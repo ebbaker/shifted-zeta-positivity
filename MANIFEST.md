@@ -8,21 +8,23 @@ missing. Updated 9 September 2026.
 
 ```
 README.md  CITATION.cff  CHANGELOG.md  CONTRIBUTING.md  RELEASING.md  MANIFEST.md
-.gitignore  .zenodo.json   (LICENSE: the repository's existing dual-license notice)
+.gitignore  .zenodo.json   (LICENSE: the repository's licensing-by-material-type notice)
 .github/ISSUE_TEMPLATE/{verification-report,possible-error,formalization}.md
-.github/labels.yml  .github/workflows/build-latex.yml
+.github/labels.yml  .github/workflows/{build-latex,check-first-slab}.yml
 blueprint/README.md  blueprint/first-slab/statements.md
 statements/README.md  statements/ledger.yaml
-environment/requirements.txt
+environment/{requirements,requirements_metadata}.txt
+tools/check_citations.py
 papers/README.md
 papers/*/README.md  papers/*/STATUS.md            (all five folders)
 papers/first-slab-positivity/{CITATION.cff,.zenodo.json,LICENSE.md,VERIFICATION_STATUS.md}
 papers/psi-omega-margin/supplementary/DERIVATION_AND_VERIFICATION.md   (authored clean, 9 Sept)
 papers/*/code/README.md  papers/*/code/requirements.txt
 verification/README.md
-verification/first-slab/{CHECKLIST.md,PROTOCOL_C1_C2.md}
+verification/first-slab/{CHECKLIST.md,PROTOCOL_C1_C2.md,CERTIFICATE_RERUN_20260909.md}
 verification/first-slab/reviews/{README.md,REVIEW_round2_verdict_20260903.md}
 verification/first-slab/scripts/{README.md,verify_referee_checks_20260831.py,verify_preprint_checks_20260905.py}
+verification/first-slab/scripts/{verify_stable_volterra_20260909.py,requirements_stable_checks.txt}   (from the 9 Sept external review)
 notes/README.md  notes/REDACTION_CHECKLIST.md
 code/README.md  code/certificates/first-slab/README.md
 references/README.md
@@ -74,5 +76,8 @@ references/README.md
   `n1_residues.py`, `n2_checks.py`, `p1_freeboson.py`, `p2b_lattice.py`,
   `m1_riemann_maass.py`, `c1_weilform.py` (round 12); `h2_edge80.py`,
   `h5_surrogate.py`, `h6_law.py` (detector, not needed by the paper).
-- First slab: the Investigation 7/12/13/14 certificate code and CSVs
-  (release-gated; `code/README.md`).
+- ~~First slab: the Investigation 7/12/13/14 certificate code and CSVs~~ —
+  **recovered 9 Sept 2026** and packaged as a review candidate outside the
+  repository (generators, audit, diagnostics, result CSVs, `verify_*` scripts,
+  pins, hash manifest, historical notes and manifests); still release-gated by
+  D1–D5 (`code/README.md`).

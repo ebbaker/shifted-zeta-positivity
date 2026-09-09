@@ -12,8 +12,10 @@ verification/
 └── first-slab/
     ├── CHECKLIST.md          what to verify, how, and what failure would look like — for volunteers
     ├── PROTOCOL_C1_C2.md     hand protocol for the two premise checks: normalization against Suzuki [1], originality search
+    ├── CERTIFICATE_RERUN_20260909.md   clean pinned rerun of the (not yet public) certificate code; byte-identical tables
     ├── reviews/              the two adversarial referee-round reports (LLM-generated, recomputed)
-    └── scripts/              independent recomputation scripts (referee round 1; preprint prep)
+    └── scripts/              recomputation scripts: two historical (referee round 1; preprint prep) and
+                              one current executable diagnostic (9 Sept; run by CI) — see its README
 ```
 
 The four working drafts under `papers/` do not have verification folders yet;

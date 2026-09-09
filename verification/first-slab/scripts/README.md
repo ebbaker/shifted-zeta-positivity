@@ -1,5 +1,33 @@
 # Independent recomputation scripts — first-slab positivity
 
+## Current executable check
+
+`verify_stable_volterra_20260909.py` repairs the singularity and overflow
+problems in the older script's A4 diagnostics. It has 16 checks covering
+piecewise-constant Galerkin sections at shifts 0.3 and 0.5, finite-section
+reflection algebra, quadrature and mesh consistency, and four high-precision
+Laplace-transfer comparisons. Unexpected failures return a nonzero status.
+
+```bash
+python3 -m pip install -r verification/first-slab/scripts/requirements_stable_checks.txt
+python3 verification/first-slab/scripts/verify_stable_volterra_20260909.py
+```
+
+Run those commands from the repository root. This is ordinary numerical
+verification, not an Arb certificate or a proof of an operator-norm bound.
+The H and V matrices share the scalar overlap integrals; agreement of their
+algebra tests indexing conventions, not an independently derived kernel.
+
+## Historical recomputation records
+
+The two dated scripts below are preserved as historical records. The September
+5 script prints failures without turning them into a nonzero exit status and
+includes exploratory normalization calculations; it must not be used as a
+pass/fail CI gate. Its A4 section is superseded by the executable check above.
+The replacement does not rerun or replace the old A1--A3 sections or C1
+normalization experiments. The existing normalization-review protocol remains
+in force.
+
 Both scripts were written from the definitions printed in the manuscript, with
 no access to the primary (Arb) or clean-room implementations. They are
 *recomputations*, not certificates: floating/mpmath arithmetic, no interval

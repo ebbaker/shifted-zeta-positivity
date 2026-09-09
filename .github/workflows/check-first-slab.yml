@@ -1,0 +1,49 @@
+name: First-slab diagnostics and citation metadata
+
+on:
+  push:
+    paths:
+      - 'verification/first-slab/scripts/**'
+      - '**/CITATION.cff'
+      - 'CITATION.cff'
+      - 'tools/check_citations.py'
+      - 'environment/requirements_metadata.txt'
+      - '.github/workflows/check-first-slab.yml'
+  pull_request:
+    paths:
+      - 'verification/first-slab/scripts/**'
+      - '**/CITATION.cff'
+      - 'CITATION.cff'
+      - 'tools/check_citations.py'
+      - 'environment/requirements_metadata.txt'
+      - '.github/workflows/check-first-slab.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  diagnostics:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install pinned diagnostic dependencies
+        run: python -m pip install -r verification/first-slab/scripts/requirements_stable_checks.txt
+      - name: Run stable numerical checks (not interval certificates)
+        run: python verification/first-slab/scripts/verify_stable_volterra_20260909.py
+  citation-metadata:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install pinned metadata validation dependencies
+        run: python -m pip install -r environment/requirements_metadata.txt
+      - name: Obtain the versioned official schema and validate citations
+        run: |
+          curl --fail --show-error --location --retry 3 --max-time 60 https://citation-file-format.github.io/1.2.0/schema.json --output /tmp/cff-1.2.0-schema.json
+          python tools/check_citations.py --schema /tmp/cff-1.2.0-schema.json

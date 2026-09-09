@@ -1,16 +1,22 @@
 # Research log
 
-> **Preface.** The documents in this directory are round reports, briefs and
+> **What is here now.** This directory currently contains only this index and
+> `REDACTION_CHECKLIST.md`. The reports named below still live in the
+> author's project store; the index is the migration catalogue, not a list of
+> files already in the repository. Each report is committed only after it has
+> been through the redaction checklist, and its row in that checklist records
+> the fact — presence in this index does not. `MANIFEST.md` tracks what has
+> been carried over.
+>
+> **Preface.** The documents catalogued here are round reports, briefs and
 > laboratory notes written by a language model during working sessions
 > directed by the author (Edward Baker), between 24 August and 5 September
-> 2026. They are published as the record of how the results in `papers/` were
-> reached, including the routes that were tried and closed, claims that were
-> later corrected in place, and one same-day retraction. They were not
-> peer-reviewed. Where a note and a released paper disagree, the paper is
-> current. Third-person references to "the author" (or "the user", where not
-> yet edited) refer to Edward Baker. Every file has been through
-> `REDACTION_CHECKLIST.md` before being committed; the checklist records what
-> was removed.
+> 2026. As they are migrated they are published as the record of how the
+> results in `papers/` were reached, including the routes that were tried and
+> closed, claims that were later corrected in place, and one same-day
+> retraction. They were not peer-reviewed. Where a note and a released paper
+> disagree, the paper is current. Third-person references to "the author" (or
+> "the user", where not yet edited) refer to Edward Baker.
 
 Dated notes, round reports, briefs and laboratory reports from the project
 store, kept flat under `notes/` with their original filenames so that the

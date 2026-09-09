@@ -7,8 +7,9 @@ This file mirrors Section 13 of the paper and is the place where the status
 will be kept current between preprint versions. The manuscript is a
 computer-assisted result prepared with substantial language-model assistance.
 It has been through two adversarial referee-style review rounds and one
-clean-room reimplementation of the certificate, and no error survives in the
-main proof chain. What it has **not** had is a human reader who has derived
+clean-room reimplementation of the certificate. No unresolved error in the
+main proof chain was identified in those internal reviews; the independent
+human checks listed below remain pending. What it has **not** had is a human reader who has derived
 the central steps on paper and will stand behind them.
 
 Legend: ✅ independently reproduced · 🔶 reproduced by automated means only, human confirmation pending · ⬜ not yet checked
@@ -79,7 +80,7 @@ Failure of B1–B4 would leave Theorem C unproved and Theorem A resting on the r
 - **D1** The inherited Investigation 7 central certificate: Binet bound `w₀(τ) ≥ β*` for `|τ| ≥ 30` and the spherical-Bessel Legendre-tail majorants (couplings `1.4084884e−9` / `2.2191643e−10`, deviations `9.78e−24` / `2.43e−25`). Both implementations take these as given.
 - **D2** The interval `LDLᵀ` and box-construction code (no reviewer has read it).
 - **D3** Full primary-vs-audit row diff, not just summary minima.
-- **D4** Version-pinned rerun of both implementations in clean environments with archived logs and manifests.
+- **D4** Version-pinned rerun of both implementations in clean environments with archived logs and manifests. Two clean reruns so far (5 Sept, 9 Sept 2026) reproduce all result tables byte-for-byte; see `../../verification/first-slab/CERTIFICATE_RERUN_20260909.md`. Logs enter the repository with the code.
 - **D5** Fix items 0.1, 0.2, 0.5 in the Investigation write-ups before releasing them.
 
 ## 5. Optional strengthening (not verification)

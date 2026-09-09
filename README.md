@@ -1,7 +1,9 @@
 # shifted-zeta-positivity
 
-Computer-assisted positivity for shifted zeta canonical systems, including
-Arb interval certificates, reproduction code, and the manuscripts they support.
+Manuscripts and verification records for computer-assisted positivity in
+shifted zeta canonical systems. Reproduction scripts for several numerical
+checks are included; the primary first-slab Arb certificate bundle is not yet
+in the public tree (see `code/README.md`).
 
 Research program around Suzuki's shifted screw functions $\Psi_\omega$ and the
 shifted scattering function $\Theta_\omega(z)=\xi(\tfrac12-\omega-iz)/\xi(\tfrac12+\omega-iz)$
@@ -13,7 +15,7 @@ Edward Baker — August–September 2026.
 
 > **Status and disclosure.** Everything here was developed with substantial
 > language-model assistance, in adversarial referee-style rounds with independent
-> numerical recomputation. One manuscript is released as a preprint
+> numerical recomputation. One manuscript is available as a preprint
 > (`papers/first-slab-positivity/`, v1.0). The other four manuscripts are
 > committed as clearly labelled **working drafts**: they have passed internal
 > review rounds but **not** external human review, no release or DOI covers
@@ -97,7 +99,7 @@ Separately, and **before** the Suzuki line of work began:
 | `blueprint/` | Statement inventory per released paper: every definition, lemma and theorem stated self-contained, with its dependency graph, proof status, human-verification status and formalization feasibility. The entry point for formalizers. |
 | `statements/` | The same inventory as machine-readable YAML (`ledger.yaml`). |
 | `verification/` | What has been checked, how, by whom; referee-round records; independent recomputation scripts; checklists for volunteers. |
-| `notes/` | The research log: dated notes, round reports, briefs, lab reports. Exploratory. Includes routes that were closed. Redacted per `notes/REDACTION_CHECKLIST.md` before release. |
+| `notes/` | Index and preparation checklist for a planned research-log migration. The indexed round reports are not yet included; see `MANIFEST.md`. |
 | `code/` | The release gate for the first-slab certificate code (not yet released). Per-paper reproduction scripts live next to their papers. |
 | `references/` | Bibliography of external sources used. No third-party PDFs are redistributed. |
 | `environment/` | Pinned Python environment for the verification scripts; each paper's `code/` has its own `requirements.txt`. |
@@ -107,6 +109,13 @@ Separately, and **before** the Suzuki line of work began:
 This is a **single repository** for the whole program. Releases are git tags
 `vMAJOR.MINOR`; the Zenodo–GitHub integration archives the entire tree at each
 tag and mints a *version DOI*, all versions sharing one *concept DOI*.
+
+**Current state.** No release has been tagged and no DOI exists yet; the
+`v1.0` release described below is the plan for the first tag. Two version
+numbers are in play and they are separate identifiers: the *repository*
+version (root `CITATION.cff`, currently `0.2.0`, set to the tag when it is
+created) and the *manuscript* version (`1.0`, stated in the preprint's PDF and
+in `papers/first-slab-positivity/CITATION.cff`).
 
 **What a release contains.** A tag archives everything present in the tree
 at that moment — including the working-draft folders. A draft is therefore
@@ -119,19 +128,32 @@ its release gate, drafts whose `STATUS.md` is current, and notes that have
 been through the redaction checklist. `v1.0` releases the first-slab preprint
 and the material around it.
 
-**Citing a paper in this repository.** Cite the *version* DOI (it pins the
-content) and name the folder:
+**Citing a paper in this repository.** Until a release exists, cite the
+folder at a specific commit (take the hash from `git rev-parse HEAD` or the
+GitHub permalink of the folder):
 
 > E. Baker, *Archimedean first-slab positivity for shifted zeta canonical
 > systems: an off-center Weil generator and a radial energy identity*,
-> preprint v1.0, in: *shifted-zeta-positivity*, release v1.0, Zenodo,
-> doi:10.5281/zenodo.NNNNNNN (version DOI), folder `papers/first-slab-positivity/`, 2026.
+> preprint v1.0, 2026, in: *shifted-zeta-positivity*,
+> <https://github.com/ebbaker/shifted-zeta-positivity>, folder
+> `papers/first-slab-positivity/`, commit ⟨hash⟩.
+
+Once a release is archived, cite the *version* DOI (it pins the content) and
+name the folder:
+
+> E. Baker, *⟨title⟩*, preprint v⟨X.Y⟩, in: *shifted-zeta-positivity*,
+> release v⟨A.B⟩, Zenodo, doi:10.5281/zenodo.⟨version DOI⟩, folder
+> `papers/⟨slug⟩/`, 2026.
+
+Angle-bracketed fields are placeholders, not identifiers; no DOI in this
+repository is real until it appears in a `CITATION.cff` `doi:` field.
 
 Each released paper folder also has its own `CITATION.cff`. Because indexers
-read the *record* title, each released paper is additionally deposited as its
-own Zenodo record (PDF + the folder's `.zenodo.json`, no code) at the time of
-its release, and the two records are linked with Zenodo's related identifiers
-(`isPartOf` / `hasPart`). Either DOI resolves to the same content; use the
+read the *record* title, the plan is to deposit each released paper as its own
+Zenodo record (PDF, using the folder's `.zenodo.json` as metadata, no code)
+and link the two records with Zenodo's related identifiers
+(`isPartOf` / `hasPart`). The paper record identifies the manuscript version;
+the repository record additionally archives the surrounding files. Use the
 paper record's DOI where a journal-style reference is wanted, the repository
 version DOI where the surrounding verification material matters.
 
@@ -157,7 +179,7 @@ formalization work.
 
 ## Licenses
 
-Dual license, see [`LICENSE`](LICENSE): text (papers, notes, documentation)
+Licensing by material type, see [`LICENSE`](LICENSE): text (papers, notes, documentation)
 under CC BY 4.0; code under MIT. Third-party material is cited, not redistributed.
 
 ## Contact

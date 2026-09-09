@@ -5,6 +5,66 @@ dates of the underlying work; the repository itself was created in September 202
 
 ## [Unreleased]
 
+### 2026-09-09 — external repository review applied (commit `50cb4d2` reviewed)
+
+Changes from an independent repository-and-reproducibility review of the first
+commit, applied after checking each finding; none touches the mathematics or
+marks a pending human check complete.
+
+- **Citation metadata.** `papers/first-slab-positivity/CITATION.cff` used
+  `type: generic`, which the CFF 1.2.0 schema does not allow at top level
+  (only `software`/`dataset`); both CFF files now validate. Each is a
+  `software` record for the folder's sources with a `preferred-citation` of
+  type `unpublished` identifying the preprint (that is what GitHub's "Cite this
+  repository" and CFF tooling read). Root CFF license is MIT (it describes
+  code); the papers stay CC BY 4.0 under `LICENSE`. New `tools/check_citations.py`
+  validates both files against the official schema; `environment/requirements_metadata.txt`
+  pins its dependencies.
+- **No example DOIs.** `10.5281/zenodo.NNNNNNN`-style placeholders removed
+  from every citation block; until a release exists the blocks give a
+  commit-based form, and the DOI forms use ⟨…⟩ placeholders. README, paper
+  README and `papers/README.md` now say plainly that no tag or DOI exists yet
+  and that repository version (`0.2.0`) and manuscript version (`1.0`) are
+  separate identifiers.
+- **Honest description of the tree.** Root README tagline and `.zenodo.json`
+  no longer imply the Arb certificate bundle is in the repository; `notes/`
+  is described as an index for a planned migration (only the index and
+  redaction checklist are present); "released as a preprint" → "available as
+  a preprint". "No error survives in the main proof chain" (VERIFICATION_STATUS,
+  CHECKLIST) → "no unresolved error was identified in those internal reviews;
+  the independent human checks remain pending".
+- **License notice** links the specific CC BY 4.0 deed and legal code and
+  states that the two licenses apply by material type, not as a choice;
+  "dual license" wording replaced everywhere. Copyright line unchanged.
+- **Stable numerical diagnostics.** New
+  `verification/first-slab/scripts/verify_stable_volterra_20260909.py`
+  replaces the A4 section of the 5 Sept script, whose sampled singular kernel
+  and unbounded float Laplace integral were numerically unreliable and whose
+  printed failures never became a nonzero exit status. The new script uses
+  integrated piecewise-constant Galerkin sections with Gauss–Jacobi treatment
+  of the t^(ω−1) endpoint, checks the reflection algebra, 48/96-node and
+  16/32-cell consistency and four high-precision Laplace-transfer identities
+  (16 checks; exit 1 on failure). Re-run here: 16/16 pass under CPython 3.12
+  with the pinned `mpmath==1.4.1`, `numpy==2.4.4`, `scipy==1.17.1`; an
+  injected 0.001 error produces 4 FAILs and exit 1. Diagnostics only — not an
+  interval certificate and not a bound on the infinite-dimensional operator.
+- **CI.** `.github/workflows/check-first-slab.yml` runs the diagnostics and the
+  CFF schema check. `RELEASING.md` now says what `build-latex` does and does
+  not establish (compilation and page count, not PDF/source identity), that
+  JSON parsing is not Zenodo metadata validation, and where each DOI goes.
+- **Certificate code recovered, not integrated.** The Investigation 7/12/13/14
+  generators, audit, diagnostics, result CSVs and verifiers were recovered and
+  packaged as a review candidate outside the repository; its CSV hashes match
+  the 5 Sept 2026 full-regeneration record and its stored-table verifiers pass.
+  All three computations were then regenerated here in a fresh pinned
+  environment (CPython 3.12.3, python-flint 0.9.0, numpy 2.3.5, scipy 1.17.0,
+  mpmath 1.4.1; ~4 min total) and produced byte-identical tables —
+  `verification/first-slab/CERTIFICATE_RERUN_20260909.md`, noted at D4 in the
+  checklist and VERIFICATION_STATUS. The code stays out of the tree until
+  D1–D5 are done (`code/README.md`, `MANIFEST.md` updated to say so).
+- Contact e-mail in `code/certificates/first-slab/README.md` corrected to the
+  personal address.
+
 ### 2026-09-08 / 09 — working drafts committed
 
 - The four companion manuscripts are now in the tree as clearly labelled

@@ -11,8 +11,9 @@
 
 The manuscript is a computer-assisted result prepared with substantial
 language-model assistance. It has been through two adversarial review rounds
-and one clean-room reimplementation, and no error survives in the main proof
-chain. What it has **not** had is a human who has derived the central steps on
+and one clean-room reimplementation. No unresolved error in the main proof
+chain was identified in those internal reviews; the checks below remain
+pending. What it has **not** had is a human who has derived the central steps on
 paper and will stand behind them. That is what this checklist is for.
 
 Items are grouped by who can do them. Each says what to check, why it carries
@@ -141,7 +142,7 @@ Section 8 converts generator positivity into strict contractivity. It is the lea
 
 **D3. Full primary-vs-audit row diff.** Only summary minima have been compared. The two runs differ in the 8th digit for reasons that took a paragraph to explain — the complete diff either closes that or exposes something.
 
-**D4. Version-pinned rerun of both implementations** in clean environments, with archived logs and manifests.
+**D4. Version-pinned rerun of both implementations** in clean environments, with archived logs and manifests. *Progress:* two clean reruns of the recovered code (author, 5 Sept 2026; independent sandbox, 9 Sept 2026 — `CERTIFICATE_RERUN_20260909.md`) reproduced all four result tables byte-for-byte under the pinned environment; the logs and manifests are archived with the code candidate and will enter the repository with it.
 
 **D5. Fix items 0.1, 0.2, 0.5** in the Investigation write-ups before releasing them.
 

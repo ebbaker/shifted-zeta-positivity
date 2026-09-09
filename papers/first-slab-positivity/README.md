@@ -5,8 +5,7 @@
 Edward Baker — preprint, version 1.0, 5 September 2026.
 
 [![License: CC BY 4.0](https://img.shields.io/badge/License-CC_BY_4.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
-<!-- After the first Zenodo release, replace the line below with the concept-DOI badge Zenodo gives you. -->
-<!-- [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.XXXXXXX.svg)](https://doi.org/10.5281/zenodo.XXXXXXX) -->
+<!-- Add the actual Zenodo concept-DOI badge after deposit. -->
 
 ## What this is
 
@@ -35,7 +34,7 @@ hypothesis nor a new zero-free region; see Section 1.5 of the paper.
 | `first_slab_positivity.tex` | LaTeX source (single file, `pdflatex`; no external bibliography). |
 | `VERIFICATION_STATUS.md` | What has been independently checked, by what means, and what has not. Mirrors Section 13 of the paper. |
 | `CITATION.cff`, `.zenodo.json` | Citation and Zenodo deposit metadata. |
-| `LICENSE.md` | CC BY 4.0 notice for this folder; the repository's dual license is `../../LICENSE`. |
+| `LICENSE.md` | CC BY 4.0 notice for this folder; licensing by material type is in `../../LICENSE`. |
 
 The certificate and audit scripts (Investigations 7, 12, 13, 14 in the paper's
 Appendix B) are **not** part of this deposit. They are available from the
@@ -66,16 +65,22 @@ Requires a standard TeX Live with `amsmath`, `amsthm`, `mathtools`,
 ## How to cite
 
 This folder is part of the single repository *shifted-zeta-positivity*
-(<https://github.com/ebbaker/shifted-zeta-positivity>). Cite the
-**version** DOI of the release that contains the version you read, and name the
-folder; or cite the paper's own Zenodo record, which is deposited at each
-release with this folder's `.zenodo.json` and linked to the repository record.
-DOIs are pasted here after the v1.0 release; until then:
+(<https://github.com/ebbaker/shifted-zeta-positivity>). No release has been
+tagged and no DOI exists yet. Until then, cite the folder at the commit you
+read (hash from `git rev-parse HEAD` or the folder's GitHub permalink):
 
 > E. Baker, *Archimedean first-slab positivity for shifted zeta canonical
 > systems: an off-center Weil generator and a radial energy identity*,
-> preprint v1.0, in: *shifted-zeta-positivity*, release v1.0, Zenodo,
-> doi:10.5281/zenodo.NNNNNNN, folder `papers/first-slab-positivity/`, 2026.
+> preprint v1.0, 2026, in: *shifted-zeta-positivity*,
+> <https://github.com/ebbaker/shifted-zeta-positivity>, folder
+> `papers/first-slab-positivity/`, commit ⟨hash⟩.
+
+After the first release, cite instead the **version** DOI of the release that
+contains the version you read together with the folder path, or the paper's
+own Zenodo record (deposited with this folder's `.zenodo.json` as metadata and
+linked to the repository record). The DOIs will appear in this file and in
+`CITATION.cff` (`preferred-citation.doi`) when they exist; the manuscript
+version and the repository release version are separate identifiers.
 
 `CITATION.cff` in this folder carries the same data; the statement inventory
 with per-statement verification status is `../../blueprint/first-slab/statements.md`.

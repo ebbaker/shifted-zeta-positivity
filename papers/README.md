@@ -5,14 +5,16 @@ One folder per manuscript. Each folder holds the LaTeX source and PDF, a
 verification record and release blockers, and — where the paper has
 reproduction code — a `code/` subfolder with its own `requirements.txt`.
 
-**Only `first-slab-positivity/` is released.** The other four folders are
-working drafts, committed at the author's decision on 8–9 September 2026 as
-an exception to the original sources-only-when-released rule: nothing in
-them is covered by a release or DOI as a finished manuscript, and each
-`STATUS.md` says so explicitly. Cite nothing from a draft folder without
-reading its `STATUS.md`. Status as of 9 September 2026.
+**Only `first-slab-positivity/` is at release stage** — it is the one
+manuscript intended to be cited as such, and the one the planned `v1.0` tag
+releases. No tag has been created and no DOI exists yet. The other four
+folders are working drafts, committed at the author's decision on 8–9
+September 2026 as an exception to the original sources-only-when-released
+rule: nothing in them is covered by a release or DOI as a finished manuscript,
+and each `STATUS.md` says so explicitly. Cite nothing from a draft folder
+without reading its `STATUS.md`. Status as of 9 September 2026.
 
-| Folder | Title | Stage | Released |
+| Folder | Title | Stage | To be released |
 |---|---|---|---|
 | `first-slab-positivity/` | Archimedean first-slab positivity for shifted zeta canonical systems: an off-center Weil generator and a radial energy identity | Preprint v1.0 (5 Sept 2026), 24 pp.; two adversarial review rounds; clean-room certificate audit; Part 0 of the verification checklist applied; statement inventory in `blueprint/first-slab/` | **yes** |
 | `psi-omega-margin/` | The margin in the shifted screw-function criterion for zero-free half-planes ("Paper 1", 21 pp.) with the concise companion *Quantitative asymptotics for Suzuki's shifted screw functions* (9 pp., the intended submission) | Working draft after the 27 Aug fold-in; referee rounds 12–14 with independent recomputation; author block filled (Edward B. Baker III); scripts `c1`–`c8` and two supplementary notes committed | no — working draft |
@@ -47,14 +49,19 @@ its own Zenodo record with the paper's title and abstract):
 
 Filled-in blocks for released papers:
 
-**first-slab-positivity, v1.0** — *DOIs to be pasted after the v1.0 release.*
+**first-slab-positivity, v1.0** — no release or DOI exists yet. Until the
+first tag, cite the folder at a commit (hash from `git rev-parse HEAD` or the
+folder's GitHub permalink):
 
 > E. Baker, *Archimedean first-slab positivity for shifted zeta canonical
 > systems: an off-center Weil generator and a radial energy identity*,
-> preprint v1.0, in: *shifted-zeta-positivity*, release v1.0, Zenodo,
-> doi:10.5281/zenodo.NNNNNNN, folder `papers/first-slab-positivity/`, 2026.
+> preprint v1.0, 2026, in: *shifted-zeta-positivity*,
+> <https://github.com/ebbaker/shifted-zeta-positivity>, folder
+> `papers/first-slab-positivity/`, commit ⟨hash⟩.
 
-BibTeX skeleton (`@misc` is what Zenodo exports; adjust to your style):
+After the `v1.0` release the block becomes the repository form above with the
+real version DOI. BibTeX skeleton for that stage (`@misc` is what Zenodo
+exports; adjust to your style; ⟨…⟩ are placeholders, not identifiers):
 
 ```bibtex
 @misc{baker2026firstslab,
@@ -65,7 +72,7 @@ BibTeX skeleton (`@misc` is what Zenodo exports; adjust to your style):
   howpublished = {Preprint v1.0, in: shifted-zeta-positivity, release v1.0, folder
                   \texttt{papers/first-slab-positivity/}},
   publisher    = {Zenodo},
-  doi          = {10.5281/zenodo.NNNNNNN},
+  doi          = {10.5281/zenodo.⟨version DOI⟩},
   note         = {Computer-assisted; verification status in the repository}
 }
 ```
@@ -95,7 +102,7 @@ the citing papers to the repository form above and issue a new release.
 3. Cross-citations renumbered against released versions.
 4. `blueprint/<slug>/statements.md` and the corresponding `statements/ledger.yaml` section written.
 5. A `VERIFICATION_STATUS.md` in the folder saying what has and has not been human-checked.
-6. `CITATION.cff` and `.zenodo.json` present in the folder; license stated.
+6. `CITATION.cff` (valid against the CFF 1.2.0 schema — `tools/check_citations.py`) and `.zenodo.json` present in the folder; license stated.
 7. PDF built from the committed `.tex` on a clean TeX Live (`latexmk -pdf`); the CI workflow passes.
 8. Figures regenerated from committed scripts or data (Paper 2: `fig_density.png`; Paper 3: Figures 1–5).
 9. Reproduction code under `code/` with `README.md` mapping scripts to results and a pinned `requirements.txt`; scripts that ran only inline in the notes reconstructed as files.
