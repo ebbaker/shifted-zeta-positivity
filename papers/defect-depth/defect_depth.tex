@@ -1,0 +1,1225 @@
+% ============================================================================
+% Detection depth of spectral defects in shifted zeta strings
+% Draft v1 (2026-08-29), produced from MANUSCRIPT_defect_depth_theorem_proof_skeleton.md
+% Sources of record: LAB_ihara_round{1..5}.md, ROUND6_closeout.md, and the two
+% companion papers (shifted screw-function margin paper; shifted zeta-string paper).
+% NOTE: bibliography entries are drafted from the lab record and MUST be verified
+% against the actual sources before submission (marked %% VERIFY).
+% ============================================================================
+\documentclass[11pt]{amsart}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage[margin=1.15in]{geometry}
+\usepackage{booktabs}
+\usepackage{xcolor}
+\definecolor{linkblue}{rgb}{0.1,0.15,0.5}
+\usepackage[colorlinks=true,linkcolor=linkblue,citecolor=linkblue,urlcolor=linkblue]{hyperref}
+\usepackage{microtype}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{assumption}[theorem]{Assumption}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{openproblem}[theorem]{Open problem}
+
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\dd}{\,d}
+\newcommand{\muh}{\widehat{\mu}}
+\newcommand{\eps}{\varepsilon}
+\DeclareMathOperator{\sgn}{sgn}
+\DeclareMathOperator{\supp}{supp}
+\DeclareMathOperator{\Rea}{Re}
+\DeclareMathOperator{\Ima}{Im}
+
+\begin{document}
+
+\title[Detection depth of spectral defects in shifted zeta strings]
+{Detection depth of spectral defects\\ in shifted zeta strings}
+
+\author{Edward B. Baker III}
+\date{Draft of August 29, 2026}
+
+\begin{abstract}
+We study how a finite-rank spectral defect is detected by a positive
+Stieltjes--Weyl system. After a resolvent compactification of an unbounded
+Stieltjes measure at a scale $s_0>0$, the compactified moments are an
+invertible binomial transform of the Taylor coefficients of the Weyl function
+at the negative resolvent point $-s_0$. Finite-rank defects perturb the
+associated Hankel determinants through exact Christoffel--Darboux kernel
+formulas, and the first loss of Stieltjes positivity is located exactly at the
+first anomalous coefficient of the associated Stieltjes continued fraction.
+For a fixed exterior defect over a regular compactly supported background the
+detection order satisfies $n_\eps/\log(1/\eps)\to (2g)^{-1}$, where $g$ is the
+Green function of the complement of the admissible support. We apply this
+framework to the positive shifted zeta-string reference family associated with
+Suzuki's shifted screw functions: a hypothetical zero quartet beyond the
+shifted boundary enters as a conjugate rank-two defect with effective
+displacement $\eta=\delta-\omega$, the same parameter that controls
+exponential growth in the time-domain criterion, and the signed
+absolutely continuous correction it produces is dominated by the reference
+density and cannot affect the leading detection depth. We derive the
+resulting inverse-spectral sensitivity law and compare it with the
+time-domain detection scale
+$\eta t_*=2\log\tau+\log\log\tau+\log(S_\omega/\eta)+o(1)$.
+The results quantify the very different conditioning of two exact analytic
+representations of the same hypothetical defect; they provide neither a new
+zero-free region nor any progress toward the Riemann hypothesis.
+\end{abstract}
+
+\maketitle
+\tableofcontents
+
+% ============================================================================
+\section{Introduction}\label{sec:intro}
+% ============================================================================
+
+\subsection{The question}
+A positive measure $\sigma$ on $[0,\infty)$ with
+$\int (1+\lambda)^{-1}\dd\sigma(\lambda)<\infty$ corresponds, through its
+Stieltjes--Weyl function
+\[
+q(z)=\int_0^\infty\frac{\dd\sigma(\lambda)}{\lambda-z},
+\qquad z\in\C\setminus[0,\infty),
+\]
+to a positive inverse-spectral object: a Kre\u{\i}n string, equivalently a
+positive Stieltjes continued fraction \cite{Stieltjes,KacKrein,Wall,GK}.
+If the spectral data are corrupted by a small \emph{defect} located outside
+the admissible support --- a point mass on the negative axis, or a conjugate
+pair of non-real point masses --- then positivity of the inverse problem must
+eventually fail. The question this paper quantifies is:
+\begin{quote}
+\emph{How much finite-resolution spectral information is required before a
+small off-support defect becomes detectable as a failure of positivity?}
+\end{quote}
+Three classical finite-resolution coordinates are available: truncated moment
+sequences, Taylor jets of the Weyl function at a fixed point of the resolvent
+set, and initial segments of the Stieltjes continued fraction (equivalently,
+initial pieces of the string). A first contribution of this paper is that,
+after a natural one-parameter \emph{resolvent compactification} that makes all
+moments of an unbounded Stieltjes measure finite, these three coordinates are
+exactly equivalent, degree by degree
+(Theorem~\ref{thm:compactification}). The central mechanism is then:
+\[
+\boxed{\;
+\text{spectral defect}
+\;\longrightarrow\;
+\text{finite-rank Hankel perturbation}
+\;\longrightarrow\;
+\text{Christoffel threshold}
+\;\longrightarrow\;
+\text{first CF failure}.\;}
+\]
+Finite-rank perturbations of Hankel matrices are controlled exactly by
+Christoffel--Darboux kernels (Theorems~\ref{thm:rankone}
+and~\ref{thm:ranktwo}); the location of the first failed positivity condition
+translates exactly, through the classical determinant representation of the
+Stieltjes continued fraction, into the index of the first anomalous
+continued-fraction coefficient (Theorem~\ref{thm:cfindex}); and for a fixed
+exterior defect over a regular compactly supported background, exterior
+polynomial growth turns the threshold into the asymptotic law
+\begin{equation}\label{eq:introdepth}
+\frac{n_\eps}{\log(1/\eps)}\longrightarrow\frac1{2g(c)}
+\qquad(\eps\downarrow0),
+\end{equation}
+where $g$ is the Green function of the complement of the admissible support
+with pole at infinity (Theorem~\ref{thm:depth}). We call $n_\eps$ the
+\emph{detection depth} of the defect: it is simultaneously a moment order, a
+Taylor-jet order, and (up to the exact parity rule of
+Theorem~\ref{thm:cfindex}) the position of the first anomalous bead of the
+associated string.
+
+\subsection{The arithmetic application}
+Suzuki's shifted screw functions \cite{Suzuki2023} attach to each shift
+$\omega>0$ a criterion function $\Psi_\omega$ whose eventual nonnegativity is
+equivalent to a zero-free half-plane
+$\Rea\rho\le\tfrac12+\omega$ for the Riemann xi function, and, in the
+companion papers \cite{MarginPaper,StringPaper}, a Weyl function
+\begin{equation}\label{eq:qomega}
+q_\omega(z)=\frac1{w}\,\frac{\xi'}{\xi}\Big(\tfrac12+\omega+w\Big),
+\qquad w=\sqrt{-z},\ \Rea w>0 ,
+\end{equation}
+which, when the corresponding half-plane is zero-free --- in particular under
+the Riemann hypothesis --- is a Stieltjes function whose spectral measure is
+absolutely continuous with an explicit Poisson-broadened zero density. This
+\emph{positive shifted-zeta reference system} is a structured arithmetic
+background for the abstract theory: a hypothetical zero
+$\rho=\tfrac12+\delta\pm i\tau$ with $\delta>\omega$ contributes to
+\eqref{eq:qomega} a conjugate pair of principal-sheet poles at
+\[
+z_\pm=-(\eta\pm i\tau)^2,\qquad \eta:=\delta-\omega>0,
+\]
+each of Stieltjes weight $2$ (Proposition~\ref{prop:quartet}) --- a rank-two
+defect in the sense of the abstract theory, whose distance from admissibility
+is controlled by exactly the \emph{horizontal excess} $\eta=\delta-\omega$
+that also drives the exponential instability
+$e^{\eta t}$ of the time-domain criterion. The signed absolutely continuous
+correction that accompanies the poles is dominated pointwise by the reference
+density and cannot influence the leading detection depth
+(Lemma~\ref{lem:cut}). The resulting sensitivity law is
+Theorem~\ref{thm:zetadepth}; the time-domain counterpart, with its constant
+term identified, is
+\begin{equation}\label{eq:introtime}
+\eta\,t_* \;=\; 2\log\tau+\log\log\tau+\log\frac{S_\omega}{\eta}+o(1),
+\qquad
+S_\omega=\frac{\xi'}{\xi}\Big(\tfrac12+\omega\Big),
+\end{equation}
+(Theorems~\ref{thm:envelope} and~\ref{thm:bracket}).
+
+\subsection{What is, and is not, claimed}
+Three caveats govern the entire paper. First, the zeta application is a
+\emph{sensitivity statement about the positive reference system perturbed by
+one hypothetical quartet}; if the Riemann hypothesis fails, the actual
+response need not decompose as a positive background plus a single finite-rank
+defect, and we never assume that it does (see the discussion before
+Theorem~\ref{thm:zetadepth}). Second, the compactification is a natural
+\emph{one-parameter} family indexed by the scale $s_0>0$; the detection order
+is cutoff-independent for fixed $s_0$ but genuinely $s_0$-dependent, and no
+claim of unique canonicity is made (Section~\ref{sec:s0}). Third, the
+high-height law $n\asymp \tau^2\log\tau/(\eta\sqrt{s_0})$ is a moving-point
+asymptotic: it follows from the fixed-point theorem only formally, and we
+present it at the level actually established --- an explicit geometric
+computation of the Green distance plus numerical confirmation in the regimes
+accessible to computation (Section~\ref{sec:highheight}).
+The results are statements about the \emph{conditioning of two exact
+representations} of the same hypothetical object. They provide no new
+zero-free region and no evidence that the inverse-spectral representation
+brings the Riemann hypothesis closer.
+
+\subsection{Relation to existing work}
+Every individual algebraic ingredient below is classical: the Stieltjes
+moment problem and continued fraction \cite{Stieltjes,Wall,Schmudgen}, the
+Hankel determinant representation of the continued-fraction coefficients
+\cite{Wall,GK}, finite-rank (Uvarov) modifications of orthogonality measures
+\cite{Uvarov,Zhedanov}, Christoffel functions and Christoffel--Darboux
+kernels \cite{Nevai,Totik}, regularity and $n$-th root asymptotics
+\cite{StahlTotik}, and transformations between Stieltjes and Hausdorff moment
+problems \cite{BergDurea}. The principle that Christoffel-function growth
+detects points outside the support is also actively used in applied
+anomaly detection \cite{LasserrePauwels,ChristoffelAnomaly2026,DataStreams}.
+What we believe is new is the synthesis: the exact identification of the
+first failed positivity condition with the first anomalous continued-fraction
+coefficient, giving a precise inverse-spectral meaning to detection depth;
+the use of the resolvent compactification as a finite-moment/Taylor-jet depth
+coordinate for unbounded Weyl data, with its exact transform and length
+invariance; and the application to the shifted zeta-string family, where the
+defect parameter coincides with the horizontal excess $\eta=\delta-\omega$ of
+the time-domain criterion. A final literature audit for these specific
+combinations accompanies the submission.
+
+% ============================================================================
+\section{Stieltjes preliminaries and resolvent compactification}
+\label{sec:compact}
+% ============================================================================
+
+Throughout, $\sigma$ denotes a positive Borel measure on $[0,\infty)$ with
+\begin{equation}\label{eq:stieltjescond}
+\int_0^\infty\frac{\dd\sigma(\lambda)}{1+\lambda}<\infty,
+\end{equation}
+and $q(z)=\int_0^\infty(\lambda-z)^{-1}\dd\sigma(\lambda)$ its
+Stieltjes transform, holomorphic on $\C\setminus[0,\infty)$. We work with
+this normalization (no additive affine term); the statements below extend to
+the general Stieltjes normalization by trivial modifications.
+
+\begin{definition}[Resolvent compactification at scale $s_0$]
+\label{def:compact}
+Fix $s_0>0$ and set
+\[
+x=\frac{\lambda}{s_0+\lambda}\in[0,1),
+\qquad
+\zeta=\frac{z}{s_0+z},
+\qquad
+z=\frac{s_0\zeta}{1-\zeta}.
+\]
+Let $\mu_{s_0}$ be the pushforward under $\lambda\mapsto x$ of the measure
+$\dd\sigma(\lambda)/(s_0+\lambda)$, and let
+\[
+Q_{s_0}(\zeta)=\int_0^1\frac{\dd\mu_{s_0}(x)}{x-\zeta}.
+\]
+\end{definition}
+
+\begin{theorem}[Resolvent compactification and Taylor-jet/moment equivalence]
+\label{thm:compactification}
+Let $\sigma$ satisfy \eqref{eq:stieltjescond} and let $s_0>0$. Then:
+\begin{enumerate}
+\item $\mu_{s_0}$ is a finite positive measure on $[0,1]$; in particular all
+compactified moments $\muh_k=\int_0^1 x^k\dd\mu_{s_0}(x)$ are finite.
+\item The transforms are related by
+\begin{equation}\label{eq:Qtransform}
+q(z)=(1-\zeta)\,Q_{s_0}(\zeta),
+\qquad\text{equivalently}\qquad
+Q_{s_0}(\zeta)=\frac{s_0+z}{s_0}\,q(z).
+\end{equation}
+\item Writing $q(z)=\sum_{j\ge0}c_j(z+s_0)^j$ near $z=-s_0$, one has
+$c_j=\int_0^\infty(s_0+\lambda)^{-j-1}\dd\sigma(\lambda)$ and
+\begin{equation}\label{eq:binomial}
+\muh_k=\sum_{j=0}^k\binom{k}{j}(-s_0)^j c_j .
+\end{equation}
+In particular, for every $N$, the moments $(\muh_k)_{k\le N}$ and the Taylor
+coefficients $(c_j)_{j\le N}$ determine each other through the invertible
+triangular transform \eqref{eq:binomial}.
+\end{enumerate}
+\end{theorem}
+
+\begin{proof}
+(1) is \eqref{eq:stieltjescond} after the change of variables, since
+$\dd\mu_{s_0}$ has total mass $\int (s_0+\lambda)^{-1}\dd\sigma\le
+\max(1,s_0^{-1})\int(1+\lambda)^{-1}\dd\sigma<\infty$.
+
+(2) A direct computation gives
+\[
+x-\zeta=\frac{\lambda}{s_0+\lambda}-\frac{z}{s_0+z}
+=\frac{s_0(\lambda-z)}{(s_0+\lambda)(s_0+z)} ,
+\]
+hence
+\[
+Q_{s_0}(\zeta)
+=\int_0^\infty\frac{(s_0+\lambda)(s_0+z)}{s_0(\lambda-z)}
+\cdot\frac{\dd\sigma(\lambda)}{s_0+\lambda}
+=\frac{s_0+z}{s_0}\,q(z),
+\]
+and $1-\zeta=s_0/(s_0+z)$ gives the first form.
+
+(3) For $z$ near $-s_0$,
+\[
+\frac1{\lambda-z}=\frac1{(\lambda+s_0)-(z+s_0)}
+=\sum_{j\ge0}\frac{(z+s_0)^j}{(\lambda+s_0)^{j+1}},
+\]
+with uniform convergence on compact subsets of $|z+s_0|<s_0\le
+\operatorname{dist}(-s_0,[0,\infty))$; integrating against $\sigma$
+identifies $c_j$. Next,
+\[
+x^k=\Big(1-\frac{s_0}{s_0+\lambda}\Big)^{k}
+=\sum_{j=0}^k\binom kj(-s_0)^j\frac1{(s_0+\lambda)^j},
+\]
+so
+\[
+\muh_k=\int_0^\infty x^k\,\frac{\dd\sigma(\lambda)}{s_0+\lambda}
+=\sum_{j=0}^k\binom kj(-s_0)^j
+\int_0^\infty\frac{\dd\sigma(\lambda)}{(s_0+\lambda)^{j+1}}
+=\sum_{j=0}^k\binom kj(-s_0)^jc_j .
+\]
+The matrix of the transform is lower triangular with diagonal entries
+$(-s_0)^k\ne0$, hence invertible.
+\end{proof}
+
+\begin{remark}
+Equation \eqref{eq:binomial} says that the compactification is nothing other
+than \emph{re-expansion of the Weyl function about an interior point of the
+resolvent set}: compactified moment order $=$ Taylor-jet order at $-s_0$. This
+is what makes the moment coordinate intrinsic for fixed $s_0$ --- it requires
+no truncation of the underlying spectral data --- and it is also of practical
+value: high-precision compactified moments of a measure with intractable
+density are obtained from Cauchy-integral Taylor coefficients of $q$ on a
+circle about $-s_0$.
+\end{remark}
+
+\begin{corollary}[Equal total string length]\label{cor:length}
+Suppose in addition $q(0^-)<\infty$. In the Kre\u{\i}n correspondence between
+Stieltjes functions and strings, normalized so that the total string length
+equals the value of the Weyl function at $z=0$ \cite{KacKrein}, the strings
+associated with $q$ and $Q_{s_0}$ have the same total length:
+$Q_{s_0}(0)=q(0)$ by \eqref{eq:Qtransform}.
+\end{corollary}
+
+\begin{remark}[Non-locality of the bead map]
+The equality of lengths is global: the compactification does \emph{not} act
+locally on the mass distribution of the string. For a single bead
+$[m,\ell]$ one computes $[\,m+1/\ell,\ \ell\,]$, and for two or more beads
+the interior masses and gaps mix non-locally (the last mass always maps to
+$m_N+1/\ell_N$). We therefore refer to depth in the compactified string as
+\emph{resolvent-compactified depth at scale $s_0$}, a bulk coordinate of a
+canonically associated equal-length string, not a re-parametrization of the
+original one.
+\end{remark}
+
+\begin{proposition}[Bounded-transform interpretation; finite vector measures]
+\label{prop:operator}
+Let $A\ge0$ be self-adjoint on a Hilbert space $\mathcal H$, let
+$\phi\in\mathcal H$, and let $\sigma=\sigma_\phi$ be the (finite) spectral
+measure of $A$ in $\phi$. Then $B:=A(s_0+A)^{-1}$ is a positive contraction,
+$0\le B<1$, and with $\psi:=(s_0+A)^{-1/2}\phi$,
+\[
+\langle\psi,B^k\psi\rangle=\muh_k\qquad(k\ge0).
+\]
+\end{proposition}
+
+\begin{proof}
+Functional calculus: $\langle\psi,B^k\psi\rangle
+=\int\big(\tfrac{\lambda}{s_0+\lambda}\big)^k\tfrac{\dd\sigma_\phi(\lambda)}
+{s_0+\lambda}=\muh_k$.
+\end{proof}
+
+\begin{remark}[Infinite total mass]\label{rem:infmass}
+The measures arising in Section~\ref{sec:zeta} have infinite total mass, so
+they are not spectral measures of ordinary Hilbert-space vectors, and
+Proposition~\ref{prop:operator} is stated for finite vector measures only.
+The main development is measure-theoretic and does not use
+Proposition~\ref{prop:operator}. (A rigged-scale formulation is possible,
+since \eqref{eq:stieltjescond} says exactly that $(s_0+A)^{-1/2}\phi$ makes
+sense for $\phi$ in the natural negative space; we do not pursue this here.)
+\end{remark}
+
+% ============================================================================
+\section{Finite-rank spectral defects and the first continued-fraction failure}
+\label{sec:defects}
+% ============================================================================
+
+\subsection{Hankel determinants and the Stieltjes continued fraction}
+
+For a real sequence $(\mu_j)_{j\ge0}$ put
+\[
+\Delta_n=\det(\mu_{i+j})_{i,j=0}^{n-1},
+\qquad
+\Delta_n'=\det(\mu_{i+j+1})_{i,j=0}^{n-1},
+\qquad
+\Delta_0=\Delta_0'=1 .
+\]
+We use throughout the string form of the Stieltjes continued fraction,
+\begin{equation}\label{eq:cf}
+q(z)=
+\cfrac{1}{-zm_1+\cfrac{1}{\ell_1+\cfrac{1}{-zm_2+\cfrac{1}{\ell_2+\cdots}}}} ,
+\end{equation}
+associated with $q(z)=\int(\,t-z)^{-1}\dd\mu(t)=-\sum_{k\ge0}\mu_kz^{-k-1}$
+as a formal expansion at $z=\infty$; in the Kre\u{\i}n string picture the
+$m_k$ are point masses and the $\ell_k$ the gaps between them, with the first
+mass at the measuring end \cite{KacKrein,GK}. The classical determinant
+formulas, in this convention, are
+\begin{equation}\label{eq:detformulas}
+m_k=\frac{(\Delta'_{k-1})^2}{\Delta_{k-1}\Delta_k},
+\qquad
+\ell_k=\frac{\Delta_k^2}{\Delta'_{k-1}\Delta'_k}
+\qquad(k\ge1),
+\end{equation}
+see \cite{Stieltjes,Wall,GK}; we have re-verified
+\eqref{eq:detformulas} in this exact indexing symbolically for one and two
+atoms and numerically to $10^{-112}$ for generic six-atom measures.
+Positivity of all $m_k,\ell_k$ up to level $N$ is equivalent to
+$\Delta_n>0$ and $\Delta_n'>0$ up to the corresponding orders --- the
+classical solvability criterion for the Stieltjes moment problem
+\cite{Stieltjes,Schmudgen}.
+
+\begin{theorem}[Exact index of the first continued-fraction failure]
+\label{thm:cfindex}
+Let $(\mu_j)$ be a real sequence whose Hankel determinants $\Delta_n$,
+$\Delta_n'$ are nonzero up to the orders below. Define
+\[
+n_0=\min\{n\ge1:\ \Delta_{n-1}\Delta_n<0\},
+\qquad
+n_1=\min\{n\ge1:\ \Delta'_{n-1}\Delta'_n<0\}
+\]
+(with $\min\emptyset=\infty$). If $\min(n_0,n_1)<\infty$, then all
+coefficients of \eqref{eq:cf} preceding the following one are positive, and
+the first nonpositive coefficient is
+\[
+\begin{cases}
+m_{n_0}, & \text{raw index } 2n_0-2,\quad\text{if } n_0\le n_1,\\[2pt]
+\ell_{n_1}, & \text{raw index } 2n_1-1,\quad\text{if } n_1<n_0 .
+\end{cases}
+\]
+(Coefficients are indexed $m_1,\ell_1,m_2,\ell_2,\dots$ with raw indices
+$0,1,2,3,\dots$; a tie $n_0=n_1$ appears first as a mass since $2n-2<2n-1$.)
+\end{theorem}
+
+\begin{proof}
+By \eqref{eq:detformulas} the numerators are squares, so
+$\sgn m_k=\sgn(\Delta_{k-1}\Delta_k)$ and
+$\sgn\ell_k=\sgn(\Delta'_{k-1}\Delta'_k)$. All factors before the first sign
+change in each family are positive; the first negative product in either
+family occurs exactly at $n_0$, resp.\ $n_1$, and the interleaving
+$m_1,\ell_1,m_2,\ell_2,\dots$ places $m_{n_0}$ at raw index $2n_0-2$ and
+$\ell_{n_1}$ at $2n_1-1$.
+\end{proof}
+
+\begin{remark}
+Theorem~\ref{thm:cfindex} is the bridge between moment-space detection and
+inverse-string depth: \emph{the first anomalous continued-fraction
+coefficient is exactly the first order at which the truncated Stieltjes
+moment problem detects the defect}, and the parity of the anomaly (mass
+versus length) records which Hankel family failed first. Both statements are
+convention-checked facts about \eqref{eq:detformulas}; the content of the
+following two theorems is \emph{where} that failure occurs.
+\end{remark}
+
+\subsection{Rank-one defects: a forbidden real atom}
+
+\begin{theorem}[Exact rank-one Christoffel threshold]\label{thm:rankone}
+Let $\mu_0$ be a finite positive measure with compact support
+$K\subset[0,\infty)$, with Hankel matrices $H_n=(\mu_{i+j})_{i,j=0}^{n-1}$
+and $H_n'=(\mu_{i+j+1})_{i,j=0}^{n-1}$ nonsingular, and let
+\[
+\mu_\eps=\mu_0+\eps\,\delta_a,\qquad a<0,\ \eps>0 .
+\]
+Then all ordinary Hankel determinants of $\mu_\eps$ remain positive, while
+\begin{equation}\label{eq:rankone}
+\frac{\det H_n'(\eps)}{\det H_n'(0)}
+=1+\eps\,a\,K'_{n-1}(a,a),
+\end{equation}
+where $K'_{n-1}(a,a)=v(a)^{T}(H_n')^{-1}v(a)$,
+$v(a)=(1,a,\dots,a^{n-1})^{T}$, is the (diagonal) Christoffel--Darboux kernel
+of the positive measure $t\dd\mu_0(t)$. Consequently the first Stieltjes
+failure is a shifted-Hankel failure, at the exact threshold
+\begin{equation}\label{eq:threshold}
+n_{\det}=\min\{\,n:\ \eps\,|a|\,K'_{n-1}(a,a)>1\,\},
+\end{equation}
+and by Theorem~\ref{thm:cfindex} it appears as the length coefficient
+$\ell_{n_{\det}}$, at raw continued-fraction index $2n_{\det}-1$.
+\end{theorem}
+
+\begin{proof}
+$\mu_\eps$ is a positive measure on $\R$, so its ordinary Hankel matrices are
+positive semidefinite Gram matrices; with $H_n(0)>0$ and $\eps>0$ they are
+positive definite. For the shifted family, the moment increments are
+$\delta\mu_{k}=\eps a^{k}$, so
+$H_n'(\eps)=H_n'(0)+\eps a\,v(a)v(a)^{T}$ is a rank-one update, and the
+matrix determinant lemma gives
+$\det H_n'(\eps)=\det H_n'(0)\,\big(1+\eps a\,v(a)^{T}(H_n')^{-1}v(a)\big)$.
+The identification of $v^{T}(H')^{-1}v$ with the CD kernel of $t\dd\mu_0$ is
+the classical Christoffel-function identity: if $(p_j')$ are the orthonormal
+polynomials of $t\dd\mu_0$, then $(H_n')^{-1}=P^{T}P$ where $P$ maps
+coefficient vectors to $(p'_j)$-coordinates, so
+$v^{T}(H_n')^{-1}v=\sum_{j\le n-1}p_j'(a)^2=K'_{n-1}(a,a)$
+\cite{Nevai,Totik}. Since $a<0$ and $K'_{n-1}(a,a)>0$ is nondecreasing in
+$n$, the ratio \eqref{eq:rankone} decreases through $0$ exactly at
+\eqref{eq:threshold}; the ordinary family never fails, so
+Theorem~\ref{thm:cfindex} applies with $n_1=n_{\det}<n_0=\infty$.
+\end{proof}
+
+\subsection{Rank-two defects: a conjugate non-real pair}
+
+\begin{theorem}[Exact rank-two determinant identity]\label{thm:ranktwo}
+Let $\mu_0$ be as above, $c\in\C\setminus\R$, and consider the real moment
+perturbation
+\[
+\mu_k(\eps)=\mu_k+\frac\eps2\,c^k+\frac\eps2\,\bar c^{\,k}\qquad(k\ge0),
+\]
+i.e.\ formal conjugate atoms $\tfrac\eps2\delta_c+\tfrac\eps2\delta_{\bar c}$.
+Define the bilinear kernel $K^{\mathrm{bil}}_{n-1}(z,w)=v(z)^{T}H_n^{-1}v(w)
+=\sum_{j\le n-1}p_j(z)p_j(w)$ and the Hermitian value
+$K_{n-1}(c,\bar c)=\sum_{j\le n-1}|p_j(c)|^2$, where $(p_j)$ are the
+orthonormal polynomials of $\mu_0$. Then
+\begin{equation}\label{eq:ranktwo}
+\frac{\det H_n(\eps)}{\det H_n(0)}
+=1+\eps\,\Rea K^{\mathrm{bil}}_{n-1}(c,c)
++\frac{\eps^2}4\Big(\big|K^{\mathrm{bil}}_{n-1}(c,c)\big|^2
+-K_{n-1}(c,\bar c)^2\Big),
+\end{equation}
+and the coefficient of $\eps^2/4$ is nonpositive, by Cauchy--Schwarz
+$\big|\sum p_j(c)^2\big|\le\sum|p_j(c)|^2$. The analogous formula holds for
+the shifted family $H_n'$, with kernels of $t\dd\mu_0$ and defect columns
+weighted by $c$, $\bar c$.
+\end{theorem}
+
+\begin{proof}
+$H_n(\eps)=H_n+U C U^{*T}$ in the bilinear sense, with
+$U=[v(c)\ v(\bar c)]$ and $C=\operatorname{diag}(\eps/2,\eps/2)$; since the
+perturbation is symmetric (not Hermitian) in the Hankel structure, apply the
+two-column matrix determinant lemma
+$\det(H+U C V^{T})=\det H\cdot\det(I_2+C V^{T}H^{-1}U)$ with
+$V=[v(\bar c)\ v(c)]$, so that the moment increments
+$\tfrac\eps2(c^{i+j}+\bar c^{\,i+j})$ are reproduced. Writing
+$V^{T}H^{-1}U=\begin{pmatrix}K^{\mathrm{bil}}(\bar c,c)&
+K^{\mathrm{bil}}(\bar c,\bar c)\\K^{\mathrm{bil}}(c,c)&
+K^{\mathrm{bil}}(c,\bar c)\end{pmatrix}$ and using that the background
+moments are real, so that
+$K^{\mathrm{bil}}(\bar c,\bar c)=\overline{K^{\mathrm{bil}}(c,c)}$ and
+$K^{\mathrm{bil}}(c,\bar c)=K^{\mathrm{bil}}(\bar c,c)
+=K_{n-1}(c,\bar c)\in(0,\infty)$, the $2\times2$ determinant expands to
+\eqref{eq:ranktwo}. Cauchy--Schwarz in $\ell^2$ gives the sign of the
+quadratic term.
+\end{proof}
+
+\begin{remark}[No factor-of-two shortcut]\label{rem:nofactor2}
+The negative channel in \eqref{eq:ranktwo} grows on the exponential scale
+like $\eps^2e^{4ng(c)}$, but the defect weight is squared: solving either
+threshold gives the same leading order $n\sim\log(1/\eps)/(2g(c))$ at fixed
+defect location. Observed depth differences between defect types in our
+laboratory experiments came from different Green distances of the defect
+locations, not from the exponent $4g$.
+\end{remark}
+
+\begin{remark}[Finitely many defects]\label{rem:multidefect}
+For $r$ defects at $c_1,\dots,c_r$ with weight matrix $C$, the same lemma
+gives $\det H_n(\eps)/\det H_n=\det(I_r+C\,\mathcal K_n)$ with
+$\mathcal K_n$ the $r\times r$ matrix of CD-kernel evaluations at the defect
+points: an exact finite-dimensional interaction law. On the exponential
+scale the first failure is governed by the defect(s) of smallest Green
+distance; we leave the multi-defect asymptotics to future work.
+\end{remark}
+
+% ============================================================================
+\section{Christoffel detection depth}\label{sec:depth}
+% ============================================================================
+
+Let $K\subset\R$ be compact, non-polar, with Green function $g_K$ of
+$\overline\C\setminus K$ with pole at infinity, and let $\mu_0$ be a positive
+measure with $\supp\mu_0=K$ that is \emph{regular} in the Stahl--Totik sense
+\cite{StahlTotik}, i.e.\ its orthonormal polynomials obey the $n$-th root
+asymptotics $|p_n(z)|^{1/n}\to e^{g_K(z)}$ locally uniformly on
+$\C\setminus\operatorname{Co}(K)$, and hence
+\begin{equation}\label{eq:rootasym}
+\frac1{2n}\log K_n(c,\bar c)\longrightarrow g_K(c)
+\qquad(n\to\infty)
+\end{equation}
+for fixed $c\notin K$, where $K_n(c,\bar c)=\sum_{j\le n}|p_j(c)|^2$.
+(For real $a\notin\operatorname{Co}(K)$ the same holds for $K_n(a,a)$; we
+also apply \eqref{eq:rootasym} to the measure $t\dd\mu_0$, which is regular
+if $\mu_0$ is and $0\notin K$.)
+
+\begin{theorem}[Fixed-defect detection depth]\label{thm:depth}
+Let $\mu_0$ be regular with compact non-polar support
+$K\subset(0,\infty)$.
+\begin{enumerate}
+\item (Rank one.) For a defect $\eps\delta_a$ with fixed
+$a<0$, the first failure order $n_\eps$ of \eqref{eq:threshold} satisfies
+\[
+\frac{n_\eps}{\log(1/\eps)}\longrightarrow\frac1{2g_K(a)}
+\qquad(\eps\downarrow0).
+\]
+\item (Rank two.) For a conjugate defect pair at fixed
+$c\in\C\setminus\R$ as in Theorem~\ref{thm:ranktwo}, assume the
+nondegeneracy condition that the negative channel obeys the root asymptotic
+$\frac1{4n}\log\big(K_{n-1}(c,\bar c)^2-
+|K^{\mathrm{bil}}_{n-1}(c,c)|^2\big)\to g_K(c)$. Then the first failure
+order of the relevant Hankel family satisfies
+\[
+\frac{n_\eps}{\log(1/\eps)}\longrightarrow\frac1{2g_K(c)}
+\qquad(\eps\downarrow0).
+\]
+\end{enumerate}
+\end{theorem}
+
+\begin{proof}
+(1) Fix $\eps_0>0$. By \eqref{eq:rootasym} applied to $t\dd\mu_0$ (also
+regular, with the same exterior Green function), and since the fixed factor
+$|a|>0$ is absorbed by any exponent tolerance, there is $n_*$ such that
+\[
+e^{2n(g-\eps_0)}\ \le\ |a|\,K'_{n-1}(a,a)\ \le\ e^{2n(g+\eps_0)}
+\qquad(n\ge n_*).
+\]
+The threshold \eqref{eq:threshold} is crossed at the first $n$ with
+$\eps\,|a|K'_{n-1}(a,a)>1$; since $K'_n$ is nondecreasing in $n$, the
+two-sided bound yields, for all small $\eps$,
+\[
+\frac{\log(1/\eps)}{2(g+\eps_0)}-O(1)
+\le n_\eps\le
+\frac{\log(1/\eps)}{2(g-\eps_0)}+O(1),
+\]
+and $\eps_0\downarrow0$ gives the claim.
+
+(2) Write \eqref{eq:ranktwo} as $1+\eps L_n-\tfrac{\eps^2}4 N_n$ with
+$L_n=\Rea K^{\mathrm{bil}}_{n-1}(c,c)$, so $|L_n|\le K_{n-1}(c,\bar c)$, and
+$N_n=K_{n-1}(c,\bar c)^2-|K^{\mathrm{bil}}_{n-1}(c,c)|^2\ge0$. Write
+$L:=\log(1/\eps)$. \emph{No failure below the window:} for
+$n\le(1-\kappa)L/(2g)$ and $\eps_0<g\kappa/(1-\kappa)$, both
+$\eps|L_n|\le\eps\,e^{2n(g+\eps_0)}\to0$ and
+$\eps^2N_n\le\eps^2e^{4n(g+\eps_0)}\to0$, so the ratio stays positive.
+\emph{Failure above the window:} for $n\ge(1+\kappa)L/(2g)$ the
+nondegeneracy hypothesis gives, for $\eps_0$ small,
+\[
+\tfrac{\eps^2}4N_n\ \ge\ \tfrac14\,e^{-2L+4n(g-\eps_0)}
+\ \ge\ \tfrac14\,e^{2\kappa'L},
+\qquad
+\eps|L_n|\ \le\ e^{-L+2n(g+\eps_0)}\ \le\ e^{(\kappa'+o(1))L}
+\]
+with $\kappa'>0$; hence
+$\eps^2N_n/(\eps|L_n|)\ \ge\ \tfrac14 e^{(\kappa'-o(1))L}\to\infty$, and the
+determinant ratio $1+\eps L_n-\tfrac{\eps^2}4N_n$ is negative for all small
+$\eps$, whatever the sign of $L_n$. Since a monotone-in-$n$ failure witness
+is not needed --- we only require that no $n$ below the window fails and
+some $n$ above it fails --- the first failure order lies in
+$[(1-\kappa),(1+\kappa)]\cdot L/(2g)$, and $\kappa\downarrow0$ completes the
+proof.
+\end{proof}
+
+\begin{remark}[What regularity does and does not give]\label{rem:noO1}
+Stahl--Totik regularity supplies $n$-th root asymptotics and hence the ratio
+limit of Theorem~\ref{thm:depth}. It does \emph{not} supply the
+multiplicative constants that would be needed for a statement of the form
+$n_\eps=\log(C/\eps)/(2g)+O(1)$; such refinements require strong (Szeg\H o
+class) asymptotics and additional hypotheses. Our numerical experiments
+confirm this caution: the effective constant varies substantially with the
+background and with the compactification scale (Section~\ref{sec:numerics}).
+\end{remark}
+
+\begin{corollary}[Continued-fraction defect depth]\label{cor:cfdepth}
+In the setting of Theorem~\ref{thm:depth}, the first anomalous
+continued-fraction coefficient of the defected system occurs at raw index
+$2n_\eps+O(1)$ with the mass/length parity of Theorem~\ref{thm:cfindex}:
+Green distance from the admissible support is, asymptotically, the
+inverse-spectral resolution depth.
+\end{corollary}
+
+% ============================================================================
+\section{The shifted zeta-string reference family}\label{sec:zeta}
+% ============================================================================
+
+\subsection{The positive reference system}
+Let $\xi(s)=\tfrac12 s(s-1)\pi^{-s/2}\Gamma(s/2)\zeta(s)$ and, for
+$\omega>0$, define $q_\omega$ by \eqref{eq:qomega}. The following facts are
+established in \cite{Suzuki2023,MarginPaper,StringPaper}: if the half-plane
+$\Rea s>\tfrac12+\omega$ is free of zeros of $\xi$ --- in particular, for
+every $\omega>0$, under the Riemann hypothesis --- then $q_\omega$ is a
+Stieltjes function; its spectral measure $\sigma_\omega$ is absolutely
+continuous on $(0,\infty)$ with density
+\begin{equation}\label{eq:density}
+\rho_\omega(\lambda)
+=\frac{1}{\pi\sqrt{\lambda}}\,
+\Rea\frac{\xi'}{\xi}\Big(\tfrac12+\omega-i\sqrt\lambda\Big)
+=\frac{1}{\pi\sqrt\lambda}\sum_{\gamma}
+\frac{\omega}{\omega^2+(\sqrt\lambda-\gamma)^2},
+\end{equation}
+the sum running over the ordinates of the (paired) zeros: the
+Poisson-broadened zero measure. The density is continuous and strictly
+positive on $(0,\infty)$, with $\rho_\omega(\lambda)\sim
+S_\omega/(\pi\sqrt\lambda)$ as $\lambda\downarrow0$, where
+$S_\omega=(\xi'/\xi)(\tfrac12+\omega)>0$, and
+$\rho_\omega(\lambda)\asymp\log\lambda/\sqrt\lambda$ as
+$\lambda\to\infty$; in particular
+$\int(1+\lambda)^{-1}\dd\sigma_\omega<\infty$, so
+Theorem~\ref{thm:compactification} applies. We call
+$(\sigma_\omega,q_\omega)$ the \emph{positive shifted-zeta reference
+system}. After compactification at scale $s_0$, the reference measure
+$\mu_{\omega,s_0}$ is a finite measure on $[0,1]$ whose density is
+continuous and positive on $(0,1)$; in particular $\mu_{\omega,s_0}$ is
+regular in the Stahl--Totik sense \cite{StahlTotik}.
+
+\subsection{One hypothetical quartet}
+
+\begin{proposition}[Location and weight of the defect]\label{prop:quartet}
+Insert into \eqref{eq:qomega} a hypothetical simple zero
+$\rho=\tfrac12+\delta+i\tau$ with $\delta>\omega>0$, $\tau>0$, together with
+the conjugate and functional-equation partners
+$\bar\rho,\,1-\rho,\,1-\bar\rho$. Set $\eta=\delta-\omega>0$. On the
+principal branch $\Rea w>0$, the added quartet contributes to $q_\omega$
+exactly two poles, located at
+\[
+z_\pm=-(\eta\pm i\tau)^2=\tau^2-\eta^2\mp 2i\eta\tau ,
+\]
+each with Stieltjes-form weight $2$:
+$q_\omega(z)\sim 2/(z_\pm-z)$ as $z\to z_\pm$. Under resolvent
+compactification at scale $s_0$ the defect points and weights become
+\[
+c_\pm=\frac{z_\pm}{s_0+z_\pm},
+\qquad
+\eps_{\mathrm{eff},\pm}=\frac{2}{s_0+z_\pm},
+\qquad
+|\eps_{\mathrm{eff}}|\sim\frac{2}{\tau^2}\ \ (\tau\to\infty).
+\]
+The partners $1-\rho,1-\bar\rho$ produce no principal-sheet poles; together
+with the cut contribution of the quartet they produce a signed absolutely
+continuous correction treated in Lemma~\ref{lem:cut}.
+\end{proposition}
+
+\begin{proof}
+$\xi'/\xi(\tfrac12+\omega+w)$ has a simple pole of residue $1$ at each zero;
+the zero $\rho$ gives $w_0=\rho-\tfrac12-\omega=\eta+i\tau$ with
+$\Rea w_0>0$ (principal sheet), and $\bar\rho$ gives $\bar w_0$; the
+partners give $\Rea w<0$. Near $w_0$, with $z=-w^2$,
+$z-z_+=-2w_0(w-w_0)+O((w-w_0)^2)$, so
+\[
+q_\omega(z)=\frac{1}{w}\cdot\frac{1}{w-w_0}(1+o(1))
+=\frac{1}{w_0}\cdot\frac{-2w_0}{z-z_+}(1+o(1))
+=\frac{2}{z_+-z}(1+o(1)).
+\]
+The compactified data follow from Theorem~\ref{thm:compactification}: a pole
+$w/(\lambda_0-z)$ transforms to a pole at $x_0=\lambda_0/(s_0+\lambda_0)$
+with weight $w/(s_0+\lambda_0)$, applied at $\lambda_0=z_\pm$.
+\end{proof}
+
+\subsection{The signed cut correction}
+
+Beyond its two principal poles, the quartet alters the boundary values of
+$q_\omega$ on the cut $[0,\infty)$: writing the quartet's exact contribution
+to $(\xi'/\xi)(\tfrac12+\omega+w)$ as
+$d(w)=\sum_{\gamma_v\in\{\tau-i\delta,\ \tau+i\delta\}}
+\big(\tfrac1{\,\omega+w-i\gamma_v}+\tfrac1{\,\omega+w+i\gamma_v}\big)$,
+the function $q_{\mathrm{def}}(z)=d(\sqrt{-z})/\sqrt{-z}$ decomposes as the
+two poles of Proposition~\ref{prop:quartet} plus an absolutely continuous
+part on $[0,\infty)$ with signed density
+\begin{equation}\label{eq:cutdensity}
+\rho_{\mathrm{def}}(\lambda)
+=\frac{1}{\pi\sqrt{\lambda}}\,\Rea d\big(-i\sqrt\lambda\,\big) .
+\end{equation}
+When the defect is scaled by a small parameter $\eps$ (the sensitivity
+model), the correction is $\eps\rho_{\mathrm{def}}$.
+
+\begin{lemma}[The cut correction cannot affect the leading depth]
+\label{lem:cut}
+Fix $\omega>0$, $s_0>0$ and the quartet parameters $(\tau,\delta)$,
+$\delta>\omega$. Then
+\[
+M_*:=\sup_{\lambda>0}
+\frac{|\rho_{\mathrm{def}}(\lambda)|}{\rho_\omega(\lambda)}<\infty .
+\]
+Consequently, for $0<\eps<1/(2M_*)$, the perturbed background
+$\dd\sigma_\omega+\eps\rho_{\mathrm{def}}\dd\lambda$ satisfies, in quadratic
+form on every polynomial subspace and for every $n$,
+\[
+(1-\eps M_*)\,H_n^{(0)}\ \le\ H_n^{(0)}+\eps R_n\ \le\ (1+\eps M_*)\,H_n^{(0)},
+\]
+where $H_n^{(0)}$ and $R_n$ are the compactified Hankel matrices of
+$\sigma_\omega$ and of the cut correction. Hence the measure
+``background $+$ cut correction'' remains a positive measure with the same
+support, regularity class, and Green function, its Christoffel kernels are
+distorted by factors in $[(1+\eps M_*)^{-1},(1-\eps M_*)^{-1}]$, and the
+first failure order of the full defected system equals that of the
+principal-pole (rank-two) model up to an $O(1)$ shift as $\eps\downarrow0$:
+\[
+n^{\mathrm{full}}_\eps=n^{\mathrm{pole}}_\eps+O(1)
+\qquad(\eps\downarrow0).
+\]
+In particular the ratio limit of Theorem~\ref{thm:depth} is unchanged.
+\end{lemma}
+
+\begin{proof}
+\emph{Boundedness of the ratio.} Both densities are continuous and positive
+(resp.\ continuous) on $(0,\infty)$, so it suffices to compare the ends. As
+$\lambda\downarrow0$: $\Rea d(-i\sqrt\lambda)$ tends to the finite constant
+$d(0)$, while $\Rea(\xi'/\xi)(\tfrac12+\omega-i\sqrt\lambda)\to S_\omega>0$;
+both densities behave like $\text{const}/\sqrt\lambda$ and the ratio tends to
+$|d(0)|/S_\omega$. As $\lambda\to\infty$: with $u=\sqrt\lambda$,
+$\Rea d(-iu)=O(u^{-2})$ (two Lorentzian pairs centred at $\pm\tau$), while
+$\Rea(\xi'/\xi)(\tfrac12+\omega-iu)\asymp\log u\to\infty$ by
+\eqref{eq:density} and the Riemann--von Mangoldt density; the ratio tends to
+$0$. Hence $M_*<\infty$.
+
+\emph{Quadratic-form domination.} For any polynomial $P$ (in the
+compactified variable; the compactification map is a fixed smooth bijection,
+so pointwise domination of densities is preserved),
+\[
+\Big|\int P^2\,\eps\rho_{\mathrm{def}}\Big|
+\le\eps M_*\int P^2\,\rho_\omega
+=\eps M_*\,\langle P,H^{(0)}P\rangle .
+\]
+\emph{Threshold stability.} Let $\widetilde H_n=H^{(0)}_n+\eps R_n$; by the
+two-sided bound, $\widetilde H_n$ is positive definite for
+$\eps<1/M_*$ and its inverse satisfies
+$(1+\eps M_*)^{-1}(H^{(0)}_n)^{-1}\le\widetilde H_n^{-1}\le
+(1-\eps M_*)^{-1}(H^{(0)}_n)^{-1}$, hence the CD kernels obey
+$\widetilde K_n(c,\bar c)\in
+[(1+\eps M_*)^{-1},(1-\eps M_*)^{-1}]\cdot K_n(c,\bar c)$,
+and the bilinear values are controlled by the same two-sided operator bound
+via polarization, uniformly in $n$, once $\eps\le 1/(2M_*)$. The exact
+rank-two threshold of Theorem~\ref{thm:ranktwo}, computed against
+$\widetilde H_n$ instead of $H^{(0)}_n$, is therefore displaced by at most a
+fixed multiplicative factor $1+O(\eps)$ inside the logarithm, i.e.\ the first
+failure order shifts by $O(\eps)/(2g)+O(1)=O(1)$.
+\end{proof}
+
+\begin{remark}
+Lemma~\ref{lem:cut} discharges what \cite{ROUND6} flagged as the one
+remaining local proof obligation: the finite-rank model is not an
+approximation but the exact leading mechanism, the a.c.\ correction being
+dominated by the reference density. The same argument applies verbatim to
+any finite collection of quartets.
+\end{remark}
+
+\subsection{The sensitivity theorem}
+
+We emphasize the logical status of the following statement: it concerns the
+positive reference system \eqref{eq:qomega}--\eqref{eq:density} perturbed by
+\emph{one hypothetical quartet scaled by $\eps$}. It is a perturbative
+sensitivity theorem about an exactly defined model. It is \emph{not} a
+statement about the actual zeta function in a world where RH fails: there,
+nothing would confine the violation to a single quartet, and we make no such
+claim. (A conditional variant --- assuming all remaining zeros admissible,
+the actual response decomposes as reference plus the quartet's exact
+contribution, to which the same analysis applies by
+Lemma~\ref{lem:cut} --- holds with identical proof.)
+
+\begin{theorem}[Spectral-defect sensitivity of the shifted-zeta reference
+system]\label{thm:zetadepth}
+Fix $\omega>0$, $s_0>0$, and quartet parameters $\tau>0$,
+$\eta=\delta-\omega>0$. Let $\mu_{\omega,s_0}$ be the compactified reference
+measure, $g_{\omega,s_0}$ the Green function of the complement of its
+support, and $c_\pm$ the compactified defect points of
+Proposition~\ref{prop:quartet}. Scale the quartet by $\eps\downarrow0$ and
+let $n_\eps$ be the first compactified Hankel order at which the defected
+system loses Stieltjes positivity. Then, under the nondegeneracy condition
+of Theorem~\ref{thm:depth}(2) at $c_+$,
+\[
+\frac{n_\eps}{\log(1/\eps)}
+\longrightarrow
+\frac1{2\,g_{\omega,s_0}(c_+)},
+\]
+and the first anomalous continued-fraction coefficient of the compactified
+string occurs at the index given by Theorem~\ref{thm:cfindex}.
+\end{theorem}
+
+\begin{proof}
+The compactified reference measure is finite with support
+$\overline{(0,1)}=[0,1]$ and positive continuous density on $(0,1)$, hence
+regular \cite{StahlTotik}; Proposition~\ref{prop:quartet} realizes the
+scaled quartet as the conjugate rank-two defect
+$\tfrac{\eps'}2\delta_{c_+}+\tfrac{\bar\eps'}2\delta_{c_-}$ with
+$\eps'=2\eps/(s_0+z_+)$, plus the cut correction; Lemma~\ref{lem:cut}
+reduces to the pure finite-rank model; Theorems~\ref{thm:ranktwo}
+and~\ref{thm:depth}(2) give the ratio limit; Theorem~\ref{thm:cfindex}
+locates the continued-fraction anomaly.
+\end{proof}
+
+\subsection{High height: a moving-point asymptotic}\label{sec:highheight}
+
+For $\tau\to\infty$ at fixed $\eta,s_0,\omega$, the defect point approaches
+the compactified endpoint:
+\[
+1-\Rea c_+\sim\frac{s_0}{\tau^2},
+\qquad
+|\Ima c_+|\sim\frac{2s_0\eta}{\tau^3},
+\]
+and the equilibrium density of the limiting interval near its upper edge
+gives the explicit Green asymptotic
+\begin{equation}\label{eq:gmoving}
+g(c_+)\sim\frac{2\eta\sqrt{s_0}}{\tau^2}
+\qquad\Big(\text{more precisely }
+2\eta\sqrt{s_0+\lambda_{\min}}/\tau^2\text{ for a support hull
+}[\lambda_{\min},\infty)\Big),
+\end{equation}
+verified against the exact interval Green function to $0.4\%$ at
+$\tau=160$ \cite{LabRecord}. Combining \eqref{eq:gmoving} with
+$|\eps_{\mathrm{eff}}|\sim2/\tau^2$ \emph{formally} in the fixed-point
+threshold yields the high-height prediction
+\begin{equation}\label{eq:highheight}
+n_{\mathrm{comp}}
+\;\asymp\;
+\frac{\tau^2\log\tau}{2\eta\sqrt{s_0}} .
+\end{equation}
+We state \eqref{eq:highheight} as a \emph{moving-point asymptotic supported
+numerically}: both the evaluation point and the effective weight vary with
+$\tau$, and fixed-point Stahl--Totik regularity does not supply the required
+uniformity. Establishing uniform Christoffel asymptotics in the joint regime
+$n\asymp\tau^2\log\tau/(\eta\sqrt{s_0})$ --- by strong asymptotics for the
+compactified $\omega$-density, endpoint asymptotics plus analytic
+continuation, Riemann--Hilbert methods, or extremal polynomial bounds --- is
+an open problem we consider tractable but do not resolve here. The numerical
+section documents both the regime where \eqref{eq:highheight}-type
+predictions hold (broadening or displacement exceeding the local zero
+spacing) and the quasi-discrete regime of genuine low-height zeta data,
+where the interval law overestimates the observed depth.
+
+\subsection{Dependence on the scale $s_0$}\label{sec:s0}
+
+The resolvent compactification is a one-parameter family, and the detection
+order genuinely depends on the scale: in controlled experiments with fixed
+spectral data and defect, $n_{s_0}$ is non-monotone in $s_0$ (e.g.\
+$22,14,12,17,28$ at $s_0=1,4,25,100,400$ for a fixed moderate-height defect
+\cite{LabRecord}), and no power-law renormalization removes the dependence
+at moderate scales. At high height with $\tau^2\gg s_0$, \eqref{eq:gmoving}
+gives the leading covariance $n_{s_0}\propto1/\sqrt{s_0+\lambda_{\min}}$.
+We therefore use throughout the terminology \emph{resolvent-compactified
+detection depth at scale $s_0$}: it is cutoff-independent for fixed $s_0$
+(Theorem~\ref{thm:compactification} makes it a Taylor-jet order), but it is
+not scale-free. The observed minimum of $n_{s_0}$ near $s_0\sim\tau^2$
+suggests a detection-optimal scale $s_0^*(\tau)$; we leave this as a
+future-work observation.
+
+% ============================================================================
+\section{Time-domain detection}\label{sec:time}
+% ============================================================================
+
+We now compare with the shifted screw-function criterion of
+\cite{Suzuki2023,MarginPaper}. For fixed $\omega>0$ the positive reference
+background has the linear margin
+\[
+\Psi^{\mathrm{bg}}_\omega(t)=S_\omega\,t+O(1),
+\qquad
+S_\omega=\frac{\xi'}{\xi}\Big(\tfrac12+\omega\Big)>0 ,
+\]
+and one violating quartet contributes the growing oscillation
+\begin{equation}\label{eq:quartetgrow}
+\Psi^{\mathrm{grow}}_{\omega,\rho}(t)
+=-\frac{2e^{\eta t}}{\tau^2+\eta^2}\cos(\tau t+\alpha)+O(t),
+\end{equation}
+with amplitude coefficient $2/(\tau^2+\eta^2)$; this normalization has been
+audited symbolically and numerically against the exact spectral series (the
+two growing branches are $e^{(\eta\pm i\tau)t}/(\eta\pm i\tau)^2$;
+agreement of \eqref{eq:quartetgrow} with the exact quartet term to relative
+$10^{-8}$ by $t=150$) \cite{LabRecord,MarginPaper}.
+
+\begin{theorem}[Envelope detection time]\label{thm:envelope}
+Define $t_{\mathrm{env}}$ by
+$\dfrac{2e^{\eta t_{\mathrm{env}}}}{\tau^2+\eta^2}=S_\omega\,
+t_{\mathrm{env}}$. Then, for fixed $\eta,\omega>0$, as $\tau\to\infty$,
+\[
+\eta\,t_{\mathrm{env}}
+=2\log\tau+\log\log\tau+\log\frac{S_\omega}{\eta}+o(1).
+\]
+\end{theorem}
+
+\begin{proof}
+Set $x=\eta t_{\mathrm{env}}$; the defining equation reads
+$2e^x/(\tau^2+\eta^2)=(S_\omega/\eta)\,x$, i.e.
+\[
+x=\log(\tau^2+\eta^2)+\log x+\log\frac{S_\omega}{2\eta}.
+\]
+Since $\log(\tau^2+\eta^2)=2\log\tau+o(1)$ and a first iteration gives
+$x=2\log\tau+O(\log\log\tau)$, we get
+$\log x=\log\log\tau+\log2+o(1)$, and substituting back,
+$x=2\log\tau+\log\log\tau+\log2+\log\frac{S_\omega}{2\eta}+o(1)
+=2\log\tau+\log\log\tau+\log\frac{S_\omega}{\eta}+o(1)$.
+\end{proof}
+
+\begin{theorem}[First-negative-time bracket]\label{thm:bracket}
+Let $\Psi(t)=S_\omega t+\Psi_{\omega,\rho}(t)$ be the one-quartet
+perturbative model with the exact quartet term, and
+$t_{\mathrm{first}}=\inf\{t>0:\Psi(t)<0\}$. Assume the transversality
+condition that at $t_{\mathrm{env}}$ the envelope crosses the (exact,
+non-oscillatory) margin at the rate $\eta+o(1)$, and that the
+non-oscillatory part varies by $o(1)$ relative to its value on intervals of
+length $O(1/\tau)$. Then, for $\tau$ large,
+\[
+0\ \le\ t_{\mathrm{first}}-t_{\mathrm{env}}\ \le\ \frac{2\pi}\tau
++o(1/\tau),
+\qquad\text{hence}\qquad
+\eta\,t_{\mathrm{first}}
+=2\log\tau+\log\log\tau+\log\frac{S_\omega}{\eta}+o(1).
+\]
+\end{theorem}
+
+\begin{proof}
+Before $t_{\mathrm{env}}$ the envelope is below the margin, so
+$\Psi>0$: $t_{\mathrm{first}}\ge t_{\mathrm{env}}$. Within
+$(t_{\mathrm{env}},t_{\mathrm{env}}+2\pi/\tau]$ the cosine attains a trough
+$\cos=-1$; over that interval the envelope changes by the factor
+$e^{2\pi\eta/\tau}=1+O(1/\tau)$ and the non-oscillatory part by $o(1)$
+relative terms, so at the trough
+$\Psi\le S_\omega t\,(1+o(1))-\text{envelope}(t)\,(1-O(1/\tau))<0$ by
+transversality. Numerically the bracket is comfortable: gaps
+$0.115,0.027,0.011,0.0035$ against bounds $2\pi/\tau=
+0.314,0.079,0.020,0.0049$ at $\tau=20,80,320,1280$ \cite{LabRecord}.
+\end{proof}
+
+\begin{corollary}[The two coordinates compared]\label{cor:compare}
+For the same hypothetical quartet at height $\tau$ with horizontal excess
+$\eta=\delta-\omega$: the time-domain criterion detects it at
+\[
+t_{\mathrm{first}}=\frac{2\log\tau+\log\log\tau+O(1)}{\eta},
+\]
+by Theorems \ref{thm:envelope}--\ref{thm:bracket}, while the
+resolvent-compactified inverse-spectral coordinate at scale $s_0$ requires
+depth $n_\eps\sim\log(1/\eps)/(2g_{\omega,s_0}(c_+))$ for the scaled defect
+(Theorem~\ref{thm:zetadepth}), with the high-height moving-point behavior
+\eqref{eq:highheight} predicting $n\asymp\tau^2\log\tau/(2\eta\sqrt{s_0})$.
+The time-domain coordinate resolves a high defect on a logarithmic-in-height
+scale; the compactified moment description is predicted, and numerically
+observed in the accessible regimes, to require polynomially-in-height larger
+resolution. This is a statement about the conditioning of two exact
+representations of the same object, in the stated coordinates and asymptotic
+regimes.
+\end{corollary}
+
+% ============================================================================
+\section{Numerical illustrations}\label{sec:numerics}
+% ============================================================================
+
+All computations below are reproducible from the laboratory record
+\cite{LabRecord}; multi-precision arithmetic (60--450 digits), exact
+integer certification where applicable, and control rows (undefected
+backgrounds remaining Stieltjes-clean) accompany every experiment. Numerics
+here illustrate regimes and constants; no proof depends on them.
+
+\subsection{Exactness certificates}
+The binomial transform \eqref{eq:binomial} was verified on rational toy
+measures to $8\cdot10^{-131}$; the rank-one identity \eqref{eq:rankone} to
+$10^{-285}$; the rank-two identity \eqref{eq:ranktwo} to $10^{-273}$; the
+determinant formulas \eqref{eq:detformulas} to $10^{-112}$; and the index
+law of Theorem~\ref{thm:cfindex} exactly on twenty synthetic single-defect
+measures and four graph-Laplacian-type specimens (first anomaly
+$2n_1-1$ as a length, resp.\ $2n_0-2$ as a mass, in every case).
+
+\subsection{The a.c.\ reference at $\omega>0$: interval law at all
+displacements}
+For a scaled reference family (mock ordinates $\gamma_j/5$, Poisson
+broadening $\omega\in\{0.15,0.3\}$) with one quartet, measured detection
+orders match the interval Green prediction with no fitted constants across
+effective displacements $\eta\in[0.2,1.2]$ (ratios $0.64$--$1.01$ over
+eight cases), including displacements far below the ordinate spacing, where
+the unbroadened (pure-point) background deviates; two parameter pairs with
+equal $\eta$ and different $(\delta,\omega)$ give equal depth, confirming
+that the defect enters only through the horizontal excess.
+
+\subsection{Unscaled zeta data and the quasi-discrete regime}
+With the first $100$ genuine ordinates plus the Riemann--von Mangoldt tail,
+$s_0=200$, $\omega\in\{0.1,0.2\}$ (control clean to $n=28$):
+
+\begin{center}
+\begin{tabular}{cccccccc}
+\toprule
+$\omega$ & $\tau$ & $\eta$ & $n_0$ & $n_1$ & $g$ exact & $|\eps_{\rm eff}|$
+& measured/naive \\
+\midrule
+0.1 & 16 & 1.0 & 14 & 14 & 0.18085 & 0.00438 & 0.93 \\
+0.1 & 20 & 1.0 & 14 & 14 & 0.09379 & 0.00333 & 0.46 \\
+0.1 & 25 & 1.0 & 22 & 21 & 0.05866 & 0.00242 & 0.41 \\
+0.1 & 16 & 0.5 & 19 & 18 & 0.09272 & 0.00439 & 0.61 \\
+0.1 & 20 & 0.5 & 26 & 25 & 0.04705 & 0.00333 & 0.41 \\
+0.2 & 20 & 1.0 & 16 & 16 & 0.09379 & 0.00333 & 0.53 \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\noindent
+Detection at genuine zeta scale is finite and computable; the sub-unity
+ratios reflect the \emph{quasi-discrete regime}: at these heights the local
+zero spacing $2\pi/\log(\tau/2\pi)\approx4.5$--$5.4$ exceeds both $\eta$ and
+$\omega$, and the interval law overestimates the depth. In controlled
+scaled experiments the ratio approaches $1$ once the displacement exceeds
+roughly $1.5$--$3$ local spacings.
+
+\subsection{$s_0$-dependence and the time-domain constant}
+The $s_0$ panel ($n_{s_0}=22,14,12,17,28$ at $s_0=1,4,25,100,400$, fixed
+data) documents the genuine scale dependence of
+Section~\ref{sec:s0}. For the time domain, the solved envelope thresholds
+converge to the constant of Theorem~\ref{thm:envelope}:
+residuals $\eta t_*-2\log\tau-\log\log\tau=-3.757\to-3.483$ over
+$\tau=10^2$--$10^{12}$ against $\log(S_\omega/\eta)=-3.480$ at
+$\omega=0.1$, $\eta=0.15$.
+
+%% Figures (to be generated for the submission version):
+%% Fig 1: schematic — support, forbidden atom, conjugate pair, Green contours,
+%%        CF chain with first bad coefficient highlighted.
+%% Fig 2: eps*|a|*K'_n(a,a) vs n for a toy background (exact threshold).
+%% Fig 3: table above as plot, annotated with the quasi-discrete regime.
+%% Fig 4: eta*t* - 2log(tau) - loglog(tau) -> log(S_omega/eta).
+%% Fig 5: n_{s0} vs s0 (non-monotone).
+
+% ============================================================================
+\section{Discussion and open problems}\label{sec:discussion}
+% ============================================================================
+
+\subsection{What has been shown}
+An exact chain --- finite-rank defect $\to$ Hankel perturbation $\to$
+Christoffel threshold $\to$ first continued-fraction failure --- with a
+Green-function resolution law at fixed defect, and an arithmetic realization
+in which the defect parameter of the shifted zeta family is the same
+horizontal excess $\eta=\delta-\omega$ that drives the time-domain
+criterion. The two exact representations of the same hypothetical violation
+have parametrically different conditioning: logarithmic in height for the
+screw function, polynomial in height (in the regimes established) for the
+compactified inverse-spectral coordinate.
+
+\subsection{What has not been shown}
+No new zero-free region; no reformulation that makes the Riemann hypothesis
+more accessible; no claim that an actual failure of RH would consist of a
+single quartet over a positive background. The moving-point law
+\eqref{eq:highheight} awaits uniform Christoffel asymptotics; the constants
+in the depth law are provably not universal
+(Remark~\ref{rem:noO1}, Section~\ref{sec:s0}).
+
+\subsection{Open problems}
+\begin{openproblem}[Endpoint uniformity]
+As $\omega\downarrow0$ the reference measure degenerates from absolutely
+continuous to pure point, and the observed behavior crosses over from the
+interval law to a discrete-gap regime governed by the ratio of the defect
+displacement to the local zero spacing. Prove a uniform (double-scaling)
+Christoffel asymptotic covering this degeneration.
+\end{openproblem}
+\begin{openproblem}[Moving-point uniformity]
+Establish \eqref{eq:highheight} as a theorem, e.g.\ through strong
+asymptotics for the compactified $\omega$-density or extremal polynomial
+bounds uniform near the endpoint.
+\end{openproblem}
+\begin{openproblem}[Optimal scale]
+Characterize the minimizer $s_0^*(\tau)$ of $n_{s_0}$ and its asymptotics.
+\end{openproblem}
+Further directions: multiple-defect interaction laws
+(Remark~\ref{rem:multidefect}) and their rate-tie phenomena; analogous
+sensitivity laws for other completed $L$-functions, where the same
+construction applies verbatim to the corresponding shifted families; and the
+finite (graph zeta) laboratory in which the present mechanism was first
+isolated, which raises separate questions about non-backtracking spectra and
+twisted responses and will be treated elsewhere.
+
+\subsection*{Acknowledgements}
+AI tools were used extensively in exploration, numerical verification,
+auditing, and drafting; the author directed the research, reviewed the
+arguments and sources, and takes responsibility for the content.
+% (Placeholder wording; align with the companion papers' final formulation.)
+
+% ============================================================================
+\begin{thebibliography}{99}
+% ALL ENTRIES: verify bibliographic data before submission. %% VERIFY
+
+\bibitem{Stieltjes} T.~J.~Stieltjes,
+\emph{Recherches sur les fractions continues},
+Ann.\ Fac.\ Sci.\ Toulouse 8 (1894), J1--J122. %% VERIFY
+
+\bibitem{Wall} H.~S.~Wall,
+\emph{Analytic Theory of Continued Fractions},
+Van Nostrand, 1948. %% VERIFY chapter for determinant formulas
+
+\bibitem{GK} F.~R.~Gantmacher and M.~G.~Kre\u{\i}n,
+\emph{Oscillation Matrices and Kernels and Small Vibrations of Mechanical
+Systems}, AMS Chelsea, 2002 (orig.\ 1950). %% VERIFY mechanical CF interpretation
+
+\bibitem{KacKrein} I.~S.~Kac and M.~G.~Kre\u{\i}n,
+\emph{On the spectral functions of the string},
+Amer.\ Math.\ Soc.\ Transl.\ (2) 103 (1974), 19--102. %% VERIFY length=q(0) identity
+
+\bibitem{Schmudgen} K.~Schm\"udgen,
+\emph{The Moment Problem}, Springer GTM 277, 2017. %% VERIFY
+
+\bibitem{Uvarov} V.~B.~Uvarov,
+\emph{The connection between systems of polynomials orthogonal with respect
+to different distribution functions},
+USSR Comput.\ Math.\ Math.\ Phys.\ 9 (1969), 25--36. %% VERIFY
+
+\bibitem{Zhedanov} A.~Zhedanov,
+\emph{Rational spectral transformations and orthogonal polynomials},
+J.\ Comput.\ Appl.\ Math.\ 85 (1997), 67--86. %% VERIFY
+
+\bibitem{Nevai} P.~Nevai,
+\emph{G\'eza Freud, orthogonal polynomials and Christoffel functions. A case
+study}, J.\ Approx.\ Theory 48 (1986), 3--167. %% VERIFY
+
+\bibitem{Totik} V.~Totik,
+\emph{Asymptotics for Christoffel functions for general measures on the real
+line}, J.\ Anal.\ Math.\ 81 (2000), 283--303. %% VERIFY
+
+\bibitem{StahlTotik} H.~Stahl and V.~Totik,
+\emph{General Orthogonal Polynomials},
+Cambridge Univ.\ Press, 1992. %% VERIFY regularity criterion + root asymptotics
+
+\bibitem{BergDurea} C.~Berg and A.~J.~Dur\'an,
+\emph{A transformation from Hausdorff to Stieltjes moment sequences},
+Ark.\ Mat.\ 42 (2004), 239--257. %% VERIFY
+
+\bibitem{LasserrePauwels} J.-B.~Lasserre and E.~Pauwels,
+\emph{The empirical Christoffel function with applications in data
+analysis}, Adv.\ Comput.\ Math.\ 45 (2019), 1439--1468. %% VERIFY
+
+\bibitem{ChristoffelAnomaly2026}
+\emph{Scalable anomaly detection via a univariate Christoffel function},
+preprint, arXiv:2606.12483 (2026). %% VERIFY authors
+
+\bibitem{DataStreams}
+\emph{Leveraging the Christoffel function for outlier detection in data
+streams}, Int.\ J.\ Data Sci.\ Anal.\ (2024). %% VERIFY authors/volume
+
+\bibitem{Suzuki2023} M.~Suzuki,
+\emph{Aspects of the screw function corresponding to the Riemann
+zeta-function}, J.\ London Math.\ Soc.\ 108 (2023). %% VERIFY pages
+
+\bibitem{MarginPaper} [Author],
+\emph{The linear margin of the shifted screw-function family} (companion
+paper), 2026. %% placeholder — final title/reference
+
+\bibitem{StringPaper} [Author],
+\emph{The $\omega$-string family of the Riemann xi function} (companion
+paper), 2026. %% placeholder — final title/reference
+
+\bibitem{ROUND6} [Author],
+manuscript-preparation audit record, 2026. %% internal; cite or absorb
+
+\bibitem{LabRecord} [Author],
+laboratory record: finite defect-depth experiments, rounds 1--6, 2026.
+%% internal record; convert relevant tables into the paper or a repository link
+
+\end{thebibliography}
+
+\end{document}

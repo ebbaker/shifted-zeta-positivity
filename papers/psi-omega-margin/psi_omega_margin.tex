@@ -1,0 +1,1484 @@
+\documentclass[11pt,reqno]{amsart}
+
+\usepackage[T1]{fontenc}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{booktabs}
+\usepackage[expansion=false]{microtype}
+\usepackage{xcolor}
+\usepackage[margin=1.2in]{geometry}
+\usepackage[colorlinks=true,linkcolor=blue!50!black,citecolor=blue!50!black,
+            urlcolor=blue!50!black]{hyperref}
+
+\theoremstyle{plain}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{hypothesis}{Hypothesis}
+\renewcommand{\thehypothesis}{H($\vartheta$)}
+
+\DeclareMathOperator{\Res}{Res}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\Rp}{\operatorname{Re}}
+\newcommand{\Ip}{\operatorname{Im}}
+\newcommand{\lxi}[1]{\left(\tfrac{\xi'}{\xi}\right)\!#1}
+
+\title[The margin in the shifted screw-function criterion]
+      {The margin in the shifted screw-function criterion\\ for zero-free half-planes}
+
+% ---------------------------------------------------------------------------
+\author{Edward B. Baker III}
+\email{edwardbaker86@gmail.com}
+
+\date{\today}
+
+\begin{document}
+
+\begin{abstract}
+Suzuki attached to the Riemann zeta-function a continuous real function $\Psi$ --- the screw
+function of $\zeta$ --- and proved that the Riemann Hypothesis is equivalent to the pointwise
+inequality $\Psi(t)\ge 0$. He also introduced a shifted family $\Psi_\omega$ and proved that
+$\zeta(s)\neq 0$ for $\Rp(s)>\tfrac12+\omega$ if and only if $\Psi_\omega(t)\ge 0$ for all
+sufficiently large $t$. The shifted family appears to have attracted no further attention.
+
+We make the shifted criterion quantitative. Writing $\vartheta:=\Theta-\tfrac12$ where
+$\Theta=\sup\{\Rp(\rho)\}$, we show that for $0<\omega<\tfrac12$
+\[
+  \Psi_\omega(t)\;=\;\lxi{\bigl(\tfrac12+\omega\bigr)}\,t \;+\; \lxi{'\bigl(\tfrac12+\omega\bigr)}
+  \;+\;O\!\left(e^{-(\omega-\vartheta)t}\right),
+\]
+where the two leading coefficients are unconditional closed forms and the implied constant is
+explicit --- under the Riemann Hypothesis it is $\omega^{-1}(\xi'/\xi)(\tfrac12+\omega)$. Four
+consequences follow. First, the criterion carries a \emph{margin} which is linear in $t$ with slope
+exactly $(\xi'/\xi)(\tfrac12+\omega)$; this slope vanishes as $\omega\to0^{+}$ precisely because
+$(\xi'/\xi)(\tfrac12)=0$, which identifies the mechanism by which the Riemann Hypothesis is the
+marginal member of the family. Second, whenever the zero-free half-plane holds at all --- the only
+case in which the criterion can hold --- it holds with room to spare: $\Psi_\omega(t)>0$ for every
+$t>t_0(\omega)$ with $t_0(\omega)\le 0.0129\,\omega<0.0065$, beyond which $\Psi_\omega$ admits an
+explicit linear lower bound. Third, a zero with $\Rp(\rho)=\tfrac12+\delta$ and $\delta>\omega$
+drives $\Psi_\omega$ with an envelope growing at the exact rate $\delta-\omega$ and explicit
+amplitude, so that failure of the criterion is exponentially visible. Fourth, the family undergoes
+a sharp phase transition at $\omega_c:=\Theta-\tfrac12$: below $\omega_c$ the function
+$e^{-\varepsilon t}\Psi_\omega(t)$ oscillates between $\pm\infty$ for every
+$\varepsilon<\omega_c-\omega$, while at and above $\omega_c$ one has
+$\Psi_\omega(t)=(\xi'/\xi)(\tfrac12+\omega)t+O(1)$; the Riemann Hypothesis is precisely the
+statement that this transition is continuous. Unconditionally, the verification of the Riemann
+Hypothesis to height $3\cdot10^{12}$, combined with the explicit zero-free regions, forces
+$\Psi_\omega(t)>0$ on an explicit initial window --- for $\omega=\tfrac14$ up to $t=110$, that is,
+$x=e^{t}\approx10^{48}$ --- whose endpoint obeys $t_+(\omega)=(4/c+o(1))(\tfrac12-\omega)^{-2}$
+with $c=5.558691$ as $\omega\to\tfrac12^{-}$; in particular no computation of feasible size can
+exhibit a violation. All results transfer to real primitive Dirichlet characters, where the margin
+grows with the conductor and the criterion is provably blind to real (Siegel) zeros. We verify
+each statement numerically, including checks of the asymptotics against the arithmetic sides of
+the formulas that use no information about the zeros, and close with an assessment of what the
+reformulation does and does not supply.
+\end{abstract}
+
+\maketitle
+
+\setcounter{tocdepth}{1}
+\tableofcontents
+
+% ===========================================================================
+\section{Introduction}
+% ===========================================================================
+
+This introduction is longer and more discursive than is customary. The results below are elementary
+consequences of a formula of Suzuki, and their interest lies less in their proofs than in what they
+say about the shape of a certain family of criteria for the Riemann Hypothesis. That is hard to
+convey without first laying out the context, so we do.
+
+\subsection{Zeros, primes, and the explicit formula}
+
+The Riemann zeta-function $\zeta(s)$ and the prime numbers are linked by a duality made precise by
+Riemann and von Mangoldt. In its modern form, due to Guinand \cite{Guinand} and Weil \cite{Weil},
+the link is an identity: for suitable test functions $\varphi$, with
+$\widehat\varphi(z):=\int_\R\varphi(x)e^{izx}\,dx$,
+\begin{equation}\label{eq:explicit}
+  \sum_{\gamma}\widehat{\varphi}(\gamma)
+  \;=\;
+  \widehat{\varphi}\!\left(\tfrac{i}{2}\right)+\widehat{\varphi}\!\left(-\tfrac{i}{2}\right)
+  -\sum_{n\ge2}\frac{\Lambda(n)}{\sqrt n}\bigl(\varphi(\log n)+\varphi(-\log n)\bigr)
+  - (\log\pi)\varphi(0)
+  + \frac{1}{2\pi}\int_{\R}\Rp\left[\frac{\Gamma'}{\Gamma}\!\left(\tfrac14+\tfrac{iz}{2}\right)\right]
+    \widehat\varphi(z)\,dz .
+\end{equation}
+Here $\Lambda$ is the von Mangoldt function and the sum on the left is over the zeros $\gamma$ of
+$\xi(\tfrac12-iz)$, counted with multiplicity, where
+\begin{equation}\label{eq:xi}
+  \xi(s)=\tfrac12 s(s-1)\pi^{-s/2}\Gamma\!\left(\tfrac s2\right)\zeta(s)
+\end{equation}
+is the completed zeta-function, entire of order one and satisfying $\xi(s)=\xi(1-s)$. The Riemann
+Hypothesis (RH) is the assertion that every zero $\rho$ of $\xi$ has $\Rp(\rho)=\tfrac12$;
+equivalently, in the variable of \eqref{eq:explicit}, that every $\gamma$ is real.
+
+Identity \eqref{eq:explicit} is an equality between a sum over zeros and a sum over prime powers.
+Read from left to right it converts spectral data into arithmetic; read from right to left it does
+the opposite. It is the fundamental tool for extracting information about $\zeta$ from the primes,
+and conversely.
+
+\subsection{Weil positivity, and the awkwardness of distributions}
+
+Weil observed that \eqref{eq:explicit} encodes RH as a positivity statement. Define the
+\emph{Weil distribution} $W$ by $W(\varphi):=\sum_\gamma\widehat\varphi(\gamma)$. If every $\gamma$
+is real then, for $\varphi=\psi*\widetilde\psi$ with $\widetilde\psi(x)=\overline{\psi(-x)}$, one has
+$\widehat\varphi(\gamma)=|\widehat\psi(\gamma)|^{2}\ge0$, so $W(\psi*\widetilde\psi)\ge0$; Weil
+proved the converse. Thus
+\begin{equation}\label{eq:weil}
+  \text{RH}\quad\Longleftrightarrow\quad
+  W(\psi*\widetilde\psi)\ge0\ \ \text{for every }\psi\in C_c^\infty(\R).
+\end{equation}
+This is attractive because it is \emph{local in the primes}: if $\psi$ is supported in $[-a,a]$,
+only prime powers $p^m\le e^{a}$ enter the right-hand side of \eqref{eq:explicit}. An infinite
+problem about all primes becomes a family of finite problems.
+
+It is also awkward, for a reason that is easy to state: $W$ is a distribution, not a function. Its
+``kernel'' is $\sum_\gamma e^{i\gamma t}$, which converges nowhere. The analytic work of Yoshida
+\cite{Yoshida} and Bombieri \cite{BombieriI,BombieriII} on \eqref{eq:weil} is correspondingly
+technical, and the objects that arise --- hermitian forms on spaces of smooth compactly supported
+functions with side conditions --- are not the objects for which classical analysis has the most
+tools.
+
+There is a second structural difficulty. One would like to test \eqref{eq:weil} on a small family of
+$\psi$ rather than on all of $C_c^\infty$, and it is a priori unclear that any small family
+suffices. That it can is the content of Li's criterion \cite{Li}, which Bombieri and Lagarias
+\cite{BombieriLagarias} showed to be exactly the positivity of $W$ on a distinguished countable
+family of test functions. This is worth emphasising, since it is the precedent for everything below:
+\emph{RH is already equivalent to Weil positivity on a one-parameter family.}
+
+\subsection{Integrating twice: the screw function}
+
+Suzuki's contribution \cite{Suzuki2023} is to integrate the Weil distribution twice. Set
+\begin{equation}\label{eq:Psi}
+  \Psi(t):=4\bigl(e^{t/2}+e^{-t/2}-2\bigr)
+  -\sum_{n\le e^{t}}\frac{\Lambda(n)}{\sqrt n}(t-\log n)
+  +\frac t2\left[\frac{\Gamma'}{\Gamma}\!\left(\tfrac14\right)-\log\pi\right]
+  +\frac14\Bigl(C-e^{-t/2}\Phi\bigl(e^{-2t},2,\tfrac14\bigr)\Bigr)
+\end{equation}
+for $t\ge0$, extended to an even function of $t\in\R$; here $\Phi$ is the Hurwitz--Lerch
+zeta-function and $C=\zeta(2,\tfrac14)$. Then $\Psi''=W$ as distributions, and $\Psi$ is a
+\emph{continuous} real function with the two faces
+\begin{equation}\label{eq:PsiTwoFaces}
+  \Psi(t)=\sum_\gamma\frac{1-\cos(\gamma t)}{\gamma^{2}},
+  \qquad\qquad
+  \int_0^\infty \Psi(t)e^{izt}\,dt=-\frac{1}{z^{2}}\,\lxi{\left(\tfrac12-iz\right)}\quad(\Ip z>\tfrac12).
+\end{equation}
+
+Two observations make $\Psi$ concrete. First, by the prime number theorem the prime sum in
+\eqref{eq:Psi} equals $4e^{t/2}+O(e^{t/2}e^{-c\sqrt t})$ \cite[Prop.~2.1]{Suzuki2023}, so the
+leading exponential cancels against the first term: \emph{$\Psi$ is the error term in the prime
+number theorem, twice integrated and normalised}. Second, if RH holds then every term of the series
+in \eqref{eq:PsiTwoFaces} is non-negative and $\Psi$ is confined to a narrow band,
+$0\le\Psi(t)<2\sum_\gamma\gamma^{-2}<0.0925$.
+
+The resulting criterion \cite[Thm.~1.7]{Suzuki2023} is as concrete as any known form of RH:
+\begin{equation}\label{eq:pointwise}
+  \text{RH}\quad\Longleftrightarrow\quad \Psi(t)\ge0\ \text{ for every }t .
+\end{equation}
+Necessity is immediate from \eqref{eq:PsiTwoFaces}. Sufficiency does not use Weil's argument at all:
+it follows from the classical theorem that the Laplace transform of a non-negative function has a
+singularity at the real point of its abscissa of convergence \cite[Ch.~II, Thm.~5b]{Widder}, applied
+to the second identity in \eqref{eq:PsiTwoFaces}, together with the elementary fact that
+$\zeta$ has no zeros on $[\tfrac12,\infty)$.
+
+Since $\Psi(t)=W(\Delta_t)$ where $\Delta_t=R_t*\widetilde{R_t}$ is the triangular function
+supported on $[-t,t]$ and $R_t=2^{-1/2}\mathbf{1}_{[-t/2,t/2]}$ a normalised rectangular function
+\cite[\S3.4]{Suzuki2023}, \eqref{eq:pointwise} says that Weil positivity tested on the family of
+\emph{rectangular} functions alone already characterises RH. As noted above, the existence of such a
+reduction is not new --- Li's criterion is one --- but the family here is a continuum of compactly
+supported functions rather than a countable family, and the resulting object $\Psi$ is a continuous
+function of one real variable with an explicit arithmetic formula. That is what makes it possible to
+attach the classical theory of Kre\u\i n \cite{KreinLanger}, in which $-\Psi$ is a \emph{screw
+function}: a continuous hermitian $g$ with $g(t-u)-g(t)-g(-u)+g(0)$ a non-negative kernel.
+Equivalently, $-g$ is conditionally negative definite, so the natural home of the positivity is the
+increments of $\Psi$, not $\Psi$ itself.
+
+\subsection{Why RH is the hard member of a family}
+
+Criterion \eqref{eq:pointwise} is exact, and exactly saturated. Suzuki observes
+\cite[\S7.1]{Suzuki2023} that if RH holds, the zeros are simple, and their positive ordinates are
+linearly independent over $\mathbb{Q}$, then Kronecker's theorem gives
+\begin{equation}\label{eq:liminf}
+  \limsup_{t\to\infty}\Psi(t)=2\sum_\gamma\frac{1}{\gamma^{2}},
+  \qquad
+  \liminf_{t\to\infty}\Psi(t)=0 .
+\end{equation}
+The function comes arbitrarily close to violating the inequality, infinitely often. As Suzuki puts
+it, this ``suggests the difficulty of proving the non-negativity of $\Psi(t)$ by approximation.''
+
+There is, however, a graded version. Following Lagarias \cite{Lagarias1999}, whose Theorem 1.1 is
+already stated with a general abscissa $\theta$, Suzuki introduces \cite[\S11]{Suzuki2023} for
+$\omega\in\R$ the shifted family
+\begin{equation}\label{eq:Psiomegadef}
+  \Psi_\omega(t):=e^{-\omega t}\Psi(t)+2\omega\int_0^t e^{-\omega u}\Psi(u)\,du
+  +\omega^{2}\int_0^t (t-u)e^{-\omega u}\Psi(u)\,du \qquad(t>0),
+\end{equation}
+again extended evenly, so that $\Psi_0=\Psi$ and
+\begin{equation}\label{eq:PsiomegaLaplace}
+  \int_0^\infty\Psi_\omega(t)e^{izt}\,dt=-\frac1{z^{2}}\lxi{\left(\tfrac12+\omega-iz\right)},
+  \qquad \Ip z>\tfrac12-\omega,
+\end{equation}
+and proves:
+
+\begin{theorem}[{Suzuki \cite[Thm.~11.1]{Suzuki2023}}]\label{thm:suzuki}
+Let $\omega\in\R$. Then $\xi(s)\neq0$ for $\Rp(s)>\tfrac12+\omega$ if and only if there exists
+$t_0>0$ such that $\Psi_\omega(t)\ge0$ for all $t\ge t_0$.
+\end{theorem}
+
+Two remarks of Suzuki's about Theorem \ref{thm:suzuki} matter for what follows. First, in the
+necessity direction the qualifier ``sufficiently large'' can be dispensed with: Suzuki observes
+\cite[\S11]{Suzuki2023} that if $\xi(s)\neq0$ for $\Rp(s)>\tfrac12+\omega$ then
+$i(\xi'/\xi)(\tfrac12+\omega-iz)$ is a Herglotz function, so $-\Psi_\omega$ is a screw function by
+the Kre\u\i n--Langer correspondence, and $\Psi_\omega(t)\ge0$ for \emph{every} $t$. The weakening
+to ``eventually'' strengthens only the sufficiency direction, where it weakens the hypothesis.
+Second, the family is monotone: $\Psi_{\omega+\eta}$ is obtained from $\Psi_\omega$ by the same
+transformation \eqref{eq:Psiomegadef} with parameter $\eta$, so non-negativity propagates upward in
+$\omega$.
+
+Writing $\Theta:=\sup\{\Rp(\rho):\xi(\rho)=0\}$ and
+$\omega_c:=\inf\{\omega:\Psi_\omega\ge0\text{ eventually}\}$, Theorem \ref{thm:suzuki} says
+$\omega_c=\Theta-\tfrac12$, and RH is the case $\omega_c=0$. Two things should be said about this
+range. For $\omega\ge\tfrac12$ the criterion is vacuous, since $\zeta(s)\neq0$ for $\Rp(s)\ge1$ is
+equivalent to the prime number theorem. For every $\omega<\tfrac12$ it is open: all known zero-free
+regions have the shape $\sigma\ge1-f(|t|)$ with $f(|t|)\to0$ --- the Korobov--Vinogradov form
+\cite{Ford}, or in explicit form $\sigma\ge1-\bigl(55.241(\log|t|)^{2/3}(\log\log|t|)^{1/3}\bigr)^{-1}$
+\cite{MTY} --- and none of them contains a half-plane $\sigma>c$ with $c<1$. Whether $\Theta<1$ is
+not known.
+
+So Theorem \ref{thm:suzuki} interpolates, between a vacuous endpoint and RH, through a range of
+statements every one of which is open. That makes it worth asking how the criterion behaves as a
+function of $\omega$, and in particular whether the saturation \eqref{eq:liminf} that obstructs the
+case $\omega=0$ persists for $\omega>0$. That is the question this note answers.
+
+\subsection{Results}
+
+Throughout, $\vartheta:=\Theta-\tfrac12\in[0,\tfrac12]$, and we write
+
+\begin{hypothesis}\label{hyp}
+$\xi(s)\neq0$ for $\Rp(s)>\tfrac12+\vartheta$.
+\end{hypothesis}
+
+\noindent
+This holds by the definition of $\vartheta$; RH is the case $\vartheta=0$. Define
+\begin{equation}\label{eq:AB}
+  A(\omega):=\sum_\gamma\frac{1}{\gamma^{2}+\omega^{2}},
+  \qquad
+  B(\omega):=\sum_\gamma\frac{\gamma^{2}-\omega^{2}}{(\gamma^{2}+\omega^{2})^{2}},
+  \qquad
+  A^{*}(\omega):=\frac12\sum_\gamma\left[\frac1{|\gamma-i\omega|^{2}}+\frac1{|\gamma+i\omega|^{2}}\right].
+\end{equation}
+
+Our first observation is that the first two sums are classical objects in disguise, with no
+hypothesis at all.
+
+\begin{proposition}\label{prop:AB}
+For $0<\omega<\tfrac12$ the series \eqref{eq:AB} converge absolutely, and, unconditionally,
+\[
+  A(\omega)=\frac1\omega\,\lxi{\left(\tfrac12+\omega\right)},
+  \qquad
+  B(\omega)=\lxi{'\left(\tfrac12+\omega\right)} .
+\]
+Moreover $A(\omega)$ is strictly decreasing on $(0,\tfrac12)$ with
+$\lim_{\omega\to\frac12^{-}}A(\omega)=\sum_\rho\frac{1}{\rho(1-\rho)}=2+\gamma_0-\log4\pi
+=0.0461914\ldots$, where $\gamma_0$ is Euler's constant. If RH holds, $A^{*}(\omega)=A(\omega)$.
+\end{proposition}
+
+The main result is then a two-term asymptotic with explicit error. Only the error term is
+conditional.
+
+\begin{theorem}\label{thm:asym}
+Let $0<\omega<\tfrac12$ and assume $\vartheta\le\omega$. Then for all $t\ge0$,
+\[
+  \Psi_\omega(t)=\lxi{\left(\tfrac12+\omega\right)}\,t
+  \;+\;\lxi{'\left(\tfrac12+\omega\right)}
+  \;+\;R_\omega(t),
+  \qquad
+  |R_\omega(t)|\le A^{*}(\omega)\,e^{-(\omega-\vartheta)t}.
+\]
+In particular, under RH, $|R_\omega(t)|\le \omega^{-1}(\xi'/\xi)(\tfrac12+\omega)\,e^{-\omega t}$.
+\end{theorem}
+
+The linear term is what we call the \emph{margin} of the criterion, and its slope is
+$(\xi'/\xi)(\tfrac12+\omega)$. Since $\xi(s)=\xi(1-s)$ forces $(\xi'/\xi)(\tfrac12)=0$, the margin
+vanishes as $\omega\to0^{+}$, at the rate $(\xi'/\xi)'(\tfrac12)\,\omega=0.0462099862\ldots\times\omega$.
+This identifies the mechanism behind \eqref{eq:liminf}: \emph{the marginality of the Riemann
+Hypothesis inside this family is exactly the vanishing of $\xi'/\xi$ at the central point.}
+
+The margin also shows that whenever the criterion of Theorem \ref{thm:suzuki} holds at all, it holds
+with an explicit strict margin from an explicit, and very small, threshold onward.
+
+\begin{theorem}\label{thm:threshold}
+Let $0<\omega<\tfrac12$ and assume $\vartheta\le\omega$, i.e.\ $\xi(s)\neq0$ for
+$\Rp(s)>\tfrac12+\omega$ --- precisely the situation in which the criterion holds. Then for every
+$t\ge0$,
+\[
+  \Psi_\omega(t)\;\ge\;\lxi{\left(\tfrac12+\omega\right)}t+\lxi{'\left(\tfrac12+\omega\right)}
+  -A^{*}(\omega),
+\]
+and $\Psi_\omega(t)>0$ for every $t>t_0(\omega):=\bigl(A^{*}(\omega)-B(\omega)\bigr)/\bigl(\omega
+A(\omega)\bigr)$. Moreover
+\[
+  A^{*}(\omega)-B(\omega)\;\le\;8\,\omega^{2}\sum_\rho\frac{1}{(\Ip\rho)^{4}},
+  \qquad\text{whence}\qquad
+  t_0(\omega)\;\le\;\frac{8\sum_\rho(\Ip\rho)^{-4}}{2+\gamma_0-\log4\pi}\;\omega
+  \;=\;0.01288\ldots\times\omega\;<\;0.0065 .
+\]
+\end{theorem}
+
+The two regimes --- linear growth at and above $\omega_c:=\Theta-\tfrac12$, failure below --- meet
+in a sharp transition, and the behaviour below $\omega_c$ is not merely a failure of
+non-negativity but two-sided exponential oscillation.
+
+\begin{theorem}\label{thm:transition}
+Let $0<\omega<\tfrac12$.
+\begin{enumerate}
+\item[(i)] If $\vartheta\le\omega$ then
+$\Psi_\omega(t)=(\xi'/\xi)(\tfrac12+\omega)\,t+O(1)$ with $|O(1)|\le|B(\omega)|+A^{*}(\omega)$;
+in particular $\Psi_\omega(t)/t\to(\xi'/\xi)(\tfrac12+\omega)$.
+\item[(ii)] If $\omega<\vartheta$ then for every $0\le\varepsilon<\vartheta-\omega$,
+\[
+  \limsup_{t\to\infty}e^{-\varepsilon t}\Psi_\omega(t)=+\infty,
+  \qquad
+  \liminf_{t\to\infty}e^{-\varepsilon t}\Psi_\omega(t)=-\infty .
+\]
+\end{enumerate}
+\end{theorem}
+
+\begin{corollary}\label{cor:graded}
+$\Theta\le\tfrac12+\omega$ if and only if
+$\Psi_\omega(t)=(\xi'/\xi)(\tfrac12+\omega)\,t+O(1)$. Consequently
+$m(\omega):=\liminf_{t\to\infty}\Psi_\omega(t)/t$ equals $-\infty$ on $(0,\omega_c)$ and
+$(\xi'/\xi)(\tfrac12+\omega)$ on $[\omega_c,\tfrac12)$: the normalised slope is an order
+parameter, with a jump of size at least $(2+\gamma_0-\log4\pi)\,\omega_c$ at $\omega_c$. The
+Riemann Hypothesis holds if and only if the transition is continuous, i.e.\ $\omega_c=0$ and
+$m(\omega)\to0$ as $\omega\to0^{+}$.
+\end{corollary}
+
+Corollary \ref{cor:graded} is a graded form of Suzuki's Theorem 1.6 (RH $\Leftrightarrow$
+$\Psi=O(1)$), with the sharp linear term; it also yields yet another description of the critical
+shift: $\omega_c=\inf\{\omega:\Psi_\omega(t)-(\xi'/\xi)(\tfrac12+\omega)t\text{ is bounded}\}$.
+
+Next, failure of the criterion is exponentially visible, at a rate that reads off the depth of
+the violation.
+
+\begin{proposition}\label{prop:sens}
+Let $\rho_0=\tfrac12+\delta+i\tau_0$ be a zero of $\xi$ with $\delta>\omega\ge0$ and $\tau_0>0$, and
+let $\Psi_\omega^{(\rho_0)}$ denote the contribution to the series for $\Psi_\omega$ of the quartet
+$\{\rho_0,\overline{\rho_0},1-\rho_0,1-\overline{\rho_0}\}$. Then
+\[
+  \Psi_\omega^{(\rho_0)}(t)
+  = -\,\frac{2\,e^{(\delta-\omega)t}}{\tau_0^{2}+(\delta-\omega)^{2}}\,
+     \cos\bigl(\tau_0 t+\alpha\bigr)\;+\;O(t),
+  \qquad \alpha=2\arg\bigl(\tau_0+i(\delta-\omega)\bigr);
+\]
+in particular
+$\limsup_{t\to\infty}e^{-(\delta-\omega)t}\bigl|\Psi_\omega^{(\rho_0)}(t)\bigr|
+ =2\bigl(\tau_0^{2}+(\delta-\omega)^{2}\bigr)^{-1}>0$.
+\end{proposition}
+
+Combining the sensitivity estimate with the numerical verification of RH to height $3\cdot10^{12}$
+\cite{PlattTrudgian} gives an unconditional initial window of positivity, which we record because it
+delimits sharply what computation can and cannot say about the criterion.
+
+\begin{proposition}\label{prop:window}
+Let $0<\omega<\tfrac12$ and $T_v=3\cdot10^{12}$. Unconditionally, for every $t\ge0$,
+\[
+  \Psi_\omega(t)\;\ge\;\lxi{\left(\tfrac12+\omega\right)}t+\lxi{'\left(\tfrac12+\omega\right)}
+  -A(\omega)\,e^{-\omega t}-e^{(\frac12-\omega)t}\,E(t),
+\]
+where, with $L_v:=\log T_v$ and
+$\nu(L):=\max\bigl\{(5.558691\,L)^{-1},\,(55.241\,L^{2/3}(\log L)^{1/3})^{-1}\bigr\}$ the explicit
+zero-free function of \cite{MTY},
+\[
+  E(t):=\frac1\pi\int_{L_v}^{\infty}(L-\log2\pi)\,e^{-L-\nu(L)\,t}\,dL,
+  \qquad
+  E(t)\le E(0)=S:=\!\!\sum_{|\Ip\rho|>T_v}\!\!\frac{1}{(\Ip\rho)^{2}}\;<\;3.2\cdot10^{-12}.
+\]
+Consequently $\Psi_\omega(t)>0$ on an explicit window $t_{-}(\omega)<t<t_{+}(\omega)$ with
+$t_{-}(\omega)<0.0017\,\omega$ and, for example, $t_{+}(0.1)=64.7$, $t_{+}(0.25)=109.9$,
+$t_{+}(0.4)=300.9$, $t_{+}(0.49)=7262$; as $\omega\to\tfrac12^{-}$,
+\[
+  t_{+}(\omega)=\Bigl(\frac4c+o(1)\Bigr)\Bigl(\tfrac12-\omega\Bigr)^{-2},
+  \qquad c=5.558691 .
+\]
+\end{proposition}
+
+All of this transfers to real primitive Dirichlet characters, with two instructive changes
+(Section \ref{sec:dirichlet}). The closed forms, the margin, the threshold and the transition hold
+verbatim for the shifted screw functions $\Psi_{\omega,\chi}$, with slope
+$(\xi'/\xi)(\tfrac12+\omega,\chi)$ vanishing at $\omega=0$ for the same functional-equation reason
+--- and the margin \emph{grows} with the conductor ($B_\chi(0)=0.113,\ 0.156,\ 0.157$ for
+$q=3,4,5$, against $0.0462$ for $\zeta$): within this family, $\zeta$ is the most marginal member.
+The arithmetic side is Proposition \ref{prop:chiprime}. The one genuinely new phenomenon is
+negative: the criterion is blind to real zeros --- a Siegel zero pushes $\Psi_{\omega,\chi}$
+\emph{up}, exponentially (Proposition \ref{prop:siegel}) --- so what the shifted criterion
+characterises for $\chi$ is the location of the \emph{non-real} zeros only. This explains
+quantitatively the real-zero hypothesis in Suzuki's extension of the screw-function theory to the
+extended Selberg class \cite[Thm.~1.1]{SuzukiSelberg}.
+
+Sections \ref{sec:setup}--\ref{sec:sens} prove these statements; Section \ref{sec:dirichlet}
+carries them to Dirichlet $L$-functions and discusses the extended Selberg class; Section
+\ref{sec:numerics} verifies them numerically, including a test of Theorem \ref{thm:asym} against
+the arithmetic side of \eqref{eq:Psi} which uses no information about the zeros; Section
+\ref{sec:discussion} assesses what the reformulation supplies.
+
+\subsection*{Attribution}
+The function $\Psi$, the shifted family $\Psi_\omega$, Theorem \ref{thm:suzuki}, and the observation
+that a zero-free half-plane forces $\Psi_\omega\ge0$ pointwise are Suzuki's \cite{Suzuki2023}; the
+screw-function theory over the extended Selberg class, including the role of real zeros, is
+developed by him in \cite{SuzukiSelberg}. The graded criterion in the form ``$\Rp(\rho)\le\theta$
+for all $\rho$ if and only if a certain function is Herglotz on $\Rp(s)>\theta$'' is Lagarias's
+\cite[Thm.~1.1]{Lagarias1999}. The reduction of RH to Weil positivity on a one-parameter family of
+test functions goes back to Li \cite{Li} and Bombieri--Lagarias \cite{BombieriLagarias}. What is
+offered here is Proposition \ref{prop:AB}, Theorems \ref{thm:asym}, \ref{thm:threshold} and
+\ref{thm:transition}, Corollary \ref{cor:graded}, Propositions \ref{prop:sens} and
+\ref{prop:window}, the Dirichlet and Selberg-class material of Section \ref{sec:dirichlet}
+(Theorem \ref{thm:chi}, Propositions \ref{prop:chiprime} and \ref{prop:siegel}), the numerical
+verification, and the discussion in Section \ref{sec:discussion}.
+
+% ===========================================================================
+\section{Setup}\label{sec:setup}
+% ===========================================================================
+
+We use Suzuki's normalisation throughout. Let $\Xi(z):=\xi(\tfrac12-iz)$, an entire function of
+order one; by $\xi(s)=\xi(1-s)$ it is even, and its zeros $\gamma$ are related to the zeros $\rho$
+of $\xi$ by
+\begin{equation}\label{eq:gammarho}
+  \gamma=i\left(\rho-\tfrac12\right),
+  \qquad\text{i.e.}\qquad
+  \rho=\beta+i\tau \;\Longrightarrow\; \gamma=-\tau+i\bigl(\beta-\tfrac12\bigr).
+\end{equation}
+Thus $\Ip\gamma=\Rp\rho-\tfrac12$, RH is the statement that all $\gamma$ are real, and
+Hypothesis \ref{hyp} says $|\Ip\gamma|\le\vartheta$ for every $\gamma$. Zeros come in the symmetric
+configuration $\gamma\mapsto-\gamma$, $\gamma\mapsto\overline{\gamma}$. Two unconditional facts
+about the zeros are used repeatedly: $|\Ip\gamma|\le\tfrac12$ for every $\gamma$
+\cite[Thm.~2.12]{Titchmarsh}, and $|\Rp\gamma|\ge14$, since the nontrivial zero of least height has
+ordinate $14.1347\ldots$ \cite[\S15]{Titchmarsh}.
+
+We shall use the standard Hadamard consequences (see e.g.\ \cite[\S12]{Davenport})
+\begin{equation}\label{eq:hadamard}
+  \frac{\Xi'}{\Xi}(z)=\sum_\gamma\frac{1}{z-\gamma},
+  \qquad
+  \frac{\Xi'}{\Xi}(z)=-i\,\lxi{\left(\tfrac12-iz\right)},
+  \qquad
+  \lxi{(1-s)}=-\lxi{(s)},
+\end{equation}
+the first with the usual convention that $\gamma$ and $-\gamma$ are paired.
+
+The starting point is Suzuki's series for the shifted family \cite[\S11]{Suzuki2023}: for $t>0$,
+\begin{equation}\label{eq:Psiomegaseries}
+  \Psi_\omega(t)=\sum_\gamma\frac{1}{(\gamma^{2}+\omega^{2})^{2}}
+  \Bigl[\;\omega t(\gamma^{2}+\omega^{2})+(\gamma^{2}-\omega^{2})
+   - e^{-\omega t}(\gamma^{2}-\omega^{2})\cos(\gamma t)
+   - e^{-\omega t}\,2\gamma\omega\sin(\gamma t)\;\Bigr].
+\end{equation}
+Setting $\omega=0$ recovers $\Psi(t)=\sum_\gamma\gamma^{-2}(1-\cos\gamma t)$, as it must. Suzuki
+also gives the arithmetic counterpart, which we record because it is what we compute with in
+Section \ref{sec:numerics}: with $\psi=\Gamma'/\Gamma$ and $\psi^{(1)}=\psi'$,
+\begin{multline}\label{eq:Psiomegaprimes}
+  \Psi_\omega(t)=
+  4\left[\frac{e^{(\frac12-\omega)t}}{(1-2\omega)^{2}}+\frac{e^{-(\frac12+\omega)t}}{(1+2\omega)^{2}}
+  -\frac{4-2(1-\omega t)(1-4\omega^{2})}{(1-4\omega^{2})^{2}}\right]
+  +\frac t2\left[\psi\!\left(\tfrac14+\tfrac\omega2\right)-\log\pi\right]\\
+  +\frac14\left[\psi^{(1)}\!\left(\tfrac14+\tfrac\omega2\right)
+   -e^{-(\frac12+\omega)t}\,\Phi\!\left(e^{-2t},2,\tfrac14+\tfrac\omega2\right)\right]
+  -\sum_{n\le e^{t}}\frac{\Lambda(n)}{n^{\frac12+\omega}}(t-\log n).
+\end{multline}
+
+\begin{lemma}\label{lem:conv}
+Let $0<\omega<\tfrac12$. Unconditionally,
+$\Rp(\gamma^{2}+\omega^{2})\ge(\Rp\gamma)^{2}-\tfrac14+\omega^{2}>0$ for every $\gamma$, the series
+\eqref{eq:AB} converge absolutely, and
+$\sum_\gamma|\gamma|\,|\gamma^{2}+\omega^{2}|^{-2}<\infty$.
+\end{lemma}
+
+\begin{proof}
+Write $\gamma=a+ib$; then $|b|\le\tfrac12$ and $|a|\ge14$. We have
+$\gamma^{2}+\omega^{2}=a^{2}-b^{2}+\omega^{2}+2iab$, whose real part is at least
+$a^{2}-\tfrac14>0$. Hence $|\gamma^{2}+\omega^{2}|\ge a^{2}-\tfrac14$, and likewise
+$|\gamma\pm i\omega|^{2}=a^{2}+(b\pm\omega)^{2}\ge a^{2}$. By the Riemann--von Mangoldt formula the
+number of $\gamma$ with $|a|\le T$ is $O(T\log T)$, so $\sum_\gamma(a^{2}-\tfrac14)^{-1}<\infty$ and
+$\sum_\gamma|\gamma|(a^{2}-\tfrac14)^{-2}<\infty$ by partial summation. The stated bounds follow.
+\end{proof}
+
+\begin{remark}
+Suzuki also records the composition law: $\Psi_{\omega+\eta}$ arises from $\Psi_\omega$ by the
+transformation \eqref{eq:Psiomegadef} with parameter $\eta>0$ \cite[\S11]{Suzuki2023}. Since that
+transformation has non-negative kernel, non-negativity of $\Psi_\omega$ (pointwise, or on $[0,t_1)$)
+implies the same for $\Psi_{\omega'}$, $\omega'>\omega$: the family is monotone in $\omega$.
+\end{remark}
+
+% ===========================================================================
+\section{Two spectral sums in closed form}\label{sec:AB}
+% ===========================================================================
+
+\begin{proof}[Proof of Proposition \ref{prop:AB}]
+Convergence is Lemma \ref{lem:conv}, and requires no hypothesis. For the closed forms, evaluate the
+first identity of \eqref{eq:hadamard} at $z=\pm i\omega$ (legitimate for $0<\omega<\tfrac12$ since
+no $\gamma$ lies on the imaginary axis: $|\Rp\gamma|\ge14$) and use the second:
+\[
+  \sum_\gamma\frac{1}{i\omega-\gamma}=-i\,\lxi{\left(\tfrac12+\omega\right)},
+  \qquad
+  \sum_\gamma\frac{1}{-i\omega-\gamma}=-i\,\lxi{\left(\tfrac12-\omega\right)}
+  \;=\;i\,\lxi{\left(\tfrac12+\omega\right)},
+\]
+the last step by the functional equation in \eqref{eq:hadamard}. Therefore
+\[
+  \sum_\gamma\frac{1}{\gamma-i\omega}=i\,\lxi{\left(\tfrac12+\omega\right)},
+  \qquad
+  \sum_\gamma\frac{1}{\gamma+i\omega}=-i\,\lxi{\left(\tfrac12+\omega\right)} .
+\]
+Since $\gamma^{2}+\omega^{2}=(\gamma-i\omega)(\gamma+i\omega)$, partial fractions give
+\[
+  A(\omega)=\sum_\gamma\frac{1}{(\gamma-i\omega)(\gamma+i\omega)}
+  =\frac{1}{2i\omega}\sum_\gamma\left[\frac{1}{\gamma-i\omega}-\frac{1}{\gamma+i\omega}\right]
+  =\frac{1}{2i\omega}\cdot 2i\,\lxi{\left(\tfrac12+\omega\right)}
+  =\frac1\omega\lxi{\left(\tfrac12+\omega\right)},
+\]
+the rearrangement being justified by absolute convergence of $A(\omega)$ together with the standard
+pairing of $\gamma$ with $-\gamma$ in \eqref{eq:hadamard}.
+
+For $B$, note the elementary identity
+\[
+  \frac{\partial}{\partial\omega}\left[\frac{\omega}{\gamma^{2}+\omega^{2}}\right]
+  =\frac{\gamma^{2}-\omega^{2}}{(\gamma^{2}+\omega^{2})^{2}} .
+\]
+By Lemma \ref{lem:conv} the differentiated series converges locally uniformly on
+$0<\omega<\tfrac12$, so term-by-term differentiation of $\omega A(\omega)$ is legitimate and
+\[
+  B(\omega)=\frac{d}{d\omega}\bigl[\omega A(\omega)\bigr]
+  =\frac{d}{d\omega}\lxi{\left(\tfrac12+\omega\right)}
+  =\lxi{'\left(\tfrac12+\omega\right)} .
+\]
+
+For monotonicity, pair each $\gamma$ with $\overline\gamma$, so that
+$A(\omega)=\sum_\gamma X_\gamma/(X_\gamma^{2}+Y_\gamma^{2})$ with
+$X_\gamma=a^{2}-b^{2}+\omega^{2}>0$ and $Y_\gamma=2ab$. Then
+\[
+  \frac{\partial}{\partial(\omega^{2})}\,\frac{X}{X^{2}+Y^{2}}
+  =\frac{Y^{2}-X^{2}}{(X^{2}+Y^{2})^{2}}<0,
+\]
+since $X>|Y|$ is equivalent to $(|a|-|b|)^{2}+\omega^{2}>0$. So every paired term, hence
+$A(\omega)$, is strictly decreasing. At $\omega=\tfrac12$, $\gamma^{2}+\tfrac14=\rho(1-\rho)$ by
+\eqref{eq:gammarho}, and $\sum_\rho 1/(\rho(1-\rho))=2\sum_\rho 1/\rho=2+\gamma_0-\log4\pi$ is
+classical \cite[\S12]{Davenport}; the limit follows by dominated convergence. Finally, if RH holds
+then $\gamma$ is real, $|\gamma\pm i\omega|^{2}=\gamma^{2}+\omega^{2}$, and $A^{*}=A$.
+\end{proof}
+
+\begin{remark}\label{rem:B0}
+Letting $\omega\to0^{+}$ gives
+$B(0)=\sum_\gamma\gamma^{-2}=(\xi'/\xi)'(\tfrac12)=0.0462099862308\ldots$ (an unconditional
+identity), so $2B(0)=0.0924199725\ldots$, consistent with Suzuki's conditional bound
+$\sup\Psi<0.094$. Also $A(\omega)\to B(0)$ as $\omega\to0^{+}$, since $(\xi'/\xi)(\tfrac12)=0$.
+Note the coincidence of scales: $A$ decreases only from $0.046210$ to $0.046191$ across the whole
+interval $(0,\tfrac12)$.
+\end{remark}
+
+% ===========================================================================
+\section{The asymptotic}\label{sec:asym}
+% ===========================================================================
+
+\begin{proof}[Proof of Theorem \ref{thm:asym}]
+Split \eqref{eq:Psiomegaseries} into the two groups of terms. The first two terms sum, by
+\eqref{eq:AB} and Proposition \ref{prop:AB}, to
+\[
+  \omega t\sum_\gamma\frac{1}{\gamma^{2}+\omega^{2}}
+  +\sum_\gamma\frac{\gamma^{2}-\omega^{2}}{(\gamma^{2}+\omega^{2})^{2}}
+  =\omega A(\omega)\,t+B(\omega)
+  =\lxi{\left(\tfrac12+\omega\right)}t+\lxi{'\left(\tfrac12+\omega\right)},
+\]
+which is the stated main term, and is unconditional. The remainder is
+\begin{equation}\label{eq:R}
+  R_\omega(t)=-e^{-\omega t}\sum_\gamma
+  \frac{(\gamma^{2}-\omega^{2})\cos(\gamma t)+2\gamma\omega\sin(\gamma t)}
+       {(\gamma^{2}+\omega^{2})^{2}} .
+\end{equation}
+The key is the exact decomposition
+\begin{equation}\label{eq:Rdecomp}
+  (\gamma^{2}-\omega^{2})\cos(\gamma t)+2\gamma\omega\sin(\gamma t)
+  \;=\;\tfrac12\,e^{i\gamma t}(\gamma-i\omega)^{2}\;+\;\tfrac12\,e^{-i\gamma t}(\gamma+i\omega)^{2},
+\end{equation}
+which is immediate from $\cos w=\tfrac12(e^{iw}+e^{-iw})$, $\sin w=\tfrac1{2i}(e^{iw}-e^{-iw})$ and
+$(\gamma\mp i\omega)^{2}=\gamma^{2}-\omega^{2}\mp2i\gamma\omega$. Dividing by
+$(\gamma^{2}+\omega^{2})^{2}=(\gamma-i\omega)^{2}(\gamma+i\omega)^{2}$,
+\begin{equation}\label{eq:Rclean}
+  R_\omega(t)=-\frac{e^{-\omega t}}2\sum_\gamma
+  \left[\frac{e^{i\gamma t}}{(\gamma+i\omega)^{2}}+\frac{e^{-i\gamma t}}{(\gamma-i\omega)^{2}}\right].
+\end{equation}
+Writing $\gamma=a+ib$ with $|b|\le\vartheta$, we have $|e^{\pm i\gamma t}|=e^{\mp bt}\le
+e^{\vartheta t}$, whence
+\[
+  |R_\omega(t)|\le \frac{e^{-(\omega-\vartheta) t}}{2}\sum_\gamma
+  \left[\frac{1}{|\gamma+i\omega|^{2}}+\frac{1}{|\gamma-i\omega|^{2}}\right]
+  =A^{*}(\omega)\,e^{-(\omega-\vartheta)t}.
+\]
+Under RH, $A^{*}=A$ by Proposition \ref{prop:AB}, giving the stated constant.
+\end{proof}
+
+\begin{remark}
+The one-line amplitude computation behind \eqref{eq:Rdecomp} --- for real $\gamma$,
+$(\gamma^{2}-\omega^{2})\cos\theta+2\gamma\omega\sin\theta$ has amplitude exactly
+$\sqrt{(\gamma^{2}-\omega^{2})^{2}+4\gamma^{2}\omega^{2}}=\gamma^{2}+\omega^{2}$ --- shows the
+constant $A(\omega)$ in the RH case is the best possible for a term-by-term estimate. Note also that
+the bound holds at $\vartheta=\omega$: there the remainder no longer decays, but stays bounded by
+$A^{*}(\omega)$, which is all Theorem \ref{thm:threshold} needs.
+\end{remark}
+
+\begin{corollary}\label{cor:margin}
+The slope of the linear term in Theorem \ref{thm:asym} is $(\xi'/\xi)(\tfrac12+\omega)$.
+Unconditionally, it is positive for $0<\omega<\tfrac12$, indeed
+\[
+  \lxi{\left(\tfrac12+\omega\right)}=\omega A(\omega)\ \ge\ (2+\gamma_0-\log4\pi)\,\omega
+  =0.0461914\ldots\times\omega,
+\]
+it vanishes at $\omega=0$, and it satisfies
+$(\xi'/\xi)(\tfrac12+\omega)=B(0)\,\omega+O(\omega^{3})$ with $B(0)=0.04620998623\ldots$.
+\end{corollary}
+
+\begin{proof}
+$\xi(s)=\xi(1-s)$ gives $(\xi'/\xi)(1-s)=-(\xi'/\xi)(s)$, so $(\xi'/\xi)$ is odd about
+$s=\tfrac12$; in particular $(\xi'/\xi)(\tfrac12)=0$ and its Taylor expansion there contains only
+odd powers. The linear coefficient is $(\xi'/\xi)'(\tfrac12)=B(0)$ by Remark \ref{rem:B0}. The
+lower bound is the monotonicity statement of Proposition \ref{prop:AB}.
+\end{proof}
+
+\begin{remark}
+Corollary \ref{cor:margin} is the precise form of the statement that RH is the marginal member of
+the family. The obstruction \eqref{eq:liminf} --- $\liminf\Psi=0$, so that no approximation argument
+can establish $\Psi\ge0$ --- is the $\omega=0$ shadow of a margin that is strictly positive and
+grows linearly in $t$ for every $\omega>0$. Whatever the difficulty of proving
+$\Psi_\omega\ge0$ for a given $\omega\in(0,\tfrac12)$, it is not that the inequality is
+asymptotically saturated. Theorem \ref{thm:transition} sharpens this into a dichotomy.
+\end{remark}
+
+% ===========================================================================
+\section{The threshold}\label{sec:threshold}
+% ===========================================================================
+
+\begin{proof}[Proof of Theorem \ref{thm:threshold}]
+Under $\vartheta\le\omega$ we have $e^{-(\omega-\vartheta)t}\le1$ for $t\ge0$, so Theorem
+\ref{thm:asym} gives the uniform lower bound
+$\Psi_\omega(t)\ge\omega A(\omega)t+B(\omega)-A^{*}(\omega)$, and strict positivity for
+$t>t_0=(A^{*}-B)/(\omega A)$, since $A(\omega)>0$.
+
+It remains to bound $A^{*}-B$. Write $z_1=\gamma-i\omega$, $z_2=\gamma+i\omega$. Then
+$z_1^{2}+z_2^{2}=2(\gamma^{2}-\omega^{2})$ and $z_1^{2}z_2^{2}=(\gamma^{2}+\omega^{2})^{2}$, so the
+$B$-term of each zero is
+\[
+  \frac{\gamma^{2}-\omega^{2}}{(\gamma^{2}+\omega^{2})^{2}}
+  =\frac{z_1^{2}+z_2^{2}}{2\,z_1^{2}z_2^{2}}
+  =\frac12\left[\frac{1}{z_1^{2}}+\frac{1}{z_2^{2}}\right],
+\]
+while the $A^{*}$-term is $\tfrac12(|z_1|^{-2}+|z_2|^{-2})$. For any $z=x+iy\neq0$,
+\[
+  \frac{1}{|z|^{2}}-\Rp\frac{1}{z^{2}}
+  =\frac{(x^{2}+y^{2})-(x^{2}-y^{2})}{|z|^{4}}
+  =\frac{2y^{2}}{|z|^{4}} .
+\]
+Summing over the zeros (the imaginary parts cancel in conjugate pairs, so $B$ equals the sum of the
+real parts) and noting $\Ip z_1=b-\omega$, $\Ip z_2=b+\omega$,
+\begin{equation}\label{eq:AstarminusB}
+  A^{*}(\omega)-B(\omega)
+  =\sum_\gamma\left[\frac{(b-\omega)^{2}}{|\gamma-i\omega|^{4}}
+  +\frac{(b+\omega)^{2}}{|\gamma+i\omega|^{4}}\right].
+\end{equation}
+Under $|b|\le\vartheta\le\omega$ we have $(b\mp\omega)^{2}\le4\omega^{2}$ and
+$|\gamma\mp i\omega|^{2}\ge a^{2}$, whence
+$A^{*}-B\le8\omega^{2}\sum_\gamma a^{-4}=8\omega^{2}\sum_\rho(\Ip\rho)^{-4}$. Computing the first
+$120$ ordinates and estimating the tail with the Riemann--von Mangoldt formula (with the explicit
+error bound of \cite{TrudgianArg}, whose contribution is far below the last digit retained) gives
+$\sum_\rho(\Ip\rho)^{-4}=7.4346\ldots\cdot10^{-5}<7.44\cdot10^{-5}$. Together with
+$\omega A(\omega)=(\xi'/\xi)(\tfrac12+\omega)\ge(2+\gamma_0-\log4\pi)\,\omega$ from Corollary
+\ref{cor:margin},
+\[
+  t_0(\omega)\le\frac{8\cdot7.44\cdot10^{-5}}{0.0461914}\,\omega=0.01288\ldots\times\omega,
+\]
+which is less than $0.0065$ throughout $0<\omega<\tfrac12$.
+\end{proof}
+
+\begin{remark}\label{rem:trivial}
+Two cheaper routes to non-strict positivity should be set beside Theorem \ref{thm:threshold}, both
+already in \cite{Suzuki2023}. Under RH, $\Psi\ge0$ pointwise, and every term of the definition
+\eqref{eq:Psiomegadef} is then non-negative, so $\Psi_\omega\ge0$ everywhere --- indeed
+$\Psi_\omega(t)>0$ for $t>0$, since $\Psi(t)>0$ for $t\neq0$ \cite[Thm.~1.7]{Suzuki2023}. More
+generally, under $\vartheta\le\omega$ alone, Suzuki's Herglotz argument (\S1.4 above) gives
+$\Psi_\omega\ge0$ everywhere via Kre\u\i n--Langer. What Theorem \ref{thm:threshold} adds is
+quantitative and elementary: an explicit linear lower bound with an explicit onset, obtained
+without the Kre\u\i n--Langer correspondence. In particular the criterion, wherever it holds, holds
+\emph{with room to spare} --- there is no analogue at $\omega>0$ of the saturation
+\eqref{eq:liminf}.
+\end{remark}
+
+\begin{remark}\label{rem:detector}
+The contrapositive is a single-point detector: a single verified value $\Psi_\omega(t^{*})\le0$ at
+any $t^{*}>0.0129\,\omega$ certifies a zero with $\Rp\rho>\tfrac12+\omega$ (by Suzuki's pointwise
+statement, any $t^{*}>0$ in fact suffices; the present form has the advantage of an explicit
+quantitative margin below which $\Psi_\omega$ cannot dip). Proposition \ref{prop:sens} quantifies
+the rate at which such values appear when a violating zero exists. Proposition \ref{prop:window}
+shows, however, that no feasible computation can reach the regime where such values could occur.
+\end{remark}
+
+\begin{remark}
+The threshold $t_0(\omega)\le0.0129\,\omega$ tends to $0$ with $\omega$, and covers the boundary
+case $\vartheta=\omega$, where the oscillation is undamped: the reason a bounded, non-decaying
+oscillation cannot break the criterion is visible in \eqref{eq:AstarminusB} --- a zero at height
+$\tau$ on the boundary $\Rp\rho=\tfrac12+\omega$ contributes oscillation of amplitude
+$\approx2/\tau^{2}$, but contributes $\approx4/\tau^{2}$ to the intercept $B(\omega)$; its own mean
+covers its own oscillation twice over. Only zeros \emph{beyond} the half-plane can drive
+$\Psi_\omega$ negative for large $t$, which is Proposition \ref{prop:sens}.
+\end{remark}
+
+% ===========================================================================
+\section{The transition at $\omega_c$}\label{sec:transition}
+% ===========================================================================
+
+Write $\omega_c:=\Theta-\tfrac12=\vartheta$, so that Theorem \ref{thm:suzuki} reads: the criterion
+at level $\omega$ holds if and only if $\omega\ge\omega_c$. Theorems \ref{thm:asym} and
+\ref{thm:threshold} describe $\Psi_\omega$ at and above $\omega_c$; Theorem \ref{thm:transition}
+adds the description below, by the same Laplace-transform mechanism that proves the sufficiency
+direction of Theorem \ref{thm:suzuki}.
+
+\begin{proof}[Proof of Theorem \ref{thm:transition}]
+Part (i) is Theorem \ref{thm:asym}: for $\vartheta\le\omega$ the remainder is bounded by
+$A^{*}(\omega)$.
+
+For part (ii), suppose $\omega<\vartheta$ and, for a contradiction, that there are constants
+$C,D>0$ and $0\le\varepsilon<\vartheta-\omega$ with $\Psi_\omega(t)\ge-Ce^{\varepsilon t}-D$ for
+all $t\ge0$; set $f:=\Psi_\omega+Ce^{\varepsilon t}+D\ge0$. From \eqref{eq:Rclean},
+\[
+  |\Psi_\omega(t)|\;\le\;\omega A(\omega)\,t+|B(\omega)|+A^{*}(\omega)\,e^{(\vartheta-\omega)t},
+\]
+an estimate that requires no ordering of $\vartheta$ and $\omega$ (and $A^{*}$ converges
+unconditionally by Lemma \ref{lem:conv}). Hence the Laplace transform
+$F(z)=\int_0^\infty f(t)e^{izt}\,dt$ converges, and is analytic, for $\Ip z>\vartheta-\omega$,
+and equals there
+\begin{equation}\label{eq:Ftransform}
+  F(z)=-\frac{1}{z^{2}}\lxi{\left(\tfrac12+\omega-iz\right)}
+  +\frac{iC}{z-i\varepsilon}+\frac{iD}{z}:
+\end{equation}
+on $\Ip z>\tfrac12-\omega$ this is \eqref{eq:PsiomegaLaplace} together with two elementary
+transforms, and the identity extends to $\Ip z>\vartheta-\omega$ by analytic continuation.
+Let $\sigma_c\le\vartheta-\omega$ denote the abscissa of convergence of $F$. Since $f\ge0$,
+Landau's theorem \cite[Ch.~II, Thm.~5b]{Widder} makes $i\sigma_c$ a singularity of $F$: no
+analytic continuation to a neighbourhood of $i\sigma_c$ exists. Now the right-hand side of
+\eqref{eq:Ftransform} is meromorphic on $\C$, and its only possible singularities on the ray
+$\{iy:y>\varepsilon\}$ are poles of $(\xi'/\xi)$ at real zeros $\tfrac12+\omega+y\in(\tfrac12,1]$
+--- and there are none. Hence $\sigma_c\le\varepsilon$, so $F$ is analytic on
+$\Ip z>\varepsilon$ and coincides there with \eqref{eq:Ftransform} by analytic continuation;
+consequently \eqref{eq:Ftransform} has no poles with $\Ip z>\varepsilon$, i.e.\ every zero
+satisfies $\Rp\rho\le\tfrac12+\omega+\varepsilon$. Since $\omega+\varepsilon<\vartheta$, this
+contradicts the definition of $\vartheta$. Therefore no such $C,D$ exist, which is the
+$\liminf$ statement. The $\limsup$ statement follows from the same argument applied to
+$f:=Ce^{\varepsilon t}+D-\Psi_\omega$, whose transform is \eqref{eq:Ftransform} with the sign of
+the first term reversed.
+\end{proof}
+
+\begin{proof}[Proof of Corollary \ref{cor:graded}]
+If $\Theta\le\tfrac12+\omega$, boundedness of $\Psi_\omega-(\xi'/\xi)(\tfrac12+\omega)t$ is
+Theorem \ref{thm:transition}(i). Conversely, if it is bounded then
+$e^{-\varepsilon t}\Psi_\omega(t)\to0$ for every $\varepsilon>0$, so (ii) fails, forcing
+$\vartheta\le\omega$. For the order parameter: on $[\omega_c,\tfrac12)$, $m$ equals the slope by
+(i); for $\omega<\omega_c$, part (ii) with any $0<\varepsilon<\omega_c-\omega$ yields points
+$t_n\to\infty$ with $\Psi_\omega(t_n)\le-e^{\varepsilon t_n}$, so
+$\Psi_\omega(t_n)/t_n\to-\infty$ and $m(\omega)=-\infty$. If $\omega_c>0$, then
+$m(\omega_c)=(\xi'/\xi)(\tfrac12+\omega_c)\ge(2+\gamma_0-\log4\pi)\,\omega_c>0$ by Corollary
+\ref{cor:margin}, while $m=-\infty$ immediately below: a jump. Under RH, $\omega_c=0$ and
+$m(\omega)=(\xi'/\xi)(\tfrac12+\omega)\to0$ as $\omega\to0^{+}$, matching
+$\liminf\Psi(t)/t=0$ at $\omega=0$ ($\Psi$ is bounded under RH).
+\end{proof}
+
+\begin{remark}
+Below $\omega_c$ the oscillation is genuinely two-sided and of exponential rate arbitrarily close
+to $\omega_c-\omega$; at and above $\omega_c$ the function is linear plus $O(1)$. In the language
+of phase transitions, $m(\omega)$ is an order parameter and RH asserts a second-order (continuous)
+transition; any $\omega_c>0$ would make it first-order, with ``latent margin''
+$(\xi'/\xi)(\tfrac12+\omega_c)\approx0.0462\,\omega_c$. For $\zeta$ the proof of part (ii) uses
+only the absence of real zeros in $(\tfrac12,1]$; for Dirichlet $L$-functions the same argument is
+sensitive to real zeros, and Section \ref{sec:dirichlet} turns that sensitivity into a statement.
+\end{remark}
+
+% ===========================================================================
+\section{An unconditional window}\label{sec:window}
+% ===========================================================================
+
+\begin{proof}[Proof of Proposition \ref{prop:window}]
+Split \eqref{eq:Rclean} at the verification height: by \cite{PlattTrudgian}, every zero with
+$|\Ip\rho|\le T_v=3\cdot10^{12}$ has $\Rp\rho=\tfrac12$, i.e.\ the corresponding $\gamma$ are real.
+For those zeros the summand of \eqref{eq:Rclean} is bounded by $(\gamma^{2}+\omega^{2})^{-1}$, and
+since the omitted high zeros have $\Rp(\gamma^{2}+\omega^{2})>0$ (Lemma \ref{lem:conv}), the partial
+sum is at most $A(\omega)$; their total contribution to $R_\omega$ is at most $A(\omega)e^{-\omega
+t}$ in absolute value. For a zero with $|\Ip\rho|=|a|>T_v$, the explicit zero-free regions of
+\cite{MTY} give $|b|\le\tfrac12-\nu(\log|a|)$ with $\nu$ as in the statement (both regions are
+valid, so their maximum is), and $|\gamma\pm i\omega|^{2}\ge a^{2}$: its contribution is at most
+$e^{-\omega t}\,e^{(\frac12-\nu(\log|a|))t}\,a^{-2}$. Summing against the Riemann--von Mangoldt
+density $dN(u)=(2\pi)^{-1}\log(u/2\pi)\,du$ and substituting $L=\log u$ gives
+$|R_\omega(t)|\le A(\omega)e^{-\omega t}+e^{(\frac12-\omega)t}E(t)$; the explicit error bound of
+\cite{TrudgianArg} for the zero-counting function perturbs $E(t)$ by less than $10^{-23}$, which
+is absorbed in every stated numerical value. At $t=0$,
+\[
+  E(0)=S=2\int_{T_v}^{\infty}\frac{dN(u)}{u^{2}}
+  =\frac{1}{\pi}\cdot\frac{\log(T_v/2\pi)+1}{T_v}+O\!\left(\frac{\log T_v}{T_v^{2}}\right)
+  <3.2\cdot10^{-12},
+\]
+and $E$ is decreasing in $t$. The displayed lower bound for $\Psi_\omega$ follows from Theorem
+\ref{thm:asym}'s main term; the window endpoints in Table \ref{tab:window} are the two roots of
+the right-hand side, the lower at $t_{-}\approx(1-B/A)/(2\omega)<0.0017\,\omega$.
+
+For the endpoint law, note that the two branches of $\nu$ cross at $L_x=8928.2$, and that for
+$L\le L_x$ one has $\nu(L)=1/(cL)$ with $c=5.558691$. By the Laplace method, the exponent
+$-L-t/(cL)$ is maximised at $L^{*}=\sqrt{t/c}$ with value $-2\sqrt{t/c}$; splitting off
+$e^{-L/\sqrt t}$ to control the polynomial factor shows
+$E(t)=\exp\bigl(-2\sqrt{t/c}\,(1+o(1))\bigr)$, valid while $L^{*}\le L_x$, i.e.\
+$t\le cL_x^{2}\approx4.4\cdot10^{8}$ --- far beyond every entry of Table \ref{tab:window}.
+Solving $(\tfrac12-\omega)t_{+}=2\sqrt{t_{+}/c}\,(1+o(1))$ gives
+$t_{+}=(4/c+o(1))(\tfrac12-\omega)^{-2}$; numerically the law is accurate to $1\%$ already at
+$\omega=0.499$ ($0.7196\cdot10^{6}$ predicted against $726\,493$ computed). Beyond the crossover
+--- relevant only once $\tfrac12-\omega\lesssim2\cdot10^{-5}$ --- the Korobov--Vinogradov branch
+takes over and the same computation gives $t_{+}\asymp(\tfrac12-\omega)^{-5/2+o(1)}$.
+\end{proof}
+
+\begin{remark}\label{rem:nonumerics}
+Proposition \ref{prop:window} delimits what computation can say about the criterion. In the
+variable $x=e^{t}$ of the underlying prime sums, the window reaches $x\approx10^{28}$ at
+$\omega=0.1$, $x\approx10^{48}$ at $\omega=\tfrac14$, $x\approx10^{131}$ at $\omega=0.4$, and
+$x\approx10^{3154}$ at $\omega=0.49$: any computation of $\Psi_\omega$ at feasible arguments takes
+place deep inside a region where its positivity is already unconditionally known, and therefore
+carries no information about $\Theta$ beyond the inputs it is built on. In particular, ``compute
+$\Psi_\omega$ at large $t$ and watch for a dip'' is not a probe of $\Theta$. The two inputs act
+separably: the verification height sets the \emph{level} of the obstruction bound, so the window
+grows with $T_v$ like $t_{+}\sim\frac{2\log T_v}{1-2\omega}$ at moderate $\omega$, while the
+zero-free region sets its \emph{decay}, which is invisible at moderate $\omega$ (a $1$--$7\%$
+enlargement of $t_+$ for $\omega\le0.45$) and dominant at the PNT end, where it produces the
+endpoint law $t_{+}=(4/c+o(1))(\tfrac12-\omega)^{-2}$ and reconnects the family continuously to
+the unconditional case $\omega\ge\tfrac12$. This is the honest quantitative content available to
+the criterion short of a genuine zero-free half-plane.
+\end{remark}
+
+% ===========================================================================
+\section{The rate at which a violating zero is detected}\label{sec:sens}
+% ===========================================================================
+
+\begin{proof}[Proof of Proposition \ref{prop:sens}]
+By \eqref{eq:gammarho} the quartet $\{\rho_0,\overline{\rho_0},1-\rho_0,1-\overline{\rho_0}\}$
+corresponds to $\gamma\in\{\pm\tau_0\pm i\delta\}$. Fix such a $\gamma=a+i\delta$ with
+$a=\pm\tau_0$. In \eqref{eq:Rclean}, the term $e^{-i\gamma t}=e^{-iat}e^{\delta t}$ dominates its
+partner $e^{i\gamma t}=e^{iat}e^{-\delta t}$ as $t\to\infty$, so the contribution of this $\gamma$
+to the oscillatory part is
+\[
+  -\frac{e^{(\delta-\omega)t}e^{-iat}}{2(\gamma-i\omega)^{2}}\bigl(1+O(e^{-2\delta t})\bigr),
+  \qquad \gamma-i\omega=a+i(\delta-\omega).
+\]
+Summing over $a=\pm\tau_0$ and adding the contribution from the two $\gamma$ with
+$\Ip\gamma=-\delta$ (for which the dominant term is $e^{i\gamma t}$, with denominator
+$(\gamma+i\omega)^{2}$) yields
+\[
+  -\,e^{(\delta-\omega)t}\,\Rp\!\left[\frac{e^{-i\tau_0 t}}{\bigl(\tau_0+i(\delta-\omega)\bigr)^{2}}
+   +\frac{e^{i\tau_0 t}}{\bigl(\tau_0-i(\delta-\omega)\bigr)^{2}}\right](1+o(1))
+  =-\,\frac{2\,e^{(\delta-\omega)t}}{\tau_0^{2}+(\delta-\omega)^{2}}\cos(\tau_0t+\alpha)(1+o(1)),
+\]
+where $\alpha=2\arg\bigl(\tau_0+i(\delta-\omega)\bigr)$. The non-oscillatory part of the quartet's
+contribution is $\omega A_0t+B_0=O(t)$ with $A_0,B_0$ the corresponding partial sums in
+\eqref{eq:AB}. The $\limsup$ statement follows since $\cos(\tau_0t+\alpha)$ attains $\pm1$ on a
+relatively dense set.
+\end{proof}
+
+\begin{remark}\label{rem:sensitivity}
+Proposition \ref{prop:sens} should be contrasted with the Nyman--Beurling criterion, in which RH is
+equivalent to $d_N\to0$ for an explicit sequence of Hilbert-space distances with
+$\liminf d_N^{2}\log N\ge\sum_\rho m_\rho^{2}|\rho|^{-2}$ \cite{BDBLS,BurnolLower}. There, by an
+identity of Balazard--Saias--Yor \cite{BSY}, the natural size of the violation signal of a zero
+$\rho=\tfrac12+\delta+i\tau$ is $\log|\rho/(1-\rho)|\approx\delta/(\tfrac14+\tau^{2})$, to be seen
+against a baseline of order $1/\log N$: detection requires $\log N\gtrsim\tau^{2}/\delta$, i.e.\
+$N\ge\exp(c\,\tau^{2}/\delta)$. Here, in the same variable $t=\log x$, the same zero drives
+$\Psi_\omega$ with an envelope growing like $e^{(\delta-\omega)t}$ and explicit amplitude:
+combining Proposition \ref{prop:sens} with Corollary \ref{cor:margin}, the height at which a
+violating quartet at fixed $\tau_0$ overtakes the margin is
+$t\asymp(\delta-\omega)^{-1}\log\bigl((\delta-\omega)^{-1}\bigr)$. The criterion is exponentially
+sensitive where Nyman--Beurling is nearly blind --- though Proposition \ref{prop:window} shows this
+sensitivity, too, begins only beyond every feasible argument, since a violating zero must lie above
+the verification height.
+\end{remark}
+
+% ===========================================================================
+\section{Dirichlet $L$-functions, and the extended Selberg class}\label{sec:dirichlet}
+% ===========================================================================
+
+Everything so far used four inputs: the Hadamard expansion, the functional-equation antisymmetry
+of $\xi'/\xi$ about $s=\tfrac12$, the strip bound $|\Ip\gamma|\le\tfrac12$, and the absence of
+real zeros in $(\tfrac12,1]$. All four are available for real primitive Dirichlet characters, so
+the theory transfers whole. What changes is instructive: the margin grows with the conductor, and
+the absence-of-real-zeros input --- free for $\zeta$ --- becomes both necessary and visible.
+
+Let $\chi$ be a real primitive character mod $q$, $a=(1-\chi(-1))/2$, and
+\[
+  \xi(s,\chi)=(q/\pi)^{(s+a)/2}\,\Gamma\!\left(\tfrac{s+a}2\right)L(s,\chi),
+\]
+entire of order one with $\xi(s,\chi)=\xi(1-s,\chi)$, since the root number of a real primitive
+character equals $+1$ by Gauss's theorem (see \cite[\S9]{Davenport}). Because the coefficients are
+real, zeros also pair under conjugation, so the zero set of $\Xi_\chi(z)=\xi(\tfrac12-iz,\chi)$
+carries the full symmetry $\gamma\mapsto-\gamma$, $\gamma\mapsto\overline\gamma$ used throughout,
+and $\Psi_{\omega,\chi}$ is defined by the series \eqref{eq:Psiomegaseries} over these $\gamma$.
+We restrict to $q\le4\cdot10^{5}$, where the numerical verification of GRH by Platt
+\cite{Platt2016} guarantees that $L(s,\chi)$ has no real zeros in $(0,1)$ and no non-real zeros of
+height below $\max(10^{8}/q,200)$; this replaces the two numerical inputs used for $\zeta$.
+
+\begin{theorem}\label{thm:chi}
+Let $\chi$ be real primitive of modulus $q\le4\cdot10^{5}$ and $0<\omega<\tfrac12$, with sums over
+the zeros $\gamma$ of $\Xi_\chi$.
+\begin{enumerate}
+\item[(i)] Unconditionally,
+$A_\chi(\omega):=\sum_\gamma(\gamma^{2}+\omega^{2})^{-1}
+ =\omega^{-1}(\xi'/\xi)(\tfrac12+\omega,\chi)$ and
+$B_\chi(\omega):=\sum_\gamma(\gamma^{2}-\omega^{2})(\gamma^{2}+\omega^{2})^{-2}
+ =(\xi'/\xi)'(\tfrac12+\omega,\chi)$; moreover $(\xi'/\xi)(\tfrac12,\chi)=0$, so the margin slope
+vanishes at $\omega=0$ exactly as for $\zeta$.
+\item[(ii)] If $\vartheta_\chi:=\sup_\rho\Rp(\rho)-\tfrac12\le\omega$ then
+\[
+  \Psi_{\omega,\chi}(t)=\lxi{\left(\tfrac12+\omega,\chi\right)}t
+  +\lxi{'\left(\tfrac12+\omega,\chi\right)}
+  +O\!\left(A^{*}_\chi(\omega)\,e^{-(\omega-\vartheta_\chi)t}\right),
+\]
+and $\Psi_{\omega,\chi}(t)>0$ for every
+$t>(A^{*}_\chi(\omega)-B_\chi(\omega))/(\omega A_\chi(\omega))$, with
+$A^{*}_\chi-B_\chi\le8\omega^{2}\sum_\rho(\Ip\rho)^{-4}$.
+\item[(iii)] The analogue of Theorem \ref{thm:transition} holds verbatim.
+\end{enumerate}
+\end{theorem}
+
+\begin{proof}
+The proofs of Sections \ref{sec:setup}--\ref{sec:transition} apply with $\xi(\cdot)$ replaced by
+$\xi(\cdot,\chi)$. Oddness of $(\xi'/\xi)(\cdot,\chi)$ about $\tfrac12$ follows from the even
+functional equation, which gives $(\xi'/\xi)(\tfrac12,\chi)=0$ and removes the constant from the
+Hadamard expansion of $\Xi_\chi'/\Xi_\chi$, exactly as in \cite[\S2.2]{Suzuki2023}. The strip
+bound $|\Ip\gamma|\le\tfrac12$ holds as for $\zeta$. By \cite{Platt2016} there are no real zeros
+in $(0,1)$ (so no purely imaginary $\gamma$, and no poles of $(\xi'/\xi)(\cdot,\chi)$ on
+$(\tfrac12,1]$, which part (iii) needs), and every non-real zero off the critical line has height
+above $200$, so $\Rp(\gamma^{2}+\omega^{2})>0$ for every $\gamma$. The pole terms $1/s+1/(s-1)$
+are absent throughout, since $\xi(s,\chi)$ is entire.
+\end{proof}
+
+Table \ref{tab:conductor} records the margin across conductors: $B_\chi(0)=(\xi'/\xi)'(\tfrac12,\chi)$
+--- the analogue of Remark \ref{rem:B0} --- and the slope at $\omega=\tfrac14$. The margin grows
+with the conductor, because the lowest zero descends: \emph{within this family, $\zeta$ is the most
+marginal member}.
+
+\begin{table}[htbp]
+\centering
+\begin{tabular}{@{}lcc@{}}
+\toprule
+$L$-function & $B(0)$ & slope $(\xi'/\xi)(\tfrac34,\cdot)$ \\
+\midrule
+$\zeta$        & $0.046210$ & $0.011552$\\
+$\chi$ mod $3$ & $0.113402$ & $0.028340$\\
+$\chi$ mod $4$ & $0.156030$ & $0.038978$\\
+$\chi$ mod $5$ & $0.156914$ & $0.039206$\\
+\bottomrule
+\end{tabular}
+\vspace{2mm}
+\caption{The margin across conductors.}
+\label{tab:conductor}
+\end{table}
+
+The arithmetic side mirrors \eqref{eq:Psiomegaprimes}, with the pole block absent.
+
+\begin{proposition}\label{prop:chiprime}
+Let $\chi,q,a$ be as above and $\alpha:=(\tfrac12+\omega+a)/2$. For $t>0$,
+\[
+  \Psi_{\omega,\chi}(t)=\frac t2\left[\psi(\alpha)+\log\frac q\pi\right]
+  +\frac14\left[\psi^{(1)}(\alpha)-e^{-2\alpha t}\,\Phi\!\left(e^{-2t},2,\alpha\right)\right]
+  -\sum_{n\le e^{t}}\frac{\Lambda(n)\chi(n)}{n^{\frac12+\omega}}\,(t-\log n).
+\]
+\end{proposition}
+
+\begin{proof}
+By uniqueness of Fourier transforms it suffices to show that the right-hand side has Laplace
+transform $-z^{-2}(\xi'/\xi)(\tfrac12+\omega-iz,\chi)$ for $\Ip z$ large, since the series
+defining $\Psi_{\omega,\chi}$ has this transform by the argument of
+\cite[\S\S2.2, 11]{Suzuki2023}, using $(\xi'/\xi)(\tfrac12,\chi)=0$. Write $s=\tfrac12+\omega-iz$;
+for $\Rp s>1$,
+\[
+  \lxi{(s,\chi)}=\tfrac12\log\frac q\pi+\tfrac12\,\psi\!\left(\tfrac{s+a}2\right)
+  -\sum_{n\ge2}\Lambda(n)\chi(n)\,n^{-s},
+\]
+with no pole terms. The transforms $\int_0^\infty te^{izt}dt=-z^{-2}$ and
+$\int_0^\infty(t-\log n)\,n^{-\frac12-\omega}\mathbf 1_{[\log n,\infty)}(t)\,e^{izt}dt
+ =-z^{-2}n^{-s}$ handle the first and third pieces. For the middle piece we claim, for $\alpha>0$
+and $\Ip z>0$,
+\begin{equation}\label{eq:gammalemma}
+  \int_0^\infty\frac14\left[\psi^{(1)}(\alpha)-e^{-2\alpha t}\Phi(e^{-2t},2,\alpha)\right]
+  e^{izt}\,dt
+  =-\frac1{2z^{2}}\left[\psi\!\left(\alpha-\tfrac{iz}2\right)-\psi(\alpha)\right].
+\end{equation}
+Indeed $\psi^{(1)}(\alpha)-e^{-2\alpha t}\Phi(e^{-2t},2,\alpha)
+ =\sum_{k\ge0}(k+\alpha)^{-2}\bigl(1-e^{-2(k+\alpha)t}\bigr)$, and per $k$, with
+$c=2(k+\alpha)$, $\int_0^\infty(1-e^{-ct})e^{izt}dt=\tfrac iz-\tfrac1{c-iz}$; the identity
+\[
+  \frac1{4(k+\alpha)^{2}}\left[\frac iz-\frac1{2(k+\alpha)-iz}\right]
+  =-\frac1{2z^{2}}\left[\frac1{k+\alpha}-\frac1{k+\alpha-iz/2}\right]
+\]
+is elementary --- both sides equal
+$\tfrac{i}{4z}\bigl[(k+\alpha)(k+\alpha-\tfrac{iz}2)\bigr]^{-1}$ --- and summing over $k$ gives
+\eqref{eq:gammalemma}. Since $(s+a)/2=\alpha-iz/2$, assembling the three pieces yields
+$-z^{-2}(\xi'/\xi)(s,\chi)$ for $\Ip z>\tfrac12$, hence for $\Ip z>\tfrac12-\omega$ by analytic
+continuation. Finally $\Psi_{\omega,\chi}(0)=0$, since
+$\Phi(1,2,\alpha)=\zeta(2,\alpha)=\psi^{(1)}(\alpha)$.
+\end{proof}
+
+Table \ref{tab:chiprime} tests Proposition \ref{prop:chiprime} against the main term of Theorem
+\ref{thm:chi}(ii), using prime powers $p^{m}\le e^{15}$ and no information about the zeros; the
+difference sits inside the envelope $A_\chi(\omega)e^{-\omega t}$ in every row and decays at the
+predicted rate. (The differences are roughly ten times the $\zeta$ case, as they must be:
+$A_\chi$ is about three times larger and the lowest zeros are lower --- $6.02$ for $q=4$ against
+$14.13$ --- so the leading damped oscillation is bigger.)
+
+\begin{table}[htbp]
+\centering
+\begin{tabular}{@{}lllcccc@{}}
+\toprule
+$q$ & $\omega$ & $t$ & $\Psi_{\omega,\chi}(t)$ (primes) & main term & difference & $A_\chi(\omega)e^{-\omega t}$\\
+\midrule
+$3$ & $0.2$ & $6$  & $0.25378628$ & $0.24936876$ & $4.4\times10^{-3}$  & $3.4\times10^{-2}$\\
+$3$ & $0.2$ & $15$ & $0.45339439$ & $0.45344292$ & $-4.9\times10^{-5}$ & $5.6\times10^{-3}$\\
+$3$ & $0.3$ & $15$ & $0.62323052$ & $0.62324617$ & $-1.6\times10^{-5}$ & $1.3\times10^{-3}$\\
+$3$ & $0.4$ & $15$ & $0.79281810$ & $0.79282263$ & $-4.5\times10^{-6}$ & $2.8\times10^{-4}$\\
+$4$ & $0.2$ & $6$  & $0.35287485$ & $0.34295358$ & $9.9\times10^{-3}$  & $4.7\times10^{-2}$\\
+$4$ & $0.2$ & $15$ & $0.62564343$ & $0.62367332$ & $2.0\times10^{-3}$  & $7.8\times10^{-3}$\\
+$4$ & $0.3$ & $15$ & $0.85733527$ & $0.85691254$ & $4.2\times10^{-4}$  & $1.7\times10^{-3}$\\
+$4$ & $0.4$ & $15$ & $1.08963532$ & $1.08954490$ & $9.0\times10^{-5}$  & $3.9\times10^{-4}$\\
+$5$ & $0.2$ & $6$  & $0.36369455$ & $0.34497036$ & $1.9\times10^{-2}$  & $4.7\times10^{-2}$\\
+$5$ & $0.2$ & $15$ & $0.62696177$ & $0.62731266$ & $-3.5\times10^{-4}$ & $7.8\times10^{-3}$\\
+$5$ & $0.3$ & $15$ & $0.86199461$ & $0.86206119$ & $-6.7\times10^{-5}$ & $1.7\times10^{-3}$\\
+$5$ & $0.4$ & $15$ & $1.09632744$ & $1.09633964$ & $-1.2\times10^{-5}$ & $3.9\times10^{-4}$\\
+\bottomrule
+\end{tabular}
+\vspace{2mm}
+\caption{Proposition \ref{prop:chiprime} tested against the arithmetic side. No zeros are used.}
+\label{tab:chiprime}
+\end{table}
+
+The genuinely new phenomenon is what the criterion \emph{cannot} see. A real zero enters the
+series with a locked phase, and pushes $\Psi_{\omega,\chi}$ up.
+
+\begin{proposition}[Blindness to real zeros]\label{prop:siegel}
+Let $\chi$ be a real primitive character, $0<\omega<\tfrac12$, and assume $\tfrac12+\omega$ is not
+a zero of $L(\cdot,\chi)$. Write $\beta_0\in[\tfrac12,1)$ for the largest real zero of
+$L(\cdot,\chi)$ in $[\tfrac12,1)$, with $\beta_0=\tfrac12$ if there is none, and
+$\vartheta_{\mathrm{nr}}:=\sup\{\Rp\rho-\tfrac12:\rho\ \text{non-real}\}$.
+\begin{enumerate}
+\item[(i)] A real zero pair $\{\tfrac12+\delta,\tfrac12-\delta\}$ with $\delta>\omega$ contributes
+\[
+  \frac{e^{(\delta-\omega)t}}{(\delta-\omega)^{2}}
+  +\frac{e^{-(\delta+\omega)t}}{(\delta+\omega)^{2}}\;>\;0
+\]
+to the oscillatory part \eqref{eq:Rclean} of $\Psi_{\omega,\chi}$.
+\item[(ii)] If $\Psi_{\omega,\chi}(t)\ge0$ for all sufficiently large $t$, then
+$\vartheta_{\mathrm{nr}}\le\max\bigl(\omega,\ \beta_0-\tfrac12\bigr)$.
+\item[(iii)] Conversely, suppose $\vartheta_{\mathrm{nr}}\le\max(\omega,\beta_0-\tfrac12)$, that
+every non-real zero satisfies $|\Ip\rho|\ge\tfrac12$, and, in the case $\beta_0>\tfrac12+\omega$,
+that $2\sum_{\rho\ \mathrm{non\text{-}real}}(\Ip\rho)^{-2}<(\beta_0-\tfrac12-\omega)^{-2}$. Then
+$\Psi_{\omega,\chi}(t)\ge0$ for all sufficiently large $t$.
+\end{enumerate}
+For $q\le4\cdot10^{5}$ the side conditions in (iii) hold by \cite{Platt2016} (indeed there are no
+real zeros at all), so (ii) and (iii) are an equivalence. In particular the shifted criterion
+cannot detect Siegel zeros, and the real-zero hypothesis in \cite[Thm.~1.1]{SuzukiSelberg} cannot
+be dropped.
+\end{proposition}
+
+\begin{proof}
+(i) For $\gamma=\pm i\delta$ one has $e^{\mp i\gamma t}=e^{\pm\delta t}$ and
+$(\gamma\mp i\omega)^{2}=-(\delta\mp\omega)^{2}$, so each of the four terms that the pair
+contributes to \eqref{eq:Rclean} is positive; summing them gives the display.
+
+(ii) This is the Landau argument of Theorem \ref{thm:transition}(ii). Suppose
+$\Psi_{\omega,\chi}\ge0$ eventually; its Laplace transform $F$ converges in a half-plane and
+equals $-z^{-2}(\xi'/\xi)(\tfrac12+\omega-iz,\chi)$ plus an entire correction. By Landau's
+theorem, $i\sigma_c$ is a singularity of $F$; the only candidates on the closed positive imaginary
+axis are $z=0$ and points $i(\beta-\tfrac12-\omega)$ with $\beta$ a real zero, so
+$\sigma_c\le\max(0,\beta_0-\tfrac12-\omega)$. Since $F$ is analytic above $\sigma_c$ and agrees
+with the meromorphic expression, every zero satisfies
+$\Rp\rho-\tfrac12-\omega\le\sigma_c$, which is the claim.
+
+(iii) Write $\Psi_{\omega,\chi}=\omega A_\chi t+B_\chi+R$ as in \eqref{eq:Rclean}. If
+$\beta_0\le\tfrac12+\omega$, all zeros satisfy $\Rp\rho\le\tfrac12+\omega$: real-zero pairs with
+$\delta\le\omega$ contribute positively to $A_\chi$ (their terms are $(\omega^{2}-\delta^{2})^{-1}>0$),
+non-real zeros contribute $\Rp[(\gamma^{2}+\omega^{2})^{-1}]>0$ by $|\Ip\rho|\ge\tfrac12\ge|b|$, so
+$A_\chi(\omega)>0$, $|R|\le A^{*}_\chi<\infty$, and the margin wins for large $t$. If
+$\beta_0=\tfrac12+\delta_r>\tfrac12+\omega$, then by (i) the largest real pair contributes at least
+$e^{(\delta_r-\omega)t}(\delta_r-\omega)^{-2}(1+o(1))$, all other real pairs contribute positively,
+and the non-real zeros contribute at most
+$e^{(\delta_r-\omega)t}\cdot2\sum_{\mathrm{nr}}(\Ip\rho)^{-2}$ in absolute value, which the
+amplitude condition makes strictly smaller; the linear terms are $O(t)$. Hence
+$\Psi_{\omega,\chi}\to+\infty$.
+\end{proof}
+
+\begin{remark}[The extended Selberg class]\label{rem:selberg}
+Suzuki has extended the unshifted theory to the extended Selberg class $S^{\sharp}$
+\cite{SuzukiSelberg}: the screw function there acquires the extra terms
+$-iB_Ft-\tfrac{m_0}2t^{2}$ (with $iB_F=(\xi_F'/\xi_F)(\tfrac12)$ and $m_0$ the order of the
+central zero), the criterion concerns $\Rp(-g_F)$, is stated under the hypothesis that $F$ has no
+real zeros off $s=\tfrac12$, and takes the ``eventually non-negative'' form even without a shift
+--- which makes an explicit threshold in the style of Theorem \ref{thm:threshold} more, not less,
+relevant there. Three remarks on how the present results sit in that generality. First, the
+functional equation $\xi_F(s)=\omega_F\overline{\xi_F(1-\bar s)}$ forces
+$\Rp(\xi_F'/\xi_F)(\tfrac12)=0$ for \emph{every} $F\in S^{\sharp}$, so the margin slope
+$\Rp(\xi_F'/\xi_F)(\tfrac12+\omega)$ vanishes at $\omega=0$ always: the marginality mechanism of
+Corollary \ref{cor:margin} is universal, the non-self-dual case being handled through the pair
+$(F,\bar F)$, which restores the $\pm\gamma$ symmetry used in the proofs. Second, a central zero
+of order $m_0$ contributes the non-negative term $m_0\,[\,t/\omega-(1-e^{-\omega t})/\omega^{2}]$
+to the shifted function, so families with forced central zeros are non-marginal at every
+$\omega>0$, with slope blowing up like $m_0/\omega$ as $\omega\to0^{+}$. Third, Proposition
+\ref{prop:siegel} is the quantitative reason for the real-zero hypothesis in
+\cite[Thm.~1.1]{SuzukiSelberg}: real zeros push the screw function up, at the fastest exponential
+rate present, and no criterion of this family can see them.
+\end{remark}
+
+% ===========================================================================
+\section{Numerical verification}\label{sec:numerics}
+% ===========================================================================
+
+All computations were done in \texttt{mpmath} at $20$--$30$ decimal digits, with $\Lambda(n)$
+obtained by sieving. Scripts are available from the author. The Dirichlet computations ---
+functional-equation and reality checks for $\xi(\cdot,\chi)$, zero counts against the
+Riemann--von Mangoldt formula, the closed forms of Theorem \ref{thm:chi}(i) against direct zero
+sums, and the arithmetic side --- are reported in Section \ref{sec:dirichlet}
+(Tables \ref{tab:conductor} and \ref{tab:chiprime}).
+
+\subsection{The arithmetic side}
+As a check on the implementation of \eqref{eq:Psiomegaprimes} we reproduce a value printed by
+Suzuki. In the proof of \cite[Thm.~4.1]{Suzuki2023} he records $\Psi(t_2)=0.0396618\ldots$ at
+$t_2=0.464002\ldots$. Evaluating \eqref{eq:Psiomegaprimes} at $\omega=0$ gives
+\[
+  \Psi(0.464002)=0.03966175656\ldots,\qquad \Psi(0)=0 .
+\]
+Separately, the per-zero identity between the definition \eqref{eq:Psiomegadef} and the series
+\eqref{eq:Psiomegaseries}, and the decomposition \eqref{eq:Rdecomp}, were verified symbolically and
+to $30$ digits at complex $\gamma$.
+
+\subsection{The closed forms of Proposition \ref{prop:AB}}
+Table \ref{tab:AB} compares the closed forms against direct summation over the first $250$ zeros
+together with a Riemann--von Mangoldt tail estimate $dN=(2\pi)^{-1}\log(\tau/2\pi)\,d\tau$. The
+relative discrepancy is $1.13\times10^{-4}$ in every row, independent of $\omega$; this is the error
+of the tail estimate, not of the identity.
+
+\begin{table}[htbp]
+\centering
+\begin{tabular}{@{}lcccc@{}}
+\toprule
+$\omega$ & $A(\omega)$ (sum + tail) & $A(\omega)$ (closed form) & $B(\omega)$ (sum + tail) & $B(\omega)$ (closed form)\\
+\midrule
+$0.10$ & $0.04621447$ & $0.04620924$ & $0.04621299$ & $0.04620776$\\
+$0.25$ & $0.04621057$ & $0.04620534$ & $0.04620128$ & $0.04619605$\\
+$0.40$ & $0.04620333$ & $0.04619810$ & $0.04617957$ & $0.04617434$\\
+\bottomrule
+\end{tabular}
+\vspace{2mm}
+\caption{Proposition \ref{prop:AB} against direct summation over $250$ zeros plus tail.}
+\label{tab:AB}
+\end{table}
+
+\subsection{The asymptotic, tested against the primes}
+Table \ref{tab:asym} is the substantive check: the left column is computed from
+\eqref{eq:Psiomegaprimes}, i.e.\ from prime powers $p^m\le e^{15}$ and elementary functions, using
+no information about the zeros whatsoever; the right column is the main term of Theorem
+\ref{thm:asym}. The difference lies inside the envelope $A(\omega)e^{-\omega t}$ of Theorem
+\ref{thm:asym} in every row and decays at the predicted rate.
+
+\begin{table}[htbp]
+\centering
+\begin{tabular}{@{}llcccc@{}}
+\toprule
+$\omega$ & $t$ & $\Psi_\omega(t)$ from \eqref{eq:Psiomegaprimes} & main term & difference & $A(\omega)e^{-\omega t}$\\
+\midrule
+$0.20$ & $6$  & $0.10222000$ & $0.10164948$ & $5.7\times10^{-4}$ & $1.4\times10^{-2}$\\
+$0.20$ & $15$ & $0.18501313$ & $0.18482211$ & $1.9\times10^{-4}$ & $2.3\times10^{-3}$\\
+$0.30$ & $6$  & $0.12966687$ & $0.12935586$ & $3.1\times10^{-4}$ & $7.6\times10^{-3}$\\
+$0.30$ & $15$ & $0.25414919$ & $0.25410476$ & $4.4\times10^{-5}$ & $5.1\times10^{-4}$\\
+$0.40$ & $6$  & $0.15721911$ & $0.15704977$ & $1.7\times10^{-4}$ & $4.2\times10^{-3}$\\
+$0.40$ & $15$ & $0.32337324$ & $0.32336293$ & $1.0\times10^{-5}$ & $1.2\times10^{-4}$\\
+\bottomrule
+\end{tabular}
+\vspace{2mm}
+\caption{Theorem \ref{thm:asym} tested against the arithmetic side. No zeros are used.}
+\label{tab:asym}
+\end{table}
+
+\subsection{The margin and the threshold}
+Table \ref{tab:margin} records the slope, the intercept, the ratio $r:=B/A$, the threshold
+$t_0=(A-B)/(\omega A)=(1-r)/\omega$ that Theorem \ref{thm:threshold} yields in the RH case
+($A^{*}=A$), and the bound $8\omega^{2}\sum_\rho(\Ip\rho)^{-4}/(\xi'/\xi)(\tfrac12+\omega)$ valid
+for every $\vartheta\le\omega$. The row $\omega=0$ returns $1.2\times10^{-30}$ for the slope, i.e.\
+zero to working precision, confirming $(\xi'/\xi)(\tfrac12)=0$.
+
+\begin{table}[htbp]
+\centering
+\begin{tabular}{@{}lccccc@{}}
+\toprule
+$\omega$ & $(\xi'/\xi)(\tfrac12+\omega)$ & $B(\omega)$ & $r(\omega)$ & $t_0$ (RH case) & $t_0$ bound (any $\vartheta\le\omega$)\\
+\midrule
+$0.49$  & $0.0226342$   & $0.0461565$ & $0.99922857$ & $0.00157$   & $0.00631$\\
+$0.40$  & $0.0184792$   & $0.0461743$ & $0.99948567$ & $0.00129$   & $0.00515$\\
+$0.30$  & $0.0138610$   & $0.0461899$ & $0.99971057$ & $0.00096$   & $0.00386$\\
+$0.20$  & $0.0092414$   & $0.0462011$ & $0.99987132$ & $0.00064$   & $0.00257$\\
+$0.10$  & $0.0046209$   & $0.0462078$ & $0.99996782$ & $0.00032$   & $0.00129$\\
+$0.05$  & $0.0023105$   & $0.0462094$ & $0.99999196$ & $0.00016$   & $0.00064$\\
+$0.01$  & $0.00046210$  & $0.0462100$ & $0.99999968$ & $3.2\times10^{-5}$ & $1.3\times10^{-4}$\\
+$0.001$ & $0.000046210$ & $0.0462100$ & $0.9999999968$ & $3.2\times10^{-6}$ & $1.3\times10^{-5}$\\
+$0$     & $1.2\times10^{-30}$ & $0.0462100$ & --- & --- & ---\\
+\bottomrule
+\end{tabular}
+\vspace{2mm}
+\caption{The margin of Theorem \ref{thm:asym} and the thresholds of Theorem \ref{thm:threshold}.
+$1-r(\omega)\approx0.0032\,\omega^{2}$, reflecting
+$A-B=2\omega^{2}\sum_\gamma(\gamma^{2}+\omega^{2})^{-2}$.}
+\label{tab:margin}
+\end{table}
+
+\subsection{The unconditional window}
+Table \ref{tab:window} records the window of Proposition \ref{prop:window}: the two roots of
+$\omega A t+B-Ae^{-\omega t}-e^{(\frac12-\omega)t}E(t)$, with, for comparison, the endpoint that
+the undamped bound $E\equiv S=2.96\cdot10^{-12}$ would give. The zero-free damping is a
+$1$--$7\%$ effect for $\omega\le0.45$ and dominant near $\omega=\tfrac12$, where the endpoint law
+$t_{+}\approx0.7196\,(\tfrac12-\omega)^{-2}$ takes over (predicted $7.20\cdot10^{5}$ against
+computed $726\,493$ at $\omega=0.499$).
+
+\begin{table}[htbp]
+\centering
+\begin{tabular}{@{}lcccc@{}}
+\toprule
+$\omega$ & $t_{-}(\omega)$ & $t_{+}$ ($E\equiv S$) & $t_{+}(\omega)$ & $x_{+}=e^{t_{+}}$\\
+\midrule
+$0.05$  & $8.0\times10^{-5}$ & $55.06$  & $55.84$   & $10^{24.3}$\\
+$0.10$  & $1.6\times10^{-4}$ & $63.67$  & $64.68$   & $10^{28.1}$\\
+$0.20$  & $3.2\times10^{-4}$ & $87.98$  & $89.86$   & $10^{39.0}$\\
+$0.25$  & $4.0\times10^{-4}$ & $107.19$ & $109.94$  & $10^{47.8}$\\
+$0.30$  & $4.8\times10^{-4}$ & $136.02$ & $140.42$  & $10^{61.0}$\\
+$0.40$  & $6.4\times10^{-4}$ & $282.06$ & $300.89$  & $10^{130.7}$\\
+$0.45$  & $7.2\times10^{-4}$ & $580.82$ & $663.59$  & $10^{288.2}$\\
+$0.49$  & $7.9\times10^{-4}$ & $3079.1$ & $7262.3$  & $10^{3154}$\\
+$0.494$ & $7.9\times10^{-4}$ & ---      & $20\,178$  & $10^{8763}$\\
+$0.497$ & $8.0\times10^{-4}$ & ---      & $80\,694$  & $10^{35\,050}$\\
+$0.499$ & $8.0\times10^{-4}$ & ---      & $726\,493$ & $10^{315\,500}$\\
+\bottomrule
+\end{tabular}
+\vspace{2mm}
+\caption{Proposition \ref{prop:window}: unconditional positivity of $\Psi_\omega$ on
+$(t_{-},t_{+})$, from RH verified to $3\cdot10^{12}$ \cite{PlattTrudgian} and the zero-free
+regions of \cite{MTY}.}
+\label{tab:window}
+\end{table}
+
+\subsection{Sensitivity}
+Table \ref{tab:sens} measures the growth rate of the envelope of a synthetic violating quartet at
+ordinate $\tau_0=50$, taking the maximum of $|\Psi_\omega^{(\rho_0)}|$ over one period of
+$\cos(\tau_0t)$. Where the exponential has fully separated from the linear drift the measured rate
+agrees with $\delta-\omega$ to five digits; where it has not, the drift contributes and the measured
+rate is smaller. Rows with $\delta<\omega$ grow at the rate of the linear drift
+$\omega A_0t+B_0$ alone: the measured rates $0.01833$ and $0.01638$ match
+$\tfrac1{20}\log\bigl((60\,\omega A_0+B_0)/(40\,\omega A_0+B_0)\bigr)=0.01838$ and $0.01682$ to
+within the residual damped oscillation, i.e.\ no exponential component survives, as predicted. Comparison against the amplitude
+$2(\tau_0^{2}+(\delta-\omega)^{2})^{-1}e^{(\delta-\omega)t}$ of Proposition \ref{prop:sens} gives
+agreement to $1$--$6\%$ at the heights tested, the discrepancy being the $O(t)$ term.
+
+\begin{table}[htbp]
+\centering
+\begin{tabular}{@{}llccrr@{}}
+\toprule
+$\delta$ & $\omega$ & envelope at $t=40$ & envelope at $t=60$ & measured rate & $\delta-\omega$\\
+\midrule
+$0.30$ & $0.10$ & $2.417$               & $1.3195\times10^{2}$ & $+0.20000$ & $+0.2000$\\
+$0.20$ & $0.10$ & $5.175\times10^{-2}$  & $3.341\times10^{-1}$ & $+0.09325$ & $+0.1000$\\
+$0.15$ & $0.10$ & $1.392\times10^{-2}$  & $2.727\times10^{-2}$ & $+0.03364$ & $+0.0500$\\
+$0.10$ & $0.20$ & $1.445\times10^{-2}$  & $2.084\times10^{-2}$ & $+0.01833$ & $-0.1000$\\
+$0.05$ & $0.10$ & $8.114\times10^{-3}$  & $1.126\times10^{-2}$ & $+0.01638$ & $-0.0500$\\
+\bottomrule
+\end{tabular}
+\vspace{2mm}
+\caption{Proposition \ref{prop:sens}: envelope growth for a synthetic quartet at $\tau_0=50$.}
+\label{tab:sens}
+\end{table}
+
+% ===========================================================================
+\section{What this supplies, and what it does not}\label{sec:discussion}
+% ===========================================================================
+
+\subsection{The shape of the problem}
+Theorem \ref{thm:asym} exhibits the criterion as a competition:
+\begin{equation}\label{eq:competition}
+  \Psi_\omega(t)=\underbrace{\lxi{\left(\tfrac12+\omega\right)}t+\lxi{'\left(\tfrac12+\omega\right)}}
+                 _{\text{margin, linear in }t,\ \text{unconditional}}
+  \;-\;\underbrace{e^{-\omega t}\times(\text{oscillation over zeros})}_{\text{obstruction}} .
+\end{equation}
+Under Hypothesis \ref{hyp} with $\vartheta\le\omega$ the obstruction is bounded by
+$A^{*}(\omega)e^{-(\omega-\vartheta)t}$ and the margin wins beyond an explicit
+$t_0(\omega)\le0.0129\,\omega$. If instead there is a zero at $\Rp\rho=\tfrac12+\delta$ with
+$\delta>\omega$, the obstruction contains a term of size $e^{(\delta-\omega)t}$ and eventually
+swamps the margin. Theorem \ref{thm:suzuki} is exactly this dichotomy; Theorems
+\ref{thm:asym}--\ref{thm:threshold} and Proposition \ref{prop:sens} make both sides of it
+quantitative.
+
+\subsection{No free lunch}
+To prove $\Psi_\omega\ge0$ for a fixed $\omega<\tfrac12$ from the arithmetic side one must show
+that the fluctuation of
+\[
+  \sum_{n\le e^{t}}\frac{\Lambda(n)}{n^{\frac12+\omega}}(t-\log n)
+\]
+about its smooth part is bounded by the linear margin $(\xi'/\xi)(\tfrac12+\omega)\,t
+\approx0.0462\,\omega\,t$. Without zero-free information that fluctuation may a priori be as large
+as $e^{(\frac12-\omega)t}$. Converting an exponential a priori bound into a linear one is precisely
+the content of a zero-free half-plane. The reformulation transports the difficulty faithfully; it
+does not reduce it, and we make no claim that it does.
+
+\subsection{Three respects in which the shifted case is nevertheless better behaved}
+
+\emph{(i) The criterion is not saturated.} For $\omega=0$ the inequality $\Psi\ge0$ has
+$\liminf\Psi=0$ conditionally \eqref{eq:liminf}, so no argument that establishes the inequality up to
+a positive error can succeed. Corollary \ref{cor:margin} shows that this obstruction is a property
+of the point $\omega=0$ alone: it is the vanishing of $\xi'/\xi$ at the centre of the critical
+strip. For every $\omega>0$ there is a margin, it is explicit, and it grows without bound.
+
+\emph{(ii) The required cancellation is linear, not square-root.} Most positivity criteria for RH
+demand square-root cancellation in an arithmetic sum. Here one needs only $o(t)$ control of a
+twice-integrated weighted Chebyshev error --- a much weaker requirement, bought by asking for a
+weaker conclusion.
+
+\emph{(iii) Failure is exponentially visible.} Proposition \ref{prop:sens} and Remark
+\ref{rem:sensitivity}.
+
+\subsection{Zero-density estimates: what they can and cannot do here}\label{sec:zerodensity}
+The obstruction in \eqref{eq:competition} is, by \eqref{eq:Rclean} and \eqref{eq:gammarho}, a sum
+over zeros weighted by $e^{(\Rp\rho-\frac12-\omega)t}$ and $|\rho|^{-2}$. Sums of this shape are
+what zero-density theorems --- from Ingham to the recent improvement of Guth and Maynard
+\cite{GuthMaynard} --- are built to control, so it is natural to ask whether, for some
+$\omega<\tfrac12$, known density estimates inserted into \eqref{eq:Rclean} bound the obstruction by
+the margin. The answer is no, for every $\omega$, and for a structural reason worth recording:
+density estimates bound \emph{counts} $N(\sigma,T)$, and every known bound is consistent with the
+existence of a single zero at any fixed $\beta<1$; a single permitted zero at
+$\beta>\tfrac12+\omega$ contributes $e^{(\beta-\frac12-\omega)t}$ and defeats any linear margin as
+$t\to\infty$. No argument using count upper bounds alone can close the gap --- to bound the
+obstruction by the margin for all $t$ \emph{is} to assert the zero-free half-plane.
+
+What density and zero-free-region technology does control is the \emph{onset}: it constrains where
+in $t$ a violation could first appear. The Korobov--Vinogradov region forces a zero at
+$\beta$ close to $1$ to have height $\tau\ge\exp\bigl(c(1-\beta)^{-3/2}\bigr)$, and a zero of
+height $\tau$ enters \eqref{eq:Rclean} with weight $\tau^{-2}$; both effects postpone the possible
+failure of $\Psi_\omega\ge0$ to explicit ranges of $t$, exactly as verification to height $T_v$
+does in Proposition \ref{prop:window}. In this precise sense the criterion's open content lives
+entirely in the tail $t\to\infty$, where only genuine zero-free-half-plane information can reach.
+The productive question is therefore not whether density estimates prove the criterion --- they
+cannot --- but how the two available inputs shape the unconditional window of Proposition
+\ref{prop:window}, and there the answer is now quantitative. The verification height sets the
+\emph{level} of the obstruction bound: $t_{+}\approx(\tfrac12-\omega)^{-1}\log(1/S)$ at moderate
+$\omega$, so raising $T_v$ moves the window logarithmically. The zero-free region sets its
+\emph{decay}: negligible at moderate $\omega$, it takes over at the PNT end and produces the
+endpoint law $t_{+}=(4/c+o(1))(\tfrac12-\omega)^{-2}$, so the constant $c$ of \cite{MTY} enters
+the criterion quadratically. All the action of zero-free technology on this family is
+concentrated near $\omega=\tfrac12$.
+
+\subsection{Status of the family}
+We note finally that $\Psi_\omega$ appears to be unworked. As of August 2026, Suzuki's paper has
+twelve recorded citations (Semantic Scholar), of which eight are his own; none of them takes up
+$\Psi_\omega$ or Theorem \ref{thm:suzuki}. In particular the later work extending screw functions
+to the extended Selberg class \cite{SuzukiSelberg} contains no shifted family --- the symbol
+$\omega$ there is the root number --- and its ``eventually non-negative'' criterion, together
+with its real-zero hypothesis, is exactly the point at which the shifted, quantitative theory of
+the present paper attaches (Section \ref{sec:dirichlet}).
+
+% ===========================================================================
+\begin{thebibliography}{99}
+
+\bibitem{BDBLS} L.~Báez-Duarte, M.~Balazard, B.~Landreau and E.~Saias,
+\emph{Notes sur la fonction $\zeta$ de Riemann, 3}, Adv. Math. \textbf{149} (2000), 130--144.
+
+\bibitem{BSY} M.~Balazard, E.~Saias and M.~Yor,
+\emph{Notes sur la fonction $\zeta$ de Riemann, 2}, Adv. Math. \textbf{143} (1999), 284--287.
+
+\bibitem{BombieriI} E.~Bombieri,
+\emph{Remarks on Weil's quadratic functional in the theory of prime numbers, I},
+Atti Accad. Naz. Lincei Cl. Sci. Fis. Mat. Natur. Rend. Lincei (9) Mat. Appl. \textbf{11} (2000),
+183--233.
+
+\bibitem{BombieriII} E.~Bombieri,
+\emph{A variational approach to the explicit formula},
+Comm. Pure Appl. Math. \textbf{56} (2003), 1151--1164.
+
+\bibitem{BombieriLagarias} E.~Bombieri and J.~C.~Lagarias,
+\emph{Complements to Li's criterion for the Riemann hypothesis},
+J. Number Theory \textbf{77} (1999), 274--287.
+
+\bibitem{BurnolLower} J.-F.~Burnol,
+\emph{A lower bound in an approximation problem involving the zeros of the Riemann zeta function},
+Adv. Math. \textbf{170} (2002), 56--70.
+
+\bibitem{Davenport} H.~Davenport,
+\emph{Multiplicative Number Theory}, 3rd ed., Graduate Texts in Mathematics \textbf{74},
+Springer, New York, 2000.
+
+\bibitem{Ford} K.~Ford,
+\emph{Zero-free regions for the Riemann zeta function},
+in: Number Theory for the Millennium II, A K Peters, 2002, 25--56.
+
+\bibitem{Guinand} A.~P.~Guinand,
+\emph{A summation formula in the theory of prime numbers},
+Proc. London Math. Soc. (2) \textbf{50} (1949), 107--119.
+
+\bibitem{GuthMaynard} L.~Guth and J.~Maynard,
+\emph{New large value estimates for Dirichlet polynomials},
+Ann. of Math. (2) \textbf{203} (2026), no.~2; arXiv:2405.20552.
+
+\bibitem{KreinLanger} M.~G.~Kre\u\i n and H.~Langer,
+\emph{Continuation of hermitian positive definite functions and related questions},
+Integral Equations Operator Theory \textbf{78} (2014), 1--69.
+
+\bibitem{Lagarias1999} J.~C.~Lagarias,
+\emph{On a positivity property of the Riemann $\xi$-function},
+Acta Arith. \textbf{89} (1999), 217--234.
+
+\bibitem{Li} X.-J.~Li,
+\emph{The positivity of a sequence of numbers and the Riemann hypothesis},
+J. Number Theory \textbf{65} (1997), 325--333.
+
+\bibitem{MTY} M.~J.~Mossinghoff, T.~S.~Trudgian and A.~Yang,
+\emph{Explicit zero-free regions for the Riemann zeta-function},
+Res. Number Theory \textbf{10} (2024), Paper No. 11; arXiv:2212.06867.
+
+\bibitem{Platt2016} D.~J.~Platt,
+\emph{Numerical computations concerning the GRH},
+Math. Comp. \textbf{85} (2016), 3009--3027; arXiv:1305.3087.
+
+\bibitem{PlattTrudgian} D.~Platt and T.~Trudgian,
+\emph{The Riemann hypothesis is true up to $3\cdot10^{12}$},
+Bull. Lond. Math. Soc. \textbf{53} (2021), 792--797.
+
+\bibitem{Suzuki2023} M.~Suzuki,
+\emph{Aspects of the screw function corresponding to the Riemann zeta-function},
+J. London Math. Soc. (2) \textbf{108} (2023), 1448--1487; arXiv:2206.03682.
+
+\bibitem{SuzukiSelberg} M.~Suzuki,
+\emph{Screw functions of Dirichlet series in the extended Selberg class}, arXiv:2209.12832.
+
+\bibitem{Titchmarsh} E.~C.~Titchmarsh,
+\emph{The Theory of the Riemann Zeta-Function}, 2nd ed., revised by D.~R.~Heath-Brown,
+Oxford Univ. Press, 1986.
+
+\bibitem{TrudgianArg} T.~S.~Trudgian,
+\emph{An improved upper bound for the argument of the Riemann zeta-function on the critical line
+II}, J. Number Theory \textbf{134} (2014), 280--292.
+
+\bibitem{Weil} A.~Weil,
+\emph{Sur les ``formules explicites'' de la th\'eorie des nombres premiers},
+Comm. S\'em. Math. Univ. Lund (1952), 252--265.
+
+\bibitem{Widder} D.~V.~Widder,
+\emph{The Laplace Transform}, Princeton Math. Series \textbf{6}, Princeton Univ. Press, 1941.
+
+\bibitem{Yoshida} H.~Yoshida,
+\emph{On Hermitian forms attached to zeta functions},
+in: Zeta Functions in Geometry, Adv. Stud. Pure Math. \textbf{21}, Kinokuniya, 1992, 281--325.
+
+\end{thebibliography}
+
+\end{document}

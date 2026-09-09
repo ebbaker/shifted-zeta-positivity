@@ -1,0 +1,387 @@
+\documentclass[11pt]{amsart}
+\usepackage[margin=1.2in]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{booktabs}
+\usepackage{xcolor}
+\usepackage[colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue]{hyperref}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{proposition}[theorem]{Proposition}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+
+\newcommand{\Xibig}{\Xi}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\CM}{\mathcal{C}}
+\newcommand{\dd}{\,\mathrm{d}}
+
+\title[A certified detector for off-axis zeros]{A certified velocity-residual detector for off-axis zeros of the Riemann $\Xi$-function, and the De Bruijn--Newman flow as a matrix pencil on Calogero--Moser space}
+
+\author{Edward B. Baker III}
+
+\date{Draft of 25 August 2026 (numerics re-verified; sources committed 9 September 2026)}
+
+\begin{document}
+
+\begin{abstract}
+Let $\Xi(z)=\xi(\tfrac12+iz)$ denote the Riemann $\Xi$-function. At any simple real zero $\gamma$ of $\Xi$, the ratio $V=\Xi''(\gamma)/\Xi'(\gamma)$ equals the two-dimensional Coulomb field of the \emph{entire} zero multiset evaluated at $\gamma$ --- including any hypothetical zeros off the critical line. We turn this asymmetry into a certified diagnostic. Using the exact Riemann--von Mangoldt decomposition, an exactly computable boundary term at the truncation point, and Trudgian's unconditional bound on $S(t)$, the residual of the measured velocity against the field of the first $K$ zeros lies in a rigorously certified band; at $K=1000$ the observed residuals sit four orders of magnitude below that band. A multipole sign discriminant then distinguishes off-axis from on-axis hidden configurations: the leading correction to the monopole field is a quadrupole whose \emph{sign} records whether the hidden displacement is perpendicular or parallel to the critical line. The certified sensitivity covers the entire parameter range permitted by the current bound $\Lambda\le 0.2$ on the De Bruijn--Newman constant. Detected configurations feed a linear matrix pencil $X+tY$ on the Calogero--Moser space whose real-spectrum threshold is the local De Bruijn--Newman margin: we prove that the backward heat flow on the roots of a polynomial is exactly the straight line $t\mapsto X+tY$ --- a De Bruijn--Newman reading of Wilson's tau-function formula for rational solutions of the KP hierarchy --- so that $\Lambda(p)$ is the reality threshold of a linear eigenvalue problem. The method uses only the Hadamard product structure of $\Xi$ and therefore ports verbatim to self-dual Selberg-class $L$-functions; we demonstrate it on the Dirichlet beta function. Everything is unconditional: the Riemann hypothesis is assumed nowhere.
+\end{abstract}
+
+\maketitle
+
+\section{Introduction}\label{sec:intro}
+
+\subsection{Setting}
+Write $\xi(s)=\tfrac12 s(s-1)\pi^{-s/2}\Gamma(s/2)\zeta(s)$ for the completed zeta function and
+\[
+\Xi(z) \;=\; \xi\!\left(\tfrac12+iz\right),
+\]
+so that $\Xi$ is entire, even, real on the real axis, of order one, and its zero multiset $\{\pm\rho_k\}$ consists of the nontrivial zeros of $\zeta$ rotated onto (a neighbourhood of) the real axis. The Riemann hypothesis (RH) is the statement that every $\rho_k$ is real. Since $\sum_k |\rho_k|^{-2}<\infty$, the Hadamard product is genus zero in $z^2$:
+\begin{equation}\label{eq:hadamard}
+\Xi(z) \;=\; \Xi(0)\prod_{k\ge 1}\Bigl(1-\frac{z^2}{\rho_k^2}\Bigr).
+\end{equation}
+Everything in this paper uses only \eqref{eq:hadamard} and elementary complex analysis, which is why it transfers without change to any self-dual element of the Selberg class (Section~\ref{sec:beta}).
+
+Two classical circles of ideas frame our results. The first is the \emph{heat-flow deformation} of de Bruijn \cite{deBruijn} and Newman \cite{Newman}: setting $H_t=e^{-t\partial_z^2}H_0$ with $H_0=\Xi$ (equivalently, inserting the factor $e^{tu^2}$ under Riemann's integral representation), there is a constant $\Lambda$, the De Bruijn--Newman constant, such that $H_t$ has only real zeros if and only if $t\ge\Lambda$. RH is the statement $\Lambda\le 0$; Rodgers and Tao proved $\Lambda\ge 0$ \cite{RT}, and the Polymath15 project \cite{Polymath15}, combined with the verification of RH to height $3\cdot 10^{12}$ by Platt and Trudgian \cite{PT}, gives $\Lambda\le 0.2$. Under the flow, the real zeros move by the first-order dynamics
+\begin{equation}\label{eq:coulomb}
+\dot z_j \;=\; \sum_{k\ne j}\frac{2}{z_j-z_k},
+\end{equation}
+that is, as a one-dimensional gas of logarithmically repelling charges \cite[Theorem 11]{RT}; the same dynamics is classical in the integrable-systems literature as the pole motion of rational solutions of the KP hierarchy \cite{AMM,Moser,KKS}.
+
+The second circle is \emph{numerical verification}. Since Turing \cite{Turing}, completeness of a list of critical-line zeros below a height $T$ is certified by counting: an argument-principle count of all zeros is compared with the number found on the line (see \cite{Booker} for a survey and \cite{PT,Platt} for the state of the art). Turing's method reports a discrepancy only as ``a zero is missing below $T$'': it produces no location, no distance from the line, and no quantitative margin.
+
+\subsection{What this paper does}
+This is a methods paper. Its main object is a diagnostic that upgrades a counting discrepancy into a diagnosis, and its main theoretical ingredient is an exact linear-algebraic model of the De Bruijn--Newman flow. The results are unconditional throughout; ``certified'' means rigorous modulo floating-point arithmetic (see Section~\ref{sec:limitations}).
+
+\emph{The detector} (Sections \ref{sec:detector}--\ref{sec:numerics}). At any simple real zero $\gamma_j$ of $\Xi$, the quantity
+\[
+V_j \;=\; \frac{\Xi''(\gamma_j)}{\Xi'(\gamma_j)}
+\]
+is computable to arbitrary precision from $\zeta$ alone, and it equals the Coulomb field $\sum_{\rho\ne\gamma_j} 2/(\gamma_j-\rho)$ of the \emph{full} zero multiset --- visible zeros, hidden off-axis zeros, and real zeros absent from the list alike (Lemma \ref{lem:velocity}). Subtracting the field of the first $K$ listed zeros and a certified tail leaves a residual $R_j$ that must lie in an explicit band $\pm\varepsilon_j$ if the list is complete. The band is made rigorous by an exact bookkeeping of the Riemann--von Mangoldt formula: the boundary term $S(U)$ at the truncation point is \emph{exactly} computable there, and the remaining oscillatory integral is majorized by Trudgian's unconditional bound $|S(u)|\le 0.111\log u+0.275\log\log u+2.450$ \cite{Trudgian}. At $K=1000$ the observed residuals are $\sim 10^{-7}$ against certified bands $\sim 10^{-3}$ (Table \ref{tab:null}).
+
+A hidden configuration announces itself in $R_j$ through its multipole expansion, and the leading distinguishing term carries a sign (Lemma \ref{lem:multipole}): an off-axis quadruple $\pm(\tau\pm i\sigma)$ contributes $4/d - 4\sigma^2/d^3+O(d^{-5})$ at distance $d$ from its centre, an on-axis pair $\pm(\tau\pm a)$ contributes $4/d + 4a^2/d^3+O(d^{-5})$. The monopole certifies \emph{existence} and locates the centre; the quadrupole's sign reads off whether the hidden displacement is perpendicular or parallel to the axis. In certified terms, at $K=1000$ any hidden pair within distance $\approx 1.8\cdot 10^{3}$ of a measured zero is visible, and off-/on-axis discrimination is certified down to $\sigma\approx 0.024$ at unit distance --- while the bound $\Lambda\le 0.2$ confines any hypothetical off-axis zero to $\sigma\lesssim 0.63$ (up to interaction corrections computed in Section \ref{sec:margin}), entirely inside the certified window.
+
+\emph{The pencil} (Section \ref{sec:pencil}). For a monic polynomial $p$ of degree $n$ with distinct roots $z_1,\dots,z_n$, form the Calogero--Moser pair
+\[
+X=\operatorname{diag}(z_1,\dots,z_n),\qquad
+Y_{jk}=\frac{2}{z_j-z_k}\ (j\ne k),\qquad
+Y_{jj}=\sum_{k\ne j}\frac{2}{z_j-z_k}.
+\]
+Then (Theorem \ref{thm:pencil}) for all $t\in\C$,
+\[
+\bigl(e^{-t\partial_z^2}p\bigr)(z) \;=\; \det\bigl(zI-X-tY\bigr).
+\]
+The identity itself is not new: it is George Wilson's tau-function formula for rational solutions of the KP hierarchy \cite{Wilson}, stated in exactly this determinantal form in \cite[\S 6.3]{KMG}, with the heat flow appearing as the second KP time; its expectation over a Gaussian ensemble is the finite free probability of Marcus, Spielman and Srivastava \cite{MSS} (see also \cite{HallHo}). What we believe is new is the De Bruijn--Newman reading and its two corollaries: the De Bruijn--Newman constant of a real polynomial is the \emph{real-spectrum threshold of a linear matrix pencil},
+\[
+\Lambda(p)\;=\;\inf\{\,t:\operatorname{spec}(X+tY)\subset\R\,\},
+\]
+and the De Bruijn--Newman flow --- the object at the centre of Newman's conjecture, the Rodgers--Tao theorem, and the Polymath15 computations --- is a \emph{straight line} on Calogero--Moser space. This gives the detector its fourth output: a detected configuration, together with its local environment of visible zeros, feeds the pencil, and the pencil's reality threshold is the interaction-corrected local De Bruijn--Newman margin --- the off-axis counterpart of the Lehmer-pair machinery of Csordas, Smith and Varga \cite{CSV}.
+
+\subsection{Why a physicist might care}
+The space on which the pencil lives is not an exotic auxiliary object. The completed phase space of the rational Calogero--Moser system, $\CM_n=\{(X,Z): \operatorname{rank}([X,Z]-I)=1\}/\!/\mathrm{GL}_n(\C)$ \cite{Wilson,KKS}, is the same variety that arises in gauge theory as the moduli space of charge-$n$ $U(1)$ instantons on noncommutative $\R^4$: the noncommutative deformation of the ADHM equations \cite{ADHM} that resolves the small-instanton singularity of the Hilbert scheme $\mathrm{Hilb}^n(\C^2)$ \cite{NS,Nakajima}; see \cite{DHKM} for a review of the ADHM construction as a hyper-K\"ahler quotient. The statement proved in Section~\ref{sec:pencil} can therefore be read as: \emph{the De Bruijn--Newman heat flow on root configurations is free (straight-line) motion on the noncommutative-instanton moduli space, in the direction of the second KP flow}. We emphasise that this is a dictionary of structures, not a proof strategy; we make no claim that gauge-theoretic dynamics constrains the zeros of $\zeta$. Its practical content in this paper is the margin meter of Section \ref{sec:margin}, plus the observation that a body of exact technology (projection methods, tau functions, adelic Grassmannians) applies verbatim to the flow that analytic number theory actually uses.
+
+\subsection{What this paper does not do}
+The detector certifies and diagnoses; it does not prove. If RH is true, it will only ever return null results, and its value is as verification infrastructure --- particularly for $L$-functions, where verified heights are far lower than for $\zeta$ --- together with the geometric dictionary it operationalises: zeros as a two-dimensional Coulomb gas whose on-axis field is exactly measurable, hidden charge as a solvable inverse-source problem, and local margins as spectra of linear pencils.
+
+\section{The velocity identity and the multipole discriminant}\label{sec:detector}
+
+Throughout, $\{\rho\}$ denotes the full zero multiset of $\Xi$ (both signs), and $\gamma_1<\gamma_2<\cdots$ the ordinates of the zeros on the real axis (i.e.\ the critical line), which after the Platt--Trudgian verification \cite{PT} is provably the complete list up to height $3\cdot 10^{12}$.
+
+\begin{lemma}[velocity identity]\label{lem:velocity}
+Let $\gamma_j$ be a simple real zero of\/ $\Xi$. Then
+\begin{equation}\label{eq:velocity}
+V_j \;:=\; \frac{\Xi''(\gamma_j)}{\Xi'(\gamma_j)}
+\;=\; \sum_{\rho\ne\gamma_j}\frac{2}{\gamma_j-\rho},
+\end{equation}
+the sum running over the full zero multiset and converging absolutely after the symmetric pairing $\rho\leftrightarrow-\rho$.
+\end{lemma}
+
+\begin{proof}
+By \eqref{eq:hadamard}, $\Xi'/\Xi(z)=\sum_k \bigl[\tfrac{1}{z-\rho_k}+\tfrac{1}{z+\rho_k}\bigr]$, the paired sum converging absolutely and locally uniformly away from zeros since $\sum|\rho_k|^{-2}<\infty$. Near the simple zero $\gamma_j$,
+\[
+\frac{\Xi'}{\Xi}(z)=\frac{1}{z-\gamma_j}+\!\!\sum_{\rho\ne\gamma_j}\frac{1}{\gamma_j-\rho}+O(z-\gamma_j),
+\]
+while the Taylor expansion of $\Xi'/\Xi$ at $\gamma_j$ has constant term $\Xi''(\gamma_j)/(2\,\Xi'(\gamma_j))$. Comparing constant terms and multiplying by $2$ gives \eqref{eq:velocity}.
+\end{proof}
+
+Three readings of $V_j$ will be used interchangeably. Analytically, it is two derivative evaluations of the completed function. Dynamically, it is the instantaneous velocity of $\gamma_j$ under the backward-heat (De Bruijn--Newman) flow, by \eqref{eq:coulomb}. Electrostatically, it is the planar Coulomb field of the full zero gas evaluated at $\gamma_j$. The left-hand side of \eqref{eq:velocity} is computable to arbitrary precision from $\zeta$ alone; the right-hand side sees every zero, wherever it is. That asymmetry is the detector.
+
+\begin{lemma}[multipole sign discriminant]\label{lem:multipole}
+Let a configuration of hidden zeros with centre $\tau>0$ be added to the multiset, symmetrically in $\rho\leftrightarrow-\rho$, and let $x>0$ be real with $d=x-\tau$, $|d|$ large compared with the configuration size. The contribution of the configuration to the field $\sum 2/(x-\rho)$ is:
+\begin{align*}
+\text{off-axis quadruple } \pm(\tau\pm i\sigma):&\qquad
+\frac{4d}{d^2+\sigma^2} \;=\; \frac{4}{d}-\frac{4\sigma^2}{d^3}+O(d^{-5}),\\[2pt]
+\text{on-axis pair } \pm(\tau\pm a):&\qquad
+\frac{2}{d-a}+\frac{2}{d+a} \;=\; \frac{4}{d}+\frac{4a^2}{d^3}+O(d^{-5}),
+\end{align*}
+in each case up to the mirror terms in $x+\tau$, which are smooth and common to both. The monopole $4/d$ is common; the first distinguishing term is the quadrupole, and its \emph{sign} records whether the hidden displacement is perpendicular or parallel to the axis.
+\end{lemma}
+
+\begin{proof}
+Two lines of Taylor expansion: $\tfrac{2}{x-\tau-i\sigma}+\tfrac{2}{x-\tau+i\sigma}=\tfrac{4d}{d^2+\sigma^2}$ and $\tfrac{2}{d-a}+\tfrac{2}{d+a}=\tfrac{4d}{d^2-a^2}$; expand in $1/d$.
+\end{proof}
+
+\begin{remark}
+In electrostatic language: hidden charge is an inverse-source problem for the log-potential measured on the axis, and the perpendicular second moment enters the axial field with a negative sign. The configuration's charge ($2m$ for $m$ hidden pairs) and centre $\tau$ are read off from the monopole across several measurement points; $m$ is independently supplied, more cheaply, by Turing-type counting, which the detector complements rather than replaces.
+\end{remark}
+
+\section{The certified residual}\label{sec:certified}
+
+Fix $K$ and measurement indices $j\le K$. The detector statistic is
+\begin{equation}\label{eq:residual}
+R_j \;=\; V_j \;-\; \sum_{\substack{k\le K\\ k\ne j}}\frac{2}{\gamma_j-\gamma_k}
+\;-\; \sum_{k\le K}\frac{2}{\gamma_j+\gamma_k} \;-\; T_j,
+\end{equation}
+where $T_j$ accounts for the tail $k>K$. Writing $f(u)=4\gamma_j/(\gamma_j^2-u^2)$ (so that a zero pair at ordinate $u$ contributes $f(u)$ to the field at $\gamma_j$; $f$ is negative and increasing on $(U,\infty)$ for $U>\gamma_j$), the tail is $\int_U^\infty f\,\dd N(u)$ with $N$ the zero-counting function and $U$ any point separating $\gamma_K$ from $\gamma_{K+1}$. Using the exact decomposition $N(u)=\theta(u)/\pi+1+S(u)$, where $\theta$ is the Riemann--Siegel theta function and $S=\pi^{-1}\arg\zeta$, and integrating the oscillatory part by parts:
+\begin{equation}\label{eq:tail}
+T_j \;=\; \int_U^\infty f(u)\,\frac{\theta'(u)}{\pi}\,\dd u \;-\; f(U)\,S(U) \;-\; \int_U^\infty f'(u)\,S(u)\,\dd u .
+\end{equation}
+The three terms are treated as follows.
+\begin{enumerate}
+\item The first is a numerical integral of explicit smooth functions.
+\item The second is \emph{exactly computable}: at a truncation point known (by the verified zero list) to separate $\gamma_K$ from $\gamma_{K+1}$, one has $S(U)=K-\theta(U)/\pi-1$ exactly. This boundary term is not small --- omitting it produces a systematic error of order $10^{-4}$ at $K=1000$, comparable to the signals of interest --- and its exact evaluation is what makes the band below usable.
+\item The third is bounded rigorously:
+\[
+|R_j^{\mathrm{true}} - R_j| \;\le\; \varepsilon_j \;:=\; \int_U^\infty f'(u)\,B(u)\,\dd u,
+\qquad B(u) = 0.111\log u+0.275\log\log u+2.450,
+\]
+using Trudgian's unconditional bound $|S(u)|\le B(u)$ for $u\ge e$ \cite{Trudgian} and $f'>0$ on $(U,\infty)$.
+\end{enumerate}
+Under completeness of the visible list, the computed $R_j$ therefore lies in the certified band $\pm\varepsilon_j$; any $|R_j|>\varepsilon_j$ certifies a defect --- hidden zeros or a missed real zero --- and the configuration's field (Lemma \ref{lem:multipole}) is superposed on every $R_j$. A second integration by parts through explicit bounds on $S_1(u)=\int_0^u S$ would tighten $\varepsilon_j$ further; the headroom below has made this unnecessary.
+
+\subsection{The pipeline}\label{sec:pipeline}
+The full diagnostic, given a (purportedly complete) list $\gamma_1<\cdots<\gamma_K$ and measured $V_j$ at selected $j$:
+\begin{enumerate}
+\item \textbf{Existence.} Any $|R_j|>\varepsilon_j$ certifies a defect.
+\item \textbf{Localisation.} The monopole $4m/(x-\tau)$ across several $R_j$ yields the pair count $m$ and centre $\tau$, cross-checked against argument-principle counting.
+\item \textbf{Characterisation.} A nonlinear fit of the exact off-axis model against the exact on-axis model (mirror terms included) selects the better model and returns $(\tau,\sigma)$ or $(\tau,a)$; the certified version compares fit residuals against $\varepsilon_j$.
+\item \textbf{Margin.} The detected configuration plus the local visible zeros feed the pencil $X+tY$ of Section \ref{sec:pencil}; its real-spectrum threshold is the interaction-corrected local De Bruijn--Newman margin.
+\end{enumerate}
+
+\section{Numerical results for $\zeta$}\label{sec:numerics}
+
+All computations below were performed in high-precision arithmetic (\texttt{mpmath}, 25--30 significant digits; ordinates stored to 25 digits) and are reproduced by the scripts listed in Section \ref{sec:repro}.
+
+\subsection{Certified null test}
+With $K=1000$, $U=1419.9195$ (the midpoint of $\gamma_{1000},\gamma_{1001}$) and the exact boundary value $S(U)=+0.153426$:
+
+\begin{table}[ht]
+\centering
+\begin{tabular}{cccc}
+\toprule
+$\gamma_j$ & observed $R_j$ & certified $\varepsilon_j$ & headroom \\
+\midrule
+$103.7255$ & $-6.3\cdot 10^{-8}$ & $8.0\cdot 10^{-4}$ & $10^{4.1}$\\
+$146.0010$ & $-9.0\cdot 10^{-8}$ & $1.1\cdot 10^{-3}$ & $10^{4.1}$\\
+$202.4936$ & $-1.3\cdot 10^{-7}$ & $1.6\cdot 10^{-3}$ & $10^{4.1}$\\
+$321.1601$ & $-2.2\cdot 10^{-7}$ & $2.6\cdot 10^{-3}$ & $10^{4.1}$\\
+$544.3239$ & $-4.5\cdot 10^{-7}$ & $4.9\cdot 10^{-3}$ & $10^{4.0}$\\
+\bottomrule
+\end{tabular}
+\medskip
+\caption{Null test on the true $\Xi$ at $K=1000$. The observed residual is dominated by the 25-digit storage of the ordinate list and the finite precision of the derivative evaluations, four orders below the certified band.}
+\label{tab:null}
+\end{table}
+
+\subsection{Certified thresholds}\label{sec:thresholds}
+At $\gamma\approx 146$ ($\varepsilon=1.1\cdot 10^{-3}$), requiring the signal to exceed $2\varepsilon$:
+\begin{itemize}
+\item \emph{Existence.} A hidden pair's monopole $4/d$ exceeds $2\varepsilon$ out to $d\approx 1.8\cdot 10^{3}$: any hidden zero anywhere near the data window is certifiably visible in a handful of $V_j$ measurements.
+\item \emph{Sign discrimination.} Off- versus on-axis discrimination needs $4\sigma^2/d^3>2\varepsilon$, i.e.\ $\sigma_{\min}\approx 0.024$ at $d=1$, $0.067$ at $d=2$, $0.27$ at $d=5$.
+\end{itemize}
+For calibration: an isolated off-axis quadruple at height $\sigma$ forces $\Lambda\gtrsim\sigma^2/2$, so the bound $\Lambda\le 0.2$ \cite{Polymath15,PT} confines any hypothetical off-axis zero to $\sigma\lesssim 0.63$; the interaction corrections computed in Section \ref{sec:margin} shift this by at most $\sim\!15\%$ in the configurations tested. The entire allowed range lies inside the certified sensitive band for $d\le 5$.
+
+\subsection{Synthetic injections}\label{sec:synthetic}
+To validate steps (2)--(3) of the pipeline in a setting where ground truth is known, we take the first $80$ true ordinates, delete zeros $\#45$--$46$, and insert a hidden configuration at their midpoint $\tau_0=134.1271$; the detector sees only the remaining real ordinates and the exact velocities of the modified (finite) multiset. Fitting both exact models (mirror terms included) by least squares:
+
+\begin{table}[ht]
+\centering
+\begin{tabular}{lccc}
+\toprule
+injected & recovered $(\tau,\ \cdot\ )$ & rms (correct model) & model separation\\
+\midrule
+off-axis $\sigma=0.8$ & $(134.1271235,\ 0.80000000)$ & $1.7\cdot 10^{-11}$ & $5.6\cdot 10^{8}$\\
+off-axis $\sigma=0.2$ & $(134.1271235,\ 0.20000012)$ & $9.0\cdot 10^{-10}$ & $6.9\cdot 10^{5}$\\
+on-axis $a=0.3$ & $(134.1271235,\ 0.30000003)$ & $3.0\cdot 10^{-10}$ & $4.8\cdot 10^{6}$\\
+on-axis $a=0.9$ & $(134.1271235,\ 0.90000000)$ & $6.2\cdot 10^{-14}$ & $2.1\cdot 10^{11}$\\
+empty (control) & --- & $\max_j|R_j|=3.6\cdot 10^{-15}$ & ---\\
+\bottomrule
+\end{tabular}
+\medskip
+\caption{Injection tests (double precision fits). ``Model separation'' is the ratio of the wrong model's best rms to the correct model's; in every case the correct model and its parameters are recovered, and the empty control is identically zero to machine precision.}
+\label{tab:synthetic}
+\end{table}
+
+Detection \emph{radius} and discrimination \emph{window} differ by design: the certified existence radius ($\sim\!10^3$ at $K=1000$) far exceeds the window where sign discrimination is certified ($d\lesssim 5$--$10$); in practice one measures $V_j$ at several zeros bracketing the suspect region, which is exactly the regime where discrimination is strongest.
+
+\section{The De Bruijn--Newman flow as a matrix pencil}\label{sec:pencil}
+
+For a real polynomial $p$, define the heat operator on polynomials by $e^{-t\partial^2}p=\sum_{j\ge 0}\frac{(-t)^j}{j!}\,p^{(2j)}$ (a terminating sum), and
+\[
+\Lambda(p)\;=\;\inf\{\,t\in\R:\ e^{-s\partial^2}p \text{ is hyperbolic for all } s\ge t\,\},
+\]
+where \emph{hyperbolic} means all roots real. This is the polynomial De Bruijn--Newman constant: $t>0$ drives roots onto the real axis, $t<0$ off it, and the classical Hermite--Poulain--P\'olya theory \cite{Polya,deBruijn} shows hyperbolicity, once acquired, persists (so $\Lambda(p)=\inf\{t: e^{-t\partial^2}p \text{ hyperbolic}\}$).
+
+\begin{theorem}\label{thm:pencil}
+Let $p$ be monic of degree $n$ with distinct roots $z_1,\dots,z_n\in\C$, and let $(X,Y)$ be its Calogero--Moser pair,
+\[
+X=\operatorname{diag}(z_1,\dots,z_n),\qquad
+Y_{jk}=\frac{2}{z_j-z_k}\ (j\ne k),\qquad
+Y_{jj}=\sum_{k\ne j}\frac{2}{z_j-z_k}.
+\]
+Then $[X,Y]+2I=2J$ with $J$ the all-ones matrix, so $\operatorname{rank}([X,Y]+2I)=1$; and for all $t\in\C$,
+\begin{equation}\label{eq:pencil}
+\bigl(e^{-t\partial_z^2}p\bigr)(z)\;=\;\det\bigl(zI-X-tY\bigr).
+\end{equation}
+\end{theorem}
+
+\begin{proof}
+The commutator is immediate: $([X,Y])_{jk}=(z_j-z_k)Y_{jk}=2$ for $j\ne k$ and $0$ on the diagonal, so $[X,Y]=2(J-I)$.
+
+Both sides of \eqref{eq:pencil} are monic polynomials of degree $n$ in $z$ whose coefficients are polynomials in $t$, so it suffices to prove equality for $t$ in a real neighbourhood of $0$, for generic root data; degenerate configurations follow by continuity.
+
+\emph{Left side.} Write $H_t=e^{-t\partial^2}p$, so $\partial_t H=-\partial_z^2 H$. Implicit differentiation at a simple root $z_j(t)$ gives $\dot z_j=H''(z_j)/H'(z_j)$, and for $H=\prod_k(z-z_k)$ one computes $H''(z_j)/H'(z_j)=\sum_{k\ne j}2/(z_j-z_k)$. Hence the roots obey the first-order system \eqref{eq:coulomb}, and differentiating \eqref{eq:coulomb} along itself --- the cross terms cancelling in pairs by antisymmetry --- the second-order rational Calogero--Moser system
+\begin{equation}\label{eq:cm}
+\ddot z_j \;=\; -8\sum_{k\ne j}(z_j-z_k)^{-3}.
+\end{equation}
+
+\emph{Right side.} By the projection method for the rational Calogero--Moser system \cite{AMM,KKS,Moser}, if $\operatorname{rank}([X,Y]+2I)=1$ then the eigenvalues $\lambda_j(t)$ of $X+tY$ solve \eqref{eq:cm}. Their initial values are $\lambda_j(0)=z_j$, and first-order eigenvalue perturbation in the eigenbasis of $X$ gives $\dot\lambda_j(0)=Y_{jj}$ --- exactly the right side of \eqref{eq:coulomb} at $t=0$. (The pencil trajectory satisfies \eqref{eq:coulomb} only at $t=0$; it is the second-order system \eqref{eq:cm} that both trajectories share, with matching initial position \emph{and} velocity.)
+
+\emph{Conclusion.} Two solutions of the same nonsingular second-order system with identical initial position and velocity coincide until the first collision; on that interval the two monic polynomials have the same roots, hence are equal; and two polynomials in $(z,t)$ agreeing on an open $t$-interval agree identically.
+\end{proof}
+
+\begin{corollary}[$\Lambda$ as a spectral threshold]\label{cor:threshold}
+For real $p$ with distinct roots,
+\[
+\Lambda(p)\;=\;\inf\{\,t:\operatorname{spec}(X+tY)\subset\R\,\},
+\]
+and the De Bruijn--Newman flow of $p$ is the straight line $t\mapsto X+tY$ on the Calogero--Moser space $\CM_n$.
+\end{corollary}
+
+\begin{proof}
+By \eqref{eq:pencil}, $e^{-t\partial^2}p$ is hyperbolic iff $\operatorname{spec}(X+tY)\subset\R$; apply the persistence of hyperbolicity noted above.
+\end{proof}
+
+\begin{corollary}[quantitative hyperbolicity]\label{cor:margin}
+$p$ is hyperbolic iff $X=X+0\cdot Y$ has real spectrum --- trivially --- but the pencil upgrades this to a quantitative statement: the local margin of hyperbolicity (the backward collision time of the spectrum) is computable by bisection at one eigendecomposition per step. The positive-definite $H$ with $HX$ Hermitian, whose existence is equivalent to hyperbolicity, is the classical Hermite/Bezoutian form; the pencil does not evade the Hilbert--P\'olya heuristic, it furnishes a finite model of it.
+\end{corollary}
+
+\begin{remark}[attribution]\label{rem:attribution}
+Identity \eqref{eq:pencil} is Wilson's tau-function formula: for a Calogero--Moser pair normalised as $\operatorname{rank}([X,Z]-I)=1$, the tau function of the associated rational KP solution is $\tau(t_1,t_2)=\det(t_1 I+2t_2 Z-X)$ \cite{Wilson}, stated in this determinantal form in \cite[\S 6.3]{KMG}; with $Z=-Y/2$, $t_1=z$, $t_2=t$ this is \eqref{eq:pencil}: \emph{the heat flow is the second KP time on polynomial tau functions}. The expectation version over a suitable Gaussian ensemble is finite free probability \cite{MSS}; \eqref{eq:pencil} is its exact derandomisation, the Calogero--Moser matrix $Y$ being the deterministic representative that the expectation happens to equal (cf.\ \cite{HallHo} for the random-matrix heat-flow circle of ideas). The root dynamics \eqref{eq:coulomb} in the De Bruijn--Newman context is \cite[Theorem 11]{RT} and, as pole dynamics of rational KP/Burgers solutions, goes back to \cite{AMM}. What we claim as new is only the De Bruijn--Newman reading: Corollaries \ref{cor:threshold} and \ref{cor:margin}, and their use as a margin meter below.
+\end{remark}
+
+\begin{remark}[a worked benchmark]\label{rem:hermite}
+$e^{-t\partial^2}z^d$ is (a rescaled) Hermite polynomial, hyperbolic exactly for $t\ge 0$, so $\Lambda(z^d)=0$; since the probabilists' Hermite polynomial is $\mathrm{He}_d=e^{-\frac12\partial^2}z^d$, the semigroup law gives $\Lambda(\mathrm{He}_d)=-\tfrac12$ for every $d$. $\Lambda$ scales quadratically under affine root maps, and the root variance of $\mathrm{He}_d$ is $d-1$, so at unit root variance $\Lambda=-1/(2(d-1))$ --- reproduced by the pencil to bisection tolerance (Section \ref{sec:pencilnum}). Similarly $\Lambda(z^2+y_0^2)=y_0^2/2$ exactly, the pencil recovering it to $2\cdot 10^{-13}$.
+\end{remark}
+
+\subsection{Numerical verification of the pencil}\label{sec:pencilnum}
+Independently of the proof: the identity \eqref{eq:pencil} was checked by coefficient comparison for random real and conjugate-pair root data at $n=2,\dots,7$ and $t\in\{0.13,-0.4,0.7+0.2i\}$, with maximal relative coefficient error $5\cdot 10^{-12}$ (double precision, conditioning-limited) and rank-one residual $\le 2\cdot 10^{-15}$; $\Lambda(z^2+y_0^2)=y_0^2/2$ and the Hermite benchmark of Remark \ref{rem:hermite} are reproduced; and on five two-pair configurations $\pm(\tau_1\pm i\sigma_1),\pm(\tau_2\pm i\sigma_2)$ the pencil threshold agrees with direct root tracking of the heat flow to $2\cdot 10^{-11}$ (e.g.\ $(\tau,\sigma)=(0,1.0),(3.0,0.5)$ gives $\Lambda=0.42976$ against the isolated-pair value $0.5$ --- interactions matter, which is the point of the margin meter).
+
+\subsection{The margin meter}\label{sec:margin}
+Step (4) of the pipeline: the detected configuration plus its local environment feeds the pencil, whose threshold is the interaction-corrected local De Bruijn--Newman margin --- the off-axis dual of the Lehmer-pair lower bounds on $\Lambda$ of Csordas--Smith--Varga \cite{CSV} (close \emph{real} pairs force $\Lambda$ up; off-axis pairs force it up through their height). For a quadruple $\pm(\tau_0\pm i\sigma)$ at $\tau_0=134.127$ with the $6$ nearest visible zeros on each side (and mirrors) included:
+
+\begin{table}[ht]
+\centering
+\begin{tabular}{cccc}
+\toprule
+$\sigma$ & isolated quadruple & with $2\times 6$ local zeros & $\sigma^2/2$\\
+\midrule
+$0.8$ & $0.319994$ & $0.273756$ & $0.320000$\\
+$0.4$ & $0.080000$ & $0.076504$ & $0.080000$\\
+$0.2$ & $0.020000$ & $0.019769$ & $0.020000$\\
+\bottomrule
+\end{tabular}
+\medskip
+\caption{Pencil thresholds (local $\Lambda$ margins). The isolated quadruple reproduces $\sigma^2/2$; the local Coulomb environment lowers the margin by up to $\sim\!15\%$ at $\sigma=0.8$, an interaction correction invisible to the isolated-configuration heuristic.}
+\label{tab:margin}
+\end{table}
+
+\section{Portability: the Dirichlet beta function}\label{sec:beta}
+
+Nothing above used more than the Hadamard structure \eqref{eq:hadamard}, evenness, and reality, so the method applies to $\Xi_L(z)=\Lambda_L(\tfrac12+iz)$ for any self-dual Selberg-class $L$-function. As a demonstration take $L(s,\chi_4)$ (the Dirichlet beta function), with completed form $\Lambda_\beta(s)=(\pi/4)^{-(s+1)/2}\Gamma(\tfrac{s+1}{2})L(s,\chi_4)$: $\Xi_\beta$ is even, entire and real, with first zeros at $6.0209,\ 10.2438,\ 12.9881,\dots$ (recomputed). With $70$ zeros found by sign scanning and the smooth density $\dd N=(2\pi)^{-1}\log(2u/\pi)\dd u$ (verified empirically: $N/T=0.4533$ measured against $0.4561$ smooth at $T=75$), the null test gives residuals
+\[
++4.4\cdot 10^{-4},\qquad +7.9\cdot 10^{-4},\qquad +1.2\cdot 10^{-3}
+\]
+at $\gamma_{11},\gamma_{21},\gamma_{31}$ --- the same quality as the zeta prototype at comparable list length with an (uncertified) smooth-density tail. Full certification for Dirichlet $L$-functions requires only the $\chi$-analogue of the exact $\theta/\pi+1+S$ decomposition and an explicit bound on $|S(u,\chi)|$, both available in the literature; nothing else changes. The practical interest is precisely here: verified heights for $L$-functions are far below those for $\zeta$, and the detector's inputs --- two derivative evaluations of the completed function per measured zero --- are available wherever zeros are computed.
+
+\section{Limitations}\label{sec:limitations}
+
+\begin{enumerate}
+\item The certificates are rigorous modulo floating point: $V_j$, the theta integrals and $\varepsilon_j$ are computed in high-precision arithmetic, not interval arithmetic. An interval port (e.g.\ ARB) is mechanical and is the natural next engineering step.
+\item The method certifies and diagnoses; it does not prove. If RH is true the detector will only ever output null results.
+\item The novelty claims are confined to: the certified residual decomposition \eqref{eq:tail} with its exactly computable boundary term; the sign discriminant of Lemma \ref{lem:multipole} as a practical classifier; and the De Bruijn--Newman reading of Wilson's formula (Corollaries \ref{cor:threshold}--\ref{cor:margin}). The identity \eqref{eq:pencil} itself is Wilson's \cite{Wilson}; the velocity $V_j$ is classical as a flow velocity \cite{RT}. We have not found Corollary \ref{cor:threshold} stated in the De Bruijn--Newman literature (in particular in the Csordas school), but a definitive novelty claim would require a more systematic search than we have performed.
+\end{enumerate}
+
+\section{Reproducibility}\label{sec:repro}
+
+All numerics are reproduced by short Python scripts (\texttt{numpy}, \texttt{scipy}, \texttt{mpmath}) accompanying this paper as ancillary files: \texttt{h1\_zeros1000.py} (ordinate cache), \texttt{h3\_certified.py} (Table \ref{tab:null} and the thresholds of Section \ref{sec:thresholds}), \texttt{d1\_synthetic.py} (Table \ref{tab:synthetic}), \texttt{v1\_pencil.py} (Section \ref{sec:pencilnum}), \texttt{d4\_margin\_meter.py} (Table \ref{tab:margin}), \texttt{h4\_beta.py} (Section \ref{sec:beta}), together with the zero caches \texttt{zeros1001.json} and \texttt{beta\_zeros.json}.
+
+\section*{Acknowledgements}
+AI tools were used extensively in exploration, numerical verification,
+auditing, and drafting; the author directed the research, reviewed the
+arguments and sources, and takes responsibility for the content.
+% (Placeholder wording; align with the companion papers' final formulation.
+% Provenance detail and the per-result verification record are in this
+% folder's STATUS.md.)
+
+\begin{thebibliography}{99}
+
+\bibitem{AMM} H.~Airault, H.~P.~McKean, J.~Moser, \emph{Rational and elliptic solutions of the Korteweg--de Vries equation and a related many-body problem}, Comm. Pure Appl. Math. \textbf{30} (1977), 95--148.
+
+\bibitem{ADHM} M.~F.~Atiyah, V.~G.~Drinfeld, N.~J.~Hitchin, Yu.~I.~Manin, \emph{Construction of instantons}, Phys. Lett. A \textbf{65} (1978), 185--187.
+
+\bibitem{Booker} A.~R.~Booker, \emph{Turing and the Riemann hypothesis}, Notices Amer. Math. Soc. \textbf{53} (2006), 1208--1211.
+
+\bibitem{deBruijn} N.~G.~de Bruijn, \emph{The roots of trigonometric integrals}, Duke Math. J. \textbf{17} (1950), 197--226.
+
+\bibitem{CSV} G.~Csordas, W.~Smith, R.~S.~Varga, \emph{Lehmer pairs of zeros, the de Bruijn--Newman constant $\Lambda$, and the Riemann hypothesis}, Constr. Approx. \textbf{10} (1994), 107--129.
+
+\bibitem{DHKM} N.~Dorey, T.~J.~Hollowood, V.~V.~Khoze, M.~P.~Mattis, \emph{The calculus of many instantons}, Phys. Rep. \textbf{371} (2002), 231--459; \texttt{hep-th/0206063}.
+
+\bibitem{GORZ} M.~Griffin, K.~Ono, L.~Rolen, D.~Zagier, \emph{Jensen polynomials for the Riemann zeta function and other sequences}, Proc. Natl. Acad. Sci. USA \textbf{116} (2019), 11103--11110.
+
+\bibitem{HallHo} B.~C.~Hall, C.-W.~Ho, \emph{The heat flow conjecture for polynomials and random matrices}, Lett. Math. Phys. \textbf{115} (2025), art. 60; \texttt{arXiv:2202.09660}.
+
+\bibitem{KMG} A.~Kasman, R.~Milson, M.~Gekhtman, \emph{Orthogonality with respect to the Hermite product, KP wave functions, and the bispectral involution}, SIGMA \textbf{22} (2026), 036, 23 pp.; \texttt{arXiv:2511.11813}.
+
+\bibitem{KKS} D.~Kazhdan, B.~Kostant, S.~Sternberg, \emph{Hamiltonian group actions and dynamical systems of Calogero type}, Comm. Pure Appl. Math. \textbf{31} (1978), 481--507.
+
+\bibitem{Lehmer} D.~H.~Lehmer, \emph{On the roots of the Riemann zeta-function}, Acta Math. \textbf{95} (1956), 291--298.
+
+\bibitem{MSS} A.~W.~Marcus, D.~A.~Spielman, N.~Srivastava, \emph{Finite free convolutions of polynomials}, Probab. Theory Related Fields \textbf{182} (2022), 807--848; \texttt{arXiv:1504.00350}.
+
+\bibitem{Montgomery} H.~L.~Montgomery, \emph{The pair correlation of zeros of the zeta function}, in: Analytic Number Theory, Proc. Sympos. Pure Math. \textbf{24}, Amer. Math. Soc., 1973, 181--193.
+
+\bibitem{Moser} J.~Moser, \emph{Three integrable Hamiltonian systems connected with isospectral deformations}, Adv. Math. \textbf{16} (1975), 197--220.
+
+\bibitem{Nakajima} H.~Nakajima, \emph{Lectures on Hilbert Schemes of Points on Surfaces}, Univ. Lecture Ser. \textbf{18}, Amer. Math. Soc., 1999.
+
+\bibitem{NS} N.~Nekrasov, A.~Schwarz, \emph{Instantons on noncommutative $\mathbb{R}^4$, and $(2,0)$ superconformal six dimensional theory}, Comm. Math. Phys. \textbf{198} (1998), 689--703.
+
+\bibitem{Newman} C.~M.~Newman, \emph{Fourier transforms with only real zeros}, Proc. Amer. Math. Soc. \textbf{61} (1976), 245--251.
+
+\bibitem{Odlyzko} A.~M.~Odlyzko, \emph{On the distribution of spacings between zeros of the zeta function}, Math. Comp. \textbf{48} (1987), 273--308.
+
+\bibitem{Platt} D.~J.~Platt, \emph{Isolating some non-trivial zeros of zeta}, Math. Comp. \textbf{86} (2017), 2449--2467.
+
+\bibitem{PT} D.~J.~Platt, T.~S.~Trudgian, \emph{The Riemann hypothesis is true up to $3\cdot 10^{12}$}, Bull. Lond. Math. Soc. \textbf{53} (2021), 792--797; \texttt{arXiv:2004.09765}.
+
+\bibitem{Polya} G.~P\'olya, \emph{\"Uber die algebraisch-funktionentheoretischen Untersuchungen von J.~L.~W.~V.~Jensen}, Kgl. Danske Vid. Sel. Math.-Fys. Medd. \textbf{7} (1927), 3--33.
+
+\bibitem{Polymath15} D.~H.~J.~Polymath, \emph{Effective approximation of heat flow evolution of the Riemann $\xi$ function, and a new upper bound for the de Bruijn--Newman constant}, Res. Math. Sci. \textbf{6} (2019), art. 31.
+
+\bibitem{RT} B.~Rodgers, T.~Tao, \emph{The de Bruijn--Newman constant is non-negative}, Forum Math. Pi \textbf{8} (2020), e6, 62 pp.
+
+\bibitem{Trudgian} T.~S.~Trudgian, \emph{An improved upper bound for the argument of the Riemann zeta-function on the critical line II}, J. Number Theory \textbf{134} (2014), 280--292; \texttt{arXiv:1208.5846}.
+
+\bibitem{Turing} A.~M.~Turing, \emph{Some calculations of the Riemann zeta-function}, Proc. Lond. Math. Soc. (3) \textbf{3} (1953), 99--117.
+
+\bibitem{Wilson} G.~Wilson, \emph{Collisions of Calogero--Moser particles and an adelic Grassmannian}, Invent. Math. \textbf{133} (1998), 1--41.
+
+\end{thebibliography}
+
+\end{document}

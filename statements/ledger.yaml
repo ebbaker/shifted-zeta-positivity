@@ -1,0 +1,290 @@
+# Machine-readable statement ledger.
+# One record per statement; ids match blueprint/<paper>/statements.md.
+#
+# status:         paper | computer | numeric | cited | asserted
+# human_check:    state ∈ {not_yet, automated_only, done}; item = checklist id
+# formalization:  feasibility ∈ {easy, moderate, hard, certificate, out_of_reach, external}
+#
+# Keep this file in sync with the markdown blueprint; both are updated at each release.
+
+schema_version: 1
+papers:
+  - slug: first-slab-positivity
+    title: "Archimedean first-slab positivity for shifted zeta canonical systems: an off-center Weil generator and a radial energy identity"
+    version: "1.0"
+    date: 2026-09-05
+    pdf: papers/first-slab-positivity/first_slab_positivity.pdf
+    blueprint: blueprint/first-slab/statements.md
+    checklist: verification/first-slab/CHECKLIST.md
+    status_file: papers/first-slab-positivity/VERIFICATION_STATUS.md
+    externals:
+      - id: SUZ
+        ref: "M. Suzuki, arXiv:1204.1827 — Prop. 1.2, Thm. 2.2, Lemmas 4.1, 4.3, 4.4, eqs (2.1)-(2.6), Sect. 3.1"
+      - id: INV7
+        ref: "Inherited central certificate (Investigation 7): Binet floor w0(tau) >= beta* for |tau| >= 30; spherical-Bessel Legendre-tail majorants"
+    statements:
+      - id: fs:S01
+        name: layer decomposition
+        type: identity
+        where: {eq: "2.5", section: "2.1"}
+        status: paper
+        depends_on: [SUZ]
+        human_check: {state: automated_only, item: C1}
+        formalization: {feasibility: easy, note: "content is Suzuki's definitions (2.1),(2.3); change of variables"}
+      - id: fs:S02
+        name: Volterra identities H=VR=RV*, RVR=V*, H^2=VV*
+        type: proposition
+        where: {eq: "2.10-2.11", section: "2.2"}
+        status: paper
+        depends_on: []
+        human_check: {state: not_yet, item: A4, note: "recomputed by referee round 1"}
+        formalization: {feasibility: moderate, note: "change of variables in Bochner/Lebesgue integrals; adjoints on L2"}
+      - id: fs:S03
+        name: completed-gamma transfer K_omega
+        type: identity
+        where: {eq: "3.2-3.3", section: "3.1"}
+        status: cited
+        depends_on: [SUZ]
+        human_check: {state: automated_only, item: C1}
+        formalization: {feasibility: hard, note: "Mellin transform of Suzuki's explicit g_omega"}
+      - id: fs:S04
+        name: factorization of K_omega
+        type: identity
+        where: {eq: "3.5", section: "3.1"}
+        status: paper
+        depends_on: [fs:S03]
+        human_check: {state: done}
+        formalization: {feasibility: easy}
+      - id: fs:S05
+        name: explicit impulse kappa_omega; integrability; compactness of V
+        type: proposition
+        where: {eq: "3.6", section: "3.2, 8.6"}
+        status: numeric
+        depends_on: [fs:S03]
+        human_check: {state: not_yet, note: "derivation of (3.6) not written out in the paper; transform verified to 1.5e-17 (omega=1/2), ~1e-10 (omega=0.3)"}
+        formalization: {feasibility: hard, note: "incomplete Beta function not in Mathlib; compactness part moderate"}
+      - id: fs:S06
+        name: Sonine identity and rational collapse (not on main chain)
+        type: identity
+        where: {eq: "3.10-3.11", section: "3.3"}
+        status: paper
+        depends_on: []
+        human_check: {state: done}
+        formalization: {feasibility: moderate}
+      - id: fs:S07
+        name: closed form of a_omega; dK/domega = -aK
+        type: identity
+        where: {eq: "4.1-4.2", section: "4.1"}
+        status: paper
+        depends_on: [fs:S03]
+        human_check: {state: done}
+        formalization: {feasibility: easy, note: "log-derivative of Complex.Gamma"}
+      - id: fs:S08
+        name: Fourier-plus-residue representation of Q_omega (0 <= omega < 1/2)
+        type: proposition
+        where: {eq: "4.5-4.7", section: "4.2"}
+        status: asserted
+        depends_on: [fs:S07]
+        human_check: {state: not_yet, note: "no checklist item; numerically verified Fourier side = kernel side to 1e-11 at omega = 0.3, 0.45"}
+        formalization: {feasibility: hard}
+      - id: fs:S09
+        name: Lemma 4.1 (endpoint boundary term, coefficient 1/2 on |C_0(f)|^2)
+        type: lemma
+        where: {eq: "4.8", section: "4.2"}
+        status: paper
+        depends_on: [fs:S08, fs:S10]
+        human_check: {state: not_yet, item: A2, note: "numeric agreement with Q0 + C_{1/2} to 7.5e-8; uncorrected formula off by 0.2402"}
+        formalization: {feasibility: hard, note: "distributional limit -pi delta_0"}
+      - id: fs:S10
+        name: Proposition 4.2 (bounded shift difference Q_omega = Q_0 + C_omega)
+        type: proposition
+        where: {eq: "4.10-4.16", section: "4.3"}
+        status: paper
+        depends_on: [fs:S07]
+        human_check: {state: not_yet, item: A1, note: "every proof step recomputed to 30+ digits at omega = 0.3 and 1/2"}
+        formalization: {feasibility: hard, note: "needs digamma integral representation; rational and bridge steps (4.14)-(4.15) are easy"}
+      - id: fs:S11
+        name: common logarithmic form domain D_log; C_omega Hilbert-Schmidt
+        type: proposition
+        where: {eq: "4.17", section: "4.4"}
+        status: paper
+        depends_on: [fs:S10]
+        human_check: {state: not_yet}
+        formalization: {feasibility: moderate}
+      - id: fs:S12
+        name: central prime-free Weil form Q_0
+        type: identity
+        where: {eq: "5.1", section: "5.1"}
+        status: paper
+        depends_on: [fs:S08]
+        human_check: {state: done}
+        formalization: {feasibility: hard, note: "inherits S08"}
+      - id: fs:S13
+        name: Legendre Fourier and pole-evaluation coefficients
+        type: identity
+        where: {eq: "5.2", section: "5.2"}
+        status: paper
+        depends_on: [fs:S12]
+        human_check: {state: done}
+        formalization: {feasibility: moderate, note: "spherical Bessel functions"}
+      - id: fs:S14
+        name: central certificate Q_0 >= 9.9999859e-4 (even), 4.99999998e-2 (odd)
+        type: computation
+        where: {eq: "5.3-5.5", section: "5.3"}
+        status: computer
+        depends_on: [fs:S13, INV7]
+        human_check: {state: not_yet, item: D1, note: "head reconstructed independently; tail majorants inherited and unaudited"}
+        formalization: {feasibility: certificate}
+      - id: fs:S15
+        name: entire shift expansion and exact Legendre correlations
+        type: identity
+        where: {eq: "6.1-6.4", section: "6.1-6.2"}
+        status: paper
+        depends_on: [fs:S10]
+        human_check: {state: done}
+        formalization: {feasibility: moderate}
+      - id: fs:S16
+        name: Lemma 6.1 (endpoint row maximum; ||C_omega|| < 0.012294)
+        type: lemma
+        where: {eq: "6.5-6.11", section: "6.3"}
+        status: paper
+        depends_on: [fs:S15]
+        human_check: {state: not_yet, item: A3, note: "all constants recomputed; argument single-sourced (audit inherited it)"}
+        formalization: {feasibility: easy, note: "polynomial part easy (nlinarith/positivity); interval enclosures of t_m, h(t_m), int|h| moderate; Schur test moderate"}
+        certified_constants:
+          t0: "0.2811995743229618465"
+          t_m: "0.1416454811943886"
+          h_tm: "-0.0044442714714077"
+          h_log2_minus_t0: "0.0126146638556245"
+          int_abs_h: "0.012293050401142320"
+      - id: fs:S17
+        name: degree-four Taylor remainder < 1.54e-12
+        type: computation
+        where: {eq: "6.12", section: "6.3"}
+        status: computer
+        depends_on: [fs:S15]
+        human_check: {state: done}
+        formalization: {feasibility: moderate}
+      - id: fs:S18
+        name: 512-box interval certificate (head >= m + kappa^2/d_tail)
+        type: computation
+        where: {eq: "7.1-7.3", section: "7.1-7.2, 7.6"}
+        status: computer
+        depends_on: [fs:S14, fs:S16, fs:S17]
+        human_check: {state: not_yet, item: "D2, D3, D4", note: "Schur loss and head minima reconstructed; code unread; audit passed"}
+        formalization: {feasibility: certificate, note: "stored interval matrices + verified LDL checker"}
+        certified_constants:
+          margin_even: "6.116350109501e-4"
+          margin_odd: "5.261670009275e-2"
+          d_tail: "1.5176929819194764"
+          schur_loss_even: "9.95869865858903e-5"
+          schur_loss_odd: "9.95869673623490e-5"
+          min_pivot: "2.326811914886e-2"
+          audit_margin_even: "6.116514636999e-4"
+          audit_margin_odd: "5.261670255041e-2"
+      - id: fs:S19
+        name: Lemma 7.1 (block-Schur coercivity)
+        type: lemma
+        where: {eq: "7.4", section: "7.3"}
+        status: paper
+        depends_on: []
+        human_check: {state: not_yet, item: A5, note: "constants recomputed"}
+        formalization: {feasibility: easy, note: "2x2 PSD criterion; good first Lean target"}
+        constants:
+          c_even: "6.11594e-4"
+          c_odd: "5.26131e-2"
+          c_star: "6.1159e-4"
+      - id: fs:S20
+        name: Theorem B (uniform coercivity of Q_omega,L on D_log)
+        type: theorem
+        where: {section: "1.3, 7.3"}
+        status: paper
+        depends_on: [fs:S14, fs:S16, fs:S17, fs:S18, fs:S19, fs:S08, fs:S11]
+        human_check: {state: not_yet, note: "composite"}
+        formalization: {feasibility: certificate}
+      - id: fs:S21
+        name: V_s is C^1 in operator norm; V' = -AV; weighted-to-unweighted transfer
+        type: proposition
+        where: {eq: "8.1-8.4", section: "8.1"}
+        status: asserted
+        depends_on: [fs:S03]
+        human_check: {state: not_yet, item: "B1, B2", note: "weakest-supported claim in the paper: O(.) bounds without constants"}
+        formalization: {feasibility: out_of_reach, note: "uniform Stirling on a vertical line"}
+      - id: fs:S22
+        name: strong limit V_s -> I
+        type: proposition
+        where: {eq: "8.5", section: "8.2"}
+        status: paper
+        depends_on: [fs:S21]
+        human_check: {state: not_yet, item: B1}
+        formalization: {feasibility: hard}
+      - id: fs:S23
+        name: V_s L^2 in D_log; closure identity (8.7)
+        type: proposition
+        where: {eq: "8.6-8.7", section: "8.3"}
+        status: asserted
+        depends_on: [fs:S21, fs:S11]
+        human_check: {state: not_yet, item: B3}
+        formalization: {feasibility: out_of_reach}
+      - id: fs:S24
+        name: energy identity on [eps, omega]
+        type: proposition
+        where: {eq: "8.8-8.9", section: "8.4"}
+        status: paper
+        depends_on: [fs:S21, fs:S23]
+        human_check: {state: not_yet}
+        formalization: {feasibility: hard}
+      - id: fs:S25
+        name: Theorem C (shift-energy identity, improper strong-operator integral)
+        type: theorem
+        where: {eq: "8.10-8.11", section: "8.5"}
+        status: paper
+        depends_on: [fs:S22, fs:S24, fs:S20]
+        human_check: {state: not_yet, item: B4}
+        formalization: {feasibility: out_of_reach}
+      - id: fs:S26
+        name: strictness D_omega > 0 and ||V_omega|| < 1
+        type: proposition
+        where: {eq: "8.12", section: "8.6"}
+        status: paper
+        depends_on: [fs:S20, fs:S22, fs:S25, fs:S05]
+        human_check: {state: not_yet, item: B5}
+        formalization: {feasibility: hard}
+      - id: fs:S27
+        name: Theorem A (critical-shift first-slab positivity)
+        type: theorem
+        where: {section: "1.3, 8.6, 9.1"}
+        status: paper
+        depends_on: [fs:S02, fs:S26]
+        human_check: {state: not_yet, note: "composite"}
+        formalization: {feasibility: out_of_reach, note: "glue is easy; inputs are not"}
+      - id: fs:S28
+        name: strict finite-section contractivity for omega > 1/2 (Suzuki Lemma 4.4)
+        type: cited
+        where: {section: "9.3"}
+        status: cited
+        depends_on: [SUZ]
+        human_check: {state: automated_only, item: C3}
+        formalization: {feasibility: external}
+      - id: fs:S29
+        name: modular endpoint Theta_{1/2}(u) = ((u-i)/(u+i)) phi((1-iu)/2)
+        type: identity
+        where: {eq: "10.4", section: "10.2"}
+        status: paper
+        depends_on: []
+        human_check: {state: done}
+        formalization: {feasibility: easy, note: "completedRiemannZeta and functional equation exist in Mathlib"}
+      - id: fs:S30
+        name: Dirichlet series of c_omega(n)
+        type: identity
+        where: {eq: "2.1, 12.2", section: "2.1, 12.3"}
+        status: paper
+        depends_on: []
+        human_check: {state: done}
+        formalization: {feasibility: easy, note: "ArithmeticFunction / LSeries / Moebius in Mathlib"}
+    diagnostics:
+      - name: positivity-horizon crossings (floating Galerkin, 24 modes)
+        where: {eq: "12.1", section: "12.2"}
+        values: {L_star_odd: 0.7429, L_star_even: 0.8199, omega_star_even: 0.8611, omega_star_odd: 1.8047}
+        status: numeric
+        note: "not theorems; promotion to interval certificates listed as optional strengthening"

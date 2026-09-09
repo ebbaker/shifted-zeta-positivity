@@ -1,0 +1,697 @@
+\documentclass[11pt,reqno]{amsart}
+
+\usepackage[T1]{fontenc}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{xcolor}
+\usepackage[expansion=false]{microtype}
+\usepackage[margin=1.2in]{geometry}
+\usepackage[colorlinks=true,linkcolor=blue!50!black,citecolor=blue!50!black,
+            urlcolor=blue!50!black]{hyperref}
+
+\theoremstyle{plain}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{remark}[theorem]{Remark}
+
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\Rp}{\operatorname{Re}}
+\newcommand{\Ip}{\operatorname{Im}}
+\newcommand{\lxi}[1]{\left(\tfrac{\xi'}{\xi}\right)\!#1}
+
+\title[Shifted screw functions for the Riemann zeta-function]
+      {Quantitative asymptotics for Suzuki's shifted screw functions}
+
+\author{Edward B. Baker III}
+\email{edwardbaker86@gmail.com}
+
+\date{August 28, 2026}
+
+\begin{document}
+
+\begin{abstract}
+Suzuki associated to the Riemann zeta-function a continuous function $\Psi$ and a shifted family
+$\Psi_\omega$, and proved that $\zeta(s)\ne0$ for $\Rp s>\tfrac12+\omega$ if and only if
+$\Psi_\omega(t)$ is eventually non-negative.  We give a quantitative form of this criterion.
+Writing $\Theta=\sup\{\Rp\rho:\xi(\rho)=0\}$ and $\vartheta=\Theta-\tfrac12$, we obtain the exact
+decomposition
+\[
+ \Psi_\omega(t)=\lxi{\left(\tfrac12+\omega\right)}t
+ +\lxi{'\left(\tfrac12+\omega\right)}+R_\omega(t),
+\]
+with an explicit spectral formula for $R_\omega$.  If $\vartheta\le\omega$, then
+$|R_\omega(t)|\le A^*(\omega)e^{-(\omega-\vartheta)t}$ with an explicit constant $A^*(\omega)$;
+thus every valid shifted criterion has an
+explicit positive linear margin.  If instead a zero lies to the right of the shifted boundary, its
+contribution grows exponentially at a rate equal to its horizontal excess.  A Landau-type argument
+then gives a sharp dichotomy across the critical shift and several one-sided consequences, including
+an equivalent formulation of RH by integrability of the negative part of $\Psi$.  These results
+quantify Suzuki's criterion; they do not by themselves provide new zero-free information.
+\end{abstract}
+
+\maketitle
+
+% ==========================================================================
+\section{Introduction}
+% ==========================================================================
+
+Let
+\[
+ \xi(s)=\tfrac12 s(s-1)\pi^{-s/2}\Gamma\!\left(\tfrac s2\right)\zeta(s),
+\]
+so that $\xi$ is entire of order one and satisfies $\xi(s)=\xi(1-s)$.  Put
+$\Xi(z)=\xi(\tfrac12-iz)$, and denote the zeros of $\Xi$ by $\gamma$.  Thus, if
+$\rho=\beta+i\tau$ is a zero of $\xi$, then
+\begin{equation}\label{eq:gammarho}
+ \gamma=i\left(\rho-\tfrac12\right)=-\tau+i\left(\beta-\tfrac12\right).
+\end{equation}
+The Riemann Hypothesis (RH) is therefore equivalent to the reality of every $\gamma$.
+
+Suzuki \cite{Suzuki2023} introduced the continuous even function
+\begin{equation}\label{eq:PsiTwoFaces}
+ \Psi(t)=\sum_\gamma\frac{1-\cos(\gamma t)}{\gamma^2},
+ \qquad
+ \int_0^\infty \Psi(t)e^{izt}\,dt
+ =-\frac1{z^2}\lxi{\left(\tfrac12-iz\right)}
+ \quad (\Ip z>\tfrac12),
+\end{equation}
+and proved
+\begin{equation}\label{eq:SuzukiRH}
+ \mathrm{RH}\quad\Longleftrightarrow\quad \Psi(t)\ge0\quad\text{for every }t.
+\end{equation}
+He also introduced, for $\omega\in\R$, the shifted family
+\begin{equation}\label{eq:Psiomegadef}
+ \Psi_\omega(t)
+ :=e^{-\omega t}\Psi(t)
+ +2\omega\int_0^t e^{-\omega u}\Psi(u)\,du
+ +\omega^2\int_0^t(t-u)e^{-\omega u}\Psi(u)\,du,
+ \qquad t>0,
+\end{equation}
+extended evenly, for which
+\begin{equation}\label{eq:PsiomegaLaplace}
+ \int_0^\infty\Psi_\omega(t)e^{izt}\,dt
+ =-\frac1{z^2}\lxi{\left(\tfrac12+\omega-iz\right)},
+ \qquad \Ip z>\tfrac12-\omega.
+\end{equation}
+His shifted criterion is
+\begin{equation}\label{eq:SuzukiShifted}
+ \xi(s)\ne0\ \text{for }\Rp s>\tfrac12+\omega
+ \quad\Longleftrightarrow\quad
+ \Psi_\omega(t)\ge0\ \text{for all sufficiently large }t.
+\end{equation}
+Moreover, in the forward direction Suzuki's Herglotz argument, through the Kre\u\i n--Langer
+theory of screw functions \cite{KreinLanger}, gives pointwise non-negativity for
+all $t$; see \cite[\S11]{Suzuki2023}.  The shifted family also satisfies a composition law, so
+non-negativity propagates upward in $\omega$.
+
+The purpose of this note is to extract the quantitative information already latent in Suzuki's
+spectral formula.  Set
+\[
+ \Theta:=\sup\{\Rp\rho:\xi(\rho)=0\},
+ \qquad \vartheta:=\Theta-\tfrac12\in[0,\tfrac12].
+\]
+By the functional equation, every zero $\gamma=a+ib$ of $\Xi$ satisfies $|b|\le\vartheta$.
+The main observation is that $\Psi_\omega$ splits into an unconditional linear term and an
+oscillatory remainder.  The slope and intercept of the linear term are the classical quantities
+$(\xi'/\xi)(\tfrac12+\omega)$ and $(\xi'/\xi)'(\tfrac12+\omega)$, while the remainder records the
+horizontal location of the zeros through factors $e^{(\Rp\rho-1/2-\omega)t}$.  This yields three
+consequences.  First, whenever the half-plane in \eqref{eq:SuzukiShifted} is zero-free, the
+criterion is not asymptotically saturated: it has a positive linear margin with an explicit onset.
+Second, a zero beyond the shifted boundary produces an exponentially growing oscillation whose
+rate is exactly its horizontal excess.  Third, the same Laplace-transform argument underlying
+Suzuki's criterion converts one-sided growth estimates, including averaged estimates for the
+negative part, into zero-free half-planes.
+
+The statements below are quantitative reformulations of a known zero-free criterion.  In
+particular, proving the needed one-sided estimates from the arithmetic side would itself amount to
+proving new zero-free information.  No such estimate is claimed here.
+
+The functions $\Psi$ and $\Psi_\omega$, the transform \eqref{eq:PsiomegaLaplace}, the criterion
+\eqref{eq:SuzukiShifted}, and the Herglotz/screw-function interpretation are due to Suzuki
+\cite{Suzuki2023}.  The use of Herglotz positivity at a general abscissa is closely related to
+Lagarias \cite{Lagarias1999}.  The contributions here begin with Proposition \ref{prop:AB} and
+Theorem \ref{thm:asym}.
+
+% ==========================================================================
+\section{Exact decomposition of the shifted family}\label{sec:decomposition}
+% ==========================================================================
+
+We use the standard Hadamard consequences
+\begin{equation}\label{eq:hadamard}
+ \frac{\Xi'}{\Xi}(z)=\sum_\gamma\frac1{z-\gamma},
+ \qquad
+ \frac{\Xi'}{\Xi}(z)=-i\,\lxi{\left(\tfrac12-iz\right)},
+ \qquad
+ \lxi{(1-s)}=-\lxi{(s)},
+\end{equation}
+where the first sum is taken with the usual pairing of $\gamma$ and $-\gamma$; see, for example,
+\cite[\S12]{Davenport}.  Suzuki's series for the shifted family is
+\begin{equation}\label{eq:Psiomegaseries}
+ \Psi_\omega(t)=\sum_\gamma\frac{1}{(\gamma^2+\omega^2)^2}
+ \Bigl[\omega t(\gamma^2+\omega^2)+(\gamma^2-\omega^2)
+ -e^{-\omega t}(\gamma^2-\omega^2)\cos(\gamma t)
+ -2\gamma\omega e^{-\omega t}\sin(\gamma t)\Bigr].
+\end{equation}
+
+For $0<\omega<\tfrac12$ define
+\begin{equation}\label{eq:AB}
+ A(\omega):=\sum_\gamma\frac1{\gamma^2+\omega^2},
+ \qquad
+ B(\omega):=\sum_\gamma\frac{\gamma^2-\omega^2}{(\gamma^2+\omega^2)^2},
+\end{equation}
+and
+\begin{equation}\label{eq:Astar}
+ A^*(\omega):=\frac12\sum_\gamma
+ \left(\frac1{|\gamma-i\omega|^2}+\frac1{|\gamma+i\omega|^2}\right).
+\end{equation}
+At $\omega=0$ we use the evident limiting definition for $A^*(0)$.
+
+\begin{lemma}\label{lem:conv}
+For $0<\omega<\tfrac12$, the series in \eqref{eq:AB} and \eqref{eq:Astar} converge absolutely, and
+\[
+ \sum_\gamma |\gamma|\,|\gamma^2+\omega^2|^{-2}<\infty.
+\]
+\end{lemma}
+
+\begin{proof}
+Write $\gamma=a+ib$.  Unconditionally $|b|\le\tfrac12$, and the least positive ordinate of a
+nontrivial zero of $\zeta$ is $14.1347\ldots$, so $|a|\ge14$; see \cite{Titchmarsh}.  Hence
+\[
+ \Rp(\gamma^2+\omega^2)=a^2-b^2+\omega^2\ge a^2-\tfrac14>0,
+ \qquad
+ |\gamma\pm i\omega|^2\ge a^2.
+\]
+The Riemann--von Mangoldt formula then gives the asserted convergence by partial summation.
+\end{proof}
+
+\begin{proposition}\label{prop:AB}
+For $0<\omega<\tfrac12$,
+\begin{equation}\label{eq:ABclosed}
+ A(\omega)=\frac1\omega\lxi{\left(\tfrac12+\omega\right)},
+ \qquad
+ B(\omega)=\lxi{'\left(\tfrac12+\omega\right)}.
+\end{equation}
+Moreover $A$ is strictly decreasing on $(0,\tfrac12)$ and
+\begin{equation}\label{eq:Aendpoint}
+ \lim_{\omega\to1/2^-}A(\omega)
+ =\sum_\rho\frac1{\rho(1-\rho)}
+ =2+\gamma_0-\log 4\pi
+ =0.0461914\ldots.
+\end{equation}
+If RH holds, then $A^*(\omega)=A(\omega)$.
+\end{proposition}
+
+\begin{proof}
+Evaluating \eqref{eq:hadamard} at $z=\pm i\omega$ gives
+\[
+ \sum_\gamma\frac1{\gamma-i\omega}
+ =i\lxi{\left(\tfrac12+\omega\right)},
+ \qquad
+ \sum_\gamma\frac1{\gamma+i\omega}
+ =-i\lxi{\left(\tfrac12+\omega\right)}.
+\]
+Partial fractions and absolute convergence therefore give the first identity in
+\eqref{eq:ABclosed}.  Since
+\[
+ \frac{\partial}{\partial\omega}\frac{\omega}{\gamma^2+\omega^2}
+ =\frac{\gamma^2-\omega^2}{(\gamma^2+\omega^2)^2},
+\]
+local uniform convergence permits termwise differentiation, yielding the second identity.
+
+For monotonicity, note first that a real $\gamma=a$ contributes $(a^2+\omega^2)^{-1}$, which is
+strictly decreasing in $\omega$.  For the non-real zeros, pair $\gamma=a+ib$ with
+$\overline\gamma$.  Their contribution to $A$ is
+\[
+ \frac{2X}{X^2+Y^2},
+ \qquad
+ X=a^2-b^2+\omega^2,
+ \quad Y=2ab.
+\]
+Differentiating with respect to $\omega^2$ gives
+\[
+ \frac{2(Y^2-X^2)}{(X^2+Y^2)^2}<0,
+\]
+because
+\[
+ X-|Y|=a^2-b^2+\omega^2-2|ab|
+ \ge 14^2-\tfrac14-14>0.
+\]
+Thus every conjugate pair decreases strictly.  At $\omega=\tfrac12$,
+$\gamma^2+\tfrac14=\rho(1-\rho)$ by \eqref{eq:gammarho}, and the classical identity in
+\eqref{eq:Aendpoint} follows from the Hadamard product; dominated convergence gives the limit.
+Under RH all $\gamma$ are real, and each summand in \eqref{eq:Astar} equals
+$(\gamma^2+\omega^2)^{-1}$ after averaging the two signs.
+\end{proof}
+
+\begin{remark}\label{rem:B0}
+The functional equation makes $\xi'/\xi$ odd about $s=\tfrac12$.  Hence
+\begin{equation}\label{eq:B0}
+ B(0):=\left(\frac{\xi'}{\xi}\right)'\!\left(\tfrac12\right)
+ =\sum_\gamma\frac1{\gamma^2}
+ =0.0462099862308\ldots,
+\end{equation}
+and
+\begin{equation}\label{eq:slopeSmallOmega}
+ \lxi{\left(\tfrac12+\omega\right)}=B(0)\,\omega+O(\omega^3).
+\end{equation}
+\end{remark}
+
+\begin{theorem}[Exact decomposition and zero-free asymptotic]\label{thm:asym}
+Let $0<\omega<\tfrac12$.  For every $t\ge0$,
+\begin{equation}\label{eq:mainDecomp}
+ \Psi_\omega(t)=\lxi{\left(\tfrac12+\omega\right)}t
+ +\lxi{'\left(\tfrac12+\omega\right)}+R_\omega(t),
+\end{equation}
+where
+\begin{equation}\label{eq:Rclean}
+ R_\omega(t)=-\frac{e^{-\omega t}}2\sum_\gamma
+ \left[
+ \frac{e^{i\gamma t}}{(\gamma+i\omega)^2}
+ +\frac{e^{-i\gamma t}}{(\gamma-i\omega)^2}
+ \right].
+\end{equation}
+Consequently, unconditionally,
+\begin{equation}\label{eq:Rtrivial}
+ |R_\omega(t)|\le A^*(\omega)e^{(1/2-\omega)t}.
+\end{equation}
+More generally, if $\vartheta\le\omega$, then
+\begin{equation}\label{eq:RzeroFree}
+ |R_\omega(t)|\le A^*(\omega)e^{-(\omega-\vartheta)t}.
+\end{equation}
+Under RH this becomes
+\begin{equation}\label{eq:RRH}
+ |R_\omega(t)|\le A(\omega)e^{-\omega t}
+ =\frac1\omega\lxi{\left(\tfrac12+\omega\right)}e^{-\omega t}.
+\end{equation}
+\end{theorem}
+
+\begin{proof}
+The first two terms of \eqref{eq:Psiomegaseries} sum to
+\[
+ \omega A(\omega)t+B(\omega)
+ =\lxi{\left(\tfrac12+\omega\right)}t
+ +\lxi{'\left(\tfrac12+\omega\right)}
+\]
+by Proposition \ref{prop:AB}.  For the remaining terms, the identity
+\[
+ (\gamma^2-\omega^2)\cos(\gamma t)+2\gamma\omega\sin(\gamma t)
+ =\tfrac12e^{i\gamma t}(\gamma-i\omega)^2
+ +\tfrac12e^{-i\gamma t}(\gamma+i\omega)^2
+\]
+gives \eqref{eq:Rclean} after division by
+$(\gamma^2+\omega^2)^2=(\gamma-i\omega)^2(\gamma+i\omega)^2$.
+If $\gamma=a+ib$, then $|e^{\pm i\gamma t}|=e^{\mp bt}$.  Using $|b|\le\tfrac12$ gives
+\eqref{eq:Rtrivial}, while $|b|\le\vartheta$ gives \eqref{eq:RzeroFree}.  Under RH,
+$A^*=A$ by Proposition \ref{prop:AB}.
+\end{proof}
+
+% ==========================================================================
+\section{The margin and the critical shift}\label{sec:margin}
+% ==========================================================================
+
+\begin{corollary}[Linear margin]\label{cor:margin}
+For $0<\omega<\tfrac12$, the slope in \eqref{eq:mainDecomp} is positive and satisfies
+\begin{equation}\label{eq:slopeLower}
+ \lxi{\left(\tfrac12+\omega\right)}
+ =\omega A(\omega)
+ \ge (2+\gamma_0-\log4\pi)\,\omega.
+\end{equation}
+It tends to zero linearly as $\omega\to0^+$ according to \eqref{eq:slopeSmallOmega}.
+\end{corollary}
+
+\begin{proof}
+This is Proposition \ref{prop:AB}, Remark \ref{rem:B0}, and the monotonicity of $A$.
+\end{proof}
+
+Thus the shifted criterion is qualitatively different from the unshifted one at infinity: for every
+$\omega>0$ satisfying the corresponding zero-free hypothesis, the leading term grows linearly.
+The next statement makes this quantitative.
+
+\begin{theorem}[Explicit onset of the margin]\label{thm:threshold}
+Let $0<\omega<\tfrac12$ and assume $\vartheta\le\omega$.  Then
+\begin{equation}\label{eq:lowerMargin}
+ \Psi_\omega(t)\ge
+ \lxi{\left(\tfrac12+\omega\right)}t
+ +\lxi{'\left(\tfrac12+\omega\right)}-A^*(\omega)
+ \qquad(t\ge0).
+\end{equation}
+In particular $\Psi_\omega(t)>0$ for
+\begin{equation}\label{eq:t0}
+ t>t_0(\omega):=
+ \frac{A^*(\omega)-B(\omega)}{\omega A(\omega)}.
+\end{equation}
+Moreover
+\begin{equation}\label{eq:AstarMinusBbound}
+ A^*(\omega)-B(\omega)
+ \le8\omega^2\sum_\rho\frac1{(\Ip\rho)^4},
+\end{equation}
+and hence
+\begin{equation}\label{eq:t0numeric}
+ t_0(\omega)\le0.0129\,\omega<0.0065.
+\end{equation}
+\end{theorem}
+
+\begin{proof}
+The bound \eqref{eq:lowerMargin} follows immediately from Theorem \ref{thm:asym} because
+$e^{-(\omega-\vartheta)t}\le1$.  To estimate the difference between the intercept and the
+oscillatory amplitude, write $\gamma=a+ib$ and $z_1=\gamma-i\omega$, $z_2=\gamma+i\omega$.
+Since
+\[
+ \frac{\gamma^2-\omega^2}{(\gamma^2+\omega^2)^2}
+ =\frac12\left(\frac1{z_1^2}+\frac1{z_2^2}\right)
+\]
+and, for $z=x+iy\ne0$,
+\[
+ \frac1{|z|^2}-\Rp\frac1{z^2}=\frac{2y^2}{|z|^4},
+\]
+summing over conjugate pairs gives the exact identity
+\begin{equation}\label{eq:AstarminusB}
+ A^*(\omega)-B(\omega)
+ =\sum_\gamma\left[
+ \frac{(b-\omega)^2}{|\gamma-i\omega|^4}
+ +\frac{(b+\omega)^2}{|\gamma+i\omega|^4}
+ \right].
+\end{equation}
+Under $|b|\le\vartheta\le\omega$, each numerator is at most $4\omega^2$ and
+$|\gamma\pm i\omega|^2\ge a^2$, proving \eqref{eq:AstarMinusBbound}.  The numerical value
+\[
+ \sum_\rho(\Ip\rho)^{-4}=7.4345\ldots\times10^{-5}<7.44\times10^{-5}
+\]
+may be obtained from the first ordinates together with a Riemann--von Mangoldt tail estimate; an
+explicit error bound such as \cite{TrudgianArg} is more than sufficient at the displayed precision.
+Combining this with \eqref{eq:slopeLower} gives
+$t_0(\omega)\le 8\cdot7.44\cdot10^{-5}\,(2+\gamma_0-\log4\pi)^{-1}\omega=0.01288\ldots\times\omega$,
+whence \eqref{eq:t0numeric}.
+\end{proof}
+
+\begin{remark}
+Under $\vartheta\le\omega$, Suzuki's Herglotz argument already gives $\Psi_\omega\ge0$ for every
+$t$ (\S1).  What Theorem \ref{thm:threshold} adds is the linear lower bound
+\eqref{eq:lowerMargin} --- wherever the shifted criterion holds, it holds with a margin that grows
+without bound, so it is never asymptotically saturated --- together with an elementary proof that
+avoids the Kre\u\i n--Langer correspondence.
+\end{remark}
+
+The qualitative boundary is the critical shift $\omega_c:=\vartheta=\Theta-\tfrac12$.
+At and above it the remainder in \eqref{eq:mainDecomp} is bounded; below it, one-sided bounds of any
+smaller exponential type are impossible.
+
+\begin{theorem}[Critical-shift dichotomy]\label{thm:transition}
+Let $0<\omega<\tfrac12$.
+\begin{enumerate}
+\item[(i)] If $\vartheta\le\omega$, then
+\[
+ \Psi_\omega(t)=\lxi{\left(\tfrac12+\omega\right)}t+O(1),
+ \qquad
+ \frac{\Psi_\omega(t)}t\longrightarrow
+ \lxi{\left(\tfrac12+\omega\right)}.
+\]
+\item[(ii)] If $\omega<\vartheta$, then for every $0\le\varepsilon<\vartheta-\omega$,
+\[
+ \limsup_{t\to\infty}e^{-\varepsilon t}\Psi_\omega(t)=+\infty,
+ \qquad
+ \liminf_{t\to\infty}e^{-\varepsilon t}\Psi_\omega(t)=-\infty.
+\]
+\end{enumerate}
+\end{theorem}
+
+\begin{proof}
+Part (i) follows from Theorem \ref{thm:asym}.  For (ii), suppose for contradiction that
+\[
+ \Psi_\omega(t)\ge-Ce^{\varepsilon t}-D
+\]
+for some $C,D>0$ and $0\le\varepsilon<\vartheta-\omega$.  Set
+$f(t)=\Psi_\omega(t)+Ce^{\varepsilon t}+D\ge0$.  From \eqref{eq:Rclean},
+\[
+ |\Psi_\omega(t)|\le \omega A(\omega)t+|B(\omega)|+A^*(\omega)e^{(\vartheta-\omega)t},
+\]
+so the Laplace transform $F(z)=\int_0^\infty f(t)e^{izt}\,dt$ converges for
+$\Ip z>\vartheta-\omega$.  On that half-plane, by analytic continuation from
+$\Ip z>\tfrac12-\omega$,
+\begin{equation}\label{eq:Ftransform}
+ F(z)=-\frac1{z^2}\lxi{\left(\tfrac12+\omega-iz\right)}
+ +\frac{iC}{z-i\varepsilon}+\frac{iD}{z}.
+\end{equation}
+Let $\sigma_c$ be its abscissa of convergence.  Since $f\ge0$, Landau's theorem for Laplace
+transforms \cite[Ch.~II, Thm.~5b]{Widder} implies that $i\sigma_c$ is a singularity of $F$.
+On the ray $\{iy:y>\varepsilon\}$, however, the right-hand side of \eqref{eq:Ftransform} can have
+a singularity only if $\tfrac12+\omega+y$ is a real zero of $\xi$.  There are no such zeros in
+$(\tfrac12,1]$.  Hence $\sigma_c\le\varepsilon$.  Analytic continuation of
+\eqref{eq:Ftransform} to $\Ip z>\varepsilon$ then excludes every zero with
+$\Rp\rho>\tfrac12+\omega+\varepsilon$, contradicting
+$\omega+\varepsilon<\vartheta$.  This proves the $\liminf$ statement.  Applying the same argument
+to $Ce^{\varepsilon t}+D-\Psi_\omega(t)$ proves the $\limsup$ statement.
+\end{proof}
+
+\begin{corollary}\label{cor:boundedCharacterization}
+For $0<\omega<\tfrac12$,
+\begin{equation}\label{eq:boundedCharacterization}
+ \Theta\le\tfrac12+\omega
+ \quad\Longleftrightarrow\quad
+ \Psi_\omega(t)-\lxi{\left(\tfrac12+\omega\right)}t=O(1).
+\end{equation}
+Consequently
+\[
+ \Theta-\tfrac12
+ =\inf\left\{\omega>0:
+ \Psi_\omega(t)-\lxi{\left(\tfrac12+\omega\right)}t\ \text{is bounded}\right\}.
+\]
+\end{corollary}
+
+\begin{proof}
+The forward direction is Theorem \ref{thm:transition}(i).  Conversely, boundedness contradicts
+Theorem \ref{thm:transition}(ii) for every $\varepsilon>0$ if $\omega<\vartheta$.
+\end{proof}
+
+The spectral meaning of the exponent in Theorem \ref{thm:transition}(ii) can be seen directly from
+a single zero quartet.
+
+\begin{proposition}[Contribution of a zero beyond the shifted boundary]\label{prop:sens}
+Let $\rho_0=\tfrac12+\delta+i\tau_0$ be a zero of $\xi$ with $\delta>\omega\ge0$ and $\tau_0>0$.
+Let $\Psi_\omega^{(\rho_0)}$ denote the contribution to Suzuki's spectral series of the quartet
+$\{\rho_0,\overline{\rho_0},1-\rho_0,1-\overline{\rho_0}\}$.  Then
+\begin{equation}\label{eq:singleZero}
+ \Psi_\omega^{(\rho_0)}(t)
+ =-\frac{2e^{(\delta-\omega)t}}{\tau_0^2+(\delta-\omega)^2}
+ \cos(\tau_0t+\alpha)+O(t),
+ \qquad
+ \alpha=2\arg\bigl(\tau_0+i(\delta-\omega)\bigr).
+\end{equation}
+In particular,
+\[
+ \limsup_{t\to\infty}e^{-(\delta-\omega)t}
+ \left|\Psi_\omega^{(\rho_0)}(t)\right|
+ =\frac{2}{\tau_0^2+(\delta-\omega)^2}.
+\]
+\end{proposition}
+
+\begin{proof}
+By \eqref{eq:gammarho}, the quartet corresponds to
+$\gamma\in\{\pm\tau_0\pm i\delta\}$.  For $\gamma=a+i\delta$ with $a=\pm\tau_0$, the dominant term
+in \eqref{eq:Rclean} is
+\[
+ -\frac{e^{(\delta-\omega)t}e^{-iat}}
+ {2\bigl(a+i(\delta-\omega)\bigr)^2}
+ \bigl(1+O(e^{-2\delta t})\bigr).
+\]
+Summing the four dominant contributions gives the oscillatory term in \eqref{eq:singleZero}; the
+non-oscillatory contribution of the quartet to the first two terms of \eqref{eq:mainDecomp} is
+$O(t)$.
+\end{proof}
+
+% ==========================================================================
+\section{One-sided consequences}\label{sec:onesided}
+% ==========================================================================
+
+The proof of Theorem \ref{thm:transition} uses only one-sided control.  We record three consequences
+because they give compact equivalents of the same zero-free information.  They should be understood
+as Laplace-transform reformulations, not as independent evidence for RH; in substance they are
+twice-integrated, damped analogues of the classical one-sided oscillation theorems of E.~Schmidt
+and Landau (see \cite[Ch.~V]{Ingham}), with the screw normalisation supplying exact constants and
+a single continuous carrier function.
+
+\begin{proposition}[One further integration]\label{prop:integrated}
+Define
+\[
+ \Psi^{[1]}(t):=\int_0^t\Psi(u)\,du.
+\]
+Then RH holds if and only if $\Psi^{[1]}(t)\ge0$ for all sufficiently large $t$.  Under RH,
+\begin{equation}\label{eq:integratedRH}
+ \Psi^{[1]}(t)=B(0)t-\sum_\gamma\frac{\sin(\gamma t)}{\gamma^3},
+ \qquad
+ \left|\sum_\gamma\frac{\sin(\gamma t)}{\gamma^3}\right|
+ \le \sum_\gamma|\gamma|^{-3}=0.0014591\ldots,
+\end{equation}
+so $\Psi^{[1]}(t)>0$ for $t>0.0316$.
+\end{proposition}
+
+\begin{proof}
+Under RH, the series in \eqref{eq:PsiTwoFaces} converges uniformly, and termwise integration gives
+\eqref{eq:integratedRH}.  Thus eventual positivity is necessary.  Unconditionally
+$\Psi^{[1]}(t)=O(e^{t/2})$, and integration by parts in \eqref{eq:PsiTwoFaces} gives
+\begin{equation}\label{eq:integratedTransform}
+ \int_0^\infty\Psi^{[1]}(t)e^{izt}\,dt
+ =\frac1{iz^3}\lxi{\left(\tfrac12-iz\right)},
+ \qquad \Ip z>\tfrac12.
+\end{equation}
+If $\Psi^{[1]}$ is eventually non-negative, add a constant so that it is non-negative on all of
+$[0,\infty)$.  Landau's theorem then places a singularity of its transform on the positive
+imaginary axis at the abscissa of convergence.  The meromorphic continuation in
+\eqref{eq:integratedTransform} has no such singularity corresponding to a real zero in
+$(\tfrac12,1]$.  The same argument as in Theorem \ref{thm:transition} therefore forces the
+abscissa to be at most zero and excludes zeros with real part $>\tfrac12$.
+\end{proof}
+
+\begin{corollary}[Pointwise one-sided bounds]\label{cor:oneside}
+Let $0\le\omega<\tfrac12$ and $\varepsilon\ge0$.
+If, for some $C>0$, either
+\[
+ \Psi_\omega(t)\ge-Ce^{\varepsilon t}
+ \quad\text{or}\quad
+ \Psi_\omega(t)\le Ce^{\varepsilon t}
+\]
+for all sufficiently large $t$, then
+\begin{equation}\label{eq:onesideConclusion}
+ \Theta\le\tfrac12+\omega+\varepsilon.
+\end{equation}
+In particular,
+\begin{equation}\label{eq:RHboundedBelow}
+ \mathrm{RH}\quad\Longleftrightarrow\quad
+ \liminf_{t\to\infty}\Psi(t)>-\infty.
+\end{equation}
+Also, if for one $\omega\in[0,\tfrac12)$ and some $\delta\in(0,\tfrac12-\omega]$ one proves
+\[
+ \Psi_\omega(t)\ge-Ce^{(1/2-\omega-\delta)t}
+\]
+eventually, then $\Theta\le1-\delta$.
+\end{corollary}
+
+\begin{proof}
+The proof of Theorem \ref{thm:transition}(ii), and its sign-reversed version, applies verbatim with
+$\varepsilon$ in place of a number smaller than $\vartheta-\omega$.  If
+$\Theta>\tfrac12+\omega+\varepsilon$, choose
+$\varepsilon'<\vartheta-\omega$ with $\varepsilon<\varepsilon'$ and obtain a contradiction to the
+assumed one-sided bound.  The case $\omega=0$ follows from the same transform argument using
+\eqref{eq:PsiTwoFaces}.
+\end{proof}
+
+Write $\Psi_\omega^-(t)=\max\{-\Psi_\omega(t),0\}$.
+
+\begin{theorem}[Averaged one-sided form]\label{thm:L1}
+Let $0\le\omega<\tfrac12$ and $\varepsilon\ge0$.  If
+\begin{equation}\label{eq:L1hyp}
+ \int_0^T\Psi_\omega^-(t)\,dt\le Ce^{\varepsilon T}
+ \qquad(T\ge0),
+\end{equation}
+then
+\begin{equation}\label{eq:L1conclusion}
+ \Theta\le\tfrac12+\omega+\varepsilon.
+\end{equation}
+Conversely, if $\vartheta\le\omega+\varepsilon$, then \eqref{eq:L1hyp} holds for some $C$.
+In particular,
+\begin{equation}\label{eq:RHnegativePart}
+ \mathrm{RH}
+ \quad\Longleftrightarrow\quad
+ \int_0^\infty\Psi^-(t)\,dt<\infty.
+\end{equation}
+\end{theorem}
+
+\begin{proof}
+Set $g=\Psi_\omega^+=\Psi_\omega+\Psi_\omega^-\ge0$ and
+\[
+ h(z)=\int_0^\infty\Psi_\omega^-(t)e^{izt}\,dt.
+\]
+If $H(T)=\int_0^T\Psi_\omega^-(t)\,dt$, then integration by parts gives, for
+$\Ip z>\varepsilon$, absolute convergence of $h$ from $H(T)\le Ce^{\varepsilon T}$; local uniform
+convergence gives analyticity.  On $\Ip z>\tfrac12-\omega$,
+\begin{equation}\label{eq:gTransform}
+ \widehat g(z)
+ =-\frac1{z^2}\lxi{\left(\tfrac12+\omega-iz\right)}+h(z).
+\end{equation}
+Since $g\ge0$, Landau's theorem makes $i\sigma_c$ a singularity of $\widehat g$, where $\sigma_c$
+is its abscissa of convergence.  If $\sigma_c>\varepsilon$, then $h$ is analytic near
+$i\sigma_c$, while the first term on the right of \eqref{eq:gTransform} can be singular there only
+if $\tfrac12+\omega+\sigma_c$ is a real zero of $\xi$ in $(\tfrac12,1]$.  There are no such zeros.
+Hence $\sigma_c\le\varepsilon$.  It follows from \eqref{eq:gTransform} that
+$-z^{-2}(\xi'/\xi)(\tfrac12+\omega-iz)$ is analytic on $\Ip z>\varepsilon$, proving
+\eqref{eq:L1conclusion}.
+
+Conversely, if $\vartheta\le\omega$, Theorem \ref{thm:threshold} shows that $\Psi_\omega^-$ has
+bounded support (and for $\omega=0$, RH gives $\Psi^-=0$).  If
+$\omega<\vartheta\le\omega+\varepsilon$, Theorem \ref{thm:asym} gives
+\[
+ \Psi_\omega^-(t)
+ \le A^*(\omega)e^{(\vartheta-\omega)t}+|B(\omega)|,
+\]
+whose integral over $[0,T]$ is $O(e^{\varepsilon T})$.
+\end{proof}
+
+% ==========================================================================
+\section{Final remarks}
+% ==========================================================================
+
+The decomposition \eqref{eq:mainDecomp} makes Suzuki's shifted criterion a competition between an
+explicit linear term and an oscillatory spectral remainder.  At or to the right of the critical
+shift, the remainder is bounded and the linear term wins.  To the left, a zero with
+$\Rp\rho>\tfrac12+\omega$ contributes an exponential factor and ultimately defeats every linear
+margin.  The shifted criterion therefore transports the zero-free-half-plane problem faithfully;
+it does not remove its analytic difficulty.
+
+The same observation explains why the one-sided formulations in Section \ref{sec:onesided} should
+not be interpreted as progress toward RH by themselves.  For example, obtaining any bound of the
+form
+\[
+ \Psi_\omega(t)\ge-Ce^{(1/2-\omega-\delta)t}
+\]
+with $0<\delta\le\tfrac12-\omega$ would already prove the zero-free half-plane $\Theta\le1-\delta$.  The value of the
+reformulation is instead that the required information can be expressed as a one-sided estimate for
+a single continuous function, or even as an averaged estimate for its negative part.
+
+Two extensions seem natural but are not needed for the core statements above.  First, verified
+zeros together with explicit zero-free regions can be inserted into \eqref{eq:Rclean} to produce
+large unconditional initial intervals on which $\Psi_\omega$ is positive.  Making the resulting
+numerical constants fully rigorous requires a careful Stieltjes treatment of the zero-counting
+error and is best separated from the present argument.  Second, analogous formulas hold for
+self-dual Dirichlet $L$-functions; off-central real zeros behave differently because their
+contribution has no oscillatory phase.  Both directions may be worth developing after the basic
+shifted asymptotic has been independently checked.
+
+\begin{thebibliography}{99}
+
+\bibitem{Davenport} H.~Davenport,
+\emph{Multiplicative Number Theory}, 3rd ed., Graduate Texts in Mathematics \textbf{74},
+Springer, New York, 2000.
+
+\bibitem{Ingham} A.~E.~Ingham,
+\emph{The Distribution of Prime Numbers}, Cambridge Tracts in Mathematics \textbf{30},
+Cambridge Univ. Press, Cambridge, 1932.
+
+\bibitem{KreinLanger} M.~G.~Kre\u\i n and H.~Langer,
+\emph{Continuation of hermitian positive definite functions and related questions},
+Integral Equations Operator Theory \textbf{78} (2014), 1--69.
+
+\bibitem{Lagarias1999} J.~C.~Lagarias,
+\emph{On a positivity property of the Riemann $\xi$-function},
+Acta Arith. \textbf{89} (1999), 217--234.
+
+\bibitem{Suzuki2023} M.~Suzuki,
+\emph{Aspects of the screw function corresponding to the Riemann zeta-function},
+J. London Math. Soc. (2) \textbf{108} (2023), 1448--1487; arXiv:2206.03682.
+
+\bibitem{Titchmarsh} E.~C.~Titchmarsh,
+\emph{The Theory of the Riemann Zeta-Function}, 2nd ed., revised by D.~R.~Heath-Brown,
+Oxford Univ. Press, 1986.
+
+\bibitem{TrudgianArg} T.~S.~Trudgian,
+\emph{An improved upper bound for the argument of the Riemann zeta-function on the critical line II},
+J. Number Theory \textbf{134} (2014), 280--292.
+
+\bibitem{Widder} D.~V.~Widder,
+\emph{The Laplace Transform}, Princeton Math. Series \textbf{6}, Princeton Univ. Press, 1941.
+
+\end{thebibliography}
+
+\end{document}

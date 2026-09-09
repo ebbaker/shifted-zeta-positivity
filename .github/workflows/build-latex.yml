@@ -1,0 +1,66 @@
+name: Build PDFs
+
+# Builds every manuscript in papers/ from its committed .tex on a clean TeX
+# Live and checks that the page count matches the committed PDF. The released
+# preprint and the working drafts are treated alike here: a green run means
+# "the sources compile", nothing more. Release status lives in each folder's
+# STATUS.md / VERIFICATION_STATUS.md, not in this workflow.
+
+on:
+  push:
+    paths:
+      - "papers/**/*.tex"
+      - "papers/**/*.png"
+      - ".github/workflows/build-latex.yml"
+  pull_request:
+    paths:
+      - "papers/**/*.tex"
+      - "papers/**/*.png"
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - dir: papers/first-slab-positivity
+            tex: first_slab_positivity
+            pages: 24
+          - dir: papers/psi-omega-margin
+            tex: psi_omega_margin
+            pages: 21
+          - dir: papers/psi-omega-margin
+            tex: psi_omega_concise
+            pages: 9
+          - dir: papers/omega-string
+            tex: omega_string
+            pages: 13
+          - dir: papers/defect-depth
+            tex: defect_depth
+            pages: 15
+          - dir: papers/rh-detector
+            tex: rh_detector
+            pages: 10
+    name: ${{ matrix.tex }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Compile ${{ matrix.tex }}.tex
+        uses: xu-cheng/latex-action@v3
+        with:
+          root_file: ${{ matrix.tex }}.tex
+          working_directory: ${{ matrix.dir }}
+          latexmk_use_lualatex: false
+
+      - name: Check page count against the committed PDF
+        run: |
+          sudo apt-get update -qq && sudo apt-get install -y -qq poppler-utils
+          got=$(pdfinfo "${{ matrix.dir }}/${{ matrix.tex }}.pdf" | awk '/^Pages:/ {print $2}')
+          echo "built ${{ matrix.tex }}.pdf: $got pages (expected ${{ matrix.pages }})"
+          test "$got" = "${{ matrix.pages }}"
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: ${{ matrix.tex }}-pdf
+          path: ${{ matrix.dir }}/${{ matrix.tex }}.pdf

@@ -1,0 +1,1706 @@
+% =====================================================================
+%  Archimedean first-slab positivity for shifted zeta canonical systems
+%  An off-center Weil generator and a radial energy identity
+%  Preprint v1.0 -- 5 September 2026 -- Edward Baker
+%  License: CC BY 4.0
+% =====================================================================
+\documentclass[11pt,a4paper]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[protrusion=true,expansion=false]{microtype}
+\usepackage[margin=28mm]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{enumitem}
+\setlist[itemize]{label=$\bullet$}
+\usepackage[hidelinks]{hyperref}
+\usepackage{url}
+\makeatletter\g@addto@macro{\UrlBreaks}{\do\_}\makeatother
+\usepackage{xcolor}
+
+\hypersetup{
+  pdftitle={Archimedean first-slab positivity for shifted zeta canonical systems},
+  pdfauthor={Edward Baker},
+  pdfsubject={Computer-assisted positivity certificate for the prime-free first slab of Suzuki's shifted zeta Hankel system},
+  pdfkeywords={Riemann zeta function, Weil positivity, canonical systems, Hankel operators, Volterra operators, computer-assisted proof, interval arithmetic}
+}
+
+% ---------------------------------------------------------------- macros
+\newcommand{\R}{\mathbb R}
+\newcommand{\C}{\mathbb C}
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\Cp}{\mathbb C_+}
+\newcommand{\Ginf}{\Gamma_{\!\infty}}
+\newcommand{\Dlog}{\mathcal D_{\log}}
+\renewcommand{\Re}{\operatorname{Re}}
+\renewcommand{\Im}{\operatorname{Im}}
+\newcommand{\supp}{\operatorname{supp}}
+\newcommand{\dd}{\,\mathrm d}
+\newcommand{\eps}{\varepsilon}
+\newcommand{\Cc}{\mathcal C}
+\newcommand{\Ss}{\mathcal S}
+\newcommand{\Hcal}{\mathcal H}
+\newcommand{\Gcal}{\mathcal G}
+\newcommand{\Kfrak}{\mathfrak K}
+\newcommand{\Hsf}{\mathsf H}
+\newcommand{\LZ}{L_{\mathrm Z}}
+\newcommand{\pt}{\mathrm{pt}}
+\DeclarePairedDelimiter{\abs}{\lvert}{\rvert}
+\DeclarePairedDelimiter{\norm}{\lVert}{\rVert}
+\newcommand{\succposdef}{\succ0}
+
+% ---------------------------------------------------------------- theorems
+\theoremstyle{plain}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem*{thmA}{Theorem A}
+\newtheorem*{thmB}{Theorem B}
+\newtheorem*{thmC}{Theorem C}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{remark}[theorem]{Remark}
+
+\numberwithin{equation}{section}
+
+\title{\textbf{Archimedean first-slab positivity for shifted zeta canonical systems}\\[1ex]
+\large An off-center Weil generator and a radial energy identity}
+\author{Edward Baker\\[0.5ex]
+\normalsize \texttt{edwardbaker86@gmail.com}}
+\date{Preprint, version 1.0 --- 5 September 2026}
+
+\begin{document}
+\maketitle
+
+\begin{center}
+\begin{minipage}{0.9\textwidth}
+\small\itshape
+This manuscript reports computer-assisted mathematics and was prepared with
+substantial language-model assistance. The author is responsible for its
+content. The analytic inputs, the interval-arithmetic certificate, and the
+independent audit are described in Sections~7 and~8 and Appendix~B; the
+present verification status of every component, including the items that
+have not yet received line-by-line human verification, is recorded in
+Section~13 and Appendix~C. The preprint is deposited to fix a citable
+version of the argument while that verification proceeds.
+\end{minipage}
+\end{center}
+
+\begin{abstract}
+For $\omega>0$, Suzuki's shifted scattering function
+$\Theta_\omega(z)=\xi(\tfrac12-\omega-iz)/\xi(\tfrac12+\omega-iz)$ admits a
+prime--gamma Hankel kernel. By results of Suzuki, $\Theta_\omega$ is a
+meromorphic inner function in the upper half-plane exactly when the associated
+Hankel transform is an isometry, and innerness for every $\omega>\omega_0$ is
+equivalent to the zero-free half-plane $\Re s>\tfrac12+\omega_0$; the Riemann
+hypothesis is the case of all $\omega_0>0$. Contractivity of every finite
+section of the Hankel operator is therefore a necessary condition for these
+open assertions when $0<\omega<\tfrac12$.
+
+We isolate the first logarithmic radial slab, before the first prime layer
+appears. On a slab of length $L\le\log2$ the arithmetic Hankel operator reduces
+exactly to a reflected finite-horizon Volterra convolution
+$H_{\omega,L}=V_{\omega,L}R_L$ with completed-gamma transfer
+$K_\omega(p)=\Ginf(\tfrac12+p-\omega)/\Ginf(\tfrac12+p+\omega)$.
+Differentiating this transfer in the shift produces a self-adjoint generator
+$Q_{\omega,L}$, an off-center prime-free Weil form, with the exact
+decomposition $Q_{\omega,L}=Q_{0,L}+C_{\omega,L}$, where $Q_{0,L}$ is the
+central compact-window Weil form and $C_{\omega,L}$ is the compact integral
+operator with kernel
+$c_\omega(x,y)=(\cosh(\omega\abs{x-y})-1)\bigl(e^{\abs{x-y}/2}-e^{-5\abs{x-y}/2}/(1-e^{-2\abs{x-y}})\bigr)$.
+The apparent singularity at $\omega=\tfrac12$ cancels in this representation
+and all generators share one logarithmic form domain. An Arb-certified
+Legendre calculation, closed by analytic Taylor and infinite-tail bounds,
+proves $Q_{\omega,L}\succ0$ for $0\le\omega\le\tfrac12$ and $0<L\le\log2$,
+with an explicit coercivity constant $6.1159\times10^{-4}$ on the whole form
+domain. The certificate uses $256$ shift boxes in each parity sector and
+sixteen Legendre modes per sector; a clean-room reimplementation reproduces
+all $512$ boxes.
+
+We then prove a strong-operator energy identity expressing the defect
+$I-V_{\omega,L}^{*}V_{\omega,L}$ as $2\int_0^\omega V_{s,L}^{*}Q_{s,L}V_{s,L}\dd s$.
+Strict generator positivity, the strong limit $V_{s,L}\to I$ as $s\downarrow0$,
+and compactness of $V_{\omega,L}$ give $\norm{V_{\omega,L}}<1$ and
+$I\pm H_{\omega,L}\succ0$ throughout the first slab for $0<\omega\le\tfrac12$.
+This complements Suzuki's unconditional strict contractivity of all finite
+sections for $\omega>\tfrac12$ and settles the critical shift interval on the
+prime-free slab. The energy identity also exhibits an explicit shift-radial
+Gram factor with local density $Q_{s,L}$. The result is prime-free and
+finite-depth: it proves neither the Riemann hypothesis nor a new zero-free
+region. Its content is an independently positive archimedean base slab for the
+shifted-zeta canonical-system program.
+\end{abstract}
+
+\medskip
+\noindent\textbf{MSC 2020.} 11M26, 47B35, 47G10, 65G20, 65G30.\\
+\textbf{Keywords.} Riemann zeta function; Weil positivity; canonical systems;
+Hankel and Volterra operators; reflection positivity; computer-assisted proof;
+interval arithmetic.
+
+\setcounter{tocdepth}{1}
+\tableofcontents
+
+% =====================================================================
+\section{Introduction}
+% =====================================================================
+
+\subsection{Shifted zeta positivity}
+
+Let
+\begin{equation}
+\xi(s)=\tfrac12 s(s-1)\pi^{-s/2}\Gamma(s/2)\zeta(s)
+\end{equation}
+be the completed Riemann xi-function and, following Suzuki~\cite{Suzuki2012},
+put for $\omega>0$
+\begin{equation}\label{eq:Theta}
+\Theta_\omega(z)=\frac{\xi(\tfrac12-\omega-iz)}{\xi(\tfrac12+\omega-iz)}.
+\end{equation}
+The functional equation $\xi(s)=\xi(1-s)$ gives, for real $u$,
+\begin{equation}
+\Theta_\omega(u)=\frac{\xi(\tfrac12+\omega+iu)}{\xi(\tfrac12+\omega-iu)},
+\qquad \abs{\Theta_\omega(u)}=1 .
+\end{equation}
+This boundary unitarity is unconditional. The nontrivial condition is
+\emph{meromorphic innerness} in the upper half-plane
+$\Cp=\{\Im z>0\}$: in the terminology of~\cite{Suzuki2012}, a bounded
+analytic function on $\Cp$ with unimodular boundary values almost everywhere
+which extends meromorphically to $\C$.
+
+We pin the relation to zero-free regions to the statements actually proved
+in~\cite{Suzuki2012}, since it carries the significance claim of this paper.
+Suzuki proves~\cite[Prop.~1.2]{Suzuki2012} that for $\omega_0>0$ the following
+are equivalent: (i) $\zeta(s)\neq0$ for $\Re s>\tfrac12+\omega_0$;
+(ii) $\Theta_\omega$ is a meromorphic inner function in $\Cp$ for every
+$\omega>\omega_0$. In particular the Riemann hypothesis is equivalent to
+meromorphic innerness of $\Theta_\omega$ for every $\omega>0$, and for
+$0<\omega_0<\tfrac12$ the half-plane statement (i) is an open quasi-RH
+assertion. The equivalence is stated for the whole family
+$\omega>\omega_0$; for a single shift, innerness of $\Theta_\omega$ excludes
+every zero $\rho$ of $\xi$ with $\Re\rho>\tfrac12+\omega$ whose pole
+$z=i(\rho-\tfrac12-\omega)$ of~\eqref{eq:Theta} is not cancelled by a zero of
+the numerator, and the passage to all $\omega>\omega_0$ removes the
+cancellation cases. Suzuki further shows~\cite[Thm.~2.2]{Suzuki2012} that
+$\Theta_\omega$ is meromorphic inner if and only if the Hankel operator
+$\Hsf_\omega$ of Section~2 maps $L^2((1,\infty),dx)$ into
+$L^2((0,\infty),dx)$---equivalently, if and only if on $L^2((1,\infty),dx)$
+the multiplier action of $\Theta_\omega$ coincides with $\Hsf_\omega$---and
+that in this case $\Hsf_\omega$ is an isometry of $L^2((0,\infty),dx)$
+\cite[Lemma~4.1]{Suzuki2012}. Every compression of an isometry is a
+contraction. Hence contractivity of
+every finite section of $\Hsf_\omega$ is a necessary condition for innerness,
+and thus, for $0<\omega<\tfrac12$, for the open zero-free statements; compare
+the classical positivity formulations of Weil and Lagarias~\cite{Lagarias1999}.
+Theorem~A verifies this necessary condition unconditionally on the entire
+first slab and throughout the critical shift interval $0<\omega\le\tfrac12$.
+For $\omega>\tfrac12$ the zero-free statement follows from the classical
+critical strip, and Suzuki~\cite[Lemma~4.4]{Suzuki2012} proves the strict
+finite-section contractivity there; see Section~9.3. The genuinely
+RH-sensitive shift range is the one treated here.
+
+The global problem is arithmetic. Suzuki's Hankel kernel contains translated
+copies of one archimedean impulse at logarithmic depths $\log n$, weighted by
+Euler-product coefficients. Proving compatible contractivity at every depth
+for shifts accumulating at zero is an RH-level problem.
+
+The present paper addresses a local but independently specified part of that
+system. Before the first threshold $\log2$, no prime layer is present. The
+kernel is determined solely by the completed gamma factor, so its positivity
+can be studied without zeta zeros, a zero-free hypothesis, or an assumed
+positive spectral measure.
+
+\subsection{The first slab and the proof architecture}
+
+An earlier approach to the first slab proceeded through the singular limit
+$\omega\downarrow0$, compact Mosco convergence to a prime-free Weil form, and
+direct parameter enclosures for the defect channels. That route remains a
+useful cross-check (Section~11), but it obscures a simpler monotonicity
+mechanism.
+
+The key observation is to differentiate the causal transfer in $\omega$. If
+\begin{equation}
+\partial_\omega V_{\omega,L}=-A_{\omega,L}V_{\omega,L},
+\end{equation}
+then the defect $D_{\omega,L}=I-V_{\omega,L}^{*}V_{\omega,L}$ satisfies
+\begin{equation}
+\partial_\omega D_{\omega,L}
+=V_{\omega,L}^{*}\bigl(A_{\omega,L}+A_{\omega,L}^{*}\bigr)V_{\omega,L}.
+\end{equation}
+Thus contractivity follows if the self-adjoint shift generator is positive.
+The generator is not a new unrelated form: it is an off-center deformation of
+the same compact-window Weil form that appears at $\omega=0$. More precisely,
+after the normalization
+\begin{equation}\label{eq:Qdef-intro}
+Q_{\omega,L}:=\tfrac12\bigl(A_{\omega,L}+A_{\omega,L}^{*}\bigr),
+\end{equation}
+all shift dependence is a small bounded compact kernel. This is the structural
+reason the full shift interval is certifiable with a modest matrix
+calculation.
+
+\subsection{Main results}
+
+Let $R_Lf(x)=f(L-x)$ on $L^2(0,L)$. Let $V_{\omega,L}$ be the causal Volterra
+operator defined in Section~2, and put $H_{\omega,L}=V_{\omega,L}R_L$.
+
+\begin{thmA}[critical-shift first-slab positivity]
+For every
+\[
+0<\omega\le\tfrac12,\qquad 0<L\le\log2,
+\]
+one has
+\begin{equation}
+\norm{V_{\omega,L}}=\norm{H_{\omega,L}}<1,
+\qquad\text{and therefore}\qquad
+I\pm H_{\omega,L}\succ0 .
+\end{equation}
+\end{thmA}
+
+Theorem~A follows from Theorems~B and~C below. Section~9.3 records the
+relation to Suzuki's complementary range $\omega>\tfrac12$ without using that
+range in Theorem~A. The computer-assisted input is isolated in one theorem.
+
+\begin{thmB}[computer-assisted off-center Weil positivity]
+Let $0\le\omega\le\tfrac12$ and $0<L\le\log2$. Then the closed form
+$Q_{\omega,L}$ with logarithmic form domain $\Dlog(I_L)$ (Section~4.4) is
+strictly positive. More precisely, for every $f\in\Dlog(I_L)$,
+\begin{equation}\label{eq:thmB-coercive}
+Q_{\omega,L}[f]\ \ge\ c_*\norm f_2^2,
+\qquad c_*=6.1159\times10^{-4},
+\end{equation}
+and $c_*$ may be replaced by $5.2613\times10^{-2}$ on the odd reflection
+sector. At $L=\log2$ the primary Arb certificate gives minimum certified
+Weyl--Schur margins
+\[
+6.116350109501\times10^{-4}
+\quad\text{and}\quad
+5.261670009275\times10^{-2}
+\]
+in the even and odd sectors, from which~\eqref{eq:thmB-coercive} follows by
+Lemma~\ref{lem:block-schur}. A clean-room reconstruction gives
+$6.116514636999\times10^{-4}$ and $5.261670255041\times10^{-2}$.
+\end{thmB}
+
+The analytic step from Theorem~B to Theorem~A is exact.
+
+\begin{thmC}[shift-energy identity]
+For $0<\omega\le\tfrac12$ and $0<L\le\log2$,
+\begin{equation}\label{eq:energy-identity}
+I-V_{\omega,L}^{*}V_{\omega,L}
+=2\int_0^\omega V_{s,L}^{*}Q_{s,L}V_{s,L}\dd s,
+\end{equation}
+where the integral is an improper strong-operator integral. In particular
+$I-V_{\omega,L}^{*}V_{\omega,L}$ is positive definite. Moreover $V_{\omega,L}$
+is compact, so positive definiteness excludes norm one and gives strict
+contractivity.
+\end{thmC}
+
+The energy identity supplies a canonical positive factor. Define
+\begin{equation}
+(\Gcal_{\omega,L}f)(s)=\sqrt2\,Q_{s,L}^{1/2}V_{s,L}f,\qquad 0<s<\omega .
+\end{equation}
+Then
+\begin{equation}
+I-V_{\omega,L}^{*}V_{\omega,L}=\Gcal_{\omega,L}^{*}\Gcal_{\omega,L}.
+\end{equation}
+The shift $s$ is therefore a radial coordinate and $Q_{s,L}$ is the local
+positive energy density accumulated by the boundary defect.
+
+\subsection{Organization of the argument}
+
+The generator certificate and the shift-energy identity are the computational
+and analytic halves of one contractivity theorem. Their combination identifies
+compact-window Weil positivity as the local dissipation density of the shifted
+causal system. Sections~2--3 set up Suzuki's system and the completed-gamma
+transfer; Section~4 derives the off-center generator and its bounded-kernel
+decomposition; Sections~5--7 contain the certificate; Section~8 proves the
+energy identity; Sections~9--12 discuss consequences, context, superseded
+routes, and open problems; Section~13 records the verification status. The
+fractional Sonine realization, compact Mosco limit, and older direct-transfer
+certificates are retained as secondary structure and cross-checks.
+
+\subsection{What is not claimed}
+
+The scope is deliberately limited.
+\begin{enumerate}[nosep]
+\item The theorem does not prove RH.
+\item It gives no new zero-free region. It verifies a necessary finite-section
+  condition for the open shifted zero-free assertions, but a prime-free
+  finite-depth compression cannot determine global innerness.
+\item No arithmetic layer $n\ge2$ is controlled. The first new layer appears
+  exactly at depth $\log2$.
+\item The positive radial factor is a rigorous one-dimensional bulk in the
+  sense of a transfer-system energy identity. It is not claimed to be an
+  ordinary AdS/CFT dual.
+\item The proof is computer-assisted. The primary special-function enclosure
+  is formal Arb arithmetic; the independent implementation is a strong audit
+  rather than a second formal special-function interval library.
+\end{enumerate}
+
+% =====================================================================
+\section{Suzuki's arithmetic Hankel system}
+% =====================================================================
+
+\subsection{Prime--gamma layer decomposition}
+
+Define the arithmetic coefficients~\cite[eq.~(2.1)]{Suzuki2012}
+\begin{equation}
+c_\omega(n)=n^\omega\sum_{d\mid n}\frac{\mu(d)}{d^{2\omega}}
+=n^\omega\prod_{p\mid n}\bigl(1-p^{-2\omega}\bigr),
+\qquad
+\sum_{n\ge1}c_\omega(n)n^{-w}=\frac{\zeta(w-\omega)}{\zeta(w+\omega)} .
+\end{equation}
+Suzuki constructs an explicit archimedean function $g_\omega$ supported in
+$(0,1)$ and the arithmetic kernel~\cite[eq.~(2.3)]{Suzuki2012}
+\begin{equation}\label{eq:h-def}
+h_\omega(x)=\frac1x\sum_{n\le x}c_\omega(n)\,g_\omega(n/x),\qquad x>1,
+\end{equation}
+with $h_\omega=0$ on $(0,1)$, and proves~\cite[Prop.~2.1]{Suzuki2012} that
+$\int_0^\infty h_\omega(x)x^{1/2+iz}\dd x/x=\Theta_\omega(z)$ for
+$\Im z>\tfrac12+\omega$. The multiplicative Hankel operator
+is~\cite[eq.~(2.5)]{Suzuki2012}
+\begin{equation}
+(\Hsf_\omega f)(x)=\int_0^\infty h_\omega(xy)f(y)\dd y .
+\end{equation}
+Introduce logarithmic coordinates
+\begin{equation}
+k_\omega(t)=e^{t/2}h_\omega(e^{t}),\qquad
+\kappa_\omega(t)=e^{-t/2}g_\omega(e^{-t})\mathbf 1_{t>0}.
+\end{equation}
+Then~\eqref{eq:h-def} becomes
+\begin{equation}\label{eq:layer}
+k_\omega(t)=\sum_{n\ge1}\frac{c_\omega(n)}{\sqrt n}\,\kappa_\omega(t-\log n).
+\end{equation}
+Every integer contributes a delayed copy of the same archimedean impulse. A
+finite sum-coordinate interval of length $L<\log2$ sees only $n=1$. At
+$L=\log2$ the $n=2$ contribution lies on a measure-zero boundary and does not
+enter the quadratic form.
+
+\subsection{Finite-volume Hankel operator}
+
+On the centered interval $I_L=(-L/2,L/2)$ the first-slab Hankel operator is
+\begin{equation}
+(H^{\mathrm c}_{\omega,L}f)(x)=\int_{I_L}k_\omega(x+y)f(y)\dd y .
+\end{equation}
+Because $L\le\log2$, the layer formula~\eqref{eq:layer} gives
+$k_\omega=\kappa_\omega$ almost everywhere on the relevant sum-coordinate
+range. After shifting $I_L$ to $(0,L)$ the same operator is
+\begin{equation}
+(H_{\omega,L}f)(x)=\int_0^L\kappa_\omega(x+y-L)f(y)\dd y .
+\end{equation}
+In Suzuki's multiplicative normalization this is the compression
+\begin{equation}
+\Hsf_{\omega,a}=P_a\Hsf_\omega P_a\colon L^2((0,a),dx)\to L^2((0,a),dx)
+\end{equation}
+of~\cite[eq.~(2.6)]{Suzuki2012}. Since $h_\omega(xy)=0$ for $xy<1$, the
+compression acts on $(1/a,a)$, which in logarithmic coordinates is the
+centered interval of total length $L=2\log a$.
+
+Define
+\begin{equation}
+(V_{\omega,L}f)(x)=\int_0^x\kappa_\omega(x-y)f(y)\dd y,
+\qquad
+(R_Lf)(x)=f(L-x).
+\end{equation}
+A change of variables gives the exact identities
+\begin{equation}\label{eq:volterra-identities}
+H_{\omega,L}=V_{\omega,L}R_L=R_LV_{\omega,L}^{*},
+\qquad
+R_LV_{\omega,L}R_L=V_{\omega,L}^{*},
+\qquad
+H_{\omega,L}^{2}=V_{\omega,L}V_{\omega,L}^{*}.
+\end{equation}
+Hence $H_{\omega,L}$ is self-adjoint and $\norm{H_{\omega,L}}=\norm{V_{\omega,L}}$.
+It follows that
+\begin{equation}
+I\pm H_{\omega,L}\succ0\quad\Longleftrightarrow\quad\norm{V_{\omega,L}}<1 .
+\end{equation}
+This is the first-slab reflection-positivity criterion.
+
+\subsection{Local positivity versus global innerness}
+
+If $\Theta_\omega$ is meromorphic inner, its Hankel transform is an isometry
+\cite[Lemma~4.1]{Suzuki2012} and every finite section is contractive.
+Conversely, compatible contractivity at all depths recovers the global
+Hardy-space mapping property in Suzuki's criterion~\cite[Thm.~2.2]{Suzuki2012}.
+Positivity at one finite depth is only a local statement. In particular,
+Theorem~A has no direct zero-free consequence.
+
+% =====================================================================
+\section{Completed-gamma transfer and fractional structure}
+% =====================================================================
+
+\subsection{Transfer function}
+
+Put
+\begin{equation}
+\Ginf(s)=\tfrac12 s(s-1)\pi^{-s/2}\Gamma(s/2),
+\end{equation}
+so that $\xi=\Ginf\zeta$; this is the factor written $\gamma(s)$
+in~\cite{Suzuki2012}. Suzuki shows~\cite[Sect.~3.1]{Suzuki2012} that
+\begin{equation}\label{eq:suzuki-mellin}
+\int_0^\infty g_\omega(x)\,x^{s}\,\frac{\dd x}{x}
+=\frac{\Ginf(s-\omega)}{\Ginf(s+\omega)},
+\qquad \Re s>\max(\omega-2,\,1-\omega).
+\end{equation}
+With $\kappa_\omega(t)=e^{-t/2}g_\omega(e^{-t})$ and $s=p+\tfrac12$ this is
+the Laplace transform of the first-slab impulse,
+\begin{equation}\label{eq:K}
+K_\omega(p)=\int_0^\infty\kappa_\omega(t)e^{-pt}\dd t
+=\frac{\Ginf(\tfrac12+p-\omega)}{\Ginf(\tfrac12+p+\omega)} .
+\end{equation}
+For $0<\omega<\tfrac12$ write
+\begin{equation}
+\alpha=\tfrac12-\omega,\qquad\beta=\tfrac12+\omega .
+\end{equation}
+Then
+\begin{equation}\label{eq:K-factored}
+K_\omega(p)=\pi^{\omega}\,\frac{p+\alpha}{p-\alpha}\,\frac{p-\beta}{p+\beta}\,
+\frac{\Gamma\bigl((p+\alpha)/2\bigr)}{\Gamma\bigl((p+\beta)/2\bigr)} .
+\end{equation}
+The pole at $p=\alpha$ obstructs a naive stationary bounded-real argument. It
+causes no difficulty on a finite horizon and disappears from the bounded
+generator difference derived in Section~4.
+
+\subsection{Explicit local impulse}
+
+Let $q(t)=1-e^{-2t}$. For $0<\omega\le\tfrac12$ the first-slab impulse can be
+written
+\begin{equation}\label{eq:kappa-explicit}
+\kappa_\omega(t)=\pi^\omega\Bigl[
+\frac{2e^{-\alpha t}q(t)^{\omega-1}}{\Gamma(\omega)}
+-\frac{4\alpha\omega\,e^{\alpha t}}{\Gamma(\omega)}B_{q(t)}(\omega,\alpha)
+-\frac{4\beta\omega\,e^{-\alpha t}q(t)^{\omega}}{\Gamma(\omega+1)}
+\Bigr],
+\end{equation}
+where $B_q(a,b)=\int_0^q u^{a-1}(1-u)^{b-1}\dd u$ and the middle term is
+interpreted as zero at $\alpha=0$. Its Laplace transform is~\eqref{eq:K};
+by uniqueness of Laplace transforms, \eqref{eq:kappa-explicit} agrees with
+$e^{-t/2}g_\omega(e^{-t})$ almost everywhere. Near the diagonal,
+$\kappa_\omega(t)=O(t^{\omega-1})$ as $t\downarrow0$, so
+$\kappa_\omega\in L^1(0,L)$ for every positive shift.
+
+\subsection{Diffusive and Sonine factors}
+
+The fractional gamma ratio
+\begin{equation}
+F_\omega(p)=\frac{\Gamma((p+\alpha)/2)}{\Gamma((p+\beta)/2)}
+\end{equation}
+has impulse
+\begin{equation}
+a_\omega(t)=\frac{2}{\Gamma(\omega)}e^{-\alpha t}(1-e^{-2t})^{\omega-1}
+=\sum_{n=0}^\infty d_{\omega,n}e^{-\lambda_{\omega,n}t},
+\qquad
+\lambda_{\omega,n}=\alpha+2n,\quad
+d_{\omega,n}=\frac{2(1-\omega)_n}{\Gamma(\omega)\,n!}>0 .
+\end{equation}
+Define the complementary kernel
+\begin{equation}
+b_\omega(t)=\frac{2}{\Gamma(1-\omega)}e^{-\beta t}(1-e^{-2t})^{-\omega}.
+\end{equation}
+The gamma recurrence gives the Sonine identity
+\begin{equation}
+a_\omega*b_\omega=2e^{-\alpha t},
+\qquad\text{equivalently}\qquad
+\tfrac12(\partial_t+\alpha)\mathcal B_\omega\mathcal A_\omega=I
+\end{equation}
+on the zero-initial-value core. This places the first-slab system in the
+general Sonine-kernel framework~\cite{Luchko2021}. It also gives the rational
+collapse
+\begin{equation}
+F_{1-\omega}(p+1)K_\omega(p)=\frac{2\pi^\omega(p-\beta)}{(p+\beta)(p-\alpha)} .
+\end{equation}
+These identities motivate a distributed-state realization, but they are not
+needed for the proof of Theorem~A.
+
+% =====================================================================
+\section{The off-center Weil generator}
+% =====================================================================
+
+\subsection{Shift derivative}
+
+Set $G(p)=\Ginf(\tfrac12+p)$ and $\ell(p)=\log G(p)$. Then
+$K_\omega(p)=G(p-\omega)/G(p+\omega)$ and
+\begin{equation}\label{eq:dK}
+\partial_\omega K_\omega(p)=-a_\omega(p)K_\omega(p),
+\qquad
+a_\omega(p)=\ell'(p-\omega)+\ell'(p+\omega).
+\end{equation}
+In terms of $\alpha=\tfrac12-\omega$ and $\beta=\tfrac12+\omega$, standard
+gamma and digamma identities~\cite{DLMF} give
+\begin{equation}\label{eq:a-mult}
+a_\omega(p)=
+\frac1{p+\alpha}+\frac1{p-\alpha}+\frac1{p+\beta}+\frac1{p-\beta}
+-\log\pi
++\tfrac12\psi\Bigl(\frac{p+\alpha}2\Bigr)+\tfrac12\psi\Bigl(\frac{p+\beta}2\Bigr).
+\end{equation}
+Let $A_{\omega,L}$ be the maximal finite-horizon causal operator with transfer
+$a_\omega$. On a smooth zero-initial-value core,
+\begin{equation}
+\partial_\omega V_{\omega,L}=-A_{\omega,L}V_{\omega,L}.
+\end{equation}
+Define the self-adjoint generator form
+\begin{equation}\label{eq:Qdef}
+Q_{\omega,L}=\tfrac12\bigl(A_{\omega,L}+A_{\omega,L}^{*}\bigr).
+\end{equation}
+At $\omega=0$ this is the central prime-free compact-window Weil form.
+
+\subsection{Fourier-plus-residue representation}
+
+Let $f$ be supported on $I_L=(-L/2,L/2)$, with Fourier transform
+$\widehat f(\tau)=\int_{I_L}f(x)e^{-i\tau x}\dd x$. Define
+\begin{equation}\label{eq:w}
+w_\omega(\tau)=\tfrac12\Re\psi\Bigl(\frac{\alpha+i\tau}2\Bigr)
++\tfrac12\Re\psi\Bigl(\frac{\beta+i\tau}2\Bigr)-\log\pi,
+\end{equation}
+and the evaluation functionals
+\begin{equation}
+\Cc_c(f)=\int_{I_L}f(x)\cosh(cx)\dd x,\qquad
+\Ss_c(f)=\int_{I_L}f(x)\sinh(cx)\dd x .
+\end{equation}
+For $0\le\omega<\tfrac12$, contour displacement gives
+\begin{equation}\label{eq:Q-fourier}
+Q_{\omega,L}[f]=\frac1{2\pi}\int_\R w_\omega(\tau)\abs{\widehat f(\tau)}^2\dd\tau
++\abs{\Cc_\alpha(f)}^2+\abs{\Cc_\beta(f)}^2
+-\abs{\Ss_\alpha(f)}^2-\abs{\Ss_\beta(f)}^2 .
+\end{equation}
+Even and odd reflection sectors therefore decouple. The endpoint needs a
+distributional correction and is recorded explicitly.
+
+\begin{lemma}[right-endpoint boundary term]\label{lem:endpoint}
+Let $w^{\pt}_{1/2}$ be the pointwise limit of $w_\omega$ as
+$\omega\uparrow\tfrac12$ away from $\tau=0$, continuously extended at zero.
+Then
+\begin{equation}\label{eq:Q-endpoint}
+Q_{1/2,L}[f]=\frac1{2\pi}\int_\R w^{\pt}_{1/2}(\tau)\abs{\widehat f(\tau)}^2\dd\tau
++\tfrac12\abs{\Cc_0(f)}^2+\abs{\Cc_1(f)}^2-\abs{\Ss_1(f)}^2 .
+\end{equation}
+\end{lemma}
+
+\begin{proof}
+Since $\psi(z)=-1/z+O(1)$ near $z=0$,
+\[
+\tfrac12\Re\psi\Bigl(\frac{\alpha+i\tau}2\Bigr)
+=-\frac{\alpha}{\alpha^2+\tau^2}+\tfrac12\Re\psi\Bigl(\frac{i\tau}2\Bigr)+o(1),
+\]
+and $\int_\R\alpha(\alpha^2+\tau^2)^{-1}\dd\tau=\pi$, so
+$\tfrac12\Re\psi((\alpha+i\tau)/2)\to\tfrac12\Re\psi(i\tau/2)-\pi\delta_0$
+in distributions as $\alpha\downarrow0$. Since
+$\widehat f(0)=\Cc_0(f)=\int f$, the delta term subtracts
+$\tfrac12\abs{\Cc_0(f)}^2$ from the pointwise-limit formula, while the residue
+terms $\abs{\Cc_\alpha}^2-\abs{\Ss_\alpha}^2$ tend to $\abs{\Cc_0}^2$. This is
+exactly the boundary contribution carried automatically by the bounded-kernel
+representation of Proposition~\ref{prop:bounded-difference} below, whose
+uniform convergence as $\omega\uparrow\tfrac12$ justifies the limit.
+\end{proof}
+
+\subsection{Exact bounded perturbation}
+
+Define
+\begin{equation}\label{eq:R}
+R(t)=e^{t/2}-\frac{e^{-5t/2}}{1-e^{-2t}} .
+\end{equation}
+
+\begin{proposition}[bounded shift difference]\label{prop:bounded-difference}
+For $0\le\omega\le\tfrac12$,
+\begin{equation}\label{eq:Q-decomp}
+Q_{\omega,L}=Q_{0,L}+C_{\omega,L},
+\end{equation}
+where $C_{\omega,L}$ is the self-adjoint integral operator on $I_L$ with kernel
+\begin{equation}\label{eq:c-kernel}
+c_\omega(x,y)=\bigl(\cosh(\omega\abs{x-y})-1\bigr)R(\abs{x-y}) .
+\end{equation}
+\end{proposition}
+
+\begin{proof}
+First take $0\le\omega<\tfrac12$ and $\Re p$ sufficiently large. The
+convergent difference must be formed before its summands are separated. From
+$\psi(z)=-\gamma+\int_0^\infty(e^{-u}-e^{-zu})(1-e^{-u})^{-1}\dd u$ with
+$u=2t$,
+\begin{equation}
+\tfrac12\psi\Bigl(\frac{p+c}2\Bigr)=-\frac\gamma2+\int_0^\infty
+\frac{e^{-2t}-e^{-(p+c)t}}{1-e^{-2t}}\dd t .
+\end{equation}
+In the sum with $c=\alpha,\beta$, minus twice the $c=\tfrac12$ term, the
+constants and the individually divergent $e^{-2t}$ terms cancel. The remaining
+integrand is integrable at zero and equals
+\begin{equation}
+-2e^{-pt}\,\frac{e^{-t/2}}{1-e^{-2t}}\bigl(\cosh(\omega t)-1\bigr).
+\end{equation}
+Independently, the four rational terms in $a_\omega-a_0$ have inverse Laplace
+kernel
+\begin{equation}
+e^{-\alpha t}+e^{\alpha t}+e^{-\beta t}+e^{\beta t}-4\cosh(t/2)
+=4\cosh(t/2)\bigl(\cosh(\omega t)-1\bigr),
+\end{equation}
+using $\cosh\alpha t+\cosh\beta t=2\cosh(t/2)\cosh(\omega t)$. Adding the two
+contributions and using
+\begin{equation}
+2\cosh(t/2)-\frac{e^{-t/2}}{1-e^{-2t}}
+=e^{t/2}-\frac{e^{-5t/2}}{1-e^{-2t}}=R(t)
+\end{equation}
+yields the multiplier identity
+\begin{equation}\label{eq:multiplier-identity}
+a_\omega(p)-a_0(p)=\int_0^\infty e^{-pt}\,2\bigl(\cosh(\omega t)-1\bigr)R(t)\dd t .
+\end{equation}
+The causal convolution with this kernel has the kernel
+$2(\cosh(\omega(x-y))-1)R(x-y)\mathbf 1_{x>y}$; symmetrizing according
+to~\eqref{eq:Qdef} removes the factor two and gives~\eqref{eq:c-kernel}.
+Finally, $c_\omega$ converges uniformly on the compact square $I_L^2$ as
+$\omega\uparrow\tfrac12$ (the factor $\cosh(\omega t)-1$ is entire in
+$\omega$ and $R$ is fixed); hence the form identity extends to the endpoint
+by bounded-operator convergence, consistently with Lemma~\ref{lem:endpoint}.
+\end{proof}
+
+\subsection{Common logarithmic form domain}
+
+As $t\downarrow0$, $R(t)=-\tfrac1{2t}+O(1)$ while
+$\cosh(\omega t)-1=\tfrac12\omega^2t^2+O(t^4)$. Thus $c_\omega(x,y)=O(\abs{x-y})$
+at the diagonal. Hence $C_{\omega,L}$ is Hilbert--Schmidt, and therefore
+bounded and compact. All $Q_{\omega,L}$ are closed forms on the common domain
+\begin{equation}\label{eq:Dlog}
+\Dlog(I_L)=\Bigl\{f\in L^2(I_L):\ \int_\R\log(2+\abs\tau)\abs{\widehat f(\tau)}^2\dd\tau<\infty\Bigr\}.
+\end{equation}
+This also removes the apparent parameter singularity at $\omega=\tfrac12$.
+
+% =====================================================================
+\section{The central prime-free Weil form}
+% =====================================================================
+
+\subsection{Central form}
+
+At $\omega=0$, $\alpha=\beta=\tfrac12$ and the generator becomes
+\begin{equation}\label{eq:Q0}
+Q_{0,L}[f]=\frac1{2\pi}\int_\R\Bigl[\Re\psi\Bigl(\frac14+\frac{i\tau}2\Bigr)-\log\pi\Bigr]
+\abs{\widehat f(\tau)}^2\dd\tau
++2\abs{\Cc_{1/2}(f)}^2-2\abs{\Ss_{1/2}(f)}^2 .
+\end{equation}
+This is the prime-free archimedean Weil form restricted to the compact window
+$I_L$. It is diagonal with respect to reflection parity. The logarithmic
+growth of the digamma multiplier makes $Q_{0,L}$ unbounded above on $L^2$,
+but it is lower bounded and closed on $\Dlog$. The residue is positive in the
+even sector and negative in the odd sector, so both sectors must be checked.
+
+\subsection{Finite-frequency reduction}
+
+At the maximal window $L=\log2$ set $T_0=\tfrac12\log2$. Let $\phi_n$ be the
+normalized Legendre basis on $(-T_0,T_0)$. Its Fourier and pole-evaluation
+coefficients are
+\begin{equation}
+\widehat\phi_n(\tau)=\sqrt{2T_0(2n+1)}\,(-i)^n j_n(T_0\tau),
+\qquad
+p_n=\sqrt{2T_0(2n+1)}\,i_n(T_0/2),
+\end{equation}
+where $j_n$ and $i_n$ are the spherical Bessel functions of the first kind and
+their modified counterparts. Choose the frequency cutoff $\Lambda=30$ and the
+high-frequency floor
+\begin{equation}
+\beta_*=\log\frac{\Lambda}{2\pi}-\frac1\Lambda=1.5299869819194765\ldots
+\end{equation}
+The central matrix is the sum of $\beta_*I$, a compact frequency integral
+over $[0,30]$, and the parity-dependent rank-one residue. The complement is
+controlled by spherical-Bessel majorants.
+
+\subsection{Central interval certificate}
+
+A sixteen-mode block in each parity sector was evaluated using 80-decimal Arb
+arithmetic and 48-point Gauss--Legendre quadrature on each of thirty unit
+frequency panels. All quadrature nodes, weights, digamma values, and Bessel
+values were ball-enclosed. An entrywise radius $10^{-10}$ was added, larger
+than the analytic quadrature remainder. Interval $LDL^{\mathsf T}$ succeeds
+after subtracting $10^{-3}I$ in the even sector and $5\times10^{-2}I$ in the
+odd sector. The head--tail couplings are bounded by
+\begin{equation}\label{eq:central-couplings}
+1.4084884\times10^{-9}\quad\text{and}\quad2.2191643\times10^{-10}
+\end{equation}
+in the even and odd sectors, and the tail deviations below $\beta_*$ by
+$9.7777\times10^{-24}$ and $2.4269\times10^{-25}$. Consequently, by the Weyl
+inequality applied to the off-diagonal blocks,
+\begin{equation}
+Q_{0,\log2}[f]\ \ge\
+\begin{cases}
+9.9999859\times10^{-4}\,\norm f_2^2, & f\ \text{even},\\[1mm]
+4.99999998\times10^{-2}\,\norm f_2^2, & f\ \text{odd}.
+\end{cases}
+\end{equation}
+The computation is independent of zeta zeros and RH. At $\omega=0$ it is a
+certified reproduction of the classical first-window Weil positivity result,
+not a claim of a new central theorem; see also the screw-form
+formulation~\cite{Suzuki2026screw} and recent compact-window and Galerkin
+investigations~\cite{ConnesConsani2020,Zhu2026,Kim2026,Groskin2026}. The new
+part here is the parameter-uniform off-center deformation and its use as the
+density in the shift-energy identity.
+
+There is no conflict between the present first-slab boundary and the larger
+certified windows in~\cite{Zhu2026}. That paper writes
+$\supp f\subset[-\LZ,\LZ]$ and its prime sum contains $\log n<2\LZ$. Our
+centered interval has total length $L$, so the conventions are related by
+$L=2\LZ$. Thus the classical prime-free cutoff $2\LZ\le\log2$ is exactly our
+$L\le\log2$, while the certificate in~\cite{Zhu2026} at $\LZ=0.8$ is
+prime-active and concerns the full Weil form, not the archimedean
+continuation studied here.
+
+% =====================================================================
+\section{Entire shift expansion}
+% =====================================================================
+
+\subsection{Analytic profile}
+
+Put $S(t)=tR(t)$. Then
+\begin{equation}
+S(t)=te^{t/2}-\tfrac12e^{-3t/2}\frac{t}{\sinh t},
+\end{equation}
+which is analytic in a disk containing $[0,\log2]$. Since
+$\cosh(\omega t)-1=\sum_{k\ge1}\omega^{2k}t^{2k}/(2k)!$, the perturbation is
+even and entire in $\omega$:
+\begin{equation}
+C_{\omega,L}=\sum_{k\ge1}\omega^{2k}T_{k,L},
+\qquad
+(T_{k,L})(x,y)=\frac{\abs{x-y}^{2k}R(\abs{x-y})}{(2k)!}.
+\end{equation}
+
+\subsection{Exact Legendre correlations}
+
+Let $m,n$ have the same parity. For $0\le u\le1$ define
+\begin{equation}
+C_{mn}(u)=\tfrac12\int_{-1}^{1-2u}\bigl[P_m(r+2u)P_n(r)+P_n(r+2u)P_m(r)\bigr]\dd r ,
+\end{equation}
+a polynomial with rational coefficients. If $S(t)=\sum_{d\ge0}s_dt^d$, then
+\begin{equation}\label{eq:Tk-entries}
+(T_{k,L})_{mn}=\frac{\sqrt{(2m+1)(2n+1)}}{(2k)!}
+\sum_j[u^j]C_{mn}(u)\sum_d\frac{s_dL^{d+2k}}{d+2k+j} .
+\end{equation}
+Thus every finite perturbation matrix is reduced to exact rational Legendre
+algebra and a scalar analytic series.
+
+\subsection{Kernel and Taylor remainder bounds}\label{sec:kernel-bound}
+
+The profile $R$ changes sign once on $(0,\log2)$, at
+\begin{equation}
+t_0=\log\rho=0.2811995743229618465\ldots,\qquad\rho^3=\rho+1,
+\end{equation}
+where $\rho=1.3247179572\ldots$ is the plastic number. We locate the actual
+maximum row sum rather than doubling an endpoint row. Put
+\begin{equation}
+h(t)=\bigl(\cosh(t/2)-1\bigr)R(t),\qquad q=e^{t/2}.
+\end{equation}
+Then
+\begin{equation}
+h(t)=\frac{(q-1)(q^6-q^2-1)}{2q^2(q+1)(q^2+1)},
+\end{equation}
+and $\dd h/\dd t$ has the sign of
+\begin{equation}
+N(q)=q^{10}+q^9+q^8+q^7-q^6-q^5+q^4-2q^3-q^2-q-1 .
+\end{equation}
+Indeed,
+\begin{equation}
+N'(q)=(10q^9-6q^5)+(9q^8-5q^4)+(8q^7-6q^2)+(7q^6-2q)+(4q^3-1)>0
+\end{equation}
+for $q\ge1$, since each bracket is nonnegative at $q=1$ and increasing. Also
+$N(1)=-2<0$ and $N(\sqrt\rho)=3\rho^2-1>0$. Thus $h$ has a unique minimum
+$t_m$ before $t_0$ and is increasing after $t_m$. The Arb check encloses
+\begin{equation}
+\begin{aligned}
+t_m&=0.1416454811943886\ldots,\\
+h(t_m)&=-0.0044442714714077\ldots,\\
+h(\log2-t_0)&=0.0126146638556245\ldots,
+\end{aligned}
+\end{equation}
+with $h(\log2-t_0)+h(t_m)>0.00817039$.
+
+\begin{lemma}[endpoint row maximum]\label{lem:row-max}
+For $0<L\le\log2$ and $0\le\omega\le\tfrac12$,
+\begin{equation}\label{eq:C-norm}
+\norm{C_{\omega,L}}\le\int_0^{\log2}\abs{h(t)}\dd t
+\le0.012293050401142320<0.012294 .
+\end{equation}
+\end{lemma}
+
+\begin{proof}
+Take first $L=\log2$ and $\omega=\tfrac12$, so that $\abs{c_\omega(x,y)}=\abs{h(\abs{x-y})}$.
+For a row indexed by $x\in I_L$, let its left and right available lengths be
+$a,b$, with $a+b=L$, and assume $a\ge b$. Its absolute row integral is
+$F(a)+F(b)$, where $F(r)=\int_0^r\abs{h(t)}\dd t$, and
+$\frac{\dd}{\dd b}[F(L-b)+F(b)]=\abs{h(b)}-\abs{h(a)}$. Note that
+$a\ge L/2=0.3466\ldots>t_0=0.2812\ldots$, so $a\le t_0$ cannot occur and
+$h(a)>0$ always. If $b\ge t_0$, monotonicity of $h$ on $[t_m,\infty)$ gives
+$h(a)\ge h(b)\ge0$. If $b\le t_0$, then $h(b)\ge h(t_m)$ and
+$h(a)\ge h(\log2-t_0)$ since $a\ge\log2-t_0>t_m$, so the displayed interval
+check gives $h(a)+h(b)>0$, again implying $\abs{h(a)}\ge\abs{h(b)}$. Hence the
+absolute row integral is nonincreasing in $b$ on $[0,L/2]$ and is maximal at
+an endpoint row, where it equals $\int_0^{\log2}\abs h$. The Schur test for
+the symmetric kernel gives the first inequality; sign-split Arb integration
+gives the second. The bound is uniform for $0\le\omega\le\tfrac12$ and
+$0<L\le\log2$, since $\abs{c_\omega}$ is pointwise increasing in $\omega$ and
+restriction to a shorter centered interval can only shorten rows.
+\end{proof}
+
+Truncating the shift expansion after $\omega^8T_4$ gives
+\begin{equation}\label{eq:taylor-remainder}
+\sup_{0\le\omega\le1/2}\Bigl\|C_{\omega,L}-\sum_{k=1}^{4}\omega^{2k}T_{k,L}\Bigr\|
+<1.54\times10^{-12}.
+\end{equation}
+The primary Arb enclosure, obtained from a conservative absolute-profile Cauchy
+bound rather than a sharp sign split, is $1.532967865231399\times10^{-12}$.
+
+% =====================================================================
+\section{Computer-assisted generator positivity}
+% =====================================================================
+
+\subsection{Parameter boxes}
+
+The interval $0\le\omega\le\tfrac12$ is divided into $256$ equal boxes. For
+each box and parity sector the calculation forms
+\begin{equation}
+Q_0+[\omega^2]T_1+[\omega^4]T_2+[\omega^6]T_3+[\omega^8]T_4,
+\end{equation}
+where every occurrence of $\omega$ is represented by the same interval
+parameter. This retains correlation between all matrix entries.
+
+The sixteen-mode head is combined with the infinite Legendre tail. The central
+tail lower bound is reduced by the full perturbation norm:
+\begin{equation}\label{eq:dtail}
+d_{\mathrm{tail}}\ \ge\ \beta_*-\delta_{\mathrm{central}}-0.012294
+\ >\ 1.5176929819194764 .
+\end{equation}
+Here $\delta_{\mathrm{central}}$ is not set to zero: its certified values are
+$9.7777\times10^{-24}$ in the even sector and $2.4269\times10^{-25}$ in the
+odd sector, and therefore disappear at the displayed decimal precision. The
+head--tail coupling is bounded by
+\begin{equation}\label{eq:kappa}
+\kappa=\kappa_{\mathrm{central}}+0.012294,
+\end{equation}
+with $\kappa_{\mathrm{central}}$ from~\eqref{eq:central-couplings}. The
+resulting worst Schur loss $\kappa^2/d_{\mathrm{tail}}$ is
+$9.95869865858903\times10^{-5}$ (even) and $9.95869673623490\times10^{-5}$
+(odd).
+
+\subsection{Primary Arb result}
+
+For every box, interval $LDL^{\mathsf T}$ proves positivity of the shifted
+head after subtracting the Schur loss and Taylor remainder. All $512$
+parity-box problems pass. The minimum certified quantities are as follows.
+
+\begin{center}
+\begin{tabular}{lrr}
+\toprule
+Quantity & Even & Odd\\
+\midrule
+Weyl--Schur margin $m$ & $6.116350109501\times10^{-4}$ & $5.261670009275\times10^{-2}$\\
+tail lower bound $d_{\mathrm{tail}}$ & $1.51769298191948$ & $1.51769298191948$\\
+Schur loss $\kappa^2/d_{\mathrm{tail}}$ & $9.95869865858903\times10^{-5}$ & $9.95869673623490\times10^{-5}$\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+Across both sectors the smallest interval $LDL^{\mathsf T}$ pivot is
+$2.326811914886\times10^{-2}$. The margin $m$ is, by construction, a certified
+lower bound for $\lambda_{\min}(\text{head})-\kappa^2/d_{\mathrm{tail}}$ on
+each box, with the interval widening of the box, the entrywise radii, and the
+Taylor remainder~\eqref{eq:taylor-remainder} already subtracted.
+
+\subsection{From the certified margin to coercivity on the form domain}
+
+The certificate is a statement about a $16\times16$ head, an infinite tail,
+and their coupling. The following elementary lemma converts it into a
+coercivity bound for the full form on $\Dlog$, which is the form in which
+Section~8.6 consumes it.
+
+\begin{lemma}[block-Schur coercivity]\label{lem:block-schur}
+Let $Q$ be a closed lower-bounded form with domain $\mathcal D\subset\Hcal$, let
+$\Hcal=\Hcal_h\oplus\Hcal_t$ with $\Hcal_h$ finite-dimensional and
+$\Hcal_h\subset\mathcal D$, and suppose that for $f_h\in\Hcal_h$ and
+$f_t\in\mathcal D\cap\Hcal_t$,
+\[
+Q[f_h]\ge\lambda\norm{f_h}^2,\qquad
+Q[f_t]\ge d\,\norm{f_t}^2,\qquad
+\abs{Q[f_h,f_t]}\le\kappa\norm{f_h}\norm{f_t},
+\]
+with $d>0$. Then $Q[f]\ge c\norm f^2$ for all $f\in\mathcal D$ and every
+$0\le c<\min(\lambda,d)$ with $(\lambda-c)(d-c)\ge\kappa^2$. In particular, if
+$\lambda\ge m+\kappa^2/d$ with $0<m<d$, then $Q\succeq c\,I$ for
+\begin{equation}\label{eq:c-from-m}
+c=m-\frac{\kappa^2m}{d(d-m)} .
+\end{equation}
+\end{lemma}
+
+\begin{proof}
+For $f=f_h+f_t$ with $f_h\in\Hcal_h$ and $f_t=f-f_h\in\mathcal D\cap\Hcal_t$,
+\[
+Q[f]=Q[f_h]+2\Re Q[f_h,f_t]+Q[f_t]
+\ge\lambda\norm{f_h}^2-2\kappa\norm{f_h}\norm{f_t}+d\norm{f_t}^2,
+\]
+and the quadratic form on the right dominates $c(\norm{f_h}^2+\norm{f_t}^2)$
+exactly when the matrix $\begin{psmallmatrix}\lambda-c&-\kappa\\-\kappa&d-c\end{psmallmatrix}$
+is positive semidefinite, i.e.\ when $\lambda\ge c$, $d\ge c$, and
+$(\lambda-c)(d-c)\ge\kappa^2$. For the second statement put $c=m-\delta$ with
+$\delta=\kappa^2m/(d(d-m))$; then
+$(\lambda-c)(d-c)\ge(\kappa^2/d+\delta)(d-m+\delta)\ge\kappa^2+\delta(d-m)-\kappa^2m/d=\kappa^2$.
+\end{proof}
+
+\begin{remark}\label{rem:not-m}
+The naive reading ``$Q\succeq m\,I$'' is \emph{not} implied by the
+certificate: the Schur complement of the tail at level $c$ is
+$\kappa^2/(d-c)$, not $\kappa^2/d$, and the difference costs
+$\kappa^2m/(d(d-m))$. Because $d_{\mathrm{tail}}\approx1.5177\gg m$ the
+correction is small---$4.0\times10^{-8}$ in the even sector and
+$3.6\times10^{-6}$ in the odd sector---but it is the reason Theorem~B states
+$c_*=6.1159\times10^{-4}$ rather than the certified margin itself. With the
+data of Section~7.2, \eqref{eq:c-from-m} gives
+$c_{\mathrm{even}}=6.11594\ldots\times10^{-4}$ and
+$c_{\mathrm{odd}}=5.26131\ldots\times10^{-2}$.
+\end{remark}
+
+\begin{proof}[Proof of Theorem~B]
+Fix a parity sector and $L=\log2$. Take $\Hcal_h$ to be the span of the
+sixteen head Legendre modes of that parity, $\Hcal_t$ its orthogonal
+complement in the sector, and $\mathcal D=\Dlog(I_{\log2})$ intersected with
+the sector. For each box, the certificate gives
+$\lambda\ge m+\kappa^2/d_{\mathrm{tail}}$ on the head,
+$d_{\mathrm{tail}}$ on the tail by~\eqref{eq:dtail}, and $\kappa$
+by~\eqref{eq:kappa}. Lemma~\ref{lem:block-schur} yields
+$Q_{\omega,\log2}\succeq c_{\mathrm{even}}I$ and
+$Q_{\omega,\log2}\succeq c_{\mathrm{odd}}I$ on the two sectors, for every
+$\omega$ in the box; the union of the boxes is $[0,\tfrac12]$ and the two
+sectors are orthogonal and $Q$-invariant, so~\eqref{eq:thmB-coercive} holds at
+$L=\log2$ with $c_*=\min(c_{\mathrm{even}},c_{\mathrm{odd}})\ge6.1159\times10^{-4}$.
+
+If $0<L'<\log2$, zero extension identifies $L^2(I_{L'})$ with a closed subspace
+of $L^2(I_{\log2})$ and preserves parity. The
+representations~\eqref{eq:Q-fourier}--\eqref{eq:Q-endpoint} depend on $f$ only
+through $\widehat f$ and the functionals $\Cc_c(f),\Ss_c(f)$, none of which
+depends on the horizon, so $Q_{\omega,L'}$ is exactly the restriction of
+$Q_{\omega,\log2}$ to that subspace, and $\Dlog(I_{L'})$ is the corresponding
+restriction of the form domain. Positivity with the same constant therefore
+passes to every shorter centered interval. In the causal coordinates of
+Section~2, the same statement says that causality makes $V_{\omega,L'}$ the
+finite-horizon compression of $V_{\omega,\log2}$.
+\end{proof}
+
+\subsection{Endpoint safety}
+
+The certificate includes $\omega=\tfrac12$. No limiting digamma evaluation is
+used there. The bounded-kernel representation $Q_\omega=Q_0+C_\omega$ continues
+analytically through the endpoint and carries the boundary delta contribution
+that would be lost by a pointwise multiplier limit. Explicitly, that
+contribution is $-\pi\delta_0$ in the multiplier, or $-\tfrac12\abs{\int f}^2$
+in the quadratic form, as stated in Lemma~\ref{lem:endpoint}.
+
+\subsection{Exact role of the computer}
+
+The following inputs are analytic:
+\begin{enumerate}[nosep]
+\item the transfer identity~\eqref{eq:multiplier-identity} for $a_\omega-a_0$;
+\item the bounded-kernel formula~\eqref{eq:c-kernel};
+\item the common logarithmic form domain~\eqref{eq:Dlog};
+\item the rational Legendre correlation formula~\eqref{eq:Tk-entries};
+\item the scalar Cauchy remainder for $S$;
+\item the kernel Schur bound of Lemma~\ref{lem:row-max};
+\item the spherical-Bessel infinite-tail estimates;
+\item the block-Schur reduction of Lemma~\ref{lem:block-schur}.
+\end{enumerate}
+The computer performs interval evaluation of the finite matrices and interval
+$LDL^{\mathsf T}$ on the $512$ boxes. The theorem does not infer positivity
+from a floating grid.
+
+\subsection{Independent implementation audit}\label{sec:audit}
+
+A clean-room audit implementation imports neither the primary generator code
+nor the central-certificate code. Its independent paths are:
+\begin{itemize}[nosep]
+\item arbitrary-precision digamma and Bessel evaluation rather than Arb;
+\item separately generated 16- and 48-point quadrature rules;
+\item the closed binomial formula for Legendre polynomials rather than recurrence;
+\item the Bernoulli expansion of $t/\sinh t$ rather than reciprocal-series inversion;
+\item direct nonlinear-kernel integrals at selected entries;
+\item a custom 80-digit directed-rounding \texttt{Decimal} interval class; and
+\item an independent interval $LDL^{\mathsf T}$ implementation.
+\end{itemize}
+The maximum central quadrature discrepancy is $1.6931\times10^{-15}$. The
+maximum difference between the independently reconstructed and primary
+floating minimum eigenvalues is $4.3755\times10^{-13}$. The maximum
+discrepancy between direct nonlinear-kernel integration and the degree-four
+Taylor reconstruction is $1.5929\times10^{-13}$. All $512$ boxes pass. The
+independently recovered minimum margins are
+$6.116514636999\times10^{-4}$ and $5.261670255041\times10^{-2}$, and the
+minimum directed-interval pivot is $2.326829938890\times10^{-2}$.
+
+The audit assigns every central entry a radius $5\times10^{-10}$, over five
+orders of magnitude larger than the observed independent quadrature
+discrepancy. Its final margins are nevertheless slightly larger than the
+primary margins because the two programs propagate the shift-polynomial
+coefficient uncertainty differently. On the weakest even box, the audit
+midpoint is $1.57\times10^{-9}$ lower but its row-sum radius is
+$1.80\times10^{-8}$ smaller, producing a net margin increase of
+$1.65\times10^{-8}$. On the weakest odd box, the corresponding changes are
+$-2.12\times10^{-8}$ in the midpoint and $-2.36\times10^{-8}$ in the radius,
+producing a net increase of $2.46\times10^{-9}$. Thus the audit's larger fixed
+central radius is more than offset by its tighter directed interval
+propagation of the parameter-dependent coefficients; the two final intervals
+are independent enclosures and are not asserted to be nested. This is a strong
+independent reproduction. Its one qualification is that the second
+special-function path is arbitrary-precision rather than a second formally
+validated interval special-function library. The original Arb calculation
+remains the formal special-function enclosure. The endpoint-row-maximum
+\emph{argument} of Lemma~\ref{lem:row-max} is inherited by the audit from the
+primary implementation; only the scalar integral in~\eqref{eq:C-norm} was
+recomputed independently.
+
+% =====================================================================
+\section{The shift-energy identity}
+% =====================================================================
+
+\subsection{Weighted Hardy realization}
+
+Fix $\eta>1$ and consider $\Hcal_\eta=L^2(\R_+,e^{-2\eta t}\dd t)$. The Laplace
+transform on $\Re p=\eta$ identifies this space with a Hardy boundary space.
+Multiplication by $K_s$ defines a bounded causal operator $T_s$, and
+\begin{equation}
+V_{s,L}=P_LT_sE_L,
+\end{equation}
+where $E_L$ is zero extension and $P_L$ is restriction. The choice $\eta>1$
+keeps the line $\Re p=\eta$ to the right of the pole $p=\alpha<\tfrac12$
+of~\eqref{eq:K-factored}.
+
+Uniform Stirling estimates on the fixed right half-plane give
+\begin{equation}
+K_s(\eta+i\tau)=O\bigl((2+\abs\tau)^{-s}\bigr)
+\end{equation}
+uniformly for $0\le s\le\tfrac12$. For every $\eps>0$ and $m=0,1,2$,
+\begin{equation}
+\partial_s^mK_s(\eta+i\tau)=O\bigl((1+\log(2+\abs\tau))^m(2+\abs\tau)^{-\eps}\bigr)
+\end{equation}
+uniformly for $\eps\le s\le\tfrac12$. Also
+$a_s(\eta+i\tau)=O(1+\log(2+\abs\tau))$, so $a_sK_s$ is a bounded multiplier
+for every positive $s$. Consequently $s\mapsto V_{s,L}$ is continuously
+differentiable in operator norm on every compact positive-shift interval, and
+\begin{equation}\label{eq:V-prime}
+V_{s,L}'=-A_{s,L}V_{s,L}.
+\end{equation}
+Although $A_{s,L}$ is unbounded, the product $A_{s,L}V_{s,L}$ is bounded. The
+weighted Hardy realization is used only to prove this adjoint-free derivative
+identity. On the finite interval the weighted and unweighted $L^2$ norms are
+equivalent, so the identity and its norm-differentiability transfer to
+operators on unweighted $L^2(0,L)$. Every adjoint from Section~8.4 onward is
+taken with respect to that unweighted inner product.
+
+\subsection{Strong limit at zero}
+
+For each fixed $p$ on $\Re p=\eta$, $K_s(p)\to1$ as $s\downarrow0$. The
+uniform multiplier bound and dominated convergence give
+\begin{equation}\label{eq:strong-limit}
+V_{s,L}f\longrightarrow f\quad\text{in }L^2(0,L)
+\end{equation}
+for every $f\in L^2(0,L)$. This convergence is strong, not in operator norm:
+the high-frequency decay $K_s(\eta+i\tau)=O(\abs\tau^{-s})$ prevents uniform
+multiplier convergence to one.
+
+\subsection{Smoothing into the common form domain}
+
+For $0<r<s$, $\sup_\tau(1+\abs\tau)^r\abs{K_s(\eta+i\tau)}<\infty$. Choose
+$r<\min(s,\tfrac12)$. The full causal multiplier maps $L^2$ into $H^r$, and
+restriction followed by zero extension is bounded on $H^r$ for $r<\tfrac12$.
+Since $\log(2+\abs\tau)\le C_r(1+\abs\tau)^{2r}$, we obtain
+\begin{equation}
+V_{s,L}L^2(0,L)\subset\Dlog(I_L).
+\end{equation}
+By closure from the smooth core,
+\begin{equation}\label{eq:Q-pairing}
+Q_{s,L}[V_{s,L}f]=\Re\langle A_{s,L}V_{s,L}f,V_{s,L}f\rangle .
+\end{equation}
+
+\subsection{Energy identity away from zero}
+
+Let $D_{s,L}=I-V_{s,L}^{*}V_{s,L}$. For $0<\eps<\omega\le\tfrac12$,
+operator-norm differentiation gives
+\begin{equation}
+\frac{\dd}{\dd s}\langle D_{s,L}f,g\rangle
+=-\langle V_{s,L}'f,V_{s,L}g\rangle-\langle V_{s,L}f,V_{s,L}'g\rangle
+=2Q_{s,L}[V_{s,L}f,V_{s,L}g].
+\end{equation}
+The right-hand side represents a norm-continuous bounded operator on
+$[\eps,\omega]$. Therefore
+\begin{equation}
+D_{\omega,L}-D_{\eps,L}=2\int_\eps^\omega V_{s,L}^{*}Q_{s,L}V_{s,L}\dd s,
+\end{equation}
+with an operator-norm integral.
+
+\subsection{Passage to zero}
+
+By the strong approximate-identity result~\eqref{eq:strong-limit},
+$D_{\eps,L}\to0$ strongly. Theorem~B makes the integrand nonnegative. Letting
+$\eps\downarrow0$ gives
+\begin{equation}
+D_{\omega,L}=2\int_0^\omega V_{s,L}^{*}Q_{s,L}V_{s,L}\dd s\ \succeq\ 0,
+\end{equation}
+where the improper integral is the monotone strong limit of the norm integrals
+over $[\eps,\omega]$. Equivalently,
+\begin{equation}\label{eq:scalar-energy}
+\langle D_{\omega,L}f,f\rangle=2\int_0^\omega Q_{s,L}[V_{s,L}f]\dd s .
+\end{equation}
+
+\subsection{Strictness}\label{sec:strictness}
+
+Suppose $\langle D_{\omega,L}f,f\rangle=0$. Theorem~B is uniform in the shift
+and gives, for the maximal horizon and hence for every compression,
+\begin{equation}
+Q_{s,L}[g]\ge c_*\norm g_2^2,\qquad c_*=6.1159\times10^{-4},
+\qquad0\le s\le\tfrac12,\quad g\in\Dlog(I_L).
+\end{equation}
+This is a bound on the whole form domain, not only on the certified head:
+Lemma~\ref{lem:block-schur} converts the certified head margin into it. The
+scalar integrand in~\eqref{eq:scalar-energy} is measurable and nonnegative.
+Its integral can vanish only if $Q_{s,L}[V_{s,L}f]=0$ for almost every
+$s\in(0,\omega)$. The uniform bound implies $V_{s,L}f=0$ for almost every such
+$s$. Choose a sequence from this full-measure set with $s_n\downarrow0$. The
+strong limit $V_{s_n,L}f\to f$ then yields $f=0$. Hence $D_{\omega,L}>0$.
+
+For fixed $s>0$, the weak singularity $\kappa_s(t)=O(t^{s-1})$ is integrable.
+Truncating $\kappa_s$ away from $t=0$ gives Hilbert--Schmidt Volterra
+operators, while Young's inequality shows convergence in operator norm. Thus
+$V_{s,L}$ is compact. If $\norm{V_{\omega,L}}=1$, the compact positive operator
+$V_{\omega,L}^{*}V_{\omega,L}$ has eigenvalue one, contradicting the positive
+definiteness of $D_{\omega,L}$. Therefore $\norm{V_{\omega,L}}<1$. This proves
+Theorem~C and, with~\eqref{eq:volterra-identities}, Theorem~A on
+$0<\omega\le\tfrac12$.
+
+% =====================================================================
+\section{Consequences and interpretations}
+% =====================================================================
+
+\subsection{Reflection positivity}
+
+Since $H_{\omega,L}=V_{\omega,L}R_L$ is self-adjoint and
+$\norm{H_{\omega,L}}=\norm{V_{\omega,L}}<1$, we have $I\pm H_{\omega,L}\succ0$.
+This is reflection positivity for the two finite-volume Hankel channels, in
+the operator-positivity sense inherited from the Osterwalder--Schrader
+framework~\cite{OS1973}. Shorter horizons follow either from the same proof or
+by compression from $L=\log2$.
+
+\subsection{Shift-radial Gram factor}
+
+Let $\Kfrak_{\omega,L}=L^2\bigl((0,\omega);L^2(0,L)\bigr)$ and define
+$(\Gcal_{\omega,L}f)(s)=\sqrt2\,Q_{s,L}^{1/2}V_{s,L}f$. The energy identity
+gives
+\begin{equation}
+2\int_0^\omega\norm{Q_{s,L}^{1/2}V_{s,L}f}^2\dd s=\langle D_{\omega,L}f,f\rangle\le\norm f^2 .
+\end{equation}
+Hence $\Gcal_{\omega,L}$ is bounded and
+$D_{\omega,L}=\Gcal_{\omega,L}^{*}\Gcal_{\omega,L}$. The boundary defect is
+therefore the accumulated positive energy along the shift coordinate.
+
+\subsection{Context: the classical shifted range \texorpdfstring{$\omega>\tfrac12$}{omega > 1/2}}\label{sec:known-range}
+
+For $\omega>\tfrac12$ the function $\Theta_\omega$ is inner unconditionally:
+$\zeta(s)\neq0$ for $\Re s\ge1$, so~\cite[Prop.~1.2]{Suzuki2012} applies with
+$\omega_0=\tfrac12$. Global innerness makes $\Hsf_\omega$ an
+isometry~\cite[Lemma~4.1]{Suzuki2012} and gives the non-strict estimate
+$\norm{V_{\omega,L}}\le1$ for every finite section. Suzuki goes further:
+for $\omega>\tfrac12$ and every $a>1$ he proves~\cite[Lemma~4.4]{Suzuki2012}
+that $\norm{\Hsf_{\omega,a}}<1$, so that $1\pm\Hsf_{\omega,a}$ are invertible.
+The strictness there comes from a support lemma~\cite[Lemma~4.3]{Suzuki2012}
+of Paley--Wiener type---for $\omega>\tfrac12$, $\Hsf_\omega P_af$ cannot have
+compact support unless it vanishes---combined with the isometry and the
+compactness of $\Hsf_{\omega,a}$. In the normalization of Section~2.2 this
+covers all $\omega>\tfrac12$ and all $L=2\log a>0$, at every depth, prime
+layers included.
+
+Theorem~A is the complementary statement on the critical interval. It covers
+$0<\omega\le\tfrac12$, where no zero-free input is available and Suzuki's
+support lemma is not stated, at the prime-free depths $L\le\log2$. At the
+endpoint $\omega=\tfrac12$, where~\cite[Prop.~1.2]{Suzuki2012} gives nothing
+and~\cite[Lemma~4.4]{Suzuki2012} is not stated, Theorem~A supplies
+strictness directly, without invoking innerness. We make no additional
+finite-section claim for $\omega>\tfrac12$ beyond citing~\cite{Suzuki2012},
+and the shift-radial Gram factor of Section~9.2 is the only factorization
+theorem asserted in this paper. Extending the certificate of Theorem~B to
+$\omega\in[\tfrac12,\omega_1]$ would give, via~\eqref{eq:energy-identity},
+$D_{\omega,L}\succeq D_{1/2,L}\succ0$ and hence an independent
+Paley--Wiener-free proof of strict contractivity on the first slab in that
+range; floating diagnostics (Section~12.3) suggest this is available up to
+$\omega_1\approx0.86$ in the even sector, but no such extension is claimed.
+
+% =====================================================================
+\section{Relation to the broader shifted-zeta program}
+% =====================================================================
+
+\subsection{String and screw-function realizations}
+
+The shifted string Weyl function is
+\begin{equation}
+q_\omega(z)=\frac1{\sqrt{-z}}\frac{\xi'}{\xi}\Bigl(\tfrac12+\omega+\sqrt{-z}\Bigr),
+\qquad\Re\sqrt{-z}>0 .
+\end{equation}
+Under the corresponding shifted zero-free hypothesis this is a Stieltjes
+function and defines a positive Kre\u{\i}n string. Its spectral density is
+\begin{equation}
+\rho_\omega(u)=\frac1\pi\Re\frac{\xi'}{\xi}\Bigl(\tfrac12+\omega+iu\Bigr).
+\end{equation}
+The associated K\"all\'en--Lehmann superposition is reflection positive. This
+is an exact inverse-spectral reformulation of the shifted zero-free condition
+(compare the shifted screw functions $\Psi_\omega$
+of~\cite[Sect.~11]{Suzuki2022screw}), but it is downstream of positivity. By
+contrast, the first-slab Volterra system is specified directly from gamma and
+prime coefficients and is positive without a zero-free assumption.
+
+If $A_\omega(t)$ denotes Suzuki's integrated radial profile and
+$\mathcal E_\omega=\int_0^\infty\abs{1-A_\omega(t)}^2\dd t$, then on the inner
+side
+\begin{equation}
+\mathcal E_\omega=2\frac{\xi'}{\xi}\Bigl(\tfrac12+\omega\Bigr),
+\qquad
+\rho_\omega(0)=\frac{\mathcal E_\omega}{2\pi},
+\qquad
+\lim_{x\to\infty}\frac{m^{\mathrm{str}}_\omega(x)}{x}=\frac4{\mathcal E_\omega^2}.
+\end{equation}
+Thus the screw margin, phase density, boundary energy, and infrared string
+density are different transforms of one scalar quantity. These companion
+statements are developed in~\cite{Baker2026string,Baker2026margin,Baker2026depth}
+and are not used here.
+
+\subsection{Modular endpoint}
+
+Let $\Lambda(s)=\pi^{-s/2}\Gamma(s/2)\zeta(s)$ and
+$\varphi(s)=\Lambda(2s-1)/\Lambda(2s)$. At $\omega=\tfrac12$,
+\begin{equation}
+\Theta_{1/2}(u)=\frac{u-i}{u+i}\,\varphi\Bigl(\frac{1-iu}2\Bigr).
+\end{equation}
+The critical shift endpoint is therefore the modular cusp scattering
+coefficient completed by one elementary Blaschke channel, in the standard
+scattering-theoretic sense~\cite{GrahamZworski2003}. This supplies a geometric
+anchor, but physical-line unitarity is unconditional; the RH-sensitive
+content remains off-line causal analyticity and contractivity.
+
+\subsection{Radial reflection positivity and holographic language}
+
+The term \emph{radial reflection positivity} is literal here: one logarithmic
+coordinate is reflected, and the boundary form is the contraction defect of a
+causal radial propagator. The identity
+$D_{\omega,L}=2\int_0^\omega V_{s,L}^{*}Q_{s,L}V_{s,L}\dd s$ is a positive-bulk
+reconstruction of the boundary defect. The word \emph{holographic} is useful
+only in this transfer-system sense. The construction is not presently a local
+Poincar\'e--Einstein geometry, and the boundary object is not generally a
+homogeneous CFT two-point function. A closer PDE precedent is Burnol's causal
+Klein--Gordon realization of the classical Hankel transform~\cite{Burnol2005}.
+
+\subsection{Where arithmetic first enters}
+
+For $\log2<L<\log3$ the kernel becomes
+\begin{equation}
+k_\omega(t)=\kappa_\omega(t)+\frac{c_\omega(2)}{\sqrt2}\kappa_\omega(t-\log2).
+\end{equation}
+The new term is a delayed copy of the archimedean impulse. Extending the
+positive energy identity across this update is the first genuinely arithmetic
+problem. The present theorem supplies the base storage operator against which
+that delayed layer must be tested.
+
+% =====================================================================
+\section{Alternative checks and superseded proof routes}
+% =====================================================================
+
+\subsection{Compact Mosco limit}
+
+The normalized defect channels $\omega^{-1}\langle f,(I\mp H_{\omega,L})f\rangle$
+converge as $\omega\downarrow0$ to the even and odd restrictions of $Q_{0,L}$.
+Uniform logarithmic coercivity prevents high-frequency escape, and compact
+Mosco convergence combines with the central strict gaps to give a qualitative
+small-shift theorem. This route remains an independent analytic explanation
+of the singular endpoint. It is no longer needed for the complete interval
+theorem, because the shift-energy proof uses the strong multiplier limit
+$V_s\to I$ directly.
+
+\subsection{Direct transfer certificates}
+
+Earlier calculations certified the defect channels directly through a
+parity-scaled matrix-valued Taylor model and centered endpoint charts. These
+computations supplied substantial numerical and interval evidence, but the
+finite-$\omega$ defect matrices mix parity and require more elaborate
+conditioning than the generator form. The generator certificate is preferable
+because the generator remains parity diagonal; all shift dependence is a
+compact kernel entire in $\omega^2$; the degree-four remainder is below
+$1.54\times10^{-12}$; the full interval, including both endpoints, is covered
+uniformly; and the energy identity converts generator positivity into the
+desired defect inequality. The earlier certificates are retained in the
+research archive as independent cross-checks, but not as part of the main
+proof.
+
+% =====================================================================
+\section{Limitations and next problems}
+% =====================================================================
+
+\subsection{A fully dual-library certificate}
+
+The clean-room audit independently reconstructs the mathematics and interval
+$LDL^{\mathsf T}$ calculation. Its central special-function path uses
+arbitrary precision with a conservative audit radius rather than a second
+formal interval library. A publication repository would be stronger if the
+central digamma/Bessel quadrature were also implemented in a second validated
+interval environment. The current agreement makes this an audit enhancement,
+not a practical blocker.
+
+\subsection{The second slab}
+
+The immediate mathematical target is the delayed $n=2$ layer. Natural
+approaches include differentiating the complete delayed propagator, deriving a
+storage update or Redheffer-star-product inequality, and testing whether the
+delayed layer preserves passivity.
+
+The archimedean continuation cannot be assumed positive throughout this next
+slab. A 24-mode floating diagnostic, independently rerun but not promoted to
+an interval certificate, places the first odd and even crossings of the
+prime-free generator near
+\begin{equation}
+L^{*}_{\mathrm{odd}}\approx0.7429,\qquad L^{*}_{\mathrm{even}}\approx0.8199 .
+\end{equation}
+In particular, the odd sector is already negative at $L=0.75$, only about
+seven percent beyond $\log2$, and both sectors are negative before $\log3$.
+These values concern the prime-free archimedean continuation; they do not
+contradict the prime-active full-Weil certificates of~\cite{Zhu2026}. They
+change the logic of the second-slab project: the delayed $n=2$ term cannot be
+treated over the whole slab merely as a small correction to a positive base.
+It must be analyzed as a possible source of the missing positivity, or as the
+source of a precise obstruction.
+
+At the fixed first-slab horizon $L=\log2$, the same floating diagnostic places
+the first even generator crossing near $\omega=0.8611$ and the odd crossing
+near $\omega=1.8047$. Those estimates suggest a possible extension of the
+generator certificate beyond the critical interval (Section~9.3), but such an
+extension is outside Theorem~B and should be stated only after a separate
+interval run.
+
+The next steps are therefore: derive the exact differentiated $n=2$ delayed
+generator; isolate its signed contribution relative to the archimedean
+continuation; seek a storage or Redheffer inequality that allows the delayed
+layer to restore, rather than merely preserve, positivity; certify
+representative horizon slices in interval arithmetic; and identify the first
+rigorous obstruction if the repair mechanism fails.
+
+\subsection{Euler-product network and geometry}
+
+The coefficient train satisfies
+\begin{equation}
+\sum_{n\ge1}\frac{c_\omega(n)}{\sqrt n}n^{-s}
+=\frac{\zeta(s+\tfrac12-\omega)}{\zeta(s+\tfrac12+\omega)} .
+\end{equation}
+A passive-network composition law reflecting this Euler product would be a
+natural global continuation of the first-slab theorem. Separately, one may
+seek a local PDE or boundary-triple realization of the completed-gamma
+quotient whose energy estimate produces $Q_{s,L}$ directly.
+
+% =====================================================================
+\section{Verification status}\label{sec:verification}
+% =====================================================================
+
+This section replaces the private author-verification notice of the working
+drafts. It records what has been checked, by what means, and what has not.
+The manuscript has been through two adversarial referee-style review rounds
+with independent numerical recomputation of every reported constant, and one
+clean-room reimplementation of the certificate (Section~\ref{sec:audit}). No
+error survives in the main proof chain. What the manuscript has \emph{not}
+had is line-by-line derivation of the central analytic steps by a human
+reader who will stand behind them; the deposit of this preprint is not a
+claim that this has happened.
+
+\subsection*{Independently reproduced from the printed definitions}
+
+Two further recomputations, independent of both the primary Arb code and the
+clean-room audit---one made during the referee-style review rounds, one made
+while preparing this preprint---reproduced the following from the definitions
+printed here:
+all algebraic identities in Sections~2.2, 3.1, 3.3, 4.1, 6.1, 6.2, 10.2 and
+10.4; the Laplace transform of the explicit impulse~\eqref{eq:kappa-explicit}
+against~\eqref{eq:K} (to $1.5\times10^{-17}$ at $\omega=\tfrac12$ and
+$8\times10^{-11}$ at $\omega=0.3$, the latter limited by quadrature at the
+$t^{\omega-1}$ singularity); the multiplier identity of
+Proposition~\ref{prop:bounded-difference} to 30 digits at $\omega=0.1$, $0.3$
+and $\tfrac12$; each step of its proof (digamma integral representation,
+cancellation of the divergent summands, the rational kernel
+$4\cosh(t/2)(\cosh\omega t-1)$, and the bridge identity for $R$); the
+endpoint Lemma~\ref{lem:endpoint}, whose corrected formula agrees with
+$Q_0+C_{1/2}$ for test functions to the quadrature floor
+($\sim10^{-8}$) while the uncorrected pointwise-limit formula is off by
+$0.2402$; the complete chain of Section~\ref{sec:kernel-bound} ($t_0$, the
+closed form of $h$, the sign analysis of $N$, $t_m$, $h(t_m)$,
+$h(\log2-t_0)$, $\int_0^{\log2}\abs h=0.012293050401142319559\ldots$, and the
+inequality $L/2>t_0$); the tail bound~\eqref{eq:dtail} and both Schur losses
+to 17 digits; the Taylor remainder $1.532967865231399\times10^{-12}$; the
+head minima and margins of Section~7.2 by an independent sixteen-mode
+Legendre reconstruction, consistent with the reported values to within the
+expected interval-widening penalty ($2.26\times10^{-5}$ even,
+$8.65\times10^{-6}$ odd); the coercivity constants of
+Remark~\ref{rem:not-m}; and all reference metadata.
+
+\subsection*{Checked against Suzuki's statements}
+
+The transfer normalization~\eqref{eq:K} and the layer
+decomposition~\eqref{eq:layer} were checked against the displayed statements
+of~\cite{Suzuki2012} as follows: Suzuki's factor $\gamma(s)$ is
+$\tfrac12s(s-1)\pi^{-s/2}\Gamma(s/2)=\Ginf(s)$; his Mellin
+formula~\cite[Sect.~3.1]{Suzuki2012} for $g_\omega$ is~\eqref{eq:K} after
+$s=p+\tfrac12$; \eqref{eq:layer} is~\cite[eq.~(2.3)]{Suzuki2012} in
+logarithmic coordinates; and~\cite[Prop.~2.1]{Suzuki2012} is consistent with
+these two facts and the Dirichlet series of $c_\omega$, with matching domains
+of convergence. The identification of $\Hsf_{\omega,a}$ with the centered
+interval of length $2\log a$ (Section~2.2) is derived from
+\cite[eqs.~(2.5)--(2.6)]{Suzuki2012}. These comparisons were made against
+automated readings of the published text and should be confirmed by a human
+reader against the paper itself; that confirmation is the single most
+important outstanding check, since a factor or shift there would move the
+$\log2$ threshold.
+
+\subsection*{Not yet human-verified}
+
+\begin{enumerate}[nosep,label=(\alph*)]
+\item \emph{Elementary derivations on paper}: Proposition~\ref{prop:bounded-difference}
+  including its endpoint extension; Lemma~\ref{lem:endpoint};
+  Lemma~\ref{lem:row-max}; the Volterra identities~\eqref{eq:volterra-identities}.
+\item \emph{Functional analysis of Section~8}: the operator-norm $C^1$
+  dependence of $s\mapsto V_{s,L}$ (the multiplier bounds of Section~8.1 are
+  stated with $O(\cdot)$ and no constants, and are the weakest-supported
+  claims in the manuscript); the weighted-to-unweighted transfer; the
+  closure step~\eqref{eq:Q-pairing}; the improper strong-operator integral
+  of Section~8.5. Failure of these would leave Theorem~C unproved and
+  Theorem~A resting on the routes of Section~11, not make Theorem~A false.
+\item \emph{Analytic number theory}: human confirmation of the normalization
+  chain against~\cite{Suzuki2012} (above); an originality search for the
+  off-center kernel identity of Proposition~\ref{prop:bounded-difference} and
+  the shift-radial energy identity against~\cite{ConnesConsani2020,Zhu2026,Kim2026,Groskin2026}
+  and newer work in this active neighborhood.
+\item \emph{Repository}: the inherited central certificate (the Binet bound
+  $w_0(\tau)\ge\beta_*$ for $\abs\tau\ge30$ and the spherical-Bessel
+  Legendre-tail majorants behind~\eqref{eq:central-couplings}), which both the
+  primary and audit implementations take as given; the interval
+  $LDL^{\mathsf T}$ and box-construction code; a full primary-versus-audit row
+  diff rather than a comparison of summary minima; and a version-pinned rerun
+  of both implementations in clean environments with archived logs.
+\end{enumerate}
+Optional strengthenings (not verification): promote the positivity-horizon
+crossings of Section~12.3 to interval certificates; extend the box sweep to
+$\omega\approx0.85$ (Section~9.3); double the box count to $512$, since the
+box radius ($2.42\times10^{-5}$) is now the second-largest erosion of the even
+margin after the Schur loss.
+
+% =====================================================================
+\appendix
+\section{Normalization ledger}
+% =====================================================================
+
+The manuscript uses
+\begin{gather}
+\xi(s)=\tfrac12s(s-1)\pi^{-s/2}\Gamma(s/2)\zeta(s),\qquad
+\Ginf(s)=\tfrac12s(s-1)\pi^{-s/2}\Gamma(s/2),\\
+\Theta_\omega(z)=\frac{\xi(\tfrac12-\omega-iz)}{\xi(\tfrac12+\omega-iz)},\qquad
+K_\omega(p)=\frac{\Ginf(\tfrac12+p-\omega)}{\Ginf(\tfrac12+p+\omega)},\\
+Q_{\omega,L}=\tfrac12\bigl(A_{\omega,L}+A_{\omega,L}^{*}\bigr),\qquad
+L_{\max}=\log2,\qquad T_0=\tfrac12\log2 .
+\end{gather}
+Suzuki's multiplicative compression $\Hsf_{\omega,a}=P_a\Hsf_\omega P_a$
+corresponds to $L=2\log a$; the compact-window convention of~\cite{Zhu2026}
+corresponds to $L=2\LZ$. For the shifted string,
+\begin{equation}
+\rho_\omega(u)=\frac1\pi\Re\frac{\xi'}{\xi}(\tfrac12+\omega+iu),\qquad
+q_\omega(z)=\frac1{\sqrt{-z}}\frac{\xi'}{\xi}(\tfrac12+\omega+\sqrt{-z}).
+\end{equation}
+The factor $Q=B/2$, where $B=A+A^{*}$, is essential when comparing the central
+Weil certificate, perturbation matrices, and shift-energy identity.
+
+% =====================================================================
+\section{Reproducibility}
+% =====================================================================
+
+The certificate scripts described below are not part of this deposit; they
+are available from the author on request, and a code release with pinned
+environments and archived logs is planned once the repository items of
+Section~\ref{sec:verification}(d) are complete.
+
+\subsection*{B.1 Primary certificate}
+
+The primary generator certificate is produced by the script
+\begin{quote}
+\texttt{investigation12\_offcenter\_weil\_generator.py},
+\end{quote}
+with the inherited central Weil implementation in
+\begin{quote}
+\texttt{project\_support/investigation7\_first\_slab\_certificate.py}:
+\end{quote}
+\begin{verbatim}
+PYTHONPATH=project_support:. \
+python3 investigation12_offcenter_weil_generator.py \
+  --certify --boxes 256 --output INVESTIGATION_12_results.csv
+python3 verify_investigation12_results.py
+\end{verbatim}
+Expected summary:
+\begin{verbatim}
+certified boxes: 512
+kernel norm < 0.012294
+Taylor remainder < 1.54e-12
+minimum interval LDL pivot > 0.0232681
+minimum certified Weyl margin > 0.00061163
+\end{verbatim}
+The 724 result rows consist of 6 Laplace-transform identity checks, 1 kernel
+norm row, 1 Taylor-remainder row, 202 floating generator samples (101 shifts
+in two parity sectors), 2 relative-endpoint checks, and 512 certified
+parameter boxes.
+
+\subsection*{B.2 Independent audit}
+
+The audit is produced by the script
+\begin{quote}
+\texttt{investigation14\_independent\_generator\_audit.py}:
+\end{quote}
+\begin{verbatim}
+python3 investigation14_independent_generator_audit.py \
+  --primary INVESTIGATION_12_results.csv \
+  --output INVESTIGATION_14_results.csv \
+  --matrices INVESTIGATION_14_matrices.csv
+python3 verify_investigation14_results.py
+\end{verbatim}
+Expected summary:
+\begin{verbatim}
+audit rows: 783
+matrix rows: 1360
+maximum central quadrature discrepancy: 1.693e-15
+maximum primary floating discrepancy: 4.375e-13
+maximum direct-kernel discrepancy: 1.593e-13
+minimum directed-interval margin: 6.116514636999e-04
+minimum directed-interval pivot: 2.326829938890e-02
+\end{verbatim}
+The 783 audit rows split as follows: 2 central-quadrature convergence rows,
+1 kernel norm, 1 Taylor remainder, 24 Legendre-correlation comparisons,
+5 profile-series comparisons, 36 direct-kernel comparisons, 202 primary
+floating comparisons, and 512 directed-interval boxes. The 1360 matrix rows
+are the lower triangles of ten $16\times16$ coefficient matrices: five Taylor
+matrices in each of two parity sectors, with 136 stored entries per matrix.
+
+\subsection*{B.3 Analytic diagnostics}
+
+The shift-energy transfer diagnostics are generated by
+\begin{quote}
+\texttt{investigation13\_operator\_diagnostics.py}
+\end{quote}
+and checked by \texttt{verify\_investigation13\_results.py}. They verify the transfer
+derivative, pointwise multiplier limit, high-frequency regularization, and
+local kernel tail on a high-precision sample grid. These checks are not
+ingredients of the analytic proof.
+
+% =====================================================================
+\section{Proof-status ledger}
+% =====================================================================
+
+\begin{center}
+\small
+\begin{tabular}{@{}p{0.55\textwidth}p{0.40\textwidth}@{}}
+\toprule
+Statement & Status\\
+\midrule
+First-slab Volterra reduction & exact\\
+Completed-gamma transfer & exact; matches~\cite[Sect.~3.1]{Suzuki2012}\\
+Sonine convolution identity & exact\\
+Formula~\eqref{eq:a-mult} for $a_\omega$ & exact\\
+Fourier-plus-residue endpoint term & exact distributional correction\\
+Bounded-kernel decomposition $Q_\omega=Q_0+C_\omega$ & exact\\
+Common logarithmic form domain & exact by bounded form perturbation\\
+Central prime-free Weil positivity & Arb-certified\\
+Sharp endpoint-row Schur bound & analytic monotonicity plus Arb scalar enclosure\\
+Degree-four shift expansion and remainder & analytic plus Arb enclosure\\
+All 512 generator boxes & Arb-certified\\
+Infinite Legendre-tail closure & analytic bounds plus certified head\\
+Block-Schur coercivity on $\Dlog$ & exact (Lemma~\ref{lem:block-schur})\\
+Independent implementation audit & passed\\
+Strong limit $V_s\to I$ & analytic Hardy-multiplier proof\\
+Closed-form shift-energy identity & analytic proof\\
+Strict contractivity & analytic consequence of generator positivity and compactness\\
+Shift-radial Gram factor & exact consequence\\
+Strict contractivity for $\omega>\tfrac12$ & Suzuki~\cite[Lemma~4.4]{Suzuki2012}, not reproved here\\
+Positivity beyond the first slab & open\\
+New zero-free region or RH & not claimed\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+% =====================================================================
+\begin{thebibliography}{99}
+\small
+
+\bibitem{Suzuki2012}
+M.~Suzuki,
+\emph{A canonical system of differential equations arising from the Riemann
+zeta-function}, arXiv:1204.1827.
+
+\bibitem{Suzuki2022screw}
+M.~Suzuki,
+\emph{Aspects of the screw function corresponding to the Riemann
+zeta-function}, arXiv:2206.03682.
+
+\bibitem{Suzuki2026screw}
+M.~Suzuki,
+\emph{Weil's quadratic form via the screw function}, arXiv:2606.09096.
+
+\bibitem{ConnesConsani2020}
+A.~Connes and C.~Consani,
+\emph{Weil positivity and trace formula, the archimedean place},
+Selecta Math. (N.S.) 27 (2021), no.~4, Paper No.~77; arXiv:2006.13771.
+
+\bibitem{Zhu2026}
+X.~Zhu,
+\emph{Weil positivity in compact windows: a finite reduction, certified
+two-sided bounds, and a Landau--Widom decay law}, arXiv:2608.24827 (v2).
+
+\bibitem{Burnol2005}
+J.-F.~Burnol,
+\emph{Spacetime causality in the study of the Hankel transform},
+arXiv:math/0509619.
+
+\bibitem{Lagarias1999}
+J.~C.~Lagarias,
+\emph{On a positivity property of the Riemann $\xi$-function},
+Acta Arith. 89 (1999), 217--234; correction, Acta Arith. 116 (2005), 293--294.
+
+\bibitem{Luchko2021}
+Y.~Luchko,
+\emph{Operational calculus for the general fractional derivatives with the
+Sonine kernels}, arXiv:2103.00549.
+
+\bibitem{OS1973}
+K.~Osterwalder and R.~Schrader,
+\emph{Axioms for Euclidean Green's functions},
+Comm. Math. Phys. 31 (1973), 83--112.
+
+\bibitem{GrahamZworski2003}
+C.~R.~Graham and M.~Zworski,
+\emph{Scattering matrix in conformal geometry},
+Invent. Math. 152 (2003), 89--118; arXiv:math/0109089.
+
+\bibitem{DLMF}
+NIST Digital Library of Mathematical Functions, Chapter~5: Gamma Function,
+Sections~5.9, 5.11 and 5.15, \url{https://dlmf.nist.gov/5}.
+
+\bibitem{Kim2026}
+T.~Kim, Y.~Hong, M.~Kim, S.~Choi, J.~Jang, and M.~Kim,
+\emph{A numerical realization of Suzuki's Weil-quadratic-form operator: the
+archimedean spectral law, its universality, and an operator form of Weil's
+positivity criterion}, arXiv:2607.24830.
+
+\bibitem{Groskin2026}
+A.~Groskin,
+\emph{A finite Guinand--Weil dictionary and archimedean tail order for the
+truncated Weil quadratic form}, arXiv:2607.02828.
+
+\bibitem{Baker2026string}
+E.~Baker,
+\emph{The shifted zeta string: an unconditional inverse-spectral family and
+its RH endpoint}, manuscript, August 2026.
+
+\bibitem{Baker2026margin}
+E.~Baker,
+\emph{The margin in the shifted screw-function criterion for zero-free
+half-planes}, manuscript, August 2026.
+
+\bibitem{Baker2026depth}
+E.~Baker,
+\emph{Detection depth of spectral defects in shifted zeta strings},
+manuscript, August 2026.
+
+\end{thebibliography}
+
+\end{document}
