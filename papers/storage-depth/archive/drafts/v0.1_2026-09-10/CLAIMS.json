@@ -1,0 +1,133 @@
+{
+  "normalization": "Working Weil-depth v0.3; independent audit pending.",
+  "source_commit": "a566944dc1be2899e37fce3d0e857516ced33d8f",
+  "claims": [
+    {
+      "id": "R1",
+      "scope": "One exact polynomial; shifted generator negative at log7, omega=1e-11; kappa lower bound only.",
+      "replay_action": "generator",
+      "records": [
+        {
+          "path": "numerics/history/critical-path-20260910/generator_witness_log7.json",
+          "sha256": "de8aa7c7281ba39778ecf9e242292b3cf26425e01e6cd816caffd7d6da368ccf"
+        },
+        {
+          "path": "numerics/history/critical-path-20260910/generator_witness_log7_replay.json",
+          "sha256": "138559f45e4edb2bdf72898077e02d2f0d6ef10a4fc2b9a550c7025b81e9c4fc"
+        }
+      ]
+    },
+    {
+      "id": "R2",
+      "scope": "Same exact polynomial; positive cumulative storage with full output, not full contraction.",
+      "replay_action": "storage",
+      "records": [
+        {
+          "path": "numerics/history/cumulative-path-20260910/storage_log7_1em11.json",
+          "sha256": "e1f4a67b5359b1dc0cd5247e1ee009a927c4ee797034cf2c15fc3688a0ab26c5"
+        },
+        {
+          "path": "numerics/history/cumulative-path-20260910/storage_log7_1em11_replay.json",
+          "sha256": "a39c57ee9dfd528fb0cf7fd8ce2d6848441acd0ee63dabcd57eb47659b66a6aa"
+        }
+      ]
+    },
+    {
+      "id": "R3",
+      "scope": "Cumulative positivity on 128 old plus 32 new inputs at log8, omega=1e-11; all output.",
+      "replay_action": "whole-step",
+      "records": [
+        {
+          "path": "numerics/history/log7-log8-extension-20260910/extension_128_32_1em11.json",
+          "sha256": "b315a4737f004fa0f9a421629834f4a1d3d536dc51f2cf5f58be90d76ef26c3f"
+        }
+      ]
+    },
+    {
+      "id": "R4",
+      "scope": "Full central coupling LOWER witness at log8; separate all-input gamma-slab contraction.",
+      "replay_action": "new-slab (gamma result only)",
+      "records": [
+        {
+          "path": "numerics/history/log7-log8-extension-20260910/central_128_32.json",
+          "sha256": "a6a341c6771ab0a851bc097cf4d981fe8aa97ae7e4a5300764c8409f90b51277"
+        },
+        {
+          "path": "numerics/history/log7-log8-extension-20260910/central_128_32_replay.json",
+          "sha256": "9e912ce0e121f6be6ce25c01fbaf3feab0946b0cb3f05de91dfc98a3bc0c0c09"
+        },
+        {
+          "path": "numerics/history/log7-log8-extension-20260910/new_slab_bound.json",
+          "sha256": "3e5599fed807dc150b3c7cf6c01fea58cf7ef6d340743f07921057075c22b359"
+        },
+        {
+          "path": "numerics/history/log7-log8-extension-20260910/step_size_diagnostics.json",
+          "sha256": "5c9217fa468ed56a7d4cf97c6897611264e27df58faf91efeff51a3cb10c3948"
+        }
+      ]
+    },
+    {
+      "id": "R5",
+      "scope": "All new form-domain inputs, 128 old modes; residual factor .004 and S>=1e-8 A.",
+      "replay_action": "residual",
+      "records": [
+        {
+          "path": "numerics/history/quarter-step-20260910/residual_128_32.json",
+          "sha256": "1e5e5c48d3de0acc350090f73a8696f501e1eecb3f039de42b2702452be32346"
+        },
+        {
+          "path": "numerics/history/quarter-step-20260910/residual_128_32_replay.json",
+          "sha256": "67a618476e0cfe881760110d7bef172b3afcd7804729155093c99afe72423502"
+        }
+      ]
+    },
+    {
+      "id": "R6",
+      "scope": "Separate global full-input floor 1e-31 at 1.98; shift <=5e-17; not used by spatial tests.",
+      "replay_action": "global",
+      "records": [
+        {
+          "path": "numerics/history/quarter-step-20260910/reference_256.json",
+          "sha256": "3c28ed621940a4931414e1f55b6156b35ad481a1b3910a0c94c04520d5952b9e"
+        },
+        {
+          "path": "numerics/history/quarter-step-20260910/path_corollary.json",
+          "sha256": "19c493492e2d34530a1fe82da80eebc1fff4232fa401d69d70bb09eac817ae91"
+        }
+      ]
+    },
+    {
+      "id": "R7",
+      "scope": "All input directions; spatial central floor 1e-33 at (3/4)log14.",
+      "replay_action": "spatial-sign or rebuild",
+      "records": [
+        {
+          "path": "numerics/history/quarter-step-closure-20260910/closure_256_32.json",
+          "sha256": "de0e65971240c9ea70bff41bc560749ace6518e05d385ebdac7a72e48d55a55c"
+        }
+      ]
+    },
+    {
+      "id": "R8",
+      "scope": "Entire old form domain; unrestricted new elimination; original J; residual factor .9.",
+      "replay_action": "relative",
+      "records": [
+        {
+          "path": "numerics/history/quarter-step-closure-20260910/relative_256_32.json",
+          "sha256": "14cbfce5f62f50574e67e7104689932d232d270a5ac18ac43ea073447030df19"
+        }
+      ]
+    },
+    {
+      "id": "R9",
+      "scope": "All-input shift consequences of spatial certificate alone; omega<=5e-18.",
+      "replay_action": "shift",
+      "records": [
+        {
+          "path": "numerics/history/quarter-step-closure-20260910/path_corollary.json",
+          "sha256": "cc6681fe89c3dc27083a1e96757f3599053be15dec161ba82e37f6b67903ea1b"
+        }
+      ]
+    }
+  ]
+}
