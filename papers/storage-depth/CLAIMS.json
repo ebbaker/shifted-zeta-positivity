@@ -1,0 +1,57 @@
+{
+  "version": "0.2",
+  "working_normalization": "Weil-depth v0.3; independent normalization audit pending",
+  "inherited_claims": "archive/drafts/v0.1_2026-09-10/CLAIMS.json",
+  "new_records": [
+    {
+      "id": "R10",
+      "claim": "At the first quarter step H_J >= 1e-7 A on the full old domain; hence S >= 1e-8 A using R8.",
+      "pass": true,
+      "records": [
+        "numerics/records/metric-comparison-2048.json",
+        "numerics/records/metric-comparison-4096.json"
+      ]
+    },
+    {
+      "id": "R11",
+      "claim": "At L2=log(56)/2 the second continuation satisfies H_J >= 1e-8 A on the full old domain.",
+      "pass": true,
+      "records": [
+        "numerics/records/second-quarter-build.json",
+        "numerics/records/second-quarter-2048.json",
+        "numerics/records/second-quarter-4096.json"
+      ],
+      "unproved": [
+        "Second-step full residual inequality",
+        "Second-step full-operator floor",
+        "Second-step positive-shift interval"
+      ],
+      "failed_sufficient_tests": [
+        "Absolute floor 1e-36",
+        "Old-energy threshold 1e-7",
+        "Scalar-tail residual theta 0.9, 0.95, 0.99"
+      ]
+    },
+    {
+      "id": "R12",
+      "claim": "Separate-tail residual experiments at theta 0.99 and 0.9999 do not certify the inequality.",
+      "pass": false,
+      "records": [
+        "numerics/records/second-quarter-weighted-1024.json",
+        "numerics/records/second-quarter-weighted-near-one.json",
+        "numerics/records/second-quarter-weighted-2048.json"
+      ],
+      "interpretation": "Failed sufficient guards, not negative-form witnesses or an exhaustive impossibility result."
+    },
+    {
+      "id": "R13",
+      "claim": "Endpoint/exterior moments and small three-interval output checks agree with independent quadrature; finite LDL failure handling checked.",
+      "pass": true,
+      "record": "numerics/records/spatial-consistency.json",
+      "interpretation": "Implementation consistency, not an independent full proof audit."
+    }
+  ],
+  "all_depth_induction": "Conditional theorem only; indefinite residual control and nonaccumulation remain open.",
+  "largest_certified_horizon": "1.98, by the separate inherited global R6 certificate",
+  "external_archive_catalog": "numerics/ARCHIVE_RECORDS.json"
+}
