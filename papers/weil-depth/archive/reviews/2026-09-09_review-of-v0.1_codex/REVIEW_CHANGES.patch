@@ -1,0 +1,639 @@
+--- v0.1/manuscript/finite_horizon_weil.tex
++++ v0.2/manuscript/finite_horizon_weil.tex
+@@ -33,17 +33,18 @@
+ \setlength{\emergencystretch}{2em}
+ \setlist{itemsep=3pt,topsep=5pt}
+ \title{Finite-horizon Weil coercivity\protect\\ and shifted-zeta contraction\protect\\[5pt]
+-\large A full-output parity certificate through total horizon $9/5$}
++\large Full-output parity certificates through total horizon $\log 7$}
+ \author{Edward Baker}
+-\date{Review draft, version 0.1\quad---\quad 9 September 2026}
++\date{Review draft, version 0.2\quad---\quad 9 September 2026}
+ 
+ \begin{document}
+ \maketitle
+ \begin{abstract}
+ We study the central Weil form associated with the causal finite-horizon
+ transfer of Suzuki's shifted zeta ratio. A computer-assisted calculation proves
+-$Q_{0,L}\succeq10^{-26}I$ for every total horizon $0<L\le9/5$.
+-The outer horizon lies beyond $\log6$: the generator contains the prime-power
++$Q_{0,L}\succeq10^{-26}I$ for every total horizon $0<L\le9/5$, and
++$Q_{0,L}\succeq10^{-34}I$ for $0<L\le\log7$.
++These horizons lie beyond $\log6$: the generator contains the prime-power
+ delays $2,3,4,5$, while the transfer includes the first mixed-prime composition.
+ The proof combines an analytic lower bound on the infinite Legendre tail with
+ full-output Gram matrices retaining the exact reflection-parity coupling.
+@@ -52,8 +53,12 @@
+ profile remainder subtracted. An even-in-shift generator identity gives
+ $\norm{V_{\omega,L}}\le\exp(-5\times10^{-27}\omega)$ for
+ $0<\omega\le3\times10^{-14}$ and $L\le9/5$, together with quantitative
+-reflection-positivity and cumulative-storage bounds. The argument does not use
+-zeta zeros or an assumed positive spectral measure. It establishes a
++reflection-positivity and cumulative-storage bounds. At the extended horizon,
++the same argument gives $\norm{V_{\omega,L}}\le\exp(-5\times10^{-35}\omega)$
++for $0<\omega\le3\times10^{-18}$ and $L\le\log7$.
++An independent implementation reproduces both certificates. Exact storage
++and nested Schur identities specify what an induction would need to retain.
++The argument does not use zeta zeros or an assumed positive spectral measure. It establishes a
+ finite-depth result, not a zero-free region or an all-depth positivity theorem.
+ \end{abstract}
+ 
+@@ -64,8 +69,8 @@
+ \noindent\textbf{Review status.} The analytic argument and executable
+ certificate are supplied for review. The finite calculation and replay have
+ passed; independent human verification and proof-assistant formalization have
+-not been completed. The numerical result is isolated in
+-Theorem~\ref{thm:computation}.
++not been completed. The numerical results are isolated in
++Theorems~\ref{thm:computation} and~\ref{thm:log7}.
+ 
+ \section{Introduction and main result}
+ 
+@@ -116,6 +121,17 @@
+ \end{equation}
+ The central estimate is computer-assisted; the remaining implications are
+ analytic.
++\end{theorem}
++
++\begin{theorem}[The logarithmic endpoint]\label{thm:endpoint-main}
++For every $0<L\le\log7$,
++\[
++ Q_{0,L}\succeq10^{-34}I,\qquad
++ \norm{V_{\omega,L}}\le e^{-5\times10^{-35}\omega}
++ \quad(0<\omega\le3\times10^{-18}).
++\]
++Consequently $I\pm H_{\omega,L}\succeq(1-e^{-5\times10^{-35}\omega})I$.
++The sharper bounds of Theorem~\ref{thm:main} remain available for $L\le9/5$.
+ \end{theorem}
+ 
+ The total horizon $9/5$ is strictly larger than $\log6$. At this horizon
+@@ -148,7 +164,7 @@
+ geometric normalization after that conversion. We do not use its numerical
+ certificate. The specific contribution here is the full-output parity
+ reduction, its fractional tail bound, and an independently assembled
+-certificate through total length $1.8$, with explicit positive-shift
++certificates through total lengths $1.8$ and $\log7$, with explicit positive-shift
+ consequences. We make no claim that finite-matrix approaches to Weil
+ positivity are themselves new.
+ 
+@@ -193,7 +209,7 @@
+ convolution $V^\gamma_{\omega,L}$.
+ 
+ \begin{definition}\label{def:transfer}
+-For $\omega>0$, define
++For $0<\omega\le1/2$, define
+ \begin{align}
+  b_\omega(n)&=n^{\omega-1/2}\prod_{p\mid n}(1-p^{-2\omega}),
+  & b_\omega(1)&=1,\label{eq:bcoeff}\\
+@@ -241,6 +257,12 @@
+ by the digamma asymptotics \cite[\S5.11]{DLMF}. All remaining terms are
+ bounded. Hence \eqref{eq:weil} is a closed semibounded form on
+ \eqref{eq:domain}. It is the central geometric Weil form in this normalization.
++For example, if $g=f_c*\widetilde f_c$ with
++$\widetilde f_c(x)=\overline{f_c(-x)}$, its pole contribution is
++$\int g(t)(e^{t/2}+e^{-t/2})\,dt=2|C(f)|^2-2|S(f)|^2$.
++Its arithmetic contribution is
++$-\sum\Lambda(n)n^{-1/2}(g(\log n)+g(-\log n))$, exactly the delay term
++above. This also makes translation invariance explicit for complex tests.
+ It commutes with reflection and with complex conjugation. The same notation
+ $Q_{0,L}$ denotes its associated self-adjoint operator where appropriate.
+ 
+@@ -445,6 +467,13 @@
+ The polynomial and orthogonality identities may also be read from
+ \cite[\S\S18.3,18.5,18.17]{DLMF}. For a finite tail combination, use
+ $x^{2\nu}\le(L/2)^{2\nu}x^\nu(L-x)^{-\nu}$ and Jacobi orthogonality.
++Indeed $x(L-x)\le L^2/4$, and the required Jacobi norm is
++\[
++ \int_0^L x^\nu(L-x)^{-\nu}
++ \bigl[P_n^{(-\nu,\nu)}(2x/L-1)\bigr]^2\,dx
++ =\frac{L\,\Gamma(n+1-\nu)\Gamma(n+1+\nu)}
++ {(2n+1)(n!)^2}.
++\]
+ The squared norm becomes bounded by
+ \[
+  (L/2)^{2\nu}\sum_{n\ge N}|c_n|^2
+@@ -520,8 +549,10 @@
+ \end{equation}
+ with threshold equality using the shorter path, since the exceptional fiber
+ has measure zero. In particular the norm is 1 for $d<L\le2d$ and
+-$\sqrt2$ for $2d<L\le3d$. The implementation uses these two exact cases
+-and the safe bound 2 otherwise.
++$\sqrt2$ for $2d<L\le3d$. The reviewed implementation evaluates the
++cosine formula for every finite path length. Logarithmic endpoints use
++exact integer-power comparisons; unresolved ball comparisons at other
++horizons stop the calculation.
+ 
+ \subsection{A uniform analytic profile remainder}
+ 
+@@ -631,7 +662,23 @@
+ \eqref{eq:leakage} removes that loss without discarding any coupling of
+ the central form.
+ 
+-\section{Finite construction and the certificate at \texorpdfstring{$9/5$}{9/5}}\label{sec:computation}
++\begin{remark}[A smaller error for future calculations]\label{rem:sharper-error}
++The certificates below keep the conservative error \eqref{eq:eps}.
++One can instead set
++\[
++ \epsilon_r=(|a-m|+2\kappa_r)\eta_M+\eta_M^2,
++ \qquad \kappa_r\ge\norm{(I-P)\widetilde QP_r}.
++\]
++Indeed the omitted-output column operator changes in norm by at most
++$\eta_M$, so its squared Gram changes by at most
++$2\kappa_r\eta_M+\eta_M^2$ directly. There is no need to bound the full
++Gram and the squared head separately. A certified upper bound on
++$\sqrt{\tr E_r}$ supplies $\kappa_r$, since $E_r$ is an exact positive
++semidefinite Gram. Any numerical upper bound used here must include the
++ball uncertainty; this refinement is not used to justify the reported runs.
++\end{remark}
++
++\section{Finite construction and the two certificates}\label{sec:computation}
+ 
+ \subsection{Polynomial and logarithmic output formulas}
+ 
+@@ -665,7 +712,7 @@
+ At $L=9/5$ the active generator indices are $2,3,4,5$, and the ordered
+ overlap pairs are exactly $(2,2),(2,3),(3,2)$.
+ 
+-\subsection{Enclosed arithmetic}
++\subsection{Enclosed arithmetic at \texorpdfstring{$9/5$}{9/5}}
+ 
+ The standalone implementation uses Arb real balls \cite{Johansson2017}
+ through python-flint \cite{PythonFlint}. Integer and rational coefficients
+@@ -793,6 +840,65 @@
+ to within $3\times10^{-217}$ after conversion of the causal/Hankel signs.
+ Those old entries are not inputs to the new positivity proof.
+ 
++\subsection{Extension to the exact endpoint \texorpdfstring{$\log7$}{log 7}}
++
++\begin{theorem}[Computer-assisted endpoint inequality]\label{thm:log7}
++At $L=\log7$, $N=128$, $M=220$, and $m=10^{-34}$, both inequalities
++\eqref{eq:finite-test} hold with $K=10000$ and the same analytic reduction.
++Consequently $Q_{0,\log7}\succeq10^{-34}I$.
++\end{theorem}
++\begin{proof}[Computer-assisted proof]
++The direct-Arb construction at 1792-bit precision verifies
++\begin{align*}
++ a_{128,\log7}&>0.60748624181467,& K_{\log7}&<5.839924,\\
++ \eta_{220}&<9.342\times10^{-42},&
++ \epsilon&<3.737\times10^{-37}.
++\end{align*}
++The full Gram trace is less than $1712$, hence less than $10^7$.
++Both 64-dimensional ball LDL tests pass. The minimum pivots are approximately
++$1.6916652823\times10^{-5}$ (even) and $9.0360554449\times10^{-5}$ (odd).
++These pivots are sign-test diagnostics, not central spectral margins.
++At the exact endpoint $T_{\log7}=0$ almost everywhere. The active
++generator indices remain $2,3,4,5$, and the reflected ordered overlaps
++remain $(2,2),(2,3),(3,2)$. Integer comparisons implement endpoint equality.
++Proposition~\ref{prop:schur} completes the full-operator argument.
++\end{proof}
++
++\begin{proof}[Proof of Theorem~\ref{thm:endpoint-main}]
++Theorem~\ref{thm:log7} and zero extension give the central bound.
++Direct ball evaluation of \eqref{eq:CL} gives
++$C_{\log7}<13.541169<14$. The exact rational calculation
++\[
++ 10^{-34}-\frac{14}{3}(3\times10^{-18})^2
++ =5.8\times10^{-35}>5\times10^{-35}
++\]
++and Proposition~\ref{prop:continuation} give the transfer bound.
++Reflection and compression give the remaining conclusions.
++\end{proof}
++
++The 128-mode tail floor is close to the required model floor at this
++endpoint: the even and odd relative-coupling diagnostics are approximately
++$0.59479118$ and $0.58991735$, compared with $a\approx0.60748624$.
++Their ratios to $a$ are approximately $0.97910$ and $0.97108$.
++Thus the suggested 128-mode calculation succeeds without increasing the
++retained dimension, but leaves less room in this sufficient test than at
++$9/5$.
++
++\subsection{Independent reconstruction during review}
++
++A second implementation, \path{independent_arb.py}, was begun from the
++printed equations before the supplied numerical source became available.
++It normalizes the polynomial rows before assembly and computes reflected
++gamma--delay integrals over $(0,1-\delta)$, rather than using the supplied
++builder's tail moments over $(\delta,1)$. It reproduces both full-operator
++tests and their displayed pivots, using Python 3.10.0, python-flint 0.9.0,
++and FLINT 3.6.0. All entries of the retained head and both full-output Grams
++have overlapping enclosures between implementations at both horizons.
++Replaying the independently saved Schur matrices also passes.
++This is an independent implementation check of the same analytic reduction;
++both programs use Arb and neither constitutes independent human review or
++formal verification.
++
+ \section{Storage, scope, and the next depth problem}\label{sec:storage}
+ 
+ \begin{corollary}[Cumulative storage]\label{cor:storage}
+@@ -825,6 +931,12 @@
+ operator first. It does not show that positivity of a previous slab alone
+ forces the next storage update to be positive. That distinction separates
+ the present finite-depth result from the intended induction problem.
++
++The same proof and Theorem~\ref{thm:endpoint-main} give, for $L\le\log7$
++and $0<\omega\le3\times10^{-18}$,
++\[
++ I-X^*X-Y^*(I-ZZ^*)^{-1}Y\succeq(1-e^{-10^{-34}\omega})I.
++\]
+ 
+ \subsection{A diagonal formulation of the all-depth target}
+ 
+@@ -857,6 +969,75 @@
+ sequence remains the missing all-depth statement; the single horizon
+ certified here is not such a sequence.
+ 
++\subsection{An exact storage update with memory}\label{sec:recursion}
++
++Fix a positive shift and suppose $D_X=I-X^*X\succ0$ and $\norm Z<1$,
++with bounded positive inverses. Put
++\[
++ W=I-Z^*Z,\qquad
++ \mathcal C=(I-ZZ^*)^{-1/2}YD_X^{-1/2},\qquad
++ S=D_X^{1/2}(I-\mathcal C^*\mathcal C)D_X^{1/2}.
++\]
++For $V=\left(\begin{smallmatrix}X&0\\Y&Z\end{smallmatrix}\right)$ one has
++the exact factorization
++\begin{equation}\label{eq:storage-factor}
++ I-V^*V=
++ \begin{pmatrix}I&-Y^*ZW^{-1}\\0&I\end{pmatrix}
++ \begin{pmatrix}S&0\\0&W\end{pmatrix}
++ \begin{pmatrix}I&0\\-W^{-1}Z^*Y&I\end{pmatrix}.
++\end{equation}
++Multiplication verifies the identity, using
++$I+Z(I-Z^*Z)^{-1}Z^*=(I-ZZ^*)^{-1}$.
++Thus contraction is equivalent to $\norm{\mathcal C}\le1$.
++If $\norm{\mathcal C}<1$, the two triangular factors and the storage
++factor provide the complete inverse defect for the next append operation.
++If only equality is certified, the defect may be singular and this
++bounded-inverse recursion cannot automatically continue.
++
++This supplies an algebraic recursion at arbitrary finite depth. Its missing
++arithmetic step is a bound on $\mathcal C$ that propagates for the actual
++prime--gamma kernel. A scalar lower bound on $D_X$ discards orientation:
++for $Z=0$ and $Y=(c,0)$, the defects
++$\operatorname{diag}(\varepsilon,1)$ and
++$\operatorname{diag}(1,\varepsilon)$ have the same least eigenvalue, but
++their updates are positive precisely when $c^2\le\varepsilon$ and
++$c^2\le1$, respectively. Each defect is realized by a diagonal contraction
++$X$. Taking $\varepsilon=1/4$ and $c^2=1/2$ gives a failing and a passing
++update with identical old scalar margins. A useful induction therefore
++needs the defect factor and its coupling to the next output.
++
++\subsection{Nested Schur elimination for a structured tail}
++
++There is a parallel recursion in retained degree. Split a form into an old
++head, a finite buffer, and the remaining tail, and write
++\[
++ Q_0-mI=\begin{pmatrix}
++ A&B^*&C^*\\B&D&E^*\\C&E&F
++ \end{pmatrix},\qquad F\succeq\alpha I,\quad\alpha>0.
++\]
++The finite head and buffer lie in the operator domain, so the displayed
++columns into the tail are bounded. Replacing $F$ by $\alpha I$ gives a
++lower form bound. Eliminating that tail yields
++\[
++ \widehat A=A-C^*C/\alpha,\quad
++ \widehat B=B-E^*C/\alpha,\quad
++ \widehat D=D-E^*E/\alpha.
++\]
++Consequently the two tests
++\begin{equation}\label{eq:nested-schur}
++ \widehat D\succ0,\qquad
++ \widehat A-\widehat B^*\widehat D^{-1}\widehat B\succeq0
++\end{equation}
++are sufficient for $Q_0\succeq mI$. The proof is two successive
++completions of the square. The cross-Gram $C^*E$ must be retained;
++separate norm bounds on $C$ and $E$ discard its cancellation.
++Full-output parity Grams for the enlarged retained space supply all three
++products $C^*C,C^*E,E^*E$. The same construction works in each parity sector.
++With the same enlarged space and scalar far-tail floor, this is a reordered
++version of the existing test, not an intrinsically stronger theorem. It
++organizes factor reuse and identifies where an improved operator lower bound
++for $F$ would strengthen the result. Such a bound requires its own proof.
++
+ \subsection{Limitations and further calculations}
+ 
+ The scalar tail bound pays separately for every arithmetic delay norm.
+@@ -867,13 +1048,25 @@
+ to be sharp. It does not connect to the previously investigated interior
+ shift ranges of the second slab.
+ 
+-The next concrete depth target is total horizon $L=\log7$, using the same
+-full-output parity construction and adapting the retained space and profile
+-degree as required. At that endpoint the $n=7$ delay is zero almost
+-everywhere; a strict increase beyond it activates the next prime. A more
+-general result would retain structure in the tail resolvent or in the
+-cumulative storage update instead of reducing all arithmetic tail terms
+-to separate scalar losses.
++The $\log7$ endpoint target is now certified. A next test is $L=\log8$,
++which activates the $n=7$ prime while keeping the $n=8$ endpoint delay zero
++almost everywhere. The active generator indices would be $2,3,4,5,7$.
++No certificate at that horizon is asserted here. Choose the profile degree
++and working precision from its own error budget before increasing the head.
++The smaller error in Remark~\ref{rem:sharper-error} and the buffer
++formulation \eqref{eq:nested-schur} are concrete candidates to test.
++
++For horizons beyond the radius of the present origin-centered profile,
++one can seek validated piecewise polynomial approximations to $w$ on the
++positive real axis, retaining the logarithmic kernel exactly. The complex
++poles of $G_0$ lie at nonzero integer multiples of $i\pi$, whereas $w$ is
++smooth at every nonnegative real argument. Taylor expansions about positive
++centers or Chebyshev pieces can therefore cover any fixed finite interval,
++provided their errors and derivative variations are enclosed. Their convolution
++outputs introduce additional piecewise polynomial terms and integration
++breakpoints, which must all be retained in the ordinary and reflected Grams.
++This removes the specific $L<3$ profile restriction in principle; it does not
++prove coercivity at larger depth or bound the cost of doing so.
+ 
+ \appendix
+ \section{Moment formulas and assembly conventions}\label{app:moments}
+@@ -926,7 +1119,7 @@
+ 
+ The accompanying review package contains the LaTeX source, bibliography,
+ compiled manuscript, continuation guide, and the full numerical supplement.
+-The core numerical files are:
++The core numerical files under \path{numerics/} are:
+ \begin{itemize}
+ \item \path{certify_arb.py}: exact-rational profiles, full-output ball
+   construction, analytic tail bounds, and ball LDL;
+@@ -938,6 +1131,10 @@
+   the matrix-archive SHA256;
+ \item \path{analysis.json}: continuation validation and separately labelled
+   diagnostics.
++\item \path{independent_arb.py}: the separately written construction from
++  the printed formulas; its saved matrices and pivot records are included.
++\item \path{review_checks.py}: moment, arithmetic-generator, parity, and
++  failure-control checks, with results under \path{review/}.
+ \end{itemize}
+ 
+ The recorded numerical environment was Python 3.12.14, python-flint 0.9.0,
+@@ -949,13 +1146,26 @@
+   --horizon 9/5 --floor 1e-26 --output output/rebuilt
+ python certify_arb.py --reuse --bits 1536 --floor 1e-26 \
+   --output output/length_1p8_N128
+-python analyze_certificate.py output/length_1p8_N128
++python analyze_certificate.py output/length_1p8_N128 \
++  --shift 3e-14 --decay 5e-27 --generator-bound 11
++python certify_arb.py --N 128 --M 220 --bits 1792 \
++  --log-horizon 7 --floor 1e-34 --output output/log7_rebuilt
++python analyze_certificate.py output/log7_rebuilt \
++  --shift 3e-18 --decay 5e-35 --generator-bound 14
+ \end{verbatim}
+ A full rebuild checks the construction as well as the final sign tests.
+ Replay checks the signs from the saved construction enclosures. The latter
+ does not replace review of the analytic formulas. Do not run Python with
+ \texttt{-O}. Build times are machine-dependent; the recorded matrix
+ construction took about 64 seconds, before archive writing and final LDL.
++The reviewed commands reject optimized Python mode and return a nonzero
++exit status if certification fails. Replay recomputes analytic bounds,
++the full-Gram trace check, and central leakage from the saved head and Grams.
++The analyzer checks archive hashes and metadata and repeats the sign tests
++before deriving continuation. Its shift and decay inputs must be positive;
++its checked generator constant is specific to the loaded horizon. An omitted
++shift is chosen by an exact rational halving rule, rather than reusing the
++$9/5$ constants at other horizons.
+ 
+ The largest mathematical review priorities are the normalization in
+ \eqref{eq:weil} and \eqref{eq:Ageneral}, the common-domain energy argument,
+--- v0.1/numerics/certify_arb.py
++++ v0.2/numerics/certify_arb.py
+@@ -11,6 +11,9 @@
+ import argparse, gzip, hashlib, json, math, platform, sys, time
+ import flint
+ from flint import arb as A, arb_mat as AM, fmpq, ctx
++
++if not __debug__:
++    raise RuntimeError('Certificate checks require assertions; do not use Python -O or -OO')
+ 
+ 
+ def rat(x):
+@@ -81,18 +84,20 @@
+ 
+ 
+ def chain_norm(n, L, log_horizon=None):
+-    if log_horizon:
+-        if n*n >= log_horizon:
+-            return A(1)
+-        if n**3 >= log_horizon:
+-            return A(2).sqrt()
+-    else:
+-        d = A(n).log()
+-        if 2*d > L:
+-            return A(1)
+-        if 3*d > L:
+-            return A(2).sqrt()
+-    return A(2)
++    # Essential fiber length. Equality gives the shorter path; a rational
++    # horizon with an unresolved ball comparison fails closed.
++    q = 1
++    while True:
++        if log_horizon is not None:
++            inside = n**q < log_horizon
++        else:
++            d = A(n**q).log()
++            inside = d < L
++            if not inside and not d > L:
++                raise ValueError('Unresolved delay-chain threshold')
++        if not inside:
++            return 2*(A.pi()/(q+1)).cos()
++        q += 1
+ 
+ 
+ def moment(rows, cols, kind, delta=None, upper=None):
+@@ -170,7 +175,7 @@
+     N, M = args.N, args.M
+     K = N+M
+     L = A(args.log_horizon).log() if args.log_horizon else rat(args.horizon)
+-    assert 1 < L and L < 2 and N >= 2 and M >= 1
++    assert 0 < L and L < 3 and N >= 2 and M >= 2
+     active = prime_powers(L, args.log_horizon)
+     for n,p,k in active:
+         assert A(n).log() < L
+@@ -252,6 +257,7 @@
+     data = {'N':N,'M':M,'precision_bits':ctx.prec,'horizon':args.horizon,
+             'log_horizon':args.log_horizon,'active_prime_powers':active,'reflected_delay_overlaps':overlaps,
+             'arithmetic':'Direct Arb enclosures throughout; no aggregate rounding allowance',
++            'builder_source_sha256':hashlib.sha256(Path(__file__).read_bytes()).hexdigest(),
+             'runtime':{'python':platform.python_version(),'python_flint':flint.__version__,'flint':flint.__FLINT_VERSION__},
+             'bounds':{k:pack(v) for k,v in bounds.items()},'bound_display':{k:show(v) for k,v in bounds.items()},
+             'full_gram_trace':show(tr),'maximum_matrix_radius':show(maximum_radius),
+@@ -264,14 +270,30 @@
+ def validate(data, floor):
+     N = data['N']
+     mats = {k:AM([[unpack(x) for x in row] for row in mat]) for k,mat in data['matrices'].items()}
+-    b = {k:unpack(v) for k,v in data['bounds'].items()}
++    assert ctx.prec >= data['precision_bits']
++    assert N >= 2 and data['M'] >= 2
++    for mat in mats.values():
++        assert mat.nrows() == N and mat.ncols() == N
++        sym(mat)  # reject inconsistent symmetry enclosures
++    log_horizon = data.get('log_horizon')
++    L = A(log_horizon).log() if log_horizon is not None else rat(data['horizon'])
++    active = prime_powers(L, log_horizon)
++    assert [list(v) for v in active] == [list(v) for v in data['active_prime_powers']]
++    b = analytic(L, profile(data['M']), N, active, log_horizon)
++    for key, value in b.items():
++        assert value.overlaps(unpack(data['bounds'][key]))
++    # Re-establish the norm budget on replay, using the full saved Gram.
++    assert sum((mats['Gram_causal'][i,i] for i in range(N)), A(0)) < 10**7
+     a, eta, m = b['tail_floor'].lower(), b['profile_remainder'].upper(), rat(floor)
+-    assert a > m
++    assert a > m and m > 0
+     modelerr = ((a-m).abs_upper()+40000)*eta+2*eta**2
+     checks=[]
+     for parity in [0,1]:
+         ids = list(range(parity,N,2))
+-        head, leakage = block(mats['Q'],ids), block(mats['E_central'],ids)
++        head = block(mats['Q'],ids)
++        leakage = (block(mats['Gram_causal'],ids)+(-1)**parity*block(mats['ReflectedGram_causal'],ids))/2-head*head
++        assert leakage.overlaps(block(mats['E_central'],ids))
++        leakage = sym(leakage)
+         test = (head-ident(len(ids))*m)*(a-m)-leakage-ident(len(ids))*modelerr.upper()
+         check=ldl(test)
+         check['parity']=parity
+@@ -280,7 +302,7 @@
+     return {'status':'PASS' if all(c['positive'] for c in checks) else 'NOT CERTIFIED',
+             'N':N,'M':data['M'],'precision_bits':data['precision_bits'],
+             'horizon':data['horizon'],'log_horizon':data['log_horizon'],'central_coercivity':floor,
+-            'bound_display':data['bound_display'],'model_error':show(modelerr),
++            'bound_display':{k:show(v) for k,v in b.items()},'model_error':show(modelerr),
+             'maximum_matrix_radius':data['maximum_matrix_radius'],
+             'checks':checks,'scope':'Full operator via analytic tail and full-output exact-parity Gram; all finite arithmetic enclosed by Arb. Subject to independent mathematical/code review.'}
+ 
+@@ -290,12 +312,15 @@
+     ap.add_argument('--N',type=int,default=128)
+     ap.add_argument('--M',type=int,default=180)
+     ap.add_argument('--bits',type=int,default=1536)
+-    ap.add_argument('--horizon',default='9/5')
+-    ap.add_argument('--log-horizon',type=int)
++    horizons=ap.add_mutually_exclusive_group()
++    horizons.add_argument('--horizon',default='9/5')
++    horizons.add_argument('--log-horizon',type=int)
+     ap.add_argument('--floor',default='1e-26')
+     ap.add_argument('--output',default='output/length_1p8_N128')
+     ap.add_argument('--reuse',action='store_true')
+     args=ap.parse_args()
++    if args.log_horizon is not None and args.log_horizon < 2:
++        ap.error('--log-horizon must be an integer at least 2')
+     ctx.prec=args.bits
+     out=Path(args.output);out.mkdir(parents=True,exist_ok=True)
+     archive=out/'central_matrices.json.gz'
+@@ -307,8 +332,11 @@
+         with gzip.open(archive,'wt') as f:json.dump(data,f)
+     result=validate(data,args.floor)
+     result['matrix_archive_sha256']=hashlib.sha256(archive.read_bytes()).hexdigest()
++    result['validation_precision_bits']=ctx.prec
++    result['validator_source_sha256']=hashlib.sha256(Path(__file__).read_bytes()).hexdigest()
+     (out/'central_certificate.json').write_text(json.dumps(result,indent=2)+'\n')
+     print('FINAL',result['status'],flush=True)
+-
+-
+-if __name__=='__main__':main()
++    return 0 if result['status']=='PASS' else 1
++
++
++if __name__=='__main__':sys.exit(main())
+--- v0.1/numerics/analyze_certificate.py
++++ v0.2/numerics/analyze_certificate.py
+@@ -5,7 +5,7 @@
+ The final eigenvalues after high-precision congruence are diagnostics only.
+ """
+ from pathlib import Path
+-import argparse, gzip, json
++import argparse, gzip, hashlib, json, sys
+ from fractions import Fraction as F
+ import numpy as np
+ from flint import arb as A, arb_mat as AM, ctx
+@@ -37,23 +37,38 @@
+     ap=argparse.ArgumentParser()
+     ap.add_argument('folder')
+     ap.add_argument('--legacy')
+-    ap.add_argument('--shift',default='3e-14')
+-    ap.add_argument('--decay',default='5e-27')
++    ap.add_argument('--shift',help='Positive rational upper shift; defaults to a certified dyadic value')
++    ap.add_argument('--decay',help='Positive rational decay coefficient; defaults to half the central floor')
++    ap.add_argument('--generator-bound',help='Rational upper bound for C_L; defaults to a checked integer')
+     args=ap.parse_args();folder=Path(args.folder)
+-    with gzip.open(folder/'central_matrices.json.gz','rt') as f:data=json.load(f)
++    archive=folder/'central_matrices.json.gz'
++    with gzip.open(archive,'rt') as f:data=json.load(f)
+     ctx.prec=data['precision_bits']
+     cert=json.loads((folder/'central_certificate.json').read_text())
++    digest=hashlib.sha256(archive.read_bytes()).hexdigest()
++    if digest != cert['matrix_archive_sha256']:
++        raise ValueError('Certificate hash does not match the matrix archive')
++    for key in ('N','M','precision_bits','horizon','log_horizon'):
++        if cert[key] != data[key]:
++            raise ValueError('Certificate/archive metadata mismatch: '+key)
++    # A PASS string alone is not evidence: rerun the ball tests before using m.
++    replay=c.validate(data,cert['central_coercivity'])
++    if replay['status']!='PASS' or cert['status']!='PASS':
++        raise ValueError('No valid central certificate; continuation is unavailable')
+     mats={k:AM([[c.unpack(x) for x in row] for row in mat]) for k,mat in data['matrices'].items()}
+-    out={'relative_coupling':[]}
++    out={'matrix_archive_sha256':digest,'central_replay':'PASS','relative_coupling':[]}
+     b={k:c.unpack(v) for k,v in data['bounds'].items()}
+-    # Outward rational bounds displayed in the research report.
+-    assert b['tail_floor']>c.rat('0.69124708426711')
+-    assert b['smooth_variation']<c.rat('5.482684')
+-    assert b['profile_remainder']<c.rat('2.477e-40')
+-    assert b['generator_change_constant']<c.rat('10.298615')
+-    a,eta,m=b['tail_floor'].lower(),b['profile_remainder'].upper(),c.rat(cert['central_coercivity'])
+-    assert ((a-m).abs_upper()+40000)*eta+2*eta**2<c.rat('9.908e-36')
+-    out['displayed_outward_bounds']='PASS'
++    # Horizon-specific display checks are supplementary, not universal inputs.
++    L=A(data['log_horizon']).log() if data['log_horizon'] is not None else c.rat(data['horizon'])
++    fresh=c.analytic(L,c.profile(data['M']),data['N'],c.prime_powers(L,data['log_horizon']),data['log_horizon'])
++    b=fresh
++    if data['log_horizon'] is None and F(data['horizon'])==F(9,5) and data['N']==128 and data['M']==180:
++        assert b['tail_floor']>c.rat('0.69124708426711')
++        assert b['smooth_variation']<c.rat('5.482684')
++        assert b['profile_remainder']<c.rat('2.477e-40')
++        assert b['generator_change_constant']<c.rat('10.298615')
++        out['original_1p8_display_bounds']='PASS'
++    out['analytic_bounds']={k:c.show(v) for k,v in b.items()}
+     for parity in [0,1]:
+         ids=list(range(parity,data['N'],2))
+         q,e=c.block(mats['Q'],ids),c.block(mats['E_central'],ids)
+@@ -61,15 +76,32 @@
+         diag['parity']=parity
+         diag['ratio_to_available_tail']=diag['maximum']/float(c.unpack(data['bounds']['tail_floor']).mid())
+         out['relative_coupling'].append(diag)
+-    if cert['status']=='PASS':
+-        m,h,decay=F(cert['central_coercivity']),F(args.shift),F(args.decay)
+-        change=c.unpack(data['bounds']['generator_change_constant'])
+-        assert change<11 and m-F(11)*h*h/3>=decay>0 and h<=F(1,2)
+-        out['continuation']={'status':'PASS','central_floor':str(m),'rounded_generator_constant':11,
+-            'shift_maximum':args.shift,'decay_coefficient':args.decay,
+-            'norm_bound':'exp(-'+args.decay+' * omega)',
+-            'storage_lower_bound':'1-exp(-2 * '+args.decay+' * omega)',
+-            'rational_exponent_margin':str(m-F(11)*h*h/3-decay)}
++    m=F(cert['central_coercivity'])
++    decay=F(args.decay) if args.decay is not None else m/2
++    if not 0<decay<m:
++        raise ValueError('Require 0 < decay < central floor')
++    change=b['generator_change_constant']
++    if args.generator_bound is None:
++        rounded=F(1)
++        while not change<c.rat(rounded):
++            rounded+=1
++    else:
++        rounded=F(args.generator_bound)
++    if not rounded>0 or not change<c.rat(rounded):
++        raise ValueError('The chosen generator constant is not a positive strict upper bound')
++    if args.shift is None:
++        h=F(1,2)
++        while m-rounded*h*h/3<decay:
++            h/=2
++    else:
++        h=F(args.shift)
++    if not (0<h<=F(1,2) and m-rounded*h*h/3>=decay):
++        raise ValueError('The requested shift/decay does not satisfy the continuation inequality')
++    out['continuation']={'status':'PASS','central_floor':str(m),'rounded_generator_constant':str(rounded),
++        'shift_maximum':str(h),'decay_coefficient':str(decay),
++        'norm_bound':'exp(-('+str(decay)+') * omega)',
++        'storage_lower_bound':'1-exp(-2 * ('+str(decay)+') * omega)',
++        'rational_exponent_margin':str(m-rounded*h*h/3-decay)}
+     if args.legacy:
+         old=json.loads(Path(args.legacy).read_text());N=old['N'];differences={}
+         for newkey,oldkey in [('Q','Q'),('Gram_causal','Gram'),('ReflectedGram_causal','ReflectedGram')]:

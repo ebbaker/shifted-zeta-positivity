@@ -16,7 +16,7 @@ Edward Baker — August–September 2026.
 > **Status and disclosure.** Everything here was developed with substantial
 > language-model assistance, in adversarial referee-style rounds with independent
 > numerical recomputation. One manuscript is available as a preprint
-> (`papers/first-slab-positivity/`, v1.0). The other four manuscripts are
+> (`papers/first-slab-positivity/`, v1.0). The other five manuscripts are
 > committed as clearly labelled **working drafts**: they have passed internal
 > review rounds but **not** external human review, no release or DOI covers
 > them as finished work, and each folder's `STATUS.md` says exactly what has
@@ -85,6 +85,19 @@ titles; "Paper 1–3" are the working labels used throughout `notes/` and
                  (grew out of the finite Ihara-zeta laboratory, papers/defect-depth/code/)
 ```
 
+Continuing the operator side of the preprint past the prime-free first slab:
+
+```
+ papers/weil-depth/  [working draft v0.4, 22 pp.]  (9–10 Sept 2026)
+ "Finite-horizon Weil coercivity and shifted-zeta contraction: two-sided certificates
+  for the finite-window Weil form through total horizon log 7"
+ m_j ≤ λ_min(Q_{0,L_j}) ≤ μ_j certified in Arb ball arithmetic at L = log 2, …, log 6, 9/5, log 7
+ (prime-power delays 2, 3, 4, 5 active; even ground state at every horizon); each floor
+ gives a small-shift contraction ‖V_{ω,L}‖ ≤ e^{−dω}. Finite-depth statements only.
+ Layout differs from the other folders (manuscript/, numerics/, archive/); its ~13 MB
+ ball-matrix archives are kept outside git — see LARGE_FILES.md and the folder's ARCHIVES.md.
+```
+
 Separately, and **before** the Suzuki line of work began:
 
 ```
@@ -95,7 +108,7 @@ Separately, and **before** the Suzuki line of work began:
 
 | Directory | What it holds |
 |---|---|
-| `papers/` | One folder per manuscript: source, PDF, `README.md`, `STATUS.md`, and the paper's own reproduction code under `code/` where it exists. `first-slab-positivity/` is the released preprint; the other four are working drafts (see `papers/README.md`). |
+| `papers/` | One folder per manuscript: source, PDF, `README.md`, `STATUS.md`, and the paper's own reproduction code under `code/` where it exists. `first-slab-positivity/` is the released preprint; the other five are working drafts (see `papers/README.md`). `weil-depth/` keeps its large derived data outside git, described by its tracked `ARCHIVES.md`. |
 | `blueprint/` | Statement inventory per released paper: every definition, lemma and theorem stated self-contained, with its dependency graph, proof status, human-verification status and formalization feasibility. The entry point for formalizers. |
 | `statements/` | The same inventory as machine-readable YAML (`ledger.yaml`). |
 | `verification/` | What has been checked, how, by whom; referee-round records; independent recomputation scripts; checklists for volunteers. |
@@ -103,6 +116,22 @@ Separately, and **before** the Suzuki line of work began:
 | `code/` | The release gate for the first-slab certificate code (not yet released). Per-paper reproduction scripts live next to their papers. |
 | `references/` | Bibliography of external sources used. No third-party PDFs are redistributed. |
 | `environment/` | Pinned Python environment for the verification scripts; each paper's `code/` has its own `requirements.txt`. |
+
+## Large files
+
+Git holds sources and small records only. Derived data that committed code
+regenerates deterministically — at present the ball-matrix archives of
+`papers/weil-depth/`, about 13 MB per horizon and 122 MB in all — are kept
+outside the repository in a sibling folder, bound to the tree by the hashes
+recorded in the small certificate files, and described by a tracked guide in
+the paper folder (`papers/weil-depth/ARCHIVES.md`). The convention (a 1 MB
+ceiling on committed files, no regenerable data in git, two hashes per
+dataset, hash-bound replay, an environment-variable lookup), the folder
+layout, the step-by-step procedure for adding or moving such a file, the
+pre-commit size check, how to repair a mistaken commit and what a release does
+and does not archive are in [`LARGE_FILES.md`](LARGE_FILES.md). Git LFS and
+shared drives are deliberately not used; a non-regenerable dataset would get
+its own Zenodo record instead.
 
 ## Releases, DOIs and how to cite
 
@@ -118,7 +147,9 @@ created) and the *manuscript* version (`1.0`, stated in the preprint's PDF and
 in `papers/first-slab-positivity/CITATION.cff`).
 
 **What a release contains.** A tag archives everything present in the tree
-at that moment — including the working-draft folders. A draft is therefore
+at that moment — including the working-draft folders, and nothing kept
+outside the tree (`LARGE_FILES.md` explains why that is complete for
+regenerable data). A draft is therefore
 archived *as a draft*: its `STATUS.md` states that it is not a released
 manuscript, the release notes list which folders are released, and only those
 folders are to be cited. Tagging is done only when everything committed is fit
@@ -167,7 +198,7 @@ the paper record's DOI to the root `.zenodo.json` under `related_identifiers`
 Start at `blueprint/first-slab/statements.md`: it lists every statement of the
 preprint with what depends on what, whether it is proved on paper, certified
 by computer, or only asserted, whether a human has checked it, and how
-feasible a Lean/Mathlib formalization looks. The four working drafts do not
+feasible a Lean/Mathlib formalization looks. The five working drafts do not
 have blueprints yet; their `STATUS.md` files carry a result-by-result
 verification record in the meantime. The two premise checks the internal
 review cannot perform — the normalization chain against Suzuki's paper and

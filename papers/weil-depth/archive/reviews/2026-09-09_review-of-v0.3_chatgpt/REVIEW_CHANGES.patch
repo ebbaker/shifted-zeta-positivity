@@ -1,0 +1,1225 @@
+diff --git a/papers/weil-depth/.gitignore b/papers/weil-depth/.gitignore
+index 26438b8..4185997 100644
+--- a/papers/weil-depth/.gitignore
++++ b/papers/weil-depth/.gitignore
+@@ -1,7 +1,9 @@
+ # Ball-matrix archives are deterministic output of numerics/certify_arb.py and are not versioned.
+-# They live in numerics-archives/ (kept outside git; see numerics-archives/README.md) and are
++# They are kept outside git (expected layout and hashes: ARCHIVES.md, which is tracked) and are
+ # regenerated in about a minute per horizon at N=128. Certificates record their content hash.
+ numerics-archives/
++# macOS Finder metadata is not part of the package.
++.DS_Store
+ numerics/output/**/*.json.gz
+ numerics/output/**/*.log
+ numerics/logs*
+@@ -13,3 +15,6 @@ manuscript/*.fdb_latexmk
+ manuscript/*.fls
+ manuscript/*.log
+ manuscript/*.out
++manuscript/*.pdf
++manuscript/*.tmp
++manuscript/*.synctex.gz
+diff --git a/papers/weil-depth/ARCHIVES.md b/papers/weil-depth/ARCHIVES.md
+new file mode 100644
+index 0000000..0319ec9
+--- /dev/null
++++ b/papers/weil-depth/ARCHIVES.md
+@@ -0,0 +1,112 @@
++# Ball-matrix archives — tracked guide to the unversioned data
++
++The large derived data of this paper are kept outside git: the saved Arb ball matrices behind
++each certificate (about 13 MB per horizon), the independent implementation's saved matrices
++for the two leading horizons, and the original v0.1 review package (whose only large content
++is the 9/5 matrices). This file is the tracked description of that folder. The folder itself
++may live anywhere — the author keeps it beside the repository as
++`shifted-zeta-positivity-archive/weil-depth/numerics-archives/`, with a copy of this guide as
++its `README.md` — and `papers/weil-depth/.gitignore` excludes `numerics-archives/` and every
++`*.json.gz` under `numerics/output/` so that a copy placed inside the repository is not
++committed by accident. The repository-wide convention and the step-by-step procedure for
++adding or moving such files are in `LARGE_FILES.md` at the repository root; this file is the
++per-paper instance of that convention.
++
++The repository is complete and verifiable without the folder. Every certificate records the
++SHA-256 of the archive it was computed from (`matrix_archive_sha256`) and a content hash of
++the matrices themselves (`matrices_content_sha256`, canonical JSON of the four ball matrices
++and the run parameters, independent of timestamps and runtime metadata), and every archive is
++deterministic output of `numerics/certify_arb.py` or `numerics/independent_arb.py` for the
++parameters recorded in the certificate — about one minute per horizon at `N = 128`.
++
++## Expected layout
++
++The folder mirrors `numerics/`. When a file is missing from `numerics/output/`, the scripts
++look for the same relative path under the directory named by the environment variable
++`WEIL_ARCHIVES` (`certify_arb.locate`).
++
++```
++WEIL_ARCHIVES/
++├── SHA256SUMS.txt
++├── output/
++│   ├── log2_N128/central_matrices.json.gz
++│   ├── log3_N128/central_matrices.json.gz
++│   ├── log4_N128/central_matrices.json.gz
++│   ├── log5_N128/central_matrices.json.gz
++│   ├── log6_N128/central_matrices.json.gz
++│   ├── length_1p8_N128/central_matrices.json.gz
++│   ├── log7_N128/central_matrices.json.gz
++│   ├── independent_1p8/independent_matrices.json.gz
++│   └── independent_log7/independent_matrices.json.gz
++└── drafts/v0.1_2026-09-09/FINITE_HORIZON_WEIL_REVIEW_PACKAGE_20260909.zip
++```
++
++| File (relative to `WEIL_ARCHIVES`) | Belongs at | Size | SHA-256 |
++|---|---|---:|---|
++| `output/log2_N128/central_matrices.json.gz` | `numerics/output/log2_N128/` | 13 MB | `f07817c12004adde9ff21e1775982ea09561c948a64577331f40a2a0e8d560de` |
++| `output/log3_N128/central_matrices.json.gz` | `numerics/output/log3_N128/` | 13 MB | `00bb842f7a8c357b754b7ff00f5953f2b4c6ab8f91d0da4fcfa2296bb76eb799` |
++| `output/log4_N128/central_matrices.json.gz` | `numerics/output/log4_N128/` | 13 MB | `b3452b4529a1bdb38514b04c8313657fed43a4e1c80f528825f7bc3a075cbcc5` |
++| `output/log5_N128/central_matrices.json.gz` | `numerics/output/log5_N128/` | 13 MB | `9b9285bdedd4a164a496ecdd030a13599b7cc121904247beab60e53836312456` |
++| `output/log6_N128/central_matrices.json.gz` | `numerics/output/log6_N128/` | 13 MB | `1afc68d147396e9a2220abe3f0950179cc337c80dc6ce0e00e6d43117218308b` |
++| `output/length_1p8_N128/central_matrices.json.gz` | `numerics/output/length_1p8_N128/` | 11 MB | `cf5cdf2f17a5a69fc6c9c1f4ec734c8cb18ceda842cd53925fa0a67b5c1ded14` |
++| `output/log7_N128/central_matrices.json.gz` | `numerics/output/log7_N128/` | 13 MB | `2460486c3de953009b85a40601a4968043ad265d1394998068364aaa8294d6a5` |
++| `output/independent_1p8/independent_matrices.json.gz` | `numerics/output/independent_1p8/` | 12 MB | `c0fe16b099d0fd1e1917aca558202f952983deea57324f64896f9002cd106d00` |
++| `output/independent_log7/independent_matrices.json.gz` | `numerics/output/independent_log7/` | 14 MB | `55e6bc41b74f1e12a67f36dea2958103a6d3c397bdfc37eff975eafd3075c62a` |
++| `drafts/v0.1_2026-09-09/FINITE_HORIZON_WEIL_REVIEW_PACKAGE_20260909.zip` | `archive/drafts/v0.1_2026-09-09/` (small contents extracted there under `package/`) | 12 MB | `e0b66ad36a1e403bc702e452623f96ed44ba52882e059cd18530cb548d684c07` |
++
++The same archive hashes appear as `matrix_archive_sha256` in the corresponding
++`numerics/output/*/central_certificate.json` and `enclosure.json`, as `matrix_sha256` in
++`numerics/output/independent_*/certificate.json`, and in `BUILD_RECORD.json`; the ZIP hash is
++the `baseline_zip_sha256` of the archived v0.2 build record. Total size about 122 MB.
++
++## Obtaining the files
++
++Either regenerate them or ask for them.
++
++* **Regenerate.** From `numerics/`, with python-flint 0.9.0 / FLINT 3.6.0 installed
++  (`requirements.txt`) and assertions enabled:
++
++  ```bash
++  python certify_arb.py --N 128 --M 220 --bits 1792 --log-horizon 7 --floor 1.37e-28 --output output/log7_N128
++  python certify_arb.py --N 128 --M 180 --bits 1536 --horizon 9/5   --floor 3.38e-23 --output output/length_1p8_N128
++  python independent_arb.py --N 128 --M 220 --bits 1792 --log-horizon 7 --floor 1.37e-28 --output output/independent_log7
++  ```
++
++  and `--log-horizon n` with `--M 220 --bits 1792` for `log2 … log6` (floors in
++  `numerics/output/enclosure_summary.json`). Each construction takes 30–90 s. Compare the
++  resulting `matrices_content_sha256` with the value in the committed certificate.
++* **Request.** Reviewers who want the exact saved files rather than a rebuild can request the
++  folder from the author. Verify it first with `sha256sum -c SHA256SUMS.txt` from inside the
++  folder; the expected content of that manifest is the table above.
++
++## Using the files
++
++Either copy the `output/` tree back into `numerics/output/` (`rsync -a WEIL_ARCHIVES/output/ numerics/output/`),
++or leave the folder where it is and point the scripts at it:
++
++```bash
++export WEIL_ARCHIVES=/path/to/numerics-archives
++cd papers/weil-depth/numerics
++python certify_arb.py --reuse --bits 1792 --floor 1.37e-28 --output output/log7_N128
++python enclose_certificate.py output/log7_N128
++python analyze_certificate.py output/log7_N128 --shift 4e-15 --decay 6e-29 --generator-bound 14
++python compare_implementations.py
++```
++
++`certify_arb.py --reuse`, `enclose_certificate.py`, `analyze_certificate.py` and
++`compare_implementations.py` all fall back to `WEIL_ARCHIVES` for any archive missing from
++`numerics/output/`; `analyze_certificate.py` refuses an archive whose hash differs from the
++one recorded in the certificate it is asked to replay.
++
++## What the hashes do and do not establish
++
++`matrix_archive_sha256` identifies one exact `.gz` file; `matrices_content_sha256`
++identifies the matrices and parameters inside it independently of packaging. In the
++environments that were tested — Python 3.10.0, 3.11.15 and 3.12.14, each with python-flint
++0.9.0 and FLINT 3.6.0 — rebuilds of the 9/5 and `log 7` archives reproduced the content hash
++exactly, with identical pivots. That is an identity check for the saved data in those
++environments. It is not a claim that every machine, or every Arb/FLINT release, produces
++bit-for-bit identical balls: a different arithmetic implementation may legitimately produce
++different (still valid) enclosures with a different content hash. The sign decisions never
++depend on a hash; they are made by ball LDL on whatever matrices are present, and a rebuild
++that passes the certificate is a certificate for its own matrices.
+diff --git a/papers/weil-depth/BUILD_RECORD.json b/papers/weil-depth/BUILD_RECORD.json
+index e53303f..b456bd0 100644
+--- a/papers/weil-depth/BUILD_RECORD.json
++++ b/papers/weil-depth/BUILD_RECORD.json
+@@ -1,19 +1,18 @@
+ {
+-  "version": "0.3",
+-  "date": "2026-09-09",
+-  "baseline_commit": "aa40ff8 (repository HEAD when v0.3 was prepared; v0.2 deliverables archived under archive/drafts/v0.2_2026-09-09)",
+-  "changes_from_v0.2": [
+-    "Floors replaced by the largest three-significant-figure rationals passing the sector tests (9/5: 1e-26 -> 3.38e-23; log7: 1e-34 -> 1.37e-28) and certified upper bounds added (ball Rayleigh quotients): two-sided enclosures",
+-    "Profile of enclosures at log2, log3, log4, log5, log6 added (new builds, N=128, M=220, 1792 bits); earlier background certificates 5e-13 (log4) and 1e-18 (log5) superseded",
+-    "Sector-wise floors and upper bounds; even ground state certified at every horizon (even upper bound < odd floor)",
+-    "Continuation constants (shift, decay, integer generator bound) derived per horizon by exact rational arithmetic and re-verified by analyze_certificate.py",
+-    "Main theorems consolidated into Theorem 1.1 with Tables 1-2; Theorem 6.1 covers all seven horizons; Proposition 6.2 (upper bounds) added",
+-    "Proposition 3.4 (continuation) proof written out in full with new Lemma 3.3 (Laplace-line estimates); closure step of Proposition 4.3 made explicit; Remark 4.2 (single-mode sharpness via Weber-Schafheitlin)",
+-    "Relation to earlier work rewritten (Yoshida 1992, Connes-Consani 2021, Zhu 2026 two-sided bounds and doubly exponential threshold; log5 row cross-checks Zhu's floor)",
+-    "Storage factorization, 2x2 counterexample and nested Schur moved to Appendix B; Section 7.2 quantifies the N required at log8, log11, log13, log16 and as L->3",
+-    "New scripts enclose_certificate.py and make_tables.py; compare_implementations.py extended to all pairs; independent_arb.py empty-sum fix at the prime-free horizon",
+-    "Older drafts, reviews and background reports moved to archive/; top level holds only the current draft",
+-    "Ball archives moved out of git into numerics-archives/ (gitignored); certificates now carry matrices_content_sha256; scripts fall back to WEIL_ARCHIVES; v0.1 package contents extracted under archive/drafts/v0.1_2026-09-09/package/"
++  "version": "0.4",
++  "date": "2026-09-10",
++  "baseline_commit": "a566944 (repository HEAD when v0.4 was prepared: v0.3 at 6a87626 plus the v0.3 review; v0.3 deliverables archived under archive/drafts/v0.3_2026-09-09)",
++  "review_applied": "archive/reviews/2026-09-09_review-of-v0.3_chatgpt/FINITE_HORIZON_WEIL_V03_REVIEW_20260909.md; disposition in RESPONSE_20260910.md in the same folder",
++  "changes_from_v0.3": [
++    "Table 3 (certificate data) rounding directions corrected: make_tables.py parses each Arb ball as an interval and prints lower values from the lower endpoint rounded down and upper values from the upper endpoint rounded up (log7 row: tail floor 0.6075 -> 0.6074, model error 3.73e-37 -> 3.74e-37, radius 4.6e-295 -> 4.7e-295; corresponding outward moves in the other rows); exact rationals asserted exact; diagnostics rounded to nearest and labelled; captions state the direction; paper_numbers.json records endpoints instead of midpoints",
++    "Decay claims restated: 'super-exponential decay' removed from abstract, introduction and Section 7.1; finite-difference slopes kept as observations on seven horizons; explicit statement that no decay law at unbounded depth is proved; Zhu's Landau-Widom law described as an empirical fit stated as a conjecture, with his large-window bound noted as conditional on RH",
++    "Horizon-ceiling claims restated as resource projections (abstract, Section 7.2): 'cannot reach much beyond 2.7' and 'stops at log13-log16' removed; a_{N,L} -> +infinity at fixed L<3 recorded; sufficiency of a 0.6 tail floor at uncomputed horizons flagged as unknown; 10^-34 per unit horizon qualified as a local extrapolation; L<3 kept as the domain of the proved profile remainder",
++    "Proof of Lemma 3.3 (Laplace-line estimates): the false bound |p+-alpha|,|p+-beta| >= eta-1/2 replaced by the bounds actually needed on the denominator factors, |p-alpha| >= eta-1/2 and |p+beta| >= eta+1/2, with rho_s written out; conclusion unchanged",
++    "Related work: hypotheses of Yoshida and Connes-Consani (support and Fourier-vanishing conditions) stated as printed; vanishing conditions identified with removal of the pole term 2|C|^2-2|S|^2 of (2.6); the log2 row described as the full-form statement, restricting to the classical one where the pole term vanishes, normalizations not matched term by term; 'cross-check between the programs' replaced by 'consistent with his reported enclosure'",
++    "Appendix B: explicit exact/model sentence in the nested Schur paragraph (displayed blocks belong to Q_0; constructed Grams enclose the model form; a nested certificate must carry profile error and ball radii into head, buffer and all coupling products)",
++    "Section 6 renamed 'Finite construction and the certificates'; acknowledgment records the v0.3 review and v0.4 revision round",
++    "Packaging: SHA256SUMS.txt regenerated from the tracked deliverables without macOS metadata; .gitignore excludes .DS_Store and manuscript build outputs; new tracked ARCHIVES.md documents the layout, hashes and retrieval of the unversioned ball archives (README, numerics/README, .gitignore, archive/README and Appendix C point to it); 'rebuild on any machine reproduces the content hash' limited everywhere to the tested environments",
++    "No numerical record, certificate, floor, upper bound or continuation constant changed"
+   ],
+   "source_sha256": {
+     "analyze_certificate.py": "67b7df552c0529cf63f32233eaae452a331f8447993bfbb6374747d34cedaaad",
+@@ -21,19 +20,26 @@
+     "compare_implementations.py": "a2eaa33a13d3cfbe7ed25dae843972516001f01f6516e95537a761d527bf278a",
+     "enclose_certificate.py": "7c0a94517d13dbee0eb709b938c02b06890bf76b65ddceafaa31a6d543b28167",
+     "independent_arb.py": "db7319ac0c585a7eb148afd5ec71c5713152e2d4bbd24775ce9d08fb2977a444",
+-    "make_tables.py": "9c21e14a7c5c2da758b523ee58b124312ea092eced2d645062aecc108a34289e",
++    "make_tables.py": "9790a6ca280bbb8c2cb5e3d020d38f72adfdf8d5eaba119fa0da3ceea4cbf9cd",
+     "review_checks.py": "4fa2c0907d1a6254bdf54f65da864d71e28f51c6b5ca36816022939b8619d177"
+   },
+   "manuscript_sha256": {
+     "finite_horizon_weil.bib": "cd178703bd64534fbdb40c7de50abcdfdec2ef7d620699a46926c3b6bd4ccaf7",
+-    "finite_horizon_weil.tex": "254bdd2b043976e3fac057e42f24f0d2c10f8a7d8f9af8c4f897aaf01106cadc",
+-    "tables_certificate.tex": "bedb404b0ecc26df0aa440de848ee6ad504c7db4b28633856c79572e9afa5140",
+-    "tables_main.tex": "bdabd8c8ad355d9d122b868d4387585a068aac59e4719d90a07e92f4e8f67837"
++    "finite_horizon_weil.tex": "3b7027833df0c84aaced3e48aed071515913ac3da0b8195515ee3daf74dd08df",
++    "tables_certificate.tex": "b91945d34c00a9f54012b43875deaee201b60406bbe200a8a881147a026dc3a8",
++    "tables_main.tex": "aff16adac9583e91e597a047dc2ccd703a8d27f0916f6280bb3b1d1122c93492"
+   },
+-  "pdf": "finite_horizon_weil_v0.3.pdf",
+-  "pdf_sha256": "75146ac7accf25274cc11f5bd2742bf46da9a7053a5749b06394fb8857a08ae5",
+-  "pdf_pages": 21,
+-  "pdf_build": "latexmk -pdf on the linked machine (TeX Live), no LaTeX warnings, no overfull boxes",
++  "documentation_sha256": {
++    "README.md": "8539f82317d8f6356727b5687ff85a45e2daae97908aaa3289d50d4d7fada736",
++    "STATUS.md": "9522053e10e623af7d27363ab4a98ea4752cb8f5e96853b279218b6630701c38",
++    "CONTINUATION.md": "aee16a0b1c53cfd98277ecdef7eeaf4612d38a6049e5429a490fb550c2a7449e",
++    "ARCHIVES.md": "81df28efc0beff7ca067865aa04d5090b0dc188815251479e520ff07ee8be3a1",
++    "numerics/README.md": "61d3e43b7d2d3f81cb9715723e31b5863eb0dbec16edfdbaacf7d84fe4a84a74"
++  },
++  "pdf": "finite_horizon_weil_v0.4.pdf",
++  "pdf_sha256": "4141db242f435e33c4de3fe649b1da67626111af3ba1ed7d34caddaefce4862f",
++  "pdf_pages": 22,
++  "pdf_build": "latexmk -pdf -interaction=nonstopmode -halt-on-error on the linked machine (TeX Live 2022, pdfTeX 1.40.22), no LaTeX warnings, no overfull boxes",
+   "certificates": {
+     "length_1p8_N128": {
+       "floor": "3.38e-23",
+@@ -78,8 +84,11 @@
+       "matrices_content_sha256": "9d9c9699cb5690f7669fb0262237a5ed6763987856a870c33d54e2dd17897c4a"
+     }
+   },
+-  "reruns_for_v0.3": "Full builds log2-log6 (new); replay of the unchanged 9/5 and log7 archives at the sharpened floors; enclose_certificate.py at all seven horizons; independent_arb.py at all seven horizons (matrices archived for 9/5 and log7 only); compare_implementations.py all seven pairs PASS (16384/16384 entries each); review_checks.py PASS; Fourier-side checks in numerics/review_claude",
+-  "environment": "Python 3.11.15, python-flint 0.9.0, FLINT 3.6.0, mpmath 1.4.1, NumPy 2.4.4 (v0.3 runs); earlier runs Python 3.12.14 / 3.10.0 with the same python-flint and FLINT; pivots identical across versions",
++  "reruns_for_v0.4": "None. make_tables.py was re-run on the unchanged records under numerics/output/ to regenerate tables_main.tex, tables_certificate.tex and paper_numbers.json; the text inequalities a_{128,9/5} > 0.69124708426711, a_{128,log7} > 0.60748624181467, C_{9/5} < 10.298615, C_{log7} < 13.541169, eta_180 < 2.477e-40, eta_220 < 9.342e-42 and max radius < 1e-214 were re-verified against the certified endpoints in Python's decimal module",
++  "source_changes_since_v0.3": [
++    "make_tables.py (rounding policy only)"
++  ],
++  "environment": "Python 3.11.15, python-flint 0.9.0, FLINT 3.6.0, mpmath 1.4.1, NumPy 2.4.4 (v0.3 runs); earlier runs Python 3.12.14 / 3.10.0 with the same python-flint and FLINT; pivots identical across versions; v0.4 table regeneration under Python 3.10.12 (standard library only)",
+   "limitations": "Two implementations, the enclosures and the Fourier-side checks share the analytic reduction; no external human audit or formal verification",
+-  "unversioned_data": "numerics-archives/ (122 MB): seven central_matrices.json.gz, two independent_matrices.json.gz, the v0.1 package ZIP; hashes in numerics-archives/SHA256SUMS.txt and in the certificates; regenerate with certify_arb.py / independent_arb.py"
++  "unversioned_data": "About 122 MB outside git: seven central_matrices.json.gz, two independent_matrices.json.gz, the v0.1 package ZIP; expected layout, hashes and retrieval in ARCHIVES.md; regenerate with certify_arb.py / independent_arb.py"
+ }
+diff --git a/papers/weil-depth/CONTINUATION.md b/papers/weil-depth/CONTINUATION.md
+index 3075d4e..ac8502f 100644
+--- a/papers/weil-depth/CONTINUATION.md
++++ b/papers/weil-depth/CONTINUATION.md
+@@ -1,6 +1,6 @@
+-# Continuation after version 0.3
++# Continuation after version 0.4
+ 
+-9 September 2026. Begin with `README.md`, `STATUS.md`, the v0.3 manuscript, and
++10 September 2026. Begin with `README.md`, `STATUS.md`, the v0.4 manuscript, and
+ `numerics/README.md`. Earlier continuation guides are under `archive/drafts/`.
+ 
+ ## What is established
+@@ -10,8 +10,10 @@ Two-sided enclosures of $\lambda_{\min}(Q_{0,L})$ at $L=\log2,\log3,\log4,\log5,
+ with sector-wise floors and upper bounds, the even ground state certified at every
+ horizon, and small-shift contraction with the constants of Table 1. All floors are exact
+ rationals passing the ball Schur test; all upper bounds are ball Rayleigh quotients.
+-Compression covers all shorter horizons. The `log 5` row reproduces Zhu's certified floor
+-at total length 1.6.
++Compression covers all shorter horizons. The `log 5` row is consistent with Zhu's
++certified floor at total length 1.6 (compatible lower bounds by different methods; not a
++cross-check of either implementation). The enclosures fall rapidly along the profile, but no
++decay law at unbounded depth is proved.
+ 
+ ## Conventions
+ 
+@@ -27,7 +29,7 @@ three-step chain (norm `sqrt 2`, exact endpoint case). The scalar tail floor at
+ is negative (`≈ -0.20`), `0.52` at `N = 256`, `1.22` at `N = 512`; the required coupling
+ diagnostic has been rising along the profile (0.17 at `log 2`, 0.59 at `log 7`) and will
+ rise again with the new prime. Plan on `N = 512`. The target floor will be of order
+-`1e-32` to `1e-34` (extrapolating Table 1), so keep the profile error far below it:
++`1e-32` to `1e-34` (a local extrapolation of Table 1, not a prediction), so keep the profile error far below it:
+ `M ≈ 300` gives `eta ≈ 1e-47` at `L = log 8`; use about 2000–2500 bits. Matrix assembly
+ scales like `N (N+M)^2` ball products, so expect tens of minutes, not seconds. Then:
+ 
+@@ -37,16 +39,21 @@ scales like `N (N+M)^2` ball products, so expect tens of minutes, not seconds. T
+    reported floor and `analyze_certificate.py` with the reported constants.
+ 3. `independent_arb.py` at the same parameters and `compare_implementations.py` (add the
+    pair to `PAIRS`).
+-4. `make_tables.py` regenerates the manuscript tables; add the row to the text.
++4. `make_tables.py` regenerates the manuscript tables (lower values rounded down, upper
++   values rounded up from the full ball); add the row to the text.
+ 
+ Use the sharper leakage error of Remark 5.3 only if the ordinary error becomes a
+ constraint; at these parameters it is not.
+ 
+ ## Beyond log 8
+ 
+-Keeping the scalar tail floor near 0.6 needs roughly `N ≈ 950` at `log 11`, `1900` at
+-`log 13`, `4400` at `log 16` and `27,000` as `L → 3`, where the profile radius also runs
+-out (Section 7.2 of the manuscript). The only idea on record that could change this
++The figures here are resource projections for the present implementation, not
++impossibility bounds: at any fixed `L < 3` the scalar tail floor `a_(N,L)` tends to `+∞`
++as `N → ∞`, so what grows is cost, and whether a floor near 0.6 suffices at a horizon with a
++new prime is not known. Keeping the scalar tail floor near 0.6 would need roughly
++`N ≈ 950` at `log 11`, `1900` at `log 13`, `4400` at `log 16` and `27,000` as `L → 3`, the
++boundary of the proved profile remainder (Section 7.2 of the manuscript). The only idea on
++record that could change this
+ scaling is a structured tail bound that keeps the prime–gamma cancellation instead of
+ paying the full arithmetic loss; a frequency-band (prolate or band-limited) tail basis is
+ the natural first experiment, and it is genuinely open whether it is easier than the
+diff --git a/papers/weil-depth/README.md b/papers/weil-depth/README.md
+index e28000f..c63427e 100644
+--- a/papers/weil-depth/README.md
++++ b/papers/weil-depth/README.md
+@@ -1,16 +1,16 @@
+ # Finite-horizon Weil coercivity and shifted-zeta contraction
+ 
+-Edward Baker. **Current working draft: version 0.3, 9 September 2026.**
++Edward Baker. **Current working draft: version 0.4, 10 September 2026.**
+ 
+ | What | Where |
+ |---|---|
+ | Current manuscript (source) | `manuscript/finite_horizon_weil.tex`, `manuscript/finite_horizon_weil.bib`, generated tables `manuscript/tables_*.tex` |
+-| Current manuscript (compiled) | `finite_horizon_weil_v0.3.pdf` |
++| Current manuscript (compiled) | `finite_horizon_weil_v0.4.pdf` |
+ | Verification status of the current draft | `STATUS.md` |
+ | What to do next | `CONTINUATION.md` |
+ | Build record and checksums of the current deliverables | `BUILD_RECORD.json`, `SHA256SUMS.txt` |
+ | Numerical supplement (code, certificates, enclosures, analyses) | `numerics/` — start with `numerics/README.md` |
+-| Saved ball matrices (large, deterministic, **not versioned**) | `numerics-archives/` — kept outside git; see `numerics-archives/README.md` and the note below |
++| Saved ball matrices (large, deterministic, **not versioned**) | kept outside git; `ARCHIVES.md` (tracked) documents the expected layout, the hashes, and how to obtain or regenerate them |
+ | Older drafts and the reviews that produced each version | `archive/` — see `archive/README.md` |
+ 
+ Everything at the top level and under `manuscript/` and `numerics/` belongs to the
+@@ -18,8 +18,11 @@ current draft and is small (under 1 MB per file). The saved ball matrices (about
+ horizon) are deterministic output of `numerics/certify_arb.py`, regenerate in about a minute
+ each, and are therefore not versioned: `.gitignore` excludes `numerics-archives/` and any
+ `*.json.gz` under `numerics/output/`. Each certificate records both the hash of the archive it
+-was computed from and `matrices_content_sha256`, a hash of the matrices themselves that a
+-rebuild on any machine reproduces exactly, so the repository is verifiable without the archives.
++was computed from and `matrices_content_sha256`, a hash of the matrices themselves; rebuilds
++in the tested environments (Python 3.10–3.12 with python-flint 0.9.0 and FLINT 3.6.0)
++reproduced it exactly. The content hash identifies the saved data — it is not a claim of
++bit-for-bit portability across other arithmetic libraries — and the repository is verifiable
++without the archives, since the sign tests are decided by ball arithmetic, not by a hash.
+ 
+ Nothing under `archive/` is current; it is kept so that each version and
+ the review that led to the next one can be read side by side (the git history has the
+@@ -43,13 +46,18 @@ no information about zeta zeros:
+ 
+ Each floor holds for every shorter horizon by compression, the bound
+ `||V_(ω,L)|| ≤ exp(-decay·ω)` holds on the stated shift interval, and at every horizon
+-the bottom of the spectrum lies in the even reflection sector. Lower bounds are exact
++the bottom of the spectrum lies in the even reflection sector. The enclosures fall
++rapidly along the profile, at an increasing logarithmic rate; these are observations on
++seven horizons, and no decay law at unbounded depth is proved. Lower bounds are exact
+ rationals passing a ball-arithmetic Schur test that includes the analytic infinite tail
+ and the profile remainder; upper bounds are ball Rayleigh quotients. A second
+ implementation reproduces all seven certificates. No all-depth positivity, RH result,
+-zero-free region, external human audit, or formal verification is claimed.
++zero-free region, external human audit, or formal verification is claimed. Section 7.2 of
++the manuscript gives resource projections for larger horizons; they are cost estimates for
++the present implementation, not impossibility bounds.
+ 
+ Build the manuscript with `latexmk -pdf -interaction=nonstopmode -halt-on-error` from
+-`manuscript/` (the tables are generated by `numerics/make_tables.py`; run it first if the
+-records under `numerics/output/` change). Text is covered by the repository's CC BY 4.0
++`manuscript/` (the tables are generated by `numerics/make_tables.py`, which rounds every
++displayed lower value down and every upper value up from the full ball enclosure; run it
++first if the records under `numerics/output/` change). Text is covered by the repository's CC BY 4.0
+ license and code by its MIT license.
+diff --git a/papers/weil-depth/SHA256SUMS.txt b/papers/weil-depth/SHA256SUMS.txt
+index 81bca74..06b2930 100644
+--- a/papers/weil-depth/SHA256SUMS.txt
++++ b/papers/weil-depth/SHA256SUMS.txt
+@@ -1,22 +1,20 @@
+-daef80f61ff3cd875ddafe2e4b06c1af5648d347bb7493f3f7d28c66821f1e0c  .DS_Store
+-11e0794d6b231863c4820edb9c056adcd1144de0ff1a62296b282374da6760b2  BUILD_RECORD.json
+-feeb099197d896437b81bb9c1213adc6ca916d136c5499f4fbacffe387acf451  CONTINUATION.md
+-926aeabeee56aec4d99717044006837a5911b0ffe0c1f63b1cc8f46e4e5188b1  README.md
+-8b3dcefa446490e152e33e87393c5c4b627867e761756b645352cf0717a6614c  STATUS.md
+-75146ac7accf25274cc11f5bd2742bf46da9a7053a5749b06394fb8857a08ae5  finite_horizon_weil_v0.3.pdf
++81df28efc0beff7ca067865aa04d5090b0dc188815251479e520ff07ee8be3a1  ARCHIVES.md
++0d092f015ee77ca53c7f0cbfaba807269ced83a9dec63dd45cb98f0800047c22  BUILD_RECORD.json
++aee16a0b1c53cfd98277ecdef7eeaf4612d38a6049e5429a490fb550c2a7449e  CONTINUATION.md
++8539f82317d8f6356727b5687ff85a45e2daae97908aaa3289d50d4d7fada736  README.md
++9522053e10e623af7d27363ab4a98ea4752cb8f5e96853b279218b6630701c38  STATUS.md
++4141db242f435e33c4de3fe649b1da67626111af3ba1ed7d34caddaefce4862f  finite_horizon_weil_v0.4.pdf
+ cd178703bd64534fbdb40c7de50abcdfdec2ef7d620699a46926c3b6bd4ccaf7  manuscript/finite_horizon_weil.bib
+-254bdd2b043976e3fac057e42f24f0d2c10f8a7d8f9af8c4f897aaf01106cadc  manuscript/finite_horizon_weil.tex
+-bedb404b0ecc26df0aa440de848ee6ad504c7db4b28633856c79572e9afa5140  manuscript/tables_certificate.tex
+-bdabd8c8ad355d9d122b868d4387585a068aac59e4719d90a07e92f4e8f67837  manuscript/tables_main.tex
+-e7ebd34b37458e63f1ea6e1353f3a37d0252adeba7910364f851624ccf62c488  numerics/.DS_Store
+-eaf463a93e5c0e9be4dc381e3bad1eae11366621537a98bd52c10d57ab280be4  numerics/README.md
++3b7027833df0c84aaced3e48aed071515913ac3da0b8195515ee3daf74dd08df  manuscript/finite_horizon_weil.tex
++b91945d34c00a9f54012b43875deaee201b60406bbe200a8a881147a026dc3a8  manuscript/tables_certificate.tex
++aff16adac9583e91e597a047dc2ccd703a8d27f0916f6280bb3b1d1122c93492  manuscript/tables_main.tex
++61d3e43b7d2d3f81cb9715723e31b5863eb0dbec16edfdbaacf7d84fe4a84a74  numerics/README.md
+ 67b7df552c0529cf63f32233eaae452a331f8447993bfbb6374747d34cedaaad  numerics/analyze_certificate.py
+ ca0bf0719a20cdbc3294855ad9d859fdb7a264fa5322b77518f06d44eb278760  numerics/certify_arb.py
+ a2eaa33a13d3cfbe7ed25dae843972516001f01f6516e95537a761d527bf278a  numerics/compare_implementations.py
+ 7c0a94517d13dbee0eb709b938c02b06890bf76b65ddceafaa31a6d543b28167  numerics/enclose_certificate.py
+ db7319ac0c585a7eb148afd5ec71c5713152e2d4bbd24775ce9d08fb2977a444  numerics/independent_arb.py
+-9c21e14a7c5c2da758b523ee58b124312ea092eced2d645062aecc108a34289e  numerics/make_tables.py
+-4546497b98484495a12ab2018484953730ebc6f381611dbb8171c4ca0e6f6477  numerics/output/.DS_Store
++9790a6ca280bbb8c2cb5e3d020d38f72adfdf8d5eaba119fa0da3ceea4cbf9cd  numerics/make_tables.py
+ 50ea121d67b960cfff3dcf5bbb0147ab81b744efcb07aa196b408655161fa8cf  numerics/output/enclosure_summary.json
+ 25de62261293fcd5f1873c63197ea7c0f0ba65424abc3e26e9d2698ba7c0f7c0  numerics/output/enclosure_table.tex
+ 9603ba5843175cd02e6ab683c6367746a63f476fe6be5f6ed1929823d5eaad24  numerics/output/independent_1p8/bounds.json
+@@ -49,7 +47,7 @@ ab38afbebe4a931bb396b67379df90bd7ab248fef2e51b7ea6cb0a34f0249193  numerics/outpu
+ 97a2a258a9730e44c74eaca6b864bf9b66aeffeda9bcbdc560a8812eca49c5c1  numerics/output/log7_N128/analysis.json
+ 4e477ac1fdf58d5a02b2c5054204c7f1dd8ea360cf40e46c6ae0302e62441801  numerics/output/log7_N128/central_certificate.json
+ 2ad7953671ff7809c041a8a3ab1c69561b6f172123f224e58053362c69e5584b  numerics/output/log7_N128/enclosure.json
+-38cf9160a8d4803f3e073e1f59f930d9b20bd845d677138e18c062f84cc71dd2  numerics/output/paper_numbers.json
++053b79321e37aca79603ae833fa9eb378ba92ed9bc63f03b64d6f994466ea452  numerics/output/paper_numbers.json
+ 25eaab9ed943de4ea2e47db77e1af47c6ddc5ceb85274f09aa741f993ed2a2dd  numerics/requirements.txt
+ c67e6f449e26927c36ab31c422aa7a92cc0c595ea430ca8386ba1513a427fe18  numerics/review/crosscheck_1p8.json
+ 70ec8d364ab1e7a9994ed05eeaa5fcc0b5fef56fba0d35b3e3e3507ee32d9800  numerics/review/crosscheck_log2.json
+diff --git a/papers/weil-depth/STATUS.md b/papers/weil-depth/STATUS.md
+index 782fba2..8a4584c 100644
+--- a/papers/weil-depth/STATUS.md
++++ b/papers/weil-depth/STATUS.md
+@@ -1,12 +1,12 @@
+-# Verification status — Weil depth v0.3
++# Verification status — Weil depth v0.4
+ 
+-9 September 2026. Working draft; not externally reviewed by a human, not formally verified.
++10 September 2026. Working draft; not externally reviewed by a human, not formally verified.
+ 
+ | Claim or component | Status | Evidence and limits |
+ |---|---|---|
+ | Central normalization and prime-power generator (eq. 2.6, Prop. 3.1) | Analytically reviewed twice; confirmed numerically against zeta zeros | v0.2 review checked Suzuki's coefficient formulas; v0.3 review rederived the gamma symbol and kernels and confirmed $Q_{0,9/5}[f]=\sum_\rho\lvert\hat f_c(\gamma_\rho)\rvert^2$ for a smooth test to relative $6\times10^{-10}$ (`numerics/review_claude/check_fourier_side.py`) |
+ | Polynomial form core (Lemma 2.2) | Analytically reviewed | Dilation, mollification, $C^1$ polynomial approximation, boundedness of the finite-rank projection checked |
+-| Shift perturbation and continuation (Lemmas 3.2–3.3, Prop. 3.4) | Analytically reviewed; proof written out in v0.3 | Weighted Laplace-line realization, norm differentiability for positive shift, Sobolev restriction below 1/2, form identity for the smoothed vector, Gronwall, strong zero-shift limit; the $C_L$ bound carries a harmless spare factor 2 |
++| Shift perturbation and continuation (Lemmas 3.2–3.3, Prop. 3.4) | Analytically reviewed; proof written out in v0.3; one local step corrected in v0.4 | Weighted Laplace-line realization, norm differentiability for positive shift, Sobolev restriction below 1/2, form identity for the smoothed vector, Gronwall, strong zero-shift limit; the $C_L$ bound carries a harmless spare factor 2. The v0.3 proof of Lemma 3.3 asserted $\lvert p\pm\alpha\rvert,\lvert p\pm\beta\rvert\ge\eta-1/2$, false for $p-\beta$ (which does not occur in the denominator); v0.4 states the bounds actually used, $\lvert p-\alpha\rvert\ge\eta-1/2$ and $\lvert p+\beta\rvert\ge\eta+1/2$. The lemma is unaffected |
+ | Fractional infinite-tail estimate (Lemma 4.1, Prop. 4.3) | Analytically reviewed; sharpness quantified | Jacobi identity and weighted norm checked; exact single-mode value via Weber–Schafheitlin shows the floor is sharp to within $\log 2$ on single modes (Remark 4.2); closure step made explicit |
+ | Profile remainder (Lemma 4.4) | Analytically reviewed | Cauchy majorant 256 verified and shown to be loose by an order of magnitude |
+ | Full-output parity leakage and Schur test (Lemma 5.1, Prop. 5.2) | Analytically reviewed and recomputed | Both exact full Grams retained; Gram entries confirmed by direct quadrature to 20+ digits (`check_grams_and_floor.py`); head diagonal confirmed from the Fourier side to $10^{-11}$ (`check_head_exact.py`) |
+@@ -14,17 +14,20 @@
+ | Upper bounds (Prop. 6.2) and even ground state | Ball Rayleigh quotients PASS; even upper bound below odd floor in every row | `enclosure.json` per horizon; the ground-state vectors themselves are diagnostics |
+ | Small-shift, reflection and storage bounds at all horizons | Analytic consequence; exact rational checks PASS | `analysis.json` per horizon (`analyze_certificate.py` with the constants of Table 1); shift bounds are sufficient, not optimal |
+ | Outward ball serialization and replay | Reviewed; PASS | Dyadic reconstruction containment; hash binding (archive hash and matrices content hash); analytic bounds, trace and leakage rechecked on replay |
+-| Reproducibility without the archives | Verified | Archives are unversioned (`numerics-archives/`); rebuilds under Python 3.10/3.11/3.12 give identical `matrices_content_sha256` at 9/5 and `log7` |
++| Displayed rounding in Table 3 (certificate data) | Corrected in v0.4 | v0.3 printed nearest- or floor-rounded midpoints (e.g. tail floor `0.6075` at `log 7`, above the certified `0.60748…`; error `3.73e-37` and radius `4.6e-295`, below their certified upper values). `make_tables.py` now rounds lower endpoints down and upper endpoints up from the full ball, radius included (`0.6074`, `3.74e-37`, `4.7e-295`), and `paper_numbers.json` records endpoints rather than midpoints. Presentation only: the sign tests always used the stored balls |
++| Reproducibility without the archives | Verified in the tested environments | Archives are unversioned (layout and hashes in `ARCHIVES.md`); rebuilds under Python 3.10/3.11/3.12 with python-flint 0.9.0 / FLINT 3.6.0 give identical `matrices_content_sha256` at 9/5 and `log7`. Not a claim of bit-for-bit portability to other arithmetic libraries; the sign tests do not depend on the hash |
+ | Moment formulas | 45 independent numerical integrals PASS | `numerics/review/review_checks.json`; diagnostic quadrature, not interval certification |
+ | Sharper leakage error (Remark 5.3) | Proved | Not used in any reported certificate |
+ | Storage update and nested Schur identities (Appendix B) | Algebraically proved | Bookkeeping only; no arithmetic preservation theorem |
+-| `log 8` and horizons above `log 7` | Not certified | Scalar tail floor at $N=128$ is negative there; needs $N\approx310$ or more (Section 7.2) |
++| `log 8` and horizons above `log 7` | Not certified | Scalar tail floor at $N=128$ is negative there; keeping it near 0.6 needs $N\approx310$ or more (Section 7.2). These are resource projections for the present implementation: at fixed $L<3$ the scalar floor $a_{N,L}\to+\infty$ as $N\to\infty$, so it is cost, not an obstruction, that grows |
++| Decay of the enclosures with $L$ | Observed, not proved | $-\log_{10}\mu_j$ rises by about 11 per unit horizon between `log 2` and `log 3` and about 33 between 9/5 and `log 7`; finite differences on seven horizons, consistent with Zhu's empirical Landau–Widom law. No decay law at unbounded depth is claimed |
+ | All-depth sequence / RH | Not proved | The diagonal implication does not construct the required sequence |
+-| Novelty / literature | Limited check | Yoshida and Connes–Consani cover $L\le\log2$; Zhu's certified window (total length 1.6) has the same active primes as the `log 5` row and agrees with its floor; no exhaustive search |
++| Novelty / literature | Limited check | Yoshida and Connes–Consani cover $L\le\log2$ for test functions whose Fourier transform vanishes at the poles (pole term removed); the `log 2` row here concerns the full form without that condition, and the two normalizations have not been matched term by term. Zhu's certified window (total length 1.6) has the same active primes as the `log 5` row and its floor is consistent with ours (compatible lower bounds by different methods, not a cross-check); no exhaustive search |
+ 
+ Review and code were produced with language-model assistance under the author's direction
+ (OpenAI models for v0.1–v0.2; Anthropic's Claude for the v0.2 review and the v0.3
+-revisions). The two implementations, the Fourier-side checks and the enclosures all share
++revisions; an OpenAI model for the v0.3 review, without recomputation; Claude for the v0.4
++revisions, which changed no certificate). The two implementations, the Fourier-side checks and the enclosures all share
+ the analytic reduction; their agreement is not a separate proof of that reduction.
+ 
+ Known robustness fix in v0.3: `independent_arb.py` used `sum()` over an empty generator at
+diff --git a/papers/weil-depth/manuscript/finite_horizon_weil.tex b/papers/weil-depth/manuscript/finite_horizon_weil.tex
+index 1e708ee..d782c66 100644
+--- a/papers/weil-depth/manuscript/finite_horizon_weil.tex
++++ b/papers/weil-depth/manuscript/finite_horizon_weil.tex
+@@ -7,7 +7,7 @@
+ \usepackage[dvipsnames]{xcolor}
+ \usepackage{url}
+ \usepackage[colorlinks=true,linkcolor=MidnightBlue,citecolor=MidnightBlue,urlcolor=MidnightBlue]{hyperref}
+-\hypersetup{pdftitle={Finite-horizon Weil coercivity and shifted-zeta contraction (v0.3)},pdfauthor={Edward Baker}}
++\hypersetup{pdftitle={Finite-horizon Weil coercivity and shifted-zeta contraction (v0.4)},pdfauthor={Edward Baker}}
+ \numberwithin{equation}{section}
+ \newtheorem{theorem}{Theorem}[section]
+ \newtheorem{proposition}[theorem]{Proposition}
+@@ -35,7 +35,7 @@
+ \title{Finite-horizon Weil coercivity\protect\\ and shifted-zeta contraction\protect\\[5pt]
+ \large Two-sided certificates for the finite-window Weil form through total horizon $\log 7$}
+ \author{Edward Baker}
+-\date{Working draft, version 0.3\quad---\quad 9 September 2026}
++\date{Working draft, version 0.4\quad---\quad 10 September 2026}
+ 
+ \begin{document}
+ \maketitle
+@@ -58,17 +58,19 @@ matrices that retain the exact reflection-parity coupling; the resulting
+ $64\times64$ Schur inequalities are verified in ball arithmetic with an
+ explicit analytic profile remainder. Upper bounds are ball Rayleigh quotients
+ of retained polynomial vectors. At every certified horizon the bottom of the
+-spectrum lies in the even reflection sector, and the certified minimum decays
+-super-exponentially in $L$. An even-in-shift generator identity converts each
+-floor into a small-shift contraction, for instance
++spectrum lies in the even reflection sector, and across the sampled horizons
++the two-sided enclosures exhibit a rapidly increasing logarithmic decay rate,
++consistent with the empirical Landau--Widom picture; no decay law at unbounded
++depth is proved. An even-in-shift generator identity converts each floor into
++a small-shift contraction, for instance
+ $\norm{V_{\omega,L}}\le\exp(-6\times10^{-29}\omega)$ for
+ $0<\omega\le4\times10^{-15}$ and $L\le\log7$, with quantitative
+ reflection-positivity and cumulative-storage bounds. A second implementation
+ reproduces every certificate, and the matrices were checked against the
+ Fourier-side definition of the form. The results are finite-depth statements:
+ they give neither a zero-free region nor an all-depth positivity theorem, and
+-we quantify why the present scalar tail bound cannot reach total horizons much
+-beyond $2.7$.
++we estimate the rapidly increasing computational cost of extending the present
++scalar tail bound to larger horizons.
+ \end{abstract}
+ 
+ \noindent\textbf{Keywords.} Weil positivity; Riemann zeta function; causal
+@@ -153,13 +155,18 @@ Three features of Table~\ref{tab:main} deserve comment. First, the enclosures
+ are tight: the ratio $\mu_j/m_j$ is below $1.3$ through $9/5$ and below $5$ at
+ $\log7$, so the floors are within a small factor of the true bottom of the
+ spectrum, and the smallness of the constants is a property of the form, not of
+-the method. Second, the certified minimum decays super-exponentially in $L$:
+-$-\log_{10}\mu_j$ grows by about $11$ per unit horizon between $\log2$ and
+-$\log3$ and by about $33$ per unit horizon between $9/5$ and $\log7$. This is
+-the Landau--Widom-type collapse discussed by Zhu \cite{Zhu2026}. Third, the
+-shift intervals $h_j$ are fixed by $m_j$ and the quadratic perturbation bound
+-of Lemma~\ref{lem:change}, $h_j\approx\sqrt{3m_j/2C_j}$; only at $\log2$,
+-where no prime term is present, is the interval macroscopic.
++the method. Second, the enclosures fall rapidly along the profile, at an
++increasing logarithmic rate: $-\log_{10}\mu_j$ grows by about $11$ per unit
++horizon between $\log2$ and $\log3$ and by about $33$ per unit horizon between
++$9/5$ and $\log7$. These finite-difference slopes are observations on seven
++horizons. They prove no decay law as $L\to\infty$, which is exactly the regime
++that remains open; they are consistent with the empirical Landau--Widom law
++that Zhu \cite{Zhu2026} fits to his data and formulates as a conjecture, and
++whose only proved large-window form is conditional on RH. Third, the shift
++intervals $h_j$ are fixed by $m_j$ and the quadratic perturbation bound of
++Lemma~\ref{lem:change}, $h_j\approx\sqrt{3m_j/2C_j}$, and therefore shrink
++with the floors along the sampled horizons; only at $\log2$, where no prime
++term is present, is the interval macroscopic.
+ 
+ The proof has three components. First, differentiating the finite Euler
+ product gives a generator even in $\omega$ and a bounded perturbation
+@@ -173,11 +180,26 @@ would not suffice. Upper bounds need only the retained head.
+ \subsection{Relation to earlier work}
+ 
+ Positivity of the Weil form on windows of total length at most $\log2$, where
+-no prime term is present, is classical: Yoshida proved it in
+-\cite{Yoshida1992}, and Connes and Consani \cite{ConnesConsani2020} reprove
+-and interpret it through Sonin spaces and a compressed scaling action, as part
+-of the operator-theoretic program pursued with Moscovici and van Suijlekom.
+-Our $\log2$ row recovers this range with an explicit two-sided constant.
++no prime term is present, is classical, with the following hypotheses. Yoshida
++\cite{Yoshida1992} proved, in the formulation quoted in the introduction of
++\cite{ConnesConsani2020}, that the Weil functional is nonnegative on smooth
++positive-definite functions supported in $(1/2,2)$ whose Fourier transform
++vanishes at $\pm i/2$. Connes and Consani \cite[Theorem~1]{ConnesConsani2020}
++prove, for $g$ supported in $[2^{-1/2},2^{1/2}]$ with Fourier transform
++vanishing at $i/2$ and at $0$, the stronger inequality bounding the functional
++of $g*g^*$ below by the trace of a manifestly nonnegative operator built from
++the compressed scaling action, as part of the operator-theoretic program
++pursued with Moscovici and van Suijlekom. In the coordinates of
++Section~\ref{sec:operators} the support condition is total length $\log2$,
++and the vanishing conditions at $\pm i/2$ remove the pole contribution of the
++explicit formula, which in the normalization of \eqref{eq:weil} is the
++indefinite term $2|C(f)|^2-2|S(f)|^2$. Our $\log2$ row concerns the full form
++\eqref{eq:weil} on all of $\DD_{\log,\log2}$, pole term included and with no
++vanishing condition. On test functions for which the pole term vanishes,
++\eqref{eq:weil} reduces to the pole-free functional, so there the row
++restricts, up to the normalization of the functional, to a quantitative
++version of the classical statement; elsewhere it is a different statement,
++and we have not matched the two normalizations term by term.
+ Beyond $\log2$ prime terms enter, and the positivity statements we are aware
+ of are computer assisted. Zhu \cite{Zhu2026} certifies
+ $Q\succeq8.9\times10^{-18}$ at total length $1.6$ (his window parameter is a
+@@ -188,9 +210,11 @@ state is simple and even, and argues that any such one-stroke certificate must
+ resolve frequencies up to a threshold that is doubly exponential in the
+ horizon. Our $\log5$ row has the same active primes as his window and, since
+ $\lambda_{\min}$ is nonincreasing in $L$, implies
+-$\lambda_{\min}(1.6)\ge8.95\times10^{-18}$ by a different reduction; the
+-agreement of the two lower bounds to two digits is a useful cross-check between
+-the programs. We do not use his certificate. The specific contributions here
++$\lambda_{\min}(1.6)\ge8.95\times10^{-18}$ by a different reduction, consistent
++with his reported enclosure. The closeness of the two lower bounds is
++compatible evidence, not a cross-check of either implementation: lower bounds
++are not estimates with two-sided error bars, and the two windows differ. We do
++not use his certificate. The specific contributions here
+ are the fractional tail bound of Section~\ref{sec:tail}, the full-output
+ parity reduction of Section~\ref{sec:schur}, two-sided certificates at seven
+ horizons through $\log7$, and the explicit positive-shift consequences. The
+@@ -452,9 +476,13 @@ $s$, and their $s$-derivatives are Dirichlet series with coefficients
+ $O(\log^jn)$, also absolutely convergent and bounded. The logarithmic
+ derivative gives the displayed arithmetic part of $a_s$. For the gamma factor,
+ \eqref{eq:gammafactor} gives $K^\gamma_s=\pi^s\rho_s(p)\,
+-\Gamma(\tfrac{p+\alpha}2)/\Gamma(\tfrac{p+\beta}2)$ with a rational factor
+-$\rho_s$ whose denominators satisfy $|p\pm\alpha|,|p\pm\beta|\ge\eta-\tfrac12$
+-on the line, so $\rho_s$ is bounded with bounded $s$-derivatives. By the
++\Gamma(\tfrac{p+\alpha}2)/\Gamma(\tfrac{p+\beta}2)$ with the rational factor
++$\rho_s(p)=(p+\alpha)(p-\beta)/((p-\alpha)(p+\beta))$, where
++$\alpha=\tfrac12-s\in[0,\tfrac12]$ and $\beta=\tfrac12+s\in[\tfrac12,1]$. Its
++denominator factors satisfy $|p-\alpha|\ge\Re(p-\alpha)\ge\eta-\tfrac12$ and
++$|p+\beta|\ge\eta+\tfrac12$ uniformly on the line (the numerator factor
++$p-\beta$ can be as small as $\eta-1$ in modulus, which is harmless), so
++$\rho_s$ is bounded with bounded $s$-derivatives. By the
+ uniform Stirling expansion \cite[\S5.11(iii)]{DLMF},
+ $|\Gamma(z+a)/\Gamma(z+b)|$ is comparable to $|z|^{\Re(a-b)}$ uniformly for
+ $z=p/2$ on the line and $a,b$ in a compact set; here $\Re(a-b)=-s$, so the
+@@ -833,7 +861,7 @@ semidefinite Gram. Any numerical upper bound used here must include the
+ ball uncertainty; this refinement is not used to justify the reported runs.
+ \end{remark}
+ 
+-\section{Finite construction and the two certificates}\label{sec:computation}
++\section{Finite construction and the certificates}\label{sec:computation}
+ 
+ \subsection{Polynomial and logarithmic output formulas}
+ 
+@@ -1137,9 +1165,10 @@ implication is the classical Weil criterion
+ The proposition requires neither a depth-independent coercivity margin nor
+ a fixed positive shift interval. Nevertheless, constructing the entire
+ sequence remains the missing all-depth statement; the seven horizons certified
+-here are not such a sequence, and Table~\ref{tab:main} shows the shifts
+-$\omega_j$ that the present method can certify collapsing super-exponentially
+-with the horizon.
++here are not such a sequence, and Table~\ref{tab:main} shows the shift
++intervals $h_j$ that the present method certifies shrinking rapidly along the
++sampled horizons. The finite data establish no rate for that collapse at
++unbounded depth.
+ 
+ \subsection{Limitations: the scale of the next horizons}\label{sec:limits}
+ 
+@@ -1150,21 +1179,34 @@ The scalar tail floor \eqref{eq:tailformula} is
+ \]
+ up to the small smooth-profile term. It pays separately for every arithmetic
+ delay norm, and $\Sigma_L$ grows like a multiple of $e^{L/2}$ by the prime
+-number theorem. The floor the finite test needs is the relative-coupling
+-diagnostic of Table~\ref{tab:certificate}, which rises from $0.17$ at $\log2$
+-to $0.59$ at $\log7$ while $a_{128,L}$ falls from $4.07$ to $0.61$. At the
++number theorem. What follows are resource projections for the present
++implementation, not impossibility bounds. Indeed the scalar floor alone never
++obstructs the test at a fixed horizon: for $0<L<3$ and any admissible profile
++degree $M$ the constants $K_L$ and $\Sigma_L$ in \eqref{eq:tailformula} are
++finite, so $a_{N,L}\to+\infty$ as $N\to\infty$. The retained head, the
++coupling, the profile error and the cost of the ball arithmetic decide whether
++a certificate is obtained, and the arithmetic loss governs how fast that cost
++grows. The floor the finite test needed at the certified horizons is the
++relative-coupling diagnostic of Table~\ref{tab:certificate}, which rises from
++$0.17$ at $\log2$ to $0.59$ at $\log7$ while $a_{128,L}$ falls from $4.07$ to
++$0.61$; whether a floor near $0.6$ suffices at an uncomputed horizon is not
++known, since the required coupling has risen with every new prime. At the
+ next prime-active horizon $\log8$, where the generator acquires the delay
+ $\log7$ and the endpoint delay $\log8$ vanishes, $\Sigma_{\log8}\approx3.13$
+ and the tail floor at $N=128$ is negative ($\approx-0.20$); it is $0.52$ at
+-$N=256$ and $1.22$ at $N=512$. Keeping the floor near $0.6$ needs roughly
++$N=256$ and $1.22$ at $N=512$. Keeping the floor near $0.6$ would need roughly
+ $N\approx310$ at $\log8$, $950$ at $\log11$, $1900$ at $\log13$, $4400$ at
+-$\log16$, and $27{,}000$ as $L\to3$, where the radius of Lemma~\ref{lem:profile}
+-also runs out, while the certified margin itself shrinks by about
+-$10^{-34}$ per unit of horizon and the model error must be kept below it.
+-Matrix assembly scales like $N(N+M)^2$ ball products. Thus the method as it
+-stands can reach perhaps $\log13$ to $\log16$ with effort and stops there.
+-This is the same doubly exponential threshold that Zhu \cite{Zhu2026} derives
+-for one-stroke certificates, seen from the tail side.
++$\log16$, and $27{,}000$ as $L\to3$, the boundary of the domain of the proved
++profile remainder (Lemma~\ref{lem:profile}). A local extrapolation of
++Table~\ref{tab:main} suggests that the certified margin shrinks by a factor of
++roughly $10^{-34}$ per additional unit of horizon, and the model error must be
++kept below it. Matrix assembly scales like $N(N+M)^2$ ball products.
++Extrapolating these figures, the cost of the present implementation rises
++rapidly beyond the certified range, and horizons near $\log13$ to $\log16$
++would be demanding for it; none of this predicts whether a certification there
++succeeds or fails. The growth of $\Sigma_L$ is the tail-side appearance of the
++doubly exponential resolution threshold that Zhu \cite{Zhu2026} derives for
++one-stroke certificates.
+ 
+ The small-shift intervals in Theorem~\ref{thm:main} are consequences of the
+ stated coercivity floors and the quadratic perturbation estimate; they are
+@@ -1283,10 +1325,15 @@ $\widehat D=D-E^*E/\alpha$, and the two tests
+ \end{equation}
+ are sufficient for $Q_0\succeq mI$, by two completions of the square. The
+ cross-Gram $C^*E$ must be retained; full-output parity Grams for the enlarged
+-retained space supply $C^*C$, $C^*E$ and $E^*E$. With the same enlarged space
+-and scalar far-tail floor this is a reordering of the existing test, not a
+-stronger theorem; it becomes one only with a proved structured lower bound
+-for $F$.
++retained space supply $C^*C$, $C^*E$ and $E^*E$. The blocks displayed here are
++those of the exact form $Q_0$, whereas constructed Grams enclose the model
++form $\widetilde Q$ of Lemma~\ref{lem:profile} in ball arithmetic; a
++certificate built on \eqref{eq:nested-schur} would therefore have to carry the
++profile error $\eta_M$ and the ball radii into the head, the buffer and every
++coupling product, as \eqref{eq:eps} does for the present two-block test. With
++the same enlarged space and scalar far-tail floor this is a reordering of the
++existing test, not a stronger theorem; it becomes one only with a proved
++structured lower bound for $F$.
+ 
+ \section{Reproducibility and review map}\label{app:reproduce}
+ 
+@@ -1310,8 +1357,12 @@ each version are kept under \path{archive/}. The core numerical files are:
+   (\path{central_certificate.json}), the enclosure record, and the continuation
+   analysis. The saved ball matrices themselves (\path{central_matrices.json.gz},
+   about 13~MB per horizon) are deterministic output of the builder and are
+-  distributed separately rather than versioned; a rebuild reproduces the content
+-  hash exactly, as was checked across three Python versions;
++  distributed separately rather than versioned; their expected layout and
++  hashes are documented in \path{ARCHIVES.md}. In the tested environments
++  (three Python versions with the same python-flint and FLINT releases) a
++  rebuild reproduced the content hash exactly; the hash identifies the saved
++  data and is not a claim of bit-for-bit portability across other arithmetic
++  libraries or versions;
+ \item \path{independent_arb.py}: the separately written construction from
+   the printed formulas, with its pivot records at all seven horizons and saved
+   matrices at $9/5$ and $\log7$;
+@@ -1359,7 +1410,10 @@ This draft and its numerical implementation were prepared with substantial
+ assistance from language models, under the author's direction: OpenAI models
+ drafted versions 0.1 and 0.2 and the accompanying review; Anthropic's Claude
+ performed the independent verification of version 0.2 (Fourier-side checks,
+-rebuilds, enclosures) and drafted the version 0.3 revisions. The record
++rebuilds, enclosures) and drafted the version 0.3 revisions; an OpenAI model
++reviewed version 0.3 without recomputation, and Claude prepared the version
++0.4 revisions, which concern presentation, scope of the stated claims and one
++local step of a proof, and required no new numerical certification. The record
+ distinguishes analytic proofs, validated arithmetic, and exploratory
+ diagnostics. The manuscript is being circulated for mathematical and
+ computational review; no result has been human-verified end to end or
+diff --git a/papers/weil-depth/manuscript/tables_certificate.tex b/papers/weil-depth/manuscript/tables_certificate.tex
+index e71c45f..d29e68e 100644
+--- a/papers/weil-depth/manuscript/tables_certificate.tex
++++ b/papers/weil-depth/manuscript/tables_certificate.tex
+@@ -1,35 +1,35 @@
+ \begin{table}[ht]
+ \centering
+-\caption{Certificate data at $N=128$. The tail floor $a_{128,L}$ is an outward lower value of \eqref{eq:tailformula}; $\epsilon$ is the outward upper value of \eqref{eq:eps} subtracted before each sign test; pivots are the smallest LDL pivots at the floor $m_j$ (rounded summaries, not spectral bounds); the radius is the largest ball radius among the four saved matrices. ``Required'' is the floating-point diagnostic $\lambda_{\max}(q_r^{-1/2}E_rq_r^{-1/2})$, the tail floor the model test would need at level zero.}
++\caption{Certificate data at $N=128$. The tail floor $a_{128,L}$ is an outward lower value of \eqref{eq:tailformula} (lower endpoint, rounded down); $\epsilon$ is the outward upper value of \eqref{eq:eps} subtracted before each sign test (upper endpoint, rounded up); pivots are lower values of the smallest LDL pivots at the floor $m_j$ (rounded down; summaries, not spectral bounds); the radius is the largest ball radius among the four saved matrices (upper endpoint, rounded up). ``Required'' is the floating-point diagnostic $\lambda_{\max}(q_r^{-1/2}E_rq_r^{-1/2})$, the tail floor the model test would need at level zero, rounded to nearest. The certified endpoints themselves are in the JSON records.}
+ \label{tab:certificate}
+ \footnotesize\setlength{\tabcolsep}{3.5pt}
+ \begin{tabular}{@{}lrrllllll@{}}
+ \toprule
+ $L$ & $M$ & bits & $a_{128,L}$ & $\epsilon$ & pivot (even) & pivot (odd) & radius & required\\
+ \midrule
+-$\log2$ & 220 & 1792 & 4.0675 & $1.44\times10^{-136}$ & $2.75\times10^{-2}$ & $1.08$ & $1.6\times10^{-344}$ & 0.166 / 0.166\\
+-$\log3$ & 220 & 1792 & 3.1089 & $2.79\times10^{-92}$ & $1.18\times10^{-2}$ & $1\times10^{-1}$ & $2.5\times10^{-305}$ & 0.224 / 0.225\\
+-$\log4$ & 220 & 1792 & 2.2350 & $6.94\times10^{-70}$ & $5.71\times10^{-3}$ & $1.32\times10^{-2}$ & $9.3\times10^{-297}$ & 0.293 / 0.289\\
+-$\log5$ & 220 & 1792 & 1.5295 & $1.7\times10^{-55}$ & $7.53\times10^{-4}$ & $3.64\times10^{-3}$ & $5.6\times10^{-294}$ & 0.348 / 0.340\\
+-$\log6$ & 220 & 1792 & 0.6961 & $3.9\times10^{-45}$ & $6.88\times10^{-5}$ & $2.01\times10^{-4}$ & $1.2\times10^{-291}$ & 0.469 / 0.473\\
+-$9/5$ & 180 & 1536 & 0.6912 & $9.9\times10^{-36}$ & $5.67\times10^{-5}$ & $1.81\times10^{-4}$ & $9.3\times10^{-215}$ & 0.491 / 0.480\\
+-$\log7$ & 220 & 1792 & 0.6075 & $3.73\times10^{-37}$ & $1.69\times10^{-5}$ & $9.03\times10^{-5}$ & $4.6\times10^{-295}$ & 0.595 / 0.590\\
++$\log2$ & 220 & 1792 & 4.0674 & $1.45\times10^{-136}$ & $2.75\times10^{-2}$ & $1.08$ & $1.7\times10^{-344}$ & 0.166 / 0.166\\
++$\log3$ & 220 & 1792 & 3.1089 & $2.8\times10^{-92}$ & $1.18\times10^{-2}$ & $1\times10^{-1}$ & $2.6\times10^{-305}$ & 0.224 / 0.225\\
++$\log4$ & 220 & 1792 & 2.2350 & $6.95\times10^{-70}$ & $5.71\times10^{-3}$ & $1.32\times10^{-2}$ & $9.4\times10^{-297}$ & 0.293 / 0.289\\
++$\log5$ & 220 & 1792 & 1.5295 & $1.71\times10^{-55}$ & $7.53\times10^{-4}$ & $3.64\times10^{-3}$ & $5.7\times10^{-294}$ & 0.348 / 0.340\\
++$\log6$ & 220 & 1792 & 0.6961 & $3.91\times10^{-45}$ & $6.88\times10^{-5}$ & $2.01\times10^{-4}$ & $1.3\times10^{-291}$ & 0.469 / 0.473\\
++$9/5$ & 180 & 1536 & 0.6912 & $9.91\times10^{-36}$ & $5.67\times10^{-5}$ & $1.81\times10^{-4}$ & $9.4\times10^{-215}$ & 0.491 / 0.480\\
++$\log7$ & 220 & 1792 & 0.6074 & $3.74\times10^{-37}$ & $1.69\times10^{-5}$ & $9.03\times10^{-5}$ & $4.7\times10^{-295}$ & 0.595 / 0.590\\
+ \bottomrule
+ \end{tabular}
+ \end{table}
+ \begin{table}[ht]
+ \centering
+-\caption{Lowest five eigenvalues of the $64\times64$ head $q_r$ in each sector (floating-point diagnostics from the ball midpoints; not certified). The certified statements are the enclosures of Tables~\ref{tab:main} and~\ref{tab:sectors}.}
++\caption{Lowest five eigenvalues of the $64\times64$ head $q_r$ in each sector (floating-point diagnostics from the ball midpoints, rounded to nearest; not certified). The certified statements are the enclosures of Tables~\ref{tab:main} and~\ref{tab:sectors}.}
+ \label{tab:spectra}
+ \small
+ \begin{tabular}{@{}lll@{}}
+ \toprule
+ Horizon & sector & lowest five head eigenvalues\\
+ \midrule
+-$9/5$ & even & $4.13\times10^{-23}$,\ $7.24\times10^{-17}$,\ $1.47\times10^{-11}$,\ $4.01\times10^{-7}$,\ $2.76\times10^{-3}$\\
+-$9/5$ & odd & $7.22\times10^{-20}$,\ $4.18\times10^{-14}$,\ $3.26\times10^{-9}$,\ $3.69\times10^{-5}$,\ $6.88\times10^{-2}$\\
+-$\log7$ & even & $6.8\times10^{-28}$,\ $1.66\times10^{-21}$,\ $8.18\times10^{-16}$,\ $6.01\times10^{-11}$,\ $1.24\times10^{-6}$\\
+-$\log7$ & odd & $1.56\times10^{-24}$,\ $1.31\times10^{-18}$,\ $3.21\times10^{-13}$,\ $8.14\times10^{-9}$,\ $1.09\times10^{-4}$\\
++$9/5$ & even & $4.14\times10^{-23}$,\ $7.25\times10^{-17}$,\ $1.48\times10^{-11}$,\ $4.02\times10^{-7}$,\ $2.77\times10^{-3}$\\
++$9/5$ & odd & $7.22\times10^{-20}$,\ $4.19\times10^{-14}$,\ $3.26\times10^{-9}$,\ $3.7\times10^{-5}$,\ $6.88\times10^{-2}$\\
++$\log7$ & even & $6.8\times10^{-28}$,\ $1.66\times10^{-21}$,\ $8.19\times10^{-16}$,\ $6.02\times10^{-11}$,\ $1.25\times10^{-6}$\\
++$\log7$ & odd & $1.57\times10^{-24}$,\ $1.32\times10^{-18}$,\ $3.21\times10^{-13}$,\ $8.15\times10^{-9}$,\ $1.09\times10^{-4}$\\
+ \bottomrule
+ \end{tabular}
+ \end{table}
+diff --git a/papers/weil-depth/manuscript/tables_main.tex b/papers/weil-depth/manuscript/tables_main.tex
+index 0bdf822..742d2d0 100644
+--- a/papers/weil-depth/manuscript/tables_main.tex
++++ b/papers/weil-depth/manuscript/tables_main.tex
+@@ -1,6 +1,6 @@
+ \begin{table}[ht]
+ \centering
+-\caption{Certified two-sided bounds and continuation constants (Theorem~\ref{thm:main}). $m_j$ is an exact rational passing the full-operator test in both reflection sectors; $\mu_j$ is a certified upper bound (rounded up). $C_j$ is an integer exceeding the generator constant $C_{L_j}$ of \eqref{eq:CL}, and $h_j$, $d_j$ satisfy $m_j-C_jh_j^2/3\ge d_j$ exactly.}
++\caption{Certified two-sided bounds and continuation constants (Theorem~\ref{thm:main}). $m_j$ is an exact rational passing the full-operator test in both reflection sectors; $\mu_j$ is a certified upper bound (upper endpoint of the ball evaluation, rounded up). $C_j$ is an integer exceeding the generator constant $C_{L_j}$ of \eqref{eq:CL}, and $h_j$, $d_j$ are exact decimals satisfying $m_j-C_jh_j^2/3\ge d_j$.}
+ \label{tab:main}
+ \small\setlength{\tabcolsep}{4pt}\begin{tabular}{@{}lclllrll@{}}
+ \toprule
+@@ -18,7 +18,7 @@ $\log7$ & 1.946 & 2, 3, 4, 5 & $1.37\times10^{-28}$ & $6.81\times10^{-28}$ & 14
+ \end{table}
+ \begin{table}[ht]
+ \centering
+-\caption{Sector-wise enclosures. Floors are exact rationals passing the sector test; upper bounds are ball Rayleigh quotients plus the profile error, rounded up. In every row the even upper bound lies below the odd floor, so the bottom of the spectrum lies in the even sector.}
++\caption{Sector-wise enclosures. Floors are exact rationals passing the sector test; upper bounds are ball Rayleigh quotients plus the profile error, upper endpoints rounded up. In every row the even upper bound lies below the odd floor, so the bottom of the spectrum lies in the even sector.}
+ \label{tab:sectors}
+ \begin{tabular}{@{}lllll@{}}
+ \toprule
+diff --git a/papers/weil-depth/numerics/README.md b/papers/weil-depth/numerics/README.md
+index 6008011..f69521a 100644
+--- a/papers/weil-depth/numerics/README.md
++++ b/papers/weil-depth/numerics/README.md
+@@ -1,4 +1,4 @@
+-# Numerical supplement — v0.3
++# Numerical supplement — v0.4
+ 
+ Read `../STATUS.md` and the manuscript for the mathematical scope. Only python-flint (Arb)
+ and the standard library decide any sign; NumPy supplies diagnostic eigenvalues and mpmath
+@@ -17,7 +17,7 @@ Assertions must be enabled (`python -O` is rejected).
+ | `independent_arb.py` | Separately written construction from the printed formulas. |
+ | `compare_implementations.py` | All-entry overlap check of head and both Grams between the two implementations and replay of the independently saved Schur matrices, for every pair whose independent archive is present. |
+ | `review_checks.py` | Moment quadratures, Euler-derivative identities, fractional-tail combinations, parity control, LDL sign controls, failure controls; writes `review/review_checks.json`. |
+-| `make_tables.py` | Generates `../manuscript/tables_main.tex` and `tables_certificate.tex` from the JSON records, with consistency assertions. |
++| `make_tables.py` | Generates `../manuscript/tables_main.tex` and `tables_certificate.tex` from the JSON records, with consistency assertions. Every displayed lower value is the lower endpoint of its ball rounded down and every upper value the upper endpoint rounded up (radius included); exact rationals are printed exactly; only diagnostics are rounded to nearest. |
+ | `review_claude/` | Independent verification scripts from the v0.2 review: Fourier-side evaluation of the form against zeta zeros, Weber–Schafheitlin head check, direct-quadrature Gram check, floor sweeps. See its `README.md`. |
+ | `output/<horizon>_N128/` | For `log2 … log6`, `length_1p8` (= 9/5) and `log7`: `central_certificate.json` (pivots at the certified floor, archive hash and matrices content hash), `enclosure.json`, `analysis.json`. The ball archive `central_matrices.json.gz` itself is **not versioned** (see below). |
+ | `output/independent_*/` | Independent-implementation certificates for all seven horizons (their archives are likewise unversioned; those for `1p8` and `log7` are kept in `numerics-archives/`). |
+@@ -27,13 +27,16 @@ Assertions must be enabled (`python -O` is rejected).
+ ## The ball archives
+ 
+ Every `central_matrices.json.gz` (about 13 MB) is deterministic output of `certify_arb.py` for
+-the parameters in the certificate, so the archives are kept outside git in
+-`../numerics-archives/` (its own `README.md` and `SHA256SUMS.txt`). Two hashes tie a
+-certificate to its data: `matrix_archive_sha256` (the exact `.gz` file) and
++the parameters in the certificate, so the archives are kept outside git; the expected layout,
++the hashes and how to obtain or regenerate them are documented in the tracked `../ARCHIVES.md`.
++Two hashes tie a certificate to its data: `matrix_archive_sha256` (the exact `.gz` file) and
+ `matrices_content_sha256` (canonical JSON of the four ball matrices and run parameters, independent
+-of timestamps and runtime metadata). A rebuild reproduces the content hash exactly — the 9/5 and
+-`log7` archives built under Python 3.12 and 3.10 hash identically to rebuilds under 3.11 — so a
+-reader can regenerate an archive and confirm it is the same object without the original file.
++of timestamps and runtime metadata). In the tested environments a rebuild reproduced the content
++hash exactly — the 9/5 and `log7` archives built under Python 3.12 and 3.10 hash identically to
++rebuilds under 3.11, all with python-flint 0.9.0 / FLINT 3.6.0 — so a reader in such an
++environment can regenerate an archive and confirm it is the same object without the original
++file. This is an identity check for the saved data, not a claim of bit-for-bit portability across
++other Arb/FLINT releases; the sign tests themselves never depend on a hash.
+ To use saved archives, copy them back into `output/` or set `WEIL_ARCHIVES=/path/to/numerics-archives`;
+ `certify_arb.py --reuse`, `enclose_certificate.py`, `analyze_certificate.py` and
+ `compare_implementations.py` fall back to that folder when a file is missing from `output/`.
+@@ -77,7 +80,12 @@ python make_tables.py
+ 
+ `make_tables.py` asserts that each `central_certificate.json` floor equals the enclosure
+ floor, that each `analysis.json` continuation matches the enclosure constants, and that
+-the even upper bound is below the odd floor in every row.
++the even upper bound (upper endpoint of its ball) is below the odd floor in every row. It
++parses each Arb ball string as an interval and rounds outward: lower values (tail floor,
++pivots) from the lower endpoint downward, upper values (upper bounds, model error, matrix
++radius) from the upper endpoint upward. `output/enclosure_table.tex`, written by
++`enclose_certificate.py --summary`, is a plain summary record that prints the midpoint of
++each printed upper-bound ball; it is not an input to the manuscript.
+ 
+ ## Rules that the code enforces and the reader should keep
+ 
+diff --git a/papers/weil-depth/numerics/make_tables.py b/papers/weil-depth/numerics/make_tables.py
+index 6524f65..9e9d08c 100644
+--- a/papers/weil-depth/numerics/make_tables.py
++++ b/papers/weil-depth/numerics/make_tables.py
+@@ -1,9 +1,22 @@
+ #!/usr/bin/env python3
+ """Generate the LaTeX tables of the manuscript from the JSON records in output/.
+-Writes manuscript/tables_generated.tex (input by finite_horizon_weil.tex)."""
+-import json, math, re
++Writes manuscript/tables_main.tex and manuscript/tables_certificate.tex (input by
++finite_horizon_weil.tex) and output/paper_numbers.json.
++
++Rounding policy (v0.4).  Every enclosed quantity is stored as an Arb ball string
++'[mid +/- rad]'.  A displayed lower value is the LOWER endpoint mid-rad rounded DOWN,
++so the true quantity is at least the printed number; a displayed upper value is the
++UPPER endpoint mid+rad rounded UP, so the true quantity is at most the printed number.
++Exact rationals (floors, shifts, decays) are printed exactly, and the script asserts
++this.  Only floating-point diagnostics (head eigenvalues, relative coupling) are rounded
++to nearest, and their captions say so.  The radius is never discarded before rounding.
++"""
++import json
+ from pathlib import Path
+ from fractions import Fraction as F
++from decimal import Decimal, getcontext, ROUND_CEILING, ROUND_FLOOR, ROUND_HALF_EVEN
++
++getcontext().prec = 120          # well above the 35-40 digits of the printed balls
+ 
+ root = Path(__file__).resolve().parent
+ folders = ['log2_N128', 'log3_N128', 'log4_N128', 'log5_N128', 'log6_N128', 'length_1p8_N128', 'log7_N128']
+@@ -11,24 +24,65 @@ labels = {'log2': r'$\log2$', 'log3': r'$\log3$', 'log4': r'$\log4$', 'log5': r'
+           '9/5': r'$9/5$', 'log7': r'$\log7$'}
+ 
+ 
+-def sci(s, up=False, sig=3):
+-    """Decimal string -> LaTeX a\\times10^{b} with `sig` significant figures; round up if `up`."""
+-    from decimal import Decimal, ROUND_CEILING, ROUND_FLOOR
+-    s = s.strip('[').split(' ')[0]
++def ball(s):
++    """Arb ball string '[mid +/- rad]' (or '[+/- rad]', or a plain decimal) -> (lower, upper) as exact Decimals."""
++    if not isinstance(s, str):
++        s = repr(s)
++    s = s.strip()
++    if s.startswith('['):
++        body = s[1:-1].strip()
++        if '+/-' in body:
++            mid, rad = body.split('+/-')
++            mid = Decimal(mid.strip() or '0')
++            rad = Decimal(rad.strip())
++        else:
++            mid, rad = Decimal(body), Decimal(0)
++        assert rad >= 0
++        return mid - rad, mid + rad
+     x = Decimal(s)
++    return x, x
++
++
++def _endpoint(s, mode):
++    lo, hi = ball(s)
++    if mode == 'lower':
++        return lo, ROUND_FLOOR
++    if mode == 'upper':
++        return hi, ROUND_CEILING
++    if mode == 'nearest':                       # diagnostics only
++        return (lo + hi) / 2, ROUND_HALF_EVEN
++    if mode == 'exact':
++        assert lo == hi, f'{s!r} is not an exact value'
++        return lo, ROUND_FLOOR
++    raise ValueError(mode)
++
++
++def sci(s, mode, sig=3):
++    """Directed rounding of an enclosure endpoint to `sig` significant figures, as LaTeX a\\times10^{b}.
++
++    mode='lower': lower endpoint rounded down (true value >= printed);
++    mode='upper': upper endpoint rounded up (true value <= printed);
++    mode='exact': the value must be an exact decimal with at most `sig` significant figures;
++    mode='nearest': midpoint rounded to nearest (floating-point diagnostics only)."""
++    x, rnd = _endpoint(s, mode)
++    assert x > 0, f'non-positive value {s!r}'
+     e = x.adjusted()
+-    q = x.scaleb(-e)                      # 1 <= q < 10
+-    q = q.quantize(Decimal(1).scaleb(-(sig-1)), rounding=ROUND_CEILING if up else ROUND_FLOOR)
++    q = x.scaleb(-e)                           # 1 <= q < 10, exact
++    q = q.quantize(Decimal(1).scaleb(-(sig - 1)), rounding=rnd)
+     if q >= 10:
+-        q = q/10; e += 1
++        q = q.scaleb(-1); e += 1
++    if mode == 'exact':
++        assert q.scaleb(e) == x, f'{s!r} is not exact to {sig} significant figures'
+     m = format(q, 'f').rstrip('0').rstrip('.')
+     if e == 0:
+         return m
+     return f'{m}\\times10^{{{e}}}'
+ 
+ 
+-def plain(s, sig=4):
+-    return f'{float(s.strip("[").split(" ")[0]):.{sig}f}'
++def plain(s, mode, dec=4):
++    """Directed rounding of an enclosure endpoint to `dec` decimal places (same modes as sci)."""
++    x, rnd = _endpoint(s, mode)
++    return format(x.quantize(Decimal(1).scaleb(-dec), rounding=rnd), 'f')
+ 
+ 
+ rows = []
+@@ -40,13 +94,16 @@ for f in folders:
+     assert F(c['central_coercivity']) == F(e['central_floor_rational'])
+     assert F(a['continuation']['shift_maximum']) == F(e['continuation']['shift_rational'])
+     assert F(a['continuation']['decay_coefficient']) == F(e['continuation']['decay_rational'])
++    assert F(e['central_floor']) == F(e['central_floor_rational'])
++    for sec in ('even', 'odd'):
++        assert F(e['sectors'][sec]['certified_floor']) == F(e['sectors'][sec]['certified_floor_rational'])
+     rows.append((e, c, a))
+ 
+ out = []
+ # ---- Table: main theorem
+ out.append(r'''\begin{table}[ht]
+ \centering
+-\caption{Certified two-sided bounds and continuation constants (Theorem~\ref{thm:main}). $m_j$ is an exact rational passing the full-operator test in both reflection sectors; $\mu_j$ is a certified upper bound (rounded up). $C_j$ is an integer exceeding the generator constant $C_{L_j}$ of \eqref{eq:CL}, and $h_j$, $d_j$ satisfy $m_j-C_jh_j^2/3\ge d_j$ exactly.}
++\caption{Certified two-sided bounds and continuation constants (Theorem~\ref{thm:main}). $m_j$ is an exact rational passing the full-operator test in both reflection sectors; $\mu_j$ is a certified upper bound (upper endpoint of the ball evaluation, rounded up). $C_j$ is an integer exceeding the generator constant $C_{L_j}$ of \eqref{eq:CL}, and $h_j$, $d_j$ are exact decimals satisfying $m_j-C_jh_j^2/3\ge d_j$.}
+ \label{tab:main}
+ \small\setlength{\tabcolsep}{4pt}\begin{tabular}{@{}lclllrll@{}}
+ \toprule
+@@ -54,7 +111,7 @@ $L_j$ & value & delays & floor $m_j$ & upper $\mu_j$ & $C_j$ & shift $h_j$ & dec
+ \midrule''')
+ for e, c, a in rows:
+     act = ', '.join(str(n) for n, p, k in e['active_prime_powers']) or 'none'
+-    out.append(f"{labels[e['horizon_label']]} & {plain(e['horizon_value'],3)} & {act} & ${sci(e['central_floor'])}$ & ${sci(e['sectors']['even']['certified_upper_bound'], up=True)}$ & {e['continuation']['generator_bound']} & ${sci(e['continuation']['shift_maximum'],sig=1)}$ & ${sci(e['continuation']['decay'],sig=1)}$\\\\")
++    out.append(f"{labels[e['horizon_label']]} & {plain(e['horizon_value'],'nearest',3)} & {act} & ${sci(e['central_floor'],'exact')}$ & ${sci(e['sectors']['even']['certified_upper_bound'],'upper')}$ & {e['continuation']['generator_bound']} & ${sci(e['continuation']['shift_maximum'],'exact',sig=1)}$ & ${sci(e['continuation']['decay'],'exact',sig=1)}$\\\\")
+ out.append(r'''\bottomrule
+ \end{tabular}
+ \end{table}''')
+@@ -62,7 +119,7 @@ out.append(r'''\bottomrule
+ # ---- Table: sectors
+ out.append(r'''\begin{table}[ht]
+ \centering
+-\caption{Sector-wise enclosures. Floors are exact rationals passing the sector test; upper bounds are ball Rayleigh quotients plus the profile error, rounded up. In every row the even upper bound lies below the odd floor, so the bottom of the spectrum lies in the even sector.}
++\caption{Sector-wise enclosures. Floors are exact rationals passing the sector test; upper bounds are ball Rayleigh quotients plus the profile error, upper endpoints rounded up. In every row the even upper bound lies below the odd floor, so the bottom of the spectrum lies in the even sector.}
+ \label{tab:sectors}
+ \begin{tabular}{@{}lllll@{}}
+ \toprule
+@@ -70,9 +127,11 @@ Horizon & even floor & even upper bound & odd floor & odd upper bound\\
+ \midrule''')
+ for e, c, a in rows:
+     s = e['sectors']
+-    out.append(f"{labels[e['horizon_label']]} & ${sci(s['even']['certified_floor'])}$ & ${sci(s['even']['certified_upper_bound'],up=True)}$ & ${sci(s['odd']['certified_floor'])}$ & ${sci(s['odd']['certified_upper_bound'],up=True)}$\\\\")
+-    # certified statement: even upper < odd floor
+-    assert F(s['even']['certified_upper_bound'].strip('[').split(' ')[0]) < F(s['odd']['certified_floor_rational'])
++    out.append(f"{labels[e['horizon_label']]} & ${sci(s['even']['certified_floor'],'exact')}$ & ${sci(s['even']['certified_upper_bound'],'upper')}$ & ${sci(s['odd']['certified_floor'],'exact')}$ & ${sci(s['odd']['certified_upper_bound'],'upper')}$\\\\")
++    # certified statement: even upper bound (upper endpoint of its ball) < odd floor (exact rational)
++    assert F(ball(s['even']['certified_upper_bound'])[1]) < F(s['odd']['certified_floor_rational'])
++    # and the tabulated (rounded-up) even upper bound is at least the floor of its own sector
++    assert F(ball(s['even']['certified_upper_bound'])[1]) >= F(s['even']['certified_floor_rational'])
+ out.append(r'''\bottomrule
+ \end{tabular}
+ \end{table}''')
+@@ -80,7 +139,7 @@ out.append(r'''\bottomrule
+ # ---- Table: certificate data
+ out.append(r'''\begin{table}[ht]
+ \centering
+-\caption{Certificate data at $N=128$. The tail floor $a_{128,L}$ is an outward lower value of \eqref{eq:tailformula}; $\epsilon$ is the outward upper value of \eqref{eq:eps} subtracted before each sign test; pivots are the smallest LDL pivots at the floor $m_j$ (rounded summaries, not spectral bounds); the radius is the largest ball radius among the four saved matrices. ``Required'' is the floating-point diagnostic $\lambda_{\max}(q_r^{-1/2}E_rq_r^{-1/2})$, the tail floor the model test would need at level zero.}
++\caption{Certificate data at $N=128$. The tail floor $a_{128,L}$ is an outward lower value of \eqref{eq:tailformula} (lower endpoint, rounded down); $\epsilon$ is the outward upper value of \eqref{eq:eps} subtracted before each sign test (upper endpoint, rounded up); pivots are lower values of the smallest LDL pivots at the floor $m_j$ (rounded down; summaries, not spectral bounds); the radius is the largest ball radius among the four saved matrices (upper endpoint, rounded up). ``Required'' is the floating-point diagnostic $\lambda_{\max}(q_r^{-1/2}E_rq_r^{-1/2})$, the tail floor the model test would need at level zero, rounded to nearest. The certified endpoints themselves are in the JSON records.}
+ \label{tab:certificate}
+ \footnotesize\setlength{\tabcolsep}{3.5pt}
+ \begin{tabular}{@{}lrrllllll@{}}
+@@ -89,19 +148,21 @@ $L$ & $M$ & bits & $a_{128,L}$ & $\epsilon$ & pivot (even) & pivot (odd) & radiu
+ \midrule''')
+ for e, c, a in rows:
+     piv = [ch['minimum_pivot_lower'] for ch in c['checks']]
++    assert [ch['parity'] for ch in c['checks']] == [0, 1], 'checks must be ordered even (parity 0), odd (parity 1)'
+     req = ' / '.join(f"{r['maximum']:.3f}" for r in a['relative_coupling'])
+-    out.append(f"{labels[e['horizon_label']]} & {c['M']} & {c['precision_bits']} & {plain(e['tail_floor_lower'],4)} & ${sci(c['model_error'])}$ & ${sci(piv[0])}$ & ${sci(piv[1])}$ & ${sci(c['maximum_matrix_radius'],sig=2)}$ & {req}\\\\")
++    out.append(f"{labels[e['horizon_label']]} & {c['M']} & {c['precision_bits']} & {plain(e['tail_floor_lower'],'lower',4)} & ${sci(c['model_error'],'upper')}$ & ${sci(piv[0],'lower')}$ & ${sci(piv[1],'lower')}$ & ${sci(c['maximum_matrix_radius'],'upper',sig=2)}$ & {req}\\\\")
+ out.append(r'''\bottomrule
+ \end{tabular}
+ \end{table}''')
+ 
+ # ---- Table: head spectra (diagnostic) at 9/5 and log7
+ def eigs(e, sector, k=5):
+-    return ',\ '.join('$'+sci(v)+'$' for v in e['sectors'][sector]['head_eigenvalues_lowest_diagnostic'][:k])
++    return ',\ '.join('$'+sci(v,'nearest')+'$' for v in e['sectors'][sector]['head_eigenvalues_lowest_diagnostic'][:k])
+ e15 = rows[5][0]; e7 = rows[6][0]
++assert e15['horizon_label'] == '9/5' and e7['horizon_label'] == 'log7'
+ out.append(r'''\begin{table}[ht]
+ \centering
+-\caption{Lowest five eigenvalues of the $64\times64$ head $q_r$ in each sector (floating-point diagnostics from the ball midpoints; not certified). The certified statements are the enclosures of Tables~\ref{tab:main} and~\ref{tab:sectors}.}
++\caption{Lowest five eigenvalues of the $64\times64$ head $q_r$ in each sector (floating-point diagnostics from the ball midpoints, rounded to nearest; not certified). The certified statements are the enclosures of Tables~\ref{tab:main} and~\ref{tab:sectors}.}
+ \label{tab:spectra}
+ \small
+ \begin{tabular}{@{}lll@{}}
+@@ -119,11 +180,23 @@ out.append(r'''\bottomrule
+ split = next(i for i, x in enumerate(out) if 'label{tab:certificate}' in x)
+ (root.parent/'manuscript'/'tables_main.tex').write_text('\n'.join(out[:split])+'\n')
+ (root.parent/'manuscript'/'tables_certificate.tex').write_text('\n'.join(out[split:])+'\n')
+-# machine-readable summary for the text
+-summ = {e['horizon_label']: {'m': e['central_floor'], 'mu_even': e['sectors']['even']['certified_upper_bound'].strip('[').split(' ')[0],
+-        'm_odd': e['sectors']['odd']['certified_floor'], 'mu_odd': e['sectors']['odd']['certified_upper_bound'].strip('[').split(' ')[0],
++
++# machine-readable summary for the text: certified endpoints (not midpoints) as decimal strings
++def lo(s): return str(ball(s)[0].normalize())
++def hi(s): return str(ball(s)[1].normalize())
++summ = {e['horizon_label']: {
++        'm': e['central_floor'],
++        'mu_even_upper': hi(e['sectors']['even']['certified_upper_bound']),
++        'm_odd': e['sectors']['odd']['certified_floor'],
++        'mu_odd_upper': hi(e['sectors']['odd']['certified_upper_bound']),
+         'C': e['continuation']['generator_bound'], 'h': e['continuation']['shift_maximum'], 'd': e['continuation']['decay'],
+-        'margin': e['continuation']['exact_margin'], 'a': e['tail_floor_lower'].strip('[').split(' ')[0], 'CL': e['generator_change_constant'].strip('[').split(' ')[0],
+-        'eps': c['model_error'].strip('[').split(' ')[0], 'req': [r['maximum'] for r in a['relative_coupling']]} for e, c, a in rows}
++        'margin': e['continuation']['exact_margin'],
++        'a_lower': lo(e['tail_floor_lower']),
++        'CL_upper': hi(e['generator_change_constant']),
++        'eps_upper': hi(c['model_error']),
++        'radius_upper': hi(c['maximum_matrix_radius']),
++        'req': [r['maximum'] for r in a['relative_coupling']],
++        'note': 'endpoints of the saved enclosures (lower endpoint for lower values, upper endpoint for upper values); the tables round these outward'}
++        for e, c, a in rows}
+ (root/'output'/'paper_numbers.json').write_text(json.dumps(summ, indent=1)+'\n')
+ print('tables written')
+diff --git a/papers/weil-depth/numerics/output/paper_numbers.json b/papers/weil-depth/numerics/output/paper_numbers.json
+index db40116..906da7b 100644
+--- a/papers/weil-depth/numerics/output/paper_numbers.json
++++ b/papers/weil-depth/numerics/output/paper_numbers.json
+@@ -1,121 +1,135 @@
+ {
+  "log2": {
+   "m": "1.32e-3",
+-  "mu_even": "0.0013293030",
++  "mu_even_upper": "0.0013293030211",
+   "m_odd": "7.31e-2",
+-  "mu_odd": "0.073104029",
++  "mu_odd_upper": "0.073104029246",
+   "C": "1",
+   "h": "4e-2",
+   "d": "6e-4",
+   "margin": "7/37500",
+-  "a": "4.0674640748756608355588152135254457",
+-  "CL": "0.29391167006311783750067695137266400",
+-  "eps": "1.4410624245493238930028973752646334e-136",
++  "a_lower": "4.067464074875660835558815213525445662",
++  "CL_upper": "0.29391167006311783750067695137266400404",
++  "eps_upper": "1.4410624245493238930028973752646334106E-136",
++  "radius_upper": "1.63213255272164496166877666848753780962E-344",
+   "req": [
+    0.1663645747487742,
+    0.1662716285483504
+-  ]
++  ],
++  "note": "endpoints of the saved enclosures (lower endpoint for lower values, upper endpoint for upper values); the tables round these outward"
+  },
+  "log3": {
+   "m": "5.52e-8",
+-  "mu_even": "5.5368725e-8",
++  "mu_even_upper": "5.5368725125E-8",
+   "m_odd": "1.49e-5",
+-  "mu_odd": "1.4932502e-5",
++  "mu_odd_upper": "0.000014932502353",
+   "C": "2",
+   "h": "2e-4",
+   "d": "2e-8",
+   "margin": "1/117187500",
+-  "a": "3.1089272546128125505603080222740089",
+-  "CL": "1.3572797049700950787529203549337368",
+-  "eps": "2.7978133174251460853837351231490285e-92",
++  "a_lower": "3.1089272546128125505603080222740088714",
++  "CL_upper": "1.3572797049700950787529203549337368219",
++  "eps_upper": "2.7978133174251460853837351231490285316E-92",
++  "radius_upper": "2.525016066495905501877776883827618545E-305",
+   "req": [
+    0.22402848824341026,
+    0.22549209250254526
+-  ]
++  ],
++  "note": "endpoints of the saved enclosures (lower endpoint for lower values, upper endpoint for upper values); the tables round these outward"
+  },
+  "log4": {
+   "m": "7.48e-13",
+-  "mu_even": "7.5660261e-13",
++  "mu_even_upper": "7.5660261116E-13",
+   "m_odd": "4.71e-10",
+-  "mu_odd": "4.7687635e-10",
++  "mu_odd_upper": "4.7687635499E-10",
+   "C": "4",
+   "h": "5e-7",
+   "d": "3e-13",
+   "margin": "43/375000000000000",
+-  "a": "2.2350006898633869728415183572349271",
+-  "CL": "3.3876045118677659750557473261052433",
+-  "eps": "6.9420466263442109381977332100131470e-70",
++  "a_lower": "2.2350006898633869728415183572349270674",
++  "CL_upper": "3.38760451186776597505574732610524330529",
++  "eps_upper": "6.9420466263442109381977332100131470489E-70",
++  "radius_upper": "9.3591184629898482256987968332510225405E-297",
+   "req": [
+    0.29319228896809846,
+    0.288794388612001
+-  ]
++  ],
++  "note": "endpoints of the saved enclosures (lower endpoint for lower values, upper endpoint for upper values); the tables round these outward"
+  },
+  "log5": {
+   "m": "8.95e-18",
+-  "mu_even": "9.2927669e-18",
++  "mu_even_upper": "9.2927669473E-18",
+   "m_odd": "9.45e-15",
+-  "mu_odd": "9.6922319e-15",
++  "mu_odd_upper": "9.6922319391E-15",
+   "C": "7",
+   "h": "1e-9",
+   "d": "4e-18",
+   "margin": "157/60000000000000000000",
+-  "a": "1.5295432933276673288277254837369258",
+-  "CL": "6.0726048353065412001876027094409004",
+-  "eps": "1.7024020833587959340818547835780774e-55",
++  "a_lower": "1.5295432933276673288277254837369257676",
++  "CL_upper": "6.0726048353065412001876027094409004323",
++  "eps_upper": "1.7024020833587959340818547835780774105E-55",
++  "radius_upper": "5.684241571091002492459878484844772249E-294",
+   "req": [
+    0.34777717436562505,
+    0.33995627625391245
+-  ]
++  ],
++  "note": "endpoints of the saved enclosures (lower endpoint for lower values, upper endpoint for upper values); the tables round these outward"
+  },
+  "log6": {
+   "m": "5.93e-23",
+-  "mu_even": "7.3280898e-23",
++  "mu_even_upper": "7.3280898384E-23",
+   "m_odd": "1.07e-19",
+-  "mu_odd": "1.3510700e-19",
++  "mu_odd_upper": "1.3510700139E-19",
+   "C": "11",
+   "h": "3e-12",
+   "d": "2e-23",
+   "margin": "63/10000000000000000000000000",
+-  "a": "0.69614382439430666161199821490540487",
+-  "CL": "10.143347453725791104023099003059006",
+-  "eps": "3.9075212269061251865829406415152561e-45",
++  "a_lower": "0.696143824394306661611998214905404869124",
++  "CL_upper": "10.1433474537257911040230990030590060356",
++  "eps_upper": "3.9075212269061251865829406415152561351E-45",
++  "radius_upper": "1.2653841618318426463232453939985445161E-291",
+   "req": [
+    0.4690574087174453,
+    0.47251641884008916
+-  ]
++  ],
++  "note": "endpoints of the saved enclosures (lower endpoint for lower values, upper endpoint for upper values); the tables round these outward"
+  },
+  "9/5": {
+   "m": "3.38e-23",
+-  "mu_even": "4.1360299e-23",
++  "mu_even_upper": "4.1360299174E-23",
+   "m_odd": "5.73e-20",
+-  "mu_odd": "7.2205383e-20",
++  "mu_odd_upper": "7.2205383306E-20",
+   "C": "11",
+   "h": "2e-12",
+   "d": "1e-23",
+   "margin": "137/15000000000000000000000000",
+-  "a": "0.69124708426711218149006311705060392",
+-  "CL": "10.298614237568797529650857365588397",
+-  "eps": "9.9070696203218572539944309720807235e-36",
++  "a_lower": "0.69124708426711218149006311705060391875",
++  "CL_upper": "10.2986142375687975296508573655883970671",
++  "eps_upper": "9.90706962032185725399443097208072350615E-36",
++  "radius_upper": "9.3406102644043894554172630526856869414E-215",
+   "req": [
+    0.4905447625593467,
+    0.479571495647323
+-  ]
++  ],
++  "note": "endpoints of the saved enclosures (lower endpoint for lower values, upper endpoint for upper values); the tables round these outward"
+  },
+  "log7": {
+   "m": "1.37e-28",
+-  "mu_even": "6.8019017e-28",
++  "mu_even_upper": "6.8019017461E-28",
+   "m_odd": "4.78e-25",
+-  "mu_odd": "1.5671033e-24",
++  "mu_odd_upper": "1.5671033174E-24",
+   "C": "14",
+   "h": "4e-15",
+   "d": "6e-29",
+   "margin": "7/3000000000000000000000000000000",
+-  "a": "0.60748624181467145668006725958514348",
+-  "CL": "13.541168214725112584263744003079413",
+-  "eps": "3.7367641658519987866919363543977377e-37",
++  "a_lower": "0.607486241814671456680067259585143479286",
++  "CL_upper": "13.541168214725112584263744003079413389",
++  "eps_upper": "3.736764165851998786691936354397737723E-37",
++  "radius_upper": "4.6679914633485587446260669226130739249E-295",
+   "req": [
+    0.5947911826073329,
+    0.5899173485644786
+-  ]
++  ],
++  "note": "endpoints of the saved enclosures (lower endpoint for lower values, upper endpoint for upper values); the tables round these outward"
+  }
+ }

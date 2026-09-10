@@ -7,12 +7,21 @@ reproduction code — a `code/` subfolder with its own `requirements.txt`.
 
 **Only `first-slab-positivity/` is at release stage** — it is the one
 manuscript intended to be cited as such, and the one the planned `v1.0` tag
-releases. No tag has been created and no DOI exists yet. The other four
-folders are working drafts, committed at the author's decision on 8–9
+releases. No tag has been created and no DOI exists yet. The other five
+folders are working drafts, committed at the author's decision on 8–10
 September 2026 as an exception to the original sources-only-when-released
 rule: nothing in them is covered by a release or DOI as a finished manuscript,
 and each `STATUS.md` says so explicitly. Cite nothing from a draft folder
-without reading its `STATUS.md`. Status as of 9 September 2026.
+without reading its `STATUS.md`. Status as of 10 September 2026.
+
+`weil-depth/` uses a slightly different layout, adopted because it goes
+through numbered review rounds: the top level holds only the current draft
+(`README.md`, `STATUS.md`, `CONTINUATION.md`, `BUILD_RECORD.json`,
+`SHA256SUMS.txt`, the versioned PDF), the source is under `manuscript/`, the
+numerical supplement under `numerics/` (in place of `code/`), superseded
+drafts and the review that produced each version under `archive/`, and its
+large ball-matrix archives are kept outside git and described by the tracked
+`ARCHIVES.md` (repository-wide rules: `../LARGE_FILES.md`).
 
 | Folder | Title | Stage | To be released |
 |---|---|---|---|
@@ -20,11 +29,15 @@ without reading its `STATUS.md`. Status as of 9 September 2026.
 | `psi-omega-margin/` | The margin in the shifted screw-function criterion for zero-free half-planes ("Paper 1", 21 pp.) with the concise companion *Quantitative asymptotics for Suzuki's shifted screw functions* (9 pp., the intended submission) | Working draft after the 27 Aug fold-in; referee rounds 12–14 with independent recomputation; author block filled (Edward B. Baker III); scripts `c1`–`c8` and two supplementary notes committed | no — working draft |
 | `omega-string/` | The shifted zeta string: an unconditional inverse-spectral family and its RH endpoint ("Paper 2", 13 pp.) | Working draft v5, frozen 28 Aug pending human specialist review; five referee passes; Kasahara (1975) source-verified 8 Sept; author block filled; figure script and two verification scripts committed | no — working draft |
 | `defect-depth/` | Detection depth of spectral defects in shifted zeta strings ("Paper 3", 15 pp.) | Working draft v1 (29 Aug) from the Ihara laboratory; all manuscript gates GO; author block empty; 17 bibliography entries still `%% VERIFY`; figures are placeholders; laboratory code committed under `code/` | no — working draft |
+| `weil-depth/` | Finite-horizon Weil coercivity and shifted-zeta contraction: two-sided certificates for the finite-window Weil form through total horizon log 7 (22 pp.) | Working draft v0.4 (10 Sept 2026) after three machine-assisted review rounds (v0.1 → v0.2 Codex; v0.2 → v0.3 Claude, with independent recomputation; v0.3 → v0.4 ChatGPT, presentation and scope only); two-sided Arb ball-arithmetic enclosures of λ_min at seven horizons `log 2 … log 7`, reproduced by an independent implementation and checked against the Fourier-side form; author block "Edward Baker"; ball-matrix archives outside git (`ARCHIVES.md`); no human review, no formal verification | no — working draft |
 | `rh-detector/` | A certified velocity-residual detector for off-axis zeros of the Riemann Ξ-function, and the De Bruijn–Newman flow as a matrix pencil on Calogero–Moser space (10 pp.) | Working draft of 25 Aug; numerics regenerated and re-verified after a workspace loss, smoke-tested 9 Sept; certified modulo floating point; author block empty; scripts and zero caches committed under `code/` | no — working draft |
 
-**Two threads.** Papers 1–3 and the preprint form one program built on
-Suzuki's shifted screw functions and shifted scattering function; they cite
-each other as companions. `rh-detector/` is a **separate, earlier thread**,
+**Two threads.** Papers 1–3, the preprint and `weil-depth/` form one program
+built on Suzuki's shifted screw functions and shifted scattering function;
+they cite each other as companions (`weil-depth/` continues the preprint's
+operator-side positivity past the prime-free first slab and refers to it in
+the text as a companion manuscript, without a bibliography entry yet).
+`rh-detector/` is a **separate, earlier thread**,
 written on 24–25 August 2026 before the Suzuki line of work began; it is
 unrelated to that program and carries no companion cross-citations.
 

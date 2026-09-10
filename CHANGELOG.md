@@ -5,6 +5,39 @@ dates of the underlying work; the repository itself was created in September 202
 
 ## [Unreleased]
 
+### 2026-09-09 / 10 — finite-horizon Weil paper (branch `finite-horizon-weil`); large-file convention
+
+- **New working draft `papers/weil-depth/`** — *Finite-horizon Weil coercivity and
+  shifted-zeta contraction: two-sided certificates for the finite-window Weil form
+  through total horizon log 7* (22 pp.). Computer-assisted two-sided enclosures of
+  `λ_min(Q_{0,L})` at `L = log 2, …, log 6, 9/5, log 7` in Arb ball arithmetic
+  (analytic infinite-tail bound, full-output parity Grams, Schur test with an
+  explicit profile remainder; ball Rayleigh upper bounds), reproduced by an
+  independent implementation and checked against the Fourier-side form; each
+  floor converted to a small-shift contraction of the transfer. Finite-depth
+  statements only. Three machine-assisted review rounds on 9–10 Sept (v0.1 → v0.2
+  Codex; v0.2 → v0.3 Claude with independent recomputation; v0.3 → v0.4 ChatGPT),
+  each archived with the draft it reviewed under `archive/`. v0.4 changes are
+  presentation and scope only: directed rounding in the certificate table,
+  decay and horizon-ceiling claims restated as observations and resource
+  projections, one denominator bound in the Laplace-line lemma corrected,
+  classical hypotheses (Yoshida, Connes–Consani) cited as printed. No human
+  review; not released.
+- **Large-file convention.** New `LARGE_FILES.md`: committed files stay below
+  about 1 MB; regenerable derived data are kept outside git in a sibling
+  `shifted-zeta-positivity-archive/<slug>/numerics-archives/` folder, bound to
+  the tree by file and content hashes in the small certificate records,
+  described by a tracked `ARCHIVES.md` per paper, and located by scripts through
+  an environment variable; pre-commit size check; repair procedure; what a
+  release archives. Git LFS and shared drives rejected (LFS objects are absent
+  from the tarball Zenodo archives). Root `.gitignore` excludes
+  `numerics-archives/`. First instance: `papers/weil-depth/ARCHIVES.md` (about
+  122 MB of ball matrices). The branch's early history still references those
+  blobs; it is to be squash-merged into `main`, whose history has none.
+- Root README, `papers/README.md` and `MANIFEST.md` describe the sixth manuscript
+  and its layout; `build-latex.yml` builds the seventh PDF
+  (`papers/weil-depth/manuscript/finite_horizon_weil.tex`, 22 pages).
+
 ### 2026-09-09 — external repository review applied (commit `50cb4d2` reviewed)
 
 Changes from an independent repository-and-reproducibility review of the first

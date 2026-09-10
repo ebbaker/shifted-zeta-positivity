@@ -1,0 +1,85 @@
+{
+  "version": "0.3",
+  "date": "2026-09-09",
+  "baseline_commit": "aa40ff8 (repository HEAD when v0.3 was prepared; v0.2 deliverables archived under archive/drafts/v0.2_2026-09-09)",
+  "changes_from_v0.2": [
+    "Floors replaced by the largest three-significant-figure rationals passing the sector tests (9/5: 1e-26 -> 3.38e-23; log7: 1e-34 -> 1.37e-28) and certified upper bounds added (ball Rayleigh quotients): two-sided enclosures",
+    "Profile of enclosures at log2, log3, log4, log5, log6 added (new builds, N=128, M=220, 1792 bits); earlier background certificates 5e-13 (log4) and 1e-18 (log5) superseded",
+    "Sector-wise floors and upper bounds; even ground state certified at every horizon (even upper bound < odd floor)",
+    "Continuation constants (shift, decay, integer generator bound) derived per horizon by exact rational arithmetic and re-verified by analyze_certificate.py",
+    "Main theorems consolidated into Theorem 1.1 with Tables 1-2; Theorem 6.1 covers all seven horizons; Proposition 6.2 (upper bounds) added",
+    "Proposition 3.4 (continuation) proof written out in full with new Lemma 3.3 (Laplace-line estimates); closure step of Proposition 4.3 made explicit; Remark 4.2 (single-mode sharpness via Weber-Schafheitlin)",
+    "Relation to earlier work rewritten (Yoshida 1992, Connes-Consani 2021, Zhu 2026 two-sided bounds and doubly exponential threshold; log5 row cross-checks Zhu's floor)",
+    "Storage factorization, 2x2 counterexample and nested Schur moved to Appendix B; Section 7.2 quantifies the N required at log8, log11, log13, log16 and as L->3",
+    "New scripts enclose_certificate.py and make_tables.py; compare_implementations.py extended to all pairs; independent_arb.py empty-sum fix at the prime-free horizon",
+    "Older drafts, reviews and background reports moved to archive/; top level holds only the current draft",
+    "Ball archives moved out of git into numerics-archives/ (gitignored); certificates now carry matrices_content_sha256; scripts fall back to WEIL_ARCHIVES; v0.1 package contents extracted under archive/drafts/v0.1_2026-09-09/package/"
+  ],
+  "source_sha256": {
+    "analyze_certificate.py": "67b7df552c0529cf63f32233eaae452a331f8447993bfbb6374747d34cedaaad",
+    "certify_arb.py": "ca0bf0719a20cdbc3294855ad9d859fdb7a264fa5322b77518f06d44eb278760",
+    "compare_implementations.py": "a2eaa33a13d3cfbe7ed25dae843972516001f01f6516e95537a761d527bf278a",
+    "enclose_certificate.py": "7c0a94517d13dbee0eb709b938c02b06890bf76b65ddceafaa31a6d543b28167",
+    "independent_arb.py": "db7319ac0c585a7eb148afd5ec71c5713152e2d4bbd24775ce9d08fb2977a444",
+    "make_tables.py": "9c21e14a7c5c2da758b523ee58b124312ea092eced2d645062aecc108a34289e",
+    "review_checks.py": "4fa2c0907d1a6254bdf54f65da864d71e28f51c6b5ca36816022939b8619d177"
+  },
+  "manuscript_sha256": {
+    "finite_horizon_weil.bib": "cd178703bd64534fbdb40c7de50abcdfdec2ef7d620699a46926c3b6bd4ccaf7",
+    "finite_horizon_weil.tex": "254bdd2b043976e3fac057e42f24f0d2c10f8a7d8f9af8c4f897aaf01106cadc",
+    "tables_certificate.tex": "bedb404b0ecc26df0aa440de848ee6ad504c7db4b28633856c79572e9afa5140",
+    "tables_main.tex": "bdabd8c8ad355d9d122b868d4387585a068aac59e4719d90a07e92f4e8f67837"
+  },
+  "pdf": "finite_horizon_weil_v0.3.pdf",
+  "pdf_sha256": "75146ac7accf25274cc11f5bd2742bf46da9a7053a5749b06394fb8857a08ae5",
+  "pdf_pages": 21,
+  "pdf_build": "latexmk -pdf on the linked machine (TeX Live), no LaTeX warnings, no overfull boxes",
+  "certificates": {
+    "length_1p8_N128": {
+      "floor": "3.38e-23",
+      "status": "PASS",
+      "archive_sha256": "cf5cdf2f17a5a69fc6c9c1f4ec734c8cb18ceda842cd53925fa0a67b5c1ded14",
+      "matrices_content_sha256": "8d7ee70c63242988f664d8ae822b2a357be6cf4dc0d53aa52f0e84c5796496ac"
+    },
+    "log2_N128": {
+      "floor": "1.32e-3",
+      "status": "PASS",
+      "archive_sha256": "f07817c12004adde9ff21e1775982ea09561c948a64577331f40a2a0e8d560de",
+      "matrices_content_sha256": "77efadd3cd6f734975e2ab374915447c7c0989d6036aaeccab569e504023451d"
+    },
+    "log3_N128": {
+      "floor": "5.52e-8",
+      "status": "PASS",
+      "archive_sha256": "00bb842f7a8c357b754b7ff00f5953f2b4c6ab8f91d0da4fcfa2296bb76eb799",
+      "matrices_content_sha256": "981b73a9eee377b13f19a8b97c34146aca01272da26a759ce7d2756ea5b0b868"
+    },
+    "log4_N128": {
+      "floor": "7.48e-13",
+      "status": "PASS",
+      "archive_sha256": "b3452b4529a1bdb38514b04c8313657fed43a4e1c80f528825f7bc3a075cbcc5",
+      "matrices_content_sha256": "75784aeaed2076936e69273167e1f275145b685a619c1f6e831cdc6a04375a98"
+    },
+    "log5_N128": {
+      "floor": "8.95e-18",
+      "status": "PASS",
+      "archive_sha256": "9b9285bdedd4a164a496ecdd030a13599b7cc121904247beab60e53836312456",
+      "matrices_content_sha256": "811d243f1da9ee464abd887e09aa9d0b41f7f913f2894b86008831d484ce1a50"
+    },
+    "log6_N128": {
+      "floor": "5.93e-23",
+      "status": "PASS",
+      "archive_sha256": "1afc68d147396e9a2220abe3f0950179cc337c80dc6ce0e00e6d43117218308b",
+      "matrices_content_sha256": "143e37e8ddf8ba3fb96c85d5a80fcdf01b8834d3fad6a360edad63f55f123f5a"
+    },
+    "log7_N128": {
+      "floor": "1.37e-28",
+      "status": "PASS",
+      "archive_sha256": "2460486c3de953009b85a40601a4968043ad265d1394998068364aaa8294d6a5",
+      "matrices_content_sha256": "9d9c9699cb5690f7669fb0262237a5ed6763987856a870c33d54e2dd17897c4a"
+    }
+  },
+  "reruns_for_v0.3": "Full builds log2-log6 (new); replay of the unchanged 9/5 and log7 archives at the sharpened floors; enclose_certificate.py at all seven horizons; independent_arb.py at all seven horizons (matrices archived for 9/5 and log7 only); compare_implementations.py all seven pairs PASS (16384/16384 entries each); review_checks.py PASS; Fourier-side checks in numerics/review_claude",
+  "environment": "Python 3.11.15, python-flint 0.9.0, FLINT 3.6.0, mpmath 1.4.1, NumPy 2.4.4 (v0.3 runs); earlier runs Python 3.12.14 / 3.10.0 with the same python-flint and FLINT; pivots identical across versions",
+  "limitations": "Two implementations, the enclosures and the Fourier-side checks share the analytic reduction; no external human audit or formal verification",
+  "unversioned_data": "numerics-archives/ (122 MB): seven central_matrices.json.gz, two independent_matrices.json.gz, the v0.1 package ZIP; hashes in numerics-archives/SHA256SUMS.txt and in the certificates; regenerate with certify_arb.py / independent_arb.py"
+}

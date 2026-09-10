@@ -2,12 +2,12 @@
 
 Provenance record for the repository: which files were written for it, which
 were carried over from the private project store, and which are still
-missing. Updated 9 September 2026.
+missing. Updated 10 September 2026.
 
 ## Written for the repository
 
 ```
-README.md  CITATION.cff  CHANGELOG.md  CONTRIBUTING.md  RELEASING.md  MANIFEST.md
+README.md  CITATION.cff  CHANGELOG.md  CONTRIBUTING.md  RELEASING.md  MANIFEST.md  LARGE_FILES.md
 .gitignore  .zenodo.json   (LICENSE: the repository's licensing-by-material-type notice)
 .github/ISSUE_TEMPLATE/{verification-report,possible-error,formalization}.md
 .github/labels.yml  .github/workflows/{build-latex,check-first-slab}.yml
@@ -16,7 +16,11 @@ statements/README.md  statements/ledger.yaml
 environment/{requirements,requirements_metadata}.txt
 tools/check_citations.py
 papers/README.md
-papers/*/README.md  papers/*/STATUS.md            (all five folders)
+papers/*/README.md  papers/*/STATUS.md            (all six folders)
+papers/weil-depth/**   (drafted in the repository, Sept 2026, on the branch finite-horizon-weil:
+                        manuscript/, numerics/, archive/, ARCHIVES.md, CONTINUATION.md,
+                        BUILD_RECORD.json, SHA256SUMS.txt; its ~122 MB of ball-matrix archives
+                        are kept outside git — LARGE_FILES.md, papers/weil-depth/ARCHIVES.md)
 papers/first-slab-positivity/{CITATION.cff,.zenodo.json,LICENSE.md,VERIFICATION_STATUS.md}
 papers/psi-omega-margin/supplementary/DERIVATION_AND_VERIFICATION.md   (authored clean, 9 Sept)
 papers/*/code/README.md  papers/*/code/requirements.txt

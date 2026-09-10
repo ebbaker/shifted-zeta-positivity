@@ -1,0 +1,35 @@
+\begin{table}[ht]
+\centering
+\caption{Certificate data at $N=128$. The tail floor $a_{128,L}$ is an outward lower value of \eqref{eq:tailformula}; $\epsilon$ is the outward upper value of \eqref{eq:eps} subtracted before each sign test; pivots are the smallest LDL pivots at the floor $m_j$ (rounded summaries, not spectral bounds); the radius is the largest ball radius among the four saved matrices. ``Required'' is the floating-point diagnostic $\lambda_{\max}(q_r^{-1/2}E_rq_r^{-1/2})$, the tail floor the model test would need at level zero.}
+\label{tab:certificate}
+\footnotesize\setlength{\tabcolsep}{3.5pt}
+\begin{tabular}{@{}lrrllllll@{}}
+\toprule
+$L$ & $M$ & bits & $a_{128,L}$ & $\epsilon$ & pivot (even) & pivot (odd) & radius & required\\
+\midrule
+$\log2$ & 220 & 1792 & 4.0675 & $1.44\times10^{-136}$ & $2.75\times10^{-2}$ & $1.08$ & $1.6\times10^{-344}$ & 0.166 / 0.166\\
+$\log3$ & 220 & 1792 & 3.1089 & $2.79\times10^{-92}$ & $1.18\times10^{-2}$ & $1\times10^{-1}$ & $2.5\times10^{-305}$ & 0.224 / 0.225\\
+$\log4$ & 220 & 1792 & 2.2350 & $6.94\times10^{-70}$ & $5.71\times10^{-3}$ & $1.32\times10^{-2}$ & $9.3\times10^{-297}$ & 0.293 / 0.289\\
+$\log5$ & 220 & 1792 & 1.5295 & $1.7\times10^{-55}$ & $7.53\times10^{-4}$ & $3.64\times10^{-3}$ & $5.6\times10^{-294}$ & 0.348 / 0.340\\
+$\log6$ & 220 & 1792 & 0.6961 & $3.9\times10^{-45}$ & $6.88\times10^{-5}$ & $2.01\times10^{-4}$ & $1.2\times10^{-291}$ & 0.469 / 0.473\\
+$9/5$ & 180 & 1536 & 0.6912 & $9.9\times10^{-36}$ & $5.67\times10^{-5}$ & $1.81\times10^{-4}$ & $9.3\times10^{-215}$ & 0.491 / 0.480\\
+$\log7$ & 220 & 1792 & 0.6075 & $3.73\times10^{-37}$ & $1.69\times10^{-5}$ & $9.03\times10^{-5}$ & $4.6\times10^{-295}$ & 0.595 / 0.590\\
+\bottomrule
+\end{tabular}
+\end{table}
+\begin{table}[ht]
+\centering
+\caption{Lowest five eigenvalues of the $64\times64$ head $q_r$ in each sector (floating-point diagnostics from the ball midpoints; not certified). The certified statements are the enclosures of Tables~\ref{tab:main} and~\ref{tab:sectors}.}
+\label{tab:spectra}
+\small
+\begin{tabular}{@{}lll@{}}
+\toprule
+Horizon & sector & lowest five head eigenvalues\\
+\midrule
+$9/5$ & even & $4.13\times10^{-23}$,\ $7.24\times10^{-17}$,\ $1.47\times10^{-11}$,\ $4.01\times10^{-7}$,\ $2.76\times10^{-3}$\\
+$9/5$ & odd & $7.22\times10^{-20}$,\ $4.18\times10^{-14}$,\ $3.26\times10^{-9}$,\ $3.69\times10^{-5}$,\ $6.88\times10^{-2}$\\
+$\log7$ & even & $6.8\times10^{-28}$,\ $1.66\times10^{-21}$,\ $8.18\times10^{-16}$,\ $6.01\times10^{-11}$,\ $1.24\times10^{-6}$\\
+$\log7$ & odd & $1.56\times10^{-24}$,\ $1.31\times10^{-18}$,\ $3.21\times10^{-13}$,\ $8.14\times10^{-9}$,\ $1.09\times10^{-4}$\\
+\bottomrule
+\end{tabular}
+\end{table}
