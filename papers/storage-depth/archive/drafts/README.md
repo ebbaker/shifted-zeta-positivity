@@ -1,19 +1,20 @@
-# Storage-depth continuation overlay — 10 September 2026
+# Archived drafts of the storage-depth manuscript
 
-This is a repository-ready **overlay**, not a full clone. Copy its new paper
-folder, papers/storage-depth/, into an existing shifted-zeta-positivity checkout
-when ready to integrate it. Start with that paper's README.md and CONTINUATION.md.
+Top level of `papers/storage-depth/` holds only the current draft. Earlier
+versions are preserved here unchanged.
 
-The manuscript, all five research packets, exact coefficients, small certificate
-records, dependency pins, and inherited v0.3 source are included. Nothing in
-the original project sources/ was changed. No commit, push, or publication was made.
+* `v0.1_2026-09-10/` — the original repository-ready overlay: manuscript v0.1,
+  all five research packets (`numerics/history/`), exact coefficients, small
+  certificate records R1–R9, dependency pins, validation manifests, and the
+  inherited Weil-depth v0.3 source. Its `README.md`, `CONTINUATION.md`,
+  `ARCHIVES.md` and `CLAIMS.json` describe that state.
+* `v0.2_2026-09-10/` — manuscript v0.2 (`manuscript/storage_depth.tex`,
+  `spatial_recursion.tex`, PDF) and its package files (`README.md`, `STATUS.md`,
+  `ARCHIVES.md`, `CLAIMS.json`, `BUILD_RECORD.json`, `SHA256SUMS.txt`). Its
+  numerics code and records R10–R13 remain live under `../../numerics/` and are
+  extended, not replaced, by v0.3. The review of v0.2 is under
+  `../reviews/`.
 
-Large derived data are in the separate sibling tree:
-shifted-zeta-positivity-archive/storage-depth/numerics-archives/.
-See papers/storage-depth/ARCHIVES.md. Do not commit that tree or either delivery
-ZIP. LARGE_FILES.md is a provenance copy of the policy retrieved from the
-repository's main branch on 10 September 2026.
-
-The inherited material's licensing is preserved in LICENSE. This draft follows
-the repository's material-type convention: research/text CC-BY-4.0, code MIT.
-Finalize authorship, attribution, and submission metadata before publication.
+Large derived data for every version live in the sibling tree
+`shifted-zeta-positivity-archive/storage-depth/numerics-archives/`; see the
+current `ARCHIVES.md`.

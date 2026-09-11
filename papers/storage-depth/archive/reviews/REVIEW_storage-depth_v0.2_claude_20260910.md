@@ -149,3 +149,7 @@ Should: enlarge both slabs to 64 or 96 modes and re-run the second step (this is
 Could: derive the Gamma constant; write out the direct-sum closure; add a two-interval "re-globalized" second step for comparison with the three-interval one; state the detection question for finite-horizon positivity (see the note) so that the programme's milestones have a stated meaning.
 
 I would be glad to run the repository's own validators with the new floors, or to draft the restated theorem, in a follow-up session.
+
+---
+
+**Erratum and follow-up (added 10 September 2026, v0.3 session).** Section 3 above says the identical radii printed by the 2048- and 4096-bit replays are "inherited from the stored 6144-bit balls and the analytic error terms". That is not the reason: the stored head entries have radii below `1e-1400`, and the printed radius is the display truncation of `arb.str(35)`. The point that the two replays re-evaluate the same stored balls stands. All findings of Sections 4.1–4.3 were subsequently confirmed through the repository's own code path (records R14–R16 of v0.3): the largest passing three-figure absolute floor at `L_q` is `2.99e-29`, the relative test carries `M_0.9 >= 2.90e-29` and `M_0.8 >= 2.67e-29`, `theta = 0.78` passes, `mu = 1.13e-7` at the first step and `5.01e-8` at the second, and the hypothetical-floor runs pass at `0.55` and fail at `0.5`.

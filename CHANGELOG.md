@@ -5,6 +5,46 @@ dates of the underlying work; the repository itself was created in September 202
 
 ## [Unreleased]
 
+### 2026-09-10 / 11 — storage-depth paper (branch `critical_path`): v0.1, v0.2, review, v0.3
+
+- **New working draft `papers/storage-depth/`** — *Residual-controlled depth
+  extension of finite-horizon Weil positivity: a spatial continuation past log 7
+  for the shifted-zeta transfer* (v0.3, 20 pp.). Continues `weil-depth/` past
+  `log 7` by splitting the interval at `log 7`, continuing old inputs onto a
+  quarter slab of length `log(8/7)/4` by a Galerkin map, and certifying the
+  graph-transformed Schur tests against the infinite polynomial complements.
+  Certified in Arb ball arithmetic (working normalization):
+  `2.99e-29 ≤ λ_min(Q_{0,L_q}) ≤ 3.29e-29` at `L_q = (3/4) log 14`, residual
+  factor `R*F^{-1}R ≤ 0.78 H_J`, comparison `H_J ≥ 1.13e-7 A`, small-shift
+  contraction for `ω ≤ 9e-16`; at `L_2 = log(56)/2` the 32-mode-slab build
+  certifies only `H_{J_2} ≥ 5.01e-8 A_2` and the upper bound `1.89e-30` (its
+  failed floor and residual tests diagnosed as an artifact of the three-interval
+  complement floor), and the 96-mode-slab build of 11 Sept then certifies
+  `1.69e-30 ≤ λ_min(Q_{0,L_2}) ≤ 1.89e-30`, residual factor `0.8`,
+  `H_{J_2} ≥ 5.25e-8 A_2` and contraction for `ω ≤ 2e-16` (record R18). A direct-floor lemma
+  (`M_θ ≥ m ⇒ Q ≥ m/τ²`) replaces the scalar comparison in the conditional
+  all-depth scheme; a dimension estimate places the method's horizon near
+  `L = 3`; a Fourier-side computation shows the near-null vector is tuned to
+  vanish at the low zeros and that the certificate constrains zeros only below
+  height about 70.
+- Provenance: v0.1 and v0.2 drafted on 10 Sept by OpenAI models (five research
+  packets, then a consolidated record); v0.2 reviewed by Claude with an
+  independent re-implementation of the validators (`archive/reviews/`), which
+  found the floors understated by four orders of magnitude and diagnosed the
+  second step; v0.3 rewritten by Claude as a paper with the numbers re-derived
+  through the repository's code path (records R14–R18: archive-based bisection
+  replays, ball Rayleigh upper bounds, hypothetical-floor diagnostics,
+  Fourier-side zero sums, the 96-mode-slab rebuild). Earlier drafts preserved under `archive/drafts/`.
+- New tools under `numerics/recursion/`: `stream_io.py` (streaming dual-hash
+  loader that runs in a few GB of memory), `replay_floor.py` (archive-based
+  replays with bisection), `rayleigh_upper.py`; `numerics/fourier_side/` for the
+  zero-sum diagnostic; `build_step_seed.py`, `build_from_seed_v2.py` and
+  `numerics/tools/` for the 96-mode rebuild. Six matrix archives (about 1.6 GB, two of
+  them built in a cloud container and to be regenerated locally) live outside git under
+  `shifted-zeta-positivity-archive/storage-depth/numerics-archives/`.
+- Root README, `papers/README.md` and `MANIFEST.md` describe the seventh
+  manuscript. No human review; not released.
+
 ### 2026-09-09 / 10 — finite-horizon Weil paper (branch `finite-horizon-weil`); large-file convention
 
 - **New working draft `papers/weil-depth/`** — *Finite-horizon Weil coercivity and

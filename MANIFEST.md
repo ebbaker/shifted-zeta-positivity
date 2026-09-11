@@ -16,11 +16,17 @@ statements/README.md  statements/ledger.yaml
 environment/{requirements,requirements_metadata}.txt
 tools/check_citations.py
 papers/README.md
-papers/*/README.md  papers/*/STATUS.md            (all six folders)
+papers/*/README.md  papers/*/STATUS.md            (all seven folders)
 papers/weil-depth/**   (drafted in the repository, Sept 2026, on the branch finite-horizon-weil:
                         manuscript/, numerics/, archive/, ARCHIVES.md, CONTINUATION.md,
                         BUILD_RECORD.json, SHA256SUMS.txt; its ~122 MB of ball-matrix archives
                         are kept outside git — LARGE_FILES.md, papers/weil-depth/ARCHIVES.md)
+papers/storage-depth/**  (drafted 10 Sept 2026 on the branch critical_path by OpenAI models
+                        (v0.1, v0.2) and rewritten as v0.3 by Claude after review: manuscript/,
+                        numerics/ (recursion/, fourier_side/, records/), archive/ (drafts v0.1 and
+                        v0.2, reviews, background), ARCHIVES.md, CLAIMS.json, BUILD_RECORD.json,
+                        SHA256SUMS.txt; its ~1.6 GB of matrix archives are kept outside git —
+                        LARGE_FILES.md, papers/storage-depth/ARCHIVES.md)
 papers/first-slab-positivity/{CITATION.cff,.zenodo.json,LICENSE.md,VERIFICATION_STATUS.md}
 papers/psi-omega-margin/supplementary/DERIVATION_AND_VERIFICATION.md   (authored clean, 9 Sept)
 papers/*/code/README.md  papers/*/code/requirements.txt

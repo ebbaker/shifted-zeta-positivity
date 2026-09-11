@@ -1,48 +1,48 @@
 {
-  "draft_version": "0.2",
-  "date": "2026-09-10",
-  "scope": "Current source-package deliverables prepared for tracking; immutable inherited sources referenced separately. External matrices are omitted.",
-  "repository_base_commit": "4094861370f8cdde4a27baa332e21179ce4b57ed",
+  "draft_version": "0.3",
+  "date": "2026-09-11",
+  "scope": "Current source-package deliverables prepared for tracking; immutable earlier drafts referenced separately under archive/drafts/. External matrices are omitted.",
+  "repository_base_commit": "89cc928",
   "numerical_environment": {
-    "python": "3.10.0",
+    "python": "3.10 / 3.11",
     "python_flint": "0.9.0",
     "FLINT": "3.6.0",
-    "mpmath": "1.4.1"
+    "mpmath": "1.3.0 / 1.4.1"
   },
   "normalization_audit": "Pending independent verification of the working Weil-depth v0.3 normalization",
-  "inherited_snapshot": {
-    "directory": "archive/drafts/v0.1_2026-09-10",
-    "build_record_sha256": "9ced02664b268dec19ed909ed2440621f80a0d5a76ae9de981456089d05b2eed",
-    "history_record_sha256": "43947d9786a53dab2e19f311a8df20136501e4d69a41aca28a231fe1ea8a3335",
-    "verified_existing_manifest_files": 113,
-    "historical_numerical_hashes_verified": 75,
-    "baseline_missing_manifest_entry": ".gitignore"
+  "inherited_snapshots": {
+    "v0.1": "archive/drafts/v0.1_2026-09-10",
+    "v0.2": "archive/drafts/v0.2_2026-09-10"
   },
   "validation": {
-    "old_energy_comparisons_bits": [
-      2048,
-      4096
-    ],
+    "first_step_bisections_bits": 2048,
+    "first_step_absolute_floor": "2.99e-29",
+    "first_step_relative_floor_theta_0.9": "2.90e-29",
+    "first_step_relative_floor_theta_0.8": "2.67e-29",
+    "first_step_theta": "0.78",
+    "first_step_mu": "1.13e-7",
+    "first_step_upper_bound": "3.29e-29",
+    "second_step_mu": "5.01e-8",
+    "second_step_upper_bound": "1.89e-30",
     "second_step_absolute_certificate": false,
     "second_step_full_residual_certificate": false,
-    "second_step_old_energy_mu": "1e-8",
-    "separate_tail_searches": [
-      {
-        "theta": "0.99",
-        "proposals": 10,
-        "bits": 1024
-      },
-      {
-        "theta": "0.9999",
-        "proposals": 10,
-        "bits": 1024
-      }
+    "hypothetical_floor_diagnostics": [
+      "0.5 fails",
+      "0.55 passes",
+      "0.65: theta 0.8 passes, largest absolute floor 1.64e-30"
     ],
-    "fixed_weight_replay_bits": 2048,
-    "small_consistency_checks_pass": true,
+    "fourier_side_zero_sum_fraction_K400": "0.918",
     "external_file_hashes_verified": 4,
-    "missing_and_mismatched_archives_rejected": true,
-    "pdf_visual_review": "25 pages; no clipped material or unresolved references"
+    "regression_of_recorded_tests": "R7 (1e-33), R8 (theta 0.9), R10 (mu 1e-7), R11 (absolute fail, mu 1e-8 pass, residual fails) reproduced to every printed digit through stream_io",
+    "pdf_pages": 21,
+    "second_step_96_absolute_floor": "1.69e-30",
+    "second_step_96_relative_floor_theta_0.9": "1.65e-30",
+    "second_step_96_theta": "0.8",
+    "second_step_96_mu": "5.25e-8",
+    "second_step_96_upper_bound": "1.89e-30",
+    "second_step_96_certified": true,
+    "fourier_side_zero_sum_fraction_K2000": "0.978",
+    "external_archives_built_in_container": 2
   },
   "large_data_guide": "ARCHIVES.md",
   "all_current_deliverables_below_1_MiB": true,
@@ -54,13 +54,13 @@
     },
     {
       "path": "ARCHIVES.md",
-      "bytes": 7940,
-      "sha256": "f1e41279b27b3aeefb7dc96bbc85e2716bd0b50e2be7405cc07273d17b624b8b"
+      "bytes": 11086,
+      "sha256": "9510f3325e237893b4c68439bf7085744ee1ff70785878234a5c85ee515a3dba"
     },
     {
       "path": "CLAIMS.json",
-      "bytes": 2300,
-      "sha256": "c68acd6664b9bdd409b57409eba65642fe16f95241058684b75e463575065d27"
+      "bytes": 7039,
+      "sha256": "f3a74d8d91b2b46761981171f53af327d395d85196882cb5a530faae39ac618b"
     },
     {
       "path": "Makefile",
@@ -69,38 +69,98 @@
     },
     {
       "path": "README.md",
-      "bytes": 3037,
-      "sha256": "b5237a51a4cb341a2500d026132c2f8717872755417e755694de7617eb9027e0"
+      "bytes": 7288,
+      "sha256": "c61d5ffbd67d92e2484e49764f3356b09ea72f8b53f793c9695ca0b2c2b06998"
     },
     {
       "path": "STATUS.md",
-      "bytes": 2850,
-      "sha256": "41892ad9ffcb443f2d89de00301ae61549bf6cd8b8a14ca004f0e890eb4ad9c0"
-    },
-    {
-      "path": "manuscript/spatial_recursion.tex",
-      "bytes": 11588,
-      "sha256": "807a586832feed1abad6c75ced5e2f41698b11b602c90dceb381e8b72f2e9c01"
+      "bytes": 5762,
+      "sha256": "9eceeffa27264ddf0407a48d5666f4c9872df2bef4e1de0acb1912ceb0f95087"
     },
     {
       "path": "manuscript/storage_depth.pdf",
-      "bytes": 504922,
-      "sha256": "58ca0a0f6389836754f1d51723ce2fea7d2372a31d545982221f229c895dbc48"
+      "bytes": 520220,
+      "sha256": "b611d32d4fb561f5fd6583cdeef054e5fe43514b8e4475d00470c459663477d3"
     },
     {
       "path": "manuscript/storage_depth.tex",
-      "bytes": 58663,
-      "sha256": "224d7bf2649a6cc9d678ac7b42e282f41c445f49d2c13177630e8756b513e2f0"
+      "bytes": 71786,
+      "sha256": "ef66b68913979f5e5f553995b03df7cf27c713f97207a0c0e7491f92d69ca616"
     },
     {
       "path": "numerics/ARCHIVE_RECORDS.json",
-      "bytes": 2859,
-      "sha256": "559863cbe5df33a7b51538c086987f757265b04ff6be31e54a4c7d7356367872"
+      "bytes": 4945,
+      "sha256": "c2987d84388e4d9c367d92abba813a512a4d3573060cf6e164c1e5b7f5e1efcf"
+    },
+    {
+      "path": "numerics/fourier_side/export_head.py",
+      "bytes": 1171,
+      "sha256": "d209545e62e931716e0895931bc4aecfe06e89cd3607bcfcfb907029bcced53e"
+    },
+    {
+      "path": "numerics/fourier_side/zero_sensitivity.py",
+      "bytes": 2945,
+      "sha256": "2ab47ff84c0136ba4fb5c11c9864f98484585ef59f3cc0b5ca96f65986ea1d5d"
+    },
+    {
+      "path": "numerics/fourier_side/zero_sensitivity_K20.json",
+      "bytes": 7178,
+      "sha256": "d0f3afe883df03e20eaf68b2830264cf72bcfc6d18dfde86ec17ff2d12e0849f"
+    },
+    {
+      "path": "numerics/fourier_side/zero_sum_check.py",
+      "bytes": 6044,
+      "sha256": "e34dbee96bc0cd09420fe026752d16f4e0ae1b37f1ef81533228fd2284405f88"
+    },
+    {
+      "path": "numerics/fourier_side/zero_sum_check_K2000.json",
+      "bytes": 11433,
+      "sha256": "b01033212c5b8828a726222e3fcdccacc59b341ae9c3cd9c095376437fb451bd"
+    },
+    {
+      "path": "numerics/fourier_side/zero_sum_check_K400.json",
+      "bytes": 10763,
+      "sha256": "000e385ca6cbcf9315eaf4efc43accb5ab37c796dacbfded28ac8f79fc262fca"
+    },
+    {
+      "path": "numerics/fourier_side/zeta_zeros_2000.json",
+      "bytes": 79787,
+      "sha256": "e6d337f67aa099588cd6c158802293454967c4d5c1172e443d00d7ec7dd43c63"
+    },
+    {
+      "path": "numerics/fourier_side/zeta_zeros_400.json",
+      "bytes": 15949,
+      "sha256": "d3752605cb53289c62ef791e0e4785310ac328040b5673498541bcf492108606"
     },
     {
       "path": "numerics/metric_comparison.py",
       "bytes": 4149,
       "sha256": "1bed80c774b6ecd74a0a28c377c6e15a05fa47569fbb9289f556e604355e0e4e"
+    },
+    {
+      "path": "numerics/records/closure_256_96.json",
+      "bytes": 712869,
+      "sha256": "6bfcb210b74b17709adc65f2e7e9d6073e789f96ecbab09934c8c39b96435b3f"
+    },
+    {
+      "path": "numerics/records/closure_256_96_catalog.json",
+      "bytes": 907,
+      "sha256": "d79cbc641fd3975abc9e5e7341a4ebf97026dc43a36c257d8527a71f3273df2b"
+    },
+    {
+      "path": "numerics/records/floor-bisection-first-2048.json",
+      "bytes": 17106,
+      "sha256": "14cb8051c866fae51f0e22206a7f048d809a15bbb55d14b80dc95a0648ae94a0"
+    },
+    {
+      "path": "numerics/records/floor-bisection-second-2048.json",
+      "bytes": 7190,
+      "sha256": "692a238cb01f905a61bca07158c20df5d0a95f1bb2f9ded9a82d6c69bf591132"
+    },
+    {
+      "path": "numerics/records/floor-bisection-second96-2048.json",
+      "bytes": 12935,
+      "sha256": "37b0712217839391f7b0921c1f8f46a1542926eb64df213eec7e9f6fbd4a4a9f"
     },
     {
       "path": "numerics/records/metric-comparison-2048.json",
@@ -113,6 +173,36 @@
       "sha256": "69b0cc611ebb74e88069820ff3bac8add7f1bc3c5d0114bb4842e9e0a8456f2c"
     },
     {
+      "path": "numerics/records/oracle-second-0.5.json",
+      "bytes": 3426,
+      "sha256": "703178973c25056e87142a162a5fe4fad77004e93b86bbb14d3f4fed2f3e96b2"
+    },
+    {
+      "path": "numerics/records/oracle-second-0.55.json",
+      "bytes": 3492,
+      "sha256": "fc3e8184b800ad272443def4194323395c77a89a8549a4eab1fe5379dac0f689"
+    },
+    {
+      "path": "numerics/records/oracle-second-0.65.json",
+      "bytes": 6401,
+      "sha256": "fe4bbbbf2bd48e99ae93a7af3632f79032e9dd96ba5acaa633ae9b62367ed2bf"
+    },
+    {
+      "path": "numerics/records/rayleigh-upper-first-2048.json",
+      "bytes": 26253,
+      "sha256": "798052ac39472f9398853977154e68b1daeae58a04dc3756f2451fbadebb223c"
+    },
+    {
+      "path": "numerics/records/rayleigh-upper-second-2048.json",
+      "bytes": 29121,
+      "sha256": "d745f7a5613b6c5d90c25caaf300cf380023b92c4ed6fe9f904c6bc60708b5ad"
+    },
+    {
+      "path": "numerics/records/rayleigh-upper-second96-2048.json",
+      "bytes": 39636,
+      "sha256": "8e3b2677dc610023e47d17444111539bdbafa4e944f2a2aa2e1c0a64a9b4726f"
+    },
+    {
       "path": "numerics/records/second-quarter-2048.json",
       "bytes": 3934,
       "sha256": "4c051c1690bde07be9e8adbebd44834dae25e44b40e4d3599a3a270e58b62ec0"
@@ -121,6 +211,11 @@
       "path": "numerics/records/second-quarter-4096.json",
       "bytes": 4030,
       "sha256": "b4900d7de01b36acf0212674b8c0385ce8cb9085d9143aebea208c9d23b34330"
+    },
+    {
+      "path": "numerics/records/second-quarter-96-build.json",
+      "bytes": 923001,
+      "sha256": "5e9552eb68f666cb279f239bab93a04f36a451af2562a72bf64db30dad349aef"
     },
     {
       "path": "numerics/records/second-quarter-build.json",
@@ -163,9 +258,19 @@
       "sha256": "6f956d9330a9a5eb932403a84d24a3733d74900ee226660ef7d6838125ed717a"
     },
     {
+      "path": "numerics/recursion/build_from_seed_v2.py",
+      "bytes": 1644,
+      "sha256": "eab648a91a8574321bb2bf17c9adcf1efee4da8710668a1895a510a4c122cf45"
+    },
+    {
       "path": "numerics/recursion/build_step.py",
       "bytes": 6410,
       "sha256": "000166c7a9c2262433bd8064521750067596f77d0e0af5a74427d8fada5f07c5"
+    },
+    {
+      "path": "numerics/recursion/build_step_seed.py",
+      "bytes": 7097,
+      "sha256": "e87a293657cfbba12a916fe7f01ad23e4cafe15d3c47c12ebd8d66ec61e2cfb3"
     },
     {
       "path": "numerics/recursion/certify_step.py",
@@ -188,9 +293,24 @@
       "sha256": "02d178e7860489c51c72d7d5ee59759ce12ea52eb8748ab2bc5acf4ac3b74fe2"
     },
     {
+      "path": "numerics/recursion/rayleigh_upper.py",
+      "bytes": 3905,
+      "sha256": "9408dc801ab71c3594549eee97d8f6a2502291724e28676c5e5579f696c6a37e"
+    },
+    {
+      "path": "numerics/recursion/replay_floor.py",
+      "bytes": 17258,
+      "sha256": "e86068b1216fc53dd8a7ad0350676064c880c5f6f64acdc0441f9dabd9396d11"
+    },
+    {
       "path": "numerics/recursion/spatial.py",
       "bytes": 6798,
       "sha256": "b4ca80baa5fe4c87db7c8377e2b87bde6273cdd7734bec38464f8b2074786de8"
+    },
+    {
+      "path": "numerics/recursion/stream_io.py",
+      "bytes": 7249,
+      "sha256": "3d786c6b0e11896fe76c9fd84d1745b5667d47bf5673dbf9a593ccdbcbf86acf"
     },
     {
       "path": "numerics/recursion/tails.py",
@@ -206,6 +326,21 @@
       "path": "numerics/requirements.txt",
       "bytes": 34,
       "sha256": "a84bec3b39ff94ed4f52f05c5614afcdd8617ed367aded7070c590fd4139a2fa"
+    },
+    {
+      "path": "numerics/tools/describe_archive.py",
+      "bytes": 1075,
+      "sha256": "b2faf4f39a85479efce20b4aecc4f0c57b03f489886947b2a05223803b802810"
+    },
+    {
+      "path": "numerics/tools/galerkin_continuation.py",
+      "bytes": 1749,
+      "sha256": "5f3f3feb2429aaa9297aa7a7bc04e4f31fc97a9dc47342311dc42b24e8ae0446"
+    },
+    {
+      "path": "numerics/tools/rayleigh_upper_record.py",
+      "bytes": 2567,
+      "sha256": "c3ffae3c8522ee56fb4d4ce80c611fe7b5d52f5353de97d6b9c1e9cc76992244"
     }
   ]
 }

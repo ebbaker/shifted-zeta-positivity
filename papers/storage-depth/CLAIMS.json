@@ -1,57 +1,101 @@
 {
-  "version": "0.2",
-  "working_normalization": "Weil-depth v0.3; independent normalization audit pending",
-  "inherited_claims": "archive/drafts/v0.1_2026-09-10/CLAIMS.json",
-  "new_records": [
+  "version": "0.3",
+  "date": "2026-09-10",
+  "working_normalization": "Weil-depth v0.3 (source preserved in archive/drafts/v0.1_2026-09-10/reference/weil-depth-v0.3/); independent normalization audit pending",
+  "inherited_claims": [
+    "archive/drafts/v0.1_2026-09-10/CLAIMS.json",
+    "archive/drafts/v0.2_2026-09-10/CLAIMS.json"
+  ],
+  "meaning_of_certified": "recorded guarded Arb sign test plus its stated analytic reduction, within the working normalization; not a proof audit, not formal verification, not a statement about zeros",
+  "records": [
     {
-      "id": "R10",
-      "claim": "At the first quarter step H_J >= 1e-7 A on the full old domain; hence S >= 1e-8 A using R8.",
+      "id": "R14",
+      "claim": "First quarter-step, L_q=(3/4)log 14, verification space 256+32, continuation R5. Absolute floor: largest passing three-figure m is 2.99e-29 (3.00e-29 fails). Relative test with inserted floor: M_0.9 >= 2.90e-29 (2.91e-29 fails), M_0.8 >= 2.67e-29 (2.68e-29 fails); with m=0 theta=0.78 passes and 0.76 fails. Comparison: H_J >= 1.13e-7 A (1.14e-7 fails). Hence Q_{0,L_q} >= 2.99e-29 I, R*F^{-1}R <= 0.78 H_J, H_J >= 2.90e-29 I, and Q_{0,L_q} >= 2.90e-29/tau^2 = 1.13e-29 I by the direct-floor lemma.",
       "pass": true,
+      "precision_bits": 2048,
       "records": [
-        "numerics/records/metric-comparison-2048.json",
-        "numerics/records/metric-comparison-4096.json"
-      ]
+        "numerics/records/floor-bisection-first-2048.json"
+      ],
+      "supersedes": [
+        "R7",
+        "R8",
+        "R9",
+        "R10"
+      ],
+      "note": "Re-evaluation of the stored 6144-bit R7 archive through the streaming dual-hash loader; reproduces the R7/R8/R10 outcomes at their fixed thresholds to every printed digit."
     },
     {
-      "id": "R11",
-      "claim": "At L2=log(56)/2 the second continuation satisfies H_J >= 1e-8 A on the full old domain.",
+      "id": "R15",
+      "claim": "Second quarter-step, L_2=log(56)/2, verification space 256+32+32, continuation R11. Comparison: H_{J_2} >= 5.01e-8 A_2 (5.02e-8 fails). Absolute test at 1e-36 fails (pivot 182); residual tests at theta=0.9, 0.95, 0.99 fail (pivots 55, 155, 174).",
       "pass": true,
+      "precision_bits": 2048,
       "records": [
-        "numerics/records/second-quarter-build.json",
-        "numerics/records/second-quarter-2048.json",
-        "numerics/records/second-quarter-4096.json"
+        "numerics/records/floor-bisection-second-2048.json"
       ],
       "unproved": [
-        "Second-step full residual inequality",
         "Second-step full-operator floor",
+        "Second-step residual inequality",
         "Second-step positive-shift interval"
       ],
-      "failed_sufficient_tests": [
-        "Absolute floor 1e-36",
-        "Old-energy threshold 1e-7",
-        "Scalar-tail residual theta 0.9, 0.95, 0.99"
-      ]
+      "note": "Failed sufficient tests are failures to certify, not negative-form witnesses."
     },
     {
-      "id": "R12",
-      "claim": "Separate-tail residual experiments at theta 0.99 and 0.9999 do not certify the inequality.",
-      "pass": false,
-      "records": [
-        "numerics/records/second-quarter-weighted-1024.json",
-        "numerics/records/second-quarter-weighted-near-one.json",
-        "numerics/records/second-quarter-weighted-2048.json"
-      ],
-      "interpretation": "Failed sufficient guards, not negative-form witnesses or an exhaustive impossibility result."
-    },
-    {
-      "id": "R13",
-      "claim": "Endpoint/exterior moments and small three-interval output checks agree with independent quadrature; finite LDL failure handling checked.",
+      "id": "R16",
+      "claim": "Ball Rayleigh upper bounds: lambda_min(Q_{0,L_q}) <= 3.29e-29 (quotient 3.28379e-29 + eta), lambda_min(Q_{0,L_2}) <= 1.89e-30 (quotient 1.88423e-30 + eta). Hypothetical-floor diagnostics at L_2: with the certified three-interval complement floor replaced by 0.55 the absolute (m=1e-36) and residual (theta=0.9) tests pass; with 0.5 both fail; with 0.65 the residual test at theta=0.8 passes and the largest passing absolute floor is 1.64e-30 (bisected), against the rigorous upper bound 1.89e-30.",
       "pass": true,
-      "record": "numerics/records/spatial-consistency.json",
-      "interpretation": "Implementation consistency, not an independent full proof audit."
+      "records": [
+        "numerics/records/rayleigh-upper-first-2048.json",
+        "numerics/records/rayleigh-upper-second-2048.json",
+        "numerics/records/oracle-second-0.5.json",
+        "numerics/records/oracle-second-0.55.json",
+        "numerics/records/oracle-second-0.65.json"
+      ],
+      "interpretation": "The upper bounds are certificates within the working normalization. The hypothetical-floor runs are DIAGNOSTICS of the finite matrices only and certify nothing; they show the second-step failure is entirely the analytic complement floor."
+    },
+    {
+      "id": "R17",
+      "claim": "Fourier-side diagnostic for the lowest eigenvector f_0 of the first-step head: 2*sum_{k<=K}|F_0(gamma_k)|^2 reaches 0.760, 0.918, 0.961, 0.978 of lambda_0=3.2838e-29 at K=100,400,1000,2000 (heights 237, 680, 1419, 2515), with a remainder scaling as 1/T; f_0(0)=f_0(L_q)=1.8e-14, jump at the join 1e-15; |F_0(gamma_k)| <= 1e-18 for k<=13; leading-order zero displacement contradicting the certificate: 9.6e-13 (k=1), 3.7e-11 (k=2), 3.1e-10 (k=3), ..., 1.0e-3 (k=12), 0.10 (k=17).",
+      "pass": null,
+      "records": [
+        "numerics/fourier_side/zero_sum_check_K400.json",
+        "numerics/fourier_side/zero_sum_check_K2000.json",
+        "numerics/fourier_side/zero_sensitivity_K20.json",
+        "numerics/fourier_side/zeta_zeros_400.json",
+        "numerics/fourier_side/zeta_zeros_2000.json"
+      ],
+      "interpretation": "Midpoints and mpmath only; not a certificate. Supports the reading that the near-null space at L_q is a low-zero interpolation phenomenon and that the certificate constrains zeros only below height about 70."
+    },
+    {
+      "id": "R18",
+      "claim": "First step rebuilt with 96 slab modes (256+96; two-interval complement floor 1.109; absolute test passes at 1e-30) and second step 256+96+96 at L_2=log(56)/2 (three-interval complement floor 0.76828, theta=0.9 modification 0.66537). Certified: absolute floor 1.69e-30 (1.70e-30 fails); relative M_0.9 >= 1.65e-30 (1.66e-30 fails), theta=0.8 passes at m=0; comparison H_{J_2} >= 5.25e-8 A_2 (5.26e-8 fails); ball Rayleigh upper bound lambda_min(Q_{0,L_2}) <= 1.89e-30 (quotient 1.884216e-30). Hence 1.69e-30 <= lambda_min(Q_{0,L_2}) <= 1.89e-30, Q >= 1.65e-30/tau^2 = 6.0e-31 by the direct-floor lemma, and with C_{L_2} < 17.4886: Q_{s,L} >= 8.4e-31 for s <= 2e-16, ||V_{omega,L}|| <= exp(-8e-31 omega), D >= (1-exp(-1.6e-30 omega)) I for L <= L_2.",
+      "pass": true,
+      "precision_bits": {
+        "build": 6144,
+        "replay": 2048
+      },
+      "records": [
+        "numerics/records/closure_256_96.json",
+        "numerics/records/closure_256_96_catalog.json",
+        "numerics/records/second-quarter-96-build.json",
+        "numerics/records/floor-bisection-second96-2048.json",
+        "numerics/records/rayleigh-upper-second96-2048.json"
+      ],
+      "external": [
+        "history/first-step-96-20260911/closure_256_96.matrices.json.gz (265,734,856 bytes, sha256 a64e5539...da742, content 14bce4f6...aebac)",
+        "output/second-quarter-96/central_matrices.json.gz (632,719,410 bytes, sha256 2a7791e1...9282, content 5ebedbe6...feb87)",
+        "second-quarter-96-continuation.json (3,018,378 bytes, sha256 fd78c865...9693e)"
+      ],
+      "environment": "Cloud container, Python 3.11.15, python-flint 0.9.0, FLINT 3.6.0, mpmath 1.4.1; builds 6144 bits (41 min first step, 85 min second step); replays 2048 bits.",
+      "note": "Closes the second-step floor and residual premises left open by R11/R15. The 448-mode head's lowest eigenvalue agrees with the 320-mode head's to five digits; the extra slab modes were needed only for the analytic complement floor."
     }
   ],
-  "all_depth_induction": "Conditional theorem only; indefinite residual control and nonaccumulation remain open.",
-  "largest_certified_horizon": "1.98, by the separate inherited global R6 certificate",
+  "carried_forward_from_v0.2": [
+    "R10",
+    "R11",
+    "R12",
+    "R13"
+  ],
+  "all_depth_induction": "Conditional theorem with the direct-floor recurrence (Sec. 7.1); hypotheses verified for the first and second steps (R14, R18); indefinite residual control and nonaccumulation remain open.",
+  "largest_certified_horizon": "L_2 = log(56)/2 = 2.0127 with floor 1.69e-30 (spatial, R18); at L_q = (3/4) log 14 the floor is 2.99e-29 (R14); the separate global R6 certificate at 1.98 has floor 1e-31",
   "external_archive_catalog": "numerics/ARCHIVE_RECORDS.json"
 }

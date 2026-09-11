@@ -1,0 +1,919 @@
+\documentclass[11pt]{article}
+\usepackage[letterpaper,margin=1in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,mathrsfs,microtype,amsmath,amssymb,amsthm,mathtools,booktabs,array,longtable}
+\usepackage{xcolor}
+\usepackage[colorlinks=true,linkcolor=blue!45!black,citecolor=blue!45!black,urlcolor=blue!45!black]{hyperref}
+\usepackage{fancyhdr}
+\pagestyle{fancy}\fancyhf{}\fancyhead[L]{\small Cumulative storage and depth extension}\fancyhead[R]{\small Research draft 0.2}\fancyfoot[C]{\thepage}
+\setlength{\headheight}{14pt}
+\setlength{\emergencystretch}{2em}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\theoremstyle{remark}\newtheorem{remark}[theorem]{Remark}
+\newcommand{\HH}{\mathcal H}
+\newcommand{\DD}{\mathcal D}
+\newcommand{\Rea}{\operatorname{Re}}
+\newcommand{\norm}[1]{\left\|#1\right\|}
+\newcommand{\ip}[2]{\langle #1,#2\rangle}
+\newcommand{\id}{I}
+\newcommand{\floorq}{10^{-33}}
+\newcommand{\rec}[1]{\texttt{\detokenize{#1}}}
+\title{Cumulative storage and residual-controlled depth extension\newline for shifted-zeta transfer operators}
+\author{Research draft prepared for Edward B. Baker III}
+\date{10 September 2026 \quad\textbullet\quad Version 0.2}
+\hypersetup{pdftitle={Cumulative storage and residual-controlled depth extension},pdfauthor={Research draft prepared for Edward B. Baker III}}
+\begin{document}
+\maketitle
+\begin{abstract}
+We study finite-horizon depth extension for the shifted-zeta transfer in the working normalization of the Weil-depth v0.3 manuscript. The cumulative contraction defect admits an exact Cayley congruence whose normalized spatial coupling equals the original storage coupling. A continuation map converts the depth Schur complement into candidate energy minus a quadratic stationarity residual. At the first quarter-step from $\log 7$ toward $\log 8$, an exact rational 128-to-32 polynomial continuation satisfies a computer-assisted residual bound on the entire old form domain: $R^*F^{-1}R\preceq0.9H_J$. A spatial verification head with 256 old and 32 new modes, complete output Grams, and an analytic bound on both infinite-dimensional complements yields this inequality without assuming the separate global certificate at depth $1.98$. An additional guarded test proves $H_J\succeq10^{-7}A$, hence the unrestricted Schur complement retains at least $10^{-8}$ of the preceding energy. An explicit conditional induction theorem identifies the further data needed for divergent depths and vanishing shifts. The same spatial construction certifies $Q_{0,L_q}\succeq10^{-33}I$ and hence contraction for $0<\omega\le5\times10^{-18}$. At a second quarter-step, a three-interval construction certifies the full-old comparison $H_{J_2}\succeq10^{-8}A_2$, but its residual and absolute positivity tests do not close. Earlier calculations distinguish negative instantaneous generator energy from positive cumulative storage and explain the severe cancellation at a whole-step extension. These are finite-horizon research results; normalization verification, independent review, direct cumulative continuation beyond generator positivity, and an all-depth recursion remain open.
+\end{abstract}
+\noindent\textbf{Status and dependencies.} The manuscript consolidates five research packets dated 10 September 2026 and the subsequent old-energy comparison and spatial continuation experiments. Version 0.1 and its records remain preserved under \rec{archive/drafts/v0.1_2026-09-10/}. Analytic conclusions use the definitions and finite-horizon framework of Weil-depth v0.3 at repository commit \rec{a566944dc1be2899e37fce3d0e857516ced33d8f} \cite{WeilDepth}. The author's independent normalization verification is pending. New analytic reductions and their implementations require independent mathematical review. ``Certified'' below means a recorded guarded Arb sign computation together with its stated analytic reduction, within these working conventions. It does not mean an independent proof audit, formal verification, or a proof of RH. Authorship and submission metadata remain for the author to finalize.
+
+\clearpage
+\tableofcontents
+\newpage
+\section{The advance and the remaining proof problem}
+
+The finite-horizon Weil program seeks positive central forms, or equivalent suitable small-shift contraction information, on supports of unbounded length. The Weil-depth paper supplies explicit all-input central floors through $L=\log7$, together with quantitative contraction intervals. Its advance is a finite reduction that controls the infinite polynomial complement through full-output Grams and an analytic tail floor. A positive finite compression by itself would not suffice.
+
+The next problem is a depth extension inequality. An absolute comparison of a cross-block norm with the smallest old energy is too expensive when the latter is approximately $10^{-28}$. The investigation therefore moved from coordinate-energy estimates to cumulative storage, then to the residual of a proposed extension. The surviving quantity is the energy of the proposed continuation, evaluated before its stationarity error is charged.
+
+Put
+\begin{equation}\label{eq:depth}
+ a=\log7,\qquad h=\tfrac14\log(8/7),\qquad
+ L_q=a+h=\tfrac34\log14=1.97929299721144396089\ldots.
+\end{equation}
+At the old/new spatial split write
+\[
+ Q_{0,L_q}=\begin{pmatrix}A&B^*\\B&F\end{pmatrix},\qquad
+ A=Q_{0,a},\quad F=Q^\gamma_{0,h}.
+\]
+Let $P_{128}$ be the orthogonal projection onto the first 128 old Legendre modes. The exact rational matrix $J_{128,32}$ in record R5 below specifies a map to 32 new Legendre modes. Extend it to the full old space by $J=J_{128,32}P_{128}$, and put
+\begin{equation}\label{eq:HR}
+ H_J=A+B^*J+J^*B+J^*FJ,\qquad R=B+FJ.
+\end{equation}
+The notation denotes closed forms where a diagonal operator is unbounded.
+
+\begin{theorem}[Computer-assisted quarter-step result]\label{thm:main}
+In the working framework above, $H_J$ is coercive and, on the entire old form domain,
+\begin{equation}\label{eq:mainrelative}
+ R^*F^{-1}R\preceq\tfrac9{10}H_J,\qquad
+ A-B^*F^{-1}B\succeq\tfrac1{10}H_J.
+\end{equation}
+For all old and new form-domain inputs $f,g$,
+\begin{equation}\label{eq:mainenergy}
+ Q_{0,L_q}[f,g]\ge(1-\sqrt{0.9})\{H_J[f]+F[g-Jf]\}
+ \ge\tfrac1{20}\{H_J[f]+F[g-Jf]\}.
+\end{equation}
+An additional guarded test, proved in Section~\ref{sec:old-energy-comparison}, gives
+\[
+ H_J\succeq10^{-7}A,\qquad A-B^*F^{-1}B\succeq10^{-8}A.
+\]
+A separate guarded sign test on the same spatial matrices gives
+\begin{equation}\label{eq:mainfloor}
+ Q_{0,L_q}\succeq10^{-33}I.
+\end{equation}
+It follows that, for $0<L\le L_q$ and $0<\omega\le5\times10^{-18}$,
+\begin{align}
+ \norm{V_{\omega,L}}&\le e^{-5\times10^{-34}\omega},\label{eq:maincontract}\\
+ D_{\omega,L}&\succeq(1-e^{-10^{-33}\omega})I.\label{eq:maindefect}
+\end{align}
+At the split \eqref{eq:depth}, the cumulative relative coupling defined in Section~\ref{sec:cumulative} satisfies $c_D(\omega)^2\le e^{-10^{-33}\omega}<1$ throughout this shift interval.
+\end{theorem}
+
+The analytic proof is in Sections~\ref{sec:residual}--\ref{sec:shift}; the numerical premises are isolated in Section~\ref{sec:records}. The relative test directly certifies a more strongly coupled graph form. It does not infer \eqref{eq:mainrelative} from a previously assumed new-depth positivity theorem. The verification head is 256 plus 32 modes; the proposed continuation itself remains 128 to 32.
+
+The factor $0.9$ covers every old input. The earlier, stronger factor $0.004$ covers only the original 128 old modes. The additional comparison proves a retained fraction $10^{-8}$ of $A$ at this first step. It does not prove a uniform retained fraction at arbitrary depth: the carried metric is $H_J$, which can be much smaller than $A$ in weak directions.
+
+\section{Conventions and the finite-horizon framework}\label{sec:framework}
+
+Let $\HH_L=L^2(0,L;\mathbb C)$, with inner product linear in its second argument. Set
+\[
+ R_Lf(x)=f(L-x),\qquad T_df(x)=\mathbf1_{x>d}f(x-d).
+\]
+The total support length is $L$, the centered support is $(-L/2,L/2)$, and the multiplicative cutoff is $e^{L/2}$. A delay at $d=L$ has zero action. All norms and adjoints use unweighted Lebesgue measure.
+
+Write $\xi(s)=\tfrac12s(s-1)\pi^{-s/2}\Gamma(s/2)\zeta(s)$ and $\mathscr F(p)=\xi(\tfrac12+p)$. For $0<\omega\le1/2$, the causal transfer has far-right Laplace symbol
+\begin{equation}\label{eq:K}
+ K_\omega(p)=\frac{\mathscr F(p-\omega)}{\mathscr F(p+\omega)}.
+\end{equation}
+Its finite-horizon realization is
+\[
+ V_{\omega,L}=\left(\sum_{\log n<L}b_\omega(n)T_{\log n}\right)V^\gamma_{\omega,L},
+ \quad b_\omega(n)=n^{\omega-1/2}\prod_{p\mid n}(1-p^{-2\omega}),\quad b_\omega(1)=1.
+\]
+Here $V^\gamma$ uses the quotient of $\gamma(s)=\tfrac12s(s-1)\pi^{-s/2}\Gamma(s/2)$. The impulse is locally integrable, of order $t^{\omega-1}$ at zero. The finite arithmetic sum includes mixed composite terms, even when $\Lambda(n)=0$. The generator, in contrast, contains only prime powers.
+
+For the centered zero extension $f_c$, use the Fourier convention
+\[
+ \widehat f_c(\tau)=\int f_c(x)e^{-i\tau x}\,dx.
+\]
+Define $C(f)=\int f_c(x)\cosh(x/2)\,dx$ and
+$S(f)=\int f_c(x)\sinh(x/2)\,dx$. The adopted central form is
+\begin{align}\label{eq:Q}
+ Q_{0,L}[f]={}&\frac1{2\pi}\int_{\mathbb R}
+ \left(\Rea\psi(\tfrac14+\tfrac{i\tau}{2})-\log\pi\right)|\widehat f_c(\tau)|^2\,d\tau\notag\\
+ &+2|C(f)|^2-2|S(f)|^2
+ -\sum_{\log n<L}\frac{\Lambda(n)}{\sqrt n}\ip f{(T_{\log n}+T_{\log n}^*)f}.
+\end{align}
+Its closed form domain is
+\[
+ \DD_{\log,L}=\left\{f:\int_{\mathbb R}\log(2+|\tau|)|\widehat f_c(\tau)|^2\,d\tau<\infty\right\}.
+\]
+Polynomials form a core. Smooth bounded multipliers preserve this domain; piecewise polynomials are also admissible and have square-integrable logarithmic gamma outputs. A spatial split gives the direct sum of the two local form domains, with bounded cross block. This follows first on functions avoiding the join and then by closure; removal of a shrinking interval about one point converges in the logarithmic norm for smooth inputs, for example through $H^s$, $0<s<1/2$.
+
+The v0.3 evolution identity and quadratic perturbation estimate are
+\begin{equation}\label{eq:evolution}
+ \frac{d}{ds}\norm{V_{s,L}f}^2=-2Q_{s,L}[V_{s,L}f],\qquad
+ \norm{Q_{s,L}-Q_{0,L}}\le C_Ls^2,
+\end{equation}
+with $V_{0,L}=I$ as a strong limit. These statements have the core and limiting interpretation of the source manuscript. The difference in \eqref{eq:evolution} is bounded although each form is unbounded. The exact arithmetic part of $Q_{s,L}$ is
+$-\sum\Lambda(n)n^{-1/2}\cosh(s\log n)(T_{\log n}+T_{\log n}^*)$.
+
+A final diagonal argument in that framework requires horizons $L_j\to\infty$, shifts $\omega_j\downarrow0$, and contraction at $(L_j,\omega_j)$. Every fixed compactly supported test is then eventually included. The zero-shift identity $V_{0,L}=I$ alone supplies no positivity information: its unscaled defect vanishes at every horizon.
+
+\section{Generator geometry and its limitation}\label{sec:generator}
+
+Put $X_Lf(x)=(x-L/2)f(x)$ and $Q=Q_{0,L}$. The off-diagonal central gamma kernel is
+\begin{equation}\label{eq:G}
+ q(t)=e^{t/2}-\frac{e^{-5t/2}}{1-e^{-2t}}=-\frac{G_0(t)}{2t},\qquad
+ G_0(t)=e^{t/2}\frac{t}{\sinh t}-4t\cosh(t/2).
+\end{equation}
+Shift multiplies both this kernel and every arithmetic delay pairing by $\cosh(\omega(x-y))$. The multiplier is one on the diagonal and its difference from one vanishes quadratically there.
+
+\begin{proposition}[Exact hyperbolic identity]\label{prop:hyperbolic}
+On the common form domain,
+\begin{equation}\label{eq:hyperbolic}
+ Q_{\omega,L}[f]=Q[\cosh(\omega X_L)f]-Q[\sinh(\omega X_L)f].
+\end{equation}
+If $Q\succeq mI>0$, then
+\[
+ Q_{\omega,L}\succeq0\quad\Longleftrightarrow\quad
+ \norm{\tanh(\omega X_L)}_{Q\to Q}\le1.
+\]
+With $\kappa_L=\norm{X_L}_{Q\to Q}$, for $0\le\omega\kappa_L\le\pi/4$,
+\begin{equation}\label{eq:kappa}
+ Q_{\omega,L}\succeq\cos(2\omega\kappa_L)Q,\qquad
+ \norm{V_{\omega,L}}\le\exp\left[-\frac{m}{2\kappa_L}\sin(2\kappa_L\omega)\right]
+\end{equation}
+when also $0<\omega\le1/2$.
+\end{proposition}
+\begin{proof}
+Use $\cosh(u-v)=\cosh u\cosh v-\sinh u\sinh v$ in the complete kernel. Smooth multiplication and closure give \eqref{eq:hyperbolic}. Factoring out the invertible multiplier $\cosh(\omega X_L)$ gives the norm criterion. In the energy Hilbert space, absolute Taylor coefficient majorants give
+$\norm{\tanh(\omega X_L)}_Q\le\tan t$ and
+$\norm{\operatorname{sech}(\omega X_L)}_Q\le\sec t$, $t=\omega\kappa_L<\pi/2$.
+Thus the lower form bound is $(1-\tan^2t)\cos^2t\,Q=\cos(2t)Q$. Integration of \eqref{eq:evolution} proves the norm bound. No bounded inverse of $V$ is used.
+\end{proof}
+
+This identifies a possible sufficient path variable $\omega\kappa_L$, but a computed finite-input value of $\kappa_L$ is a lower bound, not the upper bound required here. The midpoint minimizes the coordinate multiplication norm among real centers: that norm is convex in the center, and reflection makes it even.
+
+For a positive block form $\bigl(\begin{smallmatrix}A&B^*\\B&F\end{smallmatrix}\bigr)$, set $c=\norm{F^{-1/2}BA^{-1/2}}<1$. Cauchy's inequality gives
+\begin{equation}\label{eq:basicblock}
+ (1-c)(A\oplus F)\preceq Q_{0,L+h}\preceq(1+c)(A\oplus F).
+\end{equation}
+Consequently
+\[
+ m_{L+h}\ge(1-c)\min(m_L,m_h),\quad
+ \kappa_{L+h}\le\sqrt{\frac{1+c}{1-c}}
+ \max\{\kappa_L+h/2,\kappa_h+L/2\}.
+\]
+An elementary local extension follows from $\norm B\le b_R$ and
+$F\succeq[-\gamma-\log(\pi h)-W_Rh]I$, where
+$W_R\ge\sup_{[0,R]}|(G_0(t)-1)/t|$ and
+$b_R=\pi/2+W_RR/2+\sum_{\log n<R}\Lambda(n)/\sqrt n$.
+The condition $m_L[-\gamma-\log(\pi h)-W_Rh]>b_R^2$ suffices. The singular gamma cross term is bounded by half the Carleman norm, $\pi/2$; the smooth part uses its Hilbert--Schmidt norm. The diagonal floor is the degree-zero logarithmic fractional-integration bound from v0.3 plus a bounded smooth perturbation.
+
+This proves local extendibility of a strictly positive horizon within the working framework. It can require $h$ of order $\exp(-\mathrm{const}/m_L)$, so it does not prove divergent total depth. At the published $\log7$ floor, a conservative symbolic example is $h=e^{-10^{31}}$. Its role is to expose the quantitative obstruction.
+
+The lowest generator direction also initially bends down. Expanding \eqref{eq:hyperbolic} gives $Q_{\omega,L}=Q+\omega^2[X_L,[X_L,Q]]/2+O_L(\omega^4)$. For $Qe=me$,
+\[
+ \tfrac12\ip e{[X_L,[X_L,Q]]e}=m\norm{X_Le}^2-Q[X_Le]\le0.
+\]
+At $L=\log7$, the saved exact even polynomial of degree 126 certifies
+\begin{equation}\label{eq:negative}
+ -2.999\times10^{-27}<\frac{Q_{10^{-11},L}[f]}{\norm f^2}
+ <-2.998\times10^{-27},\qquad \kappa_L>2.32\times10^{11}.
+\end{equation}
+A precision replay evaluates the same rational vector. This is a negative instantaneous generator witness, not a negative central Weil form or a noncontractivity witness.
+
+\section{Cumulative storage and exact relative coupling}\label{sec:cumulative}
+
+The object needed for contraction is
+\[
+ D_{\omega,L}=I-V_{\omega,L}^*V_{\omega,L},\qquad
+ D_{\omega,L}[f]=2\int_0^\omega Q_{s,L}[V_{s,L}f]\,ds.
+\]
+The moving input matters. The same polynomial as in \eqref{eq:negative} satisfies the full-output enclosure
+\begin{equation}\label{eq:vectorstorage}
+ 8.717034818878968\times10^{-38}
+ <\frac{D_{10^{-11},\log7}[f]}{\norm f^2}
+ <8.717034818878970\times10^{-38}.
+\end{equation}
+Thus negative generator energy on a fixed vector can coexist with positive accumulated storage on that vector. It is still only one input.
+
+At a spatial split causality gives
+\[
+ V=\begin{pmatrix}X&0\\Y&Z\end{pmatrix},\quad
+ E=I-X^*X,\quad F_{\rm out}=I-ZZ^*.
+\]
+If $X,Z$ are strict contractions, elimination of the new input in $I-V^*V$ gives
+\begin{equation}\label{eq:cD}
+ S_D=E-Y^*F_{\rm out}^{-1}Y,\qquad
+ c_D=\norm{F_{\rm out}^{-1/2}YE^{-1/2}}.
+\end{equation}
+Hence the full transfer is a strict contraction if and only if $c_D<1$. The identity follows from
+$I+Z(I-Z^*Z)^{-1}Z^*=(I-ZZ^*)^{-1}$. A non-strict criterion with $c_D\le1$ also holds when the two diagonal defects remain coercive.
+
+\begin{proposition}[Cayley storage]\label{prop:cayley}
+For $\omega>0$ set
+\[
+ \mathcal Z=(I-V)(I+V)^{-1},\qquad
+ P_{\omega,L}=\frac2\omega\Rea\mathcal Z.
+\]
+Then $I+V$ is invertible, $P_{\omega,L}$ commutes with reflection, and
+\begin{equation}\label{eq:cayley}
+ D_{\omega,L}=\frac\omega2(I+V^*)P_{\omega,L}(I+V).
+\end{equation}
+If the diagonal storage blocks are coercive and
+$P_{\omega,L+h}=\bigl(\begin{smallmatrix}A_\omega&B_\omega^*\\B_\omega&F_\omega\end{smallmatrix}\bigr)$, then
+\begin{equation}\label{eq:samecoupling}
+ \norm{F_\omega^{-1/2}B_\omega A_\omega^{-1/2}}=c_D.
+\end{equation}
+\end{proposition}
+\begin{proof}
+Finite-horizon Volterra convolution with an $L^1$ kernel is quasinilpotent: exponential conjugation bounds its spectral radius by a weighted $L^1$ norm tending to zero. Thus $-1$ is outside its spectrum. Direct multiplication gives \eqref{eq:cayley}. Real causality gives $V^*=R_LVR_L$, hence the same identity for $\mathcal Z$ and reflection symmetry of its real part.
+
+Let $R_X=(I+X)^{-1}$, $R_Z=(I+Z)^{-1}$. Block inversion gives
+\[
+ B_\omega=-\frac2\omega R_ZYR_X,\quad
+ A_\omega=\frac2\omega R_X^*ER_X,\quad
+ F_\omega=\frac2\omega R_ZF_{\rm out}R_Z^*.
+\]
+The operators
+$U=\sqrt{2/\omega}F_\omega^{-1/2}R_ZF_{\rm out}^{1/2}$ and
+$W=\sqrt{2/\omega}E^{1/2}R_XA_\omega^{-1/2}$ are unitary. The normalized Cayley cross block is $-U(F_{\rm out}^{-1/2}YE^{-1/2})W$, proving \eqref{eq:samecoupling} without commuting factors.
+\end{proof}
+
+The corresponding causal symbol is
+\[
+ a_{\rm cum,\omega}(p)=\frac2\omega
+ \frac{\mathscr F(p+\omega)-\mathscr F(p-\omega)}
+ {\mathscr F(p+\omega)+\mathscr F(p-\omega)}.
+\]
+On a far-right line and a common smooth core, it has the even expansion
+\begin{equation}\label{eq:cumseries}
+ a_{\rm cum,\omega}=a_0+\omega^2\left(\frac{a_0''}{6}-\frac{a_0^3}{12}\right)+O(\omega^4),
+ \qquad a_0=2\mathscr F'/\mathscr F.
+\end{equation}
+The cubic term accounts for transport and is absent from a purely instantaneous test. This is not bounded-operator convergence to $Q_0$. For each positive shift $P_\omega$ is bounded, whereas $Q_0$ is unbounded. Indeed $V$ is compact by $L^1$ approximation of its kernel, so $P_\omega=(2/\omega)I+\text{compact}$. A core expansion supplies no uniform tail estimate as $\omega\downarrow0$.
+
+\subsection{A finite step changing both depth and shift}
+Fix an extension length and reference positive shift $s$, with coercive diagonal Cayley blocks $A_s,F_s$. For a candidate shift $t>0$ put
+\[
+ \mathcal K=F_s^{-1/2}B_sA_s^{-1/2},\quad
+ H_A=A_s^{-1/2}(A_t-A_s)A_s^{-1/2},\quad
+ H_F=F_s^{-1/2}(F_t-F_s)F_s^{-1/2},
+\]
+\[
+ H_B=F_s^{-1/2}(B_t-B_s)A_s^{-1/2}.
+\]
+The exact coercivity test is
+\begin{equation}\label{eq:step}
+ I+H_F\succ0,\qquad
+ I+H_A-(\mathcal K+H_B)^*(I+H_F)^{-1}(\mathcal K+H_B)\succ0.
+\end{equation}
+Here and below $\succ0$ means a strictly positive coercivity bound. This test retains the signs and directions of storage changes. Replacing them all by absolute norms discards potential improvement. For unchanged shift it reduces to $\norm{\mathcal K}<1$ and \eqref{eq:basicblock} for Cayley storage.
+
+If the top coupling singular value $c(\omega)>0$ is simple, differentiable, and attained, choose $A_\omega[x]=F_\omega[y]=1$ and $\ip y{B_\omega x}=c$. Then
+\[
+ c'=\Rea\ip y{B_\omega'x}-\frac c2\{A_\omega'[x]+F_\omega'[y]\}.
+\]
+This is a diagnostic balance in the active directions, under its regularity assumptions. It does not prove monotonicity, a unique critical curve, or differentiability in depth. Moving arithmetic thresholds can obstruct operator-norm depth differentiation. Discrete condition \eqref{eq:step} remains the robust formulation.
+
+\section{Why the whole step is difficult}\label{sec:whole}
+
+At $a=\log7$, $h_{\max}=\log(8/7)$, the central cross block is
+\begin{equation}\label{eq:B}
+ (Bf)(t)=\int_0^a q(a+t-y)f(y)\,dy
+ -\sum_{n\in\{2,3,4,5,7\}}\frac{\Lambda(n)}{\sqrt n}f(a+t-\log n),\quad0<t<h_{\max}.
+\end{equation}
+The new $7$ term is exactly $-\log7\,f(t)/\sqrt7$. At the whole-step endpoint the $8$ delay has zero action.
+
+Finite central diagnostics at 128 old and 32 new modes put the normalized gamma and arithmetic pieces separately near $2.1554\times10^{13}$, while their sum has norm near one. The new $7$ term and the remainder separately have norms near $4.0228\times10^6$ in the same metrics. These are finite-input diagnostics, but their cancellation explains why a triangle inequality among these contributions is unsuitable for the critical head.
+
+An exact rational test pair, with enclosed diagonal energies and pairing, proves the one-sided unrestricted bound
+\begin{equation}\label{eq:wholelower}
+ c_{\rm central,full}^2>1-1.84\times10^{-17}.
+\end{equation}
+The diagonal metrics exist by the old-depth floor and the new-slab bound below. Inequality \eqref{eq:wholelower} is a lower bound on coupling; it does not prove that the coupling is below one. Finite-input slack increases markedly when the step is reduced:
+\begin{center}
+\begin{tabular}{@{}lll@{}}\toprule
+Step from $\log7$ & Diagnostic $1-c_{128,32}^2$ & Certified finite slack $>$\\\midrule
+$\tfrac14\log(8/7)$ & $1.27068099025\times10^{-7}$ & $10^{-7}$\\
+$\tfrac12\log(8/7)$ & $1.77992803192\times10^{-11}$ & $10^{-11}$\\
+$\log(8/7)$ & $1.83945352171\times10^{-17}$ & $10^{-17}$\\\bottomrule
+\end{tabular}
+\end{center}
+These bounds restrict both input spaces. They motivate the quarter-step, without claiming that its finite slack controls every old direction.
+
+At total length $\log8$ and shift $10^{-11}$, the full-output cumulative defect is positive on the 160-dimensional piecewise polynomial input space (128 old plus 32 new). Its generator is negative on the embedded old witness \eqref{eq:negative}. Thus the distinction between cumulative and instantaneous positivity holds on this entire retained input subspace. All transfer output is integrated, but omitted input directions remain untested; unrestricted contraction at this shift is open.
+
+\begin{proposition}[Uniform short-slab storage; computer-assisted]\label{prop:slab}
+For $0<h\le h_{\max}$ and $0<\omega\le1/2$,
+\[
+ \norm{V^\gamma_{\omega,h}}\le e^{-0.06\omega},\qquad
+ I-(V^\gamma)^*V^\gamma,\ I-V^\gamma(V^\gamma)^*\succeq(1-e^{-0.12\omega})I.
+\]
+The defects divided by $2\omega$ are greater than $0.058I$.
+\end{proposition}
+\begin{proof}[Reduction and numerical premise]
+Write the gamma impulse as $(2\pi)^\omega t^{\omega-1}G^V_\omega(t)/\Gamma(\omega)$, with $G^V_\omega(t)=1+\sum_{j\ge1}G_j(\omega)t^j$. The radius-three profile bound and an interval calculation give $G^V_\omega>0.4935$ on $[0,h_{\max}]$. Its integral is
+\[
+ z(\omega)=\frac{(2\pi h_{\max})^\omega}{\Gamma(1+\omega)}
+ (1+\omega J(\omega)),\qquad J(\omega)=\sum_{j\ge1}\frac{G_j(\omega)h_{\max}^j}{j+\omega}.
+\]
+The gamma product and $\log(1+t)\le t$ yield
+\[
+ \frac{\log z(\omega)}\omega\le\log(2\pi h_{\max})+\gamma
+ -(\pi^2/4-2)\omega+J(\omega).
+\]
+Fifty closed shift intervals of width $0.01$, degree 64, and 768-bit arithmetic enclose the right side below $-0.0600528746$. The exact coefficient $G_1=-7/2$ avoids interval dependency. Young's inequality and compression prove the norm bound. The record also checks the divided-defect constant. See R4 in Section~\ref{sec:records}.
+\end{proof}
+
+\section{The continuation energy and residual}\label{sec:residual}
+
+The following algebra applies to central forms and, at positive shift, to bounded Cayley-storage blocks. Suppose $A,F$ are closed semibounded diagonal forms, $F\succeq f_0I>0$, and $B$ is bounded. Let $J$ be bounded into the operator domain of $F$, with $FJ$ bounded. Finite-rank polynomial continuations satisfy this condition. Define $H_J,R$ by \eqref{eq:HR}.
+
+\begin{lemma}[Residual identity and transported energy]\label{lem:residual}
+On the old form domain,
+\begin{equation}\label{eq:residualidentity}
+ S=A-B^*F^{-1}B=H_J-R^*F^{-1}R.
+\end{equation}
+If $H_J$ is coercive and $R^*F^{-1}R\preceq\theta H_J$ for $0\le\theta<1$, then
+\[
+ S\succeq(1-\theta)H_J,\qquad
+ Q[f,g]\ge(1-\sqrt\theta)\{H_J[f]+F[g-Jf]\}.
+\]
+\end{lemma}
+\begin{proof}
+Expand $R^*F^{-1}R$ and cancel the $J$ terms. With $g=Jf+v$, the complete form is $H_J[f]+2\Rea\ip v{Rf}+F[v]$. The residual inequality bounds the absolute cross pairing by $\sqrt\theta\,H_J[f]^{1/2}F[v]^{1/2}$; use $2ab\le a^2+b^2$.
+\end{proof}
+
+At the quarter-step the proposal is the Galerkin minimizer $-F_{32}^{-1}B_{32}$, rounded to exact decimal rational coefficients. Rounding means projected stationarity is approximate; the computation measures the actual residual, including this error.
+
+A stronger gamma floor than Proposition~\ref{prop:slab} is available at this smaller $h$:
+\begin{equation}\label{eq:f0}
+ F\succeq f_0I,\qquad f_0>1.73617237627376657.
+\end{equation}
+Indeed $G_0>0$ on $[0,h]$. In unit new coordinates, writing $G_0(t)=1+\sum g_jt^j$ and $\ell_h=\gamma+\log(2\pi h)$,
+\[
+ (F1)(v)=-\ell_h-\tfrac12\log(v(1-v))
+ -\tfrac12\sum_{j\ge1}\frac{g_jh^j}{j}\{v^j+(1-v)^j\}.
+\]
+The ground-state identity is
+\[
+ F[g]=\int_0^1(F1)(v)|g(v)|^2\,dv+\tfrac14\int_0^1\!\int_0^1
+ \frac{G_0(h|u-v|)}{|u-v|}|g(u)-g(v)|^2\,du\,dv.
+\]
+Use $v(1-v)\le1/4$, $g_1=-7/2$, and the Cauchy remainder to obtain
+\[
+ f_0\ge-\ell_h+\log2+\tfrac74h
+ -\tfrac12\sum_{j=2}^{d}\frac{|g_j|h^j}{j}
+ -\frac{128(h/3)^{d+1}}{(d+1)(1-h/3)}.
+\]
+The enclosed right side proves \eqref{eq:f0}; the identity extends by closure.
+
+\subsection{The first residual result: all new inputs}
+On the old polynomial space $\mathcal U_{128}$, complete new-output integration gives
+\begin{equation}\label{eq:finiteold}
+ R^*F^{-1}R\preceq0.004H_J,\qquad S\succeq0.996H_J,\qquad S\succeq10^{-8}A.
+\end{equation}
+The new input is unrestricted in these statements. The diagnostic minimum of $H_J/A$ is approximately $1.27068\times10^{-7}$. The diagnostic maximum of $R^*R/(f_0A)$ is about $0.00333284$, but the maximum relative to $H_J$ is about $0.00335287$. Comparing unrelated extrema would fail by more than 26,000. Comparing the residual in the actual remaining-energy metric succeeds.
+
+The model residual in unit new coordinates has the form
+\[
+ \widetilde Rf(v)=p_f(v)+l_f(v)\log v+r_f(v)\log(1-v).
+\]
+Its Gram uses all polynomial/logarithmic moments. For $r=h/a$ and unit old polynomial $\phi$, the singular cross output is
+\[
+ -\frac{\sqrt r}{2}\left[\phi(1+rv)\log\frac{v+a/h}{v}-H_\phi(1+rv)\right],\quad
+ H_\phi(z)=\int_0^1\frac{\phi(z)-\phi(u)}{z-u}\,du.
+\]
+The coefficient of the joining-endpoint logarithm is
+$[\sqrt{h/a}\,\phi(1)-(J\phi)(0)]/2$. It was retained rather than assumed to cancel. Profile and exterior-log remainders give $\norm{R-\widetilde R}\le\delta$, hence
+\[
+ R^*R\preceq\widetilde R^*\widetilde R+\left(2\delta\sqrt{\operatorname{tr}(\widetilde R^*\widetilde R)}+\delta^2\right)I.
+\]
+Since $F^{-1}\preceq f_0^{-1}I$, this controls every new correction. An increased-degree and increased-precision replay passes \eqref{eq:finiteold}. This mixed-space theorem alone does not imply shift-evolution contraction on its initial vectors: evolution can leave the retained old input space.
+
+\section{Closing both infinite-dimensional complements}\label{sec:complement}
+
+Take the verification projection $P=P_o\oplus P_n$ onto $N$ old and $M$ new Legendre modes, and put $K=I-P$. We use $N=256$, $M=32$; analytic profile degree is denoted $d$ to distinguish it from $M$. All outputs below are integrated on the full two intervals.
+
+\subsection{A joint arithmetic bound}
+Let $\alpha_n=\Lambda(n)/\sqrt n$ for $n\in\{2,3,4,5,7\}$, and write
+\[
+ T=\sum_n\alpha_n(T_{\log n}+T_{\log n}^*).
+\]
+This operator preserves nonnegative functions; it need not be positive as a quadratic form. If a bounded positive weight, bounded away from zero, satisfies $Tw\le\rho w$, then $\norm T\le\rho$. Apply
+\[
+ 2|f(x)f(y)|\le |f(x)|^2\frac{w(y)}{w(x)}+|f(y)|^2\frac{w(x)}{w(y)}
+\]
+to the symmetric translated pairings and integrate.
+
+A 512-cell piecewise constant weight with exact rational values certifies
+\begin{equation}\label{eq:rho}
+ \rho<1.949177212012646.
+\end{equation}
+The proposal uses floating-point iteration, followed by interval verification of every row majorant. A separate verifier partitions at every shifted discontinuity, checks all 2,152 open intervals, and handles coinciding endpoints by exact prime-exponent vectors. Thus \eqref{eq:rho} bounds the continuum operator. It improves the earlier sum of individual delay-chain bounds above $3.12$ while preserving interaction among arithmetic shifts.
+
+\subsection{The joint complement floor}
+The inherited gamma tail bound on an interval of length $\ell$ is
+\[
+ g_{\ell,k}=H_k-\gamma-\log(\pi\ell)
+ -\frac{K_\ell\ell}{2\sqrt{k(k+1)}},\qquad
+ Q^\gamma_{0,\ell}\big|_{P_k^\perp}\succeq g_{\ell,k}I,
+\]
+where $H_k=\sum_{j=1}^k1/j$ and $K_\ell\ge |w_0(0)|+\int_0^\ell|w_0^{\prime}(t)|\,dt$. Write $w_0(t)=(G_0(t)-1)/t$. The gamma cross kernel is $-1/(2s)-w_0(s)/2$. The singular part has norm at most $\pi/2$.
+
+For an old tail input its primitive vanishes at both endpoints and obeys
+$\norm{\int_0^\cdot f}\le a\norm f/(2\sqrt{N(N+1)})$, the Legendre-tail integration estimate used in v0.3. Integration by parts bounds the smooth cross term by
+\[
+ b_{\rm sm}=\frac{a\sqrt{ah}}{4\sqrt{N(N+1)}}\sup_{[0,L_q]}|w_0'|,\qquad
+ b_\gamma=\pi/2+b_{\rm sm}.
+\]
+Exact profile coefficients and a differentiated radius-three Cauchy remainder bound the derivative. Combining the two gamma tails with \eqref{eq:rho} gives
+\begin{equation}\label{eq:beta}
+ KQK\succeq\beta I,\qquad
+ \beta=\frac{g_{a,N}+g_{h,M}-\sqrt{(g_{a,N}-g_{h,M})^2+4b_\gamma^2}}2-\rho.
+\end{equation}
+At $(N,M)=(256,32)$ the enclosed quantities are approximately
+\begin{center}
+\begin{tabular}{@{}lr@{}}\toprule
+Quantity & Value (display only)\\\midrule
+$g_{a,256}$ & $3.71451757830356$\\
+$g_{h,32}$ & $5.73446389664370$\\
+$b_{\rm sm}$ & $0.001288775028904$\\
+$b_\gamma$ & $1.57208510182380$\\
+$\beta$ & $0.90675864277214$\\\bottomrule
+\end{tabular}
+\end{center}
+A positive complement floor alone does not control its coupling back into the head.
+
+\subsection{Full-output leakage and the Schur test}\label{sec:leakage}
+Let $H=PQP$, $W=KQP$, and $G=(QP)^*(QP)$. Piecewise polynomials lie in the operator domain, so these output Grams are well-defined and
+\begin{equation}\label{eq:E}
+ E=W^*W=G-H^2.
+\end{equation}
+For $0\le m<\beta$, the finite sufficient inequality
+\begin{equation}\label{eq:schur}
+ (\beta-m)(H-mI)-E\succ0
+\end{equation}
+implies $Q\succeq mI$. Eliminate $K$ from $Q-mI$ and use $(KQK-mI)^{-1}\preceq(\beta-m)^{-1}I$.
+
+The old-input/old-output part reuses matrices constructed at the old depth $\log7$. New blocks integrate the gamma and arithmetic pieces together, including exact support intersections. Adjoint cross outputs contain polynomial multiples of $1$, $\log(1-u)$, and $\log(1+h/a-u)$; old diagonal outputs also contain $\log u$. Exterior-log moments use exact recurrences with enclosed dilogarithmic initial values. These terms retain the cancellation in $G-H^2$; no output projection occurs.
+
+For model head error $\eta$ and model output error $\delta$, a valid leakage budget is
+\begin{equation}\label{eq:error}
+ e=2\delta\sqrt{\operatorname{tr}\widetilde G}+\delta^2
+ +2\eta\norm{\widetilde H}+\eta^2.
+\end{equation}
+A Frobenius upper bound is used for the last norm. Subtract $[(\beta-m)\eta+e]I$ from the model \eqref{eq:schur} before LDL factorization. The profile remainder is
+\[
+ \eta_d(L)=\frac{256(L/3)^{d+1}}{(d+1)(1-L/3)},\qquad L<3;
+\]
+the short exterior-log expansion adds $r^{T+1}/[(T+1)(1-r)]$ times its enclosed polynomial-continuation factor. All remaining arithmetic uses Arb balls.
+
+The 256-plus-32 test passes with the explicitly inserted $m=10^{-33}$. The original 128-plus-32 sufficient test failed despite $\beta>0.33467$. Its negative test pivot does not exhibit a negative vector for $Q$: \eqref{eq:schur} is sufficient, not necessary. That attempt and its original source snapshot are preserved.
+
+\section{A direct all-old residual test}\label{sec:direct}
+
+The graph congruence $\mathcal T=\bigl(\begin{smallmatrix}I&0\\J&I\end{smallmatrix}\bigr)$ gives
+\[
+ \mathcal T^*Q\mathcal T=\begin{pmatrix}H_J&R^*\\R&F\end{pmatrix}.
+\]
+To prove a prescribed relative residual factor $\theta<1$, put $\lambda=\theta^{-1/2}$ and test
+\begin{equation}\label{eq:Mtheta}
+ M_\theta=\begin{pmatrix}H_J&\lambda R^*\\\lambda R&F\end{pmatrix}.
+\end{equation}
+Coercivity of this complete form proves $H_J\succ0$ and $R^*F^{-1}R\preceq\theta H_J$ by its own Schur complement.
+
+For $N\ge128$, $M\ge32$, both the graph map and its adjoint act as identity on the joint complement. Its modified gamma cross norm is at most $\lambda b_\gamma$. The old-to-new arithmetic source windows are pairwise disjoint at the quarter-step, giving
+\[
+ b_{\rm ar}=\left(\sum_n\alpha_n^2\right)^{1/2}.
+\]
+Use the full arithmetic bound for the original block and add $(\lambda-1)b_{\rm ar}$ for its enlarged cross part. A valid complement floor for \eqref{eq:Mtheta} is therefore
+\begin{equation}\label{eq:betatheta}
+ \beta_\theta=\frac{g_{a,N}+g_{h,M}-\sqrt{(g_{a,N}-g_{h,M})^2+4\lambda^2b_\gamma^2}}2
+ -\rho-(\lambda-1)b_{\rm ar}.
+\end{equation}
+At $\theta=0.9$ this exceeds $0.7616605490419337$.
+
+Retain separate old and new output Grams $G_o,G_n$, and let $H_o,H_n$ be the corresponding row blocks of $H$. If $T$ is the finite matrix of $\mathcal T$, set
+\[
+ E_o=T^*(G_o-H_o^*H_o)T,\quad E_n=T^*(G_n-H_n^*H_n)T,
+\]
+\[
+ D_o=\operatorname{diag}(I_N,\lambda I_M),\qquad
+ D_n=\operatorname{diag}(\lambda I_N,I_M).
+\]
+The full leakage Gram of $M_\theta$ is exactly
+\begin{equation}\label{eq:Etheta}
+ E_\theta=D_oE_oD_o+D_nE_nD_n.
+\end{equation}
+Indeed the old-tail output scales only the new input column by $\lambda$, while the new-tail output scales only the old input column. This explains why a combined Gram alone is insufficient for the direct relative test.
+
+Obtain $H_\theta$ from $T^*HT$ by scaling its spatial off-diagonal blocks by $\lambda$. The guarded version of
+\begin{equation}\label{eq:reltest}
+ \beta_\theta H_\theta-E_\theta\succ0
+\end{equation}
+is the desired full-domain sign test. A conservative leakage error is
+$e(\norm{TD_o}_F^2+\norm{TD_n}_F^2)$, and a head error is $2\lambda\eta\norm T_F^2$. Their sum with the head term multiplied by $\beta_\theta$ is subtracted before LDL factorization.
+
+For $\theta=9/10$, all 288 pivots of this guarded test are positive and the error budget is below $6.253\times10^{-53}$. Since the head is finite, a strict positive Schur margin together with the positive complement floor gives full coercivity. This proves \eqref{eq:mainrelative}; Lemma~\ref{lem:residual} gives \eqref{eq:mainenergy}. This test reads the spatial matrices, their analytic bounds, and the original rational continuation. It does not read or assume the separate sign result \eqref{eq:mainfloor}, nor the global result at $1.98$.
+
+\section{Positive-shift paths and a separate stronger floor}\label{sec:shift}
+
+From \eqref{eq:mainfloor}, compression gives the same central floor at every $L\le L_q$. The source perturbation estimate evaluated at $L_q$ gives $C_{L_q}<16.536113848659$. Thus
+\[
+ C_{L_q}(5\times10^{-18})^2<4.135\times10^{-34}<\tfrac12\,10^{-33},
+\]
+and $Q_{s,L}\succeq5\times10^{-34}I$ throughout the stated rectangle. Equation~\eqref{eq:evolution} proves \eqref{eq:maincontract} and \eqref{eq:maindefect}. At the upper shift endpoint the defect floor exceeds $4.99\times10^{-51}$.
+
+If $D\succeq dI$, minimizing over the new input gives $S_D\succeq dI$. Since $E\preceq I$, also $S_D\succeq dE$. Equation~\eqref{eq:cD} then gives $c_D^2\le1-d$. This proves the coupling consequence of Theorem~\ref{thm:main}.
+
+A separate earlier use of the unchanged global v0.3 method at the rational ceiling $L_*=99/50=1.98$ certified
+\begin{equation}\label{eq:referencefloor}
+ Q_{0,L_*}\succeq10^{-31}I,\qquad
+ \norm{V_{\omega,L}}\le e^{-5\times10^{-32}\omega}\quad
+ (L\le L_*,\ 0<\omega\le5\times10^{-17}).
+\end{equation}
+Its defect floor at the upper shift exceeds $4.99\times10^{-48}$. Together with the v0.3 interval at $\log7$, it covers every intermediate point of the staircase
+\[
+ (\log7,4\times10^{-15})\longrightarrow(\log7,5\times10^{-17})
+ \longrightarrow(L_q,5\times10^{-17}).
+\]
+It also yields, a posteriori, unrestricted central coupling slack $>10^{-32}$ at the split, using $\norm B<3.67613$ and $\norm{B^*F^{-1}B}<7.78375$. This is a consequence of the global certificate, not an independent recursive justification for it.
+
+The spatial floor $10^{-33}$ is weaker numerically than \eqref{eq:referencefloor}. Its methodological value is that the spatial construction also proves the full relative residual inequality for the chosen continuation. The factor $0.9$ is a central-form factor: it has not been transferred directly to the positive-shift Cayley metric. The unrestricted cumulative regime at $\omega=10^{-11}$ remains open.
+
+\section{Certificate records, checks, and reproducibility}\label{sec:records}
+
+The record identifiers below are used throughout this manuscript. Paths for R1--R9 are relative to \rec{archive/drafts/v0.1_2026-09-10/numerics/history/}; full file names, source hashes, and run parameters are provided in the archived \rec{CLAIMS.json} and the packet's verification manifests. All five dated research directories, including earlier diagnostics and unsuccessful attempts, are supplied unchanged. Their chronological notes describe the state at their date of creation; this manuscript and the current \rec{STATUS.md} state the consolidated status.
+
+\begin{center}\small
+\begin{tabular}{@{}p{0.07\linewidth}p{0.32\linewidth}p{0.53\linewidth}@{}}\toprule
+ID & Claim and scope & Principal record\\\midrule
+R1 & Negative generator on one exact polynomial & \rec{critical-path-20260910/}\newline\rec{generator_witness_log7.json} (and replay)\\
+R2 & Positive storage on that same input; all output & \rec{cumulative-path-20260910/}\newline\rec{storage_log7_1em11_replay.json}\\
+R3 & Whole-step finite-input cumulative positivity & \rec{log7-log8-extension-20260910/}\newline\rec{extension_128_32_1em11.json}\\
+R4 & Whole-step coupling lower witness; new slab & \rec{log7-log8-extension-20260910/}\newline\rec{central_128_32.json}, \rec{new_slab_bound.json}\\
+R5 & All-new residual, 128 old inputs; $\theta=.004$ & \rec{quarter-step-20260910/}\newline\rec{residual_128_32.json} (and replay)\\
+R6 & Separate global floor at $1.98$ & \rec{quarter-step-20260910/reference_256.json}\\
+R7 & Spatial full-operator floor $10^{-33}$ & \rec{quarter-step-closure-20260910/}\newline\rec{closure_256_32.json}\\
+R8 & Direct all-old residual factor $0.9$ & \rec{quarter-step-closure-20260910/}\newline\rec{relative_256_32.json}\\
+R9 & Spatial positive-shift consequences & \rec{quarter-step-closure-20260910/}\newline\rec{path_corollary.json}\\\bottomrule
+\end{tabular}
+\end{center}
+
+R7 uses $(N,M)=(256,32)$, profile degree 320, exterior-log degree 100, and 6144-bit arithmetic. Its full-output error is below $4.953\times10^{-58}$, leakage error below $1.024\times10^{-55}$, and final Schur error below $1.026\times10^{-55}$. All 288 guarded LDL pivots pass. Their minimum, approximately $2.584\times10^{-5}$, is not a spectral floor. The floor is the explicitly inserted $10^{-33}$ in \eqref{eq:schur}.
+
+R8 reuses the same matrix archive and the original rational continuation. Its 288 guarded pivots pass at $\theta=0.9$; the minimum pivot is approximately $1.051\times10^{-5}$, again a sign diagnostic only. The original full spatial build took about 21 minutes in the recorded environment. No second independent complete 256-plus-32 reconstruction has yet been claimed.
+
+R5 has a replay at profile degree 340, logarithm degree 90, and 6656 bits, reducing its residual-output error from below $2.477\times10^{-58}$ to below $5.693\times10^{-62}$. R1 and R2 also have increased-precision/degree replays. These are replays of the same formulas, not independent implementations of every analytic reduction.
+
+Independent small-example consistency checks compare full old-output cross and adjoint Grams with quadrature (discrepancy $<1.63\times10^{-54}$), adjoint gamma outputs with the original kernel ($<8.96\times10^{-50}$), exterior-log moments with quadrature ($<1.67\times10^{-65}$), and adjoint head projection with the original cross builder ($<6.12\times10^{-910}$). The separate arithmetic partition verifier covers all 2,152 intervals. Quadrature agreement supports implementation consistency; sign claims use the guarded interval tests and their analytic bounds.
+
+The recorded environment is Python 3.10.0, python-flint 0.9.0, FLINT 3.6.0, and mpmath 1.4.1. Assertions must remain enabled. The package includes exact source snapshots, coefficients, small result records, pinned dependencies, source and data manifests, and a hash-bound replay entry point. It also includes the source of the inherited v0.3 manuscript and its unchanged numerical builder, with licensing preserved.
+
+The three inherited compressed matrix files are delivered outside the repository-ready tree: the complete spatial head and two output Grams, and the old-depth caches at 128 and 256 modes. The caches accelerate regeneration; only the spatial archive is needed for the direct relative replay. The tracked \rec{ARCHIVES.md} describes both file and canonical matrix-content hashes, regeneration, and the \rec{STORAGE_DEPTH_ARCHIVES} lookup rule. A matching hash establishes data identity under the documented serialization; the proof still requires arithmetic sign tests. No claim of cross-version bitwise portability is made. The earlier global $1.98$ wrapper rebuilds its matrices; its raw matrices were not retained. Version 0.2 adds a fourth external archive for the three-interval second step, described in Section~\ref{sec:partition-step}. Current records R10--R13 and their exact scopes appear in \rec{CLAIMS.json}; R11 includes unsuccessful sufficient tests.
+
+\begin{center}\small
+\begin{tabular}{@{}p{0.07\linewidth}>{\raggedright\arraybackslash}p{0.38\linewidth}>{\raggedright\arraybackslash}p{0.47\linewidth}@{}}\toprule
+ID & Version 0.2 result and scope & Current numerical records\\\midrule
+R10 & First-step full-old comparison, $\mu=10^{-7}$ & \rec{records/metric-comparison-2048.json} and 4096-bit record\\
+R11 & Second-step full-old comparison, $\mu=10^{-8}$; absolute and scalar residual guards unsuccessful & \rec{records/second-quarter-build.json}, 2048-bit and 4096-bit comparison records\\
+R12 & Separate-tail residual searches unsuccessful & \rec{records/second-quarter-weighted-1024.json}, near-one and 2048-bit records\\
+R13 & Expanded moment, output, and sign-validator consistency checks & \rec{records/spatial-consistency.json}\\\bottomrule
+\end{tabular}
+\end{center}
+Paths in this additional table are relative to the current \rec{numerics/}
+directory. The complete filenames and claim coverage are in the current
+\rec{CLAIMS.json}. The second-step continuation coefficients form a separate
+small exact-rational record. No second-step full-operator positivity or
+shift interval is inferred from R11 or R12.
+
+\section{A comparison with the preceding energy}
+\label{sec:old-energy-comparison}
+
+The following additional computation uses the original spatial matrix archive
+and the original exact rational continuation. It is not an independent
+reconstruction of those matrices. All statements remain in the working
+Weil-depth v0.3 normalization, with its stated independent-review obligations.
+
+First, the gamma-tail bound used here and in the spatial complement argument
+requires the variation hypothesis
+\begin{equation}\label{eq:corrected-variation}
+ K_\ell\ge |w_0(0)|+\int_0^\ell |w_0'(t)|\,dt,
+ \qquad w_0(t)=\frac{G_0(t)-1}{t}.
+\end{equation}
+Version 0.1 stated only a supremum hypothesis; the variation hypothesis above is the required correction.
+Indeed, for causal convolution,
+\[
+ S_{w_0}=(w_0(0)I+S_{w_0'})I_1,
+\]
+so the primitive estimate on the polynomial complement and Young's inequality
+give the required bound. The historical implementation already computes a
+valid choice:
+\[
+ K_\ell=
+ \sum_{j=1}^{d}|g_j|\ell^{j-1}
+ +\frac{256}{3}\frac{(\ell/3)^d}{1-\ell/3},\qquad 0<\ell<3.
+\]
+Termwise integration of the differentiated power series, with the same
+Cauchy coefficient majorant for the remainder, proves
+\eqref{eq:corrected-variation}. No numerical constant changes under this
+correction.
+
+\begin{proposition}[Additional computer-assisted old-energy comparison]
+\label{prop:old-energy-comparison}
+At
+\[
+ a=\log7,\qquad h=\tfrac14\log(8/7),\qquad L_q=a+h,
+\]
+let \(A=Q_{0,a}\), \(F=Q^\gamma_{0,h}\), and let \(B\) be the complete spatial
+cross block. Use the original rational \(J_{128,32}\), extended by zero to the
+old orthogonal complement. With
+\[
+ H_J=A+B^*J+J^*B+J^*FJ,
+\]
+the new archive-based guarded test gives, on the full old form domain,
+\begin{equation}\label{eq:full-old-mu}
+ H_J\succeq10^{-7}A.
+\end{equation}
+Combined with the previously established full-domain inequality
+
+\[
+ R^*F^{-1}R\preceq\tfrac9{10}H_J,\qquad R=B+FJ,
+\]
+this implies
+\begin{equation}\label{eq:full-old-retention}
+ A-B^*F^{-1}B\succeq10^{-8}A,
+ \qquad
+ \|F^{-1/2}BA^{-1/2}\|^2\le1-10^{-8}.
+\end{equation}
+The new variable eliminated through \(F^{-1}\) is unrestricted.
+\end{proposition}
+
+\begin{proof}[Reduction and numerical premises]
+Let \(P_o,P_n\) retain \(N=256,M=32\) old and new modes,
+and write \(P=P_o\oplus P_n\), \(K_o=I-P_o\) on the old space.
+For the exact compressed quantities set
+\[
+ H=PQP,\qquad H_o=P_oQP,\qquad
+ G_o=(\Pi_o QP)^*(\Pi_o QP),
+\]
+where \(\Pi_o\) is projection onto the complete old output interval.
+Thus
+\[
+ E_o=G_o-H_o^*H_o=(K_o\Pi_o QP)^*(K_o\Pi_o QP).
+\]
+All these outputs exist in \(L^2\) on the retained piecewise polynomial inputs.
+The notation for \(J\) also denotes its \(M\)-by-\(N\) finite matrix when used
+in the following column maps:
+\[
+ T_o=\begin{pmatrix}I_N\\J\end{pmatrix},\qquad
+ U_\mu=\begin{pmatrix}(1-\mu)I_N\\J\end{pmatrix},\qquad 0<\mu<1.
+\]
+Put \(M_\mu=H_J-\mu A\). Its old-head compression is
+\[
+ \mathsf H_\mu=T_o^*HT_o-\mu A_N,
+ \qquad A_N=P_oAP_o.
+\]
+Since \(J K_o=0\) and \(K_oJ^*=0\), its old-tail output on the retained
+old inputs is
+\[
+ K_oM_\mu P_o=K_o\Pi_o QP\,U_\mu.
+\]
+Consequently its exact leakage Gram is
+\begin{equation}\label{eq:mu-leakage}
+ \mathsf E_\mu=U_\mu^*E_oU_\mu.
+\end{equation}
+Its tail compression is exactly
+\[
+ K_oM_\mu K_o=(1-\mu)K_oAK_o.
+\]
+
+The corrected local gamma-tail bound and compression of the full arithmetic
+norm bound \(\rho\) give
+\[
+ K_oAK_o\succeq\beta_A I,
+ \qquad \beta_A=g_{a,256}-\rho>1.7653403662909112.
+\]
+For a certified lower bound \(\beta_\mu\le(1-\mu)\beta_A\), with
+\(\beta_\mu>0\), the finite sufficient Schur inequality is therefore
+\begin{equation}\label{eq:mu-schur}
+ \beta_\mu\mathsf H_\mu-\mathsf E_\mu\succ0.
+\end{equation}
+
+For clarity, use tildes for the model finite matrices stored in the archive.
+The inherited head error is at most \(\eta\). The inherited leakage error
+\(e\) also bounds
+\(\|E_o-(\widetilde G_o-\widetilde H_o^*\widetilde H_o)\|\):
+restricting the output does not increase the output error, and the full-output
+norm bound is still an upper bound for the restricted output. The corresponding
+head and leakage errors in \eqref{eq:mu-schur} are at most
+\[
+ \eta(\|T_o\|_F^2+\mu),\qquad e\|U_\mu\|_F^2.
+\]
+The validator subtracts
+\begin{equation}\label{eq:mu-budget}
+ \left\{\beta_\mu\eta(\|T_o\|_F^2+\mu)
+             +e\|U_\mu\|_F^2\right\}I
+\end{equation}
+from the model test before interval LDL factorization. A strict positive
+finite margin together with the positive tail floor proves coercivity of
+\(M_\mu\) by its own Schur complement.
+
+At the exact rational threshold \(\mu=10^{-7}\), tests at 2,048 and 4,096 bits
+both pass all 256 pivots. The certified tail floor exceeds
+\(1.7653401897568746\), and the subtracted error is below
+\(2.641\times10^{-53}\). These are re-evaluations of the saved matrix balls
+at the indicated precisions; the original matrix construction used 6,144 bits.
+The minimum pivot lower bound is approximately \(2.4638394\times10^{-5}\),
+which is a sign diagnostic and is not used as a spectral floor.
+The source and full records are supplied as
+\texttt{metric\_comparison.py}, \texttt{metric-comparison-2048.json}, and
+\texttt{metric-comparison-4096.json}.
+
+This proves \eqref{eq:full-old-mu}. The residual identity gives
+\[
+ S=H_J-R^*F^{-1}R\succeq\tfrac1{10}H_J\succeq10^{-8}A.
+\]
+Normalize by the coercive old form \(A\) to obtain the coupling bound in
+\eqref{eq:full-old-retention}.
+\end{proof}
+
+\section{A conditional induction with explicit shift selection}
+\label{sec:conditional-induction}
+
+The next result states sufficient data for an all-depth argument. Its
+hypotheses are currently verified only for the finite step specified above;
+it is not a proof that the construction continues indefinitely.
+
+\begin{theorem}[Conditional continuation scheme]
+\label{thm:conditional-continuation}
+Suppose \(L_{j+1}=L_j+h_j\), \(h_j>0\), and \(\sum_jh_j=\infty\).
+Assume \(Q_{0,L_0}\succeq m_0I>0\). At every step suppose the spatial form
+has the closed block realization
+\[
+ Q_{0,L_{j+1}}=
+ \begin{pmatrix}A_j&B_j^*\\B_j&F_j\end{pmatrix},
+ \qquad A_j=Q_{0,L_j},\quad F_j\succeq f_j I>0,
+\]
+with bounded cross block. Let \(J_j\) be bounded into the operator domain of
+\(F_j\), with \(F_jJ_j\) bounded, and define
+\[
+ H_j=A_j+B_j^*J_j+J_j^*B_j+J_j^*F_jJ_j,
+ \qquad R_j=B_j+F_jJ_j.
+\]
+Suppose the full-domain inequalities
+\begin{equation}\label{eq:induction-premises}
+ H_j\succeq\mu_jA_j,
+ \qquad R_j^*F_j^{-1}R_j\preceq\theta_jH_j,
+ \qquad \mu_j>0,\quad0\le\theta_j<1
+\end{equation}
+are proved for every \(j\). Let \(q_j\ge\|J_j\|\) and
+\[
+ \tau_j=\frac{\sqrt{q_j^2+4}+q_j}{2},\qquad
+ m_{j+1}=\frac{1-\sqrt{\theta_j}}{\tau_j^2}
+                 \min\{\mu_jm_j,f_j\}.
+\]
+Then \(Q_{0,L_j}\succeq m_jI>0\) for every \(j\).
+
+Assume also the working evolution identity and, at every finite \(L_j\),
+the estimate
+\[
+ \|Q_{s,L_j}-Q_{0,L_j}\|\le C_{L_j}s^2,
+ \qquad 0\le s\le\tfrac12,\quad C_{L_j}>0.
+\]
+Choose
+\[
+ 0<\omega_0\le\min\{\tfrac12,\sqrt{m_0/(2C_{L_0})}\},
+ \qquad
+ \omega_j=\min\left\{\frac{\omega_{j-1}}2,
+                       \frac12,\sqrt{\frac{m_j}{2C_{L_j}}}\right\}
+ \quad(j\ge1).
+\]
+Then \(\omega_j\downarrow0\) and
+\[
+ \|V_{\omega_j,L_j}\|\le\exp(-m_j\omega_j/2)<1.
+\]
+Thus these hypotheses supply the divergent-depth, vanishing-shift sequence
+required by the inherited diagonal criterion.
+\end{theorem}
+
+\begin{proof}
+For \(g=J_jf+v\), the residual bound gives
+\[
+ Q_{0,L_{j+1}}[f,g]
+ \ge(1-\sqrt{\theta_j})\{H_j[f]+F_j[v]\}
+ \ge(1-\sqrt{\theta_j})\min\{\mu_jm_j,f_j\}
+                (\|f\|^2+\|v\|^2).
+\]
+The graph map \((f,v)\mapsto(f,J_jf+v)\) has norm at most \(\tau_j\).
+This follows by bounding \(\|J_jf+v\|\le q_j\|f\|+\|v\|\) and computing
+the largest singular value of
+\(\left(\begin{smallmatrix}1&0\\q_j&1\end{smallmatrix}\right)\).
+Consequently
+\(\|f\|^2+\|v\|^2\ge\tau_j^{-2}(\|f\|^2+\|g\|^2)\),
+which proves the asserted floor inductively. Every displayed floor is
+positive at its finite index; no uniform lower bound in \(j\) is assumed.
+
+For \(0\le s\le\omega_j\), the perturbation bound gives
+\(Q_{s,L_j}\succeq m_jI/2\). Integrating the evolution identity and taking
+the strong zero-shift limit gives
+\(\|V_{\omega_j,L_j}\|\le e^{-m_j\omega_j/2}\).
+The halving condition implies \(\omega_j\to0\), while the stipulated sum
+of depth increments implies \(L_j\to\infty\).
+\end{proof}
+
+For the completed quarter-step, the newly available relative state is
+\[
+ (\mu_0,\theta_0,(1-\theta_0)\mu_0)
+       =(10^{-7},0.9,10^{-8}).
+\]
+Section~\ref{sec:second-result} establishes the old-energy comparison at the next step, but does not establish its residual premise.
+The remaining mathematical task is to produce these inequalities indefinitely
+on a divergent-depth schedule, or to prove estimates preventing an adaptive
+schedule from accumulating at finite depth. The scalar recurrence is
+conservative bookkeeping; the complete continuation energy and leakage
+matrices should remain part of the computational state.
+
+\input{spatial_recursion.tex}
+
+\section{Continuation of the proof strategy}\label{sec:next}
+
+The finite quarter-step gap has been addressed by a direct all-old residual inequality. A prospective next step should carry the following state: the current spatial decomposition, a positive candidate continuation energy, the exact continuation map, and a full residual factor below one. A scalar smallest-energy floor is useful for a conservative shift interval but is a poor description of the cancellation governing extension.
+
+The immediate continuation tasks are:
+\nopagebreak[4]
+\begin{enumerate}
+\item Independently audit the normalization bridge among the Fourier form, gamma generator, delay coefficients, and transfer evolution. This is the author's ongoing task; the present draft fixes its conventions explicitly so any correction can be propagated.
+\item Independently reconstruct the 256-plus-32 spatial matrices and review the analytic complement and error bounds. Verify the relative test separately from the absolute coercivity test.
+\item Close the residual premise at the second quarter-step. The old-energy comparison already passes at $\mu=10^{-8}$. Enlarge the 32-mode verification spaces on the short slabs and sharpen their joint complement bound. Reuse the stored full-output matrices and retain the recorded failures as sufficient-test diagnostics.
+\item Implement the local gamma representation of Section~\ref{sec:partition-step} to remove the global radius-three restriction, and develop a direct positive-shift residual certificate in the bounded Cayley metric, using \eqref{eq:step} to change shift. This is the route to cumulative contraction where instantaneous positivity is unavailable.
+\item Establish quantitative control preventing depth-step accumulation. An all-depth argument needs $\sum_jh_j=\infty$ while $\omega_j\downarrow0$. One successful step, or even local extendibility at every strictly positive horizon, does not establish this.
+\end{enumerate}
+The conditional theorem supplies explicit scalar and shift bookkeeping once its stepwise premises hold. No theorem here bounds verification dimensions at successive steps, proves the required comparisons indefinitely, proves shift monotonicity, or identifies a unique critical path. A path can approach zero shift at finite depth if available energy degenerates too quickly. The suggested ``edge'' analogy is motivational; no equivalence with the De Bruijn--Newman deformation is used. The concrete state now available for recursion consists of \eqref{eq:mainenergy}, \eqref{eq:full-old-mu}, the complete output Grams, and the exact rational continuation. The conditional theorem explains precisely how sufficiently many further certified states would complete the depth--shift argument.
+
+\appendix
+\section{Full-output storage construction}\label{app:storage}
+
+For completeness the cumulative calculations use the gamma profile
+\[
+ g(t)=e^{t/2}(\sinh t/t)^{\omega-1},\quad
+ y_c(t)=\omega\int_0^1v^{\omega-1}e^{ct(1-v)}g(tv)\,dv,
+\]
+\[
+ G^V_\omega(t)=g(t)-4t\{\alpha y_\alpha(t)+\beta y_{-\beta}(t)\},\qquad
+ \alpha=\tfrac12-\omega,\quad\beta=\tfrac12+\omega.
+\]
+Its stable coefficient recurrence is $y_{c,0}=1$ and
+$y_{c,j}=(\omega g_j+cy_{c,j-1})/(\omega+j)$. On $|z|=3$, the product for $\sinh z/z$ gives $|z/\sinh z|\le3/\sin3<24$ and hence $|G^V_\omega(z)|<32768$ for $0<\omega\le1/2$. Degree $d$ gives the full gamma operator error
+\[
+ \delta_\gamma\le\frac{(2\pi L)^\omega}{\Gamma(\omega)}
+ \frac{32768(L/3)^{d+1}}{(d+1+\omega)(1-L/3)}.
+\]
+The full error is at most $\delta=(\sum_{\log n<L}b_\omega(n))\delta_\gamma$, retaining all composite transfer terms.
+
+Delayed polynomial outputs are integrated with moments
+\[
+ J_k(d_0,\ell)=\int_0^\ell t^{k+\omega}(t+d_0)^\omega\,dt,
+\]
+initialized by an enclosed hypergeometric value and continued by
+\[
+ J_{k+1}=\frac{\ell^{k+\omega+1}(\ell+d_0)^{\omega+1}-d_0(k+\omega+1)J_k}{k+2\omega+2}.
+\]
+At a spatial join the old polynomial is represented by its global continuation minus its delayed cutoff correction. That correction is combined with any coincident arithmetic delay before taking the Gram. If $\widetilde G$ is the model Gram on orthonormal retained inputs, the exact defect differs by at most
+$2\delta\sqrt{\operatorname{tr}\widetilde G}+\delta^2$ in operator norm on that input space. Subtract this before testing positivity. This explains the phrase ``finite inputs, full output'' and why the resulting theorem cannot be enlarged to omitted inputs without a further argument.
+
+\section{A compact map of the logical dependencies}
+
+The inherited framework \eqref{eq:Q}--\eqref{eq:evolution} supports two separate full-depth calculations. The global v0.3 method at $1.98$ gives R6 and its own shift interval. The spatial method uses an old-depth matrix build, \eqref{eq:rho}, \eqref{eq:beta}, and complete Grams. It gives R7 through \eqref{eq:schur}, and R8 through \eqref{eq:betatheta}--\eqref{eq:reltest}. R8 implies the transported-energy estimate; R7 plus the generator perturbation gives R9. R8 does not depend on the sign of R7, and neither spatial test depends on R6. The all-new R5 supplies the rational proposal used by R8, but its factor $0.004$ is not a premise claiming full old-domain control.
+
+The normalized-coupling identities and residual identity are abstract analytic results. The numerical sign assertions in R1--R9 and the new old-energy comparison are finite computations with explicit error bounds and the indicated domain coverage. Finite-input diagnostics are guides to the construction, not replacements for these domain and error arguments.
+
+\clearpage
+\phantomsection
+\addcontentsline{toc}{section}{References}
+\begin{thebibliography}{9}
+\bibitem{WeilDepth}
+E. B. Baker III, \emph{Finite-horizon Weil coercivity and shifted-zeta contraction}, working draft v0.3, 2026. Repository snapshot \rec{a566944dc1be2899e37fce3d0e857516ced33d8f}.
+\href{https://github.com/ebbaker/shifted-zeta-positivity/tree/a566944dc1be2899e37fce3d0e857516ced33d8f/papers/weil-depth}{Pinned manuscript and certificate source on GitHub}.
+\bibitem{Packets}
+\emph{Depth--shift research packets}, 10 September 2026: critical path; cumulative storage; $\log7$--$\log8$ extension; quarter-step residual; quarter-step closure. Preserved in the accompanying continuation package, \rec{numerics/history/}. Exact record paths and hashes appear in \rec{CLAIMS.json}, \rec{ARCHIVES.md}, and the verification manifests.
+\end{thebibliography}
+\end{document}
