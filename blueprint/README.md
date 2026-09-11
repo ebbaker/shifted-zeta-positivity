@@ -44,8 +44,10 @@ The same inventory is available as machine-readable YAML in
 | psi-omega-margin (working draft) | — | not yet inventoried | release checklist item 4; the paper's `STATUS.md` has a result-by-result verification record in the meantime |
 | omega-string (working draft v5) | — | not yet inventoried | same |
 | defect-depth (working draft v1) | — | not yet inventoried | same |
+| [weil-depth v0.4](../papers/weil-depth/README.md) (working draft) | — | not yet inventoried | [verification status](../papers/weil-depth/STATUS.md); finite-horizon certificates |
+| [storage-depth v0.3](../papers/storage-depth/README.md) (working draft) | — | not yet inventoried | [verification status](../papers/storage-depth/STATUS.md) and [claim records](../papers/storage-depth/CLAIMS.json); continuation past log 7 |
 | rh-detector (working draft; separate thread) | — | not yet inventoried | same; the pencil theorem (Wilson's formula) and the two elementary lemmas would be natural first entries |
 
 A blueprint is written when a paper is released (or earlier if a formalizer
 asks for one): the statement ids for the drafts will be `pm:`, `os:`, `dd:`,
-`rd:`.
+`rd:`; Weil-depth and storage-depth ids will be assigned when their inventories are written.

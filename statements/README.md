@@ -16,3 +16,5 @@ Validate with `python3 -c "import yaml; yaml.safe_load(open('statements/ledger.y
 Update both the YAML and the markdown blueprint at every release; a
 verification report that closes an item changes `human_check.state` here and
 the corresponding row there.
+
+[Storage-depth paper (v0.3, working draft)](../papers/storage-depth/README.md) · [All manuscripts](../papers/README.md)

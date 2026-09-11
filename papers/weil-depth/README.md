@@ -61,3 +61,5 @@ Build the manuscript with `latexmk -pdf -interaction=nonstopmode -halt-on-error`
 displayed lower value down and every upper value up from the full ball enclosure; run it
 first if the records under `numerics/output/` change). Text is covered by the repository's CC BY 4.0
 license and code by its MIT license.
+
+[Storage-depth paper (v0.3, working draft)](../storage-depth/README.md) · [All manuscripts](../README.md)

@@ -1,11 +1,24 @@
 # External storage-depth matrices
 
-This is the current tracked guide under the repository LARGE_FILES.md policy (updated for v0.3; the archive inventory is unchanged from v0.2).
+This is the current tracked guide under the repository LARGE_FILES.md policy (v0.3, closeout 11 September 2026; includes the two R18 archives added after v0.2).
 Sources, PDFs, exact continuation coefficients, and small certificate records
-stay in Git. All regenerable matrix archives stay in the sibling
-shifted-zeta-positivity-archive/storage-depth/numerics-archives/ directory.
+stay in Git. All regenerable matrix archives stay in the external
+szp-archive/storage-depth/numerics-archives/ directory.
 No new archive is committed, no Git LFS is used, and no download service is
-required.
+required. The current local root is `/Users/Shared/szp-archive`.
+See the repository's [storage-depth closeout](https://github.com/ebbaker/shifted-zeta-positivity/blob/main/papers/storage-depth/CLOSEOUT.md)
+for the latest archive-availability audit.
+
+## Closeout availability (11 September 2026)
+
+The local audit found four of the six recorded matrices, all matching their
+stored-file hashes and sizes. The two R18 matrices below are absent; their
+small records, exact continuation and regeneration instructions are present.
+The author accepted this availability state for closing the writing project.
+Additional large Fourier-analysis outputs from Claude were intentionally
+not retained because of size; the author confirmed that omission is acceptable.
+The small R17 diagnostics remain in the repository. No omitted computation
+was rerun for this housekeeping audit.
 
 ## Layout and lookup
 
@@ -169,7 +182,7 @@ archived ARCHIVES.md for its complete instructions and the unchanged records.
 To regenerate the second step from the verified first-step archive:
 
 ~~~bash
-export STORAGE_DEPTH_ARCHIVES=/absolute/path/to/shifted-zeta-positivity-archive/storage-depth/numerics-archives
+export STORAGE_DEPTH_ARCHIVES=/absolute/path/to/szp-archive/storage-depth/numerics-archives
 python -B numerics/recursion/build_step.py \
   --archive-dir "$STORAGE_DEPTH_ARCHIVES/output/second-quarter-rebuild" \
   --archive-relative output/second-quarter-rebuild/central_matrices.json.gz \
@@ -214,7 +227,7 @@ python -B numerics/recursion/certify_step.py \
   --output /your/scratch/second-quarter-2048.json
 ~~~
 
-A source-only reviewer may regenerate the data or request the four matrix
+A source-only reviewer may regenerate the data or request the six recorded matrix
 files from the repository maintainer, quoting the names and hashes above.
 There is no public download URL or dataset DOI for these regenerable files.
 

@@ -5,11 +5,32 @@ dates of the underlying work; the repository itself was created in September 202
 
 ## [Unreleased]
 
+### 2026-09-11 — storage-depth writing project closeout
+
+- Merge `critical_path` into `main` with its five research commits preserved;
+  no large numerical data enters the main tree or history.
+- Update current README navigation, manuscript counts, the paper layout,
+  repository metadata and the code/verification indexes for storage-depth v0.3.
+- Standardize current archive documentation on `szp-archive`, locally
+  `/Users/Shared/szp-archive`; keep historical draft snapshots unchanged.
+- Move the existing lessons-learned note to `notes/`, retaining the author's
+  pending wording change. Supersymmetric briefs are for a separate project.
+- Record build, checksum, size and archive checks in
+  `papers/storage-depth/CLOSEOUT.md`; refresh the current package manifests.
+- Correct the dependency appendix to distinguish the failed 32-mode tests
+  from the successful 96-mode R18 result; rebuild the 21-page PDF after
+  minor typesetting fixes. No numerical constant or record changes.
+- Document the author-accepted absence of the two regenerable R18 matrices
+  and the intentionally omitted large Claude Fourier-analysis outputs.
+- Keep the paper at working-draft v0.3. Independent normalization review,
+  mathematical review and formal verification remain open; no release or DOI
+  is created by this closeout.
+
 ### 2026-09-10 / 11 — storage-depth paper (branch `critical_path`): v0.1, v0.2, review, v0.3
 
 - **New working draft `papers/storage-depth/`** — *Residual-controlled depth
   extension of finite-horizon Weil positivity: a spatial continuation past log 7
-  for the shifted-zeta transfer* (v0.3, 20 pp.). Continues `weil-depth/` past
+  for the shifted-zeta transfer* (v0.3, 21 pp.). Continues `weil-depth/` past
   `log 7` by splitting the interval at `log 7`, continuing old inputs onto a
   quarter slab of length `log(8/7)/4` by a Galerkin map, and certifying the
   graph-transformed Schur tests against the infinite polynomial complements.

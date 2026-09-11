@@ -1,16 +1,17 @@
 # Research log
 
-> **What is here now.** This directory currently contains only this index and
-> `REDACTION_CHECKLIST.md`. The reports named below still live in the
-> author's project store; the index is the migration catalogue, not a list of
-> files already in the repository. Each report is committed only after it has
+> **What is here now.** This directory contains the storage-depth
+> [lessons-learned note](LESSONS_LEARNED_manifest_positivity_design_guidance_20260911.md),
+> this index and `REDACTION_CHECKLIST.md`. The older reports catalogued in
+> sections 0–5 still live in the author's project store unless a repository
+> location is explicitly given; their index is a migration catalogue. Each report is committed only after it has
 > been through the redaction checklist, and its row in that checklist records
 > the fact — presence in this index does not. `MANIFEST.md` tracks what has
 > been carried over.
 >
 > **Preface.** The documents catalogued here are round reports, briefs and
 > laboratory notes written by a language model during working sessions
-> directed by the author (Edward Baker), between 24 August and 5 September
+> directed by the author (Edward Baker), between 24 August and 11 September
 > 2026. As they are migrated they are published as the record of how the
 > results in `papers/` were reached, including the routes that were tried and
 > closed, claims that were later corrected in place, and one same-day
@@ -102,6 +103,21 @@ shifted-screw program comes from). If you read one: `ROUND9`.
 
 The review records and recomputation scripts live in `verification/first-slab/`.
 The working drafts are superseded by the preprint and are not kept here.
+
+### 6 · Finite-horizon Weil positivity and storage depth (9–11 Sept)
+
+The current papers are [Weil-depth](../papers/weil-depth/README.md) and
+[storage-depth](../papers/storage-depth/README.md). The storage-depth
+[closeout record](../papers/storage-depth/CLOSEOUT.md) records the writing
+project's completed work and remaining verification limits.
+
+| Present file | Role |
+|---|---|
+| [Lessons learned](LESSONS_LEARNED_manifest_positivity_design_guidance_20260911.md) | Exploratory design guidance; moved from `Claude outputs/`, including the author's pending wording change. |
+| [Barrier theorem and ladder conjecture note](../papers/storage-depth/archive/reviews/NOTE_barrier_theorem_and_ladder_conjecture_20260911.md) | Draft arguments and diagnostic fits; distinct from the manuscript's certified records. |
+| [Depth strategy](../papers/storage-depth/archive/drafts/v3/NOTE_depth_strategy_20260911.md) | Historical options for extending the method. |
+
+The supersymmetric research briefs are reserved for a separate project and commit.
 
 ## Code referenced by the notes
 

@@ -8,7 +8,9 @@ Per-paper reproduction code lives **next to each paper**, not here:
 | `papers/omega-string/` | `fig_density.py`, `v1_identities.py`, `v2_thmE_kasahara.py` | Figure 1, residue lemma and Fourier block, Theorem E tables, Kasahara dual curve, endpoint length |
 | `papers/defect-depth/code/` | `lab_ihara_core.py`, `lab_ihara_experiments.py` + `README.md`, `requirements.txt` | the finite Ihara-zeta laboratory (rounds 1–5) behind Paper 3 |
 | `papers/rh-detector/code/` | `h1`, `h3`, `h4`, `d1`, `d4`, `v1` + `zeros1001.json`, `beta_zeros.json`, `README.md`, `requirements.txt` | every table and section of the detector paper |
-| `verification/first-slab/scripts/` | two recomputation scripts | independent checks of the first-slab preprint (not certificates) |
+| [papers/weil-depth/numerics/](../papers/weil-depth/numerics/README.md) | Arb builders, enclosures, independent checks | finite-horizon Weil positivity through log 7; external data in `szp-archive/weil-depth/` |
+| [papers/storage-depth/numerics/](../papers/storage-depth/numerics/README.md) | spatial builders, residual and floor replays, Fourier diagnostics | continuation past log 7; external data in `szp-archive/storage-depth/` |
+| `verification/first-slab/scripts/` | three recomputation scripts | independent checks of the first-slab preprint (not certificates) |
 
 This directory holds only what has no paper home yet:
 
@@ -21,7 +23,7 @@ code/
 
 All code is MIT-licensed (licensing is by material type; see `../LICENSE`).
 Python; `mpmath`, `numpy`, `scipy`, `sympy`; multi-precision throughout. Each
-paper's `code/requirements.txt` pins its own environment;
+paper's `code/requirements.txt` or `numerics/requirements.txt` pins its own environment;
 `../environment/requirements.txt` covers the verification scripts.
 
 ## Not here yet, and why

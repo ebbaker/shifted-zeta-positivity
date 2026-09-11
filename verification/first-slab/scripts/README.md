@@ -42,3 +42,5 @@ Environment: `mpmath 1.4.1`, `numpy 2.4.4`, `scipy 1.17.1` (see `environment/req
 Run time: a few minutes each. The discretised Volterra-identity check in the
 second script is unreliable because of the kernel singularity on the
 anti-diagonal; the identities were verified by hand instead (see A4 in `../CHECKLIST.md`).
+
+[Storage-depth paper (v0.3, working draft)](../../../papers/storage-depth/README.md) · [All manuscripts](../../../papers/README.md)

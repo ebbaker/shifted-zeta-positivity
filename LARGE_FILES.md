@@ -5,9 +5,10 @@ tree), it is meant to be cloned by verifiers and formalizers, and its history
 should stay small enough that a clone is quick. Git therefore holds **sources
 and small records** — LaTeX, code, PDFs, JSON certificates, hashes, notes — and
 **no large derived data**. This file states the convention and the procedure
-that goes with it. The worked instance is the finite-horizon Weil paper, whose
-ball-matrix archives (about 13 MB per horizon, 122 MB in all) live outside git
-and are described by the tracked guide `papers/weil-depth/ARCHIVES.md`.
+that goes with it. The worked instances are [Weil-depth](papers/weil-depth/ARCHIVES.md)
+(about 122 MB of ball matrices) and [storage-depth](papers/storage-depth/ARCHIVES.md)
+(about 1.6 GB across six recorded matrix archives). Their tracked guides
+describe the data and any availability limits.
 
 ## 1. The convention
 
@@ -60,12 +61,22 @@ and are described by the tracked guide `papers/weil-depth/ARCHIVES.md`.
 
 ## 2. Where the data live
 
-Outside the repository, in a sibling folder that mirrors the repository's
-paper layout:
+Outside the repository, in `szp-archive/`, which mirrors the paper layout.
+The maintainer's current archive root is `/Users/Shared/szp-archive`; it need
+not be adjacent to the checkout. Set the two lookup variables as follows
+(adjust the paths for your own copy):
+
+```bash
+export WEIL_ARCHIVES=/Users/Shared/szp-archive/weil-depth/numerics-archives
+export STORAGE_DEPTH_ARCHIVES=/Users/Shared/szp-archive/storage-depth/numerics-archives
+```
+
+Historical draft snapshots retain the old archive name; resolve their paths
+under the same paper subdirectory of `szp-archive`.
 
 ```
 shifted-zeta-positivity/                     ← the git clone
-shifted-zeta-positivity-archive/             ← not a git repository
+szp-archive/                                ← not a git repository
 └── <paper-slug>/
     └── numerics-archives/
         ├── README.md          copy of papers/<slug>/ARCHIVES.md (the tracked one is canonical)
@@ -73,7 +84,7 @@ shifted-zeta-positivity-archive/             ← not a git repository
         └── <same relative paths as under papers/<slug>/numerics/ …>
 ```
 
-For the Weil paper this is `shifted-zeta-positivity-archive/weil-depth/numerics-archives/`,
+For the Weil paper this is `szp-archive/weil-depth/numerics-archives/`,
 with `output/<horizon>_N128/central_matrices.json.gz` and so on; the full
 list with sizes and hashes is in `papers/weil-depth/ARCHIVES.md`. The folder
 may be moved or copied anywhere; scripts reach it through the environment
@@ -104,7 +115,7 @@ Inside the repository each paper that has such data carries:
    both hashes and the run parameters, and make every consumer check the hash
    (rules 3–4).
 3. Move the file out: `mv papers/<slug>/numerics/output/<run>/<file>
-   ../shifted-zeta-positivity-archive/<slug>/numerics-archives/output/<run>/<file>`
+   /absolute/path/to/szp-archive/<slug>/numerics-archives/output/<run>/<file>`
    (create directories as needed; keep the relative path identical).
 4. Refresh the archive folder's manifest from inside that folder:
    `find . -type f ! -name SHA256SUMS.txt ! -name README.md ! -name .DS_Store -print0 | sort -z | xargs -0 sha256sum > SHA256SUMS.txt`
@@ -151,14 +162,12 @@ stronger check.
   and a note in `CHANGELOG.md`; every clone must be re-cloned. Avoid reaching
   this case — see §4.
 
-**Current state (10 September 2026).** `main` contains no blob above 1 MB.
-The branch `finite-horizon-weil` does: its early commits (before `6a87626`,
-"Modified file structure to avoid the storage of large files") committed the
-seven `central_matrices.json.gz`, two `independent_matrices.json.gz` and the
-v0.1 review-package ZIP, about 130 MB of objects that remain reachable from
-the branch's history although no longer in its tree. The plan is a squash
-merge of that branch into `main`, after which the branch is deleted; do not
-fast-forward or rebase-merge it.
+**Current state (11 September 2026).** `finite-horizon-weil` was already
+squash-merged into `main` as `76b0d32`; its remote topic branch has been
+deleted. A stale local copy can still retain its old large blobs, so it must
+not be merged into `main` again. The five `critical_path` commits introduce
+no blob over 1 MiB and can be merged normally. The main-tree and main-history
+size checks remain required. No history rewrite is part of this closeout.
 
 ## 4. The pre-commit size check
 

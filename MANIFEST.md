@@ -2,7 +2,7 @@
 
 Provenance record for the repository: which files were written for it, which
 were carried over from the private project store, and which are still
-missing. Updated 10 September 2026.
+missing. Updated 11 September 2026.
 
 ## Written for the repository
 
@@ -10,11 +10,11 @@ missing. Updated 10 September 2026.
 README.md  CITATION.cff  CHANGELOG.md  CONTRIBUTING.md  RELEASING.md  MANIFEST.md  LARGE_FILES.md
 .gitignore  .zenodo.json   (LICENSE: the repository's licensing-by-material-type notice)
 .github/ISSUE_TEMPLATE/{verification-report,possible-error,formalization}.md
-.github/labels.yml  .github/workflows/{build-latex,check-first-slab}.yml
+.github/labels.yml  .github/workflows/{build-latex,check-first-slab,check-hygiene}.yml
 blueprint/README.md  blueprint/first-slab/statements.md
 statements/README.md  statements/ledger.yaml
 environment/{requirements,requirements_metadata}.txt
-tools/check_citations.py
+tools/{check_citations,check_repository_hygiene}.py
 papers/README.md
 papers/*/README.md  papers/*/STATUS.md            (all seven folders)
 papers/weil-depth/**   (drafted in the repository, Sept 2026, on the branch finite-horizon-weil:
@@ -57,6 +57,13 @@ references/README.md
 | `REVIEW_ROUND2_verdict_20260903.md` | `verification/first-slab/reviews/` | |
 | `verify_referee_checks_20260831.py`, `verify_preprint_checks_20260905.py` | `verification/first-slab/scripts/` | |
 | `PROTOCOL_C1_C2_verification_20260906.md` | `verification/first-slab/PROTOCOL_C1_C2.md` | |
+
+| Storage-depth lessons-learned note | `notes/LESSONS_LEARNED_manifest_positivity_design_guidance_20260911.md` | Moved from `Claude outputs/`, preserving the author's pending wording change; exploratory design guidance, not a certified result. |
+
+Storage-depth closeout adds `papers/storage-depth/CLOSEOUT.md` and
+`numerics/README.md`, updates the current navigation and external archive
+guides, and refreshes the current checksum records. Supersymmetric briefs
+belong to a later project/commit and are excluded here.
 
 ## Still to carry over (after the redaction checklist)
 

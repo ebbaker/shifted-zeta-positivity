@@ -20,3 +20,5 @@ Full rebuilds of both certificates (`certify_arb.py`, `independent_arb.py`), the
 `compare_implementations.py` and `review_checks.py` were also rerun in the reviewing
 environment (Python 3.11.15, python-flint 0.9.0, FLINT 3.6.0) and reproduced the archived
 pivots, bounds and radii to every displayed digit.
+
+[Storage-depth paper (v0.3, working draft)](../../../storage-depth/README.md) · [All manuscripts](../../../README.md)

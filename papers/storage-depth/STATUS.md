@@ -28,7 +28,13 @@ recorded guarded Arb sign test plus its stated analytic reduction.
 | Independent reconstruction of the spatial matrices | **Open** | The validators (not the builders) have a second implementation from the v0.2 review; no second 256+32 or 256+32+32 build |
 | Normalization audit; human review; formal verification | **Open** | |
 
-## Next experiments (in order)
+## Project closeout
+
+The storage-depth writing project is closed out on 11 September 2026 as a
+working draft. [CLOSEOUT.md](CLOSEOUT.md) records the repository and archive
+checks. This changes no certificate or review status in the table above.
+
+## Deferred research and verification (not closeout tasks)
 
 1. Regenerate the two R18 archives locally (commands in ARCHIVES.md) and confirm
    their content hashes; re-run `replay_floor.py --step 2 --record ...` on them.
@@ -42,4 +48,4 @@ recorded guarded Arb sign test plus its stated analytic reduction.
 
 Version 0.2 and its records remain unchanged under `archive/drafts/v0.2_2026-09-10/`;
 its numerics records under `numerics/records/` are still current and are
-extended, not replaced, by R14–R17.
+extended, not replaced, by R14–R18.

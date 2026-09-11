@@ -14,6 +14,10 @@ what is not), `CLAIMS.json` (record-by-record scope), and `ARCHIVES.md` (the
 large matrix archives kept outside git under the repository `LARGE_FILES.md`
 policy).
 
+The writing project is closed out at v0.3. See [CLOSEOUT.md](CLOSEOUT.md)
+for the packaging checks, current archive availability and deferred work,
+and [numerics/README.md](numerics/README.md) for the code index.
+
 ## What changed from v0.2 to v0.3
 
 * The spatial floor at `L_q = (3/4) log 14` is `2.99e-29` (bisected), not the
@@ -46,10 +50,11 @@ statement about zeros of zeta.
 ## Reproduce
 
 Python 3.10 or 3.11, python-flint 0.9.0 (FLINT 3.6.0), mpmath 1.3 or 1.4; keep
-assertions enabled. From this paper directory, with the sibling archive present:
+assertions enabled. From this paper directory, with the external archive present
+(adjust the maintainer's local path below for your copy):
 
 ~~~bash
-export STORAGE_DEPTH_ARCHIVES=/absolute/path/to/shifted-zeta-positivity-archive/storage-depth/numerics-archives
+export STORAGE_DEPTH_ARCHIVES=/Users/Shared/szp-archive/storage-depth/numerics-archives
 cd numerics/recursion
 
 # R14: first-step bisections (about 14 minutes at 2048 bits on one core)
@@ -104,10 +109,12 @@ still run; `certify_step.py` and `weighted_residual.py` use `json.load` and
 need more than 3 GB of memory for the second-step archive, whereas the new
 tools stream. The v0.1 replays and rebuilds are described in
 `archive/drafts/v0.1_2026-09-10/ARCHIVES.md`. Large derived files belong in the
-sibling archive, never in git.
+external archive, never in git.
 
 ## Build the manuscript
 
 `make` with pdflatex and latexmk installed (the source needs `lmodern`,
 `mathrsfs`, `microtype`, `booktabs`, `enumitem`, `hyperref`). Temporary files go
 under `/tmp/storage-depth-tex`.
+
+[Storage-depth closeout](CLOSEOUT.md) · [All manuscripts](../README.md)

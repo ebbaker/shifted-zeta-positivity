@@ -15,6 +15,11 @@ versions are preserved here unchanged.
   extended, not replaced, by v0.3. The review of v0.2 is under
   `../reviews/`.
 
-Large derived data for every version live in the sibling tree
-`shifted-zeta-positivity-archive/storage-depth/numerics-archives/`; see the
+* `v3/` — two intermediate v0.3 PDFs and the depth-strategy note, retained
+  as received. The current source and PDF are in `../../manuscript/`.
+
+Large derived data for every version live in the external tree
+`szp-archive/storage-depth/numerics-archives/`; see the
 current `ARCHIVES.md`.
+
+[Storage-depth paper (v0.3, working draft)](../../README.md) · [All manuscripts](../../../README.md)

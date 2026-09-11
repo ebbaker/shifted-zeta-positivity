@@ -4,8 +4,8 @@ The large derived data of this paper are kept outside git: the saved Arb ball ma
 each certificate (about 13 MB per horizon), the independent implementation's saved matrices
 for the two leading horizons, and the original v0.1 review package (whose only large content
 is the 9/5 matrices). This file is the tracked description of that folder. The folder itself
-may live anywhere — the author keeps it beside the repository as
-`shifted-zeta-positivity-archive/weil-depth/numerics-archives/`, with a copy of this guide as
+may live anywhere — the current local copy is
+`/Users/Shared/szp-archive/weil-depth/numerics-archives/`, with a copy of this guide as
 its `README.md` — and `papers/weil-depth/.gitignore` excludes `numerics-archives/` and every
 `*.json.gz` under `numerics/output/` so that a copy placed inside the repository is not
 committed by accident. The repository-wide convention and the step-by-step procedure for
@@ -18,6 +18,10 @@ the matrices themselves (`matrices_content_sha256`, canonical JSON of the four b
 and the run parameters, independent of timestamps and runtime metadata), and every archive is
 deterministic output of `numerics/certify_arb.py` or `numerics/independent_arb.py` for the
 parameters recorded in the certificate — about one minute per horizon at `N = 128`.
+
+The continuation paper is [storage-depth](https://github.com/ebbaker/shifted-zeta-positivity/tree/main/papers/storage-depth);
+its data use the separate `szp-archive/storage-depth/numerics-archives/` folder
+and `STORAGE_DEPTH_ARCHIVES` variable.
 
 ## Expected layout
 

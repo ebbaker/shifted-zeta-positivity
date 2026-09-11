@@ -8,16 +8,18 @@ reproduction code — a `code/` subfolder with its own `requirements.txt`.
 **Only `first-slab-positivity/` is at release stage** — it is the one
 manuscript intended to be cited as such, and the one the planned `v1.0` tag
 releases. No tag has been created and no DOI exists yet. The other six
-folders are working drafts, committed at the author's decision on 8–10
+folders are working drafts, committed at the author's decision on 8–11
 September 2026 as an exception to the original sources-only-when-released
 rule: nothing in them is covered by a release or DOI as a finished manuscript,
 and each `STATUS.md` says so explicitly. Cite nothing from a draft folder
-without reading its `STATUS.md`. Status as of 10 September 2026.
+without reading its `STATUS.md`. Status as of 11 September 2026.
 
 `weil-depth/` and `storage-depth/` use a slightly different layout, adopted
 because they go through numbered review rounds: the top level holds only the current draft
-(`README.md`, `STATUS.md`, `CONTINUATION.md`, `BUILD_RECORD.json`,
-`SHA256SUMS.txt`, the versioned PDF), the source is under `manuscript/`, the
+(`README.md`, `STATUS.md`, `BUILD_RECORD.json`, `SHA256SUMS.txt`,
+`ARCHIVES.md`). Weil-depth also has `CONTINUATION.md` and a versioned PDF
+at the top level; storage-depth has `CLOSEOUT.md` and its current PDF at
+`manuscript/storage_depth.pdf`. The source is under `manuscript/`, the
 numerical supplement under `numerics/` (in place of `code/`), superseded
 drafts and the review that produced each version under `archive/`, and its
 large ball-matrix archives are kept outside git and described by the tracked
@@ -42,6 +44,10 @@ the text as a companion manuscript, without a bibliography entry yet;
 `rh-detector/` is a **separate, earlier thread**,
 written on 24–25 August 2026 before the Suzuki line of work began; it is
 unrelated to that program and carries no companion cross-citations.
+
+The storage-depth writing project is closed out at v0.3; its
+[closeout record](storage-depth/CLOSEOUT.md) separates completed packaging
+from open review and deferred research.
 
 ## How to cite a paper in this repository
 
@@ -120,5 +126,5 @@ the citing papers to the repository form above and issue a new release.
 6. `CITATION.cff` (valid against the CFF 1.2.0 schema — `tools/check_citations.py`) and `.zenodo.json` present in the folder; license stated.
 7. PDF built from the committed `.tex` on a clean TeX Live (`latexmk -pdf`); the CI workflow passes.
 8. Figures regenerated from committed scripts or data (Paper 2: `fig_density.png`; Paper 3: Figures 1–5).
-9. Reproduction code under `code/` with `README.md` mapping scripts to results and a pinned `requirements.txt`; scripts that ran only inline in the notes reconstructed as files.
+9. Reproduction code under `code/` (or `numerics/` for Weil-depth and storage-depth) with `README.md` mapping scripts to results and a pinned `requirements.txt`; scripts that ran only inline in the notes reconstructed as files.
 10. Tag the release; then deposit the paper's own Zenodo record (PDF + folder `.zenodo.json`), link the two records (`isPartOf` / `hasPart`), paste both DOIs into the citation blocks.

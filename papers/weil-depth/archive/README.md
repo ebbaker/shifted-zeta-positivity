@@ -49,3 +49,5 @@ Historical research reports and checksum lists that preceded v0.1 (`ORIGINAL_*`,
 `ARITHMETIC_DEPTH_*`), moved here from `numerics/background/`. Their statements about
 what was or was not yet computed describe their own date and are superseded by the
 current `STATUS.md`.
+
+[Storage-depth paper (v0.3, working draft)](../../storage-depth/README.md) · [All manuscripts](../../README.md)

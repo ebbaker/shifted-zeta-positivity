@@ -16,7 +16,7 @@ Edward Baker — August–September 2026.
 > **Status and disclosure.** Everything here was developed with substantial
 > language-model assistance, in adversarial referee-style rounds with independent
 > numerical recomputation. One manuscript is available as a preprint
-> (`papers/first-slab-positivity/`, v1.0). The other five manuscripts are
+> (`papers/first-slab-positivity/`, v1.0). The other six manuscripts are
 > committed as clearly labelled **working drafts**: they have passed internal
 > review rounds but **not** external human review, no release or DOI covers
 > them as finished work, and each folder's `STATUS.md` says exactly what has
@@ -122,19 +122,25 @@ Separately, and **before** the Suzuki line of work began:
 | `blueprint/` | Statement inventory per released paper: every definition, lemma and theorem stated self-contained, with its dependency graph, proof status, human-verification status and formalization feasibility. The entry point for formalizers. |
 | `statements/` | The same inventory as machine-readable YAML (`ledger.yaml`). |
 | `verification/` | What has been checked, how, by whom; referee-round records; independent recomputation scripts; checklists for volunteers. |
-| `notes/` | Index and preparation checklist for a planned research-log migration. The indexed round reports are not yet included; see `MANIFEST.md`. |
+| `notes/` | Storage-depth lessons-learned note, plus an index and preparation checklist for the historical research-log migration; see `MANIFEST.md`. |
 | `code/` | The release gate for the first-slab certificate code (not yet released). Per-paper reproduction scripts live next to their papers. |
 | `references/` | Bibliography of external sources used. No third-party PDFs are redistributed. |
 | `environment/` | Pinned Python environment for the verification scripts; each paper's `code/` has its own `requirements.txt`. |
+
+The storage-depth writing project is closed out as a working draft; see its
+[closeout record](papers/storage-depth/CLOSEOUT.md) for verification, archive
+availability and deferred research. This does not close the other projects
+or the independent-review requirements.
 
 ## Large files
 
 Git holds sources and small records only. Derived data that committed code
 regenerates deterministically — at present the ball-matrix archives of
 `papers/weil-depth/` (about 13 MB per horizon, 122 MB in all) and of
-`papers/storage-depth/` (six archives, about 1.6 GB in all) — are kept
-outside the repository in a sibling folder, bound to the tree by the hashes
-recorded in the small certificate files, and described by a tracked guide in
+`papers/storage-depth/` (six recorded archives, about 1.6 GB in all; four
+present locally, two regenerable) — are kept
+outside the repository in `szp-archive/` (locally `/Users/Shared/szp-archive`),
+bound to the tree by the hashes recorded in the small certificate files, and described by a tracked guide in
 the paper folder (`papers/weil-depth/ARCHIVES.md`, `papers/storage-depth/ARCHIVES.md`). The convention (a 1 MB
 ceiling on committed files, no regenerable data in git, two hashes per
 dataset, hash-bound replay, an environment-variable lookup), the folder
@@ -209,7 +215,7 @@ the paper record's DOI to the root `.zenodo.json` under `related_identifiers`
 Start at `blueprint/first-slab/statements.md`: it lists every statement of the
 preprint with what depends on what, whether it is proved on paper, certified
 by computer, or only asserted, whether a human has checked it, and how
-feasible a Lean/Mathlib formalization looks. The five working drafts do not
+feasible a Lean/Mathlib formalization looks. The six working drafts do not
 have blueprints yet; their `STATUS.md` files carry a result-by-result
 verification record in the meantime. The two premise checks the internal
 review cannot perform — the normalization chain against Suzuki's paper and
