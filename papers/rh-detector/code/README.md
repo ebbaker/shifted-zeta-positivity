@@ -19,3 +19,5 @@ tables. Run from this directory (the JSON caches are resolved relative to the wo
 directory). Dependencies: `requirements.txt`. The high-precision parts use mpmath at
 25–30 significant digits; the injection fits and pencil eigenvalue computations run in
 double precision — this is the floating-point caveat recorded in `../STATUS.md`.
+
+[Storage-depth paper (v0.3, working draft)](../../storage-depth/README.md) · [All manuscripts](../../README.md)

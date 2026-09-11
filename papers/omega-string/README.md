@@ -20,3 +20,5 @@ To rebuild: `python3 fig_density.py && pdflatex omega_string.tex` (twice). The v
 scripts are standalone; their expected outputs are quoted in the paper's Section 7 and in the
 round records. The Herglotz-peeling reconstruction code (Section 7.1) is not yet in the
 repository; see `STATUS.md`.
+
+[Storage-depth paper (v0.3, working draft)](../storage-depth/README.md) · [All manuscripts](../README.md)

@@ -7,17 +7,19 @@ reproduction code — a `code/` subfolder with its own `requirements.txt`.
 
 **Only `first-slab-positivity/` is at release stage** — it is the one
 manuscript intended to be cited as such, and the one the planned `v1.0` tag
-releases. No tag has been created and no DOI exists yet. The other five
-folders are working drafts, committed at the author's decision on 8–10
+releases. No tag has been created and no DOI exists yet. The other six
+folders are working drafts, committed at the author's decision on 8–11
 September 2026 as an exception to the original sources-only-when-released
 rule: nothing in them is covered by a release or DOI as a finished manuscript,
 and each `STATUS.md` says so explicitly. Cite nothing from a draft folder
-without reading its `STATUS.md`. Status as of 10 September 2026.
+without reading its `STATUS.md`. Status as of 11 September 2026.
 
-`weil-depth/` uses a slightly different layout, adopted because it goes
-through numbered review rounds: the top level holds only the current draft
-(`README.md`, `STATUS.md`, `CONTINUATION.md`, `BUILD_RECORD.json`,
-`SHA256SUMS.txt`, the versioned PDF), the source is under `manuscript/`, the
+`weil-depth/` and `storage-depth/` use a slightly different layout, adopted
+because they go through numbered review rounds: the top level holds only the current draft
+(`README.md`, `STATUS.md`, `BUILD_RECORD.json`, `SHA256SUMS.txt`,
+`ARCHIVES.md`). Weil-depth also has `CONTINUATION.md` and a versioned PDF
+at the top level; storage-depth has `CLOSEOUT.md` and its current PDF at
+`manuscript/storage_depth.pdf`. The source is under `manuscript/`, the
 numerical supplement under `numerics/` (in place of `code/`), superseded
 drafts and the review that produced each version under `archive/`, and its
 large ball-matrix archives are kept outside git and described by the tracked
@@ -30,16 +32,22 @@ large ball-matrix archives are kept outside git and described by the tracked
 | `omega-string/` | The shifted zeta string: an unconditional inverse-spectral family and its RH endpoint ("Paper 2", 13 pp.) | Working draft v5, frozen 28 Aug pending human specialist review; five referee passes; Kasahara (1975) source-verified 8 Sept; author block filled; figure script and two verification scripts committed | no — working draft |
 | `defect-depth/` | Detection depth of spectral defects in shifted zeta strings ("Paper 3", 15 pp.) | Working draft v1 (29 Aug) from the Ihara laboratory; all manuscript gates GO; author block empty; 17 bibliography entries still `%% VERIFY`; figures are placeholders; laboratory code committed under `code/` | no — working draft |
 | `weil-depth/` | Finite-horizon Weil coercivity and shifted-zeta contraction: two-sided certificates for the finite-window Weil form through total horizon log 7 (22 pp.) | Working draft v0.4 (10 Sept 2026) after three machine-assisted review rounds (v0.1 → v0.2 Codex; v0.2 → v0.3 Claude, with independent recomputation; v0.3 → v0.4 ChatGPT, presentation and scope only); two-sided Arb ball-arithmetic enclosures of λ_min at seven horizons `log 2 … log 7`, reproduced by an independent implementation and checked against the Fourier-side form; author block "Edward Baker"; ball-matrix archives outside git (`ARCHIVES.md`); no human review, no formal verification | no — working draft |
+| `storage-depth/` | Residual-controlled depth extension of finite-horizon Weil positivity: a spatial continuation past log 7 for the shifted-zeta transfer (21 pp.) | Working draft v0.3 (10–11 Sept 2026); v0.1 and v0.2 drafted by OpenAI models on 10 Sept (five research packets, consolidated record); v0.2 reviewed by Claude with an independent re-implementation of the validators, then rewritten as v0.3 with the floors re-derived by archive-based bisection. Certified in Arb ball arithmetic: `2.99e-29 ≤ λ_min(Q_{0,L_q}) ≤ 3.29e-29` at `L_q = (3/4) log 14`, residual factor 0.78, small-shift contraction for `ω ≤ 9e-16`; at `L_2 = log(56)/2`, after the 32-mode-slab failure was diagnosed and the slabs enlarged to 96 modes, `1.69e-30 ≤ λ_min(Q_{0,L_2}) ≤ 1.89e-30`, residual factor 0.8, contraction for `ω ≤ 2e-16`. Author block "Edward Baker"; about 1.6 GB of matrix archives outside git, two of them to be regenerated locally (`ARCHIVES.md`); no human review, no formal verification | no — working draft |
 | `rh-detector/` | A certified velocity-residual detector for off-axis zeros of the Riemann Ξ-function, and the De Bruijn–Newman flow as a matrix pencil on Calogero–Moser space (10 pp.) | Working draft of 25 Aug; numerics regenerated and re-verified after a workspace loss, smoke-tested 9 Sept; certified modulo floating point; author block empty; scripts and zero caches committed under `code/` | no — working draft |
 
-**Two threads.** Papers 1–3, the preprint and `weil-depth/` form one program
+**Two threads.** Papers 1–3, the preprint, `weil-depth/` and `storage-depth/` form one program
 built on Suzuki's shifted screw functions and shifted scattering function;
 they cite each other as companions (`weil-depth/` continues the preprint's
 operator-side positivity past the prime-free first slab and refers to it in
-the text as a companion manuscript, without a bibliography entry yet).
+the text as a companion manuscript, without a bibliography entry yet;
+`storage-depth/` continues `weil-depth/` past `log 7` and cites it).
 `rh-detector/` is a **separate, earlier thread**,
 written on 24–25 August 2026 before the Suzuki line of work began; it is
 unrelated to that program and carries no companion cross-citations.
+
+The storage-depth writing project is closed out at v0.3; its
+[closeout record](storage-depth/CLOSEOUT.md) separates completed packaging
+from open review and deferred research.
 
 ## How to cite a paper in this repository
 
@@ -118,5 +126,5 @@ the citing papers to the repository form above and issue a new release.
 6. `CITATION.cff` (valid against the CFF 1.2.0 schema — `tools/check_citations.py`) and `.zenodo.json` present in the folder; license stated.
 7. PDF built from the committed `.tex` on a clean TeX Live (`latexmk -pdf`); the CI workflow passes.
 8. Figures regenerated from committed scripts or data (Paper 2: `fig_density.png`; Paper 3: Figures 1–5).
-9. Reproduction code under `code/` with `README.md` mapping scripts to results and a pinned `requirements.txt`; scripts that ran only inline in the notes reconstructed as files.
+9. Reproduction code under `code/` (or `numerics/` for Weil-depth and storage-depth) with `README.md` mapping scripts to results and a pinned `requirements.txt`; scripts that ran only inline in the notes reconstructed as files.
 10. Tag the release; then deposit the paper's own Zenodo record (PDF + folder `.zenodo.json`), link the two records (`isPartOf` / `hasPart`), paste both DOIs into the citation blocks.

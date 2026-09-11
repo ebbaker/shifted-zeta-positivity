@@ -1,0 +1,1370 @@
+\documentclass[11pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage{microtype,booktabs,array,enumitem}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{url}
+\usepackage[colorlinks=true,linkcolor=MidnightBlue,citecolor=MidnightBlue,urlcolor=MidnightBlue]{hyperref}
+\hypersetup{pdftitle={Finite-horizon Weil coercivity and shifted-zeta contraction (v0.3)},pdfauthor={Edward Baker}}
+\numberwithin{equation}{section}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\newcommand{\HH}{\mathcal H}
+\newcommand{\DD}{\mathcal D}
+\newcommand{\RR}{\mathbb R}
+\newcommand{\CC}{\mathbb C}
+\newcommand{\Rea}{\operatorname{Re}}
+\newcommand{\supp}{\operatorname{supp}}
+\newcommand{\tr}{\operatorname{tr}}
+\newcommand{\norm}[1]{\lVert#1\rVert}
+\newcommand{\ip}[2]{\langle#1,#2\rangle}
+\newcommand{\gam}{\Gamma_\infty}
+\newcommand{\Lstar}{L_*}
+\newcommand{\mstar}{m_*}
+\newcommand{\hstar}{h_*}
+\setlength{\emergencystretch}{2em}
+\setlist{itemsep=3pt,topsep=5pt}
+\title{Finite-horizon Weil coercivity\protect\\ and shifted-zeta contraction\protect\\[5pt]
+\large Two-sided certificates for the finite-window Weil form through total horizon $\log 7$}
+\author{Edward Baker}
+\date{Working draft, version 0.3\quad---\quad 9 September 2026}
+
+\begin{document}
+\maketitle
+\begin{abstract}
+We study the central Weil form $Q_{0,L}$ on complex test functions supported
+in an interval of total length $L$, together with the causal finite-horizon
+transfer $V_{\omega,L}$ of Suzuki's shifted zeta ratio. A computer-assisted
+argument that uses no information about zeta zeros encloses the bottom of the
+spectrum of $Q_{0,L}$ from both sides at the seven horizons
+$L=\log2,\log3,\log4,\log5,\log6,9/5,\log7$; in particular
+\[
+ 1.37\times10^{-28}\le\lambda_{\min}(Q_{0,\log7})\le6.81\times10^{-28},
+\]
+so that $Q_{0,L}\succeq1.37\times10^{-28}I$ for every $0<L\le\log7$. The
+horizon $\log7$ lies beyond $\log6$: the generator contains the prime-power
+delays $2,3,4,5$, and the transfer contains the first mixed-prime composition
+$6=2\cdot3$. Lower bounds combine an analytic lower bound on the infinite
+Legendre tail, obtained by fractional integration, with full-output Gram
+matrices that retain the exact reflection-parity coupling; the resulting
+$64\times64$ Schur inequalities are verified in ball arithmetic with an
+explicit analytic profile remainder. Upper bounds are ball Rayleigh quotients
+of retained polynomial vectors. At every certified horizon the bottom of the
+spectrum lies in the even reflection sector, and the certified minimum decays
+super-exponentially in $L$. An even-in-shift generator identity converts each
+floor into a small-shift contraction, for instance
+$\norm{V_{\omega,L}}\le\exp(-6\times10^{-29}\omega)$ for
+$0<\omega\le4\times10^{-15}$ and $L\le\log7$, with quantitative
+reflection-positivity and cumulative-storage bounds. A second implementation
+reproduces every certificate, and the matrices were checked against the
+Fourier-side definition of the form. The results are finite-depth statements:
+they give neither a zero-free region nor an all-depth positivity theorem, and
+we quantify why the present scalar tail bound cannot reach total horizons much
+beyond $2.7$.
+\end{abstract}
+
+\noindent\textbf{Keywords.} Weil positivity; Riemann zeta function; causal
+convolution; Hankel operators; Schur complement; validated computation.
+
+\smallskip
+\noindent\textbf{Status.} Working draft. The analytic argument and the
+executable certificates are supplied for review; the finite calculations,
+their replay, an independent implementation and a Fourier-side check of the
+matrices have passed, but human verification of every proof and proof-assistant
+formalization have not been completed. The numerical results are isolated in
+Theorem~\ref{thm:computation} and Proposition~\ref{prop:upper}.
+
+\section{Introduction and main result}
+
+Weil's positivity criterion expresses the Riemann hypothesis as positivity of
+an explicit quadratic form on all compactly supported test functions. Fixing
+a bounded support produces a separate, finite-horizon question: is the
+restricted form coercive, and can an explicit positive lower bound be proved
+without information about zeta zeros? Such a result controls only a bounded
+part of the criterion, but provides a test of methods intended to extend to
+larger arithmetic depth.
+
+This paper addresses that question using the causal transfer associated with
+the shifted quotient
+\begin{equation}\label{eq:theta}
+ \Theta_\omega(z)=
+ \frac{\xi(\tfrac12-\omega-iz)}{\xi(\tfrac12+\omega-iz)},\qquad
+ \xi(s)=\tfrac12s(s-1)\pi^{-s/2}\Gamma(s/2)\zeta(s).
+\end{equation}
+Suzuki introduced this family and its arithmetic Hankel kernel
+\cite{Suzuki2016}. Our statements concern the finite causal convolution
+defined in Section~\ref{sec:operators}; no global innerness assumption is made.
+
+Throughout the paper, $L$ is the \emph{total length} of the input interval.
+Its centered version is $(-L/2,L/2)$, and its autocorrelation is supported
+in $[-L,L]$. The corresponding multiplicative cutoff is $a=e^{L/2}$.
+This convention is important when comparing arithmetic thresholds or
+compact-window bounds.
+
+\begin{theorem}[Two-sided finite-horizon bounds and contraction]\label{thm:main}
+For each row of Table~\ref{tab:main}, with horizon $L_j$, floor $m_j$, upper
+bound $\mu_j$ and constants $C_j,h_j,d_j$, the central form \eqref{eq:weil}
+satisfies
+\begin{equation}\label{eq:mainenclosure}
+ m_j\le\lambda_{\min}(Q_{0,L_j})\le\mu_j,\qquad
+ \lambda_{\min}(Q_{0,L}):=\inf\{Q_{0,L}[f]:f\in\DD_{\log,L},\ \norm f_2=1\},
+\end{equation}
+and the lower bound holds in each reflection sector separately, with the
+sector-wise floors and upper bounds of Table~\ref{tab:sectors}. Consequently,
+for every $0<L\le L_j$,
+\begin{equation}\label{eq:maincentral}
+ Q_{0,L}[f]\ge m_j\norm f_2^2\qquad(f\in\DD_{\log,L}).
+\end{equation}
+For the transfer $V_{\omega,L}$ of Definition~\ref{def:transfer},
+\begin{equation}\label{eq:maintransfer}
+ \norm{V_{\omega,L}}\le e^{-d_j\omega}<1,
+ \qquad 0<\omega\le h_j,\quad 0<L\le L_j,
+\end{equation}
+and $H_{\omega,L}=V_{\omega,L}R_L$ is self-adjoint with
+\begin{equation}\label{eq:mainreflection}
+ I\pm H_{\omega,L}\succeq(1-e^{-d_j\omega})I.
+\end{equation}
+The bounds \eqref{eq:mainenclosure} are computer-assisted
+(Theorem~\ref{thm:computation} and Proposition~\ref{prop:upper}); the
+remaining implications are analytic.
+\end{theorem}
+
+\input{tables_main}
+
+In particular $Q_{0,L}\succeq1.37\times10^{-28}I$ for $L\le\log7$ and
+$Q_{0,L}\succeq3.38\times10^{-23}I$ for $L\le9/5$. The total horizons $9/5$
+and $\log7$ are strictly larger than $\log6$. There the logarithmic generator
+has precisely the delays $\log2,\log3,\log4,\log5$, while the coefficient of
+$n=6$ occurs in the transfer as a product of two prime factors, although
+$\Lambda(6)=0$; in the full-output calculation the ordered mixed overlaps
+$(2,3)$ and $(3,2)$ are retained explicitly. At the exact endpoint $L=\log7$
+the delay $T_{\log7}$ vanishes on $(0,L)$, so $\log7$ is the largest horizon
+with this generator.
+
+Three features of Table~\ref{tab:main} deserve comment. First, the enclosures
+are tight: the ratio $\mu_j/m_j$ is below $1.3$ through $9/5$ and below $5$ at
+$\log7$, so the floors are within a small factor of the true bottom of the
+spectrum, and the smallness of the constants is a property of the form, not of
+the method. Second, the certified minimum decays super-exponentially in $L$:
+$-\log_{10}\mu_j$ grows by about $11$ per unit horizon between $\log2$ and
+$\log3$ and by about $33$ per unit horizon between $9/5$ and $\log7$. This is
+the Landau--Widom-type collapse discussed by Zhu \cite{Zhu2026}. Third, the
+shift intervals $h_j$ are fixed by $m_j$ and the quadratic perturbation bound
+of Lemma~\ref{lem:change}, $h_j\approx\sqrt{3m_j/2C_j}$; only at $\log2$,
+where no prime term is present, is the interval macroscopic.
+
+The proof has three components. First, differentiating the finite Euler
+product gives a generator even in $\omega$ and a bounded perturbation
+$Q_{\omega,L}-Q_{0,L}=O_L(\omega^2)$. Second, a fractional-integration estimate
+gives a lower bound on the infinite Legendre tail. Third, full-output Grams
+control the coupling between that tail and the retained space, separately in
+each reflection sector. The finite comparison is a Schur inequality at the
+claimed positive level $m_j$; positivity of a finite compression alone
+would not suffice. Upper bounds need only the retained head.
+
+\subsection{Relation to earlier work}
+
+Positivity of the Weil form on windows of total length at most $\log2$, where
+no prime term is present, is classical: Yoshida proved it in
+\cite{Yoshida1992}, and Connes and Consani \cite{ConnesConsani2020} reprove
+and interpret it through Sonin spaces and a compressed scaling action, as part
+of the operator-theoretic program pursued with Moscovici and van Suijlekom.
+Our $\log2$ row recovers this range with an explicit two-sided constant.
+Beyond $\log2$ prime terms enter, and the positivity statements we are aware
+of are computer assisted. Zhu \cite{Zhu2026} certifies
+$Q\succeq8.9\times10^{-18}$ at total length $1.6$ (his window parameter is a
+half-width, so his $L=0.8$ is total length $1.6$ here) through a pointwise
+envelope for the Weil symbol and a single finite matrix, together with the
+certified upper bound $2.27\times10^{-17}$; he observes that the window ground
+state is simple and even, and argues that any such one-stroke certificate must
+resolve frequencies up to a threshold that is doubly exponential in the
+horizon. Our $\log5$ row has the same active primes as his window and, since
+$\lambda_{\min}$ is nonincreasing in $L$, implies
+$\lambda_{\min}(1.6)\ge8.95\times10^{-18}$ by a different reduction; the
+agreement of the two lower bounds to two digits is a useful cross-check between
+the programs. We do not use his certificate. The specific contributions here
+are the fractional tail bound of Section~\ref{sec:tail}, the full-output
+parity reduction of Section~\ref{sec:schur}, two-sided certificates at seven
+horizons through $\log7$, and the explicit positive-shift consequences. The
+doubly exponential threshold appears in our setting as the growth of the
+arithmetic loss in the scalar tail floor; Section~\ref{sec:limits} quantifies
+it. We make no claim that finite-matrix approaches to Weil positivity are
+themselves new.
+
+The estimates are finite-depth. They neither establish global innerness of
+\eqref{eq:theta} nor prove a new zero-free region, and the storage corollary
+of Section~\ref{sec:storage} does not supply an induction in arithmetic depth.
+
+\section{Causal transfer and the central form}\label{sec:operators}
+
+\subsection{Finite-horizon definitions}
+
+Let $\HH_L=L^2(0,L;\CC)$, with inner product linear in the second argument,
+and define
+\[
+ R_Lf(x)=f(L-x),\qquad T_df(x)=\mathbf1_{x>d}f(x-d).
+\]
+In particular, $T_d=0$ for $d\ge L$ and
+$T_dT_e=T_{d+e}$. Every adjoint and norm below refers to unweighted
+$L^2(0,L)$.
+
+Put $\gam(s)=\tfrac12s(s-1)\pi^{-s/2}\Gamma(s/2)$. For $0<\omega\le1/2$
+the archimedean causal convolution has Laplace transfer
+\begin{equation}\label{eq:gammaK}
+ K^\gamma_\omega(p)=
+ \frac{\gam(\tfrac12+p-\omega)}{\gam(\tfrac12+p+\omega)}.
+\end{equation}
+It may be defined on a sufficiently far right Laplace line, followed by
+restriction to $(0,L)$. For an explicit impulse, set
+$\alpha=\tfrac12-\omega$, $\beta=\tfrac12+\omega$. Then
+\begin{equation}\label{eq:gammafactor}
+ K^\gamma_\omega(p)=\pi^\omega
+ \frac{(p+\alpha)(p-\beta)}{(p-\alpha)(p+\beta)}
+ \frac{\Gamma((p+\alpha)/2)}{\Gamma((p+\beta)/2)}.
+\end{equation}
+The last ratio is the transform of
+$2e^{-\alpha t}(1-e^{-2t})^{\omega-1}/\Gamma(\omega)$.
+The rational factor has an impulse consisting of a delta mass and smooth
+exponentials (with the usual limiting interpretation at $\alpha=0$).
+Thus the full impulse $\kappa_\omega$ is locally integrable, behaves as
+$O(t^{\omega-1})$ at the origin, and defines a bounded finite-horizon
+convolution $V^\gamma_{\omega,L}$.
+
+\begin{definition}\label{def:transfer}
+For $0<\omega\le1/2$, define
+\begin{align}
+ b_\omega(n)&=n^{\omega-1/2}\prod_{p\mid n}(1-p^{-2\omega}),
+ & b_\omega(1)&=1,\label{eq:bcoeff}\\
+ B_{\omega,L}&=\sum_{\log n<L}b_\omega(n)T_{\log n},
+ &V_{\omega,L}&=B_{\omega,L}V^\gamma_{\omega,L}.\label{eq:Vdef}
+\end{align}
+Set $V_{0,L}=I$ in the strong-limit sense proved below.
+\end{definition}
+
+The sum is finite and contains all integers below $e^L$. This is the
+logarithmic-coordinate form of Suzuki's arithmetic kernel. The Euler product
+identity for its Dirichlet series also identifies the full Laplace transfer,
+on a sufficiently far right line, as
+$\xi(\tfrac12+p-\omega)/\xi(\tfrac12+p+\omega)$.
+Real causal convolution gives $V_{\omega,L}^*=R_LV_{\omega,L}R_L$;
+therefore $H_{\omega,L}=V_{\omega,L}R_L$ is self-adjoint and
+$\norm{H_{\omega,L}}=\norm{V_{\omega,L}}$.
+
+\subsection{The central Weil form}
+
+For $f\in\HH_L$, let $f_c(x)=f(x+L/2)$ on $(-L/2,L/2)$ and zero elsewhere.
+Write
+\[
+ \widehat f_c(\tau)=\int_{\RR}f_c(x)e^{-i\tau x}\,dx,\qquad
+ C(f)=\int_{\RR}f_c(x)\cosh(x/2)\,dx,\quad
+ S(f)=\int_{\RR}f_c(x)\sinh(x/2)\,dx.
+\]
+The logarithmic form domain is
+\begin{equation}\label{eq:domain}
+ \DD_{\log,L}=\left\{f\in\HH_L:
+ \int_{\RR}\log(2+|\tau|)|\widehat f_c(\tau)|^2\,d\tau<\infty\right\}.
+\end{equation}
+With $\psi=\Gamma'/\Gamma$, define
+\begin{align}
+ Q_{0,L}[f]={}&\frac1{2\pi}\int_{\RR}
+ \bigl(\Rea\psi(\tfrac14+\tfrac{i\tau}{2})-\log\pi\bigr)
+ |\widehat f_c(\tau)|^2\,d\tau\notag\\
+ &+2|C(f)|^2-2|S(f)|^2
+ -\sum_{\log n<L}\frac{\Lambda(n)}{\sqrt n}
+ \ip f{(T_{\log n}+T_{\log n}^*)f}.
+ \label{eq:weil}
+\end{align}
+Here $\Lambda(p^k)=\log p$ and is zero otherwise. The last scalar is real.
+The Fourier multiplier differs from $\log(2+|\tau|)$ by a bounded function,
+by the digamma asymptotics \cite[\S5.11]{DLMF}. All remaining terms are
+bounded. Hence \eqref{eq:weil} is a closed semibounded form on
+\eqref{eq:domain}. It is the central geometric Weil form in this normalization.
+For example, if $g=f_c*\widetilde f_c$ with
+$\widetilde f_c(x)=\overline{f_c(-x)}$, its pole contribution is
+$\int g(t)(e^{t/2}+e^{-t/2})\,dt=2|C(f)|^2-2|S(f)|^2$.
+Its arithmetic contribution is
+$-\sum\Lambda(n)n^{-1/2}(g(\log n)+g(-\log n))$, exactly the delay term
+above. This also makes translation invariance explicit for complex tests.
+It commutes with reflection and with complex conjugation. The same notation
+$Q_{0,L}$ denotes its associated self-adjoint operator where appropriate.
+
+\begin{lemma}[Polynomial core]\label{lem:core}
+Polynomials restricted to $(0,L)$ form a core for $Q_{0,L}$.
+If $P_N$ is the orthogonal projection onto the polynomials of degree less
+than $N$, polynomial combinations in $(I-P_N)\HH_L$ are a form core for
+the restriction to that subspace.
+\end{lemma}
+\begin{proof}
+Equip \eqref{eq:domain} with its weighted Fourier norm, equivalent to a
+shifted form norm. First shrink the centered zero extension by a dilation
+about the origin so that its support lies in a smaller interval. Dilations
+tending to the identity converge in this weighted norm: their norms are
+uniformly bounded, since the logarithmic weights at dilated frequencies are
+comparable, and strong convergence follows first on smooth Fourier data and
+then by density. Mollification with support smaller than the resulting
+boundary gap converges in the weighted norm by dominated convergence.
+Consequently $C_c^\infty(0,L)$ is a form core.
+
+For $h\in C^1[0,L]$, integration by parts in its zero extension gives
+\[
+ |\widehat h(\tau)|\le L\norm h_\infty,\qquad
+ |\widehat h(\tau)|\le
+ \frac{2\norm h_\infty+L\norm{h'}_\infty}{|\tau|}\quad(\tau\ne0).
+\]
+These bounds imply continuity from $C^1[0,L]$ to the logarithmic form
+domain. Approximate the derivative of a smooth function uniformly by a
+polynomial and integrate, matching one value. This gives polynomial
+approximation in $C^1$, hence in form norm. Endpoint jumps of the zero
+extension cause no difficulty.
+
+Finally $P_N$ is bounded in form norm: it has finite rank, its range consists
+of form-domain polynomials, and its coefficient functionals are bounded in
+$L^2$. Apply $I-P_N$ to the polynomial approximants of a vector orthogonal
+to the retained space.
+\end{proof}
+
+\section{The prime-delay generator and continuation}\label{sec:generator}
+
+\subsection{Exact logarithmic differentiation}
+
+Write $\ell(p)=\log\gam(\tfrac12+p)$ on a far right half-plane. The
+archimedean logarithmic generator has symbol
+\begin{align}
+ a^\gamma_\omega(p)&=\ell'(p-\omega)+\ell'(p+\omega)\notag\\
+ &=\frac1{p+\alpha}+\frac1{p-\alpha}
+ +\frac1{p+\beta}+\frac1{p-\beta}-\log\pi\notag\\
+ &\hspace{18mm}+\frac12\psi((p+\alpha)/2)+\frac12\psi((p+\beta)/2).
+ \label{eq:agamma}
+\end{align}
+It defines a causal logarithmic operator $A^\gamma_{\omega,L}$ on its natural
+core. Its symmetric form at zero is the gamma part of \eqref{eq:weil}.
+For example, the two central rational terms give the symmetric kernel
+$2\cosh((x-y)/2)$, whose form is $2|C|^2-2|S|^2$; the digamma term gives
+the multiplier in \eqref{eq:weil}.
+
+\begin{proposition}[Prime-power generator]\label{prop:generator}
+On the causal generator core,
+\begin{align}
+ \partial_\omega V_{\omega,L}&=-A_{\omega,L}V_{\omega,L},\label{eq:derivative}\\
+ A_{\omega,L}&=A^\gamma_{\omega,L}
+ -2\sum_{\log n<L}\frac{\Lambda(n)}{\sqrt n}
+ \cosh(\omega\log n)T_{\log n}.\label{eq:Ageneral}
+\end{align}
+Thus its symmetric form is
+\begin{equation}\label{eq:Qgeneral}
+ Q_{\omega,L}=Q^\gamma_{\omega,L}
+ -\sum_{\log n<L}\frac{\Lambda(n)}{\sqrt n}
+ \cosh(\omega\log n)(T_{\log n}+T_{\log n}^*).
+\end{equation}
+\end{proposition}
+\begin{proof}
+The commuting nilpotent delay algebra gives
+\[
+ B_{\omega,L}=\prod_{\log p<L}
+ (I-p^{-1/2-\omega}T_{\log p})
+ (I-p^{-1/2+\omega}T_{\log p})^{-1}.
+\]
+Each inverse is a terminating geometric series. Expanding the logarithm
+of one factor, the coefficient of $T_{k\log p}$ is
+$(p^{-k/2+k\omega}-p^{-k/2-k\omega})/k$.
+Its derivative is
+$2(\log p)p^{-k/2}\cosh(k\omega\log p)$.
+Differentiating the product in \eqref{eq:Vdef} and using commutation with
+causal gamma convolution proves \eqref{eq:Ageneral}. Symmetrization gives
+\eqref{eq:Qgeneral}. Only the bounded arithmetic factor has been inverted;
+no bounded inverse of the smoothing transfer is asserted.
+\end{proof}
+
+\subsection{A bounded quadratic change in the shift}
+
+Set
+\begin{equation}\label{eq:rkernel}
+ r(t)=e^{t/2}-\frac{e^{-5t/2}}{1-e^{-2t}},\qquad t>0.
+\end{equation}
+\begin{lemma}[Bounded shift difference]\label{lem:change}
+The forms $Q_{\omega,L}$, $0\le\omega\le1/2$, have the common domain
+$\DD_{\log,L}$. Their gamma difference has symmetric kernel
+\[
+ (\cosh(\omega|x-y|)-1)r(|x-y|).
+\]
+In particular,
+\begin{equation}\label{eq:changebound}
+ \norm{Q_{\omega,L}-Q_{0,L}}\le C_L\omega^2,
+\end{equation}
+as a bound on the bounded form difference, where
+\begin{align}
+ C_L={}&\cosh(L/2)\left(e^{L/2}\frac{L^3}{3}+\frac{L^2}{4}\right)\notag\\
+ &+\frac12\sum_{\log n<L}\frac{\Lambda(n)}{\sqrt n}
+ (\log n)^2\cosh(\log n/2)\norm{T_{\log n}+T_{\log n}^*}.
+ \label{eq:CL}
+\end{align}
+\end{lemma}
+\begin{proof}
+In the digamma integral \cite[\S5.9]{DLMF}, form
+$a^\gamma_\omega-a^\gamma_0$ before separating the divergent terms. Its
+digamma part has inverse Laplace kernel
+$-2e^{-t/2}(\cosh(\omega t)-1)/(1-e^{-2t})$.
+The rational terms contribute
+$4\cosh(t/2)(\cosh(\omega t)-1)$.
+Since
+$2\cosh(t/2)-e^{-t/2}/(1-e^{-2t})=r(t)$,
+symmetrization gives the asserted kernel. It is $O(|x-y|)$ at the diagonal
+and extends continuously in $\omega$ through $1/2$. This physical-space
+identity avoids taking an incomplete pointwise digamma limit at the endpoint.
+
+Now $|r(t)|\le e^{t/2}+1/(2t)$ and
+$0\le\cosh(\omega t)-1\le\omega^2t^2\cosh(t/2)/2$.
+The row-integral bound for the symmetric kernel is at most
+$\omega^2\cosh(L/2)\int_0^L(t^2e^{L/2}+t/2)\,dt$.
+Bounding each arithmetic difference in \eqref{eq:Qgeneral} in the same
+way gives \eqref{eq:CL}. Bounded perturbations preserve the closed-form
+domain.
+\end{proof}
+
+\begin{lemma}[Laplace-line estimates]\label{lem:laplace}
+Fix $\eta>1$ and write $p=\eta+i\tau$, $\tau\in\RR$. For $0\le s\le\tfrac12$ let
+\[
+ K_s(p)=\frac{\xi(\tfrac12+p-s)}{\xi(\tfrac12+p+s)},\qquad
+ a_s(p)=-\partial_s\log K_s(p).
+\]
+Then $a_s(p)=a^\gamma_s(p)-2\sum_{n\ge1}\Lambda(n)n^{-1/2}\cosh(s\log n)\,n^{-p}$
+with an absolutely convergent series, $K_0\equiv1$, and there is a constant
+$C_\eta$ such that for all $0\le s\le\tfrac12$ and $j\in\{0,1,2\}$
+\begin{equation}\label{eq:laplace-bounds}
+ |\partial_s^jK_s(p)|\le C_\eta(1+\log(2+|\tau|))^j(2+|\tau|)^{-s},
+ \qquad |a_s(p)|\le C_\eta(1+\log(2+|\tau|)).
+\end{equation}
+\end{lemma}
+\begin{proof}
+Write $K_s=K^\gamma_sK^\zeta_s$ with
+$K^\zeta_s(p)=\zeta(\tfrac12+p-s)/\zeta(\tfrac12+p+s)$. Since
+$\Re(\tfrac12+p\mp s)\ge\eta>1$, both zeta values are absolutely convergent
+Dirichlet series, bounded above and below in modulus uniformly in $\tau$ and
+$s$, and their $s$-derivatives are Dirichlet series with coefficients
+$O(\log^jn)$, also absolutely convergent and bounded. The logarithmic
+derivative gives the displayed arithmetic part of $a_s$. For the gamma factor,
+\eqref{eq:gammafactor} gives $K^\gamma_s=\pi^s\rho_s(p)\,
+\Gamma(\tfrac{p+\alpha}2)/\Gamma(\tfrac{p+\beta}2)$ with a rational factor
+$\rho_s$ whose denominators satisfy $|p\pm\alpha|,|p\pm\beta|\ge\eta-\tfrac12$
+on the line, so $\rho_s$ is bounded with bounded $s$-derivatives. By the
+uniform Stirling expansion \cite[\S5.11(iii)]{DLMF},
+$|\Gamma(z+a)/\Gamma(z+b)|$ is comparable to $|z|^{\Re(a-b)}$ uniformly for
+$z=p/2$ on the line and $a,b$ in a compact set; here $\Re(a-b)=-s$, so the
+gamma ratio is comparable to $(2+|\tau|)^{-s}$. Its $s$-derivatives are the
+ratio times polynomials in $\tfrac12\psi(\tfrac{p+\alpha}2)$,
+$\tfrac12\psi(\tfrac{p+\beta}2)$ and their derivatives, each
+$O(\log(2+|\tau|))$ by \cite[\S5.11(i)]{DLMF}. Combining the factors gives
+\eqref{eq:laplace-bounds}; $K_0=1$ is immediate.
+\end{proof}
+
+\begin{proposition}[Central coercivity implies contraction]\label{prop:continuation}
+If $Q_{0,L}\succeq mI$, then
+\begin{equation}\label{eq:continuation}
+ \norm{V_{\omega,L}}\le
+ \exp(-m\omega+C_L\omega^3/3),\qquad 0<\omega\le1/2.
+\end{equation}
+\end{proposition}
+\begin{proof}
+We give the argument in detail because the generator is unbounded and
+$V_{0,L}=I$ is a strong, not a norm, limit.
+
+\emph{Weighted realization.} Fix $\eta>1$ and let $M_\eta$ be multiplication
+by $e^{-\eta x}$, a bounded operator on $\HH_L$ with bounded inverse. For a
+distribution kernel $k$ supported in $[0,\infty)$ and $g$ supported in
+$[0,L]$, $M_\eta(k*g)=(M_\eta k)*(M_\eta g)$, and multiplication by the
+indicator $P_L$ of $(0,L)$ commutes with $M_\eta$. Hence the compression to
+$(0,L)$ of the causal operator with Laplace symbol $\kappa(p)$ equals
+$M_\eta^{-1}P_L\,\mathcal M[\kappa(\eta+i\cdot)]\,P_LM_\eta$, where
+$\mathcal M[\phi]$ denotes the Fourier multiplier by $\phi$ on $L^2(\RR)$. In
+particular $V_{s,L}=M_\eta^{-1}P_L\mathcal M[K_s(\eta+i\cdot)]P_LM_\eta$,
+and by Lemma~\ref{lem:laplace} $\norm{V_{s,L}}\le C_\eta\norm{M_\eta}\norm{M_\eta^{-1}}$
+uniformly in $s$.
+
+\emph{Norm differentiability for positive shift.} Fix $\varepsilon>0$. By
+\eqref{eq:laplace-bounds} with $j=2$,
+$|K_{s+h}(p)-K_s(p)-h\,\partial_sK_s(p)|\le\tfrac{h^2}2C_\eta(1+\log(2+|\tau|))^2(2+|\tau|)^{-\varepsilon}
+\le C_{\eta,\varepsilon}h^2$ uniformly in $\tau$ for $s,s+h\in[\varepsilon,\tfrac12]$.
+Therefore $s\mapsto V_{s,L}$ is norm-$C^1$ on $[\varepsilon,\tfrac12]$ with
+\begin{equation}\label{eq:dV}
+ \partial_sV_{s,L}=M_\eta^{-1}P_L\mathcal M[\partial_sK_s(\eta+i\cdot)]P_LM_\eta
+ =-M_\eta^{-1}P_L\mathcal M[(a_sK_s)(\eta+i\cdot)]P_LM_\eta .
+\end{equation}
+
+\emph{Smoothing and the generator.} Fix $s\in[\varepsilon,\tfrac12)$, $f\in\HH_L$,
+and put $g=V_{s,L}f$. By \eqref{eq:laplace-bounds} with $j=0$,
+$\mathcal M[K_s]M_\eta f\in H^r(\RR)$ for every $r<s$. Multiplication by the
+indicator of an interval is bounded on $H^r(\RR)$ for $0\le r<\tfrac12$
+\cite{Strichartz1967}, and on functions supported in $[0,L]$ multiplication by
+$e^{\eta x}$ coincides with multiplication by a smooth compactly supported
+function, also bounded on $H^r$. Hence $g\in H^r(\RR)$ for every
+$r<\min(s,\tfrac12)$, $g$ is supported in $[0,L]$, and in particular
+$g\in\DD_{\log,L}$. Since $a_sK_s$ is a bounded symbol on the line,
+$u:=M_\eta^{-1}P_L\mathcal M[(a_sK_s)(\eta+i\cdot)]M_\eta f$ lies in $\HH_L$,
+and by the convolution identity above $u$ is the restriction to $(0,L)$ of
+$k_{a_s}*g$, where $k_{a_s}$ is the causal distribution kernel with Laplace
+transform $a_s$: indeed $k_{a_s}*P_L(k_{K_s}*f)$ differs from
+$(k_{a_s}*k_{K_s})*f$ by $k_{a_s}$ applied to a function supported in
+$[L,\infty)$, whose output is supported in $[L,\infty)$. Thus
+\eqref{eq:dV} reads $\partial_sV_{s,L}f=-A_{s,L}V_{s,L}f$ with
+$A_{s,L}g:=P_L(k_{a_s}*g)$, which is the identity \eqref{eq:derivative}, and
+$A_{s,L}g\in\HH_L$.
+
+\emph{The symmetric form of the generator.} We claim
+$\Re\ip g{A_{s,L}g}=Q_{s,L}[g]$ for the vector $g$ above. The arithmetic part
+of $A_{s,L}$ is the finite sum
+$-2\sum_{\log n<L}\Lambda(n)n^{-1/2}\cosh(s\log n)T_{\log n}$, since delays
+with $\log n\ge L$ vanish on $(0,L)$; it is bounded and its real part is the
+arithmetic part of \eqref{eq:Qgeneral}. The four pole terms of
+\eqref{eq:agamma} have causal kernels $e^{\mp\alpha t}$, $e^{\mp\beta t}$,
+bounded on $(0,L)$, and their symmetrizations are the corresponding
+$\cosh$ kernels (at $s=0$, the kernel $2\cosh((x-y)/2)$ of the pole term of
+\eqref{eq:weil}). The digamma part
+$\tfrac12\psi(\tfrac{p+\alpha}2)+\tfrac12\psi(\tfrac{p+\beta}2)-\log\pi$ has a
+tempered causal kernel $k_\psi$ (a multiple of $\delta$, a finite part of
+$1/t$, and a bounded function); for $g\in L^2$ with compact support,
+$k_\psi*g$ is tempered with Fourier transform $\hat k_\psi(\tau)\hat g(\tau)$,
+where $\hat k_\psi(\tau)=\tfrac12\psi(\tfrac{i\tau+\alpha}2)+\tfrac12\psi(\tfrac{i\tau+\beta}2)-\log\pi$
+is the Laplace symbol on the imaginary axis; for $s<\tfrac12$ its arguments
+stay away from the poles of $\psi$ and it is $O(\log(2+|\tau|))$. Since
+$g\in H^r$ with $r>0$, $k_\psi*g\in L^2$, and Plancherel gives
+$\Re\ip g{k_\psi*g}=\frac1{2\pi}\int\Re\hat k_\psi(\tau)|\hat g(\tau)|^2\,d\tau$,
+the digamma term of $Q_{s,L}$. Summing the three parts proves the claim; this
+is the extension of Proposition~\ref{prop:generator} from the smooth core to
+$g$, and the same computation shows that the form $Q_{s,L}$ so obtained is the
+one whose difference from $Q_{0,L}$ is bounded by Lemma~\ref{lem:change}.
+
+\emph{Energy inequality and Gronwall.} With $g_s=V_{s,L}f$, norm
+differentiability gives, for $s\in[\varepsilon,\tfrac12)$,
+\[
+ \frac{d}{ds}\norm{g_s}^2=2\Rea\ip{g_s}{\partial_sg_s}
+ =-2\Rea\ip{g_s}{A_{s,L}g_s}=-2Q_{s,L}[g_s]
+ \le-2(m-C_Ls^2)\norm{g_s}^2,
+\]
+using the hypothesis and Lemma~\ref{lem:change}. Integrating from
+$\varepsilon$ to $\omega<\tfrac12$,
+\[
+ \norm{V_{\omega,L}f}^2\le\norm{V_{\varepsilon,L}f}^2
+ \exp\Bigl(-2\int_\varepsilon^\omega(m-C_Ls^2)\,ds\Bigr).
+\]
+
+\emph{The zero-shift limit.} Finally
+$\norm{V_{\varepsilon,L}f-f}\le\norm{M_\eta^{-1}}\,\norm{(\mathcal M[K_\varepsilon(\eta+i\cdot)]-I)M_\eta f}_{L^2(\RR)}$,
+and the right side tends to $0$ as $\varepsilon\downarrow0$ by Plancherel and
+dominated convergence, since $K_\varepsilon(\eta+i\tau)\to1$ pointwise with
+$|K_\varepsilon|\le C_\eta$. Letting $\varepsilon\downarrow0$ proves
+\eqref{eq:continuation} for $0<\omega<\tfrac12$; the case $\omega=\tfrac12$
+follows by the norm continuity of $s\mapsto V_{s,L}$ established above. No
+norm derivative at zero and no bounded inverse of the smoothing transfer are
+used.
+\end{proof}
+
+\section{An analytic lower bound on the infinite Legendre tail}\label{sec:tail}
+
+Let $\phi_n(x)=\sqrt{(2n+1)/L}\,P_n(2x/L-1)$ and let $P_N$ retain
+$\phi_0,\ldots,\phi_{N-1}$. Define causal fractional integration by
+\[
+ I_\nu f(x)=\frac1{\Gamma(\nu)}\int_0^x(x-y)^{\nu-1}f(y)\,dy.
+\]
+The following estimate applies to all combinations in the infinite tail.
+
+\begin{lemma}[Fractional tail estimate]\label{lem:fractional}
+For $N\ge1$ and $0<\nu<1$,
+\begin{equation}\label{eq:fractail}
+ \norm{I_\nu(I-P_N)}\le
+ (L/2)^\nu\sqrt{\frac{\Gamma(N+1-\nu)}{\Gamma(N+1+\nu)}}.
+\end{equation}
+Consequently
+\begin{equation}\label{eq:I1tail}
+ \norm{I_1(I-P_N)}\le\frac{L}{2\sqrt{N(N+1)}}.
+\end{equation}
+\end{lemma}
+\begin{proof}
+Termwise beta integration of the terminating Legendre polynomial gives
+\[
+ I_\nu P_n(2x/L-1)=
+ \frac{n!}{\Gamma(n+1+\nu)}x^\nu
+ P_n^{(-\nu,\nu)}(2x/L-1).
+\]
+The polynomial and orthogonality identities may also be read from
+\cite[\S\S18.3,18.5,18.17]{DLMF}. For a finite tail combination, use
+$x^{2\nu}\le(L/2)^{2\nu}x^\nu(L-x)^{-\nu}$ and Jacobi orthogonality.
+Indeed $x(L-x)\le L^2/4$, and the required Jacobi norm is
+\[
+ \int_0^L x^\nu(L-x)^{-\nu}
+ \bigl[P_n^{(-\nu,\nu)}(2x/L-1)\bigr]^2\,dx
+ =\frac{L\,\Gamma(n+1-\nu)\Gamma(n+1+\nu)}
+ {(2n+1)(n!)^2}.
+\]
+The squared norm becomes bounded by
+\[
+ (L/2)^{2\nu}\sum_{n\ge N}|c_n|^2
+ \frac{\Gamma(n+1-\nu)}{\Gamma(n+1+\nu)}.
+\]
+Successive gamma ratios decrease by the factor
+$(n+1-\nu)/(n+1+\nu)<1$. Density and boundedness of $I_\nu$ prove
+\eqref{eq:fractail}. Letting $\nu\uparrow1$, using convergence of the
+fractional kernels in $L^1(0,L)$, gives \eqref{eq:I1tail}.
+\end{proof}
+
+\begin{remark}[Sharpness on single modes]\label{rem:sharp}
+The bound is essentially optimal in its leading term. By the
+Weber--Schafheitlin integral \cite[\S10.22(ii)]{DLMF}, differentiated in the
+exponent, the exact value of the logarithmic part on a single normalized
+Legendre mode is
+\[
+ \frac1{2\pi}\int_{\RR}\log\frac{|\tau|}{2\pi}\,|\widehat{(\phi_n)_c}(\tau)|^2\,d\tau
+ =\log2+\tfrac12\bigl(\psi(n+\tfrac12)+\psi(n+\tfrac32)\bigr)-\log(\pi L),
+\]
+which exceeds the floor $H_N-\gamma-\log(\pi L)$ at $n=N$ by
+$\log2+O(1/N)$. The floor must hold for all tail combinations, and the
+logarithmic multiplier is not diagonal in the Legendre basis, so a loss of this
+order is expected. The identity was also used to check the computed head
+matrices independently of the formulas of Section~\ref{sec:computation}.
+\end{remark}
+
+The central gamma derivative $U^\gamma=\partial_\omega V^\gamma_{\omega,L}|_0$
+has the decomposition
+\begin{equation}\label{eq:Udecomp}
+ U^\gamma=J_L+S_w,\qquad
+ J_L=\left.\partial_\nu[(2\pi)^\nu I_\nu]\right|_0,
+ \qquad w(t)=\frac{G_0(t)-1}{t},
+\end{equation}
+where $S_w$ is causal convolution and
+\begin{equation}\label{eq:G0}
+ G_0(t)=\frac{e^{t/2}t}{\sinh t}-4t\cosh(t/2)
+ =\sum_{j\ge0}g_jt^j.
+\end{equation}
+To verify \eqref{eq:Udecomp}, the inverse kernel of $-a^\gamma_0$, away
+from the origin, is
+$e^{t/2}/\sinh t-4\cosh(t/2)$; subtracting the finite-part kernel of
+$J_L$ leaves $w$. The constant term agrees with the Laplace asymptotic
+$-a^\gamma_0(p)=\log(2\pi/p)+O(p^{-1})$.
+In particular $g_0=1$, $g_1=-7/2$, and $g_2=-1/24$.
+
+\begin{proposition}[Central infinite-tail floor]\label{prop:tail}
+Suppose
+$K_L\ge |w(0)|+\int_0^L|w'(t)|\,dt$. Then, on
+$(I-P_N)\DD_{\log,L}$,
+\begin{equation}\label{eq:afloor}
+ Q_{0,L}\succeq a_{N,L}I,
+\end{equation}
+where
+\begin{align}
+ a_{N,L}={}&H_N-\gamma-\log(\pi L)
+ -\frac{K_LL}{2\sqrt{N(N+1)}}\notag\\
+ &-\sum_{\log n<L}\frac{\Lambda(n)}{\sqrt n}
+ \norm{T_{\log n}+T_{\log n}^*}.
+ \label{eq:tailformula}
+\end{align}
+\end{proposition}
+\begin{proof}
+Apply \eqref{eq:fractail} to a polynomial tail vector, multiply by
+$(2\pi)^\nu$, square, and differentiate at $\nu=0$. Both sides have the
+same value there. The result is
+$-\Rea\ip f{J_Lf}\ge(H_N-\gamma-\log(\pi L))\norm f^2$.
+The differentiation is legitimate on each polynomial, whose derivative
+contains only polynomials and logarithmic endpoint terms in $L^2$.
+
+Next $S_w=(w(0)I+S_{w'})I_1$. Young's inequality and \eqref{eq:I1tail}
+give
+\[
+ \norm{S_w(I-P_N)}\le\frac{K_LL}{2\sqrt{N(N+1)}}.
+\]
+Since $Q^\gamma_0=-\Rea U^\gamma$ in form sense, this is a lower-bound
+loss. Bound the remaining symmetric delays individually in norm. The
+resulting inequality $Q_{0,L}[t]\ge a_{N,L}\norm t^2$ holds for every
+polynomial tail combination $t$. Both sides are continuous in the form norm of
+$\DD_{\log,L}$ (the left side because $Q_{0,L}$ is closed, the right side
+trivially), and by Lemma~\ref{lem:core} polynomial combinations in
+$(I-P_N)\HH_L$ are a form core for the restriction of $Q_{0,L}$ to
+$(I-P_N)\DD_{\log,L}$; hence the inequality extends to the complete tail form
+domain.
+\end{proof}
+
+For clarity, the delay norm in \eqref{eq:tailformula} is not automatically 2.
+Decompose $x$ into $x=r+kd$, $0<r<d$. On each fiber,
+$T_d+T_d^*$ is the adjacency matrix of a finite path. If
+$q=\lceil L/d\rceil$, its norm is
+\begin{equation}\label{eq:chainnorm}
+ \norm{T_d+T_d^*}=2\cos\frac{\pi}{q+1}
+ \quad(d<L),
+\end{equation}
+with threshold equality using the shorter path, since the exceptional fiber
+has measure zero. In particular the norm is 1 for $d<L\le2d$ and
+$\sqrt2$ for $2d<L\le3d$. The reviewed implementation evaluates the
+cosine formula for every finite path length. Logarithmic endpoints use
+exact integer-power comparisons; unresolved ball comparisons at other
+horizons stop the calculation.
+
+\subsection{A uniform analytic profile remainder}
+
+\begin{lemma}[Profile enclosure]\label{lem:profile}
+For $0<L<3$ and an integer $M\ge1$, let $\widetilde U$ retain the terms
+$g_j$, $j\le M$, in \eqref{eq:Udecomp}, leaving $J_L$ and the arithmetic
+delays exact. Then the bounded difference satisfies
+\begin{equation}\label{eq:eta}
+ \norm{U-\widetilde U}\le\eta_M,
+ \qquad \eta_M=\frac{256(L/3)^{M+1}}{(M+1)(1-L/3)}.
+\end{equation}
+One may use
+\begin{equation}\label{eq:Kbound}
+ K_L=\sum_{j=1}^M|g_j|L^{j-1}
+ +\frac{256}{3}\frac{(L/3)^M}{1-L/3}
+\end{equation}
+in Proposition~\ref{prop:tail}.
+\end{lemma}
+\begin{proof}
+On $|z|=3$, the Euler product for $\sinh z/z$
+\cite[\S4.36]{DLMF} gives $|z/\sinh z|\le3/\sin3<24$.
+Since $e^{3/2}<5$, \eqref{eq:G0} implies
+$|G_0(z)|<5(24+12)<256$. Thus $|g_j|\le256\,3^{-j}$.
+The $L^1$ norm of the omitted convolution kernel is bounded by
+$\sum_{j>M}|g_j|L^j/j\le\eta_M$, proving \eqref{eq:eta}.
+For $w$, the constant term contributes $|g_1|$, while integration of each
+derivative term gives $|g_j|L^{j-1}$. Summing the omitted geometric series
+proves \eqref{eq:Kbound}.
+\end{proof}
+
+The majorant $256$ is deliberately loose: numerically
+$\sup_{|z|=3}|G_0(z)|\approx28.3$ and $\max_j|g_j|3^j\approx15.2$. Since
+$\eta_M$ is already far below every quantity it is compared with
+(Table~\ref{tab:certificate}), nothing is gained by tightening it.
+
+\section{Exact reflection-parity coupling and the Schur test}\label{sec:schur}
+
+Write $P=P_N$, let $P_r$ be its parity-$r$ part ($r=\pm1$), and denote
+the central model form by $\widetilde Q=-(\widetilde U+\widetilde U^*)/2$.
+The polynomial space lies in the operator domain: the fractional derivative
+of a polynomial has only square-integrable logarithmic endpoint terms,
+and all other terms are bounded convolutions or delayed polynomials.
+Thus $Q_0P$ and $\widetilde QP$ are bounded finite-column operators.
+
+Define the retained matrix and two full-output Grams by
+\begin{equation}\label{eq:grams}
+ q=P\widetilde QP,\qquad
+ F=(\widetilde UP)^*(\widetilde UP),\qquad
+ C=(\widetilde UP)^*R_L(\widetilde UP).
+\end{equation}
+In this notation, $F$ and $C$ are finite matrices but the output in their
+definition has \emph{not} been projected onto $P\HH_L$.
+
+\begin{lemma}[Exact central-parity leakage]\label{lem:parity}
+If $q_r,F_r,C_r$ denote the same-parity blocks in \eqref{eq:grams}, then
+\begin{equation}\label{eq:leakage}
+ E_r=\frac12(F_r+rC_r)-q_r^2
+ =\bigl((I-P)\widetilde QP_r\bigr)^*
+   \bigl((I-P)\widetilde QP_r\bigr).
+\end{equation}
+\end{lemma}
+\begin{proof}
+Causal convolution gives $\widetilde U^*=R_L\widetilde UR_L$.
+For $R_Lf=rf$,
+$\widetilde Qf=-(\widetilde Uf+rR_L\widetilde Uf)/2$.
+Taking the full-output squared norm yields
+$\norm{\widetilde Qf}^2=\ip f{(F_r+rC_r)f}/2$.
+Subtract the retained-output norm $\norm{q_rf}^2$ and polarize.
+\end{proof}
+
+\begin{proposition}[Certified finite test]\label{prop:schur}
+Suppose the exact central tail is at least $aI$, $a>m$, and
+$\norm{\widetilde UP}<K$. If both finite inequalities
+\begin{equation}\label{eq:finite-test}
+ (a-m)(q_r-mI)-E_r-\epsilon I\succeq0,
+ \qquad r=\pm1,
+\end{equation}
+hold, where
+\begin{equation}\label{eq:eps}
+ \epsilon=(|a-m|+4K)\eta_M+2\eta_M^2,
+\end{equation}
+then $Q_{0,L}\succeq mI$ on the full form domain.
+\end{proposition}
+\begin{proof}
+The profile difference has norm at most $\eta_M$, as does its symmetric
+part. On each input parity, $\widetilde QP_r$ is an output-parity projection
+of $-\widetilde UP_r$, and hence has norm below $K$. The full squared-output
+Gram and the squared retained matrix each change by at most
+$2K\eta_M+\eta_M^2$. The linear head term changes by at most
+$|a-m|\eta_M$. Therefore \eqref{eq:finite-test} implies
+\[
+ (a-m)(Q_{P,r}-mI)-B_r^*B_r\succeq0,
+ \quad B_r=(I-P)Q_0P_r,
+\]
+for the exact central form.
+
+For an arbitrary input in one sector, write it as $h+t$ with $h$ retained
+and $t$ in the form-domain tail. The quadratic form of $Q_0-mI$ is bounded
+below by
+\[
+ \ip h{(Q_{P,r}-mI)h}
+ +2\Rea\ip{B_rh}t+(a-m)\norm t^2.
+\]
+Completing the square, or minimizing over $t$, leaves
+$\ip h{(Q_{P,r}-mI-(a-m)^{-1}B_r^*B_r)h}\ge0$.
+The two orthogonal reflection sectors exhaust the complex Hilbert space.
+\end{proof}
+
+The use of the exact parity leakage is consequential. Replacing it by
+the full leakage of $\widetilde U$ also bounds the coupling, but charges
+irrelevant output parity against the available tail margin. Equation
+\eqref{eq:leakage} removes that loss without discarding any coupling of
+the central form.
+
+\begin{remark}[A smaller error for future calculations]\label{rem:sharper-error}
+The certificates below keep the conservative error \eqref{eq:eps}.
+One can instead set
+\[
+ \epsilon_r=(|a-m|+2\kappa_r)\eta_M+\eta_M^2,
+ \qquad \kappa_r\ge\norm{(I-P)\widetilde QP_r}.
+\]
+Indeed the omitted-output column operator changes in norm by at most
+$\eta_M$, so its squared Gram changes by at most
+$2\kappa_r\eta_M+\eta_M^2$ directly. There is no need to bound the full
+Gram and the squared head separately. A certified upper bound on
+$\sqrt{\tr E_r}$ supplies $\kappa_r$, since $E_r$ is an exact positive
+semidefinite Gram. Any numerical upper bound used here must include the
+ball uncertainty; this refinement is not used to justify the reported runs.
+\end{remark}
+
+\section{Finite construction and the two certificates}\label{sec:computation}
+
+\subsection{Polynomial and logarithmic output formulas}
+
+Use the unitary coordinate $u=x/L$, so the normalized basis is
+$\sqrt{2n+1}\,p_n(u)$, where
+\begin{equation}\label{eq:legpoly}
+ p_n(u)=\sum_{k=0}^n(-1)^{n+k}\binom nk\binom{n+k}k u^k.
+\end{equation}
+With $\ell_L=\gamma+\log(2\pi L)$, the gamma derivative of a monomial is
+\begin{equation}\label{eq:monomial}
+ U^\gamma u^k=u^k(\log u+\ell_L-H_k)
+ +\sum_{j\ge1}g_jL^j\frac{(j-1)!k!}{(j+k)!}u^{j+k}.
+\end{equation}
+This follows by differentiating the beta integral for $I_\nu u^k$ and
+integrating each term of $S_w$. For the model, the sum stops at $j=M$.
+Every output therefore has the form
+\begin{equation}\label{eq:output}
+ \widetilde Up_n(u)=p_n(u)\log u+q_n(u)
+ +\sum_{\log j<L}\frac{2\Lambda(j)}{\sqrt j}
+   \mathbf1_{u>\delta_j}p_n(u-\delta_j),
+ \quad \delta_j=\frac{\log j}{L}.
+\end{equation}
+The polynomial $q_n$ is supplied by \eqref{eq:monomial}.
+The head, $F$, and $C$ are integrated using exact formulas for moments of
+$1,\log u,(\log u)^2,\log(1-u)$, and $\log u\log(1-u)$, including
+truncated integration intervals. Appendix~\ref{app:moments} lists them.
+There is no quadrature error and no finite-output truncation.
+
+For the reflected delayed products, the nonempty integration window is
+$(\delta_i,1-\delta_j)$, equivalently $\log(ij)<L$.
+At $L=9/5$ and at $L=\log7$ the active generator indices are $2,3,4,5$, and
+the ordered overlap pairs are exactly $(2,2),(2,3),(3,2)$; at $L=\log5$ and
+$L=\log6$ only $(2,2)$ is present, and there is none at $\log4$ and below.
+
+\subsection{Enclosed arithmetic}
+
+The standalone implementation uses Arb real balls \cite{Johansson2017}
+through python-flint \cite{PythonFlint}. Integer and rational coefficients
+in \eqref{eq:G0}, \eqref{eq:legpoly}, and \eqref{eq:monomial} are formed
+exactly. All subsequent conversions, elementary constants, logarithms,
+square roots, moments, polynomial reflections, and matrix operations are
+performed with balls, at 1536-bit working precision for the horizon $9/5$
+and 1792 bits at the logarithmic horizons. Exact symmetries are imposed only
+after checking consistency of the enclosures.
+
+The matrix $F$ encloses the model-output Gram, and its trace is checked
+below $10^7$. Hence $\norm{\widetilde UP}<10000$, allowing $K=10000$
+in \eqref{eq:eps}; the computed traces are below $2400$ at every horizon, and
+the deliberately loose bound avoids making this part of the proof delicate.
+An outward lower value of \eqref{eq:tailformula} and an outward upper value
+of \eqref{eq:eta} are used. An outward upper value of \eqref{eq:eps} is
+then subtracted from each model Schur matrix.
+
+For a symmetric ball matrix $M$, the sign test uses the recurrence
+\begin{align*}
+ d_i&=M_{ii}-\sum_{k<i}\ell_{ik}^2d_k,\\
+ \ell_{ji}&=\frac{M_{ji}-\sum_{k<i}\ell_{jk}\ell_{ik}d_k}{d_i}\quad(j>i).
+\end{align*}
+Every pivot must be strictly positive as a ball. All divisions then have
+denominators excluding zero. Induction encloses the exact $LDL^*$ factors
+of every symmetric matrix contained in $M$; positive pivots imply its
+positivity. Ordinary floating-point eigenvalues never enter this decision.
+
+\subsection{Certified lower bounds}
+
+\begin{theorem}[Computer-assisted matrix inequalities]\label{thm:computation}
+At each horizon $L_j$ of Table~\ref{tab:main}, with $N=128$ and the profile
+degree and working precision of Table~\ref{tab:certificate}, both inequalities
+\eqref{eq:finite-test} hold at $m=m_j$ with $K=10000$, the tail floor
+\eqref{eq:tailformula}, and the error \eqref{eq:eps}. In the even and odd
+sectors separately, \eqref{eq:finite-test} holds at the sector floors of
+Table~\ref{tab:sectors}. In particular $Q_{0,L_j}\succeq m_jI$.
+\end{theorem}
+\begin{proof}[Computer-assisted proof]
+The supplied builder evaluates \eqref{eq:output}, the moment formulas in
+Appendix~\ref{app:moments}, and the bounds of Section~\ref{sec:tail} with
+ball arithmetic. At the two leading horizons the following rationally rounded
+inequalities are checked:
+\begin{align*}
+ a_{128,9/5}&>0.69124708426711,&K_{9/5}&<5.482684,&
+ \eta_{180}&<2.477\times10^{-40},\\
+ a_{128,\log7}&>0.60748624181467,& K_{\log7}&<5.839924,&
+ \eta_{220}&<9.342\times10^{-42};
+\end{align*}
+the arithmetic norm term in \eqref{eq:tailformula} is approximately
+$2.39376738699$ at both, and the tail floors at all seven horizons are listed
+in Table~\ref{tab:certificate}. The sector floors were located as follows: for
+each sector the largest $m$ passing the sector inequality was found by
+bisection with the same ball test, rounded down to three significant figures,
+and the resulting exact rational was tested again; $m_j$ is the smaller of the
+two sector floors and was tested in both sectors. All $64\times64$ ball LDL
+tests pass; the minimum pivots are displayed in Table~\ref{tab:certificate}.
+Applying Proposition~\ref{prop:schur} gives the full-operator conclusion.
+\end{proof}
+
+\input{tables_certificate}
+
+The largest radius among the saved matrix enclosures is below
+$10^{-214}$ at every horizon (Table~\ref{tab:certificate}). This
+finite-arithmetic uncertainty is propagated through the sign tests; it is
+separate from the analytic remainder. The matrix archive stores dyadic
+midpoint/radius pairs and checks that every reconstructed ball contains the
+original; reconstructing a radius may enlarge it outward. A separate process
+loaded each archive and repeated the LDL tests successfully.
+
+\subsection{Certified upper bounds}
+
+\begin{proposition}[Upper bounds]\label{prop:upper}
+For each horizon and each reflection sector, $\lambda_{\min}$ of the sector
+form is at most the upper bound listed in Table~\ref{tab:sectors}; the even
+values are the $\mu_j$ of Table~\ref{tab:main}. At every horizon the even
+upper bound is smaller than the odd floor, so the bottom of the spectrum of
+$Q_{0,L_j}$ lies in the even sector.
+\end{proposition}
+\begin{proof}[Computer-assisted proof]
+The retained polynomials lie in the operator domain and
+$\norm{Q_{0,L}-\widetilde Q}\le\eta_M$ (Lemma~\ref{lem:profile}), so for
+every vector $v$ in the retained space of parity $r$,
+\[
+ \lambda_{\min}\bigl(Q_{0,L}|_{\text{parity }r}\bigr)\le
+ \frac{\ip v{q_rv}}{\ip vv}+\eta_M .
+\]
+For each sector, a floating-point eigenvector of the ball midpoints of $q_r$
+for its smallest eigenvalue is rounded to a rational vector $v$ with forty
+digits per coordinate, and the right side is evaluated with balls, using the
+saved enclosure of $q_r$ and the outward value of $\eta_M$; its upper end,
+rounded up, is the tabulated bound. The last assertion is the comparison of
+two exact numbers in each row of Table~\ref{tab:sectors}.
+\end{proof}
+
+The vectors $v$ are diagnostics; the certified content is the ball evaluation.
+Table~\ref{tab:spectra} lists the lowest head eigenvalues in each sector at
+the two leading horizons. Two regularities are visible at every horizon: the
+spectrum alternates between the sectors, the odd ground state lying between
+the first two even eigenvalues, and consecutive same-parity eigenvalues are
+separated by factors of about $10^{5.5}$ to $10^{6}$ at the deeper horizons.
+These are floating-point observations; the certified statements are the
+enclosures.
+
+\begin{proof}[Proof of Theorem~\ref{thm:main}]
+Theorem~\ref{thm:computation} and Proposition~\ref{prop:upper} give
+\eqref{eq:mainenclosure} at $L=L_j$. Zero extension into a larger interval
+preserves the central form: the Fourier representation and its
+translation-invariant kernels, including the delay correlations, do not depend
+on the chosen containing horizon. Thus the lower bound holds at every shorter
+horizon, which is \eqref{eq:maincentral}.
+
+Direct ball evaluation of \eqref{eq:CL} gives $C_{L_j}<C_j$ for the integers
+$C_j$ of Table~\ref{tab:main}; at the two leading horizons
+$C_{9/5}<10.298615<11$ and $C_{\log7}<13.541169<14$. The exact rational
+inequalities $m_j-C_jh_j^2/3\ge d_j$ are verified for every row by the
+supplied analyzer; for instance
+\begin{align*}
+ 3.38\times10^{-23}-\tfrac{11}{3}(2\times10^{-12})^2
+ &>1.91\times10^{-23}\ge10^{-23},\\
+ 1.37\times10^{-28}-\tfrac{14}{3}(4\times10^{-15})^2
+ &>6.2\times10^{-29}\ge6\times10^{-29}.
+\end{align*}
+Proposition~\ref{prop:continuation} then proves \eqref{eq:maintransfer} at
+the outer horizon $L_j$. Causality makes every shorter transfer a compression,
+so it has no larger norm. Self-adjointness of $H=VR_L$ and
+$\norm H=\norm V$ give \eqref{eq:mainreflection}.
+\end{proof}
+
+\subsection{What the larger head resolved}
+
+The preceding 96-mode experiment at horizon $9/5$ did not pass the
+sufficient Schur test. To explain the improvement, Table~\ref{tab:diagnostic}
+compares the scalar tail floor with the diagnostic largest eigenvalue of
+$q_r^{-1/2}E_rq_r^{-1/2}$. The latter measures the tail floor required by
+the model test at level zero. It was computed using a high-precision
+congruence before conversion to floating point and is a diagnostic only.
+
+\begin{table}[ht]
+\centering
+\caption{Head/tail comparison at $L=9/5$. Only the final column represents
+the complete certified sign test.}
+\label{tab:diagnostic}
+\begin{tabular}{@{}rrrrl@{}}
+\toprule
+$N$ & Tail floor & Required, even & Required, odd & Complete test\\
+\midrule
+96 & 0.39212903 & 0.55845 & 0.54762 & Not certified\\
+128 & 0.69124708 & 0.49054476 & 0.47957150 & Pass at $m=3.38\times10^{-23}$\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Thus increasing the retained space improved both the tail floor and the
+remaining coupling. Failure of the earlier sufficient inequality was not
+evidence of a negative direction of the full form. At $N=128$ the even head
+ground state is $4.14\times10^{-23}$, so the certified floor
+$3.38\times10^{-23}$ is within a factor $1.23$ of the best that any test on
+this head could give. The old matrix construction used a separate aggregate
+arithmetic budget restricted to at most 96 modes; that budget was not
+extended here, and the new direct-ball calculation is independent of it. As a
+normalization diagnostic, all shared entries of the new head and full-output
+Grams agree with the earlier 96-mode point matrices to within
+$3\times10^{-217}$ after conversion of the causal/Hankel signs. Those old
+entries are not inputs to the new positivity proof.
+
+At $\log7$ the comparison is tighter: the even and odd relative-coupling
+diagnostics are $0.5948$ and $0.5899$ against the available floor
+$a_{128,\log7}\approx0.6075$, ratios of $0.979$ and $0.971$. The 128-mode
+calculation therefore succeeds at this endpoint, but Table~\ref{tab:certificate}
+shows the required floor rising and the available floor falling steadily
+along the profile; the two curves cross soon after $\log7$
+(Section~\ref{sec:limits}).
+
+\subsection{Independent reconstruction and Fourier-side checks}
+
+A second implementation, \path{independent_arb.py}, was begun from the
+printed equations before the supplied numerical source became available.
+It normalizes the polynomial rows before assembly and computes reflected
+gamma--delay integrals over $(0,1-\delta)$, rather than using the supplied
+builder's tail moments over $(\delta,1)$. It reproduces the full-operator
+tests and their displayed pivots at all seven horizons; at $9/5$ and $\log7$
+its matrices are archived, all entries of the retained head and both
+full-output Grams have overlapping enclosures between implementations, and
+replaying the independently saved Schur matrices also passes.
+
+A third check, performed during the review of version 0.2 and included in the
+repository, evaluates the matrices from the Fourier-side definition
+\eqref{eq:weil} without using the formulas of Section~\ref{sec:computation}:
+the central form of a smooth even test at $L=9/5$ agrees with
+$\sum_\rho|\widehat f_c(\gamma_\rho)|^2$ over the first hundred zeta zeros to
+a relative $6\times10^{-10}$, fixing the normalization; the diagonal head
+entries $Q_{0,L}[\phi_n]$ for $n\le20$, computed with the exact logarithmic
+part of Remark~\ref{rem:sharp} and quadrature for the rest, agree with the
+Arb head to $10^{-11}$; and full-output Gram entries computed by direct
+quadrature of the outputs agree with the archive to more than twenty digits.
+These checks share no code with the two implementations. All three routes
+use the same analytic reduction; none constitutes independent human review or
+formal verification.
+
+\section{Storage, scope, and the next depth problem}\label{sec:storage}
+
+\begin{corollary}[Cumulative storage]\label{cor:storage}
+Fix a row of Table~\ref{tab:main}. For any spatial split of $(0,L)$ with
+$L\le L_j$, write
+\[
+ V_{\omega,L}=\begin{pmatrix}X&0\\Y&Z\end{pmatrix}.
+\]
+For $0<\omega\le h_j$,
+\begin{equation}\label{eq:storage}
+ I-X^*X-Y^*(I-ZZ^*)^{-1}Y
+ \succeq(1-e^{-2d_j\omega})I.
+\end{equation}
+\end{corollary}
+\begin{proof}
+Let $\rho=e^{-d_j\omega}$. Theorem~\ref{thm:main} gives
+$I-V^*V\succeq(1-\rho^2)I$, and $\norm Z\le\rho<1$.
+The Schur complement of the lower-right block $I-Z^*Z$ is
+\[
+ I-X^*X-Y^*Y-Y^*Z(I-Z^*Z)^{-1}Z^*Y
+ =I-X^*X-Y^*(I-ZZ^*)^{-1}Y.
+\]
+For a fixed first-block vector, minimizing the defect quadratic form over
+the second-block vector leaves a value at least
+$(1-\rho^2)$ times the first-block norm squared. This proves
+\eqref{eq:storage}.
+\end{proof}
+
+In particular, the split $\log7=\log5+\log(7/5)$ includes the first
+mixed-prime region. The corollary is obtained by certifying the whole larger
+operator first. It does not show that positivity of a previous slab alone
+forces the next storage update to be positive; that distinction separates
+the present finite-depth results from an induction in depth. The algebraic
+identities that such an induction would have to carry are recorded in
+Appendix~\ref{app:recursion}; they specify bookkeeping, not a mechanism.
+
+\subsection{A diagonal formulation of the all-depth target}
+
+\begin{proposition}\label{prop:diagonal}
+Suppose there exist $L_j\to\infty$ and $\omega_j\downarrow0$ such that
+$\norm{V_{\omega_j,L_j}}\le1$ for every $j$. Then the central Weil form
+is nonnegative on every compactly supported smooth test function.
+By Weil's criterion, such a sequence would imply RH.
+\end{proposition}
+\begin{proof}
+Fix a finite horizon $L$ and a smooth test $f$ compactly supported inside it.
+For all sufficiently large $j$, causal compression gives
+$\norm{V_{\omega_j,L}f}\le\norm f$.
+For such $f$ the map $s\mapsto\norm{V_{s,L}f}^2$ is differentiable at $s=0$
+with derivative $-2Q_{0,L}[f]$: in the weighted realization of the proof of
+Proposition~\ref{prop:continuation}, $\widehat{M_\eta f}$ is rapidly
+decreasing while $\partial_sK_s(\eta+i\tau)$ grows only logarithmically, so
+dominated convergence applies to the difference quotient on the Laplace line,
+and the identification of the resulting pairing with $Q_{0,L}[f]$ is the case
+$s=0$ of the form identity proved there. Hence
+\[
+ \lim_{s\downarrow0}\frac{\norm f^2-\norm{V_{s,L}f}^2}{2s}
+ =Q_{0,L}[f].
+\]
+The quotients along $s=\omega_j$ are nonnegative, so their limit is
+nonnegative. The horizon and compact test were arbitrary; the final
+implication is the classical Weil criterion
+\cite{ConnesConsani2020,Conrey2019}.
+\end{proof}
+
+The proposition requires neither a depth-independent coercivity margin nor
+a fixed positive shift interval. Nevertheless, constructing the entire
+sequence remains the missing all-depth statement; the seven horizons certified
+here are not such a sequence, and Table~\ref{tab:main} shows the shifts
+$\omega_j$ that the present method can certify collapsing super-exponentially
+with the horizon.
+
+\subsection{Limitations: the scale of the next horizons}\label{sec:limits}
+
+The scalar tail floor \eqref{eq:tailformula} is
+\[
+ a_{N,L}\approx\log N-\log(\pi L)-\Sigma_L,\qquad
+ \Sigma_L=\sum_{\log n<L}\frac{\Lambda(n)}{\sqrt n}\norm{T_{\log n}+T_{\log n}^*},
+\]
+up to the small smooth-profile term. It pays separately for every arithmetic
+delay norm, and $\Sigma_L$ grows like a multiple of $e^{L/2}$ by the prime
+number theorem. The floor the finite test needs is the relative-coupling
+diagnostic of Table~\ref{tab:certificate}, which rises from $0.17$ at $\log2$
+to $0.59$ at $\log7$ while $a_{128,L}$ falls from $4.07$ to $0.61$. At the
+next prime-active horizon $\log8$, where the generator acquires the delay
+$\log7$ and the endpoint delay $\log8$ vanishes, $\Sigma_{\log8}\approx3.13$
+and the tail floor at $N=128$ is negative ($\approx-0.20$); it is $0.52$ at
+$N=256$ and $1.22$ at $N=512$. Keeping the floor near $0.6$ needs roughly
+$N\approx310$ at $\log8$, $950$ at $\log11$, $1900$ at $\log13$, $4400$ at
+$\log16$, and $27{,}000$ as $L\to3$, where the radius of Lemma~\ref{lem:profile}
+also runs out, while the certified margin itself shrinks by about
+$10^{-34}$ per unit of horizon and the model error must be kept below it.
+Matrix assembly scales like $N(N+M)^2$ ball products. Thus the method as it
+stands can reach perhaps $\log13$ to $\log16$ with effort and stops there.
+This is the same doubly exponential threshold that Zhu \cite{Zhu2026} derives
+for one-stroke certificates, seen from the tail side.
+
+The small-shift intervals in Theorem~\ref{thm:main} are consequences of the
+stated coercivity floors and the quadratic perturbation estimate; they are
+not asserted to be sharp, and they do not connect to the interior shift
+ranges studied in the companion manuscripts of this repository on total
+horizons at most $\log2$ and $\log3$.
+
+For horizons beyond the radius of the present origin-centered profile,
+one can seek validated piecewise polynomial approximations to $w$ on the
+positive real axis, retaining the logarithmic kernel exactly. The complex
+poles of $G_0$ lie at nonzero integer multiples of $i\pi$, whereas $w$ is
+smooth at every nonnegative real argument. Taylor expansions about positive
+centers or Chebyshev pieces can therefore cover any fixed finite interval,
+provided their errors and derivative variations are enclosed. This removes
+the specific $L<3$ profile restriction in principle; it does not prove
+coercivity at larger depth or bound the cost of doing so. The one idea that
+could change the scaling is a structured tail bound that keeps the
+prime--gamma cancellation instead of paying $\Sigma_L$ in full, for instance
+on frequency bands; whether that is easier than the original problem is
+exactly the question, and nothing in the present data decides it.
+
+\appendix
+\section{Moment formulas and assembly conventions}\label{app:moments}
+
+The code constructs all polynomial coefficients and integrates them against
+the moments below. For an integer $k\ge0$, put $s=k+1$,
+$H_s=\sum_{j=1}^s1/j$, and $H_s^{(2)}=\sum_{j=1}^s1/j^2$.
+The full-interval formulas are
+\begin{align}
+ \int_0^1u^k\,du&=\frac1s,&
+ \int_0^1u^k\log u\,du&=-\frac1{s^2},\notag\\
+ \int_0^1u^k(\log u)^2\,du&=\frac2{s^3},&
+ \int_0^1u^k\log(1-u)\,du&=-\frac{H_s}{s},\label{eq:moments}\\
+ \int_0^1u^k\log u\log(1-u)\,du
+ &=\frac{H_s}{s^2}-\frac{\pi^2/6-H_s^{(2)}}s.\notag
+\end{align}
+They follow by differentiating the beta integral; the first three also
+follow directly by differentiating $1/s$.
+For $0<\delta<1$,
+\begin{align}
+ \int_\delta^1u^k\,du&=\frac{1-\delta^s}s,\notag\\
+ \int_\delta^1u^k\log u\,du
+ &=-\frac{1-\delta^s}{s^2}-\frac{\delta^s\log\delta}s,\label{eq:tailmoments}\\
+ \int_\delta^1u^k\log(1-u)\,du
+ &=\frac{(1-\delta^s)\log(1-\delta)-H_s+\sum_{j=1}^s\delta^j/j}{s}.
+ \notag
+\end{align}
+Integration by parts gives the last formula. Products of delayed
+polynomials use
+$\int_\delta^b u^k\,du=(b^s-\delta^s)/s$ on the appropriate nonempty
+window. For reflection, expand $(1-u)^k$ by the exact binomial theorem.
+
+To recover the gamma polynomial $q_n$ in \eqref{eq:output}, multiply each
+coefficient of $u^k$ in \eqref{eq:legpoly} by $\ell_L-H_k$, and add
+its contributions $g_jL^j(j-1)!k!/(j+k)!$ at degree $k+j$.
+The beta factor is computed rationally with the recurrence
+$\beta_{1,k}=1/(k+1)$,
+$\beta_{j,k}=\beta_{j-1,k}(j-1)/(j+k)$.
+The series $g_j$ is obtained by reciprocal power-series inversion of
+$\sinh t/t$, multiplication by $e^{t/2}$, and subtraction of
+$4t\cosh(t/2)$, all over the rationals.
+
+The unit-coordinate integrals acquire factors $\sqrt{(2i+1)(2j+1)}$ from
+normalization. The saved matrices use the causal derivative $U$.
+If instead $H_1=UR_L$ is used, the two full-output Grams acquire the
+entry sign $(-1)^{i+j}$; this sign is 1 within either same-parity block.
+The central head and central leakage are unchanged.
+
+\section{Algebraic identities for a possible depth recursion}\label{app:recursion}
+
+The following identities are elementary and are recorded only because an
+induction in arithmetic depth would have to carry them. Nothing in
+Sections~\ref{sec:computation}--\ref{sec:storage} depends on them.
+
+\paragraph{An exact storage update with memory.}
+Fix a positive shift and suppose $D_X=I-X^*X\succ0$ and $\norm Z<1$,
+with bounded positive inverses. Put
+\[
+ W=I-Z^*Z,\qquad
+ \mathcal C=(I-ZZ^*)^{-1/2}YD_X^{-1/2},\qquad
+ S=D_X^{1/2}(I-\mathcal C^*\mathcal C)D_X^{1/2}.
+\]
+For $V=\left(\begin{smallmatrix}X&0\\Y&Z\end{smallmatrix}\right)$ one has
+the exact factorization
+\begin{equation}\label{eq:storage-factor}
+ I-V^*V=
+ \begin{pmatrix}I&-Y^*ZW^{-1}\\0&I\end{pmatrix}
+ \begin{pmatrix}S&0\\0&W\end{pmatrix}
+ \begin{pmatrix}I&0\\-W^{-1}Z^*Y&I\end{pmatrix},
+\end{equation}
+verified by multiplication using $I+Z(I-Z^*Z)^{-1}Z^*=(I-ZZ^*)^{-1}$.
+Thus contraction is equivalent to $\norm{\mathcal C}\le1$; if
+$\norm{\mathcal C}<1$ the two triangular factors and $S$ provide the complete
+inverse defect for the next append operation, while if only equality is
+certified the defect may be singular and an inverse-based recursion cannot
+automatically continue. A scalar lower bound on $D_X$ discards orientation:
+for $Z=0$ and $Y=(c,0)$, the defects $\operatorname{diag}(\varepsilon,1)$ and
+$\operatorname{diag}(1,\varepsilon)$ have the same least eigenvalue, but their
+updates are positive precisely when $c^2\le\varepsilon$ and $c^2\le1$,
+respectively; $\varepsilon=1/4$, $c^2=1/2$ gives a failing and a passing
+update with identical old scalar margins.
+
+\paragraph{Nested Schur elimination for a structured tail.}
+Split a form into an old head, a finite buffer, and the remaining tail,
+\[
+ Q_0-mI=\begin{pmatrix}
+ A&B^*&C^*\\B&D&E^*\\C&E&F
+ \end{pmatrix},\qquad F\succeq\alpha I,\quad\alpha>0.
+\]
+Replacing $F$ by $\alpha I$ and eliminating the tail gives
+$\widehat A=A-C^*C/\alpha$, $\widehat B=B-E^*C/\alpha$,
+$\widehat D=D-E^*E/\alpha$, and the two tests
+\begin{equation}\label{eq:nested-schur}
+ \widehat D\succ0,\qquad
+ \widehat A-\widehat B^*\widehat D^{-1}\widehat B\succeq0
+\end{equation}
+are sufficient for $Q_0\succeq mI$, by two completions of the square. The
+cross-Gram $C^*E$ must be retained; full-output parity Grams for the enlarged
+retained space supply $C^*C$, $C^*E$ and $E^*E$. With the same enlarged space
+and scalar far-tail floor this is a reordering of the existing test, not a
+stronger theorem; it becomes one only with a proved structured lower bound
+for $F$.
+
+\section{Reproducibility and review map}\label{app:reproduce}
+
+The repository folder \path{papers/weil-depth} contains the LaTeX source,
+bibliography, compiled manuscript, continuation guide, and the full numerical
+supplement under \path{numerics/}; older drafts and the reviews that produced
+each version are kept under \path{archive/}. The core numerical files are:
+\begin{itemize}
+\item \path{certify_arb.py}: exact-rational profiles, full-output ball
+  construction, analytic tail bounds, and ball LDL;
+\item \path{enclose_certificate.py}: sector-wise floor bisection, ball
+  Rayleigh upper bounds, and exact continuation constants, producing
+  \path{enclosure.json} in each output folder and the summary table;
+\item \path{analyze_certificate.py}: hash-bound replay, rational continuation
+  checks and the diagnostic relative coupling;
+\item \path{make_tables.py}: generates the tables of this paper from the
+  saved records, so that no number in Tables~\ref{tab:main}--\ref{tab:spectra}
+  is transcribed by hand;
+\item \path{output/<horizon>_N128/}: for each of the seven horizons, the
+  complete pivot lists with the archive hash and a content hash of the matrices
+  (\path{central_certificate.json}), the enclosure record, and the continuation
+  analysis. The saved ball matrices themselves (\path{central_matrices.json.gz},
+  about 13~MB per horizon) are deterministic output of the builder and are
+  distributed separately rather than versioned; a rebuild reproduces the content
+  hash exactly, as was checked across three Python versions;
+\item \path{independent_arb.py}: the separately written construction from
+  the printed formulas, with its pivot records at all seven horizons and saved
+  matrices at $9/5$ and $\log7$;
+\item \path{review_checks.py} and \path{review_claude/}: moment,
+  arithmetic-generator, parity and failure controls, and the Fourier-side
+  checks described in Section~\ref{sec:computation}.
+\end{itemize}
+
+The certificates were produced with Python 3.10--3.12, python-flint 0.9.0 and
+FLINT 3.6.0; the two original horizons were rebuilt independently under Python
+3.12.14 (original), 3.10.0 (version 0.2 review) and 3.11.15 (version 0.3
+review) with identical pivots. NumPy is used only for diagnostic eigenvalues
+and mpmath only for the candidate ground-state vectors and the review checks.
+Run from the numerical supplement directory, with assertions enabled:
+\begin{verbatim}
+python certify_arb.py --N 128 --M 220 --bits 1792 \
+  --log-horizon 7 --floor 1.37e-28 --output output/log7_rebuilt
+python enclose_certificate.py output/log7_rebuilt
+python analyze_certificate.py output/log7_rebuilt \
+  --shift 4e-15 --decay 6e-29 --generator-bound 14
+python certify_arb.py --reuse --bits 1536 --floor 3.38e-23 \
+  --output output/length_1p8_N128
+python enclose_certificate.py output/log2_N128 output/log3_N128 \
+  output/log4_N128 output/log5_N128 output/log6_N128 \
+  output/length_1p8_N128 output/log7_N128 --summary output
+python make_tables.py
+\end{verbatim}
+A full rebuild checks the construction as well as the final sign tests;
+replay checks the signs from the saved construction enclosures. Do not run
+Python with \texttt{-O}. Build times are machine-dependent; each 128-mode
+construction took between 30 and 90 seconds, and each enclosure about one
+minute. The reviewed commands reject optimized Python mode and return a
+nonzero exit status if certification fails.
+
+The largest mathematical review priorities are the normalization in
+\eqref{eq:weil} and \eqref{eq:Ageneral}, the weighted-line energy argument of
+Proposition~\ref{prop:continuation}, the operator-level fractional tail
+estimate, and the full-output parity identity. The numerical review should
+independently check the moment assembly, outward ball serialization, and the
+subtraction of \eqref{eq:eps} before each LDL test. No external certificate is
+an input to any proof here.
+
+\section*{Acknowledgment of computational assistance}
+This draft and its numerical implementation were prepared with substantial
+assistance from language models, under the author's direction: OpenAI models
+drafted versions 0.1 and 0.2 and the accompanying review; Anthropic's Claude
+performed the independent verification of version 0.2 (Fourier-side checks,
+rebuilds, enclosures) and drafted the version 0.3 revisions. The record
+distinguishes analytic proofs, validated arithmetic, and exploratory
+diagnostics. The manuscript is being circulated for mathematical and
+computational review; no result has been human-verified end to end or
+formally verified.
+
+\bibliographystyle{plain}
+\bibliography{finite_horizon_weil}
+\end{document}

@@ -94,3 +94,5 @@ and the infinite tail remain necessary regardless of precision. LDL pivots are n
 eigenvalue lower bounds. Head eigenvalue lists and relative-coupling values are
 floating-point diagnostics. Independent code agreement is not an independent proof of the
 analytic tail estimate.
+
+[Storage-depth paper (v0.3, working draft)](../../storage-depth/README.md) · [All manuscripts](../../README.md)

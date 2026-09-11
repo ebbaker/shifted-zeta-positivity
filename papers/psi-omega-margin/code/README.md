@@ -32,3 +32,5 @@ python3 c8_prime_side_chi.py  # ~1–2 min (sieves Λ(n)χ(n) to e^15)
 
 The scripts are the ones used for the 27 August 2026 recomputation. They supersede an earlier set
 (`w1`–`w4`, first-round derivation and checks) whose results they reproduce and extend.
+
+[Storage-depth paper (v0.3, working draft)](../../storage-depth/README.md) · [All manuscripts](../../README.md)

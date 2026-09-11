@@ -88,3 +88,5 @@ with per-statement verification status is `../../blueprint/first-slab/statements
 ## Contact
 
 Edward Baker — edwardbaker86@gmail.com
+
+[Storage-depth paper (v0.3, working draft)](../storage-depth/README.md) · [All manuscripts](../README.md)

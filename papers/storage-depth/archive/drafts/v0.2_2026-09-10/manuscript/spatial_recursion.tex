@@ -1,0 +1,249 @@
+\section{A partition-based second step}
+\label{sec:partition-step}
+
+The new construction keeps the first spatial head and appends another
+interval of length \(h=\tfrac14\log(8/7)\). The resulting partition has lengths
+\[
+ (\ell_0,\ell_1,\ell_2)=(\log7,h,h),\qquad
+ L_2=\tfrac12\log56=2.0126758453675746166785\ldots,
+\]
+with retained dimensions \((256,32,32)\). Thus the old verification space at
+this step consists of the preceding 288 spatial modes. It is not replaced
+by a new global polynomial space.
+
+\subsection{Complete outputs and inherited data}
+On each output interval, the truncated gamma output of every retained input
+has the form
+\[
+ p(v)+\sum_c p_c(v)\log|v-c|,\qquad 0<v<1,
+\]
+where every logarithmic centre lies outside the open interval. Arithmetic
+outputs are polynomials restricted to their exact translated windows.
+The endpoints are rational combinations of prime logarithms; their equality
+is decided symbolically before interval division. At this horizon the
+generator active set is \(\{2,3,4,5,7\}\).
+
+Products of these outputs are integrated without an output projection.
+Polynomial--logarithm moments follow by polynomial division and integration
+by parts. For two distinct centres, the remaining integral
+\[
+ \int_0^1\frac{\log|v-d|}{v-c}\,dv
+\]
+has the primitive
+\[
+ \log|d-c|\log|v-c|
+ -\Rea\operatorname{Li}_2\!\left(\frac{v-c}{d-c}\right).
+\]
+Endpoint limits are taken before evaluating this expression, and divergent
+terms are omitted only when their coefficients vanish identically.
+For \(c=d\notin[0,1]\), the primitive is
+\(\tfrac12\log^2|v-c|\). The same-endpoint square-log cases follow directly
+from integration by parts. All sign computations use Arb enclosures;
+quadrature is used only for consistency checks. The expanded checks cover
+52 endpoint and exterior-log moment values, including interval-valued centres
+near $-1$ and $2$, where one endpoint logarithm encloses zero. Squares are
+evaluated by multiplication rather than a general power operation. The new
+LDL validator also checks finiteness before recording a failed pivot.
+Three-interval squared-output Gram checks agree with independent quadrature
+to better than $7\times10^{-77}$ on the selected small examples. These checks
+support implementation consistency, not a separate audit of the full build.
+
+The first-step head and its old/old output Gram blocks are inherited from
+the hash-verified R7 archive. The new cross blocks and new output interval
+are reconstructed. This is an incremental construction, not an independent
+reconstruction of the entire first step. The inherited exterior-log series
+and the new exact-log representation need not give identical model outputs,
+so their mismatch is included in the new Gram error.
+
+More precisely, let \(d_s\) bound the seed output error, let
+\(t_s\) be the trace of its full model Gram, and let \(\eta\) bound the
+new exact-profile model error. Each of the two inherited output restrictions
+differs from the new model by at most \(d_s+\eta\). Therefore the sum of the
+inherited Gram block errors is bounded by
+\[
+ e_s=2\{2(d_s+\eta)\sqrt{t_s}+(d_s+\eta)^2\}.
+\]
+Writing \(\widetilde G\) for the assembled full Gram and \(n=320\), a valid
+bound for the norm of the new model output is
+\[
+ b_{\rm out}=\sqrt{\operatorname{tr}\widetilde G+n e_s}.
+\]
+Consequently the full Gram and leakage errors are at most
+\[
+ e_G=e_s+2\eta b_{\rm out}+\eta^2,\qquad
+ e_E=e_G+2\eta\|\widetilde H\|_F+\eta^2.
+\]
+The same bounds cover a restriction to any union of output intervals.
+These inequalities also explain why blindly combining differently
+approximated inherited and new blocks would be insufficient.
+
+\subsection{The multi-interval complement}
+Let \(K_i\) omit the first \(N_i\) local Legendre modes. The diagonal gamma
+tail bound is the corrected \(g_{\ell_i,N_i}\). For two intervals separated
+by a positive gap \(d_{ij}\), the singular gamma kernel has the
+Hilbert--Schmidt bound
+\[
+ b_{ij}^{\rm sing}\le
+ \frac12\sqrt{\log
+ \frac{(d_{ij}+\ell_i)(d_{ij}+\ell_j)}
+ {d_{ij}(d_{ij}+\ell_i+\ell_j)}}.
+\]
+For adjacent intervals use \(\pi/2\); the smaller bound may be used when
+both apply. Integration by parts on either tail gives
+\[
+ b_{ij}^{\rm sm}\le
+ \frac{\sqrt{\ell_i\ell_j}}4
+ \min\left\{\frac{\ell_i}{\sqrt{N_i(N_i+1)}},
+             \frac{\ell_j}{\sqrt{N_j(N_j+1)}}\right\}
+ \sup_{[0,L_2]}|w_0'|.
+\]
+Form the symmetric comparison matrix with diagonal \(g_{\ell_i,N_i}\)
+and off-diagonal entries \(-b_{ij}^{\rm sing}-b_{ij}^{\rm sm}\).
+Subtract a newly verified continuum arithmetic Schur bound \(\rho_2 I\).
+A finite interval LDL test then bounds its least eigenvalue from below,
+which bounds the full three-interval complement. At the recorded parameters
+this lower bound is greater than \(0.4109027593994060\).
+
+The complete-output Schur test, the old-energy comparison, and the enlarged
+graph residual test use the same reductions as for the first step.
+For the latter two tests the old output is the union of the first two
+intervals. A rational Galerkin proposal is extended by zero on their omitted
+modes. Every translated old source window is tested for overlap; the
+arithmetic cross bound uses the disjoint-window improvement only when this
+test passes, and otherwise uses the sum of the delay norms.
+
+\subsection{The resulting certificate boundary}
+\label{sec:second-result}
+The new rational continuation has 288 old input columns and 32 new output
+rows, rounded to 80 decimal digits and then treated as exact rationals.
+It is extended by zero on the two old polynomial complements. The new
+complete-output archive has
+\[
+ \eta<5.494\times10^{-56},\qquad
+ e_G<2.376\times10^{-53},\qquad e_E<3.202\times10^{-53}.
+\]
+Its corrected construction took approximately 764 seconds in the recorded
+environment. The compressed archive occupies 297,151,691 bytes and is
+stored outside Git.
+
+\begin{proposition}[Second-step old-energy comparison]
+Let \(A_2=Q_{0,L_q}\), let \(F_2=Q^\gamma_{0,h}\), and let \(B_2\) be their
+complete spatial cross block at \(L_2\). For the new rational \(J_2\), put
+\[
+ H_{J_2}=A_2+B_2^*J_2+J_2^*B_2+J_2^*F_2J_2.
+\]
+In the working normalization, on the full old form domain,
+\[
+ H_{J_2}\succeq10^{-8}A_2.
+\]
+\end{proposition}
+\begin{proof}[Reduction and numerical premises]
+Use the comparison reduction of Proposition~\ref{prop:old-energy-comparison}
+with old head dimension 288 and old output equal to the union of the first
+two intervals. The old-tail lower bound for
+\(H_{J_2}-10^{-8}A_2\) exceeds \(0.8299288982523047\).
+The guarded error is below \(9.270\times10^{-51}\).
+All 288 pivots pass at both 2,048 and 4,096 bits, with minimum pivot lower
+bound approximately \(2.2736098\times10^{-5}\). As before, that pivot
+diagnostic is not a spectral floor. The same sufficient test at
+\(\mu=10^{-7}\) fails; this does not disprove that stronger inequality.
+\end{proof}
+
+The remaining residual premise has not been certified. At \(\theta=0.9\),
+\(0.95\), and \(0.99\), the scalar-complement graph tests fail at zero-based
+pivots 55, 155, and 174, respectively. The absolute sufficient test requesting
+\(Q_{0,L_2}\succeq10^{-36}I\) fails at pivot 182. These outcomes are reproduced
+at 2,048 and 4,096 bits; they are not numerical witnesses against either the
+operator or the desired inequalities.
+
+The separate output Grams allow a further analytic refinement. Let
+\(\Gamma_\theta\) be the three-by-three comparison matrix for the enlarged
+graph form, including its arithmetic bound. For any positive rational
+weights \(w_i\), define certified lower bounds
+\[
+ \beta_i\le(\Gamma_\theta)_{ii}
+       -\sum_{j\ne i}|(\Gamma_\theta)_{ij}|\,\frac{w_j}{w_i}.
+\]
+The inequality \(2ab\le(w_j/w_i)a^2+(w_i/w_j)b^2\) proves a separate
+tail floor \(\beta_i\) on each interval. Assume all \(\beta_i>0\).
+Let \(\widetilde E_i\) be the model leakage Gram into interval \(i\)'s
+complement before the graph change, and let \(T\) be the finite graph map.
+Put \(D_i=\operatorname{diag}(I_o,\lambda I_n)\) for either old interval
+and \(D_2=\operatorname{diag}(\lambda I_o,I_n)\) for the new one,
+where \(\lambda=\theta^{-1/2}\).
+The sufficient finite test becomes
+\[
+ \widetilde M_\theta-
+ \sum_i\frac{D_iT^*\widetilde E_iTD_i}{\beta_i}
+ -
+ \left(2\lambda\eta\|T\|_F^2+
+       e_E\sum_i\frac{\|TD_i\|_F^2}{\beta_i}\right)I
+ \succ0.
+\]
+This follows by eliminating the separately bounded tails. It retains more
+of the interval information than a single common floor.
+
+Ten proposed weight triples were tested at each of \(\theta=0.99\) and
+\(0.9999\), at 1,024 bits. None passed.
+\begin{samepage}
+\noindent For example, at \(\theta=0.9999\)
+the exact rational triple
+\[
+ (1,\;0.6335965029937086,\;0.3895577505597481)
+\]
+gives tail floors greater than \(0.5318716111\), \(0.2621540228\), and
+\(0.0963354365\), respectively, with error budget below
+\(1.654\times10^{-49}\). The guarded pivot at index 286 is negative,
+approximately \(-0.9413506220\). A separate 2,048-bit replay uses this
+same triple. This finite search neither excludes other weights nor
+proves failure of the residual inequality.
+\end{samepage}
+
+Thus the first-step induction premises are complete, while at the second
+step only the old-energy premise has been established. No new full-operator
+floor or positive-shift interval is claimed at \(L_2\). The largest certified
+horizon in the current package remains the separate \(1.98\) result R6.
+The next concrete experiment is to enlarge the verification spaces on the
+short slabs and strengthen their joint complement estimate, reusing the
+stored complete outputs wherever possible. Pivot locations are diagnostics
+for that experiment, not a localization theorem for an obstruction.
+
+\subsection{What is needed beyond the radius-three implementation}
+The output and tail routines permit general finite partitions. The current
+driver appends the second quarter slab using one gamma Taylor profile about
+zero, and therefore enforces \(L<3\). This is a numerical
+representation restriction. It is not an all-depth induction theorem.
+A local representation provides a concrete way to remove that restriction.
+
+The central gamma off-diagonal kernel satisfies the exact identity
+\[
+ q(t)=2\cosh(t/2)
+       -\frac{e^{-t/2}}{1-e^{-2t}}
+     =2\cosh(t/2)-\sum_{k=0}^{\infty}e^{-(1/2+2k)t},
+ \qquad t>0.
+\]
+On any interval the two exponential functions \(e^{x/2},e^{-x/2}\)
+span the restriction of the finite-rank hyperbolic term. If each local
+verification space includes these functions, that term has zero compression
+and zero coupling on its orthogonal complement. This statement concerns
+the exact enlarged span; replacing the exponentials by polynomial
+approximations requires a further error bound.
+
+For intervals with gap \(d>0\), after retaining \(K\) exponential terms the
+remaining cross operator has norm at most
+\[
+ \sqrt{\ell_i\ell_j}\,
+ \frac{e^{-(1/2+2K)d}}{1-e^{-2d}}.
+\]
+This follows by summing the positive geometric remainder pointwise and then
+using its Hilbert--Schmidt bound. Each retained exponential is separable
+across the two intervals. Local Taylor profiles can still handle each
+diagonal and adjacent pair whose total length is less than three.
+Thus a fixed short-slab partition together with the separated-interval
+expansion has no global radius-three barrier.
+
+This representation has not yet been implemented or certified here.
+It also does not control the arithmetic contribution or prove the
+old-energy and residual inequalities indefinitely. Those comparisons,
+their required verification dimensions, and prevention of finite-depth
+accumulation remain the substantive induction problem.

@@ -21,3 +21,5 @@ records (`LAB_ihara_round1`–`round5`, `ROUND6_closeout` in the project notes).
 inline verification runs (time-normalization certificate, s₀ scan, unscaled real-ζ suite,
 envelope bracketing) are not yet committed as standalone scripts — see `STATUS.md`, blocking
 item 5.
+
+[Storage-depth paper (v0.3, working draft)](../storage-depth/README.md) · [All manuscripts](../README.md)

@@ -28,3 +28,5 @@ Rounds 4 and 6 also ran inline scripts (crossover scans; amplitude certification
 five-point scan, unscaled real-ζ suite, envelope bracketing) that were recorded in the round
 notes but not saved as files; reconstructing them here is a pre-release item (`../STATUS.md`).
 Precision: the Hankel-grade runs use mpmath at dps 140–400; `r5_w1.py` takes ~10–20 min.
+
+[Storage-depth paper (v0.3, working draft)](../../storage-depth/README.md) · [All manuscripts](../../README.md)

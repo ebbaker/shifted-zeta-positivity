@@ -1,0 +1,148 @@
+{
+  "schema_version": 1,
+  "canonicalization": "SHA-256 of UTF-8 json.JSONEncoder(sort_keys=True,separators=(',',':'),ensure_ascii=True,allow_nan=False).iterencode(data['matrices']); list order and serialized Arb entries retained; all other metadata excluded.",
+  "portability": "Identity in tested environments only; neither arithmetic validity nor cross-version bitwise portability is implied.",
+  "archives": [
+    {
+      "path": "history/quarter-step-closure-20260910/closure_256_32.matrices.json.gz",
+      "bytes": 160584016,
+      "matrix_archive_sha256": "4e421883b6b918a5dd751430a73d115ce22398262ecb28773eaebf6005c7d75d",
+      "matrices_content_sha256": "ceccde610b1d8fad050444bee8d4d587a7a552e2b8a022002df64f9c9fe6170d",
+      "parameters": {
+        "precision_bits": 6144,
+        "old_modes": 256,
+        "new_modes": 32,
+        "profile_degree": 320,
+        "log_series_degree": 100
+      }
+    },
+    {
+      "path": "history/quarter-step-closure-20260910/old_128_320_6144.json.gz",
+      "bytes": 43429046,
+      "matrix_archive_sha256": "fc6a0d1af3e9db51b48f52139749798ef0600824be43fd1e54c3d78f087bff72",
+      "matrices_content_sha256": "f920def55bfc99ab4cffcf140f9c00db4347505f61c22555e457776fb08ba36a",
+      "parameters": {
+        "N": 128,
+        "M": 320,
+        "precision_bits": 6144,
+        "horizon": null,
+        "log_horizon": 7
+      }
+    },
+    {
+      "path": "history/quarter-step-closure-20260910/old_256_320_6144.json.gz",
+      "bytes": 173696589,
+      "matrix_archive_sha256": "a3fdcfd0731095cd5fb89d7a1e079dd3894d26d647f196cdf94bdc72b1b80d3c",
+      "matrices_content_sha256": "c69695ce5531561fd511083cd3a02086a69d99ed561777a19699ed3f2a195584",
+      "parameters": {
+        "N": 256,
+        "M": 320,
+        "precision_bits": 6144,
+        "horizon": null,
+        "log_horizon": 7
+      }
+    },
+    {
+      "path": "output/second-quarter/central_matrices.json.gz",
+      "bytes": 297151691,
+      "matrix_archive_sha256": "abce193c5bbc74b5089b193c82edfad4802b433e6daade35587e3719e5f940ee",
+      "matrices_content_sha256": "62c4f708f7d6b26d7d76d09f3fe0d4a5ba8d18af5a496fead2aef89fe456775d",
+      "parameters": {
+        "partition": [
+          [
+            [
+              7,
+              "1"
+            ]
+          ],
+          [
+            [
+              2,
+              "3/4"
+            ],
+            [
+              7,
+              "-1/4"
+            ]
+          ],
+          [
+            [
+              2,
+              "3/4"
+            ],
+            [
+              7,
+              "-1/4"
+            ]
+          ]
+        ],
+        "modes": [
+          256,
+          32,
+          32
+        ],
+        "profile_degree": 320,
+        "precision_bits": 6144
+      }
+    },
+    {
+      "path": "history/first-step-96-20260911/closure_256_96.matrices.json.gz",
+      "bytes": 265734856,
+      "matrix_archive_sha256": "a64e5539915e861b71603ecfee7a78d30c84cee0b888372ca2fe71d2e02da742",
+      "matrices_content_sha256": "14bce4f625313ccaa7cdf8af3eb09c41cd344353c05861067635ec925a1aebac",
+      "parameters": {
+        "precision_bits": 6144,
+        "old_modes": 256,
+        "new_modes": 96,
+        "profile_degree": 320,
+        "log_series_degree": 100
+      },
+      "note": "First-step rebuild with 96 slab modes (11 Sept 2026, cloud container); seed of the 256+96+96 second step. Built by archive/drafts/v0.1_2026-09-10/numerics/history/quarter-step-closure-20260910/close_complement.py --old 256 --new 96 with the old_256_320_6144 cache present. Its own catalog is numerics/records/closure_256_96_catalog.json (path relative to the seed folder)."
+    },
+    {
+      "path": "output/second-quarter-96/central_matrices.json.gz",
+      "bytes": 632719410,
+      "matrix_archive_sha256": "2a7791e1acfa7fd0f9dda2c76a379eec521b5bc7ce2a6e7f72bd9ee507739282",
+      "matrices_content_sha256": "5ebedbe6c4f0fee175dd49c14b480e1d7a07f8506db020b442077876894feb87",
+      "parameters": {
+        "partition": [
+          [
+            [
+              7,
+              "1"
+            ]
+          ],
+          [
+            [
+              2,
+              "3/4"
+            ],
+            [
+              7,
+              "-1/4"
+            ]
+          ],
+          [
+            [
+              2,
+              "3/4"
+            ],
+            [
+              7,
+              "-1/4"
+            ]
+          ]
+        ],
+        "modes": [
+          256,
+          96,
+          96
+        ],
+        "profile_degree": 320,
+        "precision_bits": 6144
+      },
+      "note": "Second step 256+96+96 (11 Sept 2026, cloud container), built by numerics/recursion/build_from_seed_v2.py from the 96-mode seed. Its Galerkin continuation record (about 3 MB, sha256 fd78c8652ac441e26e3f9598610974d791e98c637e7abddda4134fdb5ba9693e) is kept beside it, outside git."
+    }
+  ],
+  "scope": "Six external, regenerable storage-depth matrix archives; identity records, not proofs."
+}

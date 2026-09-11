@@ -76,4 +76,5 @@ Expect hits for "the user" in nearly every file; decide the convention in item 4
 | `NOTE_variation_axes.md` | | | 4, 6 | |
 | `LAB_ihara_round5.md`, `ROUND6_closeout.md` | | | 6 | |
 | `NOTE_connes_weil_dirichlet_form.md`, `NOTE_n4_reformulation.md`, `ROUND10_boundary_data.md` | | | 9 | |
+| `LESSONS_LEARNED_manifest_positivity_design_guidance_20260911.md` | Codex | 2026-09-11 | 1–9 checked; existing public note moved with the author's wording change; attribution retained, links supplied in `README.md`; exploratory claims remain labelled | Already public; no new clearance claim |
 | all remaining notes | | | 4, 5, 7 as found | |

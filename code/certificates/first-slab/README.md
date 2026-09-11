@@ -8,3 +8,5 @@ the preprint. The release gate is items D1–D5 of
 
 Available from the author on request: edwardbaker86@gmail.com. A packaged
 review candidate exists (see `../../README.md`, "Not here yet, and why").
+
+[Storage-depth paper (v0.3, working draft)](../../../papers/storage-depth/README.md) · [All manuscripts](../../../papers/README.md)

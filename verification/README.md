@@ -18,7 +18,7 @@ verification/
                               one current executable diagnostic (9 Sept; run by CI) — see its README
 ```
 
-The four working drafts under `papers/` do not have verification folders yet;
+The six working drafts under `papers/` do not have verification folders yet;
 each draft's `STATUS.md` carries its result-by-result verification record and
 its review history until it is released and gets a `blueprint/` entry and a
 folder here.
@@ -26,6 +26,12 @@ folder here.
 The authoritative current status of the first-slab preprint is
 `papers/first-slab-positivity/VERIFICATION_STATUS.md`; `CHECKLIST.md` here is
 the how-to that goes with it.
+
+For the finite-horizon continuation, use the [Weil-depth status](../papers/weil-depth/STATUS.md)
+and [storage-depth status](../papers/storage-depth/STATUS.md),
+[claim records](../papers/storage-depth/CLAIMS.json) and
+[closeout record](../papers/storage-depth/CLOSEOUT.md). Their review packets
+remain with the papers under `archive/reviews/`.
 
 ## Method used so far
 

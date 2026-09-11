@@ -55,3 +55,5 @@ Working draft; author block filled (Edward B. Baker III) but no ORCID yet; no ex
 Developed August 2026 with substantial language-model assistance under the author's direction,
 across referee-style rounds 12–14 with independent numerical recomputation at each. Full record in
 `STATUS.md`.
+
+[Storage-depth paper (v0.3, working draft)](../storage-depth/README.md) · [All manuscripts](../README.md)

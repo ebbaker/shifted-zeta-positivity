@@ -29,3 +29,5 @@ To rebuild the PDF: `pdflatex rh_detector.tex` (twice). Every number in the pape
 is printed by one of the scripts above; `code/README.md` maps them. All certificates are
 rigorous modulo floating point — the interval-arithmetic port is a blocking item in
 `STATUS.md`.
+
+[Storage-depth paper (v0.3, working draft)](../storage-depth/README.md) · [All manuscripts](../README.md)
