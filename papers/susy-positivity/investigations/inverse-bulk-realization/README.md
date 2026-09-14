@@ -14,6 +14,15 @@ credible field theory, together with an exact boundary matching theorem,
 would imply RH. A Yang–Mills-to-RH mapping is a proposed case to investigate.
 The speculative reverse RH-to-Yang–Mills direction is outside this paper.
 
+[New survey: defect observables and candidate field theories](DEFECT_OBSERVABLE_SURVEY.md)
+compares protected sphere/Schur operator algebras, boundary Liouville,
+integrable theories, gauge networks and free-field arithmetic controls.
+The main new lead is an explicit operator algebra with a physically
+positive pairing and identities that constrain the arithmetic source.
+An established construction is not required: a credible theory with an
+open construction problem is eligible for a conditional matching theorem.
+No complete Weil identity has yet been obtained.
+
 [Latest calculation: gauge transfer and the first-prime boundary test](GAUGE_TRANSFER_TEST.md)
 compares Wilson-loop winding with transfer evolution, constructs a positive
 disk model for the gamma masses and prime returns, and computes two

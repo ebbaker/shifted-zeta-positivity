@@ -148,19 +148,26 @@ arithmetic data, with its positivity supplied by the construction.
 ## 1b. Constructive plausibility and a possible Yang–Mills reduction
 
 An interesting conditional reduction needs a credible reason to expect
-that its hypotheses can hold. Every proposed field should therefore
-identify:
+that its hypotheses can hold. An already established construction is not
+required. A theory with an open construction problem, including 4d
+Yang–Mills, remains eligible when its desired properties have independent
+support. The main selection criterion is the prospect of deriving the
+complete Weil pairing.
 
-1. A concrete finite-cutoff model and an independently justified positive
-   physical pairing or reflection-positive transfer construction.
-2. Its nearest established constructive model, with the actual
-   similarities and changes in dimension, field content, interactions,
-   symmetries, boundary insertions, and ultraviolet behavior.
-3. The renormalizations and limits needed for the arithmetic observable,
-   together with structural evidence that these preserve the positive
-   pairing and produce a finite, nontrivial result.
-4. The exact additional statement still open, separated from the
-   arithmetic matching theorem.
+A proposed field should explain the available evidence, which may include
+a stable regulated model, a positive Hamiltonian or operator-algebraic
+sector, physical unitarity, consistent dual descriptions, exact protected
+observables, or a nearby established constructive theory. Comparisons
+should identify actual differences in dimension, fields, interactions,
+symmetries and ultraviolet behavior. No particular one of these forms of
+evidence is mandatory for every candidate.
+
+The conditional theorem must specify the construction properties needed
+for its observable, including any renormalizations, limits and finite-norm
+domains. These can remain open construction hypotheses. Their independent
+motivation and the derived arithmetic matching identity must be explained
+separately; prescribing the unknown Weil covariance is not such a
+derivation.
 
 Constructed stable polynomial scalar models in two spacetime dimensions
 provide one useful comparison class
@@ -221,6 +228,30 @@ nontrivial exact portion of the gamma/prime boundary response, followed
 by an account of the full contact and pole sectors. The earlier
 first-prime test remains a bounded construction test, not an RH
 reduction on its own.
+
+
+## 1c. Broaden the boundary to a defect or observable sector
+
+The input may live on a line defect, a Wilson network, an interface, a
+gluing cut, or an operator algebra acting on prepared states. The
+arithmetic coordinate need not be physical Euclidean time, and no
+codimension-one boundary is required by the norm-matching target.
+
+The [broad defect-observable survey](DEFECT_OBSERVABLE_SURVEY.md) identifies
+sphere quantization in 3d supersymmetric theories and Schur quantization
+of 4d line operators as the leading new families to investigate. They
+provide explicit shift actions, physical conjugations and trace identities;
+selected related algebras also have independently proved positive forms.
+Boundary Liouville gluing is an interacting alternative. These are model
+selection leads, not established arithmetic matches.
+
+The key unresolved step is a specified complex-linear map from arithmetic
+test functions into the chosen positive sector whose entire pairing is
+the Weil form. A lone position-independent insertion loses input data,
+and a smooth local Euclidean two-point kernel cannot supply separated
+prime-return atoms. Extended observables and nonlocal source maps remain
+available. Conformal symmetry alone supplies neither the prime data nor
+invariance under arbitrary changes of defect shape.
 
 
 ## 2. Fix the complete matching target
