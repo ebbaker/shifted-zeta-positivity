@@ -5,8 +5,8 @@ tree), it is meant to be cloned by verifiers and formalizers, and its history
 should stay small enough that a clone is quick. Git therefore holds **sources
 and small records** — LaTeX, code, PDFs, JSON certificates, hashes, notes — and
 **no large derived data**. This file states the convention and the procedure
-that goes with it. The worked instances are [Weil-depth](papers/weil-depth/ARCHIVES.md)
-(about 122 MB of ball matrices) and [storage-depth](papers/storage-depth/ARCHIVES.md)
+that goes with it. The worked instances are [Weil-depth](papers/shifted-zeta/weil-depth/ARCHIVES.md)
+(about 122 MB of ball matrices) and [storage-depth](papers/shifted-zeta/storage-depth/ARCHIVES.md)
 (about 1.6 GB across six recorded matrix archives). Their tracked guides
 describe the data and any availability limits.
 
@@ -86,7 +86,7 @@ szp-archive/                                ← not a git repository
 
 For the Weil paper this is `szp-archive/weil-depth/numerics-archives/`,
 with `output/<horizon>_N128/central_matrices.json.gz` and so on; the full
-list with sizes and hashes is in `papers/weil-depth/ARCHIVES.md`. The folder
+list with sizes and hashes is in `papers/shifted-zeta/weil-depth/ARCHIVES.md`. The folder
 may be moved or copied anywhere; scripts reach it through the environment
 variable, and its integrity is checked with `sha256sum -c SHA256SUMS.txt` from
 inside it.

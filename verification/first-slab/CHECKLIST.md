@@ -1,8 +1,8 @@
 # Verification checklist — *Archimedean first-slab positivity for shifted zeta canonical systems*
 
 **For:** anyone willing to verify part of the manuscript
-**Manuscript:** `papers/first-slab-positivity/first_slab_positivity.pdf`, preprint v1.0 (5 Sept 2026)
-**Current status:** `papers/first-slab-positivity/VERIFICATION_STATUS.md`
+**Manuscript:** `papers/shifted-zeta/first-slab-positivity/first_slab_positivity.pdf`, preprint v1.0 (5 Sept 2026)
+**Current status:** `papers/shifted-zeta/first-slab-positivity/VERIFICATION_STATUS.md`
 **Prepared:** 4 Sept 2026 for the working draft; renumbered to the preprint 5 Sept 2026
 
 ---

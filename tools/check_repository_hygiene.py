@@ -14,6 +14,11 @@ import sys
 from urllib.parse import unquote, urlsplit
 
 ROOT = Path(__file__).resolve().parents[1]
+PAPER_GROUPS = {
+    'shifted-zeta': ('psi-omega-margin', 'omega-string', 'defect-depth',
+                     'first-slab-positivity', 'weil-depth', 'storage-depth'),
+    'misc': ('rh-detector',),
+}
 
 
 def historical(path):
@@ -54,22 +59,69 @@ def main():
         readmes += 1
         text = path.read_text()
         links = re.findall(r'\[([^\]]+)\]\(([^)]+)\)', text)
-        storage_links = [(label, target) for label, target in links
-                         if 'storage-depth' in (label + target).lower()]
-        require(bool(storage_links), f'Current README omits storage-depth link: {rel}')
-        for label, target in storage_links:
+        for label, target in links:
             parsed = urlsplit(target.strip('<>'))
             if parsed.scheme or parsed.netloc:
                 continue
             require((path.parent / unquote(parsed.path)).exists(),
-                    f'Broken storage-depth link in {rel}: {target}')
+                    f'Broken local link in {rel}: {target}')
+
+    def require_index_links(index, destinations):
+        require(index in tracked, f'Project index is not tracked: {index}')
+        path = ROOT / index
+        if not path.is_file():
+            require(False, f'Missing project index: {index}')
+            return
+        targets = set()
+        for target in re.findall(r'\[[^\]]+\]\(([^)]+)\)', path.read_text()):
+            parsed = urlsplit(target.strip('<>'))
+            if not parsed.scheme and not parsed.netloc:
+                targets.add((path.parent / unquote(parsed.path)).resolve())
+        for destination in destinations:
+            require(destination in tracked, f'Paper/project README is not tracked: {destination}')
+            require((ROOT / destination).resolve() in targets,
+                    f'Index {index} omits {destination}')
+
+    require_index_links(Path('papers/README.md'),
+                        [Path('papers') / name / 'README.md'
+                         for name in (*PAPER_GROUPS, 'susy-positivity')])
+    for group, slugs in PAPER_GROUPS.items():
+        base = Path('papers') / group
+        require_index_links(base / 'README.md',
+                            [base / slug / 'README.md' for slug in slugs])
+        for slug in slugs:
+            require(not (ROOT / 'papers' / slug).exists(),
+                    f'Obsolete paper location remains: papers/{slug}')
+
+    program = Path('papers/susy-positivity')
+    attempt = program / 'attempts/positive-factorizations'
+    require_index_links(program / 'README.md', [attempt / 'README.md'])
+    for obsolete in ('manuscript.tex', 'manuscript.pdf', 'STATUS.md',
+                     'RESEARCH_BRIEF.md', 'INVESTIGATION_round3.md',
+                     'checks', 'manifest.json',
+                     'archive/overview/rh-formulation-next-version/rh_background_section.tex',
+                     'archive/overview/rh-formulation-next-version/rh_background_preview.tex'):
+        require(not (ROOT / program / obsolete).exists(),
+                f'Obsolete attempt location remains: {program / obsolete}')
+    for wrapper, section in [('background.tex', 'background_section.tex')]:
+        path = ROOT / program / wrapper
+        require(path.is_file() and any('\\input{' + name + '}' in path.read_text()
+                for name in (section, section.removesuffix('.tex'))),
+                'Background wrapper must input the shared section')
+    current = json.loads((ROOT / attempt / 'manifest.json').read_text())
+    for name, want in current['sha256'].items():
+        rel = attempt / name
+        path = ROOT / rel
+        require(rel in tracked, f'Attempt manifest names untracked file: {rel}')
+        require(path.is_file() and digest(path) == want,
+                f'Attempt checksum mismatch: {rel}')
 
     for slug in ('storage-depth', 'weil-depth'):
-        base = ROOT / 'papers' / slug
+        base = ROOT / 'papers' / 'shifted-zeta' / slug
         for line in (base / 'SHA256SUMS.txt').read_text().splitlines():
             want, name = line.split(None, 1)
             name = name.lstrip('*')
-            rel = Path('papers') / slug / name
+            rel = Path('papers') / 'shifted-zeta' / slug / name
             require(rel in tracked, f'Manifest names untracked file: {rel}')
             path = base / name
             require(path.is_file() and digest(path) == want,
@@ -97,9 +149,9 @@ def main():
             print('FAIL:', message, file=sys.stderr)
         return 1
     print(f'PASS: {len(paths)} tracked files within 1 MiB; '
-          f'{readmes} current READMEs link storage-depth; '
+          f'{readmes} current READMEs have valid local links; '
           f'{snapshots} historical README snapshots preserved; '
-          'both current paper manifests match.')
+          'paper indexes cover all groups; current paper and attempt manifests match.')
     return 0
 
 

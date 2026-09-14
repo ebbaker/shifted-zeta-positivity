@@ -1,0 +1,136 @@
+\section{The arithmetic target and its positive starting models}
+\label{sec:arithmetic}
+Throughout, inner products are conjugate-linear in their first entry. Let $E_L:L^2(I_L)\to L^2(\R)$ denote zero extension. The central Weil form is \eqref{intro:target}; no positivity assumption is made about its sum. For fixed $L$, all translated and pole terms are bounded forms. Since $B(\tau^2)$ grows logarithmically, its closed semibounded realization has form domain
+\begin{equation}\label{ari:domain}
+\mathcal D_L=\left\{f\in L^2(I_L):
+\int_{\R}\log(2+|\tau|)|\widehat{E_Lf}(\tau)|^2\,d\tau<\infty\right\}.
+\end{equation}
+The positive form $K$ is closed by the Fourier multiplier construction, and bounded perturbations give the closed semibounded target operator $W_L$. Smooth compactly supported inputs are the initial arithmetic test domain. This operator formulation does not require selected test functions to be estimated individually, but an eventual factorization must hold on the full form domain.
+
+\subsection{Gamma kinetic energy as an exact positive response}
+The elementary partial-fraction expansion of the digamma difference gives
+\begin{equation}\label{ari:bernstein}
+B(s)=\sum_{k\ge0}\frac2{a_k}\frac{s}{s+a_k^2},\qquad
+ a_k=2k+\tfrac12.
+\end{equation}
+For example, the real part of
+$\psi(b+it)-\psi(b)=\sum_{k\ge0}[(k+b)^{-1}-(k+b+it)^{-1}]$
+is $\sum_{k\ge0}t^2/[(k+b)((k+b)^2+t^2)]$; taking $b=1/4$ and $t=\sqrt{s}/2$ proves \eqref{ari:bernstein}.
+
+For a mass $a>0$, define
+\[
+\mathcal E_a[F,u]=\frac2a\left(\norm{F-u}_{L^2(\R)}^2+a^{-2}\norm{u'}_{L^2(\R)}^2\right),
+\qquad u\in H^1(\R).
+\]
+Its unique minimizer solves $(1-a^{-2}\partial_x^2)u=F$. In Fourier space,
+\[
+\widehat u(\tau)=\frac{a^2}{a^2+\tau^2}\widehat F(\tau),
+\qquad
+\inf_u\mathcal E_a[F,u]
+=\frac1{2\pi}\int\frac2a\frac{\tau^2}{a^2+\tau^2}|\widehat F(\tau)|^2\,d\tau.
+\]
+Summing these nonnegative channel energies and using monotone convergence gives
+\begin{equation}\label{ari:gamma-energy}
+K[F]=\inf_{(u_k)}\sum_{k\ge0}\mathcal E_{a_k}[F,u_k].
+\end{equation}
+The admissible fields have finite displayed energy. On \eqref{ari:domain}, the channel minimizers achieve the sum; outside it the infimum is infinite. One must not split off the divergent unprepared sum $\sum_k(2/a_k)\norm F^2$ before minimizing. Formula \eqref{ari:gamma-energy} is the exact positive bulk response used as the starting success.
+
+The same kinetic form has a jump representation. Put
+\[
+n_\gamma(r)=\frac{e^{-|r|/2}}{1-e^{-2|r|}},\qquad r\ne0.
+\]
+Expanding this density as $\sum_{k\ge0}e^{-a_k|r|}$ and using
+$\int_{\R}e^{-a|r|}(1-\cos\tau r)\,dr=(2/a)\tau^2/(a^2+\tau^2)$ yields
+\begin{equation}\label{ari:gamma-jump}
+K[F]=\frac12\int_{\R}\int_{\R}|F(x)-F(y)|^2n_\gamma(x-y)\,dx\,dy.
+\end{equation}
+The diagonal singularity is interpreted through the difference square.
+
+\subsection{An exact finite-prime ground-state amplitude}
+Let $\mathcal S$ be finite and $\sigma>0$. On
+\[
+\mathscr H_{\mathcal S}=L^2(\R,dy)\otimes
+\bigotimes_{p\in\mathcal S}\ell^2(\N_0),
+\]
+use the closed Morse operator and bounded prime differences
+\[
+A_{\sigma/2}=\partial_y+\frac{e^y-\sigma/2}{2},\qquad
+D_p=T-p^{-\sigma/2}I,\qquad (T\xi)_n=\xi_{n+1}.
+\]
+Each defines a two-term complex with its physical Hilbert adjoint; their graded tensor product has a positive supersymmetric Hamiltonian. The Morse kernel is obtained by integrating a first-order equation, while $D_p\xi=0$ gives a geometric sequence. The adjoint kernels vanish: the Morse adjoint solution grows at $+\infty$, and the zeroth component of $D_p^*\xi=0$ forces every component to vanish. Consequently the product has a unique bosonic vacuum ray,
+\begin{equation}\label{ari:state}
+\Psi_\sigma(y,\mathbf n)=\pi^{-\sigma/4}
+\exp\!\left(\frac{\sigma y/2-e^y}{2}\right)
+\prod_{p\in\mathcal S}p^{-\sigma n_p/2}.
+\end{equation}
+Morse supersymmetry and zeta-related Morse Fourier amplitudes have existing antecedents \cite{WittenMorse,McGuigan}; no priority is claimed for these elementary factor constructions.
+
+The multiplication operator
+\[
+X=\frac y2-\sum_{p\in\mathcal S}n_p\log p-\frac{\log\pi}{2}
+\]
+is self-adjoint on its maximal multiplication domain. Substituting $t=e^y$ and summing geometric series proves
+\begin{equation}\label{ari:matrix-coefficient}
+\norm{\Psi_\sigma}^2=\Lambda_{\mathcal S}(\sigma),\qquad
+\ip{\Psi_\sigma}{e^{i\tau X}\Psi_\sigma}
+=\Lambda_{\mathcal S}(\sigma+i\tau).
+\end{equation}
+The state normalization in \eqref{ari:state} is specified data. The Hamiltonian only determines the ray.
+
+\subsection{A positive derivative and the missing contact}
+The product $\Lambda_{\mathcal S}$ is nonzero on $\re z>0$. Its logarithmic derivative is
+\begin{equation}\label{ari:log-derivative}
+\frac{\Lambda_{\mathcal S}'(z)}{\Lambda_{\mathcal S}(z)}
+=-\frac{\log\pi}{2}+\frac12\psi(z/2)
+-\sum_{p\in\mathcal S}\frac{\log p}{p^z-1}.
+\end{equation}
+Taking the real part and subtracting its value on the real axis gives
+\begin{equation}\label{ari:positive-derivative}
+\begin{split}
+\left.\partial_\sigma\log
+\frac{|\Lambda_{\mathcal S}(\sigma+i\tau)|^2}
+{\Lambda_{\mathcal S}(\sigma)^2}\right|_{\sigma=1/2}
+={}&B(\tau^2)\\
+&+2\sum_{p\in\mathcal S,m\ge1}(\log p)p^{-m/2}
+[1-\cos(m\log p\,\tau)].
+\end{split}
+\end{equation}
+Every term on the right is nonnegative. Define $J_{\mathcal S,L}$ by compressing this Fourier multiplier through zero extension. If
+$a_{p,m}=(\log p)p^{-m/2}$, then
+\[
+J_{\mathcal S,L}[f]=K[E_Lf]+
+\sum_{p\in\mathcal S,m\ge1}a_{p,m}\norm{E_Lf-U_{m\log p}E_Lf}^2.
+\]
+The repetitions are summable for finite $\mathcal S$.
+
+\begin{proposition}[Exact contact decomposition]\label{ari:contact}
+Suppose $\mathcal S$ contains every prime $p$ with $\log p<L$. Put
+\[
+\kappa_{\mathcal S}=-w_0+2\sum_{p\in\mathcal S,m\ge1}a_{p,m}>0,
+\qquad P_L[f]=2|C(f)|^2-2|S(f)|^2.
+\]
+On $\mathcal D_L$,
+\begin{equation}\label{ari:contact-identity}
+Q_L[f]=J_{\mathcal S,L}[f]-\kappa_{\mathcal S}\norm f^2+P_L[f].
+\end{equation}
+\end{proposition}
+\begin{proof}
+Expand each translated difference square as
+$2\norm F^2-2\re\ip F{U_dF}$. If $d\ge L$, the correlation vanishes by disjoint support. The surviving correlations are exactly the prime terms in \eqref{intro:target}; the sum of all the diagonal contributions is cancelled by the definition of $\kappa_{\mathcal S}$.
+\end{proof}
+Additional inactive primes change $J$ and $\kappa$ by cancelling diagonal quantities. Their inclusion is harmless only when that cancellation is kept. An independent all-prime jump sum is divergent on every nonzero compactly supported input: for sufficiently large $p$, its first translation has disjoint support and contributes $2(\log p)p^{-1/2}\norm f^2$. The divergence follows already from the divergence of $\sum_p1/p$. Thus the finite-prime control is not a justification for an unrestricted positive jump limit.
+
+The normalized squared amplitude in \eqref{ari:positive-derivative} is a positive-definite function before differentiation, but its logarithmic derivative is a different observable. Equation \eqref{ari:contact-identity}, rather than the positivity of the characteristic function, is what specifies the missing arithmetic problem.
+
+\subsection{The vacuum metric is not the squared amplitude}
+A chosen complex extension of \eqref{ari:state} is
+\[
+\Psi_z=e^{zX/2}e^{-e^y/2},\qquad
+h(z,\bar z)=\norm{\Psi_z}^2=\Lambda_{\mathcal S}(\re z).
+\]
+With $\sigma=\re z$, the second derivative of $\log\Lambda_{\mathcal S}(\sigma)$ is the variance of $X$ in the normalized state, hence strictly positive. In a holomorphic line frame,
+\[
+\partial_{\bar z}\partial_z\log h
+=\tfrac14(\log\Lambda_{\mathcal S})''(\sigma)>0.
+\]
+In contrast, $|\Lambda_{\mathcal S}(z)|^2$ has zero logarithmic curvature wherever $\Lambda_{\mathcal S}$ is holomorphic and nonzero. Confusing these two metrics erases precisely the geometric obstruction motivating the enlargement.

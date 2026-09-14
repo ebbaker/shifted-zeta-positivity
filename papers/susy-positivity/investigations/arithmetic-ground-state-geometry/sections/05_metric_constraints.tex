@@ -1,0 +1,247 @@
+\section{Finite-rank metric constraints and a semisimple control}
+\label{met-section}
+
+Additional vacua can compensate the curvature of an arithmetic ground-state
+line without introducing negative norms.  They do not, however, automatically
+preserve its physical state family or its arithmetic observable.  We establish
+two finite-rank restrictions and then give a positive rank-two solution of the
+metric equations that illustrates the distinction.
+
+\subsection{The metric equation and its determinant}
+\label{met-conventions}
+
+Let $z=\sigma+i\eta$ be an ordinary chiral parameter.  In an intrinsic
+holomorphic frame, write the positive Hermitian vacuum metric as $g$ and set
+\begin{equation}
+ A_z=g^{-1}\partial_zg,\qquad
+ \mathcal K=\partial_{\bar z}(g^{-1}\partial_zg),\qquad
+ C^{\dagger_g}=g^{-1}C^*g.
+ \label{met-connection}
+\end{equation}
+Here $C^*$ denotes conjugate transpose.  Our convention for the ordinary
+chiral $tt^*$ equation is
+\begin{equation}
+ \partial_{\bar z}C=0,\qquad
+ \mathcal K=[C,C^{\dagger_g}].
+ \label{met-ttstar}
+\end{equation}
+Indeed $[D_z,D_{\bar z}]=-\mathcal K$ for
+$D_z=\partial_z+A_z$, $D_{\bar z}=\partial_{\bar z}$, and
+\eqref{met-ttstar} gives flatness of
+$D_z+\zeta^{-1}C$ and $D_{\bar z}+\zeta C^{\dagger_g}$.
+The vacuum-metric interpretation originates in topological--antitopological
+fusion~\cite{CecottiVafa}; the parameter-multiplet hypothesis is essential to
+the supersymmetric Berry-connection derivation~\cite{SonnerTong}.
+The existence of four formal supercharges alone does not identify a specified
+parameter family with \eqref{met-ttstar}.
+
+For a finite set of primes $S$, the coherent-state benchmark has
+\begin{equation}
+ h(\sigma)=\Lambda_S(\sigma),\qquad
+ \Lambda_S(z)=\pi^{-z/2}\Gamma(z/2)
+       \prod_{p\in S}(1-p^{-z})^{-1},\qquad \re z>0.
+ \label{met-arithmetic-metric}
+\end{equation}
+Writing $u=\log h$ gives
+\begin{equation}
+ V(\sigma):=u''(\sigma)
+ =\frac14\psi_1(\sigma/2)
+  +\sum_{p\in S}\frac{(\log p)^2p^{-\sigma}}
+                         {(1-p^{-\sigma})^2}>0,
+ \qquad
+ \partial_z\partial_{\bar z}\log h(\re z)=\frac V4.
+ \label{met-variance}
+\end{equation}
+This physical norm is distinct from the squared holomorphic amplitude
+$|\Lambda_S(z)|^2$.
+
+\begin{proposition}[Determinant constraint]
+\label{met-determinant-proposition}
+For a finite-rank positive solution of \eqref{met-ttstar},
+$\partial_z\partial_{\bar z}\log\det g=0$.
+Consequently $\det g=|d(z)|^2$ locally for a nonvanishing holomorphic $d$.
+In particular, the determinant cannot equal
+$h(\re z)^a|d(z)|^2$ for a nonzero real $a$.
+\end{proposition}
+\begin{proof}
+The finite-dimensional trace gives
+\[
+ \partial_z\partial_{\bar z}\log\det g
+ =\operatorname{tr}\mathcal K
+ =\operatorname{tr}[C,C^{\dagger_g}]=0.
+\]
+A real harmonic function is locally the real part of a holomorphic function,
+which proves the factorization.  The proposed determinant instead has
+logarithmic curvature $aV/4\ne0$ by \eqref{met-variance}.
+\end{proof}
+
+Thus tensoring a rank-$N$ solution with the original arithmetic line creates
+determinant curvature $NV/4$.  Prescribing $h$ as one component is a different
+operation: $g=\operatorname{diag}(h,h^{-1})$ is positive and has determinant
+one.  Determinant cancellation is a necessary condition, not the full
+differential compatibility condition.
+
+\subsection{Ambient holomorphicity is a stronger restriction}
+\label{met-ambient}
+
+\begin{proposition}[Finite ambient-holomorphic obstruction]
+\label{met-ambient-proposition}
+Let $\mathcal H$ be a fixed positive Hilbert space and let
+$T(z):\C^N\to\mathcal H$ be an injective Hilbert-norm holomorphic frame,
+with $N<\infty$.  Set $g=T^*T$ and
+$P=Tg^{-1}T^*$, the orthogonal projector onto its span.
+If this induced metric satisfies \eqref{met-ttstar}, then $P$ is constant on
+each connected parameter domain and $\mathcal K=0$.
+\end{proposition}
+\begin{proof}
+With $T'=\partial_zT$, holomorphicity gives
+$\partial_zg=T^*T'$ and $\partial_{\bar z}g=T'^*T$.  Hence
+\begin{align}
+ \mathcal K
+ &=-g^{-1}T'^*Tg^{-1}T^*T'+g^{-1}T'^*T'
+   =g^{-1}T'^*(1-P)T',
+ \label{met-second-fundamental}\\
+ \operatorname{tr}\mathcal K
+ &=\norm{(1-P)T'g^{-1/2}}_{\mathrm{HS}}^2.
+ \label{met-positive-trace}
+\end{align}
+The trace must also vanish by Proposition~\ref{met-determinant-proposition}.
+Thus $(1-P)T'=0$ and $\mathcal K=0$.  Direct differentiation yields
+$\partial_zP=(1-P)T'g^{-1}T^*=0$; taking the adjoint also gives
+$\partial_{\bar z}P=0$.
+\end{proof}
+
+This excludes a direct finite-dimensional holomorphic enlargement of the
+complete Morse--prime coherent family.  In its fixed positive Hilbert space,
+that family is
+\begin{equation}
+ \Psi_z=e^{zX/2}e^{-e^y/2},\qquad
+ X=\frac y2-\sum_{p\in S}n_p\log p-\frac{\log\pi}{2},
+ \qquad n_p\in\{0,1,2,\ldots\}.
+ \label{met-coherent-family}
+\end{equation}
+Projection to all $n_p=0$ sends states at distinct positive real parameters
+$\sigma_j$ to nonzero scalar multiples of
+$e^{\sigma_jy/4}e^{-e^y/2}$.  These are linearly independent: division by
+$e^{-e^y/2}$ and successive differentiation at one point gives a Vandermonde
+system.  Arbitrarily large independent sets exist on every open real
+interval.  Consequently no constant finite-dimensional subspace can contain
+this family, as Proposition~\ref{met-ambient-proposition} would require.
+
+The assumption $\partial_{\bar z}T=0$ must not be substituted for the weaker
+physical condition $P\partial_{\bar z}T=0$.  An intrinsic holomorphic vacuum
+frame may have nonzero antiholomorphic derivatives in the massive complement.
+Such derivatives are allowed in physical $tt^*$ geometry and invalidate the
+positive-trace calculation \eqref{met-positive-trace}.  Infinite rank likewise
+requires separate trace and domain arguments.
+
+The corresponding line-bundle identity makes the remaining freedom explicit.
+For an intrinsic holomorphic section $v$, let
+$h_v=\ip{v}{v}_g$ and $\beta=(1-P_L)D_zv$, where $P_L$ projects onto its line.
+In a holomorphic normal frame, differentiating $\log h_v$ gives
+\begin{equation}
+ \partial_z\partial_{\bar z}\log h_v
+ =\frac{\ip{v}{\mathcal Kv}_g+\norm{\beta}_g^2}{h_v}
+ =\frac{\norm{C^{\dagger_g}v}_g^2-\norm{Cv}_g^2
+                  +\norm{\beta}_g^2}{h_v}.
+ \label{met-gauss-line}
+\end{equation}
+Thus positive line curvature can be supplied by chiral mixing and variation
+inside a larger vacuum bundle.  It is not itself a rank-two obstruction.
+
+\subsection{A local positive semisimple metric}
+\label{met-semisimple}
+
+Rank-two positivity and reality conditions are studied in~\cite{Takahashi}.
+The following explicit construction verifies the metric equations directly;
+it makes no existence assertion about a microscopic quantum theory.
+
+\begin{proposition}[Real-axis metric control]
+\label{met-control-proposition}
+There is a neighborhood of $z=1/2$ carrying a positive rank-two solution of
+\eqref{met-ttstar}, with semisimple $C_z$, whose first diagonal component on
+the real axis is $\Lambda_S(\sigma)$.
+\end{proposition}
+\begin{proof}
+For $r=\re w>0$, set
+\begin{equation}
+ g_*(w,\bar w)=
+ \begin{pmatrix}\coth(2r)&0\\0&\tanh(2r)\end{pmatrix},
+ \qquad
+ C_* =\begin{pmatrix}0&1\\1&0\end{pmatrix}.
+ \label{met-coth-control}
+\end{equation}
+The first curvature entry equals the first commutator entry because
+\begin{equation}
+ \frac14\frac{d^2}{dr^2}\log\coth(2r)
+ =\frac{4\cosh(4r)}{\sinh^2(4r)}
+ =\coth^2(2r)-\tanh^2(2r).
+ \label{met-coth-verification}
+\end{equation}
+The second entries have opposite sign.  The metric is positive with determinant
+one, while $C_*$ has distinct eigenvalues $\pm1$.  For the constant bilinear
+pairing $\eta_0=\left(\begin{smallmatrix}0&1\\1&0\end{smallmatrix}\right)$,
+$\eta_0C_*$ is symmetric and
+$(\eta_0^{-1}g_*)\overline{(\eta_0^{-1}g_*)}=1$.
+
+At $\sigma=1/2$, $h>1$ and $h'<0$.  Indeed
+$\Gamma(1/4)>\int_0^1t^{-3/4}(1-t)\,dt=16/5$,
+$\pi^{1/4}<2$, and each Euler factor exceeds one.  Also
+$\psi(1/4)=-\gamma-\pi/2-3\log2<0$, while the logarithmic derivatives of
+the Euler factors are negative.  A local branch therefore exists for
+\begin{equation}
+ w(z)=\frac14\log\frac{\Lambda_S(z)+1}{\Lambda_S(z)-1},
+ \qquad
+ g_{\mathrm{new}}(z,\bar z)=g_*(w(z),\overline{w(z)}),
+ \qquad C_z=w'(z)C_*.
+ \label{met-pullback}
+\end{equation}
+After shrinking the neighborhood, $\re w>0$ and $w'\ne0$ there.  Holomorphic
+pullback multiplies both sides of \eqref{met-ttstar} by $|w'|^2$.
+On the real axis $2w=\operatorname{arccoth}h$, so
+$(g_{\mathrm{new}})_{11}(\sigma,\sigma)=\coth(2w(\sigma))=h(\sigma)$.
+The eigenvalues of $C_z$ are the distinct values $\pm w'(z)$.
+\end{proof}
+
+The complex extension has changed:
+$(g_{\mathrm{new}})_{11}(z,\bar z)$ is generally not $h(\re z)$.
+Only a real-axis diagonal norm has been retained.  The construction does not
+specify the physical states \eqref{met-coherent-family}, their complete overlap
+$\Lambda_S((\bar z+w)/2)$, a self-adjoint arithmetic observable $X$, or a
+Hamiltonian with the proposed metric as its vacuum metric.  Semisimplicity
+and the displayed algebraic reality condition also do not establish the
+additional ultraviolet, infrared, and boundary data of a massive quantum
+field theory.  The domain is local, with no all-prime or global half-plane
+continuation asserted.
+
+\begin{remark}[Keeping the original complex extension]
+\label{met-companion-remark}
+For $g=\operatorname{diag}(h(\sigma),h(\sigma)^{-1})$ and
+$\kappa=V/4$, the companion choices
+$C=\left(\begin{smallmatrix}0&1\\q&0\end{smallmatrix}\right)$ and
+$C=\left(\begin{smallmatrix}0&q\\1&0\end{smallmatrix}\right)$ require,
+respectively,
+\[
+ |q(z)|^2=R_+(\sigma):=h^4-\kappa h^2,
+ \qquad
+ |q(z)|^2=R_-(\sigma):=\kappa h^{-2}+h^{-4}.
+\]
+Holomorphic $q$ forces $RR''-(R')^2=0$ wherever it is nonzero.  Stirling's
+formula gives $u''=1/(2\sigma)+O(\sigma^{-2})$ and superexponential growth of
+$h$, whence $(\log R_+)''=2/\sigma+O(\sigma^{-2})$ and
+$(\log R_-)''=-1/\sigma+O(\sigma^{-2})$ at infinity.
+Real analyticity on $(0,\infty)$ excludes either identity even on an open
+patch; identically zero $q$ is excluded by the same large-$\sigma$ behavior.
+This is a test of the stated frame and companion normalization, not every
+rank-two Higgs field.  The changed extension in \eqref{met-pullback} avoids
+these hypotheses.
+\end{remark}
+
+The control is deliberately permissive: any positive real-analytic norm
+greater than one with nonzero derivative can be inserted into the same local
+pullback.  In particular, local metric compatibility does not select the
+arithmetic source normalization or its first normal logarithmic derivative.
+The next physical construction must preserve an explicitly defined complete
+pairing, rather than only one metric component, and derive its normalization
+from the theory.  None of the metric results above supplies the Weil pole
+pairing or proves positivity of the complete Weil form.

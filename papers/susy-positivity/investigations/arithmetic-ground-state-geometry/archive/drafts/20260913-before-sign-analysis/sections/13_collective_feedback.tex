@@ -1,0 +1,112 @@
+\section{Collective feedback and its compact error}
+\label{sec:feedback}
+The delay source $A_0$ in \eqref{poles:delay-source} is closed on
+$\mathcal D_{\log,L}$ and has $T_0=A_0^*A_0\ge mI$.
+It permits a stable response to a prescribed input. This is the
+first step toward replacing compulsory contact by a controlled
+error.
+
+\subsection{One response field}
+For $\mu\ge0$, minimize
+\[
+\norm{A_0u}^2+\mu\norm u^2-2\re\ip f u
+\quad\text{over }u\in\mathcal D_{\log,L}.
+\]
+This is stable for every fixed $f$ and has minimizer
+$u=R_\mu f$, $R_\mu=(T_0+\mu)^{-1}$. Stability here does not
+assert joint positivity in $(f,u)$.
+Read out
+$A_{\mathrm{fb}}=A_0(I-\kappa R_\mu)$, $\kappa>0$.
+The correction $F_{\kappa,\mu}=-\kappa A_0R_\mu$ is bounded and
+compact, so the source remains closed with the same domain and
+maximal adjoint domain. Expanding all terms, including the
+feedback self-pairing, yields
+\begin{equation}\label{feedback:identity}
+A_{\mathrm{fb}}^*A_{\mathrm{fb}}
+ =T_0-2\kappa I+C_{\kappa,\mu},\qquad
+C_{\kappa,\mu}=2\kappa\mu R_\mu+\kappa^2T_0R_\mu^2.
+\end{equation}
+This error is positive, compact and infinite rank.
+
+Let $J=\bigoplus_{p\in\mathcal S_L}\mathcal D_pE_L$ and
+$c_{\mathcal S}=\sum_{p\in\mathcal S_L}c_p$. Choose the gain by
+\begin{equation}\label{feedback:gain}
+2\kappa=e^D+c_{\mathcal S}-w_0.
+\end{equation}
+Then the assembled source
+$\Gamma_{\kappa,\mu}=(A_{\mathrm{fb}},J)$ satisfies
+\begin{equation}\label{feedback:complete}
+\norm{\Gamma_{\kappa,\mu}f}^2
+ =Q_L[f]+\ip f{C_{\kappa,\mu}f}.
+\end{equation}
+Its block charge is a closed-source supersymmetric construction,
+and its form operator is $W_L+C_{\kappa,\mu}$ on $\Dom T_L$.
+The gain and prime scales match arithmetic coefficients; the
+positive response has not independently derived those parameters.
+The quartic cap is an isometric tensor factor in this identity.
+
+\subsection{The error cannot be removed by its regulator}
+On a $T_0$ eigenvalue $\lambda$, the error equals
+\[
+c_{\kappa,\mu}(\lambda)
+ =\frac{2\kappa\mu}{\lambda+\mu}
+       +\frac{\kappa^2\lambda}{(\lambda+\mu)^2},\qquad
+\partial_\mu c_{\kappa,\mu}(\lambda)
+ =\frac{2\kappa\lambda(\lambda+\mu-\kappa)}
+             {(\lambda+\mu)^3}.
+\]
+In particular,
+\[
+\inf_{\mu\ge0}c_{\kappa,\mu}(\lambda)=
+\begin{cases}
+\kappa^2/\lambda,&\lambda\ge\kappa,\\
+2\kappa-\lambda,&0<\lambda<\kappa.
+\end{cases}
+\]
+Every fixed mode retains positive error.
+As $\mu\downarrow0$, the operator converges in norm to
+$\kappa^2T_0^{-1}$; as $\mu\to\infty$, it converges strongly to
+$2\kappa I$, but not in norm because it is compact for every
+finite $\mu$. For fixed parameters,
+$c_{\kappa,\mu}(\lambda)\sim(\kappa^2+2\kappa\mu)/\lambda$.
+Compactness alone gives no smallness on the possibly negative
+arithmetic modes.
+
+\subsection{Schatten-class obstruction}
+Choose a subinterval $J_0$ of length
+$\ell<\min(L,\log2)$ and the orthonormal inputs
+$f_n=\ell^{-1/2}1_{J_0}e^{2\pi inx/\ell}$.
+They belong to $\mathcal D_{\log,L}$ by their sinc Fourier tails.
+All prime overlaps vanish, the pole contribution is $O(n^{-2})$,
+and $\norm{A_Lf_n}^2=O(\log n)$. Therefore
+$Q_L[f_n]-\norm{A_Lf_n}^2=w_0+O(n^{-2})$.
+If a correction $B$ made $\norm{(A_L+B)f}^2=Q_L[f]$ on the full
+domain, then Cauchy--Schwarz in its cross term would force
+\[
+\norm{Bf_n}^2\ge c/\log n
+\quad\text{for all sufficiently large }n.
+\]
+This is incompatible with $B$ in any finite Schatten class:
+for $p\ge2$, convexity and the trace bound give
+$\sum_n\norm{Bf_n}^p\le\sum_ns_n(B)^p$; for $p<2$ use inclusion
+in the Hilbert--Schmidt class. The same reasoning applies to the
+assembled reference $(A_0,J)$, whose target discrepancy is exactly
+the nonzero constant $-2\kappa I$.
+It excludes finite Schatten-class source corrections, not every
+compact correction.
+
+The spectral comparison sharpens this distinction. Since $P_L$
+has rank two, finite-rank interlacing and
+\eqref{source:eigenvalues} give
+\begin{equation}\label{feedback:eigenvalues}
+\lambda_n(T_0)=\log\frac{\pi n}{2L}-\psi(1/4)+e^D+O_L(n^{-1}).
+\end{equation}
+Consequently the decreasing singular values satisfy
+\begin{equation}\label{feedback:singular}
+\lim_{n\to\infty}\sqrt{\log n}\,s_n(F_{\kappa,\mu})=\kappa,
+\qquad
+\lim_{n\to\infty}\log n\,s_n(C_{\kappa,\mu})
+                                  =\kappa^2+2\kappa\mu.
+\end{equation}
+Neither lies in any finite Schatten class. These exact leading
+scales replace the earlier one-sided logarithmic comparison.

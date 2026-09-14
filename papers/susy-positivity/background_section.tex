@@ -1,0 +1,887 @@
+% Shared mathematical background for the SUSY positivity research program.
+% Authoritative substantive section; background.tex supplies the standalone wrapper.
+% Uses amsmath, amssymb, amsthm; the proposition environment; and bibliography
+% keys SuzukiScrewBackground, DLMF and KwasnickiMuchaBackground,
+% supplied in background.tex.
+
+\section{Weil positivity, support length, and the shifted family}
+\label{sec:rh-background}
+
+This document develops the common mathematical framework of the
+SUSY positivity research program. It gives the arithmetic target, the
+shift-energy identities and their domains, and an explicit positive
+auxiliary-field realization of the gamma kinetic term. Definitions and
+derivations used within this framework are included here. External
+references supply the classical Weil criterion, standard special-function
+identities, and the general theory of positive extensions. A positive
+realization of the full arithmetic form at arbitrary support length
+remains the objective, not a conclusion of the constructions below.
+
+The positivity problem has two parameters with different
+roles. The length $L$ specifies the support available to a test function.
+The shift $\omega$ belongs to an auxiliary family of zeta transfers and
+their generators. The classical equivalence with the Riemann hypothesis
+(RH) concerns the central form, at $\omega=0$, on inputs of arbitrary
+compact support. We first state that target, then explain why shifted
+forms and contraction identities are useful in seeking a positive
+realization of it. We also distinguish a direct amplitude factor, a
+bulk energy reduced to boundary data, and an energy accumulated along
+the shift family.
+
+\subsection{The arithmetic form and its input space}
+\label{subsec:rh-form}
+
+Let $I_L=(-L/2,L/2)$, so that $L>0$ is the total interval length.
+All norms and inner products below use unweighted Lebesgue measure, with
+inner products conjugate-linear in the first variable. Extend
+$f\in L^2(I_L)$ by zero to $\widetilde f$ on $\mathbb R$, and set
+\begin{equation}
+\widehat f(\tau)=\int_{I_L}f(x)e^{-i\tau x}\,dx,\qquad
+\mathcal D_{\log,L}=
+\left\{f\in L^2(I_L):
+\int_{\mathbb R}\log(2+|\tau|)|\widehat f(\tau)|^2\,d\tau<\infty\right\}.
+\label{eq:rh-domain}
+\end{equation}
+For $a>0$ write $(T_af)(x)=\widetilde f(x-a)$ on $I_L$, and define
+\[
+C(f)=\int_{I_L}f(x)\cosh(x/2)\,dx,\qquad
+S(f)=\int_{I_L}f(x)\sinh(x/2)\,dx.
+\]
+The central finite-interval Weil form in our normalization is
+\begin{align}
+Q_{0,L}[f]={}&
+\frac1{2\pi}\int_{\mathbb R}
+\left(\operatorname{Re}\psi\left(\tfrac14+\tfrac{i\tau}{2}\right)
+-\log\pi\right)|\widehat f(\tau)|^2\,d\tau \notag\\
+&+2|C(f)|^2-2|S(f)|^2
+-\sum_{\substack{n\ge2\\\log n<L}}\frac{\Lambda(n)}{\sqrt n}
+\langle f,(T_{\log n}+T_{\log n}^*)f\rangle .
+\label{eq:rh-central}
+\end{align}
+Here $\psi=\Gamma'/\Gamma$ and $\Lambda$ is the von Mangoldt function.
+The sum is finite and only prime powers contribute. A delay of length
+$L$ has zero action, which explains the strict cutoff.
+
+The multiplier in \eqref{eq:rh-central} differs from
+$\log(2+|\tau|)$ by a bounded function, by the digamma asymptotics
+\cite[\S5.11]{DLMF}. The remaining terms are bounded forms at each
+fixed $L$. Consequently $Q_{0,L}$ is closed and semibounded on
+$\mathcal D_{\log,L}$ without any positivity assumption.
+Smooth compactly supported inputs form a core: dilation can first move
+the support into the interval interior, and mollification then approximates
+in the weighted Fourier norm in \eqref{eq:rh-domain}.
+
+We write $Q^\gamma_{0,L}$ for the form obtained by omitting the explicit
+prime sum. This convention retains the normalization and pole terms
+$2|C|^2-2|S|^2$. It gives $Q^\gamma_{0,L}=Q_{0,L}$ for
+$L\leq\log2$; beyond that range gamma positivity alone does not establish
+the required arithmetic positivity.
+
+\paragraph{Separating the positive kinetic term from the full form.}
+The gamma multiplier has a frequency-dependent part and a constant part.
+Define, for $s\geq0$,
+\[
+B(s)=\operatorname{Re}\psi\!\left(\tfrac14+\tfrac{i\sqrt{s}}2\right)
+-\psi(\tfrac14),\qquad w_0=\psi(\tfrac14)-\log\pi.
+\]
+The constant is negative:
+$w_0=-\gamma_E-\pi/2-3\log2-\log\pi<0$, where $\gamma_E$ is Euler's
+constant. For the zero-extended input, set
+\[
+K[\widetilde f]
+=\frac1{2\pi}\int_{\mathbb R}B(\tau^2)|\widehat f(\tau)|^2\,d\tau,
+\qquad P[f]=2|C(f)|^2-2|S(f)|^2.
+\]
+The letter $B$ denotes a scalar frequency response; $K$ denotes the
+quadratic functional obtained by weighting all Fourier components with
+that response. The argument $s=\tau^2$ is squared spatial frequency,
+not a time or a zeta shift.
+
+Write $\ell_p=\log p$ and $r_p=p^{-1/2}$ for a prime $p$.
+Since $\Lambda(p^m)=\log p$ and $\Lambda(n)=0$ off prime powers,
+Plancherel's identity rewrites the full central form exactly as
+\[
+\boxed{\begin{aligned}
+Q_{0,L}[f]={}&K[\widetilde f]+w_0\lVert f\rVert^2+P[f]\\
+&-\sum_{\substack{p\ {\rm prime},\ m\geq1\\m\ell_p<L}}
+\ell_pr_p^m\,
+\langle f,(T_{m\ell_p}+T_{m\ell_p}^*)f\rangle .
+\end{aligned}}
+\]
+In particular,
+\[
+Q^\gamma_{0,L}[f]=K[\widetilde f]+w_0\lVert f\rVert^2+P[f].
+\]
+Thus the gamma kinetic energy is $K$, while the gamma form in this
+document includes the contact and pole terms as well. Even on a
+prime-free interval, the full form is generally not equal to $K$.
+This decomposition is an arithmetic identity; it does not assert
+positivity of its signed terms or of their sum.
+
+The positive structure of $B$ follows from the digamma partial-fraction
+identity \cite[\S5.7]{DLMF}. With $a_k=2k+1/2$,
+\[
+\begin{aligned}
+B(\tau^2)
+&=\sum_{k=0}^\infty
+\left(\frac{1}{k+1/4}
+-\frac{k+1/4}{(k+1/4)^2+\tau^2/4}\right)\\
+&=\sum_{k=0}^\infty\frac{2}{a_k}
+\frac{\tau^2}{a_k^2+\tau^2}\geq0.
+\end{aligned}
+\]
+Each difference is nonnegative, and the series converges with terms
+$O_\tau(k^{-3})$. Therefore $K\geq0$ on its form domain. The later
+bulk--boundary construction derives each summand as the minimum of a
+positive field energy. The other terms in the boxed decomposition
+specify what a full positive realization must still reproduce.
+
+\subsection{The quantifiers in the RH criterion}
+\label{subsec:rh-criterion}
+
+Weil's positivity criterion, in its smooth compact-support formulation
+\cite[\S1.1]{SuzukiScrewBackground}, states
+\begin{equation}
+\boxed{\mathrm{RH}\quad\Longleftrightarrow\quad
+Q_{0,L}[f]\geq0
+\quad\text{for every }L>0
+\text{ and every }f\in C_c^\infty(I_L).}
+\label{eq:rh-criterion}
+\end{equation}
+Complex-valued test functions are allowed. Every compactly supported
+smooth function on $\mathbb R$ belongs to $C_c^\infty(I_L)$ for some
+$L$, and \eqref{eq:rh-central} agrees on that input at every larger
+length. Conversely, every such finite-interval input is a whole-line
+test function. This explains the equivalence between the usual global
+criterion and \eqref{eq:rh-criterion}. By the core property, one may
+equivalently require nonnegativity on every $\mathcal D_{\log,L}$.
+
+In particular, the first subscript in $Q_{0,L}$ has already fixed
+$\omega=0$. The remaining quantifiers range over the length and
+\emph{all} inputs, including inputs outside any chosen finite-dimensional
+approximation. Positivity here means nonnegativity. A lower bound
+$Q_{0,L}[f]\geq m_L\lVert f\rVert^2$ with $m_L>0$ is useful for
+quantitative arguments, but the criterion requires no positive constant
+independent of $L$.
+
+An unbounded sequence of covered lengths suffices: any fixed input
+eventually fits in one of them. A finite collection of lengths does not
+suffice, and decomposing a long input into short pieces introduces cross
+terms that must also be controlled.
+
+\subsection{The shifted transfer and its generator}
+\label{subsec:rh-shift}
+
+Define the completed zeta function and its central translate by
+\[
+\xi(s)=\tfrac12s(s-1)\pi^{-s/2}\Gamma(s/2)\zeta(s),
+\qquad F(p)=\xi(\tfrac12+p).
+\]
+For $0<\omega\leq1/2$ the causal transfer has Laplace symbol
+\begin{equation}
+K_\omega(p)=\frac{F(p-\omega)}{F(p+\omega)},\qquad
+\Theta_\omega(z)=K_\omega(-iz)
+=\frac{\xi(1/2-\omega-iz)}{\xi(1/2+\omega-iz)}.
+\label{eq:rh-transfer}
+\end{equation}
+The causal realization is defined on a line $\operatorname{Re}p=\eta>1$,
+where the relevant zeta Dirichlet series converge absolutely and the
+denominator is nonzero. Let $k_\omega$ be its inverse Laplace kernel,
+supported in $[0,\infty)$. Then
+$V_{\omega,L}f=(k_\omega*\widetilde f)|_{I_L}$.
+Equivalently, identify interval inputs with their zero extensions,
+let $P_L$ multiply by $\mathbf1_{I_L}$ on the whole line, and let
+$M_\eta$ multiply by $e^{-\eta x}$. Then
+\[
+V_{\omega,L}
+=M_\eta^{-1}P_L\,\mathcal M[K_\omega(\eta+i\,\cdot)]\,P_LM_\eta ,
+\]
+where $\mathcal M[b]$ denotes the whole-line Fourier multiplier by $b$.
+This defines a bounded finite-interval operator; it does not assume a
+bounded whole-line transfer on the unweighted space. At zero shift
+$K_0=1$ and $V_{0,L}=I$ as a strong limit.
+
+The symmetric generator form can be specified directly on
+$\mathcal D_{\log,L}$. Put
+$R(t)=2\cosh(t/2)-e^{-t/2}/(1-e^{-2t})$ for $t>0$. Then
+\begin{align}
+Q_{\omega,L}[f]={}&Q_{0,L}[f]
++\int_{I_L^2}\bigl(\cosh(\omega|x-y|)-1\bigr)R(|x-y|)
+\overline{f(x)}f(y)\,dx\,dy \notag\\
+&-\sum_{\substack{n\ge2\\\log n<L}}\frac{\Lambda(n)}{\sqrt n}
+\bigl(\cosh(\omega\log n)-1\bigr)
+\langle f,(T_{\log n}+T_{\log n}^*)f\rangle .
+\label{eq:rh-shift-form}
+\end{align}
+The added integral kernel is $O(|x-y|)$ at the diagonal. Together with
+the finite delay sum this yields, for each fixed $L$, a constant $C_L$
+such that
+\begin{equation}
+|Q_{\omega,L}[f]-Q_{0,L}[f]|
+\leq C_L\omega^2\lVert f\rVert^2,\qquad 0\leq\omega\leq\tfrac12.
+\label{eq:rh-shift-bound}
+\end{equation}
+The bound concerns the bounded difference of two generally unbounded
+forms. Formula \eqref{eq:rh-shift-form} also specifies the endpoint
+$\omega=1/2$ without dropping a distributional correction.
+
+For completeness, logarithmic differentiation of \eqref{eq:rh-transfer}
+gives the causal generator symbol
+\[
+a_\omega(p)=\frac{F'(p-\omega)}{F(p-\omega)}
++\frac{F'(p+\omega)}{F(p+\omega)},\qquad
+\partial_\omega K_\omega=-a_\omega K_\omega .
+\]
+Writing $\xi$ as its gamma, pole and zeta factors identifies
+$\operatorname{Re}\langle g,G_{\omega,L}g\rangle=Q_{\omega,L}[g]$,
+where $G_{\omega,L}$ is the causal operator with symbol $a_\omega$.
+In particular, the zeta logarithmic derivative contributes
+$-2\sum_{\log n<L}\Lambda(n)n^{-1/2}
+\cosh(\omega\log n)T_{\log n}$ before symmetrization.
+The gamma integral and the pole factors give the kernel in
+\eqref{eq:rh-shift-form}.
+
+\paragraph{The gamma kinetic term as an infinitesimal shift response.}
+Isolating the gamma and $\pi$ factors of $K_\omega$ gives
+\[
+K^\Gamma_\omega(p)
+=\pi^\omega
+\frac{\Gamma(1/4+p/2-\omega/2)}
+     {\Gamma(1/4+p/2+\omega/2)}.
+\]
+Direct logarithmic differentiation yields
+\[
+-\left.\partial_\omega\log K^\Gamma_\omega(p)\right|_{\omega=0}
+=\psi(1/4+p/2)-\log\pi.
+\]
+The gamma expression is regular at $p=i\tau$, so its real part is
+\[
+\operatorname{Re}\!\left[
+-\left.\partial_\omega\log K^\Gamma_\omega(i\tau)\right|_{\omega=0}
+\right]=B(\tau^2)+w_0.
+\]
+This is the arithmetic origin of the kinetic multiplier. The positive
+tower realizes the $B$ portion of the zero-shift generator, not the
+finite-shift transfer itself. Its fields therefore remain nontrivial
+at $\omega=0$, although $K_0=1$ and $D_{0,L}=0$, with the contraction
+defect $D_{\omega,L}$ defined below. Evaluating this gamma expression
+on the imaginary axis does not replace the right-half-plane causal
+definition of the full zeta transfer.
+
+For fixed $L$, first choose a test function $f\in C_c^\infty(I_L)$:
+a smooth, possibly complex-valued input compactly supported inside
+$I_L$. Keep $f$ fixed as $\omega$ varies. The evolution and its
+scalar energy balance are
+\begin{equation}
+\begin{aligned}
+\frac{d}{d\omega}(V_{\omega,L}f)
+&=-G_{\omega,L}(V_{\omega,L}f),\\
+\frac{d}{d\omega}\lVert V_{\omega,L}f\rVert_{L^2(I_L)}^2
+&=-2Q_{\omega,L}[V_{\omega,L}f].
+\end{aligned}
+\label{eq:rh-energy-derivative}
+\end{equation}
+The norm in the second line is the usual unweighted $L^2(I_L)$ norm,
+so its square is $\int_{I_L}|(V_{\omega,L}f)(x)|^2\,dx$.
+The brackets in $Q_{\omega,L}[V_{\omega,L}f]$ mean evaluation:
+first apply the linear operator $V_{\omega,L}$ to $f$, then evaluate
+the quadratic functional $Q_{\omega,L}$ on the resulting function
+to obtain a scalar energy. This is composition as maps, rather than
+a product of two linear operators. Products of operators below,
+such as $G_{\omega,L}V_{\omega,L}$, do denote operator composition.
+
+The first identity holds for every such $f$, so we may express it
+as an \emph{operator differential equation}:
+\[
+\boxed{\frac{\partial V_{\omega,L}}{\partial\omega}
+=-G_{\omega,L}V_{\omega,L},\qquad V_{0,L}=I.}
+\]
+Here $f$ has become implicit: the operator identity means that the
+two sides have equal action on every admissible test function.
+It describes the evolution of the entire transformation
+$V_{\omega,L}$, with $V_{0,L}f=f$ as its initial condition.
+
+The energy balance also has an operator version. The identity
+\[
+\lVert V_{\omega,L}f\rVert^2
+=\langle f,V_{\omega,L}^*V_{\omega,L}f\rangle
+\]
+identifies $V_{\omega,L}^*V_{\omega,L}$ as the operator representing
+the output norm squared. At positive shift, norm differentiability
+as justified below permits the product rule:
+\begin{align*}
+\frac{\partial}{\partial\omega}(V_{\omega,L}^*V_{\omega,L})
+&=\left(\frac{\partial V_{\omega,L}}{\partial\omega}\right)^*
+  V_{\omega,L}
+ +V_{\omega,L}^*\frac{\partial V_{\omega,L}}{\partial\omega}\\
+&=-(G_{\omega,L}V_{\omega,L})^*V_{\omega,L}
+  -V_{\omega,L}^*(G_{\omega,L}V_{\omega,L}).
+\end{align*}
+Consequently the contraction defect
+$D_{\omega,L}=I-V_{\omega,L}^*V_{\omega,L}$ satisfies the operator
+energy balance
+\[
+\boxed{\frac{\partial D_{\omega,L}}{\partial\omega}
+=V_{\omega,L}^*(G_{\omega,L}^*+G_{\omega,L})V_{\omega,L},
+\qquad D_{0,L}=0.}
+\]
+In this last formula the right-hand side is understood through
+quadratic forms: $G_{\omega,L}^*+G_{\omega,L}$ represents the
+symmetric generator form $2Q_{\omega,L}$, pulled back by
+$V_{\omega,L}$. The preceding product-rule expression specifies the
+bounded operator at positive shift without requiring the separate
+application of $G_{\omega,L}^*$ to an evolved input.
+Pairing with any admissible $f$ recovers the scalar energy balance
+in \eqref{eq:rh-energy-derivative}; conversely, its validity for every
+test function determines the symmetric form by polarization.
+Thus $f$ is implicit in the operator energy balance as well.
+
+At $\omega=0$ the evolution identity is interpreted by a right
+derivative on these test functions, and $V_{0,L}=I$ is a strong
+limit. No operator-norm derivative at zero is asserted.
+To justify these statements, the gamma ratio
+asymptotics and absolutely convergent Dirichlet series on
+$p=\eta+i\tau$ give, uniformly for $0\leq\omega\leq1/2$,
+\[
+|\partial_\omega^jK_\omega(\eta+i\tau)|
+\leq C_\eta(1+\log(2+|\tau|))^j(2+|\tau|)^{-\omega},
+\qquad j=0,1,2.
+\]
+For positive shift these bounds give differentiability and smoothing
+into $H^r$ for $0<r<\min(\omega,1/2)$, hence into the form domain.
+Causality permits compression of the generator identity to $I_L$.
+For smooth compactly supported initial data, rapid Fourier decay permits
+differentiation at zero by dominated convergence. Integrating from a
+positive shift and then taking its limit to zero gives the identities
+below. No bounded inverse of $V_{\omega,L}$ is needed.
+
+\subsection{Instantaneous energy, cumulative contraction, and the zero-shift limit}
+\label{subsec:rh-contraction}
+
+For the contraction defect just defined, integrating the energy
+balance in \eqref{eq:rh-energy-derivative} on smooth compactly
+supported inputs yields
+\begin{align}
+\langle f,D_{\omega,L}f\rangle
+&=\lVert f\rVert^2-\lVert V_{\omega,L}f\rVert^2
+=2\int_0^\omega Q_{s,L}[V_{s,L}f]\,ds,
+\label{eq:rh-storage}\\
+Q_{0,L}[f]&=
+\lim_{\omega\downarrow0}\frac{\langle f,D_{\omega,L}f\rangle}{2\omega}.
+\label{eq:rh-central-limit}
+\end{align}
+Here $s$ is a running shift. The generator controls instantaneous
+change, whereas $D_{\omega,L}$ records the accumulated change along
+the moving input $V_{s,L}f$.
+Nonnegativity of $D_{\omega,L}$ on every input is exactly the contraction
+condition $\lVert V_{\omega,L}\rVert\leq1$. Although $D_{0,L}=0$,
+its initial derivative contains the nontrivial central form.
+
+Positivity of $Q_{\omega,L}$ at all shifts is not the criterion
+\eqref{eq:rh-criterion}. It is an additional requirement on the family.
+Indeed, with $Xf(x)=xf(x)$, expansion of the kernels gives
+\begin{equation}
+Q_{\omega,L}[f]
+=Q_{0,L}[\cosh(\omega X)f]-Q_{0,L}[\sinh(\omega X)f].
+\label{eq:rh-hyperbolic}
+\end{equation}
+This is a difference of central energies; their individual
+nonnegativity does not supply the comparison needed for a nonnegative
+difference. Similarly, a negative instantaneous value on one input
+away from zero does not determine the sign of the cumulative integral
+\eqref{eq:rh-storage}.
+
+A useful sufficient local route starts with
+$Q_{0,L}\geq m_LI$, where $m_L>0$. Equations
+\eqref{eq:rh-shift-bound} and \eqref{eq:rh-energy-derivative} imply
+$Q_{s,L}\geq(m_L-C_Ls^2)I$, and integration gives
+\begin{equation}
+\lVert V_{\omega,L}\rVert
+\leq\exp(-m_L\omega+C_L\omega^3/3).
+\label{eq:rh-small-contraction}
+\end{equation}
+Thus sufficiently small positive shifts give contraction.
+Their allowed range may shrink with $L$; no common positive shift
+range is required for the following implication.
+
+The central-limit identity and restriction of causal outputs to shorter
+intervals give the following sufficient route directly.
+
+\begin{proposition}[A sufficient contraction route to RH]
+\label{prop:rh-diagonal}
+If there exist $L_j\to\infty$ and $0<\omega_j\downarrow0$ with
+$\lVert V_{\omega_j,L_j}\rVert\leq1$ for every $j$, then RH holds.
+\end{proposition}
+\begin{proof}
+Fix $L>0$ and $f\in C_c^\infty(I_L)$. For sufficiently large $j$,
+extend $f$ by zero into $I_{L_j}$ and restrict its output back to $I_L$.
+The causal convolution defining the transfers gives
+$\lVert V_{\omega_j,L}f\rVert\leq\lVert f\rVert$.
+The quotients in \eqref{eq:rh-central-limit} are therefore nonnegative
+along this sequence. Their limit gives $Q_{0,L}[f]\geq0$.
+The input and length were arbitrary, so \eqref{eq:rh-criterion} applies.
+\end{proof}
+
+The shift disappears from the conclusion because it has been sent to
+zero. This proposition is an auxiliary sufficient route; the central
+criterion itself is the equivalence \eqref{eq:rh-criterion}.
+If central positivity has already been established at arbitrarily
+large lengths, the contraction argument is unnecessary.
+
+\subsection{Positive factors as one route within the program}
+\label{subsec:rh-factor}
+
+The direct RH objective of a positive realization is an exact identity
+\begin{equation}
+Q_{0,L}[f]=\lVert A_{0,L}f\rVert_{\mathcal K_{0,L}}^2,
+\qquad f\in C_c^\infty(I_L),
+\label{eq:rh-factor-target}
+\end{equation}
+with $\mathcal K_{0,L}$ a positive Hilbert space and $A_{0,L}$ defined
+from arithmetic data without assuming the sign of the target form.
+The zero in both subscripts fixes $\omega=0$: this is the central
+identity, not a claim that the construction cannot depend on a shift.
+The shorter notation $A_L$ would mean $A_{0,L}$ here.
+If such a construction and its matching identity hold at arbitrary
+lengths, \eqref{eq:rh-criterion} proves RH directly. Separate
+finite-interval factors suffice for this implication; a single
+closable operator on ordinary whole-line $L^2$ is an additional
+operator-realization requirement.
+
+A shifted factorization would instead have the form
+\begin{equation}
+Q_{\omega,L}[f]
+=\lVert A_{\omega,L}f\rVert_{\mathcal K_{\omega,L}}^2,
+\qquad (\omega,L)\in\mathcal R ,
+\label{eq:rh-shift-factor-target}
+\end{equation}
+where $\mathcal R$ is the region of parameters on which this identity
+is proved, and the inputs range over the stated form domain.
+Its restriction at $\omega=0$ is \eqref{eq:rh-factor-target}.
+We do not require $\mathcal R$ to contain every shift at every length.
+For the direct RH route, it is enough to cover $(0,L)$ at arbitrarily
+large lengths. A model defined only for positive shifts would need a
+proved central limit, or the contraction route in
+Proposition~\ref{prop:rh-diagonal}.
+
+Supersymmetric notation organizes a suitable closed factor into an
+off-diagonal supercharge and a nonnegative partner Hamiltonian.
+The arithmetic content lies in deriving \eqref{eq:rh-factor-target}.
+Choosing the target's spectral square root after assuming its positivity
+does not provide that derivation.
+
+A full factor proved only on a bounded range of support lengths has
+that restricted scope. A factor of $K$ alone, or an identity on a
+proper subspace of inputs, also requires an additional argument to
+reach the full central criterion. The gamma kinetic factor is derived
+explicitly below. A full shifted factor, where available, would enter
+the accumulated-energy identity at the end of the bulk discussion;
+no such factor is assumed in deriving the shift-energy balance itself.
+
+\subsection{What a bulk--boundary realization would mean}
+\label{subsec:rh-bulk}
+
+The factor $A_{\omega,L}$ need not act through a local expression in
+the input coordinate alone. It could arise by solving for auxiliary
+fields and evaluating their positive energy. In this interpretation,
+the \emph{boundary data} are the prescribed input $f$ and the
+\emph{bulk variables} are the additional degrees of freedom allowed
+to adjust to that input. The construction has three steps: prescribe
+the boundary input, solve for the bulk configuration of least energy,
+and express that minimum using the boundary input alone. The last
+step can produce a nonlocal quadratic form even when the unreduced
+energy involves only local fields and derivatives.
+
+\paragraph{What the boundary map does.}
+Let $\mathcal X_{\omega,L}$ be a linear space of admissible bulk
+configurations, with its specified regularity and finite-energy
+conditions. A linear boundary map
+\[
+\operatorname{Tr}:\mathcal X_{\omega,L}\longrightarrow\mathcal B_L,
+\qquad U\longmapsto\operatorname{Tr}U
+\]
+extracts the input visible at the boundary. Here $\mathcal B_L$ is
+the space of allowed boundary functions, with a topology appropriate
+to the construction; it must contain the test functions required
+by the proposed matching identity. The notation denotes a
+\emph{trace map}, not the matrix or operator trace.
+
+For a geometric field, the model case is
+$(\operatorname{Tr}U)(x)=U(x,0)$. The variable $x$ still runs over
+the input interval: the boundary datum is the entire function
+$f(x)$, not just its values at $x=\pm L/2$. If the bulk occupies
+$\mathbb R\times(0,\infty)$, one can prescribe the whole lower-edge
+trace to be the zero extension $\widetilde f$; we then identify
+that trace with $f$ on $I_L$. For nonsmooth fields, boundary
+restriction must be defined as a continuous trace in the chosen
+energy-space topology, rather than by pointwise evaluation.
+
+For an auxiliary-channel configuration
+$U=(f,u_0,u_1,\ldots)$, the same notation simply means the projection
+$\operatorname{Tr}U=f$. There need not be an additional continuous
+coordinate or a geometric edge. In either case, the trace selects
+the prescribed data; it does not determine the other components
+of $U$. Their determination is the role of the energy minimization.
+Conditions at other edges or at infinity belong to the bulk
+domain and must also be specified.
+
+\paragraph{Fixing the boundary and minimizing the interior.}
+Suppose the system has an independently defined nonnegative
+quadratic energy $\mathcal E_{\omega,L}[U]$. For each fixed $f$,
+consider \emph{all} admissible configurations satisfying
+$\operatorname{Tr}U=f$. Only the bulk variables vary in this
+minimization; $f$, $\omega$ and $L$ remain fixed. The proposed
+arithmetic matching is
+\begin{equation}
+Q_{\omega,L}[f]
+\ \stackrel{\text{target}}{=}\
+\mathcal E_{\omega,L}^{\mathrm{eff}}[f]
+:=\inf_{\operatorname{Tr}U=f}\mathcal E_{\omega,L}[U].
+\label{eq:rh-bulk-target}
+\end{equation}
+The effective energy is the least cost of sustaining that boundary
+profile. A chosen extension gives an upper bound on this cost;
+it gives the exact cost only when it minimizes the energy.
+The admissible class must be nonempty and contain a finite-energy
+configuration for every required $f$. Since every competing energy
+is nonnegative, its infimum is nonnegative as well. Existence of an
+actual minimizer is a further analytical question, not a consequence
+of nonnegativity alone.
+
+To see how one finds the minimizer, temporarily suppress $\omega,L$.
+Write $\mathcal E[U]=e(U,U)$, where $e$ is a Hermitian
+sesquilinear form. Choose any admissible lift $Rf$ with
+$\operatorname{Tr}(Rf)=f$. Every competitor then has the form
+\[
+U=Rf+h,\qquad h\in\mathcal N:=\ker\operatorname{Tr}.
+\]
+Thus $\mathcal N$ consists precisely of variations that leave the
+boundary fixed. If $\mathcal P f$ is a minimizer, variations by
+$t h$ and $it h$, with real $t$, give the weak equilibrium equations
+\[
+\operatorname{Tr}(\mathcal P f)=f,\qquad
+e(h,\mathcal P f)=0\quad\text{for every }h\in\mathcal N.
+\]
+The first equation prescribes the boundary; the second says that
+the energy cannot be lowered by changing only the interior.
+It is the Euler--Lagrange equation of the bulk problem. In fact,
+for every $h\in\mathcal N$ it gives the exact decomposition
+\[
+\mathcal E[\mathcal P f+h]
+=\mathcal E[\mathcal P f]+\mathcal E[h],
+\]
+which verifies minimality directly.
+
+One sufficient setting for a unique linear extension
+$f\mapsto\mathcal P f$ is a Hilbert bulk space with continuous trace,
+a bounded linear lift $R$ from the chosen boundary space, and a
+continuous form $e$ satisfying
+$e(h,h)\geq c\lVert h\rVert_{\mathcal X}^2$ on $\mathcal N$ for
+some $c>0$. The correction $h_f$ is then the unique solution of
+$e(h,h_f)=-e(h,Rf)$ for all $h\in\mathcal N$, and
+$\mathcal P f=Rf+h_f$ is linear in $f$. These are sufficient
+hypotheses, not assumptions already proved for an arithmetic
+completion. In degenerate or infinite-channel models, one must
+instead justify the relevant completion, possible zero-energy
+quotient, and attainment on the stated domain.
+
+\paragraph{From the minimizing field to a boundary factor.}
+Restore the parameters and suppose the bulk energy is given
+independently as
+$\mathcal E_{\omega,L}[U]
+=\lVert\mathcal C_{\omega,L}U\rVert_{\mathcal K_{\omega,L}}^2$.
+For a local field theory, $\mathcal C_{\omega,L}U$ can be a list
+of weighted derivatives and field combinations; for a network,
+it can be a list of edge differences and local amplitudes.
+If a linear minimizing extension $\mathcal P_{\omega,L}$ exists,
+the construction reads
+\[
+f\ \overset{\mathcal P_{\omega,L}}{\longmapsto}\ U_{\min}
+\ \overset{\mathcal C_{\omega,L}}{\longmapsto}\ \text{energy amplitudes},
+\qquad
+\operatorname{Tr}\mathcal P_{\omega,L}=I.
+\]
+Consequently
+\[
+A_{\omega,L}:=\mathcal C_{\omega,L}\mathcal P_{\omega,L},
+\qquad
+\mathcal E_{\omega,L}^{\mathrm{eff}}[f]
+=\lVert A_{\omega,L}f\rVert^2.
+\]
+Here the trace goes from bulk to boundary, whereas the minimizing
+extension goes from boundary to bulk. Their composition above is
+the identity on boundary inputs; $\mathcal P_{\omega,L}
+\operatorname{Tr}$ generally replaces a bulk field by its
+equilibrium extension rather than returning that field unchanged.
+The factor $A_{\omega,L}$ records the energy amplitudes of this
+extension. Its definition comes from solving the bulk equations,
+and can therefore be nonlocal in $f$.
+
+Polarization gives the effective sesquilinear form
+$e^{\mathrm{eff}}(g,f)
+=\langle A_{\omega,L}g,A_{\omega,L}f\rangle$.
+If this reduced form is densely defined and closed on $L^2(I_L)$,
+it determines a nonnegative self-adjoint boundary operator
+$\mathsf S_{\omega,L}$, characterized by
+\[
+e^{\mathrm{eff}}(g,f)
+=\langle g,\mathsf S_{\omega,L}f\rangle
+\]
+for $f$ in its operator domain and $g$ in its form domain.
+When $A_{\omega,L}$ is taken as a closed factor, this is the
+operator $A_{\omega,L}^*A_{\omega,L}$. The boundary map
+$\operatorname{Tr}$ and the boundary operator $\mathsf S_{\omega,L}$
+thus have different jobs: one selects prescribed data, while the
+other describes the response after the bulk has equilibrated.
+Neither the trace nor the minimizing extension is assumed bounded
+in the ordinary $L^2$ norm merely because the notation resembles
+that of finite matrices.
+
+\paragraph{The same mechanism in block form.}
+The algebra can be seen completely in a finite-dimensional
+quadratic system. Separate the fixed boundary vector $f$ from
+the free interior vector $u$, and let
+\[
+\mathcal E[f,u]
+=
+\begin{pmatrix}f\\u\end{pmatrix}^{\!*}
+\begin{pmatrix}
+H_{\mathrm{bb}}&H_{\mathrm{bi}}\\
+H_{\mathrm{ib}}&H_{\mathrm{ii}}
+\end{pmatrix}
+\begin{pmatrix}f\\u\end{pmatrix},
+\qquad H_{\mathrm{ib}}=H_{\mathrm{bi}}^*.
+\]
+Assume the full block matrix is nonnegative and
+$H_{\mathrm{ii}}$ is positive definite. Here
+$\operatorname{Tr}(f,u)=f$. Minimizing over $u$ gives
+\[
+u_{\min}=-H_{\mathrm{ii}}^{-1}H_{\mathrm{ib}}f,\qquad
+\mathsf S=H_{\mathrm{bb}}
+-H_{\mathrm{bi}}H_{\mathrm{ii}}^{-1}H_{\mathrm{ib}}.
+\]
+Indeed, completing the square yields
+\[
+\mathcal E[f,u]
+=\langle f,\mathsf S f\rangle
++\bigl\lVert H_{\mathrm{ii}}^{1/2}
+  (u+H_{\mathrm{ii}}^{-1}H_{\mathrm{ib}}f)\bigr\rVert^2.
+\]
+Thus $\mathcal E^{\mathrm{eff}}[f]=\langle f,\mathsf S f\rangle$;
+the matrix $\mathsf S$ is the \emph{Schur complement}.
+The subtracted term describes the energy reduction obtained by
+allowing the interior to relax. Positivity of $\mathsf S$ follows
+from positivity of the \emph{full} energy matrix. Positivity of the
+interior block alone would not suffice. Even if the original
+couplings are local or sparse, the inverse interior operator can
+couple distant boundary inputs. This is the algebraic reason that
+eliminating local bulk fields can produce a nonlocal boundary form.
+For differential operators or infinitely many channels, the same
+calculation requires a form-domain and convergence argument.
+
+In a geometric extension this reduced response is often called a
+\emph{Dirichlet-to-Neumann map}: prescribe the boundary value
+(Dirichlet data), solve the equilibrium equation, and read the
+outward normal flux (Neumann data). For a regular weighted energy
+$\int a(y)|\nabla U|^2\,dx\,dy$, integration by parts in an
+equilibrium field identifies the effective energy with the
+boundary pairing against that flux, with the remaining boundary
+terms fixed by the domain. The trace itself only reads $U(x,0)$;
+the flux response also depends on the solved field.
+Positive extension realizations of functions of the Laplace
+operator provide a rigorous setting for this mechanism
+\cite{KwasnickiMuchaBackground}.
+
+\paragraph{What must match the arithmetic form.}
+The qualifier \emph{target} in \eqref{eq:rh-bulk-target} separates
+the variational construction from the arithmetic theorem still
+required. One must specify a bulk energy and its domains from
+independent data, solve or characterize the constrained minimum,
+and compute the resulting boundary form. That computation must
+reproduce $Q_{\omega,L}$ with its exact normalization and signs.
+For RH, the required central identity includes the gamma term,
+the pole terms and every active prime delay at arbitrarily large
+lengths. A successful match then supplies
+$Q_{0,L}[f]=\lVert A_{0,L}f\rVert^2$ and invokes
+\eqref{eq:rh-criterion}. A positive bulk system by itself proves
+positivity of its own reduced form; identifying that form with the
+Weil form is the substantive research problem.
+
+\paragraph{An explicit positive realization of the gamma kinetic term.}
+We now derive the bulk mechanism for the kinetic component of the
+opening decomposition. The construction uses the positive partial
+fractions of the digamma function and does not assume the sign of
+the full Weil form. Recall $a_k=2k+1/2$ and
+\begin{align}
+B(s)&=\sum_{k=0}^{\infty}\frac2{a_k}\frac{s}{a_k^2+s},
+\qquad s\geq0,\notag\\
+K[\widetilde f]&=
+\frac1{2\pi}\int_{\mathbb R}B(\tau^2)|\widehat f(\tau)|^2\,d\tau .
+\label{eq:rh-kinetic}
+\end{align}
+The partial-fraction calculation in the opening subsection identifies
+this series with the gamma multiplier. Equivalently, set
+\[
+j(y)=\sum_{k=0}^\infty e^{-a_ky}
+=\frac{e^{-y/2}}{1-e^{-2y}},\qquad y>0.
+\]
+Then
+\[
+\begin{aligned}
+2\int_0^\infty e^{-ay}(1-\cos(\tau y))\,dy
+&=\frac2a\frac{\tau^2}{a^2+\tau^2},\\
+B(\tau^2)&=2\int_0^\infty j(y)(1-\cos(\tau y))\,dy.
+\end{aligned}
+\]
+Tonelli's theorem applies to these nonnegative integrands. Near zero,
+$j(y)\sim1/(2y)$ and $1-\cos(\tau y)=O(y^2)$; at infinity $j$
+decays exponentially. This verifies convergence of the integral.
+
+The term \emph{kinetic} describes the dependence on spatial variation.
+Here the response is nonlocal, with logarithmic growth at high
+frequency. It is not the ordinary local $\lVert f'\rVert^2$ energy.
+For example, writing $F=\widetilde f$ and applying Plancherel,
+\[
+K[F]=\int_0^\infty j(y)
+\lVert F-F(\,\cdot-y)\rVert_{L^2(\mathbb R)}^2\,dy.
+\]
+The fields below realize this response by energies local in $x$
+before minimization.
+
+For auxiliary fields $u_k\in H^1(\mathbb R)$, define
+\begin{equation}
+\mathcal E^{\mathrm{kin}}[\widetilde f,(u_k)]
+=\sum_{k=0}^{\infty}\frac2{a_k}
+\int_{\mathbb R}
+\left(|\widetilde f-u_k|^2+a_k^{-2}|u_k'|^2\right)\,dx .
+\label{eq:rh-kinetic-bulk}
+\end{equation}
+Every term is nonnegative and local in $x$ before elimination.
+In the general notation above,
+$\operatorname{Tr}(\widetilde f,(u_k))=f$: the first component is
+fixed and the fields $u_k$ are varied independently.
+Their weak equilibrium equations are
+\[
+(1-a_k^{-2}\partial_x^2)u_k=\widetilde f
+\quad\text{on }\mathbb R.
+\]
+Solving these equations gives the minimizing extension
+$\mathcal P f=(\widetilde f,(u_k))$.
+Completion of the square at each Fourier frequency gives
+\begin{equation}
+\inf_{(u_k)}\mathcal E^{\mathrm{kin}}[\widetilde f,(u_k)]
+=K[\widetilde f],\qquad
+\widehat u_k(\tau)=\frac{a_k^2}{a_k^2+\tau^2}\widehat f(\tau).
+\label{eq:rh-kinetic-reduction}
+\end{equation}
+Here is the full one-channel calculation. At frequency $\tau$, put
+$\lambda=\tau^2/a^2$, $h=\widehat f(\tau)$ and $v=\widehat u(\tau)$.
+Completing the square gives
+\[
+|h-v|^2+\lambda|v|^2
+=(1+\lambda)\left|v-\frac{h}{1+\lambda}\right|^2
++\frac{\lambda}{1+\lambda}|h|^2.
+\]
+The unique minimizer and its real-space expression are
+\[
+\widehat u(\tau)=\frac{a^2}{a^2+\tau^2}\widehat f(\tau),
+\qquad
+u(x)=\frac a2\int_{\mathbb R}e^{-a|x-y|}\widetilde f(y)\,dy.
+\]
+For every $f\in L^2(I_L)$ this solution belongs to $H^2(\mathbb R)$,
+so it is an admissible $H^1$ field and solves the equilibrium equation.
+Its smoothing length is $a^{-1}$. Multiplying the minimum by $2/a$
+and applying Plancherel gives
+\[
+\inf_{u\in H^1(\mathbb R)}
+\frac2a\int_{\mathbb R}
+\left(|\widetilde f-u|^2+a^{-2}|u'|^2\right)\,dx
+=\frac1{2\pi}\int_{\mathbb R}
+\frac2a\frac{\tau^2}{a^2+\tau^2}|\widehat f(\tau)|^2\,d\tau.
+\]
+Every tower configuration has energy at least the sum of these channel
+minima. The family of channel minimizers attains that sum whenever it
+is finite. Monotone convergence of the nonnegative integrands gives
+the kinetic reduction above; the infimum and sum have not been
+interchanged without justification. Since
+$B(\tau^2)=\log(2+|\tau|)+O(1)$, finite minimized energy is equivalent
+to $f\in\mathcal D_{\log,L}$. The fields extend over the whole line
+even when the input is supported in $I_L$, and their exterior tails
+are included. Truncating the fields at the input endpoints would
+change the reduced energy.
+
+The corresponding bulk amplitude map is explicitly
+\[
+\mathcal C(\widetilde f,(u_k))
+=\left(
+\sqrt{\frac2{a_k}}(\widetilde f-u_k),
+\sqrt{\frac2{a_k^3}}\,u_k'
+\right)_{k\geq0}.
+\]
+Its target is the Hilbert direct sum of the displayed $L^2(\mathbb R)$
+components. Thus the factor produced by elimination is
+$A^{\mathrm{kin}}f=\mathcal C\mathcal P f$, and
+$\lVert A^{\mathrm{kin}}f\rVert^2=K[\widetilde f]$.
+The minimizing channel configuration has finite total energy precisely
+when the displayed kinetic integral is finite. This identifies the
+trace, equilibrium extension, amplitude map and reduced energy in
+one concrete instance of the general construction.
+
+\paragraph{What this construction establishes for the program.}
+The calculation realizes the arithmetic kinetic component as the
+minimum of an independently nonnegative local field energy:
+\[
+\boxed{
+K[\widetilde f]
+=\inf_{(u_k)}\mathcal E^{\mathrm{kin}}[\widetilde f,(u_k)]
+=\lVert A^{\mathrm{kin}}f\rVert^2\geq0.}
+\]
+This is the first constructive success of the proposed mechanism:
+one prescribed component is obtained exactly, with explicit field
+equations, an attained minimum and the required input domain. It
+also supplies a positive system whose couplings can be modified to
+seek the remaining arithmetic contributions. The masses and weights
+are chosen from the gamma identity; their realization does not show
+that supersymmetry selects them.
+
+The full target is the boxed decomposition in the opening subsection.
+The full central Weil form additionally contains
+$w_0\lVert f\rVert^2$, where $w_0=\psi(1/4)-\log\pi<0$,
+the pole terms, and the prime sum in \eqref{eq:rh-central}.
+Explaining these contributions within a common positive bulk energy
+is the remaining completion problem. The kinetic construction does
+not by itself solve it.
+
+\paragraph{Where the shift can enter a bulk description.}
+There are two distinct uses of $\omega$. In
+\eqref{eq:rh-bulk-target}, it is a parameter of the energy and boundary
+problem; the direct RH target evaluates that family at $\omega=0$.
+Alternatively, if the full generator factors are available for
+$0\leq s\leq\omega$, the shift-energy identity becomes
+\begin{equation}
+\langle f,D_{\omega,L}f\rangle
+=2\int_0^\omega
+\lVert A_{s,L}V_{s,L}f\rVert_{\mathcal K_{s,L}}^2\,ds .
+\label{eq:rh-shift-bulk-energy}
+\end{equation}
+This describes an accumulated positive energy on the strip
+$0<s<\omega$, with initial data $f$ and trajectory
+$g(s)=V_{s,L}f$. Its boundary observable is the contraction defect
+$D_{\omega,L}$; the central form is recovered from its initial rate
+by \eqref{eq:rh-central-limit}. This is a conditional identity: the full factors must first exist
+throughout the integration interval on the evolved inputs, with
+measurable and integrable squared amplitudes. The kinetic factor
+$A^{\mathrm{kin}}$ alone cannot be substituted for a full generator
+factor. An independent bulk explanation would also have to derive
+the factor and evolution
+from the specified system; writing the integral after those objects
+are known does not supply the missing arithmetic mechanism.
+
+The coordinate $x$ labels the original input, $L$ limits its support,
+and a geometric coordinate $y$ or channel index $k$ labels additional
+degrees of freedom. The zeta shift $\omega$ is not automatically that
+geometric coordinate. Using the running shift $s$ as an evolution
+coordinate in \eqref{eq:rh-shift-bulk-energy} is a specific
+interpretation with the displayed energy identity as its content.
+No AdS geometry, conformal field theory, or interacting supersymmetric
+field theory is assumed or established by these constructions.

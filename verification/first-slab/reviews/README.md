@@ -20,4 +20,4 @@ Numbers quoted in the round-1 report refer to the *31 Aug draft* (kernel bound
 corresponding v1.0 values are 0.012294, 9.9587e−5, 6.11635e−4 / 5.26167e−2
 (certified margins) and 6.1159e−4 / 5.2613e−2 (coercivity constants).
 
-[Storage-depth paper (v0.3, working draft)](../../../papers/storage-depth/README.md) · [All manuscripts](../../../papers/README.md)
+[Shifted-zeta program](../../../papers/shifted-zeta/README.md) · [All manuscripts](../../../papers/README.md)

@@ -50,7 +50,7 @@ and which are drafts.
    *version* DOI and the *concept* DOI.
 6. **Zenodo (paper records).** For each paper released for the first time in
    this tag: new upload, type *publication / preprint*, attach the PDF, paste
-   the metadata from `papers/<slug>/.zenodo.json`, add related identifier
+   the metadata from the paper folder's `.zenodo.json`, add related identifier
    `isPartOf` → the repository version DOI. Publish; copy the paper DOI.
 7. **Link back.** Edit the repository record on Zenodo: related identifier
    `hasPart` → each paper DOI. Add the same to the root `.zenodo.json` so the

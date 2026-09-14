@@ -1,6 +1,6 @@
 # Statement ledger (machine-readable)
 
-`ledger.yaml` mirrors the markdown blueprints in `../blueprint/` one record per
+`ledger.yaml` mirrors the markdown blueprints in `../blueprint` one record per
 statement, with the same ids. It exists so that scripts, dashboards, or a
 future leanblueprint project can read the status of every claim without
 parsing prose.
@@ -17,4 +17,4 @@ Update both the YAML and the markdown blueprint at every release; a
 verification report that closes an item changes `human_check.state` here and
 the corresponding row there.
 
-[Storage-depth paper (v0.3, working draft)](../papers/storage-depth/README.md) · [All manuscripts](../papers/README.md)
+[Shifted-zeta program](../papers/shifted-zeta/README.md) · [All manuscripts](../papers/README.md)

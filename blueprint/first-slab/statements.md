@@ -1,6 +1,6 @@
 # Statement inventory — *Archimedean first-slab positivity for shifted zeta canonical systems*
 
-**Version:** preprint v1.0 (5 Sept 2026), `papers/first-slab-positivity/first_slab_positivity.pdf`
+**Version:** preprint v1.0 (5 Sept 2026), `papers/shifted-zeta/first-slab-positivity/first_slab_positivity.pdf`
 **Machine-readable twin:** `statements/ledger.yaml` (ids `fs:S01`–`fs:S30`)
 **Human-check ids** refer to `verification/first-slab/CHECKLIST.md`.
 

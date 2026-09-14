@@ -1,0 +1,186 @@
+\section{Physical caps and the residue pairing}
+\label{sec:caps}
+The raw real-cycle period is a useful holomorphic diagnostic, but it is
+not yet a functional on physical vacua. This section constructs such
+functionals and fixes their normalization. All norms use ordinary
+Euclidean measure on $\C^2$, with $\norm{dz_j}^2=2$. We take Hermitian
+inner products to be antilinear in the first slot.
+
+\subsection{Compact representatives and long cylinders}
+For a strongly elliptic polynomial $f$, set
+\[
+D_f=\bar\partial+df\wedge,\qquad
+D_f^\dagger=2\sum_j
+ \left(-\iota_{\bar j}\partial_{z_j}+\overline{f_j}\iota_j\right),
+\qquad H_f=2\{D_f,D_f^\dagger\}.
+\]
+The realization is the closed Hilbert complex on square-integrable
+forms. Its finite-dimensional harmonic space is denoted $\mathcal V_f$.
+The polynomial models here satisfy the noncompact Hodge hypotheses;
+the degenerate homogeneous endpoint is checked in
+Section~\ref{sec:endpoints}. The relevant comparison theorem does not
+require Morse critical points \cite{LiWen}.
+
+Choose a compactly supported smooth cutoff $\chi$ equal to one near
+every critical point. Off this set, define
+\[
+V_f=\frac{(df\wedge)^\dagger}{|df|^2},\qquad
+N_f=[\bar\partial,V_f],\qquad
+\mathcal R_f=V_f(1+N_f)^{-1}.
+\]
+Brackets here are graded. The inverse is a finite series by bidegree,
+and $[D_f,\mathcal R_f]=1$. Consequently
+\begin{equation}\label{caps:cutoff}
+T_\chi=1-[D_f,(1-\chi)\mathcal R_f]
+       =\chi+\bar\partial\chi\wedge\mathcal R_f,
+\qquad [D_f,T_\chi]=0.
+\end{equation}
+For $\Omega=dz_1\wedge dz_2$ and a polynomial $p$, the form
+$u_p=T_\chi(p\Omega)$ is compactly supported and closed. Its physical
+cap is
+\begin{equation}\label{caps:heat}
+h_f(p)=P_fu_p=\lim_{t\to\infty}e^{-tH_f}u_p.
+\end{equation}
+This is a state preparation by a long Euclidean cylinder. At finite
+length the gluing identity is
+$\ip{e^{-tH_f}u_p}{e^{-tH_f}u_q}
+=\ip{u_p}{e^{-2tH_f}u_q}$; the limiting pairing is the ordinary
+positive harmonic Gram matrix.
+
+\begin{proposition}\label{caps:descent}
+The cap in \eqref{caps:heat} is cutoff independent and depends only
+on the Jacobi class of $p\Omega$.
+\end{proposition}
+\begin{proof}
+Differences of the cutoff operators in \eqref{caps:cutoff} are
+$D_f$-commutators supported away from critical points, so their
+action on a closed polynomial top form is compactly supported and
+exact. If $p\Omega=df\wedge\gamma$ with $\gamma$ a polynomial
+holomorphic one-form, then
+$T_\chi(p\Omega)=D_f(T_\chi\gamma)$ is also compactly supported and
+exact. Harmonic projection annihilates both kinds of difference.
+The Hodge--Jacobi comparison identifies the resulting classes with
+$\mathcal V_f$.
+\end{proof}
+
+The same assertion fails for the unmodified real-cycle integral.
+For $f_c=G_c/4$ and $s=A^2+B^2$, $q_4=A^4+B^4+A^2B^2$, let
+\[
+z_c=Af_{c,A}+Bf_{c,B}=\frac{s+cq_4}{4}.
+\]
+This is zero in the Jacobi ring. Real integration by parts nevertheless
+gives
+\[
+\frac1{2\pi}\int_{\R^2}z_c e^{-G_c}\,dA\,dB
+   =\frac12 \mathcal C(c)>0\qquad(c>0).
+\]
+Indeed, integrating the divergence of $(A,B)e^{-G_c}$ gives
+$\int (s+cq_4)e^{-G_c}=2\int e^{-G_c}$. Thus the raw period cannot
+be identified with a physical cap functional on the same source
+classes.
+
+\subsection{Opposite twist and absolute normalization}
+Let $U=(-1)^{\text{holomorphic degree}}$. It unitarily intertwines
+$f$ and $-f$. Hodge star followed by complex conjugation gives an
+antiunitary map $\mathfrak C:\mathcal V_{-f}\to\mathcal V_f$.
+In middle degree on $\C^2$, $\mathfrak C^2=1$ and
+$\mathfrak C U=U\mathfrak C$. Hence
+$\Theta=\mathfrak C U$ is an antiunitary involution of $\mathcal V_f$.
+The reflected caps and their functionals are
+\begin{equation}\label{caps:reflection}
+b_p=\Theta h_f(p),\qquad
+\ell_p(q)=\ip{b_p}{h_f(q)}
+ =\int_{\C^2}h_f(q)\wedge h_{-f}(p).
+\end{equation}
+The last pairing is complex bilinear. It is not a positive norm.
+Opposite twists are essential: for a form $a$ of degree $k$,
+\[
+\int D_fa\wedge b=(-1)^{k+1}\int a\wedge D_{-f}b.
+\]
+This identity supplies cohomological descent of the wedge pairing.
+
+The proportionality to the residue pairing is fixed by a Gaussian,
+not chosen to match an Euler factor. In one coordinate, for
+$f=az^2/2$ and $a\ne0$, representatives of $dz$ are
+\[
+\alpha_\pm=e^{-|a||z|^2}
+ \left(dz\mp\frac{\bar a}{|a|}\,d\bar z\right).
+\]
+Their exact class normalization follows by applying $D_{\pm f}$ to
+$(e^{-|a||z|^2}-1)/(\pm az)$. Direct integration gives
+$\norm{\alpha_\pm}^2=2\pi/|a|$ and
+$\int\alpha_+\wedge\alpha_-=-2\pi i/a$.
+The additional reordering sign for two coordinates yields
+$4\pi^2/(ab)$ for a diagonal Hessian $(a,b)$. With the residue
+orientation fixed by $\Omega$, localization and deformation of the
+cohomological pairing therefore give
+\begin{equation}\label{caps:residue}
+\ell_p(q)=4\pi^2\operatorname{Res}_f(pq).
+\end{equation}
+The opposite-twist Hodge pairing underlying this calculation is
+discussed in \cite{LiWen}; the displayed constant is specific to the
+Euclidean and differential conventions used here.
+
+In the shape frame $E$ of \eqref{shape:frame}, put
+\[
+\lambda=\frac{256\pi^2}{3},\qquad
+P=4\pi^2\eta_E
+ =\lambda
+\begin{pmatrix}
+0&0&1\\0&1&-4/3\\1&-4/3&4/9
+\end{pmatrix}.
+\]
+If $G_{ij}=\ip{h_i}{h_j}$ is the physical Gram matrix and
+$\mathcal B_{ij}=\ip{b_i}{b_j}$ is the cap Gram matrix, then
+\begin{equation}\label{caps:reality}
+\mathcal B=P G^{-1}P^\dagger=G^T=\bar G.
+\end{equation}
+The first equality is the Riesz representation formula; the second
+uses the antiunitary involution. In particular, residue data alone
+do not determine $G$.
+
+\subsection{The exact boundary Gram identity}
+For any positive finite-dimensional metric $G$ and genuine boundary
+map $v\mapsto y=Pv$, let $\mathcal B=PG^{-1}P^\dagger$. On the
+range of $P$, the minimum-norm state with boundary values $y$ is
+$v_{\min}=G^{-1}P^\dagger\mathcal B^+y$, where $+$ denotes the
+Moore--Penrose inverse. Orthogonal decomposition gives
+\begin{equation}\label{caps:gram}
+\norm v_G^2=y^\dagger\mathcal B^+y+
+             \norm{v-v_{\min}}_G^2.
+\end{equation}
+For one functional $\ell(v)=pv$ this reads
+$\norm v_G^2=|\ell(v)|^2/(pG^{-1}p^\dagger)+\norm{v_\perp}_G^2$.
+For invertible $P$ all states are detected and
+$G=P^\dagger\mathcal B^{-1}P$. This is the physical replacement for
+equating one raw period to one norm. For example,
+$\ell_1(1)=0$ although $\norm{h_f(1)}^2>0$; the top cap detects
+the identity through $\ell_v(1)=\lambda$.
+
+\subsection{A normalized homogeneous prime source}
+At $f_0=(Z^4+W^4+Z^2W^2)/16$, rotation symmetry makes the physical
+metric in $(1,s_0,t_0)\Omega_Z$, where
+$s_0=Z^2+W^2$ and $t_0=Z^2W^2$, diagonal. Its residue matrix is
+$\lambda$ times the anti-diagonal identity. Equation
+\eqref{caps:reality} then gives
+\begin{equation}\label{caps:homogeneous}
+G_0=\operatorname{diag}(a_0,\lambda,\lambda^2/a_0),
+\qquad a_0>0.
+\end{equation}
+The middle class is self-reflected after normalization:
+$\chi=h_{f_0}(s_0)/\sqrt\lambda$ has norm and bilinear self-pairing
+equal to one.
+
+For the homogeneous prime model
+$f_M=M^2(U^4+V^4+U^2V^2)/16$, $M\ne0$, the change of fields
+$\phi_M(U,V)=(\sqrt M\,U,\sqrt M\,V)$ gives the source
+\begin{equation}\label{caps:prime-source}
+\sigma_M=\frac{\sqrt3 M}{16\pi}(U^2+V^2)\,dU\wedge dV
+ =\frac{1}{M\sqrt\lambda}\phi_M^*(s_0\Omega_Z).
+\end{equation}
+Degree-two Euclidean norms are invariant under the relevant
+dilation. Thus its harmonic norm is $|M|^{-2}$ and its bilinear
+self-pairing is $M^{-2}$. Taking $M=1-q$ gives a normalized
+interacting Euler metric. This uses the middle Jacobi class,
+not the identity class. The mass direction is still a dilation
+and remains zero in the Jacobi ring.

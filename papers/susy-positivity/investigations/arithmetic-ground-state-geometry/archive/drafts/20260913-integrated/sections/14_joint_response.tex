@@ -1,0 +1,312 @@
+\section{Joint response and an exact finite-dimensional remainder}
+\label{sec:joint}
+The compact error in Section~\ref{sec:feedback} can be replaced by a
+finite-rank error. The construction uses a proved positive high
+sector and keeps every coupling to its finite-dimensional
+complement. It leads to an exact finite matrix criterion, whose
+sign remains to be established.
+
+\subsection{Choose the high sector without the Weil spectrum}
+For $q\in(0,1)$ put
+\[
+r_n(q)=\max_{1\le i\le n}
+ \left(\sum_{j=1}^{i-1}q^j+\sum_{j=1}^{n-i}q^j\right),\qquad
+n_p=\lceil L/\log p\rceil.
+\]
+The row-sum bound on the finite prime chains in
+\eqref{prime:finite-contact}, the negative odd pole bound and
+Theorem~\ref{source:bracket} give
+\begin{equation}\label{joint:beta}
+W_L\ge B(H_{\rm N})-\beta_LI,\qquad
+\beta_L=-w_0+2\sinh(L/2)-L+
+ \sum_{\log p<L}(\log p)r_{n_p}(p^{-1/2}).
+\end{equation}
+The coarser replacement of the last sum by
+$2\sum_{m\log p<L}(\log p)p^{-m/2}$ is also valid.
+
+Use the explicit Neumann modes
+\[
+e_0=L^{-1/2},\qquad
+e_j(x)=\sqrt{2/L}\cos(j\pi(x+L/2)/L)\quad(j\ge1),
+\qquad P=P_N=\sum_{j=0}^{N-1}e_je_j^*,\quad Q=I-P.
+\]
+Choose $N\ge1,\delta>0$ such that
+\begin{equation}\label{joint:cutoff}
+B((N\pi/L)^2)\ge\beta_L+\delta.
+\end{equation}
+Such choices exist at each fixed $L$. The restricted closed
+arithmetic form then satisfies $W_L|_{QX_L}\ge\delta I$.
+This is not a statement about the mixed low/high terms.
+The vectors $e_j$ belong even to $\Dom T_L$: their zero-extension
+Fourier transforms are $O_j((1+|\tau|)^{-1})$, which remain
+square-integrable after multiplication by $B(\tau^2)$.
+Thus $P$ preserves the form domain and $QW_LP$ is bounded and
+finite rank.
+
+There is a wholly rational example at $L=1$. Only prime two's
+first return is active, and
+\[
+\beta_1<
+\frac{58}{100}+\frac{11}{7}+\frac{21}{10}+\frac{23}{20}
+       +\frac{43}{1000}+\frac12
+=\frac{41611}{7000}.
+\]
+The bounds used here are
+$\gamma_{\!E}<0.58$, $\pi<22/7$, $\log2<0.7$,
+$\log\pi<23/20$, $2\sinh(1/2)-1<0.043$, and
+$\log2/\sqrt2<1/2$. They follow from positive or alternating
+rational series. For example
+$\log2=2\sum_{j\ge0}3^{-(2j+1)}/(2j+1)>6931/10000$,
+so $\gamma_{\!E}<H_{256}-8(6931/10000)<58/100$.
+The integral identities for $\arctan1$ and
+$22/7-\pi=\int_0^1x^4(1-x)^4/(1+x^2)\,dx$ give $3<\pi<22/7$.
+A finite exponential sum bounds $e^{23/20}$ from below by $22/7$;
+a geometric tail bounds the positive sinh series.
+Finally, exact fraction arithmetic gives
+\[
+B((4\pi)^2)>
+\sum_{k=0}^{63}\frac2{a_k}\frac{144}{a_k^2+144}
+>\frac{3007}{500}>
+\frac{41611}{7000}+\frac1{16}.
+\]
+Thus $N=4$, $\delta=1/16$ is a proved high-mode cutoff.
+It is not a certificate for the full form at $L=1$.
+
+\subsection{One field drives all channels}
+Combine the already specified sources in the same positive space:
+\begin{equation}\label{joint:reference}
+A=(A_0,J),\qquad
+T=A^*A=T_0+J^*J=W_L+\alpha I,\qquad
+\alpha=e^D+c_{\mathcal S}-w_0=2\kappa,\qquad T\ge mI.
+\end{equation}
+The domain is $\mathcal D_{\log,L}$ and $\Dom T=\Dom T_L$.
+Prepare a common field in both the gamma-and-pole source and
+every prime graph by minimizing
+$\norm{A_0u}^2+\norm{Ju}^2-2\re\ip v u$.
+Its response is $T^{-1}v$. A first joint readout obeys
+\[
+\norm{A(I-\alpha T^{-1}/2)f}^2
+ =Q_L[f]+\frac{\alpha^2}{4}\ip f{T^{-1}f}.
+\]
+Since $T\ge T_0>0$, this error is no greater than the earlier
+massless error. The full repeated response gives a stronger result.
+
+Restrict $A$ to $Q\mathcal D_{\log,L}$, denoting it $A_H$, and put
+\[
+T_H=A_H^*A_H,\qquad V=T_H^{-1},\qquad
+H=T_H-\alpha I\ge\delta I,\qquad
+B=QTP=QW_LP,\qquad M=PTP.
+\]
+In this section $B$ without an argument is the finite coupling
+matrix; $B(s)$ remains the gamma multiplier.
+The arithmetic content of the coupling is explicit:
+\[
+B=QT_LP+QP_LP-
+\sum_{m\log p<L}(\log p)p^{-m/2}
+                         Q(T_{m\log p}+T_{m\log p}^*)P .
+\]
+For $f=p+q$, with $p=Pf$, $q=Qf$, the exact form is
+\begin{equation}\label{joint:blocks}
+Q_L[p+q]=\ip q{Hq}+2\re\ip q{Bp}
+                          +\ip p{(M-\alpha I)p}.
+\end{equation}
+Terms involving $H$ are interpreted as forms on its form domain.
+
+\subsection{A convergent response series with all mixed returns}
+Let
+\[
+a_j=\frac{\binom{2j}{j}}{4^j(2j-1)},\qquad
+a_1=\frac12,\quad a_{j+1}=a_j\frac{2j-1}{2j+2},\qquad
+\theta=\frac{\alpha}{\alpha+\delta}<1.
+\]
+The operator series
+\begin{equation}\label{joint:series}
+R=I-\sum_{j\ge1}a_j\alpha^jV^j,\qquad
+R_\ell=I-\sum_{j=1}^{\ell}a_j\alpha^jV^j
+\end{equation}
+converges in norm and gives a positive invertible $R$ with
+\[
+R^2=I-\alpha V,\qquad RT_HR=H,\qquad
+\norm{A_HRq}^2=\ip q{Hq}.
+\]
+It is precisely the positive high-sector factor
+$(I-\alpha V)^{1/2}$. Its use is justified by the independent
+bound \eqref{joint:cutoff}; no sign of the full $W_L$ has been
+assumed.
+The stronger estimate needed for the unbounded output is
+\begin{equation}\label{joint:tail}
+\norm{A_H(R_\ell-R)}
+\le\frac{a_{\ell+1}\alpha^{\ell+1}}
+ {(1-\theta)(\alpha+\delta)^{\ell+1/2}}\longrightarrow0.
+\end{equation}
+Indeed the tail on an eigenvalue $\lambda\ge\alpha+\delta$ is
+$\sqrt\lambda\sum_{j>\ell}a_j(\alpha/\lambda)^j$.
+Moreover
+\begin{equation}\label{joint:positive-error}
+E_\ell:=T_HR_\ell^2-H\ge0,\qquad
+\norm{E_\ell}\le
+\frac{2a_{\ell+1}\alpha\theta^\ell}{1-\theta},
+\quad\ell\ge1.
+\end{equation}
+Each $E_\ell$ is compact. A small ratio $\delta/\alpha$ can make
+this convergence slow.
+
+To specify the noncommuting returns, write
+$T_H=T_{0,H}+K_H$ with $K_H=(J|_Q)^*(J|_Q)\ge0$.
+Choose the known bound
+$t=\sum_{p\in\mathcal S}4d_pq_p/(1-q_p^2)\ge\norm{K_H}$ and put
+$V_0=(T_{0,H}+tI)^{-1}$. Then
+\begin{equation}\label{joint:words}
+V=\sum_{j\ge0}[V_0(tI-K_H)]^jV_0,\qquad
+\norm{V_0(tI-K_H)}\le\frac{t}{m+t}<1,
+\end{equation}
+with just $V_0$ when $t=0$. Here
+\[
+K_H=c_{\mathcal S}I_{QX_L}-
+\sum_{m\log p<L}(\log p)p^{-m/2}
+                      Q(T_{m\log p}+T_{m\log p}^*)Q.
+\]
+The order of the intervening resolvents and compressions in
+\eqref{joint:words} retains every mixed gamma/prime return.
+Replacing these ordered words by scalar Euler multipliers would
+change the operator. Also
+$H^{-1}=\sum_{j\ge0}\alpha^jV^{j+1}$ converges in norm, supplying
+the second high-sector response below.
+
+\subsection{Retain the unused output and obtain finite-rank error}
+The range of $A_H$ is closed. Its orthogonal projection is the
+bounded extension $\Pi_H=A_HVA_H^*$. On a low input,
+\[
+Ap=A_HVBp+Zp,\qquad
+Z=(I-\Pi_H)A|_{PX_L},\qquad
+G:=Z^*Z=M-B^*VB\ge mI.
+\]
+The last bound follows by minimizing the known positive $T$-energy
+over the high input at fixed $p$. In particular no unknown
+arithmetic Schur complement has been declared positive.
+
+\begin{theorem}\label{joint:completion}
+In the original positive output space, define
+\begin{equation}\label{joint:source}
+\Phi_L(p+q)=A_HR(q+H^{-1}Bp)+Zp .
+\end{equation}
+It is a closed source on $\mathcal D_{\log,L}$, and for all
+inputs in that domain its polarized Gram identity is
+\begin{equation}\label{joint:gram}
+\ip{\Phi_Lf}{\Phi_Lg}=Q_L(f,g)+\ip{Pf}{D_NPg},
+\qquad
+D_N=\alpha I+B^*(H^{-1}-V)B
+    =\alpha(I+B^*VH^{-1}B)>0.
+\end{equation}
+The error operator $PD_NP$ has rank exactly $N$.
+\end{theorem}
+\begin{proof}
+The two outputs in \eqref{joint:source} are orthogonal. Expanding
+their norm with $RT_HR=H$ gives
+$\ip q{Hq}+2\re\ip q{Bp}
++\ip p{(G+B^*H^{-1}B)p}$.
+Subtract \eqref{joint:blocks}, use $G=M-B^*VB$, and use
+$H^{-1}-V=\alpha VH^{-1}\ge0$ to obtain \eqref{joint:gram}.
+Polarization gives the bilinear identity.
+For closedness subtract the original source:
+\begin{equation}\label{joint:correction}
+\Phi_L-A=A_H(R-I)Q+
+                 A_H(RH^{-1}-V)BP=:F.
+\end{equation}
+The first term extends to a compact bounded operator since its
+singular magnitude at $\lambda\in\operatorname{spec}T_H$ is
+\[
+\sqrt\lambda(1-\sqrt{1-\alpha/\lambda})
+ =\frac{\alpha}{\sqrt\lambda(1+\sqrt{1-\alpha/\lambda})}
+ \longrightarrow0.
+\]
+The second is bounded and finite rank. Thus $\Phi_L=A+F$ is a
+bounded perturbation of a closed source.
+\end{proof}
+
+It has the same graph topology and smooth compact-support core
+as $A$, and its maximal adjoint is
+$\Phi_L^*=A^*+F^*$ on $\Dom A^*$.
+Consequently
+$\Phi_L^*\Phi_L=W_L+PD_NP$ on $\Dom T_L$.
+Using $R_\ell$ instead of $R$ gives the exact additional error
+\[
+(Q+H^{-1}BP)^*E_\ell(Q+H^{-1}BP)\ge0,
+\]
+which tends to zero in operator norm by
+\eqref{joint:positive-error}.
+Finite series generally leave an infinite-rank extra error.
+
+The correction $F$ itself is not finite rank. Bounded-perturbation
+min--max and finite-codimension interlacing give
+$\lambda_n(T_H)=\log n+O_L(1)$.
+The displayed singular magnitude and finite-rank interlacing in
+\eqref{joint:correction} imply
+\begin{equation}\label{joint:singular}
+\sqrt{\log n}\,s_n(F)\longrightarrow\alpha/2.
+\end{equation}
+Thus the source correction remains outside every finite Schatten
+class, consistently with Section~\ref{sec:feedback}. Finite rank
+of the form error does not imply finite rank of the source change.
+
+\subsection{The exact remaining matrix criterion}
+Completing the high square in \eqref{joint:blocks} gives
+\begin{equation}\label{joint:schur}
+Q_L[p+q]=\norm{A_HR(q+H^{-1}Bp)}^2+\ip p{S_Np},
+\qquad
+S_N=M-\alpha I-B^*H^{-1}B=G-D_N.
+\end{equation}
+Since $q=-H^{-1}Bp$ is admissible for every $p$,
+\begin{equation}\label{joint:criterion}
+Q_L\ge0\quad\Longleftrightarrow\quad S_N\ge0
+\quad\Longleftrightarrow\quad G^{-1/2}D_NG^{-1/2}\le I.
+\end{equation}
+Both $G$ and $D_N$ are known positive matrices; their difference
+has no established sign. At $L=1$ the rational cutoff above makes
+this a four-by-four comparison, but no entries or positivity
+certificate for that arithmetic matrix are asserted.
+
+A rational non-arithmetic control makes the logical limit explicit.
+Take $\alpha=1$,
+\[
+T_H=\operatorname{diag}(25/16,25/9),\quad
+H=\operatorname{diag}(9/16,16/9),\quad
+B=\begin{pmatrix}1&2\\3&1\end{pmatrix},\quad
+Z_c=\begin{pmatrix}2&1\\0&1\end{pmatrix}.
+\]
+On two low and two high coordinates use the invertible source
+\[
+A=\begin{pmatrix}T_H^{-1/2}B&T_H^{1/2}\\Z_c&0\end{pmatrix},
+\qquad
+\Phi=\begin{pmatrix}H^{-1/2}B&H^{1/2}\\Z_c&0\end{pmatrix}.
+\]
+Their Gram identity holds exactly, with
+\[
+D_N=\frac1{3600}
+\begin{pmatrix}14257&10379\\10379&20713\end{pmatrix},\qquad
+S_N=\frac1{3600}
+\begin{pmatrix}143&-3179\\-3179&-13513\end{pmatrix}.
+\]
+The vector $p=(0,1)$, $q=(-32/9,-9/16)$ has
+$\ip{p+q}{(A^*A-I)(p+q)}=-13513/3600<0$.
+Thus a positive shifted source, a positive high sector and the
+completion identity can coexist with a negative full target.
+The reduction is valid for a wider class of semibounded forms;
+its existence alone cannot be an arithmetic positivity proof.
+
+\subsection{Compatibility inside a fixed support envelope}
+Construct $\Phi_*$ once on $I_{L_*}$, fixing its delay, prime set
+and mode projection. For $L\le L_*$ let $j_L$ be zero extension
+into that envelope. The restricted sources are closed on the
+full logarithmic domains, have the same smooth cores, and obey
+\begin{equation}\label{joint:envelope}
+\norm{\Phi_*j_Lf}^2
+=Q_L[f]+\ip f{j_L^*P_*D_*P_*j_Lf}.
+\end{equation}
+The complete arithmetic form is unchanged under the extension;
+the additional inactive prime overlaps vanish. These sources
+are compatible with nested intervals inside the fixed envelope.
+Rebuilding the source on a larger envelope generally changes
+the compressed error. No single all-support source or all-prime
+limit, and no rule allowing these errors to be subtracted, has
+been obtained.

@@ -37,7 +37,7 @@ def main() -> int:
     jsonschema.Draft7Validator.check_schema(schema)
     validator = jsonschema.Draft7Validator(schema, format_checker=jsonschema.FormatChecker())
     failed = False
-    for relative in ("CITATION.cff", "papers/first-slab-positivity/CITATION.cff"):
+    for relative in ("CITATION.cff", "papers/shifted-zeta/first-slab-positivity/CITATION.cff"):
         document = normalize_dates(yaml.safe_load((args.repo/relative).read_text()))
         errors = list(validator.iter_errors(document))
         if errors:

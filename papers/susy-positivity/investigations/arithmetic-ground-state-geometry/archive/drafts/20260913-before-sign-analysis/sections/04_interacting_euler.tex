@@ -1,0 +1,160 @@
+\section{Interacting prime fields: an exclusion and an exact Euler metric}
+\label{sec:quartic}
+The quadratic prime fields give an exact control, but only one vacuum. We now replace them by the cross-coupled polynomial
+\begin{equation}\label{qua:potential}
+F_{M,g,\lambda}(U,V)=\frac M2(U^2+V^2)+\frac g4(U^4+V^4)
++\frac\lambda2U^2V^2.
+\end{equation}
+The prime superpotential is $\mathcal W=F/2$; adjoining the cylinder gives
+$\mathcal W_{\rm full}=\tfrac12[e^Y-aY+F]$. All physical target metrics in this section are flat. The factor $1/2$ matters: the holomorphic period considered below has weight $e^{-2\mathcal W}=e^{-F}$, while the physical vacuum metric is defined by the supersymmetric Hilbert problem.
+
+\subsection{Nine isolated physical vacua}
+For definiteness take $M\ne0$, $g>0$ and $\lambda=g/2$. The critical equations are
+\[
+U(M+gU^2+\lambda V^2)=0,\qquad
+V(M+gV^2+\lambda U^2)=0.
+\]
+There is one origin, four axis points with the nonzero coordinate squared equal to $-M/g$, and four points with
+\[
+U^2=V^2=-M/(g+\lambda).
+\]
+The Hessian determinant is $M^2$ at the origin,
+$-2M^2(1-\lambda/g)$ at an axis point, and
+$4(g^2-\lambda^2)U^2V^2$ at a point with both coordinates nonzero. All nine points are nondegenerate.
+
+The homogeneous cubic gradient of the quartic part has no zero on the complex unit sphere when $g\ne0$ and $g^2\ne\lambda^2$. Compactness of that sphere gives constants with
+\[
+|\nabla F|\ge c_1R^3-c_2R,\qquad
+|\operatorname{Hess}F|\le c_3(1+R^2).
+\]
+The gradient square therefore dominates every fixed multiple of the Hessian at infinity. This verifies strong tameness on the complete K\"ahler--Stein target $\C^2$. The corresponding Landau--Ginzburg Hodge theorem identifies the physical vacuum space with the Jacobi classes in middle degree \cite{Fan}; its dimension here is nine. This use of the theorem supplies existence and the cohomological identification, not a formula for the metric.
+
+At fixed $g,\lambda$, the superpotential-variation observable is multiplication by
+$[\partial_M\mathcal W]=[(U^2+V^2)/4]$. Its critical-point values are
+$0$, $-M/(4g)$ and $-M/[2(g+\lambda)]$, with multiplicities $1,4,4$. In the twisted-Dolbeault convention specified below, the Higgs operator is half this variation. It is still nonscalar, so this interacting theory has room for nontrivial matrix geometry. Whether its observable retains the arithmetic factor is a separate test.
+
+\subsection{Every admissible identity period obeys a differential equation}
+Let $\Gamma_M$ be a locally flat family of rapid-decay relative cycles, with no finite-field boundary and sufficient decay for the following polynomial moments and integrations by parts. The coefficients of a transported cycle are fixed in relative homology; arbitrary constant complex combinations are allowed. Parameter-dependent fitted coefficients, singular insertions and nonvanishing boundary terms are not part of this class. The usual thimble description is one realization of these assumptions \cite{WittenCycles}.
+
+Write
+\[
+\langle P\rangle_M=\frac1{2\pi}\int_{\Gamma_M}P(U,V)e^{-F}\,dU\wedge dV,
+\quad s=U^2+V^2,\quad t=U^2V^2,
+\]
+and set $I=\langle1\rangle_M$, $A=\langle s\rangle_M$, $B=\langle t\rangle_M$. Differentiation keeps $g,\lambda$ fixed and gives
+\[
+I'=-A/2,\qquad A'=-\langle s^2\rangle_M/2,
+\qquad B'=-\langle st\rangle_M/2.
+\]
+The exact two-forms obtained by differentiating $Ue^{-F}$ and $Ve^{-F}$, and then $UV^2e^{-F}$ and $VU^2e^{-F}$, have vanishing boundary integrals. Their expansions are
+\[
+2I-MA-g\langle U^4+V^4\rangle_M-2\lambda B=0,
+\qquad A-2MB-(g+\lambda)\langle st\rangle_M=0.
+\]
+Consequently
+\begin{equation}\label{qua:moment-system}
+\begin{aligned}
+I'&=-A/2,\\
+A'&=-I/g+MA/(2g)-(g-\lambda)B/g,\\
+B'&=-A/[2(g+\lambda)]+MB/(g+\lambda).
+\end{aligned}
+\end{equation}
+For $g\ne\lambda$ one may eliminate the moments using
+\[
+A=-2I',\qquad B=\frac{2gI''-MI'-I}{g-\lambda}.
+\]
+Substitution yields
+\[
+2g(g+\lambda)I'''-(3g+\lambda)MI''
++[M^2-(3g+\lambda)]I'+MI=0.
+\]
+Only the subsystem probed by the identity insertion and mass derivatives has rank at most three; this does not reduce the full nine-dimensional vacuum space to three dimensions.
+
+\begin{theorem}[Fixed-coupling period exclusion]\label{qua:fixed-exclusion}
+Fix $g>0$ and $\lambda=g/2$. Every identity period in the preceding cycle class obeys
+\begin{equation}\label{qua:ode}
+\mathcal L_gI:=6g^2I'''-7gMI''+(2M^2-7g)I'+2MI=0.
+\end{equation}
+No such period can equal a nonzero constant multiple of $1/M$ on a nonempty open parameter region.
+\end{theorem}
+\begin{proof}
+The equation is the specialization of \eqref{qua:moment-system}. Direct substitution gives
+\begin{equation}\label{qua:residual}
+\mathcal L_g(1/M)=-\frac{g(7M^2+36g)}{M^4},
+\end{equation}
+which is not identically zero on any open region. Every constant combination of admissible periods obeys the same linear equation, so cancellation among saddle contributions cannot change the conclusion.
+\end{proof}
+The coefficients of \eqref{qua:ode} are entire in $M$ and its leading coefficient is nonzero. Hence every local solution continues to an entire solution in the finite $M$-plane. Fixed quartic confinement persists at $M=0$ even though critical points collide; the identity period cannot acquire the Gaussian Euler pole there. Stokes changes of an asymptotic cycle basis do not create a pole in a transported solution. This is stronger than the strict suppression of the real-cycle integral, which follows immediately from the positive real quartic term.
+
+\subsection{A mass-dependent interaction restores the period exactly}
+The fixed-coupling hypothesis is substantive. Let $c>0$ be constant and choose
+\begin{equation}\label{qua:scaled-couplings}
+g(M)=cM^2,\qquad \lambda(M)=cM^2/2.
+\end{equation}
+With
+\[
+G_c(A,B)=\tfrac12(A^2+B^2)+\tfrac c4(A^4+B^4+A^2B^2),
+\]
+one has the holomorphic change-of-variables identity
+\begin{equation}\label{qua:dilation}
+F_M(U,V)=G_c(\sqrt M\,U,\sqrt M\,V).
+\end{equation}
+For positive real $M$ use the real cycle. For nonzero complex $M$ use its dilation transport on a local square-root branch. Then
+\begin{equation}\label{qua:scaled-period}
+I_c(M)=\frac{C_c}{M},\qquad
+C_c=\frac1{2\pi}\int_{\R^2}e^{-G_c(A,B)}\,dA\,dB>0.
+\end{equation}
+The equality follows from $dA\wedge dB=M\,dU\wedge dV$, with no parameter-dependent fitted cycle coefficients. The fixed-coupling differential equation does not apply, because total differentiation now includes $g'(M)$ and $\lambda'(M)$.
+
+For each $M\ne0$, the theory remains strongly tame and has nine nondegenerate critical points. At $M=0$, all coefficients in $F_M$ vanish and confinement is lost. The eight nonzero critical points move to infinity like $M^{-1/2}$. The degeneration gives a physical location for the recovered pole.
+
+\subsection{The interacting physical metric has the same mass dependence}
+We specify the physical frame by the identity holomorphic volume class. The strongly tame Landau--Ginzburg Hodge identification gives its middle-degree harmonic representative, using the fixed normalization $\mathcal W=F/2$. The bridge to the twisted Dolbeault realization is explicit in the charge conventions of Section~\ref{ext-section}:
+\begin{equation}\label{qua:dolbeault-convention}
+D=\frac{Q_1-iQ_2}{2}=\bar\partial+\frac12\partial\mathcal W\wedge,
+\qquad \{D,D^\dagger\}=H/2.
+\end{equation}
+Thus it has the same physical harmonic kernel. Fan's differential $\bar\partial+\partial\mathfrak f\wedge$ corresponds here to $\mathfrak f=\mathcal W/2=F/4$. Its canonically normalized Higgs operator is $[\partial_M\mathfrak f]=\tfrac12[\partial_M\mathcal W]$. This constant scaling does not change the Jacobi ideal, but it fixes the normalization of any future nonzero curvature equation. All comparisons below use this same physical realization; a scalar period is not declared to be a norm.
+
+\begin{proposition}[Interacting physical Euler dependence]\label{qua:physical-metric}
+Let $\alpha_c$ be the physical harmonic representative of the identity class $dA\wedge dB$ for the reference theory $G_c/2$, and put $H_c=\norm{\alpha_c}^2>0$. For the family \eqref{qua:dilation}, the identity-class metric in the $(U,V)$ volume frame is
+\begin{equation}\label{qua:metric}
+h_c(M,\bar M)=\frac{H_c}{|M|^2},\qquad M\ne0.
+\end{equation}
+\end{proposition}
+\begin{proof}
+Let $\phi_M(U,V)=(\sqrt M\,U,\sqrt M\,V)$. It pulls back the reference flat metric to $|M|$ times the flat metric and pulls back the superpotential to the one at $M$. For a constant metric rescaling $g\mapsto ag$, a degree-one twisted exterior differential has adjoint and Laplacian
+\[
+d_h^{\dagger,ag}=a^{-1}d_h^{\dagger,g},\qquad
+\Delta_{h,ag}=a^{-1}\Delta_{h,g}.
+\]
+The same degree-counting statement holds in the twisted Dolbeault realization of the Jacobi identification. Thus constant rescaling changes no harmonic kernel. Pullback is consequently compatible with the harmonic representative and its holomorphic volume class.
+
+In real dimension four, the norm of a degree-two form satisfies
+$\norm\beta_{ag}^2=a^{4/2-2}\norm\beta_g^2=\norm\beta_g^2$.
+It follows that $\phi_M^*$ is an isometry on the middle-degree harmonic spaces when both original theories use the flat metric. Since
+$\phi_M^*(dA\wedge dB)=M\,dU\wedge dV$, uniqueness and linearity of harmonic representatives give
+\[
+\alpha_M=M^{-1}\phi_M^*\alpha_c,
+\]
+which proves \eqref{qua:metric}. Reversing the square-root branch composes with $(A,B)\mapsto(-A,-B)$. This preserves the potential, metric and identity volume class, so this source is unchanged; other classes may have monodromy.
+\end{proof}
+For $M=1-q$, division by the fixed reference norm gives exactly $|1-q|^{-2}$. This is a physical interacting Euler metric. It does not identify $H_c$ with $|C_c|^2$. A single source rescaling changes a period linearly and a norm quadratically, and therefore cannot independently set both constants to one. The normalized period and metric ratios at $M=1$ are exact without that extra assertion.
+
+\subsection{Why this interaction does not yet constrain the contact}
+Differentiate \eqref{qua:dilation} along the family \eqref{qua:scaled-couplings}. The chain rule gives
+\begin{equation}\label{qua:trivial-class}
+\partial_M F_M=\frac{U\partial_UF_M+V\partial_VF_M}{2M}.
+\end{equation}
+The right side belongs to the Jacobian ideal. Thus the projected chiral mass operator is zero in
+$\C[U,V]/(\partial_UF_M,\partial_VF_M)$. In an ordinary chiral $tt^*$ description this makes the curvature in the $M$ direction zero. Correspondingly,
+\[
+\partial_M\partial_{\bar M}\log h_c=0\quad(M\ne0),
+\]
+and the holomorphic frame change $\alpha_M\mapsto M\alpha_M$ removes the local denominator. The interaction is genuine at fixed $c$, but varying $M$ only dilates it. The source frame and the singular degeneration carry the Euler dependence.
+
+Interactions can therefore preserve an exact arithmetic local factor.
+To constrain the missing pairing one needs more than the field
+dilation in \eqref{qua:trivial-class}. Section~\ref{sec:shape}
+provides a genuine shape deformation, and Section~\ref{sec:caps}
+constructs a normalized physical source in a different Jacobi class.

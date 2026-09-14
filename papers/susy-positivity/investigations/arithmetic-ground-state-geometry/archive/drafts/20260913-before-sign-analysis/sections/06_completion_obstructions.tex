@@ -1,0 +1,284 @@
+\section{Completion obstructions and vector-parameter geometry}
+\label{obs-section}
+
+The positive normalized arithmetic jump energy is an exact control, but its
+conversion into the Weil form requires a negative contact and a signed pole
+contribution.  We first identify an obstruction to a scalar ground-state
+completion.  We then construct a vector-parameter connection compatible with
+the benchmark Berry curvature and show why that compatibility does not fix the
+missing contact.  Neither argument excludes positive bulk theories with more
+general source maps or internal degrees of freedom.
+
+\subsection{The complete form and its scalar ground transform}
+
+Fix $I=(-L/2,L/2)$ and a finite prime set $\mathcal S$ containing every prime
+with $\log p<L$.  For zero extensions $F=E_Lf$ and $G=E_Lg$, set
+\begin{gather}
+ n_\gamma(r)=\frac{e^{-|r|/2}}{1-e^{-2|r|}},\qquad
+ a_{p,m}=(\log p)p^{-m/2},\qquad d_{p,m}=m\log p,\nonumber\\
+ \nu_{\mathcal S}(dr)=n_\gamma(r)\,dr+
+ \sum_{p\in\mathcal S,m\ge1}a_{p,m}
+       (\delta_{d_{p,m}}+\delta_{-d_{p,m}})(dr),\label{obs-jump-measure}\\
+ j(f,g)=\frac12\int\nu_{\mathcal S}(dr)\int_\R
+ \overline{F(x+r)-F(x)}\,[G(x+r)-G(x)]\,dx.\label{obs-jump-form}
+\end{gather}
+The gamma density is of order $1/(2|r|)$ at zero, and the prime measure has
+finite mass.  Thus $j$ is the nonnegative gamma form plus a bounded
+perturbation, with the same logarithmic Fourier form domain.  Write $J$ for
+its associated operator.  The complete target has the exact form
+\begin{equation}
+ W_L=J-\kappa_{\mathcal S}I+P_L,
+ \qquad \kappa_{\mathcal S}=-w_0+2\sum_{p\in\mathcal S,m\ge1}a_{p,m}>0,
+ \qquad w_0=\psi(1/4)-\log\pi,
+ \label{obs-full-operator}
+\end{equation}
+where
+\begin{equation}
+ p(x,y)=2\cosh((x-y)/2),\qquad
+ P_L=2|c\rangle\langle c|-2|s\rangle\langle s|,
+ \quad c(x)=\cosh(x/2),\quad s(x)=\sinh(x/2).
+ \label{obs-pole-kernel}
+\end{equation}
+Although $p(x,y)$ is positive, $P_L$ is an indefinite rank-two operator.
+Inactive prime jumps contribute only a diagonal term to $j$, canceled by
+$\kappa_{\mathcal S}$; adding such primes does not change $W_L$.
+
+Let $\mu_{\mathcal S}$ be the internal jump measure on $I^2$ obtained from
+\eqref{obs-jump-measure}, and let
+$k_{\rm esc}(x)=\int_{x+r\notin I}\nu_{\mathcal S}(dr)$.
+Then $j$ is the internal difference form plus
+$\int_I k_{\rm esc}\overline f g$.
+Take a real $h\in C^1(\overline I)$ bounded above and bounded away from zero.
+All identities below hold first for $f=hu$, $g=hv$ with
+$u,v\in C_c^\infty(I)$ and with zero exterior values for $h$ in $Jh$.
+Expansion and symmetrization give
+\begin{equation}
+ j(hu,hv)=\frac12\int_{I^2}h(x)h(y)
+ (\overline{u(x)-u(y)})(v(x)-v(y))\,d\mu_{\mathcal S}
+ +\int_I h(Jh)\overline u v.
+ \label{obs-ground-identity}
+\end{equation}
+Consequently the potential $-(Jh)/h$ admits a positive incidence-square
+representation.  This is the useful scalar ground-state mechanism: a
+negative potential can arise from a positive energy after a change of
+ground state.  For example, $h=1$ removes the positive exterior escape
+rate.  Multiplying $h$ by a constant, however, does not change $(Jh)/h$.
+The normalization of a vacuum ray cannot select the prescribed contact.
+The incidence operator can be closed to define a positive form; identifying
+that closure with a prescribed operator sum is a further domain question.
+Our obstructions use only the displayed compactly supported core.
+
+The pole term has the corresponding identity
+\begin{equation}
+\begin{aligned}
+ \ip{f}{P_Lg}={}&\int_I r_P(x)\overline f g\\
+ &-\frac12\int_{I^2}p(x,y)
+       (\overline{f(x)-f(y)})(g(x)-g(y))\,dx\,dy,\\
+ r_P(x)={}&8\sinh(L/4)\cosh(x/2).
+\end{aligned}
+ \label{obs-pole-difference}
+\end{equation}
+Combining the two expansions yields the full polarized ground identity
+\begin{equation}
+ \begin{split}
+ q_L(hu,hv)={}&\frac12\int_{I^2}h(x)h(y)
+ (\overline{u(x)-u(y)})(v(x)-v(y))
+ [d\mu_{\mathcal S}-p(x,y)\,dx\,dy]\\
+ &+\int_I h(W_Lh)\overline u v.
+ \end{split}
+ \label{obs-signed-ground-identity}
+\end{equation}
+Even a positive solution of $W_Lh=0$ would leave a signed edge measure.
+The poles change off-diagonal couplings and therefore cannot be treated
+merely as a local killing potential.
+
+\subsection{A sign obstruction before the first prime}
+
+\begin{proposition}[Scalar source obstruction]
+\label{obs-scalar-proposition}
+Let $\rho>1$ be the root of $\rho^3-\rho-1=0$ and put $r_*=\log\rho$.
+For every $L>r_*$ there are nonzero nonnegative smooth inputs with disjoint
+supports for which $q_L(u,v)>0$.  Therefore, with a pointwise scalar source
+identification, $q_L$ cannot be a positive-ground-state transform of a real
+scalar diffusion or jump form with nonnegative edge weights, even after
+adding an arbitrary local potential.
+\end{proposition}
+
+\begin{proof}
+Away from the finitely many active prime delays, the off-diagonal kernel is
+\begin{equation}
+ R(r)=2\cosh(r/2)-n_\gamma(r)
+ =e^{-r/2}\frac{e^{3r}-e^r-1}{e^{2r}-1},\qquad r>0.
+ \label{obs-sign-kernel}
+\end{equation}
+The polynomial $x^3-x-1$ is strictly increasing for $x>1$, so $R$ is
+positive precisely when $r>r_*$.  Choose $d\in(r_*,L)$ away from all
+active prime delays and two sufficiently narrow patches separated by $d$.
+Their difference set avoids those delays and stays above $r_*$.  For
+nonnegative $u,v$ supported in the respective patches,
+$q_L(u,v)=\int u(x)R(|x-y|)v(y)\,dx\,dy>0$.
+The contact and all local potentials vanish on these disjoint inputs.
+In contrast, a nonnegative scalar jump measure has a nonpositive cross
+term on disjoint nonnegative inputs; a local diffusion contributes zero.
+Positive multiplication by $h$ preserves both disjointness and sign.
+\end{proof}
+
+The restriction concerns a Markov-type scalar boundary energy, not
+positivity of an arbitrary Hilbert-space quadratic form.  It also persists
+under scalar reversible bulk elimination.  At a finite regulator a positive
+real symmetric diffusion/jump matrix has nonpositive off-diagonal entries.
+Its invertible interior block has entrywise nonnegative inverse, so the
+Schur complement again has nonpositive off-diagonal entries.  Limits
+preserving the bilinear form on these test inputs retain the same sign.
+
+\begin{proposition}[Scalar phase obstruction]
+\label{obs-phase-proposition}
+For $L>2r_*$, a scalar phase change cannot turn all the off-diagonal
+couplings into real nonpositive Markov couplings.  This obstruction already
+occurs for some $L<\log2$.
+\end{proposition}
+
+\begin{proof}
+Choose three narrow patches with all pairwise separations above $r_*$ and
+away from prime delays.  Their continuous couplings are positive.  A phase
+change would have to assign phase $-1$ to each of the three edges.
+The product of phases around a triangle is $1$ for a scalar gauge, whereas
+the required product is $(-1)^3=-1$.  The argument can be formulated almost
+everywhere on the patches and does not require pointwise regularity of the
+phase.  Finally, evaluating $x^3-x-1$ at $\sqrt2$ shows
+$\rho<\sqrt2$, hence $2r_*<\log2$.
+\end{proof}
+
+Matrix states, genuine magnetic holonomy, and nonlocal or derivative source
+maps are outside these exclusions.  The triangle identifies why scalar
+rephasing is insufficient; it does not exclude an energy containing
+interference squares with positive cross terms.
+
+\subsection{The compulsory diagonal and the contact problem}
+
+Indeed the pole kernel has a positive interference-square construction:
+\begin{equation}
+ e_P^+(f,g)=\frac12\int_{I^2}p(x,y)
+ (\overline{f(x)+f(y)})(g(x)+g(y))\,dx\,dy
+ =\ip{f}{P_Lg}+\int_I r_P\overline f g.
+ \label{obs-positive-pole-square}
+\end{equation}
+The equality follows simply by expanding the square.  Its consequence is
+\begin{equation}
+ q_L[f]=j[f]+e_P^+[f]
+       -\int_I(\kappa_{\mathcal S}+r_P(x))|f(x)|^2\,dx.
+ \label{obs-compulsory-diagonal}
+\end{equation}
+Thus a positive square reproduces the signed pole operator only together
+with an additional diagonal energy.  The completion must derive the
+subtraction of this companion as well as the original contact.  Adding two
+pole amplitudes does not by itself perform that task.
+
+More precisely, put $D=\kappa_{\mathcal S}I-P_L$.  This bounded operator has
+infinite rank: it equals $\kappa_{\mathcal S}I$ on
+$\{c,s\}^{\perp}$.  A finite-rank correction of the prepared state map
+cannot remove the entire difference $J-W_L$.  This does not exclude a
+finite number of bulk field species, each carrying infinitely many modes.
+
+The danger of a circular Schur construction is already explicit in a
+valid one-prime support window.  If $\log2<L\le\log3$, then $D>0$:
+$c\perp s$,
+$\norm{c}^2=L/2+\sinh(L/2)$, and
+$\norm{s}^2=-L/2+\sinh(L/2)$, so its smallest possible exceptional
+eigenvalue is $\kappa_{\mathcal S}-2\norm{c}^2>0$.
+Here $2\norm{c}^2\le\log3+2/\sqrt3<3$, whereas
+$\kappa_{\mathcal S}\ge-w_0>3$.
+The elementary square completion
+\begin{equation}
+ \mathcal A[f,z]=j[f]-2\re\ip{D^{1/2}f}{z}+\norm{z}^2
+ =q_L[f]+\norm{z-D^{1/2}f}^2
+ \label{obs-circular-schur}
+\end{equation}
+does have the desired minimized value.  But $\mathcal A\ge0$ holds if and
+only if $q_L\ge0$.  Its positivity is exactly the unknown assertion.
+Adding $\ip{f}{Df}$ makes the action manifestly positive and changes its
+minimum to $j[f]$.  A useful coherent constraint must therefore supply an
+independently derived infinite-dimensional contraction or projection
+identity, including the pole sectors, rather than repackage the target's
+unknown positivity.
+
+\subsection{A vector-parameter lift and its normalization freedom}
+
+Vector-multiplet parameters offer a different compatibility equation from
+ordinary chiral $tt^*$ geometry.  Four-supercharge invariance constrains
+their Berry connection and projected moment-map operator by a Bogomolny
+equation \cite{SonnerTong}.  This is a necessary effective equation, not a
+converse construction of a microscopic theory.
+
+For the finite-prime benchmark define, on $\re z>0$,
+\begin{equation}
+ \Lambda_{\mathcal S}(z)=\pi^{-z/2}\Gamma(z/2)
+       \prod_{p\in\mathcal S}(1-p^{-z})^{-1},\qquad
+ \ell(z)=\log\Lambda_{\mathcal S}(z).
+ \label{obs-local-factor}
+\end{equation}
+The logarithm exists and is real on the positive axis.  The specified
+ground family has $\norm{\Psi_\sigma}^2=e^{\ell(\sigma)}$ and normalized
+extension $\Omega_{\sigma,\eta}=e^{i\eta X/2}\Omega_\sigma$.
+In the convention $A=i\ip{\Omega}{d\Omega}$,
+\begin{equation}
+ A_\sigma=0,\qquad A_\eta=-\tfrac12\ell'(\sigma),\qquad
+ F_{\sigma\eta}=-\tfrac12\ell''(\sigma),\qquad
+ \ell''(\sigma)=\operatorname{Var}_\sigma(X)>0.
+ \label{obs-real-berry}
+\end{equation}
+Introduce an auxiliary third coordinate $v$, orient parameter space as
+$(\sigma,\eta,v)$, and define
+\begin{equation}
+ A_\sigma=A_v=0,\qquad
+ A_\eta=-\tfrac12\re\ell'(\sigma+iv),\qquad
+ \Phi=-\tfrac12\im\ell'(\sigma+iv).
+ \label{obs-bogomolny-lift}
+\end{equation}
+The Cauchy--Riemann equations give
+$\nabla\times A=\nabla\Phi$: its $\sigma$ and $v$ components are,
+respectively, $-\im\ell''/2$ and $-\re\ell''/2$ on both sides.
+At $v=0$ this restricts to \eqref{obs-real-berry}, with $\Phi=0$.
+This explicit half-space solution works for any suitable holomorphic
+$\ell$ real on the positive axis.  It neither selects arithmetic factors
+nor makes the auxiliary extension the actual Berry data of a quantum model.
+
+For completeness,
+\begin{equation}
+ \ell'(z)=-\frac{\log\pi}{2}+\frac12\psi(z/2)
+       -\sum_{p\in\mathcal S}\frac{\log p}{p^z-1}.
+ \label{obs-log-derivative}
+\end{equation}
+Its continued local-factor poles have logarithmic-derivative residue $-1$,
+with multiplicities at coincidences.  A simple boundary pole produces a
+two-dimensional dipole-type harmonic $\Phi$, invariant along $\eta$,
+rather than a regular three-dimensional point monopole.  Global defects
+and boundary conditions would require separate physical specifications.
+
+The contact ambiguity remains exact.  Replacing $\ell(z)$ by
+$\ell(z)+cz$, $c\in\R$, corresponds to rescaling the original source
+$\Psi_\zeta$ by $e^{c\zeta/2}$, where $\zeta=\sigma+i\eta$ labels that
+chosen complex family.  Its normalized state changes only by
+$e^{ic\eta/2}$.  Consequently $A_\eta$ shifts by $-c/2$, a flat pure gauge
+on the noncompact $\eta$-line, while the curvature and $\Phi$ stay fixed.
+Nevertheless
+\begin{equation}
+ \partial_\sigma\log|\Lambda_{\mathcal S}(\sigma+i\tau)|^2
+ \longmapsto
+ \partial_\sigma\log|\Lambda_{\mathcal S}(\sigma+i\tau)|^2+2c.
+ \label{obs-contact-gauge}
+\end{equation}
+Thus curvature cannot determine this scalar contact.  Changing the origin
+of $X$ changes its mean but not its variance; a fixed physical source must
+supply the missing convention.
+
+At $\sigma=1/2$ the pole-free arithmetic multiplier is
+$2\re\ell'(1/2+i\tau)=-4A_\eta(1/2,\tau)$.
+This equality identifies functions, not a positive norm.  The choice
+$v=\tau$ is an additional proposed correspondence, and the signed pole
+form is still absent.  Scalar completion factors do not restore that form
+by a pointwise critical-line derivative.  A successful enlargement must
+derive a physical source and the complete pairing, including its contact
+and residue or boundary contributions.  These requirements leave matrix,
+fermionic, magnetic, and relative-boundary mechanisms open while specifying
+the precise failure of the scalar and curvature-only repairs tested here.

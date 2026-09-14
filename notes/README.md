@@ -57,7 +57,7 @@ shifted-screw program comes from). If you read one: `ROUND9`.
 | `ROUND2_full_YM_and_results.md` | 24 Aug | Full Yang–Mills matching; closes undeformed YM, non-self-dual solutions, Vafa–Witten, 2D YM. |
 | `ROUND3_correction_and_bridge.md`, `ROUND3_verification_and_detector.md` | 24 Aug | A round-2 correction; verification pass; the velocity-residual detector prototype and the margin map. |
 | `ROUND4_certificates_and_edge_law.md` | 24 Aug | Detector made certificate-grade (exact RvM decomposition + Trudgian's `\|S(t)\|` bound); `n = 0` edge law derived (fixed collision of zeros #4/#5 over growing variance, exponent 4); pencil identity traced to Wilson's tau-function formula. |
-| `NOTE_offaxis_detector.md`, `NOTE_pencil_and_DBN.md` | 24 Aug | Drafts that became `papers/rh-detector/` — the detector thread, which predates the Suzuki program. |
+| `NOTE_offaxis_detector.md`, `NOTE_pencil_and_DBN.md` | 24 Aug | Drafts that became `papers/misc/rh-detector/` — the detector thread, which predates the Suzuki program. |
 | `NOTE_n4_sym_seam.md` | 25 Aug | N=4 SYM as a lever on the zeros: ξ cancels in the spectral decomposition; Sarnak's ceiling is PNT; closed. |
 | `ROUND6_unscreened_sweep.md` | 26 Aug | Sweep of unscreened routes; the quantifier-order finding (RH is the line `n = 0, d → ∞` every Jensen wedge misses) and the Gaussian-slack kernel no-go. |
 | `ROUND7_nonlinear_preservers_and_KP.md` | 26 Aug | Nonlinear hyperbolicity preservers and KP; source of the three routes screened in the brief. |
@@ -70,9 +70,9 @@ shifted-screw program comes from). If you read one: `ROUND9`.
 | `NOTE_freeboson_Lfunction.md` | 26 Aug | `L_Z^{(c=1)}`, `Q_Z`; all analytic-factor zeros on `Re s = ½`; sharp threshold `A₂ ≥ A₁` for two-pair lattice cores. |
 | `NOTE_riemann_maass_sum_rules.md` | 26 Aug | Perlmutter §11.2 sum rules written out (Kuznetsov split); a second RH-detector of Dorigoni–Treilis shape; no high-energy testing window. |
 | `NOTE_connes_weil_dirichlet_form.md` | 26 Aug (corrected same day) | Beurling–Deny reading of Connes' `A_λ`; novelty **withdrawn** (Suzuki 2606.09096 Thm 1.4 has it); what survives: §6.6(i) proved at small `a`, open at large `a`; the odd-sector experiment. |
-| `ROUND12_execution_and_a_retraction.md` | 26 Aug | Executes ROUND11's items; records the retraction; **discovers the Suzuki screw-function program**, which the record had missed entirely — the pivot to the shifted-screw thread (`papers/psi-omega-margin/`). |
+| `ROUND12_execution_and_a_retraction.md` | 26 Aug | Executes ROUND11's items; records the retraction; **discovers the Suzuki screw-function program**, which the record had missed entirely — the pivot to the shifted-screw thread (`papers/shifted-zeta/psi-omega-margin/`). |
 
-### 2 · Shifted screw functions Ψ_ω (26–28 Aug) → `papers/psi-omega-margin/`
+### 2 · Shifted screw functions Ψ_ω (26–28 Aug) → `papers/shifted-zeta/psi-omega-margin/`
 
 | File | Date | One line |
 |---|---|---|
@@ -82,7 +82,7 @@ shifted-screw program comes from). If you read one: `ROUND9`.
 | `PROGRESS_psi_omega_next_steps.md` | 27 Aug | The four steps executed and verified: windows through zero-free regions (endpoint law `t₊ ≈ 0.72(½−ω)⁻²`), Dirichlet/Selberg-class margin and Siegel blindness, order-parameter theorem, Bombieri §8 priority check; letter to Suzuki drafted. |
 | `ROUND14_concise_draft_check.md` | 28 Aug | Check of the concise variant of Paper 1. |
 
-### 3 · The shifted zeta string (28 Aug) → `papers/omega-string/`
+### 3 · The shifted zeta string (28 Aug) → `papers/shifted-zeta/omega-string/`
 
 | File | Date | One line |
 |---|---|---|
@@ -90,7 +90,7 @@ shifted-screw program comes from). If you read one: `ROUND9`.
 | `ROUND15_referee_audit_omega_string.md` … `ROUND18_kasahara_verified_and_sync.md` | 28 Aug | Five referee passes on Paper 2; Kasahara's regular-variation theorem checked against the original; cross-consistency with Paper 1. |
 | `ROUND19_endpoint_length_and_freeze.md` | 28 Aug | Endpoint length collapse (`L_ω = ∞` vs `L_ξ = B(0)`); critical-member laws; citation-numbering policy; **freeze pending human review**; outreach shortlist. |
 
-### 4 · The finite (Ihara) laboratory and defect depth (29 Aug) → `papers/defect-depth/`
+### 4 · The finite (Ihara) laboratory and defect depth (29 Aug) → `papers/shifted-zeta/defect-depth/`
 
 | File | Date | One line |
 |---|---|---|
@@ -99,34 +99,42 @@ shifted-screw program comes from). If you read one: `ROUND9`.
 | `LAB_ihara_round5.md` | 29 Aug | Compactified moments = binomial transform of Taylor coefficients (canonical); ω > 0 depth law theorem-grade (Stahl–Totik); time-domain constant `log(2(ξ'/ξ)(½+ω)/(δ−ω))`; flux Hessian sees triangles. |
 | `ROUND6_closeout.md` | 29 Aug | All manuscript gates for Paper 3 resolved (amplitude-2 normalization fixes the log 2 discrepancy; `s₀`-dependence measured, "intrinsic" dropped); GO for drafting. |
 
-### 5 · First-slab positivity (31 Aug – 5 Sept) → `papers/first-slab-positivity/`
+### 5 · First-slab positivity (31 Aug – 5 Sept) → `papers/shifted-zeta/first-slab-positivity/`
 
 The review records and recomputation scripts live in `verification/first-slab/`.
 The working drafts are superseded by the preprint and are not kept here.
 
 ### 6 · Finite-horizon Weil positivity and storage depth (9–11 Sept)
 
-The current papers are [Weil-depth](../papers/weil-depth/README.md) and
-[storage-depth](../papers/storage-depth/README.md). The storage-depth
-[closeout record](../papers/storage-depth/CLOSEOUT.md) records the writing
+The current papers are [Weil-depth](../papers/shifted-zeta/weil-depth/README.md) and
+[storage-depth](../papers/shifted-zeta/storage-depth/README.md). The storage-depth
+[closeout record](../papers/shifted-zeta/storage-depth/CLOSEOUT.md) records the writing
 project's completed work and remaining verification limits.
 
 | Present file | Role |
 |---|---|
 | [Lessons learned](LESSONS_LEARNED_manifest_positivity_design_guidance_20260911.md) | Exploratory design guidance; moved from `Claude outputs/`, including the author's pending wording change. |
-| [Barrier theorem and ladder conjecture note](../papers/storage-depth/archive/reviews/NOTE_barrier_theorem_and_ladder_conjecture_20260911.md) | Draft arguments and diagnostic fits; distinct from the manuscript's certified records. |
-| [Depth strategy](../papers/storage-depth/archive/drafts/v3/NOTE_depth_strategy_20260911.md) | Historical options for extending the method. |
+| [Barrier theorem and ladder conjecture note](../papers/shifted-zeta/storage-depth/archive/reviews/NOTE_barrier_theorem_and_ladder_conjecture_20260911.md) | Draft arguments and diagnostic fits; distinct from the manuscript's certified records. |
+| [Depth strategy](../papers/shifted-zeta/storage-depth/archive/drafts/v3/NOTE_depth_strategy_20260911.md) | Historical options for extending the method. |
 
-The supersymmetric research briefs are reserved for a separate project and commit.
+### 7 · Supersymmetric positivity (11 September 2026; active)
+
+The separate investigation is in [papers/susy-positivity](../papers/susy-positivity/README.md).
+Its [companion brief](../papers/susy-positivity/attempts/positive-factorizations/RESEARCH_BRIEF.md) records the current
+motivation; [round 3](../papers/susy-positivity/attempts/positive-factorizations/INVESTIGATION_round3.md) constructs
+an odd-sector factor and certifies the first prime's stabilizing role on a
+linear input. The [original pedagogical brief](supersymmetric_positivity_research_brief.md)
+is historical motivation. The even-sector completion and joint prime model
+remain open; see the [status ledger](../papers/susy-positivity/attempts/positive-factorizations/STATUS.md).
 
 ## Code referenced by the notes
 
 Scripts named in the notes were run in session workspaces. Those that have
 been recovered or regenerated now live next to their papers:
-`papers/psi-omega-margin/code/` (`c1`–`c8`), `papers/omega-string/`
+`papers/shifted-zeta/psi-omega-margin/code/` (`c1`–`c8`), `papers/shifted-zeta/omega-string/`
 (`fig_density.py`, `v1_identities.py`, `v2_thmE_kasahara.py`),
-`papers/defect-depth/code/` (the Ihara laboratory core and experiment record),
-and `papers/rh-detector/code/` (`h1`, `h3`, `h4`, `d1`, `d4`, `v1` and the zero
+`papers/shifted-zeta/defect-depth/code/` (the Ihara laboratory core and experiment record),
+and `papers/misc/rh-detector/code/` (`h1`, `h3`, `h4`, `d1`, `d4`, `v1` and the zero
 caches). Scripts from the closed geometry/physics routes (`nb1.py`, the Jensen
 screen, the round-12 scripts) and the defect-depth round-6 inline runs have
 not been recovered; see `MANIFEST.md`.

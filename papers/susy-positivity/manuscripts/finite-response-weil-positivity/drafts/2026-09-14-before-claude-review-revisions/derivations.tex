@@ -1,0 +1,964 @@
+\input{preamble}
+\hypersetup{pdftitle={Detailed derivations for the finite-response RH formulation}}
+\title{Detailed derivations for human review\\\large Companion to the finite-response RH formulation}
+\author{Review record not yet completed}\date{13 September 2026}
+\begin{document}\maketitle
+\begin{abstract}
+This file expands the chain of arguments needed for the condensed paper.
+It distinguishes the classical Weil criterion, unconditional operator
+calculations, and the unproved arithmetic matrix conjecture. It also gives
+finite-input error bounds suitable for rigorous computation. The source
+investigation is repository revision \texttt{efb908a}; this companion is a
+new exposition, not an independently refereed validation of that manuscript.
+The human review should cover the hypotheses, domains, constants, quantifiers
+and citations as well as the displayed algebra. No verification of RH is claimed.
+\end{abstract}
+\setcounter{tocdepth}{1}
+\tableofcontents
+\clearpage
+
+\section{What must be reviewed}
+The proposed short paper does not use the interacting vacuum metrics,
+physical residue normalization, the conditional $tt^*$ equation, the remote
+delay construction, or the graph realization as premises. Those results
+remain in the longer investigation. The short paper needs only the following
+chain:
+\[
+\begin{gathered}
+\text{Weil criterion and its exact arithmetic normalization}\\
+\Downarrow\\
+\text{closed logarithmic form and explicit boundary correction}\\
+\Downarrow\\
+\text{unconditional high-mode positivity and well-defined mixed block}\\
+\Downarrow\\
+\text{Schur identity on the full form domain}\\
+\Downarrow\\
+\mathrm{RH}\ \Longleftrightarrow\ S_n\succeq0\text{ for every }n\ge1.
+\end{gathered}
+\]
+The remainder estimates provide a constructive way to approximate $S_n$;
+they do not prove its sign. The positive shifted reference supplies an
+equivalent contraction statement but is not needed for the Schur identity.
+
+Throughout, $X_L=L^2(0,L)$ over $\C$, inner products are antilinear first,
+$F=E_Lf$ is the zero extension, and
+$\widehat F(\tau)=\int F(x)e^{-i\tau x}\,dx$.
+The full-line shift is $U_dF(x)=F(x-d)$.
+Set $a_k=2k+1/2$ and write $b$ for the scalar gamma multiplier, reserving
+$B$ for the mixed operator. These differ from some letter choices in the
+long manuscript.
+
+\section{The arithmetic normalization, including the contact}
+For $g=F*\widetilde F$, $\widetilde F(x)=\overline{F(-x)}$, one has
+\[
+g(0)=\norm F^2,\quad g(-r)=\overline{g(r)},\quad
+\re g(r)=\re\ip F{U_rF}=:h_f(r).
+\]
+With $n_\gamma(r)=e^{-r/2}/(1-e^{-2r})$ for $r>0$, the additive
+Weil functional, in the normalization of \cite[Section 1.1]{Suzuki}, is
+\begin{align}
+\mathcal W(g)={}&\int_\R 2\cosh(x/2)g(x)\,dx
+-\sum_{p,m}(\log p)p^{-m/2}\{g(m\log p)+g(-m\log p)\}\notag\\
+&-(\log(4\pi)+\gamma_E)g(0)
+-\int_0^\infty[g(r)+g(-r)-2e^{-r/2}g(0)]n_\gamma(r)\,dr.
+\label{d:weil-functional}
+\end{align}
+This equality is initially used on smooth compact support. The published
+criterion states that RH is equivalent to $\mathcal W(F*\widetilde F)\ge0$
+for every complex $F\in C_c^\infty(\R)$. This is the one external
+number-theoretic equivalence on which the short paper rests.
+
+The gamma energy is
+\begin{align}
+K[F]&=\frac12\int_\R\int_\R
+ |F(x)-F(y)|^2n_\gamma(|x-y|)\,dx\,dy\notag\\
+&=\int_0^\infty[2g(0)-g(r)-g(-r)]n_\gamma(r)\,dr.
+\end{align}
+Consequently the last line of \eqref{d:weil-functional} equals
+$K[F]+w_0\norm F^2$, where
+\[
+w_0=-\log(4\pi)-\gamma_E
+-2\int_0^\infty(1-e^{-r/2})n_\gamma(r)\,dr.
+\]
+The integral is convergent at zero and infinity. Expanding the denominator
+and integrating positive terms gives
+\begin{align*}
+\int_0^\infty(1-e^{-r/2})n_\gamma(r)\,dr
+&=\sum_{k\ge0}\left(\frac1{2k+1/2}-\frac1{2k+1}\right)\\
+&=\tfrac12[\psi(1/2)-\psi(1/4)].
+\end{align*}
+Using $\psi(1/2)=-\gamma_E-2\log2$ proves
+\begin{equation}\label{d:contact}
+w_0=\psi(1/4)-\log\pi
+=-\gamma_E-\pi/2-3\log2-\log\pi.
+\end{equation}
+This checks the negative contact without assigning it by a normalization
+of a positive state.
+
+For the poles, convolution gives the kernel $2\cosh((x-y)/2)$.
+On $(0,L)$, with $c(x)=\cosh((x-L/2)/2)$ and
+$s(x)=\sinh((x-L/2)/2)$, the identity
+$\cosh(u-v)=\cosh u\cosh v-\sinh u\sinh v$ gives
+$2cc^*-2ss^*$. In particular the pole term has one positive and one
+negative direction, despite its pointwise positive kernel.
+The prime correlations vanish for $m\log p\ge L$. Thus the precise
+form is
+\begin{equation}\label{d:full-form}
+Q_L[f]=K[E_Lf]+w_0\norm f^2+2|\ip c f|^2-2|\ip s f|^2
+-2\sum_{m\log p<L}(\log p)p^{-m/2}\re\ip F{U_{m\log p}F}.
+\end{equation}
+
+\section{Gamma expansion, source domain and cores}
+The digamma partial fractions \cite{DLMF} give
+\[
+\psi(z+it)-\psi(z)=\sum_{k\ge0}
+\left[\frac1{k+z}-\frac1{k+z+it}\right].
+\]
+At $z=1/4$, taking real parts and substituting $t=\sqrt{s}/2$ yields
+\begin{equation}\label{d:gamma-series}
+b(s)=\sum_{k\ge0}\frac2{a_k}\frac{s}{a_k^2+s}.
+\end{equation}
+To identify this multiplier with the spatial energy in Section 2, use
+$2g(0)-g(r)-g(-r)=\norm{F-U_rF}^2$ and Plancherel:
+\begin{align}
+K[F]&=\frac1{2\pi}\int_\R
+\left[2\int_0^\infty(1-\cos(\tau r))n_\gamma(r)\,dr\right]
+|\widehat F(\tau)|^2\,d\tau,\label{d:gamma-fourier}\\
+2\int_0^\infty(1-\cos(\tau r))e^{-ar}\,dr
+&=\frac2a-\frac{2a}{a^2+\tau^2}
+=\frac2a\frac{\tau^2}{a^2+\tau^2}.\notag
+\end{align}
+Since $n_\gamma(r)=\sum_{k\ge0}e^{-a_kr}$ and the integrands are
+nonnegative, Tonelli justifies both interchanges, including infinite
+energy for arbitrary $F\in L^2(\R)$. Thus
+$K[E_Lf]=t_L[f]$. This explicitly links the cited Weil normalization
+to the operator used below.
+
+The series converges locally uniformly in $s\ge0$. Its summands are
+nonnegative and increasing in $s$, and at least one is strictly increasing.
+Digamma asymptotics give
+$b(\tau^2)=\log|\tau|-\log2-\psi(1/4)+O(\tau^{-2})$.
+Thus $1+b(\tau^2)$ is comparable above and below to
+$1+\log(2+|\tau|)$.
+
+For $a>0$, minimizing
+\[
+\mathcal E_a(F,u)=\frac2a(\norm{F-u}^2+a^{-2}\norm{u'}^2)
+\]
+gives $\widehat u=a^2\widehat F/(a^2+\tau^2)$ and minimum
+$\int (2/a)\tau^2/(a^2+\tau^2)|\widehat F|^2\,d\tau/(2\pi)$.
+This can alternatively be represented by the output column
+\[
+\left(\sqrt{2/a}\,H_\R(a^2+H_\R)^{-1}F,
+\sqrt{2a}\,\partial_x(a^2+H_\R)^{-1}F\right),\quad H_\R=-\partial_x^2.
+\]
+Squaring the two components gives exactly the same multiplier. The
+orthogonal sum of these columns is a closed source: convergence of input
+and output identifies every bounded component, and the square-summability
+of the limiting output is exactly membership in its maximal domain.
+That domain after zero extension is
+\begin{equation}\label{d:domain}
+\mathcal D_L=\{f:\int_\R\log(2+|\tau|)|\widehat{E_Lf}(\tau)|^2d\tau<\infty\}.
+\end{equation}
+The resulting form $t_L$ is closed. Every prime shift is a contraction
+after compression, and the two pole functions are in $L^2(0,L)$, so their
+finite sum $R_L$ is a bounded self-adjoint operator. Bounded perturbation
+gives a closed semibounded form $t_L+R_L$ and the operator
+$W_L=T_L+R_L$ on $\Dom T_L$.
+
+\subsection{Smooth compact support is a form core}
+Translate to $(-L/2,L/2)$ for this proof. Given the zero extension $F$,
+let $D_rF(x)=r^{-1/2}F(x/r)$, $r<1$. The Fourier transform is
+$r^{1/2}\widehat F(r\tau)$. Changing variable $\sigma=r\tau$ shows that
+the weighted norm uses $1+\log(2+|\sigma|/r)$. For $r$ in, say,
+$[1/2,1]$, this is uniformly comparable to the original weight.
+Dilations converge strongly as $r\uparrow1$: first prove it on Schwartz
+functions by dominated convergence, then use their density in the weighted
+Fourier space and uniform boundedness. The support of $D_rF$ lies strictly
+inside the interval. Convolution with a smooth approximate identity of
+radius smaller than the support gap stays inside the interval, and its
+bounded Fourier multiplier converges to one in the same weighted norm.
+This proves the required core assertion. No pointwise trace at the
+interval endpoints is imposed on $\mathcal D_L$.
+
+\subsection{Compactness and the scalar truncation error}
+For a bounded set in the form norm, its Fourier mass outside $[-R,R]$ is
+bounded by a constant divided by $\log(2+R)$. The map from a fixed Fourier
+band to $L^2(0,L)$ has a square-integrable kernel and is compact. Approximating
+the embedding by these compact maps shows that $\mathcal D_L\hookrightarrow X_L$
+is compact. The associated operators therefore have compact resolvent.
+They can have finitely many negative eigenvalues; this is not their absence.
+
+For numerical enclosure of $b(s)$, positivity and an integral test give
+\begin{equation}\label{d:b-tail}
+0\le b(s)-\sum_{k<J}\frac2{a_k}\frac{s}{a_k^2+s}
+\le s\left(\frac2{a_J^3}+\frac1{2a_J^2}\right).
+\end{equation}
+Indeed $a_k=a_J+2(k-J)$, and
+$\int_J^\infty 2(2x+1/2)^{-3}dx=1/(2a_J^2)$.
+
+\section{Neumann--Dirichlet comparison and the cutoff}
+For one mass, restricting a whole-line competitor $u$ to $(0,L)$ drops
+the nonnegative exterior energy. Minimizing over all $H^1(0,L)$
+competitors yields the Neumann resolvent. In the other direction, a
+Dirichlet competitor extends by zero to an admissible whole-line
+competitor. Thus, for every finite tower,
+\[
+b_J(H_{\rm N})\le T_{L,J}\le b_J(H_{\rm D}).
+\]
+Monotone limits of the nonnegative forms preserve this order and its
+domain inclusions. In particular
+\begin{equation}\label{d:ND}
+b(H_{\rm N})\le T_L\le b(H_{\rm D}).
+\end{equation}
+Min--max, indexing eigenvalues from one, gives
+\[
+b(((j-1)\pi/L)^2)\le\lambda_j(T_L)\le b((j\pi/L)^2).
+\]
+The logarithmic asymptotic then yields
+$\lambda_j(T_L)=\log(\pi j/(2L))-\psi(1/4)+O_L(j^{-1})$.
+
+For one prime $p$, put $d=\log p$ and $q=p^{-1/2}$. Express $x=t+kd$
+with $0<t<d$ and retain those integers $k$ for which $0<x<L$.
+This decomposes $X_L$ into a direct integral of finite chain spaces.
+Their lengths are at most $h=\lceil L/d\rceil$. The complete off-diagonal
+correlation on a chain is the matrix with entries
+$q^{|i-j|}$ for $i\ne j$, zero on the diagonal. Its operator norm is
+bounded by the maximum absolute row sum $r_h(q)$. The row $i$ has
+sum $\sigma_i=\sum_{j=1}^{i-1}q^j+\sum_{j=1}^{h-i}q^j$.
+Since $\sigma_{i+1}-\sigma_i=q^i-q^{h-i}$, the maximum is attained
+at the central row or rows. Summing the two geometric series there gives
+\[
+r_h(q)=\frac q{1-q}
+\left(2-q^{\lfloor(h-1)/2\rfloor}-q^{\lceil(h-1)/2\rceil}\right).
+\]
+This also gives $r_1=0$. Therefore the negative prime contribution is
+bounded below by $-d\,r_h(q)I$. The assertion also
+holds when $L/d$ is an integer; endpoint chains of exceptional length
+occur only on null sets.
+
+Direct integration gives
+\[
+\norm c^2=L/2+\sinh(L/2),\quad
+\norm s^2=-L/2+\sinh(L/2),\quad\ip c s=0.
+\]
+Dropping $2cc^*$ and bounding $-2ss^*$ proves
+\begin{equation}\label{d:beta}
+W_L\ge b(H_{\rm N})-\beta_LI,
+\quad\beta_L=-w_0+2\sinh(L/2)-L+
+\sum_{\log p<L}(\log p)r_{\lceil L/\log p\rceil}(p^{-1/2}).
+\end{equation}
+An optional coarser prime term is
+$2\sum_{m\log p<L}(\log p)p^{-m/2}$.
+
+\subsection{A certified cutoff without an equality decision}
+Put $P_h=\sum_{j=0}^{h-1}e_je_j^*$ and $\delta_0=1/16$.
+For any $L>0$, choose an integer $N(L)$ with $b_{N(L)}>\beta_L+\delta_0$,
+and set $P=P_{N(L)}$, $Q=I-P$. Such integers exist since $b_j\to\infty$.
+For integer lengths $L=n$, fix deterministic rational enclosure routines
+for $\beta_n$ and $b_j$. The following convention then specifies $N(n)$.
+At stage $r=1,2,\ldots$, compute intervals
+\[
+\beta_n\in[\underline\beta_{n,r},\overline\beta_{n,r}],
+\qquad b_j\in[\underline b_{j,r},\overline b_{j,r}]
+\quad(1\le j\le r),
+\]
+each of width at most $2^{-r}$. If any
+$\underline b_{j,r}>\overline\beta_{n,r}+\delta_0$, stop and choose the
+least such $j$ at that stage. All comparisons at this step are rational.
+
+For termination, choose a fixed $j_*$ with
+$\epsilon=b_{j_*}-\beta_n-\delta_0>0$. At any stage $r\ge j_*$
+with $2^{1-r}<\epsilon$, one has
+\[
+\underline b_{j_*,r}-\overline\beta_{n,r}-\delta_0
+\ge\epsilon-2^{1-r}>0.
+\]
+The procedure therefore stops. An equality at a smaller index cannot
+block it, because the search increases both the candidate range and the
+accuracy, rather than waiting for that single comparison.
+
+Here is why the needed enclosure routines exist without using RH.
+Enumerate primes and their powers below the integer $3^n>e^n$ and refine
+rational bounds for $e^n$ to decide which lie below $e^n$. Every comparison
+eventually resolves: $e^n$ is transcendental, whereas each prime power is
+an integer. The same comparisons determine
+$\lceil n/\log p\rceil$, using $p^{h-1}<e^n<p^h$ for active primes.
+This deals with the discontinuous integer choices in $\beta_n$.
+The remaining expressions are finite continuous arithmetic combinations
+of computable constants. One can use Taylor series with remainder bounds,
+the atanh series for logarithms, bisection for square roots, and the
+alternating series in
+$\pi=16\arctan(1/5)-4\arctan(1/239)$.
+For Euler's constant the intervals
+$[H_M-\log(M+1),H_M-\log M]$ shrink to $\gamma_E$ as $M\to\infty$.
+Finally \eqref{d:b-tail}, monotonicity in $s$, and rational bounds for
+$\pi$ enclose each $b_j$. Fixing these routines, truncation rules and
+refinement order in advance makes the search deterministic.
+The theorem holds for every such fixed implementation; a computation
+should record its routine and the cutoff certificate.
+
+The original mathematical convention
+$N_{\min}(L)=\min\{j\ge1:b_j\ge\beta_L+\delta_0\}$ remains valid,
+but equality need not be decidable from convergent enclosures.
+No algorithm to identify that exact minimum is asserted.
+The certified convention can return a different dimension. Each admissible
+cutoff gives the same positivity criterion, by the Schur identity in Section 7.
+In particular the explicit $N=4$ certificate in Section 13 may be used
+as a separate convention at length one.
+
+The operator $H$ associated with the high form on $Q\mathcal D_L$ has
+the lower bound
+\[
+H\ge\Lambda,\qquad\Lambda e_j=d_je_j,\quad
+d_j=b((j\pi/L)^2)-\beta_L\ge\delta_0\quad(j\ge N).
+\]
+Its inverse is legitimate before RH is assumed. The comparison uses the
+gamma operator and a crude bound on the signed remainder; it does not
+select low modes by assuming the spectrum of $W_L$ is positive.
+
+\section{Deriving and controlling the exact boundary correction}
+For a mass $a>0$, let $R_{f,a}$ be the compressed free resolvent and
+$R_{N,a}$ the Neumann resolvent. Their kernels are
+\[
+R_{f,a}(x,y)=\frac{e^{-a|x-y|}}{2a},\qquad
+R_{N,a}(x,y)=\frac{\cosh(a\min(x,y))\cosh(a(L-\max(x,y)))}{a\sinh(aL)}.
+\]
+Both solve $(-\partial_x^2+a^2)R=\delta_y$ in the open interval;
+the derivative jump is $-1$. The second kernel has zero normal derivative
+at both endpoints. Expand its hyperbolic factors separately on $x\le y$
+and $x\ge y$. Subtraction gives
+\begin{equation}\label{d:mass-boundary}
+2a(R_{N,a}-R_{f,a})=K_a
+=\frac{u_au_a^*+v_av_a^*+r_a(u_av_a^*+v_au_a^*)}{1-r_a^2},
+\end{equation}
+where $u_a=e^{-ax}$, $v_a=e^{-a(L-x)}$, $r_a=e^{-aL}$.
+The coefficient matrix is $(1-r_a^2)^{-1}
+\left(\begin{smallmatrix}1&r_a\\r_a&1\end{smallmatrix}\right)$, with
+positive eigenvalues $1/(1-r_a)$ and $1/(1+r_a)$.
+The energy summand is $(2/a)I-2aR$, so the free compressed energy is
+the Neumann energy plus $K_a$, with the positive sign.
+
+\subsection{Uniform boundedness of the infinite sum}
+Let $n(t)=\sum_{k\ge0}e^{-a_kt}=e^{-t/2}/(1-e^{-2t})$. In the kernel
+of $K_a$, the first $u_au_a^*$ and $v_av_a^*$ image terms sum to
+$n(x+y)+n(2L-x-y)$. Every additional diagonal image has an extra
+factor $e^{-2aL}$; the mixed images have path length at least $L$.
+Thus the remainder is bounded, for example by
+\[
+\frac{2[n(2L)+n(L)]}{1-e^{-L}}.
+\]
+As $n(t)-(2t)^{-1}$ is bounded on $(0,2L]$, the sum is
+\begin{equation}\label{d:Carleman}
+K_L=\tfrac12(C_0+C_L)+\text{a bounded-kernel operator},
+\end{equation}
+where $C_0(x,y)=(x+y)^{-1}$ and $C_L(x,y)=(2L-x-y)^{-1}$.
+Using weight $x^{-1/2}$, the identity
+\[
+\int_0^\infty\frac{y^{-1/2}}{x+y}\,dy=\pi x^{-1/2}
+\]
+proves $\norm{C_0}\le\pi$ by the weighted Schur test; reflection treats
+$C_L$. The same kernel majorant bounds every positive partial sum.
+The monotone bounded sequence $K^{(J)}=\sum_{k<J}K_{a_k}$ converges strongly
+to a bounded positive $K_L$.
+
+For any $f\in X_L$, finite-tower energies satisfy
+$t_{L,J}[f]=\ip f{b_J(H_N)f}+\ip f{K^{(J)}f}$.
+The last term has a bounded limit for every $f$. Hence the two increasing
+energy limits are finite for exactly the same $f$, and their closed forms
+differ by $K_L$. This proves
+\begin{equation}\label{d:domains}
+T_L=b(H_N)+K_L,\quad\Dom T_L=\Dom b(H_N),\quad
+\mathcal D_L=\Dom b(H_N)^{1/2}.
+\end{equation}
+Spectral partial sums of $b(H_N)$ are an operator core; bounded perturbation
+preserves that fact. In particular all finite cosine sums belong to
+$\Dom W_L$, not merely to its form domain.
+
+\subsection{Why the boundary operator is not compact}
+Split $(0,L)$ at $L/2$. In \eqref{d:Carleman}, all off-diagonal blocks and
+the opposite endpoint kernel within each diagonal block are bounded kernels.
+They are Hilbert--Schmidt. Modulo compact operators, $K_L$ is the direct
+sum of two half-Carleman operators. Thus its essential norm is at most
+$\pi/2$.
+
+For the reverse bound take
+$\phi_R(t)=t^{-1/2}1_{[1,R]}(t)/\sqrt{\log R}$ on $(0,\infty)$.
+Changing to $t=e^u$ transforms the Carleman kernel to convolution by
+$k(u-v)=[2\cosh((u-v)/2)]^{-1}$. Hence its Rayleigh quotient is
+\[
+\int_{-\log R}^{\log R}
+\left(1-\frac{|v|}{\log R}\right)k(v)\,dv\longrightarrow
+\int_\R k(v)\,dv=\pi.
+\]
+For fixed $R$, dilate into $(\epsilon,\epsilon R)\subset(0,L/2)$.
+The unit vectors tend weakly to zero and keep their Carleman quotient,
+while every compact quadratic term tends to zero. First let
+$\epsilon\downarrow0$, then $R\to\infty$. This gives the reverse
+essential-norm bound and proves
+\[
+\norm{K_L}_{\rm ess}=\pi/2,\qquad
+\norm{K_L-K^{(J)}}\ge\pi/2\quad\text{for every finite }J.
+\]
+This does not conflict with compact resolvent of the unbounded $T_L$.
+The needed Carleman facts are proved here; \cite{Yafaev} gives broader context.
+
+\section{Matrix entries and finite-input tails}
+Let $\omega_j=j\pi/L$ and $e_j=\nu_j\cos(\omega_jx)$. Integration gives
+\[
+\ip{u_a}{e_j}=\frac{\nu_ja(1-(-1)^je^{-aL})}{a^2+\omega_j^2},\qquad
+\ip{v_a}{e_j}=(-1)^j\ip{u_a}{e_j}.
+\]
+Inserting this into \eqref{d:mass-boundary} cancels the denominator and yields
+\begin{equation}\label{d:column}
+K_ae_j=\frac{\nu_ja}{a^2+\omega_j^2}(u_a+(-1)^jv_a).
+\end{equation}
+Taking a second inner product gives zero for opposite parities, and for
+equal parities gives
+\begin{equation}\label{d:entries}
+\ip{e_i}{K_Le_j}=2\nu_i\nu_j\sum_{k\ge0}
+\frac{a_k^2(1-(-1)^je^{-a_kL})}
+{(a_k^2+\omega_i^2)(a_k^2+\omega_j^2)}.
+\end{equation}
+\subsection{A faster tail for finite compressions}
+For equal-parity entries the rational part of each summand in
+\eqref{d:entries} is at most $a_k^{-2}$, and
+$|1-(-1)^je^{-a_kL}|\le1+e^{-a_JL}$ for $k\ge J$. Hence
+\begin{equation}\label{d:entry-tail}
+\left|\ip{e_i}{(K_L-K^{(J)})e_j}\right|
+\le2\nu_i\nu_j(1+e^{-a_JL})
+\left(a_J^{-2}+\frac1{2a_J}\right).
+\end{equation}
+The integral test used here is
+$\sum_{k\ge J}a_k^{-2}\le a_J^{-2}+(2a_J)^{-1}$.
+Opposite-parity entries are exactly zero. For a unit coefficient vector,
+bound the absolute quadratic form by the rank-one majorant with entries
+given by the right hand side of \eqref{d:entry-tail}, and use
+$\sum_{j<h}\nu_j^2=(2h-1)/L$. This proves
+\begin{equation}\label{d:compression-tail}
+\norm{P_h(K_L-K^{(J)})P_h}
+\le\frac{2(2h-1)}L(1+e^{-a_JL})
+\left(a_J^{-2}+\frac1{2a_J}\right).
+\end{equation}
+This is $O(J^{-1})$ for fixed $L,h$ and is useful for low and finite
+Galerkin matrices. It does not control the entire output column.
+
+\subsection{The full-column tail}
+Since $\norm{u_a},\norm{v_a}\le(2a)^{-1/2}$, equation \eqref{d:column}
+gives $\norm{K_ae_j}\le\sqrt2\nu_ja^{-3/2}$.
+The integral test yields
+$\sum_{k\ge J}a_k^{-3/2}\le a_J^{-3/2}+a_J^{-1/2}$.
+The operator norm on the first $h$ columns is at most their Hilbert--Schmidt
+norm. Using $\sum_{j<h}\nu_j^2=(2h-1)/L$ proves
+\begin{equation}\label{d:column-tail}
+\norm{(K_L-K^{(J)})P_h}\le
+\sqrt{\frac{2(2h-1)}L}(a_J^{-1/2}+a_J^{-3/2})=:\eta_{h,J}.
+\end{equation}
+Only the input dimension $h$ is fixed in this limit. It does not imply
+operator-norm convergence on the full space.
+
+\subsection{Prime and pole entries without an unspecified kernel}
+Define
+\[
+\mathcal I(\lambda,\phi;a,b)=
+\begin{cases}
+[\sin(\lambda b+\phi)-\sin(\lambda a+\phi)]/\lambda,&\lambda\ne0,\\
+(b-a)\cos\phi,&\lambda=0.
+\end{cases}
+\]
+For $0<d<L$, product-to-sum gives
+\begin{align}
+t_{ij}(d):=\ip{e_i}{V_de_j}
+=\frac{\nu_i\nu_j}{2}\bigl[&\mathcal I(\omega_i-\omega_j,\omega_jd;d,L)\notag\\
+&+\mathcal I(\omega_i+\omega_j,-\omega_jd;d,L)\bigr].
+\label{d:shift-entries}
+\end{align}
+The adjoint entry is $t_{ji}(d)$. This handles the zero-frequency cases
+by the second branch of $\mathcal I$.
+
+For $\sigma\ne0$ set
+\[
+J_j(\sigma)=\int_0^Le^{\sigma x}\cos(\omega_jx)\,dx
+=\frac{\sigma[(-1)^je^{\sigma L}-1]}{\sigma^2+\omega_j^2}.
+\]
+Then
+\begin{align*}
+c_j:=\ip{e_j}c&=\tfrac{\nu_j}{2}
+[e^{-L/4}J_j(1/2)+e^{L/4}J_j(-1/2)],\\
+s_j:=\ip{e_j}s&=\tfrac{\nu_j}{2}
+[e^{-L/4}J_j(1/2)-e^{L/4}J_j(-1/2)].
+\end{align*}
+Thus the entire cosine matrix is
+\begin{equation}\label{d:W-entries}
+w_{ij}=(b_j+w_0)\delta_{ij}+k_{ij}+2c_ic_j-2s_is_j
+-\sum_{m\log p<L}(\log p)p^{-m/2}
+[t_{ij}(m\log p)+t_{ji}(m\log p)].
+\end{equation}
+All entries are real, but the quadratic-form assertions apply to complex
+inputs. For residual norms, the full columns are also explicit:
+\begin{align}
+W_Le_j={}&(b_j+w_0)e_j+K_Le_j+2c_jc-2s_js\notag\\
+&-\sum_{d=m\log p<L}(\log p)p^{-m/2}
+\left[1_{x>d}e_j(x-d)+1_{x<L-d}e_j(x+d)\right].
+\label{d:W-columns}
+\end{align}
+Finite mass sums in \eqref{d:column} turn these into finite sums of
+exponentials, trigonometric functions, and their interval restrictions.
+Products and squared norms are elementary integrals on the finitely many
+overlap intervals. Equations \eqref{d:b-tail} and \eqref{d:column-tail}
+supply the missing infinite tails. Use \eqref{d:compression-tail} for
+finite compressions and \eqref{d:column-tail} for full residual functions.
+
+\subsection{Reflection of the complete arithmetic operator}
+Let $\mathcal Jf(x)=f(L-x)$. This is a self-adjoint unitary,
+$\mathcal Je_j=(-1)^je_j$, and direct substitution gives
+\[
+\mathcal JV_d\mathcal J=V_d^*,\qquad
+\mathcal Jc=c,\qquad \mathcal Js=-s.
+\]
+The gamma form is invariant under reflection since its Fourier
+multiplier is even. Equivalently both $b(H_N)$ and $K_L$ commute
+with $\mathcal J$, the latter exchanging its two endpoint kernels.
+The pole and symmetrized prime terms also commute with $\mathcal J$.
+Thus the entire closed form and $W_L$ commute with reflection, and so
+do the cosine projections $P$ and $Q$.
+
+On the even subspace, the negative pole term vanishes. One may therefore
+use the sharper remainder bound
+$\beta_L^{\rm even}=-w_0+\sum_{\log p<L}(\log p)
+r_{\lceil L/\log p\rceil}(p^{-1/2})$ there.
+The family in the short paper keeps the common cutoff for both parities;
+no separate choice is needed for its equivalence.
+
+\section{The finite response and both directions of the equivalence}
+Because $PX_L\subset\Dom W_L$, both $A=PW_LP$ and $B=QW_LP$ are bounded
+on the finite low space. Restriction of the closed form defines
+$H\ge\delta_0I$ on $QX_L$. Its operator domain is
+$Q\Dom b(H_N)$, by \eqref{d:domains}, and on that domain $Hh=QW_Lh$.
+This is a form compression; $W_Lh$ may also have a low component.
+For $p=Pf$ and $h=Qf$ the form is
+\[
+Q_L[p+h]=\norm{H^{1/2}h}^2+2\re\ip h{Bp}+\ip p{Ap}.
+\]
+As $H^{-1}Bp\in\Dom H$, expand the square to obtain
+\begin{equation}\label{d:Schur}
+Q_L[p+h]=\norm{H^{1/2}(h+H^{-1}Bp)}^2+\ip p{S_Lp},
+\quad S_L=A-B^*H^{-1}B.
+\end{equation}
+The expansion uses $H^{1/2}H^{-1}=H^{-1/2}$ and the closed form pairing.
+It does not require every $h$ to be in $\Dom H$.
+
+If $S_L\succeq0$, equation \eqref{d:Schur} gives $Q_L\ge0$ on its full
+form domain. Conversely choose $h=-H^{-1}Bp$. The high square vanishes
+and $Q_L[p+h]=\ip p{S_Lp}$, so positivity of $Q_L$ forces positivity of
+$S_L$. A negative vector of $S_L$ therefore produces a negative form-domain
+input. Approximation by the smooth core produces a smooth negative input.
+
+Under RH, the classical Weil criterion gives positivity on the smooth
+core; continuity in the shifted form norm extends it to $\mathcal D_L$.
+Thus $S_n\succeq0$ for every integer $n\ge1$.
+Conversely, every compactly supported test function can be translated into
+$(0,n)$ for an integer $n$. Translation changes its Fourier transform by
+a phase and preserves every translated correlation. The pole kernel
+$2\cosh((x-y)/2)$ also depends only on the difference, so the entire form
+is invariant. Zero extension to a larger interval preserves the same
+form and merely adds inactive translations with zero overlap. Positivity
+of every $S_n$ now implies the global Weil criterion, hence RH.
+
+This argument uses only a cofinal sequence of supports. It requires
+neither source compatibility nor a uniform full-form gap. It also shows
+that an arbitrary finite list of successful lengths cannot finish the proof.
+
+Reflection leaves the high form invariant, so its restricted reflection
+commutes with $H$ and $H^{-1}$. The mixed map $B$ intertwines the low and
+high reflections. Hence $S_L$ commutes with the low reflection and
+\[
+S_L=S_L^{\rm even}\oplus S_L^{\rm odd},\qquad
+\dim S_L^{\rm even}=\lceil N/2\rceil,\quad
+\dim S_L^{\rm odd}=\lfloor N/2\rfloor.
+\]
+The finite Galerkin spaces preserve parity as well. Galerkin trials, or
+arbitrary trials chosen to intertwine reflection, give the same block
+decomposition of the enclosures. Both blocks are required for the stated
+fixed-interval criterion; no odd-only variant of Weil's theorem is used.
+
+\section{The positive matrix comparison and the source interpretation}
+For $\alpha=\beta_L+1$, the operator $T=W_L+\alpha I\ge I$ is positive
+independently of RH. Its block matrix is
+\[
+T=\begin{pmatrix}A+\alpha I&B^*\\B&H+\alpha I\end{pmatrix}.
+\]
+Let $V=(H+\alpha I)^{-1}$. Completing the shifted high square yields
+\[
+G=A+\alpha I-B^*VB\ge I.
+\]
+To check the bound, minimize $\ip{p+h}{T(p+h)}\ge\norm p^2+\norm h^2$
+over $h$ at fixed $p$. Define
+\[
+D=\alpha I+B^*(H^{-1}-V)B
+=\alpha[I+B^*VH^{-1}B]\ge\alpha I.
+\]
+The product $VH^{-1}$ is positive because both factors are functions of
+the same $H$; arbitrary products of positive operators would not justify
+this step. Direct subtraction gives $G-D=S_L$. Congruence by $G^{-1/2}$
+therefore proves
+\begin{equation}\label{d:contraction}
+S_L\succeq0\quad\Longleftrightarrow\quad
+G^{-1/2}DG^{-1/2}\preceq I.
+\end{equation}
+Both $G$ and $D$ can change with the permissible positive shift; their
+difference cannot. This rules out tuning a source normalization to improve
+the arithmetic sign.
+
+For a precise source interpretation, take any closed densely defined
+$\mathcal A:X_L\to\mathcal Y$ with $\mathcal A^*\mathcal A=T$.
+Such a source exists, for example $\mathcal A=T^{1/2}$, and its domain
+is the form domain of $T$. Define the adjusted low output
+\begin{equation}\label{d:projected-source}
+Cp=\mathcal A(p-VBp),\qquad p\in PX_L,\quad V=(H+\alpha I)^{-1}.
+\end{equation}
+For high form-domain $h$, the $T$-form pairing gives
+\[
+\ip{\mathcal A h}{Cp}
+=\ip h{Bp}-\ip h{(H+\alpha I)VBp}=0.
+\]
+Thus $Cp$ is the component of $\mathcal Ap$ orthogonal to the closure
+of the high output range; the removed vector $\mathcal AVBp$ is in that
+range. The raw output $\mathcal Ap$ need not be orthogonal to it.
+The shifted square identity gives $C^*C=G$. Take the abstract defect
+output to be $D^{1/2}p$, with Gram $D$.
+
+Since $G\ge I$, $C$ is injective with closed finite-dimensional range.
+The map $Cp\mapsto D^{1/2}p$ is a contraction exactly when
+$\norm{D^{1/2}p}^2\le\norm{Cp}^2$ for every $p$, namely $D\preceq G$.
+It extends by zero on the orthogonal complement of $\operatorname{ran}C$.
+Existence of this abstract contraction is therefore the same conjecture.
+A physical construction of it from specified interactions would be
+additional structure, whose necessity under RH is not established here.
+
+For a simple control, take
+$W=\left(\begin{smallmatrix}1/2&1\\1&1\end{smallmatrix}\right)$ and
+$\alpha=1$. Then $H=1$, $V=1/2$, $G=1$, $D=3/2$, and $S=-1/2$.
+The positive shifted reference and the positive high block coexist with
+negative full-form energy. The conjectural ordering is an essential step.
+
+\section{Residual identity, inverse order and Galerkin convergence}
+For a trial map $Y:PX_L\to\Dom H$, let $R=B-HY$. Expand without
+reordering any noncommuting factors:
+\[
+R^*H^{-1}R=B^*H^{-1}B-B^*Y-Y^*B+Y^*HY.
+\]
+This proves
+\begin{equation}\label{d:residual}
+B^*H^{-1}B=B^*Y+Y^*B-Y^*HY+R^*H^{-1}R.
+\end{equation}
+The form inequality $H\ge\Lambda>0$ reverses for inverses:
+$H^{-1}\le\Lambda^{-1}$. One proof uses
+\[
+\ip z{H^{-1}z}=\sup_v\{2\re\ip z v-\norm{H^{1/2}v}^2\}
+\le\sup_v\{2\re\ip z v-\norm{\Lambda^{1/2}v}^2\}.
+\]
+The form-domain inclusion makes the supremum comparison valid.
+Thus $R^*H^{-1}R\le R^*\Lambda^{-1}R$.
+
+Let $E_K=P_{N,K}$ and solve $E_KHE_KY_K=E_KB$ in $E_KX_L$.
+The finite coefficient matrix is at least $\delta_0I$ and hence invertible.
+Multiplying by $Y_K^*$ gives
+\[
+Y_K^*HY_K=Y_K^*B=B^*Y_K,
+\quad E_K(B-HY_K)=0.
+\]
+The residual $R_K$ has no modes below $K$, so
+\begin{equation}\label{d:enclosures}
+A-B^*Y_K-d_K^{-1}R_K^*R_K
+\preceq S_L\preceq A-B^*Y_K.
+\end{equation}
+The lower expression, denoted $L_{L,K}$, includes the entire residual
+Gram. Omitting it leaves an upper bound.
+
+For the enclosure theorem alone there is a short convergence argument.
+Write $E=Q(K_L+R_L+\beta_LI)Q$, so $H=\Lambda+E$ with $E$ bounded.
+Coercivity of the finite systems and Galerkin orthogonality give
+\[
+\norm{Y_K}\le\delta_0^{-1}\norm B,\qquad
+R_K=(I-P_K)(B-EY_K),\qquad
+\norm{R_K}\le\norm B(1+\norm E/\delta_0).
+\]
+Therefore the enclosure gap is at most
+$\norm B^2(1+\norm E/\delta_0)^2/d_K$, which tends to zero.
+For Hermitian ordered matrices $L_{L,K}\preceq S_L\preceq U_{L,K}$,
+both errors are bounded in norm by the gap.
+The digamma asymptotic gives the crude rate $O_L(1/\log K)$.
+This is an analytic error bound with an $L$-dependent constant, not an
+estimate of the computational work needed to enclose that constant.
+
+For the stronger convergence $R_K\to0$ used in Section 10, each exact solution column $u=H^{-1}Be_j$ minimizes
+the coercive energy with that source. The Galerkin solution $u_K$ is its
+orthogonal projection in the $H$-form inner product onto the trial space.
+The cosine core gives $\norm{H^{1/2}(u-u_K)}\to0$; in particular
+$u_K\to u$ in $L^2$. There are finitely many source columns, so this is
+operator-norm convergence on the input space.
+Write $H=\Lambda+E$ with $E$ bounded, using \eqref{d:domains}. Then
+\[
+R_K=(I-P_K)(B-EY_K).
+\]
+Here $(I-P_K)\Lambda Y_K=0$ and the other residual rows vanish by
+Galerkin orthogonality. Since $EY_K\to EH^{-1}B$ in norm and the input
+space is finite dimensional, $R_K\to0$ in norm. Consequently the gap
+between the two matrices in \eqref{d:enclosures} tends to zero.
+
+For ordered inverse approximations the direction of the bound is easy
+to reverse accidentally. If $F_\ell\preceq H^{-1}$, then
+$A-B^*F_\ell B\succeq S_L$.
+For example with $H=1$, $\alpha=1$, $V=1/2$,
+$F_\ell=\sum_{j=0}^\ell 2^{-j-1}=1-2^{-\ell-1}$ and
+$A=1-2^{-\ell-2}$, one has
+\[
+A-F_\ell=2^{-\ell-2}>0,\qquad A-H^{-1}=-2^{-\ell-2}<0.
+\]
+Positive approximate upper matrices cannot certify the target.
+
+\section{A fully specified finite-trial error allowance}
+This section makes the word ``approximable'' operational. It is a
+consequence of the boundary column estimate and the residual identity,
+with an explicit allowance for a finite mass approximation. It is not
+an executed positivity certificate for any arithmetic matrix.
+
+Choose $K>N$ and any matrix $Y:PX_L\to P_{N,K}X_L$, for example one
+with rational coefficients. No exact inverse or exact Galerkin solution
+is required. Set $V_0=P-Y$ as a map from the low coefficient space to
+$P_KX_L$. The residual identity \eqref{d:residual} has the variational form
+\begin{equation}\label{d:variational}
+C(Y)=V_0^*W_LV_0,\qquad R(Y)=QW_LV_0=B-HY,\qquad
+S_L=C(Y)-R(Y)^*H^{-1}R(Y).
+\end{equation}
+Thus the energy of an arbitrary trial exceeds the exact minimized energy
+by its remaining response. Define
+\[
+W^{(J)}=b(H_N)+K^{(J)}+R_L,\qquad
+C_J=V_0^*W^{(J)}V_0,\qquad\widetilde R=QW^{(J)}V_0.
+\]
+The true residual is $R=QW_LV_0=B-HY$. Positivity of $K_L-K^{(J)}$
+gives $V_0^*W_LV_0\succeq C_J$, while \eqref{d:column-tail} gives
+\begin{equation}\label{d:residual-error}
+\norm{\Lambda^{-1/2}(R-\widetilde R)}
+\le\frac{\eta_{K,J}\norm{V_0}}{\sqrt{\delta_0}}
+=:\epsilon_{K,J,Y},\qquad\norm{V_0}^2=1+\norm Y^2.
+\end{equation}
+The last equality uses orthogonality of the low and trial high spaces.
+
+For a chosen $M>N$, let $r_j=e_j^*\widetilde R$ and define the finite
+matrix
+\begin{equation}\label{d:weighted-tail}
+T_M=\sum_{j=N}^{M-1}\frac{r_j^*r_j}{d_j}
++\frac1{d_M}\left(\widetilde R^*\widetilde R-
+\sum_{j=N}^{M-1}r_j^*r_j\right).
+\end{equation}
+It is positive and bounds $\widetilde R^*\Lambda^{-1}\widetilde R$ from
+above, by Parseval and monotonicity of $d_j$. All its quantities are finite
+integrals of the explicitly given functions in \eqref{d:W-columns}, with
+$K^{(J)}$ in place of $K_L$. In particular the full residual norm is kept
+even if only finitely many cosine coefficients are individually computed.
+
+For operators $X$ and $Z$ with $\norm Z\le\epsilon$,
+\[
+(X+Z)^*(X+Z)\preceq X^*X+(2\norm X\epsilon+\epsilon^2)I.
+\]
+Apply this with $X=\Lambda^{-1/2}\widetilde R$ and use
+$\norm X\le\sqrt{\norm{T_M}}$. Equations \eqref{d:residual} and
+\eqref{d:residual-error} then prove the rigorous lower bound
+\begin{equation}\label{d:finite-certificate}
+S_L\succeq C_J-T_M-
+\left(2\sqrt{\norm{T_M}}\,\epsilon_{K,J,Y}
++\epsilon_{K,J,Y}^2\right)I.
+\end{equation}
+This uses only finite matrices, integrals of finite sums, and explicit
+scalar error bounds. Extra numerical rounding or integration uncertainty
+must be subtracted as an additional scalar operator-norm allowance.
+If entrywise Hermitian errors are bounded by $e_{ij}\ge0$, the maximal
+row sum of the symmetric error majorant bounds their operator norm.
+One may use rational upper bounds for all norms and lower bounds for
+the positive $d_j$ and $\delta_0$.
+
+The special-function values $b_j$ can be enclosed by \eqref{d:b-tail}.
+Exponentials, logarithms and trigonometric values in the finite entries
+admit convergent elementary series with rational remainder estimates.
+Section 4 supplies a terminating certification procedure for the cutoff
+and for the active prime powers at integer lengths. It does not require
+deciding equality in the optional mathematical minimum.
+
+For fixed trial $Y$ and $K$, let $J\to\infty$ and refine scalar enclosures;
+then $\epsilon_{K,J,Y}\to0$, $C_J\to V_0^*W_LV_0$, and the residual
+approximations converge in $L^2$. Exact Galerkin trials with $K\to\infty$
+have vanishing true residual by the preceding section. Approximating their
+finite coefficients by rationals and taking sufficiently many masses
+therefore makes \eqref{d:finite-certificate} as close to $S_L$ as needed.
+This proves availability of finite error control, not a bound on the cost
+or a sign for the resulting matrix.
+
+\section{The tolerance conjecture and its quantifiers}
+Define $L_{n,K}$ by \eqref{d:enclosures}. The alternate conjecture is
+\begin{equation}\label{d:tolerance}
+\forall n,m\in\N\quad\exists K>N(n):\quad
+L_{n,K}+2^{-m}I\succ0.
+\end{equation}
+If $S_n\succeq0$, norm convergence gives a $K$ such that
+$\norm{L_{n,K}-S_n}<2^{-m}$. Thus the displayed matrix is strictly
+positive. Conversely a witness $K$ gives
+$S_n\succeq L_{n,K}\succ-2^{-m}I$. Since this holds for every $m$,
+each eigenvalue of $S_n$ is nonnegative. Combining with Section 7 proves
+that \eqref{d:tolerance} is equivalent to RH.
+
+The order of quantifiers matters. Neither a single $K$ for all $m$ nor a
+uniform $K$ or $N$ for all $n$ is asserted. Replacing ``every $m$'' by one
+small tolerance would be weaker than positivity. Requiring an unshifted
+strict finite certificate for each $n$ is stronger on its face and would
+need a separate strict-positivity argument to claim equivalence.
+The tolerance formulation avoids this unnecessary extra premise.
+
+The strict margin in \eqref{d:tolerance} also permits replacing the exact
+matrix by a sufficiently accurate certified lower enclosure such as
+\eqref{d:finite-certificate}. Under $S_n\succeq0$, choose all approximation
+errors less than a fixed fraction of $2^{-m}$. The existence argument
+then has slack. It remains necessary to prove the arithmetic inequalities
+for all $n,m$; the generic convergence theorem is not that proof.
+
+\section{The exact prime discrepancy and a negative control}
+Let $h_f(r)=\re\ip F{U_rF}$ and
+$E(r)=\psi_{\rm Ch}(e^r)-e^r+1$. Define
+\[
+t_{\ge1,L}[f]=\frac1{2\pi}\int_\R
+\sum_{k\ge1}\frac2{a_k}\frac{\tau^2}{a_k^2+\tau^2}
+|\widehat{E_Lf}(\tau)|^2\,d\tau,
+\]
+the gamma form after removal of its $k=0$ mass. The prime term is
+$-2\int_0^L e^{-r/2}h_f(r)\,d\psi_{\rm Ch}(e^r)$.
+The pole term is $4\int_0^L\cosh(r/2)h_f(r)dr$.
+Subtracting the smooth prime density $e^rdr$ from this pole expression
+leaves $2\int_0^Le^{-r/2}h_f(r)dr$, the form of the kernel
+$e^{-|x-y|/2}$. The $a_0=1/2$ gamma summand is $4I$ minus precisely
+that kernel, since $2a_0R_{f,a_0}$ has kernel $e^{-|x-y|/2}$.
+Thus
+\begin{equation}\label{d:discrepancy}
+Q_L[f]=t_{\ge1,L}[f]+(4+w_0)\norm f^2
+-2\int_0^Le^{-r/2}h_f(r)\,dE(r).
+\end{equation}
+Autocorrelations of $L^2$ functions are continuous, and the finite-interval
+measure has finite variation. This is a bounded form contribution, so
+the identity extends from the smooth core to $\mathcal D_L$.
+
+For smooth compact support, $E(0)=0$ and $h_f(L)=0$ remove both boundary
+terms in Stieltjes integration by parts. The last term becomes
+$2\int_0^L E(r)e^{-r/2}(h_f'(r)-h_f(r)/2)dr$. No such derivative is
+assumed to be an ordinary function on the whole logarithmic domain.
+
+If the prime measure is replaced by its leading density, then $E=0$.
+For a zero extension in $H^1(\R)$,
+\[
+t_{\ge1,L}[f]\le\sum_{k\ge1}\frac2{a_k^3}\norm{F'}^2
+\le\frac{26}{125}\norm{F'}^2.
+\]
+The last fraction is $2/(5/2)^3+1/[2(5/2)^2]$ by an integral tail.
+Equation \eqref{d:contact} implies $w_0<-5$. To check the elementary
+inequality, use $\gamma_E>1/2$, $\pi>3$, $\log2>2/3$ and $\log\pi>1$.
+For example
+$\gamma_E>H_8-\log9>H_8-11/5=29/56>1/2$;
+$e^{11/10}>3$ follows from its first six positive series terms,
+and $e<3$ gives $\log\pi>1$.
+
+On $(0,2)$, $f(x)=\sin(\pi x/2)$ has norm one, vanishes at the endpoints,
+and $\norm{F'}^2=\pi^2/4$. Hence
+\[
+Q_2^{\rm dens}[f]<-1+\frac{26}{125}\frac{(22/7)^2}{4}
+=-\frac{2979}{6125}.
+\]
+Approximation in $H_0^1(0,2)$ preserves negativity and gives smooth compact
+support. This shows why simply discarding the signed prime discrepancy
+does not provide a route to the matrix ordering. It does not rule out
+methods that use stronger, signed prime information.
+
+\section{The length-one high-mode example}
+At $L=1$ only $p=2,m=1$ is active. The chain has two sites, so
+\[
+\beta_1=-w_0+2\sinh(1/2)-1+\frac{\log2}{\sqrt2}.
+\]
+The longer manuscript supplies the rational bounds
+\[
+\begin{gathered}
+\gamma_E<0.58,\quad\pi<22/7,\quad\log2<0.7,\\
+\log\pi<23/20,\quad2\sinh(1/2)-1<43/1000,\quad
+\log2/\sqrt2<1/2.
+\end{gathered}
+\]
+They give
+\[
+\beta_1<\frac{58}{100}+\frac{11}{7}+\frac{21}{10}
++\frac{23}{20}+\frac{43}{1000}+\frac12=\frac{41611}{7000}.
+\]
+These constants may be checked using rational series: the atanh series
+$\log2=2\sum_{j\ge0}3^{-(2j+1)}/(2j+1)$ gives its upper and lower bounds;
+$\gamma_E<H_{256}-\log256$ gives the displayed Euler-constant bound
+with $\log2>6931/10000$; positive exponential sums and geometric tail
+bounds give the remaining logarithm and sinh bounds. For $\pi<22/7$ use
+$22/7-\pi=\int_0^1x^4(1-x)^4/(1+x^2)dx>0$.
+
+Since $\pi>3$ and $b$ is increasing,
+\[
+b((4\pi)^2)>\sum_{k=0}^{63}\frac2{a_k}\frac{144}{a_k^2+144}
+>\frac{3007}{500}>\frac{41611}{7000}+\frac1{16}.
+\]
+The two final comparisons use exact fractions. Thus $N=4$ is an
+admissible cutoff with a strict margin. It proves $N_{\min}(1)\le4$
+for the optional mathematical minimum, and permits a deliberate
+four-dimensional low space. It does not specify the output of the
+stagewise search for an arbitrary fixed enclosure routine.
+No arithmetic Schur-matrix entries or sign certificate are inferred
+from these scalar inequalities.
+
+\clearpage
+\section{Human review record}
+Mark an item complete only after checking its proof and any cited premise.
+This list starts unreviewed. A mathematical question should be recorded
+with the equation number and the needed correction, then resolved before
+that item is marked complete.
+\begin{center}
+\begin{tabular}{p{0.66\textwidth}p{0.23\textwidth}}
+\toprule
+Required check & Reviewer / date\\\midrule
+Weil normalization and Fourier bridge, Sections 2--3 & \hrulefill\\[7pt]
+Closed logarithmic form and smooth core, Section 3 & \hrulefill\\[7pt]
+Neumann comparison and certified cutoff, Section 4 & \hrulefill\\[7pt]
+Green-kernel sign and equality of domains, Section 5 & \hrulefill\\[7pt]
+Carleman essential norm and finite-input tails, Sections 5--6 & \hrulefill\\[7pt]
+Prime/pole entries, parity and both tails, Section 6 & \hrulefill\\[7pt]
+Schur identity and both RH implications, Section 7 & \hrulefill\\[7pt]
+Shift cancellation and projected source, Section 8 & \hrulefill\\[7pt]
+Residual bounds and both convergence proofs, Section 9 & \hrulefill\\[7pt]
+Finite-trial error propagation, Section 10 & \hrulefill\\[7pt]
+Tolerance quantifiers and null directions, Section 11 & \hrulefill\\[7pt]
+Discrepancy sign and rational control, Sections 12--13 & \hrulefill\\[7pt]
+Reference accuracy, prior work and claim of novelty & \hrulefill\\[7pt]
+Final text and disclosure match the review actually done & \hrulefill\\[7pt]
+\bottomrule
+\end{tabular}
+\end{center}
+Completing these items validates the proposed reduction only to the extent
+of the actual human checks; it does not prove the open conjecture and does
+not constitute independent peer review. The original package's 59 algebra
+checks reproduce, but they do not certify the analytic arguments above.
+The physical portions omitted from the short paper need their own review
+if they are later submitted as separate mathematical claims.
+
+\section*{Preparation note}
+OpenAI's Codex assisted substantially with the analysis, calculations, code
+and writing of this companion. The finite tolerance formulation and the
+explicit finite-trial allowance are developed here from the residual and
+column estimates in the source investigation. They are supplied with proofs
+for review, not represented as externally checked results. This revision
+also incorporates the documented Codex review of 13 September 2026,
+including the certified-cutoff convention, normalization bridge,
+projected source, parity decomposition and sharper compressed tail.
+No human review has yet been recorded in this file.
+\clearpage
+\input{references}
+\end{document}

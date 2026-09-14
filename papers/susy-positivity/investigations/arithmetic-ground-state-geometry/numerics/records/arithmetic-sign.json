@@ -1,0 +1,159 @@
+{
+  "status": "passed",
+  "arithmetic": "exact fractions; Python standard library",
+  "checks": [
+    {
+      "name": "neumann_free_boundary_kernel",
+      "status": "passed",
+      "evidence": "9 rational exponential-coordinate cases compare the independent hyperbolic Green kernel, rank-two correction and both boundary derivatives."
+    },
+    {
+      "name": "parity_and_boundary_columns",
+      "status": "passed",
+      "evidence": "4 parity pairs check the rank-two Gram against the integrated cosine-column formula; no numerical cosine integrals are substituted."
+    },
+    {
+      "name": "positive_truncated_schur_negative_target",
+      "status": "passed",
+      "evidence": [
+        {
+          "ell": 0,
+          "partial_schur": "1/4",
+          "full_negative_value": "-1/4"
+        },
+        {
+          "ell": 1,
+          "partial_schur": "1/8",
+          "full_negative_value": "-1/8"
+        },
+        {
+          "ell": 2,
+          "partial_schur": "1/16",
+          "full_negative_value": "-1/16"
+        },
+        {
+          "ell": 5,
+          "partial_schur": "1/128",
+          "full_negative_value": "-1/128"
+        },
+        {
+          "ell": 12,
+          "partial_schur": "1/16384",
+          "full_negative_value": "-1/16384"
+        },
+        {
+          "ell": 30,
+          "partial_schur": "1/4294967296",
+          "full_negative_value": "-1/4294967296"
+        }
+      ]
+    },
+    {
+      "name": "noncommuting_word_sign_obstruction",
+      "status": "passed",
+      "evidence": {
+        "jordan_matrix": [
+          [
+            "2",
+            "5/4"
+          ],
+          [
+            "5/4",
+            "1/2"
+          ]
+        ],
+        "determinant": "-9/16",
+        "negative_value": "-1",
+        "grouped_sandwich": "exact rank-one Gram"
+      }
+    },
+    {
+      "name": "mixed_response_residual_identity",
+      "status": "passed",
+      "evidence": {
+        "exact_response": [
+          [
+            "3",
+            "-1"
+          ],
+          [
+            "-1",
+            "20/11"
+          ]
+        ],
+        "residual_upper_bound": [
+          [
+            "129/32",
+            "-39/32"
+          ],
+          [
+            "-39/32",
+            "19/8"
+          ]
+        ],
+        "comparison": "H-Lambda positive; upper minus exact positive"
+      }
+    },
+    {
+      "name": "galerkin_residual_tail",
+      "status": "passed",
+      "evidence": {
+        "residual": [
+          [
+            "0",
+            "0"
+          ],
+          [
+            "11/4",
+            "-3/2"
+          ]
+        ],
+        "upper_minus_exact": "3/22 times the residual Gram; positive semidefinite"
+      }
+    },
+    {
+      "name": "mode_tail_uses_full_residual_gram",
+      "status": "passed",
+      "evidence": "An exact three-row example retains the omitted Gram and gives upper minus exact = (4/45) times the final-row Gram."
+    },
+    {
+      "name": "reference_shift_cancels_from_schur",
+      "status": "passed",
+      "evidence": {
+        "shifts": [
+          "8",
+          "9",
+          "12"
+        ],
+        "unchanged_schur": [
+          [
+            "-5/2",
+            "1"
+          ],
+          [
+            "1",
+            "-9/11"
+          ]
+        ]
+      }
+    },
+    {
+      "name": "density_pole_lowest_gamma_cancellation",
+      "status": "passed",
+      "evidence": "Both Laurent coefficients cancel exactly; the surviving scalar coefficient is 4+w_0 and all higher gamma masses remain."
+    },
+    {
+      "name": "rational_density_obstruction",
+      "status": "passed",
+      "evidence": {
+        "gamma_lower": "29/56",
+        "higher_mass_derivative_bound": "26/125",
+        "length": "2",
+        "unit_witness": "cos(pi*x/2) on (-1,1)",
+        "strict_quadratic_upper_bound": "-2979/6125",
+        "scope": "Smooth-density control, not the arithmetic Weil form."
+      }
+    }
+  ],
+  "limitation": "Finite identities and rational inequalities only. No analytic proof certification or arithmetic positivity claim."
+}

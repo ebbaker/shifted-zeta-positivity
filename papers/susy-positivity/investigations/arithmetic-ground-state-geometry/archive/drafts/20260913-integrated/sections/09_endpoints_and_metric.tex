@@ -1,0 +1,194 @@
+\section{Endpoint geometry and conditional uniqueness}
+\label{sec:endpoints}
+The physical caps give useful boundary data for the shape metric.
+One endpoint coalesces the critical points; the other sends eight
+vacua to infinity in the original coordinates. Both must be treated
+in a fixed source normalization.
+
+\subsection{The homogeneous endpoint}
+Write
+\[
+f_\epsilon(Z,W)=\frac{Z^4+W^4+Z^2W^2}{16}
+                 +\frac{\epsilon}{8}(Z^2+W^2),
+\qquad \epsilon=c^{-1/2}.
+\]
+This follows from $Z=c^{1/4}A$, $W=c^{1/4}B$. The leading cubic
+gradient has no zero on the unit sphere: its equations are
+$Z(2Z^2+W^2)=W(2W^2+Z^2)=0$, whose only common solution is zero.
+Uniformly for bounded $\epsilon$, with $R^2=|Z|^2+|W|^2$,
+\[
+|\nabla f_\epsilon|\ge aR^3-bR,\qquad
+|\nabla^k f_\epsilon|\le C_k(1+R^{4-k}),\quad k\ge2.
+\]
+It follows that for every $\delta>0$ and relevant $k$,
+$\delta|\nabla f_\epsilon|^k-|\nabla^k f_\epsilon|\to+\infty$.
+Euclidean space has bounded geometry, so these estimates establish
+the strong ellipticity hypotheses of the non-Morse Hodge
+comparison theorem \cite[Theorem 2.34]{LiWen}.
+
+\begin{proposition}\label{end:continuous}
+The harmonic spaces of $f_\epsilon$, including $\epsilon=0$, have
+dimension nine. Their projections and the Gram matrices in fixed
+compact cohomology representatives vary continuously at zero.
+\end{proposition}
+\begin{proof}
+The two leading cubics form a regular sequence. Their quotient has
+Hilbert series $(1+z+z^2)^2$ and dimension nine. Lower-degree terms
+preserve this dimension, and Hodge comparison identifies it with
+the middle-degree kernel; other degrees vanish.
+The quadratic forms of the Hamiltonians have common domain
+$H^1\cap L^2(R^6\,dV)$ on forms. The variation in their coefficients
+is bounded by
+$C(|\epsilon|R^4+|\epsilon|^2R^2+|\epsilon|)$, which is small relative
+to the common confining form as $\epsilon\to0$. Form continuity
+gives norm-resolvent continuity. Compact resolvent and the constant
+nine-dimensional kernel give a local spectral gap and continuous
+kernel projections. A single cutoff enclosing all critical points
+in this neighborhood makes the homotopy representatives in
+\eqref{caps:cutoff} continuous as well.
+\end{proof}
+
+At zero, combining field rotation with target rotation gives
+characters $e^{i(d-6)\theta}$ on the polynomial-degree $d$ classes.
+The degrees $0,2,4$ in the determinant-character sector are distinct,
+so its Gram matrix is diagonal. Combining continuity with
+\eqref{caps:homogeneous}, the radial shape metric satisfies
+\begin{equation}\label{end:small-rho}
+g_E(\rho)=D_\rho\left[
+ \operatorname{diag}(a_0,\lambda,\lambda^2/a_0)+o(1)\right]D_\rho,
+\qquad
+D_\rho=\operatorname{diag}(\sqrt\rho,1,\rho^{-1/2}),
+\quad \rho=1/c\downarrow0.
+\end{equation}
+The assertion concerns the rescaled matrix. It does not assert that
+every unscaled off-diagonal entry tends to zero.
+For the identity class this gives
+$H(c,c)\sim a_0/c$. Direct real scaling gives
+$\mathcal C(c)\sim b_0/\sqrt c$, where
+\[
+b_0=\frac1{2\pi}\int_{\R^2}
+ e^{-(Z^4+W^4+Z^2W^2)/4}\,dZ\,dW>0.
+\]
+Consequently $H(c,c)/\mathcal C(c)^2\to a_0/b_0^2$; no value of $a_0$ has
+been inferred from the raw period.
+
+\subsection{The massive endpoint without a uniform gap assumption}
+For $c>0$, use $Z=\sqrt c\,A$, $W=\sqrt c\,B$ instead. Then
+$f_c=\phi_c^*(\rho F)$ with $\rho=1/c$ and $F=f_1$.
+The frame obeys
+$E=\rho\,\phi_c^*((1,S,T)\Omega_Z)$, so
+$g_E=\rho^2g_{\mathrm{ref}}$. All nine critical points of $F$
+are now fixed and Morse.
+
+Let $H_v$ be the complex Hessian at a critical point. A unitary
+Takagi factorization gives positive singular values and local
+holomorphic Morse coordinates with unit-modulus Jacobian $k_v$.
+The product Gaussians of Section~\ref{sec:caps}, corrected by the
+compact homotopy outside disjoint small balls, give exact-class
+representatives for the primitive idempotents at twists $\pm\rho F$.
+Their supports are disjoint and their squared norms satisfy
+\[
+N_v^\pm=\frac{4\pi^2}{\rho^2|\det H_v|}
+                 (1+O(\rho^{-1/2})).
+\]
+The relative error follows from the first variation of the
+Euclidean metric in Morse coordinates on the scale
+$|\zeta|\asymp\rho^{-1/2}$; cutoff corrections are exponentially
+small. Their opposite-twist pairing is exactly diagonal, with
+entries
+$k_{v,\rho}=4\pi^2/(\rho^2\det H_v)$.
+
+\begin{proposition}\label{end:squeeze}
+In the primitive-idempotent frame,
+\[
+\rho^2G_{\mathrm{ref}}
+ =4\pi^2\operatorname{diag}_v(|\det H_v|^{-1})
+                         +O(\rho^{-1/2}).
+\]
+\end{proposition}
+\begin{proof}
+Harmonic representatives minimize norm in their class, giving
+$G_{\mathrm{ref}}\le\operatorname{diag}N_v^+$.
+For a source with coefficients $z_v$, pair with the compact
+opposite-twist representative of coefficients
+$\overline{z_vk_{v,\rho}}/N_v^-$. Cauchy--Schwarz and exact descent
+give the lower matrix bound
+$\operatorname{diag}(|k_{v,\rho}|^2/N_v^-)\le G_{\mathrm{ref}}$.
+The two bounds have the same leading term.
+\end{proof}
+This proof needs no spectral gap uniform in $\rho$.
+It establishes the metric limit, not a derivative expansion or
+Stokes data.
+
+The three orbit sums of $|\det H_v|^{-1}$ are $16,64,48$.
+The evaluation matrix from the polynomial frame to these orbits is
+\[
+\mathsf V=\begin{pmatrix}1&0&0\\1&-1&0\\1&-4/3&4/9\end{pmatrix}.
+\]
+Thus the other endpoint is completely fixed:
+\begin{equation}\label{end:large-rho}
+g_E(\rho)\longrightarrow g_\infty
+=4\pi^2
+\begin{pmatrix}
+128&-128&64/3\\
+-128&448/3&-256/9\\
+64/3&-256/9&256/27
+\end{pmatrix},
+\qquad \rho\to\infty.
+\end{equation}
+In particular,
+$H(c,c)=512\pi^2+O(\sqrt c)$ as $c\downarrow0$.
+The exactly quadratic theory at $c=0$ has identity norm
+$64\pi^2$. The difference is explained by the two escaping orbits,
+whose limiting contributions are $256\pi^2$ and $192\pi^2$.
+It is not legitimate to replace the small-positive-$c$ nine-vacuum
+limit by the one-vacuum Gaussian model.
+
+\subsection{Uniqueness under the physical chiral equation}
+The following statement is conditional on the exact identification
+of the physical connection and chiral equation in
+\eqref{shape:ttstar}. Endpoint estimates alone do not establish that
+identification.
+
+\begin{theorem}\label{end:unique}
+For the same Higgs matrix $C=R/16$, there is at most one positive
+$C^2$ metric on the punctured shape plane satisfying
+\eqref{shape:ttstar}, \eqref{end:small-rho}, and
+\eqref{end:large-rho}. The constant $a_0>0$ in the first endpoint
+need not be prescribed. For nonradial solutions, the endpoint
+conditions are required uniformly on circles.
+\end{theorem}
+\begin{proof}
+For two metrics put $F_{12}=\tr(g_1^{-1}g_2)$. At a point choose
+a holomorphic normal frame for $g_1$, then a constant unitary
+change with $g_2=\Lambda=\operatorname{diag}(\lambda_i)$.
+Writing $X=\partial g_2$, direct substitution of the two metric
+equations gives
+\[
+\bar\partial\partial F_{12}
+ =\norm{\Lambda^{-1/2}X}_{\mathrm{HS}}^2
+  +\sum_{i,j}\frac{(\lambda_i-\lambda_j)^2}{\lambda_j}|C_{ij}|^2
+ \ge0.
+\]
+Therefore $d=F_{12}+F_{21}-6$ is nonnegative and subharmonic.
+At the small endpoint its limit is
+$2(a_2/a_1+a_1/a_2-2)$, where $a_i$ are the two possible constants,
+so it is bounded. At infinity it tends to zero because both
+metrics tend to $g_\infty$.
+On $\epsilon<|u|<R$, bound $d$ by the harmonic function
+\[
+\delta_R+(K-\delta_R)
+           \frac{\log(R/|u|)}{\log(R/\epsilon)},
+\]
+where $K$ bounds the inner boundary and
+$\delta_R=\sup_{|u|=R}d$. Let $\epsilon\downarrow0$ and then
+$R\to\infty$. This proves $d=0$ and hence $g_1=g_2$.
+\end{proof}
+The physical harmonic metric exists throughout the punctured
+parameter plane by the local uniform form estimates, the
+constant-dimensional kernel and fixed compact representatives.
+If it satisfies the stated chiral equation in this frame, it
+supplies existence as well as uniqueness. In that case the
+massive endpoint selects $a_0$ implicitly. Neither its numerical
+value nor a new explicit solution of the nonlinear radial equation
+is asserted.

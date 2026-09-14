@@ -1,0 +1,259 @@
+\section{The closed arithmetic source and its spectral scale}
+\label{sec:closed-source}
+Finite-dimensional ground-state geometry does not supply the full
+arithmetic input space. We now construct a closed infinite-dimensional
+preparation for the gamma kinetic energy, retaining all remaining
+arithmetic terms explicitly.
+
+\subsection{Local fields, maximal domain and adjoint}
+Let $H=-\partial_x^2$ on $L^2(\R)$, $a_k=2k+1/2$, and
+$R_k=(a_k^2+H)^{-1}$. For a prescribed source $F$, minimize
+\[
+\mathcal E_k(F,u)=\frac2{a_k}
+ \left(\norm{F-u}^2+a_k^{-2}\norm{u'}^2\right)
+\quad\text{over }u\in H^1(\R).
+\]
+The minimizer is $u_k=a_k^2R_kF$. Define the output space and residuals
+\begin{equation}\label{source:definition}
+\mathscr Y_\gamma=\bigoplus_{k\ge0}(L^2(\R)\oplus L^2(\R)),
+\qquad
+(\mathcal A_\gamma F)_k=
+\begin{pmatrix}
+\sqrt{2/a_k}\,H R_kF\\
+\sqrt{2a_k}\,\partial_xR_kF
+\end{pmatrix}.
+\end{equation}
+The Fourier column $v_k(\tau)$ obtained from this expression has
+$v_k^\dagger v_k=(2/a_k)\tau^2/(a_k^2+\tau^2)$. Hence
+\[
+\norm{\mathcal A_\gamma F}^2
+=\frac1{2\pi}\int_\R B(\tau^2)|\widehat F(\tau)|^2\,d\tau=K[F].
+\]
+The digamma partial fraction and asymptotic formulas \cite{DLMF} give
+\begin{equation}\label{source:log}
+B(\tau^2)=\re\psi(1/4+i\tau/2)-\psi(1/4)
+=\log|\tau|-\log2-\psi(1/4)+O(\tau^{-2}).
+\end{equation}
+The positive measure
+$\sum_k(2/a_k)\delta_{a_k^2}$ also places this explicit tower in the
+complete-Bernstein extension framework \cite{KwasnickiMucha}.
+
+For $X_L=L^2(I_L)$ and zero extension $E_L$, write
+$A_L=\mathcal A_\gamma E_L$ and
+\begin{equation}\label{source:domain}
+\mathcal D_{\log,L}=
+\left\{f\in X_L:
+ \int_\R B(\tau^2)|\widehat{E_Lf}(\tau)|^2\,d\tau<\infty\right\}.
+\end{equation}
+This is the maximal source domain. It is equivalent to the
+Fourier weight $1+\log(2+|\tau|)$ after adding the $L^2$ norm.
+
+\begin{proposition}\label{source:closed}
+The source $A_L$ is closed and densely defined, with domain
+$\mathcal D_{\log,L}$ and core $C_c^\infty(I_L)$.
+\end{proposition}
+\begin{proof}
+Each component of \eqref{source:definition} is bounded. If
+$f_n\to f$ and $A_Lf_n\to y$ in the two Hilbert spaces, componentwise
+convergence identifies every component of $y$ with that of $A_Lf$.
+Their squared sum is finite, proving closedness.
+For the core assertion, first contract the supported function using
+$D_rf(x)=r^{-1/2}f(x/r)$, $r<1$. These maps are uniformly bounded
+near $r=1$ in the logarithmic Fourier norm and converge strongly
+to the identity there, by density and the weight comparison under
+dilation. The contracted support has a positive gap from the
+endpoints. Mollification inside that gap then converges in the
+same norm.
+\end{proof}
+
+The maximal adjoint must be taken after interval restriction.
+For $\Psi\in\mathscr Y_\gamma$, define the distribution $t_\Psi$ by
+\[
+\widehat t_\Psi(\tau)=\sum_k v_k(\tau)^\dagger\widehat\Psi_k(\tau).
+\]
+Cauchy--Schwarz gives
+$|\widehat t_\Psi|^2/(1+B)\le\sum_k|\widehat\Psi_k|^2$, so the sum
+defines a distribution. The global adjoint requires $t_\Psi\in L^2(\R)$,
+whereas
+\begin{equation}\label{source:adjoint}
+\Dom A_L^*=\{\Psi:t_\Psi|_{I_L}\in L^2(I_L)\},
+\qquad A_L^*\Psi=t_\Psi|_{I_L}.
+\end{equation}
+In particular the interval adjoint domain can be larger. The form
+operator $T_L=A_L^*A_L$ has domain
+\begin{equation}\label{source:operator-domain}
+\Dom T_L=
+\{f\in\mathcal D_{\log,L}:
+ (B(H)E_Lf)|_{I_L}\in L^2(I_L)\},
+\end{equation}
+where the multiplier is first understood distributionally.
+The block charge with entries $A_L,A_L^*$ on
+$\Dom A_L\oplus\Dom A_L^*$ is self-adjoint, and its square has
+diagonal entries $T_L,A_LA_L^*$. This construction concerns the
+kinetic term.
+
+\subsection{Two controlled singular limits}
+Let $A_{L,N}$ retain $0\le k<N$. Its exact operator norm is
+\begin{equation}\label{source:tower-norm}
+\norm{A_{L,N}}^2
+=\sum_{k<N}\frac2{a_k}
+=\psi(N+1/4)-\psi(1/4)
+=\log N-\psi(1/4)+O(N^{-1}).
+\end{equation}
+The upper bound follows from the multiplier; modulating any fixed
+nonzero compactly supported input to arbitrarily high frequency
+attains its supremum, including after compression. Increasing
+towers converge in output norm precisely on
+$\mathcal D_{\log,L}$; outside it their squared norms diverge.
+If $F=E_Lf\in H^1(\R)$, the tail obeys
+\[
+\norm{(A_L-A_{L,N})f}^2
+\le\left(\frac2{a_N^3}+\frac1{2a_N^2}\right)\norm{F'}^2,
+\]
+where $A_{L,N}$ is embedded by zero components.
+Monotone convergence of closed forms gives strong-resolvent
+convergence of the associated operators \cite{SimonForms}.
+
+The heat regulator is
+$A_{L,\epsilon}=\mathcal A_\gamma e^{-\epsilon H/2}E_L$.
+Its point-source columns are the inverse Fourier transforms of
+$v_k(\tau)e^{-\epsilon\tau^2/2}e^{-i\tau x}$, and
+\begin{align}
+\norm{A_{L,\epsilon}}_{\mathrm{HS}}^2
+&=\frac L{2\pi}\int_\R B(\tau^2)e^{-\epsilon\tau^2}\,d\tau
+\label{source:heat}\\
+&=\frac{L}{2\sqrt{\pi\epsilon}}
+\left(\frac12\log\frac1\epsilon+
+\frac{\gamma_{\!E}}2+\frac\pi2+\log2\right)+O_L(1).
+\nonumber
+\end{align}
+To obtain the constant, integrate the logarithm in
+\eqref{source:log}, using
+$\psi(1/2)=-\gamma_{\!E}-2\log2$ and
+$\psi(1/4)=-\gamma_{\!E}-\pi/2-3\log2$.
+The remainder is integrable after subtracting the high-frequency
+asymptotic with a cutoff. The source and form limits again have
+exactly domain $\mathcal D_{\log,L}$, with strong-resolvent
+convergence. Thus a regularized family of normalizable point caps
+has a necessarily singular size limit.
+
+\subsection{The complete signed form}
+Let $c(x)=\cosh(x/2)$, $s(x)=\sinh(x/2)$ on $I_L$, and
+$T_d=E_L^*U_dE_L$. Define the bounded self-adjoint remainder
+\begin{equation}\label{source:remainder}
+R_L=w_0I+2cc^*-2ss^*
+ -\sum_{m\log p<L}(\log p)p^{-m/2}(T_{m\log p}+T_{m\log p}^*).
+\end{equation}
+Here $cc^*$ denotes $f\mapsto c\ip c f$; the squared integrals
+in the original convention have the same quadratic values.
+A useful coarse bound is
+\[
+\norm{R_L}\le |w_0|+L+2\sinh(L/2)
+                  +2\sum_{m\log p<L}(\log p)p^{-m/2}.
+\]
+The complete operator is
+$W_L=T_L+R_L$, with form domain $\mathcal D_{\log,L}$ and
+operator domain $\Dom T_L$. Adding this same $R_L$ to either
+regulator preserves the complete signed expression and the
+strong-resolvent limit. These operators are uniformly bounded
+below; that fact is not their nonnegativity.
+If $I_L\subset I_{L_*}$, zero extension preserves the complete
+quadratic form, since all newly available translations with no
+overlap vanish.
+
+The embedding $\mathcal D_{\log,L}\hookrightarrow X_L$ is compact.
+Indeed, the weighted norm uniformly controls the high-frequency
+tail, while restricting a fixed finite Fourier band to a finite
+interval is Hilbert--Schmidt. Thus $T_L$ and $W_L$ have compact
+resolvent. There are only finitely many negative eigenvalues of
+$W_L$ at any fixed $L$, without a claim about their absence.
+
+\subsection{Why bounded and finite-rank sources do not suffice}
+For $\varphi\in C_c^\infty(I_L)$ and
+$f_N(x)=e^{iNx}\varphi(x)$, expansion of the multiplier gives
+\begin{equation}\label{source:modulation}
+\begin{split}
+Q_L[f_N]={}&\norm\varphi^2(\log N-\log(2\pi))\\
+&-2\sum_{m\log p<L}(\log p)p^{-m/2}
+\re\!\left(e^{-iNm\log p}
+\ip{E_L\varphi}{U_{m\log p}E_L\varphi}\right)+o(1).
+\end{split}
+\end{equation}
+The pole amplitudes decay faster than any power. In particular
+$Q_L[f_N]=\norm\varphi^2\log N+O(1)$. No bounded source can
+represent this form. A square-integrable family of point caps
+$b_x$ would define a Hilbert--Schmidt source and is also excluded.
+Evolution confined to a finite vacuum space, on which $H=0$,
+does not supply these inputs.
+
+Nor can an unbounded finite-range source evade the obstruction by
+a domain restriction. Every densely defined closable operator
+with finite-dimensional range is bounded on its domain: otherwise
+choose inputs tending to zero whose outputs have norm one, then
+take a convergent output subsequence, contradicting closability.
+Its closure is therefore bounded and everywhere defined.
+If a proposed norm identity holds on the smooth core, the closed
+arithmetic form makes that source closable: a sequence of inputs
+tending to zero with Cauchy outputs is Cauchy in the shifted form
+norm, so the closed-form limit forces the output limit to vanish.
+Equation \eqref{source:modulation} excludes the resulting bounded
+operator.
+
+\subsection{A resolvent pairing as a general control}
+For an independently self-adjoint physical Hamiltonian $\mathcal H$
+and bounded finite-channel coupling $J$, put
+$M(z)=J^*(\mathcal H-z)^{-1}J$ for $\im z>0$ and
+$\Gamma(z)=(\mathcal H-\bar z)^{-1}J$. The resolvent identity gives
+\begin{equation}\label{source:nevanlinna}
+\frac{M(z)-M(w)^*}{z-\bar w}=\Gamma(z)^*\Gamma(w).
+\end{equation}
+This is a positive Gram kernel. Its Cayley transform
+$S(z)=(M(z)-iI)(M(z)+iI)^{-1}$ satisfies
+\[
+\frac{I-S(z)S(w)^*}{-i(z-\bar w)}
+=2(M(z)+iI)^{-1}
+ \frac{M(z)-M(w)^*}{z-\bar w}(M(w)^*-iI)^{-1}.
+\]
+In a general operator Herglotz representation
+\[
+M(z)=A+Dz+\int_\R
+ \left(\frac1{t-z}-\frac{t}{1+t^2}\right)d\Sigma(t),
+\quad D\ge0,
+\]
+the kernel sees $D$ and the positive measure but loses the constant
+$A$ \cite{Herglotz}. This illustrates both the strength and the
+normalization limit of a resolvent Gram law. A regular bounded
+coupling does not on its own identify the complete arithmetic form
+or its singular source limit.
+
+\subsection{Neumann--Dirichlet comparison}
+Let $H_{\rm N},H_{\rm D}$ be the ordinary Neumann and Dirichlet
+interval Laplacians.
+\begin{theorem}\label{source:bracket}
+In the sense of closed quadratic forms,
+\[
+B(H_{\rm N})\le T_L\le B(H_{\rm D}),
+\]
+with
+$\Dom B(H_{\rm D})^{1/2}\subset\mathcal D_{\log,L}
+\subset\Dom B(H_{\rm N})^{1/2}$. Consequently, indexing from one,
+\begin{equation}\label{source:eigenvalues}
+B(((n-1)\pi/L)^2)\le\lambda_n(T_L)\le B((n\pi/L)^2),
+\qquad
+\lambda_n(T_L)=\log\frac{\pi n}{2L}-\psi(1/4)+O_L(n^{-1}).
+\end{equation}
+\end{theorem}
+\begin{proof}
+For each mass, restricting a whole-line auxiliary field to $I_L$
+drops nonnegative exterior energy; extending a Dirichlet field
+by zero gives an admissible whole-line competitor. Minimizing
+the three energies therefore orders them as Neumann, whole-line,
+Dirichlet. The outer minima are the forms of
+$(2/a)H_{\rm N,D}(a^2+H_{\rm N,D})^{-1}$.
+Sum finite towers and pass to increasing form limits. Min--max
+and the known interval Laplacian eigenvalues give the bounds;
+\eqref{source:log} gives the asymptotic.
+\end{proof}
+This comparison concerns three different preparations. It does
+not impose Neumann or Dirichlet boundary conditions on the actual
+whole-line gamma fields.

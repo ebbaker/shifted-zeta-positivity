@@ -4,12 +4,12 @@ Per-paper reproduction code lives **next to each paper**, not here:
 
 | Paper | Code | What it covers |
 |---|---|---|
-| `papers/psi-omega-margin/code/` | `c1`–`c8` + `README.md`, `requirements.txt` | closed forms, prime-side asymptotics, series identity, windows, Dirichlet section |
-| `papers/omega-string/` | `fig_density.py`, `v1_identities.py`, `v2_thmE_kasahara.py` | Figure 1, residue lemma and Fourier block, Theorem E tables, Kasahara dual curve, endpoint length |
-| `papers/defect-depth/code/` | `lab_ihara_core.py`, `lab_ihara_experiments.py` + `README.md`, `requirements.txt` | the finite Ihara-zeta laboratory (rounds 1–5) behind Paper 3 |
-| `papers/rh-detector/code/` | `h1`, `h3`, `h4`, `d1`, `d4`, `v1` + `zeros1001.json`, `beta_zeros.json`, `README.md`, `requirements.txt` | every table and section of the detector paper |
-| [papers/weil-depth/numerics/](../papers/weil-depth/numerics/README.md) | Arb builders, enclosures, independent checks | finite-horizon Weil positivity through log 7; external data in `szp-archive/weil-depth/` |
-| [papers/storage-depth/numerics/](../papers/storage-depth/numerics/README.md) | spatial builders, residual and floor replays, Fourier diagnostics | continuation past log 7; external data in `szp-archive/storage-depth/` |
+| `papers/shifted-zeta/psi-omega-margin/code/` | `c1`–`c8` + `README.md`, `requirements.txt` | closed forms, prime-side asymptotics, series identity, windows, Dirichlet section |
+| `papers/shifted-zeta/omega-string/` | `fig_density.py`, `v1_identities.py`, `v2_thmE_kasahara.py` | Figure 1, residue lemma and Fourier block, Theorem E tables, Kasahara dual curve, endpoint length |
+| `papers/shifted-zeta/defect-depth/code/` | `lab_ihara_core.py`, `lab_ihara_experiments.py` + `README.md`, `requirements.txt` | the finite Ihara-zeta laboratory (rounds 1–5) behind Paper 3 |
+| `papers/misc/rh-detector/code/` | `h1`, `h3`, `h4`, `d1`, `d4`, `v1` + `zeros1001.json`, `beta_zeros.json`, `README.md`, `requirements.txt` | every table and section of the detector paper |
+| [papers/shifted-zeta/weil-depth/numerics/](../papers/shifted-zeta/weil-depth/numerics/README.md) | Arb builders, enclosures, independent checks | finite-horizon Weil positivity through log 7; external data in `szp-archive/weil-depth/` |
+| [papers/shifted-zeta/storage-depth/numerics/](../papers/shifted-zeta/storage-depth/numerics/README.md) | spatial builders, residual and floor replays, Fourier diagnostics | continuation past log 7; external data in `szp-archive/storage-depth/` |
 | `verification/first-slab/scripts/` | three recomputation scripts | independent checks of the first-slab preprint (not certificates) |
 
 This directory holds only what has no paper home yet:
@@ -62,6 +62,6 @@ author on request.
 
 **Still unrecovered** (ran only in session workspaces): the round-6 inline
 runs for Paper 3 (amplitude certification, `s₀` scan, unscaled real-ζ suite,
-envelope bracketing — a pre-release item in `papers/defect-depth/STATUS.md`),
+envelope bracketing — a pre-release item in `papers/shifted-zeta/defect-depth/STATUS.md`),
 the Herglotz-peeling reconstruction for Paper 2, and the scripts of the closed
 geometry/physics routes listed in `../MANIFEST.md`.

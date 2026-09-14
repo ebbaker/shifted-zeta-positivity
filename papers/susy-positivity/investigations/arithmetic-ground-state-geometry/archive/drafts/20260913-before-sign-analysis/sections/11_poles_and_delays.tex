@@ -1,0 +1,236 @@
+\section{Pole gluing, Robin response and coherent delays}
+\label{sec:poles}
+There are two explicit ways to produce the pole kernel
+$P_L(x,y)=2\cosh((x-y)/2)$. The first changes a boundary response
+and exposes an unstable auxiliary mode. The second interferes
+with remote delayed sources and adds a positive contact.
+
+\subsection{The attractive Robin identity}
+Put $a=1/2$, $h=L/2$, and let $R_{\rm f}$ be the interval integral
+operator with kernel $e^{-|x-y|/2}$. The lowest gamma contribution
+is $K_0=4I-R_{\rm f}$. Define
+\[
+S_{\rm R}u=-u'',\qquad A_{\rm R}=S_{\rm R}+a^2,
+\]
+\[
+\Dom S_{\rm R}=\{u\in H^2(-h,h):
+ u'(h)=au(h),\ u'(-h)=-au(-h)\}.
+\]
+Its closed form on $H^1(-h,h)$ is
+\[
+\mathfrak a_{\rm R}[u]=
+ \int_{-h}^h(|u'|^2+a^2|u|^2)\,dx
+ -a(|u(h)|^2+|u(-h)|^2).
+\]
+Endpoint trace bounds prove semiboundedness and closedness. Direct
+differentiation, the derivative jump and the Robin conditions give
+\begin{equation}\label{poles:robin-green}
+A_{\rm R}^{-1}(x,y)=-e^{|x-y|/2}
+                  =R_{\rm f}(x,y)-P_L(x,y),
+\qquad
+C_L:=K_0+P_L=4I-A_{\rm R}^{-1}.
+\end{equation}
+There is no zero mode of $A_{\rm R}$.
+
+The free whole-line auxiliary field, eliminated outside the interval,
+has energy
+$4\norm{f-u}^2+16\norm{u'}^2+8(|u(h)|^2+|u(-h)|^2)$.
+Producing the pole law reverses the sign of the endpoint term.
+Equivalently the resulting energy is
+\[
+\mathcal E_{\rm R}(f,u)=4\norm f^2-8\re\ip f u
+                                      +16\mathfrak a_{\rm R}[u].
+\]
+Its stationary point is $u_f=A_{\rm R}^{-1}f/4$, and
+\begin{equation}\label{poles:stationary}
+\mathcal E_{\rm R}(f,u)=\ip f{C_Lf}
+                    +16\mathfrak a_{\rm R}[u-u_f].
+\end{equation}
+This is a stationary elimination, not a nonnegative minimization.
+
+Indeed $A_{\rm R}$ has exactly one negative eigenvalue $-\delta_e$,
+where
+\[
+\kappa_e\tanh(\kappa_e h)=a,\qquad
+\delta_e=\kappa_e^2-a^2>0,\qquad
+\phi_e(x)\propto\cosh(\kappa_e x).
+\]
+The even equation has a unique root $\kappa_e>a$. An odd negative
+eigenvalue of $A_{\rm R}$ would require
+$\kappa\coth(\kappa h)=a$ with $\kappa>a$, which is impossible.
+Thus $\inf_u\mathcal E_{\rm R}(f,u)=-\infty$ for every $f$.
+
+\begin{proposition}\label{poles:threshold}
+The bounded reduced operator $C_L$ is strictly positive for
+$L<4$, has kernel spanned by $x$ at $L=4$, and has exactly one
+negative eigenvalue, in the odd sector, for $L>4$.
+\end{proposition}
+\begin{proof}
+On an eigenvector of $S_{\rm R}$ with eigenvalue $\nu$, the
+coefficient of $C_L$ is $4\nu/(a^2+\nu)$.
+The even negative eigenvalue has $\nu<-a^2$ and gives a positive
+coefficient. An odd negative eigenvalue of $S_{\rm R}$ exists
+exactly when $ah>1$, from
+$\kappa_o\coth(\kappa_oh)=a$, $0<\kappa_o<a$.
+It gives the single negative coefficient. At $ah=1$, the odd
+zero mode is $x$. The remaining eigenvalues are positive.
+As direct checks,
+$C_L1=4e^{L/4}\cosh(x/2)$ and
+$C_Lx=8e^{L/4}(1-L/4)\sinh(x/2)$.
+\end{proof}
+For $L>4$ write
+$r_L=(a^2-\kappa_o^2)^{-1}-4>0$ and let $\Pi_o$ project onto the
+normalized odd mode. Set $r_L\Pi_o=0$ for $L\le4$.
+Removing the negative even auxiliary direction makes
+\eqref{poles:stationary} a minimization, but its reduced operator
+is $4I-A_{\rm R}^{-1}(I-\Pi_e)$; recovering $C_L$ adds
+$\delta_e^{-1}\Pi_e$. This does not remove the odd reduced defect.
+
+There is also an explicit positive source for $C_L+r_L\Pi_o$.
+Let $S_+$ be the nonnegative part of $S_{\rm R}$ and $P_{\ge0}$
+its spectral projection. Use
+\[
+\mathcal B_Lf=
+\begin{pmatrix}
+2S_+(S_++1/4)^{-1}P_{\ge0}f\\
+S_+^{1/2}(S_++1/4)^{-1}P_{\ge0}f\\
+\sqrt{4+\delta_e^{-1}}\,\ip{\phi_e}f
+\end{pmatrix}.
+\]
+Functional calculus gives
+$\mathcal B_L^*\mathcal B_L=C_L+r_L\Pi_o$.
+All components are bounded; the adjoint is the sum of the
+transposed components with conjugated scalar coefficients.
+Adjoining the higher gamma modes yields a closed source of norm
+$K+P_L+r_L\Pi_o$. The full arithmetic form still has the
+contact, translations and $-r_L\Pi_o$ to account for.
+
+\subsection{A supersymmetric factorization needs a shift}
+With $w(x)=\kappa_e\tanh(\kappa_ex)$, take
+$D=\partial_x-w$ on $H^1$ and
+$D^*=-\partial_x-w$ on $H_0^1$. Then
+\[
+D^*D=S_{\rm R}+\kappa_e^2=A_{\rm R}+\delta_e,\qquad
+DD^*=-\partial_x^2+\kappa_e^2
+          -2\kappa_e^2\operatorname{sech}^2(\kappa_ex)
+\]
+with Dirichlet partner conditions. This is consistent with the
+boundary-domain requirements in supersymmetric quantum mechanics
+\cite{BoundarySUSY}. Using $D^*D$ as the kinetic operator in the
+resolvent changes the reduced operator to
+$C_{\rm shift}=4I-(A_{\rm R}+\kappa_e^2)^{-1}$.
+Its difference from the desired one is
+\[
+C_L-C_{\rm shift}
+ =-\kappa_e^2 A_{\rm R}^{-1}(A_{\rm R}+\kappa_e^2)^{-1}.
+\]
+It is infinite rank. Positive factorization of a shifted
+Hamiltonian does not restore the unshifted pole identity.
+
+\subsection{Remote interference with a gamma channel}
+Fix a mass $a$ and put $\alpha_a=\sqrt{2/a}$. Its gamma column is
+$\alpha_a((I-a^2R_a)F,a\partial_xR_aF)$.
+Tensoring with the unit quartic cap $\chi$ in
+Section~\ref{sec:caps} leaves all the following Gram identities
+unchanged. Add to this same output channel
+\[
+\mathcal B_{D,t}F=-t
+\begin{pmatrix}(U_D+U_{-D})F\\(U_D-U_{-D})F\end{pmatrix},
+\qquad t\in\R.
+\]
+Its square is $4t^2I$. Writing $V=U_D+U_{-D}$ and
+$J=U_D-U_{-D}$, its cross term with the gamma source is
+\[
+-2\alpha_atV+2\alpha_at a^2R_aV
+                   +2\alpha_a at\,\partial_xR_aJ.
+\]
+The multiplier is
+$-4\alpha_at(\tau^2\cos(D\tau)-a\tau\sin(D\tau))/(a^2+\tau^2)$.
+For $D\ge L$ the atoms disappear after interval compression and
+the remaining kernel is
+$4\alpha_a at e^{-aD}\cosh(a(x-y))$.
+Taking $a=1/2$ and $t=e^{D/2}/2$ gives a closed source $A_0$ with
+\begin{equation}\label{poles:delay-source}
+T_0:=A_0^*A_0=T_L+P_L+e^D I,\qquad
+T_0\ge mI,\quad m=e^D+L-2\sinh(L/2)>0.
+\end{equation}
+The lower bound drops the nonnegative gamma and even pole
+components and uses $\norm s^2=\sinh(L/2)-L/2$.
+Here and below $D\ge L$ is fixed.
+
+The contact $e^D$ is optimal in the two-remote-shift ansatz with
+arbitrary constant internal cap vectors. If $r_\pm,s_\pm$ are
+their scalar overlaps with the two gamma residuals, the pole
+coefficient $\kappa\cosh(a(x-y))$ fixes
+$X=r_++\bar r_-+s_+-\bar s_-=-\kappa e^{aD}/(\alpha_a a)$.
+Cauchy--Schwarz bounds the contact below by
+\[
+|X|^2/4=\kappa^2e^{2aD}/(8a).
+\]
+For the pole normalization this is $e^D$, attained above.
+The statement is restricted to this ansatz.
+
+\subsection{Finite delay rigidity}
+A one-sided prime injection
+$-(c/\alpha_a)(U_dF,0)$ has square plus cross term
+\[
+\frac{ac^2}{2}I-c(U_d+U_{-d})
+                   +ca^2R_a(U_d+U_{-d}).
+\]
+The final term is a continuous kernel
+$ca(e^{-a|x-y-d|}+e^{-a|x-y+d|})/2$.
+Thus an isolated shifted source produces the desired atoms along
+with a continuous distortion and a contact. Several shifts also
+produce autocorrelations between their outputs.
+
+More generally let the delay alphabet $\mathcal D$ be finite and
+let the cap vectors in channel $k$ and residual component
+$\varepsilon=0,1$ obey
+\[
+\sum_{k,\varepsilon}
+       \left(\sum_{d\in\mathcal D}\norm{z_{k,\varepsilon,d}}\right)^2
+<\infty .
+\]
+This defines a bounded finite-delay source $\mathcal B$.
+Its zero-delay autocorrelation coefficient is the nonnegative
+$\gamma_{\mathcal B}=\sum_{k,\varepsilon,d}
+\norm{z_{k,\varepsilon,d}}^2$.
+
+\begin{proposition}\label{poles:finite-delay}
+Within this class, if the continuous gamma kernel is preserved
+(or changed only by the specified pole kernel), every added
+interior atom comes from $\mathcal B^*\mathcal B$.
+The contact coefficient is $\gamma_{\mathcal B}$.
+The cross term with the gamma source cannot independently supply
+nonzero interior prime atoms while its continuous part is
+cancelled.
+\end{proposition}
+\begin{proof}
+Let $u_{k,d},w_{k,d}$ be the overlaps of the cap vectors with the
+two gamma residuals, and put
+$\sigma_{k,d}=u_{k,d}+\bar u_{k,-d}$,
+$\theta_{k,d}=\bar w_{k,-d}-w_{k,d}$.
+The cross term in channel $k$ is
+\[
+\alpha_{a_k}\sum_d\sigma_{k,d}U_d
+-\alpha_{a_k}a_k^2R_k\sum_d\sigma_{k,d}U_d
++\alpha_{a_k}a_k\partial_xR_k\sum_d\theta_{k,d}U_d.
+\]
+Away from the finitely many centers, its continuous kernel is
+\[
+-\sum_{k,d}\frac{\alpha_{a_k}a_k}{2}
+ [\sigma_{k,d}+\theta_{k,d}\operatorname{sgn}(z-d)]
+                              e^{-a_k|z-d|}.
+\]
+On each interval between centers this is an absolutely convergent
+Laurent expansion in $\zeta=e^{z/2}$ with powers $\pm(4k+1)$.
+Uniqueness of Laurent coefficients identifies it with zero, or
+with the two prescribed pole powers. Comparing adjacent intervals
+forces $\sigma_{k,d}=\theta_{k,d}=0$ at every interior center.
+Remote centers are smooth across the interval and supply no
+interior atoms. The source autocorrelation is therefore the only
+remaining atomic contribution, with the stated zero coefficient.
+\end{proof}
+Filters, resolvent feedback, and infinite alphabets with accumulating
+delays are outside this result. These distinctions matter in the
+constructions below.

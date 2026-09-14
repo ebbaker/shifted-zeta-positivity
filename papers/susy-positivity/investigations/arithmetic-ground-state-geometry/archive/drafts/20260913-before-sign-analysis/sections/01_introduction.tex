@@ -1,0 +1,165 @@
+\section{Introduction: the project and what has been learned}
+\label{sec:introduction}
+The purpose of this project is to explain an arithmetic positivity statement by constructing a system whose positivity is already understood. The arithmetic object is the Weil quadratic form associated with the Riemann zeta function. Its nonnegativity on every smooth compactly supported complex input is equivalent to the Riemann hypothesis. The desired argument would identify this form with an ordinary positive bulk energy or Hilbert-space norm. Numerical tests could then check the identity; they would not be the source of its sign.
+
+This manuscript develops one route toward such a construction. It studies supersymmetric ground states, their parameter-dependent metrics, and interacting theories that retain prescribed gamma and prime factors. It produces exact local-factor identities and exclusions of specified repairs. It does not produce the full Weil norm identity. Understanding both the successes and their limits is essential: a positive quantum Hamiltonian can encode an arithmetic factor without making the required arithmetic quadratic form positive.
+
+\subsection{The arithmetic quantity that the theory must reproduce}
+Let $f$ be a smooth complex function supported in $I_L=(-L/2,L/2)$, and let $F$ be its zero extension to $\R$. Use the Fourier convention
+\[
+\widehat F(\tau)=\int_{\R}F(x)e^{-i\tau x}\,dx.
+\]
+In the normalization used here, the target has the decomposition
+\begin{equation}\label{intro:target}
+\begin{split}
+Q_L[f]={}&K[F]+w_0\norm f^2+2|C(f)|^2-2|S(f)|^2\\
+&-2\sum_{\substack{p\ {
+m prime},\ m\ge1\\m\log p<L}}
+(\log p)p^{-m/2}\re\ip F{U_{m\log p}F}.
+\end{split}
+\end{equation}
+Here $U_dF(x)=F(x-d)$ compares the profile with a translated copy, and
+\[
+C(f)=\int_{I_L}f(x)\cosh(x/2)\,dx,\qquad
+S(f)=\int_{I_L}f(x)\sinh(x/2)\,dx.
+\]
+The two squared global amplitudes constitute the signed pole contribution. The gamma kinetic energy and its local normalization are
+\begin{align}
+K[F]&=\frac1{2\pi}\int_{\R}B(\tau^2)|\widehat F(\tau)|^2\,d\tau,
+& w_0&=\psi(1/4)-\log\pi<0,\label{intro:kinetic}\\
+B(s)&=\re\psi(1/4+i\sqrt{s}/2)-\psi(1/4),\qquad s\ge0,\nonumber
+\end{align}
+where $\psi=\Gamma'/\Gamma$ is the digamma function. The distances $m\log p$ and weights $(\log p)p^{-m/2}$ are fixed arithmetic data. A finite support length activates only finitely many such distances.
+
+The gamma kinetic term is nonnegative, but the contact constant, translated correlations and pole contribution cannot be discarded. The project requires the complete sum in \eqref{intro:target} for all inputs and arbitrarily large $L$, rather than a chosen finite collection of functions or a fixed list of primes at every length. The Weil criterion and modern operator formulations provide the mathematical setting \cite{Suzuki}. Section~\ref{sec:arithmetic} supplies the form domain and the identities used below; no separate background document is needed to read this manuscript.
+
+\subsection{What a positive bulk or quantum realization would mean}
+In a classical auxiliary-field construction, one fixes the source $f$, minimizes a nonnegative bulk energy over responding fields $u$, and seeks
+\begin{equation}\label{intro:bulk-goal}
+Q_L[f]=\inf_u\mathcal E_L[f,u],\qquad \mathcal E_L[f,u]\ge0.
+\end{equation}
+The bulk may consist of fields on an extra coordinate, a collection of channels, or other auxiliary degrees of freedom. Its defining action and source map must be specified independently of the unknown positivity of $Q_L$.
+
+The operator version seeks a positive physical Hilbert space and a linear preparation map $\mathcal A_L$ with
+\begin{equation}\label{intro:norm-goal}
+Q_L[f]=\norm{\mathcal A_Lf}_{\mathscr H}^2.
+\end{equation}
+Equivalently, the associated form operator would satisfy $W_L=\mathcal A_L^*\mathcal A_L$ in the appropriate form sense. This replaces separate tests of individual functions by one operator identity. The requirement that the identity hold on the full input domain remains. Defining $\mathcal A_L$ through an assumed positive square root of $W_L$ would simply assume the desired result.
+
+Supersymmetry offers a way to organize such a physical construction. A nilpotent charge $Q$ with its actual Hilbert adjoint gives
+\[
+H=QQ^\dagger+Q^\dagger Q\ge0.
+\]
+Its zero-energy states are harmonic representatives: states annihilated by both charges. Their ordinary norms can be nonzero even though their energies vanish. Thus the proposed observable in a supersymmetric ground-state construction is a prepared norm or boundary pairing, not merely the ground-state energy. A positive Hamiltonian alone does not establish \eqref{intro:norm-goal}. Quantizing an auxiliary system is useful only if the quantum state space, interactions or gluing law supplies an identity absent from the classical minimization.
+
+\subsection{The starting success and the remaining discrepancy}
+The gamma kinetic term already has an exact positive auxiliary-field realization. The identity
+\[
+B(s)=\sum_{k\ge0}\frac2{a_k}\frac{s}{s+a_k^2},\qquad a_k=2k+\tfrac12,
+\]
+expresses it as a positive tower of resolvent responses. Each response comes from minimizing a squared mismatch and a positive gradient energy. This is a substantial first success: an entire continuous operator, on its logarithmic form domain, is represented by a positive field energy. It does not include the contact or poles.
+
+A second starting model is a positive supersymmetric Morse system tensored with discrete prime sectors. For a finite prime set $\mathcal S$ it has a state $\Psi_\sigma$ and a self-adjoint observable $X$ satisfying
+\begin{equation}\label{intro:amplitude}
+\ip{\Psi_\sigma}{e^{i\tau X}\Psi_\sigma}
+=\Lambda_{\mathcal S}(\sigma+i\tau),\qquad
+\Lambda_{\mathcal S}(z)=\pi^{-z/2}\Gamma(z/2)
+\prod_{p\in\mathcal S}(1-p^{-z})^{-1}.
+\end{equation}
+The formula is verified by an elementary integral and geometric sums. Its normalized logarithmic derivative yields a positive gamma-plus-prime jump energy $J_{\mathcal S,L}$. The complete target, however, is
+\begin{equation}\label{intro:missing}
+W_L=J_{\mathcal S,L}-\kappa_{\mathcal S}I+P_L,
+\qquad \kappa_{\mathcal S}>0,
+\end{equation}
+when $\mathcal S$ includes all primes active on the interval. The missing negative contact and signed pole operator are therefore precise, rather than unspecified corrections. A positive characteristic function or jump process does not by itself account for them.
+
+\subsection{Why enlarge the theory and admit interactions?}
+The original arithmetic state family is too restrictive for the desired extended supersymmetry. Its chosen complex extension has a nonflat scalar metric, whereas an ordinary one-vacuum chiral $tt^*$ system has zero curvature. Here $tt^*$ denotes the compatibility equations relating a physical vacuum metric, its projected connection, and operators induced by variations of a holomorphic superpotential. More vacua permit matrix commutators and hence additional geometry. The underlying fields and dynamics must actually support those equations; changing the name of a two-charge model does not create four physical supercharges.
+
+We therefore allow new bosons, fermions, boundary data and genuine interactions. The models studied below are supersymmetric quantum mechanics with complex coordinates and a holomorphic superpotential, often called Landau--Ginzburg models. Their fermions are represented by differential forms, and their Hamiltonian positivity follows from physical adjoints. A polynomial superpotential can create several isolated vacua and a nontrivial matrix of ground-state overlaps. A periodic complex coordinate introduces an additional global issue: some parameter insertions become multivalued, so ordinary chiral $tt^*$ equations cannot automatically be applied without the periodic or flavor data \cite{CGV}.
+
+Gaussianity is consequently a modeling choice, not the boundary between possible and impossible arithmetic constructions. Quadratic models are valuable controls because they can be solved exactly. An interacting theory is more useful only when its interaction changes the pairing or constraints relevant to \eqref{intro:norm-goal}. The calculations here give a concrete example of that distinction.
+
+\subsection{Overview of the results}
+The first part constructs exact local-factor controls. A complex
+cylinder supports four physical supercharges and retains a gamma
+period. Quadratic prime fields give the Euler period and a physical
+metric proportional to $|1-q|^{-2}$. A cross-coupled quartic prime
+theory has nine vacua. At fixed coupling its admissible identity
+periods cannot be Euler factors; scaling the interaction with the
+square of the mass restores
+\begin{equation}\label{intro:interacting-success}
+\mathcal P_c(M)=C_c/M,\qquad h_c(M,\bar M)=H_c/|M|^2,
+\qquad M=1-q,\quad C_c,H_c>0.
+\end{equation}
+This mass variation is a field dilation and vanishes in the Jacobi
+ring. Finite-rank curvature and scalar completion tests explain
+why these identities do not determine the missing arithmetic
+contact and poles.
+
+The shape deformation supplies a nonzero chiral operator and a
+three-dimensional symmetry sector. Its residue algebra and
+period equation are explicit. Exact radiality rules out a constant
+physical-to-period ratio on any complex-open shape region.
+Compact Koszul--Dolbeault representatives and long-cylinder
+projection then construct genuine physical caps. Opposite-twist
+reflection fixes the pairing to $4\pi^2$ times the residue in our
+Euclidean convention. A normalized homogeneous middle-class cap
+has exactly the Euler metric. The raw identity period is a
+different functional and does not descend to the Jacobi ring.
+
+Both metric endpoints can be controlled. At the homogeneous
+endpoint, non-Morse Hodge comparison and form continuity leave
+one positive scale. At the massive endpoint, local Gaussian upper
+bounds and opposite-twist lower bounds keep all nine vacua and
+fix the full limiting matrix. A subharmonic trace argument proves
+uniqueness with these endpoints, conditional on the exact
+physical chiral equation in the stated frame.
+
+The second part addresses the full arithmetic source space.
+The gamma residual tower is a closed source on the logarithmic
+form domain, with a maximal interval adjoint, a smooth
+compact-support core and two controlled singular regulators.
+The complete form is a bounded signed perturbation of its
+kinetic operator. A Neumann--Dirichlet comparison fixes the
+logarithmic eigenvalue scale and proves that an explicit
+finite-codimension sector is positive.
+
+The pole and prime constructions retain their full costs.
+Attractive Robin gluing has an unstable auxiliary mode and a
+reduced odd negative mode when $L>4$. Remote coherent delays
+produce the exact pole kernel with a compulsory contact.
+A nonnegative quantum graph produces every repetition of a
+prime with a further contact, whose stationary lower bound is
+sharp. Finite-delay rigidity excludes a specified class of
+attempts to remove those costs without changing the continuous
+kernel.
+
+Finally, feedback through the assembled positive source first
+gives the complete Weil form plus a positive compact error.
+A common response through all gamma and prime channels,
+iterated on the proved positive high sector, gives the stronger
+identity
+\begin{equation}\label{intro:finite-completion}
+\ip{\Phi_Lf}{\Phi_Lg}
+=Q_L(f,g)+\ip{P_Nf}{D_NP_Ng},\qquad D_N>0.
+\end{equation}
+Here $P_N$ is an explicitly selected Neumann cosine projection;
+every low/high coupling is retained. The source is closed on
+the full logarithmic domain and the error has rank $N$.
+The remaining criterion is exactly $S_N=G-D_N\ge0$ for a
+specified finite matrix. A rational non-arithmetic control
+shows why the completion alone does not imply this sign.
+At $L=1$ a rational high-mode estimate permits $N=4$; it does
+not certify that four-by-four arithmetic matrix.
+
+\subsection{Organization and status}
+Sections~\ref{sec:arithmetic}--\ref{sec:shape} give the arithmetic
+target, local quantum theories and shape restrictions.
+Sections~\ref{sec:caps}--\ref{sec:endpoints} construct the physical
+pairings and endpoint metric data.
+Sections~\ref{sec:closed-source}--\ref{sec:feedback} develop the
+closed source, pole and prime responses and their obstructions.
+Section~\ref{sec:joint} gives the finite-rank completion and exact
+remaining criterion. Section~\ref{sec:outlook} states what is
+still needed for a full physical positivity law.

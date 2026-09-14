@@ -1,0 +1,372 @@
+\input{preamble}
+\hypersetup{pdftitle={Finite response matrices for Weil positivity}}
+\title{Finite response matrices for Weil positivity}
+\author{Draft for author review}
+\date{13 September 2026}
+\begin{document}\maketitle
+\begin{abstract}
+We formulate an explicit matrix conjecture equivalent to the Riemann hypothesis.
+For each bounded interval, a digamma resolvent expansion and a Neumann comparison
+give an unconditional positive lower bound on a specified high-frequency sector
+of the Weil form. Eliminating that sector leaves a finite Hermitian response
+matrix, including every coupling to the low modes. We derive an explicit bounded,
+noncompact boundary correction to the diagonal Neumann model and convergent
+bounds for its action on finite input spaces. These yield rigorous lower and
+upper bounds on the response matrix and an equivalent formulation with arbitrarily
+small positive tolerances. The unresolved conjecture is positivity of these
+matrices on an unbounded sequence of intervals. The equivalence and the analytic
+reduction do not establish that positivity. No priority is claimed for the
+general finite-codimension or Schur-complement principles.
+\end{abstract}
+
+\section{The proposed conjecture and its scope}
+The useful question from the longer investigation \cite{Investigation} is whether
+all possible negativity of the localized Weil form can be isolated in an
+explicit, finite response problem. The answer to the reduction question is yes.
+The arithmetic sign of the resulting matrices remains open.
+
+The ingredients below define a matrix $S_n$ for every integer $n\ge1$ without
+using zeta zeros or assuming their location. Its dimension is a prescribed
+integer $N(n)$ obtained from an explicit high-mode estimate.
+\begin{conjecture}[Finite response]\label{conj:main}
+For every positive integer $n$, the matrix $S_n$ defined in
+\eqref{eq:schur} is positive semidefinite.
+\end{conjecture}
+In energy language, allowing the positive high modes to respond to a low-mode
+input never removes more than the low input's original energy. Theorem
+\ref{thm:equiv} proves that this assertion is equivalent to RH.
+
+Localized Weil positivity, positivity on suitable subspaces of finite
+codimension, and variational formulations have substantial antecedents in
+Yoshida and Bombieri, as reviewed in \cite[Section 1]{Suzuki}. Explicit finite
+matrices also appear in \cite{CCM}. The content to assess here is the particular
+Neumann boundary representation, the retained mixed response, and its controlled
+remainder. The Schur complement itself is standard. A comparison with those
+antecedents is necessary before making a novelty claim.
+
+\section{The arithmetic operator and an unconditional cutoff}
+Use $X_L=L^2(0,L)$, zero extension $E_L$, and
+$\widehat F(\tau)=\int_\R F(x)e^{-i\tau x}\,dx$. Inner products are
+antilinear in the first slot. Set
+\begin{align}
+a_k&=2k+\tfrac12,&
+b(s)&=\sum_{k=0}^{\infty}\frac2{a_k}\frac{s}{a_k^2+s}
+=\re\psi(\tfrac14+i\sqrt{s}/2)-\psi(\tfrac14),\label{eq:b}\\
+w_0&=\psi(\tfrac14)-\log\pi,&
+\mathcal D_L&=\left\{f\in X_L:
+\int_\R\log(2+|\tau|)|\widehat{E_Lf}(\tau)|^2\,d\tau<\infty\right\}.
+\end{align}
+Let $T_L$ be the nonnegative operator associated with the closed form
+\[
+t_L[f]=\frac1{2\pi}\int_\R b(\tau^2)|\widehat{E_Lf}(\tau)|^2\,d\tau.
+\]
+For $d>0$, $U_dF(x)=F(x-d)$ and $V_d=E_L^*U_dE_L$. Put
+$c_L(x)=\cosh((x-L/2)/2)$ and $s_L(x)=\sinh((x-L/2)/2)$.
+The bounded remainder and the full operator are
+\begin{align}
+R_L={}&w_0I+2c_Lc_L^*-2s_Ls_L^*
+-\sum_{\substack{p\ \mathrm{prime},\ m\ge1\\m\log p<L}}
+ (\log p)p^{-m/2}(V_{m\log p}+V_{m\log p}^*),\label{eq:remainder}\\
+W_L={}&T_L+R_L,\qquad Q_L[f]=t_L[f]+\ip f{R_Lf}.\label{eq:weil}
+\end{align}
+Here $vv^*f=v\ip v f$. The sum includes every active prime power.
+All sums in $R_L$ are finite. In the additive normalization of the Weil
+functional in \cite[Section 1.1]{Suzuki}, $Q_L$ is exactly the Weil form of
+$E_Lf$. The constant, both poles and all prime powers are essential.
+
+The digamma expansion \cite{DLMF} gives
+$b(\tau^2)=\log|\tau|-\log2-\psi(1/4)+O(\tau^{-2})$.
+Consequently $\mathcal D_L$ is the form domain and $C_c^\infty(0,L)$ is
+a form core. The support contraction followed by mollification proves the
+core assertion in this logarithmic Fourier norm. Bounded perturbation then
+defines the self-adjoint, semibounded $W_L$ on $\Dom T_L$.
+
+Let $H_{\rm N}$ and $H_{\rm D}$ denote the Neumann and Dirichlet interval
+Laplacians. Minimizing
+\[
+\frac2a\left(\norm{E_Lf-u}_{L^2(\R)}^2+a^{-2}\norm{u'}_{L^2(\R)}^2\right)
+\]
+over $u\in H^1(\R)$ gives $(2/a)s/(a^2+s)$ in Fourier space.
+Restricting $u$ to the interval lowers this minimum; allowing only zero
+extensions of $H_0^1(0,L)$ competitors raises it. Summation proves the
+closed-form bracket
+\begin{equation}\label{eq:bracket}
+b(H_{\rm N})\le T_L\le b(H_{\rm D}).
+\end{equation}
+The positive resolvent representation is a concrete case of the extension
+framework in \cite{KM}. The comparison does not assign Neumann boundary
+conditions to the actual whole-line fields.
+
+Write
+\[
+e_j(x)=\nu_j\cos(j\pi x/L),\quad
+\nu_0=L^{-1/2},\quad\nu_j=\sqrt{2/L}\ (j>0),\quad
+b_j=b((j\pi/L)^2).
+\]
+For $q\in(0,1)$ define
+\[
+r_h(q)=\max_{1\le i\le h}
+\left(\sum_{j=1}^{i-1}q^j+\sum_{j=1}^{h-i}q^j\right),
+\]
+and specify
+\begin{equation}\label{eq:beta}
+\beta_L=-w_0+2\sinh(L/2)-L+
+\sum_{\log p<L}(\log p)r_{\lceil L/\log p\rceil}(p^{-1/2}).
+\end{equation}
+The prime bound follows by decomposing translation by $\log p$ into finite
+chains and bounding each symmetric correlation matrix by its largest row
+sum. The odd pole costs at most $2\norm{s_L}^2=2\sinh(L/2)-L$;
+the even pole is nonnegative. Thus
+\begin{equation}\label{eq:lower}
+W_L\ge b(H_{\rm N})-\beta_LI.
+\end{equation}
+Fix $\delta_0=1/16$ once and for all and define
+\begin{equation}\label{eq:N}
+N(L)=\min\{N\ge1:b_N\ge\beta_L+\delta_0\},\qquad
+P=\sum_{j=0}^{N(L)-1}e_je_j^*,\quad Q=I-P.
+\end{equation}
+The set is nonempty because $b_j\to\infty$. Any larger certified cutoff
+gives an equivalent criterion. The high compression, defined by restricting
+the closed form to $Q\mathcal D_L$, obeys $H:=W_L|_{QX_L}\ge\delta_0I$.
+This bound is unconditional and makes $H^{-1}$ a known bounded response.
+It says nothing yet about the low/high coupling.
+
+\section{An explicit boundary operator}
+The following representation makes that coupling accessible. For $a>0$ set
+\[
+u_a(x)=e^{-ax},\quad v_a(x)=e^{-a(L-x)},\quad r_a=e^{-aL},\qquad
+K_a=\frac{u_au_a^*+v_av_a^*+r_a(u_av_a^*+v_au_a^*)}{1-r_a^2}.
+\]
+\begin{theorem}[Boundary representation]\label{thm:boundary}
+The positive finite sums $K^{(J)}=\sum_{k<J}K_{a_k}$ converge strongly to
+a bounded positive operator $K_L$ satisfying
+\begin{equation}\label{eq:boundary}
+T_L=b(H_{\rm N})+K_L,\qquad
+\Dom T_L=\Dom b(H_{\rm N}),\quad
+\mathcal D_L=\Dom b(H_{\rm N})^{1/2}.
+\end{equation}
+Finite cosine sums are an operator core. The essential norm is
+$\norm{K_L}_{\rm ess}=\pi/2$, so finite mass sums do not converge in
+operator norm. Nevertheless, for the first $h$ cosine modes,
+\begin{equation}\label{eq:tail}
+\norm{(K_L-K^{(J)})P_h}\le
+\eta_{h,J}:=\sqrt{\frac{2(2h-1)}L}
+ (a_J^{-1/2}+a_J^{-3/2})\longrightarrow0.
+\end{equation}
+\end{theorem}
+\begin{proof}
+The compressed free Green function is $e^{-a|x-y|}/(2a)$; the Neumann
+Green function is
+\[
+\frac{\cosh(a\min(x,y))\cosh(a(L-\max(x,y)))}{a\sinh(aL)}.
+\]
+Their difference multiplied by $2a$ is $K_a$. Subtracting the corresponding
+resolvent energies proves the finite-tower version of \eqref{eq:boundary}.
+The coefficient matrix of $K_a$ is positive.
+
+Let $n(t)=e^{-t/2}/(1-e^{-2t})$. Summing the kernels gives
+$n(x+y)+n(2L-x-y)$ plus a bounded kernel. Since
+$n(t)=(2t)^{-1}+O_L(1)$ on $(0,2L]$, this is one half of each endpoint
+Carleman kernel, modulo a bounded-kernel, hence compact, operator. The
+weighted Schur test bounds the Carleman operator by $\pi$. The partial
+towers have the same uniform kernel bound, so monotone convergence yields
+a bounded strong limit and the asserted domains.
+
+Splitting the interval in half makes the two endpoint operators a direct
+sum modulo compact operators. Each has essential norm $\pi$ before the
+factor $1/2$: normalized functions proportional to $t^{-1/2}$ on $[1,R]$,
+then dilated toward zero, have limiting Rayleigh quotient $\pi$ and tend
+weakly to zero. This also proves the lower essential-norm bound; see the
+Carleman background in \cite{Yafaev}.
+
+Direct integration, with $\omega_j=j\pi/L$, gives
+\begin{equation}\label{eq:column}
+K_ae_j=\frac{\nu_j a}{a^2+\omega_j^2}(u_a+(-1)^jv_a).
+\end{equation}
+Its norm is at most $\sqrt2\nu_j a^{-3/2}$. Sum the decreasing series
+using $\sum_{k\ge J}a_k^{-3/2}\le a_J^{-3/2}+a_J^{-1/2}$, then sum squared
+column bounds over $j<h$ to obtain \eqref{eq:tail}.
+\end{proof}
+
+In particular all low basis vectors lie in $\Dom W_L$. The boundary entries
+vanish for opposite parities; for equal parities they are
+\begin{equation}\label{eq:entries}
+\ip{e_i}{K_Le_j}=2\nu_i\nu_j\sum_{k\ge0}
+\frac{a_k^2(1-(-1)^j e^{-a_kL})}
+{(a_k^2+\omega_i^2)(a_k^2+\omega_j^2)}.
+\end{equation}
+The remaining entries are elementary integrals of the rank-two pole
+kernel and of translated cosines on their overlap intervals. These formulas
+specify the operator using gamma and prime data, independently of RH.
+
+\section{Exact elimination and the equivalence theorem}
+For each $L$, use the prescribed $P,Q$ and define
+\[
+A=PW_LP,\qquad B=QW_LP,\qquad H=W_L|_{QX_L}.
+\]
+Here $A$ is an $N(L)$ by $N(L)$ Hermitian matrix, $B:PX_L\to QX_L$ is
+bounded, and $H$ is the positive operator already bounded below in
+\eqref{eq:lower}. Define the finite matrix
+\begin{equation}\label{eq:schur}
+S_L=A-B^*H^{-1}B,\qquad S_n:=S_L\big|_{L=n}.
+\end{equation}
+Its entries involve an infinite-dimensional inverse. It is a finite matrix
+with explicitly specified, approximable entries, not a formula involving
+only finitely many elementary operations.
+
+\begin{theorem}[Exact RH equivalence]\label{thm:equiv}
+For each $L>0$, $Q_L\ge0$ on $\mathcal D_L$ if and only if $S_L\succeq0$.
+Consequently Conjecture \ref{conj:main} is equivalent to RH.
+\end{theorem}
+\begin{proof}
+Write $f=p+h$, $p=Pf$, $h=Qf$. Completing the high square gives the
+identity of closed forms
+\begin{equation}\label{eq:square}
+Q_L[p+h]=\norm{H^{1/2}(h+H^{-1}Bp)}^2+\ip p{S_Lp}.
+\end{equation}
+Every term is defined: $p\in\Dom W_L$, $h\in\Dom H^{1/2}$, and
+$H^{-1}Bp\in\Dom H$. If $S_L\succeq0$, this proves positivity. Conversely,
+choose $h=-H^{-1}Bp$ to recover exactly $\ip p{S_Lp}$.
+
+RH implies Weil positivity on smooth compactly supported functions.
+The form core extends it to $\mathcal D_L$, so every $S_n\succeq0$.
+For the converse, every compact support can be translated into $(0,n)$
+for some integer $n$. The Weil form is translation invariant: its gamma
+multiplier and prime correlations are invariant, and the pole kernel is
+$2\cosh((x-y)/2)$. Zero extension to a larger interval preserves all these
+terms. Thus positivity of all $S_n$ implies Weil positivity on all required
+test functions, and hence RH by the classical criterion \cite{Suzuki}.
+\end{proof}
+No uniform gap in $n$, common source on all intervals, or compatible limit
+of the matrices is required. The dimensions can grow without bound.
+
+\subsection{A comparison between two positive matrices}
+To retain the positive-source language of the investigation, put
+$\alpha=\beta_L+1$. Equation \eqref{eq:lower} proves
+$W_L+\alpha I\ge I$ without RH. Define
+\begin{align}
+G_L&=A+\alpha I-B^*(H+\alpha I)^{-1}B,\label{eq:G}\\
+D_L&=\alpha I+B^*\bigl(H^{-1}-(H+\alpha I)^{-1}\bigr)B.\label{eq:D}
+\end{align}
+Minimizing the positive shifted form gives $G_L\ge I$, and resolvent
+monotonicity gives $D_L\ge\alpha I>0$. Their difference is exactly $S_L$.
+Thus Conjecture \ref{conj:main} can equivalently be written
+\begin{equation}\label{eq:contraction}
+\lambda_{\max}(G_n^{-1/2}D_nG_n^{-1/2})\le1\qquad(n\ge1).
+\end{equation}
+The positivity of $G_L$ and $D_L$ separately supplies no ordering between
+them. Changing an admissible scalar shift changes the two matrices but
+cancels from $S_L$.
+
+\section{Bounds on the unresolved matrix}
+Put $d_j=b_j-\beta_L$ for $j\ge N$, and let $\Lambda e_j=d_je_j$ on
+$QX_L$. Then $H\ge\Lambda\ge\delta_0I$. For any finite-input trial map
+$Y:PX_L\to\Dom H$, set $R_Y=B-HY$. Expansion gives
+\begin{align}
+B^*H^{-1}B&=B^*Y+Y^*B-Y^*HY+R_Y^*H^{-1}R_Y,\label{eq:residual}\\
+0&\le R_Y^*H^{-1}R_Y\le R_Y^*\Lambda^{-1}R_Y.
+\end{align}
+For $K>N$, let $P_{N,K}$ project onto $e_N,\ldots,e_{K-1}$ and define
+the Galerkin trial by the positive finite system
+\[
+(P_{N,K}HP_{N,K})Y_K=P_{N,K}B,\qquad
+\operatorname{ran}Y_K\subset P_{N,K}X_L.
+\]
+Its residual $R_K=B-HY_K$ is supported in cosine modes $j\ge K$.
+\begin{theorem}[Convergent enclosures]\label{thm:enclosure}
+The finite Hermitian matrices
+\begin{equation}\label{eq:lower-matrix}
+L_{L,K}=A-B^*Y_K-d_K^{-1}R_K^*R_K,\qquad
+U_{L,K}=A-B^*Y_K
+\end{equation}
+satisfy $L_{L,K}\preceq S_L\preceq U_{L,K}$ and converge to $S_L$ in norm
+as $K\to\infty$. Their gap is exactly $d_K^{-1}R_K^*R_K$.
+\end{theorem}
+\begin{proof}
+Galerkin orthogonality gives
+$Y_K^*HY_K=B^*Y_K=Y_K^*B$ and $P_{N,K}R_K=0$.
+Apply \eqref{eq:residual} and
+$\Lambda^{-1}\le d_K^{-1}I$ on the remaining modes to obtain the bounds.
+For convergence, write $H=\Lambda+E$ with $E$ bounded using
+Theorem \ref{thm:boundary}. The cosine core and coercivity imply
+$Y_K\to H^{-1}B$ in the form norm. If $P_K$ contains the first $K$ modes,
+\[
+R_K=(I-P_K)(B-EY_K)\longrightarrow0
+\]
+in operator norm on the finite input space. Therefore the enclosure gap
+tends to zero, proving the assertion.
+\end{proof}
+The column tail \eqref{eq:tail} controls finite mass approximations to $B$
+and $HY_K$. The residual Gram must include their interference with the
+pole and prime columns. Positive eigenvalues of an upper enclosure alone
+are not a positivity certificate.
+
+\begin{corollary}[An equivalent tolerance formulation]\label{cor:epsilon}
+Conjecture \ref{conj:main}, and hence RH, is equivalent to
+\begin{equation}\label{eq:epsilon}
+\forall n,m\in\N\ \exists K>N(n):\quad
+L_{n,K}+2^{-m}I\succ0.
+\end{equation}
+\end{corollary}
+\begin{proof}
+If $S_n\succeq0$, choose $K$ with
+$\norm{L_{n,K}-S_n}<2^{-m}$, using Theorem \ref{thm:enclosure}.
+Conversely $S_n\succeq L_{n,K}\succ-2^{-m}I$ for every $m$ implies
+$S_n\succeq0$. This avoids assuming that a semidefinite limit is detected
+by an unshifted, finite strict certificate.
+\end{proof}
+The strict margin makes each true instance amenable to sufficiently
+accurate enclosures. The companion derivations give a version using arbitrary
+finite trials and explicit column-error allowances. No finite collection of
+successful intervals or tolerances establishes \eqref{eq:epsilon}.
+
+\section{What makes the remaining conjecture arithmetic}
+The reduction works for many semibounded operators. For example
+$W=\left(\begin{smallmatrix}1/2&1\\1&1\end{smallmatrix}\right)$ has
+a positive high block $H=1$ and $W+I>0$, but its low Schur complement is
+$-1/2$. A positive shifted source and a positive high sector alone therefore
+do not imply Conjecture \ref{conj:main}.
+
+There is a more relevant negative control. Define the Chebyshev function
+$\psi_{\rm Ch}(x)=\sum_{p^m\le x}\log p$ and
+$E(r)=\psi_{\rm Ch}(e^r)-e^r+1$. For
+$h_f(r)=\re\ip{E_Lf}{U_rE_Lf}$, cancellation of the smooth prime density
+against the poles and the lowest gamma mass gives
+\begin{equation}\label{eq:discrepancy}
+Q_L[f]=t_{\ge1,L}[f]+(4+w_0)\norm f^2
+-2\int_0^L e^{-r/2}h_f(r)\,dE(r).
+\end{equation}
+The Stieltjes form holds on $\mathcal D_L$; derivatives of $h_f$ are not
+required. If the prime measure is replaced by $e^r\,dr$, the last term
+vanishes. On the unit input $f(x)=\sin(\pi x/2)$ on $(0,2)$,
+\[
+Q_2^{\rm dens}[f]<-1+\frac{26}{125}\frac{(22/7)^2}{4}
+=-\frac{2979}{6125}<0.
+\]
+Here $w_0<-5$ and
+$\sum_{k\ge1}2/a_k^3\le26/125$; smooth approximation preserves negativity.
+The actual prime discrepancy carries information that the leading density
+and the positive response architecture cannot replace.
+
+At $L=1$, the longer manuscript gives a rational certificate allowing
+$N=4$ and $\delta_0=1/16$. That is a certificate for the high sector; it
+does not evaluate or establish the sign of $S_1$. Present bounds may require
+very large dimensions as $L$ increases. No practical complexity estimate,
+new positivity interval, or zero computation is asserted here.
+
+The proposed short paper consists of the unconditional boundary and response
+theorems, the exact equivalence, and the open matrix conjecture. The extended
+supersymmetric models motivate the investigation but are not hypotheses of
+this equivalence. In particular, no unproved physical $tt^*$ identification
+is being used to infer an arithmetic sign.
+
+\section*{Preparation and verification status}
+This draft was prepared with substantial assistance from OpenAI's Codex in
+mathematical analysis, derivation checking, code and exposition. It is a draft
+for human mathematical review; completion of that review is not claimed.
+The companion file expands the analytic arguments and identifies the checks
+needed to support the equivalence. The repository citation records the source
+revision used here. A version-specific archival DOI has not yet been supplied.
+
+\input{references}
+\end{document}

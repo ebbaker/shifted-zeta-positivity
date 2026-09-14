@@ -5,6 +5,28 @@ dates of the underlying work; the repository itself was created in September 202
 
 ## [Unreleased]
 
+- Reorganized SUSY positivity as a program with shared background and overview;
+  moved its v0.2 manuscript, checks, and historical support into
+  `papers/susy-positivity/attempts/positive-factorizations/`. See the
+  [move and verification record](papers/susy-positivity/REORGANIZATION_20260912.md).
+
+### 2026-09-11 — group papers by research program
+
+- Move psi-omega-margin, omega-string, defect-depth, first-slab-positivity,
+  weil-depth, and storage-depth under `papers/shifted-zeta/`, with a project
+  README explaining their relationships and reading order.
+- Move rh-detector under `papers/misc/`; add a collection README and keep
+  `papers/susy-positivity/` in place as a separate project.
+- Replace the storage-depth-specific navigation with the shared project
+  overview, treating all six papers as parts of the same program.
+- Update current navigation, build paths, citation metadata, verification
+  paths, and the repository checker for the grouped layout. Refresh current
+  Weil-depth and storage-depth documentation hashes.
+- Preserve manuscript sources and PDFs, numerical code and records, archived
+  snapshots, SUSY background notes, and external data locations. Historical
+  path references are explained in `papers/README.md`. No manuscript version
+  or release is created.
+
 ### 2026-09-11 — storage-depth writing project closeout
 
 - Merge `critical_path` into `main` with its five research commits preserved;

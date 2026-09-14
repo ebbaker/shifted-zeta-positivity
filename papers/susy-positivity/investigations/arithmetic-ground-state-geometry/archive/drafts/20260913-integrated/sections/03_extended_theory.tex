@@ -1,0 +1,419 @@
+\section{A positive four-supercharge enlargement}
+\label{ext-section}
+
+An enlargement of the field space provides a concrete way to obtain four
+real supercharges without retaining the spectrum of a two-supercharge
+model.  The construction below adds an angular coordinate to the real
+Morse variable.  It retains the gamma function as a holomorphic period,
+but its physical vacuum is a differential form on the enlarged target.
+Adding two complex oscillators then produces a physical Euler-factor
+metric in an explicitly specified parameter frame.  These statements
+concern positive quantum theories and identifiable observables; they do
+not identify their vacuum pairing with the complete Weil form.
+
+\subsection{The cylinder and its supersymmetry algebra}
+\label{ext-cylinder}
+
+Let
+\begin{equation}
+ \mathcal X=\R\times(\R/2\pi\mathbb Z),\qquad
+ Y=y+i\theta,\qquad
+ \mathcal H=L^2\Omega^*(\mathcal X;\C),
+ \label{ext-hilbert}
+\end{equation}
+with flat metric $dy^2+d\theta^2$ and the ordinary positive inner product
+on complex differential forms.  Write $E_y,E_\theta$ for exterior
+multiplication by $dy,d\theta$, and $I_y,I_\theta$ for their Hilbert
+adjoints.  Thus $\{E_i,I_j\}=\delta_{ij}$, while the anticommutators of
+two exterior multiplications or two contractions vanish.  Initially
+take $a>0$ and define
+\begin{equation}
+ \mathcal W_a(Y)=\frac12(e^Y-aY),\qquad
+ h=\re\mathcal W_a
+   =\frac12(e^y\cos\theta-ay).
+ \label{ext-superpotential}
+\end{equation}
+Although $\mathcal W_a$ has an additive period, $h$ is single valued for
+real $a$.  In particular $\Delta h=h_{yy}+h_{\theta\theta}=0$.
+
+On smooth compactly supported periodic forms define
+\begin{align}
+ Q_1&=E_y(\partial_y+h_y)+E_\theta(\partial_\theta+h_\theta),\notag\\
+ Q_1^\dagger&=I_y(-\partial_y+h_y)
+                    +I_\theta(-\partial_\theta+h_\theta),\notag\\
+ Q_2&=-E_y(\partial_\theta-h_\theta)+E_\theta(\partial_y-h_y),\notag\\
+ Q_2^\dagger&=I_y(\partial_\theta+h_\theta)
+                    +I_\theta(-\partial_y-h_y).
+ \label{ext-complex-charges}
+\end{align}
+Equivalently, $Q_1=d+dh\wedge$ and $Q_2=d^c-d^ch\wedge$, where
+$d^c=E_\theta\partial_y-E_y\partial_\theta$.  All adjoints in
+\eqref{ext-complex-charges} refer to \eqref{ext-hilbert}; an indefinite
+fermionic pairing is not involved.
+
+For a general smooth real $h$, the exterior relations give
+\begin{align}
+ Q_1^2=Q_2^2&=0,\qquad \{Q_1,Q_2^\dagger\}=0,\notag\\
+ \{Q_1,Q_2\}&=-2(\Delta h)E_yE_\theta,\notag\\
+ \{Q_1,Q_1^\dagger\}-\{Q_2,Q_2^\dagger\}
+   &=2(\Delta h)(N-1),\qquad
+ N=E_yI_y+E_\theta I_\theta.
+ \label{ext-algebra-defects}
+\end{align}
+For example, the coefficient of $E_yE_\theta$ in the mixed nilpotent
+anticommutator is
+$[\partial_y+h_y,\partial_y-h_y]
++[\partial_\theta+h_\theta,\partial_\theta-h_\theta]
+=-2\Delta h$.  The remaining identities follow by the same exterior
+expansion.  Harmonicity therefore gives a common Hamiltonian
+$H=\{Q_1,Q_1^\dagger\}=\{Q_2,Q_2^\dagger\}$ and four real charges
+\begin{equation}
+ \begin{split}
+ R_1=Q_1+Q_1^\dagger,&\qquad R_2=i(Q_1-Q_1^\dagger),\\
+ R_3=Q_2+Q_2^\dagger,&\qquad R_4=i(Q_2-Q_2^\dagger),
+ \end{split}
+ \qquad \{R_i,R_j\}=2\delta_{ij}H.
+ \label{ext-real-algebra}
+\end{equation}
+Their common square is
+\begin{equation}
+ \begin{split}
+ H={}&-\partial_y^2-\partial_\theta^2+\frac14|e^Y-a|^2\\
+ &+e^y\bigl[\cos\theta(E_yI_y-E_\theta I_\theta)
+             -\sin\theta(E_yI_\theta+E_\theta I_y)\bigr].
+ \end{split}
+ \label{ext-hamiltonian}
+\end{equation}
+This is an exponential bosonic interaction with a Hessian coupling to
+the fermions.  In the corresponding normal-ordered coherent-state
+description its Euclidean action is
+\begin{equation}
+ S_E=\int dt\left\{
+ \frac14(\dot y^2+\dot\theta^2)+|\nabla h|^2
+ +\bar c_i\dot c_i+2\bar c_i h_{ij}c_j\right\}.
+ \label{ext-action}
+\end{equation}
+The normalization follows from the kinetic operator $-\Delta$ in
+\eqref{ext-hamiltonian}; the scalar normal-ordering contribution
+$-\Delta h$ vanishes.  Positivity is the operator statement $H\geq0$,
+not positivity of every fermionic path-integral integrand.
+
+\subsection{Closed operators and the physical vacuum}
+\label{ext-domains-vacuum}
+
+The displayed algebra has a closed realization.  Each $R_i$ is a
+Dirac-type first-order operator with smooth Hermitian multiplication
+potential on a complete flat manifold.  Choose compact-support
+cutoffs $\chi_L$ tending to one with $|d\chi_L|\leq C/L$.  The
+potential commutes with the cutoff, so
+$\|[R_i,\chi_L]\|\leq C/L$.  A deficiency vector satisfying
+$R_i^*\psi=\pm i\psi$ is locally regular by ellipticity.  Integration
+by parts with $\chi_L^2\psi$, followed by taking the imaginary part,
+gives
+\begin{equation}
+ \|\chi_L\psi\|^2
+ \leq \frac{C}{L}\|\chi_L\psi\|\,\|\psi\|.
+ \label{ext-cutoff}
+\end{equation}
+Consequently both deficiency spaces vanish.  This proves essential
+self-adjointness on the stated common core.  The same argument applies
+to every nonzero real linear combination of the $R_i$.
+
+On that core the graph norms of the four charges coincide, by
+\eqref{ext-real-algebra}.  Their closures therefore have a common
+quadratic-form domain, and their squares define the same nonnegative
+self-adjoint $H$.  Polarizing the identities for real linear
+combinations proves the mixed algebra as a form identity.  Since each
+closed $R_i$ commutes with the spectral resolution of $R_i^2=H$, all
+products in \eqref{ext-real-algebra} are defined on $\operatorname{Dom}H$,
+where the operator identities follow.  This argument also applies to
+the product targets used below.  It is compatible with the
+noncompact Witten-operator framework of \cite{DaiYan}; the cutoff
+argument itself does not require the vacuum-counting theorem.
+
+Restricting the function $h$ to $\theta=0$ gives
+$(e^y-ay)/2$, but restricting a function is not a quantum reduction.
+For example, the scalar real-line operator obtained from
+$A=\partial_y+(e^y-a)/2$ is
+\begin{equation}
+ A^\dagger A=-\partial_y^2+\frac14(e^y-a)^2-\frac12e^y.
+ \label{ext-old-morse}
+\end{equation}
+The scalar cylinder Hamiltonian has no negative Hessian term because
+$\Delta h=0$.  In degree one its Hessian term has eigenvalues
+$\pm e^y$, rather than $-e^y/2$.  A delta function at a fixed angle
+is not a state of \eqref{ext-hilbert}.  Moreover, $e^{-h}$ grows
+exponentially near $\theta=\pi$ as $y\to+\infty$, and $e^h$ grows
+near $\theta=0$.  Neither supplies a normalizable scalar or top-form
+vacuum.
+
+\begin{proposition}
+\label{ext-vacuum-count}
+For every $a\in\C\setminus\{0\}$, the cylinder Hamiltonian with
+periodic differential forms has exactly one complex normalizable
+zero-energy state.  It is a one-form.  The assertion uses the
+well-tame Morse inequalities of \cite{DaiYan} at large Witten
+deformation, together with the continuation argument below; it does
+not compute a vacuum norm in an arithmetic source frame.
+\end{proposition}
+
+\begin{proof}
+First let $a>0$ and replace $h$ by $Th$, $T>0$.  There is exactly one
+critical point, $(y,\theta)=(\log a,0)$, of Morse index one.  The
+complete flat cylinder has bounded geometry, and
+\begin{equation}
+ \liminf_{|y|\to\infty}|dh|=\frac a2>0,
+ \qquad
+ \frac{|\operatorname{Hess}h|}{|dh|^2}\longrightarrow0.
+ \label{ext-tame}
+\end{equation}
+At the negative end the Hessian tends to zero and $|dh|\to a/2$;
+at the positive end $|dh|$ grows like $e^y/2$ while the Hessian grows
+like $e^y$.  These are the well-tame hypotheses in \cite{DaiYan}.
+Their strong Morse inequalities, including equality of the full
+alternating sums, give graded Dirac index $-1$ for sufficiently
+large $T$.  This step uses the analytic theorem, rather than an
+assumed identification of critical points with exact quantum states.
+It does not require the additional Thom--Smale comparison theorem.
+
+The graded Dirac operator remains Fredholm for all $T>0$.  At
+$y\to-\infty$ its square tends to
+$-\partial_y^2-\partial_\theta^2+T^2a^2/4$; at the other end its
+potential tends to $+\infty$, since $T^2|dh|^2$ dominates the Hessian.
+These estimates are uniform on compact positive $T$ intervals and
+give a positive lower bound outside a compact set.  Local elliptic
+compactness then gives Fredholmness.  The estimate
+$|\operatorname{Hess}h|\leq\varepsilon|dh|^2+C_\varepsilon$
+also makes the graph domains equivalent on those intervals, so the
+family is continuous in graph norm and its index is constant.
+This is the required continuation from the large-deformation
+Morse calculation \cite{WittenMorse,DaiYan}.
+
+In degrees zero and two the squared operator is simply
+$-\Delta+T^2|dh|^2$.  A zero state would have both vanishing weak
+gradient and vanishing product with $|dh|$, and hence must be zero.
+Thus the index $-1$ implies precisely one degree-one vacuum.
+
+For complex $a$, the globally defined one-form $dh$ is described
+explicitly below.  Its variation with $a$ is a bounded constant
+one-form.  The negative-end gap becomes $T^2|a|^2/4$ and the
+positive-end estimate persists.  Any path in $\C\setminus\{0\}$
+therefore gives a Fredholm continuation from positive real $a$.
+The even-degree kernels remain zero because $\Delta h=0$ locally.
+The same count follows at $T=1$.  At $a=0$ the end gap closes, so
+this argument makes no assertion there.
+\end{proof}
+
+Writing the vacuum as $\omega=P\,dy+Q\,d\theta$, its equations are
+\begin{equation}
+ \begin{split}
+ \partial_yQ-\partial_\theta P+h_yQ-h_\theta P&=0,\\
+ -\partial_yP-\partial_\theta Q+h_yP+h_\theta Q&=0.
+ \end{split}
+ \label{ext-vacuum-equations}
+\end{equation}
+These determine the physical state on the full cylinder.  No scalar
+gamma wavefunction is substituted for their solution.
+
+\subsection{Periodic parameters and the gamma period}
+\label{ext-periodic-parameter}
+
+For $a=a_R+ia_I$ one has locally
+\begin{equation}
+ h=\frac12(e^y\cos\theta-a_Ry+a_I\theta),\qquad
+ h(y,\theta+2\pi)-h(y,\theta)=\pi a_I.
+ \label{ext-period}
+\end{equation}
+Although $h$ need not be globally a function, its differential is a
+smooth closed real one-form on the cylinder.  The supercharges use
+this one-form and its complex-structure rotation, so remain globally
+defined on periodic forms.  Their definition is not globally a
+conjugation by a single-valued $e^h$.  Similarly,
+$\mathcal W_a(Y+2\pi i)-\mathcal W_a(Y)=-\pi ia$, and the proposed
+chiral insertion $\partial_a\mathcal W_a=-Y/2$ is multivalued.
+The local holomorphic dependence of a superpotential thus does not
+by itself supply an ordinary globally defined rank-one chiral
+$tt^*$ problem.  Periodic Landau--Ginzburg theories with deck and
+flavor data provide a relevant framework \cite{CGV}; any such extra
+data must be included explicitly in a proposed arithmetic pairing.
+
+The ordinary Berry connection of the specific one-vacuum realization
+above is locally flat.  Indeed, $H$ has real coefficients for every
+complex $a$, and its isolated one-dimensional kernel admits a real
+normalized generator $\psi$ locally.  Reality and differentiation of
+$\langle\psi,\psi\rangle=1$ imply
+$\langle\psi,d\psi\rangle=0$.  A possible global sign holonomy does
+not change this local conclusion.  Parameter connections with
+additional insertions or flavor structure are separate constructions;
+the distinction matters when using supersymmetric Berry equations
+\cite{SonnerTong}.
+
+There is nevertheless an exact holomorphic gamma period:
+\begin{equation}
+ \mathcal P_\gamma(a)
+ =\int_{Y\in\R}e^{-2\mathcal W_a(Y)}\,dY
+ =\int_0^\infty t^{a-1}e^{-t}\,dt
+ =\Gamma(a),\qquad \re a>0.
+ \label{ext-gamma-period}
+\end{equation}
+The factor two in the exponent is part of the definition.  For
+complex $a$ the real path is a convergent relative cycle, not
+necessarily a steepest-descent thimble.  Such periods belong to the
+holomorphic boundary quantities of Landau--Ginzburg theory
+\cite{CGV}.  Equation \eqref{ext-gamma-period} is not an evaluation
+of the Hermitian norm of the physical one-form in
+\eqref{ext-vacuum-equations}.
+
+\subsection{Two complex oscillators and a physical Euler metric}
+\label{ext-euler}
+
+Introduce independent parameters $a,q$ with $\re a>0$, $|q|<1$,
+put $M=1-q$, and enlarge the target to $\mathcal X\times\C^2$ with
+its product flat metric.  The superpotential is
+\begin{equation}
+ \mathcal W_{a,q}(Y,U,V)
+ =\frac12\left[e^Y-aY+\frac M2(U^2+V^2)\right].
+ \label{ext-product-superpotential}
+\end{equation}
+This introduces two further complex bosons and their form-valued
+fermions.  On a flat Kähler target the preceding construction extends
+with $d^c$ defined by the complex structure.  The required Hessian
+condition is pluriharmonicity, rather than merely a vanishing trace;
+it holds for $h=\re\mathcal W_{a,q}$.  Alternatively, the graded
+tensor product of the three two-dimensional complexes verifies the
+four-charge algebra directly.  The common-core closure argument
+above applies on this complete product target.  In particular,
+\begin{equation}
+ |\nabla h|^2=\frac14|e^Y-a|^2
+               +\frac{|M|^2}{4}(|U|^2+|V|^2).
+ \label{ext-product-potential}
+\end{equation}
+
+Since $\re M>0$, elementary integration on the real cycle gives
+\begin{equation}
+ \frac1{2\pi}\int_{\R^3}e^{-2\mathcal W_{a,q}}\,dY\,dU\,dV
+ =\frac{\Gamma(a)}{1-q}.
+ \label{ext-product-period}
+\end{equation}
+For a fixed prime $p$, setting $a=z/2$, $q=p^{-z}$ and specifying the
+source multiplier $\pi^{-z/2}$ produces
+$\pi^{-z/2}\Gamma(z/2)(1-p^{-z})^{-1}$ for $\re z>0$.
+Neither this restriction of parameters nor its Fourier variable
+$\im z$ identifies an arithmetic coordinate with physical Euclidean
+time.
+
+The oscillator vacuum metric is separately computable.  For one
+field with $\mathcal W_U=MU^2/4$, write $M=r e^{i\phi}$ and
+$U'=e^{i\phi/2}U=x'+iy'$.  Then
+\begin{equation}
+ h_U=\frac r4(x'^2-y'^2),\qquad
+ \psi_M=e^{-r|U|^2/4}\,dy',\qquad
+ \|\psi_M\|^2=\frac{2\pi}{r}.
+ \label{ext-oscillator-vacuum}
+\end{equation}
+The form $\psi_M$ satisfies $Q_1\psi_M=Q_1^\dagger\psi_M=0$.
+Equivalently, the scalar oscillator ground energy is $r$, cancelled
+by the occupied negative Hessian direction, whose contribution is
+$-r$.  Every other oscillator state has positive energy, proving
+uniqueness.  Consequently the product theory also has a unique
+physical vacuum for $aM\ne0$.
+
+To make the parameter frame explicit, define
+\begin{equation}
+ \begin{split}
+ s_M&=(2\pi)^{-1/2}e^{-i\phi/2}\psi_M\\
+ &=\frac{e^{-r|U|^2/4}}{2i\sqrt{2\pi}}
+       \left(dU-\frac{\bar M}{|M|}\,d\bar U\right).
+ \end{split}
+ \label{ext-holomorphic-frame}
+\end{equation}
+The second expression is single valued for $M\ne0$.  If $P_M$
+denotes the physical ground-state projector, then
+$P_M\partial_{\bar M}s_M=0$.  To verify this without identifying
+different Hodge realizations, normalize the real state as
+$\chi_M=\sqrt{r/(2\pi)}\psi_M$.  It has zero local Berry connection,
+and $s_M=M^{-1/2}\chi_M$ on a local branch.  The coefficient is
+holomorphic, which proves the assertion directly in the Hilbert
+space of real differential forms complexified.  Thus
+\begin{equation}
+ \langle s_M,s_M\rangle=|M|^{-1},\qquad
+ g_{UV}=|M|^{-2}=|1-q|^{-2}.
+ \label{ext-physical-euler-metric}
+\end{equation}
+No identification with a twisted-Dolbeault identity class is needed
+for this explicit calculation.
+
+The coefficient in \eqref{ext-holomorphic-frame} fixes the source
+normalization.  In the associated tensor frame the full physical
+metric is $g_\gamma(a,\bar a)|1-q|^{-2}$, where the cylinder factor
+has not been evaluated.  It is distinct from the period
+\eqref{ext-product-period}.  Furthermore,
+$\partial_M\partial_{\bar M}\log g_{UV}=0$ away from zero, and
+multiplication of the two-field frame by $M$ gives unit metric.
+Thus the denominator has meaning relative to the specified source;
+positivity alone does not select it.  At $M=0$ oscillator confinement
+and its normalizable vacuum disappear.  These facts provide a
+positive physical benchmark, while leaving the arithmetic contact
+and full pole pairing undetermined.
+
+\subsection{An affine gamma--prime coupling fails two tests}
+\label{ext-affine}
+
+A direct attempt to couple the sectors replaces their constant mass
+by $M+\lambda e^Y$:
+\begin{equation}
+ \mathcal W^\lambda_{a,q}
+ =\frac12\left[e^Y-aY+
+             \frac{M+\lambda e^Y}{2}(U^2+V^2)\right].
+ \label{ext-affine-superpotential}
+\end{equation}
+For real $a,M,\lambda>0$ its real-cycle integral converges, and
+integrating $U,V$ gives
+\begin{equation}
+ \begin{split}
+ \mathcal P_\lambda(a,M)
+ &=\int_0^\infty\frac{t^{a-1}e^{-t}}{M+\lambda t}\,dt
+ <\frac{\Gamma(a)}{M},\\
+ \left.\frac{d}{d\lambda}\mathcal P_\lambda\right|_{0+}
+ &=-\frac{\Gamma(a+1)}{M^2}.
+ \end{split}
+ \label{ext-affine-period}
+\end{equation}
+The inequality and the right derivative are exact analytic checks
+of the amplitude.  They are not numerical positivity bounds.
+
+There is a separate obstruction in the full complex target.  At
+$t_0=-M/\lambda\ne0$, the critical equations admit
+\begin{equation}
+ e^Y=t_0,\qquad
+ U^2+V^2=\frac{2(a-t_0)}{\lambda t_0}.
+ \label{ext-critical-quadric}
+\end{equation}
+This is a noncompact complex critical quadric: writing
+$(U+iV)(U-iV)$ as the displayed constant exhibits points escaping
+to infinity.  Thus a convergent real contour conceals nonisolated
+classical vacua elsewhere in the physical field space.  The
+isolated-vacuum hypotheses of a standard massive ground-state
+construction cannot simply be assumed.  This observation does not
+by itself prove a vanishing quantum spectral gap.
+
+The period obstruction has a useful scoped extension.  Fix $q$ and
+suppose a mass $m(t,q)$ is nonzero on $t>0$ and satisfies the
+integrability assumptions for uniqueness of its Mellin transform.
+If
+\begin{equation}
+ \int_0^\infty t^{a-1}e^{-t}m(t,q)^{-1}\,dt
+       =\frac{\Gamma(a)}{1-q}
+ \label{ext-mellin-test}
+\end{equation}
+holds throughout an open Mellin strip for independently variable
+$a$, then $m(t,q)=1-q$ almost everywhere on that contour.  Indeed,
+subtract the two integrands, fix a real part $\re a=b$ in the strip,
+and put $t=e^x$.  The resulting $L^1$ function of $x$ has identically
+zero Fourier transform, so vanishes almost everywhere.  This
+excludes a nonconstant quadratic mass preserving the entire
+factorized period within this class.  It does not exclude a match
+only on the linked locus $q=p^{-2a}$, a different insertion or
+boundary problem, or a nonquadratic prime theory.  Those alternatives
+require additional structure beyond the positive product
+Hamiltonian constructed here.

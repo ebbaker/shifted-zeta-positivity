@@ -1,53 +1,46 @@
-# Manuscripts
+# Papers and research projects
 
-One folder per manuscript. Each folder holds the LaTeX source and PDF, a
-`README.md` describing the contents, a `STATUS.md` with stage, provenance,
-verification record and release blockers, and — where the paper has
-reproduction code — a `code/` subfolder with its own `requirements.txt`.
+The papers are organized by research program. Each manuscript keeps its own
+source, PDF, status record, and associated code or numerical supplement.
 
-**Only `first-slab-positivity/` is at release stage** — it is the one
-manuscript intended to be cited as such, and the one the planned `v1.0` tag
-releases. No tag has been created and no DOI exists yet. The other six
-folders are working drafts, committed at the author's decision on 8–11
-September 2026 as an exception to the original sources-only-when-released
-rule: nothing in them is covered by a release or DOI as a finished manuscript,
-and each `STATUS.md` says so explicitly. Cite nothing from a draft folder
-without reading its `STATUS.md`. Status as of 11 September 2026.
+| Folder | Role | Start here |
+|---|---|---|
+| [`shifted-zeta/`](shifted-zeta/README.md) | The six-paper program around Suzuki's shifted screw functions, inverse spectral systems, and finite-horizon positivity. | The project README explains the papers' relationships and reading order. |
+| [`susy-positivity/`](susy-positivity/README.md) | The program seeking a structural explanation of Weil positivity, with individual approaches under `attempts/`. | [Background](susy-positivity/background.pdf); [program overview](susy-positivity/PROGRAM_OVERVIEW.md); [positive-factorizations attempt](susy-positivity/attempts/positive-factorizations/README.md) and [status](susy-positivity/attempts/positive-factorizations/STATUS.md). |
+| [`misc/`](misc/README.md) | Separate papers outside those two programs; currently the earlier `rh-detector` draft. | [Miscellaneous papers](misc/README.md). |
 
-`weil-depth/` and `storage-depth/` use a slightly different layout, adopted
-because they go through numbered review rounds: the top level holds only the current draft
-(`README.md`, `STATUS.md`, `BUILD_RECORD.json`, `SHA256SUMS.txt`,
-`ARCHIVES.md`). Weil-depth also has `CONTINUATION.md` and a versioned PDF
-at the top level; storage-depth has `CLOSEOUT.md` and its current PDF at
-`manuscript/storage_depth.pdf`. The source is under `manuscript/`, the
-numerical supplement under `numerics/` (in place of `code/`), superseded
-drafts and the review that produced each version under `archive/`, and its
-large ball-matrix archives are kept outside git and described by the tracked
-`ARCHIVES.md` (repository-wide rules: `../LARGE_FILES.md`).
+## Status
 
-| Folder | Title | Stage | To be released |
-|---|---|---|---|
-| `first-slab-positivity/` | Archimedean first-slab positivity for shifted zeta canonical systems: an off-center Weil generator and a radial energy identity | Preprint v1.0 (5 Sept 2026), 24 pp.; two adversarial review rounds; clean-room certificate audit; Part 0 of the verification checklist applied; statement inventory in `blueprint/first-slab/` | **yes** |
-| `psi-omega-margin/` | The margin in the shifted screw-function criterion for zero-free half-planes ("Paper 1", 21 pp.) with the concise companion *Quantitative asymptotics for Suzuki's shifted screw functions* (9 pp., the intended submission) | Working draft after the 27 Aug fold-in; referee rounds 12–14 with independent recomputation; author block filled (Edward B. Baker III); scripts `c1`–`c8` and two supplementary notes committed | no — working draft |
-| `omega-string/` | The shifted zeta string: an unconditional inverse-spectral family and its RH endpoint ("Paper 2", 13 pp.) | Working draft v5, frozen 28 Aug pending human specialist review; five referee passes; Kasahara (1975) source-verified 8 Sept; author block filled; figure script and two verification scripts committed | no — working draft |
-| `defect-depth/` | Detection depth of spectral defects in shifted zeta strings ("Paper 3", 15 pp.) | Working draft v1 (29 Aug) from the Ihara laboratory; all manuscript gates GO; author block empty; 17 bibliography entries still `%% VERIFY`; figures are placeholders; laboratory code committed under `code/` | no — working draft |
-| `weil-depth/` | Finite-horizon Weil coercivity and shifted-zeta contraction: two-sided certificates for the finite-window Weil form through total horizon log 7 (22 pp.) | Working draft v0.4 (10 Sept 2026) after three machine-assisted review rounds (v0.1 → v0.2 Codex; v0.2 → v0.3 Claude, with independent recomputation; v0.3 → v0.4 ChatGPT, presentation and scope only); two-sided Arb ball-arithmetic enclosures of λ_min at seven horizons `log 2 … log 7`, reproduced by an independent implementation and checked against the Fourier-side form; author block "Edward Baker"; ball-matrix archives outside git (`ARCHIVES.md`); no human review, no formal verification | no — working draft |
-| `storage-depth/` | Residual-controlled depth extension of finite-horizon Weil positivity: a spatial continuation past log 7 for the shifted-zeta transfer (21 pp.) | Working draft v0.3 (10–11 Sept 2026); v0.1 and v0.2 drafted by OpenAI models on 10 Sept (five research packets, consolidated record); v0.2 reviewed by Claude with an independent re-implementation of the validators, then rewritten as v0.3 with the floors re-derived by archive-based bisection. Certified in Arb ball arithmetic: `2.99e-29 ≤ λ_min(Q_{0,L_q}) ≤ 3.29e-29` at `L_q = (3/4) log 14`, residual factor 0.78, small-shift contraction for `ω ≤ 9e-16`; at `L_2 = log(56)/2`, after the 32-mode-slab failure was diagnosed and the slabs enlarged to 96 modes, `1.69e-30 ≤ λ_min(Q_{0,L_2}) ≤ 1.89e-30`, residual factor 0.8, contraction for `ω ≤ 2e-16`. Author block "Edward Baker"; about 1.6 GB of matrix archives outside git, two of them to be regenerated locally (`ARCHIVES.md`); no human review, no formal verification | no — working draft |
-| `rh-detector/` | A certified velocity-residual detector for off-axis zeros of the Riemann Ξ-function, and the De Bruijn–Newman flow as a matrix pencil on Calogero–Moser space (10 pp.) | Working draft of 25 Aug; numerics regenerated and re-verified after a workspace loss, smoke-tested 9 Sept; certified modulo floating point; author block empty; scripts and zero caches committed under `code/` | no — working draft |
+As of 11 September 2026, there are eight manuscript folders. Only
+[`first-slab-positivity`](shifted-zeta/first-slab-positivity/README.md) is at
+release stage (preprint v1.0), intended for the planned repository `v1.0` tag.
+No tag has been created and no DOI exists yet. The other seven folders are
+working drafts; read each paper's `STATUS.md` (or `VERIFICATION_STATUS.md`
+for the first-slab preprint) before citing it. This reorganization changes neither manuscript versions nor review status.
 
-**Two threads.** Papers 1–3, the preprint, `weil-depth/` and `storage-depth/` form one program
-built on Suzuki's shifted screw functions and shifted scattering function;
-they cite each other as companions (`weil-depth/` continues the preprint's
-operator-side positivity past the prime-free first slab and refers to it in
-the text as a companion manuscript, without a bibliography entry yet;
-`storage-depth/` continues `weil-depth/` past `log 7` and cites it).
-`rh-detector/` is a **separate, earlier thread**,
-written on 24–25 August 2026 before the Suzuki line of work began; it is
-unrelated to that program and carries no companion cross-citations.
+The SUSY program background and continuation note are at its root. Round-4
+reports accompany the positive-factorizations attempt in
+`susy-positivity/attempts/positive-factorizations/archive/progress-reports/`;
+they have not been incorporated into manuscript v0.2.
 
-The storage-depth writing project is closed out at v0.3; its
-[closeout record](storage-depth/CLOSEOUT.md) separates completed packaging
-from open review and deferred research.
+## Layout and older paths
+
+The six shifted-zeta folders moved from `papers/<slug>/` to
+`papers/shifted-zeta/<slug>/`; `papers/rh-detector/` moved to
+`papers/misc/rh-detector/`. `papers/susy-positivity/` is now a program root;
+its manuscript and support moved into `attempts/positive-factorizations/`.
+See its [move and validation record](susy-positivity/REORGANIZATION_20260912.md). Older
+manuscripts, archived drafts, and review records retain their original path
+references: apply this mapping when reading them in the current checkout,
+or use their original commit for an exact historical view.
+
+Weil-depth and storage-depth use `manuscript/`, `numerics/`, and `archive/`
+subfolders, with current `BUILD_RECORD.json`, `SHA256SUMS.txt`, and
+`ARCHIVES.md` at the paper root. Their large derived data stay outside git;
+see the [large-file policy](../LARGE_FILES.md). Shared `blueprint/`,
+`statements/`, `verification/`, `notes/`, and `code/` remain at the repository
+root. The [shifted-zeta guide](shifted-zeta/README.md) links the relevant
+entry points.
 
 ## How to cite a paper in this repository
 
@@ -60,7 +53,7 @@ hash as a work in progress.
 
 > E. Baker, *⟨paper title⟩*, ⟨preprint version⟩, in: *shifted-zeta-positivity*,
 > release v⟨X.Y⟩, Zenodo, doi:10.5281/zenodo.⟨version DOI⟩, folder
-> `papers/⟨slug⟩/`, 2026.
+> `⟨paper folder path⟩/`, 2026.
 
 *Paper-record form* (journal-style; each released paper is also deposited as
 its own Zenodo record with the paper's title and abstract):
@@ -68,7 +61,7 @@ its own Zenodo record with the paper's title and abstract):
 > E. Baker, *⟨paper title⟩*, ⟨preprint version⟩, Zenodo,
 > doi:10.5281/zenodo.⟨paper record DOI⟩, 2026.
 
-Filled-in blocks for released papers:
+Citation block for the release-stage preprint:
 
 **first-slab-positivity, v1.0** — no release or DOI exists yet. Until the
 first tag, cite the folder at a commit (hash from `git rev-parse HEAD` or the
@@ -78,7 +71,7 @@ folder's GitHub permalink):
 > systems: an off-center Weil generator and a radial energy identity*,
 > preprint v1.0, 2026, in: *shifted-zeta-positivity*,
 > <https://github.com/ebbaker/shifted-zeta-positivity>, folder
-> `papers/first-slab-positivity/`, commit ⟨hash⟩.
+> `papers/shifted-zeta/first-slab-positivity/`, commit ⟨hash⟩.
 
 After the `v1.0` release the block becomes the repository form above with the
 real version DOI. BibTeX skeleton for that stage (`@misc` is what Zenodo
@@ -91,7 +84,7 @@ exports; adjust to your style; ⟨…⟩ are placeholders, not identifiers):
                   an off-center {W}eil generator and a radial energy identity},
   year         = {2026},
   howpublished = {Preprint v1.0, in: shifted-zeta-positivity, release v1.0, folder
-                  \texttt{papers/first-slab-positivity/}},
+                  \texttt{papers/shifted-zeta/first-slab-positivity/}},
   publisher    = {Zenodo},
   doi          = {10.5281/zenodo.⟨version DOI⟩},
   note         = {Computer-assisted; verification status in the repository}

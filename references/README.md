@@ -42,4 +42,4 @@ display equation. The Suzuki [1] statements quoted in the first-slab preprint
 were extracted by automated reading of the arXiv PDF and are flagged for human
 confirmation (checklist item C1).
 
-[Storage-depth paper (v0.3, working draft)](../papers/storage-depth/README.md) · [All manuscripts](../papers/README.md)
+[Shifted-zeta program](../papers/shifted-zeta/README.md) · [All manuscripts](../papers/README.md)
