@@ -2,6 +2,10 @@
 
 14 September 2026. **Focused working note**, following the
 [broad defect-observable survey](DEFECT_OBSERVABLE_SURVEY.md).
+**Continuation:** [Dressed Schur returns and gluing](SCHUR_DRESSED_RETURNS_AND_GLUING.md)
+changes the elementary source and obtains an exact local prime norm,
+with its contact and gluing restrictions. The earlier tests below are retained.
+
 This compares specific protected sectors and source prescriptions. It is
 not a draft paper and does not select a final RH candidate.
 
