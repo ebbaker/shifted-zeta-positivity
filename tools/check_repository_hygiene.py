@@ -23,8 +23,9 @@ PAPER_GROUPS = {
 
 def historical(path):
     parts = path.parts
-    return ('drafts' in parts and
-            any(p.startswith('v') for p in parts[parts.index('drafts') + 1:-1]))
+    # Snapshot folders use both version numbers and dates. The drafts/
+    # index itself remains current navigation and must still be checked.
+    return 'drafts' in parts[:-2]
 
 
 def digest(path):
@@ -94,7 +95,7 @@ def main():
                     f'Obsolete paper location remains: papers/{slug}')
 
     program = Path('papers/susy-positivity')
-    attempt = program / 'attempts/positive-factorizations'
+    attempt = program / 'investigations/positive-factorizations'
     require_index_links(program / 'README.md', [attempt / 'README.md'])
     for obsolete in ('manuscript.tex', 'manuscript.pdf', 'STATUS.md',
                      'RESEARCH_BRIEF.md', 'INVESTIGATION_round3.md',
@@ -108,13 +109,16 @@ def main():
         require(path.is_file() and any('\\input{' + name + '}' in path.read_text()
                 for name in (section, section.removesuffix('.tex'))),
                 'Background wrapper must input the shared section')
-    current = json.loads((ROOT / attempt / 'manifest.json').read_text())
-    for name, want in current['sha256'].items():
-        rel = attempt / name
-        path = ROOT / rel
-        require(rel in tracked, f'Attempt manifest names untracked file: {rel}')
-        require(path.is_file() and digest(path) == want,
-                f'Attempt checksum mismatch: {rel}')
+    manifest = ROOT / attempt / 'manifest.json'
+    require(manifest.is_file(), f'Missing attempt manifest: {attempt / "manifest.json"}')
+    if manifest.is_file():
+        current = json.loads(manifest.read_text())
+        for name, want in current['sha256'].items():
+            rel = attempt / name
+            path = ROOT / rel
+            require(rel in tracked, f'Attempt manifest names untracked file: {rel}')
+            require(path.is_file() and digest(path) == want,
+                    f'Attempt checksum mismatch: {rel}')
 
     for slug in ('storage-depth', 'weil-depth'):
         base = ROOT / 'papers' / 'shifted-zeta' / slug

@@ -5,7 +5,23 @@ Brainstorm reassessment after the finite-response novelty review
 
 This is a research-direction assessment with targeted primary-source checks. It is not a new proof audit, exhaustive priority search, or claim that a proposed route will prove RH. Established source results, elementary deductions, and proposed investigations are distinguished below. The source repository and historical brainstorms have not been edited.
 
-**Recommendation.** Give the next structural investigation to semilocal arithmetic projections and the pairing they induce. Use the existing finite-response construction to determine whether this arithmetic structure adds an inequality or identity beyond generic positive completion. Retain ground-state geometry as a possible supporting mechanism when its source map and arithmetic action are specified. Do not begin by choosing another supersymmetric potential.
+**Later direction update, 14 September 2026.** After the canonical
+semilocal pairing comparison, the research objective was clarified:
+positivity should follow independently from the bulk, and the hard task
+should be fitting its complete boundary pairing. The next investigation
+is therefore [inverse bulk realization](../investigations/inverse-bulk-realization/README.md).
+It gives a scoped obstruction to finite rational reference feedback and
+an exact positive-action refinement of the gamma tower, then specifies
+a proposed common-field prime junction to construct and test. No exact
+Weil fit or all-length positivity result is claimed.
+
+The assessment below records the earlier recommendation. In particular,
+its proposed response estimates in section 4 are retained as historical
+alternatives, not the current work plan. The semilocal comparison remains
+a model diagnostic; an unmatched term is a reason to examine or change
+the bulk model, rather than automatically extend the error estimates.
+
+**Earlier recommendation.** Give the next structural investigation to semilocal arithmetic projections and the pairing they induce. Use the existing finite-response construction to determine whether this arithmetic structure adds an inequality or identity beyond generic positive completion. Retain ground-state geometry as a possible supporting mechanism when its source map and arithmetic action are specified. Do not begin by choosing another supersymmetric potential.
 
 “More fruitful” has two meanings here. A narrowly specified response estimate offers the clearest route to a checkable mathematical result. A semilocal polarization or projection offers the stronger prospect of introducing arithmetic structure absent from the current completion. Neither has yet supplied the missing sign. A function-field polarization example is a useful control for judging both.
 

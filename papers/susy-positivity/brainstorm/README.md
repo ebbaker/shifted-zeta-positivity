@@ -1,13 +1,16 @@
 # Exploratory proposals and assessments
 
-Start with the [14 September reassessment](ASSESSMENT.md). It compares the
-older proposals with ground-state geometry through note 20 and the revised
-finite-response note. Earlier rankings and continuation briefs describe
-their dated research stages; the reassessment gives the current priorities.
+Start with [inverse bulk realization](../investigations/inverse-bulk-realization/README.md)
+for the current continuation: fit an independently positive bulk system
+exactly to the complete boundary form. The [14 September reassessment](ASSESSMENT.md)
+compares the older proposals with ground-state geometry through note 20 and
+the revised finite-response note; its direction update explains the later
+change of priority. Earlier rankings and briefs describe their dated stages.
 
 | Material | Role |
 |---|---|
-| [Assessment](ASSESSMENT.md) | Current direction: semilocal arithmetic projections and targeted arithmetic response estimates, with explicit missing identities. |
+| [Inverse bulk realization](../investigations/inverse-bulk-realization/README.md) | Current direction: exact positive-bulk matching, with a rational-feedback obstruction and positive gamma-action refinement. The prime junction remains a proposal. |
+| [Assessment](ASSESSMENT.md) | Earlier comparison of proposals, with a later update redirecting the next task from residual estimates to exact bulk fitting. |
 | [Topological bulk–boundary proposal](TOPOLOGICAL_BULK_BOUNDARY_POSITIVITY_20260912.md) | Initial 12 September proposal and scoped model requirements. |
 | [Superspace and cohomological pairings](SUPERSPACE_COHOMOLOGICAL_BOUNDARY_PAIRINGS_20260912.md) | Initial comparison of protected boundary-pairing mechanisms. |
 | [Candidate bulk theories](candidate-bulk-theories/README.md) | Relative complex, delays, Dirac/gauge controls, coherent deformation, and reproducible diagnostics. |

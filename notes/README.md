@@ -120,12 +120,12 @@ project's completed work and remaining verification limits.
 ### 7 · Supersymmetric positivity (11 September 2026; active)
 
 The separate investigation is in [papers/susy-positivity](../papers/susy-positivity/README.md).
-Its [companion brief](../papers/susy-positivity/attempts/positive-factorizations/RESEARCH_BRIEF.md) records the current
-motivation; [round 3](../papers/susy-positivity/attempts/positive-factorizations/INVESTIGATION_round3.md) constructs
+Its [companion brief](../papers/susy-positivity/investigations/positive-factorizations/RESEARCH_BRIEF.md) records the current
+motivation; [round 3](../papers/susy-positivity/investigations/positive-factorizations/INVESTIGATION_round3.md) constructs
 an odd-sector factor and certifies the first prime's stabilizing role on a
 linear input. The [original pedagogical brief](supersymmetric_positivity_research_brief.md)
 is historical motivation. The even-sector completion and joint prime model
-remain open; see the [status ledger](../papers/susy-positivity/attempts/positive-factorizations/STATUS.md).
+remain open; see the [status ledger](../papers/susy-positivity/investigations/positive-factorizations/STATUS.md).
 
 ## Code referenced by the notes
 

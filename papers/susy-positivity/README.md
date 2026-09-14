@@ -9,7 +9,8 @@ proof is claimed.**
 ## Start here
 
 - [Mathematical background](background.pdf) and [program overview](PROGRAM_OVERVIEW.md): shared normalization, domains, goals, and the original research framework.
-- [Current research assessment, 14 September 2026](brainstorm/ASSESSMENT.md): reassesses the earlier proposals after the ground-state investigation and finite-response novelty review. It recommends testing semilocal arithmetic projections and targeted arithmetic response estimates; these are proposed directions.
+- [Inverse bulk realization](investigations/inverse-bulk-realization/README.md): current continuation toward an independently positive bulk with an exact Weil boundary pairing. It gives a scoped rational-feedback obstruction and an exact gamma-action refinement; the proposed prime junction is not yet constructed.
+- [Research assessment, 14 September 2026](brainstorm/ASSESSMENT.md): compares the earlier proposals after the ground-state investigation and finite-response novelty review. Its later direction update moves the next task to exact bulk fitting.
 - [Arithmetic ground-state geometry](investigations/arithmetic-ground-state-geometry/README.md): the investigation through note 20, including the finite-rank reduction and remaining arithmetic sign problem.
 - [Boundary corrections and finite responses](manuscripts/finite-response-weil-positivity/README.md): a separate technical note with detailed derivations. Submission is deferred pending further work and reassessment; human mathematical review and novelty assessment remain necessary.
 
@@ -31,6 +32,7 @@ susy-positivity/
     positive-factorizations/
     topological-susy-bulk/
     arithmetic-ground-state-geometry/
+    inverse-bulk-realization/
   manuscripts/                   # separate manuscripts drawn from the research
     finite-response-weil-positivity/
   archive/                       # historical reorganization record and path guide
@@ -45,6 +47,7 @@ standalone notes from manuscripts retained within investigations.
 
 | Investigation | Scope and status |
 |---|---|
+| [Inverse bulk realization](investigations/inverse-bulk-realization/README.md) | Continuation after the semilocal comparison: exact bulk fitting, a scoped obstruction to finite rational reference feedback, and compatible positive gamma-action refinements. A common-field prime junction is proposed but not constructed or matched. |
 | [Positive factorizations](investigations/positive-factorizations/README.md) · [PDF](investigations/positive-factorizations/manuscript.pdf) · [status](investigations/positive-factorizations/STATUS.md) | Manuscript v0.2: short-window factors, gamma kinetic tower, restricted odd-sector factors, scoped obstructions, and a certified first-prime stabilization example. Separate round-4 reports extend the odd factor across shifts and isolate the remaining even scalar. A complete even factor, joint prime construction, and arbitrary-length mechanism remain open. |
 | [Topological SUSY bulk](investigations/topological-susy-bulk/README.md) · [PDF](investigations/topological-susy-bulk/manuscript.pdf) · [status](investigations/topological-susy-bulk/STATUS.md) | Manuscript through 12 September: positive relative gamma complex, arithmetic loop responses, and correction obstructions. Separate 13 September notes construct a physical Fock realization and superspace boundary action and study finite-block restrictions. The full arithmetic norm remains open. |
 | [Arithmetic ground-state geometry](investigations/arithmetic-ground-state-geometry/README.md) · [PDF](investigations/arithmetic-ground-state-geometry/manuscript.pdf) · [status](investigations/arithmetic-ground-state-geometry/STATUS.md) | Integrated manuscript through note 20: interacting local factors, physical caps, closed gamma source, pole gluing, prime returns, and a positive source equal to the full Weil form plus an explicit finite-rank positive error. The remaining finite response matrix is not proved positive. Includes the noncompact gamma boundary correction and residual estimates; an all-support physical source law remains open. |
