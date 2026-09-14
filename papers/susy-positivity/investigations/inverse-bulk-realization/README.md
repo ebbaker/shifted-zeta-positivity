@@ -6,18 +6,28 @@ The intended contribution is an exact matching theorem, potentially
 conditional on construction of a credible specified theory. An already
 completed construction is not an eligibility requirement.
 
+The [current working manuscript](manuscript.pdf), *Sphere and Schur sources for
+the localized Weil form*, collects the present results in a self-contained
+draft. Its [TeX source](manuscript.tex) has internal equation labels and does
+not input the shared background. Reviewed versions are preserved in
+[drafts/](drafts/README.md); version 0.1 is the first snapshot.
+See the [build guide](BUILD.md) and [coverage map](MANUSCRIPT_COVERAGE.md).
+
 Start with the [broad program overview](../../brainstorm/INVERSE_BULK_AND_DEFECT_DIRECTIONS.md)
 for the ideas and alternatives. The
 [current focused investigation](notes/SCHUR_DRESSED_RETURNS_AND_GLUING.md)
 constructs dressed Schur return states, computes their full local norm,
 and tests their magnetic domain and two-prime gluing.
-No system has yet supplied the full Weil pairing, and there is
-no draft paper for a selected system in this folder.
+No system has yet supplied the full Weil pairing. The working manuscript
+records the preliminary source results and open joint matching problem;
+it does not announce a completed reduction to a particular field theory.
 
 ## Reading map: broad material and focused calculations
 
 | Document | Scope | Role |
 |---|---|---|
+| [Working manuscript](manuscript.pdf) | Synthesis of current results | Self-contained target, exact source calculations and proofs, scoped exclusions, and the remaining full matching problem. |
+| [Dated drafts](drafts/README.md) | Version history | Complete buildable snapshots with PDFs and file hashes; earlier versions are preserved unchanged. |
 | [Program overview in brainstorm](../../brainstorm/INVERSE_BULK_AND_DEFECT_DIRECTIONS.md) | Broad | Motivation, the conditional-construction goal, broadened boundary concepts, candidate families, and criteria for a specific paper. |
 | [Defect-observable survey](notes/DEFECT_OBSERVABLE_SURVEY.md) | Broad | Literature comparison and alternatives, including Liouville, integrable defects, gauge networks, and arithmetic/free-field controls. |
 | [Foundational analysis](notes/ANALYSIS.md) | General framework, with specific model tests | Full matching target, physical positivity, rational-feedback obstruction, positive gamma refinement, and the original junction proposal. |
@@ -42,8 +52,9 @@ the full gauge and Weyl terms, alongside sphere boundary/vortex modules
 with an actual correspondence on the Gaussian normalization control.
 A failed identity changes the choice of source or model;
 it does not initiate progressively more complicated residual estimates.
-Retain the other systems as alternatives. Specialize a draft paper only
-after a concrete system and preliminary matching results justify it.
+Retain the other systems as alternatives. Use this working manuscript to
+develop the current calculations; specialize the proposed field-theory
+reduction when a concrete joint source and complete matching results justify it.
 Only the forward construction-to-RH direction belongs to this program.
 
 ## Reproduction and preservation
@@ -55,6 +66,7 @@ python3 numerics/check_matching.py
 python3 numerics/check_gauge_transfer.py
 python3 numerics/check_sphere_schur.py
 python3 numerics/check_dressed_schur.py
+python3 validation/drafts.py check --replay
 ```
 
 The programs print small records and do not overwrite the preserved
@@ -63,6 +75,8 @@ live in `notes/`, with their filenames retained and navigation repaired.
 The earlier check programs and records are preserved unchanged; the
 generic `checks.json` is now `numerics/records/matching-checks.json`.
 Successive focused notes and their checks document each continuation separately.
+The [draft tool](validation/README.md) records reviewed builds and saves new
+versions without overwriting historical drafts.
 Follow the repository's [large-file policy](../../../../LARGE_FILES.md).
 
 Related material: [shared framework](../../PROGRAM_OVERVIEW.md),

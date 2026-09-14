@@ -25,8 +25,11 @@ before the contact term in the survey's displayed target was repaired to
 agree with the foundational formula. Navigation updates do not change
 the status of the earlier mathematical claims.
 
-There is no system-specific draft manuscript yet. Once a particular
-system and preliminary matching results justify a paper, keep these notes
-as the broader record and retain the other systems as future possibilities.
+The [working manuscript](../manuscript.pdf) now collects the current results,
+with self-contained background and proofs. The [coverage map](../MANUSCRIPT_COVERAGE.md)
+relates its sections to these retained notes, and [dated drafts](../drafts/README.md)
+preserve successive versions. The full system-specific matching problem
+remains open; these notes continue as the broader record, with other systems
+retained as future possibilities.
 See the [investigation index](../README.md) and
 [supporting checks](../numerics/README.md).

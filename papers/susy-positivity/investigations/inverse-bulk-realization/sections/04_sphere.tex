@@ -1,0 +1,139 @@
+\section{Sphere quantization and the archimedean data}\label{sec:sphere}
+\subsection{The real Gaussian boundary module}
+The real boundary module of the free hypermultiplet provides a
+Schr\"odinger representation \cite[Sections 7.2--7.3]{Sphere}. We use
+oscillator units and the explicitly normalized data
+\begin{equation}\label{eq:gaussian-data}
+ \HH_{\R}=L^2(\R,\dd y),\quad X=y=X^\dagger,\quad
+ P=\partial_y=-P^\dagger,\quad
+ \Omega(y)=\pi^{-1/4}e^{-y^2/2}.
+\end{equation}
+The unitary dilation group is $D_r\psi(y)=e^{r/2}\psi(e^ry)$.
+Direct integration gives
+\begin{equation}\label{eq:gaussian-correlation}
+ \ip\Omega{D_r\Omega}=(\cosh r)^{-1/2}.
+\end{equation}
+The real, even Gaussian state fixes a particular Mellin weight; no
+adjustable gamma shift is introduced.
+
+\begin{proposition}[Gaussian Mellin normalization]\label{prop:gaussian}
+On even states, define
+$(\mathcal U\psi)(u)=\sqrt2e^{u/2}\psi(e^u)$ and let
+$\mathcal M$ be its unitary Fourier transform with factor $(2\pi)^{-1/2}$.
+Then
+\begin{align}
+ (\mathcal M\Omega)(\tau)
+ &=2^{-3/4-i\tau/2}\pi^{-3/4}
+       \Gamma(\tfrac14-i\tau/2),\label{eq:mellin}\\
+ \norm{\int_\R f(r)D_r\Omega\dd r}^2
+ &=\int_\R\rho_{\rm G}(\tau)|\widehat f(\tau)|^2\dd\tau,
+ \qquad
+ \rho_{\rm G}(\tau)=
+ \frac{|\Gamma(\tfrac14+i\tau/2)|^2}{2^{3/2}\pi^{3/2}}.
+ \label{eq:gaussian-norm}
+\end{align}
+The density $\rho_{\rm G}$ integrates to one.
+\end{proposition}
+\begin{proof}
+Evenness makes $\mathcal U$ unitary by the substitution $y=e^u$.
+The transform of the Gaussian reduces to
+$\sqrt2\pi^{-1/4}(2\pi)^{-1/2}
+\int_0^\infty y^{-1/2-i\tau}e^{-y^2/2}\dd y$.
+The substitution $y^2/2=t$ evaluates this integral and proves
+\eqref{eq:mellin}. Dilations become translations in $u$, so spectral
+diagonalization proves \eqref{eq:gaussian-norm}; the possible sign of
+the Fourier argument is immaterial because $\rho_{\rm G}$ is even.
+Plancherel and $\norm\Omega=1$ give the last assertion.
+\end{proof}
+
+This is an exact positive pairing associated with the quarter-shift.
+It is not $Q_L$: its kernel \eqref{eq:gaussian-correlation} is smooth
+and its spectral density decays exponentially, while
+\eqref{eq:gamma-growth} grows logarithmically. It also falls under
+Proposition~\ref{prop:bounded-source}. Thus this natural source is a
+normalization control rather than the desired full preparation.
+
+\subsection{The oscillator tower and the distinction between a phase and a norm}
+The positive oscillator
+$H_{\rm osc}=\tfrac12(-\partial_y^2+y^2)$ has, on its even subspace,
+the spectrum $a_n=2n+1/2$. Consequently
+\begin{equation}\label{eq:oscillator-trace}
+ b(\tau^2)=2\Tr_{\HH_{\rm even}}
+ \left[H_{\rm osc}^{-1}\frac{\tau^2}{H_{\rm osc}^2+\tau^2}\right].
+\end{equation}
+Each fixed-$\tau$ trace converges, since its summands are $O(n^{-3})$.
+An explicit positive source into
+$\bigoplus_{n\geq0}L^2(\R)$ is
+\begin{equation}\label{eq:gamma-source}
+ (\mathcal A_nF)\widehat{\ }(\tau)
+ =\sqrt{\frac2{a_n}}\frac{i\tau}{a_n+i\tau}\widehat F(\tau),
+ \qquad \sum_{n\geq0}\norm{\mathcal A_nF}^2=K[F].
+\end{equation}
+Equivalently one may use diagonal Hilbert--Schmidt operators in the
+oscillator basis. The source is finite on the domain of $K$ and is
+closed there as a map with its graph norm. Equation~\eqref{eq:oscillator-trace}
+identifies the required masses with a standard Hamiltonian in a named
+module. It does not derive the resolvent-weighted source
+\eqref{eq:gamma-source} as a local insertion or a gluing map of that QFT.
+
+The corresponding unit-modulus archimedean phase is
+\begin{equation}\label{eq:arch-phase}
+ S_\infty(\tau)=\pi^{-i\tau}
+ \frac{\Gamma(\tfrac14+i\tau/2)}{\Gamma(\tfrac14-i\tau/2)},
+ \qquad
+ -i\overline{S_\infty}S_\infty'
+ =b(\tau^2)+w_0.
+\end{equation}
+Differentiating its logarithm proves the second identity. The scalar
+factor $\pi^{-i\tau}$ is essential for the contact. Although
+$|S_\infty|=1$, its phase derivative at zero is $w_0<0$. Unitarity of
+a multiplication operator therefore does not establish positivity of
+this derivative. Local-factor phases and gamma splitting are classical;
+their semilocal use is developed, for example, in \cite{QuasiInner}.
+
+\subsection{An interacting benchmark: charged states in \texorpdfstring{$T[SU(2)]$}{T[SU(2)]}}
+The $T[SU(2)]$ theory is the three-dimensional $U(1)$ theory with two
+hypermultiplets. Its sphere module admits a representation on twisted
+half-densities on $\mathbb{CP}^1$ \cite[Section 3.2]{Sphere}. For real
+FI parameter $t$, use the coordinate-chart data
+\begin{equation}\label{eq:tsu2-data}
+ E=\partial_z,\qquad \Omega_t(z)=(1+|z|^2)^{-1+it},
+ \qquad \dd\mu=\dd^2z/\pi.
+\end{equation}
+This vector has unit norm. Multiplication by $\Gamma(1-it)$ restores
+the partition-function factor $Z_t=\pi t/\sinh(\pi t)$, understood
+continuously as $Z_0=1$.
+
+\begin{proposition}[Charged-state Gram matrix]\label{prop:tsu2}
+The states in \eqref{eq:tsu2-data} satisfy
+\begin{align}
+ E^n\Omega_t&=(-1)^n(1-it)_n\bar z^{\,n}
+                  (1+|z|^2)^{-1+it-n},\label{eq:tsu2-states}\\
+ \ip{E^m\Omega_t}{E^n\Omega_t}&=\delta_{mn}N_n(t),\qquad
+ N_n(t)=\frac{(n!)^2}{(2n+1)!}\prod_{k=1}^n(k^2+t^2).
+ \label{eq:tsu2-norm}
+\end{align}
+Neither the vacuum returns nor the ratios of these norms supply a
+nonzero geometric repetition law for bare powers of a fixed multiple of $E$.
+\end{proposition}
+\begin{proof}
+Repeated differentiation proves \eqref{eq:tsu2-states}. Angular
+integration makes different powers orthogonal. With $u=|z|^2$, the
+remaining radial integral is
+$\int_0^\infty u^n(1+u)^{-2n-2}\dd u=(n!)^2/(2n+1)!$.
+Also $|(1-it)_n|^2=\prod_{k=1}^n(k^2+t^2)$.
+Thus $\ip{\Omega_t}{E^n\Omega_t}=0$ for $n>0$, whereas
+\begin{equation}\label{eq:tsu2-ratio}
+ \frac{N_{n+1}(t)}{N_n(t)}
+ =\frac{(n+1)^2((n+1)^2+t^2)}{(2n+3)(2n+2)}.
+\end{equation}
+The ratio at $n=1$ exceeds that at $n=0$ by $(19+t^2)/30>0$.
+A nonzero constant rescaling of $E$ multiplies both ratios by the same
+positive number and cannot make them equal.
+\end{proof}
+These are norms in an interacting protected sector. The result excludes
+the proposed bare charged return, not mixed charged and neutral
+observables, vortex modules or interfaces. A source
+$\sum_n c_n(f)E^n\Omega_t$ has norm $\sum_nN_n(t)|c_n(f)|^2$ when
+the sum converges; an arithmetic application still needs an independent
+rule for the coefficients $c_n(f)$.

@@ -309,7 +309,7 @@ Consider the elementary Schur factor
 
 This is the quantum-dilogarithm factor appearing in the elementary
 \(q\)-Weyl example; see the spectrum generator in
-[Gaiotto–Teschner, RG flow, §3.1.1](https://arxiv.org/html/2503.16685#S3.SS1.SSS1).
+[Ambrosino–Gaiotto, RG flow, §3.1.1](https://arxiv.org/html/2503.16685#S3.SS1.SSS1).
 The second identity follows directly by cancelling the infinite products.
 
 Now make the **trial arithmetic identification**
@@ -382,7 +382,7 @@ I(a,b)=c_q\langle F_a\mathscr S,F_b\mathscr S\rangle_{\ell^2(\Gamma)},
 The same \(\mathscr S\) corrects both the dualization map and the
 pairing. The general construction includes conjectural input and
 domain conditions; formal series alone do not guarantee finite norms.
-[Gaiotto–Teschner, RG flow, §§1–2](https://arxiv.org/html/2503.16685)
+[Ambrosino–Gaiotto, RG flow, §§1–2](https://arxiv.org/html/2503.16685)
 
 This is especially relevant to the present objective: (16) retains
 normalization and all interference within one state. For a linear

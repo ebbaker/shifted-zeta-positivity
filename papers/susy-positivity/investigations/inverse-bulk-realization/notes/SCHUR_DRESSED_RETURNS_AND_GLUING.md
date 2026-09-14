@@ -4,6 +4,10 @@
 [sphere and Schur pairings](SPHERE_AND_SCHUR_PAIRINGS.md). The broad
 candidate comparison remains in the [survey](DEFECT_OBSERVABLE_SURVEY.md).
 
+**Manuscript update:** The [working draft](../manuscript.pdf) now collects
+these preliminary results. The source-selection conclusions below are
+retained; no complete system-specific Weil matching theorem is claimed.
+
 There is a concrete improvement over the first tests. In the elementary
 Schur representation, an explicit electric dressing followed by one
 magnetic insertion gives a positive norm with the exact negative
@@ -51,7 +55,7 @@ C_q=(q^2;q^2)_\infty.
 
 Here \((b;Q)_\infty=\prod_{j\geq0}(1-bQ^j)\). The normalization and
 actions in (2) are those of
-[Gaiotto–Teschner, Schur RG flow, §3.1.1](https://arxiv.org/html/2503.16685#S3.SS1.SSS1).
+[Ambrosino–Gaiotto, Schur RG flow, §3.1.1](https://arxiv.org/html/2503.16685#S3.SS1.SSS1).
 The physical adjoints are inherited from the doubled representation;
 no assertion that \(u_-\) is the ordinary adjoint of \(u_+\) is used.
 

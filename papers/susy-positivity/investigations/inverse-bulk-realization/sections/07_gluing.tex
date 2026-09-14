@@ -1,0 +1,140 @@
+\section{Magnetic domains and joint-prime gluing}\label{sec:gluing}
+\subsection{What higher magnetic powers would require}
+The domain statement for one insertion is sufficient for
+Theorem~\ref{thm:schur-prime}. It does not place the prepared state in
+the domain of every negative magnetic power.
+\begin{proposition}[Formal higher-power coefficient criterion]
+\label{prop:magnetic-powers}
+For $k\geq1$, iteration of the coefficient action gives the formal series
+\begin{equation}\label{eq:magnetic-k}
+ (u_-^k\eta_a)_{-k}(\zeta)=\sqrt{1-a^2}
+ \frac{\prod_{j=0}^{k-1}(1+q^{k-1-2j}\zeta)}{1+aq^{-k}\zeta}.
+\end{equation}
+Its Taylor coefficient sequence belongs to $\ell^2$ if and only if
+\begin{equation}\label{eq:magnetic-criterion}
+ a<q^k\quad\hbox{or}\quad a\in\{q,q^3,\ldots,q^{2k-1}\}.
+\end{equation}
+For fixed $0<a<1$, square summability of all these formal outputs is
+equivalent to $a=q^{2j+1}$ for some integer $j\geq0$.
+\end{proposition}
+\begin{proof}
+Induction in \eqref{eq:schur-actions} gives \eqref{eq:magnetic-k}.
+For every coefficient of degree $n\geq k$, expanding the denominator
+shows that the coefficient equals
+\begin{equation}\label{eq:magnetic-tail}
+ \sqrt{1-a^2}(-aq^{-k})^n
+ \prod_{j=0}^{k-1}(1-q^{2j+1}/a).
+\end{equation}
+If the product is nonzero, the geometric tail is square summable
+exactly when $aq^{-k}<1$. If the product vanishes, the numerator
+cancels the denominator and the output is a polynomial. This proves
+\eqref{eq:magnetic-criterion}. For all $k$, the inequality eventually
+fails at any fixed $a>0$, so an exceptional value is necessary.
+If $a=q^{2j+1}$, it satisfies the strict inequality for $k\leq j$
+and the cancellation condition for $k\geq j+1$, proving sufficiency
+for the formal coefficient statement.
+\end{proof}
+
+The exceptional square-summable outputs do not by themselves prove
+membership in powers of a chosen closed operator extension. A divergent
+coefficient tail is, however, a necessary domain obstruction whenever
+the prescribed action on Fourier coefficients is retained. This
+distinction prevents meromorphic continuation across a pole from being
+mistaken for an operator-domain argument.
+
+For the prime states $a_p=qp^{-1/2}$, requiring all negative powers
+would force $p^{-1/2}=q^{2j_p}$. This cannot hold simultaneously for
+$p=2$ and $p=3$, since it would imply a nontrivial equality between
+an integer power of $2$ and an integer power of $3$. It does not affect
+the single insertion already proved. More generally, for any fixed
+finite $K>1$, choosing $q^{K-1}>2^{-1/2}$ puts every prime state in
+the strictly decaying regime for all powers through $K$. In that
+regime the Taylor-approximation argument of
+Lemma~\ref{lem:one-magnetic} extends through the finite sequence of
+shifts. A proposed junction must specify the finite words or actual
+operator domains it uses; a field theory need not put every state in
+the domain of every unbounded power.
+
+\subsection{A two-prime obstruction for fixed output vectors}
+For each prime write $r_p=p^{-1/2}$, $d_p=\log p$, and
+\begin{equation}\label{eq:prime-filter}
+ A_p(z)=\frac{1-z}{1-r_pz}
+ =1-(1-r_p)\sum_{n\geq1}r_p^{n-1}z^n,
+ \qquad c_p=\frac{d_pr_p(1+r_p)}{1-r_p}.
+\end{equation}
+The norm of $\sqrt{c_p}A_p$ is the multiplier
+\eqref{eq:prime-weight}. Consider a proposed coherent sum with fixed
+unit output vectors $v_2,v_3$:
+\begin{equation}\label{eq:constant-vector-source}
+ F\longmapsto\widehat F(\tau)
+ \left[\sqrt{c_2}A_2(e^{id_2\tau})v_2
+       +\sqrt{c_3}A_3(e^{id_3\tau})v_3\right],
+\end{equation}
+with output measure $\dd\tau/(2\pi)$.
+
+\begin{proposition}[Mixed atom from constant-vector gluing]\label{prop:mixed}
+In \eqref{eq:constant-vector-source}, the coefficient of
+$e^{i(\log3-\log2)\tau}$ in the full norm multiplier is
+\begin{equation}\label{eq:mixed-atom}
+ \sqrt{c_2c_3}(1-r_2)(1-r_3)\ip{v_2}{v_3}.
+\end{equation}
+Consequently this source, together with independently added gamma,
+contact and pole terms, cannot equal the two-prime Weil form on
+$I_{5/4}$ unless $v_2\perp v_3$. In the orthogonal case its prime
+part is exactly the sum of the separate positive references.
+\end{proposition}
+\begin{proof}
+The first cross term in the squared norm is
+$\sqrt{c_2c_3}\overline{A_2(e^{id_2\tau})}
+A_3(e^{id_3\tau})\ip{v_2}{v_3}$.
+Its first nonconstant coefficient from each factor gives
+\eqref{eq:mixed-atom}. A second pair of nonnegative indices with
+$n\log3-m\log2=\log3-\log2$ would give
+$3^{n-1}=2^{m-1}$ and hence $n=m=1$. The reverse cross term cannot
+give this positive frequency with nonnegative indices, and the
+individual squared norms contain only integer multiples of $d_2$
+or $d_3$.
+
+The Fourier coefficient series of each factor is absolutely summable;
+the cross kernel is therefore a finite-variation atomic measure. Other
+mixed lengths may accumulate, but its atom at $\log(3/2)$ has the
+specified nonzero mass if the overlap is nonzero. The Weil target has
+no prime-power atom there. Its gamma and pole kernels are smooth near
+this nonzero separation, and its contact is supported at zero, so none
+can cancel the atom. Since $0<\log(3/2)<5/4$, restriction to $I_{5/4}$
+still detects it. Equality of all polarized test-function pairings
+would imply equality of their distribution kernels, a contradiction.
+A purely imaginary overlap gives an imaginary antisymmetric kernel;
+complex tests still detect it. Thus the overlap must vanish.
+\end{proof}
+
+The proposition does not apply to arbitrary coherent gluing. A joint
+operator-valued junction may have additional terms which cancel mixed
+returns as an identity. Producing and evaluating such a junction is a
+new source construction. The failed fixed-vector ansatz gives no reason
+to estimate its unwanted atoms as a small residual.
+
+\subsection{The full comparison, with no omitted contact or pole}
+Let $\mathcal P$ be any finite set containing all primes $p<e^L$.
+Equations~\eqref{eq:target} and \eqref{eq:lifted-norm} give the exact
+identity
+\begin{align}
+ Q_L[f]={}&K[E_Lf]+\sum_{p\in\mathcal P}B_{r_p,d_p}[E_Lf]
+ \notag\\
+ &+\left(w_0-\sum_{p\in\mathcal P}\kappa_{r_p,d_p}\right)\norm f^2
+ +P_L[f].
+ \label{eq:full-comparison}
+\end{align}
+Each term in the first line is independently positive. The second
+line has not been realized as part of their joint norm. Extra primes
+in $\mathcal P$ contribute only contacts on this interval, which
+cancel algebraically against the displayed subtraction. This does
+not make the subtraction an independently positive operation.
+
+Thus the dressed result arrives at the same contact and pole problem
+as the conservative prime reference. It supplies a concrete Schur
+preparation and removes the earlier undressed-state mismatch, but
+establishes no larger positivity interval. Unitary repackaging of the
+orthogonal gamma and prime outputs leaves \eqref{eq:full-comparison}
+unchanged. The next calculation must determine contact, poles and
+prime interference within one complete positive preparation.

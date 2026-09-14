@@ -2,7 +2,10 @@
 
 This collection holds separate manuscripts drawn from the
 [SUSY positivity investigations](../README.md). Working manuscripts that
-present an entire investigation remain inside that investigation.
+present an entire investigation remain inside that investigation. The new
+[Sphere and Schur sources for the localized Weil form](../investigations/inverse-bulk-realization/manuscript.pdf)
+working draft is retained with [inverse bulk realization](../investigations/inverse-bulk-realization/README.md),
+including its [dated draft snapshots](../investigations/inverse-bulk-realization/drafts/README.md).
 
 | Manuscript | Contents and status |
 |---|---|
