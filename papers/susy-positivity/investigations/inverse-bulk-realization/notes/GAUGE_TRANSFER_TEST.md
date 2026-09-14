@@ -1,5 +1,9 @@
 # Gauge transfer and the first-prime boundary test
 
+**Reading status:** This earlier note is retained. The current
+focused comparison is [sphere and Schur pairings](SPHERE_AND_SCHUR_PAIRINGS.md);
+see the [notes index](README.md) for broad versus focused material.
+
 14 September 2026. Continuation of [inverse bulk realization](ANALYSIS.md).
 The paper's direction remains a forward implication from a credible
 field-theory construction and an exact pairing identity to RH.
@@ -462,7 +466,7 @@ No claim of novelty is made for the underlying heat kernels, Poisson
 semigroup or disk spectrum. The outputs of this pass are the explicit
 comparison calculations and scoped exclusions above.
 
-The [checks](check_gauge_transfer.py) and their
-[record](gauge-transfer-checks.json) verify finite algebra underlying
+The [checks](../numerics/check_gauge_transfer.py) and their
+[record](../numerics/records/gauge-transfer-checks.json) verify finite algebra underlying
 these identities. They are not a constructive field-theory proof
 checker or a Weil positivity certificate.

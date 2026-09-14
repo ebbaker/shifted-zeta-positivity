@@ -1,6 +1,9 @@
 # Exploratory proposals and assessments
 
-Start with [inverse bulk realization](../investigations/inverse-bulk-realization/README.md)
+Start with the [bulk and defect directions overview](INVERSE_BULK_AND_DEFECT_DIRECTIONS.md)
+for the broad map of the ideas, the conditional-construction objective,
+and the distinction between the leading systems and alternatives.
+Then see [inverse bulk realization](../investigations/inverse-bulk-realization/README.md)
 for the current continuation: fit an independently positive bulk system
 exactly to the complete boundary form. The [14 September reassessment](ASSESSMENT.md)
 compares the older proposals with ground-state geometry through note 20 and
@@ -9,7 +12,8 @@ change of priority. Earlier rankings and briefs describe their dated stages.
 
 | Material | Role |
 |---|---|
-| [Inverse bulk realization](../investigations/inverse-bulk-realization/README.md) | Current direction: exact positive-bulk matching, with a rational-feedback obstruction and positive gamma-action refinement. The prime junction remains a proposal. |
+| [Bulk and defect directions overview](INVERSE_BULK_AND_DEFECT_DIRECTIONS.md) | Broad program map: motivation, admissible theories and observables, leading directions, alternatives, and criteria for a specific paper. |
+| [Inverse bulk realization](../investigations/inverse-bulk-realization/README.md) | Focused investigation of exact positive-bulk matching. Sphere and Schur quantization are the first two contenders; earlier feedback and gauge-transfer calculations remain documented. |
 | [Assessment](ASSESSMENT.md) | Earlier comparison of proposals, with a later update redirecting the next task from residual estimates to exact bulk fitting. |
 | [Topological bulk–boundary proposal](TOPOLOGICAL_BULK_BOUNDARY_POSITIVITY_20260912.md) | Initial 12 September proposal and scoped model requirements. |
 | [Superspace and cohomological pairings](SUPERSPACE_COHOMOLOGICAL_BOUNDARY_PAIRINGS_20260912.md) | Initial comparison of protected boundary-pairing mechanisms. |

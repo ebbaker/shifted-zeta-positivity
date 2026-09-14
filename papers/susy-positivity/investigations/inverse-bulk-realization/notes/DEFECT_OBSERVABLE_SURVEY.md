@@ -1,5 +1,9 @@
 # Defect observables and candidate fields for an exact Weil pairing
 
+**Reading status:** This earlier note is retained. The current
+focused comparison is [sphere and Schur pairings](SPHERE_AND_SCHUR_PAIRINGS.md);
+see the [notes index](README.md) for broad versus focused material.
+
 14 September 2026. Broad literature search and research-direction assessment.
 
 The leading new direction is **sphere quantization of protected operator
@@ -34,7 +38,7 @@ Let \(I_L=(-L/2,L/2)\), let \(F=E_Lf\) denote zero extension, and put
 \begin{split}
 Q_L[f]={}&\frac1{2\pi}\int_{\mathbb R}
 b_{1/4}(\tau^2)|\widehat F(\tau)|^2\,d\tau
-w_0\|f\|^2\\
++w_0\|f\|^2\\
 &+2\left|\int_{I_L}f(x)\cosh(x/2)\,dx\right|^2
 -2\left|\int_{I_L}f(x)\sinh(x/2)\,dx\right|^2\\
 &-2\sum_{m\log p<L}(\log p)p^{-m/2}
@@ -228,7 +232,7 @@ primes. If a proposal only generates lengths in the integer span of
 finitely many fixed lengths, unique factorization prevents it from
 producing every \(\log p\). An enlarged operator algebra or compatible
 family over prime sets would have to perform that task. This is the
-existing [charge-rank selection issue](../../brainstorm/theory-landscape-20260913/SELECTION_TESTS.md),
+existing [charge-rank selection issue](../../../brainstorm/theory-landscape-20260913/SELECTION_TESTS.md),
 not a general exclusion of these theories.
 
 ## 4. Other serious candidates
@@ -426,7 +430,7 @@ cannot remove those atoms. Therefore a candidate whose kernel is smooth
 at every separated pair cannot match once a prime is active. A smooth
 coordinate change and smooth local source weights do not fix this.
 This is the existing
-[separated-return selection test](../../brainstorm/theory-landscape-20260913/SELECTION_TESTS.md).
+[separated-return selection test](../../../brainstorm/theory-landscape-20260913/SELECTION_TESTS.md).
 
 It excludes the straightforward use of a fixed local primary on a
 homogeneous Euclidean line, under that regularity assumption. It does
@@ -567,7 +571,7 @@ companion cited by the boundary Liouville paper. This is a broad survey,
 not an exhaustive priority audit or an independent proof audit of those
 papers.
 
-Compared with the [earlier landscape](../../brainstorm/theory-landscape-20260913/REPORT.md),
+Compared with the [earlier landscape](../../../brainstorm/theory-landscape-20260913/REPORT.md),
 the substantive new emphasis is the concrete sphere/Schur operator
 algebra and positive-trace literature, with boundary Liouville as an
 exact interacting alternative. It does not restore the earlier default
@@ -579,4 +583,4 @@ The possible contribution of this project remains the independently
 derived **complete arithmetic matching identity**, and the resulting
 conditional constructive-QFT-to-RH theorem. Neither has yet been
 obtained. This keeps the recommendation aligned with the
-[manuscript's novelty assessment](../../manuscripts/finite-response-weil-positivity/EVALUATION.md).
+[manuscript's novelty assessment](../../../manuscripts/finite-response-weil-positivity/EVALUATION.md).

@@ -1,5 +1,9 @@
 # Exact bulk fitting after the semilocal comparison
 
+**Reading status:** This earlier note is retained. The current
+focused comparison is [sphere and Schur pairings](SPHERE_AND_SCHUR_PAIRINGS.md);
+see the [notes index](README.md) for broad versus focused material.
+
 14 September 2026. Research continuation; all-length positivity remains open.
 
 Latest calculations: [gauge transfer and the first-prime boundary test](GAUGE_TRANSFER_TEST.md).
@@ -36,7 +40,7 @@ Equation (1) requires a nonnegative joint energy, not just a positive
 Hessian in an auxiliary variable under an external drive. For example,
 \(w^2-2fw\) is coercive in \(w\) but has minimum \(-f^2\). The distinction
 is already explicit in the
-[collective-feedback construction](../arithmetic-ground-state-geometry/notes/17_COLLECTIVE_FEEDBACK_AND_COMPACT_DEFECT.md).
+[collective-feedback construction](../../arithmetic-ground-state-geometry/notes/17_COLLECTIVE_FEEDBACK_AND_COMPACT_DEFECT.md).
 An interacting quantum model with an independently established positive
 physical Hilbert space can supply a quadratic pairing through a linear
 state preparation. If \(\Phi(f)=\mathcal O(f)\Omega\) is well defined,
@@ -297,7 +301,7 @@ This is the first complete fitting problem. The pieces to identify are:
 The existing independently positive prime channels have compulsory
 positive contacts. Subtracting those contacts from another component does
 not by itself make a positive bulk model. More strongly, the
-[candidate failures](../../brainstorm/candidate-bulk-theories/FAILURES.md)
+[candidate failures](../../../brainstorm/candidate-bulk-theories/FAILURES.md)
 exhibit a negative odd input for the gamma-plus-pole target with the prime
 term deleted at \(L=1\). Thus a proposed positive family cannot require
 its zero-prime member to realize that same fixed prime-deleted target.
@@ -497,7 +501,7 @@ gamma splitting or a completed arithmetic coupling.
 ## 5. A common-field model family to test
 
 The independently positive return graph in
-[note 16](../arithmetic-ground-state-geometry/notes/16_PRIME_RETURN_CHANNELS.md)
+[note 16](../../arithmetic-ground-state-geometry/notes/16_PRIME_RETURN_CHANNELS.md)
 has a sum of edge energies and conservative vertex conditions. It
 produces the required geometric repetition mechanism, but an independent
 output adds a compulsory positive contact.

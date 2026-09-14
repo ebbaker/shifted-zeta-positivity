@@ -1,63 +1,66 @@
 # Inverse bulk realization of the localized Weil form
 
-14 September 2026. Continuation after the canonical semilocal pairing
-comparison and the user's clarification of the research objective.
+14 September 2026. Fit the **complete** localized Weil pairing to an
+independently positive field-theoretic or observable-sector norm.
+The intended contribution is an exact matching theorem, potentially
+conditional on construction of a credible specified theory. An already
+completed construction is not an eligibility requirement.
 
-The objective is to construct an independently positive bulk system and
-fit its complete boundary pairing to the localized Weil form. The present
-task is exact model selection and matching. Estimating successively more
-complicated errors in a fixed positive completion is not the continuation
-strategy.
+Start with the [broad program overview](../../brainstorm/INVERSE_BULK_AND_DEFECT_DIRECTIONS.md)
+for the ideas and alternatives. The
+[current focused investigation](notes/SPHERE_AND_SCHUR_PAIRINGS.md)
+tests sphere and Schur quantization using named boundary and line-operator
+sectors. No system has yet supplied the full Weil pairing, and there is
+no draft paper for a selected system in this folder.
 
-The paper's scope is a forward conditional reduction: a constructively
-credible field theory, together with an exact boundary matching theorem,
-would imply RH. A Yang–Mills-to-RH mapping is a proposed case to investigate.
-The speculative reverse RH-to-Yang–Mills direction is outside this paper.
+## Reading map: broad material and focused calculations
 
-[New survey: defect observables and candidate field theories](DEFECT_OBSERVABLE_SURVEY.md)
-compares protected sphere/Schur operator algebras, boundary Liouville,
-integrable theories, gauge networks and free-field arithmetic controls.
-The main new lead is an explicit operator algebra with a physically
-positive pairing and identities that constrain the arithmetic source.
-An established construction is not required: a credible theory with an
-open construction problem is eligible for a conditional matching theorem.
-No complete Weil identity has yet been obtained.
+| Document | Scope | Role |
+|---|---|---|
+| [Program overview in brainstorm](../../brainstorm/INVERSE_BULK_AND_DEFECT_DIRECTIONS.md) | Broad | Motivation, the conditional-construction goal, broadened boundary concepts, candidate families, and criteria for a specific paper. |
+| [Defect-observable survey](notes/DEFECT_OBSERVABLE_SURVEY.md) | Broad | Literature comparison and alternatives, including Liouville, integrable defects, gauge networks, and arithmetic/free-field controls. |
+| [Foundational analysis](notes/ANALYSIS.md) | General framework, with specific model tests | Full matching target, physical positivity, rational-feedback obstruction, positive gamma refinement, and the original junction proposal. |
+| [Sphere and Schur pairings](notes/SPHERE_AND_SCHUR_PAIRINGS.md) | Focused; current | Gaussian boundary gamma data, interacting rank-one norms, conformal Wilson pairing, Schur local-factor and common-state tests, and the next source choices. |
+| [Gauge-transfer test](notes/GAUGE_TRANSFER_TEST.md) | Focused; earlier | Winding versus transfer, a positive disk model, and two first-prime preparations with exact mismatches. |
+| [Notes index](notes/README.md) | Navigation | Reading order and the status of each retained note. |
+| [Checks and records](numerics/README.md) | Supporting calculations | Small reproducible algebra programs and their explicitly scoped results. |
 
-[Latest calculation: gauge transfer and the first-prime boundary test](GAUGE_TRANSFER_TEST.md)
-compares Wilson-loop winding with transfer evolution, constructs a positive
-disk model for the gamma masses and prime returns, and computes two
-explicit preparations. One fails by a cusp at the prime delay; a coherent
-repair removes it but leaves the independent contact problem. These are
-scoped model tests, with no full Weil matching identity.
+The latest note identifies the exact quarter-shift gamma factor in a
+real boundary module and the local Euler factor in a Schur shift identity.
+Their actual positive pairings differ from the target under the tested
+source prescriptions. The most useful new tool is the Schur RG description
+of the full pairing through a common state. It fixes interference and
+normalization together, and motivates a more specific source calculation.
+These are preliminary model-selection results, not a new RH reduction.
 
-[Analysis](ANALYSIS.md) contains:
+## Working direction
 
-- a scoped obstruction to exact constant subtraction by finitely many
-  rational feedback channels built from one positive reference operator;
-- an exact positive-action refinement of the gamma tower into integer
-  branches, using the classical digamma multiplication formula;
-- a proposed common-field junction construction, with explicit first-prime,
-  repeated-prime and two-prime matching requirements.
+Continue with sphere boundary/vortex modules and Schur RG or interface
+preparations. A failed identity changes the choice of source or model;
+it does not initiate progressively more complicated residual estimates.
+Retain the other systems as alternatives. Specialize a draft paper only
+after a concrete system and preliminary matching results justify it.
+Only the forward construction-to-RH direction belongs to this program.
 
-The obstruction has a written algebraic proof. The gamma refinement is an
-exact reindexing of a known positive tower, not a claim of novelty for the
-multiplication formula. No junction satisfying the full Weil identity has
-yet been constructed, and positivity at arbitrary support remains open.
+## Reproduction and preservation
 
-The [exact checks](check_matching.py) verify the finite algebra underlying
-the refinement, its composition, and the elementary feedback identity.
-The [record](checks.json) is not an analytical proof certificate.
+Run from this directory:
 
-Run from this folder:
+```sh
+python3 numerics/check_matching.py
+python3 numerics/check_gauge_transfer.py
+python3 numerics/check_sphere_schur.py
+```
 
-    python3 check_matching.py
-    python3 check_gauge_transfer.py
+The programs print small records and do not overwrite the preserved
+results in `numerics/records/`. The three original research notes now
+live in `notes/`, with their filenames retained and navigation repaired.
+The earlier check programs and records are preserved unchanged; the
+generic `checks.json` is now `numerics/records/matching-checks.json`.
+The new note and check document the current investigation separately.
+Follow the repository's [large-file policy](../../../../LARGE_FILES.md).
 
-Related material:
-
-- [Shared framework](../../PROGRAM_OVERVIEW.md)
-- [Ground-state investigation](../arithmetic-ground-state-geometry/README.md)
-- [Prime return channels](../arithmetic-ground-state-geometry/notes/16_PRIME_RETURN_CHANNELS.md)
-- [Collective feedback](../arithmetic-ground-state-geometry/notes/17_COLLECTIVE_FEEDBACK_AND_COMPACT_DEFECT.md)
-- [Earlier brainstorm assessment and revised priority](../../brainstorm/ASSESSMENT.md)
-- [Finite-response novelty assessment](../../manuscripts/finite-response-weil-positivity/EVALUATION.md)
+Related material: [shared framework](../../PROGRAM_OVERVIEW.md),
+[ground-state geometry](../arithmetic-ground-state-geometry/README.md),
+[earlier assessment](../../brainstorm/ASSESSMENT.md), and
+[finite-response novelty assessment](../../manuscripts/finite-response-weil-positivity/EVALUATION.md).
