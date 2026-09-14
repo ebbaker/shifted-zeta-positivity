@@ -65,9 +65,9 @@ areas:
 - **[SUSY positivity](papers/susy-positivity/README.md)** is the separate
   research program seeking a structural explanation of Weil positivity.
   Begin with its [background](papers/susy-positivity/background.pdf) and
-  [research overview](papers/susy-positivity/PROGRAM_OVERVIEW.md). Its current
-  [positive-factorizations attempt](papers/susy-positivity/attempts/positive-factorizations/README.md)
-  contains the manuscript and its supporting investigations.
+  [research overview](papers/susy-positivity/PROGRAM_OVERVIEW.md). The
+  [program index](papers/susy-positivity/README.md) lists its three investigations,
+  standalone finite-response note, and current research assessment.
 - **[Miscellaneous papers](papers/misc/README.md)** currently holds
   [rh-detector](papers/misc/rh-detector/README.md), the earlier work on a
   velocity-residual detector and the De Bruijn–Newman flow, predating the
@@ -80,7 +80,7 @@ the working normalizations, verification evidence, and open review.
 
 | Directory | What it holds |
 |---|---|
-| [`papers/`](papers/README.md) | Project groups `shifted-zeta/`, `susy-positivity/`, and `misc/`, with eight manuscript folders in total. Each paper retains its sources, PDF, status, and reproduction materials. Large Weil-depth and storage-depth data stay outside git. |
+| [`papers/`](papers/README.md) | Project groups `shifted-zeta/`, `susy-positivity/`, and `misc/`, with eleven manuscript folders in total. Each paper retains its sources, PDF, status, and reproduction materials. Large Weil-depth and storage-depth data stay outside git. |
 | `blueprint/` | Statement inventory per released paper: every definition, lemma and theorem stated self-contained, with its dependency graph, proof status, human-verification status and formalization feasibility. The entry point for formalizers. |
 | `statements/` | The same inventory as machine-readable YAML (`ledger.yaml`). |
 | `verification/` | What has been checked, how, by whom; referee-round records; independent recomputation scripts; checklists for volunteers. |

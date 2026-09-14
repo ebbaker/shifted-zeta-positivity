@@ -1,5 +1,7 @@
 # Quantum theory landscape for the SUSY positivity program
 
+This is the 13 September survey. Its proposed direction was developed in [arithmetic ground-state geometry](../../investigations/arithmetic-ground-state-geometry/README.md) and subsequently reassessed in the [14 September assessment](../ASSESSMENT.md).
+
 Start with the [research report](REPORT.md). It compares eleven families and narrows the next construction to arithmetic boundary/defect operations with dynamical supersymmetric ground-state geometry. No existing named theory examined here supplies the full Weil norm identity.
 
 The two concrete controls are the finite-prime Morse SUSY model, which gives exact Euler–gamma transition amplitudes, and the interacting \(\mathbb{CP}^1\) model, which tests non-Abelian vacuum geometry. The report explains why neither alone completes the program and specifies analytical criteria for a useful extension.

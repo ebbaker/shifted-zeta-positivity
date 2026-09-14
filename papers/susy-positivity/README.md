@@ -1,62 +1,123 @@
 # SUSY positivity research program
 
-The objective is to explain the nonnegativity of the full central Weil
-quadratic form on every smooth compactly supported input, at arbitrary
-support length. The program seeks independently defined positive structures
-and exact arithmetic identities that would establish this target. The
-shifted transfer family supplies a related contraction route.
+This program seeks an independently defined positive structure whose pairing
+is the full central Weil quadratic form on every smooth compactly supported
+input, at arbitrary support length. The shifted transfer family supplies a
+related contraction route. **The all-length sign problem remains open; no RH
+proof is claimed.**
 
-Start with the **[mathematical background PDF](background.pdf)** and the
-**[program overview](PROGRAM_OVERVIEW.md)**. They explain the common goals,
-normalization, domains, and distinction between established identities and
-proposed constructions. The [continuation note](brainstorm/continuation-notes/CONTINUATION_BULK_BOUNDARY_SUPERSPACE_20260912.md)
-records the latest discussion of bulk–boundary models and possible superspace
-descriptions.
+## Start here
 
-The full arithmetic bulk completion remains open. The concrete positive
-auxiliary-field construction for the **gamma kinetic term** is established
-within its stated scope. It does not include
-the remaining normalization, pole, and prime contributions. No all-length
-positivity theorem or RH proof is claimed.
+- [Mathematical background](background.pdf) and [program overview](PROGRAM_OVERVIEW.md): shared normalization, domains, goals, and the original research framework.
+- [Current research assessment, 14 September 2026](brainstorm/ASSESSMENT.md): reassesses the earlier proposals after the ground-state investigation and finite-response novelty review. It recommends testing semilocal arithmetic projections and targeted arithmetic response estimates; these are proposed directions.
+- [Arithmetic ground-state geometry](investigations/arithmetic-ground-state-geometry/README.md): the investigation through note 20, including the finite-rank reduction and remaining arithmetic sign problem.
+- [Boundary corrections and finite responses](manuscripts/finite-response-weil-positivity/README.md): a separate technical note with detailed derivations. Submission is deferred pending further work and reassessment; human mathematical review and novelty assessment remain necessary.
 
-## Current investigations
+## Folder map
+
+```text
+susy-positivity/
+  README.md
+  PROGRAM_OVERVIEW.md
+  background.tex                 # standalone wrapper and bibliography
+  background_section.tex         # authoritative substantive background
+  background.pdf                 # compiled reading copy
+  brainstorm/                    # proposals, surveys, continuation context
+    ASSESSMENT.md                # latest research-direction assessment
+    candidate-bulk-theories/
+    continuation-notes/
+    theory-landscape-20260913/
+  investigations/                # approach-specific research packages
+    positive-factorizations/
+    topological-susy-bulk/
+    arithmetic-ground-state-geometry/
+  manuscripts/                   # separate manuscripts drawn from the research
+    finite-response-weil-positivity/
+  archive/                       # historical reorganization record and path guide
+  validation/                    # structure checker and historical relocation checks
+```
+
+The [brainstorm index](brainstorm/README.md) explains the dated proposals and
+later reassessment. The [manuscript index](manuscripts/README.md) distinguishes
+standalone notes from manuscripts retained within investigations.
+
+## Investigations and current scope
 
 | Investigation | Scope and status |
 |---|---|
-| [Positive factorizations](investigations/positive-factorizations/README.md) · [manuscript PDF](investigations/positive-factorizations/manuscript.pdf) · [status](investigations/positive-factorizations/STATUS.md) | Working manuscript v0.2: short-window full factors, the gamma kinetic tower, restricted odd-sector factors, obstructions to specified models, and a certified first-prime stabilization example. Later [round-4 reports](investigations/positive-factorizations/archive/progress-reports/REVIEW_round4_20260911.md) extend the odd factor across shifts and isolate the remaining even scalar. A complete even factor, joint prime construction, and arbitrary-length mechanism remain open. Independent specialist and priority review remain outstanding. |
-| [Topological SUSY bulk](investigations/topological-susy-bulk/README.md) · [manuscript PDF](investigations/topological-susy-bulk/manuscript.pdf) · [status](investigations/topological-susy-bulk/STATUS.md) | Positive relative gamma complex, arithmetic loop responses, and scoped correction obstructions. Later quantum notes give a physical Fock realization and stronger finite-block restrictions; the complete arithmetic norm remains open. |
-| [Arithmetic ground-state geometry](investigations/arithmetic-ground-state-geometry/README.md) · [manuscript PDF](investigations/arithmetic-ground-state-geometry/manuscript.pdf) · [research report](investigations/arithmetic-ground-state-geometry/REPORT.md) · [status](investigations/arithmetic-ground-state-geometry/STATUS.md) | Four-supercharge cylinder and interacting prime theories, exact physical Euler-factor dependence, and scoped metric, period and ground-transform obstructions. Develops the [theory landscape](brainstorm/theory-landscape-20260913/REPORT.md); the physical source normalization, contact, poles and complete Weil pairing remain open. |
+| [Positive factorizations](investigations/positive-factorizations/README.md) · [PDF](investigations/positive-factorizations/manuscript.pdf) · [status](investigations/positive-factorizations/STATUS.md) | Manuscript v0.2: short-window factors, gamma kinetic tower, restricted odd-sector factors, scoped obstructions, and a certified first-prime stabilization example. Separate round-4 reports extend the odd factor across shifts and isolate the remaining even scalar. A complete even factor, joint prime construction, and arbitrary-length mechanism remain open. |
+| [Topological SUSY bulk](investigations/topological-susy-bulk/README.md) · [PDF](investigations/topological-susy-bulk/manuscript.pdf) · [status](investigations/topological-susy-bulk/STATUS.md) | Manuscript through 12 September: positive relative gamma complex, arithmetic loop responses, and correction obstructions. Separate 13 September notes construct a physical Fock realization and superspace boundary action and study finite-block restrictions. The full arithmetic norm remains open. |
+| [Arithmetic ground-state geometry](investigations/arithmetic-ground-state-geometry/README.md) · [PDF](investigations/arithmetic-ground-state-geometry/manuscript.pdf) · [status](investigations/arithmetic-ground-state-geometry/STATUS.md) | Integrated manuscript through note 20: interacting local factors, physical caps, closed gamma source, pole gluing, prime returns, and a positive source equal to the full Weil form plus an explicit finite-rank positive error. The remaining finite response matrix is not proved positive. Includes the noncompact gamma boundary correction and residual estimates; an all-support physical source law remains open. |
 
-These investigations are approaches toward the program's goals. Their local results
-and later reports retain their length, shift, and input restrictions; they
-do not settle the shared global target.
+The positive gamma kinetic construction is established within its stated
+scope. Later constructions retain the normalization, poles, and primes in an
+explicit signed remainder or finite-rank error; positivity of the auxiliary
+source does not remove that error. Local results retain their support, shift,
+and input restrictions. Internal checks do not replace specialist proof review.
 
-## Organization and future investigations
+## Standalone manuscript
 
-The program root holds shared background, the roadmap, and continuation
-context. `background_section.tex` is the authoritative substantive TeX
-section; `background.tex` supplies the standalone wrapper and bibliography
-and inputs that section. `background.pdf` is its compiled reading copy.
+[Boundary corrections and finite responses for the localized Weil form](manuscripts/finite-response-weil-positivity/README.md)
+contains a [condensed note](manuscripts/finite-response-weil-positivity/manuscript.pdf),
+[detailed derivations](manuscripts/finite-response-weil-positivity/derivations.pdf),
+and its own review, build, provenance, and dated draft records. It develops
+boundary corrections, truncation bounds, and finite-response enclosures from
+the ground-state investigation. Its matrix conjecture remains unproved; the
+numerical example is not a positivity certificate or demonstrated computational
+advantage. See the [current evaluation](manuscripts/finite-response-weil-positivity/EVALUATION.md)
+for the deferred publication status.
 
-Place each future approach in `investigations/<descriptive-name>/`, alongside
-`positive-factorizations/`. Give it a README stating the proposed mechanism,
-scope, status, and relation to the shared framework. Keep its manuscript,
-checks, manifests, progress reports, and historical drafts inside that
-investigation. Link to shared background rather than keeping another authoritative
-copy. Add a row above when an investigation is ready to be listed; distinguish
-proved results, numerical evidence, and proposed constructions.
+This folder moved from `papers/finite-response-weil-positivity/` to
+`papers/susy-positivity/manuscripts/finite-response-weil-positivity/`.
+The [review navigation guide](manuscripts/finite-response-weil-positivity/reviews/README.md)
+maps preserved reviews to the drafts they assessed. Their old paths and line
+numbers are historical references, not links to the current revision.
+
+## Working conventions
+
+Keep shared background at the program root. New approaches belong in
+`investigations/<descriptive-name>/`, with a README stating their mechanism,
+scope, status, and relation to the shared framework. Keep their working
+manuscripts, notes, checks, and histories together. A separate manuscript
+belongs in `manuscripts/<descriptive-name>/`, with an explicit source record,
+review status, build instructions, and dated drafts. Exploratory proposals
+and comparative assessments belong in `brainstorm/`.
+
+Update this index when adding an investigation or manuscript. Distinguish
+proved results, diagnostics, and proposals. Link to the shared background;
+retain historical validation and snapshots under their original dates, and
+refresh current file inventories explicitly after edits. The
+[archive guide](archive/README.md) maps earlier layouts without rewriting
+historical evidence. Follow the repository [large-file policy](../../LARGE_FILES.md).
 
 ## Build and verification
 
-From this directory, using a standard TeX distribution:
+Run the structure check from this directory:
+
+```sh
+python3 validation/check_structure.py
+python3 investigations/arithmetic-ground-state-geometry/validation/check_package.py --replay
+python3 investigations/topological-susy-bulk/validation/check_package.py
+```
+
+The first checks current navigation, TeX dependencies, and selected current
+file records while distinguishing historical links. The investigation checks
+verify their complete package manifests; the ground-state replay also
+reproduces 59 labelled exact-algebra checks. None is an analytical proof checker.
+
+Build the shared background with a standard TeX distribution:
 
 ```sh
 latexmk -pdf -interaction=nonstopmode -halt-on-error background.tex
-(cd investigations/positive-factorizations && latexmk -pdf -interaction=nonstopmode -halt-on-error manuscript.tex)
 ```
 
-The [positive-factorizations README](investigations/positive-factorizations/README.md) gives a
-replay command that preserves historical diagnostics. The
-[reorganization record](archive/REORGANIZATION_20260912.md) records the old-to-new
-mapping, fresh verification, and provenance; current hashes and historical
-validation are identified separately.
+Use each package's build or replay guide for its outputs:
+
+- [Positive factorizations](investigations/positive-factorizations/README.md): manuscript build and replay that preserves historical diagnostics.
+- [Topological SUSY bulk](investigations/topological-susy-bulk/README.md): isolated build and numerical replay.
+- [Arithmetic ground-state geometry](investigations/arithmetic-ground-state-geometry/BUILD.md): integrated manuscript build and package refresh procedure.
+- [Finite-response note](manuscripts/finite-response-weil-positivity/BUILD.md): both document builds and review checks.
+- [Candidate bulk theories](brainstorm/candidate-bulk-theories/REPRODUCE.md): model diagnostics and earlier certificate replay.
+
+The [12 September verification record](validation/reorganization-20260912/VERIFICATION.json)
+describes that reorganization, not a fresh build of later revisions.

@@ -33,7 +33,7 @@ those results remain separate from manuscript v0.2.
 - `archive/progress-reports/`: round-4 derivations, review, and executable reproduction notes.
 - `archive/provenance/`: original manifest retained as a historical record.
 - `manifest.json`: current file hashes and separately labelled historical validation.
-- `../../REORGANIZATION_20260912.md`: fresh relocation and build verification.
+- `../../archive/REORGANIZATION_20260912.md`: fresh relocation and build verification.
 
 ## Build
 

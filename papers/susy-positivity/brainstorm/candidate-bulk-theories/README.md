@@ -6,6 +6,10 @@ The best candidate found is a **relative auxiliary Hilbert complex with coherent
 
 No model here realizes the gamma normalization, both poles, and all prime delays as one positive norm. The exact full target is also organized as a difference of two independently positive channel norms; the required comparison between them remains unproved. All conclusions are separated below by status. No positivity of the target, zero data, or spectral square root of the target was used.
 
+For the subsequent investigation stages and current priorities, see the
+[brainstorm index](../README.md) and [14 September reassessment](../ASSESSMENT.md).
+The rankings below belong to this initial pass.
+
 ## Comparison and ranking
 
 | Rank | Candidate and independently positive object | What was established in this pass | Precise obstacle |

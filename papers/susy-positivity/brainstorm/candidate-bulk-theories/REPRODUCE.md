@@ -28,7 +28,7 @@ All seeds, coefficients, lengths, quadrature orders and mass cutoffs are printed
 From the repository root, choose a directory that does not yet exist:
 
 ```bash
-python3 papers/susy-positivity/attempts/positive-factorizations/checks/replay.py \
+python3 papers/susy-positivity/investigations/positive-factorizations/checks/replay.py \
   --output-dir /tmp/susy-bulk-prior-replay
 ```
 
@@ -36,7 +36,7 @@ This copies the historical checkers to a temporary directory, runs them there, e
 
 ## Small records and integrity
 
-`results/source-record.json` identifies the repository inputs and the primary PDF versions inspected. `results/package-record.json` lists byte sizes and SHA-256 hashes of the package files other than itself. These hashes identify the recorded bytes, not mathematical correctness or bit-for-bit numerical portability across libraries. The new model JSON is a small diagnostic record; no matrix archive is needed to run any check.
+`results/source-record.json` identifies the repository inputs and the primary PDF versions inspected. `results/package-record.json` retains the original byte sizes and SHA-256 hashes under `files`, and the original verification under its recorded date. Its `current_files` inventory records the files after the 14 September navigation repairs, excluding the record itself. These hashes identify the recorded bytes, not mathematical correctness or bit-for-bit numerical portability across libraries. The new model JSON is a small diagnostic record; no matrix archive is needed to run any check.
 
 No data consumer depends on an external file in this pass. The primary PDFs were temporary source-reading material and are cited by URL, version/page, and hash; they are not third-party material committed to the repository.
 

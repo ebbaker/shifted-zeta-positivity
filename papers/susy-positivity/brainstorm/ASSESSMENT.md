@@ -30,7 +30,7 @@ where the high block H is independently coercive. The physical cap remains an is
 
 The smooth-density negative control is an especially useful discriminator: retaining the archimedean terms while replacing the prime measure by its leading density gives a negative target. A proposed positivity argument must use a property not shared by this control. It need not uniquely characterize primes among every possible positive model, but it cannot apply unchanged to a known negative example.
 
-Sources: [ground-state continuation](/Users/ebbaker/Documents/shifted-zeta-positivity/papers/susy-positivity/investigations/arithmetic-ground-state-geometry/CONTINUATION.md), [current evaluation](/Users/ebbaker/Documents/shifted-zeta-positivity/papers/susy-positivity/manuscripts/finite-response-weil-positivity/EVALUATION.md).
+Sources: [ground-state continuation](../investigations/arithmetic-ground-state-geometry/CONTINUATION.md), [current evaluation](../manuscripts/finite-response-weil-positivity/EVALUATION.md).
 
 **2. Revised disposition of the brainstorm families**
 
@@ -48,7 +48,7 @@ Sources: [ground-state continuation](/Users/ebbaker/Documents/shifted-zeta-posit
 | Tate/p-adic fields and Bost–Connes | Keep as sources of arithmetic operations. Factors, partition functions and phase derivatives remain different observables from Q. | A specific coupling and ordinary pairing that resolves an identified part of the sign problem. |
 | Canonical systems/passive transfer | A valid reserve route, but a switch of language alone does not improve the current situation. | Positive Hamiltonian or energy data constructed independently of the unresolved inner-function/contractivity property. |
 
-The decisive negative results concern specified ansatz classes. They do not exclude every interacting theory, projection construction, or physical gluing law. The [candidate failures](/Users/ebbaker/Documents/shifted-zeta-positivity/papers/susy-positivity/brainstorm/candidate-bulk-theories/FAILURES.md) and [selection tests](/Users/ebbaker/Documents/shifted-zeta-positivity/papers/susy-positivity/brainstorm/theory-landscape-20260913/SELECTION_TESTS.md) give their assumptions.
+The decisive negative results concern specified ansatz classes. They do not exclude every interacting theory, projection construction, or physical gluing law. The [candidate failures](candidate-bulk-theories/FAILURES.md) and [selection tests](theory-landscape-20260913/SELECTION_TESTS.md) give their assumptions.
 
 **3. First structural direction: arithmetic projections with a computed remainder**
 

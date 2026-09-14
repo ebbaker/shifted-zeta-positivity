@@ -6,21 +6,25 @@ source, PDF, status record, and associated code or numerical supplement.
 | Folder | Role | Start here |
 |---|---|---|
 | [`shifted-zeta/`](shifted-zeta/README.md) | The six-paper program around Suzuki's shifted screw functions, inverse spectral systems, and finite-horizon positivity. | The project README explains the papers' relationships and reading order. |
-| [`susy-positivity/`](susy-positivity/README.md) | The program seeking a structural explanation of Weil positivity, with individual approaches under `attempts/`. | [Background](susy-positivity/background.pdf); [program overview](susy-positivity/PROGRAM_OVERVIEW.md); [positive-factorizations attempt](susy-positivity/attempts/positive-factorizations/README.md) and [status](susy-positivity/attempts/positive-factorizations/STATUS.md). |
+| [`susy-positivity/`](susy-positivity/README.md) | The program seeking a structural explanation of Weil positivity, with three approaches under `investigations/` and a standalone note under `manuscripts/`. | [Background](susy-positivity/background.pdf); [program overview](susy-positivity/PROGRAM_OVERVIEW.md); [positive-factorizations attempt](susy-positivity/investigations/positive-factorizations/README.md) and [status](susy-positivity/investigations/positive-factorizations/STATUS.md). |
 | [`misc/`](misc/README.md) | Separate papers outside those two programs; currently the earlier `rh-detector` draft. | [Miscellaneous papers](misc/README.md). |
 
 ## Status
 
-As of 11 September 2026, there are eight manuscript folders. Only
+As of 14 September 2026, there are eleven manuscript folders: six shifted-zeta
+papers, three SUSY investigations, one standalone SUSY note, and rh-detector. Only
 [`first-slab-positivity`](shifted-zeta/first-slab-positivity/README.md) is at
 release stage (preprint v1.0), intended for the planned repository `v1.0` tag.
-No tag has been created and no DOI exists yet. The other seven folders are
+No tag has been created and no DOI exists yet. The other ten folders are
 working drafts; read each paper's `STATUS.md` (or `VERIFICATION_STATUS.md`
 for the first-slab preprint) before citing it. This reorganization changes neither manuscript versions nor review status.
 
-The SUSY program background and continuation note are at its root. Round-4
+The SUSY program background is at its root; proposals and continuation notes
+are under `brainstorm/`. Its [current index](susy-positivity/README.md) includes
+the latest research assessment and the deferred publication status of the
+finite-response note. Round-4
 reports accompany the positive-factorizations attempt in
-`susy-positivity/attempts/positive-factorizations/archive/progress-reports/`;
+`susy-positivity/investigations/positive-factorizations/archive/progress-reports/`;
 they have not been incorporated into manuscript v0.2.
 
 ## Layout and older paths
@@ -28,8 +32,11 @@ they have not been incorporated into manuscript v0.2.
 The six shifted-zeta folders moved from `papers/<slug>/` to
 `papers/shifted-zeta/<slug>/`; `papers/rh-detector/` moved to
 `papers/misc/rh-detector/`. `papers/susy-positivity/` is now a program root;
-its manuscript and support moved into `attempts/positive-factorizations/`.
-See its [move and validation record](susy-positivity/REORGANIZATION_20260912.md). Older
+its manuscript and support moved into `investigations/positive-factorizations/`.
+The standalone `papers/finite-response-weil-positivity/` package moved to
+`susy-positivity/manuscripts/finite-response-weil-positivity/`.
+See the [current path guide](susy-positivity/archive/README.md) and its historical
+[move and validation record](susy-positivity/archive/REORGANIZATION_20260912.md). Older
 manuscripts, archived drafts, and review records retain their original path
 references: apply this mapping when reading them in the current checkout,
 or use their original commit for an exact historical view.

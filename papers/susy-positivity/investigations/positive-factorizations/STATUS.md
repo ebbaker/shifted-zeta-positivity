@@ -26,7 +26,7 @@ Validation records are in `checks/round1`, `checks/round2`, and `checks/round3`.
 The first two diagnostic JSON files are preserved historical outputs; the
 third records the original round-3 environment. All three are historical
 outputs. `manifest.json` now separates those historical checks from current
-file hashes and links the [fresh reorganization verification](../../REORGANIZATION_20260912.md). A successful checker does not independently
+file hashes and links the [fresh reorganization verification](../../archive/REORGANIZATION_20260912.md). A successful checker does not independently
 validate the analytic reduction that supplies its inequalities.
 
 AI assistance was used for derivation, coding, verification, and writing.
