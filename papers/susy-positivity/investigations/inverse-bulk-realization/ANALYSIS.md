@@ -2,6 +2,11 @@
 
 14 September 2026. Research continuation; all-length positivity remains open.
 
+Latest calculations: [gauge transfer and the first-prime boundary test](GAUGE_TRANSFER_TEST.md).
+These test a constructible gauge-theory control, realize the gamma masses
+and geometric returns in one positive disk model, and compute two
+first-prime preparations whose complete pairings fail for explicit reasons.
+
 ## 1. The intended direction
 
 The problem is to find a bulk model \(M\), a trace or preparation map, and
@@ -32,9 +37,15 @@ Hessian in an auxiliary variable under an external drive. For example,
 \(w^2-2fw\) is coercive in \(w\) but has minimum \(-f^2\). The distinction
 is already explicit in the
 [collective-feedback construction](../arithmetic-ground-state-geometry/notes/17_COLLECTIVE_FEEDBACK_AND_COMPACT_DEFECT.md).
-An interacting quantum model can still give a quadratic pairing through
-an observable linear in \(f\). A nonlinear classical minimum requires a
-separate argument that its complete boundary dependence is quadratic.
+An interacting quantum model with an independently established positive
+physical Hilbert space can supply a quadratic pairing through a linear
+state preparation. If \(\Phi(f)=\mathcal O(f)\Omega\) is well defined,
+then \(B(f,g)=\langle\Phi(f),\Phi(g)\rangle\) has
+\(B(f,f)=\|\mathcal O(f)\Omega\|^2\geq0\). The operator
+\(\mathcal O(f)\) itself need not be positive. The physical adjoint,
+finite-norm domain and exact identity with \(Q_L\) must be established.
+A nonlinear classical minimum requires a separate argument that its
+complete boundary dependence is quadratic.
 
 The previous canonical semilocal comparison is useful as a model
 diagnostic: its metric and projection produce an independently positive
@@ -43,6 +54,174 @@ localized Weil form. Decomposing the difference tells us what a candidate
 does. It does not oblige us to keep the candidate and estimate that
 difference. The next question is which bulk operation could supply the
 missing identity.
+
+## 1a. An intermediate target: reduction to a construction problem
+
+The exact matching theorem can be valuable before the proposed field
+theory has been rigorously constructed. The next milestone may therefore
+be a specified model \(M\), a specified boundary insertion, and a theorem
+that every realization satisfying explicitly stated construction
+hypotheses has
+
+\[
+B_{M,L}(f,g)=Q_L(f,g)
+\qquad
+(f,g\in C_c^\infty(I_L),\ L>0).
+\]
+
+Here \(Q_L(f,g)\) denotes the polarization of (3). If the construction
+hypotheses supply a positive physical Hilbert space and the matching
+observable is an ordinary state pairing, the implication is
+
+\[
+\text{construct }M\text{ with the specified observable}
+\quad\Longrightarrow\quad Q_L\geq0\text{ for every }L
+\quad\Longrightarrow\quad\mathrm{RH}.
+\]
+
+The final implication is the established Weil positivity criterion;
+see the shared framework and
+[Connes–Consani–Marcolli](https://arxiv.org/abs/math/0703392).
+The paper pursues the forward implication from a constructively credible
+field theory and its exact boundary matching identity to RH. A proposed
+Yang–Mills-to-RH reduction is one possible instance. Reverse RH-to-Yang–Mills
+implications and equivalence claims are outside the paper's scope.
+
+For a Euclidean construction, one possible formulation uses a preparation
+\(A_L(f)\) supported at positive Euclidean time and the antilinear
+reflection \(\Theta\):
+
+\[
+B_{M,L}(f,g)
+=\big\langle(\Theta A_L(f))A_L(g)\big\rangle_M.
+\]
+
+Reflection positivity makes the diagonal nonnegative. Under the
+appropriate full hypotheses, Osterwalder–Schrader reconstruction supplies
+the positive Hilbert space and quantum theory
+([1975 reconstruction theorem](https://doi.org/10.1007/BF01608978)).
+The arithmetic coordinate \(x\) is not automatically Euclidean time;
+the preparation and reflection must be defined. A graph or other
+nonrelativistic model may instead use a direct Hamiltonian construction;
+the full relativistic reconstruction theorem is not automatically
+applicable to those settings.
+
+The reduction would have mathematical content only when the model's
+fields, action or Hamiltonian, couplings, adjoint/reflection, observable,
+regularization and normalization are specified independently of an
+assumed positive Weil kernel. Prime data may enter those definitions.
+The complete boundary identity must then be derived from that dynamics.
+Declaring the desired Weil distribution to be a covariance and asking
+whether it is positive simply repeats the original criterion.
+
+A conditional matching theorem must identify its hypotheses precisely:
+for example, existence of a continuum limit, domain control of the
+insertion, a boundary Ward identity, and the conditions that uniquely
+determine its correlation function. Matching a formal perturbation
+series alone does not establish the nonperturbative identity.
+At present neither this model nor such a matching theorem has been
+constructed; this is the intermediate research target.
+
+There is also a narrower sufficient route. If independently positive
+regulated models supply
+
+\[
+B_{\Lambda,L}(f,f)\geq0,\qquad
+\lim_{\Lambda\to\infty}B_{\Lambda,L}(f,g)=Q_L(f,g)
+\]
+
+for every required pair and support, positivity passes to the finite
+limit immediately. This would already prove the needed Weil positivity;
+one need not first reconstruct every correlation function of a full
+field theory. No uniform convergence rate over all inputs is needed for
+this implication. The observables entering the regulated pairings must
+retain their norm interpretation: an additive subtraction from their
+pairing is not automatically positive.
+
+Thus either an exact conditional matching theorem for a concrete field,
+or convergence of its positive regulated observable sector, is a legitimate
+milestone. Constructive estimates may be needed to establish the specified
+model and limit. The research task remains fitting that model to the
+arithmetic data, with its positivity supplied by the construction.
+
+
+## 1b. Constructive plausibility and a possible Yang–Mills reduction
+
+An interesting conditional reduction needs a credible reason to expect
+that its hypotheses can hold. Every proposed field should therefore
+identify:
+
+1. A concrete finite-cutoff model and an independently justified positive
+   physical pairing or reflection-positive transfer construction.
+2. Its nearest established constructive model, with the actual
+   similarities and changes in dimension, field content, interactions,
+   symmetries, boundary insertions, and ultraviolet behavior.
+3. The renormalizations and limits needed for the arithmetic observable,
+   together with structural evidence that these preserve the positive
+   pairing and produce a finite, nontrivial result.
+4. The exact additional statement still open, separated from the
+   arithmetic matching theorem.
+
+Constructed stable polynomial scalar models in two spacetime dimensions
+provide one useful comparison class
+([Jaffe's account](https://arthurjaffe.com/Assets/pdf/CQFT.pdf)).
+Yang–Mills provides a different example: positivity of lattice
+approximations and a positive self-adjoint transfer matrix are established
+in appropriate formulations
+([Osterwalder–Seiler](https://doi.org/10.1016/0003-4916(78)90039-8)),
+while the four-dimensional continuum existence and mass-gap problem
+remains open
+([Clay problem statement](https://www.claymath.org/millennium/yang-mills-the-maths-gap/)).
+These examples motivate a concrete constructive comparison; resemblance
+of terminology alone supplies no existence argument.
+
+For the present gamma-and-prime proposal, the positive gamma action and
+the individual conservative return graphs are useful established
+ingredients within this project's stated scope. No joint arithmetic
+junction action has yet been placed within a known constructive class.
+That comparison is required before treating a conditional realization
+as a physically supported conjecture.
+
+A direct reduction from Yang–Mills to RH is conceivable in the following
+precise sense. For a fixed compact simple gauge group, construct a
+specified gauge-invariant insertion \(\mathcal O_L(f)\) in pure
+four-dimensional Yang–Mills and prove
+
+\[
+Q_L(f,g)=
+\langle\mathcal O_L(f)\Omega_{\mathrm{YM}},
+       \mathcal O_L(g)\Omega_{\mathrm{YM}}\rangle
+\]
+
+for all required inputs and lengths, conditional on a precise
+Yang–Mills construction. If that construction also supplies these
+insertions and their finite-norm domains, its existence implies RH.
+The mass gap is not needed for this norm-positivity implication.
+Identifying a formal bulk field with a boundary insertion requires a
+trace/domain argument; ordinary existence axioms do not automatically
+construct every singular or extended insertion one might propose.
+
+The construction hypotheses should state whether a mass gap is needed
+for a particular continuum limit or boundary observable. The paper's
+matching target is the positive state pairing above; each required
+field-theory property must have an explicit role in the forward argument.
+
+To invoke the actual Clay problem, the model must really reduce to pure
+four-dimensional Yang–Mills. Adding arithmetic defects, infinitely many
+extra fields, or supersymmetric matter creates further construction
+obligations which a solution for pure Yang–Mills would not automatically
+settle. Those extensions may still be useful constructive-QFT targets,
+but the connection must be stated at the correct level.
+
+At present a Yang–Mills mapping is a speculative research question.
+No established reduction was identified in the targeted source check,
+and no evidence of one has been derived here. A useful first result
+would be an independently defined gauge-theory observable with a
+nontrivial exact portion of the gamma/prime boundary response, followed
+by an account of the full contact and pole sectors. The earlier
+first-prime test remains a bounded construction test, not an RH
+reduction on its own.
+
 
 ## 2. Fix the complete matching target
 
@@ -331,6 +510,12 @@ that value, but the physical injection and return rule have yet to be
 derived. Selecting such a state by hand does not complete the mechanism.
 
 ## 6. The next calculations should decide the model
+
+The [first preparation tests](GAUGE_TRANSFER_TEST.md) now give concrete
+constraints: direct orthogonal branching introduces an extra cusp at the
+prime delay; a coherent repair cancels the cusp but has zero Hermitian
+interference with the gamma source and leaves the independent contact.
+The next junction must solve both issues in its full physical pairing.
 
 The next bounded target is a fully specified conservative junction for
 the two branches in (12), with its complete boundary pairing at \(L=1\).

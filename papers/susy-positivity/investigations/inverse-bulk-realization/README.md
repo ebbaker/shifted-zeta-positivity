@@ -9,6 +9,18 @@ task is exact model selection and matching. Estimating successively more
 complicated errors in a fixed positive completion is not the continuation
 strategy.
 
+The paper's scope is a forward conditional reduction: a constructively
+credible field theory, together with an exact boundary matching theorem,
+would imply RH. A Yang–Mills-to-RH mapping is a proposed case to investigate.
+The speculative reverse RH-to-Yang–Mills direction is outside this paper.
+
+[Latest calculation: gauge transfer and the first-prime boundary test](GAUGE_TRANSFER_TEST.md)
+compares Wilson-loop winding with transfer evolution, constructs a positive
+disk model for the gamma masses and prime returns, and computes two
+explicit preparations. One fails by a cusp at the prime delay; a coherent
+repair removes it but leaves the independent contact problem. These are
+scoped model tests, with no full Weil matching identity.
+
 [Analysis](ANALYSIS.md) contains:
 
 - a scoped obstruction to exact constant subtraction by finitely many
@@ -30,6 +42,7 @@ The [record](checks.json) is not an analytical proof certificate.
 Run from this folder:
 
     python3 check_matching.py
+    python3 check_gauge_transfer.py
 
 Related material:
 
