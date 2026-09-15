@@ -58,8 +58,13 @@ Six findings.
    positive at all. The mirror contact `kappat_2 = 0.574`, switching on at
    `log 2`, is what carries `A_L` past the point where the bare form dies.
 
-Section 3 records the parity structure, which Yoshida also uses and which
-sharpens item 4 of the continuation note; section 7 has the recommendation.
+Section 3 is the part of this work that bears on the construction problem: the
+pole form is the **hyperbolic pairing of the two poles of `zeta`**, its null
+lines are exactly the locus on which the results of section 2 are stated, and
+every source for `Q_L` carries a canonical unitary involution — the
+functional-equation involution `rho <-> 1 - rho` — in whose `-1` eigenspace the
+subtraction must sit. That is item 4 of the continuation note, made explicit.
+Section 7 has the recommendation.
 
 ## 1. `A_L = Q_L` below `log 2`
 
@@ -188,25 +193,102 @@ at our `L = 1.6`.
 The manuscript's `references.tex` will need a Yoshida entry when it is next
 revised.
 
-## 3. The parity split, and where the difficulty sits
+## 3. The pole form, parity, and what a source must contain
+
+This section is the part of the session's work that bears on the construction
+problem rather than on the size of the target. Everything in it is elementary
+and exact.
+
+### 3.1 The two poles pair hyperbolically
+
+Write
+
+```
+u[f] = Fhat(i/2)  = int f(x) e^{ x/2} dx,
+v[f] = Fhat(-i/2) = int f(x) e^{-x/2} dx,
+```
+
+the evaluations of the transform at the two poles of `zeta`, at `s = 1` and
+`s = 0`. Then `c[f] = <cosh(x/2),f> = (u+v)/2` and
+`s[f] = <sinh(x/2),f> = (u-v)/2`, so
+
+```
+P_L[f] = 2|c|^2 - 2|s|^2 = 2 Re( u conj(v) )      ( = 2uv for real f ).
+```
+
+**In the coordinates `(u,v)` the pole form is purely off-diagonal.** Its matrix
+is `[[0,1],[1,0]]`: the hyperbolic, or split, form of signature `(1,1)`, whose
+two null lines are exactly `{u = 0}` and `{v = 0}` — the loci on which one of
+the two poles is invisible.
+
+Three things follow.
+
+1. **The negative direction is not attached to either pole.** It is the
+   antisymmetric combination `s = (u-v)/2`. No basis of the two pole states
+   splits the pairing into a good pole and a bad one; the indefiniteness lives
+   in the pairing *between* them.
+2. **A realization must contain a hyperbolic pair, not a negative-norm state.**
+   Any source with `||Phi(f)||^2 = Q_L[f]` must produce, on top of a positive
+   background, a two-dimensional subspace carrying a split inner product whose
+   two null vectors are the `s = 0` and `s = 1` evaluations. That is the
+   structure of a ghost pair — a `bc` pair, a BRST doublet, a null pair in an
+   indefinite-metric Fock space — and not of a single removed state. The
+   manuscript's outlook offers "a ghost or BRST sector, a boundary condition
+   that is not reflection positive, or a rank-two defect projection" as three
+   alternatives; the first is not one alternative among three, it is a
+   description of the algebra, and it says what must be paired with what.
+3. **The literature's hypothesis is the null cone of this pairing.** The
+   condition `fhat(±i/2) = 0` of section 2, under which Yoshida's and
+   Connes-Consani's archimedean statements are formulated, says exactly that
+   `uv = 0`, i.e. that the state lies on one of the two null lines. So those
+   theorems describe the source restricted to the null cone of the pole
+   pairing, which is the one place where the pairing carries no information.
+
+### 3.2 Reflection, and the involution it induces on a source
 
 `K`, `||.||^2` and every prime translation have kernels depending on `x - y`
-through an even function, so `Q_L` and `A_L` commute with `f(x) -> f(-x)` and
-split into even and odd sectors. Checked to `1e-11` on the form matrices; it is
-also Yoshida's section 2, and his (6.2) is the pole term's half of it:
+through an even function, so `Q_L` and `A_L` commute with the reflection
+`(Rf)(x) = f(-x)`; checked to `1e-11` on the form matrices, and also Yoshida's
+section 2. Since `c` is `R`-even and `s` is `R`-odd, the pole form splits as
 
 ```
-P_L[f] = 2|c[f]|^2 - 2|s[f]|^2,   c[f] = <cosh(x/2), f>,   s[f] = <sinh(x/2), f>,
+even sector:  +2|c|^2,        odd sector:  -2|s|^2,
 ```
 
-with `c` even and `s` odd, so the even sector receives `+2|c|^2` and the odd
-sector `-2|s|^2`. **The indefiniteness of the rank-two pole form is entirely an
-odd-sector phenomenon, and its positive direction is entirely even.** For item 4
-of the continuation note this is a concrete constraint on any source: the
-compression producing `P_L` must act as `+rank one` on even inputs and
-`-rank one` on odd inputs, i.e. the subtraction may touch only the
-reflection-odd part of the state. Yoshida's Proposition 1 adds that each sector
-separately is equivalent to RH, so neither can be set aside.
+so **the indefiniteness of `P_L` is entirely an odd-sector phenomenon and its
+positive direction is entirely even.** Yoshida's (6.2) is this computation.
+
+The constraint this puts on a source is sharper than a remark about symmetry.
+Suppose `Phi` satisfies `||Phi(f)||^2 = Q_L[f]` on `C_c^infty(I_L)`. Then
+`Q_L(Rf, Rg) = Q_L(f,g)`, so `f -> Phi(Rf)` has the same inner products as
+`Phi`, and there is a unitary `J` on the closure of the range of `Phi` with
+
+```
+J Phi(f) = Phi(Rf),     J^2 = 1.
+```
+
+**Every source for the localized Weil form carries a canonical unitary
+involution, and the hyperbolic pole pair must sit so that its positive
+direction is in the `+1` eigenspace of `J` and its negative direction in the
+`-1` eigenspace.** Equivalently: the subtraction may touch only the
+reflection-odd part of the state.
+
+Under Corollary 2.2 one can say what `J` is. A compatible realization is
+unitarily equivalent to the evaluation map `Phi(f) -> (Fhat(gamma_rho))_rho`
+on the zero multiset, `R` sends `Fhat(tau)` to `Fhat(-tau)`, and the multiset
+`{gamma_rho}` is symmetric under `gamma -> -gamma` by the functional equation.
+So **`J` is the involution `rho <-> 1 - rho` of the zeros**, and the two poles
+`s = 0, 1` are exchanged by the same involution — they are the two extra points
+of the same symmetry. The hyperbolic pair of section 3.1 is therefore not an
+accident of normalization: it is the functional equation acting on the two
+points it adds to the zero set.
+
+Yoshida's Proposition 1 completes the picture: `T` is oddly positive definite
+iff RH, and evenly positive definite iff every non-real zero is critical.
+Since `zeta` has no real zero in the critical strip, **each eigenspace of `J`
+separately carries RH**, so neither can be set aside as the easy one.
+
+### 3.3 Where the difficulty sits, as two scalars
 
 Let `W = K + c_L ||.||^2` be `A_L` without the poles, so
 `A_L = W + 2cc^* - 2ss^*`. Two facts:
@@ -216,11 +298,11 @@ Let `W = K + c_L ||.||^2` be `A_L` without the poles, so
   `L = 0.3, 0.5, log 2, 1, 3/2` (it turns positive by `L = 2`), an explicit
   certificate. The pole term is indispensable.
 - `W >= 0` on `{c = 0}` in the even sector and on `{s = 0}` in the odd sector —
-  this is the pole-free corollary of section 2.2 — so `W` has at most one
-  negative direction in each sector; the indicator certificate supplies one in
-  the even sector, and the numerics give none in the odd sector. Hence `W` has
-  exactly one negative eigenvalue and it is even (verified by symmetric
-  elimination at every `L` tested).
+  the pole-free corollary of section 2.2, i.e. the null-cone statement of 3.1 —
+  so `W` has at most one negative direction in each sector; the indicator
+  certificate supplies one in the even sector, and the numerics give none in the
+  odd sector. Hence `W` has exactly one negative eigenvalue and it is even
+  (verified by symmetric elimination at every `L` tested).
 
 With those inertia facts a positive rank-one perturbation moves exactly one
 eigenvalue through zero, and
@@ -240,12 +322,11 @@ In the 60-cell space:
 Refining at `L = log 2` the even scalar reads −1.00784, −1.00320, −1.00178,
 −1.00148 at 20, 40, 80, 120 cells, apparently approaching about −1.0012. The
 odd sector is comfortable and the even sector clears its threshold by about one
-part in 800. This matches the shape of Yoshida's computation exactly: his odd
-case closes with a `10 x 10` matrix (`N = 10`), his even case needs a
-`200 x 200` one (`N = 199`). The two-scalar form above is a compact restatement
-of the orthogonal-complement construction he carries out in his section 6, and
-it is the right object to bound if one wants an effective version of his
-theorem.
+part in 800. This matches the shape of Yoshida's computation: his odd case
+closes with a `10 x 10` matrix (`N = 10`), his even case needs a `200 x 200`
+one (`N = 199`). The two-scalar form is a compact restatement of the
+orthogonal-complement construction of his section 6, and it is the right object
+to bound if one wants an effective version of his theorem.
 
 ## 4. Why `log 2` is nearly the true edge
 
@@ -362,6 +443,9 @@ structure — so its failure below `log 7` says nothing about `A_L`.
 | `A_L = Q_L` for `L <= log 2` | Proved (trivially); checked numerically |
 | `A_L >= 0` for `L <= log 2` | **Theorem (Yoshida 1992, Thm 1)**; computer-assisted |
 | Parity split; poles even-positive, odd-negative | Proved; Yoshida section 2 and (6.2); checked to `1e-11` |
+| `P_L` is the hyperbolic pairing of the two pole evaluations | Proved; checked to `1.3e-15` |
+| Every source for `Q_L` carries a unitary involution `J`, and the subtraction sits in its `-1` eigenspace | Proved |
+| `J` is the involution `rho <-> 1-rho` of the zeros | Proved given Corollary 2.2 |
 | `W = K + c_L` is not positive for `L <= 3/2` | Proved (indicator certificate) |
 | `Abar_L` not positive for `L >= 3/4` | Proved (explicit step certificate) |
 | `W` has exactly one negative direction, and it is even | Proved given Yoshida; verified numerically |
@@ -385,10 +469,14 @@ structure — so its failure below `log 7` says nothing about `A_L`.
    computable once, that would then be available at every `L`. A crude
    substitute (`n_gamma(r) >= n_gamma(L)`) already carries the odd sector from
    about `L = 1.75`; the even sector is what needs the real constant.
-3. **Merge the remainder with item 4, the pole mechanism.** Section 3 shows they
-   are one question, and the parity constraint narrows item 4's list — "ghost or
-   BRST sector, a boundary condition that is not reflection positive, a rank-two
-   defect projection" — to mechanisms that act only on the reflection-odd part.
+3. **Item 4, the pole mechanism, is now a specification rather than a list.**
+   By section 3 a source must contain a two-dimensional subspace with a
+   hyperbolic inner product whose null vectors are the `s = 0` and `s = 1`
+   evaluations, exchanged by a unitary involution `J` that acts on the rest of
+   the source as the functional-equation involution `rho <-> 1 - rho`, with the
+   subtraction confined to the `-1` eigenspace. That is a ghost pair with its
+   pairing fixed, and it is the property to look for in a candidate protected
+   sector — before any arithmetic matching is attempted.
 
 A caution about item 3 of the continuation note. A certified lower bound on
 `lambda_min(Q_L)` at `L = 1, 5/4, 3/2` is a larger undertaking than it looks:

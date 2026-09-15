@@ -1,0 +1,162 @@
+\section{What an independently positive realization requires}\label{sec:positive}
+\subsection{State norms, constructive hypotheses, and linear sources}
+\begin{definition}[Exact positive realization]\label{def:realization}
+An exact positive realization of the Weil form consists of a specified
+model $M$ with a positive Hilbert space $\HH_M$ and complex-linear maps
+$\Phi_{M,L}:C_c^\infty(I_L)\to\HH_M$ such that
+\begin{equation}\label{eq:exact-match}
+ \ip{\Phi_{M,L}(f)}{\Phi_{M,L}(g)}=Q_L(f,g)
+ \qquad (L>0).
+\end{equation}
+The model, its physical inner product, source rule and normalization
+must be specified independently of an assumed positive Weil form.
+Construction of the model may be an explicit hypothesis; the identity
+\eqref{eq:exact-match} must be derived from the specified data.
+\end{definition}
+
+One usual form is $\Phi_{M,L}(f)=\mathcal O_{M,L}(f)\Omega_M$.
+The observable $\mathcal O_{M,L}(f)$ need not be a positive operator.
+The positivity argument is
+\begin{equation}\label{eq:observable-norm}
+ \ip{\mathcal O(f)\Omega}{\mathcal O(g)\Omega},
+ \qquad \norm{\mathcal O(f)\Omega}^2\geq0,
+\end{equation}
+provided these vectors exist in the positive physical Hilbert space.
+Writing this formally as an expectation of $\mathcal O(f)^\dagger
+\mathcal O(g)$ is justified only on its operator or quadratic-form
+domain. Linearity of the state map supplies quadratic dependence on $f$;
+the interaction strength of the theory does not affect this argument.
+
+A Euclidean formulation may use a preparation $A_L(f)$ at positive
+Euclidean time and reflection $\Theta$:
+\begin{equation}\label{eq:os}
+ B_{M,L}(f,g)=\langle(\Theta A_L(f))A_L(g)\rangle_M.
+\end{equation}
+Reflection positivity supplies its positive norm interpretation; a full
+relativistic reconstruction requires the other Osterwalder--Schrader
+hypotheses \cite{OS}. The arithmetic variable $x$ in
+\eqref{eq:target} is not automatically Euclidean time.
+
+An alternative classical construction is a nonnegative joint energy
+$\mathcal E_M(\Phi)$ with boundary trace $f$, for which
+$Q_L[f]=\inf_{\operatorname{Tr}\Phi=f}\mathcal E_M(\Phi)$.
+Positivity only in the auxiliary Hessian is insufficient:
+$w^2-2fw$ is coercive in $w$ and has minimum $-f^2$.
+For nonlinear energies, the assertion that the entire minimized
+boundary dependence is quadratic is itself a matching requirement.
+
+\begin{proposition}[Conditional construction-to-RH implication]
+\label{prop:conditional}
+If the construction hypotheses for a specified model imply the positive
+Hilbert space and domains in Definition~\ref{def:realization}, and the
+complete matching identity is derived under those hypotheses, then
+construction of that model with those observables implies RH.
+It is also sufficient to have independently positive regulated pairings
+$B_{\Lambda,L}$ such that, for every fixed pair of test functions and $L$,
+\begin{equation}\label{eq:regulated-limit}
+ \lim_{\Lambda\to\infty}B_{\Lambda,L}(f,g)=Q_L(f,g).
+\end{equation}
+\end{proposition}
+\begin{proof}
+The first assertion follows by taking $g=f$ in \eqref{eq:exact-match}
+and applying Theorem~\ref{thm:weil}. In the second assertion the finite
+limit of nonnegative real numbers $B_{\Lambda,L}(f,f)$ is nonnegative.
+The same criterion applies. No rate uniform in all inputs is required.
+\end{proof}
+
+The proposition is a logical consequence of the classical criterion,
+not the missing reduction theorem. We have not specified a model for
+which its full premise is verified. An additive subtraction from a
+regulated norm need not remain positive. Likewise, defining a covariance
+to equal $Q_L$, or setting $\Phi=Q_L^{1/2}$ before positivity is known,
+would reinsert the original problem into the construction hypothesis.
+
+A common source rule compatible under enlargement of $I_L$ is not a
+convenience. Separate positive realizations for every $L$ would suffice
+logically for RH, but a realization at one fixed interval is not by itself
+informative: as soon as $Q_L\geq0$ holds, $\Phi(f)=Q_L^{1/2}f$ into
+$L^2(I_L)$ already satisfies Definition~\ref{def:realization} on that
+interval. The content of a proposed realization is carried entirely by the
+uniformity of its source rule in $L$, and by
+Corollary~\ref{cor:spectral} that uniform object is the zero measure.
+Short intervals are therefore places to test and discard a specified
+candidate, not places where a partial result accumulates.
+
+\begin{remark}[Stationary data at one interval]\label{rem:krein}
+The same conclusion holds inside the narrower class of translation-covariant
+sources. If $Q_L\geq0$ and $\varphi\in C_c^\infty$ has small support, then
+$r\mapsto Q_L(\varphi,U_r\varphi)$ is a continuous positive definite
+function on an interval, because
+$\sum_{j,k}\bar c_jc_kQ_L(U_{r_j}\varphi,U_{r_k}\varphi)
+=Q_L[\sum_kc_kU_{r_k}\varphi]\geq0$ whenever the translates stay inside
+$I_L$. Krein's extension theorem \cite{Krein,Sasvari} then supplies a finite
+positive measure whose Fourier transform agrees with it there, hence
+stationary positive data on that scale. Positivity on one interval already
+yields such data; only its compatibility as $L$ grows carries arithmetic
+information. This remark is not used in any proof below.
+\end{remark}
+
+A mass gap is not needed for the elementary norm implication.
+It must be imposed only if a chosen construction or observable limit
+requires it. An extension of pure Yang--Mills by arithmetic defects or
+extra fields would create construction obligations beyond the pure
+Yang--Mills existence problem \cite{ClayYM}.
+
+\subsection{Protected pairings and their adjoints}
+Sphere and Schur quantization motivate Hilbert completions of protected
+algebras. The basic data can be described as a complex algebra
+$\mathcal A$, an antilinear automorphism $\rho$, and a twisted trace $T$
+with positive Hermitian form
+\begin{equation}\label{eq:twisted}
+ H(a,b)=T(\rho(a)b),\qquad
+ T(ab)=T(\rho^2(b)a).
+\end{equation}
+One quotients null vectors when necessary before completion. On the
+algebraic core the right and left actions satisfy
+$R_a^\dagger=L_{\rho(a)}$, since
+$H(ba,c)=T(\rho(b)\rho(a)c)=H(b,\rho(a)c)$.
+This does not identify $\rho$ with an arbitrary ordinary adjoint on a
+single copy of the algebra, nor establish every unbounded closure.
+The representation formulas used below come from
+\cite{Sphere,Schur,RG}. Classification results for related positive
+forms give independent mathematical support in specified algebraic
+families \cite{EKRS,Klyuev}; they do not construct every correlator of
+an interacting continuum field theory.
+
+The intended conditional program allows an open but credible construction
+problem. Explicit positive representations, stable regulated models,
+protected localization formulas and compatible dual descriptions provide
+different kinds of evidence. The source domain and matching identity
+still have to be stated for the particular model. No general Schur
+construction conjecture is promoted to a theorem in the calculations below.
+
+\subsection{A necessary source-regularity condition}
+\begin{proposition}[Finite-norm orbit smearing cannot match]\label{prop:bounded-source}
+Fix $L>0$. A source of the form
+$\Phi(f)=\int_{I_L}f(x)V_x\Omega\dd x$, with $V_x$ unitary,
+$\Omega\in\HH$, and a well-defined strongly measurable orbit, cannot
+have norm $Q_L[f]$ for all smooth test functions. The same holds for
+a finite direct sum of such sources.
+\end{proposition}
+\begin{proof}
+The estimate $\norm{\Phi(f)}\leq\sqrt L\norm\Omega\norm f$ makes
+the proposed pairing bounded in the input $L^2$ norm. Let
+$0\ne\chi\in C_c^\infty(I_L)$ and $f_N(x)=\chi(x)e^{iNx}$.
+Equation~\eqref{eq:gamma-growth} and rapid decay of $\widehat\chi$
+give
+\begin{equation}\label{eq:high-frequency}
+ \frac{Q_L[f_N]}{\log N}\longrightarrow\norm\chi^2.
+\end{equation}
+For completeness, after the change $\tau=N+u$ the integrand of the
+gamma term divided by $\log N$ converges pointwise to
+$|\widehat\chi(u)|^2$. The bound
+$b((N+u)^2)\leq C[1+\log(2+N)+\log(2+|u|)]$ for $N\geq2$
+permits dominated convergence. All other terms in
+\eqref{eq:target} are bounded uniformly in $N$ on this interval.
+This contradicts boundedness of the proposed norm.
+\end{proof}
+An exact source must be unbounded relative to the input $L^2$ norm.
+An infinite family of insertions or a distributional field with finite
+output on smooth tests is compatible with this requirement. The
+proposition makes no assertion of global closability on the union of
+all intervals, and imposes no obstruction on QFT as such.

@@ -1,4 +1,4 @@
-# Coverage of working manuscript 0.3
+# Coverage of working manuscript 0.4
 
 The [manuscript](manuscript.pdf) is a self-contained synthesis of the current
 inverse-bulk investigation. It has its own equation labels and bibliography.
@@ -16,7 +16,7 @@ the [draft index](drafts/README.md) preserves reviewed versions.
 | Appendix A | Positive gamma action, integer refinement, composition and contact identity. | [Foundational analysis](notes/ANALYSIS.md). |
 | Appendix B | Winding versus transfer, central-semigroup exclusion, positive disk model, first-prime cusp and coherent contact failures. | [Gauge-transfer test](notes/GAUGE_TRANSFER_TEST.md). |
 | Appendix C | Scoped obstruction to finite rational feedback. | [Foundational analysis](notes/ANALYSIS.md). |
-| Appendix D | Seven checks and their limits, including the explicit-formula normalization check and the channel-bound certificates, with source provenance and draft preservation. | [Numerics index](numerics/README.md). |
+| Appendix D | Eight checks and their limits, including the explicit-formula normalization check, the channel-bound certificates and the two conclusive step certificates of the prime-free check, with source provenance and draft preservation. | [Numerics index](numerics/README.md). |
 
 New in 0.2: Corollary 2.2, Remark 3.8, Proposition 7.3, Lemma 7.4,
 Theorem 7.5, Remark 7.6, Sections 8.1-8.2, two new check programs, and the
@@ -26,6 +26,12 @@ Remark 7.10 - together with Problem 8.2, the prime-free target (8.1), and
 `check_mirror_subtraction.py`. Versions 0.1 and 0.2 are preserved in `drafts/`.
 The research behind 7.5 is in
 [MIRROR_REFERENCE_AND_SUBTRACTION_FORM.md](notes/MIRROR_REFERENCE_AND_SUBTRACTION_FORM.md).
+New in 0.4: Section 2.5 entire - Lemma 2.3 and Proposition 2.4 - the revised
+status of the prime-free target in 8.2 with Proposition 8.1 and the Yoshida
+reference, the corresponding qualification of the Connes-Consani mechanism in
+8.1, `check_prime_free_archimedean.py`, an author field and a preparation note.
+The research behind 2.5 and 8.2 is in
+[PRIME_FREE_ARCHIMEDEAN_INEQUALITY_20260915.md](notes/PRIME_FREE_ARCHIMEDEAN_INEQUALITY_20260915.md).
 
 The broad survey's alternative theories remain in the notes rather than being
 expanded into separate speculative manuscript sections. No common-field

@@ -10,8 +10,8 @@ The [current working manuscript](manuscript.pdf), *Sphere and Schur sources for
 the localized Weil form*, collects the present results in a self-contained
 draft. Its [TeX source](manuscript.tex) has internal equation labels and does
 not input the shared background. Reviewed versions are preserved in
-[drafts/](drafts/README.md); version 0.3 is current and versions 0.1 and 0.2
-are preserved unchanged.
+[drafts/](drafts/README.md); version 0.4 is current and versions 0.1, 0.2 and
+0.3 are preserved unchanged.
 See the [build guide](BUILD.md) and [coverage map](MANUSCRIPT_COVERAGE.md).
 
 Start with the [broad program overview](../../brainstorm/INVERSE_BULK_AND_DEFECT_DIRECTIONS.md)
@@ -67,8 +67,20 @@ smaller contact, turns the target into a *difference*,
 \(Q_L = A_L - \sum_p \tilde B_p\), in which \(A_L\) contains no prime
 translations at all and is robustly positive where \(Q_L\) barely is. Weil
 positivity on \(I_L\) becomes one domination statement. This is Section 7.5 of
-version 0.3; its derivation and the open pieces are in the
+version 0.4; its derivation and the open pieces are in the
 [subtraction-form note](notes/MIRROR_REFERENCE_AND_SUBTRACTION_FORM.md).
+
+**The pole term now has a specification rather than a list of options.** In the
+coordinates given by the evaluations at \(s=0\) and \(s=1\) the rank-two pole
+form is off-diagonal -- the hyperbolic pairing of the two poles, with each
+evaluation a null vector -- and every source for the localized form carries a
+unitary involution exchanging them, which for a compatible realization is the
+functional equation acting on the zeros. A realization must therefore supply a
+null pair, not a removed state, and the subtraction may act only on the
+reflection-odd part. This is Section 2.5 of version 0.4; the prime-free
+inequality (8.1) is settled for \(L\le\log 2\) by Yoshida and for
+\(L\ge\log 7\) here, leaving the compact window \(\log 2<L<\log 7\). See the
+[prime-free note](notes/PRIME_FREE_ARCHIMEDEAN_INEQUALITY_20260915.md).
 
 ## Working direction
 

@@ -1,0 +1,462 @@
+\section{Magnetic domains and joint-prime gluing}\label{sec:gluing}
+\subsection{What higher magnetic powers would require}
+The domain statement for one insertion is sufficient for
+Theorem~\ref{thm:schur-prime}. It does not place the prepared state in
+the domain of every negative magnetic power.
+\begin{proposition}[Formal higher-power coefficient criterion]
+\label{prop:magnetic-powers}
+For $k\geq1$, iteration of the coefficient action gives the formal series
+\begin{equation}\label{eq:magnetic-k}
+ (u_-^k\eta_a)_{-k}(\zeta)=\sqrt{1-a^2}
+ \frac{\prod_{j=0}^{k-1}(1+q^{k-1-2j}\zeta)}{1+aq^{-k}\zeta}.
+\end{equation}
+Its Taylor coefficient sequence belongs to $\ell^2$ if and only if
+\begin{equation}\label{eq:magnetic-criterion}
+ a<q^k\quad\hbox{or}\quad a\in\{q,q^3,\ldots,q^{2k-1}\}.
+\end{equation}
+For fixed $0<a<1$, square summability of all these formal outputs is
+equivalent to $a=q^{2j+1}$ for some integer $j\geq0$.
+\end{proposition}
+\begin{proof}
+Induction in \eqref{eq:schur-actions} gives \eqref{eq:magnetic-k}.
+For every coefficient of degree $n\geq k$, expanding the denominator
+shows that the coefficient equals
+\begin{equation}\label{eq:magnetic-tail}
+ \sqrt{1-a^2}(-aq^{-k})^n
+ \prod_{j=0}^{k-1}(1-q^{2j+1}/a).
+\end{equation}
+If the product is nonzero, the geometric tail is square summable
+exactly when $aq^{-k}<1$. If the product vanishes, the numerator
+cancels the denominator and the output is a polynomial. This proves
+\eqref{eq:magnetic-criterion}. For all $k$, the inequality eventually
+fails at any fixed $a>0$, so an exceptional value is necessary.
+If $a=q^{2j+1}$, it satisfies the strict inequality for $k\leq j$
+and the cancellation condition for $k\geq j+1$, proving sufficiency
+for the formal coefficient statement.
+\end{proof}
+
+The exceptional square-summable outputs do not by themselves prove
+membership in powers of a chosen closed operator extension. A divergent
+coefficient tail is, however, a necessary domain obstruction whenever
+the prescribed action on Fourier coefficients is retained. This
+distinction prevents meromorphic continuation across a pole from being
+mistaken for an operator-domain argument.
+
+For the prime states $a_p=qp^{-1/2}$, requiring all negative powers
+would force $p^{-1/2}=q^{2j_p}$. This cannot hold simultaneously for
+$p=2$ and $p=3$, since it would imply a nontrivial equality between
+an integer power of $2$ and an integer power of $3$. It does not affect
+the single insertion already proved. More generally, for any fixed
+finite $K>1$, choosing $q^{K-1}>2^{-1/2}$ puts every prime state in
+the strictly decaying regime for all powers through $K$. In that
+regime the Taylor-approximation argument of
+Lemma~\ref{lem:one-magnetic} extends through the finite sequence of
+shifts. A proposed junction must specify the finite words or actual
+operator domains it uses; a field theory need not put every state in
+the domain of every unbounded power.
+
+\subsection{A two-prime obstruction for fixed output vectors}
+For each prime write $r_p=p^{-1/2}$, $d_p=\log p$, and
+\begin{equation}\label{eq:prime-filter}
+ A_p(z)=\frac{1-z}{1-r_pz}
+ =1-(1-r_p)\sum_{n\geq1}r_p^{n-1}z^n,
+ \qquad c_p=\frac{d_pr_p(1+r_p)}{1-r_p}.
+\end{equation}
+The norm of $\sqrt{c_p}A_p$ is the multiplier
+\eqref{eq:prime-weight}. Consider a proposed coherent sum with fixed
+unit output vectors $v_2,v_3$:
+\begin{equation}\label{eq:constant-vector-source}
+ F\longmapsto\widehat F(\tau)
+ \left[\sqrt{c_2}A_2(e^{id_2\tau})v_2
+       +\sqrt{c_3}A_3(e^{id_3\tau})v_3\right],
+\end{equation}
+with output measure $\dd\tau/(2\pi)$.
+
+\begin{proposition}[Mixed atom from constant-vector gluing]\label{prop:mixed}
+In \eqref{eq:constant-vector-source}, the coefficient of
+$e^{i(\log3-\log2)\tau}$ in the full norm multiplier is
+\begin{equation}\label{eq:mixed-atom}
+ \sqrt{c_2c_3}(1-r_2)(1-r_3)\ip{v_2}{v_3}.
+\end{equation}
+Consequently this source, together with independently added gamma,
+contact and pole terms, cannot equal the two-prime Weil form on
+$I_{5/4}$ unless $v_2\perp v_3$. In the orthogonal case its prime
+part is exactly the sum of the separate positive references.
+\end{proposition}
+\begin{proof}
+The first cross term in the squared norm is
+$\sqrt{c_2c_3}\overline{A_2(e^{id_2\tau})}
+A_3(e^{id_3\tau})\ip{v_2}{v_3}$.
+Its first nonconstant coefficient from each factor gives
+\eqref{eq:mixed-atom}. A second pair of nonnegative indices with
+$n\log3-m\log2=\log3-\log2$ would give
+$3^{n-1}=2^{m-1}$ and hence $n=m=1$. The reverse cross term cannot
+give this positive frequency with nonnegative indices, and the
+individual squared norms contain only integer multiples of $d_2$
+or $d_3$.
+
+The Fourier coefficient series of each factor is absolutely summable;
+the cross kernel is therefore a finite-variation atomic measure. Other
+mixed lengths may accumulate, but its atom at $\log(3/2)$ has the
+specified nonzero mass if the overlap is nonzero. The Weil target has
+no prime-power atom there. Its gamma and pole kernels are smooth near
+this nonzero separation, and its contact is supported at zero, so none
+can cancel the atom. Since $0<\log(3/2)<5/4$, restriction to $I_{5/4}$
+still detects it. Equality of all polarized test-function pairings
+would imply equality of their distribution kernels, a contradiction.
+A purely imaginary overlap gives an imaginary antisymmetric kernel;
+complex tests still detect it. Thus the overlap must vanish.
+\end{proof}
+
+The proposition does not apply to arbitrary coherent gluing. A joint
+operator-valued junction may have additional terms which cancel mixed
+returns as an identity. Producing and evaluating such a junction is a
+new source construction. The failed fixed-vector ansatz gives no reason
+to estimate its unwanted atoms as a small residual.
+
+\subsection{The full comparison, with no omitted contact or pole}
+Let $\mathcal P$ be any finite set containing all primes $p<e^L$.
+Equations~\eqref{eq:target} and \eqref{eq:lifted-norm} give the exact
+identity
+\begin{align}
+ Q_L[f]={}&K[E_Lf]+\sum_{p\in\mathcal P}B_{r_p,d_p}[E_Lf]
+ \notag\\
+ &+\left(w_0-\sum_{p\in\mathcal P}\kappa_{r_p,d_p}\right)\norm f^2
+ +P_L[f].
+ \label{eq:full-comparison}
+\end{align}
+Each term in the first line is independently positive. The second
+line has not been realized as part of their joint norm. Extra primes
+in $\mathcal P$ contribute only contacts on this interval, which
+cancel algebraically against the displayed subtraction. This does
+not make the subtraction an independently positive operation.
+
+Thus the dressed result arrives at the same contact and pole problem
+as the conservative prime reference. It supplies a concrete Schur
+preparation and removes the earlier undressed-state mismatch, but
+establishes no larger positivity interval. Unitary repackaging of the
+orthogonal gamma and prime outputs leaves \eqref{eq:full-comparison}
+unchanged. The next calculation must determine contact, poles and
+prime interference within one complete positive preparation.
+
+\subsection{Interference is necessary, and the two-channel architecture fails}
+\label{subsec:interference}
+Equation~\eqref{eq:full-comparison} presents $Q_L$ as a sum of two
+independently positive forms and a residual. Write
+\begin{equation}\label{eq:channels}
+ A_L[f]=K[E_Lf],\qquad
+ B_L[f]=\sum_{p\in\mathcal P}B_{r_p,d_p}[E_Lf],\qquad
+ R_L[f]=\Big(w_0-\sum_{p\in\mathcal P}\kappa_{r_p,d_p}\Big)\norm f^2+P_L[f],
+\end{equation}
+so that $Q_L=A_L+B_L+R_L$. The residual is not a positive form, and the
+first observation is that it cannot be repaired by adding more positive
+channels.
+
+\begin{proposition}[No orthogonal augmentation]\label{prop:no-augment}
+Let $c<0$. On the subspace
+$\{f\in C_c^\infty(I_L):\int_{I_L}f\cosh(x/2)=\int_{I_L}f\sinh(x/2)=0\}$,
+which has codimension two, the form $c\norm f^2+P_L[f]$ equals
+$c\norm f^2<0$. Hence $R_L$ is not the Gram form of any further channel
+adjoined orthogonally to a preparation whose norm is $A_L+B_L$.
+\end{proposition}
+\begin{proof}
+$P_L$ vanishes on that subspace by \eqref{eq:poles}, and the subspace is the
+common kernel of two linear functionals on an infinite-dimensional space.
+\end{proof}
+
+The remaining possibility is interference: the archimedean and arithmetic
+parts of a preparation must fail to be orthogonal. The next elementary bound
+says how much interference is available.
+
+\begin{lemma}[Interference bound]\label{lem:interference}
+Let $G,S$ be complex-linear maps from a complex vector space $V$ into a
+Hilbert space $\HH$. Put $A[f]=\norm{Gf}^2$, $B[f]=\norm{Sf}^2$ and
+$C[f]=\norm{(G+S)f}^2-A[f]-B[f]$. Then
+\begin{equation}\label{eq:interference-bound}
+ tA[f]+t^{-1}B[f]+C[f]\geq0\qquad (t>0,\ f\in V),
+\end{equation}
+equivalently $-C[f]\leq2\sqrt{A[f]B[f]}$, that is
+$\norm{(G+S)f}^2\geq\big(\sqrt{A[f]}-\sqrt{B[f]}\big)^2$.
+\end{lemma}
+\begin{proof}
+$C[f]=2\re\ip{Gf}{Sf}$, so
+$tA[f]+t^{-1}B[f]+C[f]=\norm{\sqrt t\,Gf+t^{-1/2}Sf}^2\geq0$.
+Minimizing the left side over $t>0$ at $t=\sqrt{B/A}$ gives the other two
+forms, and replacing $S$ by $-S$ leaves the statement unchanged.
+\end{proof}
+
+At $t=1$ the bound \eqref{eq:interference-bound} is only the positivity of
+$Q_L$. Other values of $t$ are strictly stronger, and they exclude the
+architecture of \eqref{eq:full-comparison}.
+
+\begin{theorem}[Exclusion of the archimedean/prime two-channel source]
+\label{thm:two-channel}
+Let $L=1$, or $L=5/4$, or let $L$ be sufficiently large. There are no
+complex-linear maps $G,S$ from $C_c^\infty(I_L)$ into a common positive
+Hilbert space with
+\begin{equation}\label{eq:two-channel-hypothesis}
+ \norm{Gf}^2=A_L[f],\qquad \norm{Sf}^2=B_L[f],\qquad
+ \norm{(G\pm S)f}^2=Q_L[f]
+\end{equation}
+for every $f\in C_c^\infty(I_L)$.
+\end{theorem}
+\begin{proof}
+For such a pair the interference form is $C=Q_L-A_L-B_L=R_L$, so
+Lemma~\ref{lem:interference} requires
+\begin{equation}\label{eq:two-channel-test}
+ N_L(t)[f]:=tA_L[f]+t^{-1}B_L[f]+R_L[f]\geq0
+\end{equation}
+for every $t>0$. Each of $B_L$, $P_L$ and $\norm\cdot^2$ is bounded and
+$A_L$ is the closed gamma energy, so $N_L(t)$ is continuous for the energy
+norm of $\mathcal D_{\gamma,L}$. Moreover $C_c^\infty(I_L)$ is dense in
+$\mathcal D_{\gamma,L}$: if $g$ is bounded by one and supported in a set of
+measure $2\varepsilon$ then
+$2\norm g^2-2\re\ip g{U_rg}\leq2\min(r,\varepsilon)$ pointwise in $r$, so
+$K[g]=O(\varepsilon\log(1/\varepsilon))$, and cutting $\mathbf 1_{I_L}$ off
+smoothly within $\varepsilon$ of each endpoint changes the energy by that
+much. It therefore suffices to exhibit one $f\in\mathcal D_{\gamma,L}$ and
+one $t>0$ with $N_L(t)[f]<0$.
+
+Take $f=\mathbf 1_{I_L}$, so that $\norm f^2=L$ and
+$\ip F{U_rF}=(L-r)^+$. Then
+\begin{equation}\label{eq:indicator-energy}
+ A_L[\mathbf 1_{I_L}]
+ =\int_0^\infty\big[2L-2(L-r)^+\big]\gammak(r)\dd r
+ =2\sum_{n\geq0}\frac{1-e^{-a_nL}}{a_n^2}
+ \;\leq\;\tfrac12\psi'(\tfrac14),
+\end{equation}
+using $\int_0^Lre^{-ar}\dd r+Le^{-aL}/a=(1-e^{-aL})/a^2$ and
+$\sum_{n\geq0}a_n^{-2}=\tfrac14\psi'(\tfrac14)$. Likewise
+\begin{equation}\label{eq:indicator-pieces}
+ B_L[\mathbf 1_{I_L}]
+ =\sum_{p}\Big[\kappa_{r_p,d_p}L-2d_p\!\!\sum_{nd_p<L}\!\!r_p^{\,n}(L-nd_p)\Big],
+ \qquad
+ P_L[\mathbf 1_{I_L}]=32\sinh^2(L/4),
+\end{equation}
+the second because $\int_{I_L}\sinh(x/2)\dd x=0$ and
+$\int_{I_L}\cosh(x/2)\dd x=4\sinh(L/4)$.
+
+For $L=5/4$ the active translations are $\log2$ and $\log3$, and
+\eqref{eq:indicator-energy}--\eqref{eq:indicator-pieces} give
+\[
+ A_L=4.302142,\quad B_L=7.197439,\quad P_L=3.228059,\quad
+ \kappa_{r_2,d_2}+\kappa_{r_3,d_3}=6.348275,
+\]
+so $R_L=-11.422514$ and $N_L(1)=Q_L[\mathbf 1_{I_L}]=0.077067>0$, while at
+$t=13/10$
+\[
+ N_L(13/10)=5.592785+5.536491-11.422514=-0.293238<0 .
+\]
+For $L=1$ the same computation with the eight-cell step function
+$f=(1,1,0,-1,-1,0,1,1)$ on cells of width $1/8$ and $t=3/4$ gives
+$N_L(t)[f]=-0.106621<0$, again against $Q_L[f]=0.187826>0$. Both evaluations
+are finite closed forms in $\psi'(1/4)$, $\sinh$, $\log2$ and $\log3$; they
+are carried out with an explicit tail bound for the gamma series in
+Appendix~\ref{app:checks}.
+
+For large $L$ take $f=\mathbf 1_{I_L}$ again. By \eqref{eq:indicator-energy}
+$A_L\leq\tfrac12\psi'(\tfrac14)$ uniformly in $L$, and by
+\eqref{eq:indicator-pieces} $B_L\leq L\sum_{p<e^L}\kappa_{r_p,d_p}$, since
+the subtracted correlations are nonnegative. The prime number theorem and
+partial summation give
+$\sum_{p<x}\kappa_{r_p,d_p}=4\sqrt x\,(1+o(1))$, so
+\[
+ 2\sqrt{A_LB_L}=O\big(L^{1/2}e^{L/4}\big),
+ \qquad
+ -R_L=\Big(\sum_{p<e^L}\kappa_{r_p,d_p}-w_0\Big)L-32\sinh^2(L/4)
+ =4(L-2)e^{L/2}(1+o(1)).
+\]
+Hence $-R_L>2\sqrt{A_LB_L}$ for all large $L$, and
+\eqref{eq:interference-bound} fails by a factor tending to infinity.
+\end{proof}
+
+\begin{remark}\label{rem:scan}
+The failure is not confined to the two certified intervals. Evaluating
+\eqref{eq:two-channel-test} at $f=\mathbf 1_{I_L}$ and $t=\sqrt{B_L/A_L}$
+on a grid of step $1/10$ shows $N_L(t)<0$ at every $L\geq11/10$ up to
+$L=13/2$; at $L=1$ the indicator alone gives $+0.054$ and the eight-cell
+step function above is needed. These evaluations are recorded in
+Appendix~\ref{app:checks}.
+\end{remark}
+
+Theorem~\ref{thm:two-channel} excludes an architecture, not the identities it
+is assembled from. Theorem~\ref{thm:schur-prime} remains correct; what fails
+is the plan of adjoining to it a separately positive archimedean channel and
+recovering \eqref{eq:target}. The exclusion is specific to the pair
+\eqref{eq:channels}: a preparation whose channel norms are different forms
+$A'$, $B'$ with $A'+B'+C'=Q_L$ is not covered, and
+\eqref{eq:interference-bound} is then the first test such a preparation must
+pass. A source in which archimedean and prime data are not separated into two
+channels at all is untouched by the argument.
+Proposition~\ref{prop:mixed} and Theorem~\ref{thm:two-channel} are
+complementary. The first forbids a coherent sum with fixed output vectors,
+because of the mixed translations it creates. The second forbids the
+orthogonal-channel bookkeeping of \eqref{eq:full-comparison} however the two
+channels are subsequently correlated.
+
+\subsection{The mirror reference and the subtraction form}
+\label{subsec:subtraction}
+Lemma~\ref{lem:interference} bounds the norm of a \emph{sum} from below. It
+says nothing about a difference $\norm{Gf}^2-\norm{\Pi Gf}^2$, and
+Proposition~\ref{prop:no-augment} says that a difference is what is needed.
+This subsection shows that the target has such a presentation, with the
+arithmetic confined to the subtracted term.
+
+The positive reference of Theorem~\ref{thm:schur-prime} has the least contact
+compatible with prime atoms of one sign (Corollary~\ref{cor:contact}). There
+is a second elementary weight with the same atoms and the opposite sign.
+
+\begin{proposition}[Mirror prime reference]\label{prop:mirror}
+For $0<r<1$ and $d>0$ set
+\begin{equation}\label{eq:mirror-weight}
+ \widetilde w_{r,d}(z)=\frac{dr(1-r)}{1+r}\frac{|1+z|^2}{|1-rz|^2},
+ \qquad|z|=1 .
+\end{equation}
+Then $\widetilde w_{r,d}\geq0$ and
+\begin{equation}\label{eq:mirror-coefficients}
+ \widetilde w_{r,d}(z)
+ =\widetilde\kappa_{r,d}+d\sum_{n\geq1}r^n(z^n+z^{-n}),
+ \qquad
+ \widetilde\kappa_{r,d}=\frac{2dr}{1+r} .
+\end{equation}
+The constant $\widetilde\kappa_{r,d}$ is the least one for which a continuous
+scalar multiplier with Fourier coefficients $+dr^{|n|}$ is nonnegative, and
+\begin{equation}\label{eq:complementary}
+ w_{r,d}+\widetilde w_{r,d}=\frac{4dr}{1-r^2},
+ \qquad
+ \widetilde\kappa_{r,d}<\kappa_{r,d}=\frac{2dr}{1-r}.
+\end{equation}
+\end{proposition}
+\begin{proof}
+Nonnegativity is clear from \eqref{eq:mirror-weight}. Write $c=z+z^{-1}$ and
+use the Poisson identity \eqref{eq:poisson}. The constant Laurent coefficient
+of $(2+c)/|1-rz|^2$ is $(2+2r)/(1-r^2)=2/(1-r)$, and for $m\geq1$ its $z^m$
+coefficient is
+\[
+ \frac{2r^m+r^{m-1}+r^{m+1}}{1-r^2}
+ =\frac{r^{m-1}(1+r)^2}{1-r^2}
+ =\frac{r^{m-1}(1+r)}{1-r}.
+\]
+Multiplying by $dr(1-r)/(1+r)$ gives \eqref{eq:mirror-coefficients}.
+Adding \eqref{eq:prime-weight} cancels every nonconstant coefficient and
+leaves $\kappa_{r,d}+\widetilde\kappa_{r,d}=4dr/(1-r^2)$. For minimality,
+a multiplier $C+d\sum_{n\geq1}r^n(z^n+z^{-n})$ takes at $z=-1$ the value
+$C-2dr/(1+r)$, which must be nonnegative; \eqref{eq:mirror-weight} vanishes
+there.
+\end{proof}
+
+Applying the lift \eqref{eq:bloch} to \eqref{eq:mirror-coefficients} exactly
+as in Section~\ref{sec:dressed} gives a positive form on $C_c^\infty(I_L)$,
+\begin{equation}\label{eq:mirror-form}
+ \widetilde B_{r,d}[F]
+ =\widetilde\kappa_{r,d}\norm F^2
+  +2d\sum_{n\geq1}r^n\re\ip F{U_{nd}F}\geq0 .
+\end{equation}
+
+\begin{theorem}[Prime-free subtraction form of the target]\label{thm:subtraction}
+Let $\mathcal P$ be any finite set of primes containing every $p<e^L$. Then
+\begin{align}
+ Q_L[f]&=A_L[f]-\sum_{p\in\mathcal P}\widetilde B_{r_p,d_p}[E_Lf],
+ \label{eq:subtraction}\\
+ A_L[f]&=K[E_Lf]
+  +\Big(w_0+\sum_{p\in\mathcal P}\widetilde\kappa_{r_p,d_p}\Big)\norm f^2
+  +P_L[f].
+ \label{eq:prime-free}
+\end{align}
+The form $A_L$ involves no prime translation: away from the diagonal its
+kernel is $-\gammak(|x-y|)+2\cosh((x-y)/2)$, which is smooth, and its only
+arithmetic input is the constant in \eqref{eq:prime-free}. Primes outside
+$e^L$ contribute only contacts, which cancel against that constant.
+\end{theorem}
+\begin{proof}
+By \eqref{eq:mirror-form} the prime term of \eqref{eq:target} is
+$-\sum_p\big(\widetilde B_{r_p,d_p}-\widetilde\kappa_{r_p,d_p}\norm f^2\big)$,
+since for $F=E_Lf$ the correlations with $nd_p\geq L$ vanish and the
+coefficient of $\re\ip F{U_{nd_p}F}$ is $-2d_pr_p^{\,n}$ in both. Substituting
+in \eqref{eq:target} gives \eqref{eq:subtraction}. The kernel statement is
+\eqref{eq:gamma-energy} and \eqref{eq:poles}.
+\end{proof}
+
+\begin{corollary}[The criterion as a domination, and as a compression]
+\label{cor:domination}
+For each $L>0$, $Q_L\geq0$ if and only if
+$\sum_{p}\widetilde B_{r_p,d_p}\preceq A_L$ on $C_c^\infty(I_L)$. If in
+addition $A_L[f]=\norm{Gf}^2$ for a complex-linear $G$ into a positive
+Hilbert space and
+$\sum_p\widetilde B_{r_p,d_p}[E_Lf]=\ip{Gf}{\Pi\,Gf}$ for a positive
+contraction $\Pi$ on the closure of the range of $G$, then
+\begin{equation}\label{eq:compression}
+ Q_L[f]=\norm{(1-P)VGf}^2
+\end{equation}
+for an isometry $V$ and an orthogonal projection $P$ on a larger space. In
+particular $Q_L$ is realized as a compression, and
+Lemma~\ref{lem:interference} places no obstruction on this presentation.
+\end{corollary}
+\begin{proof}
+The equivalence is \eqref{eq:subtraction}. Given $\Pi$, we have
+$Q_L[f]=\ip{Gf}{(1-\Pi)Gf}$, and $1-\Pi$ is a positive contraction; by the
+dilation theorem $1-\Pi=V^*(1-P)V$ for an isometry $V$ and a projection $P$,
+which gives \eqref{eq:compression}. Lemma~\ref{lem:interference} concerns
+$\norm{(G+S)f}^2$ and does not apply to \eqref{eq:compression}.
+\end{proof}
+
+Two features make \eqref{eq:subtraction} a better construction target than
+\eqref{eq:full-comparison}, and one numerical observation says what is still
+hard.
+
+\emph{The mirror contact is much smaller.} Since
+$\widetilde\kappa_{r,d}/\kappa_{r,d}=(1-r)/(1+r)$, the saving is concentrated
+on the small primes, which is exactly where the budget of
+\eqref{eq:full-comparison} was lost:
+\begin{center}
+\small
+\begin{tabular}{lrrr}
+\toprule
+$L$ & $\sum_p\kappa_{r_p,d_p}$ & $\sum_p\widetilde\kappa_{r_p,d_p}$
+ & $w_0+\sum_p\widetilde\kappa_{r_p,d_p}$\\
+\midrule
+$1$ & $3.3468$ & $0.5742$ & $-4.7980$\\
+$5/4$ & $6.3483$ & $1.3785$ & $-3.9937$\\
+$2$ & $11.3172$ & $3.4406$ & $-1.9315$\\
+$3$ & $18.9237$ & $7.8704$ & $+2.4983$\\
+$4$ & $30.3436$ & $16.0103$ & $+10.6381$\\
+\bottomrule
+\end{tabular}
+\end{center}
+The constant in \eqref{eq:prime-free} changes sign near $L=2.6$; beyond that
+point the prime-free form has a positive contact.
+
+\emph{The prime-free form is not marginal.} In a Fourier--Galerkin space of
+$61$ modes on $I_L$, the least eigenvalue of $A_L$ relative to
+$\norm\cdot^2$ is $0.258$ at $L=1$, $0.799$ at $L=5/4$, $0.556$ at $L=3/2$,
+$2.13$ at $L=2$ and $22.4$ at $L=5$, while the same computation gives
+$\lambda_{\min}(Q_L)\leq10^{-6}$ for $L\geq1$. The difficulty has moved out
+of the source and into the subtraction.
+
+\emph{The domination is saturated.} Writing
+$\Pi_L=A_L^{-1/2}\big(\sum_p\widetilde B_{r_p,d_p}\big)A_L^{-1/2}$, the
+criterion of Corollary~\ref{cor:domination} is $\norm{\Pi_L}\leq1$, and the
+same computation returns $\norm{\Pi_L}=1$ to within $10^{-7}$ with the number
+of eigenvalues above $0.9$ growing from two at $L=4/5$ to thirteen at $L=2$.
+That is expected: $\norm{\Pi_L}=1-\min\operatorname{spec}(Q_L;A_L)$ and $Q_L$
+is nearly degenerate. For contrast, the corresponding quotient for
+\eqref{eq:full-comparison}, which asks $\sum_pB_{r_p,d_p}\preceq K$, equals
+$1.75$ at $L=5/4$, $3.57$ at $L=2$ and $26.1$ at $L=5$. A subspace value
+above one certifies that a domination fails, so those numbers are the
+quantitative form of Theorem~\ref{thm:two-channel}; a subspace value below
+one certifies nothing, so the first row is evidence and not a proof.
+
+\begin{remark}[The mirror weight in the elementary Schur representation]
+\label{rem:mirror-schur}
+Whether \eqref{eq:mirror-weight} arises from a preparation of the kind used in
+Theorem~\ref{thm:schur-prime} is open. With $z=-\zeta$ the required output
+state is proportional to $(1-\zeta)/(1+r\zeta)$, the state of
+Lemma~\ref{lem:one-magnetic} with the numerator sign reversed. That numerator
+came from the cancellation $(1+\zeta)\chi_q(q^{-1}\zeta)=\chi_q(q\zeta)$ and
+is not a free choice: the unitary $\zeta\mapsto-\zeta$ reverses the
+denominator as well and yields alternating coefficients, $q\mapsto-q$ leaves
+the admissible range of the quantization parameter, and moving the factor into
+the dressing \eqref{eq:dressing} places a pole on the unit circle, which
+destroys the graph-domain argument. Resolving this is the next question on the
+Schur side, and it is now a sharply posed one.
+\end{remark}

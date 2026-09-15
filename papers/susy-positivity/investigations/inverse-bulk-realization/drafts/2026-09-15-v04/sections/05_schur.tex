@@ -1,0 +1,120 @@
+\section{Schur pairings before electric dressing}\label{sec:schur}
+\subsection{The conformal electric benchmark}
+Consider the four-dimensional $\mathcal N=2$ $SU(2)$ theory with four
+hypermultiplets, with $0<q<1$ and trivial flavour fugacities. Let
+\begin{equation}\label{eq:pochhammer}
+ (a;Q)_N=\prod_{j=0}^{N-1}(1-aQ^j),\qquad
+ (a;Q)_\infty=\prod_{j\geq0}(1-aQ^j).
+\end{equation}
+The electric-sector spherical norm from \cite[Section 5.1.5]{Schur}
+specializes to the finite positive measure
+\begin{align}
+ \dd\nu_q(\theta)&=Z_q^{-1}\omega_q(\theta)\frac{\dd\theta}{2\pi},
+ \qquad Z_q=\int_0^{2\pi}\omega_q(\theta)\frac{\dd\theta}{2\pi},
+ \notag\\
+ \omega_q(\theta)&=4\sin^2\theta\,
+ \frac{|(q^2e^{2i\theta};q^2)_\infty|^4}
+      {|(-qe^{i\theta};q^2)_\infty|^{16}}.
+ \label{eq:su2-measure}
+\end{align}
+The Wilson operator acts as $W=2\cos\theta$. Normalizing by $Z_q$
+sets the vacuum norm to one; the overall physical normalization would
+also have to be fixed by a full matching theorem.
+
+For the natural source $a_f(W)=\int f(x)e^{ixW}\dd x$, the entire
+pairing is
+\begin{equation}\label{eq:wilson-norm}
+ B_q(f,g)=\int_0^{2\pi}
+ \overline{\widehat f(-2\cos\theta)}\widehat g(-2\cos\theta)
+ \dd\nu_q(\theta).
+\end{equation}
+Its kernel $\int e^{2ir\cos\theta}\dd\nu_q(\theta)$ is entire in
+$r$, because the spectral variable lies in $[-2,2]$. It cannot produce
+separated prime atoms, and its bounded input norm contradicts
+Proposition~\ref{prop:bounded-source}. This conclusion concerns this
+electric preparation only.
+
+\subsection{Local difference factors and the full spherical vector}
+The elementary factor
+\begin{equation}\label{eq:chi}
+ \chi_q(v)=(-qv;q^2)_\infty^{-1}
+ \quad\hbox{satisfies}\quad
+ \frac{\chi_q(q^2v)}{\chi_q(v)}=1+qv.
+\end{equation}
+It occurs in the elementary $q$-Weyl example of
+Ambrosino--Gaiotto \cite[Section 3.1.1]{RG}. The ratio follows by
+cancelling the products in \eqref{eq:pochhammer}.
+For a trial substitution $q=p^{-1/2}$ and $v=-e^{i\tau\log p}$, let
+$J_p(\tau)=1-p^{-1/2}e^{i\tau\log p}$. Then
+\begin{equation}\label{eq:prime-phase}
+ 2\im\partial_\tau\log J_p(\tau)
+ =-2(\log p)\sum_{m\geq1}p^{-m/2}\cos(m\tau\log p).
+\end{equation}
+The series converges absolutely. The unshifted logarithm of $\chi_q$
+instead has coefficients with a factor $(1-q^{2m})^{-1}$. Thus the
+ratio in \eqref{eq:chi}, rather than the factor itself, supplies the
+geometric coefficient.
+
+This calculation has two immediate limitations. A phase derivative
+is not a state norm. In addition, varying $q$ with $p$ varies the
+quantization parameter, and is not a construction in one fixed theory.
+The dressed source in the next section addresses both points for the
+positive local reference. In the full massless four-flavour benchmark,
+the spherical vector has instead the complete ratio
+\begin{equation}\label{eq:full-ratio}
+ \frac{\varphi_0(q^2v)}{\varphi_0(v)}
+ =\frac{(1+qv)^8}
+ {(1-v^2)(1-q^2v^2)^2(1-q^4v^2)}.
+\end{equation}
+All matter and vector factors are retained here. Extracting one
+numerator factor would change the model calculation. Complex holonomy
+shifts and changes of magnetic charge also require an explicit source
+map before they can represent translation in the real arithmetic
+coordinate.
+
+\subsection{The common-state RG formulation and the undressed test}
+The RG formulation \cite[Sections 1--2]{RG} transports a UV line $a$
+to a framed expansion $F_a$ acting on a common spectrum-generator state
+$\mathscr S$. For charge lattice $\Gamma$, the relevant quantum torus
+and pairing take the form
+\begin{equation}\label{eq:rg-pairing}
+ X_\gamma X_\eta=q^{\langle\gamma,\eta\rangle}X_{\gamma+\eta},
+ \qquad I(a,b)=c_q\ip{F_a\mathscr S}{F_b\mathscr S}_{\ell^2(\Gamma)},
+ \quad c_q=(q^2;q^2)_\infty^{2r_{\rm g}}>0.
+\end{equation}
+Here $\langle\gamma,\eta\rangle$ is the integral charge pairing and
+$r_{\rm g}$ is the gauge rank. The same state enters both the
+dualization rule and the norm. General domain and construction claims
+in this formalism include conjectural input; only the explicitly
+defined elementary Hilbert-space calculations below are used as
+unconditional statements. An isometric RG description preserves the
+norm of a given source and cannot itself repair a mismatch.
+
+On one charge ray, take the bilateral shift $Xe_n=e_{n+1}$ on
+$\ell^2(\Z)$ and the vector
+\begin{equation}\label{eq:bare-state}
+ \mathscr S=\sum_{n\geq0}c_ne_n,\qquad
+ c_n=\frac{(-q)^n}{(q^2;q^2)_n},\qquad
+ Z=\sum_{n\geq0}|c_n|^2<\infty.
+\end{equation}
+These are the Fourier coefficients of $\chi_q$. The recurrence
+$(1-q^{2n})c_n=-qc_{n-1}$ gives the complete norm identity
+\begin{equation}\label{eq:bare-norm}
+ \norm{(1+qX)\mathscr S}^2
+ =(1+q^2)Z+2q\re\ip{\mathscr S}{X\mathscr S}
+ =\sum_{n\geq0}q^{4n}|c_n|^2.
+\end{equation}
+Indeed each coefficient of $(1+qX)\mathscr S$ is $q^{2n}c_n$,
+including the coefficient at $n=0$.
+
+The actual normalized overlaps do not give $q^m$. For $m\geq1$,
+\begin{equation}\label{eq:bare-overlap}
+ (-1)^m\frac{\ip{\mathscr S}{X^m\mathscr S}}Z
+ =\frac{q^m}Z\sum_{n\geq0}
+ \frac{|c_n|^2}{\prod_{j=1}^m(1-q^{2(n+j)})}>q^m.
+\end{equation}
+Every summand is positive and each denominator is strictly less than
+one. Convergence follows from $(q^2;q^2)_n\to(q^2;q^2)_\infty>0$.
+Thus a correct local difference equation does not by itself determine
+the desired physical return coefficient. This exact failure motivates
+changing the prepared state while retaining the positive Hilbert metric.

@@ -1,0 +1,88 @@
+\section{A positive gamma action and its integer refinement}\label{app:gamma}
+This appendix records the common positive bulk from which a different
+joint source could be built. For $\alpha>0$, let
+\begin{equation}\label{eq:alpha-tower}
+ a_n(\alpha)=2(n+\alpha),\qquad
+ b_\alpha(s)=\sum_{n\geq0}\frac2{a_n(\alpha)}
+                   \frac{s}{a_n(\alpha)^2+s}.
+\end{equation}
+Thus $b=b_{1/4}$. For line fields $u_n$ with weak derivatives, define
+the nonnegative joint energy
+\begin{equation}\label{eq:alpha-action}
+ \mathcal E_\alpha(F,\{u_n\})
+ =\sum_{n\geq0}\frac2{a_n(\alpha)}
+ \left(\norm{F-u_n}^2+a_n(\alpha)^{-2}\norm{u_n'}^2\right).
+\end{equation}
+The finite-energy domain is specified by the sum as a whole.
+In particular, the divergent expression
+$\sum_n2\norm F^2/a_n(\alpha)$ must not be split off as a separate
+energy from compensating fields.
+
+\begin{proposition}[Elimination and positive refinement]\label{prop:refinement}
+For smooth compactly supported $F$,
+\begin{equation}\label{eq:alpha-inf}
+ \inf_{\{u_n\}}\mathcal E_\alpha(F,\{u_n\})
+ =\frac1{2\pi}\int_\R b_\alpha(\tau^2)|\widehat F(\tau)|^2\dd\tau.
+\end{equation}
+For each integer $p\geq2$, put $\alpha_j=(\alpha+j)/p$,
+$0\leq j<p$, and $D_pF(x)=p^{-1/2}F(x/p)$. Then
+\begin{align}
+ b_\alpha(s)&=\frac1p\sum_{j=0}^{p-1}b_{\alpha_j}(s/p^2),
+ \label{eq:refine-multiplier}\\
+ \mathcal E_\alpha(F,\{u_n\})
+ &=\frac1p\sum_{j=0}^{p-1}
+   \mathcal E_{\alpha_j}
+   (D_pF,\{D_pu_{pm+j}\}_{m\geq0}).
+ \label{eq:refine-action}
+\end{align}
+The latter identity is valid as an equality of nonnegative extended
+energies, before eliminating the fields.
+\end{proposition}
+\begin{proof}
+For each mode, minimizing the Fourier-space quadratic function gives
+$\widehat u_n=a_n^2(a_n^2+\tau^2)^{-1}\widehat F$ and the summand
+in \eqref{eq:alpha-tower}. Substitution of all minimizers, or finite
+towers followed by monotone convergence, proves \eqref{eq:alpha-inf}.
+For refinement, write $n=pm+j$. Then
+$a_{pm+j}(\alpha)=p\,a_m(\alpha_j)$,
+$\norm{D_pu}=\norm u$, and
+$\norm{(D_pu)'}=p^{-1}\norm{u'}$. Substitution proves
+\eqref{eq:refine-action}; reindexing the positive multiplier sum gives
+\eqref{eq:refine-multiplier}.
+\end{proof}
+
+The first examples are
+\begin{align}
+ b_{1/4}(s)&=\tfrac12b_{1/8}(s/4)+\tfrac12b_{5/8}(s/4),
+ \notag\\
+ b_{1/4}(s)&=\tfrac13\left[b_{1/12}(s/9)+b_{5/12}(s/9)
+                           +b_{3/4}(s/9)\right].
+ \label{eq:refine-examples}
+\end{align}
+Refining by $p$ and then by another integer $\ell$ gives residue
+labels $j+pk$, the dilation $D_{p\ell}$ and weights $1/(p\ell)$.
+Thus refinement by $2$ then $3$, or $3$ then $2$, gives the same six
+branches $\{1,5,9,13,17,21\}/24$ up to permutation.
+
+There is also a contact identity. Set
+$m_\alpha(\tau)=\re\psi(\alpha+i\tau/2)-\log\pi$. Gauss
+multiplication \cite{DLMF} gives
+\begin{equation}\label{eq:refine-contact}
+ m_\alpha(\tau)=\log p+
+       \frac1p\sum_{j=0}^{p-1}m_{\alpha_j}(\tau/p).
+\end{equation}
+Subtracting the value at zero recovers \eqref{eq:refine-multiplier}.
+Only the kinetic actions in \eqref{eq:alpha-action} have the asserted
+positivity; \eqref{eq:refine-contact} is not a positive decomposition
+of the complete archimedean form.
+
+These formulas exist for every integer, and so do not select primes.
+Coordinate dilation by $p$ is also different from translation by
+$\log p$. A conservative junction acting on the common refined fields
+could be tested, but its injection, return and readout maps would have
+to derive these relations. The normalization $p^{-1/2}$ in the
+residual-output inclusion is fixed by \eqref{eq:refine-action}; it is
+not yet a physical arithmetic return amplitude. Refinement or a unitary
+rotation of all outputs preserves their norm and cannot itself introduce
+prime terms. No novelty claim is made for gamma multiplication or its
+semilocal use \cite{QuasiInner}.
