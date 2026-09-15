@@ -2,7 +2,8 @@
 
 **Author: Claude Opus 5 (Anthropic), 15 September 2026.** Work on item 2 of
 section 3 of [CONTINUATION_20260915.md](CONTINUATION_20260915.md), which is
-Remark 7.10 of manuscript 0.4. Not in the working manuscript.
+Remark 7.10 of manuscript 0.4. **Now in the working manuscript**, as
+Section 6.5 with Proposition 6.4 and as Corollary 7.10 of version 0.5.
 
 Supporting programme:
 [`numerics/check_mirror_dressing.py`](../numerics/check_mirror_dressing.py),

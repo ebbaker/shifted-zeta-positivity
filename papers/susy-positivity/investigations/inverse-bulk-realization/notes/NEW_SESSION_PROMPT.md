@@ -17,12 +17,16 @@ Start by reading, in this order:
    sector is cheap and carries little information.
 5. `notes/INTERFERENCE_BOUND_AND_TWO_CHANNEL_EXCLUSION.md` — why the earlier
    architecture was abandoned, so you don't re-propose it.
-6. Sections 2.5, 7.4, 7.5 and 8 of `manuscript.tex` (or `manuscript.pdf`).
+6. Sections 2.5, 6.5, 7.4-7.6 and 8 of `manuscript.tex` (or `manuscript.pdf`).
 
 Background for the programme as a whole is in
 `papers/susy-positivity/background_section.tex`, `PROGRAM_OVERVIEW.md` and
 `brainstorm/INVERSE_BULK_AND_DEFECT_DIRECTIONS.md`. The manuscript is
 deliberately self-contained and must not depend on them.
+
+The working manuscript is at version 0.5; version 0.4 and earlier are
+preserved in `drafts/`. Everything settled so far is folded in, so the notes
+and the manuscript agree.
 
 **The task, in order of preference.**
 
@@ -41,16 +45,7 @@ deliberately self-contained and must not depend on them.
    unchanged by the reformulation. A clean negative about a named family is as
    useful as a positive.
 
-2. *The manuscript revision.* Fold in what is settled: the mirror dressing as a
-   companion to Lemma 6.1 and Theorem 6.2, the characterisation of reachable
-   output states in place of Remark 7.10, and the replacement of the "pole term
-   needs a mechanism" paragraph of Section 8.2 described in section 5 of the
-   pole-term note. Follow the version conventions in section 5 of the
-   continuation note: snapshot before replacing, record the build, honest visual
-   review. This is the natural moment to do it, because it is also when
-   `check_mirror_dressing.py` can be registered in the `CHECKS` dictionary of
-   `validation/drafts.py`.
-3. *The compact window `log 2 < L < log 7`*, if the construction stalls. It is
+2. *The compact window `log 2 < L < log 7`*, if the construction stalls. It is
    the range on which `A_L >= 0` is known only from RH. Nothing in the
    construction programme now depends on it. The most promising tool
    is the interior Dirichlet form discarded in Proposition 8.1: for `L <= 3.5`

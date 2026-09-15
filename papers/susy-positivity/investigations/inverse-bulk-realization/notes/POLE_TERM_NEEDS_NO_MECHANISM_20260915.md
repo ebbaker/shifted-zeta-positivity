@@ -1,8 +1,9 @@
 # The pole term does not need a mechanism
 
 **Author: Claude Opus 5 (Anthropic), 15 September 2026.** Work on item 1 of
-section 3 of [CONTINUATION_20260915.md](CONTINUATION_20260915.md). Not in the
-working manuscript; section 5 records a correction the manuscript needs.
+section 3 of [CONTINUATION_20260915.md](CONTINUATION_20260915.md). **The
+correction of section 5 is now in the working manuscript**, in Section 8.2 of
+version 0.5.
 
 Supporting record, already in the repository:
 [`prime-free-archimedean-checks.json`](../numerics/records/prime-free-archimedean-checks.json),
@@ -185,10 +186,10 @@ programme than "constrains no candidate theory" suggests: it is the difference
 between building a source for a form known to be positive and building one for a
 form whose positivity is open.
 
-## 5. The correction the manuscript needs
+## 5. The correction, now made in version 0.5
 
-In Section 8.2, the paragraph "The pole term needs a mechanism" should be
-replaced. Its first two sentences are correct and should stay. The sentence
+In Section 8.2 of version 0.4, the paragraph "The pole term needs a
+mechanism" was replaced as follows, and version 0.5 carries the replacement. Its first two sentences are correct and should stay. The sentence
 beginning "A realization must therefore contain a two-dimensional subspace with
 a split inner product" should go, together with the ghost pair, the BRST doublet
 and the indefinite-metric sector, and the closing claim that "locating a

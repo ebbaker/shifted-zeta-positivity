@@ -10,8 +10,8 @@ The [current working manuscript](manuscript.pdf), *Sphere and Schur sources for
 the localized Weil form*, collects the present results in a self-contained
 draft. Its [TeX source](manuscript.tex) has internal equation labels and does
 not input the shared background. Reviewed versions are preserved in
-[drafts/](drafts/README.md); version 0.4 is current and versions 0.1, 0.2 and
-0.3 are preserved unchanged.
+[drafts/](drafts/README.md); version 0.5 is current and versions 0.1 to 0.4
+are preserved unchanged.
 See the [build guide](BUILD.md) and [coverage map](MANUSCRIPT_COVERAGE.md).
 
 Start with the [broad program overview](../../brainstorm/INVERSE_BULK_AND_DEFECT_DIRECTIONS.md)
@@ -90,7 +90,8 @@ is produced by one magnetic insertion on an admissible electric preparation at
 the same fixed \(q\) as the positive reference, and in fact every output state
 analytic past the unit circle is reachable. So the mirror does not require its
 own protected sector, and the appearance of a prime weight in a positive sector
-is a statement about the dressing rather than about the representation. See the
+is a statement about the dressing rather than about the representation. This is
+Section 6.5 and Corollary 7.10 of version 0.5; the research is in the
 [mirror-dressing note](notes/MIRROR_DRESSING_AND_REACHABLE_STATES_20260915.md).
 
 **The pole term needs no mechanism, and Section 8.2 needs a correction.** The
@@ -104,7 +105,8 @@ the binding direction of \(A_L\) is even, where the pole form is *positive*.
 The construction target is therefore the first half of
 Problem 8.3 --- a positive source for \(A_L\), reflection covariant, with no
 prime translation --- and then the mirror references as a compression of it.
-See the [pole-term note](notes/POLE_TERM_NEEDS_NO_MECHANISM_20260915.md).
+The claim is withdrawn in Section 8.2 of version 0.5; the research is in the
+[pole-term note](notes/POLE_TERM_NEEDS_NO_MECHANISM_20260915.md).
 
 **The construction target is now one compression of the gamma energy.** Splitting
 the pole form by parity puts its positive half on the source side and its
@@ -114,7 +116,9 @@ norm, with an explicit source --- and \(T_L\) the negative contact, the odd
 pole direction and every mirror prime reference, manifestly positive. Weil
 positivity on \(I_L\) is then the single domination \(T_L\preceq K_+\), with no
 unproved inequality anywhere in the presentation: in particular the prime-free
-inequality (8.1) is not a prerequisite for the construction programme. See the
+inequality (8.1) is not a prerequisite for the construction programme. This is
+Section 7.6 of version 0.5, and Problem 8.3 is restated accordingly; the
+research is in the
 [gamma-compression note](notes/GAMMA_COMPRESSION_PRESENTATION_20260915.md).
 
 ## Working direction

@@ -5,8 +5,8 @@
 which struck item 1 of section 3 of
 [CONTINUATION_20260915.md](CONTINUATION_20260915.md) and named the first half
 of Problem 8.3 as its replacement. This note shows that replacement can be
-dropped as well. Not in the working manuscript; section 5 says what it should
-replace there.
+dropped as well. **Now in the working manuscript**, as Section 7.6 with
+Proposition 7.11 of version 0.5; section 5 records what it replaced.
 
 Supporting programme:
 [`numerics/check_gamma_compression.py`](../numerics/check_gamma_compression.py),
@@ -172,16 +172,16 @@ neither is a protected-sector preparation in the sense of the programme's
 objective. No construction of `Pi`. And the presentation does not make the
 problem easier in any quantitative sense — the saturation is the same.
 
-## 5. What the manuscript should say
+## 5. What it replaced in the manuscript
 
 Section 7.5 and Section 8.2 currently present the subtraction form with `A_L`
 as the source side, and Problem 8.3 asks for (8.1) unconditionally and a source
-for `A_L`. The proposition above should be added next to Corollary 7.9, with
+for `A_L`. The proposition above is added next to Corollary 7.9 in version 0.5, with
 three consequences recorded: that the source side can be taken to be the gamma
 energy plus two elementary terms, that the presentation needs no unproved
 inequality, and that (8.1) is therefore not a prerequisite for the construction
-programme. Problem 8.3 should lose its first clause. The exact sign-change
-statement at `p = 13` belongs with the table in Section 7.5.
+programme. Problem 8.3 loses its first clause, and the exact sign-change
+statement at `p = 13` appears with the constant ladder in Section 7.6.
 
 ## 6. Status of each claim
 

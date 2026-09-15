@@ -1,4 +1,4 @@
-# Coverage of working manuscript 0.4
+# Coverage of working manuscript 0.5
 
 The [manuscript](manuscript.pdf) is a self-contained synthesis of the current
 inverse-bulk investigation. It has its own equation labels and bibliography.
@@ -10,13 +10,13 @@ the [draft index](drafts/README.md) preserves reviewed versions.
 | Sections 1-3 | Exact-fitting objective, full Weil normalization, domains, physical positivity, conditional construction-to-RH implication, bounded-source exclusion, the spectral form of the target (2.4), and the fixed-interval versus compatible-family distinction. | [Foundational analysis](notes/ANALYSIS.md), [sphere/Schur comparison](notes/SPHERE_AND_SCHUR_PAIRINGS.md); all required background is restated and derived in the manuscript. |
 | Section 4 | Real Gaussian Mellin density, oscillator gamma tower, archimedean phase, interacting charged-state Gram matrix and repetition failure. | [Sphere/Schur comparison](notes/SPHERE_AND_SCHUR_PAIRINGS.md). |
 | Section 5 | Conformal electric norm, complete spherical-vector shift ratio, common-state RG pairing and undressed-return exclusion. | [Sphere/Schur comparison](notes/SPHERE_AND_SCHUR_PAIRINGS.md). |
-| Section 6 | Electric dressing, one magnetic insertion with graph-domain proof, all local prime coefficients and compulsory contact, explicit continuous-input lift. | [Dressed Schur returns](notes/SCHUR_DRESSED_RETURNS_AND_GLUING.md). |
-| Section 7 | Higher-power coefficient-domain restriction, mixed atom for constant-vector two-prime gluing, full contact/pole comparison, the interference bound with the two-channel exclusion theorem and its certificates (7.4), and the mirror prime reference with the prime-free subtraction form and the domination/compression criterion (7.5). | [Dressed Schur returns](notes/SCHUR_DRESSED_RETURNS_AND_GLUING.md). |
-| Section 8 | Placement among spectral realizations of the zeros, what the exclusion leaves (contact by projection, the prime-free archimedean inequality, a mechanism for the poles, spectral measures as the object to compute), the finite local-factor phase bridge, and the open joint-source and subtraction problems. | Both focused notes and the [broad survey](notes/DEFECT_OBSERVABLE_SURVEY.md). |
+| Section 6 | Electric dressing, one magnetic insertion with graph-domain proof, all local prime coefficients and compulsory contact, explicit continuous-input lift, and the characterisation of the reachable output states (6.5). | [Dressed Schur returns](notes/SCHUR_DRESSED_RETURNS_AND_GLUING.md). |
+| Section 7 | Higher-power coefficient-domain restriction, mixed atom for constant-vector two-prime gluing, full contact/pole comparison, the interference bound with the two-channel exclusion theorem and its certificates (7.4), and the mirror prime reference with the prime-free subtraction form and the domination/compression criterion (7.5), the Schur realization of that mirror reference (7.10), and the presentation of the target as a compression of the gamma energy (7.6). | [Dressed Schur returns](notes/SCHUR_DRESSED_RETURNS_AND_GLUING.md). |
+| Section 8 | Placement among spectral realizations of the zeros, what the exclusion leaves (contact by projection, the prime-free archimedean inequality, why the pole term needs no mechanism of its own, spectral measures as the object to compute), the finite local-factor phase bridge, and the open joint-source and subtraction problems. | Both focused notes and the [broad survey](notes/DEFECT_OBSERVABLE_SURVEY.md). |
 | Appendix A | Positive gamma action, integer refinement, composition and contact identity. | [Foundational analysis](notes/ANALYSIS.md). |
 | Appendix B | Winding versus transfer, central-semigroup exclusion, positive disk model, first-prime cusp and coherent contact failures. | [Gauge-transfer test](notes/GAUGE_TRANSFER_TEST.md). |
 | Appendix C | Scoped obstruction to finite rational feedback. | [Foundational analysis](notes/ANALYSIS.md). |
-| Appendix D | Eight checks and their limits, including the explicit-formula normalization check, the channel-bound certificates and the two conclusive step certificates of the prime-free check, with source provenance and draft preservation. | [Numerics index](numerics/README.md). |
+| Appendix D | Ten checks and their limits, including the explicit-formula normalization check, the channel-bound certificates and the two conclusive step certificates of the prime-free check, with source provenance and draft preservation. | [Numerics index](numerics/README.md). |
 
 New in 0.2: Corollary 2.2, Remark 3.8, Proposition 7.3, Lemma 7.4,
 Theorem 7.5, Remark 7.6, Sections 8.1-8.2, two new check programs, and the
@@ -32,6 +32,18 @@ reference, the corresponding qualification of the Connes-Consani mechanism in
 8.1, `check_prime_free_archimedean.py`, an author field and a preparation note.
 The research behind 2.5 and 8.2 is in
 [PRIME_FREE_ARCHIMEDEAN_INEQUALITY_20260915.md](notes/PRIME_FREE_ARCHIMEDEAN_INEQUALITY_20260915.md).
+New in 0.5: Section 6.5 with Proposition 6.4, Corollary 7.10 in place of the
+open Remark 7.10 of 0.4, Section 7.6 entire with
+Proposition 7.11, the withdrawal in 8.2 of the claim that a realization of the
+pole term must contain a null pair in an indefinite-metric sector, the
+restatement of Problem 8.3 as the single compression, and
+`check_mirror_dressing.py` and `check_gamma_compression.py`. The research
+behind 6.5 and 7.10 is in
+[MIRROR_DRESSING_AND_REACHABLE_STATES_20260915.md](notes/MIRROR_DRESSING_AND_REACHABLE_STATES_20260915.md),
+behind the 8.2 withdrawal in
+[POLE_TERM_NEEDS_NO_MECHANISM_20260915.md](notes/POLE_TERM_NEEDS_NO_MECHANISM_20260915.md),
+and behind 7.6 in
+[GAMMA_COMPRESSION_PRESENTATION_20260915.md](notes/GAMMA_COMPRESSION_PRESENTATION_20260915.md).
 
 The broad survey's alternative theories remain in the notes rather than being
 expanded into separate speculative manuscript sections. No common-field

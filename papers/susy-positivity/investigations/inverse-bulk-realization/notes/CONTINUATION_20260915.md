@@ -66,8 +66,15 @@ RH, which briefly looked like a prerequisite for constructing a source for
 prerequisite for anything in the construction programme. It remains an
 interesting question about `A_L` and nothing is waiting on it.
 
+**All three results are now in the working manuscript**, version 0.5:
+Section 6.5 and Corollary 7.10 for the reachable states and the mirror
+dressing, Section 7.6 for the compression, and the revision of Section 8.2
+withdrawing the indefinite-metric claim, with Problem 8.3 restated as the
+single compression. Version 0.4 is preserved in `drafts/2026-09-15-v04`.
+
 Sections 1 to 5 below are otherwise unchanged and remain the handoff, with
-section 3's ordering superseded as above.
+section 3's ordering superseded as above. Note that section 1's description of
+the state of the investigation refers to version 0.4.
 
 ## 1. State of the investigation
 
