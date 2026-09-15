@@ -38,6 +38,9 @@ it does not announce a completed reduction to a particular field theory.
 | [Sphere and Schur pairings](notes/SPHERE_AND_SCHUR_PAIRINGS.md) | Focused; first comparison | Gaussian boundary gamma data, interacting rank-one norms, conformal Wilson pairing, Schur local-factor and common-state tests, and the next source choices. |
 | [Gauge-transfer test](notes/GAUGE_TRANSFER_TEST.md) | Focused; earlier | Winding versus transfer, a positive disk model, and two first-prime preparations with exact mismatches. |
 | [Notes index](notes/README.md) | Navigation | Reading order and the status of each retained note. |
+| [Mirror dressing and reachable states](notes/MIRROR_DRESSING_AND_REACHABLE_STATES_20260915.md) | Focused; current | Why the mirror prime reference is reachable in the elementary Schur representation, the characterisation of reachable output states, and why weight-matching in a positive sector carries little information. |
+| [The pole term needs no mechanism](notes/POLE_TERM_NEEDS_NO_MECHANISM_20260915.md) | Focused; current | Why no ghost pair is required or possible, the quantitative smallness of the pole form's negative direction inside the prime-free form, and the corrected construction target. |
+| [Gamma compression presentation](notes/GAMMA_COMPRESSION_PRESENTATION_20260915.md) | Focused; current construction target | The target as a compression of the gamma energy, with both sides manifestly positive and an explicit source on the dominating side. |
 | [Continuation note](notes/CONTINUATION_20260915.md) | Handoff | Where the investigation stands, the ordered next steps, and what not to redo. |
 | [Reviews](reviews/README.md) | Assessment | Dated reviews of manuscript versions, with the revisions each prompted. |
 | [Checks and records](numerics/README.md) | Supporting calculations | Small reproducible algebra programs and their explicitly scoped results. |
@@ -82,6 +85,38 @@ inequality (8.1) is settled for \(L\le\log 2\) by Yoshida and for
 \(L\ge\log 7\) here, leaving the compact window \(\log 2<L<\log 7\). See the
 [prime-free note](notes/PRIME_FREE_ARCHIMEDEAN_INEQUALITY_20260915.md).
 
+**Remark 7.10 is settled and its answer narrows nothing.** The mirror weight
+is produced by one magnetic insertion on an admissible electric preparation at
+the same fixed \(q\) as the positive reference, and in fact every output state
+analytic past the unit circle is reachable. So the mirror does not require its
+own protected sector, and the appearance of a prime weight in a positive sector
+is a statement about the dressing rather than about the representation. See the
+[mirror-dressing note](notes/MIRROR_DRESSING_AND_REACHABLE_STATES_20260915.md).
+
+**The pole term needs no mechanism, and Section 8.2 needs a correction.** The
+ghost pair asked for there cannot exist in a realization --- by
+Corollary 2.2 a compatible one is evaluation on the zeros in a positive
+\(\ell^2\) --- and is not needed, because under the subtraction form the pole
+term sits inside the positive prime-free form \(A_L\), absorbed by the same
+domination that absorbs the negative contact. Its negative direction is rank
+one, bounded by \(2(\sinh(L/2)-L/2)\), and far from binding: below \(\log 2\)
+the binding direction of \(A_L\) is even, where the pole form is *positive*.
+The construction target is therefore the first half of
+Problem 8.3 --- a positive source for \(A_L\), reflection covariant, with no
+prime translation --- and then the mirror references as a compression of it.
+See the [pole-term note](notes/POLE_TERM_NEEDS_NO_MECHANISM_20260915.md).
+
+**The construction target is now one compression of the gamma energy.** Splitting
+the pole form by parity puts its positive half on the source side and its
+negative half on the subtracted side, giving \(Q_L=K_+-T_L\) with
+\(K_+\) the gamma energy plus a constant and a rank-one term --- manifestly a
+norm, with an explicit source --- and \(T_L\) the negative contact, the odd
+pole direction and every mirror prime reference, manifestly positive. Weil
+positivity on \(I_L\) is then the single domination \(T_L\preceq K_+\), with no
+unproved inequality anywhere in the presentation: in particular the prime-free
+inequality (8.1) is not a prerequisite for the construction programme. See the
+[gamma-compression note](notes/GAMMA_COMPRESSION_PRESENTATION_20260915.md).
+
 ## Working direction
 
 Continue with charge-neutral Schur RG/interface preparations that retain
@@ -111,6 +146,7 @@ python3 numerics/check_dressed_schur.py
 python3 numerics/check_explicit_formula.py
 python3 numerics/check_channel_bound.py
 python3 numerics/check_mirror_subtraction.py
+python3 numerics/check_mirror_dressing.py
 python3 validation/drafts.py check --replay
 ```
 

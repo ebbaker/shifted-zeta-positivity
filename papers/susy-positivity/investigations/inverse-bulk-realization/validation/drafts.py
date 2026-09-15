@@ -25,6 +25,8 @@ CHECKS = {
     "check_channel_bound.py": "channel-bound-checks.json",
     "check_mirror_subtraction.py": "mirror-subtraction-checks.json",
     "check_prime_free_archimedean.py": "prime-free-archimedean-checks.json",
+    "check_mirror_dressing.py": "mirror-dressing-checks.json",
+    "check_gamma_compression.py": "gamma-compression-checks.json",
 }
 
 

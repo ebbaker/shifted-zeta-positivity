@@ -1,0 +1,80 @@
+{
+  "status": "passed",
+  "date": "2026-09-15",
+  "model": "claude-opus-5",
+  "parameters": {
+    "q": "2/5",
+    "r": "3/5",
+    "a_eq_qr": "6/25",
+    "series_truncation": 60
+  },
+  "arithmetic": "exact rational power series, except the labelled convergence rate, which is floating point",
+  "checks": {
+    "action_identities": 122,
+    "electric_ratio": 61,
+    "pochhammer_telescoping": 244,
+    "graph_convergence_rate": 3,
+    "weight_coefficients": 12,
+    "weight_series_agreement": 12,
+    "output_orthogonality": 1,
+    "general_reachability": 183
+  },
+  "total_checks": 638,
+  "dressing_tail": [
+    {
+      "truncation": 8,
+      "tail_at_radius_1_over_q": 0.06718463999999992
+    },
+    {
+      "truncation": 16,
+      "tail_at_radius_1_over_q": 0.001128443962982398
+    },
+    {
+      "truncation": 24,
+      "tail_at_radius_1_over_q": 1.8953525353286416e-05
+    },
+    {
+      "truncation": 32,
+      "tail_at_radius_1_over_q": 3.1834644439785477e-07
+    }
+  ],
+  "observed_rate_per_8_terms": [
+    0.01679615999999999,
+    0.016796159999999984,
+    0.01679615999999998
+  ],
+  "predicted_rate_per_8_terms": 0.016796159999999994,
+  "mirror_weight_coefficients": [
+    "5",
+    "4",
+    "12/5",
+    "36/25",
+    "108/125",
+    "324/625"
+  ],
+  "weight_series_max_gap": 1.2287224276543777e-25,
+  "positive_weight_coefficients": [
+    "5/4",
+    "-1/4",
+    "-3/20",
+    "-9/100",
+    "-27/500",
+    "-81/2500"
+  ],
+  "general_reachability": [
+    {
+      "target": "mirror",
+      "reproduced": true
+    },
+    {
+      "target": "rational_pole_at_2",
+      "reproduced": true
+    },
+    {
+      "target": "polynomial",
+      "reproduced": true
+    }
+  ],
+  "reading": "The mirror prime reference is the output of one negative magnetic insertion applied to an admissible electric preparation of the same elementary representation at the same fixed q, so Remark 7.10 of manuscript 0.4 has a positive answer. More generally every function analytic on a disk of radius greater than one is a reachable output state: the factor (1+zeta) supplied by u_- is cancelled by the j=0 factor of the vacuum Pochhammer whenever the dressing declines to remove it.",
+  "scope": "Reachability of source states only. No positivity certificate, no compression of the prime-free form A_L, and no statement about Problem 8.3 or the pole term."
+}

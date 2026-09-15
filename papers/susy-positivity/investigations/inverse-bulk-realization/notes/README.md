@@ -15,6 +15,9 @@ calculations. Their roles are explicit below.
 | [INTERFERENCE_BOUND_AND_TWO_CHANNEL_EXCLUSION.md](INTERFERENCE_BOUND_AND_TWO_CHANNEL_EXCLUSION.md) | Current; exclusion | Why the gamma-plus-prime architecture cannot be completed: the spectral scale of the target, the interference bound, the explicit certificates, and how far the exclusion extends. Written by Claude Opus 5. |
 | [MIRROR_REFERENCE_AND_SUBTRACTION_FORM.md](MIRROR_REFERENCE_AND_SUBTRACTION_FORM.md) | Current; narrowed direction | The mirror prime reference, the prime-free subtraction form of the target, the contraction whose norm is Weil positivity, and the two objects left to construct. Written by Claude Opus 5. |
 | [PRIME_FREE_ARCHIMEDEAN_INEQUALITY_20260915.md](PRIME_FREE_ARCHIMEDEAN_INEQUALITY_20260915.md) | Current; closes both ends of the prime-free inequality | Why the prime-free inequality below $\log 2$ is Weil positivity itself and is already Yoshida's Theorem 1 (pole-inclusive, no side condition), how Connes--Consani's restatement of it differs and why their mechanism cannot supply (8.1), the parity split and the two-scalar reduction, a proof of $A_L\ge 0$ for $L\ge\log 7$, a certificate that the bare archimedean form dies at $L=3/4$, and the resulting open window $\log 2<L<\log 7$. Written by Claude Opus 5. |
+| [MIRROR_DRESSING_AND_REACHABLE_STATES_20260915.md](MIRROR_DRESSING_AND_REACHABLE_STATES_20260915.md) | Current; settles Remark 7.10 | Why the mirror prime reference *is* reachable in the elementary $q$-Weyl representation, the dressing that produces it, the general characterisation of reachable output states, where Remark 7.10's argument fails, and why the consequence for the programme is modest. Written by Claude Opus 5. |
+| [POLE_TERM_NEEDS_NO_MECHANISM_20260915.md](POLE_TERM_NEEDS_NO_MECHANISM_20260915.md) | Current; closes item 1 | Why the ghost-pair specification asks for a structure a realization cannot have and does not need: the conflict with Corollary 2.2, what the channel argument really establishes, how far the pole term's negative direction is from binding inside the prime-free form, the corrected target, and the correction Section 8.2 needs. Written by Claude Opus 5. |
+| [GAMMA_COMPRESSION_PRESENTATION_20260915.md](GAMMA_COMPRESSION_PRESENTATION_20260915.md) | Current; construction target | $Q_L$ as a compression of the gamma energy: a source side that is manifestly a norm and has an explicit source, a subtracted side that is manifestly positive, no unproved positivity anywhere, and what that leaves of Problem 8.3. Written by Claude Opus 5. |
 | [CONTINUATION_20260915.md](CONTINUATION_20260915.md) | Handoff | State of the investigation, the three facts a new session needs, the ordered next steps, and what not to redo. Written by Claude Opus 5. |
 | [NEW_SESSION_PROMPT.md](NEW_SESSION_PROMPT.md) | Handoff | A ready prompt for starting the next session on the prime-free archimedean inequality. |
 
@@ -30,6 +33,11 @@ from the investigation root with local links updated. A missing plus sign
 before the contact term in the survey's displayed target was repaired to
 agree with the foundational formula. Navigation updates do not change
 the status of the earlier mathematical claims.
+
+The mirror-dressing and acceptance-test notes were added later on 15 September 2026,
+in the session that answered Remark 7.10. The first of them supersedes the manuscript's
+statement that the mirror weight's reachability is open; the second is the written-down
+form of the pole-sector test, ahead of any candidate.
 
 The last two notes were prepared by **Claude Opus 5 (Anthropic)** on
 15 September 2026, alongside the

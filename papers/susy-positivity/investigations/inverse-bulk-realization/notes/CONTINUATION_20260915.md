@@ -6,6 +6,69 @@ date, which is preserved in git at commit `3d63aa7`; its ordering of next
 steps was wrong and section 3 below explains why. Read this, then the notes it
 points at.
 
+## 0. Status update, later on 15 September 2026
+
+**Both items 1 and 2 of section 3 below are closed. Section 3's ordered list
+should be read as superseded by this section.**
+
+**Item 2 — Remark 7.10 — is settled, affirmatively.** The mirror weight is
+reachable: one negative magnetic insertion applied to an admissible electric
+preparation at the same fixed `q`, with the dressing of Lemma 6.1 and the sign
+of its first Pochhammer factor reversed. More generally the reachable output
+states are exactly the functions analytic on a disk of radius greater than one,
+so the `(1+zeta)` that `u_-` supplies constrains nothing, and weight-matching
+inside a positive sector is cheap and carries little information. See
+[MIRROR_DRESSING_AND_REACHABLE_STATES_20260915.md](MIRROR_DRESSING_AND_REACHABLE_STATES_20260915.md)
+and `numerics/check_mirror_dressing.py`.
+
+**Item 1 — the ghost pair — should be struck.** The specification asks for a
+structure that a realization cannot have and does not need. A realization
+compatible in `L` is, by Corollary 2.2, evaluation on the zeros in a positive
+`l^2`, which has no null vectors at all; and under the subtraction form the
+pole term sits inside `A_L`, which is positive by Yoshida below `log 2`, by
+Proposition 8.1 above `log 7`, and by RH everywhere. Its negative direction is
+rank one, bounded by `2(sinh(L/2) - L/2)`, and nowhere near binding: below
+`log 2` the binding direction of `A_L` is *even*, where the pole form is
+positive, and above it admitting the negative direction costs three per cent of
+the margin at `L = 1`. Section 8.2 of the manuscript needs a correction; see
+[POLE_TERM_NEEDS_NO_MECHANISM_20260915.md](POLE_TERM_NEEDS_NO_MECHANISM_20260915.md),
+section 5, for exactly which sentences.
+
+**What replaces them, and it is smaller than the first half of Problem 8.3.**
+That first half — realize `A_L` as a positive source norm — can be dropped too.
+Splitting the pole form by parity, (2.17), and letting the constant sit on
+whichever side its sign puts it on gives, at every `L`,
+
+```
+ Q_L = K_+ - T_L,
+ K_+[f] = K[E_L f] + (c_L)_+ ||f||^2 + 2 |<cosh(x/2),f>|^2,
+ T_L[f] = (c_L)_- ||f||^2 + 2 |<sinh(x/2),f>|^2 + sum_p Bt_p[E_L f],
+```
+
+with `K_+` manifestly a norm — explicit source
+`Gf = (b^{1/2}(D)E_L f, (c_L)_+^{1/2} f, sqrt2 <cosh(x/2),f>)` — and `T_L`
+manifestly positive term by term. So Weil positivity on `I_L` is the single
+domination `T_L <= K_+`, the dominating side is an object one can actually
+build, and **no unproved positivity enters the presentation at all**. The
+construction problem is now exactly: exhibit the contraction. See
+[GAMMA_COMPRESSION_PRESENTATION_20260915.md](GAMMA_COMPRESSION_PRESENTATION_20260915.md)
+and `numerics/check_gamma_compression.py`.
+
+The surviving necessary condition from the discarded pole-sector test is
+Proposition 2.4's involution, and nothing else. Item 3 of section 3 (what to
+compute in a candidate model: a spectral measure, not a term-by-term match)
+stands unchanged.
+
+**Item 4 stays parked, and for a better reason than before.** The compact
+window `log 2 < L < log 7` is the range on which `A_L >= 0` is known only from
+RH, which briefly looked like a prerequisite for constructing a source for
+`A_L`. In the presentation above `A_L` never appears, so (8.1) is not a
+prerequisite for anything in the construction programme. It remains an
+interesting question about `A_L` and nothing is waiting on it.
+
+Sections 1 to 5 below are otherwise unchanged and remain the handoff, with
+section 3's ordering superseded as above.
+
 ## 1. State of the investigation
 
 Working manuscript **0.4** (37 pages). Versions 0.1 to 0.4 are preserved in
@@ -129,7 +192,7 @@ Parked, deliberately:
   Their functional excludes the pole terms and their hypothesis is exactly
   `P_L = 0`, which is the one thing a source norm cannot discard.
 - Do not test candidates by matching the terms of (2.9) one at a time; use the
-  interference bound (7.11) first, it is cheap and kills most proposals.
+  interference bound (7.9) first, it is cheap and kills most proposals.
 - The dressed Schur identity (Theorem 6.2) is correct and does not need
   rechecking.
 
