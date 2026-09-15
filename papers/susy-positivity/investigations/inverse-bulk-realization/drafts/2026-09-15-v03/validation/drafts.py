@@ -24,7 +24,6 @@ CHECKS = {
     "check_explicit_formula.py": "explicit-formula-checks.json",
     "check_channel_bound.py": "channel-bound-checks.json",
     "check_mirror_subtraction.py": "mirror-subtraction-checks.json",
-    "check_prime_free_archimedean.py": "prime-free-archimedean-checks.json",
 }
 
 

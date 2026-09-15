@@ -1,0 +1,176 @@
+\section{Gauge transfer and two first-prime source tests}\label{app:gauge}
+\subsection{Winding a holonomy is different from transfer evolution}
+Two-dimensional heat-kernel Yang--Mills supplies a rigorous control
+with explicit Wilson functionals \cite{YM2}. Normalize the positive
+$SU(2)$ Casimir so that the spin-$j$ representation has value $j(j+1)$.
+For dimensionless area-coupling parameter $s>0$,
+\begin{equation}\label{eq:heat-character}
+ \mathbb E_s[\chi_j(U)]=(2j+1)e^{-sj(j+1)}.
+\end{equation}
+The normalized fundamental loop wound $m$ times is
+$w_m(U)=\tfrac12\Tr_{\C^2}(U^m)=\cos(m\vartheta)$, for eigenvalues
+$e^{\pm i\vartheta}$. The character identity
+$2\cos(m\vartheta)=\chi_{m/2}-\chi_{(m-2)/2}$ for $m\geq2$ gives
+\begin{equation}\label{eq:windings}
+ \mathbb E_s[w_1]=e^{-3s/4},\qquad
+ \mathbb E_s[w_m]=\frac12\left[(m+1)e^{-sm(m+2)/4}
+                           -(m-1)e^{-sm(m-2)/4}\right].
+\end{equation}
+If the first return is set to $r\in(0,1)$, the second is
+$(3r^{8/3}-1)/2$, strictly less than $r^2$. Indeed, for $y=r^{2/3}$,
+\begin{equation}\label{eq:winding-failure}
+ 3y^4-2y^3-1=(y-1)(3y^3+y^2+y+1)<0.
+\end{equation}
+No overall primitive-length coefficient repairs this relative failure.
+
+The same literal winding rule fails for every central probability
+convolution semigroup with proposed moments
+$\mathbb E_t[w_1]=r_t=e^{-\lambda t}$ and
+$\mathbb E_t[w_2]=r_t^2$, $\lambda>0$. The normalized spin-one
+character coefficient would be $c_1(t)=(1+2r_t^2)/3$. Convolution
+requires multiplicativity, but
+\begin{equation}\label{eq:semigroup-failure}
+ c_1(t+u)-c_1(t)c_1(u)
+ =\frac29(1-r_t^2)(1-r_u^2)>0\qquad(t,u>0).
+\end{equation}
+
+In contrast, let $H=\tfrac23C_2$ on the character Hilbert space with
+Haar inner product, and choose the unit vector $\eta=\chi_{1/2}$.
+Then $H\eta=\tfrac12\eta$ and
+\begin{equation}\label{eq:transfer-return}
+ \ip\eta{e^{-m(\log p)H}\eta}=p^{-m/2}.
+\end{equation}
+This propagates a fixed representation for a longer interval; it does
+not wind the same holonomy. It passes the scalar repetition test.
+
+Even so, the literal affine Euclidean source
+$\Phi_L(f)=\int_{I_L}f(x)e^{-(b+x)H}\eta\dd x$, $b>L/2$,
+has a Hankel kernel $C(2b+x+y)$, where $C(t)=\ip\eta{e^{-tH}\eta}$.
+If $H\geq0$ and this kernel is invariant under small simultaneous
+translations of $x,y$, then $C'$ vanishes on an interval. Its spectral
+measure satisfies
+$-C'(t)=\int\lambda e^{-t\lambda}\dd\nu_\eta(\lambda)$, so
+$\eta$ must lie in the zero-energy subspace. The resulting kernel is
+constant. This excludes that affine-time source, not other spatial,
+normalized or extended gauge preparations.
+
+\subsection{A positive disk system for masses and returns}
+Let $\Lambda$ be the Dirichlet-to-Neumann operator on the unit disk.
+On the reflection-even boundary subspace, with normalized measure
+$\dd\vartheta/(2\pi)$, use the basis
+$e_0=1$, $e_n=\sqrt2\cos(n\vartheta)$ for $n\geq1$.
+Harmonic extension gives $\Lambda e_n=ne_n$. Thus
+\begin{equation}\label{eq:disk-A}
+ A=2\Lambda+\tfrac12\id,
+ \qquad Ae_n=a_ne_n,
+\end{equation}
+has the gamma spectrum and positive quadratic form
+\begin{equation}\label{eq:disk-energy}
+ \ip h{Ah}=\frac2{2\pi}\int_{\mathbb D}|\nabla u_h|^2\dd^2z
+       +\frac{1/2}{2\pi}\int_{S^1}|h|^2\dd\vartheta.
+\end{equation}
+Here $u_h$ is the harmonic extension; the form domain is the even
+$H^{1/2}$ trace space. The choice of half-unit shift and one mode
+per nonnegative integer is explicit model data, not forced by an
+arithmetic symmetry.
+
+The transfer is a shifted Poisson semigroup. On the full circle it
+also has the positive subordination formula
+\begin{equation}\label{eq:subordination}
+ e^{-tA}=e^{-t/2}\frac t{\sqrt\pi}
+ \int_0^\infty s^{-3/2}e^{-t^2/s}e^{-sD^2}\dd s,
+ \qquad D=-i\partial_\vartheta,
+\end{equation}
+which restricts to the even subspace. The scalar Laplace integral
+proves the formula on each Fourier mode. This is a change of transfer
+generator, not an equivalence with the original Yang--Mills dynamics.
+
+Let $P_0=|e_0\rangle\langle e_0|$ and $T_p=e^{-(\log p)A}$.
+Then
+\begin{align}
+ b(\tau^2)&=2\Tr\left[A^{-1}\frac{\tau^2}{A^2+\tau^2}\right],
+ \notag\\
+ \Tr(P_0T_p^m)&=p^{-m/2},\qquad
+ T_pT_\ell=T_{p\ell},\qquad
+ \Tr(T_p^m)=\frac{p^{-m/2}}{1-p^{-2m}}.
+ \label{eq:disk-transfer}
+\end{align}
+The ground projection is therefore essential to the proposed pure
+geometric return. This model does not derive primality, the primitive
+coefficient $\log p$, or the absence of mixed histories.
+
+\subsection{An orthogonal first-prime branch has an unavoidable cusp}
+Use the source \eqref{eq:gamma-source} and set $a=1/2$,
+$d=\log2$, $r=e^{-ad}=2^{-1/2}$. With $H_x=-\partial_x^2$,
+consider the full positive preparation
+\begin{equation}\label{eq:branch-source}
+ F\longmapsto\left(
+ \{\mathcal A_nF\}_{n\geq1},
+ \sqrt{1-\theta}\mathcal A_0F,
+ \sqrt\theta\mathcal A_0(\id-rU_d)F\right),
+ \qquad 0\leq\theta\leq1.
+\end{equation}
+Its Gram operator is, in form notation,
+$K+\theta(2/a)H_x(a^2+H_x)^{-1}
+[r^2\id-r(U_d+U_d^*)]$.
+Matching the prime atom forces $\theta=ad/2=d/4$. The resulting
+complete pairing has operator
+\begin{equation}\label{eq:branch-gram}
+ B=K+dr^2\id-dr(U_d+U_d^*)+R_{a,d},
+ \qquad
+ R_{a,d}=-da^2[r^2\id-r(U_d+U_d^*)](a^2+H_x)^{-1}.
+\end{equation}
+The resolvent kernel $e^{-a|s|}/(2a)$ gives
+\begin{equation}\label{eq:cusp-kernel}
+ R_{a,d}(s)=\frac{ad}{2}
+ \begin{cases}
+ r^2e^{a|s|},&|s|\leq d,\\
+ e^{-a|s|},&|s|\geq d.
+ \end{cases}
+ \qquad
+ R_{a,d}'(d+)-R_{a,d}'(d-)=-da^2r\ne0.
+\end{equation}
+On $d<L<\log3$, after the common prime atom is removed,
+the candidate-minus-target difference is
+$(dr^2-w_0)\id+E_L^*R_{a,d}E_L-P_L$. The pole kernel is smooth
+near $x-y=d$ and the contact has no support there. Neither can
+cancel the cusp, so the full pairing cannot match on that interval.
+This is an exact kernel obstruction, requiring no residual bound.
+
+For a finite positive sum of analogous orthogonal branches with mass
+$a_n$, positive weight $\theta_n$ and attenuation $r_n$, the derivative
+jump at $d$ is $-2\theta_na_nr_n$ for each active branch. The signs
+agree and cannot cancel. General coherent changes of source are
+outside this assertion.
+
+\subsection{A coherent repair cancels the cusp and still fails the contact}
+In two common outputs, use the lowest gamma source and a shift source
+\begin{equation}\label{eq:coherent-sources}
+ \Gamma_0F=\begin{pmatrix}
+  2H_x(a^2+H_x)^{-1}F\\ \partial_x(a^2+H_x)^{-1}F
+ \end{pmatrix},\quad
+ Z_{u,v}F=\begin{pmatrix}
+ u(U_d-U_d^*)F\\vF+u(U_d+U_d^*)F
+ \end{pmatrix},\quad a=\tfrac12,
+\end{equation}
+where $u,v$ are real. All operators commute on the line. The first
+components are respectively self-adjoint and skew-adjoint, and the
+second components respectively skew-adjoint and self-adjoint. Hence
+\begin{equation}\label{eq:coherent-cross}
+ \Gamma_0^*Z+Z^*\Gamma_0=0,
+ \qquad Z^*Z=(v^2+4u^2)\id+2uv(U_d+U_d^*).
+\end{equation}
+Keeping the other gamma modes and setting $2uv=-dr$ gives
+\begin{equation}\label{eq:coherent-result}
+ B_{\rm coh}=K+C\id-dr(U_d+U_d^*),\qquad
+ C=v^2+4u^2\geq2dr.
+\end{equation}
+The inequality follows from $C-2dr=(v+2u)^2$. There is no displaced
+continuous term, but on the first-prime interval
+\begin{equation}\label{eq:coherent-failure}
+ B_{{\rm coh},L}-Q_L=(C-w_0)\id-P_L\ne0.
+\end{equation}
+Indeed $C-w_0>0$ while $P_L$ has rank two on an infinite-dimensional
+input space. This coherent representation is still the sum of independent
+gamma and jump Gram forms, because its Hermitian interference vanishes.
+It supplies a second exact stopping criterion for the tested source.

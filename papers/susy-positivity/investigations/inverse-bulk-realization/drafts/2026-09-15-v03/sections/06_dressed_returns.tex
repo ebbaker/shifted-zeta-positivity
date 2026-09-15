@@ -1,0 +1,206 @@
+\clearpage
+\section{Dressed Schur returns and the exact positive prime norm}
+\label{sec:dressed}
+\subsection{The elementary representation and electric preparation}
+Fix one real parameter $0<q<1$. This parameter will be the same for
+all primes. The elementary $q$-Weyl representation associated with
+SQED with one hypermultiplet has the following data
+\cite[Section 3.1.1]{RG}. Let
+\begin{equation}\label{eq:schur-space}
+ \HH=\ell^2(\Z)\otimes L^2(S^1,\dd\theta/(2\pi)),
+ \qquad \zeta=e^{i\theta},
+\end{equation}
+and write the magnetic charge as $m$. On the appropriate algebraic
+line-state domain the actions are
+\begin{align}
+ (v\psi)_m(\zeta)&=q^{-m}\zeta\psi_m(\zeta),\notag\\
+ (u_-\psi)_m(\zeta)&=(1+q^{-m-1}\zeta)\psi_{m+1}(q^{-1}\zeta),
+ \notag\\
+ (u_+\psi)_m(\zeta)&=\psi_{m-1}(q\zeta),\notag\\
+ (\Omega_q)_m(\zeta)&=C_q\delta_{m0}\chi_q(\zeta),
+ \qquad C_q=(q^2;q^2)_\infty.
+ \label{eq:schur-actions}
+\end{align}
+The physical adjoints are inherited from the doubled representation;
+we do not use $u_-=u_+^\dagger$. Positivity in the calculation is
+the ordinary positive norm of \eqref{eq:schur-space}.
+The elementary representation is a protected-sector control, not an
+identification with the conformal four-flavour theory of
+Section~\ref{sec:schur}.
+
+For $0<a<1$ define, on the zero-charge sector,
+\begin{equation}\label{eq:dressing}
+ D_{q,a}(\zeta)=\frac{\sqrt{1-a^2}}{C_q}
+ \frac{(-q\zeta;q^2)_\infty}{1+a\zeta}.
+\end{equation}
+The numerator is entire in $\zeta$ and the expression is analytic in
+a neighbourhood of the closed unit disk. Thus its Taylor series
+defines an electric-line completion, bounded on that sector.
+It is not asserted to be bounded on all magnetic sectors. The prepared
+state is explicitly
+\begin{equation}\label{eq:eta}
+ \eta_a=D_{q,a}(v)\Omega_q
+ =\delta_{m0}\frac{\sqrt{1-a^2}}{1+a\zeta},\qquad
+ \norm{\eta_a}=1.
+\end{equation}
+Multiplication by $-v$ on this sector gives
+\begin{equation}\label{eq:eta-returns}
+ \ip{\eta_a}{(-v)^k\eta_a}=a^{|k|},\qquad k\in\Z.
+\end{equation}
+Both assertions follow from the geometric coefficients
+$\sqrt{1-a^2}(-a)^n$, $n\geq0$. Thus the descendant factors in
+\eqref{eq:bare-overlap} have been removed by changing the source,
+without changing the metric. The parameter $a$ is independent of $q$.
+This infinite electric preparation is additional specified observable
+data; it has not been derived as a unique UV boundary condition.
+
+\subsection{One magnetic insertion and its graph domain}
+\begin{lemma}\label{lem:one-magnetic}
+If $a=qr$ with $0<r<1$, the vector $\eta_{qr}$ belongs to the graph
+closure of the algebraic negative magnetic action on its electric-line
+approximants. Its image is
+\begin{equation}\label{eq:magnetic-state}
+ (u_-\eta_{qr})_m(\zeta)
+ =\delta_{m,-1}\sqrt{1-q^2r^2}\frac{1+\zeta}{1+r\zeta},
+ \qquad
+ \norm{u_-\eta_{qr}}^2=\frac{2(1-q^2r^2)}{1+r}.
+\end{equation}
+Every closed physical extension of that algebraic action contains this
+graph limit and has the displayed value.
+\end{lemma}
+\begin{proof}
+The formula for the state follows by substituting \eqref{eq:eta} in
+\eqref{eq:schur-actions}. To justify that substitution as an operator
+action, let $D_N$ be the Taylor polynomials of $D_{q,qr}$.
+Its nearest possible pole has modulus $(qr)^{-1}>q^{-1}$, so choose
+$R$ strictly between these two radii. The polynomials converge uniformly
+on $|\zeta|\leq R$. Hence $D_N(v)\Omega_q\to\eta_{qr}$ in norm.
+On the output sector,
+\begin{equation}\label{eq:graph-cancellation}
+ u_-D_N(v)\Omega_q
+ =C_q\delta_{m,-1}D_N(q^{-1}\zeta)\chi_q(q\zeta),
+\end{equation}
+using $(1+\zeta)\chi_q(q^{-1}\zeta)=\chi_q(q\zeta)$.
+This converges in norm to the displayed state. In particular no action
+is being defined by crossing a pole and choosing a boundary value
+afterwards. Finally,
+\begin{equation}\label{eq:magnetic-coeff}
+ \frac{1+\zeta}{1+r\zeta}
+ =1+\sum_{n\geq1}(1-r)(-r)^{n-1}\zeta^n
+\end{equation}
+has squared norm $1+(1-r)^2/(1-r^2)=2/(1+r)$.
+\end{proof}
+
+\subsection{The full norm, including its contact}
+For $d>0$, set
+\begin{equation}\label{eq:beta}
+ \beta_{q;r,d}^2=
+ \frac{dr(1+r)}{(1-r)(1-q^2r^2)},\qquad
+ \Phi_{q;r,d}[h]
+ =\beta_{q;r,d}\,h(-q^{-1}v)u_-D_{q,qr}(v)\Omega_q
+\end{equation}
+for a finite Laurent polynomial $h$. On the output sector $m=-1$,
+$v=q\zeta$, so $-q^{-1}v=-\zeta$. This normalization of the
+electric argument is part of the source prescription.
+
+\begin{theorem}[Schur realization of the positive local prime reference]
+\label{thm:schur-prime}
+With $z=-\zeta$, the preparation \eqref{eq:beta} satisfies
+\begin{align}
+ \ip{\Phi_{q;r,d}[h]}{\Phi_{q;r,d}[k]}
+ &=\int_{S^1}\overline{h(z)}k(z)w_{r,d}(z)\frac{\dd\theta}{2\pi},
+ \label{eq:full-schur-pairing}\\
+ w_{r,d}(z)&=\frac{dr(1+r)}{1-r}\frac{|1-z|^2}{|1-rz|^2}
+ =\kappa_{r,d}-d\sum_{n\geq1}r^n(z^n+z^{-n}),
+ \label{eq:prime-weight}\\
+ \kappa_{r,d}&=\frac{2dr}{1-r}.
+ \label{eq:kappa}
+\end{align}
+The series converges absolutely and uniformly. In the Laurent basis,
+\begin{equation}\label{eq:toeplitz}
+ \ip{\Phi[z^j]}{\Phi[z^k]}=
+ \begin{cases}
+  \kappa_{r,d},&j=k,\\
+  -dr^{|j-k|},&j\ne k.
+ \end{cases}
+\end{equation}
+For each prime $p$, setting $r=p^{-1/2}$ and $d=\log p$ supplies every
+single-prime off-diagonal coefficient in the Weil form. The same fixed
+$q$ works for all these preparations.
+\end{theorem}
+\begin{proof}
+Lemma~\ref{lem:one-magnetic} and \eqref{eq:beta} give the first expression
+for $w_{r,d}$ directly from the physical norm. To expand it, use the
+Poisson-kernel identity
+\begin{equation}\label{eq:poisson}
+ \frac{1-r^2}{|1-rz|^2}=1+\sum_{n\geq1}r^n(z^n+z^{-n})
+ \qquad (|z|=1).
+\end{equation}
+Subtracting this identity from $(1+r)/(1-r)$ and multiplying by $d$
+gives \eqref{eq:prime-weight}. Integration against
+$\overline{z^j}z^k$ gives \eqref{eq:toeplitz}. Finally
+$a_p=q/\sqrt p<q$, so the graph-domain proof applies to every prime
+at the same $q$. All operators needed after the magnetic action are
+bounded on its fixed output sector for Laurent polynomial inputs.
+\end{proof}
+
+The source normalization $\beta$ uses the assigned arithmetic boundary
+data. It determines the entire multiplier; no independent contact is
+subtracted. Since $w_{r,d}$ is bounded, \eqref{eq:full-schur-pairing}
+extends by density from Laurent polynomials to $L^2(S^1)$ as a
+bounded source map into the output sector.
+
+\begin{corollary}[Sharp contact in this stationary scalar class]
+\label{cor:contact}
+A continuous scalar circle multiplier with nonzero Fourier coefficients
+$-dr^{|n|}$ can be nonnegative only if its constant coefficient is at
+least $\kappa_{r,d}$. The multiplier in \eqref{eq:prime-weight} attains
+that value.
+\end{corollary}
+\begin{proof}
+The multiplier with constant coefficient $C$ equals
+$C-d\sum_{n\geq1}r^n(z^n+z^{-n})$. Its value at $z=1$ is
+$C-2dr/(1-r)$, which must be nonnegative. Equation~\eqref{eq:prime-weight}
+is nonnegative and vanishes at $z=1$.
+\end{proof}
+The same statement holds for the corresponding whole-line stationary
+multiplier. It is not a claim of optimality over all finite-interval
+or nonstationary realizations. This is the known positive local reference;
+the result here supplies its Schur operator factor and checked domain.
+
+\subsection{An explicit lift to continuous arithmetic inputs}
+The circle coordinate is not, by itself, the real logarithmic input.
+To give an actual source map, define
+\begin{equation}\label{eq:bloch}
+ (\mathcal B_dF)_j(\theta)=d^{-1/2}
+ \widehat F((\theta+2\pi j)/d),\qquad
+ 0\leq\theta<2\pi,\quad j\in\Z.
+\end{equation}
+This is a unitary map from $L^2(\R)$ to
+$L^2(S^1,\dd\theta/(2\pi);\ell^2(\Z))$. Indeed the intervals
+$[2\pi j/d,2\pi(j+1)/d)$ partition the Fourier line, and
+\eqref{eq:fourier} gives equality of norms. Conversely an arbitrary
+square-integrable family specifies a Fourier transform interval by
+interval, giving surjectivity.
+
+Apply the extended source of Theorem~\ref{thm:schur-prime} to each
+component of $\mathcal B_dF$ in an orthogonal copy of $\HH$. The
+resulting positive norm is
+\begin{align}
+ B_{r,d}[F]
+ &=\frac1{2\pi}\int_\R w_{r,d}(e^{id\tau})
+                   |\widehat F(\tau)|^2\dd\tau\notag\\
+ &=\kappa_{r,d}\norm F^2
+   -2d\sum_{n\geq1}r^n\re\ip F{U_{nd}F}.
+ \label{eq:lifted-norm}
+\end{align}
+The Fourier sign for $U_d$ does not change the expression, because
+both orientations occur. For $F=E_Lf$, only $nd<L$ remains.
+
+This construction adds a specified multiplicity space and preparation.
+That multiplicity is not identified with the magnetic-charge label
+already present in \eqref{eq:schur-space}. No particular four-dimensional
+interface has yet been shown to implement \eqref{eq:bloch}. The result
+is an exact positive Hilbert-space realization containing an elementary
+Schur operator factor. A full field-theoretic interpretation of the
+lift is part of the open matching problem.

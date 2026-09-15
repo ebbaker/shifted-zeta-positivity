@@ -1,0 +1,217 @@
+\section{The complete Weil form in logarithmic coordinates}\label{sec:weil}
+\subsection{Conventions and the classical criterion}
+All Hilbert inner products are conjugate-linear in the first argument.
+For $L>0$, let $I_L=(-L/2,L/2)$ and let $E_L$ denote extension by zero
+from $I_L$ to $\R$. Unless another domain is specified, $f$ belongs to
+$C_c^\infty(I_L;\C)$ and $F=E_Lf$. Our Fourier and translation
+conventions are
+\begin{equation}\label{eq:fourier}
+ \widehat F(\tau)=\int_\R e^{-i\tau x}F(x)\dd x,
+ \qquad U_dF(x)=F(x-d),\qquad
+ \norm F^2=\frac1{2\pi}\int_\R|\widehat F(\tau)|^2\dd\tau.
+\end{equation}
+Write $\widetilde F(x)=\overline{F(-x)}$ and $g=F*\widetilde F$.
+Then $g(0)=\norm F^2$, $g(-r)=\overline{g(r)}$, and
+$g(-r)=\ip F{U_rF}$. In particular, the correlations vanish for $|r|\geq L$.
+
+For $r>0$ set
+\begin{equation}\label{eq:gamma-kernel}
+ \gammak(r)=\frac{e^{-r/2}}{1-e^{-2r}}
+ =\sum_{n\geq0}e^{-a_nr},\qquad a_n=2n+\tfrac12.
+\end{equation}
+One normalization of the additive Weil functional is
+\begin{align}
+ \mathcal W(g)={}&\int_\R 2\cosh(x/2)g(x)\dd x
+ -\sum_{p,\,m\geq1}(\log p)p^{-m/2}
+       \{g(m\log p)+g(-m\log p)\}\notag\\
+ &-(\log(4\pi)+\gamma_E)g(0)\notag\\
+ &-\int_0^\infty
+       [g(r)+g(-r)-2e^{-r/2}g(0)]\gammak(r)\dd r.
+ \label{eq:weil-functional}
+\end{align}
+Here $p$ runs over rational primes and $\gamma_E$ is Euler's constant.
+The integrand at the origin has a finite limit, and the prime sum is
+finite for compact support. This normalization can be found in
+Suzuki's account of the Weil form \cite[Section 1.1]{Suzuki}; for its
+geometric and trace interpretation see \cite{CCM}.
+
+The Riemann hypothesis (RH) asserts that every nontrivial zero of the
+meromorphic continuation of $\zeta(s)=\sum_{n\geq1}n^{-s}$ has real
+part $1/2$. We use the following classical theorem as the number-theoretic
+input; we do not reprove the explicit formula or the Weil criterion.
+\begin{theorem}[Classical Weil positivity criterion]\label{thm:weil}
+RH holds if and only if $\mathcal W(F*\widetilde F)\geq0$ for every
+complex $F\in C_c^\infty(\R)$.
+\end{theorem}
+Every compact support is contained in some $I_L$. Consequently it is
+sufficient, and necessary, to establish this positivity for every $L>0$
+and every test function in $I_L$.
+
+\subsection{Positive gamma energy and the fixed contact}
+Define
+\begin{align}
+ K[F]&=\frac12\int_\R\int_\R
+    |F(x)-F(y)|^2\gammak(|x-y|)\dd x\dd y\notag\\
+ &=\int_0^\infty[2g(0)-g(r)-g(-r)]\gammak(r)\dd r.
+ \label{eq:gamma-energy}
+\end{align}
+This is nonnegative without any arithmetic hypothesis. Expanding
+\eqref{eq:gamma-kernel} and applying Plancherel gives
+\begin{align}
+ K[F]&=\frac1{2\pi}\int_\R b(\tau^2)|\widehat F(\tau)|^2\dd\tau,
+ \label{eq:gamma-fourier}\\
+ b(\tau^2)&=\sum_{n\geq0}\frac2{a_n}
+                 \frac{\tau^2}{a_n^2+\tau^2}
+ =\re\psi(\tfrac14+i\tau/2)-\psi(\tfrac14),
+ \label{eq:gamma-multiplier}
+\end{align}
+where $\psi=\Gamma'/\Gamma$. Indeed,
+$2\int_0^\infty(1-\cos(\tau r))e^{-ar}\dd r
+=(2/a)\tau^2/(a^2+\tau^2)$; nonnegativity justifies interchange with
+the sum. The second identity in \eqref{eq:gamma-multiplier} is the
+digamma partial-fraction expansion \cite{DLMF}.
+
+The archimedean part of \eqref{eq:weil-functional} equals
+$K[F]+w_0\norm F^2$, where
+\begin{align}
+ w_0&= -\log(4\pi)-\gamma_E
+       -2\int_0^\infty(1-e^{-r/2})\gammak(r)\dd r\notag\\
+ &=\psi(\tfrac14)-\log\pi
+ =-\gamma_E-\frac\pi2-3\log2-\log\pi<0.
+ \label{eq:contact}
+\end{align}
+To verify the constant, the integral in the first line is
+$\sum_{n\geq0}(a_n^{-1}-(2n+1)^{-1})
+=\tfrac12[\psi(1/2)-\psi(1/4)]$.
+The constant is therefore fixed by the arithmetic normalization.
+It is not a parameter available to adjust a positive source.
+
+\subsection{The signed poles and the localized target}
+The first term of \eqref{eq:weil-functional} has kernel
+$2\cosh((x-y)/2)$. Using the hyperbolic addition formula gives
+\begin{equation}\label{eq:poles}
+ P_L[f]=2\left|\int_{I_L}f(x)\cosh(x/2)\dd x\right|^2
+       -2\left|\int_{I_L}f(x)\sinh(x/2)\dd x\right|^2.
+\end{equation}
+It is a rank-two Hermitian form, with one positive and one negative
+direction for $L>0$. Its pointwise positive kernel does not make it a
+positive quadratic form.
+
+The exact target for this paper is
+\begin{align}
+ Q_L[f]:=\mathcal W(F*\widetilde F)
+ ={}&K[F]+w_0\norm f^2+P_L[f]\notag\\
+ &-2\sum_{m\log p<L}(\log p)p^{-m/2}
+           \re\ip F{U_{m\log p}F}.
+ \label{eq:target}
+\end{align}
+Its polarization is denoted by $Q_L(f,g)$. At equality $m\log p=L$
+the compressed correlation is zero. The coefficient is the primitive
+length $\log p$, not the repeated length $m\log p$.
+
+On a fixed interval the prime and pole terms define bounded operators.
+The gamma multiplier satisfies
+\begin{equation}\label{eq:gamma-growth}
+ b(\tau^2)=\log|\tau|-\log2-\psi(\tfrac14)+O(|\tau|^{-2})
+ \quad (|\tau|\longrightarrow\infty).
+\end{equation}
+The natural energy domain is
+\begin{equation}\label{eq:energy-domain}
+ \mathcal D_{\gamma,L}=
+ \left\{f\in L^2(I_L):
+   \int_\R\log(2+|\tau|)|\widehat{E_Lf}(\tau)|^2\dd\tau<\infty\right\}.
+\end{equation}
+The positive gamma energy is closed on this domain; it is the restriction
+of the closed nonnegative Fourier-multiplier form to the closed subspace
+of functions supported in $\overline I_L$. The bounded other terms give
+a closed semibounded form on the same domain. All matching statements
+below are first required on smooth compactly supported inputs. The Weil
+criterion itself needs only that test space.
+
+Away from the diagonal the distribution kernel of $K$ is
+$-\gammak(|x-y|)$, which is smooth whenever $x\ne y$. The prime
+contribution instead has atoms at $x-y=\pm m\log p$. This distinction
+will provide exact tests for candidate preparations.
+
+Three small intervals already distinguish several issues:
+\begin{center}
+\begin{tabular}{lll}
+\toprule
+$L$ & Active prime powers & Test \\
+\midrule
+$1$ & $2$ & First contact, pole and translation identity \\
+$5/4$ & $2,3$ & Joint source and mixed returns \\
+$3/2$ & $2,3,4$ & First nontrivial repetition of $2$ \\
+\bottomrule
+\end{tabular}
+\end{center}
+A calculation on any one interval is preliminary. It does not establish
+the all-support statement of Theorem~\ref{thm:weil}.
+
+\subsection{The spectral form of the target}\label{subsec:spectral}
+The target \eqref{eq:target} has a classical spectral description. We record
+it because it governs what a realization has to produce, and because it
+controls the size of the quantity being matched.
+
+For $g=F*\widetilde F$ with $F\in C_c^\infty(\R)$, the function
+\begin{equation}\label{eq:entire-transform}
+ G(\tau)=\int_\R g(x)e^{-i\tau x}\dd x
+ =\widehat F(\tau)\overline{\widehat F(\bar\tau)}
+\end{equation}
+is entire of exponential type and agrees with $|\widehat F(\tau)|^2$ for real
+$\tau$. Write $\rho$ for the nontrivial zeros of $\zeta$ with multiplicity and
+put $\gamma_\rho=-i(\rho-\tfrac12)$. In the normalization
+\eqref{eq:weil-functional}, Weil's explicit formula states that
+\begin{equation}\label{eq:explicit-formula}
+ \mathcal W(g)=\sum_\rho G(\gamma_\rho),
+\end{equation}
+the sum taken in the symmetric order $|\im\rho|\leq T$, $T\to\infty$
+\cite{Suzuki,CCM}. The first term of \eqref{eq:weil-functional} is
+$G(i/2)+G(-i/2)$, the contribution of the two poles of $\zeta(s)$ at $s=0$
+and $s=1$; the remaining terms are the archimedean and finite local factors.
+We use \eqref{eq:explicit-formula} as classical input and do not reprove it.
+Appendix~\ref{app:checks} records a direct check that the normalization
+\eqref{eq:weil-functional} used here reproduces it.
+
+\begin{corollary}[Spectral form of the localized target]\label{cor:spectral}
+For $f\in C_c^\infty(I_L)$ and $F=E_Lf$,
+\begin{equation}\label{eq:spectral-target}
+ Q_L[f]=\sum_\rho\widehat F(\gamma_\rho)
+        \overline{\widehat F(\overline{\gamma_\rho})}.
+\end{equation}
+Under RH every $\gamma_\rho$ is real and each summand is
+$|\widehat F(\gamma_\rho)|^2\geq0$. A zero off the critical line pairs with
+the zero $1-\bar\rho$ to contribute
+$2\re[\widehat F(\gamma)\overline{\widehat F(\bar\gamma)}]$, which has no
+fixed sign.
+\end{corollary}
+
+Three consequences organize what follows.
+
+First, \eqref{eq:spectral-target} determines a realization that is
+compatible in $L$. Suppose $\Phi$ is defined on $C_c^\infty(\R)$ and
+satisfies $\norm{\Phi(f)}^2=Q_L[f]$ whenever $\supp f\subset I_L$. Then RH
+holds, and $\Phi(f)\mapsto(\widehat F(\gamma_\rho))_\rho$ extends to a
+unitary map from the closure of the range of $\Phi$ onto the closed span of
+those vectors in $\ell^2$ of the zero multiset. The Hilbert space and the
+source of a compatible realization are therefore not free data: up to that
+unitary they are the zeros and the evaluation map.
+
+Second, this fixes the shape of the answer without deciding the objective of
+this manuscript. That some positive Hilbert space carries this spectrum is
+equivalent to RH and cannot be arranged by fiat. The proposal here is more
+specific: that an independently motivated family of positive pairings ---
+protected line and defect algebras with physically defined twisted traces
+--- contains such a source, so that construction of a named theory with
+specified observables would supply it. Nothing in
+\eqref{eq:spectral-target} decides whether that is so.
+
+Third, \eqref{eq:spectral-target} is a warning about method. Its right side
+is generally far smaller than the individual terms of \eqref{eq:target}. For
+the smooth input used in Appendix~\ref{app:checks} on $I_4$, the gamma,
+contact, pole and prime terms of \eqref{eq:target} are
+$3.40$, $-8.06$, $9.11$ and $-4.46$, while their sum is $1.4\times10^{-7}$.
+A candidate is therefore not usefully tested by matching those terms one at
+a time. The cancellation between them is the content of the problem, and
+Section~\ref{subsec:interference} turns that remark into an exact
+obstruction.

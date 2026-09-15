@@ -10,8 +10,8 @@ The [current working manuscript](manuscript.pdf), *Sphere and Schur sources for
 the localized Weil form*, collects the present results in a self-contained
 draft. Its [TeX source](manuscript.tex) has internal equation labels and does
 not input the shared background. Reviewed versions are preserved in
-[drafts/](drafts/README.md); version 0.2 is current and version 0.1 is
-preserved unchanged.
+[drafts/](drafts/README.md); version 0.3 is current and versions 0.1 and 0.2
+are preserved unchanged.
 See the [build guide](BUILD.md) and [coverage map](MANUSCRIPT_COVERAGE.md).
 
 Start with the [broad program overview](../../brainstorm/INVERSE_BULK_AND_DEFECT_DIRECTIONS.md)
@@ -32,10 +32,14 @@ it does not announce a completed reduction to a particular field theory.
 | [Program overview in brainstorm](../../brainstorm/INVERSE_BULK_AND_DEFECT_DIRECTIONS.md) | Broad | Motivation, the conditional-construction goal, broadened boundary concepts, candidate families, and criteria for a specific paper. |
 | [Defect-observable survey](notes/DEFECT_OBSERVABLE_SURVEY.md) | Broad | Literature comparison and alternatives, including Liouville, integrable defects, gauge networks, and arithmetic/free-field controls. |
 | [Foundational analysis](notes/ANALYSIS.md) | General framework, with specific model tests | Full matching target, physical positivity, rational-feedback obstruction, positive gamma refinement, and the original junction proposal. |
+| [Two-channel exclusion](notes/INTERFERENCE_BOUND_AND_TWO_CHANNEL_EXCLUSION.md) | Focused; current | Why the gamma-plus-prime architecture cannot be completed, with certificates and the extent of the exclusion. |
+| [Mirror reference and subtraction form](notes/MIRROR_REFERENCE_AND_SUBTRACTION_FORM.md) | Focused; current direction | The prime-free subtraction form of the target and the two objects left to construct. |
 | [Dressed Schur returns and gluing](notes/SCHUR_DRESSED_RETURNS_AND_GLUING.md) | Focused; current | One fixed Schur parameter, an exact positive local prime norm, its compulsory contact, magnetic domain requirements, and a mixed-return gluing test. |
 | [Sphere and Schur pairings](notes/SPHERE_AND_SCHUR_PAIRINGS.md) | Focused; first comparison | Gaussian boundary gamma data, interacting rank-one norms, conformal Wilson pairing, Schur local-factor and common-state tests, and the next source choices. |
 | [Gauge-transfer test](notes/GAUGE_TRANSFER_TEST.md) | Focused; earlier | Winding versus transfer, a positive disk model, and two first-prime preparations with exact mismatches. |
 | [Notes index](notes/README.md) | Navigation | Reading order and the status of each retained note. |
+| [Continuation note](notes/CONTINUATION_20260915.md) | Handoff | Where the investigation stands, the ordered next steps, and what not to redo. |
+| [Reviews](reviews/README.md) | Assessment | Dated reviews of manuscript versions, with the revisions each prompted. |
 | [Checks and records](numerics/README.md) | Supporting calculations | Small reproducible algebra programs and their explicitly scoped results. |
 
 The latest note gives an explicit electric dressing and one magnetic
@@ -56,6 +60,15 @@ negative contact and the rank-two pole term must therefore come from a
 compression or projection inside one space, not from further positive
 channels. That, rather than another prime-channel identity, is the next
 object to construct.
+
+**The narrowed direction now has a concrete form.** A mirror of the positive
+prime reference, carrying the same atoms with the opposite sign and a strictly
+smaller contact, turns the target into a *difference*,
+\(Q_L = A_L - \sum_p \tilde B_p\), in which \(A_L\) contains no prime
+translations at all and is robustly positive where \(Q_L\) barely is. Weil
+positivity on \(I_L\) becomes one domination statement. This is Section 7.5 of
+version 0.3; its derivation and the open pieces are in the
+[subtraction-form note](notes/MIRROR_REFERENCE_AND_SUBTRACTION_FORM.md).
 
 ## Working direction
 
@@ -85,6 +98,7 @@ python3 numerics/check_sphere_schur.py
 python3 numerics/check_dressed_schur.py
 python3 numerics/check_explicit_formula.py
 python3 numerics/check_channel_bound.py
+python3 numerics/check_mirror_subtraction.py
 python3 validation/drafts.py check --replay
 ```
 
