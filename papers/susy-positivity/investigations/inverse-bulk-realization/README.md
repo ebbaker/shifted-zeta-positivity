@@ -1,6 +1,6 @@
 # Inverse bulk realization of the localized Weil form
 
-14 September 2026. Fit the **complete** localized Weil pairing to an
+15 September 2026. Fit the **complete** localized Weil pairing to an
 independently positive field-theoretic or observable-sector norm.
 The intended contribution is an exact matching theorem, potentially
 conditional on construction of a credible specified theory. An already
@@ -10,7 +10,8 @@ The [current working manuscript](manuscript.pdf), *Sphere and Schur sources for
 the localized Weil form*, collects the present results in a self-contained
 draft. Its [TeX source](manuscript.tex) has internal equation labels and does
 not input the shared background. Reviewed versions are preserved in
-[drafts/](drafts/README.md); version 0.1 is the first snapshot.
+[drafts/](drafts/README.md); version 0.2 is current and version 0.1 is
+preserved unchanged.
 See the [build guide](BUILD.md) and [coverage map](MANUSCRIPT_COVERAGE.md).
 
 Start with the [broad program overview](../../brainstorm/INVERSE_BULK_AND_DEFECT_DIRECTIONS.md)
@@ -42,14 +43,30 @@ insertion whose positive norm has every required single-prime repetition
 coefficient. All primes use the same Schur quantization parameter. The
 norm also fixes the known positive contact: this is an explicit Schur
 realization of the existing positive prime reference, not a full Weil
-identity. A simple coherent sum produces forbidden mixed returns,
-directing the next calculation toward a joint gauge/interface source.
+identity. A simple coherent sum produces forbidden mixed returns.
+
+**Version 0.2 settles what that construction can become.** The manuscript now
+records the target in spectral form, and proves that the architecture the
+dressed construction leads to cannot be completed: by an elementary
+interference bound, no coherent source has the positive gamma energy and the
+summed positive prime references as its two channel norms. The bound fails at
+explicit test functions --- the indicator of the interval already violates it
+at \(L=5/4\) --- and fails by a growing factor as \(L\) increases. The
+negative contact and the rank-two pole term must therefore come from a
+compression or projection inside one space, not from further positive
+channels. That, rather than another prime-channel identity, is the next
+object to construct.
 
 ## Working direction
 
 Continue with charge-neutral Schur RG/interface preparations that retain
 the full gauge and Weyl terms, alongside sphere boundary/vortex modules
 with an actual correspondence on the Gaussian normalization control.
+Every candidate must now also pass the interference bound of Section 7.4
+for each decomposition whose channel norms it computes separately, and must
+produce the contact and the signed poles from one mechanism. Compare the
+compressed-scaling-action mechanism of Connes and Consani, cited in the
+manuscript, which produces a negative archimedean contact by projection.
 A failed identity changes the choice of source or model;
 it does not initiate progressively more complicated residual estimates.
 Retain the other systems as alternatives. Use this working manuscript to
@@ -66,6 +83,8 @@ python3 numerics/check_matching.py
 python3 numerics/check_gauge_transfer.py
 python3 numerics/check_sphere_schur.py
 python3 numerics/check_dressed_schur.py
+python3 numerics/check_explicit_formula.py
+python3 numerics/check_channel_bound.py
 python3 validation/drafts.py check --replay
 ```
 
