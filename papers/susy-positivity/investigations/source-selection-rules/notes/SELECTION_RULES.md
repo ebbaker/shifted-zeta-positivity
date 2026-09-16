@@ -19,6 +19,7 @@ question. Equation numbers are those of the inverse-bulk manuscript 0.5.
 | 6 | The archimedean part is not a lifted circle weight | free | this investigation |
 | 7 | The contraction is critical, with a margin collapsing in `L`, and near-null band edge at `gamma_1` | one computation | this investigation |
 | 8 | The complete identity at `L = 1` | expensive | Problem 8.3 |
+| 9 | The source is a jump process with Lévy measure `mu_L` | cheap | this investigation |
 
 ---
 
@@ -125,6 +126,21 @@ as a physically defined source norm, and
 `(1/2pi) int sigma_1^- |F^|^2 + 2|<sinh(x/2), f>|^2 + Bt_{r_2,d_2}[E_1 f]` as a
 compression of it, with `sigma_1^-` supported on `|tau| < 3.5504`. Failure calls
 for a different source or model, not for residual estimates.
+
+**9. The source is a jump process with a prescribed Lévy measure.** By the
+decomposition (D) of
+[the jump-form note](PERRON_FROBENIUS_AND_THE_JUMP_FORM_20260916.md), the entire
+non-pole part of the target is one jump Dirichlet form with
+
+```
+ mu_L = 2 ngamma(r) dr + 2 sum_{m log p < L} (log p) p^{-m/2} delta_{m log p}  >= 0.
+```
+
+So a source must be a Lévy jump process whose jump measure has continuous part
+`2 ngamma` and an atom of mass `2 (log p) p^{-m/2}` at each prime period
+`m log p`. **This subsumes rules 3 and 4 and replaces them by one condition**,
+and it removes the two-mechanism tension: the archimedean and prime halves are
+the continuous and atomic parts of one measure, not two channels.
 
 ---
 

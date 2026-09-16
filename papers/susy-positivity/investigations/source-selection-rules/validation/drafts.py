@@ -22,6 +22,7 @@ CHECKS = {
     "check_density_symbol.py": "density-symbol-checks.json",
     "check_symbol_split.py": "symbol-split-checks.json",
     "check_qweyl_relations.py": "qweyl-relations-checks.json",
+    "check_levy_dirichlet.py": "levy-dirichlet-checks.json",
 }
 
 

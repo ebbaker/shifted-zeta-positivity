@@ -42,6 +42,15 @@ folder is current. One conjecture of the second note is **retracted**
 
 ## 3. Next, in order
 
+**Done since this note was written:** Suzuki arXiv:2606.09096 has been read
+(items 0 below is discharged; see
+[the jump-form note](PERRON_FROBENIUS_AND_THE_JUMP_FORM_20260916.md), §6), and the
+Perron-Frobenius route has been settled (same note, §4): the cone exists for the
+jump form and the pole term destroys it, and neither Krein-Rutman nor Birkhoff
+could have bounded the spectral radius anyway. The live successor is the
+**nonlocal-Dirichlet-form spectral gap** of that note, §5 and §7.3.
+
+
 0. **Read Suzuki, arXiv:2606.09096 and arXiv:2607.24830, in full.** Manuscript
    0.5 already cites the first, but only for the normalization of the Weil
    functional in Section 2.1. It reportedly also proves, unconditionally, that
