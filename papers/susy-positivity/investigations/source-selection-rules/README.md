@@ -57,6 +57,7 @@ $L$ is proving something false. See
 | [Density symbol and symbol split](notes/DENSITY_SYMBOL_AND_SYMBOL_SPLIT_20260916.md) | The density identity, its four consequences, and a sharper presentation of the compression. |
 | [q-Weyl trace space](notes/QWEYL_TRACE_SPACE_20260916.md) | What non-constructive arguments can give; the algebra identification; a retraction. |
 | [Fixed points and the margin](notes/FIXED_POINTS_AND_THE_MARGIN_20260916.md) | Why this is a membership question, not an existence question; what each family of fixed point theorem would need and which are blocked; and how small the margin really is. |
+| [Existence mechanism sweep](notes/EXISTENCE_MECHANISM_SWEEP_20260916.md) | A wide survey: why every existence theorem here transports positivity rather than creating it, the one mechanism that manufactures it, and the openings that remain. |
 | [Continuation note](notes/CONTINUATION_20260916.md) | State, ordered next steps, what not to redo, conventions. |
 | [Notes index](notes/README.md) | Navigation and reading order. |
 | [Checks and records](numerics/README.md) | Three reproducible programmes and their explicitly scoped results. |

@@ -98,7 +98,12 @@ is saturated, by a margin that collapses superexponentially in `L`:
 
 measured in a smooth basis with `Q_L` assembled from its spectral form; see
 [the fixed-point note](FIXED_POINTS_AND_THE_MARGIN_20260916.md), §5, which also
-corrects the figures quoted in Section 7.6 of the sibling manuscript. So a
+corrects the figures quoted in Section 7.6 of the sibling manuscript. **These are
+weak upper bounds.** Zhu (arXiv:2608.24827) reaches `2.3e-17` at `L = 0.8` and
+`3.2e-283` at `L = 2` with sine-basis trial functions, in a different
+normalization (against `||f||_2^2`, not `K_+`); see
+[the sweep](EXISTENCE_MECHANISM_SWEEP_20260916.md), §7, including its reliability
+caveats. The collapse is far more violent than our own basis can see. So a
 mechanism must produce a **critical** contraction, and more sharply:
 
 > Any hypothesis supplying a margin uniform in `L` — a self-map into a fixed

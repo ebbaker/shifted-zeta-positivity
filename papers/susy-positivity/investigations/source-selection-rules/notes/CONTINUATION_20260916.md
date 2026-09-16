@@ -42,7 +42,24 @@ folder is current. One conjecture of the second note is **retracted**
 
 ## 3. Next, in order
 
-0. **Port the spectral saturation computation into a check programme.** It is in
+0. **Read Suzuki, arXiv:2606.09096 and arXiv:2607.24830, in full.** Manuscript
+   0.5 already cites the first, but only for the normalization of the Weil
+   functional in Section 2.1. It reportedly also proves, unconditionally, that
+   the localized form is `<A_a v, v>` for a self-adjoint `A_a` built from a screw
+   function, that the least Rayleigh quotient is continuous in `a`, and that the
+   lowest eigenvalue is positive and simple — all of which bear directly on
+   Section 7.6 and on selection rule 7. Cheapest item here and the most likely to
+   change what we do. See [the sweep](EXISTENCE_MECHANISM_SWEEP_20260916.md), §8.
+
+0b. **Test the Birkhoff prediction.** Compute the projective diameter `Delta_L`
+   of `Pi_L`'s image in the natural cone and check whether `tanh(Delta_L/4)`
+   tracks `1 - lambda_min(L)`. Doable with what is already built, and it decides
+   whether the cone reading of `||Pi_L|| <= 1` is more than vocabulary. See the
+   sweep, §2.
+
+0c. **Port the spectral saturation computation into a check programme**, and
+   while doing it adopt Zhu's sine-basis trial functions: our polynomial basis is
+   off by hundreds of orders of magnitude (sweep, §7). It is in
    [the fixed-point note](FIXED_POINTS_AND_THE_MARGIN_20260916.md), §5, and it is
    the most consequential thing here: it measures how far the domination is from
    failing (`1e-9` at `L = 1` falling to `1e-24` at `L = 3`) and it shows that

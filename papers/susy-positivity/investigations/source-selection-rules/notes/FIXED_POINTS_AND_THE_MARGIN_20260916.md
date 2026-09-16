@@ -136,6 +136,16 @@ without repairing a mismatch. So the RG gives transport, not existence.
 
 ## 4. Summary of the four
 
+**Verdict, so this note is not misread as a blanket exclusion.** The fixed point
+angle is **not** ruled out. Exactly two instantiations are: Knaster-Tarski on the
+operator interval `[0, K_+]`, and the source sitting at a *scale-invariant* RG
+fixed point. Everything else below is open, and one of them — Schauder or Ky Fan
+on the trace cone — is in better shape after this session than before it, because
+the compact convex set such a theorem needs did not exist as a usable object
+until the trace cones were classified. The two cautions in §2 and §5 are
+constraints on admissible hypotheses, not vetoes.
+
+
 | Theorem | Needs | Status here |
 |---|---|---|
 | Banach | complete metric, strict contraction | open; the natural map has divergent contacts |
@@ -222,7 +232,25 @@ So the manuscript's qualitative conclusion is right and understated, while its
 quantitative claims are attached to a computation that does not produce them.
 Both should be fixed, and the fix strengthens the argument.
 
-## 6. What I would actually try
+## 6. Where the fixed point angle would pay off
+
+The shape mismatch of §2 is a reason to expect a detour, not an obstruction, and
+it points at exactly where the angle *is* right. Fixed point theorems are the
+natural tool for **nonlinear solvability**; separation is the natural tool for
+**linear membership**. Fitting prescribed values of a trace is linear. So the
+fixed point route pays off precisely when the model determines its own pairing
+self-consistently -- a Dyson-Schwinger equation, a bootstrap, a flow whose
+invariant state is not written down but characterised -- because then the
+nonlinearity is real and there is something for a fixed point to find. In that
+case the compact convex set is already classified and the theorem is immediately
+applicable.
+
+So the question to put to a candidate model is not "can a fixed point theorem be
+applied" but "**is the pairing characterised self-consistently, or written
+down?**" If the latter, use separation. If the former, Schauder is the right tool
+and nothing here stands in its way.
+
+## 7. What I would actually try
 
 1. **The dual side.** RH on `I_L` is the non-existence of a separating
    functional. Selection rules are non-existence proofs by invariant. This is the
@@ -238,8 +266,9 @@ Both should be fixed, and the fix strengthens the argument.
    why its *fixed points* are the wrong objects.
 4. **Not** Knaster-Tarski on operator intervals, and **not** an RG fixed point.
 
-## 7. Status
+## 8. Status
 
+- §4's verdict and §6: assessment, not result.
 - §1 and §2: definitional, and a correction of my own earlier overstatement.
 - §3's RG exclusion: **proved** (the dilation action on `{log p}` and on the
   density symbol).
