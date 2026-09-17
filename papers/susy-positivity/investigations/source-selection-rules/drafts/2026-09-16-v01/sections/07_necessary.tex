@@ -1,0 +1,133 @@
+\section{A necessary condition}\label{sec:necessary}
+\subsection{The Stieltjes part and its Perron root}
+Write \eqref{eq:jump-decomposition} as $Q_L=S_L+P_L$ with
+\begin{equation}\label{eq:SL}
+ S_L[f]=\EL[E_Lf]+\gamma_L\norm f^2 .
+\end{equation}
+Away from the diagonal the kernel of $S_L$ is $-\mu_L\leq0$, and in the cell
+basis its diagonal is constant, so $S_L$ is of Stieltjes type: writing
+$S_L=d_LI-N_L$ gives $N_L$ symmetric, entrywise nonnegative and with zero
+diagonal, whence
+\begin{equation}\label{eq:perron}
+ \lambda_{\min}(S_L)=d_L-\rho(N_L),
+\end{equation}
+$\rho$ being the Perron root. Everything indefinite in the target has been moved
+into two explicit scalars and the rank-two $P_L$. By Collatz--Wielandt, for
+every strictly positive $u$,
+\begin{equation}\label{eq:cw}
+ \min_i\frac{(N_Lu)_i}{u_i}\;\leq\;\rho(N_L)\;\leq\;\max_i\frac{(N_Lu)_i}{u_i},
+\end{equation}
+a two-sided bracket on $\lambda_{\min}(S_L)$ from one positive trial function,
+with equality at the Perron vector. At $L=2$, where
+$\lambda_{\min}(S_L)=-4.3037$, the constant function gives
+$-4.7732\leq\lambda_{\min}(S_L)\leq-3.8465$ from a single evaluation and no
+spectral computation.
+
+\subsection{One negative direction, and it is the pole's positive direction}
+Put $\alpha_L=-\lambda_{\min}(S_L)$. Numerically $S_L$ has exactly one negative
+eigenvalue at every $L\in\{1/2,3/4,1,3/2,2,3,4\}$, counted by Sylvester's law;
+that the count is at most one is forced by positivity of $Q_L$, since
+$P_L$ has one negative direction. Its ground state $\psi$ has cosine
+$|\ip\psi{\cosh(x/2)}|/\norm{\cosh(x/2)}$ equal to
+$0.9844$, $0.9918$, $0.9950$, $0.9979$, $0.9988$, $0.9997$, $0.9998$ at those
+seven values of $L$. By \eqref{eq:parity-split} $\cosh(x/2)$ spans the
+\emph{positive} direction of $P_L$. So the single negative direction of $S_L$
+and the single positive direction of the pole form are the same vector to four
+digits. That the count is one is forced; that the directions coincide is not
+forced by anything proved here, and is the sharpest statement we have of what
+the pole term is for.
+
+\subsection{The condition}
+\begin{proposition}[Necessary condition]\label{prop:necessary}
+Let $\psi$ be a normalized ground state of $S_L$, $S_L[\psi]=-\alpha_L$ with
+$\alpha_L>0$. If $Q_L\geq0$ on $C_c^\infty(I_L)$, then
+\begin{equation}\label{eq:necessary}
+ \alpha_L\;\leq\;2\Big|\int_{I_L}\psi\cosh(x/2)\Big|^2\;\leq\;
+ 2\norm{\cosh(x/2)}^2_{L^2(I_L)}=2\sinh(L/2)+L .
+\end{equation}
+\end{proposition}
+\begin{proof}
+By \eqref{eq:parity-split},
+$0\leq Q_L[\psi]=-\alpha_L+2|\int\psi\cosh(x/2)|^2-2|\int\psi\sinh(x/2)|^2$.
+Drop the last term and apply Cauchy--Schwarz, using
+$\int_{I_L}\cosh^2(x/2)\dd x=L/2+\sinh(L/2)$.
+\end{proof}
+
+\begin{center}
+\small
+\begin{tabular}{lrrrrrrr}
+\toprule
+$L$ & $1/2$ & $3/4$ & $1$ & $3/2$ & $2$ & $3$ & $4$\\
+\midrule
+$\alpha_L$ & $0.9138$ & $1.4157$ & $1.9863$ & $3.0994$ & $4.3037$ & $7.2281$ & $11.2285$\\
+$2\sinh(L/2)+L$ & $1.0052$ & $1.5177$ & $2.0422$ & $3.1446$ & $4.3504$ & $7.2586$ & $11.2537$\\
+relative margin & $9.1$e$-2$ & $6.7$e$-2$ & $2.7$e$-2$ & $1.4$e$-2$ & $1.1$e$-2$ & $4.2$e$-3$ & $2.2$e$-3$\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\subsection{It is a disproof test}
+Two facts make \eqref{eq:necessary} operational. First, the Galerkin value of
+$\alpha_L$ in \emph{any} finite basis is a lower bound for the true one, since a
+Rayleigh minimum over a subspace is at least the minimum over the space.
+Second, by \eqref{eq:cw} every strictly positive $u$ gives
+\begin{equation}\label{eq:cw-lower}
+ \alpha_L\;\geq\;\frac1h\Big(\min_i\frac{(N_Lu)_i}{u_i}-d_L\Big),
+\end{equation}
+requiring no optimality and no spectral computation; the constant function
+already gives $\alpha_L\geq3.85$ at $L=2$ against a threshold of $4.35$. A
+positive $u$, or a finite basis, making the left side of \eqref{eq:necessary}
+exceed $2\sinh(L/2)+L$ would show that $Q_L$ is not positive and hence that the
+Riemann hypothesis fails.
+
+We have run the test. $S_L$ is symmetric Toeplitz in the cell basis, so
+matrix-vector products are circulant embeddings and $\alpha_L$ is the deficit of
+the largest eigenvalue of a nonnegative operator, which is the well-conditioned
+end for Lanczos; a column build and eigensolve at $4000$ cells takes about a
+fifth of a second. Convergence at $L=1$ is
+$1.9873106$, $1.9874609$, $1.9874827$, $1.9874884$, $1.9874935$ at
+$m=250,10^3,4\cdot10^3,1.6\cdot10^4,6.4\cdot10^4$.
+
+\begin{remark}[The scan]\label{rem:scan}
+Over $7713$ values of $L$ in $[1/2,10]$ at $4000$ cells, with every prime-power
+threshold sampled at $+10^{-7}$, $+10^{-3}$ and $+2\cdot10^{-2}$ in addition to a
+uniform grid, there is \emph{no} violation of \eqref{eq:necessary}. The least
+absolute margin is $0.0187$ at $L=5.3396$, of relative size $9.5\times10^{-4}$;
+the least relative margin is $3.2\times10^{-4}$, near $L=10$. The absolute margin
+does not tend to zero: it oscillates in roughly $[0.019,0.09]$ across the range
+while both sides grow like $e^{L/2}$. This is floating point with a Lanczos
+tolerance of $10^{-12}$ and a discretization error near $10^{-5}$, both far below
+the margin, but it is not interval arithmetic and is not a certificate.
+\end{remark}
+
+\begin{remark}[Why it is not sufficient, quantitatively]\label{rem:insufficient}
+\eqref{eq:necessary} tests $Q_L$ on the single direction in which $S_L$ is
+negative and the pole form is positive --- the easy direction, where the
+cancellation is rank one. On the orthogonal complement $S_L$ is bounded below
+only by its second eigenvalue, while the pole form still contributes
+$-2|\int f\sinh(x/2)|^2$, of size up to $2\sinh(L/2)-L$:
+\begin{center}
+\small
+\begin{tabular}{lrrrrrr}
+\toprule
+$L$ & $4/5$ & $1$ & $3/2$ & $2$ & $3$ & $4$\\
+\midrule
+$\lambda_2(S_L)$ & $3.01$e$-2$ & $1.22$e$-2$ & $2.9$e$-4$ & $2.5$e$-4$ & $2.2$e$-4$ & $2.4$e$-4$\\
+$2\sinh(L/2)-L$ & $2.15$e$-2$ & $4.22$e$-2$ & $1.45$e$-1$ & $3.50$e$-1$ & $1.26$ & $3.25$\\
+ratio & $1.40$ & $0.288$ & $2.0$e$-3$ & $7.0$e$-4$ & $1.7$e$-4$ & $7.4$e$-5$\\
+\bottomrule
+\end{tabular}
+\end{center}
+For $L\geq3/2$ the available positivity on the complement is three to four
+orders of magnitude too small, so the insufficiency is quantitative rather than
+a missing lemma. The ratio crosses one near $L\approx0.85$, a little above
+$\log2$, which is the range in which a one-vector test is close to sufficient.
+Perron--Frobenius and Collatz--Wielandt are theories of the extreme eigenvalue,
+and nothing in them reaches $\lambda_2$.
+\end{remark}
+
+An exploratory computation, outside the checks, records that $\lambda_2(S_L)$ is
+already near $2\times10^{-4}$ for $L\geq3/2$, so the near-degeneracy of $Q_L$ is
+largely inherited from $S_L$ rather than produced by the pole term: the pole
+supplies a rank-one cancellation of one large negative eigenvalue, and does not
+create the criticality.

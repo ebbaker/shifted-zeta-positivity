@@ -42,6 +42,8 @@ it does not announce a completed reduction to a particular field theory.
 | [The pole term needs no mechanism](notes/POLE_TERM_NEEDS_NO_MECHANISM_20260915.md) | Focused; current | Why no ghost pair is required or possible, the quantitative smallness of the pole form's negative direction inside the prime-free form, and the corrected construction target. |
 | [Gamma compression presentation](notes/GAMMA_COMPRESSION_PRESENTATION_20260915.md) | Focused; current construction target | The target as a compression of the gamma energy, with both sides manifestly positive and an explicit source on the dominating side. |
 | [Continuation note](notes/CONTINUATION_20260915.md) | Handoff | Where the investigation stands, the ordered next steps, and what not to redo. |
+| [Exclusion map](notes/EXCLUSION_MAP_20260917.md) | Synthesis; current | Every exclusion so far, by kind of argument, with each scope clause explicit, and what remains untouched by any of them. |
+| [Context note, 17 September](notes/CONTINUATION_20260917.md) | Handoff; context only | What the reading session of 17 September covered and the state it found. No next steps. |
 | [Reviews](reviews/README.md) | Assessment | Dated reviews of manuscript versions, with the revisions each prompted. |
 | [Checks and records](numerics/README.md) | Supporting calculations | Small reproducible algebra programs and their explicitly scoped results. |
 

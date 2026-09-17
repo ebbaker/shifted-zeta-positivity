@@ -1,0 +1,92 @@
+\section{Introduction}\label{sec:intro}
+The Weil criterion makes the Riemann hypothesis the positivity of an explicit
+quadratic form on compactly supported test functions. Localized to an interval
+$I_L=(-L/2,L/2)$ it is the form
+\begin{equation}\label{eq:target-preview}
+ Q_L[f]=K[E_Lf]+w_0\norm f^2+P_L[f]
+ -2\!\!\sum_{m\log p<L}\!\!(\log p)p^{-m/2}\re\ip{E_Lf}{U_{m\log p}E_Lf},
+\end{equation}
+an archimedean energy $K$, a negative contact constant $w_0$, a rank-two form
+$P_L$ carrying the two poles of $\zeta$, and a sum over prime powers. The
+companion investigation of this program asks for a physical system whose state
+norm is \eqref{eq:target-preview}; the present paper asks a prior and entirely
+unconditional question, namely what \eqref{eq:target-preview} is.
+
+\subsection{What is proved here}
+The four terms of \eqref{eq:target-preview} are not four things. Section
+\ref{sec:density} shows that the first two are one: the archimedean symbol
+together with the contact is exactly $2\theta'(\tau)$, twice the derivative of
+the Riemann--Siegel theta function, so that
+\begin{equation}\label{eq:density-preview}
+ K[E_Lf]+w_0\norm f^2=\int_\R|\widehat{E_Lf}(\tau)|^2\dd\bar N(\tau),
+ \qquad \bar N(T)=\frac{\theta(T)}\pi+1,
+\end{equation}
+integration against the smooth zero-counting measure. The contact constant then
+requires no separate account: it is the $-\log\pi$ inside $\theta'$. Three
+consequences follow at once. The archimedean part is a \emph{signed} measure,
+negative exactly below $\tau_*=6.2898\ldots$, and once the prime contacts are
+added the negative band shrinks with $L$ and is empty above $\log13$; the
+crossing at $p=13$ is precisely the point at which the summed prime contacts
+overtake $-2\theta'(0)=-w_0$; and the symbol has the graded expansion
+$\log(\tau/2\pi)-\tfrac1{24}\tau^{-2}-\tfrac7{960}\tau^{-4}+\cdots$, with no odd
+orders, which is four separate conditions on a candidate rather than one.
+
+Section~\ref{sec:jump} shows that the prime sum joins them. Adding and
+subtracting the value of the prime symbol at $\tau=0$ puts everything but the
+pole term in L\'evy--Khinchine form,
+\begin{equation}\label{eq:jump-preview}
+ Q_L[f]=\EL[E_Lf]+\gamma_L\norm f^2+P_L[f],
+\end{equation}
+where $\EL$ is the jump Dirichlet form of the nonnegative L\'evy measure
+\begin{equation}\label{eq:measure-preview}
+ \mu_L=2\gammak(r)\dd r+2\!\!\sum_{m\log p<L}\!\!(\log p)p^{-m/2}\delta_{m\log p}
+\end{equation}
+and $\gamma_L$ is an explicit constant. The archimedean density and the prime
+atoms are the continuous and atomic parts of one measure: a source for
+\eqref{eq:target-preview} is a jump process whose jumps are the primes.
+
+Section~\ref{sec:compression} uses \eqref{eq:density-preview} to sharpen the
+compression presentation of the companion manuscript, splitting the form by the
+sign of its symbol rather than by a constant, and Section~\ref{sec:cone} takes
+up what \eqref{eq:jump-preview} buys in the way of positivity structure. Jump
+forms carry Perron--Frobenius structure: their resolvents are positivity
+preserving. We verify that here and show that the rank-two pole form destroys
+it, at every $L$ and however positive the constant is made --- a third
+independent appearance of the pole term as the obstruction of this subject. We
+then say precisely what a cone can and cannot do. For a self-adjoint form
+Krein--Rutman adds nothing to the spectral theorem; Birkhoff's contraction
+bounds a spectral gap and never a spectral radius; and Collatz--Wielandt, which
+does bound a spectral radius, needs a pointwise supersolution, which is exactly
+what the pole removes.
+
+Section~\ref{sec:necessary} applies the cone to the part of the form that is
+still inside one. Writing $Q_L=S_L+P_L$ with $S_L=\EL+\gamma_L\norm\cdot^2$, the
+form $S_L$ is of Stieltjes type with constant diagonal, so its least eigenvalue
+is a Perron-root deficit $-\alpha_L$ of an explicitly nonnegative kernel. It has
+exactly one negative direction, and that direction is $\cosh(x/2)$ to four
+digits --- which is the \emph{positive} direction of the pole form. Evaluating
+$Q_L$ there gives
+\begin{equation}\label{eq:necessary-preview}
+ Q_L\geq0\ \hbox{on}\ I_L\ \Longrightarrow\ \alpha_L\leq2\sinh(L/2)+L,
+\end{equation}
+and because $\alpha_L$ is a Perron root, a single strictly positive trial
+function bounds it from below. A trial function violating
+\eqref{eq:necessary-preview} would show that the Riemann hypothesis fails. A
+scan of $7713$ intervals finds no violation, and finds the least relative margin
+to be $9.5\times10^{-4}$.
+
+Section~\ref{sec:selection} collects eight necessary conditions on a source, and
+Section~\ref{sec:outlook} says what remains.
+
+\subsection{What is not claimed}
+Nothing here establishes Weil positivity on any interval, and no statement
+assumes the Riemann hypothesis. The presentations of
+Sections~\ref{sec:density}--\ref{sec:compression} are exact rearrangements: they
+do not make the problem smaller, and Section~\ref{sec:compression} says so
+quantitatively. The necessary condition of Section~\ref{sec:necessary} is
+necessary and not sufficient, and Remark~\ref{rem:insufficient} gives the
+quantitative reason: it tests the one direction in which the difficulty is
+absent. Its holding over the range scanned is the expected outcome and is not
+evidence for the Riemann hypothesis. Every numerical statement is labelled as
+such, and the check programs of Appendix~\ref{app:checks} state what they do and
+do not establish.

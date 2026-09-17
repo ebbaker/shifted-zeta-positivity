@@ -11,6 +11,7 @@ Exact rational algebra is labelled separately from floating-point work.
 | [check_symbol_split.py](check_symbol_split.py) | [symbol-split-checks.json](records/symbol-split-checks.json) | 32295 checks of the symbol split: the closed-form Toeplitz gamma energy against direct quadrature of (2.5), both compression identities as finite matrix identities at seven values of $L$, Cholesky certificates that the subtracted form and the negative-part multiplier are positive and that the new source side is smaller, and one-sided saturation quotients for the two presentations. |
 | [check_qweyl_relations.py](check_qweyl_relations.py) | [qweyl-relations-checks.json](records/qweyl-relations-checks.json) | 292 exact rational checks identifying the elementary Schur representation of Section 6.1 as the generalized $q$-Weyl algebra with $P(y)=1+y$: the two product relations, the grading relations, Klyuev's defining relations under the assignment $U=u_-$, $V=u_+$, $Z=v$, and the resulting root data. |
 | [check_levy_dirichlet.py](check_levy_dirichlet.py) | [levy-dirichlet-checks.json](records/levy-dirichlet-checks.json) | 11555 checks that the non-pole part of the target is a single jump Dirichlet form: the Lévy--Khinchine decomposition as a matrix identity at five values of $L$, the jump structure of the energy (nonpositive off-diagonal, nonnegative spectrum), Beurling--Deny cone positivity of the resolvent, the destruction of that cone by the rank-two pole term, and the ground-state identity. |
+| [check_collatz_wielandt.py](check_collatz_wielandt.py) | [collatz-wielandt-checks.json](records/collatz-wielandt-checks.json) | 70 checks of the Collatz--Wielandt reading: that $S_L$ is a Z operator with constant diagonal and $N_L$ entrywise nonnegative, the Perron identity $\lambda_{\min}(S_L)=d_L-\rho(N_L)$, that $S_L$ has exactly one negative direction at seven values of $L$, the overlap of its ground state with $\cosh(x/2)$, two-sided brackets from three trial functions, and the necessary condition $\alpha_L\le 2\sinh(L/2)+L$ with its margins. |
 
 Run from the investigation directory:
 
@@ -19,6 +20,7 @@ python3 numerics/check_density_symbol.py
 python3 numerics/check_symbol_split.py
 python3 numerics/check_qweyl_relations.py
 python3 numerics/check_levy_dirichlet.py
+python3 numerics/check_collatz_wielandt.py
 python3 validation/drafts.py check --replay
 ```
 

@@ -1,0 +1,63 @@
+\section{The target is a jump form}\label{sec:jump}
+\begin{proposition}[Jump form]\label{prop:jump}
+For $f\in C_c^\infty(I_L)$ and $F=E_Lf$ put
+\begin{equation}\label{eq:levy-measure}
+ \mu_L=2\gammak(r)\dd r+2\!\!\sum_{m\log p<L}\!\!(\log p)p^{-m/2}\delta_{m\log p},
+ \qquad
+ \gamma_L=w_0-2\!\!\sum_{m\log p<L}\!\!(\log p)p^{-m/2},
+\end{equation}
+and
+\begin{equation}\label{eq:jump-energy}
+ \EL[F]=\int_0^\infty\big[\norm F^2-\re\ip F{U_rF}\big]\dd\mu_L(r).
+\end{equation}
+Then $\mu_L\geq0$, $\EL\geq0$, and
+\begin{equation}\label{eq:jump-decomposition}
+ Q_L[f]=\EL[E_Lf]+\gamma_L\norm f^2+P_L[f].
+\end{equation}
+\end{proposition}
+\begin{proof}
+For the continuous part of \eqref{eq:levy-measure}, \eqref{eq:jump-energy} is
+\eqref{eq:gamma-energy}. For the atomic part, write each prime term of
+\eqref{eq:target} as
+$-2c\,\re\ip F{U_sF}=-2c\norm F^2+2c[\norm F^2-\re\ip F{U_sF}]$ with
+$c=(\log p)p^{-m/2}$ and $s=m\log p$; the first terms collect into
+$\gamma_L-w_0$ and the second into the atomic part of \eqref{eq:jump-energy}.
+Nonnegativity is $\norm F^2-\re\ip F{U_rF}=\tfrac12\norm{F-U_rF}^2$.
+\end{proof}
+
+Equivalently, in symbols, $b(\tau^2)+w_0-2\sum c\cos(\tau s)=\Phi_L(\tau)+\gamma_L$
+with $\Phi_L(\tau)=\int(1-\cos\tau r)\dd\mu_L(r)$ a continuous negative definite
+function in the sense of Schoenberg. So \eqref{eq:jump-decomposition} is a
+L\'evy--Khinchine representation of the whole of \eqref{eq:target} except the
+pole term, and it is elementary; what is worth saying is what it means.
+
+\paragraph{One object, not two channels.} The archimedean density and the prime
+atoms are the continuous and atomic parts of the single nonnegative measure
+$\mu_L$. A source for \eqref{eq:target} is, up to the constant and the two
+poles, the Dirichlet form of a L\'evy jump process whose jumps are the primes,
+with mass $2(\log p)p^{-m/2}$ at jump length $m\log p$. This matters because the
+companion manuscript proves that no coherent source has the archimedean energy
+and the summed prime references as its two channel norms: the interference bound
+fails at explicit test functions and by a growing factor. A presentation in
+which the two are one object is what that exclusion asks for, and
+\eqref{eq:jump-decomposition} supplies it.
+
+\paragraph{The constant.} $\gamma_L$ is large and negative, $-6.3524$ at $L=1$
+and $-18.3878$ at $L=3$, with $\gamma_L=w_0-4e^{L/2}(1+o(1))$ by the prime number
+theorem. It is a different bookkeeping from the constant $c_L$ of
+\eqref{eq:sigma}, which uses the mirror contact $2dr/(1+r)$ in place of the full
+$2dr^n$.
+
+\paragraph{A ground-state reformulation.} Taking the least Rayleigh quotient of
+\eqref{eq:jump-decomposition} against $\norm f^2$ gives, exactly,
+\begin{equation}\label{eq:ground-state}
+ \lambda_{\min}\big(\EL+P_L;\norm\cdot^2\big)
+ =-\gamma_L+\lambda_{\min}\big(Q_L;\norm\cdot^2\big),
+\end{equation}
+so that Weil positivity on $I_L$ says precisely that the ground-state energy of
+the jump form together with the pole term is at least
+$2\sum_{m\log p<L}(\log p)p^{-m/2}-w_0$. In a $48$-cell basis at $L=1$ the two
+sides of \eqref{eq:ground-state} are $6.354438$ and $6.352442$, the difference
+being $\lambda_{\min}(Q_L)$. This is a re-presentation and not a theorem, but it
+places the criterion where the spectral theory of nonlocal Dirichlet forms on an
+interval is the relevant apparatus.

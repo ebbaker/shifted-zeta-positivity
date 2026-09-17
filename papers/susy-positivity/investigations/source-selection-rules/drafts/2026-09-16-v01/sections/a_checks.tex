@@ -1,0 +1,57 @@
+\section{Checks and reproduction}\label{app:checks}
+Four programs accompany this paper. They use Python's standard library only,
+print a JSON record to standard output, and do not overwrite the preserved
+records in \texttt{numerics/records/}. Counts refer to finite test cases and not
+to independent theorems.
+
+\begin{itemize}
+\item \texttt{check\_density\_symbol.py} ($77$ cases). The series and digamma
+forms of $b$ with an explicit tail bound; the contact constant against its
+closed form; \eqref{eq:density-identity} against a central difference of
+$\arg\Gamma$, the two sides computed by unrelated routines; the four
+coefficients of \eqref{eq:graded}; the smooth count against three published zero
+ordinates; and the sign structure of $\sigma_L$, including $\tau_*$, the prime
+ladder and the crossing at $p=13$, and the band $\tau_L$.
+\item \texttt{check\_symbol\_split.py} ($32{,}295$ cases). The closed-form
+Toeplitz archimedean energy against direct quadrature of
+\eqref{eq:gamma-energy}, agreeing to $10^{-14}$; both compression identities as
+finite matrix identities at seven values of $L$; Cholesky certificates that the
+subtracted form and the negative-part multiplier are positive and that the new
+source side is smaller; and the one-sided saturation quotients of
+Section~\ref{sec:compression}.
+\item \texttt{check\_levy\_dirichlet.py} ($11{,}555$ cases).
+\eqref{eq:jump-decomposition} as a matrix identity at five values of $L$; the
+jump structure of $\EL$; Beurling--Deny cone positivity of the resolvent; its
+destruction by the pole term; and the ground-state identity
+\eqref{eq:ground-state}.
+\item \texttt{check\_collatz\_wielandt.py} ($70$ cases). That $S_L$ is a
+Stieltjes operator with constant diagonal and $N_L$ entrywise nonnegative;
+\eqref{eq:perron}; that $S_L$ has exactly one negative direction at seven values
+of $L$; the overlap of its ground state with $\cosh(x/2)$; two-sided brackets
+\eqref{eq:cw} from three trial functions; and \eqref{eq:necessary} with its
+margins.
+\end{itemize}
+
+Run from the investigation directory:
+\begin{verbatim}
+python3 numerics/check_density_symbol.py
+python3 numerics/check_symbol_split.py
+python3 numerics/check_levy_dirichlet.py
+python3 numerics/check_collatz_wielandt.py
+python3 validation/drafts.py check --replay
+\end{verbatim}
+
+Three computations reported in the text are \emph{not} among these programs and
+are recorded in the investigation's notes: the smooth-basis saturation values
+quoted in selection rule 7, which use arbitrary-precision arithmetic and a
+truncated sum over zero ordinates; the scan of Remark~\ref{rem:scan}, which uses
+a Toeplitz eigensolver; and the values of $\lambda_2(S_L)$ in
+Remark~\ref{rem:insufficient}. Each is labelled where it appears.
+
+The saturation quotients are \textbf{one sided}: they are Rayleigh quotients in a
+step or polynomial subspace, so a value above one would certify that a
+domination fails, while a value below one certifies nothing. The Galerkin values
+of $\alpha_L$ are the opposite way round and this is what makes
+Section~\ref{sec:necessary}.4 a test: a minimum over a subspace is at least the
+minimum over the space, so every computed $\alpha_L$ is a lower bound for the
+true one.

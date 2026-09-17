@@ -1,0 +1,59 @@
+\section{Conventions and the target}\label{sec:conventions}
+All Hilbert inner products are conjugate-linear in the first argument. For
+$L>0$ let $I_L=(-L/2,L/2)$ and let $E_L$ denote extension by zero from $I_L$ to
+$\R$; unless another domain is stated, $f\in C_c^\infty(I_L;\C)$ and $F=E_Lf$.
+The test functions carry no boundary conditions: the localization is by support
+alone. We use
+\begin{equation}\label{eq:fourier}
+ \widehat F(\tau)=\int_\R e^{-i\tau x}F(x)\dd x,\qquad U_dF(x)=F(x-d),
+ \qquad \norm F^2=\frac1{2\pi}\int_\R|\widehat F(\tau)|^2\dd\tau,
+\end{equation}
+and for $r>0$
+\begin{equation}\label{eq:gamma-kernel}
+ \gammak(r)=\frac{e^{-r/2}}{1-e^{-2r}}=\sum_{n\geq0}e^{-a_nr},
+ \qquad a_n=2n+\tfrac12 .
+\end{equation}
+The archimedean energy, the contact constant and the pole form are
+\begin{align}
+ K[F]&=\int_0^\infty\big[2\norm F^2-2\re\ip F{U_rF}\big]\gammak(r)\dd r
+  =\frac1{2\pi}\int_\R b(\tau^2)|\widehat F(\tau)|^2\dd\tau,
+ \label{eq:gamma-energy}\\
+ b(\tau^2)&=\sum_{n\geq0}\frac2{a_n}\frac{\tau^2}{a_n^2+\tau^2}
+  =\re\psi(\tfrac14+i\tau/2)-\psi(\tfrac14),
+ \label{eq:gamma-multiplier}\\
+ w_0&=\psi(\tfrac14)-\log\pi=-\gamma_E-\frac\pi2-3\log2-\log\pi
+  =-5.37218\ldots,
+ \label{eq:contact}\\
+ P_L[f]&=2\Big|\int_{I_L}f\cosh(x/2)\Big|^2-2\Big|\int_{I_L}f\sinh(x/2)\Big|^2,
+ \label{eq:poles}
+\end{align}
+with $\psi=\Gamma'/\Gamma$ and $\gamma_E$ Euler's constant. The target is
+\begin{equation}\label{eq:target}
+ Q_L[f]=K[E_Lf]+w_0\norm f^2+P_L[f]
+ -2\!\!\sum_{m\log p<L}\!\!(\log p)p^{-m/2}\re\ip F{U_{m\log p}F},
+\end{equation}
+the coefficient being the primitive length $\log p$ and not $m\log p$. The
+classical Weil criterion is that the Riemann hypothesis holds if and only if
+$Q_L\geq0$ for every $L>0$; we use it as input and do not reprove it. These are
+the conventions of the companion manuscript of this program
+\cite{InverseBulk,Suzuki,CCM}, to which we refer for the program's objective and
+for the results quoted by number below.
+
+Two facts from that manuscript are used repeatedly. The pole form splits by
+parity, $R f(x)=f(-x)$,
+\begin{equation}\label{eq:parity-split}
+ P_L\big|_{\rm even}=+2\Big|\int_{I_L}f\cosh(x/2)\Big|^2,\qquad
+ P_L\big|_{\rm odd}=-2\Big|\int_{I_L}f\sinh(x/2)\Big|^2,
+\end{equation}
+and the target has the spectral form
+\begin{equation}\label{eq:spectral-target}
+ Q_L[f]=\sum_\rho\widehat F(\gamma_\rho)\overline{\widehat F(\overline{\gamma_\rho})},
+ \qquad \gamma_\rho=-i(\rho-\tfrac12),
+\end{equation}
+the sum over the nontrivial zeros in symmetric order. The right side of
+\eqref{eq:spectral-target} is very much smaller than the individual terms of
+\eqref{eq:target}; for a smooth input on $I_4$ the four terms are
+$3.40$, $-8.06$, $9.11$, $-4.46$ and their sum is $1.4\times10^{-7}$. This is why
+the assembly of $Q_L$ from \eqref{eq:target} in double precision is unusable,
+and why the numerical work of Appendix~\ref{app:checks} either avoids the
+cancellation or is confined to quantities in which it does not occur.

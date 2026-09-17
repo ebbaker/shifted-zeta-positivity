@@ -1,0 +1,78 @@
+\section{A Perron--Frobenius structure, and what breaks it}\label{sec:cone}
+\subsection{The cone the jump form carries}
+Jump Dirichlet forms carry an order structure that quadratic forms in general do
+not. By the Beurling--Deny criteria the semigroup and resolvent of such a form
+are positivity preserving: if $u\geq0$ pointwise then $(\mathcal A+\lambda)^{-1}u\geq0$
+for $\lambda>0$, where $\mathcal A$ is the generator. In a basis of indicator
+cells on $I_L$, in which a nonnegative function is a nonnegative coefficient
+vector, this says that the inverse matrix has no negative entries.
+
+That is what happens. In a $48$-cell basis, the inverse of the archimedean
+energy plus a positive constant has \emph{no} negative entries, at
+$\lambda\in\{1,5\}$ and every $L$ tested; and so does the inverse of the
+archimedean energy plus the constant $c_L$ wherever that operator is still
+positive definite, which fails only at small $L$, where the bare archimedean form
+is known to be indefinite.
+
+\subsection{The pole form destroys it}
+Adjoining the rank-two pole form $P_L$ removes the structure entirely.
+\begin{center}
+\small
+\begin{tabular}{lrrrrr}
+\toprule
+$L$ & $4/5$ & $1$ & $3/2$ & $2$ & $3$\\
+\midrule
+negative fraction of $(K+5)^{-1}$
+ & $0.000$ & $0.000$ & $0.000$ & $0.000$ & $0.000$\\
+negative fraction of $(K+5+P_L)^{-1}$
+ & $0.404$ & $0.511$ & $0.640$ & $0.703$ & $0.734$\\
+\bottomrule
+\end{tabular}
+\end{center}
+and the effect worsens with $L$. The mechanism is the Sherman--Morrison formula:
+adding $\sigma ww^{\!\top}$ subtracts
+$\sigma(A^{-1}w)(A^{-1}w)^{\!\top}/(1+\sigma w^{\!\top}A^{-1}w)$ from the
+inverse, and when $A^{-1}\geq0$ entrywise and $w\geq0$ --- as $\cosh(x/2)>0$ is
+--- that is a nonnegative rank-one subtraction, which drives entries negative.
+\emph{Even the positive half of the pole form breaks inverse positivity.}
+
+This is the third independent appearance of the pole term as the obstruction of
+this subject, after the impossibility of supplying its negative direction by an
+adjoined positive channel and the parity split \eqref{eq:parity-split}.
+
+\subsection{What a cone can and cannot supply}
+It is worth being precise, because the conclusion is not that cone methods are
+unavailable but that three of the four standard ones cannot bound the quantity
+in question.
+
+\paragraph{(a) The existence of an invariant cone is automatic.} By
+Vandergraft's theorem a matrix leaves some proper cone invariant as soon as its
+spectral radius is an eigenvalue, which for a self-adjoint operator is always.
+So the question is never whether a cone exists but whether a \emph{usable} one,
+supplied by the structure, does.
+
+\paragraph{(b) Krein--Rutman adds nothing to the spectral theorem here.} Its
+content in dynamics is that a transfer operator is not self-adjoint and has no a
+priori spectral theory, so the existence of a leading eigenpair is a real
+statement. The operators of this subject are self-adjoint by construction and
+their leading eigenpairs exist for free.
+
+\paragraph{(c) Birkhoff's contraction bounds a gap, never a radius.} A positive
+map taking a cone into itself with finite projective diameter $\Delta$ contracts
+the Hilbert projective metric with ratio $\tanh(\Delta/4)$, which controls
+$|\lambda_2|/|\lambda_1|$ and the convergence to the leading eigenvector. It
+says nothing about $\lambda_1$, and Weil positivity is a statement about
+$\lambda_1$ alone.
+
+\paragraph{(d) Collatz--Wielandt does bound a radius, and needs a cone.} For a
+cone-positive $M$,
+\begin{equation}\label{eq:cw-abstract}
+ \rho(M)=\inf\{\lambda:\exists\,u\in\operatorname{int}C,\ Mu\preceq\lambda u\},
+\end{equation}
+so a single pointwise supersolution certifies $\rho(M)\leq1$: it converts an
+operator inequality into a pointwise inequality between two explicit functions.
+That is what a cone is worth here, and Section~\ref{sec:cone}.2 is exactly what removes
+it for $Q_L$.
+
+The next section applies \eqref{eq:cw-abstract} to the largest piece of the
+target that is still inside a cone.

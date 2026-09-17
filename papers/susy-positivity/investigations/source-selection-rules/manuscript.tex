@@ -1,0 +1,100 @@
+\documentclass[11pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools,mathrsfs}
+\usepackage{microtype,booktabs,array}
+\usepackage[dvipsnames]{xcolor}
+\usepackage[colorlinks=true,linkcolor=MidnightBlue,citecolor=MidnightBlue,urlcolor=MidnightBlue]{hyperref}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small A jump-process presentation of the localized Weil form}
+\fancyhead[R]{\small Working draft \draftversion}
+\fancyfoot[C]{\thepage}
+\setlength{\headheight}{14pt}
+\setlength{\emergencystretch}{2em}
+\numberwithin{equation}{section}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{problem}[theorem]{Problem}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\newcommand{\R}{\mathbb R}
+\newcommand{\C}{\mathbb C}
+\newcommand{\N}{\mathbb N}
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\re}{\operatorname{Re}}
+\newcommand{\im}{\operatorname{Im}}
+\newcommand{\supp}{\operatorname{supp}}
+\newcommand{\norm}[1]{\lVert #1\rVert}
+\newcommand{\ip}[2]{\langle #1,#2\rangle}
+\newcommand{\dd}{\,\mathrm d}
+\newcommand{\gammak}{n_{\gamma}}
+\newcommand{\EL}{\mathcal E_L}
+\newcommand{\draftversion}{0.1}
+\hypersetup{pdftitle={A jump-process presentation of the localized Weil form},
+  pdfsubject={The archimedean symbol as zero density, a broken Perron--Frobenius
+  structure, and selection rules for a source; working draft \draftversion}}
+\title{A jump-process presentation of the localized Weil form\\[5pt]
+\large The archimedean symbol as zero density, a broken Perron--Frobenius
+structure, and selection rules for a source}
+\author{Drafted for Edward Baker}
+\date{Working manuscript, version \draftversion\\16 September 2026}
+\begin{document}
+\maketitle
+\begin{abstract}
+The localized Weil quadratic form on an interval $I_L$ is usually written as an
+archimedean energy, a contact constant, a rank-two pole form and a sum of prime
+translations. We give a presentation in which the first, second and fourth of
+these are a single object. Adding and subtracting the value of the prime symbol
+at the origin puts everything but the pole term in L\'evy--Khinchine form: the
+target is a jump Dirichlet form whose L\'evy measure has the archimedean density
+as its continuous part and an atom of mass $2(\log p)p^{-m/2}$ at each prime
+period $m\log p$, together with one explicit constant. Two identities organize
+the account. The archimedean symbol together with the contact is exactly twice
+the derivative of the Riemann--Siegel theta function, so it is integration
+against the smooth zero-counting measure; the contact constant is not an
+independent object but the $-\log\pi$ inside that derivative, and the negativity
+of the archimedean part is confined to a band that shrinks with $L$ and is empty
+above $\log13$. Splitting the form by the sign of its symbol rather than by that
+constant then gives a compression presentation that moves strictly less to the
+subtracted side. The jump presentation carries a Perron--Frobenius structure:
+its resolvent is positivity preserving, as Beurling--Deny requires, and the
+rank-two pole form destroys that structure at every $L$. We explain what a cone
+can and cannot supply here --- Krein--Rutman adds nothing to the spectral theorem
+for a self-adjoint form, Birkhoff bounds a spectral gap and never a spectral
+radius, and Collatz--Wielandt is the only cone theorem that bounds what must be
+bounded --- and we use the part of the form that does lie in a cone to prove an
+elementary necessary condition: if the Weil form is positive on $I_L$ then
+$\alpha_L\le2\sinh(L/2)+L$, where $\alpha_L$ is a Perron-root deficit of an
+explicitly nonnegative kernel. The condition is sharp, it is bounded below by a
+single positive trial function, and a trial function violating it would show
+that the Riemann hypothesis fails; a scan of $7713$ intervals finds no
+violation. We close with eight necessary conditions that any source for the
+localized form must satisfy. Nothing here establishes Weil positivity, and no
+statement below assumes the Riemann hypothesis.
+\end{abstract}
+\input{sections/01_introduction}
+\clearpage
+{\small\tableofcontents}
+\clearpage
+\input{sections/02_conventions}
+\input{sections/03_density}
+\input{sections/04_jump}
+\input{sections/05_compression}
+\input{sections/06_cone}
+\input{sections/07_necessary}
+\input{sections/08_selection}
+\input{sections/09_outlook}
+\appendix
+\input{sections/a_checks}
+\clearpage
+\phantomsection
+\addcontentsline{toc}{section}{References}
+\input{references}
+\end{document}

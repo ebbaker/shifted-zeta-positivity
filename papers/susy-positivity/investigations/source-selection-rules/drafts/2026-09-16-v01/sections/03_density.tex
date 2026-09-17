@@ -1,0 +1,85 @@
+\section{The archimedean symbol is the smooth zero density}\label{sec:density}
+\subsection{The identity}
+\begin{proposition}[Density identity]\label{prop:density}
+For all real $\tau$,
+\begin{equation}\label{eq:density-identity}
+ b(\tau^2)+w_0=\re\psi(\tfrac14+i\tau/2)-\log\pi=2\theta'(\tau),
+\end{equation}
+where $\theta(t)=\arg\Gamma(\tfrac14+it/2)-\tfrac t2\log\pi$ is the
+Riemann--Siegel theta function. Consequently, with
+$\bar N(T)=\theta(T)/\pi+1$ the smooth part of the Riemann--von Mangoldt
+counting function,
+\begin{equation}\label{eq:density-form}
+ K[E_Lf]+w_0\norm f^2=\int_\R|\widehat{E_Lf}(\tau)|^2\dd\bar N(\tau).
+\end{equation}
+\end{proposition}
+\begin{proof}
+The first equality in \eqref{eq:density-identity} is \eqref{eq:gamma-multiplier}
+plus \eqref{eq:contact}. Differentiating $\theta$ gives
+$\theta'(t)=\tfrac12\re\psi(\tfrac14+it/2)-\tfrac12\log\pi$, which is the second.
+For \eqref{eq:density-form}, $K$ is the Fourier multiplier with symbol
+$b(\tau^2)$ by \eqref{eq:gamma-energy} and $w_0\norm f^2$ is the multiplier with
+symbol $w_0$ by Plancherel, so the sum has symbol $2\theta'$; and
+$\bar N'=\theta'/\pi$, so $\tfrac1{2\pi}\cdot2\theta'=\bar N'$.
+\end{proof}
+
+Both sides of \eqref{eq:density-identity} are computed by unrelated routines in
+\texttt{check\_density\_symbol.py} and agree to sixteen digits.
+
+\subsection{Four consequences}
+\paragraph{The contact needs no separate account.}
+It is a standing question of this program how a source is to produce a contact
+constant more negative than any of its channels. By \eqref{eq:density-form} the
+constant is not a separate object: it is the $-\log\pi$ in $\theta'$, the
+normalization of the zero density. A candidate whose spectral weight has the
+right logarithmic slope and the wrong intercept does not have a small error; it
+has the wrong density of states.
+
+\paragraph{The archimedean form is signed, and its negative band is small.}
+$2\theta'$ vanishes at $\tau_*=6.28984\ldots$, against $2\pi=6.28319\ldots$, and
+is negative below it: $\bar N$ decreases there. In the prime-free subtraction
+form of the companion manuscript the source-side symbol is
+\begin{equation}\label{eq:sigma}
+ \sigma_L(\tau)=b(\tau^2)+w_0+\Sigma_L=2\theta'(\tau)+\Sigma_L,
+ \qquad \Sigma_L=\sum_{p<e^L}\frac{2\log p}{\sqrt p+1},
+\end{equation}
+which is negative exactly on $|\tau|<\tau_L$, with
+\begin{center}
+\small
+\begin{tabular}{lrrrrrr}
+\toprule
+$L$ & $0.8$ & $1$ & $5/4$ & $3/2$ & $2$ & $5/2$ \\
+$\tau_L$ & $3.5504$ & $3.5504$ & $1.6396$ & $1.6396$ & $0.4745$ & $0.2520$\\
+\bottomrule
+\end{tabular}
+\end{center}
+and no negative band at all for $L>\log13$.
+
+\paragraph{The sign change at $p=13$ has a meaning.}
+The constant of that presentation is $c_L=\sigma_L(0)=2\theta'(0)+\Sigma_L$, so
+$c_L>0$ is exactly $\Sigma_L>-w_0=5.37218\ldots$: the summed prime contacts
+overtake the maximum negativity of the smooth zero density. That is why the
+crossing sits at $p=13$ and nowhere else.
+
+\paragraph{A graded condition on a candidate.}
+Stirling for $\theta'$ gives, with every coefficient verified numerically to
+five digits at $\tau=20,\dots,10^3$,
+\begin{equation}\label{eq:graded}
+ b(\tau^2)+w_0=\log\frac{|\tau|}{2\pi}+0\cdot|\tau|^{-1}-\frac1{24}|\tau|^{-2}
+ +0\cdot|\tau|^{-3}-\frac7{960}|\tau|^{-4}+\cdots .
+\end{equation}
+These are four separate falsifications rather than one: the leading logarithm
+with unit coefficient, which is the marginal or borderline-Gagliardo case; the
+intercept $-\log2\pi$, which is the contact; the absence of the $|\tau|^{-1}$
+term, which is the reflection symmetry of the form seen in the expansion; and
+then $-1/24$ and $-7/960$.
+
+\begin{remark}[Comparison with Suzuki's small-interval law]\label{rem:suzuki-here}
+Suzuki writes the localized form as $\ip{A_av}v$ for a self-adjoint $A_a$ on
+$L^2(-a,a)$ and proves, unconditionally, that its lowest eigenvalue is
+continuous in $a$ and, for sufficiently small $a$, positive, simple and equal to
+$\log(1/a)+\mu_1-\log(2\pi)+\psi(2)-1+O(a)$ \cite{Suzuki}. With $a=L/2$ the
+leading behaviour is \eqref{eq:graded} evaluated at the interval's own frequency
+scale $\tau\sim1/a$: the first two terms agree, the constant included. We record
+this because the two derivations are independent.
+\end{remark}

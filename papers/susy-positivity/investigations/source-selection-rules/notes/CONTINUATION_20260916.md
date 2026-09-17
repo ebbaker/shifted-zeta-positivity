@@ -1,137 +1,180 @@
-# Continuation note, 16 September 2026
+# Continuation note, 16 September 2026 (end of session)
 
-**Author: Claude Opus 5 (Anthropic).** Handoff for the next session on this
-investigation.
+**Author: Claude Opus 5 (Anthropic).** Handoff for the next session. This
+replaces the mid-session version of the same date, which was written before the
+manuscript existed and whose ordered next steps are superseded by §3 below.
 
-## 1. What this investigation is
+Read in this order: [the manuscript](../manuscript.pdf) (15 pages), then §§1--3
+here, then [the open directions](OPEN_DIRECTIONS_20260916.md).
 
-A spin-off from [inverse bulk realization](../../inverse-bulk-realization/README.md).
-Its object is not a construction but the **necessary conditions** a source must
-satisfy, and the presentation of the target that makes them visible. It exists
-because the sibling investigation's exclusions are each of the form "this
-particular preparation fails", and what is wanted is conditions that kill whole
-families cheaply.
+---
 
-It began from two brainstorm notes,
-[the bottleneck note](../../../brainstorm/inverse-bulk-brainstorm/BOTTLENECK_AND_OPERATOR_SEARCH_20260916.md)
-and
-[the non-constructive note](../../../brainstorm/inverse-bulk-brainstorm/NONCONSTRUCTIVE_EXISTENCE_AND_THETA_SYMBOL_20260916.md).
-Their results are restated here with proofs and checks; where they conflict, this
-folder is current. One conjecture of the second note is **retracted**
-(see the q-Weyl note, §4).
+## 1. Where the two manuscripts stand
 
-## 2. What is established
+**This investigation, version 0.1** --- *A jump-process presentation of the
+localized Weil form*, 15 pages, nine sections and an appendix. Builds clean,
+recorded after a page-by-page review, snapshotted as `drafts/2026-09-16-v01`,
+and `python3 validation/drafts.py check --replay` passes over 44,289 recorded
+cases. It is self-contained: it inputs no shared background and cites the
+companion manuscript only for the program's objective and for results quoted by
+number. **Nothing in it assumes RH and nothing in it proves Weil positivity.**
 
-1. **`b(tau^2) + w0 = 2 theta'(tau)`**, so the gamma energy together with the
-   contact is integration against the smooth zero-counting measure
-   `Nbar = theta/pi + 1`. The contact has no independent existence. Proved;
-   77 checks.
-2. **The symbol split**: splitting the archimedean form by the sign of its
-   symbol rather than by the constant keeps the identity exact and both sides
-   positive, moves strictly less to the subtracted side, and raises the one-sided
-   saturation quotient by a factor of 3.9 at `L = 0.8` falling to 1 at
-   `L = log 13`, above which no split is needed at all. Proved; 32295 checks.
-   **It does not change the criticality.**
-3. **The elementary Schur representation of Section 6.1 is the generalized
-   `q`-Weyl algebra with `P(y) = 1 + y`**, so by Klyuev its twisted-trace space
-   is one dimensional and the algebra carries no arithmetic parameter. All the
-   arithmetic in Section 6 lives in the chosen state. Proved in exact rational
-   arithmetic; 292 checks.
-4. **Eight selection rules**, four of them new, collected in
-   [SELECTION_RULES.md](SELECTION_RULES.md).
+**The companion investigation, version 0.6** --- three changes were made this
+session: the saturation figures of Section 7.6 were corrected (the previous
+version attributed them to a computation that does not produce them; see §5
+below), Remark 7.12 on Suzuki's unconditional results was added, and Section 7.7
+was added carrying Propositions 7.13 (the jump form) and 7.14 (the necessary
+condition). It builds clean at 42 pages. **Its `BUILD_RECORD.json` is stale** and
+`validation/drafts.py check` will fail there until someone reads the rendered
+pages and runs `record` and `save`. That is the one outstanding human action.
 
-## 3. Next, in order
+---
 
-**Done since this note was written:** Suzuki arXiv:2606.09096 has been read
-(items 0 below is discharged; see
-[the jump-form note](PERRON_FROBENIUS_AND_THE_JUMP_FORM_20260916.md), §6), and the
-Perron-Frobenius route has been settled (same note, §4): the cone exists for the
-jump form and the pole term destroys it, and neither Krein-Rutman nor Birkhoff
-could have bounded the spectral radius anyway. The live successor is the
-**nonlocal-Dirichlet-form spectral gap** of that note, §5 and §7.3.
+## 2. The five facts a new session needs
 
+**(a) The archimedean symbol is the smooth zero density.**
+`b(tau^2) + w0 = 2 theta'(tau)`, so the archimedean energy together with the
+contact is `int |F^|^2 dNbar`. The contact constant is not an independent object:
+it is the `-log pi` inside `theta'`. Everything in Section 3 of the manuscript
+follows from this, including the meaning of the `p = 13` crossing.
 
-0. **Read Suzuki, arXiv:2606.09096 and arXiv:2607.24830, in full.** Manuscript
-   0.5 already cites the first, but only for the normalization of the Weil
-   functional in Section 2.1. It reportedly also proves, unconditionally, that
-   the localized form is `<A_a v, v>` for a self-adjoint `A_a` built from a screw
-   function, that the least Rayleigh quotient is continuous in `a`, and that the
-   lowest eigenvalue is positive and simple — all of which bear directly on
-   Section 7.6 and on selection rule 7. Cheapest item here and the most likely to
-   change what we do. See [the sweep](EXISTENCE_MECHANISM_SWEEP_20260916.md), §8.
+**(b) The target is one jump form.** `Q_L = E_{mu_L} + gamma_L ||f||^2 + P_L`
+with `mu_L >= 0` carrying the archimedean density as its continuous part and the
+prime atoms as its atomic part. The archimedean and prime halves are not two
+channels; a source is a jump process whose jumps are the primes. This is what the
+companion manuscript's two-channel exclusion asks for.
 
-0b. **Test the Birkhoff prediction.** Compute the projective diameter `Delta_L`
-   of `Pi_L`'s image in the natural cone and check whether `tanh(Delta_L/4)`
-   tracks `1 - lambda_min(L)`. Doable with what is already built, and it decides
-   whether the cone reading of `||Pi_L|| <= 1` is more than vocabulary. See the
-   sweep, §2.
+**(c) The pole term is the obstruction, in three independent ways.** It cannot
+be supplied by an adjoined positive channel; it is the indefinite part under the
+parity split; and it destroys the Beurling--Deny cone that the jump form
+otherwise carries, by Sherman--Morrison, even in its positive half. Every
+structural dead end this session traced back to it.
 
-0c. **Port the spectral saturation computation into a check programme**, and
-   while doing it adopt Zhu's sine-basis trial functions: our polynomial basis is
-   off by hundreds of orders of magnitude (sweep, §7). It is in
-   [the fixed-point note](FIXED_POINTS_AND_THE_MARGIN_20260916.md), §5, and it is
-   the most consequential thing here: it measures how far the domination is from
-   failing (`1e-9` at `L = 1` falling to `1e-24` at `L = 3`) and it shows that
-   Section 7.6 of the sibling manuscript quotes figures its own registered check
-   does not produce. It currently uses `mpmath`, which this repository's
-   conventions do not allow. The port needs: arbitrary precision from `decimal`;
-   spherical Bessel functions, which are elementary at half-integer order; and
-   zero ordinates, either self-computed or hard-coded as labelled published input
-   in the manner of `check_explicit_formula.py` in the sibling investigation.
+**(d) The margin collapses, and no method may assume otherwise.**
+`min spec(Q_L; K_+)` is below `1e-9` at `L = 1` and below `1e-24` at `L = 3`.
+Any hypothesis supplying a margin uniform in `L` --- a self-map into a fixed
+compact subset of a cone's interior, a uniform contraction ratio, a spectral gap
+--- proves something false. This is selection rule 7 and it has killed more
+proposals than anything else.
 
-1. **Rule 7's band-edge half also needs a check programme.** The near-null band-edge measurement is
-   currently only in a brainstorm note, computed with `numpy`. Reimplement it
-   under this folder's conventions (standard library only, JSON to stdout,
-   preserved record, registered in `validation/drafts.py`). While doing it,
-   (The `lambda_min` discrepancy is now **resolved**: the manuscript's `1.9e-7`
-   is reproducible in an eight-dimensional smooth basis, its own registered
-   programme gives `5.5e-4` from 40 cells, and the true value is below `1e-9`.
-   See the fixed-point note, §5.)
-2. **Offer the density identity and the symbol split to manuscript 0.6**, and at
-   the same time **fix Section 7.6's saturation figures and their attribution**:
-   they are quoted as coming from "a Fourier-Galerkin space of 41 modes" while
-   the registered programme uses 40 indicator cells and produces numbers three
-   orders of magnitude larger. The correction strengthens the argument. The
-   density identity also retires a stated open debt (the contact "must arise by
-   projection"). Keep Proposition 7.14 as the special case.
-3. **Rule 4 deserves a proper statement.** The channel-spectrum reading needs the
-   identification of the arithmetic coordinate that Section 3.1 declines to make.
-   Either make it under an explicit hypothesis, or restate the rule purely
-   spectrally so it needs no such identification.
-4. **More rigidity (the highest-yield non-constructive work).** Corollary 2.2,
-   Proposition 2.4 and Proposition 3.4 have done most of the work in the sibling
-   investigation. Candidates for a fourth: a constraint on `q` from requiring one
-   fixed `q` to serve every prime (see the q-Weyl note, §5, for a conditional
-   version); a statement that any realization's compression has band edge at
-   `gamma_1`, which would turn rule 7 from a measurement into a theorem.
-5. **Rule 6, the infinite-prime limit.** The family exclusion is proved for
-   finite sums. The infinite case is not, because `union_p (log p) Z` is dense,
-   so atomic kernels can converge weakly to continuous ones — that is
-   Guinand-Weil duality and it is the only route left inside that family.
-   Settling it either way would be a real result.
+**(e) Always say which direction a one-sided value certifies.** Saturation
+quotients are Rayleigh quotients in a subspace, so they certify only *failure* of
+a domination; Galerkin values of `alpha_L` are lower bounds, so they certify only
+the direction a disproof needs. Half the care in this session went into keeping
+those straight, and the one substantive error found in version 0.5 of the
+companion manuscript was of exactly this kind.
 
-## 4. Do not redo
+---
 
-- Do not look for a better additive split of `Q_L` into positive channels
-  (Theorem 7.5).
-- Do not use Knaster-Tarski on operator intervals (Kadison's antilattice
-  theorem) and do not look for the source at a scale-invariant RG fixed point
-  (the primes fix an absolute scale). Both are settled in the fixed-point note,
-  §3. Fixed point theorems in general are **not** ruled out; the earlier blanket
-  claim to that effect is corrected there.
-- Do not revive the budget claim relating roots of `P` to primes. It is false;
-  the algebra of Section 6.1 has one root, at `-1`, independent of every prime.
-- Do not test candidates by matching the terms of (2.9) one at a time.
+## 3. Recommended pathway, in order
 
-## 5. Conventions
+**1. Read Suzuki, arXiv:2301.00421.** Reportedly it shows the Hilbert space of
+the Weil distribution *is* a de Branges space, produces a totally ordered family
+of subspaces, and converts the RH criterion **from inequalities into
+equalities**. That last is why it is first: the central structural problem of
+this whole program is that the criterion is an inequality critical to more than
+twenty digits, so no margin-based method can prove it and no finite computation
+can certify it --- which is exactly why the disproof test came back with a fixed
+gap. An equality formulation sidesteps that. It is also the cheapest item on the
+list, one session of reading, and the single verified contact with Suzuki's work
+(his Theorem 1.4 reproducing our density identity at the interval's own frequency
+scale, constant included) suggests the rest connects. *Second-hand; arXiv:2606.09096
+has been read directly, this one has not.*
 
-- Notes here, with the author model named at the top of anything written by a
-  language model. Reviews in [`reviews/`](../reviews/README.md).
-- Check programmes are standard library only, print JSON to stdout, keep a
+**2. The spectral gap of the jump form.** `lambda_2(S_L)` sits near `2e-4`, is
+roughly constant over `3/2 <= L <= 4`, and is where the criticality of the target
+originates: the pole supplies only a rank-one cancellation of one large negative
+eigenvalue and does not create the near-degeneracy. This is a well-posed
+spectral-gap question about an explicit nonlocal Dirichlet form on an interval,
+in a developed literature this program has not touched, and it is the ingredient
+the necessary condition is missing. **One connection worth testing first:**
+`N_L` is entrywise positive off the diagonal, so Birkhoff's contraction theorem
+*does* apply to it, and what Birkhoff bounds is `|lambda_2|/|lambda_1|` --- which
+is this gap. The cone is useless on `Q_L` and may be useful on `N_L`. That
+observation is untested.
+
+**3. Why is the ground state `cosh(x/2)`?** The ground state of an operator
+assembled from the archimedean density and the prime atoms has cosine `0.9844`
+rising to `0.9998` with the pole form's positive direction. Nothing forces this.
+A proof would make the rank-one cancellation structural rather than numerical and
+would very likely sharpen Proposition 7.1. Of everything open, this is the item
+most likely to have a clean theorem behind it.
+
+**4. Port two computations into registered checks** (item A4 of the open
+directions): the smooth-basis saturation values, and the near-null band edge.
+Both are quoted in the manuscripts and neither is reproducible under the
+repository's conventions. Doing this closes the gap that produced the version 0.5
+error in the first place.
+
+**Why this order.** Item 1 could change what the other three are for, and costs
+least. Items 2 and 3 are the two places where a numerical fact is asking for a
+proof, which is the most reliable kind of open problem. Item 4 is maintenance
+and can be done by a session with no context.
+
+---
+
+## 4. The brainstorming angles
+
+All of it is in [OPEN_DIRECTIONS_20260916.md](OPEN_DIRECTIONS_20260916.md),
+grouped and ranked. In summary:
+
+- **Group A, ready now** --- the four items of §3 above.
+- **Group B, open with a named obstruction** --- a cone adapted to the pole
+  directions, with Rugh's complex-cone theory as the tool; the sharp two-scalar
+  form of the necessary condition, which is exact but relocates the difficulty
+  rather than reducing it; selection rule 6 for infinite prime sums, which is
+  Guinand--Weil duality and stands directly in the path of the physics side; and
+  the Gaiotto--Teschner spherical-vector correspondence, which converts existence
+  of a positive pairing into normalizability of a solution of a `q`-difference
+  system and is the strongest physics-side handle found --- but which should wait
+  until rule 6 is settled.
+- **Group C, closed with reasons** --- nine items, each not to be redone. The
+  headline is that **every existence theorem in this subject transports positivity
+  rather than creating it**; the one mechanism that manufactures it,
+  Ruelle--Perron--Frobenius via Birkhoff cone contraction, is unoccupied in the
+  Weil-positivity literature and is what motivated Sections 6 and 7 of the
+  manuscript.
+- **Group D, external work** --- Zhu arXiv:2608.24827 (borrow the tail-envelope
+  reduction; discount the fitted decay law and the barrier, and note the
+  reliability flags); Suzuki's numerical companion arXiv:2607.24830; Bombieri's
+  index argument, which is attractive precisely because an index is an integer and
+  therefore immune to the collapsing margin.
+- **Group E, method notes** --- the practical lessons, including the one that cost
+  the most time: never assemble `Q_L` term by term in double precision, because
+  its terms are eight orders of magnitude larger than the answer.
+
+---
+
+## 5. What not to redo
+
+- Do not look for a better additive split of `Q_L` into positive channels.
+- Do not attempt non-constructive existence of a realization: it is exactly RH,
+  and abstract operator theory applied to the target alone returns its input.
+- Do not use Knaster--Tarski on operator intervals (Kadison's antilattice
+  theorem), and do not look for the source at a scale-invariant RG fixed point
+  (the primes fix an absolute scale).
+- Do not revive the conjectured prime budget from the twisted-trace
+  classification. The elementary Schur algebra is the generalized `q`-Weyl algebra
+  with `P(y) = 1 + y`, verified in exact arithmetic, so its trace space is one
+  dimensional and carries no arithmetic at all.
+- Do not expect Krein--Langer screw continuation to help: it is Remark 3.3 of the
+  companion manuscript under a different name.
+- Do not test candidates by matching the terms of the target one at a time.
+
+---
+
+## 6. Conventions
+
+- Research notes here, reviews in [`reviews/`](../reviews/README.md), with the
+  author model named at the top of anything written by a language model.
+- Check programs are standard library only, print JSON to stdout, keep a
   preserved record under `numerics/records/`, and are registered in the `CHECKS`
-  dictionary of `validation/drafts.py`. There are three.
+  dictionary of `validation/drafts.py`. There are five.
+- Snapshot before replacing a manuscript version: `drafts.py save YYYY-MM-DD-vNN`.
+  See [the build guide](../BUILD.md) for what `BUILD_RECORD.json` is for.
 - Everything stays under 1 MiB per file; see the repository's
-  [large-file policy](../../../../../LARGE_FILES.md).
-- There is no manuscript in this investigation yet. If one is started it goes in
-  `manuscript.tex` with `sections/`, `drafts/` and `BUILD.md` as in the sibling
-  folder, and `validation/drafts.py` grows the `record` and `save` commands.
+  [large-file policy](../../../../../LARGE_FILES.md). Rendered pages belong in the
+  ignored `build/` directory and should be deleted after a review.
+- A session without delete permission in the repository folder will leave a stale
+  `.git/index.lock` after any git command; remove it with `rm -f .git/index.lock`
+  before the next commit.

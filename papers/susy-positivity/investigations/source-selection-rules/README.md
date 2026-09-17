@@ -2,91 +2,100 @@
 
 16 September 2026. A spin-off from
 [inverse bulk realization](../inverse-bulk-realization/README.md). Its object is
-not a construction. It collects the **necessary conditions** a candidate source
-must satisfy, and the presentation of the target that makes them visible and
-cheap to test.
+not a construction. It asks what the localized Weil form *is*, and collects the
+necessary conditions any source for it must satisfy.
 
-It exists because the sibling investigation's exclusions are each of the form
-"this particular preparation fails", while Theorem 7.5 there shows that every
-term of the target can be matched exactly with no realization existing. What is
-wanted instead are conditions that kill whole families before any arithmetic is
-computed. Eight are collected in
-[the selection rules](notes/SELECTION_RULES.md); four of them are new here.
+It exists because the companion investigation's exclusions are each of the form
+"this particular preparation fails", while its Theorem 7.5 shows that every term
+of the target can be matched exactly with no source existing. What is wanted
+instead are conditions that exclude whole families before any arithmetic is
+computed.
 
-## The two results the rules rest on
+The [working manuscript](manuscript.pdf), *A jump-process presentation of the
+localized Weil form*, collects the results in a self-contained draft. Its
+[TeX source](manuscript.tex) inputs no shared background; it cites the companion
+manuscript for the program's objective and for results quoted by number.
+Reviewed versions are preserved in [drafts/](drafts/README.md). See the
+[build guide](BUILD.md).
 
-**The archimedean symbol is the smooth zero density.** From (2.6) and (2.7) of
-the sibling manuscript, `b(tau^2) + w0 = Re psi(1/4 + i tau/2) - log pi = 2 theta'(tau)`,
-so with `Nbar(T) = theta(T)/pi + 1`,
+## The results
 
-```
- K[E_L f] + w0 ||f||^2 = int_R |F^(tau)|^2 dNbar(tau).
-```
+**The archimedean symbol is the smooth zero density.**
+$b(\tau^2)+w_0=\re\psi(\tfrac14+i\tau/2)-\log\pi=2\theta'(\tau)$, so the
+archimedean energy together with the contact is integration against
+$\bar N=\theta/\pi+1$. The contact constant is not an independent object
+requiring a mechanism: it is the $-\log\pi$ inside $\theta'$. All archimedean
+negativity sits below $\tau_*=6.2898$, and once the prime contacts join, in a
+band that shrinks with $L$ and is empty above $\log 13$ --- the crossing at
+$p=13$ being exactly where the summed contacts overtake $-w_0$.
 
-The contact constant is not an independent object requiring a mechanism: it is
-the `-log pi` inside `theta'`. All archimedean negativity is confined to
-`|tau| < tau_L`, a band that shrinks with `L` and is empty above `log 13` — and
-the crossing at `p = 13` is exactly where the summed prime contacts overtake the
-maximum negativity of the smooth zero density. See
-[the density-symbol note](notes/DENSITY_SYMBOL_AND_SYMBOL_SPLIT_20260916.md).
+**The target is one jump form.** Adding and subtracting the prime symbol's value
+at the origin puts everything but the pole term in Lévy--Khinchine form: the
+archimedean density and the prime atoms are the continuous and atomic parts of
+one nonnegative measure $\mu_L$, and a source is a jump process whose jumps are
+the primes. This is what Theorem 7.5 of the companion manuscript asks for --- one
+mechanism, not two channels.
 
-**The elementary Schur algebra carries no arithmetic parameter.** The
-representation of Section 6.1 of the sibling manuscript is the generalized
-`q`-Weyl algebra with `P(y) = 1 + y`; by Klyuev its twisted-trace space is one
-dimensional. So the prime data of Section 6 lives entirely in the chosen
-dressing state, which Section 6.5 shows is unconstrained. Non-constructive
-existence of a realization is exactly RH and cannot be shortcut; what is
-available is rigidity, family exclusion, and finite-moment determination, none
-of which the current construction is in a position to use. See
-[the q-Weyl note](notes/QWEYL_TRACE_SPACE_20260916.md).
+**A Perron--Frobenius structure, broken by the poles.** The jump form's
+resolvent is positivity preserving, as Beurling--Deny requires; the rank-two pole
+form destroys that at every $L$, by Sherman--Morrison, even in its positive half.
+Krein--Rutman adds nothing to the spectral theorem here, Birkhoff bounds a gap
+and never a radius, and Collatz--Wielandt --- the one cone theorem that bounds
+what must be bounded --- needs the pointwise supersolution the pole removes.
 
-**How far the domination is from failing.** Weil positivity on $I_L$ is
-$T_L \preceq K_+$, and the margin $\lambda_{\min}(Q_L;K_+)$ collapses
-superexponentially: below $10^{-9}$ at $L=1$, $10^{-17}$ at $L=2$, $10^{-24}$ at
-$L=3$. Measured in a smooth basis with $Q_L$ assembled from its spectral form, so
-that the eight-order cancellation in (2.9) never occurs. Consequently any
-argument — fixed point or otherwise — whose hypotheses supply a margin uniform in
-$L$ is proving something false. See
-[the fixed-point note](notes/FIXED_POINTS_AND_THE_MARGIN_20260916.md).
+**A necessary condition.** With $S_L$ the pole-free part and
+$\alpha_L=-\lambda_{\min}(S_L)$ a Perron-root deficit of an explicitly
+nonnegative kernel: if $Q_L\ge0$ on $I_L$ then $\alpha_L\le 2\sinh(L/2)+L$.
+A single positive trial function bounds $\alpha_L$ from below, so a trial
+function violating the condition would show that the Riemann hypothesis fails.
+A scan of 7713 intervals finds no violation; the least relative margin is
+$9.5\times10^{-4}$.
+
+**Nine selection rules**, four of them new here, in Section 8 of the manuscript.
 
 ## Reading map
 
 | Document | Role |
 |---|---|
-| [Selection rules](notes/SELECTION_RULES.md) | The living index: eight necessary conditions, ordered by cost, and the rules that were dropped. |
-| [Density symbol and symbol split](notes/DENSITY_SYMBOL_AND_SYMBOL_SPLIT_20260916.md) | The density identity, its four consequences, and a sharper presentation of the compression. |
-| [q-Weyl trace space](notes/QWEYL_TRACE_SPACE_20260916.md) | What non-constructive arguments can give; the algebra identification; a retraction. |
-| [Fixed points and the margin](notes/FIXED_POINTS_AND_THE_MARGIN_20260916.md) | Why this is a membership question, not an existence question; what each family of fixed point theorem would need and which are blocked; and how small the margin really is. |
-| [Existence mechanism sweep](notes/EXISTENCE_MECHANISM_SWEEP_20260916.md) | A wide survey: why every existence theorem here transports positivity rather than creating it, the one mechanism that manufactures it, and the openings that remain. |
-| [Perron-Frobenius and the jump form](notes/PERRON_FROBENIUS_AND_THE_JUMP_FORM_20260916.md) | The target as one jump Dirichlet form; the cone it carries and how the pole destroys it; the verdict on the cone route; and a ground-state reformulation. |
-| [Continuation note](notes/CONTINUATION_20260916.md) | State, ordered next steps, what not to redo, conventions. |
-| [Notes index](notes/README.md) | Navigation and reading order. |
-| [Checks and records](numerics/README.md) | Three reproducible programmes and their explicitly scoped results. |
+| [Working manuscript](manuscript.pdf) | The consolidated results, self-contained. |
+| [Dated drafts](drafts/README.md) | Complete buildable snapshots with hashes. |
+| [Open directions](notes/OPEN_DIRECTIONS_20260916.md) | Everything opened and not finished, ranked, with what is closed and why. |
+| [Density symbol and symbol split](notes/DENSITY_SYMBOL_AND_SYMBOL_SPLIT_20260916.md) | Research note behind Sections 3 and 5. |
+| [Perron--Frobenius and the jump form](notes/PERRON_FROBENIUS_AND_THE_JUMP_FORM_20260916.md) | Research note behind Sections 4 and 6. |
+| [Collatz--Wielandt](notes/COLLATZ_WIELANDT_20260916.md) | Research note behind Section 7, including the disproof test as run. |
+| [Fixed points and the margin](notes/FIXED_POINTS_AND_THE_MARGIN_20260916.md) | What each family of fixed point theorem needs, and how small the margin is. |
+| [Existence mechanism sweep](notes/EXISTENCE_MECHANISM_SWEEP_20260916.md) | Literature survey: what transports positivity and what manufactures it. |
+| [q-Weyl trace space](notes/QWEYL_TRACE_SPACE_20260916.md) | The algebra identification, and a retraction. |
+| [Selection rules](notes/SELECTION_RULES.md) | The living index of necessary conditions. |
+| [Continuation note](notes/CONTINUATION_20260916.md) | Handoff. |
+| [Checks and records](numerics/README.md) | Five reproducible programs and their scoped results. |
 | [Reviews](reviews/README.md) | Dated assessments. None yet. |
 
 ## What is claimed and what is not
 
 Everything here is a necessary condition or a re-presentation of the target. No
-source is constructed, no positivity is proved, and nothing said here bears on
-whether a realization exists. The saturation quotients in the checks are
-one-sided subspace values: above one they would certify that a domination fails,
-below one they certify nothing.
+source is constructed, no positivity is proved, and no statement assumes the
+Riemann hypothesis. The saturation quotients are one-sided: above one they
+would certify that a domination fails, below one they certify nothing. The
+Galerkin values of $\alpha_L$ run the other way, which is what makes the
+disproof test a test.
 
 ## Reproduction
-
-Run from this directory:
 
 ```sh
 python3 numerics/check_density_symbol.py
 python3 numerics/check_symbol_split.py
 python3 numerics/check_qweyl_relations.py
+python3 numerics/check_levy_dirichlet.py
+python3 numerics/check_collatz_wielandt.py
 python3 validation/drafts.py check --replay
 ```
 
-The programmes print small records and do not overwrite the preserved results in
-`numerics/records/`. Follow the repository's
-[large-file policy](../../../../LARGE_FILES.md).
+Three computations quoted in the manuscript are deliberately outside these
+programs and are labelled where they appear; porting two of them is item A4 of
+the [open directions](notes/OPEN_DIRECTIONS_20260916.md). Follow the
+repository's [large-file policy](../../../../LARGE_FILES.md).
 
-Related material: [inverse bulk realization](../inverse-bulk-realization/README.md),
-the [brainstorm notes this grew from](../../brainstorm/inverse-bulk-brainstorm/),
+Related: [inverse bulk realization](../inverse-bulk-realization/README.md), the
+[brainstorm notes this grew from](../../brainstorm/inverse-bulk-brainstorm/),
 and the [program overview](../../PROGRAM_OVERVIEW.md).

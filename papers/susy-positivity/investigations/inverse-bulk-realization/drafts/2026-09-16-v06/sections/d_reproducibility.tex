@@ -1,0 +1,130 @@
+\section{Checks, provenance and mathematical status}\label{app:checks}
+The analytical arguments in this draft are written proofs and explicitly
+qualified construction problems. Ten small standard-library Python
+programs accompany the investigation. They check finite algebra and
+normalization identities rather than positivity of the Weil form.
+The preserved records distinguish exact rational checks from labelled
+floating-point illustrations.
+\begin{center}
+\small
+\begin{tabular}{p{0.38\linewidth}rp{0.40\linewidth}}
+\toprule
+Program in \texttt{numerics/} & Cases & Scope \\
+\midrule
+\texttt{check\_matching.py} & 153 & Rational filters and gamma refinement \\
+\texttt{check\_gauge\_transfer.py} & 326 & Winding, transfer and first-prime algebra \\
+\texttt{check\_sphere\_schur.py} & 251 & Charged norms, product ratios and undressed overlaps \\
+\texttt{check\_dressed\_schur.py} & 587 & Dressed norm, magnetic coefficients and mixed-return witnesses \\
+\texttt{check\_explicit\_formula.py} & 8 & Normalization against the sum over zeta zeros \\
+\texttt{check\_channel\_bound.py} & 75 & Interference bound and the two-channel certificates \\
+\texttt{check\_mirror\_subtraction.py} & 75 & Mirror weight, subtraction identity, domination quotients \\
+\texttt{check\_prime\_free\_archimedean.py} & 78,666 & Parity split, pole factorisation, the criterion of Proposition~\ref{prop:prime-free-large-L} at every prime breakpoint below $10^6$ \\
+\texttt{check\_mirror\_dressing.py} & 638 & Reachable output states, the mirror dressing, and its weight \\
+\texttt{check\_gamma\_compression.py} & 32,037 & The identity $Q_L=K_+-T_L$, the sign change of $c_L$, and one-sided saturation \\
+\bottomrule
+\end{tabular}
+\end{center}
+The 112,816 finite cases are supporting checks, not 112,816 independent
+theorems. Finite-product end factors and truncation boundary
+coefficients are retained. The finite mixed-return sample does not
+replace the unique-factorization proof in Proposition~\ref{prop:mixed}.
+The Mellin and beta integrals, infinite-series convergence,
+graph-domain argument and kernel exclusions are justified in the text;
+the programs do not formally verify them.
+
+The explicit-formula, channel-bound, mirror-subtraction and prime-free
+programs are labelled floating-point computations rather than exact rational
+ones. \texttt{check\_explicit\_formula.py} evaluates
+both sides of \eqref{eq:explicit-formula} for the input
+$F(x)=\tfrac12(1+\cos(2\pi x/L))$ on $I_L$, whose transform is
+$\widehat F(\tau)=\omega^2\sin(\tau L/2)/(\tau(\omega^2-\tau^2))$ with
+$\omega=2\pi/L$. It computes the zero ordinates itself, from the Hardy
+function through Borwein's series for $\eta$, and agrees with published
+values to $10^{-13}$. For $L=2,3,4$ the two sides agree to
+$2.5\times10^{-10}$, $5.4\times10^{-11}$ and $1.0\times10^{-11}$, against
+totals of $2.9\times10^{-5}$, $2.6\times10^{-6}$ and $1.4\times10^{-7}$:
+the ratio of the largest single term of \eqref{eq:target} to the total rises
+from $1.4\times10^5$ to $6.3\times10^7$ across those three intervals. This
+check confirms the conventions of \eqref{eq:weil-functional} as a whole. It
+is not evidence for RH, since its ordinates are computed on the critical
+line by construction.
+\texttt{check\_channel\_bound.py} evaluates \eqref{eq:two-channel-test} for
+step-function inputs, for which every quantity is a finite closed form; the
+one infinite series, $\sum_n(\cdot)e^{-a_nr}$, is summed after subtracting
+its exactly known leading part, and the reported remainder bound for the two
+certificates of Theorem~\ref{thm:two-channel} is below $10^{-40}$.
+\texttt{check\_mirror\_subtraction.py} verifies
+\eqref{eq:mirror-coefficients} and \eqref{eq:complementary} in exact rational
+arithmetic, checks \eqref{eq:subtraction} as an identity of quadratic forms on
+step inputs, and reports the domination quotients discussed after
+Corollary~\ref{cor:domination}. Those quotients are one sided: a value above
+one on a subspace certifies that a domination fails, a value below one
+certifies nothing. The Galerkin eigenvalues quoted in
+Section~\ref{subsec:subtraction} are labelled floating-point computations and
+are not part of the replayed record.
+
+\texttt{check\_prime\_free\_archimedean.py} builds the forms of
+\eqref{eq:target} and \eqref{eq:prime-free} in a uniform cell basis, checks
+that basis against the independent step routine of the channel-bound program,
+verifies \eqref{eq:parity-split} and \eqref{eq:hyperbolic} on random step
+inputs, and evaluates \eqref{eq:large-L-criterion} at all $78{,}497$ prime
+breakpoints below $10^6$. Its Galerkin quotients are one sided in the same
+sense as the mirror-subtraction ones. Two of its outputs are conclusive rather
+than indicative, because a negative value in a subspace certifies that a form
+is not positive: the indicator of $I_L$ gives
+$K[E_L1]+w_0\norm1^2<0$ for $L\leq3/2$, so the pole term of
+\eqref{eq:prime-free-target} cannot be dispensed with; and an explicit step
+function on $I_{3/4}$ gives $K+w_0\norm\cdot^2+P_L$ the value
+$-3.2\times10^{-3}\norm f^2$, so the archimedean form with the bare constant
+$w_0$ and no mirror contact is not positive for any $L\geq3/4$. Since
+$\widetilde\kappa_{r_2,d_2}=0.574$ switches on at $L=\log2$, the mirror
+contact of Theorem~\ref{thm:subtraction} is what keeps \eqref{eq:prime-free}
+positive beyond that point.
+
+\texttt{check\_mirror\_dressing.py} works with truncated power series in exact
+rational arithmetic. It verifies \eqref{eq:output-rule} for both the dressing
+of Lemma~\ref{lem:one-magnetic} and the mirror dressing
+\eqref{eq:mirror-dressing}, the ratio of the two electric states, the
+telescoping of the vacuum Pochhammer at four truncations, the Laurent
+coefficients of the two weights in the ratios $2/(1+r)$ and $2/(1-r)$ with
+geometric ratio $r$, the orthogonality of the two output states --- the overlap
+truncated at $N$ is exactly $r^{2N}$ --- and the reachability of three targets
+unrelated to the prime references. Its one floating-point item, labelled as
+such, is the geometric rate $r$ at which the truncated dressings' images
+converge at the radius $q^{-1}$ where the magnetic action evaluates them.
+
+\texttt{check\_gamma\_compression.py} verifies
+Proposition~\ref{prop:gamma-compression} as a matrix identity on indicator
+cells at ten values of $L$ between $1/2$ and $5$, agreeing to
+$7.5\times10^{-16}$, and rebuilds the mirror matrices independently, checking
+them against \eqref{eq:subtraction}. It locates the sign change of $c_L$ at
+$p=13$ exactly, confirms $T_L\geq0$ at every sampled $L$, and reports the
+saturation of the domination. That last column is one sided in the direction
+opposite to a Rayleigh minimum: a subspace value is a \emph{lower} bound for
+$\norm\Pi$, so a value meaningfully above one would certify that the domination
+fails and a value below one certifies nothing. The values quoted in
+Section~\ref{subsec:gammacompression} come from a Fourier--Galerkin space,
+which resolves the near-degeneracy better than the cell basis recorded here.
+
+The manuscript is self-contained at the level of its stated external
+inputs: the classical Weil criterion and the cited model representation
+data. It does not input a shared background file or cite equation numbers
+from one. The accompanying coverage map relates its sections to the
+retained research notes, including the broader candidate survey.
+Build instructions and a hash record identify the reviewed sources and
+compiled PDF. The \texttt{drafts/} folder preserves complete dated
+source-and-PDF snapshots. Those hashes establish file identity, not
+mathematical correctness or portability of PDF metadata between TeX
+installations.
+
+The following boundaries of the results are essential. The positive
+prime reference is known; the dressed theorem gives an explicit
+elementary Schur source for it. Square-summable formal magnetic
+outputs do not settle all closed-operator extensions. The continuous
+lift has not been derived from a four-dimensional interface. The
+general protected-sector construction hypotheses have not been
+proved here. Theorem~\ref{thm:two-channel} excludes one specified
+architecture and not a class of theories. Most importantly, the full
+contact-and-pole identity in Problem~\ref{prob:joint} remains unsolved, so
+this draft makes no claim to establish RH or a completed reduction to
+constructive QFT.

@@ -18,7 +18,9 @@ calculations. Their roles are explicit below.
 | [MIRROR_DRESSING_AND_REACHABLE_STATES_20260915.md](MIRROR_DRESSING_AND_REACHABLE_STATES_20260915.md) | Current; in manuscript 0.5 | Why the mirror prime reference *is* reachable in the elementary $q$-Weyl representation, the dressing that produces it, the general characterisation of reachable output states, where Remark 7.10's argument fails, and why the consequence for the programme is modest. Written by Claude Opus 5. |
 | [POLE_TERM_NEEDS_NO_MECHANISM_20260915.md](POLE_TERM_NEEDS_NO_MECHANISM_20260915.md) | Current; in manuscript 0.5 | Why the ghost-pair specification asks for a structure a realization cannot have and does not need: the conflict with Corollary 2.2, what the channel argument really establishes, how far the pole term's negative direction is from binding inside the prime-free form, the corrected target, and the correction Section 8.2 needs. Written by Claude Opus 5. |
 | [GAMMA_COMPRESSION_PRESENTATION_20260915.md](GAMMA_COMPRESSION_PRESENTATION_20260915.md) | Current; in manuscript 0.5 | $Q_L$ as a compression of the gamma energy: a source side that is manifestly a norm and has an explicit source, a subtracted side that is manifestly positive, no unproved positivity anywhere, and what that leaves of Problem 8.3. Written by Claude Opus 5. |
+| [EXCLUSION_MAP_20260917.md](EXCLUSION_MAP_20260917.md) | Current; synthesis | Every exclusion the investigation has accumulated, organised by kind of argument and with each scope clause made explicit: the two facts that power them, the four families (positivity on a subspace, the interference bound, kernel-support and atom arguments, domain and boundedness arguments), the two exclusions that were themselves withdrawn and the lesson they carry, an observation bounding what Theorem 7.5 may be quoted for, and the live surface no argument touches. Written by Claude Opus 5. |
 | [CONTINUATION_20260915.md](CONTINUATION_20260915.md) | Handoff | State of the investigation, the three facts a new session needs, the ordered next steps, and what not to redo. Written by Claude Opus 5. |
+| [CONTINUATION_20260917.md](CONTINUATION_20260917.md) | Handoff; context only | What the 17 September reading session covered, the state of the manuscript and repository it found, and the two points that came out of it. Proposes no next steps by request. Written by Claude Opus 5. |
 | [NEW_SESSION_PROMPT.md](NEW_SESSION_PROMPT.md) | Handoff | A ready prompt for starting the next session on the prime-free archimedean inequality. |
 
 Reading order: broad overview, survey, initial sphere/Schur comparison,
@@ -46,6 +48,11 @@ The last two notes were prepared by **Claude Opus 5 (Anthropic)** on
 [review of manuscript 0.1](../reviews/review_claude_opus_5_20260915.md). The
 exclusion note's results are in manuscript 0.2; the subtraction form is not yet
 in the manuscript and is the current working direction.
+
+The two notes of 17 September were written in a reading session that added no
+calculation: the exclusion map is a synthesis of results already recorded, and the
+continuation note records context only, at the investigator's request, because a new
+direction was being opened separately. Neither changes a published statement.
 
 The [working manuscript](../manuscript.pdf) now collects the current results,
 with self-contained background and proofs. The [coverage map](../MANUSCRIPT_COVERAGE.md)
