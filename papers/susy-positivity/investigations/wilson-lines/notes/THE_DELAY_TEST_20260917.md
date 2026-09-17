@@ -6,9 +6,13 @@ item 1 of the revised pathway in
 group-delay test of manuscript Condition 10.1, promoted to first place by
 [the frame-bound note](FRAME_BOUND_AND_THE_DENSITY_20260917.md).
 
-**No manuscript change has been made.** Version 0.4 is current. Section 6 lists
-what this recommends, and the recommendation is a **replacement of
-Condition 10.1**, not an addition to it.
+**Applied to the manuscript.** Version 0.5 carries this note as Section 11 and
+the rewritten Condition 10.1; Section 6 below is what was done. The Liouville lead
+of Section 4.2, which this note left open, is **closed negatively** by
+[the expansion note](THE_ARCHIMEDEAN_EXPANSION_20260917.md): with the dictionary
+fixed by the leading coefficient, Liouville's $\tau^{-2}$ coefficient is
+$+Q^2/3$ against the target's $-\frac1{24}$, at every coupling. Read the two
+together.
 
 ---
 

@@ -1,0 +1,468 @@
+\section{The delay test, and what the archimedean expansion selects}
+\label{sec:delay}
+
+Condition~\ref{cond:bilinear} is the one test in this paper a theory can fail.
+This section runs it. The answer is that the test as it was first posed is failed
+by every correlator and passed by a free Hamiltonian, so it discriminates nothing;
+but the \emph{expansion} of the delay does discriminate, one coefficient at a
+time, and it recovers the arithmetic invariants of an $L$-function in order.
+
+\subsection{The object the test can be run on}
+
+The natural reading of Condition~\ref{cond:bilinear} is to take a protected
+two-point function on the open Wilson line of \cite{OWL} and extract the phase of
+its spectral kernel. There is no such correlator: \cite{OWL} establishes the
+existence of supersymmetric open Wilson lines --- only in the superconformal
+versions of the $\mathcal N=2$ theories, and in $\mathcal N=4$ with a defect
+hypermultiplet, where the configuration is a semicircle conformally related to the
+ray --- and computes \emph{expectation values}. It contains no two-point function
+of open Wilson lines and no correlator of insertions along the line.\footnote{Its
+abstract was read directly; the body through a secondary reading, so this is
+"not found" rather than "certainly absent".}
+
+The test is therefore run on the object that does exist and is known exactly, the
+defect CFT on the $\frac12$-BPS Wilson line, whose protected two-point functions
+are $C_\Delta(\lambda)/|t_{12}|^{2\Delta}$ with $\Delta=1$ for the five scalars
+\cite{GRT}, $\frac32$ for the fermions, $2$ for the displacement
+\cite{CHMS}, and $L$ for the $(Y\!\cdot\!\Phi)^L$ tower \cite{GiombiKomatsu} ---
+every dimension protected, the coupling dependence entirely in the normalization.
+
+\subsection{The delay of a defect two-point function}
+
+In the ray coordinate of Section~\ref{subsec:conformal}, $x=\log r$ and
+$u=x_1-x_2$, a defect two-point function is
+$G_\Delta(u)=(2\sinh\frac u2)^{-2\Delta}$, the conformally covariant form of
+$C/|r_1-r_2|^{2\Delta}$; the normalization is a positive constant and drops out of
+every phase. Its causal symbol is
+\begin{equation}\label{eq:defectsymbol}
+ \widehat k_+(\tau)=\int_0^\infty e^{-i\tau u}G_\Delta(u)\dd u
+ =\Gamma(1-2\Delta)\,\frac{\Gamma(\Delta+i\tau)}{\Gamma(1-\Delta+i\tau)} ,
+\end{equation}
+checked against quadrature. Using
+$\frac{d}{d\tau}\arg\Gamma(a+i\tau)=\re\psi(a+i\tau)$ and
+$\psi(1-z)-\psi(z)=\pi\cot\pi z$:
+
+\begin{proposition}[The delay of a defect primary]\label{prop:defectdelay}
+For every $\Delta$,
+\[
+ \mathcal T_\Delta(\tau)=-\frac{d}{d\tau}\arg\widehat k_+(\tau)
+ =\pi\re\cot\big(\pi(\Delta+i\tau)\big)
+ =\frac{\pi\sin(2\pi\Delta)}{\cosh(2\pi\tau)-\cos(2\pi\Delta)} .
+\]
+It decays like $2\pi\sin(2\pi\Delta)e^{-2\pi\tau}$; for $0<\Delta<\frac12$ its
+total is $\int_0^\infty\mathcal T_\Delta=\pi(\frac12-\Delta)$; and it is periodic
+in $\Delta$ with period one.
+\end{proposition}
+
+\begin{corollary}[The protected sector gives exactly nothing]\label{cor:protected}
+$\mathcal T_\Delta\equiv0$ whenever $2\Delta\in\Z$, hence for every protected
+operator of the $\frac12$-BPS Wilson-line defect CFT. Not small: zero, at every
+frequency and every coupling.
+\end{corollary}
+
+The target grows: $2\theta'(\tau)=\log\frac\tau{2\pi}+O(\tau^{-2})$. At $\tau=3$
+and $\Delta=\frac14$ the delay is $4.09\times10^{-8}$; by $\tau=10$ it is
+$3\times10^{-27}$ and the target is $+0.464$.
+
+\subsection{No correlator can wind}
+
+The zero of Corollary~\ref{cor:protected} is an accident of half-integer
+dimensions. The following is not.
+
+Radial quantization of the ray about the pinned endpoint gives the
+boundary-channel decomposition
+$G(u)=\sum_n|\langle\Omega|O|n\rangle|^2e^{-\Delta_nu}=\int_{[0,\infty)}e^{-\Delta
+u}\dd\mu(\Delta)$ with $\mu\geq0$, using only that the defect Hilbert space has a
+positive inner product and that the dilatation generator is bounded below. For
+$G_\Delta$ this is the primary with its descendants,
+$\mu=\sum_k\frac{\Gamma(2\Delta+k)}{k!\Gamma(2\Delta)}\delta_{\Delta+k}$, with
+manifestly positive coefficients. By Bernstein's theorem $G$ is then completely
+monotone and $\widehat k_+$ is a Stieltjes transform.
+
+\begin{proposition}[No winding]\label{prop:nowinding}
+Let $G$ be the ray kernel of a two-point function in a unitary defect theory whose
+dilatation generator is bounded below. Then $\re\widehat k_+>0$ on the whole real
+axis --- so $\widehat k_+$ has no zeros there --- and for $\tau>0$,
+$\arg\widehat k_+(\tau)\in(-\frac\pi2,0)$, whence
+\[
+ \int_0^T\mathcal T(\tau)\dd\tau<\frac\pi2\qquad\text{for every }T .
+\]
+If a real subtraction is needed for convergence the bound is $\pi$. Either way it
+is a constant, while $\int_0^T2\theta'=2\theta(T)$ is $175.9$ at $T=100$ and
+$4069.1$ at $T=10^3$.
+\end{proposition}
+
+\begin{proof}
+$\widehat k_+(\tau)=\int(\Delta+i\tau)^{-1}\dd\mu$ has
+$\re\widehat k_+=\int\Delta(\Delta^2+\tau^2)^{-1}\dd\mu>0$ and
+$\im\widehat k_+=-\tau\int(\Delta^2+\tau^2)^{-1}\dd\mu<0$. Then
+$\int_0^T\mathcal T=\arg\widehat k_+(0^+)-\arg\widehat k_+(T)$.
+\end{proof}
+
+Two readings. \textbf{Phase winding is zeros crossing the contour}, and a positive
+spectral measure forbids them: the scattering dictionary of
+Section~\ref{sec:allpass} lists the zeros of $\xi$ as the resonances of
+$K_\omega$, and a correlator of a unitary theory has none to list. And
+\textbf{the obstruction is that the generator is bounded below}, not that its
+spectrum is discrete --- a continuum on $[0,\infty)$ gives the same Stieltjes
+transform.
+
+\begin{remark}[The three escapes, one of which is already a trap]\label{rem:escapes}
+Given those hypotheses, winding requires exactly one of: a signed measure, that
+is a non-unitary theory; a spectrum \emph{not} bounded below, so that the
+imaginary axis lies outside the region of absolute convergence and the object on
+it is a continuation past poles --- which is precisely
+Remark~\ref{rem:trap}, seen from the candidate's side rather than the target's;
+or a \emph{ratio}. The Weil family takes the third route, and
+Proposition~\ref{prop:groupdelay} says so: the same real function
+$b(\tau^2)+w_0$ is the archimedean multiplier of the form, where it is a positive
+weight with no phase, and the phase derivative of the transfer, where it winds. A
+correlator offers only the first reading.
+\end{remark}
+
+\subsection{What does wind, and why that is a problem}\label{ssec:winds}
+
+The phase shift of the inverted harmonic oscillator on the half-line is
+$\eta(\tau)=\arg\Gamma(\frac14+\frac{i\tau}2)$ \cite{BhaduriKhareLaw}, so
+\begin{equation}\label{eq:freewinding}
+ 2\eta'(\tau)-2\theta'(\tau)=\log\pi\qquad\text{exactly, for every }\tau,
+\end{equation}
+verified to $10^{-14}$. That system is $\frac12(xp+px)$ --- the dilatation
+generator --- on a ray, with continuous spectrum on all of $\R$, which is what
+Proposition~\ref{prop:nowinding} requires. Two consequences, in opposite
+directions. The delay clause is satisfied by a \emph{free} one-dimensional
+Hamiltonian, so as a test of a theory it has almost no power. And what the free
+generator misses is exactly the conductor: the constant $\log\pi$, which is the
+$\pi^{-s/2}$ of the completion.
+
+That the target is an inner function is the same statement:
+$e^{2i\theta(\tau)}=\pi^{-i\tau}\Gamma(\frac14+\frac{i\tau}2)/
+\Gamma(\frac14-\frac{i\tau}2)$, unimodular, with poles at $\tau=i(\frac12+2n)$ and
+zeros at $\tau=-i(\frac12+2n)$. Proposition~\ref{prop:flux} already says
+$K_\omega$ is inner; Proposition~\ref{prop:nowinding} says no correlator is.
+
+\subsection{The expansion, and the graded invariants}\label{ssec:invariants}
+
+The discrimination is in the expansion. Let a candidate's reflection amplitude be
+unimodular of $\Gamma$-ratio type,
+\begin{equation}\label{eq:gammaratio}
+ S(\tau)=e^{2ic_1\tau}\prod_j
+ \left(\frac{\Gamma(a_j+i\beta_j\tau)}{\Gamma(a_j-i\beta_j\tau)}\right)^{n_j},
+ \qquad a_j>0,\ \beta_j>0,\ n_j\in\R\setminus\{0\},
+\end{equation}
+finitely many factors. The multiplicities are real \emph{of either sign}: every
+amplitude in the survey of \S\ref{ssec:survey} except the $L$-function targets
+themselves has at least one $\Gamma$ in a denominator, so restricting to $n_j>0$
+would remove the physics rather than normalize it. From
+$\re\psi(a+iy)=\log y+\sum_{m\geq1}(-1)^{m+1}\frac{B_{2m}(a)}{2my^{2m}}$:
+
+\begin{proposition}[The delay expansion]\label{prop:expansion}
+\[
+ \mathcal T(\tau)=\Lambda\log\tau+c_0
+ +\sum_{m\geq1}\frac{(-1)^{m+1}}{m}\,\frac{\Sigma_{2m}}{\tau^{2m}},
+ \qquad \Lambda=2\sum_jn_j\beta_j,\qquad
+ \Sigma_{2m}=\sum_j\frac{n_jB_{2m}(a_j)}{\beta_j^{2m-1}},
+\]
+with $c_0=2c_1+2\sum_jn_j\beta_j\log\beta_j$. The target is
+$\mathcal T_{\rm Weil}=\log\tau-\log2\pi-\frac1{24\tau^2}+O(\tau^{-4})$.
+\end{proposition}
+
+The prefactor $(-1)^{m+1}/m$ is universal --- it depends on neither the amplitude
+nor $m$'s companions --- so it is the same for candidate and target and cancels in
+every comparison below. It is kept out of $\Sigma_{2m}$ so that the target reads
+$\Sigma_{2m}^{\rm Weil}=2^{2m-1}B_{2m}(\frac14)$; it is not optional in the
+equation, and at $m=1$ it is $+1$, which is why earlier versions, which wrote only
+the $\tau^{-2}$ term, did not need it.
+
+A candidate's natural momentum is not $\tau$, and the relation is linear,
+$\tau=\kappa P$; matching the leading coefficient forces $\kappa=\Lambda$. Rather
+than substitute by hand for each candidate --- which is what \S\ref{ssec:liouville}
+does for Liouville, and where a reader's suspicion goes first --- one may pass to
+quantities in which the dictionary has already cancelled.
+
+\begin{definition}\label{def:invariants}
+$I_{2m}(S):=\Lambda^{2m-1}\Sigma_{2m}$.
+\end{definition}
+
+\begin{proposition}[The invariants are dictionary-free]\label{prop:dictfree}
+$I_{2m}$ is unchanged by any linear change of momentum and by any common
+rescaling $\beta_j\mapsto\lambda\beta_j$. The target is
+\[
+ I_{2m}^{\rm Weil}=2^{2m-1}B_{2m}(\tfrac14)
+ =-\tfrac1{24},\quad\tfrac7{480},\quad-\tfrac{31}{2688},\quad\tfrac{127}{7680},\ \dots
+\]
+\end{proposition}
+
+\begin{proof}
+Under $\tau=\kappa P$ a delay measured in $P$ becomes
+$\mathcal T(\tau)=\kappa^{-1}\mathcal T_{\rm phys}(\tau/\kappa)$, so the leading
+coefficient is $\Lambda/\kappa$ and $\Sigma_{2m}\mapsto\kappa^{2m-1}\Sigma_{2m}$,
+the universal prefactor going along unchanged; imposing $\kappa=\Lambda$ gives the
+claim. For the
+second, $\Lambda\mapsto\lambda\Lambda$ and
+$\Sigma_{2m}\mapsto\lambda^{-(2m-1)}\Sigma_{2m}$. The target is the single factor
+$n=1$, $a=\frac14$, $\beta=\frac12$.
+\end{proof}
+
+\begin{corollary}[$\Lambda$ is the degree]\label{cor:degree}
+For the archimedean factor $\prod_{j=1}^d\Gamma_\R(s+\mu_j)$ of a degree-$d$
+$L$-function at $s=\frac12+i\tau$ one has $a_j=\frac{1/2+\mu_j}2$,
+$\beta_j=\frac12$, $n_j=1$, so $\Lambda=d$ exactly. Matching the target says:
+degree one.
+\end{corollary}
+
+\begin{theorem}[One factor: the classification is complete]\label{thm:onefactor}
+Let $S$ be \eqref{eq:gammaratio} with a single factor. Then
+\[
+ I_{2m}(S)=2^{2m-1}n^{2m}B_{2m}(a)\qquad\text{for every }m,
+\]
+\emph{independent of $\beta$}. Consequently $S$ matches the target in $I_2$ and
+$I_4$ if and only if
+\[
+ (a,n)\in\Big\{\big(\tfrac14,\pm1\big),\ \big(\tfrac34,\pm1\big),\
+ \big(\tfrac12,\pm\tfrac12\big)\Big\},
+\]
+and each of these then matches $I_{2m}$ for every $m$.
+\end{theorem}
+
+\begin{proof}
+$\Lambda=2n\beta$ and $\Sigma_{2m}=nB_{2m}(a)\beta^{-(2m-1)}$, so the powers of
+$\beta$ cancel and $I_{2m}=2^{2m-1}n^{2m}B_{2m}(a)$. Put $t=n^2>0$ and
+$u=B_2(a)=a^2-a+\frac16$. Matching $I_2$ and $I_4$ reads $tu=-\frac1{48}$ and
+$t^2B_4(a)=\frac7{3840}$. Since $B_4(a)=(a^2-a)^2-\frac1{30}=u^2-\frac u3-\frac1{180}$,
+eliminating $t$ gives
+\[
+ \frac{u^2-\frac u3-\frac1{180}}{2304\,u^2}=\frac7{3840}
+ \iff 576u^2+60u+1=0,
+\]
+whose discriminant is $3600-2304=36^2$ and whose roots are $u=-\frac1{48}$ and
+$u=-\frac1{12}$. The first gives $t=1$ and $a^2-a+\frac3{16}=0$, so $n=\pm1$ and
+$a\in\{\frac14,\frac34\}$; the second gives $t=\frac14$ and $(a-\frac12)^2=0$, so
+$n=\pm\frac12$ and $a=\frac12$. That all six then match every $I_{2m}$ is
+Remark~\ref{rem:degeneracy}.
+\end{proof}
+
+\begin{corollary}[The shift must sit near the critical line]\label{cor:signrule}
+For a single factor $I_2=2n^2B_2(a)$ carries the sign of $B_2(a)$ \emph{whatever
+the sign of $n$}, so matching forces
+\[
+ \Big|a-\tfrac12\Big|<\tfrac1{2\sqrt3}=0.288675\ldots,
+\]
+and no single-factor amplitude with $a\geq1$ can match at any multiplicity. For
+several factors with all $n_j>0$ one has $\Lambda>0$, so the same window follows
+from $\Sigma_2<0$ and at least one $a_j$ lies in it.
+\end{corollary}
+
+\begin{center}
+\begin{tabular}{@{}lccc@{}}
+\toprule
+factor, at $s=\frac12+i\tau$ & $a$ & $B_2(a)$ & in the window\\
+\midrule
+$\Gamma_\R(s)$ --- $\zeta$, even $\chi$ & $\frac14$ & $-\frac1{48}$ & yes\\
+$\Gamma_\R(s+1)$ --- odd $\chi$ & $\frac34$ & $-\frac1{48}$ & yes\\
+$\Gamma_\C(s)$ --- a complex place & $\frac12$ & $-\frac1{12}$ & yes, deepest\\
+$\Gamma(1+i\,\cdot)$ --- generic reflection amplitude & $1$ & $+\frac16$ & \textbf{no}\\
+$\Gamma(\frac32+i\,\cdot)$ & $\frac32$ & $+\frac{11}{12}$ & \textbf{no}\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\begin{remark}[The degeneracy, and what a match can certify]\label{rem:degeneracy}
+Three moves leave every $I_{2m}$ fixed. \emph{Inversion} $n\mapsto-n$, since
+$\Lambda$ and $\Sigma_{2m}$ both change sign and $2m-1$ is odd --- so the test
+cannot distinguish $S$ from $1/S$, and does not fix the sign of the delay.
+\emph{Parity} $a\mapsto1-a$, since $B_{2m}(1-a)=B_{2m}(a)$ --- so it cannot
+distinguish $\Gamma_\R(s)$ from $\Gamma_\R(s+1)$, that is $\zeta$ from a real odd
+character. And \emph{Gauss multiplication}: from $B_n(2x)=2^{n-1}[B_n(x)+B_n(x+\frac12)]$
+at $x=\frac14$,
+\[
+ B_{2m}(\tfrac12)=2^{2m}B_{2m}(\tfrac14)\qquad\text{for every }m\geq1,
+\]
+exactly, so $(a{=}\frac14,\beta,n)$ and $(a{=}\frac12,2\beta,\frac n2)$ are
+indistinguishable in $\Lambda$ and in every $\Sigma_{2m}$. Hence the three
+solutions of Theorem~\ref{thm:onefactor} are a single orbit, and the invariants
+identify the archimedean factor only \emph{modulo} inversion, parity and the
+Legendre--Gauss multiplication relations. They are an instrument for exclusion; a
+match certifies membership of an orbit, not of a point.
+\end{remark}
+
+\begin{proposition}[Rigidity at a common shift]\label{prop:rigidity}
+Suppose all $a_j=a$ and all $n_j>0$. Then $I_2=-\frac1{24}$ forces
+\[
+ \sum_jn_j\ \leq\ \big(48|B_2(a)|\big)^{-1/2},
+\]
+with equality if and only if all $\beta_j$ agree. The bound equals one exactly
+when $a\in\{\frac14,\frac34\}$, so with integer multiplicities there is a single
+factor, $n=1$, $a\in\{\frac14,\frac34\}$: the archimedean factor of a degree-one
+$L$-function, of either parity, and nothing else.
+\end{proposition}
+
+\begin{proof}
+$I_2=2B_2(a)\big(\sum_jn_j\beta_j\big)\big(\sum_jn_j/\beta_j\big)$, and with
+$n_j>0$ Cauchy--Schwarz gives
+\[
+ \Big(\sum_jn_j\Big)^2\leq\Big(\sum_jn_j\beta_j\Big)\Big(\sum_jn_j/\beta_j\Big)
+ =\frac{|I_2|}{2|B_2(a)|},
+\]
+with equality if and only if the $\beta_j$ agree; and $|B_2(a)|=\frac1{48}$ has
+roots $a=\frac14$ and $a=\frac34$.
+\end{proof}
+
+Two hypotheses here are not decoration. The common shift is not removable: with
+$a_1=\frac12$, $a_2=1$, $n_1=n_2=1$, $\beta_1=0.1576708$, $\beta_2=0.3423292$ both
+$\Lambda=1$ and $\Sigma_2=-\frac1{24}$ hold, a positive $B_2$ paying for a
+negative one. Nor is integrality: $n=\pm\frac12$ at $a=\frac12$ is the third
+solution of Theorem~\ref{thm:onefactor}, and it is the one the $c=1$ matrix model
+realizes (\S\ref{ssec:survey}). What is unconditional, for one factor, is
+Theorem~\ref{thm:onefactor}.
+
+\subsection{Liouville, excluded}\label{ssec:liouville}
+
+The bulk Liouville reflection amplitude is unimodular and does wind:
+$\frac{d}{dP}\arg S=4Q\log P+C_L+\frac{Q}{12P^2}+O(P^{-4})$, $Q=b+b^{-1}$.
+The Liouville coordinate is the radial one, so the momenta are linearly related,
+$\tau=2\kappa P$, and matching the leading coefficient \emph{forces} $\kappa=2Q$.
+Nothing is then left but $b$; the cosmological constant $\mu$ enters the
+prefactor linearly in $P$ and so moves only $c_0$. Substituting $P=\tau/4Q$,
+\[
+ \mathcal T_L(\tau)=\log\tau-\log4Q+\frac{C_L}{4Q}+\frac{Q^2}{3\tau^2}+O(\tau^{-4}) .
+\]
+The constant can be matched, by one $\mu$ for each $b$. The $\tau^{-2}$ term
+cannot: $Q\geq2$ for every $b>0$, so $Q^2/3\geq\frac43$, against the target's
+$-\frac1{24}$ --- wrong sign, and never within a factor of $32$ in magnitude.
+This is Corollary~\ref{cor:signrule} with $a=1$. \textbf{Liouville is excluded at
+every coupling}, and so is every \emph{single-factor} amplitude built from
+$\Gamma(m+i\,\cdot)$ with $m\geq1$, by Theorem~\ref{thm:onefactor}.
+
+\begin{remark}[The single-factor hypothesis is needed]\label{rem:retraction}
+Earlier versions of this section dropped it. That was wrong. With multiplicities
+of both signs, take two factors with \emph{both} shifts at $a=1$,
+\[
+ S_r(\tau)=\frac{\Gamma(1+ir\tau)}{\Gamma(1-ir\tau)}\cdot
+ \frac{\Gamma(1-i\tau)}{\Gamma(1+i\tau)},\qquad
+ I_2=-\frac{(r-1)^2}{3r},
+\]
+so $I_2=-\frac1{24}$ at the two reciprocal roots of $8r^2-17r+8=0$, namely
+$r=\frac{17\pm\sqrt{33}}{16}$, $r=1.42153516\ldots$ --- the target's $I_2$
+exactly, from two shifts in the excluded region. Using $r^2=(17r-8)/8$,
+\[
+ I_4=\frac{r^2+r+1}{240\,r}=\frac5{384}
+ \qquad\text{against the target }\frac7{480},
+\]
+short by $\frac3{28}$. More is true: with the multiplicities free, the pair
+$I_2=-\frac1{24}$, $I_4=\frac7{480}$ has a one-parameter family of solutions with
+both shifts at $a=1$, parametrized by $P=\Lambda/2\in(0,\frac{\sqrt7}4)$ through
+$\beta^{-2}=(7-16P^2)/\big(16P^2(1+8P^2)\big)$. Imposing $I_6$ as well leaves
+exactly two points of that family, $P=\frac14$ and $P=\frac12$, and both are the
+target after Legendre duplication: at $P=\frac12$,
+$\big[\Gamma(1+2i\tau)/\Gamma(1+i\tau)\big]^{1/2}
+ =2^{i\tau}\pi^{-1/4}\Gamma(\frac12+i\tau)^{1/2}$, which is
+Remark~\ref{rem:degeneracy}'s third move. So a truncation of the invariant
+sequence is defeatable and the sequence itself, on this family, is not; whether
+$\{I_{2m}\}_{m\geq1}$ determines an amplitude up to the degeneracy group in
+general is open. Theorem~\ref{thm:onefactor} settles it for one factor.
+\end{remark}
+
+\subsection{The survey, and what the test cannot see}\label{ssec:survey}
+
+Theorem~\ref{thm:onefactor} makes the test a classification rather than a window,
+and it is two lines of arithmetic per candidate. Each row below reads
+$(n_j,a_j,\beta_j)$ off the amplitude \emph{as quoted in the literature} --- the
+$\Gamma$-structure of every row is a reading, not a re-derivation here --- and
+then evaluates $\Lambda$ and the first three invariants.
+
+\begin{center}\small
+\begin{tabular}{@{}lrrrl@{}}
+\toprule
+amplitude & $\Lambda$ & $I_2$ & $I_4$ & verdict\\
+\midrule
+target $\Gamma_\R(s)$, $\zeta$ and even $\chi$ & $1$ & $-0.0416667$ & $0.0145833$ & ---\\
+$\Gamma_\R(s+1)$, odd $\chi$ & $1$ & $-0.0416667$ & $0.0145833$ & match (parity)\\
+inverted oscillator, half line, even & $-1$ & $-0.0416667$ & $0.0145833$ & \textbf{match}\\
+inverted oscillator, half line, odd & $-1$ & $-0.0416667$ & $0.0145833$ & \textbf{match}\\
+$c=1$ matrix model / $2$d string \cite{MoorePlesserRamgoolam} & $-1$ & $-0.0416667$ & $0.0145833$ & \textbf{match}\\
+Gauss duplication of the target & $1$ & $-0.0416667$ & $0.0145833$ & match (duplication)\\
+inverted oscillator, \emph{full} line & $-2$ & $-0.166667$ & $0.233333$ & fails $I_2$, $\times4$\\
+modular surface $\Gamma\backslash\mathbb H$ \cite{Iwaniec} & $1$ & $-0.166667$ & $0.233333$ & fails $I_2$, $\times4$\\
+JT / Liouville-QM wall & $4$ & $+0.333333$ & $-0.266667$ & fails $I_2$, sign\\
+$H_3^+$ ($m$-basis), any level & $-\frac43$ & $+0.333333$ & $-0.266667$ & fails $I_2$, sign\\
+bulk Liouville, $b=1$ & $8$ & $+1.33333$ & $-4.26667$ & fails $I_2$, $\times32$\\
+FZZT boundary, $b=1$ & $4$ & $+0.333333$ & $-0.266667$ & fails $I_2$, sign\\
+cigar $SL(2,\R)/U(1)$, $k=\frac{14}3$ & $-1.5$ & $-0.0416667$ & $-0.0557292$ & $I_2$ exact, fails $I_4$\\
+cigar, $k=\frac{782}3$, $n=7$ & $-0.0155$ & $-0.0416667$ & $-0.267731$ & $I_2$ exact, fails $I_4$\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+Liouville, FZZT, ZZ, JT and $H_3^+$ all reduce to $\Gamma(1+i\,\cdot)$ and fail on
+sign before any magnitude is compared; the coupling, the level and $\mu$ move
+nothing that matters. The cigar is the interesting failure: its shifts
+$\frac12+\frac{|n|\mp kw}2$ are tunable, so $I_2$ can be hit exactly --- at small
+level and at large --- and neither solution survives $I_4$.
+
+The single survivor is the inverted harmonic oscillator on a \emph{half} line,
+whose parabolic-cylinder index is $\frac14$ in the even sector and $\frac34$ in
+the odd, against $\frac12$ on the full line; the even/odd split maps onto the
+parity split $\Gamma_\R(s)$ / $\Gamma_\R(s+1)$ of even and odd characters exactly
+as Remark~\ref{rem:degeneracy} requires. That match is \cite{BhaduriKhareLaw},
+already the motivating example of \S\ref{ssec:winds}. What
+Theorem~\ref{thm:onefactor} adds is that there is nothing else: the $c=1$ matrix
+model row is its Gauss-duplication image, not an independent candidate, as it
+must be, the free-fermion and half-line problems being the same problem.
+
+\begin{remark}[The test cannot see the zeros]\label{rem:modular}
+The modular surface row deserves its own statement, because it is the one entry
+where the Riemann zeros are literally present. For $\Gamma=PSL(2,\Z)$ the
+Eisenstein scattering matrix \cite{Iwaniec} is $\varphi(s)=\xi(2s-1)/\xi(2s)$, whose poles are at
+$s=\rho/2$: the resonances \emph{are} the zeros. It fails by a factor of four. On
+$\re s=\frac12$ the functional equation and reality give
+$\xi(2s-1)=\overline{\xi(2s)}$, so $\varphi$ is unimodular with
+$\arg\varphi(\frac12+ir)=-2\arg\xi(1+2ir)$, whose $\Gamma$ content is
+$\Gamma(\frac12+ir)$ --- shift $\frac12$, not $\frac14$. Hence in $\tau=2r$,
+\[
+ \mathcal T(\tau)=\log\frac\tau{2\pi}-\frac1{6\tau^2}+O(\tau^{-4}),\qquad
+ I_2=-\tfrac16 .
+\]
+There is no paradox: the resonances lie off the line, at $\re s=\frac14$, while
+the delay is read on it, where $\varphi$ is governed by $\xi$ at the edge
+$u=1+2ir$ of the strip --- a region in which $\zeta$ has no zeros at all and
+$\arg\zeta(1+2ir)$ is bounded. The zeros contribute nothing to the delay, and the
+archimedean factor is $\Gamma_\R(2s)$ rather than $\Gamma_\R(s)$, which is exactly
+the doubling that costs the factor of four.
+
+Two consequences, and they cut in opposite directions. A pass is weak evidence:
+the half-line inverted oscillator matches every invariant exactly and its spectrum
+has nothing to do with the zeros. A failure is not evidence of absence: the
+modular surface has the zeros as resonances and fails. The delay test is a
+measurement of the archimedean factor on the critical line, and of nothing else.
+\end{remark}
+
+\begin{remark}[Where the primes are not]\label{rem:notprimes}
+None of this expansion sees the primes. They are in the bounded fluctuation
+$S(\tau)=\pi^{-1}\arg\zeta(\frac12+i\tau)$, which is invisible to every
+asymptotic order. So the expansion tests whether a candidate has the right
+\emph{archimedean} data, to any depth wanted, and says nothing about whether it
+has any arithmetic --- two questions that were previously entangled in one test.
+This is the same separation Section~\ref{sec:sampling} found on the other side,
+where the margin turned out to be set by the density and not by the primes.
+Remark~\ref{rem:modular} says the stronger thing: the expansion cannot see the
+\emph{zeros} either. Both are invisible to every asymptotic order.
+\end{remark}
+
+\begin{remark}[Status of this section]\label{rem:delaystatus}
+Propositions~\ref{prop:defectdelay}, \ref{prop:nowinding}, \ref{prop:expansion},
+\ref{prop:dictfree} and \ref{prop:rigidity}, Theorem~\ref{thm:onefactor} and
+their corollaries are written proofs, unconditional;
+Proposition~\ref{prop:nowinding} quotes Bernstein's theorem. The Liouville
+exclusion assumes the momentum dictionary is linear, which is stated where it is
+used and which Section~\ref{sec:delay}'s other results do not need ---
+Proposition~\ref{prop:dictfree} removes that assumption from everything after it.
+The $(n_j,a_j,\beta_j)$ triples of \S\ref{ssec:survey} are readings of the quoted
+amplitudes; the arithmetic on them is a computation, and the cigar rows are the
+ones most in need of independent re-derivation. The one-parameter family and its
+two $I_6$ roots in Remark~\ref{rem:retraction} are a bisection sweep, with the two
+roots then identified in closed form. Every number
+is verified in Appendix~\ref{app:checks}. Section 11.1's description of
+\cite{OWL} is a reading with its scope in the footnote; the defect spectrum and
+normalizations are quoted, not re-derived.
+\end{remark}

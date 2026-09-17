@@ -18,6 +18,9 @@ quoted in the notes are reproducible.
 | [density_control_gram.py](density_control_gram.py) | Section 5.2: $\lambda_{\min}$ for the Gram points, an arithmetic-free set with the same counting function. |
 | [density_control_jitter.py](density_control_jitter.py) | Section 5.2: the same with jitter applied in the unfolded variable $\theta/\pi$, so the counting function is preserved. |
 | [decay_laws.py](decay_laws.py) | Section 6: the one-parameter model comparison and the two published laws. |
+| [quarter_shift_survey.py](quarter_shift_survey.py) | Quarter-shift note \S3 and \S5--6: the degeneracy $B_{2m}(\frac12)=2^{2m}B_{2m}(\frac14)$, the survey table, the cigar scan, and the modular-surface identities $|\varphi|=1$ and $\arg\varphi=-2\arg\xi(1+2ir)$ --- the only place those are computed, since the registered programme is kept free of $\zeta$ and $\xi$. |
+| [quarter_shift_classify.py](quarter_shift_classify.py) | Quarter-shift note \S2: the single-factor formula $I_{2m}=2^{2m-1}n^{2m}B_{2m}(a)$ at 50 digits, its independence of the width, and the quadratic $576u^2+60u+1=0$ with its two roots. |
+| [quarter_shift_twofactor.py](quarter_shift_twofactor.py) | Quarter-shift note \S4: the closed-form counterexample at $r=\frac{17\pm\sqrt{33}}{16}$, the one-parameter family matching $I_2$ and $I_4$ with both shifts at $a=1$, the root-finding that leaves only the two Legendre-duplication points, and the duplication identity itself. |
 | [crosscheck_against_repo_assembler.py](crosscheck_against_repo_assembler.py) | Section 1.2: $Q[f]$ from the closed-form matrix against `weil_functional` of the finite-response investigation's `chk1_explicit_formula.py`, a pre-existing and independently written quadrature assembler in Suzuki's normalisation. Relative agreement $6\times10^{-25}$ at 25 digits. Also requires `sympy`. |
 
 Every number these produce is a trial-space Rayleigh quotient, hence an **upper**

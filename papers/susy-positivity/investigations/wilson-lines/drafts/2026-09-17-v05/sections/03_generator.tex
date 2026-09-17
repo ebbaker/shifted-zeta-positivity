@@ -1,0 +1,134 @@
+\section{The generator, and what it contains}\label{sec:generator}
+
+Definition~\ref{def:generator} names an operator; this section identifies it. The
+outcome is that \eqref{eq:form} holds with the \emph{complete} target on the right,
+and that the whole $\omega$-dependence is one scalar factor. Section~\ref{sec:allpass}
+then identifies the transfer, and everything after that is a consequence.
+
+\begin{theorem}[The shifted form in closed form]\label{thm:kernel}
+For $0\leq\omega\leq\frac12$ and $f\in C_c^\infty(I_L)$, $F=E_Lf$,
+\begin{align}
+ Q_{\omega,L}[f]
+ ={}&\int_0^\infty\big[2\norm F^2-2\cosh(\omega r)\re\ip F{U_rF}\big]
+      \gammak(r)\dd r
+   \;+\;w_0\norm f^2 \notag\\
+  &+2\iint_{I_L^2}\cosh\!\big(\omega(x-y)\big)
+      \cosh\!\Big(\frac{x-y}2\Big)\overline{f(x)}f(y)\dd x\dd y \notag\\
+  &-2\!\!\sum_{m\log p<L}\!\!(\log p)\,p^{-m/2}\cosh(\omega m\log p)\,
+      \re\ip F{U_{m\log p}F} .
+ \label{eq:shifted-target}
+\end{align}
+At $\omega=0$ this is \eqref{eq:target}. In words: \emph{the shifted form is the
+central form with every off-diagonal kernel multiplied by $\cosh(\omega(x-y))$
+and every prime atom by $\cosh(\omega\log n)$, the diagonal unchanged.}
+\end{theorem}
+
+\begin{proof}
+Write $\mathcal F(p)=\xi(\frac12+p)$ and $s=\frac12+p$. Logarithmic
+differentiation of \eqref{eq:xi} gives
+\begin{equation}\label{eq:threefactors}
+ \frac{\mathcal F'}{\mathcal F}(p)
+ =\underbrace{\frac1{p+\frac12}+\frac1{p-\frac12}}_{\frac12s(s-1)}
+ \;\underbrace{-\tfrac12\log\pi+\tfrac12\psi\big(\tfrac14+\tfrac p2\big)}
+   _{\pi^{-s/2}\Gamma(s/2)}
+ \;+\;\underbrace{\frac{\zeta'}{\zeta}\big(\tfrac12+p\big)}_{\zeta(s)},
+\end{equation}
+and $a_\omega(p)$ of \eqref{eq:gensymbol} is the sum of \eqref{eq:threefactors}
+at $p-\omega$ and at $p+\omega$. We compute the causal kernel of each factor on
+$\re p=\eta>1$ and then symmetrize. For a causal convolution with kernel $c$ and
+$g$ supported in $I_L$,
+\begin{equation}\label{eq:symmetrize}
+ \re\ip g{(c*\widetilde g)|_{I_L}}
+ =\tfrac12\iint_{x\neq y}c(|x-y|)\overline{g(x)}g(y)\dd x\dd y ,
+\end{equation}
+since relabelling $x\leftrightarrow y$ in the conjugate term turns the region
+$y<x$ into $x<y$ with $c(|x-y|)$ unchanged.
+
+\emph{Pole factors.} The four terms $\frac1{p\mp\omega\pm\frac12}$ have simple
+poles at $p=\pm\frac12\pm\omega$ --- poles of the individual terms, which cancel
+in the sum, as Remark~\ref{rem:trap} records --- all to the left of
+$\re p=\eta$ since
+$\eta>1\geq\frac12+\omega$. Because $\frac1{p-a}$ is the Laplace transform of
+$e^{ax}\mathbf1_{x>0}$, their kernel is
+\[
+ \big(e^{x/2}+e^{-x/2}\big)\big(e^{\omega x}+e^{-\omega x}\big)\mathbf1_{x>0}
+ =4\cosh(x/2)\cosh(\omega x)\mathbf1_{x>0},
+\]
+and \eqref{eq:symmetrize} turns it into
+$2\iint\cosh(\omega(x-y))\cosh(\frac{x-y}2)\overline f f$, the third line of
+\eqref{eq:shifted-target}. At $\omega=0$ the expansion
+$2\cosh\frac{x-y}2=2\cosh\frac x2\cosh\frac y2-2\sinh\frac x2\sinh\frac y2$
+returns $P_L[f]$ of \eqref{eq:poles}.
+
+\emph{Zeta factor.} On $\re p=\eta>1$ the Dirichlet series converges absolutely,
+so
+\[
+ \frac{\zeta'}{\zeta}\big(\tfrac12+p-\omega\big)
+ +\frac{\zeta'}{\zeta}\big(\tfrac12+p+\omega\big)
+ =-2\sum_{n\geq2}\Lambda(n)n^{-1/2}\cosh(\omega\log n)\,n^{-p},
+\]
+and $n^{-p}=e^{-p\log n}$ is the Laplace symbol of the causal delay by $\log n$.
+Applying \eqref{eq:symmetrize} to the atom at $r=\log n$ gives
+$-2\Lambda(n)n^{-1/2}\cosh(\omega\log n)\re\ip F{U_{\log n}F}$; writing
+$n=p^m$, $\Lambda(p^m)=\log p$ gives the last line of
+\eqref{eq:shifted-target}. The cutoff $m\log p<L$ is automatic, because a delay
+of length $\geq L$ has zero action on $I_L$.
+
+\emph{Gamma and $\pi$ factors.} Their contribution to $a_\omega$ is
+$-\log\pi+\frac12[\psi(\frac14+\frac{p-\omega}2)+\psi(\frac14+\frac{p+\omega}2)]$.
+With $\psi(z)=-\gamma_E+\int_0^\infty(e^{-t}-e^{-zt})(1-e^{-t})^{-1}\dd t$
+\cite[\S5.9]{DLMF} at $z=\frac14+\frac{p\mp\omega}2$ and the substitution
+$t=2r$,
+\begin{equation}\label{eq:digamma-kernel}
+ \tfrac12\Big[\psi\big(\tfrac14+\tfrac{p-\omega}2\big)
+  +\psi\big(\tfrac14+\tfrac{p+\omega}2\big)\Big]
+ =-\gamma_E+\int_0^\infty\frac{2e^{-2r}}{1-e^{-2r}}\dd r
+  -\int_0^\infty 2\cosh(\omega r)\gammak(r)e^{-pr}\dd r ,
+\end{equation}
+using $\gammak(r)=e^{-r/2}(1-e^{-2r})^{-1}$ of \eqref{eq:gamma-kernel}. The two
+integrals in \eqref{eq:digamma-kernel} diverge logarithmically at the origin and
+only their difference converges, both integrands being $\sim\frac1{2r}$; the
+pairing of the divergent constant against $\norm f^2$ with the divergent
+convolution against $\re\ip F{U_rF}$ is exactly the combination
+$2\norm F^2-2\cosh(\omega r)\re\ip F{U_rF}$ appearing in the first line of
+\eqref{eq:shifted-target}, which is integrable against $\gammak$ because it is
+$O(r)\gammak(r)$ at the origin and $2\norm F^2\gammak(r)$ for $r\geq L$. This
+fixes the first line up to an $\omega$-independent constant multiple of
+$\norm f^2$, and that constant is $w_0=\psi(\frac14)-\log\pi$ by evaluating at
+$\omega=0$, $p=i\tau$, where the multiplier of \eqref{eq:gamma-energy} and
+\eqref{eq:multiplier} is $\re\psi(\frac14+\frac{i\tau}2)-\log\pi=b(\tau^2)+w_0$.
+
+Each of the three contributions is $\omega$-independent on the diagonal, since
+$\cosh0=1$; summing them gives \eqref{eq:shifted-target}, and at $\omega=0$
+gives \eqref{eq:target}. The $\omega$-dependent part of each line is separately
+convergent, because $\cosh(\omega t)-1=O(t^2)$ at the origin.
+\end{proof}
+
+\begin{remark}[The equations of the background are general]\label{rem:general}
+Theorem~\ref{thm:kernel} settles a question that the background leaves implicit.
+The flow identities \eqref{eq:flow}--\eqref{eq:storage} are statements about the
+\emph{whole} Weil form: the archimedean energy, the contact, the poles and the
+primes all appear, and all are deformed. A separate paragraph of the background
+isolates the gamma and $\pi$ factors alone, $K_\omega^\Gamma$, and observes that
+a positive tower realizes only that portion of the zero-shift generator; that is
+a statement about a construction, not about the scope of \eqref{eq:flow}.
+\end{remark}
+
+\begin{remark}[The pole term is invisible on the imaginary axis]\label{rem:imaginary}
+The causal definition on $\re p=\eta>1$ is not a technical convenience. At
+$p=i\tau$,
+\[
+ \re\left[\frac2{p-\frac12}+\frac2{p+\frac12}\right]
+ =\frac{2\cdot\frac12}{\frac14+\tau^2}+\frac{2\cdot(-\frac12)}{\frac14+\tau^2}
+ =0
+\]
+identically in $\tau$. Reading $a_\omega$ as a Fourier multiplier on the
+imaginary axis therefore recovers the archimedean term and the prime delays and
+\emph{loses the contact and pole term entirely}. The pole factors reach
+$Q_{\omega,L}$ only through the right half-plane realization of
+Definition~\ref{def:generator}. Appendix~\ref{app:checks} verifies both halves of
+this remark numerically: the causal kernel $4\cosh(x/2)\mathbf1_{x>0}$
+reproduces $P_L$ to machine precision, and the same symbol has vanishing real
+part on the imaginary axis. Remark~\ref{rem:trap} gives the general form of the
+phenomenon: the contour may be moved for $K_\omega$ and may not for $a_\omega$.
+\end{remark}

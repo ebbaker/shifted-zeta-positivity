@@ -22,21 +22,12 @@ python3 validation/drafts.py check --replay
 
 Counts refer to finite test cases, not independent theorems.
 
-| [check_delay_test.py](check_delay_test.py) | [delay-test-checks.json](records/delay-test-checks.json) | 157 checks in six groups, supporting the [delay-test note](../notes/THE_DELAY_TEST_20260917.md): the causal symbol of a ray-frame defect two-point function against direct quadrature; its boundary-channel decomposition into primary plus descendants with positive coefficients; the closed form $\mathcal T_\Delta(\tau)=\pi\operatorname{Re}\cot(\pi(\Delta+i\tau))$ for the group delay, its total $\pi(\frac12-\Delta)$, and its identical vanishing at half-integer $\Delta$; the Stieltjes bound $\arg\in(-\frac\pi2,0)$ for arbitrary positive spectral measures, with the accumulated delay below $\frac\pi2$ at every horizon; that $e^{2i\theta}$ is unimodular and $\int_0^T2\theta'=2\theta(T)$ is unbounded; and the two objects that do wind --- the half-line inverted oscillator, exactly $\log\pi$ from the target, and the Liouville reflection amplitude at $4Q\log P$. |
+| [check_delay_test.py](check_delay_test.py) | [delay-test-checks.json](records/delay-test-checks.json) | 525 checks in eight groups, supporting the [delay-test note](../notes/THE_DELAY_TEST_20260917.md), the [expansion note](../notes/THE_ARCHIMEDEAN_EXPANSION_20260917.md) and the [quarter-shift survey note](../notes/THE_QUARTER_SHIFT_SURVEY_20260917.md): the causal symbol of a ray-frame defect two-point function against direct quadrature; its boundary-channel decomposition into primary plus descendants with positive coefficients; the closed form $\mathcal T_\Delta(\tau)=\pi\operatorname{Re}\cot(\pi(\Delta+i\tau))$ for the group delay, its total $\pi(\frac12-\Delta)$, and its identical vanishing at half-integer $\Delta$; the Stieltjes bound $\arg\in(-\frac\pi2,0)$ for arbitrary positive spectral measures, with the accumulated delay below $\frac\pi2$ at every horizon; that $e^{2i\theta}$ is unimodular and $\int_0^T2\theta'=2\theta(T)$ is unbounded; and the two objects that do wind --- the half-line inverted oscillator, exactly $\log\pi$ from the target, and the Liouville reflection amplitude at $4Q\log P$; and the delay expansion, with $\Lambda$ equal to the degree, the sign window $|a-\frac12|<\frac1{2\sqrt3}$, the rigidity bound attained only at $a\in\{\frac14,\frac34\}$, and the two-shift solution that shows its hypothesis is needed. Group H adds the graded invariants: the expansion checked against the delay assembled from $\operatorname{Re}\psi$, including the decisive test on the universal prefactor $(-1)^{m+1}/m$ (the residual left by the correct truncation falls like $\tau^{-6}$, the one left by setting the prefactor to $1$ only like $\tau^{-4}$); the targets $I_{2m}=2^{2m-1}B_{2m}(\frac14)$ in exact rational arithmetic; the degeneracy $B_{2m}(\frac12)=2^{2m}B_{2m}(\frac14)$ exactly to $m=8$; the single-factor formula and its independence of the width; the classification $(a,n)\in\{(\frac14,\pm1),(\frac34,\pm1),(\frac12,\pm\frac12)\}$ with a grid search finding nothing beyond it; every row of the survey table; the closed-form counterexample at $r=\frac{17+\sqrt{33}}{16}$ with $I_4=\frac5{384}$; the two-factor family and the bisection sweep locating exactly the two $I_6$ roots; the Legendre duplication identity behind them in squared form; the modular-surface shift together with the unimodular factor $\frac{2s-2}{2s}$ separating $\Lambda_\zeta$ from $\xi$ and the $+\frac{11}6$ it would produce; and the counterexample at $a=\frac{4-\sqrt5}8$ to the unrestricted rigidity claim, with the scan that finds no common-shift configuration with $n_j\leq6$ matching $I_4$. Standard library only, and deliberately free of $\zeta$ and $\xi$ --- the modular-surface identities that need them are in `exploratory/quarter_shift_survey.py`. |
 
-**`check_sampling_forms.py` and `check_delay_test.py` are written to the
-conventions and replay deterministically ($336$ and $157$ checks, `total_checks`
-in each record), but neither is yet in the `CHECKS` dictionary.** Adding it edits
-[`validation/drafts.py`](../validation/drafts.py), which `BUILD_RECORD.json`
-hashes, so registration must be followed by `drafts.py record` --- a manuscript
-review action, with a page count and a visual-review note --- and that is left to
-the author. Until then, run it directly:
-
-```sh
-for c in check_sampling_forms check_delay_test; do
-  python3 numerics/$c.py | python3 -c "import json,sys; d=json.load(sys.stdin); print(d['all_pass'], d['total_checks'])"
-done
-```
+All three are registered in the `CHECKS` dictionary of
+[`validation/drafts.py`](../validation/drafts.py) as of manuscript 0.5;
+`drafts.py check --replay` runs all three and requires byte-identical output,
+$742$ cases in total.
 
 Separately, [`exploratory/`](exploratory/README.md) holds programmes that are
 **not** registered: they use libraries the conventions exclude and

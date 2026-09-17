@@ -1,0 +1,350 @@
+\section{The margin is a sampling constant, and the density sets it}
+\label{sec:sampling}
+
+Section~\ref{sec:region} left the margin
+$m_L=\lambda_{\min}(Q_{0,L})$ with an exact reading --- how well a function
+supported in an interval can avoid the Riemann zeros in frequency --- and left its
+collapse as the open mechanism question. This section identifies the object, proves
+that it is positive, says what the classical theory of such objects reaches, and
+then reports a measurement which changes what the mechanism question is.
+
+\subsection{The object}
+
+For $f\in C_c^\infty(I_L)$ the transform $\widehat F$ is entire of exponential
+type $L/2$ and lies in $L^2(\R)$, that is $\widehat F\in PW_{L/2}$, the
+Paley--Wiener space; and $\norm f^2=\frac1{2\pi}\norm{\widehat F}^2$. Under the
+Riemann hypothesis the spectral form \eqref{eq:spectral-target} is a sum of
+squares, so
+
+\begin{equation}\label{eq:sampling}
+ m_L=\lambda_{\min}(Q_{0,L})
+ =\inf\Big\{\frac{2\pi\sum_\rho|\Phi(\gamma_\rho)|^2}{\norm\Phi^2}
+ \ :\ \Phi\in PW_{L/2},\ \Phi\neq0\Big\} :
+\end{equation}
+
+\emph{the margin is the constant in the lower sampling inequality for the Riemann
+zeros on $PW_{L/2}$.} Weil positivity says the zeros are a set of uniqueness for
+$PW_{L/2}$; a positive $m_L$ says they are a set of sampling, with a bound. The
+generating function of the sampling set is $\Xi(\tau)=\xi(\frac12+i\tau)$, a
+Hermite--Biehler function under the hypothesis, which is why de Branges theory
+keeps being named in this program \cite{SuzukiDeBranges}. Section~\ref{subsec:reach}
+says how much that buys.
+
+One half of the standard definition fails, and it is worth saying so before the
+language is used further.
+
+\begin{proposition}[No upper sampling constant]\label{prop:noupper}
+Unconditionally, $\sup\{Q_{0,L}[f]:\norm f=1\}=+\infty$. Equivalently the zeros
+are not relatively separated: $\#\{\rho:|\gamma_\rho-T|\leq\frac12\}\to\infty$.
+\end{proposition}
+
+\begin{proof}
+By \eqref{eq:target} and \eqref{eq:multiplier}, $Q_{0,L}$ differs from
+$\frac1{2\pi}\int|\widehat F|^2(b(\tau^2)+w_0)$ by the rank-two form $P_L$ and by
+the finite prime comb, both bounded; and $b(\tau^2)+w_0=\log\frac{|\tau|}{2\pi}+
+O(\tau^{-2})$ is unbounded. For the second statement, the number of zeros in a
+unit window at height $T$ is $\frac1{2\pi}\log\frac T{2\pi}+o(\log T)$ by
+Riemann--von Mangoldt.
+\end{proof}
+
+So $\{\gamma_\rho\}$ is \emph{not} a sampling set in the usual two-sided sense and
+$m_L$ is \emph{not} a frame bound; it is the lower constant alone. This is the
+same fact as the unboundedness of the group delay in
+Proposition~\ref{prop:groupdelay}, and the same fact as the channel-tower rule of
+\cite{Selection}. The lower inequality is the half that needs no separation, for
+the trivial reason that $\sum_{\lambda\in\Lambda}|\Phi(\lambda)|^2$ increases when
+$\Lambda$ does; that monotonicity is used again in \S\ref{subsec:density}.
+
+\subsection{The infimum is positive}
+
+\begin{proposition}[Strict positivity of the sampling constant]\label{prop:positive}
+Assume the Riemann hypothesis. Then $m_L>0$ for every $L>0$, and the infimum in
+\eqref{eq:sampling} is attained.
+\end{proposition}
+
+\begin{proof}
+Write $Q_{0,L}=\mathcal A_L+\mathcal B_L$, where
+$\mathcal A_L[f]=\frac1{2\pi}\int|\widehat F|^2(b(\tau^2)+w_0)$ and
+$\mathcal B_L=P_L-(\text{prime comb})$ is bounded, of norm at most
+$2\norm{\cosh(x/2)}^2_{L^2(I_L)}+2\sum_{n<e^L}\Lambda(n)n^{-1/2}$. Since
+$b\geq0$ and $w_0=-5.37218\ldots$, $\mathcal A_L$ is bounded below, with form
+domain $\mathcal D_{\log,L}$ of Definition~\ref{def:generator}.
+
+\emph{The embedding $\mathcal D_{\log,L}\hookrightarrow L^2(I_L)$ is compact.}
+Let $(f_k)$ be bounded in the form norm. Then $\widehat{F_k}$ is bounded in
+$L^2(\R)$; its tails are uniformly small, $\int_{|\tau|>T}|\widehat{F_k}|^2\leq
+C/\log T$; it is uniformly bounded, $|\widehat{F_k}|\leq\norm{f_k}_{L^1}\leq
+\sqrt L\norm{f_k}$; and it is equicontinuous, since
+$|\widehat{F_k}'|=|\widehat{xF_k}|\leq\frac{L^{3/2}}2\norm{f_k}$. Arzel\`a--Ascoli
+and a diagonal argument give a subsequence converging locally uniformly, and the
+uniform tail bound upgrades that to convergence in $L^2(\R)$.
+
+Hence $\mathcal A_L$ has compact resolvent; adding the bounded $\mathcal B_L$
+leaves the essential spectrum empty, so $Q_{0,L}$ has purely discrete spectrum
+accumulating only at $+\infty$ and its infimum is attained at some $e_L$ with
+$\norm{e_L}=1$. Under the hypothesis $Q_{0,L}\geq0$ on $C_c^\infty(I_L)$, hence on
+the form closure. Suppose $m_L=0$. Along an approximating sequence
+$\widehat{F_k}\to\widehat{E_L}$ locally uniformly, so for every $T$
+\[
+ \sum_{|\gamma_\rho|<T}|\widehat{E_L}(\gamma_\rho)|^2
+ =\lim_k\sum_{|\gamma_\rho|<T}|\widehat{F_k}(\gamma_\rho)|^2
+ \leq\liminf_kQ_{0,L}[f_k]=0 ,
+\]
+so $\widehat{E_L}$ vanishes at every zero. But $\widehat{E_L}\in PW_{L/2}$ is a
+nonzero function of Cartwright class and type $L/2$, so the number of its zeros in
+$[-T,T]$ is at most $\frac L\pi T(1+o(1))$, while the zeros of $\xi$ supply
+$2N(T)=\frac T\pi\log\frac T{2\pi e}+\frac74+2S(T)$. The two are incompatible for
+large $T$.
+\end{proof}
+
+Two remarks. The counting contradiction is the reason strict positivity holds and
+it is a statement about \emph{densities}, not an estimate; attainment of the
+minimum is Bombieri's \cite{BombieriWeil}, by a different argument, and the
+continuity of $m_L$ in $L$ is Suzuki's \cite{Suzuki}. What the proof above adds is
+the mechanism: the divergence of the group delay
+(Proposition~\ref{prop:groupdelay}) is exactly what makes the form domain embed
+compactly, so \textbf{the unboundedness of the Wigner--Smith delay and the
+positivity of the sampling constant are one fact}. An all-pass filter with bounded
+delay would have neither.
+
+\subsection{The sampling budget, and where it crosses}
+
+The local density of $\{\pm\gamma_\rho\}$ is $\frac1{2\pi}\log\frac\tau{2\pi}$ and
+the Nyquist density for $PW_{L/2}$ is $\frac L{2\pi}$. They meet at
+\begin{equation}\label{eq:crossover}
+ \tau_c=2\pi e^L ,
+\end{equation}
+below which the zeros undersample and above which they oversample; the cumulative
+counts cross at $T_*=e\,\tau_c=2\pi e^{L+1}$, which is where the proof of
+Proposition~\ref{prop:positive} bites. The maximal shortfall is exact:
+\begin{equation}\label{eq:deficit}
+ D(L)=\frac{L\tau_c}\pi-2N(\tau_c)
+ =\frac{\tau_c}\pi\Big(L-\log\frac{\tau_c}{2\pi e}\Big)-\frac74
+ =2e^L-\frac74 ,
+\end{equation}
+the $\frac74$ being twice the Riemann--von Mangoldt constant and $S$ dropped. Since
+$e^L=X$ is the prime cutoff in \eqref{eq:target}, \textbf{the sampling crossover is
+the explicit-formula balance}: primes up to $X$ against zeros up to height $2\pi X$,
+with a shortfall of $2X$ samples. This is the first place in the program where the
+$e^L$ scale appears for a structural reason rather than as the range of a sum.
+
+\subsection{What classical sampling theory reaches}\label{subsec:reach}
+
+Very little, and it is useful to say exactly how little, because the language of
+the subject is being used for an object outside its hypotheses.
+
+Landau's necessary density condition is satisfied with room to spare, the lower
+uniform density being infinite. Beurling's gap theorem is the only tool here that
+produces a \emph{constant}; in the explicit form of \cite{OlevskiiUlanovskii} it
+requires the maximal gap of the sampling set to be below $\pi/\sigma$ for type
+$\sigma$. The maximal gap of $\{\pm\gamma_\rho\}$ is the one straddling the origin,
+$2\gamma_1=28.2695$, and $\sigma=L/2$, so the hypothesis reads
+\begin{equation}\label{eq:beurling}
+ L<\pi/\gamma_1=0.2222606\ldots,
+\end{equation}
+with constant $(\cos(\gamma_1L/2))^{-1}$: $1.32$ at $L=0.1$ and $63$ at $L=0.22$.
+\textbf{Above $L\approx0.22$ the classical machinery does not degrade; it stops
+applying.} For comparison, Yoshida's positivity theorem reaches $L=\log2$ and
+\cite{ZhuCompact} certifies $L=1.6$.
+
+Ortega-Cerd\`a and Seip \cite{OrtegaCerdaSeip} characterize the sampling sequences
+for $PW$ through de Branges theory --- a separated $\Lambda$ is sampling if and
+only if it is the zero sequence of $EF+E^*F^*$ for suitable Hermite--Biehler
+$E,F$ with $H(E)=PW$ --- but this is a dichotomy and produces no constant, as the
+authors state. The one route in that literature which does carry constants, through
+the $A_2$ condition on $|G|^2$ for the generating function $G$, is stated for
+\emph{complete interpolating sequences}; the zeros are not one, since they
+overshoot the critical density rather than matching it.
+
+\begin{remark}[What Suzuki's de Branges space is, and is not]\label{rem:suzuki}
+\cite{SuzukiDeBranges} shows that under RH the Hilbert space of the Weil
+distribution is isomorphic to a de Branges space --- but with structure function
+$E_\xi(z)=\xi(\frac12-iz)+\xi'(\frac12-iz)$, whose zero set is not the zeta zeros,
+and the isomorphism is with the whole Weil space rather than with $PW_{L/2}$. Its
+chain of subspaces is indexed by the support cut-off, which is structurally our
+$L$, and its content is the conversion of Weil's inequality into an identity. It
+contains no smallest eigenvalue, no gap and no rate. The two questions are
+adjacent, not the same, and the de Branges side currently supplies nothing
+quantitative. Earlier drafts of this program said otherwise.
+\end{remark}
+
+\subsection{Where the obstruction lives, and a construction that fails}
+\label{subsec:profile}
+
+Let $\lambda^{(W)}_L$ be the minimum of the Rayleigh quotient over trial functions
+whose spectral content is confined below $W$. The fraction of the exponent it
+recovers is, measured at six lengths:
+
+\begin{center}
+\begin{tabular}{@{}lcccccc@{}}
+\toprule
+$W/\tau_c$ & $0.50$ & $0.75$ & $1.00$ & $1.25$ & $1.50$ & $2.00$\\
+\midrule
+$L=1.6$ & $0.585$ & $0.733$ & $0.858$ & $0.933$ & $0.982$ & $0.995$\\
+$L=2.0$ & $0.561$ & $0.725$ & $0.840$ & $0.910$ & $0.957$ & $0.995$\\
+$L=2.2$ & $0.586$ & $0.744$ & $0.842$ & $0.921$ & $0.969$ & $0.997$\\
+$L=2.5$ & $0.584$ & $0.739$ & $0.835$ & $0.915$ & $0.965$ & $0.996$\\
+$L=2.8$ & $0.590$ & $0.744$ & $0.844$ & $0.924$ & $0.966$ & $0.997$\\
+$L=3.0$ & $0.592$ & $0.741$ & $0.843$ & $0.915$ & $0.964$ & $0.997$\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\noindent
+(entries $\log\lambda^{(W)}_L/\log m_L$). The columns are constant to about one
+percent while $m_L$ moves through $10^{80}$: \textbf{the frequency profile of the
+obstruction is universal in $W/\tau_c$}, so \eqref{eq:crossover} is the right
+scale, and the obstruction is essentially complete at $2\tau_c$, between $\tau_c$
+and $T_*$. There is a practical corollary, and it is the reason the numbers below
+are reported with a basis-convergence rule rather than as single values: a trial
+space must reach about $2.5\,\tau_c$, that is a dimension of about $5Le^L$, or the
+computed value saturates and looks converged when it is not.
+
+The construction the deficit \eqref{eq:deficit} suggests --- stay below $\tau_c$
+and \emph{vanish} at the $2N(\tau_c)$ sub-critical zeros, leaving $D(L)$ free
+dimensions --- does not work, and fails worse as $L$ grows:
+
+\begin{center}
+\begin{tabular}{@{}lrrrrr@{}}
+\toprule
+$L$ & $1.6$ & $2.0$ & $2.4$ & $2.8$ & $3.0$\\
+\midrule
+$\log_{10}m_L$ & $-16.75$ & $-29.17$ & $-48.04$ & $-76.75$ & $-96.25$\\
+band $|\tau|<\tau_c$ only & $-14.30$ & $-24.46$ & $-40.41$ & $-64.84$ & $-81.19$\\
+band and vanishing & $-14.30$ & $-24.46$ & $-36.49$ & $-45.62$ & $-50.64$\\
+\midrule
+fraction recovered & $0.85$ & $0.84$ & $0.76$ & $0.59$ & $0.53$\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+The minimizer does not interpolate the undersampled zeros; it makes $\widehat F$
+\emph{small at every zero}, including the oversampled ones above $\tau_c$, and
+imposing exact vanishing is an expensive constraint. In the language of
+time--frequency localization this construction is $1-\lambda_n$ for the prolate
+operator at Shannon number $\mathcal N_L=2Le^L$ and index $\mathcal N_L-D(L)$,
+hence at occupancy fraction $u_L=1-D(L)/\mathcal N_L$ bounded away from both
+endpoints. That regime is neither the classical fixed-index one nor the
+Landau--Widom plunge. \cite{ConnesConsaniProlate} already identifies prolate
+eigenfunctions as the source of very small eigenvalues of the Weil form, without
+a rate; the sharpest available statement about the rate is
+$-\log(1-\lambda_n)\asymp(c-n)/\log\frac{2c}{c-n}$ with unequated constants, and
+the corresponding limit at fixed occupancy is an open problem
+\cite{Kulikov}.
+
+\subsection{The collapse is set by the density, not by the arithmetic}
+\label{subsec:density}
+
+The natural control is a point set with the \emph{same counting function} and no
+arithmetic. (Deleting the prime comb is not such a control: archimedean plus pole
+is not a sum of squares over a point set, and is in fact indefinite for
+$L\gtrsim0.85$.) We use the Gram points $g_n$, defined by $\theta(g_n)=n\pi$,
+whose counting function is exactly the smooth part $\theta(T)/\pi+1$ with
+$S\equiv0$; and jittered Gram points, the jitter applied in the unfolded variable
+$\theta/\pi$ so that the counting function is preserved. Everything is computed in
+the same basis, at the same truncation, and at the same precision.
+
+\begin{center}
+\begin{tabular}{@{}lrrr@{}}
+\toprule
+$L$ & $\log_{10}m_L$ (the zeros) & $\log_{10}$, Gram points & ratio of logarithms\\
+\midrule
+$0.6$ & $-2.11$ & $-1.00$ & $2.100$\\
+$0.8$ & $-3.73$ & $-2.17$ & $1.715$\\
+$1.0$ & $-6.01$ & $-4.06$ & $1.480$\\
+$1.2$ & $-8.76$ & $-6.62$ & $1.323$\\
+$1.4$ & $-12.35$ & $-9.97$ & $1.239$\\
+$1.6$ & $-16.75$ & $-14.18$ & $1.181$\\
+$1.8$ & $-22.35$ & $-19.49$ & $1.147$\\
+$2.0$ & $-29.17$ & $-26.15$ & $1.116$\\
+$2.2$ & $-37.62$ & $-34.48$ & $1.091$\\
+$2.4$ & $-48.04$ & $-44.77$ & $1.073$\\
+$2.6$ & $-60.97$ & $-57.48$ & $1.061$\\
+$2.8$ & $-76.75$ & $-73.17$ & $1.049$\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+At $L=2$ the four arithmetic-free sets --- Gram, and jitter of $0.15$, $0.40$ and
+$1.00$ of a mean spacing --- give $\log_{10}$ of $-26.15$, $-25.99$, $-26.53$ and
+$-25.44$ against $-29.17$ for the zeros; at $L=1.6$, $-14.18$, $-14.02$, $-14.59$
+and $-13.50$ against $-16.75$. Three readings.
+
+\begin{enumerate}
+\item \textbf{Every arithmetic-free set of the same density collapses
+superexponentially, at essentially the same rate.} The ratio of logarithms falls
+monotonically from $2.100$ at $L=0.6$ to $1.049$ at $L=2.8$.
+\item \textbf{The arithmetic is worth about three orders of magnitude and grows
+like $\log L$}, against a total growing like $e^L$. It is a systematic bias and not
+noise: jitter of up to a full mean spacing moves $\log_{10}m_L$ by about one in
+either direction, and the zeros sit below the whole arithmetic-free family.
+\item \textbf{So the margin carries almost no arithmetic information.} Its collapse
+is what the density $\frac1{2\pi}\log\frac\tau{2\pi}$ does to the lower sampling
+constant of a Paley--Wiener space whose type is far below it.
+\end{enumerate}
+
+\begin{remark}[Scope of the measurement]\label{rem:densityscope}
+The values for the control sets are trial-space Rayleigh quotients with the sum
+truncated, hence upper bounds on their own infima and slightly depressed by
+truncation, so the comparison is conservative in the direction that matters: the
+control values could only be higher, which would widen the gap without changing
+its relative decline. The zeros row is computed from the explicit formula without
+truncation. One jitter draw per strength; the spread across strengths is the error
+bar quoted, not a statistical estimate. The range is $L\in[0.6,3.0]$, which is
+$96$ orders of magnitude in $m_L$ but only a factor of five in $L$, and the ratio
+of logarithms has not been shown to converge.
+\end{remark}
+
+\subsection{What this changes}
+
+Section~\ref{sec:region} ended by naming the collapse of the zero-placement
+precision as the mechanism question. Proposition~\ref{prop:kappa} stands and
+\S\ref{subsec:density} does not contradict it; what it does is remove the reason to
+ask. A Gram-point analogue of $\xi$, with no primes anywhere in it, has a margin
+that collapses at the same rate to within a ratio of logarithms tending to one.
+
+\begin{remark}[Consequence for the program]\label{rem:mechanism}
+Two things follow, and they point in opposite directions.
+Reproducing the superexponential collapse is \emph{weak evidence} for a candidate
+source, because the density alone produces it; and failing to reproduce it is weak
+evidence against one. But a candidate is correspondingly \emph{not} required to
+produce an arithmetic rate. It has to produce a density --- a group delay growing
+like $\log\tau$, which is part of Condition~\ref{cond:bilinear} --- and that is a far cheaper
+demand than a superexponential margin law. The quantity that does carry arithmetic
+is the \emph{gap} between the zeros and matched-density sets, about $10^3$ at
+$L=2$; nothing in this program or in the literature has studied it.
+\end{remark}
+
+\begin{remark}[On decay laws, and a convention]\label{rem:laws}
+No one-parameter law in $D(L)$, in $\mathcal N_L$, in $\mathcal N_L/\log\mathcal N_L$,
+in $N(\tau_c)/\log N(\tau_c)$ or in $D/\log(2\mathcal N_L/D)$ fits
+$L\in[1.4,3.0]$ better than $22\%$ in the exponent. Over any factor-$1.25$ window
+in $L$ all of them fit to a few percent, which is why fitting on three or four
+points determines nothing. Two published fits illustrate this: the relation
+recorded in \cite{CriticalPath}, refitted on its own three horizons, predicts
+$L=3.0$ to within $4.1\%$ and $L=4.0$ to within $6.5\%$; the Landau--Widom form of
+\cite{ZhuCompact}, fitted on $L\in[2.8,4.0]$, is $46\%$ high at $L=1.6$.
+
+A convention warning, because it has already cost this program one wrong
+conclusion. \cite{ZhuCompact} supports $f$ in $[-L,L]$ and sums primes over
+$\log n<2L$; this manuscript supports $f$ in $(-L/2,L/2)$ and sums over $n<e^L$.
+\textbf{The $L$ of \cite{ZhuCompact} is half the $L$ used here.} With the
+conversion applied, its certified enclosure $8.9\times10^{-18}\leq m\leq
+2.27\times10^{-17}$ belongs at our $L=1.6$, where the value computed here is
+$1.73\times10^{-17}$, and its $3.19\times10^{-283}$ at our $L=4$.
+\end{remark}
+
+\begin{remark}[Status of the numbers in this section]\label{rem:samplingstatus}
+Propositions~\ref{prop:noupper} and \ref{prop:positive} are written proofs, the
+second conditional on RH and quoting the Cartwright density theorem.
+Equations~\eqref{eq:crossover}--\eqref{eq:beurling} are written computations,
+verified in Appendix~\ref{app:checks}. Every table is a labelled numerical
+computation, produced by unregistered \texttt{mpmath} programmes recorded in
+\cite{FrameBoundNote}; each entry is a trial-space Rayleigh quotient and hence a
+one-sided bound, and the direction is stated where a comparison is made. The
+assembly those programmes use agrees with an independent quadrature assembler of
+this program to a relative $6\times10^{-25}$, and reproduces the three margins of
+\cite{CriticalPath} to $2.2\%$, $3.2\%$ and $0.2\%$ --- which, incidentally, puts
+Proposition~\ref{prop:kappa} on firmer ground than the three data points it was
+stated with. Section~\ref{subsec:reach} is a reading of the cited literature.
+\end{remark}

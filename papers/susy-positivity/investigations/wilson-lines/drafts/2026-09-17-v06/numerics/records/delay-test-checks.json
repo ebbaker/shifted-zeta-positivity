@@ -1,0 +1,564 @@
+{
+  "groups": [
+    {
+      "name": "A. causal symbol: closed form vs quadrature",
+      "cases": 25,
+      "worst_error": 1.4109429026110507e-14,
+      "tolerance": 1e-09,
+      "pass": true
+    },
+    {
+      "name": "B. boundary-channel sum (primary + descendants, positive coefficients)",
+      "cases": 25,
+      "worst_error": 1.1902335301729838,
+      "tolerance": 60.0,
+      "pass": true,
+      "scope": "error normalised by the K^{2D-1} truncation tail of the channel sum"
+    },
+    {
+      "name": "C. delay in closed form; total pi(1/2-Delta); zero at half-integer Delta",
+      "cases": 81,
+      "worst_error": 1.9837909093212147e-11,
+      "tolerance": 1e-07,
+      "pass": true,
+      "totals": [
+        {
+          "Delta": 0.05,
+          "total_delay": 1.413716694095569,
+          "pi(1/2-Delta)": 1.413716694115407
+        },
+        {
+          "Delta": 0.12,
+          "total_delay": 1.193805208356185,
+          "pi(1/2-Delta)": 1.1938052083641213
+        },
+        {
+          "Delta": 0.25,
+          "total_delay": 0.7853981633943061,
+          "pi(1/2-Delta)": 0.7853981633974483
+        },
+        {
+          "Delta": 0.33,
+          "total_delay": 0.5340707511084062,
+          "pi(1/2-Delta)": 0.5340707511102648
+        },
+        {
+          "Delta": 0.45,
+          "total_delay": 0.157079632678992,
+          "pi(1/2-Delta)": 0.15707963267948963
+        }
+      ],
+      "worst_error_finite_difference": 6.951625275419815e-09,
+      "tolerance_finite_difference": 1e-06,
+      "protected_operators": [
+        {
+          "Delta": 0.5,
+          "max_|delay|": 1.5526014560547742e-16
+        },
+        {
+          "Delta": 1.0,
+          "max_|delay|": 1.6097771611682366e-15
+        },
+        {
+          "Delta": 1.5,
+          "max_|delay|": 4.657804368164323e-16
+        },
+        {
+          "Delta": 2.0,
+          "max_|delay|": 3.219554322336473e-15
+        },
+        {
+          "Delta": 3.0,
+          "max_|delay|": 4.82933148350471e-15
+        },
+        {
+          "Delta": 5.0,
+          "max_|delay|": 8.048885805841183e-15
+        }
+      ]
+    },
+    {
+      "name": "D. Stieltjes bound: arg in (-pi/2, 0), accumulated delay < pi/2",
+      "cases": 8,
+      "worst_error": 0.0,
+      "tolerance": 1e-12,
+      "pass": true,
+      "rows": [
+        {
+          "measure": [
+            [
+              1.0,
+              1.0
+            ]
+          ],
+          "arg_range": [
+            -1.5707963257948967,
+            -9.999999999996666e-07
+          ],
+          "accumulated_delay_at_T=1e6": 1.5707953267938966
+        },
+        {
+          "measure": [
+            [
+              0.3,
+              2.0
+            ],
+            [
+              1.0,
+              5.5
+            ],
+            [
+              4.0,
+              0.25
+            ]
+          ],
+          "arg_range": [
+            -1.5707963258787676,
+            -2.268171493459849e-06
+          ],
+          "accumulated_delay_at_T=1e6": 1.5707954106635962
+        },
+        {
+          "measure": [
+            [
+              0.01,
+              1.0
+            ],
+            [
+              7.0,
+              1.0
+            ],
+            [
+              7.01,
+              3.0
+            ],
+            [
+              60.0,
+              9.0
+            ]
+          ],
+          "arg_range": [
+            -1.5707962862206108,
+            -9.92851746295659e-05
+          ],
+          "accumulated_delay_at_T=1e6": 1.5707557524099638
+        },
+        {
+          "measure": [
+            [
+              0.001,
+              0.001
+            ],
+            [
+              0.5,
+              1.0
+            ],
+            [
+              2.0,
+              1.0
+            ],
+            [
+              13.0,
+              1.0
+            ],
+            [
+              100.0,
+              40.0
+            ]
+          ],
+          "arg_range": [
+            -1.5707962334133474,
+            -0.0002525216427155352
+          ],
+          "accumulated_delay_at_T=1e6": 1.570702944993418
+        }
+      ]
+    },
+    {
+      "name": "E. the target is inner and its accumulated delay is unbounded",
+      "cases": 11,
+      "worst_error": 8.757839273715223e-10,
+      "tolerance": 1e-07,
+      "pass": true,
+      "rows": [
+        {
+          "T": 10.0,
+          "int_0^T 2 theta'": -6.134148787207601,
+          "2 theta(T)": -6.13414879257979,
+          "pi/2 bound for any correlator": 1.5707963267948966
+        },
+        {
+          "T": 100.0,
+          "int_0^T 2 theta'": 175.9443304689465,
+          "2 theta(T)": 175.94433046357426,
+          "pi/2 bound for any correlator": 1.5707963267948966
+        },
+        {
+          "T": 1000.0,
+          "int_0^T 2 theta'": 4069.0928560814327,
+          "2 theta(T)": 4069.0928560760585,
+          "pi/2 bound for any correlator": 1.5707963267948966
+        }
+      ]
+    },
+    {
+      "name": "F. two objects that do wind: inverted oscillator (exactly log pi off) and Liouville (4 Q log P)",
+      "cases": 7,
+      "worst_error": 9.237055564881302e-14,
+      "tolerance": 1e-05,
+      "pass": true,
+      "liouville": [
+        {
+          "b": 0.5,
+          "Q": 2.5,
+          "measured d/dlogP of the Liouville delay": 9.999999999999908,
+          "4Q": 10.0
+        },
+        {
+          "b": 1.0,
+          "Q": 2.0,
+          "measured d/dlogP of the Liouville delay": 7.999999999999929,
+          "4Q": 8.0
+        },
+        {
+          "b": 1.7,
+          "Q": 2.288235294117647,
+          "measured d/dlogP of the Liouville delay": 9.1529411764705,
+          "4Q": 9.152941176470588
+        }
+      ],
+      "scope": "the inverted-oscillator identity is exact; the Liouville slope is asymptotic"
+    },
+    {
+      "name": "G. the expansion: Lambda is the degree, the tau^-2 sign is a selection rule",
+      "cases": 43,
+      "worst_error": 1.7284321967458993e-05,
+      "tolerance": 0.0002,
+      "pass": true,
+      "rows": [
+        {
+          "b": 0.3,
+          "Q": 3.6333333333333333,
+          "Lambda": 1.0000000000000002,
+          "tau^-2 coefficient": 4.4003703703703705,
+          "target": -0.041666666666666664,
+          "sign": "opposite"
+        },
+        {
+          "b": 0.5,
+          "Q": 2.5,
+          "Lambda": 1.0,
+          "tau^-2 coefficient": 2.083333333333333,
+          "target": -0.041666666666666664,
+          "sign": "opposite"
+        },
+        {
+          "b": 0.8,
+          "Q": 2.05,
+          "Lambda": 1.0,
+          "tau^-2 coefficient": 1.4008333333333332,
+          "target": -0.041666666666666664,
+          "sign": "opposite"
+        },
+        {
+          "b": 1.7,
+          "Q": 2.288235294117647,
+          "Lambda": 1.0,
+          "tau^-2 coefficient": 1.7453402537485578,
+          "target": -0.041666666666666664,
+          "sign": "opposite"
+        },
+        {
+          "b": 3.0,
+          "Q": 3.3333333333333335,
+          "Lambda": 0.9999999999999999,
+          "tau^-2 coefficient": 3.7037037037037033,
+          "target": -0.041666666666666664,
+          "sign": "opposite"
+        },
+        {
+          "common shift a": 0.25,
+          "max sum(n) over exact solutions": 1.0,
+          "bound 1/sqrt(48|B_2|)": 0.9999999999999998
+        },
+        {
+          "common shift a": 0.75,
+          "max sum(n) over exact solutions": 1.0,
+          "bound 1/sqrt(48|B_2|)": 0.9999999999999998
+        },
+        {
+          "common shift a": 0.5,
+          "max sum(n) over exact solutions": 0.5000000000000001,
+          "bound 1/sqrt(48|B_2|)": 0.5
+        },
+        {
+          "common shift a": 0.3,
+          "max sum(n) over exact solutions": 0.6933752452815366,
+          "bound 1/sqrt(48|B_2|)": 0.6933752452815364
+        }
+      ],
+      "sign_window": {
+        "lo": 0.21132486540518708,
+        "hi": 0.7886751345948129,
+        "factors": [
+          {
+            "factor": "Gamma_R(s), zeta / even chi",
+            "a": 0.25,
+            "B_2(a)": -0.020833333333333343,
+            "inside": true
+          },
+          {
+            "factor": "Gamma_R(s+1), odd chi",
+            "a": 0.75,
+            "B_2(a)": -0.020833333333333343,
+            "inside": true
+          },
+          {
+            "factor": "Gamma_C(s), complex place",
+            "a": 0.5,
+            "B_2(a)": -0.08333333333333334,
+            "inside": true
+          },
+          {
+            "factor": "Gamma(1 + i.), Liouville",
+            "a": 1.0,
+            "B_2(a)": 0.16666666666666666,
+            "inside": false
+          },
+          {
+            "factor": "Gamma(3/2 + i.)",
+            "a": 1.5,
+            "B_2(a)": 0.9166666666666666,
+            "inside": false
+          }
+        ]
+      },
+      "two_shift_solution": {
+        "a_1": 0.5,
+        "a_2": 1.0,
+        "beta_1": 0.15767078084837,
+        "beta_2": 0.34232921915163,
+        "Lambda": 1.0,
+        "coefficient": -0.04166666637249655,
+        "target": -0.041666666666666664,
+        "note": "so the two conditions alone are not rigid; the sign rule is what is unconditional"
+      }
+    },
+    {
+      "name": "H. the graded invariants: dictionary-free, the single-factor classification, the survey, and a retraction",
+      "cases": 240,
+      "worst_error": 3.2274843908552953e-10,
+      "tolerance": 1e-09,
+      "pass": true,
+      "targets I_2m = 2^(2m-1) B_2m(1/4)": [
+        -0.041666666666666664,
+        0.014583333333333334,
+        -0.011532738095238096,
+        0.016536458333333334
+      ],
+      "single factor solutions (a, n)": [
+        [
+          0.25,
+          1.0
+        ],
+        [
+          0.25,
+          -1.0
+        ],
+        [
+          0.75,
+          1.0
+        ],
+        [
+          0.75,
+          -1.0
+        ],
+        [
+          0.5,
+          0.5
+        ],
+        [
+          0.5,
+          -0.5
+        ]
+      ],
+      "spurious grid solutions beyond those": [
+        0.25,
+        0.5,
+        0.75
+      ],
+      "survey": [
+        {
+          "amplitude": "target Gamma_R(s), zeta / even chi",
+          "Lambda": 1.0,
+          "I_2": -0.041666666666666685,
+          "I_4": 0.014583333333333337,
+          "I_6": -0.011532738095238138,
+          "matches all three": true,
+          "first failure": null
+        },
+        {
+          "amplitude": "Gamma_R(s+1), odd chi",
+          "Lambda": 1.0,
+          "I_2": -0.04166666666666674,
+          "I_4": 0.014583333333333393,
+          "I_6": -0.01153273809523725,
+          "matches all three": true,
+          "first failure": null
+        },
+        {
+          "amplitude": "inverted oscillator, half line, even",
+          "Lambda": -1.0,
+          "I_2": -0.041666666666666685,
+          "I_4": 0.014583333333333337,
+          "I_6": -0.011532738095238138,
+          "matches all three": true,
+          "first failure": null
+        },
+        {
+          "amplitude": "inverted oscillator, half line, odd",
+          "Lambda": -1.0,
+          "I_2": -0.04166666666666674,
+          "I_4": 0.014583333333333393,
+          "I_6": -0.01153273809523725,
+          "matches all three": true,
+          "first failure": null
+        },
+        {
+          "amplitude": "c=1 matrix model / 2d string, sqrt",
+          "Lambda": -1.0,
+          "I_2": -0.041666666666666685,
+          "I_4": 0.014583333333333337,
+          "I_6": -0.011532738095238096,
+          "matches all three": true,
+          "first failure": null
+        },
+        {
+          "amplitude": "Gauss duplication of the target",
+          "Lambda": 1.0,
+          "I_2": -0.04166666666666685,
+          "I_4": 0.014583333333333837,
+          "I_6": -0.011532738095240802,
+          "matches all three": true,
+          "first failure": null
+        },
+        {
+          "amplitude": "inverted oscillator, FULL line",
+          "Lambda": -2.0,
+          "I_2": -0.16666666666666674,
+          "I_4": 0.2333333333333334,
+          "I_6": -0.7380952380952381,
+          "matches all three": false,
+          "first failure": "I_2"
+        },
+        {
+          "amplitude": "modular surface, Gamma part",
+          "Lambda": 1.0,
+          "I_2": -0.16666666666666674,
+          "I_4": 0.2333333333333334,
+          "I_6": -0.7380952380952381,
+          "matches all three": false,
+          "first failure": "I_2"
+        },
+        {
+          "amplitude": "JT / Liouville-QM wall",
+          "Lambda": 4.0,
+          "I_2": 0.33333333333333326,
+          "I_4": -0.2666666666666657,
+          "I_6": 0.7619047619047592,
+          "matches all three": false,
+          "first failure": "I_2"
+        },
+        {
+          "amplitude": "H_3^+ (m-basis), t = 3",
+          "Lambda": -1.3333333333333333,
+          "I_2": 0.33333333333333326,
+          "I_4": -0.2666666666666657,
+          "I_6": 0.7619047619047592,
+          "matches all three": false,
+          "first failure": "I_2"
+        },
+        {
+          "amplitude": "bulk Liouville, b = 1",
+          "Lambda": 8.0,
+          "I_2": 1.333333333333333,
+          "I_4": -4.2666666666666515,
+          "I_6": 48.76190476190459,
+          "matches all three": false,
+          "first failure": "I_2"
+        },
+        {
+          "amplitude": "bulk Liouville, b = 0.7",
+          "Lambda": 8.514285714285714,
+          "I_2": 1.5102721088435371,
+          "I_4": -8.380013751415339,
+          "I_6": 203.68042974640886,
+          "matches all three": false,
+          "first failure": "I_2"
+        },
+        {
+          "amplitude": "FZZT boundary, b = 1",
+          "Lambda": 4.0,
+          "I_2": 0.33333333333333326,
+          "I_4": -0.2666666666666657,
+          "I_6": 0.7619047619047592,
+          "matches all three": false,
+          "first failure": "I_2"
+        },
+        {
+          "amplitude": "FZZT boundary, b = 0.7",
+          "Lambda": 4.257142857142857,
+          "I_2": 0.3775680272108843,
+          "I_4": -0.5237508594634587,
+          "I_6": 3.1825067147876385,
+          "matches all three": false,
+          "first failure": "I_2"
+        },
+        {
+          "amplitude": "cigar SL(2,R)/U(1), k = 14/3, n = 1, w = 0",
+          "Lambda": -1.5,
+          "I_2": -0.0416666666666666,
+          "I_4": -0.055729166666666566,
+          "I_6": 0.405947730654761,
+          "matches all three": false,
+          "first failure": "I_4"
+        },
+        {
+          "amplitude": "cigar, k = 782/3, n = 7, w = 0",
+          "Lambda": -0.015463917525773141,
+          "I_2": -0.041666666666666546,
+          "I_4": -0.2677314391125443,
+          "I_6": 0.7619018330751893,
+          "matches all three": false,
+          "first failure": "I_4"
+        },
+        {
+          "amplitude": "cigar, k = 5, n = w = 0",
+          "Lambda": -1.333333333333333,
+          "I_2": 0.6666666666666665,
+          "I_4": -0.4148148148148137,
+          "I_6": 0.9594356261022892,
+          "matches all three": false,
+          "first failure": "I_2"
+        }
+      ],
+      "retraction of manuscript 11.6": {
+        "r": 1.4215351654086268,
+        "I_2": -0.041666666666666664,
+        "I_4": 0.013020833333333285,
+        "I_4 closed form 5/384": 0.013020833333333334,
+        "I_4 / target": 0.8928571428571396,
+        "25/28": 0.8928571428571429,
+        "note": "both shifts at a = 1, so the last clause of manuscript 11.6 is false"
+      },
+      "I_6 roots on the two-factor family": [
+        0.24999999999999833,
+        0.5000000000000016
+      ],
+      "modular surface I_2": -0.16666666666666674
+    }
+  ],
+  "note": "counts are finite test cases, not theorems",
+  "all_pass": true,
+  "total_checks": 440
+}

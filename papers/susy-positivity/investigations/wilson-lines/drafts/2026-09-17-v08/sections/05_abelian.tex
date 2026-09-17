@@ -1,0 +1,123 @@
+\section{The shift direction is abelian}\label{sec:abelian}
+
+The proposal's mechanism is the non-Abelian Stokes theorem: path ordering along a
+deformed line may be traded for surface ordering of the parallel-transported
+curvature, which is what converts a deformation into a differential equation with
+a local, gauge-invariant right-hand side. This section shows that the mechanism
+has nothing to act on along $\omega$.
+
+Proposition~\ref{prop:unimodular} says why in one word. An all-pass filter
+changes only phase, and a phase is a scalar; a one-parameter family of them can
+carry no ordering. The proof below is independent of that section and uses only
+causality, which is worth having because it locates the property in the
+truncation rather than in the arithmetic --- but the reader who wants the reason
+rather than the proof should take it from Section~\ref{sec:allpass}.
+
+\begin{lemma}[Truncation is multiplicative on causal kernels]\label{lem:multiplicative}
+Let $A,B$ be convolution operators whose kernels are supported in $[0,\infty)$,
+and let $P_L$ be multiplication by $\mathbf1_{I_L}$. Then
+\[
+ P_LAP_LBP_L=P_LABP_L .
+\]
+\end{lemma}
+
+\begin{proof}
+Let $f$ be supported in $I_L$ and put $g=Bf$. Causality of $B$ gives
+$\supp g\subseteq[-L/2,\infty)$. For $x\in I_L$, causality of $A$ gives
+$(Ag)(x)=\int_0^\infty a(t)g(x-t)\dd t$, which involves $g$ only on
+$(-\infty,x]$, hence only on $[-L/2,x]\subseteq I_L$. Replacing $g$ by
+$P_Lg$ therefore does not change $(Ag)(x)$ for $x\in I_L$, which is the claim.
+\end{proof}
+
+\begin{theorem}[The flow is abelian]\label{thm:abelian}
+Fix $L>0$. The operators $\{V_{\omega,L}\}_{0\leq\omega\leq1/2}$ and
+$\{G_{\omega,L}\}_{0\leq\omega\leq1/2}$ all lie in one commutative algebra. In
+particular
+\[
+ [V_{\omega,L},V_{\omega',L}]=[G_{\omega,L},G_{\omega',L}]
+ =[G_{\omega,L},V_{\omega',L}]=0
+ \qquad\text{for all }\omega,\omega' ,
+\]
+and the solution of the flow equation \eqref{eq:flow} carries no path ordering:
+\begin{equation}\label{eq:exp}
+ V_{\omega,L}=\exp\Big(-\int_0^\omega G_{s,L}\dd s\Big),
+ \qquad\text{equivalently}\qquad
+ \log K_\omega=-\int_0^\omega a_s\dd s .
+\end{equation}
+\end{theorem}
+
+\begin{proof}
+By \eqref{eq:transfer} and \eqref{eq:generator} every one of these operators has
+the form $M_\eta^{-1}P_L\,\Mult[b(\eta+i\,\cdot)]\,P_LM_\eta$ for a symbol $b$
+analytic and bounded on $\re p=\eta$, and the conjugation by $M_\eta$ replaces a
+kernel $k(x-y)$ by $k(x-y)e^{\eta(x-y)}$, again a causal function of $x-y$. So
+each is the truncation to $I_L$ of a convolution with kernel supported in
+$[0,\infty)$. By Lemma~\ref{lem:multiplicative} the truncation map is
+multiplicative on this class, hence an algebra homomorphism onto its image, and
+convolution is commutative. This gives the three vanishing commutators.
+
+A commuting family of generators makes the path-ordered solution of
+$\partial_\omega V=-GV$, $V_0=I$, the ordinary exponential of
+$-\int_0^\omega G_{s,L}\dd s$; equivalently, applying the homomorphism to the
+whole-line identity $\partial_\omega K_\omega=-a_\omega K_\omega$, $K_0=1$, which
+integrates to the scalar statement on the right of \eqref{eq:exp}.
+\end{proof}
+
+\begin{remark}[Discrete form]\label{rem:toeplitz}
+In a discretization ordered by $x$, Lemma~\ref{lem:multiplicative} is the remark
+that a truncated causal convolution is a lower-triangular Toeplitz matrix, hence
+a power series in one nilpotent shift, and that any two such commute.
+Appendix~\ref{app:checks} records this as an exact rational computation, together
+with the control showing that causality is what does the work: truncated
+\emph{non}-causal convolutions do not commute.
+\end{remark}
+
+\begin{corollary}[No non-Abelian Stokes content along the shift]\label{cor:stokes}
+The shift flow is the holonomy of an abelian connection on a one-dimensional
+parameter interval. Its holonomy depends on the endpoints of that interval and on
+nothing else; there is no surface for a curvature to be integrated over, and the
+non-Abelian Stokes theorem degenerates to the fundamental theorem of calculus,
+which is the right-hand identity in \eqref{eq:exp}.
+\end{corollary}
+
+\begin{remark}[What this costs the proposal, and what it asks for]
+\label{rem:cost}
+Corollary~\ref{cor:stokes} is not a refutation. It is a statement of what is
+missing, and it is precise: \emph{any non-commutativity must be supplied
+transverse to $\omega$.} There are exactly three places it could come from within
+the objects this program already has.
+
+\begin{enumerate}
+\item \textbf{The endpoint direction.} $P_L$ itself is not in the algebra of
+Theorem~\ref{thm:abelian}; the nested projections commute with one another but
+not with the transfers. This is Section~\ref{sec:endpoint}, and it is the
+direction the proposal itself names.
+\item \textbf{The bilinear energy balance.} The second identity of
+\eqref{eq:flow} is quadratic in $V_{\omega,L}$ where the first is linear:
+$\partial_\omega\norm{V f}^2=-\ip{Vf}{(G^*+G)Vf}$ cuts the line at the
+deformation point, inserts an object and pairs the two halves. That is the shape
+of the loop equation \cite{MM}, whose right-hand side is likewise bilinear in the
+two segments meeting at the deformation point, and in that correspondence the
+Weil form occupies the slot the parallel-transported curvature occupies. The
+caution is that the loop equation is an equation for an expectation and is
+nonlinear in the loop functional, whereas \eqref{eq:flow} is linear at the
+operator level; a matching attempt must say which of the two it claims.
+\item \textbf{An internal index.} The prime coefficients of
+\eqref{eq:shifted-target} are scalars. The corresponding sum for an Artin or
+automorphic $L$-function carries $\operatorname{tr}\rho(\mathrm{Frob}_p)$, a
+trace of a holonomy in a representation, which is the one place in this subject
+where a non-abelian holonomy is not an analogy. We record this and do not pursue
+it: it changes the target from $\zeta$ to a family and nothing in the
+investigation so far requires it.
+\end{enumerate}
+\end{remark}
+
+\begin{remark}[Relation to the two-dimensional control]
+An earlier calculation in this program used rigorously constructed
+two-dimensional Yang--Mills \cite{YM2} to reject literal Wilson-loop winding as
+the prime repetition law, on the ground that winding is not transfer evolution
+\cite{GaugeTransfer}. Theorem~\ref{thm:abelian} is a statement about the
+transfer evolution itself and is independent of that calculation; the two are
+complementary, the first saying what the evolution is not and the second saying
+what structure the evolution does not have.
+\end{remark}

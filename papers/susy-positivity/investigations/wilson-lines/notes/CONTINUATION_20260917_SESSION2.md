@@ -61,7 +61,7 @@ open.
 Along the way: **a units error was found and corrected**, and the infimum was
 shown to be **positive** rather than merely the form definite.
 
-**Then item 1 of the revised pathway was run as well**, and it also returns a
+**Then items 1 and 2 of the revised pathway were run as well.** Item 1 returns a
 negative: see [the delay-test note](THE_DELAY_TEST_20260917.md). In closed form
 the group delay of a ray-frame defect two-point function of dimension $\Delta$ is
 $\pi\operatorname{Re}\cot(\pi(\Delta+i\tau))$, exponentially small and
@@ -70,8 +70,23 @@ Wilson-line defect CFT. The failure is structural --- a positive spectral measur
 makes the causal symbol a Stieltjes transform, which has no zeros on the axis and
 so cannot wind --- and the clause is satisfied by a *free* Hamiltonian, the
 half-line inverted oscillator, whose phase shift misses $2\theta'$ by exactly
-$\log\pi$. The note recommends replacing Condition 10.1; that recommendation is
-**not** in manuscript 0.4 and is the next manuscript action.
+$\log\pi$. **And then the Liouville dictionary was fixed** --- item 1 of the pathway as the
+delay-test note left it --- which turns the negative into a selection rule: see
+[the expansion note](THE_ARCHIMEDEAN_EXPANSION_20260917.md). Matching the leading
+coefficient forces $\tau=4QP$ with nothing left to tune but $b$, and the
+$\tau^{-2}$ coefficient then comes out $+Q^2/3\geq\frac43$ against the target's
+$-\frac1{24}$: **Liouville is excluded at every coupling and every $\mu$.** The
+general form is a graded sequence of invariants --- leading coefficient = degree,
+$\tau^{-2}$ coefficient = archimedean shift, constant = conductor --- with a
+**rigidity theorem**: at a common shift the first two force a single $\Gamma$
+with $a\in\{\frac14,\frac34\}$, the archimedean factor of a degree-one
+$L$-function and nothing else.
+
+**Manuscript 0.5** carries all of it: new Section 11, *The delay test, and what
+the archimedean expansion selects*; Condition 10.1 rewritten with four clauses;
+abstract, introduction and outlook revised; five new references; and
+`check_delay_test.py` registered, so `drafts.py check --replay` now runs **742**
+cases in three programmes. 43 pages, snapshotted at `drafts/2026-09-17-v05`.
 
 ---
 
@@ -117,17 +132,19 @@ question". A Gram-point "zeta" collapses the same way.
 
 ## 3. Recommended pathway, revised
 
-**1. Fix a dictionary between the Liouville momentum and the dilatation
-eigenvalue.** This replaces the group-delay test, which has now been run and
-which returns zero for every correlator (see above). Bulk Liouville is the one
-interacting theory whose reflection amplitude has the right asymptotic shape,
-$\frac{d}{dP}\arg S=4Q\log P+O(1)$; the target needs coefficient one in the
-variable conjugate to $\log r$. Fix the relation between $P$ and $\tau$, ask
-whether $4Q$ can be brought to $1$, and read off the constant. It is a short
-calculation and it would be the first quantitative comparison in this programme
-between the target's archimedean data and an interacting theory. If the constant
-comes out anywhere near $-\log\pi$, that is the first non-trivial match the
-programme has had; if it cannot, Liouville is excluded and the field is empty.
+**1. Find an amplitude with the archimedean shift at a quarter.** This is what is
+left after the expansion note, and it is the sharpest instrument the programme
+has: a candidate's reflection amplitude must contain a $\Gamma$ whose shift lies
+within $\frac1{2\sqrt3}$ of one half. Every amplitude in the reflection
+literature is built from $\Gamma(\text{integer}+i\,\cdot)$ and fails. The
+structural hint: Liouville has the shift at an integer because its reflection is
+off a wall on a half-line; a shift at a quarter needs something whose natural
+variable is $s/2$ --- a square root of the radial coordinate, or a two-sheeted
+cover. Candidate places to look: the $SL(2,\R)/U(1)$ cigar and $H_3^+$, whose
+reflection amplitudes are $\Gamma$-ratios with shifts that depend on the level;
+$\mathbb Z_2$ orbifolds and twisted sectors of a half-line; and the Schwarzian,
+whose $\Gamma(\Delta\pm ik_1\pm ik_2)$ structure has four shifts at once. The
+test is two lines of algebra per candidate, so a survey is cheap.
 
 **2. The new question (c) raises.** If the density fixes the margin, what does
 the arithmetic fix? The measured answer is the **gap** between the zeros and
