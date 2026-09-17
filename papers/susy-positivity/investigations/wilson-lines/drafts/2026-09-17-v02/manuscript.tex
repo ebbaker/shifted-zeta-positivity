@@ -1,0 +1,109 @@
+\documentclass[11pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools,mathrsfs}
+\usepackage{microtype,booktabs,array}
+\usepackage[dvipsnames]{xcolor}
+\usepackage[colorlinks=true,linkcolor=MidnightBlue,citecolor=MidnightBlue,urlcolor=MidnightBlue]{hyperref}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small Deformation flows for the shifted Weil family}
+\fancyhead[R]{\small Working draft \draftversion}
+\fancyfoot[C]{\thepage}
+\setlength{\headheight}{14pt}
+\setlength{\emergencystretch}{2em}
+\numberwithin{equation}{section}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{problem}[theorem]{Problem}
+\newtheorem{condition}[theorem]{Condition}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\newcommand{\R}{\mathbb R}
+\newcommand{\C}{\mathbb C}
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\re}{\operatorname{Re}}
+\newcommand{\supp}{\operatorname{supp}}
+\newcommand{\norm}[1]{\lVert #1\rVert}
+\newcommand{\ip}[2]{\langle #1,#2\rangle}
+\newcommand{\dd}{\,\mathrm d}
+\newcommand{\gammak}{n_{\gamma}}
+\newcommand{\Mult}{\mathcal M}
+\newcommand{\ev}{\operatorname{ev}}
+\newcommand{\draftversion}{0.2}
+\hypersetup{pdftitle={Deformation flows for the shifted Weil family},
+  pdfauthor={Drafted for Edward Baker},
+  pdfsubject={The transfer as an all-pass filter: the causal generator, resonance
+  and escaped mass, the contraction region, and the endpoint direction;
+  working draft \draftversion}}
+\title{Deformation flows for the shifted Weil family\\[5pt]
+\large The transfer as an all-pass filter: resonance, escaped mass,
+and the endpoint direction}
+\author{Drafted for Edward Baker}
+\date{Working manuscript, version \draftversion\\17 September 2026}
+\begin{document}
+\maketitle
+\begin{abstract}
+A proposal for the bulk-realization program asks whether the shifted Weil family
+is the deformation flow of a Wilson line: the deformation of a line's expectation
+obeys a differential equation fixed by the variation of its endpoints together
+with the non-Abelian Stokes theorem, and the shifted family already obeys a
+differential equation of that shape. Pursuing it turns the transfer into a
+recognizable object, and that object reorganizes the rest. We first write the
+causal generator out in full, which the program's background had defined only by
+naming its symbol, and show that its three factors deliver the three terms of the
+target exactly: the shifted form is the central form with every off-diagonal
+kernel and every prime atom multiplied by a single hyperbolic factor. We then
+show that the transfer symbol is \emph{unimodular on the critical line}, exactly
+and unconditionally, by the functional equation alone. The transfer is therefore
+an all-pass filter, and four consequences follow. Its phase derivative is the
+archimedean symbol, so the Weil symbol is a group delay and the density identity
+of the companion investigation is explained rather than computed. Its phase jumps
+are resonances at the zeros, each contributing a Lorentzian of width $\omega$ and
+fixed mass, so the Weil form is a total resonant response. Under the Riemann
+hypothesis it is inner, the transfer is unitary, and the contraction defect is
+exactly the mass transported past the leading endpoint of the interval. And a
+filter that changes only phase is a phase, which is why the shift direction is
+abelian: truncation is multiplicative on causal kernels, the transfers and their
+generators lie in one commutative algebra, and the non-Abelian Stokes mechanism
+has nothing to act on along the shift. The contraction region in the
+shift--length plane is then settled completely: it is monotone in the length with
+supremum one or infinity and nothing between, so contraction at every length is
+\emph{equivalent} to the absence of zeros at distance more than $\omega$ from the
+critical line. The shifted family is a graded criterion, one zero-free strip per
+shift; under the Riemann hypothesis the region is the whole quadrant and has no
+boundary; and the plane is a disproof instrument and nothing else. What remains
+is the endpoint direction, where the variation is rank one at the leading end,
+the connection is non-abelian but flat, and the generator's own length-variation
+is its boundary value. We close with the operator conditions this leaves, one of
+which excludes the displacement operator and another of which is satisfied
+structurally by an open Wilson line but not by any character. Nothing here
+constructs a source, proves Weil positivity, or assumes the Riemann hypothesis
+except where a statement is explicitly labelled conditional.
+\end{abstract}
+\input{sections/01_introduction}
+\clearpage
+{\small\tableofcontents}
+\clearpage
+\input{sections/02_conventions}
+\input{sections/03_generator}
+\input{sections/04_allpass}
+\input{sections/05_abelian}
+\input{sections/06_hyperbolic}
+\input{sections/07_region}
+\input{sections/08_endpoint}
+\input{sections/09_conditions}
+\input{sections/10_outlook}
+\appendix
+\input{sections/a_checks}
+\clearpage
+\phantomsection
+\addcontentsline{toc}{section}{References}
+\input{references}
+\end{document}

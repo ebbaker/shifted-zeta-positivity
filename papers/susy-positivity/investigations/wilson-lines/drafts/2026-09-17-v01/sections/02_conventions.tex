@@ -1,0 +1,145 @@
+\section{Conventions, the target, and the shifted family}\label{sec:conventions}
+
+\subsection{The central form}
+
+All Hilbert inner products are conjugate-linear in the first argument. For $L>0$
+let $I_L=(-L/2,L/2)$ and let $E_L$ denote extension by zero from $I_L$ to $\R$;
+unless another domain is stated, $f\in C_c^\infty(I_L;\C)$ and $F=E_Lf$. The test
+functions carry no boundary conditions: the localization is by support alone.
+Write
+\begin{equation}\label{eq:fourier}
+ \widehat F(\tau)=\int_\R e^{-i\tau x}F(x)\dd x,\qquad
+ U_dF(x)=F(x-d),\qquad
+ \norm F^2=\frac1{2\pi}\int_\R|\widehat F(\tau)|^2\dd\tau,
+\end{equation}
+and for $r>0$
+\begin{equation}\label{eq:gamma-kernel}
+ \gammak(r)=\frac{e^{-r/2}}{1-e^{-2r}}=\sum_{n\geq0}e^{-a_nr},
+ \qquad a_n=2n+\tfrac12 .
+\end{equation}
+The archimedean energy, the contact constant and the pole form are
+\begin{align}
+ K[F]&=\int_0^\infty\big[2\norm F^2-2\re\ip F{U_rF}\big]\gammak(r)\dd r
+  =\frac1{2\pi}\int_\R b(\tau^2)|\widehat F(\tau)|^2\dd\tau,
+ \label{eq:gamma-energy}\\
+ b(\tau^2)&=\re\psi(\tfrac14+i\tau/2)-\psi(\tfrac14),\qquad
+ w_0=\psi(\tfrac14)-\log\pi=-5.37218\ldots,
+ \label{eq:multiplier}\\
+ P_L[f]&=2\Big|\int_{I_L}f\cosh(x/2)\Big|^2
+        -2\Big|\int_{I_L}f\sinh(x/2)\Big|^2 ,
+ \label{eq:poles}
+\end{align}
+with $\psi=\Gamma'/\Gamma$. The split in \eqref{eq:multiplier} is bookkeeping:
+$b(\tau^2)+w_0=\re\psi(\frac14+\frac{i\tau}2)-\log\pi$ is the archimedean
+multiplier, and $\psi(\frac14)$ has been moved between the Dirichlet form and the
+contact so that $b(0)=0$. The target is
+\begin{equation}\label{eq:target}
+ Q_L[f]=K[E_Lf]+w_0\norm f^2+P_L[f]
+ -2\!\!\sum_{m\log p<L}\!\!(\log p)\,p^{-m/2}\,\re\ip F{U_{m\log p}F},
+\end{equation}
+the coefficient being the primitive length $\log p$ and not $m\log p$. Weil's
+criterion, which we use as input and do not reprove, is
+\begin{equation}\label{eq:criterion}
+ \mathrm{RH}\iff Q_L[f]\geq0\quad\text{for every }L>0
+ \text{ and every }f\in C_c^\infty(I_L).
+\end{equation}
+Two facts are used repeatedly. $Q_L$ has the spectral form
+$Q_L[f]=\sum_\rho\widehat F(\gamma_\rho)\overline{\widehat F(\overline{\gamma_\rho})}$
+over the nontrivial zeros, $\gamma_\rho=-i(\rho-\frac12)$; and the right side is
+very much smaller than the individual terms of \eqref{eq:target}, which is why
+assembling $Q_L$ term by term in double precision is unusable
+\cite{InverseBulk,Selection}. Finally, $Q_L$ is \emph{not} a family of
+functionals: it is the single Weil functional restricted to $C_c^\infty(I_L)$,
+since $\ip F{U_rF}=0$ automatically for $|r|\geq L$. The $L$-dependence is a
+support condition on the input and nothing else. This will matter in
+Section~\ref{sec:endpoint}.
+
+\subsection{The shifted family}
+
+Let
+\begin{equation}\label{eq:xi}
+ \xi(s)=\tfrac12s(s-1)\pi^{-s/2}\Gamma(s/2)\zeta(s),\qquad
+ \mathcal F(p)=\xi(\tfrac12+p),
+\end{equation}
+and for $0<\omega\leq\frac12$ let the causal transfer have Laplace symbol
+\begin{equation}\label{eq:symbol}
+ K_\omega(p)=\frac{\mathcal F(p-\omega)}{\mathcal F(p+\omega)} .
+\end{equation}
+The causal realization is taken on a line $\re p=\eta>1$, where the relevant
+Dirichlet series converge absolutely and the denominator does not vanish. With
+$P_L$ multiplication by $\mathbf1_{I_L}$, $M_\eta$ multiplication by $e^{-\eta x}$
+and $\Mult[b]$ the whole-line Fourier multiplier by $b$,
+\begin{equation}\label{eq:transfer}
+ V_{\omega,L}=M_\eta^{-1}P_L\,\Mult[K_\omega(\eta+i\,\cdot)]\,P_LM_\eta ,
+ \qquad V_{0,L}=I\ \text{(strong limit)} ,
+\end{equation}
+equivalently $V_{\omega,L}f=(k_\omega*\widetilde f)|_{I_L}$ for the inverse
+Laplace kernel $k_\omega$ of $K_\omega$, supported in $[0,\infty)$. This is
+(1.4) of \cite{Background}.
+
+\begin{definition}[The generator]\label{def:generator}
+The causal generator symbol is
+\begin{equation}\label{eq:gensymbol}
+ a_\omega(p)=\frac{\mathcal F'(p-\omega)}{\mathcal F(p-\omega)}
+ +\frac{\mathcal F'(p+\omega)}{\mathcal F(p+\omega)},
+ \qquad \partial_\omega K_\omega=-a_\omega K_\omega ,
+\end{equation}
+and $G_{\omega,L}$ is realized from $a_\omega$ exactly as $V_{\omega,L}$ is
+realized from $K_\omega$, on the same line and with the same compression:
+\begin{equation}\label{eq:generator}
+ G_{\omega,L}=M_\eta^{-1}P_L\,\Mult[a_\omega(\eta+i\,\cdot)]\,P_LM_\eta ,
+ \qquad G_{\omega,L}g=(g_\omega*\widetilde g)|_{I_L},
+\end{equation}
+with $g_\omega$ the inverse Laplace kernel of $a_\omega$, supported in
+$[0,\infty)$. Its natural domain is
+$\mathcal D_{\log,L}=\{f\in L^2(I_L):\int\log(2+|\tau|)|\widehat f|^2<\infty\}$,
+on which the forms below are closed and semibounded.
+\end{definition}
+
+The operator $G_{\omega,L}$ is not symmetric. Only its symmetric part is a form,
+and that form is the shifted target:
+\begin{equation}\label{eq:form}
+ \re\ip g{G_{\omega,L}g}=Q_{\omega,L}[g],
+ \qquad\text{equivalently}\qquad
+ G_{\omega,L}^*+G_{\omega,L}\ \text{represents}\ 2Q_{\omega,L},
+\end{equation}
+with $Q_{0,L}=Q_L$ of \eqref{eq:target}. Section~\ref{sec:generator} proves
+\eqref{eq:form} by exhibiting the three factors.
+
+\subsection{The flow identities}
+
+For fixed $f\in C_c^\infty(I_L)$, held fixed as $\omega$ varies,
+\begin{equation}\label{eq:flow}
+ \frac{\partial V_{\omega,L}}{\partial\omega}=-G_{\omega,L}V_{\omega,L},
+ \qquad V_{0,L}=I,
+ \qquad
+ \frac{d}{d\omega}\norm{V_{\omega,L}f}^2=-2\,Q_{\omega,L}[V_{\omega,L}f],
+\end{equation}
+which is (1.7) of \cite{Background}. At $\omega=0$ the first identity is a right
+derivative on these test functions and no operator-norm derivative is asserted.
+With the contraction defect $D_{\omega,L}=I-V_{\omega,L}^*V_{\omega,L}$,
+\begin{equation}\label{eq:defect}
+ \frac{\partial D_{\omega,L}}{\partial\omega}
+ =V_{\omega,L}^*(G_{\omega,L}^*+G_{\omega,L})V_{\omega,L},
+ \qquad D_{0,L}=0,
+\end{equation}
+\begin{equation}\label{eq:storage}
+ \ip f{D_{\omega,L}f}=2\int_0^\omega Q_{s,L}[V_{s,L}f]\dd s,
+ \qquad
+ Q_{0,L}[f]=\lim_{\omega\downarrow0}\frac{\ip f{D_{\omega,L}f}}{2\omega},
+\end{equation}
+which are (1.8) and (1.9) of \cite{Background}. Nonnegativity of $D_{\omega,L}$
+is exactly $\norm{V_{\omega,L}}\leq1$. The route the deformation picture would
+have to serve is the following, (Proposition 1.1 of \cite{Background}):
+
+\begin{proposition}[A sufficient contraction route]\label{prop:route}
+If there exist $L_j\to\infty$ and $0<\omega_j\downarrow0$ with
+$\norm{V_{\omega_j,L_j}}\leq1$ for every $j$, then the Riemann hypothesis holds.
+\end{proposition}
+
+We stress two things about this route, because both bear on
+Section~\ref{sec:outlook}. Positivity of $Q_{\omega,L}$ at all shifts is
+\emph{not} the criterion \eqref{eq:criterion}; it is a strictly stronger
+requirement on the family. And the cumulative defect \eqref{eq:storage} can be
+positive on an input where the instantaneous form is negative, so the two
+conditions are genuinely different.

@@ -1,0 +1,72 @@
+\section{Checks}\label{app:checks}
+
+One program,
+\begin{center}
+\texttt{numerics/check\_causal\_commutation.py},\qquad
+\texttt{numerics/records/causal-commutation-checks.json},
+\end{center}
+the second being its preserved record. It uses the standard library only and
+prints JSON to standard output. Exact rational arithmetic is labelled separately
+from floating-point work. Counts refer to finite test cases, not to independent
+theorems, and none of the checks is a positivity certificate.
+
+\begin{center}
+\begin{tabular}{@{}p{0.30\textwidth}p{0.62\textwidth}@{}}
+\toprule
+Group & What is verified\\
+\midrule
+Multiplicativity of truncation &
+Lemma~\ref{lem:multiplicative} as a finite matrix identity,
+$P_LAP_LBP_L=P_LABP_L$, in exact rational arithmetic, for randomly generated
+causal kernels at several truncation sizes.\\
+Commutation, and its cause &
+$[A,B]=0$ for truncated causal convolutions, exact
+(Theorem~\ref{thm:abelian}); and the control that truncated \emph{non}-causal
+convolutions have commutators bounded away from zero, so causality is what the
+lemma uses.\\
+The causal pole kernel &
+That $4\cosh(\omega x)\cosh(x/2)\mathbf1_{x>0}$, symmetrized by
+\eqref{eq:symmetrize}, equals $2\cosh(\omega(x-y))\cosh(\frac{x-y}2)$, and at
+$\omega=0$ equals $P_L$ in the form $2|C(f)|^2-2|S(f)|^2$
+(Theorem~\ref{thm:kernel}).\\
+Vanishing on the imaginary axis &
+That $\re[2(p-\frac12)^{-1}+2(p+\frac12)^{-1}]=0$ at $p=i\tau$, exactly, over a
+grid (Remark~\ref{rem:imaginary}).\\
+The hyperbolic identity &
+Proposition~\ref{prop:hyperbolic} as a finite matrix identity at several
+$\omega$ and $L$.\\
+The endpoint algebra &
+Proposition~\ref{prop:algebra} in exact rational arithmetic: $G_{\omega,L}B_L=0$;
+the one-sided commutator $[G_{\omega,L},B_L]=-B_LG_{\omega,L}$ with
+$B_LG_{\omega,L}\neq0$; and the integrated form of
+$\partial_LG_{\omega,L}=B_LG_{\omega,L}$ at two extensions.\\
+The resonance model &
+Propositions~\ref{prop:unimodular} and \ref{prop:resonance} in a Blaschke model:
+that a factor with a zero at $\omega+i\gamma$ is unimodular on the critical line
+and that $|b-1|^2$ equals the Lorentzian $4\omega^2/(\omega^2+(\tau-\gamma)^2)$
+\emph{exactly}, both in exact rational arithmetic; and, in floating point, that
+its mass is $4\pi\omega$ and that the summed group delay over a window is $2\pi$
+times the number of resonances in it.\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+Run from the investigation directory:
+\begin{verbatim}
+python3 numerics/check_causal_commutation.py
+python3 validation/drafts.py check --replay
+\end{verbatim}
+
+\paragraph{Scope.} The resonance group uses the first twelve zero ordinates,
+truncated to exact rationals, as \emph{published input data}; the Blaschke
+identities hold for any rational $\gamma$, so the group verifies the mechanism of
+Section~\ref{sec:allpass} and not the arithmetic. Nothing here computes with
+$\xi$ or $\zeta$. The checks do not verify the convergence arguments in the proof
+of Theorem~\ref{thm:kernel}, which are analytic, nor
+Proposition~\ref{prop:trace}, which is a statement about domains, nor
+Propositions~\ref{prop:monotone}--\ref{prop:dichotomy}, which are statements
+about a limit. The numbers quoted in Section~\ref{sec:region} from
+\cite{CriticalPath} are reproduced, not re-derived, and carry the status recorded
+where they were first stated. Exploratory computations requiring \texttt{mpmath},
+which the repository's conventions exclude, are kept outside the registered
+programme in \texttt{numerics/exploratory/} and are labelled there.

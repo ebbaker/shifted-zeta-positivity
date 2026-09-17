@@ -1,0 +1,238 @@
+\section{The contraction region in the shift--length plane}\label{sec:region}
+
+The route this program must serve is Proposition~\ref{prop:route}: contraction
+along a sequence with $L_j\to\infty$ and $\omega_j\downarrow0$. It is natural to
+ask what the region
+\[
+ \mathcal R=\big\{(\omega,L):\ \lVert V_{\omega,L}\rVert\leq1\big\}
+\]
+looks like, and the earlier shifted-zeta investigation
+\cite{CriticalPath,CumulativePath} looked for a \emph{critical path} inside it.
+Proposition~\ref{prop:unimodular} settles the question completely, and the answer
+is that the region has no shape worth computing --- which is itself informative,
+and which converts the plane into an instrument of a different kind.
+
+\subsection{The region is monotone, and its supremum is one or infinity}
+
+\begin{proposition}[Monotonicity]\label{prop:monotone}
+For each fixed $\omega$, $L\mapsto\lVert V_{\omega,L}\rVert$ is nondecreasing, and
+$\sup_L\lVert V_{\omega,L}\rVert=\lVert V_\omega\rVert_{L^2(\R)}$.
+\end{proposition}
+
+\begin{proof}
+$V_{\omega,L}=P_LV_\omega P_L$ and the intervals are nested, so for $L<L'$ the
+first is a compression of the second. $P_L\to I$ strongly, so
+$\lVert P_LV_\omega P_Lf\rVert\to\lVert V_\omega f\rVert$ for each $f$.
+\end{proof}
+
+\begin{proposition}[Dichotomy]\label{prop:dichotomy}
+Fix $\omega\in(0,\frac12]$ and suppose no zero of $\xi$ has
+$|\re\rho-\frac12|=\omega$ exactly. Then
+\[
+ \sup_L\lVert V_{\omega,L}\rVert=
+ \begin{cases}
+ 1,&\text{if $\xi$ has no zero with }|\re\rho-\tfrac12|>\omega,\\[2pt]
+ \infty,&\text{otherwise.}
+ \end{cases}
+\]
+\end{proposition}
+
+\begin{proof}
+The poles of $K_\omega$ are at $p=\rho-\frac12-\omega$, so one lies in
+$\re p>0$ exactly when some $\re\rho>\frac12+\omega$; by the functional equation
+that is the same as some $|\re\rho-\frac12|>\omega$. If there is none, the
+argument of Proposition~\ref{prop:flux} applies verbatim with RH replaced by that
+weaker hypothesis: $K_\omega$ is inner and $V_\omega$ is unitary, of norm exactly
+one. If there is one, at $\re p=\delta-\omega>0$, moving the contour picks up a
+residue and $k_\omega$ acquires a component growing like $e^{(\delta-\omega)x}$,
+so $V_\omega$ is unbounded on $L^2(\R)$; by Proposition~\ref{prop:monotone} the
+truncations are then unbounded in $L$.
+\end{proof}
+
+\begin{corollary}[The shifted family is a graded criterion]\label{cor:graded}
+For each $\omega\in(0,\frac12]$ the following are equivalent:
+\begin{enumerate}
+\item $\lVert V_{\omega,L}\rVert\leq1$ for every $L>0$;
+\item $\xi$ has no zero with $|\re\rho-\frac12|>\omega$.
+\end{enumerate}
+In particular, under the Riemann hypothesis $\mathcal R$ is the whole quadrant
+$(0,\frac12]\times(0,\infty)$.
+\end{corollary}
+
+So the family is not one criterion but a totally ordered family of them, one per
+shift, interpolating between the trivial statement at $\omega=\frac12$ --- no
+zeros outside the critical strip --- and the Riemann hypothesis as
+$\omega\downarrow0$. \textbf{Each $\omega$ buys exactly a zero-free strip of width
+$\omega$.}
+
+\begin{remark}[The two limits of Proposition~\ref{prop:route} do different jobs]
+$L_j\to\infty$ realizes the supremum of Proposition~\ref{prop:monotone} and
+covers every test function; $\omega_j\downarrow0$ closes the detection threshold
+of Corollary~\ref{cor:graded}. Neither substitutes for the other.
+\end{remark}
+
+\subsection{There is no critical path, and what the plane is for}
+
+Corollary~\ref{cor:graded} says $\mathcal R$ has no interesting boundary. Under
+the Riemann hypothesis it is everything; if the hypothesis fails at distance
+$\delta$, it is everything for $\omega>\delta$ and cut off at a finite $L$ for
+$\omega<\delta$. The $L$-direction is monotone bookkeeping and the entire content
+sits at $L=\infty$, where it is the $H^\infty$ norm of $K_\omega$. There is no
+curve in the plane whose shape is worth computing.
+
+This also answers the question the manuscript previously left open, whether the
+flow formulation escapes the saturation constraint of \cite{Selection}. It does
+not, and the reason is at the level of quantifiers: a mechanism producing a
+strict contraction at one fixed $\omega>0$, however uniform in $L$, would
+establish a zero-free strip of width $\omega$ --- a real and currently open
+theorem, and a strong one --- but not the Riemann hypothesis. The quantifier
+missing from such a statement is $\omega\downarrow0$, and by
+\eqref{eq:absorption} the margin vanishes with $\omega$ by construction.
+
+Monotonicity does buy one thing, and it is worth stating on its own.
+
+\begin{remark}[A disproof instrument]\label{rem:disproof}
+A finite computation exhibiting $\lVert V_{\omega,L}\rVert>1$ at a single
+$(\omega,L)$ proves that $\xi$ has a zero at distance more than $\omega$ from the
+critical line. A computation showing $\lVert V_{\omega,L}\rVert\leq1$ at any
+finite $L$ proves nothing whatever. Numerics on the shift--length plane are
+therefore one-sided in the same way the companion investigation's disproof test
+is, and should be organized as such: certified \emph{lower} bounds on Rayleigh
+quotients, scanning $\omega$ downward and $L$ upward.
+\end{remark}
+
+\subsection{The generator region, and what controls its boundary}
+
+The generator condition $Q_{\omega,L}\succeq0$ is strictly stronger than
+contraction --- \cite{CriticalPath} exhibits a certified input at
+$L=\log7$, $\omega=10^{-11}$ on which the generator is negative while the
+cumulative defect is positive --- and it \emph{does} have a boundary. That
+boundary is controlled by
+$\kappa_L=\lVert X\rVert_{Q\to Q}$, through the sufficient path condition
+$\omega\kappa_L<\pi/4$ of \cite{CriticalPath}. Proposition~\ref{prop:hyperbolic}
+and the spectral form identify what $\kappa_L$ measures.
+
+\begin{proposition}[$\kappa_L$ is an inverse zero-placement precision]
+\label{prop:kappa}
+With $X_af=(x-a)f$ one has $\widehat{X_af}=i\widehat F'-a\widehat F$, so by
+\eqref{eq:spectral-target}
+\[
+ \kappa_L^2=\sup_f\frac{\sum_\rho\big|i\widehat F'(\gamma_\rho)
+ -a\widehat F(\gamma_\rho)\big|^2}{\sum_\rho|\widehat F(\gamma_\rho)|^2}
+ \;\xrightarrow[\text{near-null }f]{}\;
+ \sup_f\frac{\sum_\rho|\widehat F'(\gamma_\rho)|^2}
+ {\sum_\rho|\widehat F(\gamma_\rho)|^2},
+\]
+the ratio of derivative samples to value samples of $\widehat F$ at the Riemann
+zeros. If $e_L$ is the ground vector of $Q_{0,L}$ and $\varepsilon_L$ the
+root-mean-square distance from the zeros of $\widehat e_L$ to the nearest
+$\gamma_\rho$, then $m_L\approx\varepsilon_L^2Q[Xe_L]$ and
+$\kappa_L\approx\varepsilon_L^{-1}$, so
+$\kappa_L\sqrt{m_L}\approx\sqrt{Q[Xe_L]}$.
+\end{proposition}
+
+The identity for $\kappa_L^2$ is exact; the relation
+$\kappa_L\sqrt{m_L}\approx\sqrt{Q[Xe_L]}$ is a single-parameter heuristic. It is
+tested by the values recorded in \cite{CriticalPath} across twenty orders of
+magnitude in $m_L$:
+
+\begin{center}
+\begin{tabular}{@{}lrrrrr@{}}
+\toprule
+horizon & $m_L$ & $\kappa_L$ & $\kappa_L\sqrt{m_L}$ & $\pi/(4\kappa_L)$
+& recorded root\\
+\midrule
+$\log3$ & $5.537\times10^{-8}$  & $6.112\times10^{1}$  & $0.01438$
+ & $1.29\times10^{-2}$ & $1.64\times10^{-2}$\\
+$\log5$ & $9.293\times10^{-18}$ & $2.534\times10^{6}$  & $0.00773$
+ & $3.10\times10^{-7}$ & $3.95\times10^{-7}$\\
+$\log7$ & $6.802\times10^{-28}$ & $2.326\times10^{11}$ & $0.00607$
+ & $3.38\times10^{-12}$ & $4.30\times10^{-12}$\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+$\kappa_L\sqrt{m_L}$ moves by a factor of $2.4$ while $m_L$ moves by $10^{20}$,
+and the recorded diagnostic root sits within a factor of $1.3$ of
+$\pi/(4\kappa_L)$ throughout. So the generator boundary is
+$\omega_*(L)\asymp\sqrt{m_L}$.
+
+\begin{remark}[The generator boundary is an artifact]\label{rem:artifact}
+$m_L=\lambda_{\min}(Q_{0,L})$ is positive precisely when Weil positivity holds on
+$I_L$, so its superexponential collapse happens \emph{in the world the program is
+trying to prove}. The generator region's boundary therefore collapses under the
+Riemann hypothesis as well, and carries no arithmetic information; it is a
+property of a sufficient condition.
+
+How far is it from anything useful? By Proposition~\ref{prop:dichotomy}, a zero at
+distance $\delta$ becomes visible on $I_L$ only once $(\delta-\omega)L\gtrsim1$,
+so the working scale is $\omega\sim1/L$, a power law. Against
+$\pi/(4\kappa_L)$ the ratios are $7.1\times10^{1}$, $2.0\times10^{6}$ and
+$1.5\times10^{11}$ at the three horizons above --- eleven orders of magnitude at
+$L=\log7$, widening superexponentially. The sufficient condition and the needed
+one are not close and are diverging, which is the quantitative reason the earlier
+investigation's elementary extension lemma asked for extension lengths of order
+$e^{-\mathrm{const}/m_L}$.
+\end{remark}
+
+\subsection{The Cayley coordinate is the positive-real criterion}
+
+\cite{CumulativePath} introduced $Z_{\omega,L}=(I-V)(I+V)^{-1}$ and
+$P=\frac2\omega\re Z$, with $D_{\omega,L}=\frac\omega2(I+V^*)P(I+V)$, so that
+$P\succeq0\iff\lVert V\rVert\leq1$, and the corresponding causal symbol
+$a_{\rm cum,\omega}=\frac2\omega(1-K_\omega)/(1+K_\omega)$.
+Proposition~\ref{prop:unimodular} identifies it.
+
+\begin{proposition}[Reactance]\label{prop:cayley}
+On the critical line,
+\[
+ \frac{1-K_\omega(i\tau)}{1+K_\omega(i\tau)}=i\tan\Psi(\tau,\omega),
+\]
+purely imaginary. Consequently $\lVert V_{\omega,L}\rVert\leq1$ for all $L$ is
+equivalent to $Z_\omega$ being accretive, that is to $a_{\rm cum,\omega}$ being a
+\emph{positive-real} function on the right half-plane, which by
+Corollary~\ref{cor:graded} is equivalent to $K_\omega$ being inner.
+\end{proposition}
+
+\begin{proof}
+Substitute $K_\omega(i\tau)=e^{-2i\Psi}$ from \eqref{eq:phase}; the Cayley
+transform carries the unit circle to the imaginary axis. The equivalences are
+Corollary~\ref{cor:graded} together with the congruence of
+\cite{CumulativePath}.
+\end{proof}
+
+That is the classical passivity criterion, and positive-real functions are
+Nevanlinna functions after rotation, with a Herglotz representation whose measure
+is supported on the resonances --- which is Proposition~\ref{prop:resonance} seen
+from the other side. Two cautions. First, Remark~\ref{rem:trap} applies again:
+$a_{\rm cum,\omega}$ is purely imaginary on the imaginary axis, so any expansion
+carried out there loses the entire form, and the $\omega^2$ expansion of
+\cite{CumulativePath} is safe only because it is taken on a far-right Laplace
+line. Second, the natural tool for such a function is its Herglotz
+representation, not a Taylor expansion in the shift. Both point at the same
+literature as the companion investigation's top open item \cite{SuzukiDeBranges}.
+
+\subsection{What the margin is}
+
+Combining \eqref{eq:absorption} with the spectral form gives the margin an exact
+reading:
+\[
+ \lambda_{\min}(Q_{0,L})
+ =\min_{\lVert f\rVert=1,\ \supp f\subseteq I_L}\ \sum_\rho|\widehat F(\gamma_\rho)|^2 ,
+\]
+that is, \textbf{how well a function supported in an interval can avoid the
+Riemann zeros in frequency.} Two consequences.
+
+The band edge is explained rather than observed. The cheapest way to avoid every
+$\gamma_\rho$ is to live below the lowest one, so near-null directions are
+bandlimited below $\gamma_1=14.1347$ --- which \cite{Bottleneck} recorded as a
+measurement and \cite{Selection} carries as the second half of its seventh
+selection rule. Here it is a consequence.
+
+But bandlimiting is only the first factor. The recorded margins give
+$d\log m_L/dL\approx-44$ and $-69$ on the two available intervals, far steeper
+than the bandwidth-$\gamma_1$ prolate rate $-\gamma_1$ \cite{SlepianPollak}. By
+Proposition~\ref{prop:kappa} the second factor is the zero-placement precision:
+$m_L\approx\varepsilon_L^2Q[Xe_L]$. \textbf{How $\varepsilon_L$ collapses is the
+mechanism question}, and it is the form in which this paper leaves the companion
+investigation's request for a mechanism rather than a measurement.

@@ -1,0 +1,207 @@
+\section{The transfer is an all-pass filter}\label{sec:allpass}
+
+Section~\ref{sec:generator} wrote the generator out. This section identifies the
+transfer, and the identification is the hinge of the paper: one elementary
+proposition, and four consequences that occupy the rest of it.
+
+\subsection{The symbol is unimodular}
+
+\begin{proposition}[Unimodularity]\label{prop:unimodular}
+For every real $\tau$ and every $\omega$ with $\xi(\frac12+\omega+i\tau)\neq0$,
+\[
+ |K_\omega(i\tau)|=1 .
+\]
+No hypothesis is used beyond the functional equation and the reality of $\xi$ on
+the real axis.
+\end{proposition}
+
+\begin{proof}
+$\xi(s)=\xi(1-s)$ gives
+$\xi(\frac12-\omega+i\tau)=\xi(\frac12+\omega-i\tau)$, and $\xi$ has real Taylor
+coefficients about $s=\frac12$, so $\xi(\bar s)=\overline{\xi(s)}$ and
+$\xi(\frac12+\omega-i\tau)=\overline{\xi(\frac12+\omega+i\tau)}$. Numerator and
+denominator of \eqref{eq:symbol} are complex conjugates.
+\end{proof}
+
+So $\Theta_\omega$ is an \emph{all-pass filter}: it changes no amplitude at any
+frequency, only phase. Writing
+\begin{equation}\label{eq:phase}
+ \xi(\tfrac12+\omega+i\tau)=R(\tau,\omega)e^{i\Psi(\tau,\omega)},
+ \qquad K_\omega(i\tau)=e^{-2i\Psi(\tau,\omega)},
+\end{equation}
+the entire content of the transfer on the critical line is the single real
+function $\Psi$. Everything below is a statement about where that phase goes.
+
+\begin{remark}[A trap: which contour may be moved]\label{rem:trap}
+Unimodularity forces
+$\re a_\omega(i\tau)=-\partial_\omega\log|K_\omega(i\tau)|=0$, which appears to
+make $Q_{\omega,L}$ vanish. It does not, and the reason is worth recording
+because the two symbols behave differently.
+
+$K_\omega$ has poles only where $\xi(\frac12+p+\omega)=0$, at
+$p=\rho-\frac12-\omega$. Under the Riemann hypothesis those sit on
+$\re p=-\omega$, so the inverse Laplace contour \emph{may} be moved from
+$\re p=\eta>1$ to $\re p=0$. But $a_\omega$ has poles at
+$p=\rho-\frac12\pm\omega$, hence also on $\re p=+\omega$, inside the right
+half-plane, so for it the contour \emph{may not} be moved. The continuation
+$a_\omega(i\tau)$ is therefore not the symbol of the causal operator, and the
+residues crossed in the shift are the whole of the form: as $\omega\downarrow0$
+they become $2\pi\sum_\rho\delta(\tau-\gamma_\rho)$, which is
+\eqref{eq:spectral-target}.
+
+Relatedly, the four apparent poles at $p=\pm\frac12\pm\omega$ in the factor
+decomposition \eqref{eq:threefactors} \emph{cancel} between the three factors:
+$\psi$ has a pole at $p=-\frac12$ and $\zeta'/\zeta$ one at $p=\frac12$, with
+matching residues. The proof of Theorem~\ref{thm:kernel} is unaffected, because
+it transforms each factor on $\re p=\eta>1$ where all converge and sums; but
+$a_\omega$ does not have those poles.
+\end{remark}
+
+\subsection{Consequence one: the Weil symbol is a group delay}
+
+\begin{proposition}[Group delay]\label{prop:groupdelay}
+The group delay of the transfer is
+\[
+ -\frac{d}{d\tau}\arg K_\omega(i\tau)=2\,\partial_\tau\Psi
+ =2\,\re\frac{\xi'}{\xi}\Big(\tfrac12+\omega+i\tau\Big),
+\]
+and $\partial_\tau\Psi$ is $\pi$ times the density of zeros. Its smooth part is
+$\theta'(\tau)$, $\theta$ the Riemann--Siegel theta function, so the group delay
+is $2\theta'(\tau)=b(\tau^2)+w_0$.
+\end{proposition}
+
+\begin{proof}
+The first equality is \eqref{eq:phase}; the second is
+$\partial_\tau\arg\xi=\re(\xi'/\xi)$ along the vertical line. That
+$\partial_\tau\arg\xi(\frac12+\omega+i\tau)$ is $\pi$ times the zero density is
+the argument principle, and $N(T)=\theta(T)/\pi+1+S(T)$ identifies the smooth
+part. The final equality is the density identity of \cite{Selection}.
+\end{proof}
+
+The companion investigation obtained $b(\tau^2)+w_0=2\theta'(\tau)$ as an identity
+between special functions and drew from it that the contact constant "is not an
+independent object requiring a mechanism". Proposition~\ref{prop:groupdelay} says
+why: the archimedean symbol is a \emph{phase derivative}, and a phase has no
+separate ingredients. It also reads the unboundedness rule of \cite{Selection} as
+a statement about time rather than about divergence: the delay grows like
+$\log\tau$, so a packet at frequency $N$ is held for $\sim\log N$, which is
+$Q_L[\chi e^{iNx}]/\log N\to\lVert\chi\rVert^2$.
+
+\subsection{Consequence two: the zeros are resonances}
+
+\begin{proposition}[Resonant line shape]\label{prop:resonance}
+As $\omega\downarrow0$, near each $\gamma_\rho$,
+\[
+ |K_\omega(i\tau)-1|^2=\frac{4\omega^2}{\omega^2+(\tau-\gamma_\rho)^2}+o(1),
+\]
+a Lorentzian of height $4$ and half-width $\omega$, of mass $4\pi\omega$.
+Consequently
+\begin{equation}\label{eq:absorption}
+ \frac1{2\pi}\int_{\R}|K_\omega(i\tau)-1|^2|\widehat F(\tau)|^2\dd\tau
+ \;\longrightarrow\;2\omega\sum_\rho|\widehat F(\gamma_\rho)|^2
+ \;=\;2\omega\,Q_{0,L}[f].
+\end{equation}
+\end{proposition}
+
+\begin{proof}
+Near a simple zero, $\xi(\frac12+\omega+i\tau)\approx\xi'(\rho)(\omega+i(\tau-\gamma))$,
+and by Proposition~\ref{prop:unimodular} the numerator is its conjugate, so
+$K_\omega(i\tau)$ is a Blaschke factor times a constant phase. Requiring
+$K_\omega\to1$ away from the zero as $\omega\downarrow0$ fixes that phase, leaving
+$K_\omega(i\tau)\approx\big(\omega-i(\tau-\gamma)\big)/\big(\omega+i(\tau-\gamma)\big)$,
+for which $|K_\omega-1|^2$ is the stated Lorentzian exactly; its mass is
+$\int4\omega^2(\omega^2+u^2)^{-1}\dd u=4\pi\omega$. Summing over the zeros and
+dividing by $2\pi$ gives \eqref{eq:absorption}, whose right side is
+\eqref{eq:spectral-target}.
+\end{proof}
+
+So the leading behaviour of the defect,
+$\langle f,D_{\omega,L}f\rangle=2\omega Q_{0,L}[f]+o(\omega)$, is not a formal
+consequence of the flow identities but a statement about line shapes: each zero
+is a resonance of width $\omega$ and fixed integrated strength, and the Weil form
+is the total resonant response of the input. Appendix~\ref{app:checks} verifies
+the line shape, its mass and the window sum in a model built from published zero
+ordinates, where all three hold exactly.
+
+\subsection{Consequence three: under RH the defect is a boundary flux}
+
+\begin{proposition}[Inner, unitary, and the flux identity]\label{prop:flux}
+Assume the Riemann hypothesis. Then $K_\omega$ is an inner function of the right
+half-plane, with zeros exactly at $p=\omega+i\gamma_\rho$; $V_\omega$ is unitary
+on $L^2(\R)$ and causal; and for $f$ supported in $I_L$,
+\begin{equation}\label{eq:flux}
+ \langle f,D_{\omega,L}f\rangle=\lVert(1-P_L)V_\omega f\rVert^2
+ =\int_{L/2}^{\infty}\big|(V_\omega f)(x)\big|^2\dd x .
+\end{equation}
+\end{proposition}
+
+\begin{proof}
+Under RH the poles of $K_\omega$ lie on $\re p=-\omega$, so $K_\omega$ is analytic
+on $\re p\geq0$; it is bounded there, the $\Gamma$-ratio giving
+$K_\omega(p)=O(|p|^{-\omega})$ while the $\zeta$ and pole ratios tend to $1$; and
+it is unimodular on the boundary by Proposition~\ref{prop:unimodular}. Hence it is
+inner, the Blaschke condition $\sum_\rho\omega/(1+\gamma_\rho^2)<\infty$ holding.
+No pole lies between $\re p=\eta$ and $\re p=0$, so the inverse Laplace contour
+may be moved to the imaginary axis and $V_\omega$ is the Fourier multiplier by
+$K_\omega(i\cdot)$, of modulus one, hence unitary. Then
+$\lVert f\rVert^2-\lVert P_LV_\omega f\rVert^2
+=\lVert V_\omega f\rVert^2-\lVert P_LV_\omega f\rVert^2
+=\lVert(1-P_L)V_\omega f\rVert^2$, and causality gives
+$\supp V_\omega f\subseteq[-L/2,\infty)$, so all the escaping mass is to the
+right.
+\end{proof}
+
+\eqref{eq:flux} is the sharpest statement in the paper. The contraction defect is
+not an abstract operator quantity: it is the \textbf{flux of $|V_\omega f|^2$
+through the leading endpoint of the interval}, and Weil positivity on $I_L$ says
+the flow pushes mass out of the moving end and never pulls it in. Section~\ref{sec:endpoint}
+finds the same point from the geometry, as the location of a rank-one variation.
+
+\begin{remark}[Direction of the hypothesis]\label{rem:direction}
+Proposition~\ref{prop:flux} uses RH; it is the easy direction of the program made
+explicit, not a route to a proof. Its value is that it exhibits the mechanism,
+which Sections~\ref{sec:region} and \ref{sec:endpoint} then use.
+\end{remark}
+
+\subsection{The scattering dictionary}
+
+Collected, Propositions~\ref{prop:unimodular}--\ref{prop:flux} are a definition.
+
+\begin{center}
+\begin{tabular}{@{}p{0.46\textwidth}p{0.46\textwidth}@{}}
+\toprule
+Established here & Scattering name\\
+\midrule
+$k_\omega$ supported in $[0,\infty)$; $K_\omega$ analytic in a right half-plane &
+causality, via Paley--Wiener\\
+$|K_\omega(i\tau)|=1$, exactly and unconditionally &
+unitarity on the energy shell\\
+poles at $-\omega+i\gamma_\rho$ (Remark~\ref{rem:trap}) &
+resonances of width $\omega$\\
+$-\,d\varphi/d\tau=2\theta'(\tau)$ (Prop.~\ref{prop:groupdelay}) &
+Wigner--Smith time delay $=$ density of states \cite{Smith}\\
+$\Psi/\pi\to N(\tau)$ (Prop.~\ref{prop:groupdelay}) &
+Krein spectral shift function \cite{BirmanKrein}\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+Two further points make the identification specific. $K_\omega$ is a
+\emph{ratio} --- $\xi$ at the reflected argument over $\xi$ at the argument, with
+the functional equation supplying the reflection --- and a unimodular ratio of that
+shape is what a one-channel \emph{reflection coefficient} is; a half-infinite line
+with a boundary condition at one end has exactly one scattering channel and its
+entire $S$-matrix is such a coefficient. And the argument-principle bookkeeping of
+Proposition~\ref{prop:groupdelay} is Levinson's theorem, the total phase change
+per resonance being $-2\pi$.
+
+\begin{remark}[Scope of this reading]\label{rem:scatteringscope}
+Reading $\tau$ as an energy and $x$ as a scattering coordinate is an
+identification the program does not make; the caveat attached to the channel-tower
+rule of \cite{Selection} applies here in full, and Section~\ref{sec:conditions}
+gives the first motivated reason to make it without removing it. The
+neighbourhood is also crowded: zeros-as-resonances is old. Nothing here claims
+the idea. What is this program's own is that the object arrives from its own
+shifted transfer, with the constants fixed --- the delay is $2\theta'$ exactly and
+the resonance widths are exactly $\omega$.
+\end{remark}

@@ -225,21 +225,86 @@ The bound concerns the bounded difference of two generally unbounded
 forms. Formula \eqref{eq:rh-shift-form} also specifies the endpoint
 $\omega=1/2$ without dropping a distributional correction.
 
-For completeness, logarithmic differentiation of \eqref{eq:rh-transfer}
-gives the causal generator symbol
+\paragraph{The generator, explicitly.}
+Logarithmic differentiation of \eqref{eq:rh-transfer} gives the causal
+generator symbol
 \[
 a_\omega(p)=\frac{F'(p-\omega)}{F(p-\omega)}
 +\frac{F'(p+\omega)}{F(p+\omega)},\qquad
 \partial_\omega K_\omega=-a_\omega K_\omega .
 \]
-Writing $\xi$ as its gamma, pole and zeta factors identifies
-$\operatorname{Re}\langle g,G_{\omega,L}g\rangle=Q_{\omega,L}[g]$,
-where $G_{\omega,L}$ is the causal operator with symbol $a_\omega$.
-In particular, the zeta logarithmic derivative contributes
-$-2\sum_{\log n<L}\Lambda(n)n^{-1/2}
-\cosh(\omega\log n)T_{\log n}$ before symmetrization.
-The gamma integral and the pole factors give the kernel in
+The generator $G_{\omega,L}$ is realized from $a_\omega$ exactly as
+$V_{\omega,L}$ is realized from $K_\omega$, on the same line
+$\operatorname{Re}p=\eta>1$ and with the same compression:
+\[
+G_{\omega,L}
+=M_\eta^{-1}P_L\,\mathcal M[a_\omega(\eta+i\,\cdot)]\,P_LM_\eta ,
+\]
+with $P_L$ multiplication by $\mathbf1_{I_L}$, $M_\eta$ multiplication by
+$e^{-\eta x}$, and $\mathcal M[b]$ the whole-line Fourier multiplier by $b$.
+Equivalently, $G_{\omega,L}g=(g_\omega*\widetilde g)|_{I_L}$ for the inverse
+Laplace kernel $g_\omega$ of $a_\omega$, supported in $[0,\infty)$. The natural
+domain is $\mathcal D_{\log,L}$ of \eqref{eq:rh-domain}, on which
+$Q_{\omega,L}$ is closed and semibounded; $G_{\omega,L}$ is not symmetric, and
+only its symmetric part is a form:
+\[
+\operatorname{Re}\langle g,G_{\omega,L}g\rangle=Q_{\omega,L}[g],
+\qquad\text{equivalently}\qquad
+G_{\omega,L}^*+G_{\omega,L}\ \text{represents}\ 2Q_{\omega,L}.
+\]
+
+This is the \emph{complete} shifted form, not a part of it. Writing $\xi$ as its
+three factors, with $s=1/2+p$,
+\[
+\frac{F'}{F}(p)=\underbrace{\frac1{p+1/2}+\frac1{p-1/2}}_{\frac12s(s-1)}
+\;\underbrace{-\tfrac12\log\pi+\tfrac12\psi(\tfrac14+\tfrac p2)}
+ _{\pi^{-s/2}\Gamma(s/2)}
+\;+\;\underbrace{\frac{\zeta'}{\zeta}(\tfrac12+p)}_{\zeta(s)},
+\]
+and each factor supplies one term of \eqref{eq:rh-central} and
 \eqref{eq:rh-shift-form}.
+
+\emph{The zeta factor.} Absolute convergence on $\operatorname{Re}p=\eta>1$ gives
+$\frac{\zeta'}{\zeta}(\frac12+p-\omega)+\frac{\zeta'}{\zeta}(\frac12+p+\omega)
+=-2\sum_{n\geq2}\Lambda(n)n^{-1/2}\cosh(\omega\log n)\,n^{-p}$, and $n^{-p}$ is
+the causal delay by $\log n$. So the zeta factor contributes
+$-2\sum_{\log n<L}\Lambda(n)n^{-1/2}\cosh(\omega\log n)T_{\log n}$ before
+symmetrization, the cutoff being automatic because a delay of length $L$ has
+zero action on $I_L$.
+
+\emph{The gamma and $\pi$ factors.} With
+$\psi(z)=-\gamma_E+\int_0^\infty(e^{-t}-e^{-zt})(1-e^{-t})^{-1}\,dt$ at
+$z=\frac14+\frac{p\mp\omega}2$ and $t=2r$, these contribute a constant together
+with the causal kernel $-2\cosh(\omega r)\,e^{-r/2}(1-e^{-2r})^{-1}$ at
+separation $r$. At $\omega=0$ and $p=i\tau$ the multiplier is
+$\operatorname{Re}\psi(\frac14+\frac{i\tau}2)-\log\pi$, the first term of
+\eqref{eq:rh-central}.
+
+\emph{The pole factors.} The four simple poles of $a_\omega$ at
+$p=\pm\frac12\pm\omega$ have causal kernel
+$4\cosh(\omega x)\cosh(x/2)\mathbf1_{x>0}$, which under
+$\operatorname{Re}\langle g,\cdot\,g\rangle$ becomes
+$2\cosh(\omega(x-y))\cosh\!\big(\frac{x-y}2\big)$; at $\omega=0$ this is
+$2|C(g)|^2-2|S(g)|^2$, the contact and pole term of \eqref{eq:rh-central}.
+
+Collecting the three, the off-diagonal kernel of $Q_{\omega,L}$ away from the
+prime atoms is $\cosh(\omega(x-y))R(|x-y|)$ with $R$ as in
+\eqref{eq:rh-shift-form}, and each prime atom carries
+$-\Lambda(n)n^{-1/2}\cosh(\omega\log n)$. Both are the $\omega=0$ kernels
+multiplied by $\cosh(\omega\cdot)$, which is \eqref{eq:rh-hyperbolic} seen on the
+kernel side, and both leave the diagonal unchanged since $\cosh0=1$.
+
+\paragraph{The pole term is invisible on the imaginary axis.}
+The causal definition on $\operatorname{Re}p=\eta>1$ is not a technical
+convenience here. At $p=i\tau$,
+\[
+\operatorname{Re}\left[\frac2{p-1/2}+\frac2{p+1/2}\right]
+=\frac{2\cdot\frac12}{\frac14+\tau^2}+\frac{2\cdot(-\frac12)}{\frac14+\tau^2}=0 ,
+\]
+identically in $\tau$. Reading $a_\omega$ as a Fourier multiplier on the
+imaginary axis therefore recovers the archimedean term and the prime delays and
+\emph{loses the contact and pole term entirely}. The pole factors reach
+$Q_{\omega,L}$ only through the right-half-plane Laplace realization above.
 
 \paragraph{The gamma kinetic term as an infinitesimal shift response.}
 Isolating the gamma and $\pi$ factors of $K_\omega$ gives

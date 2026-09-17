@@ -1,0 +1,253 @@
+\section{Conditions on a mechanism}\label{sec:conditions}
+
+A candidate arising from this picture inherits the necessary conditions the
+companion investigation has accumulated \cite{Selection}. We do not restate their
+derivations; the table records which bear on a flow, and what this paper has
+added to each.
+
+\begin{center}
+\begin{tabular}{@{}p{0.28\textwidth}p{0.64\textwidth}@{}}
+\toprule
+Inherited condition & Bearing, after this paper\\
+\midrule
+Reflection invariance & The flow must commute with $x\mapsto-x$; the involution is
+the functional equation, which is also what makes
+Proposition~\ref{prop:unimodular} true.\\
+Unboundedness relative to $L^2$ & Now a statement about \emph{time}: by
+Proposition~\ref{prop:groupdelay} the delay grows like $\log\tau$, so a packet at
+frequency $N$ is held for $\sim\log N$. Condition~\ref{cond:bilinear} restates the
+exclusion in the form a candidate can fail.\\
+Spectral weight and channel tower & The archimedean multiplier \emph{is} the group
+delay (Proposition~\ref{prop:groupdelay}), so the density identity is no longer an
+input to be matched but a property of a phase.\\
+Criticality & Section~\ref{sec:region}: the flow formulation inherits it. A bound
+at fixed $\omega$ buys a zero-free strip of width $\omega$ and no more.\\
+Jump structure & Realized on the connection by \eqref{eq:atomic}: the atoms of the
+kernel are the prime periods.\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+Three conditions are specific to the deformation picture. They are
+\emph{proposals}: each is elementary, none has been tested against a specific
+theory, and the third carries an identification hypothesis this program
+deliberately does not make.
+
+\subsection{The object is a bilinear, not a character}
+
+\begin{condition}[Bilinear endpoints, and a delay test]\label{cond:bilinear}
+The object must be a bilinear in unbounded endpoint operators joined by a
+transport --- not a character --- and its group delay must grow like $\log\tau$
+with smooth part $2\theta'(\tau)$.
+\end{condition}
+
+The first clause names a class and the second is the test. The exclusion behind
+the clause is worth restating precisely, because it is narrower than it looks. A
+holonomy valued in a compact group, in a finite-dimensional representation, is
+unitary, so its character is a bounded function and every pairing assembled from
+it is bounded on $L^2(I_L)$ --- excluded by the unboundedness rule. That argument
+uses only that the object is a \emph{trace of a group element}. It is also the
+structural reason the conformal Wilson benchmark of \cite{Selection} failed:
+$2\cos\theta$ is bounded \emph{because} it is a character of $SU(2)$ in the
+fundamental, not by accident of that benchmark.
+
+An \emph{open} Wilson line is not a character. In the construction of
+\cite{OWL} the operator is
+\[
+ OW_i^{\,j}[\tilde C]=\bar\psi^{\,j}(x_j)\;
+ P\exp\!\left[\int_{\tilde C}\!ds\,\Big(iA_\mu\dot x^\mu
+ +n^k(s)\Phi_k\,|\dot x|\Big)\right]\psi_i(x_i),
+\]
+a bilinear in matter fields joined by a Wilson line, the endpoint fields
+transforming in the fundamental and antifundamental so that the contraction is
+gauge invariant. Its endpoints carry operator-valued distributions, so the object
+is unbounded by construction and the character argument has nothing to act on.
+\textbf{The condition is satisfied structurally rather than evaded}, which is why
+it is stated here as a prescription rather than a prohibition.
+
+Two further remarks connect that construction to Section~\ref{sec:endpoint}.
+First, the geometry matches: the supersymmetric configuration of \cite{OWL} in
+the defect theory is a \emph{ray ending on a defect}, one end pinned and one end
+free, and Proposition~\ref{prop:endpoint} found the variation to be rank one at
+the leading end only, the trailing one killed by causality --- with the boundary
+value of the evolved field as the coefficient, which in the open Wilson line is
+the endpoint field itself. Second, the obstruction of Proposition~\ref{prop:trace}
+is, in that language, the ordinary fact that a field at a point is a distribution
+and must be smeared; Condition~\ref{cond:marginal} fixes the profile.
+
+Note also that $V_{\omega,L}$ is not unitary --- it is a contraction and the
+object of interest is its defect \eqref{eq:defect} --- so the transport to be
+matched is not anti-Hermitian either.
+
+\subsection{The non-commutativity must be made visible}
+
+\begin{condition}[Visible transverse structure]\label{cond:visible}
+A mechanism must supply a reason for the holonomy to see the non-commutativity of
+Proposition~\ref{prop:algebra}: either a domain that is not simply connected, or a
+failure of the connection to exist.
+\end{condition}
+
+This replaces the weaker demand of Remark~\ref{rem:cost}, which asked only for
+non-commutativity transverse to $\omega$. That exists
+(Proposition~\ref{prop:algebra}); what it lacks is visibility
+(Proposition~\ref{prop:flat}). Problems~\ref{prob:trace} and \ref{prob:curvature}
+are the two forms the condition can take.
+
+\subsection{Marginal short distance: effective dimension one half}
+
+\begin{condition}[Marginality]\label{cond:marginal}
+Suppose the line's parameter is identified with the arithmetic coordinate $x$.
+Since $\gammak(r)=\frac1{2r}+O(1)$ as $r\downarrow0$ by \eqref{eq:gamma-kernel},
+\eqref{eq:gamma-energy} gives
+\[
+ K[F]=\frac12\iint|F(x)-F(y)|^2\gammak(|x-y|)\dd x\dd y
+ \sim\frac14\iint\frac{|F(x)-F(y)|^2}{|x-y|}\dd x\dd y
+\]
+near the diagonal: the Gagliardo seminorm at the borderline exponent $s=0$. An
+insertion on the line reproducing this must have two-point function $|x-y|^{-1}$,
+an effective defect dimension $\Delta=\frac12$, with the coefficient fixed.
+\end{condition}
+
+This excludes the first thing one would try. The displacement operator of a line
+defect has protected dimension $\Delta=2$, fixed by the Ward identity that defines
+it, and the standard protected scalar insertions on a supersymmetric Wilson line
+have $\Delta=1$ \cite{GiombiKomatsu,CHMS}. \emph{So the deformation whose
+generator matches is not the displacement operator}, which is what a deformation
+of the contour would naively produce.
+
+\begin{remark}[The principal series, and why everything here is marginal]
+\label{rem:principal}
+There is one reading under which Condition~\ref{cond:marginal} is not an accident.
+For a one-dimensional conformal system the dilatation eigenvalue is the conformal
+weight, and the unitary principal series of $SL(2,\R)$ is $\Delta=\frac12+i\tau$
+with $\tau$ real --- the critical line. In that reading the zeros are
+principal-series data, the shift $\omega$ moves off the unitary line, which is the
+detection threshold of Corollary~\ref{cor:graded}, and the Riemann hypothesis is
+the statement that nothing leaves it. Condition~\ref{cond:marginal}'s
+$\Delta=\frac12$ is then the \emph{edge} of the principal series, the most
+marginal unitary weight there is, which would explain the coincidence of
+Remark~\ref{rem:marginal}: the Gagliardo borderline, the transfer's
+$(2+|\tau|)^{-1/2}$ gain and the trace threshold $r>\frac12$ are three faces of
+one exponent. Section~\ref{subsec:conformal} supplies the missing motivation: on a ray, the
+Mellin variable is the dilation eigenvalue and $s=\Delta+i\tau$, so
+$\Delta=\frac12$ puts it on the critical line --- and $\frac12$ is what
+Condition~\ref{cond:marginal} requires for an unrelated reason. The identification
+of the arithmetic coordinate with $\log r$ is therefore \emph{derived from a
+symmetry match} rather than assumed: if one asks for a geometry whose residual
+conformal symmetry is the Weil form's exact symmetry group, the ray with a defect
+at one end is that geometry. \emph{The program's caveat is not removed --- this
+remains an identification --- but there is now a reason to make it. The
+neighbourhood, conformal quantum mechanics and the zeros, is crowded.}
+\end{remark}
+
+\subsection{Conformal symmetry: the form already has it}\label{subsec:conformal}
+
+It is natural to ask whether the conformal symmetry of Yang--Mills could be used
+to compactify and tame the infinities of the problem. The answer is better than
+the question expects, and it corrects a claim made in version 0.2 of this
+manuscript.
+
+\paragraph{The form's exact symmetry group is a conformal one.}
+Every term of \eqref{eq:target} is either a multiple of $\lVert f\rVert^2$ or an
+integral against a kernel depending on $x-y$, so the Weil functional is invariant
+under $f\mapsto f(\cdot-a)$, exactly and unconditionally --- the Toeplitz
+structure the companion investigation's numerics exploit. Write $x=\log r$, so
+that the arithmetic coordinate is the logarithm of a radial coordinate on a ray.
+
+\begin{center}
+\begin{tabular}{@{}lll@{}}
+\toprule
+in $x$ & in $r$ & status for the Weil form\\
+\midrule
+translation $x\mapsto x+a$ & dilation $r\mapsto\lambda r$ & exact symmetry\\
+reflection $x\mapsto-x$ & inversion $r\mapsto1/r$ & exact symmetry (rule 1)\\
+dilation $x\mapsto\lambda x$ & $r\mapsto r^\lambda$ & not a symmetry, and not conformal\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+The Möbius maps of the line preserving $\{0,\infty\}$ are exactly
+$r\mapsto\lambda r$ and $r\mapsto\mu/r$, so the stabilizer of a ray's two
+endpoints is generated by dilation and inversion --- and the Weil form is
+invariant under all of it. The special conformal generators move the endpoints
+and are broken by the configuration, not by the form. Hence:
+
+\begin{center}
+\emph{the Weil form's exact symmetry group is precisely the residual conformal
+group of a ray with one end pinned at the origin and the other at infinity,}
+\end{center}
+
+which is the configuration of \cite{OWL}. Both halves of that symmetry were
+already program facts; what is new is that they are the stabilizer of a geometry.
+
+\paragraph{Correction.} Version 0.2 argued here that exact scale invariance is
+incompatible with the target, citing the exclusion of \cite{ExclusionMap} that
+dilation destroys the prime atoms. That exclusion concerns dilation \emph{in
+$x$}, which is $r\mapsto r^\lambda$ and is not a Möbius map. Under the conformal
+dilation $r\mapsto\lambda r$ the atoms sit at fixed \emph{ratios}
+$r_2/r_1=p^m$ and are preserved. In the ray picture the Weil form has no absolute
+scale to protect, and conformal invariance is not in conflict with it. What the
+atoms require is a preferred set of ratios, which is a statement about the
+spectrum of dimensions rather than about scale: in Mellin variables the prime
+part carries weight $-\zeta'/\zeta$, a continuum, and a conformal system with a
+continuous spectrum of dimensions is exactly what the principal series is. The
+demand is therefore not \emph{break conformal invariance} but \emph{carry this
+continuum of dimensions}, which is sharper and more useful. We do not challenge
+the exclusion of \cite{ExclusionMap} in its own setting, where the relevant
+dilation is the field theory's own.
+
+\paragraph{Positivity is a conformal-orbit invariant.}
+\begin{proposition}[Congruence]\label{prop:congruence}
+If $M$ is invertible on the form domain then $Q\succeq0$ if and only if
+$M^*QM\succeq0$. A conformal reparametrization acts on a weight-$\Delta$ kernel
+by congruence with multiplication by a positive power of the Jacobian, so
+positivity of the target is invariant along its conformal orbit.
+\end{proposition}
+This is Sylvester's law of inertia. Since the criterion asks only for a sign, any
+member of the conformal orbit of $Q_L$ is an equally good target, and the
+ray-to-semicircle map of \cite{OWL} is not merely a reframing: the semicircle
+form is a genuinely different quadratic form with the same positivity content, on
+a \emph{compact} contour. The program already uses one congruence of this kind,
+the compression presentation $Q_L=K_+-T_L$ read as $T_L\preceq K_+$; conformal
+congruences are a second, geometrically natural class that has not been used.
+
+Two guards. The freedom is vacuous if the class is unrestricted, since every
+positive form is congruent to the identity --- any use must name the class in
+advance. And the Jacobian of the ray-to-semicircle map \emph{degenerates at the
+endpoints}, so the congruence is boundedly invertible in the interior and fails
+exactly where Proposition~\ref{prop:trace} already obstructs. Whether that
+degeneration softens the endpoint or leaves the form domain is open, and it is the
+first thing to check if this route is pursued.
+
+\paragraph{What compactifies.} The spectral infinity does, and the
+compactification is already in hand: the conformal map of the right half-plane to
+the disc is the Cayley transform of Proposition~\ref{prop:cayley}, under which
+$K_\omega$ becomes an inner function of the disc whose zeros accumulate at one
+boundary point, the logarithmically divergent delay of
+Proposition~\ref{prop:groupdelay} being exactly that accumulation. The length
+infinity does too, by the ray-to-semicircle map. What does not is
+Proposition~\ref{prop:trace}, a short-distance statement invariant under
+reparametrization; and Corollary~\ref{cor:graded}, a statement about the zero set
+of $\xi$, so compactifying moves its content to a boundary point without removing
+it.
+
+\paragraph{The vanishing theorem, read the other way.}
+\cite{OWL} finds that in non-superconformal $\mathcal N=2$ theories with
+fundamental hypermultiplets all BPS open Wilson lines have vanishing expectation
+value, nontrivial protected operators appearing only in the superconformal case.
+Version 0.2 read this as a trap. It is not: superconformality is available and is
+not in conflict with the target, because the target's exact symmetry group is the
+residual conformal group of the geometry in which those operators live. That
+makes the superconformal defect setting the natural place to run the test of
+Condition~\ref{cond:bilinear}, rather than a place where it was expected to fail
+for structural reasons.
+
+\paragraph{Where the ratios could come from.} Not from a single conformal defect,
+which preserves dilations about a point on it and therefore fixes no ratio.
+Ratios are \emph{separations}: the atoms sit at $r_2/r_1=p^m$, so what is wanted
+is a spectrum of dimensions carrying weight $-\zeta'/\zeta$, equivalently a
+structure invariant under $r\mapsto\lambda r$ but distinguishing the ratios
+$p^m$. That is \eqref{eq:atomic} in geometric dress, with the punctures at
+integer ratios, and it is the same statement as Condition~\ref{cond:visible}. The
+named object in that direction is the Bost--Connes system \cite{BostConnes}; we
+record where the structure lives and do not enter that literature.

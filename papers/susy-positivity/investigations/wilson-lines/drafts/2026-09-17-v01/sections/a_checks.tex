@@ -1,0 +1,54 @@
+\section{Checks}\label{app:checks}
+
+One program,
+\begin{center}
+\texttt{numerics/check\_causal\_commutation.py},\qquad
+\texttt{numerics/records/causal-commutation-checks.json},
+\end{center}
+the second being its preserved record. It uses the standard library only and prints JSON to standard output. Exact rational
+arithmetic is labelled separately from floating-point work. Counts refer to
+finite test cases, not to independent theorems, and none of the checks is a
+positivity certificate.
+
+\begin{center}
+\begin{tabular}{@{}p{0.32\textwidth}p{0.60\textwidth}@{}}
+\toprule
+Group & What is verified\\
+\midrule
+Multiplicativity of truncation &
+Lemma~\ref{lem:multiplicative} as a finite matrix identity,
+$P_LAP_LBP_L=P_LABP_L$, in exact rational arithmetic, for randomly generated
+causal kernels at several truncation sizes.\\
+Commutation, and its cause &
+$[A,B]=0$ for truncated causal convolutions, in exact rational arithmetic
+(Theorem~\ref{thm:abelian}, Remark~\ref{rem:toeplitz}); and the control that
+truncated \emph{non}-causal convolutions have commutators bounded away from
+zero, so that causality is what the lemma uses.\\
+The causal pole kernel &
+That $4\cosh(\omega x)\cosh(x/2)\mathbf1_{x>0}$, symmetrized by
+\eqref{eq:symmetrize}, equals
+$2\cosh(\omega(x-y))\cosh(\frac{x-y}2)$, and at $\omega=0$ equals $P_L$ of
+\eqref{eq:poles} in the form $2|C(f)|^2-2|S(f)|^2$
+(Theorem~\ref{thm:kernel}, Remark~\ref{rem:imaginary}).\\
+Vanishing on the imaginary axis &
+That $\re[2(p-\frac12)^{-1}+2(p+\frac12)^{-1}]=0$ at $p=i\tau$, exactly, over a
+grid of $\tau$ (Remark~\ref{rem:imaginary}).\\
+The hyperbolic identity &
+Proposition~\ref{prop:hyperbolic} as a finite matrix identity: the
+$\cosh(\omega(x-y))$-weighted form equals
+$Q_{0,L}[\cosh(\omega X)f]-Q_{0,L}[\sinh(\omega X)f]$ on a discretized kernel,
+at several $\omega$ and $L$.\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+Run from the investigation directory:
+\begin{verbatim}
+python3 numerics/check_causal_commutation.py
+python3 validation/drafts.py check --replay
+\end{verbatim}
+
+The checks verify finite algebra underlying the identities of
+Sections~\ref{sec:generator}--\ref{sec:hyperbolic}. They do not verify the
+convergence arguments in the proof of Theorem~\ref{thm:kernel}, which are
+analytic, nor Proposition~\ref{prop:trace}, which is a statement about domains.

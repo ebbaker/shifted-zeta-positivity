@@ -1,0 +1,254 @@
+\section{The endpoint direction}\label{sec:endpoint}
+
+Theorem~\ref{thm:abelian} sends us transverse to $\omega$, and the proposal's own
+phrase --- the variation of the endpoints --- names the direction. The compression
+$P_L$ is not in the commutative algebra: the projections commute with one
+another, but not with the transfers. Proposition~\ref{prop:flux} has already
+identified the leading endpoint as the point through which the contraction
+defect's flux passes; this section finds the same point from the geometry, works
+out the algebra there, and reaches the object the investigation is left with.
+
+\subsection{The variation is rank one, at the leading endpoint}
+
+Let $V_\omega$ denote the uncompressed causal transfer, so that
+$V_{\omega,L}f=P_LV_\omega f$ for $f$ supported in $I_L$. Fix
+$f\in C_c^\infty(I_{L_0})$ and let $L>L_0$, so that $f$ is held fixed while the
+interval grows.
+
+\begin{proposition}[Endpoint variation]\label{prop:endpoint}
+For $L>L_0$ and $f\in C_c^\infty(I_{L_0})$,
+\begin{equation}\label{eq:endpoint}
+ \frac{\partial}{\partial L}\big(V_{\omega,L}f\big)
+ =\tfrac12\,\big(V_\omega f\big)(L/2)\;\delta_{L/2},
+\end{equation}
+a rank-one variation supported at the single point $x=L/2$, whose coefficient is
+the boundary value of the evolved field. Equivalently
+$\partial_LV_{\omega,L}=B_LV_{\omega,L}$ with
+$B_L=\frac12\,\delta_{L/2}\otimes\mathrm{ev}_{L/2}$.
+\end{proposition}
+
+\begin{proof}
+$V_{\omega,L}f=\mathbf1_{I_L}\cdot(V_\omega f)$ and
+$\partial_L\mathbf1_{(-L/2,L/2)}=\frac12(\delta_{L/2}+\delta_{-L/2})$, so the
+variation has the two endpoint terms. Causality kills the second: $f$ is
+supported in $I_{L_0}$ and the kernel of $V_\omega$ is supported in
+$[0,\infty)$, so $\supp V_\omega f\subseteq[-L_0/2,\infty)$ and
+$(V_\omega f)(-L/2)=0$ for $L>L_0$. The surviving coefficient is the boundary
+value of $V_{\omega,L}f$ from inside, since $V_\omega f$ and $V_{\omega,L}f$
+agree on $I_L$.
+\end{proof}
+
+Equation \eqref{eq:endpoint} is exactly the endpoint equation of a line: the
+variation is local, it sits at the moving end, and its coefficient is the
+transported field there. The tail is fixed and the head moves, which is what
+causality means here. This is the closest structural match the proposal has, and
+it is not an analogy: the two statements have the same form.
+
+\begin{remark}[The qualification, and it matters]\label{rem:pathqualification}
+Proposition~\ref{prop:endpoint} is a \emph{partial} derivative, at fixed
+$\omega$; the reason the endpoint term is the whole of it is that $V_\omega$
+carries no $L$, so all the $L$-dependence sits in the indicator. Along a path
+$t\mapsto(\omega(t),L(t))$ the chain rule gives
+\[
+ \frac{d}{dt}V_{\omega,L}
+ =\big(\dot L\,B_L-\dot\omega\,G_{\omega,L}\big)V_{\omega,L},
+\]
+whose second term is the full causal generator --- non-local, carrying the prime
+atoms. \textbf{Along a path the motion is endpoint \emph{plus bulk}}, and the
+picture of a dragged endpoint describes one direction of the plane only. What
+survives without qualification is the stronger, non-differential statement
+\eqref{eq:flux}: the defect \emph{itself} is a boundary flux at every
+$(\omega,L)$.
+
+That is also the two-term structure a deformed Wilson line has in the first
+place, an endpoint term and a shape term. Theorem~\ref{thm:abelian} removed the
+shape term in the $\omega$-direction alone; the mixed motion puts a second term
+back, and Section~\ref{subsec:algebra} shows it does not commute with the first.
+\end{remark}
+
+\subsection{The algebra at the endpoint, and flatness}\label{subsec:algebra}
+
+It is tempting to expect a curvature in the $(\omega,L)$ plane and to look for it
+in the mixed derivative. That expectation is wrong, and the correction is what
+sends the search somewhere else. The algebra is small enough to write down.
+
+\begin{proposition}[The endpoint algebra]\label{prop:algebra}
+With $B_L=\frac12\,\delta_{L/2}\otimes\ev_{L/2}$:
+\begin{enumerate}
+\item $\partial_\omega B_L=0$;
+\item $G_{\omega,L}B_L=0$, exactly;
+\item hence $[G_{\omega,L},B_L]=-B_LG_{\omega,L}$, which does not vanish;
+\item and $\partial_LG_{\omega,L}=B_LG_{\omega,L}$.
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+(i) $B_L$ is built from the geometry of the interval and carries no shift.
+(ii) $G_{\omega,L}B_Lf$ is a multiple of $P_L(g_\omega*\delta_{L/2})$, and
+$(g_\omega*\delta_{L/2})(x)=g_\omega(x-L/2)$ vanishes for $x<L/2$ because
+$g_\omega$ is causal, hence vanishes on $I_L$ up to a null set: the endpoint
+operator injects at the leading edge and a causal generator transports only to
+the right of it, which is outside the interval. (iii) is immediate from (ii),
+and $B_LG_{\omega,L}f=\frac12(g_\omega*f)(L/2)\delta_{L/2}$ is not zero.
+(iv) $G_{\omega,L}f=\mathbf1_{I_L}\cdot(g_\omega*f)$ for $f$ supported in
+$I_{L_0}$ and $L>L_0$, so differentiating the indicator as in
+Proposition~\ref{prop:endpoint} gives
+$\partial_L(G_{\omega,L}f)=\frac12(g_\omega*f)(L/2)\delta_{L/2}$, which is
+$B_LG_{\omega,L}f$.
+\end{proof}
+
+The commutator is \emph{one-sided}: the pair generates a triangular rather than a
+commutative algebra. So the non-commutativity that Remark~\ref{rem:cost} demanded
+transverse to $\omega$ does exist. What it does not do is produce a curvature.
+
+\begin{proposition}[Flatness]\label{prop:flat}
+On the range of the two-parameter family, wherever $V_{\omega,L}f$ is twice
+continuously differentiable in $(\omega,L)$,
+\begin{equation}\label{eq:flat}
+ \partial_\omega B_L+\partial_LG_{\omega,L}+[G_{\omega,L},B_L]=0 .
+\end{equation}
+\end{proposition}
+
+\begin{proof}
+Mixed partial derivatives of $V_{\omega,L}f$ commute; substituting
+$\partial_\omega V_{\omega,L}=-G_{\omega,L}V_{\omega,L}$ from \eqref{eq:flow} and
+$\partial_LV_{\omega,L}=B_LV_{\omega,L}$ from Proposition~\ref{prop:endpoint}
+and collecting terms gives \eqref{eq:flat} applied to $V_{\omega,L}f$.
+Alternatively, and this is the content of the identity, substitute
+Proposition~\ref{prop:algebra}: (i) kills the first term and (iii) turns the
+third into $-B_LG_{\omega,L}$, so \eqref{eq:flat} \emph{is} (iv).
+\end{proof}
+
+So the pair $(-G_{\omega,L}\dd\omega,\,B_L\dd L)$ is a non-abelian but
+\textbf{flat} connection wherever it is a connection at all, and the flatness is
+not an extra hypothesis but the explicit identity
+$\partial_LG_{\omega,L}=B_LG_{\omega,L}$: the generator's own $L$-variation is its
+boundary value. There is no local curvature to compute and no surface term to
+extract, and on a simply connected parameter domain the holonomy of a flat
+connection depends on the endpoints alone. Appendix~\ref{app:checks} verifies
+(ii), (iii) and the integrated form of (iv) as exact finite algebra.
+
+\subsection{The connection does not close, and it misses by exactly the borderline}
+
+Proposition~\ref{prop:endpoint} holds on the core $C_c^\infty(I_L)$, where
+$V_\omega f$ is smooth because $\widehat f$ decays rapidly. It does not extend to
+the form domain.
+
+\begin{proposition}[No form-bounded endpoint evaluation]\label{prop:trace}
+$B_L$ is not bounded relative to $Q_{0,L}$, at any $0\leq\omega\leq\frac12$.
+\end{proposition}
+
+\begin{proof}[Proof sketch]
+$B_L$ is built from $\mathrm{ev}_{L/2}$, and a point evaluation on $\R$ is
+bounded on $H^r$ only for $r>\frac12$. The form domain is
+$\mathcal D_{\log,L}$ of Definition~\ref{def:generator}, whose multiplier
+$b(\tau^2)=\log|\tau|+O(1)$ is only logarithmically stronger than $L^2$; it is
+contained in no $H^r$ with $r>0$ and carries no trace operator, which is also why
+the natural closed domain of the archimedean energy has no trace condition
+\cite{InverseBulk}. The transfer does not repair this: the bound
+$|K_\omega(\eta+i\tau)|\leq C_\eta(2+|\tau|)^{-\omega}$ of \cite{Background}
+gives $V_\omega$ a smoothing gain into $H^r$ for $0<r<\min(\omega,\frac12)$ only,
+which is strictly below the trace threshold for every admissible shift, the
+endpoint $\omega=\frac12$ included.
+\end{proof}
+
+\begin{remark}[A third marginality at the same exponent]\label{rem:marginal}
+The failure in Proposition~\ref{prop:trace} is not by a wide margin; it is
+exactly borderline. Three separate quantities in this program sit at the same
+exponent and on the wrong side of it: the archimedean kernel
+$\gammak(r)\sim\frac1{2r}$ makes $K$ the Gagliardo seminorm at $s=0$, the
+borderline of the scale, so the form domain is only logarithmically better than
+$L^2$; the transfer gains at most $(2+|\tau|)^{-1/2}$; and a trace needs
+$r>\frac12$. We record the coincidence and do not explain it. Whether it is one
+fact seen three times is Problem~\ref{prob:trace}.
+\end{remark}
+
+\subsection{The primes are the atoms of the connection}\label{subsec:atoms}
+
+The proof of Theorem~\ref{thm:kernel} decomposes the kernel of $G_{\omega,L}$
+into a continuous part and an atomic part:
+\begin{equation}\label{eq:atomic}
+\begin{aligned}
+ g_\omega(t)&=g_\omega^{\rm cont}(t)+g_\omega^{\rm at}(t),\qquad t>0,\\
+ g_\omega^{\rm cont}(t)&=4\cosh(\omega t)\cosh(t/2)
+   -2\cosh(\omega t)\gammak(t)+\mathrm{const},\\
+ g_\omega^{\rm at}(t)&=-2\sum_{n\geq2}\Lambda(n)n^{-1/2}
+   \cosh(\omega\log n)\,\delta_{\log n},
+\end{aligned}
+\end{equation}
+the atoms sitting at the prime periods $m\log p$ with masses
+$2(\log p)p^{-m/2}\cosh(\omega m\log p)$. This is the L\'evy decomposition that
+the companion investigation's ninth selection rule requires of any source
+\cite{Selection}, and it is here a property of the connection rather than of a
+prepared state.
+
+Read along the line, an atomic connection is a connection with \emph{punctures}:
+the holonomy of the segment is an ordered product of one local factor per atom
+crossed, times the contribution of the continuous part. That is precisely the
+periodic-orbit structure the program's own analysis says the primes demand and
+which a short-distance mechanism cannot supply \cite{Bottleneck}. It is also,
+given Propositions~\ref{prop:flat} and \ref{prop:trace}, the only place left for
+the proposal's mechanism to live: a flat connection has no local curvature, but a
+flat connection on a punctured domain has monodromy, and monodromy is exactly the
+non-local, potentially non-abelian datum the proposal needs.
+
+The obstruction is stated by Theorem~\ref{thm:abelian}. The local factors at
+different atoms commute, because every object here is a convolution and the
+atomic masses are \emph{scalars}. The monodromy representation is therefore
+one-dimensional and carries no more information than the product of its masses.
+Proposition~\ref{prop:algebra} sharpens what is needed: the algebra generated by
+the bulk and endpoint directions \emph{is} non-abelian, so the missing ingredient
+is not non-commutativity but a reason for the holonomy to see it --- and by
+Proposition~\ref{prop:flat} there are exactly two, namely non-simple-connectivity
+and failure of the connection to exist.
+To make it carry more, the residues at the atoms would have to be matrix valued
+--- and the arithmetic object whose prime sum carries matrix-valued residues is
+$\operatorname{tr}\rho(\mathrm{Frob}_p)$ for a representation $\rho$. The three
+strands of Remark~\ref{rem:cost} converge on this point: the endpoint direction
+is where the geometry is, the atoms are where the primes are, and an internal
+index at the atoms is the only way to make the two non-abelian at once. We state
+this as the structural conclusion of the paper and not as a programme, since it
+changes the target from $\zeta$ to a family.
+
+\subsection{Two open problems, and why they are one}
+
+\begin{problem}[Close the endpoint flow, or show it cannot be closed]
+\label{prob:trace}
+Proposition~\ref{prop:trace} obstructs $B_L$ on the form domain while
+Proposition~\ref{prop:endpoint} defines it on a dense core. Determine whether the
+endpoint flow admits a closed realization on any domain on which $Q_{\omega,L}$ is
+also closed. Section~\ref{sec:conditions} recasts this as a smearing question,
+with the profile fixed by Condition~\ref{cond:marginal}: an endpoint operator in
+a field theory is a distribution and must be smeared, and the required effective
+dimension $\Delta=\frac12$ is the tightest smearing the domain permits.
+\end{problem}
+
+\begin{problem}[Monodromy of the punctured flow]\label{prob:curvature}
+Compute the local factor of \eqref{eq:atomic} at a single atom, as an operator on
+the core, and determine what a matrix-valued residue at that atom would have to
+satisfy for the resulting holonomy to remain a contraction in the sense of
+Proposition~\ref{prop:route}.
+\end{problem}
+
+These are not independent. Proposition~\ref{prop:algebra} says the two-parameter
+connection is non-abelian; Proposition~\ref{prop:flat} says it is flat; and a flat
+non-abelian connection on a simply connected domain where it exists has trivial
+holonomy. So there are exactly two ways for the structure found in
+Proposition~\ref{prop:algebra} to become visible, and they are precisely the two
+problems: \textbf{non-simple-connectivity}, which is the punctures of
+Section~\ref{subsec:atoms} and is Problem~\ref{prob:curvature}; and \textbf{failure
+of the connection to exist}, which is Proposition~\ref{prop:trace} and is
+Problem~\ref{prob:trace}. That is a tighter position than the investigation had
+before: the mechanism is no longer missing, it is present and trivialized, and
+there are two named ways to untrivialize it.
+
+\begin{remark}[What the $L$-direction is not]\label{rem:not-a-family}
+Two cautions, both of which this program has paid for once. First, $Q_L$ is not a
+family of functionals but one functional restricted by support, so a realization
+at fixed $L$ carries no information and an $L$-family of unrelated realizations
+proves nothing \cite{InverseBulk}. The $L$-dependence that is real is in the
+compression, which is what Proposition~\ref{prop:endpoint} differentiates.
+Second, the exclusions this program has accumulated are statements about channel
+decompositions; a flow is not a decomposition, so they neither block this
+direction nor may be quoted in its support \cite{ExclusionMap}.
+\end{remark}

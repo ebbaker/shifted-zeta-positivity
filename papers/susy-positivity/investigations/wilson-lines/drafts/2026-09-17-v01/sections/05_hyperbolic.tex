@@ -1,0 +1,73 @@
+\section{The shift is a hyperbolic rotation}\label{sec:hyperbolic}
+
+Theorem~\ref{thm:kernel} has an immediate consequence that identifies the shift
+geometrically. Let $X$ be multiplication by $x$, so that $\cosh(\omega X)$ and
+$\sinh(\omega X)$ map $C_c^\infty(I_L)$ to itself.
+
+\begin{proposition}[Hyperbolic form of the shift]\label{prop:hyperbolic}
+For $0\leq\omega\leq\frac12$ and $f\in C_c^\infty(I_L)$,
+\begin{equation}\label{eq:hyperbolic}
+ Q_{\omega,L}[f]=Q_{0,L}\big[\cosh(\omega X)f\big]
+ -Q_{0,L}\big[\sinh(\omega X)f\big].
+\end{equation}
+\end{proposition}
+
+\begin{proof}
+Write $g_c=\cosh(\omega X)f$, $g_s=\sinh(\omega X)f$, $G_c=E_Lg_c$,
+$G_s=E_Lg_s$, and evaluate \eqref{eq:target} on each, term by term. For the
+norms, $|\!\cosh(\omega x)|^2-|\!\sinh(\omega x)|^2=1$ pointwise, so
+$\norm{g_c}^2-\norm{g_s}^2=\norm f^2$; this disposes of the contact term and of
+the $2\norm F^2$ inside \eqref{eq:gamma-energy}. For a translation, at any
+$r$,
+\begin{align*}
+ \re\ip{G_c}{U_rG_c}-\re\ip{G_s}{U_rG_s}
+ &=\re\int\big[\cosh(\omega x)\cosh(\omega(x-r))\\
+ &\qquad\qquad-\sinh(\omega x)\sinh(\omega(x-r))\big]
+   \overline{F(x)}F(x-r)\dd x\\
+ &=\cosh(\omega r)\,\re\ip F{U_rF},
+\end{align*}
+by the addition formula $\cosh a\cosh b-\sinh a\sinh b=\cosh(a-b)$. Applying this
+at $r$ inside the $\gammak$ integral and at $r=m\log p$ in the prime sum
+reproduces the first and last lines of \eqref{eq:shifted-target}. For the pole
+form, $P_L[g]=2\iint\cosh(\frac{x-y}2)\overline{g(x)}g(y)$, and the same addition
+formula applied to $\cosh(\omega x)\cosh(\omega y)-\sinh(\omega x)\sinh(\omega y)
+=\cosh(\omega(x-y))$ reproduces the third line. Each difference is computed
+inside a convergent integral, so no regularization is needed. Summing gives
+\eqref{eq:shifted-target}, which is $Q_{\omega,L}[f]$ by
+Theorem~\ref{thm:kernel}.
+\end{proof}
+
+Equation \eqref{eq:hyperbolic} is (1.10) of \cite{Background}; the proof above
+derives it from the generator rather than from a kernel expansion, which is what
+makes the next remark available.
+
+\begin{remark}[The shift is an angle, not a coupling]\label{rem:angle}
+The pair $(\cosh(\omega X),\sinh(\omega X))$ is a hyperbolic rotation by angle
+$\omega$ with generator $X$. Two consequences are worth stating.
+
+First, the shift is a \emph{geometric} deformation of the input, not a change of
+coefficients, so it is the kind of parameter a line can carry. In gauge theory
+the natural object with a hyperbolic angle attached to a line is a \emph{cusp};
+this is where we would look first among specific theories, and the differential
+equation a cusped line's expectation satisfies in its angle has exactly the
+shape the proposal asks for \cite{CHMS}.
+
+Second, the parameter is not free. A cusp angle is a geometric datum of the
+contour, so a mechanism built on it cannot be dialled to fit; that is the
+property the program wants, since any mechanism with a tunable margin uniform in
+$L$ proves something false \cite{Selection}. The obstruction to state plainly is
+one of type: a cusp anomalous dimension is a number, while $Q_{\omega,L}$ is a
+form on an infinite-dimensional input space, so a line carrying it must carry an
+infinite-dimensional label. This is Condition~\ref{cond:unbounded} below.
+\end{remark}
+
+\begin{remark}[Positivity at positive shift is a different statement]
+\label{rem:not-criterion}
+Proposition~\ref{prop:hyperbolic} exhibits $Q_{\omega,L}$ as a \emph{difference}
+of two central energies. Nonnegativity of each does not give nonnegativity of the
+difference, so positivity of the shifted form at all shifts is strictly stronger
+than the criterion \eqref{eq:criterion} and is not implied by the Riemann
+hypothesis. The route of Proposition~\ref{prop:route} does not require it: what
+it requires is $\norm{V_{\omega_j,L_j}}\leq1$, a statement about the cumulative
+defect \eqref{eq:storage} rather than about its integrand.
+\end{remark}
