@@ -1,0 +1,148 @@
+\section{Inside the gap there is no lattice}\label{sec:pointcount}
+
+Section~\ref{sec:rank} put a rank-$m$ lattice at every integer $m\ge2$ and the
+family in the first gap $m\in(1,2]$. This section shows that the lattice does not
+interpolate into the gap, and identifies exactly what stops it.
+
+\subsection{The interpolation exists and is forced}\label{sec:interpolation}
+
+Write $q=e^{-\pi t}$ and $\theta=\sum_{k\in\Z}q^{k^{2}}=1+u$ with
+$u=2q+2q^{4}+2q^{9}+\dots$, and for $j\ge1$ let $R_j(n)$ be the number of
+\emph{ordered} $j$-tuples of \emph{positive} squares summing to $n$, so that
+$u^{j}=\sum_n2^{j}R_j(n)q^{n}$. Let
+\begin{equation}\label{eq:smin}
+ s(n)=\min\{j:R_j(n)>0\}
+\end{equation}
+be the least number of positive squares summing to $n$.
+
+\begin{proposition}[The interpolation {\cite[Prop.~3.1]{RankNote}}]\label{prop:interp}
+$\theta$ does not vanish on the upper half-plane, so $\theta^{m}=\exp(m\log\theta)$
+is well defined there for every real $m$, and
+\begin{equation}\label{eq:rmn}
+ \theta^{m}=\sum_{j\ge0}\binom mj u^{j},\qquad
+ r_m(n)=\sum_{j=1}^{n}\binom mj\,2^{j}\,R_j(n),
+\end{equation}
+the sum terminating because $R_j(n)=0$ for $j>n$. Each $r_m(n)$ is a polynomial
+in $m$ of degree at most $n$ which at every integer $m\ge0$ is the representation
+number of $\Z^{m}$; being of degree $\le n$ and matching at $m=0,\dots,n$, it is
+the unique such interpolation.
+\end{proposition}
+
+\subsection{The sign law, the free region, and the forcing}\label{sec:signlaw}
+
+\begin{proposition}[The sign law]\label{prop:signlaw}
+Let $k\ge0$ be an integer and $m\in(k,k+1)$. Then
+\begin{equation}\label{eq:signlaw}
+ \sgn\binom mj=(-1)^{\max(0,\;j-k-1)},
+\end{equation}
+that is: $\binom mj>0$ for $1\le j\le k+1$, $\binom m{k+2}<0$, and the sign
+alternates thereafter. No $\binom mj$ vanishes.
+\end{proposition}
+
+\begin{proof}
+$\binom mj=\frac1{j!}\prod_{i=0}^{j-1}(m-i)$, and for integer $i$ one has
+$m-i<0$ exactly when $i\ge k+1$; among $i=0,\dots,j-1$ the number of such $i$ is
+$\max(0,j-1-k)$. None vanishes because $m$ is not an integer.
+\end{proof}
+
+\begin{proposition}[The free region]\label{prop:free}
+For $m\in(k,k+1)$ and $1\le n\le k+1$, $r_m(n)>0$.
+\end{proposition}
+
+\begin{proof}
+$R_j(n)=0$ for $j>n$, so every contributing $j$ satisfies $j\le n\le k+1$ and has
+$\binom mj>0$ by Proposition~\ref{prop:signlaw}; and $R_n(n)=1$, so the sum is
+not empty.
+\end{proof}
+
+So negativity can begin only at $n\ge k+2$, and the first place at which it is
+\emph{forced} --- where no positive term is present at all --- is governed by an
+arithmetic quantity.
+
+\begin{proposition}[Where the forcing lives, and where it stops]\label{prop:Nk}
+Put $N_k=\min\{n\ge1:s(n)\ge k+2\}$. Then
+\begin{equation}\label{eq:Nk}
+ N_0=2,\qquad N_1=3,\qquad N_2=7,
+\end{equation}
+with $s(N_k)=k+2$ in each case; and $N_k$ \emph{does not exist} for any $k\ge3$,
+because Lagrange's four-square theorem \cite[Thm.~369]{HardyWright} gives
+$s(n)\le4$ for every $n\ge1$.
+\end{proposition}
+
+\begin{proof}
+The three values are a finite verification. $2$ is not a square and $2=1+1$, so
+$s(2)=2$. $3$ is not a square, and $3-1=2$ is not a square, so $3$ is not a sum
+of two positive squares; $3=1+1+1$, so $s(3)=3$. $7$ is not a square; $7-1=6$ and
+$7-4=3$ are not squares, so $7$ is not a sum of two positive squares;
+$7-1-1=5$, $7-1-4=2$ and $7-4-4<0$ are not squares, so $7$ is not a sum of three
+positive squares; and $7=4+1+1+1$, so $s(7)=4$. For the last clause, Lagrange
+writes every $n$ as a sum of four squares; discarding the zero entries leaves at
+most four positive ones.
+\end{proof}
+
+\begin{proposition}[The forced coefficient]\label{prop:forced}
+For $k=0,1,2$ and every $m\in(k,k+1)$,
+\begin{equation}\label{eq:forced}
+ r_m(N_k)<0,\qquad\text{while}\qquad r_m(n)>0\ \text{ for every }1\le n<N_k .
+\end{equation}
+Explicitly $r_m(2)=2m(m-1)$, $r_m(3)=\frac43m(m-1)(m-2)$ and
+$r_m(7)=64\binom m4+128\binom m7$.
+\end{proposition}
+
+\begin{proof}
+At $n=N_k$ every contributing $j$ has $R_j(N_k)>0$, hence $j\ge s(N_k)=k+2$, so
+every term carries a binomial of the signs of
+Proposition~\ref{prop:signlaw} at or beyond $j=k+2$.
+
+For $k=0$ and $k=1$ only one $j$ contributes at all: $R_j(2)=0$ except
+$R_2(2)=1$, and $R_j(3)=0$ except $R_3(3)=1$. Hence $r_m(2)=4\binom m2$ and
+$r_m(3)=8\binom m3$, both negative on their gap.
+
+For $k=2$, $R_j(7)=0$ except $R_4(7)=4$ and $R_7(7)=1$, so
+$r_m(7)=64\binom m4+128\binom m7$ and
+\[
+ r_m(7)=m(m-1)(m-2)(m-3)\Big[\tfrac83+\tfrac8{315}(m-4)(m-5)(m-6)\Big].
+\]
+On $(2,3)$ the prefactor is negative, and $(m-4)(m-5)(m-6)\in(-24,-6)$, so the
+bracket lies in $\big(\frac83-\frac{192}{315},\ \frac83-\frac{48}{315}\big)
+\subset(2.05,2.52)$ and is positive; hence $r_m(7)<0$.
+
+For the second clause, $n\le k+1$ is Proposition~\ref{prop:free}, which settles
+$n=1$ for $k=0$, $n\le2$ for $k=1$ and $n\le3$ for $k=2$. Three cases remain, all
+on $(2,3)$. From $R_1(4)=R_4(4)=1$,
+$r_m(4)=2m+16\binom m4=2m\big[1+\frac13(m-1)(m-2)(m-3)\big]$, and
+$(m-1)(m-2)(m-3)\in(-2,0)$ there, so the bracket exceeds $\frac13$. From
+$R_2(5)=2$ and $R_5(5)=1$, $r_m(5)=8\binom m2+32\binom m5$, and on $(2,3)$ both
+binomials are positive by Proposition~\ref{prop:signlaw}. From $R_3(6)=3$ and
+$R_6(6)=1$, $r_m(6)=24\binom m3+64\binom m6$ with $\binom m3>0$ and
+$\binom m6<0$, and
+$\frac{64\binom m6}{24\binom m3}=\frac83\cdot\frac{(m-3)(m-4)(m-5)}{120}$, whose
+modulus is below $\frac83\cdot\frac6{120}=\frac2{15}<1$.
+\end{proof}
+
+\begin{corollary}[No lattice in the gap]\label{cor:nolattice}
+For every $m\in(1,2)$ --- that is, every $d$ strictly inside the family's range
+--- $\theta(it)^{m}=\sum_nr_m(n)e^{-\pi nt}$ is \emph{not} completely monotone:
+being a Laplace expansion with discrete support, its representing measure is
+forced by uniqueness to be $\sum_nr_m(n)\delta_{\pi n}$, and $r_m(3)<0$. There is
+no positive measure and hence no point set.
+\end{corollary}
+
+\begin{remark}[What the mechanism is, and what it is not]\label{rem:lagrange}
+Propositions~\ref{prop:signlaw}--\ref{prop:forced} say that the point count's
+failure is a statement about \emph{sums of squares}: on the gap $(k,k+1)$ it is
+forced by the least integer needing $k+2$ positive squares, and it stops being
+forced at $k=3$ for one reason only, Lagrange's theorem. The scan reported in
+\cite{RankNote} found the first negative coefficient at $n=2$ on $(0,1)$, $n=3$
+on $(1,2)$, $n=7$ on $(2,3)$, at varying $n$ on $(3,4)$, and none at all for
+$m\ge4$; the first three of those are now Proposition~\ref{prop:forced} and the
+last is Proposition~\ref{prop:Nk}.
+
+What is \emph{not} covered is negativity produced by competition rather than by
+forcing. On $(3,4)$ nothing is forced, yet negative coefficients occur: there the
+$j=k+2$ terms compete with positive ones instead of standing alone. Two
+statements are therefore recorded as conjectures and are not used anywhere in
+this manuscript: that $r_m(n)\ge0$ for every $n$ and every real $m\ge4$, and that
+the negative coefficients on $(3,4)$ arise from competition. Both are questions
+about sums of squares rather than about $\zeta$.
+\end{remark}

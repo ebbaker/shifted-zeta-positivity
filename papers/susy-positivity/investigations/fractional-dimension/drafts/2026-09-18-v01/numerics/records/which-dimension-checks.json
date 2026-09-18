@@ -1,0 +1,655 @@
+{
+  "programme": "check_which_dimension.py",
+  "investigation": "fractional-dimension",
+  "question": "does the archimedean kernel carry the Euclidean dimension 2 omega or the hyperbolic dimension omega?",
+  "answer": "the real dimension is 2 omega. tau = log|t+i| is a Busemann function and not a distance; the true hyperbolic distance on the horocycle tracks the Euclidean radius, and tau ~ r^2/2 is a square, which is the whole factor of two. In the true half-distance the measure is the radial measure of complex hyperbolic space of complex dimension omega and real dimension 2 omega, with rho = omega > 0; in the Busemann coordinate it is the real hyperbolic form at n = omega with rho < 0 and an unexplained factor e^(tau/2). The comb, which has no radial coordinate at all, fixes the dimension at 2 omega",
+  "consequence": "'the shift is half a dimension' is exact: omega is a complex dimension and 2 omega the real one",
+  "scope": "finite test cases and exact identities about Gamma, sinh and the hyperbolic metric of the upper half-plane; no zeta, no xi, no positivity",
+  "groups": [
+    {
+      "name": "A. tau is a Busemann coordinate, not a distance",
+      "cases": 4,
+      "worst_margin_against_own_tolerance": 0.30387354521593596,
+      "pass": true,
+      "checks": [
+        {
+          "what": "d_H(i, t+i) = 2 arcsinh(t/2), five separations",
+          "error": 3.0387354521593595e-09,
+          "tolerance": 1e-08,
+          "pass": true
+        },
+        {
+          "what": "tau ~ r^2/2 as r -> 0 (the square)",
+          "error": 5.000819331968387e-07,
+          "tolerance": 1e-05,
+          "pass": true
+        },
+        {
+          "what": "d_H/r -> 1 as r -> 0, so the true distance tracks the Euclidean radius",
+          "error": 0.0,
+          "tolerance": 0.5,
+          "pass": true
+        },
+        {
+          "what": "d_H/(2 tau) -> 1 as r -> infinity, so tau is half the distance at large scale",
+          "error": 0.0,
+          "tolerance": 0.5,
+          "pass": true
+        }
+      ],
+      "note": "the hyperbolic distance along the horocycle tracks the Euclidean radius at small scale and 2 tau at large; tau itself is a square of the radius near 0",
+      "the horocycle": {
+        "t = 0.0001": {
+          "d_H(i, t+i)": 9.99999996544598e-05,
+          "2 arcsinh(t/2)": 9.999999995833334e-05,
+          "tau = log|t+i|": 4.9999999446126456e-09,
+          "d_H / r": 0.9999999965445979,
+          "d_H / (2 tau)": 10000.00007622069
+        },
+        "t = 0.01": {
+          "d_H(i, t+i)": 0.009999958333812627,
+          "2 arcsinh(t/2)": 0.009999958333802076,
+          "tau = log|t+i|": 4.999750016664866e-05,
+          "d_H / r": 0.9999958333812626,
+          "d_H / (2 tau)": 100.00458323397537
+        },
+        "t = 0.5": {
+          "d_H(i, t+i)": 0.4949329230945269,
+          "2 arcsinh(t/2)": 0.4949329230945269,
+          "tau = log|t+i|": 0.11157177565710488,
+          "d_H / r": 0.9898658461890538,
+          "d_H / (2 tau)": 2.2180023584800304
+        },
+        "t = 3": {
+          "d_H(i, t+i)": 2.3895264345742184,
+          "2 arcsinh(t/2)": 2.389526434574219,
+          "tau = log|t+i|": 1.151292546497023,
+          "d_H / r": 0.7965088115247395,
+          "d_H / (2 tau)": 1.0377581448975346
+        },
+        "t = 50": {
+          "d_H(i, t+i)": 7.824845531282511,
+          "2 arcsinh(t/2)": 7.824845531282511,
+          "tau = log|t+i|": 3.9122229654388097,
+          "d_H / r": 0.15649691062565022,
+          "d_H / (2 tau)": 1.0000510707605907
+        }
+      }
+    },
+    {
+      "name": "B. the same measure has local exponent 2om-1 in r and om-1 in tau",
+      "cases": 6,
+      "worst_margin_against_own_tolerance": 7.379434555813743e-09,
+      "pass": true,
+      "checks": [
+        {
+          "what": "the two local limits differ by exactly 2^(1-omega), omega = 0.01",
+          "error": 5.14254808765647e-15,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "what": "the two local limits differ by exactly 2^(1-omega), omega = 0.05",
+          "error": 5.057249802156229e-15,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "what": "the two local limits differ by exactly 2^(1-omega), omega = 0.1",
+          "error": 5.592565603863095e-15,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "what": "the two local limits differ by exactly 2^(1-omega), omega = 0.25",
+          "error": 5.941283040558348e-15,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "what": "the two local limits differ by exactly 2^(1-omega), omega = 0.4",
+          "error": 6.445771480346457e-15,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "what": "the two local limits differ by exactly 2^(1-omega), omega = 0.5",
+          "error": 7.379434555813742e-15,
+          "tolerance": 1e-06,
+          "pass": true
+        }
+      ],
+      "note": "and the ratio of the two normalized limits is 2^(1-omega), the Jacobian of the square tau = r^2/2 -- which is the entire difference between the two readings",
+      "local exponents": {
+        "omega = 0.01": {
+          "[r] density * r^(1-2om)": 0.02034570596146814,
+          "[tau] k^Gamma * tau^(1-om)": 0.01024361076886126,
+          "ratio": 1.9861849908740616,
+          "2^(1-omega)": 1.9861849908740719
+        },
+        "omega = 0.05": {
+          "[r] density * r^(1-2om)": 0.10877263136054222,
+          "[tau] k^Gamma * tau^(1-om)": 0.056304244960749275,
+          "ratio": 1.9318726578496812,
+          "2^(1-omega)": 1.931872657849691
+        },
+        "omega = 0.1": {
+          "[r] density * r^(1-2om)": 0.23572427515642122,
+          "[tau] k^Gamma * tau^(1-om)": 0.12632151129412844,
+          "ratio": 1.8660659830736044,
+          "2^(1-omega)": 1.8660659830736148
+        },
+        "omega = 0.25": {
+          "[r] density * r^(1-2om)": 0.7344062916318019,
+          "[tau] k^Gamma * tau^(1-om)": 0.4366805936556537,
+          "ratio": 1.681792830507419,
+          "2^(1-omega)": 1.681792830507429
+        },
+        "omega = 0.4": {
+          "[r] density * r^(1-2om)": 1.4252700680437664,
+          "[tau] k^Gamma * tau^(1-om)": 0.9403275648857917,
+          "ratio": 1.5157165665103882,
+          "2^(1-omega)": 1.515716566510398
+        },
+        "omega = 0.5": {
+          "[r] density * r^(1-2om)": 1.99999999999999,
+          "[tau] k^Gamma * tau^(1-om)": 1.4142135623730983,
+          "ratio": 1.4142135623730847,
+          "2^(1-omega)": 1.4142135623730951
+        }
+      }
+    },
+    {
+      "name": "C. the Euclidean reading accounts for every factor; the tau-Jacobi reading does not",
+      "cases": 12,
+      "worst_margin_against_own_tolerance": 0.003083464271116212,
+      "pass": true,
+      "checks": [
+        {
+          "what": "|S^{2om-1}| r^(2om-2) e^(2 tau) (1+r^2)^(-b/2) = k^Gamma_om(tau), omega = 0.01",
+          "error": 1.8155473811660612e-16,
+          "tolerance": 1e-13,
+          "pass": true
+        },
+        {
+          "what": "the tau-Jacobi leftover is exactly e^(tau/2), omega = 0.01",
+          "error": 0.0,
+          "tolerance": 1e-13,
+          "pass": true
+        },
+        {
+          "what": "|S^{2om-1}| r^(2om-2) e^(2 tau) (1+r^2)^(-b/2) = k^Gamma_om(tau), omega = 0.05",
+          "error": 3.083464271116212e-16,
+          "tolerance": 1e-13,
+          "pass": true
+        },
+        {
+          "what": "the tau-Jacobi leftover is exactly e^(tau/2), omega = 0.05",
+          "error": 0.0,
+          "tolerance": 1e-13,
+          "pass": true
+        },
+        {
+          "what": "|S^{2om-1}| r^(2om-2) e^(2 tau) (1+r^2)^(-b/2) = k^Gamma_om(tau), omega = 0.1",
+          "error": 2.5772479344880536e-16,
+          "tolerance": 1e-13,
+          "pass": true
+        },
+        {
+          "what": "the tau-Jacobi leftover is exactly e^(tau/2), omega = 0.1",
+          "error": 0.0,
+          "tolerance": 1e-13,
+          "pass": true
+        },
+        {
+          "what": "|S^{2om-1}| r^(2om-2) e^(2 tau) (1+r^2)^(-b/2) = k^Gamma_om(tau), omega = 0.25",
+          "error": 2.912566805155367e-16,
+          "tolerance": 1e-13,
+          "pass": true
+        },
+        {
+          "what": "the tau-Jacobi leftover is exactly e^(tau/2), omega = 0.25",
+          "error": 0.0,
+          "tolerance": 1e-13,
+          "pass": true
+        },
+        {
+          "what": "|S^{2om-1}| r^(2om-2) e^(2 tau) (1+r^2)^(-b/2) = k^Gamma_om(tau), omega = 0.4",
+          "error": 1.8818503348781539e-16,
+          "tolerance": 1e-13,
+          "pass": true
+        },
+        {
+          "what": "the tau-Jacobi leftover is exactly e^(tau/2), omega = 0.4",
+          "error": 0.0,
+          "tolerance": 1e-13,
+          "pass": true
+        },
+        {
+          "what": "|S^{2om-1}| r^(2om-2) e^(2 tau) (1+r^2)^(-b/2) = k^Gamma_om(tau), omega = 0.5",
+          "error": 2.20001763309346e-16,
+          "tolerance": 1e-13,
+          "pass": true
+        },
+        {
+          "what": "the tau-Jacobi leftover is exactly e^(tau/2), omega = 0.5",
+          "error": 1.5647218847696677e-16,
+          "tolerance": 1e-13,
+          "pass": true
+        }
+      ],
+      "note": "prefactor, Jacobian and weight together reproduce k^Gamma exactly, while the Jacobi weight Delta in the tau coordinate leaves e^(tau/2) unexplained",
+      "what is left over in the tau coordinate": {
+        "omega = 0.01": {
+          "k^Gamma(0.7)": 0.019109646974486076,
+          "Delta_{om/2-1,-1/2}(0.7) with the prefactor": 0.013466340621649586,
+          "leftover": 1.4190675485932571,
+          "e^(tau/2) at tau = 0.7": 1.4190675485932571
+        },
+        "omega = 0.05": {
+          "k^Gamma(0.7)": 0.10388213706368189,
+          "Delta_{om/2-1,-1/2}(0.7) with the prefactor": 0.07320450472330356,
+          "leftover": 1.4190675485932571,
+          "e^(tau/2) at tau = 0.7": 1.4190675485932571
+        },
+        "omega = 0.1": {
+          "k^Gamma(0.7)": 0.22986731586669557,
+          "Delta_{om/2-1,-1/2}(0.7) with the prefactor": 0.16198475970686982,
+          "leftover": 1.4190675485932571,
+          "e^(tau/2) at tau = 0.7": 1.4190675485932571
+        },
+        "omega = 0.25": {
+          "k^Gamma(0.7)": 0.762367422893109,
+          "Delta_{om/2-1,-1/2}(0.7) with the prefactor": 0.5372312429023236,
+          "leftover": 1.4190675485932571,
+          "e^(tau/2) at tau = 0.7": 1.4190675485932571
+        },
+        "omega = 0.4": {
+          "k^Gamma(0.7)": 1.5749984522074394,
+          "Delta_{om/2-1,-1/2}(0.7) with the prefactor": 1.109882650595991,
+          "leftover": 1.4190675485932571,
+          "e^(tau/2) at tau = 0.7": 1.4190675485932571
+        },
+        "omega = 0.5": {
+          "k^Gamma(0.7)": 2.304179522434235,
+          "Delta_{om/2-1,-1/2}(0.7) with the prefactor": 1.6237278660331584,
+          "leftover": 1.4190675485932573,
+          "e^(tau/2) at tau = 0.7": 1.4190675485932571
+        }
+      }
+    },
+    {
+      "name": "D. in the true half-distance u = d_H/2 the measure is the CH^omega radial measure",
+      "cases": 7,
+      "worst_margin_against_own_tolerance": 0.029670057080230548,
+      "pass": true,
+      "checks": [
+        {
+          "what": "|S^{2om-1}| r^(2om-1) dr/du = 2^(2om)|S^{2om-1}| (sinh u)^(2om-1) cosh u, omega = 0.01",
+          "error": 0.0,
+          "tolerance": 1e-14,
+          "pass": true
+        },
+        {
+          "what": "|S^{2om-1}| r^(2om-1) dr/du = 2^(2om)|S^{2om-1}| (sinh u)^(2om-1) cosh u, omega = 0.05",
+          "error": 2.0177343100846252e-16,
+          "tolerance": 1e-14,
+          "pass": true
+        },
+        {
+          "what": "|S^{2om-1}| r^(2om-1) dr/du = 2^(2om)|S^{2om-1}| (sinh u)^(2om-1) cosh u, omega = 0.1",
+          "error": 0.0,
+          "tolerance": 1e-14,
+          "pass": true
+        },
+        {
+          "what": "|S^{2om-1}| r^(2om-1) dr/du = 2^(2om)|S^{2om-1}| (sinh u)^(2om-1) cosh u, omega = 0.25",
+          "error": 2.967005708023055e-16,
+          "tolerance": 1e-14,
+          "pass": true
+        },
+        {
+          "what": "|S^{2om-1}| r^(2om-1) dr/du = 2^(2om)|S^{2om-1}| (sinh u)^(2om-1) cosh u, omega = 0.4",
+          "error": 1.3496319666597946e-16,
+          "tolerance": 1e-14,
+          "pass": true
+        },
+        {
+          "what": "|S^{2om-1}| r^(2om-1) dr/du = 2^(2om)|S^{2om-1}| (sinh u)^(2om-1) cosh u, omega = 0.5",
+          "error": 0.0,
+          "tolerance": 1e-14,
+          "pass": true
+        },
+        {
+          "what": "the transfer integral in the u coordinate against pi^om Gamma((a+p)/2)/Gamma((b+p)/2)",
+          "error": 2.2598359828841356e-13,
+          "tolerance": 1e-09,
+          "pass": true
+        }
+      ],
+      "note": "r = 2 sinh u turns Lebesgue on R^{2 omega} into (sinh u)^(2 omega - 1) cosh u, the radial Jacobian of complex hyperbolic space of complex dimension omega and real dimension 2 omega",
+      "the transfer in the true distance": {
+        "omega = 0.1": {
+          "p = 2": {
+            "quadrature in u": 1.1471420876237732,
+            "closed form": 1.1471420876237723,
+            "relative error": 7.742531891057429e-16
+          },
+          "p = 5": {
+            "quadrature in u": 1.0331276454843679,
+            "closed form": 1.0331276454843676,
+            "relative error": 2.1492465707945386e-16
+          }
+        },
+        "omega = 0.25": {
+          "p = 2": {
+            "quadrature in u": 1.4104581181057594,
+            "closed form": 1.4104581181057594,
+            "relative error": 0.0
+          },
+          "p = 5": {
+            "quadrature in u": 1.085000208831757,
+            "closed form": 1.0850002088317567,
+            "relative error": 2.0464936607165408e-16
+          }
+        },
+        "omega = 0.4": {
+          "p = 2": {
+            "quadrature in u": 1.737521152663868,
+            "closed form": 1.7375211526639884,
+            "relative error": 6.926429395397443e-14
+          },
+          "p = 5": {
+            "quadrature in u": 1.139780690562551,
+            "closed form": 1.1397806905628085,
+            "relative error": 2.2598359828841356e-13
+          }
+        },
+        "omega = 0.5": {
+          "p = 2": {
+            "quadrature in u": 2.0,
+            "closed form": 1.9999999999999998,
+            "relative error": 1.1102230246251568e-16
+          },
+          "p = 5": {
+            "quadrature in u": 1.1780972450961724,
+            "closed form": 1.1780972450961726,
+            "relative error": 1.8847731445709725e-16
+          }
+        }
+      }
+    },
+    {
+      "name": "E. the Jacobi parameters in the two coordinates, and what is realizable",
+      "cases": 27,
+      "worst_margin_against_own_tolerance": 0.11102230246251564,
+      "pass": true,
+      "checks": [
+        {
+          "what": "omega = 0.01: rho < 0 in the Busemann coordinate",
+          "error": 0.0,
+          "tolerance": 0.5,
+          "pass": true
+        },
+        {
+          "what": "omega = 0.01: rho > 0 in the true distance",
+          "error": 0.0,
+          "tolerance": 0.5,
+          "pass": true
+        },
+        {
+          "what": "omega = 0.01: rho = omega in the true distance",
+          "error": 8.673617379884035e-18,
+          "tolerance": 1e-15,
+          "pass": true
+        },
+        {
+          "what": "omega = 0.01: rho = (omega-1)/2 in the Busemann coordinate",
+          "error": 1.1102230246251565e-16,
+          "tolerance": 1e-15,
+          "pass": true
+        },
+        {
+          "what": "omega = 0.05: rho < 0 in the Busemann coordinate",
+          "error": 0.0,
+          "tolerance": 0.5,
+          "pass": true
+        },
+        {
+          "what": "omega = 0.05: rho > 0 in the true distance",
+          "error": 0.0,
+          "tolerance": 0.5,
+          "pass": true
+        },
+        {
+          "what": "omega = 0.05: rho = omega in the true distance",
+          "error": 4.163336342344337e-17,
+          "tolerance": 1e-15,
+          "pass": true
+        },
+        {
+          "what": "omega = 0.05: rho = (omega-1)/2 in the Busemann coordinate",
+          "error": 1.1102230246251565e-16,
+          "tolerance": 1e-15,
+          "pass": true
+        },
+        {
+          "what": "omega = 0.1: rho < 0 in the Busemann coordinate",
+          "error": 0.0,
+          "tolerance": 0.5,
+          "pass": true
+        },
+        {
+          "what": "omega = 0.1: rho > 0 in the true distance",
+          "error": 0.0,
+          "tolerance": 0.5,
+          "pass": true
+        },
+        {
+          "what": "omega = 0.1: rho = omega in the true distance",
+          "error": 2.7755575615628914e-17,
+          "tolerance": 1e-15,
+          "pass": true
+        },
+        {
+          "what": "omega = 0.1: rho = (omega-1)/2 in the Busemann coordinate",
+          "error": 5.551115123125783e-17,
+          "tolerance": 1e-15,
+          "pass": true
+        },
+        {
+          "what": "omega = 0.25: rho < 0 in the Busemann coordinate",
+          "error": 0.0,
+          "tolerance": 0.5,
+          "pass": true
+        },
+        {
+          "what": "omega = 0.25: rho > 0 in the true distance",
+          "error": 0.0,
+          "tolerance": 0.5,
+          "pass": true
+        },
+        {
+          "what": "omega = 0.25: rho = omega in the true distance",
+          "error": 0.0,
+          "tolerance": 1e-15,
+          "pass": true
+        },
+        {
+          "what": "omega = 0.25: rho = (omega-1)/2 in the Busemann coordinate",
+          "error": 0.0,
+          "tolerance": 1e-15,
+          "pass": true
+        },
+        {
+          "what": "omega = 0.4: rho < 0 in the Busemann coordinate",
+          "error": 0.0,
+          "tolerance": 0.5,
+          "pass": true
+        },
+        {
+          "what": "omega = 0.4: rho > 0 in the true distance",
+          "error": 0.0,
+          "tolerance": 0.5,
+          "pass": true
+        },
+        {
+          "what": "omega = 0.4: rho = omega in the true distance",
+          "error": 0.0,
+          "tolerance": 1e-15,
+          "pass": true
+        },
+        {
+          "what": "omega = 0.4: rho = (omega-1)/2 in the Busemann coordinate",
+          "error": 5.551115123125783e-17,
+          "tolerance": 1e-15,
+          "pass": true
+        },
+        {
+          "what": "omega = 0.5: rho < 0 in the Busemann coordinate",
+          "error": 0.0,
+          "tolerance": 0.5,
+          "pass": true
+        },
+        {
+          "what": "omega = 0.5: rho > 0 in the true distance",
+          "error": 0.0,
+          "tolerance": 0.5,
+          "pass": true
+        },
+        {
+          "what": "omega = 0.5: rho = omega in the true distance",
+          "error": 0.0,
+          "tolerance": 1e-15,
+          "pass": true
+        },
+        {
+          "what": "omega = 0.5: rho = (omega-1)/2 in the Busemann coordinate",
+          "error": 0.0,
+          "tolerance": 1e-15,
+          "pass": true
+        },
+        {
+          "what": "the group cases: (n/2-1,-1/2) gives (2 sinh)^(n-1) and (n-1,0) gives (2 sinh)^(2n-1)(2 cosh)",
+          "error": 0.0,
+          "tolerance": 1e-14,
+          "pass": true
+        },
+        {
+          "what": "the real dimension 2 omega is an integer exactly once on (0,1/2], at omega = 1/2",
+          "error": 0.0,
+          "tolerance": 0.5,
+          "pass": true
+        },
+        {
+          "what": "the complex dimension omega is an integer nowhere on (0,1/2]",
+          "error": 0.0,
+          "tolerance": 0.5,
+          "pass": true
+        }
+      ],
+      "note": "Delta_{al,be}(x) = (2 sinh x)^(2al+1)(2 cosh x)^(2be+1), rho = al+be+1; the group cases are (n/2-1, -1/2) for real hyperbolic H^n and (n-1, 0) for complex hyperbolic CH^n",
+      "parameters": {
+        "omega = 0.01": {
+          "tau (Busemann)": {
+            "alpha": -0.995,
+            "beta": -0.5,
+            "rho": -0.4950000000000001,
+            "reading": "real hyperbolic at n = omega"
+          },
+          "u = d_H/2 (true distance)": {
+            "alpha": -0.99,
+            "beta": 0.0,
+            "rho": 0.010000000000000009,
+            "reading": "complex hyperbolic at n = omega"
+          },
+          "real dimension": 0.02,
+          "complex dimension": 0.01
+        },
+        "omega = 0.05": {
+          "tau (Busemann)": {
+            "alpha": -0.975,
+            "beta": -0.5,
+            "rho": -0.4750000000000001,
+            "reading": "real hyperbolic at n = omega"
+          },
+          "u = d_H/2 (true distance)": {
+            "alpha": -0.95,
+            "beta": 0.0,
+            "rho": 0.050000000000000044,
+            "reading": "complex hyperbolic at n = omega"
+          },
+          "real dimension": 0.1,
+          "complex dimension": 0.05
+        },
+        "omega = 0.1": {
+          "tau (Busemann)": {
+            "alpha": -0.95,
+            "beta": -0.5,
+            "rho": -0.44999999999999996,
+            "reading": "real hyperbolic at n = omega"
+          },
+          "u = d_H/2 (true distance)": {
+            "alpha": -0.9,
+            "beta": 0.0,
+            "rho": 0.09999999999999998,
+            "reading": "complex hyperbolic at n = omega"
+          },
+          "real dimension": 0.2,
+          "complex dimension": 0.1
+        },
+        "omega = 0.25": {
+          "tau (Busemann)": {
+            "alpha": -0.875,
+            "beta": -0.5,
+            "rho": -0.375,
+            "reading": "real hyperbolic at n = omega"
+          },
+          "u = d_H/2 (true distance)": {
+            "alpha": -0.75,
+            "beta": 0.0,
+            "rho": 0.25,
+            "reading": "complex hyperbolic at n = omega"
+          },
+          "real dimension": 0.5,
+          "complex dimension": 0.25
+        },
+        "omega = 0.4": {
+          "tau (Busemann)": {
+            "alpha": -0.8,
+            "beta": -0.5,
+            "rho": -0.30000000000000004,
+            "reading": "real hyperbolic at n = omega"
+          },
+          "u = d_H/2 (true distance)": {
+            "alpha": -0.6,
+            "beta": 0.0,
+            "rho": 0.4,
+            "reading": "complex hyperbolic at n = omega"
+          },
+          "real dimension": 0.8,
+          "complex dimension": 0.4
+        },
+        "omega = 0.5": {
+          "tau (Busemann)": {
+            "alpha": -0.75,
+            "beta": -0.5,
+            "rho": -0.25,
+            "reading": "real hyperbolic at n = omega"
+          },
+          "u = d_H/2 (true distance)": {
+            "alpha": -0.5,
+            "beta": 0.0,
+            "rho": 0.5,
+            "reading": "complex hyperbolic at n = omega"
+          },
+          "real dimension": 1.0,
+          "complex dimension": 0.5
+        }
+      },
+      "reading": "the real dimension is 2 omega in either coordinate once the coordinate is a distance; the Busemann reading halves it because tau ~ r^2/2. 'Half a dimension' is exact: omega is the complex one"
+    }
+  ],
+  "all_pass": true,
+  "total_checks": 56
+}

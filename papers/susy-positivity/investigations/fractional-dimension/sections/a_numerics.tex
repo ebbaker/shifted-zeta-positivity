@@ -1,0 +1,105 @@
+\section{Programmes and records}\label{app:numerics}
+
+Six programmes are \emph{registered} in the sense of this program's conventions:
+standard library only, JSON to standard output, a preserved record under
+\texttt{numerics/records/}, and registration in
+\texttt{validation/drafts.py}, so that
+\texttt{python3 validation/drafts.py check -{}-replay} re-runs each and requires
+byte-identical output. There is no exploratory programme in this investigation.
+Nothing here is a positivity certificate, and counts refer to finite test cases
+rather than to independent theorems. Every value of $\zeta$ computed anywhere
+below is at a \emph{real} argument, by a convergent series, a convergent theta
+integral or Euler--Maclaurin; no value off the real axis is computed and no zero
+is located.
+
+\paragraph{\texttt{check\_dimension\_dictionary.py}} (72 cases, four groups,
+under a second). The dictionary of \cite{OpeningNote}: the comb weights against
+the Jordan totient, $\ct_n=J_d(n)/n^{(d+1)/2}$, for $n<120$ at seven shifts;
+$J_d(n)$ against brute-force counts of the primitive vectors in
+$(\Z/n\Z)^{d}$ for $d\in\{1,2,3\}$, and $\ct_n=\varphi(n)/n$ at $d=1$ in exact
+rationals; $J_d$ as the Dirichlet coefficient of $\zeta(u-d)/\zeta(u)$ by
+M\"obius convolution at six $d$, fractional ones included; and the
+reparametrization \eqref{eq:dm} including the Gamma factors and the Blaschke pole
+at $\frac{d+1}2$. \emph{No value of $\zeta$ is computed in it.}
+
+\paragraph{\texttt{check\_which\_dimension.py}} (56 cases, five groups, under a
+second). Which coordinate carries the dimension \cite{WhichDimension}:
+$\tau=\log\lvert t+i\rvert$ against the hyperbolic distance $2\operatorname{arcsinh}(t/2)$,
+confirming that $\tau$ is a Busemann function and $\tau\sim r^{2}/2$ a square;
+the same measure carried between coordinates, with normalized limits differing by
+$2^{1-\omega}$; the transfer integral rebuilt factor by factor in both readings,
+the Euclidean one reproducing the Gamma ratio to $3\times10^{-11}$; the
+$CH^{\omega}$ radial measure in the true half-distance; and the Jacobi
+parameters in both coordinates against the group cases. \emph{No value of $\zeta$
+is computed in it.}
+
+\paragraph{\texttt{check\_residue\_volume.py}} (27 cases, four groups, under a
+second). The Blaschke residue as a volume term \cite{WhichDimension}:
+$\operatorname{Res}_{p=b}\Kt_\omega=\lvert S^{d}\rvert/2\zeta(d+1)$ in two forms
+at six $d$, agreeing to $10^{-12}$; the endpoint $6/\pi=2/\mathrm{vol}$ and the
+classical Eisenstein residue; and $1/\zeta(m)$ as the primitive density in
+$\Z^{m}$ by brute-force counts of primitive points in balls, which is what fixes
+the rank at $d+1$. $\zeta$ is evaluated only at real $\sigma>1$.
+
+\paragraph{\texttt{check\_epstein\_scattering.py}} (327 cases, eight groups,
+under a second). Section~\ref{sec:rank} and Section~\ref{sec:interpolation}
+\cite{RankNote}: Poisson summation in dimension $m$ to $10^{-15}$; the completed
+Epstein integral against \emph{direct lattice summation} with the exact continuum
+tail at $m=2,3,4$ to $10^{-8}$, which is the non-tautological test since that
+integral is symmetric in $s\leftrightarrow\frac m2-s$ by construction;
+\eqref{eq:epsteinfe} and the universality of the reflection ratio at
+$m=2,\dots,6$; the three expressions of \eqref{eq:dictionary} agreeing to
+$10^{-11}$ at $d=1,\dots,5$ with the reflection verified in exact rationals; the
+residue at $s=\frac m2$ by Richardson extrapolation; \eqref{eq:rmn} against
+brute-force lattice enumeration in exact rationals with the degree bound by
+vanishing finite differences; the sign of $r_{d+1}(3)$ on a rational grid; the
+continuation of the cusp data; and the rank-two wall in exact rationals. $\zeta$
+is evaluated at real arguments only, including negative ones, by a convergent
+theta integral.
+
+\paragraph{\texttt{check\_two\_blaschke.py}} (266 cases, six groups, about two
+seconds). Section~\ref{sec:wall} and Section~\ref{sec:calibration}
+\cite{WallNote}. It is an extended copy of the parent's registered assembly
+\cite[App.~A]{Markov} with exactly one line changed --- the removable $0/0$ of
+Remark~\ref{rem:assembly} --- and a new driver; the change is marked in place.
+\emph{(A)} the patched Gauss--Jacobi rule against exact moments at
+$\omega=\frac12,1,\frac32,2$, including $\omega=1$ where the parent programme
+raises. \emph{(B)} $R_\omega$ in three forms, unimodular on the axis at every
+$\omega$, inner on a right half-plane grid exactly when $\omega\ge\frac12$ and
+with a right half-plane pole at $p=a$ otherwise, and $K_\omega=R_\omega\Kt_\omega$
+end to end. \emph{(C)} the regrouped identity \eqref{eq:regroup} against the
+parent's grouping, the two parameter gaps, and the kernel sampled for positivity,
+at $\omega=1$ against its closed form $2\pi e^{-\tau/2}$. \emph{(D)} the assembly's
+Laplace certificate at $\omega=1,\frac32,2$ to $3\times10^{-13}$, with
+$\omega=0.1,\frac12$ as controls. \emph{(E)} Table~\ref{tab:calibration}, with
+the quadrature drift from 32 to 48 nodes per atom. \emph{(F)} the coincidence of
+the two intervals on a grid in $d$. $\zeta$ is evaluated only at real
+$u\ge1.2$, in group (B), by Euler--Maclaurin.
+
+\paragraph{\texttt{check\_the\_trade.py}} (774 cases, seven groups, under a
+second). Sections~\ref{sec:pointcount} and~\ref{sec:position} \cite{TradeNote}.
+\emph{(A)} $R_j(n)$ by dynamic programming against brute-force enumeration,
+$s(n)$, and the values $N_0=2$, $N_1=3$, $N_2=7$, with no $N_k$ for $k\ge3$
+since $\max_{n\le240}s(n)=4$. \emph{(B)} the sign law \eqref{eq:signlaw} on six gaps,
+exact rationals. \emph{(C)} the free region, the forced negative $r_m(N_k)<0$
+across the first three gaps, and the closed forms for $r_m(n)$, $n=2,\dots,7$,
+together with the representation data the hand bounds of
+Proposition~\ref{prop:forced} use. \emph{(D)} no negative coefficient at integer
+$m=1,\dots,5$. \emph{(E)} Proposition~\ref{prop:onethreshold}: $a$ vanishing only
+at $m=2$, $k^\Gamma_\omega>0$, $\ct_n>0$ and $J_d(n)>0$ at ten values of $m$
+crossing every integer up to $6$, and the $m=3$ regularity threshold shown not to
+be a sign change. \emph{(F)} the local Euler-factor coefficients
+\eqref{eq:eulerlocal} at five primes and seven real $d$, multiplying to the
+Jordan totient. \emph{(G)} Table~\ref{tab:divergence}. \emph{No value of $\zeta$
+is computed anywhere in it.}
+
+\paragraph{Two numerical lessons carried forward.} The defect
+$\lambda_{\min}(D_N)$ is an absolute quantity of size $10^{-8}$ or smaller read
+off matrices of norm one, so only a few of its digits survive in double
+precision, and at $L=\log5,\log7$ it comes out of either sign at the $10^{-14}$
+level: there the assertion made is $\lvert\norm{V_N}-1\rvert<10^{-12}$ and the
+floor is stated, rather than $\norm{V_N}<1$. And the single-atom kernel is
+$\tau^{\omega-1}$ times a function holomorphic on $\lvert\tau\rvert<\pi$, so the
+spike belongs in the Gauss--Jacobi \emph{weight} and not in an evaluated
+quantity; that is what lets the whole assembly run in double precision
+\cite[Sec.~5.1]{Markov}.

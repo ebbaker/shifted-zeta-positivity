@@ -1,0 +1,130 @@
+\documentclass[11pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools,mathrsfs}
+\usepackage{microtype,booktabs,array}
+\usepackage[dvipsnames]{xcolor}
+\usepackage[colorlinks=true,linkcolor=MidnightBlue,citecolor=MidnightBlue,urlcolor=MidnightBlue]{hyperref}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small A scattering matrix without a space}
+\fancyhead[R]{\small Working draft \draftversion}
+\fancyfoot[C]{\thepage}
+\setlength{\headheight}{14pt}
+\setlength{\emergencystretch}{3em}
+\numberwithin{equation}{section}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{problem}[theorem]{Problem}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\newcommand{\R}{\mathbb R}
+\newcommand{\C}{\mathbb C}
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\N}{\mathbb N}
+\newcommand{\E}{\mathbb E}
+\newcommand{\re}{\operatorname{Re}}
+\newcommand{\im}{\operatorname{Im}}
+\newcommand{\sgn}{\operatorname{sign}}
+\newcommand{\norm}[1]{\lVert #1\rVert}
+\newcommand{\ip}[2]{\langle #1,#2\rangle}
+\newcommand{\dd}{\,\mathrm d}
+\newcommand{\Kt}{\widetilde K}
+\newcommand{\Kh}{\widehat K}
+\newcommand{\kt}{\widetilde k}
+\newcommand{\kh}{\widehat k}
+\newcommand{\ct}{\widetilde c}
+\newcommand{\Est}{E^{*}}
+\newcommand{\draftversion}{0.1}
+\hypersetup{pdftitle={A scattering matrix without a space},
+  pdfauthor={Drafted for Edward Baker},
+  pdfsubject={The shifted Weil transfer as an invariant of the rank, the
+  interval on which its criterion has content, and why the lattice's failure
+  leaves no trace in it; working draft \draftversion}}
+\title{A scattering matrix without a space\\[5pt]
+\large The shifted Weil transfer as an invariant of the rank, the interval on
+which its criterion has content, and why the lattice's failure leaves no trace
+in it}
+\author{Drafted for Edward Baker}
+\date{Working manuscript, version \draftversion\\18 September 2026}
+\begin{document}
+\maketitle
+\begin{abstract}
+The shifted Weil family turns the Riemann hypothesis into a statement about
+causal all-pass filters: for each shift $\omega>0$ the transfer
+$K_\omega(p)=\xi(\frac12+p-\omega)/\xi(\frac12+p+\omega)$ is unimodular on the
+critical line, and its compressions to windows of every length are contractions
+if and only if no zero lies further than $\omega$ from that line. Its Markov
+part $\Kt_\omega=\Lambda(\frac12+p-\omega)/\Lambda(\frac12+p+\omega)$ is
+completely monotone, and every one of its factors is $d$-dimensional as a
+formula for $d=2\omega$. This manuscript asks what that $d$ is. We show first
+that it is a \emph{rank}: for a covolume-one lattice $L\subset\R^{m}$ the
+primitive Epstein zeta $\Est_L(s)=\sum_{v\ \mathrm{prim}}\lvert v\rvert^{-2s}$
+satisfies $\Lambda(2s)\Est_L(s)=\Lambda(m-2s)\Est_{L^{*}}(m/2-s)$, so its
+reflection ratio is independent of $L$ and is an invariant of the rank alone ---
+and with $m=d+1$ that ratio is exactly $\Kt_\omega$, whose own reflection
+$p\mapsto-p$ is the Epstein functional equation. Every integer $d\ge1$ is
+realized, as rank $d+1$; the family's range $\omega\le\frac12$ is the first gap
+$m\in(1,2]$ of that sequence. Everything then turns on the sign of
+$a=\frac12-\omega=\frac{2-m}2$. We show that at $a=0$ three things happen at
+once: the second pole of $\Kt_\omega$ --- which is the \emph{archimedean}
+factor's, while the first is the comb's --- crosses into the right half-plane;
+the rational correction $R_\omega=B_b\cdot\frac{p+a}{p-a}$ turns from a ratio of
+Blaschke factors with a right half-plane pole into the inner product $B_bB_c$,
+$c=\omega-\frac12$; and the poles of $K_\omega$ leave the closed right
+half-plane, which makes every compression a contraction \emph{unconditionally,
+on the strength of the Euler product alone}. Complete monotonicity survives the
+crossing, by two groupings of the Gamma factors that are exchanged there, so the
+decomposition continues past the wall with its positivity intact --- but the
+criterion does not: it is vacuous for $\omega\ge\frac12$ and has arithmetic
+content on exactly $\omega\in(0,\frac12)$, that is $m\in(1,2)$, where it is
+equivalent to a zero-free strip of half-width $\omega$. The Euler product is
+therefore the criterion's \emph{value} at rank two and the Riemann hypothesis is
+its \emph{derivative} at rank one, where the transfer degenerates to the
+identity and the first-order defect is the localized Weil form. Inside the gap
+no lattice exists: the point count's unique interpolation is the
+$q$-expansion of $\theta^{m}$, and on the gap $(k,k+1)$ the binomial
+$\binom mj$ is positive through $j=k+1$ and first negative at $j=k+2$, so the
+first coefficient that is \emph{forced} negative sits at the least integer
+needing $k+2$ positive squares --- $2$, $3$, $7$, and none at all once $k\ge3$,
+because Lagrange's four-square theorem bounds that least number by four. The
+two failures share the interval $m\in(1,2)$ and nothing else: the point count
+fails on $(2,3)$ as well, where the criterion is already vacuous, and at $m=3$
+the point count is completely monotone while the transfer's rational factor is
+not. The agreement is the first gap, forced by both of the criterion's endpoints
+lying at the two smallest ranks. What separates them is where the rank sits: in
+the transfer it is always an \emph{exponent} --- $(2\sinh\tau)^{\omega-1}$,
+$(1-e^{-t})^{\beta-\alpha-1}$, $p^{-d}$ --- so each positivity is a local
+inequality, at one delay or at one prime, that continuation cannot break; in the
+point count it is a \emph{binomial index}, where positivity is a global
+cancellation. The transfer's positivity was never inherited from a lattice, and
+the lattice's failure leaves no trace in it. At fractional $d$ there is a
+scattering matrix without a space, and $d$ is a parameter. Nothing here
+constructs a source, proves positivity of the Weil form, or assumes the Riemann
+hypothesis.
+\end{abstract}
+\input{sections/01_introduction}
+\clearpage
+{\small\tableofcontents}
+\clearpage
+\input{sections/02_conventions}
+\input{sections/03_rank}
+\input{sections/04_wall}
+\input{sections/05_criterion}
+\input{sections/06_pointcount}
+\input{sections/07_position}
+\input{sections/08_outlook}
+\appendix
+\input{sections/a_numerics}
+\input{sections/b_provenance}
+\clearpage
+\phantomsection
+\addcontentsline{toc}{section}{References}
+\input{references}
+\end{document}

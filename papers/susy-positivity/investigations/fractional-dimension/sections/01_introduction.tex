@@ -1,0 +1,139 @@
+\section{Introduction}\label{sec:intro}
+
+\subsection{The family, and the question this manuscript answers}\label{sec:intro-family}
+
+Weil's criterion turns the Riemann hypothesis into a positivity statement: a
+certain quadratic form $Q_L$, built from the primes below $e^{L}$ and an
+archimedean term, is positive semidefinite for every window length $L$ if and
+only if every nontrivial zero of $\zeta$ lies on the critical line. The
+\emph{shifted} family \cite{WilsonLines} replaces that single form by a
+one-parameter deformation. For $\omega>0$ put $s=\frac12+p$ and
+\[
+ K_\omega(p)=\frac{\xi(s-\omega)}{\xi(s+\omega)} .
+\]
+The functional equation makes $\lvert K_\omega\rvert=1$ on the imaginary axis, so
+$K_\omega$ is an all-pass filter; its causal realization $V_\omega$ compressed to
+a window of length $L$ is a contraction for every $L$ precisely when no zero lies
+further than $\omega$ from the critical line; and the defect of that compression
+is, to first order in $\omega$, twice the Weil form. The Riemann hypothesis is
+therefore the assertion that the criterion holds for every $\omega>0$, and the
+family interpolates between something and it.
+
+The parent manuscript \cite{Markov} factored the transfer. Writing
+$\xi(u)=\frac12u(u-1)\Lambda(u)$, the ratio
+$\Kt_\omega=\Lambda(s-\omega)/\Lambda(s+\omega)$ is completely monotone --- the
+Laplace transform of an explicit positive measure, a Beta-distributed continuous
+delay convolved with a comb at the integers --- and what is left is a rational
+all-pass factor forced by unimodularity. It also found that every piece of
+$\Kt_\omega$ is $d$-dimensional as a formula, for $d=2\omega$: the archimedean
+factor is a Riesz integral over $\R^{d}$, the comb's weights are the Jordan
+totient $J_d$, and the residue at the Blaschke pole is the volume term of a
+lattice of rank $d+1$ \cite{HalfDimension,OpeningNote,WhichDimension}. The
+question that opened the present investigation is the obvious one.
+
+\begin{problem}\label{prob:main}
+Is $d=2\omega$ a dimension, or a parameter?
+\end{problem}
+
+This manuscript answers it: \textbf{a parameter}. The route runs through four
+statements, and the fourth is the one worth keeping.
+
+\subsection{What is proved}\label{sec:intro-results}
+
+\paragraph{The transfer is an invariant of the rank
+(Section~\ref{sec:rank}).} For a covolume-one lattice $L\subset\R^{m}$ let
+$\Est_L(s)=\sum_{v\ \mathrm{prim}}\lvert v\rvert^{-2s}$ be the primitive Epstein
+zeta. Poisson summation and the factorization $Z_L=\zeta(2s)\Est_L$ give
+$\Lambda(2s)\Est_L(s)=\Lambda(m-2s)\Est_{L^{*}}(m/2-s)$, so the reflection ratio
+is independent of $L$ and depends on the rank alone --- and with $m=d+1$ and
+$2s=p+b$ that ratio is exactly $\Kt_\omega$. So the transfer is the scattering
+matrix of the unimodular lattices of rank $d+1$, at \emph{every} integer $d\ge1$,
+and its own reflection $p\mapsto-p$ is the Epstein functional equation. The
+family's range $\omega\in(0,\frac12]$ is the first gap $m\in(1,2]$ of that
+sequence, with the modular surface at its right endpoint.
+
+\paragraph{The wall is the sign of $a$ (Section~\ref{sec:wall}).} With
+$a=\frac12-\omega=\frac{2-m}2$ and $c=-a$, three things happen at $a=0$, that is
+at $m=2$. The second pole of $\Kt_\omega$ crosses into the right half-plane ---
+and it is the \emph{archimedean} factor's pole, the one from $\Gamma$, while the
+first is the comb's, the one from $\zeta$ (Table~\ref{tab:poles}). The rational
+factor $R_\omega=B_b\cdot\frac{p+a}{p-a}$ turns from a ratio $B_b/B_a$ with a
+right half-plane pole into the inner product $B_bB_c$
+(Proposition~\ref{prop:twoblaschke}). And complete monotonicity \emph{survives}:
+$\Kh_\omega=\frac{p+a}{p-a}\Kt_\omega$ is completely monotone at every real
+$\omega>0$, by two groupings of the Gamma factors that are exchanged at the wall,
+the second being
+$\Kh^\Gamma_\omega=\pi^\omega\frac{\Gamma(z+c)}{\Gamma(z+\omega)}\frac{\Gamma(z+1)}{\Gamma(z+c+1)}$
+with $z=\frac{p+a}2$ (Proposition~\ref{prop:cmuncapped}). The decomposition
+continues past the family's range with its positivity intact.
+
+\paragraph{But the criterion does not (Section~\ref{sec:criterion}).} The poles
+of $K_\omega$ sit at $p=\rho-b$, so they leave the closed right half-plane as
+soon as $a<0$. For $\omega\ge\frac12$, therefore, every compression
+$V_{\omega,L}$ is a contraction \emph{unconditionally}, on the strength of the
+Euler product alone (Proposition~\ref{prop:vacuity}): the criterion is vacuous
+there, and has arithmetic content on exactly $\omega\in(0,\frac12)$, where it is
+equivalent to a zero-free strip of half-width $\omega$
+(Corollary~\ref{cor:content}). So the Euler product is the criterion's
+\emph{value} at rank two, and the Riemann hypothesis is its \emph{derivative} at
+rank one, where $\Est_{\Z}\equiv2$, $\Kt_0=1$, $V_0=I$, and the first-order
+defect is the Weil form (Table~\ref{tab:endpoints}). The family runs from the
+easiest theorem about $\zeta$ to the hardest conjecture, and it runs downward in
+rank.
+
+\paragraph{Inside the gap there is no lattice, and the reason is Lagrange
+(Section~\ref{sec:pointcount}).} The point count of $\Z^{m}$ has a unique
+interpolation, the $q$-coefficients of $\theta^{m}$, polynomial in $m$. Writing
+$\theta^{m}=\sum_j\binom mj(\theta-1)^{j}$ and letting $R_j(n)$ count ordered
+representations of $n$ as $j$ \emph{positive} squares, one has
+$r_m(n)=\sum_j\binom mj2^{j}R_j(n)$ with $R_j(n)=0$ for $j>n$. On the gap
+$(k,k+1)$ the binomial is positive through $j=k+1$ and first negative at
+$j=k+2$ (Proposition~\ref{prop:signlaw}), so $r_m(n)>0$ for free when $n\le k+1$
+(Proposition~\ref{prop:free}) and the first coefficient that can be \emph{forced}
+negative sits at $N_k$, the least integer needing $k+2$ positive squares. Those
+are $N_0=2$, $N_1=3$, $N_2=7$ --- \emph{and nothing at all for $k\ge3$, because
+Lagrange's four-square theorem bounds that least number by four}
+(Propositions~\ref{prop:Nk} and~\ref{prop:forced}). In particular
+$r_m(3)=\frac43m(m-1)(m-2)<0$ throughout $m\in(1,2)$: at fractional $d$ there is
+no positive measure and hence no point set.
+
+\paragraph{And the two failures are unrelated (Section~\ref{sec:position}).}
+Both the criterion's content and the point count's failure live on $m\in(1,2)$,
+which invites the guess that they are one fact. They are not. The point count
+fails on $(2,3)$ as well, where the criterion is already vacuous; and at $m=3$
+the point count is completely monotone while the transfer's rational factor is
+not (Corollary~\ref{cor:noequiv}). The agreement is the first gap and nothing
+more: the criterion's window has its endpoints at the two smallest ranks, and the
+first gap of the rank sequence is $(1,2)$ by definition
+(Remark~\ref{rem:forcedagreement}). What separates the two sides is where the
+rank sits. In the transfer it is always an \emph{exponent} ---
+$(2\sinh\tau)^{\omega-1}$ in the archimedean kernel,
+$(1-e^{-t})^{\beta-\alpha-1}$ in each Beta density, $q^{-d}$ in each Euler factor
+of the comb --- so each positivity is a \emph{local} inequality, at one delay or
+at one prime, which continuation in the parameter cannot break. In the point
+count it is a \emph{binomial index}, where positivity is a global cancellation
+(Proposition~\ref{prop:position}). The transfer's positivity was therefore never
+inherited from a lattice, and the lattice's failure leaves no trace in it; in
+particular there is no factorization of the transfer exhibiting which factor
+loses positivity at fractional $d$, because none does
+(Corollary~\ref{cor:nofactorization}).
+
+\subsection{What this is not}\label{sec:intro-not}
+
+Nothing here constructs a source, proves any positivity of the Weil form, or
+assumes the Riemann hypothesis; no statement below is conditional on it. Nothing
+here is a new bound on the zeros: Proposition~\ref{prop:vacuity} is a statement
+that a criterion is empty, not that anything is true of $\zeta$ beyond the Euler
+product. The contraction numbers of Section~\ref{sec:calibration} are a
+calibration of an inherited instrument at shifts where the answer is known in
+advance, and they are one-sided in the direction that does \emph{not} certify
+contraction (Remark~\ref{rem:direction}). The group-theoretic language of
+Corollary~\ref{cor:oneobject} is the standard reading of verified formulas and is
+labelled as such. The two statements about sums of squares in
+Remark~\ref{rem:lagrange} are conjectures and are used nowhere.
+
+Section~\ref{sec:conventions} fixes notation --- including a warning,
+Remark~\ref{rem:xiwarning}, about two incompatible meanings of $\xi$ in this
+program's own documents --- and lists what is inherited from \cite{Markov}.
+Appendix~\ref{app:numerics} describes the six check programmes and what each
+asserts; Appendix~\ref{app:provenance} records how this manuscript was drafted.

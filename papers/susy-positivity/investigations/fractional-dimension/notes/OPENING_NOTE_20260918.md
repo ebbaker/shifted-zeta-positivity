@@ -124,7 +124,7 @@ So the dictionary reads:
 
 | Factor | In the $d$ variable | What it is at integer $d$ |
 |---|---|---|
-| Archimedean | $\pi^{d/2}\Gamma(s-\frac d2)/\Gamma(s)$ | $\int_{\mathbb R^{d}}|t+i|^{-(p+b)}dt$; at $d=1$ the horocycle constant term |
+| Archimedean | $\pi^{d/2}\Gamma(s-\frac d2)/\Gamma(s)$ | $\int_{\mathbb R^{d}}\lvert t+i\rvert^{-(p+b)}dt$; at $d=1$ the horocycle constant term |
 | Comb | $\zeta(2s-d)/\zeta(2s)$, weights $J_d(n)/n^{(d+1)/2}$ | primitive vectors in $(\mathbb Z/n\mathbb Z)^d$; at $d=1$, $\varphi(n)/n$ |
 | Correction | Blaschke factor at $p=\frac{d+1}2$ | the pole of $\zeta(2s-d)$ at $2s=d+1$: the volume term |
 | The whole | $\Lambda(2s-d)/\Lambda(2s)$ | at $d=1$, the Eisenstein scattering matrix |

@@ -1,0 +1,291 @@
+{
+  "programme": "check_residue_volume.py",
+  "investigation": "fractional-dimension",
+  "statement": "the pole that the Blaschke factor cancels sits at p = b = (d+1)/2 and has residue |S^d|/(2 zeta(d+1)): the volume term of a lattice of rank d+1 whose cusp has a horocycle of dimension d. At d = 1 it is 2/vol of the modular surface, recovering the classical Eisenstein residue 1/vol",
+  "consequence": "the third entry of the dimension dictionary is not merely forced; it is a volume, and its coefficient is computable as one",
+  "scope": "finite test cases; zeta is evaluated only at real arguments above 1, by a convergent series, and nothing here is a positivity certificate",
+  "groups": [
+    {
+      "name": "A. the elementary zeta values this programme needs",
+      "cases": 3,
+      "worst_margin_against_own_tolerance": 0.00021825932000942418,
+      "pass": true,
+      "checks": [
+        {
+          "what": "zeta(2) against pi^2/6",
+          "error": 0.0,
+          "tolerance": 1e-12,
+          "pass": true
+        },
+        {
+          "what": "zeta(4) against pi^4/90",
+          "error": 2.0515553765178892e-16,
+          "tolerance": 1e-12,
+          "pass": true
+        },
+        {
+          "what": "zeta(6) against pi^6/945",
+          "error": 2.1825932000942417e-16,
+          "tolerance": 1e-12,
+          "pass": true
+        }
+      ],
+      "note": "real arguments above 1 only, by a convergent series with an Euler-Maclaurin tail; checked against the two closed forms",
+      "values": {
+        "zeta(2)": 1.6449340668482264,
+        "zeta(4)": 1.0823232337111381,
+        "zeta(6)": 1.0173430619844492
+      }
+    },
+    {
+      "name": "B. the residue at the Blaschke pole, in two forms",
+      "cases": 12,
+      "worst_margin_against_own_tolerance": 0.015940604170991225,
+      "pass": true,
+      "checks": [
+        {
+          "what": "the two forms of the residue agree, omega = 0.01",
+          "error": 0.0,
+          "tolerance": 1e-14,
+          "pass": true
+        },
+        {
+          "what": "omega = 0.01: the pole is at p = b = (d+1)/2",
+          "error": 0.0,
+          "tolerance": 0.5,
+          "pass": true
+        },
+        {
+          "what": "the two forms of the residue agree, omega = 0.05",
+          "error": 1.2648260379663781e-16,
+          "tolerance": 1e-14,
+          "pass": true
+        },
+        {
+          "what": "omega = 0.05: the pole is at p = b = (d+1)/2",
+          "error": 0.0,
+          "tolerance": 0.5,
+          "pass": true
+        },
+        {
+          "what": "the two forms of the residue agree, omega = 0.1",
+          "error": 1.162909221538284e-16,
+          "tolerance": 1e-14,
+          "pass": true
+        },
+        {
+          "what": "omega = 0.1: the pole is at p = b = (d+1)/2",
+          "error": 0.0,
+          "tolerance": 0.5,
+          "pass": true
+        },
+        {
+          "what": "the two forms of the residue agree, omega = 0.25",
+          "error": 0.0,
+          "tolerance": 1e-14,
+          "pass": true
+        },
+        {
+          "what": "omega = 0.25: the pole is at p = b = (d+1)/2",
+          "error": 0.0,
+          "tolerance": 0.5,
+          "pass": true
+        },
+        {
+          "what": "the two forms of the residue agree, omega = 0.4",
+          "error": 1.5940604170991225e-16,
+          "tolerance": 1e-14,
+          "pass": true
+        },
+        {
+          "what": "omega = 0.4: the pole is at p = b = (d+1)/2",
+          "error": 0.0,
+          "tolerance": 0.5,
+          "pass": true
+        },
+        {
+          "what": "the two forms of the residue agree, omega = 0.5",
+          "error": 0.0,
+          "tolerance": 1e-14,
+          "pass": true
+        },
+        {
+          "what": "omega = 0.5: the pole is at p = b = (d+1)/2",
+          "error": 0.0,
+          "tolerance": 0.5,
+          "pass": true
+        }
+      ],
+      "note": "the pole sits at p = b = (d+1)/2, where 2s - d = 1; the residue is pi^((d+1)/2)/(Gamma((d+1)/2) zeta(d+1)), which is |S^d|/(2 zeta(d+1))",
+      "residues": {
+        "omega = 0.01": {
+          "d = 2 omega": 0.02,
+          "pole at p = b = (d+1)/2": 0.51,
+          "residue": 0.020390390911047978,
+          "|S^d|": 2.062637707794437,
+          "zeta(d+1)": 50.57867004101556
+        },
+        "omega = 0.05": {
+          "d = 2 omega": 0.1,
+          "pole at p = b = (d+1)/2": 0.55,
+          "residue": 0.10972092122745625,
+          "|S^d|": 2.322670872517874,
+          "zeta(d+1)": 10.584448464950801
+        },
+        "omega = 0.1": {
+          "d = 2 omega": 0.2,
+          "pole at p = b = (d+1)/2": 0.6,
+          "residue": 0.2386736221672929,
+          "|S^d|": 2.669126469765856,
+          "zeta(d+1)": 5.591582441177751
+        },
+        "omega = 0.25": {
+          "d = 2 omega": 0.5,
+          "pole at p = b = (d+1)/2": 0.75,
+          "residue": 0.7371282101026556,
+          "|S^d|": 3.8513111297856697,
+          "zeta(d+1)": 2.612375348685488
+        },
+        "omega = 0.4": {
+          "d = 2 omega": 0.8,
+          "pole at p = b = (d+1)/2": 0.9,
+          "residue": 1.3929497435806666,
+          "|S^d|": 5.243702527792524,
+          "zeta(d+1)": 1.882229618102822
+        },
+        "omega = 0.5": {
+          "d = 2 omega": 1.0,
+          "pole at p = b = (d+1)/2": 1.0,
+          "residue": 1.909859317102744,
+          "|S^d|": 6.283185307179586,
+          "zeta(d+1)": 1.6449340668482264
+        }
+      }
+    },
+    {
+      "name": "C. at d = 1 the residue is the volume of the modular surface",
+      "cases": 3,
+      "worst_margin_against_own_tolerance": 0.00011626228326695439,
+      "pass": true,
+      "checks": [
+        {
+          "what": "Res_{p=b} at d = 1 against 6/pi",
+          "error": 0.0,
+          "tolerance": 1e-12,
+          "pass": true
+        },
+        {
+          "what": "Res_{p=b} at d = 1 against 2/vol(PSL(2,Z)\\H)",
+          "error": 1.1626228326695438e-16,
+          "tolerance": 1e-12,
+          "pass": true
+        },
+        {
+          "what": "Res_{s=1} = Res_{p=b}/2 against 1/vol",
+          "error": 1.1626228326695438e-16,
+          "tolerance": 1e-12,
+          "pass": true
+        }
+      ],
+      "note": "residues in p are twice residues in s because 2s = p + b, so the classical Res_{s=1} phi(s) = 1/vol is recovered exactly",
+      "the endpoint": {
+        "Res_{p=b}": 1.909859317102744,
+        "6/pi": 1.909859317102744,
+        "vol(PSL(2,Z)\\H) = pi/3": 1.0471975511965976,
+        "2/vol": 1.9098593171027443,
+        "Res_{s=1} = 1/vol": 0.954929658551372
+      }
+    },
+    {
+      "name": "D. 1/zeta(m) is the primitive density in Z^m, so the lattice has rank d + 1",
+      "cases": 9,
+      "worst_margin_against_own_tolerance": 0.05595426929605235,
+      "pass": true,
+      "checks": [
+        {
+          "what": "primitive count in a ball of R^2 against vol(B^m) X^m/zeta(m)",
+          "error": 5.0390336057578965e-05,
+          "tolerance": 0.02,
+          "pass": true
+        },
+        {
+          "what": "primitive count in a ball of R^3 against vol(B^m) X^m/zeta(m)",
+          "error": 0.0002594792464632098,
+          "tolerance": 0.03,
+          "pass": true
+        },
+        {
+          "what": "primitive count in a ball of R^4 against vol(B^m) X^m/zeta(m)",
+          "error": 0.003357256157763141,
+          "tolerance": 0.06,
+          "pass": true
+        },
+        {
+          "what": "omega = 0.01: rank (d+1) minus horocycle dimension (d) is 1",
+          "error": 0.0,
+          "tolerance": 0.5,
+          "pass": true
+        },
+        {
+          "what": "omega = 0.05: rank (d+1) minus horocycle dimension (d) is 1",
+          "error": 0.0,
+          "tolerance": 0.5,
+          "pass": true
+        },
+        {
+          "what": "omega = 0.1: rank (d+1) minus horocycle dimension (d) is 1",
+          "error": 0.0,
+          "tolerance": 0.5,
+          "pass": true
+        },
+        {
+          "what": "omega = 0.25: rank (d+1) minus horocycle dimension (d) is 1",
+          "error": 0.0,
+          "tolerance": 0.5,
+          "pass": true
+        },
+        {
+          "what": "omega = 0.4: rank (d+1) minus horocycle dimension (d) is 1",
+          "error": 0.0,
+          "tolerance": 0.5,
+          "pass": true
+        },
+        {
+          "what": "omega = 0.5: rank (d+1) minus horocycle dimension (d) is 1",
+          "error": 0.0,
+          "tolerance": 0.5,
+          "pass": true
+        }
+      ],
+      "note": "checked by brute-force counts of primitive vectors in balls; the asymptotic error is of relative order log(X)/X, so the tolerances here are percents",
+      "primitive lattice points": {
+        "m = 2": {
+          "radius X": 300,
+          "primitive vectors counted": 171896,
+          "vol(B^m) X^m / zeta(m)": 171887.33853924696,
+          "relative error": 5.0390336057578965e-05
+        },
+        "m = 3": {
+          "radius X": 40,
+          "primitive vectors counted": 222962,
+          "vol(B^m) X^m / zeta(m)": 223019.8690275616,
+          "relative error": 0.0002594792464632098
+        },
+        "m = 4": {
+          "radius X": 14,
+          "primitive vectors counted": 175744,
+          "vol(B^m) X^m / zeta(m)": 175155.95658618215,
+          "relative error": 0.003357256157763141
+        }
+      },
+      "bookkeeping": {
+        "horocycle dimension": "d = 2 omega",
+        "lattice rank": "d + 1 = 2 omega + 1",
+        "they differ by one": "as a cusp requires",
+        "at d = 1": "rank-2 lattice Z^2, one-dimensional horocycle: SL(2,Z) acting on the upper half-plane"
+      }
+    }
+  ],
+  "all_pass": true,
+  "total_checks": 27
+}

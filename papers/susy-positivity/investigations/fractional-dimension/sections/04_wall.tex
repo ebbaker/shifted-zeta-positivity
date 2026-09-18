@@ -1,0 +1,161 @@
+\section{The wall at rank two}\label{sec:wall}
+
+The family's range is $m\in(1,2]$, the first gap of the rank sequence. This
+section shows that its upper endpoint is not a convention but the zero of
+$a=\frac{2-m}2$, and that three distinct things happen there. Two of them are in
+this section; the third, which is what the endpoint costs, is
+Section~\ref{sec:criterion}.
+
+\subsection{The factorization, and where the two poles come from}\label{sec:poles}
+
+\begin{proposition}[Factorization {\cite[Prop.~3.1]{Markov}}]\label{prop:factor}
+$K_\omega=R_\omega\Kt_\omega$ with
+\begin{equation}\label{eq:factor}
+ R_\omega(p)=\frac{(s-\omega)(s-\omega-1)}{(s+\omega)(s+\omega-1)}
+ =\frac{(p+a)(p-b)}{(p+b)(p-a)}
+ =1-\frac{4\omega b}{p+b}-\frac{4\omega a}{p-a} .
+\end{equation}
+Apart from its poles at the zeros of $\Lambda(p+b)$ and its zeros at the zeros of
+$\Lambda(p+a)$, $\Kt_\omega$ has exactly two poles, at $p=b$ and $p=-a=c$, and
+exactly two zeros, at $p=a$ and $p=-b$; $R_\omega$ cancels all four. Both factors
+are unimodular on $\re p=0$.
+\end{proposition}
+
+The two cancelled poles are the poles of $\Lambda(p+a)$, at $p+a=1$ and $p+a=0$.
+They have different origins, and the distinction is what makes the repair of
+Section~\ref{sec:cmpast} the natural one.
+
+\begin{table}[ht]\centering\small
+\caption{The two poles of $\Kt_\omega$ in the right half-plane, by origin.
+Writing $\Lambda(p+a)=\pi^{-(p+a)/2}\Gamma(\frac{p+a}2)\zeta(p+a)$, the pole at
+$p=b$ comes from $\zeta$ and the pole at $p=c$ from $\Gamma$. The remaining poles
+of $\Gamma(\frac{p+a}2)$, at $p+a=-2,-4,\dots$, are cancelled by the trivial
+zeros of $\zeta(p+a)$, and $\zeta(0)=-\frac12\ne0$, so the pole at $p+a=0$ is
+exactly the archimedean one.}\label{tab:poles}
+\begin{tabular}{@{}lll@{}}
+\toprule
+pole & origin & in $\re p>0$ iff\\
+\midrule
+$p=b=\frac m2$ & $\zeta(p+a)$ at $p+a=1$: the \emph{comb} & always\\
+$p=c=\frac{m-2}2$ & $\Gamma(\frac{p+a}2)$ at $p+a=0$: the \emph{archimedean factor} & $m>2$\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{proposition}[The second factor is a Blaschke factor exactly past the
+wall]\label{prop:twoblaschke}
+For every $\omega>0$,
+\begin{equation}\label{eq:twoblaschke}
+ R_\omega(p)=B_b(p)\cdot\frac{p+a}{p-a},\qquad\text{and}\qquad
+ \frac{p+a}{p-a}=B_c(p)\ \text{ with }c=\omega-\tfrac12 .
+\end{equation}
+Consequently
+\begin{itemize}
+\item for $\omega<\frac12$ one has $c<0$, and $R_\omega=B_b/B_a$ has a pole at
+ $p=a>0$: it is unimodular on the axis but \emph{not} inner, and
+ $\sup_{\re p>0}\lvert R_\omega\rvert=\infty$;
+\item for $\omega\ge\frac12$ one has $c\ge0$, and $R_\omega=B_bB_c$ is a product
+ of two Blaschke factors of the right half-plane, hence \emph{inner}:
+ $\lvert R_\omega\rvert\le1$ on $\re p>0$.
+\end{itemize}
+At $\omega=\frac12$ exactly, $c=0$ and $B_c\equiv1$: the two regimes meet at the
+single factor $B_b$.
+\end{proposition}
+
+\begin{proof}
+Equation~\eqref{eq:factor} and $a-1=-b$, $b-1=-a$ give the first identity; and
+$\frac{p+a}{p-a}=\frac{p-(-a)}{p+(-a)}=B_{-a}=B_c$. A Blaschke factor with
+positive parameter is inner and a product of inner functions is inner; for
+$\omega<\frac12$ the pole at $p=a>0$ lies in the open right half-plane.
+\end{proof}
+
+\subsection{Complete monotonicity survives the crossing}\label{sec:cmpast}
+
+The parent manuscript proves that $\Kt_\omega$ is completely monotone on
+$(b,\infty)$ \cite[Prop.~3.2]{Markov} and that
+$\Kh_\omega=\frac{p+a}{p-a}\Kt_\omega$ is too \cite[Prop.~3.6]{Markov}, so that
+$K_\omega=B_b\Kh_\omega$ exhibits the transfer as a positive measure minus twice
+its exponential moving average. The first of these carries no restriction on
+$\omega$; the second, as proved there, does. We record both facts and repair the
+second.
+
+\begin{proposition}[Complete monotonicity, uncapped]\label{prop:cmuncapped}
+For every real $\omega>0$:
+\begin{enumerate}
+\item[(a)] $\Kt_\omega$ is completely monotone on $(b,\infty)$;
+\item[(b)] $\Kh_\omega(p)=\frac{p+a}{p-a}\Kt_\omega(p)$ is completely monotone on
+ $(b,\infty)$.
+\end{enumerate}
+For $\omega\le\frac12$ part (b) is \cite[Prop.~3.6]{Markov}. For
+$\omega\ge\frac12$ its proof there fails and the following grouping replaces it:
+with $z=\frac{p+a}2$ and $\Kh_\omega=\Kh^\Gamma_\omega K^\zeta_\omega$,
+\begin{equation}\label{eq:regroup}
+ \Kh^\Gamma_\omega(p)
+ =\pi^\omega\,\frac{\Gamma(z+c)}{\Gamma(z+\omega)}\cdot
+ \frac{\Gamma(z+1)}{\Gamma(z+c+1)} ,
+\end{equation}
+a product of two Gamma ratios whose parameter gaps are $\frac12$ and $c$.
+\end{proposition}
+
+\begin{proof}
+(a) is \cite[Prop.~3.2]{Markov}; its proof uses only that $p>b$ implies
+$p+a>1$, which holds for every $\omega>0$, and is therefore uncapped.
+
+For (b) with $\omega\le\frac12$, the parent writes
+$\frac{p+a}{p-a}=1+\frac{2a}{p-a}$, whose causal kernel is
+$\delta_0+2a\,e^{at}\mathbf 1_{t>0}$; this is a positive measure if and only if
+$a\ge0$, that is if and only if $\omega\le\frac12$. Past the wall the same
+expression has $2a<0$ and the argument is unavailable.
+
+For $\omega\ge\frac12$ regroup instead. From
+$(p+a)\Gamma\!\big(\frac{p+a}2\big)=2\Gamma(z+1)$, from $\frac{p+b}2=z+\omega$,
+and from $p-a=2(z+c)$,
+\[
+ \frac{p+a}{p-a}\cdot\pi^\omega\frac{\Gamma(\frac{p+a}2)}{\Gamma(\frac{p+b}2)}
+ =\pi^\omega\,\frac{\Gamma(z+1)}{(z+c)\,\Gamma(z+\omega)}
+ =\pi^\omega\,\frac{\Gamma(z+c)}{\Gamma(z+\omega)}\cdot
+ \frac{\Gamma(z+1)}{\Gamma(z+c+1)},
+\]
+the last step by $\Gamma(z+c+1)=(z+c)\Gamma(z+c)$. The parameter gaps are
+$\omega-c=\frac12>0$ and $(c+1)-1=c\ge0$, so each factor is completely monotone
+in $z$ by \eqref{eq:betadensity} (the second is identically $1$ when $c=0$), and
+$z=\frac{p+a}2$ is an increasing affine function of $p$ with $z>\frac12$ on
+$p>b$, inside both domains. The comb $K^\zeta_\omega$ is completely monotone on
+$(b,\infty)$ with the positive coefficients \eqref{eq:comb}. Products of
+completely monotone functions are completely monotone.
+\end{proof}
+
+\begin{remark}[The two groupings are exchanged at the wall]\label{rem:exchange}
+Proposition~\ref{prop:cmuncapped} proves the same statement twice, by arguments
+that are available on complementary ranges and meet where both degenerate. At
+$\omega=\frac12$ the parent's factor $\frac{p+a}{p-a}$ is identically $1$ and so
+is the second Gamma ratio of \eqref{eq:regroup}. At $\omega=1$ the two Gamma
+ratios telescope: $c=\frac12$, $\omega=1$, and
+$\Kh^\Gamma_1(p)=\pi\big/(z+\frac12)=2\pi/(p+\frac12)$, whose kernel is
+$2\pi e^{-\tau/2}$.
+\end{remark}
+
+\begin{remark}[The trade]\label{rem:trade}
+Table~\ref{tab:trade} collects what changes at $m=2$ and what does not. The
+factor $\frac{p+a}{p-a}$ does not \emph{lose} a positivity there: it
+\emph{exchanges} complete monotonicity for innerness. Everything else in the
+decomposition is positive on both sides. Whether that exchange is the same fact
+as the failure of the lattice on the same interval is the question of
+Section~\ref{sec:position}, and the answer is no.
+\end{remark}
+
+\begin{table}[ht]\centering\small
+\caption{What the wall separates. Only the first row changes, and it changes by
+exchange rather than by loss.}\label{tab:trade}
+\begin{tabular}{@{}lll@{}}
+\toprule
+object & $m<2$ & $m>2$\\
+\midrule
+$\frac{p+a}{p-a}$ & completely monotone, \emph{not} inner & inner, \emph{not} completely monotone\\
+$R_\omega=B_b\cdot\frac{p+a}{p-a}$ & not inner (pole at $p=a>0$) & inner\\
+$\Kt_\omega$ & completely monotone & completely monotone\\
+$\Kh_\omega$ & completely monotone (parent's grouping) & completely monotone (regrouped)\\
+$k^\Gamma_\omega,\ \ct_n$ & positive & positive\\
+\bottomrule
+\end{tabular}
+\end{table}

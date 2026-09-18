@@ -34,6 +34,162 @@ dates of the underlying work; the repository itself was created in September 202
   which at integer `d` counts the primitive vectors in `(Z/nZ)^d`, so every factor
   of the Markov part is `d`-dimensional as a formula and `d = 1` is the modular
   surface. Its question is whether `d` is a dimension or a parameter.
+- Fractional dimension, first two results, closing its dictionary on a single
+  object. (i) **The dimension is `2 omega`, not `omega`.** `tau = log|t+i|` is a
+  Busemann function on the horocycle and not a distance: the hyperbolic distance
+  is `d_H = 2 arcsinh(t/2)`, and `tau ~ r^2/2` is a square, so a measure with
+  local exponent `r^(2om-1) dr` has local exponent `tau^(om-1) dtau` and the two
+  normalized limits differ by exactly `2^(1-om)`. In the true half-distance
+  `u = d_H/2`, Lebesgue on `R^(2om)` is the radial measure of complex hyperbolic
+  space of complex dimension `omega` and real dimension `2 omega` — Jacobi
+  parameters `(om-1, 0)` with `rho = om > 0`, the only reading that accounts for
+  every factor of the kernel — and the comb, having no radial coordinate, fixes
+  `d = 2 omega` independently. (ii) **The Blaschke factor is a volume term:**
+  `Res_{p=b} Kt_om = |S^d| / (2 zeta(d+1))`, the sphere of `R^(d+1)` times the
+  primitive density in `Z^(d+1)`, which is the volume term of a lattice of
+  **rank `d+1`** whose cusp integrates over a `d`-dimensional horocycle; at
+  `d = 1` it is `6/pi = 2/vol(PSL(2,Z)\H)`, the classical Eisenstein residue.
+  The question sharpens accordingly: a dimension can be continued, but a rank is
+  a cardinality, so — is there anything of which `J_d` and `zeta(d+1)` are the
+  invariants when `d` is not an integer? Note
+  *Which coordinate carries the dimension, and the correction as a volume term*,
+  with two further standard-library check programmes (56 and 27 cases; 155 cases
+  in the investigation). No value of zeta is computed except at real arguments
+  above 1, by a convergent series.
+- Fractional dimension, the rank question answered. (i) **The object at integer
+  `d` is a lattice of rank `d+1`, at every integer and not only at `d = 1`.** For
+  a covolume-one lattice `L` in `R^m` the primitive Epstein zeta
+  `E*_L(s) = sum_{v primitive} |v|^(-2s)` satisfies
+  `xi(2s) E*_L(s) = xi(m-2s) E*_{L*}(m/2-s)` — Poisson summation plus the
+  factorization `Z_L = zeta(2s) E*_L` — so the reflection ratio is independent of
+  the lattice and is an invariant of the **rank alone**. Under the dictionary that
+  ratio is exactly the Markov part, so for every integer `d >= 1` the shifted Weil
+  transfer is the scattering matrix of the space of unimodular lattices of rank
+  `d+1`; and the transfer's own reflection `p -> -p` IS the Epstein functional
+  equation `s -> m/2 - s`, which is why it is all-pass on `Re p = 0`. This
+  strengthens the previous position, which held `d = 1` to be the only realized
+  point. (ii) **The family's cap `omega <= 1/2` is a rank cap.** `xi` has poles at
+  0 and 1, so the numerator has a second pole at `p = omega - 1/2`, in the closed
+  left half-plane exactly when `m = 2 omega + 1 <= 2`; in the lattice variable it
+  sits where zeta has its own pole. The family therefore occupies the first gap
+  `m` in `(1,2]` of the rank sequence, with the modular surface — and RH — at its
+  right endpoint. (iii) **Inside that gap the lattice does not exist.** The point
+  count of `Z^m` has a unique interpolation, the q-coefficients of `theta^m`,
+  which are polynomials in `m`; with `m = d+1`, `r_{d+1}(3) = (4/3)(d^3 - d)` is
+  strictly negative for every `d` in `(0,1)` and vanishes only at the endpoints,
+  so `theta(it)^(d+1)` is not completely monotone anywhere strictly inside the
+  family — no positive measure, hence no point set. What continues is the whole of
+  the cusp data (`J_d > 0`, `1/zeta(d+1)` in `(0,1)`, the horocycle integral, the
+  unimodularity on the critical line); what fails is the interior. At fractional
+  `d` the object is a scattering matrix without a space. Note *The rank is
+  realized at every integer, and the lattice does not continue*, with a fourth
+  standard-library check programme (327 cases; 482 in the investigation) built on
+  Riemann's theta method in dimension `m`, cross-checked against direct lattice
+  summation. zeta is evaluated at real arguments only, including negative ones; no
+  value off the real axis is computed and no zero is located.
+- Fractional dimension, the wall crossed and the criterion weighed. (i) **The
+  Markov decomposition survives past the rank-two wall and needs no repair.**
+  `R_om = B_b . (p+a)/(p-a)` at every `omega`, and `(p+a)/(p-a) = B_c` with
+  `c = omega - 1/2` is a genuine Blaschke factor of the right half-plane exactly
+  when `omega >= 1/2`, so past the wall `R_om = B_b B_c` is **inner**, where inside
+  the range it is a ratio `B_b/B_a` with a right-half-plane pole. The parent's
+  proof that `Khat_om` is completely monotone does fail there — the kernel of
+  `(p+a)/(p-a)` is `delta_0 + 2a e^(at)` with `2a < 0` — but the statement does
+  not: regrouping the Gamma factors,
+  `Khat^Gamma_om = pi^om Gamma(z+c)/Gamma(z+om) . Gamma(z+1)/Gamma(z+c+1)` with
+  `z = (p+a)/2`, exhibits it as a product of two Gamma ratios of parameter gap
+  `1/2` and `c`, both completely monotone exactly when `omega >= 1/2`. So
+  `Khat_om` is completely monotone for **every** `omega > 0`; the parent's
+  proposition was uncapped and only its proof was. The two cancelled poles have
+  different origins — `p = b` is the comb's pole, `p = c` the **archimedean**
+  factor's — so past the wall the correction removes one pole from each half of the
+  transfer. (ii) **The inherited assembly needed no second Blaschke factor at
+  all**, because it is built from the partial fractions of `R_om`, which are the
+  same algebra at every `omega`; the only change was a removable `0/0` in the k = 0
+  Jacobi recurrence coefficient, which bites at `omega = 1` and nowhere else. With
+  that one line changed the assembly's own Laplace certificate passes at
+  `omega = 1, 3/2, 2` to `3e-13`. (iii) **But the experiment it unlocks cannot
+  fail.** For every `omega >= 1/2` no zero satisfies `|Re rho - 1/2| > omega`,
+  because `0 <= Re rho <= 1`; so by the parent's own dichotomy `V_om` is unitary and
+  every `V_{om,L}` is a contraction **unconditionally** — on the strength of the Euler
+  product alone for `omega > 1/2`, with the classical zero-free region needed only at
+  the single boundary point `omega = 1/2`. The contraction criterion is vacuous on `[1/2, inf)` and has
+  arithmetic content on exactly `(0, 1/2)`, where it is equivalent to the zero-free
+  strip of half-width `omega`. (iv) **That is the same interval on which the lattice
+  fails to exist:** `omega` in `(0,1/2)` is `d` in `(0,1)` is `m` in `(1,2)`, the
+  open gap on which `r_{d+1}(3) < 0`. Same interval, same endpoints, both switching
+  on the sign of `a = (1-d)/2` — the criterion has arithmetic content precisely
+  where the lattice does not exist. (v) **Correcting the previous entry:** the
+  modular surface is at the right endpoint of the gap but RH is not. The criterion
+  is emptiest at `omega = 1/2` and sharpest as `omega -> 0`; the Euler product is
+  its value at rank two and RH is its derivative at rank one, where
+  `E*_Z = 2`, `Kt_0 = 1`, `V_0 = I` and the first-order law makes the localized Weil
+  form its `d/d omega`. Note *Past the wall the decomposition survives and the
+  criterion does not*, with a fifth standard-library check programme (266 cases;
+  748 in the investigation), an extended copy of the parent's registered assembly.
+  zeta is evaluated at real arguments `u >= 1.2` only, in one group, by
+  Euler–Maclaurin; no value off the real axis is computed and no zero is located.
+- Fractional dimension, the split explained and the question answered. (i) **The
+  two positivity statements are not one statement.** The interpolated point count
+  fails on `(2,3)` as well as on `(1,2)`, while the contraction criterion has
+  arithmetic content only on `(1,2)`; and at `m = 3` the point count is completely
+  monotone and the transfer's rational factor is not. No equivalence between them
+  can hold, and the coincidence of intervals recorded in the previous entry is the
+  first gap and nothing more — forced by both of the criterion's endpoints sitting
+  at the two smallest ranks, `m = 1` where the transfer degenerates to the identity
+  and `m = 2` where `a` changes sign. (ii) **The point count's failure is
+  Lagrange's four-square theorem, seen through a binomial series.** Writing
+  `theta^m = sum_j binom(m,j) (theta-1)^j`, on the gap `(k, k+1)` one has
+  `sign binom(m,j) = (-1)^max(0, j-k-1)`, so `r_m(n) > 0` for free when `n <= k+1`,
+  and the first coefficient that can be FORCED negative sits at `N_k`, the least
+  integer needing `k+2` POSITIVE squares: `N_0 = 2`, `N_1 = 3`, `N_2 = 7`, and no
+  `N_k` at all for `k >= 3`, because Lagrange gives `s(n) <= 4` for every `n`. The
+  third note's Lagrange threshold at `m = 4`, recorded there as an observation from
+  a scan, is exactly that and is now a theorem. (iii) **The transfer has exactly one
+  positivity threshold in `m`, and it is at `m = 2`.** Every factor of the Markov
+  part has a positive kernel at every real `omega > 0`; the only `omega`-dependent
+  positivity anywhere in the decomposition is `(p+a)/(p-a)`. Its only other feature
+  at an integer — the archimedean exponent `omega - 1 = (m-3)/2` vanishing at
+  `m = 3` — is a REGULARITY threshold and not a positivity one, and it points the
+  wrong way, since at `m = 3` the point count regains positivity. (iv) **What
+  explains the split is where the rank sits.** In the transfer it enters every
+  positive object as an EXPONENT — `(2 sinh tau)^(om-1)` in the archimedean kernel,
+  `(1-e^-t)^(beta-alpha-1)` in each Beta density, `p^-d` in each Euler factor of the
+  comb — where positivity is a LOCAL inequality, at one `tau` or at one prime, that
+  continuation in the parameter cannot break. In the point count it enters as a
+  BINOMIAL INDEX, where positivity is a global cancellation and continuation breaks
+  it at once. So the transfer's positivity was never inherited from a lattice, and
+  the lattice's failure leaves no trace in it; item 3 of the third note's plan, as
+  posed — a factorization of the transfer exhibiting which factor loses positivity
+  at fractional `d` — has no solution, because no factor loses positivity anywhere.
+  (v) With that, **the investigation's own question is answered: `d` is a
+  parameter**, with no remaining sense in which it is a dimension away from the
+  integers. Note *The trade is not the explanation*, with a sixth standard-library
+  check programme (774 cases; 1522 in the investigation), exact rational arithmetic
+  throughout the theta side. No value of zeta is computed anywhere in it. The
+  material is manuscript-shaped; no manuscript has been started.
+- Fractional dimension gets its manuscript. *A scattering matrix without a space:
+  the shifted Weil transfer as an invariant of the rank, the interval on which its
+  criterion has content, and why the lattice's failure leaves no trace in it*,
+  working draft 0.1, 21 pages, drafted for Edward Baker by Claude Opus 5. It
+  consolidates the investigation's five research notes with every proposition
+  proved in place and the inherited ones listed in its Section 2.3: the transfer
+  as the primitive-Epstein scattering matrix of the rank-`d+1` lattices at every
+  integer `d`; the wall at `m = 2` as the zero of `a = (2-m)/2`, where the
+  archimedean pole crosses into the right half-plane, `R_om` turns from a ratio of
+  Blaschke factors into an inner product, and the poles of `K_om` leave the closed
+  right half-plane; complete monotonicity surviving that crossing by two groupings
+  of the Gamma factors exchanged there; the criterion vacuous for `omega >= 1/2` on
+  the Euler product alone, so its arithmetic content sits on exactly `m` in
+  `(1,2)`, with the Euler product its value at rank two and RH its derivative at
+  rank one; the point count's failure identified as Lagrange's four-square theorem
+  read through a binomial series; and the two failures shown not to be one fact,
+  separated by whether the rank enters as an exponent or as a binomial index. All
+  six check programmes are registered in the investigation's new
+  `validation/drafts.py` and replayed with the manuscript at 1522 cases,
+  byte-identical. Snapshot `drafts/2026-09-18-v01`; build guide `BUILD.md`;
+  provenance and the use of language models in the manuscript's Appendix B. No
+  value of zeta is computed off the real axis anywhere in the package.
 - No investigation folder was renamed and no preserved snapshot was rewritten.
 
 ### 2026-09-11 — group papers by research program

@@ -1,0 +1,149 @@
+\section{What the criterion is worth}\label{sec:criterion}
+
+The third thing that happens at $a=0$ is that the poles of $K_\omega$ leave the
+closed right half-plane. That costs the criterion everything.
+
+\subsection{Vacuity past the wall}\label{sec:vacuity}
+
+\begin{proposition}[Vacuity]\label{prop:vacuity}
+Let $\omega\ge\frac12$. Then no nontrivial zero of $\zeta$ satisfies
+$\lvert\re\rho-\frac12\rvert>\omega$. Hence, by
+Proposition~\ref{prop:dichotomy}, $K_\omega$ is inner on $\re p>0$, $V_\omega$ is
+unitary and causal on $L^2(\R)$, and
+\begin{equation}\label{eq:vacuity}
+ \norm{V_{\omega,L}}\le1\qquad\text{for every }L>0,
+\end{equation}
+\emph{unconditionally}. For $\omega>\frac12$ the only arithmetic input is
+$\zeta(u)\ne0$ for $\re u>1$ --- the Euler product --- together with the
+functional equation, which give $0\le\re\rho\le1$.
+\end{proposition}
+
+\begin{proof}
+$0\le\re\rho\le1$ gives $\lvert\re\rho-\frac12\rvert\le\frac12\le\omega$, so the
+hypothesis of Proposition~\ref{prop:dichotomy} holds with nothing assumed.
+Equivalently at the level of poles: the poles of $K_\omega$ lie at $p=\rho-b$,
+with $\re p\le1-b=a\le0$, and $a<0$ as soon as $\omega>\frac12$.
+\end{proof}
+
+\begin{remark}[The boundary point]\label{rem:boundary}
+At $\omega=\frac12$ exactly, $a=0$ and $\re p=\re\rho-1$ is negative for every
+zero but has supremum $0$, the zeros approaching $\re\rho=1$ as the height grows.
+The hypothesis of Proposition~\ref{prop:dichotomy} is still satisfied by the
+Euler product, since it is a strict inequality; moving the realization contour to
+the axis there uses $\zeta(1+it)\ne0$, the classical zero-free region
+\cite{Titchmarsh}, and not the Euler product. Nothing below turns on the boundary
+point: the informative range is the \emph{open} interval $(0,\frac12)$ either
+way.
+\end{remark}
+
+\begin{corollary}[Where the criterion has content]\label{cor:content}
+By Proposition~\ref{prop:dichotomy} in both directions,
+$\sup_L\norm{V_{\omega,L}}\le1$ if and only if every zero satisfies
+$\lvert\re\rho-\frac12\rvert\le\omega$. Therefore
+\begin{itemize}
+\item for $\omega\ge\frac12$ the statement is unconditionally true and is
+ equivalent to nothing about the zeros: the criterion is \emph{vacuous};
+\item for $\omega\in(0,\frac12)$ it is equivalent to the zero-free strip of
+ half-width $\omega$, a nontrivial statement;
+\item the Riemann hypothesis is the conjunction over all $\omega\in(0,\frac12)$,
+ that is the limit $\omega\downarrow0$.
+\end{itemize}
+\end{corollary}
+
+\subsection{Which endpoint is the Riemann hypothesis}\label{sec:endpoints}
+
+Corollary~\ref{cor:content} makes $\omega$ exactly the half-width of the
+zero-free strip the criterion certifies, so the criterion is \emph{weakest} at
+the right endpoint of the family and sharpest at the left. That inverts a natural
+first reading, in which rank two --- the modular surface, the lattice $\zeta$
+itself comes from --- looks like where the Riemann hypothesis lives. It is where
+the \emph{object} lives; it is not where the criterion has strength.
+
+\begin{table}[ht]\centering\small
+\caption{The family runs from the Euler product to the Riemann hypothesis, and
+the direction is from the larger rank to the smaller.}\label{tab:endpoints}
+\begin{tabular}{@{}lll@{}}
+\toprule
+$m$ & the object & the criterion\\
+\midrule
+$m=2$, $\omega=\frac12$ & rank two: $\Z^{2}$, the modular surface,
+$\varphi(s)=\frac{\Lambda(2s-1)}{\Lambda(2s)}$ & its \emph{value} is the Euler product\\
+$m\in(1,2)$ & no lattice (Section~\ref{sec:pointcount}) & zero-free strips of half-width $\frac{m-1}2$\\
+$m=1$, $\omega=0$ & rank one: $\Est_{\Z}\equiv2$, $\Kt_0=1$, $V_0=I$ & its \emph{derivative} is the Weil form\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+The bottom row deserves a sentence of its own. At rank one the primitive Epstein
+zeta of $\Z\subset\R$ is the constant $2$ (only $\pm1$ is primitive), its
+reflection ratio is $1$, and the transfer degenerates to the identity; and by
+Proposition~\ref{prop:firstorder} the first-order defect of the compression is
+the localized Weil form. \emph{The Riemann hypothesis is the derivative of the
+rank-$(d{+}1)$ scattering matrix at rank one; the Euler product is its value at
+rank two; and the gap between the two smallest ranks is filled by the zero-free
+strips.}
+
+\subsection{The instrument, and a calibration}\label{sec:calibration}
+
+The parent manuscript's registered assembly \cite[Sec.~5]{Markov} computes
+$\norm{V_{\omega,L}}$ and $\lambda_{\min}(D_{\omega,L})$ from $\Gamma$, $\sinh$,
+$\exp$ and the integers below $e^L$. It continues past the wall with one change,
+and the change is arithmetic rather than analytic.
+
+\begin{remark}[The assembly needs no second Blaschke factor]\label{rem:assembly}
+The assembly is built from the \emph{partial fractions} of $R_\omega$ in
+\eqref{eq:factor}, namely
+$\kappa_\omega=k^\Gamma_\omega-4\omega b\,J_{-b}-4\omega a\,J_{a}$ with
+$J_\gamma(\tau)=\int_0^\tau e^{\gamma(\tau-u)}k^\Gamma_\omega(u)\dd u$, which is
+the same algebra at every $\omega$, with $a<0$ merely making the second smoothing
+decay instead of grow. The Blaschke factorization of
+Proposition~\ref{prop:twoblaschke} enters the proofs of positivity, not the
+computation. The one obstacle is that the parent programme writes the $k=0$
+Jacobi recurrence coefficient of its Gauss--Jacobi rule as
+$(\beta^2-\alpha^2)/(\delta(\delta+2))$ with $\delta=\alpha+\beta$, which is
+$0/0$ when $\alpha=\beta=0$, that is at $\omega=1$ exactly and nowhere else; its
+removable value is $(\beta-\alpha)/(\alpha+\beta+2)$. With that one line changed
+the assembly's own certificate,
+\[
+ \int_0^\infty e^{-p\tau}\kappa_\omega(\tau)\dd\tau
+ =\pi^\omega\frac{\Gamma(\frac{a+p}2)}{\Gamma(\frac{b+p}2)}\cdot
+ \frac{(p+a)(p-b)}{(p+b)(p-a)}
+\]
+\cite[Prop.~5.3]{Markov}, holds at $\omega=1,\frac32,2$ to $3\times10^{-13}$
+(Appendix~\ref{app:numerics}).
+\end{remark}
+
+By Proposition~\ref{prop:vacuity} the contraction data past the wall is known in
+advance, so running the assembly there is a \emph{calibration} and not a test.
+Table~\ref{tab:calibration} records it.
+
+\begin{table}[ht]\centering\small
+\caption{Calibration at $L=\log3$, $N=24$ sine modes, $32$ Gauss--Jacobi nodes
+per atom; $m_L^{(24)}=6.247514\times10^{-8}$. Contraction here is
+Proposition~\ref{prop:vacuity}, not these numbers. What the table shows is that
+the instrument returns it, and that the first-order law
+$\lambda_{\min}(D_N)/2\omega=m_L^{(N)}$ degrades smoothly as $\omega$ grows, with
+no feature at the wall.}\label{tab:calibration}
+\begin{tabular}{@{}lccccc@{}}
+\toprule
+$\omega$ & rank $m$ & mass on window & $1-\norm{V_N}$ & $\lambda_{\min}(D_N)$ & $\lambda_{\min}(D_N)/(2\omega m_L^{(24)})$\\
+\midrule
+$0.1$ & $1.2$ & $0.940662658$ & $6.61\times10^{-9}$ & $1.3217\times10^{-8}$ & $1.058$\\
+$\frac12$ & $2$ & $0.774030153$ & $4.58\times10^{-8}$ & $9.1686\times10^{-8}$ & $1.468$\\
+$1$ & $3$ & $0.707371247$ & $1.72\times10^{-7}$ & $3.4445\times10^{-7}$ & $2.757$\\
+$\frac32$ & $4$ & $0.762741187$ & $5.38\times10^{-7}$ & $1.0761\times10^{-6}$ & $5.741$\\
+$2$ & $5$ & $0.891128215$ & $1.55\times10^{-6}$ & $3.1068\times10^{-6}$ & $12.432$\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{remark}[Which direction these numbers certify]\label{rem:direction}
+$\lambda_{\min}(D_N)$ is a trial-space Rayleigh quotient on the $N$-mode sine
+basis, and for $f$ in that space
+$\ip f{D_Nf}=\norm f^2-\norm{P_NV f}^2\ge\norm f^2-\norm{Vf}^2$, so
+$\lambda_{\min}(D_N)\ge\lambda_{\min}(D_{\omega,L})$: it \emph{overstates} the
+margin, and a positive computed value does \emph{not} certify contraction. Every
+recorded margin in this program is one-sided in this direction. The wall is
+invisible in Table~\ref{tab:calibration} --- as it must be, since it is not a
+wall in the transfer but a wall in what the transfer is evidence for.
+\end{remark}

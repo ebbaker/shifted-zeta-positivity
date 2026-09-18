@@ -1,0 +1,125 @@
+\section{Conventions, and the facts we use}\label{sec:conventions}
+
+\subsection{The completed zeta function, and a warning}\label{sec:xiwarning}
+
+Throughout,
+\begin{equation}\label{eq:xi-lambda}
+ \Lambda(u)=\pi^{-u/2}\Gamma(u/2)\zeta(u),\qquad
+ \xi(u)=\tfrac12u(u-1)\Lambda(u),
+\end{equation}
+so that $\Lambda$ satisfies $\Lambda(u)=\Lambda(1-u)$, is real on the real axis,
+and is holomorphic except for simple poles at $u=0$ and $u=1$ with residues $-1$
+and $+1$; while $\xi$ is entire and satisfies $\xi(u)=\xi(1-u)$. The trivial
+zeros of $\zeta$ cancel the poles of $\Gamma(u/2)$, so the zeros of $\Lambda$ and
+of $\xi$ are exactly the nontrivial zeros $\rho$ of $\zeta$.
+
+\begin{remark}[Two conventions in one program]\label{rem:xiwarning}
+The research notes on which Sections~\ref{sec:rank} and~\ref{sec:pointcount}
+are based \cite{OpeningNote,WhichDimension,RankNote} write $\xi$ for what
+\eqref{eq:xi-lambda} calls $\Lambda$ --- that is, for the completed zeta
+\emph{with} its two poles. The parent manuscript \cite{Markov} uses
+\eqref{eq:xi-lambda}, and so does this one. The two differ by exactly the
+rational factor $R_\omega$ of \eqref{eq:factor}, which is the object of
+Section~\ref{sec:wall}; the clash is harmless inside each document and lethal
+across them, and it is the reason this remark exists.
+\end{remark}
+
+\subsection{The shifted family}\label{sec:family}
+
+For $\omega>0$ put
+\begin{equation}\label{eq:ab}
+ s=\tfrac12+p,\qquad a=\tfrac12-\omega,\qquad b=\tfrac12+\omega,\qquad
+ c=-a=\omega-\tfrac12,
+\end{equation}
+so that $a+b=1$, $b-a=2\omega$ and $b-c=1$, and let the transfer symbol and its
+Markov part be
+\begin{equation}\label{eq:symbol}
+ K_\omega(p)=\frac{\xi(s-\omega)}{\xi(s+\omega)}=\frac{\xi(p+a)}{\xi(p+b)},
+ \qquad
+ \Kt_\omega(p)=\frac{\Lambda(p+a)}{\Lambda(p+b)} .
+\end{equation}
+The \emph{causal realization} of a symbol $H$ holomorphic on $\re p>\eta_0$ is
+the convolution with its inverse Laplace transform on any line $\re p=\eta>\eta_0$,
+a distribution supported on $[0,\infty)$; we write $V_\omega$ for the causal
+realization of $K_\omega$ on $L^2(\R)$, and, for $L>0$ and $P_L$ the
+multiplication by the indicator of $I_L=(-L/2,L/2)$,
+\begin{equation}\label{eq:compression}
+ V_{\omega,L}=P_LV_\omega P_L,\qquad D_{\omega,L}=I-V_{\omega,L}^{*}V_{\omega,L}
+\end{equation}
+for the compression to the window and its contraction defect. We write $Q_L$ for
+the localized Weil form and $m_L$ for its smallest eigenvalue on $L^2(I_L)$, the
+\emph{margin}; Weil's criterion, used as input, is that the Riemann hypothesis
+holds if and only if $Q_L\ge0$ for every $L$.
+
+Finally we set
+\begin{equation}\label{eq:dm}
+ d=2\omega,\qquad m=d+1=2\omega+1,\qquad\text{so}\qquad
+ a=\frac{2-m}2,\qquad b=\frac m2,\qquad 2s=p+b ,
+\end{equation}
+which is the dictionary of \cite{OpeningNote,WhichDimension}: $d$ is the
+dimension carried by every factor of $\Kt_\omega$ and $m=d+1$ will turn out to
+be a rank. The family's range is $\omega\in(0,\frac12]$, that is $m\in(1,2]$.
+
+\subsection{What is inherited}\label{sec:inherited}
+
+The following are proved in the parent manuscript \cite{Markov} and are used
+here as stated. We reprove nothing.
+
+\begin{proposition}[Unimodularity {\cite[Prop.~2.1]{Markov}}]\label{prop:unimodular}
+$\lvert K_\omega(i\tau)\rvert=1$ for every real $\tau$ with
+$\xi(\frac12+\omega+i\tau)\ne0$.
+\end{proposition}
+
+\begin{proposition}[Flux and dichotomy {\cite[Prop.~2.3]{Markov}}]\label{prop:dichotomy}
+For fixed $\omega$, $L\mapsto\norm{V_{\omega,L}}$ is nondecreasing with limit
+$\norm{V_\omega}_{L^2(\R)}$. If no zero of $\xi$ satisfies
+$\lvert\re\rho-\frac12\rvert>\omega$, then $K_\omega$ is inner on the right
+half-plane, $V_\omega$ is unitary and causal on $L^2(\R)$, and every
+$V_{\omega,L}$ is a contraction. If some zero satisfies
+$\lvert\re\rho-\frac12\rvert>\omega$, then $\sup_L\norm{V_{\omega,L}}=\infty$.
+\end{proposition}
+
+\begin{proposition}[The first-order law {\cite[Sec.~2.2]{Markov}}]\label{prop:firstorder}
+$\ip f{D_{\omega,L}f}=2\omega\,Q_L[f]+O(\omega^2)$ as $\omega\downarrow0$, and
+$V_{0,L}=I$.
+\end{proposition}
+
+\begin{proposition}[The pieces {\cite[Prop.~3.3]{Markov}}]\label{prop:pieces}
+$\Kt_\omega=K^\Gamma_\omega K^\zeta_\omega$ with
+\begin{align}
+ K^\Gamma_\omega(p)&=\pi^\omega\frac{\Gamma(\frac{s-\omega}2)}{\Gamma(\frac{s+\omega}2)}
+ =\int_0^\infty e^{-p\tau}k^\Gamma_\omega(\tau)\dd\tau,\qquad
+ k^\Gamma_\omega(\tau)=\frac{2\pi^\omega}{\Gamma(\omega)}(2\sinh\tau)^{\omega-1}e^{\tau/2},
+ \label{eq:kgamma}\\
+ K^\zeta_\omega(p)&=\frac{\zeta(p+a)}{\zeta(p+b)}=\sum_{n\ge1}\ct_n\,n^{-p},\qquad
+ \ct_n=n^{\omega-\frac12}\prod_{q\mid n}\big(1-q^{-2\omega}\big),
+ \label{eq:comb}
+\end{align}
+the product over the primes $q$ dividing $n$; and $\ct_n>0$ for every $n\ge1$ and
+every real $\omega>0$.
+\end{proposition}
+
+\subsection{Complete monotonicity and Blaschke factors}\label{sec:cmblaschke}
+
+A function $H$ on $(p_0,\infty)$ is \emph{completely monotone} if
+$(-1)^kH^{(k)}\ge0$ for every $k\ge0$; by Bernstein's theorem this holds if and
+only if $H(p)=\int_{[0,\infty)}e^{-pt}\dd\mu(t)$ for a positive measure $\mu$
+whose integral converges for $p>p_0$, and $\mu$ is then the causal inverse
+Laplace kernel of $H$ \cite{SSV}. Products of completely monotone functions are
+completely monotone. A \emph{Blaschke factor} of the right half-plane is
+\begin{equation}\label{eq:blaschke}
+ B_\gamma(p)=\frac{p-\gamma}{p+\gamma},\qquad\gamma>0,
+\end{equation}
+holomorphic and bounded by $1$ on $\re p>0$, unimodular on the axis, with causal
+kernel $\delta_0-2\gamma e^{-\gamma t}\mathbf 1_{t>0}$. A finite product of
+Blaschke factors is \emph{inner}: $\lvert\cdot\rvert\le1$ throughout the open
+right half-plane. We will use repeatedly that for $\beta>\alpha$ the Beta
+integral gives
+\begin{equation}\label{eq:betadensity}
+ \frac{\Gamma(z+\alpha)}{\Gamma(z+\beta)}
+ =\frac1{\Gamma(\beta-\alpha)}\int_0^\infty e^{-zt}\,
+ e^{-\alpha t}\big(1-e^{-t}\big)^{\beta-\alpha-1}\dd t ,
+\end{equation}
+a completely monotone function of $z$ on $z>-\alpha$, with a manifestly positive
+density; and that complete monotonicity is preserved by an increasing affine
+change of the variable.

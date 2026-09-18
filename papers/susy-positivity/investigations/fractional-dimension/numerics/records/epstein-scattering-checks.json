@@ -1,0 +1,2151 @@
+{
+  "programme": "check_epstein_scattering.py",
+  "investigation": "fractional-dimension",
+  "statement": "for every integer d >= 1 the Markov part of the shifted Weil transfer is the primitive-Epstein scattering matrix of the space of unimodular lattices of rank d + 1, with p -> -p the Epstein functional equation s -> m/2 - s; and the point count of that lattice, whose unique analytic interpolation is the coefficients of theta^(d+1), is strictly negative at n = 3 for every d in the open range (0,1) of the family",
+  "consequence": "the family lives in the gap between rank 1 and rank 2, with d = 1 (the modular surface, and RH) at its right endpoint; strictly inside, there is a scattering matrix but no space",
+  "scope": "finite test cases; zeta is evaluated only at REAL arguments, by a convergent theta integral; no value off the real axis is computed, no zero is located, and nothing here is a positivity certificate",
+  "groups": [
+    {
+      "name": "A. the theta machinery, verified against things it does not assume",
+      "cases": 25,
+      "worst_margin_against_own_tolerance": 0.005609264524242202,
+      "pass": true,
+      "checks": [
+        {
+          "what": "Poisson: theta_1(1/0.3) = 0.3^(1/2) theta_1(0.3)",
+          "error": 0.0,
+          "tolerance": 1e-13,
+          "pass": true
+        },
+        {
+          "what": "Poisson: theta_1(1/0.7) = 0.7^(1/2) theta_1(0.7)",
+          "error": 0.0,
+          "tolerance": 1e-13,
+          "pass": true
+        },
+        {
+          "what": "Poisson: theta_1(1/1.3) = 1.3^(1/2) theta_1(1.3)",
+          "error": 0.0,
+          "tolerance": 1e-13,
+          "pass": true
+        },
+        {
+          "what": "Poisson: theta_1(1/2.5) = 2.5^(1/2) theta_1(2.5)",
+          "error": 1.403243899874972e-16,
+          "tolerance": 1e-13,
+          "pass": true
+        },
+        {
+          "what": "Poisson: theta_2(1/0.3) = 0.3^(2/2) theta_2(0.3)",
+          "error": 0.0,
+          "tolerance": 1e-13,
+          "pass": true
+        },
+        {
+          "what": "Poisson: theta_2(1/0.7) = 0.7^(2/2) theta_2(0.7)",
+          "error": 0.0,
+          "tolerance": 1e-13,
+          "pass": true
+        },
+        {
+          "what": "Poisson: theta_2(1/1.3) = 1.3^(2/2) theta_2(1.3)",
+          "error": 0.0,
+          "tolerance": 1e-13,
+          "pass": true
+        },
+        {
+          "what": "Poisson: theta_2(1/2.5) = 2.5^(2/2) theta_2(2.5)",
+          "error": 0.0,
+          "tolerance": 1e-13,
+          "pass": true
+        },
+        {
+          "what": "Poisson: theta_3(1/0.3) = 0.3^(3/2) theta_3(0.3)",
+          "error": 0.0,
+          "tolerance": 1e-13,
+          "pass": true
+        },
+        {
+          "what": "Poisson: theta_3(1/0.7) = 0.7^(3/2) theta_3(0.7)",
+          "error": 2.077148273730363e-16,
+          "tolerance": 1e-13,
+          "pass": true
+        },
+        {
+          "what": "Poisson: theta_3(1/1.3) = 1.3^(3/2) theta_3(1.3)",
+          "error": 2.7126871715607356e-16,
+          "tolerance": 1e-13,
+          "pass": true
+        },
+        {
+          "what": "Poisson: theta_3(1/2.5) = 2.5^(3/2) theta_3(2.5)",
+          "error": 0.0,
+          "tolerance": 1e-13,
+          "pass": true
+        },
+        {
+          "what": "Poisson: theta_5(1/0.3) = 0.3^(5/2) theta_5(0.3)",
+          "error": 2.21981734664997e-16,
+          "tolerance": 1e-13,
+          "pass": true
+        },
+        {
+          "what": "Poisson: theta_5(1/0.7) = 0.7^(5/2) theta_5(0.7)",
+          "error": 0.0,
+          "tolerance": 1e-13,
+          "pass": true
+        },
+        {
+          "what": "Poisson: theta_5(1/1.3) = 1.3^(5/2) theta_5(1.3)",
+          "error": 1.9529271445331088e-16,
+          "tolerance": 1e-13,
+          "pass": true
+        },
+        {
+          "what": "Poisson: theta_5(1/2.5) = 2.5^(5/2) theta_5(2.5)",
+          "error": 0.0,
+          "tolerance": 1e-13,
+          "pass": true
+        },
+        {
+          "what": "zeta(2) against pi^2/6",
+          "error": 1.3498693315439662e-16,
+          "tolerance": 1e-11,
+          "pass": true
+        },
+        {
+          "what": "zeta(4) against pi^4/90",
+          "error": 3.6927996777322004e-15,
+          "tolerance": 1e-11,
+          "pass": true
+        },
+        {
+          "what": "zeta(6) against pi^6/945",
+          "error": 5.609264524242201e-14,
+          "tolerance": 1e-11,
+          "pass": true
+        },
+        {
+          "what": "zeta(-1) against -1/12",
+          "error": 1.6653345369377348e-16,
+          "tolerance": 1e-11,
+          "pass": true
+        },
+        {
+          "what": "zeta(-3) against 1/120",
+          "error": 3.747002708109903e-15,
+          "tolerance": 1e-11,
+          "pass": true
+        },
+        {
+          "what": "Epstein Z_{Z^2}(2.5): direct lattice sum + continuum tail vs the theta method",
+          "error": 1.5305207454340912e-11,
+          "tolerance": 3e-05,
+          "pass": true
+        },
+        {
+          "what": "Epstein Z_{Z^2}(3): direct lattice sum + continuum tail vs the theta method",
+          "error": 5.118702027244745e-13,
+          "tolerance": 3e-05,
+          "pass": true
+        },
+        {
+          "what": "Epstein Z_{Z^3}(3): direct lattice sum + continuum tail vs the theta method",
+          "error": 3.026902444523044e-09,
+          "tolerance": 3e-05,
+          "pass": true
+        },
+        {
+          "what": "Epstein Z_{Z^4}(4): direct lattice sum + continuum tail vs the theta method",
+          "error": 3.926049533193473e-10,
+          "tolerance": 3e-05,
+          "pass": true
+        }
+      ],
+      "note": "Poisson summation in dimension m is the only input; the completed integral is then checked against direct lattice summation where that converges, and against closed-form zeta values",
+      "lattice_sum_cross_check": {
+        "m=2,s=2.5": {
+          "direct_plus_tail": 5.090258233587512,
+          "theta_method": 5.09025823366542
+        },
+        "m=2,s=3": {
+          "direct_plus_tail": 4.65891361560123,
+          "theta_method": 4.658913615603614
+        },
+        "m=3,s=3": {
+          "direct_plus_tail": 8.401924000259,
+          "theta_method": 8.401923974827195
+        },
+        "m=4,s=4": {
+          "direct_plus_tail": 10.245486155960718,
+          "theta_method": 10.24548615193829
+        }
+      }
+    },
+    {
+      "name": "B. the scattering identity: the ratio is universal and depends only on the rank",
+      "cases": 30,
+      "worst_margin_against_own_tolerance": 0.0002572909199185349,
+      "pass": true,
+      "checks": [
+        {
+          "what": "m=2 s=1.6: xi(2s) Estar(s) = Lambda_m(s)",
+          "error": 1.935712181649965e-16,
+          "tolerance": 1e-12,
+          "pass": true
+        },
+        {
+          "what": "m=2 s=1.6: Estar(s)/Estar(m/2-s) = xi(m-2s)/xi(2s)",
+          "error": 1.8420378635331748e-16,
+          "tolerance": 1e-11,
+          "pass": true
+        },
+        {
+          "what": "m=2 s=2.2: xi(2s) Estar(s) = Lambda_m(s)",
+          "error": 1.1264493783272081e-16,
+          "tolerance": 1e-12,
+          "pass": true
+        },
+        {
+          "what": "m=2 s=2.2: Estar(s)/Estar(m/2-s) = xi(m-2s)/xi(2s)",
+          "error": 0.0,
+          "tolerance": 1e-11,
+          "pass": true
+        },
+        {
+          "what": "m=2 s=3.1: xi(2s) Estar(s) = Lambda_m(s)",
+          "error": 1.9088027712556821e-16,
+          "tolerance": 1e-12,
+          "pass": true
+        },
+        {
+          "what": "m=2 s=3.1: Estar(s)/Estar(m/2-s) = xi(m-2s)/xi(2s)",
+          "error": 1.8945616145752939e-16,
+          "tolerance": 1e-11,
+          "pass": true
+        },
+        {
+          "what": "m=3 s=1.6: xi(2s) Estar(s) = Lambda_m(s)",
+          "error": 1.861421822733778e-16,
+          "tolerance": 1e-12,
+          "pass": true
+        },
+        {
+          "what": "m=3 s=1.6: Estar(s)/Estar(m/2-s) = xi(m-2s)/xi(2s)",
+          "error": 2.831674682020048e-16,
+          "tolerance": 1e-11,
+          "pass": true
+        },
+        {
+          "what": "m=3 s=2.2: xi(2s) Estar(s) = Lambda_m(s)",
+          "error": 0.0,
+          "tolerance": 1e-12,
+          "pass": true
+        },
+        {
+          "what": "m=3 s=2.2: Estar(s)/Estar(m/2-s) = xi(m-2s)/xi(2s)",
+          "error": 0.0,
+          "tolerance": 1e-11,
+          "pass": true
+        },
+        {
+          "what": "m=3 s=3.1: xi(2s) Estar(s) = Lambda_m(s)",
+          "error": 2.1516411878386176e-16,
+          "tolerance": 1e-12,
+          "pass": true
+        },
+        {
+          "what": "m=3 s=3.1: Estar(s)/Estar(m/2-s) = xi(m-2s)/xi(2s)",
+          "error": 0.0,
+          "tolerance": 1e-11,
+          "pass": true
+        },
+        {
+          "what": "m=4 s=1.6: xi(2s) Estar(s) = Lambda_m(s)",
+          "error": 1.5389430852305427e-16,
+          "tolerance": 1e-12,
+          "pass": true
+        },
+        {
+          "what": "m=4 s=1.6: Estar(s)/Estar(m/2-s) = xi(m-2s)/xi(2s)",
+          "error": 0.0,
+          "tolerance": 1e-11,
+          "pass": true
+        },
+        {
+          "what": "m=4 s=2.2: xi(2s) Estar(s) = Lambda_m(s)",
+          "error": 0.0,
+          "tolerance": 1e-12,
+          "pass": true
+        },
+        {
+          "what": "m=4 s=2.2: Estar(s)/Estar(m/2-s) = xi(m-2s)/xi(2s)",
+          "error": 1.8472227909683012e-16,
+          "tolerance": 1e-11,
+          "pass": true
+        },
+        {
+          "what": "m=4 s=3.1: xi(2s) Estar(s) = Lambda_m(s)",
+          "error": 0.0,
+          "tolerance": 1e-12,
+          "pass": true
+        },
+        {
+          "what": "m=4 s=3.1: Estar(s)/Estar(m/2-s) = xi(m-2s)/xi(2s)",
+          "error": 1.706313673673308e-16,
+          "tolerance": 1e-11,
+          "pass": true
+        },
+        {
+          "what": "m=5 s=1.6: xi(2s) Estar(s) = Lambda_m(s)",
+          "error": 1.5698574187822202e-16,
+          "tolerance": 1e-12,
+          "pass": true
+        },
+        {
+          "what": "m=5 s=1.6: Estar(s)/Estar(m/2-s) = xi(m-2s)/xi(2s)",
+          "error": 2.0657815505576476e-16,
+          "tolerance": 1e-11,
+          "pass": true
+        },
+        {
+          "what": "m=5 s=2.2: xi(2s) Estar(s) = Lambda_m(s)",
+          "error": 2.5729091991853484e-16,
+          "tolerance": 1e-12,
+          "pass": true
+        },
+        {
+          "what": "m=5 s=2.2: Estar(s)/Estar(m/2-s) = xi(m-2s)/xi(2s)",
+          "error": 1.6128526841412173e-16,
+          "tolerance": 1e-11,
+          "pass": true
+        },
+        {
+          "what": "m=5 s=3.1: xi(2s) Estar(s) = Lambda_m(s)",
+          "error": 0.0,
+          "tolerance": 1e-12,
+          "pass": true
+        },
+        {
+          "what": "m=5 s=3.1: Estar(s)/Estar(m/2-s) = xi(m-2s)/xi(2s)",
+          "error": 1.4155238741476394e-16,
+          "tolerance": 1e-11,
+          "pass": true
+        },
+        {
+          "what": "m=6 s=1.6: xi(2s) Estar(s) = Lambda_m(s)",
+          "error": 1.2054479095416267e-16,
+          "tolerance": 1e-12,
+          "pass": true
+        },
+        {
+          "what": "m=6 s=1.6: Estar(s)/Estar(m/2-s) = xi(m-2s)/xi(2s)",
+          "error": 3.32811714590744e-16,
+          "tolerance": 1e-11,
+          "pass": true
+        },
+        {
+          "what": "m=6 s=2.2: xi(2s) Estar(s) = Lambda_m(s)",
+          "error": 1.7424788319916595e-16,
+          "tolerance": 1e-12,
+          "pass": true
+        },
+        {
+          "what": "m=6 s=2.2: Estar(s)/Estar(m/2-s) = xi(m-2s)/xi(2s)",
+          "error": 1.5687915324873192e-16,
+          "tolerance": 1e-11,
+          "pass": true
+        },
+        {
+          "what": "m=6 s=3.1: xi(2s) Estar(s) = Lambda_m(s)",
+          "error": 0.0,
+          "tolerance": 1e-12,
+          "pass": true
+        },
+        {
+          "what": "m=6 s=3.1: Estar(s)/Estar(m/2-s) = xi(m-2s)/xi(2s)",
+          "error": 0.0,
+          "tolerance": 1e-11,
+          "pass": true
+        }
+      ],
+      "note": "xi(2s) Estar(s) = Lambda_m(s), which is symmetric in s <-> m/2 - s; so the primitive Epstein zeta of ANY unimodular rank-m lattice has the same reflection ratio, xi(m-2s)/xi(2s)"
+    },
+    {
+      "name": "C. the dictionary: at every integer d the Markov part IS that scattering matrix",
+      "cases": 60,
+      "worst_margin_against_own_tolerance": 0.00039369722323408647,
+      "pass": true,
+      "checks": [
+        {
+          "what": "d=1 p=0.9: Ktilde_omega(p) = xi(m-2s)/xi(2s)",
+          "error": 0.0,
+          "tolerance": 1e-11,
+          "pass": true
+        },
+        {
+          "what": "d=1 p=0.9: Ktilde_omega(p) = Estar(s)/Estar(m/2-s) of Z^2",
+          "error": 0.0,
+          "tolerance": 1e-10,
+          "pass": true
+        },
+        {
+          "what": "d=1 p=1.3: Ktilde_omega(p) = xi(m-2s)/xi(2s)",
+          "error": 7.379951666469776e-16,
+          "tolerance": 1e-11,
+          "pass": true
+        },
+        {
+          "what": "d=1 p=1.3: Ktilde_omega(p) = Estar(s)/Estar(m/2-s) of Z^2",
+          "error": 9.839935555293034e-16,
+          "tolerance": 1e-10,
+          "pass": true
+        },
+        {
+          "what": "d=1 p=2.4: Ktilde_omega(p) = xi(m-2s)/xi(2s)",
+          "error": 0.0,
+          "tolerance": 1e-11,
+          "pass": true
+        },
+        {
+          "what": "d=1 p=2.4: Ktilde_omega(p) = Estar(s)/Estar(m/2-s) of Z^2",
+          "error": 0.0,
+          "tolerance": 1e-10,
+          "pass": true
+        },
+        {
+          "what": "d=1 p=3.7: Ktilde_omega(p) = xi(m-2s)/xi(2s)",
+          "error": 0.0,
+          "tolerance": 1e-11,
+          "pass": true
+        },
+        {
+          "what": "d=1 p=3.7: Ktilde_omega(p) = Estar(s)/Estar(m/2-s) of Z^2",
+          "error": 1.5079312107835016e-16,
+          "tolerance": 1e-10,
+          "pass": true
+        },
+        {
+          "what": "d=2 p=0.9: Ktilde_omega(p) = xi(m-2s)/xi(2s)",
+          "error": 0.0,
+          "tolerance": 1e-11,
+          "pass": true
+        },
+        {
+          "what": "d=2 p=0.9: Ktilde_omega(p) = Estar(s)/Estar(m/2-s) of Z^3",
+          "error": 0.0,
+          "tolerance": 1e-10,
+          "pass": true
+        },
+        {
+          "what": "d=2 p=1.3: Ktilde_omega(p) = xi(m-2s)/xi(2s)",
+          "error": 7.627054473698186e-16,
+          "tolerance": 1e-11,
+          "pass": true
+        },
+        {
+          "what": "d=2 p=1.3: Ktilde_omega(p) = Estar(s)/Estar(m/2-s) of Z^3",
+          "error": 8.898230219314551e-16,
+          "tolerance": 1e-10,
+          "pass": true
+        },
+        {
+          "what": "d=2 p=2.4: Ktilde_omega(p) = xi(m-2s)/xi(2s)",
+          "error": 0.0,
+          "tolerance": 1e-11,
+          "pass": true
+        },
+        {
+          "what": "d=2 p=2.4: Ktilde_omega(p) = Estar(s)/Estar(m/2-s) of Z^3",
+          "error": 1.6724258354657393e-16,
+          "tolerance": 1e-10,
+          "pass": true
+        },
+        {
+          "what": "d=2 p=3.7: Ktilde_omega(p) = xi(m-2s)/xi(2s)",
+          "error": 0.0,
+          "tolerance": 1e-11,
+          "pass": true
+        },
+        {
+          "what": "d=2 p=3.7: Ktilde_omega(p) = Estar(s)/Estar(m/2-s) of Z^3",
+          "error": 0.0,
+          "tolerance": 1e-10,
+          "pass": true
+        },
+        {
+          "what": "d=3 p=0.9: Ktilde_omega(p) = xi(m-2s)/xi(2s)",
+          "error": 0.0,
+          "tolerance": 1e-11,
+          "pass": true
+        },
+        {
+          "what": "d=3 p=0.9: Ktilde_omega(p) = Estar(s)/Estar(m/2-s) of Z^4",
+          "error": 1.606031439052428e-16,
+          "tolerance": 1e-10,
+          "pass": true
+        },
+        {
+          "what": "d=3 p=1.3: Ktilde_omega(p) = xi(m-2s)/xi(2s)",
+          "error": 3.527286501468092e-16,
+          "tolerance": 1e-11,
+          "pass": true
+        },
+        {
+          "what": "d=3 p=1.3: Ktilde_omega(p) = Estar(s)/Estar(m/2-s) of Z^4",
+          "error": 3.527286501468092e-16,
+          "tolerance": 1e-10,
+          "pass": true
+        },
+        {
+          "what": "d=3 p=2.4: Ktilde_omega(p) = xi(m-2s)/xi(2s)",
+          "error": 1.2930559536778108e-15,
+          "tolerance": 1e-11,
+          "pass": true
+        },
+        {
+          "what": "d=3 p=2.4: Ktilde_omega(p) = Estar(s)/Estar(m/2-s) of Z^4",
+          "error": 1.1083336745809805e-15,
+          "tolerance": 1e-10,
+          "pass": true
+        },
+        {
+          "what": "d=3 p=3.7: Ktilde_omega(p) = xi(m-2s)/xi(2s)",
+          "error": 0.0,
+          "tolerance": 1e-11,
+          "pass": true
+        },
+        {
+          "what": "d=3 p=3.7: Ktilde_omega(p) = Estar(s)/Estar(m/2-s) of Z^4",
+          "error": 2.510532745757527e-16,
+          "tolerance": 1e-10,
+          "pass": true
+        },
+        {
+          "what": "d=4 p=0.9: Ktilde_omega(p) = xi(m-2s)/xi(2s)",
+          "error": 0.0,
+          "tolerance": 1e-11,
+          "pass": true
+        },
+        {
+          "what": "d=4 p=0.9: Ktilde_omega(p) = Estar(s)/Estar(m/2-s) of Z^5",
+          "error": 1.2324851566099454e-16,
+          "tolerance": 1e-10,
+          "pass": true
+        },
+        {
+          "what": "d=4 p=1.3: Ktilde_omega(p) = xi(m-2s)/xi(2s)",
+          "error": 1.2202229203044163e-15,
+          "tolerance": 1e-11,
+          "pass": true
+        },
+        {
+          "what": "d=4 p=1.3: Ktilde_omega(p) = Estar(s)/Estar(m/2-s) of Z^5",
+          "error": 1.2202229203044163e-15,
+          "tolerance": 1e-10,
+          "pass": true
+        },
+        {
+          "what": "d=4 p=2.4: Ktilde_omega(p) = xi(m-2s)/xi(2s)",
+          "error": 3.9369722323408644e-15,
+          "tolerance": 1e-11,
+          "pass": true
+        },
+        {
+          "what": "d=4 p=2.4: Ktilde_omega(p) = Estar(s)/Estar(m/2-s) of Z^5",
+          "error": 3.9369722323408644e-15,
+          "tolerance": 1e-10,
+          "pass": true
+        },
+        {
+          "what": "d=4 p=3.7: Ktilde_omega(p) = xi(m-2s)/xi(2s)",
+          "error": 0.0,
+          "tolerance": 1e-11,
+          "pass": true
+        },
+        {
+          "what": "d=4 p=3.7: Ktilde_omega(p) = Estar(s)/Estar(m/2-s) of Z^5",
+          "error": 1.4155238741476394e-16,
+          "tolerance": 1e-10,
+          "pass": true
+        },
+        {
+          "what": "d=5 p=0.9: Ktilde_omega(p) = xi(m-2s)/xi(2s)",
+          "error": 0.0,
+          "tolerance": 1e-11,
+          "pass": true
+        },
+        {
+          "what": "d=5 p=0.9: Ktilde_omega(p) = Estar(s)/Estar(m/2-s) of Z^6",
+          "error": 1.1141247425049657e-16,
+          "tolerance": 1e-10,
+          "pass": true
+        },
+        {
+          "what": "d=5 p=1.3: Ktilde_omega(p) = xi(m-2s)/xi(2s)",
+          "error": 4.0083445378037493e-16,
+          "tolerance": 1e-11,
+          "pass": true
+        },
+        {
+          "what": "d=5 p=1.3: Ktilde_omega(p) = Estar(s)/Estar(m/2-s) of Z^6",
+          "error": 6.012516806705626e-16,
+          "tolerance": 1e-10,
+          "pass": true
+        },
+        {
+          "what": "d=5 p=2.4: Ktilde_omega(p) = xi(m-2s)/xi(2s)",
+          "error": 4.948272293022161e-16,
+          "tolerance": 1e-11,
+          "pass": true
+        },
+        {
+          "what": "d=5 p=2.4: Ktilde_omega(p) = Estar(s)/Estar(m/2-s) of Z^6",
+          "error": 4.948272293022161e-16,
+          "tolerance": 1e-10,
+          "pass": true
+        },
+        {
+          "what": "d=5 p=3.7: Ktilde_omega(p) = xi(m-2s)/xi(2s)",
+          "error": 0.0,
+          "tolerance": 1e-11,
+          "pass": true
+        },
+        {
+          "what": "d=5 p=3.7: Ktilde_omega(p) = Estar(s)/Estar(m/2-s) of Z^6",
+          "error": 1.269220640957587e-16,
+          "tolerance": 1e-10,
+          "pass": true
+        },
+        {
+          "what": "d=1 p=9/10: s(-p) = m/2 - s(p) exactly",
+          "error": 0.0,
+          "tolerance": 0.5,
+          "pass": true
+        },
+        {
+          "what": "d=1 p=13/10: s(-p) = m/2 - s(p) exactly",
+          "error": 0.0,
+          "tolerance": 0.5,
+          "pass": true
+        },
+        {
+          "what": "d=1 p=12/5: s(-p) = m/2 - s(p) exactly",
+          "error": 0.0,
+          "tolerance": 0.5,
+          "pass": true
+        },
+        {
+          "what": "d=1 p=37/10: s(-p) = m/2 - s(p) exactly",
+          "error": 0.0,
+          "tolerance": 0.5,
+          "pass": true
+        },
+        {
+          "what": "d=2 p=9/10: s(-p) = m/2 - s(p) exactly",
+          "error": 0.0,
+          "tolerance": 0.5,
+          "pass": true
+        },
+        {
+          "what": "d=2 p=13/10: s(-p) = m/2 - s(p) exactly",
+          "error": 0.0,
+          "tolerance": 0.5,
+          "pass": true
+        },
+        {
+          "what": "d=2 p=12/5: s(-p) = m/2 - s(p) exactly",
+          "error": 0.0,
+          "tolerance": 0.5,
+          "pass": true
+        },
+        {
+          "what": "d=2 p=37/10: s(-p) = m/2 - s(p) exactly",
+          "error": 0.0,
+          "tolerance": 0.5,
+          "pass": true
+        },
+        {
+          "what": "d=3 p=9/10: s(-p) = m/2 - s(p) exactly",
+          "error": 0.0,
+          "tolerance": 0.5,
+          "pass": true
+        },
+        {
+          "what": "d=3 p=13/10: s(-p) = m/2 - s(p) exactly",
+          "error": 0.0,
+          "tolerance": 0.5,
+          "pass": true
+        },
+        {
+          "what": "d=3 p=12/5: s(-p) = m/2 - s(p) exactly",
+          "error": 0.0,
+          "tolerance": 0.5,
+          "pass": true
+        },
+        {
+          "what": "d=3 p=37/10: s(-p) = m/2 - s(p) exactly",
+          "error": 0.0,
+          "tolerance": 0.5,
+          "pass": true
+        },
+        {
+          "what": "d=4 p=9/10: s(-p) = m/2 - s(p) exactly",
+          "error": 0.0,
+          "tolerance": 0.5,
+          "pass": true
+        },
+        {
+          "what": "d=4 p=13/10: s(-p) = m/2 - s(p) exactly",
+          "error": 0.0,
+          "tolerance": 0.5,
+          "pass": true
+        },
+        {
+          "what": "d=4 p=12/5: s(-p) = m/2 - s(p) exactly",
+          "error": 0.0,
+          "tolerance": 0.5,
+          "pass": true
+        },
+        {
+          "what": "d=4 p=37/10: s(-p) = m/2 - s(p) exactly",
+          "error": 0.0,
+          "tolerance": 0.5,
+          "pass": true
+        },
+        {
+          "what": "d=5 p=9/10: s(-p) = m/2 - s(p) exactly",
+          "error": 0.0,
+          "tolerance": 0.5,
+          "pass": true
+        },
+        {
+          "what": "d=5 p=13/10: s(-p) = m/2 - s(p) exactly",
+          "error": 0.0,
+          "tolerance": 0.5,
+          "pass": true
+        },
+        {
+          "what": "d=5 p=12/5: s(-p) = m/2 - s(p) exactly",
+          "error": 0.0,
+          "tolerance": 0.5,
+          "pass": true
+        },
+        {
+          "what": "d=5 p=37/10: s(-p) = m/2 - s(p) exactly",
+          "error": 0.0,
+          "tolerance": 0.5,
+          "pass": true
+        }
+      ],
+      "note": "d = 2 omega, b = (d+1)/2, u = 1/2 + p + omega = 2s, m = d + 1; the arguments avoid the poles of xi at 0 and 1",
+      "values_of_the_markov_part": {
+        "d=1,p=0.9": -18.227301593829793,
+        "d=1,p=1.3": 7.221010054053545,
+        "d=1,p=2.4": 2.175907966764331,
+        "d=1,p=3.7": 1.472511500107885,
+        "d=2,p=0.9": -12.885715057271046,
+        "d=2,p=1.3": -27.948249414386627,
+        "d=2,p=2.4": 5.310719320792987,
+        "d=2,p=3.7": 2.2206486929179095,
+        "d=3,p=0.9": 44.24214361453137,
+        "d=3,p=1.3": -30.216261230737775,
+        "d=3,p=2.4": 19.23272978316924,
+        "d=3,p=3.7": 3.53780854362896,
+        "d=4,p=0.9": 7.206402567501381,
+        "d=4,p=1.3": 34.93834072135792,
+        "d=4,p=2.4": -137.16441145854634,
+        "d=4,p=3.7": 6.274556267974948,
+        "d=5,p=0.9": 3.9859918096028033,
+        "d=5,p=1.3": 8.863294173676756,
+        "d=5,p=2.4": -57.43764236758571,
+        "d=5,p=3.7": 13.995650417881993
+      },
+      "corollary": "on Re p = 0 the two arguments are complex conjugates and the coefficients are real, so |Ktilde_omega| = 1 there: the all-pass property of the transfer is the Epstein functional equation. Not computed here -- no value off the real axis is."
+    },
+    {
+      "name": "D. the residue is the residue of the primitive Epstein zeta",
+      "cases": 30,
+      "worst_margin_against_own_tolerance": 0.5015597557278539,
+      "pass": true,
+      "checks": [
+        {
+          "what": "m=2: Res_{s=m/2} Lambda_m = 1",
+          "error": 5.015597557278539e-07,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "what": "m=2: Res_{s=m/2} Estar = |S^(m-1)|/(2 zeta(m))",
+          "error": 3.2405996068419494e-08,
+          "tolerance": 1e-05,
+          "pass": true
+        },
+        {
+          "what": "m=2: |S^(m-1)|/(2 zeta(m)) equals pi^(m/2)/(Gamma(m/2) zeta(m))",
+          "error": 0.0,
+          "tolerance": 1e-13,
+          "pass": true
+        },
+        {
+          "what": "m=2: Z_{Z^m}(0) = -1",
+          "error": 2.6210690646788493e-06,
+          "tolerance": 0.0001,
+          "pass": true
+        },
+        {
+          "what": "m=2: Estar(0) = 2",
+          "error": 2.1093784334791366e-06,
+          "tolerance": 0.0001,
+          "pass": true
+        },
+        {
+          "what": "m=2: Res_{p=b} Ktilde_omega = Res_{s=m/2} Estar, the Jacobian cancelling against Estar(0) = 2",
+          "error": 1.0854163870794891e-08,
+          "tolerance": 1e-05,
+          "pass": true
+        },
+        {
+          "what": "m=3: Res_{s=m/2} Lambda_m = 1",
+          "error": 2.2809919886235264e-07,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "what": "m=3: Res_{s=m/2} Estar = |S^(m-1)|/(2 zeta(m))",
+          "error": 2.0217296882531043e-08,
+          "tolerance": 1e-05,
+          "pass": true
+        },
+        {
+          "what": "m=3: |S^(m-1)|/(2 zeta(m)) equals pi^(m/2)/(Gamma(m/2) zeta(m))",
+          "error": 0.0,
+          "tolerance": 1e-13,
+          "pass": true
+        },
+        {
+          "what": "m=3: Z_{Z^m}(0) = -1",
+          "error": 2.2219094224507074e-06,
+          "tolerance": 0.0001,
+          "pass": true
+        },
+        {
+          "what": "m=3: Estar(0) = 2",
+          "error": 2.907694783615966e-06,
+          "tolerance": 0.0001,
+          "pass": true
+        },
+        {
+          "what": "m=3: Res_{p=b} Ktilde_omega = Res_{s=m/2} Estar, the Jacobian cancelling against Estar(0) = 2",
+          "error": 1.7640517586105626e-07,
+          "tolerance": 1e-05,
+          "pass": true
+        },
+        {
+          "what": "m=4: Res_{s=m/2} Lambda_m = 1",
+          "error": 1.3780146590480769e-07,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "what": "m=4: Res_{s=m/2} Estar = |S^(m-1)|/(2 zeta(m))",
+          "error": 6.3322614113066266e-09,
+          "tolerance": 1e-05,
+          "pass": true
+        },
+        {
+          "what": "m=4: |S^(m-1)|/(2 zeta(m)) equals pi^(m/2)/(Gamma(m/2) zeta(m))",
+          "error": 0.0,
+          "tolerance": 1e-13,
+          "pass": true
+        },
+        {
+          "what": "m=4: Z_{Z^m}(0) = -1",
+          "error": 1.9745396799830672e-06,
+          "tolerance": 0.0001,
+          "pass": true
+        },
+        {
+          "what": "m=4: Estar(0) = 2",
+          "error": 3.402432450005932e-06,
+          "tolerance": 0.0001,
+          "pass": true
+        },
+        {
+          "what": "m=4: Res_{p=b} Ktilde_omega = Res_{s=m/2} Estar, the Jacobian cancelling against Estar(0) = 2",
+          "error": 2.8303636076698564e-07,
+          "tolerance": 1e-05,
+          "pass": true
+        },
+        {
+          "what": "m=5: Res_{s=m/2} Lambda_m = 1",
+          "error": 1.0425257790380726e-07,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "what": "m=5: Res_{s=m/2} Estar = |S^(m-1)|/(2 zeta(m))",
+          "error": 8.433593478163452e-09,
+          "tolerance": 1e-05,
+          "pass": true
+        },
+        {
+          "what": "m=5: |S^(m-1)|/(2 zeta(m)) equals pi^(m/2)/(Gamma(m/2) zeta(m))",
+          "error": 0.0,
+          "tolerance": 1e-13,
+          "pass": true
+        },
+        {
+          "what": "m=5: Z_{Z^m}(0) = -1",
+          "error": 1.7735576103294903e-06,
+          "tolerance": 0.0001,
+          "pass": true
+        },
+        {
+          "what": "m=5: Estar(0) = 2",
+          "error": 3.8043951116062402e-06,
+          "tolerance": 0.0001,
+          "pass": true
+        },
+        {
+          "what": "m=5: Res_{p=b} Ktilde_omega = Res_{s=m/2} Estar, the Jacobian cancelling against Estar(0) = 2",
+          "error": 3.575228172748392e-07,
+          "tolerance": 1e-05,
+          "pass": true
+        },
+        {
+          "what": "m=6: Res_{s=m/2} Lambda_m = 1",
+          "error": 9.839293046987052e-08,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "what": "m=6: Res_{s=m/2} Estar = |S^(m-1)|/(2 zeta(m))",
+          "error": 2.3164952552675737e-08,
+          "tolerance": 1e-05,
+          "pass": true
+        },
+        {
+          "what": "m=6: |S^(m-1)|/(2 zeta(m)) equals pi^(m/2)/(Gamma(m/2) zeta(m))",
+          "error": 0.0,
+          "tolerance": 1e-13,
+          "pass": true
+        },
+        {
+          "what": "m=6: Z_{Z^m}(0) = -1",
+          "error": 1.577674604957835e-06,
+          "tolerance": 0.0001,
+          "pass": true
+        },
+        {
+          "what": "m=6: Estar(0) = 2",
+          "error": 4.196159682390288e-06,
+          "tolerance": 0.0001,
+          "pass": true
+        },
+        {
+          "what": "m=6: Res_{p=b} Ktilde_omega = Res_{s=m/2} Estar, the Jacobian cancelling against Estar(0) = 2",
+          "error": 4.1585918767923316e-07,
+          "tolerance": 1e-05,
+          "pass": true
+        }
+      ],
+      "note": "Lambda_m has residue 1 at s = m/2, so Estar has residue pi^(m/2)/(Gamma(m/2) zeta(m)) = |S^(m-1)|/(2 zeta(m)) there; with m = d+1 this is the |S^d|/(2 zeta(d+1)) of the previous programme"
+    },
+    {
+      "name": "E. the point count has a unique interpolation, and it is polynomial in m",
+      "cases": 27,
+      "worst_margin_against_own_tolerance": 0.0,
+      "pass": true,
+      "checks": [
+        {
+          "what": "m=1: r_m(n) equals the representation numbers of Z^1 for n <= 20",
+          "error": 0.0,
+          "tolerance": 0.5,
+          "pass": true
+        },
+        {
+          "what": "m=2: r_m(n) equals the representation numbers of Z^2 for n <= 20",
+          "error": 0.0,
+          "tolerance": 0.5,
+          "pass": true
+        },
+        {
+          "what": "m=3: r_m(n) equals the representation numbers of Z^3 for n <= 20",
+          "error": 0.0,
+          "tolerance": 0.5,
+          "pass": true
+        },
+        {
+          "what": "m=4: r_m(n) equals the representation numbers of Z^4 for n <= 20",
+          "error": 0.0,
+          "tolerance": 0.5,
+          "pass": true
+        },
+        {
+          "what": "m=5: r_m(n) equals the representation numbers of Z^5 for n <= 20",
+          "error": 0.0,
+          "tolerance": 0.5,
+          "pass": true
+        },
+        {
+          "what": "n=1: the 2-th finite difference of m -> r_m(1) vanishes (degree <= 1)",
+          "error": 0.0,
+          "tolerance": 0.5,
+          "pass": true
+        },
+        {
+          "what": "n=2: the 3-th finite difference of m -> r_m(2) vanishes (degree <= 2)",
+          "error": 0.0,
+          "tolerance": 0.5,
+          "pass": true
+        },
+        {
+          "what": "n=3: the 4-th finite difference of m -> r_m(3) vanishes (degree <= 3)",
+          "error": 0.0,
+          "tolerance": 0.5,
+          "pass": true
+        },
+        {
+          "what": "n=4: the 5-th finite difference of m -> r_m(4) vanishes (degree <= 4)",
+          "error": 0.0,
+          "tolerance": 0.5,
+          "pass": true
+        },
+        {
+          "what": "n=5: the 6-th finite difference of m -> r_m(5) vanishes (degree <= 5)",
+          "error": 0.0,
+          "tolerance": 0.5,
+          "pass": true
+        },
+        {
+          "what": "n=6: the 7-th finite difference of m -> r_m(6) vanishes (degree <= 6)",
+          "error": 0.0,
+          "tolerance": 0.5,
+          "pass": true
+        },
+        {
+          "what": "n=7: the 8-th finite difference of m -> r_m(7) vanishes (degree <= 7)",
+          "error": 0.0,
+          "tolerance": 0.5,
+          "pass": true
+        },
+        {
+          "what": "m=1/3: r_m(1) = 2m",
+          "error": 0.0,
+          "tolerance": 0.5,
+          "pass": true
+        },
+        {
+          "what": "m=1/3: r_m(2) = 2m(m-1)",
+          "error": 0.0,
+          "tolerance": 0.5,
+          "pass": true
+        },
+        {
+          "what": "m=1/3: r_m(3) = (4/3)m(m-1)(m-2)",
+          "error": 0.0,
+          "tolerance": 0.5,
+          "pass": true
+        },
+        {
+          "what": "m=7/10: r_m(1) = 2m",
+          "error": 0.0,
+          "tolerance": 0.5,
+          "pass": true
+        },
+        {
+          "what": "m=7/10: r_m(2) = 2m(m-1)",
+          "error": 0.0,
+          "tolerance": 0.5,
+          "pass": true
+        },
+        {
+          "what": "m=7/10: r_m(3) = (4/3)m(m-1)(m-2)",
+          "error": 0.0,
+          "tolerance": 0.5,
+          "pass": true
+        },
+        {
+          "what": "m=3/2: r_m(1) = 2m",
+          "error": 0.0,
+          "tolerance": 0.5,
+          "pass": true
+        },
+        {
+          "what": "m=3/2: r_m(2) = 2m(m-1)",
+          "error": 0.0,
+          "tolerance": 0.5,
+          "pass": true
+        },
+        {
+          "what": "m=3/2: r_m(3) = (4/3)m(m-1)(m-2)",
+          "error": 0.0,
+          "tolerance": 0.5,
+          "pass": true
+        },
+        {
+          "what": "m=12/5: r_m(1) = 2m",
+          "error": 0.0,
+          "tolerance": 0.5,
+          "pass": true
+        },
+        {
+          "what": "m=12/5: r_m(2) = 2m(m-1)",
+          "error": 0.0,
+          "tolerance": 0.5,
+          "pass": true
+        },
+        {
+          "what": "m=12/5: r_m(3) = (4/3)m(m-1)(m-2)",
+          "error": 0.0,
+          "tolerance": 0.5,
+          "pass": true
+        },
+        {
+          "what": "m=7/2: r_m(1) = 2m",
+          "error": 0.0,
+          "tolerance": 0.5,
+          "pass": true
+        },
+        {
+          "what": "m=7/2: r_m(2) = 2m(m-1)",
+          "error": 0.0,
+          "tolerance": 0.5,
+          "pass": true
+        },
+        {
+          "what": "m=7/2: r_m(3) = (4/3)m(m-1)(m-2)",
+          "error": 0.0,
+          "tolerance": 0.5,
+          "pass": true
+        }
+      ],
+      "note": "r_m(n) = sum_j C(m,j) 2^j R_j(n) are the coefficients of theta(tau)^m, which is well defined for every real m because theta does not vanish on the upper half-plane; exact rational arithmetic throughout"
+    },
+    {
+      "name": "F. the interpolated lattice is negative on the whole open range of the family",
+      "cases": 79,
+      "worst_margin_against_own_tolerance": 0.0026918962581223838,
+      "pass": true,
+      "checks": [
+        {
+          "what": "d=1/20: r_{d+1}(3) < 0",
+          "error": 0.0,
+          "tolerance": 0.5,
+          "pass": true
+        },
+        {
+          "what": "d=1/10: r_{d+1}(3) < 0",
+          "error": 0.0,
+          "tolerance": 0.5,
+          "pass": true
+        },
+        {
+          "what": "d=3/20: r_{d+1}(3) < 0",
+          "error": 0.0,
+          "tolerance": 0.5,
+          "pass": true
+        },
+        {
+          "what": "d=1/5: r_{d+1}(3) < 0",
+          "error": 0.0,
+          "tolerance": 0.5,
+          "pass": true
+        },
+        {
+          "what": "d=1/4: r_{d+1}(3) < 0",
+          "error": 0.0,
+          "tolerance": 0.5,
+          "pass": true
+        },
+        {
+          "what": "d=3/10: r_{d+1}(3) < 0",
+          "error": 0.0,
+          "tolerance": 0.5,
+          "pass": true
+        },
+        {
+          "what": "d=7/20: r_{d+1}(3) < 0",
+          "error": 0.0,
+          "tolerance": 0.5,
+          "pass": true
+        },
+        {
+          "what": "d=2/5: r_{d+1}(3) < 0",
+          "error": 0.0,
+          "tolerance": 0.5,
+          "pass": true
+        },
+        {
+          "what": "d=9/20: r_{d+1}(3) < 0",
+          "error": 0.0,
+          "tolerance": 0.5,
+          "pass": true
+        },
+        {
+          "what": "d=1/2: r_{d+1}(3) < 0",
+          "error": 0.0,
+          "tolerance": 0.5,
+          "pass": true
+        },
+        {
+          "what": "d=11/20: r_{d+1}(3) < 0",
+          "error": 0.0,
+          "tolerance": 0.5,
+          "pass": true
+        },
+        {
+          "what": "d=3/5: r_{d+1}(3) < 0",
+          "error": 0.0,
+          "tolerance": 0.5,
+          "pass": true
+        },
+        {
+          "what": "d=13/20: r_{d+1}(3) < 0",
+          "error": 0.0,
+          "tolerance": 0.5,
+          "pass": true
+        },
+        {
+          "what": "d=7/10: r_{d+1}(3) < 0",
+          "error": 0.0,
+          "tolerance": 0.5,
+          "pass": true
+        },
+        {
+          "what": "d=3/4: r_{d+1}(3) < 0",
+          "error": 0.0,
+          "tolerance": 0.5,
+          "pass": true
+        },
+        {
+          "what": "d=4/5: r_{d+1}(3) < 0",
+          "error": 0.0,
+          "tolerance": 0.5,
+          "pass": true
+        },
+        {
+          "what": "d=17/20: r_{d+1}(3) < 0",
+          "error": 0.0,
+          "tolerance": 0.5,
+          "pass": true
+        },
+        {
+          "what": "d=9/10: r_{d+1}(3) < 0",
+          "error": 0.0,
+          "tolerance": 0.5,
+          "pass": true
+        },
+        {
+          "what": "d=19/20: r_{d+1}(3) < 0",
+          "error": 0.0,
+          "tolerance": 0.5,
+          "pass": true
+        },
+        {
+          "what": "d=0: r_{d+1}(3) = 0 exactly",
+          "error": 0.0,
+          "tolerance": 0.5,
+          "pass": true
+        },
+        {
+          "what": "d=1: r_{d+1}(3) = 0 exactly",
+          "error": 0.0,
+          "tolerance": 0.5,
+          "pass": true
+        },
+        {
+          "what": "r_{d+1}(3) = (4/3)(d^3 - d) as a polynomial identity",
+          "error": 0.0,
+          "tolerance": 0.5,
+          "pass": true
+        },
+        {
+          "what": "the arch's minimum is at d = 1/sqrt(3)",
+          "error": 2.691896258122384e-07,
+          "tolerance": 0.0001,
+          "pass": true
+        },
+        {
+          "what": "the arch's depth is -8/(9 sqrt 3)",
+          "error": 1.1102230246251565e-16,
+          "tolerance": 1e-12,
+          "pass": true
+        },
+        {
+          "what": "d=0: P'(d) = (4/3)(3d^2 - 1) = -4/3",
+          "error": 0.0,
+          "tolerance": 0.5,
+          "pass": true
+        },
+        {
+          "what": "d=0: the exact central difference is P'(d) + (4/3)h^2",
+          "error": 0.0,
+          "tolerance": 0.5,
+          "pass": true
+        },
+        {
+          "what": "d=1: P'(d) = (4/3)(3d^2 - 1) = 8/3",
+          "error": 0.0,
+          "tolerance": 0.5,
+          "pass": true
+        },
+        {
+          "what": "d=1: the exact central difference is P'(d) + (4/3)h^2",
+          "error": 0.0,
+          "tolerance": 0.5,
+          "pass": true
+        },
+        {
+          "what": "m=1/10 in (0,1): r_m(2) < 0",
+          "error": 0.0,
+          "tolerance": 0.5,
+          "pass": true
+        },
+        {
+          "what": "m=1/5 in (0,1): r_m(2) < 0",
+          "error": 0.0,
+          "tolerance": 0.5,
+          "pass": true
+        },
+        {
+          "what": "m=3/10 in (0,1): r_m(2) < 0",
+          "error": 0.0,
+          "tolerance": 0.5,
+          "pass": true
+        },
+        {
+          "what": "m=2/5 in (0,1): r_m(2) < 0",
+          "error": 0.0,
+          "tolerance": 0.5,
+          "pass": true
+        },
+        {
+          "what": "m=1/2 in (0,1): r_m(2) < 0",
+          "error": 0.0,
+          "tolerance": 0.5,
+          "pass": true
+        },
+        {
+          "what": "m=3/5 in (0,1): r_m(2) < 0",
+          "error": 0.0,
+          "tolerance": 0.5,
+          "pass": true
+        },
+        {
+          "what": "m=7/10 in (0,1): r_m(2) < 0",
+          "error": 0.0,
+          "tolerance": 0.5,
+          "pass": true
+        },
+        {
+          "what": "m=4/5 in (0,1): r_m(2) < 0",
+          "error": 0.0,
+          "tolerance": 0.5,
+          "pass": true
+        },
+        {
+          "what": "m=9/10 in (0,1): r_m(2) < 0",
+          "error": 0.0,
+          "tolerance": 0.5,
+          "pass": true
+        },
+        {
+          "what": "m=0.1 (non-integer, below the Lagrange threshold): a negative coefficient appears",
+          "error": 0.0,
+          "tolerance": 0.5,
+          "pass": true
+        },
+        {
+          "what": "m=0.2 (non-integer, below the Lagrange threshold): a negative coefficient appears",
+          "error": 0.0,
+          "tolerance": 0.5,
+          "pass": true
+        },
+        {
+          "what": "m=0.3 (non-integer, below the Lagrange threshold): a negative coefficient appears",
+          "error": 0.0,
+          "tolerance": 0.5,
+          "pass": true
+        },
+        {
+          "what": "m=0.4 (non-integer, below the Lagrange threshold): a negative coefficient appears",
+          "error": 0.0,
+          "tolerance": 0.5,
+          "pass": true
+        },
+        {
+          "what": "m=0.5 (non-integer, below the Lagrange threshold): a negative coefficient appears",
+          "error": 0.0,
+          "tolerance": 0.5,
+          "pass": true
+        },
+        {
+          "what": "m=0.6 (non-integer, below the Lagrange threshold): a negative coefficient appears",
+          "error": 0.0,
+          "tolerance": 0.5,
+          "pass": true
+        },
+        {
+          "what": "m=0.7 (non-integer, below the Lagrange threshold): a negative coefficient appears",
+          "error": 0.0,
+          "tolerance": 0.5,
+          "pass": true
+        },
+        {
+          "what": "m=0.8 (non-integer, below the Lagrange threshold): a negative coefficient appears",
+          "error": 0.0,
+          "tolerance": 0.5,
+          "pass": true
+        },
+        {
+          "what": "m=0.9 (non-integer, below the Lagrange threshold): a negative coefficient appears",
+          "error": 0.0,
+          "tolerance": 0.5,
+          "pass": true
+        },
+        {
+          "what": "m=1.0 (integer): no negative coefficient up to n=160",
+          "error": 0.0,
+          "tolerance": 0.5,
+          "pass": true
+        },
+        {
+          "what": "m=1.1 (non-integer, below the Lagrange threshold): a negative coefficient appears",
+          "error": 0.0,
+          "tolerance": 0.5,
+          "pass": true
+        },
+        {
+          "what": "m=1.2 (non-integer, below the Lagrange threshold): a negative coefficient appears",
+          "error": 0.0,
+          "tolerance": 0.5,
+          "pass": true
+        },
+        {
+          "what": "m=1.3 (non-integer, below the Lagrange threshold): a negative coefficient appears",
+          "error": 0.0,
+          "tolerance": 0.5,
+          "pass": true
+        },
+        {
+          "what": "m=1.4 (non-integer, below the Lagrange threshold): a negative coefficient appears",
+          "error": 0.0,
+          "tolerance": 0.5,
+          "pass": true
+        },
+        {
+          "what": "m=1.5 (non-integer, below the Lagrange threshold): a negative coefficient appears",
+          "error": 0.0,
+          "tolerance": 0.5,
+          "pass": true
+        },
+        {
+          "what": "m=1.6 (non-integer, below the Lagrange threshold): a negative coefficient appears",
+          "error": 0.0,
+          "tolerance": 0.5,
+          "pass": true
+        },
+        {
+          "what": "m=1.7 (non-integer, below the Lagrange threshold): a negative coefficient appears",
+          "error": 0.0,
+          "tolerance": 0.5,
+          "pass": true
+        },
+        {
+          "what": "m=1.8 (non-integer, below the Lagrange threshold): a negative coefficient appears",
+          "error": 0.0,
+          "tolerance": 0.5,
+          "pass": true
+        },
+        {
+          "what": "m=1.9 (non-integer, below the Lagrange threshold): a negative coefficient appears",
+          "error": 0.0,
+          "tolerance": 0.5,
+          "pass": true
+        },
+        {
+          "what": "m=2.0 (integer): no negative coefficient up to n=160",
+          "error": 0.0,
+          "tolerance": 0.5,
+          "pass": true
+        },
+        {
+          "what": "m=2.1 (non-integer, below the Lagrange threshold): a negative coefficient appears",
+          "error": 0.0,
+          "tolerance": 0.5,
+          "pass": true
+        },
+        {
+          "what": "m=2.2 (non-integer, below the Lagrange threshold): a negative coefficient appears",
+          "error": 0.0,
+          "tolerance": 0.5,
+          "pass": true
+        },
+        {
+          "what": "m=2.3 (non-integer, below the Lagrange threshold): a negative coefficient appears",
+          "error": 0.0,
+          "tolerance": 0.5,
+          "pass": true
+        },
+        {
+          "what": "m=2.4 (non-integer, below the Lagrange threshold): a negative coefficient appears",
+          "error": 0.0,
+          "tolerance": 0.5,
+          "pass": true
+        },
+        {
+          "what": "m=2.5 (non-integer, below the Lagrange threshold): a negative coefficient appears",
+          "error": 0.0,
+          "tolerance": 0.5,
+          "pass": true
+        },
+        {
+          "what": "m=2.6 (non-integer, below the Lagrange threshold): a negative coefficient appears",
+          "error": 0.0,
+          "tolerance": 0.5,
+          "pass": true
+        },
+        {
+          "what": "m=2.7 (non-integer, below the Lagrange threshold): a negative coefficient appears",
+          "error": 0.0,
+          "tolerance": 0.5,
+          "pass": true
+        },
+        {
+          "what": "m=2.8 (non-integer, below the Lagrange threshold): a negative coefficient appears",
+          "error": 0.0,
+          "tolerance": 0.5,
+          "pass": true
+        },
+        {
+          "what": "m=2.9 (non-integer, below the Lagrange threshold): a negative coefficient appears",
+          "error": 0.0,
+          "tolerance": 0.5,
+          "pass": true
+        },
+        {
+          "what": "m=3.0 (integer): no negative coefficient up to n=160",
+          "error": 0.0,
+          "tolerance": 0.5,
+          "pass": true
+        },
+        {
+          "what": "m=3.1 (non-integer, below the Lagrange threshold): a negative coefficient appears",
+          "error": 0.0,
+          "tolerance": 0.5,
+          "pass": true
+        },
+        {
+          "what": "m=3.2 (non-integer, below the Lagrange threshold): a negative coefficient appears",
+          "error": 0.0,
+          "tolerance": 0.5,
+          "pass": true
+        },
+        {
+          "what": "m=3.3 (non-integer, below the Lagrange threshold): a negative coefficient appears",
+          "error": 0.0,
+          "tolerance": 0.5,
+          "pass": true
+        },
+        {
+          "what": "m=3.4 (non-integer, below the Lagrange threshold): a negative coefficient appears",
+          "error": 0.0,
+          "tolerance": 0.5,
+          "pass": true
+        },
+        {
+          "what": "m=3.5 (non-integer, below the Lagrange threshold): a negative coefficient appears",
+          "error": 0.0,
+          "tolerance": 0.5,
+          "pass": true
+        },
+        {
+          "what": "m=3.6 (non-integer, below the Lagrange threshold): a negative coefficient appears",
+          "error": 0.0,
+          "tolerance": 0.5,
+          "pass": true
+        },
+        {
+          "what": "m=3.7 (non-integer, below the Lagrange threshold): a negative coefficient appears",
+          "error": 0.0,
+          "tolerance": 0.5,
+          "pass": true
+        },
+        {
+          "what": "m=3.8 (non-integer, below the Lagrange threshold): a negative coefficient appears",
+          "error": 0.0,
+          "tolerance": 0.5,
+          "pass": true
+        },
+        {
+          "what": "m=3.9 (non-integer, below the Lagrange threshold): a negative coefficient appears",
+          "error": 0.0,
+          "tolerance": 0.5,
+          "pass": true
+        },
+        {
+          "what": "m=4.0 (integer): no negative coefficient up to n=160",
+          "error": 0.0,
+          "tolerance": 0.5,
+          "pass": true
+        },
+        {
+          "what": "m=5.0 (integer): no negative coefficient up to n=160",
+          "error": 0.0,
+          "tolerance": 0.5,
+          "pass": true
+        },
+        {
+          "what": "m=6.0 (integer): no negative coefficient up to n=160",
+          "error": 0.0,
+          "tolerance": 0.5,
+          "pass": true
+        }
+      ],
+      "note": "with m = d + 1, r_{d+1}(3) = (4/3)(d+1)d(d-1) < 0 for every d in (0,1) and vanishes exactly at d = 0 and d = 1; exact rational arithmetic",
+      "first_n_with_a_negative_coefficient": {
+        "0.1": 2,
+        "0.2": 2,
+        "0.3": 2,
+        "0.4": 2,
+        "0.5": 2,
+        "0.6": 2,
+        "0.7": 2,
+        "0.8": 2,
+        "0.9": 2,
+        "1.0": null,
+        "1.1": 3,
+        "1.2": 3,
+        "1.3": 3,
+        "1.4": 3,
+        "1.5": 3,
+        "1.6": 3,
+        "1.7": 3,
+        "1.8": 3,
+        "1.9": 3,
+        "2.0": null,
+        "2.1": 7,
+        "2.2": 7,
+        "2.3": 7,
+        "2.4": 7,
+        "2.5": 7,
+        "2.6": 7,
+        "2.7": 7,
+        "2.8": 7,
+        "2.9": 7,
+        "3.0": null,
+        "3.1": 28,
+        "3.2": 28,
+        "3.3": 16,
+        "3.4": 16,
+        "3.5": 16,
+        "3.6": 16,
+        "3.7": 16,
+        "3.8": 16,
+        "3.9": 64,
+        "4.0": null,
+        "4.1": null,
+        "4.2": null,
+        "4.3": null,
+        "4.4": null,
+        "4.5": null,
+        "4.6": null,
+        "4.7": null,
+        "4.8": null,
+        "4.9": null,
+        "5.0": null,
+        "5.1": null,
+        "5.2": null,
+        "5.3": null,
+        "5.4": null,
+        "5.5": null,
+        "5.6": null,
+        "5.7": null,
+        "5.8": null,
+        "5.9": null,
+        "6.0": null
+      },
+      "scan_note": "an observation on a grid to n = 160, not a theorem: every non-integer m below 4 has a negative coefficient (at n = 2, 3, 7 on (0,1), (1,2), (2,3) respectively), and none was found at or above m = 4, the Lagrange four-square threshold. Only the two exact statements above are claimed.",
+      "consequence": "theta(i t)^m = sum_n r_m(n) e^(-pi n t) is a discrete Laplace expansion, so by uniqueness of Laplace transforms a negative r_m(n) says exactly that theta(i t)^m is not completely monotone: no positive measure, hence no point set."
+    },
+    {
+      "name": "G. what does continue: the cusp invariants, at every real d",
+      "cases": 48,
+      "worst_margin_against_own_tolerance": 0.0,
+      "pass": true,
+      "checks": [
+        {
+          "what": "d=0.05 n=2: J_d(n) > 0",
+          "error": 0.0,
+          "tolerance": 0.5,
+          "pass": true
+        },
+        {
+          "what": "d=0.05 n=3: J_d(n) > 0",
+          "error": 0.0,
+          "tolerance": 0.5,
+          "pass": true
+        },
+        {
+          "what": "d=0.05 n=6: J_d(n) > 0",
+          "error": 0.0,
+          "tolerance": 0.5,
+          "pass": true
+        },
+        {
+          "what": "d=0.05 n=12: J_d(n) > 0",
+          "error": 0.0,
+          "tolerance": 0.5,
+          "pass": true
+        },
+        {
+          "what": "d=0.05 n=30: J_d(n) > 0",
+          "error": 0.0,
+          "tolerance": 0.5,
+          "pass": true
+        },
+        {
+          "what": "d=0.05 n=97: J_d(n) > 0",
+          "error": 0.0,
+          "tolerance": 0.5,
+          "pass": true
+        },
+        {
+          "what": "d=0.05 n=100: J_d(n) > 0",
+          "error": 0.0,
+          "tolerance": 0.5,
+          "pass": true
+        },
+        {
+          "what": "d=0.05: 1/zeta(d+1) lies in (0,1)",
+          "error": 0.0,
+          "tolerance": 0.5,
+          "pass": true
+        },
+        {
+          "what": "d=0.2 n=2: J_d(n) > 0",
+          "error": 0.0,
+          "tolerance": 0.5,
+          "pass": true
+        },
+        {
+          "what": "d=0.2 n=3: J_d(n) > 0",
+          "error": 0.0,
+          "tolerance": 0.5,
+          "pass": true
+        },
+        {
+          "what": "d=0.2 n=6: J_d(n) > 0",
+          "error": 0.0,
+          "tolerance": 0.5,
+          "pass": true
+        },
+        {
+          "what": "d=0.2 n=12: J_d(n) > 0",
+          "error": 0.0,
+          "tolerance": 0.5,
+          "pass": true
+        },
+        {
+          "what": "d=0.2 n=30: J_d(n) > 0",
+          "error": 0.0,
+          "tolerance": 0.5,
+          "pass": true
+        },
+        {
+          "what": "d=0.2 n=97: J_d(n) > 0",
+          "error": 0.0,
+          "tolerance": 0.5,
+          "pass": true
+        },
+        {
+          "what": "d=0.2 n=100: J_d(n) > 0",
+          "error": 0.0,
+          "tolerance": 0.5,
+          "pass": true
+        },
+        {
+          "what": "d=0.2: 1/zeta(d+1) lies in (0,1)",
+          "error": 0.0,
+          "tolerance": 0.5,
+          "pass": true
+        },
+        {
+          "what": "d=0.5 n=2: J_d(n) > 0",
+          "error": 0.0,
+          "tolerance": 0.5,
+          "pass": true
+        },
+        {
+          "what": "d=0.5 n=3: J_d(n) > 0",
+          "error": 0.0,
+          "tolerance": 0.5,
+          "pass": true
+        },
+        {
+          "what": "d=0.5 n=6: J_d(n) > 0",
+          "error": 0.0,
+          "tolerance": 0.5,
+          "pass": true
+        },
+        {
+          "what": "d=0.5 n=12: J_d(n) > 0",
+          "error": 0.0,
+          "tolerance": 0.5,
+          "pass": true
+        },
+        {
+          "what": "d=0.5 n=30: J_d(n) > 0",
+          "error": 0.0,
+          "tolerance": 0.5,
+          "pass": true
+        },
+        {
+          "what": "d=0.5 n=97: J_d(n) > 0",
+          "error": 0.0,
+          "tolerance": 0.5,
+          "pass": true
+        },
+        {
+          "what": "d=0.5 n=100: J_d(n) > 0",
+          "error": 0.0,
+          "tolerance": 0.5,
+          "pass": true
+        },
+        {
+          "what": "d=0.5: 1/zeta(d+1) lies in (0,1)",
+          "error": 0.0,
+          "tolerance": 0.5,
+          "pass": true
+        },
+        {
+          "what": "d=0.75 n=2: J_d(n) > 0",
+          "error": 0.0,
+          "tolerance": 0.5,
+          "pass": true
+        },
+        {
+          "what": "d=0.75 n=3: J_d(n) > 0",
+          "error": 0.0,
+          "tolerance": 0.5,
+          "pass": true
+        },
+        {
+          "what": "d=0.75 n=6: J_d(n) > 0",
+          "error": 0.0,
+          "tolerance": 0.5,
+          "pass": true
+        },
+        {
+          "what": "d=0.75 n=12: J_d(n) > 0",
+          "error": 0.0,
+          "tolerance": 0.5,
+          "pass": true
+        },
+        {
+          "what": "d=0.75 n=30: J_d(n) > 0",
+          "error": 0.0,
+          "tolerance": 0.5,
+          "pass": true
+        },
+        {
+          "what": "d=0.75 n=97: J_d(n) > 0",
+          "error": 0.0,
+          "tolerance": 0.5,
+          "pass": true
+        },
+        {
+          "what": "d=0.75 n=100: J_d(n) > 0",
+          "error": 0.0,
+          "tolerance": 0.5,
+          "pass": true
+        },
+        {
+          "what": "d=0.75: 1/zeta(d+1) lies in (0,1)",
+          "error": 0.0,
+          "tolerance": 0.5,
+          "pass": true
+        },
+        {
+          "what": "d=0.999 n=2: J_d(n) > 0",
+          "error": 0.0,
+          "tolerance": 0.5,
+          "pass": true
+        },
+        {
+          "what": "d=0.999 n=3: J_d(n) > 0",
+          "error": 0.0,
+          "tolerance": 0.5,
+          "pass": true
+        },
+        {
+          "what": "d=0.999 n=6: J_d(n) > 0",
+          "error": 0.0,
+          "tolerance": 0.5,
+          "pass": true
+        },
+        {
+          "what": "d=0.999 n=12: J_d(n) > 0",
+          "error": 0.0,
+          "tolerance": 0.5,
+          "pass": true
+        },
+        {
+          "what": "d=0.999 n=30: J_d(n) > 0",
+          "error": 0.0,
+          "tolerance": 0.5,
+          "pass": true
+        },
+        {
+          "what": "d=0.999 n=97: J_d(n) > 0",
+          "error": 0.0,
+          "tolerance": 0.5,
+          "pass": true
+        },
+        {
+          "what": "d=0.999 n=100: J_d(n) > 0",
+          "error": 0.0,
+          "tolerance": 0.5,
+          "pass": true
+        },
+        {
+          "what": "d=0.999: 1/zeta(d+1) lies in (0,1)",
+          "error": 0.0,
+          "tolerance": 0.5,
+          "pass": true
+        },
+        {
+          "what": "d=1 n=2: J_d(n) > 0",
+          "error": 0.0,
+          "tolerance": 0.5,
+          "pass": true
+        },
+        {
+          "what": "d=1 n=3: J_d(n) > 0",
+          "error": 0.0,
+          "tolerance": 0.5,
+          "pass": true
+        },
+        {
+          "what": "d=1 n=6: J_d(n) > 0",
+          "error": 0.0,
+          "tolerance": 0.5,
+          "pass": true
+        },
+        {
+          "what": "d=1 n=12: J_d(n) > 0",
+          "error": 0.0,
+          "tolerance": 0.5,
+          "pass": true
+        },
+        {
+          "what": "d=1 n=30: J_d(n) > 0",
+          "error": 0.0,
+          "tolerance": 0.5,
+          "pass": true
+        },
+        {
+          "what": "d=1 n=97: J_d(n) > 0",
+          "error": 0.0,
+          "tolerance": 0.5,
+          "pass": true
+        },
+        {
+          "what": "d=1 n=100: J_d(n) > 0",
+          "error": 0.0,
+          "tolerance": 0.5,
+          "pass": true
+        },
+        {
+          "what": "d=1: 1/zeta(d+1) lies in (0,1)",
+          "error": 0.0,
+          "tolerance": 0.5,
+          "pass": true
+        }
+      ],
+      "note": "J_d and 1/zeta(d+1) are positive for every real d > 0, so the scattering matrix survives the loss of the lattice"
+    },
+    {
+      "name": "H. the wall at rank two: where the second pole crosses",
+      "cases": 28,
+      "worst_margin_against_own_tolerance": 0.4889527699702967,
+      "pass": true,
+      "checks": [
+        {
+          "what": "xi has residue -1 at 0",
+          "error": 0.0009779055399405934,
+          "tolerance": 0.002,
+          "pass": true
+        },
+        {
+          "what": "xi has residue +1 at 1",
+          "error": 0.0009759050415193427,
+          "tolerance": 0.002,
+          "pass": true
+        },
+        {
+          "what": "xi has residue -1 at 0",
+          "error": 9.770043258483518e-05,
+          "tolerance": 0.002,
+          "pass": true
+        },
+        {
+          "what": "xi has residue +1 at 1",
+          "error": 9.768042751145956e-05,
+          "tolerance": 0.002,
+          "pass": true
+        },
+        {
+          "what": "omega=1/4: the cancelled pole is at p = b",
+          "error": 0.0,
+          "tolerance": 0.5,
+          "pass": true
+        },
+        {
+          "what": "omega=1/4: the other pole is at p = omega - 1/2",
+          "error": 0.0,
+          "tolerance": 0.5,
+          "pass": true
+        },
+        {
+          "what": "omega=1/4: that pole is in the closed left half-plane iff m <= 2",
+          "error": 0.0,
+          "tolerance": 0.5,
+          "pass": true
+        },
+        {
+          "what": "omega=1/4: in s it is at (m-1)/2 = omega, where zeta(2s) has its pole exactly at omega = 1/2",
+          "error": 0.0,
+          "tolerance": 0.5,
+          "pass": true
+        },
+        {
+          "what": "omega=1/2: the cancelled pole is at p = b",
+          "error": 0.0,
+          "tolerance": 0.5,
+          "pass": true
+        },
+        {
+          "what": "omega=1/2: the other pole is at p = omega - 1/2",
+          "error": 0.0,
+          "tolerance": 0.5,
+          "pass": true
+        },
+        {
+          "what": "omega=1/2: that pole is in the closed left half-plane iff m <= 2",
+          "error": 0.0,
+          "tolerance": 0.5,
+          "pass": true
+        },
+        {
+          "what": "omega=1/2: in s it is at (m-1)/2 = omega, where zeta(2s) has its pole exactly at omega = 1/2",
+          "error": 0.0,
+          "tolerance": 0.5,
+          "pass": true
+        },
+        {
+          "what": "omega=3/4: the cancelled pole is at p = b",
+          "error": 0.0,
+          "tolerance": 0.5,
+          "pass": true
+        },
+        {
+          "what": "omega=3/4: the other pole is at p = omega - 1/2",
+          "error": 0.0,
+          "tolerance": 0.5,
+          "pass": true
+        },
+        {
+          "what": "omega=3/4: that pole is in the closed left half-plane iff m <= 2",
+          "error": 0.0,
+          "tolerance": 0.5,
+          "pass": true
+        },
+        {
+          "what": "omega=3/4: in s it is at (m-1)/2 = omega, where zeta(2s) has its pole exactly at omega = 1/2",
+          "error": 0.0,
+          "tolerance": 0.5,
+          "pass": true
+        },
+        {
+          "what": "omega=1: the cancelled pole is at p = b",
+          "error": 0.0,
+          "tolerance": 0.5,
+          "pass": true
+        },
+        {
+          "what": "omega=1: the other pole is at p = omega - 1/2",
+          "error": 0.0,
+          "tolerance": 0.5,
+          "pass": true
+        },
+        {
+          "what": "omega=1: that pole is in the closed left half-plane iff m <= 2",
+          "error": 0.0,
+          "tolerance": 0.5,
+          "pass": true
+        },
+        {
+          "what": "omega=1: in s it is at (m-1)/2 = omega, where zeta(2s) has its pole exactly at omega = 1/2",
+          "error": 0.0,
+          "tolerance": 0.5,
+          "pass": true
+        },
+        {
+          "what": "omega=3/2: the cancelled pole is at p = b",
+          "error": 0.0,
+          "tolerance": 0.5,
+          "pass": true
+        },
+        {
+          "what": "omega=3/2: the other pole is at p = omega - 1/2",
+          "error": 0.0,
+          "tolerance": 0.5,
+          "pass": true
+        },
+        {
+          "what": "omega=3/2: that pole is in the closed left half-plane iff m <= 2",
+          "error": 0.0,
+          "tolerance": 0.5,
+          "pass": true
+        },
+        {
+          "what": "omega=3/2: in s it is at (m-1)/2 = omega, where zeta(2s) has its pole exactly at omega = 1/2",
+          "error": 0.0,
+          "tolerance": 0.5,
+          "pass": true
+        },
+        {
+          "what": "omega=2: the cancelled pole is at p = b",
+          "error": 0.0,
+          "tolerance": 0.5,
+          "pass": true
+        },
+        {
+          "what": "omega=2: the other pole is at p = omega - 1/2",
+          "error": 0.0,
+          "tolerance": 0.5,
+          "pass": true
+        },
+        {
+          "what": "omega=2: that pole is in the closed left half-plane iff m <= 2",
+          "error": 0.0,
+          "tolerance": 0.5,
+          "pass": true
+        },
+        {
+          "what": "omega=2: in s it is at (m-1)/2 = omega, where zeta(2s) has its pole exactly at omega = 1/2",
+          "error": 0.0,
+          "tolerance": 0.5,
+          "pass": true
+        }
+      ],
+      "note": "xi has simple poles at 0 and 1 (residues -1 and +1), so the numerator xi(u-d) = xi(m-u) of the Markov part has exactly two, at p = b = omega + 1/2 and at p = omega - 1/2. The first is what the Blaschke factor cancels; the second is in the closed left half-plane exactly when omega <= 1/2, that is when m = 2 omega + 1 <= 2",
+      "reading": "the family's cap omega <= 1/2 and the rank cap m <= 2 are the same statement, and both are the pole of zeta at 1 reaching the boundary Re p = 0. Rank two -- the modular surface, the lattice zeta itself comes from -- is the largest rank at which the transfer has a single cancelled pole in the right half-plane."
+    }
+  ],
+  "all_pass": true,
+  "total_checks": 327
+}

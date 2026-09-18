@@ -1,0 +1,92 @@
+\section{The transfer is an invariant of the rank}\label{sec:rank}
+
+The dictionary of \cite{OpeningNote,WhichDimension} makes every factor of
+$\Kt_\omega$ a $d$-dimensional formula: the archimedean factor is the Riesz
+integral over $\R^{d}$, the comb's weights are the Jordan totient $J_d$, and the
+residue of $\Kt_\omega$ at $p=b$ is $\lvert S^{d}\rvert/2\zeta(d+1)$, the volume
+term of a lattice of rank $d+1$. This section says what the object is at integer
+$d$, and the answer fixes the meaning of $m$ for the rest of the manuscript.
+
+\begin{proposition}[Primitive Epstein scattering]\label{prop:epstein}
+Let $L\subset\R^{m}$ be a lattice of covolume $1$, $L^{*}$ its dual, and for
+$\re s>m/2$
+\[
+ Z_L(s)=\sum_{0\ne v\in L}\lvert v\rvert^{-2s},\qquad
+ \Est_L(s)=\sum_{v\in L\ \mathrm{primitive}}\lvert v\rvert^{-2s} .
+\]
+Then $Z_L=\zeta(2s)\Est_L$, both continue meromorphically, and
+\begin{equation}\label{eq:epsteinfe}
+ \Lambda(2s)\,\Est_L(s)=\Lambda(m-2s)\,\Est_{L^{*}}(m/2-s).
+\end{equation}
+In particular the reflection ratio
+$\Est_L(s)\big/\Est_{L^{*}}(m/2-s)=\Lambda(m-2s)/\Lambda(2s)$ is
+\emph{independent of $L$}: it is an invariant of the rank $m$ alone.
+\end{proposition}
+
+\begin{proof}
+Every nonzero $v\in L$ is uniquely $kv_0$ with $k\ge1$ and $v_0$ primitive, so
+$Z_L(s)=\sum_{k\ge1}k^{-2s}\Est_L(s)=\zeta(2s)\Est_L(s)$. Poisson summation in
+dimension $m$ gives $\theta_L(1/x)=x^{m/2}\theta_{L^{*}}(x)$ for
+$\theta_L(x)=\sum_{v\in L}e^{-\pi x\lvert v\rvert^{2}}$ at covolume one, whence
+Riemann's theta argument yields
+$\pi^{-s}\Gamma(s)Z_L(s)=\pi^{-(m/2-s)}\Gamma(m/2-s)Z_{L^{*}}(m/2-s)$. Divide by
+the factorization and use $\pi^{-s}\Gamma(s)\zeta(2s)=\Lambda(2s)$ and
+$\pi^{-(m/2-s)}\Gamma(m/2-s)\zeta(m-2s)=\Lambda(m-2s)$. See also
+\cite[Ch.~4]{Terras}.
+\end{proof}
+
+\begin{proposition}[The integer points of the family]\label{prop:integerpoints}
+With the dictionary \eqref{eq:dm}, for every real $d>0$
+\begin{equation}\label{eq:dictionary}
+ \Kt_\omega(p)=\frac{\Lambda(p+a)}{\Lambda(p+b)}
+ =\frac{\Lambda(2s-d)}{\Lambda(2s)}=\frac{\Lambda(m-2s)}{\Lambda(2s)},
+\end{equation}
+and for every \emph{integer} $d\ge1$ this equals
+$\Est_L(s)\big/\Est_{L^{*}}(m/2-s)$ for every covolume-one lattice $L$ of rank
+$m=d+1$. Moreover $s(-p)=\frac m2-s(p)$ identically, so the transfer's
+reflection $p\mapsto-p$ \emph{is} the Epstein functional equation
+$s\mapsto\frac m2-s$; and on $\re p=0$ the two arguments are complex conjugates,
+so $\lvert\Kt_\omega\rvert=1$ there.
+\end{proposition}
+
+\begin{proof}
+$2s=p+b$ gives $2s-d=p+b-2\omega=p+a$ and $m-2s=(2\omega+1)-(p+b)=b-p$, and
+$\Lambda(w)=\Lambda(1-w)$ turns $\Lambda(b-p)$ into $\Lambda(1-b+p)=\Lambda(p+a)$
+since $1-b=a$; this is \eqref{eq:dictionary}, and the identification at integer
+$d$ is Proposition~\ref{prop:epstein}. For the reflection,
+$s(p)=\frac{p+b}2$ and
+$\frac m2-s(p)=\frac{(2\omega+1)-p-b}2=\frac{b-p}2=s(-p)$. On $p=i\tau$ this is
+$\overline{s(p)}$, and $\Est$ has real coefficients, so for a self-dual $L$ the
+ratio is $\Est(s)/\overline{\Est(s)}$.
+\end{proof}
+
+\begin{corollary}[One object, three entries]\label{cor:oneobject}
+At integer $d$ the three entries of the dictionary are the three parts of one
+constant term. The archimedean factor
+$\pi^{d/2}\Gamma(s-\frac d2)/\Gamma(s)=\int_{\R^{d}}\lvert t+i\rvert^{-(p+b)}\dd t$
+is the integral over a $d$-dimensional unipotent radical \cite{HalfDimension};
+the comb $\zeta(2s-d)/\zeta(2s)=\sum_nJ_d(n)n^{-2s}$ is the count of that radical
+modulo $n$, which is what the Jordan totient
+$J_d(n)=n^{d}\prod_{q\mid n}(1-q^{-d})$ counts; and the residue of $\Est$ at its
+rightmost pole $s=\frac m2$ is $\lvert S^{d}\rvert/2\zeta(d+1)$, the sphere of
+$\R^{d+1}$ times the primitive density in $\Z^{d+1}$, which is
+$\operatorname{Res}_{p=b}\Kt_\omega$ \cite{WhichDimension}. In standard language
+$g\mapsto\Est_{\Z^{m}g}(s)$ is the degenerate Eisenstein series of the maximal
+parabolic $P_{1,m-1}$ of $SL(m)$ and $\Lambda(m-2s)/\Lambda(2s)$ is its
+$c$-function \cite{Terras}; at $m=2$ it is the classical
+$\varphi(s)=\Lambda(2s-1)/\Lambda(2s)$ of $PSL(2,\Z)\backslash\mathbb H$
+\cite{Iwaniec,LaxPhillips}.
+\end{corollary}
+
+\begin{remark}[The reading, and its limit]\label{rem:rankreading}
+So $d=1,2,3,\dots$ are \emph{all} realized, as ranks $2,3,4,\dots$: the transfer
+is the scattering matrix of the space of unimodular lattices of rank $d+1$, at
+every integer and not only at $d=1$. The family's range contains exactly one of
+them, $d=1$. What Proposition~\ref{prop:epstein} does not give is any
+\emph{individual} lattice: the ratio is the same for all of them, so no property
+of a particular $L$ --- its theta series, its minimum, its positivity --- is
+recoverable from $\Kt_\omega$. That will matter in
+Section~\ref{sec:position}. The group-theoretic sentence of
+Corollary~\ref{cor:oneobject} is the standard interpretation of the verified
+formulas and is not something proved here.
+\end{remark}
