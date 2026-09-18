@@ -1,5 +1,29 @@
 # Wilson lines: deformation flows for the shifted Weil family
 
+**Current status — 18 September 2026: endpoint-matter continuation active.**
+The unchanged manuscript is version **0.8, 47 pages**. Its pre-continuation
+state is preserved in `drafts/2026-09-18-v08-endpoint-baseline/`.
+Start with [Endpoint matter](notes/ENDPOINT_MATTER_CONTINUATION_20260918.md),
+then [Endpoint transports and the shifted tower](notes/ENDPOINT_TRANSPORT_AND_SHIFT_20260918.md).
+These notes supersede the old next-step recommendations and qualify the
+protected zero-delay claim; they are not yet integrated into the manuscript.
+
+The even image average of the dimension-one-half endpoint propagator is exactly
+`n_gamma(u)=exp(-u/2)/(1-exp(-2u))`. A determinant ratio on that fixed tower
+reproduces the full archimedean shift, with the conductor normalization supplied.
+The simplest gauge-invariant pairwise semicircles match the leading kernel but,
+with a fixed scalar coupling, do not share one bulk supercharge across the full
+two-variable family. A physical positive gluing and the prime terms remain open.
+The new [154 finite checks](numerics/records/endpoint-matter-checks.json) pass;
+[continuation provenance and replay](validation/endpoint_matter.py) are separate
+from the unchanged manuscript build record.
+
+Read the older result summaries below with the
+[17 September review](reviews/review_claude-fable-5-1_2026-09-17.md)
+and these two continuation notes. In particular, the modular-surface rejection,
+the claimed arithmetic Gram-point gap, and the use of a divergent correlator
+formula at protected dimensions must not be treated as current exclusions.
+
 17 September 2026. A new investigation, opened from a proposal of Edward
 Baker's. Its object is a **flow**, not a value: deform a Wilson line, and ask
 whether the differential equation its deformation obeys --- fixed by the
@@ -16,7 +40,7 @@ initial condition determine it, and there is nothing left to tune --- so matchin
 one is a different kind of claim.
 
 The [working manuscript](manuscript.pdf), *Deformation flows for the shifted Weil
-family: the transfer as an all-pass filter*, version 0.3, collects the results in
+family: the transfer as an all-pass filter*, version 0.8, collects the results in
 a self-contained draft. It inputs no shared
 background; it cites the background by equation number for the shifted family and
 the two companion manuscripts for results quoted by number. Reviewed versions are
@@ -25,7 +49,7 @@ preserved in [drafts/](drafts/README.md). See the [build guide](BUILD.md).
 **Nothing here is a construction. No source is built, no positivity is proved,
 and nothing assumes the Riemann hypothesis.**
 
-## The results
+## Earlier results, subject to the corrections above
 
 **The transfer is an all-pass filter.** $|K_\omega(i\tau)|=1$ for every real
 $\tau$ and every $\omega$ --- exactly, unconditionally, by the functional
@@ -155,35 +179,33 @@ upper bounds and cannot be fitted to a decay law. See the
 
 | Document | Role |
 |---|---|
-| [Working manuscript](manuscript.pdf) | The consolidated results, self-contained, 18 pages. |
+| [Working manuscript](manuscript.pdf) | Manuscript 0.8, self-contained, 47 pages; later corrections and endpoint continuation remain in the notes. |
 | [Dated drafts](drafts/README.md) | Complete buildable snapshots with hashes. |
 | [Deformation flow and the shift](notes/DEFORMATION_FLOW_AND_THE_SHIFT_20260917.md) | The opening note, written before the manuscript; carries a status header saying which of its two claims the manuscript supersedes. |
 | [Notes index](notes/README.md) | Navigation and status of each note. |
 | [Checks and records](numerics/README.md) | One reproducible program and its scoped results. |
-| [Reviews](reviews/README.md) | Dated assessments. None yet. |
+| [Reviews](reviews/README.md) | The 17 September review and its scope qualifications. |
 
 ## What is open
 
-Manuscript 0.3 carries every result in the notes. The ranked pathway is in
-Section 10 of the manuscript and in the
-[continuation note](notes/CONTINUATION_20260917.md); in short:
+1. **Positive endpoint gluing.** Specify a common-reference or reflected-state
+   transport network and calculate its actual leading kernel. Pairwise
+   semicircle expectations do not automatically form a Gram kernel.
+2. **Common supersymmetry with endpoint matter.** The fixed-scalar-coupling
+   two-variable semicircle family has failed the necessary bulk test. Test
+   contour-dependent scalar couplings or a different network together with
+   the defect endpoint constraints; individual BPS status is insufficient.
+3. **The full interaction correction in a common local scheme.** Distinguish a
+   finite normalization at one scale from protection of the endpoint weight
+   across all separations. The continuation gives the exact kernel variation
+   produced by an anomalous weight.
+4. **Physical shift and arithmetic.** The fixed even tower supplies the Gamma
+   ratio algebraically. Derive, rather than insert, its physical determinant,
+   the conductor, prime atoms, and pole/contact terms before claiming a
+   realization of the full transfer or contraction.
 
-1. **The group-delay test on a specific open Wilson line** --- the first test in
-   this program that a gauge theory can fail, needing no arithmetic and no
-   positivity.
-2. **The lower frame bound of the zeros on $PW_{L/2}$** --- which is what "how
-   the margin collapses" means, now that the margin has been identified.
-   Recomputing the margins in a basis adapted to the deficit band is a
-   prerequisite: the recorded values cannot test any law.
-3. **Suzuki, arXiv:2301.00421, promoted from reading to machinery** --- the de
-   Branges question and the frame-bound question coincide.
-4. **Manuscript Problems 8.6 and 8.7**, which are the two forms of one question.
-5. **The conformal congruence at the endpoint** --- positivity is invariant along
-   a conformal orbit, so the semicircle form is an equally good target on a
-   compact contour, but its Jacobian degenerates exactly where the trace
-   obstruction lives.
-6. **Whether the vanishing theorem generalizes** beyond the class of
-   arXiv:1102.4948.
+The earlier frame-bound and delay-survey questions remain historical side
+questions; see the review before reviving their numerical conclusions.
 
 ## Relation to the sibling investigations
 

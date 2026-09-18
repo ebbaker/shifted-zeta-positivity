@@ -1,5 +1,32 @@
 # Small checks and retained records
 
+## Active endpoint-matter continuation
+
+[check_endpoint_matter.py](check_endpoint_matter.py) supplies **154 finite checks**
+in seven groups: parity kernels, difference energy, subtracted transform,
+weight variation, semicircle Clifford algebra, shifted determinant and generator,
+and the cutoff logarithm. Its [preserved record](records/endpoint-matter-checks.json)
+is replayed by the separate [continuation registry](../validation/endpoint_matter.py):
+
+```sh
+python3 numerics/check_endpoint_matter.py
+python3 validation/endpoint_matter.py check --replay
+```
+
+It uses only the standard library and writes JSON to standard output. These
+checks support the two new research notes; they are not yet registered as
+manuscript contents. On manuscript integration, migrate them into `drafts.py`
+and rebuild and review the manuscript normally.
+
+**Baseline audit:** all 1067 legacy cases pass their internal tolerances in the
+18 September runtime, but strict legacy replay differs in five floating-point
+error diagnostics across two programs. The original records remain unchanged.
+[The audit](records/endpoint-baseline-replay-audit.json) records every difference.
+Package/snapshot identity checks still pass. A successful numerical check is
+not a proof of any physical interpretation discussed in the notes.
+
+## Legacy manuscript checks
+
 This program supports the written calculations in the
 [manuscript](../manuscript.pdf) and [the notes](../notes/README.md). It uses
 Python's standard library only and prints JSON to standard output; it does not
@@ -27,7 +54,7 @@ Counts refer to finite test cases, not independent theorems.
 All three are registered in the `CHECKS` dictionary of
 [`validation/drafts.py`](../validation/drafts.py) as of manuscript 0.5;
 `drafts.py check --replay` runs all three and requires byte-identical output,
-$742$ cases in total.
+$1067$ cases in total. Strict cross-runtime replay has the qualification recorded above.
 
 Separately, [`exploratory/`](exploratory/README.md) holds programmes that are
 **not** registered: they use libraries the conventions exclude and

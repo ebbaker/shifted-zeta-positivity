@@ -1,0 +1,146 @@
+\section{Checks}\label{app:checks}
+
+Three programs,
+\begin{center}
+\texttt{numerics/check\_causal\_commutation.py},\qquad
+\texttt{numerics/records/causal-commutation-checks.json},\\[2pt]
+\texttt{numerics/check\_sampling\_forms.py},\qquad
+\texttt{numerics/records/sampling-forms-checks.json},\\[2pt]
+\texttt{numerics/check\_delay\_test.py},\qquad
+\texttt{numerics/records/delay-test-checks.json},
+\end{center}
+the second of each pair being its preserved record. All three use the standard
+library only and print JSON to standard output. Exact rational arithmetic is labelled separately
+from floating-point work. Counts refer to finite test cases, not to independent
+theorems, and none of the checks is a positivity certificate.
+
+\begin{center}
+\begin{tabular}{@{}p{0.30\textwidth}p{0.62\textwidth}@{}}
+\toprule
+Group & What is verified\\
+\midrule
+Multiplicativity of truncation &
+Lemma~\ref{lem:multiplicative} as a finite matrix identity,
+$P_LAP_LBP_L=P_LABP_L$, in exact rational arithmetic, for randomly generated
+causal kernels at several truncation sizes.\\
+Commutation, and its cause &
+$[A,B]=0$ for truncated causal convolutions, exact
+(Theorem~\ref{thm:abelian}); and the control that truncated \emph{non}-causal
+convolutions have commutators bounded away from zero, so causality is what the
+lemma uses.\\
+The causal pole kernel &
+That $4\cosh(\omega x)\cosh(x/2)\mathbf1_{x>0}$, symmetrized by
+\eqref{eq:symmetrize}, equals $2\cosh(\omega(x-y))\cosh(\frac{x-y}2)$, and at
+$\omega=0$ equals $P_L$ in the form $2|C(f)|^2-2|S(f)|^2$
+(Theorem~\ref{thm:kernel}).\\
+Vanishing on the imaginary axis &
+That $\re[2(p-\frac12)^{-1}+2(p+\frac12)^{-1}]=0$ at $p=i\tau$, exactly, over a
+grid (Remark~\ref{rem:imaginary}).\\
+The hyperbolic identity &
+Proposition~\ref{prop:hyperbolic} as a finite matrix identity at several
+$\omega$ and $L$.\\
+The endpoint algebra &
+Proposition~\ref{prop:algebra} in exact rational arithmetic: $G_{\omega,L}B_L=0$;
+the one-sided commutator $[G_{\omega,L},B_L]=-B_LG_{\omega,L}$ with
+$B_LG_{\omega,L}\neq0$; and the integrated form of
+$\partial_LG_{\omega,L}=B_LG_{\omega,L}$ at two extensions.\\
+The resonance model &
+Propositions~\ref{prop:unimodular} and \ref{prop:resonance} in a Blaschke model:
+that a factor with a zero at $\omega+i\gamma$ is unimodular on the critical line
+and that $|b-1|^2$ equals the Lorentzian $4\omega^2/(\omega^2+(\tau-\gamma)^2)$
+\emph{exactly}, both in exact rational arithmetic; and, in floating point, that
+its mass is $4\pi\omega$ and that the summed group delay over a window is $2\pi$
+times the number of resonances in it.\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+The second program, $336$ cases in five groups, supports
+Section~\ref{sec:sampling}.
+
+\begin{center}
+\begin{tabular}{@{}p{0.30\textwidth}p{0.62\textwidth}@{}}
+\toprule
+Group & What is verified\\
+\midrule
+Basis algebra &
+The closed forms for the autocorrelations $S_{jk}$ and the pole pairings
+$E_j^{\pm}$ of the orthonormal sine basis of $L^2(I_L)$, against direct
+quadrature, at four lengths; and the parity rule.\\
+Archimedean integrals &
+The three families of integrals against $\gammak$ needed to assemble $Q_{0,L}$,
+summed in closed form by \eqref{eq:gamma-kernel} into $\psi$ and $\psi'$ at
+$\frac14$ plus a geometrically convergent remainder, against quadrature; together
+with $\int_L^\infty e^{-r/2}\gammak(r)\dd r=\operatorname{artanh}(e^{-L})$.\\
+Assembly against the zeros &
+The assembled $Q_{0,L}$ matrix elements against a direct sum over one hundred
+published zero ordinates plus a smooth tail, at three lengths. Agreement is
+$1.8\times10^{-4}$, limited by the tail, so this checks the assembly and not the
+arithmetic of $\zeta$.\\
+The sampling budget &
+\eqref{eq:deficit}, that $D(L)=2e^L-\frac74$ exactly, against the
+Riemann--von Mangoldt main term at six lengths; and the count crossover
+$T_*=2\pi e^{L+1}$.\\
+Conventions &
+That the prime mass of \cite{ZhuCompact} at its $L$ is the comb of
+\eqref{eq:target} at $2L$, exactly, at three lengths; this is the factor of two
+of Remark~\ref{rem:laws}.\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+The third program, $200$ cases in seven groups, supports
+Section~\ref{sec:delay}: the causal symbol \eqref{eq:defectsymbol} against
+quadrature and against its boundary-channel decomposition into primary and
+descendants with positive coefficients; Proposition~\ref{prop:defectdelay} in
+closed form, its total, and its identical vanishing at half-integer $\Delta$; the
+Stieltjes bound of Proposition~\ref{prop:nowinding} for arbitrary positive
+spectral measures; that $e^{2i\theta}$ is unimodular while
+$\int_0^T2\theta'=2\theta(T)$ is unbounded; the two objects that do wind, the
+half-line inverted oscillator at exactly $\log\pi$ from the target and the
+Liouville amplitude at $4Q\log P$; the graded invariants of
+Proposition~\ref{prop:dictfree} --- the target values in exact rational
+arithmetic, the degeneracy $B_{2m}(\frac12)=2^{2m}B_{2m}(\frac14)$ to $m=8$
+exactly, the single-factor formula and its independence of the width, the
+classification of Theorem~\ref{thm:onefactor} together with a grid search finding
+no solution beyond the three, every row of the survey table of
+\S\ref{ssec:survey}, the closed-form counterexample of
+Remark~\ref{rem:retraction} with $I_4=\frac5{384}=\frac{25}{28}$ of the target,
+the two-factor family and the bisection sweep locating exactly the two $I_6$
+roots, that those two are one amplitude under the width rescaling, the Legendre
+duplication identity behind them in its squared form, the modular-surface shift
+together with the unimodular factor $\frac{2s-2}{2s}$ that separates
+$\Lambda_\zeta$ from $\xi$ and the $+\frac{11}6$ it would produce, and the
+counterexample at $a=\frac{4-\sqrt5}8$ to the unrestricted form of
+Proposition~\ref{prop:rigidity} together with the scan that finds no
+common-shift configuration with $n_j\leq6$ matching $I_4$; and the expansion of
+Proposition~\ref{prop:expansion} with the degree identity, the sign window, the
+rigidity bound of Proposition~\ref{prop:rigidity} attained only at
+$a\in\{\frac14,\frac34\}$, and the two-shift solution showing its hypothesis is
+needed.
+
+Run from the investigation directory:
+\begin{verbatim}
+python3 numerics/check_causal_commutation.py
+python3 numerics/check_sampling_forms.py
+python3 numerics/check_delay_test.py
+python3 validation/drafts.py check --replay
+\end{verbatim}
+
+\paragraph{Scope.} The resonance group uses the first twelve zero ordinates,
+truncated to exact rationals, as \emph{published input data}; the Blaschke
+identities hold for any rational $\gamma$, so the group verifies the mechanism of
+Section~\ref{sec:allpass} and not the arithmetic. Nothing here computes with
+$\xi$ or $\zeta$. The checks do not verify the convergence arguments in the proof
+of Theorem~\ref{thm:kernel}, which are analytic, nor
+Proposition~\ref{prop:trace}, which is a statement about domains, nor
+Propositions~\ref{prop:monotone}--\ref{prop:dichotomy}, which are statements
+about a limit. The numbers quoted in Section~\ref{sec:region} from
+\cite{CriticalPath} are reproduced, not re-derived, and carry the status recorded
+where they were first stated. Nor do they verify anything in
+Section~\ref{sec:sampling} beyond its closed forms and its budget: every table
+there comes from exploratory computations requiring \texttt{mpmath}, which the
+repository's conventions exclude, kept outside the registered programmes in
+\texttt{numerics/exploratory/} and labelled there. Those computations agree with
+an independently written quadrature assembler of this program to a relative
+$6\times10^{-25}$, which is a consistency check and not a certificate.

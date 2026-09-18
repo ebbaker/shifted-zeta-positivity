@@ -15,3 +15,21 @@ snapshot carries its own copy of the tool so it can be verified in isolation.
 
 These records establish file identity and build provenance, not mathematical
 correctness.
+
+## Endpoint continuation baseline
+
+`2026-09-18-v08-endpoint-baseline` preserves the current **version 0.8, 47-page**
+source/PDF/check package before endpoint-matter work. It is a new snapshot of the
+existing version, not manuscript version 0.9. All older snapshots remain intact.
+The snapshot tool's inherited generic title text is not the manuscript title;
+use the saved TeX/PDF title. Its hashes verify the files as saved.
+
+The intervening snapshots omitted from the older table are also preserved:
+
+| Snapshot | Version | Pages |
+|---|---|---|
+| `2026-09-17-v04` | 0.4 | 37 |
+| `2026-09-17-v05` | 0.5 | 43 |
+| `2026-09-17-v06` | 0.6 | 46 |
+| `2026-09-17-v07` | 0.7 | 46 |
+| `2026-09-17-v08` | 0.8 | 47 |

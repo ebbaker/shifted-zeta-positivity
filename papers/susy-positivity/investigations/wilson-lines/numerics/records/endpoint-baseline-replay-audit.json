@@ -1,0 +1,85 @@
+{
+  "schema": 1,
+  "date": "2026-09-18",
+  "python": "3.10.0 (v3.10.0:b494f5935c, Oct  4 2021, 14:59:19) [Clang 12.0.5 (clang-1205.0.22.11)]",
+  "executable": "/Library/Frameworks/Python.framework/Versions/3.10/bin/python3",
+  "platform": "macOS-14.5-arm64-arm-64bit",
+  "scope": "Pre-existing legacy replay differences, recorded without rewriting historical outputs. All programs exited successfully; their numerical thresholds are unchanged.",
+  "programs": [
+    {
+      "program": "numerics/check_causal_commutation.py",
+      "program_sha256": "3a06b655dc801113d00ff6d515d5edc74bf2189e4a3792e4842357482b7f22b8",
+      "preserved_record_sha256": "642fa3af87e9d623065e1eb696fa0d7a0f5892f0ee640f056057c31170c21223",
+      "exit_code": 0,
+      "total_checks": 206,
+      "status": "passed",
+      "group_passes": [],
+      "strict_replay_equal": false,
+      "differences": [
+        {
+          "path": "/worst_relative_error/hyperbolic_identity",
+          "preserved": "2.35e-15",
+          "current": "1.47e-15"
+        }
+      ]
+    },
+    {
+      "program": "numerics/check_sampling_forms.py",
+      "program_sha256": "06f6dec33f74ab01d293ca789acd4c9b9e7994efe9a764cfc43d43a55dc5833a",
+      "preserved_record_sha256": "4ae7a10814c68debb13de9e9d107c47b71ca6ae594c21053fe4131877a9fa4d5",
+      "exit_code": 0,
+      "total_checks": 336,
+      "status": true,
+      "group_passes": [
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "strict_replay_equal": true,
+      "differences": []
+    },
+    {
+      "program": "numerics/check_delay_test.py",
+      "program_sha256": "44b340f5efbc770a478b8dfbdedbec4fab70df3e9657f3c337dd69d43f53b08d",
+      "preserved_record_sha256": "8f65f7c1c0a0122254620e557155c9004c8715c56c38c4a6b94c354c205cd558",
+      "exit_code": 0,
+      "total_checks": 525,
+      "status": true,
+      "group_passes": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "strict_replay_equal": false,
+      "differences": [
+        {
+          "path": "/groups/0/worst_error",
+          "preserved": 1.4109429026110507e-14,
+          "current": 1.3934016296766134e-14
+        },
+        {
+          "path": "/groups/1/worst_error",
+          "preserved": 1.1902335301729838,
+          "current": 1.1902335301729758
+        },
+        {
+          "path": "/groups/2/totals/3/total_delay",
+          "preserved": 0.5340707511084062,
+          "current": 0.5340707511084061
+        },
+        {
+          "path": "/groups/3/rows/2/arg_range/1",
+          "preserved": -9.92851746295659e-05,
+          "current": -9.928517462956589e-05
+        }
+      ]
+    }
+  ]
+}
