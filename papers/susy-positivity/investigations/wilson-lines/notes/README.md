@@ -1,6 +1,6 @@
 # Research notes
 
-**Start here:** the [endpoint-matter continuation](ENDPOINT_MATTER_CONTINUATION_20260918.md)
+**Start here:** the [reflection-network note](REFLECTION_NETWORKS_AND_THE_EVEN_TOWER_20260918.md) and its [continuation](CONTINUATION_20260918_CLAUDE_SESSION2.md), then the [endpoint-matter continuation](ENDPOINT_MATTER_CONTINUATION_20260918.md)
 and [its follow-through calculation](ENDPOINT_TRANSPORT_AND_SHIFT_20260918.md)
 are the active direction as of 18 September. Manuscript 0.8 remains unchanged;
 its older claims must be read with the review and these notes.
@@ -8,6 +8,8 @@ its older claims must be read with the review and these notes.
 
 | Note | Breadth and status | Read it for |
 |---|---|---|
+| [CONTINUATION_20260918_CLAUDE_SESSION2.md](CONTINUATION_20260918_CLAUDE_SESSION2.md) | Current handoff | Reflection-network results, the OS-positivity audit as first item, registration left undone. Claude Fable 5.1. |
+| [REFLECTION_NETWORKS_AND_THE_EVEN_TOWER_20260918.md](REFLECTION_NETWORKS_AND_THE_EVEN_TOWER_20260918.md) | Active; the positive pairing constructed, conditionally | $n_\gamma=G_o+G_-$: the within-defect reflection glues only the alternating tower, with a cusp and no common supercharge; the through-the-defect reflection with the origin as reference and the even combination $\Phi_r+\Phi_{-r}$ gives a gauge-invariant Gram pairing whose free kernel is exactly $n_\gamma$, smooth at the origin, all kets sharing one bulk special supercharge; positivity conditional on OS positivity of the interface under $x_3\to-x_3$; $X^H_3$ read as $\Theta_3$-odd. 1196 finite checks. Claude Fable 5.1. |
 | [CONTINUATION_20260918_CLAUDE.md](CONTINUATION_20260918_CLAUDE.md) | Current Claude handoff | Complete session state, exact versus unproved claims, uncommitted work, positive-pairing next calculation, and verification. OpenAI GPT-6 (Codex). |
 | [ENDPOINT_MATTER_CONTINUATION_20260918.md](ENDPOINT_MATTER_CONTINUATION_20260918.md) | Active; exact free-kernel identities and qualified physical candidate | Even endpoint image projection gives the full central archimedean tower and energy; gauge-invariant pairwise semicircles; local-renormalization qualification; anomalous-weight diagnostic; correction to the protected zero-delay inference. OpenAI GPT-6 (Codex). |
 | [ENDPOINT_TRANSPORT_AND_SHIFT_20260918.md](ENDPOINT_TRANSPORT_AND_SHIFT_20260918.md) | Active; first continuation results | Fixed-coupling semicircles share bulk supersymmetry only when they share an endpoint; the full kernel has no common bulk supercharge in that ansatz. Pairwise transports are not automatically a Gram construction. A determinant on the fixed even tower realizes every archimedean shift. OpenAI GPT-6 (Codex). |

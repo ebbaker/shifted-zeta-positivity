@@ -1,5 +1,16 @@
 # Changelog
 
+## 2026-09-18 — wilson-lines: reflection networks (Claude Fable 5.1)
+
+- New note `papers/susy-positivity/investigations/wilson-lines/notes/REFLECTION_NETWORKS_AND_THE_EVEN_TOWER_20260918.md`:
+  the positive pairing of the endpoint kernel constructed as a through-the-defect
+  reflection network; the within-defect reflection shown to glue only the
+  alternating tower. Conditional on OS positivity of the interface.
+- New check `numerics/check_reflection_networks.py` (1196 cases) with record;
+  not yet registered in `validation/endpoint_matter.py`.
+- Continuation `notes/CONTINUATION_20260918_CLAUDE_SESSION2.md`; indexes updated.
+  Manuscript unchanged at 0.8.
+
 All notable changes to the released contents of this repository. Dates are the
 dates of the underlying work; the repository itself was created in September 2026.
 

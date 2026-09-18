@@ -25,6 +25,17 @@ error diagnostics across two programs. The original records remain unchanged.
 Package/snapshot identity checks still pass. A successful numerical check is
 not a proof of any physical interpretation discussed in the notes.
 
+[check_reflection_networks.py](check_reflection_networks.py) supplies **1196 finite
+checks** in five groups for the [reflection-network note](../notes/REFLECTION_NETWORKS_AND_THE_EVEN_TOWER_20260918.md):
+the tower bookkeeping $n_\gamma=G_o+G_-$ in exact rationals; the transform of the
+alternating tower and the difference energy of the odd tower; the orientation
+table of the bulk BPS solution on upper and lower semicircles; the common special
+supercharge of every arc through the origin; and the two-circle determinants that
+separate the through-the-defect network from the within-defect one. Record:
+[reflection-networks-checks.json](records/reflection-networks-checks.json).
+**Not yet registered** in `validation/endpoint_matter.py`; see the continuation
+note. Written by Claude Fable 5.1. Zeta is evaluated nowhere.
+
 ## Legacy manuscript checks
 
 This program supports the written calculations in the

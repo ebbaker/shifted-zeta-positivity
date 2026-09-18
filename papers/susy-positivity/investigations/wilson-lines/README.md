@@ -3,7 +3,7 @@
 **Current status — 18 September 2026: endpoint-matter continuation active.**
 The unchanged manuscript is version **0.8, 47 pages**. Its pre-continuation
 state is preserved in `drafts/2026-09-18-v08-endpoint-baseline/`.
-Start with [Endpoint matter](notes/ENDPOINT_MATTER_CONTINUATION_20260918.md),
+Start with the [reflection-network note](notes/REFLECTION_NETWORKS_AND_THE_EVEN_TOWER_20260918.md) and its [continuation](notes/CONTINUATION_20260918_CLAUDE_SESSION2.md), then [Endpoint matter](notes/ENDPOINT_MATTER_CONTINUATION_20260918.md),
 then [Endpoint transports and the shifted tower](notes/ENDPOINT_TRANSPORT_AND_SHIFT_20260918.md).
 These notes supersede the old next-step recommendations and qualify the
 protected zero-delay claim; they are not yet integrated into the manuscript.
@@ -188,9 +188,11 @@ upper bounds and cannot be fitted to a decay law. See the
 
 ## What is open
 
-1. **Positive endpoint gluing.** Specify a common-reference or reflected-state
-   transport network and calculate its actual leading kernel. Pairwise
-   semicircle expectations do not automatically form a Gram kernel.
+1. **Positive endpoint gluing --- constructed, conditionally.** The through-the-defect
+   reflection network of the [reflection-network note](notes/REFLECTION_NETWORKS_AND_THE_EVEN_TOWER_20260918.md)
+   is a gauge-invariant Gram pairing with free kernel exactly $n_\gamma$ and one
+   common bulk supercharge on its kets; its positivity rests on OS positivity of
+   the interface under $x_3\to-x_3$, which is the first open audit.
 2. **Common supersymmetry with endpoint matter.** The fixed-scalar-coupling
    two-variable semicircle family has failed the necessary bulk test. Test
    contour-dependent scalar couplings or a different network together with
