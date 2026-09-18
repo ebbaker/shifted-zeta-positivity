@@ -1,0 +1,632 @@
+{
+  "programme": "check_contraction_margin.py",
+  "investigation": "loewner",
+  "object": "V_{omega,L} = P_L (causal convolution with k_omega) P_L, k_omega the causal kernel of xi(s-omega)/xi(s+omega), assembled from Gamma, sinh, exp and the integers below e^L",
+  "basis": "orthonormal sine basis on (-L/2, L/2), N = 24",
+  "quadrature": "Gauss-Jacobi for the weight tau^(omega-1), 32 nodes outer, 32 inner",
+  "scope": "finite test cases at three horizons; not a positivity certificate and not a statement about the zeros",
+  "groups": [
+    {
+      "name": "A. the quadrature rules and the closed-form sine autocorrelations",
+      "cases": 6,
+      "worst_margin_against_own_tolerance": 0.03228422196244196,
+      "pass": true,
+      "checks": [
+        {
+          "what": "Gauss-Jacobi moments against 1/(omega+m), m < 64, omega = 0.002",
+          "error": 3.2284221962441963e-12,
+          "tolerance": 1e-10,
+          "pass": true
+        },
+        {
+          "what": "Gauss-Jacobi moments against 1/(omega+m), m < 64, omega = 0.01",
+          "error": 5.575229167220641e-13,
+          "tolerance": 1e-10,
+          "pass": true
+        },
+        {
+          "what": "Gauss-Jacobi moments against 1/(omega+m), m < 64, omega = 0.05",
+          "error": 2.708108043369961e-13,
+          "tolerance": 1e-10,
+          "pass": true
+        },
+        {
+          "what": "Gauss-Jacobi moments against 1/(omega+m), m < 64, omega = 0.1",
+          "error": 3.2115872461435656e-13,
+          "tolerance": 1e-10,
+          "pass": true
+        },
+        {
+          "what": "Gauss-Legendre moments against 1/(m+1), m < 128",
+          "error": 8.659739592076221e-15,
+          "tolerance": 1e-12,
+          "pass": true
+        },
+        {
+          "what": "S_jk closed form against direct quadrature, 24 pairs (j,k,t)",
+          "error": 6.245004513516506e-16,
+          "tolerance": 1e-13,
+          "pass": true
+        }
+      ],
+      "Gauss-Jacobi worst relative moment error": {
+        "omega = 0.002": 3.2284221962441963e-12,
+        "omega = 0.01": 5.575229167220641e-13,
+        "omega = 0.05": 2.708108043369961e-13,
+        "omega = 0.1": 3.2115872461435656e-13
+      },
+      "Gauss-Legendre worst relative moment error": 8.659739592076221e-15,
+      "S_jk worst absolute error": 6.245004513516506e-16
+    },
+    {
+      "name": "B. the elementary kernel: two routes to the smoothings, and the exact Laplace transform",
+      "cases": 4,
+      "worst_margin_against_own_tolerance": 0.002514291041360609,
+      "pass": true,
+      "checks": [
+        {
+          "what": "Gh via Psi against Gh via the split rule, 5 points, omega = 0.01",
+          "error": 2.514291041360609e-14,
+          "tolerance": 1e-11,
+          "pass": true
+        },
+        {
+          "what": "Laplace transform of kappa_omega against the closed form, p in {2,3,5,8}, omega = 0.01",
+          "error": 1.4028636779786183e-13,
+          "tolerance": 1e-10,
+          "pass": true
+        },
+        {
+          "what": "Gh via Psi against Gh via the split rule, 5 points, omega = 0.1",
+          "error": 2.4623766101032578e-14,
+          "tolerance": 1e-11,
+          "pass": true
+        },
+        {
+          "what": "Laplace transform of kappa_omega against the closed form, p in {2,3,5,8}, omega = 0.1",
+          "error": 1.1647999740992976e-13,
+          "tolerance": 1e-10,
+          "pass": true
+        }
+      ],
+      "note": "the Laplace transform is the archimedean Gamma-ratio times the rational pole repair; it uses Gamma alone, no zeta and no zeros, and is the identity that says the Beta kernel and the R_omega correction are the right ones",
+      "Gh, worst relative difference between the two routes": {
+        "omega = 0.01": 2.514291041360609e-14,
+        "omega = 0.1": 2.4623766101032578e-14
+      },
+      "int_0^inf e^(-p tau) kappa_omega dtau  vs  pi^om Gamma((a+p)/2)/Gamma((b+p)/2) (p+a)(p-b)/((p+b)(p-a))": {
+        "omega = 0.01": {
+          "p = 2": {
+            "assembled": 0.9924172114845874,
+            "closed form": 0.9924172114845021,
+            "relative error": 8.591661581893428e-14
+          },
+          "p = 3": {
+            "assembled": 0.995269478135378,
+            "closed form": 0.99526947813529,
+            "relative error": 8.845914376649585e-14
+          },
+          "p = 5": {
+            "assembled": 0.9951890867617064,
+            "closed form": 0.9951890867615981,
+            "relative error": 1.0877002806893093e-13
+          },
+          "p = 8": {
+            "assembled": 0.9932040566567462,
+            "closed form": 0.9932040566566068,
+            "relative error": 1.4028636779786183e-13
+          }
+        },
+        "omega = 0.1": {
+          "p = 2": {
+            "assembled": 0.9265378400038835,
+            "closed form": 0.9265378400038161,
+            "relative error": 7.273371327658829e-14
+          },
+          "p = 3": {
+            "assembled": 0.9536562881394863,
+            "closed form": 0.9536562881394158,
+            "relative error": 7.392512684128719e-14
+          },
+          "p = 5": {
+            "assembled": 0.9529158717667237,
+            "closed form": 0.9529158717666375,
+            "relative error": 9.041019177400216e-14
+          },
+          "p = 8": {
+            "assembled": 0.9340818924503411,
+            "closed form": 0.9340818924502323,
+            "relative error": 1.1647999740992976e-13
+          }
+        }
+      }
+    },
+    {
+      "name": "C. the mass on [0,L) at three horizons, and its first-order limit against Proposition 2.3",
+      "cases": 6,
+      "worst_margin_against_own_tolerance": 0.28113288380406054,
+      "pass": true,
+      "checks": [
+        {
+          "what": "mass against the 40-digit assembly, omega in {0.002, 0.01}, L = log3",
+          "error": 4.012959568651882e-14,
+          "tolerance": 1e-12,
+          "pass": true
+        },
+        {
+          "what": "two-point extrapolation of (1-mass)/omega against Proposition 2.3, L = log3",
+          "error": 1.2122750022996135e-06,
+          "tolerance": 1e-05,
+          "pass": true
+        },
+        {
+          "what": "mass against the 40-digit assembly, omega in {0.002, 0.01}, L = log5",
+          "error": 4.022571434623713e-14,
+          "tolerance": 1e-12,
+          "pass": true
+        },
+        {
+          "what": "two-point extrapolation of (1-mass)/omega against Proposition 2.3, L = log5",
+          "error": 1.5200187128988243e-06,
+          "tolerance": 1e-05,
+          "pass": true
+        },
+        {
+          "what": "mass against the 40-digit assembly, omega in {0.002, 0.01}, L = log7",
+          "error": 5.11609342181262e-14,
+          "tolerance": 1e-12,
+          "pass": true
+        },
+        {
+          "what": "two-point extrapolation of (1-mass)/omega against Proposition 2.3, L = log7",
+          "error": 2.8113288380406054e-06,
+          "tolerance": 1e-05,
+          "pass": true
+        }
+      ],
+      "note": "the closed form integrates the poles, the digamma and the primes of xi'/xi directly; the assembled kernel carries them through the Beta convolution and the pole repair, so the agreement is between two arrangements of the same data",
+      "horizons": {
+        "log3": {
+          "omega = 0.002": {
+            "mass on [0,L)": 0.998740468308131,
+            "(1 - mass)/omega": 0.6297658459344935,
+            "40-digit reference": 0.9987404683080909,
+            "relative error": 4.012959568651882e-14
+          },
+          "omega = 0.01": {
+            "mass on [0,L)": 0.9937323186866961,
+            "(1 - mass)/omega": 0.6267681313303908,
+            "40-digit reference": 0.9937323186866635,
+            "relative error": 3.2846427866125975e-14
+          },
+          "two-point extrapolation to omega = 0": 0.6305152745855191,
+          "Proposition 2.3 closed form": 0.6305160389443517,
+          "relative difference": 1.2122750022996135e-06
+        },
+        "log5": {
+          "omega = 0.002": {
+            "mass on [0,L)": 0.998712157385034,
+            "(1 - mass)/omega": 0.6439213074829753,
+            "40-digit reference": 0.99871215738503,
+            "relative error": 4.001956779134e-15
+          },
+          "omega = 0.01": {
+            "mass on [0,L)": 0.9935940115938799,
+            "(1 - mass)/omega": 0.6405988406120056,
+            "40-digit reference": 0.99359401159384,
+            "relative error": 4.022571434623713e-14
+          },
+          "two-point extrapolation to omega = 0": 0.6447519242007177,
+          "Proposition 2.3 closed form": 0.6447529042371973,
+          "relative difference": 1.5200187128988243e-06
+        },
+        "log7": {
+          "omega = 0.002": {
+            "mass on [0,L)": 0.9983317984055098,
+            "(1 - mass)/omega": 0.8341007972451076,
+            "40-digit reference": 0.99833179840551,
+            "relative error": 2.2241563904873193e-16
+          },
+          "omega = 0.01": {
+            "mass on [0,L)": 0.9917174696039107,
+            "(1 - mass)/omega": 0.8282530396089283,
+            "40-digit reference": 0.99171746960386,
+            "relative error": 5.11609342181262e-14
+          },
+          "two-point extrapolation to omega = 0": 0.8355627366541524,
+          "Proposition 2.3 closed form": 0.8355650857023739,
+          "relative difference": 2.8113288380406054e-06
+        }
+      },
+      "Proposition 2.3 first-order tail": {
+        "log3": 0.6305160389443517,
+        "log5": 0.6447529042371973,
+        "log7": 0.8355650857023739
+      }
+    },
+    {
+      "name": "D. contraction and the first-order margin at L = log 3",
+      "cases": 17,
+      "worst_margin_against_own_tolerance": 0.536384065936546,
+      "pass": true,
+      "checks": [
+        {
+          "what": "m_L^(24) from the closed-form Weil assembler against 40 digits",
+          "error": 1.013045663247439e-08,
+          "tolerance": 1e-07,
+          "pass": true
+        },
+        {
+          "what": "||V_{0.002,log3}|| < 1",
+          "error": 0.0,
+          "tolerance": 0.5,
+          "pass": true
+        },
+        {
+          "what": "lambda_min(D)/(2 omega) against 40 digits, omega = 0.002",
+          "error": 0.0003474857230944581,
+          "tolerance": 0.001,
+          "pass": true
+        },
+        {
+          "what": "first-order law on e_1 against 40 digits, omega = 0.002",
+          "error": 4.583513169009734e-08,
+          "tolerance": 1e-07,
+          "pass": true
+        },
+        {
+          "what": "||V_{0.01,log3}|| < 1",
+          "error": 0.0,
+          "tolerance": 0.5,
+          "pass": true
+        },
+        {
+          "what": "lambda_min(D)/(2 omega) against 40 digits, omega = 0.01",
+          "error": 5.7472319791368016e-05,
+          "tolerance": 0.001,
+          "pass": true
+        },
+        {
+          "what": "first-order law on e_1 against 40 digits, omega = 0.01",
+          "error": 7.592694806213274e-09,
+          "tolerance": 1e-07,
+          "pass": true
+        },
+        {
+          "what": "||V_{0.02,log3}|| < 1",
+          "error": 0.0,
+          "tolerance": 0.5,
+          "pass": true
+        },
+        {
+          "what": "lambda_min(D)/(2 omega) against 40 digits, omega = 0.02",
+          "error": 2.3598053615790962e-05,
+          "tolerance": 0.001,
+          "pass": true
+        },
+        {
+          "what": "first-order law on e_1 against 40 digits, omega = 0.02",
+          "error": 3.136753523591551e-09,
+          "tolerance": 1e-07,
+          "pass": true
+        },
+        {
+          "what": "||V_{0.05,log3}|| < 1",
+          "error": 0.0,
+          "tolerance": 0.5,
+          "pass": true
+        },
+        {
+          "what": "lambda_min(D)/(2 omega) against 40 digits, omega = 0.05",
+          "error": 8.699072812467621e-06,
+          "tolerance": 0.001,
+          "pass": true
+        },
+        {
+          "what": "first-order law on e_1 against 40 digits, omega = 0.05",
+          "error": 1.1638789931822657e-09,
+          "tolerance": 1e-07,
+          "pass": true
+        },
+        {
+          "what": "||V_{0.1,log3}|| < 1",
+          "error": 0.0,
+          "tolerance": 0.5,
+          "pass": true
+        },
+        {
+          "what": "lambda_min(D)/(2 omega) against 40 digits, omega = 0.1",
+          "error": 2.9976834256672053e-06,
+          "tolerance": 0.001,
+          "pass": true
+        },
+        {
+          "what": "first-order law on e_1 against 40 digits, omega = 0.1",
+          "error": 3.9447312083495945e-10,
+          "tolerance": 1e-07,
+          "pass": true
+        },
+        {
+          "what": "|lambda_min(D)/(2 omega) / m_L^(24) - 1| at omega = 0.01",
+          "error": 0.00536384065936546,
+          "tolerance": 0.01,
+          "pass": true
+        }
+      ],
+      "note": "lambda_min(D) is a 1e-9 quantity read off matrices of norm 1, so double precision carries about four of its digits; the sharp assertions are contraction and |delta| < 1 percent, and the 40-digit comparison is made at the 1e-3 relative level the arithmetic supports",
+      "m_L^(24), even block": 6.247513920142631e-08,
+      "m_L^(24), odd block": 1.8605738683736116e-05,
+      "omega sweep": {
+        "omega = 0.002": {
+          "1 - ||V||": 1.2504175472827228e-10,
+          "lambda_min(D)": 2.5008350945654456e-10,
+          "lambda_min(D)/(2 omega)": 6.252087736413614e-08,
+          "ratio to m_L^(24)": 1.000732101813529,
+          "40-digit reference": 6.2542610028206e-08,
+          "relative error against it": 0.0003474857230944581,
+          "first-order law on e_1, ratio to Q[e_1]": 0.9988342505238683,
+          "e_1 ratio, 40-digit reference": 0.998834296359
+        },
+        "omega = 0.01": {
+          "1 - ||V||": 6.281024589327444e-10,
+          "lambda_min(D)": 1.2562049178654888e-09,
+          "lambda_min(D)/(2 omega)": 6.281024589327444e-08,
+          "ratio to m_L^(24)": 1.0053638406593655,
+          "40-digit reference": 6.2813855951291e-08,
+          "relative error against it": 5.7472319791368016e-05,
+          "first-order law on e_1, ratio to Q[e_1]": 0.9946762114133052,
+          "e_1 ratio, 40-digit reference": 0.994676219006
+        },
+        "omega = 0.02": {
+          "1 - ||V||": 1.2630958501347322e-09,
+          "lambda_min(D)": 2.5261917002694645e-09,
+          "lambda_min(D)/(2 omega)": 6.315479250673661e-08,
+          "ratio to m_L^(24)": 1.0108787801675645,
+          "40-digit reference": 6.3156282872086e-08,
+          "relative error against it": 2.3598053615790962e-05,
+          "first-order law on e_1, ratio to Q[e_1]": 0.9906069641732465,
+          "e_1 ratio, 40-digit reference": 0.99060696731
+        },
+        "omega = 0.05": {
+          "1 - ||V||": 3.2105051950281904e-09,
+          "lambda_min(D)": 6.421010390056381e-09,
+          "lambda_min(D)/(2 omega)": 6.421010390056381e-08,
+          "ratio to m_L^(24)": 1.0277704815277608,
+          "40-digit reference": 6.4210662473792e-08,
+          "relative error against it": 8.699072812467621e-06,
+          "first-order law on e_1, ratio to Q[e_1]": 0.985816211143121,
+          "e_1 ratio, 40-digit reference": 0.985816212307
+        },
+        "omega = 0.1": {
+          "1 - ||V||": 6.608554481424278e-09,
+          "lambda_min(D)": 1.3217108962848556e-08,
+          "lambda_min(D)/(2 omega)": 6.608554481424278e-08,
+          "ratio to m_L^(24)": 1.057789476885776,
+          "40-digit reference": 6.6085742918379e-08,
+          "relative error against it": 2.9976834256672053e-06,
+          "first-order law on e_1, ratio to Q[e_1]": 1.0020272934655268,
+          "e_1 ratio, 40-digit reference": 1.00202729386
+        }
+      },
+      "relative excess over m_L^(24), divided by omega (Proposition 2.2 is linear)": {
+        "omega = 0.002": 0.36605090676444796,
+        "omega = 0.01": 0.536384065936546,
+        "omega = 0.02": 0.5439390083782247,
+        "omega = 0.05": 0.555409630555217,
+        "omega = 0.1": 0.5778947688577607
+      }
+    },
+    {
+      "name": "E. the first-order law on e_1 at L = log 5 and log 7",
+      "cases": 8,
+      "worst_margin_against_own_tolerance": 0.22368413310491775,
+      "pass": true,
+      "checks": [
+        {
+          "what": "first-order law on e_1 against 40 digits, L = log5, omega = 0.002",
+          "error": 1.134641574029871e-07,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "what": "| ||V|| - 1 | at L = log5, omega = 0.002 (the true defect, 2.6e-19 and 2.1e-24, is below double precision; only its absence at the 1e-12 level is asserted)",
+          "error": 5.395683899678261e-14,
+          "tolerance": 1e-12,
+          "pass": true
+        },
+        {
+          "what": "first-order law on e_1 against 40 digits, L = log5, omega = 0.01",
+          "error": 1.9083829072563674e-08,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "what": "| ||V|| - 1 | at L = log5, omega = 0.01 (the true defect, 2.6e-19 and 2.1e-24, is below double precision; only its absence at the 1e-12 level is asserted)",
+          "error": 4.707345624410664e-14,
+          "tolerance": 1e-12,
+          "pass": true
+        },
+        {
+          "what": "first-order law on e_1 against 40 digits, L = log7, omega = 0.002",
+          "error": 2.2368413310491775e-07,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "what": "| ||V|| - 1 | at L = log7, omega = 0.002 (the true defect, 2.6e-19 and 2.1e-24, is below double precision; only its absence at the 1e-12 level is asserted)",
+          "error": 6.328271240363392e-14,
+          "tolerance": 1e-12,
+          "pass": true
+        },
+        {
+          "what": "first-order law on e_1 against 40 digits, L = log7, omega = 0.01",
+          "error": 3.79404641037695e-08,
+          "tolerance": 1e-06,
+          "pass": true
+        },
+        {
+          "what": "| ||V|| - 1 | at L = log7, omega = 0.01 (the true defect, 2.6e-19 and 2.1e-24, is below double precision; only its absence at the 1e-12 level is asserted)",
+          "error": 5.417888360170764e-14,
+          "tolerance": 1e-12,
+          "pass": true
+        }
+      ],
+      "note": "m_L^(N) is 2.5e-17 and 2.1e-22 in this basis, below what double precision can read off a matrix of norm 1, so the margin at these horizons stays exploratory (see ../exploratory/cmgj_*.json); the first-order law on a fixed vector is O(1e-4) and is carried here",
+      "horizons": {
+        "log5": {
+          "omega = 0.002": {
+            "(1 - ||V e_1||^2)/(2 omega)": 0.0002259050958797193,
+            "Q_{0,L}[e_1]": 0.00022646652655755606,
+            "ratio": 0.9975209109868426,
+            "40-digit reference": 0.997521024451,
+            "difference": 1.134641574029871e-07
+          },
+          "omega = 0.01": {
+            "(1 - ||V e_1||^2)/(2 omega)": 0.000223780951541519,
+            "Q_{0,L}[e_1]": 0.00022646652655755606,
+            "ratio": 0.9881414041321709,
+            "40-digit reference": 0.988141423216,
+            "difference": 1.9083829072563674e-08
+          }
+        },
+        "log7": {
+          "omega = 0.002": {
+            "(1 - ||V e_1||^2)/(2 omega)": 0.00013213018279500943,
+            "Q_{0,L}[e_1]": 0.00013246261551747018,
+            "ratio": 0.9974903657068669,
+            "40-digit reference": 0.997490589391,
+            "difference": 2.2368413310491775e-07
+          },
+          "omega = 0.01": {
+            "(1 - ||V e_1||^2)/(2 omega)": 0.00013090320126196708,
+            "Q_{0,L}[e_1]": 0.00013246261551747018,
+            "ratio": 0.9882275142355359,
+            "40-digit reference": 0.988227552176,
+            "difference": 3.79404641037695e-08
+          }
+        }
+      }
+    },
+    {
+      "name": "F. the cumulative Cayley coordinate Z = (I-V)(I+V)^(-1), P = (2/omega) Re Z",
+      "cases": 12,
+      "worst_margin_against_own_tolerance": 0.6734214507112782,
+      "pass": true,
+      "checks": [
+        {
+          "what": "congruence D = (omega/2)(I+V*) P (I+V), omega = 0.002",
+          "error": 7.549435252288128e-17,
+          "tolerance": 1e-15,
+          "pass": true
+        },
+        {
+          "what": "P_{0.002,log3} >= 0 (accretive Z, positive-real symbol)",
+          "error": 0.0,
+          "tolerance": 0.5,
+          "pass": true
+        },
+        {
+          "what": "congruence D = (omega/2)(I+V*) P (I+V), omega = 0.01",
+          "error": 7.632783294297951e-17,
+          "tolerance": 1e-15,
+          "pass": true
+        },
+        {
+          "what": "P_{0.01,log3} >= 0 (accretive Z, positive-real symbol)",
+          "error": 0.0,
+          "tolerance": 0.5,
+          "pass": true
+        },
+        {
+          "what": "congruence D = (omega/2)(I+V*) P (I+V), omega = 0.02",
+          "error": 1.0408340855860843e-16,
+          "tolerance": 1e-15,
+          "pass": true
+        },
+        {
+          "what": "P_{0.02,log3} >= 0 (accretive Z, positive-real symbol)",
+          "error": 0.0,
+          "tolerance": 0.5,
+          "pass": true
+        },
+        {
+          "what": "congruence D = (omega/2)(I+V*) P (I+V), omega = 0.05",
+          "error": 1.6653345369377348e-16,
+          "tolerance": 1e-15,
+          "pass": true
+        },
+        {
+          "what": "P_{0.05,log3} >= 0 (accretive Z, positive-real symbol)",
+          "error": 0.0,
+          "tolerance": 0.5,
+          "pass": true
+        },
+        {
+          "what": "congruence D = (omega/2)(I+V*) P (I+V), omega = 0.1",
+          "error": 1.1102230246251565e-16,
+          "tolerance": 1e-15,
+          "pass": true
+        },
+        {
+          "what": "P_{0.1,log3} >= 0 (accretive Z, positive-real symbol)",
+          "error": 0.0,
+          "tolerance": 0.5,
+          "pass": true
+        },
+        {
+          "what": "the difference is quadratic: spread of (lambda_min(P) - lambda_min(D)/2omega)/(m_L omega^2) over omega in {0.02, 0.05, 0.1}",
+          "error": 0.10101321760669173,
+          "tolerance": 0.15,
+          "pass": true
+        },
+        {
+          "what": "that coefficient at omega = 0.1 against its 40-digit value 0.0382715",
+          "error": 0.0011353750820070592,
+          "tolerance": 0.02,
+          "pass": true
+        }
+      ],
+      "note": "P >= 0 is the positive-real criterion, equivalent to ||V|| <= 1 by the exact congruence; and P = Q_{0,L} + O(omega^2), because Z = tanh(omega G/2) is odd in omega, where the defect carries a first-order correction -omega m_L^2",
+      "omega sweep at L = log 3": {
+        "omega = 0.002": {
+          "lambda_min(P)": 6.25226680689381e-08,
+          "lambda_min(D)/(2 omega)": 6.252087736413614e-08,
+          "difference, relative to m_L^(24)": 2.866267806445022e-05,
+          "difference / (m_L^(24) omega^2)": 7.165669516112556,
+          "congruence residual max |D - (omega/2)(I+V*)P(I+V)|": 7.549435252288128e-17
+        },
+        "omega = 0.01": {
+          "lambda_min(P)": 6.2810783387182e-08,
+          "lambda_min(D)/(2 omega)": 6.281024589327444e-08,
+          "difference, relative to m_L^(24)": 8.603324689329965e-06,
+          "difference / (m_L^(24) omega^2)": 0.08603324689329964,
+          "congruence residual max |D - (omega/2)(I+V*)P(I+V)|": 7.632783294297951e-17
+        },
+        "omega = 0.02": {
+          "lambda_min(P)": 6.315583487676238e-08,
+          "lambda_min(D)/(2 omega)": 6.315479250673661e-08,
+          "difference, relative to m_L^(24)": 1.668455707490093e-05,
+          "difference / (m_L^(24) omega^2)": 0.041711392687252324,
+          "congruence residual max |D - (omega/2)(I+V*)P(I+V)|": 1.0408340855860843e-16
+        },
+        "omega = 0.05": {
+          "lambda_min(P)": 6.421596063103586e-08,
+          "lambda_min(D)/(2 omega)": 6.421010390056381e-08,
+          "difference, relative to m_L^(24)": 9.374497675264185e-05,
+          "difference / (m_L^(24) omega^2)": 0.037497990701056735,
+          "congruence residual max |D - (omega/2)(I+V*)P(I+V)|": 1.6653345369377348e-16
+        },
+        "omega = 0.1": {
+          "lambda_min(P)": 6.610948213165493e-08,
+          "lambda_min(D)/(2 omega)": 6.608554481424278e-08,
+          "difference, relative to m_L^(24)": 0.0003831494850290954,
+          "difference / (m_L^(24) omega^2)": 0.038314948502909535,
+          "congruence residual max |D - (omega/2)(I+V*)P(I+V)|": 1.1102230246251565e-16
+        }
+      },
+      "note on the two smallest shifts": "the difference is 1e-5 of a 1e-9 eigenvalue at omega = 0.01 and 1e-7 of it at omega = 0.002, i.e. 1e-14 and 1e-16 in absolute terms, so those two rows are at the double-precision floor and only omega >= 0.02 carries the law"
+    }
+  ],
+  "all_pass": true,
+  "total_checks": 53
+}

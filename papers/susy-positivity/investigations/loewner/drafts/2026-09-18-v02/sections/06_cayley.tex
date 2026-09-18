@@ -1,0 +1,144 @@
+\section{The Cayley coordinate, and what a lattice does not know}\label{sec:cayley}
+
+Two things the instrument of Section~\ref{sec:contraction} makes available were
+not available before: the coordinate in which contraction \emph{is} positivity,
+and a like-for-like comparison, in one fixed basis, between the transfer's
+margin and the best zero-free surrogate for it.
+
+\subsection{The cumulative Cayley coordinate}\label{sec:cayleycoord}
+
+Following \cite[Proposition~7.7]{WilsonLines}, set
+\begin{equation}\label{eq:cayley}
+ Z_{\omega,L}=(I-V_{\omega,L})(I+V_{\omega,L})^{-1},\qquad
+ P_{\omega,L}=\frac2\omega\,\re Z_{\omega,L},
+\end{equation}
+$\re$ denoting the Hermitian part. The causal symbol of $P$ is the positive-real
+function $a_{\rm cum,\omega}=\frac2\omega(1-K_\omega)/(1+K_\omega)$, whose
+positive-realness is the classical passivity criterion and is equivalent, by
+\cite[Proposition~7.8]{WilsonLines}, to $K_\omega$ being inner.
+
+\begin{proposition}[The congruence]\label{prop:congruence}
+Whenever $I+V$ is invertible, $I-V^*V=\frac\omega2(I+V^*)P(I+V)$; hence
+$P\succeq0$ if and only if $\norm V\leq1$.
+\end{proposition}
+\begin{proof}
+$Z(I+V)=I-V$ and $(I+V^*)Z^*=(Z(I+V))^*=I-V^*$, so
+$(I+V^*)(Z+Z^*)(I+V)=(I+V^*)(I-V)+(I-V^*)(I+V)=2(I-V^*V)$.
+\end{proof}
+
+\begin{proposition}[$P$ is even in $\omega$]\label{prop:evencayley}
+On the compression, $V_{-\omega,L}=V_{\omega,L}^{-1}$; hence
+$Z_{-\omega,L}=-Z_{\omega,L}$ and $P_{-\omega,L}=P_{\omega,L}$, so
+\begin{equation}\label{eq:Pexpansion}
+ P_{\omega,L}=Q_L+O(\omega^2)
+\end{equation}
+with an expansion in even powers of $\omega$ only, where
+$\lambda_{\min}(D_{\omega,L})/2\omega=m_L-\omega m_L^2+O(\omega^2)$ carries a
+correction already at first order.
+\end{proposition}
+\begin{proof}
+$K_{-\omega}=1/K_\omega$ by definition, and both are Laplace transforms of
+causal distributions on $\re p>b$, since the poles of either lie in
+$|\re p|\leq b$ unconditionally. By Lemma~\ref{lem:multiplicative},
+$V_{-\omega,L}V_{\omega,L}=P_L(K_{-\omega}K_\omega)P_L=I$. Then
+$Z_{-\omega}=(I-V^{-1})(I+V^{-1})^{-1}=(V-I)(V+I)^{-1}=-Z_\omega$, so $\re Z$ is
+odd in $\omega$ and $P$ is even. Its value at $\omega=0$ is $\re G=Q_L$, from
+$Z=\tanh(\omega G/2)+O(\omega^3)$ as in
+Proposition~\ref{prop:secondorder}.
+\end{proof}
+
+The parity needs no exponential and no evenness of $a_\omega$: only that the
+transfer inverts under $\omega\mapsto-\omega$ and that compression respects
+products of causal symbols. On a finite basis, however, the advantage is
+structural rather than numerical.
+
+\begin{proposition}[The Galerkin term is common]\label{prop:cayleygalerkin}
+With $f_N$ as in Proposition~\ref{prop:galerkin} and $P_N$ built from $V_N$,
+\begin{equation}\label{eq:cayley-galerkin}
+ \ip{f_N}{P_Nf_N}=m_L^{(N)}
+ +\frac\omega2\Big(\norm{(I-P_N)Af_N}^2-\norm{(I-P_N)Qf_N}^2\Big)+O(\omega^2),
+\end{equation}
+the same first-order truncation term as \eqref{eq:galerkin-expansion}. The two
+estimators of $m_L^{(N)}$ therefore differ at second order in $\omega$ only.
+\end{proposition}
+\begin{proof}
+With $X_N=P_NXP_N$: $V_N=I-\omega G_N+\frac{\omega^2}2(G^2)_N+O(\omega^3)$ and
+$(I+V_N)^{-1}=\frac12\big(I+\frac\omega2G_N\big)+O(\omega^2)$, so
+$Z_N=\frac\omega2G_N-\frac{\omega^2}4\big((G^2)_N-G_N^2\big)+O(\omega^3)$ and
+$\frac2\omega\re Z_N=Q_N-\frac\omega2\re\big((G^2)_N-G_N^2\big)+O(\omega^2)$.
+On $f\in E_N$,
+$\ip f{\big((G^2)_N-G_N^2\big)f}=\ip{(I-P_N)G^*f}{(I-P_N)Gf}
+=\norm{(I-P_N)Qf}^2-\norm{(I-P_N)Af}^2$, the cross terms cancelling in a real
+space.
+\end{proof}
+
+\paragraph{What the numbers say.} At $L=\log3$, $N=24$, 40 digits, the residual
+$\max_{jk}|D-\frac\omega2(I+V^*)P(I+V)|$ is between $5.4\times10^{-42}$ and
+$1.1\times10^{-41}$ over the sweep: Proposition~\ref{prop:congruence} at
+working precision. $\lambda_{\min}(P)>0$ at every shift, which is contraction
+read in the positive-real coordinate. And
+\begin{equation}\label{eq:cayleygap}
+ \frac{\lambda_{\min}(P_{\omega,L})-\lambda_{\min}(D_{\omega,L})/2\omega}{m_L^{(24)}\,\omega^2}
+ =0.03622,\ 0.03635,\ 0.03655,\ 0.03717,\ 0.03827
+\end{equation}
+at $\omega=0.002,0.01,0.02,0.05,0.1$: constant to three digits across a factor
+of fifty in $\omega$, which is Propositions~\ref{prop:evencayley}
+and~\ref{prop:cayleygalerkin} together (the $+\omega m_L^2$ they also predict is
+$10^{-9}$ relative and invisible). As an estimator of $m_L$ in a fixed basis the
+Cayley coordinate buys nothing, because the dominant error is the shared
+Galerkin term; what it buys is that the object whose positivity is the criterion
+is now computed, its congruence checked rather than quoted, and a second-order
+coefficient of the exact compression measured.
+
+\subsection{What a lattice does not know}\label{sec:lattice}
+
+Under the Riemann hypothesis $Q_L$ is an absorption,
+$Q_L[f]=\sum_\rho|\widehat F(\gamma_\rho)|^2$, so $m_L$ is how well a function
+supported in $I_L$ can avoid the zeros in frequency
+\cite[Section~7]{WilsonLines}. Replacing the zeros by an unfolded lattice of the
+same density gives a zero-free surrogate, and \cite[Section~3]{WilsonReview}
+showed that surrogate is \emph{phase}-dependent: the Gram points
+$\theta(g_n)=n\pi$ started at $n\geq-1$ or at $n\geq0$ bracket the truth by
+orders of magnitude in either direction, and only the half-shifted lattice
+$\theta(t)=(k-\frac12)\pi$ --- the Gram's-law idealization, whose counting
+function matches the smooth one on average --- tracks it.
+
+Table~\ref{tab:lattice} puts those three controls, computed as even-block
+$\lambda_{\min}$ in the \emph{same} $N=24$ sine basis to which the transfer is
+compressed, beside the exact form and beside $\lambda_{\min}(D_{\omega,L})/2\omega$.
+
+\begin{table}[ht]\centering\small
+\caption{Lattice controls and the transfer, as $\log_{10}$ of the ratio to the
+exact Weil margin, in the $N=24$ even block, point sets truncated at
+$T=3000$.}\label{tab:lattice}
+\begin{tabular}{@{}lccccc@{}}
+\toprule
+$L$ & $m_L^{(24)}$ & Gram $n\geq-1$ & Gram $n\geq0$ & half-shifted & transfer, $\omega=0.01$\\
+\midrule
+$\log3$ & $6.2475\times10^{-8}$ & $+1.995$ & $-1.413$ & $+0.0297$ & $+0.00235$\\
+$\log5$ & $2.5445\times10^{-17}$ & $+2.444$ & $-1.768$ & $+0.3398$ & $+0.00518$\\
+$\log7$ & $2.1067\times10^{-22}$ & $+2.587$ & $-1.346$ & $-0.1190$ & $+0.00796$\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+As ratios, the phase-matched lattice gives $1.071$, $2.187$, $0.760$; the
+transfer gives $1.0054$, $1.0120$, $1.0185$, and by Table~\ref{tab:horizons}
+those three are $0.54\,\omega$, $1.20\,\omega$, $1.85\,\omega$ --- they vanish
+with the shift, where the lattice numbers do not go anywhere.
+
+The reading. The best zero-free surrogate for the margin, chosen with the right
+phase, is correct to a factor wandering between $0.76$ and $2.19$ over three
+horizons, with no law in sight; the transfer --- $\Gamma$, $\sinh$, $\exp$, the
+integers below $e^L$ and two exponential smoothings, containing no zero and no
+lattice --- is correct to first order in $\omega$ exactly, with a computable and
+vanishing remainder. A lattice reproduces the \emph{density} of the zeros; the
+transfer reproduces the \emph{form}. That is the practical case for computing
+the compression at all: Proposition~\ref{prop:dichotomy} is about
+$\norm{V_{\omega,L}}$ at every horizon, and a density surrogate cannot settle it
+even at one.
+
+What this does not say: the agreement is with $m_L^{(N)}$ in a truncated basis at
+horizons where $m_L>0$ is known, and it is the first-order law
+\eqref{eq:intro-firstorder}, an identity, being verified. No zero is located and
+nothing is proved about horizons where the margin is not known.

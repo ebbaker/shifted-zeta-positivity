@@ -13,6 +13,21 @@ contraction data against the localized Weil form. The programme is
 margin $m_L$ is known and positive; the computation tests the assembly, not the
 zeros.**
 
+
+> **Superseded in part (18 September 2026).** The $\omega=0.002$ and
+> $\omega=0.01$ rows of the margin column of Table 3.1 lay beneath this note's
+> own tanh--sinh noise floor and are replaced by the Gauss--Jacobi values of the
+> [note of 18 September](REGISTERED_ASSEMBLY_AND_THE_HORIZONS_20260918.md),
+> Section 3.1 ($1.00108$ and $1.00542$ in place of $0.99717$ and $1.00109$); the
+> $\omega\geq0.02$ rows, the mass of Table 3.4 and the $e_1$ column all stand,
+> reproduced there to every digit printed here. The "$1/N'$" reading of
+> Section 3.3 is withdrawn in that note's Section 3.2, where the nested sequence
+> is carried to $N'=192$ and crosses below $1$ as Proposition 2.2 requires. The
+> numerical lessons of Section 5 concern the substitution $\tau=u^{1/\omega}$
+> plus tanh--sinh rule and are superseded by putting the spike in the quadrature
+> weight instead (that note, Proposition 1.1); they are kept as the record of
+> why.
+
 ---
 
 ## 0. Summary

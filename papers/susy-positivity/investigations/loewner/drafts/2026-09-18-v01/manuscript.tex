@@ -1,0 +1,130 @@
+\documentclass[11pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools,mathrsfs}
+\usepackage{microtype,booktabs,array}
+\usepackage[dvipsnames]{xcolor}
+\usepackage[colorlinks=true,linkcolor=MidnightBlue,citecolor=MidnightBlue,urlcolor=MidnightBlue]{hyperref}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small The Markov part of the shifted Weil transfer}
+\fancyhead[R]{\small Working draft \draftversion}
+\fancyfoot[C]{\thepage}
+\setlength{\headheight}{14pt}
+\setlength{\emergencystretch}{2em}
+\numberwithin{equation}{section}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{problem}[theorem]{Problem}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\newcommand{\R}{\mathbb R}
+\newcommand{\C}{\mathbb C}
+\newcommand{\N}{\mathbb N}
+\newcommand{\E}{\mathbb E}
+\newcommand{\re}{\operatorname{Re}}
+\newcommand{\im}{\operatorname{Im}}
+\newcommand{\supp}{\operatorname{supp}}
+\newcommand{\norm}[1]{\lVert #1\rVert}
+\newcommand{\ip}[2]{\langle #1,#2\rangle}
+\newcommand{\dd}{\,\mathrm d}
+\newcommand{\gammak}{n_{\gamma}}
+\newcommand{\EMA}{\operatorname{EMA}}
+\newcommand{\fp}{\operatorname{fp}}
+\newcommand{\Kt}{\widetilde K}
+\newcommand{\Kh}{\widehat K}
+\newcommand{\kt}{\widetilde k}
+\newcommand{\kh}{\widehat k}
+\newcommand{\ct}{\widetilde c}
+\newcommand{\Gh}{\widehat G}
+\newcommand{\draftversion}{0.2}
+\hypersetup{pdftitle={The Markov part of the shifted Weil transfer},
+  pdfauthor={Drafted for Edward Baker},
+  pdfsubject={A positive measure minus twice its exponential moving average:
+  the decomposition of the shifted Weil transfer, what can and cannot realize
+  its pieces, and the contraction margin at the first horizons; working draft
+  \draftversion}}
+\title{The Markov part of the shifted Weil transfer\\[5pt]
+\large A positive measure minus twice its exponential moving average:
+the decomposition, what can realize its pieces, and the contraction margin at
+the first horizons}
+\author{Drafted for Edward Baker}
+\date{Working manuscript, version \draftversion\\18 September 2026}
+\begin{document}
+\maketitle
+\begin{abstract}
+The shifted Weil family turns the Riemann hypothesis into a statement about a
+one-parameter family of causal all-pass filters: for each shift $\omega>0$ the
+transfer $K_\omega(p)=\xi(\frac12+p-\omega)/\xi(\frac12+p+\omega)$ has unit
+modulus on the critical line, its compressions to windows of every length are
+contractions if and only if no zero lies further than $\omega$ from the line,
+and the first-order defect of the compression is the localized Weil form. A
+proposal to realize this flow as the deformation of a Wilson line, and a
+subsequent proposal to construct the deformation paths by a Loewner-type
+evolution, both ask the same question: what, exactly, would a realization have
+to produce? This manuscript answers it by factoring the transfer. Writing
+$\xi(u)=\frac12u(u-1)\Lambda(u)$, the ratio $\Lambda(s-\omega)/\Lambda(s+\omega)$
+is completely monotone, hence the Laplace transform of a positive measure ---
+an explicit one, the convolution of a Beta-distributed continuous delay with a
+comb on the integer ratios whose weights are the Dirichlet coefficients of
+$\zeta(s-\omega)/\zeta(s+\omega)$ --- and the polynomial ratio is a rational
+all-pass factor forced by unimodularity. Cleanly: $K_\omega=B_b\Kh_\omega$ with
+$B_b$ one Blaschke factor at the pole of $\zeta$ and $\Kh_\omega$ completely
+monotone, so the causal kernel is \emph{a positive measure minus twice its
+exponential moving average}. The Beta part is Bessel additivity in dimensions
+$\frac12\mp\omega$; the comb is the Hecke semigroup of $\N^\times$ acting by
+dilations, which no Loewner chain produces in any reading of the variables; the
+correction carries no arithmetic; at $\omega=\frac12$ the positive part is the
+Eisenstein scattering matrix of the modular surface and the comb weights are
+Euler's totient. None of this is a positivity mechanism --- the subtraction
+cancels the growth of the positive part exactly and what remains is the
+fluctuation the zeros control --- but it makes the transfer, its compression,
+its norm and its defect elementary functions of the integers below $e^L$. We
+build that assembly and validate it end to end. Written in the right
+coordinate the single-atom kernel is $\tau^{\omega-1}$ times a function
+holomorphic on $|\tau|<\pi$, so the spike belongs in a Gauss--Jacobi weight
+rather than in an evaluated quantity; the assembly then runs in double
+precision, is certified against a closed-form Laplace transform involving only
+$\Gamma$, and is registered as a replayed check. At $L=\log3,\log5,\log7$ the
+compression is a strict contraction whose defect eigenvalue reproduces the
+margin of the Weil form in the same basis --- margins from $6\times10^{-8}$ to
+$2\times10^{-22}$ --- up to a deviation that is linear in $\omega$ and is
+exactly the Galerkin truncation the theory predicts; the exact defect expands as
+$2\omega Q-\omega^2(2Q^2+[Q,A])$, whose commutator vanishes on the minimizer;
+the nested defect overshoots as predicted; and the first-order mass beyond the
+horizon has a closed form from $\xi'/\xi$ alone that the assembled kernel
+matches at every horizon. In the Cayley coordinate $P=\frac2\omega\operatorname{Re}(I-V)(I+V)^{-1}$,
+where contraction is positivity, $P$ is \emph{even} in $\omega$ --- because the
+transfer inverts under $\omega\mapsto-\omega$ and compression respects products
+--- so the first-order law holds there with no first-order correction at all.
+Finally, in one fixed basis, the best phase-matched lattice surrogate for the
+margin is off by factors between $0.76$ and $2.19$ across the three horizons
+where the transfer, which contains no zero and no lattice, is off by
+$0.54\omega$, $1.20\omega$ and $1.85\omega$. Nothing here constructs a source,
+proves positivity, or assumes the Riemann hypothesis except where a statement is
+labelled conditional.
+\end{abstract}
+\input{sections/01_introduction}
+\clearpage
+{\small\tableofcontents}
+\clearpage
+\input{sections/02_conventions}
+\input{sections/03_decomposition}
+\input{sections/04_realizations}
+\input{sections/05_contraction}
+\input{sections/06_cayley}
+\input{sections/07_outlook}
+\appendix
+\input{sections/a_numerics}
+\input{sections/b_provenance}
+\clearpage
+\phantomsection
+\addcontentsline{toc}{section}{References}
+\input{references}
+\end{document}

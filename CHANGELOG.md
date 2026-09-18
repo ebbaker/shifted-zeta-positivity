@@ -8,7 +8,33 @@ dates of the underlying work; the repository itself was created in September 202
 - Reorganized SUSY positivity as a program with shared background and overview;
   moved its v0.2 manuscript, checks, and historical support into
   `papers/susy-positivity/attempts/positive-factorizations/`. See the
-  [move and verification record](papers/susy-positivity/REORGANIZATION_20260912.md).
+  [move and verification record](papers/susy-positivity/archive/REORGANIZATION_20260912.md).
+
+### 2026-09-18 — SUSY positivity: close the Loewner investigation, open fractional dimension
+
+- Close `papers/susy-positivity/investigations/loewner/`. It was opened to test
+  one proposal — that a Loewner-type conformal evolution could construct the
+  shifted Weil family's deformation paths — and the proposal is answered in the
+  negative on all three factors of the transfer: the comb (far-field transport is
+  a pure delay), the rational correction (forced by unimodularity, no arithmetic
+  in its residues), and the archimedean factor (three independent obstructions).
+  The folder keeps its name, which records the question it tested, as the sibling
+  folders' names do; a closing header at the head of its README says what is
+  closed and where the work continues.
+- Its durable output is the decomposition with its dictionary — including the
+  identification of the archimedean factor as the horocycle integral
+  `int_{R^d} |t+i|^{-(p+b)} dt` in dimension `d = 2 omega` — and a registered,
+  standard-library assembly of the compressed transfer that computes its norm,
+  defect and Cayley coordinate at any horizon. Manuscript *The Markov part of the
+  shifted Weil transfer* reaches working draft 0.3 (33 pages) with two registered
+  check programmes, 53 and 43 cases, replayed with it.
+- Open `papers/susy-positivity/investigations/fractional-dimension/` from it, with
+  an opening note, one check programme (72 cases) and no manuscript. Its first
+  result: the comb's weights are the Jordan totient, `ct_n = J_d(n)/n^((d+1)/2)`,
+  which at integer `d` counts the primitive vectors in `(Z/nZ)^d`, so every factor
+  of the Markov part is `d`-dimensional as a formula and `d = 1` is the modular
+  surface. Its question is whether `d` is a dimension or a parameter.
+- No investigation folder was renamed and no preserved snapshot was rewritten.
 
 ### 2026-09-11 — group papers by research program
 

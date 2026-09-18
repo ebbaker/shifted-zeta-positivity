@@ -1,0 +1,203 @@
+\section{The decomposition of the transfer}\label{sec:decomposition}
+
+Everything in this section is unconditional and elementary. The plan is to
+split $\xi$ into $\Lambda$ and the polynomial, show that the $\Lambda$-ratio is
+completely monotone and compute its positive kernel in closed form, show that
+the polynomial ratio is a forced rational all-pass factor, and then read the
+result.
+
+\subsection{Factorization}
+
+\begin{proposition}[Factorization]\label{prop:factor}
+$K_\omega=R_\omega\Kt_\omega$ with
+\begin{equation}\label{eq:factor}
+ \Kt_\omega(p)=\frac{\Lambda(s-\omega)}{\Lambda(s+\omega)},\qquad
+ R_\omega(p)=\frac{(s-\omega)(s-\omega-1)}{(s+\omega)(s+\omega-1)}
+ =\frac{(p+a)(p-b)}{(p+b)(p-a)}
+ =1-\frac{4\omega b}{p+b}-\frac{4\omega a}{p-a}.
+\end{equation}
+Apart from its poles at the zeros of $\Lambda(s+\omega)$ and its zeros at the
+zeros of $\Lambda(s-\omega)$, $\Kt_\omega$ has exactly two poles, at $p=b$ and
+$p=-a$ (the poles of $\Lambda(s-\omega)$ at $s-\omega=1,0$), and exactly two
+zeros, at $p=a$ and $p=-b$ (the poles of $\Lambda(s+\omega)$); $R_\omega$
+cancels all four. Both factors are unimodular on $\re p=0$.
+\end{proposition}
+\begin{proof}
+$\xi(u)=\frac12u(u-1)\Lambda(u)$ at $u=s\mp\omega$; $s-\omega=p+a$,
+$s-\omega-1=p-b$, $s+\omega=p+b$, $s+\omega-1=p-a$. For the partial fractions,
+$(p+a)(p-b)-(p+b)(p-a)=2(a-b)p=-4\omega p$, so
+$R_\omega-1=\frac{-4\omega p}{(p+b)(p-a)}$, whose residues at $p=-b$ and $p=a$
+are $-4\omega b$ and $-4\omega a$. $R_\omega=B_b/B_a$ is a ratio of two
+Blaschke factors, hence unimodular on the axis; $\Kt_\omega=K_\omega/R_\omega$ is
+then unimodular by Proposition~\ref{prop:unimodular}.
+\end{proof}
+
+\subsection{The \texorpdfstring{$\Lambda$}{Lambda}-ratio is completely monotone}
+
+\begin{proposition}[Complete monotonicity]\label{prop:cm}
+$\Kt_\omega$ is completely monotone on $(b,\infty)$. Hence its causal kernel
+$\kt_\omega$ is a positive measure on $[0,\infty)$ with
+$\int_0^\infty e^{-pt}\kt_\omega(t)\dd t<\infty$ for $p>b$.
+\end{proposition}
+\begin{proof}
+On $p>b$ both $\Lambda(s\pm\omega)$ are positive ($s-\omega>1$), so
+$\Phi(p)=-\log\Kt_\omega(p)=\log\Lambda(s+\omega)-\log\Lambda(s-\omega)$ is
+real, and with $\frac{\Lambda'}{\Lambda}(u)=-\frac12\log\pi+\frac12\psi(\frac u2)+\frac{\zeta'}{\zeta}(u)$,
+\begin{equation}\label{eq:phiprime}
+ \Phi'(p)=\int_{-\omega}^{\omega}\Big[\tfrac14\psi'\Big(\frac{s+t}2\Big)
+ +\sum_{n\geq2}\Lambda(n)\log n\;n^{-(s+t)}\Big]\dd t ,
+\end{equation}
+since $\frac{d}{du}\frac{\zeta'}{\zeta}(u)=\sum\Lambda(n)\log n\,n^{-u}$ for
+$\re u>1$ and $s+t\geq s-\omega>1$ on the range. Each integrand is completely
+monotone in $p$: $\psi'(z)=\sum_{k\geq0}(z+k)^{-2}$ is, and $n^{-p}$ is. So
+$\Phi'$ is completely monotone on $(b,\infty)$, and $e^{-\Phi}=\Kt_\omega$ is
+completely monotone there (Section~\ref{sec:conventions}). Bernstein's theorem
+gives the measure.
+\end{proof}
+
+\begin{proposition}[The pieces]\label{prop:pieces}
+$\Kt_\omega=K^\Gamma_\omega K^\zeta_\omega$ with
+\begin{align}
+ K^\Gamma_\omega(p)&=\pi^\omega\frac{\Gamma(\frac{s-\omega}2)}{\Gamma(\frac{s+\omega}2)}
+ =\int_0^\infty e^{-px}k^\Gamma_\omega(x)\dd x,\qquad
+ k^\Gamma_\omega(x)=\frac{2\pi^\omega}{\Gamma(\omega)}(2\sinh x)^{\omega-1}e^{x/2},
+ \label{eq:kgamma}\\
+ K^\zeta_\omega(p)&=\frac{\zeta(s-\omega)}{\zeta(s+\omega)}=\sum_{n\geq1}\ct_n\,e^{-p\log n},\qquad
+ \ct_n=n^{\omega-\frac12}\prod_{p\mid n}\big(1-p^{-2\omega}\big)>0 ,
+ \label{eq:comb}
+\end{align}
+so that
+\begin{equation}\label{eq:ktilde}
+ \kt_\omega=k^\Gamma_\omega*\sum_{n\geq1}\ct_n\,\delta_{\log n}
+ =\sum_{n\geq1}\ct_n\,k^\Gamma_\omega(\,\cdot-\log n)\ \geq0 ,
+\end{equation}
+a sum of shifted Beta kernels with positive weights; note
+$k^\Gamma_\omega=\frac{2\pi^\omega}{\Gamma(\omega)}(2\sinh x)^{\omega}\gammak(x)$
+by \eqref{eq:ngamma}. Moreover
+$k^\Gamma_\omega(x)\dd x$ is the law of $x=-\frac12\log U$ with
+$U\sim\mathrm{Beta}(\frac a2,\omega)$, up to the factor
+$\pi^\omega\Gamma(\frac a2)/\Gamma(\frac b2)$:
+\begin{equation}\label{eq:betamoments}
+ K^\Gamma_\omega(p)=\pi^\omega\frac{\Gamma(\frac a2)}{\Gamma(\frac b2)}\,\E\big[U^{p/2}\big].
+\end{equation}
+\end{proposition}
+\begin{proof}
+The Beta integral $\int_0^1r^{s-\omega-1}(1-r^2)^{\omega-1}\dd r
+=\frac12B(\frac{s-\omega}2,\omega)
+=\frac{\Gamma(\frac{s-\omega}2)\Gamma(\omega)}{2\Gamma(\frac{s+\omega}2)}$,
+with $r=e^{-x}$, is $\int_0^\infty e^{-(s-\omega)x}(1-e^{-2x})^{\omega-1}\dd x$;
+with $s=\frac12+p$ and $1-e^{-2x}=e^{-x}\,2\sinh x$, the integrand is
+$e^{-px}(2\sinh x)^{\omega-1}e^{x/2}$, which gives \eqref{eq:kgamma}. For
+\eqref{eq:comb}: $\zeta(s-\omega)=\sum n^{\omega}n^{-s}$ and
+$1/\zeta(s+\omega)=\sum\mu(n)n^{-\omega}n^{-s}$, so the coefficient $c_n$ of
+$n^{-s}$ is multiplicative with $c_{p^k}=p^{k\omega}-p^{(k-2)\omega}=p^{k\omega}(1-p^{-2\omega})$
+for $k\geq1$; writing $n^{-s}=n^{-1/2}e^{-p\log n}$ puts the weight
+$\ct_n=c_nn^{-1/2}$ on the atom at $\log n$. Positivity: $p^{-2\omega}<1$.
+Convolution theorem for \eqref{eq:ktilde}. For \eqref{eq:betamoments}:
+$\E\,U^{p/2}=B(\frac a2+\frac p2,\omega)/B(\frac a2,\omega)$ and
+$\frac a2+\frac p2=\frac{s-\omega}2$, $\frac a2+\omega=\frac b2$,
+$\frac a2+\omega+\frac p2=\frac{s+\omega}2$.
+\end{proof}
+
+Two features of $\kt_\omega$ matter below. Near each atom the spike is an
+integrable power, $k^\Gamma_\omega(\tau)\sim\frac{2\pi^\omega}{\Gamma(\omega)}(2\tau)^{\omega-1}$
+as $\tau\downarrow0$, so $\kt_\omega$ has no atoms and is not bounded; as
+$\omega\downarrow0$, $k^\Gamma_\omega\to\delta_0$ weakly while spreading its
+mass as $\tau^{\omega-1}$, so that for small $\omega$ half the mass sits below
+$\tau=2^{-1/\omega}$. And $\kt_\omega$ grows: the pole of $\Kt_\omega$ at
+$p=b$ makes $\kt_\omega(x)\sim C_\omega e^{bx}$ on average, with $C_\omega$ the
+residue there.
+
+\subsection{The rational factor is forced, and one all-pass section suffices}
+
+\begin{proposition}[Forcedness]\label{prop:forced}
+Among rational functions $\rho$ with $|\rho(i\tau)|=1$ and $\rho(\infty)=1$,
+the unique one of minimal degree such that $\rho\Kt_\omega$ is holomorphic and
+nonvanishing at the four points $p\in\{b,-a,a,-b\}$ is $\rho=R_\omega$.
+\end{proposition}
+\begin{proof}
+Such $\rho$ is a product of Blaschke factors $\frac{p-c}{p+\bar c}$. Cancelling
+the pole of $\Kt_\omega$ at $b$ needs the factor $\frac{p-b}{p+b}$, whose own
+pole at $-b$ is cancelled by the zero of $\Kt_\omega$ there; cancelling the pole
+at $-a$ needs $\frac{p+a}{p-a}$, whose pole at $a$ is cancelled by the zero
+there. Any further factor introduces an uncancelled pole or zero.
+\end{proof}
+
+So, given the Markov part, the correction is determined by the functional
+equation; its residues $-4\omega b$, $-4\omega a$ are not data a realization
+could get right or wrong. A realization that produced $\Kt_\omega$ and respected
+unimodularity would produce $K_\omega$. The arithmetic is in the poles of
+$\Kt_\omega$ at the zeros of $\Lambda(s+\omega)$ and nowhere else.
+
+\begin{proposition}[One all-pass section]\label{prop:blaschke}
+With $B_b(p)=\frac{p-b}{p+b}$ and
+\begin{equation}\label{eq:khat}
+ \Kh_\omega(p)=\frac{p+a}{p-a}\,\Kt_\omega(p)
+ =\frac{(s-\omega)\,\Lambda(s-\omega)}{(s+\omega-1)\,\Lambda(s+\omega)},
+\end{equation}
+one has $K_\omega=B_b\Kh_\omega$, and $\Kh_\omega$ is completely monotone on
+$(b,\infty)$. Hence $\kh_\omega\geq0$ and
+\begin{equation}\label{eq:ema}
+ k_\omega=\kh_\omega-2\,\EMA_b[\kh_\omega],\qquad
+ \kh_\omega=\kt_\omega+2a\,\big(e^{a\,\cdot}\mathbf 1_{>0}\big)*\kt_\omega .
+\end{equation}
+\end{proposition}
+\begin{proof}
+$\frac{p+a}{p-a}=1+\frac{2a}{p-a}$ is completely monotone on $p>a$, and
+$\Kt_\omega$ on $p>b>a$; products of completely monotone functions are
+completely monotone. $B_b=1-\frac{2b}{p+b}$ gives \eqref{eq:ema} by the
+convolution theorem.
+\end{proof}
+
+\subsection{Reading}
+
+\paragraph{The transfer is elementary on a window.} Only $n<e^L$ contribute to
+$k_\omega$ on $[0,L)$, since $k^\Gamma_\omega(\cdot-\log n)$ vanishes below
+$\log n$. So $V_{\omega,L}$ is assembled exactly from $(2\sinh x)^{\omega-1}e^{x/2}$,
+the numbers $\ct_n$ for $n<e^L$, and two exponentials, in precisely the way
+$Q_L$ is assembled from \eqref{eq:target}. Section~\ref{sec:contraction} does
+this.
+
+\paragraph{The first-order kernel.} As $\omega\downarrow0$, off the atoms,
+\begin{equation}\label{eq:firstorder}
+ \frac{k_\omega(x)}\omega\longrightarrow2\gammak(x)-4\cosh\frac x2,\qquad
+ \ct_n=2\omega\Lambda(n)n^{-1/2}+O(\omega^2),
+\end{equation}
+which is $-g_0$ of \eqref{eq:g0} off the atoms and at the atoms, as it must be
+by \eqref{eq:generator} ($\partial_\omega K_\omega|_0=-a_0$). The continuous
+part is positive for $x<x_0$ and negative beyond, where
+$\gammak(x_0)=2\cosh\frac{x_0}2$, i.e. $u^3+u^2=1$ with $u=e^{-x_0}$:
+$x_0=0.28120$. So $k_\omega$ is a positive integrable singularity at the
+origin, positive integrable singularities at every $\log n$, and a negative
+continuous background produced entirely by the rational factor.
+
+\paragraph{Growth and fluctuation.} $\kh_\omega$ grows like $C_\omega e^{bx}$
+with $C_\omega=\big(2\omega\Lambda(1+2\omega)\big)^{-1}\to1$, the residue of
+\eqref{eq:khat} at $p=b$: the pole of $\zeta(s-\omega)$ at $s-\omega=1$, the
+prime number theorem's main term in the comb
+($\sum_{n\leq N}\ct_n\sim N^b/(b\,\zeta(1+2\omega))$) smoothed by the Beta
+kernel. The exponential moving average at rate $b$ maps $e^{bx}$ to
+$\frac12(e^{bx}-e^{-bx})$, so $g\mapsto g-2\EMA_b[g]$ sends $Ce^{bx}$ to
+$Ce^{-bx}$: the subtraction kills the main term exactly and unconditionally.
+What remains is the fluctuation of $\kh_\omega$ about its main term.
+Unconditionally $k_\omega(x)=O(e^{(\theta-\omega+\epsilon)x})$ with
+$\theta=\sup\re(\rho-\frac12)$; under RH, $k_\omega$ decays like $e^{-\omega x}$
+with the residue expansion
+$\sum_\rho\frac{\xi(\rho-2\omega)}{\xi'(\rho)}e^{(-\omega+i\gamma_\rho)x}$
+\cite[Section~5.2]{WilsonReview}. This is Proposition~\ref{prop:dichotomy} at
+the level of the kernel.
+
+\paragraph{What it does not say.} It does not make $V_\omega$ a Markov
+operator, and cannot: a positive kernel of mass $K_\omega(0)=1$ would make
+every compression a contraction and prove a zero-free strip. The first-order
+background is negative for $x>x_0$, and the sign changes at every $\omega$
+computed \cite{LoewnerNote}. Nor does structural positivity of $\kh_\omega$
+bound $\norm{V_{\omega,L}}$: by Lemma~\ref{lem:multiplicative},
+$V_{\omega,L}=(P_LB_bP_L)(P_L\widehat V_\omega P_L)$, and the first factor is a
+contraction while the second has norm greater than one, so the factorization
+bounds $\norm{V_{\omega,L}}$ by a number greater than one. The cancellation
+between the two factors is the whole content, as Proposition~\ref{prop:dichotomy}
+says it must be. What the decomposition does is put the whole failure of
+positivity into one rational factor with explicit residues, and identify the
+positive part with objects that probability and geometry know how to produce
+--- the subject of the next section.

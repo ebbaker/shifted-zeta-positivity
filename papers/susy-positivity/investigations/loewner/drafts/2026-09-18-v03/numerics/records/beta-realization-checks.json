@@ -1,0 +1,700 @@
+{
+  "programme": "check_beta_realization.py",
+  "investigation": "loewner",
+  "question": "can a radial Loewner chain driven by a Bessel process of dimension b = 1/2 + omega produce the archimedean delay, i.e. a squared radius ratio distributed as Beta(a/2, omega)?",
+  "what the archimedean factor is instead": "the horocycle integral int_{R^d} |t+i|^(-(p+b)) dt in dimension d = 2 omega, whose delay is log|t+i| and whose prefactor is the area of S^(2 omega - 1); at omega = 1/2, d = 1 and this is the Eisenstein constant term of the modular surface. The shift is half a dimension, and geometry quantizes it",
+  "answer": "no, for three independent reasons: the fraction is independent of the total; the antipodal exponent of any radial chord law is pinned at 1/2 while the transfer needs it to be omega; and the delay has a power-law singularity at zero delay that no first-passage time from an interior start can have",
+  "scope": "finite test cases and exact identities about Beta, Gamma and the radial Loewner drift; no zeta, no xi, no zeros, and nothing here is a positivity certificate",
+  "groups": [
+    {
+      "name": "A. the archimedean delay IS a Beta variable: tau = -(1/2) log U, U ~ Beta(a/2, omega)",
+      "cases": 4,
+      "worst_margin_against_own_tolerance": 0.11125674031638266,
+      "pass": true,
+      "checks": [
+        {
+          "what": "k^Gamma_omega(tau) against the Beta pullback, 7 shifts x 8 delays",
+          "error": 5.671824140623384e-14,
+          "tolerance": 1e-12,
+          "pass": true
+        },
+        {
+          "what": "E[U^q] against Gamma((a+2q)/2) Gamma(b/2) / (Gamma((b+2q)/2) Gamma(a/2))",
+          "error": 1.1125674031638267e-14,
+          "tolerance": 1e-13,
+          "pass": true
+        },
+        {
+          "what": "the zero-delay singularity k^Gamma ~ (pi^om 2^om/Gamma(om)) tau^(omega-1)",
+          "error": 5.000002098842085e-10,
+          "tolerance": 1e-08,
+          "pass": true
+        },
+        {
+          "what": "the dual power law E[U^q] ~ (Gamma(b/2)/Gamma(a/2)) q^(-omega)",
+          "error": 3.385090263691616e-08,
+          "tolerance": 1e-06,
+          "pass": true
+        }
+      ],
+      "note": "this is Proposition 4.1 of the manuscript made pointwise; the change of variable x = e^(-2 tau) in the Beta integral is what identifies U",
+      "zero-delay exponent": {
+        "omega = 0.002": {
+          "k^Gamma(tau) tau^(1-omega) at tau=1e-9": 0.0020096771350806312,
+          "pi^om 2^om / Gamma(om)": 0.0020096771340757926
+        },
+        "omega = 0.01": {
+          "k^Gamma(tau) tau^(1-omega) at tau=1e-9": 0.010243610773983038,
+          "pi^om 2^om / Gamma(om)": 0.010243610768861235
+        },
+        "omega = 0.05": {
+          "k^Gamma(tau) tau^(1-omega) at tau=1e-9": 0.05630424498890126,
+          "pi^om 2^om / Gamma(om)": 0.05630424496074914
+        },
+        "omega = 0.1": {
+          "k^Gamma(tau) tau^(1-omega) at tau=1e-9": 0.1263215113572889,
+          "pi^om 2^om / Gamma(om)": 0.1263215112941281
+        },
+        "omega = 0.25": {
+          "k^Gamma(tau) tau^(1-omega) at tau=1e-9": 0.436680593873993,
+          "pi^om 2^om / Gamma(om)": 0.4366805936556527
+        },
+        "omega = 0.4": {
+          "k^Gamma(tau) tau^(1-omega) at tau=1e-9": 0.9403275653559533,
+          "pi^om 2^om / Gamma(om)": 0.9403275648857894
+        },
+        "omega = 0.49": {
+          "k^Gamma(tau) tau^(1-omega) at tau=1e-9": 1.36112305362153,
+          "pi^om 2^om / Gamma(om)": 1.3611230529409686
+        }
+      },
+      "large-q power law": {
+        "omega = 0.002": {
+          "E[U^q] q^omega at q=1e7": 0.9915806702028903,
+          "Gamma(b/2)/Gamma(a/2)": 0.9915806923920499
+        },
+        "omega = 0.01": {
+          "E[U^q] q^omega at q=1e7": 0.9586014245883484,
+          "Gamma(b/2)/Gamma(a/2)": 0.9586014062540129
+        },
+        "omega = 0.05": {
+          "E[U^q] q^omega at q=1e7": 0.8089240156732053,
+          "Gamma(b/2)/Gamma(a/2)": 0.808924016720106
+        },
+        "omega = 0.1": {
+          "E[U^q] q^omega at q=1e7": 0.6516381675930373,
+          "Gamma(b/2)/Gamma(a/2)": 0.651638168354264
+        },
+        "omega = 0.25": {
+          "E[U^q] q^omega at q=1e7": 0.3146342650092294,
+          "Gamma(b/2)/Gamma(a/2)": 0.3146342659193052
+        },
+        "omega = 0.4": {
+          "E[U^q] q^omega at q=1e7": 0.10108514861451633,
+          "Gamma(b/2)/Gamma(a/2)": 0.10108514519269292
+        },
+        "omega = 0.49": {
+          "E[U^q] q^omega at q=1e7": 0.00897594307476234,
+          "Gamma(b/2)/Gamma(a/2)": 0.00897594310543511
+        }
+      }
+    },
+    {
+      "name": "B. the additivity fraction is independent of the total, so a dimension-b chain cannot see the split",
+      "cases": 1,
+      "worst_margin_against_own_tolerance": 0.0010303171865382527,
+      "pass": true,
+      "checks": [
+        {
+          "what": "E[U^q S^r] = E[U^q] E[S^r], 5 shifts x 9 (q,r) pairs",
+          "error": 1.0303171865382526e-15,
+          "tolerance": 1e-12,
+          "pass": true
+        }
+      ],
+      "note": "U = Z_a/(Z_a + Z_2omega) and S = Z_a + Z_2omega = Z_b are independent (Gamma-Beta algebra); at the level of processes this is the Warren-Yor decomposition of BESQ into a Jacobi process and an independent total. So the Beta law is not a functional of the dimension-b path",
+      "at q = r = 1": {
+        "omega = 0.002": {
+          "E[U S]": 0.24900000000000022,
+          "E[U] E[S]": 0.2490000000000003
+        },
+        "omega = 0.01": {
+          "E[U S]": 0.24499999999999972,
+          "E[U] E[S]": 0.2449999999999997
+        },
+        "omega = 0.1": {
+          "E[U S]": 0.19999999999999998,
+          "E[U] E[S]": 0.19999999999999993
+        },
+        "omega = 0.25": {
+          "E[U S]": 0.1250000000000002,
+          "E[U] E[S]": 0.12500000000000014
+        },
+        "omega = 0.45": {
+          "E[U S]": 0.02499999999999999,
+          "E[U] E[S]": 0.024999999999999977
+        }
+      }
+    },
+    {
+      "name": "C. the antipodal exponent of a radial chain is 1/2 for every driving",
+      "cases": 3,
+      "worst_margin_against_own_tolerance": 0.1500015877842209,
+      "pass": true,
+      "checks": [
+        {
+          "what": "(1/2)(sigma_x^2 m)' = mu_x m for m = x^(d/2-1)(1-x)^(-1/2), 7 kappa x 5 points",
+          "error": 2.220446049250313e-16,
+          "tolerance": 1e-13,
+          "pass": true
+        },
+        {
+          "what": "the antipodal exponent is -1/2 for all 5 drivings (Beta second parameter = 1/2)",
+          "error": 1.500015877842209e-06,
+          "tolerance": 1e-05,
+          "pass": true
+        },
+        {
+          "what": "the swallowing exponent is 2/sigma^2(0) - 1/2, free, for all 5 drivings",
+          "error": 7.000003798829368e-07,
+          "tolerance": 1e-05,
+          "pass": true
+        }
+      ],
+      "note": "the speed density solves (1/2)(sigma_x^2 m)' = mu_x m; at the antipode the Loewner drift cot(theta/2) vanishes and only the Ito curvature of the chord map survives, which is why the exponent there does not depend on the driving",
+      "constant driving": {
+        "kappa = 1": {
+          "Bessel dimension d = 1 + 4/kappa": 5.0,
+          "speed density": "x^(d/2 - 1) (1-x)^(-1/2)",
+          "Beta parameters (swallowing, antipode)": [
+            2.5,
+            0.5
+          ]
+        },
+        "kappa = 2": {
+          "Bessel dimension d = 1 + 4/kappa": 3.0,
+          "speed density": "x^(d/2 - 1) (1-x)^(-1/2)",
+          "Beta parameters (swallowing, antipode)": [
+            1.5,
+            0.5
+          ]
+        },
+        "kappa = 4": {
+          "Bessel dimension d = 1 + 4/kappa": 2.0,
+          "speed density": "x^(d/2 - 1) (1-x)^(-1/2)",
+          "Beta parameters (swallowing, antipode)": [
+            1.0,
+            0.5
+          ]
+        },
+        "kappa = 6": {
+          "Bessel dimension d = 1 + 4/kappa": 1.6666666666666665,
+          "speed density": "x^(d/2 - 1) (1-x)^(-1/2)",
+          "Beta parameters (swallowing, antipode)": [
+            0.8333333333333333,
+            0.5
+          ]
+        },
+        "kappa = 8": {
+          "Bessel dimension d = 1 + 4/kappa": 1.5,
+          "speed density": "x^(d/2 - 1) (1-x)^(-1/2)",
+          "Beta parameters (swallowing, antipode)": [
+            0.75,
+            0.5
+          ]
+        },
+        "kappa = 16": {
+          "Bessel dimension d = 1 + 4/kappa": 1.25,
+          "speed density": "x^(d/2 - 1) (1-x)^(-1/2)",
+          "Beta parameters (swallowing, antipode)": [
+            0.625,
+            0.5
+          ]
+        },
+        "kappa = 64": {
+          "Bessel dimension d = 1 + 4/kappa": 1.0625,
+          "speed density": "x^(d/2 - 1) (1-x)^(-1/2)",
+          "Beta parameters (swallowing, antipode)": [
+            0.53125,
+            0.5
+          ]
+        }
+      },
+      "general driving": {
+        "sigma^2 = 6 (constant)": {
+          "antipode: (1-x) 2 mu_x/sigma_x^2 -> -1/2": -0.49999995854648455,
+          "swallowing end: x 2 mu_x/sigma_x^2 -> 2/sigma^2(0) + 1/2": 0.8333333332833333,
+          "that limit": 0.8333333333333333,
+          "speed exponents (swallowing, antipode)": [
+            -0.16666666666666674,
+            -0.5
+          ]
+        },
+        "sigma^2 = 2 (constant)": {
+          "antipode: (1-x) 2 mu_x/sigma_x^2 -> -1/2": -0.499999958479818,
+          "swallowing end: x 2 mu_x/sigma_x^2 -> 2/sigma^2(0) + 1/2": 1.4999999999500002,
+          "that limit": 1.5,
+          "speed exponents (swallowing, antipode)": [
+            0.5,
+            -0.5
+          ]
+        },
+        "sigma^2 = 6 (1 + 0.3 cos theta)^2": {
+          "antipode: (1-x) 2 mu_x/sigma_x^2 -> -1/2": -0.4999999585117908,
+          "swallowing end: x 2 mu_x/sigma_x^2 -> 2/sigma^2(0) + 1/2": 0.6972386587453268,
+          "that limit": 0.6972386587771203,
+          "speed exponents (swallowing, antipode)": [
+            -0.3027613412228797,
+            -0.5
+          ]
+        },
+        "sigma^2 = 6 (1 + 0.6 x)": {
+          "antipode: (1-x) 2 mu_x/sigma_x^2 -> -1/2": -0.49999995855898455,
+          "swallowing end: x 2 mu_x/sigma_x^2 -> 2/sigma^2(0) + 1/2": 0.8333333332633334,
+          "that limit": 0.8333333333333333,
+          "speed exponents (swallowing, antipode)": [
+            -0.16666666666666674,
+            -0.5
+          ]
+        },
+        "sigma^2 = 1 + 9 x^2": {
+          "antipode: (1-x) 2 mu_x/sigma_x^2 -> -1/2": -0.4999999585598179,
+          "swallowing end: x 2 mu_x/sigma_x^2 -> 2/sigma^2(0) + 1/2": 2.49999999995,
+          "that limit": 2.5,
+          "speed exponents (swallowing, antipode)": [
+            1.5,
+            -0.5
+          ]
+        }
+      }
+    },
+    {
+      "name": "D. the two parameter families do not meet on 0 < omega < 1/2",
+      "cases": 30,
+      "worst_margin_against_own_tolerance": 0.0,
+      "pass": true,
+      "checks": [
+        {
+          "what": "omega = 0.002: both target parameters are < 1/2",
+          "error": 0.0,
+          "tolerance": 0.5,
+          "pass": true
+        },
+        {
+          "what": "omega = 0.002: the first target parameter is < 1/4",
+          "error": 0.0,
+          "tolerance": 0.5,
+          "pass": true
+        },
+        {
+          "what": "omega = 0.002: neither parameter equals 1/2, so no radial chord law matches",
+          "error": 0.0,
+          "tolerance": 0.5,
+          "pass": true
+        },
+        {
+          "what": "omega = 0.01: both target parameters are < 1/2",
+          "error": 0.0,
+          "tolerance": 0.5,
+          "pass": true
+        },
+        {
+          "what": "omega = 0.01: the first target parameter is < 1/4",
+          "error": 0.0,
+          "tolerance": 0.5,
+          "pass": true
+        },
+        {
+          "what": "omega = 0.01: neither parameter equals 1/2, so no radial chord law matches",
+          "error": 0.0,
+          "tolerance": 0.5,
+          "pass": true
+        },
+        {
+          "what": "omega = 0.05: both target parameters are < 1/2",
+          "error": 0.0,
+          "tolerance": 0.5,
+          "pass": true
+        },
+        {
+          "what": "omega = 0.05: the first target parameter is < 1/4",
+          "error": 0.0,
+          "tolerance": 0.5,
+          "pass": true
+        },
+        {
+          "what": "omega = 0.05: neither parameter equals 1/2, so no radial chord law matches",
+          "error": 0.0,
+          "tolerance": 0.5,
+          "pass": true
+        },
+        {
+          "what": "omega = 0.1: both target parameters are < 1/2",
+          "error": 0.0,
+          "tolerance": 0.5,
+          "pass": true
+        },
+        {
+          "what": "omega = 0.1: the first target parameter is < 1/4",
+          "error": 0.0,
+          "tolerance": 0.5,
+          "pass": true
+        },
+        {
+          "what": "omega = 0.1: neither parameter equals 1/2, so no radial chord law matches",
+          "error": 0.0,
+          "tolerance": 0.5,
+          "pass": true
+        },
+        {
+          "what": "omega = 0.25: both target parameters are < 1/2",
+          "error": 0.0,
+          "tolerance": 0.5,
+          "pass": true
+        },
+        {
+          "what": "omega = 0.25: the first target parameter is < 1/4",
+          "error": 0.0,
+          "tolerance": 0.5,
+          "pass": true
+        },
+        {
+          "what": "omega = 0.25: neither parameter equals 1/2, so no radial chord law matches",
+          "error": 0.0,
+          "tolerance": 0.5,
+          "pass": true
+        },
+        {
+          "what": "omega = 0.4: both target parameters are < 1/2",
+          "error": 0.0,
+          "tolerance": 0.5,
+          "pass": true
+        },
+        {
+          "what": "omega = 0.4: the first target parameter is < 1/4",
+          "error": 0.0,
+          "tolerance": 0.5,
+          "pass": true
+        },
+        {
+          "what": "omega = 0.4: neither parameter equals 1/2, so no radial chord law matches",
+          "error": 0.0,
+          "tolerance": 0.5,
+          "pass": true
+        },
+        {
+          "what": "omega = 0.49: both target parameters are < 1/2",
+          "error": 0.0,
+          "tolerance": 0.5,
+          "pass": true
+        },
+        {
+          "what": "omega = 0.49: the first target parameter is < 1/4",
+          "error": 0.0,
+          "tolerance": 0.5,
+          "pass": true
+        },
+        {
+          "what": "omega = 0.49: neither parameter equals 1/2, so no radial chord law matches",
+          "error": 0.0,
+          "tolerance": 0.5,
+          "pass": true
+        },
+        {
+          "what": "at omega = 1/2 the second parameter is 1/2 but the first is 0, forcing dimension 0",
+          "error": 0.0,
+          "tolerance": 0.5,
+          "pass": true
+        },
+        {
+          "what": "omega = 0.002: the three dimensions a, 2omega, b all lie in (0,1)",
+          "error": 0.0,
+          "tolerance": 0.5,
+          "pass": true
+        },
+        {
+          "what": "omega = 0.01: the three dimensions a, 2omega, b all lie in (0,1)",
+          "error": 0.0,
+          "tolerance": 0.5,
+          "pass": true
+        },
+        {
+          "what": "omega = 0.05: the three dimensions a, 2omega, b all lie in (0,1)",
+          "error": 0.0,
+          "tolerance": 0.5,
+          "pass": true
+        },
+        {
+          "what": "omega = 0.1: the three dimensions a, 2omega, b all lie in (0,1)",
+          "error": 0.0,
+          "tolerance": 0.5,
+          "pass": true
+        },
+        {
+          "what": "omega = 0.25: the three dimensions a, 2omega, b all lie in (0,1)",
+          "error": 0.0,
+          "tolerance": 0.5,
+          "pass": true
+        },
+        {
+          "what": "omega = 0.4: the three dimensions a, 2omega, b all lie in (0,1)",
+          "error": 0.0,
+          "tolerance": 0.5,
+          "pass": true
+        },
+        {
+          "what": "omega = 0.49: the three dimensions a, 2omega, b all lie in (0,1)",
+          "error": 0.0,
+          "tolerance": 0.5,
+          "pass": true
+        },
+        {
+          "what": "the SLE dictionary d = 1 + 4/kappa never reaches (0,1)",
+          "error": 0.0,
+          "tolerance": 0.5,
+          "pass": true
+        }
+      ],
+      "note": "the radial family is Beta(d/2, 1/2) (or Beta(1/2, d/2) with the orientation reversed): one parameter is exactly 1/2. The target has both parameters strictly below 1/2, and its first below 1/4",
+      "target parameters": {
+        "omega = 0.002": {
+          "b = 1/2 + omega": 0.502,
+          "target Beta": [
+            0.249,
+            0.002
+          ],
+          "sum = b/2": 0.251,
+          "max parameter": 0.249,
+          "matches Beta(d/2, 1/2)?": false,
+          "matches Beta(1/2, d/2)?": false
+        },
+        "omega = 0.01": {
+          "b = 1/2 + omega": 0.51,
+          "target Beta": [
+            0.245,
+            0.01
+          ],
+          "sum = b/2": 0.255,
+          "max parameter": 0.245,
+          "matches Beta(d/2, 1/2)?": false,
+          "matches Beta(1/2, d/2)?": false
+        },
+        "omega = 0.05": {
+          "b = 1/2 + omega": 0.55,
+          "target Beta": [
+            0.225,
+            0.05
+          ],
+          "sum = b/2": 0.275,
+          "max parameter": 0.225,
+          "matches Beta(d/2, 1/2)?": false,
+          "matches Beta(1/2, d/2)?": false
+        },
+        "omega = 0.1": {
+          "b = 1/2 + omega": 0.6,
+          "target Beta": [
+            0.2,
+            0.1
+          ],
+          "sum = b/2": 0.30000000000000004,
+          "max parameter": 0.2,
+          "matches Beta(d/2, 1/2)?": false,
+          "matches Beta(1/2, d/2)?": false
+        },
+        "omega = 0.25": {
+          "b = 1/2 + omega": 0.75,
+          "target Beta": [
+            0.125,
+            0.25
+          ],
+          "sum = b/2": 0.375,
+          "max parameter": 0.25,
+          "matches Beta(d/2, 1/2)?": false,
+          "matches Beta(1/2, d/2)?": false
+        },
+        "omega = 0.4": {
+          "b = 1/2 + omega": 0.9,
+          "target Beta": [
+            0.04999999999999999,
+            0.4
+          ],
+          "sum = b/2": 0.45,
+          "max parameter": 0.4,
+          "matches Beta(d/2, 1/2)?": false,
+          "matches Beta(1/2, d/2)?": false
+        },
+        "omega = 0.49": {
+          "b = 1/2 + omega": 0.99,
+          "target Beta": [
+            0.0050000000000000044,
+            0.49
+          ],
+          "sum = b/2": 0.495,
+          "max parameter": 0.49,
+          "matches Beta(d/2, 1/2)?": false,
+          "matches Beta(1/2, d/2)?": false
+        }
+      },
+      "the three Bessel dimensions": {
+        "omega = 0.002": {
+          "a": 0.498,
+          "2 omega": 0.004,
+          "b": 0.502,
+          "all below 1": true
+        },
+        "omega = 0.01": {
+          "a": 0.49,
+          "2 omega": 0.02,
+          "b": 0.51,
+          "all below 1": true
+        },
+        "omega = 0.05": {
+          "a": 0.45,
+          "2 omega": 0.1,
+          "b": 0.55,
+          "all below 1": true
+        },
+        "omega = 0.1": {
+          "a": 0.4,
+          "2 omega": 0.2,
+          "b": 0.6,
+          "all below 1": true
+        },
+        "omega = 0.25": {
+          "a": 0.25,
+          "2 omega": 0.5,
+          "b": 0.75,
+          "all below 1": true
+        },
+        "omega = 0.4": {
+          "a": 0.09999999999999998,
+          "2 omega": 0.8,
+          "b": 0.9,
+          "all below 1": true
+        },
+        "omega = 0.49": {
+          "a": 0.010000000000000009,
+          "2 omega": 0.98,
+          "b": 0.99,
+          "all below 1": true
+        }
+      }
+    },
+    {
+      "name": "E. the archimedean factor is a horocycle integral in dimension d = 2 omega",
+      "cases": 5,
+      "worst_margin_against_own_tolerance": 0.7196431607038153,
+      "pass": true,
+      "checks": [
+        {
+          "what": "K^Gamma_omega(p) = pi^(d/2) Gamma(s-d/2)/Gamma(s), d = 2 omega, s = (p+b)/2",
+          "error": 4.614292840561389e-15,
+          "tolerance": 1e-13,
+          "pass": true
+        },
+        {
+          "what": "the kernel prefactor is the area of the unit sphere in dimension 2 omega",
+          "error": 0.0,
+          "tolerance": 1e-14,
+          "pass": true
+        },
+        {
+          "what": "the Riesz integral by honest quadrature at integer d in {1,2,3}",
+          "error": 7.196431607038153e-06,
+          "tolerance": 1e-05,
+          "pass": true
+        },
+        {
+          "what": "k^Gamma_omega dtau is the push-forward of (1+|t|^2)^(-b/2) dt on R^(2 omega)",
+          "error": 1.7803032457154787e-14,
+          "tolerance": 1e-12,
+          "pass": true
+        },
+        {
+          "what": "d = 2 omega is an integer for some omega in (0, 1/2] only at omega = 1/2",
+          "error": 0.0,
+          "tolerance": 0.5,
+          "pass": true
+        }
+      ],
+      "note": "K^Gamma_omega(p) = int_{R^d} |t+i|^(-(p+b)) dt with d = 2 omega: at omega = 1/2 this is the constant-term integral of the Eisenstein series over the one-dimensional horocycle of the modular surface, and the delay is log|t+i|, the arithmetic coordinate. For omega < 1/2 the dimension is fractional",
+      "sphere areas": {
+        "omega = 0.05": {
+          "d = 2 omega": 0.1,
+          "2 pi^omega / Gamma(omega)": 0.10877263136054251,
+          "area of S^(2 omega - 1)": 0.10877263136054251
+        },
+        "omega = 0.1": {
+          "d = 2 omega": 0.2,
+          "2 pi^omega / Gamma(omega)": 0.23572427515642191,
+          "area of S^(2 omega - 1)": 0.23572427515642191
+        },
+        "omega = 0.25": {
+          "d = 2 omega": 0.5,
+          "2 pi^omega / Gamma(omega)": 0.7344062916318046,
+          "area of S^(2 omega - 1)": 0.7344062916318046
+        },
+        "omega = 0.5": {
+          "d = 2 omega": 1.0,
+          "2 pi^omega / Gamma(omega)": 2.0,
+          "area of S^(2 omega - 1)": 2.0
+        },
+        "omega = 1": {
+          "d = 2 omega": 2.0,
+          "2 pi^omega / Gamma(omega)": 6.283185307179586,
+          "area of S^(2 omega - 1)": 6.283185307179586
+        },
+        "omega = 1.5": {
+          "d = 2 omega": 3.0,
+          "2 pi^omega / Gamma(omega)": 12.566370614359172,
+          "area of S^(2 omega - 1)": 12.566370614359172
+        }
+      },
+      "Riesz integral at integer dimension": {
+        "d = 1, s = 1.4": {
+          "quadrature": 2.1347597196621133,
+          "closed form": 2.134759719594883,
+          "relative error": 3.14931093990988e-11
+        },
+        "d = 1, s = 2": {
+          "quadrature": 1.5707963267948966,
+          "closed form": 1.5707963267948966,
+          "relative error": 0.0
+        },
+        "d = 1, s = 3.5": {
+          "quadrature": 1.0666666666666667,
+          "closed form": 1.0666666666666667,
+          "relative error": 0.0
+        },
+        "d = 2, s = 1.4": {
+          "quadrature": 7.853925113332811,
+          "closed form": 7.853981633974483,
+          "relative error": 7.196431607038153e-06
+        },
+        "d = 2, s = 2": {
+          "quadrature": 3.1415926536220913,
+          "closed form": 3.141592653589793,
+          "relative error": 1.0280824952362672e-11
+        },
+        "d = 2, s = 3.5": {
+          "quadrature": 1.2566370614520663,
+          "closed form": 1.2566370614359177,
+          "relative error": 1.2850677795488728e-11
+        },
+        "d = 3, s = 2": {
+          "quadrature": 9.869604401089354,
+          "closed form": 9.869604401089358,
+          "relative error": 3.59965155078391e-16
+        },
+        "d = 3, s = 3.5": {
+          "quadrature": 1.6755160819145563,
+          "closed form": 1.6755160819145567,
+          "relative error": 2.6504622345529303e-16
+        }
+      },
+      "reading": "d = 1 at omega = 1/2 is the horocycle of the modular surface; d = 2 would be omega = 1, outside the family"
+    }
+  ],
+  "all_pass": true,
+  "total_checks": 43
+}

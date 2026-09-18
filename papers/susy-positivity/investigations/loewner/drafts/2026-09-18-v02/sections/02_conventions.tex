@@ -1,0 +1,179 @@
+\section{Conventions, and the facts we use}\label{sec:conventions}
+
+\subsection{The Weil form}
+
+Inner products are conjugate-linear in the first argument. For $L>0$ let
+$I_L=(-L/2,L/2)$, let $P_L$ be multiplication by $\mathbf 1_{I_L}$, and for
+$f\in L^2(I_L)$ let $F$ be its extension by zero. Write
+\begin{equation}\label{eq:fourier}
+ \widehat F(\tau)=\int_\R e^{-i\tau x}F(x)\dd x,\qquad
+ U_dF(x)=F(x-d),\qquad
+ \norm F^2=\frac1{2\pi}\int_\R|\widehat F(\tau)|^2\dd\tau ,
+\end{equation}
+and, for $r>0$,
+\begin{equation}\label{eq:ngamma}
+ \gammak(r)=\frac{e^{-r/2}}{1-e^{-2r}}=\frac{e^{r/2}}{2\sinh r}.
+\end{equation}
+The localized Weil form is, in the normalization of \cite{WilsonLines},
+\begin{multline}\label{eq:target}
+ Q_L[f]=\int_0^\infty\big[2\norm F^2-2\re\ip F{U_rF}\big]\gammak(r)\dd r
+ +w_0\norm f^2+P_L[f]\\
+ -2\!\!\sum_{m\log p<L}\!\!(\log p)\,p^{-m/2}\,\re\ip F{U_{m\log p}F},
+\end{multline}
+with $w_0=\psi(\frac14)-\log\pi$, $\psi=\Gamma'/\Gamma$, and the pole form
+$P_L[f]=2|\int f\cosh\frac x2|^2-2|\int f\sinh\frac x2|^2$. Its spectral form is
+\begin{equation}\label{eq:spectral}
+ Q_L[f]=\sum_\rho\widehat F(\gamma_\rho)\overline{\widehat F(\overline{\gamma_\rho})},
+ \qquad\gamma_\rho=-i(\rho-\tfrac12),
+\end{equation}
+the sum over the nontrivial zeros of $\zeta$ in symmetric order, and Weil's
+criterion, used as input, is $\mathrm{RH}\iff Q_L\geq0$ for every $L$. We write
+$m_L$ for the smallest eigenvalue of the (unbounded below-bounded) operator
+representing $Q_L$ on $L^2(I_L)$, the \emph{margin}; under RH it is positive
+\cite[Section~8]{WilsonLines}, and its recorded values at
+$L=\log3,\log5,\log7$ are $5.5\times10^{-8}$, $9.3\times10^{-18}$,
+$6.8\times10^{-28}$ \cite{CriticalPath,FrameBound}.
+
+\subsection{The shifted family}
+
+Let
+\begin{equation}\label{eq:xi-lambda}
+ \Lambda(u)=\pi^{-u/2}\Gamma(u/2)\zeta(u),\qquad
+ \xi(u)=\tfrac12u(u-1)\Lambda(u),\qquad s=\tfrac12+p,
+\end{equation}
+so that $\xi$ is entire, $\xi(u)=\xi(1-u)$, $\xi$ is real on the real axis, and
+$\Lambda$ has simple poles at $u=0,1$ with residues $-1,1$ and is otherwise
+holomorphic except that it inherits nothing from $\Gamma$ (the trivial zeros of
+$\zeta$ cancel the poles of $\Gamma(u/2)$). Throughout,
+\begin{equation}\label{eq:ab}
+ 0<\omega\leq\tfrac12,\qquad a=\tfrac12-\omega,\qquad b=\tfrac12+\omega,
+\end{equation}
+and the transfer symbol is
+\begin{equation}\label{eq:symbol}
+ K_\omega(p)=\frac{\xi(s-\omega)}{\xi(s+\omega)}.
+\end{equation}
+The poles of $K_\omega$ are at the zeros of $\xi(s+\omega)$, $p=\rho-\frac12-\omega$,
+all with $\re p\leq\frac12-\omega=a$; its zeros are at $p=\rho-\frac12+\omega$.
+The \emph{causal realization} of a symbol $H$ holomorphic on $\re p>\eta_0$ is
+the convolution with its inverse Laplace transform on any line $\re p=\eta>\eta_0$,
+a distribution $h$ supported on $[0,\infty)$ with $H(p)=\int_0^\infty e^{-pt}h(t)\dd t$;
+we write $V_\omega f=k_\omega*f$ for $K_\omega$, and
+\begin{equation}\label{eq:compression}
+ V_{\omega,L}=P_LV_\omega P_L,\qquad
+ D_{\omega,L}=I-V_{\omega,L}^*V_{\omega,L},
+\end{equation}
+for the compression to the window and its contraction defect. Causal
+distributions with a Laplace transform form a commutative convolution algebra
+(the algebra $\mathcal D'_+$ of Schwartz), on which the Laplace transform is a
+homomorphism; we use this freely.
+
+The \emph{generator} is the causal realization $G_{\omega,L}=P_L(g_\omega*\cdot)P_L$
+of the symbol
+\begin{equation}\label{eq:generator}
+ a_\omega(p)=-\partial_\omega\log K_\omega(p)
+ =\frac{\xi'}{\xi}(s+\omega)+\frac{\xi'}{\xi}(s-\omega),
+ \qquad
+ \frac{\xi'}{\xi}(u)=\frac1u+\frac1{u-1}-\frac12\log\pi+\frac12\psi\Big(\frac u2\Big)+\frac{\zeta'}{\zeta}(u),
+\end{equation}
+and the \emph{shifted form} is its Hermitian part,
+$Q_{\omega,L}[g]=\re\ip g{G_{\omega,L}g}$, with $Q_{0,L}=Q_L$. The flow
+identities \cite[Section~2]{WilsonLines} are
+\begin{equation}\label{eq:flow}
+ \partial_\omega V_{\omega,L}=-G_{\omega,L}V_{\omega,L},\qquad V_{0,L}=I,\qquad
+ \frac{d}{d\omega}\norm{V_{\omega,L}f}^2=-2\,Q_{\omega,L}[V_{\omega,L}f],
+\end{equation}
+so that $\ip f{D_{\omega,L}f}=2\omega Q_L[f]+O(\omega^2)$, which is
+\eqref{eq:intro-firstorder}. Two structural facts about $a_\omega$ are used
+below. It is \emph{even in $\omega$}, by inspection of \eqref{eq:generator}; at
+the kernel level, since a shift of $p$ multiplies a kernel by an exponential,
+$g_\omega(t)=2\cosh(\omega t)\,g^+(t)$ with $g^+$ the kernel of
+$\frac{\xi'}{\xi}(\frac12+p)$, which is \cite[Theorem~3.1]{WilsonLines}: the
+shifted form is the central form with every off-diagonal kernel and every
+prime atom multiplied by $\cosh(\omega\cdot)$. And its kernel at $\omega=0$ is
+read off term by term from \eqref{eq:generator}:
+\begin{equation}\label{eq:g0}
+ g_0(t)=2e^{-t/2}+2e^{t/2}-\log\pi\,\delta_0-\fp[2\gammak]-2\sum_{n\geq2}\Lambda(n)\,n^{-1/2}\,\delta_{\log n},
+\end{equation}
+where the finite part is the causal distribution with Laplace transform
+$-\psi(\frac14+\frac p2)$, fixed by the integral representation
+$\psi(z)=\int_0^\infty\big(\frac{e^{-t}}t-\frac{e^{-zt}}{1-e^{-t}}\big)dt$:
+\begin{equation}\label{eq:fp}
+ \big\langle\fp[2\gammak],\phi\big\rangle
+ =\lim_{\epsilon\downarrow0}\Big[\int_\epsilon^\infty2\gammak(u)\phi(u)\dd u-\phi(0)\,E_1(2\epsilon)\Big],
+ \qquad E_1(x)=\int_x^\infty\frac{e^{-u}}u\dd u .
+\end{equation}
+(Here $g_0$ is twice $\xi'/\xi$ at $u=\frac12+p$: the constant
+$-\frac12\log\pi$ doubles to $-\log\pi\,\delta_0$, and the pole terms
+$\frac1u+\frac1{u-1}=\frac1{p+1/2}+\frac1{p-1/2}$ have kernels $e^{-t/2}$ and
+$e^{t/2}$, doubled.)
+
+\subsection{Facts about the transfer}
+
+The following are proved in \cite{WilsonLines}; we reprove the two that are
+one line, state the rest, and use nothing else from that manuscript.
+
+\begin{proposition}[Unimodularity {\cite[Proposition~4.1]{WilsonLines}}]\label{prop:unimodular}
+$|K_\omega(i\tau)|=1$ for every real $\tau$ with $\xi(\frac12+\omega+i\tau)\neq0$.
+\end{proposition}
+\begin{proof}
+$\xi(u)=\xi(1-u)$ gives $\xi(\frac12-\omega+i\tau)=\xi(\frac12+\omega-i\tau)$,
+and $\xi(\bar u)=\overline{\xi(u)}$ gives
+$\xi(\frac12+\omega-i\tau)=\overline{\xi(\frac12+\omega+i\tau)}$; numerator and
+denominator of \eqref{eq:symbol} are conjugate.
+\end{proof}
+
+\begin{lemma}[Compression is multiplicative on causal kernels {\cite[Lemma~5.1]{WilsonLines}}]\label{lem:multiplicative}
+If $\mathcal A,\mathcal B$ are causal convolutions and $f$ is supported in
+$I_L$, then $P_L\mathcal A\mathcal BP_Lf=(P_L\mathcal AP_L)(P_L\mathcal BP_L)f$.
+Consequently $H\mapsto P_L(h*\cdot)P_L$ is a homomorphism from the causal
+convolution algebra onto a commutative algebra $\mathcal A_L$ of operators on
+$L^2(I_L)$, in which all $V_{\omega,L}$ and $G_{\omega,L}$ lie.
+\end{lemma}
+\begin{proof}
+$(I-P_L)\mathcal Bf$ is supported to the right of $I_L$; a causal operator
+moves support only to the right; so $P_L\mathcal A(I-P_L)\mathcal BP_Lf=0$.
+\end{proof}
+
+\begin{proposition}[Flux and dichotomy {\cite[Propositions~4.5, 7.1, 7.2]{WilsonLines}}]\label{prop:dichotomy}
+For fixed $\omega$, $L\mapsto\norm{V_{\omega,L}}$ is nondecreasing with limit
+$\norm{V_\omega}_{L^2(\R)}$. If no zero of $\xi$ has $|\re\rho-\frac12|>\omega$,
+then $K_\omega$ is inner on the right half-plane, $V_\omega$ is unitary and
+causal on $L^2(\R)$, every $V_{\omega,L}$ is a contraction, and
+\begin{equation}\label{eq:flux}
+ \ip f{D_{\omega,L}f}=\norm{(I-P_L)V_\omega f}^2=\int_{L/2}^\infty|(V_\omega f)(x)|^2\dd x .
+\end{equation}
+If some zero has $|\re\rho-\frac12|>\omega$, then $\sup_L\norm{V_{\omega,L}}=\infty$.
+\end{proposition}
+\begin{proof}[Sketch]
+Nested compressions; strong convergence $P_L\to I$. If no pole of $K_\omega$
+lies in $\re p>0$ the realization contour may be moved to the imaginary axis,
+where $K_\omega$ is unimodular, so $V_\omega$ is unitary and
+$\norm f^2-\norm{P_LV_\omega f}^2=\norm{(I-P_L)V_\omega f}^2$, with the escaping
+mass to the right by causality. A pole at $\re p=\delta-\omega>0$ contributes a
+growing exponential to $k_\omega$, making $V_\omega$ unbounded, hence the
+compressions unbounded in $L$.
+\end{proof}
+
+\subsection{Complete monotonicity, Bernstein functions, Blaschke factors}
+
+A function $H$ on an interval $(p_0,\infty)$ is \emph{completely monotone} if
+$(-1)^kH^{(k)}\geq0$ for all $k\geq0$. Bernstein's theorem states that $H$ is
+completely monotone on $(p_0,\infty)$ if and only if
+$H(p)=\int_{[0,\infty)}e^{-pt}\dd\mu(t)$ for a positive measure $\mu$ with the
+integral finite for $p>p_0$; the measure is the causal inverse Laplace kernel
+of $H$. Products of completely monotone functions are completely monotone, and
+if $\Phi$ has a completely monotone derivative on $(p_0,\infty)$ then
+$e^{-\Phi}$ is completely monotone there (after adding a constant, $\Phi$ is a
+Bernstein function, and $e^{-\Phi}$ is then completely monotone by the standard
+composition theorem; see \cite{SSV}). Both facts are used in
+Section~\ref{sec:decomposition}.
+
+A \emph{Blaschke factor} of the right half-plane is
+$B_c(p)=\frac{p-c}{p+\bar c}$ with $\re c>0$; it is holomorphic and bounded on
+$\re p>0$, unimodular on the axis, and its causal kernel is
+$\delta_0-2\re c\,e^{-\bar ct}\mathbf 1_{t>0}$. A finite product of Blaschke
+factors is the general rational function unimodular on the axis and equal to
+$1$ at infinity. The \emph{exponential moving average} at rate $b>0$ is
+$\EMA_b[g](x)=b\int_0^xe^{-b(x-y)}g(y)\dd y$, the causal convolution with
+$be^{-bt}\mathbf 1_{t>0}$, of symbol $\frac b{p+b}$; so
+$B_b=1-\frac{2b}{p+b}$ acts on kernels as $g\mapsto g-2\EMA_b[g]$.

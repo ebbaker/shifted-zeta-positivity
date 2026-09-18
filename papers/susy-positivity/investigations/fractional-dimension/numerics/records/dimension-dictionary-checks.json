@@ -1,0 +1,554 @@
+{
+  "programme": "check_dimension_dictionary.py",
+  "investigation": "fractional-dimension",
+  "statement": "every factor of the Markov part of the shifted Weil transfer has an expression at d = 2 omega: the archimedean factor is an integral over R^d, the comb's weights are the Jordan totient J_d(n)/n^((d+1)/2), and the Blaschke pole sits at (d+1)/2. At d = 1 this is the Eisenstein scattering matrix of the modular surface",
+  "what it does not settle": "whether fractional d is more than a parameter; J_d stays a multiplicative function but stops counting, and R^d stops being a space",
+  "scope": "finite test cases and exact identities about Gamma, Mobius convolution and lattice point counts; no value of zeta or xi is computed, and nothing here is a positivity certificate",
+  "groups": [
+    {
+      "name": "A. the comb weights are the Jordan totient at d = 2 omega",
+      "cases": 7,
+      "worst_margin_against_own_tolerance": 0.006283375273324488,
+      "pass": true,
+      "checks": [
+        {
+          "what": "ct_n = J_d(n)/n^((d+1)/2) for n < 120, omega = 0.002",
+          "error": 4.1356265376617646e-16,
+          "tolerance": 1e-13,
+          "pass": true
+        },
+        {
+          "what": "ct_n = J_d(n)/n^((d+1)/2) for n < 120, omega = 0.01",
+          "error": 5.195361913378212e-16,
+          "tolerance": 1e-13,
+          "pass": true
+        },
+        {
+          "what": "ct_n = J_d(n)/n^((d+1)/2) for n < 120, omega = 0.05",
+          "error": 3.9648556527385954e-16,
+          "tolerance": 1e-13,
+          "pass": true
+        },
+        {
+          "what": "ct_n = J_d(n)/n^((d+1)/2) for n < 120, omega = 0.1",
+          "error": 6.283375273324488e-16,
+          "tolerance": 1e-13,
+          "pass": true
+        },
+        {
+          "what": "ct_n = J_d(n)/n^((d+1)/2) for n < 120, omega = 0.25",
+          "error": 4.483110238834858e-16,
+          "tolerance": 1e-13,
+          "pass": true
+        },
+        {
+          "what": "ct_n = J_d(n)/n^((d+1)/2) for n < 120, omega = 0.4",
+          "error": 4.2381605220532187e-16,
+          "tolerance": 1e-13,
+          "pass": true
+        },
+        {
+          "what": "ct_n = J_d(n)/n^((d+1)/2) for n < 120, omega = 0.5",
+          "error": 1.8318679906315082e-16,
+          "tolerance": 1e-13,
+          "pass": true
+        }
+      ],
+      "note": "ct_n = J_d(n)/n^((d+1)/2): the same rewriting that turns the archimedean factor into an integral over R^d turns the comb into the d-dimensional reduced-fraction count",
+      "weights at n = 6": {
+        "omega = 0.002": {
+          "d = 2 omega": 0.004,
+          "ct_6": 4.97410283460379e-06,
+          "J_d(6)/6^((d+1)/2)": 4.97410283460379e-06
+        },
+        "omega = 0.01": {
+          "d = 2 omega": 0.02,
+          "ct_6": 0.00012435592822315512,
+          "J_d(6)/6^((d+1)/2)": 0.00012435592822315514
+        },
+        "omega = 0.05": {
+          "d = 2 omega": 0.1,
+          "ct_6": 0.0031109971163224984,
+          "J_d(6)/6^((d+1)/2)": 0.003110997116322498
+        },
+        "omega = 0.1": {
+          "d = 2 omega": 0.2,
+          "ct_6": 0.01247025272696867,
+          "J_d(6)/6^((d+1)/2)": 0.012470252726968674
+        },
+        "omega = 0.25": {
+          "d = 2 omega": 0.5,
+          "ct_6": 0.07909555922012407,
+          "J_d(6)/6^((d+1)/2)": 0.07909555922012407
+        },
+        "omega = 0.4": {
+          "d = 2 omega": 0.8,
+          "ct_6": 0.2080718368262436,
+          "J_d(6)/6^((d+1)/2)": 0.2080718368262436
+        },
+        "omega = 0.5": {
+          "d = 2 omega": 1.0,
+          "ct_6": 0.33333333333333337,
+          "J_d(6)/6^((d+1)/2)": 0.3333333333333333
+        }
+      }
+    },
+    {
+      "name": "B. for integer d, J_d(n) counts the primitive vectors in (Z/nZ)^d",
+      "cases": 37,
+      "worst_margin_against_own_tolerance": 0.0,
+      "pass": true,
+      "checks": [
+        {
+          "what": "d = 1, n =  1: primitive count 1 = J_d(n)",
+          "error": 0.0,
+          "tolerance": 0.5,
+          "pass": true
+        },
+        {
+          "what": "d = 1, n =  2: primitive count 1 = J_d(n)",
+          "error": 0.0,
+          "tolerance": 0.5,
+          "pass": true
+        },
+        {
+          "what": "d = 1, n =  3: primitive count 2 = J_d(n)",
+          "error": 0.0,
+          "tolerance": 0.5,
+          "pass": true
+        },
+        {
+          "what": "d = 1, n =  4: primitive count 2 = J_d(n)",
+          "error": 0.0,
+          "tolerance": 0.5,
+          "pass": true
+        },
+        {
+          "what": "d = 1, n =  5: primitive count 4 = J_d(n)",
+          "error": 0.0,
+          "tolerance": 0.5,
+          "pass": true
+        },
+        {
+          "what": "d = 1, n =  6: primitive count 2 = J_d(n)",
+          "error": 0.0,
+          "tolerance": 0.5,
+          "pass": true
+        },
+        {
+          "what": "d = 1, n =  7: primitive count 6 = J_d(n)",
+          "error": 0.0,
+          "tolerance": 0.5,
+          "pass": true
+        },
+        {
+          "what": "d = 1, n =  8: primitive count 4 = J_d(n)",
+          "error": 0.0,
+          "tolerance": 0.5,
+          "pass": true
+        },
+        {
+          "what": "d = 1, n =  9: primitive count 6 = J_d(n)",
+          "error": 0.0,
+          "tolerance": 0.5,
+          "pass": true
+        },
+        {
+          "what": "d = 1, n = 10: primitive count 4 = J_d(n)",
+          "error": 0.0,
+          "tolerance": 0.5,
+          "pass": true
+        },
+        {
+          "what": "d = 1, n = 11: primitive count 10 = J_d(n)",
+          "error": 0.0,
+          "tolerance": 0.5,
+          "pass": true
+        },
+        {
+          "what": "d = 1, n = 12: primitive count 4 = J_d(n)",
+          "error": 0.0,
+          "tolerance": 0.5,
+          "pass": true
+        },
+        {
+          "what": "d = 2, n =  1: primitive count 1 = J_d(n)",
+          "error": 0.0,
+          "tolerance": 0.5,
+          "pass": true
+        },
+        {
+          "what": "d = 2, n =  2: primitive count 3 = J_d(n)",
+          "error": 0.0,
+          "tolerance": 0.5,
+          "pass": true
+        },
+        {
+          "what": "d = 2, n =  3: primitive count 8 = J_d(n)",
+          "error": 0.0,
+          "tolerance": 0.5,
+          "pass": true
+        },
+        {
+          "what": "d = 2, n =  4: primitive count 12 = J_d(n)",
+          "error": 0.0,
+          "tolerance": 0.5,
+          "pass": true
+        },
+        {
+          "what": "d = 2, n =  5: primitive count 24 = J_d(n)",
+          "error": 0.0,
+          "tolerance": 0.5,
+          "pass": true
+        },
+        {
+          "what": "d = 2, n =  6: primitive count 24 = J_d(n)",
+          "error": 0.0,
+          "tolerance": 0.5,
+          "pass": true
+        },
+        {
+          "what": "d = 2, n =  7: primitive count 48 = J_d(n)",
+          "error": 0.0,
+          "tolerance": 0.5,
+          "pass": true
+        },
+        {
+          "what": "d = 2, n =  8: primitive count 48 = J_d(n)",
+          "error": 0.0,
+          "tolerance": 0.5,
+          "pass": true
+        },
+        {
+          "what": "d = 2, n =  9: primitive count 72 = J_d(n)",
+          "error": 0.0,
+          "tolerance": 0.5,
+          "pass": true
+        },
+        {
+          "what": "d = 2, n = 10: primitive count 72 = J_d(n)",
+          "error": 0.0,
+          "tolerance": 0.5,
+          "pass": true
+        },
+        {
+          "what": "d = 2, n = 11: primitive count 120 = J_d(n)",
+          "error": 0.0,
+          "tolerance": 0.5,
+          "pass": true
+        },
+        {
+          "what": "d = 2, n = 12: primitive count 96 = J_d(n)",
+          "error": 0.0,
+          "tolerance": 0.5,
+          "pass": true
+        },
+        {
+          "what": "d = 3, n =  1: primitive count 1 = J_d(n)",
+          "error": 0.0,
+          "tolerance": 0.5,
+          "pass": true
+        },
+        {
+          "what": "d = 3, n =  2: primitive count 7 = J_d(n)",
+          "error": 0.0,
+          "tolerance": 0.5,
+          "pass": true
+        },
+        {
+          "what": "d = 3, n =  3: primitive count 26 = J_d(n)",
+          "error": 0.0,
+          "tolerance": 0.5,
+          "pass": true
+        },
+        {
+          "what": "d = 3, n =  4: primitive count 56 = J_d(n)",
+          "error": 0.0,
+          "tolerance": 0.5,
+          "pass": true
+        },
+        {
+          "what": "d = 3, n =  5: primitive count 124 = J_d(n)",
+          "error": 0.0,
+          "tolerance": 0.5,
+          "pass": true
+        },
+        {
+          "what": "d = 3, n =  6: primitive count 182 = J_d(n)",
+          "error": 0.0,
+          "tolerance": 0.5,
+          "pass": true
+        },
+        {
+          "what": "d = 3, n =  7: primitive count 342 = J_d(n)",
+          "error": 0.0,
+          "tolerance": 0.5,
+          "pass": true
+        },
+        {
+          "what": "d = 3, n =  8: primitive count 448 = J_d(n)",
+          "error": 0.0,
+          "tolerance": 0.5,
+          "pass": true
+        },
+        {
+          "what": "d = 3, n =  9: primitive count 702 = J_d(n)",
+          "error": 0.0,
+          "tolerance": 0.5,
+          "pass": true
+        },
+        {
+          "what": "d = 3, n = 10: primitive count 868 = J_d(n)",
+          "error": 0.0,
+          "tolerance": 0.5,
+          "pass": true
+        },
+        {
+          "what": "d = 3, n = 11: primitive count 1330 = J_d(n)",
+          "error": 0.0,
+          "tolerance": 0.5,
+          "pass": true
+        },
+        {
+          "what": "d = 3, n = 12: primitive count 1456 = J_d(n)",
+          "error": 0.0,
+          "tolerance": 0.5,
+          "pass": true
+        },
+        {
+          "what": "at d = 1 (omega = 1/2): ct_n = phi(n)/n in exact rationals, n < 80",
+          "error": 0.0,
+          "tolerance": 0.5,
+          "pass": true
+        }
+      ],
+      "note": "the d-dimensional reduced fractions with denominator n; at d = 1 this is Euler's totient and the count of cosets in the cusp's Fourier expansion",
+      "primitive counts": {
+        "d = 1": {
+          "n = 6": {
+            "primitive vectors in (Z/nZ)^d": 2,
+            "J_d(n)": "2"
+          },
+          "n = 12": {
+            "primitive vectors in (Z/nZ)^d": 4,
+            "J_d(n)": "4"
+          }
+        },
+        "d = 2": {
+          "n = 6": {
+            "primitive vectors in (Z/nZ)^d": 24,
+            "J_d(n)": "24"
+          },
+          "n = 12": {
+            "primitive vectors in (Z/nZ)^d": 96,
+            "J_d(n)": "96"
+          }
+        },
+        "d = 3": {
+          "n = 6": {
+            "primitive vectors in (Z/nZ)^d": 182,
+            "J_d(n)": "182"
+          },
+          "n = 12": {
+            "primitive vectors in (Z/nZ)^d": 1456,
+            "J_d(n)": "1456"
+          }
+        }
+      }
+    },
+    {
+      "name": "C. J_d is the Dirichlet coefficient of zeta(u-d)/zeta(u)",
+      "cases": 6,
+      "worst_margin_against_own_tolerance": 0.0008326672684688674,
+      "pass": true,
+      "checks": [
+        {
+          "what": "sum_{ke=n} e^d mu(k) = J_d(n) for n < 60, d = 0.004",
+          "error": 2.386667794819497e-16,
+          "tolerance": 1e-12,
+          "pass": true
+        },
+        {
+          "what": "sum_{ke=n} e^d mu(k) = J_d(n) for n < 60, d = 0.5",
+          "error": 8.326672684688674e-16,
+          "tolerance": 1e-12,
+          "pass": true
+        },
+        {
+          "what": "sum_{ke=n} e^d mu(k) = J_d(n) for n < 60, d = 1",
+          "error": 2.220446049250313e-16,
+          "tolerance": 1e-12,
+          "pass": true
+        },
+        {
+          "what": "sum_{ke=n} e^d mu(k) = J_d(n) for n < 60, d = 1.7",
+          "error": 2.3996614282878395e-16,
+          "tolerance": 1e-12,
+          "pass": true
+        },
+        {
+          "what": "sum_{ke=n} e^d mu(k) = J_d(n) for n < 60, d = 2",
+          "error": 0.0,
+          "tolerance": 1e-12,
+          "pass": true
+        },
+        {
+          "what": "sum_{ke=n} e^d mu(k) = J_d(n) for n < 60, d = 3",
+          "error": 1.168941201430407e-16,
+          "tolerance": 1e-12,
+          "pass": true
+        }
+      ],
+      "note": "checked by Mobius convolution, so no value of zeta is computed"
+    },
+    {
+      "name": "D. the reparametrization d = 2 omega, s = (p+b)/2",
+      "cases": 22,
+      "worst_margin_against_own_tolerance": 0.46142928405613887,
+      "pass": true,
+      "checks": [
+        {
+          "what": "pi^omega Gamma((a+p)/2)/Gamma((b+p)/2) = pi^(d/2) Gamma(s-d/2)/Gamma(s), omega = 0.002",
+          "error": 4.119022527707724e-15,
+          "tolerance": 1e-14,
+          "pass": true
+        },
+        {
+          "what": "omega = 0.002: 2s - d = p + a and 2s = p + b",
+          "error": 0.0,
+          "tolerance": 0.5,
+          "pass": true
+        },
+        {
+          "what": "omega = 0.002: the Blaschke pole sits at p = b = (d+1)/2",
+          "error": 0.0,
+          "tolerance": 0.5,
+          "pass": true
+        },
+        {
+          "what": "pi^omega Gamma((a+p)/2)/Gamma((b+p)/2) = pi^(d/2) Gamma(s-d/2)/Gamma(s), omega = 0.01",
+          "error": 4.614292840561389e-15,
+          "tolerance": 1e-14,
+          "pass": true
+        },
+        {
+          "what": "omega = 0.01: 2s - d = p + a and 2s = p + b",
+          "error": 0.0,
+          "tolerance": 0.5,
+          "pass": true
+        },
+        {
+          "what": "omega = 0.01: the Blaschke pole sits at p = b = (d+1)/2",
+          "error": 0.0,
+          "tolerance": 0.5,
+          "pass": true
+        },
+        {
+          "what": "pi^omega Gamma((a+p)/2)/Gamma((b+p)/2) = pi^(d/2) Gamma(s-d/2)/Gamma(s), omega = 0.05",
+          "error": 1.127253724322747e-15,
+          "tolerance": 1e-14,
+          "pass": true
+        },
+        {
+          "what": "omega = 0.05: 2s - d = p + a and 2s = p + b",
+          "error": 0.0,
+          "tolerance": 0.5,
+          "pass": true
+        },
+        {
+          "what": "omega = 0.05: the Blaschke pole sits at p = b = (d+1)/2",
+          "error": 0.0,
+          "tolerance": 0.5,
+          "pass": true
+        },
+        {
+          "what": "pi^omega Gamma((a+p)/2)/Gamma((b+p)/2) = pi^(d/2) Gamma(s-d/2)/Gamma(s), omega = 0.1",
+          "error": 4.452345110877719e-15,
+          "tolerance": 1e-14,
+          "pass": true
+        },
+        {
+          "what": "omega = 0.1: 2s - d = p + a and 2s = p + b",
+          "error": 0.0,
+          "tolerance": 0.5,
+          "pass": true
+        },
+        {
+          "what": "omega = 0.1: the Blaschke pole sits at p = b = (d+1)/2",
+          "error": 0.0,
+          "tolerance": 0.5,
+          "pass": true
+        },
+        {
+          "what": "pi^omega Gamma((a+p)/2)/Gamma((b+p)/2) = pi^(d/2) Gamma(s-d/2)/Gamma(s), omega = 0.25",
+          "error": 0.0,
+          "tolerance": 1e-14,
+          "pass": true
+        },
+        {
+          "what": "omega = 0.25: 2s - d = p + a and 2s = p + b",
+          "error": 0.0,
+          "tolerance": 0.5,
+          "pass": true
+        },
+        {
+          "what": "omega = 0.25: the Blaschke pole sits at p = b = (d+1)/2",
+          "error": 0.0,
+          "tolerance": 0.5,
+          "pass": true
+        },
+        {
+          "what": "pi^omega Gamma((a+p)/2)/Gamma((b+p)/2) = pi^(d/2) Gamma(s-d/2)/Gamma(s), omega = 0.4",
+          "error": 4.5925768395928625e-15,
+          "tolerance": 1e-14,
+          "pass": true
+        },
+        {
+          "what": "omega = 0.4: 2s - d = p + a and 2s = p + b",
+          "error": 0.0,
+          "tolerance": 0.5,
+          "pass": true
+        },
+        {
+          "what": "omega = 0.4: the Blaschke pole sits at p = b = (d+1)/2",
+          "error": 0.0,
+          "tolerance": 0.5,
+          "pass": true
+        },
+        {
+          "what": "pi^omega Gamma((a+p)/2)/Gamma((b+p)/2) = pi^(d/2) Gamma(s-d/2)/Gamma(s), omega = 0.5",
+          "error": 0.0,
+          "tolerance": 1e-14,
+          "pass": true
+        },
+        {
+          "what": "omega = 0.5: 2s - d = p + a and 2s = p + b",
+          "error": 0.0,
+          "tolerance": 0.5,
+          "pass": true
+        },
+        {
+          "what": "omega = 0.5: the Blaschke pole sits at p = b = (d+1)/2",
+          "error": 0.0,
+          "tolerance": 0.5,
+          "pass": true
+        },
+        {
+          "what": "d = 1 exactly at omega = 1/2, the only integer d in (0,1]",
+          "error": 0.0,
+          "tolerance": 0.5,
+          "pass": true
+        }
+      ],
+      "note": "the Markov part Lambda(s_0-omega)/Lambda(s_0+omega) is Lambda(2s-d)/Lambda(2s), which at d = 1 is the Eisenstein scattering matrix; only the Gamma part and the bookkeeping are checked here, the Riesz integral being established in the loewner investigation",
+      "dictionary": {
+        "archimedean": "pi^(d/2) Gamma(s-d/2)/Gamma(s) = integral over R^d of |t+i|^(-(p+b))",
+        "comb": "zeta(2s-d)/zeta(2s), weights J_d(n)/n^((d+1)/2)",
+        "pole": "Blaschke factor at p = b = (d+1)/2, i.e. 2s = d+1",
+        "d = 1": "the modular surface: horocycle of dimension 1, weights phi(n)/n"
+      }
+    }
+  ],
+  "all_pass": true,
+  "total_checks": 72
+}
