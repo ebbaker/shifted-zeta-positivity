@@ -1,0 +1,215 @@
+\section{What the pieces are, and what can realize them}\label{sec:realizations}
+
+\subsection{The two proposals, stated precisely}\label{sec:proposals}
+
+Before naming the pieces we record what the two proposals of the introduction
+actually require, since the inherited note \cite{LoewnerNote} found that both
+had been stated too strongly.
+
+\paragraph{What is abelian.} By Lemma~\ref{lem:multiplicative} the map
+$H\mapsto P_L(h*\cdot)P_L$ is a homomorphism from the commutative algebra of
+causal symbols onto $\mathcal A_L$, so every $V_{\omega,L}$ and every
+$G_{\omega,L}$ lie in one commutative algebra, for all $\omega$ at fixed $L$.
+What is abelian is \emph{translation invariance along the line}: each shift
+acts on $I_L$ by a kernel depending only on the separation $x-y$, with the
+prime atoms at fixed separations, and two functions of the line momentum
+commute. Read as a condition on a realization, the insertions implementing the
+$\omega$-deformation must act as functions of a single operator, uniformly
+along the line. That is a selection of a Cartan-like direction, not an
+impossibility.
+
+\paragraph{The critical path is ordered.} The endpoint generator
+$B_L=\frac12\delta_{L/2}\otimes\mathrm{ev}_{L/2}$ of the length direction
+satisfies $G_{\omega,L}B_L=0\neq B_LG_{\omega,L}$ \cite[Proposition~9.3]{WilsonLines}.
+Along a path $t\mapsto(\omega(t),L(t))$ the transport
+$\mathcal P\exp\int(\dot LB_L-\dot\omega G_{\omega,L})\dd t$ is a genuinely
+ordered product; only its value is path-independent, because the connection is
+flat.
+
+\paragraph{Flatness is a tautology.} If $V(\alpha)$ is any smooth family with
+$dV=\mathcal AV$ and dense range, then $0=d^2V=(d\mathcal A-\mathcal A\wedge\mathcal A)V$
+forces the curvature to vanish. In the non-Abelian Stokes variation of an open
+line $W[C]$, the field strength enters as the \emph{coefficient} $\mathcal A$
+of the bulk deformation, and $\mathcal A$'s curvature on deformation space is
+zero by the same argument. So flatness constrains no realization; the object
+to match is the coefficient $G_{\omega,L}$ itself, together with the one-sided
+commutation with the endpoint term. What remains as the obstruction is the
+dichotomy: any realization must be exactly critical.
+
+\paragraph{The Loewner affinities.} Whole-plane Loewner evolution grows a hull
+$K_t$ from $0$ with logarithmic capacity $t$, so Loewner time is
+log-conformal-radius, the arithmetic coordinate $x=\log r$; the stabilizer of
+the marked points $0,\infty$ is the group of dilations and inversions, the
+exact symmetry group of the Weil form; the exterior Loewner equation
+$\partial_tg_t(z)=g_t(z)\frac{e^{iU_t}+g_t(z)}{e^{iU_t}-g_t(z)}$ is a tip
+equation with one scalar coefficient, like the endpoint variation
+$\partial_LV_{\omega,L}=B_LV_{\omega,L}$ \cite[Proposition~9.1]{WilsonLines};
+the chain is a path-ordered flow of Witt-algebra vector fields
+\cite{BauerBernard,Lawler}; and composition with a univalent self-map is a contraction
+on Hardy-type spaces by Littlewood subordination \cite{Shapiro}. The proposal
+is therefore well motivated, and the question it poses is concrete: can such a
+chain produce the kernel $k_\omega$, or at least the positive part $\kt_\omega$?
+
+\subsection{The archimedean factor is Bessel additivity}
+
+\begin{proposition}[Bessel additivity]\label{prop:bessel}
+Let $Z_\delta$ denote independent $\mathrm{Gamma}(\frac\delta2)$ variables ---
+the value at any fixed time, up to the common factor $2t$, of a squared Bessel
+process of dimension $\delta$ started at $0$. Then, with $U=Z_a/(Z_a+Z_{2\omega})$,
+\begin{equation}\label{eq:bessel}
+ U\sim\mathrm{Beta}\Big(\frac a2,\omega\Big),\qquad
+ K^\Gamma_\omega(p)=\pi^\omega\frac{\Gamma(\frac a2)}{\Gamma(\frac b2)}\E\big[U^{p/2}\big],
+ \qquad Z_a+Z_{2\omega}\stackrel d=Z_b .
+\end{equation}
+The archimedean delay is $x=-\frac12\log U$, i.e.\ $(r_1/r_2)^2=U$ in the ray
+variable $r=e^x$.
+\end{proposition}
+\begin{proof}
+$G_\alpha/(G_\alpha+G_\beta)\sim\mathrm{Beta}(\alpha,\beta)$ and
+$G_\alpha+G_\beta\sim G_{\alpha+\beta}$ for independent Gamma variables are
+classical; $\frac a2+\omega=\frac b2$. The additivity of squared Bessel
+processes in the dimension is Shiga--Watanabe \cite{ShigaWatanabe,RevuzYor}.
+The moment identity is \eqref{eq:betamoments}.
+\end{proof}
+
+Three remarks. The two Bessel dimensions $a,b$ are the two exponents $e^{ax}$,
+$e^{-bx}$ of the rational factor: one set of numbers, $\frac12\pm\omega$,
+because both come from $s\pm\omega$. The dimensions are fractional and below
+one, so there is no sphere and no angle; the Beta variable is the additivity
+fraction, and the archimedean ``quarter'' of the delay test
+\cite[Section~11]{WilsonLines} is $\frac a2$ at $\omega=0$, half a Bessel
+dimension. And the statement is about Bessel processes, which drive radial
+Loewner chains but are not chains: whether a conformal-radius or hitting law
+of a radial chain driven by a Bessel process of dimension $b$ has $U$ as a
+squared-radius ratio is open (Section~\ref{sec:outlook}).
+
+\subsection{A Loewner chain cannot produce the comb}\label{sec:nocomb}
+
+There are two ways to identify the arithmetic coordinate with a Loewner
+variable, and neither produces the comb.
+
+\begin{lemma}[Rotation averages of composition operators are dilations]\label{lem:rotation}
+Let $\phi$ be analytic near $0$ with $\phi(0)=0$ and let $h$ be analytic. Then
+\begin{equation}\label{eq:rotation}
+ \frac1{2\pi}\int_0^{2\pi}h\big(e^{i\theta}\phi(e^{-i\theta}z)\big)\dd\theta=h\big(\phi'(0)z\big).
+\end{equation}
+Consequently, for a random conformal map $g$ with rotation-invariant law and
+deterministic $g'(0)$, $\E[h\circ g]=h(g'(0)\,\cdot)$ for every analytic $h$;
+the same holds at $\infty$ for exterior maps $g(z)=e^{-t}z+O(1)$.
+\end{lemma}
+\begin{proof}
+It suffices to take $h=z^n$. Then $e^{in\theta}\phi(e^{-i\theta}z)^n=e^{in\theta}\sum_{k\geq n}b_ke^{-ik\theta}z^k$
+and the average keeps only $k=n$, with coefficient $b_n=\phi'(0)^n$.
+\end{proof}
+
+So if the arithmetic coordinate is Loewner time, the expected composition
+operator of a rotation-invariant chain with the capacity normalization acts on
+$H^2$, on the Dirichlet space, on any space of analytic functions, as
+$h\mapsto h(e^{-t}\cdot)$: a pure delay by $t$, symbol $e^{-tp}$, carrying no
+information about the chain. The shape of the curve lives in non-analytic
+observables --- $|g|$, harmonic measure, $\E|g'|^q$ --- and a Loewner
+realization of the transfer would have to act on those. The natural one is the
+radial process $\log|g_t(z)|$, and for it the other identification applies.
+
+\begin{proposition}[Far-field transport is a pure delay]\label{prop:farfield}
+Let $K_t$ be a whole-plane Loewner hull of logarithmic capacity $t$,
+deterministic or random, with any number of tips, and
+$g_t:\hat\C\setminus K_t\to\hat\C\setminus\overline{\mathbb D}$ its normalized
+map, $g_t(z)=e^{-t}z+O(1)$. Then $\log|g_t(z)|=\log|z|-t+O(|z|^{-1})$ uniformly
+in $\arg z$. Hence if the induced transition kernel $P_t(y,\dd y')$ from
+$y=\log|z|$ to $y'=\log|g_t(z)|$, averaged over $\arg z$ and over the chain's
+law, is translation-invariant in $y$, it equals $\delta_{y'=y-t}$. In
+particular no Loewner chain induces a translation-invariant radial kernel with
+atoms at $y'=y-\log n$, $n\geq2$.
+\end{proposition}
+\begin{proof}
+The normalization at infinity is the definition of the capacity
+parametrization; translation invariance forces $P_t(y,\cdot)$ to equal its
+$y\to\infty$ limit.
+\end{proof}
+
+Away from the far field the kernel depends on the distance to the hull and is
+not translation-invariant; and in either case $t\mapsto g_t(z)$ is continuous
+even for a c\`adl\`ag driving function, since the Loewner equation is an ODE
+whose field is smooth in $g$ away from the circle, so a jump of the driving
+process moves the tip, not the transported points. Echoes at the fixed
+separations $\log n$ with position-independent weights are not a Loewner
+phenomenon in any reading. What Loewner or Bessel processes can supply is the
+archimedean factor alone.
+
+\subsection{What the comb is}\label{sec:hecke}
+
+On functions of the arithmetic coordinate let $\mu_nf(x)=f(x-\log n)$. The
+$\mu_n$ are isometries of $L^2(\R,\dd x)$ with $\mu_n\mu_m=\mu_{nm}$, and the
+comb operator is
+\begin{equation}\label{eq:heckeop}
+ C_\omega=\sum_{n\geq1}\ct_n\,\mu_n,\qquad
+ \ct_n=n^{-1/2}\big(n^{\omega}*\mu(n)n^{-\omega}\big)=n^{\omega-\frac12}\prod_{p\mid n}(1-p^{-2\omega}),
+\end{equation}
+a Dirichlet series in the multiplicative semigroup $\N^\times$ acting on the
+ray by dilations: the image of $\zeta(s-\omega)/\zeta(s+\omega)$ under the
+representation $n^{-s}\mapsto\mu_n$, with the $n^{-1/2}$ making it unitary on
+$L^2(\dd x)$. This is the Hecke algebra of $\N^\times$ in the Bost--Connes
+system \cite{BostConnes}, which \cite[Section~10.4]{WilsonLines} had already
+named as the structure ``invariant under $r\mapsto\lambda r$ but distinguishing
+the ratios $p^m$'' that the prime atoms require; the decomposition says exactly
+which element of that algebra the transfer contains, with which coefficients,
+at each shift. Its local factor at $p$, $\frac{1-p^{-\omega}z_p}{1-p^{\omega}z_p}$
+with $z_p=e^{-s\log p}$, is a one-delay feedback loop of length $\log p$ with
+loop gain $p^{\omega}$: its kernel before the $n^{-1/2}$ is
+$\delta_0+(1-p^{-2\omega})\sum_{k\geq1}p^{k\omega}\delta_{k\log p}$, and a
+traversal of the loop multiplies by the scalar $p^\omega$, which is the abelian
+monodromy at the puncture of \cite[Section~9.4]{WilsonLines}, made explicit.
+To first order in $\omega$ the coefficients are $2\omega\Lambda(n)n^{-1/2}$,
+the von Mangoldt function, and at second order the composite weights appear:
+$\ct_6=\omega^2\cdot4\log2\log3/\sqrt6+O(\omega^3)$.
+
+\subsection{The endpoint \texorpdfstring{$\omega=\frac12$}{omega = 1/2} is the modular surface}\label{sec:endpoint}
+
+At $\omega=\frac12$: $a=0$, $b=1$, $\frac{p+a}{p-a}=1$, so
+\begin{equation}\label{eq:endpoint}
+ \Kh_{1/2}(p)=\Kt_{1/2}(p)=\frac{\Lambda(p)}{\Lambda(p+1)}=\varphi\Big(\frac{p+1}2\Big),
+ \qquad
+ \varphi(s')=\sqrt\pi\,\frac{\Gamma(s'-\frac12)\,\zeta(2s'-1)}{\Gamma(s')\,\zeta(2s')}
+ =\frac{\Lambda(2s'-1)}{\Lambda(2s')},
+\end{equation}
+where $\varphi$ is the scattering matrix of the Eisenstein series of
+$PSL(2,\mathbb Z)\backslash\mathbb H$ \cite{Iwaniec}, the coefficient of
+$y^{1-s'}$ in the constant term of $E(z,s')$; its pole at $s'=1$ is $p=b=1$.
+The comb weights are $\ct_n=\prod_{p\mid n}(1-p^{-1})=\varphi_{\mathrm{Euler}}(n)/n$,
+the density of reduced fractions with denominator $n$ --- the count of cosets
+in the cusp's Fourier expansion that produces $\zeta(2s'-1)/\zeta(2s')$ in the
+first place. The Beta part degenerates: $\mathrm{Beta}(0,\frac12)$, and
+$k^\Gamma_{1/2}(x)=2(1-e^{-2x})^{-1/2}$ does not decay, which is the pole of
+$K^\Gamma_{1/2}$ at $p=0$. And
+\begin{equation}\label{eq:laxphillips}
+ K_{1/2}=B_1\,\varphi\Big(\frac{p+1}2\Big)=\frac{p-1}{p+1}\,\varphi\Big(\frac{p+1}2\Big):
+\end{equation}
+the transfer at the endpoint is the Eisenstein scattering matrix with its pole
+at $s'=1$ removed by one Blaschke factor, which is what Lax and Phillips do
+when they pass to the orthocomplement of the constant function
+\cite{LaxPhillips} (a reading; the identity is exact). So the Markov part has,
+at the endpoint, a classical geometric realization in which the comb is a
+coset sum and the correction is the removal of the residual spectrum. For
+$\omega<\frac12$ Eisenstein constant terms give only unit offsets in $2s'$, so
+the interior of the family is not realized by any congruence-subgroup
+scattering matrix; this was already observed in \cite{WilsonReview}. All of
+\eqref{eq:endpoint}--\eqref{eq:laxphillips} and the totient identity are
+checked numerically in Appendix~\ref{app:numerics}.
+
+\subsection{Summary of the dictionary}
+
+\begin{center}
+\small
+\begin{tabular}{@{}lll@{}}
+\toprule
+Piece & Symbol & Realization \\
+\midrule
+Archimedean delay & $K^\Gamma_\omega=\pi^\omega\Gamma(\frac{s-\omega}2)/\Gamma(\frac{s+\omega}2)$ & Bessel additivity in dimensions $a,2\omega\to b$ (Prop.~\ref{prop:bessel}) \\
+Comb & $K^\zeta_\omega=\zeta(s-\omega)/\zeta(s+\omega)$ & Hecke operator $\sum\ct_n\mu_n$ of $\N^\times$; not Loewner (Prop.~\ref{prop:farfield}) \\
+Correction & $R_\omega=B_b/B_a$; cleanly $B_b$ & Forced by unimodularity (Prop.~\ref{prop:forced}); no arithmetic \\
+Endpoint $\omega=\frac12$ & $K_{1/2}=B_1\varphi$ & Modular surface; Lax--Phillips (\S\ref{sec:endpoint}) \\
+The whole & $K_\omega=B_b\Kh_\omega$ & Positive measure minus twice its EMA (Prop.~\ref{prop:blaschke}) \\
+\bottomrule
+\end{tabular}
+\end{center}

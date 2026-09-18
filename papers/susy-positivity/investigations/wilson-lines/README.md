@@ -189,6 +189,13 @@ Section 10 of the manuscript and in the
 
 This investigation inherits their constraints and must not re-derive them.
 
+- [Loewner](../loewner/README.md) was opened from this investigation on 17
+  September 2026, around the factorization of the transfer into a completely
+  monotone part and one all-pass section found in the
+  [Loewner/Markov-decomposition note](notes/LOEWNER_AND_THE_MARKOV_DECOMPOSITION_20260917.md);
+  the [review of the same day](reviews/review_claude-fable-5-1_2026-09-17.md)
+  lists corrections to this manuscript that have not yet been applied.
+
 - [Inverse bulk realization](../inverse-bulk-realization/README.md) supplies the
   target, the rigidity of Corollary 2.2, the two-channel exclusion, and the
   [exclusion map](../inverse-bulk-realization/notes/EXCLUSION_MAP_20260917.md)

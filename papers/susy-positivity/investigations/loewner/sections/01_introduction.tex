@@ -1,0 +1,312 @@
+\section{Introduction}\label{sec:intro}
+
+This manuscript reports the first results of the \emph{Loewner} investigation
+of the SUSY-positivity program. It is written to be read on its own, and its
+introduction is deliberately slow: the results in Sections~\ref{sec:decomposition}
+to~\ref{sec:contraction} are short and elementary once the objects are in
+view, and the work of the investigation was largely in getting them into view.
+The chain of logic runs from Weil's criterion, through the shifted family and
+its reading as a filter, through a proposal to realize that filter by a
+conformal evolution, to a factorization of the filter that says what any
+realization would have to produce --- and then to a computation that confirms
+the factorization is what it claims to be.
+
+\subsection{Weil's criterion, and where the arithmetic hides}
+
+Riemann's zeta function has a completed form
+$\xi(s)=\frac12s(s-1)\pi^{-s/2}\Gamma(s/2)\zeta(s)$, entire, real on the real
+axis, symmetric under $s\mapsto1-s$, whose zeros are the nontrivial zeros
+$\rho$ of $\zeta$. The Riemann hypothesis places them all on the critical line
+$\re s=\frac12$. Weil's criterion restates this as the positivity of a
+quadratic form. Take a test function $f$ supported in a window
+$I_L=(-\frac L2,\frac L2)$ of the real line, extend it by zero to $F$, and
+write $\gamma_\rho=-i(\rho-\frac12)$, so that $\gamma_\rho$ is real exactly when
+$\rho$ is on the line. The \emph{Weil form} is
+\begin{equation}\label{eq:intro-spectral}
+ Q_L[f]=\sum_\rho\widehat F(\gamma_\rho)\,\overline{\widehat F(\overline{\gamma_\rho})},
+\end{equation}
+and the criterion says that RH holds if and only if $Q_L[f]\geq0$ for every
+$L$ and every $f$. Under RH each term is $|\widehat F(\gamma_\rho)|^2$ and the
+positivity is obvious; a zero off the line pairs with its reflection to produce
+a term that can be made negative by a suitable $f$.
+
+The reason this is not a tautology is the explicit formula. The same quantity
+$Q_L[f]$ has a second expression in which the zeros do not appear at all: an
+\emph{archimedean} term built from the digamma function, a \emph{pole} term
+from the factor $s(s-1)$, and a \emph{prime} term,
+$-2\sum_{m\log p<L}(\log p)\,p^{-m/2}\,\re\ip F{U_{m\log p}F}$, in which $F$ is
+correlated with its own translates by the logarithms of prime powers. The
+prime-side expression is what one can compute, and what a construction could
+hope to produce; the zero-side expression is what is positive. The whole
+difficulty of the criterion is that positivity is manifest on one side and
+invisible on the other, and the two sides are the same number. The cancellation
+between them is extreme: at $L=\log 3$ the smallest value of $Q_L$ on
+normalized $f$ is about $5\times10^{-8}$, at $L=\log 7$ about
+$10^{-27}$, while the individual terms are of order one. Every investigation of
+this program is, in one way or another, a search for a presentation of $Q_L$ in
+which positivity is structural and the arithmetic is nevertheless present.
+
+\subsection{The shifted family: RH as the stability of a filter}
+
+The Wilson-lines investigation \cite{WilsonLines} studies a one-parameter
+deformation of the criterion. Write $s=\frac12+p$ and, for $0<\omega\leq\frac12$,
+\begin{equation}\label{eq:intro-transfer}
+ K_\omega(p)=\frac{\xi(\tfrac12+p-\omega)}{\xi(\tfrac12+p+\omega)} .
+\end{equation}
+Three facts organize everything that follows, and all three are elementary.
+First, $K_\omega$ is \emph{unimodular on the imaginary axis}: the functional
+equation and the reality of $\xi$ make numerator and denominator complex
+conjugates at $p=i\tau$, so $|K_\omega(i\tau)|=1$ for every real $\tau$. In the
+language of signal processing $K_\omega$ is an \emph{all-pass filter}: it
+changes the phase of every frequency and the amplitude of none. Second,
+$K_\omega$ is the symbol of a \emph{causal} operator: realized as a Laplace
+transform on a line $\re p=\eta$ to the right of all its singularities, it is
+$\int_0^\infty e^{-pt}k_\omega(t)\,dt$ for a kernel $k_\omega$ supported on
+$t\geq0$, and the operator $V_\omega f=k_\omega*f$ never moves mass to the left.
+Third, the derivative at $\omega=0$ is the Weil form. Compress $V_\omega$ to the
+window, $V_{\omega,L}=P_LV_\omega P_L$ with $P_L$ the restriction to $I_L$, and
+form the \emph{contraction defect} $D_{\omega,L}=I-V_{\omega,L}^*V_{\omega,L}$,
+which measures how far the compression is from an isometry. Then
+\begin{equation}\label{eq:intro-firstorder}
+ \norm f^2-\norm{V_{\omega,L}f}^2=\ip f{D_{\omega,L}f}=2\omega\,Q_L[f]+O(\omega^2).
+\end{equation}
+So Weil positivity on $I_L$ is the statement that, to first order in the shift,
+the compressed filter contracts.
+
+The three facts combine into a dichotomy \cite[Proposition~7.2]{WilsonLines}
+that is the hinge of the present manuscript. Fix $\omega$. On the whole line an
+all-pass filter is unitary, and a compression of a unitary is a contraction; but
+$V_\omega$ is unitary on $L^2(\R)$ only if the causal realization can be moved
+onto the imaginary axis, which requires $K_\omega$ to have no poles in the right
+half-plane. The poles of $K_\omega$ are at $p=\rho-\frac12-\omega$, so this is
+the statement that no zero has $\re\rho>\frac12+\omega$. If there is such a
+zero, $k_\omega$ contains a growing exponential and the compressions are
+unbounded as $L$ grows. Hence
+\begin{equation}\label{eq:intro-dichotomy}
+ \sup_L\norm{V_{\omega,L}}\in\{1,\infty\},\qquad
+ \sup_L\norm{V_{\omega,L}}=1\iff\text{no zero of $\xi$ lies further than $\omega$ from the line.}
+\end{equation}
+The shifted family is a graded criterion, one zero-free strip per shift, and
+the Riemann hypothesis is the statement that, for every $\omega>0$, the causal
+filter $k_\omega$ is \emph{passive}: every window compression is a contraction.
+Under RH the defect has a physical meaning, the flux identity
+\cite[Proposition~4.5]{WilsonLines}: $\ip f{D_{\omega,L}f}$ is exactly the mass
+of $V_\omega f$ that has been pushed past the leading end of the window. The
+form $Q_L$ is the first-order version of that flux.
+
+\subsection{Realizations, and the two proposals}
+
+The bulk-realization program asks for a system --- a field theory, a
+statistical model, a conformal evolution --- in which the transfer, or the
+form, appears as an observable whose positivity is structural, so that the
+arithmetic would be carried by the system and its positivity by a general
+theorem (unitarity, reflection positivity, subordination). The dichotomy sets
+the standard any such realization must meet: it must be exactly critical,
+unitary on the whole line and contracting on every window by a margin
+$\omega m_L$ that collapses superexponentially in $L$ \cite[Section~8]{WilsonLines}.
+
+The Wilson-lines proposal \cite{WilsonLines} took the transfer to be the
+deformation flow of an open Wilson line, because the shifted family obeys a
+flow equation $\partial_\omega V_{\omega,L}=-G_{\omega,L}V_{\omega,L}$ of the
+shape produced by varying a line's contour, with the non-Abelian Stokes theorem
+supplying the coefficient. Two of that manuscript's findings bear directly on
+what follows. The shift direction is \emph{abelian}: compression to a window
+is multiplicative on causal kernels, so the transfers and their generators lie
+in one commutative algebra --- the algebra of translation-invariant causal
+operators on the line, lower-triangular Toeplitz matrices in any discretization
+--- and what is abelian is precisely translation invariance along the
+arithmetic coordinate \cite[Theorem~5.2]{WilsonLines}. And the
+two-parameter flow in the shift--length plane is flat
+\cite[Proposition~9.4]{WilsonLines}. The inherited note \cite{LoewnerNote}
+from which this investigation was opened sharpened both statements, in response
+to the question of whether these were obstructions or selections. They are
+selections. Flatness is a tautology for any single-valued family
+$V(\alpha)$ with $dV=\mathcal AV$ --- the curvature of $\mathcal A=dV\,V^{-1}$
+vanishes identically --- so it constrains nothing about a realization; in the
+non-Abelian Stokes variation the field strength is the \emph{coefficient}
+$\mathcal A$, not the curvature, and the object to match is the generator
+$G_{\omega,L}$ itself. Commutativity, likewise, is a symmetry requirement on the
+insertions that implement the shift (they must act as functions of one
+operator, uniformly along the line), not an impossibility. Along a general path
+in the $(\omega,L)$ plane the transport is a genuinely ordered product, because
+the endpoint generator $B_L$ and the bulk generator $G_{\omega,L}$ generate a
+triangular, not commutative, algebra.
+
+The Loewner proposal, made at that point, was to construct the paths
+independently: to take the arithmetic coordinate $x=\log r$ as the time of a
+whole-plane Loewner evolution, whose hull grows from $0$ toward $\infty$ with
+logarithmic capacity $t$, and to let a simple boundary driving function
+produce the ordered, infinite-dimensional, structurally contractive family that
+the shift direction lacks. The affinities are real: Loewner time is
+log-conformal-radius, which is the arithmetic coordinate exactly; the marked
+points $0,\infty$ have the dilations and inversions of the Weil form's exact
+symmetry group as their stabilizer; the Loewner equation is a tip equation
+with one scalar coefficient, like the endpoint variation of the transfer; and
+composition with univalent self-maps is contractive on Hardy-type spaces by
+Littlewood subordination, with a positive defect and no arithmetic in it.
+
+\subsection{What a realization would have to produce: the factorization}
+
+To test either proposal one must know the kernel $k_\omega$ concretely, and it
+turns out to have a structure that neither proposal anticipated. Factor the
+completed zeta function as $\xi(u)=\frac12u(u-1)\Lambda(u)$ with
+$\Lambda(u)=\pi^{-u/2}\Gamma(u/2)\zeta(u)$. The transfer splits
+correspondingly into a ratio of $\Lambda$'s and a ratio of quadratics,
+$K_\omega=R_\omega\Kt_\omega$, and the two factors have opposite characters.
+
+The ratio $\Kt_\omega(p)=\Lambda(s-\omega)/\Lambda(s+\omega)$ is
+\emph{completely monotone} on $p>\frac12+\omega$: all its derivatives alternate
+in sign. By Bernstein's theorem a completely monotone function is the Laplace
+transform of a positive measure, so the causal kernel $\kt_\omega$ of
+$\Kt_\omega$ is \emph{nonnegative}. Moreover it is explicit. The $\Gamma$-ratio
+$\pi^\omega\Gamma(\frac{s-\omega}2)/\Gamma(\frac{s+\omega}2)$ is a Beta integral
+whose kernel is
+$k^\Gamma_\omega(x)=\frac{2\pi^\omega}{\Gamma(\omega)}(2\sinh x)^{\omega-1}e^{x/2}$,
+a continuous delay distributed as $x=-\frac12\log U$ with
+$U\sim\mathrm{Beta}(\frac14-\frac\omega2,\omega)$; and the $\zeta$-ratio
+$\zeta(s-\omega)/\zeta(s+\omega)$ is a Dirichlet series whose coefficients
+$\ct_n=n^{\omega-1/2}\prod_{p\mid n}(1-p^{-2\omega})$ are positive because the
+Euler product makes each local factor a geometric series with positive terms.
+Its kernel is a comb of atoms at the integer logarithms, and
+$\kt_\omega=k^\Gamma_\omega*\sum_n\ct_n\delta_{\log n}$: a sum of Beta-shaped
+spikes, one at every $\log n$, with positive weights. This is the
+\emph{Markov part} of the transfer, a positive kernel, though of infinite
+mass --- it grows like $e^{(\frac12+\omega)x}$, because $\Lambda(s-\omega)$ has
+the pole of $\zeta$ at $s-\omega=1$, and that pole is the prime number theorem's
+main term.
+
+The rational factor $R_\omega$ is a ratio of two Blaschke factors, unimodular
+on the axis, and it is \emph{forced}: given the Markov part, it is the unique
+minimal rational all-pass function that cancels the poles and zeros of
+$\Kt_\omega$ at the poles of $\Lambda$, so its coefficients carry nothing but
+the positions $0,1$ of those poles and the shift. Absorbing the harmless half
+of it into the Markov part gives the form we use throughout:
+\begin{equation}\label{eq:intro-decomp}
+ K_\omega=B_b\,\Kh_\omega,\qquad B_b(p)=\frac{p-b}{p+b},\qquad b=\tfrac12+\omega,
+ \qquad \Kh_\omega\ \text{completely monotone on }p>b,
+\end{equation}
+and at the level of kernels
+\begin{equation}\label{eq:intro-ema}
+ k_\omega=\kh_\omega-2\,\EMA_b[\kh_\omega],\qquad
+ \EMA_b[g](x)=b\int_0^xe^{-b(x-y)}g(y)\dd y,\qquad \kh_\omega\geq0 .
+\end{equation}
+\emph{The impulse response of the shifted Weil transfer is a positive measure
+minus twice its exponential moving average}, at the rate set by the pole of
+$\zeta$. The subtraction is exact and unconditional: it maps the main term
+$Ce^{bx}$ of the positive part to $Ce^{-bx}$, so the growth is cancelled
+identically, and what remains of $k_\omega$ is the fluctuation of $\kh_\omega$
+about its main term --- which is to say, the zeros. Under RH the remainder
+decays like $e^{-\omega x}$; a zero at distance $\delta>\omega$ from the line
+leaves a growing $e^{(\delta-\omega)x}$. This is the dichotomy
+\eqref{eq:intro-dichotomy} at the level of the kernel, and it says where the
+arithmetic hides: not in the small rational correction, whose residues are
+fixed by the functional equation, but in the fine structure of a positive
+measure whose Laplace transform has poles at the zeros behind its abscissa of
+convergence.
+
+\subsection{What the pieces are, and what can make them}
+
+Each piece of the positive part has a name in probability or geometry, and the
+names decide the two proposals. The Beta law is \emph{Bessel additivity}: with
+$a=\frac12-\omega$ and $b=\frac12+\omega$, $U=Z_a/(Z_a+Z_{2\omega})$ for
+independent squared Bessel processes of dimensions $a$ and $2\omega$, whose sum
+is a squared Bessel process of dimension $b$. The two exponents of the rational
+factor are the two Bessel dimensions, and the delay test's archimedean quarter
+is half a Bessel dimension. This is a statement about Bessel processes, which
+drive radial Loewner chains but are not themselves chains; whether a radial
+chain has this law as a squared-radius ratio is the one question in the Loewner
+direction that remains open.
+
+The comb cannot come from a Loewner chain in any reading of the variables. If
+the arithmetic coordinate is Loewner time, the only translation-invariant
+filter a rotation-invariant chain induces on analytic observables is the pure
+delay $e^{-tp}$ --- a rotation average of a composition operator is a dilation.
+If the arithmetic coordinate is the radial coordinate $\log|z|$, the chain's
+transport of exterior points is a pure delay in the far field,
+$\log|g_t(z)|=\log|z|-t+O(|z|^{-1})$, and translation invariance forces the
+induced kernel to equal its far-field limit. Echoes at the fixed separations
+$\log n$ with position-independent weights are available in neither reading.
+What the comb \emph{is} is a semigroup structure: the operator
+$C_\omega=\sum_n\ct_n\mu_n$ with $\mu_nf(x)=f(x-\log n)$ and
+$\mu_n\mu_m=\mu_{nm}$, a Dirichlet series in the multiplicative semigroup
+$\N^\times$ acting on the ray by dilations --- the Hecke operator of the
+Bost--Connes system, with coefficients that are, to first order in $\omega$,
+$2\omega\Lambda(n)n^{-1/2}$: the von Mangoldt function.
+
+And at the endpoint $\omega=\frac12$ the whole positive part is a classical
+geometric object: $\Kh_{1/2}=\Lambda(p)/\Lambda(p+1)$ is the Eisenstein
+scattering matrix of the modular surface $PSL(2,\mathbb Z)\backslash\mathbb H$,
+the comb weights are Euler's totient $\varphi(n)/n$ --- the coset count in the
+cusp's Fourier expansion that produces $\zeta(2s-1)/\zeta(2s)$ in the first
+place --- and $K_{1/2}=B_1\Kh_{1/2}$ is that scattering matrix with its pole at
+$s=1$ removed by one Blaschke factor, which is exactly the Lax--Phillips
+modification. So the Markov part has, at one shift, a realization in which the
+comb is a coset sum and the correction is the removal of the residual
+spectrum. For $\omega<\frac12$ no Eisenstein construction produces the offset
+$2\omega$, and the interior of the family has no such realization from that
+source.
+
+\subsection{What the decomposition is not, and what it is}
+
+It is not a positivity mechanism, and the dichotomy says why with no
+computation. The positive part $\Kh_\omega$ has a causal operator $\widehat
+V_\omega$ of norm greater than one on every window (its kernel grows), the
+Blaschke factor is a contraction, and their product is the transfer; the
+contraction of $V_{\omega,L}$ for all $L$ is a zero-free strip by
+\eqref{eq:intro-dichotomy}, so no structural property of $\kh_\omega$ short of
+the location of the poles can imply it. Any passivity theorem for filters of
+the form ``positive measure minus twice its EMA'' would have to see the poles.
+We record this plainly because it is the honest end of one line of thought:
+positivity of the Markov part is real, explicit and cheap, and it proves
+nothing about the zeros.
+
+What the decomposition is, is three things. It is a \emph{computational tool}:
+on a window of length $L$ only the atoms $\log n<L$ contribute, so the
+transfer, its compression, its norm and its defect are assembled exactly from
+$(2\sinh x)^{\omega-1}e^{x/2}$, the numbers $\ct_n$ for $n<e^L$, and two
+exponentials --- no $\xi$, no $\zeta$ on a line, no zeros --- in precisely the
+way the Weil form is assembled from the explicit formula. It is a
+\emph{dictionary}: Bessel additivity for the archimedean factor, the Hecke
+semigroup for the comb, one Blaschke factor at the pole of $\zeta$ for the
+correction, the modular surface at the endpoint. And it is a statement of the
+program's criticality in filter language: the shifted Weil transfer is a
+lossless filter whose impulse response is a positive measure minus twice its
+exponential moving average, and the Riemann hypothesis is the statement that
+this filter is stable at every $\omega>0$.
+
+\subsection{The first computation}
+
+The tool was then built and tested. Section~\ref{sec:contraction} assembles
+$V_{\omega,L}$ at the first horizon $L=\log3$ in an orthonormal sine basis,
+from the kernel alone, and measures its contraction data. The compression is a
+strict contraction at every shift computed, and the smallest eigenvalue of its
+defect satisfies $\lambda_{\min}(D_{\omega,L})/2\omega\to m_L$, the margin of
+the Weil form in the same basis, with agreement to $0.1\%$ at $\omega=0.01$:
+the transfer side and the form side of the program, assembled from different
+presentations of the explicit formula, agree at first order. The deviations at
+larger $\omega$ are then accounted for exactly. On the exact compression the
+defect expands as $D_{\omega,L}=2\omega Q_L-\omega^2(2Q_L^2+[Q_L,A_L])+O(\omega^3)$,
+where $A_L$ is the skew part of the compressed generator, and on the minimizer
+of $Q_L$ the commutator term vanishes, so the only first-order correction to
+\eqref{eq:intro-firstorder} at the minimizer is $-\omega m_L^2$. The positive
+excess seen in a finite basis is a truncation term, the energy of $A_Lf$
+outside the basis, and it dies under nesting exactly as predicted. Finally the
+mass of the assembled kernel beyond the horizon has, to first order in
+$\omega$, a closed form from the logarithmic derivative of $\xi$ alone ---
+poles, digamma and primes, no zeros --- and the assembly matches it to five
+digits.
+
+\subsection{Organization and status}
+
+Section~\ref{sec:conventions} fixes conventions and quotes, with proofs where
+they are short, the facts about the shifted family that the rest uses.
+Section~\ref{sec:decomposition} proves the factorization and its reading.
+Section~\ref{sec:realizations} identifies the pieces and proves the negative
+Loewner results. Section~\ref{sec:contraction} presents the assembly, the
+second-order theory of the defect, the first-order tail, and the numerical
+results. Section~\ref{sec:outlook} ranks what remains. Appendix~\ref{app:numerics}
+documents the programmes and records and the numerical lessons;
+Appendix~\ref{app:provenance} records provenance and the use of language
+models. Every statement is labelled as a written proof, a labelled numerical
+computation, or a reading; nothing assumes the Riemann hypothesis except where
+a statement says so.

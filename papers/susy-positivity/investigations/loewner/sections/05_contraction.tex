@@ -1,0 +1,273 @@
+\section{The contraction margin at the first horizon}\label{sec:contraction}
+
+The decomposition makes $V_{\omega,L}$ computable from elementary functions.
+This section builds it, says what its contraction data must be to second order
+in $\omega$, and reports the computation at $L=\log3$, the first horizon at
+which the margin $m_L$ of the Weil form is recorded \cite{CriticalPath}. The
+programme is described in Appendix~\ref{app:numerics}; it is exploratory
+(\texttt{mpmath}, 40 digits) and every number has a record beside it.
+
+\subsection{The assembly}\label{sec:assembly}
+
+In the orthonormal sine basis $e_j(x)=\sqrt{2/L}\sin(j\pi(x+\frac L2)/L)$,
+$j=1,\dots,N$, on $I_L$, the Galerkin matrix of the compression is
+\begin{equation}\label{eq:galerkin}
+ V_{jk}=\ip{e_j}{V_{\omega,L}e_k}=\int_0^Lk_\omega(t)\,S_{jk}(t)\dd t,\qquad
+ S_{jk}(t)=\int_{-L/2+t}^{L/2}e_j(x)\,e_k(x-t)\dd x ,
+\end{equation}
+because $V_{\omega,L}$ is a causal convolution. The one-sided autocorrelations
+are elementary: with $\alpha=\pi/L$ and $\sigma=(-1)^{j+k}$,
+\begin{equation}\label{eq:S}
+\begin{aligned}
+ S_{jj}(t)&=\frac{(L-t)\cos(j\alpha t)+\sin(j\alpha t)/(j\alpha)}L,\\
+ S_{jk}(t)&=\frac1L\Big[\frac{\sigma\sin(k\alpha t)-\sin(j\alpha t)}{(j-k)\alpha}
+ +\frac{\sigma\sin(k\alpha t)+\sin(j\alpha t)}{(j+k)\alpha}\Big]\qquad(j\neq k).
+\end{aligned}
+\end{equation}
+The kernel is assembled in the form of Proposition~\ref{prop:factor}:
+$k_\omega=\sum_{n<e^L}\ct_n\kappa_\omega(\cdot-\log n)$ with
+$\kappa_\omega=k^\Gamma_\omega-4\omega b\,(e^{-b\cdot}\mathbf 1_{>0})*k^\Gamma_\omega-4\omega a\,(e^{a\cdot}\mathbf 1_{>0})*k^\Gamma_\omega$.
+At $L=\log3$ the atoms are $n=1,2$. The $t$-integral is the only quadrature.
+On each interval between consecutive atoms the integrand is written in the
+local coordinate $\tau=t-\log n_0$ and the singularity $\tau^{\omega-1}$ is
+removed by the substitution $\tau=u^{1/\omega}$, after which a tanh--sinh rule
+with step $h$ is applied. The local coordinate is essential: the spike carries
+half its mass below $\tau=2^{-1/\omega}$, and forming $t=\log n_0+\tau$ in
+finite precision and subtracting again destroys it (the first version of the
+programme reported $\norm V>1$ for exactly this reason).
+
+Three quantities are then read from the $N\times N$ matrix: $\norm{V_N}$,
+which must be below one; $\lambda_{\min}(D_N)$ with $D_N=I-V_N^{\mathsf T}V_N$,
+compared through \eqref{eq:intro-firstorder} with $m_L^{(N)}$, the smallest
+eigenvalue of $Q_L$ in the same basis, computed in closed form from
+\eqref{eq:target} by the assembler of \cite{FrameBound}; and the first-order
+law on the fixed vector $e_1$, where $Q_L[e_1]=4.3474\times10^{-4}$ is $7000$
+times $m_L$ and the check is insensitive to the noise floor.
+
+\subsection{What the numbers should be}\label{sec:theory}
+
+Write $G=G_{0,L}$ for the compressed generator at $\omega=0$ and split it into
+Hermitian and skew parts, $G=Q+A$, so that $Q=Q_L$ is the Weil form and $A$ is
+a Hilbert transform on the interval together with the odd part of the comb and
+smooth terms.
+
+\begin{proposition}[The defect to second order]\label{prop:secondorder}
+On the compression,
+\begin{equation}\label{eq:secondorder}
+ D_{\omega,L}=2\omega\,Q-\omega^2\big(2Q^2+[Q,A]\big)+O(\omega^3),
+\end{equation}
+and if $f$ is a normalized eigenvector of $Q$ with eigenvalue $m$ then
+$\ip f{D_{\omega,L}f}/2\omega=m-\omega m^2+O(\omega^2)$. In particular
+$\lambda_{\min}(D_{\omega,L})/2\omega=m_L-\omega m_L^2+O(\omega^2)$: the relative
+correction to the first-order law at the minimizer is $-\omega m_L$ and
+nothing else.
+\end{proposition}
+\begin{proof}
+By \eqref{eq:generator}, $K_\omega=\exp(-\int_0^\omega a_{\omega'}\dd\omega')$,
+and $a_\omega$ is even in $\omega$, so $K_\omega=\exp(-\omega a_0+O(\omega^3))$
+as symbols on $\re p>b$, hence as causal kernels. By
+Lemma~\ref{lem:multiplicative} compression is a homomorphism, so
+$V_{\omega,L}=\exp(-\omega G+O(\omega^3))=I-\omega G+\frac{\omega^2}2G^2+O(\omega^3)$
+and
+$V^*V=I-\omega(G+G^*)+\omega^2\big(G^*G+\frac12G^2+\frac12G^{*2}\big)+O(\omega^3)$.
+With $G=Q+A$: $G^*G=Q^2+QA-AQ-A^2$ and $\frac12(G^2+G^{*2})=Q^2+A^2$, so the
+bracket is $2Q^2+[Q,A]$. For the eigenvector,
+$\ip f{[Q,A]f}=\ip{Qf}{Af}-\ip{A^*f}{Qf}=2\re\ip{Qf}{Af}=2m\,\re\ip f{Af}=0$ since $A^*=-A$,
+and $\ip f{Q^2f}=m^2$. The eigenvalue statement is first-order perturbation
+theory for the lowest eigenvalue of $Q$, which is an eigenvalue with a smooth
+eigenvector (the form is of logarithmic order on the interval, bounded below
+with compact resolvent) and is taken simple, as the computations show. The
+expansions are of matrix elements $\int_0^Lk_\omega(t)S(t)\dd t$ against smooth
+$S$, which are analytic in $\omega$: the spike integrates against a constant to
+$\epsilon^\omega$.
+\end{proof}
+
+\begin{proposition}[The Galerkin defect]\label{prop:galerkin}
+Let $E_N$ be the span of the first $N$ basis functions, $P_N$ its projection,
+$V_N=P_NV_{\omega,L}P_N$, and $f_N$ the normalized minimizer of $Q$ on $E_N$
+with eigenvalue $m_L^{(N)}$. Then
+\begin{equation}\label{eq:galerkin-defect}
+ D_N:=I_N-V_N^{\mathsf T}V_N=P_ND_{\omega,L}P_N+P_NV^*(I-P_N)VP_N\ \geq\ P_ND_{\omega,L}P_N ,
+\end{equation}
+and
+\begin{equation}\label{eq:galerkin-expansion}
+ \frac{\ip{f_N}{D_Nf_N}}{2\omega}=m_L^{(N)}-\omega\big(m_L^{(N)}\big)^2
+ +\frac\omega2\Big(\norm{(I-P_N)Af_N}^2-\norm{(I-P_N)Qf_N}^2\Big)+O(\omega^2).
+\end{equation}
+If the defect is instead computed \emph{nested} in $E_{N'}\supset E_N$,
+$D_{N\subset N'}:=I_N-(V_{N'}^{\mathsf T}V_{N'})_{N\times N}=P_N(I-V^*P_{N'}V)P_N$,
+the term $\frac\omega2\norm{(I-P_N)Gf_N}^2$ hidden in
+\eqref{eq:galerkin-expansion} is replaced by $\frac\omega2\norm{(I-P_{N'})Gf_N}^2$,
+which tends to zero as $N'\to\infty$.
+\end{proposition}
+\begin{proof}
+$V_N^{\mathsf T}V_N=P_NV^*P_NVP_N$ and $P_N\leq I$ give the identity and the
+inequality. On $f_N\in E_N$, $(I-P_N)Vf_N=-\omega(I-P_N)Gf_N+O(\omega^2)$, so the
+extra term is $\omega^2\norm{(I-P_N)Gf_N}^2+O(\omega^3)$. In
+Proposition~\ref{prop:secondorder} evaluated on $f_N$, which is an eigenvector
+of $P_NQP_N$ but not of $Q$, write $Qf_N=m_L^{(N)}f_N+(I-P_N)Qf_N$; then
+$\norm{Qf_N}^2=(m_L^{(N)})^2+\norm{(I-P_N)Qf_N}^2$ and
+$\re\ip{Qf_N}{Af_N}=\re\ip{(I-P_N)Qf_N}{(I-P_N)Af_N}$, since $\re\ip{f_N}{Af_N}=0$. Collecting these with
+$\norm{(I-P_N)(Q+A)f_N}^2$ expanded gives \eqref{eq:galerkin-expansion}.
+\end{proof}
+
+So a finite-basis computation must show a \emph{positive} first-order excess
+over $m_L^{(N)}$, dominated by the energy of $Af_N$ outside the basis. $Af_N$
+has logarithmic endpoint singularities from the Hilbert transform and nonzero
+endpoint values from the shifted copies, so its sine coefficients decay like
+$1/n$ and the excess should fall like $1/N'$ under nesting. Both predictions
+are tested below.
+
+\begin{proposition}[The first-order tail]\label{prop:tail}
+For $L>0$, integrating over $[0,L)$,
+\begin{equation}\label{eq:tail}
+ \lim_{\omega\downarrow0}\frac1\omega\int_L^\infty k_\omega(t)\dd t
+ =8\sinh\frac L2-2\sum_{n<e^L}\frac{\Lambda(n)}{\sqrt n}-\log2\pi-\gamma_E
+ -\int_0^L\Big(2\gammak(u)-\frac1u\Big)\dd u-\log L .
+\end{equation}
+At $L=\log3$ the five terms are $4.618802$, $-0.980258$, $-1.837877$,
+$-0.577216$, $-0.592935$, total $0.630516$.
+\end{proposition}
+\begin{proof}
+$\int_0^\infty k_\omega=K_\omega(0)=\xi(\frac12-\omega)/\xi(\frac12+\omega)=1$
+for every $\omega$, so the tail is minus the head, and
+$\partial_\omega|_0\int_0^Lk_\omega=\int_0^Lk_1$ with $k_1=-g_0$ of
+\eqref{eq:g0}. The pole terms integrate to
+$-2\int_0^L(e^{-t/2}+e^{t/2})\dd t=-8\sinh\frac L2$, the constant to $\log\pi$,
+the comb to $2\sum_{n<e^L}\Lambda(n)n^{-1/2}$, and the finite part, by
+\eqref{eq:fp} with $\phi=\mathbf 1_{[0,L)}$ and $E_1(x)=-\gamma_E-\log x+O(x)$,
+to $\gamma_E+\log2+\int_0^L(2\gammak-\frac1u)\dd u+\log L$. Collect and negate.
+\end{proof}
+
+This checks the mass of the assembled kernel by a formula that integrates the
+poles, the digamma and the primes directly, where the kernel carries them
+through the Beta convolution and two exponential smoothings; it uses no zeros.
+
+\subsection{Results}\label{sec:results}
+
+All runs: $L=\log3$ exactly, atoms $n\in\{1,2\}$, 40 digits, tanh--sinh step
+$1/h=16$ unless stated. In the same basis, $m_L^{(16)}=6.84655\times10^{-8}$,
+$m_L^{(24)}=6.24751\times10^{-8}$, $m_L^{(32)}=6.21505\times10^{-8}$ (even
+block); the converged value is $5.66\times10^{-8}$ \cite{FrameBound}
+(recorded $5.54\times10^{-8}$ \cite{CriticalPath}), so the sine basis is far
+from converged at these $N$, and every comparison is \emph{within a basis},
+which is what Proposition~\ref{prop:galerkin} is about.
+
+\begin{table}[ht]\centering\small
+\caption{The $\omega$-sweep at $N=24$. The last column is
+$(1-\norm{P_NVe_1}^2)/(2\omega\,Q_L[e_1])$.}\label{tab:sweep}
+\begin{tabular}{@{}lccccc@{}}
+\toprule
+$\omega$ & $1-\norm{V_N}$ & $\lambda_{\min}(D_N)$ & $\lambda_{\min}(D_N)/2\omega$ & ratio to $m_L^{(24)}$ & $e_1$ ratio\\
+\midrule
+0.002 ($1/h=20$) & $1.2460\times10^{-10}$ & $2.49192\times10^{-10}$ & $6.22980\times10^{-8}$ & 0.99717 & 0.99883\\
+0.01 & $6.2543\times10^{-10}$ & $1.25087\times10^{-9}$ & $6.25435\times10^{-8}$ & 1.00109 & 0.99465\\
+0.02 & $1.2606\times10^{-9}$ & $2.52117\times10^{-9}$ & $6.30292\times10^{-8}$ & 1.00887 & 0.99057\\
+0.05 & $3.2101\times10^{-9}$ & $6.42021\times10^{-9}$ & $6.42021\times10^{-8}$ & 1.02764 & 0.98581\\
+0.1 & $6.6085\times10^{-9}$ & $1.32171\times10^{-8}$ & $6.60854\times10^{-8}$ & 1.05779 & 1.00203\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\paragraph{Contraction and the first-order law.} $V_N$ is a strict contraction
+at every $\omega$ (Table~\ref{tab:sweep}), with $1-\norm{V_N}=\frac12\lambda_{\min}(D_N)$
+to all printed digits as it must be for $\lambda_{\min}\ll1$, and
+$\lambda_{\min}(D_N)/2\omega\to m_L^{(24)}$ as $\omega\downarrow0$. The transfer
+side, assembled from $k^\Gamma_\omega$, $\ct_n$ and $R_\omega$, and the form
+side, assembled from \eqref{eq:target}, agree at first order in $\omega$ to the
+precision of the quadrature. On $e_1$, which is not an eigenvector, the
+correction is genuinely of order $\omega$, as \eqref{eq:secondorder} predicts
+for a vector on which $\ip{Qe_1}{Ae_1}\neq0$.
+
+\paragraph{The quadrature floor.} The step $1/h=16$ resolves
+$\lambda_{\min}(D_N)$ to about $6\times10^{-12}$: this is $2.5\%$ of the signal
+at $\omega=0.002$ (where the $1/h=16$ run gave ratio $0.97507$ and the
+$1/h=20$ run $0.99717$) and $\pm0.5\%$ at $\omega=0.01$ (where $N=24$ and
+$N=32$ gave deviations of opposite sign, $+0.11\%$ and $-0.50\%$). At $1/h=20$
+the floor is below $10^{-12}$; at $1/h=12$ it exceeds the signal at
+$\omega=0.002$. The mass $\int_0^Lk_\omega$ agrees between $1/h=16$ and $20$ to
+$10^{-15}$, so the floor is in the oscillatory matrix elements, not the mass.
+
+\begin{table}[ht]\centering\small
+\caption{Basis size and the nested defect at $\omega=0.1$ (floor $0.05\%$ of
+the signal), and one row at $\omega=0.05$.}\label{tab:nested}
+\begin{tabular}{@{}lcccc@{}}
+\toprule
+$\omega$ & $N$ & $N'$ (nested) & ratio to $m_L^{(N)}$ & excess\\
+\midrule
+0.1 & 16 & -- & 1.06508 & 6.5\%\\
+0.1 & 24 & -- & 1.05779 & 5.8\%\\
+0.1 & 32 & -- & 1.04540 & 4.5\%\\
+0.1 & 24 & 40 & 1.03792 & 3.8\%\\
+0.1 & 24 & 64 & 1.02035 & 2.0\%\\
+0.05 & 24 & -- & 1.02764 & 2.8\%\\
+0.05 & 24 & 64 & 1.00612 & 0.6\%\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\paragraph{The second-order behaviour.} The excess over $m_L^{(N)}$ at
+$\omega\geq0.02$ is positive and close to linear in $\omega$ (relative slopes
+$0.44,0.55,0.58$ at $\omega=0.02,0.05,0.1$), which is the Galerkin term of
+Proposition~\ref{prop:galerkin}, not the $-\omega m_L$ of
+Proposition~\ref{prop:secondorder}. Table~\ref{tab:nested} tests the
+prediction: the excess decreases with $N$, and under nesting at fixed $N=24$
+falls as $5.8\to3.8\to2.0\%$ for $N'=24,40,64$, against $5.8\times24/N'=5.8,3.5,2.2\%$
+for a $1/N'$ law. Fitting the nested-64 excesses at $\omega=0.05,0.1$ to
+$\alpha\omega+\beta\omega^2$ gives $\alpha\approx0.04$ and $\beta\approx1.6$:
+the linear artefact is essentially gone at $N'=64$, and what remains is
+$\lambda_{\min}(D)/2\omega\approx m_L(1+1.6\,\omega^2)$, a second-order
+coefficient of order unity relative to $m_L$, where the a-priori estimate
+$O(\omega^2\kappa_L^2)$ with $\kappa_{\log3}=61$ \cite{CriticalPath} allows
+$3.7\times10^3$. The same trend appears on $e_1$: its ratio at $\omega=0.1$ is
+$1.0273,1.0020,0.9876$ for $N=16,24,32$, crossing below one as the truncation
+term dies and the genuine $-\omega(\dots)$ term remains.
+
+\begin{table}[ht]\centering\small
+\caption{The mass on the window. Proposition~\ref{prop:tail} gives $0.630516$
+for the $\omega\to0$ limit of the last column; linear extrapolation of the
+first two rows gives $0.63052$.}\label{tab:mass}
+\begin{tabular}{@{}lcc@{}}
+\toprule
+$\omega$ & $\int_0^Lk_\omega$ & $(1-\int_0^Lk_\omega)/\omega$\\
+\midrule
+0.002 & 0.9987404683 & 0.629766\\
+0.01 & 0.9937323187 & 0.626768\\
+0.02 & 0.9875394433 & 0.623028\\
+0.05 & 0.9694073969 & 0.611852\\
+0.1 & 0.9406626582 & 0.593373\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\paragraph{The mass.} Table~\ref{tab:mass} against Proposition~\ref{prop:tail}:
+the assembled kernel --- Beta convolution, comb, two exponential smoothings,
+local coordinates, substitution, tanh--sinh --- has the right first-order
+mass beyond the horizon to five digits, by a formula that knows nothing of the
+assembly.
+
+\subsection{Reading}
+
+The elementary assembly is validated end to end. The kernel side and the form
+side agree at the first-order law to the precision of the quadrature; their
+second-order disagreement is the one Proposition~\ref{prop:galerkin}
+prescribes and dies as prescribed; and the mass agrees with an independent
+closed form. There is now a working instrument that computes
+$\norm{V_{\omega,L}}$, $\lambda_{\min}(D_{\omega,L})$ and their
+$\omega$-dependence from the integers below $e^L$ and elementary functions.
+
+What it says at $L=\log3$ is what Proposition~\ref{prop:dichotomy} says it
+must: contraction, with margin $\omega m_L$ to first order and a positive
+second-order correction. Nothing about the zeros is learned at one horizon
+where $m_L>0$ is already known; the dichotomy is about all horizons, and the
+margins at $\log5,\log7$ are $10^{-17},10^{-27}$, beyond what a
+double-precision registered check can resolve and within what this instrument
+can at 40 digits, at a cost that grows with the number of atoms rather than
+with $L$.
+
+Proposition~\ref{prop:secondorder} is worth keeping for its own sake: the
+defect of the compressed all-pass is, to second order, $2\omega Q-\omega^2(2Q^2+[Q,A])$,
+so the only first-order correction to the first-order law at the minimizer is
+$-\omega m_L^2$, and the commutator of the Weil form with its skew partner ---
+the compressed Hilbert transform of the interval --- governs the second-order
+behaviour away from the minimizer.

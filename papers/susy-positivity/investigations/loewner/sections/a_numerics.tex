@@ -1,0 +1,76 @@
+\section{Programmes, records, and numerical lessons}\label{app:numerics}
+
+All programmes live in \texttt{numerics/exploratory/} of the investigation
+folder, use \texttt{mpmath}, and are unregistered in the sense of the
+program's conventions: nothing replays them automatically, and every value is
+either an identity checked to working precision or a labelled quadrature.
+Nothing here is a positivity certificate.
+
+\paragraph{\texttt{decomposition\_checks.py}} (30 digits, record
+\texttt{decomposition\_checks\_omega0.1.json}), at $\omega=0.1$: complete
+monotonicity of $\Kh_\omega$ through six derivatives at $p\in\{0.8,1,2\}$;
+$K_\omega=B_b\Kh_\omega$ at five complex $p$ to relative $2\times10^{-31}$;
+$\Kt_{1/2}(p)=\varphi(\frac{p+1}2)$, $\Kh_{1/2}=\Kt_{1/2}$ and $K_{1/2}=B_1\varphi$
+to $10^{-31}$, and $\ct_n|_{\omega=1/2}=\varphi_{\mathrm{Euler}}(n)/n$ for
+$n<200$ in exact rationals; \eqref{eq:betamoments} by Beta moments and by the
+Gamma-ratio form to $4\times10^{-31}$, with the Beta density pulled back to
+$k^\Gamma_\omega$ pointwise; the EMA identity \eqref{eq:ema} against the
+$R_\omega$ assembly at four points to $2\times10^{-31}$, with $\kh_\omega>0$
+there; and the first-order comb weights $\ct_n/(2\omega\Lambda(n)n^{-1/2})$ at
+$\omega=0.01$ within $1.00001$--$1.00006$ for $n=2,3,5,7$, and
+$\ct_6/\omega^2=1.2436$ against $4\log2\log3/\sqrt6$.
+
+\paragraph{\texttt{transfer\_kernel.py}} (record
+\texttt{transfer\_kernel\_omega0.1.json}): the kernel $k_\omega$ assembled from
+$k^\Gamma_\omega$, $\ct_n$ and $R_\omega$, with checks of the Laplace
+transforms, the Dirichlet coefficients, $R_\omega\Kt_\omega=K_\omega$, complete
+monotonicity, the first-order law \eqref{eq:firstorder}, a kernel table, and
+the truncated kernel transform against $K_\omega(p)$, which converges
+geometrically in the cutoff.
+
+\paragraph{\texttt{contraction\_margin.py}} (40 digits; usage
+\texttt{omega L N [1/h] [Nbig]}, with \texttt{L} written as \texttt{log3}
+parsed exactly and atoms taken with $\log n<L$ strictly): the assembly of
+Section~\ref{sec:assembly}. The closed form \eqref{eq:S} is checked against
+quadrature to $10^{-41}$. The tanh--sinh rule uses nodes
+$u_k=\frac U2(1+\tanh(\frac\pi2\sinh kh))$, $|k|\leq4.5/h$, on each interval
+$(0,U)$, $U=(\log n_1-\log n_0)^\omega$, after the substitution
+$\tau=u^{1/\omega}$; with $1/h=16$ this is 262 kernel evaluations, about 40
+seconds, the whole cost of a run. $m_L^{(N)}$ and $Q_L[e_1]$ come from
+\texttt{weil\_sine\_basis.py} of the Wilson-lines exploratory folder, in
+closed form. With a fifth argument $N'>N$ the matrix is assembled at $N'$ and
+the nested defect of Proposition~\ref{prop:galerkin} is reported. Records
+\texttt{cm\_om\{omega\}\_log3\_N\{N\}.json}, with suffixes \texttt{\_h20} and
+\texttt{\_nested\{N'\}} where used, for every row of
+Tables~\ref{tab:sweep}--\ref{tab:mass}.
+
+\paragraph{Lessons.} Recorded so that the registered version does not
+rediscover them.
+\begin{enumerate}
+\item \emph{Local coordinates.} The spike
+$k^\Gamma_\omega(\tau)\sim\omega\pi^\omega2^\omega\tau^{\omega-1}$ puts half its
+mass below $\tau=2^{-1/\omega}$. Any formulation that forms the global time
+$t=\log n_0+\tau$ and recovers $\tau$ by subtraction loses it at every finite
+precision; the kernel must be evaluated as a function of $\tau$. Symptom:
+$\norm V>1$ by $10^{-3}$ and a first-order check off by a factor 100.
+\item \emph{The substitution and the rule.} $\tau=u^{1/\omega}$ removes the
+singularity exactly; after it a tanh--sinh rule converges doubly
+exponentially, but the step needed grows as $\omega$ shrinks. $1/h=16$ gives a
+floor of $6\times10^{-12}$ in $\lambda_{\min}(D)$, $1/h=20$ below $10^{-12}$;
+$1/h=12$ is insufficient at $\omega\leq0.002$. Write the rule out; a library's
+node generator may not follow its documentation.
+\item \emph{Atoms at the horizon.} With $L$ entered as a decimal slightly above
+$\log3$, or formed at default precision before the working precision is set,
+the atom $n=3$ enters with a sliver $[\log3,L)$ of length $10^{-17}$ and
+carries $(10^{-17})^\omega$ of its spike mass --- $68\%$ of it at $\omega=0.01$.
+This changes $\int_0^Lk_\omega$ (to $1.0027$ from $0.9937$) but not the
+operator, because $S_{jk}(L)=0$ for all $j,k$. Parse $L=\log n$ exactly, set
+the precision first, take $\log n<L$ strictly. The record
+\texttt{cm\_om0.01\_log3\_N16\_h12\_edgeatom\_stale.json} is that run, kept as
+the example.
+\item \emph{Sign of the Galerkin bias.} $D_N\geq P_ND_{\omega,L}P_N$: the plain
+Galerkin defect overestimates at first order in $\omega$ by the energy of
+$Af_N$ outside the basis; the nested defect removes most of it at the cost of
+assembling $V$ at $N'$. Compare within a basis, never a Galerkin
+$\lambda_{\min}(D_N)$ against a converged $m_L$.
+\end{enumerate}
