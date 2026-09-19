@@ -2,6 +2,11 @@
 
 ## Active endpoint-matter continuation
 
+Three standard-library programs supply **1,535 finite cases**, registered in
+[`validation/endpoint_matter.py`](../validation/endpoint_matter.py). The registry
+binds the research notes, review, handoff, scripts and records separately from
+the unchanged manuscript build record.
+
 [check_endpoint_matter.py](check_endpoint_matter.py) supplies **154 finite checks**
 in seven groups: parity kernels, difference energy, subtracted transform,
 weight variation, semicircle Clifford algebra, shifted determinant and generator,
@@ -14,7 +19,7 @@ python3 validation/endpoint_matter.py check --replay
 ```
 
 It uses only the standard library and writes JSON to standard output. These
-checks support the two new research notes; they are not yet registered as
+checks support the research continuation; they are not yet registered as
 manuscript contents. On manuscript integration, migrate them into `drafts.py`
 and rebuild and review the manuscript normally.
 
@@ -33,8 +38,19 @@ table of the bulk BPS solution on upper and lower semicircles; the common specia
 supercharge of every arc through the origin; and the two-circle determinants that
 separate the through-the-defect network from the within-defect one. Record:
 [reflection-networks-checks.json](records/reflection-networks-checks.json).
-**Not yet registered** in `validation/endpoint_matter.py`; see the continuation
-note. Written by Claude Fable 5.1. Zeta is evaluated nowhere.
+Registered in `validation/endpoint_matter.py` on 19 September. Written by Claude
+Fable 5.1. These cases do not check its original Gram, spike or protection
+claims; see the [review](../reviews/review_codex_2026-09-18.md).
+
+[check_angular_regulator.py](check_angular_regulator.py) adds **185 finite cases**
+for [angular smearing and the Robin model](../notes/ANGULAR_SMEARING_AND_ROBIN_MODEL_20260919.md):
+normalization and moments of the sphere profile, direct double sphere
+integration, finite Gram matrices, position/Fourier difference energies,
+cutoff asymptotics, arbitrary-direction bulk Clifford conditions, and the
+boundary Gaussian with its normalized gamma ratio. The
+[record](records/angular-regulator-checks.json) is registered and replayed.
+Written by Codex. Analytic domain and limit proofs are in the note; these
+finite checks establish neither interacting gauge-theory positivity nor RH.
 
 ## Legacy manuscript checks
 

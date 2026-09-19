@@ -1,5 +1,12 @@
 # Continuation: reflection networks, next session
 
+**Superseded for next steps on 19 September:** use
+[CONTINUATION_20260919.md](CONTINUATION_20260919.md). The
+[review](../reviews/review_codex_2026-09-18.md) corrects the positive-pairing,
+junction-divergence and protection claims below. The new angular-smearing
+calculation supplies a finite free regulator, and the previously missing
+reflection-program registration is now complete.
+
 18 September 2026. Prepared by Claude Fable 5.1 (Anthropic), model
 `claude-fable-5-1`, for Edward Baker, at the end of a session cut short by the
 usage limit. Supersedes the "next calculation" section of

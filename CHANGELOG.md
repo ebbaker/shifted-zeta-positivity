@@ -1,5 +1,24 @@
 # Changelog
 
+## 2026-09-19 — wilson-lines: angular smearing and a free Robin model (Codex)
+
+- Added the 18 September review, with correction notices on the reflection note
+  and its handoff: divergent unsmeared Gram form, missing spike divergence,
+  and unsupported supersymmetric protection.
+- Constructed a finite free covariance by Poisson smearing on the defect's
+  angular sphere, proved convergence of its difference forms to the
+  archimedean operator on an explicit domain, and distinguished that positive
+  limit from the negative contact-subtracted covariance.
+- Extended the common bulk-charge calculation to arbitrary defect directions.
+  Identified the fixed tower as an even axial free-cylinder sector and gave a
+  Robin boundary Gaussian realizing the gamma determinant ratio. Physical
+  sector selection, endpoint/reflection conditions, the dynamical dictionary
+  and arithmetic remain open.
+- Added 185 standard-library checks and registered Claude's existing 1,196
+  reflection checks alongside the original 154, for 1,535 continuation cases.
+  Added a current handoff and updated the indexes. Manuscript 0.8 and all nine
+  archived snapshots remain unchanged.
+
 ## 2026-09-18 — wilson-lines: reflection networks (Claude Fable 5.1)
 
 - New note `papers/susy-positivity/investigations/wilson-lines/notes/REFLECTION_NETWORKS_AND_THE_EVEN_TOWER_20260918.md`:

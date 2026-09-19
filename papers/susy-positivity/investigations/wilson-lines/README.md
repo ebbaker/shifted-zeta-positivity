@@ -1,26 +1,32 @@
 # Wilson lines: deformation flows for the shifted Weil family
 
-**Current status — 18 September 2026: endpoint-matter continuation active.**
+**Current status — 19 September 2026: angular smearing and a free boundary model.**
 The unchanged manuscript is version **0.8, 47 pages**. Its pre-continuation
 state is preserved in `drafts/2026-09-18-v08-endpoint-baseline/`.
-Start with the [reflection-network note](notes/REFLECTION_NETWORKS_AND_THE_EVEN_TOWER_20260918.md) and its [continuation](notes/CONTINUATION_20260918_CLAUDE_SESSION2.md), then [Endpoint matter](notes/ENDPOINT_MATTER_CONTINUATION_20260918.md),
-then [Endpoint transports and the shifted tower](notes/ENDPOINT_TRANSPORT_AND_SHIFT_20260918.md).
+Start with [Angular smearing and the Robin model](notes/ANGULAR_SMEARING_AND_ROBIN_MODEL_20260919.md),
+the [current handoff](notes/CONTINUATION_20260919.md), and the
+[18 September review](reviews/review_codex_2026-09-18.md), then the
+[reflection-network note](notes/REFLECTION_NETWORKS_AND_THE_EVEN_TOWER_20260918.md),
+[Endpoint matter](notes/ENDPOINT_MATTER_CONTINUATION_20260918.md), and
+[Endpoint transports and the shifted tower](notes/ENDPOINT_TRANSPORT_AND_SHIFT_20260918.md).
 These notes supersede the old next-step recommendations and qualify the
 protected zero-delay claim; they are not yet integrated into the manuscript.
 
-The even image average of the dimension-one-half endpoint propagator is exactly
-`n_gamma(u)=exp(-u/2)/(1-exp(-2u))`. A determinant ratio on that fixed tower
-reproduces the full archimedean shift, with the conductor normalization supplied.
-The simplest gauge-invariant pairwise semicircles match the leading kernel but,
-with a fixed scalar coupling, do not share one bulk supercharge across the full
-two-variable family. A physical positive gluing and the prime terms remain open.
-The new [154 finite checks](numerics/records/endpoint-matter-checks.json) pass;
+Angular smearing of free endpoints gives the finite positive covariance
+`C_rho(u)=exp(-|u|/2)/(1-rho^4 exp(-2|u|))`. Removing the smearing yields a
+closed positive difference form with the archimedean multiplier; the
+contact-subtracted covariance has the opposite sign and is not positive.
+The common-reference arcs retain one bulk charge for all smearing directions.
+A Robin boundary Gaussian on the even axial sector of a free cylinder scalar
+reproduces the gamma determinant ratio. Its sector selection and dynamical
+interpretation, physical endpoint supersymmetry/reflection, and arithmetic
+remain open. The [1,535 finite continuation checks](numerics/README.md) pass;
 [continuation provenance and replay](validation/endpoint_matter.py) are separate
 from the unchanged manuscript build record.
 
 Read the older result summaries below with the
 [17 September review](reviews/review_claude-fable-5-1_2026-09-17.md)
-and these two continuation notes. In particular, the modular-surface rejection,
+and the current continuation notes. In particular, the modular-surface rejection,
 the claimed arithmetic Gram-point gap, and the use of a divergent correlator
 formula at protected dimensions must not be treated as current exclusions.
 
@@ -46,8 +52,10 @@ background; it cites the background by equation number for the shifted family an
 the two companion manuscripts for results quoted by number. Reviewed versions are
 preserved in [drafts/](drafts/README.md). See the [build guide](BUILD.md).
 
-**Nothing here is a construction. No source is built, no positivity is proved,
-and nothing assumes the Riemann hypothesis.**
+**No full arithmetic source or transfer is constructed, and nothing assumes
+the Riemann hypothesis.** The current notes construct a regulated free
+covariance, its positive difference form and an auxiliary free boundary model;
+these do not establish positivity of the full Weil form.
 
 ## Earlier results, subject to the corrections above
 
@@ -183,28 +191,27 @@ upper bounds and cannot be fitted to a decay law. See the
 | [Dated drafts](drafts/README.md) | Complete buildable snapshots with hashes. |
 | [Deformation flow and the shift](notes/DEFORMATION_FLOW_AND_THE_SHIFT_20260917.md) | The opening note, written before the manuscript; carries a status header saying which of its two claims the manuscript supersedes. |
 | [Notes index](notes/README.md) | Navigation and status of each note. |
-| [Checks and records](numerics/README.md) | One reproducible program and its scoped results. |
-| [Reviews](reviews/README.md) | The 17 September review and its scope qualifications. |
+| [Checks and records](numerics/README.md) | Three continuation programs, 1,535 finite cases, and the preserved legacy checks. |
+| [Reviews](reviews/README.md) | The 17 and 18 September reviews and their scope qualifications. |
 
 ## What is open
 
-1. **Positive endpoint gluing --- constructed, conditionally.** The through-the-defect
-   reflection network of the [reflection-network note](notes/REFLECTION_NETWORKS_AND_THE_EVEN_TOWER_20260918.md)
-   is a gauge-invariant Gram pairing with free kernel exactly $n_\gamma$ and one
-   common bulk supercharge on its kets; its positivity rests on OS positivity of
-   the interface under $x_3\to-x_3$, which is the first open audit.
-2. **Common supersymmetry with endpoint matter.** The fixed-scalar-coupling
-   two-variable semicircle family has failed the necessary bulk test. Test
-   contour-dependent scalar couplings or a different network together with
-   the defect endpoint constraints; individual BPS status is insufficient.
+1. **Physical endpoint supersymmetry.** The common-reference arcs share a bulk
+   charge, including all angular smearing directions. Solve the defect endpoint
+   conditions and physical spinor constraints with one polarization.
+2. **Physical reflection and interacting gluing.** The regulated free Gram
+   kernel and its closed difference form are established. Derive the correct
+   antilinear reflection, test its Gaussian sector, and handle the scalar-sign
+   junction before claiming positivity in the interacting interface theory.
 3. **The full interaction correction in a common local scheme.** Distinguish a
    finite normalization at one scale from protection of the endpoint weight
    across all separations. The continuation gives the exact kernel variation
    produced by an anomalous weight.
-4. **Physical shift and arithmetic.** The fixed even tower supplies the Gamma
-   ratio algebraically. Derive, rather than insert, its physical determinant,
-   the conductor, prime atoms, and pole/contact terms before claiming a
-   realization of the full transfer or contraction.
+4. **Physical shift and arithmetic.** The projected free Robin model supplies
+   the gamma ratio. Explain the one-copy even axial sector (a local mass on the
+   full sphere retains angular multiplicities) and the Laplace-frequency
+   dictionary. Derive the conductor, prime atoms and pole/contact terms before
+   claiming the full transfer or contraction.
 
 The earlier frame-bound and delay-survey questions remain historical side
 questions; see the review before reviving their numerical conclusions.

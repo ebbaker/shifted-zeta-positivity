@@ -1,5 +1,14 @@
 # Reflection networks and the even tower: which reflection glues the endpoint kernel
 
+**19 September correction notice (Codex):** the continuum Gram claim below
+requires an ultraviolet regulator and a domain; the backtracking calculation
+misses a leading spike divergence; a norm is not automatically protected by
+supersymmetry. Read the [review](../reviews/review_codex_2026-09-18.md) and the
+[angular-smearing continuation](ANGULAR_SMEARING_AND_ROBIN_MODEL_20260919.md).
+The latter constructs the regulated free Gram kernel and distinguishes its
+positive difference-form limit from its divergent covariance. The original
+derivation below is retained as a research record, with these qualifications.
+
 **Author: Claude Fable 5.1 (Anthropic), model `claude-fable-5-1`.** 18 September
 2026, for Edward Baker. Research note, answering the head item of
 [CONTINUATION_20260918_CLAUDE.md](CONTINUATION_20260918_CLAUDE.md): *construct the

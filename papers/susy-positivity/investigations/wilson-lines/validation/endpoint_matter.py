@@ -2,7 +2,8 @@
 """Separate registry/provenance for research notes beyond manuscript 0.8.
 
 Does not alter BUILD_RECORD.json, archived snapshots, or legacy check records.
-Model: OpenAI GPT-6 (Codex). Standard library only.
+Models: OpenAI GPT-6 (Codex), and Claude Fable 5.1 as credited in its notes.
+Standard library only.
 """
 import argparse
 import hashlib
@@ -12,10 +13,17 @@ import subprocess
 import sys
 
 ROOT = Path(__file__).resolve().parents[1]
-CHECKS = {'check_endpoint_matter.py': 'endpoint-matter-checks.json'}
+CHECKS = {'check_endpoint_matter.py': 'endpoint-matter-checks.json',
+          'check_reflection_networks.py': 'reflection-networks-checks.json',
+          'check_angular_regulator.py': 'angular-regulator-checks.json'}
 RECORD = ROOT / 'ENDPOINT_MATTER_RECORD.json'
 FILES = ['notes/ENDPOINT_MATTER_CONTINUATION_20260918.md',
          'notes/ENDPOINT_TRANSPORT_AND_SHIFT_20260918.md',
+         'notes/REFLECTION_NETWORKS_AND_THE_EVEN_TOWER_20260918.md',
+         'notes/CONTINUATION_20260918_CLAUDE_SESSION2.md',
+         'notes/ANGULAR_SMEARING_AND_ROBIN_MODEL_20260919.md',
+         'notes/CONTINUATION_20260919.md',
+         'reviews/review_codex_2026-09-18.md',
          'validation/endpoint_matter.py',
          'numerics/records/endpoint-baseline-replay-audit.json']
 for script, record in CHECKS.items():
@@ -32,8 +40,9 @@ def main():
     parser.add_argument('--replay', action='store_true')
     args = parser.parse_args()
     if args.command == 'record':
-        payload = {'schema': 1, 'date': '2026-09-18',
-                   'title': 'Endpoint-matter continuation', 'model': 'OpenAI GPT-6 (Codex)',
+        payload = {'schema': 1, 'date': '2026-09-19',
+                   'title': 'Endpoint matter, reflection networks and angular smearing',
+                   'model': 'OpenAI GPT-6 (Codex); Claude Fable 5.1 (as credited in the reflection-network note)',
                    'manuscript_baseline': 'drafts/2026-09-18-v08-endpoint-baseline',
                    'sha256': {name: digest(ROOT/name) for name in FILES},
                    'scope': 'Research-note identity; no manuscript/PDF update or proof certification.'}
