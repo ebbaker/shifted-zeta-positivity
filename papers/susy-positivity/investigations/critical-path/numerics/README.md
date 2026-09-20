@@ -1,4 +1,36 @@
-# EMA controls
+# Arithmetic EMA anchor certificate
+
+[certify_ema_original_anchor.py](certify_ema_original_anchor.py) is a
+standard-library-only, outward rational interval certificate. It proves the
+finite scalar and matrix bounds used in the [anchor note](../notes/EMA_TOWER_ORIGINAL_TRANSFER_ANCHOR_20260920.md)
+to establish Q(0,1/2) >= I/40 and the original cumulative defect
+D(0.001,1/2) >= 0.000049998 I on every L2 input. The finite tower has 32
+prescribed scales; 16 cosine head modes and an explicit infinite-complement
+bound complete the proof. No output smoother is used.
+
+- [40-digit record](records/ema-original-anchor-20260920.json).
+- [60-digit replay](records/ema-original-anchor-60digits-20260920.json).
+- [Separate reduction checker](check_ema_anchor_reduction.py) and its
+  [record](records/ema-anchor-reduction-checks-20260920.json): 130 Fraction-based
+  interval controls, rejection of an indefinite matrix, and direct-response
+  quadrature agreement below 3.7e-14. NumPy is needed only for this checker.
+- [Review and anchor provenance](records/ema-review-anchor-provenance-20260920.json).
+
+From the repository root, writing fresh replay records outside the repository:
+
+```sh
+python3 papers/susy-positivity/investigations/critical-path/numerics/certify_ema_original_anchor.py --output /tmp/ema-original-anchor-replay.json
+python3 papers/susy-positivity/investigations/critical-path/numerics/certify_ema_original_anchor.py --digits 60 --output /tmp/ema-original-anchor-replay-60.json
+python3 papers/susy-positivity/investigations/critical-path/numerics/check_ema_anchor_reduction.py --output /tmp/ema-anchor-reduction-replay.json
+```
+
+No floating eigenvalue is used for a certificate sign decision. The programs
+refuse assertion-disabled Python execution. Mathematical validity also depends
+on the analytic reduction in the note; independent specialist review remains
+outstanding. This is a fixed-window anchor, not an all-depth theorem or a new
+known positivity horizon. Historical records below are unchanged.
+
+## Earlier EMA controls
 
 [check_ema_controls.py](check_ema_controls.py) is a standalone Python
 standard-library diagnostic program. Its [record](records/ema-controls.json)
