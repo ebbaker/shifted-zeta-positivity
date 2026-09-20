@@ -1,11 +1,21 @@
 # Wilson-Loewner: contour evolution of endpoint Wilson observables
 
-Opened 19 September 2026. Working manuscript **0.1** (26 pages),
+Opened 19 September 2026. Working manuscript **0.2** (27 pages),
 *Wilson lines on Loewner-generated contours: defect supersymmetry,
 reflection, and endpoint positivity*: [PDF](manuscript.pdf),
 [LaTeX source](manuscript.tex), [build guide](BUILD.md), and
 [dated drafts](drafts/README.md). Written by OpenAI GPT-6 (Codex),
 for Edward Baker. Initial research remains in [notes](notes/README.md).
+
+Version 0.2 expands Section 2.2 to display the add-and-subtract identity
+defining the local remainder, its contribution to the archimedean integral,
+and the complete Weil form in difference-energy notation.
+
+The [shift-flow and critical-path research note](notes/SHIFT_FLOW_CUMULATIVE_STORAGE_AND_CRITICAL_PATH_20260919.md)
+records a proposed next direction: prescribe the exact arithmetic shift
+evolution, seek a reflected realization of cumulative contraction, and
+connect it to the existing depth--shift gluing criteria. It is a handoff
+to the new critical-path investigation, not a new result of this manuscript.
 
 The manuscript is self contained: it reproduces the RH target, arithmetic
 factorization, relevant free-field background and the three calculations,

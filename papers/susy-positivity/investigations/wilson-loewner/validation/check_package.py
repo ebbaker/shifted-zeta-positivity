@@ -95,7 +95,7 @@ def main():
         record = dict(schema_version=1,
                       generated_utc=datetime.now(timezone.utc).isoformat(),
                       author='OpenAI GPT-6 (Codex), for Edward Baker',
-                      status='Self-contained working manuscript 0.1 and dated snapshot; '
+                      status='Self-contained working manuscript 0.2 and dated snapshots; '
                              'research through direct bulk response; no independent review',
                       python=platform.python_version(),
                       scope='File identity and finite classical, chiral-defect, endpoint, '

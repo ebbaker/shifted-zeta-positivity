@@ -2,6 +2,7 @@
 
 | Snapshot | Contents and status |
 |---|---|
+| [2026-09-19-v02](2026-09-19-v02/README.md) | Working manuscript 0.2, 27 pages. Section 2.2 explicitly separates the local remainder and rewrites the full Weil form. Mathematical claims and numerical diagnostics are unchanged. |
 | [2026-09-19-v01](2026-09-19-v01/README.md) | Working manuscript 0.1, 26 pages. Self-contained background and three calculations, complete TeX sources, PDF, build provenance and 268 finite diagnostics. Interacting positivity and the full response remain open; no independent review. |
 
 The [current manuscript](../manuscript.pdf) can evolve. A dated snapshot is
