@@ -1,0 +1,113 @@
+\section{Endpoint polarization, vanishing, and the adjoint}\label{sec:endpoints}
+
+\subsection{The same-charge endpoint calculation}
+
+The physical scalar variations may be written
+$\delta q_m=2\bar\zeta_{im}\Psi_i$ and
+$\delta\bar q_m=2\bar\Psi_i\zeta_{im}$, with the related physical
+generator conjugation; see \cite[Appendix~C]{Baker}. Complexification
+does not make the actions on $q$ and $\bar q$ independently adjustable.
+For the plus-normal choice the annihilated scalar components are
+$q_2$ and $\bar q_1$.
+
+Here is a basis-independent polarization version of that statement.
+Suppress the nonzero spacetime/V factor of the charge, let its H factor
+be $a\in\C^2\setminus\{0\}$, and write
+\begin{equation}
+ q(v)=\sum_m v_mq_m,\qquad\bar q(w)=\sum_m w_m\bar q_m,
+ \qquad E=\begin{pmatrix}0&1\\-1&0\end{pmatrix}.
+\end{equation}
+In the generator convention just specified, the invariant tensors give
+\begin{equation}\label{eq:endpoint-tensors}
+ Q(a)q(v)\ \propto\ (a^TEv)\Psi,\qquad
+ Q(a)\bar q(w)\ \propto\ (a^Tw)\widetilde\Psi.
+\end{equation}
+This follows by rotating the representative conditions
+$Q_{i2}q_2=Q_{i2}\bar q_1=0$, with $E$ the fundamental antisymmetric
+tensor and the second contraction the fundamental/dual evaluation.
+The suppressed fermion components are arbitrary, so an operator
+annihilator requires the scalar coefficient to vanish.
+
+\begin{proposition}[Zero same-charge scalar pairing]\label{prop:endpoint-zero}
+For the constant fixed-H-factor charge above, nonzero ordinary
+fundamental and antifundamental scalar endpoints separately killed by
+that charge have zero mutual free contraction. They are not a physical
+adjoint pair.
+\end{proposition}
+\begin{proof}
+The two nullspaces in \eqref{eq:endpoint-tensors} are
+\begin{equation}
+ v=\lambda a,\qquad w=\mu Ea.
+\end{equation}
+The H tensor of the free propagator is $\delta_{mn}$, so its polarization
+factor is $v^Tw=\lambda\mu a^TEa=0$.
+Physical conjugation instead requires $w=v^*$ and gives
+$v^Tv^*=\norm v^2>0$. If $v=\lambda a\ne0$, then
+$a^Tv^*=\lambda^*\norm a^2\ne0$, so the physical conjugate is not
+killed by that same charge.
+\end{proof}
+
+In the representative basis, $q_2$ pairs nontrivially with $\bar q_2$,
+whereas its same-charge partner is $\bar q_1$. The physical adjoint
+pair is a useful nonzero control, but its dressed expectation still
+requires an independent positivity argument. At distinct endpoints
+the two supersymmetry variations contain independent fermion fields,
+so they cannot cancel each other as bare operator identities. In
+this ansatz the bulk line variation already vanishes separately.
+Junction matter or a fermionic superconnection would change the
+operator and require a new calculation.
+
+\subsection{The full bilinear has nonzero R charge}
+
+The fields in \eqref{eq:plane-connection} and \eqref{eq:all-connection}
+are neutral under the H rotation fixing $X_6$. Assign $q_1,q_2$ weights
+$+1/2,-1/2$. Then $\bar q_1$ also has weight $-1/2$ and
+\begin{equation}\label{eq:charged-bilinear}
+ \mathcal O_C=\bar q_1(b)U_M(C)q_2(a)
+\end{equation}
+has charge $-1$. If the vacuum and the definition of the operator
+preserve this symmetry, its expectation obeys
+\begin{equation}
+ \vev{\mathcal O_C}=e^{-\ii\alpha}\vev{\mathcal O_C}
+ \quad\text{for every }\alpha,\qquad\vev{\mathcal O_C}=0.
+\end{equation}
+This selection rule extends beyond the free contraction. It does not
+construct an ultraviolet-finite line operator. A compensating charged
+insertion, a different endpoint sector or a symmetry-breaking vacuum
+changes its assumptions. A fixed-endpoint deformation of the same
+neutral connection carries no compensating charge.
+
+\subsection{Why the original semicircle is a nonzero control}
+
+The restriction is to a constant Poincare charge and the displayed
+tangent map. On \eqref{eq:semicircle}, that map has scalar direction
+$n_8=-\sin\theta$, $n_6=\cos\theta$: the scalar normal direction
+changes sign along with the tangent. The common Poincare charge
+therefore keeps its H weight fixed.
+
+The original semicircle with constant scalar arclength coupling instead
+uses a position-dependent conformal Killing spinor. Its local endpoint
+conditions can select different H factors at the two ends. Baker's
+same-polarization semicircle has a nonzero leading endpoint contraction,
+proportional to $g^2/(4\pi|a-b|)$ in that paper's normalization
+\cite[Section~3.2]{Baker}. It is consequently a successful control
+outside Proposition~\ref{prop:endpoint-zero}, rather than a
+counterexample to it. This distinction is also why the rigidity theorem
+and tangent-map construction must not be conflated.
+
+\subsection{The adjoint changes the scalar map}
+
+For a tangent-coupled line and Hermitian matrix fields,
+\begin{equation}\label{eq:dagger}
+ U_M(C)^\dagger=U_{-M}(C^{-1}),\qquad
+ U_M(C^{-1})=U_M(C)^{-1}.
+\end{equation}
+To prove the first identity, reverse the product order in the discretized
+ordered exponential and conjugate each exponent. The gauge term changes
+sign under conjugation; after reversing the contour it is again
+$\ii A_\mu\dd x^\mu$, while the scalar one-form has acquired $-M$.
+The second identity is ordinary inverse transport. Thus contour
+reversal with unchanged tangent map gives the inverse, not the
+Hermitian adjoint. A reflected norm must implement the former identity
+with the appropriate spacetime pullback. This is the purpose of the
+next section.

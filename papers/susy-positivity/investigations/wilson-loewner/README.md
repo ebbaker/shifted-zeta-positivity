@@ -1,6 +1,6 @@
 # Wilson--Loewner: shifted-zeta evolution and Wilson lines
 
-Working manuscript pair **0.3**, 20 September 2026. Drafted for Edward
+Working manuscript pair **0.4**, 20 September 2026. Drafted for Edward
 Baker with OpenAI GPT-6 (Codex) assistance. Neither paper has received an
 independent mathematical review.
 
@@ -12,8 +12,15 @@ independent mathematical review.
   derivations, restrictions and diagnostics.
 - [Research continuation for the next chat](notes/RESEARCH_CONTINUATION_20260920.md):
   prioritized directions, first calculations, and remaining proof obligations.
+- [Fixed-window Wilson response calculation](notes/FIXED_WINDOW_WILSON_RESPONSE_OBSTRUCTION_20260920.md):
+  a causal normalized readout, full local/pole matching conditions, and a
+  scoped regularity obstruction; 31 additional research diagnostics.
 - [Build guide](BUILD.md), [dated manuscript pairs](drafts/README.md),
   and [restructuring handoff](notes/MANUSCRIPT_SPLIT_AND_PROGRAM_20260920.md).
+- [Adaptive EMA continuation](../critical-path/notes/EMA_SMOOTHING_AND_POSITIVITY_CONTINUATION_20260920.md):
+  evaluation of boundary and path smoothing, exact filter-energy identities,
+  sufficient limiting routes and 57 separate finite controls; not yet integrated
+  into the manuscript pair.
 
 The main exposition takes the exact arithmetic shift equation as the
 prescribed effective evolution. The research hypothesis is that an
@@ -33,25 +40,26 @@ loads a parent investigation or shared-background TeX source.
 |---|---|
 | Sections 1--3: proposal, normalization, exact shift and defect equations | S1: arithmetic conventions and complete Beta/comb/rational factorization |
 | Section 4: physical transfer hypothesis and insertion closure | S3--S4: contour dictionary, rigidity, full smooth variation and controls |
-| Section 5: spectral ingredients and constraints | S2, S5--S6: free kernel, Gaussian model, projectors and endpoint selection |
-| Section 6: cumulative positivity and reflected amplitudes | S7--S8: adjoint, reference junction, reflection tests and bulk response |
-| Section 7: depth--shift route and spatial gluing | S9: Schur, Cayley and simultaneous continuation algebra |
-| Section 8: research agenda and statement ledger | S10--S11: 268 finite diagnostics and provenance |
+| Section 5: fixed-window test and localization question | S10--S11: complete local/pole target, Gaussian response, scoped obstructions and auxiliary boson--fermion product |
+| Section 6: spectral ingredients and constraints | S2, S5--S6: free kernel, Gaussian model, projectors and endpoint selection |
+| Section 7: cumulative positivity and reflected amplitudes | S7--S8: adjoint, reference junction, reflection tests and bulk response |
+| Section 8: depth--shift route and spatial gluing | S9: Schur, Cayley and simultaneous continuation algebra |
+| Section 9: research agenda and statement ledger | S12--S13: 299 finite diagnostics and provenance |
 
 The companion retains the detailed former Sections 3--9, together with
 the arithmetic factorization and diagnostic appendix. Key constraints stay
 visible in the exposition: the subtraction sign, same-charge endpoint
 vanishing, conditional interacting reflection, and the incomplete physical
-response. Historical unified versions 0.1 and 0.2 are unchanged.
+response. The current pair has 18 exposition pages and 33 supplementary pages.
+Historical versions 0.1--0.3 remain unchanged.
 
 The [shift-flow note](notes/SHIFT_FLOW_CUMULATIVE_STORAGE_AND_CRITICAL_PATH_20260919.md)
 records the proposal that led to this split. The
-[critical-path investigation](../critical-path/README.md) is the intended
-home for new continuation research; this revision does not populate it.
+[critical-path investigation](../critical-path/README.md) now contains the
+adaptive-EMA evaluation and next-session continuation plan. The version 0.4
+manuscript pair remains unchanged by that subsequent research.
 
 ## Underlying research
-
-
 
 1. [Opening note](notes/OPENING_NOTE_20260919.md): relation to the two parent
    investigations, narrowed scope of the previous closure, and proof target.
@@ -67,13 +75,12 @@ home for new continuation research; this revision does not populate it.
    The [first](notes/CONTINUATION_20260919.md) and
    [second](notes/CONTINUATION_20260919_SESSION2.md) handoffs are preserved.
 
-
 ## Package map
 
 | Location | Purpose |
 |---|---|
 | [notes](notes/README.md) | Dated research and continuation notes |
-| [numerics](numerics/README.md) | Three diagnostic programs and their preserved records |
+| [numerics](numerics/README.md) | Four diagnostic programs and their preserved records (299 cases) |
 | [validation](validation/README.md) | Both-document build records, snapshots and package inventory |
 | [reviews](reviews/README.md) | Independent reviews; none yet |
 | [drafts](drafts/README.md) | Immutable standalone manuscript snapshots |

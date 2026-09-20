@@ -1,0 +1,380 @@
+\section{A normalized Wilson response on a fixed window}
+\label{sec:fixed-response}
+
+This section tests a definite response on $0<L<\log2$. It gives
+the full arithmetic comparison, a regulated Wilson readout and
+its Gaussian first variation, followed by two scoped
+obstructions. The calculation does not construct the effective
+transfer hypothesized in the exposition.
+
+\subsection{The causal target and its fixed contact term}
+\label{subsec:fixed-target}
+
+For $f\in C_c^\infty(I_L)$ let $F$ be its zero extension and
+$d=x+L/2$. No nontrivial integer delay acts on this window.
+The local constant and pole terms in
+\eqref{eq:generator} still give
+\begin{align}\label{eq:small-generator}
+ (G_{0,L}f)(x)={}&w_0f(x)+
+ 2\int_0^\infty\nGamma(u)\{f(x)-F(x-u)\}\dd u\notag\\
+ &+4\int_0^d\cosh(u/2)f(x-u)\dd u.
+\end{align}
+This is the nonsymmetric causal generator. The symmetric pole
+kernel is $2\cosh((x-y)/2)$, with form
+$2|C(f)|^2-2|S(f)|^2$, and must not be substituted for the
+causal pole kernel.
+
+The gamma tail outside the available delay interval is local
+but does not vanish. Substituting $v=e^{-u/2}$ gives
+\begin{equation}\label{eq:gamma-tail}
+ T(d):=2\int_d^\infty\nGamma(u)\dd u
+ =\log\frac{1+e^{-d/2}}{1-e^{-d/2}}
+       +2\arctan(e^{-d/2}).
+\end{equation}
+Thus the first two terms in \eqref{eq:small-generator} are
+$(w_0+T(d))f(x)+2\int_0^d\nGamma(u)\{f(x)-f(x-u)\}\dd u$.
+Deleting the tail would change the target.
+
+\begin{proposition}[Full first-response distribution]
+\label{prop:contact-response}
+Set $A_L=-G_{0,L}$ and, for $u>0$,
+\begin{equation}\label{eq:offdiag-response}
+ b(u)=2\nGamma(u)-4\cosh(u/2)
+     =\frac{2e^{-5u/2}}{1-e^{-2u}}-2e^{u/2}.
+\end{equation}
+With $c_\epsilon=-w_0-T(\epsilon)$, one has on the smooth core,
+in $L^2(I_L)$,
+\begin{equation}\label{eq:contact-response}
+ (A_Lf)(x)=\lim_{\epsilon\downarrow0}
+ \left[c_\epsilon f(x)+
+       \int_\epsilon^d b(u)f(x-u)\dd u\right],
+\end{equation}
+where the integral is zero for $d\le\epsilon$. Moreover
+\begin{equation}\label{eq:contact-finite-part}
+ c_\epsilon=\log\epsilon+\gamma+\log(2\pi)+O(\epsilon).
+\end{equation}
+\end{proposition}
+\begin{proof}
+The gamma part of the bracket is
+$-w_0f-2\int_\epsilon^\infty\nGamma(u)(f-F(\,\cdot-u))\dd u$.
+Its omitted part tends to zero in $L^2$ because
+$\norm{F-F(\,\cdot-u)}_2\le u\norm{F'}_2$ and
+$\nGamma(u)=O(1/u)$ near zero. The omitted pole integral
+is $O(\epsilon)\norm f_2$ by the convolution bound. Finally,
+\eqref{eq:gamma-tail} gives
+$T(\epsilon)=-\log\epsilon+\log4+\pi/2+O(\epsilon)$.
+Insert the specified
+$w_0=-\gamma-\pi/2-3\log2-\log\pi$.
+\end{proof}
+
+The finite part in \eqref{eq:contact-finite-part} belongs to
+this hard-delay-cutoff convention. A different physical
+regulator needs an explicit conversion to it; no freedom to
+retune the arithmetic constant is introduced.
+The off-diagonal sign also matters. With $z=e^u$,
+$b(u)=0$ is $z^3-z-1=0$, whose unique root with $z>1$
+gives $u_*=0.2811995743229617\ldots<\log2$.
+The response kernel is positive below $u_*$ and negative
+above it. This excludes a pointwise nonnegative first-response
+kernel on a window longer than $u_*$; it does not exclude
+positive Gram operators, whose entries or derivatives need
+not be pointwise positive.
+
+\subsection{The lowest-mode cancellation at finite shift}
+\label{subsec:absorbed-pole}
+
+The prime-free arithmetic symbol is
+\[
+ a_0^{<}(p)=\psi\left(\tfrac14+\tfrac p2\right)-\log\pi
+                +\frac2{p+1/2}+\frac2{p-1/2}.
+\]
+The digamma recurrence~\cite[Section~5.5]{DLMFGamma} gives
+\begin{equation}\label{eq:absorbed-symbol}
+ a_0^{<}(p)=\psi\left(\tfrac54+\tfrac p2\right)-\log\pi
+                          +\frac2{p-1/2}.
+\end{equation}
+Equivalently, with $n_1(u)=e^{-2u}\nGamma(u)$ and $w_1=w_0+4$,
+\begin{equation}\label{eq:reduced-generator}
+ G_{0,L}=w_1I+
+ 2\int_0^\infty n_1(u)(I-T_u)\dd u+2R_{-1/2,L},
+ \qquad
+ (R_{-1/2,L}f)(x)=\int_0^d e^{u/2}f(x-u)\dd u.
+\end{equation}
+The shift in the local term exactly accounts for removing the
+$n=0$ gamma mode. The remaining growing exponential is bounded
+as a Volterra kernel on this fixed interval; it is not a
+decaying covariance mode.
+
+Absorbing $(p+1/2-\omega)/(p+1/2+\omega)$ into the gamma ratio
+in \eqref{eq:factor} yields, for $0<\omega\le1/2$,
+\begin{equation}\label{eq:small-transfer-factor}
+ K_\omega^{<}(p)=\pi^\omega
+ \frac{\Gamma((p+5/2-\omega)/2)}
+      {\Gamma((p+5/2+\omega)/2)}
+ \left(1-\frac{2\omega}{p-1/2+\omega}\right).
+\end{equation}
+Its compression equals $V_{\omega,L}$ on $L<\log2$.
+It is not the full whole-line zeta quotient. In particular the
+apparent pole of this factor must not be interpreted as a pole
+of the entire completed-zeta function.
+
+Define
+\begin{equation}\label{eq:reduced-beta}
+ h_\omega(u)=\frac{2\pi^\omega}{\Gamma(\omega)}
+ e^{-(5/2-\omega)u}(1-e^{-2u})^{\omega-1}\mathbf1_{u>0}.
+\end{equation}
+Inverse Laplace transformation on $\Ree p>1$ gives
+\begin{equation}\label{eq:small-transfer-kernel}
+ k_\omega^{<}(u)=h_\omega(u)-
+ 2\omega\int_0^u e^{(1/2-\omega)(u-v)}h_\omega(v)\dd v.
+\end{equation}
+It is locally integrable at every positive shift, with leading
+singularity proportional to $u^{\omega-1}$. Its identity limit
+at zero is distributional. Differentiating the corresponding
+operators on the smooth core recovers
+\eqref{eq:reduced-generator}, including the pole.
+
+\subsection{A regulated readout with identity initial data}
+\label{subsec:readout-model}
+
+For a fully specified control, take independent abelian
+Gaussian bulk gauge components and six Hermitian scalars with
+equal Feynman-gauge covariance
+$g^2/(4\pi^2|X-Y|^2)$. Take an independent complex defect
+doublet with covariance $\delta_{mn}/|a-b|$.
+This is a fixed-gauge Gaussian probe model, not the complete
+interacting gauge/defect action.
+An explicit regulator uses heat times $s\ge\epsilon^2$:
+\begin{align}
+ D_\epsilon(X-Y)&=g^2\int_{\epsilon^2}^\infty
+ (4\pi s)^{-2}e^{-|X-Y|^2/(4s)}\dd s,\\
+ C_\epsilon(a-b)&=4\pi\int_{\epsilon^2}^\infty
+ (4\pi s)^{-3/2}e^{-|a-b|^2/(4s)}\dd s.
+\end{align}
+The probability measure is normalized and independent of the
+deformation. Reflection positivity of this cutoff measure
+is not assumed.
+
+Use the tangent map $M$ of Section~\ref{sec:projectors},
+with columns $(-e_7,e_8,e_9,e_6)$, and the curves
+\[
+ X_{r,\eta}(t)=(rt,\eta r\varphi(t)),\qquad
+ \varphi(t)=t^2(1-t),\quad 0\le t\le1.
+\]
+The ket runs from $t=1$ to zero, ending at the common reference
+$b=0$ with tangent $-e_0$. Let $r=e^x$ and
+$\eta(\omega)=\eta_0+\omega$, $\eta_0>0$.
+This is a test deformation, not an identification with Loewner
+capacity. The color fiber is one-dimensional with its ordinary
+metric and an identity contraction at $b$; no extra defect
+field is inserted there.
+
+Use the physical pair $q_2,\bar q_2$, and define
+\begin{align}
+ F_{\omega,\epsilon}(x)&=
+ e^{x/2}U_M(C_{e^x,\eta(\omega)})q_{2,\epsilon}(a_{e^x}),\\
+ \mathsf K_{\omega,\epsilon}(x,y)&=
+ \vev{\Theta_0F_{\omega,\epsilon}(x)F_{\omega,\epsilon}(y)}_\epsilon.
+\end{align}
+The bra uses reversed ordering and $N=-MR$, as in
+Section~\ref{sec:reflection}. Replacing $\bar q_2$ by
+the same-charge $\bar q_1$ would give the vanishing endpoint
+control of Section~\ref{sec:endpoints}. No common endpoint
+supercharge or protected expectation is asserted.
+
+Specify the response on every input by
+\begin{equation}\label{eq:retarded-readout}
+ (\mathcal V^\epsilon_{\omega,L}f)(x)=f(x)+
+ \int_{-L/2}^{x}
+ [\mathsf K_{\omega,\epsilon}(x,y)-
+  \mathsf K_{0,\epsilon}(x,y)]f(y)\dd y.
+\end{equation}
+The integral pairs the output row with the source state
+$\int_{-L/2}^x F_\omega(y)f(y)\dd y$, minus its baseline.
+This supplies a direct identity channel and exact
+$\mathcal V^\epsilon_{0,L}=I$, without inverting a compact
+Gram operator. Causality in $x$ is imposed by the readout,
+not derived from Euclidean reflection. The adjoint in the
+fixed unweighted norm is the usual upper-triangular integral
+adjoint, with conjugated kernel. It is not contour reversal
+with unchanged scalar map.
+
+\subsection{A nonzero but bounded Gaussian first variation}
+\label{subsec:gaussian-readout}
+
+The exact fixed-endpoint tangent-connection insertion
+\eqref{eq:complex-curvature} applies. Its curvature contains
+the scalar and polarization terms of
+\eqref{eq:insertion}. The bulge displacement vanishes at
+both endpoints; their polarizations and radial weights are
+fixed. Both bra and ket vary. More generally one would have
+\[
+ \partial_\omega\vev{\mathcal O}_\omega
+ =\vev{\partial_\omega\mathcal O}_\omega
+ -\vev{\mathcal O\,\partial_\omega S_\omega}_{\omega,c},
+\]
+as well as derivatives of external normalizations or source
+identifications. The second term is zero in this model
+because its normalized measure is fixed.
+
+At free endpoint order the kernel is
+$G_o(x-y)=1/(2\cosh((x-y)/2))$, independent of the bulge,
+and the response is $I$. The Wilson dressing gives a nonzero
+control. Same-branch gauge/scalar contractions cancel.
+The ordinary reflected cross contraction gives, in the
+continuum abelian Gaussian model,
+\begin{equation}\label{eq:gaussian-kernel}
+ \mathsf K_\omega(x,y)=G_o(x-y)
+ \exp\{\lambda B_{\eta(\omega)}(r,s)\},
+ \qquad r=e^x,\ s=e^y,\quad\lambda=\frac{g^2}{4\pi^2},
+\end{equation}
+where
+\begin{equation}\label{eq:unequal-bulge}
+ B_\eta(r,s)=2\eta^2rs\int_0^1\!\int_0^1
+ \frac{\varphi'(v)\varphi'(t)}
+ {(rv+st)^2+\eta^2[r\varphi(v)-s\varphi(t)]^2}
+ \dd v\dd t.
+\end{equation}
+The exponential is exact only for these independent abelian
+Gaussian fields. Its first order in $g^2$ is the direct bulk
+sector of Section~\ref{sec:response}. It is not the sum of
+the interacting endpoint, defect and counterterm diagrams.
+
+Set $A=(rv+st)^2$ and
+$H=[r\varphi(v)-s\varphi(t)]^2$. Direct differentiation gives
+\begin{equation}\label{eq:unequal-bulge-derivative}
+ \partial_\eta B_\eta(r,s)=4\eta rs
+ \int_0^1\!\int_0^1
+ \frac{\varphi'(v)\varphi'(t)A}{(A+\eta^2H)^2}
+ \dd v\dd t.
+\end{equation}
+Using $|\varphi'(v)|\le2v$ and
+$4rsvt\le(rv+st)^2$ gives
+\begin{equation}\label{eq:bulge-uniform-bounds}
+ |B_\eta(r,s)|\le2\eta^2,\qquad
+ |\partial_\eta B_\eta(r,s)|\le4\eta.
+\end{equation}
+These estimates include the reference corner $v=t=0$.
+For the regulator above, its four-dimensional covariance is
+a constant times $(1-e^{-\rho^2/(4\epsilon^2)})/\rho^2$.
+It and its radial derivative are bounded by constant
+multiples of $\rho^{-2}$ and $\rho^{-3}$, uniformly in
+$\epsilon$. On compact positive ranges of $r,s,\eta$,
+the displacement of the separation is $O(v+t)$.
+The differentiated cross integrands are consequently bounded
+by a constant times $vt/(v+t)^2$. Dominated convergence
+justifies the continuum kernel and its first derivative in
+this model. It does not justify removal of interacting
+defect or junction counterterms.
+
+At $\omega=0$,
+\begin{equation}
+ J_0(x,y)=\lambda G_o(x-y)e^{\lambda B_{\eta_0}(r,s)}
+                         \partial_\eta B_{\eta_0}(r,s),
+ \qquad
+ |J_0|\le2\lambda\eta_0e^{2\lambda\eta_0^2}.
+\end{equation}
+Uniform first differentiability on the finite square therefore gives
+\begin{equation}\label{eq:bounded-readout-variation}
+ \mathcal V_{\omega,L}=I+\omega\mathcal J_L+o(\omega)
+ \quad\hbox{in operator norm},\qquad
+ \norm{\mathcal J_L}\le2L\lambda\eta_0e^{2\lambda\eta_0^2},
+\end{equation}
+where $\mathcal J_L$ is the lower-triangular integral
+operator with kernel $J_0$.
+For example,
+$B_{0.3}(1,1)=0.0102220294386856\ldots$ and
+$\partial_\eta B_{0.3}(1,1)=0.0680705213083742\ldots$.
+The derivative is nonzero but finite at $x=y$.
+
+\subsection{Two obstructions and their precise scope}
+\label{subsec:readout-obstructions}
+
+\begin{proposition}[Bounded first derivatives cannot match]
+\label{prop:bounded-response}
+If a response has first derivative on the smooth core equal
+to the restriction of a bounded $L^2(I_L)$ operator, it cannot
+equal $-G_{0,L}$ there. In particular this excludes
+\eqref{eq:bounded-readout-variation}, even after adding a
+bounded local multiplier to its derivative.
+\end{proposition}
+\begin{proof}
+Fix $0\ne\chi\in C_c^\infty(I_L)$ and set
+$f_N=e^{\ii Nx}\chi$. From \eqref{eq:weil} and the digamma
+asymptotic~\cite[Section~5.11]{DLMFGamma},
+\begin{equation}\label{eq:modulation-growth}
+ \frac{Q_{0,L}[f_N]}{\norm\chi^2}
+ =\log N-\log(2\pi)+o(1).
+\end{equation}
+Indeed the Fourier transform is translated by $N$; split the
+integral into its central region and the rapidly decaying
+tails of $\widehat\chi$. The two pole moments tend to zero
+by integration by parts. If a bounded $A$ equaled $-G_{0,L}$
+on the core, then
+$\Ree\ip{f_N}{Af_N}/\norm\chi^2$ would tend to $-\infty$,
+contrary to boundedness of $A$.
+\end{proof}
+
+This uses the localized form to disprove full operator
+equality, not to weaken the matching target. It does not
+assign a whole-line unweighted Fourier multiplier to the
+growing pole. A finite smooth clock change still has a
+bounded derivative. A singular clock or a regulator limit
+with unbounded first-derivative norms requires a separate
+analysis and is not excluded. In particular smoothness at
+each fixed cutoff alone is not a continuum obstruction.
+
+\begin{proposition}[A persistent identity channel cannot match]
+\label{prop:compact-response}
+For every $\omega>0$, $V_{\omega,L}$ is compact. A response
+of the form $I+C_\omega$ with compact $C_\omega$ satisfies
+\[
+ \norm{I+C_\omega-V_{\omega,L}}\ge1.
+\]
+The Gaussian readout \eqref{eq:retarded-readout} has this form.
+\end{proposition}
+\begin{proof}
+The kernel \eqref{eq:small-transfer-kernel} is in $L^1(0,L)$.
+Approximate it there by bounded kernels. Young's convolution
+bound gives convergence in operator norm, while every
+approximating operator on the finite square is
+Hilbert--Schmidt. Hence $V_{\omega,L}$ is compact.
+The difference in the proposition is identity plus compact,
+whose essential norm is one. The Gaussian kernel difference
+is bounded on the finite square, so its retarded operator
+is Hilbert--Schmidt.
+\end{proof}
+
+A nonzero scalar direct coefficient gives the lower bound
+$|m_\omega|$ instead. More generally a nonzero multiplication
+operator on this nonatomic interval is not compact.
+There is no contradiction with the arithmetic strong initial
+limit: compact operators can converge strongly to $I$,
+but not in operator norm. A successful response must supply
+the singularly concentrating identity limit rather than
+retain a separate regular direct channel.
+
+\subsection{Consequences for storage and continuation}
+
+Neither a nonzero Gaussian variation nor a positive reflected
+Gram kernel gives the physical balance law
+$\norm f^2=\norm{\mathcal V_{\omega,L}f}^2+
+\norm{\mathcal B_{\omega,L}f}^2$.
+After transfer matching, that law requires
+$\norm{\mathcal B_{\omega,L}f}^2
+=2\omega Q_{0,L}[f]+o(\omega)$.
+In a direction with $Q_{0,L}[f]>0$, the amplitude is of order
+$\sqrt\omega$. A state difference that is $O(\omega)$ in its
+positive Hilbert norm cannot supply this first-order defect.
+This statement is conditional on that norm regularity.
+
+The cumulative defect need not be monotone in shift; no
+positivity of every instantaneous generator is imposed here.
+The cross-interval bound using the new slab's output defect
+and the signed shift changes in Section~\ref{sec:continuation}
+remain separate tasks. Nor does this prime-free test account
+for the first new generator delay
+$-2(\log2)/\sqrt2\,T_{\log2}$ when $\log2<L<\log3$.
+The excluded regular readout and the unconstructed arithmetic
+Loewner driver must not be conflated with all possible Wilson
+realizations.

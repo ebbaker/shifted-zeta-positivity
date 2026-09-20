@@ -3,7 +3,7 @@
 [drafts.py](drafts.py) records a visually inspected exposition and supplementary build,
 preserves new dated snapshots without overwriting them, and verifies current
 and archived source/PDF identity for both documents. Historical single-document
-records remain supported. Its `check --replay` mode runs the 268
+records remain supported. Its `check --replay` mode runs the 299
 standard-library diagnostics with the original parameters and thresholds.
 It is portable with each saved manuscript. See [BUILD.md](../BUILD.md) and
 [BUILD_RECORD.json](../BUILD_RECORD.json).
@@ -11,7 +11,8 @@ It is portable with each saved manuscript. See [BUILD.md](../BUILD.md) and
 [check_package.py](check_package.py) is the broader live-repository inventory.
 It records every current package file except its own record and temporary
 build/cache files, including the dated snapshots. It also pins inherited
-research inputs in neighboring investigations. The current inventory is
+research inputs in neighboring investigations. Both replay paths include the 31 fixed-window diagnostics, for 299
+cases. Historical version 0.3 retains its original 268 cases. The current inventory is
 [PACKAGE_RECORD.json](../PACKAGE_RECORD.json).
 
 From the investigation directory:

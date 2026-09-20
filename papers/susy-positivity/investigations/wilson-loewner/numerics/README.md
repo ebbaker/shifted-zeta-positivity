@@ -10,7 +10,16 @@ contains 102 cases, all passing in the recorded run.
 [check_reflected_junction.py](check_reflected_junction.py) adds 67 cases in
 its [record](records/reflected-junction-checks.json), all passing. It imports
 the standard-library matrix helpers from the endpoint checker. There are
-268 registered cases across the three programs.
+268 cases across these three programs.
+
+[check_fixed_window_response.py](check_fixed_window_response.py) adds 31
+research diagnostics in its [record](records/fixed-window-response-checks.json),
+all passing. It checks the full local/pole arithmetic comparison and the
+unequal-radius Gaussian Wilson variation from the
+[fixed-window research note](../notes/FIXED_WINDOW_WILSON_RESPONSE_OBSTRUCTION_20260920.md).
+It uses the standard library and imports the existing reflected-junction
+quadrature. Version 0.4 and the live research inventory both register 299 cases
+across four programs. Historical manuscript version 0.3 retains 268.
 
 | Group | Scope |
 |---|---|
@@ -24,7 +33,7 @@ the standard-library matrix helpers from the endpoint checker. There are
 | Physical reflection | Reflected field pullback and ordered transport; color gluing; distinct ket/bra projectors; Cauchy endpoint Gram and scalar/R-twist counterexamples |
 | Junction and response | Time-normal reference tangent, continuous scalar direction, locally bounded bulk exchange; exact bulge coefficient, independent quadrature and finite Gaussian cross-response Gram |
 
-Run a program directly, or replay all three with
+Run a program directly, or replay all four live research programs with
 `python3 validation/check_package.py check --replay`.
 
 The note supplies the analytical derivations. These finite diagnostics do
@@ -33,4 +42,6 @@ Ward identities, stochastic rough-contour limits, contraction, or RH.
 The endpoint derivation uses the complexification of the physical
 hypermultiplet transformations; numerical nullspaces alone do not certify
 that physical input. The bulk response checker omits endpoint and defect
-diagrams. None of the programs uses zeta zeros or the target transfer.
+diagrams. The three original programs use neither zeta zeros nor the target transfer.
+The fixed-window diagnostic explicitly uses the arithmetic transfer for
+comparison; it does not construct that transfer from field data.

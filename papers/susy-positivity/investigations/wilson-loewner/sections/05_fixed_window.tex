@@ -1,0 +1,155 @@
+\section{A fixed-window test and the localization question}
+\label{sec:fixed-window}
+
+The first realization test can be made before the first arithmetic
+delay. For $0<L<\log2$, no nontrivial integer translation acts on
+$I_L$. The local term and both rational pole terms remain. On this
+window we can state the complete target, calculate a normalized
+Wilson readout, and exclude that readout within a precise regularity
+class. We can also formulate a localization test for the required
+cancellations. The detailed calculations and proofs are in
+\cite[Sections~S10--S11]{Supplement}.
+
+\subsection{The local and pole terms constrain the response}
+
+Let $A_L=-G_{0,L}$ be the required first shift derivative. Away
+from the diagonal its causal kernel is
+\begin{equation}\label{eq:main-required-response}
+ b(u)=2\frac{e^{-u/2}}{1-e^{-2u}}-4\cosh(u/2)
+     =2\frac{e^{-5u/2}}{1-e^{-2u}}-2e^{u/2},
+ \qquad 0<u<L.
+\end{equation}
+The first pole cancels the lowest gamma mode. The other leaves
+the signed growing exponential in the second expression.
+The kernel behaves as $1/u$ at zero; it must be interpreted
+together with a contact subtraction. In the hard-delay-cutoff
+convention, on $C_c^\infty(I_L)$,
+\begin{equation}\label{eq:main-contact}
+ (A_Lf)(x)=\lim_{\epsilon\downarrow0}
+ \left[c_\epsilon f(x)+
+ \int_\epsilon^{x+L/2}b(u)f(x-u)\dd u\right],
+ \qquad
+ c_\epsilon=\log\epsilon+\gamma+\log(2\pi)+O(\epsilon).
+\end{equation}
+An integral whose upper limit is at most $\epsilon$ means zero.
+This finite part is fixed by $w_0$ in the stated cutoff scheme,
+not a new normalization choice. Its derivation, including the
+zero-extension tail, is in \cite[Section~S10.1]{Supplement}.
+
+At positive shift, absorb the first rational factor into the
+gamma ratio. The factor whose compression is the full arithmetic
+transfer on this window becomes
+\begin{equation}\label{eq:main-small-factor}
+ K_\omega^{<}(p)=
+ \pi^\omega
+ \frac{\Gamma((p+5/2-\omega)/2)}
+      {\Gamma((p+5/2+\omega)/2)}
+ \frac{p-1/2-\omega}{p-1/2+\omega}.
+\end{equation}
+This is an arithmetic identity, not yet a field-theory
+construction. Its locally integrable positive-shift kernel has
+a singularly concentrating identity limit; there is no separate
+delta channel at positive shift
+\cite[Section~S10.2]{Supplement}.
+
+\subsection{A normalized causal Wilson readout that fails the test}
+
+Use the ordinary reflected endpoint pairing, with the physical
+polarizations $q_2,\bar q_2$, a common reference color fiber and
+the adjoint scalar map $N=-MR$. For the smooth polynomial bulges
+of the companion, deform a positive height by
+$\eta(\omega)=\eta_0+\omega$, $\eta_0>0$, keeping the endpoints
+fixed. Let $\mathsf K_\omega(x,y)$ be the radially weighted
+reflected correlator. A definite linear response is
+\begin{equation}\label{eq:main-readout}
+ (\mathcal V_{\omega,L}f)(x)=f(x)+
+ \int_{-L/2}^{x}
+ [\mathsf K_\omega(x,y)-\mathsf K_0(x,y)]f(y)\dd y.
+\end{equation}
+It has exact identity initial data and causal support. The
+retarded integration in logarithmic radius is part of the
+specified readout, not a consequence of Euclidean reflection.
+It avoids inverting the compact free Gram operator.
+
+In the independent abelian Gaussian probe model defined in
+\cite[Sections~S10.3--S10.4]{Supplement}, the free endpoint term
+has zero variation, while the Wilson dressing gives a nonzero
+variation at positive bulge height. The unequal-radius
+calculation and a uniform bound show that
+$\partial_\omega\mathcal V_{0,L}$ is nevertheless a bounded
+integral operator. It therefore cannot equal $-G_{0,L}$ on the
+smooth core: for $f_N(x)=e^{\ii Nx}\chi(x)$ with nonzero
+$\chi\in C_c^\infty(I_L)$,
+\[
+ \frac{Q_{0,L}[f_N]}{\norm\chi^2}
+ =\log N-\log(2\pi)+o(1).
+\]
+No bounded derivative, even with a bounded local multiplier,
+has this quadratic-form growth. At positive shift there is a
+second obstruction: \eqref{eq:main-readout} is identity plus a
+compact operator, whereas $V_{\omega,L}$ is compact.
+The proofs and regulator scope are in
+\cite[Section~S10.5]{Supplement}.
+
+These exclusions do not cover all Wilson constructions or a
+controlled singular limit of regulated responses. They show
+what must change in the tested observable-to-operator map.
+Localizing the same regular readout would not remove the
+obstruction.
+
+\subsection{Localization as a test of the surviving modes}
+
+Localization is a candidate mechanism for deriving the
+cancellations in \eqref{eq:main-required-response}. Pestun's
+fluctuation calculation organizes cancellations by an
+equivariant complex~\cite{Pestun}. Baker's open-line discussion
+already points toward a lower-dimensional defect theory
+\cite[Section~3.3]{Baker}. Wang's defect-localization framework
+contains endpoint bilocals joined by gauge transport
+\cite[Section~5.1, equation~(5.5)]{WangDefects}; its unevaluated
+normal-fluctuation determinant remains an explicit assumption
+\cite[Section~4.4]{WangDefects}.
+
+An auxiliary calculation makes the proposed test concrete. Put
+$a_n=2n+1/2$ and retain one complex bosonic Gaussian for each
+$n=1,\ldots,N$, together with one complex Grassmann pair:
+\begin{equation}\label{eq:main-bf-product}
+ Z_N(p)=(p-1/2)\prod_{n=1}^N(p+a_n)^{-1}.
+\end{equation}
+Then exact finite-product algebra gives
+\begin{equation}\label{eq:main-bf-ratio}
+ \pi^\omega\lim_{N\to\infty}N^{-\omega}
+ \frac{Z_N(p-\omega)}{Z_N(p+\omega)}
+ =K_\omega^{<}(p).
+\end{equation}
+Removing the lowest boson accounts for the first pole
+cancellation, and the Grassmann factor supplies the remaining
+rational ratio. These modes and the normalization have been
+chosen from the arithmetic target. Their presence is not a
+localization theorem or even a specified supersymmetric action.
+
+The useful next calculation is whether a defect-compatible
+supercharge, boundary conditions and observable produce these
+surviving contributions and the required finite normalization.
+An especially sharp comparison, independent of an additive
+$p$-independent generator constant, is
+\begin{equation}\label{eq:main-mode-test}
+ \partial_p a_0^{<}(p)
+ =2\sum_{n=1}^{\infty}\frac1{(p+2n+1/2)^2}
+  -\frac2{(p-1/2)^2}.
+\end{equation}
+The construction and its missing physical dictionary are
+spelled out in \cite[Section~S11]{Supplement}. A localization
+deformation coefficient multiplying a $Q$-exact term cannot
+simply be identified with the physical shift. Likewise a
+partition ratio does not yet act on arbitrary boundary inputs.
+The original conformal semicircle remains a relevant control,
+outside the restricted constant-Poincare-charge endpoint
+obstruction.
+
+Finally, signed mode cancellation does not establish an
+ordinary positive norm. The independent cumulative-storage
+identity of Section~\ref{sec:storage} and the spatial gluing
+estimates of Section~\ref{sec:path} remain separate requirements.
+Neither this test nor the auxiliary product supplies an
+arithmetic Loewner driver.

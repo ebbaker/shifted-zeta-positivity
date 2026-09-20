@@ -21,6 +21,7 @@ CHECKS = (
     ('numerics/check_smooth_variation.py', 'numerics/records/smooth-variation-checks.json'),
     ('numerics/check_defect_endpoints.py', 'numerics/records/defect-endpoint-checks.json'),
     ('numerics/check_reflected_junction.py', 'numerics/records/reflected-junction-checks.json'),
+    ('numerics/check_fixed_window_response.py', 'numerics/records/fixed-window-response-checks.json'),
 )
 INHERITED = (
     '../wilson-lines/notes/ENDPOINT_TRANSPORT_AND_SHIFT_20260918.md',
@@ -99,11 +100,11 @@ def main():
         record = dict(schema_version=1,
                       generated_utc=datetime.now(timezone.utc).isoformat(),
                       author='OpenAI GPT-6 (Codex), for Edward Baker',
-                      status='Working exposition and supplementary information 0.3; '
-                             'prescribed shift-evolution research program; no independent review',
+                      status='Working exposition and supplementary information 0.4; '
+                             'fixed-window response and localization results incorporated; no independent review',
                       python=platform.python_version(),
                       scope='File identity and finite classical, chiral-defect, endpoint, '
-                            'reflection and Gaussian-response diagnostics; not a proof checker '
+                            'reflection, Gaussian-response and fixed-window arithmetic-comparison diagnostics; not a proof checker '
                             'or quantum positivity certification',
                       replay_policy='Same parameters, case identities and thresholds; '
                                     'all cases pass. Floating values may differ.',
