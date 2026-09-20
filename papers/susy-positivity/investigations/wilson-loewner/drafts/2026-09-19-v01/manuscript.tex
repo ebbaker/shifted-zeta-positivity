@@ -1,0 +1,96 @@
+\documentclass[11pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools,mathrsfs}
+\usepackage{microtype,booktabs,array,longtable}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta}
+\usepackage[colorlinks=true,linkcolor=MidnightBlue,citecolor=MidnightBlue,urlcolor=MidnightBlue]{hyperref}
+\usepackage{fancyhdr}
+\newcommand{\draftversion}{0.1}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small Wilson lines on Loewner-generated contours}
+\fancyhead[R]{\small Working draft \draftversion}
+\fancyfoot[C]{\thepage}
+\setlength{\headheight}{14pt}
+\setlength{\emergencystretch}{2em}
+\numberwithin{equation}{section}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{assumption}[theorem]{Assumption}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\newcommand{\R}{\mathbb R}
+\newcommand{\C}{\mathbb C}
+\newcommand{\N}{\mathbb N}
+\newcommand{\dd}{\,\mathrm d}
+\newcommand{\ii}{\mathrm i}
+\newcommand{\Tr}{\operatorname{Tr}}
+\newcommand{\tr}{\operatorname{tr}}
+\newcommand{\Ree}{\operatorname{Re}}
+\newcommand{\diag}{\operatorname{diag}}
+\newcommand{\supp}{\operatorname{supp}}
+\newcommand{\nGamma}{n_\Gamma}
+\newcommand{\norm}[1]{\left\lVert#1\right\rVert}
+\newcommand{\ip}[2]{\left\langle#1,#2\right\rangle}
+\newcommand{\vev}[1]{\left\langle#1\right\rangle}
+\newcommand{\pathfile}[1]{\texttt{\detokenize{#1}}}
+\title{Wilson lines on Loewner-generated contours\\[3pt]
+\large Defect supersymmetry, reflection, and endpoint positivity}
+\author{Drafted for Edward Baker}
+\date{19 September 2026 \quad--\quad Version \draftversion}
+\hypersetup{pdftitle={Wilson lines on Loewner-generated contours},
+pdfauthor={Drafted for Edward Baker; OpenAI GPT-6 (Codex)},
+pdfsubject={Working research draft; no claim of a proof of the Riemann Hypothesis}}
+\begin{document}
+\maketitle
+\begin{abstract}
+We examine a construction in which Loewner evolution supplies a contour and
+a supersymmetric gauge theory supplies an open Wilson observable on it.
+The motivation is a positivity program for the Weil quadratic form, but
+the results concern the geometric and field-theoretic prerequisites of
+that program. We give an exact constant-driver description of the
+inherited semicircles and prove their rigidity for one fixed scalar
+coupling and bulk supercharge. A smooth transport variation identifies
+the insertions produced by a regular inverse Loewner map. Allowing a
+tangent-dependent scalar coupling restores contour freedom: a full
+chiral D3--D5 projector calculation gives a common complex Poincare
+charge, including one charge for all defect directions. Within this
+constant-map ansatz, however, the scalar endpoints killed by the same
+charge have zero mutual contraction and a charged, vanishing vacuum
+pairing. Ordinary time reflection instead gives a nonzero free Gram
+kernel, with a different scalar map on the reflected branch. We construct
+a smooth reference junction and compute a finite, nonzero direct bulk
+response to a polynomial contour deformation. This is one perturbative
+sector, not the complete interacting response. The paper supplies the
+arithmetic target, relevant background, proofs, controls, and reproducible
+diagnostics. Interacting reflection positivity, a protected nonzero
+pairing, and the identification with the full Weil form remain open.
+\end{abstract}
+\noindent\textbf{Status.} Working research draft. Classical and free-field
+statements are separated from conditional quantum statements throughout.
+No independent mathematical review has been completed. Model assistance
+and source provenance are disclosed in Appendix~\ref{app:provenance}.
+\tableofcontents
+\input{sections/01_introduction}
+\input{sections/02_arithmetic}
+\input{sections/03_free_kernel}
+\input{sections/04_geometry}
+\input{sections/05_variation}
+\input{sections/06_projectors}
+\input{sections/07_endpoints}
+\input{sections/08_reflection}
+\input{sections/09_response}
+\input{sections/10_outlook}
+\appendix
+\input{sections/a_diagnostics}
+\input{sections/b_provenance}
+\input{references}
+\end{document}

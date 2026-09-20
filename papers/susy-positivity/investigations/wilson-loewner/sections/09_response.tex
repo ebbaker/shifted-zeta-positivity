@@ -1,0 +1,177 @@
+\section{A smooth reference join and a direct bulk response}\label{sec:response}
+
+\subsection{A contour family that meets the reflection plane smoothly}
+
+Let $v$ be the incoming unit ket tangent at $b$. Its reflected reverse
+has outgoing tangent $-Rv$. A smooth join requires
+\begin{equation}\label{eq:smooth-join}
+ v=-Rv,
+\end{equation}
+so $v$ is parallel to the time direction $e_0$. The internal scalar
+directions then agree as well, since $N(-Rv)=Mv$. For a kernel
+involving many contours, every ket should have the same reference
+tangent. The old semicircles arrive along $-e_3$ and return along
+$+e_3$ under time reflection, producing a backtracking join instead.
+
+Contour freedom provides a simple replacement. In the $(x^0,x^3)$-plane
+set
+\begin{equation}\label{eq:bulge}
+ X_{T,\eta}(t)=(Tt,\eta T f(t)),\qquad f(t)=t^2(1-t),
+ \quad0\leq t\leq1,\quad T>0,\quad\eta\geq0.
+\end{equation}
+The ket traverses the curve from $t=1$ to zero. The endpoints are on
+the defect, its interior is in positive time and, for $\eta>0$,
+strictly above the defect. Since $f'(0)=0$, its incoming unit tangent
+is $-e_0$. The reflected return is regular with a continuous scalar
+direction even when the two branches have different $T$ or $\eta$.
+Curvature need not agree.
+
+\begin{figure}[htbp]
+\centering
+\begin{tikzpicture}[x=1.15cm,y=1.2cm,>=Stealth]
+ \fill[blue!4] (0,0) rectangle (3.7,1.75);
+ \draw[->,gray] (-3.8,0)--(3.9,0) node[right] {$x^0$};
+ \draw[dashed,gray] (0,-0.55)--(0,1.9) node[above] {$x^0=0$};
+ \node[below] at (2,-0.45) {defect $x^3=0$};
+ \node[right] at (0.08,1.7) {$x^3>0$};
+ \draw[thick,MidnightBlue,domain=0:1,samples=100]
+ plot ({3*\x},{8*\x*\x*(1-\x)});
+ \draw[thick,BurntOrange,domain=0:1,samples=100]
+ plot ({-3*\x},{8*\x*\x*(1-\x)});
+ \draw[->,thick,MidnightBlue] (1.5,1)--(1.32,0.87);
+ \draw[->,thick,BurntOrange] (-1.32,0.87)--(-1.5,1);
+ \fill (0,0) circle (1.6pt) node[below] {$b$};
+ \fill (3,0) circle (1.6pt) node[below] {$a$};
+ \fill (-3,0) circle (1.6pt) node[below] {$\vartheta a$};
+ \node[MidnightBlue] at (2.5,1.55) {$U_M(C)$};
+ \node[BurntOrange] at (-2.5,1.55) {$U_N(\vartheta C^{-1})$};
+\end{tikzpicture}
+\caption{A polynomial bulge and its ordinary reflected adjoint. The
+ket runs from $a$ to $b$, and the bra from $b$ to $\vartheta a$.
+Both branches lie above the defect and meet with tangent $-e_0$.
+The scalar maps differ away from the join. Vertical scale is enlarged.}
+\label{fig:join}
+\end{figure}
+
+This construction removes a fixed-angle geometric and scalar-direction
+cusp in the direct bulk term. It does not prove absence of defect
+contact or junction counterterms. No driver or capacity law for
+\eqref{eq:bulge} is computed here; it is a smooth contour control for
+the field-theory problem, not an identification with $\omega$.
+
+\subsection{The specified Gaussian perturbative sector}
+
+Use the free Feynman-gauge propagators
+\begin{equation}\label{eq:bulk-propagators}
+ \vev{A_\mu^a(x)A_\nu^b(y)}_0
+ =\frac{g^2\delta^{ab}\delta_{\mu\nu}}{4\pi^2|x-y|^2},\qquad
+ \vev{X_A^a(x)X_B^b(y)}_0
+ =\frac{g^2\delta^{ab}\delta_{AB}}{4\pi^2|x-y|^2}.
+\end{equation}
+This defines the direct exchange of a bulk field between the two line
+branches. Endpoint self-energy, endpoint-to-line interactions, defect
+vertices and counterterms are excluded from this sector. Only their
+consistent sum could be a gauge-independent interacting answer.
+
+On a single branch the gauge/scalar numerator cancels by $M^TM=I$
+or $N^TN=I$. If $v_i,v_j$ denote oriented original ket tangents,
+the cross-branch numerator instead is
+\begin{align}\label{eq:cross-numerator}
+ -(-Rv_i)\cdot v_j+[N(-Rv_i)]\cdot Mv_j
+ &=v_i\cdot(R+I)v_j\notag\\
+ &=2v_{i,\mathrm{sp}}\cdot v_{j,\mathrm{sp}}.
+\end{align}
+Here $\mathrm{sp}$ consists of the three directions unchanged by time
+reflection, including the defect normal. Near a regular reference
+join satisfying \eqref{eq:smooth-join}, the spatial tangents vanish
+linearly in arclength. The numerator is $O(st)$ and the denominator
+is comparable to $(s+t)^2$. The local double integral is finite.
+This local estimate concerns \eqref{eq:bulk-propagators}, not all
+possible defect graphs.
+
+For the self-pairing of \eqref{eq:bulge}, $T$ cancels by scale
+invariance and the stripped cross term is
+\begin{equation}\label{eq:bulk-I}
+ I(\eta)=2\eta^2\int_0^1\!\int_0^1
+ \frac{f'(s)f'(t)}{(s+t)^2+\eta^2[f(s)-f(t)]^2}\dd s\dd t.
+\end{equation}
+If $\sum_aT_aT_a=C_F I$ in the endpoint representation, its contribution
+relative to the free endpoint propagator is
+$g^2C_F I(\eta)/(4\pi^2)$. There is no factor $1/2$ for an exchange
+between two distinct ordered branches.
+
+\begin{proposition}[The direct bulk bulge coefficient]\label{prop:bulge-coefficient}
+For $f(t)=t^2(1-t)$,
+\begin{equation}\label{eq:bulge-coefficient}
+ I(\eta)=(\tfrac32-2\log2)\eta^2+O(\eta^4),\qquad
+ \tfrac32-2\log2=0.1137056388801094\ldots>0.
+\end{equation}
+One may bound the absolute remainder by $2\eta^4$ for real $\eta$.
+\end{proposition}
+\begin{proof}
+The quadratic coefficient is $2A$, where
+\begin{equation}
+ A=\int_0^1\!\int_0^1
+ \frac{(2s-3s^2)(2t-3t^2)}{(s+t)^2}\dd s\dd t.
+\end{equation}
+Put $r=s/(s+t)$ and $u=s+t$. The Jacobian is $u$.
+By symmetry, integrate $0\leq r\leq1/2$ and
+$0\leq u\leq1/(1-r)$ and multiply by two. The integrand including
+the Jacobian is
+$r(1-r)[4-6u+9r(1-r)u^2]u$.
+Its $u$ integral, including that factor two, simplifies to
+$r^2/[2(1-r)^2]$. Hence
+\begin{equation}
+ A=\frac12\int_0^{1/2}\frac{r^2}{(1-r)^2}\dd r
+ =\frac34-\log2.
+\end{equation}
+For the remainder, $|f'|\leq1$, $|f'(s)|\leq2s$ and
+$|f(s)-f(t)|\leq|s-t|\leq s+t$. Subtracting the denominator at
+$\eta=0$ bounds the absolute integrand difference by
+\begin{equation}
+ 2\eta^4\frac{|f'(s)f'(t)|[f(s)-f(t)]^2}{(s+t)^4}
+ \leq8\eta^4\frac{st}{(s+t)^2}\leq2\eta^4.
+\end{equation}
+The integration square has area one. This justifies the expansion
+uniformly even at the apparent singular corner.
+\end{proof}
+
+Numerical controls give $I(0)=0$,
+$I(0.3)\simeq0.0102220294386856$ and
+$I(0.7)\simeq0.0553790171218514$. These check the integral and its
+small-bulge coefficient; they are not estimates of the complete
+interacting response.
+
+There is also a positive Gaussian interpretation of this cross term.
+The reflected four-dimensional scalar covariance has representation
+\begin{equation}
+ D_0(\vartheta x-y)=\int_{\R^3}\frac{\mathrm d^3k}{(2\pi)^3}
+ \frac{e^{-|k|(x^0+y^0)}e^{\ii k\cdot(\mathbf y-\mathbf x)}}{2|k|}.
+\end{equation}
+Smear it against the three spatial tangent currents of each ket and
+sum the components as in \eqref{eq:cross-numerator}. This is a Gram
+matrix. The vanishing of those currents at $b$ permits the finite
+join limit just estimated. This proves positivity of the displayed
+Gaussian current sector, without extending it to the omitted diagrams.
+
+\subsection{Why a positive norm need not be protected}
+
+For an actual reflected pairing a smooth deformation has the structure
+\begin{equation}
+ \delta K_{ij}=\vev{\Theta_0(\delta F_i)F_j}
+                 +\vev{\Theta_0F_i\,\delta F_j},
+\end{equation}
+with the insertions of Section~\ref{sec:variation} and any renormalized
+contact terms. Even if a deformation of a ket is $Q$-exact,
+$\delta\psi=Q\lambda$, and $Q\psi=0$, its physical norm obeys
+\begin{equation}\label{eq:Q-norm}
+ \delta\norm\psi^2=2\Ree\ip\psi{Q\lambda}
+                  =2\Ree\ip{Q^\dagger\psi}\lambda.
+\end{equation}
+The first condition does not imply $Q^\dagger\psi=0$. For example,
+on a Hilbert space with orthonormal $e_1,e_2$, let
+$Qe_2=e_1$, $Qe_1=0$, $\psi=e_1$, $\lambda=e_2$.
+Then $Q^2=0$, $Q\psi=0$, but \eqref{eq:Q-norm} equals two.
+Adding a vector $e_3$ killed by both $Q$ and $Q^\dagger$ supplies a
+zero-first-variation control. Thus a common-charge Ward identity
+and a physical positive norm are different requirements.

@@ -1,5 +1,70 @@
 # Changelog
 
+## 2026-09-19 — wilson-loewner: self-contained manuscript 0.1 (Codex)
+
+- Assembled *Wilson lines on Loewner-generated contours: defect
+  supersymmetry, reflection, and endpoint positivity*, a 26-page first draft
+  with the Weil-form target, arithmetic factorization, free angular and
+  auxiliary Gaussian background, relevant primary literature, and proofs
+  of the three calculations already recorded in the investigation.
+- Distinguished the vanishing same-charge scalar pairing, the positive free
+  reflected pairing, conditional interacting positivity, and the direct
+  bulk correction from the uncomputed full response. No arithmetic
+  realization, quantum positivity theorem or RH proof is claimed.
+- Added editable standalone TeX, a rendered and checked PDF, source/build
+  provenance, a non-overwriting dated snapshot, and portable replay of
+  the 268 finite diagnostics. Preserved the initial notes and all parents.
+- Updated the investigation and program navigation and added a manuscript
+  continuation. Independent mathematical review remains outstanding.
+
+## 2026-09-19 — wilson-loewner: reflection, junction and bulk response (Codex)
+
+- Derived the ordinary time-reflected scalar map and explicit reference
+  color contraction, separating the conditional interacting Gram claim
+  from the proved free opposite-ray kernel and its half-space support.
+- Tested the reflected chiral defect projectors and the R rotation that
+  aligns them. Its endpoint metric is nonpositive; the older odd-H normal
+  reflection also fails the canonical free bulk test, including a
+  gauge-invariant cubic observable.
+- Constructed contours with a smooth spacetime and scalar-direction join.
+  Their direct bulk exchange is locally finite and has quadratic bulge
+  coefficient 3/2 - 2 log 2. This is a Gaussian perturbative subset;
+  endpoint, defect, junction and small-height limits remain to be settled.
+- Added 67 finite controls, bringing replay to 268 cases, and a current
+  continuation for the complete first interaction-order shape response.
+  Preserved all earlier handoffs and parent manuscripts.
+
+## 2026-09-19 — wilson-loewner: defect charges and endpoint pairing (Codex)
+
+- Completed the tangent-coupled endpoint test in a new dated research note.
+  The full chiral defect projector admits two complex charges in one normal
+  plane and one across all defect directions with the required scalar-map
+  orientation. Wrong-triplet and wrong-orientation choices have controls.
+- Derived the endpoint polarization restriction: a single constant charge
+  selects an off-diagonal pair with zero free contraction and nonzero
+  residual R charge. Its expectation vanishes under the stated symmetry
+  assumptions; this restricts the ansatz, not the combined investigation.
+- Distinguished physical adjoint overlap from the same-charge pairing and
+  derived the adjoint transport's scalar-sign reversal. Added 99 matrix,
+  polarization and ordered-transport diagnostics, bringing replay to 201.
+- Added a current continuation on physical reflection and the reference
+  junction, preserving the first handoff and the parent manuscripts.
+
+## 2026-09-19 — wilson-loewner: smooth contour evolution (Codex)
+
+- Opened the user-created investigation with initial work in dated notes,
+  package navigation, check records, provenance and a continuation note.
+- Identified the existing common-origin semicircles with constant-driver
+  chordal Loewner slits under inversion. Proved rigidity under the
+  inherited planar fixed-scalar, fixed-bulk-charge condition.
+- Derived the Wilson variation with curvature, scalar arclength and
+  moving-endpoint terms, and substituted a regular Loewner pullback.
+  Added a varying-scalar bulk control and retained the unsolved physical
+  endpoint conditions and arithmetic requirements.
+- Added 102 finite diagnostics, including noncommuting ordered-transport
+  comparisons and positive controls, with tolerance-based replay.
+  Parent manuscripts and archived drafts remain unchanged.
+
 ## 2026-09-19 — wilson-lines: angular smearing and a free Robin model (Codex)
 
 - Added the 18 September review, with correction notices on the reflection note

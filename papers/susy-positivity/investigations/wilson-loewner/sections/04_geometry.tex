@@ -1,0 +1,101 @@
+\section{Semicircles, constant drivers, and a restricted rigidity theorem}\label{sec:geometry}
+
+Choose a plane containing a direction tangent to the defect and its
+normal, and write $z=x+\ii y$ with $y>0$. The common-reference semicircle
+from $r>0$ to zero is
+\begin{equation}\label{eq:semicircle}
+ z_r(\theta)=\frac r2(1+\cos\theta+\ii\sin\theta),\qquad0\leq\theta<\pi.
+\end{equation}
+Inversion preserves the upper half-plane and gives
+\begin{equation}
+ w_r(\theta)=-\frac1{z_r(\theta)}
+ =-\frac1r+\frac{\ii}{r}\tan(\theta/2).
+\end{equation}
+This is a vertical slit. In the chordal convention
+\begin{equation}\label{eq:loewner}
+ \partial_t g_t(w)=\frac2{g_t(w)-U_t},\qquad g_0(w)=w,
+\end{equation}
+the constant driver $U_t=a=-1/r$ has solution
+\begin{equation}\label{eq:constant-driver}
+ g_t(w)=a+\sqrt{(w-a)^2+4t},\quad
+ \gamma_t=a+2\ii\sqrt t,\quad z_t=-\frac1{a+2\ii\sqrt t}.
+\end{equation}
+The square-root branch is fixed by $g_t(w)\sim w$ at infinity. Its
+expansion is $g_t(w)=w+2t/w+O(w^{-2})$, so the half-plane capacity is
+$2t$, consistent with \cite[Lecture~2, Proposition~2.17]{Lawler}.
+Comparing the traces gives the exact dictionary
+\begin{equation}\label{eq:capacity-dictionary}
+ t=\frac{\tan^2(\theta/2)}{4r^2}.
+\end{equation}
+The complete semicircle reaches the reference only as $t\to\infty$.
+At fixed angle, $r\mapsto\lambda r$ sends $t\mapsto\lambda^{-2}t$.
+Thus this inverted capacity is neither the coordinate $\log r$ nor
+the arithmetic shift $\omega$. The formulas identify contours; they
+do not assert equality of renormalized expectations through an
+inversion singular at an endpoint.
+
+\subsection{Fixed scalar coupling and fixed special charge}
+
+Let the Euclidean Clifford generators satisfy
+$\{\Gamma_A,\Gamma_B\}=2\delta_{AB}$. Take one internal direction $I$
+and fix a nonzero complex spinor $\epsilon_c$ obeying
+\begin{equation}\label{eq:inherited-charge}
+ \epsilon_s=0,\qquad J\epsilon_c=-\epsilon_c,
+ \qquad J=\ii\Gamma_I\Gamma_3.
+\end{equation}
+Here $\epsilon_s+X^\mu\Gamma_\mu\epsilon_c$ is the relevant conformal
+Killing spinor, with its constant part set to zero. These are the
+inherited common bulk conditions. For a regular real curve
+$X=(x,y)\ne0$ in the $(1,3)$-plane and constant positive scalar
+arclength coupling, its local line condition is
+\begin{equation}\label{eq:rigidity-condition}
+ (\ii\dot x\Gamma_1+\ii\dot y\Gamma_3+v\Gamma_I)
+ (x\Gamma_1+y\Gamma_3)\epsilon_c=0,
+ \qquad v=|\dot X|>0.
+\end{equation}
+
+\begin{proposition}[Rigidity under \eqref{eq:inherited-charge}]\label{prop:rigidity}
+Equation~\eqref{eq:rigidity-condition} holds if and only if
+\begin{equation}\label{eq:rigid-tangent}
+ \frac{\dot z}{|\dot z|}=\frac{\ii z^2}{|z|^2}.
+\end{equation}
+Consequently $-1/z$ has constant real part and increasing imaginary
+part. Connected solutions in the upper half-plane are subarcs of
+circles through zero with center on the real axis, or the degenerate
+imaginary-axis line. A solution from a nonzero real boundary point to
+zero is the corresponding oriented upper semicircle.
+\end{proposition}
+\begin{proof}
+The projector implies $\Gamma_I\epsilon_c=-\ii\Gamma_3\epsilon_c$.
+Clifford multiplication reduces \eqref{eq:rigidity-condition} to
+$(A+B\Gamma_1\Gamma_3)\epsilon_c=0$, where
+\begin{equation}
+ A=x\dot x+y\dot y+vy,\qquad B=y\dot x-x\dot y+vx.
+\end{equation}
+Since $(\Gamma_1\Gamma_3)^2=-1$, multiplication by
+$A-B\Gamma_1\Gamma_3$ gives $(A^2+B^2)\epsilon_c=0$.
+The coefficients are real and the spinor is nonzero, so $A=B=0$.
+Solving gives
+\begin{equation}
+ \frac{\dot x}{v}=-\frac{2xy}{x^2+y^2},\qquad
+ \frac{\dot y}{v}=\frac{x^2-y^2}{x^2+y^2},
+\end{equation}
+which is \eqref{eq:rigid-tangent}. Conversely it makes $A=B=0$.
+Moreover $\mathrm d(-1/z)/\mathrm ds=\ii v/|z|^2$.
+The level set $\Ree(-1/z)=a\ne0$ is
+$x^2+y^2=-x/a$, and $a=0$ gives the imaginary axis.
+\end{proof}
+
+For instance, an inverted deformation
+$w(s)=a+\varepsilon h(s)+\ii s$ preserves these conditions only if
+$\varepsilon h'(s)=0$. A constant $h$ changes the slit location;
+a nontrivial fixed-endpoint deformation fails. A regular
+capacity-parametrized Loewner trace satisfying the same conditions
+therefore has constant driving.
+
+This is a bulk theorem for one plane, one charge and one scalar
+prescription. It is not a classification of supersymmetric contours
+with varying scalar directions, other conformal Killing spinors,
+additional endpoint degrees of freedom, or nonplanar embeddings.
+Section~\ref{sec:projectors} supplies a constructive control showing
+that a changed scalar prescription allows arbitrary tangents.
