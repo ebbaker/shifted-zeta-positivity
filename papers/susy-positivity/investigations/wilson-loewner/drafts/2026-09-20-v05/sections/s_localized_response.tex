@@ -1,0 +1,351 @@
+\section{Localized boundary amplitudes and spatial radial evolution}
+\label{sec:localized-response}
+
+The auxiliary product in Section~\ref{sec:localization} prescribes its
+modes from arithmetic. We now test an independently specified free
+localization problem. It supplies a one-sided gamma amplitude and an
+explicit scalar-endpoint state, but no identification with the spatial
+transfer. The obstruction occurs before fitting the pole factors:
+ordinary spatial dilation fails to preserve the fixed protected
+representatives. Canonical Hodge representatives allow a different
+radial evolution, whose elementary scalar channel contains only the
+lowest spatial mode.
+
+The localization and Hodge inputs are established results of
+\cite{DPYHiggs,DedushenkoGluing}. Their application and the comparison
+below are internal research calculations, without independent
+specialist review. The statements concern the specified free sector,
+not every supersymmetric defect or Wilson construction.
+
+\subsection{A specified charge, boundary state and circle control}
+\label{subsec:localized-boundary}
+
+Take one free three-dimensional $\mathcal N=4$ hypermultiplet on a
+round hemisphere $HS^3$ of radius $r$. Use the Higgs boundary
+polarization of \cite[Sections~4.2 and 4.3.2]{DedushenkoGluing}.
+In that reference's sphere-algebra notation the charge is
+\begin{equation}\label{eq:localized-charge}
+ \mathcal Q^H=Q_1^++Q_2^-
+ =\mathcal Q_1^{\ell+}+\mathcal Q_1^{r-}
+  +\mathcal Q_2^{\ell-}+\mathcal Q_2^{r+}.
+\end{equation}
+The $\ell,r$ superscripts here label supersymmetry algebras. They do
+not denote spatial angular momentum or an additional radius.
+For this equivariant charge, the protected complex is understood on
+the $\mathcal Q^2$-invariant subspace; unrestricted nilpotence is not
+assumed.
+The scalar boundary data and auxiliary completion are
+\begin{equation}\label{eq:localized-boundary-data}
+ q_1|=Y,\qquad \widetilde q_2|=\bar Y,\qquad
+ G|=-\frac{\ii}{2r}Y,\qquad
+ \bar G|=\frac{\ii}{2r}\bar Y,
+\end{equation}
+with the fermionic completion in
+\cite[equations~(80)--(82)]{DedushenkoGluing}. In the free theory,
+$G=\ii\partial_\perp q_2$, so
+$\partial_\perp q_2|=-Y/(2r)$; zero Neumann data would define a
+different problem. There is no dynamical gauge multiplet in this
+control. An embedding into the four-dimensional Wilson problem is
+not assumed.
+
+Put $\epsilon=(4\pi r)^{-1}$ and $x=|Y|^2/\epsilon$. The localized
+empty-hemisphere state is
+\begin{equation}\label{eq:localized-vacuum}
+ \Psi_0(Y,\bar Y)=(\pi\epsilon)^{-1/2}e^{-x},\qquad
+ \int_{\C}|\Psi_0|^2\,\mathrm d^2Y=\frac12.
+\end{equation}
+For a neutral radial state
+$\Psi=(\pi\epsilon)^{-1/2}f(x)$, the normalized boundary
+Fourier--Mellin transform has radial part
+\begin{equation}\label{eq:localized-mellin}
+ \mathcal Mf(\sigma)=\frac1{\sqrt{2\pi}}
+   \int_0^\infty x^{s-1}f(x)\dd x,\qquad
+ s=\frac12-\ii\sigma,\quad \sigma\in\R.
+\end{equation}
+The angular Fourier label is zero for these states. In particular,
+\begin{equation}\label{eq:localized-gamma}
+ \mathcal M(e^{-x})(\sigma)=\frac{\Gamma(s)}{\sqrt{2\pi}}.
+\end{equation}
+The integral converges for $\Ree s>0$ and extends meromorphically.
+Its one-sided simple poles are therefore a prediction of this
+specified boundary amplitude, without an arithmetic mode prescription.
+This agrees with the mirror hemisphere amplitude in
+\cite[equations~(135)--(140)]{DedushenkoGluing}.
+
+The circle determinant is a different object. The polarized scalar
+fields have twist
+$u^a(\varphi)=(\cos(\varphi/2),\sin(\varphi/2))$ and antiperiodic
+boundary conditions. At fixed real mass/background $\mu$, their
+kinetic operator is $\partial_\varphi+\mu$ and has weights
+$\mu+\ii(n+1/2)$, $n\in\mathbb Z$
+\cite[Section~6.1]{DPYHiggs}. Pairing both frequency directions gives
+\begin{equation}\label{eq:localized-circle}
+ \frac{Z_{\rm circ}(\mu)}{Z_{\rm circ}(0)}
+ =\prod_{n=0}^\infty
+   \frac{(n+1/2)^2}{(n+1/2)^2+\mu^2}
+ =\frac1{\cosh\pi\mu},\qquad
+ Z_{\rm circ}(0)=\frac12.
+\end{equation}
+Correspondingly,
+$|\Gamma(1/2-\ii\sigma)|^2/(2\pi)
+ =[2\cosh(\pi\sigma)]^{-1}$.
+The gamma amplitude before gluing and the paired determinant
+must not be interchanged. In particular, the direct real-mass
+shift ratio tends to $e^{2\pi\omega}$ at large mass, whereas
+the arithmetic factor \eqref{eq:small-transfer-factor} behaves
+as $(2\pi/p)^\omega$ at large positive $p$.
+
+\subsection{The actual two-scalar state and its adjoint}
+\label{subsec:localized-pair}
+
+The boundary operators act by
+\begin{equation}\label{eq:localized-operators}
+ Q_L=Y,\qquad \widetilde Q_L=-\epsilon\partial_Y,\qquad
+ \widetilde Q_R=\bar Y,\qquad Q_R=-\epsilon\partial_{\bar Y},
+ \qquad [\widetilde Q_L,Q_L]=-\epsilon I.
+\end{equation}
+The right operators use the opposite ordering of the right action
+\cite[equations~(125)--(126)]{DedushenkoGluing}.
+For the free massless semicircle, separated opposite-pole scalar
+endpoints with identity transport give
+\begin{align}
+ \Psi_{\rm pair}
+ &=Q_L\widetilde Q_R\Psi_0
+   =Y\bar Y\Psi_0=\epsilon x\Psi_0,
+ \label{eq:localized-pair-state}\\
+ \widehat\Psi_{\rm pair}
+ &=\frac{\epsilon}{\sqrt{2\pi}}\Gamma(s+1).
+ \label{eq:localized-pair-gamma}
+\end{align}
+The normalized gluing overlap is $\epsilon/2$, agreeing with the
+ordered propagator
+$-\epsilon\,\operatorname{sgn}(\varphi_1-\varphi_2)/2$.
+No contact subtraction is forced at separated endpoints. Reversing
+the coincident ordering gives $\epsilon(x-1)\Psi_0$, and choosing
+the symmetric local composite gives $\epsilon(x-1/2)\Psi_0$.
+These are distinct observables; none forces an additional quartic
+insertion into \eqref{eq:localized-pair-state}.
+
+The real-coordinate boundary norm reduces to $L^2((0,\infty),\dd x)$.
+For $N=-x\partial_x$, integration by parts and Mellin Plancherel give
+\begin{equation}\label{eq:localized-field-adjoint}
+ N^*=1-N,\qquad
+ \mathcal M(Nf)=s\,\mathcal Mf,\qquad
+ \norm{f}_{L^2(\dd x)}^2
+ =\int_{\R}|\mathcal Mf(\sigma)|^2\dd\sigma.
+\end{equation}
+These identities hold first on a suitable smooth core. The centered
+operator $N-1/2$ is skew-adjoint and generates unitary dilation of
+the \emph{field magnitude}. It has not been identified with spatial
+dilation. On the real contour ordinary conjugation sends $s$ to
+$1-s$. For example,
+\[
+ \int_0^\infty |xe^{-x}|^2\dd x=\frac14,\qquad
+ \int_{\R}\frac{|s|^2}{2\cosh\pi\sigma}\dd\sigma=\frac14,
+ \qquad
+ \int_{\R}\frac{s^2}{2\cosh\pi\sigma}\dd\sigma=0.
+\]
+Reusing a vacuum gluing phase with the same analytic polynomial on
+both sides would make the last, incorrect norm substitution.
+This boundary-coordinate identity also does not prove an isometry
+from the full physical radial state space or arithmetic storage.
+
+\subsection{Why ordinary spatial dilation fails on fixed representatives}
+\label{subsec:localized-nondescent}
+
+The hemisphere cut is at great-circle angles $\varphi=0,\pi$.
+For concentric radial slices, stereographically project from the
+antipode of its center. On the protected diameter,
+\begin{equation}\label{eq:localized-centered-frame}
+ t=2r\tan\frac{\varphi-\pi/2}{2},\qquad
+ \Omega=\left(1+\frac{t^2}{4r^2}\right)^{-1},\qquad
+ \frac{u(\varphi)}{\sqrt{\Omega}}
+ =\frac1{\sqrt2}\left(1-\frac{t}{2r},1+\frac{t}{2r}\right).
+\end{equation}
+The hemisphere is the ball of radius $2r$. A constant H-basis
+rotation writes the protected scalar as
+\begin{equation}\label{eq:localized-protected-family}
+ O(t)=q'_1(t)+\frac{t}{2r}q'_2(t),\qquad
+ \mathcal Qq'_2(t)=\chi(t),\qquad
+ \mathcal Qq'_1(t)=-\frac{t}{2r}\chi(t).
+\end{equation}
+Here $\chi$ is a nonzero free-fermion combination. These relations
+are the affine conformal Killing-spinor variation underlying the
+twist in \cite[equations~(3.1)--(3.5)]{DPYHiggs}. The basis change
+is passive and does not replace \eqref{eq:localized-boundary-data}.
+
+\begin{proposition}[Failure on fixed protected representatives]
+\label{prop:localized-nondescent}
+At fixed finite $r$, ordinary spatial dilation $D$ does not preserve
+all closed representatives of the specified free Higgs complex.
+In particular it does not directly induce the field-space Mellin
+evolution \eqref{eq:localized-field-adjoint}.
+\end{proposition}
+\begin{proof}
+The scalar has conformal dimension $1/2$. Dilation acts on the
+fields, keeping the coefficients of the specified insertion fixed.
+Thus
+\begin{equation}\label{eq:localized-nonclosure}
+ [D,O(t)]=(t\partial_t+\tfrac12)O(t)
+                   -\frac{t}{2r}q'_2(t),\qquad
+ \mathcal Q[D,O(t)]=-\frac{t}{2r}\chi(t).
+\end{equation}
+The derivative differentiates the complete protected family.
+The last expression gives a nonzero witness at a nonzero interior
+point. Equivalently, finite dilation leaves the residual
+$(1-e^a)tq'_2(e^at)/(2r)$, apart from the common factor $e^{a/2}$.
+Acting on the conformal vacuum gives the same boundary-state
+counterexample. A neutral separated pair has two such fermionic
+terms; setting one insertion at $t=0$ leaves the other witness.
+Hence the failure is preservation of closed representatives,
+not merely a nonzero commutator between $D$ and $\mathcal Q$.
+\end{proof}
+
+The compensation $\widehat D=D-R_H$, with adapted H weights
+$(1/2,-1/2)$ on the doublet, satisfies
+$[\widehat D,O(t)]=t\partial_tO(t)$ and is the exact twisted
+dilation on the relevant local cohomology
+\cite[equation~(3.4)]{DPYHiggs}. It acts trivially there.
+The corresponding free protected two-point function is proportional
+to an ordering sign: the polarization determinant cancels
+$|t_1-t_2|^{-1}$. It does not retain the stationary untwisted
+spatial covariance of Section~\ref{sec:free}.
+
+Transporting the charge itself instead relates different complexes:
+in the standard flat frame,
+$e^{aD}\mathcal Q_r e^{-aD}=e^{a/2}\mathcal Q_{e^ar}$.
+That alternative needs specified intertwiners and ordinary adjoints.
+Proposition~\ref{prop:localized-nondescent} does not exclude it,
+an enlarged unprotected state space, another supersymmetric sector,
+or the canonical representative construction below.
+
+\subsection{Canonical Hodge evolution and the lost spatial tower}
+\label{subsec:localized-hodge}
+
+For either nilpotent Higgs charge in the free conformal theory,
+the positive Hodge operator is proportional to
+$B_H=D-R_H\succeq0$. Its kernel gives the common canonical
+representatives \cite[equation~(3.4)]{DPYHiggs}. In the joint
+energy/R-charge basis, $D$ commutes with
+$P_H=1_{\{0\}}(B_H)$. Consequently
+\begin{equation}\label{eq:localized-hodge-flow}
+ T_H(u)=e^{-uD}|_{\ker B_H},\qquad u\geq0,
+\end{equation}
+is a contraction semigroup and $D=R_H$ on this space.
+Choosing these representatives first is a different operation from
+the failed descent on arbitrary representatives. It does not make
+$D$ zero or prove an isometry with the hemisphere coordinate norm.
+
+\begin{proposition}[Elementary spatial channel after Hodge projection]
+\label{prop:localized-hodge-loss}
+For a highest-H-weight elementary free scalar, Hodge projection
+retains only its lowest spatial harmonic. In the parity-even axial
+covariance channel, the retained and omitted terms are
+\begin{equation}\label{eq:localized-omitted-tower}
+ C_H(u)=e^{-u/2},\qquad
+ C_{\rm omit}(u)=\frac{e^{-5u/2}}{1-e^{-2u}},\qquad u>0.
+\end{equation}
+\end{proposition}
+\begin{proof}
+The conformally rescaled scalar cylinder operator is
+$-\partial_u^2-\Delta_{S^2}+1/4$. On a one-particle harmonic,
+\[
+ D=\ell+\tfrac12,\qquad R_H=\tfrac12,\qquad B_H=\ell.
+\]
+Only $\ell=0$ lies in the Hodge kernel. The parity-even observable
+channel in Section~\ref{sec:free} is
+\[
+ C_{\rm ev}(u)=\tfrac12[C(u,1)+C(u,-1)]
+ =\sum_{n\geq0}e^{-(2n+1/2)u}
+ =\frac{e^{-u/2}}{1-e^{-2u}}.
+\]
+Subtracting its $\ell=0$ term proves
+\eqref{eq:localized-omitted-tower}.
+\end{proof}
+The full spatial multiplicity remains $2\ell+1$; the unit coefficients
+above describe the selected channel. The aligned and antipodal
+observations are used at $u>0$, not as a normalized vector at $u=0$.
+Their omitted fraction is $e^{-2u}$, tending to one as $u\downarrow0$,
+and, for $\Ree p>1/2$ in the arithmetic comparison,
+\begin{equation}\label{eq:localized-omitted-comparison}
+ C_{\rm omit}(u)=\frac1{2u}-\frac34+O(u),\qquad
+ 2\int_0^\infty ue^{-pu}C_{\rm omit}(u)\dd u
+ =2\sum_{n\geq1}\frac1{(p+2n+1/2)^2}.
+\end{equation}
+This is exactly the shape of the positive tower in
+\eqref{eq:mode-count-test}. The full arithmetic derivative still
+contains $-2/(p-1/2)^2$. Equation~\eqref{eq:localized-omitted-comparison}
+does not count the discarded tower as arithmetic positivity.
+In particular, removing the lowest scalar mode after this projection
+leaves no elementary spatial tower at all.
+
+\subsection{Composite-state characters and endpoint spectral weights}
+\label{subsec:localized-character}
+
+The many-particle protected space contains more states. Let $A,B$
+denote independent highest-H-weight scalar creators of flavor
+charges $+1,-1$, not ordinary adjoints. The free Higgs chiral ring
+is polynomial in these generators
+\cite[Section~4.3.2]{DedushenkoGluing}. Normalized monomials
+$A^aB^b$ have energy $(a+b)/2$ and flavor $a-b$, so
+\begin{equation}\label{eq:localized-character}
+ \chi_H(u,y)
+ =\sum_{a,b\geq0}e^{-u(a+b)/2}y^{a-b}
+ =\frac1{(1-ye^{-u/2})(1-y^{-1}e^{-u/2})}.
+\end{equation}
+At flavor one, the states $A^{k+1}B^k$ have energies $k+1/2$.
+Selecting even $k$ gives the ladder $2n+1/2$; additionally deleting
+the ground state gives the character $C_{\rm omit}$. These are
+additional selections of composite states, not the physical
+single-particle angular projection.
+
+For an elementary normalized endpoint ket $E|0\rangle=|1,0\rangle$,
+the actual ordinary-adjoint radial response is instead
+\begin{equation}\label{eq:localized-endpoint-response}
+ \langle0|E^*T_H(u)E|0\rangle=e^{-u/2},\qquad
+ \int_0^\infty e^{-pu}\langle0|E^*T_H(u)E|0\rangle\dd u
+ =\frac1{p+1/2}.
+\end{equation}
+A finite polynomial endpoint gives only finitely many energies
+in this free control. An infinite response tower needs a specified
+observable or coupling and its matrix elements. A matching counting
+character does not supply them. This physical radial adjoint is
+also not an assertion that a tilded cohomological endpoint is the
+ordinary adjoint, or that \eqref{eq:localized-pair-gamma} has acquired
+a spatial spectral interpretation.
+
+\subsection{Scope of the arithmetic comparison}
+
+The complete auxiliary arithmetic amplitude is
+\begin{equation}\label{eq:localized-arithmetic-amplitude}
+ F_{\rm ar}(p)=\pi^{-p/2}(p-\tfrac12)\Gamma(p/2+5/4),
+ \qquad
+ K_\omega^<(p)=\frac{F_{\rm ar}(p-\omega)}{F_{\rm ar}(p+\omega)}.
+\end{equation}
+For the trial identification $s=(p+1/2)/2$, the polynomial
+$N(2N-1)$ acting on $e^{-x}$ gives
+$(2x^2-3x)e^{-x}$ and Mellin factor
+$s(2s-1)\Gamma(s)$. This matches the non-exponential part of
+\eqref{eq:localized-arithmetic-amplitude}. It is an inverse fit,
+not the insertion selected by the separated scalar pair.
+Moreover the different trial offset $s=(p+5/2)/2$ changes the
+required polynomial to $2N-3$. A degree obstruction based on
+one trial map is therefore conditional, not universal.
+
+The Mellin coordinate in \eqref{eq:localized-mellin} is the magnitude
+of a boundary field. The spatial variable is logarithmic radius.
+The fixed-representative obstruction and the Hodge channel calculation
+provide no identification of these variables, their measures or
+their adjoints. Analytic continuation does not supply that missing
+intertwining relation, and a rescaling chosen to manufacture
+$\pi^{-p/2}$ does not explain the fixed arithmetic finite part.
+Nor can the coefficient of a $Q$-exact localizing deformation
+become the physical shift.
+
+The useful physical alternatives must retain the unprotected
+angular modes, specify an enlarged or interface sector, or derive
+an observable coupling to the required composite states. They
+must then reproduce the causal response and its ordinary adjoint.
+The gamma amplitude established here explains a possible special-function
+structure; it supplies neither the complete arithmetic transfer nor
+an independent cumulative positive norm.

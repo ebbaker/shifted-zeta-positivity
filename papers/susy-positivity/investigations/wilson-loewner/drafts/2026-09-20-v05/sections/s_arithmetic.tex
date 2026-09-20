@@ -1,0 +1,237 @@
+\section{Arithmetic conventions and exact kernel factorization}\label{sec:arithmetic}
+
+We repeat the arithmetic normalization to make this companion
+independently readable. The effective-evolution hypothesis and its
+role in the program are stated in the exposition~\cite{Exposition}.
+The free defect calculations below use the exponential tower
+\begin{equation}\label{eq:intro-tower}
+ \nGamma(u)=\frac{e^{-u/2}}{1-e^{-2u}}
+ =\sum_{n=0}^\infty e^{-(2n+1/2)u},\qquad u>0.
+\end{equation}
+
+\subsection{The compactly supported Weil form}
+
+Let $I_L=(-L/2,L/2)$, with $L>0$, and let
+$f\in C_c^\infty(I_L;\C)$. Write $F$ for its zero extension to $\R$ and use
+\begin{equation}
+ \widehat F(\tau)=\int_\R e^{-\ii\tau x}F(x)\dd x,
+ \qquad \ip f g=\int_{I_L}\overline{f(x)}g(x)\dd x.
+\end{equation}
+For $a>0$, define the compressed shift $T_af(x)=F(x-a)$ on $I_L$.
+Let $\psi=\Gamma'/\Gamma$ be the digamma function, and let
+$\Lambda(n)=\log p$ when $n=p^k$, $p$ prime and $k\geq1$, and zero otherwise.
+Finally put
+\begin{equation}
+ C(f)=\int_{I_L}f(x)\cosh(x/2)\dd x,
+ \qquad S(f)=\int_{I_L}f(x)\sinh(x/2)\dd x.
+\end{equation}
+The normalization of the program is
+\begin{align}\label{eq:weil}
+ Q_{0,L}[f]={}&\frac1{2\pi}\int_\R
+ \bigl[\Ree\psi(\tfrac14+\tfrac{\ii\tau}2)-\log\pi\bigr]
+ |\widehat F(\tau)|^2\dd\tau
+ +2|C(f)|^2-2|S(f)|^2\notag\\
+ &-\sum_{\substack{n\geq2\\\log n<L}}
+ \frac{\Lambda(n)}{\sqrt n}\ip f{(T_{\log n}+T_{\log n}^*)f}.
+\end{align}
+The prime-power sum is finite on a fixed interval. The pole term is
+indefinite, and the archimedean multiplier includes its local constant.
+Neither may be dropped in a positivity argument.
+
+For comparison with the usual explicit formula, set
+$h=F*\widetilde F$, where $\widetilde F(x)=\overline{F(-x)}$.
+The two prime sums in the Weil functional give the last line of
+\eqref{eq:weil}; its $e^{x/2}+e^{-x/2}$ term gives
+$2|C|^2-2|S|^2$. Its archimedean distribution has Fourier multiplier
+$\Ree\psi(1/4+\ii\tau/2)-\log\pi$. Thus
+$Q_{0,L}[f]=W(F*\widetilde F)$ in the convention of
+\cite[p.~1]{Suzuki}. In particular the weight is $\Lambda(n)/\sqrt n$.
+
+\begin{theorem}[Weil positivity criterion, used as background]\label{thm:weil}
+RH holds if and only if $Q_{0,L}[f]\geq0$ for every $L>0$ and every
+$f\in C_c^\infty(I_L;\C)$.
+\end{theorem}
+The equivalence is the classical criterion, not a result of the present
+construction. Every compact support lies in one such interval, so an
+unbounded sequence of interval lengths suffices. A finite collection of
+lengths or numerical matrices does not.
+
+\subsection{The positive kinetic term and the indispensable local term}
+
+Put $a_n=2n+1/2$, for $n\geq0$, and
+\begin{equation}\label{eq:b-symbol}
+ b(\tau^2)=\Ree\psi(\tfrac14+\tfrac{\ii\tau}2)-\psi(\tfrac14)
+ =2\sum_{n=0}^\infty\frac{\tau^2}{a_n(a_n^2+\tau^2)}\geq0,
+ \qquad w_0=\psi(\tfrac14)-\log\pi<0.
+\end{equation}
+The constant $\psi(1/4)$ is not equal to $\log\pi$. Adding and
+subtracting $\psi(1/4)$ in the original multiplier gives the exact identity
+\begin{align}\label{eq:archimedean-split}
+ \Ree\psi(\tfrac14+\tfrac{\ii\tau}2)-\log\pi
+ &=[\Ree\psi(\tfrac14+\tfrac{\ii\tau}2)-\psi(\tfrac14)]
+   +[\psi(\tfrac14)-\log\pi]\notag\\
+ &=b(\tau^2)+w_0.
+\end{align}
+Thus $w_0$ is the remainder after separating the nonnegative multiplier
+$b(\tau^2)$; it is already present in \eqref{eq:weil}, not an additional
+term introduced into the form.
+
+The series in \eqref{eq:b-symbol} follows by subtracting the convergent digamma partial
+fractions. Each exponential in \eqref{eq:intro-tower} satisfies
+$\int_0^\infty e^{-a u}(1-\cos\tau u)\dd u
+=\tau^2/[a(a^2+\tau^2)]$. Plancherel therefore gives
+\begin{equation}\label{eq:kinetic}
+ \mathcal E_\Gamma[F]
+ :=\int_0^\infty\nGamma(u)\norm{F(\,\cdot+u)-F}_2^2\dd u
+ =\frac1{2\pi}\int_\R b(\tau^2)|\widehat F(\tau)|^2\dd\tau.
+\end{equation}
+Using \eqref{eq:archimedean-split} and
+$\frac1{2\pi}\int_\R|\widehat F(\tau)|^2\dd\tau=\norm f_2^2$,
+the archimedean contribution becomes
+\begin{equation}\label{eq:archimedean-energy}
+ \frac1{2\pi}\int_\R
+ [\Ree\psi(\tfrac14+\tfrac{\ii\tau}2)-\log\pi]
+ |\widehat F(\tau)|^2\dd\tau
+ =\mathcal E_\Gamma[F]+w_0\norm f_2^2.
+\end{equation}
+Substituting this identity into \eqref{eq:weil} rewrites the full target as
+\begin{align}\label{eq:weil-energy}
+ Q_{0,L}[f]={}&\mathcal E_\Gamma[F]+w_0\norm f_2^2
+ +2|C(f)|^2-2|S(f)|^2\notag\\
+ &-\sum_{\substack{n\geq2\\\log n<L}}
+ \frac{\Lambda(n)}{\sqrt n}\ip f{(T_{\log n}+T_{\log n}^*)f}.
+\end{align}
+Here $w_0\norm f_2^2=w_0\int_{I_L}|f(x)|^2\dd x$ is the fixed
+negative local term. The positive difference energy is only one part of
+the desired form: its local term, pole contribution and prime-power
+translations must all be retained.
+
+The natural form domain on a fixed interval is given by zero extensions
+with $\int\log(2+|\tau|)|\widehat F(\tau)|^2\dd\tau<\infty$.
+Indeed $b(\tau^2)$ grows logarithmically at infinity, whereas the pole
+and finite translation terms are bounded forms on $L^2(I_L)$. This
+explains the logarithmic form domain and semiboundedness of the
+localized form. For the logical proof target in Theorem~\ref{thm:weil},
+the smooth compactly supported class is enough.
+
+\subsection{Shifted transfers and a sufficient contraction route}
+
+Define the entire completed zeta function and its centered version by
+\begin{equation}
+ \xi(s)=\tfrac12s(s-1)\pi^{-s/2}\Gamma(s/2)\zeta(s),
+ \qquad H(p)=\xi(\tfrac12+p).
+\end{equation}
+For $0<\omega\leq1/2$, the shifted transfer is
+\begin{equation}\label{eq:transfer}
+ K_\omega(p)=\frac{H(p-\omega)}{H(p+\omega)}.
+\end{equation}
+The functional equation and reality imply $|K_\omega(\ii\tau)|=1$
+where the ratio is defined. This boundary identity is unconditional;
+it is not a proof that an unweighted convolution operator is a
+contraction. In particular poles away from that boundary cannot be
+ignored.
+
+The causal interpretation uses inverse Laplace transform on a line
+$\Ree p=\sigma>1$. Let $k_\omega$ be that causal distribution and
+$V_{\omega,L}=P_L(k_\omega*)P_L$, where $P_L$ denotes restriction to
+$I_L$ together with zero extension when used as an input. The explicit
+kernel below is locally integrable for $\omega>0$, so these finite-window
+operators are bounded. At $\omega=0$, $k_0=\delta_0$ and $V_{0,L}=I$.
+Logarithmic differentiation gives
+\begin{equation}
+ \partial_\omega K_\omega(p)=-a_\omega(p)K_\omega(p),\qquad
+ a_\omega(p)=\frac{H'}{H}(p-\omega)
+             +\frac{H'}{H}(p+\omega).
+\end{equation}
+At zero shift the causal generator has Laplace symbol
+\begin{align}\label{eq:generator}
+ a_0(p)={}&\frac2{p+1/2}+\frac2{p-1/2}-\log\pi
+ +\psi(\tfrac14+\tfrac p2)
+ -2\sum_{n\geq2}\frac{\Lambda(n)}{\sqrt n}e^{-p\log n}.
+\end{align}
+The identity
+\begin{equation}
+ \psi(\tfrac14+\tfrac p2)-\psi(\tfrac14)
+ =2\int_0^\infty\nGamma(u)(1-e^{-pu})\dd u
+\end{equation}
+shows that the real quadratic form of this causal generator is exactly
+\eqref{eq:weil}. The two rational terms give the symmetric kernel
+$2\cosh((x-y)/2)$; its form is $2|C|^2-2|S|^2$.
+On smooth test functions the first variation is therefore
+\begin{equation}\label{eq:first-variation-arithmetic}
+ \ip f{(I-V_{\omega,L}^*V_{\omega,L})f}
+ =2\omega Q_{0,L}[f]+o(\omega),\qquad\omega\downarrow0.
+\end{equation}
+One obtains this expansion by differentiating the causal kernel at
+$\omega=0$ using \eqref{eq:generator}; smooth zero extensions make the
+subtracted difference integral convergent in $L^2$ on a finite window.
+Thus an independent proof of $\norm{V_{\omega,L}}\leq1$ for every $L$
+and shifts tending to zero would imply RH. We need only this sufficient
+implication here; no global unweighted realization of $K_\omega$ is
+assumed.
+
+\subsection{The exact positive part, and what it leaves unresolved}
+
+Write $a=1/2-\omega$, $b=1/2+\omega$, $s=1/2+p$, and
+$\mathcal L(s)=\pi^{-s/2}\Gamma(s/2)\zeta(s)$, distinguished from the
+von Mangoldt function. Direct factorization yields
+\begin{equation}\label{eq:factor}
+ K_\omega(p)=\frac{(p+a)(p-b)}{(p+b)(p-a)}\,
+ \widetilde K_\omega(p),\qquad
+ \widetilde K_\omega(p)=\frac{\mathcal L(s-\omega)}{\mathcal L(s+\omega)}.
+\end{equation}
+The beta integral and Euler product, for $\Ree p>b$, give
+\begin{align}
+ g_\omega(t)&=\frac{2\pi^\omega}{\Gamma(\omega)}
+ e^{-a t}(1-e^{-2t})^{\omega-1}\mathbf1_{t>0},\label{eq:beta}\\
+ c_n(\omega)&=n^{\omega-1/2}\prod_{\ell\mid n,\ \ell\text{ prime}}
+ (1-\ell^{-2\omega}),\qquad c_1=1,\label{eq:comb}\\
+ \widetilde k_\omega&=g_\omega*\sum_{n\geq1}c_n(\omega)\delta_{\log n}\geq0.
+ \label{eq:positive-part}
+\end{align}
+For example, the substitution $r=e^{-2t}$ in the Laplace transform of
+\eqref{eq:beta} gives
+$\pi^\omega\Gamma((p+a)/2)/\Gamma((p+b)/2)$.
+For the zeta quotient the coefficient at a prime power $\ell^k$ is
+$\ell^{k\omega}(1-\ell^{-2\omega})$ before multiplication by
+$n^{-1/2}$, proving \eqref{eq:comb} by multiplicativity.
+Only finitely many shifts contribute on a fixed window. These formulas
+define positive locally finite measures, not normalized probability
+laws; the endpoint $a=0$ in particular precludes an unqualified
+Beta$(a/2,\omega)$ probability interpretation.
+
+Absorb one rational factor into the positive part:
+\begin{align}
+ \widehat k_\omega
+ &=\widetilde k_\omega+2a(e^{a\,\cdot}\mathbf1_{>0})*
+ \widetilde k_\omega\geq0,\notag\\
+ k_\omega&=\widehat k_\omega
+ -2b(e^{-b\,\cdot}\mathbf1_{>0})*\widehat k_\omega.
+ \label{eq:rational-subtraction}
+\end{align}
+Thus the full kernel is a positive part minus an exponential average.
+This exact reduction was central to the parent Loewner
+investigation~\cite{ParentLoewner}. It neither makes $k_\omega$ positive
+nor bounds the norm of its finite-window convolution. The required
+cancellation is still the arithmetic problem.
+
+The fractional-dimension interpretation follows from the radial beta
+integral
+\begin{equation}\label{eq:fractional}
+ \int_{\R^d}(1+|u|^2)^{-(p+b)/2}\dd^d u
+ =\pi^{d/2}\frac{\Gamma((p+b-d)/2)}{\Gamma((p+b)/2)}.
+\end{equation}
+For integer $d$ this is an ordinary integral in its convergence region;
+its radial continuation at $d=2\omega$ reproduces the gamma factor.
+It is not a continuously variable lattice dimension. To see a concrete
+obstruction to one natural lattice continuation, put
+$\vartheta(q)=\sum_{k\in\mathbb Z}q^{k^2}$ and $m=1+d$.
+The coefficient of $q^3$ in $\vartheta(q)^m$ is
+\begin{equation}
+ 8\binom m3=\tfrac43m(m-1)(m-2)=\tfrac43(d^3-d)<0
+ \quad(0<d<1).
+\end{equation}
+It cannot be a positive point count. This excludes that interpolation,
+not every positive kernel or analytic continuation. Neither
+\eqref{eq:fractional} nor a bare Loewner map supplies the prime comb and
+rational subtraction in \eqref{eq:positive-part}--\eqref{eq:rational-subtraction}.

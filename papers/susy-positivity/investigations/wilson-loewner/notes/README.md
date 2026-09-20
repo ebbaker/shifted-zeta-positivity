@@ -1,10 +1,28 @@
 # Research notes
 
-The latest bounded localization result is [Spatial radial evolution does not descend to the fixed Higgs hemisphere sector](SPATIAL_RADIAL_DESCENT_OBSTRUCTION_20260920.md), with a [next-session handoff](RESEARCH_CONTINUATION_AFTER_RADIAL_DESCENT_20260920.md). It gives an explicit supersymmetry obstruction for ordinary spatial dilation, computes the actual two-scalar arc state, and keeps its field-space Mellin transform distinct from the unidentified spatial spectral parameter. The 83 new checks are separate from the manuscript diagnostics.
+The latest bounded calculation is [Gaussian pair-interface endpoint response](GAUSSIAN_PAIR_INTERFACE_ENDPOINT_RESPONSE_20260920.md),
+with an [internal primary-source audit](../reviews/review_codex_endpoint_sources_20260920.md)
+and [next-session prompt](RESEARCH_CONTINUATION_AFTER_GAUSSIAN_ENDPOINT_20260920.md).
+A specified neutral Gaussian mode coupling excites infinitely many protected
+composites, but a single charged endpoint fixes weights proportional to
+`(k+1)q^k`. Even granting an extra projection, they do not match the omitted
+channel; the nonzero singular limit has a double short-distance pole.
+This is a scoped obstruction and a new research addendum, not a manuscript
+revision or specialist review.
+
+The version 0.5 manuscript integration is recorded in the
+[localization integration and handoff](LOCALIZATION_RESULTS_MANUSCRIPT_INTEGRATION_20260920.md).
+Detailed localization controls appear in SI S12, with a summary in main
+Section 5.4. The independent EMA anchor and append status are in main
+Section 8.4 and SI S9.5.
+
+The preceding follow-up is [The Hodge alternative and the spectrum it loses](HODGE_RADIAL_CHANNEL_AND_PROGRAM_ASSESSMENT_20260920.md). It audits the radial-descent result, constructs the distinct evolution on canonical protected representatives, and shows that only the lowest elementary spatial mode survives. Composite-state characters can contain the even ladder, but the elementary endpoint does not excite it. This note also gives the program assessment at that stage.
+
+The preceding bounded localization result is [Spatial radial evolution does not descend to the fixed Higgs hemisphere sector](SPATIAL_RADIAL_DESCENT_OBSTRUCTION_20260920.md), with a [next-session handoff](RESEARCH_CONTINUATION_AFTER_RADIAL_DESCENT_20260920.md). It gives an explicit supersymmetry obstruction for ordinary spatial dilation, computes the actual two-scalar arc state, and keeps its field-space Mellin transform distinct from the unidentified spatial spectral parameter. The 83 new checks are separate from the manuscript diagnostics.
 
 The preceding [predictive hemisphere control](PREDICTIVE_LOCALIZATION_HEMISPHERE_TEST_20260920.md) and [handoff](RESEARCH_CONTINUATION_AFTER_LOCALIZATION_TEST_20260920.md) are preserved. Their polynomial-degree comparison was conditional on an unproved dictionary.
 
-The separate [EMA smoothing, positivity, and continuation](../../critical-path/notes/EMA_SMOOTHING_AND_POSITIVITY_CONTINUATION_20260920.md) note is in the critical-path investigation. It evaluates Baker’s adaptive-smoothing suggestion across several interpretations, derives sufficient smoothing-removal and shift-averaging limits, and gives a controlled next experiment. It includes 57 separate EMA diagnostics and does not revise manuscript version 0.4.
+The separate [EMA smoothing, positivity, and continuation](../../critical-path/notes/EMA_SMOOTHING_AND_POSITIVITY_CONTINUATION_20260920.md) note is in the critical-path investigation. It evaluates Baker’s adaptive-smoothing suggestion across several interpretations, derives sufficient smoothing-removal and shift-averaging limits, and gives a controlled next experiment. It includes 57 separate EMA diagnostics and preserves manuscript version 0.4. The subsequent EMA anchor and append status are summarized in version 0.5.
 
 A follow-up [Localization and the pole cancellation](LOCALIZATION_AND_THE_POLE_CANCELLATION_20260920.md) develops Edward Baker's suggestion, identifies relevant defect-localization literature, and gives an exact auxiliary boson–fermion product as a mode-counting target. No physical localization derivation is claimed.
 
@@ -14,16 +32,18 @@ The broader agenda is in [Research continuation: realizing the shift flow and co
 It prioritizes the operator definition and first generator-matching test,
 then the cumulative-storage and depth--shift work.
 
-The current synthesis is the version 0.4
+The current synthesis is the version 0.5
 [exposition](../manuscript.pdf) and
 [supplementary information](../supplementary-information.pdf).
 The [version 0.4 integration note](MANUSCRIPT_RESULTS_INTEGRATION_20260920.md)
 records the new main Section 5 and SI S10--S11. The earlier
 [split note](MANUSCRIPT_SPLIT_AND_PROGRAM_20260920.md) records the version 0.3 organization. Earlier dated handoffs retain their stage-specific priorities;
-the radial-descent handoff supplies the latest localization decision, while the earlier research continuation retains the broader physical and cumulative-storage agenda.
+the Gaussian-endpoint handoff now supplies the latest localization decision, while the earlier research continuation retains the broader physical and cumulative-storage agenda.
 
 | Note | Status | Read it for |
 |---|---|---|
+| [Version 0.5 localization integration](LOCALIZATION_RESULTS_MANUSCRIPT_INTEGRATION_20260920.md) | Matched manuscript revision and handoff | Predictive free control, non-descent and Hodge qualification, arithmetic status, validation and next decisions |
+| [Hodge radial channel and program assessment](HODGE_RADIAL_CHANNEL_AND_PROGRAM_ASSESSMENT_20260920.md) | New internal analytical follow-up; exact counting and finite diagnostics | Canonical Hodge evolution, omitted one-particle tower, trace versus endpoint response, and next priorities |
 | [Spatial radial-descent obstruction](SPATIAL_RADIAL_DESCENT_OBSTRUCTION_20260920.md) | New scoped analytical obstruction; 83 finite checks | Centered radial geometry, explicit non-closure, R-current compensation, field-space adjoint and the actual free bilocal |
 | [Continuation after radial descent](RESEARCH_CONTINUATION_AFTER_RADIAL_DESCENT_20260920.md) | Latest localization handoff | Exact scope of the negative result, replay commands and the required intertwiner for any family-of-charges alternative |
 | [Predictive hemisphere control](PREDICTIVE_LOCALIZATION_HEMISPHERE_TEST_20260920.md) | Preserved preceding calculation | Gaussian boundary state, Mellin gamma, endpoint ordering and dictionary-dependent polynomial comparison |

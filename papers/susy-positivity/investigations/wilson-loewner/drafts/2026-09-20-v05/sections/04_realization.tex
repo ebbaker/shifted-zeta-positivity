@@ -1,0 +1,108 @@
+\section{The Wilson--Loewner realization hypothesis}\label{sec:realization}
+
+\subsection{An observable before a driver}
+
+A physical candidate must specify boundary input and output spaces,
+a field theory and regulator, endpoint states, a reference color
+sector, a physical adjoint, a family or ensemble of contours, and a
+normalization. After a fixed identification of its boundary spaces
+with $L^2(I_L)$, denote its averaged transfer by
+$\mathcal V_{\omega,L}$. It must act linearly on arbitrary boundary
+inputs, not merely return one scalar expectation for a single curve.
+
+\begin{hypothesis}[Prescribed effective evolution]\label{hyp:realization}
+There is an independently specified Wilson boundary construction,
+with contours generated or parametrized by a Loewner evolution,
+whose normalized transfer is strongly initialized by
+$\mathcal V_{0,L}=I$ and satisfies
+\begin{equation}\label{eq:physical-flow}
+ \partial_\omega\mathcal V_{\omega,L}
+       =-G_{\omega,L}\mathcal V_{\omega,L}
+\end{equation}
+on the arithmetic smooth core, in a causal evolution class for
+which this initial-value problem is unique.
+\end{hypothesis}
+
+Under these conditions $\mathcal V_{\omega,L}=V_{\omega,L}$.
+The existence of the construction, closure into the specified
+$G_{\omega,L}$, and the applicable uniqueness statement are all
+obligations of the hypothesis. Declaring $-G$ to be an abstract
+connection gives a formal ordered transport, but supplies none of
+the field or endpoint data. At fixed $L$ the causal convolution
+generators formally commute on a common admissible core; the nontrivial question remains how
+a color-ordered field observable reduces to this boundary evolution.
+
+The differential equation is intended to \emph{select} admissible
+physical and geometric data. There may be no suitable scalar
+driver within a proposed family, or several such families. An
+explicit real driver or a driver law would be an output of solving
+that matching problem. We do not assert that the arithmetic
+equation already defines one.
+
+\subsection{The insertion identity that must close}
+
+For smooth matrix fields on a regular curve, set
+\[
+ \mathcal M=\ii A_\mu\dot X^\mu+\Phi v,\qquad
+ \Phi=n^I X_I,\qquad v=|\dot X|.
+\]
+Ordered Wilson transport obeys
+$\partial_sU(s,0)=\mathcal M(s)U(s,0)$.
+For a shape change $\eta=\delta X$ and a change $\delta n$,
+its exact variation is
+\begin{align}\label{eq:variation-summary}
+ \delta U(1,0)
+ &=C_1U(1,0)-U(1,0)C_0
+   +\int_0^1U(1,s)\mathcal I(s)U(s,0)\dd s,\\
+ \mathcal I
+ &=\ii F_{\nu\mu}\eta^\nu\dot X^\mu
+   +vD_\nu\Phi\,\eta^\nu
+   +\Phi\frac{\dot X\cdot\dot\eta}{v}
+   +vX_I\delta n^I,\qquad C_s=\ii A_\nu\eta^\nu.
+ \notag
+\end{align}
+The boundary terms combine with the variations of actual endpoint
+fields and their polarizations. The proof, conventions, tangent-map
+version and endpoint formula are in \cite[Section~S4]{Supplement}.
+
+To obtain \eqref{eq:physical-flow}, the averaged insertions and all
+normalization terms must act on boundary inputs as
+$-G_{\omega,L}\mathcal V_{\omega,L}$. Field equations, Ward
+identities or a controlled reduction must establish this closure.
+A universal formula depending only on the curve cannot do so:
+in the abelian example $A_x=cy$, a straight line at $y=0$ has
+$U=1$ for every $c$, but its transverse variation depends on $c$.
+This obstruction concerns bare transport; it leaves open a
+field-dependent averaged closure.
+
+\subsection{Three parameters that must be related explicitly}
+
+Use the chordal equation
+\begin{equation}\label{eq:main-loewner}
+ \partial_tg_t(z)=\frac2{g_t(z)-u_t},
+ \qquad \operatorname{hcap}=2t,
+\end{equation}
+where $u_t$ is a real driver, distinguished from Wilson transport
+$U$. For a smooth reference curve $\zeta(s)$ in a region where
+$f_t=g_t^{-1}$ is regular,
+\[
+ X_t(s)=f_t(\zeta(s)),\qquad
+ \partial_tX_t(s)=-\frac{2f_t'(\zeta(s))}{\zeta(s)-u_t}.
+\]
+These velocities can be inserted into
+\eqref{eq:variation-summary}; they do not define transport at a
+singular growing tip. A stochastic trace would need additional
+regularization and a defined limiting observable.
+
+At fixed $L$, a dictionary $\omega=\omega(t)$ would require
+\begin{equation}\label{eq:clock-dictionary}
+ \partial_t\mathcal V_{\omega(t),L}
+ =-\dot\omega(t)G_{\omega(t),L}\mathcal V_{\omega(t),L}.
+\end{equation}
+Loewner capacity $t$, arithmetic shift $\omega$, and support length
+$L$ have different meanings. Even the explicit constant-driver
+semicircle dictionary in \cite[Section~S3]{Supplement} identifies
+neither $t$ nor the logarithmic endpoint radius with $\omega$.
+When $L$ changes, so do the space and compression; the fixed-window
+equation \eqref{eq:clock-dictionary} omits that change.
+Section~\ref{sec:path} treats it as a separate finite gluing step.

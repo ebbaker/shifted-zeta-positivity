@@ -5,7 +5,10 @@ preserves new dated snapshots without overwriting them, and verifies current
 and archived source/PDF identity for both documents. Historical single-document
 records remain supported. Its `check --replay` mode runs the 299
 standard-library diagnostics with the original parameters and thresholds.
-It is portable with each saved manuscript. See [BUILD.md](../BUILD.md) and
+Version 0.5 also hash-binds and packages the three localization control
+programs and their separate-format records; replay those using the commands
+in the build guide. They are not added to the 299-case count.
+The validator is portable with each saved manuscript. See [BUILD.md](../BUILD.md) and
 [BUILD_RECORD.json](../BUILD_RECORD.json).
 
 [check_package.py](check_package.py) is the broader live-repository inventory.

@@ -1,0 +1,127 @@
+\section{The arithmetic positivity target}\label{sec:arithmetic}
+
+This section fixes the target independently of any field-theory model.
+The formulas also explain why positivity of a single covariance kernel
+would be insufficient.
+
+\subsection{The compactly supported Weil form}
+
+Let $I_L=(-L/2,L/2)$, with $L>0$, and let
+$f\in C_c^\infty(I_L;\C)$. Write $F$ for its zero extension to $\R$ and use
+\begin{equation}
+ \widehat F(\tau)=\int_\R e^{-\ii\tau x}F(x)\dd x,
+ \qquad \ip f g=\int_{I_L}\overline{f(x)}g(x)\dd x.
+\end{equation}
+For $a>0$, define the compressed shift $T_af(x)=F(x-a)$ on $I_L$.
+Let $\psi=\Gamma'/\Gamma$ be the digamma function, and let
+$\Lambda(n)=\log p$ when $n=p^k$, $p$ prime and $k\geq1$, and zero otherwise.
+Finally put
+\begin{equation}
+ C(f)=\int_{I_L}f(x)\cosh(x/2)\dd x,
+ \qquad S(f)=\int_{I_L}f(x)\sinh(x/2)\dd x.
+\end{equation}
+The normalization of the program is
+\begin{align}\label{eq:weil}
+ Q_{0,L}[f]={}&\frac1{2\pi}\int_\R
+ \bigl[\Ree\psi(\tfrac14+\tfrac{\ii\tau}2)-\log\pi\bigr]
+ |\widehat F(\tau)|^2\dd\tau
+ +2|C(f)|^2-2|S(f)|^2\notag\\
+ &-\sum_{\substack{n\geq2\\\log n<L}}
+ \frac{\Lambda(n)}{\sqrt n}\ip f{(T_{\log n}+T_{\log n}^*)f}.
+\end{align}
+The prime-power sum is finite on a fixed interval. The pole term is
+indefinite, and the archimedean multiplier includes its local constant.
+Neither may be dropped in a positivity argument.
+
+For comparison with the usual explicit formula, set
+$h=F*\widetilde F$, where $\widetilde F(x)=\overline{F(-x)}$.
+The two prime sums in the Weil functional give the last line of
+\eqref{eq:weil}; its $e^{x/2}+e^{-x/2}$ term gives
+$2|C|^2-2|S|^2$. Its archimedean distribution has Fourier multiplier
+$\Ree\psi(1/4+\ii\tau/2)-\log\pi$. Thus
+$Q_{0,L}[f]=W(F*\widetilde F)$ in the convention of
+\cite[p.~1]{Suzuki}. In particular the weight is $\Lambda(n)/\sqrt n$.
+
+\begin{theorem}[Weil positivity criterion, used as background]\label{thm:weil}
+RH holds if and only if $Q_{0,L}[f]\geq0$ for every $L>0$ and every
+$f\in C_c^\infty(I_L;\C)$.
+\end{theorem}
+The equivalence is the classical criterion, not a result of the present
+construction. Every compact support lies in one such interval, so an
+unbounded sequence of interval lengths suffices. A finite collection of
+lengths or numerical matrices does not.
+
+\subsection{The positive kinetic term and the indispensable local term}
+
+The numbers $a_n=2n+1/2$, $n\geq0$, are the decay rates
+$1/2,5/2,9/2,\ldots$ in the exponential expansion
+\begin{equation}\label{eq:intro-tower}
+ \nGamma(u)=\frac{e^{-u/2}}{1-e^{-2u}}
+ =\sum_{n=0}^\infty e^{-a_nu},\qquad u>0.
+\end{equation}
+They arise by expanding a geometric series, and are not zeta zeros
+or prime-power coefficients. In the free defect construction they
+also appear as the even angular rates $\ell+1/2$ with $\ell=2n$;
+the physical derivation is in \cite[Section~S2]{Supplement}.
+Put
+\begin{equation}\label{eq:b-symbol}
+ b(\tau^2)=\Ree\psi(\tfrac14+\tfrac{\ii\tau}2)-\psi(\tfrac14)
+ =2\sum_{n=0}^\infty\frac{\tau^2}{a_n(a_n^2+\tau^2)}\geq0,
+ \qquad w_0=\psi(\tfrac14)-\log\pi<0.
+\end{equation}
+The exact digamma value is
+\begin{equation}
+ \psi(\tfrac14)=-\gamma-\frac{\pi}{2}-3\log2,\qquad
+ w_0=-\gamma-\frac{\pi}{2}-3\log2-\log\pi
+       \simeq-5.37218342,
+\end{equation}
+where $\gamma$ is Euler's constant. Thus $\psi(1/4)$ is not equal
+to $\log\pi$. Adding and
+subtracting $\psi(1/4)$ in the original multiplier gives the exact identity
+\begin{align}\label{eq:archimedean-split}
+ \Ree\psi(\tfrac14+\tfrac{\ii\tau}2)-\log\pi
+ &=[\Ree\psi(\tfrac14+\tfrac{\ii\tau}2)-\psi(\tfrac14)]
+   +[\psi(\tfrac14)-\log\pi]\notag\\
+ &=b(\tau^2)+w_0.
+\end{align}
+Thus $w_0$ is the remainder after separating the nonnegative multiplier
+$b(\tau^2)$; it is already present in \eqref{eq:weil}, not an additional
+term introduced into the form.
+
+The series in \eqref{eq:b-symbol} follows by subtracting the convergent digamma partial
+fractions. Each exponential in \eqref{eq:intro-tower} satisfies
+$\int_0^\infty e^{-a u}(1-\cos\tau u)\dd u
+=\tau^2/[a(a^2+\tau^2)]$. Plancherel therefore gives
+\begin{equation}\label{eq:kinetic}
+ \mathcal E_\Gamma[F]
+ :=\int_0^\infty\nGamma(u)\norm{F(\,\cdot+u)-F}_2^2\dd u
+ =\frac1{2\pi}\int_\R b(\tau^2)|\widehat F(\tau)|^2\dd\tau.
+\end{equation}
+Using \eqref{eq:archimedean-split} and
+$\frac1{2\pi}\int_\R|\widehat F(\tau)|^2\dd\tau=\norm f_2^2$,
+the archimedean contribution becomes
+\begin{equation}\label{eq:archimedean-energy}
+ \frac1{2\pi}\int_\R
+ [\Ree\psi(\tfrac14+\tfrac{\ii\tau}2)-\log\pi]
+ |\widehat F(\tau)|^2\dd\tau
+ =\mathcal E_\Gamma[F]+w_0\norm f_2^2.
+\end{equation}
+Substituting this identity into \eqref{eq:weil} rewrites the full target as
+\begin{align}\label{eq:weil-energy}
+ Q_{0,L}[f]={}&\mathcal E_\Gamma[F]+w_0\norm f_2^2
+ +2|C(f)|^2-2|S(f)|^2\notag\\
+ &-\sum_{\substack{n\geq2\\\log n<L}}
+ \frac{\Lambda(n)}{\sqrt n}\ip f{(T_{\log n}+T_{\log n}^*)f}.
+\end{align}
+Here $w_0\norm f_2^2=w_0\int_{I_L}|f(x)|^2\dd x$ is the fixed
+negative local term. The positive difference energy is only one part of
+the desired form: its local term, pole contribution and prime-power
+translations must all be retained.
+
+The natural form domain on a fixed interval is given by zero extensions
+with $\int\log(2+|\tau|)|\widehat F(\tau)|^2\dd\tau<\infty$.
+Indeed $b(\tau^2)$ grows logarithmically at infinity, whereas the pole
+and finite translation terms are bounded forms on $L^2(I_L)$. This
+explains the logarithmic form domain and semiboundedness of the
+localized form. For the logical proof target in Theorem~\ref{thm:weil},
+the smooth compactly supported class is enough.

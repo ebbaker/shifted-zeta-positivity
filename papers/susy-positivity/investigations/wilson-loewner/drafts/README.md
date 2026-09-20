@@ -2,6 +2,7 @@
 
 | Snapshot | Contents and status |
 |---|---|
+| [2026-09-20-v05](2026-09-20-v05/README.md) | Version 0.5: 20-page exposition and 39-page supplementary information. Main Section 5.4 and SI S12 give the predictive hemisphere calculation, fixed-representative obstruction and distinct Hodge evolution. Main Section 8.4 and SI S9.5 record the arithmetic EMA anchor and unresolved normalized append. The 299 original diagnostics and three separate localization controls are preserved. No independent specialist review. |
 | [2026-09-20-v04](2026-09-20-v04/README.md) | Version 0.4 manuscript pair: 18-page exposition and 33-page supplementary information. Main Section 5 and SI S10--S11 incorporate the complete fixed-window response test, scoped obstructions and auxiliary localization product. Four diagnostic programs register 299 passing cases; physical realization, cumulative positivity and depth--shift gluing remain open. |
 | [2026-09-20-v03](2026-09-20-v03/README.md) | Version 0.3 manuscript pair: 16-page program exposition and 26-page supplementary information. The prescribed shift evolution organizes the exposition; detailed tools and continuation algebra are in the companion. The physical realization and all-depth bounds remain open. |
 | [2026-09-19-v02](2026-09-19-v02/README.md) | Working manuscript 0.2, 27 pages. Section 2.2 explicitly separates the local remainder and rewrites the full Weil form. Mathematical claims and numerical diagnostics are unchanged. |

@@ -1,0 +1,202 @@
+\section{Physical reflection and the reference color junction}\label{sec:reflection}
+
+\subsection{Ordinary time reflection}
+
+Reflect a time direction tangent to the defect:
+\begin{equation}
+ \vartheta x=Rx,\qquad R=\diag(-1,1,1,1),\qquad
+ b=0\in\{x^0=0\}\cap\{x^3=0\}.
+\end{equation}
+The positive half-space is $x^0>0$. In the bosonic adjoint convention,
+$A$ transforms as a one-form, all six Hermitian scalars are even under
+geometric time reflection, and conjugation exchanges $q_m$ with
+$\bar q_m$. Fermionic reflection and an interacting regulator are
+additional requirements, not consequences of these bosonic rules.
+
+Let $C:a\to b$ lie in the positive half-space except at $b$, with $a$
+on the defect. Use $M$ from \eqref{eq:M-map}. Pullback of the fields
+first gives $U_{MR}(\vartheta C)$; applying \eqref{eq:dagger} then gives
+\begin{equation}\label{eq:reflection-map}
+ \Theta_0U_M(C)=U_N(\vartheta C^{-1}),\qquad N=-MR.
+\end{equation}
+Explicitly,
+\begin{equation}
+ Ne_0=-e_7,\quad Ne_1=-e_8,\quad Ne_2=-e_9,\quad Ne_3=-e_6.
+\end{equation}
+The time component retains its scalar map and the spatial components
+reverse it. This ordering calculation agrees with the distinction
+between geometric reflection and scalar-coupled adjoint transport
+in \cite[eqs.~(4)--(7)]{DP}.
+
+\subsection{The actual paired operator and the conditional Gram statement}
+
+Define a covariant color vector at the reference by
+\begin{equation}
+ F_i^\alpha=[U_M(C_i)]^\alpha{}_{\beta}q_2^\beta(a_i).
+\end{equation}
+Its reflected row is
+$\bar q_{2,\gamma}(\vartheta a_i)
+[U_N(\vartheta C_i^{-1})]^\gamma{}_{\alpha}$. The proposed kernel is
+\begin{equation}\label{eq:network}
+ K_{ij}=\vev{
+ \bar q_{2,\gamma}(\vartheta a_i)
+ [U_N(\vartheta C_i^{-1})]^\gamma{}_{\alpha}
+ [U_M(C_j)]^\alpha{}_{\beta}q_2^\beta(a_j)}.
+\end{equation}
+There is an identity color contraction at $b$, not another defect
+field there. Under a gauge transformation, $F_i\mapsto g(b)F_i$ and
+its reflected row transforms by $g(b)^{-1}$, so the paired observable
+is gauge invariant. The individual vector is not a gauge-invariant
+state without a specified reference charge sector.
+
+\begin{assumption}\label{ass:OS}
+A regulator and reference color sector admit Osterwalder--Schrader
+positivity for these half-space functionals. The regulated endpoint
+and junction operators belong to that domain, and their limiting
+renormalization preserves the inequality whenever a limit is claimed.
+\end{assumption}
+
+\begin{proposition}[Conditional positivity]\label{prop:conditional-gram}
+Under the regulated part of Assumption~\ref{ass:OS}, the matrix
+in \eqref{eq:network} is positive semidefinite for every finite
+collection of admissible contours and endpoints.
+\end{proposition}
+\begin{proof}
+Apply the assumed OS inequality to $\sum_i c_iF_i$, including its
+reference color fiber, to obtain $\sum_{ij}\bar c_iK_{ij}c_j\geq0$.
+For a concrete bosonic sufficient model, suppose the two half-integrals
+factor over boundary data $B$ with positive measure $\nu$. They give
+vector wavefunctions $\psi_i^\alpha(B)$ and
+\begin{equation}\label{eq:factorized-gram}
+ K_{ij}=\int\sum_\alpha\overline{\psi_i^\alpha(B)}
+                    \psi_j^\alpha(B)\dd\nu(B),\qquad\nu\geq0.
+\end{equation}
+The claimed inequality is then the integral of a squared norm.
+Boundary gauge transformations act unitarily on the displayed fiber.
+\end{proof}
+
+This conditional statement locates the missing physical input. A
+positive bosonic factorization is not asserted for the full fermionic
+$\mathcal N=4$ defect measure. Gauge invariance of
+\eqref{eq:network} alone proves no reflection inequality. Gauss law,
+the reference charge sector, the regulator, and junction counterterms
+must all be addressed in an interacting realization.
+
+\subsection{An unconditional free kernel}
+
+At leading free endpoint order $U=I$. Strip the positive color and
+coupling constants and write $a_i=(\tau_i,\mathbf z_i,0)$ with
+$\tau_i>0$, $\mathbf z_i\in\R^2$. Then
+\begin{equation}\label{eq:free-OS}
+ K^{(0)}(a_i,a_j)=
+ \frac1{\sqrt{(\tau_i+\tau_j)^2+|\mathbf z_i-\mathbf z_j|^2}}.
+\end{equation}
+Its representation
+\begin{equation}
+ K^{(0)}(a_i,a_j)=4\pi\int_{\R^2}\frac{\mathrm d^2k}{(2\pi)^2}
+ \frac{e^{-|k|(\tau_i+\tau_j)}
+ e^{\ii k\cdot(\mathbf z_j-\mathbf z_i)}}{2|k|}
+\end{equation}
+is an integral of products $\overline{\psi_i(k)}\psi_j(k)$ with
+positive measure. This proves free positivity independently of
+Assumption~\ref{ass:OS}. On the time ray $a_r=(r,0,0,0)$ it reduces to
+\begin{equation}\label{eq:opposite-ray}
+ K^{(0)}(r,s)=\frac1{r+s}
+ =\int_0^\infty e^{-\lambda r}e^{-\lambda s}\dd\lambda,
+ \qquad
+ \sqrt{rs}K^{(0)}(r,s)=G_o(\log r-\log s).
+\end{equation}
+The diagonal is finite for $r>0$. The kernel is Hankel in $r,s$,
+and translation invariant after the radial weights and logarithmic
+coordinates. It is the opposite-ray kernel of \eqref{eq:rays}, not
+the full even archimedean tower. The full-sphere profile in
+Section~\ref{sec:free} cannot be used as the same half-space state
+without changing its support and recomputing its weights.
+
+\subsection{The two branches preserve different constant charges}
+
+Let $\widetilde K_\mu=\ii\Gamma_{Me_\mu}\Gamma_\mu$ for
+$\mu=0,1,2$, and $K_n=\ii\Gamma_6\Gamma_3$. With $\chi=D=+1$,
+the two branches require the following eigenvalues:
+\begin{center}
+\begin{tabular}{lcc}
+\toprule
+Involution & Ket with $M$ & Reflected bra with $N$\\
+\midrule
+$\widetilde K_0$ & $-1$ & $-1$\\
+$\widetilde K_1,\widetilde K_2$ & $-1$ & $+1$\\
+$K_n$ & $-1$ & $+1$\\
+\bottomrule
+\end{tabular}
+\end{center}
+Each all-direction family has one complex compatible charge; in
+the $(x^0,x^3)$-plane each has two. Their common subspace is zero
+when time and normal tangents are independently required, because
+the normal conditions are opposite. The normal projectors also
+select opposite H weights: the ket uses $q_2$ and the physical bra
+uses $\bar q_2$ with the conjugate-weight charge. The identity tensor
+at $b$ cannot compensate a nonzero variation on a branch.
+
+As a bulk control, a straight time-directed contour needs only
+$\widetilde K_0=-1$. That condition is common to the maps and gives
+a four-dimensional complex chiral defect solution space. It is a
+bulk control, not a statement that a constant charge annihilates
+the physical adjoint pair of endpoint scalars.
+
+\subsection{Internal rotations do not automatically preserve positivity}
+
+The proper rotations by $\pi$ about H axis 4 and V axis 7 are
+\begin{equation}
+ S_H=\diag(1,-1,-1),\qquad S_V=\diag(1,-1,-1).
+\end{equation}
+For $S=S_H\oplus S_V$, one checks $SN=M$. Thus an internally rotated
+reflection aligns the two bulk scalar maps. But $S_H$ acts on the
+endpoint doublet by $\pm\ii\sigma_1$, up to basis convention. It
+takes $\bar q_2$ to a phase times $\bar q_1$, restoring the zero
+diagonal contraction of Proposition~\ref{prop:endpoint-zero}.
+
+On the full free endpoint doublet the inserted metric is not positive.
+Without a phase adjustment its eigenvalues are $\pm\ii$; with a phase
+making it Hermitian they are $+1,-1$. For instance
+\begin{equation}
+ (1,-1)\sigma_1\binom{1}{-1}/2=-1.
+\end{equation}
+No overall phase makes both eigenvalues positive. The identity metric
+from ordinary adjoint pairing is the control. More generally, if a
+unitary $S$ on a positive Hilbert space satisfies
+$\ip\psi{S\psi}\geq0$ for every $\psi$, then $S$ is positive
+self-adjoint; unitarity forces its spectrum to be $\{1\}$ and $S=I$.
+Projection to one rotation eigenspace is a different operation and
+here mixes the fixed H endpoint weights.
+
+This is a counterexample for the displayed doublet state space.
+It does not contradict the special large-rectangle rotated-reflection
+conjecture distinguished from ordinary reflection in
+\cite[eqs.~(11)--(16)]{DP}.
+
+\subsection{A free test of an odd-H normal reflection}
+
+A different proposal in the parent investigation reflected across
+the defect and assigned odd parity to the H scalars. For the canonical
+free scalar algebra, a real mode of frequency $\nu>0$ at distance
+$a>0$ from a reflection plane has ordinary norm
+$e^{-2\nu a}/(2\nu)>0$; assigning it odd reflection parity changes
+the sign. The failure is also visible in a gauge-invariant observable.
+For a non-Abelian group with $\tr(T_aT_b)=\delta_{ab}/2$, take the
+Hermitian Wick polynomial
+\begin{equation}
+ \mathcal O=\ii\tr\bigl(H[V_1,V_2]\bigr),
+\end{equation}
+where $H$ is one H scalar and $V_1,V_2$ are distinct V scalars.
+Writing $[T_b,T_c]=\ii f_{bca}T_a$, its coefficient is
+$-f_{bca}/2$. Distinct species have only their matching free
+contractions, hence at separated reflected points
+\begin{equation}
+ \vev{\Theta_{\rm even}\mathcal O(x)\,\mathcal O(x)}
+ =\tfrac14\sum_{abc}f_{abc}^2D_0(\vartheta x-x)^3>0,
+\end{equation}
+with $D_0$ the positive scalar covariance. Odd H and even V parity
+give the negative of this value. This excludes that reflection on
+the unrestricted canonical free bulk observable algebra. It does
+not classify all interacting normal-reflection actions or restricted
+observable sectors. The even assignment supplies the positive control.

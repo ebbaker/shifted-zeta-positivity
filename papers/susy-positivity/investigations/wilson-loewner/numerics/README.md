@@ -1,6 +1,18 @@
 # Checks and records
 
-Subsequent localization research has separate programs and records:
+The post-version-0.5
+[Gaussian pair endpoint checker](check_gaussian_pair_endpoint.py) and its
+[small record](records/gaussian-pair-endpoint-checks-20260920.json) accompany
+the [bounded interface calculation](../notes/GAUSSIAN_PAIR_INTERFACE_ENDPOINT_RESPONSE_20260920.md).
+Run it with `python3 -B numerics/check_gaussian_pair_endpoint.py --output /tmp/gaussian-pair-endpoint-replay.json`
+from the investigation directory. It checks four rational couplings,
+25 factorial weights, three independent finite squeeze evolutions at two
+step sizes, 20 response comparisons and nine regulator identities.
+The exact incompatible weight requirements and the floating diagnostics
+are distinguished in the record. This adds no arithmetic certificate and
+does not change the manuscript's diagnostic count or frozen build record.
+
+Version 0.5 incorporates localization research with separate programs and records:
 
 - [check_localization_hemisphere.py](check_localization_hemisphere.py) and
   its [record](records/localization-hemisphere-checks-20260920.json) audit
@@ -13,12 +25,19 @@ Subsequent localization research has separate programs and records:
   standard-library quadrature helper. It does not derive the external
   supersymmetry transformations or an arithmetic transfer.
 
+- [check_hodge_radial_channel.py](check_hodge_radial_channel.py) and its
+  [record](records/hodge-radial-channel-checks-20260920.json) check the
+  canonical Hodge channel: 13 one-particle levels, 25 protected-degree
+  levels, six spatial comparisons and an exact rational tail enclosure.
+
 Run these explicitly with `python3 numerics/check_localization_hemisphere.py`
 and `python3 numerics/check_spatial_radial_descent.py` from the investigation
-directory. Both accept `--output` for a disposable replay record. Their
+directory. The Hodge program runs with `python3 numerics/check_hodge_radial_channel.py`.
+All three accept `--output` for a disposable replay record. Their
 provenance companions pin inputs, model identity and the unexposed effort
-setting. They are inventoried in the live package but are not part of the
-version-0.4 manuscript's 299-case replay below.
+setting. They are included in the version-0.5 standalone snapshot and inventoried
+in the live package; their formats remain separate from the original
+299-case replay below.
 
 [check_smooth_variation.py](check_smooth_variation.py) uses the Python standard
 library and prints JSON. Its [preserved record](records/smooth-variation-checks.json)
@@ -38,7 +57,7 @@ all passing. It checks the full local/pole arithmetic comparison and the
 unequal-radius Gaussian Wilson variation from the
 [fixed-window research note](../notes/FIXED_WINDOW_WILSON_RESPONSE_OBSTRUCTION_20260920.md).
 It uses the standard library and imports the existing reflected-junction
-quadrature. Version 0.4 and the live research inventory both register 299 cases
+quadrature. Versions 0.4--0.5 and the live research inventory register 299 cases
 across four programs. Historical manuscript version 0.3 retains 268.
 
 | Group | Scope |
