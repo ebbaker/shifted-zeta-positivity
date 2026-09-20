@@ -10,6 +10,12 @@ independent mathematical review.
 - [Supplementary information](supplementary-information.pdf),
   [LaTeX source](supplementary-information.tex): detailed tools,
   derivations, restrictions and diagnostics.
+- [Spatial radial-descent test](notes/SPATIAL_RADIAL_DESCENT_OBSTRUCTION_20260920.md)
+  and [next-session handoff](notes/RESEARCH_CONTINUATION_AFTER_RADIAL_DESCENT_20260920.md):
+  ordinary spatial dilation fails closure in the specified free Higgs
+  hemisphere sector; the actual two-scalar state and 83 separate checks.
+- [Predictive hemisphere-localization control](notes/PREDICTIVE_LOCALIZATION_HEMISPHERE_TEST_20260920.md):
+  the preceding Gaussian/Mellin calculation and its conditional dictionary.
 - [Research continuation for the next chat](notes/RESEARCH_CONTINUATION_20260920.md):
   prioritized directions, first calculations, and remaining proof obligations.
 - [Fixed-window Wilson response calculation](notes/FIXED_WINDOW_WILSON_RESPONSE_OBSTRUCTION_20260920.md):
@@ -80,7 +86,7 @@ manuscript pair remains unchanged by that subsequent research.
 | Location | Purpose |
 |---|---|
 | [notes](notes/README.md) | Dated research and continuation notes |
-| [numerics](numerics/README.md) | Four diagnostic programs and their preserved records (299 cases) |
+| [numerics](numerics/README.md) | Four manuscript diagnostic programs (299 cases), plus two subsequent localization research programs |
 | [validation](validation/README.md) | Both-document build records, snapshots and package inventory |
 | [reviews](reviews/README.md) | Independent reviews; none yet |
 | [drafts](drafts/README.md) | Immutable standalone manuscript snapshots |

@@ -1,6 +1,10 @@
 # Research notes
 
-The next-session handoff is [EMA smoothing, positivity, and continuation](../../critical-path/notes/EMA_SMOOTHING_AND_POSITIVITY_CONTINUATION_20260920.md), in the critical-path investigation. It evaluates Baker’s adaptive-smoothing suggestion across several interpretations, derives sufficient smoothing-removal and shift-averaging limits, and gives a controlled next experiment. It includes 57 separate EMA diagnostics and does not revise manuscript version 0.4.
+The latest bounded localization result is [Spatial radial evolution does not descend to the fixed Higgs hemisphere sector](SPATIAL_RADIAL_DESCENT_OBSTRUCTION_20260920.md), with a [next-session handoff](RESEARCH_CONTINUATION_AFTER_RADIAL_DESCENT_20260920.md). It gives an explicit supersymmetry obstruction for ordinary spatial dilation, computes the actual two-scalar arc state, and keeps its field-space Mellin transform distinct from the unidentified spatial spectral parameter. The 83 new checks are separate from the manuscript diagnostics.
+
+The preceding [predictive hemisphere control](PREDICTIVE_LOCALIZATION_HEMISPHERE_TEST_20260920.md) and [handoff](RESEARCH_CONTINUATION_AFTER_LOCALIZATION_TEST_20260920.md) are preserved. Their polynomial-degree comparison was conditional on an unproved dictionary.
+
+The separate [EMA smoothing, positivity, and continuation](../../critical-path/notes/EMA_SMOOTHING_AND_POSITIVITY_CONTINUATION_20260920.md) note is in the critical-path investigation. It evaluates Baker’s adaptive-smoothing suggestion across several interpretations, derives sufficient smoothing-removal and shift-averaging limits, and gives a controlled next experiment. It includes 57 separate EMA diagnostics and does not revise manuscript version 0.4.
 
 A follow-up [Localization and the pole cancellation](LOCALIZATION_AND_THE_POLE_CANCELLATION_20260920.md) develops Edward Baker's suggestion, identifies relevant defect-localization literature, and gives an exact auxiliary boson–fermion product as a mode-counting target. No physical localization derivation is claimed.
 
@@ -16,10 +20,14 @@ The current synthesis is the version 0.4
 The [version 0.4 integration note](MANUSCRIPT_RESULTS_INTEGRATION_20260920.md)
 records the new main Section 5 and SI S10--S11. The earlier
 [split note](MANUSCRIPT_SPLIT_AND_PROGRAM_20260920.md) records the version 0.3 organization. Earlier dated handoffs retain their stage-specific priorities;
-the EMA continuation supplies the next-session comparison, while the earlier research continuation retains the broader physical and cumulative-storage agenda.
+the radial-descent handoff supplies the latest localization decision, while the earlier research continuation retains the broader physical and cumulative-storage agenda.
 
 | Note | Status | Read it for |
 |---|---|---|
+| [Spatial radial-descent obstruction](SPATIAL_RADIAL_DESCENT_OBSTRUCTION_20260920.md) | New scoped analytical obstruction; 83 finite checks | Centered radial geometry, explicit non-closure, R-current compensation, field-space adjoint and the actual free bilocal |
+| [Continuation after radial descent](RESEARCH_CONTINUATION_AFTER_RADIAL_DESCENT_20260920.md) | Latest localization handoff | Exact scope of the negative result, replay commands and the required intertwiner for any family-of-charges alternative |
+| [Predictive hemisphere control](PREDICTIVE_LOCALIZATION_HEMISPHERE_TEST_20260920.md) | Preserved preceding calculation | Gaussian boundary state, Mellin gamma, endpoint ordering and dictionary-dependent polynomial comparison |
+| [Continuation after the hemisphere test](RESEARCH_CONTINUATION_AFTER_LOCALIZATION_TEST_20260920.md) | Preserved preceding handoff | The bounded spatial-descent question now tested |
 | [EMA smoothing and next-session continuation](../../critical-path/notes/EMA_SMOOTHING_AND_POSITIVITY_CONTINUATION_20260920.md) | New analytical evaluation and 57 finite controls | Inherited arithmetic EMA, adaptive auxiliary filters, artificial positivity, removal rates, path averaging and spatial memory |
 | [Version 0.4 manuscript integration](MANUSCRIPT_RESULTS_INTEGRATION_20260920.md) | Matched manuscript revision | Placement, claim scope, rendered-page review and diagnostic replay |
 | [Localization and the pole cancellation](LOCALIZATION_AND_THE_POLE_CANCELLATION_20260920.md) | Research proposal and exact auxiliary product | Defect-compatible localization, missing physical mode pairing, full gamma/pole factor, and an additive-constant-free derivative test |

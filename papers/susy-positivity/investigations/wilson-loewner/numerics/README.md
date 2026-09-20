@@ -1,5 +1,25 @@
 # Checks and records
 
+Subsequent localization research has separate programs and records:
+
+- [check_localization_hemisphere.py](check_localization_hemisphere.py) and
+  its [record](records/localization-hemisphere-checks-20260920.json) audit
+  the preceding hemisphere/Mellin control at quadrature orders 24 and 40.
+- [check_spatial_radial_descent.py](check_spatial_radial_descent.py) and
+  its [record](records/spatial-radial-descent-checks-20260920.json) audit
+  the [fixed-sector radial obstruction](../notes/SPATIAL_RADIAL_DESCENT_OBSTRUCTION_20260920.md).
+  All 83 cases pass at orders 24 and 40: 57 exact rational checks and 26
+  floating-point checks. The code imports the preceding program's
+  standard-library quadrature helper. It does not derive the external
+  supersymmetry transformations or an arithmetic transfer.
+
+Run these explicitly with `python3 numerics/check_localization_hemisphere.py`
+and `python3 numerics/check_spatial_radial_descent.py` from the investigation
+directory. Both accept `--output` for a disposable replay record. Their
+provenance companions pin inputs, model identity and the unexposed effort
+setting. They are inventoried in the live package but are not part of the
+version-0.4 manuscript's 299-case replay below.
+
 [check_smooth_variation.py](check_smooth_variation.py) uses the Python standard
 library and prints JSON. Its [preserved record](records/smooth-variation-checks.json)
 contains 102 cases, all passing in the recorded run.
