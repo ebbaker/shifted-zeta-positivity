@@ -1,8 +1,9 @@
 # Validation and provenance
 
-[drafts.py](drafts.py) records a visually inspected manuscript build,
+[drafts.py](drafts.py) records a visually inspected exposition and supplementary build,
 preserves new dated snapshots without overwriting them, and verifies current
-and archived source/PDF identity. Its `check --replay` mode runs the 268
+and archived source/PDF identity for both documents. Historical single-document
+records remain supported. Its `check --replay` mode runs the 268
 standard-library diagnostics with the original parameters and thresholds.
 It is portable with each saved manuscript. See [BUILD.md](../BUILD.md) and
 [BUILD_RECORD.json](../BUILD_RECORD.json).

@@ -1,0 +1,126 @@
+\section{Why defect matter reproduces the archimedean exponents}\label{sec:free}
+
+The geometric reason for using three-dimensional defect matter can be
+seen without supersymmetry. Normalize a free massless scalar covariance
+on the defect to $|X-Y|^{-1}$; coupling and color constants will be
+restored when needed. Write $X=e^x\Omega$, $Y=e^y\Omega'$ with
+$\Omega,\Omega'\in S^2$, and rescale the field by $e^{x/2}$. With
+$u=x-y$ and $v=\Omega\cdot\Omega'$, the covariance becomes
+\begin{equation}\label{eq:cylinder-cov}
+ C(u,v)=\frac1{\sqrt{2(\cosh u-v)}}
+ =\sum_{\ell=0}^\infty e^{-(\ell+1/2)|u|}P_\ell(v),\qquad u\ne0.
+\end{equation}
+This is the Legendre generating function with parameter $e^{-|u|}$.
+
+Fix an axis $e\in S^2$ and $0\leq\rho<1$. The Poisson density on $S^2$
+and its even part are
+\begin{equation}
+ P_\rho(v)=\frac{1-\rho^2}{4\pi(1-2\rho v+\rho^2)^{3/2}},\qquad
+ h_\rho(\Omega)=\tfrac12\{P_\rho(e\cdot\Omega)+P_\rho(-e\cdot\Omega)\}.
+\end{equation}
+Integrating \eqref{eq:cylinder-cov} against $h_\rho(\Omega)h_\rho(\Omega')$
+projects onto even angular degrees. Orthogonality of the Legendre
+polynomials gives
+\begin{equation}\label{eq:regulated-cov}
+ C_\rho(u)=\sum_{n=0}^\infty\rho^{4n}e^{-a_n|u|}
+ =\frac{e^{-|u|/2}}{1-\rho^4e^{-2|u|}},\qquad a_n=2n+\tfrac12.
+\end{equation}
+For $\rho<1$ this is a bounded continuous positive-definite covariance.
+For $u\ne0$ it tends to $\nGamma(|u|)$ as $\rho\uparrow1$.
+The limit is singular at $u=0$, so positivity of the regulated covariance
+cannot simply be passed to a finite contact-subtracted covariance.
+
+\begin{proposition}[The sign of the subtraction]\label{prop:subtraction}
+Let $T_\rho$ be convolution by $C_\rho$ on $\R$, and put
+$M_\rho=\widehat C_\rho(0)$. Then $M_\rho I-T_\rho$ is positive,
+and its quadratic form tends to $\mathcal E_\Gamma$ on smooth compactly
+supported functions. The opposite subtraction $T_\rho-M_\rho I$ tends
+to the negative of that form. Adding any finite constant multiple of
+the identity to the latter limit does not give a positive form on all
+smooth compactly supported functions.
+\end{proposition}
+\begin{proof}
+Fourier transformation gives
+\begin{align}
+ \widehat C_\rho(\tau)&=\sum_{n\geq0}\rho^{4n}
+ \frac{2a_n}{a_n^2+\tau^2},\notag\\
+ M_\rho-\widehat C_\rho(\tau)
+ &=2\sum_{n\geq0}\rho^{4n}\frac{\tau^2}{a_n(a_n^2+\tau^2)}
+ \uparrow b(\tau^2).
+\end{align}
+Monotone convergence and \eqref{eq:kinetic} prove the first claims.
+Moreover $M_\rho=\sum_{n\geq0}\rho^{4n}/(n+1/4)$ diverges
+logarithmically. Since $b(\tau^2)\to\infty$, any multiplier
+$c-b(\tau^2)$ is negative at high frequencies. Modulating a fixed
+nonzero compactly supported smooth function to arbitrarily high
+frequency gives a negative form value, also on any fixed nonempty
+interval.
+\end{proof}
+
+There is a second useful decomposition. For $u\ne0$ define the
+same-ray and opposite-ray functions
+\begin{equation}\label{eq:rays}
+ G_s(u)=\frac1{2\sinh(|u|/2)},\qquad
+ G_o(u)=\frac1{2\cosh(u/2)}.
+\end{equation}
+Then $\nGamma(|u|)=\tfrac12(G_s(u)+G_o(u))$. The reflected free
+network constructed in Section~\ref{sec:reflection} gives $G_o$.
+That is a positive and finite kernel, but it is not the even tower by
+itself. Conversely, the full angular smearing above is an ordinary
+covariance construction with support on all of $S^2$. It is not
+automatically a state supported in a positive-time half-space, as
+required for a time-reflection argument. Restricting the angular
+profile to a hemisphere changes its spectral weights.
+
+The useful conclusion is therefore precise: free defect matter
+supplies the desired exponents and a regulated positive covariance.
+The RH target requires the associated difference energy, its fixed
+local term, its pole term and its arithmetic translations. These
+are distinct operations on the free data.
+
+\subsection{An auxiliary Gaussian realization of the gamma ratio}
+
+The parent endpoint work also gave a useful fixed-space alternative
+to fractional dimension~\cite{ParentAngular}. It can be understood
+from elementary Gaussian integration. Retain one complex mode for
+each $a_n=2n+1/2$, and for real $p$ with $a_0+p>\omega$ define
+\begin{equation}
+ Z_N(p)=\prod_{n=0}^{N-1}\int_\C\frac{\mathrm d^2z_n}{\pi}
+             e^{-(a_n+p)|z_n|^2}
+       =\prod_{n=0}^{N-1}(a_n+p)^{-1}.
+\end{equation}
+For a half-line field $\phi_n(t)$ with action
+$\int_0^\infty(|\phi_n'|^2+a_n^2|\phi_n|^2)\dd t$ and boundary value
+$z_n$, the decaying classical solution is $\phi_n(t)=z_ne^{-a_nt}$.
+Its action is $a_n|z_n|^2$. Adding the boundary term $p|z_n|^2$
+gives the same Gaussian; varying the boundary value gives the Robin
+condition $(-\partial_t+p)\phi_n(0)=0$ for the full variational problem.
+Constants common to the two partition functions cancel in the ratio.
+
+Set $x=(p+1/2-\omega)/2$ and $y=x+\omega$. The finite product gives
+\begin{equation}
+ \frac{Z_N(p-\omega)}{Z_N(p+\omega)}
+ =\prod_{n=0}^{N-1}\frac{n+y}{n+x}
+ =\frac{\Gamma(N+y)\Gamma(x)}{\Gamma(y)\Gamma(N+x)}.
+\end{equation}
+Since $\Gamma(N+y)/\Gamma(N+x)\sim N^{\omega}$,
+\begin{equation}\label{eq:gaussian-gamma}
+ \pi^\omega\lim_{N\to\infty}N^{-\omega}
+ \frac{Z_N(p-\omega)}{Z_N(p+\omega)}
+ =\pi^\omega\frac{\Gamma((p+a)/2)}{\Gamma((p+b)/2)}.
+\end{equation}
+Equivalently one can divide by the same finite product at a reference
+$p_0$ to cancel the normalization. One real Gaussian mode would give
+the square root of the ratio, so statistics and multiplicities matter.
+
+This is an auxiliary partition-function model, not a localization
+of the Wilson network. Angular smearing samples a channel; it does
+not remove the other angular modes from a partition function. The
+full scalar sphere has multiplicity $2\ell+1$, whereas the model
+retains one copy of each even axial mode. A physical projection or
+cancellation of the extra modes has not been derived. Here $p$ is a
+boundary mass, and identifying it with the arithmetic Laplace
+frequency requires a dynamical dictionary. The Robin response
+$(a_n+p)^{-1}$, the partition ratio, and a causal transfer are different
+objects. The supplied factor $\pi^\omega$, the prime comb, and the
+rational pole correction remain outside this Gaussian mechanism.

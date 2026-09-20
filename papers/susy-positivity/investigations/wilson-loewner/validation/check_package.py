@@ -34,6 +34,10 @@ INHERITED = (
     '../fractional-dimension/sections/06_pointcount.tex',
     '../wilson-lines/manuscript.tex',
     '../../background_section.tex',
+    '../wilson-lines/sections/07_region.tex',
+    '../../../shifted-zeta/storage-depth/archive/background/1-critical_path_research.md',
+    '../../../shifted-zeta/storage-depth/archive/background/2-cumulative_storage_path.md',
+    '../../../shifted-zeta/storage-depth/manuscript/storage_depth.tex',
 )
 
 
@@ -95,8 +99,8 @@ def main():
         record = dict(schema_version=1,
                       generated_utc=datetime.now(timezone.utc).isoformat(),
                       author='OpenAI GPT-6 (Codex), for Edward Baker',
-                      status='Self-contained working manuscript 0.2 and dated snapshots; '
-                             'research through direct bulk response; no independent review',
+                      status='Working exposition and supplementary information 0.3; '
+                             'prescribed shift-evolution research program; no independent review',
                       python=platform.python_version(),
                       scope='File identity and finite classical, chiral-defect, endpoint, '
                             'reflection and Gaussian-response diagnostics; not a proof checker '

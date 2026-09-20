@@ -1,15 +1,20 @@
 # Research notes
 
-Initial work remains in dated notes. The self-contained synthesis is now
-[manuscript 0.2](../manuscript.pdf). The
-[shift-flow and critical-path note](SHIFT_FLOW_CUMULATIVE_STORAGE_AND_CRITICAL_PATH_20260919.md)
-records the proposed research direction and handoff to the new investigation;
-the [manuscript continuation](MANUSCRIPT_CONTINUATION_20260919.md) retains the
-first manuscript's build and calculation context. Earlier notes keep their
-original stage-specific claims.
+Start the next chat with [Research continuation: realizing the shift flow and continuing cumulative positivity](RESEARCH_CONTINUATION_20260920.md).
+It prioritizes the operator definition and first generator-matching test,
+then the cumulative-storage and depth--shift work.
+
+The current synthesis is the version 0.3
+[exposition](../manuscript.pdf) and
+[supplementary information](../supplementary-information.pdf).
+The [split note](MANUSCRIPT_SPLIT_AND_PROGRAM_20260920.md) maps the material
+between them. Earlier dated handoffs retain their stage-specific priorities;
+the new research continuation supplies the current order of work.
 
 | Note | Status | Read it for |
 |---|---|---|
+| [Research continuation for the next chat](RESEARCH_CONTINUATION_20260920.md) | Current prioritized handoff, 20 September | Recommended fixed-window realization test, independent cumulative amplitude, concrete depth--shift pilot, tools and decision points |
+| [Manuscript split and program](MANUSCRIPT_SPLIT_AND_PROGRAM_20260920.md) | Editorial handoff, 20 September | Reading map for the version 0.3 exposition and technical companion |
 | [Prescribed shift flow, cumulative storage, and critical path](SHIFT_FLOW_CUMULATIVE_STORAGE_AND_CRITICAL_PATH_20260919.md) | Research proposal and handoff; no new theorem or numerical run | Exact arithmetic evolution as the construction target, reflected cumulative storage, spatial gluing, and the distinction between a true contraction boundary and a path of provable estimates |
 | [Opening note](OPENING_NOTE_20260919.md) | Current scope and proposal | The combined contour/field observable, what the old closure excludes, and the full RH target |
 | [Smooth variation and the constant driver](SMOOTH_VARIATION_AND_CONSTANT_DRIVER_20260919.md) | Written derivations; finite checks | The explicit semicircle/slit dictionary, fixed-charge rigidity, Wilson variation with endpoints, and a varying-scalar control |
@@ -20,8 +25,9 @@ original stage-specific claims.
 | [Third continuation](CONTINUATION_20260919_SESSION3.md) | Detailed next-calculation handoff, still applicable | Complete the first interaction-order shape response, including endpoint, defect and junction terms |
 | [Manuscript continuation](MANUSCRIPT_CONTINUATION_20260919.md) | Handoff after draft 0.1 | Build, review and snapshot state, remaining research task and proof obligations |
 
-All nine were written by OpenAI GPT-6 (Codex), for Edward Baker, on
-19 September 2026. Individual notes distinguish proved statements under
-displayed hypotheses, diagnostics, inherited results and proposals.
+The original nine notes were prepared on 19 September 2026; the split
+and new research continuation are dated 20 September. They were written by
+OpenAI GPT-6 (Codex), for Edward Baker. Individual notes distinguish inherited
+identities, calculations under stated assumptions, diagnostics and proposals.
 
 See the [investigation index](../README.md).

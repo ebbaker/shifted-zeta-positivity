@@ -1,0 +1,57 @@
+\documentclass[11pt]{article}
+\newcommand{\draftversion}{0.3}
+\newcommand{\shorttitle}{Supplementary information}
+\input{preamble}
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd{\l@section}{1.5em}{2.4em}{}{\PackageError{supplement}{Cannot widen TOC section numbers}{}}
+\makeatother
+\renewcommand{\thesection}{S\arabic{section}}
+\renewcommand{\thefigure}{S\arabic{figure}}
+\title{Supplementary information\\[3pt]
+\large Tools for the shifted-zeta Wilson--Loewner program}
+\author{Drafted for Edward Baker}
+\date{20 September 2026 \quad--\quad Version \draftversion}
+\hypersetup{pdftitle={Supplementary information: tools for the shifted-zeta Wilson--Loewner program},
+pdfauthor={Drafted for Edward Baker; OpenAI GPT-6 (Codex)},
+pdfsubject={Technical companion; classical and free results, conditional quantum claims}}
+\begin{document}
+\maketitle
+\begin{abstract}
+This companion to \emph{Shifted-zeta evolution and Wilson lines}
+collects the detailed tools used to formulate that research program.
+It gives the causal arithmetic factorization, the free defect kernel
+and auxiliary gamma model, the constant-driver contour dictionary,
+the exact smooth Wilson variation, chiral defect projectors, endpoint
+selection rules, and ordinary reflected pairing. A smooth junction
+and its direct Gaussian bulk response provide a controlled
+deformation calculation. We also give the algebraic cumulative-storage
+gluing and simultaneous depth--shift criteria used in the exposition.
+The established contour and free-field calculations do not identify
+the arithmetic transfer or prove interacting reflection positivity.
+The three preserved diagnostic programs contain 268 finite cases.
+\end{abstract}
+\noindent\textbf{How to read this companion.}
+The program, its physical realization hypothesis and the route to RH
+are developed in the main exposition~\cite{Exposition}. Sections
+S1--S8 retain the technical calculations of the preceding unified
+manuscript, with arithmetic conventions repeated for independent
+reading. Section~S9 records the inherited continuation algebra;
+Section~S10 describes the diagnostics. The two documents have separate
+numbering and bibliographies and can be compiled independently.
+References to numbered sections below are local unless explicitly
+attributed to the exposition.
+\tableofcontents
+\input{sections/s_arithmetic}
+\input{sections/03_free_kernel}
+\input{sections/04_geometry}
+\input{sections/05_variation}
+\input{sections/06_projectors}
+\input{sections/07_endpoints}
+\input{sections/08_reflection}
+\input{sections/09_response}
+\input{sections/s_continuation}
+\input{sections/a_diagnostics}
+\input{sections/s_provenance}
+\input{supplementary-references}
+\end{document}

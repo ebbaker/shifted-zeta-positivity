@@ -1,0 +1,146 @@
+\section{Smooth Wilson variation and the Loewner insertion}\label{sec:variation}
+
+\subsection{Conventions and the exact variation}
+
+Work with smooth finite matrix fields and a regular $C^2$ curve
+$X:[0,1]\to\R^4$. Let $A_\mu$ and the scalar fields $X_I$ be Hermitian,
+and let $n^I(s)$ be a unit internal vector. Define
+\begin{equation}
+ \mathcal M(s)=\ii A_\mu(X(s))\dot X^\mu(s)+\Phi(X(s),s)v(s),
+ \quad\Phi=n^I X_I,\quad v=|\dot X|.
+\end{equation}
+The ordered transport $U(b,a)$ solves
+$\partial_bU(b,a)=\mathcal M(b)U(b,a)$, $U(a,a)=I$; larger parameters
+stand to the left. Our curvature and covariant derivative are
+\begin{equation}
+ F_{\nu\mu}=\partial_\nu A_\mu-\partial_\mu A_\nu
+             -\ii[A_\nu,A_\mu],\qquad
+ D_\nu\Phi=\partial_\nu\Phi-\ii[A_\nu,\Phi].
+\end{equation}
+Vary the curve by $\eta=\delta X$ and the internal vector by $\delta n$,
+holding the spacetime fields fixed.
+
+\begin{proposition}[Ordered transport variation]\label{prop:variation}
+With $C_s=\ii A_\nu(X(s))\eta^\nu(s)$,
+\begin{align}\label{eq:variation}
+ \delta U(1,0)={}&C_1U(1,0)-U(1,0)C_0
+ +\int_0^1 U(1,s)\mathcal I(s)U(s,0)\dd s,\\
+ \mathcal I={}&\ii F_{\nu\mu}\eta^\nu\dot X^\mu
+ +vD_\nu\Phi\,\eta^\nu
+ +\Phi\frac{\dot X\cdot\dot\eta}{v}
+ +vX_I\delta n^I.\label{eq:insertion}
+\end{align}
+\end{proposition}
+\begin{proof}
+Differentiating the defining ODE gives $\delta U=\int U\delta\mathcal M U$.
+Direct differentiation of $\mathcal M$ yields
+$\delta\mathcal M=\dot C+[C,\mathcal M]+\mathcal I$.
+Meanwhile
+\begin{equation}
+ \frac{\mathrm d}{\mathrm ds}\{U(1,s)C_sU(s,0)\}
+ =U(1,s)(\dot C+[C,\mathcal M])U(s,0).
+\end{equation}
+Integration proves the formula, including its ordering and boundary signs.
+\end{proof}
+
+For constant $n$ and fixed endpoints, integrate the arclength term by
+parts. Writing $T=\mathrm dX/\mathrm d\ell$, $k=\mathrm dT/\mathrm d\ell$,
+one obtains
+\begin{align}\label{eq:displacement}
+ \delta U&=\int_C U(1,s)\eta^\nu\mathcal D_\nu U(s,0)\dd\ell,\notag\\
+ \mathcal D_\nu&=\ii F_{\nu\mu}T^\mu
+ +(\delta_\nu{}^\mu-T_\nu T^\mu)D_\mu\Phi-\Phi k_\nu.
+\end{align}
+In particular $T^\nu\mathcal D_\nu=0$, as required for a fixed-endpoint
+reparametrization. The curvature term is necessary because the scalar
+couples to arclength. If $n$ varies, one must retain its additional
+terms in \eqref{eq:insertion}.
+
+Let the endpoints be $x=X(0)$ and $y=X(1)$, both on the defect, and
+consider $\mathcal O=\bar q(y)U(1,0)q(x)$. The boundary terms in
+\eqref{eq:variation} combine with endpoint differentiation to give
+\begin{align}\label{eq:endpoint-variation}
+ \delta\mathcal O={}&\eta_y^\nu(\partial_\nu\bar q+\ii\bar qA_\nu)(y)Uq(x)
+ +\bar q(y)U\eta_x^\nu(D_\nu q)(x)\notag\\
+ &+\int_0^1\bar q(y)U(1,s)\mathcal I(s)U(s,0)q(x)\dd s.
+\end{align}
+Here $D_\nu q=\partial_\nu q-\ii A_\nu q$, and endpoint displacements
+are tangent to the defect. Changing endpoint R polarizations contributes
+further terms. A defect field $q$ is not defined at a bulk tip.
+
+\subsection{Regular inverse-map deformations}
+
+Let $f_t=g_t^{-1}$ for \eqref{eq:loewner}, and choose a fixed smooth
+reference contour $\zeta(s)$ in a region where $f_t$ is regular and
+$\zeta(s)\ne U_t$. Differentiating $g_t(f_t(w))=w$ gives
+\begin{equation}\label{eq:inverse-flow}
+ X_t(s)=f_t(\zeta(s)),\qquad
+ \eta_t(s)=\partial_tX_t(s)
+ =-\frac{2f'_t(\zeta(s))}{\zeta(s)-U_t}.
+\end{equation}
+Insert its real and imaginary components into
+\eqref{eq:insertion} and \eqref{eq:endpoint-variation}. This is a
+concrete field-dependent evolution of the transport on a pulled-back
+test curve. It is not a variation formula for the singular growing tip.
+Regular real boundary segments remain on the defect in this planar
+interpretation. A growing prefix instead carries an uncontracted color
+index at its interior endpoint; it requires a specified tip state or
+a conditional completion of the curve.
+
+If $\mathrm dU_t=\sqrt\kappa\,\mathrm dB_t$ for standard Brownian motion
+$B_t$, then at fixed $w$ the inverse-map equation is of finite variation
+until a singularity is reached. In centered coordinates
+$\mathfrak f_t(w)=f_t(w+U_t)$, stopped smooth Ito calculus gives
+\begin{equation}\label{eq:ito}
+ \mathrm d\mathfrak f_t(w)=
+ \left[-\frac{2\mathfrak f'_t(w)}w+\frac\kappa2\mathfrak f''_t(w)\right]\dd t
+ +\sqrt\kappa\,\mathfrak f'_t(w)\dd B_t.
+\end{equation}
+This is only a map identity. No scalar arclength integral or quantum
+Wilson transport on an unregulated stochastic trace is defined by it.
+
+\subsection{A precise obstruction to geometry-only closure}
+
+\begin{proposition}\label{prop:no-closure}
+There is no universal multiplicative shape generator for a single
+Wilson transport whose coefficient depends only on the curve and its
+deformation, independently of the background fields.
+\end{proposition}
+\begin{proof}
+In an abelian theory take $A_x=cy$, $A_y=\Phi=0$ and the straight path
+$X(s)=(s,0)$, $0\leq s\leq1$. Then $U=1$ for every real $c$.
+For $\eta=(0,h(s))$ with $h(0)=h(1)=0$,
+\begin{equation}
+ \delta U=\ii c\int_0^1h(s)\dd s.
+\end{equation}
+The same curve, deformation and original transport thus have different
+derivatives. As a positive control, a pure gauge $A=\mathrm d\chi$
+has fixed-endpoint transport independent of the contour.
+\end{proof}
+The proposition does not exclude closure of an averaged correlation
+function after field equations, Ward identities or a protected
+reduction are supplied. It identifies the extra information such a
+closure must use. At leading free endpoint order $U=I$, fixed-endpoint
+interior deformations do not change \eqref{eq:regulated-cov}; the
+nontrivial information must enter at higher order or through another
+specified sector.
+
+\subsection{The tangent connection as a one-form}
+
+For a constant real isometry $M:\R^4\to\R^6$, set
+$n=M T$, so that $\Phi|\mathrm dX|=\Phi_\mu\mathrm dX^\mu$ with
+$\Phi_\mu=M^A{}_{\mu}X_A$. Define
+$\mathcal B_\mu=\ii A_\mu+\Phi_\mu$. Then the fixed-endpoint variation
+takes the ordinary one-form form
+\begin{align}\label{eq:complex-curvature}
+ \delta U_M&=\int U_M(1,s)\mathcal F_{\nu\mu}
+             \eta^\nu\dot X^\mu U_M(s,0)\dd s,\notag\\
+ \mathcal F_{\nu\mu}
+ &=\partial_\nu\mathcal B_\mu-\partial_\mu\mathcal B_\nu
+   -[\mathcal B_\nu,\mathcal B_\mu]\notag\\
+ &=\ii F_{\nu\mu}+D_\nu\Phi_\mu-D_\mu\Phi_\nu-[\Phi_\nu,\Phi_\mu].
+\end{align}
+For moving endpoints the boundary insertion is
+$\mathcal B_\nu\eta^\nu$. These signs follow from the same ordered ODE.
+Supersymmetry of the line is not an assertion that this complex
+curvature vanishes on arbitrary field configurations.

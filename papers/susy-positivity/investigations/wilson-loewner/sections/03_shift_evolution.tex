@@ -1,0 +1,130 @@
+\section{The exact shifted-zeta evolution}\label{sec:shift}
+
+\subsection{The transfer and its causal generator}
+
+Define
+\begin{equation}
+ \xi(s)=\tfrac12s(s-1)\pi^{-s/2}\Gamma(s/2)\zeta(s),
+ \qquad H(p)=\xi(\tfrac12+p).
+\end{equation}
+For $0<\omega\leq1/2$, set
+\begin{equation}\label{eq:transfer}
+ K_\omega(p)=\frac{H(p-\omega)}{H(p+\omega)},\qquad
+ a_\omega(p)=\frac{H'(p-\omega)}{H(p-\omega)}
+             +\frac{H'(p+\omega)}{H(p+\omega)}.
+\end{equation}
+Logarithmic differentiation gives
+$\partial_\omega K_\omega=-a_\omega K_\omega$.
+The functional equation gives $|K_\omega(\ii\tau)|=1$ wherever
+the ratio is defined. This boundary identity alone does not give
+a bounded causal transfer on the unweighted whole line.
+
+Instead take inverse Laplace transforms on $\Ree p=\sigma>1$,
+where the denominator is nonzero and the Dirichlet series converge.
+If $k_\omega$ is the causal kernel, define
+\begin{equation}
+ V_{\omega,L}f=(k_\omega*F)|_{I_L},\qquad V_{0,L}=I.
+\end{equation}
+For positive shift the kernel is locally integrable and the
+finite-window operator is bounded. The exact Beta-kernel, integer
+comb and rational correction are given in
+\cite[Section~S1.4]{Supplement}; positivity of the Beta/comb part
+does not imply contraction of the full transfer.
+
+Let $G_{\omega,L}$ be the compressed causal realization of
+$a_\omega$ on the same Laplace line. Its symmetric quadratic form is
+\begin{equation}\label{eq:Qomega}
+ Q_{\omega,L}[g]=\Ree\ip g{G_{\omega,L}g}.
+\end{equation}
+This notation is interpreted as a form when the operator pairing
+is not separately defined. The natural form domain has logarithmic
+Fourier weight as in Section~\ref{sec:arithmetic}; it need not be
+the full operator domain of the nonsymmetric generator.
+Smooth compactly supported tests and their positive-shift
+evolutions suffice for the identities below.
+
+\subsection{The equation to be realized}
+
+Causality permits the scalar transfer identity to be compressed to
+the finite interval: an intermediate value beyond its right endpoint
+cannot return to the interval, and the input has no values before
+its left endpoint. The exact equation is
+\begin{equation}\label{eq:prescribed-flow}
+ \boxed{\partial_\omega V_{\omega,L}
+       =-G_{\omega,L}V_{\omega,L},\qquad V_{0,L}=I.}
+\end{equation}
+It is the boxed equation adjacent to the energy derivative in the
+shared background~\cite{SharedBackground}. It holds on admissible
+inputs, with a strong initial limit and a right derivative at zero
+on smooth tests. No operator-norm derivative at zero is asserted.
+
+The zero-shift symbol shows the matching problem explicitly:
+\begin{align}\label{eq:generator}
+ a_0(p)={}&w_0+
+ 2\int_0^\infty\nGamma(u)(1-e^{-pu})\dd u
+ +\frac2{p+1/2}+\frac2{p-1/2}\notag\\
+ &-2\sum_{n\geq2}\frac{\Lambda(n)}{\sqrt n}e^{-p\log n}.
+\end{align}
+Its real quadratic form is exactly $Q_{0,L}$, including the fixed
+local constant, the pole response and the prime delays.
+At positive shift the prime term in $a_\omega$ is
+\[
+ -2\sum_{n\geq2}\frac{\Lambda(n)}{\sqrt n}
+       \cosh(\omega\log n)e^{-p\log n}.
+\]
+The transfer itself contains the fuller multiplicative integer comb,
+not just the prime-power part of its logarithmic derivative.
+
+Thus \eqref{eq:prescribed-flow} supplies a detailed prescription.
+A physical construction must reproduce every component of
+\eqref{eq:generator}, and its finite-shift continuation, with these
+coefficients. Choosing a contour with a suggestive gamma spectrum
+addresses only one component.
+
+\subsection{The accumulated defect and the central limit}
+
+Put
+\begin{equation}\label{eq:defect}
+ D_{\omega,L}=I-V_{\omega,L}^*V_{\omega,L}.
+\end{equation}
+The product rule at positive shift yields the second evolution
+equation
+\begin{equation}\label{eq:defect-flow}
+ \boxed{\partial_\omega D_{\omega,L}
+ =V_{\omega,L}^*(G_{\omega,L}^*+G_{\omega,L})V_{\omega,L},
+ \qquad D_{0,L}=0.}
+\end{equation}
+The right side is the pullback of the symmetric form $2Q_{\omega,L}$.
+Equivalently one uses the bounded positive-shift product-rule
+expression
+$(G_{\omega,L}V_{\omega,L})^*V_{\omega,L}
++V_{\omega,L}^*(G_{\omega,L}V_{\omega,L})$.
+This avoids assuming that the separate adjoint generator acts
+on every evolved input.
+
+For $f\in C_c^\infty(I_L)$, integration and the initial limit give
+\begin{align}
+ \ip f{D_{\omega,L}f}
+ &=\norm f^2-\norm{V_{\omega,L}f}^2
+ =2\int_0^\omega Q_{s,L}[V_{s,L}f]\dd s,
+ \label{eq:cumulative}\\
+ Q_{0,L}[f]
+ &=\lim_{\omega\downarrow0}
+        \frac{\ip f{D_{\omega,L}f}}{2\omega}.
+ \label{eq:central-limit}
+\end{align}
+The running shift $s$ changes both the form and the input to it.
+The analytic justification in the shared background uses the
+gamma-ratio bounds
+$|\partial_\omega^jK_\omega(\sigma+\ii\tau)|
+\leq C_\sigma(1+\log(2+|\tau|))^j(2+|\tau|)^{-\omega}$
+for $j=0,1,2$: these give positive-shift smoothing and
+differentiability, and dominated convergence on smooth inputs at
+zero. No inverse of $V_{\omega,L}$ is needed.
+
+The positivity target is $D_{\omega,L}\succeq0$, or equivalently
+$\norm{V_{\omega,L}}\leq1$. Requiring all the instantaneous
+$Q_{s,L}$ to be positive would suffice, but is a stronger demand
+than positivity of their accumulated pullback in
+\eqref{eq:cumulative}. This distinction determines the proposed
+role of the reflected network in Section~\ref{sec:storage}.

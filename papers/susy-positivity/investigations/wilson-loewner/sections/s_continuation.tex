@@ -1,0 +1,181 @@
+\section{Cumulative-storage gluing and joint continuation}\label{sec:continuation}
+
+This section gives the algebra behind the continuation criterion in
+the exposition~\cite{Exposition}. It follows the inherited
+cumulative-storage note~\cite{CumulativePath}. All operators here
+act on ordinary unweighted interval Hilbert spaces. The identities
+supply tests for a proposed construction; no arithmetic coupling
+bound or successful all-depth recursion is proved.
+
+\subsection{The fixed-shift spatial Schur complement}
+
+After translating $I_{L+h}$ to $(0,L+h)$, causality gives
+\begin{equation}\label{eq:si-block}
+ V=V_{\omega,L+h}=
+ \begin{pmatrix}X&0\\Y&Z\end{pmatrix},
+ \qquad X=V_{\omega,L},\quad Z=V_{\omega,h}.
+\end{equation}
+Here $Y$ carries old input into the added output interval.
+Suppose $\norm X<1$ and $\norm Z<1$, and set
+\[
+ E=I-X^*X,\qquad F_{\mathrm{out}}=I-ZZ^*,
+ \qquad \mathcal C=F_{\mathrm{out}}^{-1/2}YE^{-1/2}.
+\]
+These defects are coercive: each is bounded below by a positive
+multiple of the identity.
+
+\begin{proposition}[Cumulative gluing criterion]\label{prop:si-gluing}
+Under these strict diagonal bounds,
+\begin{equation}\label{eq:si-gluing}
+ \norm V\leq1
+ \quad\Longleftrightarrow\quad
+ E-Y^*F_{\mathrm{out}}^{-1}Y\succeq0
+ \quad\Longleftrightarrow\quad\norm{\mathcal C}\leq1.
+\end{equation}
+Replacing both norm inequalities by strict inequalities gives
+the strict-contraction criterion.
+\end{proposition}
+\begin{proof}
+The defect is
+\[
+ I-V^*V=
+ \begin{pmatrix}
+ E-Y^*Y&-Y^*Z\\
+ -Z^*Y&I-Z^*Z
+ \end{pmatrix}.
+\]
+Its lower diagonal block is coercive. Its Schur complement is
+\[
+ E-Y^*\bigl[I+Z(I-Z^*Z)^{-1}Z^*\bigr]Y
+ =E-Y^*F_{\mathrm{out}}^{-1}Y
+ =E^{1/2}(I-\mathcal C^*\mathcal C)E^{1/2}.
+\]
+The middle identity follows by multiplying by $I-ZZ^*$.
+Schur elimination proves positivity and, using bounded invertible
+triangular elimination factors, equivalence of coercivity.
+\end{proof}
+The output orientation $I-ZZ^*$ is essential; replacing it with
+$I-Z^*Z$ inside the displayed cross term changes the condition.
+At non-strict diagonal contraction the inverses need not exist,
+so this proof cannot be used without a range-compatible extension.
+
+\subsection{Cayley coordinates and reflection}
+
+For $\omega>0$ the finite-window transfer is Volterra convolution
+by a locally integrable kernel. It is quasinilpotent: conjugation
+by $e^{-cx}$ gives a convolution norm bounded by
+$\int_0^L e^{-cu}|k_\omega(u)|\dd u$, which tends to zero as
+$c\to\infty$. Each finite-$c$ conjugation is a bounded similarity,
+so the spectral radius is zero. Hence $I+V$ has a bounded inverse
+without assuming contraction.
+
+Define
+\begin{equation}
+ \mathcal Z=(I-V)(I+V)^{-1},\qquad
+ P_{\omega,L}=\frac2\omega\Ree\mathcal Z,\qquad
+ \Ree A=\tfrac12(A+A^*).
+\end{equation}
+Multiplying the real part on the two sides gives
+\begin{equation}\label{eq:si-congruence}
+ I-V^*V=\frac\omega2(I+V^*)P_{\omega,L}(I+V).
+\end{equation}
+Thus $P_{\omega,L}\succeq0$ is exactly contraction; coercivity
+is exactly strict contraction in operator norm.
+For the real causal kernel, interval reflection
+$J_Lf(x)=f(-x)$ on the centered interval gives
+$V^*=J_LVJ_L$. Consequently $\mathcal Z^*=J_L\mathcal ZJ_L$,
+and $P_{\omega,L}$ commutes with reflection. The raw input
+defect need not commute with it.
+
+For the block split \eqref{eq:si-block}, put
+$R_X=(I+X)^{-1}$, $R_Z=(I+Z)^{-1}$. Block inversion yields
+\begin{equation}
+ P_{\omega,L+h}=\begin{pmatrix}A&B^*\\B&F\end{pmatrix},
+ \quad A=P_{\omega,L},\quad F=P_{\omega,h},\quad
+ B=-\frac2\omega R_ZYR_X.
+\end{equation}
+The two useful orientations of the diagonal identities are
+\begin{equation}
+ A=\frac2\omega R_X^*ER_X,\qquad
+ F=\frac2\omega R_ZF_{\mathrm{out}}R_Z^*.
+\end{equation}
+Under the strict bounds of Proposition~\ref{prop:si-gluing},
+\begin{equation}\label{eq:si-coupling}
+ \norm{F^{-1/2}BA^{-1/2}}
+ =\norm{F_{\mathrm{out}}^{-1/2}YE^{-1/2}}.
+\end{equation}
+Indeed the left normalized block equals $-\mathcal U\mathcal C\mathcal W$,
+where
+\[
+ \mathcal U=\sqrt{2/\omega}\,F^{-1/2}R_ZF_{\mathrm{out}}^{1/2},
+ \qquad
+ \mathcal W=\sqrt{2/\omega}\,E^{1/2}R_XA^{-1/2}.
+\]
+The displayed diagonal identities make these invertible maps
+unitary. This proves \eqref{eq:si-coupling} without commuting any
+noncommuting factors. The Cayley change preserves the full
+coupling norm; it provides coordinates rather than stronger bounds.
+
+\subsection{A step changing both length and shift}
+
+Fix the proposed append length $h$. At a reference positive shift
+$\alpha$, suppose $A_\alpha=P_{\alpha,L}$ and
+$F_\alpha=P_{\alpha,h}$ are coercive. The enlarged block need
+not yet be positive. Let $B_\alpha$ be its cross block and put
+$\mathcal K=F_\alpha^{-1/2}B_\alpha A_\alpha^{-1/2}$.
+For a candidate new shift $\beta>0$, define
+\begin{align}
+ H_A&=A_\alpha^{-1/2}(A_\beta-A_\alpha)A_\alpha^{-1/2},\\
+ H_F&=F_\alpha^{-1/2}(F_\beta-F_\alpha)F_\alpha^{-1/2},\\
+ H_B&=F_\alpha^{-1/2}(B_\beta-B_\alpha)A_\alpha^{-1/2}.
+\end{align}
+Congruence by the reference diagonal metrics makes the enlarged
+form at $\beta$ equal to
+\[
+ \begin{pmatrix}
+ I+H_A&(\mathcal K+H_B)^*\\
+ \mathcal K+H_B&I+H_F
+ \end{pmatrix}.
+\]
+It is coercive if and only if $I+H_F$ is coercive and
+\begin{equation}\label{eq:si-joint}
+ \boxed{I+H_A-(\mathcal K+H_B)^*(I+H_F)^{-1}
+                     (\mathcal K+H_B)\succ0.}
+\end{equation}
+Here $\succ0$ means a strictly positive operator lower bound.
+This is a second Schur complement; its signed changes retain
+improvements in either diagonal storage or cross coupling.
+A simple sufficient condition is
+\[
+ H_A\succeq aI,\quad H_F\succeq bI,\quad a,b>-1,\qquad
+ \norm{\mathcal K+H_B}^2<(1+a)(1+b).
+\]
+Replacing each signed change by its absolute norm is more
+conservative and may discard the improvement that makes the step
+possible. All these statements concern operators, not only their
+finite compressions.
+
+\subsection{Scope near zero shift and at increasing depth}
+
+The causal Cayley symbol has the core expansion
+\begin{equation}
+ \frac2\omega\frac{1-K_\omega(p)}{1+K_\omega(p)}
+ =a_0(p)+\omega^2\left(\frac{a_0''(p)}6
+                         -\frac{a_0(p)^3}{12}\right)+O(\omega^4),
+\end{equation}
+where primes mean $p$ derivatives. To see the coefficient, write
+$\log K_\omega=-\omega a_0-\omega^3a_0''/6+O(\omega^5)$
+and expand the resulting hyperbolic tangent. The expression is
+even in $\omega$; its use after inversion is on appropriate smooth
+cores, not an operator-norm comparison with the unbounded central
+form. The extra cubic term also distinguishes accumulated storage
+from the instantaneous generator.
+
+Positive-shift comparisons in \eqref{eq:si-joint} avoid asserting
+uniform convergence on the central form domain. They still require
+rigorous estimates of the full blocks and their weak directions.
+An iteration must additionally prove
+$L_{j+1}=L_j+h_j$, $\sum_jh_j=\infty$ and
+$\omega_j\downarrow0$. The algebra does not supply those estimates.
+Discarding output through a projection, assuming monotonicity
+in shift, or extrapolating local extension cannot replace them.

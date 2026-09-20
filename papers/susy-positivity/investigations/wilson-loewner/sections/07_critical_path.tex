@@ -1,0 +1,132 @@
+\section{The depth--shift continuation problem}\label{sec:path}
+
+\subsection{A sufficient diagonal route}
+
+The end of the program requires a sequence of operator bounds,
+not a particular smooth curve in the parameter plane.
+
+\begin{proposition}[Sufficient depth--shift route]\label{prop:diagonal}
+Suppose $L_j\to\infty$, $0<\omega_j\downarrow0$, and
+$\norm{V_{\omega_j,L_j}}\leq1$ for every $j$.
+Then $Q_{0,L}[f]\geq0$ for every $L>0$ and
+$f\in C_c^\infty(I_L)$, and hence RH holds.
+\end{proposition}
+\begin{proof}
+Fix $L$ and $f$. For large $j$, zero-extend $f$ to $I_{L_j}$.
+Restriction of its output to $I_L$ is $V_{\omega_j,L}f$,
+because the causal kernel is the same. Restriction cannot
+increase its norm, so
+$\norm{V_{\omega_j,L}f}\leq\norm f$.
+Divide its nonnegative defect by $2\omega_j$ and take the fixed-test
+limit \eqref{eq:central-limit}. Theorem~\ref{thm:weil} completes
+the implication.
+\end{proof}
+
+No rate coupling $L_j$ to $\omega_j$, uniform positive margin,
+or differentiable path is needed for this implication. Every
+bound must hold on all inputs at its selected pair.
+Finite matrices alone do not supply that assertion.
+
+\subsection{What is meant by a critical path}
+
+Here a critical path means a continuation along which a
+construction or rigorous estimate remains effective as depth grows
+and shift decreases. It is not an assumed boundary of the true
+contraction region. Under RH the positive-shift quotient is inner,
+so finite-window contraction holds throughout the parameter range;
+the parent Wilson-lines discussion makes this distinction
+\cite{ParentWilson}. There is also an unconditional anchor at
+$\omega=1/2$ from the known innerness of the quotient
+\cite[Section~1.4]{Suzuki2012}. This anchor gives finite-window
+contraction, but does not automatically initialize the strict
+margins or physical data needed for a chosen continuation.
+
+The earlier adaptive-shift estimate is a different, sufficient
+route. Assuming $Q_{0,L}\succeq m_LI>0$, and writing $X_Lf=xf$
+on the centered interval, put
+\begin{equation}
+ \kappa_L=\sup_{f\ne0}
+       \left(\frac{Q_{0,L}[X_Lf]}{Q_{0,L}[f]}\right)^{1/2}.
+\end{equation}
+With a finite proved bound on this form-multiplication norm, the
+inherited estimate is
+\begin{equation}
+ Q_{\omega,L}\succeq
+ \cos(2\omega\kappa_L)Q_{0,L},
+ \qquad 0\leq\omega\kappa_L\leq\pi/4
+ \quad\cite{AdaptivePath}.
+\end{equation}
+It gives a small-shift schedule after central positivity has
+been proved at that depth. It does not establish the central
+positivity needed to enlarge the interval. A lower estimate of
+$\kappa_L$ from finitely many vectors cannot justify that schedule.
+
+\subsection{Length extension has its own exact constraint}
+
+Translate the interval to $(0,L+h)$ and split it into old and
+new pieces. Causality gives
+\begin{equation}
+ V_{\omega,L+h}=
+ \begin{pmatrix}X&0\\Y&Z\end{pmatrix},
+ \qquad X=V_{\omega,L},\quad Z=V_{\omega,h}.
+\end{equation}
+If $X$ and $Z$ are strict contractions in operator norm, set
+\[
+ E=I-X^*X,\qquad F_{\mathrm{out}}=I-ZZ^*.
+\]
+The inherited cumulative-storage criterion is
+\begin{equation}\label{eq:gluing-main}
+ \boxed{\norm{V_{\omega,L+h}}\leq1
+ \quad\Longleftrightarrow\quad
+ \norm{F_{\mathrm{out}}^{-1/2}YE^{-1/2}}\leq1.}
+\end{equation}
+It measures cross-interval transfer in the old-input and new-output
+defect metrics. A strict inequality gives a strict contraction.
+The proof and the simultaneous depth--shift criterion are in
+\cite[Section~S9]{Supplement}, following \cite{CumulativePath}.
+The diagonal strictness is required for the displayed inverses;
+a semidefinite boundary case needs a separate range formulation.
+
+This suggests a precise physical gluing target: derive or bound
+the normalized cross map in \eqref{eq:gluing-main}, preserving its
+directions and cancellations. Separate worst-case scalar estimates
+can lose the information a continuation needs.
+If the shift also changes, the old and new defect metrics change
+as well; the finite-step Schur test in the companion keeps those
+changes. The fixed-$L$ shift ODE alone is not that joint step.
+
+For reflection-compatible coordinates one can use
+\[
+ P_{\omega,L}=\frac2\omega\Ree\bigl[(I-V_{\omega,L})
+                                    (I+V_{\omega,L})^{-1}\bigr].
+\]
+Here $\Ree A=(A+A^*)/2$ and the inverse exists for the
+positive-shift finite-window Volterra operator.
+The exact congruence
+\begin{equation}
+ D_{\omega,L}=\frac\omega2(I+V_{\omega,L}^*)P_{\omega,L}
+                                      (I+V_{\omega,L})
+\end{equation}
+preserves positivity and the normalized spatial coupling.
+These are useful coordinates, not an additional positivity result.
+At positive shift $P$ is bounded, whereas $Q_{0,L}$ is an unbounded
+form; a core expansion does not give a uniform operator-norm
+approximation.
+
+\subsection{The all-depth requirement}
+
+A recursion with $L_{j+1}=L_j+h_j$ must establish
+$\sum_jh_j=\infty$ as well as $\omega_j\downarrow0$.
+Local extendibility could otherwise accumulate at a finite length.
+Arithmetic delays and crossings of weak directions favor a finite
+step criterion over an assumed smooth critical-curve ODE.
+Decreasing the shift also cannot be justified by reversing forward
+dissipation; no bounded inverse of $V_{\omega,L}$ is assumed.
+
+Numerical exploration should retain complete output norms and a
+rigorous bound on the unresolved input complement. In particular,
+$I-(\Pi V\Pi)^*(\Pi V\Pi)$ can look positive because output was
+discarded. The parent Loewner assembly is a reusable diagnostic
+tool, but a finite experiment neither proves
+\eqref{eq:gluing-main} on the full space nor prevents finite-depth
+accumulation.
