@@ -14,6 +14,11 @@ from pathlib import Path
 from urllib.parse import unquote, urlparse
 
 ROOT = Path(__file__).resolve().parents[1]
+CURRENT = {'critical-path', 'wilson-loewner', 'wilson-lines', 'loewner',
+           'fractional-dimension'}
+PREVIOUS = {'arithmetic-ground-state-geometry', 'inverse-bulk-realization',
+            'positive-factorizations', 'source-selection-rules',
+            'topological-susy-bulk'}
 HISTORICAL_NOTE = ('brainstorm/continuation-notes/'
                    'CONTINUATION_BULK_BOUNDARY_SUPERSPACE_20260912.md')
 
@@ -22,7 +27,8 @@ def historical(path):
     rel = path.relative_to(ROOT)
     return (('archive' in rel.parts or 'drafts' in rel.parts
              or 'reviews' in rel.parts) and path.name != 'README.md'
-            or 'drafts' in rel.parts
+            or ('drafts' in rel.parts
+                and not (path.name == 'README.md' and path.parent.name == 'drafts'))
             or 'provenance' in rel.parts
             or rel.as_posix() == HISTORICAL_NOTE)
 
@@ -35,7 +41,8 @@ def ignored(path):
 def main():
     errors = []
     counts = dict(local_links=0, tex_dependencies=0, json_files=0,
-                  python_sources=0, recorded_files=0, historical_markdown=0)
+                  python_sources=0, recorded_files=0, historical_markdown=0,
+                  previous_files=0)
 
     def require(ok, message):
         if not ok:
@@ -54,9 +61,23 @@ def main():
                 f'Broken {kind} in {path.relative_to(ROOT)}: {target}')
         counts[kind] += 1
 
+    investigations = ROOT / 'investigations'
+    previous = investigations / 'previous'
+    require({p.name for p in investigations.iterdir() if p.is_dir()}
+            == CURRENT | {'previous'}, 'Unexpected top-level investigation layout')
+    require(previous.is_dir(), 'Missing previous investigation group')
+    if previous.is_dir():
+        require({p.name for p in previous.iterdir() if p.is_dir()} == PREVIOUS,
+                'Unexpected previous investigation layout')
+    for base in [investigations / name for name in CURRENT] + [previous] + [
+            previous / name for name in PREVIOUS]:
+        require((base / 'README.md').is_file(), f'Missing investigation index: {base}')
+
     for path in sorted(ROOT.rglob('*')):
         if not path.is_file() or ignored(path):
             continue
+        if path.is_relative_to(previous):
+            counts['previous_files'] += 1
         if path.suffix == '.json':
             try:
                 json.loads(path.read_text())
@@ -101,7 +122,7 @@ def main():
                         f'Recorded size differs: {path}')
             counts['recorded_files'] += 1
 
-    positive = ROOT / 'investigations/positive-factorizations'
+    positive = ROOT / 'investigations/previous/positive-factorizations'
     manifest = json.loads((positive / 'manifest.json').read_text())
     check_record(positive, manifest['sha256'])
     for key in ('record', 'summary'):

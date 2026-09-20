@@ -1,0 +1,1524 @@
+\documentclass[11pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools,mathrsfs}
+\usepackage{microtype,booktabs,longtable,array}
+\usepackage[dvipsnames]{xcolor}
+\usepackage[colorlinks=true,linkcolor=MidnightBlue,citecolor=MidnightBlue,urlcolor=MidnightBlue]{hyperref}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small Positive loop evolution and field corrections}
+\fancyhead[R]{\small Working manuscript}
+\fancyfoot[C]{\thepage}
+\setlength{\headheight}{14pt}
+\setlength{\emergencystretch}{2em}
+\numberwithin{equation}{section}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\newcommand{\R}{\mathbb R}
+\newcommand{\C}{\mathbb C}
+\newcommand{\N}{\mathbb N}
+\newcommand{\Dom}{\operatorname{Dom}}
+\newcommand{\ran}{\operatorname{ran}}
+\newcommand{\supp}{\operatorname{supp}}
+\newcommand{\re}{\operatorname{Re}}
+\newcommand{\im}{\operatorname{Im}}
+\newcommand{\qq}{\mathsf q}
+\newcommand{\norm}[1]{\left\lVert#1\right\rVert}
+\newcommand{\ip}[2]{\left\langle#1,#2\right\rangle}
+\newcommand{\avg}[1]{\mathbb E_{\theta}\!\left[#1\right]}
+\hypersetup{pdftitle={Positive loop evolution and coupled-field corrections for finite-interval Weil forms},pdfauthor={AI-assisted working manuscript prepared for Edward Baker},pdfsubject={Exact positive boundary responses, arithmetic coefficient matching, and scoped obstructions},pdfkeywords={Weil form, relative Hilbert complex, loop evolution, positive bulk energy, supersymmetry}}
+\begin{document}
+\begin{center}
+{\LARGE\bfseries Positive loop evolution and coupled-field corrections for finite-interval Weil forms\par}
+\vspace{8pt}
+{\large A self-contained account of the topological/SUSY bulk attempt\par}
+\vspace{9pt}
+{Prepared for Edward Baker\par}
+{AI-assisted working manuscript, 12 September 2026\par}
+\end{center}
+\begin{abstract}
+We investigate whether an independently positive static auxiliary-field system can reproduce the finite-interval Weil form. A relative Hilbert complex gives a nonzero harmonic boundary state for the positive gamma kinetic tower. Exact primitive return histories supply every prime repetition and its endpoint correction, but initially yield a difference of norms. Exponentiating their bounded return generator produces a positive deformed tower whose logarithmic response matches the prescribed contact and prime delta coefficients at finite coupling. Its remaining error is an explicit continuous convolution kernel.
+
+For one prime we prove an infinite-rank obstruction from a diagonal derivative jump, and derive a stronger obstruction to completing this particular norm by enlarging only its response space. We then construct a positive low-mass splitting field, specify its closed differential and adjoint, and eliminate it exactly. A positive choice of its coefficient cancels the entire inverse-square error. An inverse-fourth-power error with strictly negative mean survives, producing a third-derivative jump and another infinite-rank obstruction. Finitely many convex compliance splits and a simple derivative penalty for the splitting field also fail at precisely stated scopes.
+
+The manuscript includes the unsuccessful scalar-transfer model, finite-coupling diagnostics, mixed-history and cutoff issues, controls for the obstruction arguments, and a complete status ledger. The project background is the sole reference; all model definitions and arguments needed for this attempt are given here. No new full-form positivity interval, canonical bulk Hamiltonian, arithmetic selection principle, superspace Ward identity, or proof of the Riemann hypothesis is established.
+\end{abstract}
+\tableofcontents
+\clearpage
+
+\section*{Introduction: purpose, progress, and physical interpretation}
+\addcontentsline{toc}{section}{Introduction: purpose, progress, and physical interpretation}
+\label{sec:orientation}
+This attempt constructs positive static field models and calculates the boundary responses they produce. It reproduces one substantial component of the arithmetic target exactly, incorporates the prescribed prime repetitions into a larger positive model, and identifies the remaining discrepancy. It then tests ways of removing that discrepancy. One field modification cancels its leading singularity, but further obstructions survive. The result is a collection of explicit constructions and precise restrictions on proposed completions. A full positive realization of the Weil form and a physical bulk Hamiltonian theory remain open.
+
+This introduction explains the purpose of those calculations before their technical details. It also separates the mathematical positivity problem from the stronger physical interpretation motivating the attempt. The shared background document \cite{background} supplies the overall program and the equivalence with the Riemann hypothesis; the definitions and proofs specific to this attempt appear in the sections that follow.
+
+\subsection*{The overall goal: obtain the arithmetic form from something positive}
+The input is a smooth complex profile $f$ supported in a finite interval of length $L$. The arithmetic object $Q_{0,L}[f]$, called the Weil form, assigns a real number to that profile. Its formula is fixed in advance by the zeta explicit formula. It contains a gamma contribution, a local normalization term, correlations between translated copies of $f$ at prime-power distances, and two global amplitudes coming from the pole terms. Some contributions have negative signs. Their sum is the quantity whose positivity must be understood.
+
+The background identifies the ultimate requirement as
+\[
+Q_{0,L}[f]\geq0
+\quad\hbox{for every admitted }f\hbox{ and arbitrarily large support lengths }L.
+\]
+This is an all-input requirement. Checking several profiles, reproducing selected coefficients, or proving positivity after restricting the input to a finite-dimensional space does not establish it.
+
+A possible route is to define an independent positive system, couple $f$ to that system, and prove an exact identity
+\[
+Q_{0,L}[f]=\norm{\Psi_L(f)}^2.
+\]
+The positivity would then follow from the ordinary Hilbert norm. The essential work is to specify the system and the state preparation without already assuming the unknown positivity, and to prove that their response is exactly the prescribed arithmetic form. A factor obtained by taking a spectral square root of the target would not supply an independent positivity argument.
+
+For a physics interpretation, one would also like a reason why this system, these couplings, and this observable arise: a bulk dynamics, an appropriate supersymmetry or constraint structure, and an identity protecting the desired boundary pairing. That is a stronger construction goal. An exact independently positive static realization could already prove the mathematical sign statement, even without a physical time evolution. A physical theory would add an explanation for that realization and its arithmetic data. Neither the complete static identity nor that stronger physical explanation has been obtained here.
+
+\subsection*{Where this investigation enters the shared program}
+The background offers two related routes. The direct route seeks a positive realization of $Q_{0,L}$ itself. The transfer route studies the causal operators $V_{\omega,L}$ associated with a ratio of shifted completed zeta functions, and seeks nonnegative contraction defects
+\[
+D_{\omega,L}=I-V_{\omega,L}^*V_{\omega,L}.
+\]
+In the domains and limiting sense established in the background, the two are connected by
+\[
+\begin{aligned}
+\ip{f}{D_{\omega,L}f}
+ &=2\int_0^\omega Q_{s,L}[V_{s,L}f]\,ds,\\
+Q_{0,L}[f]
+ &=\lim_{\omega\downarrow0}\frac{\ip{f}{D_{\omega,L}f}}{2\omega}.
+\end{aligned}
+\]
+Here $s$ is a running zeta shift and $V_{0,L}=I$. The central form measures the initial rate of norm loss, even though the defect itself vanishes at zero shift. The background explains how contraction on an appropriate sequence of increasing lengths and decreasing shifts would imply the central positivity criterion.
+
+This investigation pursues the direct route: it fixes $\omega=0$ and tries to construct the central energy as a positive static boundary response. It does not construct the family $V_{\omega,L}$ or a positive accumulated energy along its shift trajectory. The fields remain present at $\omega=0$ because they represent the nonzero generator form, not the vanishing defect $D_{0,L}$. The connection from the shifted gamma ratio to their mass tower is derived explicitly in Section~\ref{subsec:gamma-tower}.
+
+Within the program's bulk formulation, the particular choice here is
+\[
+\begin{aligned}
+U&=(f,(u_k)_{k\geq0}), &\operatorname{Tr}U&=f,\\
+Z_L[f]&=\inf_{(u_k)}\mathcal E[f,(u_k)],
+& Q_{0,L}[f]&\stackrel{\text{target}}{=}Z_L[f].
+\end{aligned}
+\]
+Thus the background's boundary map is simply projection onto the prescribed function, and the bulk equations determine the auxiliary fields. The positive gamma kinetic energy supplied in the background is the starting system. The present work equips it with a relative Hilbert complex, tests arithmetic deformations of that same energy, and computes the resulting errors. The gamma kinetic tower itself is an inherited ingredient; its cohomological preparation and the subsequent loop and field calculations are the subject of this investigation.
+
+The choice to modify a common positive energy matters. The prime form has both signs, the contact constant is negative, and the pole form is signed. They cannot each be represented by an independent positive add-on. Eliminating coupled fields can produce negative cross terms inside a positive total response, as the one-channel calculation below already illustrates. The research question is whether such a common response can produce all the prescribed terms together.
+
+This also explains the role of finite-length calculations in an arbitrary-length program. A specified mechanism must first survive exact tests where one prime or two primes are active. Failure there rejects that mechanism. Success there would justify testing its general rule, but would not establish that the rule persists at arbitrary support length. The results below make those tests explicit; they do not extend the range of established full-form positivity.
+
+\subsection*{What the present bulk fields actually are}
+In the calculations below, \emph{bulk} denotes auxiliary fields that respond to the prescribed input. The coordinate $x$ is continuous. A label $k$ distinguishes different field channels; it is not a spatial lattice index. The input has finite support, but the response fields generally extend beyond that support. Their exterior tails contribute to the energy and are retained.
+
+The basic operation is static minimization. For a fixed source profile $f$, solve for the auxiliary fields that minimize a specified positive energy, and call the resulting value $Z_L[f]$. Schematically,
+\[
+f\ \longmapsto\ \hbox{equilibrium fields for }f\
+\longmapsto\ Z_L[f]=\inf\mathcal E[f;\hbox{auxiliary fields}].
+\]
+When an equivalent geometric extension is available, fixing the source can instead be expressed as fixing a boundary trace. In both descriptions, the resulting response must be calculated before comparing it with $Q_{0,L}$.
+
+For example, one channel has the explicitly given energy
+\[
+\mathcal E_a[F;u]
+=\frac2a\int_{\R}
+\left(|F-u|^2+a^{-2}|u'|^2\right)\,dx,
+\qquad a>0,
+\]
+where $F$ is the zero extension of $f$. The first term penalizes a mismatch between the prescribed profile and the responding field; the second penalizes spatial variation of that field. The two terms compete. The equilibrium equation is
+\[
+(1-a^{-2}\partial_x^2)u=F.
+\]
+Thus the channel smooths the imposed profile over a scale set by $a^{-1}$. Substituting its actual solution into the original energy gives the response. There is no inference here from a finite matrix approximation; Section~\ref{sec:gamma} establishes the continuous-space domains and solution directly.
+
+The displayed models use quadratic energies because their full responses can be calculated exactly. Quadratic bulk energy is a modeling choice, not a necessary condition on every possible completion. A nonlinear energy can have a quadratic minimized response: for complex numbers $z,v$,
+\[
+\inf_v\bigl(|z|^2+|v-z^2|^2\bigr)=|z|^2.
+\]
+What an exact completion must reproduce is the quadratic boundary observable. Arguments below that assume a Hermitian bulk form or a linear transfer retain those assumptions. In particular, Proposition~\ref{prop:descent} is a criterion within the positive quadratic class. The finite blocks in Section~\ref{sec:principles} illustrate elimination in that class; they do not replace the analysis of the continuous fields.
+
+\subsection*{Where the Hamiltonian and supersymmetry enter}
+The topological motivation is to seek a boundary observable whose value is fixed by an independently justified constraint or symmetry, so that its arithmetic coefficients need not be fitted separately at each length. Exact independence of the unreduced energy from every interior extension would be one strong realization of that idea. The positive gradient energies used here do depend on the interior fields. What is established is a weaker but concrete construction: minimize over auxiliary variations and obtain a well-defined norm of a relative class. Section~\ref{sec:principles} distinguishes this quotient norm from exact extension independence and from a protected arithmetic pairing. This distinction explains both the use of cohomology and the need to continue calculating the norm after the class has been constructed.
+
+There are two different notions of energy in the manuscript. The first is the static functional just described. The energies in \eqref{eq:Et} and \eqref{eq:Emix} are the definitions of the corresponding response models. No canonical phase space, conjugate momenta, or physical time evolution for those fields has been chosen. The parameter $t$ in the loop evolution is an auxiliary deformation parameter, and its evolution is not required to be unitary. Calling that evolution a physical time evolution would introduce an additional claim.
+
+The second object is an auxiliary supersymmetric Hamiltonian. A closed differential $D$, together with its actual Hilbert adjoint, gives the nilpotent charge and positive operator
+\[
+\qq(u,Y)=(0,Du),\qquad
+H_{\rm aux}=\{\qq,\qq^*\}
+=\operatorname{diag}(D^*D,DD^*).
+\]
+This structure organizes the elimination problem. Auxiliary variations change representatives of a class, and minimization selects its harmonic representative. The construction also checks that a nonzero input gives a surviving class rather than a state that disappears as exact.
+
+The boundary quantity used in the proposed positivity argument is the ordinary norm of that representative. It is not its $H_{\rm aux}$ energy. Indeed, for a prepared harmonic state,
+\[
+H_{\rm aux}(0,\Psi_L(f))=0,
+\qquad
+Z_L[f]=\norm{\Psi_L(f)}^2
+\quad\hbox{can be nonzero}.
+\]
+The supersymmetric algebra therefore supplies a useful state-space organization, but its positive Hamiltonian alone does not identify the arithmetic observable.
+
+One could add a positive momentum term to a static channel energy and declare a canonical dynamics. This would be a further model choice, and would not by itself derive a physical supersymmetry, the prime couplings, or the required boundary identity. The present paper has not performed that construction. Its physical contribution is to make available explicit response systems, their boundary states, and demanding matching conditions that a Hamiltonian formulation would have to address.
+
+\subsection*{The first success: an exact positive realization of the gamma kinetic term}
+The one-channel calculation gives a positive frequency response proportional to
+\[
+\frac{\tau^2}{a^2+\tau^2}.
+\]
+Combining channels at masses $a_k=2k+\tfrac12$ with their specified positive weights produces the function $B(\tau^2)$ used in the gamma kinetic term $K$. This is an exact continuous-space construction. Each field is solved before its contribution is summed. The paper proves that the prepared sum is meaningful on the required logarithmic form domain, even though the corresponding unprepared infinite source has divergent norm.
+
+This establishes an independently positive realization of a substantial part of the target. It also supplies an explicit place to introduce additional fields or modify couplings. It does not establish the positivity of the complete gamma-and-pole expression: $K$ does not include the negative normalization constant or the two signed pole amplitudes. Those terms remain necessary even at support lengths for which no prime translation is active.
+
+The masses and weights are prescribed to reproduce the known gamma structure. Their realization by an ordinary oscillator gives a useful representation of those data; it does not prove that supersymmetry selects them. Representation of assigned arithmetic data and explanation of their origin are separate achievements.
+
+\subsection*{The second success: implement the prime repetitions and expose the exact error}
+The prime contribution compares a profile with copies translated by $n\log p$. A primitive return of length $\log p$, with amplitude reduced by $p^{-1/2}$ on each traversal, naturally produces those repeated translations and their geometric weights. A finite input interval requires care: part of a translated profile can leave the interval. The return identity includes the escaped part in an endpoint reservoir. Dropping it changes the form being calculated.
+
+Sections~\ref{sec:loops} and \ref{sec:scalar} show why these ingredients did not immediately solve the positivity problem. The primitive identity initially expresses the desired contribution as a difference of positive norms. A simple scalar derivative coupling is positive as a bulk model but has the wrong exact repetition coefficients. Its first-order response also fails to predict the actual response at the required finite coupling. These calculations rule out using a tangent formula as though it were a completed model.
+
+The exponential loop construction repairs that coefficient problem. It modifies the gamma channels through a boundedly invertible translation operator at every fixed finite prime cutoff. Its full response is again an ordinary positive boundary norm. At the stipulated coupling, the contact coefficient and every active prime-power delta coefficient agree with the arithmetic target.
+
+There is still a regular contribution to the response, and it cannot be discarded. With the definitions made precise below, the exact result is
+\[
+\boxed{\displaystyle
+Q_{0,L}[f]=Z_1[f]+P[f]-\mathscr R_{1,L}[f].}
+\]
+Here $Z_1$ is the positive norm that has actually been constructed, $P$ is the prescribed signed pole form, and $\mathscr R_{1,L}$ is a computed continuous-kernel error. This identity identifies both the success and the remaining task. The singular arithmetic coefficients match; the full pairing does not. Positivity of $Z_1$ alone says nothing decisive about the sign of the remaining difference.
+
+The regular error is not an unknown term concealed by an approximation. Its exact multiplier is given in Section~\ref{sec:residual}, and its finite-interval kernel can be studied directly. That explicit residual allows the next proposals to be tested against a concrete missing response.
+
+\subsection*{Why the obstruction results are useful}
+Suppose the remaining discrepancy could be supplied by a Hermitian quadratic form in finitely many linear boundary amplitudes. Such a correction has finite rank: all of its dependence on the input passes through finitely many numbers. The pole form is of this kind, involving only two amplitudes.
+
+The loop model's regular error behaves differently. In the one-prime setting, its kernel is continuous but has a nonzero jump in its first derivative across the diagonal. Moving the input point moves that singular feature. The proof in Section~\ref{sec:structural} turns this fact into an infinite-rank statement on every nonempty open input interval. A finite collection of boundary amplitudes cannot cancel it exactly. Thus continuity does not make the error harmless, and matching the pole amplitudes alone cannot complete this model.
+
+A second obstruction tests a more general idea: keep the old energy accessible and simply allow additional fields to relax it. Enlarging the minimization set can only lower the minimum. For certain compact profiles modulated to high frequency, however, the arithmetic target lies above the old response, even after finitely many linear source amplitudes have been forced to vanish. Pure relaxation therefore changes the response in the wrong direction on those inputs. This reasoning concerns the inclusion of admissible configurations and survives nonlinear additional fields when the old energy remains accessible.
+
+These conclusions guide the next construction. They exclude specific proposed repairs and identify features a successful repair would have to change. They do not exclude a different Hamiltonian, a changed source coupling, a coupled infinite-dimensional field system, or nonlinear bulk models in general. Their value is diagnostic: an otherwise plausible proposal can be stopped at an exact unmatched coefficient or kernel singularity rather than carried forward on the basis of its formal positivity.
+
+\subsection*{The field modification: a controlled success with a surviving limitation}
+The next model introduces a second positive field into one gamma channel and changes the derivative stiffness at the same time. The new energy is specified before elimination, its Hilbert differential and adjoint are calculated, and its response is obtained for every admitted input. Because the old stiffness has changed, setting the new field to zero does not recover the unchanged old energy. The modification consequently falls outside the pure-relaxation obstruction.
+
+For the lowest mass $a=\tfrac12$, choosing the positive parameter $\delta=\tfrac1{24}$ cancels the complete leading inverse-square Fourier error, including its dependence on the prime phase. In position space this removes the first-derivative jumps. This is a concrete demonstration that positive field modifications can change the regular error in a useful, exactly controllable way.
+
+The next term does not vanish. Its inverse-fourth-power Fourier coefficient has strictly negative mean under the stated one-prime hypotheses. The corrected kernel has a nonzero third-derivative jump and is still of infinite rank. The error has become smoother, but the full arithmetic identity is still absent. Two natural extensions---finitely many positive convex splits and a positive derivative penalty on the new field---also fail their stated matching tests.
+
+This regularity improvement should not be interpreted as a uniform improvement in the error, or as a new positivity bound. On one tested smooth profile, the already negative difference $Q-Z$ becomes slightly more negative after the modification. That sign observation is a floating-point diagnostic. The derivative-jump obstructions are analytic results and do not depend on certifying that particular numerical sign. Section~\ref{sec:numerics} keeps these kinds of evidence separate.
+
+\subsection*{What this means for the overall program, and how to read the paper}
+The program seeks an independently positive system, an exact arithmetic identity, and coverage at arbitrary support length. This investigation constructs positive candidates and exact comparisons with the target. Their remainders are nonzero. The field modification tests whether changing a positive bare energy can remove that remainder; canceling one asymptotic coefficient is a necessary matching test, not an increase in the range where Weil positivity is proved.
+
+No new full-form positivity interval or physical bulk Hamiltonian with the desired arithmetic observable is established. The prime lengths, return weights, mass tower, contact constant and pole data remain externally prescribed. Compatibility as the input support and prime cutoff grow also remains open. A symmetry that forced the full matching and its persistence would provide the sought explanation; the current cohomology alone does neither.
+
+A further proposal should specify its fields, source rule, domains, constraints and positive energy, then calculate the full boundary pairing. The singular coefficients give early necessary tests; the regular kernel and both pole amplitudes decide the full identity. Section~\ref{sec:outlook} derives the next conditions for coupled channels or a modified source. Nonlinear constructions remain possible, with the same obligation to produce the prescribed quadratic response.
+
+For the connection to the background, read Section~\ref{subsec:gamma-tower} and the opening of Sections~\ref{sec:loops} and \ref{sec:evolution}. The exact residual identity \eqref{eq:mainidentity} states the current mathematical position. The later obstruction and field sections explain why particular repairs fail; the numerical section and final ledger distinguish analytic conclusions from diagnostics.
+
+\clearpage
+
+\section{The arithmetic objective and the results obtained}
+\label{sec:objective}
+The mathematical background of the SUSY-positivity program \cite{background} distinguishes an arithmetic positivity target from a positive realization of that target. This manuscript studies a particular proposed realization. Its central question is whether one can define fields, a positive component energy, and an input rule independently, then calculate the resulting boundary pairing and obtain the full Weil form.
+
+The distinction is substantial. A nonnegative minimum proves the sign of its own response. It does not prove the sign of a different arithmetic form merely because both responses contain gamma functions or prime labels. Similarly, a positive supersymmetric Hamiltonian does not identify the ordinary norm of a chosen boundary state with the arithmetic form. We therefore calculate full responses, including distributional contacts, continuous errors, pole terms and endpoint contributions.
+
+\subsection{Inputs, Fourier convention and translations}
+For $L>0$ let $I_L=(-L/2,L/2)$, and let $f,g\in C_c^\infty(I_L;\C)$. Capital letters $F,G$ denote their zero extensions to $\R$. We use
+\begin{equation}
+\widehat F(\tau)=\int_\R F(x)e^{-i\tau x}\,dx,
+\qquad
+\ip{G}{F}=\frac1{2\pi}\int_\R
+\overline{\widehat G(\tau)}\widehat F(\tau)\,d\tau.
+\end{equation}
+All Hilbert inner products are conjugate-linear in the first variable and use ordinary positive Lebesgue measure. The whole-line translation is $U_dF(x)=F(x-d)$. The compressed translation on $I_L$ is
+\begin{equation}
+(T_df)(x)=\widetilde f(x-d),\qquad x\in I_L.
+\end{equation}
+For $d\ge L$, $T_d=0$. The adjoint translates in the opposite direction with its actual interval cap. One must not replace $T_d$ by a unitary operator when expanding finite-interval Gram forms.
+
+Write
+\begin{equation}
+ a_k=2k+\tfrac12,\quad \ell_p=\log p,\quad r_p=p^{-1/2},
+ \qquad B(s)=\sum_{k=0}^\infty\frac2{a_k}\frac{s}{a_k^2+s},\quad s\ge0.
+ \label{eq:B}
+\end{equation}
+The parameter $a_k$ is a gamma-channel mass; $\ell_p$ is a primitive delay length. Define
+\begin{align}
+ K(G,F)&=\frac1{2\pi}\int_\R B(\tau^2)
+          \overline{\widehat G(\tau)}\widehat F(\tau)\,d\tau,\label{eq:K}\\
+ C(f)&=\int_{I_L}f(x)\cosh(x/2)\,dx,
+ &S(f)&=\int_{I_L}f(x)\sinh(x/2)\,dx,\label{eq:poles}\\
+ w_0&=\psi(1/4)-\log\pi
+ =-\gamma_E-\pi/2-3\log2-\log\pi.
+\end{align}
+Here $\psi=\Gamma'/\Gamma$ and $\gamma_E$ is Euler's constant. The polarized pole form is
+\begin{equation}
+ P(g,f)=2\overline{C(g)}C(f)-2\overline{S(g)}S(f),
+ \label{eq:P}
+\end{equation}
+whose kernel is $2\cosh((x-y)/2)$. It is smooth and has rank at most two on a finite interval, with both signs present.
+
+\subsection{The full target and its quantifiers}
+In the normalization of the background, the central target is
+\begin{align}
+ Q_{0,L}(g,f)={}&K(G,F)+w_0\ip{g}{f}+P(g,f)\notag\\
+ &-\sum_{\substack{p\ \mathrm{prime},\ n\ge1\\n\ell_p<L}}
+ \ell_pr_p^n\ip{g}{(T_{n\ell_p}+T_{n\ell_p}^*)f}.
+ \label{eq:target}
+\end{align}
+The one-sided delta coefficient is $-\ell_pr_p^n$, while the cosine multiplier coefficient is $-2\ell_pr_p^n$. This factor of two will matter repeatedly. The negative contact $w_0\approx-5.372183419225665$ is part of the target, not a dispensable normalization.
+
+The natural form domain is
+\begin{equation}
+ \mathcal D_{\log,L}=
+ \left\{f\in L^2(I_L):\int_\R\log(2+|\tau|)
+ |\widehat F(\tau)|^2\,d\tau<\infty\right\}.
+ \label{eq:domain}
+\end{equation}
+The gamma multiplier differs from $\log(2+|\tau|)$ by a bounded function. The other terms in \eqref{eq:target} are bounded forms at fixed $L$, so $Q_{0,L}$ is closed and semibounded on this domain without assuming nonnegativity. Smooth compact inputs form a core: first dilate a supported function into the interval interior, and then mollify in the weighted Fourier norm. This is the domain convention of \cite{background}.
+
+We use from the background the classical criterion
+\begin{equation}
+ \mathrm{RH}\quad\Longleftrightarrow\quad
+ Q_{0,L}[f]\ge0\quad\text{for every }L>0
+ \text{ and every }f\in C_c^\infty(I_L;\C).
+ \label{eq:RH}
+\end{equation}
+The present manuscript does not reprove the equivalence with RH. It does specify and prove its auxiliary constructions without requiring another project document. An unbounded collection of covered lengths would suffice for \eqref{eq:RH}, since every fixed compact input eventually fits. No positive lower bound uniform in $L$ is required. A parity sector, a mesh, or a finite collection of lengths is insufficient. The parameter $0$ fixes the zeta shift; it is not a spatial coordinate or the evolution parameter introduced below.
+
+\subsection{What the attempt accomplishes}
+The results fit into a sequence of explicit calculations rather than a positivity theorem for \eqref{eq:target}.
+\begin{enumerate}
+\item A positive relative complex realizes $K$ as the norm of a nonzero harmonic boundary class, with its actual adjoint and all-input preparation.
+\item Primitive loop histories reproduce complete repetition series and endpoint contributions. Their arithmetic contribution is a difference of norms, whose sign remains unresolved.
+\item A scalar product of stable first-order delay transfers has incorrect repetition weights. Its tangent residual does not describe its finite-coupling error.
+\item Exponentiating the exact loop return repairs the contact and delta coefficients, while retaining a positive gamma tower. The remaining error is an explicit continuous compact kernel on each fixed interval.
+\item For one prime, a nonzero derivative jump proves that error has infinite rank. High-frequency compact packets also rule out pure relaxation of the unchanged positive model, even with a finite-rank source addition.
+\item A positive two-field modification cancels the first jump. Its remaining third-derivative jump excludes completion by a net finite-rank correction. Two natural extensions have further exact obstructions.
+\end{enumerate}
+Each failure is scoped to the stated family. None excludes arbitrary coupled fields, source changes, or suitable new infinite-dimensional constructions. The last sections identify what a further construction would have to change.
+
+\section{Positive bulk responses and the role of symmetry}
+\label{sec:principles}
+Before introducing arithmetic, it is useful to distinguish the mechanisms that could produce a positive boundary form. A bulk means additional degrees of freedom. It can be a geometric extension, a collection of fields, or a constrained transport system; it need not mean the complement of $I_L$.
+
+\subsection{Elimination and a boundary state}
+Within the quadratic class, let $\mathcal C$ be linear and let $\mathcal E[U]=\norm{\mathcal C U}_{\mathcal H}^2$ be an independently specified positive energy. Let a linear trace map $\operatorname{Tr}$ extract the prescribed input. If for each $f$ there is a linear minimizing extension $U_f$ with $\operatorname{Tr}U_f=f$, then
+\begin{equation}
+ f\longmapsto U_f\longmapsto\Psi(f)=\mathcal C U_f,
+ \qquad Z(g,f)=\ip{\Psi(g)}{\Psi(f)}.
+ \label{eq:bulkroute}
+\end{equation}
+The sign of $Z$ follows from the ambient Hilbert norm. The matching requirement is $Z=Q_{0,L}$ on all input pairs.
+
+In a finite block system the same operation gives a Schur complement. If
+\begin{equation}
+ H=\begin{pmatrix}H_{bb}&H_{bi}\\H_{ib}&H_{ii}\end{pmatrix}\ge0,
+ \qquad H_{ii}>0,
+\end{equation}
+then eliminating the interior variable gives
+\begin{equation}
+ u_f=-H_{ii}^{-1}H_{ib}f,
+ \qquad Z[f]=\ip{f}{(H_{bb}-H_{bi}H_{ii}^{-1}H_{ib})f}.
+\end{equation}
+This finite-dimensional illustration is not an operator-domain argument for continuous fields: the existence and meaning of an inverse must be established in the chosen function spaces. The whole block, not merely $H_{ii}$, supplies positivity. Subtracting a desired kernel after minimization is not an independent positive construction.
+
+\subsection{Exact descent is a stronger condition}
+\begin{proposition}[Descent criterion]
+\label{prop:descent}
+Let $e$ be a nonnegative Hermitian form on a linear space of fields, and suppose a linear trace is onto the required boundary space. The energy $e(U,U)$ depends only on the trace if and only if $e(h,h)=0$ for every zero-trace variation $h$.
+\end{proposition}
+\begin{proof}
+Trace dependence implies the assertion by comparing $h$ with zero. Conversely, Cauchy--Schwarz for the nonnegative form gives $|e(h,U)|^2\le e(h,h)e(U,U)=0$. Hence adding $h$ changes neither the energy nor its cross terms.
+\end{proof}
+In an unconstrained positive finite block, this condition forces $H_{ii}=0$ and then $H_{bi}=0$. Thus unrestricted extension independence removes energetic interior coupling rather than performing a nontrivial elimination. A gauge symmetry may annihilate a selected set of variations without annihilating every zero-trace variation. Those two assertions must not be conflated.
+
+A constrained theory can instead restrict the allowed fields before evaluating the positive energy. It must prove that the constraints admit every required boundary input and that any residual sector is fixed or has no effect on the pairing. Writing a multiplier action for constraints does not make that off-shell action nonnegative.
+
+\subsection{Saturation and arbitrary-input solvability}
+Another route would be an identity
+\begin{equation}
+ \mathcal E[U]=\norm{\mathcal D U}^2+B[\operatorname{Tr}U],
+ \qquad \mathcal E[U]\ge0,
+ \label{eq:saturation}
+\end{equation}
+with an admissible saturating field for every input. The inequality $\mathcal E\ge B$ alone does not prove $B\ge0$.
+
+A finite-dimensional example makes the point exact. Let $A$ be an invertible Hermitian matrix, with no sign assumption, and take $u\in H^1([0,\infty);\C^m)$ with $u(0)=f$. Then
+\begin{equation}
+ \int_0^\infty(\norm{u'}^2+\norm{Au}^2)dy
+ =\int_0^\infty\norm{u'+Au}^2dy+\ip{f}{Af}.
+\end{equation}
+The proposed saturating field $e^{-yA}f$ is admissible exactly on the positive spectral subspace of $A$. For general $f$ the actual minimizer is $e^{-y|A|}f$, with response $\ip{f}{|A|f}$. Thus all-input saturation can contain the very sign question it was supposed to solve. If exact attainment is unavailable, a sequence with the same trace and $\norm{\mathcal DU_j}\to0$ would suffice, but the trace and energy convergence still require proof.
+
+\subsection{Cohomology, Hilbert norms and protected observables}
+A closed Hilbert differential $D:E^0\to E^1$ gives an odd operator
+\begin{equation}
+ \qq(u,Y)=(0,Du),\qquad
+ \qq^*(u,Y)=(D^*Y,0),\qquad
+ \{\qq,\qq^*\}=\operatorname{diag}(D^*D,DD^*)\ge0.
+ \label{eq:susy}
+\end{equation}
+A harmonic vector in $E^1$ can have a nonzero ordinary norm even though its auxiliary Hamiltonian energy is zero. With closed range, $E^1/\ran D$ has its ordinary quotient norm, represented by $\ker D^*$. The quotient does not declare a positive-norm vector null in the ambient metric; it chooses the least-norm representative of a class. The operator in \eqref{eq:susy} is the auxiliary Hilbert-complex Hamiltonian. No canonical Hamiltonian formulation for the bulk fields is inferred from this algebra, and the arithmetic candidate is the ordinary norm of the prepared state, not its energy expectation under that operator.
+
+There is an exact-state trap. If a factor $A$ is itself used as the differential, then $(0,Af)=\qq(f,0)$ is exact and vanishes in that cohomology. The relative differential below is instead defined by auxiliary variations, while the source is a distinct injection. We prove that its class survives.
+
+A state space can remain unchanged while its norm changes. For example, on a circle with metric $r^2ds^2$, the cohomology class of $ds$ is fixed, but its squared norm is $1/r$. Representative independence therefore does not prove coefficient independence. Similarly, a supertrace is a signed index, not an ordinary positive norm. Introducing Grassmann coordinates packages components but does not choose the physical Hilbert metric or an arithmetic boundary observable.
+
+For a putative smeared insertion $\Psi(f)=\int f(x)\mathcal O(x)\Omega\,dx$, closure of $\mathcal O$ modulo an $x$-derivative produces derivatives of $f$ after integration by parts. Compact support removes endpoints, not those terms. A Ward argument must control arbitrary complex smearing and the adjoint insertion as well as the ket. No such arithmetic Ward identity is assumed in the calculations that follow.
+
+\section{The positive relative gamma complex}
+\label{sec:gamma}
+\subsection{One channel, its adjoint and its surviving class}
+Fix $a>0$. Take $E^0=L^2(\R)$, $E^1=L^2(\R;\C^2)$, and
+\begin{equation}
+ D_au=(u,a^{-1}u'),\qquad\Dom D_a=H^1(\R).
+ \label{eq:Da}
+\end{equation}
+The map is closed and has closed range: $\norm{D_au}\ge\norm u$, and convergence of both components controls $u'$ as well as $u$. Integration by parts gives its actual adjoint,
+\begin{equation}
+ D_a^*(v,w)=v-a^{-1}w',\qquad\Dom D_a^*=L^2\oplus H^1.
+ \label{eq:Daadj}
+\end{equation}
+Inject the boundary input by $JF=(F,0)$, and find the class's least-norm representative by solving
+\begin{equation}
+ (1-a^{-2}\partial_x^2)u_f=F,
+ \qquad
+ \widehat u_f(\tau)=\frac{a^2}{a^2+\tau^2}\widehat F(\tau).
+ \label{eq:uf}
+\end{equation}
+For every $F\in L^2$, the solution belongs to $H^2$ and equals $(a/2)e^{-a|\cdot|}*F$. Define
+\begin{equation}
+ \Psi_a(f)=\sqrt{2/a}\,(F-u_f,-u_f'/a).
+ \label{eq:psia}
+\end{equation}
+Equation \eqref{eq:Daadj} annihilates this vector. It is a nonzero harmonic class when $F\ne0$: if $(F,0)=D_au$, then $u=F$ and $u'=0$, which forces $F=0$ in whole-line $L^2$.
+
+\begin{proposition}[Exact one-channel pairing]
+For arbitrary $F,G\in L^2(\R)$,
+\begin{align}
+ \ip{\Psi_a(g)}{\Psi_a(f)}
+ &=\frac2a\int_\R\left[\overline{G-u_g}(F-u_f)
+             +a^{-2}\overline{u_g'}u_f'\right]dx\notag\\
+ &=\frac1{2\pi}\int_\R\frac2a\frac{\tau^2}{a^2+\tau^2}
+       \overline{\widehat G}\widehat F\,d\tau.
+ \label{eq:paira}
+\end{align}
+Its distributional kernel is $(2/a)\delta_0-e^{-a|x-y|}$.
+\end{proposition}
+\begin{proof}
+At each frequency, completing the square in
+$|\widehat F-\widehat u|^2+a^{-2}\tau^2|\widehat u|^2$
+gives \eqref{eq:uf} and minimum $\tau^2|\widehat F|^2/(a^2+\tau^2)$. Plancherel proves the diagonal identity, and polarization proves the displayed formula. The Fourier transform of $e^{-a|x|}$ is $2a/(a^2+\tau^2)$, giving the kernel with its contact term.
+\end{proof}
+The negative exponential contribution is compatible with a positive total Gram form. Its sign alone is not a sign test for the whole channel.
+
+\subsection{Whole-line output and exact interface data}
+The interval supports the input, not the output field. If the source is supported in $(l,r)$, the equilibrium tails satisfy $u'(l)=au(l)$ and $u'(r)=-au(r)$. The exterior part of the channel energy is
+\begin{equation}
+ \frac2{a^2}\bigl(|u(l)|^2+|u(r)|^2\bigr).
+ \label{eq:exterior}
+\end{equation}
+For example, the left tail is $u(l)e^{a(x-l)}$. Integrating the two equal contributions $|u|^2$ and $a^{-2}|u'|^2$ over that half-line gives $(2/a^2)|u(l)|^2$. Dropping \eqref{eq:exterior} changes the response.
+
+For sources $F_-$ and $F_+$ on opposite sides of an interface $x=c$, the cross pairing is
+\begin{equation}
+ Z_a(F_-,F_+)=-
+ \left(\int_{x<c}\overline{F_-(x)}e^{a(x-c)}dx\right)
+ \left(\int_{y>c}F_+(y)e^{-a(y-c)}dy\right).
+ \label{eq:crossgamma}
+\end{equation}
+An orthogonal sum of independent interval states would lose it. One response amplitude per mass can carry this particular interface term, but the full tower needs all its masses.
+
+A literal extension model gives the same energy. Let a field $U(x,y)$ on $0<y<h$ have lower value $F$ and free upper value $u$, with energy
+\begin{equation}
+ \int_0^h\norm{\partial_yU}^2dy+\mu\norm{u'}^2.
+\end{equation}
+Eliminating the segment gives $h^{-1}\norm{F-u}^2+\mu\norm{u'}^2$. Choosing $h=a/2$ and $\mu=2/a^3$ gives the channel above. Subdividing a segment and eliminating a shared interface adds its resistances and leaves the response unchanged at fixed total resistance. Changing that total resistance changes the observable.
+
+\subsection{The tower and the source-domain issue}
+\label{subsec:gamma-tower}
+\paragraph{From the zeta shift to the channel masses.}
+To connect the tower to the shared background, use $q$ for its Laplace variable, reserving $p$ for primes and $F$ for the extended input. For $0\leq\omega\leq1/2$, the transfer is
+\[
+K_\omega(q)=\frac{\xi(1/2+q-\omega)}{\xi(1/2+q+\omega)},
+\qquad
+\xi(s)=\tfrac12s(s-1)\pi^{-s/2}\Gamma(s/2)\zeta(s).
+\]
+Its causal realization is defined on a line $\re q=\eta>1$, as in the background's subsection ``The shifted transfer and its generator.'' Isolating the gamma and $\pi$ factors gives
+\[
+K^\Gamma_\omega(q)=\pi^\omega
+\frac{\Gamma(1/4+q/2-\omega/2)}
+     {\Gamma(1/4+q/2+\omega/2)}.
+\]
+Logarithmic differentiation at zero shift yields
+\[
+-\left.\partial_\omega\log K^\Gamma_\omega(q)\right|_{\omega=0}
+=\psi(1/4+q/2)-\log\pi.
+\]
+For this gamma expression, taking the real part at $q=i\tau$ is regular and gives
+\[
+\re\!\left[-\left.\partial_\omega\log K^\Gamma_\omega(i\tau)
+\right|_{\omega=0}\right]
+=B(\tau^2)+w_0.
+\]
+The tower realizes the positive $B$ portion of this infinitesimal gamma response. The constant $w_0$ remains outside it. In the background's convention, the full gamma form also includes the pole terms, so it is larger in scope than the kinetic tower.
+
+The masses $a_k=2k+1/2$ arise from the denominators $k+1/4+i\tau/2$ in the digamma expansion. Pairing their real parts and subtracting the value at $\tau=0$ produces exactly the positive resolvent responses already obtained by minimizing the channel energies:
+
+The partial-fraction identity for the gamma logarithmic derivative gives
+\begin{equation}
+ B(\tau^2)=\re\psi(1/4+i\tau/2)-\psi(1/4).
+ \label{eq:digamma}
+\end{equation}
+Indeed, subtract the two convergent difference series with $u=k+1/4$ and $v=\tau/2$; the real difference in the $k$th term is $v^2/[u(u^2+v^2)]$, exactly the summand of \eqref{eq:B}. An equivalent integral follows by summing exponentials:
+\begin{equation}
+ j(t)=\sum_{k\ge0}e^{-a_kt}
+ =\frac{e^{-t/2}}{1-e^{-2t}},\quad t>0,
+ \qquad B(\tau^2)=2\int_0^\infty j(t)(1-\cos(\tau t))dt.
+ \label{eq:j}
+\end{equation}
+The integral converges at zero because $j(t)\sim1/(2t)$. Monotone convergence of the positive channel multipliers gives
+\begin{equation}
+ \Psi_{\rm kin}(f)=(\Psi_{a_k}(f))_{k\ge0},\qquad
+ \norm{\Psi_{\rm kin}(f)}^2=K[F].
+ \label{eq:tower}
+\end{equation}
+This direct sum exists exactly on \eqref{eq:domain}. For the total variational problem, every configuration has energy at least the sum of its channel minima, and the family of channel minimizers attains that sum whenever it is finite.
+
+The raw source $(\sqrt{2/a_k}JF)_k$ has infinite squared norm for every nonzero $F$, since $\sum2/a_k$ diverges. It is therefore invalid to project it as though it were an ambient Hilbert vector. One first prepares the individual harmonic states, then takes their square-summable sum. No independent subtraction of a divergent contact series is required.
+
+\paragraph{Which parameter measures which operation.}
+The index $k$ selects an entire field $u_k(x)$, whose equilibrium response smooths over distance $a_k^{-1}$; every such field contains all spatial frequencies $\tau$. The shift $\omega$ instead changes the arithmetic transfer. For fixed $\omega$, the gamma-ratio asymptotic gives
+\[
+|K^\Gamma_\omega(i\tau)|\sim(2\pi)^\omega|\tau|^{-\omega}
+\qquad (|\tau|\to\infty).
+\]
+This compares a finite-shift smoothing exponent with the channel scales; it does not identify a channel scale with $\omega$. Nor does it assert boundedness of the full zeta transfer on the critical axis: that transfer retains the right-half-plane causal definition above. The later parameter $t$ deforms the auxiliary derivative coupling at fixed zero zeta shift. Increasing $L$ changes the permitted input support and the active prime delays. These four operations are distinct. A shift-dependent field family, or a bulk energy accumulated along $\omega$, would require an additional construction.
+
+The mass spectrum can be realized by the ordinary oscillator $-\partial_z^2+z^2-1/2=2N+1/2$, whose ordinary heat trace is $j(t)$. This realizes assigned data; it does not explain why those masses or couplings are arithmetically selected. Replacing the trace by a supersymmetric supertrace would change the function.
+
+\subsection{The exact invariances and a variation control}
+Adding $D_av$ to $JF$ leaves its quotient class unchanged. Replacing $D_a$ by $D_aR$ with the same closed range also leaves the quotient norm unchanged. Heat evolution of an already harmonic state fixes it. These statements are exact. By contrast, the raw source's heat response at frequency $\tau$ is
+\begin{equation}
+ \frac2a\left[\frac{\tau^2}{a^2+\tau^2}
+ +\frac{a^2}{a^2+\tau^2}e^{-t(1+\tau^2/a^2)}\right],
+\end{equation}
+which depends on $t$. Heat preparation has performed a projection limit, not established deformation invariance of the unprojected observable.
+
+If a bounded skew-adjoint $X$ rotates the range, its harmonic projection is $P_\eta=e^{\eta X}P_0e^{-\eta X}$, and
+\begin{equation}
+ \left|\frac d{d\eta}\frac2a\norm{P_\eta JF}^2\bigg|_{0}\right|
+ \le\frac4a\norm X\norm{P_0JF}\norm{(1-P_0)JF}.
+\end{equation}
+For $F_N=e^{iNx}\phi$ with fixed smooth compact $\phi$, the last norm is $O(N^{-1})$. A fixed finite collection of such bounded channel rotations cannot generate a nondecaying first-order contact or translation coefficient. An infinite tower is outside that finite-channel estimate; the next construction uses precisely its logarithmic response.
+
+\section{Primitive returns, endpoint reservoirs and mixed histories}
+\label{sec:loops}
+The gamma tower comes from one factor of the infinitesimal shift generator. The prime delays come from another. On the absolutely convergent Laplace line, the zeta part satisfies
+\[
+-\left.\partial_\omega\log
+\frac{\zeta(1/2+q-\omega)}{\zeta(1/2+q+\omega)}
+\right|_{\omega=0}
+=2\frac{\zeta'}{\zeta}(1/2+q)
+=-2\sum_{p,n\geq1}\ell_pr_p^n e^{-n\ell_p q}.
+\]
+Inverse Laplace transformation turns $e^{-n\ell_p q}$ into a delay of length $n\ell_p$. Taking the real quadratic pairing of this causal generator gives the coefficient $-\ell_pr_p^n$ multiplying $T_{n\ell_p}+T_{n\ell_p}^*$ in \eqref{eq:target}. Finite support then leaves only the active delays. This derives the lengths and repetition weights to be implemented. Realizing them as primitive return histories is the modeling choice tested next; the logarithmic derivative does not itself provide a positive loop energy.
+
+\subsection{An exact finite-interval loop identity}
+Translate the interval to $(0,L)$ and write $h$ for the translated input. For one primitive length $\ell>0$ and reflection coefficient $0<r<1$, put
+\begin{equation}
+ T=T_\ell,\quad W=(I-rT)^{-1},\quad P=T^*T,\quad\Pi=I-P.
+\end{equation}
+Here $P$ and $\Pi$ are orthogonal projections. If $\ell<L$, $\Pi$ selects the right endpoint reservoir $(L-\ell,L)$; if $\ell\ge L$, it is all of $(0,L)$. Since $T$ is nilpotent, $W$ is a finite sum. Define the positive residence/escape state
+\begin{equation}
+ Yh=(\sqrt{1-r^2}\,Wh,\ r\Pi Wh).
+ \label{eq:Y}
+\end{equation}
+\begin{proposition}[Return and escape identity]
+The full state, including its endpoint component, satisfies
+\begin{equation}
+ Y^*Y=W^*(I-r^2T^*T)W
+ =W+W^*-I
+ =I+\sum_{n\ge1}r^n(T_{n\ell}+T_{n\ell}^*).
+ \label{eq:poisson}
+\end{equation}
+The sum terminates at the interval cutoff. In particular one prime's exact contribution is
+\begin{equation}
+ -\sum_{n\ell_p<L}\ell_pr_p^n
+ \ip{h}{(T_{n\ell_p}+T_{n\ell_p}^*)h}
+ =\ell_p(\norm h^2-\norm{Y_ph}^2).
+ \label{eq:primediff}
+\end{equation}
+\end{proposition}
+\begin{proof}
+The norm of \eqref{eq:Y} is $\ip{Wh}{[(1-r^2)I+r^2\Pi]Wh}$, giving the first identity. Multiply $W+W^*-I$ on the left by $I-rT^*$ and on the right by $I-rT$; the result is $I-r^2T^*T$. Expand $W$ in its finite geometric series to obtain the last identity and then \eqref{eq:primediff}.
+\end{proof}
+The weights, all active repetitions and the endpoint cap are exact. Their organization as a difference of norms does not establish its sign. Omitting the reservoir would replace $I-r^2T^*T$ by $(1-r^2)I$ and lose the identity.
+
+The associated scattering map $S=(rI-T)W$ has
+\begin{equation}
+ I-S^*S=(1-r^2)W^*\Pi W\ge0.
+\end{equation}
+On the whole line $U_\ell$ is unitary, so this scattering defect vanishes. Its vanishing does not imply that the residence response is trivial. In fact the whole-line residence multiplier is
+\begin{equation}
+ \mathcal P(\tau)=\frac{1-r^2}{1-2r\cos(\ell\tau)+r^2}
+ =1+2\sum_{n\ge1}r^n\cos(n\ell\tau).
+ \label{eq:Poissonwhole}
+\end{equation}
+The prime multiplier is $\ell(1-\mathcal P)$, with both signs. Passivity of scattering alone does not prove its sign.
+
+\subsection{Exact bookkeeping for the full form}
+Let $\theta_L=\sum_{\ell_p<L}\ell_p$. Using \eqref{eq:tower} and \eqref{eq:primediff}, define
+\begin{align}
+ \mathcal Bf&=(\Psi_{\rm kin}(f),\sqrt{\theta_L}f,\sqrt2C(f)),\\
+ \mathcal Rf&=(\sqrt{-w_0}f,\sqrt2S(f),(\sqrt{\ell_p}Y_ph)_p).
+\end{align}
+Then
+\begin{equation}
+ Q_{0,L}[f]=\norm{\mathcal Bf}^2-\norm{\mathcal Rf}^2.
+ \label{eq:bookkeeping}
+\end{equation}
+An independently derived conservation law making the second state a contraction of the first would be significant. Declaring it contractive would instead assume exactly the missing inequality. We retain \eqref{eq:bookkeeping} as an exact comparison, not a positive factorization.
+
+\subsection{Coherent histories and finite Gram costs}
+For forward delays $0<a<b$, direct calculation on $(0,L)$ gives
+\begin{equation}
+ T_a^*T_b=P_aT_{b-a},\qquad P_a=T_a^*T_a,
+ \quad\text{output support }(b-a,L-a).
+ \label{eq:cap}
+\end{equation}
+Thus a common amplitude $h-\alpha T_ah-\beta T_bh$ generates the mixed term
+$\alpha\beta(T_a^*T_b+T_b^*T_a)$ even when $a+b\ge L$. At $L=5/4$, $a=\log2$ and $b=\log3$, the forward sum is inactive but the capped difference $\log(3/2)$ is active. Replacing \eqref{eq:cap} by an uncapped unitary translation changes the form.
+
+Suppose finite component vectors satisfy
+$\ip{v_0}{v_p}=-c_p$, $\ip{v_0}{v_q}=-c_q$ and $\ip{v_p}{v_q}=0$, with squared norms $d_0,d_p,d_q>0$. Positivity of their Gram matrix forces
+\begin{equation}
+ d_0\ge\frac{|c_p|^2}{d_p}+\frac{|c_q|^2}{d_q}.
+\end{equation}
+This is the Schur cost of forcing the mixed term to vanish. Naming components by primes does not remove that cost. Likewise, a shared loop denominator $1-x-y$ produces a mixed $xy$ coefficient in its logarithm, while separate denominators $\log(1-x)+\log(1-y)$ do not. The absence of unwanted cycles requires actual algebra.
+
+\subsection{A finite-trace repetition obstruction and its control}
+A logarithm has a $1/n$ repetition factor. Differentiating with respect to a spectral variable whose exponent is $n\ell$ supplies $n\ell$ and cancels that $1/n$. This is why a primitive logarithmic derivative, rather than a bare logarithm, naturally carries the length weights.
+
+A separate sign problem cannot be solved by one fixed finite matrix: there is no matrix $A$ with $\operatorname{Tr}A^n=-r^n$ for every $n\ge1$ and $r\ne0$. Indeed, near zero,
+\begin{equation}
+ \log\det(I-zA)=-\sum_{n\ge1}\frac{\operatorname{Tr}A^n}{n}z^n
+ =-\log(1-rz).
+\end{equation}
+It would follow that the polynomial $\det(I-zA)$ equals $1/(1-rz)$, a contradiction. The positive control $A=r$ gives $+r^n$; $A=-r$ alternates signs rather than reversing every repetition. This excludes the fixed finite-trace prescription, not nonrational or field-valued mechanisms.
+
+\section{Why the scalar derivative model was insufficient}
+\label{sec:scalar}
+\subsection{Positive deformation and its tangent}
+Let $M_\eta$ be a boundedly invertible translation multiplier commuting with differentiation. Replacing $u'$ by $M_\eta u'$ in the gamma energy leaves it positive. If its multiplier is $m_\eta$, elimination gives
+\begin{equation}
+ Z_\eta(g,f)=\frac1{2\pi}\int B(\tau^2|m_\eta(\tau)|^2)
+ \overline{\widehat G}\widehat F\,d\tau.
+ \label{eq:generalZ}
+\end{equation}
+For $M_\eta=I-\eta\sum_j b_jU_{d_j}$, the condition $|\eta|\sum_j|b_j|<1$ ensures invertibility. Put
+\begin{equation}
+ h(\tau)=2\tau^2B'(\tau^2).
+\end{equation}
+Differentiating \eqref{eq:generalZ} at zero gives multiplier
+\begin{equation}
+ -h(\tau)\sum_j b_j\cos(d_j\tau).
+ \label{eq:tangent}
+\end{equation}
+For the infinite tower $h(0)=0$ and $h(\tau)\to1$ at high frequency. In contrast, for any fixed finite tower the high-frequency limit of $h$ is zero. This is a noncommutation of the tower and frequency limits.
+
+There is an essential contact in the inverse transform of $h$. If $t=|x|$, integration by parts in \eqref{eq:j} gives
+\begin{equation}
+ \mathcal F^{-1}h=\delta_0+R_h,
+ \qquad R_h(x)=j(t)+tj'(t),\quad R_h(0)=\tfrac14.
+ \label{eq:Rh}
+\end{equation}
+One way to check the contact is to write $h(\tau)=2\tau\int_0^\infty tj(t)\sin(\tau t)dt$. Since $tj(t)\to1/2$ at zero, integration by parts gives the constant multiplier $1$ plus the Fourier transform of $R_h$. Thus the first-prime choice $b=2\log2/\sqrt2$ matches its leading delta pair, but also produces a translated continuous kernel through $k=-R_h$. The value $k(0)=-1/4$ is not an omitted ultraviolet constant.
+
+For two product factors, the leading logarithmic mixed delta disappears, but the mixed continuous response does not. With $s=\tau^2$, differentiation at zero product couplings gives
+\begin{equation}
+ 4b_pb_q\cos(\ell_p\tau)\cos(\ell_q\tau)
+ \bigl[sB'(s)+s^2B''(s)\bigr].
+ \label{eq:mixedtangent}
+\end{equation}
+The inverse transform of the bracket is
+\begin{equation}
+ V(x)=-\tfrac14\bigl[j(t)+3tj'(t)+t^2j''(t)\bigr],
+ \qquad V(0)=-\tfrac1{16}.
+\end{equation}
+To see this, note that the bracket is $\tau h'(\tau)/4$ and use \eqref{eq:Rh}. Equation \eqref{eq:mixedtangent} therefore has four translated copies of $V$. These are derivatives of the response family, not the full error at unit coupling.
+
+\subsection{The exact scalar repetition coefficients}
+Take one stable scalar factor per prime,
+\begin{equation}
+ m(\tau)=\prod_{p\in\mathcal P}(1-\alpha_pe^{-i\ell_p\tau}),
+ \qquad0<\alpha_p<1.
+\end{equation}
+The gamma asymptotic proved in Appendix~\ref{app:asymptotic} implies
+\begin{equation}
+ B(\tau^2|m|^2)-B(\tau^2)=\log|m(\tau)|+O(\tau^{-2}).
+\end{equation}
+Since the logarithmic series converges absolutely,
+\begin{equation}
+ \log|m(\tau)|=-\sum_{p,n\ge1}\frac{\alpha_p^n}{n}
+ \cos(n\ell_p\tau).
+ \label{eq:scalarcoeff}
+\end{equation}
+Matching the first repetition requires $\alpha_p=2\ell_p/\sqrt p$. For $p=2$ this is approximately $0.9802581435$, within the allowed range, but the second cosine coefficient has magnitude $(\log2)^2\approx0.4804530139$ instead of $\log2\approx0.6931471806$. That obstruction is active once $L>\log4$.
+
+Already for $p=3$, the first match requires $\alpha_3\approx1.2685682012>1$. Allowing a positive real $\alpha>1$ does not rescue that single-factor prescription: factor out $\alpha$ to obtain a constant plus a series with $\alpha^{-n}/n$, whose first coefficient again has magnitude less than one. The case $\alpha=1$ loses uniform invertibility. Multiple copies, different weights, or horizon-dependent transfers change the model and are not covered by this particular exclusion.
+
+A continuous kernel cannot cancel a wrong delta translation on an active line for arbitrary test pairs. Thus the coefficient failures are decisive within this scalar family, independently of any numerical signs.
+
+\subsection{Exact finite coupling differs from the tangent}
+For one first-prime factor let $d=\log2$ and $\alpha=2d/\sqrt2$. Its exact regular remainder is
+\begin{equation}
+ r_\alpha(\tau)=B(\tau^2|1-\alpha e^{-id\tau}|^2)
+ -B(\tau^2)-\log|1-\alpha e^{-id\tau}|.
+ \label{eq:ralpha}
+\end{equation}
+It is continuous and $O(\tau^{-2})$. At zero,
+\begin{equation}
+ r_\alpha(0)=-\log(1-\alpha)\approx3.9250142002,
+\end{equation}
+while its first-order prediction is only $\alpha\approx0.9802581435$. A pointwise multiplier value is not by itself a finite-interval sign theorem, but it exposes the size of the nonlinear correction.
+
+The same distinction occurs on an admitted input. For
+\begin{equation}
+ f(x)=
+ \begin{cases}
+ e^{-1/(1-(x/.49)^2)}(1+.3ix)e^{3ix},&|x|<.49,\\
+ 0,&|x|\ge.49,
+ \end{cases}
+ \label{eq:bump}
+\end{equation}
+a Fourier quadrature gives actual kinetic change $+0.00346853325$ and first-order prediction $-0.00405814876$. Two resolutions differ by about $4.2\times10^{-11}$ in the exact change. These are numerical diagnostics, not certified enclosures, but the signs make it particularly inappropriate to substitute unit coupling into a tangent formula. Small-coupling controls recover \eqref{eq:tangent} with quadratically shrinking error.
+
+\section{Exact loop evolution with a positive boundary state}
+\label{sec:evolution}
+The next model is motivated by the gamma tower's logarithmic growth. If a boundedly invertible translation multiplier $M$ is inserted into each derivative term, minimization replaces the response $B(\tau^2)$ by $B(\tau^2|m(\tau)|^2)$. Since $B(\tau^2)=\log|\tau|+\text{constant}+O(\tau^{-2})$, one has
+\[
+B(\tau^2e^{2v(\tau)})-B(\tau^2)
+=v(\tau)+O(\tau^{-2})
+\]
+for bounded real $v$. Choosing $v$ to be the desired contact-plus-prime cosine series therefore offers a way to introduce those signed coefficients while every bare energy term remains positive. Exponentiating a return generator makes $\log|m|=v$ exact at finite coupling and additive over primes. The $O(\tau^{-2})$ term is the prospective regular error, not a term to be discarded. Section~\ref{sec:residual} computes it exactly and then tests whether the positive response can be completed.
+
+This argument selects an ansatz for a static energy. Although it uses arithmetic coefficients from the central shift generator, the operator $M_t$ defined below acts on the auxiliary fields' derivatives. It is not the shifted-zeta transfer $V_{\omega,L}$ acting on the input. The latter solves $\partial_\omega V_{\omega,L}=-G_{\omega,L}V_{\omega,L}$ with the full, shift-dependent generator, including gamma and pole terms. Consequently $t=1$ means the stipulated model coupling, while the arithmetic target is still at $\omega=0$. Neither the exponential form nor its return histories identify $t$ with the zeta shift.
+
+\subsection{The bounded return generator}
+Fix a finite prime set $\mathcal P$ and a real constant $c$. The set must contain every prime with $\ell_p<L$ if it is to match \eqref{eq:target}. Define on whole-line $L^2$
+\begin{equation}
+ \mathcal A_{\mathcal P}=
+ \sum_{p\in\mathcal P}\ell_p\bigl((I-r_pU_{\ell_p})^{-1}-I\bigr)
+ =\sum_{p\in\mathcal P}\ell_p\sum_{n\ge1}r_p^nU_{n\ell_p},
+\end{equation}
+where each series converges in operator norm. Let
+\begin{equation}
+ M_t=\exp[t(cI-2\mathcal A_{\mathcal P})],\qquad0\le t\le1.
+ \label{eq:Mt}
+\end{equation}
+All translations commute with differentiation, and both $M_t$ and $M_t^{-1}$ are bounded on every ordinary Sobolev space. For example,
+\begin{equation}
+ \norm{M_t^{\pm1}}_{H^s\to H^s}
+ \le\exp\left[t\left(|c|+2\sum_{p\in\mathcal P}
+ \frac{\ell_pr_p}{1-r_p}\right)\right].
+ \label{eq:Mbound}
+\end{equation}
+The evolution parameter $t$ is auxiliary and has no identification with the zeta shift.
+
+Write its multiplier as $m_t=e^{tg}$, where
+\begin{equation}
+ g(\tau)=c-2\sum_{p\in\mathcal P}
+ \ell_p\frac{r_pe^{-i\ell_p\tau}}{1-r_pe^{-i\ell_p\tau}},
+ \qquad v(\tau)=\re g(\tau).
+ \label{eq:g}
+\end{equation}
+The important finite-coupling identity is
+\begin{align}
+ \log|m_t(\tau)|&=t\,v(\tau),\notag\\
+ v(\tau)&=c+\sum_{p\in\mathcal P}\ell_p(1-\mathcal P_p(\tau))
+ =c-2\sum_{p,n\ge1}\ell_pr_p^n\cos(n\ell_p\tau).
+ \label{eq:exactlog}
+\end{align}
+The real logarithm of the modulus has no branch ambiguity. A principal complex logarithm of $m_t$ would be a different expression and can jump.
+
+Equation \eqref{eq:exactlog} has the desired repetition weights, allows the first 3-coefficient, and has no mixed-prime Fourier coefficients. The amplitude $M_t$ itself contains mixed histories; it is the logarithmic modulus that is additive. Its causal phase realizes a bounded whole-line operator, but the reduced gamma norm depends only on its modulus, so positivity does not select that phase uniquely.
+
+The same construction works for assigned nonarithmetic lengths, weights and reflection coefficients. Its arithmetic input is explicit rather than explained by supersymmetry. Exponentiation has solved a coefficient implementation problem, not the arithmetic selection problem.
+
+\subsection{The closed differential and its exact pairing}
+Replace \eqref{eq:Da} by
+\begin{equation}
+ D_{a,t}u=(u,a^{-1}M_tu'),\qquad\Dom D_{a,t}=H^1.
+\end{equation}
+Bounded invertibility of $M_t$ proves closedness, and the first component proves closed range. The actual adjoint is
+\begin{equation}
+ D_{a,t}^*(v,w)=v-a^{-1}M_t^*w',
+ \qquad\Dom D_{a,t}^*=L^2\oplus H^1.
+ \label{eq:deformedadj}
+\end{equation}
+The adjoint reverses the translations. Minimize the positive energy
+\begin{equation}
+ \mathcal E_t[F,(u_k)]
+ =\sum_{k\ge0}\frac2{a_k}
+ \left(\norm{F-u_k}^2+a_k^{-2}\norm{M_tu_k'}^2\right).
+ \label{eq:Et}
+\end{equation}
+For each $f$, its minimizing fields and harmonic states are
+\begin{align}
+ \widehat u_{k,t}(\tau)&=
+ \frac{a_k^2}{a_k^2+\tau^2e^{2tv(\tau)}}\widehat F(\tau),\label{eq:ut}\\
+ \Psi_{k,t}(f)&=\sqrt{2/a_k}\,(F-u_{k,t},-a_k^{-1}M_tu_{k,t}').
+\end{align}
+For every fixed channel, $u_{k,t}\in H^2$ when $F\in L^2$. Equations \eqref{eq:deformedadj} and \eqref{eq:ut} prove harmonicity and arbitrary-input coverage.
+
+\begin{theorem}[Positive finite-coupling loop response]
+At fixed finite $\mathcal P,c,t$, the prepared harmonic direct sum satisfies
+\begin{equation}
+ Z_t(g,f)=\ip{\Psi_t(g)}{\Psi_t(f)}
+ =\frac1{2\pi}\int_\R B(\tau^2e^{2tv(\tau)})
+       \overline{\widehat G}\widehat F\,d\tau.
+ \label{eq:Zt}
+\end{equation}
+Its form domain on $I_L$ is $\mathcal D_{\log,L}$. The norm is the minimum of \eqref{eq:Et} and is positive independently of any sign of $Q_{0,L}$.
+\end{theorem}
+\begin{proof}
+Complete the square in each channel at every frequency, as in \eqref{eq:paira}, with $\tau^2$ replaced by $\tau^2e^{2tv}$. The upper and lower bounds on $v$ show that this new multiplier differs from $B(\tau^2)$ by a bounded function. The sums of minimized positive energies therefore converge precisely on the same logarithmic domain. Monotone convergence gives the diagonal identity and polarization gives \eqref{eq:Zt}. The projected sum is taken after the channelwise minimizations; no raw infinite source vector is used.
+\end{proof}
+
+\subsection{An auxiliary transport realization}
+The exponential can be imposed by a uniquely solvable linear constraint system. For an initial derivative field $v_0=u'$, introduce $v_\xi$ and histories $R_{p,\xi}$ obeying
+\begin{equation}
+ R_{p,\xi}=v_\xi+r_pU_{\ell_p}R_{p,\xi},\qquad
+ \partial_\xi v_\xi=cv_\xi-2\sum_p\ell_p(R_{p,\xi}-v_\xi).
+ \label{eq:transport}
+\end{equation}
+Solving the return equation first gives $R_{p,\xi}=(I-r_pU_{\ell_p})^{-1}v_\xi$, hence $v_t=M_tu'$. To make the delay local in an additional coordinate, put
+\begin{equation}
+ \chi_p(\xi,x,s)=R_{p,\xi}(x-s),\quad
+ (\partial_s+\partial_x)\chi_p=0,\quad0<s<\ell_p,
+\end{equation}
+with return condition
+$\chi_p(\xi,x,0)=v_\xi(x)+r_p\chi_p(\xi,x,\ell_p)$.
+These constraints realize the assigned histories. The energy \eqref{eq:Et} remains an ordinary positive norm on their uniquely determined solutions.
+
+This is a constrained auxiliary-field implementation, not a derived local superspace theory. The evolution need not be unitary or contractive. Changing $t$ changes the boundary pairing. The supersymmetric Hilbert-complex algebra and its positive adjoint are available, but a protected observable selecting \eqref{eq:target} is still missing.
+
+\section{The exact residual after arithmetic coefficient matching}
+\label{sec:residual}
+\subsection{A continuous error with a controlled Fourier tail}
+The scalar asymptotic needed throughout is
+\begin{equation}
+ B(\tau^2)=\log|\tau|-\log2-\psi(1/4)
+ -\frac1{24\tau^2}-\frac7{960\tau^4}+O(\tau^{-6}).
+ \label{eq:Basymp}
+\end{equation}
+Appendix~\ref{app:asymptotic} derives the inverse-power coefficients directly from \eqref{eq:j}. Define the exact integrated error
+\begin{equation}
+ \rho_t(\tau)=B(\tau^2e^{2tv(\tau)})-B(\tau^2)-t\,v(\tau).
+ \label{eq:rho}
+\end{equation}
+For a fixed finite prime set, $v$ is bounded, even and real. Consequently $\rho_t$ is continuous, even and real, with
+\begin{align}
+ \rho_t(0)&=-t\,v(0),\notag\\
+ \rho_t(\tau)&=-\frac{e^{-2tv(\tau)}-1}{24\tau^2}
+ -\frac{7(e^{-4tv(\tau)}-1)}{960\tau^4}+O(\tau^{-6}).
+ \label{eq:rhotail}
+\end{align}
+The constants in this expansion depend on the fixed cutoff and parameters. It is not an estimate uniform over all prime sets.
+
+In particular $\rho_t\in L^1(\R)$. Its inverse Fourier transform $R_t$ is bounded, continuous and tends to zero at infinity. On $I_L\times I_L$, the difference kernel $R_t(x-y)$ defines a Hilbert--Schmidt operator, since a bounded continuous kernel on that compact rectangle is square integrable. Its form is
+\begin{equation}
+ \mathscr R_{t,L}(g,f)=\frac1{2\pi}\int_\R\rho_t(\tau)
+ \overline{\widehat G(\tau)}\widehat F(\tau)d\tau.
+\end{equation}
+Continuity of the kernel does not imply differentiability of every order; below we identify actual derivative jumps.
+
+\begin{theorem}[Exact target decomposition]
+If $\mathcal P$ contains every prime active at $L$, then
+\begin{align}
+ Z_t(g,f)={}&K(G,F)+tc\ip{g}{f}\notag\\
+ &-t\sum_{\substack{p\in\mathcal P,n\ge1\\n\ell_p<L}}
+ \ell_pr_p^n\ip{g}{(T_{n\ell_p}+T_{n\ell_p}^*)f}
+ +\mathscr R_{t,L}(g,f).
+ \label{eq:decomp}
+\end{align}
+At $t=1$ and $c=w_0$ this becomes
+\begin{equation}
+ \boxed{Q_{0,L}(g,f)=Z_1(g,f)+P(g,f)-\mathscr R_{1,L}(g,f).}
+ \label{eq:mainidentity}
+\end{equation}
+\end{theorem}
+\begin{proof}
+Subtract \eqref{eq:rho} in \eqref{eq:Zt}, then use the absolutely convergent Fourier series \eqref{eq:exactlog}. For supported inputs, every translation with length at least $L$ has zero pairing. The surviving terms give \eqref{eq:decomp}; comparison with \eqref{eq:target} proves \eqref{eq:mainidentity}.
+\end{proof}
+All contact and prime coefficients now match at finite coupling, but \eqref{eq:mainidentity} is not a positive completion. The pole form has both signs, and the continuous residual has no supplied favorable sign. Compactness alone does not remove the latter from an exact identity.
+
+\subsection{An integrated evolution formula}
+There is a second exact way to calculate the residual:
+\begin{equation}
+ \rho_t(\tau)=\int_0^t v(\tau)
+ \left[h(\tau e^{uv(\tau)})-1\right]du.
+ \label{eq:rhointegral}
+\end{equation}
+This follows by differentiating \eqref{eq:rho} in $t$ and using $\rho_0=0$. It explains precisely what the tangent misses: the entire argument of $h$ changes along the evolution. The value at $u=0$ is only the initial derivative. Numerical integration of \eqref{eq:rhointegral} agrees with direct subtraction on the tested frequencies to approximately $6.4\times10^{-14}$.
+
+If separate prime parameters enter $v=c+\sum_pt_pv_p$, mixed differentiation of the full multiplier gives
+\begin{equation}
+ \partial_{t_p}\partial_{t_q} B(\tau^2e^{2v})
+ =4v_pv_q\left[s_vB'(s_v)+s_v^2B''(s_v)\right],
+ \quad s_v=\tau^2e^{2v}.
+\end{equation}
+It has no nondecaying mixed delta term, but it is generally nonzero. The nonlinear gamma response still mixes primitive histories in its regular error.
+
+\subsection{A constant-scaling control}
+With no primes, set $b=e^c>0$ and $t=1$. The exact regular kernel is
+\begin{equation}
+ R_c(x)=j(|x|)-b^{-1}j(|x|/b)\quad(x\ne0),
+ \qquad R_c(0)=\tfrac14(1-b^{-1}).
+ \label{eq:constantkernel}
+\end{equation}
+To verify it, substitute $t=bu$ in \eqref{eq:j} for $B(b^2\tau^2)$ and compare the two kernels. Their common singular $1/(2t)$ part leaves contact $\log b=c$, while their difference is continuous. Evaluating the multiplier at zero gives $\widehat R_c(0)=-c$.
+
+This control is instructive: even encoding only a constant contact by scaling the positive kinetic system changes its regular response. For $c\ne0$,
+\begin{equation}
+ R_c(x)=\tfrac14(1-e^{-c})
+ -\tfrac1{48}(1-e^{-2c})|x|+O(x^2),
+\end{equation}
+so it already has a derivative jump. With no prime and $c=0$, the residual is identically zero.
+
+\section{Two structural obstructions for the exact loop model}
+\label{sec:structural}
+\subsection{Fixed rational transfers cannot supply all repetitions}
+The exponential in \eqref{eq:Mt} is nonrational in the primitive delay variable. This is necessary within a natural scalar class.
+\begin{proposition}[Scoped rational-transfer obstruction]
+Let $0<r<1$ and $\ell\ne0$. There is no rational scalar function $m(z)$ with no poles on the closed unit disk and no zeros on the unit circle such that
+\begin{equation}
+ \log|m(e^{i\theta})|
+ =c-2\ell\re\frac{re^{i\theta}}{1-re^{i\theta}}
+ \quad\text{for every }\theta.
+ \label{eq:rationaltarget}
+\end{equation}
+\end{proposition}
+\begin{proof}
+Remove the finite Blaschke factors associated with zeros inside the disk; these have boundary modulus one. The resulting rational factor $m_{\rm out}$ is analytic and zero-free on the closed disk. Choose its constant phase so $m_{\rm out}(0)>0$, and take an analytic logarithm. Harmonic uniqueness applied to its real part and \eqref{eq:rationaltarget} gives
+\begin{equation}
+ m_{\rm out}(z)=\exp\left(c-\frac{2\ell rz}{1-rz}\right)
+ \quad\text{inside the disk}.
+\end{equation}
+Thus its logarithmic derivative is $-2\ell r/(1-rz)^2$. Equality on the disk forces equality of these meromorphic functions. A rational function's logarithmic derivative has only simple poles, with integer residues equal to zero or pole multiplicities, whereas this expression has a double pole at $1/r$. This is impossible.
+\end{proof}
+The conclusion concerns a fixed finite scalar rational response in one delay variable that matches every repetition simultaneously. It does not concern matrix observables, nonrational functions, or matching finitely many coefficients at a fixed horizon.
+
+The controls exhibit both distinctions. The rational function $1-\alpha z$, $|\alpha|<1$, has the allowed simple-pole logarithmic derivative and the coefficients in \eqref{eq:scalarcoeff}. The nonrational exponential above realizes the desired coefficients. Moreover, sufficiently long Taylor polynomials of that exponential converge uniformly on the closed disk and are zero-free there, since the limiting function has a positive minimum modulus. They can match any prescribed finite initial collection of Taylor and logarithmic coefficients. Growing complexity with horizon therefore genuinely escapes the all-repetition obstruction.
+
+\subsection{The one-prime error has a first-derivative jump}
+Fix one prime, unit evolution time and $c\le0$. Set $\theta=\ell\tau$ and
+\begin{equation}
+ q(\theta)=e^{-2v(\theta)},\qquad
+ q(\theta)-1=\sum_{n\in\mathbb Z}\beta_ne^{-in\theta}.
+ \label{eq:qbeta}
+\end{equation}
+Here $q$ is a scalar compliance, unrelated to the charge $\qq$. The function is real analytic and periodic, so its Fourier coefficients decay exponentially. Since the mean of $v$ is $c$, strict Jensen gives
+\begin{equation}
+ \beta_0=\avg{e^{-2v}}-1>e^{-2c}-1\ge0.
+ \label{eq:beta0}
+\end{equation}
+Strictness follows from the nonconstant prime response.
+
+\begin{theorem}[Cusp and infinite rank]
+For this one-prime model the exact residual kernel has
+\begin{equation}
+ R'(0+)-R'(0-)=\frac{\beta_0}{24}>0.
+ \label{eq:cusp1}
+\end{equation}
+Its compression to every nonempty open interval has infinite rank. Subtracting the smooth pole kernel does not change that conclusion.
+\end{theorem}
+\begin{proof}
+By \eqref{eq:rhotail},
+\begin{equation}
+ q_{\rm reg}(\tau):=\rho(\tau)+
+ \frac{q(\ell\tau)-1}{24(1+\tau^2)}=O(\tau^{-4}).
+\end{equation}
+In this formula and below $q(\ell\tau)$ means the periodic version in \eqref{eq:qbeta}. The function is bounded near zero, and $\tau^2q_{\rm reg}\in L^1$, so its inverse transform $Q_{\rm reg}$ is $C^2$. Using $\mathcal F^{-1}(1+\tau^2)^{-1}=\tfrac12e^{-|x|}$,
+\begin{equation}
+ R(x)=-\frac1{48}\sum_{n\in\mathbb Z}\beta_ne^{-|x-n\ell|}
+       +Q_{\rm reg}(x).
+ \label{eq:cuspdecomp}
+\end{equation}
+Near zero, only the term $n=0$ has a first-derivative jump. Since the jump of $e^{-|x|}$ is $-2$, \eqref{eq:cusp1} follows.
+
+Choose distinct points $y_1,\ldots,y_N$ in a subinterval of length less than $\ell$. The columns $R(x-y_j)$ each have a nonzero derivative jump at their own point and none at the other selected points. Any linear relation between the columns has zero jump only if every coefficient vanishes. If the integral operator had finite rank, approximate delta inputs at $y_j$ would converge to these continuous columns in $L^2$, placing them in its finite-dimensional closed range. Arbitrarily many independent columns contradict finite rank. Adding a smooth rank-two kernel cannot remove the jumps.
+\end{proof}
+A correction made from finitely many scalar amplitudes
+$\sum_{i,j\le N}h_{ij}\overline{\lambda_i(g)}\lambda_j(f)$ has finite rank and cannot supply the full error. This does not exclude an extra field with infinitely many degrees of freedom, or a finite number of variables coupled to an infinite bath in a way that changes an infinite-rank response. The net boundary operator, rather than the number of names assigned to fields, determines the scope.
+
+For two incommensurate prime lengths, integer combinations can accumulate near zero. The isolated-lattice-jump argument just given is not an argument for that dense set. We retain its one-prime hypothesis throughout the subsequent local obstruction proofs.
+
+\section{Why pure relaxation of the unchanged model cannot complete it}
+\label{sec:relaxation}
+A new field can change an infinite-rank response, but there is a further limitation when it only enlarges the variables over which the unchanged energy is minimized. Such an enlargement can only decrease its minimum. The exact one-prime residual requires increases on many compact inputs.
+
+\begin{lemma}[High-frequency compact packets]
+In the one-prime model with $c\le0$, let $J\subset I_L$ have length less than $\ell$, choose $0\ne\phi\in C_c^\infty(J)$, and set $f_N(x)=e^{iNx}\phi(x)$. Then
+\begin{align}
+ \mathscr R[f_N]&=-\frac{\beta_0}{24N^2}\norm\phi^2+O(N^{-3}),\notag\\
+ (Q_{0,L}-Z)[f_N]&=\frac{\beta_0}{24N^2}\norm\phi^2+O(N^{-3}).
+ \label{eq:packets}
+\end{align}
+The second identity assumes the prime set covers the target at $L$ and $c=w_0$. The estimates are uniform on each fixed finite-dimensional space of such profiles.
+\end{lemma}
+\begin{proof}
+Use $\widehat f_N(\tau)=\widehat\phi(\tau-N)$ and write $\tau=N+\eta$. On $|\eta|<N/2$, replacing the leading denominator in \eqref{eq:rhotail} by $N^2$ costs $O(N^{-3})$, since the weighted moments of $|\widehat\phi|^2$ are finite and $q$ is bounded. The $O(\tau^{-4})$ term contributes $O(N^{-4})$. Off this region, rapid Fourier decay and the boundedness of $\rho$ make the error smaller than any required inverse power.
+
+Expand $q-1$ in its absolutely convergent Fourier series. For every $n\ne0$,
+\begin{equation}
+ \frac1{2\pi}\int e^{-in\ell\eta}|\widehat\phi(\eta)|^2d\eta
+ =\ip{\phi}{U_{n\ell}\phi}=0,
+\end{equation}
+by the support diameter. Only $\beta_0$ survives, independently of the carrier phase $N\ell$. This proves the first identity. The pole amplitudes of $e^{iNx}\phi$ decay faster than every inverse power by integration by parts, giving the second via \eqref{eq:mainidentity}. All constants can be made uniform on the unit sphere of a fixed finite-dimensional profile space.
+\end{proof}
+
+\begin{theorem}[Pure-relaxation obstruction]
+For the first-prime target range $\log2<L\le\log3$, with the full primitive histories, $c=w_0$ and $t=1$, no boundary form satisfying
+\begin{equation}
+ Z_{\rm rel}[f]\le Z[f]+\norm{\Lambda f}_{\C^d}^2
+ \quad\text{for all smooth compact }f,
+ \label{eq:relbound}
+\end{equation}
+with finite $d$ can equal $Q_{0,L}$.
+\end{theorem}
+\begin{proof}
+Choose $d+1$ linearly independent profiles supported in one interval $J$ shorter than $\ell$. For each large $N$, a nonzero combination of their modulated versions belongs to $\ker\Lambda$. Normalize its profile in $L^2$. The uniform estimate \eqref{eq:packets} makes $(Q-Z)[f_N]>0$, while \eqref{eq:relbound} on that kernel would give $(Q-Z)[f_N]\le0$.
+\end{proof}
+The proof only needs the amplitudes to be defined and linear on the test space; it does not assume smooth representers for them. The same common-kernel argument handles a finite-rank Hermitian addition.
+
+In particular, an energy of the form
+\begin{equation}
+ \norm{JF-Du-Ew}_{\mathcal H}^2+\norm{Aw}_{\mathcal K}^2
+ \label{eq:purerel}
+\end{equation}
+is excluded when setting $w=0$ recovers the old problem with the same source, coefficients and allowed old configurations. The new variable $w$ may be field-valued. For the infinite tower, interpret this statement through the channel energies and their admissible old minimizers, not through a divergent ambient source. Setting the new variables to zero still proves the upper bound.
+
+The restriction is opposite to the earlier numerical evidence against independent positive addition. Appending an independent norm requires $Q-Z\ge0$ everywhere; pure relaxation requires $Q-Z\le0$ apart from finitely many source amplitudes. The high-frequency argument proves an obstruction to the latter without using an uncertified low-frequency negative witness.
+
+A working control is
+\begin{equation}
+ |F-u-w|^2+s|u|^2+b|w|^2,\qquad s,b>0.
+\end{equation}
+Its minimum is $|F|^2/(1+s^{-1}+b^{-1})$, strictly below the old minimum $s|F|^2/(1+s)$. Pure relaxation correctly realizes such decreases. It fails for the present target because \eqref{eq:packets} demands increases on a test space surviving every finite collection of amplitude constraints. Changing the old stiffness or source falls outside the theorem and motivates the next model.
+
+\section{A positive low-mass splitting field}
+\label{sec:mixing}
+\subsection{Fix the model before matching}
+We now keep one prime, $\log2<L\le\log3$, full primitive histories, $c=w_0$ and $t=1$. Write $M=M_1$, $m=m_1$, and
+\begin{equation}
+ q(\tau)=|m(\tau)|^{-2}=e^{-2v(\tau)}.
+\end{equation}
+When discussing its periodic Fourier coefficients, the same function will be written $q(\theta)$ with $\theta=\ell\tau$. The argument is stated explicitly when needed.
+
+Fix a mass $a>0$ and a parameter $0<\delta<1$. For $u\in H^1(\R)$ and $w\in L^2(\R)$ define
+\begin{equation}
+ \mathcal E_{a,\delta}[F;u,w]=\frac2a\left(
+ \norm{F-u}^2+
+ \frac{\norm{M(u'-w)}^2}{a^2(1-\delta)}+
+ \frac{\norm w^2}{a^2\delta}\right).
+ \label{eq:Emix}
+\end{equation}
+The derivative flux is split between a loop-history field and an ordinary positive field. All coefficients are declared before elimination. The loop constraints of \eqref{eq:transport}, with initial field $u'-w$, give an explicit implementation of $M(u'-w)$.
+
+This modifies the old stiffness: setting $w=0$ multiplies its derivative cost by $1/(1-\delta)$. Thus \eqref{eq:Emix} is not the pure relaxation of \eqref{eq:purerel}. The limit $\delta\downarrow0$ recovers the old channel after forcing $w$ to zero. The parameter will later be chosen by a necessary matching condition in this already positive family. It is not asserted to be selected by a symmetry.
+
+\subsection{Closed relative complex, actual adjoint and input coverage}
+Let $E^0=L^2(\R;\C^2)$, $E^1=L^2(\R;\C^3)$ and
+\begin{equation}
+ D_{a,\delta}(u,w)=
+ \left(u,\frac{M(u'-w)}{a\sqrt{1-\delta}},
+             \frac{w}{a\sqrt\delta}\right),
+ \qquad\Dom D_{a,\delta}=H^1\oplus L^2.
+ \label{eq:Dmix}
+\end{equation}
+The first and third components control $u,w$. The second component and the bounded inverse of $M$ then control $u'$. This proves closedness and closed range. Its adjoint, on $Y=(y_0,y_1,y_2)$, is
+\begin{align}
+ D_{a,\delta}^*Y={}&\left(
+ y_0-\frac{M^*y_1'}{a\sqrt{1-\delta}},
+ -\frac{M^*y_1}{a\sqrt{1-\delta}}+\frac{y_2}{a\sqrt\delta}
+ \right),\notag\\
+ \Dom D_{a,\delta}^*={}&L^2\oplus H^1\oplus L^2.
+ \label{eq:Dmixadj}
+\end{align}
+The Sobolev condition follows because $M^*$ and its inverse commute with differentiation. No conjugation has been suppressed: $M^*$ reverses the histories.
+
+Use $\qq(U,Y)=(0,D_{a,\delta}U)$ on the graded sum, with its actual Hilbert adjoint. It is nilpotent and has a nonnegative partner Hamiltonian as in \eqref{eq:susy}. Prepare the class of $\sqrt{2/a}(F,0,0)$. If it were exact, the first and third components would force $u=F,w=0$, while the second would force $u'=0$, hence $F=0$. Thus nonzero boundary input again survives in the positive relative quotient.
+
+\subsection{Eliminate the two fields exactly}
+Set
+\begin{equation}
+ X(\tau)=(1-\delta)q(\tau)+\delta.
+ \label{eq:X}
+\end{equation}
+At a fixed frequency and a fixed derivative value $d=i\tau\widehat u$, minimizing $A|d-w|^2+B|w|^2$ with
+$A=|m|^2/(1-\delta)$ and $B=1/\delta$ gives $w=A(A+B)^{-1}d$ and cost $AB(A+B)^{-1}|d|^2=|d|^2/X$. Consequently the two equilibrium fields are
+\begin{equation}
+ \widehat u_f(\tau)=\frac{a^2X(\tau)}{\tau^2+a^2X(\tau)}\widehat F(\tau),
+ \qquad
+ \widehat w_f(\tau)=\frac\delta{X(\tau)}i\tau\widehat u_f(\tau).
+ \label{eq:mixfields}
+\end{equation}
+Positive upper and lower bounds on $X$ show that $u_f\in H^2$ and $w_f\in H^1$ for every $F\in L^2$. There is no parity, chirality or mean-zero restriction. Define
+\begin{equation}
+ \Psi_{a,\delta}(f)=\sqrt{2/a}
+ \left(F-u_f,-\frac{M(u_f'-w_f)}{a\sqrt{1-\delta}},
+                  -\frac{w_f}{a\sqrt\delta}\right).
+ \label{eq:mixstate}
+\end{equation}
+Substitution in \eqref{eq:Dmixadj} verifies harmonicity. Completing the two squares gives the full polarized response
+\begin{equation}
+ Z_{a,\delta}(g,f)=\frac1{2\pi}\int_\R
+ T_a(\tau,X(\tau))\overline{\widehat G}\widehat F\,d\tau,
+ \qquad T_a(\tau,X)=\frac2a\frac{\tau^2}{\tau^2+a^2X}.
+ \label{eq:Ta}
+\end{equation}
+This is an actual positive norm computed from \eqref{eq:Emix}, not a prescribed boundary metric.
+
+Replace the corresponding old channel $T_a(\tau,q)$ in the full tower by \eqref{eq:Ta}. Its new positive multiplier is
+\begin{equation}
+ \widetilde Z(\tau)=B(\tau^2/q)+T_a(\tau,X)-T_a(\tau,q).
+ \label{eq:Ztilde}
+\end{equation}
+The subtraction removes the channel that has been replaced; positivity comes from the remaining positive channels plus \eqref{eq:Emix}. The exact change is
+\begin{equation}
+ \Delta_{a,\delta}(\tau)=
+ \frac{2a\delta(q-1)\tau^2}
+ {(\tau^2+a^2X)(\tau^2+a^2q)}.
+ \label{eq:Delta}
+\end{equation}
+It is bounded and $O(\tau^{-2})$. Therefore no contact or prime delta coefficient changes, and the logarithmic form domain remains the same. All fields and output energies are on the whole line; no side-wall or exterior term has been discarded. Replacing finitely many channels does not cure the raw-source divergence of the tower, which is handled by the same channelwise preparation.
+
+\section{Cancellation of the first cusp and the surviving obstruction}
+\label{sec:thirdjump}
+\subsection{Choose the low-mode coefficient by an exact condition}
+The new residual is $\widetilde\rho=\rho+\Delta_{a,\delta}$. Expanding \eqref{eq:Ta} at fixed phase gives
+\begin{equation}
+ T_a(\tau,X)=\frac2a-\frac{2aX}{\tau^2}
+                       +\frac{2a^3X^2}{\tau^4}+O(\tau^{-6}).
+\end{equation}
+Hence the inverse-square coefficient of the new residual is
+\begin{equation}
+ \left(-\frac1{24}+2a\delta\right)(q-1).
+ \label{eq:cancel2}
+\end{equation}
+The positive choice $\delta=1/(48a)$ cancels this entire periodic coefficient. It is admissible for every gamma mass. For the lowest mass,
+\begin{equation}
+ a=\tfrac12,\qquad \delta=\tfrac1{24},\qquad
+ X=\frac{23q+1}{24}.
+ \label{eq:choice}
+\end{equation}
+This removes all first-derivative cusps, including their translated copies, without changing the contact or prime deltas. It is a genuine success of an infinite-dimensional positive response modification. Its coefficient has been selected by necessary matching inside a family whose positivity was already proved; there is no claim that a Ward identity fixes the number $1/24$.
+
+\subsection{The next coefficient has strictly negative mean}
+At \eqref{eq:choice}, the next term is
+\begin{align}
+ \widetilde\rho(\tau)&=\frac{d_4(\ell\tau)}{\tau^4}+O(\tau^{-6}),
+ \label{eq:rho4}\\
+ d_4(\theta)&=-\frac7{960}(q(\theta)^2-1)
+                +\frac14(X(\theta)^2-q(\theta)^2)\notag\\
+ &=-\frac{(q(\theta)-1)(319q(\theta)+89)}{11520}.
+ \label{eq:d4}
+\end{align}
+The rational coefficients in this expansion are exact. In the first-prime model with $c=w_0$, $q>1$ at every phase. For example,
+\begin{equation}
+ v\le c+\frac{2\ell r}{1+r}<c+2\log2<0,
+\end{equation}
+since $w_0<-3$. Thus $d_4<0$ pointwise.
+
+A broader one-prime statement follows without pointwise $q>1$. If $c\le0$, strict Jensen gives $\mu=\avg q>1$ and $\avg{q^2}\ge\mu^2$. Consequently
+\begin{equation}
+ \gamma_0:=\avg{d_4}
+ \le-\frac{(\mu-1)(319\mu+89)}{11520}<0.
+ \label{eq:gamma0}
+\end{equation}
+This mean is what determines the diagonal singularity, so the conclusion is stronger than a sign test at one frequency.
+
+\begin{theorem}[Third-derivative jump after positive cusp cancellation]
+For the one-prime model with $c\le0$ and the replacement \eqref{eq:choice}, the residual kernel $\widetilde R$ is $C^2$ and satisfies
+\begin{equation}
+ \widetilde R'''(0+)-\widetilde R'''(0-)=\gamma_0<0.
+ \label{eq:cusp3}
+\end{equation}
+Its compression has infinite rank on every nonempty open interval. No net finite-rank boundary correction can complete the fixed response \eqref{eq:Ztilde} into \eqref{eq:target}.
+\end{theorem}
+\begin{proof}
+Expand the real analytic periodic coefficient $d_4(\theta)=\sum_n\gamma_ne^{-in\theta}$. Subtract
+$d_4(\ell\tau)/(1+\tau^2)^2$ from \eqref{eq:rho4}. The result is $O(\tau^{-6})$, bounded near zero, and remains integrable after multiplication by $\tau^4$. Its inverse transform $Q_4$ is therefore $C^4$.
+
+The inverse transform of $(1+\tau^2)^{-2}$ is
+\begin{equation}
+ G_2(x)=\tfrac14(1+|x|)e^{-|x|}.
+\end{equation}
+For instance it is the convolution of two copies of $e^{-|x|}/2$, which gives the formula by splitting the integral at $0$ and $x$. Thus
+\begin{equation}
+ \widetilde R(x)=\sum_n\gamma_nG_2(x-n\ell)+Q_4(x).
+ \label{eq:decomp3}
+\end{equation}
+Exponential coefficient decay justifies convergence with the derivatives away from the lattice shifts. Since
+\begin{equation}
+ G_2(x)=\tfrac14-\tfrac18x^2+\tfrac1{12}|x|^3+O(x^4),
+\end{equation}
+its third-derivative jump is $1$. Only the $n=0$ term jumps near zero, giving \eqref{eq:cusp3}. The distinct-column proof used for \eqref{eq:cusp1} now applies to third-derivative jumps. A smooth rank-two pole kernel does not remove the jump, so the net required correction still has infinite rank.
+\end{proof}
+The error has become smoother, but has not disappeared. In particular, matching the first high-frequency term does not make the pole block the only remaining issue. A finite-order asymptotic match is a necessary test of a proposed exact identity, not the identity itself.
+
+The controls are exact. With no loop and $c=0$, $q=X=1$, so every split leaves the original gamma channel unchanged. With nontrivial one-prime data, \eqref{eq:cancel2} verifies an actual leading-cusp cancellation by positive fields. The pole kernel really has rank at most two. These controls prevent interpreting \eqref{eq:cusp3} as a general prohibition on positive field modifications.
+
+\section{Two extensions of the splitting family that still fail}
+\label{sec:extensions}
+\subsection{Finitely many positive convex compliance splits}
+Allow a finite set of masses and parameters $0\le\delta_k\le1$, where endpoints are interpreted as limits. For each mass set
+\begin{equation}
+ X_k=(1-\delta_k)q+\delta_k.
+\end{equation}
+The first-cusp matching condition becomes
+\begin{equation}
+ \sum_k2a_k\delta_k=\frac1{24}.
+ \label{eq:finitecondition}
+\end{equation}
+The next coefficient is
+\begin{equation}
+ d_{4,\mathrm{fin}}(q)=
+ -\frac7{960}(q^2-1)+\sum_k2a_k^3(X_k^2-q^2).
+ \label{eq:d4fin}
+\end{equation}
+For the stipulated $c=w_0$, $q>1$ and $1\le X_k\le q$, so every summand is nonpositive and the first is strictly negative. Therefore the next coefficient cannot vanish.
+
+For any one-prime $c\le0$, a mean argument gives the same local obstruction. Write \eqref{eq:d4fin} as $Aq^2+Bq+C$. Its leading coefficient is strictly negative, its constant coefficient strictly positive, and its value at $q=1$ is zero. Thus it factors as $(q-1)(Aq-C)$. Concavity and $\avg q>1$ give
+\begin{equation}
+ \avg{d_{4,\mathrm{fin}}(q)}
+ \le d_{4,\mathrm{fin}}(\avg q)<0.
+\end{equation}
+Whenever \eqref{eq:finitecondition} has removed the first jump, the proof of \eqref{eq:cusp3} applies and the third jump survives. Adding more independent splits of this particular convex-compliance type does not complete the residual.
+
+This does not exclude a matrix of jointly coupled masses, a source modification, other frequency dependence, or an infinite family with separately justified limits. The obstruction uses the displayed scalar responses and a finite sum, not merely positivity of their energies.
+
+\subsection{A positive derivative penalty on the new field}
+A natural attempt to create a more flexible response is to give $w$ its own derivative energy. Add $\mu\norm{w'}^2$, $\mu>0$, inside the parentheses of \eqref{eq:Emix}, and now take $w\in H^1$. The bare energy remains positive. At a fixed frequency, its second-field penalty changes from $1/\delta$ to $1/\delta+a^2\mu\tau^2$ after factoring out $a^{-2}$. The same elimination gives
+\begin{equation}
+ X_\mu(\tau)=(1-\delta)q(\tau)
+ +\frac{\delta}{1+a^2\mu\delta\tau^2},
+ \qquad Z_{a,\delta,\mu}(\tau)=T_a(\tau,X_\mu(\tau)).
+ \label{eq:Xmu}
+\end{equation}
+For every fixed positive $\mu$, its new leading residual is
+\begin{equation}
+ \rho_{\delta,\mu}(\tau)=
+ \frac{(2a\delta-1/24)q(\ell\tau)+1/24}{\tau^2}
+ +O(\tau^{-4}).
+ \label{eq:rhoderiv}
+\end{equation}
+There is no choice of $\delta$ making this coefficient vanish at every phase for nonconstant $q$. A direct finite-interval test makes the exclusion sharper.
+
+\begin{lemma}
+The first complex Fourier coefficient $q_1$ of the one-prime compliance $q$ is strictly positive.
+\end{lemma}
+\begin{proof}
+Write
+\begin{equation}
+ q(\theta)=e^{-2c}\exp\left[4\ell\sum_{n\ge1}r^n\cos(n\theta)\right].
+\end{equation}
+On the unit circle this is an absolutely convergent product of exponentials of positive-coefficient power series in $e^{i\theta}$ and $e^{-i\theta}$. Every Laurent coefficient is nonnegative, and the term of degree one already receives a strictly positive contribution. Hence $q_1>0$.
+\end{proof}
+In the range $\ell<L\le\log3$, the shift $\ell$ is active. Removing its first-derivative jump in \eqref{eq:rhoderiv} forces $2a\delta=1/24$. That leaves the constant inverse-square coefficient $1/24$, whose inverse transform has diagonal derivative jump $-1/24$. A smooth pole kernel cannot remove it. Thus this positive derivative-cost extension fails to match the full target for every fixed $\mu>0$, even after canceling its active shifted cusp.
+
+There is no contradiction with the successful first cancellation: if $\mu\downarrow0$ first, \eqref{eq:Xmu} returns to \eqref{eq:X}; if high frequency is taken first, the constant compliance term disappears. The two limits do not commute. This conclusion concerns the specified derivative penalty, not every possible dynamics for the splitting field.
+
+\section{Prime cutoffs, support inclusion and genericity}
+\label{sec:cutoffs}
+At fixed $L$, including additional inactive primes leaves their direct compressed delta pairings zero. It nevertheless changes $v$, the positive norm $Z_1$, and the continuous residual. These changes cancel in \eqref{eq:decomp}, but they are individually real. For the bump \eqref{eq:bump} on $I_1$, including prime 3 changes the computed $Z_1$ from approximately $0.001051486128$ to $0.002111388176$, while the target remains unchanged.
+
+Truncating each primitive generator to repetitions active at the horizon also gives a different positive system:
+\begin{equation}
+ \mathcal A_L^{\rm trunc}=
+ \sum_{n\ell_p<L}\ell_pr_p^nU_{n\ell_p},\qquad
+ M=\exp(cI-2\mathcal A_L^{\rm trunc}).
+\end{equation}
+It matches the same active arithmetic deltas but has a different regular error. Thus principal coefficient agreement does not specify a unique bulk norm or a unique regular completion. The full-history convention is part of the model in the one-prime theorems above.
+
+The bound \eqref{eq:Mbound} supplies no boundedly invertible all-prime limit. At zero frequency,
+\begin{equation}
+ g_{\mathcal P,c}(0)=c-2\sum_{p\in\mathcal P}
+ \frac{\ell_pr_p}{1-r_p}\longrightarrow-\infty.
+ \label{eq:cutoffdiv}
+\end{equation}
+One elementary route to divergence uses $\sum_p1/p=\infty$. For completeness, if that series converged, the finite Euler products $\prod_{p\le X}(1-1/p)^{-1}$ would be uniformly bounded because the logarithms have summable tails. Expanding those finite products as sums over integers with prime factors at most $X$ bounds the harmonic sum through $X$, a contradiction. The summands in \eqref{eq:cutoffdiv} eventually dominate $1/p$.
+
+For each finite cutoff the multiplier is continuous, so its value at zero bounds its essential minimum from above. The loss of a uniform inverse bound is not confined to a measure-zero point. This proves no claim about a complete strong-operator limit; an all-prime interpretation would need a new topology, a renormalized equation or a compatible interval construction.
+
+Exact matching on separate unbounded lengths would already suffice for the RH criterion. Isometric support inclusions and a gluing law would be additional structure explaining compatibility. At an interface, gamma cross terms such as \eqref{eq:crossgamma}, capped mixed histories such as \eqref{eq:cap}, and finite contact terms must all be retained. Orthogonal addition of short-interval norms loses these interactions.
+
+Finally, the exponential construction works for arbitrary assigned delay data. A positive logarithmic kinetic form can encode a broad class of bounded real even delay symbols in its high-frequency change. This freedom is why matching those coefficients alone provides little evidence that the remaining sign is easy. The hard information is carried by the exact regular correction and its relation to the poles.
+
+\section{Numerical verification and its precise evidentiary scope}
+\label{sec:numerics}
+The analytical identities above are accompanied by small reproducible calculations. They use Python and NumPy, without zeta-zero data, target spectral square roots, or a full-form eigenvalue sweep. Some finite-dimensional toy controls diagonalize their own explicitly specified matrices; those are not approximations to a target Weil spectral factor. Exact rational arithmetic checks the displayed cancellation coefficients. Floating-point quadrature tests the analytic formulas and indicates the behavior of selected admitted inputs.
+
+\subsection{Gamma evaluation and exact coefficient checks}
+For the main loop checks, digamma and trigamma are evaluated by recurrence from $z=1/4+i\tau/2$ to $z+20$, followed by an eight-term Bernoulli asymptotic. The recurrence terms are then subtracted or added as appropriate. Moderate-frequency controls compare with a positive sum of $200{,}000$ gamma channels; the recorded discrepancies have the expected omitted-tail size.
+
+The field-mixing checks also evaluate the logarithmically subtracted gamma response directly by its inverse-power expansion for $|\tau|\ge50$. This avoids catastrophic subtraction of large logarithms in high-frequency residuals. At smaller nonzero frequencies they use the recurrence evaluation. This branch is a numerical device, not a rigorous asymptotic enclosure. The first eight coefficients are computed from Bernoulli polynomials with rational arithmetic, and the first two agree with the direct derivation in Appendix~\ref{app:asymptotic}.
+
+The rational checks verify exactly
+\begin{equation}
+ b_2=-\frac1{24},\quad b_4=-\frac7{960},\quad
+ \delta=\frac1{24},\quad
+ d_4(q)=\frac{89+230q-319q^2}{11520}.
+\end{equation}
+They also verify that the derivative-cost model retains inverse-square constant $1/24$ after its active shifted coefficient is canceled. The field checker refuses optimized Python execution that would disable its assertions.
+
+\subsection{Primitive and relative-complex controls}
+Direct numerical Fourier tests for primes $2,3,5$ and repetitions $1,2,3$ check \eqref{eq:exactlog}, with maximum discrepancy about $3.4\times10^{-16}$. A two-angle torus calculation finds the mixed sum and difference coefficients of the logarithmic response below $1.2\times10^{-16}$. A nonarithmetic delay control verifies that exponentiation encodes assigned data as expected.
+
+The relative-complex checks compare the full amplitude pairing, including exterior tails, with the exponential/contact kernel. The largest recorded discrepancy is about $3.3\times10^{-14}$. An explicit finite-dimensional complex checks nilpotence, harmonic projection, representative independence, same-range reparametrization and the noninvariance of raw-source heat response. Integer-delay matrices check exact compression algebra; separate continuum calculations using $\log p$ and true overlap boundaries check the primitive norm identity, with discrepancies below $1.8\times10^{-15}$. Removing the endpoint reservoir deliberately produces a nonzero error.
+
+First and mixed deformation derivatives are compared with centered finite differences of the same finite tower. Their errors are of order $10^{-10}$ and $10^{-7}$ at the reported settings. Integral tests of the translated $R_h$ and $V$ kernels include the analytically bounded omitted mass tails. They check derivative formulas, not full unit-coupling matching. The exact scalar finite-coupling calculation of Section~\ref{sec:scalar} separately prevents that confusion.
+
+\subsection{Exact loop response on smooth compact inputs}
+For the loop calculations define
+\begin{equation}
+ b_L(x)=
+ \begin{cases}
+ \exp[-1/(1-(x/(.49L))^2)],&|x|<.49L,\\
+ 0,&\text{otherwise}.
+ \end{cases}
+\end{equation}
+Use $f_{\rm complex}=b_L(x)(1+.3ix)e^{3ix}$ and $f_{\rm odd}=b_L(x)x/L$. Both belong to the required smooth compact test space. Prime pairings are integrated independently in position space over their actual overlaps; gamma and deformed pairings are integrated in Fourier space.
+
+The two loop resolutions use $(N_x,N_\tau,T,\Delta)=(192,32,140,1)$ and $(288,48,210,1/2)$, where $N_x$ is the spatial Gauss order, $N_\tau$ the Gauss order per frequency panel, $T$ the cutoff in $[-T,T]$, and $\Delta$ the panel width. The fine values for $c=w_0,t=1$ are shown in Table~\ref{tab:loops}.
+\begin{table}[htbp]
+\centering\small
+\begin{tabular}{@{}llrrr@{}}
+\toprule
+Input, $L$ & Prime set & $Q_{0,L}[f]$ & $Z_1[f]$ & $Q_{0,L}[f]-Z_1[f]$\\
+\midrule
+Complex, $1$ & $\{2\}$ & $0.000205483019$ & $0.001051486128$ & $-0.000846003109$\\
+Complex, $5/4$ & $\{2,3\}$ & $0.000944792943$ & $0.002729565586$ & $-0.001784772643$\\
+Complex, $3/2$ & $\{2,3\}$ & $0.000269565960$ & $0.003040879590$ & $-0.002771313630$\\
+Odd, $5/4$ & $\{2,3\}$ & $0.000104105755$ & $0.000125091802$ & $-0.000020986048$\\
+\bottomrule
+\end{tabular}
+\caption{Floating-point loop-response diagnostics, not interval enclosures.}
+\label{tab:loops}
+\end{table}
+The largest coarse/fine discrepancy in the listed defects is approximately $2.1\times10^{-9}$. Independent checks of \eqref{eq:decomp} have discrepancies below $2.0\times10^{-9}$ across both resolutions, and below $3.5\times10^{-11}$ at the finer one. These are observed agreements, not proven error bounds.
+
+At $L=3/2$, the repeated-2 shift is active, but the particular bump has very small overlap there. The repetition identity is established by the analytical Fourier coefficients and their direct tests, not by that weak numerical overlap. The residual itself has both observed signs: on the $L=5/4$ complex and odd inputs its normalized values are approximately $0.937564$ and $-0.0280788$, respectively. No finite-interval sign is inferred merely from $\rho(0)$.
+
+The negative defects in Table~\ref{tab:loops} are evidence against completing this fixed $Z_1$ by adjoining only an independent positive norm. A rigorous exclusion from those witnesses would need a negative interval enclosure controlling Fourier tails, quadrature and rounding. Such a certificate has not been supplied. The analytical finite-rank and pure-relaxation obstructions do not depend on those numerical signs.
+
+\subsection{Field elimination, packet asymptotics and finite-coupling errors}
+The field calculation specifies \eqref{eq:Dmix} as a complex matrix at selected frequencies and independently minimizes its squared residual. It compares the resulting energy, equilibrium fields and harmonicity with \eqref{eq:mixfields}--\eqref{eq:Ta}. The largest energy discrepancy is $4.45\times10^{-16}$. A four-component version includes the derivative penalty and verifies \eqref{eq:Xmu}.
+
+For the first-prime contact model, the numerical periodic means are
+\begin{equation}
+ \beta_0\approx1.4775992926\times10^6,
+ \qquad\gamma_0\approx-9.9923622266\times10^{11}.
+\end{equation}
+At $c=0$, the original $\beta_0$ is approximately $30.86674748$. The much larger contact-model coefficients reflect severe multiplier scaling. They are not estimates of every compact-input pairing, and the asymptotic regime begins at correspondingly large frequencies.
+
+For a bump of support radius $0.2$, smaller than half the first delay, packet calculations use $192$ spatial Gauss nodes and frequency offsets in $[-300,300]$ with panel width $1/2$ and order $16$. At carrier $N=10^6$, the ratio of the original scaled residual pairing to its analytical $N^{-2}$ prediction is approximately $1.00000426$. After the positive split, the ratio to the predicted $N^{-4}$ mean is approximately $0.99999603$. These test the asymptotic formulas on actual supported inputs. Their signs are not substituted for the analytical jump proofs.
+
+For the bump \eqref{eq:bump}, the field check uses two configurations $(192,24,140,1)$ and $(288,32,210,1/2)$. Computing the defect through $P-\mathscr R$ at the finer resolution gives approximately
+\begin{equation}
+ Q-Z=-0.0008460030754,\qquad
+ Q-\widetilde Z=-0.0008905512830.
+\end{equation}
+The first value differs slightly from Table~\ref{tab:loops}, which evaluates the independently assembled $Q-Z$; the difference is the recorded quadrature identity error. The positive energy increases by about $4.4548208\times10^{-5}$ after the split, so this low-frequency mismatch becomes somewhat larger even while the leading cusp is canceled.
+
+\subsection{What these computations do and do not establish}
+The numerical programs reproduce the specified models and detect omitted endpoints, incorrect tangent substitutions and asymptotic coefficient errors. Exact fraction equalities are exact algebra. The remaining floating-point calculations have no general certified tail or rounding enclosures and are not positivity certificates. Previous historical records retain their own scopes; a successful replay does not upgrade them to interval proofs or independent specialist reviews.
+
+The written propositions and theorems are AI-assisted analytic arguments, not formalized or independently human-verified results. No novelty claim is made for the underlying Hilbert-complex, Schur-complement or rational-factorization mechanisms. The contribution of the attempt is the explicit sequence of model definitions, exact response calculations, and scoped tests applied to the stated arithmetic target.
+
+\section{What a further completion must change}
+\label{sec:outlook}
+\subsection{A necessary redistribution between channels}
+The fixed positive split stiffens every modified channel when $q>1$, because $X\le q$ and $T_a(\tau,X)\ge T_a(\tau,q)$. The surviving fourth-order error identifies a more precise requirement for a broader diagonal replacement. Suppose finitely many old channels are replaced by phase-dependent positive compliances $X_k$, with no additional frequency scale in those functions. Matching the first two whole-line inverse-power terms requires
+\begin{equation}
+ \sum_k2a_k(q-X_k)=\frac{q-1}{24},\qquad
+ \sum_k2a_k^3(X_k^2-q^2)=\frac7{960}(q^2-1).
+ \label{eq:momentconditions}
+\end{equation}
+For $c=w_0$, the second right-hand side is positive at every phase. At least one channel must therefore have $X_k>q$, meaning that it softens, while the first equation requires a weighted net stiffening. This is why an all-stiffening family cannot meet both conditions.
+
+Equation \eqref{eq:momentconditions} is a diagnostic for a new independently defined field system. Solving it for desired compliances does not by itself construct that system or select its coefficients. A coupled matrix of gamma modes, a field-valued source/history modification, or a different conservation law might permit the required redistribution. The positive bare energy, its trace and all-input solution must be defined before comparing the response with the target. A square root or inverse reconstruction of the unknown Weil form would conceal the issue.
+
+For finite-interval matching, it is necessary to test the diagonal and every active shifted singularity; full phase-wise matching in \eqref{eq:momentconditions} is a stronger preliminary filter. Even after both conditions hold, the complete continuous kernel and both pole amplitudes must agree. A smooth nonzero remainder would still defeat an exact identity.
+
+\subsection{What topology or supersymmetry would still need to supply}
+The present fields already have a positive Hilbert space, a closed nilpotent charge, actual adjoints and nonzero harmonic boundary classes. They also have a constrained transport realization of assigned loop data. A stronger topological or superspace theory would need to explain additional structure rather than rename those facts.
+
+For example, suppose a proposed action $S_\lambda$ has an auxiliary deformation $\partial_\lambda S_\lambda=\qq V_\lambda$, and a full observable $X_{g,f}$ represents the bra-ket pairing. Formally, a normalized expectation would satisfy
+\begin{equation}
+ \partial_\lambda\langle X_{g,f}\rangle_\lambda
+ =-\langle X_{g,f}\,\qq V_\lambda\rangle_\lambda
+ +\langle X_{g,f}\rangle_\lambda\langle\qq V_\lambda\rangle_\lambda,
+\end{equation}
+provided the observable has no explicit parameter dependence. A Ward identity might annul these terms. But the measure, contour, domains, boundary conditions, normalization and zero modes must justify the differentiation, and any variation of the observable or state-space identification must also be included. Closure of the ket alone is insufficient.
+
+A plausible protected quantity would retain the metric and translations along the input coordinate while being insensitive to specified auxiliary changes. If tangential translations themselves were charge-exact and all Ward identities held with no contact or defect terms, correlators of closed insertions would become locally position independent away from collisions. That would not by itself reproduce the nontrivial difference kernel needed here. The assigned boundary geometry cannot disappear without a mechanism restoring its arithmetic dependence.
+
+The scalar weights, primitive lengths, oscillator spectrum, contact constant and pole signs remain externally prescribed. Subdividing the transport coordinates at fixed return data realizes the same operator; changing the return data or the coupling parameter changes the observable. No equality under those changes has been proved. A supertrace, an index or a bare topological phase is not the ordinary Hermitian norm in \eqref{eq:mainidentity}.
+
+\subsection{A concrete stopping rule for the next investigation}
+The next pass should examine one joint two-mass/history system or a nontrivial field-valued source modification. It should first compute its exact elimination and then test the singular coefficients and residual kernel. The following outcomes would be substantive:
+\begin{enumerate}
+\item a positive bare system with a full matching identity on every admitted complex input in the stated first-prime range;
+\item an unmatched active delta, a nonzero derivative jump, or another explicit residual kernel;
+\item a negative bare mode, a missing endpoint contribution or an all-input domain failure;
+\item an independently established conservation identity that proves the contraction required by \eqref{eq:bookkeeping}.
+\end{enumerate}
+A successful first-prime architecture should then be tested at $L=5/4$, where both 2 and 3 act, and above $\log4$, where the second 2-repetition acts. Mixed adjoint caps and continuous mixed residuals must be checked together. Inactive-prime changes and interval gluing remain further compatibility tests.
+
+The present attempt has reached an explicit finite-coupling error and several rigorous-in-form architectural restrictions. It has not reached a full positive completion. This distinction also separates it from existing short-interval results elsewhere in the program, described in \cite{background}; no extension of those ranges is claimed here.
+
+\appendix
+\section{Derivation of the gamma tail and the jump conventions}
+\label{app:asymptotic}
+This appendix supplies the scalar calculations used in the residual theorems, so the displayed coefficients need not be taken from another working note. From \eqref{eq:j},
+\begin{equation}
+ j(t)=\frac{e^{t/2}}{2\sinh t}
+ =\frac1{2t}+\frac14-\frac{t}{48}-\frac{t^2}{32}
+ +\frac{7t^3}{11520}+O(t^4).
+ \label{eq:jexp}
+\end{equation}
+The expansion follows by dividing the power series for $e^{t/2}$ and $2\sinh t$. Put $b(\tau)=B(\tau^2)$ and $A(t)=tj(t)$. The latter is smooth at zero and all its derivatives decay at infinity. Differentiation under the integral gives
+\begin{equation}
+ b'(\tau)=2\int_0^\infty A(t)\sin(\tau t)dt.
+\end{equation}
+Repeated integration by parts yields, for positive large $\tau$,
+\begin{equation}
+ \int_0^\infty A(t)\sin(\tau t)dt
+ =\frac{A(0)}\tau-\frac{A''(0)}{\tau^3}
+ +\frac{A^{(4)}(0)}{\tau^5}+O(\tau^{-7}).
+\end{equation}
+All the remainder estimates follow from integrability of the next derivatives; the removable singularity at zero is already resolved in $A$. From \eqref{eq:jexp},
+\begin{equation}
+ A(0)=\frac12,\qquad A''(0)=-\frac1{24},\qquad
+ A^{(4)}(0)=\frac7{480}.
+\end{equation}
+Therefore
+\begin{equation}
+ b'(\tau)=\frac1\tau+\frac1{12\tau^3}+
+ \frac7{240\tau^5}+O(\tau^{-7}).
+\end{equation}
+Integration gives a constant plus $\log\tau-1/(24\tau^2)-7/(960\tau^4)+O(\tau^{-6})$. The constant is $-\log2-\psi(1/4)$ by \eqref{eq:digamma} and the leading gamma logarithmic-derivative normalization in \cite{background}. It cancels out of every residual in this manuscript, so the residual coefficients also follow without evaluating that constant. Evenness gives \eqref{eq:Basymp} for negative frequencies.
+
+For the first residual subtraction we use
+\begin{equation}
+ \mathcal F^{-1}(1+\tau^2)^{-1}(x)=\tfrac12e^{-|x|},
+\end{equation}
+whose first-derivative jump is $-1$. Thus a leading multiplier $H(\ell\tau)/\tau^2$ yields a diagonal jump minus the mean of $H$, after an $O(\tau^{-4})$ subtraction with $C^2$ inverse transform. In particular $H=-(q-1)/24$ gives $+\beta_0/24$.
+
+For the second subtraction,
+\begin{equation}
+ \mathcal F^{-1}(1+\tau^2)^{-2}(x)=\tfrac14(1+|x|)e^{-|x|},
+\end{equation}
+whose third-derivative jump is $+1$. A leading multiplier $H(\ell\tau)/\tau^4$ therefore gives a diagonal third jump equal to the mean of $H$, after an $O(\tau^{-6})$ subtraction with $C^4$ inverse transform. These sign conventions explain why the two jump tests have different prefactors.
+
+The regularity claims use only differentiation under the Fourier integral: if $\tau^m r(\tau)\in L^1$ and $r\in L^1$, then its inverse transform has continuous derivatives through order $m$. The periodic coefficients here decay exponentially, allowing the translated kernel series to be differentiated away from its lattice shifts.
+
+\section{Comparison models and boundary controls}
+\label{app:comparisons}
+These comparisons record useful preliminary calculations. Each identifies an explicit mismatch or a missing hypothesis in a specified model; none is an exclusion of all field theories of the indicated kind.
+
+\subsection{A half-space Dirac saturation model}
+At tangential frequency $\tau$, consider the Hermitian matrix
+\begin{equation}
+ M_a(\tau)=\begin{pmatrix}a&\tau\\\tau&-a\end{pmatrix},
+ \qquad\rho=\sqrt{a^2+\tau^2},\qquad
+ P_\pm=\frac12(I\pm M_a/\rho).
+\end{equation}
+For a two-component field on $y>0$ with energy
+$\int_0^\infty(\norm{u_y}^2+\rho^2\norm u^2)dy$,
+the first-order equation $u_y+M_au=0$ has solution
+$e^{-\rho y}P_+F+e^{\rho y}P_-F$.
+Finite energy requires $P_-F=0$. If the input is prescribed as $F=(\widehat f,0)$, this fails for every nonzero compact scalar input, because the negative component is nonzero for almost every nonzero frequency. The positive unconstrained minimum with prescribed full vector instead has multiplier $\rho$.
+
+One can cover arbitrary scalar inputs by choosing a responding second component $\tau\widehat f/(\rho+a)$ so the full vector belongs to $P_+$. Its positive saturated response is then
+\begin{equation}
+ \rho\left(1+\frac{\tau^2}{(\rho+a)^2}\right)|\widehat f|^2
+ =\frac{2\rho^2}{\rho+a}|\widehat f|^2\sim2|\tau||\widehat f|^2.
+\end{equation}
+This repairs input coverage but not the logarithmic growth. A finite positive sum of these fixed channels retains first-order growth. The infinite relative gamma tower demonstrates that a different infinite-channel construction can change the order; the finite comparison does not exclude it.
+
+\subsection{An assigned chiral edge energy}
+As another comparison, prescribe the scalar edge action
+\begin{equation}
+ S_\partial[\phi]=\frac{k}{4\pi}\int
+ \left(\partial_t\phi\,\partial_x\phi-v(\partial_x\phi)^2\right)dt\,dx.
+\end{equation}
+With $kv>0$ its classical Hamiltonian is a positive multiple of $\norm{\partial_x\phi}^2$. If the input is the profile $\phi$, this gives a $\tau^2$ response. If it is the derivative profile, the response is constant, with any zero-mode reconstruction conditions stated separately. If instead a one-sided current pairing is assigned to a smeared complex input, its form is
+\begin{equation}
+ \frac1{2\pi}\int_0^\infty\tau|\widehat f(\tau)|^2d\tau.
+\end{equation}
+Opposite chiralities give $|\tau|$, again not logarithmic growth. The smearing interpretation admits arbitrary smooth complex $f$; a periodic classical derivative's mean-zero condition must not be imported into it. In each interpretation the boundary Hamiltonian or current metric is an additional choice. These simple edge responses do not determine the required gamma tower or arithmetic coefficients.
+
+\subsection{A growing-propagator boundary witness}
+The lowest mass $a_0=1/2$ shares the exponential scale of the pole functions. That observation does not justify replacing a decaying propagator by a growing one. For example, on $(0,L)$ consider
+\begin{equation}
+ \int_0^L(|u'|^2+a^2|u|^2)dx-a(|u(0)|^2+|u(L)|^2).
+\end{equation}
+The test $u=e^{ax}$ gives $-2a<0$. Reversing the sign of the endpoint term makes the same expression positive and gives the correct transparent-decay control. Any proposed growing pole response needs a jointly stable boundary calculation, not just a matching exponent.
+
+\subsection{A conditional whole-line topology obstruction}
+The background warns that a simultaneous closable factor on ordinary whole-line $L^2$ is an extra requirement beyond separate fixed-interval factors. The elementary mechanism behind that warning can be seen conditionally. Suppose a state map contains point evaluation of $\widehat f$ at a frequency $\gamma_0$, and that its target vectors for
+\begin{equation}
+ f_N(x)=N^{-1}e^{i\gamma_0x}\phi(x/N)
+\end{equation}
+converge to a vector with a nonzero $\gamma_0$ coordinate. Then $\norm{f_N}_{L^2}\to0$ while $\widehat f_N(\gamma_0)=\widehat\phi(0)$ stays fixed, contradicting closability of that map. This conditional example is not a claim that the present attempt has constructed a zero-sampling representation or proved its convergence. It explains why the input topology must be stated, and why growing-support conclusions should not be imported into the fixed-interval constructions proved here.
+
+\section{Status ledger}
+\label{app:status}
+Table~\ref{tab:status} records the logical status of the results in this manuscript. ``Analytic'' means a written argument is supplied here; it does not mean independent specialist verification or formal proof. ``Diagnostic'' means the numerical computation has no certified enclosure unless explicitly stated otherwise. There are no new interval sign certificates in this attempt.
+\begin{longtable}{@{}p{.28\textwidth}p{.17\textwidth}p{.48\textwidth}@{}}
+\caption{Claims and their limits.}\label{tab:status}\\
+\toprule
+Result & Status & Scope or remaining issue\\
+\midrule
+\endfirsthead
+\toprule Result & Status & Scope or remaining issue\\\midrule
+\endhead
+\bottomrule\endfoot
+Relative gamma state & Analytic & Closed differential, actual adjoint, nonzero class and full kinetic pairing; not the full gamma or Weil form.\\[4pt]
+Primitive history identity & Analytic & Every repetition and finite-interval escape cap; arithmetic remains a difference of norms.\\[4pt]
+Scalar-transfer failure & Analytic & One stable scalar factor per prime fails specified first and repeated coefficients.\\[4pt]
+Exact versus tangent response & Diagnostic & Opposite observed signs on an admitted bump; exact finite-coupling formula supplied.\\[4pt]
+Loop exponential & Analytic & Finite prime set, bounded invertibility, exact contact and delta coefficients, positive harmonic state.\\[4pt]
+Continuous residual & Analytic & Exact convolution error, compact compression and controlled tail; no favorable full sign assumed.\\[4pt]
+Rational realization obstruction & Analytic & Fixed scalar rational transfer in one delay variable matching all repetitions.\\[4pt]
+Original cusp and infinite rank & Analytic & One prime, $c\le0$, nonzero first jump; no claim for dense mixed-delay sets.\\[4pt]
+Pure-relaxation obstruction & Analytic & Unchanged old energy, even with finitely many source amplitudes; not arbitrary new coupled systems.\\[4pt]
+Positive low-mass splitting & Analytic & All-input fields, closed complex and exact response; leading cusp canceled at $\delta=1/24$.\\[4pt]
+Surviving third jump & Analytic & Nonzero mean fourth-order coefficient; no net finite-rank completion of that fixed model.\\[4pt]
+Finite convex splits & Analytic & Specified finite scalar compliance family cannot remove the next jump.\\[4pt]
+Derivative penalty variant & Analytic & Fixed positive derivative cost restores an unmatched active/diagonal first-cusp condition.\\[4pt]
+Selected negative defects & Diagnostic & Suggest failure of independent positive addition; a rigorous negative enclosure is still absent.\\[4pt]
+Full arithmetic completion & Open & Both pole terms and the entire regular kernel must enter one independently positive system.\\[4pt]
+Protected arithmetic pairing & Open & No local superspace action, Ward identity or arithmetic selection rule constructed.\\[4pt]
+Unbounded lengths and RH & Open & No new full-form positivity range or all-prime compatible construction.\\
+\end{longtable}
+
+\vspace{-\baselineskip}
+\begin{thebibliography}{1}
+\bibitem{background}
+\emph{SUSY positivity research program: mathematical background}.
+Shared program document, prepared 11 September 2026 and updated 12 September 2026.
+\href{../../../background.pdf}{Background PDF};
+authoritative section source \href{../../../background_section.tex}{background\_section.tex}.
+\end{thebibliography}
+\end{document}

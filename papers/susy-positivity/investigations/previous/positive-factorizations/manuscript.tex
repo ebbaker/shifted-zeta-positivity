@@ -1,0 +1,1441 @@
+\documentclass[11pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools,mathrsfs}
+\usepackage{microtype,booktabs,array,enumitem}
+\usepackage[dvipsnames]{xcolor}
+\usepackage[colorlinks=true,linkcolor=MidnightBlue,citecolor=MidnightBlue,urlcolor=MidnightBlue]{hyperref}
+\usepackage{fancyhdr}
+\hypersetup{pdftitle={Positive factorizations and supersymmetric extensions of finite-interval Weil forms},pdfauthor={Working draft prepared for Edward Baker}}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small Positive factorizations of Weil forms}
+\fancyhead[R]{\small Working draft 0.2}
+\fancyfoot[C]{\thepage}
+\setlength{\headheight}{14pt}
+\setlength{\emergencystretch}{2em}
+\setlist{itemsep=3pt,topsep=5pt}
+\numberwithin{equation}{section}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\newcommand{\R}{\mathbb R}
+\newcommand{\C}{\mathbb C}
+\newcommand{\HH}{\mathcal H}
+\newcommand{\DD}{\mathcal D}
+\newcommand{\norm}[1]{\lVert#1\rVert}
+\newcommand{\ip}[2]{\langle#1,#2\rangle}
+\newcommand{\Qgam}{Q^{\gamma}}
+\newcommand{\EE}{\mathcal E}
+\newcommand{\Acal}{\mathcal A}
+\DeclareMathOperator{\Dom}{Dom}
+\DeclareMathOperator{\supp}{supp}
+\DeclareMathOperator{\Rea}{Re}
+\DeclareMathOperator{\diag}{diag}
+\DeclareMathOperator{\artanh}{artanh}
+\title{Positive factorizations and supersymmetric extensions\\of finite-interval Weil forms}
+\author{Working draft prepared for Edward Baker}
+\date{Version 0.2 \quad 11 September 2026}
+
+\begin{document}
+\maketitle
+\begin{abstract}
+We investigate whether positive auxiliary systems can explain the sign of
+finite-interval Weil forms arising from the shifted Riemann zeta function.
+The objective is an independently specified square-root or bulk construction,
+followed by an exact arithmetic identification. We give an explicit nonlocal
+factorization of the prime-free form, uniform for total interval length
+$L\leq1/4$ and shift $0\leq\omega\leq1/2$, with lower bound greater than
+$0.099$. The gamma kinetic multiplier admits an exact realization by a
+positive tower of local auxiliary fields and a closed graded supercharge.
+We also prove restrictions on proposed completions. Scalar gauge changes
+cannot remove the off-diagonal sign obstruction. More generally, positive
+two-point square factors fail already at $L=2/3$, as established by a
+comparison-form test with an exact rational certificate. Comparison
+positivity survives elimination of internal nodes in finite pairwise
+networks. A coherent multicomponent toy model escapes this restriction. Reflection
+folding and an explicit cubic weight give a positive factor for the complete
+central odd gamma sector for $L\leq7/10$, with floor $1/100$. An exact
+linear-input test shows that the first prime can stabilize a negative gamma
+direction and that an independent-edge remainder fails.
+We identify additional boundary and first-prime matching constraints, and
+show that no closable norm factor of the full Weil form exists on ordinary
+whole-line $L^2$ with all smooth compactly supported inputs in its domain.
+These results delimit a supersymmetric research program; they supply neither
+an all-depth positivity theorem nor a proof of the Riemann hypothesis.
+\end{abstract}
+
+\noindent\textbf{Draft status.}
+This manuscript consolidates three exploratory investigations. Proofs are
+included, with reproducible exact rational checkers for the comparison
+obstruction, the odd-sector potential bound, and the first-prime sign test.
+There has been no independent specialist review or complete priority audit.
+The graded constructions are linear operator models, not a constructed
+interacting superspace field theory. The small-window result does not extend
+the stronger finite-depth certificates already recorded in the project.
+
+\smallskip
+\noindent\textbf{Keywords.} Weil positivity; auxiliary fields; supersymmetric
+quantum mechanics; nonlocal forms; Schur complements; comparison matrices.
+
+\clearpage
+\tableofcontents
+\clearpage
+
+\section{Motivation and the question of mechanism}
+\label{sec:motivation}
+
+\subsection{From higher-dimensional extensions to positive boundary systems}
+
+The research program motivating this paper began with an attempt to extend
+the completed xi function into higher-dimensional settings and constrain its
+zeros by rotational symmetry. Investigations using slice-regular and related
+extensions repeatedly encountered the same difficulty: the proposed
+extension encoded information already present in the original complex
+function. An additional coordinate did not, by itself, create an additional
+constraint on the zeros. This is the history reported by the researcher,
+not a general impossibility theorem about higher-dimensional approaches.
+
+The search then moved toward physical models, including gauge theory and
+ideas inspired by bulk--boundary correspondences. The enduring question was
+whether an arithmetic boundary observable could be derived from an
+independently positive system. Here a ``bulk'' may be a linear field system,
+an auxiliary channel space, or a network. The term does not assert an AdS
+geometry or a conformal field theory. A sufficiently explicit positive
+linear model would already be useful if its boundary response were exactly
+the required zeta object.
+
+The shifted zeta program supplies concrete targets for this question:
+causal transfers, finite-interval generators, contraction defects, and
+string or spectral representations. Its existing finite-depth work proves
+restricted inequalities by analytic estimates and certificates
+\cite{BakerFirst,BakerWeil}. Those results provide benchmarks for an
+explanatory construction. They do not establish positivity at every depth,
+and a sequence of finite certificates is not itself a rule forcing the
+next certificate to succeed.
+
+The intended direction of explanation is
+\[
+\text{specified arithmetic data}
+\ \longrightarrow\ \text{independently positive system}
+\ \longrightarrow\ \text{exact boundary identity}.
+\]
+The global quantifiers needed for the Riemann hypothesis (RH) come only
+after these steps and require a separate limiting or compatibility theorem.
+Reconstructing a positive system from a measure already assumed positive
+does not supply the missing direction of implication.
+
+\subsection{Why a supersymmetric extension is a reasonable test}
+
+Supersymmetric quantum mechanics suggests beginning with a defining operator
+$A$ and a positive inner product. Its adjoint then yields a nonnegative
+Hamiltonian $A^*A$, or a graded Hamiltonian with two partner blocks. The
+substantive work is to define $A$ independently and identify the resulting
+energy or observable with the arithmetic target.
+
+Signed terms in a displayed operator do not rule out such a mechanism.
+For example, on a compactly supported smooth core, a real smooth function
+$W$ gives
+\begin{equation}
+(\partial_x+W)^*(\partial_x+W)
+=-\partial_x^2+W^2-W'.
+\end{equation}
+The potential need not be pointwise positive, but the terms are constrained
+by a common square. On an interval the same statement also requires the
+correct domain and boundary terms. The present problem is to find an
+analogous constraint relating the gamma, pole, and prime contributions.
+
+The positive component-space interpretation of fermionic variables is
+standard in supersymmetric quantum mechanics \cite{Singleton}. A formal
+Berezin integral is not a positive measure, and a supertrace is a difference
+of ordinary traces. Boson--fermion cancellation therefore does not establish
+positivity of an arbitrary reduced observable. Likewise, nilpotence of a
+BRST differential does not establish positivity on its physical quotient.
+A BRST construction would require a specific gauge redundancy and a
+separate argument about the induced inner product. No such gauge system is
+assumed here.
+
+\subsection{Results and limits of the present paper}
+
+Theorem~\ref{thm:small} constructs a positive factor on a small prime-free
+window. Theorem~\ref{thm:tower} realizes the gamma kinetic term through local
+auxiliary fields; the reduction produces the correct nonlocal boundary
+order. Theorem~\ref{thm:pair} excludes a larger class of pairwise factors,
+and Proposition~\ref{prop:schur} explains why adding internal nodes to a
+finite pairwise network does not automatically help.
+Section~\ref{sec:coherent} exhibits a coherent positive model outside that
+class and identifies two elementary completion failures.
+Theorem~\ref{thm:oddcompletion} gives an explicit completion on the odd
+subspace through the prime-free slab; Proposition~\ref{prop:primestabilizes}
+certifies the stabilizing role of the first prime on a linear input.
+Theorem~\ref{thm:global} addresses the input space for a global factor.
+
+These statements have different scopes. A small-interval construction does
+not prove all-depth positivity. A restriction on a class of factors does
+not prove negativity of the Weil form. A coherent toy model establishes
+possibility within a larger class, not an arithmetic selection principle.
+The proposed continuation in Section~\ref{sec:program} is kept separate
+from the proved statements.
+
+There is substantial prior literature on Weil forms and Hilbert-space
+realizations. In particular, Suzuki gives norm-identity criteria related to
+RH \cite{SuzukiHilbert} and a screw-function treatment of finite-interval
+operators and small-window arguments \cite{SuzukiScrew}. We do not claim that
+the possibility of a norm formulation, a graded block construction, or a
+small-window Dirichlet argument is new. The application-specific formulas
+and restrictions below are recorded with proofs; their priority requires
+further review.
+
+\section{The forms, domains, and graded convention}
+\label{sec:target}
+
+Let $I_L=(-L/2,L/2)$, where $L$ is the \emph{total} interval length.
+Extend $f\in L^2(I_L)$ by zero to $\widetilde f$ on $\R$, and use
+\begin{equation}
+\widehat f(\tau)=\int_{I_L}f(x)e^{-i\tau x}\,dx,
+\qquad
+\DD_{\log,L}=\left\{f:\int_\R\log(2+|\tau|)|\widehat f(\tau)|^2d\tau<\infty\right\}.
+\end{equation}
+We use inner products conjugate-linear in the first variable. Write
+\begin{equation}
+C(f)=\int_{I_L}f(x)\cosh(x/2)\,dx,
+\qquad S(f)=\int_{I_L}f(x)\sinh(x/2)\,dx.
+\end{equation}
+For $a>0$, define the truncated translation
+$(T_af)(x)=\widetilde f(x-a)$ for $x\in I_L$.
+
+The central finite-interval form, in the normalization of
+\cite{BakerWeil}, is
+\begin{align}
+Q_{0,L}[f]={}&\frac1{2\pi}\int_\R
+\left(\Rea\psi(\tfrac14+\tfrac{i\tau}{2})-\log\pi\right)
+|\widehat f(\tau)|^2\,d\tau\notag\\
+&+2|C(f)|^2-2|S(f)|^2
+-\sum_{\log n<L}\frac{\Lambda(n)}{\sqrt n}
+\ip{f}{(T_{\log n}+T_{\log n}^*)f}.
+\label{eq:weil}
+\end{align}
+Here $\psi=\Gamma'/\Gamma$, and $\Lambda$ is the von Mangoldt function.
+The prime-free form $\Qgam_{0,L}$ omits the last sum and agrees with
+$Q_{0,L}$ for $L\leq\log2$. The Fourier multiplier differs from
+$\log(2+|\tau|)$ by a bounded function \cite{DLMF}; the other terms are
+bounded on each fixed interval. Thus these forms are closed and semibounded
+on $\DD_{\log,L}$, regardless of their sign. Smooth compactly supported
+functions form a core: first shrink the support by dilation, then mollify;
+the weighted Fourier norm converges in each step.
+
+Set
+\begin{align}
+w_0&=\psi(1/4)-\log\pi
+=-\gamma_E-\pi/2-3\log2-\log\pi,\label{eq:w0}\\
+j(t)&=\frac{e^{-t/2}}{1-e^{-2t}},
+& R(t)&=2\cosh(t/2)-j(t),\qquad t>0.\label{eq:jR}
+\end{align}
+The shifted gamma form can be defined without an endpoint ambiguity by
+\begin{equation}
+\Qgam_{\omega,L}[f]=\Qgam_{0,L}[f]
++\int_{I_L^2}(\cosh(\omega|x-y|)-1)R(|x-y|)
+\overline{f(x)}f(y)\,dx\,dy,
+\label{eq:shift}
+\end{equation}
+for $0\leq\omega\leq1/2$. This is the bounded perturbation identity proved
+for the finite-horizon shift generator in \cite{BakerFirst}. The kernel is
+continuous across the diagonal after assigning its limiting value there.
+In particular, \eqref{eq:shift} includes the distributional correction
+required at $\omega=1/2$ in a Fourier-plus-residue description.
+
+\begin{lemma}[Graded realization]\label{lem:graded}
+Let $A:\Dom A\subset\HH_0\to\HH_1$ be closed and densely defined between
+positive Hilbert spaces. Then
+\begin{equation}
+\mathscr S=\begin{pmatrix}0&A^*\\A&0\end{pmatrix},
+\quad \Dom\mathscr S=\Dom A\oplus\Dom A^*,
+\end{equation}
+is self-adjoint and
+\begin{equation}
+\mathscr S^2=\diag(A^*A,AA^*)\geq0.
+\label{eq:graded}
+\end{equation}
+Equivalently, $q(f,g)=(0,Af)$, with domain $\Dom A\oplus\HH_1$,
+is nilpotent and $\{q,q^*\}=\mathscr S^2$ on the natural operator domain.
+\end{lemma}
+\begin{proof}
+Computing the adjoint of the off-diagonal block gives the same block and
+domain because $A^{**}=A$. Squaring on its natural domain gives
+\eqref{eq:graded}. The nilpotent formulation is the same calculation.
+\end{proof}
+
+This lemma organizes an independently constructed factor. Choosing
+$A=Q^{1/2}$ for an operator whose sign is unknown would assume the premise
+we seek to establish.
+
+\section{An explicit positive factor on a small window}
+\label{sec:small}
+
+\subsection{The full-output jump identity}
+
+The digamma difference integral \cite[\S5.9]{DLMF} gives
+\begin{equation}
+\Rea\psi(1/4+i\tau/2)-\log\pi
+=w_0+2\int_0^\infty j(t)(1-\cos\tau t)\,dt.
+\end{equation}
+If $U_t$ denotes translation on $L^2(\R)$, Plancherel implies
+\begin{equation}
+\Qgam_{0,L}[f]=w_0\norm f^2
++\int_0^\infty j(t)\norm{\widetilde f-U_t\widetilde f}_{L^2(\R)}^2dt
++2|C(f)|^2-2|S(f)|^2.
+\label{eq:jump}
+\end{equation}
+The norm includes output outside $I_L$. Dropping that output would change
+the boundary contribution and invalidate the subsequent factorization.
+
+Define
+\begin{equation}
+F(a)=\int_a^\infty j(t)dt
+=\artanh(e^{-a/2})+\arctan(e^{-a/2}),\qquad a>0,
+\end{equation}
+and put $h(t)=-R(t)$. Splitting the jump integral into interior and exterior
+pairs, then expanding the pole kernel, gives
+\begin{align}
+\Qgam_{0,L}[f]&=\frac12\int_{I_L^2}h(|x-y|)|f(x)-f(y)|^2dx\,dy
++\int_{I_L}\kappa_{0,L}(x)|f(x)|^2dx,\label{eq:diff}\\
+\kappa_{0,L}(x)&=w_0+F(x+L/2)+F(L/2-x)
++8\sinh(L/4)\cosh(x/2).\label{eq:kappa}
+\end{align}
+The endpoint logarithms in $F$ are part of the form. They are integrable
+against smooth functions. Identity~\eqref{eq:diff} remains valid when its
+weights lose positivity.
+
+\subsection{The positive range and shift-uniform estimate}
+
+\begin{theorem}[Small-window factor]\label{thm:small}
+For $0<L\leq1/4$ and $0\leq\omega\leq1/2$, define
+\begin{align}
+h_\omega(t)&=\cosh(\omega t)h(t),\\
+\kappa_{\omega,L}(x)&=\kappa_{0,L}(x)
+-\int_{I_L}(\cosh(\omega|x-y|)-1)h(|x-y|)dy.\label{eq:kappashift}
+\end{align}
+Both weights are nonnegative, and
+\begin{equation}
+\kappa_{\omega,L}(x)\geq c_*:=
+\log(4/\pi)-\gamma_E+\frac7{16}
+-\frac{e^{1/8}\cosh(1/8)}{512}>0.099.
+\label{eq:cstar}
+\end{equation}
+The closed map from $L^2(I_L)$ to $L^2(I_L^2)\oplus L^2(I_L)$ given by
+\begin{equation}
+\Acal_{\omega,L}f=
+\left(\sqrt{h_\omega(|x-y|)/2}\,[f(x)-f(y)],
+\ \sqrt{\kappa_{\omega,L}(x)}f(x)\right)
+\label{eq:smallA}
+\end{equation}
+has domain $\DD_{\log,L}$ and satisfies
+\begin{equation}
+\Qgam_{\omega,L}[f]=\norm{\Acal_{\omega,L}f}^2
+\geq c_*\norm f^2.
+\end{equation}
+\end{theorem}
+
+\begin{proof}
+The sign of $R(t)$ is that of $q^3-q-1$ with $q=e^t$. Its unique positive
+sign-change point is
+\begin{equation}
+t_0=\log\rho=0.2811995743\ldots,\qquad \rho^3=\rho+1.
+\label{eq:tzero}
+\end{equation}
+In particular, $h(t)>0$ for $0<t\leq1/4$.
+
+Since $j$ decreases, $F$ is convex. Both the sum of the two $F$ terms in
+\eqref{eq:kappa} and its hyperbolic-cosine term attain their minimum at
+$x=0$. Using elementary hyperbolic identities, this minimum is
+\begin{equation}
+-\gamma_E-\log(8\pi)+\log\coth(L/8)
+-2\arctan(\tanh(L/8))+8\sinh(L/4).
+\end{equation}
+The inequalities $\coth u\geq1/u$, $\arctan(\tanh u)\leq u$, and
+$\sinh u\geq u$ give
+\begin{equation}
+\kappa_{0,L}(x)\geq-\gamma_E-\log(\pi L)+7L/4
+\geq\log(4/\pi)-\gamma_E+7/16=:c_0,
+\label{eq:kappalower}
+\end{equation}
+where the last inequality uses monotonic decrease of the preceding
+expression for $L\leq1/4$.
+
+Expanding the difference squares shows that changing $h$ to $h_\omega$
+produces the off-diagonal perturbation in \eqref{eq:shift}; the subtraction
+in \eqref{eq:kappashift} cancels the extra diagonal. Moreover,
+\[
+0\leq h(t)\leq j(t)=\frac{e^{t/2}}{2\sinh t}\leq\frac{e^{1/8}}{2t},
+\qquad
+\cosh(\omega t)-1\leq\frac{t^2}{8}\cosh(1/8).
+\]
+Since $\int_{I_L}|x-y|dy\leq L^2/2$, the subtracted potential is at most
+$e^{1/8}\cosh(1/8)/512$. This proves \eqref{eq:cstar}.
+
+The norm identity follows first on the smooth core from \eqref{eq:diff}.
+The corresponding graph norm is equivalent to the closed positive form
+norm on $\DD_{\log,L}$. Closing the map on that core gives a closed
+operator with this domain and preserves the identity. The sign estimate
+precedes this closure argument; no unknown spectral square root is used.
+\end{proof}
+
+\subsection{Relation to the shift-energy identity}
+
+On the smooth core, the finite-horizon transfer satisfies
+$\partial_\omega V_{\omega,L}=-G_{\omega,L}V_{\omega,L}$, with symmetric
+generator form $\Qgam_{\omega,L}$ in the prime-free region. Integration of
+the energy derivative, followed by the form limit, gives
+\begin{equation}
+\norm f^2-\norm{V_{\omega,L}f}^2
+=2\int_0^\omega
+\norm{\Acal_{s,L}V_{s,L}f}^2ds,
+\label{eq:radial}
+\end{equation}
+in the domain and limiting sense of \cite{BakerFirst}. Equation
+\eqref{eq:radial} is a consequence of that transfer identity and the new
+explicit factor, not a separately constructed bulk duality. Its range is
+only a subset of the already certified prime-free slab.
+
+\section{Two restrictions on direct scalar factors}
+\label{sec:direct}
+
+\begin{proposition}[Scalar conductances and scalar gauges]
+For $L>t_0$, the gamma form cannot be written as nonnegative scalar
+conductances multiplying $|f(x)-f(y)|^2$, plus an arbitrary multiplication
+form. A positive scalar rescaling, or a single position-dependent phase
+change of the input, does not remove this obstruction.
+\end{proposition}
+\begin{proof}
+A nonnegative difference conductance has nonpositive off-diagonal kernel,
+whereas $R(|x-y|)$ is positive on an open set when $L>t_0$.
+A positive rescaling preserves these signs. For a phase change, choose
+$t_0/2<d<\min(t_0,L/2)$ and three interior points with consecutive
+separation $d$. The signs of the three kernel entries are $-,-,+$.
+Their product is positive and is invariant under a scalar phase gauge.
+Three negative real entries would have negative product. The argument can
+be made on small separated neighborhoods, so it is an obstruction to an
+almost-everywhere kernel identity, not merely to values at three points.
+\end{proof}
+
+Independent edge phases are more general than a scalar gauge. They are
+addressed in Section~\ref{sec:comparison}; the preceding argument alone
+does not exclude them.
+
+\begin{proposition}[Local first-order boundary factors]
+No finite-component map $Af=a(x)f'+b(x)f$, with locally bounded smooth
+coefficients and the ordinary positive component $L^2$ norm, has
+$\norm{Af}^2=Q_{0,L}[f]$ on all $C_c^\infty(I_L)$.
+\end{proposition}
+\begin{proof}
+For fixed $\chi\in C_c^\infty(I_L)$, put $f_N=\chi e^{iNx}$.
+The digamma asymptotic and the bounded remaining terms imply
+\begin{equation}
+Q_{0,L}[f_N]=\log N\,\norm\chi^2+O(1).
+\end{equation}
+For the multiplier term, translate the Fourier variable by $N$ and use
+rapid decay of $\widehat\chi$ outside $|\tau-N|\leq N/2$.
+If $a$ is nonzero, choose $\chi$ where $\norm{a\chi}>0$; then
+$\norm{Af_N}^2=N^2\norm{a\chi}^2+O(N)$, a contradiction.
+If $a$ vanishes identically, the left side remains bounded in $N$, also a
+contradiction. The same argument applies to a finite vector of rows.
+\end{proof}
+
+This proposition concerns the square root acting directly on the original
+boundary coordinate. Eliminating local auxiliary variables can change the
+order of the reduced operator, as the next construction demonstrates.
+
+\section{A positive auxiliary-field realization of the gamma kinetic term}
+\label{sec:tower}
+
+Define $a_k=2k+1/2$ and
+\begin{equation}
+B(s)=\sum_{k=0}^\infty\frac2{a_k}\frac{s}{a_k^2+s},\qquad s\geq0.
+\label{eq:B}
+\end{equation}
+The geometric expansion $j(t)=\sum_{k\geq0}e^{-a_kt}$ and the digamma
+difference integral give
+\begin{equation}
+B(\tau^2)=\Rea\psi(1/4+i\tau/2)-\psi(1/4).
+\label{eq:Bdigamma}
+\end{equation}
+Consequently the nonnegative kinetic form is
+\begin{equation}
+K[f]=\frac1{2\pi}\int_\R B(\tau^2)|\widehat f(\tau)|^2d\tau.
+\end{equation}
+
+\begin{theorem}[Positive local tower]\label{thm:tower}
+For $a>0$, let
+\begin{equation}
+\EE_a[f,u]=\frac2a\int_\R
+\left(|f-u|^2+a^{-2}|u'|^2\right)dx,
+\quad f\in L^2(\R),\quad u\in H^1(\R).
+\label{eq:Ea}
+\end{equation}
+Then, with extended values allowed,
+\begin{equation}
+K[f]=\inf_{(u_k)}\sum_{k=0}^\infty\EE_{a_k}[f,u_k].
+\label{eq:minK}
+\end{equation}
+For $K[f]<\infty$, the infimum is attained by
+\begin{equation}
+\widehat u_k(\tau)=\frac{a_k^2}{a_k^2+\tau^2}\widehat f(\tau).
+\label{eq:uk}
+\end{equation}
+The unreduced energy is the norm square of a closed densely defined map
+between positive component Hilbert spaces and therefore has the graded
+realization of Lemma~\ref{lem:graded}.
+\end{theorem}
+\begin{proof}
+At a single frequency, completion of the square gives
+\begin{align}
+|f-u|^2+\frac{\tau^2}{a^2}|u|^2
+={}&\frac{\tau^2}{a^2+\tau^2}|f|^2\notag\\
+&+\left(1+\frac{\tau^2}{a^2}\right)
+\left|u-\frac{a^2}{a^2+\tau^2}f\right|^2.
+\end{align}
+Plancherel gives the minimum of \eqref{eq:Ea}. Summing and using monotone
+convergence proves \eqref{eq:minK}. Each multiplier in \eqref{eq:uk}
+maps $L^2$ into $H^1$, and the minimum has finite total energy whenever
+$K[f]$ is finite.
+
+For a precise infinite-component space, set
+\begin{equation}
+\HH_B=L^2(\R)\oplus\ell^2\bigl(L^2(\R);2/a_k^3\bigr),
+\qquad
+\HH_F=\ell^2\bigl(L^2(\R)\oplus L^2(\R)\bigr),
+\end{equation}
+and define
+\begin{equation}
+A(f,(u_k))=
+\left(\sqrt{2/a_k}(f-u_k),\sqrt{2/a_k^3}\,u_k'\right)_{k\geq0}.
+\label{eq:towerA}
+\end{equation}
+Give $A$ its maximal domain: all $u_k\in H^1$ for which the displayed
+sequence belongs to $\HH_F$. It is closed. Indeed, convergence in
+$\HH_B$ gives convergence of every component in $L^2$, and convergence
+of $A$ gives convergence of every weak derivative; closedness of weak
+differentiation identifies the limit and its residuals.
+
+The domain is dense. Choose smooth $f$, let finitely many smooth $u_k$
+be independent, and set $u_k=f$ in the tail. The tail derivative energy
+is finite since $\sum a_k^{-3}<\infty$. Such vectors are dense in the
+weighted product space by truncation and approximation. Finally, the
+minimizers satisfy $\norm{u_k}\leq\norm f$, so their auxiliary Hilbert
+norm is finite; their derivative and difference energies sum to $K[f]$.
+Lemma~\ref{lem:graded} now applies to \eqref{eq:towerA}.
+\end{proof}
+
+The fields $u_k$ live on the whole line even when $f$ is supported in
+$I_L$. Truncating them at the input endpoints changes the minimization.
+The square-root map uses only first derivatives and multiplication in the
+unreduced coordinate. Its reduced boundary multiplier is logarithmic,
+which explains precisely why the direct order argument of
+Section~\ref{sec:direct} does not apply.
+
+\begin{corollary}[An extra-coordinate extension]
+The function $B$ in \eqref{eq:B} is a complete Bernstein function. Hence
+$B(-\partial_x^2)$ has a positive extension realization of the type
+established by Kwa\'snicki and Mucha, allowing a measure-valued coefficient.
+\end{corollary}
+\begin{proof}
+The representation
+\[
+B(s)=\int_0^\infty\frac{s}{s+r}\,\nu(dr),
+\qquad \nu=\sum_{k\geq0}\frac2{a_k}\delta_{a_k^2},
+\]
+has a positive measure satisfying
+$\int(1+r)^{-1}\nu(dr)<\infty$. This is the complete Bernstein
+representation, and the extension conclusion follows from
+\cite{KwasnickiMucha}, including its general measure-coefficient theorem.
+\end{proof}
+
+The extension coefficient is not computed here. This corollary concerns
+the explicitly positive function $B$, not the shifted zeta Weyl function.
+Moreover, the exact gamma form still reads
+\begin{equation}
+\Qgam_{0,L}[f]=K[\widetilde f]+w_0\norm f^2
++2|C(f)|^2-2|S(f)|^2.
+\label{eq:remaining}
+\end{equation}
+The negative normalization and odd pole contribution remain. They cannot
+be removed by changing the zero of energy without changing the target.
+The positive tower is an ingredient for a completion, not the completion.
+Related positive diffusive gamma expansions already appear in
+\cite{BakerFirst}; the point here is the explicit variational and graded
+realization at the generator level.
+
+\section{A comparison-form obstruction to pairwise factors}
+\label{sec:comparison}
+
+\subsection{The class of factors and its necessary condition}
+
+The scalar gauge obstruction does not control arbitrary phases attached
+to edges. A stronger test uses the diagonal contributions forced by each
+positive two-point square.
+
+\begin{definition}[Positive pairwise representation]\label{def:pair}
+A positive pairwise representation on $I$ is a sum or integral of terms
+\begin{equation}
+\norm{u(x,y)f(x)+v(x,y)f(y)}^2,
+\qquad x<y,
+\label{eq:pairrow}
+\end{equation}
+plus a nonnegative multiplication form. The coefficient vectors may have
+arbitrary positive Hilbert component spaces. After grouping channels for
+each pair, their Gram coefficients are locally integrable away from
+$x=y$. The nonnegative integral is finite on the smooth test core and
+equals the proposed form there. Negative renormalizing counterterms are
+not permitted as additional energy terms in this definition.
+\end{definition}
+
+For a fixed pair the Gram matrix has diagonal entries
+$\alpha=\norm u^2$, $\beta=\norm v^2$, and off-diagonal entry
+$c=\ip uv$. Cauchy--Schwarz gives $|c|^2\leq\alpha\beta$.
+Replacing $c$ by $-|c|$ therefore preserves positivity of this
+two-by-two matrix. Different endpoint magnitudes and independent edge
+phases are all allowed in Definition~\ref{def:pair}.
+
+\begin{lemma}[Necessary comparison positivity]\label{lem:comparison}
+If $\Qgam_{0,L}$ has a positive pairwise representation, then
+\begin{equation}
+Q_{\mathrm{cmp},L}[f]:=\Qgam_{0,L}[f]
+-2\int_{I_L^2}R_+(|x-y|)\overline{f(x)}f(y)dx\,dy
+\label{eq:comparison}
+\end{equation}
+is nonnegative on nonnegative real smooth supported inputs. Here
+$R_+=\max(R,0)$.
+\end{lemma}
+\begin{proof}
+Polarization with disjointly supported tests identifies the grouped
+off-diagonal coefficient with $R(|x-y|)$ almost everywhere away from
+the diagonal. For nonnegative real inputs, replacing that coefficient by
+$-|R|$ subtracts exactly the second term in \eqref{eq:comparison}.
+Each grouped pair remains positive by the preceding Gram-matrix argument,
+and the nonnegative multiplication term is unchanged. The subtraction
+has a bounded kernel, so the argument does not split the singular
+diagonal into separately divergent integrals.
+\end{proof}
+
+\subsection{A counterexample at total length \texorpdfstring{$2/3$}{2/3}}
+
+\begin{theorem}[Failure of positive pairwise factors]\label{thm:pair}
+The form $\Qgam_{0,2/3}$ has no representation of
+Definition~\ref{def:pair}. In particular, independent edge phases,
+unequal endpoint weights, and arbitrary separate vector channels for
+each pair cannot provide such a factorization.
+\end{theorem}
+
+\begin{proof}
+Take $f=L^{-1/2}\mathbf1_{I_L}$. It belongs to the logarithmic form
+domain. The jump identity and cancellation of the exponential tail give
+\begin{equation}
+\Qgam_{0,L}[f]=w_0+\frac2L\sum_{k=0}^\infty
+\frac{1-e^{-a_kL}}{a_k^2}
++\frac{32}{L}\sinh^2(L/4),
+\label{eq:constantgamma}
+\end{equation}
+while
+\begin{equation}
+Q_{\mathrm{cmp},L}[f]
+=\Qgam_{0,L}[f]-\frac4L\int_0^L(L-t)R_+(t)dt.
+\label{eq:constantcmp}
+\end{equation}
+For $L=2/3$ and $b=1/3$, the right side is at most
+\begin{equation}
+\mathcal U:=\Qgam_{0,2/3}[f]
+-6\int_{1/3}^{2/3}(2/3-t)R(t)dt.
+\label{eq:U}
+\end{equation}
+The exact rational enclosure established in
+Appendix~\ref{app:certificate} proves $\mathcal U<-1/25$.
+
+Choose nonnegative smooth interior cutoffs converging to the constant.
+Each endpoint error is a scaled fixed profile of width $\varepsilon$;
+changing variables in its weighted Fourier norm gives an upper bound
+$O(\varepsilon(1+\log(1/\varepsilon)))$. Thus the cutoffs converge in
+the logarithmic form norm. The bounded-kernel term in
+\eqref{eq:comparison} also converges. A sufficiently close smooth cutoff
+therefore has negative comparison form, contradicting
+Lemma~\ref{lem:comparison}.
+\end{proof}
+
+For orientation, separate quadratures give
+\[
+\Qgam_{0,2/3}[f]\simeq0.17402032645,
+\qquad Q_{\mathrm{cmp},2/3}[f]\simeq-0.06189510026.
+\]
+These decimal values are diagnostics; the proof uses the weaker exact
+bound on $\mathcal U$. Since $2/3<\log2$, the obstruction occurs before
+any prime is active. It concerns a class of positive representations,
+not negativity of the gamma form itself.
+
+\subsection{Eliminating hidden nodes in finite networks}
+
+For a Hermitian matrix $G$, let $M(G)$ have the same diagonal and
+off-diagonal entries $-|G_{ij}|$.
+
+\begin{proposition}[Comparison positivity survives a Schur reduction]
+\label{prop:schur}
+If $M(G)\succeq0$, then eliminating internal nodes by positive-pivot
+Schur complements preserves comparison positivity. In particular, every
+finite positive network assembled from two-point squares and nonnegative
+one-point terms has a boundary Schur complement $S$ with $M(S)\succeq0$.
+\end{proposition}
+\begin{proof}
+Eliminate one node with diagonal $d>0$. The resulting entries are
+$S_{ij}=G_{ij}-G_{i0}G_{0j}/d$. The diagonal of $M(S)$ equals that of
+the Schur complement $N$ of $M(G)$, and, for $i\ne j$,
+\begin{equation}
+-|S_{ij}|\geq-|G_{ij}|-|G_{i0}||G_{0j}|/d=N_{ij}.
+\end{equation}
+Both $M(S)$ and $N$ have nonpositive off-diagonal entries. For every
+complex vector $z$, writing $|z|$ componentwise gives
+\begin{equation}
+z^*M(S)z\geq |z|^{\mathsf T}M(S)|z|
+\geq |z|^{\mathsf T}N|z|\geq0.
+\end{equation}
+The last step follows from positivity of the Schur complement of
+$M(G)$. A zero diagonal in a positive semidefinite comparison matrix
+has a zero row and column, so such nodes decouple. Iterate the argument.
+Finally, the grouped two-by-two Gram argument proves $M(G)\succeq0$
+for a positive pairwise network.
+\end{proof}
+
+The proposition is finite dimensional. It passes to a limit if the
+comparison forms themselves converge on the relevant tests. No claim is
+made here that every singular continuum extension admits that passage.
+The theorem does establish that adding arbitrarily many nodes to a
+finite scalar magnetic spring network does not, by itself, evade the
+comparison restriction.
+
+\section{Coherent couplings and two completion constraints}
+\label{sec:coherent}
+
+\subsection{A positive graded model outside the pairwise class}
+
+Consider three complex boundary amplitudes and one auxiliary amplitude:
+\begin{equation}
+\EE(f,u)=|f_1+f_2-u|^2+|f_3+u|^2.
+\label{eq:coherent}
+\end{equation}
+Completion of the square gives
+\begin{equation}
+\inf_u\EE(f,u)=\tfrac12|f_1+f_2+f_3|^2,
+\qquad u=\tfrac12(f_1+f_2-f_3).
+\end{equation}
+The boundary matrix is half the all-ones matrix; its eigenvalues are
+$0,0,3/2$. Its comparison matrix has eigenvalues $-1/2,1,1$.
+Thus a positive bulk can produce a boundary form outside the pairwise
+comparison class.
+
+The independently specified factor is
+\begin{equation}
+A=\begin{pmatrix}1&1&0&-1\\0&0&1&1\end{pmatrix}.
+\end{equation}
+Lemma~\ref{lem:graded} supplies its graded realization. The first row
+mixes three scalar amplitudes before taking the norm; it is not a
+two-endpoint spring. Dividing it into independent pairwise energies would
+discard the cross terms responsible for the example.
+
+This is an architectural example, not a zeta model. Its positivity is
+already present before the grading is introduced. A useful supersymmetric
+completion of the arithmetic form would need a principle that forces
+the analogous coherent couplings and their normalization.
+
+\subsection{The pole term and a growing Green function}
+
+The identity
+\begin{equation}
+R(t)=e^{t/2}-\sum_{k\geq1}e^{-(2k+1/2)t}
+\label{eq:Rsplit}
+\end{equation}
+suggests replacing one decaying massive propagator by a growing one.
+The following elementary computation identifies the boundary cost of
+this particular attempt.
+
+\begin{proposition}[Growing propagator boundary defect]
+For $a>0$, the kernel
+\begin{equation}
+G_a(x,y)=-\frac1{2a}e^{a|x-y|},\qquad 0<x,y<L,
+\end{equation}
+is the Green function of $-\partial_x^2+a^2$ with boundary conditions
+$u'(0)=-au(0)$ and $u'(L)=au(L)$. Its quadratic form is not nonnegative.
+\end{proposition}
+\begin{proof}
+The derivative jump at $x=y$ and the two endpoint derivatives verify
+the Green equation and Robin conditions. The homogeneous equation has
+no nonzero solution satisfying both conditions, so the inverse is
+well defined. Integration by parts gives the form on $H^1(0,L)$,
+\begin{align}
+\EE_R[u]&=\int_0^L(|u'|^2+a^2|u|^2)dx
+-a|u(0)|^2-a|u(L)|^2\notag\\
+&=\norm{u'-au}^2-2a|u(0)|^2.
+\end{align}
+The form-domain test $u(x)=e^{ax}$ gives $\EE_R[u]=-2a<0$.
+\end{proof}
+
+This calculation excludes treating the replacement channel as independently
+positive. It does not exclude stabilization through a larger coherent
+system. It also illustrates why a formal differential square without its
+boundary domain is insufficient.
+
+\subsection{The first prime forces joint diagonal accounting}
+
+Translate the interval to $(0,L)$ and assume $\log2<L\leq\log3$.
+Let $a=\log2$, $c=\log2/\sqrt2$, and $T=T_a$. Since $L<2a$,
+$T^2=0$. Its initial and final projections are
+\begin{equation}
+P=T^*T=\mathbf1_{(0,L-a)},\qquad
+F=TT^*=\mathbf1_{(a,L)}.
+\end{equation}
+The first-prime correction is $-c(T+T^*)$. On each paired component it
+has eigenvalues $\pm c$, so it cannot be a separate positive additive
+channel.
+
+The explicit edge factor $B_p=\sqrt c(P-T^*)$ satisfies
+\begin{equation}
+B_p^*B_p=c(P+F-T-T^*).
+\end{equation}
+Hence the exact identity is
+\begin{equation}
+Q_{0,L}[f]=\norm{B_pf}^2+
+\left(\Qgam_{0,L}[f]-c\ip f{(P+F)f}\right).
+\label{eq:primebudget}
+\end{equation}
+Proposition~\ref{prop:primestabilizes} shows that the remainder fails
+to be nonnegative throughout this interval. At positive shift the
+arithmetic coefficient becomes $c\cosh(\omega\log2)$; the same accounting
+applies to that correction.
+
+There is a complementary restriction on an auxiliary-field approach.
+For a quadratic block with a fixed bare boundary block $A_0$ and positive
+invertible auxiliary block $C_0$, minimization gives
+\begin{equation}
+\begin{pmatrix}A_0&B_0^*\\B_0&C_0\end{pmatrix}
+\quad\longmapsto\quad A_0-B_0^*C_0^{-1}B_0.
+\label{eq:schurminus}
+\end{equation}
+The change is negative semidefinite, whereas the first-prime correction
+is indefinite. Thus adding an auxiliary Gaussian field while leaving
+the bare boundary block fixed cannot reproduce that correction either.
+Equations~\eqref{eq:primebudget} and \eqref{eq:schurminus} require a
+successful model to change the joint couplings and diagonal terms together.
+
+\section{Reflection folding and an explicit odd-sector completion}
+\label{sec:oddcompletion}
+
+The comparison obstruction leaves open the possibility of mixing amplitudes
+before applying a positive factor. Reflection gives one such mixing rule
+already specified by the target. This section completes the central
+prime-free form on the odd subspace. It does not complete the even subspace.
+
+Put $\ell=L/2$. For $\varepsilon\in\{+1,-1\}$, the map
+$f\mapsto g=\sqrt2 f|_{(0,\ell)}$ is unitary from the parity subspace
+$f(-x)=\varepsilon f(x)$ onto $L^2(0,\ell)$. The folded off-diagonal
+kernel of $\Qgam_{0,L}$ is
+\begin{equation}
+R(|x-y|)+\varepsilon R(x+y),\qquad 0<x,y<\ell.
+\label{eq:foldedkernel}
+\end{equation}
+Since $j'<0$, we have $R'(t)=\sinh(t/2)-j'(t)>0$. Thus the odd
+folded kernel is negative. Write its positive conductance as
+\begin{equation}
+h_-(x,y)=R(x+y)-R(|x-y|)>0\quad(x\ne y).
+\end{equation}
+In contrast, for $L>2t_0$ the even folded kernel is positive on an open
+set: take $t_0<x<\ell$ and $y$ sufficiently small. The same positive
+conductance construction therefore does not cover the even sector at
+$L=\log2$.
+
+\begin{theorem}[Explicit odd gamma factor]\label{thm:oddcompletion}
+For $0<L\leq7/10$, set
+\begin{equation}
+\phi_L(x)=x\left(1-\frac{4x^2}{5\ell^2}\right),\quad 0<x<\ell.
+\label{eq:cubicphi}
+\end{equation}
+Let $v_L=(Q^-_{\gamma,L}\phi_L)/\phi_L$, where $Q^-_{\gamma,L}$
+is the folded odd operator. Then $v_L(x)>1/100$ throughout $(0,\ell)$,
+and for every odd $f\in\DD_{\log,L}$, with $g=\sqrt2 f|_{(0,\ell)}$,
+\begin{align}
+\Qgam_{0,L}[f]={}&\frac12\int_{(0,\ell)^2}
+ h_-(x,y)\phi_L(x)\phi_L(y)
+ \left|\frac{g(x)}{\phi_L(x)}-\frac{g(y)}{\phi_L(y)}\right|^2dx\,dy
+ \notag\\
+&+\int_0^\ell v_L(x)|g(x)|^2dx
+\ \geq\frac1{100}\norm f^2.
+\label{eq:oddfactor}
+\end{align}
+The two displayed terms give an explicit closed norm factor and hence a
+graded realization. For $L\leq\log2$ this is the full central Weil form
+on odd inputs. Between $\log2$ and $7/10$ the statement concerns the gamma
+form only.
+\end{theorem}
+
+\begin{proof}
+We prove the sign of $v_L$ directly from the cubic, without a ground-state
+or spectral positivity assumption. Set
+\[
+r(t)=j(t)-\frac1{2t},\qquad b=\frac4{5\ell^2},\qquad
+S_\phi=\int_{-\ell}^{\ell}(y-by^3)\sinh(y/2)dy.
+\]
+The full-output jump identity, or direct integration of its polynomial
+input, gives the following pointwise formula for $0<x<\ell$:
+\begin{align}
+v_L(x)={}&-\gamma_E-\log(2\pi)-\tfrac12\log(\ell^2-x^2)
+ +\frac{1+b\ell^2/2-11bx^2/6}{1-bx^2}\notag\\
+&-\frac{\displaystyle\int_0^\ell
+ [r(|x-y|)-r(x+y)]\phi_L(y)dy
+       +2S_\phi\sinh(x/2)}{\phi_L(x)}.
+\label{eq:oddpotential}
+\end{align}
+For clarity about the normalization, one uses
+\[
+F(t)=\log2+\pi/4-\tfrac12\log t-\int_0^t r(s)ds.
+\]
+The constant part of $r$ integrates to zero against the odd polynomial.
+The singular $1/(2t)$ jump contributes
+$x-b(11x^3/6-\ell^2x/2)$; these facts give
+\eqref{eq:oddpotential}, including its pole term.
+
+We need only an elementary bound for $r'$. With $u=t/2$,
+\begin{equation}
+j(t)=\tfrac14\bigl(\operatorname{csch}u+\operatorname{sech}u\bigr),
+\qquad
+-r'(t)=\tfrac18\left(\frac{\cosh u}{\sinh^2u}-\frac1{u^2}
+                   +\operatorname{sech}u\tanh u\right).
+\end{equation}
+For $0<u\leq7/20$,
+\begin{equation}
+0\leq\frac{\cosh u}{\sinh^2u}-\frac1{u^2}\leq\frac16.
+\label{eq:cschbound}
+\end{equation}
+For the upper bound, expand
+$(1+u^2/6)\sinh^2u-u^2\cosh u$ in powers: its coefficients vanish
+through degree four and are nonnegative thereafter. For the lower bound,
+use $\sinh u/u\leq(1-u^2/6)^{-1}$ and $\cosh u\geq1+u^2/2$.
+The inequality $(1+v/2)(1-v/6)^2\geq1$ for $0\leq v\leq1$ finishes
+the comparison. Therefore
+\begin{equation}
+0\leq-r'(t)\leq D:=31/480\qquad(0<t\leq7/10).
+\end{equation}
+Put $z=x^2/\ell^2$. The mean-value bound and an elementary integration give
+\begin{align}
+0\leq\frac{\int_0^\ell[r(|x-y|)-r(x+y)]\phi_L(y)dy}{\phi_L(x)}
+&\leq\frac{2D\ell^2(3/10-z/6+z^2/25)}{1-4z/5},\\
+\frac{2S_\phi\sinh(x/2)}{\phi_L(x)}
+&\leq\frac{(13/75)\ell^3\cosh^2(\ell/2)}{1-4z/5}.
+\end{align}
+Here $\int_0^\ell\min(x,y)\phi_L(y)dy
+=x\ell^2(3/10-z/6+z^2/25)$, and
+$S_\phi\leq(13/75)\ell^3\cosh(\ell/2)$.
+
+Let $\ell_*=7/20$. Since all loss bounds increase with $\ell$ and
+$\cosh^2(7/40)<33/32$, \eqref{eq:oddpotential} is bounded below by
+\begin{align}
+\mathcal V(z)={}&-\gamma_E-\log(7\pi/10)-\tfrac12\log(1-z)\notag\\
+&+\frac{\displaystyle 7/5-22z/15
+-2D\ell_*^2(3/10-z/6+z^2/25)
+-(13/75)\ell_*^3(33/32)}{1-4z/5}.
+\label{eq:oddscalar}
+\end{align}
+The exact rational interval calculation described in
+Appendix~\ref{app:round3} proves $\mathcal V(z)>1/100$ for all
+$0\leq z<1$. Thus the sign proof is a scalar estimate for an explicitly
+chosen polynomial, not a spectral certificate for the target operator.
+
+Expanding the difference square in \eqref{eq:oddfactor} now proves the
+identity on the odd smooth core, using \eqref{eq:foldedkernel} and the
+definition of $v_L$. One can first cut away the diagonal and then take the
+form limit. The cubic is positive on $(0,\ell)$; at zero, smooth odd
+inputs have a bounded quotient by it. The graph norm of the displayed
+factor equals the norm of the closed positive form. Closing from the
+core gives the stated domain and identity, and Lemma~\ref{lem:graded}
+applies.
+\end{proof}
+
+Reflection is an independently specified coherent operation here: in the
+original input variables the odd projection uses $f(x)-f(-x)$ before
+forming differences between two positive coordinates. This involves up to
+four original amplitudes. It is not a representation of the full form by
+the two-point factors excluded in Theorem~\ref{thm:pair}. The polynomial
+choice is an explicit trial weight, not an arithmetic selection principle
+for the even sector or for arbitrary depth. No novelty is claimed for the
+general ground-state transform used in the proof.
+
+\subsection{The first prime can supply essential stabilization}
+
+The diagonal accounting in \eqref{eq:primebudget} has a concrete failure
+within the first-prime interval.
+
+\begin{proposition}[A certified linear-input test]\label{prop:primestabilizes}
+At $L=1$, put $f(x)=\sqrt{12}\,x$ on $(-1/2,1/2)$, so $\norm f=1$.
+With $P,F,c$ as in \eqref{eq:primebudget},
+\begin{equation}
+\Qgam_{0,1}[f]<-0.12,\qquad Q_{0,1}[f]>0.26,\qquad
+\Qgam_{0,1}[f]-c\ip f{(P+F)f}<-0.58.
+\label{eq:primesigns}
+\end{equation}
+Consequently the proposed remainder in \eqref{eq:primebudget} is not
+nonnegative throughout the first-prime interval.
+\end{proposition}
+\begin{proof}
+For the unit linear input on a general interval, the autocorrelation is
+$r_f(t)=1-3t/L+2t^3/L^3$ for $0\leq t\leq L$. At $L=1$ only $n=2$
+is active. Writing $a=\log2$ gives the exact expressions
+\[
+Q_{0,1}[f]=\Qgam_{0,1}[f]-2c(1-3a+2a^3),\qquad
+c\ip f{(P+F)f}=c\bigl[1-(2a-1)^3\bigr].
+\]
+The jump formula evaluates $\Qgam_{0,1}[f]$ by a convergent exponential
+mass sum. Appendix~\ref{app:round3} gives that sum and proved tails.
+Exact rational interval evaluation yields
+\begin{align*}
+\Qgam_{0,1}[f]&\in[-0.137027,-0.128850],\\
+Q_{0,1}[f]&\in[0.268205,0.276382],\\
+\Qgam_{0,1}[f]-c\ip f{(P+F)f}&\in[-0.598903,-0.590726].
+\end{align*}
+These displayed intervals are rounded outward; the checker asserts the
+stronger rational inequalities \eqref{eq:primesigns}. The linear input is
+in the logarithmic form domain. Core approximation preserves the strict
+signs, so endpoint discontinuities do not create the obstruction.
+\end{proof}
+
+This proposition proves signs on a specified input, not positivity of the
+full first-prime operator on every input. In particular, the gamma piece
+itself cannot be an independently positive additive subsystem throughout
+that interval: the arithmetic coupling rescues this odd direction.
+
+\subsection{Which reflected channel the prime stabilizes}
+
+For $\log2<L\leq\log3$, still write $a=\log2$ and $\ell=L/2$. On
+$L^2(0,\ell)$ let $J=(a-\ell,\ell)$, let $P_J$ multiply by
+$\mathbf1_J$, and define the partial reflection
+\begin{equation}
+(\mathcal R_a g)(x)=\mathbf1_J(x)g(a-x),\qquad
+\Pi_\pm=\tfrac12(P_J\pm\mathcal R_a).
+\end{equation}
+The operators $\Pi_\pm$ are orthogonal projections onto the symmetric
+and antisymmetric components of the cap $J$. Directly folding the
+translation gives, for an input of parity $\varepsilon$,
+\begin{equation}
+-c\ip f{(T_a+T_a^*)f}
+=-\varepsilon c\ip g{\mathcal R_a g}
+=-\varepsilon c\bigl(\norm{\Pi_+g}^2-\norm{\Pi_-g}^2\bigr).
+\label{eq:primefold}
+\end{equation}
+Thus the prime adds $c$ to the symmetric cap channel of the odd sector
+and subtracts $c$ from its antisymmetric channel. The signs reverse in
+the even sector. In these coordinates the independent-edge square is
+$2c\norm{\Pi_{-\varepsilon}g}^2$, and the remainder subtracts
+$c\norm{P_Jg}^2$. This exhibits precisely where that allocation loses
+positivity. Equation~\eqref{eq:primefold} is an exact coherent matching
+rule, but one of its two channels is still negative. A successful
+completion must control both against the gamma part jointly.
+
+\section{The input space of a global norm identity}
+\label{sec:global}
+
+Let $Q_W$ denote the full central Weil form on $C_c^\infty(\R)$ with no
+fixed support bound. The following restriction does not concern the
+finite-interval closed forms.
+
+\begin{theorem}[No closable factor on ordinary whole-line $L^2$]
+\label{thm:global}
+There is no closable linear map $A:L^2(\R)\supset\Dom A\to\mathcal K$
+to a positive Hilbert space, with $C_c^\infty(\R)\subset\Dom A$, such that
+\begin{equation}
+\norm{Af}_{\mathcal K}^2=Q_W[f]
+\quad\text{for every }f\in C_c^\infty(\R).
+\end{equation}
+\end{theorem}
+\begin{proof}
+Such an identity implies Weil positivity and hence RH; we use the standard
+Weil criterion as presented in \cite{SuzukiHilbert,SuzukiScrew}.
+Under RH the explicit formula becomes
+\begin{equation}
+Q_W[f]=\sum_\gamma m_\gamma|\widehat f(\gamma)|^2,
+\label{eq:sampling}
+\end{equation}
+where distinct zero ordinates are indexed by $\gamma$ and $m_\gamma$
+is their multiplicity. Fix an ordinate $\gamma_0$ and choose
+$\phi\in C_c^\infty(\R)$ with $\widehat\phi(0)=1$. Set
+\begin{equation}
+f_N(x)=N^{-1}e^{i\gamma_0x}\phi(x/N).
+\end{equation}
+Then $\norm{f_N}^2=N^{-1}\norm\phi^2\to0$, while
+$\widehat f_N(\gamma)=\widehat\phi(N(\gamma-\gamma_0))$.
+These sampling vectors converge in $\ell^2(m_\gamma)$ to the vector
+equal to one at $\gamma_0$ and zero elsewhere. To justify norm
+convergence, use isolation of $\gamma_0$, rapid Fourier decay, and the
+zero-counting estimate $N_\zeta(T)=O(T\log T)$ to obtain a summable
+dominating sequence, uniform for $N\geq1$.
+
+Consequently $Q_W[f_N-f_M]\to0$, but $Q_W[f_N]\to m_{\gamma_0}>0$.
+The assumed norm identity makes $Af_N$ a Cauchy sequence with nonzero
+limiting norm while $f_N\to0$. This contradicts closability.
+\end{proof}
+
+The argument is an unconditional impossibility proof: assuming the factor
+first supplies RH and then yields a contradiction. It neither assumes RH
+as a result of this investigation nor challenges the possibility of norm
+identities on other input spaces. Related measure-theoretic closability
+questions occur in Wiener--Hopf form theory \cite{Yafaev}; the proof here
+is direct for the present sampling measure.
+
+\begin{corollary}
+A bounded embedding $J:L^2(\R)\to\HH_B$ followed by a closed supercharge
+component $S$ cannot give such a global factor if
+$C_c^\infty(\R)\subset\Dom(SJ)$.
+\end{corollary}
+\begin{proof}
+The composition $SJ$ is closed: if $f_n\to f$ and $SJf_n\to g$, then
+$Jf_n\to Jf$, and closedness of $S$ applies. Theorem~\ref{thm:global}
+therefore excludes the claimed norm identity.
+\end{proof}
+
+There is no contradiction with the kinetic tower, which realizes a
+different form with a continuous Fourier density. There is also no
+contradiction with finite-interval factors: the supports of $f_N$ grow
+without bound. Test-function topologies, other independently defined
+positive spaces, and unbounded boundary observables remain possible.
+Adding a fixed finite number of ordinary Sobolev derivatives to the
+whole-line norm does not remove this particular sequence: its derivative
+norms still tend to zero.
+
+\section{What a useful supersymmetric completion must establish}
+\label{sec:program}
+
+\subsection{The boundary object must be specified}
+
+Three possible constructions need different proofs. A direct factor
+requires $Q[f]=\norm{Af}^2$ on its specified input space. A minimized
+bulk energy requires an identity with an infimum over auxiliary fields,
+including the correct endpoint conditions. A spectral response requires
+identification of a resolvent or covariance with the zeta function of
+interest. Positivity of a Hamiltonian does not identify these objects
+with one another.
+
+For example, $H\geq0$ and a Hilbert-space vector $b$ imply
+\[
+\ip b{(H-z)^{-1}b}=\int_0^\infty\frac{d\mu_b(\lambda)}{\lambda-z},
+\qquad d\mu_b\geq0.
+\]
+This is a useful model of a positive response, but an actual boundary
+trace can be unbounded and can require a different formulation. To use
+such a mechanism for zeta, the exact response and normalization must be
+derived from independently specified dynamics.
+
+The shifted transfer family has the form
+\begin{equation}
+\Theta_\omega(z)=
+\frac{\xi(1/2-\omega-iz)}{\xi(1/2+\omega-iz)},
+\qquad
+\xi(s)=\tfrac12s(s-1)\pi^{-s/2}\Gamma(s/2)\zeta(s).
+\end{equation}
+Increasing support length adds logarithmic arithmetic delays; changing
+$\omega$ changes the shifted family. Neither operation is automatically
+the extra coordinate of an extension problem. The RG and bulk--boundary
+language remains motivation until a theorem identifies the corresponding
+dynamics and observables.
+
+\subsection{Two concrete milestones}
+
+The first milestone is a coherent positive model reproducing the complete
+prime-free form throughout the known positive slab, with the fixed
+normalization and pole terms in \eqref{eq:remaining}. The kinetic tower is
+a controlled ingredient, and the comparison theorem excludes a broad
+family of simple completions. The odd central sector now has the explicit
+factor of Theorem~\ref{thm:oddcompletion}; the even sector and a comparable
+shift-uniform completion remain to be constructed. A proposed model should be tested against
+both its off-diagonal kernel and its diagonal terms.
+
+The second milestone is the first prime. The joint model must derive the
+indefinite correction and the diagonal accounting in
+\eqref{eq:primebudget}; appending an independent positive square or using
+\eqref{eq:schurminus} with the original boundary block fixed is
+insufficient. Proposition~\ref{prop:primestabilizes} shows that the
+independent-edge remainder actually fails, while \eqref{eq:primefold}
+identifies the channels requiring joint control. Beyond the first prime,
+overlapping delays impose further
+compatibility conditions not investigated here.
+
+An arithmetic or geometric rule forcing coherent mixing would be
+substantive progress. A Ward identity could contribute if the model,
+domain, and invariant positive inner product were independently defined
+and the identity forced the required equality. At present, no such rule
+has been found. A fitted positive matrix, a spectral square root of the
+target, or an inverse realization conditioned on positivity does not
+provide this missing explanation.
+
+\subsection{What should be retained if this route stops}
+
+The earlier higher-dimensional investigations warn that additional
+coordinates can reproduce existing information without strengthening it.
+The present calculations refine that lesson. Auxiliary dynamics can
+change the mathematical class of a boundary operator, as demonstrated
+by the gamma tower. Coherent mixing can change the class of positive
+boundary couplings, as demonstrated by \eqref{eq:coherent}. Both are
+real possibilities, but neither selects the arithmetic data needed for RH.
+
+The obstructions should be used at their stated scope. A failure of
+pairwise squares motivates testing coherent amplitudes; it does not
+establish a successful coherent completion. A domain obstruction
+requires a different boundary topology; merely renaming the original
+$L^2$ space as superspace does not change it. These are design constraints
+for future explorations rather than evidence that a global proof is near.
+
+\appendix
+\section{Exact rational certificate for the comparison test}
+\label{app:certificate}
+
+The sign used in Theorem~\ref{thm:pair} is verified with rational interval
+arithmetic in the companion file \texttt{check\_round2.py}. This appendix
+states the finite calculation and all truncation bounds.
+
+Let $L=2/3$, $b=1/3$, $N=32$, and $a_k=2k+1/2$. Define
+\begin{equation}
+J(\lambda)=\int_b^L(L-t)e^{-\lambda t}dt
+=\frac{e^{-\lambda b}[\lambda(L-b)-1]+e^{-\lambda L}}{\lambda^2}.
+\end{equation}
+Using \eqref{eq:Rsplit},
+\begin{equation}
+\int_b^L(L-t)R(t)dt=J(-1/2)-\sum_{k=1}^\infty J(a_k).
+\end{equation}
+The required infinite sums are bounded by
+\begin{align}
+\frac1{2a_N}
+&\leq\sum_{k=N}^\infty a_k^{-2}
+\leq\frac1{2a_N}+a_N^{-2},\label{eq:tailpower}\\
+0&\leq\sum_{k=N}^\infty\frac{e^{-a_kL}}{a_k^2}
+\leq\frac{e^{-a_NL}}{a_N^2(1-e^{-2L})},\label{eq:tailexp}\\
+0&\leq\sum_{k=N}^\infty J(a_k)
+\leq\frac{(L-b)e^{-a_Nb}}{a_N(1-e^{-2b})}.\label{eq:tailJ}
+\end{align}
+Equation~\eqref{eq:tailpower} is the integral bound for a decreasing
+inverse-square function. Equation~\eqref{eq:tailexp} follows by bounding
+all denominators below by $a_N^2$ and summing the geometric numerator.
+For \eqref{eq:tailJ}, bound $L-t\leq L-b$, extend the exponential
+integral to infinity, and then sum its geometric majorant.
+
+For rational $x\geq0$, the checker encloses $e^x$ by its Taylor
+polynomial through degree $m=160$. If $x<m+2$, the remaining positive
+tail is at most
+\begin{equation}
+\frac{x^{m+1}}{(m+1)!}\frac1{1-x/(m+2)}.
+\end{equation}
+Negative arguments are handled by reciprocal intervals. All arguments
+in this calculation obey the required bound.
+For rational $x\geq1$, put $z=(x-1)/(x+1)$. Then
+\begin{equation}
+\log x=2\sum_{k=0}^{n-1}\frac{z^{2k+1}}{2k+1}+r_n,
+\quad 0\leq r_n\leq
+\frac{2z^{2n+1}}{(2n+1)(1-z^2)},
+\end{equation}
+with $n=48$. The alternating arctangent series, with 24 terms, and
+Machin's formula
+$\pi=16\arctan(1/5)-4\arctan(1/239)$ give rational endpoints for $\pi$.
+The logarithm endpoints are then evaluated by monotonicity. Finally,
+the elementary integral-test bounds
+\begin{equation}
+H_{128}-\log128-1/128<\gamma_E<H_{128}-\log128,
+\qquad \log128=7\log2,
+\end{equation}
+are sufficient; no high-precision tabulated value of $\gamma_E$ is used.
+
+Combining these intervals with \eqref{eq:constantgamma} and
+\eqref{eq:U} produces an enclosure for $\mathcal U$ with approximate
+endpoints
+\begin{equation}
+[-0.0494803686403,\,-0.0409467581007].
+\end{equation}
+The actual comparison in the checker is the exact rational assertion
+\begin{equation}
+\mathcal U_{\mathrm{upper}}<-1/25.
+\end{equation}
+The displayed decimals are for interpretation only. All additions,
+multiplications, divisions, and interval endpoint comparisons in this
+certificate use exact fractions. This is a reproducible computational
+proof of a sign in the stated normalization, subject to review of the
+short checker and the elementary bounds above.
+
+\section{Rational certificates for the third investigation}
+\label{app:round3}
+
+The file \texttt{checks/round3/check\_round3.py} reuses the elementary
+fraction interval operations and exponential, logarithm, and arctangent
+enclosures of the second checker. Logarithm arguments are first reduced
+by powers of two to $[1,2]$, so the logarithm series parameter has absolute
+value at most $1/3$. The same $H_{128}$ bounds for $\gamma_E$ are used.
+The program rejects optimized Python mode, since its imported helper
+contains assertions. Its reported decimal values are explanatory; all
+certifying comparisons are between fractions.
+
+\subsection{The entire odd potential interval}
+
+For \eqref{eq:oddscalar}, the checker evaluates interval extensions on
+each of the 1980 closed cells
+\[
+[k/2000,(k+1)/2000],\qquad k=0,\ldots,1979.
+\]
+Their union is $[0,99/100]$. Every interval lower endpoint exceeds $1/100$;
+the smallest is approximately $0.0176841$. On $[99/100,1)$ it bounds
+$-\log(1-z)$ below by $\log100$, and evaluates the remaining rational
+function on the closed interval $[99/100,1]$. This yields a lower bound
+approximately $0.547915$. The denominator $1-4z/5$ is bounded below by
+$1/5$ everywhere. The inequality $\cosh^2(7/40)<33/32$ is also verified
+by fractions. These are interval covers of the full continuum, not
+samples at grid points. The proof of the kernel estimate and the reduction
+to this scalar function are in Theorem~\ref{thm:oddcompletion}.
+
+\subsection{The linear-input signs}
+
+For the unit linear input at length $L$, the contribution of mass $m>0$
+to its kinetic jump form is
+\begin{equation}
+I_m(L)=\frac6{Lm^2}-\frac{24}{L^3m^4}
++e^{-mL}\left(\frac6{Lm^2}+\frac{24}{L^2m^3}
+                         +\frac{24}{L^3m^4}\right).
+\end{equation}
+This follows by integrating
+$2e^{-mt}(3t/L-2t^3/L^3)$ from zero to $L$ and adding the full-output
+tail $2e^{-mL}/m$. Thus
+\begin{equation}
+\Qgam_{0,L}[f]=w_0+\sum_{k=0}^\infty I_{a_k}(L)
+-\frac{24}{L^3}\bigl[2L\cosh(L/4)-8\sinh(L/4)\bigr]^2.
+\end{equation}
+The checker sets $L=1$, sums $k=0,\ldots,63$, and writes $m=a_{64}$.
+The two inverse-power tails satisfy
+\[
+\frac1{2m}\leq\sum_{k=64}^\infty a_k^{-2}\leq\frac1{2m}+m^{-2},
+\qquad
+\frac1{6m^3}\leq\sum_{k=64}^\infty a_k^{-4}
+\leq\frac1{6m^3}+m^{-4}.
+\]
+The positive exponential tail is at most
+\[
+\frac{e^{-mL}}{1-e^{-2L}}
+\left(\frac6{Lm^2}+\frac{24}{L^2m^3}+\frac{24}{L^3m^4}\right).
+\]
+Combining these signed bounds proves the gamma enclosure. The arithmetic
+coefficient is enclosed as $c=(\log2)e^{-(\log2)/2}$; the autocorrelation
+and diagonal debit in Proposition~\ref{prop:primestabilizes} then give the
+remaining enclosures with no square-root oracle or zero data.
+
+\subsection{Separate identity diagnostics and controls}
+
+At two quadrature orders and three lengths, the checker compares the
+full-output autocorrelation formula against the folded cubic factor on a
+complex odd polynomial. It integrates the endpoint logarithm by exact
+polynomial moment formulas before numerical quadrature of the smooth
+remainder. The largest observed absolute discrepancy is below $6\cdot10^{-16}$
+for the unnormalized test inputs. These are floating-point identity checks,
+not the sign certificate. The cap-reflection identity is also checked on
+complex vectors. Positive symmetric and negative antisymmetric cap inputs
+are both tested, preventing a mistaken assertion that the prime correction
+is nonnegative on the entire odd sector.
+
+\section{Verification, provenance, and remaining review}
+\label{app:verification}
+
+The supplied \texttt{checks/} directory contains the two original
+diagnostic programs, the third investigation checker, and recorded outputs. They use Python and
+NumPy and require no zeta-zero data. The second program's rational
+certificate uses only standard-library fraction arithmetic. Its other
+calculations, and all calculations in the first program, are separate
+floating-point diagnostics.
+
+The first program checks the digamma/jump normalization, the full-output
+difference identity on complex polynomial inputs at two quadrature
+orders, and the first-prime projection algebra. The second checks the
+mass expansion at six frequencies against an independent digamma
+evaluation, the auxiliary minimization, the coherent model and its
+graded algebra, and the constant-input integrals at two quadrature
+orders. The observed identity discrepancies are consistent with the
+stated numerical truncations and floating-point precision. These
+diagnostics do not certify an extension of the small-window theorem.
+
+The normalization was taken from the project manuscripts
+\cite{BakerFirst,BakerWeil} at repository commit
+\texttt{c6eb19cc47b972b410b077be5af4e86a112afd95}.
+The researcher's previously reported Fourier checks were accepted as
+context; their large archive outputs were not required for the present
+derivations. The data archive is named \texttt{szp-archive}.
+Version 0.1 was prepared outside the source repository. Version 0.2 adds
+the third investigation on branch \texttt{susy-positivity}, starting from
+commit \texttt{4de517e}. No external archive or synced project document was
+modified by this continuation.
+
+The introductory history is based on the researcher's account and the
+project brief. The mathematical results consolidate the two initial exploratory
+investigations and the third continuation dated 11 September 2026. AI assistance was used in their derivation,
+checking, and exposition, and in preparing this manuscript. No external
+author was contacted and no independent review is implied.
+
+Before this could be treated as a submission draft, the priority review
+should compare the small-window argument with existing Dirichlet-form
+methods and the pairwise restriction with established comparison-matrix
+and factor-width results. The domains of the infinite tower and the
+continuum pairwise definition also merit specialist review. The present
+paper makes no general continuum Schur-limit theorem and no claim to
+have constructed an interacting superspace theory.
+
+One formula-convention question concerning negative time in a published
+norm-map construction was recorded during the first investigation.
+It is not needed for any proof here and is retained in the companion
+research notes for further checking, rather than presented as an
+established correction to that work.
+
+\begin{thebibliography}{9}
+\raggedright
+
+\bibitem{BakerFirst}
+E. Baker, \emph{Archimedean first-slab positivity for shifted zeta canonical systems}, project working
+manuscript, 2026. Repository source:
+\href{../../../../shifted-zeta/first-slab-positivity/first_slab_positivity.tex}{First-slab positivity manuscript source}.
+The source file, rather than a public publication, is the cited object.
+
+\bibitem{BakerWeil}
+E. Baker, \emph{Finite-horizon Weil coercivity and shifted-zeta contraction},
+working draft, version 0.4, 10 September 2026. Repository source:
+\href{../../../../shifted-zeta/weil-depth/manuscript/finite_horizon_weil.tex}{Weil-depth manuscript source}.
+
+\bibitem{DLMF}
+NIST Digital Library of Mathematical Functions, Chapter 5,
+especially \S\S5.7, 5.9, and 5.11.
+\url{https://dlmf.nist.gov/5}.
+
+\bibitem{KwasnickiMucha}
+M. Kwa\'snicki and J. Mucha,
+\emph{Extension technique for complete Bernstein functions of the Laplace
+operator}, Journal of Evolution Equations (2018).
+\href{https://doi.org/10.1007/s00028-018-0444-4}{doi:10.1007/s00028-018-0444-4}.
+\href{https://arxiv.org/abs/1707.02475}{arXiv:1707.02475}.
+
+\bibitem{Singleton}
+A. Singleton, \emph{Superconformal quantum mechanics and the exterior
+algebra}, 2014. \href{https://arxiv.org/abs/1403.4933}{arXiv:1403.4933}.
+
+\bibitem{SuzukiHilbert}
+M. Suzuki, \emph{On the Hilbert space derived from the Weil distribution},
+2025. \href{https://doi.org/10.4153/S0008414X25101739}{doi:10.4153/S0008414X25101739}.
+\href{https://arxiv.org/abs/2301.00421v3}{arXiv:2301.00421v3}.
+
+\bibitem{SuzukiScrew}
+M. Suzuki, \emph{Weil's quadratic form via the screw function}, 2026.
+\href{https://arxiv.org/abs/2606.09096v1}{arXiv:2606.09096v1}.
+This is the version consulted during the exploratory investigation;
+a later revision exists and remains to be compared in the priority audit.
+
+\bibitem{Yafaev}
+D. R. Yafaev, \emph{On semibounded Wiener--Hopf operators}, 2016.
+\href{https://arxiv.org/abs/1606.01361}{arXiv:1606.01361}.
+
+\end{thebibliography}
+\end{document}

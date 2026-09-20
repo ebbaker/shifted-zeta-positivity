@@ -1,6 +1,6 @@
 # Quantum theory landscape for the SUSY positivity program
 
-This is the 13 September survey. Its proposed direction was developed in [arithmetic ground-state geometry](../../investigations/arithmetic-ground-state-geometry/README.md) and subsequently reassessed in the [14 September assessment](../ASSESSMENT.md).
+This is the 13 September survey. Its proposed direction was developed in [arithmetic ground-state geometry](../../investigations/previous/arithmetic-ground-state-geometry/README.md) and subsequently reassessed in the [14 September assessment](../ASSESSMENT.md).
 
 Start with the [research report](REPORT.md). It compares eleven families and narrows the next construction to arithmetic boundary/defect operations with dynamical supersymmetric ground-state geometry. No existing named theory examined here supplies the full Weil norm identity.
 
@@ -23,6 +23,6 @@ The literature supplies the named theories and established geometry cited in the
 
 The finite-prime amplitude, its positive normalized jump energy, the contact/pole distinction, and the scoped extension obstructions are established within the specified models. A physical positive realization of the complete Weil form remains unconstructed. No full-form positivity interval, spectral convergence theorem, or RH claim is made. No numerical positivity search was used to select the recommendation.
 
-This package continues the [topological bulk investigation](../../investigations/topological-susy-bulk/README.md) and its [quantum covariance audit](../../investigations/topological-susy-bulk/archive/notes/QUANTUM_COVARIANCE_AUDIT_AND_FINITE_BLOCK_OBSTRUCTION_20260913.md), while broadening beyond the earlier [candidate-bulk study](../candidate-bulk-theories/README.md). The existing manuscript, shared background, and historical calculations are not revised by this research package.
+This package continues the [topological bulk investigation](../../investigations/previous/topological-susy-bulk/README.md) and its [quantum covariance audit](../../investigations/previous/topological-susy-bulk/archive/notes/QUANTUM_COVARIANCE_AUDIT_AND_FINITE_BLOCK_OBSTRUCTION_20260913.md), while broadening beyond the earlier [candidate-bulk study](../candidate-bulk-theories/README.md). The existing manuscript, shared background, and historical calculations are not revised by this research package.
 
 All files are small Markdown sources. No third-party papers or large derived data are included. AI assistance was used in literature review, derivation, cross-review, and exposition.

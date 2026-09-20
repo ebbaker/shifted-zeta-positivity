@@ -2,7 +2,7 @@
 
 11 September 2026; navigation updated 14 September 2026 · About 15–20 minutes
 
-This overview explains the common research objective, how possible approaches fit together, and the choices ahead. Start with the [standalone background](background.pdf) for the shared mathematical framework. The [positive-factorizations attempt](investigations/positive-factorizations/README.md) is one approach within this program; its [manuscript](investigations/positive-factorizations/manuscript.pdf) contains the detailed proofs of that attempt. Its [round-4 review](investigations/positive-factorizations/archive/progress-reports/REVIEW_round4_20260911.md) records subsequent results. The opening sections clarify the RH criterion, the role of the shift, and the connection to storage-depth. Later sections discuss this attempt and the preference to search for a global mechanism. Future approaches belong alongside it under `investigations/<descriptive-name>/`; see the [program guide](README.md).
+This overview explains the common research objective, how possible approaches fit together, and the choices ahead. Start with the [standalone background](background.pdf) for the shared mathematical framework. The [positive-factorizations attempt](investigations/previous/positive-factorizations/README.md) is one approach within this program; its [manuscript](investigations/previous/positive-factorizations/manuscript.pdf) contains the detailed proofs of that attempt. Its [round-4 review](investigations/previous/positive-factorizations/archive/progress-reports/REVIEW_round4_20260911.md) records subsequent results. The opening sections clarify the RH criterion, the role of the shift, and the connection to storage-depth. Later sections discuss this attempt and the preference to search for a global mechanism. Future approaches belong alongside it under `investigations/<descriptive-name>/`; see the [program guide](README.md).
 
 This overview retains the original research framing and positive-factorizations survey. For later results through ground-state note 20, the standalone finite-response note, and the revised research priorities, use the [current program index](README.md) and [14 September assessment](brainstorm/ASSESSMENT.md).
 
@@ -26,7 +26,7 @@ Here the input space consists of smooth functions supported strictly inside the 
 
 The notation has three separate roles. **The zero in \(Q_{0,L}\) fixes the shift at \(\omega=0\); \(L\) is the total support length; and \(f\) is the input being tested.** Positivity is a statement about every input, not a single number obtained by choosing \(L\). It means nonnegativity, \(Q[f]\geq0\). A positive bound \(Q_{0,L}[f]\geq m_L\|f\|^2\) is useful for estimates, but the criterion does not require one common positive bound valid for all lengths.
 
-The target is the **full central form** defined in Section 2 of the [positive-factorizations manuscript](investigations/positive-factorizations/manuscript.pdf), with its fixed normalization, gamma and pole terms, and prime contributions. The gamma form \(Q^\gamma_{0,L}\) agrees with it only for \(L\leq\log2\), when no prime delay acts. At longer lengths, a factor for gamma alone does not establish the required Weil positivity.
+The target is the **full central form** defined in Section 2 of the [positive-factorizations manuscript](investigations/previous/positive-factorizations/manuscript.pdf), with its fixed normalization, gamma and pole terms, and prime contributions. The gamma form \(Q^\gamma_{0,L}\) agrees with it only for \(L\leq\log2\), when no prime delay acts. At longer lengths, a factor for gamma alone does not establish the required Weil positivity.
 
 ### Why the papers also contain a shift parameter
 
@@ -38,7 +38,7 @@ The shifted-zeta program introduces an auxiliary family in addition to this cent
 \qquad 0<\omega\leq\tfrac12,
 \]
 
-where \(\xi\) is the completed zeta function and \(z\) is the spectral variable. The parameter \(\omega\) shifts the two arguments on opposite sides of the central argument. Its finite-interval action is written \(V_{\omega,L}\). Increasing \(L\) allows longer inputs and more prime delays; varying \(\omega\) changes the transfer applied to those inputs. These are distinct operations. See Section 10 of the [positive-factorizations manuscript](investigations/positive-factorizations/manuscript.pdf) and Section 2 of [storage-depth](../shifted-zeta/storage-depth/manuscript/storage_depth.pdf).
+where \(\xi\) is the completed zeta function and \(z\) is the spectral variable. The parameter \(\omega\) shifts the two arguments on opposite sides of the central argument. Its finite-interval action is written \(V_{\omega,L}\). Increasing \(L\) allows longer inputs and more prime delays; varying \(\omega\) changes the transfer applied to those inputs. These are distinct operations. See Section 10 of the [positive-factorizations manuscript](investigations/previous/positive-factorizations/manuscript.pdf) and Section 2 of [storage-depth](../shifted-zeta/storage-depth/manuscript/storage_depth.pdf).
 
 Three related objects must be distinguished:
 
@@ -135,7 +135,7 @@ The desired result could therefore be a single construction or theorem valid for
 
 ## 2. The positive-factorizations attempt: how its manuscript sections fit together
 
-The section numbers below refer to [manuscript v0.2](investigations/positive-factorizations/manuscript.pdf). Its mathematical statements remain the baseline; the later background results and strategic discussion are identified separately.
+The section numbers below refer to [manuscript v0.2](investigations/previous/positive-factorizations/manuscript.pdf). Its mathematical statements remain the baseline; the later background results and strategic discussion are identified separately.
 
 | Section | High-level summary and role |
 |---|---|
@@ -153,7 +153,7 @@ The section numbers below refer to [manuscript v0.2](investigations/positive-fac
 
 The overall argument moves from **defining the target**, to **constructing positive ingredients**, to **excluding insufficient models**, and finally to **specifying what a successful completion must explain**. The odd factor is a concrete success within this process. It does not yet supply the rule connecting all lengths and all prime delays.
 
-The newer [shifted odd note](investigations/positive-factorizations/archive/progress-reports/SHIFTED_ODD_FACTOR_round4_20260911.md) extends Section 8 across the shift parameter. The [even-sector note](investigations/positive-factorizations/archive/progress-reports/EVEN_SECTOR_REDUCTION_round4_20260911.md) establishes a positive subspace and isolates the remaining even condition. These results have not been incorporated into the manuscript.
+The newer [shifted odd note](investigations/previous/positive-factorizations/archive/progress-reports/SHIFTED_ODD_FACTOR_round4_20260911.md) extends Section 8 across the shift parameter. The [even-sector note](investigations/previous/positive-factorizations/archive/progress-reports/EVEN_SECTOR_REDUCTION_round4_20260911.md) establishes a positive subspace and isolates the remaining even condition. These results have not been incorporated into the manuscript.
 
 ## 3. What is established, what remains, and ideas for proceeding
 
@@ -169,7 +169,7 @@ The newer [shifted odd note](investigations/positive-factorizations/archive/prog
 
 **We have identified why a tempting even simplification is unsafe.** Replacing the smooth kernel and pole amplitude by constants makes a simple even polynomial have negative energy in the simplified model. Those apparently small details can determine the sign and must be retained or controlled.
 
-These are working mathematical results with written derivations. All three original checkers were replayed successfully. The new scalar certificates also pass, with separate floating-point identity diagnostics. Independent specialist review and a complete priority audit remain outstanding. No all-length positivity theorem or RH proof has been obtained. The new factors do not extend the positivity range already certified by the earlier finite-depth work. See the [review](investigations/positive-factorizations/archive/progress-reports/REVIEW_round4_20260911.md) and [verification record](investigations/positive-factorizations/archive/progress-reports/REPRODUCIBILITY_round4_20260911.md).
+These are working mathematical results with written derivations. All three original checkers were replayed successfully. The new scalar certificates also pass, with separate floating-point identity diagnostics. Independent specialist review and a complete priority audit remain outstanding. No all-length positivity theorem or RH proof has been obtained. The new factors do not extend the positivity range already certified by the earlier finite-depth work. See the [review](investigations/previous/positive-factorizations/archive/progress-reports/REVIEW_round4_20260911.md) and [verification record](investigations/previous/positive-factorizations/archive/progress-reports/REPRODUCIBILITY_round4_20260911.md).
 
 ### The outstanding challenges
 

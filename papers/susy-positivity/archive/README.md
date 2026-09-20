@@ -8,7 +8,7 @@ current index.
 
 | Earlier location | Current location |
 |---|---|
-| `papers/susy-positivity/attempts/positive-factorizations/` | [investigations/positive-factorizations/](../investigations/positive-factorizations/README.md) |
+| `papers/susy-positivity/attempts/positive-factorizations/` | [investigations/previous/positive-factorizations/](../investigations/previous/positive-factorizations/README.md) |
 | `papers/susy-positivity/REORGANIZATION_20260912.md` | [archive/REORGANIZATION_20260912.md](REORGANIZATION_20260912.md) |
 | `papers/susy-positivity/CONTINUATION_BULK_BOUNDARY_SUPERSPACE_20260912.md` | [brainstorm/continuation-notes/CONTINUATION_BULK_BOUNDARY_SUPERSPACE_20260912.md](../brainstorm/continuation-notes/CONTINUATION_BULK_BOUNDARY_SUPERSPACE_20260912.md) |
 | `papers/finite-response-weil-positivity/` | [manuscripts/finite-response-weil-positivity/](../manuscripts/finite-response-weil-positivity/README.md) |
@@ -26,3 +26,10 @@ their own indexes and preservation records. Historical hashes identify the
 bytes inspected at their recorded date; current package manifests identify
 the delivered files. Do not refresh historical fingerprints to conceal a
 later edit or interpret an old review's line numbers against current sources.
+
+## 20 September 2026 focus grouping
+
+The [new relocation record](REORGANIZATION_20260920.md) maps exactly five
+investigation folders into `investigations/previous/` and records preservation
+and current validation. Apply that prefix map after any earlier mapping above.
+Historical records retain their original paths and hashes.

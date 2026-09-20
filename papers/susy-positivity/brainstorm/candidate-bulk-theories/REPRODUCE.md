@@ -28,7 +28,7 @@ All seeds, coefficients, lengths, quadrature orders and mass cutoffs are printed
 From the repository root, choose a directory that does not yet exist:
 
 ```bash
-python3 papers/susy-positivity/investigations/positive-factorizations/checks/replay.py \
+python3 papers/susy-positivity/investigations/previous/positive-factorizations/checks/replay.py \
   --output-dir /tmp/susy-bulk-prior-replay
 ```
 

@@ -46,7 +46,7 @@ If the joint kernel block resists construction, the existing later report gives 
 s_L=a_L-\langle b_L,F_L^{-1}b_L\rangle,
 \]
 
-where $F_L\ge11/100$ is independently established on the even mean-zero subspace, $a_L$ is the constant-input energy, and $b_L$ is its coupling to that subspace. The residual estimate in [the even-sector report](../../investigations/positive-factorizations/archive/progress-reports/EVEN_SECTOR_REDUCTION_round4_20260911.md) gives a way to certify this scalar with an explicit response ansatz. This is a useful restricted theorem but does not by itself supply the arithmetic selection mechanism or a factor of $F_L$.
+where $F_L\ge11/100$ is independently established on the even mean-zero subspace, $a_L$ is the constant-input energy, and $b_L$ is its coupling to that subspace. The residual estimate in [the even-sector report](../../investigations/previous/positive-factorizations/archive/progress-reports/EVEN_SECTOR_REDUCTION_round4_20260911.md) gives a way to certify this scalar with an explicit response ansatz. This is a useful restricted theorem but does not by itself supply the arithmetic selection mechanism or a factor of $F_L$.
 
 ## What remains before a full arithmetic realization
 

@@ -39,7 +39,7 @@ of the [shared background](../../background.pdf).
 
 It exists because every candidate this program has tested so far was asked to
 reproduce a *value*, and Section 6.5 of the
-[inverse-bulk manuscript](../inverse-bulk-realization/manuscript.pdf) showed how
+[inverse-bulk manuscript](../previous/inverse-bulk-realization/manuscript.pdf) showed how
 cheap values are: the states reachable by one magnetic insertion are every
 function analytic past the unit circle. A flow is rigid --- a generator and an
 initial condition determine it, and there is nothing left to tune --- so matching
@@ -227,20 +227,20 @@ This investigation inherits their constraints and must not re-derive them.
   the [review of the same day](reviews/review_claude-fable-5-1_2026-09-17.md)
   lists corrections to this manuscript that have not yet been applied.
 
-- [Inverse bulk realization](../inverse-bulk-realization/README.md) supplies the
+- [Inverse bulk realization](../previous/inverse-bulk-realization/README.md) supplies the
   target, the rigidity of Corollary 2.2, the two-channel exclusion, and the
-  [exclusion map](../inverse-bulk-realization/notes/EXCLUSION_MAP_20260917.md)
+  [exclusion map](../previous/inverse-bulk-realization/notes/EXCLUSION_MAP_20260917.md)
   with each scope clause made explicit. Two entries of that map govern the work
   here: no accumulated exclusion touches any actual gauge theory, and the
   exclusions that do exist are statements about *channel decompositions*, which
   a flow is not --- so they neither block this direction nor may be quoted as if
   they did.
-- [Source selection rules](../source-selection-rules/README.md) supplies the nine
+- [Source selection rules](../previous/source-selection-rules/README.md) supplies the nine
   necessary conditions a candidate must satisfy. Rule 2 (unboundedness) is what
   killed the Wilson-*loop* benchmark; rule 7 (criticality) is the decisive
   question for this direction and is not settled here; rule 9 (the jump
   structure) is realized on the connection by the manuscript's Section 6.4.
-- The [gauge-transfer test](../inverse-bulk-realization/notes/GAUGE_TRANSFER_TEST.md)
+- The [gauge-transfer test](../previous/inverse-bulk-realization/notes/GAUGE_TRANSFER_TEST.md)
   already rejected literal Wilson-loop winding as the prime repetition law, in a
   rigorously constructed two-dimensional Yang--Mills control. That exclusion is
   about winding, not about lines.

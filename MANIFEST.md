@@ -21,9 +21,10 @@ papers/shifted-zeta/*/{README,STATUS,VERIFICATION_STATUS}.md  (where applicable;
 papers/misc/rh-detector/{README,STATUS}.md
 papers/susy-positivity/{README,PROGRAM_OVERVIEW}.md (shared program guide)
 papers/susy-positivity/background{,_section}.tex + background.pdf
-papers/susy-positivity/CONTINUATION_BULK_BOUNDARY_SUPERSPACE_20260912.md
-papers/susy-positivity/attempts/positive-factorizations/** (manuscript and support)
-papers/susy-positivity/{REORGANIZATION_20260912.md,validation/} (fresh verification)
+papers/susy-positivity/brainstorm/continuation-notes/CONTINUATION_BULK_BOUNDARY_SUPERSPACE_20260912.md
+papers/susy-positivity/investigations/{critical-path,wilson-loewner,wilson-lines,loewner,fractional-dimension}/**
+papers/susy-positivity/investigations/previous/** (five complete earlier investigations)
+papers/susy-positivity/{archive/,validation/} (dated relocation maps and verification)
 papers/shifted-zeta/weil-depth/**   (drafted in the repository, Sept 2026, on the branch finite-horizon-weil:
                         manuscript/, numerics/, archive/, ARCHIVES.md, CONTINUATION.md,
                         BUILD_RECORD.json, SHA256SUMS.txt; its ~122 MB of ball-matrix archives
@@ -72,7 +73,7 @@ Storage-depth closeout adds `papers/shifted-zeta/storage-depth/CLOSEOUT.md` and
 guides, and refreshes the current checksum records. Supersymmetric briefs
 were excluded from that closeout. The later `susy-positivity` work now lives
 under the shared program root `papers/susy-positivity/`. Its positive-factorizations
-manuscript and supporting notes are in `attempts/positive-factorizations/`,
+manuscript and supporting notes are in `investigations/previous/positive-factorizations/`,
 with historical drafts and round-4 reports preserved inside that attempt.
 
 ## Still to carry over (after the redaction checklist)

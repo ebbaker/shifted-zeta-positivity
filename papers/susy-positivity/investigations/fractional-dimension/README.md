@@ -227,7 +227,7 @@ no factor loses positivity anywhere.
   carries everything inherited here.
 - [Wilson lines](../wilson-lines/README.md) supplies the transfer, the flow
   identities, the dichotomy and the margins $m_L$, $\kappa_L$.
-- [Source selection rules](../source-selection-rules/README.md) supplies the
+- [Source selection rules](../previous/source-selection-rules/README.md) supplies the
   Lévy-jump presentation of the form.
 
 ## Conventions

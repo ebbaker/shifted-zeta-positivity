@@ -6,6 +6,7 @@ Historical draft snapshots retain their original README text and manifests.
 This checks package identity, not mathematical validity or PDF correspondence.
 """
 from pathlib import Path
+import argparse
 import hashlib
 import json
 import re
@@ -33,8 +34,17 @@ def digest(path):
 
 
 def main():
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('--working-tree', action='store_true',
+                        help='Check present tracked and nonignored new files before staging moves.')
+    args = parser.parse_args()
+    listing = ['git', 'ls-files', '-z']
+    if args.working_tree:
+        listing += ['--cached', '--others', '--exclude-standard']
     paths = [Path(p) for p in subprocess.check_output(
-        ['git', 'ls-files', '-z'], cwd=ROOT).decode().split('\0') if p]
+        listing, cwd=ROOT).decode().split('\0') if p]
+    if args.working_tree:
+        paths = sorted({p for p in paths if (ROOT / p).is_file()})
     tracked = set(paths)
     errors = []
     readmes = 0
@@ -95,7 +105,7 @@ def main():
                     f'Obsolete paper location remains: papers/{slug}')
 
     program = Path('papers/susy-positivity')
-    attempt = program / 'investigations/positive-factorizations'
+    attempt = program / 'investigations/previous/positive-factorizations'
     require_index_links(program / 'README.md', [attempt / 'README.md'])
     for obsolete in ('manuscript.tex', 'manuscript.pdf', 'STATUS.md',
                      'RESEARCH_BRIEF.md', 'INVESTIGATION_round3.md',
@@ -152,7 +162,8 @@ def main():
         for message in errors:
             print('FAIL:', message, file=sys.stderr)
         return 1
-    print(f'PASS: {len(paths)} tracked files within 1 MiB; '
+    file_scope = 'working-tree' if args.working_tree else 'tracked'
+    print(f'PASS: {len(paths)} {file_scope} files within 1 MiB; '
           f'{readmes} current READMEs have valid local links; '
           f'{snapshots} historical README snapshots preserved; '
           'paper indexes cover all groups; current paper and attempt manifests match.')

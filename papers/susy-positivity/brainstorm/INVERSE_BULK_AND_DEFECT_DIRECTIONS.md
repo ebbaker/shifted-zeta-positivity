@@ -1,7 +1,7 @@
 # Bulk realization and defect observables: overview of research directions
 
 14 September 2026. **Broad program map**, rather than a calculation for a
-particular field theory. The [inverse-bulk investigation](../investigations/inverse-bulk-realization/README.md)
+particular field theory. The [inverse-bulk investigation](../investigations/previous/inverse-bulk-realization/README.md)
 contains the detailed notes, current comparisons, and reproducible checks.
 
 ## 1. The objective and the intended contribution
@@ -64,7 +64,7 @@ theories should be treated as different cases here.
 The ranking below concerns opportunities for an exact matching calculation,
 not the likelihood of proving RH or the strength of existing construction
 theorems. The detailed literature assessment is indexed in the
-[inverse-bulk investigation](../investigations/inverse-bulk-realization/README.md).
+[inverse-bulk investigation](../investigations/previous/inverse-bulk-realization/README.md).
 
 | Direction | Reason to pursue it | Present status and next discriminating question |
 |---|---|---|
@@ -83,7 +83,7 @@ theorems. The detailed literature assessment is indexed in the
 
 ## 4. What earlier work contributes to the selection
 
-The [ground-state geometry investigation](../investigations/arithmetic-ground-state-geometry/README.md)
+The [ground-state geometry investigation](../investigations/previous/arithmetic-ground-state-geometry/README.md)
 and [finite-response manuscript](../manuscripts/finite-response-weil-positivity/README.md)
 provide a precise target and distinguish a positive reference model from
 the unresolved arithmetic matching. The

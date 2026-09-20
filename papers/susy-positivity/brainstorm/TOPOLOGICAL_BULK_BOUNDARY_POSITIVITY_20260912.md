@@ -6,7 +6,7 @@
 
 This note develops Edward Baker's suggestion that a bulk theory might be topological in a sense that makes its energy depend only on the boundary data. In that case, the infimum in the background's bulk–boundary formula could be replaced by evaluation on an extension. The formula is equation **1.14** in the current background; its stable TeX label is `eq:rh-bulk-target`.
 
-The shared definitions remain in the [background source](../background_section.tex) and [background PDF](../background.pdf). See also the [program overview](../PROGRAM_OVERVIEW.md), [superspace continuation](continuation-notes/CONTINUATION_BULK_BOUNDARY_SUPERSPACE_20260912.md), and [positive-factorizations manuscript](../investigations/positive-factorizations/manuscript.tex). This note records a possibility within that program, rather than revising those documents.
+The shared definitions remain in the [background source](../background_section.tex) and [background PDF](../background.pdf). See also the [program overview](../PROGRAM_OVERVIEW.md), [superspace continuation](continuation-notes/CONTINUATION_BULK_BOUNDARY_SUPERSPACE_20260912.md), and [positive-factorizations manuscript](../investigations/previous/positive-factorizations/manuscript.tex). This note records a possibility within that program, rather than revising those documents.
 
 ## 1. The idea and the distinctions that matter
 
@@ -447,7 +447,7 @@ The full form also contains \((\psi(1/4)-\log\pi)\|f\|^2\), the pole terms, and 
 
 ### 11.3 Existing restrictions remain applicable
 
-The [positive-factorizations manuscript](../investigations/positive-factorizations/manuscript.tex) contains working results that any new candidate should respect:
+The [positive-factorizations manuscript](../investigations/previous/positive-factorizations/manuscript.tex) contains working results that any new candidate should respect:
 
 - **Independent pairwise squares:** Section 6 excludes its precisely defined class of positive two-point representations already at a prime-free length. Finite positive networks assembled from such squares retain comparison positivity after the specified Schur eliminations. Calling hidden nodes topological does not change this algebra. Singular continuum limits require their own analysis; the finite result is not a theorem excluding every continuum model.
 - **Joint gamma and prime accounting:** Sections 7–8 show why adding isolated prime channels with a simple diagonal debit fails in the demonstrated case. The first prime can stabilize a negative gamma direction while acting with the opposite sign on another channel. A common energy must account for both effects.

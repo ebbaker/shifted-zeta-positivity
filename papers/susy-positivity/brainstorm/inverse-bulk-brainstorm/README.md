@@ -3,7 +3,7 @@
 Exploratory notes on the inverse-bulk realization programme. These are
 brainstorm material: assessments, proposed directions and preliminary
 numerics. Results belong in
-[`investigations/inverse-bulk-realization/`](../../investigations/inverse-bulk-realization/README.md).
+[`investigations/previous/inverse-bulk-realization/`](../../investigations/previous/inverse-bulk-realization/README.md).
 
 | Note | Contents |
 |---|---|
@@ -11,7 +11,7 @@ numerics. Results belong in
 | [Non-constructive existence and the theta symbol, 16 Sep 2026](NONCONSTRUCTIVE_EXISTENCE_AND_THETA_SYMBOL_20260916.md) | `b(tau^2) + w0 = 2 theta'(tau)`, so the gamma energy plus contact is integration against the smooth zero-counting measure; a sharper compression that splits the archimedean form by the sign of its symbol; a graded four-coefficient OPE checklist; the taxonomy of what non-constructive arguments can and cannot give; what the Klyuev and EKRS twisted-trace classifications deliver (finite-moment determination, and a budget on prime parameters); a family exclusion for Bloch-lifted circle weights. |
 
 These two notes were the starting point of the
-[source selection rules](../../investigations/source-selection-rules/README.md)
+[source selection rules](../../investigations/previous/source-selection-rules/README.md)
 investigation, where their results are restated with proofs and checks.
 They are retained as written; where they conflict with that folder, that
 folder is current. One conjecture of the second note -- a budget on prime

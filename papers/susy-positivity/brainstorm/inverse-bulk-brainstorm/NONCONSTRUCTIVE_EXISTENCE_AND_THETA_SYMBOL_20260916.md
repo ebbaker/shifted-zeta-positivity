@@ -6,7 +6,7 @@ the two directions singled out there: non-constructive existence (§4D of that
 note) and the OPE (§4F).
 
 Manuscript references are to
-[`investigations/inverse-bulk-realization/manuscript.tex`](../../investigations/inverse-bulk-realization/manuscript.tex),
+[`investigations/previous/inverse-bulk-realization/manuscript.tex`](../../investigations/previous/inverse-bulk-realization/manuscript.tex),
 version 0.5. Status of every claim is in §8.
 
 ---

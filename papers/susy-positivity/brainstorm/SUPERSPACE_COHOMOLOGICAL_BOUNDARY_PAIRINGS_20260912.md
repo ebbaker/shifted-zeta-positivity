@@ -6,7 +6,7 @@
 
 This is a companion to [Topological bulk theories and exact boundary positivity](TOPOLOGICAL_BULK_BOUNDARY_POSITIVITY_20260912.md), especially its §§6–9. That note distinguishes extension independence, constrained energies, saturation, and positive gluing. The present note concentrates on how supersymmetry might make the pairing route useful, what a candidate theory would need, and how it could connect to the established gamma kinetic construction.
 
-The authoritative normalization and form domains remain in the [shared background source](../background_section.tex) and [background PDF](../background.pdf). Other starting points are the [program overview](../PROGRAM_OVERVIEW.md), the [earlier superspace continuation](continuation-notes/CONTINUATION_BULK_BOUNDARY_SUPERSPACE_20260912.md), and the [positive-factorizations manuscript](../investigations/positive-factorizations/manuscript.tex). The continuation note was moved into `brainstorm/continuation-notes/`; use the links here for the current locations of its background references.
+The authoritative normalization and form domains remain in the [shared background source](../background_section.tex) and [background PDF](../background.pdf). Other starting points are the [program overview](../PROGRAM_OVERVIEW.md), the [earlier superspace continuation](continuation-notes/CONTINUATION_BULK_BOUNDARY_SUPERSPACE_20260912.md), and the [positive-factorizations manuscript](../investigations/previous/positive-factorizations/manuscript.tex). The continuation note was moved into `brainstorm/continuation-notes/`; use the links here for the current locations of its background references.
 
 ## 1. Where the discussion stands
 
@@ -379,7 +379,7 @@ Its target is the positive Hilbert direct sum of the displayed \(L^2(\mathbb R)\
 |\widehat f(\tau)|^2\,d\tau.
 \]
 
-The summed multiplier is \(\operatorname{Re}\psi(1/4+i\tau/2)-\psi(1/4)\). The factor, minimizing extension, and infinite-channel domain are supplied by Section 5 of the [existing manuscript](../investigations/positive-factorizations/manuscript.tex).
+The summed multiplier is \(\operatorname{Re}\psi(1/4+i\tau/2)-\psi(1/4)\). The factor, minimizing extension, and infinite-channel domain are supplied by Section 5 of the [existing manuscript](../investigations/previous/positive-factorizations/manuscript.tex).
 
 ### 10.1 One channel already tests nonlocality and exact normalization
 
@@ -528,7 +528,7 @@ Exact matching on separate unbounded lengths is already enough for the RH implic
 | Support growth | Exact matching at unbounded lengths, with interface interactions if a gluing law is used. |
 | Appropriate input topology | Finite-interval form domains or another stated topology; no unwarranted whole-line \(L^2\) closability assumption. |
 
-The last condition is substantive. Section 9 of the existing manuscript gives a restriction on a single closable factor on ordinary whole-line \(L^2\) containing all compactly supported smooth inputs and reproducing the full form. It does not exclude finite-interval factors or maps on appropriate test-function spaces. A global boundary operator-valued distribution should not silently be assumed to extend to an \(L^2\)-bounded or closable smearing map. The manuscript's results retain the review status recorded in its [status file](../investigations/positive-factorizations/STATUS.md).
+The last condition is substantive. Section 9 of the existing manuscript gives a restriction on a single closable factor on ordinary whole-line \(L^2\) containing all compactly supported smooth inputs and reproducing the full form. It does not exclude finite-interval factors or maps on appropriate test-function spaces. A global boundary operator-valued distribution should not silently be assumed to extend to an \(L^2\)-bounded or closable smearing map. The manuscript's results retain the review status recorded in its [status file](../investigations/previous/positive-factorizations/STATUS.md).
 
 For limits of regularized positive pairings, a sufficient sign argument is convergence of \(Z_{L,\varepsilon}(f,f)\) to the desired finite value for each fixed test \(f\). Convergence on arbitrary pairs gives the polarized identity as well. Convergence in the form topology is an appropriate route when approximating inputs in the unbounded finite-interval form. Ordinary \(L^2\) convergence alone does not control those energies.
 

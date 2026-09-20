@@ -48,7 +48,7 @@ search for rather than the operator.
 The attraction is real and it is specific to *this* program rather than to
 Hilbert--Polya generally. Every previous candidate has been asked to reproduce a
 **value**: a norm, a weight, a pairing. Section 6.5 of the companion
-[manuscript](../../inverse-bulk-realization/manuscript.pdf) showed how cheap
+[manuscript](../../previous/inverse-bulk-realization/manuscript.pdf) showed how cheap
 values are --- the states reachable by one magnetic insertion are every function
 analytic past the unit circle --- and the
 [bottleneck note](../../../brainstorm/inverse-bulk-brainstorm/BOTTLENECK_AND_OPERATOR_SEARCH_20260916.md)
@@ -245,8 +245,8 @@ before Section 9's item 1 has been done.
 
 ## 7. What the accumulated rules already say
 
-The [nine selection rules](../../source-selection-rules/notes/SELECTION_RULES.md)
-and the [exclusion map](../../inverse-bulk-realization/notes/EXCLUSION_MAP_20260917.md)
+The [nine selection rules](../../previous/source-selection-rules/notes/SELECTION_RULES.md)
+and the [exclusion map](../../previous/inverse-bulk-realization/notes/EXCLUSION_MAP_20260917.md)
 apply to anything this investigation proposes. The load-bearing ones here:
 
 | Rule | Bearing on a deformation flow |

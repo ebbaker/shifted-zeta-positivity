@@ -210,10 +210,10 @@ is still this investigation's own:
   algebra; the decomposition studied here first appears in its notes, and its
   [review of 17 September](../wilson-lines/reviews/review_claude-fable-5-1_2026-09-17.md)
   identifies the modular surface as the transfer at $\omega=\frac12$.
-- [Source selection rules](../source-selection-rules/README.md) supplies the
+- [Source selection rules](../previous/source-selection-rules/README.md) supplies the
   Lévy-jump presentation of the form (its ninth rule); the comb here is that
   presentation on the transfer side, with its coefficients at every shift.
-- [Inverse bulk realization](../inverse-bulk-realization/README.md) supplies the
+- [Inverse bulk realization](../previous/inverse-bulk-realization/README.md) supplies the
   target and the exclusions, none of which touches a filter decomposition.
 
 ## Conventions

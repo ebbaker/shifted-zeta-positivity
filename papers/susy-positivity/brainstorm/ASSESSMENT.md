@@ -9,7 +9,7 @@ This is a research-direction assessment with targeted primary-source checks. It 
 semilocal pairing comparison, the research objective was clarified:
 positivity should follow independently from the bulk, and the hard task
 should be fitting its complete boundary pairing. The next investigation
-is therefore [inverse bulk realization](../investigations/inverse-bulk-realization/README.md).
+is therefore [inverse bulk realization](../investigations/previous/inverse-bulk-realization/README.md).
 It gives a scoped obstruction to finite rational reference feedback and
 an exact positive-action refinement of the gamma tower, then specifies
 a proposed common-field prime junction to construct and test. No exact
@@ -46,7 +46,7 @@ where the high block H is independently coercive. The physical cap remains an is
 
 The smooth-density negative control is an especially useful discriminator: retaining the archimedean terms while replacing the prime measure by its leading density gives a negative target. A proposed positivity argument must use a property not shared by this control. It need not uniquely characterize primes among every possible positive model, but it cannot apply unchanged to a known negative example.
 
-Sources: [ground-state continuation](../investigations/arithmetic-ground-state-geometry/CONTINUATION.md), [current evaluation](../manuscripts/finite-response-weil-positivity/EVALUATION.md).
+Sources: [ground-state continuation](../investigations/previous/arithmetic-ground-state-geometry/CONTINUATION.md), [current evaluation](../manuscripts/finite-response-weil-positivity/EVALUATION.md).
 
 **2. Revised disposition of the brainstorm families**
 

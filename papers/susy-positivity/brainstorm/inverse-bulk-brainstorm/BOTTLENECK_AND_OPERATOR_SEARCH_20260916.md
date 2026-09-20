@@ -12,7 +12,7 @@ is either a restatement of results already in working manuscript 0.5 (with
 references) or an assessment.
 
 Manuscript references are to
-[`investigations/inverse-bulk-realization/manuscript.tex`](../../investigations/inverse-bulk-realization/manuscript.tex),
+[`investigations/previous/inverse-bulk-realization/manuscript.tex`](../../investigations/previous/inverse-bulk-realization/manuscript.tex),
 version 0.5.
 
 ---
