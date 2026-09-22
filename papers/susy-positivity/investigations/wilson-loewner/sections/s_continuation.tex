@@ -5,8 +5,8 @@ the exposition~\cite{Exposition}. It follows the inherited
 cumulative-storage note~\cite{CumulativePath}. All operators here
 act on ordinary unweighted interval Hilbert spaces. The identities
 supply tests for a proposed construction. The final subsection reports
-a separate internally certified fixed-window anchor and a quantitative
-obstruction to one coupling estimate. No successful all-depth recursion
+a separate internally certified fixed-window anchor, a quantitative
+obstruction to a scalar coupling estimate, and a subsequent bounded append. No successful all-depth recursion
 is established.
 
 \subsection{The fixed-shift spatial Schur complement}
@@ -182,7 +182,7 @@ $\omega_j\downarrow0$. The algebra does not supply those estimates.
 Discarding output through a projection, assuming monotonicity
 in shift, or extrapolating local extension cannot replace them.
 
-\subsection{The arithmetic EMA anchor and the unresolved append}
+\subsection{Separate arithmetic anchor and append results}
 \label{subsec:si-ema-progress}
 
 A separate computer-assisted calculation in the critical-path
@@ -230,13 +230,23 @@ complement/complement norm divided by $\delta$ exceeds 46
 \cite{CumulativeAppend}. Complete-output finite-input diagnostics
 instead give normalized quotients near $0.801830639$.
 In exact arithmetic such finite quotients are lower, not upper,
-bounds on the full coupling norm. No all-input upper bound below
-one has been obtained.
+bounds on the full coupling norm. These diagnostics alone give
+no all-input upper bound below one.
 
-The next estimate must preserve the directional defect energy
-at the join and control both omitted input spaces. Endpoint memory
-cannot be reset when windows are adjoined. An operator lower bound
-for an instantaneous form also cannot be exponentiated through a
-nonnormal flow without justification; the cumulative balance must
-retain the actual transfer. Auxiliary smoothing loss and averaging
-variance contribute no arithmetic positivity to these results.
+The subsequent operator calculation retains directional defect
+energy and controls both full complementary spaces, establishing
+internally at the same $(L,h,\omega)$
+\[
+ \norm{F_{\mathrm{out}}^{-1/2}YE^{-1/2}}<0.951
+ \qquad\cite{CumulativeCoupling}.
+\]
+It uses a forward/backward energy factorization and a Carleman
+operator bound for the singular corner, preserving the complete
+history and the output-defect orientation. Its proof and rational
+records remain in the critical-path investigation; independent
+specialist review is outstanding. It establishes neither an
+all-depth continuation nor a physical realization. No instantaneous
+operator lower bound is exponentiated through the nonnormal flow.
+Auxiliary smoothing loss and averaging variance are not arithmetic
+positivity; the field resolution in Section~\ref{sec:trace-hierarchy}
+likewise makes no contribution to this arithmetic estimate.

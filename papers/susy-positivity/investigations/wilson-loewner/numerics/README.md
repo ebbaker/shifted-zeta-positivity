@@ -1,5 +1,16 @@
 # Checks and records
 
+The 21 September live revision incorporates the
+[growing-trace hierarchy checker](check_growing_trace_hierarchy.py) and its
+[small record](records/growing-trace-hierarchy-20260921.json). Run
+`python3 -B numerics/check_growing_trace_hierarchy.py --output /tmp/growing-trace-replay.json`
+with NumPy installed. It checks the linear-driver geometry, exact rational
+tip coefficients, noncommuting transport and curvature-insertion identities,
+gauge covariance, an Abelian area control and a deterministic remainder
+sample. These are separate finite matrix diagnostics, not quantum sampling,
+interval certificates or independent specialist review. They are bound by
+the live build record; no new draft snapshot has been saved.
+
 The post-version-0.5
 [Gaussian pair endpoint checker](check_gaussian_pair_endpoint.py) and its
 [small record](records/gaussian-pair-endpoint-checks-20260920.json) accompany
@@ -10,7 +21,7 @@ from the investigation directory. It checks four rational couplings,
 step sizes, 20 response comparisons and nine regulator identities.
 The exact incompatible weight requirements and the floating diagnostics
 are distinguished in the record. This adds no arithmetic certificate and
-does not change the manuscript's diagnostic count or frozen build record.
+does not change the original 299-case count or any archived build record.
 
 Version 0.5 incorporates localization research with separate programs and records:
 

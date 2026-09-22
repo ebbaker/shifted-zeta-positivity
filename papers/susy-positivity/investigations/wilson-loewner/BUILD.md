@@ -78,3 +78,20 @@ version-0.5 standalone snapshot. Replay them separately:
 
 These checks audit algebra, mode counts and finite quadratures; they are not
 supersymmetry proof checkers or arithmetic positivity certificates.
+
+## Live revision without a new snapshot
+
+The 21 September 2026 update is a live revision of version 0.5. Rebuild,
+render and inspect both current PDFs, then use `validation/drafts.py record`
+to bind the live files to that review. Do **not** call its `save` command
+until the author requests a new dated draft. The existing archived version
+0.5 remains unchanged. The revision date and unarchived status appear in
+both current documents.
+
+The genuine-trace hierarchy has a separate NumPy diagnostic program:
+
+    python3 -B numerics/check_growing_trace_hierarchy.py --output /tmp/growing-trace-replay.json
+
+Its source and small record are bound by the live build record; its checks
+are not added to the original 299-case count. It tests deterministic matrix
+transport and geometry, not the interacting quantum measure.

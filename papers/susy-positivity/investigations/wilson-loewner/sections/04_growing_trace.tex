@@ -1,0 +1,135 @@
+\section{Quantum evolution along a genuine growing trace}
+\label{sec:growing-trace}
+
+The first task in the physical program is to determine the quantum
+evolution induced by a specified Loewner curve within a fixed theory.
+This does not require an explicit expectation value or an immediate
+identification with the arithmetic transfer. We now carry out that
+calculation for an independently specified observable in pure
+four-dimensional Yang--Mills theory. Unlike the regular inverse-map
+deformations in Section~\ref{sec:realization}, the path here is the
+actual growing trace; previously traced points remain fixed.
+
+\subsection{A fixed theory and a specified tip contraction}
+
+Fix Euclidean $SU(N)$ Yang--Mills at $\theta=0$, including its
+coupling and state. Embed the upper half-plane in $x_3=x_4=0$ and
+let a deterministic driver $u(t)$ generate a sufficiently regular
+trace $q[0,t]$, starting at $q(0)=0$. The slit is geometric data,
+not a moving physical boundary of the quantum theory. The driver
+need not be random for the field expectation to be quantum.
+
+An open holonomy carries color indices at its endpoints. We
+contract them by returning from $q(t)$ to the origin along the
+straight chord. This return path is part of the observable. Let
+$U_t$ transport along the actual prefix and $R_t(r)$ transport
+along the straight segment from $0$ to $r q(t)$. Define
+\begin{equation}\label{eq:main-trace-observable}
+ \mathsf H_t=R_t(1)^{-1}U_t,\qquad
+ W_\tau(t)=\frac1N\vev{\tr\mathsf H_t},\qquad W_\tau(0)=1.
+\end{equation}
+To state smooth-field identities with a controlled short-time
+expansion, the connection is the Yang--Mills flowed field $B_\tau$
+at a fixed positive resolution $\tau$. The action and measure
+remain those of the original interacting theory; there is no
+Gaussian substitution. Field-flow time $\tau$ is distinct from
+Loewner time $t$ and the arithmetic shift $\omega$
+\cite{LuscherFlow,LuscherWeiszFlow}.
+
+The following identities are exact for smooth connections. Their
+expectation-value versions assume existence of the selected
+regulated or flowed correlators and the integrability needed to
+differentiate them. No nonperturbative continuum construction is
+asserted. Removing the resolution requires a separate treatment
+of cusp and contact terms. Neither this observable nor its
+normalization is identified with $V_{\omega,L}$.
+
+\subsection{The tip cancellation and the quantum hierarchy}
+
+Suppress $\tau$ in field notation and transport the curvature
+back to the fixed basepoint:
+\begin{equation}\label{eq:main-trace-moment}
+ \widehat F_t(r)=R_t(r)^{-1}F_{12}(r q(t))R_t(r),\quad
+ \mathsf J_t=\int_0^1r\widehat F_t(r)\dd r,\quad
+ k_t=q_1\dot q_2-q_2\dot q_1.
+\end{equation}
+Prefix growth inserts the connection at the tip. Differentiating
+the return chord produces the opposite endpoint term, so these
+terms cancel before averaging. The remaining exact matrix and
+expectation equations are
+\begin{equation}\label{eq:main-trace-flow}
+ \boxed{\dot{\mathsf H}_t=\ii k_t\mathsf J_t\mathsf H_t,
+ \qquad \dot W_\tau(t)=\ii k_t M_1(t),\qquad
+ M_1=\frac1N\vev{\tr(\mathsf J_t\mathsf H_t)}.}
+\end{equation}
+The geometric coefficient is twice the oriented area growth of
+the trace with its chord. The quantum coefficient is a curvature
+insertion in the same interacting expectation.
+
+Differentiating once more gives
+\begin{equation}\label{eq:main-trace-second}
+ \dot M_1=\dot q^\mu M_{D,\mu}+2\ii k_t M_2,
+ \qquad \mu=1,2.
+\end{equation}
+Here $M_{D,\mu}$ is the normalized expectation with insertion
+$\int_0^1r^2\widehat{D_\mu F_{12}}_t(r)\dd r$; $M_2$ has the
+ordered insertion
+\[
+ \int_{0<s<r<1}rs\widehat F_t(s)\widehat F_t(r)\dd s\dd r.
+\]
+Both are followed by $\mathsf H_t$ inside the trace. The order and
+the factor of two follow from the changing radial transports.
+The complete derivation and domains are given in
+\cite[Section~S13]{Supplement}. These are equations for quantum
+expectations without a Wick rule or large-$N$ factorization;
+they are not yet a closed scalar equation for $W_\tau$.
+
+\subsection{A linear driver and a controlled short-time response}
+
+For the concrete driver $u(t)=a t$, the upper-half-plane tip obeys
+\begin{equation}\label{eq:main-linear-trace}
+ aq+2\log(1-aq/2)=a^2t,\qquad
+ q(t)=2\ii\sqrt t+\frac{2a}{3}t-\frac{\ii a^2}{18}t^{3/2}
+                       +O_a(t^2).
+\end{equation}
+The implicit relation is for $a\ne0$ on the branch issuing from
+the origin; its $a=0$ limit is the vertical slit. It follows by
+integrating the forward Loewner equation, not by evaluating that
+equation at its singular tip. The enclosed oriented area is
+$\mathcal A(t)=-(2a/9)t^{3/2}+O_a(t^{5/2})$. Under the local
+moment assumptions stated in the companion,
+\begin{equation}\label{eq:main-trace-short-time}
+ \boxed{W_\tau(t)=1-\frac{2a^2}{81}C_\tau t^3
+                         +O_{\tau,a}(t^{7/2}),\qquad
+ C_\tau=\frac1N\vev{\tr F_{12}[B_\tau](0)^2}.}
+\end{equation}
+The coefficient $C_\tau$ is a gauge-invariant moment in the fixed
+theory. Its value need not be known to derive this relation.
+The companion bounds the remainder explicitly by curvature and
+covariant-derivative moments; the expansion is at fixed $\tau$.
+For the constant driver the chosen loop backtracks exactly,
+so $\mathsf H_t=I$ and $W_\tau(t)=1$ configuration by configuration.
+That control concerns this return-path choice, not every Wilson
+observable on a straight trace.
+
+\subsection{The Makeenko--Migdal closure question}
+
+Schwinger--Dyson identities relate field-equation insertions to
+derivatives of observables. Their loop-equation form is a natural
+candidate for reducing \eqref{eq:main-trace-second}
+\cite{MakeenkoLoops}. The first missing terms are explicit. In
+four dimensions $D_1F_{12}$ is only one part of
+$E_2=\sum_\mu D_\mu F_{\mu2}$: the terms $D_3F_{32}$ and
+$D_4F_{42}$ remain even though the contour is planar. Finite-$N$
+splitting terms also retain expectations of products. At positive
+$\tau$, differentiating the observable with respect to the
+original field differentiates the flow map $B_\tau[A]$ as well.
+These terms have not been reduced to $W_\tau$ and $M_1$.
+
+Thus the calculation supplies a concrete relation between genuine
+Loewner growth and quantum evolution, and identifies the
+correlators needed for a closure attempt. It supplies neither a
+closed Makeenko--Migdal reduction nor the physical arithmetic
+transfer. The freedom to choose another return path, endpoint
+contraction or insertion stays within the fixed-theory question;
+each choice must have its own derived evolution.

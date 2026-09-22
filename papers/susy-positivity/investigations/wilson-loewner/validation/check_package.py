@@ -101,7 +101,7 @@ def main():
                       generated_utc=datetime.now(timezone.utc).isoformat(),
                       author='OpenAI GPT-6 (Codex), for Edward Baker',
                       status='Working exposition and supplementary information 0.5; '
-                             'predictive localization controls, Hodge qualification and EMA status incorporated; no independent review',
+                             'unarchived live revision with genuine-trace quantum hierarchy, localization controls and separate arithmetic status; no independent review',
                       python=platform.python_version(),
                       scope='File identity and finite classical, chiral-defect, endpoint, '
                             'reflection, Gaussian-response and fixed-window arithmetic-comparison diagnostics; not a proof checker '

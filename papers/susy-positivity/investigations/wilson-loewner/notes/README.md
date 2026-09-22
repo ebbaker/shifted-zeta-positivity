@@ -1,6 +1,10 @@
 # Research notes
 
-The latest bounded calculation is [Gaussian pair-interface endpoint response](GAUSSIAN_PAIR_INTERFACE_ENDPOINT_RESPONSE_20260920.md),
+The [21 September manuscript integration](GROWING_TRACE_MANUSCRIPT_INTEGRATION_20260921.md) records the live update and its next-session instructions; no new dated draft was saved.
+
+The current physical direction is [genuine Loewner trace growth in fixed Yang--Mills theory](GENUINE_LOEWNER_TRACE_YM_HIERARCHY_20260921.md), with a [next-session handoff](RESEARCH_CONTINUATION_AFTER_GROWING_TRACE_20260921.md). It derives the first two expectation-value evolution equations for a growing trace closed by a return chord, identifies the curvature correlators required for closure, and gives a short-time response with an explicit smooth-field remainder bound. The quantum identities retain the interacting measure under stated regularity and moment assumptions; the accompanying matrix checks are floating diagnostics, not a QFT certificate. The hierarchy is integrated into live main Section 5 and SI S13; the archived manuscript v0.5 is unchanged and no new draft snapshot was saved. Arithmetic continuation remains a separate workstream; manuscript separation is deferred.
+
+The preceding Gaussian calculation is [Gaussian pair-interface endpoint response](GAUSSIAN_PAIR_INTERFACE_ENDPOINT_RESPONSE_20260920.md),
 with an [internal primary-source audit](../reviews/review_codex_endpoint_sources_20260920.md)
 and [next-session prompt](RESEARCH_CONTINUATION_AFTER_GAUSSIAN_ENDPOINT_20260920.md).
 A specified neutral Gaussian mode coupling excites infinitely many protected
@@ -12,9 +16,9 @@ revision or specialist review.
 
 The version 0.5 manuscript integration is recorded in the
 [localization integration and handoff](LOCALIZATION_RESULTS_MANUSCRIPT_INTEGRATION_20260920.md).
-Detailed localization controls appear in SI S12, with a summary in main
-Section 5.4. The independent EMA anchor and append status are in main
-Section 8.4 and SI S9.5.
+Detailed localization controls appear in SI S12, with a summary in live main
+Section 6.4. The independent EMA anchor and append status are in main
+live Section 9.4 and SI S9.5.
 
 The preceding follow-up is [The Hodge alternative and the spectrum it loses](HODGE_RADIAL_CHANNEL_AND_PROGRAM_ASSESSMENT_20260920.md). It audits the radial-descent result, constructs the distinct evolution on canonical protected representatives, and shows that only the lowest elementary spatial mode survives. Composite-state characters can contain the even ladder, but the elementary endpoint does not excite it. This note also gives the program assessment at that stage.
 

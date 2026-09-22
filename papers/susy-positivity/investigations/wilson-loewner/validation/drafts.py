@@ -147,6 +147,7 @@ def record_build(args):
         ("check_localization_hemisphere.py", "localization-hemisphere-checks-20260920.json"),
         ("check_spatial_radial_descent.py", "spatial-radial-descent-checks-20260920.json"),
         ("check_hodge_radial_channel.py", "hodge-radial-channel-checks-20260920.json"),
+        ("check_growing_trace_hierarchy.py", "growing-trace-hierarchy-20260921.json"),
     ):
         supported.extend([f"numerics/{program}", f"numerics/records/{result}"])
     record = {

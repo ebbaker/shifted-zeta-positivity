@@ -1,0 +1,380 @@
+\section{Genuine trace growth in Yang--Mills theory}
+\label{sec:trace-hierarchy}
+
+This section derives the expectation-value evolution summarized
+in the exposition. The contour is the actual Loewner prefix, not
+a reference contour deformed by an inverse map. We fix the theory
+and an observable before differentiating. The results are exact
+smooth-connection identities and their conditional quantum
+averages; no closed-form path integral is required.
+
+\subsection{Theory, field resolution and averaging assumptions}
+
+Fix Euclidean $SU(N)$ Yang--Mills, $N\ge2$, at $\theta=0$.
+With Hermitian generators normalized by
+$\tr(T^aT^b)=\delta^{ab}/2$, use
+\begin{align}\label{eq:trace-action}
+ F_{\mu\nu}[A]&=\partial_\mu A_\nu-\partial_\nu A_\mu
+                         -\ii[A_\mu,A_\nu],\\
+ D_\mu^A X&=\partial_\mu X-\ii[A_\mu,X],\qquad
+ S[A]=\frac1{2g^2}\int_{\R^4}\tr F_{\mu\nu}[A]F_{\mu\nu}[A]\dd^4x.
+ \notag
+\end{align}
+The action, coupling and quantum state stay fixed. Embed the
+Loewner upper half-plane in $x_3=x_4=0$; removing its hull does
+not change the physical spacetime or the measure.
+
+To define a smooth probe, take the gauge-covariant field flow
+\begin{equation}\label{eq:trace-field-flow}
+ \partial_\tau B_\mu=D_\nu^B F_{\nu\mu}[B],\qquad B_0=A,
+ \qquad \tau>0\ \hbox{fixed}.
+\end{equation}
+The Wilson observable is constructed from $B_\tau[A]$ and averaged
+in the original interacting measure. There is no independent
+Gaussian measure for $B_\tau$. Field-flow time $\tau$, Loewner
+capacity time $t$ and the arithmetic shift $\omega$ are distinct.
+Positive-flow local observables and their perturbative
+renormalization are discussed in
+\cite{LuscherFlow,LuscherWeiszFlow}.
+
+\begin{assumption}[Regularity for the expectation identities]
+\label{ass:trace-regularity}
+The chosen regulated or flowed construction defines the indicated
+holonomies and insertion correlators on the swept compact region.
+Connections are sufficiently smooth for ordered-transport
+differentiation; expectations of the required local field bounds
+justify passing derivatives through the expectation. For the
+short-time remainder we require the two finite moments specified
+in Proposition~\ref{prop:trace-remainder}.
+\end{assumption}
+
+This assumption is not a construction of nonperturbative
+continuum four-dimensional Yang--Mills. Results on local
+positive-flow observables alone do not establish it for every
+cusped nonlocal loop. Without positive flow the same algebra
+gives bare regulated identities, whose passage to renormalized
+unflowed observables must include perimeter, cusp and contact
+terms. We do not perform that passage here. Below we suppress
+$\tau$ and write $A,F,D$ for the selected smooth connection;
+this does not identify $B_\tau$ with the integration variable in
+a Schwinger--Dyson equation.
+
+\subsection{The actual prefix and its return chord}
+
+Use half-plane capacity $2t$ and a deterministic driver $u(t)$:
+\begin{equation}\label{eq:trace-definition}
+ \partial_tg_t(z)=\frac2{g_t(z)-u(t)},\qquad
+ q(t)=\lim_{y\downarrow0}g_t^{-1}(u(t)+\ii y),\qquad q(0)=0.
+\end{equation}
+We assume a trace that is $C^1$ for positive $t$, with the local
+integrability needed at zero. Section~\ref{subsec:linear-trace}
+supplies an explicit analytic example. No Brownian trace or
+contour average is assumed; general driver regularity is a
+separate issue~\cite{LindTran}.
+
+Let $U_t$ transport along $q[0,t]$, with later parameters ordered
+to the left. For $0\le r\le1$ let $R_t(r)$ transport from $0$ to
+$rq(t)$ along the radial segment, and put
+\begin{equation}\label{eq:trace-holonomy}
+ \mathsf H_t=R_t(1)^{-1}U_t,\quad
+ W_\tau(t)=\frac1N\vev{\tr\mathsf H_t},\quad
+ \widehat F_t(r)=R_t(r)^{-1}F_{12}(rq(t))R_t(r).
+\end{equation}
+The straight return chord closes the trace's color indices.
+It is a choice of observable, not an identity for every possible
+endpoint state. The trace is in the fundamental representation;
+basepoint conjugation leaves all the displayed traced insertions
+gauge invariant. At zero size $\mathsf H_0=I$ and $W_\tau(0)=1$.
+
+Pure gauge transport reverses to its inverse. The same assertion
+does not follow for a scalar-arclength-coupled $\mathcal N=4$
+Wilson line: its scalar term requires an additional analysis.
+The chord-completed observable therefore supplies a pure-YM
+calculation within a fixed theory, not an implicit supersymmetric
+extension or a proposed all-input arithmetic transfer.
+
+\subsection{Exact cancellation of the moving-tip term}
+
+Define
+\begin{equation}\label{eq:trace-J}
+ k_t=q_1\dot q_2-q_2\dot q_1,\qquad
+ \mathsf J_t(r)=\int_0^r s\widehat F_t(s)\dd s,\qquad
+ \mathsf J_t=\mathsf J_t(1).
+\end{equation}
+
+\begin{proposition}[Growing-trace transport]
+\label{prop:trace-transport}
+For a smooth Hermitian connection and the specified completion,
+\begin{equation}\label{eq:trace-matrix-flow}
+ \dot{\mathsf H}_t=\ii k_t\mathsf J_t\mathsf H_t.
+\end{equation}
+Under Assumption~\ref{ass:trace-regularity},
+\begin{equation}\label{eq:trace-first-expectation}
+ \dot W_\tau=\ii k_t M_1,\qquad
+ M_1=\frac1N\vev{\tr(\mathsf J_t\mathsf H_t)}.
+\end{equation}
+\end{proposition}
+\begin{proof}
+Only the newly added prefix segment contributes to
+\[
+ \dot U_t=\ii A_\mu(q(t))\dot q^\mu U_t.
+\]
+For the outward chord $x(s)=s q(t)$, its displacement is
+$s\dot q(t)$. The gauge part of the variation formula
+\eqref{eq:variation} has
+$F_{\nu\mu}\dot q^\nu q^\mu=-k_tF_{12}$, and hence
+\begin{equation}\label{eq:trace-radial-variation}
+ R_t(r)^{-1}\dot R_t(r)
+ =\ii rR_t(r)^{-1}A_\mu(rq)\dot q^\mu R_t(r)
+                                  -\ii k_t\mathsf J_t(r).
+\end{equation}
+At $r=1$ the endpoint connection cancels exactly when
+$R_t(1)^{-1}U_t$ is differentiated. The remaining term is
+\eqref{eq:trace-matrix-flow}. Tracing and averaging in the fixed
+measure gives \eqref{eq:trace-first-expectation}. No field
+equation, Gaussian contraction or factorization has been used.
+\end{proof}
+
+For a planar curve with this chord, its oriented area satisfies
+\begin{equation}\label{eq:trace-area}
+ \mathcal A(t)=\frac12\int_0^t k_v\dd v.
+\end{equation}
+A constant commuting curvature gives
+$\mathsf H_t=\exp(\ii F_{12}\mathcal A(t))$, checking the
+orientation and the factor of two independently.
+
+\subsection{Curvature transport and the next expectation equation}
+
+Differentiating the conjugation in \eqref{eq:trace-holonomy}
+with \eqref{eq:trace-radial-variation} gives
+\begin{equation}\label{eq:trace-curvature-flow}
+ \partial_t\widehat F_t(r)
+ =r\dot q^\mu\widehat{D_\mu F_{12}}_t(r)
+                      +\ii k_t[\mathsf J_t(r),\widehat F_t(r)].
+\end{equation}
+The endpoint connection in the conjugation converts the ordinary
+derivative of $F$ into its covariant derivative. Define
+\begin{align}\label{eq:trace-second-moments}
+ \mathsf D_{\mu,t}&=\int_0^1r^2\widehat{D_\mu F_{12}}_t(r)\dd r,
+ &\mathsf R_t&=\int_0^1r[\mathsf J_t(r),\widehat F_t(r)]\dd r,\\
+ \mathsf P_t&=\int_{0<s<r<1}rs\widehat F_t(s)\widehat F_t(r)\dd s\dd r.
+ \notag
+\end{align}
+In particular $\dot{\mathsf J}_t=\dot q^\mu\mathsf D_{\mu,t}
++\ii k_t\mathsf R_t$. Splitting the square of its defining
+integral into the two triangles yields
+\begin{equation}\label{eq:trace-ordering}
+ \mathsf J_t^2+\mathsf R_t=2\mathsf P_t.
+\end{equation}
+Indeed, on $s<r$, the square contributes
+$rs(\widehat F_t(r)\widehat F_t(s)+\widehat F_t(s)\widehat F_t(r))$,
+and the commutator contributes their difference with the second
+ordering positive. Thus the smaller radial argument is on the left
+in $\mathsf P_t$.
+
+\begin{proposition}[The first two quantum equations]
+Under Assumption~\ref{ass:trace-regularity}, let
+\[
+ M_{D,\mu}=\frac1N\vev{\tr(\mathsf D_{\mu,t}\mathsf H_t)},\qquad
+ M_2=\frac1N\vev{\tr(\mathsf P_t\mathsf H_t)}.
+\]
+Then, with $\mu=1,2$ summed,
+\begin{align}\label{eq:trace-hierarchy}
+ \dot W_\tau&=\ii k_t M_1, &
+ \dot M_1&=\dot q^\mu M_{D,\mu}+2\ii k_t M_2,\\
+ \ddot W_\tau&=\ii\dot k_tM_1+\ii k_t\dot q^\mu M_{D,\mu}
+                                      -2k_t^2M_2.
+ \notag
+\end{align}
+\end{proposition}
+\begin{proof}
+The first equation is Proposition~\ref{prop:trace-transport}.
+Differentiate $\mathsf J_t\mathsf H_t$ and use
+\eqref{eq:trace-ordering}. Its derivative is
+$(\dot q^\mu\mathsf D_{\mu,t}+2\ii k_t\mathsf P_t)\mathsf H_t$.
+The second equation follows by tracing and averaging. The product
+rule gives the third on positive-time intervals with the required
+derivatives.
+\end{proof}
+
+The equations retain the complete interacting expectation.
+The derivative and two-curvature insertions are new unknowns.
+Writing $\dot W_\tau/W_\tau$ as an unspecified coefficient is
+not a closure of the hierarchy.
+
+\subsection{The explicit trace of a linear driver}
+\label{subsec:linear-trace}
+
+Choose $u(t)=at$, $a\in\R$. At fixed initial $z$ put
+$w_s=g_s(z)-as$, so $\dot w_s=2/w_s-a$. For $a\ne0$ a primitive
+of $w/(2-aw)$ is
+\[
+ -\frac wa-\frac2{a^2}\log(2-aw).
+\]
+At the tip $w_0=q(t)$ and $w_t=0$. Integrating on the branch
+issuing into the upper half-plane gives
+\begin{equation}\label{eq:trace-linear-implicit}
+ aq+2\log(1-aq/2)=a^2t,\qquad \dot q=a-2/q.
+\end{equation}
+The local tip ODE is special to this driver; a general trace
+depends on the driver's history. In particular it is not obtained
+by substituting the singular tip into the forward map equation.
+
+Set $s=\sqrt t$. The identity $q q_s=2asq-4s$ determines
+\begin{equation}\label{eq:trace-linear-series}
+ q(t)=2\ii\sqrt t+\frac{2a}{3}t-\frac{\ii a^2}{18}t^{3/2}
+                +\frac{a^3}{135}t^2+O_a(t^{5/2}).
+\end{equation}
+For a direct analyticity argument, put $q=sv$ in
+\eqref{eq:trace-linear-implicit}, divide out its double zero in
+$s$, and apply the implicit-function theorem at $v=2\ii$;
+the derivative in $v$ is nonzero. Therefore the coefficient
+recursion describes a local analytic series in $s$, not only a
+formal asymptotic ansatz. It follows that
+\begin{align}\label{eq:trace-area-series}
+ \mathcal A(t)&=-\frac{2a}{9}t^{3/2}
+                    -\frac{11a^3}{1350}t^{5/2}+O_a(t^{7/2}),\\
+ k_t&=-\frac{2a}{3}\sqrt t
+                    -\frac{11a^3}{270}t^{3/2}+O_a(t^{5/2}).
+ \notag
+\end{align}
+The negative sign for $a>0$ records clockwise orientation. For
+$a=0$, $q(t)=2\ii\sqrt t$ and the return chord exactly retraces
+the prefix. Thus $\mathsf H_t=I$ for every field configuration.
+This is a control for the selected observable, not a universal
+statement about straight-line observables.
+
+\subsection{A quantitative short-time expectation bound}
+
+For a fixed small terminal time $t$, let $K_0$ bound $\norm{F_{12}}$
+on all swept chords, and let $K_1$ bound
+$\norm{e^\mu D_\mu F_{12}}$ for every unit planar vector $e$ on
+that region. These bounds may depend on the field configuration.
+Put
+\begin{equation}\label{eq:trace-geometric-integrals}
+ I(t)=\int_0^t|k_v|\dd v,\qquad
+ I_1(t)=\int_0^t|k_v|\,|q(v)|\dd v,
+ \qquad F_0=F_{12}(0).
+\end{equation}
+
+\begin{proposition}[Remainder with explicit constants]
+\label{prop:trace-remainder}
+For each smooth Hermitian connection,
+\begin{equation}\label{eq:trace-remainder}
+ \left|\frac1N\tr\mathsf H_t-1+
+             \frac{\mathcal A(t)^2}{2N}\tr F_0^2\right|
+ \le\frac{K_0K_1}{6}I(t)I_1(t)+\frac{K_0^3}{48}I(t)^3.
+\end{equation}
+If $\vev{K_0K_1}$ and $\vev{K_0^3}$ are finite on a fixed small
+swept neighborhood, the averaged inequality holds with these
+expected moments on the right. In particular, at fixed positive
+field-flow time and for the driver $u(t)=at$,
+\begin{equation}\label{eq:trace-quantum-expansion}
+ W_\tau(t)=1-\frac{2a^2}{81}C_\tau t^3+O_{\tau,a}(t^{7/2}),
+ \qquad C_\tau=\frac1N\vev{\tr F_{12}[B_\tau](0)^2}.
+\end{equation}
+\end{proposition}
+\begin{proof}
+Radial differentiation of the conjugated curvature gives
+\[
+ \norm{\widehat F_v(r)-F_0}\le r|q(v)|K_1,\qquad
+ \norm{\mathsf J_v-F_0/2}\le |q(v)|K_1/3.
+\]
+Set $\mathsf M=\int_0^t k_v\mathsf J_v\dd v$ and
+$S=K_0I(t)/2$. Then
+\[
+ \norm{\mathsf M-\mathcal A(t)F_0}\le K_1I_1(t)/3,
+ \qquad \norm{\mathsf M}\le S,\qquad |\mathcal A(t)|\le I(t)/2.
+\]
+Each $\mathsf J_v$ is traceless, so the linear Dyson coefficient
+has zero trace. By cyclicity, the trace of the second ordered
+coefficient is $-\tr\mathsf M^2/2$. The anti-Hermitian generator
+$\ii k_v\mathsf J_v$ gives unitary evolution. The third-order
+integral remainder, with the remaining exact propagator retained,
+therefore has norm at most $S^3/6$; no exponential moment is needed.
+Finally,
+\begin{align*}
+ \frac1N\left|\tr(\mathsf M^2-\mathcal A^2F_0^2)\right|
+ &\le\norm{\mathsf M-\mathcal A F_0}
+                   (\norm{\mathsf M}+|\mathcal A|K_0)\\
+ &\le K_0K_1I I_1/3.
+\end{align*}
+Dividing this contribution by two and adding $S^3/6$ proves
+\eqref{eq:trace-remainder}. Averaging uses the stated moments.
+For the linear driver, $I=O_a(t^{3/2})$ and $I_1=O_a(t^2)$;
+\eqref{eq:trace-area-series} supplies the coefficient in
+\eqref{eq:trace-quantum-expansion}.
+\end{proof}
+
+No Wick expansion evaluates $C_\tau$. It is a local moment of
+the same interacting theory and is nonnegative in a positive
+Euclidean measure. The order of limits is essential: $t\downarrow0$
+with $\tau$ fixed. Removing the resolution first can invalidate
+the moment bounds and introduces unflowed cusp and short-distance
+effects. This proposition is not a uniform smoothing-removal
+theorem or an unsmeared-loop OPE theorem.
+
+\subsection{Schwinger--Dyson equations and the unresolved closure}
+
+At a finite lattice regulator, product Haar measure and the
+Wilson action
+$S_{\rm lat}=\beta\sum_p(1-\Ree\tr U_p/N)$ give the exact
+integration-by-parts identity
+\begin{equation}\label{eq:trace-lattice-sd}
+ \vev{\nabla_e^a f}=\vev{f\nabla_e^aS_{\rm lat}},
+\end{equation}
+where $\nabla_e^a$ is a left-invariant link derivative. Applying
+it to Wilson observables gives deformation and splitting/joining
+terms. Finite-$N$ expectations of products remain part of the
+system. Factorizing them is an additional large-$N$ reduction,
+not a prerequisite for the quantum identity itself.
+
+The continuum formal loop equation relates a covariant divergence
+of an area insertion to contact terms; its loop-space Laplacian
+form and supersymmetric extension are discussed in
+\cite[Lecture~3]{MakeenkoLoops}. Neither operator is automatically
+the first derivative along the specified Loewner family.
+The first difference can be exhibited at the field-component
+level. In unflowed notation set $E_\nu=\sum_{\mu=1}^4D_\mu F_{\mu\nu}$.
+Then
+\begin{align}\label{eq:trace-transverse-residual}
+ \dot q^1D_1F_{12}+\dot q^2D_2F_{12}
+ ={}&\dot q^1E_2-\dot q^2E_1\\
+ &-\dot q^1(D_3F_{32}+D_4F_{42})
+   +\dot q^2(D_3F_{31}+D_4F_{41}).\notag
+\end{align}
+Consequently an equation for $E_\nu$ leaves an explicit transverse
+insertion in $\dot q^\mu M_{D,\mu}$: the second line, radially
+transported, integrated with weight $r^2$, followed by
+$\mathsf H_t$, traced and averaged. Planar placement of the
+contour does not delete it.
+
+For a local algebraic control, take $T_3=\sigma_3/2$ in $SU(2)$,
+$A_2=b(x_1^2-x_3^2)T_3/2$, and all other components zero. Then
+\begin{equation}\label{eq:trace-eom-control}
+ F_{12}=b x_1T_3,\quad F_{32}=-b x_3T_3,\quad E_\nu=0,
+ \quad D_1F_{12}=bT_3=-D_3F_{32}.
+\end{equation}
+For $b=1$ the deleted component would have operator norm $1/2$
+despite the vanishing total equation-of-motion insertion. This
+is a counterexample to a component replacement, not a finite-action
+vacuum configuration or a no-go theorem for averaged closure.
+Any symmetry that removes its averaged counterpart must be proved
+for the chosen observable.
+
+At positive flow time, $E[B_\tau]$ is not the functional derivative
+of $S[A]$. Applying \eqref{eq:trace-lattice-sd} differentiates
+$B_\tau[A]$ and produces its response kernel. The bare unflowed
+contact equation cannot be imported unchanged. The additional
+two-curvature moment, transverse insertion, flow-response kernel
+and possible unflowed cusp limit have not been reduced to $W_\tau$
+and $M_1$ alone.
+
+An enlarged system including loops and open lines has been derived
+for lattice Yang--Mills--Higgs~\cite{ShenSmithZhuLines}. That is
+methodological precedent with a different action, not a closure
+theorem for the fixed pure-YM observable here. The bounded next
+question is to evaluate the Schwinger--Dyson reduction of the
+specific derivative moment while retaining the displayed residuals.
+No closed expectation-value evolution, arithmetic realization or
+positive cumulative norm is claimed by the present hierarchy.

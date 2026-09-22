@@ -106,3 +106,29 @@ The additional controls audit the stated algebra and normalization;
 they do not verify the external supersymmetry input or certify
 arithmetic positivity. The separate EMA interval certificates are
 maintained in the critical-path investigation \cite{EMAAnchor}.
+
+\subsection{Genuine trace-growth controls in the live revision}
+
+The separate NumPy program
+\nolinkurl{check_growing_trace_hierarchy.py} accompanies
+Section~\ref{sec:trace-hierarchy}. Its small record is
+\nolinkurl{numerics/records/growing-trace-hierarchy-20260921.json}.
+It derives twelve tip-series coefficients by exact rational
+recursion and independently integrates the original prefix
+transport for $A_1=T_1$, $A_2=T_2$, then closes the chord.
+Four samples include positive, negative and zero driver slopes.
+Finite differences check the matrix and first-moment equations;
+a spatial gauge transformation checks the tip-frame cancellation.
+An Abelian constant-curvature comparison checks the area sign,
+and two deterministic samples evaluate the remainder inequality.
+
+The largest recorded matrix-derivative discrepancy is below
+$1.314\times10^{-10}$; the ordering identity differs by less than
+$2.259\times10^{-16}$. Doubling the integration resolution changes
+the selected loop by less than $4.523\times10^{-13}$. These are
+floating diagnostics of geometry and matrix calculus, not interval
+certificates, YM sampling, continuum renormalization checks or
+specialist review. They do not increase the historical 299-case
+ledger. Run the program separately with its \texttt{--output}
+option; the analytical remainder is
+Proposition~\ref{prop:trace-remainder}.
