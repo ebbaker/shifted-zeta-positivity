@@ -1,0 +1,115 @@
+\section{Composition, gluing and the spatial-kernel limitation}
+\label{sec:pairings}
+
+\subsection{Transport and fusion}
+
+Write $\Phi(r)=[f^{(0)}(r),f^{(1)}(r)]$ and
+\begin{equation}
+ E_t=J_x^hJ_y^h b_t^{-2h}\Phi(a_t/b_t).
+\end{equation}
+In a single original-coordinate frame, the exact propagator is
+\begin{equation}
+ U(t,s)=E_tE_s^{-1},\qquad
+ U(t,s)U(s,r)=U(t,r),\qquad U(s,s)=I.
+ \label{eq:composition}
+\end{equation}
+It is also the time-ordered exponential of the generator. Restarting the
+Loewner map requires the translated remaining driver and the evolved marked
+points, rather than a reset to the original geometry. The primary-Jacobian
+chain rule gives the same composition.
+
+For fusion, define
+\begin{equation}
+ R=\begin{pmatrix}1/2&\sqrt3/2\\-\sqrt3/2&1/2\end{pmatrix},\quad
+ Z=\diag(1,-1),\qquad \Phi_{12}(r)=RZ\Phi(1-r)Z.
+\end{equation}
+Its columns have unit leading tensors in the $12$ channels.
+Direct substitution of \eqref{eq:block0}--\eqref{eq:block1} yields
+\begin{equation}
+ \Phi(r)=\Phi_{12}(r)\mathsf C,\qquad
+ \mathsf C=\begin{pmatrix}
+ 1/\sqrt2&-\sqrt{2/3}\\\sqrt{3/8}&1/\sqrt2
+ \end{pmatrix}.
+\end{equation}
+With $N=\diag(1,\sqrt3/2)$, the unitary channel gauge gives
+\begin{equation}
+ N^{-1}\mathsf C N=\frac1{\sqrt2}
+ \begin{pmatrix}1&-1\\1&1\end{pmatrix}.
+ \label{eq:unitary_fusion}
+\end{equation}
+The signs depend on the chosen tensor basis and channel gauge.
+
+\subsection{The channel metric is not the fixed tensor metric}
+
+In raw Frobenius coefficients $c,d$, the positive unitary Chern--Simons
+pairing, normalized by vacuum norm one, is
+\begin{equation}
+ \ip{c}{d}_{\rm CS}=c^\dagger H_c d,
+ \qquad H_c=\diag(1,4/3).
+ \label{eq:channel_metric}
+\end{equation}
+Local monodromies have the distinct phases of the exponents $-3/8,1/8$,
+forcing the invariant metric to be diagonal. Requiring fusion to preserve
+it fixes the ratio $4/3$. Equivalently, \eqref{eq:unitary_fusion} is
+unitary on $N^{-1}c$. Orientation reversal conjugates the amplitude and
+sewing contracts the matching channel indices with this pairing. The
+selected vacuum has norm one and equal-magnitude coefficients $1/\sqrt2$
+in the normalized crossed channel.
+
+For evaluated tensors $M=E_tc$, the same pairing becomes
+\begin{equation}
+ H_t=E_t^{-\dagger}H_cE_t^{-1},\qquad
+ U(t,s)^\dagger H_tU(t,s)=H_s.
+ \label{eq:transported_metric}
+\end{equation}
+Thus the CS channel norm is preserved while the evaluated tensor can
+decrease in the fixed $W$ norm of \eqref{eq:tensor_balance}. Neither
+metric has been identified with the arithmetic $L^2$ norm.
+Likewise a scalar polarization $v^\dagger M$ with fixed $v\in W$ is
+different from a channel amplitude $d^\dagger H_cc$.
+
+\subsection{Spatial superposition does not create the initial identity}
+
+For disjoint compact boundary intervals $I_x<I_y$ away from the hull,
+\begin{equation}
+ M_t[f,g]=\int_{I_x}\int_{I_y}f(x)g(y)M_t(x,y)\dd y\dd x
+\end{equation}
+is a well-defined superposition for smooth compactly supported tests.
+Its derivative is the corresponding integral of $G_t(x,y)M_t(x,y)$.
+Since $G_t$ depends on the positions, this single smeared two-vector does
+not satisfy a closed $2\times2$ equation. Retaining all positions gives
+a multiplication evolution, and integrating \eqref{eq:tensor_balance}
+against a positive spatial measure gives a direct-integral norm balance.
+Arbitrary functions in that enlarged space have not been prepared as
+physical boundary states.
+
+There is a stronger initial-condition test. Fix a compact interval
+$I\subset(0,\infty)$ away from the hull and a polarization $v\in W$.
+Set $\mathcal K_t(x,y)=v^\dagger M_t(x,y)$ for $x<y$, and zero for the
+opposite order. This chosen ordering does not derive arithmetic causality.
+
+\begin{proposition}[The raw ordered kernel has a compact initial limit]
+On a compact time interval where $g_t$ is regular on $I$, the integral
+operator with kernel $\mathcal K_t$ is Hilbert--Schmidt. As $t\downarrow0$
+it converges in Hilbert--Schmidt norm to its explicit compact operator at
+$t=0$, and therefore cannot have the identity as its initial limit on
+the infinite-dimensional space $L^2(I)$.
+\end{proposition}
+\begin{proof}
+The worst diagonal singularity is the $12$ identity OPE, of exponent
+$-2h=-3/8$. Uniform regularity of the coordinate map and spectator
+Jacobians gives
+\begin{equation}
+ |\mathcal K_t(x,y)|\le C_T(1+|x-y|^{-3/8}).
+\end{equation}
+The square has exponent $-3/4$, integrable on $I\times I$. Pointwise
+continuity off the diagonal and dominated convergence yield the stated
+Hilbert--Schmidt limit. That limit is compact and cannot equal the identity.
+\end{proof}
+
+A finite scalar normalization or a regular change of time cannot alter
+this explicit limit. The result does not exclude a new sewing construction
+with descendants, a separately derived identity term, or a distinct
+singular limiting regime. Compact operators can converge strongly to the
+identity in other settings; the present obstruction also uses convergence
+to the specified compact initial operator.

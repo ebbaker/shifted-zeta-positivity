@@ -1,0 +1,83 @@
+\section{Explicit level-2 conformal blocks}
+\label{sec:blocks}
+
+Let $W=\Inv((\C^2)^{\otimes4})$ have the orthonormal basis
+\begin{equation}
+ e_0=s_{01}s_{23},\qquad
+ e_1=\frac{t^+_{01}t^-_{23}+t^-_{01}t^+_{23}-t^0_{01}t^0_{23}}{\sqrt3},
+\end{equation}
+where $s=(|\uparrow\downarrow\rangle-|\downarrow\uparrow\rangle)/\sqrt2$
+and $t^+,t^0,t^-$ are the normalized triplets. Use
+$t^a=\sigma^a/\sqrt2$ and $T_{ij}=\sum_a t_i^at_j^a$. Put
+$\nu=(k+2)^{-1}=1/4$. Then $C_{1/2}=3/2$ and
+$h=\nu C_{1/2}/2=3/16$. In this basis,
+\begin{equation}
+ D=T_{01}=\begin{pmatrix}-3/2&0\\0&1/2\end{pmatrix},\quad
+ C=T_{02}=\begin{pmatrix}0&-\sqrt3/2\\-\sqrt3/2&-1\end{pmatrix},\quad
+ B=T_{12}=\begin{pmatrix}0&\sqrt3/2\\\sqrt3/2&-1\end{pmatrix}.
+ \label{eq:matrices}
+\end{equation}
+In particular $D+C+B=-3I/2$. Replacing these generators by $\sigma^a/2$
+without changing the KZ coefficient would incorrectly halve the vacuum
+OPE exponent.
+
+Translation and scaling covariance give
+\begin{equation}
+ F(0,a,b,\infty)=b^{-2h}f(r),\qquad r=a/b,\qquad
+ f'(r)=\nu\left(\frac Dr+\frac B{r-1}\right)f(r).
+ \label{eq:kz}
+\end{equation}
+The first adjacent pair in \eqref{eq:labels} has label $0$ on both outside
+intervals. Its OPE lies in $\mathcal H_{00}=V_0$ and therefore selects
+\begin{equation}
+ f^{(0)}(r)=r^{-3/8}(e_0+O(r)),
+ \label{eq:selection}
+\end{equation}
+with no independent spin-one Frobenius branch. This selection is fixed by
+the boundary labels, rather than by choosing initial data for favorable
+signs. A single selected block generally has both tensor components.
+
+For $0<r<1$, write $s=\sqrt{1-r}$ and $q=[r(1-r)]^{-3/8}$, using positive
+real roots. The two unit-leading Frobenius solutions are
+\begin{align}
+ f^{(0)}(r)&=\frac{q}{2\sqrt2}
+ \begin{pmatrix}(1+s)^{3/2}\\-\sqrt3(1-s)\sqrt{1+s}\end{pmatrix},
+ \label{eq:block0}\\
+ f^{(1)}(r)&=\frac{q}{\sqrt6}
+ \begin{pmatrix}-(1-s)^{3/2}\\\sqrt3(1+s)\sqrt{1-s}\end{pmatrix}.
+ \label{eq:block1}
+\end{align}
+The second solution has leading behavior $r^{1/8}e_1$. Both columns are
+useful for transport and fusion, although the specified boundary conditions
+select \eqref{eq:block0}.
+
+For a direct derivation, eliminate the second component of \eqref{eq:kz}
+and write the first as $qP(r)$. The scalar equation becomes
+\begin{equation}
+ r(1-r)P''-\tfrac12P'-\tfrac3{16}P=0.
+\end{equation}
+After $s=\sqrt{1-r}$ it is
+$(1-s^2)P_{ss}+sP_s-3P/4=0$, solved by $(1+s)^{3/2}$ and
+$(1-s)^{3/2}$. Substitution in the first KZ component and normalization of
+the leading tensors give \eqref{eq:block0}--\eqref{eq:block1}.
+
+An independent local construction writes
+$f=r^\lambda\sum_{n\ge0}v_nr^n$ and uses
+\begin{equation}
+ [(\lambda+n)I-\nu D]v_n
+ =-\nu B\sum_{m=0}^{n-1}v_m,\qquad n\ge1.
+ \label{eq:recurrence}
+\end{equation}
+Take $(\lambda,v_0)=(-3/8,e_0)$ or $(1/8,e_1)$. The exponent difference
+is $1/2$, so the displayed inverses exist. For example,
+\begin{equation}
+ f^{(0)}(r)=r^{-3/8}\left[
+ \binom10+r\binom0{-\sqrt3/4}
+ +r^2\binom{3/64}{-\sqrt3/8}+O(r^3)\right].
+\end{equation}
+At $(u,x,y)=(0,1,2)$, the physical selected state is
+\begin{equation}
+ M_0=2^{-3/8}f^{(0)}(1/2)
+ \simeq (1.02266239412001,-0.30390758736355)^T.
+ \label{eq:selected_initial}
+\end{equation}

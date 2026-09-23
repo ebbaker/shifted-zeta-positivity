@@ -1,5 +1,11 @@
 # Wilson--Loewner: shifted-zeta evolution and Wilson lines
 
+The completed WZW pilot and arithmetic-source follow-up are now written up in a [standalone WZW manuscript](WZW/manuscript.pdf), with [editable source](WZW/manuscript.tex) and a [dedicated continuation folder](WZW/notes/README.md). This keeps the parent manuscript pair below at its existing scope. See the [WZW package](WZW/README.md) for the result map and provenance.
+
+The [22 September arithmetic-source investigation](notes/ARITHMETIC_SOURCE_AND_GENERALIZED_LOEWNER_EVOLUTION_20260922.md) now sets the next arithmetic-matching priority. A shifted xi logarithmic derivative defines an actual generalized Loewner flow and recovers the full arithmetic source. The note also identifies the RH-equivalent zero-shift condition, the failure of instantaneous generator positivity, and the length-dependent cost of removing a safe spectral weight. The next target is a cumulative boundary or canonical response with a specified norm. See the [internal audit](reviews/review_codex_arithmetic_loewner_source_20260922.md), [60 checks](numerics/records/arithmetic-loewner-source-20260922.json), and [milestone index](DRAFT_HISTOR.md).
+
+The [preceding SU(2)_2 boundary pilot](notes/SU2_LEVEL2_DETERMINISTIC_LOEWNER_PILOT_20260922.md) completed the proposed WZW calculation: explicit blocks, deterministic evolution, a constant-driver tensor norm balance, fusion/gluing, and a spatial-smearing limitation. It remains a physical benchmark; its further sewing calculation is deferred while the arithmetic source and operator dictionary are specified. See the [pilot audit](reviews/review_codex_wzw_loewner_pilot_20260922.md) and [72 checks](numerics/records/wzw-loewner-pilot-20260922.json). Both are separate research addenda; the manuscript pair below is unchanged.
+
 Live revision of manuscript pair **0.5**, 21 September 2026; **no new
 dated draft saved**. The archived version 0.5 of 20 September is unchanged.
 Drafted for Edward Baker with OpenAI GPT-6 (Codex) assistance. Neither paper has received an
@@ -11,7 +17,7 @@ independent mathematical review.
 - [Supplementary information](supplementary-information.pdf),
   [LaTeX source](supplementary-information.tex): detailed tools,
   derivations, restrictions and diagnostics.
-- [Genuine Loewner growth in fixed Yang--Mills theory](notes/GENUINE_LOEWNER_TRACE_YM_HIERARCHY_20260921.md): the current physical research direction, deriving a quantum insertion hierarchy for an actual growing trace and a specified return chord; [next-session handoff](notes/RESEARCH_CONTINUATION_AFTER_GROWING_TRACE_20260921.md). The short-time response has an explicit smooth-field error bound; continuum and closure assumptions remain stated separately. Integrated into live main Section 5 and SI S13; the archived v0.5 pair is preserved.
+- [Genuine Loewner growth in fixed Yang--Mills theory](notes/GENUINE_LOEWNER_TRACE_YM_HIERARCHY_20260921.md): the preceding physical calculation, deriving a quantum insertion hierarchy for an actual growing trace and a specified return chord; [next-session handoff](notes/RESEARCH_CONTINUATION_AFTER_GROWING_TRACE_20260921.md). The short-time response has an explicit smooth-field error bound; continuum and closure assumptions remain stated separately. Integrated into live main Section 5 and SI S13; the archived v0.5 pair is preserved.
 - [Live manuscript integration and handoff](notes/GROWING_TRACE_MANUSCRIPT_INTEGRATION_20260921.md): main Section 5 and detailed SI S13; no new draft snapshot.
 - [Gaussian pair-interface endpoint response](notes/GAUSSIAN_PAIR_INTERFACE_ENDPOINT_RESPONSE_20260920.md):
   a specified neutral Gaussian preparation excites an infinite protected
@@ -43,8 +49,7 @@ independent mathematical review.
   live main Section 9.4 and SI S9.5.
 
 The main exposition takes the exact arithmetic shift equation as the
-prescribed effective evolution. The immediate physical question fixes a theory and derives the quantum
-evolution along a genuine Loewner trace. The longer-term hypothesis is that
+prescribed effective evolution. The immediate arithmetic question now starts from the completed xi logarithmic derivative and asks for a cumulative boundary or canonical response with the correct operator norm. Deterministic WZW boundary evolution and the earlier growing-trace YM hierarchy remain complementary physical calculations. The longer-term hypothesis is that
 an independently defined Wilson boundary observable can realize the arithmetic
 equation and admit a cumulative positive-norm identity. A sequence of contractions with increasing length and vanishing
 shift would imply central Weil positivity. No such physical realization,

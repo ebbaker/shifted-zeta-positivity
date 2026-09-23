@@ -1,0 +1,138 @@
+\section{Continuation and the arithmetic operator norm}
+\label{sec:limits}
+
+\subsection{Four parameters with different meanings}
+
+The boundary capacity $t$ in \eqref{eq:chordal}, the generalized Loewner
+time $\tau$ in \eqref{eq:radial_flow} or \eqref{eq:koenigs_flow}, the
+source translation $\eta$, and the arithmetic shift $\omega$ are distinct.
+No equality between them, or between them and the spatial window length,
+has been derived.
+
+Differentiating the normalized source gives
+\begin{equation}
+ \partial_\eta P_\eta(w)
+ =\frac{(1-w)^2}{2}\partial_wP_\eta(w)
+ -\kappa_\eta P_\eta(w),\qquad
+ \kappa_\eta=\frac{m'(1+\eta)}{m(1+\eta)}.
+ \label{eq:source_transport}
+\end{equation}
+For $h\ge0$, it integrates exactly to
+\begin{equation}
+ P_{\eta+h}(\chi(p))=
+ \frac{c_\eta}{c_{\eta+h}}P_\eta(\chi(p+h)).
+ \label{eq:translation_composition}
+\end{equation}
+Right translation preserves the half-plane and the positive-real property.
+On safe lines, $u_\eta(y)=\Ree m(\eta+\ii y)$ obeys Poisson smoothing,
+\begin{equation}
+ u_{\eta+h}(y)=\frac1\pi\int_\R
+ \frac{h}{h^2+(y-v)^2}\,u_\eta(v)\dd v,\qquad h>0.
+\end{equation}
+There is no extra linear harmonic term at infinity, by the xi asymptotic.
+Reversing this smoothing need not preserve positivity.
+
+For a concrete control, the even real entire polynomial
+\begin{equation}
+ H_\delta(p)=((p-\delta)^2+\gamma^2)((p+\delta)^2+\gamma^2)
+\end{equation}
+has a positive-real shifted logarithmic derivative when $\eta>\delta$,
+but interior poles when $\eta<\delta$. At $\delta=1/4,\gamma=2$,
+the shift $1/2$ is safe while at $\eta=1/10$ a disk pole has modulus
+approximately $0.941951$. This excludes a general continuation argument
+based only on functional symmetries and positivity at a safe shift; it is
+not a claim about the actual xi zeros. Even $H(p)=p^2+\gamma^2$ has
+$m'(x)=2(\gamma^2-x^2)/(x^2+\gamma^2)^2$ of both signs, so simple
+pointwise monotonicity cannot replace the missing argument.
+
+\subsection{Endpoint paths and operator actions do not yet match}
+
+The endpoints used in \eqref{eq:source_recovery} satisfy
+\begin{equation}
+ w_\pm(\omega)=\chi(p\pm\omega-\eta),\qquad
+ \partial_\omega w_\pm=\pm\tfrac12(1-w_\pm)^2.
+\end{equation}
+These are opposite half-plane translations. At $w=0$ their velocities
+are $\pm1/2$, while the radial field $-wP_\eta(w)$ vanishes.
+A scalar change of clock cannot identify these vector fields on the whole
+domain. The reciprocal-source flow has a position-dependent velocity
+instead of either fixed translation.
+
+Likewise, the arithmetic action in Laplace coordinates is multiplication,
+$F\mapsto K_\omega F$, whereas a self-map acts by composition.
+If $W(p)F(\psi(p))=K_\omega(p)F(p)$ for every analytic $F$, testing
+$F=1,p$ forces $W=K_\omega$ and $\psi(p)=p$ where $K_\omega\ne0$.
+This algebraic test does not presume that $1,p$ are half-plane Hardy
+vectors. It excludes the direct identification on all analytic functions,
+not a further boundary projection, integral transform or intertwiner.
+
+\subsection{Cumulative positivity is the appropriate target}
+
+Even under RH, $m(p-\omega)$ has poles at $p=\omega+\ii\gamma$
+inside $\HR$ for every $\omega>0$. The other source term does not
+cancel them. Thus $a_\omega$ is not a holomorphic positive-real driver
+on that half-plane. Zeros of $K_\omega$ cancel those poles in
+\eqref{eq:arithmetic_shift}.
+
+The failure is also visible away from the poles. For $H(p)=p^2+4$,
+$K_\omega$ is a finite half-plane Blaschke product, but at
+$p=1/4+2\ii$, $\omega=1/2$, exact arithmetic gives
+\begin{equation}
+ |K_\omega(p)|^2=\frac{257}{2385}<1,\qquad
+ \Ree a_\omega(p)=-\frac{538768}{204315}<0.
+ \label{eq:increment_counterexample}
+\end{equation}
+Hence the squared modulus is locally increasing in $\omega$ despite
+remaining below one. Cumulative contraction does not require contractive
+multiplicative increments.
+
+The cumulative positive-real candidate is the Cayley transform
+\begin{equation}
+ Z_\omega=\frac{1-K_\omega}{1+K_\omega},\qquad
+ \Ree Z_\omega=\frac{1-|K_\omega|^2}{|1+K_\omega|^2},\qquad
+ \partial_\omega Z_\omega=\frac{a_\omega}{2}(1-Z_\omega^2).
+ \label{eq:cumulative_cayley}
+\end{equation}
+The Riccati identity holds on regular regions and through removable
+singularities. It is not an independent proof of positivity.
+
+On a finite causal window, the corresponding target is
+$V_{0,L}=I$, $\partial_\omega V_{\omega,L}=-G_{\omega,L}V_{\omega,L}$.
+Its accumulated defect obeys, on admissible inputs,
+\begin{equation}
+ I-V_{\omega,L}^*V_{\omega,L}
+ =\int_0^\omega
+ V_{s,L}^*(G_{s,L}^*+G_{s,L})V_{s,L}\dd s.
+ \label{eq:accumulated_defect}
+\end{equation}
+Generator pairings are understood as forms when separate operator domains
+are unavailable. The initial limit is strong, with differentiation on
+smooth tests; no operator-norm derivative at zero is assumed. A physical
+construction must account for the full accumulated quantity, not impose
+the false pointwise condition excluded by \eqref{eq:increment_counterexample}.
+
+\subsection{The unconditional weighted operator control}
+
+Fix $0\le\omega\le\Omega$ and translate the transfer by
+$b\ge\Omega+1/2$. Both terms in $a_\omega(p+b)$ are then positive-real
+on $\HR$. Integrating \eqref{eq:arithmetic_shift} from $K_0=1$ gives
+\begin{equation}
+ |K_\omega(p+b)|\le1,\qquad \Ree p>0.
+\end{equation}
+It is an analytic contractive multiplier on the causal Hardy/Laplace
+space. On $L^2(0,L)$, define $(E_bf)(x)=e^{bx}f(x)$. The Laplace
+translation rule and causal compression give
+\begin{equation}
+ V_{\omega,b,L}=E_{-b}V_{\omega,L}E_b,\qquad
+ \norm{V_{\omega,b,L}}\le1,\qquad
+ \boxed{\norm{V_{\omega,L}}\le e^{bL}.}
+ \label{eq:weighted_bound}
+\end{equation}
+This also defines the bounded unshifted finite-window operator consistently
+with its causal inverse Laplace kernel. Pointwise multiplier convergence
+and dominated convergence give the strong identity limit at zero shift.
+
+The last estimate is an upper bound, not a claim of actual exponential
+growth. Its length-dependent cost is precisely why safe-line positivity
+does not give the unweighted contraction. The unconditional $b$ remains
+at least $1/2$, so the bound does not tend to one as $L\to\infty$.

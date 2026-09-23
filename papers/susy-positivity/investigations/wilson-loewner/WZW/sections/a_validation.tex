@@ -1,0 +1,109 @@
+\section{Recorded controls, provenance and acknowledgements}
+\label{app:validation}
+
+\subsection{What the numerical records establish}
+
+Two separate programs accompany the underlying 22 September research notes.
+Their unchanged records contain 132 passing cases: 11 exact rational
+controls and 121 floating diagnostics. These counts do not belong to the
+parent manuscript's original 299-case suite, and this editorial synthesis
+does not claim a new numerical experiment.
+
+The WZW program has 72 cases, seven rational and 65 floating. It checks the
+independent 16-dimensional Pauli construction, algebraic blocks against
+the Frobenius recurrence, KZ derivatives, fusion and both pairings, the
+square reduction, and full two-column deterministic evolution. Five
+drivers are integrated at two resolutions, with composition and norm
+controls. Negative controls detect missing tip drift, omitted Jacobians,
+scalar component closure, and an unrestricted contraction claim.
+
+For $x=1,y=2,T=0.2$, the recorded values are shown below. The initial
+selected tensor norm squared is $1.1381981940$ in every row.
+\begin{center}
+\small
+\begin{tabular}{@{}lrr@{}}
+\toprule
+Driver & Final selected norm squared & Largest singular value of $U$ \\
+\midrule
+$u=0$ & $0.8772251458$ & $0.9993155549$ \\
+$u=0.8t$ & $0.9140272726$ & $0.9957985079$ \\
+$u=4t$ & $1.1237629942$ & $1.0029796534$ \\
+$u=-0.8t$ & $0.8453990280$ & $1.0021154561$ \\
+$u=0.4\sin(2t)$ & $0.9127125337$ & $0.9958813085$ \\
+\bottomrule
+\end{tabular}
+\end{center}
+The $u=4t$ state initially grows, although its final norm in the table is
+below its initial value. For $u=0$, the integrated loss is approximately
+$0.260973048240009$. The largest recorded floating equality residual is
+below $6.7\times10^{-14}$; it is diagnostic agreement, not an interval
+error bound or a proof of a continuum field theory.
+
+The arithmetic-source program has 60 cases, four rational and 56 floating.
+It uses mpmath 1.3.0 at 40 decimal digits for the main source identities,
+and double-precision time integration with 25-digit function evaluations
+for the flow. Checks cover the xi logarithmic derivative, the complete
+prime/gamma source, the shift and Cayley equations, normalized source
+transport, finite model measures and the two obstruction controls.
+No xi-zero table is used; the finite polynomial models explicitly specify
+their own zeros.
+
+For prime powers through $N=1000$, the tail comparison uses
+\begin{equation}
+ \sum_{n>N}\Lambda(n)n^{-\sigma}
+ \le N^{1-\sigma}\left(
+ \frac{\log N}{\sigma-1}+\frac1{(\sigma-1)^2}\right),
+\end{equation}
+where $\sigma>1$ and $(\log x)x^{-\sigma}$ is decreasing for $x\ge N$.
+The inequality follows from $\Lambda(n)\le\log n$ and integral
+comparison. At $p=5.5+0.7\ii$, $\omega=0.2$, the floating residual
+is approximately $8.81\times10^{-16}$ against the analytical tail bound
+$6.24\times10^{-15}$. Evaluating a proven bound in floating arithmetic
+does not make the residual comparison an interval certificate.
+
+For \eqref{eq:koenigs_flow}, at $\eta=1/2$ and $\tau=0.3$, the initial
+point $1+0.7\ii$ reaches approximately
+$1.2393712363+0.6045293214\ii$. The directly evaluated xi ratio is
+$1.0209360162$, agreeing with \eqref{eq:linearization}. Across the two
+sample trajectories the 64-versus-128-step difference is at most
+$1.36\times10^{-13}$ and the xi linearization residual at most
+$7.31\times10^{-16}$. The composition check uses matching steps and
+primarily tests consistency; the separate xi identity independently
+tests the vector field.
+
+Analytical arguments, rather than sign samples, establish the finite
+tensor balance, compact initial limit and safe positive-real source.
+The numerical work establishes neither the physical sewing operator nor
+unweighted arithmetic contraction or RH.
+
+\subsection{Source history and reproducibility}
+
+The main internal inputs are the 22 September notes
+\emph{SU(2) level 2: a completed deterministic boundary Loewner pilot}
+and \emph{The arithmetic source and an actual generalized Loewner
+evolution}, together with their same-assistant audits. The former followed
+the Chern--Simons/WZW proposal; the latter refined the priority toward
+arithmetic-source matching. The earlier commuting shift-flow and cumulative
+Cayley observations are credited in those notes, and are not new claims
+of this synthesis. The parent manuscript supplies the established causal
+operator conventions used in \eqref{eq:accumulated_defect}.
+
+The local README links the preserved notes, both programs, their JSON
+records and replay instructions. The manuscript builds entirely from TeX
+files in this directory; it does not load parent manuscript sections.
+The build record identifies the delivered PDF, source files and unchanged
+research inputs. Such hashes establish file identity, not mathematical
+correctness. Future working milestones are indexed by commits or tags
+when available, without new dated manuscript snapshots.
+
+\subsection{Acknowledgements and review status}
+
+This manuscript was drafted for Edward Baker with substantial LLM
+assistance from GPT-6 (Codex, according to the developer-provided model
+identity), including mathematical synthesis, algebraic calculations,
+numerical programs, source checking and document preparation. The
+reasoning-effort setting was not exposed and is not inferred. Internal
+audits were performed by the same assistant; no independent specialist
+review is claimed. The classical results are attributed in the references,
+and unresolved mathematical and physical obligations are stated in
+Sections~\ref{sec:limits}--\ref{sec:outlook}.

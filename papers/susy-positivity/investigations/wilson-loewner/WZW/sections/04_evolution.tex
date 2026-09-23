@@ -1,0 +1,111 @@
+\section{Complete deterministic evolution and the tensor norm}
+\label{sec:evolution}
+
+The relative coordinates and Jacobians satisfy
+\begin{equation}
+ \dot a=2/a-\dot u,\quad \dot b=2/b-\dot u,\qquad
+ \partial_t\log J_x=-2/a^2,\quad
+ \partial_t\log J_y=-2/b^2.
+ \label{eq:geometry_rates}
+\end{equation}
+The two finite-coordinate KZ connections are
+\begin{equation}
+ A_a=\nu\left(\frac Da+\frac B{a-b}\right),\qquad
+ A_b=\nu\left(\frac Cb+\frac B{b-a}\right).
+\end{equation}
+Translation invariance includes the moving tip:
+$\partial_uF=-(\partial_a+\partial_b)F=-\nu(D/a+C/b)F$.
+Differentiating \eqref{eq:observable} therefore yields $\dot M=GM$, with
+\begin{equation}
+ G=\nu\left[
+ \left(\frac2{a^2}-\frac{\dot u}a\right)D+
+ \left(\frac2{b^2}-\frac{\dot u}b\right)C-
+ \frac{2B}{ab}\right]
+ -2h\left(\frac1{a^2}+\frac1{b^2}\right)I.
+ \label{eq:ward_generator}
+\end{equation}
+The $B$ coefficient follows by subtracting the two spectator velocities;
+their common $-\dot u$ cancels in that coefficient, but not in the $D,C$
+terms. The final scalar comes from the primary Jacobians.
+
+\begin{proposition}[Deterministic square reduction]
+On every compact interval before collision or swallowing, the normalized
+observable satisfies
+\begin{equation}
+ \boxed{\dot M_t=-\nu(2Q_t^2+\dot u_tQ_t)M_t,\qquad
+ Q_t=\frac D{a_t}+\frac C{b_t},\quad \nu=\tfrac14.}
+ \label{eq:square_reduction}
+\end{equation}
+The associated two-dimensional initial-value problem has a unique
+invertible propagator.
+\end{proposition}
+\begin{proof}
+The matrices in \eqref{eq:matrices} obey
+\begin{equation}
+ D^2=\tfrac34I-D,\qquad C^2=\tfrac34I-C,\qquad DC+CD=B.
+ \label{eq:spin_identities}
+\end{equation}
+Expanding $-2\nu(D/a+C/b)^2$ reproduces the terms in
+\eqref{eq:ward_generator} independent of $\dot u$, since
+$2h=3\nu/2$. The remaining term is $-\nu\dot uQ$.
+The coefficients are continuous and bounded on the stated compact time
+interval, giving the usual matrix-ODE existence and uniqueness.
+\end{proof}
+
+The same algebraic reduction extends to a spin-$1/2$ tip with finitely
+many real boundary primary spectators, using
+$Q=\sum_iT_{0i}/w_i$, $h_i=\nu C_i/2$,
+$T_{0i}^2=C_iI/2-T_{0i}$ and
+$\{T_{0i},T_{0j}\}=T_{ij}$ for $i\ne j$.
+Boundary conditions and integrable channels still require specification.
+Complex bulk or mirror coordinates need not give Hermitian $Q$.
+
+\subsection{An exact balance for a constant driver}
+
+For the real boundary coordinates, $Q=Q^\dagger$ in the fixed tensor
+metric of $W$. If $\dot u=0$, differentiation of the norm and integration
+give
+\begin{equation}
+ \boxed{\norm{M_T}_W^2+4\nu\int_0^T\norm{Q_tM_t}_W^2\dd t
+ =\norm{M_0}_W^2.}
+ \label{eq:tensor_balance}
+\end{equation}
+This holds for every initial evaluated vector in $W$, without assuming
+that matrices at different times commute. For $a=1,b=2$,
+\begin{equation}
+ G_{\dot u=0}=\begin{pmatrix}
+ -39/32&-3\sqrt3/16\\-3\sqrt3/16&-3/32
+ \end{pmatrix}.
+\end{equation}
+More generally $\det Q=-3(1/a-1/b)^2/4$, so distinct spectators give
+an invertible $Q$. The constant-driver evolution is nontrivial.
+
+\subsection{Moving drivers can increase the same norm}
+
+The general identity is
+\begin{equation}
+ \frac{\dd}{\dd t}\norm{M}_W^2
+ =-4\nu\norm{QM}_W^2-2\nu\dot u\ip{M}{QM}_W.
+ \label{eq:moving_balance}
+\end{equation}
+At $a=1,b=2$, $\dot u=4$,
+\begin{equation}
+ G=\begin{pmatrix}9/32&\sqrt3/16\\\sqrt3/16&-3/32\end{pmatrix}.
+\end{equation}
+For the selected state \eqref{eq:selected_initial}, the initial derivative
+of its squared norm is approximately $0.436388495438834>0$.
+This disproves an all-driver contraction claim even for the chosen Cardy
+preparation. It does not imply monotone growth at later times.
+
+Completing the square gives the general bound
+\begin{equation}
+ G=-2\nu(Q+\dot uI/4)^2+\nu\dot u^2I/8,
+ \qquad
+ \norm{U(T,0)}_W\le
+ \exp\left(\frac\nu8\int_0^T\dot u^2\dd t\right).
+ \label{eq:driver_bound}
+\end{equation}
+Multiplying $M$ by the inverse scalar on the right would make this
+pairing contractive for every $C^1$ driver. That factor is additional to
+\eqref{eq:observable}; no physical partition function has been shown to
+supply it. It therefore cannot stand in for a fixed arithmetic normalization.

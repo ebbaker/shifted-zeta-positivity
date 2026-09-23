@@ -1,5 +1,9 @@
 # Checks and records
 
+The [arithmetic-source checker](check_arithmetic_loewner_source.py) and [record](records/arithmetic-loewner-source-20260922.json) accompany the [direct Loewner-source note](../notes/ARITHMETIC_SOURCE_AND_GENERALIZED_LOEWNER_EVOLUTION_20260922.md). Run `python3 -B numerics/check_arithmetic_loewner_source.py --output /tmp/arithmetic-loewner-source-replay.json` with mpmath installed. All 60 cases passed: four exact rational controls and 56 floating checks of the complete xi/prime source, normalized source transport, generalized Loewner evolution and its xi linearization, positive measures in finite models, and two obstruction controls. The run uses no xi-zero table. These are analytical-identity diagnostics, not interval certificates or proof of an arithmetic physical realization. They are separate from the WZW and original manuscript counts.
+
+The [22 September WZW pilot checker](check_wzw_loewner_pilot.py) and [record](records/wzw-loewner-pilot-20260922.json) accompany the [SU(2)_2 research note](../notes/SU2_LEVEL2_DETERMINISTIC_LOEWNER_PILOT_20260922.md). Run `python3 -B numerics/check_wzw_loewner_pilot.py --output /tmp/wzw-loewner-replay.json` from the investigation directory, with NumPy installed. All 72 checks passed: seven exact rational identities and 65 floating controls covering representations, algebraic blocks, KZ derivatives, five deterministic drivers, composition, both pairings, and counterexamples to omitted terms and unrestricted contraction. These are separate research controls, not part of the original 299-case manuscript count or an arithmetic certificate.
+
 The 21 September live revision incorporates the
 [growing-trace hierarchy checker](check_growing_trace_hierarchy.py) and its
 [small record](records/growing-trace-hierarchy-20260921.json). Run

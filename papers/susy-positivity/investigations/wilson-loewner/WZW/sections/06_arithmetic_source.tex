@@ -1,0 +1,165 @@
+\section{The arithmetic source defines generalized Loewner flows}
+\label{sec:arithmetic}
+
+\subsection{The full source of the shift equation}
+
+Define
+\begin{equation}
+ \xi(s)=\tfrac12s(s-1)\pi^{-s/2}\Gamma(s/2)\zeta(s),\quad
+ H(p)=\xi(\tfrac12+p),\quad m(p)=\frac{H'(p)}{H(p)}.
+\end{equation}
+The target transfer and its logarithmic generator are
+\begin{equation}
+ K_\omega(p)=\frac{H(p-\omega)}{H(p+\omega)},\qquad
+ a_\omega(p)=m(p-\omega)+m(p+\omega),
+ \qquad \partial_\omega K_\omega=-a_\omega K_\omega,
+ \label{eq:arithmetic_shift}
+\end{equation}
+with $K_0=1$. The meromorphic identity is first used on a zero-free
+right half-plane. Individual poles of $a_\omega$ can cancel in the
+product with $K_\omega$.
+
+The completed logarithmic derivative is
+\begin{equation}
+ m(p)=\frac1{p+1/2}+\frac1{p-1/2}-\frac12\log\pi
+ +\frac12\psi\left(\tfrac14+\tfrac p2\right)
+ +\frac{\zeta'}{\zeta}\left(\tfrac12+p\right),
+ \label{eq:completed_source}
+\end{equation}
+where $\psi$ is the digamma function. Apparent singularities at removable
+points of the completed function must be treated together. In the region
+$\Ree p>1/2+\omega$, the prime part of $a_\omega$ is
+\begin{equation}
+ -2\sum_{n\ge2}\frac{\Lambda(n)}{\sqrt n}
+       \cosh(\omega\log n)e^{-p\log n}.
+ \label{eq:prime_source}
+\end{equation}
+The inverse Laplace source therefore contains the delays $\log n$ with
+their full coefficients, in addition to the gamma, rational and local
+terms. It is the logarithmic source that has the prime-power comb; the
+transfer itself has the fuller multiplicative integer comb.
+
+\subsection{A safe positive-real function, and its limiting condition}
+
+Write the xi zeros, with multiplicity, as
+$\rho=1/2+\alpha_\rho+\ii\gamma_\rho$. The centered product gives
+\begin{equation}
+ \Ree m(x+\ii y)=\sum_\rho
+ \frac{x-\alpha_\rho}{(x-\alpha_\rho)^2+(y-\gamma_\rho)^2}.
+ \label{eq:zero_sum}
+\end{equation}
+The complex series uses symmetric grouping; the real-part series is
+absolutely convergent. Functional symmetry removes an additional real
+constant. No restriction of the sum to assumed critical zeros is made.
+
+Let $\HR=\{p:\Ree p>0\}$ and $m_\eta(p)=m(p+\eta)$ for $\eta\ge0$.
+If xi has no zero with $\Ree\rho>1/2+\eta$, every numerator in
+\eqref{eq:zero_sum}, evaluated at $p+\eta$, is positive on $\HR$.
+Conversely such a zero would be an interior pole of $m_\eta$ with a
+positive integer residue. Consequently
+\begin{equation}
+ \begin{split}
+ &m_\eta\text{ is holomorphic with }\Ree m_\eta>0\text{ on }\HR\\
+ &\hspace{2cm}\Longleftrightarrow
+ \xi\text{ has no zero with }\Ree\rho>\tfrac12+\eta.
+ \end{split}
+ \label{eq:positive_real_criterion}
+\end{equation}
+For $\eta\ge1/2$ this is unconditional. At $\eta=0$ it is equivalent
+to RH, using functional symmetry. This is the classical positivity
+criterion of Lagarias \cite{Lagarias,LagariasCorrection}, applied in
+centered coordinates; it is not a new RH criterion.
+
+\subsection{A normalized radial evolution and its driving measure}
+
+Use the Cayley maps and normalization
+\begin{equation}
+ C_\D(w)=\frac{1+w}{1-w},\qquad \chi(p)=\frac{p-1}{p+1},\qquad
+ c_\eta=m(1+\eta),\qquad
+ P_\eta(w)=\frac{m(\eta+C_\D(w))}{c_\eta}.
+ \label{eq:radial_source}
+\end{equation}
+Here $c_\eta>0$ is unconditional for $\eta\ge0$. If $\eta\ge1/2$,
+then $P_\eta$ is holomorphic on the disk, has positive real part, and
+satisfies $P_\eta(0)=1$. The classical generator criterion
+\cite{BCDM} therefore gives the global univalent disk self-map semigroup
+\begin{equation}
+ \partial_\tau\varphi_\tau(w)
+ =-\varphi_\tau(w)P_\eta(\varphi_\tau(w)),\qquad
+ \varphi_0(w)=w,\qquad \varphi_\tau'(0)=e^{-\tau}.
+ \label{eq:radial_flow}
+\end{equation}
+This is the inward evolution-family convention for generalized radial
+Loewner evolution, not a claim of a single-slit chordal driver.
+
+The Herglotz probability measure is fixed by
+\begin{equation}
+ P_\eta(w)=\int_{|z|=1}\frac{z+w}{z-w}\dd\mu_\eta(z).
+ \label{eq:driving_measure}
+\end{equation}
+On a safe line it has density
+\begin{equation}
+ \dd\mu_\eta(e^{\ii\theta})=
+ \frac{\Ree m(\eta+\ii\cot(\theta/2))}{2\pi c_\eta}\dd\theta.
+\end{equation}
+The possible atom at $1$ vanishes since $m(\eta+x)/x\to0$ as
+$x\to+\infty$. At all other boundary points the source continues
+analytically, excluding another singular part.
+
+Under RH the zero-shift measure has the atomic form
+\begin{equation}
+ z_\gamma=\frac{\ii\gamma-1}{\ii\gamma+1},\qquad
+ \mu_0=\sum_{\gamma\text{ of either sign}}
+ \frac{1}{c_0(1+\gamma^2)}\delta_{z_\gamma}.
+ \label{eq:atomic_measure}
+\end{equation}
+The sum includes multiplicities. Pairing the two signs gives
+$m(p)=\sum_{\gamma>0}2p/(p^2+\gamma^2)$, and evaluation at $p=1$
+shows total mass one. The summable weights matter: a real-line measure
+with unit mass at every zero would have infinite total mass.
+
+Most directly, on $\Ree p>\eta+\omega$ the complete arithmetic source is
+\begin{equation}
+ \boxed{a_\omega(p)=c_\eta\left[
+ P_\eta\bigl(\chi(p-\omega-\eta)\bigr)+
+ P_\eta\bigl(\chi(p+\omega-\eta)\bigr)\right].}
+ \label{eq:source_recovery}
+\end{equation}
+Thus the genuine Loewner source recovers every term of
+\eqref{eq:completed_source}--\eqref{eq:prime_source}. Its arithmetic
+content is prescribed by xi, rather than derived from independent field
+data.
+
+\subsection{A flow linearized by the logarithm of xi}
+
+Fix $\eta\ge1/2$ and choose the analytic branch
+$L_\eta(p)=\log H(p+\eta)$ real on the positive real axis. It is
+univalent on $\HR$, because for $p\ne q$,
+\begin{equation}
+ \frac{L_\eta(p)-L_\eta(q)}{p-q}
+ =\int_0^1m(q+s(p-q)+\eta)\dd s
+\end{equation}
+has positive real part. The reciprocal source defines another semigroup:
+\begin{equation}
+ \partial_\tau\psi_\tau(p)=
+ \frac{c_\eta}{m(\psi_\tau(p)+\eta)},\qquad \psi_0(p)=p.
+ \label{eq:koenigs_flow}
+\end{equation}
+Under the Cayley map its generator is
+$(1-w)^2/[2P_\eta(w)]$. Since $\Ree(1/P_\eta)>0$, this is a
+Berkson--Porta generator with boundary fixed point $1$, giving global
+self-maps of $\HR$. Direct differentiation gives
+\begin{equation}
+ \boxed{L_\eta(\psi_\tau(p))=L_\eta(p)+c_\eta\tau,\qquad
+ H(\psi_\tau(p)+\eta)=e^{c_\eta\tau}H(p+\eta).}
+ \label{eq:linearization}
+\end{equation}
+The arithmetic transfer can also be written, in the domain of
+\eqref{eq:source_recovery}, as
+\begin{equation}
+ K_\omega(p)=\exp\left[
+ L_\eta(p-\omega-\eta)-L_\eta(p+\omega-\eta)\right].
+\end{equation}
+This identifies the common analytic potential. It does not identify
+arithmetic shift with geometric time, or spectral position with physical
+boundary position.
