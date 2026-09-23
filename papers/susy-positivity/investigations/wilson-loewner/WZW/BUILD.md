@@ -1,6 +1,6 @@
-# Build the WZW manuscript
+# Build the thermal orbit-weight manuscript
 
-This is a live standalone manuscript, with local TeX inputs and no imports from the parent manuscript. A TeX Live installation with latexmk, pdfLaTeX, Latin Modern, AMS packages, microtype, hyperref, fancyhdr and tabularx is sufficient.
+The live standalone manuscript uses local TeX inputs and does not import the parent manuscript. It now focuses on the Bost–Connes orbit-weight investigation, with earlier tests summarized near the end. A TeX Live installation with latexmk, pdfLaTeX, Latin Modern, AMS packages, microtype, hyperref, fancyhdr and tabularx is sufficient.
 
 From `WZW`:
 
@@ -9,29 +9,30 @@ latexmk -pdf -interaction=nonstopmode -halt-on-error -outdir=build manuscript.te
 cp build/manuscript.pdf manuscript.pdf
 ```
 
-The delivered PDF is [manuscript.pdf](manuscript.pdf). Rebuilding can change its metadata bytes without changing its mathematics. [BUILD_RECORD.json](BUILD_RECORD.json) records the source and PDF hashes, page count, inherited research inputs, and the completed visual review for this delivery. After substantive changes, inspect the new PDF and refresh that record; do not preserve a stale review claim.
+The delivered [PDF](manuscript.pdf) has 12 pages. [BUILD_RECORD.json](BUILD_RECORD.json) records its identity, active sources, research inputs, numerical provenance and visual review. Rebuilding can alter PDF metadata bytes without altering the mathematics. After substantive changes, inspect the new PDF and refresh the record rather than preserving a stale review claim.
 
-For visual review, render every page into the ignored build directory:
+The active sections are `01_scope`, `02_arithmetic_target`, `03_thermal_weights`, `04_norms_and_limits`, `05_physical_interface`, `06_previous_tests` and `a_validation`, together with the entry point, preamble and references. Seven older section fragments remain in the folder but are not compiled; the record identifies them separately.
+
+Render every page for review:
 
 ```sh
 pdftoppm -r 110 -png build/manuscript.pdf build/page
 ```
 
-Resolve undefined citations or references, overflow, and layout defects before recording a new delivery. Keep intermediate logs and images in `build/`, outside the tracked source inventory. Each committed file stays under the repository's size limit. Do not add third-party PDFs.
+Resolve undefined references or citations, overflow and layout defects before recording a delivery. Keep intermediate logs and images in the ignored `build/` directory or outside the repository. Check relative links to the research notes from the delivered PDF's directory. Each committed file must remain under the repository's size limit; do not add third-party PDFs.
 
-## Existing numerical controls
+## Recorded numerical controls
 
-The manuscript documents the unchanged 22 September records. From `WZW`, with NumPy and mpmath installed, replay them separately if the underlying mathematics or programs change:
+The current argument uses the unchanged 87-case orbit-weight record: 17 exact integer and 70 floating controls. From `WZW`, with Python 3 and mpmath installed:
 
 ```sh
-python3 -B ../numerics/check_wzw_loewner_pilot.py --output /tmp/wzw-loewner-replay.json
-python3 -B ../numerics/check_arithmetic_loewner_source.py --output /tmp/arithmetic-loewner-source-replay.json
+python3 -B numerics/check_arithmetic_orbit_weights.py --output /tmp/arithmetic-orbit-weights-replay.json
 ```
 
-The first has 72 cases and the second 60. They are separate from the parent manuscript's 299-case suite. A replay checks the program's recorded identities and inequalities; it does not prove the BCFT input, physical sewing, unweighted arithmetic contraction, or RH.
+The manuscript revision is an editorial integration of the completed research and adds no numerical cases. The program and record hashes were checked; the suite was not rerun merely to rewrite the manuscript. Earlier controls remain separate: WZW pilot 72, arithmetic source 60, bounded collar 60, Brownian readout 51, modular scattering 65, fractional cusp 80. See [numerics/README.md](numerics/README.md) and the linked notes for replay commands and limitations. These controls do not establish a causal completed physical realization or RH.
 
-## Milestones and the parent package
+## Milestones and package identity
 
-Use [DRAFT_HISTOR.md](DRAFT_HISTOR.md) for a short milestone entry with a commit or tag when available, plus the reason and links to the detailed note and review. Do not create dated manuscript snapshot folders.
+Use [DRAFT_HISTOR.md](DRAFT_HISTOR.md) for concise milestones, pointing to the containing commit or tag when available and the detailed note and review. Do not create dated manuscript snapshots.
 
-The parent `PACKAGE_RECORD.json` inventories this folder as well. After adding or changing files, refresh its identity inventory while preserving unrelated recorded diagnostics, and run `python3 -B validation/check_package.py check` from the parent Wilson--Loewner directory. The existing `refresh` command also reruns and rewrites the old numerical records, so it should not be used merely to register an editorial change.
+The parent `PACKAGE_RECORD.json` inventories this folder. Refresh its file identities after edits while preserving all unrelated numerical records and custom research metadata. Then run `python3 -B validation/check_package.py check` from the parent Wilson–Loewner directory. The validator's `refresh` command also reruns and rewrites older diagnostics, so it should not be used for a purely editorial update.

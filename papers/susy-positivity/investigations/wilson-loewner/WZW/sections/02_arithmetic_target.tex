@@ -1,0 +1,97 @@
+\section{The arithmetic response and its orbit coefficients}
+\label{sec:target}
+
+\subsection{The shift equation and the physical requirement}
+
+Define the completed function and its centered logarithmic derivative by
+\begin{equation}
+ \xi(s)=\tfrac12s(s-1)\pi^{-s/2}\Gamma(s/2)\zeta(s),\qquad
+ H(p)=\xi(\tfrac12+p),\qquad m(p)=\frac{H'(p)}{H(p)}.
+\end{equation}
+The target transfer satisfies
+\begin{equation}
+ K_\omega(p)=\frac{H(p-\omega)}{H(p+\omega)},\qquad
+ \partial_\omega K_\omega=-a_\omega K_\omega,\qquad
+ a_\omega(p)=m(p-\omega)+m(p+\omega),\qquad K_0=1.
+ \label{eq:shift_equation}
+\end{equation}
+These identities are initially used on a sufficiently far right,
+zero-free half-plane, and then meromorphically. Here $p$ is the Laplace
+variable, $\omega$ the arithmetic shift, and $\beta$ the thermal
+parameter in \eqref{eq:main_dictionary}; physical time is a separate
+variable.
+
+A physical realization must specify its states, preparation, propagation
+and readout, and derive $K_\omega$ from them. In particular, on an
+ordinary radiation space $L^2(0,L)$ its causal compression
+$V_{\omega,L}$ must have the appropriate identity limit and accumulated
+norm balance. The desired contraction is
+\begin{equation}
+ \norm{V_{\omega,L}f}_2^2\le\norm{f}_2^2,
+ \qquad V_{0,L}=I.
+ \label{eq:radiation_requirement}
+\end{equation}
+The strong identity limit is the relevant convention; an operator-norm
+derivative at zero is not presumed. Cumulative contraction does not
+require every shift increment to be contractive, or $a_\omega$ itself
+to be a holomorphic positive-real function. Those distinctions and the
+unconditional weighted bounds are developed in \cite{SourceNote}.
+
+Writing down the quotient in \eqref{eq:shift_equation} is not a proof
+of the full unweighted realization. Its unit boundary modulus, where
+defined, follows from the functional equation and conjugation; causal
+contractivity for every positive shift is a further issue, related to
+the RH-equivalent innerness criterion \cite{Suzuki}. No such conclusion
+is inferred here from the thermal coefficient identity.
+
+\subsection{Euler coefficients at unchanged logarithmic labels}
+
+For $\Ree p>1/2+\omega$, factor the target as
+\begin{align}
+ K_\omega(p)&=A_\omega(p)Z_\omega(p),\qquad
+ Z_\omega(p)=\frac{\zeta(p+1/2-\omega)}{\zeta(p+1/2+\omega)},
+ \label{eq:factorization}\\
+ A_\omega(p)&=\pi^\omega\frac{\Gamma(s_-/2)}{\Gamma(s_+/2)}
+             \frac{s_-(s_--1)}{s_+(s_+-1)},\qquad
+ s_\pm=p+\tfrac12\pm\omega.
+ \label{eq:archimedean}
+\end{align}
+For one prime, set $a=\ell^{\omega-1/2}$,
+$b=\ell^{-\omega-1/2}$ and $z=\ell^{-p}$. Then
+\begin{equation}
+ \frac{1-bz}{1-az}
+ =1+\sum_{r\ge1}(1-\ell^{-2\omega})\ell^{r(\omega-1/2)}z^r.
+\end{equation}
+Multiplying the absolutely convergent local series gives
+\begin{equation}
+ Z_\omega(p)=\sum_{n\ge1}c_n(\omega)e^{-p\log n},\qquad
+ c_n(\omega)=n^{\omega-1/2}\prod_{\ell\mid n}(1-\ell^{-2\omega}),
+ \qquad c_1=1.
+ \label{eq:coefficients}
+\end{equation}
+At $\omega=1/2$, this is $c_n=\varphi_E(n)/n$, with $\varphi_E$
+Euler's totient. The orbit terminology refers to the primitive residues
+of the modular constant term, not to the closed-geodesic coefficients
+of a Selberg trace formula. The labels $\log n$ stay fixed as the
+arithmetic weights vary. Whether they are physical delays in a new
+model must be derived separately.
+
+The first-prime coefficient and its tangent are
+\begin{equation}
+ c_2(\omega)=\frac{2^\omega-2^{-\omega}}{\sqrt2},\qquad
+ c_2(1/2)=\tfrac12,\qquad c_2'(1/2)=\tfrac32\log2.
+ \label{eq:first_prime}
+\end{equation}
+The full logarithmic derivative also follows in the same convergence
+region:
+\begin{equation}
+ \partial_\omega\log Z_\omega(p)
+ =2\sum_{n\ge2}\Lambda(n)n^{-1/2}\cosh(\omega\log n)e^{-p\log n}
+ =-a_{\omega,\mathrm{prime}}(p).
+ \label{eq:prime_generator}
+\end{equation}
+The transfer involves all positive integers through multiplicativity;
+its logarithmic source involves prime powers through the von Mangoldt
+function $\Lambda$. The remaining terms of $-a_\omega$ are
+$\partial_\omega\log A_\omega$. A successful physical deformation must
+produce those terms with the same parameter.

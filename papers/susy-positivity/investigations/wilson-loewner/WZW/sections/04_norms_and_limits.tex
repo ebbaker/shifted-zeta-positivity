@@ -1,0 +1,194 @@
+\section{Ordinary local norms and two assembly limitations}
+\label{sec:norms}
+
+\subsection{A radial realization of the diagonal state}
+
+For one prime $\ell$, normalize additive Haar measure $dx$ on
+$\mathbb Q_\ell$ by $\operatorname{vol}(\mathbb Z_\ell)=1$ and define
+\begin{equation}
+ d\mu_{\beta,\ell}(x)=C_{\beta,\ell}|x|_\ell^{\beta-1}dx,
+ \qquad C_{\beta,\ell}=\frac{1-\ell^{-\beta}}{1-\ell^{-1}}.
+ \label{eq:radial_measure}
+\end{equation}
+This is the local scaling law of the equilibrium diagonal
+\cite[Section~2]{Neshveyev}. The shell $v_\ell(x)=m$ has Haar mass
+$(1-\ell^{-1})\ell^{-m}$. Consequently its mass under
+\eqref{eq:radial_measure}, for $m\ge0$, is
+$(1-\ell^{-\beta})\ell^{-m\beta}$, exactly
+\eqref{eq:geometric_law}. Thus
+\begin{equation}
+ \mu_{\beta,\ell}(\mathbb Z_\ell)=1,\qquad
+ \mu_{\beta,\ell}(aE)=|a|_\ell^\beta\mu_{\beta,\ell}(E),\qquad
+ \mu_{\beta,\ell}(\ell^r\mathbb Z_\ell)=\ell^{-r\beta}
+ \quad(r\ge0).
+\end{equation}
+The unit shell supplies the primitive probability $1-\ell^{-\beta}$.
+
+The normalized half-density in the fixed Haar Hilbert space is
+\begin{equation}
+ u_{\beta,\ell}(x)=\sqrt{C_{\beta,\ell}}
+ |x|_\ell^{(\beta-1)/2}1_{\mathbb Z_\ell}(x),\qquad
+ \norm{u_{\beta,\ell}}_2=1.
+ \label{eq:half_density}
+\end{equation}
+This realizes the diagonal state in an ordinary positive norm. It is
+not claimed to intertwine the full Bost--Connes representations at
+different temperatures.
+
+Weighted dilations on $L^2(\mu_{\beta,\ell})$ and the canonical
+half-density transport are
+\begin{equation}
+ D_a^{(\beta)}f(x)=|a|_\ell^{\beta/2}f(ax),\qquad
+ T_\beta f(x)=\sqrt{C_{\beta,\ell}}|x|_\ell^{(\beta-1)/2}f(x).
+\end{equation}
+The scaling law makes $D_a^{(\beta)}$ unitary, and cancellation of the
+weights gives
+\begin{equation}
+ T_\beta D_a^{(\beta)}T_\beta^{-1}=D_a^{(1)}.
+ \label{eq:transported_dilation}
+\end{equation}
+Therefore a pure measure change does not alter the unitary dilation
+action after this canonical transport. The parameter enters the state
+and its observables.
+
+Direct shell integration gives an actual native correlation:
+\begin{equation}
+ \ip{u_{\beta,\ell}}{D_{\ell^r}^{(1)}u_{\beta,\ell}}
+ =\ell^{-\beta|r|/2},\qquad r\in\mathbb Z.
+ \label{eq:dilation_correlation}
+\end{equation}
+Indeed the common support has valuation $m\ge\max(0,-r)$ and the
+integrand summed over shells is
+$(1-\ell^{-\beta})\ell^{-\beta m-r\beta/2}$.
+Its geometric sum proves \eqref{eq:dilation_correlation}. This is
+different from $c_{\ell^r}$: primitive projection and centering remain
+additional readout choices, even though the local state norm is known.
+
+\subsection{Failure of the naive common product vacuum}
+
+At the reference temperature $\beta=1$,
+$u_{1,\ell}=1_{\mathbb Z_\ell}$. The affinity of the two normalized
+local vectors is
+\begin{equation}
+ h_\ell(\beta)=\ip{u_{1,\ell}}{u_{\beta,\ell}}
+ =\frac{\sqrt{(1-\ell^{-1})(1-\ell^{-\beta})}}
+             {1-\ell^{-(\beta+1)/2}}.
+ \label{eq:affinity}
+\end{equation}
+In the incomplete tensor product based on the reference vectors, embed
+a finite set of changed local states as
+\begin{equation}
+ \Omega_{\beta,S}=\bigotimes_{\ell\in S}u_{\beta,\ell}
+                  \otimes\bigotimes_{\ell\notin S}u_{1,\ell}.
+ \label{eq:finite_vacuum}
+\end{equation}
+
+\begin{proposition}[A scoped product-space obstruction]
+\label{prop:product_obstruction}
+For each fixed $0<\beta<1$, the finite-place vectors
+\eqref{eq:finite_vacuum} are not Cauchy as $S$ exhausts the primes.
+Their shift tangents at $\beta=2\omega=1$ also have unbounded norm.
+\end{proposition}
+
+\begin{proof}
+For fixed $\beta<1$, expansion of \eqref{eq:affinity} at large $\ell$
+gives
+\begin{equation}
+ 1-h_\ell(\beta)\sim\tfrac12\ell^{-\beta}.
+\end{equation}
+The prime sum diverges, since $\ell^{-\beta}\ge\ell^{-1}$ and
+$\sum_\ell\ell^{-1}$ diverges. Hence $\prod_\ell h_\ell(\beta)=0$.
+For $S\subset T$ the normalized vectors satisfy
+\begin{equation}
+ \norm{\Omega_{\beta,T}-\Omega_{\beta,S}}^2
+ =2\left(1-\prod_{\ell\in T\setminus S}h_\ell(\beta)\right).
+ \label{eq:noncauchy}
+\end{equation}
+For every fixed finite $S$, the right side approaches 2 as $T$ grows,
+which excludes the Cauchy property.
+
+For the tangent, express the normalized local vector in its shell basis
+as $a_m(\beta)=\sqrt{(1-q)q^m}$, where $q=\ell^{-\beta}$.
+Differentiation gives
+\begin{equation}
+ \partial_\beta a_m
+ =\frac{\log\ell}{2}\left(\frac{q}{1-q}-m\right)a_m.
+\end{equation}
+The geometric variance is $q/(1-q)^2$. Taking account of
+$\partial_\omega=2\partial_\beta$ at $\beta=1$ yields
+\begin{equation}
+ \left\|\left.\partial_\omega\Omega_{2\omega,S}
+                  \right|_{\omega=1/2}\right\|^2
+ =\sum_{\ell\in S}(\log\ell)^2\frac{\ell}{(\ell-1)^2}.
+ \label{eq:tangent_norm}
+\end{equation}
+Each local derivative is orthogonal to its normalized real vector,
+so the product derivative has no cross terms. The last prime sum
+diverges.
+\end{proof}
+
+Some finite-place values illustrate the calculation:
+\begin{center}
+\small
+\begin{tabular}{@{}rrrrr@{}}
+\toprule
+Primes & Largest & Overlap, $\beta=.5$ & Overlap, $\beta=.8$ & Tangent norm$^2$\\
+\midrule
+4 & 7 & 0.805625 & 0.978404 & 3.41186\\
+25 & 97 & 0.398762 & 0.924811 & 10.9944\\
+168 & 997 & 0.0444597 & 0.819804 & 23.9650\\
+1,229 & 9,973 & $8.01090\,10^{-5}$ & 0.658092 & 42.3681\\
+9,592 & 99,991 & $1.73891\,10^{-12}$ & 0.454913 & 66.1381\\
+\bottomrule
+\end{tabular}
+\end{center}
+The proof is the divergent-series argument, not the finite table.
+
+This obstruction concerns the stated Haar-based embedding. It does not
+invalidate the established positive KMS states, whose representations
+are supplied by their own construction. Nor does it exclude a
+different common representation, a correlated archimedean coupling,
+or a different radiation map. Finite-observable thermal expectations
+can be differentiable even when this vector family is not. No claim
+about the canonical Sonin embeddings studied elsewhere in the project
+follows from this calculation.
+
+\subsection{The bare Euler delay train is not contractive}
+
+A second tempting assembly would turn the numbers
+$\varphi_\beta(B_{n,\beta})$ directly into delayed scalar amplitudes:
+\begin{equation}
+ R_\omega=I+\sum_{n\ge2}c_n(\omega)S_{\log n},
+ \label{eq:bare_train}
+\end{equation}
+where $S_vf(u)=f(u-v)$ with zero extension. Each finite observation
+window sees only finitely many shifts, so the following exclusion
+requires no definition of the infinite sum as a global bounded operator.
+
+\begin{proposition}[Bare Euler readout exclusion]
+For $\omega>0$, the compression of \eqref{eq:bare_train} to any
+window $\log2<L<\log3$ is not a contraction in ordinary $L^2(0,L)$.
+\end{proposition}
+
+\begin{proof}
+Only $I+c_2S_{\log2}$ appears on this window. Choose a unit pulse
+supported on $(0,\varepsilon)$, where
+$0<\varepsilon<\min(\log2,L-\log2)$. The direct and delayed copies
+are disjoint and contained in the window. Thus
+\begin{equation}
+ \norm{1_{(0,L)}R_\omega f}_2^2=1+c_2(\omega)^2>1.
+ \label{eq:pulse_exclusion}
+\end{equation}
+\end{proof}
+
+The squared norm is approximately $1.06066017177982$ at
+$\omega=1/4$, and $1.25$ at $\omega=1/2$. Positive contractive
+observables at individual labels do not control the energy of their
+coherent sum.
+
+Equation~\eqref{eq:pulse_exclusion} does not exclude the completed
+response $A_\omega Z_\omega$. The same bare Euler failure occurs at
+the known modular half shift, where the archimedean factor is essential
+\cite{ModularNote}. The next physical test must therefore include that
+sector and its flux, rather than infer passivity from the signs or
+individual sizes of the arithmetic weights.

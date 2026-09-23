@@ -1,0 +1,162 @@
+\section{Primitive projections in the Bost--Connes system}
+\label{sec:thermal}
+
+\subsection{The equilibrium identity}
+
+The Bost--Connes arithmetic system was introduced in \cite{BC}.
+We use its multiplicative isometries $v_n$ and the range projections
+$e_n=v_nv_n^*$, with
+\begin{equation}
+ v_n^*v_n=I,\qquad v_mv_n=v_{mn},\qquad
+ e_me_n=e_{\operatorname{lcm}(m,n)},\qquad
+ \sigma_t(v_n)=n^{\ii t}v_n.
+ \label{eq:bc_relations}
+\end{equation}
+In the standard integer representation $v_n|k\rangle=|nk\rangle$,
+the projection $e_n$ detects divisibility by $n$, and the Hamiltonian
+is $\mathcal H|k\rangle=(\log k)|k\rangle$.
+This representation has a normalized Gibbs trace only for $\beta>1$.
+The full system nevertheless has positive KMS states for
+$0<\beta\le1$; their existence and local measure structure are
+established inputs, for which we use \cite[Introduction and Section~2]{Neshveyev}.
+
+For analytic elements the KMS condition reads
+$\varphi_\beta(ab)=\varphi_\beta(b\sigma_{\ii\beta}(a))$.
+Apply it to $a=v_n$ and $b=v_n^*$:
+\begin{equation}
+ \varphi_\beta(e_n)
+ =\varphi_\beta(v_n^*\sigma_{\ii\beta}(v_n))=n^{-\beta}.
+ \label{eq:divisibility_probability}
+\end{equation}
+No analytic continuation of a divergent trace is used in this identity.
+
+\begin{proposition}[Primitive thermal coefficient identity]
+For $n\ge1$ define the temperature-independent projection
+\begin{equation}
+ P_n=\prod_{\ell\mid n}(I-e_\ell),\qquad P_1=I.
+ \label{eq:primitive_projection}
+\end{equation}
+For a KMS state as above,
+\begin{equation}
+ \varphi_\beta(P_n)=\prod_{\ell\mid n}(1-\ell^{-\beta}).
+ \label{eq:primitive_probability}
+\end{equation}
+Consequently the centered expectations at $\beta=2\omega$ are exactly
+the coefficients in \eqref{eq:coefficients}.
+\end{proposition}
+
+\begin{proof}
+The divisibility projections commute. Expanding the finite product in
+\eqref{eq:primitive_projection} and using the lcm relation gives
+\begin{equation}
+ P_n=\sum_{d\mid\operatorname{rad}(n)}\mu(d)e_d,
+\end{equation}
+where $\operatorname{rad}(n)$ is the product of the distinct prime
+divisors, $\mu$ is the M\"obius function and $e_1=I$.
+Taking expectations and applying \eqref{eq:divisibility_probability}
+gives the product in \eqref{eq:primitive_probability}. Multiplication
+by $n^{(\beta-1)/2}$ gives \eqref{eq:coefficients}. Thus the result
+does not require a separate probabilistic independence assumption.
+\end{proof}
+
+At a repeated prime, $P_{\ell^r}=P_\ell$: primitiveness is the same
+event. Its contribution is
+\begin{equation}
+ c_{\ell^r}(\omega)
+ =(1-\ell^{-2\omega})\ell^{r(\omega-1/2)}.
+\end{equation}
+The repetition dependence comes from centering; one has not introduced
+a new primitive event for each $r$. For coprime integers the projections
+combine by their distinct prime sets, recovering the required
+multiplicativity. Hence the first-prime tangent
+\eqref{eq:first_prime} and the full prime source
+\eqref{eq:prime_generator} follow from the same coefficient law.
+
+There is also a direct counting interpretation at integer exponent.
+Inclusion-exclusion shows that
+\begin{equation}
+ J_d(n)=n^d\prod_{\ell\mid n}(1-\ell^{-d})
+\end{equation}
+counts tuples $(x_1,\ldots,x_d)$ modulo $n$ with
+$\gcd(n,x_1,\ldots,x_d)=1$. For real $\beta>0$ the analogous product
+defines $J_\beta(n)$, and $c_n(\omega)=J_{2\omega}(n)/n^{\omega+1/2}$.
+The thermal construction supplies a real-parameter probability law;
+it does not posit a noninteger number of discrete coordinates.
+
+\subsection{An explicit positive model at finitely many places}
+
+Let $S$ be a finite set of primes. On
+$\bigotimes_{\ell\in S}\ell^2(\mathbb N_0)$, with occupation operators
+$N_\ell$, take the self-adjoint Hamiltonian
+\begin{equation}
+ \mathcal H_S=\sum_{\ell\in S}(\log\ell)N_\ell.
+ \label{eq:finite_hamiltonian}
+\end{equation}
+For every $\beta>0$ its Gibbs state is trace class, with
+\begin{equation}
+ \mathcal Z_S(\beta)=\prod_{\ell\in S}(1-\ell^{-\beta})^{-1},
+ \qquad
+ \Pr_\beta(N_\ell=m)=(1-\ell^{-\beta})\ell^{-m\beta}.
+ \label{eq:geometric_law}
+\end{equation}
+The primitive projection selects occupation zero at each prime dividing
+$n$, provided those primes belong to $S$. It gives
+\eqref{eq:primitive_probability} directly. This finite-place realization
+of the relevant diagonal observables is explicit and positive throughout
+the temperature range of interest. It is not asserted to encode every
+observable of the full arithmetic algebra.
+
+As a small illustration, the centered coefficients are
+\begin{center}
+\small
+\begin{tabular}{@{}rrrr@{}}
+\toprule
+$n$ & $\omega=1/4$ & $\omega=0.4$ & $\omega=1/2$\\
+\midrule
+2 & 0.246292858 & 0.397146260 & $1/2$\\
+3 & 0.321144348 & 0.523917402 & $2/3$\\
+4 & 0.207106781 & 0.370550563 & $1/2$\\
+6 & 0.079095559 & 0.208071837 & $1/3$\\
+\bottomrule
+\end{tabular}
+\end{center}
+The entries are samples of the exact identity, not a fit defining the
+state. In the infinite system for $\beta\le1$, the product partition
+function diverges. The positive KMS state must then be used in its
+established algebraic sense, not replaced by
+$e^{-\beta\mathcal H}/\zeta(\beta)$.
+
+\subsection{What the centering and the time variable still require}
+
+For $0<\beta\le1$, the centered observable
+\begin{equation}
+ B_{n,\beta}=n^{(\beta-1)/2}P_n
+\end{equation}
+is a positive contraction and
+$\varphi_\beta(B_{n,\beta})=c_n(\beta/2)$. However, this observable
+depends on temperature. The equality alone does not derive all
+amplitudes from a temperature change with a fixed physical detector.
+
+The dynamics gives a structured analytic-time expression:
+\begin{equation}
+ c_n(\beta/2)=n^{-1/2}\varphi_\beta
+ \left(P_n v_n^*\sigma_{-\ii\beta/2}(v_n)\right),\qquad
+ \sigma_{-\ii\beta/2}(v_n)=n^{\beta/2}v_n.
+ \label{eq:thermal_halfstep}
+\end{equation}
+It identifies a thermal half-step and the fixed factor $n^{-1/2}$.
+Imaginary-time continuation is not unitary real-time propagation.
+The physical input/output normalization that would implement
+\eqref{eq:thermal_halfstep} is still to be derived.
+
+There is a second, independent distinction. Since
+$\sigma_t(P_n)=P_n$, a native real-time correlation of two such
+projections is constant:
+\begin{equation}
+ \varphi_\beta(P_m\sigma_t(P_n))=\varphi_\beta(P_mP_n).
+\end{equation}
+The number $\log n$ in $\sigma_t(v_n)=n^{\ii t}v_n$ is an energy
+difference or dilation label. It has not thereby become the causal
+delay $\log n$ in \eqref{eq:coefficients}. That conversion is a
+requirement on a coupling to propagating signals, not a consequence
+of equilibrium positivity.
