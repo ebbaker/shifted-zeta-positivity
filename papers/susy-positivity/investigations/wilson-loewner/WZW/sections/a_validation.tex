@@ -1,7 +1,7 @@
 \section{Numerical evidence, provenance and acknowledgements}
 \label{app:validation}
 
-\subsection{The current diagnostic}
+\subsection{The orbit-weight diagnostic}
 
 The orbit-weight investigation has an existing record of 87 passing
 controls: 17 exact integer cases and 70 floating diagnostics. The
@@ -44,6 +44,41 @@ comparison an interval certificate. No xi-zero table or external
 dataset is used. The record stores a SHA-256 program hash, which
 establishes file identity rather than correctness.
 
+\subsection{The two completed interface diagnostics}
+
+The finite-place interface record contains 144 passing floating controls,
+and the thermal boundary record contains 203. They are separate from
+the 87-case coefficient suite:
+\begin{itemize}
+\item \href{numerics/check_finite_place_interface.py}{Finite-place interface program},
+\href{numerics/records/finite-place-interface-20260923.json}{144-case record}, and
+\href{reviews/review_codex_finite_place_interface_20260923.md}{research audit}.
+\item \href{numerics/check_thermal_boundary_structure.py}{Thermal boundary program},
+\href{numerics/records/thermal-boundary-structure-20260923.json}{203-case record}, and
+\href{reviews/review_codex_thermal_boundary_structure_20260923.md}{research audit}.
+\end{itemize}
+Both use Python 3.10.0 and mpmath 1.3.0 at 60 decimal digits. The
+first derives echo paths from the boundary recursion, solves the vertex
+equations, checks coherent/fluctuating/stored energy, and samples the
+completion residues and their cancellation in the full quotient. Pulse
+intersection lengths are exact formulas evaluated in floating arithmetic.
+The second evaluates native correlations and Kubo response, checks the
+spectral sum rule and integrated oscillator work, independently solves
+the port equations, and checks passivity, asymptotics, tangents and
+endpoints. Occupation sums extend through 360 and 400 respectively,
+with omitted-mass bounds; the second uses infinite-ladder matrix elements,
+not an artificially truncated commutator.
+
+Passing controls reproduce both the valid energy balances and the
+failures of arithmetic matching. None is an interval certificate,
+a proof of a general asymptotic theorem, or a simulation of exact
+finite-coupling microscopic quantum scattering. The recorded program
+hashes and case outcomes were checked for this manuscript integration;
+no numerical program or record was changed and no suite was rerun
+merely for the editorial revision.
+
+\subsection{Historical diagnostics}
+
 Earlier suites are separate: the WZW pilot has 72 controls, the direct
 arithmetic source 60, the collar 60, Brownian readout 51, modular
 scattering 65, and the fractional cusp test 80. Their notes document
@@ -55,7 +90,7 @@ this editorial revision.
 
 \subsection{Research and document provenance}
 
-The principal source of the current argument is \cite{OrbitNote}.
+The principal sources are \cite{OrbitNote,InterfaceNote,BoundaryNote}.
 The earlier notes are cited in Section~\ref{sec:previous} so that the
 retrospective need not repeat their derivations. The local README and
 build record identify the active TeX inputs, delivered PDF, source
@@ -66,9 +101,9 @@ creating a dated manuscript snapshot.
 
 The coefficient proofs and scoped exclusions are analytical arguments.
 The numerical controls do not prove the existence of a causal physical
-interface, the full-family unweighted contraction, or RH. The next
-construction is the finite-place interface in
-Section~\ref{sec:interface}, rather than a numerical search for zeros.
+interface, the full-family unweighted contraction, or RH. The completed interface tests narrow the candidate class; the
+next proposed arithmetic calculation is cumulative storage on the first
+prime window in Section~\ref{sec:outlook}.
 
 \subsection{Acknowledgements and review status}
 

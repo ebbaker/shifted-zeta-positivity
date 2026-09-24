@@ -1,6 +1,6 @@
 # Build the thermal orbit-weight manuscript
 
-The live standalone manuscript uses local TeX inputs and does not import the parent manuscript. It now focuses on the Bost–Connes orbit-weight investigation, with earlier tests summarized near the end. A TeX Live installation with latexmk, pdfLaTeX, Latin Modern, AMS packages, microtype, hyperref, fancyhdr and tabularx is sufficient.
+The live standalone manuscript uses local TeX inputs and does not import the parent manuscript. It integrates the Bost–Connes orbit-weight investigation, completed finite-place and energy-exchanging boundary tests, and current research priorities, with earlier tests summarized near the end. A TeX Live installation with latexmk, pdfLaTeX, Latin Modern, AMS packages, microtype, hyperref, fancyhdr and tabularx is sufficient.
 
 From `WZW`:
 
@@ -9,9 +9,9 @@ latexmk -pdf -interaction=nonstopmode -halt-on-error -outdir=build manuscript.te
 cp build/manuscript.pdf manuscript.pdf
 ```
 
-The delivered [PDF](manuscript.pdf) has 12 pages. [BUILD_RECORD.json](BUILD_RECORD.json) records its identity, active sources, research inputs, numerical provenance and visual review. Rebuilding can alter PDF metadata bytes without altering the mathematics. After substantive changes, inspect the new PDF and refresh the record rather than preserving a stale review claim.
+The delivered [PDF](manuscript.pdf) has 17 pages. [BUILD_RECORD.json](BUILD_RECORD.json) records its identity, active sources, research inputs, numerical provenance and visual review. Rebuilding can alter PDF metadata bytes without altering the mathematics. After substantive changes, inspect the new PDF and refresh the record rather than preserving a stale review claim.
 
-The active sections are `01_scope`, `02_arithmetic_target`, `03_thermal_weights`, `04_norms_and_limits`, `05_physical_interface`, `06_previous_tests` and `a_validation`, together with the entry point, preamble and references. Seven older section fragments remain in the folder but are not compiled; the record identifies them separately.
+The active sections are `01_scope`, `02_arithmetic_target`, `03_thermal_weights`, `04_norms_and_limits`, `05_physical_interface`, `06_thermal_boundary`, `06_previous_tests`, `07_outlook` and `a_validation`, together with the entry point, preamble and references. Seven older section fragments remain in the folder but are not compiled; the record identifies them separately.
 
 Render every page for review:
 
@@ -23,13 +23,15 @@ Resolve undefined references or citations, overflow and layout defects before re
 
 ## Recorded numerical controls
 
-The current argument uses the unchanged 87-case orbit-weight record: 17 exact integer and 70 floating controls. From `WZW`, with Python 3 and mpmath installed:
+The current argument uses the unchanged 87-case orbit-weight record (17 exact integer and 70 floating controls), 144-case finite-place interface record, and 203-case thermal boundary record. The latter two consist of floating controls. From `WZW`, with Python 3 and mpmath installed:
 
 ```sh
 python3 -B numerics/check_arithmetic_orbit_weights.py --output /tmp/arithmetic-orbit-weights-replay.json
+python3 -B numerics/check_finite_place_interface.py --output /tmp/finite-place-interface-replay.json
+python3 -B numerics/check_thermal_boundary_structure.py --output /tmp/thermal-boundary-structure-replay.json
 ```
 
-The manuscript revision is an editorial integration of the completed research and adds no numerical cases. The program and record hashes were checked; the suite was not rerun merely to rewrite the manuscript. Earlier controls remain separate: WZW pilot 72, arithmetic source 60, bounded collar 60, Brownian readout 51, modular scattering 65, fractional cusp 80. See [numerics/README.md](numerics/README.md) and the linked notes for replay commands and limitations. These controls do not establish a causal completed physical realization or RH.
+The manuscript revision is an editorial integration of the completed research and adds no numerical cases. Program hashes and all recorded case outcomes were checked; the suites were not rerun merely to rewrite the manuscript. Earlier controls remain separate: WZW pilot 72, arithmetic source 60, bounded collar 60, Brownian readout 51, modular scattering 65, fractional cusp 80. See [numerics/README.md](numerics/README.md) and the linked notes for replay commands and limitations. These controls do not establish a causal completed physical realization or RH.
 
 ## Milestones and package identity
 

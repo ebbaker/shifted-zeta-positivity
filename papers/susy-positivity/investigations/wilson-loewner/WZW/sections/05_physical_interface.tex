@@ -1,52 +1,173 @@
-\section{The next test: a finite-place physical interface}
+\section{The finite-place interface: completed tests}
 \label{sec:interface}
 
-The coefficient calculation selects a concrete next candidate: the
-positive sector \eqref{eq:finite_hamiltonian} for $S=\{2,3\}$,
-coupled to an archimedean radiation channel. It has native observables
-$P_2$, $P_3$ and $P_6$, and its equilibrium state exists at every
-relevant temperature. The mathematical task is now to specify and
-derive the coupling, not to invent another list of arithmetic weights.
+The proposed two-prime interface has now been tested in an explicit
+unitary delay model. Its ordinary energy balance and identity limit
+hold, but its arithmetic amplitudes fail. A separate argument excludes
+a literal finite Euler product with the unchanged archimedean completion.
+This section summarizes the derivations in \cite{InterfaceNote}; that
+note also contains the detailed path calculations and numerical controls.
 
-The first comparison should include $n=2,3,4,6$. The first two test
-the primitive amplitudes, $n=4$ tests repetition, and $n=6$ tests the
-combination of distinct primes. A successful model must meet four
-linked requirements:
-\begin{enumerate}
-\item An explicit Hamiltonian or boundary coupling, together with its
-state preparation and measured output, must convert the native
-arithmetic labels into physical propagation delays $\log n$.
-\item The same construction must derive the centered amplitudes
-$n^{(\beta-1)/2}\varphi_\beta(P_n)$ and their parameter derivative,
-including $c_2'(1/2)=(3/2)\log2$. A temperature-dependent detector
-chosen to equal $B_{n,\beta}$ is not by itself that derivation.
-\item The archimedean sector must produce
-$A_\omega$ in \eqref{eq:archimedean} with $\beta=2\omega$, including
-the rational completion as well as the gamma factor.
-\item The full assembly must have an ordinary radiation-energy
-balance that accounts for internal storage, later output and any
-additional channels. It must not define its positive norm by
-pulling back the desired arithmetic transfer.
-\end{enumerate}
-Assigning a filter equal to $A_\omega$ times a finite Euler product
-would merely restate the target. A finite-place model need not be
-lossless if omitted channels carry explicitly accounted flux; an
-unexplained gain or deficit cannot be treated as the desired scalar
-response.
+\subsection{Primitive-controlled loops and measured amplitudes}
 
-Only after this finite interface is derived should one seek an
-infinite-place common-space limit. Proposition~\ref{prop:product_obstruction}
-identifies a specific embedding that cannot supply it. The full
-KMS construction remains available, but an intertwiner from that
-construction to the required fixed radiation norm is an additional
-obligation.
+Use the finite Gibbs sector \eqref{eq:finite_hamiltonian} with
+$S=\{2,3\}$ and $q_\ell=\ell^{-\beta}$. At each prime attach a
+unit-speed transport loop with coordinate $x=\log y$, $1\le y\le\ell$.
+Its length and flight time are $\tau_\ell=\log\ell$. This geometry is
+an explicit modeling assumption; a thermal energy label alone does not
+derive a flight time. In the primitive sector $P_\ell=1$, impose
+\begin{equation}
+ \binom{y_\ell}{u_\ell}
+ =\begin{pmatrix}-r_\ell&t_\ell\\t_\ell&r_\ell\end{pmatrix}
+   \binom{f_\ell}{v_\ell},\qquad
+ t_\ell=\sqrt{1-r_\ell^2},\quad
+ v_\ell(t)=u_\ell(t-\tau_\ell),\quad r_\ell=\ell^{-1}.
+ \label{eq:loop_vertex}
+\end{equation}
+The complementary sector bypasses an empty, disconnected loop. The
+full controlled vertex is unitary and preserves the thermal occupations.
+Prepare the loops empty, cascade the stages, and measure the mean
+outgoing amplitude. The controller is not reset on a repeated traversal.
 
-The zero-shift endpoint requires a separate check as well. For each
-fixed $n>1$, $c_n(\omega)\to0$ as $\omega\downarrow0$, while
-$c_1=1$. This is the correct coefficientwise identity limit.
-Meanwhile, the geometric thermal distribution at each prime spreads
-to arbitrarily high occupation as $\beta\downarrow0$. Coefficientwise
-convergence is therefore not yet a strong state limit or a strong
-scattering limit. The current result supplies an independently
-motivated arithmetic probability law and precisely locates the
-physical work that remains.
+Writing $z_\ell=e^{-p\tau_\ell}$, elimination of the internal fields gives
+\begin{equation}
+ F_\ell=\frac{z_\ell-r_\ell}{1-r_\ell z_\ell},\qquad
+ R_{\ell,\beta}=q_\ell+(1-q_\ell)F_\ell,\qquad
+ R_\beta=R_{2,\beta}R_{3,\beta}.
+ \label{eq:thermal_loop_transfer}
+\end{equation}
+Each $F_\ell$ is a causal contraction, and the product follows from the
+independent, unchanged controllers. Set
+$d_\ell=q_\ell-r_\ell(1-q_\ell)$ and
+$b_\ell=(1-q_\ell)(1-r_\ell^2)$. The coefficients of the paths labeled
+$1,2,3,4,6$ are respectively
+\begin{equation}
+ g_1=d_2d_3,\quad g_2=b_2d_3,\quad g_3=d_2b_3,\quad
+ g_4=r_2b_2d_3,\quad g_6=b_2b_3.
+\end{equation}
+The primitive probability occurs once per distinct prime, but
+\begin{equation}
+ \frac{g_4}{g_2}=\frac12,\qquad
+ \frac{c_4(\beta/2)}{c_2(\beta/2)}=2^{(\beta-1)/2}.
+ \label{eq:loop_repetition_failure}
+\end{equation}
+These ratios differ throughout $0<\beta\le1$. More generally, a fixed
+loop reflectivity cannot match the varying ratio on an open temperature
+interval. Formally normalizing by $g_1>0$ gives, at $\beta=1$,
+\begin{center}
+\begin{tabular}{c r r}
+\toprule
+Label $n$ & $g_n/g_1$ & Required $c_n(1/2)$\\
+\midrule
+2 & $3/2$ & $1/2$\\
+3 & $16/3$ & $2/3$\\
+4 & $3/4$ & $1/2$\\
+6 & $8$ & $1/3$\\
+\bottomrule
+\end{tabular}
+\end{center}
+This normalization compares path weights; it does not define another
+contractive readout. Its first-prime shift tangent is $12\log2$,
+whereas \eqref{eq:first_prime} requires $(3/2)\log2$. Moreover,
+$R_\beta(p)\to d_2d_3>0$ as real $p\to+\infty$, while the completed
+target tends to zero like $(2\pi/p)^{\beta/2}$.
+
+\subsection{Energy accounting and a genuine identity limit}
+
+For each controller sector $a$, unitarity of \eqref{eq:loop_vertex}
+gives input energy equal to output energy plus loop storage. Let
+$y_a$ be the sector output, $\bar y=\mathbb E_\beta y_a=R_\beta f$,
+and $E_a(L)$ the total energy remaining in the two loops. Averaging
+and separating the output variance yields
+\begin{equation}
+ \norm{f}_{(0,L)}^2=\norm{\bar y}_{(0,L)}^2
+ +\mathbb E_\beta\norm{y_a-\bar y}_{(0,L)}^2
+ +\mathbb E_\beta E_a(L).
+ \label{eq:loop_energy}
+\end{equation}
+All terms use ordinary radiation energy. The variance is outgoing
+signal fluctuation correlated with the controller, not unexplained
+absorption; the controller occupations do not change. This identity
+establishes passivity of the specified model, not arithmetic matching.
+
+The model also has the positive endpoint property
+\begin{equation}
+ \norm{R_\beta-I}\le2\bigl[(1-2^{-\beta})+(1-3^{-\beta})\bigr]
+ \longrightarrow0\qquad(\beta\downarrow0).
+\end{equation}
+Thus a scattering identity limit can exist even when the Gibbs states
+have no trace-class limit. This does not repair the amplitude failure.
+
+\subsection{A fixed bounded thermal readout cannot supply centering}
+
+\begin{proposition}[Finite-place readout limitation]
+\label{prop:fixed_thermal_readout}
+Fix a finite prime set $S$, its native Gibbs state $\rho_\beta$, and
+a bounded temperature-independent operator $B$. For any $n>1$
+supported on $S$, $\operatorname{Tr}(\rho_\beta B)$ cannot equal
+$c_n(\beta/2)$ on a nonempty open interval of positive temperatures.
+\end{proposition}
+\begin{proof}
+In the occupation basis the expectation is
+\begin{equation}
+ f_B(\beta)=\prod_{\ell\in S}(1-\ell^{-\beta})
+ \sum_{\mathbf m\ge0}\langle\mathbf m|B|\mathbf m\rangle
+ e^{-\beta\sum_\ell m_\ell\log\ell}.
+\end{equation}
+Bounded diagonal entries give locally uniform convergence on
+$\Ree\beta>0$. Both $f_B$ and $c_n(\beta/2)$ are holomorphic there,
+so equality on the interval forces equality throughout this half-plane.
+For real $\beta>0$, however, $|f_B(\beta)|\le\norm B$, whereas
+$n^{(\beta-1)/2}\prod_{\ell\mid n}(1-\ell^{-\beta})\to\infty$
+as $\beta\to\infty$.
+\end{proof}
+The proposition requires extraction by a fixed bounded observable in
+the native Gibbs state. It does not apply automatically to coefficients
+obtained by temperature-dependent deconvolution of a completed response,
+to a different interacting equilibrium, or to the full $K_{\beta/2}$.
+
+\subsection{Why a finite Euler completion is not passive}
+
+For a finite prime set $S$, put
+\begin{equation}
+ Z_{S,\beta/2}(p)=\prod_{\ell\in S}
+ \frac{1-\ell^{-s_+}}{1-\ell^{-s_-}},\qquad
+ d=\frac{1-\beta}{2},\quad s_-=p+d,\quad s_+=p+d+\beta.
+\end{equation}
+At $p=d$, one has $s_+=1$ and $s_-=1-\beta$. For $0<\beta<1$,
+the rational completion in \eqref{eq:archimedean} has a simple pole,
+while every finite Euler factor and both gamma factors are finite and
+nonzero. Direct evaluation gives
+\begin{align}
+ \operatorname*{Res}_{p=d}\bigl[A_{\beta/2}Z_{S,\beta/2}\bigr]
+ &=-\beta(1-\beta)\pi^{(\beta-1)/2}
+ \Gamma\!\left(\frac{1-\beta}{2}\right)
+ \prod_{\ell\in S}\frac{1-\ell^{-1}}{1-\ell^{-(1-\beta)}}
+ \ne0.
+ \label{eq:finite_euler_pole}
+\end{align}
+A causal time-invariant contraction on ordinary $L^2(0,\infty)$ has
+a holomorphic contractive multiplier in $\Ree p>0$. Hence this finite
+completion cannot be such a passive response. Additional zero-input
+passive ports do not help: their measured scalar block is still
+contractive. The pole allows a causal unstable response, so the
+exclusion concerns causality together with the required energy bound.
+
+The full quotient cancels the pole through $1/\zeta(s_+)$, using the
+simple residue-one pole of zeta at one \cite{DLMF}. In fact
+\begin{equation}
+ K_{\beta/2}(d)=2\xi(1-\beta).
+\end{equation}
+This local cancellation is unconditional; it does not establish
+full-family passivity. At $\beta=1$, the two-prime completion instead
+behaves as $-2/(3\log2\log3\,p^3)$ near $p=0$, whereas
+$K_{1/2}(0)=1$. Thus the existing global modular benchmark is unaffected.
+
+Finite \emph{time} windows remain valid comparisons. The far-right
+Euler series and the causal archimedean kernel imply equality with the
+full formal causal kernel before the first omitted prime delay
+\cite[Section~7]{InterfaceNote}. For $S=\{2,3\}$ this means
+$L<\log5$. A scalar comparison through $\log6$ must also include
+prime 5; a path-resolved two-loop experiment can isolate label 6.
+Finite-window agreement alone asserts neither passivity nor a physical
+realization.

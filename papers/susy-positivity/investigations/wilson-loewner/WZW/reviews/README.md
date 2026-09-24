@@ -1,6 +1,12 @@
 # WZW reviews
 
-The [current thermal orbit-weight manuscript audit](review_codex_thermal_manuscript_20260923.md) covers the 12-page revision focused on the Bost–Connes coefficient result, its explicit physical gaps and ordinary-norm limitations, and the brief retrospective of earlier tests. It records the source, link and complete page review; it is a same-assistant audit, not an independent specialist review.
+The [current manuscript integration audit](review_codex_interface_manuscript_integration_20260923.md) covers the 17-page synthesis of the coefficient identity and both completed interface tests, the scoped front-rigidity theorem, current avenues, numerical provenance and all-page/link review. It is a same-assistant audit.
+
+The [thermal boundary structural audit](review_codex_thermal_boundary_structure_20260923.md) checks native energy-changing Kubo probes, the distinction between an exact susceptibility and its effective linear boundary model, ordinary coherent energy and thermal-noise accounting, the finite-spectral-mass front theorem, and the failed calibrated arithmetic tangent. Its 203 floating controls support parking the specified regular boundary-load branch; this is a same-assistant review.
+
+The [finite-place radiation interface audit](review_codex_finite_place_interface_20260923.md) checks the explicit unitary two-prime delay model, coherent/inclusive energy accounting, normalized coefficient and tangent failures, the fixed bounded thermal-readout proposition, and the finite-Euler completion pole. It accompanies 144 new floating controls and a revised next test; it is a same-assistant review, not an independent specialist review.
+
+The [earlier thermal orbit-weight manuscript audit](review_codex_thermal_manuscript_20260923.md) covers the 12-page revision focused on the Bost–Connes coefficient result, its explicit physical gaps and ordinary-norm limitations, and the brief retrospective of earlier tests. It records the source, link and complete page review; it is a same-assistant audit, not an independent specialist review.
 
 The [arithmetic orbit-weight audit](review_codex_arithmetic_orbit_weights_20260923.md) checks the primitive KMS coefficient identity, explicit centering and time-interpretation gaps, local ordinary norms, the scoped product-state and bare Euler exclusions, and scalar holonomy rigidity. It is a same-assistant audit with 87 separate controls, including 17 exact integer cases; a causal coupled physical realization is not claimed.
 

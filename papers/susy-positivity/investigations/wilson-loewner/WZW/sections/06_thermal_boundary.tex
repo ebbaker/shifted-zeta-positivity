@@ -1,0 +1,206 @@
+\section{Energy-exchanging boundary loads and front rigidity}
+\label{sec:thermal_boundary}
+
+A second test allows the thermal sector to exchange energy and connects
+its response to the \emph{full} modular channel. It yields a positive
+linear boundary model but a structural arithmetic exclusion. Complete
+derivations, additional endpoint checks and the diagnostic record are
+in \cite{BoundaryNote}.
+
+\subsection{Native Kubo response and its physical scope}
+
+Write $H_S=\sum_{\ell=2,3}\epsilon_\ell N_\ell$, with
+$\epsilon_\ell=\log\ell$, and retain the native Gibbs state. The
+isometry $v_\ell|m\rangle=|m+1\rangle$ obeys
+$v_\ell^*v_\ell=I$ and $v_\ell v_\ell^*=I-P_\ell$.
+Unlike the primitive gate, the bounded self-adjoint probe
+$B_\ell=v_\ell+v_\ell^*$ changes the occupation energy. A real
+boundary effort drives the interaction
+\begin{equation}
+ H_{\rm probe}(t)=H_S-U(t)\sum_\ell g_\ell B_\ell.
+\end{equation}
+For bounded real $U$, this is a bounded self-adjoint perturbation on
+the original domain. All dynamical times use the common radiation time
+conjugate to $p$; inverse temperature is a separate parameter.
+
+The retarded response around the uncoupled Gibbs state is obtained
+from the Kubo commutator \cite{Kubo}. Since
+$[B_\ell(t),B_\ell(0)]=-2\ii\sin(\epsilon_\ell t)P_\ell$,
+\begin{equation}
+ \chi_{\ell,\beta}(t)=2(1-q_\ell)\sin(\epsilon_\ell t)1_{t>0},
+ \qquad
+ \chi_{\ell,\beta}(p)=\frac{2\epsilon_\ell(1-q_\ell)}
+ {p^2+\epsilon_\ell^2}.
+ \label{eq:native_kubo}
+\end{equation}
+The conjugate flow $I=\sum_\ell g_\ell\,d\langle B_\ell\rangle/dt$
+has admittance
+\begin{equation}
+ Y_\beta(p)=\sum_{\ell=2,3}w_{\ell,\beta}
+ \frac{p}{p^2+\epsilon_\ell^2},\qquad
+ w_{\ell,\beta}=2g_\ell^2\epsilon_\ell(1-q_\ell)>0.
+ \label{eq:native_admittance}
+\end{equation}
+It is positive real in $\HR$, because
+$p/(p^2+\epsilon^2)=\tfrac12[(p-\ii\epsilon)^{-1}+
+(p+\ii\epsilon)^{-1}]$. Here $\log\ell$ is a transition frequency,
+not a derived flight delay.
+
+For a common strength $\lambda\ge0$, this susceptibility has an exact
+conservative linear realization:
+\begin{align}
+ \ddot x_\ell+\epsilon_\ell^2x_\ell
+ &=\sqrt{\lambda w_{\ell,\beta}}\,U,
+ & I&=\sum_\ell\sqrt{\lambda w_{\ell,\beta}}\,\dot x_\ell,\\
+ E_{\rm load}&=\tfrac12\sum_\ell
+ (|\dot x_\ell|^2+\epsilon_\ell^2|x_\ell|^2),
+ &\dot E_{\rm load}&=\Ree(\bar U I).
+ \label{eq:load_energy}
+\end{align}
+The initial coherent perturbation is zero. Equation~\eqref{eq:native_kubo}
+is the exact susceptibility of the uncoupled probe;
+\eqref{eq:load_energy} is an exact \emph{linear realization} of it.
+Neither statement identifies the closed-loop model with exact
+finite-coupling microscopic quantum scattering. That would require
+an interacting equilibrium, radiative dressing and fluctuation channels.
+Indeed
+\begin{equation}
+ \langle B_\ell(t)B_\ell(0)\rangle_\beta
+ =e^{-\ii\epsilon_\ell t}+q_\ell e^{\ii\epsilon_\ell t}.
+\end{equation}
+The load energy balance concerns coherent perturbations, not the full
+thermal output intensity of a noiseless quantum device.
+
+\subsection{Connection to the completed modular response}
+
+Use the established half-shift reference
+$K(p)=\xi(p)/\xi(p+1)$ and $r_b(p)=e^{-bp}K(p)$ at an exterior port.
+Its fixed-shift causality is an input from the known innerness result
+and modular construction \cite{Suzuki,ModularNote}. The favorable
+control $b=0$ removes the extra lead algebraically; it is not asserted
+to be the selected regular geometric cross-section.
+
+In the fixed measured-output orientation, let $f,g$ be external
+amplitudes and $a,r_ba$ the core amplitudes. Impose common effort and
+addition of flows:
+\begin{equation}
+ U=f-g=a-r_ba,\qquad f+g=a+r_ba+I,\qquad I=\lambda Y_\beta U.
+\end{equation}
+Then $f=a+I/2$, $g=r_ba+I/2$, and elimination yields
+\begin{equation}
+ S_{\beta,\lambda,b}
+ =\frac{r_b+J_\beta(1-r_b)}{1+J_\beta(1-r_b)},\qquad
+ J_\beta=\lambda Y_\beta/2.
+ \label{eq:parallel_response}
+\end{equation}
+The entire completed modular transfer is retained. The core admittance
+$(1+r_b)/(1-r_b)$ is positive real, so adding $\lambda Y_\beta$
+and taking its Cayley transform proves that
+\eqref{eq:parallel_response} is analytic and contractive in $\HR$.
+For its numerator $N$ and denominator $D$, the flux identity is
+\begin{equation}
+ |D|^2-|N|^2=1-|r_b|^2+\lambda\Ree Y_\beta\,|1-r_b|^2\ge0.
+\end{equation}
+The ordinary finite-window coherent balance is
+\begin{equation}
+ \norm f_{(0,L)}^2-\norm g_{(0,L)}^2
+ =E_{\rm load}(L)+\norm a_{(0,L)}^2-\norm{r_ba}_{(0,L)}^2\ge0.
+ \label{eq:parallel_energy}
+\end{equation}
+Here $r_ba$ denotes causal convolution. The core deficit is the later
+output energy for its input stopped at $L$. This uses the established
+half-shift isometry, not positivity of the unknown variable-shift target.
+
+\subsection{A structural exclusion for finite spectral mass}
+
+\begin{proposition}[Fixed-core parallel-load front rigidity]
+\label{prop:front_rigidity}
+Suppose $K(p)\sim c\,p^{-1/2}$, $c>0$, on the positive real axis,
+and a load has the representation
+\begin{equation}
+ Y(p)=\int_{(0,\infty)}\frac{p}{p^2+\Omega^2}\dd\nu(\Omega),
+ \qquad \nu\ge0,\qquad C:=\nu((0,\infty))<\infty.
+ \label{eq:finite_spectral_mass}
+\end{equation}
+For each fixed finite $\lambda\ge0$, the connection
+\eqref{eq:parallel_response} at $b=0$ satisfies
+\begin{equation}
+ S(p)=K(p)+\frac{\lambda C}{2p}+o(p^{-1}),\qquad
+ S(p)\sim c\,p^{-1/2}.
+ \label{eq:front_rigidity}
+\end{equation}
+For the modular core, it cannot equal $K_{\beta/2}$ at any
+$0<\beta<1$.
+\end{proposition}
+\begin{proof}
+Dominated convergence gives
+$pY(p)=\int p^2/(p^2+\Omega^2)\dd\nu(\Omega)\to C$.
+Subtracting the core from \eqref{eq:parallel_response} gives
+\begin{equation}
+ S-K=\frac{(\lambda Y/2)(1-K)^2}{1+(\lambda Y/2)(1-K)}.
+\end{equation}
+This proves \eqref{eq:front_rigidity}. The required leading behavior is
+$K_{\beta/2}(p)\sim(2\pi/p)^{\beta/2}$, which has a different power
+for $0<\beta<1$.
+\end{proof}
+
+The hypothesis includes countably many modes when their total response
+spectral mass is finite. For a self-adjoint thermal probe $B$, the
+transition measure has positive weights
+$2(E_n-E_m)(\rho_m-\rho_n)|B_{mn}|^2$ at $E_n-E_m>0$.
+When the sum converges its total mass is
+\begin{equation}
+ C_\beta=\operatorname{Tr}\rho_\beta[B,[H_S,B]].
+\end{equation}
+Finite sums of products of the native isometries and their adjoints
+have bounded energy jumps and the needed bounded commutators. In
+particular, \eqref{eq:native_admittance} has
+$C_\beta=\sum_\ell w_{\ell,\beta}<\infty$, without truncating the
+occupation space. Boundedness of an arbitrary $B$ alone does not
+imply this energy regularity for an unbounded Hamiltonian.
+
+At a regular exterior port $b>0$, a nonzero load instead gives
+$S_{\beta,\lambda,b}(p)\sim\lambda C_\beta/(2p)$: it introduces a
+prompt response before the reference delay of
+$e^{-bp}K_{\beta/2}$. Thus the regular port does not repair the failure
+already visible in the favorable $b=0$ comparison.
+
+\subsection{The calibrated tangent and endpoints also fail}
+
+A fixed active added load changes the half-shift reference itself.
+Grant the favorable additional switch $\lambda(\beta)=1-\beta$ so
+that $S_{1,0,0}=K$. This switch is not supplied by the KMS law.
+Its microscopic amplitude is proportional to $\sqrt{1-\beta}$;
+a differentiable amplitude vanishing at one would give zero first
+response tangent. The one-sided tangent under the granted switch is
+\begin{align}
+ T_{\rm native}(p)
+ &=\left.\partial_\beta\log S_{\beta,1-\beta,0}(p)\right|_1
+ =-\frac{Y_1(p)(1-K(p))^2}{2K(p)}
+ \sim-\frac{C_1}{2\sqrt{2\pi}}p^{-1/2},\\
+ T_{\rm arith}(p)
+ &=\left.\partial_\beta\log K_{\beta/2}(p)\right|_1
+ =-\tfrac12 a_{1/2}(p)
+ =-\tfrac12\log\frac{p}{2\pi}+O(p^{-1}).
+ \label{eq:boundary_tangent_failure}
+\end{align}
+For $g_2=g_3=1$, $C_1=\log2+(4/3)\log3$. No constant calibration
+can turn the decaying native tangent into the required logarithm.
+In time, the native transfer tangent has a finite step at the front,
+whereas the arithmetic transfer tangent has a
+$t^{-1/2}\log t$ singularity \cite[Section~7]{BoundaryNote}.
+
+For the explicit finite-transition load, $Y_\beta(p)=O(p)$ near zero,
+so $S'_{\beta,\lambda,0}(0)=K'(0)$, while the target slope varies
+with $\beta$. For bounded $\lambda(\beta)$, the native weights vanish
+as $\beta\downarrow0$, giving $S\to K$ pointwise rather than the
+identity. These supplementary failures are not needed for the
+front-rigidity proof.
+
+The resulting decision is to park the regular finite-place passive
+parallel-load route. The theorem concerns the unchanged core and
+\eqref{eq:finite_spectral_mass}; it excludes neither distributed
+interactions that change the core nor every passive boundary admittance.
+A singular continuum proposal would need its own well-defined domain
+and positive energy. The coefficient identity in
+\eqref{eq:main_dictionary} remains intact.

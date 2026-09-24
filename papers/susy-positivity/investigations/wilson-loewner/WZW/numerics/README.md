@@ -1,5 +1,29 @@
 # WZW continuation diagnostics
 
+## Thermal boundary coupling and front rigidity
+
+The [structural diagnostic](check_thermal_boundary_structure.py) accompanies the [research note](../notes/THERMAL_BOUNDARY_COUPLING_AND_FRONT_RIGIDITY_TEST_20260923.md) and [audit](../reviews/review_codex_thermal_boundary_structure_20260923.md). Its [record](records/thermal-boundary-structure-20260923.json) has 203 passing floating controls for native occupation-changing Kubo response, oscillator storage, the full modular boundary connection, finite-spectral-mass bounds, and the failed front and shift tangent.
+
+From the parent Wilson–Loewner directory, with Python 3 and mpmath installed:
+
+```sh
+python3 -B WZW/numerics/check_thermal_boundary_structure.py --output /tmp/thermal-boundary-structure-replay.json
+```
+
+The recorded run uses mpmath 1.3.0 at 60 decimal digits, with occupation sums through 400 and tail controls. It uses no sibling program or external dataset. These are checks of the stated linear-response model and analytical exclusion, not a microscopic finite-coupling quantum simulation or interval certificate. Earlier suites remain unchanged.
+
+## Finite-place thermal radiation interface
+
+The [interface diagnostic](check_finite_place_interface.py) accompanies the [research note](../notes/FINITE_PLACE_RADIATION_INTERFACE_TEST_20260923.md) and [audit](../reviews/review_codex_finite_place_interface_20260923.md). Its [record](records/finite-place-interface-20260923.json) has 144 passing floating controls. They solve the actual unitary loop boundary conditions, trace the native Gibbs state, integrate coherent and fluctuating pulse output plus loop storage, and verify the predicted coefficient failures and the finite-Euler completion pole. Passing checks confirm these scoped exclusions; a completed arithmetic physical realization is not claimed.
+
+From the parent Wilson–Loewner directory, with Python 3 and mpmath installed:
+
+```sh
+python3 -B WZW/numerics/check_finite_place_interface.py --output /tmp/finite-place-interface-replay.json
+```
+
+The recorded run uses mpmath 1.3.0 at 60 decimal digits. Pulse overlaps are integrated from their exact interval lengths; thermal shell sums use occupation cutoff 360 with an explicit tail bound. There is no time grid, external dataset, sibling-program import or interval certificate. Earlier suites are unchanged.
+
 ## Arithmetic orbit weights and the Bost–Connes thermal source
 
 The [orbit-weight diagnostic](check_arithmetic_orbit_weights.py) accompanies the [research note](../notes/ARITHMETIC_ORBIT_WEIGHTS_AND_BOST_CONNES_TEST_20260923.md) and [audit](../reviews/review_codex_arithmetic_orbit_weights_20260923.md). Its [record](records/arithmetic-orbit-weights-20260923.json) has 87 passing controls: 17 exact integer and 70 floating. They verify primitive coefficients, finite-place thermal laws, the prime-source derivative, local norm formulas and two specified norm limitations. They do not establish the missing causal scattering interface.
