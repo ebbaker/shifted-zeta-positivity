@@ -1,5 +1,49 @@
 # Changelog
 
+## 2026-09-24 — wilson-loewner/N4SYM: second session (Claude Opus 5.5)
+
+- The near-BPS corner of the generalized cusp (phi = pi - u,
+  theta = pi - x u) controls the continuum short-time law of the
+  flipped-return Loewner loop. The CHMS formula fixes the exact slope at
+  the BPS line. The transcribed Drukker–Forini two-loop cusp, checked
+  against three limits, gives the corner (1 - x^2)[g/16pi - g^2/192pi^2]
+  with g = lambda u. The coefficient H is one-loop exact order by order in
+  perturbation theory, under a stated assumption. The planar classical
+  string gives Gamma = sqrt(lambda u) F(x) at g >> 1, with F(0) = 0.1750;
+  it reproduces the exact BPS-line slope, and implies a (pi - theta)^(3/2)
+  antiparallel law at strong coupling.
+- The rounded flipped family W(s, dhat) is finite at one loop. Its
+  log(1/delta) coefficient is the exact cusp sum; the constant is
+  h = -4.0202 (convention dependent).
+- The Schwinger–Dyson audit of the flipped hierarchy gives an explicit
+  residual inventory. At one loop the field-equation part is contact and
+  the transverse part is long range.
+- Added one note, a continuation, two standard-library programs with
+  records (56 + 20 cases, all passing) and a second same-assistant audit
+  with a referee pass. No independent review; nothing committed.
+
+## 2026-09-24 — wilson-loewner/N4SYM: first working session (Claude Opus 5.5)
+
+- Straight half-BPS line (proposal milestones M0–M2). The quadratic shape
+  response is fixed by B up to one perimeter constant, and the Zarembo
+  cancellation holds if and only if C_D = 6 C_Phi. The linear retarded
+  response is local, chi_R = m_R w^2 + 2 pi i B w^3 (Abraham–Lorentz). Total
+  work reproduces the CHMS radiated energy. The renormalized finite-time
+  account is non-passive, and the tilt channel is an exact resistor. The
+  linear straight-line channel is closed as an arithmetic candidate.
+- Growing trace. In the CFT, Loewner time collapses to s = a sqrt(t). The
+  proposal's constant-scalar chord completion is sliver-dominated and
+  divergent, and the tangent-coupled family is trivial. A flipped-return
+  completion is proposed and analyzed: exact first and second smooth-field
+  equations, a one-loop confirmation of the short-time law, the continuum
+  cusp and finite-part structure, and three flow regimes. The near-BPS
+  coefficient H(lambda, N) remains open.
+- Added two research notes, a continuation, three standard-library check
+  programs with records (72 + 77 + 47 cases, all passing, deterministic) and
+  a same-assistant audit with a separate referee pass. No manuscript and no
+  independent review. validation/check_package.py was already reporting
+  inventory mismatches at 8b22141 and was not refreshed.
+
 ## 2026-09-19 — wilson-loewner: self-contained manuscript 0.1 (Codex)
 
 - Assembled *Wilson lines on Loewner-generated contours: defect
