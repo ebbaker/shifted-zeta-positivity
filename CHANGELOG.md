@@ -1,5 +1,24 @@
 # Changelog
 
+## 2026-09-24 — wilson-loewner/arithmetic-storage: review and second session (Claude)
+
+- Reviewed commit 1bd1adf (GPT-6 Codex opening package and first-prime session, which had
+  no changelog entry). The replays pass: identical 40/60-digit checks, diagnostics within
+  1.5e-14. An independent Galerkin model reproduces every number.
+- Lemma A: for coercive local forms, kappa_0 <= kappa iff
+  Q(0,R) >= (1-kappa)(Q(0,L) + Q(0,h)). Every append hypothesis is joined-window central
+  positivity, and contraction follows directly (weil-depth's continuation proposition).
+- Closed the first-prime join with the unchanged weil-depth builder (both implementations):
+  Q(0,3/4) >= 123/250000; kappa_0 <= 0.99980; normalized coupling < 0.99982 at
+  omega = 1e-3; ||V(w,3/4)|| <= exp(-w/5000) for w <= 1/50.
+- Proposition 1: for a fixed join length, sup_L kappa_0 >= 1, unconditionally.
+- Certified prime-2 weight window: positivity on (0, log 3) fails for relative weight
+  errors above +3.16e-6 or below -8.18e-5. Proposition 2 (under RH): sign-changing
+  translation-invariant perturbations destroy positivity.
+- Certified archimedean threshold: 0.74 < R_A <= 0.745.
+- Added one note, a review, a continuation, four programs (three Arb, one floating) and
+  eleven records. Same-assistant referee pass only; nothing committed.
+
 ## 2026-09-24 — wilson-loewner/N4SYM: third session (Claude Fable 5.1)
 
 - Option (B) of the second continuation, chosen by the author: a physical

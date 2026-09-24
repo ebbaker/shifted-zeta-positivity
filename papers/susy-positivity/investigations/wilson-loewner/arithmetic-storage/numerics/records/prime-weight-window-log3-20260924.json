@@ -1,0 +1,69 @@
+{
+  "date": "2026-09-24",
+  "model": "Claude (Anthropic); session configured claude-fable-5-1; runtime-reported serving model Claude Opus 5.5 (claude-opus-5-5); serving model may differ",
+  "reasoning_effort": "not exposed",
+  "horizon": null,
+  "log_horizon": 3,
+  "N": 128,
+  "M": 220,
+  "precision_bits": 1792,
+  "profile_remainder_upper": "[6.9939896984427176739681856987568910e-97 +/- 3.45e-132]",
+  "content_sha256": {
+    "with_prime": "462c144d643f7bdc40aa2e6582046656b3718ad6f0fd04c8d48a5c8683c65f2a",
+    "arch_only": "95175df6e28b8a42a07683ef024c5e7398bcbf1631dd0d28dac1741e55bc3255"
+  },
+  "builder_source_sha256": "ca0bf0719a20cdbc3294855ad9d859fdb7a264fa5322b77518f06d44eb278760",
+  "source_sha256": "175edcf727e02d8023fd505e21cb45f82b16b5d10b587dd3e372d0f260f2fe08",
+  "runtime": {
+    "python": "3.11.15",
+    "numpy": "2.4.4"
+  },
+  "floating_head_diagnostics": {
+    "even": {
+      "head_lambda_min_at_s1": 5.53687255698849e-08,
+      "head_lambda_min_at_s0": -0.0739930589456397,
+      "head_upper_edge_s": 1.0000030931967907,
+      "head_lower_edge_s": 0.9981452667537838
+    },
+    "odd": {
+      "head_lambda_min_at_s1": 1.493250235250567e-05,
+      "head_lambda_min_at_s0": -0.43031022658090545,
+      "head_upper_edge_s": 1.0750357487602686,
+      "head_lower_edge_s": 0.9999198613057632
+    },
+    "head_interval_s": [
+      0.9999198613057632,
+      1.0000030931967907
+    ]
+  },
+  "certified_outer_trials": [
+    {
+      "s": "25000079/25000000",
+      "c_weight_decimal": 0.4901306205421402,
+      "certified_not_positive": true,
+      "witness": {
+        "sector": "even",
+        "rayleigh_plus_eta_upper": "[-1.1989548885616003958149953924170938e-9 +/- 5.73e-45]",
+        "negative_certified": true
+      }
+    },
+    {
+      "s": "4999591/5000000",
+      "c_weight_decimal": 0.4900889791762057,
+      "certified_not_positive": true,
+      "witness": {
+        "sector": "odd",
+        "rayleigh_plus_eta_upper": "[-3.0982912411500881993285036640779404e-7 +/- 4.48e-42]",
+        "negative_certified": true
+      }
+    }
+  ],
+  "inner_bound": {
+    "central_floor_at_s1": "271/5000000000",
+    "schur_test": "PASS (weil-depth validate)",
+    "inner_half_width_s_lower": "[1.1058311601109197982151345503969728e-7 +/- 4.18e-42]",
+    "statement": "Q_R(s) >= (m - |s-1| log2/sqrt2) I >= 0 for |s-1| <= m sqrt2/log2"
+  },
+  "elapsed_seconds": 55.049731731414795,
+  "scope": "Outer bounds are certified non-positivity of Q_R(s) (ball Rayleigh quotient plus profile remainder). The inner bound is elementary from the replayed weil-depth floor. Floating head intervals are diagnostics."
+}
