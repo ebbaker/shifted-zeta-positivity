@@ -1,0 +1,137 @@
+\section{The straight line: quadratic response, locality and energy}
+\label{sec:straight}
+
+Deform the straight line by a transverse displacement $\epsilon h(\sigma)$ and the internal direction by
+a tilt $\epsilon j(\sigma)\perp n_0$, and let $Z[h,j]=\vev{W[x_h,n_j]}/\vev{W[x_0,n_0]}$. The first
+variation inserts $\mathbb D_ih^i+\Phi_aj^a$ with $\mathbb D_i=\ii F_{i\sigma}+D_i\Phi_{n_0}$; both
+one-point functions vanish. The Euclidean displacement is Osterwalder--Schrader real,
+$\Theta\mathbb D(\sigma)=\mathbb D(-\sigma)$, and Wick rotation makes $F_{i0}+D_i\Phi$ Hermitian; the
+explicit $\ii$ is not a failure of Hermiticity. At tree level $\vev{\ii F\,\ii F}$ contributes $+4$ and
+$\vev{\partial\Phi\partial\Phi}$ contributes $+2$ in units of $g^2C_F/(4\pi^2\sigma^4)$, so $C_D=12B_1$.
+
+\subsection{Quadratic response}
+
+\begin{proposition}[renormalized quadratic response]
+\label{prop:quadratic}
+Assume that (a) the second variation of the renormalized $\log Z$, away from the diagonal, is given by the
+defect two-point functions; (b) its extension across the diagonal differs from any other by a
+finite-order local distribution whose coefficients carry powers of the regulator scale, apart from
+finite renormalization conditions; (c) $Z$ is invariant under translations, rotations, $SO(5)$ and the
+reflection described below. Then, for every $\lambda$ and $N$,
+\begin{equation}
+\log Z[\epsilon h,\epsilon j]=\epsilon^2\Big\{\pi B\!\int\!\frac{\dd k}{2\pi}\big(|k|^3|\hat h(k)|^2-|k|\,|\hat\jmath(k)|^2\big)
++c_R\!\int\!|\dot h|^2\dd\sigma\Big\}+O(\epsilon^4),
+\label{eq:quadratic}
+\end{equation}
+and there is no cubic term.
+\end{proposition}
+
+\begin{proof}
+The separated kernels are $12B\delta_{ij}\sigma^{-4}$, $2B\delta_{ab}\sigma^{-2}$ and zero for the mixed
+pair (operators of different dimension have vanishing two-point functions on a conformal line, and
+$SO(3)\times SO(5)$ has no invariant tensor with one index of each kind). The family $|\sigma|^\lambda$ has
+poles only at $\lambda=-1,-3,\dots$, so the scale-covariant extensions of $|\sigma|^{-4}$ and $|\sigma|^{-2}$
+are unique and free of logarithms, with Fourier transforms $(\pi/6)|k|^3$ and $-\pi|k|$. In the $h$-sector a
+$\delta$ term is excluded by translation invariance, a $\delta''$ term is the perimeter constant $c_R$, and
+higher terms vanish with the regulator; in the $j$-sector the $\delta$ term is excluded by $R$-invariance and
+$\delta''$ already vanishes, so that sector is universal. Cubic terms need an odd $SO(5)$ tensor (none) or
+$\epsilon_{ijk}$ with three displacements, excluded by the reflection $x^2\to-x^2$ combined with a reflection
+of one internal direction orthogonal to $n_0$, a symmetry inherited from a ten-dimensional rotation.
+\end{proof}
+
+The perimeter constant is $c_R=-m_R/2$, with $m_R$ the renormalized heavy-source mass; it vanishes in the
+natural Maldacena--Wilson scheme, where the one-loop kernel realizes the homogeneous extension exactly. With
+$c_R=0$ the form is positive in the transverse direction ($\dot H^{3/2}$), negative in the internal
+direction ($\dot H^{1/2}$), and zero on the Zarembo profile $j=\dot h$, where the two terms cancel because
+$|k|^3|\hat h|^2=|k|\,|k\hat h|^2$. In general the cancellation is $(\pi/12)(C_D-6C_\Phi)|k|^3$, so it holds
+if and only if $C_D=6C_\Phi$: a self-contained check of the CHMS normalizations against Zarembo's
+non-renormalization \cite{Zarembo,GuralnikKulik,DGGM}. The first correlators not determined by $B$ are the
+connected four-point functions of the displacement multiplet, which enter at $O(\epsilon^4)$
+(Section~\ref{sec:quartic}).
+
+\subsection{Locality of the linear retarded response}
+
+Take $H(s)=H_0-h(s)D+(\text{seagull})$ with $D$ the Hermitian Lorentzian displacement and $h$ the transverse
+displacement of the heavy source; the supplied work is $W(T)=-\int_{-\infty}^T\dot h\vev D\dd s$.
+
+\begin{proposition}[locality]
+\label{prop:locality}
+For any unitary conformal line defect, in particular for the Maldacena--Wilson line at every $\lambda$ and
+$N$, the Wightman function is $\vev{D(s)D(0)}=C_D/(s-\ii0)^4$ and its commutator is the contact
+distribution $-(\ii\pi C_D/3)\delta'''(s)$. The renormalized susceptibility is the polynomial
+\begin{equation}
+\chi_R(\omega)=m_R\omega^2+\ii\frac{\pi C_D}{6}\omega^3=m_R\omega^2+2\pi\ii B\omega^3,\qquad
+\vev{D(s)}=-m_R\ddot h(s)+2\pi B\dddot h(s).
+\label{eq:AL}
+\end{equation}
+\end{proposition}
+
+\begin{proof}
+One-dimensional conformal symmetry fixes the Euclidean two-point function of the dimension-two primary;
+its continuation $\sigma=\ii s+0$ gives the Wightman function, and
+$(x\mp\ii0)^{-n}=x^{-n}\pm\ii\pi(-1)^{n-1}\delta^{(n-1)}(x)/(n-1)!$ gives the commutator. The spectral density
+fixes $\Imm\chi_R=(\pi C_D/6)\omega^3$ and excludes an $\ii\omega$ term; the even part is $c_0+c_2\omega^2$ with
+$c_0=0$ because a static displacement is a symmetry; an $\omega^4$ term carries a negative power of the
+cutoff. Finally $m_R=c_2=-2c_R$.
+\end{proof}
+
+The mechanism is one-dimensional conformal symmetry plus the integer dimension of the displacement: the
+discontinuity of $(s-\ii0)^{-2\Delta}$ is a contact term exactly when $2\Delta$ is an integer, and the
+displacement of a line defect has $\Delta=2$ in every bulk dimension. Non-contact commutators, i.e.\ memory,
+first appear in higher-point functions. The $2\pi B\dddot h$ term is the \Nfour{} Abraham--Lorentz force;
+at strong coupling its coefficient is $\sqrt\lambda/2\pi$ \cite{Mikhailov}. The internal tilt channel is an
+exact resistor, $\vev{\Phi_a}=-2\pi B\dot\jmath_a$, finite-time passive with no counterterm.
+
+\subsection{Energy account}
+
+\begin{proposition}[work]
+\label{prop:work}
+For a smooth compactly supported drive, $W(\infty)=2\pi B\int\ddot h^2\dd s$, independent of $m_R$ and of the
+scheme; this is the CHMS radiated energy including the coefficient. With the cutoff measure
+$\dd\mu_\Lambda=(C_D/6)\Omega^3e^{-\Omega/\Lambda}\dd\Omega$ and the translation seagull, the impedance is a
+Foster function, $W_\Lambda(T)\ge0$ for every $T$, and as $\Lambda\to\infty$
+\begin{equation}
+W_\Lambda(T)=\frac{\delta m_\Lambda}{2}\dot h(T)^2+2\pi B\Big[\int_{-\infty}^T\ddot h^2\dd s-\dot h(T)\ddot h(T)\Big]+o(1),
+\qquad \delta m_\Lambda=4B\Lambda .
+\end{equation}
+\end{proposition}
+
+\begin{proposition}[the renormalized finite-time account is never passive]
+\label{prop:schott}
+Let $m_R\ge0$ be finite and let $h$ vanish for $s<s_0$ with a finite-order onset of order $n\ge3$ at $s_0$.
+Then $W_R(T)=\frac{m_R}2\dot h(T)^2+2\pi B[\int_{s_0}^T\ddot h^2-\dot h(T)\ddot h(T)]<0$ for all $T>s_0$
+sufficiently close to $s_0$.
+\end{proposition}
+
+The proof is the expansion $h\approx c(T-s_0)^n$: the bracket is negative and of lower order than the inertial
+term. For flat onsets $e^{-1/x^\alpha}$ the ratio $\dot h\ddot h/\int\ddot h^2$ tends to $2$ and negativity
+persists; oscillating onsets give counterexamples. This is the Abraham--Lorentz--Dirac--Schott account:
+positivity at finite time is carried by regulator-scale inertia that renormalization removes, and the
+natural scheme $m_R=0$ is the extreme case. Section~\ref{sec:finite-mass} shows how a finite physical mass
+resolves this.
+
+\subsection{Consequence}
+
+At linear order about the straight line, any channel built from $D$ or $\Phi_a$ has a Laplace transfer that
+is a polynomial: with $\omega=\ii p$, $\chi(p)=-m_Rp^2+2\pi Bp^3$ and $\chi^\Phi(p)=-2\pi Bp$. Changing
+$\lambda$ or $N$ changes only $2\pi B$. There is no front $(2\pi/p)^\omega$, no variable exponent, no delayed
+singularity and no identity endpoint as a parameter varies. The linear straight-line channel is closed as an
+arithmetic candidate, for every conformal line defect. The closure is scoped to linear order on the
+straight line.
+
+\subsection*{Ledger}
+\begin{center}\small
+\begin{tabular}{@{}p{0.55\textwidth}p{0.40\textwidth}@{}}
+\toprule
+Statement & Status\\
+\midrule
+Quadratic response, Proposition~\ref{prop:quadratic} & Proof under (a)--(c); cubic vanishing a proof sketch\\
+Zarembo cancellation iff $C_D=6C_\Phi$ & Proof\\
+Locality, Proposition~\ref{prop:locality} & Proof\\
+Total work equals CHMS $\Delta E$ & Proof (not independent evidence for CHMS)\\
+Cutoff passivity and the Schott limit & Proof\\
+Non-passivity of the renormalized account & Proof; flat onsets an observation\\
+One-loop kernel checks & Labelled numerical computation (72 cases)\\
+\bottomrule
+\end{tabular}
+\end{center}

@@ -23,7 +23,14 @@ Reading order:
    - Classical-string corner function F(x), with a √(λu) window.
    - Rounded one-loop family with h = −4.0202.
    - Schwinger–Dyson residual inventory with one-loop kernel controls.
-6. [Continuation after the second session](CONTINUATION_AFTER_SECOND_SESSION_20260924.md) — current handoff.
+6. [Continuation after the second session](CONTINUATION_AFTER_SECOND_SESSION_20260924.md) (preserved).
+7. [A physical channel with memory: the finite-mass source, its exactly local boundary field, and the quartic straight-line response](FINITE_MASS_MEMORY_AND_QUARTIC_RESPONSE_20260924.md) — 24 September 2026 (Claude Fable 5.1).
+   - Exact linearized Chernicoff–García–Güijosa dynamics: F = mŸ, X = Y + z_mẎ, mẌ = F + z_mḞ; one exponential memory.
+   - Positive finite-time energy account; the Schott term as a truncation.
+   - Exact light-cone localization of the dilaton-coupled boundary response, with a closed-form quartic transfer function.
+   - Front test failed by construction; no arithmetic comparison.
+   - Quartic straight-line response: operator content, GFF linearity, memory from the connected correlator, no scale; validation of the transcribed strong-coupling input.
+8. [Continuation after the third session](CONTINUATION_AFTER_THIRD_SESSION_20260924.md) — current handoff.
 
 The proposal builds on the [parent cross-theory lessons](../../notes/LESSONS_FROM_WZW_FOR_YM_AND_N4SYM_20260923.md) and preserves the physical objective of the [genuine-trace continuation](../../notes/RESEARCH_CONTINUATION_AFTER_GROWING_TRACE_20260921.md).
 

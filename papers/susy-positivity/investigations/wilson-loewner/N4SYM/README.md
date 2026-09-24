@@ -8,7 +8,7 @@ The physical objective is to derive Wilson-line shape and genuine-trace evolutio
 - [Parent analysis: lessons from WZW and the subsequent tests](../notes/LESSONS_FROM_WZW_FOR_YM_AND_N4SYM_20260923.md).
 - [Existing pure-YM hierarchy](../notes/GENUINE_LOEWNER_TRACE_YM_HIERARCHY_20260921.md).
 
-## Status after the first session (23–24 September 2026; Claude Opus 5.5)
+## Status after the first and second sessions (23–24 September 2026; Claude Opus 5.5)
 
 1. **[Straight-line response and trace completion](notes/STRAIGHT_LINE_RESPONSE_AND_TRACE_COMPLETION_20260923.md)** covers milestones M0–M2 for the straight line and prepares M3.
    - The quadratic shape response is fixed by B, up to a single perimeter constant.
@@ -32,6 +32,18 @@ The physical objective is to derive Wilson-line shape and genuine-trace evolutio
    - The Schwinger–Dyson audit leaves an explicit residual inventory, so the hierarchy is not closed.
 4. **[Continuation for the next session](notes/CONTINUATION_AFTER_SECOND_SESSION_20260924.md).** It poses a decision: complete the flipped family as physics, or seek a physical channel with memory for the arithmetic goal.
 
-Numerics: five standard-library programs with 72, 77, 47, 56 and 20 cases (272 total), all passing, deterministic, with records under `numerics/records/`. Reviews: two same-assistant audits, each with a separate referee context; there has been no independent specialist review.
+## Status after the third session (24 September 2026; Claude Fable 5.1)
 
-No manuscript exists for this investigation. Manuscript milestones should use commits or tags recorded in a concise DRAFT_HISTORY.md, without creating dated manuscript snapshots. Work from this session is uncommitted.
+The author chose option (B) of the second continuation: return to the arithmetic goal by looking for a physical channel with memory.
+
+5. **[Finite-mass memory and the quartic response](notes/FINITE_MASS_MEMORY_AND_QUARTIC_RESPONSE_20260924.md)**.
+   - The finite-mass source (string endpoint at z_m = √λ/2πm) is the first channel with memory. Exactly at linear order: F = mŸ, X = Y + z_mẎ, mẌ = F + z_mḞ, with Y the retarded auxiliary trajectory; the memory is one exponential, χ_m(ω) = −mω²/(1 − iωz_m), whose first two terms reproduce the Abraham–Lorentz response of the first note.
+   - Finite mass restores finite-time passivity: W(T) = (m/2)Ẏ² + (√λ/2π)∫Ÿ² ≥ 0; the Schott term is the O(z_m) truncation of the positive square.
+   - The boundary field of the moving source (dilaton-coupled operator) is exactly local in the retarded time: the depth integral is a total derivative, and the transfer function is e^{iωr_m} times a closed-form quartic polynomial. A referee context reports that this contradicts a 1999 broadening claim (Callan–Güijosa), to be checked by eye.
+   - Verdict: rational transfer, one pole, one fixed delay, integer exponents. The channel fails the front-and-tangent test; no arithmetic comparison is run.
+   - The quartic straight-line response is the first nonlocal one; its memory is set by the non-protected dimension Δ₆(λ) ∈ (1, 2), but the straight line has no scale, so no fixed delays can arise at any order. The transcribed GRT Δ = 1 four-point functions pass crossing and OPE tests; the Δ = 2 transcription fails them and is not used.
+6. **[Continuation for the next session](notes/CONTINUATION_AFTER_THIRD_SESSION_20260924.md).**
+
+Numerics: seven standard-library programs with 72, 77, 47, 56, 20, 107 and 93 cases (472 total), all passing, deterministic, with records under `numerics/records/`. Reviews: three same-assistant audits, each with separate referee contexts; there has been no independent specialist review.
+
+A first draft manuscript covering the three sessions, *Displacement response and Loewner growth for the half-BPS Wilson line: locality, memory and the limits of an arithmetic reading*, is at [manuscript.tex](manuscript.tex) ([PDF](manuscript.pdf), [build notes](BUILD.md), [milestone index](DRAFT_HISTORY.md)). It is drafted for the author and has had no independent review. Manuscript milestones use commits or tags recorded in DRAFT_HISTORY.md, without dated snapshots. Work from all three sessions is uncommitted.

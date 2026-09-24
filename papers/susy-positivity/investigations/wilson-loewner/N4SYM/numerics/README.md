@@ -1,8 +1,8 @@
 # N4SYM checks and records
 
-All five programs use the Python standard library only. Each prints one JSON object to stdout, or writes `--output FILE`. They are deterministic: repeated runs give byte-identical output on a given platform. Run them from `papers/susy-positivity/investigations/wilson-loewner/`. No zeta function is evaluated anywhere.
+All seven programs use the Python standard library only. Each prints one JSON object to stdout, or writes `--output FILE`. They are deterministic: repeated runs give byte-identical output on a given platform. Run them from `papers/susy-positivity/investigations/wilson-loewner/`. No zeta function is evaluated anywhere.
 
-Every floating case is a diagnostic of an analytic statement, not an interval certificate. The SU(2) background is a classical test connection, not a sample of the quantum measure. The programs are not registered in `validation/drafts.py`, because N4SYM has no manuscript. Register them in the same pass that folds these results into one.
+Every floating case is a diagnostic of an analytic statement, not an interval certificate. The SU(2) background is a classical test connection, not a sample of the quantum measure. The programs are not yet registered in a validation replay; the draft manuscript lists them, and registration belongs to the pass that records a reviewed build.
 
 | Program | Record | Cases | Accompanies |
 |---|---|---|---|
@@ -11,6 +11,8 @@ Every floating case is a diagnostic of an analytic statement, not an interval ce
 | [check_flipped_return.py](check_flipped_return.py) | [flipped-return-20260924.json](records/flipped-return-20260924.json) | 47 | [flipped-return note](../notes/FLIPPED_RETURN_TRACE_ANALYSIS_20260924.md) |
 | [check_near_bps_corner.py](check_near_bps_corner.py) | [near-bps-corner-20260924.json](records/near-bps-corner-20260924.json) | 56 | [corner note](../notes/NEAR_BPS_CORNER_ROUNDING_AND_CLOSURE_20260924.md), Section 1 |
 | [check_rounded_and_closure.py](check_rounded_and_closure.py) | [rounded-and-closure-20260924.json](records/rounded-and-closure-20260924.json) | 20 | corner note, Sections 2–3 |
+| [check_finite_mass_response.py](check_finite_mass_response.py) | [finite-mass-response-20260924.json](records/finite-mass-response-20260924.json) | 107 | [finite-mass note](../notes/FINITE_MASS_MEMORY_AND_QUARTIC_RESPONSE_20260924.md), Sections 1–2 |
+| [check_quartic_input.py](check_quartic_input.py) | [quartic-input-20260924.json](records/quartic-input-20260924.json) | 93 | finite-mass note, Section 3 |
 
 ## Case groups
 
@@ -47,5 +49,23 @@ Every floating case is a diagnostic of an analytic statement, not an interval ce
 - R0: stadium conventions and normalization.
 - R1–R3: the rounded flipped loop, covering fillet geometry, the log(1/δ) coefficient A(s) and the finite part with h.
 - C1: closure controls (the scalar-Laplacian counterexample, the transported derivative with commutator, and the flowed-propagator kernels).
+
+**check_finite_mass_response.py**
+
+- A: the retarded linearized string solution, the boundary condition, and the exact endpoint relations F = mŸ, X = Y + z_mẎ, mẌ = F + z_mḞ.
+- B: the causal exponential memory kernel, the transfer function and its pole, the low-frequency expansion.
+- C: the work identity, its positive split, the string-energy integral and the fluxes.
+- D: the Schott term as the O(z_m) term of a square; the (1 − s²)⁵ drive, negative in the point account and nonnegative at finite mass.
+- E: nonrelativistic limits of the transcribed CGG equations (28) and (35).
+- F: front test on the endpoint channel: integer exponents, universal collapse in ωz_m, reality.
+- G: the dilaton-coupled boundary response: the g₄ polynomial, the total derivative G(z), the static sum rule and closed form, exact locality against contour-rotated quadrature, exponents, the far-field polynomial, and the time-domain pulse test (no tail).
+
+**check_quartic_input.py**
+
+- Y: the transcribed GRT Δ = 1 four-point functions: crossing 1↔2 and 1↔3 at both orders, OPE limits, anomalous dimensions from the logarithms.
+- X: the transcribed Δ = 2 functions: the GFF part passes; the tree part fails crossing and the OPE constraint, and is marked unusable.
+- Q: integrability of the quartic tilt integrand; homogeneity degree.
+- L: discontinuity structure: rational GFF part, logarithmic connected part.
+- D: literature values of Δ₆(λ) recorded as labelled inputs.
 
 Runtimes are a few seconds each. Follow the repository [large-file policy](../../../../../../LARGE_FILES.md); all records are below 20 KB.

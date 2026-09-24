@@ -1,5 +1,39 @@
 # Changelog
 
+## 2026-09-24 — wilson-loewner/N4SYM: third session (Claude Fable 5.1)
+
+- Option (B) of the second continuation, chosen by the author: a physical
+  channel with memory. The finite-mass heavy source at strong coupling
+  (string endpoint at z_m = sqrt(lambda)/(2 pi m), Chernicoff–García–
+  Güijosa) gives exactly, at linear order, F = m Y'', X = Y + z_m Y' and
+  m X'' = F + z_m F', with Y the retarded auxiliary trajectory; the memory
+  is one exponential, chi_m = -m w^2/(1 - i w z_m), whose expansion
+  reproduces the Abraham–Lorentz response of the first session. The work
+  identity W(T) = (m/2) Y'^2 + (sqrt(lambda)/2pi) int Y''^2 is nonnegative
+  at every time; the Schott term is its O(z_m) truncation.
+- The boundary field of the moving source (dilaton-coupled operator) is
+  exactly local in the retarded time: the string-depth integrand is a
+  total derivative, and the transfer function is e^{i w r_m} times a
+  closed-form quartic polynomial, r_m = sqrt(r^2 + z_m^2). A referee
+  context reports that Callan–Güijosa (1999) claimed broadening for this
+  observable with an inconsistent intermediate kernel; to be checked by
+  eye.
+- Verdict: rational transfer, one pole, one fixed delay, integer
+  exponents; the channel fails the front-and-tangent test and no
+  arithmetic comparison is run.
+- The quartic straight-line response is the first nonlocal one; its memory
+  is set by the non-protected dimension Delta_6(lambda), and the straight
+  line has no scale, so no fixed delays can arise at any order. The
+  transcribed Giombi–Roiban–Tseytlin Delta = 1 four-point functions pass
+  crossing and OPE tests; the Delta = 2 transcription fails them and is
+  not used.
+- Added one note, a continuation, two standard-library programs with
+  records (107 + 93 cases, all passing, deterministic), a third
+  same-assistant audit with two referee passes, and a first draft
+  manuscript covering the three N4SYM sessions (N4SYM/manuscript.tex,
+  with BUILD.md and DRAFT_HISTORY.md). No independent review; nothing
+  committed.
+
 ## 2026-09-24 — wilson-loewner/N4SYM: second session (Claude Opus 5.5)
 
 - The near-BPS corner of the generalized cusp (phi = pi - u,

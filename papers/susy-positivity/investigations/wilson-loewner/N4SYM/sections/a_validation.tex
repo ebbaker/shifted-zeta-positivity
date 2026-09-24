@@ -1,0 +1,63 @@
+\section{Numerical evidence, provenance and acknowledgements}
+\label{app:validation}
+
+\subsection{Programs and records}
+
+Seven standard-library Python programs accompany the text, each printing one JSON object, deterministic
+(byte-identical on repeated runs on a given platform), with records under
+\pathfile{N4SYM/numerics/records/}. Every case is a floating diagnostic of an analytic statement; the $SU(2)$
+backgrounds are classical test connections, not samples of the quantum measure; no zeta function is evaluated
+anywhere.
+
+\begin{center}\small
+\begin{tabular}{@{}llrl@{}}
+\toprule
+Program & Record & Cases & Section\\
+\midrule
+\pathfile{check_straight_line_response.py} & \pathfile{straight-line-response-20260923.json} & 72 & \ref{sec:straight}\\
+\pathfile{check_trace_completion.py} & \pathfile{trace-completion-20260923.json} & 77 & \ref{sec:loewner}\\
+\pathfile{check_flipped_return.py} & \pathfile{flipped-return-20260924.json} & 47 & \ref{sec:loewner}\\
+\pathfile{check_near_bps_corner.py} & \pathfile{near-bps-corner-20260924.json} & 56 & \ref{sec:corner}\\
+\pathfile{check_rounded_and_closure.py} & \pathfile{rounded-and-closure-20260924.json} & 20 & \ref{sec:loewner}\\
+\pathfile{check_finite_mass_response.py} & \pathfile{finite-mass-response-20260924.json} & 107 & \ref{sec:finite-mass}\\
+\pathfile{check_quartic_input.py} & \pathfile{quartic-input-20260924.json} & 93 & \ref{sec:quartic}\\
+\midrule
+Total & & 472 &\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+All 472 cases pass. The programs are not yet registered in a validation replay; registration belongs to the pass
+that records a reviewed build. Traps recorded in the research notes include: the implicit linear-driver relation is
+ill-conditioned for $s<0.05$ (use the exact series); $\cos\theta-\cos\varphi$ must be written as
+$-2\sin\frac{\theta+\varphi}2\sin\frac{\theta-\varphi}2$ near the corner; the classical corner string is not thin;
+fillet rounding and flow are separation-based regulators and give $|s|\log|s|$, vertex excision does not; the
+Zarembo-stadium control has an identically vanishing integrand; the oscillatory depth integral of
+Section~\ref{sec:finite-mass} should be evaluated on a rotated contour, or through its antiderivative.
+
+\subsection{Provenance of literature inputs}
+
+Publication data were taken from the INSPIRE API. The CHMS normalizations and near-BPS formula, the Drukker--Forini
+two-loop cusp, the Chernicoff--García--Güijosa equations, the Giombi--Roiban--Tseytlin four-point functions and the
+Beccaria--Giombi--Tseytlin and Ferrero--Meneghelli dimensions were read through automated fetch summaries of the
+arXiv versions. Each formula used in a derivation was validated before use: the DF cusp by three limits, the CGG
+equations by their nonrelativistic limits against an independent derivation, the GRT $\Delta=1$ functions by crossing
+in two channels and by the OPE, the GRT $\Delta=2$ functions likewise (and rejected). Equation numbers cited from these
+summaries should be confirmed by eye before publication.
+
+\subsection{Research record}
+
+The research notes, with statement ledgers, the same-assistant audits with separate referee contexts, and the
+continuation notes are in \pathfile{N4SYM/notes} and \pathfile{N4SYM/reviews}. The referee passes found and corrected
+seven, six and three items in the three sessions respectively; the corrections are incorporated here.
+
+\subsection{Acknowledgements and review status}
+
+This manuscript was drafted for Edward Baker with substantial LLM assistance: the first two research sessions and
+their notes were prepared with Claude Opus 5.5 (Anthropic) and the third session and this draft with Claude Fable 5.1
+(Anthropic; session configuration \texttt{claude-fable-5-1}, the serving model can differ), including derivations,
+diagnostic programming, source checking and document preparation; the research proposal that opened the investigation
+was prepared with GPT-6 (Codex). Reasoning-effort settings were not exposed and are not inferred. The audits were
+performed by the same assistants with separate referee contexts; no independent specialist review is claimed.
+Established results are attributed to their sources, and the assumptions behind every order-by-order or
+proof-sketch statement are stated in the ledgers.

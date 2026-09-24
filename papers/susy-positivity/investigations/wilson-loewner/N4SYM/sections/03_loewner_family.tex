@@ -1,0 +1,161 @@
+\section{The Loewner family and the flipped-return loop}
+\label{sec:loewner}
+
+\subsection{Scaling collapse}
+
+\begin{proposition}[conformal collapse]
+\label{prop:collapse}
+For the linear driver $u(t)=at$ the trace satisfies $q_a(Tr)=\sqrt T\,q_{a\sqrt T}(r)$. In \Nfour{} SYM,
+dilatation invariance of renormalized loops, up to cusp anomalous dimensions, gives
+\begin{equation}
+W(a,t)=F\big(a\sqrt t,\ \delta/\sqrt t\big)\,(\mu\sqrt t)^{-\Gamma_{\rm tot}(a\sqrt t)},
+\end{equation}
+where $\delta$ is a rounding scale and $\Gamma_{\rm tot}$ the sum of the cusp anomalous dimensions.
+\end{proposition}
+
+The Loewner time is therefore not an independent clock in the conformal theory: renormalized loops depend
+on $t$ only through the slope $s=a\sqrt t$, and the short-time limit is the small-driver limit. Pure
+Yang--Mills at fixed flow resolution differs, because there $t/\tau$ is meaningful.
+
+\subsection{Choice of completion}
+
+The trace must be closed to form a loop. Three completions were examined in units where $t=1$, where the
+trace and a straight return chord bound a sliver of width $w(y)=(s/6)y(2-y)$, $y\in[0,2]$, with cusp openings
+$s/3$ at base and tip.
+
+\emph{Constant scalar on both legs.} The opposite legs are nearly antiparallel with the same scalar charge, so
+gauge and scalar exchange add. At one loop $\log W\approx(3\lambda(1-1/N^2)/2\pi s)\log(1/\hat\varepsilon)$,
+which diverges as $s\to0$; to all orders the near-antiparallel cusp gives $\log W\approx(6c/s)\log(1/\hat\varepsilon)$
+with $c$ the antiparallel-lines coefficient \cite{DrukkerForini}. The $a=0$ member is not a normalizable
+control. At fixed flow resolution the loop measures perimeter growth, $W_\tau=1+8t\vev{N^{-1}\tr\Phi_{n_0}^2}_\tau+\dots$.
+
+\emph{Tangent-coupled scalar.} With $n=MT$ the loop is a Zarembo loop and $\vev W=1$ for every curve
+\cite{Zarembo,GuralnikKulik,DGGM}; the corners are BPS cusps. This is a Ward-identity control, reproduced by
+Proposition~\ref{prop:quadratic} at $O(\epsilon^2)$ exactly because $C_D=6C_\Phi$.
+
+\emph{Flipped return.} Keep $n_0$ on the trace and $-n_0$ on the chord. The chord traversed from tip to base
+with connection $\ii A\cdot\dd x-|\dd x|\Phi$ is the inverse of the base-to-tip transport $R_t$ with connection
+$\ii A\cdot\dd x+|\dd x|\Phi$, so
+\begin{equation}
+Q_t=R_t(1)^{-1}U_t,\qquad W(t)=\vev{N^{-1}\tr Q_t},
+\end{equation}
+and at $a=0$ the transport is exactly the identity. The opposite legs are nearly antiparallel with opposite
+scalar charge (the no-force configuration), and both cusps have $(\varphi,\theta)\approx(\pi-s/3,\pi)$, i.e.\ they
+are nearly BPS. $W$ is even in $a$. This is the recommended family.
+
+\subsection{Exact evolution equations}
+
+Write $k=q_1\dot q_2-q_2\dot q_1$, $\hat n=(-q_2,q_1)/|q|$, $\rho=|q|$, $\gamma=|\dot q|-\dot\rho\ge0$; hats denote
+conjugation by $R_t(r)$; $J(r)=\int_0^rr'\hat F_{12}\dd r'$, $\mathcal G(r)=\int_0^rr'\widehat{(\hat n\cdot D\Phi)}\dd r'$,
+$J=J(1)$, $\mathcal G=\mathcal G(1)$.
+
+\begin{proposition}[first equation]
+\label{prop:first}
+For smooth fields and every configuration,
+$\dot Q_t=\mathcal X_tQ_t$ with $\mathcal X_t=\ii k(J+\ii\mathcal G)+\gamma\hat\Phi(1)$. Since
+$\int_0^t\gamma=L_{\rm trace}(t)-|q(t)|$, the scalar tip coefficient is exactly the growth rate of the perimeter
+mismatch between the two legs.
+\end{proposition}
+
+\begin{proposition}[transported derivative and second equation]
+\label{prop:second}
+For a local adjoint field $X$ on the chord,
+$\partial_t\hat X(r)=r\widehat{(\dot q\cdot DX)}(r)+[\hat X(r),\mathcal K(r)]+\widehat{(\partial_tX)}_{\rm explicit}$
+with $\mathcal K(r)=-\ii k(J(r)+\ii\mathcal G(r))+\dot\rho\,r\hat\Phi(r)$. Hence
+$\ddot W=\vev{N^{-1}\tr((\dot{\mathcal X}+\mathcal X^2)Q)}$ with
+\begin{align}
+\dot{\mathcal X}&=\ii\dot k(J+\ii\mathcal G)+\dot\gamma\hat\Phi(1)+\ii k(\dot J+\ii\dot{\mathcal G})
++\gamma\big[\widehat{(\dot q\cdot D\Phi)}(1)+[\hat\Phi(1),\mathcal K(1)]\big],\\
+\dot J&=\int_0^1r\big(r\widehat{(\dot q\cdot DF_{12})}+[\hat F_{12},\mathcal K(r)]\big)\dd r,\\
+\dot{\mathcal G}&=\int_0^1r\Big(r\widehat{(\dot q^\mu\hat n^\nu D_\mu D_\nu\Phi)}-\frac{k}{|q|^2}\widehat{(\hat q\cdot D\Phi)}
++[\widehat{(\hat n\cdot D\Phi)},\mathcal K(r)]\Big)\dd r .
+\end{align}
+Both equations hold for any driver with a $C^2$ trace.
+\end{proposition}
+
+The proofs use the ordered-transport variation on the chord and one radial integration by parts, which is
+possible because the chord connection commutes with $\Phi$ along the chord; the commutator terms arise
+because it does not commute with $F$ or $D\Phi$. Both equations were verified by finite differences on a
+noncommuting $SU(2)$ background (relative errors $10^{-9}$ and $8\times10^{-7}$). The terms
+$\ii k\,\ii k[\hat F,J(r)]$ and $(\ii kJ)^2$ combine into $-2k^2\mathcal P$ with $\mathcal P$ the ordered
+$\hat F\hat F$ moment, exactly as in pure Yang--Mills; the new terms are ordered pairs mixing $\hat F$,
+$\widehat{(\hat n\cdot D\Phi)}$ and $\hat\Phi$ and chord--tip pairs, which do not combine into a single moment.
+
+\subsection{Short time at fixed resolution}
+
+Configuration by configuration, with $\mathcal A=-(2a/9)t^{3/2}$ the oriented area and
+$L_{\rm trace}-L_{\rm chord}=a^2t^{3/2}/27$,
+\begin{equation}
+N^{-1}\tr Q_t-1=\frac1{2N}\tr\Big(\mathcal A(\ii F_{12}+D_1\Phi)(0)+\frac{a^2t^{3/2}}{27}\Phi(0)\Big)^2+O(t^{7/2}),
+\end{equation}
+so that in an $SO(6)$- and parity-invariant flowed state
+\begin{equation}
+W_\tau=1+\frac{2a^2t^3}{81}\big(C^\Phi_\tau-C_\tau\big)+\frac{a^4t^3}{1458}S_\tau+O(t^{7/2}),\qquad
+\log W^{(1)}_\tau=B_1\Big[-\frac{a^2t^3}{1296\tau^2}+\frac{a^4t^3}{5832\tau}\Big]
+\end{equation}
+with the free flowed propagator ($C_\tau=\vev{N^{-1}\tr F_{12}^2}_\tau$, $C^\Phi_\tau=\vev{N^{-1}\tr(e\cdot D\Phi_{n_0})^2}_\tau$,
+$S_\tau=\vev{N^{-1}\tr\Phi_{n_0}^2}_\tau$), and an independent
+expansion of the flowed one-loop Maldacena--Wilson integral for $\tau\gg t$ reproduces it term by term through the
+exact identities $M_0=(L_{\rm trace}-L_{\rm chord})^2$ and $M_2=2\mathcal A^2$. The agreement is not circular:
+one side is the exact first equation, the other a Feynman integral.
+
+\subsection{Continuum one loop and the flow regimes}
+
+With cusp neighbourhoods of size $\varepsilon$ excised,
+\begin{equation}
+\begin{gathered}
+\log W=B_1\Big[-A(s)\log\frac\ell\varepsilon+F(s)\Big]+O(\varepsilon),\\
+A(s)=\sum_{\rm cusps}2(\pi-\alpha_c)\tan\frac{\alpha_c}2=\frac{2\pi}3s+A_2s^2+\dots,\qquad F(s)=\frac{4\pi}3s+O(s^2\log\tfrac1s),
+\end{gathered}
+\label{eq:oneloop}
+\end{equation}
+$A_2\approx-0.224$. The exactness of $A$ is tested without fitting: after subtracting it, the successive
+$\varepsilon$-differences halve. So $W\to1$ like $1-(2\pi B_1/3)|s|(\log(\ell/\varepsilon)-2)$, non-analytic in $a$
+because $a\to-a$ is a symmetry. With a gradient-flow regulator of resolution $\tau$ there are three regimes:
+regime I ($\tau\gg t$) is the $a^2t^3$ law above; regime II ($s^2t\ll\tau\ll t$) gives
+$\log W\approx-B_1(\sqrt{2\pi}/27)s^2\sqrt{t/\tau}$; regime III ($\tau\ll s^2t$) gives
+$\log W\approx-B_1(2\pi s/3)[\log(8\kappa)+\gamma_E/2-2]$ with $\kappa=s\sqrt t/(6\sqrt{8\tau})$. Separation-based
+regulators cut the near-BPS cusp interaction where the sliver width reaches $\sqrt\tau$, at distance
+$\approx\sqrt\tau/\alpha$ from the vertex, which produces an $|s|\log|s|$ term absent from vertex excision; the
+scheme-independent content at $O(s)$ is $A(s)$. Every regime is regular, and the order of the limits $t\to0$ and
+$\tau\to0$ changes the exponent but never produces a divergence.
+
+\subsection{Rounded family and closure}
+
+Replacing each cusp by a circular fillet of radius $\delta$, with the internal vector turning in step with the
+tangent, gives a $C^1$ loop with a finite one-loop value
+\begin{equation}
+\log W^{(1)}=-B_1\Big[A(s)\log\frac1{\hat\delta}+\frac{2\pi|s|}{3}\Big(\log\frac{|s|}3-2\Big)-h|s|\Big]+O(s^2),\qquad
+\hat\delta=\delta/\sqrt t,\quad h=-4.0202,
+\end{equation}
+valid for $\hat\delta\ll|s|$. The coefficient of $\log(1/\hat\delta)$ is the exact cusp sum and the $|s|\log|s|$ term
+has the same origin as in regime III; the constant $h$ is convention dependent (an independent implementation gave
+$-4.02025$).
+
+The second equation is not closed. At a finite regulator the Schwinger--Dyson identities reduce only the
+curvature-current part $(\dot q^1E_2-\dot q^2E_1)$, the scalar Laplacian and the radial derivatives, leaving
+the transverse gauge currents, the transverse scalar Laplacian $(D_3^2+D_4^2)\Phi$, scalar and fermion currents,
+scalar-potential and Yukawa insertions, scalar commutators from transport along the chord, the tip gradient and
+the ordered pairs. At one loop the field-equation part of a derivative moment is a pure regulator contact term
+while the transverse part has a long-range $4/r^4$ kernel, so the residual cannot be dropped even
+perturbatively. The flipped hierarchy is an honest infinite hierarchy with a specific residual inventory.
+
+\subsection*{Ledger}
+\begin{center}\small
+\begin{tabular}{@{}p{0.55\textwidth}p{0.40\textwidth}@{}}
+\toprule
+Statement & Status\\
+\midrule
+Conformal collapse, Proposition~\ref{prop:collapse} & Proof given conformal invariance\\
+Constant-scalar completion diverges as $1/s$ & One loop: labelled computation; all orders: proof sketch\\
+Zarembo family trivial & Literature\\
+Identity at $a=0$; evenness in $a$ & Proof\\
+Propositions~\ref{prop:first}, \ref{prop:second} & Proof (smooth fields); numerically verified\\
+Short-time formula and one-loop confirmation & Proof sketch (remainder not bounded); independent one-loop check\\
+Continuum $A(s)$; $F(s)$ leading term & Proof (cusp formula); exactness tested; $s^2\log$ term an observation\\
+Regimes I--III & Analytic (thin sliver, moments) plus numerics\\
+Rounded family; $h$ & Numerical verification; $h$ a labelled constant\\
+Closure inventory & Structural reading with one-loop kernel controls\\
+\bottomrule
+\end{tabular}
+\end{center}

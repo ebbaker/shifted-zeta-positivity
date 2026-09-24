@@ -1,0 +1,155 @@
+\section{A finite-mass source: memory, energy and an exactly local boundary field}
+\label{sec:finite-mass}
+
+Locality about the straight line (Proposition~\ref{prop:locality}) is a statement about an infinitely heavy
+source. A source of finite mass $m$ has an internal scale, and at strong coupling it is described by a string
+ending on a flavour brane at $z_m=\sqrt\lambda/2\pi m$ \cite{CGGprl,CGGjhep}. We linearize that system exactly.
+
+\subsection{Setup and exact endpoint relations}
+
+Poincaré AdS$_5$, $\dd s^2=z^{-2}(-\dd t^2+\dd\vec x^2+\dd z^2)$ with $R=1$, tension $\sqrt\lambda/2\pi$; the string
+hangs from $z_m$ to the Poincaré horizon, with static energy $m=(\sqrt\lambda/2\pi)\int_{z_m}^\infty\dd z/z^2$. An
+external force acts through $S_F=\int\dd t\,F(t)x(t,z_m)$, equivalently the boundary condition $\Pi^z_x|_{z_m}=F$
+of \cite{CGGprl}. One transverse direction is kept. The quadratic action is
+$S_2=-(\sqrt\lambda/4\pi)\int\dd t\dd z\,z^{-2}(x'^2-\dot x^2)$, the bulk equation is $\ddot x=x''-(2/z)x'$, and the
+boundary variation gives $x'(t,z_m)=-(z_m/m)F(t)$ (a positive force makes the string trail). The mode equation is
+Bessel of order $3/2$, hence elementary, and the retarded branch is
+\begin{equation}
+x(t,z)=\tilde X(t-z)+z\tilde X'(t-z),
+\end{equation}
+the linearization of Mikhailov's solution \cite{Mikhailov}; the other branch is a wave emerging from the horizon,
+excluded by the vacuum initial condition. Let $Y(t):=\tilde X(t-z_m)$, the retarded auxiliary trajectory.
+
+\begin{proposition}[exact linearized dynamics]
+\label{prop:cgg}
+With $X(t)=x(t,z_m)$ the physical endpoint position,
+\begin{equation}
+F=m\ddot Y,\qquad X=Y+z_m\dot Y,\qquad m\ddot X=F+z_m\dot F .
+\label{eq:cgg}
+\end{equation}
+\end{proposition}
+
+The third relation is the nonrelativistic, small-force limit of the Chernicoff--García--Güijosa equation
+(their eq.~28 of \cite{CGGjhep}, whose linearization we recover independently); their dispersion relation gives
+$p_q=mv-z_mF=m\dot Y$, so the auxiliary velocity is the momentum of the dressed quark. The auxiliary trajectory is the
+causal exponential smearing of the physical one, $Y=(1+z_m\partial_t)^{-1}X$ with kernel $z_m^{-1}e^{-s/z_m}\theta(s)$,
+so the force needed to sustain a prescribed trajectory has the susceptibility
+\begin{equation}
+\chi_m(\omega)=\frac{-m\omega^2}{1-\ii\omega z_m}=-m\omega^2-\ii\frac{\sqrt\lambda}{2\pi}\omega^3+\frac{\sqrt\lambda}{2\pi}z_m\omega^4+\dots,
+\label{eq:chim}
+\end{equation}
+with a single pole at $\omega=-\ii/z_m$. Its first two terms are the mass and Abraham--Lorentz terms of
+\eqref{eq:AL} at $m_R=m$, $2\pi B=\sqrt\lambda/2\pi$; the rest is the memory, on the Compton scale $z_m$ of the
+dressed quark. At $\omega z_m\gg1$ the endpoint is a pure damper, $|\chi_m|\to(2\pi m^2/\sqrt\lambda)\omega$.
+Rationality holds for endpoint quantities at $T=0$, in the strict planar limit (rigid flavour brane), at strict
+$\lambda\to\infty$ and at linear order.
+
+\subsection{Energy account}
+
+\begin{proposition}[positive finite-time account]
+\label{prop:positive}
+With $\dot Y(-\infty)=0$,
+\begin{equation}
+W(T)=\int_{-\infty}^TF\dot X\dd t=\frac m2\dot Y(T)^2+\frac{\sqrt\lambda}{2\pi}\int_{-\infty}^T\ddot Y^2\dd t\ \ge0\quad\text{for every }T,
+\label{eq:Wfinite}
+\end{equation}
+and $(\sqrt\lambda/2\pi)\ddot Y^2=(\sqrt\lambda/2\pi m^2)F^2$ is the CGG radiation rate. Both terms are the string's own
+energy: $\int_{z_m}^\infty\mathcal H\dd z=W(T)$ exactly, the first term being a total $z$-derivative of the energy
+density and the second the energy of the wave in flight. As $m\to\infty$ at fixed $\lambda$,
+\begin{equation}
+\frac m2\dot Y^2=\frac m2\dot X^2-\frac{\sqrt\lambda}{2\pi}\dot X\ddot X+\frac{\sqrt\lambda}{4\pi}z_m(\ddot X^2+2\dot X\dddot X)+O(\sqrt\lambda z_m^2).
+\end{equation}
+\end{proposition}
+
+The Schott energy of Proposition~\ref{prop:schott} is the $O(z_m)$ truncation of a perfect square: finite-time
+non-passivity of the point limit is an artefact of the truncation. For the drive $(1-s^2)^5$ the renormalized point
+account is negative just after onset while \eqref{eq:Wfinite} is nonnegative (records, group D).
+
+\subsection{The boundary field is exactly local in the retarded time}
+
+The gauge-theory field of the moving source is read at the boundary through bulk-to-boundary propagators. For the
+dilaton-coupled operator $O$ ($\Delta=4$) the Euclidean propagator is $K_E=Cz^4/(z^2+\rho^2+\tau_E^2)^4$ and its
+retarded version, with the Kubo sign, is
+\begin{equation}
+K_R(\tau,\rho,z)=-\frac\pi3C\,\theta(\tau)\,z^4\,\delta'''(z^2+\rho^2-\tau^2),
+\end{equation}
+normalized so that $\int\dd\tau K_R=\int\dd\tau_EK_E$; it is supported on the light cone only, because
+$(s+\ii\varepsilon)^{-4}$ is real for $s\ne0$, a property of the integer dimension. The string sources $O$ with
+density $z^{-2}$ at transverse position $x(t',z)\hat e$, so to first order
+\begin{equation}
+\vev O^{(1)}(t,\vec r)=\frac{2\pi}3C(\vec r\cdot\hat e)\int_{z_m}^\infty\dd z\,z^2\,\partial_s^4\Big[\frac{x(t-\sqrt s,z)}{2\sqrt s}\Big]_{s=z^2+r^2},
+\end{equation}
+which for a constant displacement reproduces the gradient of the static profile $C(5\pi/16)\int\dd z\,z^2(z^2+r^2)^{-7/2}$
+(Coulombic for $r\gg z_m$, regular at $r\to0$: the gluonic cloud of \cite{CGGjhep}). For $Y=e^{-\ii\omega t}$, with
+$g_4(s;\omega)=\partial_s^4[e^{\ii\omega\sqrt s}/2\sqrt s]=e^{\ii\omega\rho}\rho^{-9}[(\omega\rho)^4+10\ii(\omega\rho)^3-45(\omega\rho)^2-105\ii\omega\rho+105]/32$,
+the transfer function is
+$\mathcal T(\omega;r,z_m)=\int_{z_m}^\infty\dd z\,z^2(1-\ii\omega z)e^{\ii\omega(z-z_m)}g_4(z^2+r^2;\omega)$. The delays
+$u(z)=z-z_m+\sqrt{z^2+r^2}$ increase from $r_m=\sqrt{r^2+z_m^2}$, so a continuum of delays appears to contribute.
+
+\begin{proposition}[exact localization]
+\label{prop:local}
+The integrand of $\mathcal T$ is an exact $z$-derivative, $\dd G/\dd z$, with $\rho=\sqrt{z^2+r^2}$,
+\begin{equation}
+G(z)=-e^{\ii\omega(z+\rho)}\frac{N(z,\rho,\omega)}{32\rho^7(\rho+z)^3},
+\end{equation}
+\begin{equation}
+\begin{aligned}
+N={}&\omega^4\rho^3z^3(\rho+z)^2+2\ii\omega^3\rho^2z^2(\rho+z)^2(2\rho+3z)\\
+&-\omega^2\rho z(\rho+z)(8\rho^3+24\rho^2z+33\rho z^2+15z^3)-\ii\omega(\rho+z)S_4+S_4,
+\end{aligned}
+\end{equation}
+$S_4=8\rho^4+24\rho^3z+48\rho^2z^2+45\rho z^3+15z^4$, and $G\to0$ as $z\to\infty$. Hence
+\begin{equation}
+\mathcal T(\omega;r,z_m)=e^{\ii\omega r_m}P_4(\omega),\qquad P_4(\omega)=\frac{N(z_m,r_m,\omega)}{32r_m^7(r_m+z_m)^3},
+\label{eq:P4}
+\end{equation}
+a quartic polynomial times a single delay: the boundary response is a fourth-order differential operator on $Y$ at
+the bulk null travel time $r_m$ from the endpoint to the boundary point.
+\end{proposition}
+
+$G$ was found by a polynomial ansatz with $(\rho^2-z^2)$ denominators and verified by symbolic differentiation and,
+numerically, against contour-rotated quadrature and a direct time-domain pulse computation (records, group G). For
+$z_m\to0$, $P_4\to(1-\ii\omega r)/(4r^6)$: the boundary point at distance $r$ reads
+$Y(t-r)+r\dot Y(t-r)=x(t,z=r)$, the string at height $r$ at the same time. The static value
+$P_4(0)=S_4/(32r_m^7(r_m+z_m)^3)$ is a closed form for $(105/32)\int_{z_m}^\infty z^2(z^2+r^2)^{-9/2}\dd z$. In terms of the
+physical trajectory $\hat{\mathcal T}_X=e^{\ii\omega r_m}P_4(\omega)/(1-\ii\omega z_m)$, and since $N$ is not divisible by
+$(1-\ii\omega z)$ the exponential memory is present and is the only memory. The mechanism is that the propagator is
+light-cone supported and the retarded string $x=Y(u)+z\dot Y(u)=-z^2\partial_z[Y(u)/z]$ is a congruence of null rays
+from the endpoint, whose imprints telescope; this is the dilaton analogue of the light-cone localization of the
+energy density of the Mikhailov string \cite{ACLNR,HIMTradiation,Hubeny}. Whether it persists at nonlinear order is
+open.
+
+\begin{remark}
+A referee context reports that Callan and Güijosa \cite{CallanGuijosa} computed this observable at $z_m=0$, obtained
+an intermediate kernel that agrees with $32g_4e^{-\ii\omega\rho}$ only at $\omega=0$, and concluded an infinitely
+broadened pulse. If that reading, made through a text extractor, is confirmed by eye against the journal version,
+Proposition~\ref{prop:local} corrects it. We make no stronger statement here.
+\end{remark}
+
+\subsection{Verdict for the front test}
+
+At linear order the finite-mass channel is a rational transfer with one simple pole, times one fixed light-travel
+delay; the exponents are integers fixed by the wave equation and by the integer dimension of $O$, and the single scale
+$z_m$ rescales time without changing the shape ($\chi_mz_m^3/\sqrt\lambda$ depends on $\omega z_m$ alone). There is no
+power front, no logarithmic tangent and no hierarchy of delays. The channel fails the front-and-tangent test before
+any prime is involved, and no arithmetic comparison is run. A finite temperature would add a quasinormal tower of
+poles $\omega_n\propto T$, not logarithms of primes.
+
+\subsection*{Ledger}
+\begin{center}\small
+\begin{tabular}{@{}p{0.55\textwidth}p{0.40\textwidth}@{}}
+\toprule
+Statement & Status\\
+\midrule
+Proposition~\ref{prop:cgg} & Proof, exact at linear order; referee confirmed\\
+Agreement with CGG eqs.\ 28, 34, 35 in the nonrelativistic limit & Check of transcribed formulas; equation numbers to confirm by eye\\
+$\chi_m$ rational, one pole; expansion & Proof\\
+Proposition~\ref{prop:positive}; string-energy identity; Schott truncation & Proof (asymptotic series for the truncation)\\
+Retarded $\Delta=4$ propagator & Proof, confirmed two ways\\
+Proposition~\ref{prop:local}; massless limit; static closed form & Proof (symbolic differentiation), numerically verified\\
+Callan--Güijosa discrepancy & Referee reading; unverified by eye\\
+Front test failure & Proof, under the stated qualifications\\
+Nonlinear localization & Open\\
+\bottomrule
+\end{tabular}
+\end{center}
