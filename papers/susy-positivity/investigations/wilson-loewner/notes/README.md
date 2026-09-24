@@ -1,5 +1,9 @@
 # Research notes
 
+The new [arithmetic-storage program and goals](../arithmetic-storage/notes/ARITHMETIC_STORAGE_PROGRAM_AND_GOALS_20260924.md) gives the current arithmetic handoff. It corrects the assessment below: the first normalized append already has an internal all-input bound below 0.951, with specialist review outstanding. The next substantive targets are extension across the first prime, the actual Sonin remainder, and a norm comparison between them.
+
+The [24 September cross-program assessment](CROSS_PROGRAM_PRIORITIES_AFTER_WZW_AND_N4SYM_REVIEWS_20260924.md) evaluates the new WZW review against N4SYM, the critical-path anchor and the earlier semilocal comparison. It ranks normalized cumulative continuation and the actual first-prime residual as the main arithmetic tasks, qualifies broad exclusion claims, and records the recovered WZW manuscript provenance. This is a research assessment with 40 replayed review controls, not a new positivity result.
+
 The [23 September lessons for YM and N=4 SYM](LESSONS_FROM_WZW_FOR_YM_AND_N4SYM_20260923.md) distinguish transferable readout and positivity constraints from theory-specific WZW failures. The resulting [N4SYM research proposal](../N4SYM/notes/N4SYM_DISPLACEMENT_LOEWNER_RESEARCH_PROPOSAL_20260923.md) specifies a fixed theory, displacement and scalar-insertion calculations, retarded work accounting, a genuine-trace extension, and later conditional arithmetic tests. The physical Wilson-evolution question remains worthwhile before an arithmetic match is available.
 
 The current WZW and arithmetic-source results now have a [standalone manuscript](../WZW/manuscript.pdf). Further notes for that branch belong in [WZW/notes](../WZW/notes/README.md), beginning with the [23 September continuation](../WZW/notes/CONTINUATION_AFTER_WZW_WRITEUP_20260923.md). The historical notes below are preserved at their original paths.
