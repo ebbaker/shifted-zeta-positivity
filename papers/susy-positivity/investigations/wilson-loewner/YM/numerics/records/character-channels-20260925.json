@@ -1,0 +1,735 @@
+{
+  "date": "2026-09-25",
+  "prepared_for": "Edward Baker",
+  "model": "GPT-6 (Codex)",
+  "reasoning_effort": "not exposed; not inferred",
+  "purpose": "Finite algebra and asymptotic controls, not YM sampling or interval certification.",
+  "python_version": "3.12.14",
+  "numpy_version": "2.3.5",
+  "source_sha256": "f4d00195067511221d524c29d6251741e0e00dbdfc203eee33d2b140d6962f85",
+  "parameters": {
+    "seed": 20260925,
+    "angular_points": 4096,
+    "gauss_legendre_points": 360,
+    "density": "(1+0.35*cos(theta)+0.2*cos(2*theta))/0.9",
+    "asymptotic_scales": [
+      32,
+      128,
+      512
+    ],
+    "phase_refinement_scales": [
+      128,
+      512,
+      2048,
+      8192
+    ],
+    "current_refinement_scales": [
+      32,
+      128,
+      512,
+      2048
+    ]
+  },
+  "check_count": 57,
+  "all_passed": true,
+  "checks": [
+    {
+      "label": "Haar: weighted adjoint a=2",
+      "absolute_error": 3.3306690738754696e-16,
+      "scaled_error": 7.979517793503706e-17,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "label": "Haar: norm defect a=2",
+      "absolute_error": 3.552713678800501e-15,
+      "scaled_error": 2.0343778072844504e-16,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "label": "Haar: weighted adjoint a=3",
+      "absolute_error": 4.002966042486721e-16,
+      "scaled_error": 3.5477745339099846e-16,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "label": "Haar: norm defect a=3",
+      "absolute_error": 3.552713678800501e-15,
+      "scaled_error": 2.0343778072844504e-16,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "label": "Haar: weighted adjoint a=5",
+      "absolute_error": 5.117875266520903e-16,
+      "scaled_error": 5.117875266520903e-16,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "label": "Haar: norm defect a=5",
+      "absolute_error": 3.552713678800501e-15,
+      "scaled_error": 2.0343778072844504e-16,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "label": "Haar: exact channel branching a=2, alpha=0.0",
+      "absolute_error": 5.64279353627509e-15,
+      "scaled_error": 5.64279353627509e-15,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "label": "Haar: exact channel branching a=2, alpha=1.2566370614359172",
+      "absolute_error": 6.405533421003362e-15,
+      "scaled_error": 6.405533421003362e-15,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "label": "Haar: exact channel branching a=3, alpha=0.0",
+      "absolute_error": 1.923092095457409e-14,
+      "scaled_error": 1.923092095457409e-14,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "label": "Haar: exact channel branching a=3, alpha=1.2566370614359172",
+      "absolute_error": 1.0446783981640722e-14,
+      "scaled_error": 1.0446783981640722e-14,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "label": "Haar: exact channel branching a=5, alpha=0.0",
+      "absolute_error": 1.934794642429296e-14,
+      "scaled_error": 1.934794642429296e-14,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "label": "Haar: exact channel branching a=5, alpha=1.2566370614359172",
+      "absolute_error": 2.193169342644997e-14,
+      "scaled_error": 2.193169342644997e-14,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "label": "Haar: mixed limit a=1, b=1",
+      "absolute_error": 2.1588091654280093e-11,
+      "scaled_error": 2.1588091654280093e-11,
+      "tolerance": 2e-05,
+      "passed": true
+    },
+    {
+      "label": "Haar: mixed limit a=1, b=2",
+      "absolute_error": 1.6833035644951355e-10,
+      "scaled_error": 1.6833035644951355e-10,
+      "tolerance": 2e-05,
+      "passed": true
+    },
+    {
+      "label": "Haar: mixed limit a=1, b=3",
+      "absolute_error": 1.6533400581616987e-10,
+      "scaled_error": 1.6533400581616987e-10,
+      "tolerance": 2e-05,
+      "passed": true
+    },
+    {
+      "label": "Haar: mixed limit a=2, b=3",
+      "absolute_error": 5.8364470676148525e-12,
+      "scaled_error": 5.8364470676148525e-12,
+      "tolerance": 2e-05,
+      "passed": true
+    },
+    {
+      "label": "Haar: mixed limit a=2, b=4",
+      "absolute_error": 1.6833036861910804e-10,
+      "scaled_error": 1.6833036861910804e-10,
+      "tolerance": 2e-05,
+      "passed": true
+    },
+    {
+      "label": "Haar: mixed limit a=4, b=6",
+      "absolute_error": 5.836446026813725e-12,
+      "scaled_error": 5.836446026813725e-12,
+      "tolerance": 2e-05,
+      "passed": true
+    },
+    {
+      "label": "Haar: channel orthogonality 0, 3.141592653589793",
+      "absolute_error": 2.9364038132113283e-16,
+      "scaled_error": 2.9364038132113283e-16,
+      "tolerance": 2e-05,
+      "passed": true
+    },
+    {
+      "label": "Haar: channel orthogonality 1.0471975511965976, 1.0471975511965976",
+      "absolute_error": 2.1588295654936556e-11,
+      "scaled_error": 2.1588295654936556e-11,
+      "tolerance": 2e-05,
+      "passed": true
+    },
+    {
+      "label": "Haar: channel orthogonality 1.0471975511965976, 2.0943951023931953",
+      "absolute_error": 5.390302547173558e-16,
+      "scaled_error": 5.390302547173558e-16,
+      "tolerance": 2e-05,
+      "passed": true
+    },
+    {
+      "label": "Haar: positive block a=2",
+      "absolute_error": 1.6465045993285798e-10,
+      "scaled_error": 1.6465045993285798e-10,
+      "tolerance": 2e-05,
+      "passed": true
+    },
+    {
+      "label": "Haar: positive block a=3",
+      "absolute_error": 1.1668999100322708e-10,
+      "scaled_error": 1.1668999100322708e-10,
+      "tolerance": 2e-05,
+      "passed": true
+    },
+    {
+      "label": "Haar: positive block a=4",
+      "absolute_error": 1.069138111375878e-10,
+      "scaled_error": 1.069138111375878e-10,
+      "tolerance": 2e-05,
+      "passed": true
+    },
+    {
+      "label": "Haar: positive block a=9",
+      "absolute_error": 1.6952050874152746e-11,
+      "scaled_error": 1.6952050874152746e-11,
+      "tolerance": 2e-05,
+      "passed": true
+    },
+    {
+      "label": "positive_central_control: weighted adjoint a=2",
+      "absolute_error": 1.2560739669470201e-15,
+      "scaled_error": 2.5381383621508894e-16,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "label": "positive_central_control: norm defect a=2",
+      "absolute_error": 0.0,
+      "scaled_error": 0.0,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "label": "positive_central_control: weighted adjoint a=3",
+      "absolute_error": 2.220446049250313e-15,
+      "scaled_error": 5.440905482136979e-16,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "label": "positive_central_control: norm defect a=3",
+      "absolute_error": 0.0,
+      "scaled_error": 0.0,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "label": "positive_central_control: weighted adjoint a=5",
+      "absolute_error": 4.2662913262779675e-16,
+      "scaled_error": 4.2662913262779675e-16,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "label": "positive_central_control: norm defect a=5",
+      "absolute_error": 0.0,
+      "scaled_error": 0.0,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "label": "positive_central_control: exact channel branching a=2, alpha=0.0",
+      "absolute_error": 4.300474113605382e-15,
+      "scaled_error": 4.300474113605382e-15,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "label": "positive_central_control: exact channel branching a=2, alpha=1.2566370614359172",
+      "absolute_error": 6.2422918250416775e-15,
+      "scaled_error": 6.2422918250416775e-15,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "label": "positive_central_control: exact channel branching a=3, alpha=0.0",
+      "absolute_error": 1.4651398869563945e-14,
+      "scaled_error": 1.4651398869563945e-14,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "label": "positive_central_control: exact channel branching a=3, alpha=1.2566370614359172",
+      "absolute_error": 1.0188918142036444e-14,
+      "scaled_error": 1.0188918142036444e-14,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "label": "positive_central_control: exact channel branching a=5, alpha=0.0",
+      "absolute_error": 1.4742922232409877e-14,
+      "scaled_error": 1.4742922232409877e-14,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "label": "positive_central_control: exact channel branching a=5, alpha=1.2566370614359172",
+      "absolute_error": 2.1390281816546462e-14,
+      "scaled_error": 2.1390281816546462e-14,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "label": "positive_central_control: mixed limit a=1, b=1",
+      "absolute_error": 5.972872723031527e-07,
+      "scaled_error": 5.972872723031527e-07,
+      "tolerance": 2e-05,
+      "passed": true
+    },
+    {
+      "label": "positive_central_control: mixed limit a=1, b=2",
+      "absolute_error": 4.6605724359062916e-08,
+      "scaled_error": 4.6605724359062916e-08,
+      "tolerance": 2e-05,
+      "passed": true
+    },
+    {
+      "label": "positive_central_control: mixed limit a=1, b=3",
+      "absolute_error": 3.406441058920292e-08,
+      "scaled_error": 3.406441058920292e-08,
+      "tolerance": 2e-05,
+      "passed": true
+    },
+    {
+      "label": "positive_central_control: mixed limit a=2, b=3",
+      "absolute_error": 8.557017896669002e-09,
+      "scaled_error": 8.557017896669002e-09,
+      "tolerance": 2e-05,
+      "passed": true
+    },
+    {
+      "label": "positive_central_control: mixed limit a=2, b=4",
+      "absolute_error": 8.025731316703695e-09,
+      "scaled_error": 8.025731316703695e-09,
+      "tolerance": 2e-05,
+      "passed": true
+    },
+    {
+      "label": "positive_central_control: mixed limit a=4, b=6",
+      "absolute_error": 1.4910564593111318e-09,
+      "scaled_error": 1.4910564593111318e-09,
+      "tolerance": 2e-05,
+      "passed": true
+    },
+    {
+      "label": "positive_central_control: channel orthogonality 0, 3.141592653589793",
+      "absolute_error": 5.179325676228766e-16,
+      "scaled_error": 5.179325676228766e-16,
+      "tolerance": 2e-05,
+      "passed": true
+    },
+    {
+      "label": "positive_central_control: channel orthogonality 1.0471975511965976, 1.0471975511965976",
+      "absolute_error": 4.971197372524756e-06,
+      "scaled_error": 4.971197372524756e-06,
+      "tolerance": 2e-05,
+      "passed": true
+    },
+    {
+      "label": "positive_central_control: channel orthogonality 1.0471975511965976, 2.0943951023931953",
+      "absolute_error": 9.312271372769587e-16,
+      "scaled_error": 9.312271372769587e-16,
+      "tolerance": 2e-05,
+      "passed": true
+    },
+    {
+      "label": "positive_central_control: positive block a=2",
+      "absolute_error": 1.3832585440964884e-06,
+      "scaled_error": 1.3832585440964884e-06,
+      "tolerance": 2e-05,
+      "passed": true
+    },
+    {
+      "label": "positive_central_control: positive block a=3",
+      "absolute_error": 1.2370486582591322e-06,
+      "scaled_error": 1.2370486582591322e-06,
+      "tolerance": 2e-05,
+      "passed": true
+    },
+    {
+      "label": "positive_central_control: positive block a=4",
+      "absolute_error": 1.2158003583340182e-06,
+      "scaled_error": 1.2158003583340182e-06,
+      "tolerance": 2e-05,
+      "passed": true
+    },
+    {
+      "label": "positive_central_control: positive block a=9",
+      "absolute_error": 1.1585605875219507e-06,
+      "scaled_error": 1.1585605875219507e-06,
+      "tolerance": 2e-05,
+      "passed": true
+    },
+    {
+      "label": "2D: rescaled handle multiplier",
+      "absolute_error": 1.70304442558946e-10,
+      "scaled_error": 1.70304442558946e-10,
+      "tolerance": 2e-05,
+      "passed": true
+    },
+    {
+      "label": "2D: scaled cylinder multiplier",
+      "absolute_error": 1.4339046483183538e-07,
+      "scaled_error": 1.4339046483183538e-07,
+      "tolerance": 2e-05,
+      "passed": true
+    },
+    {
+      "label": "Haar: electric energy escape coefficient",
+      "absolute_error": 6.599866228529372e-07,
+      "scaled_error": 6.599866228529372e-07,
+      "tolerance": 2e-05,
+      "passed": true
+    },
+    {
+      "label": "Haar: current graph limit",
+      "absolute_error": 8.595255290275215e-06,
+      "scaled_error": 8.595255290275215e-06,
+      "tolerance": 2e-05,
+      "passed": true
+    },
+    {
+      "label": "Haar: other-channel current growth a=3",
+      "absolute_error": 8.250580574298283e-08,
+      "scaled_error": 7.308411157476989e-08,
+      "tolerance": 2e-05,
+      "passed": true
+    },
+    {
+      "label": "Haar: other-channel current growth a=4",
+      "absolute_error": 8.251146477178395e-08,
+      "scaled_error": 4.111263246073496e-08,
+      "tolerance": 2e-05,
+      "passed": true
+    },
+    {
+      "label": "Haar: other-channel current growth a=5",
+      "absolute_error": 8.251873984121971e-08,
+      "scaled_error": 2.6314404722095485e-08,
+      "tolerance": 2e-05,
+      "passed": true
+    }
+  ],
+  "convergence": [
+    {
+      "density": "Haar",
+      "a": 1,
+      "b": 1,
+      "scales": [
+        32,
+        128,
+        512
+      ],
+      "absolute_errors": [
+        4.5380445343762794e-07,
+        2.643937127681513e-11,
+        2.1588091654280093e-11
+      ]
+    },
+    {
+      "density": "Haar",
+      "a": 1,
+      "b": 2,
+      "scales": [
+        32,
+        128,
+        512
+      ],
+      "absolute_errors": [
+        6.886599494155922e-07,
+        1.6435132197145811e-10,
+        1.6833035644951355e-10
+      ]
+    },
+    {
+      "density": "Haar",
+      "a": 1,
+      "b": 3,
+      "scales": [
+        32,
+        128,
+        512
+      ],
+      "absolute_errors": [
+        5.512892300793419e-07,
+        1.6789864853977816e-10,
+        1.6533400581616987e-10
+      ]
+    },
+    {
+      "density": "Haar",
+      "a": 2,
+      "b": 3,
+      "scales": [
+        32,
+        128,
+        512
+      ],
+      "absolute_errors": [
+        1.7964798531498462e-05,
+        7.41943922276086e-09,
+        5.8364470676148525e-12
+      ]
+    },
+    {
+      "density": "Haar",
+      "a": 2,
+      "b": 4,
+      "scales": [
+        32,
+        128,
+        512
+      ],
+      "absolute_errors": [
+        6.886599494438312e-07,
+        1.643513751892859e-10,
+        1.6833036861910804e-10
+      ]
+    },
+    {
+      "density": "Haar",
+      "a": 4,
+      "b": 6,
+      "scales": [
+        32,
+        128,
+        512
+      ],
+      "absolute_errors": [
+        1.7964798531517215e-05,
+        7.4194392304993125e-09,
+        5.836446026813725e-12
+      ]
+    },
+    {
+      "density": "Haar",
+      "alpha": 0,
+      "beta": 3.141592653589793,
+      "scales": [
+        128,
+        512,
+        2048,
+        8192
+      ],
+      "absolute_errors": [
+        2.5965973948012967e-09,
+        1.6066463342603722e-15,
+        1.8932864721134703e-16,
+        2.9364038132113283e-16
+      ]
+    },
+    {
+      "density": "Haar",
+      "alpha": 1.0471975511965976,
+      "beta": 1.0471975511965976,
+      "scales": [
+        128,
+        512,
+        2048,
+        8192
+      ],
+      "absolute_errors": [
+        2.643937127681513e-11,
+        2.1587987812839224e-11,
+        2.158801377319274e-11,
+        2.1588295654936556e-11
+      ]
+    },
+    {
+      "density": "Haar",
+      "alpha": 1.0471975511965976,
+      "beta": 2.0943951023931953,
+      "scales": [
+        128,
+        512,
+        2048,
+        8192
+      ],
+      "absolute_errors": [
+        2.4900125193943354e-06,
+        2.5340597059407356e-10,
+        3.227937720230791e-17,
+        5.390302547173558e-16
+      ]
+    },
+    {
+      "density": "positive_central_control",
+      "a": 1,
+      "b": 1,
+      "scales": [
+        32,
+        128,
+        512
+      ],
+      "absolute_errors": [
+        0.00015420511014061514,
+        9.561496229045184e-06,
+        5.972872723031527e-07
+      ]
+    },
+    {
+      "density": "positive_central_control",
+      "a": 1,
+      "b": 2,
+      "scales": [
+        32,
+        128,
+        512
+      ],
+      "absolute_errors": [
+        1.1409669117699233e-05,
+        7.475840826057836e-07,
+        4.6605724359062916e-08
+      ]
+    },
+    {
+      "density": "positive_central_control",
+      "a": 1,
+      "b": 3,
+      "scales": [
+        32,
+        128,
+        512
+      ],
+      "absolute_errors": [
+        8.138352098507574e-06,
+        5.425524583550241e-07,
+        3.406441058920292e-08
+      ]
+    },
+    {
+      "density": "positive_central_control",
+      "a": 2,
+      "b": 3,
+      "scales": [
+        32,
+        128,
+        512
+      ],
+      "absolute_errors": [
+        1.0582735648656977e-05,
+        1.3746323741019037e-07,
+        8.557017896669002e-09
+      ]
+    },
+    {
+      "density": "positive_central_control",
+      "a": 2,
+      "b": 4,
+      "scales": [
+        32,
+        128,
+        512
+      ],
+      "absolute_errors": [
+        1.6988483616826183e-06,
+        1.299498828020838e-07,
+        8.025731316703695e-09
+      ]
+    },
+    {
+      "density": "positive_central_control",
+      "a": 4,
+      "b": 6,
+      "scales": [
+        32,
+        128,
+        512
+      ],
+      "absolute_errors": [
+        9.436209249718919e-06,
+        2.462118337272084e-08,
+        1.4910564593111318e-09
+      ]
+    },
+    {
+      "density": "positive_central_control",
+      "alpha": 0,
+      "beta": 3.141592653589793,
+      "scales": [
+        128,
+        512,
+        2048,
+        8192
+      ],
+      "absolute_errors": [
+        3.5143285319500453e-09,
+        2.164053599406e-15,
+        2.6773592705321924e-16,
+        5.179325676228766e-16
+      ]
+    },
+    {
+      "density": "positive_central_control",
+      "alpha": 1.0471975511965976,
+      "beta": 1.0471975511965976,
+      "scales": [
+        128,
+        512,
+        2048,
+        8192
+      ],
+      "absolute_errors": [
+        0.00031695029242801283,
+        7.948660687605735e-05,
+        1.9882407990204318e-05,
+        4.971197372524756e-06
+      ]
+    },
+    {
+      "density": "positive_central_control",
+      "alpha": 1.0471975511965976,
+      "beta": 2.0943951023931953,
+      "scales": [
+        128,
+        512,
+        2048,
+        8192
+      ],
+      "absolute_errors": [
+        2.8482532614112058e-06,
+        3.038680559987244e-10,
+        1.249792703053463e-16,
+        9.312271372769587e-16
+      ]
+    },
+    {
+      "observable": "Haar electric-Wilson current",
+      "scales": [
+        32,
+        128,
+        512,
+        2048
+      ],
+      "absolute_errors": [
+        0.01844182908047007,
+        0.002127239043889238,
+        0.00013724694328772023,
+        8.595255290275215e-06
+      ]
+    }
+  ]
+}

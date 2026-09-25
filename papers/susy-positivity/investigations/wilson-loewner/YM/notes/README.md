@@ -1,11 +1,15 @@
 # YM research notes
 
-24 September 2026. Prepared for Edward Baker with substantial GPT-6 (Codex) assistance. Reasoning effort: not exposed; not inferred.
+25 September 2026. Prepared for Edward Baker with substantial GPT-6 (Codex) assistance. Reasoning effort: not exposed; not inferred.
 
 Start with the [project outline and self-contained background](../PROJECT_OUTLINE.md). The current direction is one global YM realization of the Weil form, with OS positivity assumed and nonconstructive existence allowed.
 
 Latest continuation:
 
+- [Character channels and prime mixed pairings](CHARACTER_CHANNEL_LIMITS_AND_PRIME_MIXED_PAIRINGS_20260925.md): derives the actual weighted adjoints, an exact rational phase branching law, and limiting mixed translations with the required prime-power weights. A full physical electric–Wilson current supplies differentiation on the identity component. The note proves norm escape and a divergent positive contact term, identifies the remaining archimedean and occurrence problems, and checks the two-dimensional gluing comparison. No full Weil realization is established.
+- [Topology, geometry, and character-observable options](TOPOLOGY_GEOMETRY_AND_CHARACTER_OBSERVABLE_OPTIONS_20260925.md): distinguishes changes that preserve the local norm obstruction from genuine alternatives; derives bounded character-weighted winding operations and their actual mixed Gram matrix, and records the two-dimensional YM and modular-scattering comparisons. No model change is adopted.
+- [Native winding sources and their electric mixed pairing](NATIVE_WINDING_MELLIN_SOURCES_AND_ELECTRIC_PAIRING_20260925.md): one independent fixed-state source law, its exact interacting mixed identity, a complete Abel/form-domain construction, and an all-input obstruction to its Weil identification. Also derives the native winding Euler/Poisson controls and the required prime-separation singularities for future candidates.
+- [Independent review of the three global-mechanism notes](../reviews/OFF_DIAGONAL_AND_GLOBAL_MECHANISMS_REVIEW_20260925.md), with [source-domain and weight-transport controls](SOURCE_DOMAIN_AND_WEIGHT_TRANSPORT_REVIEW_CONTROLS_20260925.md): clarification of completion, smooth-test bounds, and physical source content.
 - [Critical assessment and ranked global approaches](../reviews/GLOBAL_MECHANISMS_CRITICAL_REVIEW_20260924.md): audit of the recent notes and correction of the optional native-generator requirement.
 - [Separated-source rigidity and compact source existence](OFF_DIAGONAL_RIGIDITY_AND_COMPACT_SOURCE_EXISTENCE_20260924.md): three-constant pairing determination, finite compatibility in the fixed YM space, a weighted elliptic control lemma, and the exact unresolved mixed identity.
 - [Source spectra, modular and Liouville controls](SOURCE_SPECTRA_MODULAR_AND_LIOUVILLE_CONTROLS_20260924.md): conditional arithmetic point spectrum, trivial boundary modular flow, scoped vacuum-boost exclusion, and thermal source calculations.

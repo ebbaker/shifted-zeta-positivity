@@ -1,4 +1,28 @@
-# YM hierarchy numerics
+# YM numerics and algebra controls
+
+## Character channels and current controls, 25 September 2026
+
+The [character checker](check_character_channels.py) and [small record](records/character-channels-20260925.json) accompany the [character-channel note](../notes/CHARACTER_CHANNEL_LIMITS_AND_PRIME_MIXED_PAIRINGS_20260925.md). Prepared for Edward Baker with GPT-6 (Codex) assistance; reasoning effort not exposed or inferred.
+
+Run from the YM directory with Python 3 and NumPy: `python3 -B numerics/check_character_channels.py --output /tmp/ym-character-channels.json`.
+
+The 57 controls cover the actual weighted-adjoint formula using prescribed densities, exact root branching, mixed packet limits including common-divisor weights, phase orthogonality, positive prime-type differences, two-dimensional gluing multipliers, electric energy growth, the electric–Wilson current approximation, and its growth on winding-created components. All passed in the recorded environment. Finite exact controls had maximum absolute discrepancy below 2.2e-14; final asymptotic comparisons were below 8.6e-6, against tolerance 2e-5.
+
+Phase refinement runs through representation scale 8192, and the current comparison through scale 2048. Intermediate errors are retained, including coarse comparisons exceeding the final tolerance. The Haar and positive central test densities are algebra controls, not interacting YM samples. No infinite limit is certified by this floating calculation; those claims have analytical arguments in the note. The small record includes parameters, environment and checker provenance. No large arrays or external datasets are stored.
+
+## Winding-source mixed-pairing controls, 25 September 2026
+
+The [winding checker](check_winding_electric_pairing.py) and [small record](records/winding-electric-pairing-20260925.json) accompany the [native source and electric pairing note](../notes/NATIVE_WINDING_MELLIN_SOURCES_AND_ELECTRIC_PAIRING_20260925.md). Prepared for Edward Baker with GPT-6 (Codex) assistance; reasoning effort not exposed or inferred.
+
+Run from `wilson-loewner/YM` with Python 3 and NumPy:
+
+```sh
+python3 -B numerics/check_winding_electric_pairing.py --output /tmp/ym-winding-electric-pairing.json
+```
+
+The 64 controls compare finite Laurent norm and electric mixed Gram formulas against direct angular quadrature, including negative windings and complex pairs. They also check the Haar finite-difference identity and normalization. All passed in the recorded environment; maximum scaled discrepancy was below 1.6e-15. Haar and a prescribed positive central density are algebra controls, not samples of the interacting state. The source's infinite-winding limit and exclusion theorem are analytical and are not certified by this floating calculation. The script and small provenance record are the complete reproducible material; no large data are generated.
+
+## Earlier hierarchy controls
 
 The [checker](check_positive_hierarchy.py) and [record](records/positive-hierarchy-preliminary-20260924.json) accompany the [preliminary analysis](../notes/YM_POSITIVE_HIERARCHY_PRELIMINARY_ANALYSIS_20260924.md). Prepared for Edward Baker with GPT-6 (Codex) assistance; reasoning effort not exposed or inferred.
 
