@@ -5,6 +5,8 @@ Prepared for Edward Baker with substantial LLM assistance.
 Model: GPT-6 (Codex). Reasoning effort: not exposed; not inferred.  
 Status: working research outline. OS positivity is an allowed assumption; the arithmetic realization is an open objective. No RH proof is claimed.
 
+Critical update, 24 September 2026: the [global-mechanisms review](reviews/GLOBAL_MECHANISMS_CRITICAL_REVIEW_20260924.md) rechecks the recent notes and corrects an unnecessary prerequisite. An exact pairing induces translations on its source image; identifying them with a separately specified native YM generator is optional unless required by a particular ansatz. The new priority is a mixed identity for actual sources, supported by [global pairing determination and compact source extension](notes/OFF_DIAGONAL_RIGIDITY_AND_COMPACT_SOURCE_EXISTENCE_20260924.md). These new deductions also await independent review.
+
 ## 1. Overall goal
 
 Investigate whether a specified Yang–Mills theory contains an admissible family of sources whose reflected inner product is exactly the Weil form for the Riemann zeta function. An existence proof is a valid endpoint; an explicit formula for every source is not required. Under assumed Osterwalder–Schrader (OS) positivity, such an identification would imply the Riemann Hypothesis (RH).
@@ -145,11 +147,11 @@ This provides a genuine YM setting in which to ask an existence question. It doe
 
 ## 4. The desired global theorem
 
-Fix the YM model and state, physical reflection, admissible observable sector or completion, and an independently specified arithmetic action on sources. Assuming (8), prove that there exists one continuous linear map
+Fix the YM model and state, physical reflection, admissible observable sector or completion, and a source prescription or system of relations giving the sources genuine YM observable content. A separately specified native arithmetic action is an optional additional condition, not a prerequisite for the reflected-pairing problem. Assuming (8), prove that there exists one continuous linear map
 \[
 J:\mathcal D^0\longrightarrow\mathcal H_{\mathrm{YM}}
 \]
-with the required source interpretation and intertwining properties, such that
+with the stated source interpretation and any explicitly imposed intertwining properties, such that
 \[
 Q(f,g)=\langle Jf,Jg\rangle_{\mathrm{OS}}
 \qquad \text{for every }f,g\in\mathcal D^0.
@@ -176,11 +178,13 @@ A source module means a vector space of allowed sources together with specified 
 
 The two central unknowns are whether the arithmetic module occurs in YM and whether its relations are sufficiently restrictive. Uniqueness only among already positive forms would leave the sign of \(Q\) unproved. Simply postulating all its known coefficients as positive moments restates the target.
 
+The [new determination theorem](notes/OFF_DIAGONAL_RIGIDITY_AND_COMPACT_SOURCE_EXISTENCE_20260924.md) makes one possible relation set precise. Translation/reflection symmetry, the exact gamma-plus-prime pairing on separated source supports, and logarithmic high-frequency growth leave only three local constants after pulling back by \(-\partial_x^2+1/4\). Three dilated calibration tests fix them. This theorem assumes no sign and no native generator. The unresolved step is deriving the separated-source identity from YM observables; imposing it as positive moments is not an independent realization.
+
 ### B. Compatible approximation in a fixed YM source space
 
 Prove the existence of approximate sources for arbitrary finite sets of tests and source identities, together with estimates that produce a compatible global limit. Ordinary weak Hilbert-space compactness is insufficient because norm can be lost.
 
-The [current audit](notes/GLOBAL_SOURCE_AND_WARD_IDENTITY_AUDIT_20260924.md) proves a sufficient replacement: uniformly bounded maps into a stronger source Hilbert space compactly embedded in the fixed OS space have a strongly convergent subsequence on all tests, provided the bounds use local smooth-test seminorms and the pairings converge on a dense family. Strong convergence preserves the pairings. Finite boundary Sobolev spaces provide concrete candidate stronger norms.
+The [earlier audit](notes/GLOBAL_SOURCE_AND_WARD_IDENTITY_AUDIT_20260924.md) proves a sufficient replacement: uniformly bounded maps into a stronger source Hilbert space compactly embedded in the fixed OS space have a strongly convergent subsequence on all tests, provided the bounds use local smooth-test seminorms and the pairings converge on a dense family. Strong convergence preserves the pairings. The [new finite-compatibility theorem](notes/OFF_DIAGONAL_RIGIDITY_AND_COMPACT_SOURCE_EXISTENCE_20260924.md) starts instead with arbitrary finite feasible source assignments in fixed compact source balls. It supplies a global map without presupposing globally defined approximants. A weighted elliptic operator on the actual finite YM boundary supplies the compact source norm and a quantitative spectral tail bound.
 
 The unresolved part is obtaining the approximants and uniform bounds from YM/arithmetic relations. Approximation only for a few supports does not supply them. An approach based instead on free moments must also prove that its limiting state is the intended YM state, rather than another positive theory.
 
@@ -196,10 +200,13 @@ The unresolved part is obtaining the approximants and uniform bounds from YM/ari
 | Euclidean-semigroup exclusion | Arithmetic translations cannot equal positive-Hamiltonian Euclidean decay on an exact source image | A native unitary arithmetic action or another causal correspondence |
 | Full finite-lattice integration-by-parts uniqueness | Identifies the Wilson state without assuming a density first | Selection of the arithmetic source map |
 | Compact source-control criterion | Supplies a sufficient nonconstructive limit preserving norms and pairings | Global approximants, uniform stronger bounds, and retained source relations |
-| Native translation-generator audit | Requires an unbounded two-sided nonperiodic generator; rules out semibounded Hamiltonians and periodic link rotations in that role | A specific admissible generator with arithmetic determining relations |
+| Induced translation-generator audit | An exact source image has an unbounded two-sided nonperiodic action; semibounded Hamiltonians and periodic rotations cannot be identified with it | A native identification is optional for bare source existence and needs extra proof when imposed |
 | Generalized source via spectral calculus | Gives a continuous global source class from a generator and finite-order generalized vector | Native YM occurrence and equality of its spectral pairing with the Weil form |
+| Separated-support determination theorem | Reduces pairing freedom to three local constants under stated symmetries and growth; three anchors give exact equality | A YM-derived mixed gamma/prime identity |
+| Compact finite-compatibility theorem | Extends finite source assignments inside the fixed YM representation; preserves norms and closed source relations | Arbitrary finite feasibility with common local source bounds |
+| Spectral/modular controls | Exact pairing conditionally forces a discrete source spectrum; current boundary modular flow is trivial; geometric vacuum boosts fail under explicit hypotheses | Other source laws and state/sector choices remain open |
 
-The analytic entries are proved or scoped in the [global source and Ward-identity audit](notes/GLOBAL_SOURCE_AND_WARD_IDENTITY_AUDIT_20260924.md) and its [native-generator continuation](notes/NATIVE_TRANSLATION_GENERATORS_AND_GENERALIZED_SOURCES_20260924.md). They are research-note results, not independently reviewed claims of novelty. The first interacting test remains a finite statistical diagnostic.
+The earlier analytic entries are proved or scoped in the [global source and Ward-identity audit](notes/GLOBAL_SOURCE_AND_WARD_IDENTITY_AUDIT_20260924.md) and its [native-generator continuation](notes/NATIVE_TRANSLATION_GENERATORS_AND_GENERALIZED_SOURCES_20260924.md), with a subsequent [critical assessment](reviews/GLOBAL_MECHANISMS_CRITICAL_REVIEW_20260924.md). New proofs are in the [determination/extension note](notes/OFF_DIAGONAL_RIGIDITY_AND_COMPACT_SOURCE_EXISTENCE_20260924.md) and [spectral controls](notes/SOURCE_SPECTRA_MODULAR_AND_LIOUVILLE_CONTROLS_20260924.md). These are model-assisted research deductions, not independently validated results or novelty claims. The first interacting test remains a finite statistical diagnostic.
 
 The source coordinate must be treated carefully. Common logarithmic translations preserve \(Q\), so an exact source image carries a unitary translation action. Physical Euclidean decay is contractive, and Loewner capacity labels contour growth. These are distinct operations until an actual intertwining statement is proved. Keeping this distinction does not remove the causal realization objective.
 
@@ -207,18 +214,22 @@ The source coordinate must be treated carefully. Common logarithmic translations
 
 The next phase should test a global mechanism before expanding the list of finite support certificates.
 
-1. **Specify the source core and arithmetic action.** Start with the existing boundary completion, covariant loop functions, and properly adjointed link/field insertions. The arithmetic generator must be unbounded in both spectral directions and nonperiodic. The native-generator note gives the concrete source class \(Jf=[\widehat f(\lambda)(1+\lambda^2)^{s/2}](G)\eta\). The next obligation is a native choice of \(G\), an admissible seed \(\eta\), and determining relations; choosing their spectrum from presumed RH would be circular. State the source topology and reference-color sector.
-2. **Derive a mixed identity from the model.** Compute the relevant Ward/intertwining relations with their domains and adjoints. The sought relation must couple the source's archimedean behavior to its arithmetic shifts; separate positive sectors and translation symmetry alone do not do this.
-3. **Test determination globally.** Calculate which continuous Hermitian pairings satisfy the relation set. Translation/reflection symmetry, leading logarithmic growth, and finitely many normalizations leave infinitely many possibilities. A successful next result must eliminate that freedom or identify exactly which additional relation is missing.
-4. **Choose the existence proof.** Pursue occurrence plus uniqueness if a sufficiently restrictive module appears. Pursue compact approximation if the source hierarchy supplies uniform stronger bounds and an extension principle. Prove the needed property for arbitrary finite collections, not only displayed examples.
-5. **Use computation to check those statements.** Appropriate calculations test exact candidate identities, source-domain estimates, or a concrete finite obstruction. Further loop-family Monte Carlo work remains useful for the physical hierarchy, but is not by itself progress on the global arithmetic match.
-6. **Return to the causal target with a precise dictionary.** Specify physical preparation, time evolution, readout, and storage; prove how the already-defined shifted transfer arises. Reflected positivity alone does not supply this dictionary.
+1. **Fix the source core and observable relations.** Keep one finite pure-YM slab and the covariant boundary/insertion completion as the first setting. State local smooth-test bounds and the reference-color sector. Do not require an independently native generator unless the proposed source law uses one. Arbitrary Hilbert embeddings and spectra selected from presumed RH remain inadmissible substitutes for observable content.
+2. **Derive the mixed separated-source identity.** The exact unresolved target is equation (9) of the determination note: the OS pairing for disjoint arithmetic supports must give the complete archimedean tail and both prime-power shift orientations. A Poisson/dilation character is a literature template, not an existing YM identity. Derive arithmetic coefficients from the proposed operations instead of imposing them as positive moments.
+3. **Apply the proved global determination theorem.** Establish translation/reflection symmetry, logarithmic growth, and three independent anchor values. The new theorem then identifies the whole pairing without assuming its sign. The arithmetic support coordinate still needs its own source interpretation.
+4. **Prove occurrence by compact finite compatibility if useful.** The weighted elliptic source-control lemma is available. The missing existence input is feasibility for arbitrary finite sets of independently justified source relations with one collection of local bounds. No uniform positive gap or bound uniform in support length is required.
+5. **Keep native operator proposals scoped.** Thermal Liouville sources change the state/representation; the current boundary modular flow is trivial, and geometric vacuum wedge boosts face the conditional point-spectrum obstruction. Other insertion or modular choices need explicit algebra, state, domain, and metric data. None of these exclusions prohibits the general source-existence problem.
+6. **Retain the separate causal theorem and investment test.** Specify physical preparation, evolution, readout, and ordinary energy balance for the prescribed shifted transfer. Use computation only to test a concrete identity or obstruction. If no independent arithmetic relation can be specified in pure YM, discuss a clearly identified arithmetic defect/auxiliary theory rather than expanding isolated support certificates.
 
 A decisive negative result about one source class should lead to a stated class change, not repeated adjustment of \(L\). A decisive positive result should be an all-support identity, representation theorem, or compatible extension/bound, not merely another positive finite matrix.
 
 ## 8. Organization and reading order
 
 - This file is the maintained project-level outline; it is intended to be readable without earlier discussion.
+- [Critical global-mechanisms assessment](reviews/GLOBAL_MECHANISMS_CRITICAL_REVIEW_20260924.md) is the latest review and ranked research recommendation.
+- [Separated-source rigidity and compact source existence](notes/OFF_DIAGONAL_RIGIDITY_AND_COMPACT_SOURCE_EXISTENCE_20260924.md) gives the new determination theorem, extension theorem, explicit missing identity, and recommended existence problem.
+- [Source spectra, modular and Liouville controls](notes/SOURCE_SPECTRA_MODULAR_AND_LIOUVILLE_CONTROLS_20260924.md) supplies additional scoped operator tests without making a native generator mandatory.
+- [Primary-source ledger](notes/GLOBAL_MECHANISMS_PRIMARY_SOURCE_LEDGER_20260924.md) records checked papers, theorem locations, versions, and verification limits.
 - [Global existence under assumed OS positivity](notes/YM_EXISTENCE_ASSUMED_OS_AND_GLOBAL_SCOPE_20260924.md) records the agreed scope and nonconstructive objective. It was moved into this investigation from the parent notes directory.
 - [Global source and Ward-identity audit](notes/GLOBAL_SOURCE_AND_WARD_IDENTITY_AUDIT_20260924.md) is the first analytical continuation under that scope.
 - [Native translation generators and generalized sources](notes/NATIVE_TRANSLATION_GENERATORS_AND_GENERALIZED_SOURCES_20260924.md) tests natural operators, derives the exact weighted-flow generator, and formulates the next global source class. A fixed flow's weighted adjoint is conjugate to its unweighted generator, so the YM density alone does not determine its spectrum.
