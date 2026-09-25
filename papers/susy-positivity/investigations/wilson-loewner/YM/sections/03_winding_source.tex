@@ -1,0 +1,152 @@
+\section{A genuine winding/electric source and its limitation}\label{sec:winding}
+Before passing to character packets it is useful to exhibit a global
+source law whose admissibility and actual pairing can be proved,
+and whose failure of the target can also be proved.
+
+Write $w_k=\mathbb E_\nu\tr(P^k)/2$; here $w_k$ is a moment, distinct
+from the full density w in \eqref{eq:boundary-weight}. Then
+\begin{equation}
+w_k=t_k-\tfrac12(t_{k+2}+t_{k-2}),\qquad
+q(\theta)=2\rho(\theta)\sin^2\theta,
+\end{equation}
+and for finite Laurent sums
+\begin{equation}\label{eq:laurent-pair}
+\ip{\sum a_nP^n}{\sum b_mP^m}_\nu
+=\sum_{n,m}\bar a_n b_m w_{m-n}.
+\end{equation}
+For $f\in\cD$, $n\ne0$, define
+\begin{equation}
+a_f(n)=|n|^{-1/2}\widehat f(\sgn(n)\log|n|),\quad a_f(0)=0,
+\quad A_{f,r}=\sum_{n\ne0}r^{|n|}a_f(n)P^n,\quad0<r<1.
+\end{equation}
+Every damped observable is smooth. The proposed source is
+\begin{equation}\label{eq:winding-source}
+J_Ef=\lim_{r\uparrow1}E_\nu^{1/2}A_{f,r}.
+\end{equation}
+It is not defined by prescribing a positive arithmetic Gram matrix.
+
+\begin{theorem}[Admissibility, actual mixed energy, and exclusion]
+The limit \eqref{eq:winding-source} exists in the physical completion,
+defines a continuous global smooth-test source, and has pairing
+\begin{equation}\label{eq:electric-winding-pair}
+\ip{J_Ef}{J_Eg}_\nu
+=\ell\lim_{r\uparrow1}\sum_{n,m\ne0}r^{|n|+|m|}
+ \overline{a_f(n)}a_g(m)
+ \{nm\,w_{m-n}+2(t_{m-n}-t_{m+n})\}.
+\end{equation}
+The common Abel limit is essential. There is a constant depending only
+on the fixed state such that
+\begin{equation}\label{eq:winding-local-bound}
+\norm{J_Ef}_\nu^2\le C\ell C_\rho\int(1+x^2)|f(x)|^2\dd x.
+\end{equation}
+Consequently this law, and every fixed scalar multiple of it, fails to
+realize Q on $\cD^0$.
+\end{theorem}
+\begin{proof}
+For $P=\cos\theta I+\ii\sin\theta\,\omega\cdot\sigma$,
+$P^n=\cos(n\theta)I+\ii\sin(n\theta)\omega\cdot\sigma$.
+The radial derivative pairing is $nm\cos((m-n)\theta)$, while the
+angular pairing is $2\sin(n\theta)\sin(m\theta)/\sin^2\theta$.
+Integration gives the braces in \eqref{eq:electric-winding-pair}.
+Each of the four distinct links gives the same bi-invariant Dirichlet
+contribution, explaining $\ell$. This computes the full form; it does
+not replace $E_\nu$ by a radial operator.
+
+For Haar, extend a by zero to $\Z$, put $c(k)=ka(k)$, and use direct
+Fourier algebra to obtain
+\begin{align}
+\norm{\sum a_nP^n}_{\rm Haar}^2
+ &=\tfrac12\sum_k|a(k+2)-a(k)|^2,\\
+\mathfrak e_{\rm Haar}^{(1)}(A,A)
+ &=\tfrac12\sum_k|c(k+2)-c(k)|^2+
+                         \sum_k|a(k)-a(-k)|^2.\label{eq:haar-difference}
+\end{align}
+For $F=\widehat f$, a one-dimensional Sobolev sampling bound gives
+\begin{equation}
+\sum_{n\ge1}\frac{|F(\log n)|^2+|F(-\log n)|^2}{n}
+ \le C(\norm F_2^2+\norm{F'}_2^2).
+\end{equation}
+To prove it, use the fundamental theorem of calculus on
+$[\log n,\log(n+1)]$, whose length is comparable to $1/n$, then sum.
+For $c(n)=\sqrt n F(\log n)$, the interpolant
+$b(u)=\sqrt u F(\log u)$ satisfies
+$b'(u)=u^{-1/2}(F'(\log u)+F(\log u)/2)$, so
+\begin{equation}
+\sum_{n\ge1}|c(n+2)-c(n)|^2
+\le4\int_0^\infty|F'(v)+F(v)/2|^2\dd v.
+\end{equation}
+The negative branch and finitely many crossing indices obey the same
+bound. This controls \eqref{eq:haar-difference}.
+
+For Abel convergence, on the positive branch
+\begin{equation}
+\Delta_2(r^kc(k))=r^k\Delta_2c(k)+(r^2-1)r^kc(k+2).
+\end{equation}
+The first term converges in $\ell^2$. The squared norm of the second
+is bounded by
+$C(1-r)^2\sum_{k\ge1}(k+2)r^{2k}|F(\log(k+2))|^2$, which tends to
+zero: remove a finite head and use uniform smallness of F on the tail.
+The negative branch is identical. Comparison by the positive marginal
+\eqref{eq:marginal} transfers form convergence to the actual state.
+Closedness proves \eqref{eq:winding-source} and the mixed identity.
+Finally Plancherel gives
+$\norm F_2^2+\norm{F'}_2^2=2\pi\int(1+x^2)|f|^2$, proving
+\eqref{eq:winding-local-bound}. Proposition~\ref{prop:highfreq} then excludes
+the arithmetic match.
+\end{proof}
+A sharp winding cutoff is not equivalent to Abel convergence: its
+edge can contain $N|F(\log N)|^2$. The unsmeared coefficient family
+$|n|^{-1/2-\ii x\sgn(n)}$ has a Hilbert interpretation through the
+first difference norm, but its electric differences behave like
+$n^{-1/2}$ and fail the form domain. Applying the electric square root
+only after smearing was necessary, even though the final law remains
+too locally bounded to be the desired source.
+
+\subsection{Euler algebra and the holonomy-twisted Poisson identity}
+Repeated traversal acts on the continuous functional calculus of P by
+$\Psi_aF(z)=F(z^a)$. On $C(S^1)$ it is a contraction and
+$\Psi_a\Psi_b=\Psi_{ab}$. Hence, for $\Ree s>1$,
+\begin{equation}\label{eq:raw-euler}
+\sum_{a\ge1}a^{-s}\Psi_a=\prod_p(I-p^{-s}\Psi_p)^{-1},\qquad
+-\mathcal Z'(s)\mathcal Z(s)^{-1}
+=\sum_{a\ge2}\Lambda(a)a^{-s}\Psi_a.
+\end{equation}
+Absolute convergence and the Mobius inverse justify these identities.
+They are not bounded-operator identities on the actual winding
+Hilbert norm: the pushed density
+$q_a(u)=a^{-1}\sum_{j=0}^{a-1}q((u+2\pi j)/a)$ is positive at $u=\pi$
+for every $a\ge2$, whereas q vanishes quadratically there. A bump of
+width $\epsilon$ at $\pi$ has input squared norm of order $\epsilon^3$
+and output squared norm of order $\epsilon$. Thus $\Psi_a$ has no
+bounded extension in that metric.
+
+On constants $\mathcal Z(s)I=\zeta(s)I$, but expectation of a loop is
+a different operation. Since $w_n$ decreases rapidly,
+$\sum_{n\ge1}w_n n^{-s}$ is entire; for Haar it is $-2^{-s-1}$.
+There is no scalar zeta Euler product obtained by averaging
+\eqref{eq:raw-euler}.
+
+For a concrete completion test choose
+$\phi(u)=u^2(2\pi u^2-3)e^{-\pi u^2}$.
+Gaussian differentiation shows that its $2\pi$-Fourier transform equals
+itself and that $\phi(0)=\int\phi=0$. The actual observable
+$\Theta_\phi(t,P)=\sum_{n\in\Z}\phi(nt)P^n$ obeys, at eigenangle
+$e^{2\pi\ii\alpha}$,
+\begin{equation}
+\sum_n\phi(nt)e^{2\pi\ii n\alpha}
+=t^{-1}\sum_k\widehat\phi((k-\alpha)/t).
+\end{equation}
+The dual lattice is shifted by the holonomy. At $P=I$ alone,
+\begin{equation}
+\int_0^\infty t^{s-1}\Theta_\phi(t,I)\dd t
+=\xi(s)/\pi,
+\quad \xi(s)=\tfrac12s(s-1)\pi^{-s/2}\Gamma(s/2)\zeta(s).
+\end{equation}
+Indeed the Mellin transform of $\phi$ is
+$s(s-1)\pi^{-s/2}\Gamma(s/2)/(4\pi)$; the sum contributes $2\zeta(s)$.
+The identity starts in $\Ree s>1$ and continues by the rapid two-ended
+Poisson decay. Evaluation at $P=I$ has measure-zero support and is not
+continuous in the physical \Ltwo{} norm. The actual mixed pairing is instead
+$\sum_{n,m}\overline{\phi(nt)}\psi(mu)w_{m-n}$.
+Thus Euler and Poisson identities alone do not determine a reflected
+Weil pairing.

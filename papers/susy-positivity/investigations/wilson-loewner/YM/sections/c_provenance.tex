@@ -1,0 +1,141 @@
+\section{Research provenance, diagnostics, and reproducibility}\label{app:provenance}
+\subsection{Scope of this consolidation}
+This manuscript consolidates the YM investigation as it
+stood on 25 September 2026. It introduces no new numerical
+experiment or physical candidate. The historical notes
+and reviews remain in place; the manuscript is one
+maintained document, not a new dated snapshot directory.
+The baseline checkout was
+\begin{center}\small
+\texttt{f8b8622fbd687bd152dd40dcc0c4bbd4576008e5}.
+\end{center}
+That commit identifies the starting checkout; it does not
+claim to contain the later uncommitted notes or this draft.
+The build record fingerprints the actual research files
+used, including uncommitted work.
+
+The principal crosswalk below is for provenance; definitions,
+claims, and their proof arguments appear in the manuscript
+itself. Links are relative to the YM directory containing
+the PDF and sources.
+\begin{longtable}{@{}>{\raggedright\arraybackslash}p{0.27\textwidth}p{0.68\textwidth}@{}}
+\toprule
+Manuscript material & Investigation record\\
+\midrule
+\endhead
+Scope and global target &
+\noteurl{YM_EXISTENCE_ASSUMED_OS_AND_GLOBAL_SCOPE_20260924.md}{Assumed OS positivity and global scope};
+\noteurl{GLOBAL_SOURCE_AND_WARD_IDENTITY_AUDIT_20260924.md}{global source and Ward audit}.\\[4pt]
+Fixed boundary and hierarchy &
+\noteurl{YM_POSITIVE_HIERARCHY_PRELIMINARY_ANALYSIS_20260924.md}{Preliminary positive hierarchy};
+\noteurl{FINITE_SLAB_REFLECTION_AND_DISCRETE_HIERARCHY_20260924.md}{finite-slab reflection and discrete bounds};
+\noteurl{FIRST_INTERACTING_SLAB_TEST_AND_CONTINUATION_20260924.md}{first interacting test}.\\[4pt]
+Winding and operator choices &
+\noteurl{NATIVE_WINDING_MELLIN_SOURCES_AND_ELECTRIC_PAIRING_20260925.md}{Native winding/electric sources};
+\noteurl{TOPOLOGY_GEOMETRY_AND_CHARACTER_OBSERVABLE_OPTIONS_20260925.md}{topology and character options}.\\[4pt]
+Character and gamma limits &
+\noteurl{CHARACTER_CHANNEL_LIMITS_AND_PRIME_MIXED_PAIRINGS_20260925.md}{Character channels and prime mixed pairings};
+\noteurl{ELECTRIC_PARITY_ARCHIMEDEAN_RESPONSE_AND_PHASE_OBSTRUCTION_20260925.md}{electric parity and archimedean response}.\\[4pt]
+Occurrence obstructions &
+\noteurl{BOUNDED_WINDING_OCCURRENCE_OBSTRUCTION_20260925.md}{Bounded winding occurrence};
+\noteurl{NATIVE_RECENTERING_AND_GAPPED_POSITIVE_COMPLETION_20260925.md}{native recentering and coercive positive completion}.\\[4pt]
+One detecting response &
+\noteurl{SINGLE_PROBE_OCCURRENCE_AND_PRIME_BOUNDARY_RESPONSE_20260925.md}{Single-probe occurrence, full current spectrum, and prime boundaries}.\\[4pt]
+Determination and domains &
+\noteurl{OFF_DIAGONAL_RIGIDITY_AND_COMPACT_SOURCE_EXISTENCE_20260924.md}{Off-diagonal rigidity and compact existence};
+\noteurl{SOURCE_DOMAIN_AND_WEIGHT_TRANSPORT_REVIEW_CONTROLS_20260925.md}{source domains and weight transport}.\\[4pt]
+Spectral comparisons &
+\noteurl{NATIVE_TRANSLATION_GENERATORS_AND_GENERALIZED_SOURCES_20260924.md}{Native generators and generalized sources};
+\noteurl{SOURCE_SPECTRA_MODULAR_AND_LIOUVILLE_CONTROLS_20260924.md}{source spectra, modular and Liouville controls};
+\noteurl{GLOBAL_MECHANISMS_PRIMARY_SOURCE_LEDGER_20260924.md}{primary-source verification ledger}.\\
+\bottomrule
+\end{longtable}
+The audits are the
+\revurl{GLOBAL_MECHANISMS_CRITICAL_REVIEW_20260924.md}{global-mechanisms review},
+\revurl{OFF_DIAGONAL_AND_GLOBAL_MECHANISMS_REVIEW_20260925.md}{off-diagonal/domain review},
+\revurl{CHARACTER_CURRENT_AND_PRIME_DOMAIN_AUDIT_20260925.md}{character, current, and prime audit},
+\revurl{ELECTRIC_PARITY_RESPONSE_CRITICAL_REVIEW_20260925.md}{electric-parity review},
+\revurl{OS_MASS_GAP_AND_SOURCE_DOMAIN_AUDIT_20260925.md}{OS and source-domain audit},
+and
+\revurl{SINGLE_PROBE_CURRENT_AND_CUTOFF_DOMAIN_AUDIT_20260925.md}{single-probe and cutoff audit}.
+They are model-assisted assessments; their names do not
+certify independent human review. The
+\revurl{MANUSCRIPT_CONSOLIDATION_AUDIT_20260925.md}{consolidation audit}
+records the editorial checks and the corrected missing
+addition sign in \eqref{eq:two-mode-residual}.
+
+\subsection{Numerical evidence ledger}
+All the following are floating diagnostics, with small
+records retained under \filepath{numerics/records/}.
+They neither prove an infinite limiting statement nor
+certify positive completion.
+\begin{center}
+\begin{tabularx}{\textwidth}{@{}XrX@{}}
+\toprule
+Record family & Controls & Main scope\\
+\midrule
+Positive hierarchy (24 September) & 64 &
+Finite algebra and prescribed smooth backgrounds\\
+Finite slab (24 September) & --- &
+Interacting experiment; includes 30 independent dense-unitary algebra tests\\
+Winding/electric pairing (25 September) & 64 &
+Laurent and electric Gram formulas\\
+Character channels (25 September) & 57 &
+Weighted adjoints, phases, finite-scale limits\\
+Archimedean response (25 September) & 19 &
+Parity, contact, growth, phase failures\\
+Electric-parity review (25 September) & 76 &
+Rerun of the preceding 57+19, not new distinct controls\\
+Current recentering (25 September) & 19 &
+Sine scaling, retained and escaped norms\\
+Single probe and prime edges (25 September) & 13 &
+Product conventions and sharp-cutoff profiles\\
+\bottomrule
+\end{tabularx}
+\end{center}
+The saved records report all listed controls passing
+in their recorded environments. They were not rerun
+merely to consolidate this manuscript. Several use
+Haar and the prescribed density
+$\rho_{\rm test}=(1+0.35\cos\theta+0.2\cos2\theta)/0.9$;
+these are not interacting four-dimensional samples.
+Only the finite-slab experiment in
+Appendix~\ref{app:hierarchy} samples that Wilson action.
+
+For the latest edge check the cutoffs were
+$10^3,10^4,10^5,10^6$, with relative profile errors
+approximately 0.148035, 0.050738, 0.016088, 0.006306.
+The final two-edge energy ratio was approximately
+0.999265. Refinement from 240 to 360 quadrature points
+changed the normalized energy by $8.204\,10^{-10}$.
+An initial 160/240 comparison missed the $10^{-7}$
+refinement threshold at $1.0323\,10^{-7}$; quadrature
+was refined rather than the threshold loosened.
+Finite products with 28 and 40 factors check
+conventions, not the zero-free strip proof.
+No zeta zero list was used.
+
+The \href{numerics/README.md}{numerics index} provides
+the unchanged source programs and reproduction commands.
+Intermediate arrays remain in memory or external
+scratch space. The repository contains no new large
+datasets or third-party papers. Source hashes, build
+tools, page count, and PDF checks are recorded in
+\filepath{BUILD_RECORD.json}; instructions are in
+\filepath{BUILD.md}. Build intermediates are excluded
+from the maintained manuscript files.
+
+\subsection{Authorship and LLM assistance}
+Drafted for Edward Baker. Substantial assistance from
+an OpenAI large language model was used to develop
+and audit the investigation's arguments, write
+diagnostic programs, and consolidate and typeset this
+manuscript. The model identity exposed in this session
+is \textbf{GPT-6 (Codex)}. The exact deployed variant
+and configured reasoning effort are \textbf{unavailable}
+and have not been inferred. These declarations do
+not imply author or independent specialist endorsement
+of every mathematical deduction. The proof arguments
+and their dependencies are supplied for review, and
+the manuscript's conclusions retain the unresolved
+physical occurrence gap.

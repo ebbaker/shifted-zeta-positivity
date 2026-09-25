@@ -1,0 +1,244 @@
+\section{The current and a completed signed archimedean response}\label{sec:arch}
+\subsection{The full electric--Wilson current}
+Let $X=\tr(P)/2=\cos\theta$ and retain $\ell=4$. On smooth covariant
+functions define
+\begin{equation}\label{eq:current}
+A_\nu=\frac{\ii}{2\ell}[E_\nu,X]
+=-\ii\left(Y+\tfrac12\operatorname{div}_\nu Y\right),
+\qquad Y=\ell^{-1}\nabla X .
+\end{equation}
+The complete smooth flow $\Phi_t$ of Y on compact M defines the
+strongly continuous unitary group
+\begin{equation}\label{eq:weighted-flow}
+(\UU_tF)(U)=j_t(U)^{1/2}F(\Phi_tU),\qquad
+j_t=\frac{\dd(\Phi_t^*\nu)}{\dd\nu},\qquad \UU_t=e^{\ii tA_\nu}.
+\end{equation}
+Its Stone generator fixes the self-adjoint domain; smooth covariant
+functions form a core. Thus the notation does not depend on selecting
+an unproved self-adjoint extension of a formal commutator.
+The actual state correction is
+\begin{equation}
+A_\nu-A_0=-\frac{\ii}{\ell}\nabla\log\Omega\cdot\nabla X .
+\end{equation}
+It is bounded but generally depends on all links. Replacing it by
+a class-density drift is not a computation of the full operator.
+
+\begin{proposition}[The identity phase and the other phases]\label{prop:phase-current}
+With $\Px=-\ii\partial_x$,
+\begin{align}
+A_\nu S_R^0 f&=S_R^0\Px f+O_{\cH}(N^{-1}),\\
+A_\nu S_R^\pi f&=S_R^\pi(-\Px f)+O_{\cH}(N^{-1}),\\
+A_\nu S_R^\beta f&=N\sin\beta\,S_R^\beta(e^x f)+O_{\cH}(1),
+\quad\beta\ne0,\pi .
+\end{align}
+For $a=2$ the squared norm of the derivative-intertwining defect
+tends to $2\rho(\pi)\norm{f'}_2^2/\rho(0)$. For $a\ge3$,
+\begin{equation}\label{eq:wound-current-growth}
+\lim_R N^{-2}\norm{A_\nu V_aS_Rf}^2
+=\frac{a}{\rho(0)}
+\sum_{a\beta=0}\rho(\beta)\sin^2\beta
+       \int e^{2x}|f(x)|^2\dd x>0
+\end{equation}
+when f is nonzero.
+\end{proposition}
+\begin{proof}
+Haar differentiation gives exactly
+\begin{equation}
+A_0\chi_n=\frac{\ii}{2}
+\{(n+\tfrac12)\chi_{n+1}-(n-\tfrac12)\chi_{n-1}\}.
+\end{equation}
+Taylor-expand the slowly varying coefficients in
+\eqref{eq:phase-packets}. At phase zero the centered difference
+is $-\ii f'$ and its norm error is $O(N^{-2})$; at phase $\pi$
+the sign reverses. At other phases the leading difference is
+$n\sin\beta$, giving the displayed N term.
+For the state drift use its factor $\nabla X$, whose magnitude
+is $\sqrt\ell\sin\theta$. The identity and $\pi$ packets localize
+at their respective endpoints, and
+$\norm{\sin\theta S_R^{0,\pi}f}=O(N^{-1})$ by the corresponding
+coefficient difference estimate. This proves the full weighted
+errors. Finally apply exact branching and phase orthogonality.
+For a=2 the $\pi$ derivative differs by $-2\Px$; for larger a
+some roots have nonzero sine, yielding \eqref{eq:wound-current-growth}.
+\end{proof}
+More generally a smooth observable $h(X)$ replaces the leading
+symbol by $Nh'(\cos\beta)\sin\beta$. Finite response at every
+rational phase requires $h'$ to vanish on a dense subset of
+$(-1,1)$, hence h is constant. A positive sum of squared current
+responses cannot cancel these divergences. At the identity phase
+alone a current norm produces a derivative-squared response,
+not the required logarithmic multiplier.
+
+\subsection{A specified parity conversion, with its domain}
+There is nevertheless a signed insertion recovering the complete
+archimedean term. Its additional compression and compensation
+must be stated explicitly. Put
+\begin{equation}
+v(\theta)=\sqrt{\rho(\theta)}\sin\theta,\qquad
+\WW F=\sqrt{2/\pi}\,vF .
+\end{equation}
+This is a unitary $\cH_{\rm cl}\to L^2(0,\pi)$.
+The compressed electric form divided by $\ell$ has radial
+operator $-v^{-2}\partial_\theta(v^2\partial_\theta)$, and
+\begin{equation}
+\WW E_{\rm rad}\WW^{-1}
+=-\partial_\theta^2+v''/v .
+\end{equation}
+The potential extends smoothly to the endpoints; for Haar it is
+$-1$. Subtracting this specified potential leaves the Dirichlet
+operator $D^2=-\partial_\theta^2{}_{\rm Dir}$.
+This is a compensated compression, not a restriction of the full
+$E_\nu$ to a reducing class subspace, and no YM Ward identity
+has been proved to select the subtraction.
+
+The polar derivative
+\begin{equation}
+B=\partial_\theta D^{-1},\qquad
+B\sqrt{2/\pi}\sin(n\theta)=\sqrt{2/\pi}\cos(n\theta)
+\end{equation}
+satisfies $B^*B=I$ and $BB^*=I-\Pi_{\rm constants}$.
+Measure the angle in turns, $q=\theta/(2\pi)$, and define
+\begin{equation}\label{eq:arch-insertion}
+C_\rho=\WW^{-1}\{\log D+B^*M_{\log q}B\}\WW .
+\end{equation}
+A precise dense symmetric domain is the inverse image of
+$\{u\in\Dom\log D:\ (\log q)Bu\in L^2(0,\pi)\}$.
+It contains all finite sine sums, so the finite span of
+$\phi_n=\rho^{-1/2}\chi_n$ is a common dense test domain for
+the present matrix calculations. Symmetry implies closability; a positive
+closed form or self-adjoint realization of the sum is not asserted.
+The insertion is specified through electric spectral calculus,
+a polar derivative, and the angle observable. Its multiplier
+will be derived, not assigned.
+
+\subsection{The completed mixed identity}
+Set
+\begin{equation}\label{eq:compensated-packet}
+F_Rf=\sum_{n\ge1}n^{-1/2}f(\log(n/N))\phi_n,\qquad
+H_f(t)=t^{-1/2}f(\log t)\quad(t>0).
+\end{equation}
+For each test, $\norm{F_Rf-S_Rf}_\nu\to0$: the raw sine packet
+concentrates at $\theta=0$, where $\rho(\theta)^{-1/2}$ equals
+$\rho(0)^{-1/2}$. The $\phi_n$ are an actual orthonormal basis.
+
+\begin{theorem}[Complete archimedean limit]\label{thm:arch}
+For $f,g\in\cD$,
+\begin{equation}\label{eq:arch-mixed-limit}
+\lim_R\ip{F_Rf}{C_\rho F_Rg}_\nu
+=\frac1{2\pi}\int m_+(\tau)
+                 \overline{\widehat f(\tau)}\widehat g(\tau)\dd\tau.
+\end{equation}
+This includes the local coefficient and logarithmic growth in
+\eqref{eq:contact-growth}, not only the off-diagonal kernel.
+\end{theorem}
+\begin{proof}
+Let $\mathcal F_+H(y)=2\int_0^\infty\cos(2\pi ty)H(t)\dd t$.
+It is a unitary involution of $L^2(\R_+)$, by even Fourier
+extension. Write $u_R=\WW F_Rf$.
+The electric part of the pairing is the Riemann sum
+\[
+R\,\ip{F_Rf}{F_Rg}
++\frac1N\sum_{n\ge1}\log(n/N)\,
+                       \overline{H_f(n/N)}H_g(n/N).
+\]
+After $\theta=2\pi y/N$, the cosine part obeys the exact Poisson
+identity
+\begin{equation}\label{eq:cosine-poisson}
+\sqrt{2\pi/N}\,Bu_R(2\pi y/N)
+=\frac2N\sum_{n\ge1}H_f(n/N)\cos(2\pi ny/N)
+=\sum_{k\in\Z}(\mathcal F_+H_f)(y+kN)
+\end{equation}
+on $0<y<N/2$. The even extension of $H_f$ is smooth and supported
+away from zero, so its transform is Schwartz. All nonzero aliases
+in \eqref{eq:cosine-poisson} are uniformly rapidly small on this
+half interval. The weight $|\log y|$ is integrable near zero,
+and Schwartz decay controls the expanding tail.
+As $\log q=\log y-R$, the $-R$ term cancels the electric $R$
+term \emph{exactly}, since B is an isometry. The limit is
+\begin{equation}\label{eq:conductor-form}
+\int_0^\infty\log t\,\overline{H_f(t)}H_g(t)\dd t+
+\int_0^\infty\log y\,
+\overline{\mathcal F_+H_f(y)}\mathcal F_+H_g(y)\dd y .
+\end{equation}
+This is the real even conductor form; compare \cite{burnol}.
+
+Under the unitary logarithmic coordinate $H(t)=t^{-1/2}f(\log t)$,
+its Mellin--Fourier conversion is
+\[
+\widehat{\,y^{1/2}\mathcal F_+H_f(y)\,}(\tau)
+=\gamma_+(\tau)\widehat f(-\tau),\qquad
+\gamma_+(\tau)=\pi^{\ii\tau}
+\frac{\Gamma(1/4-\ii\tau/2)}{\Gamma(1/4+\ii\tau/2)} .
+\]
+The hat on the left is in $\log y$. One obtains this identity
+first by the damped cosine Mellin integral
+$2(2\pi)^{-s}\Gamma(s)\cos(\pi s/2)$ at $s=1/2-\ii\tau$,
+then by the gamma duplication and reflection formulas.
+Multiplication by $\log t$ becomes $\ii\partial_\tau$.
+In the sum \eqref{eq:conductor-form} the differentiated test
+terms cancel, while
+\begin{equation}
+\ii\,\gamma_+'(\tau)/\gamma_+(\tau)
+=\Ree\psi(1/4+\ii\tau/2)-\log\pi .
+\end{equation}
+The tests and transformed profiles have the decay needed for
+integration by parts. The digamma integral and its asymptotic
+then give \eqref{eq:arch-difference} and
+\eqref{eq:contact-growth}, including the contact.
+\end{proof}
+Without the parity conversion B, the sine transform gives
+$\Ree\psi(3/4+\ii\tau/2)-\log\pi$ and the different kernel
+$-e^{-3|r|/2}/(1-e^{-2|r|})$. Rescaling the angle unit adds a
+local constant. Thus the parity and the $2\pi$ Fourier convention
+are mathematical parts of the construction, not innocuous
+normalizations to leave unspecified.
+
+For every finite A put
+\begin{equation}\label{eq:finite-signed}
+K_A=C_\rho-\sum_{2\le a\le A}\Lambda(a)(V_a+V_a^{*\nu}),
+\qquad
+L_A=m_+(\Px)-\sum_{2\le a\le A}\frac{\Lambda(a)}{\sqrt a}
+(U_{\log a}+U_{-\log a}).
+\end{equation}
+Its actual finite-core pairing satisfies
+\begin{equation}\label{eq:complete-signed}
+\lim_{A\to\infty}\lim_{R\to\infty}
+\ip{F_Rf}{K_AF_Rg}_\nu=Q(f,g),\qquad f,g\in\cD^0 .
+\end{equation}
+For fixed A, this follows from Theorem~\ref{thm:arch},
+\eqref{eq:prime-mixed}, and the boundedness of each $V_a$.
+After taking R the prime sum stabilizes on each compact test pair.
+No joint cutoff limit for these compensated packets is claimed.
+
+\subsection{Why this is not yet a positive source}
+The insertion \eqref{eq:arch-insertion} does not control the
+phases created by winding. Put
+\[
+F_R^\beta f=\sum n^{-1/2}e^{\ii n\beta}f(\log(n/N))\phi_n.
+\]
+For $b=\arccos(\cos\beta)\in(0,\pi]$, Fourier localization gives
+\begin{equation}\label{eq:nonidentity-arch}
+\ip{F_R^\beta f}{C_\rho F_R^\beta g}_\nu
+=R\ip f g_2+\ip f{xg}_2+
+\log\!\frac b{2\pi}\ip f g_2+o(1).
+\end{equation}
+Here the electric logarithm still contributes R, whereas the
+angle packet stays at the nonzero folded angle b, so there is
+no compensating $-R$. Applying the same localized calculation
+to $V_aF_Rf$ gives
+\begin{equation}
+\lim_R R^{-1}\ip{V_aF_Rf}{C_\rho V_aF_Rf}_\nu
+=\frac{\sum_{j=1}^{a-1}\rho(2\pi j/a)}{a\rho(0)}\norm f_2^2>0
+\quad(a\ge2).
+\end{equation}
+Endpoint packets at $\pi$ have the same conclusion; the cosine
+localization is interpreted one-sided there.
+
+Even on $\cD^0$ the archimedean form alone is not positive.
+For $h_L=L^{-1/2}h(x/L)$ and $f_L=\T h_L$, its normalized
+Fourier mass concentrates at zero as $L\to\infty$.
+Dominated convergence after scaling gives
+$Q_\infty[f_L]/\norm{f_L}_2^2\to m_+(0)<0$.
+Thus \eqref{eq:complete-signed} is a proved signed mixed
+identity. It is neither an OS norm identity nor a proof that
+subtracting a local divergence preserves positivity.

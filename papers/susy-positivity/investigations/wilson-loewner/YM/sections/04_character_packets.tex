@@ -1,0 +1,173 @@
+\section{Character packets, weighted adjoints, and the prime insertion}\label{sec:characters}
+\subsection{Operations in the actual state}
+On the class sector define
+\begin{equation}
+(V_aF)(g)=\chi_a(g)F(g^a),\qquad V_a\chi_n=\chi_{an},
+\qquad a\in\N.
+\end{equation}
+These are independently specified character/winding operations. They
+satisfy $V_aV_b=V_{ab}$ and
+$\norm{V_a}\le\sqrt{C_\rho/c_\rho}$, uniformly in a.
+To see the bound and compute the adjoint, map F to
+$\sqrt2\sin\theta F(\theta)$ in the odd subspace of the circle, with
+measure $\rho(\theta)\dd\theta/(2\pi)$. Then $V_a$ becomes
+$C_aA(\theta)=A(a\theta)$. If
+\begin{equation}
+L_ah(\theta)=\frac1a\sum_{j=0}^{a-1}
+h\left(\frac{\theta+2\pi j}{a}\right),\qquad \rho_a=L_a\rho,
+\end{equation}
+change of variables gives
+\begin{equation}\label{eq:weighted-adjoint}
+C_a^{*\rho}=\rho^{-1}L_aM_\rho,\qquad
+V_a^{*\nu}V_a=M_{\rho_a/\rho}.
+\end{equation}
+The odd subspace is preserved. The familiar divisibility formula
+$V_a^*\chi_n=\chi_{n/a}$ when $a\mid n$, and zero otherwise, is a
+\emph{Haar} formula. It cannot be used as the interacting adjoint.
+Fourier expansion gives $\rho_a\to t_0$ smoothly as $a\to\infty$.
+
+\subsection{All phase components of a packet}
+Put $N=e^R$ and, for $\alpha\in\R/(2\pi\Z)$, set
+\begin{equation}\label{eq:phase-packets}
+S_R^\alpha f=\rho(\alpha)^{-1/2}
+\sum_{n\ge1}n^{-1/2}e^{\ii n\alpha}f(\log(n/N))\chi_n,
+\qquad S_R=S_R^0 .
+\end{equation}
+The sum is finite for $f\in\cD$. Opposite phases are distinct channels
+unless $\alpha=0$ or $\pi$.
+
+\begin{theorem}[Mixed packet limits and exact branching]\label{thm:packets}
+For fixed phases and fixed smooth compact tests,
+\begin{equation}\label{eq:phase-orthogonality}
+\lim_{R\to\infty}\ip{S_R^\alpha f}{S_R^\beta g}_\nu
+=\begin{cases}\ip f g_2,&\alpha=\beta\pmod{2\pi},\\0,&\text{otherwise}.
+\end{cases}
+\end{equation}
+For every positive integer a there is the exact identity
+\begin{equation}\label{eq:branch}
+V_aS_R^\alpha f=\frac1{\sqrt a}
+\sum_{a\beta=\alpha\ (2\pi)}
+\sqrt{\frac{\rho(\beta)}{\rho(\alpha)}}\,
+S_R^\beta U_{\log a}f .
+\end{equation}
+In particular,
+\begin{align}
+\lim_R\ip{S_Rf}{V_aS_Rg}_\nu
+ &=a^{-1/2}\ip f{U_{\log a}g}_2,\label{eq:prime-mixed}\\
+\lim_R\ip{V_aS_Rf}{V_bS_Rg}_\nu
+ &=\frac{d\,\rho_d(0)}{\sqrt{ab}\rho(0)}
+       \ip f{U_{\log(b/a)}g}_2,\qquad d=(a,b),\label{eq:wound-mixed}\\
+\lim_R\norm{V_aS_Rf}_\nu^2
+ &=\frac{\rho_a(0)}{\rho(0)}\norm f_2^2.\label{eq:wound-norm}
+\end{align}
+\end{theorem}
+\begin{proof}
+Insert \eqref{eq:gram} into the packet pairing. For the Toeplitz term
+fix $k=m-n$. The nonoscillating Riemann sum tends to
+$e^{\ii k\alpha}\ip f g_2$ when the phases agree, and summing k
+gives $\sum_k t_ke^{\ii k\alpha}=\rho(\alpha)$.
+When the phases differ the extra factor $e^{\ii n(\beta-\alpha)}$
+makes the sum tend to zero by summation by parts. The coefficients
+vary on scale N and are supported between two fixed positive
+multiples of N. Rapid decay of $t_k$ permits first truncating k,
+uniformly in R. The Hankel term has $n+m\asymp N$ and tends to zero
+by that same rapid decay.
+
+For \eqref{eq:branch}, sum $e^{\ii m\beta}$ over the a roots of
+$a\beta=\alpha$. The result is zero unless $a\mid m$, and then is
+$ae^{\ii(m/a)\alpha}$. The factors $m^{-1/2}$ and $a^{-1/2}$ give
+exactly the coefficient of $\chi_{an}$ on the left. Equations
+\eqref{eq:prime-mixed}--\eqref{eq:wound-norm} now follow from
+\eqref{eq:phase-orthogonality}: the common roots for a and b are
+the d roots of zero, whose marginal values sum to $d\rho_d(0)$.
+\end{proof}
+The extra phase channels account for the full norm in
+\eqref{eq:wound-norm}. Keeping only the identity channel would
+incorrectly assign the squared norm $a^{-1}\norm f^2$.
+
+\subsection{Euler coefficients and the distributional domain}
+Uniform boundedness and the semigroup law imply, for $\Ree s>1$,
+\begin{equation}
+\mathcal Z_V(s)=\sum_{a\ge1}a^{-s}V_a
+=\prod_p(I-p^{-s}V_p)^{-1},\qquad
+-\mathcal Z'_V(s)\mathcal Z_V(s)^{-1}
+=\sum_{a\ge2}\Lambda(a)a^{-s}V_a.
+\end{equation}
+All series and products here converge in operator norm; the
+absolutely convergent Mobius series is the inverse. These identities
+explain the coefficient $\Lambda(a)$ without assigning prime
+weights to a Gram matrix.
+
+At $s=0$ the same expression is not a Hilbert-space operator on
+finite characters. In coefficient Sobolev coordinates write
+$\cH^{-s}_{\chi}$ for the space with norm
+$\sum_n(1+n^2)^{-s}|c_n|^2$. For a finite character polynomial F,
+\begin{equation}\label{eq:L-domain}
+\mathcal L F=\sum_{a\ge2}\Lambda(a)V_aF
+\quad\hbox{belongs to }\cH^{-s}_{\chi}\quad(s>1/2).
+\end{equation}
+Indeed each of its finitely many branches is bounded by
+$C\log n$, and $\sum n^{-2s}\log^2n<\infty$.
+Smooth positive weights give equivalent distributional Sobolev
+descriptions. In contrast, $\mathcal LF\notin\cH_{\rm cl}$ for
+every nonzero finite character polynomial F. If m is its least
+nonzero label, then for every sufficiently large prime p the
+coefficient at mp is exactly $c_m\log p$: another fixed label
+could divide mp only by dividing m, and those lower coefficients
+vanish. These coefficients are not square summable.
+
+The legitimate actual mixed matrix entry is nevertheless
+\begin{equation}\label{eq:prime-distribution}
+\ip{\chi_n}{\mathcal L\chi_m}_\nu
+=\sum_{a\ge2}\Lambda(a)(t_{n-am}-t_{n+am}),
+\end{equation}
+which converges absolutely. The notation means distributional
+duality, not a Hilbert inner product with a purported vector
+$\mathcal L\chi_m$.
+
+\begin{proposition}[Controlled raw-packet prime tail]\label{prop:prime-tail}
+For the raw packets \eqref{eq:phase-packets} at phase zero,
+\begin{equation}\label{eq:infinite-prime-limit}
+\lim_R\sum_{a\ge2}\Lambda(a)
+\{\ip{S_Rf}{V_aS_Rg}_\nu+
+  \ip{V_aS_Rf}{S_Rg}_\nu\}
+=\sum_{a\ge2}\frac{\Lambda(a)}{\sqrt a}
+ \{\ip f{U_{\log a}g}_2+\ip f{U_{-\log a}g}_2\}.
+\end{equation}
+The sums on the left are absolute distributional pairings.
+The same limit holds for any cutoff $A(R)\to\infty$.
+\end{proposition}
+\begin{proof}
+Choose $A_0$ larger than the ratio of the packet support scales
+and their inverses. For $a>A_0$, either mixed entry is bounded,
+for each $M>0$, by
+\begin{equation}
+C_{f,g,M}N^{1-M}a^{-M}.
+\end{equation}
+There are $O(N^2)$ coefficient pairs, their product is $O(N^{-1})$,
+and $|n-am|$ and $n+am$ are bounded below by a positive multiple of
+aN in the relevant orientation. Apply the rapid Fourier bound
+on t in \eqref{eq:gram}. Since $\Lambda(a)\le\log a$, the tail
+is summable and tends to zero uniformly over cutoffs.
+For $a\le A_0$ use \eqref{eq:prime-mixed}. The limiting correlations
+are zero beyond another fixed support-dependent cutoff.
+\end{proof}
+This tail proof concerns raw packets. Later replacement by packets
+which differ by $o(1)$ in norm preserves each \emph{fixed} bounded
+$V_a$ pairing, but does not by itself preserve this infinite insertion.
+
+\subsection{Weak escape is a physical obstruction}
+For every nonzero test f, $S_Rf\rightharpoonup0$ in the actual
+class sector, while $\norm{S_Rf}\to\norm f_2$. This follows by
+testing first against finite characters and using
+\eqref{eq:gram}, then density and boundedness.
+Moreover, for every $r>0$,
+\begin{equation}\label{eq:packet-escape}
+\norm{(1+E_\nu)^{r/2}S_Rf}\asymp_{f,r}N^r .
+\end{equation}
+Under Haar, $E_0\chi_n(P)=\ell(n^2-1)\chi_n(P)$.
+Smooth elliptic Sobolev norm equivalence transfers this estimate
+to the fixed weighted manifold. Thus the packets violate every
+fixed positive-order compact-source bound in
+\eqref{eq:compact-tail}. Their limiting mixed numbers cannot
+be identified with a retained vector merely by weak convergence.

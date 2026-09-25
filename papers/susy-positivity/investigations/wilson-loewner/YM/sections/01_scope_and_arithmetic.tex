@@ -1,0 +1,145 @@
+\section{Scope, arithmetic target, and principal results}\label{sec:scope}
+
+The problem is to construct one continuous linear source law
+\begin{equation}\label{eq:goal}
+J:\cD^0\longrightarrow\cH_{\rm YM},\qquad
+\ip{Jf}{Jg}_{\rm OS}=Q(f,g),
+\end{equation}
+where the physical model, state, observable prescription and completion
+are fixed for all compact arithmetic supports. The sources must arise
+from independently specified YM observables or relations. An arbitrary
+Hilbert embedding of a form already assumed positive does not solve this
+problem. Assuming OS positivity, \eqref{eq:goal} implies RH by Weil's
+criterion. A nonconstructive source-occurrence theorem is an acceptable
+route, provided its feasibility hypotheses are independently established.
+
+Most results below concern pure SU(2) Wilson theory on a spatial
+$6^3$ torus and physical-time slices $-2,-1,0,1,2$, with open outer
+boundaries, coupling $\beta=8/5$, and theta angle zero. The boundary
+state is a finite-slab state, not an identified continuum vacuum.
+The two-dimensional and thermal calculations in the appendices are
+explicit comparisons, not changes to this main model.
+
+Full OS reconstruction, continuum YM existence, and a physical mass gap
+\cite{jaffe-witten}
+may be assumed where explicitly stated. Local phase-space compactness
+is a further optional physical assumption. These hypotheses have useful
+roles in positivity and source compactness, but no argument here derives
+the missing arithmetic source identity from them. The finite-state
+weighted electric Laplacian is never identified with the physical
+continuum Hamiltonian. Arithmetic translation, physical time, contour
+capacity, and the representation scale are distinct parameters.
+
+\subsection{Conventions and the complete form}
+Let $\cD=C_c^\infty(\R)$, with its usual compact-support test topology,
+and use inner products antilinear in the first entry. Put
+\begin{equation}
+\widehat f(\tau)=\int_\R e^{-\ii\tau x}f(x)\dd x,
+\qquad U_tf(x)=f(x-t),\qquad
+\T=-\partial_x^2+\tfrac14.
+\end{equation}
+The pole-neutral space is
+\begin{equation}\label{eq:pole-neutral}
+\cD^0=\left\{f\in\cD:
+\int e^{x/2}f(x)\dd x=\int e^{-x/2}f(x)\dd x=0\right\}.
+\end{equation}
+For $r>0$, set
+\begin{equation}
+n_\Gamma(r)=\frac{e^{-r/2}}{1-e^{-2r}},\qquad
+m_+(\tau)=\Ree\psi(\tfrac14+\ii\tau/2)-\log\pi,
+\qquad \psi=\Gamma'/\Gamma.
+\end{equation}
+The full quadratic form is
+\begin{align}\label{eq:full-weil}
+Q[f]&=Q_\infty[f]+P[f]
+-2\sum_{a\ge2}\frac{\Lambda(a)}{\sqrt a}
+          \Ree\ip{f}{U_{\log a}f}_2,\\
+Q_\infty[f]&=\frac1{2\pi}\int_\R m_+(\tau)|\widehat f(\tau)|^2\dd\tau,
+\label{eq:arch-fourier}\\
+P[f]&=2\left|\int f(x)\cosh(x/2)\dd x\right|^2
+      -2\left|\int f(x)\sinh(x/2)\dd x\right|^2.
+\end{align}
+Here $\Lambda(p^k)=\log p$ and is zero at other integers.
+Polarization defines $Q(f,g)$. The prime sum is finite for each compact
+test pair, because sufficiently large shifts have disjoint supports.
+The pole term vanishes on $\cD^0$. On that space $Q$ is stationary
+and invariant under reflection $f(x)\mapsto f(-x)$.
+
+Equivalently,
+\begin{equation}\label{eq:arch-difference}
+Q_\infty[f]=m_+(0)\norm f_2^2+
+\frac12\iint_{\R^2}|f(x)-f(y)|^2n_\Gamma(|x-y|)\dd x\dd y.
+\end{equation}
+The difference makes the diagonal singularity integrable. Its completed
+contact and asymptotic are
+\begin{equation}\label{eq:contact-growth}
+m_+(0)=-\gamma_{\!E}-\frac\pi2-3\log2-\log\pi,
+\qquad
+m_+(\tau)=\log\frac{|\tau|}{2\pi}+O(|\tau|^{-2}).
+\end{equation}
+These formulas follow from the digamma integral and asymptotics
+\cite{dlmf}. In particular, the off-diagonal kernel alone does not fix
+the required form. The normalization of \eqref{eq:full-weil} and the
+sufficiency of positivity on \eqref{eq:pole-neutral} are the restricted
+Weil criterion in \cite[Appendices B--C]{cc}.
+
+\begin{lemma}[Exact removal of the pole moments]\label{lem:T}
+The map $\T:\cD\to\cD^0$ is a topological isomorphism. Its inverse is
+\begin{equation}
+(\T^{-1}f)(x)=\int_\R e^{-|x-y|/2}f(y)\dd y.
+\end{equation}
+The inverse preserves an enclosing support interval, although it need
+not preserve holes in a disconnected support.
+\end{lemma}
+\begin{proof}
+The displayed kernel is the fundamental solution of
+$-\partial^2+1/4$. Its two exterior tails vanish precisely by the two
+moments. The resulting function is smooth, since its equation is
+$h''=h/4-f$, and is supported in the convex hull of $\supp f$.
+Integration by parts proves $\T\cD\subset\cD^0$; compactly supported
+solutions of $\T h=0$ vanish. The integral formula and differential
+equation give continuity on each fixed-support test space, hence the
+claimed test-space isomorphism.
+\end{proof}
+
+\begin{proposition}[A necessary ultraviolet test]\label{prop:highfreq}
+For nonzero $h\in\cD$, the exactly pole-neutral functions
+\begin{equation}\label{eq:modulation}
+f_\lambda=\lambda^{-2}\T(e^{\ii\lambda x}h)
+=e^{\ii\lambda x}\left(h-\frac{2\ii h'}\lambda+
+                     \frac{h/4-h''}{\lambda^2}\right)
+\end{equation}
+have uniformly bounded ordinary $L^1,L^2,L^\infty$ norms and satisfy
+\begin{equation}\label{eq:highfreq}
+Q[f_\lambda]=\norm h_2^2\log|\lambda|+O_h(1)
+\quad (|\lambda|\to\infty).
+\end{equation}
+Consequently no source law locally bounded solely in one of those
+ordinary input norms realizes $Q$. In particular this excludes
+$Jf=\int f(x)A(x)\dd x$ when $A$ is a Hilbert-valued function with
+locally integrable norm.
+\end{proposition}
+\begin{proof}
+The unmodulated profile in \eqref{eq:modulation} converges smoothly to h
+on a fixed support and has uniform Schwartz Fourier estimates.
+In \eqref{eq:arch-fourier} split at $|\tau-\lambda|=|\lambda|/2$.
+Equation \eqref{eq:contact-growth} gives the leading logarithm on the
+first region and the Schwartz tail bounds the second. The finitely many
+prime terms on the fixed support remain bounded by Cauchy--Schwarz.
+For the stated integral law,
+$\norm{Jf_\lambda}\le\norm{f_\lambda}_\infty
+\int_{\supp h}\norm{A(x)}\dd x$, contradicting \eqref{eq:highfreq}.
+\end{proof}
+
+\subsection{What has been established}
+The affirmative identities in this manuscript are the exact reflected
+boundary norm, two actual generalized-source constructions with
+nonarithmetic pairings, the character prime mixed limit, the complete
+signed archimedean/prime limit, and several sufficient occurrence and
+determination theorems. The exclusions identify where these identities
+fail to become a positive Weil-source law. The last criterion reduces
+the target to one stationary physical correlation, but that correlation
+is not obtained from a YM observable here. Classical conductor-operator
+and explicit-formula mathematics is credited to its sources; no claim
+of novelty is made for those ingredients or for the present deductions
+without further literature and independent mathematical review.

@@ -1,0 +1,177 @@
+\section{Positive completions and the moving prime boundary}\label{sec:positive}
+\subsection{The unsubtracted positive prime form has zero domain}
+For finite A define the positive expression
+\begin{equation}
+q_A^{\rm prime}[F]=
+\sum_{2\le a\le A}\Lambda(a)\norm{(I-V_a)F}_\nu^2 .
+\end{equation}
+Its negative cross terms resemble the prime part of Q, but its
+diagonal terms cannot be omitted from a positive identity.
+
+\begin{proposition}\label{prop:prime-zero-domain}
+In the full actual class sector,
+\begin{equation}
+\left\{F:\sum_{a\ge2}\Lambda(a)\norm{(I-V_a)F}_\nu^2<\infty\right\}
+=\{0\}.
+\end{equation}
+\end{proposition}
+\begin{proof}
+Coefficient shifts and the norm equivalence \eqref{eq:gram}
+give $V_aF\rightharpoonup0$ as $a\to\infty$, first for finite
+characters and then for all F by uniform boundedness.
+Equation \eqref{eq:weighted-adjoint} gives
+\[
+\norm{V_aF}_\nu^2=\int|F|^2\rho_a\dd g
+\longrightarrow t_0\norm F_{\rm Haar}^2 .
+\]
+Consequently
+$\norm{(I-V_a)F}_\nu^2\to
+\norm F_\nu^2+t_0\norm F_{\rm Haar}^2$, which is strictly
+positive for nonzero F. The sum already diverges along the
+infinitely many primes.
+\end{proof}
+On raw packets the limiting positive form at finite A is
+\begin{equation}
+\left[\sum_{2\le a\le A}\Lambda(a)
+       \left(1+\frac{\rho_a(0)}{\rho(0)}\right)\right]\norm f_2^2
+-2\sum_{2\le a\le A}\frac{\Lambda(a)}{\sqrt a}
+                         \Ree\ip f{U_{\log a}f}_2.
+\end{equation}
+The bracket diverges while, for a fixed compact f, the cross
+sum stabilizes. Pole neutrality does not remove the bracket.
+Formal subtraction leaves a signed expression; positivity of
+the unrenormalized forms supplies no proof of positivity of
+that difference.
+
+\subsection{A coercive variational attempt also diverges}
+Let h be any densely defined closed quadratic form on the class
+space with $h[u]\ge\delta\norm u_\nu^2$ for $\delta>0$.
+Set
+\begin{equation}
+q_A[u]=h[u]+q_A^{\rm prime}[u],\qquad K_A^{\rm pos}\ge\delta I .
+\end{equation}
+Each $q_A$ is closed on $\Dom h$. For a bounded readout
+$B:\cH_{\rm cl}\to\mathcal Y$ define
+\begin{equation}
+\Gamma_A[y]=\inf_{Bu=y}q_A[u] .
+\end{equation}
+When feasible, the affine constraint is closed and strict
+coercivity gives a unique minimizer. The vector
+$(K_A^{\rm pos})^{1/2}u_A$ is an actual positive source.
+For finite-dimensional surjective B,
+\begin{equation}
+u_A=(K_A^{\rm pos})^{-1}B^*
+[B(K_A^{\rm pos})^{-1}B^*]^{-1}y .
+\end{equation}
+
+\begin{theorem}[Failure of a fixed bounded constrained readout]\label{thm:schur}
+For every nonzero feasible y, $\Gamma_A[y]\to+\infty$.
+Also $(K_A^{\rm pos})^{-1}\to0$ and
+$(K_A^{\rm pos})^{-1/2}\to0$ strongly.
+\end{theorem}
+\begin{proof}
+If a subsequence of constrained energies were bounded,
+coercivity would give $u_{A_j}\rightharpoonup u$ along a
+subsequence. For each fixed finite cutoff B, lower
+semicontinuity of its bounded positive prime form gives
+$q_B^{\rm prime}[u]\le C$. Taking $B\to\infty$ and using
+Proposition~\ref{prop:prime-zero-domain} forces u=0, whereas
+weak continuity of the readout forces Bu=y. This is a
+contradiction.
+
+For $u_A=(K_A^{\rm pos})^{-1}v$, coercivity bounds both
+$u_A$ and $q_A[u_A]=\ip{u_A}v$. Every weak limit is zero
+by the same argument without a readout. Thus
+$q_A[u_A]\to0$ and $\norm{u_A}\to0$. Finally
+$\norm{(K_A^{\rm pos})^{-1/2}v}^2=\ip v{u_A}\to0$.
+\end{proof}
+For the constraint that the Haar character coefficient $c_m=b$,
+one has the explicit lower bound
+\begin{equation}
+q_A[u]\ge c_\rho|b|^2
+\left[\delta+\sum_{\substack{p\le A\\p\ {\rm prime}}}
+                       \frac{\delta\log p}{\delta+\log p}\right].
+\end{equation}
+Indeed keep the mass terms at m and the distinct labels pm,
+and the p-th difference at pm. Minimizing
+$\delta|c_{pm}|^2+\log p\,|c_{pm}-b|^2$ gives the summand.
+A physical mass gap can motivate coercivity only after an
+actual excited-sector identification. Even granting it here
+does not repair this divergent positive construction.
+
+\subsection{An explicit boundary layer of the signed prime operator}
+The sharp arithmetic cutoff has an additional, independently
+provable norm obstruction. Let $h\in\cD$ be real, supported
+in $[-1,1]$, and put $f=\T h$. Define
+\begin{equation}
+\mathcal P_A f=\sum_{2\le a\le A}\frac{\Lambda(a)}{\sqrt a}
+(U_{\log a}+U_{-\log a})f,\qquad L=\log A .
+\end{equation}
+
+\begin{theorem}[Prime-cutoff edge profiles]\label{thm:edges}
+Uniformly for $s\in[-1,1]$,
+\begin{align}
+A^{-1/2}\mathcal P_A f(L+s)&\longrightarrow h'(s)+\tfrac12h(s),\\
+A^{-1/2}\mathcal P_A f(-L+s)&\longrightarrow-h'(s)+\tfrac12h(s).
+\end{align}
+For the completed signed operator $L_A$ in
+\eqref{eq:finite-signed},
+\begin{equation}\label{eq:edge-lower}
+\liminf_{A\to\infty}A^{-1}\norm{L_Af}_2^2
+\ge2\norm{h'}_2^2+\tfrac12\norm h_2^2>0
+\end{equation}
+if h is nonzero. This uses the prime number theorem, not RH.
+\end{theorem}
+\begin{proof}
+Let $\Psi(x)=\sum_{a\le x}\Lambda(a)$. At the positive edge
+only one shift orientation contributes for large A, and its
+scaled Stieltjes sum is
+\[
+\int_0^1 q^{-1/2} f(s-\log q)\dd\{\Psi(Aq)/A\}.
+\]
+The tests vanish unless $q\ge e^{-2}$. The prime number
+theorem $\Psi(x)=x+o(x)$, uniformly on this fixed positive
+q interval after division by A, and integration by parts
+give convergence to the Lebesgue integral, uniformly in s.
+Uniformity follows from bounded smooth derivatives in the
+compact $(q,s)$ rectangle. The integral equals
+\[
+e^{s/2}\int_s^1e^{-u/2}f(u)\dd u=h'(s)+h(s)/2,
+\]
+because $f=-h''+h/4$ and all endpoint derivatives vanish.
+The negative edge similarly gives
+$e^{-s/2}\int_{-1}^se^{u/2}f(u)\dd u=-h'(s)+h(s)/2$.
+
+Outside the support of f, the archimedean operator has kernel
+$-n_\Gamma(|x-y|)$. Expanding it into exponentials shows that
+its $e^{-|x|/2}$ tail vanishes by the pole moments; the
+remaining tail is $O(e^{-5|x|/2})$.
+It is negligible at both moving edges after scaling.
+Integrate the two squared edge profiles on their disjoint
+intervals. Their cross derivative terms cancel, leaving
+$2\norm{h'}^2+\norm h^2/2$.
+\end{proof}
+Any counterterm whose output stays in a fixed compact
+neighborhood of the original support, even with A-dependent
+coefficients, misses these moving intervals and cannot cancel
+\eqref{eq:edge-lower}. The theorem does not cover every smooth
+regulator, or a nonlocal moving counterterm with an independently
+justified physical definition.
+
+This is also a lower bound in the actual state, not solely an
+arithmetic calculation. For finite A let
+$q_{R,A}=\UU_RK_AF_Rf$, with the signed $K_A$ of
+\eqref{eq:finite-signed}. Strong recentering and its finite-A
+mixed identity imply
+\begin{equation}\label{eq:physical-edge}
+\liminf_R\norm{q_{R,A}}_\nu\ge\norm{L_Af}_2 .
+\end{equation}
+To prove this, take any subsequence of bounded norms and a
+weak limit q. Pair with the strongly convergent
+$\UU_RF_Rg\to J_{\rm rec}g$. The limit is $\ip g{L_Af}_2$.
+Density of $\cD$ and the isometry of $J_{\rm rec}$ force
+the projection of q onto its range to be $J_{\rm rec}L_Af$.
+If the norms are unbounded there is nothing to prove.
+Combining \eqref{eq:physical-edge} and \eqref{eq:edge-lower}
+gives an iterated physical norm lower bound of order $\sqrt A$.
+No joint cutoff convergence is inferred.

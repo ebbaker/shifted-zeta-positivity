@@ -1,0 +1,131 @@
+\section{A fixed reflected boundary representation}\label{sec:boundary}
+\subsection{Finite slab and reference color fiber}
+For general SU($N_c$) on a finite slab, the Wilson action \cite{wilson} is
+\begin{equation}
+S=\beta\sum_p\left(1-\frac1{N_c}\Ree\tr U_p\right).
+\end{equation}
+Use normalized Haar measure on each link. Let U denote the central-slice
+spatial links and $X_\pm$ the strict half-slab variables. Site reflection
+in physical time gives
+\begin{equation}
+S(U,X_+,X_-)=S_0(U)+S_+(U,X_+)+S_-(U,X_-),
+\qquad S_-=\theta S_+.
+\end{equation}
+There is no plaquette containing both strict half interiors. Define
+\begin{equation}\label{eq:boundary-weight}
+h(U)=\int e^{-S_+(U,X_+)}\dd X_+,
+\quad \Omega(U)=e^{-S_0(U)/2}h(U),
+\quad \dd\nu=Z^{-1}\Omega^2\dd m=w\dd m.
+\end{equation}
+The compact finite integral shows that $\Omega$ is smooth, gauge
+invariant and strictly positive, with positive lower and upper bounds.
+This is a prepared finite-slab amplitude with unit outer-boundary data.
+It is consistent with the standard lattice transfer-matrix framework
+\cite{luscher}; the gluing identity needed here is derived directly below.
+
+At a fixed base vertex, retain a reference endomorphism fiber, so a
+matrix-valued observable transforms by $F\mapsto gFg^{-1}$ there.
+For a half-slab observable F set
+\begin{equation}
+\psi_F(U)=e^{-S_0(U)/2}\int e^{-S_+(U,X_+)}F(U,X_+)\dd X_+.
+\end{equation}
+Reflected gluing and contraction of the reference indices give
+\begin{equation}\label{eq:gluing}
+\ip F G_{\rm refl}=Z^{-1}\int\frac1{N_c}
+             \tr(\psi_F^\dagger\psi_G)\dd m.
+\end{equation}
+For boundary functions B,C this reduces exactly to
+\begin{equation}\label{eq:physical-H}
+\ip B C_\nu=\int\frac1{N_c}\tr(B^\dagger C)\dd\nu,
+\qquad\cH=L^2_{\rm cov}(M,\nu;\operatorname{End}\C^{N_c}).
+\end{equation}
+The reference fiber retains singlet and adjoint channels and adds no
+bulk dynamical matter. Tracing each observable before taking its norm
+would be a different scalar reduction.
+
+\begin{proposition}[Boundary descent through the reflected null space]
+The reflected null space is the kernel of $F\mapsto\psi_F$.
+For every bounded covariant boundary multiplier D,
+$\psi_{DF}=D\psi_F$. It therefore descends to the reflected quotient;
+if $D^\dagger D=I$, its action is unitary. Based spatial loops Q have
+$\norm Q_\nu=1$, and their Gram entries are
+$\mathbb E_\nu\tr(Q_i^\dagger Q_j)/N_c$.
+\end{proposition}
+\begin{proof}
+Separate the two half integrals in \eqref{eq:gluing}. Boundary
+multiplication passes through the half integral, and the remaining
+statements follow from the positive integral norm. Strict positivity
+of $\Omega$ identifies its completed covariant image with
+\eqref{eq:physical-H}.
+\end{proof}
+An interior multiplier need not descend: take independent signs $X_+$
+and $X_-$ with reflected pairing
+$\mathbb E\overline{F(X_-)}G(X_+)=\overline{\mathbb EF}\mathbb EG$.
+The function $F(X_+)=X_+$ is null, while multiplication by the unitary
+sign $X_+$ sends it to 1. Boundary dependence is the hypothesis that
+prevents this failure. Slice-only gauge-covariant group-valued smoothing
+preserves boundary admissibility; its bias and continuum limit still
+require analysis. General four-dimensional smoothing does not
+implicitly preserve the same reflection support.
+
+\subsection{Weighted derivatives and compact source norms}
+Return to SU(2). Normalize its bi-invariant metric so
+$\ii\sigma_1,\ii\sigma_2,\ii\sigma_3$ are orthonormal; the fundamental
+Casimir is 3. For Haar-divergence-free link derivatives $D_{\ell,j}$,
+\begin{equation}\label{eq:electric}
+D_{\ell,j}^{*\nu}=-D_{\ell,j}-2D_{\ell,j}\log\Omega,
+\quad \mathfrak e_\nu(B,C)=\sum_{\ell,j}\ip{D_{\ell,j}B}{D_{\ell,j}C}_\nu,
+\quad E_\nu=\sum_{\ell,j}D_{\ell,j}^{*\nu}D_{\ell,j}.
+\end{equation}
+Take the closed form and its nonnegative Friedrichs operator. The full
+summed form is gauge invariant, so the covariant subspace reduces it;
+an individual colored derivative need not preserve that subspace.
+Ellipticity on compact M implies compact resolvent. For $r>0$,
+\begin{equation}\label{eq:compact-tail}
+\cK_r=\Dom(1+E_\nu)^{r/2}\Subset\cH,
+\quad
+\norm{(1-\mathbf1_{[0,L]}(E_\nu))B}
+\le(1+L)^{-r/2}\norm{(1+E_\nu)^{r/2}B}.
+\end{equation}
+The inequality follows eigenvalue by eigenvalue and proves compactness
+by finite-rank approximation. These are physical regularity norms, not
+arithmetic translation generators.
+
+\subsection{The one-plaquette marginal}
+Fix an elementary spatial plaquette P using $\ell=4$ distinct links.
+Its product map onto SU(2) is a smooth submersion: solve for one link
+with the other three fixed. Disintegration of the smooth positive
+weight, and differentiation under the compact fiber integral, give
+\begin{equation}\label{eq:marginal}
+P_*\nu=\rho(g)\dd g,\qquad
+0<c_\rho\le\rho\le C_\rho<\infty.
+\end{equation}
+Gauge invariance makes $\rho$ central. Its radial extension is even,
+smooth and $2\pi$-periodic. The class sector $F(P)I$ is a closed
+subspace $\cH_{\rm cl}$ of \eqref{eq:physical-H}. Put
+\begin{equation}
+\chi_n(\theta)=\frac{\sin n\theta}{\sin\theta},\quad n\ge1,
+\qquad t_k=\frac1\pi\int_0^\pi\rho(\theta)\cos(k\theta)\dd\theta.
+\end{equation}
+Then $t_{-k}=t_k\in\R$ decreases rapidly, $t_0-t_2=1$, and
+\begin{equation}\label{eq:gram}
+\ip{\chi_n}{\chi_m}_\nu=t_{n-m}-t_{n+m},\qquad
+c_\rho\sum|c_n|^2\le\norm{\sum c_n\chi_n}_\nu^2
+                       \le C_\rho\sum|c_n|^2.
+\end{equation}
+These statements follow from the radial Haar measure
+$(2/\pi)\sin^2\theta\dd\theta$ and the product-to-sum identity.
+In general $t_0\ne1$. The full $E_\nu$ need not preserve
+$\cH_{\rm cl}$; its form compression must be distinguished from a
+restriction to a reducing subspace.
+
+\subsection{What full finite Ward equations determine}
+For the full finite lattice, suppose a normalized positive measure
+$\mu$ satisfies
+$\int DF\dd\mu=\int F(DS)\dd\mu$ for every smooth F and every
+link derivative D. Then $\eta=e^S\mu$ satisfies $\int Dh\dd\eta=0$,
+by applying the identity to $F=e^S h$. Hence $\eta$ is invariant under
+all link translations and is a constant multiple of product Haar.
+Thus $\mu=Z^{-1}e^{-S}m$, without a prior density assumption.
+This determines the state, not an arithmetic source law. A finite list
+of loop equations does not have the stated all-test hypothesis.

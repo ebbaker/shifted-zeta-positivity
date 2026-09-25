@@ -1,0 +1,161 @@
+\section{Determination and sufficient source-occurrence theorems}\label{sec:occurrence}
+\subsection{Off-diagonal data leave exactly three local constants}
+Suppose B is a continuous Hermitian form on $\cD^0$,
+stationary under $U_t$ and invariant under reflection.
+Assume its mixed pairing on $\T h,\T k$ agrees with Q
+whenever h and k have disjoint supports. This hypothesis
+includes the prime shifts and the archimedean off-diagonal
+kernel, with their differentiated pullbacks.
+
+\begin{theorem}[Three-anchor determination]\label{thm:determination}
+If also $B[f_\lambda]=O_h(\log|\lambda|)$ for the normalized
+modulations \eqref{eq:modulation}, then
+\begin{equation}\label{eq:local-ambiguity}
+B(\T h,\T k)-Q(\T h,\T k)
+=a_0\ip h k_2+a_1\ip{h'}{k'}_2+a_2\ip{h''}{k''}_2
+\end{equation}
+for three real constants. Equality on three anchors
+$\T h_r$, where $h_r(x)=r^{-1/2}h(x/r)$, any nonzero
+$h\in\cD$, and $r=1,2,3$, forces $B=Q$ everywhere.
+\end{theorem}
+\begin{proof}
+Pull the difference back to $\cD$ through the topological
+isomorphism $\T$. The distribution kernel theorem and
+stationarity give a convolution kernel. Disjoint-support
+vanishing makes that kernel supported at zero, hence it is
+a finite linear combination of derivatives of $\delta$.
+Hermiticity makes its Fourier polynomial real; reflection
+makes it even. For
+$f_\lambda=\lambda^{-2}\T(e^{\ii\lambda x}h)$, a term of
+degree d has leading size $\lambda^{d-4}\norm h^2$.
+The logarithmic bound and Proposition~\ref{prop:highfreq}
+therefore exclude $d>4$. This proves
+\eqref{eq:local-ambiguity}.
+At the three scaled anchors the coefficients multiply
+$\norm h^2,r^{-2}\norm{h'}^2,r^{-4}\norm{h''}^2$.
+The determinant is
+$-5\norm h^2\norm{h'}^2\norm{h''}^2/54$, which is nonzero.
+\end{proof}
+Three constants are necessary in this argument. Without
+reflection the Hermitian polynomial may have every degree
+from zero through four, leaving five real constants.
+Symmetry, growth, and finitely many anchors \emph{without}
+the off-diagonal identity are inadequate: a real even Schwartz
+multiplier can be chosen to vanish on all those finitely
+many anchor functionals yet change the form.
+
+One useful necessary test is visible after pullback. At
+each nonzero prime shift the kernel of $Q(\T h,\T k)$
+contains
+\begin{equation}
+-\frac{\Lambda(a)}{\sqrt a}
+\T_r^2\{\delta(r-\log a)+\delta(r+\log a)\},
+\qquad \T_r^2=\partial_r^4-\tfrac12\partial_r^2+\tfrac1{16}.
+\end{equation}
+A candidate with a smooth off-diagonal mixed kernel cannot
+supply these singularities. Negative off-diagonal coefficients
+alone are not an obstruction to positivity: squared shift
+differences supply such terms together with positive contact.
+
+\subsection{Compactness turns verified finite feasibility into occurrence}
+\begin{theorem}[Compact-source occurrence criterion]\label{thm:compact-occurrence}
+Let $\cK\Subset\cH_{\rm phys}$ be an injectively and compactly
+embedded Hilbert source space. Choose a countable complex-rational
+linear test core in $\cD^0$, dense on every enclosing compact
+support interval. Prescribe for each coordinate f a bound
+$\norm{Jf}_{\cK}\le C_Ip_I(f)$, using fixed continuous test
+seminorms on each interval I. Suppose every finite collection
+of the desired source relations is feasible by actual vectors
+in these same balls. The relations must be closed in the
+strong physical topology and include complex-rational
+linearity and the required mixed pairings on the test core.
+Then there is a continuous global source law satisfying all
+these relations and the same bounds.
+\end{theorem}
+\begin{proof}
+Each $\cK$ ball has compact image in $\cH_{\rm phys}$.
+Its image is closed: a strong physical limit of bounded
+$\cK$ vectors has a weak $\cK$ subsequence, whose image
+equals that strong limit. Take the product of these compact
+coordinate balls. Every imposed closed relation cuts out a
+closed subset. Finite feasibility is exactly the finite
+intersection property, so a common assignment exists.
+For each support interval the seminorm bound extends the
+linear assignment from the dense core to the full test
+space. Rational complex linearity and continuity give
+complex linearity. Compatible approximations in larger
+intervals give one global law; physical strong continuity
+passes all mixed pairings to the limit. Weak compactness
+in $\cK$ preserves the stated source bounds.
+\end{proof}
+Unbounded operator relations require their actual closed
+graph and sufficient coordinate bounds, rather than a formal
+symbolic identity. A high-frequency estimate needed for
+Theorem~\ref{thm:determination} must likewise be imposed
+uniformly by a common continuous seminorm; asymptotic
+agreement on a countable list does not imply it.
+A useful special case is a sequence of full source maps
+with uniform compact-source bounds and convergent mixed
+data on a dense core; a diagonal compactness argument
+then gives the same conclusion.
+
+The finite boundary model supplies the spaces $\cK_r$ in
+\eqref{eq:compact-tail}, but the raw character packets fail
+their bounds. More fundamentally, feasibility of the
+arithmetic relations with these bounds has not been
+established. Positivity of separately assembled finite
+matrices does not establish the theorem's physical
+finite-feasibility hypothesis.
+
+\subsection{Optional continuum OS and phase-space hypotheses}
+Assume a reconstructed vacuum theory with local algebras
+$\mathcal A(O)$, vacuum $\Omega_{\rm vac}$, and physical
+Hamiltonian $H_{\rm phys}\ge0$. A mass gap means
+$H_{\rm phys}\ge\Delta(1-P_{\rm vac})$. It controls infrared
+excitations, but does not imply compactness of arbitrary
+ultraviolet source families.
+
+A natural additional phase-space hypothesis is that, for
+bounded O and $\beta>0$,
+\begin{equation}
+\Theta_{\beta,O}:\mathcal A(O)\longrightarrow\cH_{\rm OS},
+\qquad A\longmapsto e^{-\beta H_{\rm phys}}A\Omega_{\rm vac}
+\end{equation}
+maps the operator-norm unit ball into a relatively compact
+set. Nuclearity is a familiar stronger condition
+\cite{buchholz-wichmann}; it is an explicit extra assumption
+here, not a consequence claimed from the mass gap.
+
+For each finite M the set
+\begin{equation}
+\mathcal K(O,M)=
+\{e^{-\beta H_{\rm phys}}A\Omega_{\rm vac}:
+                A\in\mathcal A(O),\ \norm A\le M\}
+\end{equation}
+is actually compact. Relative compactness is assumed.
+For closedness, take a norm-convergent sequence of images,
+an ultraweak convergent subnet of their bounded operators,
+and test against arbitrary vectors. The vector functionals
+are normal, so the norm limit is the image of the ultraweak
+limit operator in $\mathcal A(O)$ with the same bound.
+There is also the elementary energy-tail estimate
+\begin{equation}
+\norm{\mathbf1_{[E,\infty)}(H_{\rm phys})
+          e^{-\beta H_{\rm phys}}A\Omega_{\rm vac}}
+\le Me^{-\beta E}.
+\end{equation}
+
+Consequently the preceding finite-intersection proof applies
+with these compact prepared-vector sets. If every finite
+set of required arithmetic/source relations is realizable
+with fixed local regions $O_I$ and fixed operator bounds
+$M_f\le C_Ip_I(f)$, it produces a global actual source
+$Jf=e^{-\beta H_{\rm phys}}A_f\Omega_{\rm vac}$ with those
+relations. If the vacuum is separating for the relevant
+local algebra, injectivity makes $A_f$ unique and transfers
+vector linearity to operator linearity; otherwise only the
+vector law is needed. Reeh--Schlieder density by itself
+does not provide the uniform bounds or arithmetic
+feasibility. No such feasibility is proved here, even
+when all OS axioms, a mass gap, and phase-space compactness
+are granted.

@@ -1,0 +1,237 @@
+\section{A single detecting correlation and an exact occurrence reduction}\label{sec:probe}
+\subsection{A compact test which misses no nontrivial zero}
+Let $a_j=2^{-j}$ and let b be the density of the absolutely
+convergent sum of independent uniforms on $[-a_j,a_j]$.
+Its bilateral Laplace transform is
+\begin{equation}\label{eq:probe-product}
+\mathcal B(z)=\prod_{j\ge1}\frac{\sinh(2^{-j}z)}{2^{-j}z}.
+\end{equation}
+Removable factors at zero have value one. Define
+\begin{equation}\label{eq:probe}
+h_*=\frac{e^x b(x)}{\mathcal B(1)},\qquad f_*=\T h_*,
+\qquad
+F(z)=\int e^{zx}f_*(x)\dd x
+=(1/4-z^2)\frac{\mathcal B(1+z)}{\mathcal B(1)} .
+\end{equation}
+
+\begin{lemma}\label{lem:probe}
+The real functions $h_*,f_*$ are smooth, supported in
+$[-1,1]$, and $f_*\in\cD^0$. The entire function F has
+no zeros in $|\Ree z|<1/2$. In particular
+$\widehat f_*(\tau)\ne0$ at every real $\tau$.
+\end{lemma}
+\begin{proof}
+The random sum is supported in $[-1,1]$. On the imaginary
+axis, bound any fixed number k of product factors by
+$\min(1,(a_j|\tau|)^{-1})$ and the rest by one.
+Its Fourier transform decays faster than every power,
+giving a smooth compact density by Fourier inversion.
+The product converges locally uniformly in the plane
+because its tail deviations from one are summable.
+All zeros of each factor lie on the imaginary axis, and
+off that axis the nonzero summable tail cannot vanish.
+For $|\Ree z|<1/2$, one has $\Ree(1+z)>1/2$, so neither
+the product nor $1/4-z^2$ vanishes. Integration by parts
+proves \eqref{eq:probe} and the two neutral moments.
+\end{proof}
+The tilt $e^x$ removes the real Fourier zeros that an
+untilted even compact density would have. This probe
+uses no zero list and no assumption about RH.
+
+Put $k(t)=\ip{f_*}{U_tf_*}_2$ and define the real even response
+\begin{align}\label{eq:C-star}
+C_*(t)=Q(f_*,U_tf_*)&=
+\frac1{2\pi}\int m_+(\tau)|\widehat f_*(\tau)|^2
+                                     e^{-\ii t\tau}\dd\tau\\
+&\quad-\sum_{a\ge2}\frac{\Lambda(a)}{\sqrt a}
+                  \{k(t+\log a)+k(t-\log a)\}.\nonumber
+\end{align}
+Here k is smooth and supported in $[-2,2]$, so the prime
+sum is locally finite in t. The definition contains no
+spectral zero data. For $t>2$ its archimedean part is
+\begin{equation}
+C_{*,\infty}(t)=
+-\sum_{j\ge1}e^{-(2j+1/2)t}
+                   F(2j+1/2)F(-2j-1/2).
+\end{equation}
+This follows by expanding the off-diagonal kernel.
+The $j=0$ term vanishes by pole neutrality, and the local
+contact contributes only for overlapping supports.
+
+\subsection{An unconditional criterion and an unconditional nondecay theorem}
+To avoid confusion with the plaquette density $\rho$, denote
+a nontrivial zeta zero by $\varrho$, counted with multiplicity,
+and put $\lambda_\varrho=\varrho-1/2$.
+The unconditioned explicit formula \cite{cc} gives
+\begin{equation}\label{eq:C-zeros}
+C_*(t)=\sum_\varrho c(\lambda_\varrho)e^{\lambda_\varrho t},
+\qquad c(\lambda)=F(\lambda)F(-\lambda).
+\end{equation}
+Opposite Fourier conventions are reconciled by
+$\varrho\mapsto1-\varrho$. Off the critical line the
+coefficient is this product, not a squared modulus.
+It is nonzero at every nontrivial zero by Lemma~\ref{lem:probe}.
+The zero symmetries, $0<\Ree\varrho<1$, and
+$N(T)=O(T\log T)$ are unconditional \cite{dlmf,elkies}.
+Smooth compact support gives rapid vertical decay of F
+uniformly in bounded real strips. Thus the sum converges
+absolutely and locally uniformly with every t derivative.
+
+\begin{theorem}[One-probe regularity criterion]\label{thm:probe-criterion}
+The following are equivalent: RH; boundedness of $C_*$ on
+$\R$; temperedness of the distribution defined by $C_*$;
+and, for every $\epsilon>0$, a bound
+$|C_*(t)|\le C_\epsilon e^{\epsilon t}$ for $t\ge0$.
+Moreover
+\begin{equation}\label{eq:growth-rate}
+\limsup_{t\to+\infty}\frac{\log(1+|C_*(t)|)}{t}
+=\sup_\varrho|\Ree\varrho-1/2|.
+\end{equation}
+\end{theorem}
+\begin{proof}
+Under RH the expansion becomes
+\begin{equation}\label{eq:C-positive}
+C_*(t)=\sum_{\gamma\ {\rm distinct}}
+m_\gamma|\widehat f_*(\gamma)|^2e^{-\ii\gamma t}.
+\end{equation}
+The positive coefficients are summable; this proves all
+three regularity properties.
+
+Conversely, in $\Ree z>1/2$ absolute convergence permits
+the one-sided Laplace transform
+\begin{equation}\label{eq:laplace-probe}
+\int_0^\infty e^{-zt}C_*(t)\dd t
+=\sum_\varrho\frac{c(\lambda_\varrho)}{z-\lambda_\varrho}.
+\end{equation}
+The right side is meromorphic on the plane, normally
+convergent off its discrete poles; the residue at a zero
+of multiplicity m is $m c(\lambda)\ne0$.
+A subexponential bound makes the left side holomorphic
+on $\Ree z>0$. Temperedness has the same consequence:
+multiply the smooth function distribution by a smooth
+cutoff equal to one for $t\ge1$ and zero for $t\le0$,
+take its exponentially damped distributional Laplace
+transform, and add the compact initial-interval correction.
+This avoids multiplying an arbitrary distribution by a
+discontinuous step. The transform agrees with the integral
+in its initial half-plane and is holomorphic for $\Ree z>0$.
+It cannot have one of the nonzero residues there.
+The functional equation excludes left-half-plane
+$\lambda_\varrho$ as well. Boundedness is a special case.
+
+For \eqref{eq:growth-rate} let b be the supremum on the
+right, also the supremum of $\Ree\lambda_\varrho$.
+Absolute summability bounds $|C_*(t)|$ by
+$e^{bt}\sum|c(\lambda_\varrho)|$. If the limsup were
+less than b, a slightly larger exponent still below b
+would give a holomorphic Laplace transform to the left
+of at least one nonzero-residue pole, a contradiction.
+For b=0 the upper bound and the nonnegative logarithm
+give equality directly.
+\end{proof}
+This is a relation between RH and a precise regularity
+property, not a derivation of that property from OS
+temperedness. The variable t is logarithmic character
+scale, and the response has not been shown to be a
+Schwinger function in spacetime. Simply postulating its
+temperedness would postulate an RH-equivalent arithmetic
+condition without establishing a physical explanation.
+
+\begin{corollary}\label{cor:nondecay}
+Unconditionally, $C_*\notin C_0(\R)$.
+\end{corollary}
+\begin{proof}
+Membership in $C_0$ would imply boundedness and hence RH.
+Under that consequence, the absolutely convergent series
+\eqref{eq:C-positive} is uniformly almost periodic and
+\[
+\lim_{T\to\infty}\frac1{2T}\int_{-T}^T|C_*(t)|^2\dd t
+=\sum_{\gamma\ {\rm distinct}}
+\{m_\gamma|\widehat f_*(\gamma)|^2\}^2>0.
+\]
+One proves the formula first for finite sums and passes
+by uniform convergence. There are nontrivial zeros and
+the probe misses none. A function in $C_0$ has zero such
+mean square, a contradiction.
+\end{proof}
+Together with Theorem~\ref{thm:current-spectrum}, this
+excludes $C_*(t)=\ip\xi{\UU_t\eta}$ for \emph{any} two
+physical Hilbert vectors. In particular no current-covariant
+source law with the exact Weil pairing can exist in the
+fixed boundary space, even if its seed is not a class
+function or a finite-order generalized source.
+An inserted coefficient $\ip v{K\UU_tv}$ is also excluded
+whenever $v\in\Dom K^*$, because it is the ordinary
+coefficient $\ip{K^*v}{\UU_tv}$.
+A genuinely distributional left functional is outside
+this finite-vector statement and is not an OS norm.
+
+Similarly, a diagonal cutoff $A(R)$ cannot produce
+bounded actual response vectors with all translated
+mixed limits equal to $C_*$. A weakly convergent
+subsequence of such bounded vectors, paired with the
+strongly recovered translates in \eqref{eq:rec-pair},
+would give a finite-vector current coefficient equal
+to $C_*$, contradicting the corollary. This is a
+conditional obstruction to that proposed joint limit,
+not a claim that the joint convergence holds.
+
+\subsection{One actual stationary correlation would suffice}
+\begin{theorem}[One-correlation source occurrence]\label{thm:one-occurrence}
+Suppose an independently specified physical closed
+admissible sector contains a vector v and a strongly
+continuous unitary group $V_t=e^{-\ii tG}$ such that
+\begin{equation}\label{eq:one-occurrence-hyp}
+\ip v{V_tv}_{\rm phys}=C_*(t)\quad(t\in\R).
+\end{equation}
+Then RH follows, and spectral filtering in that same
+sector constructs a continuous global source
+$J:\cD^0\to\cH_{\rm phys}$ with
+$Jf_*=v$, $JU_t=V_tJ$, and
+$\ip{Jf}{Jg}_{\rm phys}=Q(f,g)$.
+\end{theorem}
+\begin{proof}
+The left side of \eqref{eq:one-occurrence-hyp} is bounded
+by $\norm v^2$, so Theorem~\ref{thm:probe-criterion} gives
+RH. Fourier uniqueness for finite measures and
+\eqref{eq:C-positive} determine the actual spectral
+measure of v:
+\begin{equation}
+\dd\mu_v(\lambda)=
+\sum_{\gamma\ {\rm distinct}}
+m_\gamma|\widehat f_*(\gamma)|^2\delta_\gamma(\dd\lambda).
+\end{equation}
+For $g\in\cD^0$ define
+\begin{equation}\label{eq:filter-source}
+Jg=\left(\frac{\widehat g}{\widehat f_*}\right)(G)v .
+\end{equation}
+There are no real denominator zeros, but no polynomial
+bound for this quotient is presumed. Its actual
+functional-calculus domain is verified instead:
+\[
+\int\left|\frac{\widehat g(\lambda)}
+                    {\widehat f_*(\lambda)}\right|^2\dd\mu_v
+=\sum_\gamma m_\gamma|\widehat g(\gamma)|^2<\infty.
+\]
+Thus bounded spectral truncations converge to an actual
+vector in the same closed sector. Polarization gives
+\eqref{eq:zero-pairing}, hence Q by the explicit formula.
+The ratio for $g=f_*$ is one; multiplication by
+$e^{-\ii t\lambda}$ proves covariance. Finally for tests
+in a fixed compact interval, integration by parts bounds
+$|\widehat g(\gamma)|$ by
+$C_{I,M}(1+|\gamma|)^{-M}$ times a fixed finite derivative
+seminorm. Zero counting makes the squared sum finite,
+proving test-space continuity.
+\end{proof}
+An equivalent hypothesis is an actual norm-continuous
+stationary family $\{v_t\}$ with
+$\ip{v_s}{v_t}=C_*(t-s)$: translation on its linear
+span is an isometry, extends to a unitary group on its
+closure, and gives \eqref{eq:one-occurrence-hyp}.
+A separately identified native arithmetic generator is
+therefore optional. No family with this correlation has
+been constructed here. The theorem guarantees vectors
+in the declared closed sector, not bounded local
+operators or stronger electric source bounds unless
+those additional domains are independently preserved.

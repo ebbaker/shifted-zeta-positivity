@@ -1,0 +1,280 @@
+\section{Wilson-loop hierarchies and the interacting experiment}\label{app:hierarchy}
+\subsection{Continuous storage, memory, and projection error}
+This appendix records the physical hierarchy from which the
+source investigation developed. Its continuous statements
+assume a positive regulated measure on smooth Hermitian
+connections and bounded multiplication generators with
+integrable operator norm on the capacity interval. They are
+not asserted for unrenormalized continuum loops.
+
+Let $q(t)\in\R^2$ be the tip of a planar trace starting at
+the origin. Close the trace by its straight return chord.
+If $U_t$ is transport along the trace and $R_t(r)$ along
+the chord from 0 to $rq(t)$, define
+\begin{equation}
+Q_t=R_t(1)^{-1}U_t,\quad
+J_t=\int_0^1r\,\widehat F_{12,t}(r)\dd r,\quad
+k_t=q_1\dot q_2-q_2\dot q_1 .
+\end{equation}
+The hat denotes curvature transported back along the chord.
+Variation of parallel transport, or differentiation of its
+path-ordered equation with the endpoint terms cancelled,
+gives $\dot Q_t=\ii k_tJ_tQ_t$. The moment $J_t$ is Hermitian
+and traceless. Put $\mathsf A_tX=\ii k_tJ_tX$ in the
+positive trace-normalized configuration Hilbert space,
+$e=I$, $\Psi_t=Q_t$, and $W(t)=\ip e{\Psi_t}$.
+The generator is skew-adjoint and the propagator is unitary.
+For $P=|e\rangle\langle e|$ and $z=(I-P)\Psi$,
+\begin{equation}
+|W|^2+\norm z^2=1,\qquad
+\dot W=-\ip{v_t}{z_t},\quad
+\dot z_t=v_tW+(I-P)\mathsf A_t(I-P)z_t,\quad v_t=\mathsf A_te .
+\end{equation}
+The first identity is orthogonal decomposition. It describes
+storage, not monotone dissipation: a two-dimensional unitary
+rotation returns all amplitude. It also concerns one
+prepared state, not arbitrary-input passivity.
+
+The compressed bounded skew-adjoint generator has a unitary
+propagator $\mathsf R(t,s)$. Eliminating z with $z_0=0$
+gives the exact memory equation
+\begin{equation}
+\dot W(t)=-\int_0^t\Gamma(t,s)W(s)\dd s,\qquad
+\Gamma(t,s)=\ip{v_t}{\mathsf R(t,s)v_s}.
+\end{equation}
+If $w_t=\mathsf R(t,0)^*v_t$, then
+$\Gamma(t,s)=\ip{w_t}{w_s}$ for both time orders, so the
+full two-time kernel is positive definite and
+$\norm{z_T}^2=\norm{\int_0^Tw_sW(s)\dd s}^2$.
+Writing $g(t)=\mathbb E\tr(J_t^2)/N_c$ also gives
+$|\Gamma(t,s)|\le|k_tk_s|\sqrt{g(t)g(s)}$.
+The causally truncated kernel is not thereby a positive
+self-adjoint operator, and no stationarity in capacity
+has been proved. This is an explicit time-dependent
+projection identity in the spirit of \cite{mori}; evaluating
+the complementary propagator can remain as difficult as
+the original dynamics.
+
+For a differentiable linearly independent family
+$B(t)c=\sum_jc_jb_j(t)$ containing e, let
+$G=B^*B$, $M=B^*\mathsf AB$, $C=B^*\dot B$.
+Galerkin orthogonality gives
+\begin{equation}
+G\dot c=(M-C)c,\qquad
+\frac{\dd}{\dd t}(c^*Gc)=0 .
+\end{equation}
+Indeed $M^*=-M$ and $\dot G=C+C^*$; omitting the moving
+connection C invalidates conservation. For
+$D=\dot B-\mathsf AB$ and $\Pi=BG^{-1}B^*$, the actual
+residual is
+\begin{equation}
+r=(I-\Pi)Dc,\qquad
+\norm r^2=c^*(D^*D-D^*BG^{-1}B^*D)c .
+\end{equation}
+This is a nonnegative Gram Schur complement. Singular
+families must first be quotiented by their null space.
+If the initial vector is represented exactly, Duhamel's
+formula and unitarity imply
+\begin{align}
+\norm{\Psi_t-B(t)c(t)}&\le\int_0^t\norm{r_s}\dd s,\\
+|W(t)-\ip e{B(t)c(t)}|
+&\le\int_0^t\left(\int_s^t|k_v|\sqrt{g(v)}\dd v\right)
+                                          \norm{r_s}\dd s.
+\end{align}
+For the second inequality use $\ip e{r_s}=0$ and subtract
+e from the backward-propagated readout. Its difference
+has norm at most the inner integral. Initial error adds
+its norm to both bounds.
+
+For the two-observable family $e,J/\sqrt g$, assume $g>0$
+and put $\mu_j=\mathbb E\tr(J^j)/N_c$ and
+$d=\mathbb E\tr(\dot J^2)/N_c$. The internal moving
+connection vanishes and
+\begin{equation}
+\frac{\dd}{\dd t}\binom{x}{y}
+=\ii k\begin{pmatrix}0&\sqrt g\\\sqrt g&\mu_3/g\end{pmatrix}
+\binom{x}{y},\qquad (x(0),y(0))=(1,0).
+\end{equation}
+The orthogonal derivative and curvature residuals are
+$R_D=\dot J-(\dot g/(2g))J$ and
+$R_C=J^2-ge-(\mu_3/g)J$. Their inner product is real,
+so the cross term in $\norm{R_D-\ii kR_C}^2$ vanishes:
+\begin{equation}\label{eq:two-mode-residual}
+\norm{r_2}^2=\frac{|y|^2}{g}
+\left[d-\frac{\dot g^2}{4g}
++k^2\left(\mu_4-g^2-\frac{\mu_3^2}{g}\right)\right].
+\end{equation}
+Both summands in brackets are nonnegative squared
+orthogonal residuals. The displayed plus sign is
+essential; it repairs a missing addition sign in the
+preliminary note's displayed equation (5.8).
+For SU(2), $\mu_3=0$, so
+$x=\cos\vartheta$, $y=\ii\sin\vartheta$, with
+$\vartheta=\int_0^tk_s\sqrt{g(s)}\dd s$.
+Although $J^2$ is scalar configuration by configuration,
+its coefficient fluctuates, and $\mu_4-g^2$ need not vanish.
+
+For the linear driver $u(t)=at$, the regulated tip expansion
+gives $k_t=-(2a/3)\sqrt t+O(t^{3/2})$ and
+$J_t=F_{12}(0)/2+O(\sqrt t)$. If
+$C_0=\mathbb E\tr(F_{12}(0)^2)/N_c>0$, then
+\[
+\vartheta=-\frac{2a\sqrt{C_0}}9t^{3/2}+O(t^2),\qquad
+W_2=1-\frac{2a^2C_0}{81}t^3+O(t^{7/2}).
+\]
+Under $\norm{R_D}=O(t^{-1/2})$ and $\norm{R_C}=O(1)$,
+the refined output bound is $O(t^{7/2})$, while the
+whole-state bound is only $O(t^2)$.
+One sufficient regulated set of moment hypotheses is
+finite $\mathbb E K_1^2$ and $\mathbb E K_0^4$, where
+$K_0$ bounds curvature and $K_1$ its directional covariant
+derivative in the swept region. Chord transport and the
+ordered commutator term give
+\begin{equation}
+g\le\tfrac14\mathbb EK_0^2,\quad
+\mu_4\le\tfrac1{16}\mathbb EK_0^4,\quad
+d\le\mathbb E\left(|\dot q|K_1/3+|k|K_0^2/4\right)^2.
+\end{equation}
+The factors follow from $\int_0^1r\dd r=1/2$,
+$\int_0^1r^2\dd r=1/3$, and the ordered-commutator
+bound using $\norm{J(r)}\le K_0r^2/2$.
+No regulator-uniform version is established.
+
+\subsection{Exact discrete contour steps}
+For actual lattice loops $Q_n$, multiplication by
+$\mathsf U_n=Q_{n+1}Q_n^*$ is unitary and maps $Q_n$ to
+$Q_{n+1}$. It uses no fractional link powers.
+Relative to e and its orthogonal complement write the
+blocks as $a_n,b_n,c_n,d_n$. With initial complement zero,
+\begin{equation}
+W_{n+1}=a_nW_n+
+\sum_{j<n}b_nd_{n-1}\cdots d_{j+1}c_jW_j .
+\end{equation}
+This is exact block elimination; resetting the complement
+would change the evolution.
+
+For moving finite families $B_n$ containing e, set
+$G_n=B_n^*B_n$ and $T_n=B_{n+1}^*\mathsf U_nB_n$.
+Orthogonal projection gives
+\begin{equation}
+c_{n+1}=G_{n+1}^{-1}T_nc_n,\quad
+\rho_n^2=\norm{B_{n+1}c_{n+1}-\mathsf U_nB_nc_n}^2
+=c_n^*(G_n-T_n^*G_{n+1}^{-1}T_n)c_n .
+\end{equation}
+Here retained squared norm decreases by exactly $\rho_n^2$;
+this discrete compression loss differs from the continuous
+Galerkin conservation above. Telescoping unitary propagation
+gives whole-state error at most $\sum_{j<N}\rho_j$.
+Writing $K_{Nj}=\ip{Q_N}{Q_j}$, a sharper scalar bound is
+\begin{equation}
+|W_N-\widehat W_N|\le\sum_{j<N}\eta_{Nj}\rho_j,\qquad
+\eta_{Nj}^2=2-2\Ree K_{N,j+1},
+\end{equation}
+where residual j lives at step $j+1$.
+The factor is at most
+$\min(2,\sum_{k=j+1}^{N-1}\sqrt{2-2\Ree K_{k+1,k}})$.
+These follow by subtracting e from the exact backward
+readout at that step, which is orthogonal to the residual.
+
+A computable backward family gives another bound. Start
+with $\chi_N=e=B_Nh_N$ and recurse
+$h_j=G_j^{-1}T_j^*h_{j+1}$. Its backward residual has norm
+\begin{equation}
+\delta_j^2=h_{j+1}^*(G_{j+1}-T_jG_j^{-1}T_j^*)h_{j+1}.
+\end{equation}
+Backward telescoping bounds the error in the readout at
+step $j+1$ by $\sum_{k=j+1}^{N-1}\delta_k$.
+Since the forward residual is orthogonal to that retained
+readout, one obtains
+\begin{equation}\label{eq:fb-bound}
+|W_N-\widehat W_N|
+\le\sum_{j<N}\rho_j\sum_{k=j+1}^{N-1}\delta_k .
+\end{equation}
+All are inequalities for true ensemble Gram entries.
+Floating Monte Carlo evaluation does not turn them into
+certified ensemble bounds.
+
+\subsection{The first interacting finite-slab test}
+The completed experiment used the fixed SU(2) $6^3$ by
+5 open-time Wilson lattice at $\beta=1.6$. Geometry was
+specified before sampling: linear driver $u(t)=t$,
+capacities $0,1,2.8,6$, nearest-vertex trace prefixes and
+straight return chords. The signed lattice areas were
+$0,-1,-2,-6$. The continuum tip obeys
+$\dot q=1-2/q$ and
+$q=2\ii\sqrt t+(2/3)t-(\ii/18)t^{3/2}+t^2/135+\cdots$.
+Integration in $\sqrt t$ used maximum step $10^{-4}$,
+started at $10^{-5}$. Halving the mesh left all words
+unchanged; the independent equation
+$q+2\log(1-q/2)=t$ had residual below $3.8\,10^{-12}$,
+with tip refinement differences below $3.4\,10^{-12}$.
+
+Four seeded chains, two cold and two Haar starts, used
+600 burn-in sweeps and 2400 production sweeps each,
+recording every sixth sweep: 1600 total configurations.
+Each sweep used three proposals per link, with uniformly
+distributed Pauli axis and angle in $[-1.2,1.2]$;
+acceptance was approximately 0.599. The 216 spatially
+translated loops were averaged within each configuration,
+not counted as independent samples. Correlated batch
+bootstrap used 400 resamples and block lengths 5, 10,
+20, and 40; the principal quoted choice was 20.
+Estimated autocorrelation scales of 0.50--0.76 measurement
+intervals do not prove mixing.
+
+The measured plaquette was $0.385525\pm0.000207$.
+The loop expectations were
+\begin{center}
+\begin{tabular}{ccc}
+\toprule
+Capacity & Wilson mean & Estimated standard error\\
+\midrule
+1 & 0.388006 & 0.000716\\
+2.8 & 0.150381 & 0.000939\\
+6 & 0.002404 & 0.000891\\
+\bottomrule
+\end{tabular}
+\end{center}
+The tested local family used an anti-Hermitian transported
+plaquette-curvature average B with $\norm B_{\rm op}\le1/2$.
+The retained families were $I$; $I,B$; and $I,B,v^2I$,
+where $B^2=-v^2I$ in SU(2). The unknown completed loop
+was not included as a basis vector.
+At capacity 2.8 the results were
+\begin{center}
+\begin{tabular}{rrrr}
+\toprule
+Dimension & Predicted mean & Difference from direct & Output bound\\
+\midrule
+1 & 0.150548 & $+0.000168\pm0.000746$ & 0.849452\\
+2 & 0.135442 & $-0.014939\pm0.000666$ & 0.800524\\
+3 & 0.136709 & $-0.013671\pm0.000678$ & 0.798915\\
+\bottomrule
+\end{tabular}
+\end{center}
+The first-step residual norms were approximately
+0.92166, 0.86983, 0.86949; retained squared norms were
+0.15055, 0.24340, 0.24398. Most state norm was lost.
+The near scalar coincidence for dimension one is not
+evidence of factorization, and larger nested families
+need not improve a later scalar readout. These families
+did not establish useful closure.
+
+Earlier prescribed-background controls were more favorable:
+for a noncommuting three-background SU(2) ensemble with
+weights $0.2,0.3,0.5$, slope 0.8 and capacity 0.4225,
+the direct loop was 0.9996561469, the two-mode result
+0.9996420564, and the refined output bound about
+$8.00\,10^{-5}$ versus observed error $1.41\,10^{-5}$.
+The whole-state bound was about 0.00707.
+This demonstrates the possible value of the projection
+bound in a controlled ensemble, not its efficacy in YM.
+The ensemble was not reflection/parity invariant.
+
+The sampler sources, geometry rules, seeds, checks, and
+small record are retained in \filepath{numerics/}.
+Raw chains and executables are regenerable scratch
+outputs, not a permanent deposited data archive.
+No uncertainty estimate quoted here is an interval
+certificate, a continuum extrapolation, or evidence
+for an arithmetic source identity.

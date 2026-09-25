@@ -1,11 +1,15 @@
 # YM research notes
 
+The investigation is paused at the author's request. The [self-contained manuscript](../manuscript.pdf), [LaTeX source](../manuscript.tex), and [consolidation audit](../reviews/MANUSCRIPT_CONSOLIDATION_AUDIT_20260925.md) integrate the results below. The analytical notes remain preserved as research provenance; the positive physical occurrence gap remains open.
+
 25 September 2026. Prepared for Edward Baker with substantial GPT-6 (Codex) assistance. Reasoning effort: not exposed; not inferred.
 
 Start with the [project outline and self-contained background](../PROJECT_OUTLINE.md). The current direction is one global YM realization of the Weil form, with OS positivity assumed and nonconstructive existence allowed.
 
 Latest continuation:
 
+- [One detecting probe, full-current spectrum, and prime-cutoff boundary response](SINGLE_PROBE_OCCURRENCE_AND_PRIME_BOUNDARY_RESPONSE_20260925.md): a one-probe boundedness/temperedness criterion for RH, full-state current exclusion, explicit growing prime-cutoff boundary profiles, and a sufficient physical occurrence theorem from one actual stationary correlation. The last physical identity is still missing.
+- [Single-probe/current/cutoff domain audit](../reviews/SINGLE_PROBE_CURRENT_AND_CUTOFF_DOMAIN_AUDIT_20260925.md): checks complex-frequency signs, weighted domains, cutoff order, the positive source criterion, and limits of OS/mass-gap assumptions.
 - [Native recentering and gapped positive completion](NATIVE_RECENTERING_AND_GAPPED_POSITIVE_COMPLETION_20260925.md): a strong physical identity-packet limit, exact winding norm loss, a global closability obstruction, divergence of coercive prime Schur completions, and a continuum occurrence criterion using assumed local phase-space compactness. Full OS axioms and a physical gap are allowed where explicitly used; the arithmetic source identity remains open.
 - [OS, mass-gap, and source-domain audit](../reviews/OS_MASS_GAP_AND_SOURCE_DOMAIN_AUDIT_20260925.md): records the actual assumptions, full-state flow checks, domain distinctions, and limits of the conditional results.
 - [Critical review of the electric-parity response](../reviews/ELECTRIC_PARITY_RESPONSE_CRITICAL_REVIEW_20260925.md): rederives the latest claims, retains the full signed identity, and recommends an independently positive physical source pairing without assuming full character-module occurrence.

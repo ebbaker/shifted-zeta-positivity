@@ -1,5 +1,17 @@
 # YM numerics and algebra controls
 
+## Detecting-probe and prime-cutoff boundary controls, 25 September 2026
+
+The [new checker](check_single_probe_and_prime_edges.py) and [small record](records/single-probe-prime-edges-20260925.json) accompany the [single-probe/current note](../notes/SINGLE_PROBE_OCCURRENCE_AND_PRIME_BOUNDARY_RESPONSE_20260925.md). Prepared for Edward Baker with substantial GPT-6 (Codex) assistance; exact variant and reasoning effort unavailable.
+
+Run from the YM directory with Python 3 and NumPy:
+
+```sh
+OPENBLAS_NUM_THREADS=1 python3 -B numerics/check_single_probe_and_prime_edges.py --output /tmp/ym-single-probe-prime-edges.json
+```
+
+All 13 floating controls passed. They check product-transform conventions, exact algebraic pole cancellation, both boundary primitive signs, and prime-cutoff profiles up to one million. The final relative profile error is about 0.006306; the normalized two-edge energy ratio is about 0.999265. Quadrature refinement from 240 to 360 points changed normalized energy by about 8.204e-10 relative to the predicted coefficient. The edge controls use an independent smooth bump to which the theorem also applies. These checks do not prove zero-freeness of the infinite product, the limiting theorem, positivity, or RH. No zero list or four-dimensional YM sampling is used; all arrays remain in memory.
+
 ## Native electric recentering controls, 25 September 2026
 
 The [new checker](check_current_recentering.py) and [small record](records/current-recentering-20260925.json) accompany the [recentring/positive-completion note](../notes/NATIVE_RECENTERING_AND_GAPPED_POSITIVE_COMPLETION_20260925.md). Prepared for Edward Baker with substantial GPT-6 (Codex) assistance; exact variant and reasoning effort unavailable.

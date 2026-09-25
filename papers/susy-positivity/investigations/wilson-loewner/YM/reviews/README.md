@@ -1,7 +1,10 @@
 # YM assessments
 
+- [Manuscript consolidation audit](MANUSCRIPT_CONSOLIDATION_AUDIT_20260925.md) records the self-contained 35-page draft, the corrected missing addition sign in the preliminary residual formula, operator-domain qualifications, build and visual checks, and preservation of existing research. The investigation is paused; this is editorial consolidation, not independent mathematical review.
+
 25 September 2026. Prepared for Edward Baker with substantial LLM assistance. Model exposed: GPT-6 (Codex); exact variant and configured reasoning effort not exposed, not inferred.
 
+- [Detecting probe, full current, and cutoff-domain audit](SINGLE_PROBE_CURRENT_AND_CUTOFF_DOMAIN_AUDIT_20260925.md) checks the one-response RH criterion, full-state continuous current spectrum, growing sharp-cutoff boundary response, and conditional source-occurrence theorem. It records 13 passing diagnostics and distinguishes the proved analytic reduction from its unverified physical correlation hypothesis.
 - [OS, mass-gap, and source-domain audit](OS_MASS_GAP_AND_SOURCE_DOMAIN_AUDIT_20260925.md) checks the native recentering construction, the global closability and coercive Schur obstructions, and the actual role of OS reconstruction, a physical gap, and optional local phase-space compactness. It is a model-assisted self-audit, not independent validation.
 - [Electric-parity response critical review](ELECTRIC_PARITY_RESPONSE_CRITICAL_REVIEW_20260925.md) rederives the signed mixed identity and its domains, records 76 passing diagnostic reruns, and recommends prioritizing positive physical source occurrence. Its accompanying note proves a new bounded winding-module occurrence obstruction. No central formula in the preceding two files is retracted.
 - [Character/current/prime-domain audit](CHARACTER_CURRENT_AND_PRIME_DOMAIN_AUDIT_20260925.md) rederives the weighted adjoints and limiting identities, clarifies the distributional domain, adds the pi-phase current reversal, and proves that the infinite positive prime-difference form has domain only zero on the class space. Model-assisted proofs, not independent human validation.

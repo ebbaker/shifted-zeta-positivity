@@ -1,0 +1,145 @@
+\section{Strong recentering and the full current spectrum}\label{sec:recentering}
+\subsection{A retained source with ordinary \Ltwo{} pairing}
+For the complete vector field in \eqref{eq:current},
+\begin{equation}
+Y\theta=-\sin\theta,\qquad
+\tan(\theta_t/2)=e^{-t}\tan(\theta/2),\qquad
+\operatorname{div}_mY=-3\cos\theta.
+\end{equation}
+These follow from the four distinct link derivatives of P.
+Consequently
+\begin{equation}\label{eq:flow-jacobian}
+j_t(U)=\left(\frac{\sin\theta_t}{\sin\theta}\right)^3
+                     \frac{w(\Phi_tU)}{w(U)} .
+\end{equation}
+For $P\ne-I$ the trajectory converges as $t\to+\infty$:
+its remaining length is $\theta_t/\sqrt\ell$, since
+$\norm Y=\sin\theta/\sqrt\ell$.
+Write $\Phi_\infty U$ for this limit and
+$w_\infty(U)=w(\Phi_\infty U)$. This is a bounded positive
+measurable function. Smoothness at the repelling critical set
+is not asserted.
+
+\begin{theorem}[Native strong recovery]\label{thm:recentering}
+The actual vectors $J_Rf=\UU_RS_Rf$ converge strongly to
+\begin{align}
+J_{\rm rec}f(U)
+ &=\sqrt{\frac{w_\infty(U)}{\rho(0)w(U)}}\,
+                    J_{\rm H}f(\theta(U))\,I,\label{eq:rec-source}\\
+J_{\rm H}f(\theta)
+ &=\frac{(1+y^2/4)^{3/2}}{y}
+           \int_0^\infty H_f(t)\sin(yt)\dd t,
+\qquad y=2\tan(\theta/2).
+\end{align}
+Moreover
+\begin{equation}\label{eq:rec-pair}
+\ip{J_{\rm rec}f}{J_{\rm rec}g}_\nu=\ip f g_2,\qquad
+J_{\rm rec}U_t=\UU_{-t}J_{\rm rec}.
+\end{equation}
+Thus $J_{\rm rec}$ extends to an isometry from $L^2(\R)$ into
+the same physical boundary completion.
+\end{theorem}
+\begin{proof}
+First use Haar. The map
+\begin{equation}
+(\mathcal RF)(y)=\sqrt{2/\pi}\,
+\frac{y}{(1+y^2/4)^{3/2}}F(2\arctan(y/2))
+\end{equation}
+is a unitary from radial Haar \Ltwo{} to $L^2(\R_+,\dd y)$.
+Apply it to the Haar recentered packet and use
+\eqref{eq:flow-jacobian}. The exact result is
+\begin{equation}\label{eq:rec-riemann}
+\frac{\sqrt{2/\pi}}{N\sqrt{1+(y/(2N))^2}}
+\sum_{n\ge1}H_f(n/N)
+          \sin\!\left(2n\arctan(y/(2N))\right).
+\end{equation}
+On bounded y intervals the Riemann sums converge uniformly to
+$\sqrt{2/\pi}\int H_f(t)\sin(yt)\dd t$.
+The squared norm before this limit is exactly
+$N^{-1}\sum|H_f(n/N)|^2\to\norm{H_f}_2^2$.
+The sine transform is unitary with this normalization, so
+local convergence, boundedness, and equality of limiting norms
+give strong convergence on the whole half-line.
+Inverting $\mathcal R$ gives $J_{\rm H}$.
+
+For the actual measure, $\UU_RS_Rf$ equals the Haar expression
+times $\sqrt{w(\Phi_RU)/(\rho(0)w(U))}$. These multipliers
+are uniformly bounded and converge almost everywhere to the
+factor in \eqref{eq:rec-source}. Strong convergence follows
+by dominated convergence and the Haar strong limit. Unitarity
+of $\UU_R$ and \eqref{eq:phase-orthogonality} prove the pairing.
+Finally $S_RU_tf=S_{R+t}f$ exactly. Passing to the strong
+limit in
+$\UU_RS_{R+t}f=\UU_{-t}(\UU_{R+t}S_{R+t}f)$ proves covariance.
+\end{proof}
+The formula describes actual full-state dependence through
+$w_\infty/w$. It does not assume that the current preserves
+the class sector. Since $\UU_R$ is unitary,
+$\UU_RF_Rf$ has the same strong limit.
+
+Winding retains only part of its norm under this recentering:
+\begin{equation}\label{eq:rec-winding-weak}
+\UU_RV_aS_Rf\rightharpoonup
+a^{-1/2}J_{\rm rec}U_{\log a}f ,
+\end{equation}
+while the missing limiting squared norm is
+\begin{equation}\label{eq:rec-defect}
+\left(\frac{\rho_a(0)}{\rho(0)}-\frac1a\right)\norm f_2^2
+=\frac{\sum_{j=1}^{a-1}\rho(2\pi j/a)}
+       {a\rho(0)}\norm f_2^2>0\quad(a\ge2).
+\end{equation}
+Indeed each nonidentity branch, after the flow, tends to zero
+on compact sets away from $P=-I$ by summation by parts in
+its oscillatory coefficient series. Boundedness and density
+give weak convergence to zero there. Its retained norm escapes
+toward the repelling set, which has measure zero. Equations
+\eqref{eq:branch} and \eqref{eq:wound-norm} then prove
+\eqref{eq:rec-winding-weak}--\eqref{eq:rec-defect}.
+This recentering solves weak escape for the unbranched \Ltwo{}
+source, but does not retain the full winding module or the
+Weil norm.
+
+\subsection{An exact normal form for the entire current}
+\begin{theorem}[Full interacting current is absolutely continuous]\label{thm:current-spectrum}
+There is a transverse covariant Hilbert space $\cK$ and a unitary
+identification
+\begin{equation}\label{eq:current-normal}
+\cH\simeq L^2(\R,\dd r;\cK),\qquad
+\UU_tH(r)=H(r-t),\qquad A_\nu=\ii\partial_r ,
+\end{equation}
+with the usual Hilbert-valued $H^1$ generator domain.
+In particular every finite-vector coefficient satisfies
+\begin{equation}\label{eq:current-decay}
+\ip\xi{\UU_t\eta}_\nu\longrightarrow0\quad(|t|\to\infty).
+\end{equation}
+\end{theorem}
+\begin{proof}
+Off $P=\pm I$, put $r=\log\tan(\theta/2)$, so $Yr=-1$.
+Every remaining trajectory crosses the regular hypersurface
+$\Sigma=\{\theta=\pi/2\}$ once. The map
+$(r,z)\mapsto\Phi_{-r}z$ is a smooth bijection with smooth
+inverse from $\R\times\Sigma$ onto this full-measure part
+of M. The excluded sets have Haar measure zero by the
+plaquette submersion, and therefore have $\nu$ measure zero.
+This coordinate statement includes every link, not just the
+plaquette angle.
+
+Choose a smooth positive gauge-invariant transverse measure
+$\sigma$, and write the pulled-back measure as
+$b_\nu(r,z)\dd r\dd\sigma(z)$. Multiplication by
+$b_\nu^{1/2}$ changes it to product measure. The weighted
+flow factor is exactly
+$\sqrt{b_\nu(r-t,z)/b_\nu(r,z)}$, so this multiplication
+converts the group into translation. Gauge transformations
+preserve r and commute with the flow, restricting only the
+transverse Hilbert space. Fourier transformation in r
+proves pure absolute continuity. Each matrix coefficient is
+the Fourier transform of an $L^1$ function, by Hilbert-valued
+Cauchy--Schwarz, and hence tends to zero.
+\end{proof}
+On the recovered subspace \eqref{eq:rec-pair} implies
+$A_\nu J_{\rm rec}=J_{\rm rec}\Px$ on the smooth-test domain.
+The full theorem is stronger than that subspace statement:
+changing to an arbitrary seed vector elsewhere in the physical
+boundary space cannot turn this current into a pure point
+arithmetic translation generator.
