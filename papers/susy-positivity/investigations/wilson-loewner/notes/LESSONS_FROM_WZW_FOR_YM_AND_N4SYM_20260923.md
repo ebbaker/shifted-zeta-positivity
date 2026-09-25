@@ -1,5 +1,7 @@
 # Lessons from WZW and the later response tests for Yang–Mills and N=4 SYM
 
+**Update, 24 September 2026:** the [new assessment](UPDATED_PATH_ASSESSMENT_REFLECTION_AND_HIERARCHIES_20260924.md) reviews the subsequent WZW, N4SYM and arithmetic-storage results. Reflection may target the complete central Weil form as well as accumulated storage; the finite-mass calculation illustrates the importance of retained states, and the growing-loop hierarchy now has an explicit nonclosure audit. The finite-append route has been reassessed after first-prime closure. The original analysis follows unchanged.
+
 23 September 2026. Prepared for Edward Baker with substantial LLM assistance.
 
 **Model:** GPT-6 (Codex; developer-provided model identity).  

@@ -1,0 +1,83 @@
+{
+  "date": "2026-09-24",
+  "prepared_for": "Edward Baker",
+  "model": "GPT-6 (Codex; developer-provided model identity)",
+  "reasoning_effort": "Not exposed; not inferred",
+  "baseline_commit": "488c782b639728a5dfd9685139b81e09cbb1cd40",
+  "scope": "Targeted existing-diagnostic replays and committed-record checks for a research assessment. Not an independent proof review or a new positivity certificate.",
+  "diagnostic_total": 260,
+  "replays": [
+    {
+      "script": "WZW/numerics/check_wzw_program_review.py",
+      "source_sha256": "77ae7b0da9363d2c85a59df0be9490941e4df8a8bcf1bb3fde9daa538c6434dd",
+      "command_from_wilson_loewner": "python3 -B WZW/numerics/check_wzw_program_review.py --output <temporary-json>",
+      "count": 40,
+      "all_pass": true,
+      "replayed_output_sha256": "68efa46edfd0bb57077b9e4f8a030e186222892790b72aafaf7fa0f7738efc65"
+    },
+    {
+      "script": "N4SYM/numerics/check_rounded_and_closure.py",
+      "source_sha256": "852d89d6c7320ddbd9d13b54b457118969e55b0f98c1b5c9e646c053c7681766",
+      "command_from_wilson_loewner": "python3 -B N4SYM/numerics/check_rounded_and_closure.py --output <temporary-json>",
+      "count": 20,
+      "all_pass": true,
+      "replayed_output_sha256": "f77f9a683ec636d5e255c36b7c546249e7b6b8d70503bc689996e306b6d0ac75"
+    },
+    {
+      "script": "N4SYM/numerics/check_finite_mass_response.py",
+      "source_sha256": "649d3d157006dd789382cd06ed4cf86f5a06306b10b99b824b6c575f3aba16a1",
+      "command_from_wilson_loewner": "python3 -B N4SYM/numerics/check_finite_mass_response.py --output <temporary-json>",
+      "count": 107,
+      "all_pass": true,
+      "replayed_output_sha256": "3f58c892330ec8400abbd86b312c091f43965046506bdfb5134842eb891aa535"
+    },
+    {
+      "script": "N4SYM/numerics/check_quartic_input.py",
+      "source_sha256": "71342a5c706702d1be55a99b8d17d8f45af7045d21dac8c00e61143162cde32f",
+      "command_from_wilson_loewner": "python3 -B N4SYM/numerics/check_quartic_input.py --output <temporary-json>",
+      "count": 93,
+      "all_pass": true,
+      "replayed_output_sha256": "3351c6eb2f9c9952821b0de4b005bb6e7a3eed6b244b5fb54145be3b074b211e"
+    }
+  ],
+  "additional_dependencies_sha256": {
+    "N4SYM/numerics/check_trace_completion.py": "47835f974d700a6f8e62ced49eafa3fb18a624e74527e20e3ce54d78c33d58bc",
+    "N4SYM/numerics/check_flipped_return.py": "805cdab8727916034c11e1ca1f1adf3fa252962da0615768478426330df7e373"
+  },
+  "first_prime_record_checker": {
+    "script": "arithmetic-storage/numerics/check_first_prime_records.py",
+    "source_sha256": "5d8023320e3dbac034796d77432e3991bab8d96254db2efc8bb94f8fe9465819",
+    "check_pass": true,
+    "nested_interval_pairs": 15,
+    "floating_reduction_controls": 8,
+    "records_sha256": {
+      "first-prime-coupling-diagnostics-20260924.json": "e936284628e301b4ad09095d517f2d569f77c2554b931667b7fd6833bee3eb3f",
+      "first-prime-inputs-40digits-20260924.json": "3caf68b768d4c32584d1425eef8436522c86de8f7deaadd816dcc147b1bddf38",
+      "first-prime-inputs-60digits-20260924.json": "778de8afc52d353bbfcc8a60d2d35f1eba9c24d5a9fadae54a3bf4ce52b984bf"
+    },
+    "scope": "Record bindings, nested intervals and conditional rational implication only; its 0.999 hypothesis is not asserted by this replay."
+  },
+  "join_closure_record_checks": {
+    "record": "arithmetic-storage/numerics/records/first-prime-join-closure-20260924.json",
+    "record_sha256": "b4ae965ef3ea94d81326bd3fa16444a63e45401a825ca66807e04acbedb9f773",
+    "source_sha256": "a4b02e689d42c897ff2c84b98509d05a30b507d2b0143fa09139afb059a98e95",
+    "builder_source_sha256": "ca0bf0719a20cdbc3294855ad9d859fdb7a264fa5322b77518f06d44eb278760",
+    "all_source_bindings_pass": true,
+    "central_floor_assumed_from_committed_certificate": "123/250000",
+    "mixed_block_bound_assumed_from_committed_certificate": "308/125",
+    "kappa0_upper_recomputed": "616000/616123",
+    "normalized_coupling_upper_recomputed": "1650647280421279873358525930982233083389874100100/1650946782537377749975050468529967584193776632907",
+    "positive_direct_margin_recomputed": "119/750000",
+    "arb_matrices_regenerated": false,
+    "analytic_tail_proof_independently_reviewed": false
+  },
+  "evidence_records_sha256": {
+    "prime-weight-window-log3-20260924.json": "be34e27fea3b890b82038058ef082e7028dd7b5d07bef7df24d9814607a00a12",
+    "archimedean-threshold-20260924.json": "b4586dad75ac31bba5c72263e12af5b6b8116e1497b3246df751fcca69eb9c88"
+  },
+  "limits": [
+    "Quartic input checks include expected rejection of a faulty dimension-two transcription; no full cubic retarded response is certified.",
+    "Fixed-join obstruction and perturbation-rigidity proofs were read, not independently specialist-reviewed.",
+    "First-prime weight exclusions and the central floor are reported internal certificates, not freshly rebuilt interval results."
+  ]
+}
