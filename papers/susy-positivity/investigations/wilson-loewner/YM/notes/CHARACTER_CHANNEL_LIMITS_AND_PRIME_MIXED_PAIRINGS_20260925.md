@@ -8,6 +8,8 @@ Model: GPT-6 (Codex). The deployed variant and reasoning effort are not exposed;
 
 Status: new analytical deductions and floating algebra controls, not independently reviewed. The fixed four-dimensional YM model is retained. No full Weil realization or RH proof is established.
 
+Subsequent same-day [critical rederivation](../reviews/CHARACTER_CURRENT_AND_PRIME_DOMAIN_AUDIT_20260925.md): the displayed mixed-limit, weighted-adjoint, branching and prime-tail formulas survive, with the distributional domain clarified below. The phase at pi has the opposite finite current, so winding by two also fails the derivative intertwining. The infinite positive prime-difference form has domain only zero on the entire class space. The [archimedean continuation](ELECTRIC_PARITY_ARCHIMEDEAN_RESPONSE_AND_PHASE_OBSTRUCTION_20260925.md) now derives a complete signed mixed response, including its contact constant, but proves additional phase and source-occurrence obstructions; it supplies no positive Weil source.
+
 ## 1. What this continuation obtains
 
 The character-weighted winding operations proposed in the [topology and observable assessment](TOPOLOGY_GEOMETRY_AND_CHARACTER_OBSERVABLE_OPTIONS_20260925.md) have a useful mixed pairing in the actual YM state. There is an independently specified family of finite character packets \(S_R f\) such that, for every fixed integer \(a\ge1\),
@@ -212,7 +214,7 @@ On the finite character span define
 \]
 as a negative-Sobolev distribution. For a single character \(\chi_m(P)\), its Haar coefficients are \(\Lambda(a)\) at labels \(am\). By (17), the series converges in \(H^{-s}(M)\) for every \(s>1/2\), since
 \(\sum_{a\ge2}a^{-2s}(\log a)^2<\infty\).
-Finite linear combinations follow. Smooth multiplication by the actual state density defines its pairing with smooth physical test vectors, and equivalence of weighted Sobolev norms gives the same admissibility in that state. Explicitly,
+Finite linear combinations follow. Smooth multiplication by the actual state density defines its pairing with smooth physical test vectors, and equivalence of weighted Sobolev norms gives the same distributional well-definedness in that state. This is not admissibility as an OS Hilbert source or a Hilbert-valued insertion on this core. Explicitly,
 \[
 \langle\chi_n,\mathcal L\chi_m\rangle_\nu
  =\sum_{a\ge2}\Lambda(a)(t_{n-am}-t_{n+am})
@@ -389,7 +391,7 @@ This follows from the leading coefficient in (21); the bounded drift in (23) can
 \]
 when \(f\ne0\). For Haar the coefficient is \(a^2/2\). At \(a=2\) the leading term vanishes, since its roots are \(0,\pi\).
 
-Consequently (24) does not supply one finite limiting current on the whole rational-phase space closed under winding. Inserting a desired digamma function of a generator would also require a separate physical derivation and domain analysis; (24) or (25) alone supplies neither. A native generator remains optional for the bare source-existence objective.
+Consequently (24) does not supply one finite limiting current on the whole rational-phase space closed under winding. The subsequent audit also proves \(\mathcal A_\nu S_R^\pi f=S_R^\pi(+if')+O(N^{-1})\): the phase at pi has the opposite current, and \(\|\mathcal A_\nu V_2S_Rf-V_2S_R(-if')\|^2\to2\rho(\pi)\rho(0)^{-1}\|f'\|^2\). Thus the exceptional case a=2 is not an intertwining repair. Inserting a desired digamma function of a generator would also require a separate physical derivation and domain analysis; (24) or (25) alone supplies neither. A native generator remains optional for the bare source-existence objective.
 
 ## 8. Positivity exposes a divergent contact term
 

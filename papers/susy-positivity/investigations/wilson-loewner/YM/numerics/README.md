@@ -1,5 +1,35 @@
 # YM numerics and algebra controls
 
+## Native electric recentering controls, 25 September 2026
+
+The [new checker](check_current_recentering.py) and [small record](records/current-recentering-20260925.json) accompany the [recentring/positive-completion note](../notes/NATIVE_RECENTERING_AND_GAPPED_POSITIVE_COMPLETION_20260925.md). Prepared for Edward Baker with substantial GPT-6 (Codex) assistance; exact variant and reasoning effort unavailable.
+
+Run from the YM directory with Python 3 and NumPy:
+
+```sh
+OPENBLAS_NUM_THREADS=1 python3 -B numerics/check_current_recentering.py --output /tmp/ym-current-recentering.json
+```
+
+Nineteen floating controls passed: sine quadrature refinement and Plancherel, local identity-packet recovery, mixed winding coefficients, and retained/escaped norms for windings 2, 3 and 5. Scales 16, 64, 256 and 1024 are recorded. The script also records the proved coercive lower bound at four prime cutoffs. Haar and a prescribed radial density are comparisons, not interacting four-dimensional current samples. Full-state convergence, closability, and divergence are analytical results; these controls do not prove them. Arrays remain in memory and only a small JSON record is saved.
+
+## Electric-parity review rerun, 25 September 2026
+
+The [review rerun record](records/electric-parity-review-20260925.json) records unchanged executions of the 57 character controls and 19 archimedean controls for the [critical review](../reviews/ELECTRIC_PARITY_RESPONSE_CRITICAL_REVIEW_20260925.md). All passed. It includes script and reviewed-file hashes, commands, environment, and compact summaries; the existing scripts above their respective records remain the reproduction sources. The new bounded-occurrence theorem is analytical and does not depend on these floating diagnostics. No original script or record was overwritten.
+
+## Electric parity and archimedean response, 25 September 2026
+
+The [new checker](check_archimedean_response.py) and [small record](records/archimedean-response-20260925.json) accompany the [response note](../notes/ELECTRIC_PARITY_ARCHIMEDEAN_RESPONSE_AND_PHASE_OBSTRUCTION_20260925.md) and [audit](../reviews/CHARACTER_CURRENT_AND_PRIME_DOMAIN_AUDIT_20260925.md). Prepared with substantial GPT-6 (Codex) assistance; exact deployed variant and reasoning effort unavailable.
+
+Run from the YM directory with Python 3 and NumPy:
+
+```sh
+OPENBLAS_NUM_THREADS=1 python3 -B numerics/check_archimedean_response.py --output /tmp/ym-archimedean-response.json
+```
+
+Nineteen floating controls compare the finite log-angle matrix with an independent Fourier/digamma integral for both sine and cosine parity; verify the contact and difference kernel; check the logarithmic asymptotic, pi-current reversal, winding-two defect, nonidentity-phase divergence, and an explicit negative signed full-core response. A finite weighted pairing uses a prescribed nonconstant density, not an interacting Wilson sample. Coarse and refined errors are retained. All passed in the saved environment. The 57 earlier character controls were also rerun unchanged and passed. Neither set certifies limiting statements or positivity.
+
+Only the script and small provenance/summary record are saved. All arrays remain in memory; no external datasets or large files are generated.
+
 ## Character channels and current controls, 25 September 2026
 
 The [character checker](check_character_channels.py) and [small record](records/character-channels-20260925.json) accompany the [character-channel note](../notes/CHARACTER_CHANNEL_LIMITS_AND_PRIME_MIXED_PAIRINGS_20260925.md). Prepared for Edward Baker with GPT-6 (Codex) assistance; reasoning effort not exposed or inferred.
