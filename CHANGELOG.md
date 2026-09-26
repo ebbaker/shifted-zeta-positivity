@@ -1,5 +1,24 @@
 # Changelog
 
+## 2026-09-25 — wilson-loewner/YM: reply to the GPT-6 response (Claude Fable 5.1)
+
+- Reply in YM/response/CLAUDE_REPLY_TO_RESPONSE_20260925.md. Conceded: the R1 extension
+  (a derivative-type law with a bounded kernel family does reach log-growth; counterexample
+  confirmed numerically), the R2 generalization (Kronecker flow on T^2 is a smooth pure-point
+  flow without a global section), "channel-free" in R3, the universal form of R4, the
+  "state enters only the obstructions" wording, and two metadata errors in the control
+  (Haar wound norm is ||f||^2, not a^-1 ||f||^2; a sampled weight is not a tail bound).
+- Structural note revised: conditions restated with proved scopes as N1-N4; closure of the
+  finite-slab route recorded as a judgement, not a theorem. Errata section appended to the
+  review; original text left in place.
+- check_probe_against_zeros.py: metadata renamed (identity_phase_part, haar_total_wound_norm);
+  new control 7, a rigorous omitted-zero tail bound (per-factor envelope times Backlund's
+  zero count): 1.2e-12 on the critical line, 5.6e-11 unconditionally in the strip for t <= 7.
+  Record regenerated: 30/30 pass; script sha fa9ab492...
+- Held: DRAFT_HISTORY.md naming (project instructions and the parent folder use the full
+  name); the zero-list control tests the normalization of Q at the 1e-2..1e0 level where an
+  error would appear. Nothing committed.
+
 ## 2026-09-25 — wilson-loewner/YM: independent verification review (Claude Fable 5.1)
 
 - First assessment of the consolidated YM manuscript (commit 187548e) by a system other

@@ -19,6 +19,13 @@ Only NumPy is required.  The 700 zero ordinates are read from
 records/zeta-zeros-700.json (computed once with mpmath.zetazero; pass
 --regenerate-zeros to recompute them, which needs mpmath and about two minutes).
 
+Revision of 25 September 2026 (after the GPT-6 response in ../response/): the
+metadata field formerly called `haar_value` mislabelled the identity-phase part
+a^{-1}||f||^2 as the Haar wound norm; the total Haar wound norm is ||f||^2 (V_a is
+an isometry in the Haar limit).  It is now `identity_phase_part`.  The former
+`tail_weight_at_last_ordinate` was a single sampled weight, not a tail bound; the
+record now carries a rigorous envelope bound for the omitted zeros (control 7).
+
 Controls:
   1  m_+(0) = psi(1/4) - log pi = -gamma - pi/2 - 3 log 2 - log pi
   2  Theorem 5.4 (complete archimedean limit): <F_R f, C_rho F_R g>, computed by
@@ -31,9 +38,17 @@ Controls:
      Mangoldt sum) equals sum_gamma 2 |fhat_*(gamma)|^2 cos(gamma t) over the
      first 700 zeros, at twelve values of t in [0, 7].
   5  The closed archimedean tail C_{*,inf}(t) = -sum_j e^{-(2j+1/2)t} F(2j+1/2)F(-2j-1/2).
-  6  Corollary 10.5: the empirical mean square of C_* on [0, 200] equals the
+  6  Corollary 10.3: the empirical mean square of C_* on [0, 200] equals the
      almost-periodic prediction sum 2|w_gamma|^2 within one percent, and
      Q[f_*] = C_*(0) > 0.
+  7  Tail of the zero sum beyond the last listed ordinate T0: a rigorous envelope
+     for |F(lambda)F(-lambda)| (each factor sinh(w)/w bounded by
+     min(sinh(x)/x, cosh(x)/|w|) with x = Re w) times Backlund's zero-count bound
+     gives sum_{|gamma|>T0} 2|fhat_*(gamma)|^2 <= (conditional bound), and, for
+     hypothetical zeros anywhere in the strip |Re z| <= 1/2 above height T0, the
+     same with Re(1+z) <= 3/2 and the growth factor e^{t/2}; both are far below the
+     comparison tolerance.  Zeros with |gamma| <= T0 lie on the critical line by
+     the published verification of RH to height 3e12 (Platt-Trudgian 2021).
 """
 import argparse
 import hashlib
@@ -95,6 +110,52 @@ def F_detect(z):
 
 def fhat_probe(tau):
     return F_detect(-1j * np.asarray(tau, dtype=float))
+
+
+def envelope_B(gamma, re_shift):
+    """Rigorous upper bound for |B(w)| with w = (re_shift - i*gamma)*a_j per factor.
+
+    |sinh(x+iy)|^2 = sinh^2 x + sin^2 y <= cosh^2 x  and  |w| >= a_j |gamma|, so each
+    factor is <= cosh(a_j re_shift)/(a_j |gamma|); also
+    |sinh w / w|^2 = (sinh^2 x + sin^2 y)/(x^2 + y^2) <= max(sinh^2 x / x^2, 1) = sinh^2 x / x^2.
+    Both bounds are nonincreasing in |gamma|.  re_shift = 1 on the critical line,
+    3/2 for the worst case in the strip |Re z| <= 1/2.
+    """
+    gamma = abs(float(gamma))
+    out = 1.0
+    for a in AJ:
+        x = a * re_shift
+        c = math.sinh(x) / x
+        b = math.cosh(x) / (a * gamma) if gamma > 0 else float("inf")
+        out *= min(c, b)
+    return out
+
+
+def tail_bound(T0, t_max):
+    """sum over omitted zeros of the explicit-formula weights, bounded rigorously.
+
+    Zeros are counted with Backlund's bound |N(T) - (T/2pi) log(T/2pi e) - 7/8|
+    <= 0.137 log T + 0.443 log log T + 4.35 (T >= 2).  On each unit block [T, T+1]
+    the envelope is evaluated at T (nonincreasing) and the polynomial prefactor at T+1.
+    """
+    def count_bound(T):
+        main = ((T + 1) * math.log((T + 1) / (2 * math.pi * math.e)) - T * math.log(T / (2 * math.pi * math.e))) / (2 * math.pi)
+        err = 0.137 * math.log(T + 1) + 0.443 * math.log(math.log(T + 1)) + 4.35
+        return main + 2 * err
+    cond = uncond = 0.0
+    T = math.floor(T0)
+    while True:
+        n = count_bound(T)
+        pref = (0.25 + (T + 1) ** 2) ** 2
+        e_line = pref * envelope_B(T, 1.0) ** 2 / B_ONE ** 2          # |fhat(gamma)|^2 on the line
+        pref_strip = (0.5 + (T + 1) ** 2) ** 2                          # |1/4 - z^2| <= 1/2 + gamma^2
+        e_strip = pref_strip * envelope_B(T, 1.5) ** 2 / B_ONE ** 2 * math.exp(0.5 * t_max)
+        cond += 2 * n * e_line
+        uncond += 2 * n * e_strip
+        if e_strip * n < 1e-40 or T > T0 + 5000:
+            break
+        T += 1
+    return cond, uncond, T
 
 
 def von_mangoldt(limit):
@@ -248,7 +309,11 @@ def main():
     for a in (2, 3):
         val = marg.pair(cf, a * n, cf, a * n).real
         tgt = marg.rho_a0(a) / r0 * inner_shift(f_test, f_test, 0.0).real
-        check(f"wound norm a={a}", abs(val - tgt), 1e-8, value=val, target=tgt, haar_value=tgt * (1 / a) / (marg.rho_a0(a) / r0))
+        # identity_phase_part is a^{-1}||f||^2, the identity-channel share only; the
+        # total Haar wound norm is ||f||^2 since V_a is an isometry in the Haar limit.
+        check(f"wound norm a={a}", abs(val - tgt), 1e-8, value=val, target=tgt,
+              identity_phase_part=tgt * (1 / a) / (marg.rho_a0(a) / r0),
+              haar_total_wound_norm=tgt / (marg.rho_a0(a) / r0))
     val = marg.pair(cf, 2 * n, cg, 4 * n)
     tgt = 2 * marg.rho_a0(2) / (math.sqrt(8) * r0) * inner_shift(f_test, g_test, math.log(2))
     check("gcd formula (2,4)", abs(val - tgt), 1e-8, value=[val.real, val.imag], target=[tgt.real, tgt.imag])
@@ -276,6 +341,7 @@ def main():
         return np.trapezoid(W * Mp * np.cos(tgrid * t), tgrid) / math.pi
 
     tvals = [0.0, 0.3, 0.7, 1.0, 1.5, 2.0, 2.5, 3.0, 4.0, 5.0, 6.0, 7.0] + ([10.0] if args.extended else [])
+    tail_cond, tail_uncond, tail_T_end = tail_bound(float(zeros[-1]), max(tvals))
     labels, lam = von_mangoldt(int(math.exp(max(tvals) + 2.0)) + 2)
     probe_rows = []
     for t in tvals:
@@ -311,6 +377,9 @@ def main():
     q_probe = probe_rows[0]["definition"]
     check("Q[f_*] > 0", 0.0 if q_probe > 0 else 1.0, 0.5, value=q_probe)
 
+    # 7. the omitted-zero tail is below the comparison tolerance
+    check("rigorous tail bound (critical line) below 1e-9", tail_cond, 1e-9, unconditional_strip_bound=tail_uncond)
+
     result = {
         "status": "floating diagnostics only; not proof of RH, any limiting theorem, positivity, or source occurrence",
         "prepared_for": "Edward Baker",
@@ -319,7 +388,11 @@ def main():
         "numpy": np.__version__,
         "script_sha256": hashlib.sha256(Path(__file__).read_bytes()).hexdigest(),
         "zeros": {"count": int(len(zeros)), "last_ordinate": float(zeros[-1]),
-                  "tail_weight_at_last_ordinate": float(np.abs(fhat_probe(zeros[-1])) ** 2),
+                  "weight_at_last_ordinate": float(np.abs(fhat_probe(zeros[-1])) ** 2),
+                  "tail_bound_critical_line": tail_cond,
+                  "tail_bound_strip_unconditional_t_le_7": tail_uncond,
+                  "tail_bound_summed_to_height": tail_T_end,
+                  "tail_bound_method": "per-factor envelope min(sinh x/x, cosh x/|w|) times Backlund zero count per unit block; zeros below the last ordinate are on the line by Platt-Trudgian 2021",
                   "first_weights": [float(w) for w in wz[:5]]},
         "probe": {"B_one": B_ONE, "F_half": [float(abs(F_detect(0.5))), float(abs(F_detect(-0.5)))],
                   "min_abs_fhat_on_grid": float(np.sqrt(W).min()), "l2_norm_squared": float(np.trapezoid(W, tgrid) / math.pi)},

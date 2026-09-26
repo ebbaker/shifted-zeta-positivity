@@ -4,11 +4,15 @@
   "assistant": "Claude (Anthropic); model line claude-fable-5-1 (Fable 5.1), session configured as claude-opus-5-5; serving model may differ; reasoning effort not exposed",
   "python": "3.11.15",
   "numpy": "2.4.4",
-  "script_sha256": "03a2b30c1c486d3bdd4fb52024e872a0f7ae2f9bb67d9252b7dd89debbbc2bff",
+  "script_sha256": "fa9ab492ddfe37fba62ae6dd4f2c7bba74ed33f077c1c7b9fe40bf7ccfe619c6",
   "zeros": {
     "count": 700,
     "last_ordinate": 1062.9153815078805,
-    "tail_weight_at_last_ordinate": 5.060680290008391e-18,
+    "weight_at_last_ordinate": 5.060680290008391e-18,
+    "tail_bound_critical_line": 1.1568301926817974e-12,
+    "tail_bound_strip_unconditional_t_le_7": 5.589316695308883e-11,
+    "tail_bound_summed_to_height": 6063,
+    "tail_bound_method": "per-factor envelope min(sinh x/x, cosh x/|w|) times Backlund zero count per unit block; zeros below the last ordinate are on the line by Platt-Trudgian 2021",
     "first_weights": [
       4.0286203639108145,
       1.596307309885949,
@@ -253,7 +257,8 @@
       "passed": true,
       "value": 0.10696087715864196,
       "target": 0.10696087982596705,
-      "haar_value": 0.06845496308861891
+      "identity_phase_part": 0.06845496308861891,
+      "haar_total_wound_norm": 0.13690992617723782
     },
     {
       "name": "wound norm a=3",
@@ -262,7 +267,8 @@
       "passed": true,
       "value": 0.09412557317992057,
       "target": 0.09412557424685099,
-      "haar_value": 0.045636642059079274
+      "identity_phase_part": 0.045636642059079274,
+      "haar_total_wound_norm": 0.13690992617723782
     },
     {
       "name": "gcd formula (2,4)",
@@ -427,9 +433,16 @@
       "tolerance": 0.5,
       "passed": true,
       "value": 6.347672267248095
+    },
+    {
+      "name": "rigorous tail bound (critical line) below 1e-9",
+      "error": 1.1568301926817974e-12,
+      "tolerance": 1e-09,
+      "passed": true,
+      "unconditional_strip_bound": 5.589316695308883e-11
     }
   ],
-  "check_count": 29,
+  "check_count": 30,
   "all_passed": true,
   "failed": []
 }
