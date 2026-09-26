@@ -1,5 +1,28 @@
 # Changelog
 
+## 2026-09-25 — wilson-loewner/YM: independent verification review (Claude Fable 5.1)
+
+- First assessment of the consolidated YM manuscript (commit 187548e) by a system other
+  than the one that wrote it. Every displayed formula and proof in Sections 1-10 and
+  Appendix B rederived by hand; no mathematical error found.
+- New control numerics/check_probe_against_zeros.py (29 floating checks, all pass):
+  Theorem 5.2 by independent log-angle quadrature (1e-14), Theorem 4.1 with a five-harmonic
+  non-Haar marginal (3e-9, O(N^-2)), and the detecting response C_*(t) from the definition
+  against the first 700 zeta zeros at twelve translates (1.1e-13) — the folder's first check
+  of the Weil-form normalization against zero data. Ordinates in records/zeta-zeros-700.json.
+- All existing YM programs rerun and reproduced to roundoff; BUILD_RECORD hashes match;
+  LaTeX rebuilds cleanly. check_positive_hierarchy.py needs np.trapz -> np.trapezoid on
+  NumPy >= 2.4.
+- Findings: the affirmative identities (prime mixed limits, archimedean limit, signed
+  identity) are independent of the YM state and reduce to Burnol's conductor operator and
+  the Adams operations on l2(N); Theorem 10.4's hypothesis is at least as strong as RH; the
+  negative results (Prop. 1.2, Thms 6.1 and 7.2, Prop. 8.1) close the fixed-finite-slab
+  route. Nine edits recommended before freezing the manuscript as a negative-result record.
+- Added notes/STRUCTURAL_REQUIREMENTS_AND_NEXT_STEPS_20260925.md: four proved necessary
+  conditions for any bulk realization (log-UV source norm, non-geometric translation,
+  Bost-Connes-type isometries, no termwise positivity), a filter for N4SYM and WZW, and a
+  ranked recommendation to return effort to the certified arithmetic line. Nothing committed.
+
 ## 2026-09-24 — wilson-loewner/arithmetic-storage: review and second session (Claude)
 
 - Reviewed commit 1bd1adf (GPT-6 Codex opening package and first-prime session, which had

@@ -1,5 +1,19 @@
 # YM numerics and algebra controls
 
+## Independent controls and the zero-list check, 25 September 2026
+
+The [independent checker](check_probe_against_zeros.py), its [record](records/probe-against-zeros-20260925.json), and the [zero ordinates](records/zeta-zeros-700.json) accompany the [verification review](../reviews/REVIEW_CLAUDE_MANUSCRIPT_VERIFICATION_20260925.md). Prepared for Edward Baker by Claude (Anthropic), model line claude-fable-5-1 (Fable 5.1), session configured as claude-opus-5-5; reasoning effort not exposed. The program was written from the manuscript's displayed formulas, not from the other programs here, and uses different discretizations.
+
+Run from the YM directory with Python 3 and NumPy (about four minutes; `--extended` adds t = 10, `--regenerate-zeros` recomputes the 700 ordinates with mpmath):
+
+```sh
+OPENBLAS_NUM_THREADS=1 python3 -B numerics/check_probe_against_zeros.py --output /tmp/ym-probe-against-zeros.json
+```
+
+All 29 floating controls passed: the contact constant; Theorem 5.2 by direct log-angle quadrature for a complex pair at N = 256 and 1024 (errors below 1e-14); Theorem 4.1 with a five-harmonic non-Haar marginal (prime mixed limits, wound norms, gcd formula; errors below 3e-9 at N = 4096 with O(N^-2) convergence); the closed archimedean tail; and the one control this folder lacked, the detecting response C_*(t) computed from the definition (digamma integral plus von Mangoldt sum) against the sum over the first 700 nontrivial zeros at twelve translates in [0, 7], agreeing to 1.1e-13. Q[f_*] = 6.34767 > 0 and the mean square of C_* on [0, 200] matches the almost-periodic prediction to 0.1 %. These are floating diagnostics; they do not prove RH, any limiting theorem, positivity, or source occurrence.
+
+Reproducibility note from the same review: `check_positive_hierarchy.py` uses `np.trapz`, removed in NumPy 2.4; replace with `np.trapezoid` (lines 231 and 234). With that shim all 64 of its controls reproduce. All other programs reproduce their records to roundoff in Python 3.11 / NumPy 2.4.
+
 ## Detecting-probe and prime-cutoff boundary controls, 25 September 2026
 
 The [new checker](check_single_probe_and_prime_edges.py) and [small record](records/single-probe-prime-edges-20260925.json) accompany the [single-probe/current note](../notes/SINGLE_PROBE_OCCURRENCE_AND_PRIME_BOUNDARY_RESPONSE_20260925.md). Prepared for Edward Baker with substantial GPT-6 (Codex) assistance; exact variant and reasoning effort unavailable.
