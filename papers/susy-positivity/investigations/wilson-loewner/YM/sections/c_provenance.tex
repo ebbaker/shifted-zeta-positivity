@@ -1,8 +1,16 @@
 \section{Research provenance, diagnostics, and reproducibility}\label{app:provenance}
 \subsection{Scope of this consolidation}
-This manuscript consolidates the YM investigation as it
-stood on 25 September 2026. It introduces no new numerical
-experiment or physical candidate. The historical notes
+This manuscript began as a consolidation on 25 September 2026.
+The continuation after the review exchange adds
+Section~\ref{sec:distributional}, two scoped candidate tests,
+and a correction of the zero-list certification claims.
+The 26 September continuation adds
+Section~\ref{sec:full-electric-preparation}: full-electric point-source
+growth, a generator-free strict-half-slab preparation obstruction, and
+necessary compact-source bounds. It preserves the earlier uncommitted
+continuation and does not change its numerical programs or records.
+The continuation baseline is \texttt{be3e2d5}; the earlier
+consolidation baseline is recorded below. The historical notes
 and reviews remain in place; the manuscript is one
 maintained document, not a new dated snapshot directory.
 The baseline checkout was
@@ -41,6 +49,11 @@ Occurrence obstructions &
 \noteurl{NATIVE_RECENTERING_AND_GAPPED_POSITIVE_COMPLETION_20260925.md}{native recentering and coercive positive completion}.\\[4pt]
 One detecting response &
 \noteurl{SINGLE_PROBE_OCCURRENCE_AND_PRIME_BOUNDARY_RESPONSE_20260925.md}{Single-probe occurrence, full current spectrum, and prime boundaries}.\\[4pt]
+Distributional candidates &
+\noteurl{COMPACT_RETURN_AND_PHYSICAL_TRANSLATION_SOURCES_20260925.md}{Compact returns, actual electric waves, and continuum spacetime translations}.\\[4pt]
+Full electric and preparation &
+\noteurl{FULL_ELECTRIC_AND_BUFFERED_SOURCE_OBSTRUCTIONS_20260926.md}{Point-source spectral growth, physical half-slab descent, and preparation bounds};
+\revurl{FULL_ELECTRIC_AND_BUFFERED_SOURCE_AUDIT_20260926.md}{scope and domain self-audit}.\\[4pt]
 Determination and domains &
 \noteurl{OFF_DIAGONAL_RIGIDITY_AND_COMPACT_SOURCE_EXISTENCE_20260924.md}{Off-diagonal rigidity and compact existence};
 \noteurl{SOURCE_DOMAIN_AND_WEIGHT_TRANSPORT_REVIEW_CONTROLS_20260925.md}{source domains and weight transport}.\\[4pt]
@@ -63,6 +76,13 @@ certify independent human review. The
 \revurl{MANUSCRIPT_CONSOLIDATION_AUDIT_20260925.md}{consolidation audit}
 records the editorial checks and the corrected missing
 addition sign in \eqref{eq:two-mode-residual}.
+The subsequent
+\revurl{REVIEW_CLAUDE_MANUSCRIPT_VERIFICATION_20260925.md}{Claude verification review and errata}
+and the two documents in \filepath{response/} correct overbroad
+interpretations without retracting the signed identity.
+The new
+\revurl{COMPACT_RETURN_AND_CONTINUUM_TRANSLATION_AUDIT_20260925.md}{distributional-source self-audit}
+checks the additional proofs and their scope.
 
 \subsection{Numerical evidence ledger}
 All the following are floating diagnostics, with small
@@ -90,12 +110,16 @@ Current recentering (25 September) & 19 &
 Sine scaling, retained and escaped norms\\
 Single probe and prime edges (25 September) & 13 &
 Product conventions and sharp-cutoff profiles\\
+Probe versus stored zeros (25 September) & 30 &
+Floating normalization checks and finite envelope sums;
+no complete error enclosure\\
 \bottomrule
 \end{tabularx}
 \end{center}
 The saved records report all listed controls passing
-in their recorded environments. They were not rerun
-merely to consolidate this manuscript. Several use
+in their recorded environments. The 30-control zero-list
+program was replayed for this continuation; the earlier
+control suites were not rerun. Several use
 Haar and the prescribed density
 $\rho_{\rm test}=(1+0.35\cos\theta+0.2\cos2\theta)/0.9$;
 these are not interacting four-dimensional samples.
@@ -113,10 +137,25 @@ refinement threshold at $1.0323\,10^{-7}$; quadrature
 was refined rather than the threshold loosened.
 Finite products with 28 and 40 factors check
 conventions, not the zero-free strip proof.
-No zeta zero list was used.
+Those earlier controls used no zero list. The later Claude
+checker uses 700 stored floating ordinates. Its finite block
+envelopes are approximately $1.15683019\,10^{-12}$ and
+$5.58931670\,10^{-11}$, but are not certified infinite-tail
+bounds. The
+\revurl{PROBE_TAIL_CERTIFICATION_AUDIT_20260925.md}{tail audit}
+derives separately, using twelve product factors and a proved
+zero-count bound, an infinite post-6063 remainder below
+$1.665\,10^{-22}$ across the full strip for $|t|\le7$.
+An exact-rational standard-library control records that
+inequality. The finite envelopes, product evaluation,
+quadrature, and individual stored ordinates remain unenclosed;
+published low-height RH verification does not certify those
+floating ordinate values. The complete comparison remains
+diagnostic. The historical record is preserved, with a
+separately named replay record.
 
 The \href{numerics/README.md}{numerics index} provides
-the unchanged source programs and reproduction commands.
+the source programs, certification scope and reproduction commands.
 Intermediate arrays remain in memory or external
 scratch space. The repository contains no new large
 datasets or third-party papers. Source hashes, build

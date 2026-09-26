@@ -1,0 +1,266 @@
+\section{Full electric sources and physical preparation}\label{sec:full-electric-preparation}
+We now test two further mechanisms in the same finite slab and
+state: regular-point distributional sources for the full electric
+operator, and observables passed through the strict half-slab
+integral. Both give positive actual pairings. Neither realizes Q.
+No continuum assumption, physical mass gap, or RH is used.
+
+\subsection{Sobolev powers of full-electric point sources}
+There are $L=648$ spatial links and $V=216$ spatial vertices.
+The compact link manifold has dimension $D=3L=1944$.
+Choose an irreducible connection q: after a spanning-tree gauge
+choice, two noncommuting loop holonomies have common centralizer
+$\{\pm I\}$. The principal gauge quotient near q is smooth of
+dimension
+\begin{equation}\label{eq:quotient-dimension}
+d=3L-3V=1296.
+\end{equation}
+The scalar and traceless covariant sectors are locally bundles of
+ranks one and three. Both are actual orthogonal reducing subspaces
+of $E=E_\nu$; the center acts trivially on their fibers. Their
+electric restrictions $E_j$ are locally elliptic with the same
+scalar positive quadratic principal symbol $p_2(q,\eta)$.
+
+Write $E_je_{jn}=\lambda_{jn}e_{jn}$ in actual orthonormal bases,
+$\omega_{jn}=\sqrt{1+\lambda_{jn}}$, and choose nonzero fiber
+vectors $\xi_j$ at q independently of arithmetic. For any real s
+define the combined spectral source
+\begin{equation}\label{eq:full-point-source}
+J_sf=\sum_{j=0}^1\sum_n\omega_{jn}^{-s}b_{jn}
+ \widehat f(\epsilon_j\omega_{jn})e_{jn},\qquad
+b_{jn}=\ip{e_{jn}(q)}{\xi_j}_{\rm fib},\quad
+\epsilon_0=1,\ \epsilon_1=-1.
+\end{equation}
+Point preparation fixes a boundary configuration; its electric
+Sobolev power controls regularity. These definitions precede any
+arithmetic matching. The two signs use existing color sectors;
+the generator is $\sqrt{1+E_0}\oplus(-\sqrt{1+E_1})$, an electric
+wave action rather than physical time.
+
+The local spectral law at this regular point is
+\begin{equation}\label{eq:point-weyl}
+N_j(R):=\sum_{\omega_{jn}\le R}|b_{jn}|^2
+=C_jR^d+o(R^d),\qquad C_j>0.
+\end{equation}
+In a local orthonormal fiber frame with quotient density
+$a_\nu(q)\dd q$,
+\begin{equation}
+C_j=\frac{\norm{\xi_j}_{\rm fib}^2}{(2\pi)^d a_\nu(q)}
+\int_{p_2(q,\eta)<1}\dd\eta.
+\end{equation}
+This is the local elliptic spectral-function law
+\cite{hormander-spectral,ramacher}; only its leading term at a
+fixed principal point is used. To check its application, conjugation
+by $\sqrt w$ preserves the full electric principal symbol and adds
+only a smooth potential to the Haar Laplacian. Gauge reduction on a
+principal neighborhood gives an elliptic bundle operator with scalar
+leading symbol. Its local heat-kernel coefficient is proportional
+to the fiber identity, giving the displayed positive constant.
+Equivalently the fixed-isotypic local Weyl law applies after removing
+the ineffective center. No smoothness of the entire singular quotient
+or uniform estimate toward its singular orbits is asserted.
+
+Polynomial spectral growth and Schwartz decay make
+\eqref{eq:full-point-source} converge strongly for every compact
+smooth test, with fixed-support seminorm bounds. It has the exact
+positive, state-dependent pairing
+\begin{equation}\label{eq:full-point-pairing}
+B_s(f,g)=\sum_{j,n}\omega_{jn}^{-2s}|b_{jn}|^2
+\overline{\widehat f(\epsilon_j\omega_{jn})}
+\widehat g(\epsilon_j\omega_{jn}).
+\end{equation}
+Finite spectral cutoffs preserve this pairing in the strong limit.
+No winding operation, phase deletion, or subtraction is used.
+
+\begin{proposition}[Full-electric point-source exclusion]\label{prop:point-exclusion}
+No real s in \eqref{eq:full-point-source} gives the complete Weil
+pairing. The same holds with distinct fixed Sobolev powers in the
+two orthogonal channels.
+\end{proposition}
+\begin{proof}
+Use \eqref{eq:shrinking-test} with a nonzero real profile h.
+The diagonal prime terms vanish for large R and
+\eqref{eq:shrinking-diag} gives
+$Q[f_R]=\norm{h''}_2^2\log R+O(1)$.
+Put $p=d-2s$. If $p>0$, partial summation of
+\eqref{eq:point-weyl} gives weighted cumulative mass
+$dC_jR^p/p+o(R^p)$. With
+$\widehat f_R(\tau)=R^{-5/2}(\tau^2+1/4)\widehat h(\tau/R)$,
+Stieltjes rescaling yields
+\begin{equation}\label{eq:point-scaling}
+B_s[f_R]\sim d(C_0+C_1)R^{p-1}
+\int_0^\infty u^{p+3}|\widehat h(u)|^2\dd u.
+\end{equation}
+The limiting measure is $dC_ju^{p-1}\dd u$; polynomial mass
+bounds and Schwartz decay control its tails. The factor $u^4$
+controls the origin, and the lower powers from $1/(4R^2)$ vanish.
+For $p=0$, weighted mass is $O(\log R)$; a dyadic split at R
+gives $B_s[f_R]=O(R^{-1}\log R)$. For $p<0$ the measure is finite
+and $\sup|\widehat f_R|=O(R^{-1/2})$ gives $O(R^{-1})$.
+Thus $p>1$ gives a positive power, $p=1$ a positive constant,
+and $p<1$ decay. None gives the required logarithm. Different
+powers in orthogonal channels cannot cancel positive leading terms.
+\end{proof}
+Fixed time rescaling changes only constants. A fixed contact
+$c\ip f g_2$ cannot repair this mismatch because $\norm{f_R}_2$
+is bounded. The contact in \eqref{eq:full-point-pairing} is already
+fixed by the actual spectral smearing; no divergent subtraction has
+been supplied with a positivity theorem. This excludes the specified
+Sobolev point-source family, including genuinely distributional
+members, not the full many-link electric action with every possible
+seed. Other singular supports, singular-orbit preparations, and
+nonclassical spectral weights require separate analysis and an
+independent physical prescription.
+
+\subsection{Many source directions on one short interval}
+\begin{lemma}[Uniform local test spaces]\label{lem:many-tests}
+Fix an interval I of length less than $\log2$. For all large integers
+N there are N-dimensional spaces of neutral tests supported in a
+fixed compact subinterval of I, parametrized by $f_{N,c}$, such that
+\begin{align}
+c_1\norm c&\le\norm{f_{N,c}}_2\le c_2\norm c,
+&Q[f_{N,c}]&\ge c_3\log N\,\norm c^2,\label{eq:many-tests}\\
+\norm{f_{N,c}}_{C^m}&\le C_mN^{m+1/2}\norm c,
+&\norm{f_{N,c}}_{H^s}&\le C_sN^s\norm c\quad(s\ge0).
+\end{align}
+\end{lemma}
+\begin{proof}
+Place N disjoint translates of $h_R=R^{1/2}h(R\cdot)$ inside I,
+with $R=aN$ for a sufficiently large fixed a. Let $H_c$ be their
+linear combination and put $f_{N,c}=R^{-2}\T H_c$. Disjointness gives
+\begin{equation}
+\norm{f_{N,c}}_2^2=
+\left(\norm{h''}^2+\frac{\norm{h'}^2}{2R^2}
++\frac{\norm h^2}{16R^4}\right)\norm c^2,
+\qquad \norm{H_c}_2=\norm h_2\norm c.
+\end{equation}
+Every prime mixed term vanishes. The Fourier projection onto
+$|\tau|\le\epsilon R$ satisfies
+\begin{equation}\label{eq:many-low-frequency}
+\norm{P_{\le\epsilon R}f_{N,c}}_2
+\le(\epsilon^2+1/(4R^2))\norm{H_c}_2.
+\end{equation}
+Choose $\epsilon>0$ small so this is at most half the full norm,
+uniformly in c for large R. The archimedean multiplier is bounded
+below globally and is at least $\log R-C_\epsilon$ on the remaining
+region, which carries at least three quarters of the squared norm.
+This proves the Q bound, including possible cancellation between
+translates. Derivative scaling and disjointness prove the integer
+Sobolev and $C^m$ bounds; interpolation gives all real $s\ge0$.
+\end{proof}
+
+\subsection{Strict-half-slab distributional preparation}
+Let X denote precisely the strict-half variables in
+\eqref{eq:boundary-weight}. Suppose $\mathcal Af$ is a covariant
+matrix-valued distribution depending on X and not on the central
+spatial links U. On each fixed arithmetic support interval assume
+\begin{equation}\label{eq:buffered-input}
+\mathcal A:\cD^0(I)\longrightarrow H^{-s}(X)
+\text{ is continuous and linear for some finite }s=s_I.
+\end{equation}
+This allows finite-order distributions in both the observable
+variables and arithmetic input. A jointly distributional kernel
+on $I\times X$ has this property by its local finite-order estimate
+and Sobolev embedding in X. It includes positive-time observables
+with admissible reference-color transport and finite-order
+insertions, but excludes explicit central-link source dependence.
+
+Physical boundary descent fixes
+\begin{equation}\label{eq:buffered-source}
+I_f(U)=\langle\mathcal Af,e^{-S_+(U,\cdot)}\rangle_X,
+\qquad Jf(U)=K_\nu\mathcal Af(U)=h(U)^{-1}I_f(U).
+\end{equation}
+Its exact reflected pairing is
+\begin{equation}\label{eq:buffered-pairing}
+B_{\mathcal A}(f,g)=Z^{-1}\int_M e^{-S_0(U)}
+\tfrac12\tr\big(I_f(U)^\dagger I_g(U)\big)\dd m(U).
+\end{equation}
+This retains the full interacting action and source dependence.
+It is positive with no subtraction, and has no native-generator
+or winding-module hypothesis.
+
+The compact finite integral has a smoothing property:
+\begin{equation}\label{eq:buffered-smoothing}
+K_\nu:H^{-s}(X)\longrightarrow\cK_r
+\text{ is bounded for every finite }s,r\ge0.
+\end{equation}
+Indeed every U derivative of its kernel $e^{-S_+(U,X)}/h(U)$
+has uniformly bounded $H^s(X)$ norm. Duality bounds all output
+derivatives, and elliptic Sobolev equivalence gives
+\eqref{eq:buffered-smoothing}. Smooth gauge-compatible regularizations
+of each input distribution converge in $H^{-s}(X)$ and hence strongly
+in the physical norm. Thus \eqref{eq:buffered-pairing} is the actual
+positive completed pairing, not a norm retained after weak escape.
+
+\begin{theorem}[No fixed smoothing preparation]\label{thm:smoothing-exclusion}
+No linear source with exact Weil pairing can obey, on one fixed
+short interval I,
+\begin{equation}\label{eq:common-input-order}
+\norm{Jf}_{\cK_r}\le C_{I,r}\norm f_{C^m}\quad\text{for every }r>0
+\end{equation}
+with one finite m independent of r. In particular the physical
+source \eqref{eq:buffered-input}--\eqref{eq:buffered-source} cannot
+have the Weil pairing.
+\end{theorem}
+\begin{proof}
+A conservative electric count is
+\begin{equation}\label{eq:ambient-count}
+\operatorname{rank}P_L\le C(1+L)^{D/2},\qquad
+P_L=\mathbf1_{[0,L]}(E),\quad D=1944.
+\end{equation}
+The upper/lower weight bounds compare Rayleigh quotients with Haar.
+On one SU(2) link the eigenvalues are $n^2-1$ with multiplicity $n^2$.
+Bounding each product factor by $\sum_{n\le\sqrt{CL+1}}n^2$ and
+including the four-dimensional matrix fiber proves the estimate
+on the full space. Restriction to covariant functions reduces the
+count. No global smooth-quotient Weyl law is needed.
+
+Choose $L_N\asymp N^{2/D}$ so $\operatorname{rank}P_{L_N}<N$.
+There is a unit coefficient vector $c_N$ in the kernel of
+$c\mapsto P_{L_N}Jf_{N,c}$. Lemma~\ref{lem:many-tests} and the
+electric spectral tail give
+\begin{equation}\label{eq:smoothing-contradiction}
+\sqrt{c_3\log N}\le\norm{Jf_{N,c_N}}
+\le(1+L_N)^{-r/2}\norm{Jf_{N,c_N}}_{\cK_r}
+\le C_rN^{m+1/2-r/D}.
+\end{equation}
+Taking $r>D(m+1/2)$ is a contradiction. For the buffered source,
+continuity in \eqref{eq:buffered-input} bounds its input by one
+$C^m$ seminorm. Equation~\eqref{eq:buffered-smoothing} then gives
+that same input order for every r, as required.
+\end{proof}
+The theorem is stronger than the ordinary-input-norm exclusion and
+does not require arithmetic translation to be a native action.
+It also covers $J=e^{-\beta E}\mathcal A$ for fixed $\beta>0$ and
+any continuous Hilbert-valued input distribution. This is electric
+diffusion, not an identification with physical time; the last bound
+improves to $CN^{m+1/2}\exp(-c\beta N^{2/D})$.
+
+Any finite winding operations on X preserving
+\eqref{eq:buffered-input} are included with their full observables.
+Central-link windings fall outside the stated source relation; no
+rational phase is removed. Fixed contact normalization cannot repair
+\eqref{eq:smoothing-contradiction}, since an added fixed multiple of
+$\norm f_2^2$ is bounded on the test spaces relative to $\norm c^2$.
+
+\subsection{Necessary preparation cost and scope}
+For any exact source taking values in $\cK_r$, the same rank argument
+implies
+\begin{equation}\label{eq:preparation-cost}
+\sup_{\norm c=1}\norm{Jf_{N,c}}_{\cK_r}
+\ge c_rN^{r/D}\sqrt{\log N}.
+\end{equation}
+Consequently a bound by the input $H^s(\R)$ norm requires
+$s>r/D$, including failure at equality. The compact-occurrence
+criterion of Theorem~\ref{thm:compact-occurrence} uses one fixed r
+and permits a suitable input seminorm, so remains valid. Its
+feasibility cannot be supplied by the fixed smoothing preparation
+just excluded. Merely having smooth source vectors, with input
+orders allowed to increase with output order, is not excluded.
+
+Central-slice-dependent distributional sources outside the point
+family, physically prescribed nonclassical electric weights, and
+limits losing these uniform preparation estimates remain open.
+The finite-lattice smoothing constants and dimension need not be
+uniform in a continuum limit. Neither this theorem nor the
+point-source exclusion closes all YM approaches.

@@ -1,5 +1,42 @@
 # Changelog
 
+## 2026-09-26 — wilson-loewner/YM: full electric sources and physical preparation
+
+- Tested two remaining source mechanisms in the original finite SU(2) state. Actual
+  positive full-electric point-source pairings with arbitrary fixed Sobolev powers
+  have power-law ultraviolet behavior and cannot reproduce the required logarithm.
+- Proved a generator-free obstruction to finite-order distributional observables
+  passed through the strict-half-slab integral without central-link dependence.
+  Uniform short-interval test spaces and an electric rank bound quantify the necessary
+  preparation cost for any compact-source occurrence argument.
+- Preserved the scope of all earlier exclusions. Central-link-dependent sources outside
+  the tested class and limits losing uniform preparation estimates remain open.
+- Added an analytical note and substantive self-audit; updated the live manuscript,
+  outline, indexes and prescribed DRAFT_HISTOR.md. Preserved earlier uncommitted work
+  and all numerical programs/records. No new numerical claim or model change.
+- Substantial GPT-6 (Codex) assistance; exact deployed variant and reasoning effort
+  unavailable. No commit, tag, large dataset or snapshot folder created.
+
+## 2026-09-25 — wilson-loewner/YM: distributional-source continuation after review
+
+- Proved a short-support mixed identity and a compact-return obstruction: every nonzero
+  translation step on the closure of an exact Weil source has the full unit circle as
+  essential spectrum. The proof uses the given form directly, without RH or zero data.
+- Tested the uncompensated radial electric wave in both actual reference-color channels.
+  Its distributional sources have positive state-dependent pairings and strong cutoff
+  limits, but its asymptotic integer frequencies give a forbidden compact return.
+- Under explicit infinite-volume positive-energy Poincare-vacuum assumptions, proved
+  absolute continuity of ordinary spacetime translation off the vacuum, excluding that
+  second source relation. Neither result closes all YM source mechanisms.
+- Updated the live manuscript and current indexes to reflect the review's scoped
+  corrections. Preserved historical reviews, records, and DRAFT_HISTOR.md.
+- Corrected the zero-list routine's certification labels. Its 30 floating diagnostics
+  pass in a separate replay; an exact-rational seven-check control records a proved
+  full-strip infinite post-6063 remainder below 1.665e-22 for |t| <= 7. The finite
+  comparison, stored ordinates and quadrature remain diagnostic.
+- GPT-6 (Codex) assistance; exact serving variant and reasoning effort unavailable.
+  No commit, tag, snapshot folder, or large derived dataset created.
+
 ## 2026-09-25 — wilson-loewner/YM: reply to the GPT-6 response (Claude Fable 5.1)
 
 - Reply in YM/response/CLAUDE_REPLY_TO_RESPONSE_20260925.md. Conceded: the R1 extension

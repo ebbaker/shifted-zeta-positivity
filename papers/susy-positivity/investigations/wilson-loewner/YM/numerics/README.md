@@ -1,5 +1,15 @@
 # YM numerics and algebra controls
 
+## Infinite remainder control and diagnostic zero-list replay, 25 September 2026
+
+Run the new rational control from the YM directory:
+
+```sh
+python3 numerics/check_probe_postcutoff_tail.py --output numerics/records/probe-postcutoff-tail-20260925.json
+```
+
+All seven exact rational checks pass. GPT-6 (Codex) assistance; exact serving variant and reasoning effort unavailable. This control verifies the stated analytic tail estimate, not the stored zero list or RH.
+
 ## Independent controls and the zero-list check, 25 September 2026
 
 The [independent checker](check_probe_against_zeros.py), its [record](records/probe-against-zeros-20260925.json), and the [zero ordinates](records/zeta-zeros-700.json) accompany the [verification review](../reviews/REVIEW_CLAUDE_MANUSCRIPT_VERIFICATION_20260925.md). Prepared for Edward Baker by Claude (Anthropic), model line claude-fable-5-1 (Fable 5.1), session configured as claude-opus-5-5; reasoning effort not exposed. The program was written from the manuscript's displayed formulas, not from the other programs here, and uses different discretizations.
@@ -10,7 +20,7 @@ Run from the YM directory with Python 3 and NumPy (about four minutes; `--extend
 OPENBLAS_NUM_THREADS=1 python3 -B numerics/check_probe_against_zeros.py --output /tmp/ym-probe-against-zeros.json
 ```
 
-All 30 floating controls passed (revised 25 September after the [GPT-6 response](../response/RESPONSE_TO_CLAUDE_MANUSCRIPT_VERIFICATION_20260925.md): the wound-norm metadata now labels a^-1 ||f||^2 as the identity-phase share rather than the Haar value, and a rigorous envelope bound for the omitted zeros replaces a sampled weight): the contact constant; Theorem 5.2 by direct log-angle quadrature for a complex pair at N = 256 and 1024 (errors below 1e-14); Theorem 4.1 with a five-harmonic non-Haar marginal (prime mixed limits, wound norms, gcd formula; errors below 3e-9 at N = 4096 with O(N^-2) convergence); the closed archimedean tail; and the one control this folder lacked, the detecting response C_*(t) computed from the definition (digamma integral plus von Mangoldt sum) against the sum over the first 700 nontrivial zeros at twelve translates in [0, 7], agreeing to 1.1e-13, with a proved remainder from omitted zeros below 1.2e-12 on the critical line and below 5.6e-11 for hypothetical zeros anywhere in the strip at t <= 7 (control 7). Q[f_*] = 6.34767 > 0 and the mean square of C_* on [0, 200] matches the almost-periodic prediction to 0.1 %. These are floating diagnostics; they do not prove RH, any limiting theorem, positivity, or source occurrence.
+All 30 floating controls pass in the [separate replay record](records/probe-against-zeros-replay-20260925.json), preserving the original historical record. The finite envelope sums reproduce 1.1568301926817994e-12 and 5.589316695308886e-11 through the block starting at 6063. They are **not certified infinite-tail bounds**: floating arithmetic, the 48-factor product, quadrature and stored ordinates lack complete enclosures. The [tail audit](../reviews/PROBE_TAIL_CERTIFICATION_AUDIT_20260925.md) proves separately that the full-strip infinite remainder above 6063 is below 1.665e-22 for |t| <= 7, using twelve product factors and a proved zero-count bound. Its [exact-rational control](check_probe_postcutoff_tail.py) and [record](records/probe-postcutoff-tail-20260925.json) use only the standard library and no zero file. This does not certify the whole comparison. Published low-height RH verification does not enclose the individual stored floating ordinates. The source includes a NumPy trapezoid/trapz compatibility fallback.
 
 Reproducibility note from the same review: `check_positive_hierarchy.py` uses `np.trapz`, removed in NumPy 2.4; a fallback such as `getattr(np, "trapezoid", getattr(np, "trapz", None))` (lines 231 and 234) keeps both old and new environments running. With that shim all 64 of its controls reproduce. All other programs reproduce their records to roundoff in Python 3.11 / NumPy 2.4.
 

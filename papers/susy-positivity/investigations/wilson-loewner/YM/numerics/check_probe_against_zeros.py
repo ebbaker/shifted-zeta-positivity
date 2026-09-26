@@ -24,7 +24,14 @@ metadata field formerly called `haar_value` mislabelled the identity-phase part
 a^{-1}||f||^2 as the Haar wound norm; the total Haar wound norm is ||f||^2 (V_a is
 an isometry in the Haar limit).  It is now `identity_phase_part`.  The former
 `tail_weight_at_last_ordinate` was a single sampled weight, not a tail bound; the
-record now carries a rigorous envelope bound for the omitted zeros (control 7).
+record carries a finite floating envelope sum for omitted zeros (control 7).
+
+Certification correction, GPT-6 (Codex), 25 September 2026: the loop stops after
+the block starting at height 6063, and the 48-factor product and floating
+arithmetic have no complete enclosures. These sums are diagnostic, not rigorous
+infinite-tail bounds. The separately proved post-cutoff remainder is recorded by
+check_probe_postcutoff_tail.py; see ../reviews/PROBE_TAIL_CERTIFICATION_AUDIT_20260925.md.
+Published low-height RH verification does not certify the stored floating ordinates.
 
 Controls:
   1  m_+(0) = psi(1/4) - log pi = -gamma - pi/2 - 3 log 2 - log pi
@@ -41,14 +48,13 @@ Controls:
   6  Corollary 10.3: the empirical mean square of C_* on [0, 200] equals the
      almost-periodic prediction sum 2|w_gamma|^2 within one percent, and
      Q[f_*] = C_*(0) > 0.
-  7  Tail of the zero sum beyond the last listed ordinate T0: a rigorous envelope
+  7  Finite floating envelope beyond the last listed ordinate T0: an analytic envelope
      for |F(lambda)F(-lambda)| (each factor sinh(w)/w bounded by
      min(sinh(x)/x, cosh(x)/|w|) with x = Re w) times Backlund's zero-count bound
-     gives sum_{|gamma|>T0} 2|fhat_*(gamma)|^2 <= (conditional bound), and, for
+     gives a finite diagnostic sum (both signs counted once), and, for
      hypothetical zeros anywhere in the strip |Re z| <= 1/2 above height T0, the
-     same with Re(1+z) <= 3/2 and the growth factor e^{t/2}; both are far below the
-     comparison tolerance.  Zeros with |gamma| <= T0 lie on the critical line by
-     the published verification of RH to height 3e12 (Platt-Trudgian 2021).
+     same with Re(1+z) <= 3/2 and the growth factor e^{|t|/2}. Neither number
+     encloses the full comparison error or certifies the stored zero list.
 """
 import argparse
 import hashlib
@@ -58,6 +64,8 @@ import platform
 from pathlib import Path
 
 import numpy as np
+
+TRAPEZOID = getattr(np, "trapezoid", getattr(np, "trapz", None))
 
 EULER = 0.57721566490153286060
 HERE = Path(__file__).resolve().parent
@@ -113,7 +121,7 @@ def fhat_probe(tau):
 
 
 def envelope_B(gamma, re_shift):
-    """Rigorous upper bound for |B(w)| with w = (re_shift - i*gamma)*a_j per factor.
+    """Floating evaluation of a 48-factor envelope, not a certified infinite bound.
 
     |sinh(x+iy)|^2 = sinh^2 x + sin^2 y <= cosh^2 x  and  |w| >= a_j |gamma|, so each
     factor is <= cosh(a_j re_shift)/(a_j |gamma|); also
@@ -131,8 +139,8 @@ def envelope_B(gamma, re_shift):
     return out
 
 
-def tail_bound(T0, t_max):
-    """sum over omitted zeros of the explicit-formula weights, bounded rigorously.
+def tail_envelope_diagnostic(T0, t_max):
+    """Finite floating block envelope; no infinite remainder is added here.
 
     Zeros are counted with Backlund's bound |N(T) - (T/2pi) log(T/2pi e) - 7/8|
     <= 0.137 log T + 0.443 log log T + 4.35 (T >= 2).  On each unit block [T, T+1]
@@ -196,11 +204,11 @@ XG = np.linspace(-3.0, 3.0, 60001)
 
 def fourier(fun, tau):
     fx = fun(XG)
-    return np.array([np.trapezoid(fx * np.exp(-1j * t * XG), XG) for t in tau])
+    return np.array([TRAPEZOID(fx * np.exp(-1j * t * XG), XG) for t in tau])
 
 
 def inner_shift(f1, f2, s):
-    return np.trapezoid(np.conj(f1(XG)) * f2(XG - s), XG)
+    return TRAPEZOID(np.conj(f1(XG)) * f2(XG - s), XG)
 
 
 def gl_nodes(npanels, upper):
@@ -287,7 +295,7 @@ def main():
     # 2. Theorem 5.4
     tau = np.arange(-400.0, 400.0, 0.02)
     fh, gh = fourier(f_test, tau), fourier(g_test, tau)
-    target = np.trapezoid(m_plus(tau) * np.conj(fh) * gh, tau) / (2 * math.pi)
+    target = TRAPEZOID(m_plus(tau) * np.conj(fh) * gh, tau) / (2 * math.pi)
     arch = []
     for N in (256, 1024):
         r = control_archimedean(target, N)
@@ -335,13 +343,13 @@ def main():
     wz = 2.0 * np.abs(fhat_probe(zeros)) ** 2
 
     def k_corr(s):
-        return np.trapezoid(W * np.cos(tgrid * s), tgrid) / math.pi
+        return TRAPEZOID(W * np.cos(tgrid * s), tgrid) / math.pi
 
     def c_arch(t):
-        return np.trapezoid(W * Mp * np.cos(tgrid * t), tgrid) / math.pi
+        return TRAPEZOID(W * Mp * np.cos(tgrid * t), tgrid) / math.pi
 
     tvals = [0.0, 0.3, 0.7, 1.0, 1.5, 2.0, 2.5, 3.0, 4.0, 5.0, 6.0, 7.0] + ([10.0] if args.extended else [])
-    tail_cond, tail_uncond, tail_T_end = tail_bound(float(zeros[-1]), max(tvals))
+    tail_cond, tail_uncond, tail_T_end = tail_envelope_diagnostic(float(zeros[-1]), max(tvals))
     labels, lam = von_mangoldt(int(math.exp(max(tvals) + 2.0)) + 2)
     probe_rows = []
     for t in tvals:
@@ -377,25 +385,29 @@ def main():
     q_probe = probe_rows[0]["definition"]
     check("Q[f_*] > 0", 0.0 if q_probe > 0 else 1.0, 0.5, value=q_probe)
 
-    # 7. the omitted-zero tail is below the comparison tolerance
-    check("rigorous tail bound (critical line) below 1e-9", tail_cond, 1e-9, unconditional_strip_bound=tail_uncond)
+    # 7. diagnostic only: this check does not certify the complete omitted tail
+    check("finite floating tail envelope (critical line) below 1e-9", tail_cond, 1e-9,
+          finite_strip_envelope=tail_uncond, certified=False)
 
     result = {
         "status": "floating diagnostics only; not proof of RH, any limiting theorem, positivity, or source occurrence",
         "prepared_for": "Edward Baker",
-        "assistant": "Claude (Anthropic); model line claude-fable-5-1 (Fable 5.1), session configured as claude-opus-5-5; serving model may differ; reasoning effort not exposed",
+        "assistant": "Original program: Claude (Anthropic), claude-fable-5-1 (Fable 5.1), session configured as claude-opus-5-5. Certification labels corrected with GPT-6 (Codex) assistance; exact serving variants and reasoning effort unavailable.",
         "python": platform.python_version(),
         "numpy": np.__version__,
         "script_sha256": hashlib.sha256(Path(__file__).read_bytes()).hexdigest(),
         "zeros": {"count": int(len(zeros)), "last_ordinate": float(zeros[-1]),
                   "weight_at_last_ordinate": float(np.abs(fhat_probe(zeros[-1])) ** 2),
-                  "tail_bound_critical_line": tail_cond,
-                  "tail_bound_strip_unconditional_t_le_7": tail_uncond,
-                  "tail_bound_summed_to_height": tail_T_end,
-                  "tail_bound_method": "per-factor envelope min(sinh x/x, cosh x/|w|) times Backlund zero count per unit block; zeros below the last ordinate are on the line by Platt-Trudgian 2021",
+                  "finite_block_envelope_critical_line": tail_cond,
+                  "finite_block_envelope_full_strip": tail_uncond,
+                  "finite_block_t_max": max(tvals),
+                  "finite_block_last_start_height": tail_T_end,
+                  "finite_block_method": "floating 48-factor envelope times zero-count bound per unit block; no infinite remainder; stored ordinates not certified",
+                  "zero_file_sha256": hashlib.sha256(ZERO_FILE.read_bytes()).hexdigest(),
+                  "postcutoff_proof": "reviews/PROBE_TAIL_CERTIFICATION_AUDIT_20260925.md; applies to |t| <= 7, independently of this diagnostic",
                   "first_weights": [float(w) for w in wz[:5]]},
         "probe": {"B_one": B_ONE, "F_half": [float(abs(F_detect(0.5))), float(abs(F_detect(-0.5)))],
-                  "min_abs_fhat_on_grid": float(np.sqrt(W).min()), "l2_norm_squared": float(np.trapezoid(W, tgrid) / math.pi)},
+                  "min_abs_fhat_on_grid": float(np.sqrt(W).min()), "l2_norm_squared": float(TRAPEZOID(W, tgrid) / math.pi)},
         "archimedean_target": [target.real, target.imag],
         "archimedean_convergence": arch,
         "marginal": packets,

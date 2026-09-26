@@ -1,0 +1,266 @@
+\section{Distributional sources: compact returns and spacetime translations}
+\label{sec:distributional}
+We now test two further, explicitly specified source relations.
+The first stays in the original finite-slab state and retains its
+radial electric potential. The second explicitly assumes an
+infinite-volume continuum vacuum. Neither changes the scope of
+the preceding exclusions into a prohibition on all YM sources.
+
+\subsection{Short-support mixed identities and compact returns}
+For nonzero $h\in\cD$, put
+\begin{equation}\label{eq:shrinking-test}
+h_R(x)=R^{1/2}h(Rx),\qquad f_R=R^{-2}\T h_R\in\cD^0,
+\qquad c_h=\norm{h''}_2^2>0.
+\end{equation}
+These tests shrink in support; they are not the modulations
+of Proposition~\ref{prop:highfreq}. Their exact normalizations are
+\begin{equation}
+\norm{f_R}_2^2=c_h+\frac{\norm{h'}_2^2}{2R^2}
+ +\frac{\norm h_2^2}{16R^4},\qquad
+\widehat f_R(\tau)=R^{-5/2}(\tau^2+1/4)\widehat h(\tau/R).
+\end{equation}
+\begin{lemma}[Shrinking-support mixed test]\label{lem:shrinking}
+With the complete contact convention \eqref{eq:contact-growth},
+\begin{align}
+Q[f_R]&=c_h\log R+d_h+o(1),&
+d_h&=\frac1{2\pi}\int u^4\log\frac{|u|}{2\pi}
+                         |\widehat h(u)|^2\dd u,\label{eq:shrinking-diag}\\
+Q(f_R,U_tf_R)&=-b(t)\norm{f_R}_2^2+O_{h,t}(R^{-5})
+\quad(t\ne0),\label{eq:shrinking-off}\\
+Q(f_R,g)&=O_{h,g}(R^{-5/2})\quad(g\in\cD^0\ \hbox{fixed}).
+\label{eq:shrinking-weak}
+\end{align}
+Here $b(t)=\Lambda(a)/\sqrt a$ if $|t|=\log a$ for an integer
+$a\ge2$, and is zero otherwise.
+\end{lemma}
+\begin{proof}
+The diagonal prime sum vanishes once the support diameter is
+less than $\log2$. Scale the archimedean integral to obtain
+\[
+\frac1{2\pi}\int m_+(Ru)(u^2+(4R^2)^{-1})^2
+                              |\widehat h(u)|^2\dd u.
+\]
+Use \eqref{eq:contact-growth} for $|u|\ge R^{-1}$ and boundedness
+of $m_+$ on the remaining interval. The $u^4\log|u|$ term is
+integrable, the other tails are Schwartz, and the polynomial
+correction is $O(R^{-2}\log R)$. This proves
+\eqref{eq:shrinking-diag}. Adding a constant c to the multiplier
+would change $d_h$ by $cc_h$; the contact has not been reset.
+
+At fixed nonzero t the supports are eventually separated.
+Move both copies of $\T$ onto the smooth off-diagonal kernel
+$-n_\Gamma(|x-y|)$. Its derivatives are bounded there, and
+$R^{-4}\norm{h_R}_1^2=R^{-5}\norm h_1^2$.
+Local discreteness of the prime shifts leaves only the shift
+exactly cancelling t, giving \eqref{eq:shrinking-off}, including
+when t is a prime-power separation. For fixed g, the Fourier
+formula and its rapid decay prove \eqref{eq:shrinking-weak}
+for the archimedean term. There are only finitely many prime
+terms on the enclosing supports; moving $\T$ onto each
+translate of g gives the same estimate.
+\end{proof}
+
+\begin{theorem}[No compact return for an exact source]\label{thm:compact-return}
+Suppose a continuous law $J:\cD^0\to\cH$ into a positive
+physical Hilbert space has pairing Q. On
+$\mathcal S=\overline{J\cD^0}$ let $V_t$ implement
+$JU_t=V_tJ$, either as the induced action or as a restriction
+of a specified physical unitary group. Then, for every $L\ne0$,
+\begin{equation}\label{eq:essential-circle}
+\sigma_{\rm ess}(V_L|_{\mathcal S})=\{z:|z|=1\}.
+\end{equation}
+In particular no nonzero Laurent polynomial in $V_L$ is
+compact on $\mathcal S$. Thus $V_L-e^{\ii\phi}I$ cannot be
+compact there or on an ambient sector containing it.
+\end{theorem}
+\begin{proof}
+Set $x_R=Jf_R/\sqrt{\log R}$. Lemma~\ref{lem:shrinking} and
+density give $x_R\rightharpoonup0$ and
+$\norm{x_R}^2\to c_h$. For every nonzero integer k,
+$\ip{x_R}{V_L^kx_R}\to0$ by \eqref{eq:shrinking-off}.
+Consequently, for $p(z)=\sum_jp_jz^j$,
+\begin{equation}
+\norm{p(V_L)x_R}^2\longrightarrow c_h\sum_j|p_j|^2.
+\end{equation}
+This contradicts compactness for every nonzero p. Uniform
+polynomial approximation extends the formula to continuous
+F on the circle, with limit
+$c_h\int|F(e^{\ii\theta})|^2\dd\theta/(2\pi)$.
+If an open arc missed the essential spectrum, a nonzero
+continuous F supported there would give compact $F(V_L)$
+by continuous functional calculus modulo compact operators,
+again a contradiction.
+\end{proof}
+The proof uses the geometric form directly, not RH or a zero
+spectrum. Its weakly null family is a contradiction test,
+not a proposed physical limit retaining norms. Pure point
+spectrum alone is not excluded: Kronecker flows can have
+the full-circle essential spectrum required here. Compact
+resolvent of a generator alone does not imply a compact return.
+
+\subsection{Candidate A: uncompensated electric waves in both polarizations}
+Keep the fixed state of Section~\ref{sec:boundary}. For
+$P=\cos\theta I+\ii\sin\theta\,\omega\cdot\sigma$, set
+$\Sigma(P)=\omega\cdot\sigma$, ignoring the null endpoints.
+The existing scalar and adjoint reference-color channels give
+the actual closed sector
+\begin{equation}
+\cH_{\rm pol}=\{F_0(\theta)I+F_1(\theta)\Sigma(P)\}
+\simeq L^2(\mu_\rho)\oplus L^2(\mu_\rho),\qquad
+\dd\mu_\rho=\tfrac2\pi\rho\sin^2\theta\dd\theta.
+\end{equation}
+The trace/2 norm makes the channels orthogonal. Compress the
+actual electric form divided by $\ell=4$ to this sector:
+\begin{equation}\label{eq:polar-electric}
+q_\rho[F]=\frac2\pi\int_0^\pi\rho\{
+\sin^2\theta(|F_0'|^2+|F_1'|^2)+2|F_1|^2\}\dd\theta.
+\end{equation}
+Each distinct link supplies the same SU(2) Dirichlet term;
+the angular factor is $\sum_j|\nabla_{S^2}\omega_j|^2=2$.
+Take the closed forms and their Friedrichs operators
+$E_0,E_1\ge0$. This is a form compression, not a claim that
+the full $E_\nu$ reduces the sector.
+
+With $v=\sqrt\rho\sin\theta$ and $WF=\sqrt{2/\pi}\,vF$,
+\begin{equation}\label{eq:polar-liouville}
+WE_0W^{-1}=-\partial^2+v''/v,\qquad
+WE_1W^{-1}=-\partial^2+2\csc^2\theta+v''/v.
+\end{equation}
+The first has Dirichlet endpoints and the second the
+Friedrichs inverse-square endpoints. The retained potential
+$v''/v$ is smooth and bounded. No compensation is performed.
+The candidate translation is the electric-wave prescription
+\begin{equation}\label{eq:electric-wave}
+G_{\rm el}=\sqrt{1+E_0}\oplus(-\sqrt{1+E_1}),\qquad
+V_x=e^{-\ii xG_{\rm el}}.
+\end{equation}
+Both frequency directions are supplied inside the existing
+physical sector. The unit shift uses the fixed Casimir units;
+any fixed positive shift or common speed rescaling gives the
+same conclusion below. Identifying arithmetic x with this
+electric-wave parameter is the candidate's extra source relation,
+not a consequence of YM dynamics or physical Euclidean time.
+
+Let $e_{s,n}$ be its actual electric eigenvectors with positive
+frequencies $\omega_{s,n}$, and let a distributional seed have
+coefficients satisfying
+\begin{equation}
+\sum_{s,n}(1+\omega_{s,n}^2)^{-r}|b_{s,n}|^2<\infty
+\end{equation}
+for some finite r. Evaluation at a fixed interior holonomy
+angle, for example $\pi/2$, and its angular derivatives are
+independent geometric examples, by Sobolev evaluation.
+With $\epsilon_0=1$, $\epsilon_1=-1$, define
+\begin{align}
+J_bf&=\sum_{s,n}b_{s,n}\widehat f(\epsilon_s\omega_{s,n})e_{s,n},\\
+\ip{J_bf}{J_bg}_\nu
+&=\sum_{s,n}|b_{s,n}|^2
+\overline{\widehat f(\epsilon_s\omega_{s,n})}
+\widehat g(\epsilon_s\omega_{s,n}).\label{eq:electric-wave-pair}
+\end{align}
+Fourier decay proves strong convergence of spectral cutoffs,
+smooth-test continuity and the displayed positive pairing.
+The eigenvalues and coefficients of a fixed geometric seed
+retain the actual state dependence. Finite-order derivatives
+are included by increasing r. There is no subtraction or
+renormalization, and no winding phase is discarded: this
+candidate uses electric eigenvectors rather than scaling
+packets. Any admissible winding-modified seed is included
+with all its coefficients and obeys the same exclusion.
+
+\begin{proposition}[Failure of the radial electric-wave candidate]
+No source covariant under \eqref{eq:electric-wave} has the
+complete Weil pairing, even without a finite-order seed bound.
+\end{proposition}
+\begin{proof}
+Put $V_\rho=1+v''/v$, a bounded real potential.
+The Haar comparison operators for $1+E_s$ have eigenvalues
+$n^2$, starting at $n=1$ for the scalar channel and $n=2$
+for the adjoint channel. For the latter use
+$A=\partial-\cot\theta$, with
+$A^*A=-\partial^2-1$ and
+$AA^*=-\partial^2+2\csc^2\theta-1$.
+The vectors $A\sin(n\theta)$, $n\ge2$, are complete;
+the missing adjoint kernel $1/\sin\theta$ is not in $L^2$.
+The min-max principle for the bounded perturbation $V_\rho$
+therefore gives
+\begin{equation}
+|\omega_{s,n}^2-n^2|\le\norm{V_\rho}_\infty,\qquad
+\omega_{s,n}=n+O_\rho(n^{-1}).
+\end{equation}
+Thus $V_{2\pi}-I$ is compact on both channels. Apply
+Theorem~\ref{thm:compact-return}.
+\end{proof}
+This pure-point candidate avoids the earlier absolutely
+continuous current obstruction and requires no winding
+intertwiner. It fails because of its asymptotic spacing.
+The full many-link electric operator need not have this
+spacing; no conclusion about that operator follows here.
+
+\subsection{Candidate B: translations in a continuum vacuum}
+We now explicitly change to continuum YM on Minkowski
+$\R^{1,3}$. Assume continuum existence and full OS
+reconstruction with a separable physical Hilbert space,
+a strongly continuous positive-energy unitary Poincar\'e
+representation, and a unique translation-invariant vacuum.
+A physical mass gap is allowed but unnecessary below.
+For a fixed nonzero real four-vector a the candidate relation is
+\begin{equation}\label{eq:spacetime-source}
+JU_t=e^{-\ii tP\cdot a}J.
+\end{equation}
+It describes translating a fixed physical preparation along a
+straight spacetime direction. For $b=A\Omega_{\rm vac}$ and
+a polynomial p, derivative smearing has actual pairing
+\begin{equation}
+J_bf=\{p(\ii\lambda)\widehat f(\lambda)\}(P\cdot a)b,
+\qquad
+\ip{J_bf}{J_bg}=\int\overline{\widehat f}\widehat g
+                         |p(\ii\lambda)|^2\dd\mu_b^a(\lambda).
+\end{equation}
+The combined multiplier is bounded on each test and gives
+strong spectral-cutoff convergence. More singular seeds
+are permitted if smearing gives actual Hilbert vectors.
+
+\begin{lemma}[Spacetime-line spectral type]\label{lem:spacetime-ac}
+Under these continuum representation assumptions,
+$P\cdot a$ has absolutely continuous spectrum off the
+vacuum for every $a\ne0$.
+\end{lemma}
+\begin{proof}
+Let E be the joint momentum spectral measure and choose a
+finite control measure
+$\mu=\sum_n2^{-n}\ip{e_n}{E(\cdot)e_n}$ from an orthonormal
+basis. It has the same null sets as E, and covariance makes
+its measure class Lorentz invariant. Average it over a smooth
+compactly supported nonnegative Lorentz-group density positive
+near the identity. The average has the same null sets:
+one direction follows from covariance, and the other from
+continuity and nonnegativity of
+$\ip{U(\Lambda)e_n}{E(B)U(\Lambda)e_n}$ at the identity.
+
+For every nonzero forward-cone p, the real-analytic function
+$\Lambda\mapsto a\cdot\Lambda p$ is nonconstant. Its critical
+set has Haar measure zero. The submersion/coarea theorem
+therefore makes the inverse image of each Lebesgue-null set
+Haar-null. Tonelli and equivalence of the averaged measure
+prove the assertion for all $p\ne0$. At zero momentum,
+uniqueness leaves only the vacuum.
+\end{proof}
+This proof includes spacelike and lightlike a and requires
+neither a particle decomposition nor asymptotic completeness.
+It uses infinite-volume Lorentz covariance, which the fixed
+slab does not possess. Mass-shell representation theory gives
+the same interpretation \cite{bekaert-boulanger}.
+
+Consequently each vector coefficient is a vacuum constant
+plus a function in $C_0(\R)$. If it equalled $C_*$, boundedness
+would imply RH by Theorem~\ref{thm:probe-criterion}.
+Under that consequence \eqref{eq:C-positive} has zero Ces\`aro
+mean and positive mean square. The first removes the vacuum
+constant; the second contradicts $C_0$ decay. Hence no exact
+source can satisfy \eqref{eq:spacetime-source}, even for
+distributional preparations whose smeared vectors exist.
+This verifies a physical spectral hypothesis rather than
+assuming clustering in an unidentified arithmetic variable.
+Neither candidate establishes the missing non-geometric
+source relations or compact arithmetic feasibility.
