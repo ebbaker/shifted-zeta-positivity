@@ -1,8 +1,12 @@
 # CCM operator realizations: program overview
 
-Date: 28 September 2026. Status: updated after whole-line weighted-tail and discrete-spectrum analysis, round 8.
+Date: 28 September 2026. Status: round 9 completed; bounded endpoint-energy route obstructed, one-sided threshold inequality still open.
 
-Drafted for Edward Baker with LLM assistance. Model: GPT-6 (Codex); the exact model variant and reasoning-effort setting are not exposed in this session. This document summarizes the research record and current priority. The linked round-6 through round-8 notes supply residual, restricted selection, complement, weighted-gap, and whole-line spectral results; no true-ground overlap lower bound, RH proof, or determinant-limit theorem is claimed. This is not independent peer review.
+Drafted for Edward Baker with LLM assistance. Model: GPT-6 (Codex); the exact model variant and reasoning-effort setting are not exposed in this session. This document summarizes the research record and current priority. The linked round-6 through round-9 notes supply residual, restricted selection, complement, weighted-gap, whole-line spectral, and endpoint-energy obstruction results; no true-ground overlap lower bound, RH proof, or determinant-limit theorem is claimed. This is not independent peer review.
+
+**Resume here:** [round-9 findings and decision](notes/CCM_THRESHOLD_ENERGY_OBSTRUCTION_20260928.md) and [sequential review](reviews/CCM_THRESHOLD_ENERGY_REVIEW_20260928.md). The bounded endpoint-operator route in the bare archimedean energy norm is suspended: even after exact ground removal its signed operator is unbounded below. Further work needs a one-sided signed estimate or a new comparison after physical threshold compression. Sonin residuals remain deferred.
+
+**Saved baseline:** `8eaabbf5ab409422827013b6bc83ad0c1bbb92bc` contains the completed research through round 8. Round 9 and the preceding handoff refresh are uncommitted working-tree additions after that baseline; inspect the actual checkout before continuing and preserve later work.
 
 ## Purpose and present assessment
 
@@ -10,13 +14,15 @@ The investigation seeks a realization of the Connes–Consani–Moscovici (CCM) 
 
 The early work developed finite realizations and the removal of the Fourier cutoff at fixed support. It produced useful identities, a conditional determinant limit, and a certified infinite Fourier-tail bound at one support length. The latest round adds unconditional whole-line tail control for the weighted jump operator. This does not identify the limiting CCM determinant or supply a uniform inverse-moment bound for it.
 
-The [bounded audit](notes/CCM_INFINITE_L_BOUNDED_AUDIT_20260926.md) is complete. Its decision is to **change approach to the arithmetic ground-state comparison and suspend automatic enlargement of the fixed-support certificate**. The proposed 4096-mode Schur certificate remains a local question; the audit proves why merely improving its gap input cannot repair the existing support-dependent trace estimate.
+The [bounded audit](notes/CCM_INFINITE_L_BOUNDED_AUDIT_20260926.md) is complete. Its round-5 decision was to change approach to the arithmetic ground-state comparison and suspend automatic enlargement of the fixed-support certificate. Rounds 6–8 developed that investigation into the current weighted threshold-index target. The proposed 4096-mode Schur certificate remains a local question; the audit proves why merely improving its gap input cannot repair the existing support-dependent trace estimate.
 
 The [ground-selection continuation](notes/CCM_GROUND_SELECTION_TARGET_20260928.md) now constructs unconditional arithmetic approximate-null vectors and proves why they do not select the ground state. A weaker sufficient target for RH is available: the bottom even spectral projection of the truncated Xi kernel must have norm that dominates its known operator residual. This avoids needing full profile convergence for the RH implication, but the needed overlap lower bound is unproved. Identification of the CCM determinant still requires stronger control. A bounded diagnostic favors resolving the weak even cluster rather than dividing a full residual norm by the second-even separation.
 
 The [round-7 continuation](notes/CCM_BOUNDARY_SELECTION_AND_COMPLEMENT_20260928.md) now proves selection toward Xi within the two-profile derivative space and eventual positivity at every fixed derivative rank. Its complement analysis proves that fixed-support derivative spaces form a core, while fixed-rank growing-support energies always tend to zero unconditionally. A uniform joint limit is essential. The new exact weighted-jump formulation supplies a sharp alternative inequality, including the obstruction that every fixed finite-prime truncation has gap zero. These are concrete advances in identifying and testing the missing estimate, not a proof of that estimate.
 
 The [round-8 continuation](notes/CCM_WEIGHTED_TAIL_AND_DISCRETE_OBSTRUCTION_20260928.md) now proves the full weighted exterior threshold and identifies 1/4 as the essential spectral lower edge. Any additional spectrum below it consists of discrete eigenvalues. Exact pole cancellation gives superexponential exterior bounds without PNT, while a separate prime-return argument explains the arithmetic mechanism. The remaining sharp inequality becomes a compact eigenvalue-count problem at every fixed distance below 1/4, with uniform control as that distance tends to zero still missing.
+
+The [round-9 investigation](notes/CCM_THRESHOLD_ENERGY_OBSTRUCTION_20260928.md) now proves a structural obstruction to bounded endpoint normalization. The exact threshold profiles are dense in the bare archimedean energy completion; as a result, the ground-reduced Birman–Schwinger family diverges on its negative side, every fixed prime tail has unbounded absolute relative error, and physical projection off the known threshold span is unbounded in that energy norm. These results do not obstruct the desired one-sided upper bound or establish RH. They identify a specific route to suspend and the signed input needed to change approach.
 
 ## Parameters and the two limits
 
@@ -48,6 +54,7 @@ The finite construction assumes the full Weil matrix has a simple even least eig
 | Ground-selection continuation | Unconditional boundary residual and near-zero cluster; escaping arithmetic moments; a weaker sufficient RH overlap criterion, with its lower bound still missing | [Target](notes/CCM_GROUND_SELECTION_TARGET_20260928.md), [review](reviews/CCM_GROUND_SELECTION_REVIEW_20260928.md) |
 | Boundary selection and complement | Explicit two-profile selection; fixed-rank positivity and fixed-support form core; complement obstruction; sharp weighted-jump target and finite-prime zero-gap theorem | [Continuation](notes/CCM_BOUNDARY_SELECTION_AND_COMPLEMENT_20260928.md), [review](reviews/CCM_BOUNDARY_SELECTION_REVIEW_20260928.md) |
 | Full weighted tail and discrete obstruction | Whole-line exterior coercivity; essential lower edge 1/4; simple zero mode and positive unspecified gap; fixed-depth compact counting criterion, with sharp exclusion unproved | [Continuation](notes/CCM_WEIGHTED_TAIL_AND_DISCRETE_OBSTRUCTION_20260928.md), [review](reviews/CCM_WEIGHTED_TAIL_REVIEW_20260928.md) |
+| Threshold energy and deflation obstruction, round 9 | Energy-density theorem; negative endpoint divergence after ground removal; fixed-prime absolute-relative obstruction; physical threshold projection unbounded in bare energy norm | [Analysis](notes/CCM_THRESHOLD_ENERGY_OBSTRUCTION_20260928.md), [review](reviews/CCM_THRESHOLD_ENERGY_REVIEW_20260928.md) |
 
 The string experiments do not establish uniform first-moment tightness. Stable total string mass and a stable first bead do not imply it; an exact counterexample is recorded. String geometry is one possible route, not a necessary prerequisite for determinant convergence.
 
@@ -106,7 +113,7 @@ Finally, the construction must connect to arithmetic. CCM identifies two remaini
 
 ## Completed audit and conditions for further work
 
-The [continuation prompt](CONTINUATION_PROMPT.md) has been executed within its two-mechanism scope. No arithmetic support sweep was needed; exact finite controls checked the new algebra.
+The [historical round-5 brief](CONTINUATION_PROMPT.md#historical-audit-brief) was executed within its two-mechanism scope. It is not the active next-session task. No arithmetic support sweep was needed; exact finite controls checked the new algebra.
 
 1. The direct combined trace is exactly half the normalized second moment of the finite ground function. This follows from the established CCM transform formula and includes the entire free tail. It removes the explicit inverse gap, but a new arithmetic concentration bound is still needed. A nonarithmetic logarithmic comparison family has trace L^2/24 despite the generic positive/simple-even structure.
 2. The prolate candidate has controlled concentration under the cited prolate approximation theorem. Its Fourier projection error is at most a constant times sqrt(L)*exp(-L/4)+L/(N+1). Thus N of order at least L^(7/2) gives O(L^(-5/2)) resolution for the candidate. An actual ground-state comparison of that accuracy would suffice for the trace bound and Xi identification, but it remains unproved.
@@ -130,7 +137,7 @@ along a cofinal sequence implies RH. The proof uses unshifted ground energies, d
 
 The same arithmetic annihilator identity holds for translated Xi kernels. It gives arbitrarily large fixed-dimensional near-zero clusters; under RH, every fixed-index even level tends to zero. Positive even approximate-null profiles can also have moments growing like L^2/32. Thus candidate positivity, small residual, and a uniform absolute gap are not suitable substitutes for ground selection.
 
-The small Xi-proxy diagnostic is consistent with this distinction: high candidate–ground overlap coexists with a Rayleigh quotient above the second even level. Minute components outside the lowest few modes dominate the residual. A useful next comparison should resolve an independently specified low arithmetic/prolate space and bound its effective operator, including the complement correction, on the scale of its level splitting. The exact tail-form identity supplies an object to analyze, not that estimate. See the [main continuation](notes/CCM_GROUND_SELECTION_TARGET_20260928.md) and [diagnostic](reviews/CCM_XI_GROUND_DIAGNOSTIC_20260928.md).
+The small Xi-proxy diagnostic is consistent with this distinction: high candidate–ground overlap coexists with a Rayleigh quotient above the second even level. Minute components outside the lowest few modes dominate the residual. That round motivated resolving an independently specified low arithmetic/prolate space and bounding its effective operator, including the complement correction, on the scale of its level splitting. The later complement results explain why this was insufficient on its own. The exact tail-form identity supplies an object to analyze, not that estimate. See the [main continuation](notes/CCM_GROUND_SELECTION_TARGET_20260928.md) and [diagnostic](reviews/CCM_XI_GROUND_DIAGNOSTIC_20260928.md).
 
 ## Boundary and weighted-gap formulation from round 7
 
@@ -149,17 +156,58 @@ Q(ku)=\mathcal E_\Gamma(u)+\mathcal E_p(u)
 \]
 The sharp Poincare lower bound at 1/4 is equivalent to RH. Infinitely many explicit derivative-ratio functions are threshold eigenfunctions already; their existence does not exclude lower spectrum. Every fixed finite-prime truncation of this transformed whole-line form has gap zero, so escaping test functions require the infinite prime contribution. This is not the same truncation as the original finite-window Weil sum.
 
-The literal kernel normalization is Xi/4, proved by its Mellin integral. Two earlier supporting notes were corrected; normalized comparisons and the overlap criterion are unchanged. The [round-7 synthesis](notes/CCM_BOUNDARY_SELECTION_AND_COMPLEMENT_20260928.md) records the correction and the complete new results. No lower bound for the actual ground overlap or the full weighted jump gap has been obtained.
+The literal kernel normalization is Xi/4, proved by its Mellin integral. Two earlier supporting notes were corrected; normalized comparisons and the overlap criterion are unchanged. The [round-7 synthesis](notes/CCM_BOUNDARY_SELECTION_AND_COMPLEMENT_20260928.md) records the correction and the complete new results. No lower bound for the actual ground overlap or sharp weighted gap of 1/4 was obtained in round 7. Round 8 subsequently established an unspecified positive weighted gap, as described below.
 
-## Current target after round 8
+## Weighted target established in round 8
 
-The full even weighted jump operator J has a simple zero eigenvalue (constants), essential spectral lower edge 1/4, and an explicit infinite-dimensional eigenspace at that threshold. Its spectrum in (0,1/4), if any, is discrete with possible accumulation only at 1/4. Consequently an unspecified positive spectral gap holds unconditionally, while RH is equivalent to that gap being exactly 1/4.
+The full even weighted jump operator J has a simple zero eigenvalue (constants), essential spectral lower edge s=1/4, and an explicit infinite-dimensional eigenspace at that threshold. Its spectrum in (0,1/4), if any, is discrete with possible accumulation only at 1/4. Consequently an unspecified positive spectral gap holds unconditionally, while RH is equivalent to that gap being exactly 1/4. These are working proofs in the linked notes, with same-model checks and no independent human refereeing.
 
-The exact unitary transform has the form H=1/4+A0−K, where A0 is the positive weighted logarithmic gamma form and K is a bounded, relatively form-compact signed perturbation. Weighted prime translations in K have exponentially small tails in the prime-power cutoff. Exterior compression errors decay superexponentially with distance. A separate unconditional PNT proof recovers the full inward prime rate 1/4 and explains why fixed positive-jump truncations miss it.
+Use the literal normalization
+\[
+\widehat k=\Xi/4,\quad m(x)=k(x)\cosh(x/2),\quad
+M=\int m=\tfrac18,\quad a=\sqrt{k/\cosh(x/2)}.
+\]
+With Uu=sqrt(m)u, the exact transformed operator is
+\[
+H=UJU^{-1}=sI+A_0-K,\quad
+A_0=M_a(g(D)+6)M_a,\quad K=6M_{a^2}+P_a,
+\]
+\[
+g(t)=\Re\psi(1/4+it/2)-\log\pi,\qquad
+P_a=\sum_{n\ge2}\frac{\Lambda(n)}{\sqrt n}
+M_a(T_{\log n}+T_{-\log n})M_a.
+\]
+A_0 is the positive closed form with domain av in the logarithmic Fourier space. K is bounded, self-adjoint, generally signed, and relatively form compact; it is not claimed compact on ordinary L2. Constants give the normalized vector v0=sqrt(m)/sqrt(M), with Hv0=0.
 
-For 0<lambda<1/4, the compact self-adjoint operator (A0+1/4−lambda)^(-1/2) K (A0+1/4−lambda)^(-1/2) must have exactly one eigenvalue above 1. One is guaranteed by the known constant mode; ruling out a second, uniformly as lambda tends to 1/4, is the remaining RH-equivalent target. The norm error from an approximation to K is amplified by 1/(1/4−lambda). This identifies the required threshold control instead of treating a finite-depth certificate as a solution.
+The missing statement is **one negative direction for H−s**, equivalently
+\[
+\boxed{\quad K\le A_0+s|v_0\rangle\langle v_0|
+\quad\text{in form sense on the even domain}.\quad}
+\]
+Equivalently H−s must be nonnegative on v0-perpendicular. This is an RH-equivalent target, not a new established bound.
 
-The next useful direction is a one-negative-direction theorem for H−1/4, or an equivalent uniform count bound. The complete threshold eigenspace and signed prime contribution must be retained. No such count theorem or sharp global Poincare bound is claimed. The [main note](notes/CCM_WEIGHTED_TAIL_AND_DISCRETE_OBSTRUCTION_20260928.md) gives the exact criterion and the supporting proofs.
+For spectral energy 0<E<s, put delta=s−E. The compact self-adjoint family
+\[
+\mathcal T_E=(A_0+\delta I)^{-1/2}K(A_0+\delta I)^{-1/2}
+\]
+satisfies N(H<E)=n(T_E>1), counting strictly and with multiplicity. The exact target is n(T_E>1)=1 for **every** 0<E<1/4. One count is guaranteed by Hv0=0, but v0 is generally not an eigenvector of T_E; any removal of this mode in those coordinates needs the correct congruence or Schur argument. E here is an energy, not CCM's support parameter lambda>1. J here is the jump operator, not the inverse-differentiation map used in older mechanical formulas.
+
+| Available input | What it permits | What is still missing |
+|---|---|---|
+| Norm-convergent weighted prime sum, with tail bounded by 2C² sum_(n>P) (log n)/sqrt(n) exp(−2cn), for fixed 0<c<pi/2 | Arithmetic approximation on the whole line while retaining the exact full diagonal | A signed comparison that controls the second eigenvalue count |
+| Superexponential exterior error d_R and localization error e_R | For an eigenvalue at most s−delta, mass outside R+1 is at most e_R/(delta−d_R), when d_R<delta | Uniform control as delta tends to zero; a fixed central interval is not justified |
+| Local compactness and relative form compactness | A compact eigenvalue-count problem at every fixed spectral depth | Spatial and frequency errors with proved endpoint dependence |
+| Infinite exact threshold family k^(2j)/k−4^(−j) | Exact threshold modes that any reduction must respect | Completeness of this family, or a positive gap on its complement, is not established |
+
+A bounded approximation K_N introduces at most ||K−K_N||/delta error in T_E. This exposes the endpoint difficulty even when the prime tail is exponentially small. Positive prime-jump truncation is a different approximation: it deletes the long-jump diagonal and still has gap zero. No bounded inverse for A_0 at delta=0 or compact endpoint T_s is supplied by round 8.
+
+## Round 9: endpoint obstruction and research decision
+
+The [threshold handoff](notes/CCM_THRESHOLD_INDEX_CONTINUATION_20260928.md) was executed. The chosen mechanism removed the ground mode exactly on the H side and attempted to pass to the endpoint using the bare A_0 energy. Its precise failure is proved in the [analysis](notes/CCM_THRESHOLD_ENERGY_OBSTRUCTION_20260928.md) and checked in the [sequential same-model review](reviews/CCM_THRESHOLD_ENERGY_REVIEW_20260928.md). No numerical sweep was needed.
+
+Writing d_j=k^(2j)−4^(−j)k, their span is dense in even H_log with the archimedean energy norm. This does not imply whole-line weighted completeness. A compact cosh-moment-zero test with positive Weil form can therefore be approximated in this energy by threshold profiles while retaining its nonzero Weil form after subtraction. The ground-reduced signed Birman–Schwinger spectral infimum tends to minus infinity as delta tends to zero. Every fixed prime remainder has the same negative divergence. Physical threshold projection is valid but unbounded in the bare energy norm; finite threshold removal also leaves arbitrarily many eigenvalues approaching the counting cutoff from below in the min–max bound.
+
+**Decision:** suspend bounded endpoint-operator and absolute-relative-tail estimates in this normalization. The diverging negative side is compatible with the desired upper bound, so a one-sided signed factorization remains possible. A new round should specify such an estimate on the full form domain, or after exact physical projection off the known threshold span, before any computation. Completeness of that span and a positive complement gap remain unproved. The error ledger separates positive-depth prime and spatial schedules from the still-missing frequency, coupling, and sign control.
 
 ## Prospects and resource judgment
 
@@ -167,10 +215,10 @@ The bounded round produced rigorous method limitations and a more precise compar
 
 The new whole-line tail theorem supplies a usable reduction, but there is still little evidence for expecting a full CCM determinant-limit theorem soon. Most realizations are algebraic transformations available for broad classes of positive finite pencils. The positive high-frequency compression primarily resolves a fixed-support analytic issue. Neither fact supplies the arithmetic cancellation or ground-state comparison that the limiting identification requires. The very small finite odd energies emphasize the need for relative estimates; they do not establish how the continuum gap behaves.
 
-The risk of an unproductive detour remains substantial if each finite calculation simply generates a larger finite calculation. The audit recommends changing approach, with further investment tied to a specific arithmetic comparison. There is no defensible numerical probability of success from the current evidence, and model confidence is not mathematical evidence.
+The risk of an unproductive detour remains substantial if each finite calculation simply generates a larger finite calculation. The completed audits redirected the work; further investment is now tied to an estimate that controls the threshold index. There is no defensible numerical probability of success from the current evidence, and model confidence is not mathematical evidence.
 
 ## Model and working practice
 
-For the analytical continuation, I suggest **GPT-6 Astra with Extra high (`xhigh`) reasoning**, followed by a separate adversarial reading of the resulting argument. This is a task-specific recommendation, not a measured comparison on this problem. [OpenAI's model-selection guidance](https://developers.openai.com/api/docs/guides/model-selection) associates that setting with demanding analysis; the [model page](https://developers.openai.com/api/docs/models/gpt-6-astra) confirms the supported effort levels. Sources checked 26 September 2026. More reasoning effort cannot replace a new estimate or independent verification.
+Record the actual model and effort when exposed; otherwise state that they are unavailable. The current derivations and parallel reviews were produced with GPT-6 (Codex), with exact serving variant and effort unexposed. Same-model agreement does not replace independent mathematical review.
 
-Keep new derivations in `notes/`, numerical code and small records in `numerics/`, and reviews in `reviews/`. Preserve earlier work and follow [LARGE_FILES.md](../../../LARGE_FILES.md). Record the actual model and effort when exposed, otherwise state that they are unavailable. Distinguish same-model checks from independent review. Keep [DRAFT_HISTOR.md](DRAFT_HISTOR.md) concise; use future commits or tags instead of draft snapshots. The detailed reading order and deliverables are in [CONTINUATION_PROMPT.md](CONTINUATION_PROMPT.md).
+Keep derivations in `notes/`, programs and small numerical records in `numerics/`, and reviews in `reviews/`. Preserve existing work and follow [LARGE_FILES.md](../../../LARGE_FILES.md). Keep [DRAFT_HISTOR.md](DRAFT_HISTOR.md) concise; use commits or tags instead of new manuscript snapshots. The [executed handoff](notes/CCM_THRESHOLD_INDEX_CONTINUATION_20260928.md) preserves the round-9 scope; the [findings](notes/CCM_THRESHOLD_ENERGY_OBSTRUCTION_20260928.md) now give the decision and required next input. The [continuation entry point](CONTINUATION_PROMPT.md) also retains the completed round-5 brief as historical context. Round 9 remains uncommitted; no release or manuscript snapshot was created.

@@ -2,7 +2,9 @@
 
 Started: 26 September 2026.
 
-Start with the [full weighted-tail continuation](notes/CCM_WEIGHTED_TAIL_AND_DISCRETE_OBSTRUCTION_20260928.md) and the [program overview](PROGRAM_OVERVIEW.md). Round 8 proves whole-line exterior coercivity and identifies 1/4 as the essential spectral lower edge of the even weighted jump operator. The remaining RH obstruction is isolated eigenvalues in (0,1/4); excluding them uniformly up to the threshold remains open. A compact eigenvalue-count formulation supplies a precise next target. Automatic enlargement of the fixed-L certificate remains suspended.
+Start with the [round-9 threshold analysis](notes/CCM_THRESHOLD_ENERGY_OBSTRUCTION_20260928.md), its [sequential review](reviews/CCM_THRESHOLD_ENERGY_REVIEW_20260928.md), and the [program overview](PROGRAM_OVERVIEW.md). The new result is a scoped obstruction: even after exact ground removal, the signed Birman–Schwinger operator has no bounded endpoint in the bare archimedean energy norm. Fixed-prime absolute relative bounds and energy-continuous threshold deflation fail. The one-sided inequality excluding eigenvalues in (0,1/4) remains open.
+
+The [threshold-index handoff](notes/CCM_THRESHOLD_INDEX_CONTINUATION_20260928.md) has been executed. For further work, use Section 8 of the new analysis: a one-sided signed comparison or a new estimate after physical threshold compression is required. Automatic enlargement of the fixed-L certificate remains suspended.
 
 This investigation studies alternative geometric and physical realizations of the Connes–Consani–Moscovici spectral operators. A useful realization should preserve the arithmetic input, account for the Hilbert-space metric, and improve control of the ground state or the normalized spectral determinant as cutoffs increase.
 
@@ -21,6 +23,8 @@ The sixth continuation proves that the Xi kernel and its translates are uncondit
 The seventh continuation derives a cancellation-adapted boundary form and an explicit second-derivative correction to the trial ground. Every fixed derivative rank is eventually positive unconditionally, while all derivatives form a core at fixed support; the order of those limits therefore matters. A bounded Schur diagnostic measures the complement correction. A positive-k transform gives an exact weighted Poincare target with constant 1/4 and shows that any fixed finite-prime truncation of that transformed whole-line form has gap zero. The literal-k normalization Xi/4 is corrected in two earlier supporting notes; normalized conclusions are unchanged.
 
 The eighth continuation proves that the complete prime family restores the exterior threshold 1/4. An exact weighted operator identity gives a stronger superexponential exterior bound without a prime number theorem, local compactness, and discrete spectrum below that threshold. Constants form the simple zero mode; an unspecified positive gap follows unconditionally. RH is equivalent to the absence of any further subthreshold eigenvalues. A fixed-depth compact Birman–Schwinger formulation isolates the remaining uniform threshold problem.
+
+The ninth continuation proves density of the exact threshold profiles in the bare archimedean energy completion, without asserting their completeness in the physical weighted space. Subtracting these profiles from a positive compact witness proves negative divergence of the ground-reduced Birman–Schwinger family and of every fixed prime tail. Physical threshold removal is valid but unbounded in that energy norm; finite removal leaves threshold crowding. This suspends a specific endpoint approximation mechanism, while retaining the one-sided RH target.
 
 ## Research record
 
@@ -48,6 +52,9 @@ The eighth continuation proves that the complete prime family restores the exter
 - [Prime return and exterior coercivity](notes/CCM_PRIME_RETURN_AND_EXTERIOR_COERCIVITY_20260928.md).
 - [Review of round 8](reviews/CCM_WEIGHTED_TAIL_REVIEW_20260928.md).
 - [Bounded prime-return diagnostic](reviews/CCM_PRIME_RETURN_DIAGNOSTIC_20260928.md).
+- [Continuation round 9: threshold energy and deflation obstruction](notes/CCM_THRESHOLD_ENERGY_OBSTRUCTION_20260928.md).
+- [Sequential adversarial review of round 9](reviews/CCM_THRESHOLD_ENERGY_REVIEW_20260928.md).
+- [Executed threshold-index handoff](notes/CCM_THRESHOLD_INDEX_CONTINUATION_20260928.md).
 - [Concise milestone index](DRAFT_HISTOR.md).
 - [Numerical reconstruction and checks](numerics/README.md).
 - [Initial derivation check](reviews/INITIAL_DERIVATION_CHECK_20260926.md).
@@ -60,8 +67,8 @@ Incremental research belongs in `notes/`, numerical programs and small records i
 
 ## Next research question
 
-The current target is to exclude additional even eigenvalues between 0 and 1/4 in the full weighted jump operator. Round 8 controls its whole-line exterior and proves that all such eigenvalues are discrete; this is stronger than fixed-support evidence. The exact compact Birman–Schwinger family must have exactly one eigenvalue above 1 for every parameter 0<lambda<1/4, with one count supplied by the known constant mode. A proof must control the limit toward 1/4, where there is already an infinite-dimensional threshold eigenspace.
+The sharp one-negative-direction inequality is still the target. Round 9 rules out obtaining it through a bounded endpoint sandwich, an absolute A_0-relative bound for a fixed prime tail, or energy-continuous removal of the full known threshold span. These failures occur on the signed operator's negative side and do not disprove the desired upper bound.
 
-Weighted off-diagonal prime translations can now be truncated with a global operator-norm error, while retaining the exact full diagonal. This differs from truncating positive prime jump energies, which still has gap zero. A proposed central comparison should use the explicit tails and fixed-depth localization, then state how its constants behave at the threshold. Finite checks at a fixed distance below 1/4 do not settle the limit.
+Further work should begin with a concrete one-sided signed factorization, or a comparison on the physical complement of the known threshold modes that controls all form vectors. The [analysis, Section 8](notes/CCM_THRESHOLD_ENERGY_OBSTRUCTION_20260928.md#8-decision-and-next-useful-input) specifies the exact missing inequality. Prime and spatial schedules at positive depth alone do not certify the endpoint inertia count; the error ledger states their limits. No numerical sweep is the default.
 
-The earlier overlap condition r_b/||E_b v_b|| -> 0 remains sufficient for RH, and the original determinant limit still requires normalization and concentration control. Neither has been proved. Sonin residuals remain deferred. See the [latest continuation](notes/CCM_WEIGHTED_TAIL_AND_DISCRETE_OBSTRUCTION_20260928.md) for the operator identity, compact counting criterion, and remaining limits.
+The earlier ground-overlap criterion and CCM determinant limit remain unproved. Sonin residuals remain deferred.

@@ -1,16 +1,32 @@
-# Continuation prompt: audit the infinite-support route
+# CCM continuation entry point
+
+Updated 28 September 2026 for Edward Baker with LLM assistance. Model: GPT-6 (Codex); exact serving variant and configured effort are not exposed.
+
+## Current continuation decision
+
+The [threshold-index handoff](notes/CCM_THRESHOLD_INDEX_CONTINUATION_20260928.md) was executed in round 9. Read the [threshold energy analysis](notes/CCM_THRESHOLD_ENERGY_OBSTRUCTION_20260928.md), its [sequential adversarial review](reviews/CCM_THRESHOLD_ENERGY_REVIEW_20260928.md), and the [current overview](PROGRAM_OVERVIEW.md).
+
+The bounded endpoint-operator route in the bare archimedean energy norm is suspended. The known threshold span is dense in that energy completion; the ground-reduced signed Birman–Schwinger family and every fixed prime tail diverge on their negative side. Physical threshold projection is exact but unbounded in this norm. These are scoped method obstructions, not a disproof of the one-sided RH inequality.
+
+Further research needs a concrete one-sided signed form estimate, or a new comparison after physical threshold compression, as specified in Section 8 of the analysis. Do not repeat a fixed-depth reduction or start a numerical sweep without that input. Sonin residuals remain deferred.
+
+The committed baseline through round 8 is `8eaabbf5ab409422827013b6bc83ad0c1bbb92bc`. Round 9 and the handoff refresh remain uncommitted. Preserve later changes; do not reset to the baseline.
+
+## Historical audit brief
+
+The text below preserves the completed 26 September round-5 scope. It is historical context, not instructions to repeat that audit. Its results are in the [bounded audit](notes/CCM_INFINITE_L_BOUNDED_AUDIT_20260926.md) and [review](reviews/INFINITE_L_BOUNDED_AUDIT_REVIEW_20260926.md). Use the round-9 decision linked above for new work.
 
 Prepared 26 September 2026 for Edward Baker with LLM assistance. Preparation model: GPT-6 (Codex); exact variant and reasoning-effort setting unavailable. Suggested model for execution: GPT-6 Astra, Extra high (`xhigh`). This suggestion does not describe the model that prepared this file.
 
 Execution status: completed on 26 September 2026. Read the [audit and decision](notes/CCM_INFINITE_L_BOUNDED_AUDIT_20260926.md) and [review](reviews/INFINITE_L_BOUNDED_AUDIT_REVIEW_20260926.md) before initiating further work. The instructions below are preserved as the scope of the completed round.
 
-## Task
+### Task
 
 Continue the investigation in `/Users/ebbaker/Documents/shifted-zeta-positivity/papers/investigations/ccm-operator-realizations` by conducting one bounded feasibility audit of the **L-to-infinity limit**. Produce actual mathematical analysis and a clear decision about the next research investment. Do not default to the previously proposed 4096-mode fixed-L Schur computation.
 
 The central question is whether the mass–stiffness realization can yield estimates that survive growing support, or merely relocates the original CCM difficulties. A valid negative or unresolved outcome is acceptable. Do not manufacture a positive theorem to justify the program.
 
-## Read first
+### Read first
 
 Read `PROGRAM_OVERVIEW.md`, the current `README.md`, and the repository's `LARGE_FILES.md`. Then read these investigation files, prioritizing the indicated sections:
 
@@ -21,7 +37,7 @@ Read `PROGRAM_OVERVIEW.md`, the current `README.md`, and the repository's `LARGE
 
 Consult the earlier string and chiral notes if needed. Check any external theorem actually used against its primary source and record its hypotheses. In [CCM, Sections 7–8](https://arxiv.org/html/2511.22755v1#S7), distinguish convergence of the prolate-based candidate from the still-missing comparison with the Weil ground state.
 
-## Known state that must remain explicit
+### Known state that must remain explicit
 
 L is support length, with \(X=e^L=\lambda^2\); N is Fourier cutoff. The latest rational tail certificate applies only at \(L=\log13\). It proves positivity of the odd high-frequency compression above mode 4096. It does not prove the complete continuum odd gap, even-sector simplicity, the Weil ground-energy sign, or an infinite-L limit.
 
@@ -40,7 +56,7 @@ A sufficient joint-limit target is a sequence \(L_j,N_j\to\infty\) satisfying th
 \]
 plus an independent arithmetic identification of the normalized spectral functions on a real interval. For the free tail to tend to one, \(L_j^2/N_j\to0\) is sufficient. These requirements alone do not bound the finite arithmetic block's approximation error. Uniformity over every pair \((L,N)\) is not required. A weaker strip-convergence route is admissible if its full criterion and normalization are stated.
 
-## Work to perform
+### Work to perform
 
 First make an L-dependence ledger. Include the prime/pole bound \(D_L\), inverse differentiation, the integrated mass trace, the unknown odd gap, the high-frequency split and leakage, the coupling coefficient bound, and the free tail. Separate an upper estimate that grows from a proof that the quantity being estimated grows. Do not extrapolate constants certified at log13 to general L.
 
@@ -52,7 +68,7 @@ Use at most one modest numerical sweep, and only if it can distinguish the propo
 
 Finally address the identification step even if the estimates are inconclusive: explain exactly what additional arithmetic theorem would identify the limit with Xi, and whether the proposed route simplifies that obligation. A compact family of unspecified entire functions is not the intended result.
 
-## Completion and decision
+### Completion and decision
 
 Complete this round after the ledger and up to two candidate estimates have been assessed. Save one of the following outcomes with its proper scope:
 
