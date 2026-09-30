@@ -1,5 +1,104 @@
 # Arithmetic-storage numerics
 
+## First compressed Sonin moment (29 September 2026)
+
+The [main note](../notes/SONIN_COMPACT_FIRST_MOMENT_20260929.md) and
+[review](../reviews/SONIN_FIRST_MOMENT_REVIEW_20260929.md) provide the compact
+boundary identity, full error budget, first-prime bounds, and their scope.
+
+- [sonin_second_transport_scalar.py](sonin_second_transport_scalar.py): the extra scalar `B_infinity[D2^2F]`, retaining gamma/contact and epsilon tails.
+- [moment_compact_certificate.py](moment_compact_certificate.py): actual projection correction, with [polynomial reduction](moment_kernel_polynomial.py) and [exact truncated splines](arithmetic_truncated_spline.py).
+- [arithmetic_prime_diagnostic.py](arithmetic_prime_diagnostic.py): independent rigorous prime correlation and direct arithmetic controls.
+- [sonin_first_moment_bounds.py](sonin_first_moment_bounds.py): hash-checked combination into compressed-moment, inverse-trace, and residual bounds, plus the information-limit check.
+- [arithmetic_truncated_spline_check.py](arithmetic_truncated_spline_check.py): independent Acb integration controls for the finite spline formulas.
+- [moment_compact_diagnostic.py](moment_compact_diagnostic.py): separate floating compact quadrature; explicitly diagnostic, not a certificate.
+
+The principal records have the corresponding script names under `records/`.
+Additional small controls are `arithmetic_prime_diagnostic_256bit.json`,
+`arithmetic_h2_replay.json`, and `moment_compact_fine_diagnostic.json`.
+Use Python with `python-flint==0.9.0`, without `-O`/`-OO`; the floating
+control additionally uses NumPy and SciPy. No source-grid or matrix arrays
+are saved. Full reproduction commands and precision choices are in the note.
+The lightweight combination replay, retaining the saved records, is:
+
+```sh
+python -B sonin_first_moment_bounds.py --h2 records/sonin_second_transport_scalar.json --correction records/moment_compact_certificate.json --prime records/arithmetic_prime_diagnostic.json --output /tmp/sonin-first-moment-replay.json
+```
+
+This checks the saved numerical implications and code/input bindings; it
+does not rerun their full generating calculations. Prepared for Edward Baker
+with substantial GPT-6 (Codex) assistance; exact serving variant and configured
+reasoning effort not exposed.
+
+## Scalar Sonin traces (29 September 2026)
+
+The [scalar note](../notes/SONIN_SCALAR_TRACE_CALCULATION_20260929.md) proves the complete error budget. The [project summary](../PROJECT_SUMMARY.md) distinguishes these evaluated real-place scalars from the still broadly bounded first-prime trace.
+
+- [gamma_scalar_certificate.py](gamma_scalar_certificate.py): full gamma/contact through an Arb FFT, with both Poisson alias bounds and the complete frequency tail.
+- [sonin_scalar_epsilon.py](sonin_scalar_epsilon.py): certified finite exponential kernel, exact integer spline autocorrelation, and source/operator error propagation.
+- [sonin_scalar_summary.py](sonin_scalar_summary.py): hash-checked scalar combination and updated fixed-space Hilbert–Schmidt residual/trace bounds.
+- [epsilon_selected_point_review.py](epsilon_selected_point_review.py): independent finite-kernel Legendre/Bessel normalization control at three scaling values.
+
+Their same-named JSON records are under `records/`. Run each from this folder with Python and `python-flint==0.9.0`, without `-O`/`-OO`. Existing source/prolate modules and records are inputs. All program defaults follow this directory layout. No generated source grids or Fourier arrays are retained. The four final real-place trace intervals have width below `10^-5`; no complete arithmetic residual sign is asserted.
+
+## Actual Sonin enclosures (later 29 September 2026)
+
+The [main note](../notes/SONIN_ACTUAL_PROJECTION_ENCLOSURES_20260929.md)
+contains the derivation and full error budget. These programs require
+`python-flint==0.9.0` and standard Python; no floating FFT decides a bound.
+
+- [prolate_certificate.py](prolate_certificate.py): cosine Taylor tail,
+  interval LDL gap `57/10^6`, and polynomial resolvent certificate.
+- [source_norm_enclosures.py](source_norm_enclosures.py): exact A17 source
+  normalization and derivative norms, rigorous interior quadrature and endpoint tails.
+- [sonin_trial_enclosure.py](sonin_trial_enclosure.py): actual-Sonin A/H/J/K
+  enclosures from compact spline proxies plus complete projection-tail bounds.
+- [sonin_omitted_direction_check.py](sonin_omitted_direction_check.py): checks
+  the strictly positive omitted-trace lower bounds for the nested trial spaces.
+
+The five small records are in `records/`: `prolate_certificate_rank32.json`,
+`source_norm_enclosures.json`, `sonin_trial_enclosure.json`,
+`sonin_omitted_direction.json`, and `sonin_omitted_direction_check.json`.
+Hashes bind generators and inputs; replay the arithmetic to verify the bounds.
+No grid arrays, convolution arrays, or large matrix archives are retained.
+
+To preserve these saved records, copy the four programs and the `records/`
+subdirectory into a temporary working directory, then run there in this order:
+
+```sh
+python3 -B source_norm_enclosures.py
+python3 -B prolate_certificate.py --rank 32
+python3 -B sonin_trial_enclosure.py --grid 16384
+python3 -B sonin_trial_enclosure.py --grid 16384 --seed-degrees 20 24 21 --output records/sonin_omitted_direction.json
+python3 -B sonin_omitted_direction_check.py
+```
+
+Use ordinary Python, without `-O`/`-OO` (the source script uses assertion
+checks). Separate 192/256-bit prolate builds pass the stated caps. The trial
+records use 320-bit arithmetic and retain conservative interpolation errors.
+The rank-two test fails the small trace-error target; no complete arithmetic
+residual or Weil sign is certified. Prepared for Edward Baker with GPT-6
+(Codex) assistance; exact serving variant and reasoning effort not exposed.
+
+## Sonin scalar return bounds (29 September 2026)
+
+[sonin_return_tail_bounds.py](sonin_return_tail_bounds.py) uses exact rational
+arithmetic and an integer-square-root bracket to certify scalar tail majorants
+for the Neumann and Chebyshev inverse expansions. The [record](records/sonin-return-tail-bounds-20260929.json)
+is small and includes the program hash. This is not a Sonin trace evaluation,
+projection approximation, source-energy calculation, or Weil certificate.
+See the [analysis](../notes/SONIN_PLACE_ADDITION_AND_ERROR_CONTROL_20260929.md).
+
+From this directory, preserving the saved record:
+
+```sh
+python3 -B sonin_return_tail_bounds.py > /tmp/sonin-return-tail-replay.json
+```
+
+Standard library only; do not run with `-O`, which disables certificate
+assertions. Prepared for Edward Baker with GPT-6 (Codex) assistance;
+exact serving variant and reasoning effort not exposed.
+
 ## Second session (24 September 2026): closure of the first-prime join, prime-weight rigidity
 
 Read the [research note](../notes/FIRST_PRIME_JOIN_EQUIVALENCE_AND_PRIME_WEIGHT_RIGIDITY_20260924.md)

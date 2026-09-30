@@ -1,5 +1,43 @@
 # Changelog
 
+## 2026-09-29 — arithmetic-storage: scalar Sonin traces and consolidated project summary
+
+- Enclosed the four prescribed real-place smoothed traces to width below `10^-5`, including the full gamma/contact term and the epsilon correction with complete source and operator errors.
+- Updated the existing Galerkin diagnostics: the two-vector trial captures below 1.090% and 2.422% of the first-prime positive trace. The full finite-place inverse-metric trace remains only broadly bounded; the arithmetic residual sign is open.
+- Added `arithmetic-storage/PROJECT_SUMMARY.md` as the current entry point, with the accumulated results, rejected approaches, remaining gap, and next calculation criteria.
+- Saved derivations, separate internal review, reproducible programs, and small hash-bound records. No large arrays, new finite Weil certificate, CCM reopening, manuscript snapshot, commit, or push.
+- Prepared for Edward Baker with substantial GPT-6 (Codex) assistance; exact serving variant and reasoning effort not exposed.
+
+## 2026-09-29 — arithmetic-storage: actual Sonin enclosures and a trial accuracy limit
+
+- Certified the actual cutoff-cosine gap, polynomial resolvent, smooth-source
+  norms, and full projection-tail bounds with interval arithmetic.
+- Implemented actual-Sonin trial A/H/J/K enclosures using compact spline
+  proxies and exact integer convolutions. No spatial tail was silently cut off.
+- A single omitted direction proves that the chosen rank-two trace misses
+  more than 0.00373 and 0.00712 on the even and odd sources. This rejects
+  that small-error approximation target, not an arithmetic positivity claim.
+- Saved small reproducible scripts/records, research derivations, critical
+  review, and the next scalar-trace task. No complete arithmetic residual
+  sign, new Weil certificate, CCM work, manuscript, snapshot, commit or push.
+- Prepared for Edward Baker with substantial GPT-6 (Codex) assistance;
+  exact serving variant and reasoning effort not exposed.
+
+## 2026-09-29 — arithmetic-storage: Sonin trace audit and signed place addition
+
+- Audited the canonical Sonin comparison, full normalization, pole-neutral
+  RH criterion, finite-place adjoints, and compact-smooth trace existence.
+- Derived a signed covariance/place-addition law retaining the inverse metric,
+  a Chebyshev return expansion, and a one-sided Galerkin trace error identity.
+- Saved a small exact-arithmetic scalar tail record: 64 versus 373 trace terms
+  at the crude `10^-8 B_infinity` bound. No actual Sonin trace or residual sign
+  was numerically certified; the projection/full-tail enclosure is the next task.
+- Added research notes, critical review, continuation, and index updates.
+  Preserved the completed Weil certificates and existing uncommitted work;
+  CCM remains temporarily closed. No manuscript, snapshot, commit, or push.
+- Prepared for Edward Baker with substantial GPT-6 (Codex) assistance;
+  exact serving variant and reasoning effort not exposed.
+
 ## 2026-09-26 — wilson-loewner/YM: full electric sources and physical preparation
 
 - Tested two remaining source mechanisms in the original finite SU(2) state. Actual
