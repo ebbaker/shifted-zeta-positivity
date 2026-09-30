@@ -1,5 +1,9 @@
 # Arithmetic-storage reviews
 
+- [Critical-limit continuation review](SONIN_CRITICAL_LIMIT_REVIEW_20260929.md) (GPT-6 Codex, 29 September 2026): uniform frequency tails, global source traces, local projection deficit, rational countermodel, and complete arithmetic crossing terms. Exact return loss and the arithmetic limit remain unresolved.
+
+- [Phase boundary trace review](SONIN_PHASE_BOUNDARY_TRACE_REVIEW_20260929.md) (GPT-6 Codex, 29 September 2026): cutoff resolvent, independent boundary trace, normalization, archimedean calibration, compact-frequency continuation, and Abel spectral-tail bound; full arithmetic identification remains open.
+
 - [Direct positive-limit review](SONIN_DIRECT_LIMIT_REVIEW_20260929.md) (GPT-6 Codex, 29 September 2026): regularized convergence, phase endpoint, fixed-compression obstruction, moving-tail criteria, and the separation of positive construction from arithmetic identification. No critical arithmetic trace limit is claimed.
 
 - [First compressed moment review](SONIN_FIRST_MOMENT_REVIEW_20260929.md) (GPT-6 Codex, 29 September 2026): boundary identity, polynomial reduction, source and operator errors, arithmetic controls, hash-bound replay, and the mass-and-mean information limit. Internal checks pass; neither arithmetic residual sign is resolved.

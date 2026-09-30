@@ -1,5 +1,11 @@
 # Arithmetic-storage research notes
 
+- [Critical-limit synthesis and next decision](SONIN_CRITICAL_LIMIT_STATUS_20260929.md): full trace and tail gates closed; remaining exact-kernel return defect and complete arithmetic discrepancy.
+- [Uniform phase-family frequency tails](SONIN_PHASE_FREQUENCY_TAILS_20260929.md): unit-window log-squared bounds, full source traces for every sigma>1/2, and the extended scalar boundary formula.
+- [Critical boundary localization and countermodel](SONIN_CRITICAL_BOUNDARY_MODEL_20260929.md): actual local upper limit, return mass concentrating only at spectral value 1, fixed-Abel critical-zero limit, and an exact model showing complete loss in the projection.
+- [Arithmetic crossing terms](SONIN_PHASE_ARITHMETIC_CROSSINGS_20260929.md): global phase-bulk tails, complete pole and zero residues including exceptional lines, and the signed off-line pairing that arithmetic identification must retain.
+- [Phase trace and boundary resolvent](SONIN_PHASE_BOUNDARY_TRACE_20260929.md): completes the bounded trace assignment; explicit gamma-minus-primes plus cutoff correction for sigma>1, archimedean calibration, locally finite phase measures, Abel error bound, and the unresolved boundary and arithmetic limits.
+- [Continuation after the direct limit analysis](SONIN_DIRECT_LIMIT_CONTINUATION_20260929.md): bounded projection trace assignment, essential caveats, reading order, and Codex or ChatGPT workflow recommendation.
 - [Active direct positive-limit program](SONIN_DIRECT_POSITIVE_LIMIT_PROGRAM_20260929.md): candidate families, exact arithmetic target, spectral concentration, coupled cutoffs, and decision criteria; supersedes odd-source domination as the next prerequisite.
 - [Regularized infinite-place positive family](SONIN_REGULARIZED_POSITIVE_FAMILY_20260929.md): quantitative convergence for sigma>1, phase continuation, strong zero endpoint, and finite positive forms with coupled resolution still required.
 - [Positive-limit topology](SONIN_POSITIVE_LIMIT_TOPOLOGY_20260929.md): fixed-compression obstruction, frequency measures and concentration, primary-source scope, and dense-source criteria.

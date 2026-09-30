@@ -7,6 +7,14 @@ refereeing. No expensive numerical calculation was performed.
 
 ## Outcome and scope
 
+**Later continuation:** [uniform frequency tails](SONIN_PHASE_FREQUENCY_TAILS_20260929.md)
+now prove full source-smoothed trace finiteness for every sigma>1/2, beyond
+the bounded transport region considered here. The
+[critical-limit synthesis](SONIN_CRITICAL_LIMIT_STATUS_20260929.md)
+records the remaining exact-projection defect and arithmetic discrepancy.
+The open-finiteness statements below are retained as the historical scope
+of this initial regularization argument.
+
 For every real sigma greater than 1, the regularized finite-place transports
 have an unconditional bounded invertible operator-norm limit. Their actual
 Sonin projections converge in operator norm, and their fixed-source positive

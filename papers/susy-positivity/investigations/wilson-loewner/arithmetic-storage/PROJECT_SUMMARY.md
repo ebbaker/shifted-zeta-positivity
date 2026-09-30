@@ -33,6 +33,84 @@ theorem, first-prime storage mechanism, or RH proof has been obtained.
 The [direct positive-limit program](notes/SONIN_DIRECT_POSITIVE_LIMIT_PROGRAM_20260929.md)
 is the active research plan. The [original program and goals](notes/ARITHMETIC_STORAGE_PROGRAM_AND_GOALS_20260924.md)
 remain the broader context.
+The [continuation handoff](notes/SONIN_DIRECT_LIMIT_CONTINUATION_20260929.md) gives the first bounded
+assignment and the recommended working environment. That trace-representation
+assignment is now completed in the
+[phase boundary note](notes/SONIN_PHASE_BOUNDARY_TRACE_20260929.md);
+its critical boundary limit remains open.
+
+## Critical endpoint results
+
+The [new critical-limit synthesis](notes/SONIN_CRITICAL_LIMIT_STATUS_20260929.md)
+settles full phase-trace finiteness, uniform source-weighted frequency tails,
+and the arithmetic crossing terms. On each bounded sigma strip above one
+half, the positive frequency measures of the actual projection and its
+majorant have unit-window mass at most `C_S log²(2+|j|)`. Thus full compact
+smooth source traces exist for every sigma>1/2; an ambient finite-rank cutoff
+is no longer needed to define them.
+
+For every fixed compact smooth source, the small-cutoff and crossing
+corrections vanish at the critical endpoint. If
+`H_sigma=L_sigma-Pi_sigma >= 0` is the independently defined return operator,
+then
+
+\[
+B_\sigma[F]=Z_{\rm crit}[F]
+-\operatorname{Tr}(C_F H_\sigma C_F^*)+o_F(1).
+\]
+
+Every subsequential projection-measure limit has atoms only at critical-line
+zeros, with weights between zero and their multiplicities. Return mass
+vanishes away from cutoff spectral value 1; the mass approaching 1 remains
+uncontrolled. An exact rational comparison model has the same local phase
+concentration and a positive prelimit gap, but its actual projection is zero.
+It shows why those properties cannot prove that all critical mass survives.
+It is not a counterexample about the zeta family.
+
+The complete contour calculation retains the pole, off-line zeros, and half
+residues on exceptional lines. For prepared sources it gives
+`Q=Z_crit+Z_off`, so the remaining exact-projection discrepancy is
+`B_sigma-Q=-return_trace-Z_off+o(1)`. The fixed-Abel positive family has the
+identified limit `Z_crit`; that is not unconditionally the complete Weil
+form. No arithmetic positive limit or RH proof has been obtained.
+
+See the [tail theorem](notes/SONIN_PHASE_FREQUENCY_TAILS_20260929.md),
+[boundary localization and model](notes/SONIN_CRITICAL_BOUNDARY_MODEL_20260929.md),
+[crossing calculation](notes/SONIN_PHASE_ARITHMETIC_CROSSINGS_20260929.md), and
+[internal review](reviews/SONIN_CRITICAL_LIMIT_REVIEW_20260929.md).
+
+## New phase trace representation
+
+For sigma>1, the actual positive trace now has the independently derived
+decomposition `B_sigma = Gamma - W_sigma + K_sigma`. Writing
+`C_sigma=chi F_sigma chi`, `T_sigma=chi F_sigma P`, and
+`a_e(t)=(|Fhat(t)|^2+|Fhat(-t)|^2)/2`, the correction is
+
+\[
+K_\sigma[F]=2\Re\operatorname{Tr}_{\chi\mathcal H}
+\left(C_\sigma(I-C_\sigma^2)^{-1}T_\sigma a_e(D)\chi\right).
+\]
+
+The source factor crosses the cutoff in a finite strip. A quantitative
+cutoff gap justifies the inverse, and a convergent return expansion has an
+explicit truncation error. This is a new boundary representation of the
+correction, not a definition by arithmetic subtraction. Its archimedean
+limit is the existing nonzero `E_infinity`.
+
+On compact frequency windows, bounded Abel resolvents continue the formula
+to every fixed sigma>1/2 and prove local finiteness of the positive frequency
+measure. This supplies finite positive forms with source-independent smooth
+frequency cutoffs. Such cutoffs have infinite rank and can retain trace
+concentration despite the strong zero limit of the projections.
+
+The later critical endpoint results above settle the frequency tails and
+crossing bookkeeping left open by this representation. The exact return
+defect at cutoff spectral value 1 remains unresolved. Below sigma=1 the
+phase bulk includes explicit pole and off-line zero-crossing terms in
+addition to `Gamma-W_sigma`. See the
+[derivation](notes/SONIN_PHASE_BOUNDARY_TRACE_20260929.md)
+and [internal review](reviews/SONIN_PHASE_BOUNDARY_TRACE_REVIEW_20260929.md).
+No full arithmetic trace limit or RH theorem follows.
 
 ## Active plan and first limit results
 
@@ -90,9 +168,10 @@ analytic results:
   unproved.
 
 The phase continuation and the raw critical prime-cutoff sequence are
-separate candidates; their limits have not been shown equivalent. For
-1/2<sigma<=1, finiteness of the full phase-family smoothed trace is also
-open here. Finite-rank forms avoid assuming that finiteness.
+separate candidates; their limits have not been shown equivalent. The new
+tail theorem proves full phase-family smoothed trace finiteness for every
+sigma>1/2. The earlier finite-rank forms remain valid, but are no longer
+needed merely to obtain a finite form.
 
 See the [regularized family](notes/SONIN_REGULARIZED_POSITIVE_FAMILY_20260929.md),
 [topology and fixed-compression analysis](notes/SONIN_POSITIVE_LIMIT_TOPOLOGY_20260929.md),
@@ -255,22 +334,21 @@ trial space. See the
 
 ## Next work and decision criteria
 
-1. Derive a usable representation of the positive frequency measure or
-   source-smoothed discrepancy of a specified candidate family. The central
-   question is how the positive measure concentrates and why its action on
-   each prepared source should approach the arithmetic expression.
-2. Prove arithmetic identification with an error tending to zero on each
-   fixed source, preserving contact, poles or their exact preparation, and
-   every active prime power. A local distributional limit on prepared
-   correlation tests is sufficient. Defining a positive measure from assumed
-   real zeta zeros, or merely proving convergence to an unknown form, is not
-   an independent construction.
-3. Establish the required tails and parameter schedule. For the phase family,
-   resolution must grow as regularization is removed; fixed resolution gives
-   zero. For the raw place family, investigate the new moving-tail or signed
-   covariance estimates without discarding the cancellations they retain.
-   Uniform state-space trace compactness forcing a fixed final compression
-   is not an appropriate requirement.
+1. Seek a global property of the actual zeta phase that determines which
+   critical-zero packets survive in its exact intersection kernel. The
+   remaining return mass is concentrated near cutoff spectral value 1.
+   The rational countermodel rules out an inference from local factorization,
+   strong convergence, or a merely positive prelimit gap. A small constraint
+   residual alone does not imply proximity to the exact kernel.
+2. Retain the exact discrepancy `B_sigma-Q=-return_trace-Z_off+o(1)`.
+   Vanishing return would identify the critical-line measure; identifying
+   the complete arithmetic form also requires the off-line pairing. The
+   crossing terms are now explicitly derived, not an omitted normalization.
+3. Phase-family source tails are proved. Any remaining coupled Abel or
+   finite-rank schedule must resolve the exact-kernel issue, rather than
+   merely define finite traces. For the raw place family, the moving-tail
+   or signed-covariance hypotheses still need proof; no equivalence with
+   the phase limit is known.
 4. Choose numerical experiments only after specifying the asymptotic statement
    they can test. Reuse the existing even/odd sources and projection tools for
    calibration. A finite-stage residual sign is optional evidence about a

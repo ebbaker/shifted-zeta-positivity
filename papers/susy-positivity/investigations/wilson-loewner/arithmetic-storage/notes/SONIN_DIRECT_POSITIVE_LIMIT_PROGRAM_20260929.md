@@ -147,8 +147,10 @@ Define a unitary involution on the Fourier side, almost everywhere, by
 Isolated zeros or poles affect only null sets in this multiplier definition.
 No half-plane innerness or zero-free claim is used. For sigma>1 this projection
 agrees with the regularized transported Sonin projection. For 1/2<sigma<=1,
-(2) is a definition; bounded inverse-Euler transport and trace finiteness
-have not been inherited from the sigma>1 proof.
+(2) is a definition; bounded inverse-Euler transport is not inherited from
+the sigma>1 proof. The later
+[frequency-tail theorem](SONIN_PHASE_FREQUENCY_TAILS_20260929.md) separately
+proves full source-smoothed trace finiteness for every sigma>1/2.
 
 The functional equation cancels the phase at sigma=1/2, giving
 F_(1/2)=J. Hence the endpoint intersection is zero. Moreover F_sigma tends
@@ -161,7 +163,7 @@ fixed-state trace realization. The detailed construction and proof are in the
 The phase path is a separate candidate from R->infinity at the physical
 coefficient p^(-1/2). No theorem equates those limiting procedures.
 
-### Finite positive forms that remain defined before trace finiteness is known
+### Finite-rank positive forms and the now-established full traces
 
 Fix source-independent finite-rank orthogonal projections E_N increasing
 strongly to the identity. The forms
@@ -171,9 +173,10 @@ P_{\sigma,N}[F]=\|C_F\Pi_\sigma E_N\|_{\rm HS}^2\ge0
 \tag{3}
 \]
 
-are finite for every compact smooth F. For sigma>1, their N->infinity limit
-is B_sigma. For other sigma, that full trace may be infinite; (3) remains
-well-defined.
+are finite for every compact smooth F. Their N->infinity limit is B_sigma
+for every sigma>1/2, now known to be finite by the separate frequency-tail
+theorem. They remain useful as approximants, but are no longer necessary
+merely to define finite forms.
 
 For each fixed N, P_(sigma,N)[F] tends to zero as sigma decreases to 1/2,
 because Pi_sigma E_N tends to zero in Hilbert–Schmidt norm. A nonzero
@@ -195,20 +198,32 @@ not be replaced by uniform tightness at a fixed spatial cutoff.
 
 ## Next work and decision points
 
-1. Derive a usable representation of the positive frequency measure or
-   source-smoothed discrepancy for the proposed family. For the phase path,
-   investigate spectral concentration and the finite-rank growth needed near
-   the critical endpoint. A positive finite matrix alone is not the target.
+The [phase boundary derivation](SONIN_PHASE_BOUNDARY_TRACE_20260929.md)
+now supplies the requested representation for sigma>1, including the
+independently represented correction, its archimedean calibration, and a
+controlled return expansion. The subsequent
+[critical-limit synthesis](SONIN_CRITICAL_LIMIT_STATUS_20260929.md)
+closes full source-trace finiteness, uniform weighted tails, and arithmetic
+crossing bookkeeping. The actual projection can still lose critical-line
+mass through its return operator. An exact rational model shows that local
+phase factorization and a positive prelimit gap do not rule out total loss.
+
+1. Determine a global property of the actual zeta phase that controls its
+   return mass near cutoff spectral value 1, or shows a nonzero defect.
+   Return mass away from 1 and the other boundary terms now vanish in the
+   critical limit. The remaining step must distinguish approximate kernel
+   vectors from the exact intersection; local phase information is insufficient.
 2. Prove an arithmetic comparison with an error tending to zero on each fixed
    prepared source. One sufficient formulation is convergence, as distributions
    on compact correlation tests, of the independently constructed kernels to
    the fully prepared gamma/contact-minus-prime distribution. Preserve the
    exact normalization and all active prime powers. This is the decisive open
    lemma, not a consequence of convergence to an unidentified positive measure.
-3. Establish the necessary tails or parameter schedule. For (3), neither fixed
-   N nor unproved exchange of N and sigma limits can work. For the raw place
-   family, test the new moving-tail or signed-sum conditions. Do not require
-   whole-line operator-norm convergence or a uniform positive gap.
+3. Phase-family tails are proved. Any needed parameter schedule for (3)
+   must resolve the remaining exact-kernel loss; fixed N still gives zero.
+   Fixed Abel parameters instead recover the critical-line zero measure,
+   which omits the signed off-line pairing. For the raw place family,
+   investigate its still-unproved moving-tail or signed-sum conditions.
 4. Use numerics only to discriminate a stated concentration, tail, or
    discrepancy mechanism. The two existing sources are calibration probes.
    Resolve their finite-stage residual signs only if the chosen asymptotic
@@ -223,10 +238,10 @@ establish neither.
 
 If the raw family converges to the wrong object, revise the family or the
 geometric cutoff rather than demand that its finite remainders become
-nonnegative. If the regularized phase family lacks a usable finite smoothed
-trace or joint cutoff control, retain its proved endpoint behavior and assess
-another positive construction. Neither result would close the general
-positive-approximation program.
+nonnegative. The regularized phase family now has finite smoothed traces
+and weighted tail control. If its exact projection loses the needed mass,
+retain those results and assess another positive construction. This would
+not close the general positive-approximation program.
 
 ## Current assessment
 
