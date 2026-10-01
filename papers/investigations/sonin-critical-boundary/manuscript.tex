@@ -1,0 +1,1545 @@
+\documentclass[11pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage{enumitem}
+\usepackage{microtype}
+\usepackage{xcolor}
+\usepackage[colorlinks=true,linkcolor=blue!45!black,citecolor=blue!45!black,urlcolor=blue!45!black]{hyperref}
+\hypersetup{pdftitle={Critical-boundary trace limits for zeta-phase Sonin operators},
+pdfauthor={Drafted for Edward Baker},
+pdfsubject={Sonin projections, zeta phases, uniform trace bounds, and projection loss}}
+\numberwithin{equation}{section}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\newcommand{\HH}{\mathcal H}
+\newcommand{\Sch}{\mathcal S}
+\newcommand{\Tr}{\operatorname{Tr}}
+\newcommand{\Ran}{\operatorname{Ran}}
+\newcommand{\Rea}{\operatorname{Re}}
+\newcommand{\Ima}{\operatorname{Im}}
+\newcommand{\ii}{\mathrm i}
+\newcommand{\Id}{I}
+\newcommand{\J}{\mathcal J}
+\newcommand{\Fcal}{\mathcal F}
+\newcommand{\Qcal}{\mathcal Q}
+\newcommand{\Sone}{\mathfrak S_1}
+\newcommand{\Stwo}{\mathfrak S_2}
+\newcommand{\norm}[1]{\left\lVert #1\right\rVert}
+\newcommand{\abs}[1]{\left\lvert #1\right\rvert}
+\newcommand{\inner}[2]{\left\langle #1,#2\right\rangle}
+\newcommand{\dd}{\,\mathrm d}
+\newcommand{\mucrit}{\mu_{\mathrm{crit}}}
+\newcommand{\Zcrit}{Z_{\mathrm{crit}}}
+\newcommand{\Zoff}{Z_{\mathrm{off}}}
+\setlist[enumerate]{label=\textup{(\roman*)},itemsep=3pt}
+\setlength{\emergencystretch}{2em}
+\title{Critical-boundary trace limits\\for zeta-phase Sonin operators}
+\author{Drafted for Edward Baker}
+\date{30 September 2026\\[3pt]\small Working draft}
+\begin{document}
+\maketitle
+
+\begin{abstract}
+We study the Sonin-type intersection projections associated with the
+unimodular phases
+\(v_\sigma(t)=e^{2\ii\theta(t)}
+\zeta(\sigma+\ii t)/\zeta(\sigma-\ii t)\), \(\sigma>1/2\).
+A boundary-resolvent formula separates the positive projection trace from
+the phase derivative. We prove uniform logarithmic-square bounds for the
+unit-window masses of the projection, a positive majorant, and the
+compressed cutoff square. These bounds give finite traces and uniform
+frequency tails for every compact smooth source. As \(\sigma\downarrow1/2\),
+the majorant and every fixed Abel regularization converge, after source
+smoothing, to the counting measure of critical-line zeros. Every
+subsequential limit of the exact projection measure is supported on those
+zeros, with weights between zero and their multiplicities. The remaining
+projection defect is positive and concentrates at cutoff spectral value
+one. An explicit rational phase has the same local concentration and a
+positive gap at every prelimit parameter, but its exact intersection
+projection vanishes identically. Finally, a contour comparison retains
+the pole and all off-line zero crossings, distinguishing the critical-zero
+measure from the complete Weil form. Neither survival of all critical
+mass in the exact zeta projection nor the Riemann hypothesis is proved.
+\end{abstract}
+
+\noindent\textbf{Draft status.}
+This manuscript consolidates internal research derivations.
+Independent specialist verification and a full priority assessment remain
+outstanding. All results below are analytic; no numerical certificate is
+used in their proofs.
+
+\tableofcontents
+
+\section{Introduction and main results}\label{sec:intro}
+
+A positive trace attached to a Hilbert-space compression is a natural
+candidate for comparison with Weil's quadratic form. The difficult part
+of such a comparison is the identification of the arithmetic functional.
+An orthogonal projection may converge strongly to zero while its
+smoothed trace retains a nonzero limit. Conversely, concentration in a
+phase derivative need not survive passage to an exact intersection
+kernel. This paper separates these phenomena for a family of zeta phases.
+
+Connes and Consani express the archimedean Weil distribution as a Sonin
+trace with a prolate correction \cite{CCWeil}. Their quasi-inner framework
+constructs semilocal Sonin spaces and maps between them \cite{CCQuasi}.
+Connes, Consani, and Moscovici further analyze semilocal transport and
+the associated Hilbert spaces of entire functions \cite{CCM}.
+The relation of Sonine spaces to zeta zeros has earlier developments
+in de Branges's framework and Burnol's work \cite{Burnol}. Spectral
+interpretations that distinguish critical zeros from possible noncritical
+zeros also predate the present construction \cite{ConnesTrace}.
+
+The contribution considered here is the critical-boundary behavior of
+one specified phase family: uniform source-trace estimates, a precise
+localization of possible projection loss, and a solvable example showing
+the limits of local phase information. We use standard two-projection
+algebra \cite{Halmos}, Schwartz-kernel smoothing, local estimates for
+\(\zeta'/\zeta\), and elementary contour arguments. We do not claim a
+new general positivity principle or a new version of the explicit formula.
+
+Here is the operator setting. On \(\HH=L^2(\mathbb R,\dd x)\), let
+\[
+P=1_{(0,\infty)},\qquad \chi=\Id-P,\qquad
+(\J h)(x)=h(-x).
+\]
+With the Fourier convention fixed in Section~\ref{sec:setup}, set
+\begin{equation}\label{eq:phase-intro}
+v_\sigma(t)=
+\frac{\Gamma(1/4+\ii t/2)}{\Gamma(1/4-\ii t/2)}
+\pi^{-\ii t}
+\frac{\zeta(\sigma+\ii t)}{\zeta(\sigma-\ii t)},
+\qquad
+\Fcal_\sigma=\J v_\sigma(D).
+\end{equation}
+The operator \(\Fcal_\sigma\) is a selfadjoint unitary involution. Define
+\begin{equation}\label{eq:operators-intro}
+T_\sigma=\chi\Fcal_\sigma P,\quad
+C_\sigma=\chi\Fcal_\sigma\chi,\quad
+\Pi_\sigma=\operatorname{proj}\ker(T_\sigma|_{P\HH}),
+\quad L_\sigma=P-T_\sigma^*T_\sigma.
+\end{equation}
+All compressed operators are extended by zero on the complementary
+half-line. In particular \(0\le\Pi_\sigma\le L_\sigma\le P\).
+We call
+\[
+H_\sigma=L_\sigma-\Pi_\sigma
+\]
+the \emph{return operator}; this is an independently defined positive
+operator.
+
+For a bounded positive operator \(G\), its frequency measure is initially
+defined with infinite values allowed by
+\begin{equation}\label{eq:measure-intro}
+\nu_G(E)=\norm{1_E(D)G^{1/2}}_{\Stwo}^2.
+\end{equation}
+Local finiteness is part of the theorem. Write
+\(\nu_\sigma=\nu_{\Pi_\sigma}\), and let
+\[
+\mucrit=\sum_{\rho=1/2+\ii\gamma}m_\rho\delta_\gamma
+\]
+sum over distinct nontrivial critical-line zeros, including both signs
+of the ordinates, with multiplicity \(m_\rho\).
+
+\begin{theorem}[Uniform bounds and the critical limit]\label{thm:main}
+For every finite \(S>1/2\), there is \(M_S<\infty\) such that
+\begin{equation}\label{eq:main-window}
+\nu_G([j,j+1])\le M_S\log^2(2+|j|),\qquad j\in\mathbb Z,
+\end{equation}
+uniformly for \(1/2<\sigma\le S\) and
+\(G=\Pi_\sigma,L_\sigma,C_\sigma^2\).
+For every \(f\in\Sch(\mathbb R)\), all corresponding positive sandwich
+traces are finite, with uniform tails in frequency. Moreover:
+\begin{enumerate}
+\item The projections \(\Pi_\sigma\) tend strongly to zero as
+\(\sigma\downarrow1/2\), but
+\[
+\Tr(f(D)L_\sigma f(D)^*)\longrightarrow
+\int |f|^2\dd\mucrit.
+\]
+\item With \(R_\sigma[f]=\Tr(f(D)H_\sigma f(D)^*)\ge0\),
+\begin{equation}\label{eq:main-defect}
+\Tr(f(D)\Pi_\sigma f(D)^*)
+=\int|f|^2\dd\mucrit-R_\sigma[f]+o_f(1).
+\end{equation}
+Every sequence \(\sigma_n\downarrow1/2\) has a subsequence for which
+\(\nu_{\sigma_n}\) converges vaguely. Every such limit is
+\[
+\nu_*=\sum_{\rho=1/2+\ii\gamma}c_\gamma\delta_\gamma,
+\qquad 0\le c_\gamma\le m_\rho.
+\]
+\item For each fixed \(0\le r<1\), the positive contractions
+\[
+\Pi_{\sigma,r}=P-T_\sigma^*(\Id_\chi-rC_\sigma^2)^{-1}T_\sigma
+\]
+satisfy
+\[
+\Tr(f(D)\Pi_{\sigma,r}f(D)^*)\longrightarrow
+\int |f|^2\dd\mucrit.
+\]
+\end{enumerate}
+\end{theorem}
+
+The theorem does not assert convergence of the exact projection measures
+or equality \(c_\gamma=m_\rho\).
+Section~\ref{sec:return} identifies the remaining defect as mass
+approaching the endpoint of the spectrum of \(C_\sigma^2\).
+Section~\ref{sec:model} gives an explicit family for which every exact
+projection is zero although the limiting majorant measure is a unit atom.
+It also computes the dependence on a jointly varying Abel parameter.
+
+To state the arithmetic consequence, let \(F\in C_c^\infty(\mathbb R)\),
+let \(C_F\) be convolution by \(F\), and put
+\[
+a_F(z)=\widehat F(z)\overline{\widehat F(\overline z)}.
+\]
+Write \(B_\sigma[F]=\Tr(C_F\Pi_\sigma C_F^*)\) and
+\(\Zcrit[F]=\int|\widehat F|^2\dd\mucrit\).
+For the prepared sources
+\begin{equation}\label{eq:prepared}
+F=(-\partial_x^2+1/4)h,\qquad h\in C_c^\infty(\mathbb R),
+\end{equation}
+the pole terms in the critical explicit formula vanish.
+With \(Q\) normalized in Section~\ref{sec:arithmetic}, the comparison is
+\begin{equation}\label{eq:intro-arithmetic}
+B_\sigma[F]-Q[F]
+=-R_\sigma[\widehat F]-\Zoff[F]+o_F(1),\qquad
+\Zoff[F]=2\Rea\sum_{\beta>1/2}m_{\beta+\ii\gamma}
+a_F\bigl(\gamma+\ii(\beta-1/2)\bigr).
+\end{equation}
+At nonreal arguments \(a_F\) is not a modulus square.
+Consequently \(\Zoff\) has no asserted sign. The positive limits in
+Theorem~\ref{thm:main} count critical-line zeros; unconditional
+identification with the complete Weil form is a separate problem.
+
+\section{Conventions, cutoff geometry, and smoothing}\label{sec:setup}
+
+We use inner products antilinear in the first variable and
+\begin{equation}\label{eq:fourier}
+\widehat h(t)=\int_{\mathbb R}h(x)e^{-\ii tx}\dd x,\qquad
+h(x)=\int_{\mathbb R}\widehat h(t)e^{\ii tx}\frac{\dd t}{2\pi}.
+\end{equation}
+The notation \(b(D)\) denotes the Fourier multiplier with symbol \(b\).
+The Riemann--Siegel phase in the abstract is
+\[
+\theta(t)=\Ima\log\Gamma(1/4+\ii t/2)-(t/2)\log\pi,
+\]
+with the continuous logarithm normalized at \(t=0\).
+The reflection \(\J\) is linear. No complex conjugation is included
+in \(\J\). The symbols \(\norm{\cdot}_{\Sone}\) and
+\(\norm{\cdot}_{\Stwo}\) denote trace and Hilbert--Schmidt norms.
+
+At a zero or pole on the line \(\Rea s=\sigma\), the numerator and
+denominator of the zeta ratio in \eqref{eq:phase-intro} have the same
+order as functions of real \(t\). The ratio therefore has a smooth
+removable extension near that frequency. We always use this extension,
+not a one-sided distributional limit in \(\sigma\).
+On the real line
+\[
+|v_\sigma|=1,\qquad v_\sigma(-t)=\overline{v_\sigma(t)}.
+\]
+These identities imply that \(\Fcal_\sigma\) is a selfadjoint
+unitary involution and preserves real functions.
+
+For part of the argument it is useful to work with an arbitrary smooth
+unimodular phase \(v\) having this symmetry. Set \(V=v(D)\),
+\(\Fcal=\J V\), and use \(C,T,L,\Pi,H\) without subscripts.
+The elementary block identities are
+\begin{align}
+TT^*&=\Id_\chi-C^2,\label{eq:tt}\\
+L&=P V^*\chi V P=(P\Fcal P)^2,\label{eq:Lfactor}\\
+C^2&=\chi V^*PV\chi,\label{eq:Cfactor}\\
+\Qcal:=V^*PV-P
+&=\begin{pmatrix}-L&T^*C\\ CT&C^2\end{pmatrix}
+\quad\hbox{on }P\HH\oplus\chi\HH.\label{eq:Qblocks}
+\end{align}
+Indeed \(V=\J\Fcal\), \(\J P\J=\chi\), and \(\Fcal^2=\Id\).
+On \(P\HH\), \(L=\Id_{P\HH}-T^*T\); hence \(0\le L\le P\).
+The kernel projection of \(T\) is the spectral projection of \(L\)
+at \(1\), so \(L\Pi=\Pi\) and \(0\le\Pi\le L\).
+
+\begin{lemma}[Schwartz cutoff blocks]\label{lem:hankel}
+If \(q\in\Sch(\mathbb R)\), then \(Pq(D)\chi\),
+\(\chi q(D)P\), and \([P,q(D)]\) are trace class.
+Their trace norms depend continuously on Schwartz seminorms of \(q\).
+Furthermore,
+\begin{equation}\label{eq:comm-energy}
+\norm{[P,q(D)]}_{\Stwo}^2
+=\frac1{4\pi^2}\iint_{\mathbb R^2}
+\frac{|q(t)-q(s)|^2}{(t-s)^2}\dd t\dd s.
+\end{equation}
+The last identity also applies whenever the right side is finite and
+\(q\) is bounded.
+\end{lemma}
+\begin{proof}
+After reflection of the negative coordinate, the kernel of
+\(Pq(D)\chi\) is \(\check q(x+y)\) for \(x,y>0\).
+Choose a smooth function equal to one on \([0,\infty)\) and zero
+on \((-\infty,-1]\) in each variable. Multiplying
+\(\check q(x+y)\) by these cutoffs gives a Schwartz kernel on
+\(\mathbb R^2\). Expansion in Hermite functions, or repeated application
+of the harmonic oscillator in both variables, gives rapidly decaying
+matrix coefficients. Thus the extended operator is trace class, with
+trace norm controlled by finitely many Schwartz seminorms.
+Compression proves the first assertion. This is also the smoothing
+argument used in \cite[Appendix D]{CCWeil}.
+
+In Fourier coordinates with measure \(\dd t/(2\pi)\), the kernel of
+\(P\) is
+\[
+\pi\delta(t-s)-\ii\operatorname{pv}\frac1{t-s}.
+\]
+The commutator cancels the delta term and has kernel
+\(-\ii(q(s)-q(t))/(t-s)\). Its squared Hilbert--Schmidt norm gives
+\eqref{eq:comm-energy}. Approximation, or the same kernel calculation
+in distributions, proves the finite-energy version.
+\end{proof}
+
+\begin{lemma}[Localized phase trace]\label{lem:phase-trace}
+For \(b\in C_c^\infty(\mathbb R)\), let \(\phi'\) be the smooth
+local phase derivative of \(v\), so \(v'=\ii\phi'v\).
+The positive operators \(b(D)Lb(D)^*\) and \(b(D)C^2b(D)^*\)
+are trace class, as is \(b(D)\Qcal b(D)^*\), and
+\begin{equation}\label{eq:bulk-trace}
+-\Tr(b(D)\Qcal b(D)^*)=\int |b(t)|^2\phi'(t)\frac{\dd t}{2\pi}.
+\end{equation}
+Writing \(X_a=Pa(D)\chi\), \(a=|b|^2\), gives
+\begin{equation}\label{eq:L-trace}
+\Tr(b(D)Lb(D)^*)=
+\int a(t)\phi'(t)\frac{\dd t}{2\pi}
++\Tr(b(D)C^2b(D)^*)+2\Rea\Tr_{\chi\HH}(CTX_a).
+\end{equation}
+\end{lemma}
+\begin{proof}
+Whenever \(q,qv\) are Schwartz,
+\begin{equation}\label{eq:phase-comm}
+q(D)\Qcal
+=V^*\bigl([P,(qv)(D)]-[P,q(D)]V\bigr)\in\Sone.
+\end{equation}
+Apply this first with \(q=b\). Commuting \(b(D)\) past \(P\)
+and \(\chi\), using Lemma~\ref{lem:hankel}, proves that \(b(D)\)
+times every block in \eqref{eq:Qblocks} is trace class. In particular
+the two positive sandwiches are trace class.
+
+The Fourier kernel of \(\Qcal\) is
+\[
+-\ii\frac{\overline{v(t)}v(s)-1}{t-s}.
+\]
+Its diagonal value is \(\ii\overline v(t)v'(t)=-\phi'(t)\).
+The kernel of its sandwich by \(b\) is smooth and compactly supported
+in both frequency variables. The trace is therefore its diagonal
+integral, proving \eqref{eq:bulk-trace}.
+Taking traces of \eqref{eq:Qblocks} yields \eqref{eq:L-trace}.
+The crossing term can be cycled to the negative half-line because
+\(X_a\in\Sone\) and all other factors are bounded.
+\end{proof}
+
+\begin{remark}
+For \(G\ge0\), an orthonormal-basis expansion of
+\eqref{eq:measure-intro} and Tonelli's theorem give countable additivity
+and
+\[
+\Tr(b(D)Gb(D)^*)=\int|b|^2\dd\nu_G.
+\]
+At a parameter where the measure is locally finite it is absolutely
+continuous: a Lebesgue-null frequency set has zero spectral projection
+\(1_E(D)\). This does not prevent an atomic limit of the measures.
+\end{remark}
+
+\section{Actual projections and boundary formulas}\label{sec:boundary}
+
+\subsection{The bounded-transport region}
+
+Let \(\Fcal_\infty=\J v_\infty(D)\), where
+\[
+v_\infty(t)=
+\pi^{-\ii t}\frac{\Gamma(1/4+\ii t/2)}
+{\Gamma(1/4-\ii t/2)}.
+\]
+This is the logarithmic form of the unitary cosine transform at physical
+cutoff one. Its compressed negative-half-line operator
+\(C_\infty=\chi\Fcal_\infty\chi\) is compact and
+\begin{equation}\label{eq:c0}
+c_0:=\norm{C_\infty}<1.
+\end{equation}
+One way to see strictness is to return to the finite physical interval:
+the cosine kernel is smooth there and hence compact. Equality of its
+norm to one would give a nonzero function supported in that interval
+whose cosine transform is also supported there. The transform of a
+compactly supported function is entire, and vanishing on the exterior
+interval forces it to be zero. Compactness makes this exclusion of an
+extremal vector sufficient for \eqref{eq:c0}; compare \cite{CCWeil}.
+
+For \(\sigma>1\), put \(U_ah(x)=h(x-a)\) and
+\begin{equation}\label{eq:transport}
+D_\sigma=\sum_{n\ge1}\mu(n)n^{-\sigma}U_{\log n},
+\qquad
+D_\sigma^{-1}=\sum_{n\ge1}n^{-\sigma}U_{\log n}.
+\end{equation}
+Both series converge absolutely in operator norm; their multipliers
+are \(1/\zeta(\sigma+\ii t)\) and \(\zeta(\sigma+\ii t)\).
+Both preserve \(P\HH\). Set
+\[
+\ell_\sigma=\zeta(\sigma)^{-1},\qquad
+u_\sigma=\frac{\zeta(\sigma)}{\zeta(2\sigma)},\qquad
+D_+=D_\sigma|_{P\HH},\quad
+D_-=\chi D_\sigma\chi|_{\chi\HH}.
+\]
+Then \(\norm{D_+}\le u_\sigma\) and
+\(\norm{D_-^{-1}}\le\ell_\sigma^{-1}\).
+The inverse assertion for \(D_-\) follows by compressing
+\(D_\sigma^{-1}\): the triangularity
+\(\chi D_\sigma P=\chi D_\sigma^{-1}P=0\) makes the two products identities.
+
+\begin{proposition}[Gap and exact metric]\label{prop:gap}
+For \(\sigma>1\),
+\begin{equation}\label{eq:gap}
+T_\sigma=D_-T_\infty D_+^{-1},\qquad
+\Id_\chi-C_\sigma^2\ge
+g_\sigma\Id_\chi,\quad
+g_\sigma=(\ell_\sigma/u_\sigma)^2(1-c_0^2)>0,
+\end{equation}
+and
+\begin{equation}\label{eq:projection}
+\Pi_\sigma=P-T_\sigma^*(\Id_\chi-C_\sigma^2)^{-1}T_\sigma.
+\end{equation}
+It is the ordinary orthogonal projection onto
+\(D_\sigma\Ran\Pi_\infty\).
+\end{proposition}
+\begin{proof}
+The multiplier relation gives
+\(\Fcal_\sigma=D_\sigma\Fcal_\infty D_\sigma^{-1}\).
+Compress and use the triangularity just noted to obtain
+the formula for \(T_\sigma\).
+For \(y\in\chi\HH\),
+\[
+\norm{T_\sigma^*y}
+\ge u_\sigma^{-1}\norm{T_\infty^*D_-^*y}
+\ge u_\sigma^{-1}(1-c_0^2)^{1/2}\ell_\sigma\norm y.
+\]
+This proves the gap. Thus \(T_\sigma\) is onto, and the usual kernel
+projection formula gives \eqref{eq:projection}.
+The factorization of \(T_\sigma\) identifies its kernel.
+
+Equivalently, if
+\(A_\sigma=\Pi_\infty D_\sigma^*D_\sigma\Pi_\infty\)
+on \(\Ran\Pi_\infty\), then
+\[
+\Pi_\sigma=D_\sigma\Pi_\infty A_\sigma^{-1}
+\Pi_\infty D_\sigma^*.
+\]
+The inverse compressed metric is necessary in this formula.
+\end{proof}
+
+\subsection{A boundary resolvent with a finite crossing strip}
+
+For \(F\in C_c^\infty\), put \(a=|\widehat F|^2\), and
+\[
+a_e(t)=\frac{a(t)+a(-t)}2,\qquad X_{F,e}=Pa_e(D)\chi.
+\]
+The phase derivative is
+\begin{equation}\label{eq:phase-deriv}
+\phi_\sigma'(t)=\gamma_\infty(t)
++2\Rea\frac{\zeta'}{\zeta}(\sigma+\ii t),\quad
+\gamma_\infty(t)=\Rea\psi(1/4+\ii t/2)-\log\pi,
+\end{equation}
+with removable values used on exceptional lines.
+Write
+\[
+\kappa_F(x)=\int\overline{F(y)}F(y+x)\dd y,\qquad
+\Gamma[F]=\int\gamma_\infty(t)|\widehat F(t)|^2\frac{\dd t}{2\pi},
+\]
+and, for any real \(\sigma\),
+\begin{equation}\label{eq:W}
+W_\sigma[F]=\sum_{p,m\ge1}(\log p)p^{-m\sigma}
+\{\kappa_F(m\log p)+\kappa_F(-m\log p)\}.
+\end{equation}
+If the support of \(F\) has diameter at most \(L\), only delays
+\(m\log p<L\) contribute. All active prime powers are retained.
+
+\begin{theorem}[Boundary-resolvent representation]\label{thm:boundary}
+For \(\sigma>1\) and \(F\in C_c^\infty(\mathbb R)\),
+\begin{equation}\label{eq:boundary-formula}
+B_\sigma[F]=\Gamma[F]-W_\sigma[F]+K_\sigma[F],
+\end{equation}
+where the correction is independently represented by
+\begin{equation}\label{eq:short-boundary}
+K_\sigma[F]=
+2\Rea\Tr_{\chi\HH}
+\left(C_\sigma(\Id_\chi-C_\sigma^2)^{-1}T_\sigma X_{F,e}\right).
+\end{equation}
+The kernel of \(X_{F,e}\) is
+\(1_{x>0>y}\check a_e(x-y)\); it vanishes unless
+\(-L<y<0<x<L\) and \(x-y<L\).
+With \(c_\sigma=\norm{C_\sigma}<1\), the series
+\begin{equation}\label{eq:return-series}
+K_\sigma[F]=2\Rea\sum_{n\ge0}
+\Tr_{\chi\HH}(C_\sigma^{2n+1}T_\sigma X_{F,e})
+\end{equation}
+has truncation error after \(n=N\) bounded by
+\begin{equation}\label{eq:return-series-error}
+\frac{2c_\sigma^{2N+3}}{\sqrt{1-c_\sigma^2}}\,
+\norm{X_{F,e}}_{\Sone}.
+\end{equation}
+\end{theorem}
+\begin{proof}
+For fixed \(\sigma>1\), derivatives of the zeta ratio are bounded
+at each order; the gamma ratio and its derivatives have at most
+polynomial growth. Thus \eqref{eq:phase-comm} applies to every Schwartz
+multiplier. The trace calculation of Lemma~\ref{lem:phase-trace}
+extends from compact frequency tests by trace-norm approximation.
+The absolutely convergent differentiated Euler series in
+\eqref{eq:phase-deriv} gives the bulk
+\(\Gamma[F]-W_\sigma[F]\).
+
+For the remaining algebra suppress \(\sigma\), and set
+\(s=(\Id_\chi-C^2)^{1/2}\).
+Equation~\eqref{eq:projection} gives
+\[
+\Pi=L-H,\qquad H=T^*C^2s^{-2}T\ge0.
+\]
+Since \(0\le H\le L\), its source sandwich is trace class.
+The first boundary formula is consequently
+\begin{equation}\label{eq:long-boundary}
+K_\sigma[F]=
+\Tr(C_FC^2C_F^*)-\Tr(C_FHC_F^*)
++2\Rea\Tr_{\chi\HH}(CTPa(D)\chi).
+\end{equation}
+It follows directly from \eqref{eq:Qblocks}, without defining \(K\)
+by arithmetic subtraction.
+
+Real structure makes the frequency measure of \(\Pi\) even, and the
+bulk derivative is even. We may therefore replace \(a\) by \(a_e\)
+in \(K\). The multiplier \(a_e(D)\) commutes with \(\Fcal\).
+The isometry \(J=T^*s^{-1}:\chi\HH\to(P-\Pi)\HH\)
+gives on \(J\chi\HH\oplus\chi\HH\)
+\[
+\Fcal=\begin{pmatrix}-C&s\\s&C\end{pmatrix},
+\qquad
+\Pi+\Qcal=\begin{pmatrix}-C^2&sC\\Cs&C^2\end{pmatrix}.
+\]
+This subspace reduces \(\Fcal\): \(\Ran\Pi\) is itself invariant
+under the involution. If the compression of \(a_e(D)\) is
+\(\begin{pmatrix}A&B\\B^*&D_0\end{pmatrix}\), commutation gives
+\[
+sD_0-As=CB+BC,\qquad B=s^{-1}T X_{F,e}\in\Sone.
+\]
+The diagonal products \(AC^2,D_0C^2\) are trace class: this follows
+by compressing \(a_e(D)\Qcal\), whose diagonal blocks are
+\(-AC^2+BCs\) and \(B^*sC+D_0C^2\).
+Multiplying the commutation relation on the right by \(Cs^{-1}C\),
+and using bounded-factor cyclicity, gives
+\[
+\Tr(C^2D_0-C^2A)=2\Tr(C^3s^{-1}B).
+\]
+Adding the crossing traces reduces \eqref{eq:long-boundary}
+to \(2\Rea\Tr(Cs^{-1}B)\), which is \eqref{eq:short-boundary}.
+
+The Neumann series for \(s^{-2}\) proves
+\eqref{eq:return-series}. The omitted bounded factor is
+\(C^{2N+3}(\Id_\chi-C^2)^{-1}T\).
+Multiplication by its adjoint and \eqref{eq:tt} give squared norm
+at most \(c_\sigma^{4N+6}/(1-c_\sigma^2)\).
+The trace-ideal inequality proves \eqref{eq:return-series-error}.
+\end{proof}
+
+\begin{remark}[Archimedean calibration]\label{rem:calibration}
+As \(\sigma\to\infty\), \(D_\sigma,D_\sigma^{-1}\to\Id\) in norm.
+The gap and the fixed trace-class crossing block show directly that
+\eqref{eq:short-boundary} tends to its archimedean value.
+If \(C_\infty\xi_n=\lambda_n\xi_n\) and
+\(\zeta_n=T_\infty^*\xi_n/\sqrt{1-\lambda_n^2}\), that value is
+\[
+2\Rea\sum_n\frac{\lambda_n}{\sqrt{1-\lambda_n^2}}
+\inner{\zeta_n}{a_e(D)\xi_n}.
+\]
+The smooth finite-interval cosine kernel makes \(C_\infty\) trace
+class, so the sum is absolutely convergent.
+This is the prolate correction of
+\cite[Theorem 7]{CCWeil} in the present conventions.
+The correction is generally nonzero.
+\end{remark}
+
+\section{Abel regularization without a cutoff gap}\label{sec:abel}
+
+The norm gap in Proposition~\ref{prop:gap} is only established for
+\(\sigma>1\). Bounded spectral calculus gives a replacement on every
+line \(\sigma>1/2\).
+
+\begin{proposition}[Positive Abel approximants]\label{prop:abel}
+For \(0\le r<1\), define
+\begin{align}
+\Pi_{\sigma,r}
+&=P-T_\sigma^*(\Id_\chi-rC_\sigma^2)^{-1}T_\sigma,\label{eq:abel}\\
+H_{\sigma,r}
+&=rT_\sigma^*C_\sigma^2(\Id_\chi-rC_\sigma^2)^{-1}T_\sigma.
+\label{eq:abel-return}
+\end{align}
+Then
+\[
+0\le\Pi_\sigma\le\Pi_{\sigma,r}\le L_\sigma,\qquad
+\Pi_{\sigma,r}\downarrow\Pi_\sigma,\qquad
+H_{\sigma,r}\uparrow H_\sigma
+\]
+in the strong operator topology as \(r\uparrow1\), and
+\(\Pi_{\sigma,r}=L_\sigma-H_{\sigma,r}\).
+For every compact smooth frequency multiplier \(b\), these monotone
+limits pass through the positive smoothed traces.
+\end{proposition}
+\begin{proof}
+Put \(A=T_\sigma^*T_\sigma\) on \(P\HH\).
+Using \(T_\sigma T_\sigma^*=\Id_\chi-C_\sigma^2\),
+functional calculus gives
+\[
+\Pi_{\sigma,r}
+=\frac{(1-r)(\Id_{P\HH}-A)}
+{(1-r)\Id_{P\HH}+rA}.
+\]
+At a spectral value \(\alpha\in[0,1]\) the multiplier is
+\((1-r)(1-\alpha)/(1-r+r\alpha)\). It equals one at
+\(\alpha=0\), decreases to zero at every \(\alpha>0\), and lies
+between zero and \(1-\alpha\). This proves all operator assertions.
+Lemma~\ref{lem:phase-trace} supplies the finite dominating trace
+\(\Tr(b(D)L_\sigma b(D)^*)\), so monotone convergence applies.
+\end{proof}
+
+In particular \(\nu_\sigma\) is locally finite for every
+\(\sigma>1/2\). A gap is unnecessary for this assertion.
+The approximants in \eqref{eq:abel} are generally not projections.
+Their positive sandwich trace is
+\(\Tr(b(D)\Pi_{\sigma,r}b(D)^*)\); it must not be replaced by
+\(\norm{b(D)\Pi_{\sigma,r}}_{\Stwo}^2\).
+
+\section{Uniform frequency bounds}\label{sec:tails}
+
+We now prove \eqref{eq:main-window} and extend local trace formulas to
+all Schwartz source multipliers. The estimates are uniform when a zero
+or the zeta pole approaches the chosen vertical line.
+
+\subsection{Local factorization and a uniform energy bound}
+
+The classical inputs are the local zero count and local partial-fraction
+formula for \(\zeta'/\zeta\); see
+\cite[Propositions 16 and 19]{Tao} and \cite{Elkies}.
+Counting multiplicities,
+\begin{equation}\label{eq:zero-count}
+\#\{\rho=\beta+\ii\gamma:|\gamma-j|\le5\}
+=O(\log(2+|j|)).
+\end{equation}
+Reflection in the critical line extends a count in a strip bounded
+away from zero to the full critical strip.
+For fixed \(S>1/2\), \(1/2\le\sigma\le S\), and
+\(t\in J_j=(j-3,j+3)\), the local logarithmic-derivative estimate gives
+\begin{equation}\label{eq:local-log}
+\frac{\zeta'}{\zeta}(\sigma+\ii t)
+-\sum_{|\gamma-j|\le5}\frac{m_\rho}{\sigma+\ii t-\rho}
++\frac1{\sigma+\ii t-1}
+=O_S(\log(2+|j|)),
+\end{equation}
+after removal of the displayed singularities.
+To obtain this version, first extract zeros in a fixed small disk
+about \(\sigma+\ii t\). Enlarging the extracted set to the
+displayed list adds only \(O(\log(2+|j|))\) terms whose denominators
+are bounded away from zero. The estimate for bounded \(j\) follows
+by factoring finitely many singularities on a compact set.
+
+For \(d\ne0\), define
+\[
+B_{d,\gamma}(t)=\frac{t-\gamma-\ii d}{t-\gamma+\ii d},
+\qquad B_{0,\gamma}=1.
+\]
+The zero-width convention concerns the phase on the line itself.
+The phase derivative of a nonconstant factor is
+\begin{equation}\label{eq:Bderiv}
+\frac{2d}{d^2+(t-\gamma)^2}.
+\end{equation}
+Include the inverse pole factor
+\[
+R_\sigma(t)=\frac{t+\ii(\sigma-1)}{t-\ii(\sigma-1)}
+\quad(\sigma\ne1),\qquad R_1=1,
+\]
+and, on \(J_j\), set
+\begin{equation}\label{eq:local-product}
+\mathcal B_{j,\sigma}
+=R_\sigma\prod_{|\gamma-j|\le5}
+B_{\sigma-\beta,\gamma}^{\,m_\rho},
+\qquad w_{j,\sigma}=v_\sigma/\mathcal B_{j,\sigma}.
+\end{equation}
+All factors have modulus one. Equation~\eqref{eq:local-log}
+and the \(O(\log(2+|t|))\) bound for the archimedean phase derivative
+show that the removable extension of \(w_{j,\sigma}\) obeys
+\begin{equation}\label{eq:background}
+\sup_{J_j}|w_{j,\sigma}'|
+\le C_S\log(2+|j|).
+\end{equation}
+The estimate includes \(\sigma=1\) and lines containing zeros.
+The real part of \(1/(\ii(t-\gamma))\) is zero away from
+\(\gamma\); its phase contribution on the exceptional line is
+removed, not interpreted as a delta mass.
+
+For a scalar function \(q\), write
+\[
+\mathcal E(q)=\iint
+\frac{|q(t)-q(s)|^2}{(t-s)^2}\dd t\dd s.
+\]
+
+\begin{lemma}[Width-independent factor energy]\label{lem:energy}
+For \(d\ne0\), \(\mathcal E(B_{d,\gamma})=4\pi^2\).
+There is a fixed real cutoff \(b_0\in C_c^\infty((-2,2))\),
+equal to one on \([0,1]\), such that, with \(b_j(t)=b_0(t-j)\),
+\begin{equation}\label{eq:localized-energy}
+\mathcal E(b_jv_\sigma)\le C_S\log^2(2+|j|)
+\end{equation}
+uniformly for \(1/2<\sigma\le S\).
+\end{lemma}
+\begin{proof}
+Direct subtraction gives
+\[
+\frac{|B_{d,\gamma}(t)-B_{d,\gamma}(s)|^2}{(t-s)^2}
+=\frac{4d^2}
+{((t-\gamma)^2+d^2)((s-\gamma)^2+d^2)}.
+\]
+Integration proves the first assertion, independently of the sign
+or magnitude of \(d\). The inverse pole factor has the same energy.
+
+Extend \(w_{j,\sigma}\) constantly outside \(J_j\).
+This extension is continuous and Lipschitz. Let
+\(f_{j,\sigma}=b_jw_{j,\sigma}\). The translation estimates
+\[
+\norm{f(\cdot+h)-f}_2\le |h|\norm{f'}_2\quad (|h|\le1),
+\qquad
+\norm{f(\cdot+h)-f}_2\le2\norm f_2\quad (|h|>1)
+\]
+imply
+\[
+\mathcal E(f_{j,\sigma})
+\le C\bigl(\norm{f_{j,\sigma}}_2^2+
+\norm{f_{j,\sigma}'}_2^2\bigr)
+\le C_S\log^2(2+|j|).
+\]
+For a product \(B=\prod_{k=1}^{M}B_k\) of unit-modulus factors,
+telescoping and Cauchy--Schwarz give
+\[
+|B(t)-B(s)|^2\le M\sum_{k=1}^{M}|B_k(t)-B_k(s)|^2.
+\]
+Here \(M=O(\log(2+|j|))\), including the pole factor.
+Using
+\[
+|f(t)B(t)-f(s)B(s)|^2
+\le2|f(t)-f(s)|^2+
+2\norm f_\infty^2|B(t)-B(s)|^2
+\]
+proves \eqref{eq:localized-energy}. The identity
+\(b_jv_\sigma=f_{j,\sigma}\mathcal B_{j,\sigma}\) holds globally
+because \(b_j\) is supported strictly inside \(J_j\).
+No global Blaschke factorization has been assumed.
+\end{proof}
+
+\subsection{Positive traces and source tails}
+
+\begin{proposition}[Uniform trace control]\label{prop:tails}
+The estimate \eqref{eq:main-window} holds. For every
+\(f\in\Sch(\mathbb R)\) and any of the three positive measures there,
+\begin{equation}\label{eq:tail-sum}
+\int |f(t)|^2\dd\nu_G(t)
+\le M_S\sum_{j\in\mathbb Z}
+\log^2(2+|j|)\sup_{t\in[j,j+1]}|f(t)|^2.
+\end{equation}
+For each integer \(N>1\), its tail on \(|t|>A\) is
+\(O_{S,f,N}(A^{1-2N}\log^2(2+A))\), uniformly in \(\sigma\).
+\end{proposition}
+\begin{proof}
+Factor \(L_\sigma=A_\sigma^*A_\sigma\), with
+\(A_\sigma=\chi V_\sigma P\), where \(V_\sigma=v_\sigma(D)\).
+Then
+\[
+A_\sigma b_j(D)^*
+=\chi(v_\sigma\overline b_j)(D)P+
+\chi V_\sigma[P,b_j(D)^*].
+\]
+Lemma~\ref{lem:hankel} and \eqref{eq:localized-energy} imply
+\[
+\Tr(b_j(D)L_\sigma b_j(D)^*)
+=\norm{A_\sigma b_j(D)^*}_{\Stwo}^2
+\le C_S\log^2(2+|j|).
+\]
+Since \(b_j=1\) on \([j,j+1]\), this proves the estimate for
+\(\nu_{L_\sigma}\). Positive domination gives it for \(\nu_\sigma\).
+Using \eqref{eq:Cfactor}, factor the small-cutoff sandwich through
+\(PV_\sigma\chi b_j(D)^*\), and commute \(b_j(D)^*\) past
+\(\chi\). Exactly the same estimates prove the bound for
+\(\nu_{C_\sigma^2}\). This includes any subspace at spectral
+value one of \(C_\sigma^2\).
+
+Summing the unit-window estimates gives \eqref{eq:tail-sum}.
+For the tail, use the order-\(N\) Schwartz bound and sum over
+\(|j|>A-2\). The resulting scalar series has the asserted bound.
+\end{proof}
+
+The same bounds hold for \(H_\sigma\) and all \(\Pi_{\sigma,r}\),
+by positive domination. Thus full compact smooth position sources
+require no auxiliary finite-rank cutoff.
+
+\begin{proposition}[Full-source boundary identity]\label{prop:full-boundary}
+For every \(f\in\Sch(\mathbb R)\) and \(\sigma>1/2\),
+\begin{align}
+\Tr(f(D)\Pi_\sigma f(D)^*)
+&=\int |f(t)|^2\phi_\sigma'(t)\frac{\dd t}{2\pi}+K_\sigma[f],
+\label{eq:full-boundary}\\
+K_\sigma[f]
+&=\Tr(f(D)C_\sigma^2 f(D)^*)
+-\Tr(f(D)H_\sigma f(D)^*)\notag\\
+&\hspace{1em}+2\Rea\Tr_{\chi\HH}
+\bigl(C_\sigma T_\sigma P|f|^2(D)\chi\bigr).
+\label{eq:full-K}
+\end{align}
+All displayed quantities are finite. The two positive traces have
+uniform frequency tails on bounded \(\sigma\)-strips.
+\end{proposition}
+\begin{proof}
+Local factorization also gives
+\begin{equation}\label{eq:phase-L1}
+\int_j^{j+1}|\phi_\sigma'(t)|\dd t
+\le C_S\log(2+|j|).
+\end{equation}
+Indeed each rational factor has total absolute phase variation at
+most \(2\pi\), and the remainder satisfies \eqref{eq:background}.
+This proves absolute convergence and uniform Schwartz tails for
+the bulk integral.
+
+Apply Lemma~\ref{lem:phase-trace} and \(\Pi_\sigma=L_\sigma-H_\sigma\)
+to \(f_N=f b_0(t/N)\), replacing \(b_0\) if necessary by a
+cutoff equal to one near zero. Then \(f_N\to f\) in the Schwartz
+topology. Proposition~\ref{prop:tails} treats the positive trace
+terms. Lemma~\ref{lem:hankel} gives
+\[
+P|f_N|^2(D)\chi\longrightarrow P|f|^2(D)\chi
+\quad\hbox{in trace norm}.
+\]
+The remaining factor \(C_\sigma T_\sigma\) is bounded in norm by one,
+so the crossing traces converge. Equation~\eqref{eq:phase-L1}
+treats the bulk integral and proves the result.
+This proof assigns the crossing scalar directly to a trace-class
+cutoff product; it does not require a global trace-class assertion
+for an unsandwiched phase operator.
+\end{proof}
+
+\section{Localization at the critical boundary}\label{sec:critical}
+
+\subsection{Strong collapse and local phase factors}
+
+The functional equation, in the usual Riemann--Siegel convention
+\cite{DLMF}, gives \(v_{1/2}(t)=1\) away from zero ordinates.
+Bounded pointwise convergence therefore implies
+\(V_\sigma\to\Id\) strongly as \(\sigma\downarrow1/2\).
+Equations~\eqref{eq:Lfactor}--\eqref{eq:Cfactor} give
+\begin{equation}\label{eq:strong}
+\Fcal_\sigma\longrightarrow\J,\qquad
+L_\sigma\longrightarrow0,\qquad
+C_\sigma\longrightarrow0,\qquad
+\Pi_\sigma\longrightarrow0
+\quad\hbox{strongly}.
+\end{equation}
+For the last assertion,
+\(\norm{\Pi_\sigma h}^2\le\inner h{L_\sigma h}\).
+In particular, for fixed finite-rank \(E\) and bounded \(f(D)\),
+\(\norm{f(D)\Pi_\sigma E}_{\Stwo}\to0\).
+A fixed compact frequency multiplier is generally infinite rank,
+so this observation does not determine its trace limit.
+
+Let \(\epsilon=\sigma-1/2>0\). On a fixed compact frequency interval,
+choose a slightly larger rectangle about the critical line with
+boundary free of zeros and no off-line zero in its interior.
+There are only finitely many zeros in a bounded rectangle, so its
+horizontal width can be chosen this way. Local analytic factorization
+gives, on a neighborhood of the interval,
+\begin{equation}\label{eq:critical-factor}
+v_{1/2+\epsilon}(t)=B_\epsilon(t)w_\epsilon(t),
+\qquad
+B_\epsilon(t)=\prod_\gamma
+\left(\frac{t-\gamma-\ii\epsilon}
+{t-\gamma+\ii\epsilon}\right)^{m_\gamma},
+\qquad
+w_\epsilon\longrightarrow1\quad\hbox{in }C^\infty.
+\end{equation}
+The product includes every critical zero in the rectangle. The factored
+remainder is smooth jointly in \(\epsilon,t\); the functional equation
+identifies its endpoint value. Zeros outside the rectangle do not
+require any location hypothesis.
+
+Every pole of \(B_\epsilon\) lies in the lower frequency half-plane.
+Its inverse Fourier kernel is supported on \((-\infty,0]\).
+For example
+\begin{equation}\label{eq:onefactor-kernel}
+\mathcal F^{-1}\left(\frac{t-\ii h}{t+\ii h}\right)(x)
+=\delta_0(x)-2h e^{hx}1_{x<0},\qquad h>0.
+\end{equation}
+Partial fractions or convolution proves the corresponding support
+statement for the finite product, and hence
+\begin{equation}\label{eq:triangular-B}
+P B_\epsilon(D)\chi=0.
+\end{equation}
+
+\begin{lemma}[Local phase concentration]\label{lem:phase-limit}
+As \(\sigma\downarrow1/2\),
+\[
+\phi_\sigma'(t)\frac{\dd t}{2\pi}\longrightarrow\mucrit
+\]
+on compact smooth tests and on all Schwartz tests.
+\end{lemma}
+\begin{proof}
+Differentiating the local factorization \eqref{eq:critical-factor}
+gives a smooth term tending uniformly to zero and, for each critical
+zero of multiplicity \(m_\gamma\), the term
+\[
+\frac{2m_\gamma\epsilon}{\epsilon^2+(t-\gamma)^2}.
+\]
+After division by \(2\pi\), this tends to
+\(m_\gamma\delta_\gamma\). The local conclusion follows from the
+Poisson-kernel approximate identity. The unit-window variation bound
+\eqref{eq:phase-L1} and the local zero count give uniform Schwartz
+tails for the prelimit and limit measures, respectively.
+This proves the global assertion.
+\end{proof}
+
+\subsection{Small-cutoff and crossing terms}
+
+\begin{lemma}[Vanishing localized cutoff]\label{lem:Csmall}
+For every \(b\in C_c^\infty(\mathbb R)\),
+\begin{equation}\label{eq:Csmall}
+\norm{C_\sigma b(D)}_{\Stwo}\longrightarrow0.
+\end{equation}
+Furthermore,
+\begin{equation}\label{eq:crosssmall}
+\Tr_{\chi\HH}\bigl(C_\sigma T_\sigma P|f|^2(D)\chi\bigr)
+\longrightarrow0
+\quad\hbox{for every } f\in\Sch(\mathbb R).
+\end{equation}
+\end{lemma}
+\begin{proof}
+Choose the factorization \eqref{eq:critical-factor} on a
+neighborhood of \(\operatorname{supp}b\), and set
+\(q_\epsilon=b(w_\epsilon-1)\), extended by zero.
+Then \(q_\epsilon\to0\) in the Schwartz topology.
+Using \(C_\sigma=\J P V_\sigma\chi\),
+\(\chi b(D)=b(D)\chi-[b(D),\chi]\), and
+\eqref{eq:triangular-B}, one obtains the exact identity
+\begin{align}\label{eq:Csmall-id}
+C_\sigma b(D)=\J\{&
+Pq_\epsilon(D)\chi B_\epsilon(D)\chi\\
+&+P(B_\epsilon(D)-V_\sigma)[b(D),\chi]\}.\notag
+\end{align}
+The first term tends to zero in Hilbert--Schmidt norm by
+Lemma~\ref{lem:hankel}. Both \(B_\epsilon(D)\) and \(V_\sigma\)
+converge strongly to the identity. Thus the second term is a
+uniformly bounded strongly null family times a fixed
+Hilbert--Schmidt operator, and tends to zero in that ideal.
+This last implication follows by finite-rank approximation.
+
+For \eqref{eq:crosssmall}, \(P|f|^2(D)\chi\) is trace class,
+whereas \(C_\sigma T_\sigma\to0\) strongly by
+\eqref{eq:strong}. Finite-rank approximation in trace norm
+proves the scalar limit.
+\end{proof}
+
+Combining these lemmas with \eqref{eq:L-trace} gives
+\begin{equation}\label{eq:local-Llimit}
+\Tr(b(D)L_\sigma b(D)^*)\longrightarrow
+\int|b|^2\dd\mucrit
+\quad (b\in C_c^\infty).
+\end{equation}
+The uniform tails of Proposition~\ref{prop:tails} extend this
+limit to every Schwartz \(f\). They likewise extend
+\(\Tr(b(D)C_\sigma^2b(D)^*)\to0\) to all such \(f\).
+Thus \eqref{eq:full-K} implies
+\begin{align}
+\Tr(f(D)\Pi_\sigma f(D)^*)
+&=\int|f|^2\dd\mucrit-\Tr(f(D)H_\sigma f(D)^*)+o_f(1),
+\label{eq:deficit}\\
+K_\sigma[f]&=-\Tr(f(D)H_\sigma f(D)^*)+o_f(1).
+\label{eq:Kdeficit}
+\end{align}
+
+\begin{corollary}[Possible exact-projection limits]\label{cor:subseq}
+Every sequence \(\sigma_n\downarrow1/2\) has a vaguely convergent
+subsequence of \(\nu_{\sigma_n}\). Any limit is bounded above by
+\(\mucrit\) and therefore has precisely the form stated in
+Theorem~\ref{thm:main}.
+\end{corollary}
+\begin{proof}
+The unit-window bound gives compactness of the positive measures
+on each bounded interval. A diagonal subsequence gives vague
+convergence on \(\mathbb R\). Since
+\(\nu_{\sigma}\le\nu_{L_\sigma}\), \eqref{eq:local-Llimit}
+implies \(\nu_*\le\mucrit\).
+One may pass from squared smooth tests to all compact continuous
+tests by choosing a smooth function equal to one on their support
+and uniformly approximating there; the local mass bounds justify
+this step. A positive measure dominated by the discrete
+\(\mucrit\) has no other support and has atom weights bounded
+by its multiplicities.
+\end{proof}
+
+\section{The return defect at cutoff spectral value one}\label{sec:return}
+
+Let
+\begin{equation}\label{eq:polar}
+T_\sigma=(\Id_\chi-C_\sigma^2)^{1/2}W_\sigma^{\mathrm{pol}}
+\end{equation}
+be the polar decomposition in this orientation.
+The superscript distinguishes the partial isometry from the prime sum
+\(W_\sigma[F]\). Its initial space is
+\((\ker T_\sigma)^\perp\subset P\HH\), and its final space is
+\(\ker(\Id_\chi-C_\sigma^2)^\perp\).
+Consequently
+\begin{equation}\label{eq:Hpolar}
+H_\sigma=(W_\sigma^{\mathrm{pol}})^*C_\sigma^2
+W_\sigma^{\mathrm{pol}}.
+\end{equation}
+For \(b\in C_c^\infty(\mathbb R)\), define the positive spectral measure
+\begin{equation}\label{eq:eta}
+\eta_{\sigma,b}(E)=
+\Tr\!\left(b(D)(W_\sigma^{\mathrm{pol}})^*C_\sigma^2
+1_E(C_\sigma^2)W_\sigma^{\mathrm{pol}}b(D)^*\right),
+\quad E\subset[0,1].
+\end{equation}
+It is finite, its total mass is \(R_\sigma[b]\), and
+\(\eta_{\sigma,b}(\{1\})=0\) at each fixed \(\sigma\).
+The last fact follows from the final space of the polar partial
+isometry. It gives no uniform exclusion of mass close to one.
+
+\begin{theorem}[Return localization and Abel error]\label{thm:return}
+For \(b\in C_c^\infty(\mathbb R)\) and \(0<\delta<1\),
+\begin{equation}\label{eq:return-localize}
+\eta_{\sigma,b}([0,1-\delta])
+\le \delta^{-1}\norm{C_\sigma T_\sigma b(D)^*}_{\Stwo}^2
+\longrightarrow0
+\quad(\sigma\downarrow1/2).
+\end{equation}
+For \(0\le r<1\),
+\begin{align}
+\Tr\!\left(b(D)(\Pi_{\sigma,r}-\Pi_\sigma)b(D)^*\right)
+&=\int_{[0,1]}\frac{1-r}{1-r\lambda}\dd\eta_{\sigma,b}(\lambda)
+\label{eq:Abel-error}\\
+&\le
+\frac{1-r}{1-r+r\delta}\eta_{\sigma,b}([0,1])
++\eta_{\sigma,b}((1-\delta,1)).
+\notag
+\end{align}
+At each fixed \(\sigma\), this error tends to zero as \(r\uparrow1\).
+For each fixed \(r<1\),
+\begin{equation}\label{eq:fixed-Abel}
+\Tr(f(D)\Pi_{\sigma,r}f(D)^*)\longrightarrow
+\int |f|^2\dd\mucrit
+\quad\hbox{for every }f\in\Sch(\mathbb R).
+\end{equation}
+\end{theorem}
+\begin{proof}
+Set \(b^\sharp(t)=\overline{b(-t)}\).
+Since \(\Fcal_\sigma b(D)^*=b^\sharp(D)\Fcal_\sigma\),
+\begin{equation}\label{eq:CTsmall}
+C_\sigma T_\sigma b(D)^*
+=C_\sigma b^\sharp(D)\Fcal_\sigma P
++C_\sigma\Fcal_\sigma[P,b(D)^*].
+\end{equation}
+The first term tends to zero in Hilbert--Schmidt norm by
+Lemma~\ref{lem:Csmall}. The second does also: its commutator is
+fixed Hilbert--Schmidt, and
+\(C_\sigma\Fcal_\sigma\to0\) strongly.
+This proves the limit on the right of \eqref{eq:return-localize}.
+
+Under \eqref{eq:polar}, the squared norm in that equation contains
+the spectral weight \(\lambda(1-\lambda)\), while \(\eta\)
+contains \(\lambda\). On \([0,1-\delta]\), the latter is at most
+\(\delta^{-1}\lambda(1-\lambda)\). This proves the inequality.
+
+Subtracting the exact kernel projection from \eqref{eq:abel}
+and using the polar decomposition gives
+\[
+\Pi_{\sigma,r}-\Pi_\sigma
+=(W_\sigma^{\mathrm{pol}})^*
+\frac{(1-r)C_\sigma^2}{\Id_\chi-rC_\sigma^2}
+W_\sigma^{\mathrm{pol}}.
+\]
+This proves \eqref{eq:Abel-error}. Splitting its spectral integral
+at \(1-\delta\) proves the bound. Dominated convergence applies
+at fixed \(\sigma\), since there is no atom at one.
+
+For fixed \(r<1\), \eqref{eq:abel-return} gives
+\[
+0\le\Tr(b(D)H_{\sigma,r}b(D)^*)
+\le\frac{r}{1-r}
+\norm{C_\sigma T_\sigma b(D)^*}_{\Stwo}^2\longrightarrow0.
+\]
+Combine this with \(\Pi_{\sigma,r}=L_\sigma-H_{\sigma,r}\)
+and \eqref{eq:local-Llimit}. This proves \eqref{eq:fixed-Abel}
+for compact smooth \(b\). The domination
+\(0\le\Pi_{\sigma,r}\le L_\sigma\) and the uniform source tails
+extend it to every Schwartz \(f\).
+\end{proof}
+
+Theorems~\ref{thm:return} and~\ref{thm:main} leave open precisely
+the total return mass. For a fixed compact frequency test, the
+sufficient condition
+\begin{equation}\label{eq:uniform-integrability}
+\lim_{\delta\downarrow0}\,
+\limsup_{\sigma\downarrow1/2}
+\eta_{\sigma,b}((1-\delta,1))=0
+\end{equation}
+would imply \(R_\sigma[b]\to0\), using
+\eqref{eq:return-localize}. Conversely, vanishing total mass implies
+\eqref{eq:uniform-integrability}. A mere positive gap for each
+prelimit parameter does not supply this condition.
+
+For a jointly chosen \(r=r(\sigma)\uparrow1\), the sufficient
+estimate
+\[
+\frac{\norm{C_\sigma T_\sigma b(D)^*}_{\Stwo}^2}
+{1-r(\sigma)}\longrightarrow0
+\]
+gives the critical-zero limit for the corresponding Abel trace.
+This is a source-dependent sufficient criterion, not a proved
+uniform rate for the zeta family.
+
+\section{A rational family with complete projection loss}\label{sec:model}
+
+The following example concerns a different global phase. Its role
+is to test what can be inferred from local critical factorization,
+strong convergence, and a positive prelimit gap.
+
+\begin{theorem}[Exact rational model]\label{thm:model}
+For \(0<\epsilon<1\), set \(R=\epsilon^{-1}\) and
+\begin{equation}\label{eq:model-phase}
+B_h(t)=\frac{t-\ii h}{t+\ii h},\qquad
+v_\epsilon^{\mathrm{mod}}(t)=-\frac{B_\epsilon(t)}{B_R(t)},
+\qquad
+q=\frac{R-\epsilon}{R+\epsilon}
+=\frac{1-\epsilon^2}{1+\epsilon^2}.
+\end{equation}
+Define the cutoff operators as before from
+\(\Fcal_\epsilon^{\mathrm{mod}}=\J v_\epsilon^{\mathrm{mod}}(D)\).
+Then the following statements hold:
+\begin{enumerate}
+\item \(v_\epsilon^{\mathrm{mod}}=B_\epsilon w_\epsilon\)
+locally, with \(w_\epsilon=-B_R^{-1}\to1\) in \(C^\infty\);
+the phase measures tend locally to \(\delta_0\).
+\item The cutoff gap is strictly positive for every \(\epsilon\),
+\[
+1-\norm{C_\epsilon^{\mathrm{mod}}}^2
+=1-q^2=\frac{4\epsilon^2}{(1+\epsilon^2)^2}.
+\]
+Nevertheless \(\Pi_\epsilon^{\mathrm{mod}}=0\) exactly.
+\item For every Schwartz \(b\), the majorant trace tends to
+\(|b(0)|^2\), and the entire limiting mass lies in the return defect.
+\end{enumerate}
+\end{theorem}
+\begin{proof}
+The phase derivative is
+\begin{equation}\label{eq:model-derivative}
+(\phi_\epsilon^{\mathrm{mod}})'(t)
+=\frac{2\epsilon}{t^2+\epsilon^2}
+-\frac{2R}{t^2+R^2}.
+\end{equation}
+On compact tests, the first term divided by \(2\pi\) tends
+to \(\delta_0\), and the second tends to zero. The asserted
+factorization and smooth background limit follow directly.
+
+Partial fractions, with the Fourier convention \eqref{eq:fourier},
+give
+\begin{equation}\label{eq:model-kernel}
+\check v_\epsilon^{\mathrm{mod}}(x)
+=-\delta_0(x)-2\epsilon q e^{\epsilon x}1_{x<0}
++2Rq e^{-Rx}1_{x>0}.
+\end{equation}
+Let
+\[
+u_\epsilon(x)=\sqrt{2\epsilon}\,e^{-\epsilon x}1_{x>0},
+\qquad
+\xi_R(x)=\sqrt{2R}\,e^{Rx}1_{x<0}.
+\]
+These are unit vectors. The kernel of \(\Fcal_\epsilon^{\mathrm{mod}}\)
+is \(\check v_\epsilon^{\mathrm{mod}}(-x-y)\), so
+\begin{equation}\label{eq:model-blocks}
+P\Fcal_\epsilon^{\mathrm{mod}}P
+=-q\,|u_\epsilon\rangle\langle u_\epsilon|,
+\qquad
+C_\epsilon^{\mathrm{mod}}
+=q\,|\xi_R\rangle\langle\xi_R|.
+\end{equation}
+Therefore
+\[
+L_\epsilon^{\mathrm{mod}}
+=q^2|u_\epsilon\rangle\langle u_\epsilon|,\qquad
+\norm{L_\epsilon^{\mathrm{mod}}}=q^2<1.
+\]
+An orthogonal projection dominated by a positive operator of
+norm less than one is zero. Since \(\Pi\le L\), this proves
+\(\Pi_\epsilon^{\mathrm{mod}}=0\) and \(H_\epsilon^{\mathrm{mod}}=L_\epsilon^{\mathrm{mod}}\).
+
+Finally,
+\begin{equation}\label{eq:model-source}
+\norm{b(D)u_\epsilon}_2^2
+=\int |b(t)|^2
+\frac{2\epsilon}{\epsilon^2+t^2}\frac{\dd t}{2\pi}
+\longrightarrow |b(0)|^2.
+\end{equation}
+This proves the trace assertion for Schwartz \(b\).
+\end{proof}
+
+The spectral defect and both orders of limits are explicit.
+Indeed \(T_\epsilon^{\mathrm{mod}}u_\epsilon
+=-\sqrt{1-q^2}\,\xi_R\), so
+\begin{equation}\label{eq:model-eta}
+\eta_{\epsilon,b}^{\mathrm{mod}}
+=q^2\norm{b(D)u_\epsilon}_2^2\,\delta_{q^2}.
+\end{equation}
+It has no atom at one for any \(\epsilon>0\), but asymptotically
+all its mass approaches one.
+
+\begin{corollary}[Abel crossover]\label{cor:crossover}
+In the rational model,
+\begin{equation}\label{eq:model-Abel}
+\Pi_{\epsilon,r}^{\mathrm{mod}}
+=\frac{q^2(1-r)}{1-rq^2}
+|u_\epsilon\rangle\langle u_\epsilon|.
+\end{equation}
+Writing \(d_\epsilon=1-r(\epsilon)\), its smoothed trace tends to
+\[
+\begin{cases}
+|b(0)|^2,& d_\epsilon/\epsilon^2\to\infty,\\
+0,& d_\epsilon/\epsilon^2\to0,\\
+\dfrac{c}{c+4}|b(0)|^2,& d_\epsilon/\epsilon^2\to c\in(0,\infty).
+\end{cases}
+\]
+\end{corollary}
+\begin{proof}
+On the span of \(u_\epsilon\), \(T^*T\) has eigenvalue
+\(1-q^2\); on its orthogonal complement it has eigenvalue one.
+The functional-calculus formula in Proposition~\ref{prop:abel}
+gives \eqref{eq:model-Abel}.
+Use \(1-q^2\sim4\epsilon^2\) and \eqref{eq:model-source}.
+\end{proof}
+
+Thus local phase concentration can be canceled completely by an
+exact-projection return term. The example shares the local structure
+used in Section~\ref{sec:critical}, but it is not a counterexample
+about the actual zeta phase. A theorem determining the weights
+\(c_\gamma\) for zeta must use additional information about that
+global phase.
+
+\section{Arithmetic comparison and crossing residues}\label{sec:arithmetic}
+
+The operator results above concern the frequency measure on critical
+zeros. We now retain the arithmetic terms needed to compare it with
+the full explicit formula. The residue calculation is classical;
+its purpose here is to fix the normalization and identify which
+terms remain after the operator limit.
+
+\subsection{Entire source weights}
+
+Let \(F\in C_c^\infty(\mathbb R)\), possibly complex, and define
+\begin{equation}\label{eq:entire-a}
+a(z)=\widehat F(z)\overline{\widehat F(\overline z)}.
+\end{equation}
+It is entire, satisfies \(a(\overline z)=\overline{a(z)}\),
+and equals \(|\widehat F(t)|^2\) on the real line.
+It need not be even. For every \(D<\infty\) and every integer \(N\),
+compact support and integration by parts give
+\begin{equation}\label{eq:strip-decay}
+\sup_{|\Ima z|\le D}(1+|\Rea z|)^N|a(z)|<\infty.
+\end{equation}
+The local zero count implies \(N(T)=O(T\log(T+2))\).
+Consequently all zero sums below converge absolutely, uniformly
+for bounded imaginary shifts in the source weight.
+
+Define the phase bulk
+\[
+A_\sigma[F]=\int a(t)\phi_\sigma'(t)\frac{\dd t}{2\pi},
+\]
+and the crossing terms
+\begin{align}
+\mathcal P_\sigma[F]
+&=
+\begin{cases}
+2\Rea a(\ii(1-\sigma)),&1/2<\sigma<1,\\
+a(0),&\sigma=1,\\
+0,&\sigma>1,
+\end{cases}
+\label{eq:Pcross}\\
+\mathcal Z_\sigma[F]
+&=2\Rea\sum_{\beta>\sigma}m_{\beta+\ii\gamma}
+a\bigl(\gamma+\ii(\beta-\sigma)\bigr)
++\sum_{\beta=\sigma}m_{\beta+\ii\gamma}a(\gamma).
+\label{eq:Zcross}
+\end{align}
+Both signs of \(\gamma\) occur. The on-line sum in
+\eqref{eq:Zcross} is a half-residue contribution relative to
+the strictly right-hand sum.
+
+\begin{theorem}[Complete phase comparison]\label{thm:crossings}
+For every \(\sigma>1/2\),
+\begin{equation}\label{eq:crossing-formula}
+A_\sigma[F]=\Gamma[F]-W_\sigma[F]
++\mathcal P_\sigma[F]-\mathcal Z_\sigma[F].
+\end{equation}
+The value on an exceptional line uses the removable phase itself.
+Moreover,
+\begin{equation}\label{eq:critical-explicit}
+\Gamma[F]-W_{1/2}[F]
+=\Zcrit[F]+\Zoff[F]-2\Rea a(\ii/2),
+\end{equation}
+where \(\Zoff\) is as in \eqref{eq:intro-arithmetic}.
+\end{theorem}
+\begin{proof}
+The differentiated Euler series proves
+\eqref{eq:crossing-formula} when \(\sigma>1\).
+For \(1/2<\sigma<2\), initially excluding the pole line and real
+parts of zeros, move the logarithmic-derivative contour to
+\(\Rea s=2\). Consider
+\begin{equation}\label{eq:contour-integrand}
+a(-\ii(s-\sigma))\frac{\zeta'}{\zeta}(s)\frac{\dd s}{2\pi\ii}.
+\end{equation}
+Choose heights \(T_n\in[n,n+1]\) at distance at least
+\(c/\log(n+2)\) from every nearby zero ordinate. The local zero
+count constructs such heights by excluding intervals of sufficiently
+small total length. Conjugation gives the same property at \(-T_n\).
+The local logarithmic-derivative estimate then bounds
+\(\zeta'/\zeta\) by \(O(\log^2(T_n+2))\) along the horizontal
+sides, uniformly for real parts in \([\sigma,2]\).
+Together with \eqref{eq:strip-decay}, this makes the horizontal
+integrals vanish.
+
+Orient the left side upward and the right side downward. The
+orientation is clockwise, so the left integral equals the right
+integral minus the residues. The logarithmic derivative has residue
+\(-1\) at the pole and \(+m_\rho\) at a zero. The crossing terms
+from \eqref{eq:contour-integrand} are therefore
+\[
+1_{\sigma<1}a(-\ii(1-\sigma))
+-\sum_{\beta>\sigma}m_{\beta+\ii\gamma}
+a\bigl(\gamma-\ii(\beta-\sigma)\bigr).
+\]
+On the right side the Euler series is absolutely convergent.
+Shifting the entire source weight gives
+\[
+\int a(t-\ii(2-\sigma))e^{-\ii t\log n}\frac{\dd t}{2\pi}
+=n^{2-\sigma}\kappa_F(-\log n).
+\]
+Thus its integral is
+\(-\sum_{n\ge2}\Lambda(n)n^{-\sigma}\kappa_F(-\log n)\).
+Interchange the integral and series on the line two first;
+compact correlation support then makes the final sum finite.
+
+Repeat the calculation with \(a(-z)\), and add the finite-height
+identities before taking the limit. The left side becomes
+\[
+\int_{-T_n}^{T_n}a(t)
+\left(\frac{\zeta'}{\zeta}(\sigma+\ii t)+
+\frac{\zeta'}{\zeta}(\sigma-\ii t)\right)\frac{\dd t}{2\pi}.
+\]
+The paired integral is absolutely convergent by
+\eqref{eq:phase-L1} and the archimedean bound.
+No separate absolute convergence of the imaginary logarithmic
+derivative is needed. The prime terms add to \(-W_\sigma[F]\).
+Conjugation of the zero set and Schwarz reflection of \(a\)
+put the residue terms in the form
+\(\mathcal P_\sigma-\mathcal Z_\sigma\).
+This proves \eqref{eq:crossing-formula} on nonexceptional lines.
+
+At an exceptional line, take the average of the two neighboring
+limits through nonexceptional lines. On a fixed bounded frequency
+window, local factorization shows that a zero's two Cauchy-kernel
+limits give opposite atoms; their average is its removable phase
+value. The pole behaves in the same way with the opposite sign.
+The uniform tails from \eqref{eq:phase-L1} extend this averaging
+to the full source. The absolute and uniform convergence of the
+shifted zero sums justifies averaging their residues. This produces
+exactly the on-line term in \eqref{eq:Zcross} and
+\(\mathcal P_1=a(0)\).
+
+Finally Lemma~\ref{lem:phase-limit} gives
+\(A_\sigma[F]\to\Zcrit[F]\). The prime sum is finite and
+continuous in \(\sigma\). Dominated convergence in the crossing
+sums gives
+\(\mathcal Z_\sigma[F]\to\Zoff[F]\) and
+\(\mathcal P_\sigma[F]\to2\Rea a(\ii/2)\).
+At exceptional parameters approaching \(1/2\), the on-line
+terms are controlled by the same uniform summable bound.
+Taking the limit proves \eqref{eq:critical-explicit}.
+\end{proof}
+
+As checks on the signs, crossing the pole line from right to left
+changes the bulk by \(+2a(0)\), whereas crossing a zero line changes
+its local bulk contribution by \(-2m_\rho a(\gamma)\).
+Preparation at the fixed pole moments
+\(\widehat F(\pm\ii/2)=0\) does not imply \(a(0)=0\);
+intermediate pole corrections must therefore be kept.
+
+\subsection{The complete Weil form and the unresolved identification}
+
+Define the full arithmetic form in these conventions by
+\begin{equation}\label{eq:Qdefinition}
+Q[F]=\Gamma[F]-W_{1/2}[F]+2\Rea a_F(\ii/2).
+\end{equation}
+Reflection \(\beta+\ii\gamma\mapsto1-\beta+\ii\gamma\)
+and Schwarz reflection of \(a_F\) pair the off-line terms as
+conjugates. Thus \eqref{eq:critical-explicit} is equivalently
+\begin{equation}\label{eq:full-zero-pairing}
+Q[F]=\Zcrit[F]+\Zoff[F]
+=\sum_\rho m_\rho
+a_F\bigl(\Ima\rho+\ii(\Rea\rho-1/2)\bigr).
+\end{equation}
+This is the usual complete zero pairing, written in the chosen
+Fourier orientation. For sources \eqref{eq:prepared},
+\(\widehat F(z)=(z^2+1/4)\widehat h(z)\); hence
+\(a_F(\pm\ii/2)=0\) and \(Q[F]=\Gamma[F]-W_{1/2}[F]\).
+
+\begin{corollary}[Remaining arithmetic discrepancy]\label{cor:arithmetic}
+For every compact smooth source, with \(Q\) defined by
+\eqref{eq:Qdefinition},
+\[
+B_\sigma[F]-Q[F]
+=-R_\sigma[\widehat F]-\Zoff[F]+o_F(1).
+\]
+In particular this gives \eqref{eq:intro-arithmetic} for prepared
+sources.
+\end{corollary}
+\begin{proof}
+Subtract \eqref{eq:full-zero-pairing} from \eqref{eq:deficit}
+with \(f=\widehat F\).
+\end{proof}
+
+The identity separates two distinct questions. Even if the exact
+return trace were shown to vanish, its identified limit would be
+\(\Zcrit\). Recovering \(Q\) additionally requires addressing
+the off-line pairing. Conversely, under RH that pairing vanishes,
+but the results of this paper still do not prove vanishing return
+mass for the exact projection.
+
+The all-support quantifier is essential in any use of Weil
+positivity: a fixed source family or a fixed support window is
+insufficient. The prepared-source version of the criterion is
+discussed in \cite[Appendix C]{CCWeil}. No such all-support
+positivity conclusion is obtained here.
+
+\section{Scope and further questions}\label{sec:scope}
+
+The estimates establish a finite positive trace family for every
+\(\sigma>1/2\), together with an identified critical limit for its
+majorant and fixed Abel regularizations. For exact projections they
+give an upper limiting measure and locate every possible loss at
+one cutoff spectral endpoint. The solvable rational family shows
+that the gap between these statements can persist even when each
+prelimit cutoff is bounded away from one.
+
+The next question about this particular zeta family is therefore
+concrete: determine whether \(R_\sigma[b]\to0\) for every compact
+smooth frequency test, or exhibit a test with a nonzero limiting
+return defect. Condition~\eqref{eq:uniform-integrability} is an
+equivalent endpoint condition once
+Theorem~\ref{thm:return} is available. An approximate kernel vector
+alone does not settle the question. When nonzero singular values
+of \(T_\sigma\) approach zero, a small constraint residual does
+not bound distance to the exact kernel.
+
+The phase path studied here is distinct from taking an increasing
+finite set of primes at the critical exponent in a semilocal Sonin
+construction. In the absolute-convergence region, the causal
+transport \eqref{eq:transport} connects the constructions.
+No equality of their critical limiting procedures is asserted.
+Likewise the two-parameter crossover in
+Corollary~\ref{cor:crossover} concerns the rational model; its
+scale is not an estimate for zeta.
+
+The theorem package can therefore be assessed independently of
+whether this phase family ultimately yields an arithmetic
+positivity mechanism. Its content is the source-uniform trace
+control, the majorant limit, and the precise distinction between
+phase concentration and exact-kernel mass.
+
+\section*{Acknowledgements and use of language models}
+
+This draft was prepared for Edward Baker with substantial assistance
+from OpenAI's GPT-6 (Codex). Language-model assistance was used in
+the underlying research notes and in consolidating definitions,
+developing and checking proofs, organizing the manuscript, and
+checking bibliographic links. The exact serving variant and
+configured reasoning effort for this drafting session were not
+exposed. The internal checks are not independent specialist
+refereeing; author verification and approval of the mathematical
+claims and final text remain outstanding. No language model is
+listed as an author.
+
+\begin{thebibliography}{99}
+
+\bibitem{ConnesTrace}
+A.~Connes,
+\emph{Trace formula in noncommutative geometry and the zeros of the
+Riemann zeta function},
+Selecta Math.\ (N.S.) \textbf{5} (1999), 29--106.
+\href{https://arxiv.org/abs/math/9811068}{arXiv:math/9811068}.
+
+\bibitem{CCWeil}
+A.~Connes and C.~Consani,
+\emph{Weil positivity and Trace formula, the archimedean place},
+2020 preprint.
+\href{https://arxiv.org/abs/2006.13771}{arXiv:2006.13771}.
+Theorem~7 and Appendices C--E are used for comparison and conventions.
+
+\bibitem{CCQuasi}
+A.~Connes and C.~Consani,
+\emph{Quasi-inner functions and local factors},
+2020 preprint.
+\href{https://arxiv.org/abs/2008.10974}{arXiv:2008.10974}.
+
+\bibitem{CCM}
+A.~Connes, C.~Consani, and H.~Moscovici,
+\emph{Zeta zeros and prolate wave operators},
+2023; version 2, 2024.
+\href{https://arxiv.org/abs/2310.18423v2}{arXiv:2310.18423v2}.
+Sections 4.6--4.8 concern semilocal Sonin transport.
+
+\bibitem{Burnol}
+J.-F.~Burnol,
+\emph{Two complete and minimal systems associated with the zeros of
+the Riemann zeta function},
+2002 preprint.
+\href{https://arxiv.org/abs/math/0203120}{arXiv:math/0203120}.
+
+\bibitem{Halmos}
+P.~R.~Halmos,
+\emph{Two subspaces},
+Trans.\ Amer.\ Math.\ Soc.\ \textbf{144} (1969), 381--389.
+\href{https://doi.org/10.1090/S0002-9947-1969-0251519-5}
+{doi:10.1090/S0002-9947-1969-0251519-5}.
+
+\bibitem{Tao}
+T.~Tao,
+\emph{254A, Notes 2: Complex-analytic multiplicative number theory},
+9 December 2014, Propositions 16 and 19.
+\href{https://terrytao.wordpress.com/2014/12/09/254a-notes-2-complex-analytic-multiplicative-number-theory/}
+{Author's lecture notes}.
+
+\bibitem{Elkies}
+N.~D.~Elkies,
+\emph{Math 259: Introduction to Analytic Number Theory},
+notes on the Riemann zeta function, pp.~2--4.
+\href{https://people.math.harvard.edu/~elkies/M259.02/zeta2.pdf}
+{Author's lecture notes}.
+
+\bibitem{DLMF}
+F.~W.~J.~Olver et al., eds.,
+\emph{NIST Digital Library of Mathematical Functions},
+Chapter~25, especially Sections 25.2 and 25.4.
+\href{https://dlmf.nist.gov/25.4}{Functional equations of the Riemann zeta function}.
+
+\end{thebibliography}
+\end{document}
