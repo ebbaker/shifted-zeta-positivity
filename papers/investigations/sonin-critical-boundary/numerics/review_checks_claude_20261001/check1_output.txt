@@ -1,0 +1,39 @@
+=== Check 1: v_{1/2}(t) = 1 ===
+  t=   0.500  v_{1/2}(t) = (1.0 - 7.17388835675e-22j)   |v-1| = 7.17e-22
+  t=   3.000  v_{1/2}(t) = (1.0 + 5.83440695633e-22j)   |v-1| = 5.83e-22
+  t=  10.000  v_{1/2}(t) = (1.0 + 2.45357833389e-21j)   |v-1| = 2.45e-21
+  t=  14.000  v_{1/2}(t) = (1.0 + 2.90584888689e-21j)   |v-1| = 2.91e-21
+  t=  30.500  v_{1/2}(t) = (1.0 + 6.56927116606e-21j)   |v-1| = 6.62e-21
+  t= 100.250  v_{1/2}(t) = (1.0 + 2.08037875084e-20j)   |v-1| = 2.08e-20
+
+=== Check 2: phase derivative formula vs finite difference of arg v_sigma ===
+  sigma=0.60 t=  2.00  FD=-0.05943333704  formula=-0.05943333704  diff=-9.51e-15
+  sigma=0.60 t= 14.00  FD=7.116079718  formula=7.116079718  diff=1.33e-10
+  sigma=0.60 t= 25.30  FD=2.168562074  formula=2.168562074  diff=1.96e-11
+  sigma=0.90 t=  2.00  FD=-0.2516018143  formula=-0.2516018143  diff=-4.32e-14
+  sigma=0.90 t= 14.00  FD=4.5362214  formula=4.5362214  diff=-4.99e-12
+  sigma=0.90 t= 25.30  FD=3.4108977  formula=3.4108977  diff=1.67e-12
+  sigma=1.50 t=  2.00  FD=-0.6329484468  formula=-0.6329484468  diff=-1.11e-13
+  sigma=1.50 t= 14.00  FD=2.076158991  formula=2.076158991  diff=-6.02e-13
+  sigma=1.50 t= 25.30  FD=2.154628473  formula=2.154628473  diff=-3.9e-13
+
+=== Check 3: Blaschke energy E(B_d) = 4 pi^2 ===
+  d=  0.0010  E = 39.4784176044   4pi^2 = 39.4784176044
+  d=  0.1000  E = 39.4784176044   4pi^2 = 39.4784176044
+  d=  3.0000  E = 39.4784176044   4pi^2 = 39.4784176044
+  d= -0.0500  E = 39.4784176044   4pi^2 = 39.4784176044
+  pointwise identity: lhs=0.38581893885 rhs=0.38581893885
+
+=== Check 4: critical explicit formula for Gaussian source (s=0.3) ===
+  using 40 zeros, last gamma = 122.94683; tail weight a(gamma_last) = 8.39e-592
+  Gamma[F]      = -0.99351269318
+  W_{1/2}[F]   = 0.163195981899
+  Z_crit[F]     = 1.75526255146e-8
+  2 Re a(i/2)   = 1.15670869263
+  LHS Gamma-W   = -1.15670867508
+  RHS Zcrit-pole= -1.15670867508
+  difference    = -1.69e-21
+
+real	0m1.982s
+user	0m1.984s
+sys	0m0.068s
