@@ -1,5 +1,67 @@
 # Changelog
 
+## 2026-09-26 — papers/investigations/character-channels: first session (Claude Fable 5.1)
+
+- New root-level folder papers/investigations/ for investigations not tied to a program;
+  first entry character-channels, exploring the "extra phase channels" of the YM winding
+  operators.
+- Research note: in the Haar limit the winding operators V_a and the phase multiplications
+  satisfy the Bost-Connes relations (the branching law (4.6) is mu_a e(r) mu_a^* =
+  a^-1 sum e(s)); the limiting module of Theorem 6.1 is L^2 of the integral adeles
+  R x Zhat with a unitary Galois action of Zhat^*. The chi-isotypic combinations of the
+  phase channels (Gauss sums) are multiplicative twists with winding limits
+  a^-1/2 conj(chi(a)) <f, U_log a g>, the prime terms of L(s, chi); the winding norm loss
+  (7.9) is the norm of the nontrivial characters. The interacting state normalizes each
+  sector by rhobar_q, breaks the Galois symmetry to {+-1}, and mixes same-parity sectors
+  (Gram G_{chi chi'}). The class-sector archimedean insertion diverges on character packets
+  with finite part <f,xf> + phi(q)^-1 sum log(min(j,q-j)/q); the two parities of the
+  insertion are the archimedean factors of even and odd characters.
+- Control program (NumPy; mpmath for Part C): 168 class-sector limit checks (Haar to 1e-13,
+  interacting marginal O(N^-2)), the insertion finite parts (3e-8, 5e-8 at N = 4096), and
+  the family Weil form Q_chi on the manuscript's probe against the zeros of L(s, chi) for
+  the six real primitive characters of conductor 3, 4, 5, 7, 8 (zeros to height 320, counts
+  matching the main term of N(T, chi)). Records under numerics/records.
+- No positivity mechanism; the family form is Weil's explicit formula reorganized. Next
+  steps: a certifiable family version of the arithmetic-storage prime-weight rigidity, and
+  the twisted-theta derivation of the character archimedean factor. Nothing committed.
+
+## 2026-09-26 — wilson-loewner/YM: full electric sources and physical preparation
+
+- Tested two remaining source mechanisms in the original finite SU(2) state. Actual
+  positive full-electric point-source pairings with arbitrary fixed Sobolev powers
+  have power-law ultraviolet behavior and cannot reproduce the required logarithm.
+- Proved a generator-free obstruction to finite-order distributional observables
+  passed through the strict-half-slab integral without central-link dependence.
+  Uniform short-interval test spaces and an electric rank bound quantify the necessary
+  preparation cost for any compact-source occurrence argument.
+- Preserved the scope of all earlier exclusions. Central-link-dependent sources outside
+  the tested class and limits losing uniform preparation estimates remain open.
+- Added an analytical note and substantive self-audit; updated the live manuscript,
+  outline, indexes and prescribed DRAFT_HISTOR.md. Preserved earlier uncommitted work
+  and all numerical programs/records. No new numerical claim or model change.
+- Substantial GPT-6 (Codex) assistance; exact deployed variant and reasoning effort
+  unavailable. No commit, tag, large dataset or snapshot folder created.
+
+## 2026-09-25 — wilson-loewner/YM: distributional-source continuation after review
+
+- Proved a short-support mixed identity and a compact-return obstruction: every nonzero
+  translation step on the closure of an exact Weil source has the full unit circle as
+  essential spectrum. The proof uses the given form directly, without RH or zero data.
+- Tested the uncompensated radial electric wave in both actual reference-color channels.
+  Its distributional sources have positive state-dependent pairings and strong cutoff
+  limits, but its asymptotic integer frequencies give a forbidden compact return.
+- Under explicit infinite-volume positive-energy Poincare-vacuum assumptions, proved
+  absolute continuity of ordinary spacetime translation off the vacuum, excluding that
+  second source relation. Neither result closes all YM source mechanisms.
+- Updated the live manuscript and current indexes to reflect the review's scoped
+  corrections. Preserved historical reviews, records, and DRAFT_HISTOR.md.
+- Corrected the zero-list routine's certification labels. Its 30 floating diagnostics
+  pass in a separate replay; an exact-rational seven-check control records a proved
+  full-strip infinite post-6063 remainder below 1.665e-22 for |t| <= 7. The finite
+  comparison, stored ordinates and quadrature remain diagnostic.
+- GPT-6 (Codex) assistance; exact serving variant and reasoning effort unavailable.
+  No commit, tag, snapshot folder, or large derived dataset created.
+
 ## 2026-09-25 — wilson-loewner/YM: reply to the GPT-6 response (Claude Fable 5.1)
 
 - Reply in YM/response/CLAUDE_REPLY_TO_RESPONSE_20260925.md. Conceded: the R1 extension

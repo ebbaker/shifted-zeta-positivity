@@ -8,6 +8,7 @@ source, PDF, status record, and associated code or numerical supplement.
 | [`shifted-zeta/`](shifted-zeta/README.md) | The six-paper program around Suzuki's shifted screw functions, inverse spectral systems, and finite-horizon positivity. | The project README explains the papers' relationships and reading order. |
 | [`susy-positivity/`](susy-positivity/README.md) | The program seeking a structural explanation of Weil positivity, with five retained investigations under `investigations/` and five earlier packages under `investigations/previous/` and a standalone note under `manuscripts/`. | [Background](susy-positivity/background.pdf); [program overview](susy-positivity/PROGRAM_OVERVIEW.md); [positive-factorizations attempt](susy-positivity/investigations/previous/positive-factorizations/README.md) and [status](susy-positivity/investigations/previous/positive-factorizations/STATUS.md). |
 | [`misc/`](misc/README.md) | Separate papers outside those two programs; currently the earlier `rh-detector` draft. | [Miscellaneous papers](misc/README.md). |
+| [`investigations/`](investigations/README.md) | Investigations at the papers root, not tied to either program (from 26 September 2026); currently `character-channels`, on the Dirichlet-family structure of the winding phases in the YM class sector. | [Index](investigations/README.md). |
 
 ## Status
 
