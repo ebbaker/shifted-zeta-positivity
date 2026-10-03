@@ -43,7 +43,7 @@ pdfsubject={Sonin projections, zeta phases, uniform trace bounds, and projection
 \setlength{\emergencystretch}{2em}
 \title{Critical-boundary trace limits\\for zeta-phase Sonin operators}
 \author{Drafted for Edward Baker}
-\date{1 October 2026\\[3pt]\small Working draft}
+\date{3 October 2026\\[3pt]\small Working draft}
 \begin{document}
 \maketitle
 
@@ -67,7 +67,12 @@ zeros, with weights between zero and their multiplicities. The remaining
 projection defect is positive and concentrates at cutoff spectral value
 one. An explicit rational phase has the same local concentration and a
 positive gap at every prelimit parameter, but its exact intersection
-projection vanishes identically. Finally, a contour comparison retains
+projection vanishes identically. For each finite Euler product, we also
+prove an exact boundary identity at every positive exponent, retaining
+the inverse compressed metric. Expanding prepared sources obstruct an
+all-support correction bound at any fixed finite set of primes; the
+comparison with primes chosen for each source support remains open.
+Finally, a contour comparison retains
 the pole and all off-line zero crossings, distinguishing the critical-zero
 measure from the complete Weil form. Neither survival of all critical
 mass in the exact zeta projection nor the Riemann hypothesis is proved.
@@ -125,6 +130,19 @@ must be compared with this family before applying them to its limiting
 frequency weights. We do not claim a new general positivity principle
 or a new version of the explicit formula. A theorem-by-theorem priority
 comparison for the particular boundary estimates remains outstanding.
+
+We also apply the bounded-transport and boundary arguments to a finite
+Euler product. Its cutoff gap persists for every \(\sigma>0\), including
+\(\sigma=1/2\). Proposition~\ref{prop:finite-boundary} gives the exact
+projection metric and smoothed boundary identity; after all active primes
+are included, this yields \(Q=B_{S,1/2}-K_{S,1/2}\) on prepared sources.
+Proposition~\ref{prop:fixed-place-obstruction} shows that
+\(K_{S,\sigma}>B_{S,\sigma}\) for suitable expanding prepared sources
+at every fixed finite \(S\). This rules out a fixed-place all-support
+comparison with the partial arithmetic bulk. It does not decide the
+comparison when \(S\) grows with the support. Detailed transport,
+trace-ideal, and sign calculations appear in the internal note
+\cite{FiniteEulerNote}; the proofs below record the essential steps.
 
 Here is the operator setting. On \(\HH=L^2(\mathbb R,\dd x)\), let
 \[
@@ -672,11 +690,120 @@ convergence controlled by \(1-c_\sigma^2\); its error bound does not
 assert efficient numerical convergence when that gap is small.
 \end{remark}
 
+\subsection{Finite Euler products at every positive exponent}
+\label{sec:finite-euler}
+
+For a finite set of primes \(S\) and \(\sigma>0\), define
+\[
+\zeta_S(s)=\prod_{p\in S}(1-p^{-s})^{-1},\qquad
+v_{S,\sigma}(t)=v_\infty(t)
+\frac{\zeta_S(\sigma+\ii t)}{\zeta_S(\sigma-\ii t)},\qquad
+\Fcal_{S,\sigma}=\J v_{S,\sigma}(D).
+\]
+Use the same cutoff definitions for \(T_{S,\sigma},C_{S,\sigma},
+L_{S,\sigma}\), and \(\Pi_{S,\sigma}\). The empty set gives the
+archimedean operators, denoted by subscript \(\infty\) as above;
+that subscript does not denote a limit over prime sets. Put
+\begin{align}
+\mathcal D_{S,\sigma}&=\prod_{p\in S}(\Id-p^{-\sigma}U_{\log p}),&
+\mathcal D_{S,\sigma}^{-1}
+&=\sum_{n\in\mathbb N_S}n^{-\sigma}U_{\log n},
+\label{eq:finite-transport}\\
+\ell_{S,\sigma}&=\prod_{p\in S}(1-p^{-\sigma}),&
+u_{S,\sigma}&=\prod_{p\in S}(1+p^{-\sigma}),\notag
+\end{align}
+where \(\mathbb N_S\) consists of the positive integers with all prime
+divisors in \(S\). The notation \(\mathcal D_{S,\sigma}\)
+distinguishes the transport from the frequency operator \(D\).
+The inverse series converges absolutely in operator norm. Both operators preserve \(P\HH\), and
+\(\ell_{S,\sigma}\norm z\le\norm{\mathcal D_{S,\sigma}z}
+\le u_{S,\sigma}\norm z\).
+
+\begin{proposition}[Finite Euler boundary identity]\label{prop:finite-boundary}
+For every finite \(S\), every \(\sigma>0\), and every
+\(F\in C_c^\infty(\mathbb R;\mathbb C)\), the following statements hold.
+On \(\mathcal K_\infty=\Ran\Pi_\infty\), define
+\[
+M_{S,\sigma}
+=\left.\Pi_\infty \mathcal D_{S,\sigma}^*\mathcal D_{S,\sigma}\Pi_\infty
+\right|_{\mathcal K_\infty}.
+\]
+Then \(\ell_{S,\sigma}^2\Id\le M_{S,\sigma}
+\le u_{S,\sigma}^2\Id\), and
+\begin{align}
+\Id_\chi-C_{S,\sigma}^2
+&\ge (\ell_{S,\sigma}/u_{S,\sigma})^2(1-c_0^2)\Id_\chi,
+\label{eq:finite-gap}\\
+\Pi_{S,\sigma}
+&=\mathcal D_{S,\sigma}\Pi_\infty M_{S,\sigma}^{-1}
+\Pi_\infty \mathcal D_{S,\sigma}^*.
+\label{eq:finite-metric}
+\end{align}
+The inverse in \eqref{eq:finite-metric} acts on
+\(\mathcal K_\infty\). Moreover,
+\begin{align}
+B_{S,\sigma}[F]
+&:=\norm{C_F\Pi_{S,\sigma}}_{\Stwo}^2
+=\Gamma[F]-W_{S,\sigma}[F]+K_{S,\sigma}[F],
+\label{eq:finite-boundary}\\
+W_{S,\sigma}[F]
+&=\sum_{p\in S}\sum_{m\ge1}(\log p)p^{-m\sigma}
+\{\kappa_F(m\log p)+\kappa_F(-m\log p)\},\notag\\
+K_{S,\sigma}[F]
+&=2\Rea\Tr_{\chi\HH}\left(
+C_{S,\sigma}(\Id_\chi-C_{S,\sigma}^2)^{-1}
+T_{S,\sigma}X_{F,e}\right).
+\label{eq:finite-correction}
+\end{align}
+All these quantities are finite. The finite crossing strip and
+return-series estimate of Theorem~\ref{thm:boundary} hold with
+\(c_{S,\sigma}=\norm{C_{S,\sigma}}<1\). No estimate is asserted
+uniformly in growing \(S\) or as \(\sigma\downarrow0\).
+\end{proposition}
+\begin{proof}
+The multiplier of \(\mathcal D_{S,\sigma}\) is
+\(d(t)=\zeta_S(\sigma+\ii t)^{-1}\). Reflection reverses its
+argument, giving
+\[
+\mathcal D_{S,\sigma}\Fcal_\infty \mathcal D_{S,\sigma}^{-1}
+=\J\bigl(v_\infty(t)d(-t)/d(t)\bigr)(D)
+=\Fcal_{S,\sigma}.
+\]
+Triangularity therefore gives
+\(T_{S,\sigma}=\mathcal D_-T_\infty\mathcal D_+^{-1}\), with the two
+compressions defined as in Proposition~\ref{prop:gap}. Its proof gives
+\eqref{eq:finite-gap} and the ordinary orthogonal projection
+\eqref{eq:finite-metric}. The transport is boundedly invertible,
+not assumed isometric.
+
+At fixed \(S,\sigma\), every derivative of the finite Euler factors
+is bounded, so \(qv_{S,\sigma}\) is Schwartz for every Schwartz \(q\).
+Lemma~\ref{lem:hankel} and \eqref{eq:phase-comm} make the smoothed
+blocks trace class; \(0\le\Pi_{S,\sigma}\le L_{S,\sigma}\)
+proves finiteness of \(B_{S,\sigma}\) before any arithmetic subtraction.
+The phase derivative is
+\[
+\phi'_{S,\sigma}(t)=\gamma_\infty(t)
+-\sum_{p\in S}\sum_{m\ge1}(\log p)p^{-m\sigma}
+\bigl(e^{\ii tm\log p}+e^{-\ii tm\log p}\bigr).
+\]
+This series converges absolutely and uniformly. The smoothed diagonal
+trace gives \(\Gamma-W_{S,\sigma}\). The gap permits precisely the
+block algebra in the proof of Theorem~\ref{thm:boundary}, yielding
+\eqref{eq:finite-correction} and its return-series estimate. Averaging
+the multiplier to \(a_e\) uses real structure and imposes no parity
+or reality condition on \(F\). Only source-smoothed products are
+traced; no trace of unsmoothed \(C_{S,\sigma}^2\) is needed.
+The full trace-ideal justification is given in
+\cite[Sections 2--4]{FiniteEulerNote}.
+\end{proof}
+
 \section{Abel regularization without a cutoff gap}\label{sec:abel}
 
-The norm gap in Proposition~\ref{prop:gap} is only established for
-\(\sigma>1\). Bounded spectral calculus gives a replacement on every
-line \(\sigma>1/2\).
+For the full zeta family, the norm gap in
+Proposition~\ref{prop:gap} is only established for \(\sigma>1\).
+Bounded spectral calculus gives a replacement on every line
+\(\sigma>1/2\).
 
 \begin{proposition}[Positive Abel approximants]\label{prop:abel}
 For \(0\le r<1\), define
@@ -1629,6 +1756,86 @@ insufficient. The prepared-source version of the criterion is
 discussed in \cite[Appendix C]{CCWeil}. No such all-support
 positivity conclusion is obtained here.
 
+\subsection{Support-adapted finite products and a fixed-place obstruction}
+\label{sec:finite-comparison}
+
+The finite Euler identity gives a separate exact arithmetic comparison.
+Let \(F\) be prepared as in \eqref{eq:prepared}, with support diameter
+at most \(L_0\), and put
+\[
+S_{L_0}=\{p\text{ prime}:p\le e^{L_0}\}.
+\]
+If \(S\supseteq S_{L_0}\), every active prime and all its active
+powers occur in \(W_{S,1/2}\). The correlation vanishes at the
+endpoints of its support, so
+\begin{equation}\label{eq:finite-comparison}
+W_{S,1/2}[F]=W_{1/2}[F],\qquad
+Q[F]=B_{S,1/2}[F]-K_{S,1/2}[F].
+\end{equation}
+This follows directly from \eqref{eq:finite-boundary} and pole
+neutrality; it uses no sum over zeros. Preparation was unnecessary
+for the operator identity itself. Before all active primes are
+included, the complete comparison instead reads
+\[
+Q[F]=B_{S,1/2}[F]-K_{S,1/2}[F]
+-\bigl(W_{1/2}[F]-W_{S,1/2}[F]\bigr).
+\]
+Thus the omitted prime terms cannot be absorbed into a signed
+boundary correction. The reconciliation with the earlier transported
+metric residual is recorded in \cite[Section 5]{FiniteEulerNote}.
+
+\begin{proposition}[Fixed-place obstruction]\label{prop:fixed-place-obstruction}
+Fix a finite prime set \(S\) and \(\sigma>0\). Choose any nonzero
+\(\eta\in C_c^\infty(\mathbb R;\mathbb C)\), and define
+\[
+h_R(x)=R^{-1/2}\eta(x/R),\qquad
+F_R=(-\partial_x^2+1/4)h_R.
+\]
+Then
+\begin{equation}\label{eq:fixed-place-limit}
+\Gamma[F_R]-W_{S,\sigma}[F_R]
+\longrightarrow\frac{\norm\eta_2^2}{16}
+\left(\gamma_\infty(0)
+-2\sum_{p\in S}\frac{\log p}{p^\sigma-1}\right)<0.
+\end{equation}
+Consequently \(K_{S,\sigma}[F_R]>B_{S,\sigma}[F_R]\ge0\)
+for all sufficiently large \(R\). The family is exactly pole neutral
+for every \(R\); it can also be chosen to have zero mean.
+\end{proposition}
+\begin{proof}
+After rescaling Fourier variables,
+\[
+\Gamma[F_R]=\int\gamma_\infty(u/R)
+(u^2/R^2+1/4)^2|\widehat\eta(u)|^2\frac{\dd u}{2\pi}
+\longrightarrow \gamma_\infty(0)\norm\eta_2^2/16.
+\]
+Schwartz decay and the logarithmic growth of \(\gamma_\infty\)
+give dominated convergence. For each fixed shift \(a\), continuity
+of translations and the derivative correction of order \(R^{-2}\)
+give \(\kappa_{F_R}(a)\to\norm\eta_2^2/16\).
+The bound \(|\kappa_{F_R}(a)|\le\norm{F_R}_2^2\), uniformly
+bounded for \(R\ge1\), permits dominated convergence through the
+absolutely summable prime-power coefficients at fixed \(S,\sigma\).
+This gives \eqref{eq:fixed-place-limit}. Its sign follows from
+\[
+\gamma_\infty(0)=-\gamma_{\mathrm E}-\pi/2-3\log2-\log\pi<0.
+\]
+Equation~\eqref{eq:finite-boundary} now gives \(K_{S,\sigma}>B_{S,\sigma}\).
+Preparation gives \(\widehat F_R(\pm\ii/2)=0\), and choosing
+\(\int\eta=0\) also gives \(\widehat F_R(0)=0\).
+See \cite[Section 6]{FiniteEulerNote} for the detailed scaling calculation.
+\end{proof}
+
+The prime set required by \eqref{eq:finite-comparison} grows with
+the support of \(F_R\). The fixed-set dominated-convergence argument
+does not apply on that growing family. In particular the proposition
+neither refutes the support-adapted inequality \(K_{S_{L_0},1/2}\le
+B_{S_{L_0},1/2}\) nor implies a negative complete Weil form.
+It does rule out \(K_{S,\sigma}\le0\), and even \(K_{S,\sigma}\le
+B_{S,\sigma}\), on the all-support prepared class for every fixed
+finite \(S\), including the empty set. This is compatible with the
+restricted-support bound in Remark~\ref{rem:calibration}.
+
 \section{Scope and further questions}\label{sec:scope}
 
 The estimates establish a finite positive trace family for every
@@ -1653,11 +1860,30 @@ vector alone does not settle the question. When nonzero singular values
 of \(T_\sigma\) approach zero, a small constraint residual does
 not bound distance to the exact kernel.
 
-The phase path studied here is distinct from taking an increasing
-finite set of primes at the critical exponent in a semilocal Sonin
-construction. In the absolute-convergence region, the causal
-transport \eqref{eq:transport} connects the constructions.
-No equality of their critical limiting procedures is asserted.
+The finite-product result establishes bounded transport, the exact
+inverse metric, and the smoothed boundary identity at the critical
+exponent for each fixed finite prime set. Its comparison with the
+complete Weil form requires all active primes for each source support.
+A possible structured estimate suggested by the archimedean calibration is
+\begin{equation}\label{eq:rank-one-question}
+K_{S_{L_0},1/2}[(-\partial_x^2+1/4)h]
+\le\frac{c_{L_0}}{16}\left|\int h(x)\dd x\right|^2,
+\qquad h\in C_c^\infty((-L_0/2,L_0/2);\mathbb C),
+\end{equation}
+with a finite constant \(c_{L_0}\ge0\). This is an unproved form
+estimate, not a consequence of the boundary identity. The first proposed
+case is \(L_0=1\), \(S_{L_0}=\{2\}\). Nonpositivity on the
+mean-zero subspace alone would not establish the bound: mixed terms
+with a mean direction also need control near null directions of that
+subspace. A positive correction on one mean-zero prepared source would
+refute this candidate, while leaving the weaker comparison
+\(K\le B\) open. The motivation and quantifiers are detailed in
+\cite[Section 7]{FiniteEulerNote}.
+
+The global phase path and an increasing finite set of primes at the
+critical exponent remain distinct limiting procedures. In the
+absolute-convergence region, \eqref{eq:transport} connects the
+constructions, but no equality of their critical limits is asserted.
 Likewise the two-parameter crossover in
 Corollary~\ref{cor:crossover} concerns the rational model; its
 scale is not an estimate for zeta.
@@ -1665,8 +1891,10 @@ scale is not an estimate for zeta.
 The theorem package can therefore be assessed independently of
 whether this phase family ultimately yields an arithmetic
 positivity mechanism. Its content is the source-uniform trace
-control, the majorant limit, and the precise distinction between
-phase concentration and exact-kernel mass.
+control, the majorant limit, the distinction between phase concentration
+and exact-kernel mass, and the finite-place identity with its fixed-set
+obstruction. Neither a signed support-adapted comparison nor convergence
+along growing prime sets is established.
 
 \section*{Acknowledgements and use of language models}
 
@@ -1777,6 +2005,14 @@ F.~W.~J.~Olver et al., eds.,
 \emph{NIST Digital Library of Mathematical Functions},
 Chapter~25, especially Sections 25.2 and 25.4.
 \href{https://dlmf.nist.gov/25.4}{Functional equations of the Riemann zeta function}.
+
+\bibitem{FiniteEulerNote}
+\emph{Finite Euler boundary identity and a fixed-place sign obstruction},
+internal research note prepared for Edward Baker with GPT-6 (Codex)
+assistance, 3 October 2026.
+\path{notes/FINITE_EULER_BOUNDARY_IDENTITY_20261003.md}.
+Detailed calculations and source-class qualifications; not independent
+specialist refereeing.
 
 \end{thebibliography}
 \end{document}
