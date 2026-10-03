@@ -1,0 +1,108 @@
+{
+  "status": "FLOATING_RESOURCE_DIAGNOSTIC_NOT_A_CERTIFICATE",
+  "date": "2026-10-03",
+  "model": "GPT-6 (Codex)",
+  "serving_variant": "not exposed",
+  "reasoning_effort": "not exposed",
+  "runtime": {
+    "python": "3.10.0",
+    "dependencies": "standard library only"
+  },
+  "script_sha256": "e9130a8e057f4a989366e63d32344c0b3fafad0317e8f695ca08c0ec460434e2",
+  "parameters": {
+    "L": "6/5",
+    "prime_set": [
+      2,
+      3
+    ],
+    "g0": "57/1000000",
+    "epsilons": [
+      1.0,
+      0.5,
+      0.1
+    ]
+  },
+  "constants": {
+    "rho_s": 0.0021134995689086546,
+    "gamma0": -5.372183419225665,
+    "k0": 158.93935288259115,
+    "g_s": 1.2046947542779332e-07,
+    "k_s": 3457.344931314656,
+    "c_s_l": 2.248826344663675,
+    "active_prime_powers": [
+      {
+        "prime": 2,
+        "exponent": 1,
+        "power": 2,
+        "amplitude": 0.9802581434685471
+      },
+      {
+        "prime": 3,
+        "exponent": 1,
+        "power": 3,
+        "amplitude": 1.268568201195128
+      }
+    ]
+  },
+  "count_bound_formula": "L/(2*pi) * (E+1) * sqrt(exp(2*(E+1))-1)",
+  "direct_energy_formula": "Lambda + C_S,L + k_S,L - gamma0",
+  "transport_energy_formula": "Lambda/rho_S + k_0,L - gamma0",
+  "threshold_formula": "Lambda = k_S,L / epsilon",
+  "rows": [
+    {
+      "epsilon": 1.0,
+      "spectral_threshold_lambda": 3457.344931314656,
+      "direct_energy": 6922.310872393202,
+      "transport_energy": 1636003.2689579595,
+      "direct": {
+        "expression_12_log10": 3009.8770235917036,
+        "simple_exponential_cap_log10": 3009.8770235917036,
+        "rounded_simple_cap_log10": 3010
+      },
+      "transport": {
+        "expression_12_log10": 710513.1211644155,
+        "simple_exponential_cap_log10": 710513.1211644155,
+        "rounded_simple_cap_log10": 710513
+      }
+    },
+    {
+      "epsilon": 0.5,
+      "spectral_threshold_lambda": 6914.689862629312,
+      "direct_energy": 10379.655803707858,
+      "transport_energy": 3271842.226379617,
+      "direct": {
+        "expression_12_log10": 4511.558760256152,
+        "simple_exponential_cap_log10": 4511.558760256152,
+        "rounded_simple_cap_log10": 4512
+      },
+      "transport": {
+        "expression_12_log10": 1420949.254663063,
+        "simple_exponential_cap_log10": 1420949.254663063,
+        "rounded_simple_cap_log10": 1420949
+      }
+    },
+    {
+      "epsilon": 0.1,
+      "spectral_threshold_lambda": 34573.44931314656,
+      "direct_energy": 38038.4152542251,
+      "transport_energy": 16358553.885752875,
+      "direct": {
+        "expression_12_log10": 16524.16937494633,
+        "simple_exponential_cap_log10": 16524.16937494633,
+        "rounded_simple_cap_log10": 16524
+      },
+      "transport": {
+        "expression_12_log10": 7104436.613540267,
+        "simple_exponential_cap_log10": 7104436.613540267,
+        "rounded_simple_cap_log10": 7104437
+      }
+    }
+  ],
+  "limitations": [
+    "Logs of pessimistic sufficient upper bounds, not measured eigenvalue counts or necessary ranks.",
+    "Counts apply separately to positive and negative relative eigenvalues exceeding epsilon in magnitude.",
+    "Only the prescribed L=6/5 and three epsilon values are evaluated; no source rank is expanded.",
+    "No outward rounding, resolvent columns, source-gap certificate, or all-window positivity is supplied.",
+    "The exact count expression and its simple exponential cap differ below floating resolution here."
+  ]
+}
