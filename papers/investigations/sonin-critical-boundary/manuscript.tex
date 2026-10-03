@@ -72,17 +72,26 @@ prove an exact boundary identity at every positive exponent, retaining
 the inverse compressed metric. Expanding prepared sources obstruct an
 all-support correction bound at any fixed finite set of primes; the
 comparison with primes chosen for each source support remains open.
-Finally, a contour comparison retains
-the pole and all off-line zero crossings, distinguishing the critical-zero
-measure from the complete Weil form. Neither survival of all critical
-mass in the exact zeta projection nor the Riemann hypothesis is proved.
+A contour comparison retains the pole and all off-line zero crossings,
+distinguishing the critical-zero measure from the complete Weil form.
+For one explicit prepared polynomial probe, we prove that subexponential
+growth of its signed prime covariance is equivalent to the Riemann
+hypothesis and all-window positivity; weighted integral criteria are
+equivalent as well. We also give an explicit linear lower bound for the
+negative index of the centered archimedean reference and an outward
+seven-source Gram certificate with lower bound \(1/20\).
+The global signed growth estimate, survival of all critical mass in the
+exact zeta projection, and the Riemann hypothesis remain unproved.
 \end{abstract}
 
 \noindent\textbf{Draft status.}
 This manuscript consolidates internal research derivations.
 Independent specialist verification and a full priority assessment remain
-outstanding. All results below are analytic; no numerical certificate is
-used in their proofs.
+outstanding. The structural trace results and the single-probe equivalence
+are analytic. The scalar root bracket and finite Gram comparison in
+Section~\ref{sec:source-criteria} are explicitly computer-assisted, with
+reproducible code and rational enclosure records. Their numerical inputs
+are not used to prove the analytic equivalence or any all-window sign.
 
 \tableofcontents
 
@@ -143,6 +152,22 @@ comparison with the partial arithmetic bulk. It does not decide the
 comparison when \(S\) grows with the support. Detailed transport,
 trace-ideal, and sign calculations appear in the internal note
 \cite{FiniteEulerNote}; the proofs below record the essential steps.
+
+Section~\ref{sec:source-criteria} then specializes the arithmetic question
+to compact sources with the additional zero-mean condition. One fixed
+polynomial profile suffices: its signed prime covariance has
+subexponential growth if and only if RH holds. The proof combines an
+elementary zero-location lemma for the profile's entire transform with an
+exact Laplace identity for \(-\zeta'/\zeta\). Its translates still range
+over unbounded separations, so the support quantifier is retained.
+A separate concavity argument gives a lower bound of
+\(\max(0,\lceil Lt_*/\pi\rceil-4)\) for the centered reference's negative
+index, with \(t_*/\pi\) certified near \(1.949925482\).
+Finally, seven translates of that same profile have Gram matrix strictly
+larger than \(\Id/20\), although the elementary absolute row-sum bound is
+negative. This last statement concerns one finite-dimensional subspace.
+The global growth estimate is open; no new unconditional positivity
+principle or literature priority for the scalar criterion is claimed.
 
 Here is the operator setting. On \(\HH=L^2(\mathbb R,\dd x)\), let
 \[
@@ -1751,10 +1776,12 @@ but the results of this paper still do not prove vanishing return
 mass for the exact projection.
 
 The all-support quantifier is essential in any use of Weil
-positivity: a fixed source family or a fixed support window is
-insufficient. The prepared-source version of the criterion is
-discussed in \cite[Appendix C]{CCWeil}. No such all-support
-positivity conclusion is obtained here.
+positivity: a fixed finite list of sources or a fixed support window is
+insufficient. The prepared-source version of the criterion is discussed
+in \cite[Appendix C]{CCWeil}. Section~\ref{sec:source-criteria} uses one
+fixed profile with unbounded translations and an additional transform
+argument; it does not eliminate the all-support quantifier. No
+unconditional all-support positivity conclusion is obtained here.
 
 \subsection{Support-adapted finite products and a fixed-place obstruction}
 \label{sec:finite-comparison}
@@ -1836,6 +1863,648 @@ B_{S,\sigma}\), on the all-support prepared class for every fixed
 finite \(S\), including the empty set. This is compatible with the
 restricted-support bound in Remark~\ref{rem:calibration}.
 
+\section{Prepared-source criteria and finite translate certificates}
+\label{sec:source-criteria}
+
+We now separate three statements about the arithmetic form: a scalar
+criterion equivalent to the all-window sign, an unconditional obstruction
+for the centered reference, and a computer-assisted comparison on one
+seven-dimensional source space. Only the last statement certifies a
+particular joint arithmetic matrix. The first gives an exact unresolved
+growth obligation, while the second bounds the size of the reference's
+negative block.
+
+\subsection{The three-moment source space and one fixed probe}
+\label{sec:probe-setup}
+
+The remaining all-window arithmetic question admits a scalar reduction
+for one explicit source. We give the proof, including the transform
+nonvanishing that is particular to this source; the underlying
+derivation is recorded in \cite{SingleProbeNote}.
+For \(L>0\), let \(I_L=(-L/2,L/2)\), extend its sources by zero, and set
+\begin{equation}\label{eq:probe-source-space}
+E_L=\left\{F\in L^2(I_L):
+\int F(x)\dd x=\int e^{x/2}F(x)\dd x
+=\int e^{-x/2}F(x)\dd x=0\right\}.
+\end{equation}
+Complex sources are allowed. Use the logarithmic form domain
+\[
+\mathcal D_{\log}=
+\left\{F\in L^2(\mathbb R):
+\int\log(2+|t|)|\widehat F(t)|^2\frac{\dd t}{2\pi}<\infty\right\}.
+\]
+The growth \(|\gamma_\infty(t)|=O(\log(2+|t|))\) makes
+\(\Gamma\) continuous in this form norm. On sources in one fixed
+compact interval, the prime contribution is a finite sum of bounded
+translation forms. Hence the restriction of \eqref{eq:Qdefinition} to
+\(E_L\cap\mathcal D_{\log}\) is
+\begin{align}
+Q(F_1,F_2)
+&=\int\gamma_\infty(t)
+\overline{\widehat F_1(t)}\widehat F_2(t)
+\frac{\dd t}{2\pi}\notag\\
+&\quad-\sum_{n\ge2}\frac{\Lambda(n)}{\sqrt n}
+\int\overline{F_1(x)}
+\bigl(F_2(x+\log n)+F_2(x-\log n)\bigr)\dd x.
+\label{eq:probe-sesquilinear}
+\end{align}
+This convention is antilinear in the first argument, with
+\(Q[F]=Q(F,F)\). The pole term vanishes by the two exponential
+moments. Formula~\eqref{eq:probe-sesquilinear} is compatible across
+nested windows and is invariant under simultaneous translations.
+
+The all-window assertion on these form domains is equivalent to the
+same assertion on compact smooth sources with the three moments.
+Indeed, convolution with a compact smooth approximate identity
+preserves each vanishing moment, converges in \(\mathcal D_{\log}\),
+and keeps all approximants in one slightly larger fixed interval.
+Continuity of \eqref{eq:probe-sesquilinear} then passes its sign to the
+limit. This use of a larger fixed interval is permitted by the
+all-window quantifier.
+
+To avoid confusing a spatial derivative with the Fourier multiplier
+notation, write \(\partial_x=d/dx\). Define
+\begin{equation}\label{eq:probe-polynomial}
+\begin{gathered}
+h_0(x)=
+\begin{cases}(1-16x^2)^8,&|x|<1/4,\\0,&|x|\ge1/4,
+\end{cases}
+\\
+g_0=(-\partial_x^2+1/4)\partial_xh_0,
+\qquad g=\frac{g_0}{\norm{g_0}_2},\qquad \ell=\frac12.
+\end{gathered}
+\end{equation}
+The zero extension of \(h_0\) is \(C^7\), and \(g_0\) is \(C^4\).
+The distributional derivatives in \eqref{eq:probe-polynomial}
+therefore agree with the ordinary derivatives on the two sides of
+each endpoint, without additional point masses. Integration by parts
+shows that \(g\) has all three vanishing moments: the factor
+\(\partial_x\) gives zero mean, and
+\(-\partial_x^2+1/4\) gives the two exponential moments.
+In particular \(g\in E_\ell\cap\mathcal D_{\log}\).
+Alternatively, convolving \(h_0\) with smooth approximate identities
+before applying its differential preparation gives exactly prepared
+smooth approximants to \(g\) in the same form norm, in a fixed
+slightly larger interval. The same holds for every finite linear
+combination of translates of \(g\).
+
+Put
+\begin{equation}\label{eq:probe-transforms}
+\begin{aligned}
+H_0(z)&=\int h_0(x)e^{zx}\dd x,
+&G(z)&=\int g(x)e^{zx}\dd x,\\
+\varphi(u)&=\int g(x)g(x+u)\dd x,
+&\Phi(z)&=\int\varphi(u)e^{zu}\dd u=G(z)G(-z).
+\end{aligned}
+\end{equation}
+These transforms are entire. The autocorrelation \(\varphi\) is real
+and even, supported on \([-\ell,\ell]\), and \(\varphi(0)=1\).
+Integration by parts and integration of the even monomials give
+\begin{equation}\label{eq:probe-entire-formula}
+\begin{aligned}
+G(z)&=\frac{z(z^2-1/4)H_0(z)}{\norm{g_0}_2},\\
+\frac{H_0(z)}{H_0(0)}
+&=\sum_{k=0}^{\infty}
+\frac{(z^2/64)^k}{(19/2)_k\,k!}
+={}_0F_1\left(;19/2;z^2/64\right),
+\end{aligned}
+\end{equation}
+where \((a)_k\) is the rising factorial and \(H_0(0)>0\).
+
+\begin{lemma}[Nonvanishing of the prepared transform]
+\label{lem:probe-nonvanishing}
+Every zero of \(H_0\) is nonzero and purely imaginary. Consequently,
+\begin{equation}\label{eq:probe-nonvanishing}
+\Phi(z)\ne0\quad\text{if }\Rea z>0\text{ and }z\ne1/2.
+\end{equation}
+The zero of \(\Phi\) at \(1/2\) has order two.
+\end{lemma}
+\begin{proof}
+Set \(f(z)=H_0(z)/H_0(0)\). If \(f(z_0)=0\), then \(z_0\ne0\).
+For \(y(t)=f(z_0t)\), termwise differentiation of
+\eqref{eq:probe-entire-formula} gives
+\[
+(t^{18}y'(t))'=\frac{z_0^2}{16}t^{18}y(t),
+\qquad y(0)=1,\quad y'(0)=0,\quad y(1)=0.
+\]
+Multiplication by \(\overline{y(t)}\) and integration by parts yield
+\begin{equation}\label{eq:probe-ode-energy}
+-\int_0^1t^{18}|y'(t)|^2\dd t
+=\frac{z_0^2}{16}\int_0^1t^{18}|y(t)|^2\dd t.
+\end{equation}
+The boundary terms vanish, including at zero by regularity and the
+factor \(t^{18}\). Both integrals in \eqref{eq:probe-ode-energy}
+are strictly positive before the displayed minus sign: otherwise
+\(y\) would be constant, contrary to its endpoint values.
+Thus \(z_0^2\) is strictly negative real.
+Formula~\eqref{eq:probe-entire-formula} now proves
+\eqref{eq:probe-nonvanishing}. Since \(H_0(\pm1/2)>0\), the factors
+\(G(z)\) and \(G(-z)\) each have a simple zero at \(z=1/2\), giving
+exactly a double zero of \(\Phi\).
+\end{proof}
+
+\subsection{The signed prime covariance and its Laplace transform}
+\label{sec:probe-covariance}
+
+For real \(r\), let \((\tau_rg)(x)=g(x-r)\), and define
+\begin{equation}\label{eq:probe-covariance-def}
+C_g(r)=Q(g,\tau_rg),\qquad q=Q[g],\qquad
+M_g(r)=\sum_{n\ge2}\frac{\Lambda(n)}{\sqrt n}
+\varphi(\log n-r)\quad(r\ge0).
+\end{equation}
+The function \(C_g\) is real and even, by the real symmetric kernels
+and translation invariance in \eqref{eq:probe-sesquilinear}.
+Because \(\ell<\log2\), no prime term is active on the diagonal,
+so \(q=\Gamma[g]\). Each sum defining \(M_g(r)\) is finite;
+locally its indices range over a fixed finite set. It follows that
+\(M_g\) is continuous. The elementary estimate
+\(\Lambda(n)\le\log n\) also gives
+\begin{equation}\label{eq:probe-elementary-growth}
+M_g(r)=O((1+r)e^{r/2}).
+\end{equation}
+
+\begin{proposition}[Exact covariance and Laplace identities]
+\label{prop:probe-identities}
+For \(r>\ell\),
+\begin{equation}\label{eq:probe-covariance-identity}
+C_g(r)=-M_g(r)+\epsilon_g(r),\qquad
+|\epsilon_g(r)|\le
+\frac{\ell e^{-5(r-\ell)/2}}{1-e^{-2(r-\ell)}}.
+\end{equation}
+Moreover,
+\begin{equation}\label{eq:probe-laplace}
+\int_0^\infty e^{-sr}M_g(r)\dd r
+=-\Phi(s)\frac{\zeta'}{\zeta}(1/2+s),
+\qquad \Rea s>1/2.
+\end{equation}
+\end{proposition}
+\begin{proof}
+The digamma partial-fraction expansion gives
+\begin{equation}\label{eq:probe-digamma-kernel}
+\gamma_\infty(t)-\gamma_\infty(0)
+=2\int_0^\infty n(u)(1-\cos(tu))\dd u,
+\qquad n(u)=\frac{e^{-u/2}}{1-e^{-2u}};
+\end{equation}
+see \cite[\S5.7, equation 5.7.6]{DLMF}.
+Thus the off-diagonal convolution kernel of \(\Gamma\) is
+\(-n(|u|)\). More explicitly, polarizing the Fourier identity
+\eqref{eq:probe-digamma-kernel} and using the disjoint supports when
+\(r>\ell\) gives
+\[
+\Gamma(g,\tau_rg)
+=-\int_{-\ell}^{\ell}\varphi(u)n(r+u)\dd u.
+\]
+The two prime branches in \eqref{eq:probe-sesquilinear} are
+\(\varphi(\log n-r)\) and \(\varphi(\log n+r)\).
+Only the first can be nonzero for \(r>\ell\); hence
+\begin{equation}\label{eq:probe-exact-remainder}
+C_g(r)=-M_g(r)
+-\int_{-\ell}^{\ell}\varphi(u)n(r+u)\dd u.
+\end{equation}
+There is no factor two in front of \(M_g(r)\).
+Preparation gives
+\(\int\varphi(u)e^{-u/2}\dd u=\Phi(-1/2)=0\).
+It cancels the first term in the convergent expansion
+\(n(v)=\sum_{k\ge0}e^{-(2k+1/2)v}\), \(v>0\).
+Finally,
+\(\norm\varphi_1\le\norm g_1^2\le\ell\norm g_2^2=\ell\).
+Bounding the terms with \(k\ge1\) on \(r+u\ge r-\ell\) proves
+\eqref{eq:probe-covariance-identity}.
+
+For every \(n\ge2\), the support of
+\(r\mapsto\varphi(\log n-r)\) lies strictly in \((0,\infty)\),
+since \(\ell<\log2\). Substitution \(u=\log n-r\) therefore gives
+\[
+\int_0^\infty e^{-sr}\varphi(\log n-r)\dd r
+=n^{-s}\Phi(s).
+\]
+For \(\Rea s>1/2\), the corresponding absolute integrals sum to at
+most a finite profile constant times
+\(\sum_{n\ge2}\Lambda(n)n^{-1/2-\Rea s}\).
+Termwise integration is thus justified, and the logarithmic-derivative
+Dirichlet series proves \eqref{eq:probe-laplace}; see
+\cite[\S27.4, equation 27.4.12]{DLMF}.
+\end{proof}
+
+\subsection{A single-probe equivalence theorem}
+\label{sec:probe-equivalence}
+
+\begin{theorem}[One prepared probe and all-window positivity]
+\label{thm:probe-equivalence}
+For the fixed normalized source \eqref{eq:probe-polynomial}, the
+following seven statements are equivalent:
+\begin{enumerate}[label=\textup{(\roman*)}]
+\item\label{item:probe-all-window}
+For every \(L>0\), \(Q[F]\ge0\) for all
+\(F\in E_L\cap\mathcal D_{\log}\).
+\item\label{item:probe-rh} The Riemann hypothesis holds.
+\item\label{item:probe-pairwise}
+\(q\ge0\) and \(|C_g(r)|\le q\) for every real \(r\).
+\item\label{item:probe-bounded} \(M_g\) is bounded on \([0,\infty)\).
+\item\label{item:probe-subexponential}
+For every \(\varepsilon>0\), there is a finite
+\(A_\varepsilon\) such that
+\(|M_g(r)|\le A_\varepsilon e^{\varepsilon r}\) for all \(r\ge0\).
+\item\label{item:probe-l1}
+For every \(\varepsilon>0\),
+\(\int_0^\infty e^{-\varepsilon r}|M_g(r)|\dd r<\infty\).
+\item\label{item:probe-l2}
+For every \(\varepsilon>0\),
+\(\int_0^\infty e^{-2\varepsilon r}|M_g(r)|^2\dd r<\infty\).
+\end{enumerate}
+Statement~\ref{item:probe-pairwise} is exactly positivity of every
+two-source translate Gram matrix for this probe, including complex
+coefficients.
+\end{theorem}
+\begin{proof}
+Under RH, \eqref{eq:full-zero-pairing} expresses \(Q[F]\), for every
+compact smooth source satisfying the three moments, as the sum
+\(\sum_\rho m_\rho|\widehat F(\Ima\rho)|^2\ge0\).
+The form closure established in Section~\ref{sec:probe-setup}
+extends positivity to the domains in
+\ref{item:probe-all-window}. Hence
+\ref{item:probe-rh} implies \ref{item:probe-all-window}.
+
+Each finite linear combination of translates of \(g\) has the three
+moments and lies in one compact window. If necessary translate that
+window into an interval \(I_L\); simultaneous translation preserves
+the form. Under \ref{item:probe-all-window}, its Gram matrix
+\([C_g(r_j-r_i)]_{i,j}\) is consequently positive semidefinite over
+\(\mathbb C\). In particular the two-source matrix has diagonal
+\(q\) and off-diagonal entries \(C_g(r)\) and its conjugate, proving
+\ref{item:probe-pairwise}.
+
+Under \ref{item:probe-pairwise},
+\eqref{eq:probe-covariance-identity} bounds \(M_g\) on
+\([\ell+1,\infty)\); its continuity handles the remaining compact
+interval. This proves \ref{item:probe-bounded}, which immediately
+implies \ref{item:probe-subexponential}, \ref{item:probe-l1}, and
+\ref{item:probe-l2}. Statement~\ref{item:probe-subexponential}
+implies \ref{item:probe-l1} by using a growth exponent smaller than
+the specified integration exponent. Statement~\ref{item:probe-l2}
+also implies \ref{item:probe-l1}: for \(\delta>0\),
+\[
+\int_0^\infty e^{-\delta r}|M_g(r)|\dd r
+\le
+\left(\int_0^\infty e^{-\delta r}|M_g(r)|^2\dd r\right)^{1/2}
+\left(\int_0^\infty e^{-\delta r}\dd r\right)^{1/2},
+\]
+using \(\varepsilon=\delta/2\) in \ref{item:probe-l2}.
+
+It remains to prove \ref{item:probe-l1} implies \ref{item:probe-rh}.
+The weighted absolute integrability in \ref{item:probe-l1} makes
+the left side of \eqref{eq:probe-laplace} holomorphic throughout
+\(\Rea s>0\). On every compact subset of that half-plane, a smaller
+positive exponential weight dominates the integrand and all its
+derivatives with respect to \(s\). By meromorphic continuation and
+the identity theorem, the right side of \eqref{eq:probe-laplace}
+must coincide with this holomorphic function there. The zeta pole
+at \(1\) causes no obstruction: the double zero of \(\Phi\) at
+\(s=1/2\) cancels the simple pole of its logarithmic derivative.
+
+Suppose instead that \(\rho\) is a nontrivial zero with
+\(\Rea\rho>1/2\), and write \(s_\rho=\rho-1/2\).
+Lemma~\ref{lem:probe-nonvanishing} gives \(\Phi(s_\rho)\ne0\),
+since \(\rho\ne1\). If \(m_\rho\) is its multiplicity, the right
+side of \eqref{eq:probe-laplace} then has a genuine simple pole with
+residue
+\begin{equation}\label{eq:probe-residue}
+-m_\rho\Phi(s_\rho)\ne0.
+\end{equation}
+This contradicts holomorphy. Reflection of the nontrivial zeros under
+the functional equation excludes zeros to the left as well, proving
+RH; see \cite[\S\S25.4, 25.10]{DLMF}. The argument does not require
+simple zeros or a rightmost off-line zero.
+\end{proof}
+
+\begin{corollary}[Growth forced by an off-line zero]
+\label{cor:probe-growth}
+Let \(a\ge0\). Either of the assumptions
+\[
+\int_0^\infty e^{-ar}|M_g(r)|\dd r<\infty,
+\qquad\text{or}\qquad
+|M_g(r)|\le A(1+r)^k e^{ar}\quad(r\ge0)
+\]
+for finite constants \(A\) and \(k\ge0\) implies that zeta has no
+zero with real part greater than \(1/2+a\).
+Conversely, a hypothetical zero \(\rho\) with
+\(\beta=\Rea\rho>1/2\) forces
+\begin{equation}\label{eq:probe-forced-growth}
+\limsup_{r\to\infty}\frac{\log(1+|M_g(r)|)}{r}
+\ge\beta-1/2.
+\end{equation}
+For every \(0<\varepsilon<\beta-1/2\),
+\(\int_0^\infty e^{-\varepsilon r}|M_g(r)|\dd r=\infty\).
+\end{corollary}
+\begin{proof}
+Either displayed hypothesis makes the Laplace transform holomorphic
+in \(\Rea s>a\). The same nonzero-residue argument therefore
+excludes zeros with \(\Rea\rho>1/2+a\).
+If the limsup in \eqref{eq:probe-forced-growth} were smaller than
+\(\beta-1/2\), an intermediate positive exponent would bound
+\(|M_g|\) eventually, and continuity would extend that bound to
+all \(r\ge0\). The preceding implication would exclude \(\rho\).
+The weighted-integral divergence follows from the first implication
+with \(a=\varepsilon\).
+\end{proof}
+
+Theorem~\ref{thm:probe-equivalence} uses the exact arithmetic transform
+of this particular source. Pairwise positivity of an arbitrary
+covariance function does not imply positivity of every larger Gram
+matrix. Here the pairwise bounds imply RH through
+\eqref{eq:probe-laplace}, and the complete explicit formula then gives
+the larger-matrix and all-source conclusions.
+No bound in statements~\ref{item:probe-pairwise}--\ref{item:probe-l2}
+is established here for all separations. In particular,
+\eqref{eq:probe-elementary-growth} does not have the subexponential
+strength required by the theorem. The growth corollary supplies
+neither an effective first violating separation nor a lower bound
+at every large separation. The unresolved step remains a global
+signed estimate for \(M_g\); the equivalence proof requires no
+finite numerical certificate.
+
+
+\subsection{The size of the negative centered reference block}
+\label{subsec:centered-negative-index}
+
+The centered comparison has a separate obstruction whose dimension can be
+estimated explicitly.  For \(I_L=(-L/2,L/2)\), let
+\[
+ (J_LF)(x)=\int_{I_L}e^{-|x-y|/2}F(y)\dd y,
+ \qquad x\in I_L.
+\]
+Thus \(J_L\) is the compression of the convolution operator with Fourier
+multiplier \((t^2+1/4)^{-1}\); it is unrelated to the reflection operator
+\(\J\).  On functions supported in \(I_L\), define the centered reference
+form
+\begin{equation}\label{eq:centered-reference-form}
+ A_L[F]=\Gamma[F]+\inner{F}{J_LF}
+       =\int_{\mathbb R}m(t)|\widehat F(t)|^2\frac{\dd t}{2\pi},
+ \qquad m(t)=\gamma_\infty(t)+\frac{1}{t^2+1/4}.
+\end{equation}
+The restriction to \(E_L\) imposes the same three zero moments as before.
+If \(W_L\) denotes the bounded selfadjoint operator representing
+\(W_{1/2}\) on sources supported in \(I_L\), then adding \(J_L\) to
+both terms gives the exact identity
+\[
+ Q[F]=A_L[F]-\inner{F}{(W_L+J_L)F},\qquad F\in E_L.
+\]
+Here \(W_L\) is bounded because only finitely many prime shifts are
+active on a fixed support interval; the restriction of these forms to
+\(E_L\) is understood.  This identity explains the reference form
+without asserting a sign for either term.
+Write \(\operatorname{ind}_{-}(A_L|_{E_L})\) for the supremum of the
+dimensions of subspaces on which this form is strictly negative.
+
+\begin{theorem}[Explicit centered negative index]
+\label{thm:centered-negative-index}
+There is a unique positive number \(t_*\) satisfying
+\[
+ \Rea\psi(5/4+\ii t_*/2)-\log\pi=0.
+\]
+For every \(L>0\),
+\begin{equation}\label{eq:centered-negative-index-bound}
+ \operatorname{ind}_{-}(A_L|_{E_L})
+ \geq \max\left\{0,\left\lceil\frac{Lt_*}{\pi}\right\rceil-4\right\}.
+\end{equation}
+The same lower bound holds when the negative subspaces are required to
+consist of compact smooth sources satisfying all three moments.  In
+particular,
+\begin{equation}\label{eq:centered-index-density}
+ \liminf_{L\to\infty}\frac{\operatorname{ind}_{-}(A_L|_{E_L})}{L}
+ \geq\frac{t_*}{\pi}.
+\end{equation}
+\end{theorem}
+
+\begin{proof}
+The digamma recurrence gives the exact identity
+\begin{equation}\label{eq:centered-shifted-digamma}
+ m(t)=\Rea\psi(5/4+\ii t/2)-\log\pi,
+\end{equation}
+since
+\(\Rea(1/(1/4+\ii t/2))=(t^2+1/4)^{-1}\).
+Put \(a_n=2n+5/2\).  The digamma series yields
+\begin{equation}\label{eq:centered-m-series}
+ m(t)=m(0)+\sum_{n=0}^\infty
+          \frac{2t^2}{a_n(a_n^2+t^2)},\qquad
+ m(0)=4-\gamma_{\mathrm E}-\frac{\pi}{2}-3\log2-\log\pi<0.
+\end{equation}
+The series shows that \(m\) is even and strictly increasing on
+\((0,\infty)\).  Integral comparison gives
+\[
+ m(t)-m(0)\geq\frac12\log\left(1+\frac{4t^2}{25}\right),
+\]
+so \(m(t)\to\infty\).  This proves existence and uniqueness of \(t_*\),
+with \(m(t)<0\) precisely when \(|t|<t_*\).
+Moreover, \(f(v)=m(\sqrt v)\) is increasing and concave on \([0,\infty)\):
+each summand \(2v/(a_n(a_n^2+v))\) has those properties, and its first two
+derivative series converge locally uniformly.
+
+Let \(D_{n,L}\) be the span of the first \(n\) Dirichlet sine modes on
+\(I_L\), extended by zero.  These extensions belong to \(H^1(\mathbb R)\),
+and Plancherel gives
+\[
+ \int_{\mathbb R}t^2|\widehat F(t)|^2\frac{\dd t}{2\pi}
+ =\norm{F'}_2^2
+ \leq\left(\frac{\pi n}{L}\right)^2\norm F_2^2,
+ \qquad F\in D_{n,L}.
+\]
+For \(F\ne0\), apply Jensen's inequality to the concave function \(f\)
+and the probability measure
+\(|\widehat F(t)|^2\dd t/(2\pi\norm F_2^2)\).  Its second moment is
+finite, and \(m\) has logarithmic growth, so this gives
+\begin{equation}\label{eq:centered-dirichlet-bound}
+ A_L[F]\leq m\!\left(\frac{\pi n}{L}\right)\norm F_2^2
+ \quad(F\in D_{n,L}).
+\end{equation}
+Since \(E_L\) imposes three linear conditions,
+\(\dim(D_{n,L}\cap E_L)\geq n-3\).  Whenever \(\pi n/L<t_*\),
+\eqref{eq:centered-dirichlet-bound} is a strict negative bound throughout
+that intersection, including for complex linear combinations.
+
+To realize these finite dimensional negative subspaces in the smooth
+source class, approximate a basis in \(H^1_0(I_L)\) by compact smooth
+functions.  The three moment functionals are independent on
+\(C_c^\infty(I_L)\), so fixed compact smooth dual functions can correct
+the three approximation errors exactly.  The corrected approximations
+converge in \(H^1\), hence in the logarithmic form norm.  Linear
+independence and the strict negative margin persist for sufficiently
+accurate approximations.
+
+The largest nonnegative integer strictly below \(Lt_*/\pi\) is
+\(\lceil Lt_*/\pi\rceil-1\).  Use this integer for \(n\), or the zero
+subspace when necessary, to obtain
+\eqref{eq:centered-negative-index-bound}.  The strict inequality on
+\(n\) accounts for the ceiling also when \(Lt_*/\pi\) is an integer.
+Dividing by \(L\) proves \eqref{eq:centered-index-density}.
+\end{proof}
+
+\begin{corollary}\label{cor:centered-correction-rank}
+Any bounded finite-rank selfadjoint correction that makes \(A_L|_{E_L}\)
+nonnegative has rank at least the right side of
+\eqref{eq:centered-negative-index-bound}.  Any additional linear
+conditions that remove all its negative directions have at least that
+codimension within \(E_L\).
+\end{corollary}
+\begin{proof}
+A negative subspace of dimension larger than the rank of the correction
+has a nonzero intersection with its kernel.  The form is unchanged and
+negative on such a vector.  Intersecting with the common kernel of the
+additional conditions proves the second assertion.
+\end{proof}
+
+An outward scalar calculation in \cite{JointProbeCertificate} gives the
+rational bracket
+\begin{equation}\label{eq:centered-root-bracket}
+ \frac{113002385070995698543}{18446744073709551616}
+ <t_*<
+ \frac{113002385070995698544}{18446744073709551616},
+\end{equation}
+and consequently
+\begin{equation}\label{eq:centered-density-bracket}
+ 1.94992548206433579713
+ <\frac{t_*}{\pi}<
+ 1.94992548206433579715.
+\end{equation}
+The calculation checks opposite signs at \(6\) and \(7\), then performs
+64 rational bisections using 192-bit outward digamma arithmetic.  Exact
+rational endpoint enclosures of both final function values are stored
+in the record; uniqueness is the analytic conclusion of the proof above.
+Thus, for example, the exact rational
+\(c=1.9499254820643357971\) gives the implementable lower bound
+\(\max\{0,\lceil cL\rceil-4\}\).
+The decimal bounds use this scalar certificate, while
+Theorem~\ref{thm:centered-negative-index} does not require its numerical
+evaluation.
+
+This is a lower bound for the centered reference, not a matching
+asymptotic formula and not a negative-index statement about \(Q\).
+It quantifies the size of the block that a centered signed comparison
+must retain.  The underlying derivation and its scope are recorded in
+\cite{CenteredIndexNote}.
+
+\subsection{A certified joint comparison for seven translates}
+\label{subsec:seven-source-certificate}
+
+The preceding global reduction can be tested on one fixed finite set
+of translates without assuming its unresolved growth condition.  Keep
+the normalized polynomial probe \(g\), its autocorrelation \(\varphi\),
+and \(\ell=1/2\).  Put
+\[
+ g_j=\tau_{2j}g\quad(0\leq j\leq6),\qquad
+ G_{ij}=Q(g_i,g_j).
+\]
+The sources have disjoint supports and are orthonormal in \(L^2\).
+Their union lies in an interval of length \(25/2\); a common translation
+centers that interval without changing the Gram matrix or the zero
+moments.
+
+\begin{proposition}[Computer-assisted seven-source comparison]
+\label{prop:seven-source-gram}
+The arithmetic Gram matrix satisfies
+\begin{equation}\label{eq:seven-source-gram-bound}
+ G>\frac1{20}I_7.
+\end{equation}
+Equivalently, for every nonzero \((a_0,\ldots,a_6)\in\mathbb C^7\),
+\[
+ Q\!\left[\sum_{j=0}^6a_j\tau_{2j}g\right]
+ >\frac1{20}\sum_{j=0}^6|a_j|^2.
+\]
+\end{proposition}
+
+\begin{proof}[Certificate and verification]
+Translation invariance and the real even covariance make \(G\) a real
+symmetric Toeplitz matrix.  Let \(q_k=G_{0k}\) for \(0\leq k\leq6\).
+Since \(\ell<\log2\), no prime term occurs on the diagonal.  With
+\(\kappa(u)=e^{-u/2}/(1-e^{-2u})\), its exact value is
+\begin{equation}\label{eq:seven-source-diagonal}
+ q_0=\gamma_\infty(0)
+ +2\int_0^\ell\kappa(u)(1-\varphi(u))\dd u
+ +2\left[\operatorname{arctanh}(e^{-\ell/2})
+                  +\arctan(e^{-\ell/2})\right].
+\end{equation}
+The autocorrelation on \([0,\ell]\) is computed as an exact rational
+polynomial from the unnormalized source and its exact squared norm.
+For validated integration, the removable origin in
+\eqref{eq:seven-source-diagonal} is resolved by writing
+\((1-\varphi(u))/u\) as a polynomial and using
+\(u\kappa(u)=e^{u/2}/(2\sinh(u)/u)\), with its analytic value at zero.
+The implementation evaluates the same entire denominator as
+\({}_0F_1(;3/2;u^2/4)=\sinh(u)/u\).
+The resulting enclosure implies
+\[
+ 1.46694003100528<q_0<1.46694003100529.
+\]
+
+For each \(r\in\{2,4,6,8,10,12\}\), all active prime powers in
+\(M_g(r)\) are enumerated.  The largest sieve endpoint is
+\(\lceil e^{12+1/2}\rceil=268338\).  The entry with \(r=2k\) is
+enclosed using the full signed prime sum and the symmetric interval
+\begin{equation}\label{eq:seven-source-offdiagonal}
+ q_k\in-M_g(2k)+[-b(2k),b(2k)],\qquad
+ b(r)=\frac{\ell e^{-5(r-\ell)/2}}{1-e^{-2(r-\ell)}}.
+\end{equation}
+For completeness, the off-diagonal archimedean kernel is
+\(-\kappa(|u|)\), so its contribution is
+\(-\int_{-\ell}^\ell\varphi(u)\kappa(r+u)\dd u\).
+The leading \(e^{-(r+u)/2}\) term vanishes by the exponential moments.
+Bounding the remaining geometric series and using
+\(\norm\varphi_1\leq\norm g_1^2\leq\ell\) gives exactly the radius
+\(b(r)\).  No archimedean remainder is omitted.
+
+The certificate forms \(G-\frac1{20}I_7\) with these interval entries
+and computes an outward \(LDL^{\mathsf T}\) factorization, where the
+lower triangular factor has unit diagonal.  Every pivot interval is
+strictly positive.  Table~\ref{tab:seven-source-pivots} displays rational
+decimal lower bounds rounded down from the recorded enclosures; each
+listed bound is valid in both the 192-bit and 256-bit runs.
+\begin{table}[htbp]
+\centering
+\begin{tabular}{c|r}
+Pivot & Strict lower bound\\
+\hline
+1 & 1.41694003\\
+2 & 1.41676996\\
+3 & 1.30926974\\
+4 & 1.03034199\\
+5 & 0.63776164\\
+6 & 0.14730945\\
+7 & 0.01286159
+\end{tabular}
+\caption{Strict lower bounds for the outward pivots of
+\(G-\frac1{20}I_7\).  These pivots are not eigenvalue bounds;
+the certified matrix lower bound is the chosen shift \(1/20\).}
+\label{tab:seven-source-pivots}
+\end{table}
+Positive pivot enclosures inductively justify all divisions and enclose
+the exact factorization.  Treating repeated Toeplitz entries as
+independent intervals only enlarges the enclosures.  Positive definiteness
+of the real symmetric matrix proves the same Hermitian inequality for
+arbitrary complex coefficients.
+
+The package \cite{JointProbeCertificate} records the exact polynomial,
+all six signed prime sums, all six remainder bounds, the complete first
+row, and the seven pivot intervals as rational endpoints.  Its replay
+checks the source bindings, positive pivots, invariant data, and interval
+overlap between precisions.  A separate implementation using rational
+intervals and directed rounding after each operation to a grid of size
+\(2^{-128}\) also obtains seven positive pivots from both saved first
+rows.  This last check independently verifies the matrix algebra; it
+uses the saved entry enclosures and does not independently reconstruct
+the prime sums or the diagonal integral.
+\end{proof}
+
+The elementary Gershgorin lower bound for this same matrix is enclosed
+between \(-1.511672\) and \(-1.495987\), so it cannot certify its
+positivity; that negative lower bound is not evidence of a negative
+eigenvalue.  The signed joint factorization proves a comparison on one
+seven dimensional subspace.  It proves neither positivity for all
+sources of width \(25/2\), nor positivity for every translate of \(g\),
+nor a bound for \(M_g(r)\) at untested separations.  It supplies no input
+to the analytic single-probe equivalence or to
+Theorem~\ref{thm:centered-negative-index}.
+
+
 \section{Scope and further questions}\label{sec:scope}
 
 The estimates establish a finite positive trace family for every
@@ -1864,21 +2533,32 @@ The finite-product result establishes bounded transport, the exact
 inverse metric, and the smoothed boundary identity at the critical
 exponent for each fixed finite prime set. Its comparison with the
 complete Weil form requires all active primes for each source support.
-A possible structured estimate suggested by the archimedean calibration is
-\begin{equation}\label{eq:rank-one-question}
-K_{S_{L_0},1/2}[(-\partial_x^2+1/4)h]
-\le\frac{c_{L_0}}{16}\left|\int h(x)\dd x\right|^2,
-\qquad h\in C_c^\infty((-L_0/2,L_0/2);\mathbb C),
-\end{equation}
-with a finite constant \(c_{L_0}\ge0\). This is an unproved form
-estimate, not a consequence of the boundary identity. The first proposed
-case is \(L_0=1\), \(S_{L_0}=\{2\}\). Nonpositivity on the
-mean-zero subspace alone would not establish the bound: mixed terms
-with a mean direction also need control near null directions of that
-subspace. A positive correction on one mean-zero prepared source would
-refute this candidate, while leaving the weaker comparison
-\(K\le B\) open. The motivation and quantifiers are detailed in
-\cite[Section 7]{FiniteEulerNote}.
+The present arithmetic target is the weaker signed comparison
+\[
+K_{S_L,1/2}[F]\le B_{S_L,1/2}[F],\qquad
+F\in E_L\cap C_c^\infty(I_L),
+\]
+on an unbounded sequence of nested windows, with the same three moments.
+The earlier mean-only upper-bound proposal is retired in the accompanying
+first-prime analysis \cite{FirstPrimeResonance}: it constructs positive
+corrections on prepared mean-zero sources already at \(L=1\), \(S=\{2\}\).
+That separate obstruction concerns \(K>0\), not \(K>B\), and leaves the
+present comparison open.
+
+For the explicit polynomial profile in Section~\ref{sec:source-criteria},
+an equivalent target is
+\[
+\int_0^\infty e^{-\varepsilon r}|M_g(r)|\dd r<\infty
+\qquad\text{for every }\varepsilon>0.
+\]
+The equivalence is proved, but this global signed bound is not.
+Replacing the signed prime sum by its absolute majorant does not supply
+the required estimate. The centered route must also accommodate a growing
+negative reference block; its size has the explicit lower bound proved
+above. The seven-source certificate retains simultaneous signed
+correlations, but covers neither its infinite-dimensional complement nor
+untested translations. It therefore supplies no unbounded-window
+continuation or termination theorem.
 
 The global phase path and an increasing finite set of primes at the
 critical exponent remain distinct limiting procedures. In the
@@ -1893,15 +2573,18 @@ whether this phase family ultimately yields an arithmetic
 positivity mechanism. Its content is the source-uniform trace
 control, the majorant limit, the distinction between phase concentration
 and exact-kernel mass, and the finite-place identity with its fixed-set
-obstruction. Neither a signed support-adapted comparison nor convergence
-along growing prime sets is established.
+obstruction, together with the single-probe growth criterion and the
+quantitative centered negative-index bound. The finite joint certificate
+adds one verified arithmetic subspace. Neither the global signed growth
+estimate nor convergence along growing prime sets is established.
 
 \section*{Acknowledgements and use of language models}
 
 This draft was prepared for Edward Baker with substantial assistance
 from OpenAI's GPT-6 (Codex). Language-model assistance was used in
 the underlying research notes and in consolidating definitions,
-developing and checking proofs, organizing the manuscript, and
+developing and checking proofs, organizing the manuscript,
+implementing and auditing the outward numerical certificates, and
 checking bibliographic links. A separate review by Anthropic's Claude
 informed the revision of the operator interpretation, uniform estimates,
 and presentation; its bibliographic and mathematical suggestions were
@@ -2003,8 +2686,10 @@ notes on the Riemann zeta function, pp.~2--4.
 \bibitem{DLMF}
 F.~W.~J.~Olver et al., eds.,
 \emph{NIST Digital Library of Mathematical Functions},
-Chapter~25, especially Sections 25.2 and 25.4.
-\href{https://dlmf.nist.gov/25.4}{Functional equations of the Riemann zeta function}.
+Chapters~5, 25, and 27, especially Sections 5.7, 25.2, 25.4,
+and equation 27.4.12.
+\href{https://dlmf.nist.gov/25.4}{Functional equations of the Riemann zeta function};
+\href{https://dlmf.nist.gov/27.4.E12}{logarithmic-derivative Dirichlet series}.
 
 \bibitem{FiniteEulerNote}
 \emph{Finite Euler boundary identity and a fixed-place sign obstruction},
@@ -2013,6 +2698,36 @@ assistance, 3 October 2026.
 \path{notes/FINITE_EULER_BOUNDARY_IDENTITY_20261003.md}.
 Detailed calculations and source-class qualifications; not independent
 specialist refereeing.
+
+
+\bibitem{SingleProbeNote}
+\emph{One prepared probe detects the full all-window obstruction},
+internal research note prepared for Edward Baker with GPT-6 (Codex)
+assistance, 3 October 2026.
+\path{notes/SINGLE_PROBE_GROWTH_THEOREM_20261003.md}.
+Proof and internal audit trail; no claim of literature priority.
+
+\bibitem{CenteredIndexNote}
+\emph{An explicit linear lower bound for the centered negative block},
+internal research note prepared for Edward Baker with GPT-6 (Codex)
+assistance, 3 October 2026.
+\path{notes/CENTERED_NEGATIVE_INDEX_SHARPENING_20261003.md}.
+
+\bibitem{JointProbeCertificate}
+\emph{Joint translated-probe Gram certificate},
+reproducible numerical package prepared for Edward Baker with GPT-6
+(Codex) assistance, 3 October 2026.
+\path{numerics/single_probe_joint_20261003/README.md}.
+Includes the 192-bit and 256-bit Gram records, rational interval matrix
+audit, and the independent scalar centered-reference root bracket.
+
+\bibitem{FirstPrimeResonance}
+\emph{First-prime translated resonance: positive prepared correction directions},
+internal research note prepared for Edward Baker with GPT-6 (Codex)
+assistance, 3 October 2026.
+\path{notes/FIRST_PRIME_TRANSLATED_RESONANCE_20261003.md};
+separate internal audit:
+\path{reviews/FIRST_PRIME_RESONANCE_REVIEW_20261003.md}.
 
 \end{thebibliography}
 \end{document}
