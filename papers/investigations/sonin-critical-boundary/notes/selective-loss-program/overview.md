@@ -235,6 +235,8 @@ RH-equivalent. The [actual remainder and fitted-error diagnostics](../../numeric
 give only small floating checks; see the
 [internal review](../../reviews/SELECTIVE_LOSS_ACTUAL_ERROR_REVIEW_20261003.md).
 
+The [subpower continuation](10_subpower_growth_and_investigation_paths_20261003.md) now proves that variance O_delta(X^(2+delta)) for every positive delta, subexponential cumulative J, and physical weighted-energy finiteness for every positive weight are equivalent to RH for this probe. Constants and starting thresholds may depend on delta. The corresponding central projected energy target is O_delta(X^(1+delta)). A bound at one fixed delta between zero and one would exclude zeros strictly right of 1/2+delta/2. These are transfer results and open estimate targets; no actual-prime global bound has been obtained. The manuscript integrates notes 08–10 and provides suggested investigation paths.
+
 Higher prime powers give an o(1), uniformly bounded correction to p,
 so the remaining energy target can be reduced to primes alone. Weighted
 unprojected response and local energy have an exact coercive integral
@@ -302,10 +304,11 @@ bound. All these global formulations retain RH strength.
 | Global mechanism audit | Test factorization, frames, ordinary PNT, and variance/Hardy inputs | Endpoint and coherent-vector gaps identified; structural countermodel established; actual-prime variance target specified |
 | Dyadic shifted correlations | Exact cap weights, diagonal and continuum normalization, singular-series main, and arithmetic input audit | Established in note 08; the singular-series leading main cancels the diagonal in the model; actual signed correlation errors remain open |
 | Actual error localization | Constant-order model main, negative-part bound, removable Chebyshev trends, and additive outer frequencies | Established in note 09; the positive remainder and signed central projection remain open |
+| Subpower quantitative relaxation | Exact dyadic and weighted transfers, all-exponent central target, and fixed-exponent zero-free implication | Established in note 10; the actual-prime estimates remain open and RH-equivalent when all positive exponents are required |
 | Weighted response estimate | A polynomial or subexponential bound on X, local prime energy, or the aggregate signed off-diagonal loss | Open; the finite theorem does not imply a global estimate |
 | Arithmetic conclusion | Apply the established one-sided theorem after the global bound is proved | Conditional on the preceding estimate |
 
-The immediate global theorem target remains Theta_+(Y)<=C(1+Y)^2,
+The quadratic quantitative target remains Theta_+(Y)<=C(1+Y)^2,
 with all signs summed before taking the positive part and with the complete
 top-top cap block. The explicit quadratic diagonal makes this equivalent
 to J(Y)=O((1+Y)^2). A concrete sufficient next target is the fixed-kernel
@@ -324,6 +327,7 @@ Note 09 supplies a sharper equivalent central-frequency target in its
 equation (19), after controlling the outer piece unconditionally. Its
 equation (12) gives an alternative fitted Chebyshev-error norm target,
 retaining four exactly harmless trends rather than charging their size.
+For the ultimate implication, the less restrictive all-delta subpower target in note 10 permits logarithmic or subpower losses without a uniform small-weight polynomial rate. Prioritize the exact central projection and calculate the exponent delivered by a proposed unconditional arithmetic input, retaining both caps, real endpoints, and exceptional-shift costs. A single fixed exponent below three in physical variance would already give a substantial zero-free half-plane milestone.
 For a continued Schur route, use an unconditional enlarged-head certificate
 and retain every added source loss. Endpoint-only nonnegative tails cannot
 be assumed as a preliminary.

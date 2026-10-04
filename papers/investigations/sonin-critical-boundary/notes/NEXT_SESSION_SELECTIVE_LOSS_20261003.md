@@ -32,6 +32,8 @@ frequencies on the target scale. The unproved part is now the signed
 central projection in note 09 (19), or the sufficient fitted-error
 mean-square bound in note 09 (12). Both retain RH strength.
 
+The subsequent [subpower note](selective-loss-program/10_subpower_growth_and_investigation_paths_20261003.md) and [manuscript revision review](../reviews/ACTUAL_ERROR_SUBPOWER_MANUSCRIPT_REVISION_20261003.md) record a quantitative relaxation: variance O_delta(X^(2+delta)) for every positive delta already suffices, equivalently central projected energy O_delta(X^(1+delta)). Constants and starting thresholds may depend on delta. One fixed delta between zero and one would exclude zeros strictly right of 1/2+delta/2. The transfer theorem is proved; all these global actual-prime estimates remain open. The manuscript now integrates notes 08–10 and includes prioritized investigation paths.
+
 ## 1. Fixed normalization and connection to the positive main
 
 Use zero extensions, a=1/4, ell=1/2, and
