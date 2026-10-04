@@ -19,8 +19,19 @@ specialist refereeing.
 | Visual page-by-page layout and final page count | Not independently inspected; native compile tool returns no PDF or page count, and computer-use access to Codex is unavailable | [Final review](reviews/MANUSCRIPT_REVIEW_20261004.md) |
 | First fixed global actual-prime exponent below one | Open; not claimed | [Manuscript](manuscript.tex) |
 | Actual-prime exponent descent | Open; not assumed | [Manuscript](manuscript.tex) |
+| Möbius small-divisor elimination | Proved O(X^(9/5)(log X)²) discarded energy at d≤X^(9/10); remaining cofactors O(X^(1/10)); limiting 11/12 cutoff also checked | [Arithmetic localization review](reviews/ARITHMETIC_LOCALIZATION_REVIEW_20261004.md) |
+| Balanced Vaughan reduction | Proved quadratic or strictly subquadratic remainder with explicit logarithmic continuum; no saving for retained sum claimed | [Arithmetic localization review](reviews/ARITHMETIC_LOCALIZATION_REVIEW_20261004.md) |
+| Sixth-order short-interval reconstruction | Peano kernel, endpoint atoms, cap estimate, and exponent budget checked; gives O(X) norm error at h=X^(11/12) | [Reconstruction note](notes/HIGHER_ORDER_SHORT_INTERVAL_RECONSTRUCTION_20261004.md), [second review](reviews/MOBIUS_PILOT_REVIEW_20261004.md) |
+| Actual-coefficient cofactor and Vaughan pilot | Independent sieve/divisor/weight checks and quadrature refinement passed; finite floating diagnostic, not certification | [Numerical package](numerics/mobius_reduction_20261004/README.md), [review](reviews/MOBIUS_PILOT_REVIEW_20261004.md) |
+| Modern Type II input | Exact primary theorem/ranges audited; polynomial hypothesis needed for a power saving remains unproved | [Source audit](notes/BILINEAR_INPUT_SOURCE_AUDIT_20261004.md) |
 
 All recorded finite bounds apply to every real X in their stated intervals.
 They do not establish a global quadratic estimate. Source and certificate
 identifiers, completed checks, and final-source details are collected in the
 [final manuscript review](reviews/MANUSCRIPT_REVIEW_20261004.md).
+
+The subsequent [initial delta investigation](notes/INITIAL_DELTA_INVESTIGATION_20261004.md)
+adds research notes and a small diagnostic package. It does not change the
+manuscript or its previously recorded compilation state, and does not
+claim a smaller global delta. Its promising initial result is the proved
+elimination of large arithmetic sectors below the quadratic energy scale.

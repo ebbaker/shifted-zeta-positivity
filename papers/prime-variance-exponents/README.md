@@ -35,6 +35,29 @@ and the published finite-height verification were not regenerated.
 | Any fixed global delta<1 for actual primes | Open |
 | Actual-prime exponent-descent rule | Open |
 
+## Initial delta investigation — 4 October 2026
+
+The [first investigation outcome](notes/INITIAL_DELTA_INVESTIGATION_20261004.md)
+proves that the exact Möbius divisor expansion can discard all d≤X^(9/10)
+with shell energy O(X^(9/5)(log X)²). The unresolved signed sum then has
+cofactors k≤2B X^(1/10). A sharper limiting cutoff leaves only
+O(X^(1/12)(log X)^(1/6)) cofactors, with quadratic discarded error.
+These are proved bounds for arithmetic sectors; the retained sum still
+needs a power-saving estimate.
+
+A balanced Vaughan reduction and a sixth-order short-interval
+reconstruction provide two further precise options. The
+[finite pilot](numerics/mobius_reduction_20261004/README.md) finds strong
+signed cofactor cancellation on six tested shells and checks the exact
+identities, without fitting or claiming a global exponent. Fresh internal
+proof and code reviews passed. The
+[source audit](notes/BILINEAR_INPUT_SOURCE_AUDIT_20261004.md) identifies the
+additional polynomial Mellin estimate that one modern Type II route would
+need; the available μ/Λ applications give logarithmic savings.
+
+These new results are retained in research notes. They have not yet been
+inserted into the manuscript.
+
 See [verification status](VERIFICATION_STATUS.md) for the precise check
 scope and [draft history](DRAFT_HISTOR.md) for the manuscript milestone.
 No independent specialist refereeing or mathematical priority is claimed.
@@ -46,6 +69,8 @@ No independent specialist refereeing or mathematical priority is claimed.
 - [Primary-source and bibliography review](reviews/SOURCES_REVIEW_20261003.md)
 - [Certificate replay and exact polynomial checks](reviews/CERTIFICATE_REPLAY_20261003.md)
 - [Final manuscript verification](reviews/MANUSCRIPT_REVIEW_20261004.md)
+- [Arithmetic localization proof review](reviews/ARITHMETIC_LOCALIZATION_REVIEW_20261004.md)
+- [Möbius pilot and higher-order reconstruction review](reviews/MOBIUS_PILOT_REVIEW_20261004.md)
 - [Existing small finite variance package](../investigations/sonin-critical-boundary/numerics/subpower_finite_variance_20261003/README.md)
 - [Existing outward package](../investigations/sonin-critical-boundary/numerics/selective_loss_quadratic_target_20261003/README.md)
 
@@ -56,7 +81,9 @@ The parent manuscript and its numerical packages are unchanged. No large
 data or draft snapshot folders are duplicated here.
 
 The next global research step is a genuine fixed power saving for the
-actual signed covariance, or for the complete short-interval mean square
-at h=X^(3/4). Increasing verified zero heights can instead extend the
-finite quadratic range on the scale H^10/(log H)^2; that is a separate
-finite milestone.
+retained signed Möbius-cofactor covariance, or the centered balanced
+Vaughan sum, with every cutoff and continuum term included. The original
+short-interval route remains available, now also with sixth-order
+reconstruction at h=X^(11/12). Increasing verified zero heights can
+instead extend the finite quadratic range on the scale H^10/(log H)^2;
+that is a separate finite milestone.
