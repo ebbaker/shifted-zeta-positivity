@@ -11,6 +11,12 @@ nontrivial zeta zeros lying in the closed strip of half-width delta/2
 around the critical line. Bounds along exponents tending to zero are
 equivalent to RH.
 
+The [research overview](notes/PROJECT_OVERVIEW_20261004.md) ranks the next
+global programs, reviews the earlier Sonin critical-boundary work, and links
+ten investigation charters in notes/programs/. It distinguishes started
+reductions, exploratory mechanisms, proved obstructions and finite support
+work. All first fixed global exponents below one remain open.
+
 The [draft manuscript](manuscript.tex) is the single editable source.
 It contains full proofs of the probe properties, the fixed-exponent
 equivalence, the PNT-envelope transfer, the finite quadratic transfer,
@@ -58,6 +64,26 @@ need; the available μ/Λ applications give logarithmic savings.
 These new results are retained in research notes. They have not yet been
 inserted into the manuscript.
 
+## Signed Mellin continuation — 4 October 2026
+
+The [continuation note](notes/SIGNED_MELLIN_CONTINUATION_20261004.md)
+restricts the retained response to |t|≤X^(1/12)log X with o(X) norm error
+and gives the exact signed central quadratic kernel. It also derives an
+exact Mertens integral with the hard-cutoff boundary and identifies its
+nonzero lattice moment with the Vaughan continuum constant. These are
+proved reductions; available Mertens bounds still give subpower savings.
+
+A conditional endpoint result sharpens the earlier target: any global
+X^(3−κ+o(1)) energy estimate, 0<κ≤1, would imply the exact bound
+O(X^(3−κ)) through the existing fixed-probe zero-strip theorem. The
+proposed uniform factorwise Type II hypothesis already entails a stronger
+fixed strip from its zero-frequency slice, when full real-block uniformity
+is included. Separate cofactor bounds also have a stronger boundary
+obligation because their transforms have higher-order poles. These
+findings favor a direct signed central-form estimate. The first actual-prime
+power saving remains open. See the
+[fresh internal review](reviews/SIGNED_MELLIN_CONTINUATION_REVIEW_20261004.md).
+
 See [verification status](VERIFICATION_STATUS.md) for the precise check
 scope and [draft history](DRAFT_HISTOR.md) for the manuscript milestone.
 No independent specialist refereeing or mathematical priority is claimed.
@@ -71,6 +97,7 @@ No independent specialist refereeing or mathematical priority is claimed.
 - [Final manuscript verification](reviews/MANUSCRIPT_REVIEW_20261004.md)
 - [Arithmetic localization proof review](reviews/ARITHMETIC_LOCALIZATION_REVIEW_20261004.md)
 - [Möbius pilot and higher-order reconstruction review](reviews/MOBIUS_PILOT_REVIEW_20261004.md)
+- [Signed Mellin continuation review](reviews/SIGNED_MELLIN_CONTINUATION_REVIEW_20261004.md)
 - [Existing small finite variance package](../investigations/sonin-critical-boundary/numerics/subpower_finite_variance_20261003/README.md)
 - [Existing outward package](../investigations/sonin-critical-boundary/numerics/selective_loss_quadratic_target_20261003/README.md)
 

@@ -24,6 +24,11 @@ specialist refereeing.
 | Sixth-order short-interval reconstruction | Peano kernel, endpoint atoms, cap estimate, and exponent budget checked; gives O(X) norm error at h=X^(11/12) | [Reconstruction note](notes/HIGHER_ORDER_SHORT_INTERVAL_RECONSTRUCTION_20261004.md), [second review](reviews/MOBIUS_PILOT_REVIEW_20261004.md) |
 | Actual-coefficient cofactor and Vaughan pilot | Independent sieve/divisor/weight checks and quadrature refinement passed; finite floating diagnostic, not certification | [Numerical package](numerics/mobius_reduction_20261004/README.md), [review](reviews/MOBIUS_PILOT_REVIEW_20261004.md) |
 | Modern Type II input | Exact primary theorem/ranges audited; polynomial hypothesis needed for a power saving remains unproved | [Source audit](notes/BILINEAR_INPUT_SOURCE_AUDIT_20261004.md) |
+| Capped Mellin localization | Gaussian mean-square and Plancherel proof give outer energy O_g(X²(log X)^5(T^(-11)+XT^(-12))); T=X^(1/12)log X gives o(X) norm error | [Continuation](notes/SIGNED_MELLIN_CONTINUATION_20261004.md), [review](reviews/SIGNED_MELLIN_CONTINUATION_REVIEW_20261004.md) |
+| Exact signed Mertens representation | Hard-cutoff Abel boundary, derivative measure, uniform kernel integrals and nonzero continuum moment checked; known envelopes give subpower only | [Continuation](notes/SIGNED_MELLIN_CONTINUATION_20261004.md), [review](reviews/SIGNED_MELLIN_CONTINUATION_REVIEW_20261004.md) |
+| Conditional exponent endpoint | Proved: X^(3−κ+o(1)) for a quadratically equivalent response implies O(X^(3−κ)), 0<κ≤1; no positive κ established | [Continuation](notes/SIGNED_MELLIN_CONTINUATION_20261004.md), [review](reviews/SIGNED_MELLIN_CONTINUATION_REVIEW_20261004.md) |
+| Low-frequency Type II obstruction | Proved conditional real-block t=0 Mellin criterion implying a fixed strip; full real-block/partial-block quantifiers explicit | [Continuation](notes/SIGNED_MELLIN_CONTINUATION_20261004.md), [review](reviews/SIGNED_MELLIN_CONTINUATION_REVIEW_20261004.md) |
+| Separated cofactor endpoints | Higher-order reciprocal-zeta poles checked; exact individual-channel energy bound excludes off-critical boundary zeros, beyond the signed-response requirement | [Continuation](notes/SIGNED_MELLIN_CONTINUATION_20261004.md), [review](reviews/SIGNED_MELLIN_CONTINUATION_REVIEW_20261004.md) |
 
 All recorded finite bounds apply to every real X in their stated intervals.
 They do not establish a global quadratic estimate. Source and certificate
@@ -35,3 +40,16 @@ adds research notes and a small diagnostic package. It does not change the
 manuscript or its previously recorded compilation state, and does not
 claim a smaller global delta. Its promising initial result is the proved
 elimination of large arithmetic sectors below the quadratic energy scale.
+
+The [signed Mellin continuation](notes/SIGNED_MELLIN_CONTINUATION_20261004.md)
+adds checked analytic reductions and conditional endpoint/obstruction
+statements. It changes no manuscript source or compilation record and
+adds no numerical certificate. The signed central estimate and the first
+global exponent below one remain open.
+
+The [project overview](notes/PROJECT_OVERVIEW_20261004.md) and ten program
+charters synthesize prior work and identify prospective inputs. Their
+[internal planning review](reviews/PROJECT_OVERVIEW_REVIEW_20261004.md)
+checks status distinctions, exponent budgets, primary-source conventions
+and local links. This is research organization, not a new proof,
+certificate, manuscript change or compilation event.

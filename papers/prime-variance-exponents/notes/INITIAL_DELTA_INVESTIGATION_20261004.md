@@ -156,8 +156,11 @@ The selected next target is one fixed κ>0 in
 \]
 
 for all sufficiently large real X, with the complete d>D and k≤K bands.
-For 0<κ≤1, a bounded L would yield delta=1−κ; an unbounded subpower L
-gives every delta>max(0,1−κ). The same target can be posed for the
+For 0<κ≤1, the elementary norm transfer gives delta=1−κ when L is
+bounded, and every delta>1−κ for an unbounded subpower L. The subsequent
+[continuation](SIGNED_MELLIN_CONTINUATION_20261004.md) proves that the
+manuscript’s fixed-probe spectral equivalence then recovers the endpoint
+delta=1−κ even for unbounded L. The same target can be posed for the
 centered balanced sum. In either form it must retain the actual signs.
 
 The [bounded primary-source search](BILINEAR_INPUT_SOURCE_AUDIT_20261004.md)
@@ -189,3 +192,34 @@ This first investigation has produced proved arithmetic sector bounds,
 two explicit surviving targets, and a checked diagnostic of their signed
 cancellation. The first global actual-prime exponent below one and an
 exponent-descent rule remain open.
+
+
+## Continuation: signed Mellin localization and endpoint recovery
+
+The [next investigation note](SIGNED_MELLIN_CONTINUATION_20261004.md)
+proves that the retained signed response can be restricted to Mellin
+frequencies |t|≤X^(1/12)log X with o(X) shell-norm error. Together with
+the existing divisor elimination, this preserves every admissible
+variance exponent, including the quadratic endpoint. The note displays
+the exact central quadratic kernel with all arithmetic caps and signs.
+
+An exact Mertens-function integral sums the cofactors before applying a
+bound and retains the hard-cutoff boundary. Its nonzero lattice moment
+is precisely the c_w required by the Vaughan continuum. Available global
+Mertens estimates still yield only subpower savings. A further pole-order
+check shows that bounding individual cofactor channels at an exact
+endpoint would exclude boundary zeros that the signed prime response
+permits; preserving cross terms is therefore analytically consequential.
+
+The continuation also proves two conditional implications. A global
+X^(3−κ)L(X), L=X^(o(1)), estimate for any quadratically equivalent
+response would give the exact endpoint bound X^(3−κ), for 0<κ≤1.
+The fully uniform real-block Type II hypothesis proposed in the source
+audit already contains a stronger fixed zero-free strip in its t=0
+slice. Both observations refine the research target; neither supplies
+a positive κ. The remaining selected task is a direct signed bound for
+the central form, or for the correctly centered balanced form.
+
+A [fresh internal review](../reviews/SIGNED_MELLIN_CONTINUATION_REVIEW_20261004.md)
+checks the derivations and quantifiers. No additional numerical sweep,
+manuscript revision, draft snapshot, commit, or push was made.
