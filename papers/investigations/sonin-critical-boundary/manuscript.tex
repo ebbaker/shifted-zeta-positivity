@@ -76,22 +76,32 @@ A contour comparison retains the pole and all off-line zero crossings,
 distinguishing the critical-zero measure from the complete Weil form.
 For one explicit prepared polynomial probe, we prove that subexponential
 growth of its signed prime covariance is equivalent to the Riemann
-hypothesis and all-window positivity; weighted integral criteria are
-equivalent as well. We also give an explicit linear lower bound for the
-negative index of the centered archimedean reference and an outward
+hypothesis and all-window positivity; one-sided envelopes and weighted
+integral criteria are equivalent as well. Prime powers contribute only
+\(o(1)\), leaving a criterion over primes alone. A published finite-height
+zero verification and an explicit zero tail give \(|M_g(r)|<1.48\) for
+every \(2\le r\le500\). Known zero-free regions also give an
+unconditional large-separation bound, still of exponential rate \(1/2\).
+Complete smoothed prime-response energy admits an independently positive
+source main, explicit quadratic diagonal bounds, and a certified negative
+aggregate cross energy on a continuous finite range. Its global quadratic
+energy target remains RH-equivalent. We also give an explicit linear lower
+bound for the negative index of the centered archimedean reference and an outward
 seven-source Gram certificate with lower bound \(1/20\).
-The global signed growth estimate, survival of all critical mass in the
+The global subexponential estimate, survival of all critical mass in the
 exact zeta projection, and the Riemann hypothesis remain unproved.
 \end{abstract}
 
 \noindent\textbf{Draft status.}
 This manuscript consolidates internal research derivations.
 Independent specialist verification and a full priority assessment remain
-outstanding. The structural trace results and the single-probe equivalence
-are analytic. The scalar root bracket and finite Gram comparison in
-Section~\ref{sec:source-criteria} are explicitly computer-assisted, with
-reproducible code and rational enclosure records. Their numerical inputs
-are not used to prove the analytic equivalence or any all-window sign.
+outstanding. The structural trace results, single-probe equivalence, and explicit
+quadratic diagonal bounds are analytic. The scalar root bracket, finite
+Gram comparison, continuous covariance bound, and finite signed-pair sign
+in Section~\ref{sec:source-criteria} are explicitly computer-assisted,
+with reproducible code and rational enclosure records. The two continuum
+bounds also use a cited, published finite-height RH verification. These numerical inputs are not used to prove the analytic
+equivalence or any all-window sign.
 
 \tableofcontents
 
@@ -160,14 +170,24 @@ subexponential growth if and only if RH holds. The proof combines an
 elementary zero-location lemma for the profile's entire transform with an
 exact Laplace identity for \(-\zeta'/\zeta\). Its translates still range
 over unbounded separations, so the support quantifier is retained.
+A Landau argument reduces the requirement to either sign, and the prime
+number theorem removes higher prime powers as an \(o(1)\) correction.
+An explicit zero tail and published finite-height verification bound
+\(|M_g(r)|\) by \(1.48\) throughout \([2,500]\). A classical zero-free
+region yields \(M_g(r)=O_c(e^{r/2-c\sqrt r})\) for \(c<2.81345\),
+which still falls short of the required subexponential growth.
 A separate concavity argument gives a lower bound of
 \(\max(0,\lceil Lt_*/\pi\rceil-4)\) for the centered reference's negative
 index, with \(t_*/\pi\) certified near \(1.949925482\).
 Finally, seven translates of that same profile have Gram matrix strictly
 larger than \(\Id/20\), although the elementary absolute row-sum bound is
 negative. This last statement concerns one finite-dimensional subspace.
-The global growth estimate is open; no new unconditional positivity
-principle or literature priority for the scalar criterion is claimed.
+Section~\ref{sec:selective-loss-summary} adds a positive-source
+construction and complete prime-energy reduction. Its explicit quadratic
+diagonal and finite signed-pair theorem isolate a global fixed-kernel
+variance target that is still RH-equivalent and open.
+No new unconditional positivity principle or literature priority for the
+scalar criterion is claimed.
 
 Here is the operator setting. On \(\HH=L^2(\mathbb R,\dd x)\), let
 \[
@@ -1866,13 +1886,14 @@ restricted-support bound in Remark~\ref{rem:calibration}.
 \section{Prepared-source criteria and finite translate certificates}
 \label{sec:source-criteria}
 
-We now separate three statements about the arithmetic form: a scalar
-criterion equivalent to the all-window sign, an unconditional obstruction
-for the centered reference, and a computer-assisted comparison on one
-seven-dimensional source space. Only the last statement certifies a
-particular joint arithmetic matrix. The first gives an exact unresolved
-growth obligation, while the second bounds the size of the reference's
-negative block.
+This section gives scalar criteria equivalent to the all-window sign,
+source-reference constructions and obstructions, and finite
+computer-assisted bounds. The one-sided and prime-only refinements,
+complete prime-energy reduction, and unconditional growth envelope leave
+an exact global arithmetic estimate open. The finite covariance and
+signed-pair bounds cover real intervals; only the seven-source comparison
+certifies a joint arithmetic matrix. These finite results do not supply
+the required global estimate.
 
 \subsection{The three-moment source space and one fixed probe}
 \label{sec:probe-setup}
@@ -2224,6 +2245,528 @@ signed estimate for \(M_g\); the equivalence proof requires no
 finite numerical certificate.
 
 
+\subsection{One-sided growth criteria and reduction to primes}
+\label{subsec:probe-one-sided}
+
+The missing estimate may be restricted to either sign.  The following
+classical Laplace-transform argument records the required positivity step.
+\begin{lemma}[Landau boundary lemma]\label{lem:probe-landau}
+Let \(f\ge0\) be locally integrable on \([0,\infty)\), with a Laplace
+transform converging somewhere.  If its abscissa of convergence \(b\) is
+finite, that transform cannot continue holomorphically across the real point \(b\).
+\end{lemma}
+\begin{proof}
+Suppose a continuation exists on \(|s-b|<R\), and put \(d=b+R/4\).
+The Taylor series about \(d\) converges at \(d-R/2\). Differentiating in
+its original half-plane and then applying Tonelli's theorem gives
+\[
+ \sum_{n\ge0}\frac{(R/2)^n}{n!}
+       \int_0^\infty r^ne^{-dr}f(r)\dd r
+ =\int_0^\infty e^{-(d-R/2)r}f(r)\dd r<\infty.
+\]
+This contradicts \(d-R/2=b-R/4<b\).  Polynomial factors in the
+differentiated integrands are dominated by a smaller convergent
+exponential weight, which justifies differentiation.
+\end{proof}
+
+\begin{proposition}[Either sign suffices]\label{prop:probe-one-sided}
+Fix \(a\ge0\). If, for some finite \(K,R\ge0\), either
+\[
+ M_g(r)\le Ke^{ar}\quad(r\ge R),\qquad\text{or}\qquad
+ M_g(r)\ge-Ke^{ar}\quad(r\ge R),
+\]
+then \(\int_0^\infty e^{-\sigma r}|M_g(r)|\dd r<\infty\) for every
+\(\sigma>a\), and zeta has no zero in \(\Rea\rho>1/2+a\).
+Consequently each of the two separate eventual-envelope conditions
+\[
+ M_g(r)\le C_\varepsilon e^{\varepsilon r}
+ \quad\text{for every }\varepsilon>0,
+ \qquad\text{or}\qquad
+ M_g(r)\ge-C_\varepsilon e^{\varepsilon r}
+ \quad\text{for every }\varepsilon>0
+\]
+is equivalent to the conditions of Theorem~\ref{thm:probe-equivalence}.
+The start point of the eventual bound may depend on \(\varepsilon\).
+\end{proposition}
+\begin{proof}
+Set \(A(s)=-\Phi(s)\zeta'(1/2+s)/\zeta(1/2+s)\).
+This is holomorphic near every real \(s\ge0\): the pole at \(s=1/2\)
+is canceled, and zeta has no real zero on \([1/2,\infty)\).
+For the latter fact below one, its alternating eta series is positive,
+whereas \(1-2^{1-v}<0\) for \(0<v<1\); above one use the Euler product.
+In the upper-bound case the tail
+\(f(r)=\mathbf1_{[R,\infty)}(r)(Ke^{ar}-M_g(r))\) is nonnegative.
+In its initial convergence half-plane, \eqref{eq:probe-laplace} gives
+\begin{equation}\label{eq:probe-positive-tail-transform}
+ F(s)=\frac{Ke^{-(s-a)R}}{s-a}-A(s)
+                   +\int_0^R e^{-sr}M_g(r)\dd r.
+\end{equation}
+If its finite abscissa exceeded \(a\), this identity would continue
+\(F\) across that real abscissa, contradicting Lemma~\ref{lem:probe-landau}.
+The elementary growth bound ensures convergence somewhere, and an
+abscissa of minus infinity needs no argument. Thus \(F(\sigma)<\infty\)
+for every \(\sigma>a\). Since \(|M_g(r)|\le Ke^{ar}+f(r)\) on the
+tail, the asserted absolute integrability follows. Replace \(M_g\) by
+\(-M_g\) for the lower bound. The nonzero-residue argument in
+Theorem~\ref{thm:probe-equivalence} excludes the claimed zeros.
+Apply this for every positive \(a\) to obtain RH; conversely RH gives
+boundedness by that theorem.
+\end{proof}
+
+\begin{remark}\label{rem:probe-one-sided-integral}
+Weighted integrability of just one signed part also suffices: either
+\(\int_0^\infty e^{-\varepsilon r}(M_g(r))_+\dd r<\infty\) for all
+\(\varepsilon>0\), or the same assertion for \((M_g)_-\), implies RH.
+Indeed, the transform of the other nonnegative part is the known
+holomorphic transform plus or minus \(A\). Lemma~\ref{lem:probe-landau}
+rules out a positive real abscissa for that other part. One-sided
+weighted square integrability implies this condition by Cauchy--Schwarz.
+\end{remark}
+
+\begin{proposition}[Both signs detect each off-line zero]
+\label{prop:probe-signed-oscillation}
+If \(\rho=1/2+\alpha+\ii\gamma\) is a zero of multiplicity \(m_\rho\)
+and \(\alpha>0\), then
+\begin{align}
+ \limsup_{r\to\infty}e^{-\alpha r}M_g(r)
+    &\ge m_\rho|\Phi(\alpha+\ii\gamma)|>0,\notag\\
+ \liminf_{r\to\infty}e^{-\alpha r}M_g(r)
+    &\le-m_\rho|\Phi(\alpha+\ii\gamma)|<0.
+ \label{eq:probe-signed-oscillation}
+\end{align}
+\end{proposition}
+\begin{proof}
+Write \(s_0=\alpha+\ii\gamma\). Nonvanishing follows from
+Lemma~\ref{lem:probe-nonvanishing}, and \(\gamma\ne0\).
+If the limsup were smaller than \(m_\rho|\Phi(s_0)|\), choose a positive
+\(K\) between them. Eventually \(M_g(r)\le Ke^{\alpha r}\), so the
+nonnegative tail used in \eqref{eq:probe-positive-tail-transform} has a
+Laplace transform on \(\Rea s>\alpha\). Positivity implies
+\(|F(\sigma+\ii\gamma)|\le F(\sigma)\) for \(\sigma>\alpha\).
+Multiply by \(\sigma-\alpha\) and let \(\sigma\downarrow\alpha\).
+The real side tends to \(K\), since \(A\) is regular at real \(\alpha\).
+The complex side tends in modulus to \(m_\rho|\Phi(s_0)|\), by
+\eqref{eq:probe-residue}; the majorant term is regular there since
+\(\gamma\ne0\). This is a contradiction. Applying the same reasoning
+to \(-M_g\) proves the liminf assertion. No rightmost zero is required.
+\end{proof}
+
+\begin{proposition}[Prime powers give a vanishing correction]
+\label{prop:probe-primes-only}
+Let
+\[
+ P_g(r)=\sum_p\frac{\log p}{\sqrt p}\varphi(\log p-r),\qquad
+ P_{g,k}(r)=\sum_p\frac{\log p}{p^{k/2}}\varphi(k\log p-r).
+\]
+Then, unconditionally,
+\[
+ M_g(r)-P_g(r)=\sum_{k\ge2}P_{g,k}(r)=o(1),\qquad
+ \sum_{k\ge3}|P_{g,k}(r)|=O((1+r)e^{-r/6}).
+\]
+Thus the growth and signed-part integral criteria remain equivalent
+when \(M_g\) is replaced by \(P_g\).
+\end{proposition}
+\begin{proof}
+Write \(\vartheta(x)=\sum_{p\le x}\log p=x+o(x)\), by the prime
+number theorem \cite[\S27.12]{DLMF}, and \(E_\vartheta(x)=\vartheta(x)-x\).
+For sufficiently large \(r\),
+\[
+ P_{g,2}(r)=\int x^{-1}\varphi(2\log x-r)\dd\vartheta(x).
+\]
+The main term is \(\frac12\int\varphi=\frac12\Phi(0)=0\).
+Integration by parts bounds the remainder by
+\[
+ \frac12\sup_{e^{(r-\ell)/2}\le x\le e^{(r+\ell)/2}}
+       \frac{|E_\vartheta(x)|}{x}
+       \int_{-\ell}^{\ell}|2\varphi'(u)-\varphi(u)|\dd u=o(1).
+\]
+For \(k\ge3\), the support restriction and \(\vartheta(x)\le Cx\) give
+\[
+ |P_{g,k}(r)|\le\norm{\varphi}_\infty e^{-(r-\ell)/2}
+             \vartheta(e^{(r+\ell)/k})
+ \le C\norm{\varphi}_\infty e^{5\ell/6}e^{-r/6}.
+\]
+Only \(k\le(r+\ell)/\log2\) can contribute. The correction is
+therefore bounded globally and tends to zero. Bounded corrections
+preserve the stated envelopes and weighted integrals; for signed
+parts use \(|u_+-v_+|\le|u-v|\) and its negative-part counterpart.
+\end{proof}
+
+These reductions do not establish either one-sided envelope. They
+isolate the remaining problem in the signed contribution of the primes.
+
+
+\subsection{Unconditional growth bounds and a continuous finite range}
+\label{sec:probe-unconditional-growth}
+
+The one-sided criteria do not yet give the requisite envelope. We can,
+however, bound the unknown zero contribution explicitly and deduce an
+absolute bound on a long continuous interval of separations. All zeros in
+the following sums are distinct and carry their multiplicities \(m_\rho\).
+
+\begin{lemma}[Absolute zero expansion and its tail]
+\label{lem:probe-zero-tail}
+Set \(\nu=\norm{g_0}_2^2\), with \(g_0\) as in
+\eqref{eq:probe-polynomial}, and define
+\begin{equation}\label{eq:probe-tail-constants}
+\nu=\frac{146640624550936576}{37921101075},\qquad
+B=9470610144359,\qquad K^2=\frac{B^2}{\nu}.
+\end{equation}
+Then
+\begin{equation}\label{eq:probe-transform-decay}
+|\Phi(\sigma+\ii t)|\le e^{1/4}K^2|t|^{-12}
+\qquad(|\sigma|\le1/2,\ t\ne0),
+\end{equation}
+and the unconditional identity
+\begin{equation}\label{eq:probe-full-covariance}
+C_g(r)=\sum_\rho m_\rho\Phi(\rho-1/2)e^{(\rho-1/2)r}
+\end{equation}
+converges absolutely and locally uniformly for real \(r\).
+For \(T\ge100\), put
+\begin{equation}\label{eq:probe-delta-tail}
+\delta_T=24e^{1/4}K^2T^{-11}
+\left(\frac{\log T}{11}+\frac1{121}\right).
+\end{equation}
+The subseries \(R_T(r)\) over \(|\Ima\rho|>T\) satisfies
+\(|R_T(r)|\le\delta_Te^{|r|/2}\).
+\end{lemma}
+\begin{proof}
+The sixth distributional derivative of the zero extension of \(g_0\)
+is a finite signed measure. Its interior density is the ordinary sixth
+derivative, and its endpoint atoms have total variation \(2\,8!8^8\).
+Exact polynomial integration gives
+\[
+\norm{g_0^{(6)}}_{L^2(-1/4,1/4)}^2
+=\frac{2504085215525628254072340480}{19}.
+\]
+By Cauchy--Schwarz on this interval of length \(1/2\),
+\[
+\norm{D^6g_0}_{\mathrm{TV}}
+\le2\,8!8^8+\sqrt{\tfrac12\norm{g_0^{(6)}}_2^2}<B.
+\]
+These rational identities and the integer square-root comparison are
+recomputed in the certificate package \cite{GlobalGrowthCertificate}.
+Distributional integration by parts gives
+\(|G(z)|\le K e^{|\Rea z|/4}|z|^{-6}\), \(z\ne0\), proving
+\eqref{eq:probe-transform-decay}.
+
+Polarization of the complete explicit formula
+\eqref{eq:full-zero-pairing} gives
+\eqref{eq:probe-full-covariance} for smooth sources. To pass to \(g\),
+convolve with a compact smooth approximate identity. Its bilateral
+transform is uniformly bounded on the critical strip for a fixed support
+enlargement, so the decay just proved dominates the zero sums uniformly.
+The form convergence in Section~\ref{sec:probe-setup} identifies their
+limit with \(C_g\). Absolute local uniform convergence follows from
+\(|\Rea(\rho-1/2)|<1/2\) and \(N(t)=O(t\log t)\).
+
+Here \(N(t)\) counts positive ordinates with multiplicity. The explicit
+estimate of Hasanalizade, Shen, and Wong \cite[Corollary~1.2]{HSW}
+implies \(N(t)\le t\log t\) for \(t\ge100\). Indeed its main term
+is at most \((t/6)\log t\), while its error
+\(0.1038\log t+0.2573\log\log t+9.3675\) is at most
+\(3\log t\) on that range. Thus Stieltjes integration gives
+\[
+\sum_{|\Ima\rho|>T}m_\rho|\Ima\rho|^{-12}
+\le24\int_T^\infty t^{-12}\log t\dd t
+=24T^{-11}\left(\frac{\log T}{11}+\frac1{121}\right).
+\]
+Combine this with \eqref{eq:probe-transform-decay} to prove the claim.
+\end{proof}
+
+\begin{proposition}[Finite-height verification and all separations]
+\label{prop:probe-verified-height}
+If all nontrivial zeros through height \(T\ge100\) lie on the critical
+line, then for every real \(r\),
+\begin{equation}\label{eq:probe-height-covariance}
+|C_g(r)|\le q+\delta_T(1+e^{|r|/2}).
+\end{equation}
+Consequently, for \(r>\ell\),
+\begin{equation}\label{eq:probe-height-growth}
+|M_g(r)|\le q+\delta_T(1+e^{r/2})+b(r),\qquad
+b(r)=\frac{\ell e^{-5(r-\ell)/2}}{1-e^{-2(r-\ell)}}.
+\end{equation}
+Using the published verification through \(T=3\cdot10^{12}\) gives
+the unconditional continuous-range bound
+\begin{equation}\label{eq:probe-continuum-bound}
+|M_g(r)|<1.47931505787654<1.48\qquad(2\le r\le500).
+\end{equation}
+\end{proposition}
+\begin{proof}
+For a critical-line zero, \(\Phi(\ii\gamma)=|G(\ii\gamma)|^2\ge0\).
+Evaluating \eqref{eq:probe-full-covariance} at zero therefore bounds the
+entire verified low-zero mass without enumerating its ordinates:
+\[
+S_T=\sum_{|\Ima\rho|\le T}m_\rho|G(\ii\Ima\rho)|^2
+=q-R_T(0)\le q+\delta_T.
+\]
+Its Fourier sum has absolute value at most \(S_T\). Adding the tail
+proves \eqref{eq:probe-height-covariance};
+\eqref{eq:probe-covariance-identity} then proves
+\eqref{eq:probe-height-growth}.
+
+Platt and Trudgian verify RH through \(3\cdot10^{12}\)
+\cite{PlattTrudgian}. At that height, the outward arithmetic in
+\cite{GlobalGrowthCertificate} certifies
+\[
+\delta_T<1.058\cdot10^{-116},\qquad
+\delta_T(1+e^{250})<3.961\cdot10^{-8},\qquad
+b(2)<0.01237498726501953.
+\]
+It imports the hash-checked earlier diagonal certificate
+\(q<1.46694003100529\) and directly bounds the sum in
+\eqref{eq:probe-height-growth} by the tighter endpoint in
+\eqref{eq:probe-continuum-bound}. Since \(b\) decreases and the tail
+majorant increases, the endpoint bounds apply throughout \([2,500]\).
+The 192-bit and 256-bit runs agree. They certify these scalar constants;
+they do not reperform the published zero verification.
+\end{proof}
+
+This estimate does not prove \(|C_g(r)|\le q\). For a fixed verified
+height the unknown tail still grows exponentially. It is also distinct
+from a finite-source Gram certificate: it bounds \(M_g\) at every real
+separation in the stated interval, but supplies no exact sign of the
+corresponding forms.
+
+\begin{proposition}[Consequence of a classical zero-free region]
+\label{prop:probe-classical-global}
+For every \(0<c<2\sqrt{11/5.558691}=2.813455638\ldots\),
+\begin{equation}\label{eq:probe-classical-global}
+M_g(r)=O_c\!\left(e^{r/2-c\sqrt r}\right)
+\qquad(r\to\infty).
+\end{equation}
+\end{proposition}
+\begin{proof}
+The zero-free region of Mossinghoff, Trudgian, and Yang
+\cite[Theorem~1.3]{MTY} gives
+\(\Rea\rho<1-1/(R\log|\Ima\rho|)\), with \(R=5.558691\),
+for \(|\Ima\rho|\ge2\). Group the high zeros into
+\(e^k<|\Ima\rho|\le e^{k+1}\). By
+\eqref{eq:probe-transform-decay} and the preceding counting bound,
+their absolute contribution is at most a constant times
+\[
+e^{r/2}\sum_{k\ge k_0}(k+1)
+\exp\left(-11k-\frac{r}{R(k+1)}\right).
+\]
+Choose a fixed \(k_0\) with \(e^{k_0}\ge100\) below the verified
+height; the remaining low zeros contribute a bounded amount. For
+\(0<\eta<11\), setting \(j=k+1\) gives
+\[
+11j+\frac r{Rj}\ge\eta j+
+2\sqrt{\frac{(11-\eta)r}{R}}.
+\]
+The sum of \(j e^{-\eta j}\) is finite. Choose \(\eta\) small enough
+that \(c<2\sqrt{(11-\eta)/R}\), and use
+\eqref{eq:probe-covariance-identity}. This proves the assertion.
+\end{proof}
+
+The linear exponential rate in \eqref{eq:probe-classical-global}
+is still \(1/2\); this is an application of a known zero-free region,
+not the subexponential estimate required by
+Theorem~\ref{thm:probe-equivalence}. The detailed continuation also
+identifies an obstruction to a direct finite prime-pair energy argument:
+sharp prime cutoffs introduce an artificial last-window contribution
+of size \(X^{1-2\varepsilon}\) in the squared weighted norm. That
+contribution persists even under RH. Its proof and the complete
+finite-energy approximation are recorded in \cite{GlobalGrowthNotes}.
+
+
+
+\subsection{Selective source loss and complete prime-response energy}
+\label{sec:selective-loss-summary}
+
+The following source-form construction summarizes the selective-loss
+program \cite{SelectiveLossNotes}. It uses the same normalized probe
+\eqref{eq:probe-polynomial} and retains all active prime powers and
+partial boundary packets. The detailed Schur-complement audits,
+response calculations, and mechanism tests remain in the cited notes.
+
+Set \(a=1/4\), \(L=r+\ell\), and, for \(r>\ell\), center the
+norm-one two-packet source in \(I_L\):
+\[
+F_r=\frac{\tau_{-r/2}g+\tau_{r/2}g}{\sqrt2},\qquad
+c_+=1-\gamma_\infty(0),\qquad
+\mathsf A_L=(\Gamma+c_+\Id)|_{E_L}.
+\]
+Here \(\mathsf A_L\) denotes the closed source-form realization.
+The digamma identity used in Proposition~\ref{prop:probe-identities}
+gives \(\gamma_\infty(t)\ge\gamma_\infty(0)\), hence
+\(\mathsf A_L\ge\Id\) independently of the arithmetic sign.
+It differs from the signed centered reference considered below.
+Let \(\mathsf W_L\) be the complete finite prime-shift operator,
+with support restriction and projection to \(E_L\), so that the source
+realization is \(Q_L=\mathsf A_L-(\mathsf W_L+c_+\Id)\). Put
+\[
+\mathsf T_L=\Id-\mathsf A_L^{-1/2}(\mathsf W_L+c_+\Id)
+\mathsf A_L^{-1/2},\qquad
+X_g(r)=\inner{Q_LF_r}{\mathsf A_L^{-1}Q_LF_r}.
+\]
+The operator \(\mathsf T_L\) is bounded and selfadjoint at each
+fixed window and realizes the relative form of \(Q_L\).
+The sixth-power Fourier decay places \(F_r\) in the operator domain,
+and positivity gives \(\mathsf A_L[F_r]\le2(q+c_+)=a_*\).
+For \(F\in E_L\cap\mathcal D_{\log}\),
+\(v=\mathsf A_L^{1/2}F\), and \(\eta>0\),
+the nonnegative source forms
+\[
+\mathfrak P_{\eta,L}[F]=
+\frac{\norm{(\mathsf T_L+\eta\Id)v}^2}{4\eta},\qquad
+\mathfrak L_{\eta,L}[F]=
+\frac{\norm{(\mathsf T_L-\eta\Id)v}^2}{4\eta}
+\]
+satisfy \(Q[F]=\mathfrak P_{\eta,L}[F]-\mathfrak L_{\eta,L}[F]\).
+Optimization and Cauchy--Schwarz give
+\begin{equation}\label{eq:selective-dual-allowance}
+Q[F_r]\ge-\sqrt{a_*X_g(r)},\qquad
+\inf_{\eta>0}\mathfrak L_{\eta,L}[F_r]\le\sqrt{a_*X_g(r)},
+\quad a_*=2(q+c_+).
+\end{equation}
+Each fixed \(\eta\) gives a positive quadratic main; optimization on
+individual sources gives the scalar allowance in
+\eqref{eq:selective-dual-allowance}. Its global usefulness requires a
+bound on \(X_g\). A global polynomial bound on \(X_g\) would imply
+RH by the one-sided probe criterion; RH gives \(X_g(r)=O(1+r)\)
+\cite{SelectiveLossNotes}. This dual-energy estimate remains unproved.
+
+Define the real causal signal and its exact finite energy by
+\begin{equation}\label{eq:selective-local-energy}
+\begin{gathered}
+\begin{aligned}
+p_g(y)&=\sum_{n\ge2}\frac{\Lambda(n)}{\sqrt n}g(y-\log n),
+&J_g(Y)&=\int_0^Yp_g(y)^2\dd y,\\
+\mathcal K_Y(u,v)&=\int_0^Yg(y-u)g(y-v)\dd y,
+&J_g(Y)&=D_g(Y)+\Theta_g(Y),
+\end{aligned}\\[2pt]
+\begin{aligned}
+D_g(Y)&=\sum_n\frac{\Lambda(n)^2}{n}\mathcal K_Y(\log n,\log n),\\
+\Theta_g(Y)&=2\sum_{n<m}\frac{\Lambda(n)\Lambda(m)}{\sqrt{nm}}
+\mathcal K_Y(\log n,\log m).
+\end{aligned}
+\end{gathered}
+\end{equation}
+For \(Y\ge0\) every sum is finite and includes all contributing
+delays \(\log n<Y+a\). With \((\Theta_g)_+=\max(\Theta_g,0)\),
+the complete-response calculation in \cite{SelectiveLossNotes} yields
+\begin{equation}\label{eq:selective-signed-allowance}
+\sqrt{a_*X_g(r)}\le\sqrt{a_*}
+\left(C_\Gamma+\sqrt{2D_g(r+a)}
++\sqrt{2(\Theta_g)_+(r+a)}\right),\qquad
+C_\Gamma=\sqrt2\norm{\gamma_\infty(D)g}_2<\infty.
+\end{equation}
+The positive part is taken after the entire signed off-diagonal sum.
+Thus a favorable aggregate contribution has no cost in this bound.
+
+\begin{proposition}[Quadratic diagonal and finite continuum sign]
+\label{prop:selective-finite-sign}
+For every real \(Y\ge0\), unconditionally,
+\begin{equation}\label{eq:selective-diagonal-bounds}
+\max(0,Y^2/4-48)\le D_g(Y)
+\le2\log2\,(Y^2+17/16).
+\end{equation}
+The computer-assisted constants in \cite{SelectiveLossCertificate},
+using the published finite-height verification \cite{PlattTrudgian},
+also establish
+\begin{equation}\label{eq:selective-finite-sign}
+\Theta_g(Y)<-5\quad(100\le Y\le225),\qquad
+(\Theta_g)_+(Y)\le25(1+Y)\quad(0\le Y\le225).
+\end{equation}
+In particular \((\Theta_g)_+=0\) throughout \([100,225]\).
+\end{proposition}
+\begin{proof}[Proof summary]
+For \(A_2(t)=\sum_{\log n\le t}\Lambda(n)^2/n\), finite
+interchange gives \(D_g(Y)=\int_{-a}^ag(v)^2A_2(Y-v)\dd v\).
+Elementary binomial estimates give \(\psi(x)\le4(\log2)x\)
+for \(x\ge1\) and \(\theta(x)\ge x/2\) for \(x\ge e^{10}\).
+Stieltjes partial summation therefore yields
+\[
+A_2(t)\le2\log2\,(t^2+1)\quad(t\in\mathbb R),\qquad
+A_2(t)\ge t^2/4-48\quad(t\ge10).
+\]
+Evenness of \(g^2\), \(\norm g_2=1\), and
+\(\int v^2g(v)^2\dd v\le1/16\) prove
+\eqref{eq:selective-diagonal-bounds}; nonnegativity covers the initial
+range for the lower bound. The complete elementary derivation is in
+the quadratic-target note linked by \cite{SelectiveLossNotes}.
+
+The scalar certificate proves \(|p_g(y)|<497/100\) for every real
+\(1\le y\le225\), and \(J_g(1)<127/100\).
+It checks the rigorous count \(N(500)=269\) and the neighboring
+zero ordinates, encloses the low linear-transform mass, and combines
+the sixth-power zero tail with verification through
+\(3\cdot10^{12}\). Unknown higher zeros retain their exponential
+allowance. Separate 192-bit and 256-bit outward runs, with rational
+replay, verify the uniform constants; no prime sieve near \(e^{225}\)
+is required. The explicit formula, endpoint majorants, and implementation
+details are supplied in \cite{SelectiveLossNotes,SelectiveLossCertificate}.
+It follows that
+\[
+J_g(Y)<\frac{127}{100}+\left(\frac{497}{100}\right)^2(Y-1)
+\quad(1\le Y\le225).
+\]
+Subtracting this upper bound from \(Y^2/4-48\) gives a margin
+\(53409/10000>5\) at \(Y=100\), increasing thereafter.
+This proves the strict sign throughout the real interval. The initial
+energy bound and \((\Theta_g)_+\le J_g\) give the remaining claim.
+\end{proof}
+
+Equations~\eqref{eq:selective-signed-allowance}--\eqref{eq:selective-finite-sign}
+give a linear allowance on \(399/4\le r\le899/4\). This concerns
+the specified moving source and a bounded range of separations; it is
+not a source-wide Sonin-complement certificate or an all-window sign.
+
+\begin{proposition}[Strength of the global energy target]
+\label{prop:selective-global-target}
+For this fixed probe, RH is equivalent to
+\((\Theta_g)_+(Y)=O((1+Y)^2)\), and equivalently to
+\(J_g(Y)=O((1+Y)^2)\). More generally any polynomial upper bound
+on \(J_g\) implies RH. A sufficient concrete target is
+\begin{equation}\label{eq:selective-variance-target}
+\int_X^{2X}|V_g(x)|^2\dd x\le C_{\rm var}X^2\log(2X),\qquad
+V_g(x)=\sum_n\Lambda(n)(n/x)^{-1/2}g(-\log(n/x)),
+\end{equation}
+for some \(C_{\rm var}<\infty\) and all sufficiently large \(X\).
+This target is also RH-equivalent.
+\end{proposition}
+\begin{proof}[Proof summary]
+The diagonal bound and \((\Theta_g)_+\le J_g\) prove the first
+energy equivalence. In the manuscript's plus-exponent convention
+\eqref{eq:probe-transforms}, the causal Laplace identity is
+\[
+P_g(s)=\int_0^\infty e^{-sy}p_g(y)\dd y
+=-G(-s)\frac{\zeta'}{\zeta}(1/2+s),\qquad\Rea s>1/2.
+\]
+A polynomial energy bound makes the true transform holomorphic on
+\(\Rea s>0\); Lemma~\ref{lem:probe-nonvanishing} leaves a nonzero
+residue at each off-critical zero to the right of the critical line.
+This contradiction forces RH. Conversely RH makes the complete linear
+zero expansion absolutely bounded, so \(p_g=O(1)\) and
+\(J_g(Y)=O(1+Y)\). The detailed pole-inclusive argument is in
+\cite{SelectiveLossNotes}.
+Finally \(p_g(\log x)=x^{-1/2}V_g(x)\), hence
+\(J_g(Y)=\int_1^{e^Y}|V_g(x)|^2\dd x/x^2\).
+Dyadic summation of \eqref{eq:selective-variance-target} gives quadratic
+\(J_g\); RH gives the stronger \(O(X^2)\) variance bound.
+\end{proof}
+
+The mechanism notes in \cite{SelectiveLossNotes} explain the remaining
+obligation. Differential factorization retains an essential endpoint
+cancellation, and a linear frame bound does not control the coherent
+prime sum. A positive sparse sequence on the integer grid can satisfy
+PNT and \(\widetilde D_g(Y)=Y^2/2+O(1)\) while its energy grows exponentially;
+that model has no asserted Euler multiplicativity. Thus those generic
+inputs alone cannot prove \eqref{eq:selective-variance-target}.
+An alternative weighted formulation uses
+\(J_{g,\varepsilon}=\int_0^\infty e^{-2\varepsilon y}p_g(y)^2\dd y\).
+Its convergence abscissa is
+\(\sup_\rho(\Rea\rho-1/2)\), and quadratic cumulative energy is
+equivalent to \(J_{g,\varepsilon}=O(\varepsilon^{-2})\) as
+\(\varepsilon\downarrow0\). A meromorphic norm on one vertical
+line supplies neither physical convergence nor the needed half-plane
+analyticity. Effective PNT gives \(J_{g,1/2}<\infty\), but does not
+supply the small-weight bound. These global bounds remain open; their detailed
+obstructions and exact signed covariance targets are left to the notes.
+
+
 \subsection{The size of the negative centered reference block}
 \label{subsec:centered-negative-index}
 
@@ -2551,14 +3094,32 @@ an equivalent target is
 \int_0^\infty e^{-\varepsilon r}|M_g(r)|\dd r<\infty
 \qquad\text{for every }\varepsilon>0.
 \]
-The equivalence is proved, but this global signed bound is not.
-Replacing the signed prime sum by its absolute majorant does not supply
-the required estimate. The centered route must also accommodate a growing
-negative reference block; its size has the explicit lower bound proved
-above. The seven-source certificate retains simultaneous signed
+The equivalence is proved, but this global weighted bound is not.
+It suffices to control either signed part, and prime powers can be
+removed with an \(o(1)\) error. The continuous-range estimate
+\eqref{eq:probe-continuum-bound} and the unconditional global envelope
+\eqref{eq:probe-classical-global} leave the subexponential requirement
+unresolved. Replacing the signed prime sum by its absolute majorant does
+not supply that estimate. Sharp prime cutoffs also create a spurious
+boundary contribution in the weighted square norm
+\cite{GlobalGrowthNotes}. The earlier signed centered reference has a
+growing negative block, with the explicit lower bound proved above.
+The independently positive reference in Section~\ref{sec:selective-loss-summary}
+replaces that reference and leaves a complete signed response-energy
+obligation. The seven-source certificate retains simultaneous signed
 correlations, but covers neither its infinite-dimensional complement nor
 untested translations. It therefore supplies no unbounded-window
 continuation or termination theorem.
+
+The new scalar decomposition controls its entire signed off-diagonal
+sum before taking a positive part. Proposition~\ref{prop:selective-finite-sign}
+certifies negative aggregate cross energy on \([100,225]\), and the
+positive-square construction gives an allowance for the specified moving
+source. Neither gives a source-wide Sonin-complement certificate.
+The global quadratic energy and dyadic variance in
+Proposition~\ref{prop:selective-global-target} remain RH-equivalent and
+unproved; long derivations, countermodels, and numerical implementation
+are retained in \cite{SelectiveLossNotes,SelectiveLossCertificate}.
 
 The global phase path and an increasing finite set of primes at the
 critical exponent remain distinct limiting procedures. In the
@@ -2575,8 +3136,12 @@ control, the majorant limit, the distinction between phase concentration
 and exact-kernel mass, and the finite-place identity with its fixed-set
 obstruction, together with the single-probe growth criterion and the
 quantitative centered negative-index bound. The finite joint certificate
-adds one verified arithmetic subspace. Neither the global signed growth
-estimate nor convergence along growing prime sets is established.
+adds one verified arithmetic subspace, while the zero-tail argument
+controls a continuous finite interval of separations. The selective-loss
+continuation adds an explicit quadratic diagonal and a bounded continuum
+sign for aggregate prime-pair energy. Neither the global subexponential
+or quadratic energy estimate nor convergence along growing prime sets
+is established.
 
 \section*{Acknowledgements and use of language models}
 
@@ -2728,6 +3293,67 @@ assistance, 3 October 2026.
 \path{notes/FIRST_PRIME_TRANSLATED_RESONANCE_20261003.md};
 separate internal audit:
 \path{reviews/FIRST_PRIME_RESONANCE_REVIEW_20261003.md}.
+
+
+\bibitem{PlattTrudgian}
+D.~J.~Platt and T.~S.~Trudgian,
+\emph{The Riemann hypothesis is true up to \(3\cdot10^{12}\)},
+Bull.\ London Math.\ Soc.\ \textbf{53} (2021), 792--797.
+\href{https://doi.org/10.1112/blms.12460}{doi:10.1112/blms.12460};
+\href{https://arxiv.org/abs/2004.09765}{author preprint}.
+
+\bibitem{HSW}
+E.~Hasanalizade, Q.~Shen, and P.-J.~Wong,
+\emph{Counting zeros of the Riemann zeta function},
+J.\ Number Theory \textbf{235} (2022), 219--241.
+\href{https://doi.org/10.1016/j.jnt.2021.06.032}
+{doi:10.1016/j.jnt.2021.06.032};
+\href{https://arxiv.org/abs/2107.06506}{author preprint}.
+
+\bibitem{MTY}
+M.~J.~Mossinghoff, T.~S.~Trudgian, and A.~Yang,
+\emph{Explicit zero-free regions for the Riemann zeta-function},
+Res.\ Number Theory \textbf{10} (2024), Paper No.~11.
+\href{https://doi.org/10.1007/s40993-023-00498-y}
+{doi:10.1007/s40993-023-00498-y};
+\href{https://arxiv.org/abs/2212.06867}{author preprint}.
+
+\bibitem{GlobalGrowthCertificate}
+\emph{Fixed-probe zero-tail and continuous-range certificate},
+reproducible scalar numerical package prepared for Edward Baker with
+GPT-6 (Codex) assistance, 3 October 2026.
+\path{numerics/global_growth_20261003/README.md}.
+Exact polynomial constants, 192-bit and 256-bit outward records, and
+a rational-endpoint replay; published zero verification is an input.
+
+\bibitem{GlobalGrowthNotes}
+\emph{Global growth continuation: one-sided criteria, zero tails,
+and the prime-cutoff obstruction},
+internal research notes prepared for Edward Baker with GPT-6 (Codex)
+assistance, 3 October 2026.
+\path{notes/GLOBAL_GROWTH_OUTCOME_20261003.md} links the full derivations
+and same-model checks. The global subexponential estimate remains open.
+
+
+\bibitem{SelectiveLossNotes}
+\emph{Selective loss program: positive source forms, complete prime energy,
+and global mechanism audits},
+internal research notes prepared for Edward Baker with GPT-6 (Codex)
+assistance, 3 October 2026.
+\path{notes/selective-loss-program/overview.md} links notes 03--07,
+including the detailed finite theorem in
+\path{notes/selective-loss-program/05_quadratic_target_and_finite_sign_20261003.md}
+and the variance and weighted-energy obligations in notes 06--07.
+Long derivations and same-model checks; the global estimate is open.
+
+\bibitem{SelectiveLossCertificate}
+\emph{Finite continuum signed-pair certificate},
+reproducible scalar numerical package prepared for Edward Baker with
+GPT-6 (Codex) assistance, 3 October 2026.
+\path{numerics/selective_loss_quadratic_target_20261003/README.md}.
+Exact probe and derivative constants, complete low-zero count and mass,
+192-bit and 256-bit outward records, and rational replay; published
+finite-height verification is an input.
 
 \end{thebibliography}
 \end{document}
