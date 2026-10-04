@@ -339,6 +339,10 @@ obligation is proved, refuted, or replaced. Detailed history belongs in
 the linked notes; manuscript milestones belong in the existing concise
 draft history when a manuscript milestone actually occurs.
 
+The [dedicated subpower milestones program](../subpower-milestones/README.md) now organizes the author's preferred quantitative investigation around global delta bounds. Its [baseline note](../subpower-milestones/01_baseline_and_exponent_budget_20261003.md) establishes the fixed-exponent zero-strip equivalence and transfers a stronger known PNT envelope while retaining delta=1. The first genuine power saving and any exponent-descent rule remain open. The central signed projection is one possible method within that program.
+
+The first continuation proves a [short-interval mean-square transfer](../subpower-milestones/02_short_interval_transfer_and_gate_20261003.md), obtains [finite quadratic variance bounds](../subpower-milestones/03_finite_range_variance_20261003.md) through explicitly stated continuous ranges, and establishes a [finite-prefix structural obstruction](../subpower-milestones/04_structural_nonbootstrap_20261003.md) to exponent bootstrap. The tested short-interval input supplies no fixed power saving. The next global obligation is an actual-prime input supplying positive kappa in the gate, or an improvement retaining the signed covariance. The [internal review](../../reviews/SUBPOWER_FIRST_INVESTIGATION_REVIEW_20261003.md) records the proof and rational-certificate checks.
+
 ## 7. Starting references
 
 - [Global growth handoff](../NEXT_SESSION_GLOBAL_GROWTH_HANDOFF_20261003.md).

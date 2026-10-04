@@ -223,3 +223,24 @@ Seek a signed actual-prime estimate or a precise arithmetic obstruction.
 Enlarging the finite certificate cannot replace that obligation. Save
 derivations in the program folder, numerics in numerics, and reviews in
 reviews; preserve existing work.
+
+
+## Author-selected quantitative continuation
+
+The author has selected the [subpower milestones program](subpower-milestones/README.md)
+for continued investigation. Its first continuation records a proved
+complete-cap short-interval transfer and its exact exponent budget,
+finite quadratic variance certificates, and a generic non-bootstrap
+theorem. The [ledger](subpower-milestones/MILESTONES.md) and
+[internal review](../reviews/SUBPOWER_FIRST_INVESTIGATION_REVIEW_20261003.md)
+give the statements and limitations. The manuscript source is unchanged
+by this notes-only continuation.
+
+For the next global attempt, require one candidate arithmetic lemma with
+a genuine fixed relative saving X^(-kappa), kappa>0, at h=X^(3/4), or
+an estimate retaining the signed short-interval covariance. All support
+and averaging errors are already on the X^2 scale in this gate. The
+tested classical mean-square input gives only a subpower saving and
+does not reduce global delta. The structural estimates and any finite
+prime prefix cannot by themselves furnish an exponent-descent rule.
+Do not promote the finite variance bounds to global delta milestones.
