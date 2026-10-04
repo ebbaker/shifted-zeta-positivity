@@ -5,6 +5,17 @@ Model: GPT-6 (Codex), inherited configuration; the exact serving variant and
 configured reasoning effort are not exposed and are not inferred.
 Research planning and internal review; no new global exponent is proved.
 
+Subsequent [preliminary work across all ten programs](PROGRAM_PREFLIGHT_ASSESSMENT_20261004.md)
+now supplies concrete derivations, source gates and bounded checks. It
+retains programs 01, 02 and 03 as the shortlist and targets the centered
+Vaughan block covariance in program 01 for the next investigation.
+
+The subsequent [one-sided arithmetic investigation](programs/01_signed_arithmetic_covariance/ONE_SIDED_ARITHMETIC_ATTEMPT_20261004.md)
+reduces that target to a signed prime-discrepancy correlation, after
+power-small density and boundary elimination. Actual smooth coefficients
+defeat literal sign deletion. The required one-sided fixed-power bound
+remains open; the linked note records the precise next estimate.
+
 
 The best-prepared route is a genuinely signed estimate for the retained
 Möbius cofactor response or the correctly centered Vaughan response. The

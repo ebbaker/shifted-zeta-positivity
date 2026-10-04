@@ -36,3 +36,8 @@ Save dated investigation notes here; put corresponding reviews under
 parent evidence linked in place. Include model/effort and LLM assistance,
 and distinguish reductions, conditional inputs, conjectures and diagnostics.
 Require an explicit inequality/exponent budget before numerical sweeps.
+
+The [preliminary investigation](PRELIMINARY_INVESTIGATION_20261004.md) records
+the first concrete deductions and their limits. See the
+[cross-program assessment](../../PROGRAM_PREFLIGHT_ASSESSMENT_20261004.md)
+for the updated shortlist and targeted next investigation.

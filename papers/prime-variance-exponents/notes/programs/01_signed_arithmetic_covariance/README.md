@@ -5,7 +5,20 @@ Model: GPT-6 (Codex), inherited configuration; the exact serving variant and
 configured reasoning effort are not exposed and are not inferred.
 Research planning and internal review; no new global exponent is proved.
 
-Status: Started; the complete signed power-saving estimate is open.
+Status: Investigated through exact prime-density centering; the complete
+signed power-saving estimate is open.
+
+The [one-sided arithmetic investigation](ONE_SIDED_ARITHMETIC_ATTEMPT_20261004.md)
+cancels the entire continuum against the continuous prime density, with
+power-small lattice and boundary errors. It gives sharper scalar cutoffs
+and proves that literal sign deletion fails within actual smooth outer
+coefficients. The remaining target is one sign of the explicit correlation
+between prime discrepancy and the complete signed Möbius kernel.
+No new global exponent is established.
+
+The earlier [signed covariance continuation](SIGNED_COVARIANCE_CONTINUATION_20261004.md)
+gives the one-sided scalar criterion, exact arithmetic sector refinements,
+a semiprime obstruction to separate bounds, and cutoff transport.
 
 [Project overview](../../PROJECT_OVERVIEW_20261004.md) fixes the common probe, exponent conversion,
 evidence inventory and relative priority. This charter opens a program;
@@ -37,3 +50,8 @@ Save dated investigation notes here; put corresponding reviews under
 parent evidence linked in place. Include model/effort and LLM assistance,
 and distinguish reductions, conditional inputs, conjectures and diagnostics.
 Require an explicit inequality/exponent budget before numerical sweeps.
+
+The [preliminary investigation](PRELIMINARY_INVESTIGATION_20261004.md) records
+the first concrete deductions and their limits. See the
+[cross-program assessment](../../PROGRAM_PREFLIGHT_ASSESSMENT_20261004.md)
+for the updated shortlist and targeted next investigation.

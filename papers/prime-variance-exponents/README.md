@@ -17,6 +17,32 @@ ten investigation charters in notes/programs/. It distinguishes started
 reductions, exploratory mechanisms, proved obstructions and finite support
 work. All first fixed global exponents below one remain open.
 
+The [preliminary assessment of all ten programs](notes/PROGRAM_PREFLIGHT_ASSESSMENT_20261004.md)
+adds a concrete investigation in every subfolder. Signed arithmetic
+covariance, source-selective Sonin loss, and signed prime-pair dispersion
+remain the top three. The targeted next investigation is centered Vaughan
+block covariance with the scalar continuum mismatch retained. Exact
+algebra checks and small floating diagnostics are recorded in the
+[combined review](reviews/PROGRAM_PREFLIGHT_REVIEW_20261004.md).
+
+The [signed covariance continuation](notes/programs/01_signed_arithmetic_covariance/SIGNED_COVARIANCE_CONTINUATION_20261004.md)
+sharpens this target further: either one-sided envelope for the complete
+centered scalar is equivalent to the full variance bound. Exact arithmetic
+overlap identifies compulsory semiprime/smooth-sector cancellation, and
+cutoff transport permits narrower target-dependent ranges. The semiprime
+sector alone defeats even separate projected power bounds; known
+logarithmic anticorrelation is insufficient. The first fixed saving remains
+open. See the [continuation review](reviews/01_signed_arithmetic_covariance/CONTINUATION_REVIEW_20261004.md).
+
+The [one-sided arithmetic investigation](notes/programs/01_signed_arithmetic_covariance/ONE_SIDED_ARITHMETIC_ATTEMPT_20261004.md)
+then cancels the full continuum against prime density with power-small
+lattice and cutoff-boundary errors, and sharpens the scalar cutoff budget
+to u+v<=1−kappa/14. Actual smooth coefficients rule out literal sign
+deletion even with the continuum retained. The remaining signed
+prime-discrepancy correlation still lacks the required one-sided power
+bound. The [new review](reviews/01_signed_arithmetic_covariance/ONE_SIDED_ATTEMPT_REVIEW_20261004.md)
+records internal proof checks and 81,429 exact finite comparisons.
+
 The [draft manuscript](manuscript.tex) is the single editable source.
 It contains full proofs of the probe properties, the fixed-exponent
 equivalence, the PNT-envelope transfer, the finite quadratic transfer,

@@ -53,3 +53,35 @@ charters synthesize prior work and identify prospective inputs. Their
 checks status distinctions, exponent budgets, primary-source conventions
 and local links. This is research organization, not a new proof,
 certificate, manuscript change or compilation event.
+
+The [all-program preliminary assessment](notes/PROGRAM_PREFLIGHT_ASSESSMENT_20261004.md)
+adds concrete work in every program folder, cross-reviewed algebraic
+reductions, primary-source range checks, 11,188 exact finite comparisons,
+and small floating diagnostics. The [combined review](reviews/PROGRAM_PREFLIGHT_REVIEW_20261004.md)
+records their precise scope. Programs 01/02/03 remain the shortlist,
+with centered Vaughan block covariance selected for the next investigation.
+No new global exponent or outward numerical certificate is established.
+
+The [signed covariance continuation](notes/programs/01_signed_arithmetic_covariance/SIGNED_COVARIANCE_CONTINUATION_20261004.md)
+proves a scalar-only equivalent criterion (either sign suffices), an
+actual-coefficient semiprime obstruction to separate sector bounds,
+affordable arithmetic overlap sectors, and exact cutoff transport with
+target-adapted localization. The [internal review](reviews/01_signed_arithmetic_covariance/CONTINUATION_REVIEW_20261004.md)
+records independent same-model checks, 57,600 exact coefficient-vector
+comparisons, 50 rational centering checks, and four floating sector runs.
+No one-sided fixed-saving envelope has been proved; the first global
+exponent remains open.
+
+The [one-sided arithmetic investigation](notes/programs/01_signed_arithmetic_covariance/ONE_SIDED_ARITHMETIC_ATTEMPT_20261004.md)
+adds exact density centering with remainder O((U²/X)^8), the correctly
+retained lower-cutoff boundary O((U²/X)^7), and a scalar-only cutoff
+budget u+v<=1−kappa/14. The actual smooth-sector positive and negative
+scalar masses each exceed a fixed multiple of (log X)^−2, defeating
+literal sign deletion at both old and new cutoffs. Conditional two-sided
+oscillation and fixed positive-averaging tests were also checked.
+The [internal review](reviews/01_signed_arithmetic_covariance/ONE_SIDED_ATTEMPT_REVIEW_20261004.md)
+records 81,043 exact finite arithmetic identities and 386 rational
+centering/endpoint comparisons, including 28 successful negative controls
+for an omitted boundary. The rational centering inputs are synthetic;
+no fixed-probe bound, outward certificate, new global exponent, manuscript
+edit or compilation event is inferred from these checks.
