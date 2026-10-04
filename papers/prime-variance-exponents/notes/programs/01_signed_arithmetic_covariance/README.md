@@ -5,8 +5,27 @@ Model: GPT-6 (Codex), inherited configuration; the exact serving variant and
 configured reasoning effort are not exposed and are not inferred.
 Research planning and internal review; no new global exponent is proved.
 
-Status: Investigated through exact prime-density centering; the complete
-signed power-saving estimate is open.
+Status: Investigated through an unconditional spectral-tail estimate and
+an equivalent finite central target; the signed power-saving estimate is open.
+
+The [next analytic attempt](FINITE_CROSS_SPECTRUM_20261004.md) reduces the
+remaining correlation to a finite signed product of actual arithmetic
+transforms, with bandwidth T=X^(kappa/14)[log(2X)]^(4/7) and an affordable
+O(X^(-kappa/2)) tail. Its central integral remains unbounded at that power.
+The [dispersion audit](SHORT_INTERVAL_DISPERSION_GATE_20261004.md) proves
+that a proposed uncentered short-interval variance input already implies
+a stronger strip. The [arithmetic closure](ARITHMETIC_CLOSURE_ATTEMPT_20261004.md)
+retains all convolution edges and sharpens the deterministic mode boundary
+error, including arbitrary zero multiplicities. No new exponent is proved.
+
+The [aggregated-kernel continuation](AGGREGATED_KERNEL_CONTINUATION_20261004.md)
+removes the logarithm-squared envelope loss and deletes complementary divisors
+below D=U X^(-kappa/14) at the target power cost. The remaining signed divisor
+band is still unbounded at fixed power. The
+[mixed-discrepancy companion](MIXED_DISCREPANCY_FEEDBACK_20261004.md)
+derives an exact double-error representation and a deterministic Mellin test:
+a hypothetical simple-zero mode retains the original coefficient. No new
+global exponent is established.
 
 The [one-sided arithmetic investigation](ONE_SIDED_ARITHMETIC_ATTEMPT_20261004.md)
 cancels the entire continuum against the continuous prime density, with

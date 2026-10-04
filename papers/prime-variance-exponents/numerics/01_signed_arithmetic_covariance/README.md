@@ -89,3 +89,59 @@ asymptotics are proved in the associated notes; these finite checks do
 not certify their constants or asymptotic onset. See the
 [investigation summary](../../notes/programs/01_signed_arithmetic_covariance/ONE_SIDED_ARITHMETIC_ATTEMPT_20261004.md)
 and [internal review](../../reviews/01_signed_arithmetic_covariance/ONE_SIDED_ATTEMPT_REVIEW_20261004.md).
+
+
+## Aggregated kernel and signed divisor localization
+
+[check_aggregated_kernel.py](check_aggregated_kernel.py) imports the exact
+polynomial kernel and arithmetic helpers from the adjacent centering checker.
+It tests global aggregate/divisor identities including the singleton term,
+a signed divisor split, Stieltjes integration on partial intervals with prime
+and noninteger endpoints, centering E by E(U), and the terminal Möbius-shell
+identity. All calculations use exact fractions and synthetic prime atom
+weights p. Run:
+
+```sh
+python3 papers/prime-variance-exponents/numerics/01_signed_arithmetic_covariance/check_aggregated_kernel.py
+```
+
+The [record](aggregated_kernel_record_20261004.json) contains 1,279 exact
+comparisons across 28 cases, with source hashes for both the checker and its
+shared kernel module. It detects 277 instances where endpoint deletion
+changes a tested expression, 15 cases where using the terminal identity
+globally fails, and 28 nonzero singleton controls outside its deletion range.
+Counts of controls are diagnostic instances, not independent asymptotic tests.
+The script accepts `--output PATH`. No large arrays or derived sweeps are saved.
+
+See the [research continuation](../../notes/programs/01_signed_arithmetic_covariance/AGGREGATED_KERNEL_CONTINUATION_20261004.md)
+and [review](../../reviews/01_signed_arithmetic_covariance/AGGREGATED_KERNEL_REVIEW_20261004.md).
+The Poisson derivative constants, mixed Mellin moments and residue arguments
+are analytic deductions reviewed separately; the checker does not certify
+those statements or any fixed-power estimate.
+
+
+## Localized target and finite spectrum continuation
+
+[check_localized_target.py](check_localized_target.py) checks the cofactor
+identity underlying the spectral representation, exact mu/von-Mangoldt
+coefficient closure, additive smoothing with zero-extended band endpoints,
+centered covariance, shifted autocorrelation, and a synthetic triple
+integration-by-parts identity. Run:
+
+```sh
+python3 papers/prime-variance-exponents/numerics/01_signed_arithmetic_covariance/check_localized_target.py
+```
+
+The [record](localized_target_record_20261004.json) reports 2,592 exact
+comparisons and source hashes for the new checker and both shared kernel
+modules. Formal prime logarithms are coefficient dictionaries; the kernel
+checks use rational polynomial data and synthetic prime weights p. The
+primitive tests use R(v)=v^8, not the fixed probe. Negative controls expose
+38 missing low/low terms, 18 omitted shifted endpoint residuals, and 16
+incorrect primitive coefficients. The script accepts `--output PATH`.
+
+The [analytic note](../../notes/programs/01_signed_arithmetic_covariance/FINITE_CROSS_SPECTRUM_20261004.md)
+and [review](../../reviews/01_signed_arithmetic_covariance/LOCALIZED_TARGET_ATTEMPT_REVIEW_20261004.md)
+separate these finite checks from the Fourier inversion, spectral-tail
+bound, mode estimate, and unproved central arithmetic inequality. No
+asymptotic exponent fit or large numerical sweep is included.
