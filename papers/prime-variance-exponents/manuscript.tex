@@ -1,0 +1,1019 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,booktabs,array}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,microtype}
+\usepackage{xurl}
+\usepackage[colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue]{hyperref}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\newcommand{\dd}{\,d}
+\newcommand{\R}{\mathbb R}
+\newcommand{\C}{\mathbb C}
+\newcommand{\Vcal}{\mathcal V_g}
+\newcommand{\Rea}{\operatorname{Re}}
+\newcommand{\Ima}{\operatorname{Im}}
+\newcommand{\norm}[1]{\left\|#1\right\|}
+\DeclareMathOperator{\supp}{supp}
+\numberwithin{equation}{section}
+\title{Prime response variance exponents and the Riemann hypothesis}
+\author{Edward Baker}
+\date{Draft, 4 October 2026}
+\begin{document}
+\maketitle
+\begin{abstract}
+We fix an explicit, compactly supported, prepared prime response and study
+its variance on complete dyadic intervals. For each $0\le\delta\le1$, a
+global bound $O(X^{2+\delta})$ is equivalent to every nontrivial zeta zero
+lying in the closed strip $|\Rea\rho-1/2|\le\delta/2$. The proof uses an
+elementary noncancellation argument and the true Laplace transform of the
+response. Thus bounds along any positive sequence of exponents tending
+to zero are equivalent to the Riemann hypothesis, without uniformity of
+their constants. We give an unconditional baseline, transfer existing
+finite certificates to quadratic bounds through $10^{102}$, and reduce
+the global problem to an exact signed short-interval covariance with
+quadratic approximation cost. A finite-prefix construction shows why
+preparation, prime-number-theorem estimates, and diagonal controls alone
+do not imply an exponent descent. No fixed global exponent below one,
+new zero-free strip, or actual-prime descent rule is established.
+\end{abstract}
+
+\section{The fixed response and the exponent program}
+Let $\Lambda$ be the von Mangoldt function and
+$\psi(t)=\sum_{2\le n\le t}\Lambda(n)$, with $\psi(t)=0$ for $t<2$.
+All logarithms are natural. Fix, once and for all,
+\begin{equation}\label{eq:probe}
+\begin{gathered}
+a=\tfrac14,\qquad h(v)=(1-16v^2)^8\mathbf1_{|v|<a},\qquad
+g_0=-h'''+\tfrac14h',\qquad g=g_0/\sqrt\nu,\\
+\nu=\norm{g_0}_2^2=\frac{146640624550936576}{37921101075},\qquad
+A=e^{-a},\quad B=e^a,\qquad w(t)=t^{-1/2}g(-\log t)\quad(t>0).
+\end{gathered}
+\end{equation}
+The functions $h,g,w$ are extended by zero off their indicated supports;
+in particular $\supp w=[A,B]$. The preparation will imply
+$\int w=0$ and $\int w^2=1$. Define
+\begin{equation}\label{eq:response}
+\begin{split}
+p_g(y)&=\sum_{n\ge2}\frac{\Lambda(n)}{\sqrt n}g(y-\log n),\\
+V_g(x)&=\sum_{n\ge2}\Lambda(n)w(n/x)=\sqrt x\,p_g(\log x),\qquad
+\Vcal(X)=\int_X^{2X}|V_g(x)|^2\dd x.
+\end{split}
+\end{equation}
+These sums are locally finite. For $x\in[X,2X]$ every active integer
+lies in $[AX,2BX]$. The entire support window is always retained;
+weights vanish at its endpoints, so endpoint inclusion is immaterial.
+The word variance denotes this centered quadratic integral, without
+division by the interval length.
+
+\begin{theorem}[Fixed exponent and closed zero strip]\label{thm:main}
+For each fixed $\delta\in[0,1]$, the following are equivalent:
+\begin{align}
+\Vcal(X)&=O(X^{2+\delta})\quad\text{for all sufficiently large real }X;
+\label{eq:global}\\
+|\Rea\rho-\tfrac12|&\le\tfrac\delta2
+\quad\text{for every nontrivial zero $\rho$ of $\zeta$}.
+\label{eq:strip}
+\end{align}
+The constants and starting threshold in \eqref{eq:global} may depend on
+$\delta$. Zeros on the boundary of the strip are permitted.
+\end{theorem}
+
+\begin{corollary}\label{cor:rh}
+The exponent $\delta=1$ is unconditional, and $\delta=0$ is equivalent
+to the Riemann hypothesis (RH). Each of the following is also equivalent
+to RH: \eqref{eq:global} holds for every $\delta\in(0,1]$; or it holds
+for some positive sequence $\delta_j\to0$. No uniform constants or
+uniform starting thresholds are required. A single fixed $\delta<1$
+already gives an all-height zero-free strip; for example, $\delta=0.99$
+would exclude $\Rea\rho>0.995$.
+\end{corollary}
+
+The illustrative exponent $0.99$ has not been attained here. The first
+global milestone is any fixed exponent below one for the actual
+coefficients $\Lambda(n)$. A rule improving an already proved exponent
+is a separate open problem. Even an infinite sequence of improvements
+with positive limiting exponent gives only the corresponding fixed
+strip. A finite range or a fitted numerical slope does not meet the
+global quantifier in \eqref{eq:global}.
+
+For completeness, the optimal exponent is
+\begin{equation}\label{eq:optimal}
+\delta_*:=\inf\{\delta\in[0,1]:\Vcal(X)=O(X^{2+\delta})\}
+=2\sup_\rho(\Rea\rho-\tfrac12).
+\end{equation}
+This translates Theorem~\ref{thm:main}; it does not compute the supremum.
+Indeed the supremum itself defines a closed strip, so the theorem also
+supplies the variance bound at this optimal exponent.
+
+The purpose is a focused quantitative reformulation and research
+program. Sections~\ref{sec:probe}--\ref{sec:equivalence} prove the
+equivalence directly. Section~\ref{sec:bounds} separates global
+baseline estimates from finite quadratic certificates.
+Section~\ref{sec:arithmetic} gives the principal arithmetic formulation,
+and Section~\ref{sec:milestone} identifies the missing global input.
+The fixed probe and certificate inputs arose in the parent
+Sonin critical-boundary investigation; no operator results from that
+investigation are needed for the proofs below. No claim of mathematical
+priority is made.
+
+\section{Preparation, noncancellation, and transform decay}\label{sec:probe}
+Use exclusively the plus-exponent convention
+\begin{equation}\label{eq:transforms}
+G(z)=\int_{-a}^a g(v)e^{zv}\dd v,\qquad
+H(z)=\int_{-a}^a h(v)e^{zv}\dd v.
+\end{equation}
+Both transforms are entire. In sources using a minus-exponent transform,
+that transform is $G(-z)$ in the present notation.
+
+\begin{lemma}[Probe identities]\label{lem:probe}
+The zero extension of $g$ is real, odd, $C^4$, and normalized in $L^2$.
+It and its derivatives through order four vanish at $\pm a$. Moreover,
+\begin{equation}\label{eq:moments}
+G(0)=G(\tfrac12)=G(-\tfrac12)=0,\qquad
+\int_\R w(t)\dd t=0,\qquad \int_\R w(t)^2\dd t=1,
+\end{equation}
+and
+\begin{equation}\label{eq:series}
+G(z)=\frac{z(z^2-1/4)}{\sqrt\nu}H(z),\qquad
+\frac{H(z)}{H(0)}=
+\sum_{k=0}^\infty\frac{(z^2/64)^k}{(19/2)_k\,k!}.
+\end{equation}
+Here $(q)_k=q(q+1)\cdots(q+k-1)$ and $(q)_0=1$.
+\end{lemma}
+\begin{proof}
+The polynomial $h$ has a zero of order eight at each endpoint; its zero
+extension is $C^7$. Its third derivative therefore vanishes to order five
+there, giving the stated regularity of $g$. Parity and reality follow
+from the definition. Exact integration of the polynomial square gives
+$\nu$ in \eqref{eq:probe}; an explicit finite-arithmetic prescription is
+given in Appendix~\ref{app:certificate}.
+
+Three integrations by parts, with zero boundary terms, give the first
+identity in \eqref{eq:series} and hence the three vanishing moments.
+Expanding $e^{zv}$ and integrating the even monomials proves the second
+identity: substitution $u=4v$, followed by $r=u^2$, gives
+\[
+\frac{\int_{-a}^a v^{2k}h(v)\dd v}{\int_{-a}^a h(v)\dd v}
+=16^{-k}\frac{(1/2)_k}{(19/2)_k},\qquad
+(2k)!=4^k k!(1/2)_k.
+\]
+Finally $t=e^{-v}$ gives $\int w=G(-1/2)$ and
+$\int w^2=\int g^2=1$. In particular $w\in C_c^4(\R)$.
+\end{proof}
+
+\begin{lemma}[Elementary noncancellation]\label{lem:noncancel}
+Every zero of $H$ is nonzero and purely imaginary. Consequently
+$G(-s)\ne0$ whenever $0<\Rea s<1/2$. Its zero at $s=1/2$ is simple.
+\end{lemma}
+\begin{proof}
+Put $f=H/H(0)$. If $f(z_0)=0$, then $z_0\ne0$. For
+$u(t)=f(z_0t)$, the series \eqref{eq:series} gives
+\[
+(t^{18}u')'=\frac{z_0^2}{16}t^{18}u,\qquad
+u(0)=1,\quad u'(0)=0,\quad u(1)=0.
+\]
+Multiply by $\overline u$ and integrate over $[0,1]$:
+\[
+-\int_0^1t^{18}|u'|^2\dd t
+=\frac{z_0^2}{16}\int_0^1t^{18}|u|^2\dd t.
+\]
+The boundary terms vanish at both ends. Both integrals are strictly
+positive before the minus sign, since $u$ is neither zero nor constant.
+Thus $z_0^2$ is strictly negative real. The polynomial factor in
+\eqref{eq:series} proves noncancellation. Since $H(-1/2)>0$,
+the preparation zero at $s=1/2$ is simple.
+\end{proof}
+
+\begin{lemma}[Sixth-power decay]\label{lem:decay}
+There is a fixed $K>0$ such that
+\begin{equation}\label{eq:decay}
+|G(z)|\le K e^{a|\Rea z|}|z|^{-6}\quad(z\ne0).
+\end{equation}
+In particular, $G(\sigma+it)=O_g((1+|t|)^{-6})$ uniformly for
+$|\sigma|\le1/2$.
+\end{lemma}
+\begin{proof}
+The piecewise fifth derivative of $g$ has finite endpoint jumps.
+Its sixth distributional derivative is a finite signed measure,
+consisting of an interior polynomial density and two endpoint atoms.
+Distributional integration by parts gives
+$z^6G(z)=\int e^{zv}\dd(D^6g)(v)$.
+Take $K=\norm{D^6g}_{\rm TV}$, or the larger explicit constant in
+Appendix~\ref{app:certificate}. Boundedness on compact sets covers
+small $t$ in the final assertion.
+\end{proof}
+
+\section{Proof of the exponent equivalence}\label{sec:equivalence}
+We use the classical meromorphic continuation and functional equation of
+$\zeta$, its simple pole at one, its simple trivial zeros $-2k$,
+and the Dirichlet series
+\begin{equation}\label{eq:dirichlet}
+-\frac{\zeta'}{\zeta}(z)=\sum_{n\ge2}\Lambda(n)n^{-z}
+\qquad(\Rea z>1).
+\end{equation}
+Nontrivial zeros satisfy $0<\Rea\rho<1$ and are invariant, with
+multiplicity, under conjugation and $\rho\mapsto1-\rho$.
+Write $N(T)$ for their number with $0<\Ima\rho\le T$, counted with
+multiplicity. The classical zero count gives
+$N(T)=O(T\log(T+2))$ and $N(T+1)-N(T)=O(\log(T+2))$.
+For contour shifts one may choose heights $T_j\to\infty$ avoiding zero
+ordinates such that $\zeta'/\zeta(\sigma\pm iT_j)=O(\log^2T_j)$ on
+each fixed bounded $\sigma$ interval. This follows from the local count
+and the logarithmic-derivative partial fraction formula, by staying
+at distance $\gg1/\log T_j$ from the ordinates. These are standard
+zeta inputs; see \cite{DLMF,ExplicitFormula,HSW}.
+All sums indexed by $\rho$ below run over distinct nontrivial zeros,
+include both ordinate signs, and carry their multiplicities $m_\rho$.
+
+\begin{proposition}[Complete linear explicit formula]\label{prop:explicit}
+For $y>a$,
+\begin{equation}\label{eq:explicit}
+p_g(y)=-\sum_\rho m_\rho G(1/2-\rho)e^{(\rho-1/2)y}
+-\sum_{k\ge1}G(2k+1/2)e^{-(2k+1/2)y}.
+\end{equation}
+Both series converge absolutely and locally uniformly on $y>a$.
+The nontrivial coefficients alone are absolutely summable.
+\end{proposition}
+\begin{proof}
+Fourier inversion for the compact $C^4$ function $g$, on the line
+$\Rea z=2$, and absolute convergence of \eqref{eq:dirichlet} give
+\[
+p_g(y)=\frac1{2\pi i}\int_{2-i\infty}^{2+i\infty}
+-\frac{\zeta'}{\zeta}(z)
+e^{(z-1/2)y}G(1/2-z)\dd z.
+\]
+The integrals and the interchange with the Dirichlet series converge
+absolutely by \eqref{eq:decay}. Shift to
+$\Rea z=-(2M+1)$, first sending the horizontal sides to the good heights
+just described. On a fixed strip their integrands are
+$O_{M,y}(T_j^{-6}\log^2T_j)$, so the horizontal integrals vanish.
+The pole at one would contribute $e^{y/2}G(-1/2)=0$.
+At a nontrivial zero the residue is
+$-m_\rho e^{(\rho-1/2)y}G(1/2-\rho)$, and at $-2k$ it is
+$-e^{-(2k+1/2)y}G(2k+1/2)$.
+
+On the negative odd vertical lines, the functional equation and the
+Dirichlet series in $\Rea(1-z)>1$ give
+$\zeta'/\zeta(z)=O(\log(|z|+2))$, uniformly as $M$ increases.
+The exponential in the remaining integral is bounded by
+$e^{-(2M+3/2)(y-a)}$ after applying \eqref{eq:decay}; the remaining
+integral of $|z-1/2|^{-6}\log(|z|+2)$ is
+$O(M^{-5}\log(M+2))$. Thus this vertical integral tends to zero for
+$y>a$. This contour argument works directly for the present $C^4$
+probe and needs no unstated smoothness assumption.
+
+The zero count and \eqref{eq:decay} imply
+$\sum_\rho m_\rho|G(1/2-\rho)|<\infty$.
+The factors $e^{(\Rea\rho-1/2)y}$ are uniformly bounded on compact
+$y$ intervals. Finally $\norm g_1\le\sqrt{2a}$ gives
+\begin{equation}\label{eq:trivial}
+\sum_{k\ge1}|G(2k+1/2)|e^{-(2k+1/2)y}
+\le \frac{\sqrt{1/2}\,e^{-5(y-a)/2}}{1-e^{-2(y-a)}}\quad(y>a).
+\end{equation}
+This proves the convergence assertions, including local uniformity.
+\end{proof}
+
+\begin{proof}[Proof of Theorem~\ref{thm:main}]
+Assume \eqref{eq:global}. The exact change of variables $x=e^y$ gives
+\begin{equation}\label{eq:shell}
+\int_{\log X}^{\log(2X)}|p_g(y)|^2\dd y
+=\int_X^{2X}\frac{|V_g(x)|^2}{x^2}\dd x
+\le X^{-2}\Vcal(X).
+\end{equation}
+Let $\ell=\log2$. On the shells $[j\ell,(j+1)\ell]$ this is
+$O(2^{j\delta})$ for large $j$. For $\sigma=\Rea s>\delta/2$,
+Cauchy--Schwarz therefore gives
+\[
+\int_{j\ell}^{(j+1)\ell}e^{-\sigma y}|p_g(y)|\dd y
+\le \ell^{1/2}2^{-j\sigma}
+\left(\int_{j\ell}^{(j+1)\ell}|p_g(y)|^2\dd y\right)^{1/2}
+\ll 2^{j(\delta/2-\sigma)}.
+\]
+The sum is geometric, locally uniformly in $\Rea s>\delta/2$.
+On each finite interval $p_g$ is continuous by local finiteness.
+Consequently the true integral
+\begin{equation}\label{eq:laplace}
+P_g(s)=\int_0^\infty e^{-sy}p_g(y)\dd y
+\end{equation}
+is absolutely convergent and holomorphic in that half-plane; local
+uniform domination, or Morera's theorem, justifies holomorphy.
+
+Since $a<\log2$, $p_g(y)=0$ for $0\le y<\log2-a$, and every translated
+packet has its entire support above zero. For $\Rea s>1/2$,
+absolute termwise integration thus gives exactly
+\begin{equation}\label{eq:laplace-zeta}
+P_g(s)=G(-s)\sum_{n\ge2}\Lambda(n)n^{-1/2-s}
+=-G(-s)\frac{\zeta'}{\zeta}(1/2+s).
+\end{equation}
+There is no initial endpoint correction. Uniqueness of meromorphic
+continuation identifies the right side with the holomorphic function
+\eqref{eq:laplace} throughout $\Rea s>\delta/2$.
+The pole of $\zeta$ at $s=1/2$ is canceled by preparation.
+If $\rho=\beta+i\gamma$ had $\beta-1/2>\delta/2$, then
+$0<\Rea(\rho-1/2)<1/2$ and Lemma~\ref{lem:noncancel} would leave the
+nonzero residue $-m_\rho G(1/2-\rho)$ at $s=\rho-1/2$.
+This contradicts holomorphy. Functional-equation symmetry supplies the
+left boundary, proving the closed strip \eqref{eq:strip}.
+
+Conversely, assume that strip. Absolute summability in
+Proposition~\ref{prop:explicit} bounds the nontrivial sum by
+$C_g e^{\delta y/2}$ for $y\ge1$. The trivial sum is bounded there
+by \eqref{eq:trivial}. Hence
+$p_g(y)=O_g(e^{\delta y/2})$, and
+$V_g(x)=O_g(x^{(1+\delta)/2})$. Integrating its square over $[X,2X]$
+proves \eqref{eq:global}. The initial compact interval is controlled
+by the original finite arithmetic sum.
+
+Both arguments include $\delta=0$ and $\delta=1$. The converse uses
+a non-strict bound on each real part and therefore permits boundary
+zeros, with no logarithmic loss. The forward argument only uses
+$\Rea s>\delta/2$; no convergence at the boundary is asserted.
+\end{proof}
+
+\begin{proof}[Proof of Corollary~\ref{cor:rh}]
+Every nontrivial zero lies in $0<\Rea\rho<1$, giving $\delta=1$.
+At $\delta=0$ the strip is exactly the critical line. The bounds along
+$\delta_j\to0$ imply all the corresponding closed strips; their
+intersection is the critical line. Conversely RH gives the quadratic
+bound and hence all larger exponents. Constants may vary with $j$
+because the intersection is a statement about each fixed zero.
+\end{proof}
+
+\begin{remark}
+If $J(Y)=\int_0^Y|p_g(y)|^2\dd y$ is also considered, summing
+\eqref{eq:shell} gives $J(Y)=O(1+Y)$ at $\delta=0$, not $O(1)$.
+For positive $\delta$ it gives $J(Y)=O(e^{\delta Y})$.
+Neither observation is needed to assert a transform on its boundary.
+\end{remark}
+
+\section{Global baseline and finite quadratic bounds}\label{sec:bounds}
+\subsection{Transfer of a prime-number-theorem error}
+Put $E(t)=\psi(t)-t$ and $M_w=\int_A^B u|w'(u)|\dd u$.
+Stieltjes integration by parts and $\int w=0$ give
+\begin{equation}\label{eq:pnt-transfer}
+V_g(x)=\int w(t/x)\dd(\psi(t)-t)
+=-\int_A^B E(xu)w'(u)\dd u.
+\end{equation}
+The weight vanishes at both endpoints; the identity retains the entire
+support even when an endpoint is an integer.
+
+\begin{proposition}[Unconditional envelope transfer]\label{prop:baseline}
+If $|E(t)|\le t r(t)$ throughout $[AX,2BX]$, where $r\ge0$, then
+\begin{equation}\label{eq:baseline}
+\Vcal(X)\le\frac73M_w^2X^3
+\left(\sup_{AX\le t\le2BX}r(t)\right)^2.
+\end{equation}
+In particular, unconditionally as $X\to\infty$,
+\begin{equation}\label{eq:jy}
+\Vcal(X)=O_g\left(X^3(\log X)^{3.602}
+\exp\left[-0.3706\frac{(\log X)^{3/5}}{(\log\log X)^{1/5}}\right]\right).
+\end{equation}
+\end{proposition}
+\begin{proof}
+Equation~\eqref{eq:pnt-transfer} bounds $|V_g(x)|$ by
+$xM_w\sup r$ on the shell. Integrating $x^2$ gives $7X^3/3$.
+Johnston--Yang \cite[Theorem 1.4]{JY} prove, for $t\ge23$,
+\[
+|E(t)|\le t\,0.026(\log t)^{1.801}
+\exp\left[-0.1853\frac{(\log t)^{3/5}}{(\log\log t)^{1/5}}\right].
+\]
+For $X\ge23/A$, inserting this exact function $r$ into
+\eqref{eq:baseline} is an explicit bound with the displayed supremum.
+For the asymptotic statement, put
+$F(X)=(\log X)^{3/5}/(\log\log X)^{1/5}$.
+The mean value theorem in $\log X$ gives
+$F(cX)-F(X)=o(1)$ uniformly for $c\in[A,2B]$; the logarithmic
+prefactor ratio also tends uniformly to one. Squaring the envelope
+proves \eqref{eq:jy}.
+\end{proof}
+
+No monotonicity of the explicit envelope is needed. The decaying factor
+in \eqref{eq:jy} is subpower: $F(X)=o(\log X)$. It supplies no fixed
+improvement of the global exponent $\delta=1$. This is an application
+of an existing prime-number-theorem estimate, not a new arithmetic
+saving. It does not assert that the actual variance attains the upper
+comparison function.
+
+\subsection{Finite verification and the linear tail}
+The following finite conclusions use published critical-line verification
+and retained outward numerical records. Their analytic transfer is given
+here; Appendix~\ref{app:certificate} identifies the records and exact
+rational checks.
+
+\begin{theorem}[Finite continuous quadratic bounds]\label{thm:finite}
+For every real $X$ in the indicated intervals,
+\begin{equation}\label{eq:finite}
+\begin{aligned}
+\Vcal(X)&<38X^2 &&(e\le X\le10^{99}),\\
+\Vcal(X)&<40X^2 &&(e\le X\le10^{100}),\\
+\Vcal(X)&<72X^2 &&(e\le X\le10^{102}).
+\end{aligned}
+\end{equation}
+These bounds require no global RH assumption.
+\end{theorem}
+\begin{proof}
+Take $L=500$, $H=3\cdot10^{12}$, and
+$K=9470610144359/\sqrt\nu$ in \eqref{eq:decay}.
+Hasanalizade--Shen--Wong \cite[Corollary 1.2]{HSW} imply
+$N(t)\le t\log t$ for $t\ge100$; the explicit comparison is recorded
+in Appendix~\ref{app:certificate}. Stieltjes partial summation gives
+\begin{equation}\label{eq:tail}
+\sum_{|\Ima\rho|>T}m_\rho|\Ima\rho|^{-6}
+\le12\int_T^\infty\frac{\log t}{t^6}\dd t
+=12T^{-5}\left(\frac{\log T}{5}+\frac1{25}\right),\quad T\ge100.
+\end{equation}
+Indeed for positive ordinates the exact boundary term is
+$-T^{-6}N(T)\le0$; the factor two includes both signs.
+
+Platt--Trudgian \cite[Theorem 1]{PT} verify the critical-line location
+through a height exceeding $H$. The retained records certify
+$N(500)=269$ and
+\[
+S_{500}=2\sum_{j=1}^{269}|G(-i\gamma_j)|
+=4.813490676290039592\ldots,
+\]
+with outward enclosures rather than merely decimal approximations.
+For the critical zeros between $L$ and $H$, apply \eqref{eq:tail}
+with $T=L$ and no exponential real-part factor. For the zeros above
+$H$, use $|\Rea\rho-1/2|<1/2$ and
+$|e^{(\rho-1/2)y}|\le e^{y/2}$ for $y\ge1$.
+The trivial zeros are bounded by \eqref{eq:trivial}. Thus, for every
+$y\ge1$ without an upper restriction,
+\begin{equation}\label{eq:envelope}
+|p_g(y)|\le b+R_H e^{y/2},
+\end{equation}
+where
+\begin{equation}\label{eq:b-r}
+\begin{split}
+b&=S_{500}+12K L^{-5}\left(\frac{\log L}{5}+\frac1{25}\right)
++\frac{\sqrt{1/2}\,e^{-15/8}}{1-e^{-3/2}},\\
+R_H&=12Ke^{1/8}H^{-5}\left(\frac{\log H}{5}+\frac1{25}\right).
+\end{split}
+\end{equation}
+The infinite counting majorant used for the finite segment $(L,H]$
+does not assume criticality beyond $H$.
+The outward inputs prove the strict rational bounds
+\begin{equation}\label{eq:rounding}
+b<\frac{124}{25}=4.96,\qquad
+R_H<\frac{39}{25}\,10^{-51}=1.56\cdot10^{-51}.
+\end{equation}
+Since $|V_g(x)|\le b\sqrt{x}+R_Hx$ for $x\ge e$, exact integration
+over the full shell gives
+\begin{equation}\label{eq:budget}
+\Vcal(X)\le\frac32b^2X^2+
+\frac45(2^{5/2}-1)bR_HX^{5/2}+\frac73R_H^2X^3.
+\end{equation}
+After division by $X^2$, this positive budget increases with $X$.
+Insert \eqref{eq:rounding}, use
+$\frac45(2^{5/2}-1)<466/125$, and evaluate the rational upper budgets
+at the three right endpoints. They are respectively
+$37.8311431296$, $39.84376128$, and $71.4265728$.
+Appendix~\ref{app:certificate} gives the exact fractions.
+Monotonicity proves all three continuous ranges, including endpoints.
+\end{proof}
+
+\begin{corollary}[A systematic finite-range milestone]\label{cor:height}
+Keep the low cutoff and the constant $b$ fixed. For a ceiling
+$C>3b^2/2$, let $q_C>0$ solve
+\[
+\tfrac73q_C^2+\tfrac45(2^{5/2}-1)bq_C+\tfrac32b^2=C.
+\]
+Along heights $H\ge500$ through which criticality is rigorously verified,
+\eqref{eq:budget} proves $\Vcal(X)\le CX^2$ for
+$e\le X\le(q_C/R_H)^2$. The resulting range satisfies
+\begin{equation}\label{eq:height-law}
+X_{\max}\asymp_{g,C} H^{10}/(\log H)^2.
+\end{equation}
+\end{corollary}
+\begin{proof}
+Substitute $q=R_H\sqrt X$ in the normalized budget. Formula
+\eqref{eq:b-r} gives $R_H\asymp_g H^{-5}\log H$.
+\end{proof}
+The linear coefficient tail is of order $H^{-5}\log H$; a
+twelfth-power transform bound for an autocorrelation cannot be used
+for this linear response. At any fixed $H$, \eqref{eq:budget} retains
+a cubic term as $X\to\infty$. Therefore \eqref{eq:height-law} improves
+a finite range, and does not establish a global quadratic bound.
+
+\section{Short intervals and an exact signed covariance}\label{sec:arithmetic}
+Fix a sufficiently large real $X$ and $1\le h\le AX$. Define
+\begin{equation}\label{eq:short-defs}
+\begin{split}
+D_h(t)&=\psi(t+h/2)-\psi(t-h/2)-h,\\
+S(X,h)&=\int_{AX}^{2BX}|D_h(t)|^2\dd t,\\
+V_h(x)&=\frac1h\int_\R w(t/x)D_h(t)\dd t,\qquad
+Q_h(X)=\int_X^{2X}|V_h(x)|^2\dd x.
+\end{split}
+\end{equation}
+The centered difference uses the actual prime-power counting function.
+All integrals in a fixed window are finite.
+
+\begin{proposition}[Complete-support transfer]\label{prop:short}
+Set
+\begin{equation}\label{eq:capp}
+C_{\rm app}=\frac{(4\log2)(B+A/2)}{24}\norm{w''}_\infty.
+\end{equation}
+Uniformly in the indicated real $X,h$ range,
+\begin{align}
+\Vcal(X)&\le\frac{3X^2}{h^2}S(X,h)+C_{\rm app}^2\frac{h^4}{X},
+\label{eq:gate}\\
+\left|\sqrt{\Vcal(X)}-\sqrt{Q_h(X)}\right|
+&\le C_{\rm app}\frac{h^2}{\sqrt{2X}}.
+\label{eq:norm-error}
+\end{align}
+Moreover the exact signed covariance is
+\begin{equation}\label{eq:covariance}
+\begin{split}
+Q_h(X)&=\frac1{h^2}\int_{AX}^{2BX}\int_{AX}^{2BX}
+D_h(t)D_h(u)W_X(t,u)\dd t\dd u,\\
+W_X(t,u)&=\int_X^{2X}w(t/x)w(u/x)\dd x.
+\end{split}
+\end{equation}
+For every fixed $\delta\ge0$,
+\begin{equation}\label{eq:Q-equivalence}
+Q_{X^{3/4}}(X)=O(X^{2+\delta})
+\quad\Longleftrightarrow\quad\Vcal(X)=O(X^{2+\delta}).
+\end{equation}
+\end{proposition}
+\begin{proof}
+First, finite Fubini and exact centering give
+\begin{equation}\label{eq:finite-fubini}
+V_h(x)=\sum_{n\ge2}\Lambda(n)\overline w_{x,h}(n),\qquad
+\overline w_{x,h}(n)=\frac1h\int_{-h/2}^{h/2}w((n+u)/x)\dd u.
+\end{equation}
+For a fixed $n$, the inverse set of $t$ for the counting interval
+$(t-h/2,t+h/2]$ is $[n-h/2,n+h/2)$, with endpoints irrelevant to
+Lebesgue integration. The density term vanishes because
+$\int w(t/x)\dd t=x\int w=0$. This proves the identity for
+noninteger $X,h$ without a rounding error.
+
+Taylor's theorem for the $C^2$ zero extension, followed by symmetric
+averaging, gives for every real $n$
+\begin{equation}\label{eq:taylor}
+|\overline w_{x,h}(n)-w(n/x)|
+\le \frac{h^2}{24x^2}\norm{w''}_\infty.
+\end{equation}
+The difference vanishes off $[Ax-h/2,Bx+h/2]$. Thus the estimate also
+includes every extra atom created near the original support endpoints.
+For clarity, the elementary Chebyshev constant used here is
+\begin{equation}\label{eq:cheb}
+\psi(T)\le(4\log2)T\qquad(T\ge1).
+\end{equation}
+Indeed Legendre's valuation formula implies
+$\psi(2n)-\psi(n)\le\log\binom{2n}{n}\le2n\log2$.
+Sum at dyadic integer values and round $T$ upward to the next power
+of two to obtain \eqref{eq:cheb}.
+
+Since $h\le AX\le Ax$, \eqref{eq:taylor} and \eqref{eq:cheb} yield
+\[
+|V_h(x)-V_g(x)|\le\frac{h^2\norm{w''}_\infty}{24x^2}
+\psi(Bx+h/2)\le C_{\rm app}\frac{h^2}{x}.
+\]
+Integration gives
+\begin{equation}\label{eq:L2-error}
+\int_X^{2X}|V_h-V_g|^2\dd x\le C_{\rm app}^2\frac{h^4}{2X}.
+\end{equation}
+On the other hand, $\int w(t/x)^2\dd t=x$ and support in $[Ax,Bx]$
+give by Cauchy--Schwarz
+\[
+|V_h(x)|^2\le\frac{x}{h^2}\int_{Ax}^{Bx}|D_h(t)|^2\dd t
+\le\frac{x}{h^2}S(X,h),\qquad
+Q_h(X)\le\frac{3X^2}{2h^2}S(X,h).
+\]
+Apply $|r+s|^2\le2|r|^2+2|s|^2$ to prove \eqref{eq:gate}, and
+the reverse triangle inequality in $L^2([X,2X])$ to prove
+\eqref{eq:norm-error}. Finite Fubini gives \eqref{eq:covariance},
+since the union of the $t$ supports is exactly $[AX,2BX]$.
+Finally $h=X^{3/4}$ is admissible for all sufficiently large $X$;
+the norm error in \eqref{eq:norm-error} is $C_{\rm app}X/\sqrt2$.
+Either norm bound $O(X^{1+\delta/2})$ therefore implies the other
+for $\delta\ge0$.
+\end{proof}
+
+The kernel $W_X$ is positive as a quadratic form, because it is a Gram
+kernel. Its individual cross terms may have either sign. The exact
+expression \eqref{eq:covariance} is the principal open arithmetic
+formulation: bounding its terms individually by absolute values can
+discard the cancellation one needs. Equation~\eqref{eq:Q-equivalence}
+is an equivalence of admissible growth exponents, not an equality of
+leading coefficients.
+
+\begin{corollary}[Exponent budget for a proposed input]\label{cor:gate}
+Let $h=X^\tau$, with fixed $0<\tau<1$. If an unconditional estimate
+\begin{equation}\label{eq:candidate-S}
+S(X,h)\le C Xh^2X^{-\kappa}L(X),\qquad \kappa>0,\quad
+L(X)=X^{o(1)},
+\end{equation}
+holds for all sufficiently large real $X$, then
+\begin{equation}\label{eq:power-budget}
+\Vcal(X)\ll_g X^{3-\kappa}L(X)+X^{4\tau-1}.
+\end{equation}
+It follows that every $\delta>\max(0,1-\kappa,4\tau-3)$ is admissible.
+\end{corollary}
+\begin{proof}
+Substitute into \eqref{eq:gate}, using $L(X)\ll_\epsilon X^\epsilon$
+for every $\epsilon>0$. The displayed strict inequality allows
+$\epsilon$ to be chosen smaller than the available exponent margin.
+\end{proof}
+
+Table~\ref{tab:budget} lists implications of hypothetical inputs;
+none of its positive $\kappa$ estimates is proved here. At
+$\tau=3/4$, all support and averaging costs are already $O(X^2)$.
+An unbounded $L$ does not in general justify the frontier
+$\delta=1-\kappa$. With $L=O(1)$, one can instead take the non-strict
+maximum in the corollary. If only the averaging term determines the
+frontier, its endpoint can also follow directly from
+\eqref{eq:power-budget}.
+\begin{table}[ht]
+\centering
+\begin{tabular}{cccc}
+\toprule
+Length exponent $\tau$ & Relative saving $\kappa$ & Sufficient $\delta$ & Consequence\\
+\midrule
+$3/4$ & $1/100$ & $\delta>0.99$ & A fixed strip if $\delta<1$\\
+$3/4$ & $1/2$ & $\delta>1/2$ & Narrower fixed strips\\
+$3/4$ & $1$ & Every $\delta>0$ & RH\\
+$7/8$ & $1$ & $\delta>1/2$ & Averaging cost remains\\
+\bottomrule
+\end{tabular}
+\caption{Translation of proposed raw mean-square savings with $L=X^{o(1)}$.}
+\label{tab:budget}
+\end{table}
+
+\subsection{The available short-interval input retains exponent one}
+The unconditional input audited from Saffari--Vaughan \cite[Section 6]{SV}
+gives, at $h=X^{3/4}$,
+\begin{equation}\label{eq:sv}
+S(X,h)\ll_g Xh^2\exp[-c_g(\log X/\log\log X)^{1/3}].
+\end{equation}
+There is a distinction in the source: the stated additive Lemma 6 is
+for $\theta$, whereas the proof first establishes a relative-interval
+estimate for $\psi$ in (6.12)--(6.18). We use that latter estimate,
+not a silent replacement of $\theta$ by $\psi$ in the lemma.
+
+Here is the short transfer needed to specify the input's scope. Write
+$I(u,v)=\psi(u+v)-\psi(u)-v$. The source's relative estimate, with
+its unconditional density exponent $12/5$ and a fixed positive margin
+in the length condition, gives
+\[
+\int_U^{2U}|I(u,\vartheta u)|^2\dd u
+\ll\vartheta^2U^3 r(U),\qquad
+r(U)=\exp[-c(\log U/\log\log U)^{1/3}],
+\]
+uniformly for $U\ge4$ and $U^{\epsilon-5/6}<\vartheta<1$, for
+each fixed $\epsilon>0$; below take $\epsilon=1/12$.
+For $2h\le v\le3h$,
+$I(u,h)=I(u,v)-I(u+h,v-h)$. Squaring, integrating over
+$u\in[U,2U]$ and $v\in[2h,3h]$, and assuming $h\le U/6$ gives
+\[
+h\int_U^{2U}|I(u,h)|^2\dd u
+\le12U\int_{h/(3U)}^{3h/U}\int_U^{3U}
+|I(u,\vartheta u)|^2\dd u\dd\vartheta.
+\]
+Cover $[U,3U]$ by $[U,2U]$ and $[2U,4U]$, apply the relative
+estimate, and integrate $\vartheta^2$. This proves
+$\int_U^{2U}|I(u,h)|^2\dd u\ll Uh^2r(U)$.
+For $h=X^{3/4}$ and $U$ a fixed multiple of $X$, the entire
+$\vartheta$ band is admissible: its lower end is comparable to
+$X^{-1/4}$, above the source threshold $U^{-3/4}$ obtained by taking
+the length margin $1/12$ with density exponent $12/5$.
+
+Finally, $u=t-h/2$ moves the band of $S$ into $[AX/2,2BX]$.
+The three dyadic intervals with lower endpoints
+$U_j=2^jAX/2$, $j=0,1,2$, cover that band, since $4AX>2BX$.
+This proves \eqref{eq:sv} with both ends included. Through
+\eqref{eq:gate} it gives only
+\[
+\Vcal(X)\ll_g X^3\exp[-c_g(\log X/\log\log X)^{1/3}]+X^2.
+\]
+The saving is subpower and leaves $\delta=1$. This tested input does
+not improve \eqref{eq:jy}; it does not rule out a stronger signed
+covariance estimate.
+
+\section{The first global milestone and the absence of a descent rule}
+\label{sec:milestone}
+A concrete first target is a fixed $\kappa>0$ in
+\eqref{eq:candidate-S} at $h=X^{3/4}$, or a direct bound
+$Q_{X^{3/4}}(X)=O(X^{2+\delta})$ for some fixed $\delta<1$.
+All these estimates must concern the actual coefficients and all
+sufficiently large real $X$. The support and approximation analysis
+already has the required quadratic cost; the missing step is arithmetic.
+An alternative useful target has the form
+\[
+\Vcal(X)\le C\{X^2L(X)+X^{3-\kappa}L(X)\},\qquad L=X^{o(1)}.
+\]
+It gives every $\delta>\max(0,1-\kappa)$, and would imply RH if
+$\kappa\ge1$. This is a candidate bound, not an established estimate.
+
+The following proposition explains the limits of using only generic
+counting and preparation properties. It is a statement about constructed
+coefficients, with no claim that they are Euler-prime coefficients.
+
+\begin{proposition}[Finite-prefix obstruction]\label{prop:model}
+Fix $0<\delta<1$, $\gamma\in\R\setminus\{0\}$, $0<\eta<1/2$, and an integer
+$N_0\ge2$. There are nonnegative coefficients $c_n$, equal to
+$\Lambda(n)$ for $2\le n\le N_0$ and belonging to $\{0,\log n\}$
+beyond a finite index, such that, with $\beta=(1+\delta)/2$,
+\begin{equation}\label{eq:model-psi}
+\widetilde\psi(x):=\sum_{2\le n\le x}c_n
+=x+\eta\Rea\frac{x^{\beta+i\gamma}}{\beta+i\gamma}+O(\log x).
+\end{equation}
+Define $\widetilde V(x)=\sum c_nw(n/x)$ and
+$\widetilde{\mathcal V}(X)=\int_X^{2X}|\widetilde V(x)|^2\dd x$.
+Then, for all sufficiently large real $X$,
+\begin{equation}\label{eq:model-var}
+\widetilde{\mathcal V}(X)\asymp X^{2+\delta}.
+\end{equation}
+The associated complete diagonal
+\begin{equation}\label{eq:model-diagonal}
+\widetilde D(Y)=\int_0^Y\sum_{n\ge2}\frac{c_n^2}{n}
+g(y-\log n)^2\dd y
+\end{equation}
+satisfies $\widetilde D(Y)=Y^2/2+O(1)$.
+\end{proposition}
+The proof, including the finite-prefix and all-real-$X$ assertions, is
+in Appendix~\ref{app:model}. These sequences satisfy PNT and even
+$\widetilde\psi(x)-x=O(xe^{-cL(x)})$ for each fixed $c>0$ and
+nonnegative $L=o(\log x)$. The latter is an asymptotic assertion with
+parameter-dependent constants and thresholds, not preservation of every
+published explicit constant. Their probe preparation is identical and
+their diagonal has the same leading order, but they defeat every exponent
+smaller than $\delta$. By choosing $N_0$ large enough they also preserve
+any prescribed finite collection of tests depending only on a bounded
+coefficient prefix.
+
+Thus these controls and an input exponent alone cannot imply a universal
+descent rule. Even a proposed universal step from $\delta=1$ to a fixed
+$\delta'<1$ is refuted within this generic class by choosing
+$\delta\in(\max(0,\delta'),1)$. This says nothing against a theorem
+using the prime-power support, multiplicative structure, or additional
+signed arithmetic information of the actual coefficients. The global
+milestone remains open; the fixed-exponent theorem, finite certificates,
+and transfer identities specify its exact requirements.
+
+\appendix
+\section{Certificate constants and reproducibility}\label{app:certificate}
+The finite theorem uses a small transfer of existing outward records.
+The following details make its analytic constants explicit without
+duplicating a zero cache.
+
+\subsection{Exact polynomial arithmetic}
+Write $b_j=(-16)^j\binom8j$. On $(-1/4,1/4)$,
+\[
+g_0(v)=-\sum_{j=2}^8b_j(2j)(2j-1)(2j-2)v^{2j-3}
++\sum_{j=1}^8\frac{j b_j}{2}v^{2j-1}.
+\]
+For any polynomial product one integrates each monomial using
+\[
+\int_{-1/4}^{1/4}v^m\dd v=
+\begin{cases}2\,4^{-(m+1)}/(m+1),&m\text{ even},\\0,&m\text{ odd}.
+\end{cases}
+\]
+Squaring the displayed polynomial and its sixth derivative yields exactly
+\[
+\norm{g_0}_2^2=\frac{146640624550936576}{37921101075},\qquad
+\norm{g_0^{(6)}}_{L^2(-a,a)}^2
+=\frac{2504085215525628254072340480}{19}.
+\]
+The total variation of the two endpoint atoms of $D^6g_0$ is
+$2\cdot8!\,8^8=1352914698240$. Cauchy--Schwarz bounds its interior
+$L^1$ mass by the square root of half the last squared norm, which is
+strictly less than $8117695446119$ (an integer-square comparison).
+Consequently
+\[
+\norm{D^6g_0}_{\rm TV}<9470610144359=:M_6,\qquad K=M_6/\sqrt\nu
+\]
+is valid in Lemma~\ref{lem:decay}. These finite rational calculations
+are independently reproducible from the polynomial prescription above.
+
+\subsection{Zero counts and outward inputs}
+The explicit count in \cite[Corollary 1.2]{HSW} is, for $T\ge e$,
+\[
+\left|N(T)-\frac{T}{2\pi}\log\frac{T}{2\pi e}\right|
+\le0.1038\log T+0.2573\log\log T+9.3675.
+\]
+For $T\ge100$, $\log\log T\le\log T$ and
+$9.3675\le(9.3675/\log100)\log T$.
+The main term is at most $(T/(2\pi))\log T$.
+The remaining coefficient is less than $2.4$, whereas
+$(1-1/(2\pi))T>84$ at $T=100$ and increases. This verifies
+$N(T)\le T\log T$ on the full range used in \eqref{eq:tail}.
+
+The outward package \cite{OutwardCertificate} reconstructs the probe
+and uses Arb/Acb zero enumeration and counting. Its 192-bit and 256-bit
+records each check $N(500)=269$, enclose 270 consecutive positive zeros,
+verify $\gamma_{269}<500<\gamma_{270}$ and ordered disjoint enclosures,
+and bound the low mass including both signs. The count and consecutive
+enumeration, not just a list of decimal approximations, provide
+completeness; the routines are documented in \cite{FLINT}.
+The published finite-height theorem \cite{PT} separately supplies
+criticality through $H=3\cdot10^{12}$.
+
+The finite transfer \cite{FiniteCertificate} checks the input hashes,
+their scope, overlapping enclosures, the strict roundings
+\eqref{eq:rounding}, and the following exact budgets:
+\begin{center}
+\begin{tabular}{ccc}
+\toprule
+Upper endpoint & Rational upper bound for $\Vcal(X)/X^2$ & Strict ceiling\\
+\midrule
+$10^{99}$ & $2955558057/78125000$ & $38$\\
+$10^{100}$ & $62255877/1562500$ & $40$\\
+$10^{102}$ & $5580201/78125$ & $72$\\
+\bottomrule
+\end{tabular}
+\end{center}
+For the cross coefficient it uses $(283/50)^2>32$; at $10^{99}$ it
+also uses $\sqrt{10}<16/5$. All comparisons are rational.
+The original records use the minus-exponent transform $G(-s)$.
+Their coefficient masses are absolute values, so the convention change
+does not alter the imported bounds.
+
+Paths in the following list are relative to the parent directory
+\path{../investigations/sonin-critical-boundary/numerics/}.
+These SHA-256 identifiers locate the exact imported inputs and transfer:
+\begin{description}
+\item[Outward generator] \path{selective_loss_quadratic_target_20261003/certify.py}\\
+\nolinkurl{6f3947f99d4b45307b8a84fb25a6ec56d395d98fb5467106d77dac0a95c63a1b}
+\item[192-bit record] \path{selective_loss_quadratic_target_20261003/bound_192.json}\\
+\nolinkurl{21a71598fb9dcf8fe51743e75f65aedd5c5deee69619d2bda806da3e9ac6f2c0}
+\item[256-bit record] \path{selective_loss_quadratic_target_20261003/bound_256.json}\\
+\nolinkurl{3c39ccfbc704122de57c04395e120f11a5a563d9d3838c5b6388a9e7c50a60b8}
+\item[Finite transfer generator] \path{subpower_finite_variance_20261003/certify.py}\\
+\nolinkurl{91e1b31ce6a34d6f6625c1b6ccb2c02e60c4c404599277ba274bfd9e3eafbf1f}
+\item[Finite transfer record] \path{subpower_finite_variance_20261003/record.json}\\
+\nolinkurl{7576708c6cd4e0e9be89d7551d1386ef77b9c972908f55d50f864b9c4afc6b26}
+\end{description}
+The small generator was replayed into a temporary output and matched the
+retained finite record byte-for-byte; the exact polynomial arithmetic
+was also checked. This replay imports the earlier outward calculations;
+it does not independently regenerate them or the published verification.
+Hashes identify data, while the rational inequalities and the analytic
+proof establish the transfer. The linked package READMEs give the
+reproduction commands and software requirements.
+
+\section{Proof of the finite-prefix obstruction}\label{app:model}
+\begin{proof}[Proof of Proposition~\ref{prop:model}]
+Put $N=\max(N_0,8)$ and retain $c_n=\Lambda(n)$ through $N$.
+Let $S_N=\sum_{2\le n\le N}\Lambda(n)$ and set
+\[
+M(x)=x+\eta\Rea\frac{x^{\beta+i\gamma}}{\beta+i\gamma},\qquad
+F(x)=S_N+M(x)-M(N)\quad(x\ge N).
+\]
+Since $\beta<1$, $1-\eta\le M'(x)\le1+\eta<2$ for $x\ge1$.
+For each integer $n>N$, choose $c_n=\log n$ if $S_{n-1}<F(n)$,
+and $c_n=0$ otherwise; put $S_n=S_{n-1}+c_n$.
+Induction proves
+\begin{equation}\label{eq:tracking}
+0\le S_n-F(n)\le\log n\qquad(n\ge N).
+\end{equation}
+Indeed the increment $d_n=F(n)-F(n-1)$ lies in $(0,2)$. If the previous
+excess minus $d_n$ is nonnegative, no insertion is made and the bound
+persists. Otherwise insertion gives excess in $(\log n-2,\log n)$,
+which is positive because $n>N\ge8$. Between successive integers
+$F$ changes by less than two. Thus
+$\widetilde\psi(x)=F(x)+O(\log x)=M(x)+O(\log x)$, proving
+\eqref{eq:model-psi} including the prescribed prefix.
+
+For the complete support of $w(t/x)$, Stieltjes integration against
+$dM$ cancels its constant-density part. If $s=\beta+i\gamma$,
+substitution $u=e^{-v}$ gives the exact Mellin identity
+\[
+\int_A^B w(u)u^{s-1}\dd u=G(1/2-s).
+\]
+The tracking error contributes $O(\log x)$ by integration by parts:
+it is bounded by
+$x^{-1}\int_{Ax}^{Bx}O(\log t)|w'(t/x)|\dd t$.
+Endpoint terms vanish, including for the full finite windows.
+Writing $\alpha=\delta/2$, we obtain
+\begin{equation}\label{eq:model-response}
+\widetilde V(x)=\eta\Rea\{G(-\alpha-i\gamma)x^{\beta+i\gamma}\}
++O(\log x).
+\end{equation}
+By Lemma~\ref{lem:noncancel} its complex amplitude is nonzero.
+Let $\lambda=2+\delta$, $\ell=\log2$, and
+$\theta_X=\gamma\log X+\arg G(-\alpha-i\gamma)$.
+Using $x=Xe^t$ in the squared main term gives
+\begin{equation}\label{eq:phase}
+\begin{split}
+\widetilde{\mathcal V}(X)
+&=\eta^2|G(-\alpha-i\gamma)|^2X^\lambda Q(\theta_X)\\
+&\quad+O\bigl(X^{3/2+\delta/2}\log X+X(\log X)^2\bigr),\\
+Q(\theta)&=\int_0^\ell e^{\lambda t}\cos^2(\theta+\gamma t)\dd t.
+\end{split}
+\end{equation}
+Both error powers are smaller than $\lambda$. Direct integration yields
+\begin{equation}\label{eq:phase-min}
+\min_\theta Q(\theta)=\frac12\left\{
+\frac{e^{\lambda\ell}-1}{\lambda}
+-\left|\frac{e^{(\lambda+2i\gamma)\ell}-1}{\lambda+2i\gamma}\right|
+\right\}>0.
+\end{equation}
+The strict inequality is the strict triangle inequality for
+$\int_0^\ell e^{\lambda t}e^{2i\gamma t}\dd t$: its phase is not
+constant on any interval because $\gamma\ne0$.
+The maximum of $Q$ is finite. The uniform positive minimum in
+\eqref{eq:phase-min}, not merely a favorable subsequence of phases,
+proves \eqref{eq:model-var} for every sufficiently large real $X$.
+
+Finally put $\widetilde A_2(t)=\sum_{\log n\le t}c_n^2/n$.
+Since $c_n^2=(\log n)c_n$ for $n>N$, there is a fixed prefix correction
+\[
+C_N=\sum_{2\le n\le N}\frac{c_n^2-(\log n)c_n}{n}
+\]
+such that, once the prefix is fully included,
+\begin{equation}\label{eq:diagonal-prefix}
+\widetilde A_2(t)=\int_{2^-}^{e^t}\frac{\log u}{u}\dd\widetilde\psi(u)
++C_N,\qquad t\ge\log N.
+\end{equation}
+Partial summation with
+$\widetilde\psi(u)-u=O(u^\beta)+O(\log u)$ gives
+$\widetilde A_2(t)=t^2/2+C+o(1)$: the endpoint error
+$O(t e^{-(1-\beta)t})$ tends to zero and the differentiated-error
+integral converges because $\beta<1$.
+Every packet begins above zero since $a<\log2$. Finite interchange
+therefore proves the exact identity
+\[
+\widetilde D(Y)=\int_{-a}^a g(v)^2\widetilde A_2(Y-v)\dd v.
+\]
+For large $Y$ all arguments exceed $\log N$.
+Use $\int g^2=1$ and $\int v g(v)^2\dd v=0$ to conclude
+$\widetilde D(Y)=Y^2/2+O(1)$. The retained prefix affects only the
+constant. This completes the proof.
+\end{proof}
+
+\section*{Acknowledgements and status}
+This draft was prepared with substantial large-language-model assistance
+in mathematical development, exposition, source checking, and internal
+proof review. Internal checks do not constitute independent specialist
+refereeing. The analytic reductions are proved in the text; the finite
+numerical theorem additionally relies on the published verification and
+the identified outward records. No global exponent below one and no
+actual-prime exponent-descent mechanism is claimed.
+
+\begin{thebibliography}{99}
+\bibitem{DLMF}
+F.~W.~J.~Olver et al., eds.,
+\emph{NIST Digital Library of Mathematical Functions},
+Sections 25.2, 25.4, 25.10, and equation 27.4.12.
+\url{https://dlmf.nist.gov/25.4};
+\url{https://dlmf.nist.gov/27.4.E12}.
+
+\bibitem{ExplicitFormula}
+T.~Tao, \emph{254A, Notes 2: Complex-analytic multiplicative number
+theory}, 2014, especially Propositions 16 and 19 and the discussion
+of explicit formulae.
+\url{https://terrytao.wordpress.com/2014/12/09/254a-notes-2-complex-analytic-multiplicative-number-theory/}.
+
+\bibitem{JY}
+D.~R.~Johnston and A.~Yang,
+\emph{Some explicit estimates for the error term in the prime number theorem},
+J. Math. Anal. Appl. \textbf{527} (2023), no.~2, Article 127460.
+\href{https://doi.org/10.1016/j.jmaa.2023.127460}{doi:10.1016/j.jmaa.2023.127460};
+\href{https://arxiv.org/abs/2204.01980v2}{author preprint}, Theorem 1.4.
+
+\bibitem{PT}
+D.~J.~Platt and T.~S.~Trudgian,
+\emph{The Riemann hypothesis is true up to $3\cdot10^{12}$},
+Bull. London Math. Soc. \textbf{53} (2021), no.~3, 792--797.
+\href{https://doi.org/10.1112/blms.12460}{doi:10.1112/blms.12460};
+\href{https://arxiv.org/abs/2004.09765v1}{author preprint}, Theorem 1.
+
+\bibitem{HSW}
+E.~Hasanalizade, Q.~Shen, and P.-J.~Wong,
+\emph{Counting zeros of the Riemann zeta function},
+J. Number Theory \textbf{235} (2022), 219--241.
+\href{https://doi.org/10.1016/j.jnt.2021.06.032}{doi:10.1016/j.jnt.2021.06.032};
+\href{https://arxiv.org/abs/2107.06506v1}{author preprint}, Corollary 1.2.
+
+\bibitem{SV}
+B.~Saffari and R.~C.~Vaughan,
+\emph{On the fractional parts of $x/n$ and related sequences. II},
+Ann. Inst. Fourier \textbf{27} (1977), no.~2, 1--30, Section 6.
+\href{https://doi.org/10.5802/aif.649}{doi:10.5802/aif.649}.
+
+\bibitem{FLINT}
+The FLINT contributors, \emph{FLINT documentation: acb\_dirichlet},
+zero-counting and consecutive zeta-zero enclosure routines.
+\url{https://flintlib.org/doc/acb_dirichlet.html}.
+
+\bibitem{OutwardCertificate}
+\emph{Quadratic signed-pair target: outward numerical certificate},
+project numerical package, 3 October 2026.
+\href{../investigations/sonin-critical-boundary/numerics/selective_loss_quadratic_target_20261003/README.md}{Package README};
+\path{../investigations/sonin-critical-boundary/numerics/selective_loss_quadratic_target_20261003/README.md}.
+Includes the original 192-bit and 256-bit records and their generator.
+
+\bibitem{FiniteCertificate}
+\emph{Finite continuous dyadic variance certificate},
+project numerical package, 3 October 2026.
+\href{../investigations/sonin-critical-boundary/numerics/subpower_finite_variance_20261003/README.md}{Package README};
+\path{../investigations/sonin-critical-boundary/numerics/subpower_finite_variance_20261003/README.md}.
+Includes the small rational transfer and its exact record.
+\end{thebibliography}
+\end{document}
