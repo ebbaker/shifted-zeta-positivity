@@ -13,13 +13,15 @@ and the
 They verify parameter arithmetic and formal examples. They contain no actual
 zeta zeros and do not certify the required arithmetic cancellation estimate.
 
-All four sources use the Python standard library only. Run from this directory:
+The original four sources and the new Poisson-refinement checker use the
+Python standard library only. Run from this directory:
 
 ```sh
 python3 check_gaussian_preflight.py
 python3 check_explicit_gaussian_constants.py
 python3 check_gaussian_arithmetic_reduction.py
 python3 check_height_uniform_vaughan.py
+python3 check_poisson_refinement.py
 ```
 
 ## Initial diagnostics
@@ -78,6 +80,29 @@ support the analytic proofs; they do not evaluate the proposed enormous
 signed sums or prove the remaining cancellation inequalities. The
 [internal review](../../../reviews/height_adapted_zero_detection/gaussian_localization/ARITHMETIC_REDUCTION_REVIEW_20261004.md)
 records these limits.
+
+## Poisson refinement and conditional signed criteria
+
+`check_poisson_refinement.py` writes
+`poisson_refinement_record_20261004.json`. It is standalone: the recorded
+old-source hashes identify provenance and are not imported dependencies.
+It checks exact formal prime-log identities, complex rational cap
+identities, the full geometric mode sum, fractional Gaussian exponents,
+ray-rotation constants, and all-sample budget arithmetic. It also checks
+amplitude-derivative constants and the two conditional signed criteria,
+including the corrected exponential base certificate and secondary
+cutoff budgets, with synthetic partial-summation controls.
+
+Read the [Poisson refinement](../../../notes/height_adapted_zero_detection/gaussian_localization/POISSON_SMALL_DIVISOR_REFINEMENT_20261004.md),
+[basic signed attempt](../../../notes/height_adapted_zero_detection/gaussian_localization/SIGNED_DYADIC_ATTEMPT_20261004.md), and
+[cofactor-aware criterion](../../../notes/height_adapted_zero_detection/gaussian_localization/COFACTOR_AWARE_SIGNED_CRITERION_20261004.md)
+for the analytic arguments. The new deletion theorem has no Möbius
+cancellation hypothesis. The signed criteria have an unproved finite
+arithmetic hypothesis. This checker verifies their algebra and elementary
+budget seeds; it does not formally verify contour rotation or Poisson
+summation, evaluate the giant signed sums, or establish a zero-free box.
+The [internal review](../../../reviews/height_adapted_zero_detection/gaussian_localization/POISSON_AND_SIGNED_REVIEW_20261004.md)
+records the analytical checks and their limits.
 
 No large arrays, third-party PDFs, inverse-kernel quadrature data, or zero
 caches are stored. Follow the repository large-file policy if future

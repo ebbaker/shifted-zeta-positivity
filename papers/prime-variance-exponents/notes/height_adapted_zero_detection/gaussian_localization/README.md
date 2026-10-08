@@ -35,6 +35,17 @@ The [height-uniform Vaughan comparison](HEIGHT_UNIFORM_VAUGHAN_REDUCTION_2026100
 also makes the original scalar gate's derivative and cutoff error explicit,
 retaining its continuum, product caps, and full prime powers.
 
+The [Poisson continuation](POISSON_SMALL_DIVISOR_REFINEMENT_20261004.md)
+now enlarges the removable divisor range to exp(15.4k), with the same
+all-sample deletion allowance, and reduces the cofactor ceiling to
+exp(10.6k). The [signed block attempt](SIGNED_DYADIC_ATTEMPT_20261004.md)
+gives a complete conditional criterion and checks why elementary
+absolute and mean-square estimates do not close it. The
+[cofactor-aware continuation](COFACTOR_AWARE_SIGNED_CRITERION_20261004.md)
+then retains cofactor cancellation in the transfer, weakening a sufficient
+dyadic twisted-Möbius input from Y^(3/5) to Y^(13/20). That arithmetic
+input is unproved; these continuations do not exclude a new zero.
+
 Read the parent [overview](../README.md),
 [coefficient lemmas](../DETECTOR_LEMMAS_20261004.md), and
 [prioritized assessment](../PRIORITIZED_ASSESSMENT_20261004.md) for context.
@@ -42,7 +53,8 @@ The internal reviews cover the
 [opening analysis](../../../reviews/height_adapted_zero_detection/gaussian_localization/INITIAL_REVIEW_20261004.md),
 the
 [effective constants](../../../reviews/height_adapted_zero_detection/gaussian_localization/EXPLICIT_CONSTANTS_REVIEW_20261004.md), and the
-[arithmetic reductions](../../../reviews/height_adapted_zero_detection/gaussian_localization/ARITHMETIC_REDUCTION_REVIEW_20261004.md).
+[arithmetic reductions](../../../reviews/height_adapted_zero_detection/gaussian_localization/ARITHMETIC_REDUCTION_REVIEW_20261004.md), and the
+[Poisson and signed criteria](../../../reviews/height_adapted_zero_detection/gaussian_localization/POISSON_AND_SIGNED_REVIEW_20261004.md).
 The [numerics directory](../../../numerics/height_adapted_zero_detection/gaussian_localization/README.md)
 contains the initial floating diagnostics and the continuation's exact
 rational checks with outward elementary-function enclosures, formal signed
@@ -51,10 +63,10 @@ check algebra and budgets, not the actual zeta zero set or arithmetic saving.
 
 ## Next questions
 
-1. Test one complete signed dyadic estimate for the new finite Gaussian
-   target, preserving every product cap and specifying the full carrier
-   range. A short Poisson-saddle analysis may reduce the divisor cutoff
-   before any large numerical sweep.
+1. Establish the finite twisted-Möbius block condition in the cofactor-aware
+   criterion, or derive a stronger joint signed estimate that bypasses this
+   sufficient input. Retain every partial block and covered carrier. The
+   bounded absolute Poisson cutoff refinement is now complete.
 2. Run the smaller-guard Gaussian parameter trial through all finite-height
    budgets and compare its arithmetic cost with the proved baseline.
 3. Decide whether a count restricted to the right part of the strip can

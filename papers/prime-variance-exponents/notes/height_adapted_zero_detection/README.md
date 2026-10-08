@@ -37,6 +37,12 @@ giving a narrower signed arithmetic target. The
 provides explicit derivative and cutoff costs for the original scalar
 route. Both retained cancellation inequalities remain open.
 
+The [arithmetic reduction centered at the carrier](arithmetic_centered_at_carrier/README.md)
+now develops the original scalar's exact full-von-Mangoldt cofactor spectrum,
+with a uniform displaced-pole estimate, a complete spectral-tail bound, and
+an effective density-cancellation remainder. Its signed central arithmetic
+estimate remains open; see its opening note, review, and finite diagnostics.
+
 ## Aim and scope
 
 The intended outcome is an unconditional inequality for a complete prepared
