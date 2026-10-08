@@ -499,10 +499,10 @@ positive time floors still requires infinitely many shrinking-time regimes;
 no fixed finite certificate proves RH.
 
 The small standard-library script
-[check_normalized_heat_constants.py](../numerics/check_normalized_heat_constants.py)
+[check_normalized_heat_constants.py](../../numerics/check_normalized_heat_constants.py)
 checks the final rational implications in (22)–(26), including the explicit
 cosine/sine contradiction. Its saved
-[record](../numerics/normalized_heat_constant_record_20261008.json) reports only
+[record](../../numerics/normalized_heat_constant_record_20261008.json) reports only
 those exact arithmetic checks. The analytic disk estimates and the imported
 approximation theorem remain proof inputs; the script does not certify them
 by sampling. All deliverables are small source/record files under the

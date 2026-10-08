@@ -6,6 +6,15 @@ configured reasoning effort are not exposed and are not inferred.
 Same-model analysis and cross-review are internal checks, not independent
 specialist validation.
 
+**Correction and continuation, 8 October 2026.** Two missing conjugations
+in the definitions of the Gauss coefficient and transformed profile have
+been repaired below, following a rendered-PDF and TeX-source check. The
+[source audit and exact core involution](SHORT_FAMILY_CORE_INVOLUTION_20261008.md)
+record the error and its scope. The prior absolute bounds survive, while
+the exact identity requires the corrected definitions. The
+[latest continuation](SHORT_FAMILY_CONTINUATION_20261008.md) also removes
+a larger overlap sector and identifies an actual prime-column obstruction.
+
 ## Outcome and verification scope
 
 The small-cofactor obstruction in the
@@ -94,11 +103,11 @@ nonprincipal, so its zero frequency vanishes.
 
 ## 2. Exact transformed form after removing the diagonal
 
-Write \(W_0(t)=t^{-1/2}W(t)\). The source's Lemma 4.1 converts the
+Write \(W_0(t)=t^{-1/2}\overline{W(t)}\). The source's Lemma 4.1 converts the
 Möbius coefficients, on squarefree ideals, to
 
 \[
-a_\xi(n)=\alpha(n)\gamma_2(n)\xi(n),\qquad |a_\xi(n)|=1,
+a_\xi(n)=\overline{\alpha(n)}\gamma_2(n)\xi(n),\qquad |a_\xi(n)|=1,
 \tag{5}
 \]
 
@@ -131,7 +140,12 @@ retained, gives
 
 Every starred ideal is prime to \(S\) and has its fixed primary
 generator. The finite coefficients \(c_\xi\) depend only on the
-original fixed arithmetic data. The **complete** dual-row kernel is
+original fixed arithmetic data. Their convention is explicitly
+\[
+\overline{\nu(t)}G_{\rm ray}(t^{-1})=\sum_\xi c_\xi\xi(t),
+\]
+where \(G_{\rm ray}\) is the fixed ray-group function in source Lemma 4.1.
+The **complete** dual-row kernel is
 
 \[
 \mathcal K_f(m_1,m_2)=
@@ -436,14 +450,16 @@ unbounded heights enter.
 
 ## Finite verification
 
-[check_short_family_small_cofactor.py](../numerics/check_short_family_small_cofactor.py)
+[check_short_family_small_cofactor.py](../../numerics/check_short_family_small_cofactor.py)
 checks the exact local sextic ratio and shared-prime masks, vanishing
 of complete nonprincipal finite-character sums, and the rational
 exponents in (15), (20), (23), and (26). Its small record is
-[short_family_small_cofactor_check.json](../numerics/short_family_small_cofactor_check.json).
+[short_family_small_cofactor_check.json](../../numerics/short_family_small_cofactor_check.json).
 The finite residue-field tests check coefficient identities, not the
 two-dimensional analytic Poisson theorem or the missing estimate (25).
-The [scoped same-model review](../reviews/SHORT_FAMILY_SMALL_COFACTOR_REVIEW_20261008.md)
-checked the source normalization, full diagonal removal, shared-prime
-masks, block budgets, and the order of the sector reductions, with no
-blocking finding. No new zero-free region is certified.
+The [scoped same-model review](../../reviews/SHORT_FAMILY_SMALL_COFACTOR_REVIEW_20261008.md)
+checked full diagonal removal, shared-prime masks, block budgets, and
+the order of the sector reductions. Its original source-normalization
+acceptance missed the two conjugations corrected above; the
+[follow-up review](../../reviews/SHORT_FAMILY_CORE_AND_OVERLAP_REVIEW_20261008.md)
+checks the repaired conventions. No new zero-free region is certified.

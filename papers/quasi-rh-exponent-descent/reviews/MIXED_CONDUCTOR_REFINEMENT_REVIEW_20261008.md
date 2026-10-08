@@ -7,7 +7,7 @@ Review type: separate same-model derivation and script inspection by the
 integrating agent. This is not independent specialist refereeing, source
 proof replay, or formal verification.
 
-The [new note](../notes/MIXED_CONDUCTOR_REFINEMENT_20261008.md) gives a
+The [new note](../mixed_character_families/notes/MIXED_CONDUCTOR_REFINEMENT_20261008.md) gives a
 valid conditional refinement of the existing two-conductor reduction.
 No blocking mathematical issue was found in the stated scope. Its
 additional removable sector is not a bound for the complete residual.

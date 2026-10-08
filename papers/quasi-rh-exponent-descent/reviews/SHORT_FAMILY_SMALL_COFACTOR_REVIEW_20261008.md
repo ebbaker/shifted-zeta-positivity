@@ -5,7 +5,18 @@ Model: GPT-6 (Codex), inherited configuration; exact serving variant and
 configured reasoning effort are not exposed to this agent and are not inferred.
 This is same-model internal review, not independent specialist validation.
 
-Reviewed: [SHORT_FAMILY_SMALL_COFACTOR_20261008.md](../notes/SHORT_FAMILY_SMALL_COFACTOR_20261008.md).
+**Correction, 8 October 2026.** This review initially missed two
+conjugations because the plain PDF extraction dropped overbars. The
+[rendered-source follow-up](../short_families/notes/SHORT_FAMILY_CORE_INVOLUTION_20261008.md)
+verifies \(a_\xi=\overline\alpha\gamma_2\xi\) and
+\(W_0(t)=t^{-1/2}\overline{W(t)}\); the underlying note is now
+corrected. Its absolute estimates and masks are unaffected, but its
+original exact-identity normalization was wrong. The source-normalization
+acceptance below is valid only with these corrections. The
+[new scoped review](SHORT_FAMILY_CORE_AND_OVERLAP_REVIEW_20261008.md)
+records the repaired formulas and subsequent deductions.
+
+Reviewed: [SHORT_FAMILY_SMALL_COFACTOR_20261008.md](../short_families/notes/SHORT_FAMILY_SMALL_COFACTOR_20261008.md).
 The transformed formula, masks, conductor, second-Poisson scale, total-cost
 bound, and valid-range reuse of the source moment pass this scoped check.
 No new bound for the residual signed quadratic form is proved by the review.
@@ -144,4 +155,5 @@ Ran the accompanying finite check: 51,040 local mask comparisons, 56
 complete-period sums, and the rational exponent identities passed. These
 test local coefficients and bookkeeping only; they are not a numerical or
 formal proof of the analytic Poisson input or of the missing signed estimate.
-No outstanding correction was identified within the reviewed scope.
+The original pass missed the two conjugations documented in the correction
+above; both have now been repaired.

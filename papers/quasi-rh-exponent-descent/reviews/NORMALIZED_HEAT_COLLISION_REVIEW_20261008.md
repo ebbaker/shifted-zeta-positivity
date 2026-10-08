@@ -14,7 +14,7 @@ the note does not independently prove that all complex zeros above that
 height are real. No compact rectangle or shrinking-time limit is certified.
 
 Reviewed
-[NORMALIZED_HEAT_COLLISION_CRITERION_20261008.md](../notes/NORMALIZED_HEAT_COLLISION_CRITERION_20261008.md),
+[NORMALIZED_HEAT_COLLISION_CRITERION_20261008.md](../newman_collisions/notes/NORMALIZED_HEAT_COLLISION_CRITERION_20261008.md),
 its [constant check](../numerics/check_normalized_heat_constants.py), and
 its [record](../numerics/normalized_heat_constant_record_20261008.json).
 The exact rational check reproduces that record byte for byte. Its scope

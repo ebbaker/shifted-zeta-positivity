@@ -27,8 +27,8 @@ This continues
 [MIXED_CONDUCTOR_REFINEMENT_20261008.md](MIXED_CONDUCTOR_REFINEMENT_20261008.md).
 Use its operational `(d,x,r,m)` region, `s`, `ell=10^-6`, actual
 polynomials, and derivative-profile requirements. The original
-[amplification manuscript](../../quasi-rh-character-amplification/manuscript.tex)
-and its [energy note](../../quasi-rh-character-amplification/notes/SELECTOR_ENERGY_LOCALIZATION_20261008.md)
+[amplification manuscript](../../../quasi-rh-character-amplification/manuscript.tex)
+and its [energy note](../../../quasi-rh-character-amplification/notes/SELECTOR_ENERGY_LOCALIZATION_20261008.md)
 remain the source of the analytic assumptions.
 
 ## 1. The actual weighted plain frame
@@ -440,7 +440,7 @@ Run
 python3 papers/quasi-rh-exponent-descent/numerics/check_selected_inverse_distribution.py
 ```
 
-The [script](../numerics/check_selected_inverse_distribution.py) reuses
+The [script](../../numerics/check_selected_inverse_distribution.py) reuses
 the exact rational interval class in the previous cutoff script and
 checks all quadratic Gauss sums over `F_3`, `F_9`, and `F_27` with
 integer arithmetic in `Z[omega]`. Exact local sextic phase tests
@@ -448,7 +448,7 @@ also distinguish equal orders from equal characters and retain the
 zero mask when a phase cancels. These tests do not prove reciprocity;
 that input is explicitly attributed above. The script verifies the continuous
 repeated-character margin and the exponent budgets above. Its small
-[record](../numerics/selected_inverse_distribution_certificate_20261008.json)
+[record](../../numerics/selected_inverse_distribution_certificate_20261008.json)
 contains no large matrices and proves no asymptotic arithmetic moment.
 
 The next useful attempt should estimate the weighted **cyclic** product

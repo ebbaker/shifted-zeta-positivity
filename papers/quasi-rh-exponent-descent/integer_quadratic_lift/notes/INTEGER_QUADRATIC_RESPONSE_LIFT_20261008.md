@@ -10,7 +10,7 @@ There is an elementary family lift of the **complete integer prime
 response**, including every prime power. Odd square rows reproduce it up
 to an explicit error of size logarithmic in the row range. This resolves
 the identity-and-error part of Route E1 of the
-[continuation](CODEX_CONTINUATION_20261008.md), without replacing integer
+[continuation](../../notes/CODEX_CONTINUATION_20261008.md), without replacing integer
 coefficients by ideal coefficients. The required new mean square remains
 open. The classical squarefree quadratic large sieve does not supply it;
 its extension to these rows retains a term that gives no exponent gain.
@@ -38,7 +38,7 @@ S_1(X;\ell)=\sum_n\Lambda(n)\ell(n/X)=qX\lambda(X).        \tag{2}
 
 The probe \(\ell\) is supported in \([A,2B]\), has zero ordinary
 moment, and has the nonzero logarithmic moment specified in the
-[scalar detector](../../prime-variance-exponents/notes/programs/01_signed_arithmetic_covariance/SCALAR_DETECTOR_20261004.md).
+[scalar detector](../../../prime-variance-exponents/notes/programs/01_signed_arithmetic_covariance/SCALAR_DETECTOR_20261004.md).
 Its Mellin transform is nonzero at every forbidden zeta zero. These are
 inherited theorems, not consequences of character orthogonality.
 
@@ -114,7 +114,8 @@ gives
 \[
 \boxed{\quad
 \|F_X\|_2\le R(H)^{-1/2}
-\left(\sum_{\substack{u\le H\\u\ {m odd}}}\|T_u(X;\cdot)\|_2^2\right)^{1/2}
+\left(\sum_{\substack{u\le H\\u\ {
+m odd}}}\|T_u(X;\cdot)\|_2^2\right)^{1/2}
 +C_w\log(2H).\quad}                                      \tag{6}
 \]
 
@@ -129,7 +130,8 @@ and every \(\varepsilon>0\), that
 
 \[
 \mathcal E_w(X,X^h):=
-\sum_{\substack{u\le X^h\\u\ {m odd}}}\|T_u(X;\cdot)\|_2^2
+\sum_{\substack{u\le X^h\\u\ {
+m odd}}}\|T_u(X;\cdot)\|_2^2
 \ll_{w,h,a,\varepsilon}X^{1+a+h+\varepsilon}               \tag{7}
 \]
 
@@ -152,7 +154,8 @@ The weaker scalar moment hypothesis
 
 \[
 \mathcal E_L(X,X^h):=
-\sum_{\substack{u\le X^h\\u\ {m odd}}}|S_u(X;\ell)|^2
+\sum_{\substack{u\le X^h\\u\ {
+m odd}}}|S_u(X;\ell)|^2
 \ll X^{1+a+h+\varepsilon}                                \tag{9}
 \]
 
@@ -189,7 +192,8 @@ The same bound (4) applies. Define
 
 \[
 \mathcal M_L(X,H)=
-\sum_{\substack{a\le H\\a\ {m odd\ squarefree}}}
+\sum_{\substack{a\le H\\a\ {
+m odd\ squarefree}}}
 R(H/a)|S_a(X;L)|^2.
 \]
 
@@ -205,7 +209,8 @@ particular, the term \(R(H)|S_1|^2\) is an actual coherent component of
 the moment, not a fluctuation that averaging can remove. A theorem about
 squarefree or primitive nonprincipal rows does not control it. The square
 rows alone essentially restate the target: if
-\(\mathcal E_{\rm sq}=\sum_{b\ {m odd},\,b^2\le H}|S_{b^2}|^2\),
+\(\mathcal E_{\rm sq}=\sum_{b\ {
+m odd},\,b^2\le H}|S_{b^2}|^2\),
 then
 
 \[
@@ -225,7 +230,8 @@ The finite scalar moment expands exactly as
 \mathcal E_L(X,H)=\sum_{n,m\ge2}\Lambda(n)\Lambda(m)
 L(n/X)\overline{L(m/X)}\,\mathcal K_H(n,m),
 \quad
-\mathcal K_H(n,m)=\sum_{\substack{u\le H\\u\ {m odd}}}
+\mathcal K_H(n,m)=\sum_{\substack{u\le H\\u\ {
+m odd}}}
 \left(\frac{nm}{u}\right).                               \tag{13}
 \]
 
@@ -235,7 +241,8 @@ the full product window, continuum preparation, and prime-power terms
 are retained. In particular,
 
 \[
-\mathcal K_H(p,p)=\#\{u\le H:u\ {m odd},\ p\nmid u\},
+\mathcal K_H(p,p)=\#\{u\le H:u\ {
+m odd},\ p\nmid u\},
 \]
 
 which is not the unmasked odd-row count. Reality or positivity of the
@@ -244,7 +251,7 @@ A useful arithmetic estimate would bound this whole form with its actual
 profile signs, to the scale (7) or (9).
 
 The fixed-delay scalar from the
-[arithmetic feedback note](ARITHMETIC_FEEDBACK_AND_RESONANCE_20261008.md)
+[arithmetic feedback note](../../fixed_scale_descent/notes/ARITHMETIC_FEEDBACK_AND_RESONANCE_20261008.md)
 also lifts with no additional identity problem. For fixed \(c>1\),
 \(0<r<1\), define \(L(v)=\ell(v)-rc^\beta\ell(cv)\). Then
 
@@ -377,7 +384,7 @@ target is \(X^{2+\varepsilon}\), compared with the available
 not a small correction to the classical theorem. The principal component
 (12) is an obligatory check on every proposed argument.
 
-The [finite check script](../numerics/check_integer_quadratic_lift.py)
+The [finite check script](../../numerics/check_integer_quadratic_lift.py)
 verifies the Jacobi masks, unique squarefree decomposition, exact
 prime-power deletion coefficients, full signed Gram identity, and
 exponent bookkeeping using integer and rational arithmetic. It includes

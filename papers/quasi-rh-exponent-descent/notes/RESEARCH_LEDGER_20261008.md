@@ -30,6 +30,21 @@ quasi-RH implies RH.
 | Actual quadratic prime-pair absolute-majorant obstruction | New positive-Gram deduction, using the standard prime number theorem | Excludes termwise absolute estimation of this exact target; does not disprove its signed bound |
 | Polymath effective heat approximation, Theorem 1.3 and equations (6)--(24) | Published theorem and constants checked; proof not replayed | Normalized full-disk and derivative errors, and explicit real-collision exclusion for \(t\in[\varepsilon,1/2]\), \(|x|\ge e^{64/\varepsilon}\) |
 
+## Focused short-family continuation
+
+| Input or claim | Status | What it licenses |
+| --- | --- | --- |
+| Corrected Gauss coefficient and conjugate profile | Rechecked against October 5 TeX and rendered PDF; two previously missed overbars repaired | Exact core involution; prior absolute bounds unchanged |
+| All-scale primitive completion and gcd counting | New deduction from imported primitive Poisson and elementary lattice counting | Control of \(BF^2G^2\ge D^{1-a}\) with complete row kernels |
+| Prime-selected coprime-core lower bound | New deduction using positivity, explicit sixth powers, and the prime ideal theorem | Rules out target-sized bounds for every separately selected prime/composite piece; no counterexample to the full moment |
+| Composite replication and inherited order reduction | Exact masks, finite reuse, Cauchy--Schwarz | Same extraction floor; no additional power gain without a new moment input |
+| De Faveri, arXiv:2610.04045v1, Theorem 1.1 | Newly imported preprint theorem; statement and family transfer checked, deep proof not replayed | Generic all-row bound \(\mathfrak M\ll D^{1+\varepsilon}H^{1/6}\) for \(H\le D\), and extraction floor one |
+
+See the [continuation](../short_families/notes/SHORT_FAMILY_CONTINUATION_20261008.md) and
+[scoped review](../reviews/SHORT_FAMILY_CORE_AND_OVERLAP_REVIEW_20261008.md).
+All-power-row counts and finite checks do not supply the missing signed
+low-overlap estimate or a new boundary.
+
 ## Logical separation
 
 1. Zeta-only quasi-RH is a bound on the real parts of zeta zeros. It supplies
@@ -56,6 +71,6 @@ quasi-RH implies RH.
    operator bound is not failure of the original signed arithmetic target.
 
 The [third continuation results](THIRD_CONTINUATION_RESULTS_20261008.md)
-index the current notes, checked conclusions, and next analytic tasks.
+index the preceding notes, checked conclusions, and next analytic tasks.
 The [second continuation results](SECOND_CONTINUATION_RESULTS_20261008.md)
 retain the preceding extraction, conductor, lift, and truncation deductions.

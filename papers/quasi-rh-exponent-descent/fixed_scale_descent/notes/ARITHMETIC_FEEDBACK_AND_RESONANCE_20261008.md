@@ -346,14 +346,14 @@ and states a falsifiable criterion for evaluating a proposed new mechanism.
 
 ## Source links and verification scope
 
-- [Scalar detector](../../prime-variance-exponents/notes/programs/01_signed_arithmetic_covariance/SCALAR_DETECTOR_20261004.md),
+- [Scalar detector](../../../prime-variance-exponents/notes/programs/01_signed_arithmetic_covariance/SCALAR_DETECTOR_20261004.md),
   sections 2--4 and 6: scalar normalization, noncancellation, cap and strip equivalence.
-- [Prime-discrepancy centering](../../prime-variance-exponents/notes/programs/01_signed_arithmetic_covariance/PRIME_DISCREPANCY_CENTERING_20261004.md),
+- [Prime-discrepancy centering](../../../prime-variance-exponents/notes/programs/01_signed_arithmetic_covariance/PRIME_DISCREPANCY_CENTERING_20261004.md),
   sections 3 and 5: exact density remainder and improved scalar comparison.
-- [Mixed discrepancy feedback](../../prime-variance-exponents/notes/programs/01_signed_arithmetic_covariance/MIXED_DISCREPANCY_FEEDBACK_20261004.md),
+- [Mixed discrepancy feedback](../../../prime-variance-exponents/notes/programs/01_signed_arithmetic_covariance/MIXED_DISCREPANCY_FEEDBACK_20261004.md),
   sections 2--3, 5--8: complete increment identity, aggregate decay,
   deterministic resonance calculations and exact coefficient closure.
-- [Aggregated-kernel continuation](../../prime-variance-exponents/notes/programs/01_signed_arithmetic_covariance/AGGREGATED_KERNEL_CONTINUATION_20261004.md),
+- [Aggregated-kernel continuation](../../../prime-variance-exponents/notes/programs/01_signed_arithmetic_covariance/AGGREGATED_KERNEL_CONTINUATION_20261004.md),
   section 6: fixed-cutoff multiplier and warning about moving cutoffs.
 
 The proofs above were checked algebraically against those identities. No

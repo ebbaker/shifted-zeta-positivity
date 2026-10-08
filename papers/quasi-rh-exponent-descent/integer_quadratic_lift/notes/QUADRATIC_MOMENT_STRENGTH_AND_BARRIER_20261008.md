@@ -53,7 +53,7 @@ being nonzero at zeta zeros. If
 \[
 \widehat\ell(s)=G(1/2-s)\frac{2^{s+2}-1}{s+2}.              \tag{3}
 \]
-The [parent manuscript](../../prime-variance-exponents/manuscript.tex),
+The [parent manuscript](../../../prime-variance-exponents/manuscript.tex),
 Lemmas 2.1 and 2.2, gives
 \(G(z)=z(z^2-1/4)H(z)/\sqrt\nu\), with every zero of \(H\) purely
 imaginary. Hence
@@ -313,7 +313,7 @@ even for a tiny proposed boundary improvement. It remains a valid
 alternative, but should not be described as an inexpensive consequence
 of the existing zeta strip.
 
-The [finite check](../numerics/check_quadratic_moment_barrier.py) verifies
+The [finite check](../../numerics/check_quadratic_moment_barrier.py) verifies
 the exact masked squarefree transform coefficient by coefficient,
 the positive-Gram inequality behind (14), and rational instances of the
 piecewise envelope and its sharp abstract model. Square-root weights

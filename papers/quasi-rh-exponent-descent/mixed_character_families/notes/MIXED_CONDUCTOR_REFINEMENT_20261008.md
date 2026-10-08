@@ -17,13 +17,13 @@ This is a conditional sector estimate, not the missing full mixed bound.
 No new zero-free boundary, exponent descent, or RH implication follows.
 
 The inputs are the current
-[amplification manuscript](../../quasi-rh-character-amplification/manuscript.tex),
-[two-ratio reduction](../../quasi-rh-character-amplification/notes/SELECTOR_PRESERVING_PLAIN_CONDUCTOR_20261008.md),
-[proved mixed subcases](../../quasi-rh-character-amplification/notes/SELECTOR_PRESERVING_SUBCASES_20261008.md),
-[energy localization](../../quasi-rh-character-amplification/notes/SELECTOR_ENERGY_LOCALIZATION_20261008.md),
-and [scoped review](../../quasi-rh-character-amplification/reviews/SELECTOR_PRESERVING_REVIEW_20261008.md).
+[amplification manuscript](../../../quasi-rh-character-amplification/manuscript.tex),
+[two-ratio reduction](../../../quasi-rh-character-amplification/notes/SELECTOR_PRESERVING_PLAIN_CONDUCTOR_20261008.md),
+[proved mixed subcases](../../../quasi-rh-character-amplification/notes/SELECTOR_PRESERVING_SUBCASES_20261008.md),
+[energy localization](../../../quasi-rh-character-amplification/notes/SELECTOR_ENERGY_LOCALIZATION_20261008.md),
+and [scoped review](../../../quasi-rh-character-amplification/reviews/SELECTOR_PRESERVING_REVIEW_20261008.md).
 This implements Route A of the
-[continuation](CODEX_CONTINUATION_20261008.md).
+[continuation](../../notes/CODEX_CONTINUATION_20261008.md).
 
 ## 1. Dependency and quantifier ledger
 
@@ -176,7 +176,7 @@ Strict boundaries in (2) mean limiting corner values, rather than a
 claim that these endpoints occur at a permitted selected rectangle.
 
 This is not a floating scan. The standard-library script
-[check_mixed_conductor_refinement.py](../numerics/check_mixed_conductor_refinement.py)
+[check_mixed_conductor_refinement.py](../../numerics/check_mixed_conductor_refinement.py)
 uses automatic differentiation in rational interval arithmetic on
 `32 x 32` closed cells covering the whole `(d,x)` rectangle. Its
 division operation fails if a denominator interval contains zero.
@@ -367,7 +367,7 @@ python3 papers/quasi-rh-exponent-descent/numerics/check_mixed_conductor_refineme
 ```
 
 The saved output is
-[mixed_conductor_refinement_certificate_20261008.json](../numerics/mixed_conductor_refinement_certificate_20261008.json).
+[mixed_conductor_refinement_certificate_20261008.json](../../numerics/mixed_conductor_refinement_certificate_20261008.json).
 It certifies continuous finite-parameter algebra and the stated rational
 inequalities, not the unproved mixed arithmetic estimate. All generated
 files are small; no manuscript, historical note, or third-party PDF

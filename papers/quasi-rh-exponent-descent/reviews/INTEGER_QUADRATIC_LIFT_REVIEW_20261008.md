@@ -8,10 +8,10 @@ specialist validation.
 
 ## Scope and finding
 
-Reviewed [INTEGER_QUADRATIC_RESPONSE_LIFT_20261008.md](../notes/INTEGER_QUADRATIC_RESPONSE_LIFT_20261008.md),
+Reviewed [INTEGER_QUADRATIC_RESPONSE_LIFT_20261008.md](../integer_quadratic_lift/notes/INTEGER_QUADRATIC_RESPONSE_LIFT_20261008.md),
 including its conductor localization in Section 7, against the inherited
 [scalar detector](../../prime-variance-exponents/notes/programs/01_signed_arithmetic_covariance/SCALAR_DETECTOR_20261004.md)
-and [arithmetic feedback](../notes/ARITHMETIC_FEEDBACK_AND_RESONANCE_20261008.md)
+and [arithmetic feedback](../fixed_scale_descent/notes/ARITHMETIC_FEEDBACK_AND_RESONANCE_20261008.md)
 normalizations. The classical quadratic large-sieve statement was checked
 in the indexed primary-source text of Heath-Brown's
 [Theorem 1, p. 237](https://matwbn.icm.edu.pl/ksiazki/aa/aa72/aa7234.pdf).

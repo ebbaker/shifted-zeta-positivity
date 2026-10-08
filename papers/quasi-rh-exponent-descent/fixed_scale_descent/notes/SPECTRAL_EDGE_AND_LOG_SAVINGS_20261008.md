@@ -11,7 +11,7 @@ The abstract countermodel is not a statement about actual zeta zeros.
 ## 1. Inputs and scope
 
 Use the fixed response, plus-exponent transform, and unnormalized variance
-from the [prime-variance manuscript](../../prime-variance-exponents/manuscript.tex):
+from the [prime-variance manuscript](../../../prime-variance-exponents/manuscript.tex):
 
 \[
 G(z)=\int g(v)e^{zv}\,dv,\qquad

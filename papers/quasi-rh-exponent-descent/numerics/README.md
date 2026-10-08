@@ -57,3 +57,25 @@ states the analytic deductions and links the scoped reviews. In particular,
 the effective large-height conclusion is proved analytically from the
 imported approximation theorem; its rational constant script alone does
 not prove that conclusion.
+
+## Focused short-family continuation
+
+Run [check_short_family_continuation.py](check_short_family_continuation.py)
+with Python 3.10 or later. It prints JSON and writes no files. The retained
+[record](short_family_continuation_record_20261008.json) contains 9,356
+passing exact assertions and replays byte-for-byte.
+
+The checks cover rational block budgets and inherited family exponents,
+324 rational heights for the generic sieve comparison, 780 complex weight
+vectors, a nonconstant Eisenstein angular-phase witness, and exact finite
+Gauss/Fourier identities over the fields of sizes 7, 13, and 19. Complex
+profiles and nonreal characters detect the wrong conjugation orientations.
+All arithmetic uses fractions and finite cyclotomic polynomial rings;
+there is no floating-point tolerance.
+
+These checks certify only the displayed finite identities and exponent
+bookkeeping. They do not prove the number-field Poisson formula, the
+imported sextic large sieve, the prime ideal theorem, or the missing
+asymptotic signed estimate. See the
+[continuation](../short_families/notes/SHORT_FAMILY_CONTINUATION_20261008.md) and
+[scoped review](../reviews/SHORT_FAMILY_CORE_AND_OVERLAP_REVIEW_20261008.md).

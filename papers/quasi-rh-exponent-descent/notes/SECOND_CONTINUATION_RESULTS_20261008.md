@@ -65,7 +65,7 @@ to control those actual-coefficient blocks at one useful fixed
 \(h<9/10\), with \(a<3/4-5h/6\). An all-scale supremum is no longer
 a prerequisite for extraction.
 
-[Derivation](SHORT_FAMILY_DESCENT_REFINEMENT_20261008.md) ·
+[Derivation](../short_families/notes/SHORT_FAMILY_DESCENT_REFINEMENT_20261008.md) ·
 [review](../reviews/SHORT_FAMILY_REFINEMENT_REVIEW_20261008.md).
 
 ## 2. A further mixed-conductor sector is removable
@@ -106,7 +106,7 @@ estimate that uses the distribution of this selected inverse mass among
 ratio phases, rather than just its total size. Derivative-profile
 uniformity and actual witness losses remain explicit conditions.
 
-[Derivation](MIXED_CONDUCTOR_REFINEMENT_20261008.md) ·
+[Derivation](../mixed_character_families/notes/MIXED_CONDUCTOR_REFINEMENT_20261008.md) ·
 [review](../reviews/MIXED_CONDUCTOR_REFINEMENT_REVIEW_20261008.md).
 
 ## 3. The complete integer response has an exact family lift
@@ -149,7 +149,7 @@ For \(h=7/5\), this asks for a weighted moment through conductor
 the desired improved zeta bound. The lift resolves the identity and
 error-budget task, while exposing rather than hiding that coherent term.
 
-[Derivation](INTEGER_QUADRATIC_RESPONSE_LIFT_20261008.md) ·
+[Derivation](../integer_quadratic_lift/notes/INTEGER_QUADRATIC_RESPONSE_LIFT_20261008.md) ·
 [review](../reviews/INTEGER_QUADRATIC_LIFT_REVIEW_20261008.md).
 
 ## 4. Finite theta cutoffs cannot supply an all-height Wronskian sign
@@ -182,7 +182,7 @@ approximation with complex-neighborhood and derivative error control.
 The diverging height coverage as positive time tends to zero remains an
 independent obstacle.
 
-[Derivation](ZETA_COLLISION_ARITHMETIC_20261008.md) ·
+[Derivation](../newman_collisions/notes/ZETA_COLLISION_ARITHMETIC_20261008.md) ·
 [review](../reviews/ZETA_COLLISION_ARITHMETIC_REVIEW_20261008.md).
 
 ## Verification and next continuation

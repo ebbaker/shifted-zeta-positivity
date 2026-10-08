@@ -20,7 +20,7 @@ valid on prescribed compact rectangles.
 
 ## 1. Exact arithmetic quantities
 
-Use the same normalization as the [parent bridge](../../prime-variance-exponents/notes/QUASI_RH_NEWMAN_BRIDGE_20261008.md):
+Use the same normalization as the [parent bridge](../../../prime-variance-exponents/notes/QUASI_RH_NEWMAN_BRIDGE_20261008.md):
 
 \[
  H_t(x)=\int_0^\infty e^{tu^2}\Phi(u)\cos(xu)\,du,
@@ -378,9 +378,9 @@ Run
 python3 papers/quasi-rh-exponent-descent/numerics/zeta_collision_arithmetic_check.py
 ```
 
-The [script](../numerics/zeta_collision_arithmetic_check.py) uses only the
+The [script](../../numerics/zeta_collision_arithmetic_check.py) uses only the
 Python standard library and writes a small JSON record to stdout. The saved
-[record](../numerics/zeta_collision_arithmetic_record_20261008.json) records
+[record](../../numerics/zeta_collision_arithmetic_record_20261008.json) records
 panel doubling, center values, and floating evaluations of the analytic error
 formulas. Simpson quadrature roundoff and discretization are **not enclosed**.
 

@@ -49,7 +49,7 @@ would supply the proposed moment and hence the previously proved extraction
 to \((1+a)/2+5h/12\). For instance, \(h=8/9,a=0\) would give
 \(47/54=7/8-1/216\). No such residual estimate is proved.
 
-[Derivation](SHORT_FAMILY_SMALL_COFACTOR_20261008.md) ·
+[Derivation](../short_families/notes/SHORT_FAMILY_SMALL_COFACTOR_20261008.md) ·
 [source-scoped review](../reviews/SHORT_FAMILY_SMALL_COFACTOR_REVIEW_20261008.md).
 
 ## 2. Mixed family: retain cyclic phases
@@ -92,7 +92,7 @@ over three pairwise inequivalent primitive characters. This is still a
 new arithmetic obligation; the operator target is sufficient and stronger
 than the original fixed-vector mixed-energy target.
 
-[Derivation](SELECTED_INVERSE_DISTRIBUTION_20261008.md) ·
+[Derivation](../mixed_character_families/notes/SELECTED_INVERSE_DISTRIBUTION_20261008.md) ·
 [scoped review](../reviews/SELECTED_INVERSE_DISTRIBUTION_REVIEW_20261008.md) ·
 [local-character audit](../reviews/PRIMITIVE_CHARACTER_FIBER_REVIEW_20261008.md).
 
@@ -123,7 +123,7 @@ misses the target \(17/10\) by \(7/40\). A sharp abstract array verifies
 the limitation of those two scalar envelopes; it is not an arithmetic
 counterexample to the desired moment.
 
-[Derivation](QUADRATIC_MOMENT_STRENGTH_AND_BARRIER_20261008.md) ·
+[Derivation](../integer_quadratic_lift/notes/QUADRATIC_MOMENT_STRENGTH_AND_BARRIER_20261008.md) ·
 [scoped review](../reviews/QUADRATIC_MOMENT_BARRIER_REVIEW_20261008.md).
 
 ## 4. Heat flow: a complete normalized criterion
@@ -153,7 +153,7 @@ been certified. The unhandled range grows without bound as
 \(\varepsilon\downarrow0\), so this does not exclude a positive Newman
 threshold.
 
-[Derivation](NORMALIZED_HEAT_COLLISION_CRITERION_20261008.md) ·
+[Derivation](../newman_collisions/notes/NORMALIZED_HEAT_COLLISION_CRITERION_20261008.md) ·
 [source and constant review](../reviews/NORMALIZED_HEAT_COLLISION_REVIEW_20261008.md).
 
 ## 5. Next bounded investigations

@@ -18,8 +18,8 @@ hypothesis and without an initial zero strip.
 This is a new deduction from elementary replication and the existing
 mask identity, not a proof of a short-family moment or a new zero-free
 region. It sharpens the analytic obligation for Route B. The
-[earlier transfer note](../../quasi-rh-character-amplification/notes/CHARACTER_FAMILY_TRANSFER_20261008.md)
-and [continuation](CODEX_CONTINUATION_20261008.md), equations (13)--(19),
+[earlier transfer note](../../../quasi-rh-character-amplification/notes/CHARACTER_FAMILY_TRANSFER_20261008.md)
+and [continuation](../../notes/CODEX_CONTINUATION_20261008.md), equations (13)--(19),
 are the starting records.
 
 | Ingredient | Status used here |
@@ -366,9 +366,9 @@ for the extraction proved here.
 
 The exact exponent recurrence, the finite chains, the error map, and
 the unrestricted-coefficient threshold are checked by
-[check_short_family_refinement.py](../numerics/check_short_family_refinement.py),
+[check_short_family_refinement.py](../../numerics/check_short_family_refinement.py),
 with the small record
-[short_family_refinement_check.json](../numerics/short_family_refinement_check.json).
+[short_family_refinement_check.json](../../numerics/short_family_refinement_check.json).
 These are algebraic checks, not asymptotic arithmetic evidence.
 
 This note proves conditional extraction and an equivalence of obligations.

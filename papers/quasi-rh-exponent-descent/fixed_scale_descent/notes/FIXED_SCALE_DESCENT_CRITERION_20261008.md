@@ -13,7 +13,7 @@ An improved constant in a single asymptotic upper bound would not suffice.
 ## The normalized energy
 
 Use the fixed real probe and prime response of the
-[prime-variance manuscript](../../prime-variance-exponents/manuscript.tex),
+[prime-variance manuscript](../../../prime-variance-exponents/manuscript.tex),
 and write
 
 \[
