@@ -47,9 +47,16 @@ $O_\ee(XV^{1/2+\ee})$ pairs of ideals of norm $O(X)$ whose sextic
 ratio character has conductor norm at most $V$. The reduction preserves
 all zero-extension masks and the actual M\"obius divisor coefficients.
 For the parameter range considered here, the discarded terms have
-exponent margin at least $1/6250$. We identify the remaining signed
+exponent margin at least $1/6250$. A further reduction keeps the row
+selector and removes small conductors of the plain-variable ratio,
+while increasing the removable total-conductor range. For the source's
+physical prime slots, a positive interpolation also proves the mixed
+bound when the plain length exponent is at least $21/50$.
+We identify the remaining signed
 correlation and explain why a direct use of the existing marked inverse
-recursion does not estimate it. We also calculate the conditional
+recursion does not estimate it. A principal-row test exposes an unmet
+budget for complete-family enlargement, while an elementary mean-zero
+profile subcase controls its sixth-power layer. We also calculate the conditional
 row-count consequence of a $1/5000$ saving in this mixed moment.
 The remaining signed estimate is open; no new zero-free region is
 established.
@@ -565,6 +572,117 @@ Taking absolute values only for these discarded terms proves
 height factors.
 \end{proof}
 
+\section{A refinement with two ratio conductors}\label{sec:two-ratios}
+
+Apply the definitions \eqref{eq:ratio-data} to the plain ideals $k,k'$
+alone and denote the resulting data by
+$c_{\rm pl},f_{\rm pl},E_{\rm pl}$. These are distinct from the
+total-column data $c(n,n'),f(n,n'),E(n,n')$ and from the primitive
+conductor of a physical row. The inverse and prime variables can
+introduce or cancel local phases, so neither ratio conductor generally
+determines the other.
+
+\begin{lemma}[Weighted plain pairs]\label{lem:weighted-plain}
+Let $w(u)\ge0$ have finite mass $\mathcal A=\sum_u w(u)$.
+Write $a(k)=\nu(k)B(\Nm k/N)$ with its original zeros, and set
+\[
+\mathcal K_w^{\rm pl}(k,k')=
+ \sum_u w(u)\chi_{c_{\rm pl}(k,k')}(u)^{s_\chi}
+ \ind_{(u,E_{\rm pl}(k,k'))=1}.
+\]
+For $V\ge1$,
+\begin{equation}\label{eq:weighted-plain}
+\frac1N\sum_{\Nm f_{\rm pl}(k,k')\le V}
+ |a(k)a(k')\mathcal K_w^{\rm pl}(k,k')|
+\ll_\ee \mathcal A V^{1/2+\ee}N^\ee\HH^{A_0}.
+\end{equation}
+The same bound holds with additional plain-pair restrictions.
+\end{lemma}
+\begin{proof}
+The exact local identity in Lemma~\ref{lem:ratio} retains the displayed
+mask. Each zero-extended character has modulus at most one, so the
+weighted kernel is bounded by $\mathcal A$. Apply
+Lemma~\ref{lem:pair-count} at column scale $N$, and use the bounded
+annular coefficients. Additional restrictions reduce this positive
+majorant.
+\end{proof}
+
+Take $w(u)=\ind_{\CC_+}(u)|M_r(u)Q_I(u)|^2$. Its mass is
+$O_\ee(U^{1+\ee}\HH^{A_0})$ by Hypothesis~\ref{hyp:inverse}.
+The entire signed low-plain-conductor contribution, including the
+plain diagonal, is therefore $O_\ee(U^{1+\ee}V^{1/2+\ee}\HH^{A_0})$.
+This estimate assembles the inverse and prime variables into a positive
+weight before taking absolute values; it is not a termwise bound for
+their expanded tuples.
+
+Put $\gamma=1/6250$, and define
+\begin{align}
+v_{\rm pl}&=2\delta m-\frac9{12500},\qquad
+ V_{\rm pl}=U^{v_{\rm pl}},\label{eq:plain-threshold}\\
+\tau_0&=2\delta\left(m+\frac{23}{20}\right)
+ -\frac14-\frac9{12500},\qquad
+ V_{\rm tot}=U^{\tau_0}.\label{eq:total-threshold}
+\end{align}
+Since $2(\eta+\gamma)=9/12500$, these satisfy
+\[
+1+v_{\rm pl}/2=K-\gamma,\qquad
+\frac98-\frac{23\delta}{20}+\tau_0/2=K-\gamma.
+\]
+Their ranges on \eqref{eq:ranges} are
+\begin{equation}\label{eq:threshold-ranges}
+\frac{3231}{12500}\le v_{\rm pl}\le\frac{5241}{12500},\qquad
+\frac{2614}{3125}\le\tau_0\le\frac{14191}{12500}.
+\end{equation}
+In particular $\tau_0\ge0.83648>4/5$. A ratio conductor of columns
+is not bounded by the physical row scale, so $\tau_0>1$ causes no
+inconsistency.
+
+Define the further restricted, exact signed sum
+\begin{equation}\label{eq:Tjoint}
+\mathcal T_{\rm joint}=\frac1X
+\sum_{\substack{\st,\st'\\
+ \Nm f_{\rm pl}(k,k')>V_{\rm pl}\\
+ \Nm f(n(\st),n(\st'))>V_{\rm tot}}}
+b(\st)\conj{b(\st')}\,
+\mathcal K_{\CC_+}\bigl(c(n,n');E(n,n')\bigr).
+\end{equation}
+The condition $k\ne k'$ is automatic here.
+
+\begin{theorem}[Two-ratio localization]\label{thm:two-ratios}
+Under the same hypotheses as Theorem~\ref{thm:main},
+\begin{equation}\label{eq:two-ratio-reduction}
+\sum_{u\in\CC}|M_rS_mQ_I|^2
+=\Rea\mathcal T_{\rm joint}
++O_\ee(U^{K-1/6250+\ee}\HH^{A_0}).
+\end{equation}
+\end{theorem}
+\begin{proof}
+Remove $\CC_-$ using \eqref{eq:low-row}. On $\CC_+$ expand only
+the plain factor and remove its entire block $\Nm f_{\rm pl}\le
+V_{\rm pl}$ using \eqref{eq:weighted-plain}. Expand the remaining
+block in the inverse and prime variables. Proposition~\ref{prop:small}
+and Hypothesis~\ref{hyp:count} bound the part with
+$\Nm f(n,n')\le V_{\rm tot}$ by $O_\ee(U^{K-\gamma+\ee}\HH^{A_0})$;
+the extra plain-pair restriction only reduces its positive majorant.
+This leaves \eqref{eq:Tjoint}. All pair regions are swap-invariant,
+so their complete signed sums are real.
+\end{proof}
+
+No total-conductor condition was inserted into the positive inverse
+weight. The proof removes disjoint contributions in the stated order.
+Small plain-ratio conductor can occur for distinct $k,k'$ while the
+inverse variables make the total ratio conductor large; this removes
+additional terms from the earlier retained sum. The strengthened open
+input is now
+\begin{equation}\label{eq:joint-open}
+\Rea\mathcal T_{\rm joint}
+\le C_\ee U^{1+\delta m-1/5000+\ee}\HH^{A_0}.
+\end{equation}
+It remains equivalent at this scale to the mixed bound. Positivity of
+\eqref{eq:two-ratio-reduction}'s left side bounds the negative part by
+the smaller error, so a modulus bound for the whole remaining sum is
+also sufficient. No individual-pair cancellation is asserted.
+
 \section{Uniformity and the row selector}\label{sec:uniformity}
 
 The exact coefficient expansion is made at one fixed set of separating
@@ -597,6 +715,197 @@ by Cauchy--Schwarz before applying the single-presentation estimate.
 The exact equality \eqref{eq:main} is stated for the single product
 \eqref{eq:product}; it does not omit cross-presentation terms from an
 unexpanded finite sum.
+
+\subsection{The principal-row feasibility test}\label{sec:selector-test}
+
+Let $\Phi$ be a nonnegative smooth compactly supported annular
+majorant for the physical norm interval. The complete-family route
+would require the stronger positive estimate
+\begin{equation}\label{eq:complete-enlargement}
+\sum_{u\ne0}\Phi(\Nm u/U)|M_r(u)S_m(u)Q_I(u)|^2
+\ll_\ee U^{K+\ee}\HH^{A_0}.
+\end{equation}
+This adds principal and non-sixth-power-free rows. We test the
+principal presentation $\nu=1$, retaining its fixed exclusions.
+For each integral ideal $a$, choose a generator $\alpha_a$. Since
+the Eisenstein ring has six units, $\alpha_a^6$ is independent of
+that choice, and different ideals give different sixth powers.
+Thus the exact positive sixth-power contribution is
+\begin{equation}\label{eq:sixth-layer}
+E_6=\sum_a\Phi((\Nm a)^6/U)
+ |M_r^{(a)}|^2|S_m^{(a)}Q_I^{(a)}|^2.
+\end{equation}
+There is no extra factor six. The superscript means that every
+original coefficient and fixed exclusion is retained and that the
+additional masks are $(a,d)=1$, $(a,k)=1$, and $p_i\nmid a$.
+This follows from $\chi_n(\alpha_a^6)=\ind_{(a,n)=1}$.
+These rows have primitive inducing conductor one; the mask radical
+is not a primitive conductor, nor is it a column-ratio conductor.
+
+Put $\beta_B=\int_0^\infty B(y)\,dy$, including the actual norm
+twist. With $R_a$ the radical containing $a$ and the fixed excluded
+primes, smooth lattice counting and inclusion--exclusion give
+\begin{align}
+S_m^{(a)}&=N^{1/2}c(a)\beta_B
+ +O_\ee(N^{-1/2}U^\ee\HH^{A_0}),\label{eq:principal-plain}\\
+c(a)&=\mathop{\rm Res}_{s=1}\zeta_F(s)
+ \prod_{p\mid R_a}(1-(\Nm p)^{-1}).\nonumber
+\end{align}
+Indeed the unmasked smooth ideal sum has its lattice area term and
+an $O(\HH^{A_0})$ error on scales at least one. For $e\mid R_a$,
+the residual scale $N/\Nm e$ exceeds one because
+$\Nm e\ll U^{1/6}$ and $m\ge9/25>1/6$.
+There are $O_\ee(U^\ee)$ such divisors. This also follows from
+\cite[Lemma 18.3]{openai}. Each prime factor satisfies the exact formula
+\begin{equation}\label{eq:principal-prime}
+Q_i^{(a)}=Q_i^{(1)}-P_i^{-1/2}
+ \sum_{\substack{p\in\mathcal P_i\\p\mid a}}
+ a_i(p)W_i(\Nm p/P_i).
+\end{equation}
+The deleted sum costs at most $O(P_i^{-1/2}\log U)$ times the
+profile bound. Neither $\beta_B$ nor $Q_i^{(1)}$ is assumed nonzero.
+Their actual coefficients must be evaluated before assigning a
+principal main-term exponent.
+
+With $G(a)=U^{-m-z}|S_m^{(a)}Q_I^{(a)}|^2$, bounding
+\eqref{eq:sixth-layer} at the desired scale is exactly the demand
+\begin{equation}\label{eq:principal-inverse-budget}
+\sum_a\Phi((\Nm a)^6/U)G(a)|M_r^{(a)}|^2
+\ll_\ee U^{1-(1-\delta)m-z-\eta+\ee}\HH^{A_0}.
+\end{equation}
+If the actual plain and prime factors have nonvanishing principal
+mass on a specified root subfamily, then $G(a)\ge U^{-\ee}$ there,
+after allocating the small losses. The corresponding unweighted
+inverse average must then meet this exponent as well.
+
+Assuming the source's seven-eighths theorem, its
+Lemmas~4.9--4.10 and smooth Mellin inversion give only the available
+pointwise bound $|M_r^{(a)}|^2\ll_\ee D^{3/4+\ee}U^\ee\HH^{A_0}$.
+The masked Dirichlet series is
+$\zeta_F(s)^{-1}\prod_{p\mid R_a}(1-(\Nm p)^{-s})^{-1}$;
+the contour is placed at $\Rea s=7/8+v$, with $v>0$ arbitrarily
+small and fixed. Counting the $O(U^{1/6})$ roots gives inverse
+average exponent $1/6+3r/4$. At $z=(1-r)/2-\rho$, its excess over
+the unweighted budget is
+\begin{equation}\label{eq:sixth-budget-gap}
+\Delta_6=(1-\delta)m+\frac r4-\frac13+\eta-\rho
+\in\left[\frac{19}{375}-\rho,\frac{1289}{7500}-\rho\right].
+\end{equation}
+This is a deficit in an available upper bound, not a lower bound
+for $E_6$ or a contradiction to \eqref{eq:complete-enlargement}.
+For general profiles the exact condition remains
+\eqref{eq:principal-inverse-budget}.
+
+\begin{proposition}[A mean-zero principal-layer subcase]\label{prop:mean-zero}
+If $\nu=1$ and the actual smooth profile has $\beta_B=0$, then,
+with all original masks and prime supports retained,
+\begin{equation}\label{eq:mean-zero-layer}
+E_6\ll_\ee U^{1/6+r-m+z+\ee}\HH^{A_0}
+\ll_\ee U^{K-6791/15000+\ee}\HH^{A_0}.
+\end{equation}
+\end{proposition}
+\begin{proof}
+Equation~\eqref{eq:principal-plain} gives
+$|S_m^{(a)}|^2\ll_\ee N^{-1}U^\ee\HH^{A_0}$.
+Absolute ideal counting gives $|M_r^{(a)}|^2\ll D\HH^{A_0}$
+and $|Q_I^{(a)}|^2\ll U^z\HH^{A_0}$. Sum over the roots.
+Using $z\le(1-r)/2$, the margin below $K$ is at least
+$1/3-r/2+(1+\delta)m-\eta\ge6791/15000$.
+\end{proof}
+
+This proposition controls one added layer only. Mean zero at one
+height does not imply mean zero for its derivative profiles, so it
+does not supply the application uniformity by itself. More generally,
+principal-inducing rows have finitely many sixth-power-free seeds
+supported on the fixed excluded primes, with their unit factors;
+the same calculation applies to each seed with its masks retained.
+The detailed selector note in the investigation records this
+decomposition and the profile-sensitive budget. Until those added
+rows and the remaining complete family are controlled, the main
+route must retain the selector in \eqref{eq:high-rows}. No new mixed
+saving follows from \eqref{eq:mean-zero-layer}.
+
+\section{A selector-preserving mixed subcase}\label{sec:mixed-subcase}
+
+The following partial result uses additional source inputs, beyond the
+three hypotheses of Theorem~\ref{thm:two-ratios}. The slots must be the
+source's physical prime sums, with their fixed ray-class restrictions,
+smooth annuli and fixed finite-ray coefficient expansions. Arbitrary
+prime subsets with bounded coefficients do not automatically satisfy
+the buffered pointwise prime estimate used here.
+Assume the source's seven-eighths theorem so that $\kappa=3/4$ is
+legal in \cite[Lemma 18.1]{openai}. Its slot mesh and all original
+height conventions are required.
+
+For a subset of whole slots $J\subset I$ with
+$2m+(9/2)z_J\le1$, where $z_J=\sum_{i\in J}w_i$, the source gives
+\begin{equation}\label{eq:fourth-subset}
+\sum_{u\in\CC_+}|S_m(u)^2Q_J(u)|^2
+\ll_\ee U^{1+\ee}\HH^{A_0}.
+\end{equation}
+For $J=\varnothing$, its zero-slot assertion applies without this
+length restriction. Every primitive character in the source's fixed
+finite exceptional family has bounded conductor. Thus $\CC_+$ is
+in the nonexceptional family for all sufficiently large $U$.
+The source's Lemmas~8.2 and 19.1 give, for the actual profiles,
+\begin{equation}\label{eq:pointwise-subset}
+|M_r|^2\ll_\ee U^{\delta r+\ee}\HH^{A_0},\qquad
+|Q_{I\setminus J}|^2\ll_\ee
+ U^{\delta(z-z_J)+\ee}\HH^{A_0}.
+\end{equation}
+Alternatively, \eqref{eq:fourth-subset}--\eqref{eq:pointwise-subset}
+may be stipulated explicitly as the extra hypotheses for the next
+proposition.
+
+\begin{proposition}[Upper plain-length band]\label{prop:upper-band}
+Under these additional inputs, suppose the source mesh permits a
+whole-slot selection with total capacity decrement and rounding loss
+at most $1/1000$. Then, for $21/50\le m\le1/2$,
+\begin{equation}\label{eq:upper-band}
+\sum_{u\in\CC_+}|M_rS_mQ_I|^2
+\ll_\ee U^{K-59/100000+\ee}\HH^{A_0}.
+\end{equation}
+Consequently the full moment over $\CC$ has the bound
+$O_\ee(U^{K-1/6250+\ee}\HH^{A_0})$ in this band.
+\end{proposition}
+\begin{proof}
+The summand factors exactly as
+\[
+|M_rS_mQ_I|^2
+=|M_rQ_{I\setminus J}|\,|M_rQ_I|\,|S_m^2Q_J|.
+\]
+Bound the first factor pointwise and apply Cauchy to the other two,
+using Hypothesis~\ref{hyp:inverse} and \eqref{eq:fourth-subset}.
+This proves the fixed-subset bound
+\begin{equation}\label{eq:subset-interpolation}
+\sum_{\CC_+}|M_rS_mQ_I|^2
+\ll_\ee U^{1+\delta(r+z-z_J)/2+\ee}\HH^{A_0}.
+\end{equation}
+Put $c_m=2(1-2m)/9$. Greedy selection of whole slots inside $I$
+gives $z_J\le c_m$ and
+$z-z_J\le(z-c_m)_++\ell_{\rm sel}$, where
+$\ell_{\rm sel}\le1/1000$ includes the decrement and last slot.
+This includes the empty selection when $c_m=0$.
+Since $z\le(1-r)/2$ and $(1-r)/2>c_m$ on the box, the saving in
+\eqref{eq:subset-interpolation} below $1+\delta m$ is at least
+\[
+\delta\left(\frac79m-\frac r4-\frac5{36}
+ -\frac{\ell_{\rm sel}}2\right).
+\]
+Without the selection loss it is at least $1/1000$ in the stated
+band. The loss is at most $21/100000$. Subtracting $\eta=1/5000$
+leaves $59/100000$. Add \eqref{eq:low-row} for the final assertion.
+\end{proof}
+
+This proof retains the selector until each positive norm is formed.
+For the source's physical slots, its conservative pointwise envelopes
+and moment inputs, with the same cumulative height allowance, apply
+also to the required smooth derivative profiles. Under the abstract
+alternative of stipulating the extra inputs, they must be assumed
+uniformly for those derivative profiles as well.
+A finer amplitude bin at one parameter is not automatically a bound
+for those derivatives. The partial result does not cover the shorter
+plain lengths near the simultaneous witness crossing.
 
 \section{Relation to the exceptional-row count}\label{sec:application}
 
@@ -724,6 +1033,78 @@ Appendix~\ref{app:checks} identifies the exact record for these
 intervals. A total count-level loss below $1/250000$ fits within
 the surplus in Proposition~\ref{prop:payoff}.
 
+\subsection{The smaller application domain}\label{sec:application-wedge}
+
+The original rectangle is sufficient but larger than necessary for the
+proposed count application. Put $m_{\rm new}=t_{\rm new}-r_{\rm new}$,
+where $r_{\rm new}=r_*(t_{\rm new})-\eta/(\delta D_x)$, and retain
+$R_{\rm new}$ from \eqref{eq:rebalance}. The old plain count at the
+actual length is $P_{\rm plain}(m)=1-\delta(4x/9+B_xm)$. The exact
+rebalance identities are
+\begin{equation}\label{eq:wedge-crossing}
+A_I(r_{\rm new})=R_{\rm new}+\eta,\qquad
+P_{\rm plain}(m_{\rm new})=R_{\rm new}.
+\end{equation}
+Before the prescribed small losses, these old count bounds already
+reach $R_{\rm new}$ if either
+\[
+r\ge r_{\rm new}+w,\quad w=\frac{\eta}{\delta(1-x)},
+\qquad\hbox{or}\qquad m\ge m_{\rm new}.
+\]
+The detector support is $r+m\ge t_{\rm new}$ at this exponent
+level. Thus the only region needing a new input has
+\begin{equation}\label{eq:application-wedge}
+a_r=r-r_{\rm new},\qquad b_m=m_{\rm new}-m,
+\qquad 0<a_r<w,\qquad 0<b_m\le a_r.
+\end{equation}
+This statement localizes a sufficient application input; it does not
+prove the full mixed moment outside this region by a row-count argument.
+
+The exact width satisfies $1/1071\le w\le1/900$. On the whole
+$(\delta,x)$ box, exact monotonicity gives
+\begin{align*}
+\frac{47749}{67660}&\le r_{\rm new}\le\frac{10261670}{14086891},\\
+\frac{3470383}{8566666}&\le m_{\rm new}\le\frac{28646}{69475}.
+\end{align*}
+For example, with $F=a_\delta B_x/J$, the simplified identities
+\[
+r_{\rm new}=1-F/2-(1-F)w,\qquad
+m_{\rm new}=\frac12-\frac{a_\delta}{J}
+ \left(\frac{1-x}{2}-\frac\eta\delta\right)
+\]
+show that $r_{\rm new}$ increases in $\delta$ and decreases in $x$,
+using the derivatives of $F$ above. The derivatives of $m_{\rm new}$
+are positive on the box; the exact rational sign bounds are given in
+the accompanying selector-energy note and checker. The leading wedge
+lies in $0.7057<r<0.7296$ and $0.4039<m<0.4124$.
+In particular it is disjoint from Proposition~\ref{prop:upper-band}'s
+proved band.
+
+A sufficient mixed saving inside this region can taper with $r$:
+\begin{equation}\label{eq:tapered-target}
+s(r)=\eta-\delta(1-x)(r-r_{\rm new})>0,\qquad
+\sum_{\CC}|M_rS_mQ_I|^2
+\ll_\ee U^{1+\delta m-s(r)+\ee}\HH^{A_0}.
+\end{equation}
+In the capacity limit, the simultaneous witness and prime lower bounds
+then give count exponent $A_I(r)-s(r)=R_{\rm new}$. For an actual
+prime product with squared gain exponent $2G_I$, the required saving
+is instead $1-R_{\rm new}-\delta r-2G_I$, with all witness losses
+included. A uniform $\eta$ saving is a stronger sufficient request
+on the ideal wedge, before these losses.
+
+One must use a buffered domain in the actual application. If $\ell_0$
+bounds each marginal count loss and the detector support loss, then
+the rows not already counted at exponent $R_{\rm new}$ satisfy
+\begin{equation}\label{eq:buffered-wedge}
+a_r<\frac{\eta+\ell_0}{\delta(1-x)},\qquad
+b_m>-\frac{\ell_0}{\delta B_x},\qquad b_m\le a_r+\ell_0.
+\end{equation}
+The mixed theorem must be uniform on this outer region with its actual
+capacity, profile and height losses. Those losses are chosen within
+the existing conditional payoff surplus. No estimate for
+\eqref{eq:tapered-target} on this region is proved here.
+
 \subsection{Profile localization and the proposed boundary}
 
 For completeness, the earlier profile refinement can be expressed
@@ -797,6 +1178,45 @@ coefficient, even one independent of the averaged labels.
 A divisor bound on $h$ does not allow it to be inserted into that
 signed theorem while preserving its conclusion.
 
+One can make a more precise structural reduction without invoking that
+theorem. Rename the transformed label $f$ as $g$, to distinguish it
+from the ratio conductor. On the squarefree coprime support $v=tgn$,
+assign each physical slot to its unique factor and write $P=P_0P_n$
+according as it lies outside or inside $n$. Then the plain ideal splits
+uniquely as
+\[
+k=k_0k_1,\qquad k_0\mid tg/P_0,\qquad k_1\mid n/P_n.
+\]
+The coefficient retains $\mu_F(k_0)\mu_F(k_1)$ and the coupled
+profile $B(\Nm k_0\Nm k_1/N)$. Put $\lambda=\log_U\Nm k_1$.
+After a common smooth separation, the source's coefficient identity
+(17.72) permits factoring $n=k_1e$ and moving $k_1$ into the averaged
+label $\widetilde g=gk_1$. Cauchy costs $U^{\lambda+\ee}$ in energy;
+reindexing $(g,k_1)$ by $\widetilde g$ adds only divisor multiplicity.
+This recovers the coefficient class for the separated positive child,
+not a bound on its support.
+
+In fact, let $L=r+m+z$, let $\beta$ be the norm exponent of $t$,
+and let $V$ be that of $g$. The source's formal child centers are
+\[
+M=2L-1-2\beta,\qquad R=L-\beta-V,\qquad F=R+V.
+\]
+The change replaces $(R,V)$ by $(R-\lambda,V+\lambda)$, leaving
+$F$ and the row center $M$ unchanged. If $z_n$ is the remaining
+prime-slot length, its first canonical margin is still
+\begin{equation}\label{eq:live-width}
+F-M-\beta-z_n=1-L-z_n\le1-r-m\le-3/50.
+\end{equation}
+Even a hypothetical baseline canonical bound on that inadmissible
+support would leave exponent $1+\lambda$ after this Cauchy step.
+At $\lambda\approx m$ its excess over $K$ approaches
+$(1-\delta)m+\eta\in[209/1000,1601/5000]$.
+The detailed live-divisor note records the exact masks, slot assignments,
+common separating profiles, and unequal-side normalization. This
+complete-family calculation remains conditional on the selector gate
+in Section~\ref{sec:selector-test}; it does not transform the sharp
+kernel \eqref{eq:kernel}.
+
 The widths fail as well. Appending the plain factor changes the
 effective squarefree column length from $r+z$ to $r+m+z$ and adds
 $2m$ to the first dual-row length in the source's equation (17.69).
@@ -830,10 +1250,15 @@ contribution.
 
 \section{The remaining arithmetic question}
 
-The task left by Theorem~\ref{thm:main} is \eqref{eq:open}, with
-the exact coefficient \eqref{eq:tuple-coeff}, the row selector
-\eqref{eq:high-rows}, the unequal plain ideals, and the large
-ratio-conductor restriction all retained.
+The strengthened task left by Theorem~\ref{thm:two-ratios} is
+\eqref{eq:joint-open}, with the exact coefficient
+\eqref{eq:tuple-coeff}, the row selector \eqref{eq:high-rows}, and
+both large ratio-conductor restrictions in \eqref{eq:Tjoint}
+retained. Proposition~\ref{prop:upper-band} proves a mixed subcase
+for source-compatible physical slots. For the proposed count
+application, the remaining new input can be confined to the buffered
+region \eqref{eq:buffered-wedge}, with the actual saving budget
+described there; that region is not covered by the upper-band result.
 The reductions do not show that the surviving rows are sparse enough,
 that their phases align, or that the signed kernel cancels.
 In particular, exponent saturation of a normalized prime sum at
@@ -841,7 +1266,7 @@ scale $P^{\delta/2}$ is far below its triangle-inequality scale
 $P^{1/2+o(1)}$ on the present box; it supplies no elementary
 near-equality argument.
 
-A proof of \eqref{eq:open} would complete the proposed localized
+A proof of \eqref{eq:joint-open} would complete the proposed localized
 mixed input and permit the two rebalances of
 Section~\ref{sec:application}. At present it remains an explicit
 open estimate.
@@ -854,11 +1279,15 @@ The results in this draft have three distinct statuses.
 \item Lemmas~\ref{lem:ratio}--\ref{lem:pair-count} and
 Proposition~\ref{prop:small} are elementary coefficient, local-character,
 and ideal-counting statements proved here.
-\item Theorem~\ref{thm:main} is conditional on
+\item Theorems~\ref{thm:main} and \ref{thm:two-ratios} are conditional on
 Hypotheses~\ref{hyp:inverse}--\ref{hyp:count}. Their application uses
 the source's buffered, marked-moment, detector, and fixed-parameter
-row-count framework. Those deep results are not re-proved here.
-\item The signed estimate \eqref{eq:open}, the new mixed bound
+row-count framework. Proposition~\ref{prop:upper-band} additionally
+uses the source-compatible fourth moment and buffered pointwise inputs
+stated in Section~\ref{sec:mixed-subcase}. Those deep results are not
+re-proved here.
+\item The signed estimates \eqref{eq:open} and \eqref{eq:joint-open},
+the full mixed bound
 \eqref{eq:desired}, and the proposed improved boundary remain unproved.
 \end{enumerate}
 
@@ -873,6 +1302,17 @@ enumeration.
 \item \path{numerics/check_joint_witness_payoff.py} checks symbolic
 derivative identities, the two rebalances, the uniform length
 intervals, and their rational slack.
+\item \path{numerics/check_selector_feasibility.py} checks the
+principal-row inverse budget, the mean-zero subcase margin, and
+the unchanged widths after the live plain divisor enters an averaged
+label. It does not establish nonvanishing profile masses or bound
+the remaining mixed correlation.
+\item \path{numerics/check_selector_preserving.py} checks both
+adaptive conductor cutoffs, their local zero masks, and the upper
+plain-band loss budget. \path{numerics/check_selector_energy.py}
+checks the exact rebalance identities, continuous monotonicity bounds,
+and the smaller sufficient application domain. Neither checker proves
+the correlation estimate within that domain.
 \item \path{numerics/check_localized_target.py} certifies the
 conditional geometric payoff by positive rational Bernstein
 coefficients on a continuous rectangle cover. Its hard-box test

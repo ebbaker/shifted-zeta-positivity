@@ -46,8 +46,37 @@ explicit margins. The unresolved input is a precisely specified signed
 sum over distinct plain ideals on the remaining large-conductor rows;
 the existing transformed inverse proof does not cover its coefficient class.
 
+The continuation has now tested the complete-family enlargement. Its
+added principal rows require a profile-dependent masked inverse estimate
+that the available bounds do not supply near prime capacity. An elementary
+mean-zero plain-profile subcase controls that principal layer. Tracking the
+live plain divisor through the formal transform recovers a coefficient
+class after Cauchy, but leaves inadmissible widths and a large endpoint
+cost. The main route therefore retains the exceptional-row selector;
+the required mixed saving is still open.
+
+The next selector-preserving calculation strengthens that reduction:
+small conductors of the plain-variable ratio are controlled by the
+positive marked inverse weight, and the total-ratio cutoff can be
+increased adaptively. Under the source's physical-slot hypotheses,
+positive interpolation proves the requested mixed bound for
+`21/50 <= m <= 1/2`; a count-sensitive argument also controls
+`0.700 <= r <= 0.701`. Neither subcase covers the remaining application
+region. The new input needed for the proposed boundary can be localized,
+before its explicit loss buffers, to a triangle of side at most `1/900`
+near the simultaneous witness crossing. Its arithmetic saving is open.
+
 | Record | Contribution |
 | --- | --- |
+| [Continuation plan](notes/CONTINUATION_20261008.md) | Orders the selector feasibility test, live-divisor analysis, uniform estimate, and validation; recommends a Codex-led workflow. |
+| [Selector feasibility](notes/SELECTOR_FEASIBILITY_20261008.md) | Exact principal-row norm and actual-profile budget; proves a mean-zero principal-layer subcase and identifies the missing enlargement estimate. |
+| [Live plain divisor](notes/LIVE_DIVISOR_TRANSFORM_20261008.md) | Exact transformed coefficient and label reindexing; records the unchanged width obstruction and endpoint Cauchy cost. |
+| [Selector review](reviews/SELECTOR_FEASIBILITY_REVIEW_20261008.md) | Same-model checks of masks, unit counts, profile-dependent budgets, partial theorem, and manuscript consolidation. |
+| [Continuation input review](reviews/CONTINUATION_INPUT_REVIEW_20261008.md) | Rechecks the ideal-pair proof and relevant source hypotheses, principal inverse estimate, and live-divisor identities. |
+| [Plain-ratio conductor reduction](notes/SELECTOR_PRESERVING_PLAIN_CONDUCTOR_20261008.md) | Preserves the selector while removing small plain-ratio conductors and increasing the removable total-conductor range; leaves an exact sum with both conductors large. |
+| [Selector-preserving mixed subcases](notes/SELECTOR_PRESERVING_SUBCASES_20261008.md) | Proves the upper plain-length band under source physical-slot inputs and records a sparse-cofactor partial estimate with its summation cost. |
+| [Energy and application localization](notes/SELECTOR_ENERGY_LOCALIZATION_20261008.md) | Proves a count-sensitive mixed strip and reduces the new application input to a narrow buffered triangle, with a tapered saving budget. |
+| [Selector-preserving review](reviews/SELECTOR_PRESERVING_REVIEW_20261008.md) | Same-model checks of the new two-conductor reduction, physical-slot hypotheses, mixed subcases, and continuous application localization. |
 | [Current geometry extension](notes/GEOMETRY_OPTIMIZATION_20261008.md) | Derives the candidate `7/8 - 1/24000`, all range margins, and the exact endpoint certificate. |
 | [Mixed-moment reduction](notes/MIXED_MOMENT_REDUCTION_20261008.md) | Combines three controlled contributions into one explicit remaining signed sum. |
 | [Column kernel and small conductors](notes/MIXED_KERNEL_CONDUCTOR_REDUCTION_20261008.md) | Derives the exact masks and proves the ideal-pair bound removing conductors through `U^(4/5)`. |
@@ -76,10 +105,15 @@ row-count bound, the high estimate loses its strict saving near boundary
 not a mathematical barrier to stronger results. Repeating the present
 adjustment does not by itself approach RH.
 
-The next arithmetic task is to bound the signed term in equation (12) of
-the mixed-moment reduction, retaining the row selector and the actual
-Möbius divisor coefficients. A direct transfer of the existing canonical
-moment fails both its width and coefficient hypotheses. The separate
+The next arithmetic task is to bound `T_joint` in equation (12) of the
+[plain-ratio reduction](notes/SELECTOR_PRESERVING_PLAIN_CONDUCTOR_20261008.md),
+retaining the row selector, actual Möbius divisor coefficients, and both
+large-conductor restrictions. For the proposed count application it
+suffices to establish the required saving on the buffered triangle in
+Section 4 of the [energy note](notes/SELECTOR_ENERGY_LOCALIZATION_20261008.md),
+uniformly in the original profiles and heights. The existing canonical
+moment still fails its required width hypotheses after the divisor
+coefficient is handled by Cauchy. The separate
 short-family program still seeks a sufficiently uniform sextic Mobius
 mean square with row range `H=D^h`, `h<9/10`.
 Independent specialist or formal validation of the imported machinery

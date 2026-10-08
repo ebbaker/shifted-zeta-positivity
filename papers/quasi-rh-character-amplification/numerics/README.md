@@ -16,6 +16,9 @@ from this directory to print its small retained JSON record.
 | `python3 check_amplitude_profile.py` | [Profile reduction checks](amplitude_profile_check.json) | Rational retuning constants and two exact profile examples, including zero gain at full saturation. |
 | `python3 check_joint_witness_payoff.py` | [Mixed-moment payoff checks](joint_witness_payoff_check.json) | Exact two-stage rebalancing, minimum gain factor, witness-band coverage, and loss allowance; the mixed moment itself is unproved. |
 | `python3 check_mixed_kernel.py` | [Mixed-kernel algebra and margins](mixed_kernel_check.json) | Exact local valuation/mask checks, conductor-reduction margins, and formal transfer-width deficits; no cancellation estimate is proved by the finite checks. |
+| `python3 check_selector_feasibility.py` | [Selector and divisor budgets](selector_feasibility_check.json) | Continuous principal-row budget extrema, mean-zero subcase margin, and exact live-label width and normalization identities; no main-mass or cancellation assertion. |
+| `python3 check_selector_preserving.py` | [Two-conductor and subcase checks](selector_preserving_check.json) | Exact adaptive conductor thresholds and zero masks, positive interpolation identity, and upper plain-band selection-loss margin. |
+| `python3 check_selector_energy.py` | [Energy and application-domain checks](selector_energy_check.json) | Exact count-sensitive strip, rebalance/taper identities, continuous monotonicity bounds, and buffered triangle constants. |
 
 The current certificate proves positivity by comparing polynomial
 coefficients and completing a square over the entire parameter rectangle.
@@ -68,3 +71,27 @@ These finite checks support the displayed identities; they neither estimate
 actual exceptional character sums nor prove the remaining signed saving.
 The [scoped review](../reviews/MIXED_REDUCTION_REVIEW_20261008.md) records
 what was independently checked.
+
+## Selector and live-divisor continuation
+
+The [selector note](../notes/SELECTOR_FEASIBILITY_20261008.md) extracts
+the exact sixth-power norm with the actual profiles. Its near-capacity
+inverse-budget shortfall is at least `19/375-rho`, using the imported
+seven-eighths bound; this is an upper-bound deficit, not a lower bound on
+the norm. The mean-zero plain-profile subcase has margin `6791/15000`.
+The [live-divisor note](../notes/LIVE_DIVISOR_TRANSFORM_20261008.md)
+retains the first canonical width at most `-3/50` after label reindexing.
+The new script checks these extrema using monotonicity and exact fractions,
+and compares polynomial coefficients for the width and normalization
+identities. It does not activate the conditional two-rebalance payoff.
+
+The subsequent [plain-ratio reduction](../notes/SELECTOR_PRESERVING_PLAIN_CONDUCTOR_20261008.md)
+uses the new thresholds `2*delta*m-9/12500` and
+`2*delta*(m+23/20)-1/4-9/12500`. Their positive-norm and pair-count proofs
+are in the note; the checker verifies algebra and local zero masks.
+The [mixed subcase](../notes/SELECTOR_PRESERVING_SUBCASES_20261008.md)
+has upper-band margin `59/100000` after the stated whole-slot loss.
+The [energy note](../notes/SELECTOR_ENERGY_LOCALIZATION_20261008.md)
+proves continuous derivative signs before evaluating corner extrema;
+its application triangle has ideal width at most `1/900`. These records
+do not estimate the remaining correlation within that triangle.
