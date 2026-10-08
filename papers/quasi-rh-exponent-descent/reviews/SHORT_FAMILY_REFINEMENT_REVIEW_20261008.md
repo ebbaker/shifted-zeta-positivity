@@ -5,7 +5,7 @@ Model: GPT-6 (Codex), inherited configuration; the exact serving variant and
 configured reasoning effort are not exposed to this agent and are not inferred.
 This is same-model internal cross-review, not independent specialist validation.
 
-Reviewed: [SHORT_FAMILY_DESCENT_REFINEMENT_20261008.md](../short_families/notes/SHORT_FAMILY_DESCENT_REFINEMENT_20261008.md),
+Reviewed: [1_SHORT_FAMILY_DESCENT_REFINEMENT_20261008.md](../short_families/notes/1_SHORT_FAMILY_DESCENT_REFINEMENT_20261008.md),
 compared with Route B, equations (13)–(19), in the
 [continuation](../notes/CODEX_CONTINUATION_20261008.md), and the
 [earlier family transfer](../../quasi-rh-character-amplification/notes/CHARACTER_FAMILY_TRANSFER_20261008.md).

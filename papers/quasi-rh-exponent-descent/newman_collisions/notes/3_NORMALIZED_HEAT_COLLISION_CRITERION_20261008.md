@@ -11,7 +11,7 @@ below. No new bound near time zero, full-flow Wronskian sign, or RH conclusion
 is claimed. The crude explicit height bound is a rederivation of known
 positive-time eventual simplicity, not a claimed improvement or priority result.
 
-The [previous arithmetic note](ZETA_COLLISION_ARITHMETIC_20261008.md) left a
+The [previous arithmetic note](2_ZETA_COLLISION_ARITHMETIC_20261008.md) left a
 specific task: turn an effective normalized scalar heat approximation into an
 analytic-neighborhood approximation, pay its moving integer cutoff, and obtain
 an actual derivative error. This note completes that reduction. It also yields

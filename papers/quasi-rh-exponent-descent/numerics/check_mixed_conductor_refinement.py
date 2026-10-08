@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """Exact arithmetic certificate for
-../mixed_character_families/notes/MIXED_CONDUCTOR_REFINEMENT_20261008.md.
+../mixed_character_families/notes/1_MIXED_CONDUCTOR_REFINEMENT_20261008.md.
 
 GPT-6 (Codex), inherited configuration, 8 October 2026. The exact serving
 variant and reasoning effort are not exposed. No arithmetic moment or

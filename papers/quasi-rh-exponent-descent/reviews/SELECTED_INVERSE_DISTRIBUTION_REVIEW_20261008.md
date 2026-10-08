@@ -6,9 +6,9 @@ configured reasoning effort are not exposed and are not inferred.
 This is same-model internal review, not independent specialist validation
 of the source theorems or a formal proof replay.
 
-Reviewed [SELECTED_INVERSE_DISTRIBUTION_20261008.md](../mixed_character_families/notes/SELECTED_INVERSE_DISTRIBUTION_20261008.md),
+Reviewed [2_SELECTED_INVERSE_DISTRIBUTION_20261008.md](../mixed_character_families/notes/2_SELECTED_INVERSE_DISTRIBUTION_20261008.md),
 its exact script, and the operational region in the preceding
-[mixed-conductor note](../mixed_character_families/notes/MIXED_CONDUCTOR_REFINEMENT_20261008.md).
+[mixed-conductor note](../mixed_character_families/notes/1_MIXED_CONDUCTOR_REFINEMENT_20261008.md).
 The Gram normalization, legal transposition, conditional kernel bound,
 finite-character example, trace expansion, and continuous exponent budgets
 pass the stated checks. The actual primitive-character fiber audit resolves

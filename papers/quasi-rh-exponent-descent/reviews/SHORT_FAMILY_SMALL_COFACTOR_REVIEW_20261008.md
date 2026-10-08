@@ -7,7 +7,7 @@ This is same-model internal review, not independent specialist validation.
 
 **Correction, 8 October 2026.** This review initially missed two
 conjugations because the plain PDF extraction dropped overbars. The
-[rendered-source follow-up](../short_families/notes/SHORT_FAMILY_CORE_INVOLUTION_20261008.md)
+[rendered-source follow-up](../short_families/notes/3_SHORT_FAMILY_CORE_INVOLUTION_20261008.md)
 verifies \(a_\xi=\overline\alpha\gamma_2\xi\) and
 \(W_0(t)=t^{-1/2}\overline{W(t)}\); the underlying note is now
 corrected. Its absolute estimates and masks are unaffected, but its
@@ -16,7 +16,7 @@ acceptance below is valid only with these corrections. The
 [new scoped review](SHORT_FAMILY_CORE_AND_OVERLAP_REVIEW_20261008.md)
 records the repaired formulas and subsequent deductions.
 
-Reviewed: [SHORT_FAMILY_SMALL_COFACTOR_20261008.md](../short_families/notes/SHORT_FAMILY_SMALL_COFACTOR_20261008.md).
+Reviewed: [2_SHORT_FAMILY_SMALL_COFACTOR_20261008.md](../short_families/notes/2_SHORT_FAMILY_SMALL_COFACTOR_20261008.md).
 The transformed formula, masks, conductor, second-Poisson scale, total-cost
 bound, and valid-range reuse of the source moment pass this scoped check.
 No new bound for the residual signed quadratic form is proved by the review.

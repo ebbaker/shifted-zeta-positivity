@@ -8,7 +8,7 @@ specialist validation.
 
 ## Scope and finding
 
-Reviewed [QUADRATIC_MOMENT_STRENGTH_AND_BARRIER_20261008.md](../integer_quadratic_lift/notes/QUADRATIC_MOMENT_STRENGTH_AND_BARRIER_20261008.md)
+Reviewed [2_QUADRATIC_MOMENT_STRENGTH_AND_BARRIER_20261008.md](../integer_quadratic_lift/notes/2_QUADRATIC_MOMENT_STRENGTH_AND_BARRIER_20261008.md)
 and [check_quadratic_moment_barrier.py](../numerics/check_quadratic_moment_barrier.py).
 The relevant probe construction was checked in the
 [parent manuscript](../../prime-variance-exponents/manuscript.tex),

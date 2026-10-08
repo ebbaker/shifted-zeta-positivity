@@ -5,9 +5,9 @@ Model: GPT-6 (Codex), inherited configuration; exact serving variant and
 configured reasoning effort are not exposed and are not inferred.
 This is same-model internal review, not independent specialist validation.
 
-Reviewed the [core involution](../short_families/notes/SHORT_FAMILY_CORE_INVOLUTION_20261008.md),
-[overlap estimate](../short_families/notes/SHORT_FAMILY_HIGH_OVERLAP_20261008.md), and
-[replication limits](../short_families/notes/SHORT_FAMILY_REPLICATION_LIMITS_20261008.md). The October 5 primary
+Reviewed the [core involution](../short_families/notes/3_SHORT_FAMILY_CORE_INVOLUTION_20261008.md),
+[overlap estimate](../short_families/notes/4_SHORT_FAMILY_HIGH_OVERLAP_20261008.md), and
+[replication limits](../short_families/notes/5_SHORT_FAMILY_REPLICATION_LIMITS_20261008.md). The October 5 primary
 [TeX source](https://raw.githubusercontent.com/openai/math/main/preprints/The-Quasi-Riemann-Hypothesis-October-5-2026/build/paper2.tex)
 was compared with rendered PDF pages 13--17. Its Gauss/reciprocity identities
 and primitive Poisson formula remain imported inputs; its deep theta and
@@ -139,7 +139,7 @@ the scope reviewed here, after the source definitions were corrected.
 
 ## Added audit: the newly located sixth-order sieve baseline
 
-Also reviewed the [generic sieve baseline](../short_families/notes/SHORT_FAMILY_SEXTIC_SIEVE_BARRIER_20261008.md) against
+Also reviewed the [generic sieve baseline](../short_families/notes/6_SHORT_FAMILY_SEXTIC_SIEVE_BARRIER_20261008.md) against
 de Faveri, *Optimal large sieve for fixed order characters*,
 [arXiv:2610.04045v1](https://arxiv.org/html/2610.04045v1), Theorem 1.1 and
 Sections 2.2--2.5. The stated theorem permits sixth-power-free indices on

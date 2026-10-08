@@ -550,7 +550,7 @@ certified gain should not consume the whole search for a scalable mechanism.
 
 ## 7. Route D: signed arithmetic feedback at fixed multiplicative scales
 
-The [arithmetic note](../fixed_scale_descent/notes/ARITHMETIC_FEEDBACK_AND_RESONANCE_20261008.md)
+The [arithmetic note](../fixed_scale_descent/notes/3_ARITHMETIC_FEEDBACK_AND_RESONANCE_20261008.md)
 keeps the full von Mangoldt function and gives, at \(U=X^{11/24}\),
 
 \[
@@ -582,7 +582,7 @@ E_\delta(X)\le qE_\delta(X/b)+CX^{-\eta},
 \qquad b>1,\quad0<q<1,\quad\eta>0.                       \tag{23}
 \]
 
-The [fixed-scale criterion](../fixed_scale_descent/notes/FIXED_SCALE_DESCENT_CRITERION_20261008.md)
+The [fixed-scale criterion](../fixed_scale_descent/notes/1_FIXED_SCALE_DESCENT_CRITERION_20261008.md)
 proves every saving
 \(\sigma<\min\{\delta,\eta,\log(1/q)/\log b\}\).
 The recurrence must hold for all sufficiently large real \(X\).
@@ -701,7 +701,7 @@ fixed multiplicative scale change of (23).
 
 ## 9. Route F: height-adapted detection and unbounded heights
 
-The [spectral-edge note](../fixed_scale_descent/notes/SPECTRAL_EDGE_AND_LOG_SAVINGS_20261008.md)
+The [spectral-edge note](../fixed_scale_descent/notes/2_SPECTRAL_EDGE_AND_LOG_SAVINGS_20261008.md)
 shows why a vanishing normalized leading term need not improve the power.
 At a positive admissible exponent, little-o excludes boundary zeros but
 may leave zeros approaching the boundary at unbounded height.
@@ -749,7 +749,7 @@ length/conductor/height range.
 
 ## 10. Route G: positive Newman time and collision exclusion
 
-The [Newman scout](../newman_collisions/notes/NEWMAN_FLOW_AND_COLLISION_SCOUT_20261008.md) reduces
+The [Newman scout](../newman_collisions/notes/1_NEWMAN_FLOW_AND_COLLISION_SCOUT_20261008.md) reduces
 a positive threshold to a finite real multiple zero, using the
 positive-time high-real-part cutoff and zero dynamics in
 [Polymath's heat-flow paper](https://arxiv.org/html/1904.12438).
@@ -886,7 +886,9 @@ large redundant data. Decisive external proofs or certificates need
 specialist or formal validation beyond same-model review.
 
 Save research in the relevant investigation's `<project>/notes/` folder,
-using the [notes index](README.md) to select the project. Keep shared plans
+using the [notes index](README.md) to select the project. Prefix each new
+investigation note with the next unused integer and an underscore in that
+project's sequence, retaining its descriptive title and date. Keep shared plans
 and dependency records in `notes/`, calculations and small records in
 `numerics/`, and reviews in `reviews/`. Link to the original projects
 rather than silently revising their claims. Include model/effort metadata

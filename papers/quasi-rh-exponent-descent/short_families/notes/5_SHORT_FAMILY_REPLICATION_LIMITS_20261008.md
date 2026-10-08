@@ -7,7 +7,7 @@ Status: elementary conditional deductions about extraction from the existing sho
 
 ## 1. All composite sixth powers give an equivalent repeated-row obligation
 
-Use the fixed field, character, excluded set, profile, and zero extension of [the short-family refinement](SHORT_FAMILY_DESCENT_REFINEMENT_20261008.md), equations (1)--(4). In particular, let
+Use the fixed field, character, excluded set, profile, and zero extension of [the short-family refinement](1_SHORT_FAMILY_DESCENT_REFINEMENT_20261008.md), equations (1)--(4). In particular, let
 
 \[
  A(D)=\sum_{(n,S)=1}\mu_K(n)\nu(n)W(Nn/D),\qquad

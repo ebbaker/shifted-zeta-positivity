@@ -15,7 +15,7 @@ The PDF SHA-256 is
 Plain extraction of this PDF loses mathematical overbars and is inadequate
 for checking these identities.
 
-The [small-cofactor note](SHORT_FAMILY_SMALL_COFACTOR_20261008.md)
+The [small-cofactor note](2_SHORT_FAMILY_SMALL_COFACTOR_20261008.md)
 had two missing conjugations, now corrected:
 
 1. Its equation (5) must use
@@ -203,7 +203,7 @@ Every parameter pair that beats \(7/8\) satisfies
 by strictly more than a quarter power of \(D\), up to logarithms.
 All deletion masks are retained in this strengthening.
 
-The [uniform overlap bound](SHORT_FAMILY_HIGH_OVERLAP_20261008.md)
+The [uniform overlap bound](4_SHORT_FAMILY_HIGH_OVERLAP_20261008.md)
 controls a larger common-factor sector but leaves this coprime core.
 
 ## Next theorem and scope

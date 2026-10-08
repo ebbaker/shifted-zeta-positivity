@@ -308,7 +308,7 @@ claimed certified by the accompanying floating-point script.
 
 ## 5. The remaining height issue and the next research task
 
-The [Newman scout](NEWMAN_FLOW_AND_COLLISION_SCOUT_20261008.md) proves that a
+The [Newman scout](1_NEWMAN_FLOW_AND_COLLISION_SCOUT_20261008.md) proves that a
 positive zeta threshold forces a finite real collision. Its compactness
 argument uses the positive-time cutoff from
 [Polymath, Theorem 1.5(i)](https://arxiv.org/html/1904.12438#S1.Thmtheorem5),

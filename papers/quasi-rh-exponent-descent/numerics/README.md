@@ -77,5 +77,5 @@ These checks certify only the displayed finite identities and exponent
 bookkeeping. They do not prove the number-field Poisson formula, the
 imported sextic large sieve, the prime ideal theorem, or the missing
 asymptotic signed estimate. See the
-[continuation](../short_families/notes/SHORT_FAMILY_CONTINUATION_20261008.md) and
+[continuation](../short_families/notes/7_SHORT_FAMILY_CONTINUATION_20261008.md) and
 [scoped review](../reviews/SHORT_FAMILY_CORE_AND_OVERLAP_REVIEW_20261008.md).

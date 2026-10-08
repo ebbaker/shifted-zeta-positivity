@@ -139,7 +139,7 @@ q=a^r,
 holds exactly, yet \(E(X)\) has no fixed power decay. The analogous
 factor-scale feedback in the mixed Mertens identity therefore needs an
 additional power gain or a stronger form of self-improvement. See the
-[arithmetic feedback note](ARITHMETIC_FEEDBACK_AND_RESONANCE_20261008.md).
+[arithmetic feedback note](3_ARITHMETIC_FEEDBACK_AND_RESONANCE_20261008.md).
 
 ## A mode check before attempting a proof
 
@@ -149,7 +149,7 @@ hold with \(q<1\) and a power-decaying remainder. This is an elementary
 diagnostic, not an actual-prime counterexample. It makes explicit that
 the proposed estimate must exclude a persistent boundary mode.
 
-The [spectral-edge note](SPECTRAL_EDGE_AND_LOG_SAVINGS_20261008.md) explains
+The [spectral-edge note](2_SPECTRAL_EDGE_AND_LOG_SAVINGS_20261008.md) explains
 the further obstacle when the optimal boundary is approached only at
 unbounded zero height. A finite list of frequency checks is insufficient
 for (2).

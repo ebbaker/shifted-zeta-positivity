@@ -24,7 +24,7 @@ No bound for the remaining cyclic correlation, new zero-free boundary,
 or RH implication is proved.
 
 This continues
-[MIXED_CONDUCTOR_REFINEMENT_20261008.md](MIXED_CONDUCTOR_REFINEMENT_20261008.md).
+[1_MIXED_CONDUCTOR_REFINEMENT_20261008.md](1_MIXED_CONDUCTOR_REFINEMENT_20261008.md).
 Use its operational `(d,x,r,m)` region, `s`, `ell=10^-6`, actual
 polynomials, and derivative-profile requirements. The original
 [amplification manuscript](../../../quasi-rh-character-amplification/manuscript.tex)

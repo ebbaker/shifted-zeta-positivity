@@ -251,7 +251,7 @@ A useful arithmetic estimate would bound this whole form with its actual
 profile signs, to the scale (7) or (9).
 
 The fixed-delay scalar from the
-[arithmetic feedback note](../../fixed_scale_descent/notes/ARITHMETIC_FEEDBACK_AND_RESONANCE_20261008.md)
+[arithmetic feedback note](../../fixed_scale_descent/notes/3_ARITHMETIC_FEEDBACK_AND_RESONANCE_20261008.md)
 also lifts with no additional identity problem. For fixed \(c>1\),
 \(0<r<1\), define \(L(v)=\ell(v)-rc^\beta\ell(cv)\). Then
 

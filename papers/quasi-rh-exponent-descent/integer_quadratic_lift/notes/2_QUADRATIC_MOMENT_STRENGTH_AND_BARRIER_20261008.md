@@ -7,7 +7,7 @@ Same-model derivation and review are internal checks, not independent
 specialist validation.
 
 The localized quadratic moment from the
-[integer-response lift](INTEGER_QUADRATIC_RESPONSE_LIFT_20261008.md)
+[integer-response lift](1_INTEGER_QUADRATIC_RESPONSE_LIFT_20261008.md)
 has three further consequences for the research program.
 
 1. Its proposed bound excludes forbidden zeros for every primitive quadratic
@@ -250,7 +250,7 @@ prime-power separation, gives
 \sum_{a\asymp A}^{*}a^{-1/2}|S_a|^2
 \ll X^{2-\alpha/2+\varepsilon}.
 \]
-This is the same [source theorem and application](INTEGER_QUADRATIC_RESPONSE_LIFT_20261008.md#6-what-the-classical-squarefree-large-sieve-actually-gives)
+This is the same [source theorem and application](1_INTEGER_QUADRATIC_RESPONSE_LIFT_20261008.md#6-what-the-classical-squarefree-large-sieve-actually-gives)
 as before. Taking the better bound and summing blocks yields exponent
 \[
 \mathfrak E(B,h)=

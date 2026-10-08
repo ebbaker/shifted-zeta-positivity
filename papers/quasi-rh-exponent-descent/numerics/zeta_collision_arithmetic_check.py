@@ -3,7 +3,7 @@
 
 Run from any working directory. Small JSON goes to stdout. The analytical
 truncation and collision-certificate theorems are in
-../newman_collisions/notes/ZETA_COLLISION_ARITHMETIC_20261008.md. No large output is generated.
+../newman_collisions/notes/2_ZETA_COLLISION_ARITHMETIC_20261008.md. No large output is generated.
 """
 import json
 import math

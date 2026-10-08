@@ -22,7 +22,7 @@ prime-variance manuscript were not independently replayed in full.
 
 ## Fixed multiplicative scale criterion
 
-The [descent note](../fixed_scale_descent/notes/FIXED_SCALE_DESCENT_CRITERION_20261008.md) received
+The [descent note](../fixed_scale_descent/notes/1_FIXED_SCALE_DESCENT_CRITERION_20261008.md) received
 a separate check of the normalization
 \(\|F_X\|_2^2=X^{-2-\delta}\mathcal V_g(X)\), the arithmetic difference
 profile, and the signed norm identity. Iteration to a compact initial
@@ -36,7 +36,7 @@ correctly treats the arithmetic recurrence as a sufficient unproved input.
 
 ## Spectral edge and subpower improvements
 
-The [spectral note](../fixed_scale_descent/notes/SPECTRAL_EDGE_AND_LOG_SAVINGS_20261008.md) was
+The [spectral note](../fixed_scale_descent/notes/2_SPECTRAL_EDGE_AND_LOG_SAVINGS_20261008.md) was
 checked against the parent's absolutely summable zero expansion. The
 weighted shell substitution has exponent \(2+D\); nonedge terms vanish
 by dominated convergence, and Fourier averages isolate each nonzero
@@ -52,7 +52,7 @@ does not claim Euler-product structure or the full zeta zero density.
 
 ## Arithmetic feedback and the moving cutoff
 
-The [arithmetic note](../fixed_scale_descent/notes/ARITHMETIC_FEEDBACK_AND_RESONANCE_20261008.md)
+The [arithmetic note](../fixed_scale_descent/notes/3_ARITHMETIC_FEEDBACK_AND_RESONANCE_20261008.md)
 was checked by a separate agent against the parent centering, mixed
 feedback, scalar detector, and Vaughan identities. Replacing the prime
 counting error by \(\psi(t)-t\) retains higher prime powers and preserves
@@ -69,7 +69,7 @@ A definition of \(c_w\) was added for clarity.
 
 ## Newman flow and the explicit kernel
 
-The [Newman note](../newman_collisions/notes/NEWMAN_FLOW_AND_COLLISION_SCOUT_20261008.md)
+The [Newman note](../newman_collisions/notes/1_NEWMAN_FLOW_AND_COLLISION_SCOUT_20261008.md)
 received a separate check of the compactness argument, Bessel spectral
 proof, positive-kernel construction, threshold argument, and rescaling.
 Polymath's uniform positive-time cutoff is essential: pointwise finiteness

@@ -9,7 +9,7 @@ specialist validation.
 ## Finding and precise scope
 
 The fiber term in
-[SELECTED_INVERSE_DISTRIBUTION_20261008.md](../mixed_character_families/notes/SELECTED_INVERSE_DISTRIBUTION_20261008.md)
+[2_SELECTED_INVERSE_DISTRIBUTION_20261008.md](../mixed_character_families/notes/2_SELECTED_INVERSE_DISTRIBUTION_20261008.md)
 is uniformly bounded by the largest row weight for the stated **actual
 sixth-power-free element rows** in one common fixed presentation.
 

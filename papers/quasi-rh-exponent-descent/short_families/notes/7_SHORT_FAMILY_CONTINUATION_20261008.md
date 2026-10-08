@@ -8,7 +8,7 @@ independent specialist validation or formal proof replay.
 
 Based on repository commit `00119da502ed019798e9b164e8342ea0e2df6d02`.
 This continuation follows the [strategic review](../../reviews/STRATEGIC_REVIEW_20261008.md)
-and [small-cofactor reduction](SHORT_FAMILY_SMALL_COFACTOR_20261008.md).
+and [small-cofactor reduction](2_SHORT_FAMILY_SMALL_COFACTOR_20261008.md).
 
 ## What changed
 
@@ -31,7 +31,7 @@ W_0(t)=t^{-1/2}\overline{W(t)}.
 
 The exact transformed identity needs both corrections. Earlier bounds
 that use coefficient moduli, masks, and profile seminorms survive.
-The [source audit](SHORT_FAMILY_CORE_INVOLUTION_20261008.md) records
+The [source audit](3_SHORT_FAMILY_CORE_INVOLUTION_20261008.md) records
 the conventions, including the exterior finite-character coefficients.
 
 ## A larger controlled overlap sector
@@ -59,7 +59,7 @@ Uniform primitive completion and counting by the common ideal give
 Thus all blocks with \(BF^2G^2\ge D^{1-a}\) fit the proposed
 \(D^{h+a+\varepsilon}\) budget. In the lossless \(b=f=1\) block,
 this removes overlap norms \(G\ge D^{1/2}\), improving the previous
-threshold for \(h>1/2\). The [proof](SHORT_FAMILY_HIGH_OVERLAP_20261008.md)
+threshold for \(h>1/2\). The [proof](4_SHORT_FAMILY_HIGH_OVERLAP_20261008.md)
 preserves the complete row kernel and explains dyadic boundary constants.
 
 After first applying the imported positive theorem to complete large-
@@ -100,7 +100,7 @@ Every target that improves \(7/8\) instead has
 target by more than a quarter power of \(D\), up to logarithms.
 
 This is an obstruction to that decomposition method, not a lower bound
-for the unrestricted Möbius moment. The [full derivation](SHORT_FAMILY_CORE_INVOLUTION_20261008.md)
+for the unrestricted Möbius moment. The [full derivation](3_SHORT_FAMILY_CORE_INVOLUTION_20261008.md)
 retains the actual source coefficients and exterior character combination.
 
 ## Generic estimates and replication do not close the gap
@@ -118,10 +118,10 @@ and paying for all sixth-power multiplicities, it gives
 For \(1\le H\le D\), this is \(D^{1+\varepsilon}H^{1/6}\).
 It matches the broad-coefficient lower bound in powers, but corresponds
 to \(a=1-5h/6\) and extracts only exponent one. Its deep proof has
-not been replayed. The [transfer and comparison](SHORT_FAMILY_SEXTIC_SIEVE_BARRIER_20261008.md)
+not been replayed. The [transfer and comparison](6_SHORT_FAMILY_SEXTIC_SIEVE_BARRIER_20261008.md)
 separate that imported result from the new deductions here.
 
-The [replication audit](SHORT_FAMILY_REPLICATION_LIMITS_20261008.md)
+The [replication audit](5_SHORT_FAMILY_REPLICATION_LIMITS_20261008.md)
 also shows that using every composite sixth power improves the prime-row
 count only logarithmically; arbitrary row weights cannot improve the
 replication power; and quadratic or cubic subfamilies inherited solely

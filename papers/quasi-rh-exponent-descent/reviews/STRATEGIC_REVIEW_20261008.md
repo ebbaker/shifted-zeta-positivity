@@ -25,7 +25,7 @@ zeta-only quasi-RH implies RH. The original scoped pass did not identify
 a blocking error, but the subsequent short-family continuation found and
 corrected two omitted conjugations in the exact transformed definitions.
 The absolute reductions and ranking survive those corrections; see the
-[correction and new results](../short_families/notes/SHORT_FAMILY_CONTINUATION_20261008.md).
+[correction and new results](../short_families/notes/7_SHORT_FAMILY_CONTINUATION_20261008.md).
 Neither review validates all imported analytic proofs.
 
 | Approach | Strongest current contribution | Decisive missing result | Recommended role |
@@ -52,7 +52,7 @@ smaller column scales. The exact mask identity and the arbitrary-epsilon
 quantifiers support this conclusion. To infer a zero-free boundary, the
 moment must cover a profile class with no common Mellin zero in the relevant
 half-plane; one arbitrary fixed profile is insufficient.
-See the [extraction and detection argument](../short_families/notes/SHORT_FAMILY_DESCENT_REFINEMENT_20261008.md),
+See the [extraction and detection argument](../short_families/notes/1_SHORT_FAMILY_DESCENT_REFINEMENT_20261008.md),
 Sections 2–4.
 
 The latest reduction does actual work: it removes the original diagonal,
@@ -67,7 +67,7 @@ The second Poisson estimate gives no saving there. Thus a smaller residual
 has been identified, but no mechanism has yet made its difficult core easier.
 The actual unit-column obstruction also prevents extending the old positive
 dual theorem unchanged.
-See the [small-cofactor note](../short_families/notes/SHORT_FAMILY_SMALL_COFACTOR_20261008.md),
+See the [small-cofactor note](../short_families/notes/2_SHORT_FAMILY_SMALL_COFACTOR_20261008.md),
 Sections 3–6.
 
 The first useful target should be chosen by its achievable loss, not solely
@@ -109,7 +109,7 @@ information. Together with the imported growth estimates, they control
 every cubic term with a repeated primitive character, with a certified
 positive margin. These are stronger accomplishments than merely rewriting
 the desired inequality.
-See the [selected inverse note](../mixed_character_families/notes/SELECTED_INVERSE_DISTRIBUTION_20261008.md),
+See the [selected inverse note](../mixed_character_families/notes/2_SELECTED_INVERSE_DISTRIBUTION_20261008.md),
 Sections 1–2 and 5, and the
 [primitive-character audit](PRIMITIVE_CHARACTER_FIBER_REVIEW_20261008.md).
 
@@ -156,8 +156,8 @@ repeated substitution nor an improved constant supplies the needed
 power. This route deserves priority if the question is specifically the
 logical implication from a zeta-only strip, but the current evidence
 does not establish a practical way to prove its covariance inequality.
-See the [fixed-scale criterion](../fixed_scale_descent/notes/FIXED_SCALE_DESCENT_CRITERION_20261008.md)
-and [arithmetic resonance analysis](../fixed_scale_descent/notes/ARITHMETIC_FEEDBACK_AND_RESONANCE_20261008.md).
+See the [fixed-scale criterion](../fixed_scale_descent/notes/1_FIXED_SCALE_DESCENT_CRITERION_20261008.md)
+and [arithmetic resonance analysis](../fixed_scale_descent/notes/3_ARITHMETIC_FEEDBACK_AND_RESONANCE_20261008.md).
 
 **4. Heat flow is useful for certification, with the endpoint difficulty intact.**
 
@@ -183,7 +183,7 @@ One modest interval-certified rectangle, including a natural-cutoff
 crossing, is a useful bounded next task. Further priority as an RH route
 should depend on a new arithmetic lower bound for the normalized value
 and derivative in the shrinking-time region.
-See the [normalized criterion](../newman_collisions/notes/NORMALIZED_HEAT_COLLISION_CRITERION_20261008.md).
+See the [normalized criterion](../newman_collisions/notes/3_NORMALIZED_HEAT_COLLISION_CRITERION_20261008.md).
 
 **5. The quadratic lift should receive less effort under the present inputs.**
 
@@ -201,8 +201,8 @@ whose extracted boundaries \(1/2+h/4\) remain above \(3/4\). This is a
 limitation of that reduction, not of every possible quadratic-family
 approach. Retain the exact lift, but resume sustained work only with a
 new signed prime-correlation mechanism.
-See the [quadratic barrier analysis](../integer_quadratic_lift/notes/QUADRATIC_MOMENT_STRENGTH_AND_BARRIER_20261008.md)
-and the [integer lift](../integer_quadratic_lift/notes/INTEGER_QUADRATIC_RESPONSE_LIFT_20261008.md).
+See the [quadratic barrier analysis](../integer_quadratic_lift/notes/2_QUADRATIC_MOMENT_STRENGTH_AND_BARRIER_20261008.md)
+and the [integer lift](../integer_quadratic_lift/notes/1_INTEGER_QUADRATIC_RESPONSE_LIFT_20261008.md).
 
 **Verification and research decision.** All nine supplied check scripts
 were rerun in this review, using temporary copies where they write files.

@@ -40,7 +40,7 @@ quasi-RH implies RH.
 | Composite replication and inherited order reduction | Exact masks, finite reuse, Cauchy--Schwarz | Same extraction floor; no additional power gain without a new moment input |
 | De Faveri, arXiv:2610.04045v1, Theorem 1.1 | Newly imported preprint theorem; statement and family transfer checked, deep proof not replayed | Generic all-row bound \(\mathfrak M\ll D^{1+\varepsilon}H^{1/6}\) for \(H\le D\), and extraction floor one |
 
-See the [continuation](../short_families/notes/SHORT_FAMILY_CONTINUATION_20261008.md) and
+See the [continuation](../short_families/notes/7_SHORT_FAMILY_CONTINUATION_20261008.md) and
 [scoped review](../reviews/SHORT_FAMILY_CORE_AND_OVERLAP_REVIEW_20261008.md).
 All-power-row counts and finite checks do not supply the missing signed
 low-overlap estimate or a new boundary.

@@ -39,7 +39,7 @@ the low-overlap core, and it does not establish a new signed saving there.
 ## Source conventions and the actual kernel
 
 Use the setting of
-[the corrected small-cofactor note](SHORT_FAMILY_SMALL_COFACTOR_20261008.md), equations (2)--(8),
+[the corrected small-cofactor note](2_SHORT_FAMILY_SMALL_COFACTOR_20261008.md), equations (2)--(8),
 with the source's exact conjugations. The October 5 source PDF has SHA-256
 `f919b57829b178c8e60e7c17b018cf773e7907cf642ef5a3347d8a826e8dbf18`.
 Rendered pages 13 and 16 were inspected. They give
@@ -55,7 +55,7 @@ The transformed profile is
 \(W_0(N(bfm_1)/D)\overline{W_0(N(bfm_2)/D)}\), as in source
 equation (4.16). The displayed unbarred \(\alpha\) and unbarred \(W\)
 in the earlier repository note have been corrected; see the
-[source audit](SHORT_FAMILY_CORE_INVOLUTION_20261008.md). The bound here uses only \(|a_\xi|=1\)
+[source audit](3_SHORT_FAMILY_CORE_INVOLUTION_20261008.md). The bound here uses only \(|a_\xi|=1\)
 on its actual squarefree support and the bounded profile, so it is
 unaffected numerically by those corrections.
 
@@ -256,7 +256,7 @@ far outside the useful improvement range
 summed-\(\xi\) coprime core returns the original coprime off-diagonal
 Möbius form. It is not a new signed estimate for that form.
 
-The [core-involution note](SHORT_FAMILY_CORE_INVOLUTION_20261008.md)
+The [core-involution note](3_SHORT_FAMILY_CORE_INVOLUTION_20261008.md)
 proves that the prime-selected part alone has size
 \(\gg DH^{1/6}/(\log D)^2\) for a nonnegative profile and trivial
 fixed twist. This exceeds every useful target by more than a quarter

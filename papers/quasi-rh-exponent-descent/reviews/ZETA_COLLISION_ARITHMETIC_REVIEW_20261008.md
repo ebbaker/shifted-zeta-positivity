@@ -14,7 +14,7 @@ holomorphy and a nonvanishing normalizer on the whole closed disk.
 No outstanding correction remains in the reviewed scope.
 
 Reviewed
-[ZETA_COLLISION_ARITHMETIC_20261008.md](../newman_collisions/notes/ZETA_COLLISION_ARITHMETIC_20261008.md),
+[2_ZETA_COLLISION_ARITHMETIC_20261008.md](../newman_collisions/notes/2_ZETA_COLLISION_ARITHMETIC_20261008.md),
 its [script](../numerics/zeta_collision_arithmetic_check.py), and its
 [small record](../numerics/zeta_collision_arithmetic_record_20261008.json).
 The script reproduced the saved record byte for byte in the current

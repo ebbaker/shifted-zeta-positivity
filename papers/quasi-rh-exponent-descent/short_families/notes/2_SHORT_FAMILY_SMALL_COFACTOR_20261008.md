@@ -9,16 +9,16 @@ specialist validation.
 **Correction and continuation, 8 October 2026.** Two missing conjugations
 in the definitions of the Gauss coefficient and transformed profile have
 been repaired below, following a rendered-PDF and TeX-source check. The
-[source audit and exact core involution](SHORT_FAMILY_CORE_INVOLUTION_20261008.md)
+[source audit and exact core involution](3_SHORT_FAMILY_CORE_INVOLUTION_20261008.md)
 record the error and its scope. The prior absolute bounds survive, while
 the exact identity requires the corrected definitions. The
-[latest continuation](SHORT_FAMILY_CONTINUATION_20261008.md) also removes
+[latest continuation](7_SHORT_FAMILY_CONTINUATION_20261008.md) also removes
 a larger overlap sector and identifies an actual prime-column obstruction.
 
 ## Outcome and verification scope
 
 The small-cofactor obstruction in the
-[short-family refinement](SHORT_FAMILY_DESCENT_REFINEMENT_20261008.md)
+[short-family refinement](1_SHORT_FAMILY_DESCENT_REFINEMENT_20261008.md)
 can be sharpened in two ways.
 
 First, the source's proposed positive dual estimate cannot simply be
