@@ -17,7 +17,9 @@ notes, use the next unused number in that investigation and retain the date;
 keep existing numbers stable. Shared program records and this index retain
 their filenames.
 
-Start with the [latest signed fourth reduction](../mixed_character_families/notes/14_SIGNED_HIGH_GCD_REDUCTION_20261009.md),
+Start with the [signed bilinear continuation](../mixed_character_families/notes/23_SIGNED_BILINEAR_CONTINUATION_20261009.md): the short combined cofactor and all its cross terms are controlled; the exact large-cofactor moment remains open. The [joint transform](../mixed_character_families/notes/21_SIGNED_JOINT_TRANSFORM_20261009.md) removes the artificial nonunit second diagonal but gives no automatic width gain.
+
+The [ordered fourth continuation](../mixed_character_families/notes/20_ORDERED_FOURTH_CONTINUATION_20261009.md),
 then the [dependency ledger](RESEARCH_LEDGER_20261008.md) and the
 [broad continuation plan](CODEX_CONTINUATION_20261008.md).
 The [project overview](../README.md) gives the common notation and motivation.
@@ -141,6 +143,20 @@ estimate, remains unproved.
 13. [Fourth correlation continuation](../mixed_character_families/notes/13_MIXED_FOURTH_CONTINUATION_20261009.md): completed bounded tasks, uniform sufficient theorem, scoped evidence and the next signed ratio-core estimate.
 14. [Signed high gcd reduction](../mixed_character_families/notes/14_SIGNED_HIGH_GCD_REDUCTION_20261009.md): shortened inverse deletion convolution and signed coprimality inversion control a new gcd sector; the near-coprime, near-maximal ratio correlation remains open.
 15. [Finite prime completion](../mixed_character_families/notes/15_FINITE_PRIME_COMPLETION_20261009.md): complete prime states, controlled original ratio shell and a compatible completion with an affordable gcd boundary; isolated Euler factors supply no fixed power saving.
+16. [Source fourth marked bridge](../mixed_character_families/notes/16_SOURCE_FOURTH_MARKED_BRIDGE_20261009.md): actual two-transform proof audit, sufficient marked norm, exact sign-loss and mixed coefficient closure obligations.
+17. [Native coprime and response test](../mixed_character_families/notes/17_NATIVE_COPRIME_AND_RESPONSE_TEST_20261009.md): exact coprime Euler correction, native nonvanishing, buffered contour limit and precise weighted tail alternative.
+18. [Native annular diagonal test](../mixed_character_families/notes/18_NATIVE_ANNULAR_DIAGONAL_TEST_20261009.md): prime-product coefficient norm lower bound and failure of the separately positive diagonal majorant, without an energy lower bound.
+19. [Source slot and witness certificate](../mixed_character_families/notes/19_SOURCE_SLOT_WITNESS_CERTIFICATE_20261009.md): quantified original-slot construction, exact lower gains and loss/height ordering; finer mesh lowers the sufficient common new saving to 1/700.
+20. [Ordered fourth continuation](../mixed_character_families/notes/20_ORDERED_FOURTH_CONTINUATION_20261009.md): completed source audit, native tests and conditional certificate, with the refined unproved correlation target and next proof interface.
+21. [Signed joint transform](../mixed_character_families/notes/21_SIGNED_JOINT_TRANSFORM_20261009.md): exact pre-Cauchy kernel, restored zero-frequency cancellation, frequency-divisor labels and the unchanged width with retained sixth-power masks.
+22. [Truncated inverse bilinear removal](../mixed_character_families/notes/22_TRUNCATED_INVERSE_BILINEAR_REMOVAL_20261009.md): exact two-factor inverse decomposition, controlled short-cofactor square and complete cross terms, literal buffers and the surviving original selected form.
+23. [Signed bilinear continuation](../mixed_character_families/notes/23_SIGNED_BILINEAR_CONTINUATION_20261009.md): new conditional removal, exact large-cofactor target, audited transform constraints and next signed-kernel task.
+24. [Adaptive cofactor and dyadic kernel](../mixed_character_families/notes/24_ADAPTIVE_COFACTOR_AND_DYADIC_KERNEL_20261009.md): enlarged cutoff with unchanged saving, exact dyadic/extraction class and conditional smooth zero bounds; nonzero-frequency target remains open.
+25. [Squarepart estimate and smooth obstruction](../mixed_character_families/notes/25_SQUAREPART_REMOVAL_AND_SMOOTH_OBSTRUCTION_20261009.md): complete large inverse-factor common-part removal, legal sieve deficit and principal-compatible raw smooth obstruction; smaller selected target remains open.
+26. [Original centered comparison](../mixed_character_families/notes/26_CENTERED_COMPARISON_FEASIBILITY_20261009.md): complete comparison saving exceeding 1/700 on the certified operational region, retaining the original marked inverse.
+27. [Centered auxiliary control](../mixed_character_families/notes/27_CENTERED_AUXILIARY_CONTROL_AND_SIGNED_REMAINDER_20261009.md): negligible principal layer, growing nonprincipal conductor sectors, exact centered coefficient and gated projector; signed remainder remains open.
+28. [Signed support and conductor reductions](../mixed_character_families/notes/28_SIGNED_HIGH_CONDUCTOR_SUPPORT_AND_DEFECT_20261009.md): full common-support pair count, actual squarefree-core sieve radius, moving valuation-defect frontier and exact remaining signed theorem; Mellin/derivative centering supplies no automatic power gain.
+29. [Further signed-form bounds](../mixed_character_families/notes/29_SIGNED_FORM_SECTORS_AND_SIXTHPOWER_TAIL_20261009.md): small primitive full-column quotient conductors, a core frontier without the defect ceiling, and native sixth-power column-tail removal with every cross term; the precise remaining signed correlation is open.
 
 The [cofactor and mixed-probe review](../reviews/SHORT_FAMILY_COFACTOR_PAIRING_REVIEW_20261008.md)
 records the scoped proof audits and finite checks. The remaining open-chain

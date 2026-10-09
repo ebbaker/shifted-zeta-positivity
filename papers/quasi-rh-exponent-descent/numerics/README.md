@@ -356,3 +356,118 @@ Neither checker proves the remaining near-coprime fourth correlation.
 
 See [mixed note 14](../mixed_character_families/notes/14_SIGNED_HIGH_GCD_REDUCTION_20261009.md)
 and [note 15](../mixed_character_families/notes/15_FINITE_PRIME_COMPLETION_20261009.md).
+
+## Marked fourth proof, native tests, and refined source slots
+
+[check_mixed_marked_bridge.py](check_mixed_marked_bridge.py) prints a
+deterministic small [record](mixed_marked_bridge_record_20261009.json) and
+writes no files. It uses the standard library and the earlier retained
+operational budget record; both that record and the checker source are
+hashed. Run from this folder with Python 3, passing the checker path.
+
+Its 215 exact assertions check rational Euler collision algebra, complete
+versus annular inverse/plain convolution, the source norm ledger, native
+good-prime nonvanishing bound, contour displacement and literal buffer,
+strict response-tail layer integration, conditional whole-prefix margins,
+and the refined common sufficient saving 1/700.
+
+The finite coefficient sample uses independent ideal labels with norms
+13,7,7; it does not realize an operational bin or a native selected row.
+The asymptotic prime-product coefficient theorem is proved in mixed note
+18 using the inherited fixed-field prime ideal theorem. Neither that
+positive-majorant obstruction nor these finite checks lower-bound the
+selected energy or full Gauss norm. Source analytic lemmas and the new
+mixed correlation remain unproved here.
+
+See the [ordered continuation](../mixed_character_families/notes/20_ORDERED_FOURTH_CONTINUATION_20261009.md)
+and the source, coprime, diagonal and slot reviews in [reviews](../reviews/).
+
+## Signed bilinear and truncated inverse checks
+
+The next [squarepart checker](check_mixed_squarepart_estimate.py) prints a
+[small deterministic record](mixed_squarepart_estimate_record_20261009.json)
+with 725,761 exact assertions. It preserves the literal common-factor
+split, original profiles, native zeros and all selected cross terms;
+it also checks the sixthfree projector, formal pole scaling and continuous
+rational saving ledgers. Two fresh runs reproduced the record byte for
+byte. Formal pole points are not zeta zeros; the finite checks prove
+neither Mellin continuation nor the analytic obstruction or moment.
+See [Note 25](../mixed_character_families/notes/25_SQUAREPART_REMOVAL_AND_SMOOTH_OBSTRUCTION_20261009.md)
+and its [review](../reviews/MIXED_SQUAREPART_AND_SMOOTH_REVIEW_20261009.md).
+
+The follow-up [check_mixed_dyadic_cofactor.py](check_mixed_dyadic_cofactor.py)
+prints a [deterministic record](mixed_dyadic_cofactor_record_20261009.json)
+with 33,662 exact assertions. Run with `python3 -B`; it writes no files.
+It checks the adaptive cutoff's continuous rational budget, capped signed
+squarefree-core identity, unequal-cap prime extraction through exponent
+seven, strict endpoints, and the literal dyadic reconstruction with both
+orientations, native zeros, original normalization and selected cross terms.
+The checker and its read-only dependency are hash-bound in the record;
+two fresh runs reproduced it byte for byte. Finite models do not prove
+smooth Poisson, the analytic coefficient extension or the new moment.
+See [Note 24](../mixed_character_families/notes/24_ADAPTIVE_COFACTOR_AND_DYADIC_KERNEL_20261009.md)
+and the [review](../reviews/MIXED_ADAPTIVE_DYADIC_REVIEW_20261009.md).
+
+[check_mixed_signed_bilinear.py](check_mixed_signed_bilinear.py) prints a
+deterministic [small record](mixed_signed_bilinear_record_20261009.json)
+and writes no files. Run with Python 3 from this folder. The record binds
+the checker source by SHA-256 and states its assertion counts and scope.
+Two fresh runs reproduced its 62,822-assertion record byte for byte.
+
+The exact finite checks retain the original inverse normalizer, truncated
+two-factor convolution, squareful/higher-power cancellation, multiplicative
+zero masks, both local sixth-root orientations, selected positive weights
+and every cross term. Rational inequalities certify the uniform short-
+cofactor gain and the literal correlated source-buffer reserve. Finite
+kernel projector checks are labeled arithmetic models. These tests do not
+prove native reciprocity or source analytic inputs, actual zero-bin
+realization, ideal asymptotics, or the surviving unbounded signed moment.
+
+See [mixed note 22](../mixed_character_families/notes/22_TRUNCATED_INVERSE_BILINEAR_REMOVAL_20261009.md),
+[the continuation](../mixed_character_families/notes/23_SIGNED_BILINEAR_CONTINUATION_20261009.md)
+and the linked same-model reviews.
+
+
+The [centered continuation checker](check_centered_continuation.py)
+prints its [small deterministic record](centered_continuation_record_20261009.json)
+and writes no files. Two fresh runs reproduced all 10,533 assertions and
+the record byte for byte. It checks complete centered coefficients,
+inverse/plain/slot prime ownership, physical zeros, selected cross terms,
+the conductor-gated projector with active nonunit masks and a literal
+extended bin predicate, and exact rational conductor/contour/height
+ledgers. The coefficient model is a formal ideal monoid and the
+projector uses synthetic multiplicative characters; neither certifies
+native arithmetic transfer, smooth Poisson, source moments, Mellin
+decay or the unbounded signed estimate. See
+[Note 27](../mixed_character_families/notes/27_CENTERED_AUXILIARY_CONTROL_AND_SIGNED_REMAINDER_20261009.md)
+and its [review](../reviews/MIXED_CENTERED_AUXILIARY_REVIEW_20261009.md).
+
+
+The [signed high-conductor sector checker](check_signed_high_sectors.py)
+prints its [small deterministic record](signed_high_sectors_record_20261009.json)
+and writes no files. Fresh replay reproduces all 7,021 assertions
+and the retained record byte for byte. It checks complete centered
+physical squares, full common-support decomposition versus ordinary
+gcd quotients, signed pair cuts and complements, physical zeros,
+marked inverse sixth-free columns, actual core-radius sieve branches,
+the moving valuation-defect frontier, literal contour/height reserves,
+and common Mellin/derivative diagnostics. Five defect values include
+80 exact frontier cancellations and 320 feasible core-radius cases.
+The formal ideal monoid and synthetic multiplicative kernel do not
+certify native analytic transfer, source envelopes, asymptotic ideal
+counts, smooth Poisson or the unbounded signed finishing theorem.
+See [Note 28](../mixed_character_families/notes/28_SIGNED_HIGH_CONDUCTOR_SUPPORT_AND_DEFECT_20261009.md) and its [review](../reviews/MIXED_SIGNED_HIGH_CONDUCTOR_REVIEW_20261009.md).
+
+
+The [signed-form bound checker](check_signed_form_bound.py)
+prints its [deterministic small record](signed_form_bound_record_20261009.json)
+and writes no files. Replay reproduces all 16,191 assertions
+and the retained record byte for byte. It checks primitive quotient
+and column sixth-power maps, complete original/head/tail identities,
+nested signed cuts and physical zeros, the full piecewise core sieve
+frontier and exact native/scalar tail reserves. All 16 native branch
+pairs are checked at 16 coarse corners, giving a continuous
+multi-affine arithmetic certificate. Its synthetic kernel does not
+certify native transfer, global growth, ideal asymptotics, source
+height propagation or the full signed correlation.
+See [Note 29](../mixed_character_families/notes/29_SIGNED_FORM_SECTORS_AND_SIXTHPOWER_TAIL_20261009.md) and its [review](../reviews/MIXED_SIGNED_FORM_BOUND_REVIEW_20261009.md).

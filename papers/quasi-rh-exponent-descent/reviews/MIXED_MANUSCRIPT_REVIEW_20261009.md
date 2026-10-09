@@ -1,4 +1,4 @@
-# Review of the organized mixed-family manuscript
+# Historical review of the initial mixed-family manuscript
 
 9 October 2026. Prepared for Edward Baker with substantial LLM assistance.
 Model: GPT-6 (Codex), inherited configuration; exact serving variant and
@@ -8,9 +8,11 @@ specialist review or formal proof verification.
 
 The [standalone manuscript](../mixed_character_families/mixed_character_reductions.tex)
 consolidates mixed Notes 1–8 and connects them to the broader exponent-descent
-program and the adjacent short-family manuscript. Its mathematical content
-has been reviewed internally. The current source has one known LaTeX error;
-its final compilation has not succeeded.
+program and the adjacent short-family manuscript. This review describes
+that initial assembly, whose last source still had one LaTeX error.
+The later signed bilinear integration corrected it and compiled successfully;
+see the [current integration review](MIXED_SIGNED_BILINEAR_MANUSCRIPT_REVIEW_20261009.md).
+The diagnostics and source hashes below belong to the earlier assembly.
 
 ## Coverage and logical status
 
@@ -66,7 +68,7 @@ The source is 129,845 bytes with 2 theorems, 14 propositions, 8 lemmas and
 numerical experiment is claimed. Existing finite records are described at
 their original scope; they do not prove the imported analytic inputs.
 
-## Native compilation status and remaining formatting correction
+## Initial compilation status and historical formatting correction
 
 The source was sent to the built-in LaTeX editor; the UI returned `queued`.
 That does not confirm the editor was visible. The built-in compiler reported
@@ -75,15 +77,14 @@ scope and notation clarification introduced a superscript-token issue,
 which was corrected in the third repair pass, and a new unbraced fraction
 issue while renaming the scalar gain to F_x.
 
-The current compiler diagnostic is `Missing { inserted` at source line 312.
+The final compiler diagnostic in that earlier request was `Missing { inserted` at source line 312.
 The remaining correction is to replace the fraction token sequence
 `\frac F_x2` with `\frac{F_x}{2}`. The appendix already displays this same
 mathematical formula correctly. The compiler tool's instruction limits this
-request to three source-repair attempts, which have been used. The current
-source is preserved; no final successful compilation or final rendered-layout
+request to three source-repair attempts, which have been used. The source was preserved at the end of that request; no final successful compilation or final rendered-layout
 verification is claimed. No terminal TeX installation or PDF export was made.
 
-Current source SHA-256:
+Initial assembly source SHA-256:
 `9a2be609dc21ed2fa8c4d3b18a0b865af8ebb66094b7ff25c920e85e71c954c5`.
 Earlier compiled source SHA-256:
 `ab5e1b790e7bdae9e1c283a86b55eacf21fcfbb26d2b2dc6606b87ddaea6b181`.

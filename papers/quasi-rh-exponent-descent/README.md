@@ -1,5 +1,7 @@
 # Quasi-RH exponent descent
 
+The latest [bounds for the signed form](mixed_character_families/notes/29_SIGNED_FORM_SECTORS_AND_SIXTHPOWER_TAIL_20261009.md) control small primitive column quotient conductors, additional higher-defect auxiliary rows, and columns with a sixth-power factor exceeding U^(1/10), including all cross terms. The universal tail proof uses the existing native arbitrary-vector sieve; the optional U^(2/25) cutoff retains its additional source scalar hypotheses. The exact remaining correlation still needs saving 1/700. Its [review](reviews/MIXED_SIGNED_FORM_BOUND_REVIEW_20261009.md) records the conditional inputs and finite verification.
+
 Prepared for Edward Baker, 8 October 2026, with substantial LLM assistance.
 Model: GPT-6 (Codex), inherited configuration; exact serving variant and
 configured reasoning effort are not exposed and are not inferred.
@@ -13,7 +15,7 @@ and the [prime-variance project](../prime-variance-exponents/README.md).
 The [investigation summary and notes index](notes/README.md) maps the five
 project folders and their current results and open tasks.
 For the next research session, start with the
-[latest signed fourth reduction](mixed_character_families/notes/14_SIGNED_HIGH_GCD_REDUCTION_20261009.md)
+[latest signed-form bounds](mixed_character_families/notes/29_SIGNED_FORM_SECTORS_AND_SIXTHPOWER_TAIL_20261009.md)
 and [dependency ledger](notes/RESEARCH_LEDGER_20261008.md), then consult the detailed
 [Codex continuation note](notes/CODEX_CONTINUATION_20261008.md) for the broader program.
 It integrates a review of
@@ -34,16 +36,20 @@ of mathematical priority or independent specialist validation is made.
 ## Focused continuation: short and mixed families
 
 The [organized mixed-family manuscript](mixed_character_families/mixed_character_reductions.tex)
-now consolidates Notes 1–8 with proofs, an explicit input ledger, the latest
-signed remainder, direct fourth-moment alternatives, and a detailed route
-from local estimates to the broader program. Its
-[review](reviews/MIXED_MANUSCRIPT_REVIEW_20261009.md) records the internal
-mathematical checks and one remaining LaTeX formatting error; final compilation
-is pending. The full mixed estimate and RH descent remain open.
+now includes Notes 1–8 and the signed bilinear results of Notes 21–29,
+with the original-slot and operational context from Notes 9 and 19. It
+proves the conditional short-cofactor removal with all cross terms, derives
+the exact signed joint kernel, and states the remaining large-cofactor
+fourth target, followed by the original centered comparison, auxiliary conductor reductions and further signed support/defect cuts, primitive quotient removal and the complete sixth-power column-tail interaction. The revised source compiled successfully in the built-in
+editor. The [integration review](reviews/MIXED_SIGNED_BILINEAR_MANUSCRIPT_REVIEW_20261009.md)
+records the proofs, source assumptions and checks; the full mixed moment
+and RH descent remain open.
 
 The [operational fourth continuation](mixed_character_families/notes/13_MIXED_FOURTH_CONTINUATION_20261009.md) gives a conditional uniform inverse-weighted fourth target with saving 1/540 and half-power ratio-cut reserve greater than 1/500. It records exact Mobius ratio cores, a squarefree absolute-count barrier, legal cubic blocks and their cross-core recombination deficit, and the separate boundary-reuse obligations. Actual slot/witness certification and the new signed correlation remain open.
 
 The [signed high-gcd reduction](mixed_character_families/notes/14_SIGNED_HIGH_GCD_REDUCTION_20261009.md) uses the source all-length buffered inverse bound and exact coprimality inversion to control common gcd norms at least c U^(1/125), with reserve greater than 1/1000. The remaining selected correlation has nearly coprime inverse pairs and ratio cores above U^(2r-2/125). A [finite-prime completion](mixed_character_families/notes/15_FINITE_PRIME_COMPLETION_20261009.md) preserves all local states with a controlled gcd boundary. These are conditional sector reductions; the near-coprime correlation and actual source/witness certificate remain open.
+
+The [ordered continuation](mixed_character_families/notes/20_ORDERED_FOURTH_CONTINUATION_20261009.md) audits the actual fourth proof, tests native coprime and annular coefficients, and gives a conditional original-slot/witness construction. Its fine original mesh lowers the common sufficient new fourth saving from 1/540 to 1/700, with explicit fixed-loss reserves. The unchanged separate positive transformed-diagonal majorant fails; signed transformed correlation or a weighted response-tail bound remains the next arithmetic task. No new mixed moment or zero-free boundary is proved.
 
 The active research focus is now mixed character families. The
 [joint middle continuation](mixed_character_families/notes/8_JOINT_MIDDLE_COMPONENT_CONDUCTORS_20261009.md)

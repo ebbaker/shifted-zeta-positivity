@@ -322,3 +322,88 @@ See [mixed note 14](../mixed_character_families/notes/14_SIGNED_HIGH_GCD_REDUCTI
 [completion review](../reviews/MIXED_FINITE_PRIME_COMPLETION_REVIEW_20261009.md).
 The exact checkers verify algebra and rational losses; the retained
 unbounded correlation remains the arithmetic proof task.
+
+## Ordered fourth-proof continuation on 9 October 2026
+
+| Item | Logical status | Consequence |
+| --- | --- | --- |
+| Actual source Lemma 18.1 replay | Source proof-structure and scope audit; deep inputs remain imported | Inverse correlation is lost at the envelope replacement; retaining it creates a new marked bilinear/Gauss family with inverse-specific masks |
+| Native coprime inverse block | Exact Euler resummation and conditional buffered contour bound | The correction is nonvanishing in the two-half-plane native domain; existing absolute reciprocal contours give no fixed saving |
+| Native annular mixed coefficient | Ideal-algebra derivation and inherited prime ideal theorem | Prime products force squared coefficient norm of full product length; the unchanged separate positive second diagonal misses even the refined budget by more than 363/1750 |
+| Original source slots and witness | Conditional construction from the source's fixed-window and amplitude subdivision | Whole inverse prefix has t_I in [ell/2,3ell/4] and G_I>=dx z_I; remaining witness losses must be below 137ell/200 |
+| Refined fourth subset | Exact continuous budget plus the same fine original mesh | With h_J<=3ell/4, sufficient new saving 1/700 has spare 563861960869/86211772920000000; literal buffer/envelope costs must fit it |
+| Remaining arithmetic | Still open | Signed low-gcd selected correlation or weighted inverse-response tail, retaining all profiles, heights and masks |
+| Program boundary | Separate imported and new obligations | No new full mixed moment, detector count improvement, reusable family boundary or RH implication |
+
+See the [ordered continuation](../mixed_character_families/notes/20_ORDERED_FOURTH_CONTINUATION_20261009.md),
+its linked notes 16–19, and the [215-assertion record](../numerics/mixed_marked_bridge_record_20261009.json).
+The source's quantified slot mechanism is available; absence of an evaluated local manifest is not a theorem-level nonexistence claim.
+
+## Signed bilinear kernel and truncated inverse removal
+
+[Note 29](../mixed_character_families/notes/29_SIGNED_FORM_SECTORS_AND_SIXTHPOWER_TAIL_20261009.md) bounds three further parts of the exact Note 28 form. An elementary X√V pair count controls the full-column primitive quotient radical f≤B_all² with saving 1/500. The complete piecewise marked sieve removes the defect ceiling using κ+[η+(ell_M−2α)_+]/10≤κ_sf, retaining saving 11/6250. Native arbitrary-vector sixth-power extraction controls every interaction with at least one column sixth-power factor above U^(1/10), with saving 1/500; its optional U^(2/25) cutoff requires the original scalar source scope. The remaining exact real signed form has both exclusive supports>B_all, quotient radical>B_all², both sixth-power factors≤U^(1/10), and the row outside the complete core frontier. It is unproved. The 16,191-assertion record checks finite identities and multi-affine rational ledgers, not the native inputs or unbounded correlation; see the [review](../reviews/MIXED_SIGNED_FORM_BOUND_REVIEW_20261009.md).
+
+[Note 28](../mixed_character_families/notes/28_SIGNED_HIGH_CONDUCTOR_SUPPORT_AND_DEFECT_20261009.md) controls the signed full-column pair sector min(Na,Nb)≤B_all=U^(dr−1/500) with saving 1/500, including all same-radical pairs. The direct selected cutoff is B_sel=U^(1+dr−1/500−R). The native arbitrary-coefficient sixth-order sieve on the actual squarefree factor radius extends the auxiliary conductor range to κ≤κ_sf−η/10 for η≤3/20. A fresh fixed 0<v≤1/5000 leaves saving 11/6250 and reserve 29/87500. The uniform endpoint κ_D improves κ1 by at least 2029/56250. The remaining exact real signed form keeps both large exclusive supports and the complement of the defect frontier. It is unproved; sharp predicates do not automatically inherit row Poisson. The centered Mellin zero and common aspect derivatives give no fixed saving without a new signed estimate. The 7,021-assertion record checks finite identities and exact rational ledgers, with scope in the [review](../reviews/MIXED_SIGNED_HIGH_CONDUCTOR_REVIEW_20261009.md).
+
+[Notes 26–27](../mixed_character_families/notes/27_CENTERED_AUXILIARY_CONTROL_AND_SIGNED_REMAINDER_20261009.md)
+now give the complete original-product centering comparison on the
+certified operational region, principal/bounded-ray cancellation with
+explicit smoothness and height cost, and a growing nonprincipal auxiliary
+sector through kappa0=m+dr/2−1/1000 with saving 1/500. The imported global
+beta*≤7/8 package enlarges the cutoff to kappa1=m+2dr/3−1/750, with a
+fresh fixed contour offset v≤1/3500 retained literally. The centered
+coefficient, prime ownership and extended-bin projector are exact;
+the gated projector has Nq≪U^(67/2000). The remaining signed centered
+high-conductor theorem is open, and legal scalar bounds miss by at least
+1627/7000. The 10,533-assertion finite record checks arithmetic identities
+and budgets, not the analytic inputs or that theorem. Height orders in
+the imported source moments remain symbolic, and full detector/bin
+coverage is not certified. See the
+[continuation review](../reviews/MIXED_CENTERED_AUXILIARY_REVIEW_20261009.md).
+
+
+[Note 25](../mixed_character_families/notes/25_SQUAREPART_REMOVAL_AND_SMOOTH_OBSTRUCTION_20261009.md)
+adds a controlled large common factor of the two truncated inverse factors.
+At gamma=(1−d)r/2+1/250 its selected square saves 1/125, and its full
+cross interaction saves at least 79927/20000000. The combined removals
+retain the previous 7979/2000000 saving and leave a smaller selected
+small-common-factor signed core target. A classical Mellin pole argument
+refutes the unrestricted uncentered all-row target in a genuinely
+principal-compatible class with nonzero principal profile means; the
+original selected high-conductor target is unaffected. A suitable retained
+signed row mask or separately proved centered comparison is now required
+for that smooth strategy. The imported sixth-order sieve estimate still
+misses the target by at least 5423/52500. The new finite record checks
+725,761 identities and rational budgets, not these analytic conclusions.
+
+The [adaptive continuation](../mixed_character_families/notes/24_ADAPTIVE_COFACTOR_AND_DYADIC_KERNEL_20261009.md)
+enlarges the cutoff to U^(r/2−1/4) without extending the imported reflected
+length range; the complete difference retains saving 7979/2000000.
+Its dyadic cover, capped squarefree-core formula and prime-extraction
+rules are exact algebra. Divisor-bounded raw marked coefficients give
+conditional smooth first-zero and residual unit second-zero bounds;
+these use the imported native Poisson and bounded frozen-scalar inputs.
+The source's recursive analytic coefficient class and the full nonzero
+frequency estimate with saving 1/700 remain unproved. Auxiliary principal
+rows in a positive smooth enlargement cannot use original nonprincipal
+bin bounds. The new [finite record](../numerics/mixed_dyadic_cofactor_record_20261009.json)
+checks 33,662 exact identities and rational budgets; it establishes no
+unbounded moment, bin coverage or family-boundary reuse.
+
+9 October 2026. GPT-6 (Codex), inherited configuration; exact serving
+variant and configured reasoning effort are not exposed and are not inferred.
+Same-model internal derivations and reviews; no independent specialist audit.
+
+| Item | Status | Consequence and limit |
+| --- | --- | --- |
+| Joint second transform before Cauchy | Exact finite kernel and source-normalization derivation | Full coprimality projector kills the nonunit second diagonal; nonzero frequencies permit only s dividing j; unit exception and physical zeros remain |
+| Joint row/column width and sixth-power replacement | Exact ledger and retained-sublattice calculation | Width returns to M at the principal dyad; a moving common row character and lattice masks remain, so no automatic fixed saving |
+| Truncated two-factor inverse identity | Exact good-ideal convolution identity through the product cutoff | The original annular inverse becomes two short squarefree factors times a plain quotient, with all squareful and higher-power cancellations retained |
+| Combined cofactor Nt≤U^(1/10) | New conditional analytic removal using source reflected plain bound, ideal counting and selected fourth mass | Squared-response saving at least 1/125 before buffers; complete cross error has saving at least 7979/2000000 for e≤1/1200000, also subject to source/witness limits |
+| Remaining large-cofactor selected moment | Equivalent unproved target at saving 1/700 under imported hypotheses | Original weights and normalizer retained; cZ is not multiplicative beyond Z, factors may be unbalanced, and old near-gcd selectors require a separate exact bridge |
+
+See [the continuation](../mixed_character_families/notes/23_SIGNED_BILINEAR_CONTINUATION_20261009.md),
+[the transform](../mixed_character_families/notes/21_SIGNED_JOINT_TRANSFORM_20261009.md),
+[the removal](../mixed_character_families/notes/22_TRUNCATED_INVERSE_BILINEAR_REMOVAL_20261009.md),
+the linked same-model reviews, and the [finite record](../numerics/mixed_signed_bilinear_record_20261009.json).
+No new mixed fourth theorem or stronger zero-free boundary is claimed.
