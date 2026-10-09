@@ -17,7 +17,7 @@ notes, use the next unused number in that investigation and retain the date;
 keep existing numbers stable. Shared program records and this index retain
 their filenames.
 
-Start with the [new-session continuation](../short_families/notes/20_SHORT_FAMILY_SESSION_CONTINUATION_20261008.md),
+Start with the [latest signed fourth reduction](../mixed_character_families/notes/14_SIGNED_HIGH_GCD_REDUCTION_20261009.md),
 then the [dependency ledger](RESEARCH_LEDGER_20261008.md) and the
 [broad continuation plan](CODEX_CONTINUATION_20261008.md).
 The [project overview](../README.md) gives the common notation and motivation.
@@ -79,6 +79,13 @@ density and both low/high edges for this unresolved estimate.
 The whole nonsquarefree total-product sector is now affordable at
 \(H=D^{2/5}\) with cutoff \(\theta=11/20\), leaving a squarefree
 signed residual. This is a component bound, not an improved full moment.
+At the same cutoff, complete small-prime cofactors now cancel odd rough
+cores, giving a growing three-prime signed zero sector on a specified
+large-conductor range. Even rough cores and coherent low-conductor triples
+remain. The masked squarefree discrepancy identity retains all edges and
+the enlarged deletion modulus; the full moment remains open. The
+[rough-parity audit](../reviews/SHORT_FAMILY_ROUGH_PARITY_REVIEW_20261008.md)
+records these proofs and their validation limits.
 
 1. [Descent refinement](../short_families/notes/1_SHORT_FAMILY_DESCENT_REFINEMENT_20261008.md): conditional extraction and finite reuse of a fixed moment.
 2. [Small-cofactor reduction](../short_families/notes/2_SHORT_FAMILY_SMALL_COFACTOR_20261008.md): diagonal subtraction and second-Poisson decay.
@@ -100,7 +107,13 @@ signed residual. This is a component bound, not an improved full moment.
 17. [Squarefree tail reduction](../short_families/notes/17_SHORT_FAMILY_SQUAREFREE_TAIL_REDUCTION_20261008.md): the entire nonsquarefree sector has bound \(D^{19/24+\varepsilon}\) at the proposed test point; the squarefree moment remains open.
 18. [Cofactor compensation](../short_families/notes/18_SHORT_FAMILY_COFACTOR_COMPENSATION_20261008.md): an actual selected-factor block is negligible by complete cofactor inversion and free completion; its range has constant relative width.
 19. [Opposing edge compensation](../short_families/notes/19_SHORT_FAMILY_EDGE_COMPENSATION_20261008.md): exact low/high cancellation and a positive packet integral, with selected-edge barriers and the unit exception retained.
-20. [New-session continuation](../short_families/notes/20_SHORT_FAMILY_SESSION_CONTINUATION_20261008.md): current proof status, exact squarefree target, cutoff safeguards, prioritized research tasks and session recommendation.
+20. [Squarefree-reduction continuation](../short_families/notes/20_SHORT_FAMILY_SESSION_CONTINUATION_20261008.md): preceding proof status, exact squarefree target, cutoff safeguards and research tasks.
+21. [Rough-core parity](../short_families/notes/21_SHORT_FAMILY_ROUGH_PARITY_20261008.md): complete small-prime cofactors, a growing signed zero sector at large conductor, and the retained generic budget.
+22. [Squarefree discrepancy](../short_families/notes/22_SHORT_FAMILY_SQUAREFREE_DISCREPANCY_20261008.md): complete masked convolution, both edges, low/low, density, prime powers, endpoints and added modulus cost.
+23. [Parity continuation](../short_families/notes/23_SHORT_FAMILY_PARITY_CONTINUATION_20261008.md): the signed sector, surviving nonzero response, validation scope and cofactor test.
+24. [Complete-cofactor obstruction](../short_families/notes/24_SHORT_FAMILY_FINITE_COFACTOR_PAIRING_20261008.md): for the permitted trivial twist, a genuine semiprime/odd-product pairing retains coherent power 16/15 uniformly for growing cofactor norm below D^(1/20); no full-tail lower bound follows.
+25. [Pairing remainder](../short_families/notes/25_SHORT_FAMILY_PAIRING_REMAINDER_20261008.md): exact finite-prime resummation, negligible auxiliary free response with both norm costs paid, and an unbounded signed arithmetic complement.
+26. [Cofactor continuation](../short_families/notes/26_SHORT_FAMILY_COFACTOR_CONTINUATION_20261008.md): completed cofactor test, mixed actual-probe reassessment, reproducible checks and the distinct-character open-chain task.
 
 The [signed packet review](../reviews/SHORT_FAMILY_SIGNED_PACKET_REVIEW_20261008.md)
 records the proof audits and finite checks. The full tail moment remains open.
@@ -115,6 +128,28 @@ estimate, remains unproved.
 
 1. [Mixed conductor refinement](../mixed_character_families/notes/1_MIXED_CONDUCTOR_REFINEMENT_20261008.md): buffered cutoff certificates and another removable plain-conductor sector.
 2. [Selected inverse distribution](../mixed_character_families/notes/2_SELECTED_INVERSE_DISTRIBUTION_20261008.md): frame transposition, primitive-character fibers, and the remaining cyclic estimate.
+3. [Actual-probe cubic target](../mixed_character_families/notes/3_ACTUAL_PROBE_CUBIC_TARGET_20261008.md): a strictly weaker sufficient cubic criterion for the actual plain vector; conditional buffered endpoint input controls repeated characters, leaving a distinct-character open chain.
+4. [Conductor-neighbor sectors](../mixed_character_families/notes/4_CONDUCTOR_NEIGHBOR_SECTORS_20261008.md): physical conductor-neighbor and coupled middle-row counts, hybrid masked Poisson kernels, and six controlled nonprincipal sectors with the exact remainder retained.
+5. [Neighbor continuation](../mixed_character_families/notes/5_MIXED_NEIGHBOR_CONTINUATION_20261008.md): six controlled sectors, sharp raw-count example and the entrywise-method deficit.
+6. [Weighted middle sieve and direct energy](../mixed_character_families/notes/6_WEIGHTED_MIDDLE_SIEVE_AND_DIRECT_ENERGY_20261009.md): seventh sector from the imported physical operator, the exact exterior-factor complement, and the optimized direct marginal budget with new correlation targets.
+7. [Valuation factors and inverse-ratio fourth](../mixed_character_families/notes/7_VALUATION_FACTOR_SECTORS_AND_INVERSE_RATIO_FOURTH_20261009.md): eighth sector using grouped power-free exterior roots, control of the previous higher-valuation example, a surviving raw geometry, and an exact small-inverse-ratio removal for the direct fourth moment.
+8. [Joint middle component conductors](../mixed_character_families/notes/8_JOINT_MIDDLE_COMPONENT_CONDUCTORS_20261009.md): coupled exterior-radical and quadratic/cubic column-conductor cut, exact expanded remainder, joint cubic operator scope and the retained sextic correlation.
+9. [Operational fourth budget](../mixed_character_families/notes/9_OPERATIONAL_FOURTH_BUDGET_20261009.md): exact whole-slot optimization, continuous operational extrema, a sufficient uniform fourth saving 1/540, and the distinct tighter witness budget.
+10. [Mobius ratio cores](../mixed_character_families/notes/10_MOBIUS_RATIO_CORE_FOURTH_20261009.md): exact squarefree gcd/core decomposition with all masks, annular balance, sharp absolute squarefree pair-count exponent, and the direct signed correlation.
+11. [Parity-core joint correlation](../mixed_character_families/notes/11_PARITY_CORE_JOINT_CORRELATION_20261009.md): legal bounded-coefficient cubic power extraction, exact filtered cross-core identity, and a quantified failure of positive core recombination.
+12. [Boundary reuse and input scope](../mixed_character_families/notes/12_BOUNDARY_REUSE_AND_INPUT_SCOPE_20261009.md): exact detector feedback obligations, present low/moment/contour ceilings, and conditional native comparison with the remaining dictionary stated.
+13. [Fourth correlation continuation](../mixed_character_families/notes/13_MIXED_FOURTH_CONTINUATION_20261009.md): completed bounded tasks, uniform sufficient theorem, scoped evidence and the next signed ratio-core estimate.
+14. [Signed high gcd reduction](../mixed_character_families/notes/14_SIGNED_HIGH_GCD_REDUCTION_20261009.md): shortened inverse deletion convolution and signed coprimality inversion control a new gcd sector; the near-coprime, near-maximal ratio correlation remains open.
+15. [Finite prime completion](../mixed_character_families/notes/15_FINITE_PRIME_COMPLETION_20261009.md): complete prime states, controlled original ratio shell and a compatible completion with an affordable gcd boundary; isolated Euler factors supply no fixed power saving.
+
+The [cofactor and mixed-probe review](../reviews/SHORT_FAMILY_COFACTOR_PAIRING_REVIEW_20261008.md)
+records the scoped proof audits and finite checks. The remaining open-chain
+bound has not been obtained.
+
+The [conductor-neighbor review](../reviews/MIXED_CONDUCTOR_NEIGHBOR_REVIEW_20261008.md)
+audits the new sector proofs, the native Poisson dependency and the retained
+all-large-conductor obligation. Its finite checks do not validate an
+unbounded mixed moment or the imported analytic inputs.
 
 ## Integer quadratic lift
 

@@ -13,7 +13,7 @@ and the [prime-variance project](../prime-variance-exponents/README.md).
 The [investigation summary and notes index](notes/README.md) maps the five
 project folders and their current results and open tasks.
 For the next research session, start with the
-[new-session continuation](short_families/notes/20_SHORT_FAMILY_SESSION_CONTINUATION_20261008.md)
+[latest signed fourth reduction](mixed_character_families/notes/14_SIGNED_HIGH_GCD_REDUCTION_20261009.md)
 and [dependency ledger](notes/RESEARCH_LEDGER_20261008.md), then consult the detailed
 [Codex continuation note](notes/CODEX_CONTINUATION_20261008.md) for the broader program.
 It integrates a review of
@@ -31,7 +31,70 @@ prove quasi-RH implies RH, a new zero-free strip, or the required arithmetic
 contraction. The proposed implication remains a research target; no claim
 of mathematical priority or independent specialist validation is made.
 
-## Focused continuation: short families
+## Focused continuation: short and mixed families
+
+The [organized mixed-family manuscript](mixed_character_families/mixed_character_reductions.tex)
+now consolidates Notes 1–8 with proofs, an explicit input ledger, the latest
+signed remainder, direct fourth-moment alternatives, and a detailed route
+from local estimates to the broader program. Its
+[review](reviews/MIXED_MANUSCRIPT_REVIEW_20261009.md) records the internal
+mathematical checks and one remaining LaTeX formatting error; final compilation
+is pending. The full mixed estimate and RH descent remain open.
+
+The [operational fourth continuation](mixed_character_families/notes/13_MIXED_FOURTH_CONTINUATION_20261009.md) gives a conditional uniform inverse-weighted fourth target with saving 1/540 and half-power ratio-cut reserve greater than 1/500. It records exact Mobius ratio cores, a squarefree absolute-count barrier, legal cubic blocks and their cross-core recombination deficit, and the separate boundary-reuse obligations. Actual slot/witness certification and the new signed correlation remain open.
+
+The [signed high-gcd reduction](mixed_character_families/notes/14_SIGNED_HIGH_GCD_REDUCTION_20261009.md) uses the source all-length buffered inverse bound and exact coprimality inversion to control common gcd norms at least c U^(1/125), with reserve greater than 1/1000. The remaining selected correlation has nearly coprime inverse pairs and ratio cores above U^(2r-2/125). A [finite-prime completion](mixed_character_families/notes/15_FINITE_PRIME_COMPLETION_20261009.md) preserves all local states with a controlled gcd boundary. These are conditional sector reductions; the near-coprime correlation and actual source/witness certificate remain open.
+
+The active research focus is now mixed character families. The
+[joint middle continuation](mixed_character_families/notes/8_JOINT_MIDDLE_COMPONENT_CONDUCTORS_20261009.md)
+controls an expanded column-pair piece whose quadratic or cubic component
+conductor is small relative to the exterior middle radical. Its conditional
+uniform reserve is 927/500000. The exact remainder retains all eight row
+conditions and both strict coupled component-conductor inequalities.
+This refines the actual joint sum; the full sextic pq² correlation remains
+open. The [valuation-factor note](mixed_character_families/notes/7_VALUATION_FACTOR_SECTORS_AND_INVERSE_RATIO_FOURTH_20261009.md)
+also keeps the parallel direct large-inverse-ratio fourth target. Further
+short-family cofactor work is deferred. See the [scoped review](reviews/MIXED_JOINT_COMPONENT_REVIEW_20261009.md).
+
+The latest [mixed conductor-neighbor estimates](mixed_character_families/notes/4_CONDUCTOR_NEIGHBOR_SECTORS_20261008.md)
+control six specified parts of the distinct-character open chain, retaining
+the actual selected weights, endpoint plain sums and deletion masks.
+Local sixth-power-free row counting gives a coupled middle-row bound;
+the existing native all-scale Poisson input further sharpens kernels at
+small primitive conductor. The [remaining-range analysis and handoff](mixed_character_families/notes/5_MIXED_NEIGHBOR_CONTINUATION_20261008.md)
+quantify why the range with all three conductors of order \(U\) still
+needs weight distribution or phase cancellation. These are conditional
+sector estimates; the full mixed moment remains open. The
+[scoped review](reviews/MIXED_CONDUCTOR_NEIGHBOR_REVIEW_20261008.md)
+and 26,966 finite assertions record the proof and verification scope.
+
+The [complete-cofactor test](short_families/notes/24_SHORT_FAMILY_FINITE_COFACTOR_PAIRING_20261008.md)
+pairs actual semiprimes with every signed divisor cofactor of an ideal
+\(NM\le D^\beta\), fixed \(\beta<1/20\), for the permitted trivial
+fixed twist \(\nu=1\). This nonzero signed block
+still has coherent energy of power \(16/15\), up to logarithms, for
+every fixed nonzero zero-integral profile. It cannot receive a separate
+\(4/5\) budget; its cross term with the remaining products is open.
+The [free/complement split](short_families/notes/25_SHORT_FAMILY_PAIRING_REMAINDER_20261008.md)
+makes the auxiliary free response negligible while retaining an explicit
+arithmetic remainder. The prescribed
+[mixed-family reassessment](mixed_character_families/notes/3_ACTUAL_PROBE_CUBIC_TARGET_20261008.md)
+gives a weaker cubic target for the actual plain vector and controls all
+repeated-character chains using the existing conditional buffered input.
+Its distinct-character open chain remains unproved. The
+[scoped review](reviews/SHORT_FAMILY_COFACTOR_PAIRING_REVIEW_20261008.md)
+records the proofs, finite checks and manuscript compilation.
+
+The [rough-core parity decomposition](short_families/notes/21_SHORT_FAMILY_ROUGH_PARITY_20261008.md)
+cancels complete small-prime cofactors with odd rough cores at the retained
+buffer. A growing three-prime sector has negligible full weighted energy
+on an explicit large-conductor range, while coherent low-conductor rows
+and even rough cores remain. The
+[squarefree discrepancy bridge](short_families/notes/22_SHORT_FAMILY_SQUAREFREE_DISCREPANCY_20261008.md)
+retains both edges, low/low, prime powers, endpoints and the added deletion
+modulus. The [scoped audit](reviews/SHORT_FAMILY_ROUGH_PARITY_REVIEW_20261008.md)
+records the signed sector proof and its limits. The generic full-moment
+exponent remains \(16/15\); the \(4/5\) target is open.
 
 The [squarefree reduction](short_families/notes/17_SHORT_FAMILY_SQUAREFREE_TAIL_REDUCTION_20261008.md)
 now bounds the entire nonsquarefree part of the adaptive tail by
@@ -64,7 +127,7 @@ records the same-model audits and reproducible finite checks.
 
 The [organized manuscript](short_families/short_family_reductions.tex)
 develops the useful results of short-family notes 1–13 and the cancellation
-results of notes 15 and 17 in one standalone
+results of notes 15, 17, 21 and 24 in one standalone
 LaTeX document: conditional extraction, adaptive zero-integral
 factorization, signed gcd truncation, transformed overlap control,
 and the selected-factor and generic-sieve barriers. It includes proofs
@@ -223,7 +286,7 @@ numerical proof of any asymptotic prime estimate.
 Research notes live in each investigation's `<project>/notes/` folder;
 the [shared notes index](notes/README.md), continuation plans, and dependency
 ledger live in `notes/`. Checks remain in `reviews/`, and reproducible
-calculations in `numerics/`. This research package contains the organized short-family manuscript
+calculations in `numerics/`. This research package contains organized short- and mixed-family manuscripts
 and separate working notes. [DRAFT_HISTOR.md](DRAFT_HISTOR.md) records the initial working
 state and will index later commits or tags without draft snapshot folders.
 Third-party PDFs and large derived data stay outside the repository under

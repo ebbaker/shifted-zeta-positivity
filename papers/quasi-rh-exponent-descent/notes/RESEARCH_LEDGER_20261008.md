@@ -145,3 +145,180 @@ and the [scoped review](../reviews/SHORT_FAMILY_SQUAREFREE_AND_COFACTOR_REVIEW_2
 The full moment has no improved proved exponent. The cutoff differs from
 the earlier packet theorem; projected sectors cannot be moved between
 cutoffs using closeness of the full vectors.
+
+## Squarefree cofactor parity and masked discrepancy
+
+| Input or claim | Status | What it licenses |
+| --- | --- | --- |
+| Complete small-prime divisor inverse and rough-core parity | Exact finite squarefree algebra at \(\theta=11/20\), including overflow and unit endpoints | Saturated odd rough cores have coefficient zero; even cores and unsaturated cofactors retain their complete coefficients |
+| Growing three-prime sector with \(Nb\le D^{1/40}\) | New signed zero-sector deduction, internally audited | Arbitrarily small complete weighted energy on \(L_u\ge D^{1/8+\delta}\); low-conductor response remains |
+| Fixed threshold variation and binary prefixes | Existing physical operator applied to fixed jump vectors | Each canonical retained response has generic energy \(D^\epsilon B(D,H)\); exponent remains \(16/15\) |
+| Masked Möbius/von Mangoldt convolution with outer product \(h\) | Exact ideal algebra; full prime powers retained before cancellation | A squarefree mixed-discrepancy bridge with density, both edges, low/low and endpoint terms |
+| Added deletion support | Exact conductor accounting | Primitive conductor unchanged, but completion modulus can grow to \(L_{u,h}\le L_uNh\); no new uniform Möbius or prime estimate |
+| Retained nonzero signed combination | Explicit unproved target | Still requires \(4/5\) energy for saturated-even plus unsaturated responses inside the same square |
+
+See [note 21](../short_families/notes/21_SHORT_FAMILY_ROUGH_PARITY_20261008.md),
+[note 22](../short_families/notes/22_SHORT_FAMILY_SQUAREFREE_DISCREPANCY_20261008.md),
+the [scoped audit](../reviews/SHORT_FAMILY_ROUGH_PARITY_REVIEW_20261008.md),
+and the [preceding handoff](../short_families/notes/23_SHORT_FAMILY_PARITY_CONTINUATION_20261008.md).
+The finite checkers validate only their displayed algebra and rational budgets.
+
+## Complete-cofactor test and actual-probe reassessment
+
+This continuation completes the nonzero pairing test prescribed by note 23
+and its requested mixed-family reassessment. The short-family full-moment
+target remains open; the mixed sufficient criterion is refined without
+proving the remaining arithmetic estimate.
+
+| Item | Status and dependency | Consequence and limit |
+| --- | --- | --- |
+| Actual products bqr with every divisor b of squarefree M, NM≤D^β, β<1/20, trivial twist ν=1 | New selected signed-block obstruction; existing fixed-field quantitative prime ideal theorem and radical comparison | Coherent energy ≥D^(16/15) divided by fixed logarithmic powers and (log log D)^3; full-tail cross terms remain uncontrolled |
+| Uniform cofactor continuum | New weighted partial summation and Taylor argument | Errors sum with Σ1/Nb, not τ(M); the essential Jacobian leaves ∏(1−1/Np)>0 |
+| Free/complement resummation | Exact ideal algebra plus imported primitive completion and proved row-mass lemma | Auxiliary free response has rapid decay after the cost L_u(NM)^2/D; arithmetic complement and remaining products are still inside one square |
+| Balanced triple test | Exact original truncated-convolution coefficient | True −6 versus naive −2, missing −4 from the other singleton prefixes; the old nonsquarefree budget does not transfer to new complement coefficients |
+| Actual-probe cubic functional J=f*G²f | New finite positive-frame deduction | E³≤L_N²J and J≤L_N Tr(G³); a strictly weaker sufficient criterion than the full cubic trace |
+| Repeated-character open chains | Existing conditional buffered plain estimate, imported family kernel and primitive-growth bounds, selected inverse mass and bounded primitive fibers | All-equal, adjacent-equal and endpoint-equal patterns have reserves 0.540594, 0.19376 and 0.24376; this is conditional on the same source inputs as the mixed reduction |
+| Pairwise-inequivalent open chain | Explicit unproved arithmetic target | Re J_neq≪U^(h_3+m+ε) with actual endpoint sums and every mask/selector retained would suffice; available individual-modulus bounds fail |
+
+See [note 24](../short_families/notes/24_SHORT_FAMILY_FINITE_COFACTOR_PAIRING_20261008.md),
+[note 25](../short_families/notes/25_SHORT_FAMILY_PAIRING_REMAINDER_20261008.md),
+[mixed note 3](../mixed_character_families/notes/3_ACTUAL_PROBE_CUBIC_TARGET_20261008.md),
+the [scoped review](../reviews/SHORT_FAMILY_COFACTOR_PAIRING_REVIEW_20261008.md),
+and the [current handoff](../short_families/notes/26_SHORT_FAMILY_COFACTOR_CONTINUATION_20261008.md).
+The two new checkers replay 3,289 cofactor and 2,368 actual-probe assertions;
+their finite algebra does not verify the imported analytic inputs or an
+unbounded moment. The cofactor theorem is incorporated in the existing
+manuscript and was compiled successfully with the native editor compiler.
+
+## Mixed conductor-neighbor and coupled-middle sectors
+
+This bounded continuation estimates nonzero parts of the distinct-character
+open chain, rather than replacing its actual endpoint sums by arbitrary
+coefficients. It retains the selected physical sixth-power-free rows.
+
+| Item | Status and dependency | Consequence and limit |
+| --- | --- | --- |
+| Fixed-row conductor neighbors | New deduction from imported exact local sextic ramification and elementary ideal counting | At most V^(1+ε) rows with quotient conductor ≤V; weighted mass ≤W V^(1+ε), including fixed bad-prime/unit choices |
+| Coupled middle-row geometry | New exact local identity PQ=F A_0 B_0², A_0 dividing F, (B_0,F)=1 | Fixed-endpoint middle count ≤U^ε(1+sqrt(V_1 V_2/Q_uh)); conductor-excess cap R gives ≤U^ε(1+sqrt R) |
+| Existing native primitive Poisson input at order zero | Explicit imported analytic dependency, now used for the mixed quotient kernel | Nonprincipal masked kernel ≤U^ε min(N^(-1/8),sqrt Q/N); all deletion zeros retained, with divisor rather than norm cost for the mask |
+| Six conductor sectors in mixed note 4 | New conditional sector estimates using the original buffered endpoint, mass, pointwise envelope and continuous parameter certificate | Exact margins 47/12500, 19/12500, 47/12500, 219/25000, 163/25000 and 313/50000 below h_3+m; no full chain bound |
+| Exact six-cut remainder | Unproved signed arithmetic target | All original weights/endpoints/masks remain; both displayed legs exceed U^(39/100), and the all-three-conductors-of-order-U range survives every cut |
+| Raw physical squarefree-row counting sharpness | New construction using the existing fixed-field prime ideal theorem | A coupled count of order U^(1/2)/log U occurs when all three quotient conductors have order U; selected-bin membership and inverse weights are not lower-bounded |
+| Current-bound deficit at a legal operational point | Exact rational budget deduction | Middle-count expense 1/2 exceeds the available 92902792407/338300000000 by 76247207593/338300000000; this obstructs the stated counting bound, not the actual energy |
+
+The native Poisson input is the already declared primitive package in the
+short-family manuscript, used for the common masked row quotient and smooth
+profile |B|². A large full deletion modulus prevents rapid positive-order
+completion from that ratio alone, but does not invalidate its order-zero
+square-root bound. The global family/growth and buffered plain estimates
+retain their conditional status; zeta-only quasi-RH does not supply them.
+
+See [mixed note 4](../mixed_character_families/notes/4_CONDUCTOR_NEIGHBOR_SECTORS_20261008.md),
+the [current handoff](../mixed_character_families/notes/5_MIXED_NEIGHBOR_CONTINUATION_20261008.md),
+the [scoped review](../reviews/MIXED_CONDUCTOR_NEIGHBOR_REVIEW_20261008.md),
+and the [26,966-assertion record](../numerics/mixed_conductor_neighbors_record_20261008.json).
+The checker verifies finite valuation geometry, exact masked-frame chains
+and rational budgets, not reciprocity, Poisson, asymptotic ideal counts,
+the source's continuous parameter certificate or an unbounded moment.
+
+## Mixed middle sieve and direct energy continuation on 9 October 2026
+
+| Item | Status and dependency | Consequence and limit |
+| --- | --- | --- |
+| Physical operator on sixth-power-free columns | Existing imported de Faveri theorem and repository presentation transfer, newly used in this mixed lane | Physical-row operator B(H,X); indexed by physical norm, not conductor norm |
+| Arbitrary plain-column kernel average | New conditional deduction with exact sixth-power column masks and positive row squares | Sum over middle factor norm at most H of the squared kernel is at most U^epsilon Hheight^b B(H,N)/N |
+| Exterior physical middle factor | Exact factorization and bounded endpoint-supported valuations | Retains valuations 1 through 5; U^epsilon fixed-factor choices, all weights and masks preserved |
+| Seventh sector | New conditional estimate on exterior factor norm at most U^(103/200) | Uniform reserve 4031/1500000; earlier four-prime counting example has reserve 13705777673/507450000000 at its sharper radius |
+| Exact seven-cut remainder | Unproved one-sided endpoint-form target | Every prior conductor condition remains, with exterior physical norm greater than U^(103/200); all-comparable conductors with repeated exterior valuations can remain |
+| Direct marginal Holder envelope | Exact optimization of existing count, inverse, plain fourth and pointwise inputs | Optimistic displayed deficit 88651/1321484375; a scalar saturation model shows those marginal inequalities do not imply the target |
+| Inverse-weighted plain fourth | New sufficient correlated arithmetic target, unproved | Optimistic extra saving 177302/1321484375; actual whole-slot losses must be retained |
+
+See [mixed note 6](../mixed_character_families/notes/6_WEIGHTED_MIDDLE_SIEVE_AND_DIRECT_ENERGY_20261009.md),
+[scoped review](../reviews/MIXED_MIDDLE_SIEVE_REVIEW_20261009.md), and
+[finite record](../numerics/mixed_middle_sieve_record_20261009.json).
+The active focus is mixed character families; further short-family cofactor
+reductions are deferred. The 141,413 finite assertions check formal masks,
+factorizations and exact budgets, not the physical sieve or an unbounded
+mixed correlation. Existing source analytic inputs retain their conditional
+status. No new full mixed moment, zero-free boundary or RH implication is proved.
+
+## Valuation-factor and direct inverse-ratio continuation on 9 October 2026
+
+| Item | Status and dependency | Consequence and limit |
+| --- | --- | --- |
+| Grouped exterior valuation roots | Exact factorization; injective sixth-power-free auxiliary ideal with original or complementary exponents | 62 subset/orientation choices; frozen squarefree roots are counted; actual selected rows and all masks retained |
+| Power-free-row sextic kernel operator | Existing imported de Faveri theorem and native presentation transfer | Uses Theta6(H,N), without all-physical row-power multiplicity; fixed coefficient vectors include frozen phases and zeros |
+| Eighth sector | New conditional actual-chain estimate for Phi at most 5(103/200)/6−2m/3 | Uniform reserve 4031/1500000; overall eight-cut error reserve remains 19/12500 |
+| Previous higher-valuation survivor | Newly controlled using its valuation-one root | Exact point reserve 6124435399/253725000000, uniform reserve 12281/1500000 |
+| Exact eight-cut remainder | Unproved one-sided endpoint form | Six-prime raw pattern with exterior physical exponent 0.58 survives; method deficit 1487314601/253725000000 at the displayed point, with no actual weight lower bound asserted |
+| Direct small-inverse-ratio fourth sector | New conditional deduction from original bounded Mobius coefficients, positive selected plain-fourth mass and existing ideal-pair lemma | Absolute cost U^(1+nu/2); fixed-subset reserve dr−chi−nu/2; large inverse-ratio correlation remains open |
+| Half-power inverse-ratio cap | Favorable continuous-slot point comparison, subject to actual slot eligibility and loss | Point reserve 166737511/42287500000; whole-slot shortfall subtracts d e_slot |
+
+See [mixed note 7](../mixed_character_families/notes/7_VALUATION_FACTOR_SECTORS_AND_INVERSE_RATIO_FOURTH_20261009.md),
+[scoped review](../reviews/MIXED_VALUATION_FACTOR_REVIEW_20261009.md), and
+[finite record](../numerics/mixed_valuation_factors_record_20261009.json).
+Two fresh finite replays agree: 133,487 exact assertions. They do not
+certify the native transfer, imported analytic inputs, ideal asymptotics,
+selected-bin population or either unbounded correlation. No new full
+mixed moment, zero-free boundary or RH implication is proved.
+
+## Joint middle component-conductor continuation on 9 October 2026
+
+| Item | Status and dependency | Consequence and limit |
+| --- | --- | --- |
+| Good quadratic and cubic column conductors | Exact valuation differences modulo two and three; original fixed phases and all deletion zeros retained | Good moving component cuts, without silently classifying the full primitive character at bad primes |
+| Small projected-conductor pair count | New elementary deduction from gcd/power extraction and existing ideal counting | At column scale N, at most N^(1+epsilon) V^(1/2+epsilon) pairs; order-two extraction pays logarithms, order-three converges |
+| Coupled actual tuple cut | New conditional column-piece estimate inside the eight-row-cut remainder | Z² min(Nf2,Nf3) at most U^(142/125); radical count and column-pair count cancel their common scale, giving A²W N^(d−1) U^(71/125) |
+| Uniform and point reserves | Exact continuous lower envelope using inherited A,W and buffered endpoint inputs | Uniform 927/500000; displayed point 108685273/9950000000; overall removed error still has reserve 19/12500 |
+| Expanded high-component remainder | Unproved one-sided signed endpoint/column target | Retains all eight row conditions and both strict product inequalities; this is not a whole physical row cut with intact kernels |
+| Joint cubic source operator | Verified de Faveri Proposition 8.1, squarefree columns and cubic ab² rows | Genuine arbitrary-coefficient joint bound, but not the remaining sextic pq² estimate; Remark 8.2 leaves extra column extension work |
+| Weight and covariance scope | Exact weight expansion and abstract matrix limits | Global inverse mass and separate covariance norms supply no joint saving; the high-pair filter need not preserve positivity |
+
+See [mixed note 8](../mixed_character_families/notes/8_JOINT_MIDDLE_COMPONENT_CONDUCTORS_20261009.md),
+[scoped review](../reviews/MIXED_JOINT_COMPONENT_REVIEW_20261009.md), and
+[finite record](../numerics/mixed_joint_component_record_20261009.json).
+Two fresh finite replays agree: 312,257 exact assertions. These verify
+formal masks, actual finite coefficient expansions and rational budgets,
+not native reciprocity, asymptotic ideal counts, imported analytic inputs,
+selected-bin population or the remaining unbounded joint moment.
+No new full mixed moment, zero-free boundary or RH implication is proved.
+
+## Operational fourth and ratio core continuation on 9 October 2026
+
+| Item | Status and dependency | Consequence and limit |
+| --- | --- | --- |
+| Whole-slot fourth budget | Exact optimization and continuous rational proof on the operational wedge | With universal envelopes, total inverse deficit at least ell/2, fourth-subset shortfall at most 1/1000 and actual witness/source legality, a common new saving 1/540 suffices |
+| Half-power inverse-ratio removal | Existing pair bound, exact new uniform budget | Common target reserve is at least 140772625414022617/64335535541550000000, greater than 1/500 |
+| Total amplifier witness | Exact source-compatible gain inequality | Requires 2dx t_I+2 Delta_G+Lambda<=ell; the fourth-subset shortfall allowance does not pay for this distinct loss |
+| Squarefree inverse ratio core | New exact gcd/core decomposition | Mobius sign remains on a b; the common gcd zero mask and both original annuli remain inside the selected kernel |
+| Absolute squarefree pair count | Sharp in power using inherited fixed-field prime counting and squarefree lattice density | Balanced two-prime cores attain D sqrt(V) up to logarithms; no selected energy lower bound follows |
+| Positive full inverse sieve | Legal conditional sufficient majorant, inadequate | Favorable exponent deficit 15459785767/126862500000; does not measure the original fourth moment's required saving |
+| Bounded parity-core cubic block | New deduction from squarefree cubic operator and exact power extraction, conditional native cubic transfer | No fixed power loss within one core; long-core positive recombination costs 0.42 against affordable 0.173181... in the surviving raw geometry |
+| Native and boundary reuse scope | Conditional comparison lemma and exact dependency audit | Native dictionary, source slot/witness certificate, complete bin coverage and scalable global high/low/growth package still required |
+
+Start with [mixed note 13](../mixed_character_families/notes/13_MIXED_FOURTH_CONTINUATION_20261009.md).
+The [operational](../reviews/MIXED_OPERATIONAL_SCOPE_REVIEW_20261009.md),
+[ratio-core](../reviews/MIXED_MOBIUS_RATIO_CORE_REVIEW_20261009.md), and
+[parity-core](../reviews/MIXED_PARITY_CORE_REVIEW_20261009.md) reviews are
+same-model internal checks. All three new checkers reproduce their small
+records. The full mixed correlation, actual detector realization,
+new family boundary and RH descent remain open.
+
+## Signed fourth gcd continuation on 9 October 2026
+
+| Item | Status and dependency | Consequence and limit |
+| --- | --- | --- |
+| Shortened inverse with growing deletion | New exact q-smooth convolution deduction from source Lemma 8.2 at all bounded nonnegative lengths | Original character, zero masks, annular profile, twist and height allocation remain; preliminary buffer must fit the stated reserve |
+| Full fixed-gcd cofactor sum | Exact coprimality inversion into alternating shorter inverse squares | Both canceled masks retained before estimation; no positivity of filtered kernels asserted |
+| New high-gcd signed sector | Conditional bound U D^d G0^(-d), with the old ratio cut restored by subtracting its small-core part | At G0=c U^(1/125), additional reserve 347/337500>1/1000 before allocated losses; old small-core reserve >1/500 |
+| Exact retained correlation | Still unproved one-sided selected fourth target | Ng<c U^(1/125), Nf>U^(2r-2/125), with original annuli, signs, whole slots and all masks |
+| Complete prime pairing | Exact four-state completion and controlled crossing errors | Original half-edge mask NP<=U^(1/250); compatible near-coprime mask NP<=U^(1/25000) uses whole-gcd boundary control, not an elementary near-maximal-core count |
+| Remaining proof scope | Imported source pointwise/fourth package, actual witness certificate and correlation | No new full mixed moment, selected detector realization, family boundary or RH implication |
+
+See [mixed note 14](../mixed_character_families/notes/14_SIGNED_HIGH_GCD_REDUCTION_20261009.md),
+[note 15](../mixed_character_families/notes/15_FINITE_PRIME_COMPLETION_20261009.md),
+[source scope review](../reviews/MIXED_SHORT_MASKED_INVERSE_SCOPE_REVIEW_20261009.md),
+[gcd review](../reviews/MIXED_SIGNED_GCD_REVIEW_20261009.md), and
+[completion review](../reviews/MIXED_FINITE_PRIME_COMPLETION_REVIEW_20261009.md).
+The exact checkers verify algebra and rational losses; the retained
+unbounded correlation remains the arithmetic proof task.

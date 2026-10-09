@@ -1,0 +1,2612 @@
+\documentclass[11pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage{booktabs,array}
+\usepackage[expansion=false]{microtype}
+\usepackage{xcolor,hyperref}
+\hypersetup{colorlinks=true,linkcolor=blue!55!black,citecolor=blue!55!black,urlcolor=blue!55!black}
+\allowdisplaybreaks
+\setlength{\emergencystretch}{3em}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{analyticinput}[theorem]{Analytic input}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{remark}[theorem]{Remark}
+\newcommand{\N}{\mathrm N}
+\newcommand{\eps}{\varepsilon}
+\newcommand{\Id}{\mathbf 1}
+\newcommand{\Cplus}{\mathcal C^+}
+\newcommand{\lls}{\ll_{\eps,\mathcal P}}
+\DeclareMathOperator{\rad}{rad}
+\DeclareMathOperator{\supp}{supp}
+\DeclareMathOperator{\Tr}{Tr}
+\DeclareMathOperator{\cond}{cond}
+\title{Selected mixed character families:\\conductor reductions, weighted probes, and the remaining proof problem}
+\author{Drafted for Edward Baker\thanks{Prepared with substantial assistance from GPT-6 (Codex), inherited configuration. The exact serving variant and configured reasoning effort are not exposed and are not inferred. Same-model derivations and audits are internal validation, not independent specialist review or formal proof verification.}}
+\date{9 October 2026}
+\begin{document}
+\maketitle
+\begin{abstract}
+We organize the mixed-character investigation in the quasi-Riemann-hypothesis exponent-descent program. The object is a selected second moment of a truncated inverse polynomial, a plain character polynomial, and original physical prime slots over sixth-power-free Eisenstein rows. Under explicitly stated family, detector, pointwise, Poisson, and large-sieve inputs, we prove successive conductor reductions and a weaker cubic criterion for the actual plain vector. Physical neighbor counts remove six row sectors; a transferred sixth-order sieve removes a small exterior factor and a valuation-grouped sector; an elementary quadratic/cubic column-pair count removes a further coupled piece after exact expansion of the two kernels. The latest remainder is written with all its strict restrictions and original coefficients. We also derive direct weighted-fourth and high-response alternatives, quantify the limitations of the available positive moments, and explain the conditional count payoff and the further requirements for exponent descent toward RH. The full mixed estimate, the required new family moments, and the implication from zeta-only quasi-RH to RH remain unproved.
+\end{abstract}
+\tableofcontents
+
+\section{Purpose, scope, and the larger program}\label{sec-purpose}
+The broad question is whether a fixed zero strip strictly inside the critical strip can be improved repeatedly by arithmetic estimates until it collapses to the critical line. For the zeta function, write a symmetric strip as
+\[
+ |\Re\rho-\tfrac12|\le\tfrac{\delta}{2},\qquad 0\le\delta<1.
+\]
+RH is the case $\delta=0$. In the parent prime-variance investigation, the inherited fixed-probe theorem relates such a strip to a variance bound $\mathcal V_g(X)=O(X^{2+\delta})$; the least admissible exponent is attained. A genuine power improvement at every positive optimum would therefore exclude a positive optimum. A logarithmic saving, the absence of zeros at a particular finite height, or a favorable calculation in one parameter bin does not provide this conclusion. We use this equivalence as program context, not as a new result of the present manuscript; see \cite{overview,continuation}.
+
+Character amplification offers a more structured arithmetic route. A hypothetical zero produces a short inverse-polynomial response; a prime amplifier produces a second response. Simultaneous large responses would contradict a sufficiently strong selected mixed energy estimate. The present investigation starts after the detector and parameter rebalancing: it keeps the actual selected inverse weight and asks for the missing mixed estimate. This is a narrower problem than proving RH, but it is connected to the detector through an explicit count inequality, developed below.
+
+Three hypotheses must be distinguished. A strip hypothesis for zeta is a statement about one $L$-function. A uniform strip and growth hypothesis for the native Hecke family is a stronger analytic input involving many $L$-functions and height ranges. A new short or mixed arithmetic moment is a further estimate, not a consequence of the first hypothesis merely because its terms are characters. We never replace the second or third hypothesis by zeta-only quasi-RH. The imported source theorem, its original source version, and the detector hypotheses retain their conditional status throughout \cite{amplification,continuation}.
+
+The adjacent short-family project studies a truncated M\"obius moment and has obtained exact signed reductions, controlled sectors, and useful obstruction tests. Its organized manuscript \cite{sf} proves a conditional extraction from one fixed short moment; the short moment itself remains open. In particular, coherent semiprime responses and their complete small-cofactor pairing show that a separate positive estimate for each apparent arithmetic packet can exceed the intended budget. That experience motivates the present focus on the actual selected vector rather than a uniform operator theorem for arbitrary coefficients. It does not imply that the mixed problem is inherently easier or that the short problem has been solved.
+
+This manuscript consolidates mixed Notes 1--8 \cite{n1,n2,n3,n4,n5,n6,n7,n8}. It contains the proofs of the elementary counts, matrix reductions, positive enlargements, exponent comparisons, and direct-energy criteria used here. The deep family estimates and native character transfer are displayed as inputs. The operational parameter enclosure is stated with its rational certificate procedure; our main deductions use an explicitly defined working domain, so a reader can check them without assuming an undocumented numerical inequality.
+
+\subsection{The main object and the current endpoint}
+For $U\ge2$, let $\mathcal C$ be the full buffered physical row bin. It is fixed before choosing a simultaneous witness. Write $\Cplus$ for its high primitive-conductor part, and put
+\[
+ w_u=\Id_{\Cplus}(u)|M_uQ_I(u)|^2,\qquad
+ A=\sum_u w_u,\qquad W=\max_u w_u,
+ \qquad E=\sum_u w_u|S_u|^2.
+\]
+The target is
+\begin{equation}\label{eq-energy-target}
+ E\ll U^{e+\eps}H^b,\qquad e=1+dm-s,
+\end{equation}
+where $s>0$ is the saving required by the actual witness and slot bookkeeping. All symbols and all uniformity requirements are specified in Section~\ref{sec-setting}. Low primitive row conductors are already controlled with a reserve.
+
+Define the normalized plain kernel
+\[
+ K(u,v)=\frac1N\sum_{\mathfrak k}
+ |B(\N\mathfrak k/N)|^2\psi_u(\mathfrak k)
+ \overline{\psi_v(\mathfrak k)},\qquad N=U^m.
+\]
+The positive matrix argument gives the sufficient cubic bound
+\begin{equation}\label{eq-probe-target-intro}
+ J=\sum_{u,v,h}w_uw_vw_h\overline{S_u}
+ K(u,v)K(v,h)S_h\ll U^{T+\eps}H^b,
+ \qquad T=3e-2m.
+\end{equation}
+Repeated primitive characters and eight specified row sectors are controlled. The last proved cut is a piece of the exactly expanded column-pair sum, coupled to the exterior middle radical through its quadratic or cubic component conductor. It is not a ninth whole row sector. The final signed remainder, defined in Section~\ref{late-final}, has a total error reserve at least $19/12500$. A bound for that remainder at exponent $T$ would give \eqref{eq-energy-target}. This implication retains all the analytic inputs and operational budgets; it is not a proof of the remainder bound.
+
+\section{Arithmetic setting and the input ledger}\label{sec-setting}
+\subsection{Physical rows, symbols, and original polynomials}
+Let $F=\mathbb Q(\sqrt{-3})$, with Eisenstein integers $\mathcal O_F$. Its class number is one. Fix a finite set $S$ of bad prime ideals containing primes above $6$ and the finite ray data. Good ideals are integral ideals coprime to $S$. The detector family consists of nonzero elements $u$ whose native primitive character is nonprincipal, of norm $\N u\asymp U$, with every prime valuation in $\{0,1,\ldots,5\}$; unit and bad-prime data are fixed or range over bounded sets. Elements and their principal ideals are distinguished when necessary, but only bounded unit multiplicities enter the counts.
+
+Fix a native sixth-order residue symbol $\chi_{\mathfrak p}(u)$ at each good prime, extended by zero on $\mathfrak p\mid u$. For a good denominator ideal,
+\begin{equation}\label{eq-symbol-multiplicative}
+ \chi_{\mathfrak n}(u)=\prod_{\mathfrak p\mid\mathfrak n}
+ \chi_{\mathfrak p}(u)^{v_{\mathfrak p}(\mathfrak n)}.
+\end{equation}
+Positive powers retain the zero; $\chi_{\mathfrak p}(u)^6$ equals $1$ only on the units modulo $\mathfrak p$. The native polynomial character has the form
+\[
+ \psi_u(\mathfrak n)=\nu(\mathfrak n)\chi_{\mathfrak n}(u)^{s_\chi},
+ \qquad s_\chi\in\{1,-1\},
+\]
+with one common orientation and a fixed finite ray factor $\nu$, including its prescribed zeros. A negative orientation denotes conjugation, with $\overline0=0$. Reciprocity, conductor identification, and the finite native-to-canonical presentation are imported; changing an orientation or dropping a canceled zero is not an innocent simplification.
+
+The inverse and plain polynomials are
+\begin{align}\label{eq-polynomials}
+ M_u&=D^{-1/2}\sum_{\mathfrak d}\mu_F(\mathfrak d)
+ \psi_u(\mathfrak d)A_0(\N\mathfrak d/D),&D&=U^r,\\
+ S_u&=N^{-1/2}\sum_{\mathfrak k}\psi_u(\mathfrak k)
+ B(\N\mathfrak k/N),&N&=U^m.
+\end{align}
+Here $A_0,B$ are the actual permitted smooth annular profiles. In particular $A_0$ is the truncated inverse cutoff of the detector. The plain sum is over its full original good annulus, without a squarefree or sixth-power-free restriction.
+
+For a finite index set $I$ of original, disjoint whole physical prime slots,
+\[
+ Q_I(u)=\prod_{i\in I}P_i^{-1/2}
+ \sum_{\mathfrak p}a_i(\mathfrak p)\psi_u(\mathfrak p)
+ W_i(\N\mathfrak p/P_i),\quad P_i=U^{z_i},\quad z=\sum_{i\in I}z_i.
+\]
+The coefficients are row independent, the original exclusions are retained, and supports have the source's separation. No primes are deleted from a physical annulus in the reductions. A subset $J\subseteq I$ always means whole slots. We use $Q_J$ for the corresponding product, including $Q_\varnothing=1$.
+
+The full bin $\mathcal C$ lies in this nonprincipal detector family and fixes the original zero, amplitude, and profile conditions. Principal rows used in positive sieve enlargements below are auxiliary; they are not inserted into the detector bin. It is not an arbitrary subset chosen to favor the proof. Its high-conductor part is
+\begin{equation}\label{eq-cplus}
+ \Cplus=\{u\in\mathcal C:\ Q_{\psi_u}>U^{2m-1/1000}\},
+\end{equation}
+where $Q_{\psi_u}$ is the norm of the primitive character conductor. Physical norm, primitive conductor, radical, and the norm of an auxiliary valuation factor will be kept separate.
+
+\subsection{Uniformity convention}
+Fix common separating parameters first. Let $\mathcal P$ denote the native presentation, fixed exclusions, profile seminorm bounds, finite slot data, and permitted derivative-profile families. Set $H=1+T_1$ for the source height parameter. Throughout, a bound written $X\lls Y$ allows a factor $U^\eps H^b$, where $b$ is finite and fixed by $\mathcal P$, and holds for every $\eps>0$. The profile and derivative uniformity must hold before a positive-norm Sobolev argument handles rowwise heights. Constants cannot depend on a selected row, growing character twist, or a witness chosen afterwards. All auxiliary norm radii used with the suppressed-loss notation are bounded by fixed powers of $U$; generic statements with unrestricted radii retain their explicit $(H_0X)^\eps$ factors. Fixed positive exponent reserves must exceed the actual losses when these estimates are applied. A theorem at a single smooth profile is not automatically derivative uniform.
+
+\subsection{Working domain}
+The analytic deductions below hold on the following explicit domain:
+\begin{gather}\label{eq-working-domain}
+ \frac9{25}\le d\le\frac{21}{50},\quad
+ \frac{49}{100}\le x\le\frac12,\quad
+ \frac7{10}\le r<\frac{73}{100},\quad
+ \frac25<m<\frac{207}{500},\quad
+ 0<s<\frac{101}{500000},\\
+ z\le\frac{1-r}{2},\qquad
+ g=dr+\Gamma_I\le\frac{d(1+r)}2,\qquad
+ M_0:=1-g-(\tfrac{11}{4}-3d)m-3s\ge\frac{147}{12500}.\label{eq-working-margin}
+\end{gather}
+The universal physical envelope is $\Gamma_J=d\sum_{j\in J}z_j$; an improved profile-specific envelope may be used if it is additive over slots and actually proved. Put
+\[
+ R=R_*+\ell,\qquad \mu_0=1-R-g,\qquad
+ \mu=\max(0,\mu_0),\qquad \ell=10^{-6}.
+\]
+The operational rational formulas for $R_*,r,m,s$ and the inclusion certificate are given in Appendix~\ref{app-parameters}. The working domain does not assert the missing simultaneous-witness budget: that budget and the source's support margins must also be checked for the chosen profiles and slots.
+
+\subsection{Analytic assumptions, stated separately}
+The following inputs are used at the scope indicated. Their elementary consequences are proved in this manuscript. We do not claim to prove the inputs or replay a formal verification of their sources.
+
+\begin{analyticinput}[Selected mass and pointwise envelopes]\label{in-mass}
+For the actual full bin, $\#\mathcal C\lls U^R$ and the full-bin marked mass and pointwise envelopes satisfy
+\[
+ \sum_{u\in\mathcal C}|M_uQ_I(u)|^2\lls U,
+ \qquad |M_u|^2\lls U^{dr},\quad
+ |Q_J(u)|^2\lls U^{\Gamma_J},\quad |S_u|^2\lls U^{dm}.
+\]
+Consequently
+\begin{equation}\label{eq-AW}
+ A\lls U^{1-\mu},\qquad W\lls U^g.
+\end{equation}
+Indeed $A\le\min(U,U^{R+g})$ at the exponent level. These are selected inverse and physical-profile inputs from \cite{amplification,n1,n2}.
+\end{analyticinput}
+
+\begin{analyticinput}[Low conductors and the native kernel]\label{in-kernel}
+For $u\in\mathcal C$, write $\theta(u)=\log_U Q_{\psi_u}$. The conductor-sensitive pointwise plain bound on this nonprincipal bin is
+\[
+ |S_u|^2\lls U^{d\min(m,\theta(u)-m)}.
+\]
+The inherited family strip and growth statement gives $|K(u,v)|\lls N^{-1/8}$ for inequivalent primitive row characters, while always $|K(u,v)|\lls1$. For a nonprincipal primitive ratio, the native all-scale, order-zero Poisson estimate, with the actual deletion masks, gives
+\begin{equation}\label{eq-hybrid-kernel}
+ |K(u,v)|\lls\min\{N^{-1/8},\sqrt{Q_{uv}}/N\}.
+\end{equation}
+Here $Q_{uv}$ is the norm of the primitive conductor of the quotient of the native row characters; it is comparable, up to fixed bad factors, to the good radical of primes at which their valuations differ modulo $6$. The number of mask divisors costs $U^\eps$. These assertions keep their source family hypotheses and profile scope \cite{n1,n4}.
+\end{analyticinput}
+
+The low-conductor part of the full energy is controlled by the inverse mass and the first assertion of Input~\ref{in-kernel}. With
+\[
+ \eta=\frac1{5000},\quad \gamma=\frac1{6250},\quad
+ \gamma_\ell=\gamma-3\ell=\frac{157}{10^6},
+\]
+the operational inequalities in the appendix imply $d/1000-s-\gamma_\ell\ge\ell$, so this contribution is $O(U^{e-\gamma_\ell-\ell+\eps}H^b)$. The native ratio-conductor identification also implies bounded physical fibers of each primitive character: exact good local characters fix valuations $0,\ldots,5$; only finitely many unit, bad-prime, and ray possibilities remain. Equality of local orders alone would not suffice to prove this fact.
+
+\begin{analyticinput}[Transferred sixth-order sieve]\label{in-sieve}
+For any coefficient vector on good sixth-power-free ideals of norm at most $X$, the canonical sixth-order family, and its native finite-ray transfer, satisfy
+\begin{equation}\label{eq-theta6-input}
+ \sum_{\substack{\N t\le H_0\\t\text{ sixth-power-free}}}
+ \left|\sum_{\substack{\N k\le X\\k\text{ sixth-power-free}}}
+ b_k\chi_k(t)^{s_\chi}\right|^2
+ \ll_{\eps,\mathcal P}(H_0X)^\eps
+ \Theta_6(H_0,X)\sum_k|b_k|^2,
+\end{equation}
+where
+\[
+ \Theta_6(H_0,X)=H_0+X+H_0^{5/6}X^{1/3}+H_0^{1/3}X^{5/6}.
+\]
+This is the $n=6$ specialization of de Faveri's Theorem 1.1 \cite{df}, together with the required finite native presentation transfer. The latter must retain reciprocity phases and zero masks; it is an explicit assumption of the present application. Conjugation preserves the inequality. Its use does not invoke a theorem for arbitrary physical rows or arbitrary non-power-free plain columns: those extensions are proved below with their multiplicities paid.
+\end{analyticinput}
+
+\begin{analyticinput}[Legal plain fourth moment]\label{in-fourth}
+For a subset of whole original slots $J\subseteq I$ with
+\[
+ 2m+\tfrac92 z_J<1,\qquad z_J=\sum_{j\in J}z_j,
+\]
+and the source's fixed support, exclusion, and derivative margins,
+\begin{equation}\label{eq-plain-fourth-input}
+ \sum_{u\in\Cplus}|S_u|^4|Q_J(u)|^2\lls U.
+\end{equation}
+This marked plain fourth input is used only in the parallel direct route. It does not allow arbitrary inverse coefficients, a fractional slot, a growing twist, or a rescaling to a smaller row factor without checking the original hypotheses \cite{n6,n7}.
+\end{analyticinput}
+
+Basic ideal counting $\#\{\mathfrak a:\N\mathfrak a\le X\}\ll X$, divisor bounds $C^{\omega(\mathfrak a)}\ll_\eps(\N\mathfrak a)^\eps$, and finite fixed ray decompositions are used freely. Every claimed conductor cutoff is a good-radical cutoff unless the primitive conductor is explicitly named. Retaining finite bad factors changes only permitted constants.
+
+% Modular manuscript fragment prepared for Edward Baker, 9 October 2026.
+% Substantial LLM assistance: GPT-6 (Codex), inherited configuration.
+% Exact serving variant and reasoning effort are not exposed and not inferred.
+% Read-only synthesis of repository notes; no new deep analytic input is claimed.
+
+% ==================== OPTIONAL PROGRAM OVERVIEW ====================
+% The main manuscript may move this material into its introduction.
+
+\section{What a mixed estimate would prove}
+\label{sec:mixed-logical-payoff}
+
+The mixed investigation is a conditional strengthening of the source's
+zero/profile-bin count.  It does not yet establish its central mixed moment,
+a new zero-free boundary, or an iteration to the critical line.  The scalar
+detector equivalences in the broader program identify appropriate estimates
+with a fixed zero strip, but they do not supply those estimates.  In the
+present branch, the new task is to control one actual inverse--plain--prime
+response on the small region where neither original marginal count reaches
+the proposed improved count.  The imports remain the fixed family strip and
+growth statements, the marked inverse estimate, the buffered plain bound,
+the selected plain fourth moment, and the source detector and profile
+reductions; see \cite{amplification,n1,n2,n3,df}.
+
+\subsection{The detector-to-count implication}
+
+Fix the physical polynomials and a buffered zero/profile bin
+\(\mathcal C\).  On a subset \(\mathcal W_{r,m,I}\subset\mathcal C\)
+carrying the source's simultaneous detector witness, suppose the actual
+lower bounds are
+\begin{equation}
+ |M_uS_u|^2\ge c\,U^{d(r+m)-\lambda_1},\qquad
+ |Q_I(u)|^2\ge c\,U^{2G_I-\lambda_2}.
+ \label{eq:actual-witness-lower}
+\end{equation}
+Here \(G_I\) is the gain of the actual whole-slot prime product, and
+\(\lambda_1,\lambda_2\ge0\) record the allocated witness and profile
+losses.  No current lower bound is asserted on every row of the full bin.
+
+\begin{proposition}[Conditional count payoff]
+\label{prop:actual-detector-payoff}
+If
+\begin{equation}
+ E_{\mathcal C}:=\sum_{u\in\mathcal C}|M_uS_uQ_I(u)|^2
+       \lls U^{1+dm-s},
+ \label{eq:full-mixed-energy-target}
+\end{equation}
+then
+\begin{equation}
+ \#\mathcal W_{r,m,I}
+ \lls U^{1-dr-2G_I-s+\lambda_1+\lambda_2}.
+ \label{eq:actual-detector-count}
+\end{equation}
+Consequently, apart from the subsequently allocated analytic loss, a
+sufficient saving for a desired count exponent \(R_{\rm new}\) is
+\begin{equation}
+ s\ge 1-R_{\rm new}-dr-2G_I+\lambda_1+\lambda_2.
+ \label{eq:actual-required-saving}
+\end{equation}
+\end{proposition}
+\begin{proof}
+Each row counted on the left of \eqref{eq:actual-detector-count}
+contributes at least
+\(c^2U^{d(r+m)+2G_I-\lambda_1-\lambda_2}\) to the positive sum
+\eqref{eq:full-mixed-energy-target}.  Dividing the latter bound by this
+quantity proves the assertion.  The cancellation of \(dm\) in this division
+is the reason that the improved inverse count is a line in \(r\).
+\end{proof}
+
+To display the scalar application, put \(x=q/d\), where \(q\) is the
+physical-length-weighted mean prime amplitude.  In the ideal capacity
+limit \(z=(1-r)/2\), \(2G_I=2qz=dx(1-r)\), the exponent in
+\eqref{eq:actual-detector-count}, before losses, is
+\begin{equation}
+ A_I(r)-s,\qquad A_I(r)=1-d[x+(1-x)r].
+ \label{eq:direct-count-line}
+\end{equation}
+The original plain count and long inverse count are
+\begin{equation}
+ P_{\rm plain}(m)=1-d[4x/9+B_xm],\qquad
+ L_d(t)=1-d+a(t-1),
+ \label{eq:plain-and-long-lines}
+\end{equation}
+where
+\[
+ a=\frac56-d,\quad B_x=2-\frac{8x}{9},\quad
+ D_x=3-\frac{17x}{9},\quad P_x=B_x(1-x),\quad
+ J_x=aD_x+dP_x.
+\]
+The existing scalar crossing has
+\[
+ t_0=1+\frac{dP_x}{2J_x},\qquad
+ R_*=1-d+\frac{adP_x}{2J_x}.
+\]
+If the mixed input improves the inverse line by \(\eta\), it does not
+independently improve the plain line.  Solving the new inverse/plain
+crossing at a fixed \(t=r+m\), and then balancing its optimized short
+count against \(L_d(t)\), gives
+\begin{equation}
+ t_{\rm new}=t_0-\frac{B_x\eta}{J_x},\qquad
+ R_{\rm new}=R_*-F_x\eta,\qquad F_x=\frac{aB_x}{J_x}.
+ \label{eq:two-rebalances-direct-fragment}
+\end{equation}
+Equivalently, with
+\[
+ r_{\rm new}=1-\frac F_x2-
+       \frac{(1-F_x)\eta}{d(1-x)},\qquad
+ m_{\rm new}=\frac12-\frac a{J_x}
+       \left(\frac{1-x}{2}-\frac\eta d\right),
+\]
+one has the exact identities
+\begin{equation}
+ A_I(r_{\rm new})=R_{\rm new}+\eta,\qquad
+ P_{\rm plain}(m_{\rm new})=R_{\rm new}.
+ \label{eq:rebalance-identities-direct-fragment}
+\end{equation}
+Indeed, the fixed-\(t\) crossing solves
+\(r=(B_xt-5x/9)/D_x-\eta/(dD_x)\).  Its short-count slope in \(t\)
+is \(-dP_x/D_x\), while its improvement at a fixed \(t\) is
+\((B_x/D_x)\eta\).  Balancing against the slope \(a\) of the long
+line proves \eqref{eq:two-rebalances-direct-fragment}.
+
+On the hard box \(9/25\le d\le21/50\),
+\(49/100\le x\le1/2\), differentiation yields
+\[
+ \partial_dF_x=-\frac{(5/6)B_x^2(1-x)}{J_x^2}<0,\qquad
+ \partial_xF_x=
+ \frac{a[(10/9)a+dB_x^2]}{J_x^2}>0.
+\]
+Thus \(F_x\ge1091200/2012413\).  The proposed
+\(\eta=1/5000\) would give count gain at least
+\begin{equation}
+ F_x\eta\ge\frac{5456}{50310325}
+   =\frac1{10000}+\frac{169987}{20124130000},
+ \label{eq:uniform-conditional-count-gain}
+\end{equation}
+before the actual application losses.  This is a count payoff, not by
+itself a new theorem about the global family boundary.
+
+Write \(a_r=r-r_{\rm new}\), \(b_m=m_{\rm new}-m\).  The buffered
+application domain is
+\begin{equation}
+ a_r<\frac{\eta+\ell}{d(1-x)},\qquad
+ b_m>-\frac{\ell}{dB_x},\qquad b_m\le a_r+\ell.
+ \label{eq:buffered-wedge-direct-fragment}
+\end{equation}
+With \(s_0=\eta-d(1-x)a_r\), the ideal count identity is
+\(A_I(r)-s_0=R_{\rm new}\).  The working energy request uses
+\(s=s_0+\ell\), where \(\ell=10^{-6}\).  Its usefulness for an actual
+slot arrangement requires the difference between the ideal prime gain
+and \(2G_I\), together with all witness/profile losses in
+\eqref{eq:actual-required-saving}, to fit the prescribed budget.
+The support inequalities \eqref{eq:buffered-wedge-direct-fragment}
+alone do not establish that budget.  In particular, a fractional slot
+at the continuous capacity is not an admissible substitute for a whole
+original slot.
+
+\subsection{Relation to the short-family branch and to RH}
+
+The short-family branch asks for a different analytic input on a separate auxiliary family: all nonzero element rows, including principal sixth powers, rather than only the nonprincipal sixth-power-free detector rows.  For a fixed
+finite-order Hecke character \(\nu\), finite excluded set, and fixed
+smooth annular profile \(\phi\), write
+\[
+ A_u(D;\phi)=\sum_{(n,S)=1}\mu_F(n)\nu(n)\chi_n(u)
+                         \phi(\N(n)/D).
+\]
+The current extraction theorem, proved by finite reuse of the same
+hypothesis in \cite{sf}, is as follows.
+
+\begin{proposition}[Fixed short-moment extraction]
+\label{prop:short-extraction-direct-fragment}
+Suppose \(0<h\le1\), \(a_{\rm sf}\ge0\), and for every \(\eps>0\), at all
+sufficiently large \(D\),
+\begin{equation}
+ \sum_{0<\N(u)\le D^h}|A_u(D;\phi)|^2
+       \ll_{\nu,S,\phi,h,a_{\rm sf},\eps}D^{1+a_{\rm sf}+h+\eps}.
+ \label{eq:short-moment-direct-fragment}
+\end{equation}
+Then, for every \(\eps>0\),
+\begin{equation}
+ |A_1(D;\phi)|\ll_{\nu,S,\phi,h,a_{\rm sf},\eps}D^{b+\eps},
+ \qquad b=\frac{1+a_{\rm sf}}{2}+\frac{5h}{12}.
+ \label{eq:short-floor-direct-fragment}
+\end{equation}
+Neither an initial zero strip nor a supremum over smaller column scales
+is needed for this implication.
+\end{proposition}
+\begin{proof}
+Put \(Q=D^{h/6}\), and average over good prime ideals
+\(Q/2<\N(p)\le Q\).  Their sixth powers are distinct auxiliary element rows of
+norm at most \(D^h\), and there are \(\asymp Q/\log Q\) such rows.
+The original zero extension gives
+\(\chi_n(p^6)=\Id_{p\nmid n}\).  Thus, with
+\(B_p(L)=A_{p^6}(L;\phi)\), squarefree Möbius multiplicativity gives
+the exact identities
+\[
+ A_1(L;\phi)=B_p(L)-\nu(p)B_p(L/\N(p)),\qquad
+ B_p(L)=\sum_{j\ge0}\nu(p)^jA_1(L/\N(p)^j;\phi).
+\]
+The second sum is finite by annular support.  If
+\(A_1(L;\phi)\ll L^{t+\eps}\) for every \(\eps>0\), with \(t>0\),
+the resulting geometric series bounds
+\(|A_1(D;\phi)-B_p(D)|\ll(D/\N(p))^{t+\eps}\).
+The moment hypothesis bounds the mean square of \(B_p(D)\) by
+\(D^{2b+\eps}\).  Squaring, averaging, and choosing the preliminary
+losses sufficiently small therefore gives the implication
+\[
+ P(t)\Longrightarrow P(\max\{b,ct\}),\qquad c=1-h/6<1,
+\]
+where \(P(t)\) denotes the all-\(\eps\) response bound at exponent
+\(t\).  Ideal counting supplies \(P(1)\).  If \(b<1\), reusing the
+same fixed moment a finite number of times gives
+\(t_j=\max\{b,c^j\}\), and hence \(P(b)\).  If \(b\ge1\), ideal
+counting already suffices.  No uniformity in the number of reuses is
+needed because that number is finite.
+\end{proof}
+
+A fixed positive \(h\) has the floor \(b\ge1/2+5h/12\).
+To reach response exponents arbitrarily close to \(1/2\), this route
+needs new moments along a sequence \(h_j\to0\), \(a_{{\rm sf},j}\to0\), with
+the displayed arbitrary-\(\eps\) quantifiers.  The mixed saving does
+not supply these short-family moments.  Conversely, the short-family
+algebra is not a proof of the mixed weighted energy.
+
+For the logical transfer, require the short-moment hypothesis for every profile in a class of fixed profiles with no
+common Mellin zero in the target half-plane: for each point \(s\) there
+is a permitted \(\phi\) with \(\widehat\phi(s)\ne0\).  In an initial
+half-plane the Mellin identity is
+\[
+ \int_0^\infty A_1(D;\phi)D^{-s-1}\,dD
+                =\frac{\widehat\phi(s)}{L_F^S(s,\nu)}.
+\]
+An all-\(\eps\) response bound at exponent \(b\) makes the left side
+holomorphic for \(\Re s>b\), so a profile nonzero at a putative zero
+excludes that zero.  A separate contour argument is needed when starting
+from a zero strip to obtain a response bound: zero exclusion alone does
+not supply the required vertical growth of the reciprocal.
+
+For \(\nu=1\),
+\(\zeta_F(s)=\zeta(s)L(s,\chi_{-3})\).  Zero exclusion for
+\(\zeta_F\) in \(\Re s>1/2\) implies it for \(\zeta\), since the
+companion has no poles there.  A zeta-only quasi-RH hypothesis supplies
+no corresponding Hecke-family moment or companion-factor control.
+An all-character endpoint theorem therefore requires precisely the
+family and profile uniformity its proof uses.  The source mixed theory
+currently uses a fixed imported family boundary \(7/8\); an estimate
+at this boundary is not automatically a boundary-dependent theorem
+that can be iterated.  These distinctions are material to the program's
+status, rather than differences of notation; see \cite{df,sf,amplification}.
+
+
+% Standalone source fragment for the mixed-family manuscript.
+% Prepared for Edward Baker, 9 October 2026.
+% Model: GPT-6 (Codex), inherited configuration; exact variant and
+% configured reasoning effort are not exposed and are not inferred.
+% This fragment assumes the main document defines \N, \eps, and \lls,
+% the physical setting, and the stated elementary working domain.
+
+\section{Selected column-ratio reductions}\label{early-sec-cutoffs}
+
+We first record the reductions preceding the row-kernel argument.
+They retain the original physical coefficients and selectors
+\cite{n1,n2}.  Throughout, \(\lls\) suppresses the permitted factor
+\(U^\eps H^b\), with its uniformity in the prescribed derivative
+profiles and height parameters.  Different occurrences may have different
+fixed \(b\).  The constants and small analytic losses are allocated before
+the positive Sobolev step.
+
+Let \(\mathcal C\) be the full buffered physical bin, and let
+\(\Cplus\) be its subset satisfying
+\(Q_{\psi_u}>U^{2m-1/1000}\).  Write
+\[
+ E_{\mathcal C}=\sum_{u\in\mathcal C}|M_uS_uQ_I(u)|^2,\qquad
+ E=\sum_{u\in\Cplus}|M_uS_uQ_I(u)|^2.
+\]
+The first energy includes the low-conductor rows; the second is the
+energy of the positive frame used below.  In the notation of the main
+setting,
+\[
+ w_u=\mathbf1_{\Cplus}(u)|M_uQ_I(u)|^2,\qquad
+ A=\sum_uw_u,\qquad W=\max_uw_u.
+\]
+Suppose that \(\#\mathcal C\lls U^R\) and that the marked inverse and
+pointwise physical-profile inputs give
+\[
+ \sum_{u\in\mathcal C}|M_uQ_I(u)|^2\lls U,\qquad
+ |M_uQ_I(u)|^2\lls U^g.
+\]
+Then, with \(\mu=(1-R-g)_+\),
+\begin{equation}\label{early-eq-mass}
+ A\lls U^{1-\mu},\qquad W\lls U^g.
+\end{equation}
+Indeed, the two bounds for \(A\) are \(U\) and \(U^{R+g}\).
+This argument is applied after the complete inverse and prime polynomial
+has been assembled into a nonnegative weight.
+
+For ideals \(n,n'\), define the good-prime ratio data by
+\[
+ e_{\mathfrak p}(n,n')
+   =(v_{\mathfrak p}(n)-v_{\mathfrak p}(n'))\bmod6
+       \in\{0,\ldots,5\},\qquad
+ c(n,n')=\prod_{\substack{\mathfrak p\notin S\\e_{\mathfrak p}\ne0}}
+                 \mathfrak p^{e_{\mathfrak p}},\qquad
+ f(n,n')=\operatorname{rad}c(n,n').
+\]
+The additional deletion ideal contains the good primes dividing \(nn'\)
+at which the difference is zero modulo six.  All fixed-prime zeros and
+fixed ray data are also retained.  The native ratio identity is
+\begin{equation}\label{early-eq-column-ratio}
+ \chi_n(u)^{s_\chi}\overline{\chi_{n'}(u)^{s_\chi}}
+  =\chi_{c(n,n')}(u)^{s_\chi}
+       \mathbf1_{(u,E(n,n'))=1},
+\end{equation}
+with the fixed arithmetic factors included in the chosen presentation.
+Thus phase cancellation does not remove physical zeros.
+
+\begin{lemma}[Ideal pairs with a small sixth-order ratio radical]
+\label{early-lem-pairs}
+For \(X,V\ge1\), the number of ideal pairs satisfying
+\(\N n,\N n'\le C X\) and \(\N f(n,n')\le V\) is
+\[
+ \ll_{\eps,S,C} X^{1+\eps}V^{1/2+\eps}.
+\]
+The same estimate holds after any additional restriction on these pairs.
+\end{lemma}
+
+\begin{proof}
+Extract the ideal gcd, writing \(n=g_0a\), \(n'=g_0b\), with
+\((a,b)=1\).  Write \(a=a_0a_1^6\) and \(b=b_0b_1^6\), where
+\(a_0,b_0\) are sixth-power-free.  Since \(a,b\) are coprime, the good
+radical of \(a_0b_0\) is exactly \(f(n,n')\).  For fixed \(a,b\), ideal
+counting bounds the possible gcds by
+\[
+ \ll \frac{X}{\max(\N a,\N b)}
+       \le \frac{X}{\sqrt{\N a\,\N b}}.
+\]
+An upper bound smaller than one means there are no such gcds.
+For a fixed good squarefree ideal \(f\), each prime of \(f\) is assigned
+to one of \(a_0,b_0\), with exponent in \(\{1,\ldots,5\}\).
+There are at most \(10^{\omega(f)}\) assignments, and each satisfies
+\(\N a_0\N b_0\ge\N f\).  The sums over \(a_1,b_1\) converge,
+because their contributions have exponent \(3\):
+\[
+ \sum_{a_1,b_1}(\N a_1\N b_1)^{-3}<\infty.
+\]
+Residual valuations at the fixed primes \(S\) have finitely many
+choices; their sixth powers are already included in these convergent
+sums.  Consequently the fixed-\(f\) count is
+\[
+ \ll_S X\,\frac{10^{\omega(f)}}{\sqrt{\N f}}.
+\]
+The divisor bound and elementary ideal counting give
+\(\sum_{\N f\le V}10^{\omega(f)}(\N f)^{-1/2}
+\ll_{\eps,S}V^{1/2+\eps}\), proving the assertion.
+An additional restriction only reduces the count.
+\end{proof}
+
+Put \(X_{\rm col}=DN\prod_{i\in I}P_i\).  On the original supports,
+let
+\[
+ \mathbf t=(d,k,(\mathfrak p_i)_{i\in I}),\qquad
+ n(\mathbf t)=dk\prod_{i\in I}\mathfrak p_i,
+\]
+\[
+ b(\mathbf t)=\mu_F(d)\nu(n(\mathbf t))
+ A_0(\N d/D)B(\N k/N)
+ \prod_{i\in I}a_i(\mathfrak p_i)W_i(\N\mathfrak p_i/P_i).
+\]
+Here \(A_0\) is the actual inverse profile, including its truncated
+cutoff.  Multiplicativity, with zero extensions, gives exactly
+\begin{equation}\label{early-eq-tuple-expansion}
+ M_uS_uQ_I(u)=X_{\rm col}^{-1/2}
+          \sum_{\mathbf t}b(\mathbf t)
+                     \chi_{n(\mathbf t)}(u)^{s_\chi}.
+\end{equation}
+All displayed ideals have norm at most a fixed multiple of their stated
+scale.  A composite ideal \(n\) has only a divisor-sized number of such
+tuple presentations, because the slot count is fixed.  Their total
+absolute coefficient is \(\lls U^\eps\).  In particular,
+Lemma~\ref{early-lem-pairs} applies to the absolute tuple majorant
+without requiring coefficient cancellation.
+
+Let \(\mathcal T(\tau,v)\) denote the exact expansion of
+\(E\) from \eqref{early-eq-tuple-expansion}, restricted by
+\[
+ \N f(n(\mathbf t),n(\mathbf t'))>U^\tau,\qquad
+ \N f(k,k')>U^v.
+\]
+Its normalization is \(X_{\rm col}^{-1}\); its coefficients are
+\(b(\mathbf t)\overline{b(\mathbf t')}\); and its row kernel is
+\[
+ \sum_{u\in\Cplus}
+     \chi_{c(n(\mathbf t),n(\mathbf t'))}(u)^{s_\chi}
+         \mathbf1_{(u,E(n(\mathbf t),n(\mathbf t')))=1}.
+\]
+The fixed ray factors and zeros are understood as in
+\eqref{early-eq-column-ratio}.  This definition does not change the
+row selector.
+
+\begin{proposition}[Buffered selected cutoffs]\label{early-prop-cutoffs}
+Let \(e=1+dm-s\), and retain the main document's fixed payoff reserve
+\(\gamma_\ell=157/10^6\).  Suppose that
+\(d/1000\ge s+\gamma_\ell\) and
+\[
+ \tau=2(e-\gamma_\ell-R)>0,\qquad
+ v=2(e-\gamma_\ell-1)>0,\qquad v^\dagger=v+2\mu.
+\]
+Under the marked inverse, buffered plain and full-bin count inputs,
+\begin{equation}\label{early-eq-cutoff-result}
+ E_{\mathcal C}
+   =\operatorname{Re}\mathcal T(\tau,v^\dagger)
+      +O\bigl(U^{e-\gamma_\ell+\eps}H^b\bigr).
+\end{equation}
+The operational loss budget supplies an additional low-row reserve.
+\end{proposition}
+
+\begin{proof}
+If \(u\in\mathcal C\setminus\Cplus\), the buffered reflected
+plain bound gives
+\[
+ |S_u|^2\lls U^{dm-d/1000}.
+\]
+The marked inverse input bounds the sum of the remaining positive
+weight by \(U\).  Hence
+\[
+ E_{\mathcal C}-E\lls U^{1+dm-d/1000}
+                          \le U^{e-\gamma_\ell}.
+\]
+Next expand only the plain factor in \(E\), leaving \(w_u\) intact.
+The weighted row kernel in this expansion has modulus at most \(A\).
+Its canceled-phase deletion mask remains present before taking this
+bound.  Lemma~\ref{early-lem-pairs}, the bounded actual plain
+coefficients and the normalization \(N^{-1}\) therefore give
+\begin{equation}\label{early-eq-small-plain}
+ |\text{plain-ratio contribution with }\N f(k,k')\le V|
+       \lls A V^{1/2}\lls U^{1-\mu}V^{1/2}.
+\end{equation}
+Taking \(V=U^{v^\dagger}\) is sufficient because
+\(1-\mu+v^\dagger/2=e-\gamma_\ell\).
+This includes the complete plain diagonal, together with all its inverse
+and prime cross terms.
+
+Only after that subtraction expand the inverse and prime factors.
+For total ratio radical at most \(U^\tau\), the absolute tuple
+majorant and Lemma~\ref{early-lem-pairs} give
+\[
+ X_{\rm col}^{-1}
+       \sum_{\substack{\mathbf t,\mathbf t'\\
+                       \N f(n(\mathbf t),n(\mathbf t'))\le U^\tau}}
+       |b(\mathbf t)\overline{b(\mathbf t')}|\,
+                  \#\Cplus
+       \lls U^{R+\tau/2}=U^{e-\gamma_\ell}.
+\]
+The additional high-plain restriction only reduces this absolute
+majorant.  The exact remaining expansion is
+\(\mathcal T(\tau,v^\dagger)\), proving the result.  Reversal of the
+two tuples makes its grouped sum real; writing its real part also
+preserves the convention of the original reduction.
+\end{proof}
+
+The improvement \(v\mapsto v+2\mu\) removes an additional selected
+plain-ratio sector.  An intersection with the high-total sector must
+be justified by subtracting its low-total portion using the absolute
+tuple majorant above.  The total-ratio restriction cannot be inserted
+into the positive weight before using the marked inverse input.
+The operational parameter formulas and their rational certificate
+yield the numerical total-cutoff enclosure and the additional
+\(1/12500\) plain-cutoff improvement described in \cite{n1}.
+They do not estimate the complementary signed sum.
+
+\section{The complete positive frame and the actual cubic probe}
+\label{early-sec-frame}
+
+Define
+\[
+ K(u,v)=N^{-1}\sum_k |B(\N k/N)|^2
+                     \psi_u(k)\overline{\psi_v(k)}.
+\]
+The sum runs over the complete original plain annulus, including any
+zero columns.  Let \(c(u)\) denote the inducing primitive character
+of \(\psi_u\); distinctness below always means distinct primitive
+characters.  The common fixed ray phase cancels in the quotient,
+but its zeros and all row zeros remain.
+
+The conditional nonprincipal input is
+\begin{equation}\label{early-eq-global-kernel}
+ |K(u,v)|\lls N^{-1/8}\quad(c(u)\ne c(v)),\qquad
+ |K(u,v)|\lls1\quad(c(u)=c(v)).
+\end{equation}
+Its first branch uses the source global family bound
+\(\beta_*\le7/8\) together with quantitative primitive growth and
+deleted Euler-factor estimates \cite{n2,amplification}.
+More explicitly, write the quotient as
+\(\vartheta_{uv}(k)\mathbf1_{(k,R_{uv})=1}\), with
+\(Q_{uv}\ll U^2\) and \(\N R_{uv}\ll U^C\).
+Mellin inversion of \(|B|^2\) gives an integral containing
+\[
+ N^{s-1}\widehat{|B|^2}(s)L(s,\vartheta_{uv})
+ \prod_{\mathfrak p\mid R_{uv}}
+       (1-\vartheta_{uv}(\mathfrak p)\N\mathfrak p^{-s}).
+\]
+For a nonprincipal primitive quotient, shift to
+\(\Re s=7/8+\delta\), where there is no principal pole.
+The quantitative growth estimates give arbitrarily small powers of the
+polynomial conductor, radical and height.  Choose \(\delta\) and those
+powers small enough, and integrate against the permitted profile
+decay, to obtain \eqref{early-eq-global-kernel}.
+This deduction requires the stated family growth inputs, not merely
+zeta-only quasi-RH or an assertion about zero locations.
+It is required uniformly for the actual derivative profiles.
+
+\begin{lemma}[Bounded primitive fibers]\label{early-lem-fibers}
+For the actual sixth-power-free rows in a common fixed ray
+presentation and orientation,
+\[
+ \#\{v:c(v)=c(u)\}\le6^{|S|+1}.
+\]
+Consequently, if \(A_c=\sum_{c(u)=c}w_u\) and
+\(P_{\rm fib}=\max_c A_c\), then \(P_{\rm fib}\ll_S W\).
+\end{lemma}
+
+\begin{proof}
+The imported exact native reciprocity formula identifies the good local
+quotient exponent as
+\[
+ s_\chi\bigl(v_{\mathfrak p}(u)-v_{\mathfrak p}(v)\bigr)\pmod6.
+\]
+The good prime character has exact order six.  Equality of the inducing
+primitive characters forces this exponent to vanish.  A fixed ray
+factor cannot cancel ramification at a good prime, and the row
+valuations belong to \(\{0,\ldots,5\}\).  Thus the valuations agree at
+every good prime.  Each fixed prime has at most six valuation choices,
+and an Eisenstein ideal has at most six generators, its unit multiples.
+This proves the count; summing the actual weights proves the mass
+bound.  The proof equates neither the imprimitive presentations nor
+their deletion masks.
+\end{proof}
+
+Let \(L_N\ll N\) be the number of columns, and define
+\[
+ \mathsf T_{u,k}=N^{-1/2}\psi_u(k)B(\N k/N),\qquad
+ \mathsf F=\operatorname{diag}(\sqrt w)\mathsf T,\qquad
+ G=\mathsf F\mathsf F^*,\quad C_{\rm col}=\mathsf F^*\mathsf F,
+ \quad f=\mathsf F\mathbf1.
+\]
+Then \(\mathsf T\mathbf1=S\) and
+\begin{equation}\label{early-eq-energy-frame}
+ E=\|f\|^2=\mathbf1^*C_{\rm col}\mathbf1.
+\end{equation}
+All selectors are in the original weight \(w\).
+No column-ratio restriction is imposed on this positive frame.
+
+\begin{proposition}[Actual-probe cubic criterion]\label{early-prop-probe}
+With
+\[
+ J=\mathbf1^*C_{\rm col}^3\mathbf1
+       =f^*G^2f=\|Gf\|^2,
+\]
+one has
+\begin{equation}\label{early-eq-probe-jensen}
+ E^3\le L_N^2J,\qquad
+ J\le L_N\operatorname{Tr}(G^3).
+\end{equation}
+In particular \(J\lls U^T\), where \(T=3e-2m\), is sufficient for
+\(E\lls U^e\).  The exact open-chain expansion is
+\begin{equation}\label{early-eq-chain}
+ J=\sum_{u,v,h}w_uw_vw_h
+       \overline{S_u}K(u,v)K(v,h)S_h.
+\end{equation}
+\end{proposition}
+
+\begin{proof}
+The assertion is trivial if \(L_N=0\).  Otherwise apply spectral Jensen
+to the positive semidefinite matrix \(C_{\rm col}\) and the unit vector
+\(\mathbf1/\sqrt{L_N}\):
+\[
+ \left(\frac{\mathbf1^*C_{\rm col}\mathbf1}{L_N}\right)^3
+      \le\frac{\mathbf1^*C_{\rm col}^3\mathbf1}{L_N}.
+\]
+This is the first inequality.  Positivity bounds the latter Rayleigh
+quotient by \(\operatorname{Tr}(C_{\rm col}^3)
+=\operatorname{Tr}(G^3)\), proving the second.
+Using \(L_N\ll N=U^m\) gives the asserted exponent.
+Finally, \(G_{uv}=\sqrt{w_uw_v}K(u,v)\) and
+\(f_u=\sqrt{w_u}S_u\); substituting these entries gives
+\eqref{early-eq-chain}.
+\end{proof}
+
+The probe criterion is weaker than the earlier trace criterion
+\(\operatorname{Tr}(G^3)\lls U^{T-m}\).
+For example the finite frame
+\[
+ \mathsf T=\begin{pmatrix}a&-a\\1&1\end{pmatrix},\qquad w=(1,1),
+\]
+has \(E=4\), \(J=16\), and \(\operatorname{Tr}(G^3)=8a^6+8\).
+This algebraic comparison is not a physical character construction.
+The probe criterion is still only a sufficient condition for the
+original energy \cite{n3,n5}.
+
+\begin{proposition}[A finite phase obstruction to taking entrywise moduli]
+\label{early-prop-phase-obstruction}
+Let \(q=3^n\), let
+\(\mathrm e_q(t)=\exp(2\pi i\,\operatorname{Tr}_{\mathbb F_q/\mathbb F_3}(t)/3)\),
+and choose a set \(\mathcal B\subset\mathbb F_q^\times\) of size
+\(B_0\ge2\).  The \(qB_0\) rows and \(q\) columns
+\[
+ Z_{(a,b),y}=q^{-1/2}\mathrm e_q(ay+by^2),
+ \qquad a,y\in\mathbb F_q,\quad b\in\mathcal B,
+\]
+form a union of \(B_0\) orthonormal bases.  If \(H=ZZ^*\), then
+\[
+ Z^*Z=B_0I_q,\qquad
+ \|H\|=B_0,\qquad
+ \operatorname{Tr}(H^3)=qB_0^3,
+\]
+whereas its entrywise modulus matrix satisfies
+\[
+ \bigl\|\,|H|\,\bigr\|=1+(B_0-1)\sqrt q.
+\]
+The signed pairwise-distinct-row contribution to the cubic trace is
+\[
+ qB_0(B_0-1)(B_0-2),
+\]
+and the sum of the moduli of those individual cyclic terms is
+\[
+ q^{3/2}B_0(B_0-1)(B_0-2).
+\]
+For the actual all-ones column probe, \(\|Z\mathbf1\|^2=qB_0\).
+This is a finite algebraic obstruction to an entrywise-modulus method,
+not an Eisenstein physical-family counterexample.
+\end{proposition}
+
+\begin{proof}
+For a fixed \(b\), additive orthogonality gives
+\[
+ q^{-1}\sum_y\mathrm e_q((a-a')y)
+       =\mathbf1_{a=a'}.
+\]
+Thus its \(q\) rows are an orthonormal basis, and summing the associated
+identity matrices gives \(Z^*Z=B_0I_q\).  The nonzero eigenvalues of
+\(H\) are consequently \(B_0\), each with multiplicity \(q\).
+
+For \(b\ne b'\), the unnormalized row inner product is a quadratic
+Gauss sum
+\[
+ G(A,B)=\sum_y\mathrm e_q(Ay+By^2),\qquad B\ne0.
+\]
+Its squared modulus can be evaluated without choosing its phase.
+Set \(h=y-z\), and first sum over \(z\):
+\[
+ |G(A,B)|^2
+   =\sum_h\mathrm e_q(Ah+Bh^2)
+                     \sum_z\mathrm e_q(2Bhz)=q.
+\]
+Since the characteristic is three and \(B\ne0\), only \(h=0\)
+survives.  Hence every cross-basis entry of \(H\) has modulus
+\(q^{-1/2}\); within a basis only its diagonal entries are nonzero.
+The nonnegative Hermitian matrix \(|H|\) has constant row sum
+\(1+(B_0-1)\sqrt q\).  The all-ones eigenvector attains this value,
+and the row-sum bound bounds every eigenvalue in modulus by it,
+proving the asserted norm.
+
+The all-identical-row cyclic contribution is \(qB_0\).
+The exactly-two-equal-row terms have three cyclic placements and sum
+to
+\[
+ 3\sum_{i\ne j}|H_{ij}|^2=3qB_0(B_0-1).
+\]
+Their combined contribution is \(qB_0(3B_0-2)\).
+Subtracting this from \(qB_0^3\) gives the signed
+pairwise-distinct contribution.  A nonzero distinct-row cyclic term
+must use three different bases.  There are
+\(B_0(B_0-1)(B_0-2)q^3\) such ordered triples, each of modulus
+\(q^{-3/2}\), proving the absolute-sum formula.
+Finally each row sum of \(Z\) is a normalized quadratic Gauss sum
+with \(b\ne0\), so its squared modulus is one.  Summing over the
+\(qB_0\) rows proves the probe assertion.
+\end{proof}
+
+With uniform row weight \(w\), the signed operator norm in this
+example is \(wB_0=A/q\), while its entrywise-modulus norm is
+\(w[1+(B_0-1)\sqrt q]\), of order \(A/\sqrt q\).
+When \(B_0\ge3\), even the cubic distinct-row expansion loses a
+factor \(\sqrt q\) if its cyclic phases are discarded.
+This example uses cubic phases, which are also sixth roots of unity,
+but it supplies no reciprocity, inverse coefficient, physical annulus,
+or selected-bin realization.  Its role is to show why bounds that
+have forgotten those structures cannot recover the desired signed
+cancellation solely from a mass bound and individual kernel
+magnitudes \cite{n2}.
+
+\begin{proposition}[Repeated primitive-character patterns]
+\label{early-prop-repeated}
+Partition \eqref{early-eq-chain} into all-equal, exactly one
+adjacent-equal pair, precisely equal endpoints, and pairwise-distinct
+primitive characters:
+\[
+ J=J_{\rm all}+J_{\rm adj}+J_{\rm end}+J_{\ne}.
+\]
+The first three terms have the bounds
+\[
+ |J_{\rm all}|\lls N^dAW^2,\qquad
+ |J_{\rm adj}|\lls N^{d-1/8}A^2W,\qquad
+ |J_{\rm end}|\lls N^{d-1/4}A^2W.
+\]
+On the stated working domain, their respective reserves below \(T\)
+are at least
+\[
+ \frac{270297}{500000},\qquad
+ \frac{1211}{6250},\qquad
+ \frac{3047}{12500}.
+\]
+All four grouped sums are real.  The all-equal and endpoint-equal
+sums are nonnegative; positivity is not asserted for the other two.
+\end{proposition}
+
+\begin{proof}
+The buffered plain input gives
+\(|S_uS_h|\lls N^d\) on the selected rows.
+In the all-equal case use the crude kernel bounds and
+\(\sum_cA_c^3\le A P_{\rm fib}^2\).
+In an exactly adjacent-equal case there is one nonprincipal kernel;
+in an endpoint-equal case there are two.
+The corresponding weight sums are at most a fixed multiple of
+\(A^2P_{\rm fib}\).  Apply
+\eqref{early-eq-global-kernel} and
+Lemma~\ref{early-lem-fibers} to obtain the displayed bounds.
+Reversal \(u\leftrightarrow h\) conjugates each summand.
+The asserted nonnegative parts have block expressions
+\[
+ J_{\rm all}=\sum_cf_c^*G_{cc}^2f_c,\qquad
+ J_{\rm end}=\sum_{c\ne d}f_c^*G_{cd}G_{dc}f_c.
+\]
+
+For the margins, put \(h_3=T-m=3[1-(1-d)m-s]\).
+Our working domain is contained in the original coarser box
+\(d\in[9/25,21/50]\), \(r\le37/50\), \(m\le1/2\), and
+\(s<101/500000\).  Since \(g\le d(1+r)/2\),
+\[
+ h_3\ge3\left[1-\left(1-\frac9{25}\right)\frac12
+                         -\frac{101}{500000}\right],\qquad
+ g\le\frac{21}{50}\frac{1+37/50}{2}.
+\]
+Subtracting \(1+2g\) from this lower bound gives
+\(154297/500000\).  The all-equal open-chain comparison adds
+\((1-d)m\ge29/125\), giving \(270297/500000\).
+For the other two bounds, direct identities give
+\[
+ \begin{split}
+ T-\{2(1-\mu)+g+(d-1/8)m\}
+   &=M_0+(7/8-d)m+2\mu\\
+   &\ge\frac{147}{12500}
+             +\left(\frac78-\frac{21}{50}\right)\frac25
+      =\frac{1211}{6250},
+ \end{split}
+\]
+\[
+ \begin{split}
+ T-\{2(1-\mu)+g+(d-1/4)m\}
+   &=M_0+(1-d)m+2\mu\\
+   &\ge\frac{147}{12500}
+             +\left(1-\frac{21}{50}\right)\frac25
+      =\frac{3047}{12500}.
+ \end{split}
+\]
+These arguments count primitive characters, not merely identical rows,
+and use no equality of imprimitive masks.
+\end{proof}
+
+\section{Physical conductor neighborhoods and six controlled sectors}
+\label{early-sec-neighbors}
+
+For physical rows let
+\[
+ f_{uv}=\prod_{\substack{\mathfrak p\notin S\\
+                      v_{\mathfrak p}(u)\ne v_{\mathfrak p}(v)}}
+                    \mathfrak p.
+\]
+The exact native good-prime ramification description gives
+\begin{equation}\label{early-eq-conductor-comparison}
+ \N f_{uv}\le Q_{uv}\le C_S\N f_{uv},
+\end{equation}
+where \(Q_{uv}\) is the norm of the inducing primitive quotient
+conductor.  It is symmetric in \(u,v\), and \(Q_{uv}\ll U^2\).
+The bounded factor in \eqref{early-eq-conductor-comparison} comes
+only from the fixed bad primes and ray presentation.
+Primitive conductors here are different from individual physical row
+conductors and from either column-ratio radical above.
+
+\begin{lemma}[Neighbors and weighted trees]\label{early-lem-neighbors}
+For a fixed row \(u\) and \(V\ge1\),
+\[
+ \#\{v\in\Cplus:Q_{uv}\le V\}
+      \ll_{\eps,S}V^{1+\eps},\qquad
+ \sum_{\substack{v\in\Cplus\\Q_{uv}\le V}}w_v
+      \ll_{\eps,S}WV^{1+\eps}.
+\]
+For any one edge of the triangle \((u,v,h)\), a cap \(V\) gives
+total triple weight \(\lls A^2WV\).  For any two specified edges,
+caps \(V_1,V_2\) give total triple weight
+\(\lls AW^2V_1V_2\).
+These statements include trees using the endpoint edge \(u,h\).
+\end{lemma}
+
+\begin{proof}
+For fixed \(u\) and good squarefree \(f=f_{uv}\), good valuations of
+\(v\) outside \(f\) are forced to equal those of \(u\).
+At a prime of \(f\) there are at most five alternative valuations.
+There are at most \(6^{|S|+1}\) fixed-prime and unit choices.  Thus
+\[
+ \#\{v:f_{uv}=f\}\le6^{|S|+1}5^{\omega(f)}.
+\]
+Imposing the physical dyad and actual bin only reduces the count.
+Sum \(\N f\le V\), using the divisor bound and ideal counting,
+and use \eqref{early-eq-conductor-comparison}.  Multiplication by
+\(W\) proves the weighted assertion.
+For one capped edge, sum its first vertex with mass \(A\), its
+neighbor with mass \(\lls WV\), and the free vertex with mass \(A\).
+For two edges, root their tree at the common vertex: its mass is \(A\)
+and each leaf has its corresponding neighbor bound.
+This proves the stated bounds without assuming independent arithmetic
+distributions.
+\end{proof}
+
+\begin{lemma}[Coupled middle rows]\label{early-lem-coupled}
+For fixed endpoints \(u,h\) and polynomial-size \(V_1,V_2,R_0\ge1\),
+\[
+ \#\{v\in\Cplus:Q_{uv}\le V_1,\ Q_{vh}\le V_2\}
+       \ll_{\eps,S}U^\eps
+              \left(1+\sqrt{V_1V_2/Q_{uh}}\right),
+\]
+and this count is zero if \(Q_{uh}>C_SV_1V_2\), after enlarging
+the fixed constant if needed.  Also,
+\[
+ \#\{v\in\Cplus:Q_{uv}Q_{vh}\le R_0Q_{uh}\}
+       \ll_{\eps,S}U^\eps(1+\sqrt{R_0}).
+\]
+The corresponding actual middle masses satisfy these bounds multiplied
+by \(W\).
+\end{lemma}
+
+\begin{proof}
+Put \(\mathfrak f=f_{uh}\),
+\(\mathfrak p=f_{uv}\), and \(\mathfrak q=f_{vh}\).
+At a prime of \(\mathfrak f\), the endpoint valuations differ.
+The middle valuation either equals one endpoint, putting that prime
+in exactly one leg, or equals neither, putting it in both.
+Let \(A_0\mid\mathfrak f\) contain the primes of the latter kind.
+Outside \(\mathfrak f\), the endpoints agree; a different middle
+valuation puts the prime in both legs.  Let \(B_0\) contain these
+primes.  Prime by prime one has the exact ideal identity
+\begin{equation}\label{early-eq-coupled-identity}
+ \mathfrak p\mathfrak q=\mathfrak f A_0B_0^2,\qquad
+ A_0\mid\mathfrak f,\qquad(B_0,\mathfrak f)=1.
+\end{equation}
+The leg caps imply
+\(\N B_0\le\sqrt{V_1V_2/\N\mathfrak f}\).
+For each \(B_0\), there are at most
+\(6^{\omega(\mathfrak f)}5^{\omega(B_0)}\) good valuation
+assignments.  This counts the \(A_0\) choices as part of the endpoint
+prime assignments, so no additional independent factor is required.
+The fixed-prime/unit choices are bounded.  Since
+\(\N\mathfrak f\ll U^2\), its divisor factors are \(O_\eps(U^\eps)\).
+Summing \(B_0\) by ideal counting, and comparing
+\(\N\mathfrak f\) with \(Q_{uh}\), proves the first bound and its
+nonemptiness condition.
+
+For the direct ratio cap,
+\eqref{early-eq-conductor-comparison} and
+\eqref{early-eq-coupled-identity} give
+\[
+ \frac{Q_{uv}Q_{vh}}{Q_{uh}}
+       \asymp_S \N A_0\,(\N B_0)^2.
+\]
+Hence \(\N B_0\ll_S\sqrt{R_0}\), and the same enumeration proves
+the second bound.  A weighted count follows by bounding each actual
+middle weight by \(W\).  The \(+1\) and fixed constants keep both
+statements valid at the unit and bad-prime boundaries.
+\end{proof}
+
+The additional native masked-Poisson input is used only for the final
+three sectors \cite{n4,n5,sf}.  For a nonprincipal native primitive
+character of conductor norm \(Q\), its order-zero branch gives
+\[
+ \left|\sum_k\vartheta(k)\mathbf1_{(k,E_0)=1}
+                         V(\N k/X)\right|
+       \ll_V\tau(E_0)\sqrt Q
+\]
+at every scale \(X>0\), with the permitted derivative and height
+costs.  The primitive zero frequency vanishes.  Its nonzero Schwartz
+lattice sum gives the all-scale order-zero bound; expanding the mask
+over divisors merely rescales \(X\), and contributes \(\tau(E_0)\).
+For a physical row quotient, its good deletion ideal divides
+\(\operatorname{rad}(uv)\), up to fixed data, so
+\(\tau(E_0)\ll_\eps U^\eps\).  Apply this input to the actual profile
+\(|B|^2\), and combine it with
+\eqref{early-eq-global-kernel}, to obtain
+\begin{equation}\label{early-eq-completed-kernel}
+ |K(u,v)|\lls
+       \min\{N^{-1/8},\sqrt{Q_{uv}}/N\}
+                  \qquad(c(u)\ne c(v)).
+\end{equation}
+This order-zero deduction retains all zeros and is valid without a
+small bound on the full deletion modulus.  Positive-order rapid
+decay would require separate control of that combined modulus.
+
+\begin{theorem}[Six disjoint nonprincipal conductor sectors]
+\label{early-thm-six}
+In the pairwise-distinct part of the actual open chain, write
+\(P=Q_{uv}Q_{vh}\) and \(F=Q_{uh}\).
+Assign \(\Gamma_i\) successively outside all preceding sectors,
+using the conditions in the table below.  Their signed contributions
+satisfy \(|J_{\Gamma_i}|\lls U^{T-\delta_i}\).
+\begin{center}
+\begin{tabular}{lll}
+\hline
+Sector & Conductor condition & Reserve \(\delta_i\)\\
+\hline
+\(\Gamma_1\) & \(\min(Q_{uv},Q_{vh},F)\le U^{6/25}\)
+             & \(47/12500\)\\
+\(\Gamma_2\) & \(\min(P,Q_{uv}F,Q_{vh}F)\le U^{17/20}\)
+             & \(19/12500\)\\
+\(\Gamma_3\) & \(P/F\le U^{12/25}\)
+             & \(47/12500\)\\
+\(\Gamma_4\) & \(\min(Q_{uv},Q_{vh})\le U^{39/100}\)
+             & \(219/25000\)\\
+\(\Gamma_5\) & \(P\le U^{103/100}\)
+             & \(163/25000\)\\
+\(\Gamma_6\) & \(P^2/F\le U^{15/8}\)
+             & \(313/50000\)\\
+\hline
+\end{tabular}
+\end{center}
+No positivity of these restricted chains is asserted.
+\end{theorem}
+
+\begin{proof}
+For pairwise-distinct characters, the two global nonprincipal kernel
+bounds and the actual plain endpoint bound give
+\[
+ |\overline{S_u}K(u,v)K(v,h)S_h|\lls N^{d-1/4}.
+\]
+Two baseline margins follow directly from the working domain:
+\begin{equation}\label{early-eq-baseline-one}
+ \begin{split}
+ B_1&:=T-\{2(1-\mu)+g+(d-1/4)m\}\\
+    &=M_0+(1-d)m+2\mu\ge\frac{3047}{12500},
+ \end{split}
+\end{equation}
+\begin{equation}\label{early-eq-baseline-two}
+ \begin{split}
+ B_2&:=T-\{(1-\mu)+2g+(d-1/4)m\}\\
+    &=2M_0+(15/4-4d)m+\mu+3s\\
+    &\ge\frac{294}{12500}
+         +\left(\frac{15}{4}-4\frac{21}{50}\right)\frac25
+       =\frac{10644}{12500}.
+ \end{split}
+\end{equation}
+
+For \(\Gamma_1\), apply the one-edge bound in
+Lemma~\ref{early-lem-neighbors}, including any of the three edges:
+\[
+ |J_{\Gamma_1}|\lls N^{d-1/4}A^2WU^{6/25}.
+\]
+Its reserve is
+\(B_1-6/25\ge47/12500\).
+For \(\Gamma_2\), any two edges form a tree.  Partition their
+conductor norms into fixed binary intervals and apply the two-edge
+bound.  Their dyadic upper caps have product at most a fixed multiple
+of \(U^{17/20}\), giving
+\[
+ |J_{\Gamma_2}|\lls N^{d-1/4}AW^2U^{17/20}.
+\]
+The reserve is \(B_2-17/20\ge19/12500\).
+There are only logarithmically many dyadic bins because
+\(Q_{uv},Q_{vh},F\ll U^2\).
+
+For \(\Gamma_3\), Lemma~\ref{early-lem-coupled} bounds the actual
+middle mass, for each fixed endpoint pair, by
+\(WU^{6/25+\eps}\).  Thus
+\[
+ |J_{\Gamma_3}|\lls N^{d-1/4}A^2WU^{6/25},
+\]
+again with reserve \(47/12500\).
+
+For \(\Gamma_4\), use completion on the displayed leg capped by
+\(V\), and the global bound on the other leg.
+Its neighboring weight costs \(WV\), and its completed kernel
+costs \(\sqrt V/N\).  Hence, summing the endpoints and the two
+possible orientations,
+\[
+ |J_{\text{one displayed leg}\le V}|
+      \lls N^{d-9/8}A^2WV^{3/2}.
+\]
+Taking \(V=U^{39/100}\), the reserve is
+\[
+ B_1+\frac78m-\frac32\frac{39}{100}
+ \ge\frac{3047}{12500}+\frac7{20}-\frac{117}{200}
+ =\frac{219}{25000}.
+\]
+
+For \(\Gamma_5\), use completion on both displayed kernels.
+On a displayed-product dyadic bin their product costs
+\(\sqrt P/N^2\), while the displayed-edge tree weight costs
+\(AW^2P\).  Therefore
+\[
+ |J_{P\le U^\sigma}|
+       \lls N^{d-2}AW^2U^{3\sigma/2}.
+\]
+For \(\sigma=103/100\), the reserve is
+\[
+ B_2+\frac74m-\frac32\frac{103}{100}
+ \ge\frac{10644}{12500}+\frac7{10}-\frac{309}{200}
+ =\frac{163}{25000}.
+\]
+
+Finally fix endpoints for \(\Gamma_6\) and partition \(P\)
+dyadically.  The local identity
+\eqref{early-eq-coupled-identity} implies \(F\ll_SP\) on any
+nonempty bin.  The \(+1\) in the coupled middle count is therefore
+bounded by a fixed multiple of \(\sqrt{P/F}\).
+Multiplying that count by both completed kernels gives
+\[
+ WU^\eps(1+\sqrt{P/F})\frac{\sqrt P}{N^2}
+       \ll_S \frac{WU^\eps P}{N^2\sqrt F}.
+\]
+If \(P^2/F\le U^{15/8}\), this is at most
+\(WU^{15/16+\eps}/N^2\).  Summing the endpoint weights with their
+actual plain bound yields
+\[
+ |J_{\Gamma_6}|\lls N^{d-2}A^2WU^{15/16}.
+\]
+Its reserve is
+\[
+ B_1+\frac74m-\frac{15}{16}
+ \ge\frac{3047}{12500}+\frac7{10}-\frac{15}{16}
+ =\frac{313}{50000}.
+\]
+All dyadic logarithms and preliminary counting losses are absorbed
+in the arbitrarily small permitted analytic loss.  Taking a sector
+outside earlier sectors never enlarges any of these absolute
+majorants.
+\end{proof}
+
+\begin{proposition}[Exact complement after the first six sectors]
+\label{early-prop-six-complement}
+Let \(J_{\rm rem,6}\) be the pairwise-distinct contribution with every
+strict condition
+\begin{equation}\label{early-eq-six-complement}
+ \begin{gathered}
+ Q_{uv},Q_{vh},F>U^{6/25},\\
+ P,Q_{uv}F,Q_{vh}F>U^{17/20},\\
+ P/F>U^{12/25},\qquad
+ Q_{uv},Q_{vh}>U^{39/100},\\
+ P>U^{103/100},\qquad P^2/F>U^{15/8}.
+ \end{gathered}
+\end{equation}
+Then the exact disjoint partition gives
+\[
+ J_{\ne}=J_{\rm rem,6}
+       +O\bigl(U^{T-19/12500+\eps}H^b\bigr).
+\]
+Each grouped sector and the complement are real, with all original
+weights, endpoints, profiles, masks and selectors retained.
+A one-sided bound \((J_{\rm rem,6})_+\lls U^T\) is sufficient to
+complete this stage of the energy argument.
+\end{proposition}
+
+\begin{proof}
+Equality in each cutoff belongs to its removed side, so the six
+successively assigned sectors and
+\eqref{early-eq-six-complement} partition all pairwise-distinct
+triples exactly.  Every predicate is invariant under
+\(u\leftrightarrow h\), which conjugates its chain summand.
+The sums are therefore real.  Theorem~\ref{early-thm-six} has
+smallest reserve \(19/12500\), proving the error estimate.
+Combine the proposition with the repeated-character estimates and
+Proposition~\ref{early-prop-probe} for the sufficient implication.
+\end{proof}
+
+The endpoint edge belongs to the first two cutoffs even though it is
+not a displayed kernel.  Those cutoffs cannot be replaced by conditions
+on the displayed legs.  Conversely, the completion sectors explicitly
+use displayed legs.  Neither positivity of the complete frame nor a
+bound for one removed sector implies positivity or an estimate for its
+complement.  The later arguments refine this exact signed remainder;
+the six-sector theorem itself proves no complete mixed-energy bound
+or new zero-free boundary \cite{n4,n5}.
+
+\subsection{What the raw count and positivity methods leave open}
+\label{sec-raw-barriers}
+Fix distinct good prime ideals $a,b,c$ of norms $\asymp U^{1/2}$, and let $u=ab$, $h=ac$, $v=ad$ as $d$ varies over distinct good primes in the same scale. All three row-ratio conductor exponents are one, so none of the six cuts applies. The fixed-field prime ideal theorem gives $\asymp U^{1/2}/\log U$ such middle ideals in fixed admissible windows; compatible populated finite ray classes can be chosen by a finite pigeonhole, retaining a positive proportion of these primes. No claim about every prescribed ray class follows from this count alone. This attains the exponent $1/2$ of the coupled count. It asserts raw geometric sharpness, not selected-bin membership or a lower bound for $w_v$.
+
+At the exact point in Appendix~\ref{app-parameters}, the budget for this middle count after the global two-kernel bound is
+\[
+ B_1=T-[2(1-\mu)+g+(d-1/4)m]
+ =\frac{92902792407}{338300000000}
+ =0.274616590029\ldots.
+\]
+The absolute count therefore exceeds that method's budget by
+\[
+ \frac12-B_1=\frac{76247207593}{338300000000}
+ =0.225383409970\ldots.
+\]
+The original energy estimate $E\le AN^d$ misses its target there only by
+\[s-\mu=\frac{20187853}{169150000000}.\] Thus the larger cubic deficit is a limitation of a sufficient majorant, not a required saving for the original moment. The seventh cut below subsequently controls this raw family by averaging the actual kernel over its exterior factor; it is no longer a surviving example.
+
+A different limitation follows using positivity alone. Let $G_0$ be the primitive-character block diagonal part of $G$ and let $G_1=G-G_0$. Then
+\[
+ f^*G_1^2f=J_{\ne}+J_{\rm end},\qquad J_{\rm end}\ge0.
+\]
+The nonprincipal kernel bound gives $\|G_1\|\lls N^{-1/8}A$: its entrywise modulus is dominated by the rank-one matrix $N^{-1/8}(\sqrt{w_u})_u(\sqrt{w_v})_v^*$, whose norm is $N^{-1/8}A$. Consequently
+\[
+ J_{\ne}\le\|G_1f\|^2\lls N^{-1/4}A^2E
+ \lls N^{d-1/4}A^3.
+\]
+On the hard region $\mu<s$, this sufficient majorant has exponent deficit
+\[
+ (\tfrac74-2d)m+3(s-\mu)\ge\frac{91}{250}
+\]
+relative to $T$. If $\mu\ge s$, the original energy already follows from $E\le AN^d$. The block identity and Schur estimate therefore do not provide the missing arithmetic improvement on the hard region. The finite phase example explains why forgetting phases can be costly, but it does not itself supply those phases' native cancellation.
+
+The order-zero Poisson bound also cannot be promoted to arbitrarily rapid decay from $Q_{uv}$ alone. Take two rows sharing four distinct good primes of norm $U^{9/40}$ and having different extra primes of norm $U^{1/10}$. The row norms have exponent one, their ratio conductor exponent is $1/5$, and the common canceled-phase mask has exponent $9/10$. The combined conductor and deletion norm has exponent $11/10$; the common primes lie below the plain-column scale. The mask is effective. This example does not invalidate the all-scale order-zero bound; it shows what additional modulus control a positive-order completion argument would need \cite{n4,n5}.
+
+% Late-sector fragment; drafted by GPT-6 (Codex), inherited configuration,
+% 2026-10-09. Exact serving variant and reasoning effort are not inferred.
+% No preamble.  Uses the surrounding manuscript's \N, \eps and \lls macros.
+
+\section{A physical middle-factor sieve and valuation-factor cuts}
+\label{late-sec-middle}
+
+We retain the actual selected row family, its weights, and its plain
+column sum.  In particular, throughout this section
+\[
+ A=\sum_u w_u\lls U^{1-\mu},\qquad
+ W=\sup_u w_u\lls U^g,\qquad
+ |S_uS_h|\lls N^d,\qquad N=U^m,
+\]
+where $\mu\ge0$, $g=dr+\Gamma_I\le d(1+r)/2$, and
+$z\le(1-r)/2$.  The envelope $\Gamma_I$ is the actual additive
+slot envelope; in the universal case it equals $dz$.
+The notation $\lls$ suppresses the admissible $U^\eps$ losses and
+polynomial height and profile-seminorm factors specified in the common
+setup.  The cubic-probe exponent is
+\[
+ e=1+dm-s,\qquad T=3e-2m.
+\]
+All separators are fixed before the estimates are applied.  The
+estimates must hold uniformly for the derivative profiles and height
+parameters required by the original reduction, not merely for one
+scalar bump function.
+
+\subsection{The imported sieve and its native realization}
+\label{late-subsec-sieve}
+
+The analytic input used here is the arbitrary-coefficient sixth-order
+large sieve imported from de Faveri's Theorem~1.1 \cite{df}.  On the
+good sixth-power-free ideal variables of the canonical family, write
+its bound as
+\begin{equation}
+ \Theta_6(H,X)
+ =H+X+H^{5/6}X^{1/3}+H^{1/3}X^{5/6}.
+ \label{late-eq-theta}
+\end{equation}
+Thus the squared norm of the row evaluation operator, for row norm at
+most $H$ and sixth-power-free column norm at most $X$, is
+$\lls\Theta_6(H,X)$.  The coefficients in this assertion are arbitrary
+fixed complex coefficients on the permitted ideal columns.  Smooth
+dyadic versions and sharp balls are related by a positive cover.
+
+We also retain the native-to-canonical transfer recorded in the
+short-family reduction and in the mixed notes \cite{n6,n7}.  Its precise
+content matters here.  Over the Eisenstein field, a fixed choice of
+generators and canonical construction data identifies the native
+sextic symbols with the canonical row characters, up to finitely many
+unit and fixed bad-prime or ray-class twists of the column
+coefficients.  The symbols have the same zero extension on the good
+columns.  For a physical presentation
+$t=\varepsilon x m_E j_0^6$, the factor $\varepsilon$ is handled by a
+finite unit split, and the sixth-power part has the exact native zero
+mask.  The transfer is an equality of the inducing characters and
+their prescribed zeros; it does not insert a new coprimality condition
+at a temporary decomposition prime.  A fixed, possibly large endpoint
+factor below enters an arbitrary coefficient vector.  It is not
+treated as a twist for which the large-sieve constant must be uniform
+in a growing conductor.  These native-transfer assertions and
+\eqref{late-eq-theta} are imported analytic hypotheses of the present
+conditional argument.
+
+\begin{lemma}[The physical-row operator]
+\label{late-lem-physical}
+Let the columns be good sixth-power-free ideals of norm at most $X$,
+with arbitrary fixed coefficients.  Averaging the native evaluations
+over all good physical rows of norm at most $H$ has operator bound
+\begin{equation}
+ \mathcal B(H,X)
+ =H+XH^{1/6}+H^{5/6}X^{1/3}+H^{1/3}X^{5/6}.
+ \label{late-eq-physical}
+\end{equation}
+The fixed unit and presentation splits change only the suppressed
+constant.  Actual row congruences or exclusions may be retained and
+then enlarged after a nonnegative square.
+\end{lemma}
+
+\begin{proof}
+On ideals, extract sixth powers uniquely as $t=\eta\lambda^6$, with
+$\eta$ sixth-power-free.  Multiplicativity with the native zero
+convention gives
+\[
+ \chi_k(t)=\chi_k(\eta)\,1_{(k,\lambda)=1}.
+\]
+For a fixed $\lambda$, this is a mask on the column coefficient vector,
+whose squared norm can only decrease.  Apply
+\eqref{late-eq-theta} to row radius $H/(\N\lambda)^6$ and then sum over
+$\N\lambda\le H^{1/6}$.  The four resulting ideal sums have weights
+$(\N\lambda)^{-6}$, $1$, $(\N\lambda)^{-5}$, and
+$(\N\lambda)^{-2}$, respectively.  The first, third and fourth
+series converge, and the constant term counts $O(H^{1/6})$ ideals.
+This gives \eqref{late-eq-physical}.  The finite physical-generator
+splits are covered by the native-transfer hypothesis.
+\end{proof}
+
+The physical norm in \eqref{late-eq-physical} is not the primitive
+conductor or the norm of the radical.  For a sixth-power-free row it
+still counts every prime with its physical valuation, which may be
+any of $1,\ldots,5$.
+
+\subsection{Extracting sixth powers from the original plain columns}
+\label{late-subsec-columns}
+
+The original plain columns in the kernel need not be sixth-power-free.
+The following lemma accounts for them without changing their
+coefficients or dropping their zeros.
+
+\begin{lemma}[A masked plain-column kernel average]
+\label{late-lem-kernel}
+Fix physical factors $u,a$ and one of the finite presentation classes.
+Suppose
+\begin{equation}
+ K(u,at)=\frac1N\sum_k \beta_{u,a}(k)
+                  \overline{\chi_k(t)}^{\,s_\chi},
+ \qquad \N k\le C_BN,
+ \label{late-eq-beta}
+\end{equation}
+where $\beta_{u,a}$ is fixed while $t$ varies and is uniformly bounded
+by the permitted profile seminorms.  The coefficient includes the
+original bump, ray factor, endpoint phases and all their zeros.
+The orientation $s_\chi=\pm1$ means identity or complex conjugation,
+including at zero, rather than a literal inverse of zero.  Then
+\begin{equation}
+ \sum_{\N t\le H}|K(u,at)|^2\lls\frac{\mathcal B(H,N)}N.
+ \label{late-eq-kernel-physical}
+\end{equation}
+If the varying ideal rows are sixth-power-free, the same assertion
+holds with $\Theta_6(H,N)$ in place of $\mathcal B(H,N)$.
+\end{lemma}
+
+\begin{proof}
+Write each ideal column uniquely as $k=k_0\lambda^6$, where $k_0$ is
+sixth-power-free.  The exact identity is
+\[
+ \chi_{k_0\lambda^6}(t)
+   =\chi_{k_0}(t)\,1_{(t,\lambda)=1}.
+\]
+For fixed $\lambda$, the normalized coefficient vector
+$N^{-1}\beta_{u,a}(k_0\lambda^6)$ has squared norm
+$\lls N^{-1}(\N\lambda)^{-6}$ and column support of size
+$X_\lambda\ll N/(\N\lambda)^6$.  The row mask
+$1_{(t,\lambda)=1}$ is discarded only after taking a nonnegative row
+square.  The physical-row operator and Minkowski's inequality give
+\[
+ \left(\sum_{\N t\le H}|K(u,at)|^2\right)^{1/2}
+ \lls
+ \sum_\lambda
+  \left(\frac{\mathcal B(H,X_\lambda)}
+                   {N(\N\lambda)^6}\right)^{1/2}
+ \lls \left(\frac{\mathcal B(H,N)}N\right)^{1/2}
+                  \sum_\lambda(\N\lambda)^{-3}.
+\]
+The last series converges.  Empty column ranges contribute zero.  The
+sixth-power-free row version uses \eqref{late-eq-theta} at the same
+step.  No cancellation of a phase permits the corresponding zero
+mask to be removed before that square.
+\end{proof}
+
+\subsection{The seventh cut: a bounded exterior physical factor}
+\label{late-subsec-seventh}
+
+For fixed endpoints $u,h$, let $E=\operatorname{rad}_{\rm good}(uh)$.
+The actual sixth-power-free middle row has, after a finite unit and
+bad-prime split, the unique ideal factorization
+\[
+ v=a\xi,\qquad \operatorname{supp}(a)\subseteq\operatorname{supp}(E),
+ \qquad (\xi,E)=1.
+\]
+The valuations in both $a$ and $\xi$ are retained.  There are at most
+$6^{\omega(E)}\lls1$ choices of $a$, since $\N E\ll U^2$.
+The exterior factor $\xi$ need not be squarefree.  Set
+\begin{equation}
+ \kappa=\frac{103}{200},\qquad
+ \sigma_\kappa(m)=\frac{5\kappa}{6}-\frac{2m}{3}.
+ \label{late-eq-kappa}
+\end{equation}
+Assign, outside the previously controlled six row sectors, the sector
+\begin{equation}
+ \Gamma_7:\quad \N\xi\le U^\kappa.
+ \label{late-eq-gamma7}
+\end{equation}
+This is a condition on the full exterior physical ideal norm.
+
+\begin{proposition}[The seventh row sector]
+\label{late-prop-seventh}
+With the actual selectors and weights retained,
+\begin{equation}
+ |J_{\Gamma_7}|\lls A^2W N^{d-1}\mathcal B(U^\kappa,N).
+ \label{late-eq-seventh-bound}
+\end{equation}
+On the operational rectangle
+\begin{equation}
+ \frac9{25}\le d\le\frac{21}{50},\quad
+ \frac7{10}\le r<\frac{73}{100},\quad
+ \frac25<m<\frac{207}{500},\quad
+ 0<s<\frac{101}{500000},
+ \label{late-eq-rectangle}
+\end{equation}
+its reserve below $T$ is at least $4031/1500000$.
+\end{proposition}
+
+\begin{proof}
+Fix $u,h,a$ and the presentation class.  Since
+$K(v,h)=\overline{K(h,v)}$, the actual middle contribution is bounded
+by
+\[
+ W\left(\sum_{\text{actual }\xi}|K(u,a\xi)|^2\right)^{1/2}
+   \left(\sum_{\text{actual }\xi}|K(h,a\xi)|^2\right)^{1/2}.
+\]
+Only these nonnegative squares are enlarged to the full physical ball.
+Lemma~\ref{late-lem-kernel}, the $\lls1$ choices of $a$, the endpoint
+amplitude bound, and $\sum_{u,h}w_uw_h\le A^2$ give
+\eqref{late-eq-seventh-bound}.  This also explains why the endpoint
+sum introduces no extra middle multiplicity.
+
+Throughout \eqref{late-eq-rectangle}, $m<\kappa<2m$.  The dominant
+term of $\mathcal B(U^\kappa,N)/N$ is
+$U^{5\kappa/6-2m/3}$: it dominates $U^{\kappa-m}$,
+$U^{\kappa/6}$, and $U^{\kappa/3-m/6}$.  Thus the chain exponent is
+\[
+ 2(1-\mu)+g+dm+\sigma_\kappa(m),
+\]
+and the reserve is
+\begin{equation}
+ \Delta_7=1-\frac{5\kappa}{6}-g-
+                  \left(\frac43-2d\right)m-3s+2\mu.
+ \label{late-eq-delta7}
+\end{equation}
+Use $g\le d(1+r)/2$ and $\mu\ge0$.  The resulting lower bound
+decreases with $r,m,s$, and with $d$ because
+$2m-(1+r)/2<0$ on the rectangle.  Substitution at the upper corner
+gives
+\[
+ \Delta_7\ge\frac{4031}{1500000}
+                    =0.002687333333\ldots.
+\]
+At the legal parameter point used in the mixed notes the exact reserve
+is $7362652673/507450000000=0.014509119465\ldots$.
+\end{proof}
+
+The four-prime geometry $u=ab$, $h=ac$, $v=ad$, with distinct good
+prime ideals all of norm about $U^{1/2}$, lies in this sector.  For
+large $U$, all these primes exceed the complete plain-column cap
+$C_BN$, so the common factor cancels with its mask identically one
+on that cap.  Applying the preceding argument at exterior radius
+$U^{1/2}$ gives the still larger point reserve
+$0.027009119465\ldots$.  This controls the earlier raw counting
+example; it does not assert that its physical rows populate a chosen
+zero-selected bin with nonzero weight.
+
+\subsection{The eighth cut: all valuation groups and conjugation}
+\label{late-subsec-eighth}
+
+Decompose the exterior ideal into its actual valuation classes:
+\[
+ \xi=\prod_{a=1}^5\xi_a^a,\qquad
+ x_a=\log_U\N\xi_a.
+\]
+The $\xi_a$ are squarefree, pairwise coprime good ideals outside $E$.
+In particular, $\sum_a x_a$ is the exterior radical exponent, whereas
+$\sum_a ax_a$ is its physical norm exponent.  Define
+\begin{equation}
+ \beta_6(y;m)=\max\left\{y-m,\ 0,\
+               \frac{5y}{6}-\frac{2m}{3},\
+               \frac y3-\frac m6\right\}.
+ \label{late-eq-beta6}
+\end{equation}
+For a nonempty $L\subseteq\{1,\ldots,5\}$ and a global orientation
+$\tau\in\{+,-\}$, put $c_+(a)=a$, $c_-(a)=6-a$, and
+\begin{equation}
+ \Phi(\boldsymbol x;m)=
+ \min_{L\ne\varnothing,\ \tau\in\{+,-\}}
+ \left\{\sum_{a\notin L}x_a+
+ \beta_6\left(\sum_{a\in L}c_\tau(a)x_a;m\right)\right\}.
+ \label{late-eq-phi}
+\end{equation}
+There are $62$ choices in this minimum.  The minus sign is global
+conjugation of the varying grouped factor, with conjugation of the
+coefficient vector as well.  It is not an independent choice of
+conjugation at each prime.
+
+\begin{lemma}[A grouped valuation estimate]
+\label{late-lem-grouped}
+An endpoint-symmetric sector on which
+$\Phi(\boldsymbol x;m)\le\sigma$ satisfies
+\begin{equation}
+ |J_\Gamma|\lls A^2W N^d U^\sigma.
+ \label{late-eq-grouped-bound}
+\end{equation}
+\end{lemma}
+
+\begin{proof}
+Fix endpoints, the endpoint-supported factor, a finite presentation
+class, and a dyadic box for the five $\xi_a$.  Choose one of the
+finitely many minimizing pairs $(L,\tau)$, retaining the actual
+sector selector.  Freeze the factors with $a\notin L$; there are
+$\lls U^{\sum_{a\notin L}x_a}$ choices.  The grouped varying ideal
+\[
+ t=\prod_{a\in L}\xi_a^{c_\tau(a)}
+\]
+is sixth-power-free.  Its valuations identify each $\xi_a$, so the map
+from the grouped ideal tuple to $t$ is injective.  The physical unit
+ambiguities are absorbed by the finite presentation split, with no
+new divisor multiplicity.  For the minus orientation the exact
+identity is
+\[
+ \chi_k\left(\prod_{a\in L}\xi_a^{6-a}\right)
+     =\overline{\chi_k\left(\prod_{a\in L}\xi_a^a\right)}.
+\]
+It also holds at nonunits because both sides are zero.
+
+Apply Cauchy to the two actual middle legs and use the sixth-power-free
+version of Lemma~\ref{late-lem-kernel} at radius
+$U^{\sum_{a\in L}c_\tau(a)x_a}$.  Fixed coprimality conditions with
+the endpoints and frozen factors are retained until the nonnegative
+squares are enlarged.  The cost is the expression inside
+\eqref{late-eq-phi}.  Summing the frozen variables, endpoint weights
+and amplitudes proves \eqref{late-eq-grouped-bound}.
+
+There are $O(\log^5 U)$ dyadic boxes.  Replacing actual norms by the
+upper endpoints of a box changes all five logarithmic exponents by
+$O(1/\log U)$ and every cost in \eqref{late-eq-phi} by that amount.
+This costs only a fixed multiplicative constant.  One retains the
+actual cut inside a box and enlarges its positive squares; the whole
+box need not satisfy the cut.  These losses and the finite choices of
+minimizer are absorbed by $\lls$.
+\end{proof}
+
+Assign outside the first seven row sectors
+\begin{equation}
+ \Gamma_8:\quad \Phi(\boldsymbol x;m)\le\sigma_\kappa(m).
+ \label{late-eq-gamma8}
+\end{equation}
+The preceding lemma gives the same exponent and the same reserve
+$\Delta_8=\Delta_7\ge4031/1500000$.  Taking $L=\{1,\ldots,5\}$
+shows that \eqref{late-eq-gamma8} includes the physical cap
+\eqref{late-eq-gamma7}, since $\beta_6$ is increasing and
+$\beta_6(\kappa;m)=\sigma_\kappa(m)$ on the operational rectangle.
+It also includes the corresponding conjugate physical cap.  The
+seventh condition is therefore redundant in the final complement,
+but is retained to record the exact order of the proof.
+
+Let $J_{\rm rem,8}$ denote the exact open chain retaining the first
+six inherited complement conditions, $\N\xi>U^\kappa$, and
+$\Phi(\boldsymbol x;m)>\sigma_\kappa(m)$.  The two new row cuts are
+invariant under endpoint reversal, so their sums and this remainder
+are real.  They are not asserted to be positive.  Combining them
+with the inherited minimum reserve $19/12500$ gives
+\begin{equation}
+ J_{\ne}=J_{\rm rem,8}
+  +O_\eps\left(U^{T-19/12500+\eps}H^b\right).
+ \label{late-eq-row-remainder}
+\end{equation}
+
+\subsection{Raw geometries: one is removed and another survives}
+\label{late-subsec-raw}
+
+The earlier six-prime geometry uses distinct good prime ideals with
+norm exponents
+\[
+ (a_1,a_2,b,c,p,q):
+ \left(\frac9{20},\frac1{20},\frac12,\frac12,
+                                      \frac7{20},\frac1{10}\right),
+ \qquad
+ u=a_1a_2b,\quad h=a_1a_2c,\quad v=a_1pq^2.
+\]
+Its exterior physical exponent is $11/20>\kappa$, but varying the
+valuation-one root $p$ and counting $q$ gives
+\[
+ \Phi\le\frac{13}{60}-\frac m6,
+ \qquad
+ \sigma_\kappa(m)-\left(\frac{13}{60}-\frac m6\right)
+                      =\frac{17}{80}-\frac m2>0.
+\]
+Thus the eighth cut removes this raw geometry.
+
+A different geometry uses norm exponents
+\begin{equation}
+ (a_1,a_2,b,c,p,q):
+ \left(\frac{21}{50},\frac2{25},\frac12,\frac12,
+                                      \frac{13}{50},\frac4{25}\right)
+ \label{late-eq-new-raw}
+\end{equation}
+and the same products $u=a_1a_2b$, $h=a_1a_2c$, $v=a_1pq^2$.
+All three physical row norms have exponent one; all three primitive
+good row-ratio conductors have exponent one.  The middle primitive
+conductor has exponent $21/25$, which exceeds $2m-1/1000$ throughout
+\eqref{late-eq-rectangle}.  Its exterior physical exponent is
+$29/50>\kappa$, and its exterior radical exponent is $21/50$.
+For the three nontrivial grouped subsets and both orientations the
+costs are
+\[
+ \begin{array}{c|cc}
+   \text{varying roots}&+&-\\ \hline
+   p&37/150-m/6&73/50-m\\
+   q&11/30-m/6&119/150-2m/3\\
+   p,q&29/60-2m/3&97/50-m.
+ \end{array}
+\]
+Groups consisting only of unit roots cost $21/50$.  Hence, throughout
+$2/5<m<207/500$,
+\begin{equation}
+ \Phi=\frac{37}{150}-\frac m6,\qquad
+ \Phi-\sigma_\kappa(m)=\frac m2-\frac{73}{400}
+                                          >\frac7{400}.
+ \label{late-eq-new-phi}
+\end{equation}
+At the legal mixed parameter point, the affordable middle exponent
+is $C=T-[2(1-\mu)+g+dm]=0.173181072367\ldots$, whereas
+\eqref{late-eq-new-phi} is $0.179042988225\ldots$.  Its excess is
+$1487314601/253725000000=0.005861915857\ldots$.
+These are consistency tests of a raw norm and conductor geometry.
+They are not a lower bound for the energy and do not prove a nonzero
+population in the actual selected bin.
+
+\section{A coupled cut after the exact two-kernel expansion}
+\label{late-sec-components}
+
+\subsection{The actual expanded chain and projected conductors}
+\label{late-subsec-expansion}
+
+Put $c_k=|B(\N k/N)|^2|\nu(k)|^2$.  With the fixed orientation
+convention above, the original complete kernels satisfy exactly
+\begin{align}
+ K(u,v)K(v,h)
+ &=\frac1{N^2}\sum_{k,l}c_kc_l
+       \chi_k(u)^{s_\chi}\overline{\chi_l(h)}^{\,s_\chi}
+       \Gamma_{k,l}(v),
+ \label{late-eq-two-kernels}\\
+ \Gamma_{k,l}(v)
+ &=\overline{\chi_k(v)}^{\,s_\chi}\chi_l(v)^{s_\chi}.
+ \label{late-eq-gamma-kl}
+\end{align}
+The actual row selector, $w_v$, endpoint factors, and every zero remain
+in this finite expansion.  It is never an expansion of a replacement
+middle character family.
+
+For $j=2,3$, define the good radical ideals
+\begin{equation}
+ f_j(k,l)=
+ \prod_{\substack{\mathfrak p\text{ good}\\
+      v_{\mathfrak p}(k)-v_{\mathfrak p}(l)\not\equiv0\ ({\rm mod}\ j)}}
+                  \mathfrak p.
+ \label{late-eq-components}
+\end{equation}
+They are symmetric in $k,l$.  The ideal $f_2$ is the growing
+conductor of the quadratic projection of the native sixth-order
+ratio; $f_3$ is that of its cubic projection.  Their least common
+multiple is the good sixth-order ratio conductor.  Fixed bad-prime,
+unit and ray factors remain in the actual quotient and are not used
+to define these good-part predicates.  The full primitive order
+would also require those fixed factors.  Neither cancellation modulo
+six nor projection modulo two or three permits one to drop the
+original canceled-phase zero masks.  In the estimate below we use only
+$|\Gamma_{k,l}(v)|\le1$ on the full original product.
+
+\begin{lemma}[Projected column-pair count]
+\label{late-lem-pair-count}
+For good column ideals of norms at most $C_BN$, and $V\ge1$,
+\begin{equation}
+ \#\{(k,l):\N f_j(k,l)\le V\}
+                \ll_\eps N^{1+\eps}V^{1/2+\eps},\qquad j=2,3.
+ \label{late-eq-pair-count}
+\end{equation}
+The finite physical-generator choices change only the constant.  If
+fixed bad-prime factors are kept in the columns rather than killed by
+their original zeros, their norm-bounded possibilities cost $N^\eps$.
+\end{lemma}
+
+\begin{proof}
+Write $k=gA$, $l=gB$, with $(A,B)=1$, and extract $j$-th powers:
+\[
+ A=a_0a^j,\qquad B=b_0b^j,
+ \qquad f_j=\operatorname{rad}(a_0b_0),
+\]
+where $a_0,b_0$ are $j$-th-power-free.  At a prime of $f_j$ there
+are $2(j-1)$ possible allocations: its side and its residual
+valuation $1,\ldots,j-1$.  For each choice, counting $g$ gives
+\[
+ \frac{C N}{\max\{\N a_0(\N a)^j,\N b_0(\N b)^j\}}
+ \le\frac{C N}{\sqrt{\N(a_0b_0)}(\N(ab))^{j/2}}
+ \le\frac{C N}{\sqrt{\N f_j}(\N(ab))^{j/2}}.
+\]
+When the permitted norm of $g$ is below one its actual count is zero.
+For $j=3$, the two ideal series of exponent $3/2$ converge.  For
+$j=2$, retain $\N a,\N b\ll\sqrt N$, giving at most two harmonic
+ideal logarithms.  The allocation factor is a bounded-base divisor
+factor and hence $\ll_\eps(\N f_j)^\eps$.  Summing over
+$\N f_j\le V$ by ideal counting and partial summation gives
+\eqref{late-eq-pair-count}.  These are positive counting enlargements;
+no lower-order large sieve or native lower-order transfer is used.
+\end{proof}
+
+\subsection{The coupled radical and projected-conductor cut}
+\label{late-subsec-coupled}
+
+Write
+\[
+ Z=Z_{u,h}(v)=\N\operatorname{rad}_{\rm good}\xi_{u,h}(v).
+\]
+This is an exterior radical norm, not the exterior physical norm of
+the seventh cut.  Within the exact expansion of $J_{\rm rem,8}$,
+assign the tuples satisfying
+\begin{equation}
+ Z^2\min\{\N f_2(k,l),\N f_3(k,l)\}
+                          \le U^{142/125}
+ \label{late-eq-coupled-cut}
+\end{equation}
+to $J_{\rm comp}$.  This is a column-pair-dependent piece of the
+expanded chain.  It is not an additional row-only sector with two
+untouched complete kernels.
+
+\begin{proposition}[The coupled expanded cut]
+\label{late-prop-coupled}
+The actual coupled piece satisfies
+\begin{equation}
+ |J_{\rm comp}|\lls A^2W N^{d-1}U^{71/125}.
+ \label{late-eq-coupled-bound}
+\end{equation}
+Its reserve below $T$ is
+\begin{equation}
+ \Delta_{\rm comp}
+  =1-\frac{71}{125}-g-(1-2d)m-3s+2\mu
+                      \ge\frac{927}{500000}.
+ \label{late-eq-coupled-reserve}
+\end{equation}
+\end{proposition}
+
+\begin{proof}
+Fix the endpoints.  In a dyadic interval $H\le Z<2H$, the number of
+actual middle rows is $\lls H$: count the squarefree radical of norm
+at most $2H$, assign its exterior valuations in $1,\ldots,5$, and
+then choose the endpoint-supported factor in $6^{\omega(E)}$
+ways.  The factors $5^{\omega(\operatorname{rad}\xi)}$ and
+$6^{\omega(E)}$, together with the fixed unit and bad-prime choices,
+are absorbed by $U^\eps$.  The actual selector and physical norm cap
+can only reduce this positive count.
+
+If \eqref{late-eq-coupled-cut} holds, then $Z\le U^{71/125}$ and
+one of the projected norms is at most
+$V_H=U^{142/125}/H^2$.  If $V_H<1$, no column pairs qualify.
+Otherwise Lemma~\ref{late-lem-pair-count} and a union bound give
+\[
+ \#\{(k,l)\text{ qualifying in this interval}\}
+                     \lls N\frac{U^{71/125}}H.
+\]
+Multiplication by the middle count gives $\lls NU^{71/125}$.
+Sum the $O(\log U)$ intervals.  Bound the original phases and zeros
+by one, $w_v$ by $W$, and $c_k,c_l$ by their fixed profile bound
+inside the exact expansion \eqref{late-eq-two-kernels}.  The original
+normalization is $N^{-2}$.  Summing the endpoint weights and
+amplitudes gives \eqref{late-eq-coupled-bound}.
+
+Its exponent is $2(1-\mu)+g+(d-1)m+71/125$, so subtraction from
+$T$ gives \eqref{late-eq-coupled-reserve}.  Substitute
+$g\le d(1+r)/2$ and $\mu\ge0$.  The lower bound decreases with
+$r,m,s$, and with $d$ because $2m-(1+r)/2<0$.  The upper corner of
+\eqref{late-eq-rectangle} gives exactly
+$927/500000=0.001854$.  At the legal mixed parameter point the
+reserve is $108685273/9950000000=0.010923143015\ldots$.
+\end{proof}
+
+\subsection{The latest residual and its scope}
+\label{late-final}
+
+Let $J_{\rm rem,comp}$ be the expanded remainder with all eight row
+complement conditions and both strict conditions
+\begin{equation}
+ Z^2\N f_2(k,l)>U^{142/125},\qquad
+ Z^2\N f_3(k,l)>U^{142/125}.
+ \label{late-eq-coupled-complement}
+\end{equation}
+Since the new reserve exceeds $19/12500$, the latest exact reduction
+is
+\begin{equation}
+ J_{\ne}=J_{\rm rem,comp}
+   +O_\eps\left(U^{T-19/12500+\eps}H^b\right).
+ \label{late-eq-latest-remainder}
+\end{equation}
+Simultaneous reversal $(u,h,k,l)\mapsto(h,u,l,k)$ conjugates the
+summand and preserves every predicate, so $J_{\rm comp}$ and
+$J_{\rm rem,comp}$ are real.  No positivity is inherited by this
+restricted expanded remainder.  For example, when $Z\le U^{71/125}$
+the high-conductor column filter has zero diagonal; if it admits an
+off-diagonal pair, its corresponding $2$ by $2$ principal block is
+$\left(\begin{smallmatrix}0&1\\1&0\end{smallmatrix}\right)$,
+which is indefinite.  Thus the positivity of the original cubic
+probe cannot justify a positive-semidefinite estimate for this
+filtered chain.
+
+The raw geometry \eqref{late-eq-new-raw} remains compatible with
+\eqref{late-eq-coupled-complement}.  Its $Z$ exponent is $21/50$;
+the removed projected-column threshold therefore has exponent
+$142/125-2(21/50)=37/125$.  Two coprime good prime columns in the
+original annulus have $f_2=f_3=kl$, with exponent $2m$, and hence
+\[
+ \log_U(Z^2\N f_j)=\frac{21}{25}+2m>\frac{142}{125}
+ \qquad(j=2,3).
+\]
+There is no forced structural zero in this norm model.  As before,
+this is not an assertion of actual selected-bin population or a lower
+bound for the remaining signed sum.
+
+
+\begin{theorem}[Conditional completion of the mixed energy]\label{thm-completion}
+Assume Inputs~\ref{in-mass}, \ref{in-kernel}, and \ref{in-sieve}, the working domain, the operational support and witness budgets, and their stated profile and height uniformity. Define $J_{\rm rem,comp}$ explicitly by
+\begin{equation}\label{eq-complete-signed-remainder}
+ \frac1{N^2}\sum_{u,v,h}w_uw_vw_h\overline{S_u}S_h
+ \sum_{k,l}c_kc_l\chi_k(u)^{s_\chi}
+ \overline{\chi_l(h)}^{\,s_\chi}\Gamma_{k,l}(v)\,
+ \Id_{\mathcal R}(u,v,h,k,l),
+\end{equation}
+where $\mathcal R$ requires pairwise distinct primitive row characters, every condition in \eqref{early-eq-six-complement}, $\N\xi_{u,h}(v)>U^\kappa$, $\Phi(\boldsymbol x;m)>\sigma_\kappa(m)$, and both conditions in \eqref{late-eq-coupled-complement}. Every original support, row selector, coefficient, and zero is retained. If this real signed expression satisfies $(J_{\rm rem,comp})_+\lls U^T$, then
+\[
+ E_{\mathcal C}=\sum_{u\in\mathcal C}|M_uS_uQ_I(u)|^2\lls U^{1+dm-s}.
+\]
+\end{theorem}
+\begin{proof}
+The exact expansions and disjoint cuts give $J_{\ne}=J_{\rm rem,comp}+O(U^{T-19/12500+\eps}H^b)$. The repeated-character terms have the larger reserves in Proposition~\ref{early-prop-repeated}. Thus the real upper bound on the remainder gives $0\le J\lls U^T$. Proposition~\ref{early-prop-probe} and $L_N\ll N$ yield $E^3\lls U^{2m+T}=U^{3e}$. Taking cube roots, allocating preliminary losses inside the permitted losses, and restoring the controlled low-conductor sector proves the assertion.
+\end{proof}
+
+
+
+\section{Direct bounds for the actual selected energy}
+\label{sec:direct-energy-fragment}
+
+All statements in this section retain the actual physical row selector,
+original smooth profiles, and original whole-slot prime polynomials.
+Write
+\[
+ w_u=\Id_{\Cplus}(u)|M_uQ_I(u)|^2,\qquad
+ X_u=|S_u|^2,\qquad E=\sum_u w_uX_u,
+\]
+and let \(A=\sum_u w_u\), \(W=\max_u w_u\).  Fix a permitted
+additive pointwise slot envelope \(\Gamma_L\), so that
+\[
+ |M_u|^2\lls U^{dr},\quad |Q_L(u)|^2\lls U^{\Gamma_L},
+ \quad X_u\lls U^{dm},\quad
+ \Gamma_I=\Gamma_J+\Gamma_{I\setminus J}.
+\]
+The universal envelope is \(\Gamma_L=dz_L\).  Put
+\begin{equation}
+ R=R_*+\ell,\quad g=dr+\Gamma_I,\quad
+ \mu_0=1-R-g,\quad \mu=\max\{0,\mu_0\},\quad
+ e=1+dm-s.
+ \label{eq:direct-budget-definitions}
+\end{equation}
+The full-bin count and marked inverse mass yield
+\begin{equation}
+ \#\Cplus\lls U^R,\qquad
+ A\lls U^{1-\mu},\qquad W\lls U^g.
+ \label{eq:mass-and-maximum-direct}
+\end{equation}
+The relevant selected plain-fourth input is
+\begin{equation}
+ \sum_{u\in\Cplus}|S_u|^4|Q_J(u)|^2\lls U,
+ \qquad 2m+\frac92z_J<1,
+ \label{eq:legal-selected-fourth-direct}
+\end{equation}
+where \(J\subset I\) consists of whole original physical slots and
+every strict capacity decrement required by the input is respected.
+We do not use \eqref{eq:legal-selected-fourth-direct} for arbitrary
+prime-deleted supports or arbitrary column coefficients.
+
+For clarity, the low physical-conductor sector has already been removed.
+On \(\theta(u)\le2m-1/1000\), the buffered bound
+\(X_u\lls U^{d\min(m,\theta(u)-m)}\), combined with marked inverse
+mass, gives energy \(\lls U^{1+dm-d/1000}\).  The operational target
+has \(0<s<\eta+2\ell\), and
+\(d/1000-s\ge157/10^6+\ell\) on \(d\ge9/25\).
+Thus a bound for the present selected energy, with losses smaller than
+this reserve, completes that part of the original full-bin request.
+
+\subsection{The full Hölder envelope of the marginal inputs}
+
+\begin{proposition}[Continuous Hölder envelope]
+\label{prop:holder-envelope-direct}
+Fix a legal whole-slot set \(J\), and define
+\begin{equation}
+ D_J=2dm+\Gamma_J-g.
+ \label{eq:DJ-direct}
+\end{equation}
+For
+\begin{equation}
+ \alpha_H\ge0,\quad\beta\ge0,\quad
+ \beta\le\frac12,\quad \alpha_H+\beta\le1,
+ \label{eq:holder-polygon-direct}
+\end{equation}
+the existing marginal bounds imply
+\begin{equation}
+ E\lls U^{R+g+dm+\alpha_H\mu_0+\beta(\mu_0-D_J)}.
+ \label{eq:holder-family-direct}
+\end{equation}
+Optimizing over this polygon gives
+\begin{equation}
+ E\lls U^{1+dm-\sigma_H},\qquad
+ \sigma_H=\max\left\{\mu,\frac{D_J+\mu}{2}\right\}.
+ \label{eq:holder-optimum-direct}
+\end{equation}
+If several legal fourth-moment slot sets are available, this Hölder
+scheme chooses one with the largest permitted \(\Gamma_J\).  Mixing
+several such fourth moments does not improve this envelope.
+\end{proposition}
+\begin{proof}
+All sums in this proof are over \(u\in\Cplus\), where the selector
+in \(w_u\) equals one.  Put \(Y_u=|S_u|^4|Q_J(u)|^2\).
+The integrand factors exactly as
+\[
+ w_uX_u
+ =w_u^{\alpha_H} Y_u^\beta
+   |M_u|^{2(1-\alpha_H)}
+   |Q_I(u)|^{2(1-\alpha_H)}|Q_J(u)|^{-2\beta}
+   X_u^{1-2\beta},
+\]
+when the displayed factors are nonzero.  To avoid inverse powers at
+zeros, write the prime factor instead as
+\(|Q_J|^{2(1-\alpha_H-\beta)}
+ |Q_{I\setminus J}|^{2(1-\alpha_H)}\); this gives the same identity
+with only nonnegative powers, interpreted by continuity at zeros.
+The constraints \eqref{eq:holder-polygon-direct} make all residual
+powers nonnegative.  Their pointwise majorant is
+\[
+ U^{(1-\alpha_H)g-\beta\Gamma_J+(1-2\beta)dm}.
+\]
+Hölder with exponents corresponding to \(\alpha_H,\beta\), and
+\(1-\alpha_H-\beta\), applied to marked inverse mass, selected plain
+fourth mass, and support count, gives the additional exponent
+\(\alpha_H+\beta+(1-\alpha_H-\beta)R\).  Their sum is
+\eqref{eq:holder-family-direct}.  Degenerate boundary cases follow by
+the usual limiting convention, or directly by omitting a zero power.
+
+The polygon has vertices
+\((0,0),(1,0),(0,1/2),(1/2,1/2)\).  The saving relative to
+\(1+dm\) is
+\((1-\alpha_H-\beta)\mu_0+\beta D_J\), whose vertex maximum is
+\[
+ \max\{\mu_0,0,D_J/2,(D_J+\mu_0)/2\}
+       =\max\{\mu,(D_J+\mu)/2\}.
+\]
+For several fourth masses, let their Hölder powers be \(\beta_j\).
+The constraints use \(\sum_j\beta_j\), while the saving uses the
+linear combination \(\sum_j\beta_j\Gamma_{J_j}\).  For a fixed
+total power this is maximized by a single largest \(\Gamma_{J_j}\).
+\end{proof}
+
+\begin{proposition}[Sharpness as a scalar marginal bound]
+\label{prop:scalar-sharpness-direct}
+In the operational range, \eqref{eq:holder-optimum-direct} is sharp
+using only the displayed scalar mass, support-count, pointwise, and
+legal fourth-moment inequalities.  This assertion concerns abstract
+nonnegative arrays and does not assert a physical character-family
+example or a compatible detector bin.
+\end{proposition}
+\begin{proof}
+First use the universal envelope \(\Gamma_L=dz_L\), and let \(c\)
+be the largest legal slot length in the relaxed scalar problem.  Put
+\(\Gamma_* =dc\), \(h=1-g-\mu=\min\{R,1-g\}\), and
+\[
+ y=\min\left\{dm,\frac{g+\mu-\Gamma_*}{2}\right\}.
+\]
+On \(\lfloor U^h\rfloor\) abstract rows assign
+\[
+ |M|^2=U^{dr},\qquad |Q_i|^2=U^{dz_i},\qquad |S|^2=U^y.
+\]
+In this range \(h>0\) and \(y>0\).  The marked mass has exponent
+\(h+g=1-\mu\le1\).  Every legal subset of length \(z_J\le c\)
+has plain-fourth exponent
+\(h+2y+dz_J\le1\).  All pointwise and support bounds hold.  The
+energy has exponent
+\[
+ h+g+y=1-\mu+y
+ =1+dm-\max\left\{\mu,
+      \frac{2dm+\Gamma_*-g+\mu}{2}\right\}.
+\]
+It therefore attains the optimized scalar envelope, up to harmless
+rounding constants.  The same construction works for additive
+envelopes by assigning the relevant additive slot exponents and
+taking \(\Gamma_*\) to be their largest legal sum.  No claim is made
+that these assigned arrays are values of the actual Möbius and
+character polynomials.  The example proves only that the listed
+marginal inequalities cannot logically force a better exponent.
+\end{proof}
+
+At note 5's exact legal parameter point, the continuous slot relaxation
+has
+\[
+ c_m=\frac{2(1-2m)}9=\frac{4251661}{101490000},\qquad
+ \mu=\frac{12288947}{169150000000},\qquad
+ D_J=\frac{8859}{50000000},\qquad s=\frac3{15625}.
+\]
+Consequently
+\begin{equation}
+ \sigma_H=\frac{165074}{1321484375}
+       =0.0001249155897\ldots,
+ \qquad
+ s-\sigma_H=\frac{88651}{1321484375}
+       =0.0000670844103\ldots.
+ \label{eq:exact-direct-gap}
+\end{equation}
+The inverse-mass estimate alone has saving
+\(\mu=0.0000726511794\ldots\), and hence a larger gap.  The
+continuous fourth-slot capacity is an optimistic relaxation.  With
+\(\Gamma_J=dz_J\) and whole-slot shortfall
+\(e_{\rm slot}=c_m-z_J\ge0\), the actual saving is
+\begin{equation}
+ \sigma_{H,J}=\max\{\mu,
+             \sigma_{H,\rm cap}-de_{\rm slot}/2\}.
+ \label{eq:actual-slot-holder-saving}
+\end{equation}
+Thus the counted fourth-moment branch may switch back to the inverse
+mass branch.  The positive deficit in \eqref{eq:exact-direct-gap}
+is a deficit in the available bounds, not an energy lower bound for
+the physical family; see \cite{n5,n6}.
+
+\subsection{A high-response localization}
+
+Suppose \(\mu<s\), choose \(\delta_{\rm loc}>0\), and put
+\[
+ \tau=s-\mu+\delta_{\rm loc},\qquad
+ H_\tau=\{u\in\Cplus: X_u>U^{dm-\tau}\}.
+\]
+The complementary contribution is immediately affordable:
+\begin{equation}
+ \sum_{u\notin H_\tau}w_uX_u
+    \lls U^{1+dm-\mu-\tau}=U^{e-\delta_{\rm loc}}.
+ \label{eq:low-response-removal-direct}
+\end{equation}
+The exact remaining sufficient target is
+\begin{equation}
+ \sum_{u\in H_\tau}w_uX_u\lls U^e.
+ \label{eq:exact-high-response-target}
+\end{equation}
+A stronger sufficient condition, using the pointwise plain bound, is
+\begin{equation}
+ \sum_{u\in H_\tau}w_u\lls U^{1-s}.
+ \label{eq:strong-high-response-mass-target}
+\end{equation}
+This is a correlation statement about marked inverse mass on the rows
+where the actual plain response is large.  It is not a consequence
+of the unweighted size of \(H_\tau\).
+
+The existing fourth input alone yields
+\begin{align}
+ \sum_{u\in H_\tau}w_uX_u
+ &\le U^{-(dm-\tau)}
+       \sum_u w_uX_u^2 \\
+ &\lls U^{1+g-\Gamma_J-dm+\tau}
+       =U^{1+dm-D_J+\tau}.
+ \label{eq:fourth-high-response-bound}
+\end{align}
+Balancing its saving \(D_J-\tau\) against the complementary saving
+\(\mu+\tau\) gives \((D_J+\mu)/2\), whenever that branch is
+beneficial; otherwise the inverse mass saving \(\mu\) is preferable.
+Thus threshold selection without a new correlation input reproduces
+the Hölder envelope.  It is a useful localization, but it is not a
+new saving.  Preliminary analytic losses must be chosen inside
+\(\delta_{\rm loc}\); changing the threshold by an allocated buffer deals with
+fixed profile and height factors.
+
+\subsection{An inverse-weighted plain fourth target}
+
+Define
+\begin{equation}
+ P_I=\sum_u w_u|S_u|^4,\qquad
+ F_J=\sum_{u\in\Cplus}|M_u|^2|S_u|^4|Q_J(u)|^2,
+ \qquad \chi=(2s-\mu-D_J)_+.
+ \label{eq:inverse-fourth-definitions}
+\end{equation}
+
+\begin{proposition}[Sufficient direct fourth criterion]
+\label{prop:inverse-fourth-criterion}
+Either of the following bounds is sufficient for \(E\lls U^e\):
+\begin{equation}
+ P_I\lls U^{1+2dm-2s+\mu},
+ \label{eq:PI-sufficient-target}
+\end{equation}
+or, for a legal whole-slot subset \(J\),
+\begin{equation}
+ F_J\lls U^{1+dr-\chi}.
+ \label{eq:FJ-sufficient-target}
+\end{equation}
+\end{proposition}
+\begin{proof}
+Weighted Cauchy gives \(E^2\le AP_I\).  Inserting
+\eqref{eq:mass-and-maximum-direct} and
+\eqref{eq:PI-sufficient-target} gives exponent \(2e\).
+Moreover,
+\(P_I\lls U^{\Gamma_I-\Gamma_J}F_J\).  If
+\(2s-\mu-D_J>0\), insertion of
+\eqref{eq:FJ-sufficient-target} gives exactly
+\[
+ (1-\mu)+(\Gamma_I-\Gamma_J)+(1+dr-\chi)=2e.
+\]
+If \(2s-\mu-D_J\le0\), the same sum with \(\chi=0\) is at most
+\(2e\).  This proves both sufficient implications.
+\end{proof}
+
+The pointwise inverse bound and the selected plain fourth input give
+only \(F_J\lls U^{1+dr}\).  Hence \(\chi\) is the additional saving
+requested by this route.  At the optimistic source point,
+\begin{equation}
+ \chi=\frac{177302}{1321484375}
+      =0.0001341688206\ldots=2(s-\sigma_H).
+ \label{eq:exact-inverse-fourth-deficit}
+\end{equation}
+These criteria are sufficient, rather than necessary, for the desired
+energy.  No implication between this fourth target and the actual-probe
+cubic target \(J\lls U^T\), \(T=3e-2m\), is asserted.  The fourth
+criterion has a smaller displayed direct deficit under its available
+estimates, but the arithmetic comparison of the two targets remains
+open.
+
+\subsection{Removing small inverse-column ratio conductors}
+
+This target admits an exact additional decomposition using the original
+Möbius coefficients.  Put \(D=U^r\), write
+\begin{equation}
+ M_u=D^{-1/2}\sum_{\mathfrak d}a_{\mathfrak d}
+                              \psi_u(\mathfrak d),\qquad
+ a_{\mathfrak d}=\mu_F(\mathfrak d)
+                         A_0(\N(\mathfrak d)/D),
+ \label{eq:actual-inverse-coefficients-direct}
+\end{equation}
+and retain any original fixed phases consistently in the coefficients
+or in \(\psi_u\).  Here \(A_0\) is the fixed original smooth inverse
+profile.  Its coefficients have bounded magnitude, are supported on
+the original annulus \(\N(\mathfrak d)\asymp D\), and satisfy
+\(\sum|a_{\mathfrak d}|^2\lls D\).  There is no rescaling of this
+annulus to a ratio conductor.  Assemble the positive selected weight
+\begin{equation}
+ V_u=\Id_{\Cplus}(u)|S_u|^4|Q_J(u)|^2,
+ \qquad \sum_uV_u\lls U,
+ \label{eq:actual-positive-fourth-weight}
+\end{equation}
+before expanding.  The exact identity is
+\begin{equation}
+ F_J=D^{-1}\sum_{\mathfrak d,\mathfrak d'}
+       a_{\mathfrak d}\overline{a_{\mathfrak d'}}
+       L_J(\mathfrak d,\mathfrak d'),\qquad
+ L_J(\mathfrak d,\mathfrak d')
+       =\sum_uV_u\psi_u(\mathfrak d)
+                        \overline{\psi_u(\mathfrak d')}.
+ \label{eq:exact-inverse-ratio-expansion}
+\end{equation}
+The inherited primitive ratio presentation in this kernel contains its
+canceled-phase coprimality mask.  For example, canceling a common prime
+character factor still leaves its zero on rows divisible by that prime.
+One has \(|L_J|\le\sum V_u\), but no complete-row Poisson formula is
+being applied to this sharply selected, response-weighted sum.
+
+We record the elementary ideal-pair estimate to make the normalization
+in this removal explicit; it is the pair lemma of
+\cite{amplification}, used in \cite{n7}.
+
+\begin{proposition}[Pairs with small sextic ratio conductor]
+\label{prop:ideal-pair-count-direct}
+Let \(f(n,n')\) be the good sextic ratio conductor, whose prime support
+consists of valuations of \(n/n'\) nonzero modulo six, and restrict the
+ideals to the original good columns \((nn',S)=1\).  For fixed
+\(C>0\), \(X,V\ge1\), and every \(\eps>0\),
+\begin{equation}
+ \#\{(n,n'): \N(n),\N(n')\le CX,\ \N(f(n,n'))\le V\}
+        \ll_{C,\eps} XV^{1/2+\eps}.
+ \label{eq:elementary-ideal-pair-count}
+\end{equation}
+The fixed native presentation may add bounded factors supported on
+\(S\); these are absorbed into fixed constants without changing the
+good-column statement.
+\end{proposition}
+\begin{proof}
+Write \(g_0=(n,n')\), \(n=g_0A\), \(n'=g_0B\), with
+\((A,B)=1\), and extract sixth powers uniquely:
+\(A=a_0a_1^6\), \(B=b_0b_1^6\).  The ideals \(a_0,b_0\) are
+coprime and sixth-power-free, and
+\(f=\rad(a_0b_0)\).  Each prime of \(f\) has ten allocations:
+one of the two sides and one of the five exponents \(1,\ldots,5\).
+For a fixed allocation and fixed \(a_1,b_1\), ideal counting bounds
+the number of \(g_0\) by
+\[
+ \ll \frac{X}{\max\{\N(a_0)\N(a_1)^6,
+                           \N(b_0)\N(b_1)^6\}}
+ \le\frac{X}{\sqrt{\N(a_0b_0)}\,\N(a_1b_1)^3}.
+\]
+When the allowed norm of \(g_0\) is below one its count is zero, so
+the majorant remains valid.  The ideal sums in \(a_1,b_1\) converge
+at exponent three, and \(\N(a_0b_0)\ge\N(f)\).  The total for
+fixed \(f\) is therefore
+\(\ll X10^{\omega(f)}\N(f)^{-1/2}\).  The divisor bound and partial
+summation of ideal counting give
+\(\sum_{\N(f)\le V}10^{\omega(f)}\N(f)^{-1/2}
+\ll_\eps V^{1/2+\eps}\), proving the claim.
+\end{proof}
+
+Let \(F_{J,\le\upsilon}\) and \(F_{J,>\upsilon}\) denote the exact sums
+\eqref{eq:exact-inverse-ratio-expansion} restricted respectively to
+\(\N(f_{\rm inv}(\mathfrak d,\mathfrak d'))\le U^\upsilon\) and
+its complement.  Here \(\upsilon\ge0\) is a conductor-cap exponent.
+
+\begin{proposition}[Affordable small inverse-ratio sector]
+\label{prop:small-inverse-ratio-direct}
+For every fixed legal \(J\) and cap exponent \(\upsilon\ge0\),
+\begin{equation}
+ |F_{J,\le\upsilon}|\lls U^{1+\upsilon/2}.
+ \label{eq:small-inverse-ratio-bound-direct}
+\end{equation}
+If
+\begin{equation}
+ \gamma_J=dr-\chi-\upsilon/2>0,
+ \label{eq:inverse-ratio-reserve-direct}
+\end{equation}
+this sector is below \eqref{eq:FJ-sufficient-target} by \(\gamma_J\).
+The exact residual is
+\begin{equation}
+ F_{J,>\upsilon}=D^{-1}
+   \sum_{\N(f_{\rm inv}(\mathfrak d,\mathfrak d'))>U^\upsilon}
+     a_{\mathfrak d}\overline{a_{\mathfrak d'}}
+     \sum_u V_u\psi_u(\mathfrak d)
+                         \overline{\psi_u(\mathfrak d')}.
+ \label{eq:actual-large-inverse-ratio-target}
+\end{equation}
+Both sectors are real by pair reversal.  A one-sided upper bound
+\((F_{J,>\upsilon})_+\lls U^{1+dr-\chi}\) is sufficient for the energy
+target; neither sector is asserted nonnegative.
+\end{proposition}
+\begin{proof}
+Take absolute values term by term in the small sector.  Bounded actual
+coefficients, \(|L_J|\le\sum V_u\lls U\), and
+\eqref{eq:elementary-ideal-pair-count} with \(X=D\), \(V=U^\upsilon\)
+give
+\[
+ D^{-1}\sum_{\N(f_{\rm inv})\le U^\upsilon}
+          |a_{\mathfrak d}\overline{a_{\mathfrak d'}}L_J|
+ \lls D^{-1}(DU^{\upsilon/2})U=U^{1+\upsilon/2}.
+\]
+The factor \(D^{-1}\) is essential.  The predicate is invariant under
+\((\mathfrak d,\mathfrak d')\mapsto(\mathfrak d',\mathfrak d)\),
+and the summand becomes its conjugate, proving reality.  The exact
+decomposition \(F_J=F_{J,\le\upsilon}+F_{J,>\upsilon}\), together with
+\eqref{eq:inverse-ratio-reserve-direct}, proves the sufficient residual
+claim.  This argument includes the inverse diagonal and nontrivial
+off-diagonal pairs; it uses no Möbius cancellation.
+\end{proof}
+
+At the optimistic note 5 point, the simple cap \(\upsilon=1/2\) has
+\begin{equation}
+ \gamma_{\rm cap}=dr-\chi-\frac14
+       =\frac{166737511}{42287500000}
+       =0.00394295030446\ldots.
+ \label{eq:exact-half-cap-reserve}
+\end{equation}
+For an actual whole-slot shortfall \(e_{\rm slot}\), using the universal
+envelope at this point gives
+\(\chi_J=\chi_{\rm cap}+de_{\rm slot}\), and the reserve is
+\(\gamma_{\rm cap}-de_{\rm slot}\).  The half-power cap is justified
+only when this is positive.  For an arbitrary legal \(J\), use the
+fixed-\(J\) inequality \eqref{eq:inverse-ratio-reserve-direct} with
+a smaller cap if necessary.  A profile-specific slot envelope must be
+inserted into \(D_J\) directly; it cannot be recovered from the length
+shortfall formula alone.
+
+The remaining target \eqref{eq:actual-large-inverse-ratio-target} keeps
+the original bounded Möbius coefficients, the physical inverse scale,
+the selected \(|S|^4|Q_J|^2\) weight, and both phase and zero-extension
+data.  The available marginal inputs do not bound it at the required
+exponent.  In particular, replacing the selected weight by a complete
+row family, replacing the physical scale by its ratio conductor, or
+using a full Möbius convolution in place of the truncated annular
+coefficients would change the mathematical problem.  The finite
+checks in \cite{n6,n7} verify the algebra, masks, normalization and
+rational budgets; they do not prove this unbounded correlation estimate.
+
+\section{What would complete a proof, and why these next steps are natural}\label{sec-roadmap}
+\subsection{A precise local finishing theorem}
+There are several sufficient finishing statements. The most immediate is a real upper bound for the latest expanded remainder $J_{\mathrm{rem,comp}}$ defined above:
+\begin{equation}\label{eq-final-obligation}
+ (J_{\mathrm{rem,comp}})_+\ll U^{T+\eps}H^b.
+\end{equation}
+Here $t_+=\max(t,0)$ for real $t$; this is a one-sided bound for a real signed sum. Proving its absolute value is sufficient, but summing the absolute values of its individual terms can be much stronger and can erase the needed compensation. Together with the proved removals and spectral Jensen, \eqref{eq-final-obligation} implies \eqref{eq-energy-target}. The imported analytic inputs, actual slot amplitudes, and permitted derivatives must hold on every operational bin required by the detector. An estimate only on the displayed rational point, on squarefree physical middle rows, or on one smooth profile does not meet this obligation.
+
+One may instead prove the original energy target directly, use the weighted-fourth criterion, or prove the high-response selected mass criterion derived in the direct section. None must pass through the cubic sufficient condition. The reductions organize alternatives; they do not justify replacing their targets by a bound that happens to be easier to formulate. The cubic problem has a larger apparent absolute-majorant deficit than the original energy at some parameter points because it is a sufficient higher-moment test.
+
+\subsection{Joint sextic correlations and their quadratic part}
+The new surviving raw geometry has an exterior factor $pq^2$ with two independent prime scales. Keeping both variables inside the same average is the natural way to improve on freezing one factor and paying its entire count. For a zero-extended sixth-order character $\chi$, its quadratic and cubic parts can be written
+\[
+ \chi_2=\chi^3,\qquad \chi_3=\chi^2,\qquad
+ \chi=\chi_2\overline{\chi_3},\qquad
+ \chi(pq^2)=\chi_2(p)\overline{\chi_3(p)}\chi_3(q),
+\]
+with every equality interpreted with the inherited zeros. Thus a genuinely joint cubic estimate is suggestive, but the varying quadratic factor on $p$ survives. It depends jointly on the moving row $p$ and the column $k$; absorbing it into a column coefficient would create row-dependent coefficients, beyond the fixed-vector theorem.
+
+De Faveri's Proposition 8.1 \cite{df} supplies a joint cubic $ab^2$ operator for squarefree columns. For row scales $P,Q$ and column length $L$, its operator bound is
+\[
+ PQ+\min(P,Q)^{2/3}\max(P,Q)^{1/3}L
+ +\min(P,Q)^{1/3}\max(P,Q)^{2/3}L^{2/3}.
+\] Its proof exploits cubic conjugation, and Remark 8.2 leaves an extension to cube-free columns as additional work. Neither that result nor a fixed-twist central $L$-value moment supplies an arbitrary sextic $pq^2$ operator for the present full columns. A new application must prove the sextic extension, handle the actual column support, or exploit the particular fixed profile coefficients; a citation to the cubic result alone does not close the gap.
+
+A bounded next task is to split the columns by their quadratic parity core and stratify the exterior radical at $Z=U^{71/125}$. Write $k=a r_0^2$, with $a$ squarefree. In a positive square on one fixed core, the factor $\chi_a(p)^3$ is common and its modulus can be removed after retaining the zero mask. This exposes a cubic-looking block in which a joint theorem can be tested at its actual support and scale. The cross terms between different parity cores remain present in the original kernel; establishing estimates within each core is only a partial result unless those cross terms are also controlled. The latest coupled cut has a sharper consequence. If $k=a r_0^2$ and $l=a s_0^2$ have the same parity core, then $f_2(k,l)=1$, so such a pair remains only when $Z>U^{71/125}$. Thus for $Z\le U^{71/125}$ the remainder contains only cross-parity-core pairs, and only cross-cube-core pairs by the analogous $f_3=1$ identity. For $Z>U^{71/125}$, both component inequalities are automatic. A parity-core argument must therefore treat cross-core correlations in the first range and the unfiltered joint problem in the second; it cannot claim progress by re-estimating already removed within-core pairs.
+
+A useful first milestone would therefore be an exact parity-core decomposition of the current two-kernel expression, including its full masks and fixed ray phases, followed by a comparison of the best legal within-core estimate with the required exponent. It would locate the cross-core correlation that a new theorem must address. This is narrower than assuming a general sextic operator inequality and makes any proposed extension reviewable.
+
+\subsection{Actual weight distribution rather than arbitrary coefficients}
+The middle weight is
+\[
+ w_v=\Id_{\Cplus}(v)|M_vQ_I(v)|^2,
+\]
+with the original inverse length $U^r$. The existing cuts replace it by $W$ only when estimating a positive norm or an absolute tuple count. Any gain from a more favorable distribution of this weight must be proved locally or in the actual endpoint aggregate. The global statement $\sum_vw_v\ll U^{1-\mu}$ does not imply decorrelation from a particular kernel intensity, conductor stratum, or parity-core block.
+
+For fixed endpoints a natural object is the actual weighted sum
+\[
+ \sum_{v\in\mathcal R(u,h)}w_vK(u,v)K(v,h),
+\]
+where $\mathcal R(u,h)$ retains the row predicates. After the component cut, the exact expression must instead use its column-dependent restrictions, as in the final theorem; these restrictions cannot be moved into a row-only weight. A uniform estimate for every endpoint pair would be sufficient but may be unnecessarily strong. An estimate after summing against $w_uw_h\overline{S_u}S_h$ can exploit the arithmetic signs and still finish the program.
+
+The first useful distribution test is a weighted middle intensity or endpoint aggregate with the original $M_v$, slots, and selector. It must improve on the pointwise replacement by $W$, rather than merely invoke the global mass again. Rescaling the row to $p$ or $q$ is not a valid shortcut: the inverse is still of length $U^r$, and its marked capacities, normalization, and witness geometry are expressed at scale $U$. A small auxiliary factor does not create a new legal short inverse moment.
+
+\subsection{Signed endpoint compensation and the direct fourth alternative}
+The exact open chain has endpoint factors $\overline{S_u}S_h$. Their phases are part of the arithmetic target, and discarding them immediately reduces the argument to a stronger absolute count. A signed endpoint estimate could gain power even when every separate middle absolute bound fails. Such a theorem should be stated for the original joint expression, not for a fictitious positive Gram form after the high-conductor filters. The finite frame examples show why positivity of the original uncut matrix does not survive an arbitrary conductor filter.
+
+The parallel inverse-weighted fourth route has a different advantage. Its positive selected weight contains $|S_u|^4|Q_J(u)|^2$; only the inverse pair is expanded. The small inverse-ratio piece is removed by an elementary count, leaving a precise large inverse-ratio signed moment. At the displayed favorable point the additional fourth saving is about $1.34\cdot10^{-4}$, and the half-power inverse cutoff still has a positive reserve. These are promising budgets for the original target, although a small required exponent saving is not evidence that the required theorem is easy. Whole-slot rounding and profile losses can increase that deficit. The next direct task should preserve the actual M\"obius coefficients, sharp selected set, and all canceled-phase zeros in the large-ratio remainder.
+
+There is no automatic inverse functional reflection analogous to the plain-polynomial reflection: reciprocal $L$-functions have poles at the zeros being detected. Nor do the annular coefficients permit formal untruncated identities to annihilate the inverse. A truncated $\mu*1$ need not vanish, and the untruncated convolution $\mu*1*1$ equals $1$, not the convolution identity concentrated at the unit. Any cancellation theorem must use the actual cutoffs and coefficients.
+
+\subsection{A recommended sequence of bounded tasks}
+The following sequence addresses the narrowest remaining arithmetic uncertainty first.
+\begin{enumerate}
+\item Derive the exact parity-core block decomposition of the latest two-kernel remainder, separately for $Z\le U^{71/125}$ and $Z>U^{71/125}$. Keep the component predicates, original columns, and masks. In the first range quantify the cross-core correlation; in the second test legal within-core positive blocks and retain all cross terms. The outcome may be a usable sector or a clearly stated additional correlation theorem.
+\item Compare a genuine joint sextic estimate with a weight-sensitive estimate on the current $pq^2$ geometry. Separate physical length, exterior radical, and primitive component conductor in the statement. Do not extrapolate a gain in one raw family to all valuation patterns.
+\item In parallel, isolate the actual inverse-weighted fourth large-ratio sum for legal whole slots and test M\"obius cancellation there. This keeps a direct route available if a cubic probe argument is too costly.
+\item Once one target closes, verify the complete operational coverage: support margins, witness amplitudes, profile derivatives, all permitted heights, native ray classes, and finite bin/slot recombination. Only then apply the detector and the two rebalances to obtain the conditional count improvement.
+\end{enumerate}
+Each task has a finite output: an exact decomposition, a sufficient bound with an exponent budget, or a proof that a proposed method leaves a specific deficit. This is why the next task is a parity-core and joint-correlation analysis rather than another arbitrary small-conductor cutoff. The proved cuts already control the easy small-component ranges; the remaining raw example contains both independent exterior factors and high quotient components.
+
+\subsection{From a mixed estimate to a full descent argument}
+A full local mixed proof would still need the inherited analytic assumptions and actual parameter budgets before it yields a zero-count improvement. Turning that improvement into an RH argument requires further work. One needs a valid boundary or variance improvement on every required parameter range, a proof that the analytic hypotheses survive reuse at the new boundary, and uniform height control for zeros that may approach an edge only as their heights tend to infinity. If short-family estimates are used to feed an iteration, those estimates must also be proved; the fixed short-moment extraction in \cite{sf} is a conditional implication.
+
+An inequality $F(B)<B$ at one $B>1/2$ does not prove convergence to $1/2$. Even strict pointwise improvement can stall at a positive limiting boundary if the gain degenerates without suitable continuity or a uniform positive gain on compact intervals away from $1/2$. A complete argument must establish that property, or use a different global endpoint such as a strict fixed-scale variance contraction at every positive optimal exponent, or complete all-height zero exclusion. The parent fixed-scale route asks for
+\[
+ E_\delta(X)\le qE_\delta(X/b)+CX^{-\eta_0},\qquad
+ b>1,\quad 0<q<1,\quad \eta_0>0,
+\]
+where $E_\delta(X)=X^{-2-\delta}\mathcal V_g(X)$. Iteration gives a power gain; a contraction at factor scales such as $X^{1/2}$ can instead give only logarithmic improvement. The Newman route has its own remaining small-time and finite-height collision obligations \cite{continuation,overview}. These routes explain how the mixed investigation fits within the larger program without implying that its local completion settles all of them.
+
+\appendix
+\section{Operational parameters and exact arithmetic scope}\label{app-parameters}
+\subsection{The buffered application region}
+To avoid collision with the inverse length $D$, use $D_x$ for the scalar parameter below. Set
+\begin{align*}
+ \alpha&=\tfrac56,& a&=\alpha-d,&
+ B_x&=2-\tfrac89x,&D_x&=3-\tfrac{17}{9}x,\\
+ P_x&=B_x(1-x),&J_x&=aD_x+dP_x,&
+ R_*&=1-d+\frac{adP_x}{2J_x},&F_x&=\frac{aB_x}{J_x},\\
+ r_{\rm new}&=1-\frac{F_x}{2}
+ -(1-F_x)\frac{\eta}{d(1-x)},&&&&\\
+ m_{\rm new}&=\frac12-\frac{a}{J_x}
+ \left(\frac{1-x}{2}-\frac{\eta}{d}\right).&&&&
+\end{align*}
+Write $a_r=r-r_{\rm new}$ and $b_m=m_{\rm new}-m$. The buffered operational inequalities are
+\begin{equation}\label{eq-operational}
+ a_r<\frac{\eta+\ell}{d(1-x)},\qquad
+ b_m> -\frac{\ell}{dB_x},\qquad
+ b_m\le a_r+\ell,\qquad
+ a_r> -\frac{39}{14}\ell.
+\end{equation}
+Put $s=\eta-d(1-x)a_r+\ell$. The first and last inequalities imply
+$0<s<\eta+2\ell=101/500000$ because
+$d(1-x)\le1071/5000$ and $(1071/5000)(39/14)<1$.
+They also give
+\[
+ \frac d{1000}-s-\gamma_\ell\ge\ell.
+\]
+The application additionally requires that $\ell$ dominate the actual marginal count losses and detector support losses, and that the required simultaneous-witness saving, including whole-slot rounding, amplitude losses, and capacity losses, be at most $s$. Those conditions are not consequences of \eqref{eq-operational} alone. The original marked inverse capacities must retain fixed positive margins,
+\[
+ r+2z\le1-c_1,\qquad 2r+8z\le3-c_2,
+ \qquad c_1,c_2>0,
+\]
+as well as the original disjoint-support and exclusion conditions. Their numerical sizes are part of the chosen setup.
+
+The enclosure in Note 1 gives
+\[
+ .70571698<r<.72957194,\qquad .40398543<m<.41232277,
+\]
+with rational interval inequalities underlying the decimal display. It lies in the coarse working box. The lower bound for $M_0$ is a separate continuous rational certificate, described next. If a profile-specific $\Gamma_I$ improves on $dz$, it can only improve this bound.
+
+\subsection{How the continuous certificate is checked}
+The existing scripts \nolinkurl{check_mixed_conductor_refinement.py} and
+\nolinkurl{check_selected_inverse_distribution.py}, in the parent investigation's \nolinkurl{numerics/} folder, use rational endpoint arithmetic on $32\times32$ closed cells covering the entire $(d,x)$ rectangle. Addition, multiplication, and division of intervals enclose all values; division fails if its denominator interval contains zero. Automatic differentiation uses the product and reciprocal rules to enclose derivatives continuously on each cell. Thus a positive derivative enclosure proves a sign on the entire cell, not just on sampled points.
+
+For example, $r$ and $m$ are bounded above in each cell by
+\[
+ r_{\max}=r_{\rm new}+\frac{\eta+\ell}{d(1-x)},\qquad
+ m_{\max}=m_{\rm new}+\frac{\ell}{dB_x}.
+\]
+Interval evaluation of
+\[
+ 1-\frac{d(1+r_{\max})}{2}
+ -(\tfrac{11}{4}-3d)m_{\max}-3(\eta+2\ell)
+\]
+gives a minimum whose downward rounding to $10^{-5}$ is $147/12500$. This establishes the inclusion in \eqref{eq-working-margin}. The proof of each sector margin thereafter is ordinary exact algebra on the working domain. Reproducing this particular inclusion requires the small rational certificate; none of the new asymptotic moment obligations is checked by it.
+
+For the total cutoff, substitution gives
+\[
+ \tau=\tau_A+2d[(1-x)a_r-b_m]+2\ell,\qquad
+ \tau_A=2(1+dm_{\rm new}-\eta-\gamma-R_*).
+\]
+Linear optimization on the closure of \eqref{eq-operational} yields
+\begin{align*}
+ \tau_L&=\tau_A-\frac{2x(\eta+\ell)}{1-x}-2d\ell+2\ell,\\
+ \tau_H&=\tau_A+2\eta+4\ell+2\ell/B_x.
+\end{align*}
+The certificate proves both functions increasing in $d,x$, with
+\[
+ \partial_d\tau_L,\partial_d\tau_H\ge\frac{13517}{5000},\quad
+ \partial_x\tau_L\ge\frac{1723}{10000},\quad
+ \partial_x\tau_H\ge\frac{1739}{10000}.
+\]
+Corner evaluation therefore proves the exact limiting interval
+\[
+ \frac{822322221061601}{910208262500000}\le\tau
+ \le\frac{2977001009}{2779000000}.
+\]
+Strict operational boundaries need not attain the limiting extrema. Relative to the old coarse count $R_0=9/8-23d/20$, the same certificate gives a uniform total-cutoff increase at least $3951043/503103250$. On $x\in[4999/10000,1/2]$ and $a_r\le1/10000$, the selected mass satisfies $\mu>1/25000$, hence the extra plain cutoff increases by at least $1/12500$. These are enlargements of proved removable sectors, not a bound for the complementary signed energy.
+
+\subsection{An exact parameter point}
+For checking the displayed method budgets, use
+\[
+ d=\frac9{25},\quad x=\frac12,\quad a_r=\frac1{20000},
+ \quad b_m=\frac1{40000},\quad
+ z=\frac{1-r}{2}-\frac{\ell}{2},\quad \Gamma_I=dz.
+\]
+Then
+\begin{align*}
+ R_*&=\frac{58601}{84575},&
+ r&=\frac{47752383}{67660000},&
+ m&=\frac{54905017}{135320000},\\
+ z&=\frac{995377467}{6766000000},&
+ g&=\frac{51935541903}{169150000000},&
+ s&=\frac3{15625},\\
+ \mu&=\frac{12288947}{169150000000},&
+ T&=\frac{8884236001}{3383000000},&R&=R_*+\ell.
+\end{align*}
+This point satisfies the displayed rational inequalities and positive capacity margins. It is an exponent-bookkeeping point, not a proof that a selected bin with any prescribed prime-slot arrangement or witness population realizes every favorable amplitude there. Statements using the continuous fractional fourth-slot capacity are explicitly favorable envelopes; legal application uses actual whole slots.
+
+\section{Verification, coverage, and provenance}\label{app-verification}
+The manuscript incorporates the positive-mass and cutoff refinements of Note 1, the positive frame and finite phase obstruction of Note 2, the weaker actual-probe criterion of Note 3, the six conductor sectors and their raw range test of Notes 4--5, the physical middle sieve and direct envelopes of Note 6, the valuation grouping and inverse-fourth remainder of Note 7, and the coupled component-conductor cut of Note 8. Proofs are given for the deductions, while the input ledger identifies the deep imported statements. In particular the historical raw example of Note 5 is subsequently controlled by the seventh cut; the historical higher-valuation example of Note 6 is subsequently controlled by the eighth. Neither should be mistaken for a current energy obstruction.
+
+Existing finite records test the following scopes:
+\begin{center}\small
+\begin{tabular}{p{.26\linewidth}r p{.53\linewidth}}
+\toprule
+Record & Assertions & Scope\\
+\midrule
+Actual probe, 8 Oct. & 2,368 & Frame algebra, character partitions, real reversal, exact exponent margins.\\
+Conductor neighbors, 8 Oct. & 26,966 & Local valuation counts, coupled supports, six cuts, masks, and rational budgets.\\
+Middle sieve, 9 Oct. & 141,413 & Sixth-power extraction, positive enlargement, physical factor cuts, direct envelopes.\\
+Valuation factors, 9 Oct. & 133,487 & Grouped maps, complementary powers, eighth cut, actual finite inverse weights, fourth cutoffs.\\
+Joint components, 9 Oct. & 312,257 & Projected phases with zeros, coupled predicates, exact recombination, indefinite filters, budgets.\\
+\bottomrule
+\end{tabular}
+\end{center}
+The earlier selected-distribution record also checks finite Gauss sums and the 1,024-cell continuous margin; the conductor-refinement record checks the operational cutoff extrema. The programs and their small retained JSON records live in \nolinkurl{papers/quasi-rh-exponent-descent/numerics/}; their scope and separate reviews are indexed there and in \nolinkurl{reviews/}. These checks are useful safeguards against missing conjugations, masks, or exponent losses. Finite fields and formal ideal monoids do not prove native reciprocity, the large sieve, the prime ideal theorem, a derivative-uniform selected moment, or an all-height zero-free result. Same-model parallel audits are not independent expert review.
+
+This is one stable source manuscript, with no external bibliography, image, or input-file dependency. The research history belongs in the linked notes; manuscript milestones are indexed in \nolinkurl{DRAFT_HISTOR.md}. Third-party papers are cited rather than copied into the repository. The full mixed estimate and the global RH descent remain open as of 9 October 2026.
+
+\begin{thebibliography}{99}
+\bibitem{df} Alexandre de Faveri, \emph{Optimal large sieve for fixed order characters}, arXiv:2610.04045v1, 2 October 2026. \url{https://arxiv.org/abs/2610.04045v1}. Theorem 1.1 and, for comparison only, Proposition 8.1 and Remark 8.2.
+\bibitem{amplification} Drafted for Edward Baker with LLM assistance, \emph{Conductor localization of a mixed inverse--plain moment}, 8 October 2026. Repository source: \nolinkurl{papers/quasi-rh-character-amplification/manuscript.tex}. Imported source theorem, detector, and family assumptions retain their stated qualifications.
+\bibitem{sf} Drafted for Edward Baker with LLM assistance, \emph{Short sextic character families: extraction, adaptive factorization, and signed remainders}, organized manuscript, updated 8 October 2026. Repository source: \nolinkurl{papers/quasi-rh-exponent-descent/short_families/short_family_reductions.tex}.
+\bibitem{overview} Edward Baker research repository, \emph{Quasi-RH exponent descent: investigation overview}, 8--9 October 2026. \nolinkurl{papers/quasi-rh-exponent-descent/README.md}, with linked prime-variance and Newman investigations. \url{https://github.com/ebbaker/shifted-zeta-positivity}.
+\bibitem{continuation} Prepared for Edward Baker with LLM assistance, \emph{Codex continuation and research dependency ledger}, 8--9 October 2026. \nolinkurl{papers/quasi-rh-exponent-descent/notes/CODEX_CONTINUATION_20261008.md} and \nolinkurl{RESEARCH_LEDGER_20261008.md} in the same notes folder.
+\bibitem{n1} Mixed Note 1, \emph{Buffered conductor cutoffs and a further selector-preserving sector}, 8 October 2026. \nolinkurl{1_MIXED_CONDUCTOR_REFINEMENT_20261008.md}.
+\bibitem{n2} Mixed Note 2, \emph{Selected inverse distribution}, 8 October 2026. \nolinkurl{2_SELECTED_INVERSE_DISTRIBUTION_20261008.md}.
+\bibitem{n3} Mixed Note 3, \emph{Actual-probe cubic target}, 8 October 2026. \nolinkurl{3_ACTUAL_PROBE_CUBIC_TARGET_20261008.md}.
+\bibitem{n4} Mixed Note 4, \emph{Conductor-neighbor sectors}, 8 October 2026. \nolinkurl{4_CONDUCTOR_NEIGHBOR_SECTORS_20261008.md}.
+\bibitem{n5} Mixed Note 5, \emph{Mixed-neighbor continuation}, 8 October 2026. \nolinkurl{5_MIXED_NEIGHBOR_CONTINUATION_20261008.md}.
+\bibitem{n6} Mixed Note 6, \emph{Weighted middle sieve and direct energy}, 9 October 2026. \nolinkurl{6_WEIGHTED_MIDDLE_SIEVE_AND_DIRECT_ENERGY_20261009.md}.
+\bibitem{n7} Mixed Note 7, \emph{Valuation-factor sectors and inverse-ratio fourth}, 9 October 2026. \nolinkurl{7_VALUATION_FACTOR_SECTORS_AND_INVERSE_RATIO_FOURTH_20261009.md}.
+\bibitem{n8} Mixed Note 8, \emph{Joint middle component conductors}, 9 October 2026. \nolinkurl{8_JOINT_MIDDLE_COMPONENT_CONDUCTORS_20261009.md}. All eight mixed notes are in \nolinkurl{papers/quasi-rh-exponent-descent/mixed_character_families/notes/}; each includes authorship/LLM metadata and source qualifications.
+\end{thebibliography}
+\end{document}

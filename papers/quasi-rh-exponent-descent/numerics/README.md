@@ -161,3 +161,198 @@ Poisson, infinite Euler convergence, asymptotic sparse ideal counts, prime
 ideal counting, the imported sieve or any unbounded signed moment. See the
 [main proof](../short_families/notes/17_SHORT_FAMILY_SQUAREFREE_TAIL_REDUCTION_20261008.md)
 and [scoped review](../reviews/SHORT_FAMILY_SQUAREFREE_AND_COFACTOR_REVIEW_20261008.md).
+
+## Rough-core parity and squarefree masked discrepancy
+
+These standard-library scripts print deterministic small JSON records and
+write no files. Two fresh runs of each reproduced the retained record
+byte-for-byte.
+
+| Checker and record | Finite scope |
+| --- | --- |
+| [Rough parity](check_short_family_rough_parity.py), [record](short_family_rough_parity_record_20261008.json) | 32,815 assertions across 177 inverse-profile cases and 3,173 cutoffs; original ordered tuples, full cofactors, saturation, overflow, equal-norm symbols, phases/deletion zeros, fixed jump variation and rational budgets; 420 nonempty zero tails |
+| [Squarefree discrepancy](check_short_family_squarefree_discrepancy.py), [record](short_family_squarefree_discrepancy_record_20261008.json) | 1,490 masked convolutions; 22,680 projected coefficients and cofactor regroupings each; 2,820 independent original-tuple comparisons with the full prime-power bridge; 10,416 phase/deletion checks; 128 masked mixed integrals and edge closures each, plus 768 centered Stieltjes comparisons |
+
+The discrepancy script imports the earlier ideal-discrepancy checker from
+this directory to test every added deletion support. Its direct coefficient
+model has formal norms \((2,3,5,7)\), not native good ideals, and specializes
+formal logarithms to two exact rational vectors. These finite evaluations
+test the displayed proof; they do not prove a rational-function identity
+from finitely many samples. The independent tuple tests and inherited
+integral tests use exact cyclotomic arithmetic.
+
+Neither script validates physical reciprocity, conductor comparison,
+Poisson, sieve inputs, ideal prime asymptotics or an unbounded moment.
+The signed odd-core sector has its stated large-conductor restriction;
+the retained full-moment exponent remains \(16/15\). See
+[note 21](../short_families/notes/21_SHORT_FAMILY_ROUGH_PARITY_20261008.md),
+[note 22](../short_families/notes/22_SHORT_FAMILY_SQUAREFREE_DISCREPANCY_20261008.md)
+and the [scoped audit](../reviews/SHORT_FAMILY_ROUGH_PARITY_REVIEW_20261008.md).
+
+## Complete-cofactor pairing and mixed actual probe
+
+Both standard-library scripts print deterministic small JSON records and
+write no files. Two fresh runs of each match the retained record byte for
+byte; separate same-model agents also replayed them.
+
+| Checker and record | Finite scope |
+| --- | --- |
+| [Cofactor pairing](check_short_family_cofactor_pairing.py), [record](short_family_cofactor_pairing_record_20261008.json) | 3,289 assertions; 27 actual pairing cases; original ordered tuples, 108 sixth-root phase/deletion checks, equal-norm distinct symbols, Jacobian Euler products, translated moments, free/complement partition and balanced-triple missing −4 |
+| [Mixed actual probe](check_mixed_actual_probe.py), [record](mixed_actual_probe_record_20261008.json) | 2,368 exact assertions across 34 rational Gaussian frames; cubic identities, spectral inequalities, actual endpoint chains, four character partitions, strict relaxation example and exact exponent reserves |
+
+The mixed frames are abstract finite frames, not physical character
+constructions. Negative adjacent and distinct chain groups explicitly
+check that restricted groups need not inherit positivity from the full
+functional. Neither checker validates prime ideal or lattice asymptotics,
+physical reciprocity, conductor comparison, imported family estimates or
+an unbounded moment. See [note 24](../short_families/notes/24_SHORT_FAMILY_FINITE_COFACTOR_PAIRING_20261008.md),
+[note 25](../short_families/notes/25_SHORT_FAMILY_PAIRING_REMAINDER_20261008.md),
+[mixed note 3](../mixed_character_families/notes/3_ACTUAL_PROBE_CUBIC_TARGET_20261008.md)
+and the [scoped review](../reviews/SHORT_FAMILY_COFACTOR_PAIRING_REVIEW_20261008.md).
+
+## Mixed conductor-neighbor sectors
+
+[check_mixed_conductor_neighbors.py](check_mixed_conductor_neighbors.py)
+prints a deterministic small
+[record](mixed_conductor_neighbors_record_20261008.json) and writes no files.
+Two fresh runs reproduce it byte for byte: **26,966 exact assertions**.
+The checker uses 216 sixth-power-free valuation vectors on three distinct
+formal prime symbols, including two of equal norm, and 40 endpoint pairs.
+It checks local conductor supports, the identity PQ=F A_0 B_0², fixed-row
+and coupled-middle counts, weighted tree bounds, six disjoint chain
+selectors and the actual endpoints in exact sixth-root masked frames.
+It also checks all sector margins and the exact operational-point deficit.
+The frames retain 60 deleted entries and have four nonzero selected-chain
+witnesses. They are finite formal models, not native residue-symbol or
+selected-amplitude-bin constructions.
+
+The analytic Poisson bound, native reciprocity, ideal-count asymptotics,
+buffered plain and global family inputs, and the unbounded complementary
+chain are outside this finite verification. See
+[mixed note 4](../mixed_character_families/notes/4_CONDUCTOR_NEIGHBOR_SECTORS_20261008.md),
+[note 5](../mixed_character_families/notes/5_MIXED_NEIGHBOR_CONTINUATION_20261008.md)
+and the [scoped review](../reviews/MIXED_CONDUCTOR_NEIGHBOR_REVIEW_20261008.md).
+
+## Mixed middle sieve and direct energy budgets
+
+[check_mixed_middle_sieve.py](check_mixed_middle_sieve.py) prints a deterministic
+[small record](mixed_middle_sieve_record_20261009.json) and writes no files.
+Two fresh runs match byte for byte: **141,413 exact assertions** over 216
+formal valuation rows and 512 formal columns. The record SHA-256 is
+`81db128551bc77b5848a714162db5fa1091535bdce54aac4805ef786ccf6d44c`.
+
+The checker retains nontrivial sixth-power deletion zeros, verifies the
+fixed-coefficient kernel expansion, positive mask removal and Hilbert Cauchy,
+external physical middle-factor decomposition including higher valuations,
+cut complements and endpoint reversal, the old sharp-family inclusion and
+a higher-valuation remaining support pattern. Rational checks reproduce the
+seventh-sector reserve, its continuous monotonic lower envelope, the direct
+Holder envelope and a scalar marginal saturation model.
+
+These are finite formal identities and budgets. They do not certify native
+reciprocity, physical presentation transfer, de Faveri's theorem, analytic
+inverse/plain/family bounds, or any unbounded mixed correlation. The direct
+slot-capacity figures are favorable continuous relaxations. See
+[mixed note 6](../mixed_character_families/notes/6_WEIGHTED_MIDDLE_SIEVE_AND_DIRECT_ENERGY_20261009.md)
+and its [scoped review](../reviews/MIXED_MIDDLE_SIEVE_REVIEW_20261009.md).
+
+## Mixed valuation factors and direct inverse-ratio fourth
+
+[check_mixed_valuation_factors.py](check_mixed_valuation_factors.py), with
+[mixed_valuation_direct_checks.py](mixed_valuation_direct_checks.py), prints a
+deterministic [small record](mixed_valuation_factors_record_20261009.json)
+and writes no files. Two fresh runs match byte for byte: **133,487 exact
+assertions**, including 39,831 in the direct component. The record SHA-256 is
+`d2b1de18298ab3777e77534e343d827cf8b739c2ba4beddd7ed9a40947b3c935`.
+
+Formal checks cover 216 exterior valuation rows and all 62 grouping choices,
+injectivity of the grouped sixth-power-free variable, zero-preserving
+complementary exponents, fixed coefficient vectors, original selected
+weights and Cauchy before positive enlargement. Rational checks cover
+operator breakpoints, exact eighth-cut complements, control of note 6's
+example, a new surviving raw geometry and the exact remaining budgets.
+The direct component retains actual Mobius coefficients and a positive
+selected plain-fourth/slot weight, canceled-phase masks, exact inverse
+normalization, real small/large inverse-ratio partitions and actual
+whole-slot shortfall formulas.
+
+These checks do not certify native reciprocity, presentation transfer,
+ideal counting or the imported asymptotic sieve/moment inputs, selected
+bin population, or either unbounded correlation. Ideal slot capacity is
+a favorable comparison. See [mixed note 7](../mixed_character_families/notes/7_VALUATION_FACTOR_SECTORS_AND_INVERSE_RATIO_FOURTH_20261009.md)
+and its [scoped review](../reviews/MIXED_VALUATION_FACTOR_REVIEW_20261009.md).
+
+## Joint middle projected component conductors
+
+[check_mixed_joint_component.py](check_mixed_joint_component.py) prints a
+deterministic [small record](mixed_joint_component_record_20261009.json)
+and writes no files. Two fresh runs match byte for byte: **312,257 exact
+assertions**. The record SHA-256 is
+`fa96f75c34ee3c0f674b5e054d19ee8f17c814674a8d3e1e0fc7f46b27f68812`.
+
+Checks retain formal zero-extended phases, canceled full and projected
+ratio masks, finite Mobius and physical-prime coefficients, coupled pq²
+row norms, actual selected weights and the exact two-kernel expansion.
+The coupled norm/conductor predicate has exact equality, complement,
+reversal and signed recombination checks, including nonzero removed and
+retained off-diagonal terms and a negative restricted-chain example.
+A high-pair filter has an explicit indefinite two-column block; abstract
+nested positive blocks attain the separate Schur-product norm bound.
+Exact rational checks reproduce the uniform and point reserves, dyadic
+scale cancellation, the governing old error reserve and surviving
+large-component column norms.
+
+These finite checks do not certify native reciprocity, asymptotic ideal
+pair counts, physical presentation transfer or imported analytic inputs,
+selected-bin population, or the retained sextic correlation. See
+[mixed note 8](../mixed_character_families/notes/8_JOINT_MIDDLE_COMPONENT_CONDUCTORS_20261009.md)
+and its [scoped review](../reviews/MIXED_JOINT_COMPONENT_REVIEW_20261009.md).
+
+## Operational fourth budgets and ratio core correlations
+
+| Reproducible check | Scope | Small record |
+| --- | --- | --- |
+| [Operational budget](check_mixed_operational_budget.py) | Exact rational continuous extrema and source-qualified whole-slot optimization; uniform sufficient saving 1/540 and half-cap reserve greater than 1/500; synthetic feasibility only | [Record](mixed_operational_budget_record_20261009.json) |
+| [Mobius ratio core](check_mixed_mobius_ratio_core.py) | 101,107 exact formal phase, selected-weight, normalization, gcd-mask and strict-ratio identities; rational positive-sieve deficit | [Record](mixed_mobius_ratio_core_record_20261009.json) |
+| [Parity core](check_mixed_parity_core.py) | 11,241 exact local phase/component/mask identities and rational block-recombination deficits | [Record](mixed_parity_core_check.json) |
+
+Each standalone script uses the Python standard library, prints deterministic
+JSON and writes no files. Run from this folder, for example
+`python3 -B check_mixed_operational_budget.py`. Its optional `--slots` input
+accepts an original fixed list and returns an arithmetic-only whole-subset
+choice; it does not certify the source profiles, mesh or witness.
+
+The continuous budget certificate covers the closed operational region
+through rational inequalities, not a sampled grid. The phase checks use
+formal monoids rather than physical native characters. None proves a
+new selected moment, native reciprocity/transfer, detector realization or
+zero-free boundary. The notes' analytic deductions retain their explicitly
+stated source theorems and presentation assumptions.
+
+See [the continuation](../mixed_character_families/notes/13_MIXED_FOURTH_CONTINUATION_20261009.md)
+and the [operational](../reviews/MIXED_OPERATIONAL_SCOPE_REVIEW_20261009.md),
+[ratio-core](../reviews/MIXED_MOBIUS_RATIO_CORE_REVIEW_20261009.md), and
+[parity-core](../reviews/MIXED_PARITY_CORE_REVIEW_20261009.md) cross-reviews.
+
+## Signed fourth gcd reduction and finite prime completion
+
+| Reproducible check | Scope | Small record |
+| --- | --- | --- |
+| [Signed gcd reduction](check_mixed_signed_gcd.py) | 2,161 exact assertions: q-smooth deletion convolution, alternating fixed-gcd squares, strict core restoration, low-gcd aggregate and rational reserve with literal source-buffer allowance | [Record](mixed_signed_gcd_record_20261009.json) |
+| [Finite prime completion](check_mixed_finite_prime_completion.py) | 153,705 exact assertions: all local states and physical zeros, original stable/crossing ratio identity, compatible stable/crossing gcd identity, and exact mask budgets | [Record](mixed_finite_prime_completion_record_20261009.json) |
+
+Both standard-library scripts print deterministic JSON and write no files.
+The signed-gcd checker reuses the exact phase functions of
+`check_mixed_mobius_ratio_core.py` and hashes that dependency and its own
+source. Run from this folder, for example
+`python3 -B check_mixed_signed_gcd.py`.
+
+The formal profiles and phases test identities rather than native
+characters or actual selected zero bins. The new high-gcd analytic removal
+uses the source all-length buffered inverse bound, deletion convolution,
+legal selected fourth mass and ideal counting. Fixed preliminary source
+buffers must be retained in the power or chosen to fit the stated reserves.
+Neither checker proves the remaining near-coprime fourth correlation.
+
+See [mixed note 14](../mixed_character_families/notes/14_SIGNED_HIGH_GCD_REDUCTION_20261009.md)
+and [note 15](../mixed_character_families/notes/15_FINITE_PRIME_COMPLETION_20261009.md).
