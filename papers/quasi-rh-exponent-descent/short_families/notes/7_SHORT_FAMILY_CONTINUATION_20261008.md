@@ -10,6 +10,13 @@ Based on repository commit `00119da502ed019798e9b164e8342ea0e2df6d02`.
 This continuation follows the [strategic review](../../reviews/STRATEGIC_REVIEW_20261008.md)
 and [small-cofactor reduction](2_SHORT_FAMILY_SMALL_COFACTOR_20261008.md).
 
+**Later continuation, 8 October 2026.** [Notes 8--10](10_SHORT_FAMILY_FACTORIZATION_CONTINUATION_20261008.md)
+preserve the Möbius factorization before squaring, control a centered
+small-product sector, and retain its principal main term in an equivalent
+unproved moment. They also give a signed original-core gcd truncation and
+quantitative limits on coherent-core cutoffs. The reductions below remain
+available; the later continuation is the next starting point.
+
 ## What changed
 
 The short-family route now has a larger controlled overlap sector and a

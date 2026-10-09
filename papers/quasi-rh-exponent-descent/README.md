@@ -13,7 +13,7 @@ and the [prime-variance project](../prime-variance-exponents/README.md).
 The [investigation summary and notes index](notes/README.md) maps the five
 project folders and their current results and open tasks.
 For the next research session, start with the
-[short-family continuation](short_families/notes/7_SHORT_FAMILY_CONTINUATION_20261008.md)
+[new-session continuation](short_families/notes/20_SHORT_FAMILY_SESSION_CONTINUATION_20261008.md)
 and [dependency ledger](notes/RESEARCH_LEDGER_20261008.md), then consult the detailed
 [Codex continuation note](notes/CODEX_CONTINUATION_20261008.md) for the broader program.
 It integrates a review of
@@ -33,7 +33,80 @@ of mathematical priority or independent specialist validation is made.
 
 ## Focused continuation: short families
 
-The [new results](short_families/notes/7_SHORT_FAMILY_CONTINUATION_20261008.md) enlarge the
+The [squarefree reduction](short_families/notes/17_SHORT_FAMILY_SQUAREFREE_TAIL_REDUCTION_20261008.md)
+now bounds the entire nonsquarefree part of the adaptive tail by
+\(D^{19/24+\varepsilon}\) at \(H=D^{2/5}\), using cutoff
+\(\theta=11/20\) and the existing imported analytic inputs. This is
+below the proposed \(D^{4/5+\varepsilon}\) budget, reducing that target
+to a squarefree, pairwise-coprime signed residual. **The full moment remains
+open.** A [cofactor inverse](short_families/notes/18_SHORT_FAMILY_COFACTOR_COMPENSATION_20261008.md)
+also gives a compensated block crossing total products, while
+[opposing logarithmic edges](short_families/notes/19_SHORT_FAMILY_EDGE_COMPENSATION_20261008.md)
+exhibit exact compensation that must be retained. The
+[scoped review](reviews/SHORT_FAMILY_SQUAREFREE_AND_COFACTOR_REVIEW_20261008.md)
+records the proofs, cutoff tradeoff and reproducible finite checks.
+
+
+The [signed packet milestone](short_families/notes/15_SHORT_FAMILY_DIVISOR_PACKET_CANCELLATION_20261008.md)
+proves exact compensation for products with two large primes and a small
+nonunit cofactor, including nonsquarefree cofactors and deletion masks.
+At \(h=a=2/5,\theta=1/40\), a growing packet family has negligible
+energy under the full Schwartz weight. Its two branches can each exceed
+the useful budget before cancellation. The
+[ideal mixed-discrepancy bridge](short_families/notes/14_SHORT_FAMILY_IDEAL_MIXED_DISCREPANCY_20261008.md)
+retains the principal density and both low/high edges for the remaining
+signed estimate. The [product barrier](short_families/notes/16_SHORT_FAMILY_PRODUCT_BARRIER_20261008.md)
+shows that complete recombination within each total product and every
+fixed nonzero detector profile leave an oversized semiprime sector.
+Its compensation must cross total products; the full tail moment is open.
+The [scoped review](reviews/SHORT_FAMILY_SIGNED_PACKET_REVIEW_20261008.md)
+records the same-model audits and reproducible finite checks.
+
+The [organized manuscript](short_families/short_family_reductions.tex)
+develops the useful results of short-family notes 1–13 and the cancellation
+results of notes 15 and 17 in one standalone
+LaTeX document: conditional extraction, adaptive zero-integral
+factorization, signed gcd truncation, transformed overlap control,
+and the selected-factor and generic-sieve barriers. It includes proofs
+of the new reductions, states the imported analytic inputs, and refers
+to the notes for lengthy ray-group calculations and routes that give
+no extra power gain. Its [scoped review](reviews/SHORT_FAMILY_MANUSCRIPT_REVIEW_20261008.md)
+records the initial coverage, assumptions and native compilation.
+The [cancellation addition review](reviews/SHORT_FAMILY_CANCELLATION_MANUSCRIPT_REVIEW_20261008.md)
+records the new theorem, full weighted-sector proof, exact opposite
+branches and successful compilation of the updated source.
+The signed tail moment remains open.
+
+The [latest adaptive continuation](short_families/notes/13_SHORT_FAMILY_ADAPTIVE_CONTINUATION_20261008.md)
+restricts to zero-integral profiles that still detect every relevant
+Mellin zero, so the principal correction vanishes exactly. The combined
+conductor and deletion norm is comparable to the good radical of the row;
+a row-dependent cutoff \(Y_u=D^{1-\theta}/(Q_uNE_u)\) then removes
+the actual small-product sector with arbitrary power decay under the
+complete Schwartz weight. The resulting tail moment remains unproved.
+On coherent inner rows at \(h=4/5\), its free factor has norm
+\(O(D^{2/15+\theta})\). A prime-by-prime part of this tail still exceeds
+the useful budget, so signed cancellation across factor classes is needed.
+[Notes 11--12](short_families/notes/11_SHORT_FAMILY_MEAN_ZERO_ADAPTIVE_REDUCTION_20261008.md)
+and the [scoped review](reviews/SHORT_FAMILY_MEAN_ZERO_REVIEW_20261008.md)
+record the profile reduction, imported analytic inputs and obstruction.
+
+The [centered factorization continuation](short_families/notes/10_SHORT_FAMILY_FACTORIZATION_CONTINUATION_20261008.md)
+now gives an exact Möbius convolution with a negligible centered
+small-product sector: for \(H=D^h\), products
+\(Nd\le D^{1-h-\eta}\) have arbitrarily rapid mean-square decay after
+their principal-character main term is retained separately. The new
+equivalent target keeps that main term inside the square with the
+complementary convolution sum. It remains unproved.
+[Signed gcd recombination](short_families/notes/9_SHORT_FAMILY_SIGNED_GCD_RECOMBINATION_20261008.md)
+also gives an exact original-core truncation; its gcd cutoff differs
+from the transformed overlap cutoff below. Quantitative core-cutoff
+bounds show why deleting finitely many coherent row families cannot
+repair the generic sieve. The [new scoped review](reviews/SHORT_FAMILY_FACTORIZATION_REVIEW_20261008.md)
+separates these deductions from the imported reciprocity and Poisson
+inputs and the finite algebra checks.
+
+The [preceding results](short_families/notes/7_SHORT_FAMILY_CONTINUATION_20261008.md) enlarge the
 controlled overlap sector to dyadic blocks \(BF^2G^2\ge D^{1-a}\),
 correct two missing conjugations in the earlier exact formulas, and show
 that a second Poisson transform returns the coprime core to its original
@@ -150,8 +223,8 @@ numerical proof of any asymptotic prime estimate.
 Research notes live in each investigation's `<project>/notes/` folder;
 the [shared notes index](notes/README.md), continuation plans, and dependency
 ledger live in `notes/`. Checks remain in `reviews/`, and reproducible
-calculations in `numerics/`. This is a research package; no manuscript has
-been created. [DRAFT_HISTOR.md](DRAFT_HISTOR.md) records the initial working
+calculations in `numerics/`. This research package contains the organized short-family manuscript
+and separate working notes. [DRAFT_HISTOR.md](DRAFT_HISTOR.md) records the initial working
 state and will index later commits or tags without draft snapshot folders.
 Third-party PDFs and large derived data stay outside the repository under
 [LARGE_FILES.md](../../LARGE_FILES.md).

@@ -1,0 +1,2312 @@
+\documentclass[11pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage{booktabs,array}
+\usepackage[expansion=false]{microtype}
+\usepackage{xcolor}
+\usepackage[colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue]{hyperref}
+\hypersetup{pdftitle={Short sextic character families: extraction and signed reductions},
+ pdfauthor={Drafted for Edward Baker}}
+\allowdisplaybreaks[2]
+\setlength{\emergencystretch}{3em}
+\numberwithin{equation}{section}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{assumption}[theorem]{Analytic input}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\newcommand{\N}{\mathrm N}
+\newcommand{\OO}{\mathcal O}
+\newcommand{\muK}{\mu_K}
+\newcommand{\ind}{\mathbf 1}
+\newcommand{\rad}{\operatorname{rad}}
+\newcommand{\Mfrak}{\mathfrak M}
+\newcommand{\eps}{\varepsilon}
+\newcommand{\Res}{\operatorname*{res}}
+\newcommand{\Rea}{\operatorname{Re}}
+\newcommand{\Q}{\mathbb Q}
+\newcommand{\C}{\mathbb C}
+\newcommand{\R}{\mathbb R}
+\newcommand{\dd}{\,d}
+\newcommand{\good}{\mathcal I_S}
+\newcommand{\sfstar}{\sideset{}{^*}\sum}
+\newcommand{\norm}[1]{\left\lVert #1\right\rVert}
+\title{Short sextic character families:\\
+ extraction, adaptive factorization, and signed remainders}
+\author{Drafted for Edward Baker}
+\date{8 October 2026}
+\begin{document}
+\maketitle
+\begin{abstract}
+We organize reductions for smoothed M\"obius sums twisted by sextic
+residue characters over the Eisenstein field. A moment at one fixed
+positive row exponent \(h\), with loss \(a\), conditionally yields the
+scalar exponent \((1+a)/2+5h/12\); finite reuse of the same moment
+removes the prime-deletion error without an initial zero-free strip.
+An exact truncated-inverse factorization and zero-integral derivative
+profiles lead to a sufficient adaptive tail moment. Its cutoff depends
+on the combined conductor and deletion modulus, which is comparable
+to the good radical of the row. The actual omitted sector has
+arbitrarily rapid mean-square decay with the complete Schwartz row
+weight. We also prove a signed gcd truncation and uniform complete-kernel
+bounds controlling a larger transformed overlap sector.
+A further exact divisor cancellation makes a growing nonunit-cofactor
+sector negligible under the complete row weight, even though its opposite
+branches can each be oversized. Unit-cofactor semiprimes survive this
+cancellation; it gives no improved bound for the full moment.
+A square-divisor projection and sparse use of the generic physical
+operator bound the entire nonsquarefree tail sector by
+\(D^{19/24+\varepsilon}\) at \(H=D^{2/5}\), with cutoff
+\(\theta=11/20\). This is below the proposed \(D^{4/5}\) budget
+and leaves an equivalent squarefree signed target.
+Prime-selected and prime-by-prime factor-selected obstructions show
+why separate absolute estimates cannot give a useful moment;
+the generic sextic large sieve retains the same coherent-row power.
+The arithmetic tail estimate remains open. No new zero-free region
+or implication from quasi-RH to RH is established.
+\end{abstract}
+\tableofcontents
+
+\section{Introduction and the remaining estimate}\label{sec:intro}
+
+The objective is to turn cancellation in a short family of sextic
+twists into a stronger bound for one fixed-character M\"obius sum.
+The distinction between a reduction and a new arithmetic estimate is
+essential. Repeated rows make extraction effective, but they also
+create a coherent obstruction for coefficient classes that discard
+the M\"obius signs.
+
+For \(K=\Q(\sqrt{-3})\), fixed arithmetic data \((\nu,S)\), and a smooth
+annular profile \(W\), the amplitudes and normalized moment are
+\[
+ A_{u,W}(D)=\sum_{n\in\good}\muK(n)\nu(n)\chi_n(u)W(\N n/D),
+ \qquad
+ \Mfrak_W(D,H)=\frac1D\sum_{u\ne0}
+       \Phi(\N u/H)|A_{u,W}(D)|^2.
+\]
+All notation and analytic inputs are specified in
+Section~\ref{sec:setting}. The desired new estimate is
+\begin{equation}\label{eq:intro-moment}
+ \Mfrak_W(D,D^h)\ll_{\eps,W}D^{h+a+\eps},
+ \qquad a+\frac{5h}{6}<\frac34.
+\end{equation}
+The inequality on \(h,a\) is exactly the condition for the extracted
+scalar exponent to improve the benchmark \(7/8\).
+The benchmark is used only for comparison; no zero-free theorem
+from a neighboring investigation is assumed in the extraction.
+
+The useful results fit together as follows.
+Theorem~\ref{thm:finite-extraction} extracts a scalar bound from one fixed
+moment. The exact factorization and adaptive small-sector estimate
+in Section~\ref{sec:factorization} then replace
+\eqref{eq:intro-moment} by a moment of an actual convolution tail.
+Profiles
+\[
+ W=(1+t\partial_t)V,\qquad V\in C_c^\infty((0,\infty)),
+\]
+make the principal correction vanish and retain every Mellin detector
+away from \(s=1\). Signed gcd recombination and transformed overlap
+bounds give parallel formulations in
+Sections~\ref{sec:gcd} and~\ref{sec:overlap}.
+Section~\ref{sec:packets} proves exact signed cancellation in a growing
+family of nonunit-cofactor packets, with full Schwartz-weighted control.
+It retains the unit-cofactor semiprimes and does not prove a smaller full
+moment. The generic sieve and selected-factor obstructions identify the
+cancellation still required.
+Section~\ref{sec:squarefree-tail} proves a power bound for the whole
+nonsquarefree sector at a larger cutoff buffer, leaving a squarefree
+signed residual with pairwise-coprime factors. This component bound
+does not improve the proved exponent of the full moment.
+
+One concrete sufficient target is the adaptive tail moment at
+\(h=4/5\), \(0\le a<1/12\), for every derivative profile and one
+fixed cutoff buffer \(\theta>0\). It would give
+\[
+ |A_{1,W}(D)|\ll_{\eps,W}D^{5/6+a/2+\eps},
+ \qquad \frac56+\frac a2<\frac78.
+\]
+The present results simplify this target but do not prove it.
+
+The manuscript develops the useful conclusions of research
+notes~\cite{N1,N2,N3,N4,N5,N6,N7,N8,N9,N10,N11,N12,N13}
+and the signed cancellation and squarefree reductions of~\cite{N15,N17}.
+The lengthy ray-group identities are isolated as explicit imported
+inputs; their conventions and detailed derivations remain in the
+cited notes. Routes that yield no additional power saving are
+summarized in Section~\ref{sec:limits}.
+
+\section{Arithmetic setting and analytic inputs}\label{sec:setting}
+
+\subsection{Ideals, rows and zero extensions}
+
+Let \(\OO=\mathbb Z[\omega]\), \(\omega=e^{2\pi i/3}\).
+For an element \(u\), \(\N u=u\bar u\); for a nonzero integral
+ideal \(n\), \(\N n=\#(\OO/n)\).
+Fix a finite-order Hecke character \(\nu\) and a finite set \(S\)
+containing the primes above \(6\) and its conductor.
+The monoid \(\good\) consists of integral ideals prime to \(S\).
+Since \(\OO\) is a principal ideal domain, ideal variables may be
+represented by fixed primary generators when a residue-symbol
+argument requires an element. Rows \(u\) always range over elements.
+
+At a good prime ideal \(p\), the native sextic symbol
+\(\chi_p(u)\in\mu_6\cup\{0\}\) is the sixth-power residue symbol,
+zero if \(p\mid(u)\). Fix one common orientation and put
+\[
+ \chi_n(u)=\prod_{p\mid n}\chi_p(u)^{v_p(n)},\qquad
+ \chi_1(u)=1.
+\]
+This is the multiplicative denominator extension, including
+nonsquarefree \(n\).
+For fixed \(u\ne0\),
+\begin{equation}\label{eq:lambda}
+ \lambda_u(n)=\nu(n)\chi_n(u)
+\end{equation}
+is completely multiplicative, including its zero values.
+In particular
+\begin{equation}\label{eq:power-mask}
+ \chi_n(r^6)=\ind_{(n,r)=1},\qquad
+ \chi_n(vr^6)=\chi_n(v)\ind_{(n,r)=1}.
+\end{equation}
+The first identity is a deletion mask, not a constant character.
+All convolutions below take place on \(\good\).
+The functions \(\muK,\tau,\omega\) denote ideal M\"obius, divisor
+count and number of distinct prime factors.
+
+Fix \(W\in C_c^\infty((0,\infty))\), with
+\(\operatorname{supp}W\subset[c,C]\), \(0<c<C\).
+We allow signed and complex profiles.
+Fix a nonnegative radial Schwartz weight \(\Phi\), at least one on
+\([0,1]\); the transformed formulation additionally uses a smooth
+compactly supported radial Fourier transform \(\widehat\Phi\).
+Such weights exist: take a nonnegative radial smooth function of
+sufficiently small Fourier support, square the modulus of its inverse
+transform, and normalize its positive lower bound on the unit norm ball.
+
+Write \(A_u=A_{u,W}\) when the profile is fixed, and set
+\begin{equation}\label{eq:moment}
+ \Mfrak_W(D,H)=\frac1D\sum_{u\in\OO\setminus\{0\}}
+    \Phi(\N u/H)|A_{u,W}(D)|^2.
+\end{equation}
+We take \(D\ge2\) and \(1\le H\le D\) unless stated otherwise.
+The zero row would contribute nothing for large \(D\):
+all nonunit columns vanish there and the unit is off the profile.
+All implied constants may depend on the fixed arithmetic data and
+the displayed profiles. Every epsilon estimate means \emph{for every
+\(\eps>0\)}, with its own constant and sufficiently large threshold.
+No uniformity in a moving character or profile is implicit.
+
+\subsection{The precise imported facts}
+
+Elementary counting gives
+\[
+ \#\{n:\N n\le X\}\ll X,\quad
+ \#\{u:0<\N u\le X\}\ll X,\quad
+ \sum_{\N n\le X}\tau(n)\ll X\log(2X),\quad
+ \tau(n)\ll_\eps(\N n)^\eps.
+\]
+The fixed-field prime ideal theorem gives
+\(\#\{p:X/2<\N p\le X,\ p\notin S\}\asymp X/\log X\).
+The more precise remainder needed for the selected-factor obstruction
+is stated separately in Section~\ref{sec:obstructions}.
+
+We retain the following arithmetic and Poisson package from the native
+sextic presentation and the source conventions audited in
+\cite{N2,N3,N8,N11,OA5}.
+
+\begin{assumption}[Native presentation and primitive completion]
+\label{input:poisson}
+For each \(u\ne0\), the ideal character \(\lambda_u\) is induced by a
+primitive finite-order Hecke character of conductor norm \(Q_u\).
+Let \(E_u\) be the additional squarefree deletion ideal, with support
+disjoint from that conductor, and put \(L_u=Q_u\N E_u\).
+At a good prime dividing \(u\), a valuation nonzero modulo six gives
+conductor exponent one; a positive valuation zero modulo six gives
+only a deletion prime. The fixed bad part is bounded. Consequently
+\begin{equation}\label{eq:radical-modulus}
+ \N\rad_S(u)\le L_u\ll_{\nu,S}\N\rad_S(u)\le \N u,
+ \qquad Q_u\le L_u,
+\end{equation}
+where \(\rad_S(u)\) is the product of good primes dividing \((u)\).
+
+Primitive lattice Poisson has normalized Gauss factors of modulus one.
+For a divisor \(e\mid E_u\), a radial sum at norm scale \(X\)
+has nonzero-frequency prefactor of magnitude
+\(X/(\N e\sqrt{Q_u})\) and norm frequency scale
+\(X/(\N e Q_u)\). Its zero frequency is the principal residue times
+\(X\int W\).
+For two distinct squarefree columns \(m_1,m_2\), their ratio character
+is nonprincipal with good conductor
+\(m_1m_2/(m_1,m_2)^2\), and the canceled shared primes remain as a
+coprimality mask.
+\end{assumption}
+
+The proofs below derive all-scale bounds from this package; they do
+not assume a new conductor-uniform M\"obius bound.
+Exact Fourier constants in the involution use the same normalization
+as the imported paired-Gauss identity in
+Section~\ref{sec:overlap}. Fixed ideal-to-lattice and bad-prime constants
+are included in the residue and transforms.
+
+For the Mellin conclusion we use the standard meromorphic continuation
+of \(L_K^S(s,\nu)\) and its Euler product in \(\Rea s>1\).
+A fixed-character boundary \(A_{u,V}(t)=o(t)\) is used only for the
+optional sharp-profile recovery theorem. The generic sieve and the
+source's positive dual theorem are explicitly identified where used.
+Their deep proofs are not part of this manuscript.
+
+% Drafted for Edward Baker, 8 October 2026, with substantial LLM assistance.
+% Model: GPT-6 (Codex), inherited configuration; effort is not exposed.
+% Manuscript fragment: uses amsmath, amssymb, amsthm and standard theorem environments.
+% Imported analytic facts are identified in the text; the short-family target is not proved.
+
+\section{The physical family and conditional extraction}
+\label{sec:physical-extraction}
+
+Retain the setting of Section~\ref{sec:setting}, and write
+\(A(D)=A_{1,W}(D)\) for the fixed profile.
+The squarefree support comes from \(\muK\); it is not an extra
+restriction on subsequently introduced convolution factors.
+
+The sharp normalized moment is
+\[
+ \Mfrak_{\le}(D,H)=D^{-1}\sum_{0<\N u\le H}|A_u(D)|^2.
+\]
+If $\Phi$ is a fixed nonnegative radial Schwartz weight, at least one
+on $[0,1]$, its smoothed analogue
+$D^{-1}\sum_{u\ne0}\Phi(\N u/H)|A_u(D)|^2$ dominates this sharp moment.
+Thus a bound for the smoothed moment with the same exponent suffices in
+the following theorem. No converse comparison at one fixed short-family
+exponent is assumed.
+
+\begin{theorem}[Finite extraction from one fixed short-family moment]
+\label{thm:finite-extraction}
+Fix $0<h\le1$ and $a\ge0$. Suppose, for every $\eps>0$ and all
+sufficiently large real $D$, that
+\begin{equation}\label{eq:short-moment-hypothesis}
+ \Mfrak_{\le}(D,D^h)\ll_{\nu,S,W,h,a,\eps}
+ D^{h+a+\eps}.
+\end{equation}
+Then, with
+\[
+ \beta(h,a)=\frac{1+a}{2}+\frac{5h}{12},
+\]
+one has $A(D)\ll_{\nu,S,W,h,a,\eps}
+D^{\beta(h,a)+\eps}$ for every $\eps>0$.
+The hypothesis is required at one fixed $h$, for one fixed character
+and profile. An initial zero-free strip, a supremum over smaller column
+scales, and conductor-uniform estimates are not needed for this deduction.
+\end{theorem}
+
+\begin{proof}
+Put $B_p(L)=A_{p^6}(L)$ and $q=\N p$. Splitting squarefree ideals
+according to divisibility by $p$, using \eqref{eq:power-mask},
+gives the exact identities
+\begin{equation}\label{eq:prime-completion}
+ A(L)=B_p(L)-\nu(p)B_p(L/q),\qquad
+ B_p(L)=\sum_{j\ge0}\nu(p)^jA(L/q^j).
+\end{equation}
+The second sum is finite because $A(L)=0$ for $L<1/C$.
+Let $P(t)$ mean $A(L)\ll_\eps L^{t+\eps}$ for every
+$\eps>0$ and $L\ge1$. Its constant may be enlarged to include
+the bounded nonempty scales below one. For $t>0$, the geometric sum in
+\eqref{eq:prime-completion} proves, uniformly for $q\ge2$,
+\begin{equation}\label{eq:prime-mask-error}
+ P(t)\quad\Longrightarrow\quad
+ |B_p(D)-A(D)|\ll_{t,\eps}(D/q)^{t+\eps}.
+\end{equation}
+
+Set $Q=D^{h/6}$. We use the prime ideal theorem for the fixed field,
+for example the fixed-field specialization of \cite{DKN}.
+The number $J(D)$ of good prime ideals with $Q/2<\N p\le Q$ satisfies
+$J(D)\asymp Q/\log Q$. Their sixth powers are distinct physical rows
+of norm at most $D^h$. Hence \eqref{eq:short-moment-hypothesis} implies
+\[
+ J(D)^{-1}\sum_{Q/2<\N p\le Q}|B_p(D)|^2
+ \ll_\eps D^{1+a+5h/6+\eps}
+ =D^{2\beta(h,a)+\eps}.
+\]
+The logarithm has been absorbed by requesting a smaller preliminary
+$\eps$. Applying \eqref{eq:prime-mask-error}, squaring and
+averaging therefore gives
+\[
+ P(t)\Longrightarrow P\bigl(\max\{\beta(h,a),(1-h/6)t\}\bigr).
+\]
+Ideal counting supplies $P(1)$. If $\beta(h,a)\ge1$ it already proves
+the assertion. Otherwise write $c_h=1-h/6\in(0,1)$. After $j$ uses of
+the same hypothesis the exponent is
+$t_j=\max\{\beta(h,a),c_h^j\}$; this follows immediately by induction.
+A finite $j$ has $c_h^j\le\beta(h,a)$ and proves the desired exponent.
+The arbitrary-$\eps$ quantifier absorbs each of the finitely many
+losses; no uniformity in the iteration number is required.
+\end{proof}
+
+Thus a single pair improves $7/8$ precisely when
+\begin{equation}\label{eq:improvement-budget}
+ a+5h/6<3/4.
+\end{equation}
+For example, the lossless floors at $h=8/9,4/5,2/3$ are respectively
+$47/54,5/6,7/9$. The corresponding strict losses allowed to improve
+$7/8$ are $a<1/108,1/12,7/36$.
+
+\subsection{Zero detection and the scope of replication}
+
+For $0<\beta\le1$, the proof also gives the exact equivalence
+\begin{equation}\label{eq:prime-row-equivalence}
+ P(\beta)\quad\Longleftrightarrow\quad
+ J(D)^{-1}\sum_{Q/2<\N p\le Q}|B_p(D)|^2
+ \ll_\eps D^{2\beta+\eps}.
+\end{equation}
+The forward implication uses the geometric completion; the reverse
+implication repeats the finite argument with floor $\beta$.
+The positivity $\beta>0$ is essential here. This repeated-row estimate
+is consequently a reformulation of its fixed-character target, rather
+than an independent cancellation estimate.
+
+To obtain a zero-free consequence one must assume the moment for a
+class of profiles with no common Mellin zero in the region in question.
+Indeed, with $\widehat W(s)=\int_0^\infty W(t)t^{s-1}\,dt$,
+\begin{equation}\label{eq:extraction-mellin}
+ \int_0^\infty A(D)D^{-s}\,\frac{dD}{D}
+ =\frac{\widehat W(s)}{L_K^S(s,\nu)}\qquad(\Rea s>1).
+\end{equation}
+This follows by absolute convergence and the ideal M\"obius Euler
+product. A bound $P(\beta)$ makes the left side holomorphic in
+$\Rea s>\beta$. Multiplying by $L_K^S$ and continuing the identity
+excludes any zero $\rho\ne1$ with $\Rea\rho>\beta$ for which
+$\widehat W(\rho)\ne0$. The possible principal pole at $s=1$ is
+handled meromorphically, and omitted Euler factors are nonzero for
+$\Rea s>0$. Each zero and its detecting profile are fixed before the
+constant and sufficiently large threshold are chosen.
+
+Lemma~\ref{sfac:lem:profiles} below supplies a sufficient derivative
+profile class with common Mellin zero only at \(s=1\).
+
+\begin{remark}[Limits of replication alone]
+Put $B_r(D)=A_{r^6}(D)$ for good integral ideals $r$.
+The exact composite completion is
+$B_r(D)=\sum_{\rad(d)\mid\rad(r)}\nu(d)A(D/\N d)$,
+with arbitrary prime powers allowed. Its inverse is the finite
+squarefree-divisor sum
+$A(D)=\sum_{d\mid\rad(r)}\muK(d)\nu(d)B_r(D/\N d)$.
+For every fixed $\beta>0$, the product
+$\prod_{p\mid r}(1-(\N p)^{-\beta-\delta})^{-1}$ is
+$O_{\beta,\delta,\eta}((\N r)^\eta)$ for every $\delta,\eta>0$.
+This proves that averaging all $\N r\le D^{h/6}$ is equivalent, up to
+arbitrary epsilon losses, to the same $P(\beta)$ target; the reverse
+implication retains the large-prime subsum. Composite rows improve the
+prime count only logarithmically. A fixed small prime divisor of $r$
+prevents replacing their masks by the false uniform error
+$O((D/\N r)^t)$.
+For arbitrary weights on $R$ selected sixth-power rows,
+$|\sum_r w_r|^2/\sum_r|w_r|^2\le R\ll D^{h/6}$.
+For $d\mid6$, the inherited order-dividing-$d$ subfamily has
+$h_d=dh/6$, $a_d=a+h-h_d$, and therefore the same extraction floor
+$(1+a_d)/2+(d-1)h_d/(2d)=\beta(h,a)$.
+These are limits of extraction from the same unweighted moment, not
+no-go theorems for new signed correlation estimates. Fixed nontrivial
+cores replicate twisted targets; growing cores require conductor-uniform
+input. Detailed proofs and qualifications are in \cite{N5,N6}.
+\end{remark}
+
+
+% Integrable manuscript section; not a standalone document.
+% Drafted for Edward Baker, 8 October 2026, with substantial LLM assistance.
+% Model: GPT-6 (Codex), inherited configuration; exact variant and effort
+% label are not exposed.  This is a same-model internal derivation.
+% Requires amsmath, amssymb, amsthm and theorem/lemma/proposition/corollary
+% environments.  All labels are prefixed sfac:.
+
+\section{A zero-integral adaptive factorization}
+\label{sfac:sec:adaptive}\label{sec:factorization}
+
+Retain \(A_{u,W},\lambda_u,\Mfrak_W\) from
+Section~\ref{sec:setting}. All convolutions are on \(\good\).
+The symbols \(\delta\) and \(\mathbf1\) denote the convolution identity
+and the constant-one function. Complete multiplicativity includes
+every deletion zero. The arguments in this section develop
+\cite{N8,N10,N11}.
+
+\subsection{An exact truncated inverse}
+
+\begin{lemma}[Truncated Dirichlet inverse]
+\label{sfac:lem:inverse}
+For $z\ge1$ set $m_z=\mu_K\mathbf1_{\N n\le z}$ and
+$r_z=\delta-\mathbf1*m_z$.  For every integer $J\ge1$,
+\begin{equation}
+ \mu_K=\sum_{j=1}^J(-1)^{j-1}\binom Jj
+            m_z^{*j}*\mathbf1^{*(j-1)}+\mu_K*r_z^{*J}.
+ \label{sfac:eq:inverse}
+\end{equation}
+The first sum equals $\mu_K(n)$ at every $\N n\le z^J$, including
+the endpoint.
+\end{lemma}
+
+\begin{proof}
+The equality $\mathbf1*\mu_K=\delta$ shows that $r_z(n)=0$ when
+$\N n\le z$.  Since $\delta-r_z=\mathbf1*m_z$, the binomial identity
+\[
+ \delta-r_z^{*J}
+  =\sum_{j=1}^J(-1)^{j-1}\binom Jj(\mathbf1*m_z)^{*j}
+\]
+gives \eqref{sfac:eq:inverse} after convolution with $\mu_K$.
+Every nonzero term of $r_z^{*J}$ is a product of $J$ ideals whose
+norms are strictly greater than $z$.  Convolution with $\mu_K$ does
+not decrease the norm.  Its remainder is therefore supported strictly
+beyond $z^J$.
+\end{proof}
+
+Multiplication of coefficients by $\lambda_u$ commutes with convolution.
+This assertion remains true when factors overlap: zero extension is part
+of complete multiplicativity.  No squarefree or pairwise-coprimality
+restriction may be added to the individual factors of
+\eqref{sfac:eq:inverse}.  Their signed recombination supplies the
+required nonsquarefree zeros.
+
+Take $J=2$, $z=(CD)^{1/2}$, and $D$ sufficiently large that $cD>z$.
+Then $m_z$ vanishes on the profile, and, with $c_z=m_z*m_z$,
+\begin{align}
+ S_u(X)&=\sum_{m\in\good}\lambda_u(m)W(\N m/X),\label{sfac:eq:S}\\
+ A_{u,W}(D)&=-\sum_d c_z(d)\lambda_u(d)S_u(D/\N d).
+ \label{sfac:eq:factor}
+\end{align}
+All these sums are finite; $c_z(d)$ is supported on $\N d\le CD$ and
+$|c_z(d)|\le\tau(d)$.  It is cube-free supported.  For $\N d\le z$,
+$c_z(d)=(\mu_K*\mu_K)(d)$, whose local coefficients are $-2$ at
+$p$, $1$ at $p^2$, and $0$ at $p^j$ for $j\ge3$.
+The truncation $z^2\ge CD$ covers the entire profile, rather than
+only its lower portion.
+
+\subsection{A sufficient zero-integral profile class}
+
+\begin{lemma}[Profiles with vanishing principal density]
+\label{sfac:lem:profiles}
+If $V\in C_c^\infty((0,\infty))$ and
+\begin{equation}
+ W(t)=(1+t\partial_t)V(t),
+ \label{sfac:eq:derivative-profile}
+\end{equation}
+then $I_W:=\int_0^\infty W(t)\,dt=0$ and
+\begin{equation}
+ \widehat W(s)=(1-s)\widehat V(s),\qquad
+ \widehat V(s)=\int_0^\infty V(t)t^s\,\frac{dt}{t}.
+ \label{sfac:eq:profile-Mellin}
+\end{equation}
+The common Mellin zero of this profile class is exactly $s=1$.
+\end{lemma}
+
+\begin{proof}
+Both identities follow by integration by parts, with vanishing endpoint
+terms.  Given $\rho\ne1$, choose a nonzero nonnegative smooth annular
+$\phi$ and put $V(t)=t^{-\rho}\phi(t)$.  Then
+$\widehat W(\rho)=(1-\rho)\int\phi(t)\,dt/t\ne0$.
+\end{proof}
+
+Consequently these profiles suffice in the scalar Mellin detector
+$\widehat W(s)/L_K^S(s,\nu)$ for every potential zero other than
+$s=1$, which retains its classical separate treatment.  The finite
+prime-mask extraction uses the same profile at each scale and applies
+unchanged to signed or complex profiles.  Thus restricting the analytic
+target to \eqref{sfac:eq:derivative-profile} removes no relevant detector;
+it does not itself prove a short-family estimate.
+
+
+\subsection{Sharp moment recovery for arbitrary profiles}
+\label{sec:profile-recovery}
+
+The derivative class is already sufficient for Mellin detection.
+It also recovers every sharp profile moment in the useful range,
+subject to a classical fixed-character boundary.
+
+\begin{proposition}[Recovery with a fixed-row boundary]
+\label{prop:sharp-recovery}
+Let \(0<h<1\), \(a\ge0\), \(h+a<1\), and
+\(W=(1+t\partial_t)V\), \(V\in C_c^\infty((0,\infty))\).
+Assume the fixed-character M\"obius boundary
+\begin{equation}\label{eq:fixed-boundary}
+ A_{u,V}(t)/t\longrightarrow0\quad(t\longrightarrow\infty)
+ \quad\text{for each fixed }u\ne0.
+\end{equation}
+If
+\[
+ \sum_{0<\N u\le t^h}|A_{u,W}(t)|^2
+       \ll_{\eps,W}t^{1+h+a+\eps},
+\]
+then the same sharp moment bound holds with \(V\) in place of \(W\).
+Thus the sharp all-profile and derivative-profile moment assertions
+are equivalent for \(h+a<1\), subject to \eqref{eq:fixed-boundary}.
+\end{proposition}
+\begin{proof}
+Termwise differentiation of the locally finite smooth sum gives
+\(A_{u,W}(t)=(1-t\partial_t)A_{u,V}(t)\).
+Since \((A_{u,V}(t)/t)'=-A_{u,W}(t)/t^2\),
+the boundary assumption yields
+\begin{equation}\label{eq:profile-integral-recovery}
+ A_{u,V}(D)=D\int_D^\infty A_{u,W}(t)\,\frac{dt}{t^2}.
+\end{equation}
+For the finite fixed row set \(0<\N u\le D^h\), Minkowski and
+enlargement to \(0<\N u\le t^h\), \(t\ge D\), give
+\[
+ \left(\sum_{0<\N u\le D^h}|A_{u,V}(D)|^2\right)^{1/2}
+ \ll D\int_D^\infty t^{(1+h+a+\eps)/2-2}\,dt
+ =\frac{D^{(1+h+a+\eps)/2}}
+        {1-(1+h+a+\eps)/2}.
+\]
+Choose a smaller preliminary epsilon so that \(h+a+\eps<1\).
+Squaring proves the result. The reverse implication is restriction
+of the all-profile assertion.
+\end{proof}
+
+The ordinary fixed-character M\"obius prime number theorem supplies
+\eqref{eq:fixed-boundary}; here it is an explicitly retained analytic
+input, used only for this optional recovery. Its constants need not
+be conductor-uniform: the boundary is used for finitely many fixed
+rows at each fixed \(D\). This argument recovers a sharp moment,
+not an arbitrary Schwartz-weighted all-row moment.
+A bound for the latter on derivative profiles supplies the sharp
+hypothesis because \(\Phi\ge1\) on the inner ball.
+
+\subsection{Native arithmetic inputs and primitive completion}
+
+Use Analytic input~\ref{input:poisson}, and extend \(\lambda_u\)
+by zero at \(S\). For the primitive inducing character \(\psi_u\),
+\begin{equation}\label{sfac:eq:primitive-presentation}
+ \lambda_u(n)=\psi_u(n)\ind_{(n,E_u)=1},\qquad
+ Q_u=\\N\mathfrak q_u,\quad L_u=Q_u\N E_u.
+\end{equation}
+The radical comparison is \eqref{eq:radical-modulus}.
+We retain the principal frequency through its exact residue and derive
+the remaining all-scale bound from primitive Poisson.
+
+\begin{lemma}[All-scale masked completion]
+\label{sfac:lem:completion}
+Let $\kappa_u$ be the residue at $s=1$ of the Dirichlet series of
+$\lambda_u$.  Then
+\begin{equation}
+ S_u(X)=\kappa_u XI_W+\mathcal V_u(X),\qquad
+ |\mathcal V_u(X)|\ll_{A,W}
+      \tau(E_u)\sqrt{Q_u}(L_u/X)^A
+      \quad(X>0,\ A\ge0).
+ \label{sfac:eq:completion}
+\end{equation}
+Here $\kappa_u=0$ unless $\psi_u$ is principal.  In that case
+\begin{equation}
+ \kappa_u=\frac{\pi}{3\sqrt3}
+       \prod_{p\in S\,\text{or}\,p\mid u}(1-(\N p)^{-1}).
+ \label{sfac:eq:residue}
+\end{equation}
+The remainder $\mathcal V_u$ is exactly the full nonzero-frequency
+Poisson remainder, without a row or frequency truncation.
+\end{lemma}
+
+\begin{proof}
+For a primitive character of conductor norm $Q$, primitive Poisson after
+removal of its zero frequency has prefactor of size $\sqrt Q\,t$,
+where $t=X/Q$.  Its remaining lattice frequencies have radial Schwartz
+weights at scale a fixed constant times $t$.  Lattice counting gives
+\[
+ \sum_{k\ne0}|\mathcal F_W(t\N k)|\ll_W t^{-1}\quad(t>0),
+ \qquad
+ \sum_{k\ne0}|\mathcal F_W(t\N k)|\ll_{A,W}t^{-A-1}
+       \quad(t\ge1).
+\]
+The fixed field and Fourier-normalization constants are absorbed here.
+Hence the primitive remainder is $O_W(\sqrt Q)$ at every scale and
+$O_{A,W}(\sqrt Q(Q/X)^A)$ when $X\ge Q$.  For $X<Q$ the latter
+bound follows from the former because $(Q/X)^A\ge1$.
+
+Expand the mask in \eqref{sfac:eq:primitive-presentation}.  Each
+$e\mid E_u$ multiplies the primitive sum by $\mu_K(e)\psi_u(e)$
+and replaces $X$ by $X/\N e$.  Its remainder is bounded by
+$\sqrt{Q_u}(\N e Q_u/X)^A$, and $\N e Q_u\le L_u$.
+Summing the $\tau(E_u)$ divisors proves the error estimate.
+The zero frequency occurs precisely for the principal primitive
+character.  Its unmasked coefficient is
+$\operatorname{res}_{s=1}\zeta_K(s)=\pi/(3\sqrt3)$; the divisor
+expansion contributes the surviving Euler factors, giving
+\eqref{sfac:eq:residue}.
+\end{proof}
+
+\begin{lemma}[Radical-weighted row mass]
+\label{sfac:lem:mass}
+For $H\ge1$ and every $\delta>0$,
+\begin{equation}
+ \sum_{u\ne0}\Phi(\N u/H)
+       \frac{\tau(E_u)^2Q_u}{L_u^2}\ll_\delta H^\delta.
+ \label{sfac:eq:mass}
+\end{equation}
+Also $\#\{0<\N u\le H:L_u\le R\}\ll_\delta RH^\delta$ for $R\ge1$.
+\end{lemma}
+
+\begin{proof}
+The fixed bad part costs a constant, and
+$\tau(E_u)^2Q_u/L_u^2\ll
+4^{\omega(\operatorname{rad}_S(u))}/\N\operatorname{rad}_S(u)$.
+For every $\delta>0$ the ideal Euler product
+\begin{align}
+ &\sum_{\mathfrak n}
+ \frac{4^{\omega(\operatorname{rad}_S(\mathfrak n))}}
+      {\N\operatorname{rad}_S(\mathfrak n)(\N\mathfrak n)^\delta}
+ \notag\\[-2pt]
+ &\hspace{1cm}=
+ \prod_{p\notin S}
+ \left(1+\frac{4(\N p)^{-1-\delta}}{1-(\N p)^{-\delta}}\right)
+ \prod_{p\in S}(1-(\N p)^{-\delta})^{-1}
+ <\infty\label{sfac:eq:Euler-mass}
+\end{align}
+converges absolutely.  The large-prime terms are $O((\N p)^{-1-\delta})$.
+There are six element generators per ideal, and
+$\Phi(\N u/H)\ll_\delta H^\delta(\N u)^{-\delta}$, proving
+\eqref{sfac:eq:mass} with the complete Schwartz weight.
+
+For the counting assertion, the same Euler product gives
+\[
+ \sum_{0<\N u\le H}\frac1{\\N\operatorname{rad}_S(u)}
+       \ll_\delta H^\delta.
+\]
+On the counted rows $\N\operatorname{rad}_S(u)\le L_u\le R$.
+This proves the count; the smaller mass in \eqref{sfac:eq:mass} alone
+would not prove it on principal rows.
+\end{proof}
+
+\subsection{The adaptive tail theorem}
+
+\begin{theorem}[Negligible adaptive small sector]
+\label{sfac:thm:adaptive}
+Fix $0<\theta<1$ and let $Y_u=D^{1-\theta}/L_u$.  Define
+\begin{align}
+ I_u&=-\sum_{\N d\le Y_u}c_z(d)\lambda_u(d)S_u(D/\N d),
+ &T_u&=-\sum_{\N d>Y_u}c_z(d)\lambda_u(d)S_u(D/\N d),\notag\\
+ P_u&=-\kappa_uDI_W
+       \sum_{\N d\le Y_u}\frac{c_z(d)\lambda_u(d)}{\N d}.
+ \label{sfac:eq:adaptive-sums}
+\end{align}
+The short sums are empty if $Y_u<1$.  For every $A\ge0$, $\delta>0$,
+\begin{equation}
+ D^{-1}\sum_{u\ne0}\Phi(\N u/H)|I_u-P_u|^2
+  \ll_{A,\delta}D^{1-2\theta-2A\theta}\log^2(2D)H^\delta.
+ \label{sfac:eq:adaptive-energy}
+\end{equation}
+For $1\le H\le D$ this is $O_N(D^{-N})$ for every requested $N$,
+choosing $A$ after $N$ and $\theta$.
+
+If $W$ has the form \eqref{sfac:eq:derivative-profile}, then $P_u=0$.
+For every fixed $0<h<1$ and $a\ge0$, the full moment estimate
+\begin{equation}
+ \mathfrak M_W(D,D^h)\ll_\varepsilon D^{h+a+\varepsilon}
+ \label{sfac:eq:full-target}
+\end{equation}
+is therefore equivalent to the tail estimate
+\begin{equation}
+ D^{-1}\sum_{u\ne0}\Phi(\N u/D^h)|T_u|^2
+       \ll_\varepsilon D^{h+a+\varepsilon}.
+ \label{sfac:eq:tail-target}
+\end{equation}
+The tail estimate remains an analytic hypothesis.
+\end{theorem}
+
+\begin{proof}
+Ideal counting gives $\sum_{\N d\le Y}|c_z(d)|\ll Y\log(2Y)$ for
+$Y\ge1$.  For $\N d\le Y_u$, \eqref{sfac:eq:completion} has
+$L_u\N d/D\le D^{-\theta}$.  As $Y_u\le D$, this gives
+\[
+ |I_u-P_u|\ll_{A,W}
+ D^{1-\theta}L_u^{-1}\log(2D)
+       \tau(E_u)\sqrt{Q_u}D^{-A\theta}.
+\]
+Square, divide by $D$, and apply Lemma~\ref{sfac:lem:mass}.
+This proves \eqref{sfac:eq:adaptive-energy}.  The exact factorization
+is $A_{u,W}=(I_u-P_u)+(T_u+P_u)$.  For zero-integral profiles $P_u=0$,
+and the triangle inequality in the weighted $\ell^2$ norm proves the
+equivalence of \eqref{sfac:eq:full-target} and \eqref{sfac:eq:tail-target}.
+\end{proof}
+
+The cutoff is legitimate because the factorization and completion are
+pointwise in $u$.  Squaring it produces a row-dependent arithmetic
+selector; it cannot be inserted into a previously completed row kernel
+whose estimates require a row-independent selector.
+
+\begin{corollary}[Uniform-cutoff centered estimate]
+\label{sfac:cor:uniform}
+Instead split \eqref{sfac:eq:factor} at a fixed $1\le Y\ll D$, and
+write the resulting sums as $I_{u,Y},T_{u,Y}$, with
+$P_{u,Y}=-\kappa_uDI_W\sum_{\N d\le Y}c_z(d)\lambda_u(d)/\N d$.
+For $1\le H\le D$ and every fixed $A\ge0$,
+\begin{equation}
+ D^{-1}\sum_{u\ne0}\Phi(\N u/H)|I_{u,Y}-P_{u,Y}|^2
+ \ll_{A,\varepsilon}D^\varepsilon
+       \frac{H^2Y^2}{D}\left(\frac{HY}{D}\right)^{2A}.
+ \label{sfac:eq:uniform-energy}
+\end{equation}
+For $H=D^h$, $Y=D^{1-h-\eta}$, and fixed $0<\eta<1-h$, this
+has arbitrary power decay.  Separately, its $A=0$ branch is affordable
+at $D^{h+a+\varepsilon}$ whenever $Y=D^y$ and $2y+h-1\le a$.
+For a general profile the residual is $T_{u,Y}+P_{u,Y}$, with the
+principal correction retained inside the same square.
+\end{corollary}
+
+\begin{proof}
+Equations \eqref{eq:radical-modulus} and
+\eqref{sfac:eq:completion}, with the divisor bound, imply
+$|\mathcal V_u(X)|\ll_{A,\varepsilon}(\N u)^{1/2+\varepsilon}(\N u/X)^A$.
+Summing $|c_z|$ below $Y$ gives
+$|I_{u,Y}-P_{u,Y}|\ll Y^{1+\varepsilon}
+(\N u)^{1/2+\varepsilon}(\N u Y/D)^A$.
+Every higher moment of the fixed Schwartz row weight is finite;
+lattice counting therefore proves \eqref{sfac:eq:uniform-energy},
+after reallocating epsilon.  At the buffered cutoff its prefactor is
+$D^{1-2\eta}$ and its decay factor is $D^{-2A\eta}$.  The unbuffered
+claim follows directly by taking $A=0$.
+\end{proof}
+
+For general profiles the same exact argument gives the residual
+$T_u+P_u$.  In terms of the full Poisson remainder it has the useful
+identity
+\begin{equation}
+ T_u+P_u=-\kappa_uDI_W M_z(u)^2
+       -\sum_{\N d>Y_u}c_z(d)\lambda_u(d)\mathcal V_u(D/\N d),
+ \qquad
+ M_z(u)=\sum_{\N a\le z}\frac{\mu_K(a)\lambda_u(a)}{\N a}.
+ \label{sfac:eq:main-square}
+\end{equation}
+Indeed the zero frequencies of the short and long sums combine into
+$-\kappa_uDI_W\sum_d c_z(d)\lambda_u(d)/\N d$, and finite convolution
+makes this last sum $M_z(u)^2$.  It is an ordinary square, not
+$|M_z(u)|^2$.  Neither term of \eqref{sfac:eq:main-square} is separately
+estimated by the reduction.
+
+On the tail, write $d=ab$ with $\N a,\N b\le\sqrt{CD}$.  Its exact support
+implies
+\begin{equation}
+ \N m<CD^\theta L_u,\qquad
+ \N a,\N b>D^{1/2-\theta}/(\sqrt C L_u).
+ \label{sfac:eq:tail-support}
+\end{equation}
+If $u=\eta vr^6$, with $v$ sixth-power-free and $\eta$ a unit, then
+$L_u\ll \N\operatorname{rad}(vr)\le \N v\,\N r
+=(\N u)^{1/6}(\N v)^{5/6}$.  On coherent inner rows $u=r^6$, $\N u\le D^h$,
+this gives
+\begin{equation}
+ Y_u\gg D^{1-\theta-h/6},\qquad
+ \N m\ll D^{\theta+h/6},\qquad
+ \N a,\N b\gg D^{1/2-\theta-h/6}.
+ \label{sfac:eq:coherent-support}
+\end{equation}
+For a complete Schwartz moment these bounds are used pointwise or on
+row shells; $\N u\le D^h$ is not a global replacement for the row variable.
+
+The following proposed row exponents give these support ranges on
+coherent inner rows.  Constants depending on the fixed annulus and
+arithmetic data are suppressed.
+\begin{center}
+\begin{tabular}{@{}cccc@{}}
+\toprule
+$h$ & lower bound for $Y_u$ & upper bound for $\N m$
+    & lower bound for each $\N a,\N b$\\
+\midrule
+$2/5$ & $D^{14/15-\theta}$ & $D^{1/15+\theta}$
+      & $D^{13/30-\theta}$\\
+$4/5$ & $D^{13/15-\theta}$ & $D^{2/15+\theta}$
+      & $D^{11/30-\theta}$\\
+$8/9$ & $D^{23/27-\theta}$ & $D^{4/27+\theta}$
+      & $D^{19/54-\theta}$\\
+\bottomrule
+\end{tabular}
+\end{center}
+These are support statements; the remaining signed sums are not bounded
+by the completion argument.
+
+\section{Exact signed cancellation in divisor packets}
+\label{sec:packets}
+
+The adaptive tail admits a further exact cancellation, developed in
+\cite{N15}. It removes a particular family of total products; it does
+not improve the proved bound for the complete tail moment. We first
+recombine all factor tuples with the same total ideal, preserving
+their signs, phases and deletion zeros.
+
+\subsection{Complete recombination by total ideal}
+
+For $z\ge1$ and $Y>0$, put
+\begin{equation}\label{eq:packet-coefficient}
+ t_{z,Y}(n)=-\sum_{\substack{d\mid n\\\N d>Y}}c_z(d).
+\end{equation}
+Complete multiplicativity in \eqref{eq:lambda} gives the finite identity
+\begin{equation}\label{eq:packet-recombination}
+ T_{u,W}(D)=\sum_{n\in\good}
+   t_{z,Y_u}(n)\lambda_u(n)W(\N n/D),
+ \qquad Y_u=D^{1-\theta}/L_u.
+\end{equation}
+Thus $t_{z,Y_u}(n)$ includes every original tuple $n=abm$,
+with $\N a,\N b\le z$ and $\N(ab)>Y_u$.
+For the adaptive factorization, $z=\sqrt{CD}$ and sufficiently large
+$D$ give $z<\N n\le z^2$ on the profile. Thus
+Lemma~\ref{sfac:lem:inverse} with $J=2$
+also gives
+\begin{equation}\label{eq:packet-inverse-coefficient}
+ t_{z,Y}(n)=\muK(n)+\sum_{\substack{d\mid n\\\N d\le Y}}c_z(d).
+\end{equation}
+Indeed $m_z(n)=0$ there and $(\mathbf1*c_z)(n)=-\muK(n)$.
+No coprimality or squarefreeness conditions have been added to the
+original factors in either identity.
+
+\subsection{A pointwise cancellation theorem}
+
+For a nonunit ideal $b$, write
+$P^-(b)=\min_{p\mid b}\N p$.
+
+\begin{theorem}[Nonunit cofactor packet]
+\label{thm:divisor-packet}
+Let $b\ne1$ be any good ideal, $B=\N b$, and let $q,r$ be
+distinct good prime ideals with $(b,qr)=1$. Suppose
+\begin{align}
+ &\N q,\N r\le z,\qquad B\N q\le z,
+       \qquad \N r\,P^-(b)>z,\label{eq:packet-factor-conditions}\\
+ &\max\{B\N q,B\N r\}\le Y<\N(qr).
+       \label{eq:packet-tail-conditions}
+\end{align}
+Then
+\begin{equation}\label{eq:packet-zero}
+ t_{z,Y}(bqr)=0.
+\end{equation}
+The statement allows nonsquarefree $b$ and holds with every complex
+completely multiplicative twist and its deletion zeros.
+\end{theorem}
+
+\begin{proof}
+A divisor of $bqr$ missing either $q$ or $r$ has norm at most
+$\max\{B\N q,B\N r\}$ and is excluded from
+\eqref{eq:packet-coefficient}. The surviving divisors are exactly
+$qre$, $e\mid b$, since $\N(qr)>Y$.
+Also $Y\ge B\N r\ge P^-(b)\N r>z$, so $q,r$ cannot occur
+together in one truncated factor.
+
+No prime of $b$ can share the factor containing $r$, by
+$\N r\,P^-(b)>z$. Every divisor $e\mid b$ can share the
+factor containing $q$, by $\N(qe)\le B\N q\le z$.
+The only possible ordered factor pairs for $qre$ are consequently
+$(qe,r)$ and $(r,qe)$, and
+\[
+ c_z(qre)=2\muK(e).
+\]
+For nonsquarefree $e$, both sides vanish. Summation gives
+\[
+ t_{z,Y}(bqr)=-2\sum_{e\mid b}\muK(e)=0,
+\]
+because $b\ne1$. Every tuple carries the same value
+$\lambda_u(bqr)W(\N(bqr)/D)$, including when that value is zero.
+The cancellation therefore precedes squaring and survives all
+complex phases and masks.
+\end{proof}
+
+For a prime cofactor $b=p$, the opposite branches are particularly
+simple. The divisor $d=qr$, with free factor $m=p$, has total
+coefficient $-2$; the divisor $d=pqr$, with $m=1$, has total
+coefficient $+2$. Each coefficient includes both ordered truncated
+factor pairs. Their contributions cancel at the same total ideal.
+
+\subsection{A growing sector under the complete row weight}
+
+\begin{corollary}[Negligible full weighted packet sector]
+\label{cor:packet-energy}
+Fix $h=2/5$, $\theta=1/40$, and $0<\delta<1/40$.
+Let $\mathcal P_\delta(D)$ be the row-independent set of good ideals
+$n$ with $cD\le\N n\le CD$ admitting a representation $n=bqr$
+such that
+\begin{equation}\label{eq:packet-growing-set}
+ 1<B\le D^{1/40-\delta},\qquad B\N q\le z,
+ \qquad z/7<\N r\le z,
+ \qquad (b,qr)=1,
+\end{equation}
+where $q,r$ are distinct good primes and $B=\N b$.
+Each total ideal occurs once in the set, even if its representation
+is not unique. Define its actual response vector by
+\begin{equation}\label{eq:packet-response}
+ \mathcal P_{u,W}(D)=
+ \sum_{n\in\mathcal P_\delta(D)}
+ t_{z,Y_u}(n)\lambda_u(n)W(\N n/D).
+\end{equation}
+For every fixed smooth annular $W$ and every requested $N>0$,
+\begin{equation}\label{eq:packet-energy}
+ \frac1D\sum_{u\ne0}\Phi(\N u/D^{2/5})
+       |\mathcal P_{u,W}(D)|^2\ll_{N,W,\Phi,\delta}D^{-N}.
+\end{equation}
+No zero-integral condition on $W$ is needed for this sector estimate.
+\end{corollary}
+
+\begin{proof}
+Every good prime ideal has norm at least seven, since $S$ contains
+the primes above six. Thus \eqref{eq:packet-growing-set} implies
+$\N r\,P^-(b)>z$. On the enlarged row range
+$\N u\le D^{17/40}$, \eqref{eq:radical-modulus} gives
+\begin{align*}
+ Y_u&\gg D^{22/40},&
+ \max\{B\N q,B\N r\}&\le Bz\ll D^{21/40-\delta},\\
+ \N(qr)&=\N n/B\ge cD^{39/40+\delta},&
+ Y_u&\le D^{39/40}.
+\end{align*}
+The positive exponent margins dominate all fixed constants for
+sufficiently large $D$. Theorem~\ref{thm:divisor-packet} applies
+pointwise, so $\mathcal P_{u,W}(D)=0$ on this entire enlarged ball.
+
+For the farther rows, the uniform bound
+\begin{equation}\label{eq:packet-uniform-bound}
+ |\mathcal P_{u,W}(D)|
+ \ll_W\sum_{\N n\le CD}\sum_{d\mid n}|c_z(d)|
+ \ll_W D\log^2(2D)
+\end{equation}
+follows by majorizing with all ideal triples of product norm at most
+$CD$. Indeed, ideal counting followed by two harmonic ideal sums
+bounds that count by $D\log^2(2D)$.
+For every $A>1$, lattice counting and Schwartz decay give
+\[
+ \sum_{\N u>D^{17/40}}\Phi(\N u/D^{2/5})
+ \ll_{A,\Phi}D^{2/5}D^{-(A-1)/40}.
+\]
+Square \eqref{eq:packet-uniform-bound}, divide by $D$, and choose
+$A$ after the requested $N$. This proves \eqref{eq:packet-energy}
+with the complete row weight, rather than only an inner-ball sum.
+\end{proof}
+
+The only conductor input in this proof is $1\le L_u\ll_{\nu,S}\N u$.
+The sector can be removed from the full response by the weighted
+triangle inequality. For general profiles, the principal correction in
+\eqref{sfac:eq:main-square} remains inside the residual $T_u+P_u$.
+The individual factor branches of the packet cannot be discarded
+separately.
+
+\subsection{Large opposite branches and the surviving obstruction}
+
+\begin{proposition}[Oversized branches with exact compensation]
+\label{prop:packet-branches}
+In the parameter setting of Corollary~\ref{cor:packet-energy}, let
+$\nu=1$, fix a good prime cofactor $p$, and let $W\ne0$ be
+a fixed smooth annular profile, possibly complex. There are fixed
+narrow prime windows $\mathcal W_D$ selecting products $pqr$ in
+$\mathcal P_\delta(D)$ such that the actual tail branches
+\begin{equation}\label{eq:packet-branch-amplitudes}
+ \mathcal B^\pm_{u,p}(D)=\pm2\lambda_u(p)
+ \sum_{(q,r)\in\mathcal W_D}
+ \lambda_u(qr)W(P\N(qr)/D),\qquad P=\N p,
+\end{equation}
+have normalized weighted energy, each separately,
+\begin{equation}\label{eq:packet-branch-energy}
+ \gg_{W,p,\Phi}\frac{DH^{1/6}}{\log^4D}
+ =\frac{D^{16/15}}{\log^4D},\qquad H=D^{2/5}.
+\end{equation}
+The minus branch has $d=qr,m=p$, and the plus branch has
+$d=pqr,m=1$. Both include the two ordered truncated factor pairs.
+Their sum is exactly zero on every row. The lower bound concerns each
+selected branch, not an unrestricted complex branch sum.
+\end{proposition}
+
+\begin{proof}
+Write $P=\N p$ and choose $t\in(c,C)$ with $W(t)\ne0$.
+Take
+\[
+ \max\{t/C,1/7\}<\beta<1,\qquad
+ \alpha=t/(C\beta)<1.
+\]
+Choose the same sufficiently narrow windows around
+$\N q=\alpha z/P$ and $\N r=\beta z$ for both branches.
+Their centers satisfy $P\N q<z$, $\N r>z/7$, and
+$P\N q\N r=tD$. Shrinking the windows preserves the strict
+inequalities and ensures a positive lower bound for
+$\Rea(e^{-i\arg W(t)}W)$ throughout their product range.
+For large $D$, the primes are distinct and avoid $p$, and the fixed
+cofactor satisfies $P\le D^{1/40-\delta}$.
+
+The fixed-field prime ideal theorem supplies
+$\asymp_{W,p}D/\log^2D$ pairs in these windows. Restrict rows
+to $u=v^6$, $\N v\le H^{1/6}$, with $(v,p)=1$.
+The primes $q,r\asymp D^{1/2}$ cannot divide $v$, so all original
+masks equal one. There are $\asymp_p H^{1/6}$ distinct such
+physical rows, accounting for the finite unit multiplicity.
+Each selected branch amplitude has modulus
+$\gg_{W,p}D/\log^2D$ there. Square, use $\Phi\ge1$ on the
+inner ball, count these rows, and divide by $D$ to obtain
+\eqref{eq:packet-branch-energy}.
+
+For this fixed cofactor, $\N(qr)\ge cD/P>D^{39/40}\ge Y_u$
+for sufficiently large $D$, uniformly in every row. Both selected
+branches therefore belong to the actual tail on every row.
+The window conditions give $c_z(qr)=2$ and $c_z(pqr)=-2$,
+so their amplitudes are precisely \eqref{eq:packet-branch-amplitudes}
+and cancel identically. Outside the enlarged row ball, the complete
+coefficient $t_{z,Y_u}(pqr)$ may contain additional divisors; it is
+the sum of the two selected branches, rather than that complete
+coefficient, which vanishes on all rows. Prime ideal counting is
+used for the branch lower bound, not for the algebraic cancellation
+or the negligible-sector estimate.
+\end{proof}
+
+\begin{remark}[No improved full moment is proved]
+\label{rem:packet-open-moment}
+The unit-cofactor case is different. For balanced distinct
+semiprimes $qr$ with $\N q,\N r\le z\le Y_u<\N(qr)$,
+all proper divisors lie below the tail threshold, and
+\[
+ t_{z,Y_u}(qr)=-c_z(qr)=-2.
+\]
+Every decomposition of the same semiprime has already been included;
+its compensation must involve different total ideals. The packet
+theorem therefore does not bound the remaining signed tail.
+
+At $h=a=2/5$, $\theta=1/40$, the proposed full tail target is
+$D^{4/5+\eps}$. The existing generic benchmark is
+$D^{16/15+\eps}$, leaving a $4/15$ power gap. A proof of the
+proposed full moment would give
+$\beta(2/5,2/5)=13/15<7/8$ by
+Theorem~\ref{thm:finite-extraction}; no such proof is supplied here.
+The parameter choice in Corollary~\ref{cor:packet-energy} proves
+only its displayed controlled-sector estimate.
+\end{remark}
+
+\section{Signed gcd recombination at the original row scale}
+\label{sfac:sec:gcd}\label{sec:gcd}
+
+Set $x_u(n)=\mu_K(n)\lambda_u(n)W(\N n/D)$ and define
+\begin{align}
+ C(D,H)&=D^{-1}\sum_{u\ne0}\Phi(\N u/H)
+       \sum_{\substack{n_1\ne n_2\\(n_1,n_2)=1}}
+          x_u(n_1)\overline{x_u(n_2)},\notag\\
+ B_d(D,H)&=D^{-1}\sum_{u\ne0}\Phi(\N u/H)
+              \left|\sum_{d\mid n}x_u(n)\right|^2.
+ \label{sfac:eq:gcd-definitions}
+\end{align}
+
+The sum over both ordered columns shows that \(C(D,H)\) also equals
+the conjugated-orientation core \(\mathfrak C(D,H)\) used in
+Section~\ref{sec:overlap}; swapping the two columns identifies them.
+
+\begin{proposition}[Exact identity and quantitative truncation]
+\label{sfac:prop:gcd}
+For large $D$, when the unit column is off the profile,
+\begin{equation}
+ C(D,H)=\sum_d\mu_K(d)B_d(D,H).
+ \label{sfac:eq:gcd-exact}
+\end{equation}
+For $T\ge1$ and $H\ge1$,
+\begin{equation}
+ C(D,H)-\sum_{\N d\le T}\mu_K(d)B_d(D,H)
+ \ll_\varepsilon D^\varepsilon
+        \left[H+\min\{HD/T,D^2/T^2\}\right].
+ \label{sfac:eq:gcd-tail}
+\end{equation}
+The estimate uses the native primitive conductor and Poisson formulas
+for ratios of coprime squarefree sextic columns.
+\end{proposition}
+
+\begin{proof}
+Expanding the squares, the coefficient of a column pair is
+$\sum_{d\mid(n_1,n_2)}\mu_K(d)=\mathbf1_{(n_1,n_2)=1}$.
+Its only possible surviving diagonal is $n_1=n_2=1$, which is absent.
+This proves \eqref{sfac:eq:gcd-exact}; all column and divisor sums are finite.
+
+For distinct squarefree columns let $g=(n_1,n_2)$ and $G=\N g$.
+Their ratio character, after cancellation of $g$, is nonprincipal and
+primitive at the good conductor, of norm
+$Q=\N(n_1n_2)/G^2$.  The original kernel retains the common-prime mask:
+\[
+ K_H(n_1,n_2)=\sum_{u\ne0}\Phi(\N u/H)
+  \chi_{n_1/g}(u)\overline{\chi_{n_2/g}(u)}
+  \mathbf1_{(u,g)=1}.
+\]
+Trivial counting and masked primitive completion give
+$|K_H|\ll_\varepsilon D^\varepsilon\min\{H,D/G\}$.
+For a dyadic gcd block $G\le\N g<2G$, counting $g$ and then its two
+cofactors gives $O(D^2/G)$ pairs.  After division by $D$, the absolute
+block bound is
+$D^\varepsilon\min\{HD/G,D^2/G^2\}$.
+
+Put $\sigma_T(g)=\sum_{d\mid g,\,\N d\le T}\mu_K(d)$.
+For $1<\N g\le T$ this is zero, while for $\N g>T$ it is bounded by
+$\tau(g)\ll_\varepsilon D^\varepsilon$.  Thus the off-diagonal
+truncation error is bounded by the dyadic high-gcd tail, proving the
+minimum term in \eqref{sfac:eq:gcd-tail}.  The truncated diagonal is
+not generally zero.  Its absolute value is bounded by
+\[
+ D^{-1}\sum_n |\mu_K(n)\nu(n)W(\N n/D)|^2|\sigma_T(n)|
+       \sum_{u\ne0}\Phi(\N u/H)\mathbf1_{(u,n)=1}
+ \ll_\varepsilon HD^\varepsilon,
+\]
+by ideal and lattice counting.  This proves the remaining term.
+\end{proof}
+
+For squarefree $d$, extraction of $d\mid n$ gives
+\[
+ \sum_{d\mid n}x_u(n)=\mu_K(d)\lambda_u(d)
+ \sum_{(m,dS)=1}\mu_K(m)\lambda_u(m)W(\N m/(D/\N d)).
+\]
+Both the column mask $(m,d)=1$ and the row mask $(u,d)=1$ survive.
+If $\mathfrak M_d(X,H)$ denotes the corresponding inner moment
+normalized by $1/X$, then
+\begin{equation}
+ B_d(D,H)=(\N d)^{-1}\mathfrak M_d(D/\N d,H).
+ \label{sfac:eq:gcd-scale}
+\end{equation}
+The row scale is still $H$; it does not become $(D/\N d)^h$.
+
+For $H=D^h$ and $a\ge0$, either $T\ge D^{1-a}$ or
+$T\ge D^{1-(h+a)/2}$ makes \eqref{sfac:eq:gcd-tail} affordable at
+$D^{h+a+\varepsilon}$.  At $a=0$ the smaller useful cutoff is
+$D^{1-h/2}$.  This original-row cutoff differs from the
+$D^{1/2}$ overlap cutoff in the earlier transformed kernel.  Moreover
+$B_1=\mathfrak M_W(D,H)$: a triangle bound on
+\eqref{sfac:eq:gcd-exact} retains the very moment to be proved.
+
+There is a finite local check of the signed compensation.  For
+$\Re s,\Re t>1$ and $a_p=\lambda_u(p)$,
+\[
+ \sum_{(m,n)=1}\frac{\mu_K(m)\mu_K(n)\lambda_u(m)
+          \overline{\lambda_u(n)}}{(\N m)^s(\N n)^t}
+ =\prod_{p\notin S}(1-a_p(\N p)^{-s}-\overline{a_p}(\N p)^{-t}).
+\]
+If the columns are all squarefree divisors of a product of $k$ primes
+with $a_p=1$, and the profile is replaced by $1$ in this finite test,
+the total including the unit column is $(-1)^k$, whereas its distinct
+prime-only part is $k(k-1)$.  This identity illustrates compensation;
+it makes no annular asymptotic assertion.
+
+% Section fragment prepared for Edward Baker, 8 October 2026.
+% GPT-6 (Codex), inherited configuration; exact serving variant and effort
+% label are not exposed. Same-model internal derivation and audit.
+% Uses master macros \N,\OO,\muK,\ind,\rad,\Mfrak,\eps.
+% Imported arithmetic/Poisson identities and positive valid-range moment
+% are explicitly separated from the new kernel/counting deductions.
+
+\section{Complete row kernels and the controlled overlap sector}
+\label{sec:complete-kernels}\label{sec:overlap}
+
+This section records a second reduction of the short-family problem.
+It is an alternative to the zero-integral factorization reduction.
+The remaining signed form is not estimated here.
+Keep the original fixed data over \(K=\mathbb Q(\sqrt{-3})\).
+Suppress the fixed profile subscript on \(\Mfrak_W\) in this section.
+Ideals are prime to \(S\), and their fixed primary generators are used
+in residue symbols. A star denotes this restriction together with
+squarefreeness. Let \(\operatorname{supp}W\subset[c,C]\subset(0,\infty)\).
+Choose the fixed nonnegative radial Schwartz weight \(\Phi\), with
+\(\Phi\ge1\) on \([0,1]\) and \(\widehat\Phi\) smooth and compactly
+supported. Use the normalized radial Fourier transform
+\[
+ \widehat F(|w|^2)=\frac2{\sqrt3}\int_{\mathbb C}
+      F(|z|^2)e(-zw)\,dx\,dy,\qquad
+ e(z)=\exp(4\pi i\,\operatorname{Im}z/\sqrt3).
+\]
+The row lattice has covolume one in this measure. Fourier inversion
+gives \(\widehat{\widehat F}=F\) for radial functions.
+
+\subsection{The full diagonal and the original coprime core}
+
+Write \(x_u(n)=\muK(n)\nu(n)\chi_n(u)W(\N(n)/D)\).
+The original normalized smooth moment is
+\(\Mfrak(D,H)=D^{-1}\sum_u\Phi(\N(u)/H)|\sum_nx_u(n)|^2\).
+For large \(D\), the zero row contributes nothing.
+
+\begin{proposition}[Full diagonal removal]\label{prop:ov-diagonal}
+For \(H\ge1\),
+\begin{align*}
+ \Mfrak(D,H)&=\mathfrak D(D,H)+\mathfrak O(D,H),\\
+ \mathfrak D(D,H)&=\frac1D\sum_n|\muK(n)\nu(n)W(\N(n)/D)|^2
+       \sum_u\Phi(\N(u)/H)\ind_{(u,n)=1}.
+\end{align*}
+where \(\mathfrak O\) contains exactly the distinct column pairs, and
+\(\mathfrak D(D,H)\ll H\). Its original coprime part is
+\begin{equation}\label{eq:ov-original-core}
+ \mathfrak C(D,H)=\frac1D\sum_u\Phi(\N(u)/H)
+   \sum_{\substack{n_1\ne n_2\\(n_1,n_2)=1}}
+               \overline{x_u(n_1)}x_u(n_2).
+\end{equation}
+\end{proposition}
+\begin{proof}
+Expand the square in the displayed conjugated orientation.
+The zero extension gives \(|\chi_n(u)|^2=\ind_{(u,n)=1}\)
+on the squarefree support. Lattice counting bounds the inner row
+sum by \(O_\Phi(H)\), and ideal counting bounds the weighted column
+sum by \(O_W(D)\). This proves the diagonal bound.
+Equation~\eqref{eq:ov-original-core} is a subform of the remaining
+distinct pairs. It is not a positive submoment.
+\end{proof}
+
+The diagonal above includes every Fourier frequency of each diagonal
+column pair. Subtracting only the first Poisson zero frequency would
+leave diagonal terms in the dual form.
+
+\subsection{The finite transformed representation}
+
+We specify the imported arithmetic packet rather than reproduce its
+ray-group construction. There is a fixed finite collection of actual
+coefficients \(a_\xi(n)\), with \(|a_\xi(n)|=1\) on good squarefree
+ideals, and fixed constants \(c_\xi\). For distinct coprime columns,
+put \(\psi=\chi_{n_1}\overline{\chi_{n_2}}\). The paired-Gauss identity is
+\begin{equation}\label{eq:ov-paired-gauss}
+ \sum_\xi c_\xi a_\xi(n_1)\overline{a_\xi(n_2)}
+ =\muK(n_1)\muK(n_2)\overline{\nu(n_1)}\nu(n_2)
+                                      \gamma(\overline\psi).
+\end{equation}
+For a primitive character of conductor \(\mathfrak m\), define
+\[
+ \gamma(\psi)=\N(\mathfrak m)^{-1/2}
+      \sum_{x\bmod\mathfrak m}\psi(x)e(x/\mathfrak m),
+\]
+using the fixed generator in the quotient. Thus
+\(|\gamma(\psi)|=1\) and
+\(\gamma(\psi)\gamma(\overline\psi)=\psi(-1)\).
+These are the finite identities of \cite[Lemma~4.1]{OA5}.
+Their source-correct conventions, including the angular factor in
+\(a_\xi\), are recorded in \cite{N3}; no arbitrary coefficient family
+is substituted for them.
+
+Put \(W_0(t)=t^{-1/2}\overline{W(t)}\). Primitive Poisson and the
+finite changes of variables in \cite[Section~4.4]{OA5} give
+\begin{equation}\label{eq:ov-transformed}
+ \Mfrak-\mathfrak D=\sum_\xi c_\xi\mathfrak S^\circ_\xi,
+\end{equation}
+where
+\begin{align}
+ \mathfrak S^\circ_\xi
+ ={}&\frac H{D^2}\!
+ \sum_{\substack{b,f\\(b,f)=1}}^*\muK(f)\N(b)
+ \sum_{\substack{m_1,m_2\\(m_1m_2,b)=1\\m_1\ne m_2}}^*
+ a_\xi(m_1)\overline{a_\xi(m_2)}
+ \chi_{m_1}(f)^4\overline{\chi_{m_2}(f)^4}
+ \notag\\[-2mm]
+ &\hspace{12mm}\cdot
+ W_0(\N(bfm_1)/D)\overline{W_0(\N(bfm_2)/D)}
+                              \mathcal K_f(m_1,m_2),\label{eq:ov-S}\\
+ \mathcal K_f(m_1,m_2)
+ ={}&\sum_{k\in\OO\setminus\{0\}}
+ \chi_{m_1}(k)\overline{\chi_{m_2}(k)}
+ \widehat\Phi\!\left(\frac{H\N(k)}
+                  {\N(f)^2\N(m_1)\N(m_2)}\right).
+ \label{eq:ov-K}
+\end{align}
+The \(f\)-characters retain the mask \((m_1m_2,f)=1\); the
+\(b\)-mask is displayed. No coprimality between \(m_1,m_2\) is
+imposed. The complete \(k\)-sum must be retained.
+The original condition \(n_1\ne n_2\) becomes exactly \(m_1\ne m_2\).
+These are finite Poisson/algebra identities, valid for \(H>0\);
+they do not extend the source's deep moment theorem beyond its range.
+For the variable bijection and the corrected complex-profile
+orientation, see \cite{N2,N3}.
+
+\begin{proposition}[Exact second-Poisson involution]
+\label{prop:ov-involution}
+In \eqref{eq:ov-S}, restrict to \(b=f=1\) and
+\((m_1,m_2)=1\). After the original finite \(c_\xi\)-combination,
+this restricted form equals \(\mathfrak C(D,H)\) in
+\eqref{eq:ov-original-core}.
+\end{proposition}
+\begin{proof}
+Set \(q=\N(m_1m_2)\) and
+\(\psi=\chi_{m_1}\overline{\chi_{m_2}}\). The columns are distinct,
+so \(\psi\) is nonprincipal and primitive of conductor \(m_1m_2\).
+There is no shared-prime mask. Poisson at scale \(q/H\), followed
+by radial Fourier inversion, gives exactly
+\[
+ \mathcal K_1(m_1,m_2)
+ =\frac{\sqrt q}{H}\gamma(\psi)
+               \sum_{u\ne0}\overline{\psi(u)}\Phi(\N(u)/H).
+\]
+The physical factors satisfy
+\[
+ \frac H{D^2}\frac{\sqrt q}{H}
+ W_0(\N(m_1)/D)\overline{W_0(\N(m_2)/D)}
+ =\frac1D\overline{W(\N(m_1)/D)}W(\N(m_2)/D).
+\]
+Now apply \eqref{eq:ov-paired-gauss}. The two Gauss factors multiply
+to \(\psi(-1)\), which is removed from the complete radial row sum
+by \(u\mapsto-u\). The resulting expression is precisely
+\eqref{eq:ov-original-core}. Thus the second transform alone is an
+involution, not a shorter-scale estimate.
+\end{proof}
+
+\subsection{Uniform primitive completion and overlap counting}
+
+\begin{lemma}[Complete primitive kernel]\label{lem:ov-kernel}
+For distinct good squarefree \(m_1,m_2\), put
+\[
+ g=(m_1,m_2),\quad G=\N(g),\quad
+ \mathfrak c=m_1m_2/g^2,\quad Q=\N(\mathfrak c),\quad
+ R=\frac{\N(f)^2\N(m_1)\N(m_2)}H.
+\]
+Then
+\[
+ |\mathcal K_f(m_1,m_2)|\ll_\Phi\tau(g)\sqrt Q.
+\]
+In the column ranges of \eqref{eq:ov-S}, this implies
+\begin{equation}\label{eq:ov-min-kernel}
+ |\mathcal K_f(m_1,m_2)|
+ \ll_{\Phi,\eps}D^\eps\min\{R,\sqrt Q\}.
+\end{equation}
+If \(Z=\N(f)^2G/H\ge1\), then for every fixed \(A>1\),
+\begin{equation}\label{eq:ov-rapid-kernel}
+ |\mathcal K_f(m_1,m_2)|
+ \ll_{\Phi,A}\tau(g)\frac R{\sqrt Q}Z^{-A}.
+\end{equation}
+\end{lemma}
+\begin{proof}
+At a prime present in only one column, the local sextic character
+has exponent \(1\) or \(-1\), hence conductor exponent one.
+Thus the ratio is a nonprincipal primitive character \(\psi\) of
+conductor \(\mathfrak c\), with \((\mathfrak c,g)=1\), and
+\[
+ \chi_{m_1}(k)\overline{\chi_{m_2}(k)}
+       =\psi(k)\ind_{(k,g)=1}.
+\]
+Apply the masked primitive Poisson formula
+\cite[Lemma~4.2]{OA5} with weight \(\widehat\Phi\).
+For a divisor \(d\mid g\), the prefactor has modulus
+\(R/(\N(d)\sqrt Q)\), and the frequency scale is
+\(t_d=R/(\N(d)Q)\). The zero frequency vanishes.
+Lattice counting and Schwartz decay give
+\[
+ t\sum_{\ell\in\OO\setminus\{0\}}|\Phi(t\N(\ell))|
+       \ll_\Phi1\qquad(t>0).
+\]
+Each divisor therefore costs \(O_\Phi(\sqrt Q)\).
+This proves the uniform bound. Compact support of
+\(\widehat\Phi\) gives the additional bound \(O_\Phi(R)\)
+at every positive \(R\): a nonempty row sum forces \(R\)
+above a fixed positive constant. Absorb \(\tau(g)\) into
+\(D^\eps\) to obtain \eqref{eq:ov-min-kernel}.
+Finally \(t_d=\N(f)^2G^2/(H\N(d))\ge Z\).
+For \(t\ge1\), arbitrary Schwartz decay gives
+\(\sum_{\ell\ne0}|\Phi(t\N(\ell))|\ll_{\Phi,A}t^{-A}\).
+Sum the corresponding Poisson divisor terms to obtain
+\eqref{eq:ov-rapid-kernel}.
+\end{proof}
+
+\begin{proposition}[Controlled overlap blocks]\label{prop:ov-block}
+Let \(B,F,G\) be dyadic lower endpoints for
+\(\N(b),\N(f),\N((m_1,m_2))\), respectively. The block of
+\eqref{eq:ov-S} satisfies
+\begin{equation}\label{eq:ov-block}
+ |\mathfrak S^\circ_{\xi;B,F,G}|
+ \ll_\eps D^\eps
+       \min\left\{\frac{D^2}{B^2FG},
+                    \frac{HD}{BF^2G^2}\right\}.
+\end{equation}
+The bound remains valid after a selector of modulus at most one
+on \(b,f,m_1,m_2\) independent of \(k\). In particular, for
+\(H=D^h\), all blocks with \(BF^2G^2\ge D^{1-a}\) contribute
+\(O_\eps(D^{h+a+\eps})\).
+\end{proposition}
+\begin{proof}
+The profile gives \(X=D/(BF)\), \(\N(m_j)\asymp X\),
+\(R\asymp D^2/(HB^2)\), and \(\sqrt Q\asymp X/G\).
+There are \(O(G)\) possible common ideals, and
+\(O(X/G)\) choices for each quotient column, giving
+\(O(X^2/G)\) pairs. Fixed support constants cover bounded
+nonempty quotient ranges; impossible blocks are empty.
+The counts of \(b,f\) and the exterior factor give
+\[
+ \frac{HB^2F}{D^2}\frac{X^2}{G}
+       D^\eps\min\left\{\frac{D^2}{HB^2},\frac XG\right\},
+\]
+which simplifies to \eqref{eq:ov-block}. This estimates an
+absolute majorant after each complete \(k\)-kernel has been assembled,
+proving the selector statement. The dyadic block count is logarithmic,
+and a smaller preliminary epsilon absorbs it.
+\end{proof}
+
+The cutoff is stated in dyadic lower endpoints. An actual norm product
+\(\N(b)\N(f)^2\N(g)^2\ge32D^{1-a}\) necessarily belongs to a
+controlled block. Boundary blocks may remain in the residual.
+The estimate does not authorize a selector inside the \(k\)-sum.
+
+\subsection{The imported valid range and the signed residual}
+
+The only deep analytic input used in this sector removal is the
+following valid-range source estimate \cite[Proposition~5.1]{OA5}.
+For fixed \(\kappa>0,C_0\ge1\), \(R,X,F\ge1\),
+\(\Sigma=XF\le D^{C_0}\), and \(R\le\Sigma D^{-\kappa}\),
+\begin{equation}\label{eq:ov-imported-positive}
+ \frac1{XF}\sum_{\N(f)\asymp F}^{*}
+ \sum_{0<\N(k)\le R}
+ \left|\sum_n^*a_\xi(n)\chi_n(k)\chi_n(f)^4V(\N(n)/X)\right|^2
+ \ll_\eps \|V\|_{C^J}^2D^\eps\Sigma .
+\end{equation}
+Here \(J\) and the constant have the dependencies in the source.
+The source's exclusion-removal comparison preserves \(\Sigma\)
+and the row range. Smooth separation on fixed compact boxes and
+Cauchy--Schwarz apply this estimate to the whole coupled quadratic
+block of \eqref{eq:ov-S}; the resulting cost is \(HD^\eps\).
+Indeed its outside factor and the two source norms give
+\((HB^2/D^2)\Sigma^2=H\).
+This application is made before imposing pair selectors.
+
+Fix \(0<h<1\), \(a\ge0\), \(H=D^h\), and \(0<\eta<h/10\).
+For complete blocks \(B\ge D^{1-h+\eta}\),
+\[
+ \frac R\Sigma\ll\frac{D}{HB}\ll D^{-\eta},
+\]
+so \eqref{eq:ov-imported-positive} applies with, for example,
+\(\kappa=\eta/2\) after absorbing fixed constants.
+Reintroducing and then subtracting the column diagonal costs
+\(D/B\ll HD^{-\eta}\). Bounded nonempty scales not covered by
+the source's \(R,X,F\ge1\) hypotheses are handled by direct counting.
+Next, on the remaining blocks,
+\eqref{eq:ov-rapid-kernel} removes
+\(\N(f)^2\N(g)\ge HD^{2\eta}\) with error \(O(D^{-L})\)
+for every requested \(L\). An explicit crude block cost is
+\(D^{2+\eps-2\eta A}\), so choosing \(A\) first suffices.
+Finally apply Proposition~\ref{prop:ov-block}.
+
+Consequently the remaining signed form can be restricted to
+\begin{equation}\label{eq:ov-residual}
+ B<D^{1-h+\eta},\qquad
+ \N(f)^2\N(g)<HD^{2\eta},\qquad
+ BF^2G^2<D^{1-a},\qquad m_1\ne m_2,
+\end{equation}
+with all original coefficients, masks, profiles and complete rows.
+Here the first and third restrictions concern dyadic lower endpoints,
+removing any boundary ambiguity. If \(\mathfrak S_{\xi,\rm rem}\)
+denotes this restriction, then
+\[
+ \Mfrak(D,D^h)=O_\eps(D^{h+a+\eps})
+       +\sum_\xi c_\xi\mathfrak S_{\xi,\rm rem}+O(D^{-L}).
+\]
+An upper bound \(D^{h+a+\eps}\) for the real part of the retained
+exterior combination therefore suffices for the original moment.
+No such signed bound is proved here.
+In particular \(B=F=G=1\) remains; the uniform block bound there
+is only \(O(HD^{1+\eps})\).
+The exact involution above explains why a second transform by itself
+does not settle that core. The earlier positive long-row and
+prime-selected counterchecks are documented in \cite{N2,N3,N7}.
+
+\section{The imported generic sextic baseline}
+\label{sec:generic-sextic-baseline}
+
+We import de Faveri's sixth-order large sieve, rather than proving it.
+For sixth-power-free good ideal indices and any coefficient vector,
+its operator bound is
+\begin{equation}\label{eq:imported-sextic-sieve}
+ \sum_{\N v\le M}^{\text{$6$-free}}
+ \left|\sum_{\N n\le N}^{\text{$6$-free}}b_n\chi_v^{\rm DF}(n)\right|^2
+ \ll_\eps(MN)^\eps
+ \left(M+N+M^{5/6}N^{1/3}+M^{1/3}N^{5/6}\right)\sum_n|b_n|^2.
+\end{equation}
+This is Theorem~1.1 of \emph{Optimal large sieve for fixed order characters},
+\cite{DF}. Its finite character presentation and zero extension,
+from Sections~2.3--2.5 of that source, are also part of the imported
+input. In the Eisenstein PID one can choose its generators so that,
+after finitely many unit and fixed bad-prime classes, a physical good
+sixth-power-free row $v_0$ satisfies
+$\chi_n(v_0)=\chi_n(\epsilon_v)\chi_v^{\rm DF}(n)$ with
+$\epsilon_v\in\mu_6$. Splitting the six values of $\epsilon_v$ makes
+the supplementary factor a fixed column twist. Both presentations
+retain the same zeros at primes dividing $v$; no temporary decomposition
+prime is inserted into the physical masks. On each class the column
+coefficient vector is fixed while $v$ varies, so positivity allows
+enlargement to the full row set in the imported operator bound.
+The fixed-data construction and full ray-class comparison are
+detailed in \cite{N6}.
+
+\begin{corollary}[Physical operator on sixth-power-free columns]
+\label{cor:physical-operator}
+For a fixed coefficient vector supported on sixth-power-free good ideals
+of norm at most \(X\), the imported sieve and stated presentation give
+\begin{align}
+ &\sum_{u\ne0}\Phi(\N u/H)
+       \left|\sum_n b_n\chi_n(u)\right|^2\notag\\
+ &\quad\ll_\eps(HX)^\eps
+ [H+XH^{1/6}+H^{5/6}X^{1/3}+H^{1/3}X^{5/6}]
+       \sum_n|b_n|^2. \label{eq:physical-operator}
+\end{align}
+\end{corollary}
+\begin{proof}
+For each fixed sixth-power factor \(r\), keep the column mask
+\((n,r)=1\); its squared norm is at most \(\sum|b_n|^2\).
+Apply the imported ideal-row sieve at \(H/(\N r)^6\).
+The four terms sum with inverse powers \(6,0,5,2\) of \(\N r\).
+The constant term counts \(O(H^{1/6})\) ideals and the other
+three sums converge. Finite presentation splitting and Schwartz
+row shells give the displayed bound.
+\end{proof}
+
+\begin{proposition}[Physical-row transfer of the generic sieve]
+\label{prop:physical-generic-sieve}
+Conditional on \eqref{eq:imported-sextic-sieve} and the stated
+presentation, for $D,H\ge1$,
+\begin{equation}\label{eq:physical-generic-sieve}
+ \Mfrak_{\le}(D,H)\ll_\eps(DH)^\eps
+ \left(H+DH^{1/6}+H^{5/6}D^{1/3}+H^{1/3}D^{5/6}\right).
+\end{equation}
+The same bound holds with a fixed Schwartz row weight. It also holds
+for bounded squarefree-supported column coefficients in place of
+$\muK\nu$.
+\end{proposition}
+
+\begin{proof}
+Apply Corollary~\ref{cor:physical-operator} with \(X=CD\) and
+\(b_n=\muK(n)\nu(n)W(\N n/D)\). Its squared norm is \(O_W(D)\)
+by ideal counting. Divide by \(D\), and absorb the fixed support
+constant. The same argument covers bounded squarefree-supported
+coefficients and the sharp weight.
+\end{proof}
+
+For $1\le H\le D$ the right side is $O_\eps(D^{1+\eps}H^{1/6})$.
+At $H=D^h$ it supplies only $a=1-5h/6$, whose extraction floor is one.
+This power is necessary for the broad bounded coefficient class:
+with trivial twist, a nonnegative nonzero annular profile, and prime-only
+columns, every row $u=r^6$ with $\N r\le H^{1/6}$ has no prime mask on
+the profile for large $D$, and has amplitude $\asymp D/\log D$ by the
+prime ideal theorem. Ideal counting supplies $\asymp H^{1/6}$ such rows,
+so their normalized energy is $\gg DH^{1/6}/(\log D)^2$.
+This is a selected-coefficient obstruction, not a lower bound for the
+unrestricted M\"obius family. A useful target \eqref{eq:improvement-budget}
+requires more than a quarter power beyond that generic baseline and
+must preserve additional arithmetic cancellation.
+
+% Assembly references: notes 1, 5, 6; reviews
+% SHORT_FAMILY_REFINEMENT_REVIEW_20261008.md and
+% SHORT_FAMILY_CORE_AND_OVERLAP_REVIEW_20261008.md.
+
+% Section fragment prepared for Edward Baker, 8 October 2026.
+% Substantial GPT-6 (Codex) assistance; inherited configuration.
+% Exact serving variant and configured effort are not exposed or inferred.
+% Uses the manuscript's existing macros, theorem environments and labels.
+
+\section{A nonsquarefree tail bound and a squarefree residual}
+\label{sec:squarefree-tail}
+
+The exact inverse creates nonsquarefree total products even though the
+original M\"obius coefficient vanishes on them. Their complete contribution
+can now be bounded, using the existing completion and physical operator.
+This gives a squarefree residual at a different adaptive cutoff from
+Section~\ref{sec:packets}; the signed moment of that residual remains open.
+The detailed derivation is recorded in \cite{N17}.
+
+Fix a zero-integral annular profile \(W\) and \(0<\theta<1\).
+Write \(I_u^{(\theta)},T_u^{(\theta)}\) for the adaptive sums with
+\(Y_u^{(\theta)}=D^{1-\theta}/L_u\). Define projection by the total ideal:
+\begin{align}
+ T_{u,\mathrm{nsq}}^{(\theta)}
+ &=-\sum_{\substack{d,m\in\good\\
+             \N d>Y_u^{(\theta)}\\dm\ \mathrm{nonsquarefree}}}
+       c_z(d)\lambda_u(dm)W(\N(dm)/D),\notag\\
+ \mathcal E_{\mathrm{nsq}}^{(\theta)}(D,H)
+ &=\frac1D\sum_{u\ne0}\Phi(\N u/H)
+       |T_{u,\mathrm{nsq}}^{(\theta)}|^2.\label{eq:nsq-projection}
+\end{align}
+The analogous small-product projection is denoted
+\(I_{u,\mathrm{nsq}}^{(\theta)}\). Set
+\[
+ \mathcal B(H,X)=H+XH^{1/6}
+                   +H^{5/6}X^{1/3}+H^{1/3}X^{5/6},
+\]
+the operator factor in Corollary~\ref{cor:physical-operator}.
+
+\begin{theorem}[Complete nonsquarefree sector]\label{thm:nsq-tail}
+For every fixed \(0<\theta<1\), every fixed smooth annular \(W\) with
+\(\int W=0\), \(1\le H\le D\), and every \(\eps>0\),
+\begin{equation}\label{eq:nsq-tail-bound}
+ \mathcal E_{\mathrm{nsq}}^{(\theta)}(D,H)
+ \ll_{\eps,\theta,W,\Phi}
+ D^\eps\min\{HD^{1-\theta},
+                    D^{-\theta/2}\mathcal B(H,D)\}.
+\end{equation}
+The second bound uses the imported physical operator on arbitrary
+sixth-power-free columns. No new M\"obius or conductor-uniform
+reciprocal estimate is assumed.
+\end{theorem}
+
+\begin{proof}
+The exact factorization \eqref{sfac:eq:factor} and the vanishing of
+\(\muK(n)\) on nonsquarefree ideals give the pointwise identity
+\begin{equation}\label{eq:nsq-small-tail}
+ T_{u,\mathrm{nsq}}^{(\theta)}
+       =-I_{u,\mathrm{nsq}}^{(\theta)}.
+\end{equation}
+Use the finite divisor identity
+\[
+ \ind_{n\ \mathrm{nonsquarefree}}
+       =-\sum_{\substack{k^2\mid n\\k\ne1}}\muK(k),
+\]
+and split the auxiliary ideals at \(R=D^\rho\), with
+\(0<2\rho<\theta\). Let \(J_{u,\le R}\) and \(J_{u,>R}\) be the
+resulting contributions to \(I_{u,\mathrm{nsq}}^{(\theta)}\).
+
+For fixed \(d,k\), put \(j=k^2/(k^2,d)\). Ideal valuations give
+\(k^2\mid dm\) if and only if \(j\mid m\), so complete multiplicativity,
+including its zeros, gives
+\[
+ \sum_{m:k^2\mid dm}\lambda_u(m)W(\N(dm)/D)
+ =\lambda_u(j)S_u\!\left(\frac D{\N d\,\N j}\right).
+\]
+For \(\N d\le Y_u^{(\theta)}\) and \(\N k\le R\),
+\(\N j\le R^2\) and \(L_u\N d\,\N j/D\le D^{-\theta}R^2\).
+There are \(O(R)\) auxiliary ideals, and
+\(\sum_{\N d\le Y}|c_z(d)|\ll Y\log(2Y)\).
+Lemmas~\ref{sfac:lem:completion} and~\ref{sfac:lem:mass} therefore imply,
+for every completion order \(M\ge0\) and \(\delta>0\),
+\begin{equation}\label{eq:nsq-small-square}
+ \frac1D\sum_{u\ne0}\Phi(\N u/H)|J_{u,\le R}|^2
+ \ll_{M,\delta,W,\Phi}
+ D^{1-2\theta}R^2\log^2(2D)H^\delta
+                         (D^{-\theta}R^2)^{2M}.
+\end{equation}
+The small sum is empty when \(Y_u^{(\theta)}<1\).
+Since \(\theta-2\rho>0\) and \(H\le D\), this energy is
+\(O_N(D^{-N})\) for every requested \(N\), choosing \(M\) afterwards.
+
+For the remaining part, define the fixed coefficients
+\[
+ w_R(n)=-\sum_{\substack{k^2\mid n\\\N k>R}}\muK(k),
+ \qquad
+ v_Y(n)=-\sum_{\substack{d\mid n\\\N d\le Y}}c_z(d).
+\]
+Then
+\[
+ J_{u,>R}=\sum_n w_R(n)v_{Y_u^{(\theta)}}(n)
+                         \lambda_u(n)W(\N n/D).
+\]
+With \(\tau_3=\mathbf1*\mathbf1*\mathbf1\), uniformly in \(Y\),
+\[
+ |v_Y(n)|\le\tau_3(n),\qquad
+ |w_R(n)|\le\sum_{\substack{k^2\mid n\\\N k>R}}1.
+\]
+The divisor bound and ideal counting yield
+\[
+ |J_{u,>R}|
+ \ll_{\eps,W}D^\eps
+       \sum_{\N k>R}\#\{m:\N(k^2m)\le CD\}
+ \ll_{\eps,W}D^{1+\eps}/R,
+\]
+because \(\sum_{\N k>R}(\N k)^{-2}\ll R^{-1}\).
+The full row weight has mass \(O_\Phi(H)\), hence
+\begin{equation}\label{eq:nsq-elementary-large}
+ \frac1D\sum_{u\ne0}\Phi(\N u/H)|J_{u,>R}|^2
+                  \ll_{\eps,W,\Phi}HD^{1+\eps}/R^2.
+\end{equation}
+
+For a sharper bound, order the good ideals \(d\) of norm at most \(CD\)
+by norm, fixing ties. The condition \(\N d\le Y_u^{(\theta)}\) is a
+prefix. A fixed binary partition expresses each prefix as
+\(O(\log D)\) intervals, with \(O(\log D)\) partition levels.
+Thus a maximal-prefix bound follows by Cauchy and the sum of squares
+over the fixed intervals; no row-dependent vector is passed to an
+operator.
+
+Uniquely write \(n=\ell^6n_0\), with \(n_0\) sixth-power-free, and put
+\(X_\ell=CD/(\N\ell)^6\). For a fixed partition interval \(\mathcal J\),
+the column vector, up to its common sign, is
+\[
+ b_{\mathcal J,\ell}(n_0)=
+ w_R(\ell^6n_0)\nu(\ell^6n_0)W(\N(\ell^6n_0)/D)
+       \sum_{\substack{d\mid\ell^6n_0\\d\in\mathcal J}}c_z(d).
+\]
+The physical identity
+\(\chi_{\ell^6n_0}(u)=\ind_{(u,\ell)=1}\chi_{n_0}(u)\)
+retains the common row mask. For each \(\ell\) it may be removed only
+by enlarging a nonnegative sum of squares.
+
+If \(w_R(\ell^6n_0)\ne0\), some squarefree \(k\), \(\N k>R\),
+has \(k^2\mid\ell^6n_0\). Set \(g=(k,\ell)\), \(k_2=k/g\).
+Squarefreeness of \(k\) gives
+\[
+ k_2^2\mid n_0,\qquad \N k_2>R/\N\ell.
+\]
+Summing ideal counts over these square divisors, or using the
+unrestricted count when \(R/\N\ell<1\), shows that the number of
+possible columns is
+\[
+ \ll X_\ell\min\{1,\N\ell/R\}.
+\]
+On each partition level the intervals are disjoint in \(d\), so
+\[
+ \sum_{\mathcal J}
+ \left|\sum_{\substack{d\mid n\\d\in\mathcal J}}c_z(d)\right|^2
+ \le\left(\sum_{d\mid n}|c_z(d)|\right)^2\le\tau_3(n)^2.
+\]
+Also \(|w_R(n)|\le\tau(n)\). Consequently, on each level,
+\[
+ \sum_{\mathcal J}\norm{b_{\mathcal J,\ell}}_2^2
+ \ll_{\eps,W}D^\eps X_\ell\min\{1,\N\ell/R\}.
+\]
+Corollary~\ref{cor:physical-operator}, applied to these fixed
+sixth-power-free vectors, bounds the \(\ell\)-channel with any prefix
+by this quantity times \(D^\eps\mathcal B(H,X_\ell)\).
+All partition and maximal-prefix logarithms are absorbed by
+reallocating epsilon.
+
+Finally weighted Cauchy in \(\ell\) uses
+\(\sum_\ell(\N\ell)^{-2}<\infty\). After division by \(D\),
+\begin{align}
+ \frac1D\sum_{u\ne0}\Phi(\N u/H)|J_{u,>R}|^2
+ &\ll_{\eps,W,\Phi}D^\eps
+   \sum_\ell(\N\ell)^{-4}\min\{1,\N\ell/R\}
+                       \mathcal B(H,X_\ell)\notag\\
+ &\ll_{\eps,W,\Phi}\frac{D^\eps}{R}\mathcal B(H,D)
+                         \sum_\ell(\N\ell)^{-3}
+ \ll_{\eps,W,\Phi}D^\eps\mathcal B(H,D)/R.
+ \label{eq:nsq-sparse-large}
+\end{align}
+Only \(X_\ell\ge1\) can contribute. The fixed annular constant \(C\)
+is absorbed when comparing the operator factors.
+
+Choose \(\rho=\theta/2-\kappa\), where the fixed positive \(\kappa\)
+and the preliminary divisor and operator epsilons are sufficiently
+small in terms of the requested \(\eps,\theta\).
+Equations~\eqref{eq:nsq-small-square}--\eqref{eq:nsq-sparse-large}
+then give \eqref{eq:nsq-tail-bound}. Both large-square bounds estimate
+the same vector, so taking their minimum is legitimate.
+\end{proof}
+
+\begin{corollary}[An affordable squarefree residual]\label{cor:sf-residual}
+Let \(H=D^{2/5}\), \(\theta=11/20\), and \(\int W=0\). Then
+\begin{equation}\label{eq:nsq-affordable}
+ \mathcal E_{\mathrm{nsq}}^{(11/20)}(D,D^{2/5})
+       \ll_{\eps,W,\Phi}D^{19/24+\eps},
+ \qquad \frac45-\frac{19}{24}=\frac1{120}.
+\end{equation}
+If \(T_{u,\mathrm{sf}}^{(\theta)}\) retains only squarefree total
+ideals, the full moment target
+\(\mathfrak M_W(D,D^{2/5})\ll_\eps D^{4/5+\eps}\)
+is equivalent to
+\begin{equation}\label{eq:sf-residual-target}
+ \frac1D\sum_{u\ne0}\Phi(\N u/D^{2/5})
+       |T_{u,\mathrm{sf}}^{(11/20)}|^2
+                       \ll_\eps D^{4/5+\eps}.
+\end{equation}
+The estimate \eqref{eq:sf-residual-target} remains open.
+\end{corollary}
+
+\begin{proof}
+At \(H=D^{2/5}\), \(\mathcal B(H,D)\ll D^{16/15}\), and
+\(16/15-11/40=19/24\). Theorem~\ref{sfac:thm:adaptive} equates the
+full zero-integral moment with its full adaptive tail moment.
+Equation~\eqref{eq:nsq-affordable} then permits removing or restoring
+the nonsquarefree response by the weighted triangle inequality.
+\end{proof}
+
+In the remaining factorization, squarefreeness of the total ideal
+\(n=abm\) forces \(a,b,m\) to be squarefree and pairwise coprime.
+These restrictions are now justified with a proved error budget;
+they were not permissible in the original exact convolution.
+The restricted \(m\)-sum is no longer a free ideal sum, so its
+completion requires a separate argument.
+
+Since \(Y_u^{(11/20)}\le D^{9/20}<z\) for sufficiently large \(D\),
+\eqref{eq:packet-inverse-coefficient} also gives the exact residual form
+\[
+ T_{u,\mathrm{sf}}^{(11/20)}
+ =\sum_{n\ \mathrm{squarefree}}
+ \left[\muK(n)+
+   \sum_{\substack{d\mid n\\\N d\le D^{9/20}/L_u}}
+                    (-2)^{\omega(d)}\right]
+              \lambda_u(n)W(\N n/D).
+\]
+The inner sum is empty when \(Y_u^{(11/20)}<1\). This identity
+does not estimate the remaining signed response.
+
+The cutoff differs from \(\theta=1/40\) in
+Corollary~\ref{cor:packet-energy}. For zero-integral profiles, the
+full vectors at any two fixed positive buffers differ by an
+arbitrarily small weighted response, by
+Theorem~\ref{sfac:thm:adaptive}; their product projections need not.
+The controlled sectors from the two representations cannot therefore
+be combined as projections of one unchanged tail.
+
+\section{Quantitative cutoffs for coherent cores}
+\label{sfac:subsec:cores}
+
+The decomposition $u=\eta vr^6$ also permits a precise separation of
+fixed-core information from growing-conductor assumptions.  Use the
+finite unit and bad-prime splitting, retain the complete row weight,
+and put
+\[
+ \tau_{\eta,v}(n)=\nu(n)\chi_n(\eta v),\qquad
+ C_{\eta,v}(X)=\sum_{n\in\good}
+      \mu_K(n)\tau_{\eta,v}(n)W(\N n/X).
+\]
+Euler-factor completion gives the exact masked identity
+\begin{equation}
+ A_{\eta vr^6,W}(D)=
+   \sum_{\substack{d\in\good\\
+                  \operatorname{rad}(d)\mid\operatorname{rad}(r)}}
+       \tau_{\eta,v}(d)C_{\eta,v}(D/\N d).
+ \label{sfac:eq:core-completion}
+\end{equation}
+Every good prime power supported on $\operatorname{rad}(r)$ is allowed
+in this sum; primes in $S$ have no effect on the completion.  Zeros at primes dividing $vS$ are retained; the annular
+profile makes the sum finite.
+
+\begin{proposition}[Conditional low-core estimate]
+\label{sfac:prop:core-cutoff}
+Fix $\beta>0$.  Assume, explicitly, that for each core under
+consideration and every $\varepsilon>0$,
+\begin{equation}
+ |C_{\eta,v}(X)|\ll
+ C_{\eta,v,\varepsilon}X^{\beta+\varepsilon}
+ \label{sfac:eq:core-hypothesis}
+\end{equation}
+at all nonempty scales, including bounded scales.  For $1\le V\le H$,
+the moment restricted to cores $\N v\le V$ satisfies
+\begin{equation}
+ \mathfrak M_{\le V}(D,H)\ll_\varepsilon
+ D^{2\beta-1+\varepsilon}H^{1/6}
+       \sum_\eta\sum_{\N v\le V}
+           C_{\eta,v,\varepsilon}^{\,2}(\N v)^{-1/6}.
+ \label{sfac:eq:low-core}
+\end{equation}
+In particular, an additional conductor-uniform hypothesis
+$C_{\eta,v,\varepsilon}\ll_\varepsilon(\N v)^\kappa$, $\kappa\ge0$,
+would give
+\begin{equation}
+ \mathfrak M_{\le V}(D,H)\ll_\varepsilon
+   D^{2\beta-1+\varepsilon}H^{1/6}V^{2\kappa+5/6}.
+ \label{sfac:eq:low-core-uniform}
+\end{equation}
+Fixed-character estimates alone do not provide this uniformity.
+\end{proposition}
+
+\begin{proof}
+Use a smaller preliminary epsilon in \eqref{sfac:eq:core-hypothesis}.
+Equation \eqref{sfac:eq:core-completion} bounds each row amplitude by
+$C_{\eta,v,\varepsilon}D^{\beta+\varepsilon}F_\beta(r)$, where
+\[
+ F_\beta(r)=\prod_{p\mid r}(1-(\N p)^{-\beta})^{-1}.
+\]
+For this auxiliary row-ideal average, convolution is on all integral
+ideals, including primes in $S$, rather than on the coefficient monoid.
+The multiplicative function $F_\beta^2=\mathbf1*g_\beta$ has
+nonnegative squarefree-supported coefficients with
+$g_\beta(p)=(1-(\N p)^{-\beta})^{-2}-1$.  Its Euler product
+\[
+ \sum_d\frac{g_\beta(d)}{\N d}
+   =\prod_p\left(1+
+    \frac{(1-(\N p)^{-\beta})^{-2}-1}{\N p}\right)
+\]
+converges because $\beta>0$.  Ideal counting consequently gives
+$\sum_{\N r\le R}F_\beta(r)^2\ll_\beta R$ for $R\ge1$.
+Dyadic shells against $\Phi(\N v(\N r)^6/H)$ have total
+$O((H/\N v)^{1/6})$ when $\N v\le H$.  Summing the squared amplitudes
+and dividing by $D$ proves \eqref{sfac:eq:low-core}.
+Under the additional uniformity, ideal counting gives
+$\sum_{\N v\le V}(\N v)^{2\kappa-1/6}\ll V^{2\kappa+5/6}$.
+\end{proof}
+
+For comparison, the imported ideal-row sieve
+\eqref{eq:imported-sextic-sieve}, with its stated native-family transfer,
+has operator factor
+\[
+ \Theta_6(U,X)\ll_\varepsilon(UX)^\varepsilon
+   [U+X+U^{5/6}X^{1/3}+U^{1/3}X^{5/6}].
+\]
+Keeping each fixed $r$-mask, its complementary-core consequence is
+\begin{equation}
+ \mathfrak M_{>V}(D,H)\ll_\varepsilon(DH)^\varepsilon
+ \left[H+D(H/V)^{1/6}
+          +H^{5/6}D^{1/3}+H^{1/3}D^{5/6}\right].
+ \label{sfac:eq:high-core-generic}
+\end{equation}
+To see the multiplicity budgets, in a bounded row shell fix $r$ and
+apply the sieve at core length $H/(\N r)^6$.  Only
+$\N r\ll(H/V)^{1/6}$ can pay its $D$ term.  The $H$, $H^{5/6}$,
+and $H^{1/3}$ terms sum respectively with inverse powers
+$(\N r)^{-6}$, $(\N r)^{-5}$, and $(\N r)^{-2}$, all convergent.
+Schwartz row shells recover the full weight.  This deduction retains
+the imported status of the sieve and its native-family transfer.
+
+For example, even granting $\beta=7/8$, a fixed finite core collection
+has the supplied upper-bound exponent $3/4+h/6$; it does not improve
+that benchmark scalar exponent.  Moreover the last term of
+\eqref{sfac:eq:high-core-generic} has exponent $5/6+h/3$, larger
+than every useful budget $h+a<3/4+h/6$ by more than
+$1/12+h/6$.  This is an insufficiency of the supplied upper bound,
+not a lower bound for the actual Möbius energy.
+
+
+
+\section{Selected pieces that cannot meet the useful budget}
+\label{sec:obstructions}
+
+The following obstructions concern actual selected components.
+They rule out giving the target bound separately to every such
+component. They do not lower-bound the full M\"obius moment.
+
+\subsection{The original prime-selected coprime core}
+
+\begin{proposition}[Prime-column obstruction]\label{prop:prime-core}
+Let \(\nu=1\), let \(W\) be nonnegative and nonzero, and let
+\(H=D^h\), \(0<h<1\).
+The coprime off-diagonal form restricted to distinct good prime
+columns satisfies
+\begin{equation}\label{eq:prime-core-lower}
+ \mathfrak C_{\rm prime}(D,H)
+ \gg \frac{DH^{1/6}}{(\log D)^2}-O\!\left(\frac H{\log D}\right)
+ \gg \frac{DH^{1/6}}{(\log D)^2}.
+\end{equation}
+\end{proposition}
+\begin{proof}
+Put \(P_u(D)=\sum_{p\notin S}\chi_p(u)W(\N p/D)\).
+The distinct-prime form is
+\[
+ \frac1D\sum_{u\ne0}\Phi(\N u/H)|P_u(D)|^2
+ -\frac1D\sum_p|W(\N p/D)|^2
+          \sum_{u\ne0}\Phi(\N u/H)\ind_{(u,p)=1}.
+\]
+Indeed \(\muK(p)=-1\), and distinct prime ideals are coprime.
+The diagonal is \(O(H/\log D)\) by lattice and prime ideal counting.
+There are \(\asymp H^{1/6}\) distinct coherent rows \(u=r^6\) in
+the inner ball. Every prime on the profile has norm \(\asymp D\);
+none divides \(r\), whose norm is at most \(H^{1/6}\).
+Their \(P_u(D)\) are consequently all
+\(\sum_pW(\N p/D)\asymp D/\log D\).
+Positivity of the full square and the inner-ball weight prove the
+first inequality. Its first term dominates for \(0<h<1\).
+\end{proof}
+
+The exact involution in Proposition~\ref{prop:ov-involution}
+places this obstruction in the corresponding transformed coprime
+core with its actual finite coefficient combination.
+It requires \(a+5h/6\ge1\) for a separate bound
+\(D^{h+a+\eps}\), while a useful target requires
+\(a+5h/6<3/4\). The unrestricted core can compensate the prime
+columns by other column types.
+
+\subsection{A prime-by-prime component inside the adaptive tail}
+
+Zero integral removes the principal frequency, but does not make
+every remaining factor class small.
+We now use the quantitative fixed-field prime ideal theorem
+\begin{equation}\label{eq:quantitative-pnt}
+ \pi_K(x)=\operatorname{Li}(x)
+       +O_K(xe^{-c_K\sqrt{\log x}})
+ \quad(x\text{ sufficiently large}).
+\end{equation}
+It follows from the fixed-field specialization of
+\cite[Corollary~1.4]{DKN}, subtracting prime powers and using partial
+summation. A possible fixed exceptional-zero term is absorbed after
+increasing the threshold. The proof below needs this quantitative
+remainder, rather than an unquantified asymptotic.
+
+\begin{theorem}[Actual prime-by-prime tail obstruction]
+\label{thm:prime-pair-tail}
+Let \(\nu=1\), \(V\ge0\) be a nonzero smooth function supported
+inside \((c,C)\), and \(W=(1+t\partial_t)V\).
+For fixed \(0<\theta<1\), \(H=D^h\), \(0<h<1\), consider the
+adaptive tail of Theorem~\ref{sfac:thm:adaptive}.
+Select its ordered factor tuples
+\[
+ a=p,\quad b=q,\quad p\ne q,\quad
+ \N p,\N q\le z=\sqrt{CD},\qquad m=1.
+\]
+Their actual amplitude is
+\[
+ U_u(D)=-\sum_{\substack{p\ne q\\\N p,\N q\le z}}
+       \chi_p(u)\chi_q(u)W(\N p\N q/D),
+\]
+with good primes throughout. Every nonzero summand is in the adaptive
+tail for sufficiently large \(D\), and
+\begin{equation}\label{eq:prime-pair-tail-energy}
+ \frac1D\sum_{u\ne0}\Phi(\N u/H)|U_u(D)|^2
+       \gg_{V,\Phi}\frac{DH^{1/6}}{(\log D)^4}.
+\end{equation}
+\end{theorem}
+\begin{proof}
+The original coefficient on these tuples is
+\(-\muK(p)\muK(q)=-1\).
+Profile support and the two upper bounds force both prime norms
+into a fixed annulus of size \(D^{1/2}\).
+Apply \eqref{eq:quantitative-pnt} in each prime variable.
+After \(\N p=D^{1/2}x\), \(\N q=D^{1/2}y\), the product of the
+two prime densities is \(4/(\log D)^2+O((\log D)^{-3})\),
+uniformly on this fixed compact region. Partial summation, including
+the upper boundaries, therefore gives
+\begin{align}
+ \sum_{\N p,\N q\le z}W(\N p\N q/D)
+ &=\frac{4D}{(\log D)^2}
+     \int_0^{\sqrt C}\int_0^{\sqrt C}W(xy)\,dx\,dy
+          +O_V(D/(\log D)^3)\notag\\
+ &=\frac{4D}{(\log D)^2}
+     \int_c^CW(t)\log(C/t)\,dt+O_V(D/(\log D)^3).
+ \label{eq:prime-pair-asymptotic}
+\end{align}
+For the second identity, fix \(x\), put \(t=xy\), and integrate
+\(dx/x\) between \(t/\sqrt C\) and \(\sqrt C\).
+Since \(W=(tV)'\), integration by parts gives
+\[
+ \int_c^CW(t)\log(C/t)\,dt=\int_c^CV(t)\,dt>0.
+\]
+The omitted diagonal \(p=q\) is \(O_V(\sqrt D/\log D)\),
+smaller than the error above.
+
+For every coherent row \(u=r^6\), \(\N u\le H\), the prime
+norms \(\gg\sqrt D\) exceed \(\N r\le D^{h/6}\);
+both masks are one. Moreover
+\(\N p\N q\ge cD>D^{1-\theta}/L_u=Y_u\), since \(L_u\ge1\).
+Thus every such row has amplitude
+\[
+ U_{r^6}(D)
+ =-\frac{4D}{(\log D)^2}\int V(t)\,dt
+       +O_V(D/(\log D)^3).
+\]
+Count the \(\asymp H^{1/6}\) distinct coherent rows, square,
+use \(\Phi\ge1\) on the inner ball, and divide by \(D\).
+\end{proof}
+
+The power in \eqref{eq:prime-pair-tail-energy} exceeds every useful
+budget by more than \(1/4\), up to arbitrary small epsilon losses.
+This is a lower bound for the selected amplitude only.
+It neither lower-bounds the full \(m=1\) block nor permits removal
+of the cross terms with composite factors and \(m>1\).
+For the original prime columns on small-modulus rows, the large
+primes occur in the removed \(d=1\) sector. Their zero-integral
+cancellation is retained by the adaptive reduction. They must not
+be used as a lower bound for its new tail; the theorem above gives
+a separate tail-specific obstruction.
+
+\subsection{Grouping the Möbius factors does not repair the generic bound}
+
+Group \(d=ab\), and take a dyadic rectangle
+\(\N d\asymp X\), \(\N m\asymp Z\), \(XZ\asymp D\).
+The coefficients \(c_z(d)\) are cube-free-supported, hence
+sixth-power-free, with squared norm \(O_\eps(XD^\eps)\).
+Cauchy in \(m\) and the physical generic sieve
+\eqref{eq:physical-operator} gives only
+\begin{equation}\label{eq:generic-bilinear}
+ \mathfrak E_{X,Z}\ll_\eps D^\eps\frac D X
+ \left[H+XH^{1/6}+H^{5/6}X^{1/3}+H^{1/3}X^{5/6}\right].
+\end{equation}
+Indeed Cauchy pays \(Z\), summing the \(m\)-indexed sieve bounds
+pays another \(Z\), the \(d\)-coefficient norm pays \(X\), and
+normalization by \(D\asymp XZ\) leaves \(Z\) times the operator factor.
+For each fixed \(m\), the dyadic profile has bounded seminorms.
+
+The threshold \(\N d>Y_u\) in this particular grouping is covered
+by a maximal partial-sum form of the sieve with only a
+\(\log^2(2X)\) loss. Order the columns by norm with fixed tie-breaking.
+Every suffix decomposes into \(O(\log(2X))\) intervals from a fixed
+binary partition. Cauchy and the sieve on each fixed interval,
+summed by partition level, give the asserted loss because each level
+partitions the coefficient squared norm.
+This does not authorize arbitrary selectors in completed row kernels.
+
+For \(H=D^h\), \(X=D^x\), the four supplied powers are
+\[
+ 1+h-x,\qquad 1+\frac h6,\qquad
+ 1+\frac{5h}{6}-\frac{2x}{3},\qquad
+ 1+\frac h3-\frac x6.
+\]
+The term \((D/X)XH^{1/6}=DH^{1/6}\) survives every balance.
+This is an insufficiency of the generic upper bound, not a lower
+bound for the actual M\"obius block.
+The \(m=1\) block, \(X\asymp D\), remains in the tail.
+Its coefficient norm has the full power \(D\): on any subinterval
+where \(|W|\) is bounded below, the prime ideal theorem gives
+\(\gg D/\log^2D\) balanced distinct semiprimes \(pq\) with
+\(c_z(pq)=2\).
+Zero integral provides no power saving in that norm.
+
+\section{Routes without an additional power gain and the next task}
+\label{sec:limits}
+
+Several natural alterations simplify a presentation without supplying
+the arithmetic saving in \eqref{eq:intro-moment}.
+The replication identities and effective row-count bound following
+Theorem~\ref{thm:finite-extraction} show why composite sixth powers,
+free row weights, and lower-order subfamilies inherited solely from
+the same moment keep the same extraction floor. Their full
+bookkeeping is in \cite{N5}.
+The core-cutoff estimates above quantify the extra conductor
+uniformity needed when the collection of fixed cores grows.
+
+The source's positive dual estimate cannot simply be extended into
+the long-row regime. At column length \(X=1\), a smooth profile
+isolating the unit ideal gives a positive dual energy
+\(\mathcal E(R,1,F)\asymp R\), with the actual source coefficient
+\(a_\xi(1)=1\).
+For \(b=1,F=D,H=D^h\), it has \(R\asymp D^{2-h}\),
+whereas the proposed old right side has scale \(\Sigma=XF=D\).
+This obstructs that positive extension for \(h<1\).
+The full diagonal removal avoids this particular unit term;
+it does not prove the remaining signed estimate.
+See \cite{N2} for the exact test and \cite{N1} for the failed
+shrinking-ratio condition.
+
+A second Poisson transform of the coprime core is the exact involution
+proved above, and unit-character splitting has only finitely many
+classes \cite{N3}. Neither gives a power contraction.
+The positive divisor moments in the gcd identity retain
+\(B_1=\Mfrak_W\); separately triangle-bounding them is circular.
+Finally, a Poisson sum over either remaining M\"obius factor would
+require information about its coefficients that the free-factor
+completion does not supply.
+
+One concrete sufficient input remains the following.
+
+\begin{assumption}[Adaptive signed tail moment]\label{input:open-tail}
+For fixed \(h=4/5\), some \(0\le a<1/12\), and one fixed
+\(0<\theta<1\), every \(V\in C_c^\infty((0,\infty))\) with
+\(W=(1+t\partial_t)V\) satisfies, for every \(\eps>0\),
+\[
+ \frac1D\sum_{u\ne0}\Phi(\N u/D^{4/5})
+ \left|\sum_{\N d>D^{1-\theta}/L_u}
+     c_z(d)\lambda_u(d)S_u(D/\N d)\right|^2
+       \ll_{\eps,V}D^{4/5+a+\eps}.
+\]
+All \(z\) cutoffs, overlapping factors, deletion zeros, and the
+complete row weight are retained.
+\end{assumption}
+
+Theorem~\ref{sfac:thm:adaptive} and
+Theorem~\ref{thm:finite-extraction} would turn this input into
+scalar exponent \(5/6+a/2<7/8\).
+The derivative detectors then exclude zeros to its right,
+with \(s=1\) treated separately.
+The alternative \(h=8/9\), \(a<1/108\), gives
+\(47/54+a/2<7/8\).
+At \(h=a=2/5\), the proposed moment would give \(13/15<7/8\).
+Corollary~\ref{cor:sf-residual} reduces that target to its squarefree
+signed tail at \(\theta=11/20\). None of these full moments is
+established.
+
+For an endpoint program, moments at a sequence
+\(h_j\to0\), \(a_j\to0\), for every detecting profile, would give
+scalar exponents approaching \(1/2\).
+In fact their \(u=1\) terms alone already approach that endpoint;
+finite replication sharpens the finite-\(h\) output.
+For \(\nu=1\), zero-freeness of
+\(\zeta_K(s)=\zeta(s)L(s,\chi_{-3})\) in \(\Rea s>1/2\)
+would imply RH for \(\zeta\) by its functional equation.
+A zeta-only quasi-RH hypothesis supplies none of the new
+Hecke-family moments automatically.
+
+\appendix
+\section{Research record and scope of verification}\label{sec:record}
+
+This manuscript organizes the working-tree results developed through
+8 October 2026, based on repository commit
+\texttt{480581447dcd3e93c9c2f9c22a050d9c5100ff9d}.
+The notes contain fuller source audits, conventions and exploratory
+calculations. They are grouped here by their role.
+
+\begin{center}\small
+\begin{tabular}{@{}p{.14\textwidth}p{.76\textwidth}@{}}
+\toprule
+Notes & Role in the organized argument\\
+\midrule
+1 & Finite reuse of one moment, prime-mask extraction and Mellin detection.\\
+2--4 & Full diagonal removal, exact involution, complete primitive kernels
+and the enlarged overlap sector.\\
+5--7 & Replication limits, generic sextic-sieve transfer and the earlier
+signed residual.\\
+8--10 & Exact truncated inverse, centered uniform cutoff, signed gcd
+truncation and quantitative coherent-core costs.\\
+11--13 & Zero-integral profiles, sharp-profile recovery, radical-dependent
+adaptive reduction, factor-selected obstruction and the current target.\\
+15 & Exact nonunit-cofactor packet cancellation, a growing full-weight
+controlled sector, opposite branch lower bounds and the surviving
+semiprime coefficient.\\
+17 & Whole-nonsquarefree sector bound, sparse adaptive-prefix estimate
+and the equivalent squarefree residual at \(h=a=2/5\).\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+The existing finite checkers use exact rational or finite cyclotomic
+arithmetic. The consolidated records include 9,356 assertions for
+the core/overlap continuation, 24,245 for factorization and gcd
+algebra, and 4,812 for the zero-integral adaptive continuation.
+The divisor-packet record adds 3,982 exact assertions, including
+nonsquarefree cofactors, cutoff boundaries, complex masks and actual
+local split-prime sextic symbols. Its local cutoff uses a good-radical
+proxy, not a computation of the inducing primitive conductor, and checks
+the pointwise packet theorem rather than its asymptotic growing range.
+The squarefree-projection record adds 594,360 exact assertions for
+projection signs, equal-norm distinct ideal symbols, square-divisor
+overlaps, sixth-power decomposition and fixed binary prefixes.
+These finite checks do not certify the asymptotic sparse count or
+operator estimate used in the sector theorem.
+They check specified finite identities, complex conjugation
+orientations, deletion zeros and rational exponent arithmetic.
+They do not verify the imported Poisson theorem, infinite Euler
+convergence, quantitative prime ideal theorem, generic sieve,
+or an asymptotic signed moment. Detailed review links are in
+the notes and repository index.
+
+\subsection*{Acknowledgement and preparation metadata}
+
+Prepared for Edward Baker with substantial assistance from GPT-6
+(Codex) in organization, derivation, source comparison and internal
+review. The inherited configuration does not expose the exact serving
+variant or configured reasoning effort, and neither is inferred.
+Parallel same-model audits and finite checks are internal validation,
+not independent specialist review or formal proof verification.
+Authorship and any publication version require the author's review.
+
+\begin{thebibliography}{OA30}
+\bibitem[OA5]{OA5}
+OpenAI, \emph{The Quasi-Riemann Hypothesis}, version dated
+5 October 2026, source archive.
+\href{https://github.com/openai/math/tree/main/preprints/The-Quasi-Riemann-Hypothesis-October-5-2026}{Online source}.
+Native character and Poisson formulas and the positive dual estimate
+are used only in the explicitly recorded scope.
+\bibitem[DF]{DF}
+Alexandre de Faveri, \emph{Optimal large sieve for fixed order characters},
+arXiv:2610.04045v1, 2 October 2026.
+\href{https://arxiv.org/html/2610.04045v1}{Version 1}.
+\bibitem[DKN]{DKN}
+Sourabhashis Das, Habiba Kadiri and Nathan Ng,
+\emph{An effective version of Chebotarev's density theorem},
+arXiv:2508.09480v1, 13 August 2025.
+\href{https://arxiv.org/html/2508.09480v1}{Version 1}.
+
+\bibitem[N1]{N1}
+Research note 1, \emph{A fixed short-family moment already removes its prime-mask error}, 8 October 2026.
+\href{notes/1_SHORT_FAMILY_DESCENT_REFINEMENT_20261008.md}{Repository note 1}.
+\bibitem[N2]{N2}
+Research note 2, \emph{Removing the diagonal and the large transformed cofactor}, 8 October 2026.
+\href{notes/2_SHORT_FAMILY_SMALL_COFACTOR_20261008.md}{Repository note 2}.
+\bibitem[N3]{N3}
+Research note 3, \emph{Source corrections, exact involution, and a prime-column obstruction}, 8 October 2026.
+\href{notes/3_SHORT_FAMILY_CORE_INVOLUTION_20261008.md}{Repository note 3}.
+\bibitem[N4]{N4}
+Research note 4, \emph{A uniform primitive-kernel bound and a larger controlled overlap sector}, 8 October 2026.
+\href{notes/4_SHORT_FAMILY_HIGH_OVERLAP_20261008.md}{Repository note 4}.
+\bibitem[N5]{N5}
+Research note 5, \emph{Limits of composite replication, row weights, and inherited lower-order families}, 8 October 2026.
+\href{notes/5_SHORT_FAMILY_REPLICATION_LIMITS_20261008.md}{Repository note 5}.
+\bibitem[N6]{N6}
+Research note 6, \emph{The generic sixth-order sieve reaches the coherent-row barrier}, 8 October 2026.
+\href{notes/6_SHORT_FAMILY_SEXTIC_SIEVE_BARRIER_20261008.md}{Repository note 6}.
+\bibitem[N7]{N7}
+Research note 7, \emph{Short families: the remaining cancellation problem}, 8 October 2026.
+\href{notes/7_SHORT_FAMILY_CONTINUATION_20261008.md}{Repository note 7}.
+\bibitem[N8]{N8}
+Research note 8, \emph{Exact M\"obius factorization and a controlled centered small product}, 8 October 2026.
+\href{notes/8_SHORT_FAMILY_CENTERED_FACTORIZATION_20261008.md}{Repository note 8}.
+\bibitem[N9]{N9}
+Research note 9, \emph{Signed gcd recombination of the original coprime core}, 8 October 2026.
+\href{notes/9_SHORT_FAMILY_SIGNED_GCD_RECOMBINATION_20261008.md}{Repository note 9}.
+\bibitem[N10]{N10}
+Research note 10, \emph{Continuation after centered factorization}, 8 October 2026.
+\href{notes/10_SHORT_FAMILY_FACTORIZATION_CONTINUATION_20261008.md}{Repository note 10}.
+\bibitem[N11]{N11}
+Research note 11, \emph{Zero-integral profiles and a conductor-dependent factorization cutoff}, 8 October 2026.
+\href{notes/11_SHORT_FAMILY_MEAN_ZERO_ADAPTIVE_REDUCTION_20261008.md}{Repository note 11}.
+\bibitem[N12]{N12}
+Research note 12, \emph{Factor selection on zero-integral profiles}, 8 October 2026.
+\href{notes/12_SHORT_FAMILY_FACTOR_SELECTION_BARRIER_20261008.md}{Repository note 12}.
+\bibitem[N13]{N13}
+Research note 13, \emph{Continuation after the zero-integral adaptive reduction}, 8 October 2026.
+\href{notes/13_SHORT_FAMILY_ADAPTIVE_CONTINUATION_20261008.md}{Repository note 13}.
+\bibitem[N15]{N15}
+Research note 15, \emph{Exact divisor packet cancellation in the adaptive tail}, 8 October 2026.
+\href{notes/15_SHORT_FAMILY_DIVISOR_PACKET_CANCELLATION_20261008.md}{Repository note 15}.
+\bibitem[N17]{N17}
+Research note 17, \emph{A power bound for the nonsquarefree tail and a squarefree residual}, 8 October 2026.
+\href{notes/17_SHORT_FAMILY_SQUAREFREE_TAIL_REDUCTION_20261008.md}{Repository note 17}.
+\end{thebibliography}
+\end{document}

@@ -1,6 +1,8 @@
 # Investigation summary and notes index
 
 8 October 2026. Prepared for Edward Baker with substantial LLM assistance.
+Model: GPT-6 (Codex), inherited configuration; exact serving variant and
+configured reasoning effort are not exposed and are not inferred.
 
 This project investigates arithmetic exponent descent toward RH and exclusion
 of positive-time Newman collisions. Five investigation folders sit directly
@@ -15,7 +17,7 @@ notes, use the next unused number in that investigation and retain the date;
 keep existing numbers stable. Shared program records and this index retain
 their filenames.
 
-Start with the [latest short-family continuation](../short_families/notes/7_SHORT_FAMILY_CONTINUATION_20261008.md),
+Start with the [new-session continuation](../short_families/notes/20_SHORT_FAMILY_SESSION_CONTINUATION_20261008.md),
 then the [dependency ledger](RESEARCH_LEDGER_20261008.md) and the
 [broad continuation plan](CODEX_CONTINUATION_20261008.md).
 The [project overview](../README.md) gives the common notation and motivation.
@@ -50,11 +52,33 @@ cancellation alone do not supply that improvement.
 
 ## Short character families
 
+The [standalone manuscript](../short_families/short_family_reductions.tex)
+organizes the useful results below, with proofs and explicit imported inputs.
+The [manuscript review](../reviews/SHORT_FAMILY_MANUSCRIPT_REVIEW_20261008.md)
+maps its initial coverage to notes 1–13. The
+[cancellation addition review](../reviews/SHORT_FAMILY_CANCELLATION_MANUSCRIPT_REVIEW_20261008.md)
+records the incorporation of note 15 with complete proofs and successful
+native compilation. The
+[squarefree addition review](../reviews/SHORT_FAMILY_SQUAREFREE_AND_COFACTOR_REVIEW_20261008.md)
+records the new whole-nonsquarefree bound and its manuscript incorporation.
+The full arithmetic moment remains open.
+
 Finite reuse of one hypothetical short-family moment removes the prime-mask
 error. Diagonal subtraction, second Poisson summation, and overlap bounds
 reduce the residual region, but the low-overlap signed core remains open.
 The prime-selected obstruction and generic sieve and replication limits
-constrain which estimates could close that gap.
+constrain which estimates could close that gap. Exact Möbius factorization
+removes a centered small-product sector. Zero-integral profiles now
+remove the principal correction exactly while preserving Mellin detection;
+a radical-dependent row cutoff makes the actual small sector negligible.
+A growing family with a small nonunit cofactor now cancels exactly within
+each total product, with negligible full weighted energy. The surviving
+semiprime sector requires cancellation across total products for every
+fixed nonzero profile. The ideal mixed-discrepancy bridge retains the
+density and both low/high edges for this unresolved estimate.
+The whole nonsquarefree total-product sector is now affordable at
+\(H=D^{2/5}\) with cutoff \(\theta=11/20\), leaving a squarefree
+signed residual. This is a component bound, not an improved full moment.
 
 1. [Descent refinement](../short_families/notes/1_SHORT_FAMILY_DESCENT_REFINEMENT_20261008.md): conditional extraction and finite reuse of a fixed moment.
 2. [Small-cofactor reduction](../short_families/notes/2_SHORT_FAMILY_SMALL_COFACTOR_20261008.md): diagonal subtraction and second-Poisson decay.
@@ -62,7 +86,24 @@ constrain which estimates could close that gap.
 4. [High-overlap bound](../short_families/notes/4_SHORT_FAMILY_HIGH_OVERLAP_20261008.md): uniform primitive-kernel estimate and the enlarged controlled sector.
 5. [Replication limits](../short_families/notes/5_SHORT_FAMILY_REPLICATION_LIMITS_20261008.md): composite rows, weights, and inherited lower-order families.
 6. [Sextic sieve barrier](../short_families/notes/6_SHORT_FAMILY_SEXTIC_SIEVE_BARRIER_20261008.md): imported generic sixth-order sieve and its extraction floor.
-7. [Latest continuation](../short_families/notes/7_SHORT_FAMILY_CONTINUATION_20261008.md): current results, remaining region, and next analytic targets.
+7. [Overlap and sieve continuation](../short_families/notes/7_SHORT_FAMILY_CONTINUATION_20261008.md): overlap results, remaining transformed region, and analytic targets.
+8. [Centered factorization](../short_families/notes/8_SHORT_FAMILY_CENTERED_FACTORIZATION_20261008.md): exact Möbius convolution and a negligible centered small-product sector, with the principal main term retained.
+9. [Signed gcd recombination](../short_families/notes/9_SHORT_FAMILY_SIGNED_GCD_RECOMBINATION_20261008.md): exact original-core identity, truncated diagonal and the correct original gcd cutoff.
+10. [Factorization continuation](../short_families/notes/10_SHORT_FAMILY_FACTORIZATION_CONTINUATION_20261008.md): recombined convolution target and quantitative coherent-core cutoff limits.
+11. [Zero-integral adaptive reduction](../short_families/notes/11_SHORT_FAMILY_MEAN_ZERO_ADAPTIVE_REDUCTION_20261008.md): sufficient detector profiles, sharp moment recovery and a negligible radical-dependent small sector.
+12. [Factor selection barrier](../short_families/notes/12_SHORT_FAMILY_FACTOR_SELECTION_BARRIER_20261008.md): an actual prime-by-prime tail piece and the generic grouped sieve retain the coherent power barrier.
+13. [Adaptive continuation](../short_families/notes/13_SHORT_FAMILY_ADAPTIVE_CONTINUATION_20261008.md): the correction-free adaptive tail target, shorter coherent free factor and remaining signed estimate.
+
+14. [Ideal mixed discrepancy](../short_families/notes/14_SHORT_FAMILY_IDEAL_MIXED_DISCREPANCY_20261008.md): exact logarithmic bridge, principal density, Stieltjes endpoints and capped Riesz edges.
+15. [Signed packet milestone](../short_families/notes/15_SHORT_FAMILY_DIVISOR_PACKET_CANCELLATION_20261008.md): exact divisor cancellation, a growing negligible full-weight sector, and two oversized compensating branches.
+16. [Product barrier](../short_families/notes/16_SHORT_FAMILY_PRODUCT_BARRIER_20261008.md): the obstruction survives complete productwise recombination and every fixed nonzero profile; pure prime powers are affordable.
+17. [Squarefree tail reduction](../short_families/notes/17_SHORT_FAMILY_SQUAREFREE_TAIL_REDUCTION_20261008.md): the entire nonsquarefree sector has bound \(D^{19/24+\varepsilon}\) at the proposed test point; the squarefree moment remains open.
+18. [Cofactor compensation](../short_families/notes/18_SHORT_FAMILY_COFACTOR_COMPENSATION_20261008.md): an actual selected-factor block is negligible by complete cofactor inversion and free completion; its range has constant relative width.
+19. [Opposing edge compensation](../short_families/notes/19_SHORT_FAMILY_EDGE_COMPENSATION_20261008.md): exact low/high cancellation and a positive packet integral, with selected-edge barriers and the unit exception retained.
+20. [New-session continuation](../short_families/notes/20_SHORT_FAMILY_SESSION_CONTINUATION_20261008.md): current proof status, exact squarefree target, cutoff safeguards, prioritized research tasks and session recommendation.
+
+The [signed packet review](../reviews/SHORT_FAMILY_SIGNED_PACKET_REVIEW_20261008.md)
+records the proof audits and finite checks. The full tail moment remains open.
 
 ## Mixed character families
 

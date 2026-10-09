@@ -79,3 +79,85 @@ imported sextic large sieve, the prime ideal theorem, or the missing
 asymptotic signed estimate. See the
 [continuation](../short_families/notes/7_SHORT_FAMILY_CONTINUATION_20261008.md) and
 [scoped review](../reviews/SHORT_FAMILY_CORE_AND_OVERLAP_REVIEW_20261008.md).
+
+## Centered short-family factorization
+
+Run [check_short_family_factorization.py](check_short_family_factorization.py)
+with Python 3.10 or later. It uses exact standard-library arithmetic,
+prints a deterministic small JSON record, and writes no files. The
+[retained record](short_family_factorization_record_20261008.json) lists
+the 24,245 exact assertions across 33 groups. Two coordinating runs
+reproduced the record byte-for-byte.
+
+The checks cover truncated ideal-style convolution and its endpoint,
+complex completely multiplicative twists with deletion zeros,
+nonsquarefree cancellation, principal centering algebra, signed gcd
+recombination, Euler deletion identities, divisor-mean algebra, and
+rational completion, truncation and core-cutoff budgets. Their
+scope is finite algebra and exponent bookkeeping. They do not prove
+number-field reciprocity, Poisson summation, prime ideal counting,
+the imported large sieve, or the missing recombined moment.
+
+See the [continuation](../short_families/notes/10_SHORT_FAMILY_FACTORIZATION_CONTINUATION_20261008.md)
+and [scoped review](../reviews/SHORT_FAMILY_FACTORIZATION_REVIEW_20261008.md).
+
+## Zero-integral adaptive short families
+
+Run [check_short_family_mean_zero.py](check_short_family_mean_zero.py)
+with Python 3.10 or later. It uses exact standard-library arithmetic,
+prints deterministic JSON and writes no files. Two fresh coordinating
+runs reproduced the 3,144-byte
+[record](short_family_mean_zero_record_20261008.json) byte-for-byte:
+4,812 assertions across 28 groups passed.
+
+The checks cover the zero-integral derivative profile, Mellin and
+logarithmic integral identities, finite scalar differentiation,
+complex adaptive convolution with deletion zeros, an empty cutoff,
+the local conductor/mask partition, finite radical-weight geometric
+factors including the divisor weight, and rational support and
+generic bilinear exponents. The polynomial profile is a finite
+calculus diagnostic; it is not a smooth analytic test profile.
+Formal monoid twists are not actual residue symbols.
+
+Infinite Euler convergence, primitive Poisson, the quantitative prime
+ideal theorem, the imported sextic sieve, and the new adaptive signed
+moment are outside the finite checks. See the
+[continuation](../short_families/notes/13_SHORT_FAMILY_ADAPTIVE_CONTINUATION_20261008.md)
+and [scoped review](../reviews/SHORT_FAMILY_MEAN_ZERO_REVIEW_20261008.md).
+
+## Ideal discrepancy and signed packets
+
+These standalone standard-library scripts print deterministic JSON and write
+no files. Two fresh runs reproduced each retained record byte-for-byte.
+
+| Script and record | Finite checks | Scope |
+| --- | --- | --- |
+| [check_short_family_ideal_discrepancy.py](check_short_family_ideal_discrepancy.py), [record](short_family_ideal_discrepancy_record_20261008.json) | 638 named equalities | Formal logarithmic convolution, complex discrepancy integrals, complete Riesz edge closure and centered Stieltjes endpoints |
+| [check_short_family_divisor_packets.py](check_short_family_divisor_packets.py), [record](short_family_divisor_packet_record_20261008.json) | 3,982 assertions in 22 groups | Tuple/product recombination, nonsquarefree packets, masks, strict cutoffs and actual split-prime local sextic symbols |
+| [check_short_family_product_barrier.py](check_short_family_product_barrier.py), [record](short_family_product_barrier_record_20261008.json) | 182 assertions in ten groups | Product coefficients, continuum series and partial fractions, polynomial derivative moments and rational exponents |
+
+The actual local packet uses a good-radical proxy rather than a computation
+of the primitive combined conductor. It tests the pointwise packet theorem,
+not membership in its asymptotic growing-cofactor range. The polynomial bump
+is a finite calculus diagnostic, not a smooth analytic test profile.
+These checks do not verify reciprocity, conductor comparison, Poisson,
+prime ideal asymptotics, the all-profile density argument, or a signed moment.
+See the [milestone](../short_families/notes/15_SHORT_FAMILY_DIVISOR_PACKET_CANCELLATION_20261008.md)
+and [scoped review](../reviews/SHORT_FAMILY_SIGNED_PACKET_REVIEW_20261008.md).
+
+## Squarefree reduction and further compensation
+
+Each standard-library script prints deterministic JSON and writes no files.
+Two fresh coordinating runs reproduced each retained record byte-for-byte.
+
+| Script and record | Finite checks | Scope |
+| --- | --- | --- |
+| [check_short_family_squarefree_projection.py](check_short_family_squarefree_projection.py), [record](short_family_squarefree_projection_record_20261008.json) | 594,360 exact assertions | Equal-norm distinct ideal symbols, projection signs, overlaps, sixth-root phases and zeros, strict cutoffs, sixth-power sparsity and fixed binary prefixes |
+| [check_short_family_cofactor_compensation.py](check_short_family_cofactor_compensation.py), [record](short_family_cofactor_compensation_record_20261008.json) | 18,442 exact assertions | Cofactor inversion, bounded selectors, adaptive split, complex phases, endpoints and asymmetric factorization |
+| [check_short_family_edge_compensation.py](check_short_family_edge_compensation.py), [record](short_family_edge_compensation_record_20261008.json) | Five packets, 52 triple terms, 208 phase/deletion checks and 24 rational-log cases | All four logarithmic edges, nonsquarefree cofactors, weak endpoints and the unit exception |
+
+These finite monoid models do not validate reciprocity, primitive conductors,
+Poisson, infinite Euler convergence, asymptotic sparse ideal counts, prime
+ideal counting, the imported sieve or any unbounded signed moment. See the
+[main proof](../short_families/notes/17_SHORT_FAMILY_SQUAREFREE_TAIL_REDUCTION_20261008.md)
+and [scoped review](../reviews/SHORT_FAMILY_SQUAREFREE_AND_COFACTOR_REVIEW_20261008.md).
