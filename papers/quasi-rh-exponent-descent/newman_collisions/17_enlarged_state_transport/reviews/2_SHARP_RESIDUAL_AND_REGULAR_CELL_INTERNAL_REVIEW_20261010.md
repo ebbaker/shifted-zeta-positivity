@@ -101,7 +101,7 @@ over subdivision or pointwise arithmetic gain.
 | Existing shared checker | 15,446 exact assertions passed unchanged; source SHA-256 645292360a4afc8edb49a6ffec550ec4277d4c74c8497164050aaf1f058b2435 |
 | Complete outward cell | Fresh root replay passed; full budget and source hashes in the small record |
 | Uniform sector coverage | Open; no multiplier exponent or global collision exclusion established |
-| Manuscript compilation | Saved repository source compiled successfully with the native desktop compiler; editor and PDF preview opened |
+| Manuscript compilation | Saved repository source compiled successfully with the native desktop compiler; editor opening requested and queued by the app |
 
 The new scripts and records remain small and reproducible. The imported
 interval source hashes are checked before use. No synced project source,
