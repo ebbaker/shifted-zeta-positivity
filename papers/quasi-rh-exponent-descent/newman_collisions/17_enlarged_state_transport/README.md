@@ -27,6 +27,15 @@ effort is not exposed to this session and is not inferred.
 
 ## Entry points
 
+- [Paid paired contours and product remainder](notes/9_PAIRED_CONTOUR_BOUNDS_ON_THE_SHRINKING_SECTOR_20261010.md):
+  complete matched contours, explicit source norms and a product cutoff of
+  order x log x on the shrinking sector and its physical complex disks.
+- [Matched Mellin transform and raw-channel obstruction](notes/10_MATCHED_MELLIN_BESSEL_TRANSFORM_AND_RAW_CHANNEL_OBSTRUCTION_20261010.md):
+  both Bessel endpoints, the exact completed-zeta collapse, and a certified
+  nonzero endpoint in the first raw divisor channel.
+- [Quasi-RH prime counting and growing cofactor filters](notes/11_QUASI_RH_PRIME_COUNTING_AND_GROWING_COFACTOR_FILTERS_20261010.md):
+  conditional transfer through the entire original growing norm budget,
+  with direct h=30/41 projection and full filter coefficient costs.
 - [RH strategy with the linked quasi-RH assumption](notes/8_RH_STRATEGY_WITH_QUASI_RH_AND_NEXT_ANALYTIC_TARGET_20261010.md):
   explicit conditional 11/12-to-33/41 arithmetic step, threshold
   coverage obligations and exact divisor pairing of all theta cross terms.
@@ -92,3 +101,13 @@ route, while the existing mixed ledger needs stronger premises than
 the linked 11/12 theorem. See the
 [internal strategy review](reviews/5_RH_STRATEGY_AND_EXACT_THETA_PAIRING_INTERNAL_REVIEW_20261010.md) and
 [chat 9 registry](../../chat-histories/index.json).
+
+The [paired-source continuation](notes/9_PAIRED_CONTOUR_BOUNDS_ON_THE_SHRINKING_SECTOR_20261010.md)
+now supplies the strategy's analytic contour checkpoint, including a
+uniform product-index remainder. Complete Jacobi cancellation precedes
+truncation; the resulting approximation retains both contours on the
+physical complex disk. The new target is a signed margin for this matched
+response on genuine stationary sets, larger than its paid error, together
+with predecessor coverage. The [internal continuation review](reviews/6_PAIRED_CONTOUR_MELLIN_AND_COFACTOR_INTERNAL_REVIEW_20261010.md)
+records the analytic audits and both replays. No uniform sign, shorter-family
+moment, new collision exclusion or RH conclusion has been obtained.
