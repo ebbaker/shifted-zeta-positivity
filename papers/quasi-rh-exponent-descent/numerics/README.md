@@ -1,5 +1,18 @@
 # Exact checks and collision reconnaissance
 
+## Complete coherent-current geometry
+
+Run [check_coherent_current_geometry.py](check_coherent_current_geometry.py)
+with Python 3.10 or later. It prints deterministic JSON and writes no files.
+The [small record](COHERENT_CURRENT_GEOMETRY_RECORD_20261010.json) binds its
+source and records 22,492 passing Fraction checks for sharp paid-square
+distance, constant-carrier singular-value and square floors, the
+difference/reflected-sum identity, and centered current pair regrouping.
+It supplies no genuine current lower bound or phase estimate. See
+[Heat Note 17](../newman_collisions/notes/17_TWO_PRIORITY_CONTINUATION_AND_COMPLETE_CURRENT_GEOMETRY_20261010.md).
+Model: GPT-6 (Codex); exact serving variant and configured reasoning
+effort unavailable and not inferred. Checks are internal LLM work.
+
 ## Local heat jets and asymmetric derivative inputs
 
 Run [check_local_heat_jet_input.py](check_local_heat_jet_input.py) with

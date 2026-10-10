@@ -59,8 +59,8 @@ records live in [the shared numerics folder](../numerics/README.md), and
 scoped reviews in `../reviews/`. New manuscript milestones belong in
 [DRAFT_HISTOR.md](../DRAFT_HISTOR.md), with no new snapshot folders.
 The investigation's dated conversations are recorded in
-[chat-histories](../chat-histories/README.md), beginning with chat 1 and
-continuations 2 and 3 and next number 4 in its registry.
+[chat-histories](../chat-histories/README.md), numbered 1 through 5.
+The next new conversation receives number 6 in its registry.
 
 [Heat Note 13](notes/13_RECENT_HEAT_RESULTS_AND_PATHS_FORWARD_20261009.md) gives an overview of the recent results,
 their achievements and limits, and five proposed bounded paths forward.
@@ -75,7 +75,35 @@ stochastic, integrable, and statistical mechanical projects. It distinguishes
 exact reproduction of the backward heat flow from a new arithmetic property
 and its transfer to the joint collision observable or threshold jets. Each
 direction has a proposed folder, a bounded first task, and a failure criterion.
-[Program review](../reviews/HEAT_DIMENSIONAL_REDUCTION_PROGRAM_REVIEW_20261010.md). The next research chat can
-instantiate the proposed folders and distribute bounded scouts in parallel.
-This conversation is chat 3, “Review Newman collision program”; the next
-new conversation is 4. Preparation: GPT-6.1-sol (Codex), reasoning effort ultra.
+[Program review](../reviews/HEAT_DIMENSIONAL_REDUCTION_PROGRAM_REVIEW_20261010.md).
+The sixteen folders have now been instantiated directly in this directory,
+following the existing `01_analytic_gaussian` layout. That scout was
+preserved; initial results for programs 02–16 and five recommended
+continuations are in
+[Heat Note 15](notes/15_SIXTEEN_PROGRAM_INITIAL_RESULTS_AND_FIVE_PRIORITIES_20261010.md).
+The selected five directions have now been continued in
+[Heat Note 16](notes/16_FIVE_PRIORITY_CONTINUATIONS_AND_SIGNED_ARITHMETIC_CHECKPOINTS_20261010.md),
+with a second note, internal review and reproducible check in each folder.
+The results sharpen the signed arithmetic target and certify specific
+theta-score, coherent-block and radial-shape obstructions; the required
+opposite collision sign remains open.
+The program-note conversation is chat 3, “Review Newman collision program”.
+Preparation: GPT-6.1-sol (Codex), reasoning effort ultra.
+
+The portfolio scouts use GPT-6 (Codex); exact serving variant and configured
+reasoning effort are unavailable and are not inferred. Results include
+genuine theta identities, a positive radial theta lift, finite spin moment
+exclusions, and scoped mechanism obstructions. No new collision exclusion
+or RH conclusion is established. Reviews are internal LLM checks.
+
+Projects 09 and 13 have a further continuation in
+[Heat Note 17](notes/17_TWO_PRIORITY_CONTINUATION_AND_COMPLETE_CURRENT_GEOMETRY_20261010.md).
+It gives paid dual kernels, a genuine-height Gram-rank witness for the
+loss of a conditional norm relaxation, and sharp complete-current
+geometry. A complete 22,066-term interval certificate now proves one
+unique simple genuine heat zero at every time in a specified positive-time
+rectangle, with no collision anywhere in that rectangle. The uniform
+shrinking-sector signed theorem remains open.
+This portfolio continuation is archived as
+[chat 5, “Create 15 project folders”](../chat-histories/0005_2026-10-10T04-54-18Z_create-15-project-folders.json);
+the history README gives the next-session entry points.

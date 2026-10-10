@@ -6,9 +6,9 @@ as recorded in this chat's session configuration.
 
 This folder keeps dated conversation records and a numbering registry.
 The first captured chat is **1**. “Continue manuscript integration” is **2**.
-The current continuation, “Review Newman collision program”, is **3**.
-Read `index.json` before recording another chat: the next new conversation
-is **4**. Numbers belong to this investigation's
+"Review Newman collision program" is **3**. "Investigate analytic Gaussian"
+is **4**. "Create 15 project folders" is **5**. Read `index.json` before recording
+another chat: the next new conversation is **6**. Numbers belong to this investigation's
 folder and remain stable. A later refresh of the same conversation retains
 its number. Retrospective imports receive the next unused number and retain
 their original conversation dates; importing an older chat does not renumber
@@ -123,7 +123,7 @@ real-axis vector, the proposed higher dimensional or supersymmetric
 reduction, and the request to write a broad program note and archive this
 chat. Completed public text is preserved through capture; a later refresh
 can add the final delivery without changing number 3. Chats 1 and 2 are
-unchanged. The next new conversation receives **4**.
+unchanged. At that capture, the next new conversation was numbered **4**.
 
 The next chat should start with [Heat Note 14](../newman_collisions/notes/14_DIMENSIONAL_REDUCTION_AND_SUPERSYMMETRIC_HEAT_PROGRAM_20261010.md),
 [Heat Note 13](../newman_collisions/notes/13_RECENT_HEAT_RESULTS_AND_PATHS_FORWARD_20261009.md),
@@ -132,3 +132,60 @@ the stable manuscript's signed vector and threshold sections, and
 sixteen proposed project folders with bounded first tasks. Instantiate them
 and investigate them in parallel in the next research chat, preserving the
 common exact-reduction and signed-observation requirements.
+
+## Gaussian analytic investigation
+
+Chat **4**, “Investigate analytic Gaussian”, retains its original creation
+time 2026-10-10T04:38:51.235Z (10 October 2026 at 00:38:51.235
+America/New_York). The archive records the request to investigate the first
+direction in Heat Note 14, the completed public progress messages, the
+investigation delivery, and the request to add this chat to the history.
+Capture time is recorded separately. A later refresh can add this archive
+response's final delivery while retaining number 4. Chats 1–3 remain
+unchanged; the next new conversation receives **5**.
+
+The research begins in
+[the Gaussian analytic project](../newman_collisions/01_analytic_gaussian/README.md),
+with [its first note](../newman_collisions/01_analytic_gaussian/notes/1_GAUSSIAN_REDUCTION_JOINT_KERNEL_AND_POSITIVITY_OBSTRUCTION_20261010.md)
+and [internal review](../newman_collisions/01_analytic_gaussian/reviews/1_GAUSSIAN_SCOUT_INTERNAL_REVIEW_20261010.md).
+The scout derives the exact joint Gaussian observation, pays a fixed
+Gaussian cutoff through the sixth normalized derivative on a closed
+rectangle, and identifies the observation kernel that defeats a universal
+Gaussian positivity lower bound. A new theta-specific signed relation
+remains open. The recorded configuration is GPT-6.1-sol (Codex), reasoning
+effort ultra; internal LLM checks are not independent mathematical review.
+
+## Sixteen-project portfolio and priority continuations
+
+Chat **5**, "Create 15 project folders", retains its original creation time
+2026-10-10T04:54:18.111Z (10 October 2026 at 00:54:18.111 America/New_York).
+Its [conversation record](0005_2026-10-10T04-54-18Z_create-15-project-folders.json)
+contains the sixteen-project request, the initial results and five priorities,
+the five-project continuation, and the further investigation of projects 09
+and 13, including their completed research deliveries. It also includes the
+request to archive this chat. The registry records capture time separately.
+This is a snapshot through capture; the archive response's final delivery
+can be included by a later refresh without changing number 5. Chats 1–4 and
+their registry entries are preserved. The next new conversation is **6**.
+
+Start the next research session with
+[Heat Note 17](../newman_collisions/notes/17_TWO_PRIORITY_CONTINUATION_AND_COMPLETE_CURRENT_GEOMETRY_20261010.md),
+[project 09 Note 3](../newman_collisions/09_prime_phase_torus/notes/3_PAID_DUAL_KERNELS_AND_ACTUAL_FREQUENCY_RELAXATION_LOSS_20261010.md),
+[project 13 Note 3](../newman_collisions/13_microlocal_phase_space/notes/3_COMPLETE_CURRENT_AND_PAID_SIMPLE_ZERO_RECTANGLE_20261010.md),
+and [the shared review and replay links](../reviews/HEAT_TWO_PRIORITY_SIGNED_CONTINUATION_REVIEW_20261010.md).
+[Heat Note 15](../newman_collisions/notes/15_SIXTEEN_PROGRAM_INITIAL_RESULTS_AND_FIVE_PRIORITIES_20261010.md)
+records all sixteen scouts;
+[Heat Note 16](../newman_collisions/notes/16_FIVE_PRIORITY_CONTINUATIONS_AND_SIGNED_ARITHMETIC_CHECKPOINTS_20261010.md)
+records the five priority continuations.
+
+The latest constructive result certifies one unique simple genuine heat
+zero at every time in a specified positive-time rectangle, using all 22066
+cutoff terms and the full approximation payments. It excludes collisions
+only on that rectangle. Project 09 supplies paid dual kernels and a
+genuine-height rank witness for the loss of its conditional norm relaxation.
+The next research target is a complete current margin conditional on genuine
+candidates on a closed shrinking subsector, or a signed four-channel dual
+estimate with the prescribed coefficients that beats all payments. Keep
+the common height and carrier, physical derivatives, both candidate
+tolerances and complete complement interference. The uniform sector
+theorem remains open.

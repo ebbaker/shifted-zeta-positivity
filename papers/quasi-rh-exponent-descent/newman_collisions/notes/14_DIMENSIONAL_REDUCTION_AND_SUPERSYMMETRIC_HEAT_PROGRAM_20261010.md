@@ -14,6 +14,12 @@ at an all-real threshold. The research directions below are proposals for
 separate parallel projects. An exact lift alone is a representation result;
 collision exclusion requires an additional theorem that survives reduction.
 
+Instantiation update, 10 October 2026: the sixteen projects now live directly
+in `newman_collisions/`, following the previously created first project.
+[Heat Note 15](15_SIXTEEN_PROGRAM_INITIAL_RESULTS_AND_FIVE_PRIORITIES_20261010.md)
+records the fifteen new initial scouts and ranks five continuations. The
+prospectus below retains its original proposed layout and stopping targets.
+
 This program continues [Heat Note 13](13_RECENT_HEAT_RESULTS_AND_PATHS_FORWARD_20261009.md)
 and the [stable heat manuscript](../newman_collision_reductions.tex).
 It reconnects the heat investigation to the repository's earlier search for
