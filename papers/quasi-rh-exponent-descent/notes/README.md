@@ -1,12 +1,20 @@
 # Investigation summary and notes index
 
+The [dimensional reduction program](../newman_collisions/notes/14_DIMENSIONAL_REDUCTION_AND_SUPERSYMMETRIC_HEAT_PROGRAM_20261010.md)
+describes the exact heat target and sixteen proposed lifts, with a stable
+folder map, bounded scouts, and their intended signed collision interfaces.
+[Scoped program review](../reviews/HEAT_DIMENSIONAL_REDUCTION_PROGRAM_REVIEW_20261010.md);
+[chat 3 registry](../chat-histories/index.json), next new number 4.
+Prepared with GPT-6.1-sol (Codex), reasoning effort ultra.
+
 Heat Notes 8–12 are now included in the
 [stable heat manuscript](../newman_collisions/newman_collision_reductions.tex).
 [The recent heat overview](../newman_collisions/notes/13_RECENT_HEAT_RESULTS_AND_PATHS_FORWARD_20261009.md) describes
 the signed cores, shorter derivative average, and paid threshold jet test,
 with five bounded next tasks. The missing signed implication remains open.
 [Integration review](../reviews/HEAT_SIGNED_RESULTS_MANUSCRIPT_INTEGRATION_REVIEW_20261009.md);
-[chat 2 and numbering registry](../chat-histories/index.json), next number 3.
+[integration chat 2 and numbering registry](../chat-histories/index.json);
+current dimensional reduction chat 3, next new number 4.
 Integration: GPT-6.1-sol (Codex), reasoning effort ultra, verified from the
 recorded configuration.
 
@@ -16,7 +24,7 @@ error interface and worked examples.
 [Integration review and next-chat handoff](../reviews/HEAT_MANUSCRIPT_INTEGRATION_REVIEW_20261009.md)
 records the positive-time collision-exclusion task and the new dated
 [conversation registry](../chat-histories/index.json), beginning at chat 1
-with continuation chat 2 and next number 3. Integration: GPT-6.1-sol (Codex), ultra.
+with continuations 2 and 3 and next number 4. Integration: GPT-6.1-sol (Codex), ultra.
 
 The [signed shrinking-time continuation](../newman_collisions/notes/8_SIGNED_SHRINKING_COLLISION_VECTOR_AND_PHASE_OBSTRUCTION_20261009.md)
 pays exponentially small value, derivative and cutoff errors on kappa in
@@ -282,6 +290,10 @@ still missing; positivity and fixed finite theta cutoffs do not settle them.
 1. [Newman flow and collision scout](../newman_collisions/notes/1_NEWMAN_FLOW_AND_COLLISION_SCOUT_20261008.md): collision reduction and limitations of general kernel properties.
 2. [Zeta collision arithmetic](../newman_collisions/notes/2_ZETA_COLLISION_ARITHMETIC_20261008.md): theta identities, the finite-cutoff obstruction, and conditional compact certificates.
 3. [Normalized heat collision criterion](../newman_collisions/notes/3_NORMALIZED_HEAT_COLLISION_CRITERION_20261008.md): full-disk and derivative errors and explicit high-height real-collision exclusion.
+
+The latest extension is [Heat Note 14](../newman_collisions/notes/14_DIMENSIONAL_REDUCTION_AND_SUPERSYMMETRIC_HEAT_PROGRAM_20261010.md),
+which proposes sixteen dimensional reduction projects for parallel investigation.
+The established signed heat results are summarized in [Heat Note 13](../newman_collisions/notes/13_RECENT_HEAT_RESULTS_AND_PATHS_FORWARD_20261009.md).
 
 ## Shared program records
 

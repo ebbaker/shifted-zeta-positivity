@@ -1,5 +1,14 @@
 # Quasi-RH exponent descent
 
+The [dimensional reduction research program](newman_collisions/notes/14_DIMENSIONAL_REDUCTION_AND_SUPERSYMMETRIC_HEAT_PROGRAM_20261010.md)
+extends the heat investigation with sixteen proposed parallel projects:
+analytic, supersymmetric, geometric, arithmetic, stochastic, integrable,
+and statistical mechanical lifts. Each specifies a reduction to test, the
+additional collision constraint sought, and a bounded first task.
+[Program review and next-chat handoff](reviews/HEAT_DIMENSIONAL_REDUCTION_PROGRAM_REVIEW_20261010.md).
+Prepared with GPT-6.1-sol (Codex), reasoning effort ultra. The proposed
+project folders will be instantiated in the next research chat.
+
 The [heat manuscript](newman_collisions/newman_collision_reductions.tex)
 now incorporates Heat Notes 8–12: complete shrinking-time errors, genuine
 signed core reductions, phase-relaxation obstructions, a shorter complete
@@ -8,8 +17,9 @@ The [recent results and paths forward](newman_collisions/notes/13_RECENT_HEAT_RE
 explain what these estimates achieve and set out bounded next tasks.
 The opposite local signed implication and global collision exclusion remain
 open. [Integration review](reviews/HEAT_SIGNED_RESULTS_MANUSCRIPT_INTEGRATION_REVIEW_20261009.md).
-The current continuation is saved as chat **2** in the
-[conversation registry](chat-histories/index.json), with next number **3**.
+That signed-results integration is saved as chat **2** in the
+[conversation registry](chat-histories/index.json). The current dimensional
+reduction conversation is **3**; the next new chat uses **4**.
 Integration: GPT-6.1-sol (Codex), reasoning effort ultra, verified from the
 recorded configuration. No new snapshot or Git commit is created.
 
@@ -43,7 +53,7 @@ quadratic error payments. Its strict signed opposite remains open.
 [New review](reviews/HEAT_LOCAL_JET_AND_DERIVATIVE_INPUT_REVIEW_20261009.md)
 records the research-stage results subsequently integrated above.
 The integration conversation is recorded as **chat 1** in
-[chat-histories](chat-histories/README.md); the registry now reserves **3** for
+[chat-histories](chat-histories/README.md); the registry now reserves **4** for
 the next new chat and retains dates separately from capture/import order.
 Integration prepared with GPT-6.1-sol (Codex), reasoning effort ultra.
 

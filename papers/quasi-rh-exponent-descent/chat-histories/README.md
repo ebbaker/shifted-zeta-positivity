@@ -5,9 +5,10 @@ Prepared for Edward Baker using GPT-6.1-sol (Codex), reasoning effort ultra,
 as recorded in this chat's session configuration.
 
 This folder keeps dated conversation records and a numbering registry.
-The first captured chat is **1**. The current continuation,
-“Continue manuscript integration”, is **2**. Read `index.json` before
-recording another chat: the next new conversation is **3**. Numbers belong to this investigation's
+The first captured chat is **1**. “Continue manuscript integration” is **2**.
+The current continuation, “Review Newman collision program”, is **3**.
+Read `index.json` before recording another chat: the next new conversation
+is **4**. Numbers belong to this investigation's
 folder and remain stable. A later refresh of the same conversation retains
 its number. Retrospective imports receive the next unused number and retain
 their original conversation dates; importing an older chat does not renumber
@@ -96,7 +97,7 @@ task recorded in the
 [manuscript integration review](../reviews/HEAT_MANUSCRIPT_INTEGRATION_REVIEW_20261009.md), then save its own record
 as the next unused number.
 
-## Latest continuation
+## Signed-results integration continuation
 
 Chat 2 retains the original creation time 2026-10-10T00:08:38.413Z
 (9 October 2026 at 20:08:38.413 America/New_York). Its capture time is
@@ -107,7 +108,27 @@ response's final delivery without changing chat 2's number.
 
 For the next research continuation, start with
 [the recent heat overview](../newman_collisions/notes/13_RECENT_HEAT_RESULTS_AND_PATHS_FORWARD_20261009.md) and
-[the signed-results integration review](../reviews/HEAT_SIGNED_RESULTS_MANUSCRIPT_INTEGRATION_REVIEW_20261009.md). They replace
-the initial shrinking-time scout as the latest handoff; the candidate
+[the signed-results integration review](../reviews/HEAT_SIGNED_RESULTS_MANUSCRIPT_INTEGRATION_REVIEW_20261009.md). They advanced
+the initial shrinking-time scout; the candidate
 signed jet implication, higher multiplicities, and global coverage remain
 open.
+
+## Latest dimensional reduction continuation
+
+Chat **3**, “Review Newman collision program”, retains its original creation
+time 2026-10-10T03:36:56.248Z (9 October 2026 at 23:36:56.248
+America/New_York). The note and archive capture are dated 10 October.
+It records the manuscript/program review, the explanation of the exact
+real-axis vector, the proposed higher dimensional or supersymmetric
+reduction, and the request to write a broad program note and archive this
+chat. Completed public text is preserved through capture; a later refresh
+can add the final delivery without changing number 3. Chats 1 and 2 are
+unchanged. The next new conversation receives **4**.
+
+The next chat should start with [Heat Note 14](../newman_collisions/notes/14_DIMENSIONAL_REDUCTION_AND_SUPERSYMMETRIC_HEAT_PROGRAM_20261010.md),
+[Heat Note 13](../newman_collisions/notes/13_RECENT_HEAT_RESULTS_AND_PATHS_FORWARD_20261009.md),
+the stable manuscript's signed vector and threshold sections, and
+[the program review](../reviews/HEAT_DIMENSIONAL_REDUCTION_PROGRAM_REVIEW_20261010.md). The new note provides
+sixteen proposed project folders with bounded first tasks. Instantiate them
+and investigate them in parallel in the next research chat, preserving the
+common exact-reduction and signed-observation requirements.

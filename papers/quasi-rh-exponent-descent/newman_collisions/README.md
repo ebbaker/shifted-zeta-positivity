@@ -1,6 +1,6 @@
 # Heat-flow collision reductions
 
-9 October 2026. Prepared for Edward Baker with substantial LLM assistance.
+Updated 10 October 2026. Prepared for Edward Baker with substantial LLM assistance.
 Model: GPT-6.1-sol (Codex). Reasoning effort: ultra, verified from the current
 chat's recorded configuration. Internal same-model checks are not independent
 mathematical review.
@@ -60,7 +60,7 @@ scoped reviews in `../reviews/`. New manuscript milestones belong in
 [DRAFT_HISTOR.md](../DRAFT_HISTOR.md), with no new snapshot folders.
 The investigation's dated conversations are recorded in
 [chat-histories](../chat-histories/README.md), beginning with chat 1 and
-continuation chat 2 and next number 3 in its registry.
+continuations 2 and 3 and next number 4 in its registry.
 
 [Heat Note 13](notes/13_RECENT_HEAT_RESULTS_AND_PATHS_FORWARD_20261009.md) gives an overview of the recent results,
 their achievements and limits, and five proposed bounded paths forward.
@@ -68,3 +68,14 @@ their achievements and limits, and five proposed bounded paths forward.
 manuscript changes, scoped validation, and conversation capture.
 Integration: GPT-6.1-sol (Codex), reasoning effort ultra, verified from the
 recorded configuration; same-model checks are internal.
+
+[Heat Note 14](notes/14_DIMENSIONAL_REDUCTION_AND_SUPERSYMMETRIC_HEAT_PROGRAM_20261010.md) develops a dimensional reduction program
+with sixteen proposed analytic, supersymmetric, geometric, arithmetic,
+stochastic, integrable, and statistical mechanical projects. It distinguishes
+exact reproduction of the backward heat flow from a new arithmetic property
+and its transfer to the joint collision observable or threshold jets. Each
+direction has a proposed folder, a bounded first task, and a failure criterion.
+[Program review](../reviews/HEAT_DIMENSIONAL_REDUCTION_PROGRAM_REVIEW_20261010.md). The next research chat can
+instantiate the proposed folders and distribute bounded scouts in parallel.
+This conversation is chat 3, “Review Newman collision program”; the next
+new conversation is 4. Preparation: GPT-6.1-sol (Codex), reasoning effort ultra.
