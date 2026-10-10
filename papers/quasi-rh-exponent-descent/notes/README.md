@@ -1,10 +1,20 @@
 # Investigation summary and notes index
 
+The [latest RH strategy continuation](../newman_collisions/17_enlarged_state_transport/notes/8_RH_STRATEGY_WITH_QUASI_RH_AND_NEXT_ANALYTIC_TARGET_20261010.md)
+compares the endpoint mechanisms under the linked October 5 quasi-RH
+assumption. It gives a conditional 11/12-to-33/41 short-family step
+and an exact complete theta divisor-pair identity; their required
+moment and stationary Fourier estimates remain open. The existing
+mixed-family budgets require a stronger 7/8 premise.
+[Internal review](../newman_collisions/17_enlarged_state_transport/reviews/5_RH_STRATEGY_AND_EXACT_THETA_PAIRING_INTERNAL_REVIEW_20261010.md);
+[conversation 9 and numbering registry](../chat-histories/index.json),
+next new number 10. Prepared with GPT-6.1-sol (Codex), ultra.
+
 The [dimensional reduction program](../newman_collisions/notes/14_DIMENSIONAL_REDUCTION_AND_SUPERSYMMETRIC_HEAT_PROGRAM_20261010.md)
 describes the exact heat target and sixteen proposed lifts, with a stable
 folder map, bounded scouts, and their intended signed collision interfaces.
 [Scoped program review](../reviews/HEAT_DIMENSIONAL_REDUCTION_PROGRAM_REVIEW_20261010.md);
-[chat 3 registry](../chat-histories/index.json), next new number 4.
+[conversation registry](../chat-histories/index.json), the numbering authority.
 Prepared with GPT-6.1-sol (Codex), reasoning effort ultra.
 
 Heat Notes 8–12 are now included in the
@@ -14,7 +24,7 @@ the signed cores, shorter derivative average, and paid threshold jet test,
 with five bounded next tasks. The missing signed implication remains open.
 [Integration review](../reviews/HEAT_SIGNED_RESULTS_MANUSCRIPT_INTEGRATION_REVIEW_20261009.md);
 [integration chat 2 and numbering registry](../chat-histories/index.json);
-current dimensional reduction chat 3, next new number 4.
+consult the registry for the latest capture and next new number.
 Integration: GPT-6.1-sol (Codex), reasoning effort ultra, verified from the
 recorded configuration.
 

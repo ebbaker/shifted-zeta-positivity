@@ -27,6 +27,9 @@ effort is not exposed to this session and is not inferred.
 
 ## Entry points
 
+- [RH strategy with the linked quasi-RH assumption](notes/8_RH_STRATEGY_WITH_QUASI_RH_AND_NEXT_ANALYTIC_TARGET_20261010.md):
+  explicit conditional 11/12-to-33/41 arithmetic step, threshold
+  coverage obligations and exact divisor pairing of all theta cross terms.
 - [Working manuscript](enlarged_state_transport_and_heat_flow.tex): exact
   structures, conditional visibility, sharp transport residuals, the
   primes 2 and 3 obstruction, and a bounded regular calibration.
@@ -79,3 +82,13 @@ The shared algebra checker supplies finite exact controls, not a theta
 sign or collision certificate. Keep research in `notes/`, computations in
 `numerics/`, and reviews in `reviews/`, following the repository
 [large-file policy](../../../../LARGE_FILES.md).
+
+The [latest strategy continuation](notes/8_RH_STRATEGY_WITH_QUASI_RH_AND_NEXT_ANALYTIC_TARGET_20261010.md) recommends
+a complete paired Jacobi or Mellin transform with matched endpoint
+and remainder bounds. Its exact product-index identity supplies
+arithmetic channels; the conditional stationary Fourier sign is
+still open. Arithmetic short-family descent is a parallel endpoint
+route, while the existing mixed ledger needs stronger premises than
+the linked 11/12 theorem. See the
+[internal strategy review](reviews/5_RH_STRATEGY_AND_EXACT_THETA_PAIRING_INTERNAL_REVIEW_20261010.md) and
+[chat 9 registry](../../chat-histories/index.json).

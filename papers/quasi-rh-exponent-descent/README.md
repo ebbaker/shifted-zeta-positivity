@@ -1,5 +1,15 @@
 # Quasi-RH exponent descent
 
+The [latest RH strategy continuation](newman_collisions/17_enlarged_state_transport/notes/8_RH_STRATEGY_WITH_QUASI_RH_AND_NEXT_ANALYTIC_TARGET_20261010.md)
+compares the endpoint mechanisms under the linked October 5 quasi-RH
+assumption. It gives a conditional 11/12-to-33/41 short-family step
+and an exact complete theta divisor-pair identity; their required
+moment and stationary Fourier estimates remain open. The existing
+mixed-family budgets require a stronger 7/8 premise.
+[Internal review](newman_collisions/17_enlarged_state_transport/reviews/5_RH_STRATEGY_AND_EXACT_THETA_PAIRING_INTERNAL_REVIEW_20261010.md);
+[conversation 9 and numbering registry](chat-histories/index.json),
+next new number 10. Prepared with GPT-6.1-sol (Codex), ultra.
+
 The [dimensional reduction research program](newman_collisions/notes/14_DIMENSIONAL_REDUCTION_AND_SUPERSYMMETRIC_HEAT_PROGRAM_20261010.md)
 extends the heat investigation with sixteen proposed parallel projects:
 analytic, supersymmetric, geometric, arithmetic, stochastic, integrable,
@@ -18,8 +28,7 @@ explain what these estimates achieve and set out bounded next tasks.
 The opposite local signed implication and global collision exclusion remain
 open. [Integration review](reviews/HEAT_SIGNED_RESULTS_MANUSCRIPT_INTEGRATION_REVIEW_20261009.md).
 That signed-results integration is saved as chat **2** in the
-[conversation registry](chat-histories/index.json). The current dimensional
-reduction conversation is **3**; the next new chat uses **4**.
+[conversation registry](chat-histories/index.json). Consult the registry for current captures and the next available number.
 Integration: GPT-6.1-sol (Codex), reasoning effort ultra, verified from the
 recorded configuration. No new snapshot or Git commit is created.
 
@@ -53,8 +62,8 @@ quadratic error payments. Its strict signed opposite remains open.
 [New review](reviews/HEAT_LOCAL_JET_AND_DERIVATIVE_INPUT_REVIEW_20261009.md)
 records the research-stage results subsequently integrated above.
 The integration conversation is recorded as **chat 1** in
-[chat-histories](chat-histories/README.md); the registry now reserves **4** for
-the next new chat and retains dates separately from capture/import order.
+[chat-histories](chat-histories/README.md); the registry retains dates separately from capture/import order
+and is the authority for the next new number.
 Integration prepared with GPT-6.1-sol (Codex), reasoning effort ultra.
 
 The [analytic continuation assessment](notes/ANALYTIC_RH_CONTINUATION_AND_MANUSCRIPT_RESULTS_20261009.md)

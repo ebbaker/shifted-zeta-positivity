@@ -9,8 +9,9 @@ The first captured chat is **1**. “Continue manuscript integration” is **2**
 "Review Newman collision program" is **3**. "Investigate analytic Gaussian"
 is **4**. "Create 15 project folders" is **5**. "Continue RH exponent descent"
 is **6**. “Summarize Newman collision progress” is **7**.
-“Assess Newman collision program” is **8**. Read `index.json` before
-recording another chat: the next new conversation is **9**. Numbers belong to this investigation's
+“Assess Newman collision program” is **8**.
+“Continue enlarged-state transport” is **9**. Read `index.json` before
+recording another chat: the next new conversation is **10**. Numbers belong to this investigation's
 folder and remain stable. A later refresh of the same conversation retains
 its number. Retrospective imports receive the next unused number and retain
 their original conversation dates; importing an older chat does not renumber
@@ -362,3 +363,36 @@ been obtained. All first-jet approximation payments, literal cutoff boundaries,
 complete interference, and wider angular-shift costs remain part of the
 proof task. Global time/height coverage remains open; no new collision
 exclusion or RH conclusion is claimed.
+
+## Continued enlarged-state transport and RH strategy
+
+Chat **9**, “Continue enlarged-state transport”, retains its recorded
+creation time 2026-10-10T17:08:13.386Z (2026-10-10T13:08:13.386-04:00
+in America/New_York). Its
+[public conversation record](0009_2026-10-10T17-08-13Z_continue-enlarged-state-transport.json)
+contains the project 17 review request, the source-visibility discussion,
+coordinate and implicit-function questions, the ensuing research
+continuations and completed deliveries, and the comparison of approaches
+under the linked quasi-RH premise. Exact completed public text is retained
+through capture. Creation time and capture time remain separate.
+
+This is a snapshot during the strategy/archive response. Its final delivery
+after capture enters only on a later refresh of chat 9; its identity and
+number remain unchanged. Chats 1–8 and their registry entries are unchanged.
+The next new conversation is **10**. The recorded configuration for the
+latest request is GPT-6.1-sol (Codex), reasoning effort ultra; this does not
+retrospectively replace unavailable configuration fields in earlier notes.
+
+Start further research with
+[the latest RH strategy note](../newman_collisions/17_enlarged_state_transport/notes/8_RH_STRATEGY_WITH_QUASI_RH_AND_NEXT_ANALYTIC_TARGET_20261010.md),
+[the complete Laguerre kernels](../newman_collisions/17_enlarged_state_transport/notes/7_COMPLETE_LAGUERRE_KERNELS_AND_TRIPLE_ZERO_LIMIT_20261010.md),
+[the genuine stationary calibrations](../newman_collisions/17_enlarged_state_transport/notes/6_PAID_GENUINE_THETA_STATIONARY_SIGNS_20261010.md),
+and [the internal strategy review](../newman_collisions/17_enlarged_state_transport/reviews/5_RH_STRATEGY_AND_EXACT_THETA_PAIRING_INTERNAL_REVIEW_20261010.md).
+
+The main endpoint routes are scalable arithmetic exponent contraction and
+conditional theta correlations near possible Newman thresholds. The linked
+family 11/12 assumption differs from the stronger premises used by the
+current mixed budgets. A new complete shorter-family mean square would
+conditionally give 33/41; an exact theta divisor-pair identity supplies
+channels for a signed estimate. Neither missing estimate, uniform coverage
+nor RH is established. The existing manuscript remains the current source.
