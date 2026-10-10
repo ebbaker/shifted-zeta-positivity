@@ -1,5 +1,30 @@
 # Quasi Riemann hypothesis character amplification
 
+The [upstream reflection, Poisson and sieve audit](reviews/UPSTREAM_REFLECTION_POISSON_SIEVE_AUDIT_20261009.md)
+checks the source reflection proof, its moving-prime kernel uniformity,
+local conductor orientation and external sieve interfaces. It distinguishes
+the reflection cusp denominator from the primitive Poisson conductor and
+finds no substantive defect in the inspected interfaces. Full automorphy,
+reciprocity, sieve proofs and the global family baseline remain imported;
+the candidate boundary is still conditional. See the
+[next-step continuation report](../quasi-rh-exponent-descent/reviews/HIGH_PRIORITY_NEXT_STEPS_20261009.md).
+
+The [highest-priority continuation](../quasi-rh-exponent-descent/reviews/HIGH_PRIORITY_CONTINUATION_20261009.md)
+now includes source-proof audits of
+[reflection and inverse recursion](reviews/REFLECTION_INVERSE_PROOF_AUDIT_20261009.md)
+and the [centered fourth induction](reviews/CENTERED_FOURTH_PROOF_AUDIT_20261009.md).
+No substantive defect was found in their reviewed local algebra, masks,
+exponents or choice of parameters. The upstream reflection, Poisson, sieve
+and global-family analytic inputs still require validation; the candidate
+remains conditional.
+
+The [conditional geometry theorem and dependency ledger](notes/GEOMETRY_CONDITIONAL_THEOREM_AND_DEPENDENCY_LEDGER_20261009.md)
+now consolidate the current candidate, prove the continuation and height
+selection directly, and explicitly pay the slot-count-dependent normalizer
+error. The substantive source reflection and moment proofs remain imported
+assumptions. The [comparative follow-up](../quasi-rh-exponent-descent/reviews/COMPARATIVE_PROGRAM_FOLLOWUP_20261009.md)
+reassesses all programs after additional work.
+
 Prepared for Edward Baker, 8 October 2026, with substantial LLM assistance.
 Model: GPT-6 (Codex), inherited configuration; exact serving variant and
 configured reasoning effort are not exposed and are not inferred.
@@ -68,6 +93,8 @@ near the simultaneous witness crossing. Its arithmetic saving is open.
 
 | Record | Contribution |
 | --- | --- |
+| [Reflection/inverse proof audit](reviews/REFLECTION_INVERSE_PROOF_AUDIT_20261009.md) | Reads the source proofs and checks actual annuli, frozen bases, masks, source-witness punctures, principal/tail payments, child normalization and length-one uniformity; upstream analytic inputs remain imported. |
+| [Centered-fourth proof audit](reviews/CENTERED_FOURTH_PROOF_AUDIT_20261009.md) | Checks full centered cross terms, exceptional/principal rows, common product powers, affine ledgers, strict induction and slot-count-independent mesh; 49,273 exact finite assertions. |
 | [Continuation plan](notes/CONTINUATION_20261008.md) | Orders the selector feasibility test, live-divisor analysis, uniform estimate, and validation; recommends a Codex-led workflow. |
 | [Selector feasibility](notes/SELECTOR_FEASIBILITY_20261008.md) | Exact principal-row norm and actual-profile budget; proves a mean-zero principal-layer subcase and identifies the missing enlargement estimate. |
 | [Live plain divisor](notes/LIVE_DIVISOR_TRANSFORM_20261008.md) | Exact transformed coefficient and label reindexing; records the unchanged width obstruction and endpoint Cauchy cost. |

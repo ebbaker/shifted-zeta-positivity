@@ -1,0 +1,3053 @@
+\documentclass[11pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage{mathrsfs}
+\usepackage[margin=1in]{geometry}
+\usepackage[colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue]{hyperref}
+\usepackage{enumitem}
+\allowdisplaybreaks
+\setlength{\emergencystretch}{2em}
+\numberwithin{equation}{section}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{lemma}[theorem]{Lemma}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\DeclareMathOperator{\Rea}{Re}
+\DeclareMathOperator{\Ima}{Im}
+\DeclareMathOperator{\Log}{Log}
+\newcommand{\RH}{\mathrm{RH}}
+\newcommand{\dd}{\,d}
+\title{Collision Exclusion and Collective Attraction\protect\\
+in the Riemann Heat Flow:\protect\\
+Reductions, Quantitative Tools, and Endpoint Obstructions}
+\author{Drafted for Edward Baker}
+\date{9 October 2026}
+\begin{document}
+\maketitle
+\begin{abstract}
+We assemble analytic reductions and proved comparison tools for a proposed
+descent of the de Bruijn--Newman bound. A positive threshold forces a finite
+real multiple zero, while positive-kernel and theta-cutoff examples delimit
+generic exclusion mechanisms. A holomorphic normalized approximation gives
+explicit disk, reflection, cutoff, and derivative errors. In the shrinking
+sector $\kappa=t\log(x/(4\pi))\in[1,2]$, the complete analytic error decays
+exponentially. Genuine phase cancellation removes growing terminal blocks,
+with a larger removal for the derivative coordinate. Weighted reflected
+frequency estimates give positive mean square for the complete derivative
+on intervals of length $Dt^2e^{2\mathfrak a/t}$, where
+$\mathfrak a=\kappa(4-\kappa)/16$. This interval remains too long for
+the available local curvature argument. Independent-phase and complete
+multiplicative-twist models admit joint zeros; their scope is distinguished
+from the genuine height orbit. At an all-real multiple zero, deflation and
+the forced mirror root give a necessary fourth-derivative inequality.
+Its full-sum and value-core approximation errors vanish, supplying an
+additional conditional signed exclusion test. A polynomial heat flow
+saturates that inequality at an arbitrary positive threshold. Separately,
+a sharp exact attraction-field comparison and uniform all-zero counts
+give global field and landing tools, with worked effective and compact
+examples. The opposite signed inequality, higher-multiplicity control,
+and coverage outside the shrinking sector remain open. No proof of RH,
+descent to zero, new numerical record, or literature priority is claimed.
+\end{abstract}
+\tableofcontents
+
+\section{Setup and scope of the reductions}
+\label{sec:setup}
+Use the standard normalization
+\begin{equation}\label{eq:heat}
+ H_t(z)=\int_0^\infty e^{tu^2}\Phi(u)\cos(zu)\dd u,
+ \qquad H_0(z)=\frac18\xi\left(\frac12+\frac{iz}{2}\right),
+ \qquad \partial_tH_t=-H_t'',
+\end{equation}
+where
+\begin{equation}\label{eq:theta}
+ \Phi(u)=\sum_{n\ge1}\phi_n(u),\qquad
+ \phi_n(u)=(2\pi^2n^4e^{9u}-3\pi n^2e^{5u})
+                    e^{-\pi n^2e^{4u}}.
+\end{equation}
+The full kernel extends to an even function, by the theta functional
+equation, and is positive on the real axis. The representation, threshold
+theorem, and quantitative approximation used below are imported from the
+classical theory and \cite{polymath,newmanwu}. The integral and all its
+finite parameter derivatives converge locally uniformly: the decay in
+\eqref{eq:theta} dominates every fixed Gaussian and exponential weight.
+Thus the flow is jointly entire in the complex variables $t,z$, and is real
+and even in $z$ at real times. In particular,
+\begin{equation}\label{eq:imaginarypositive}
+ H_t(iy)=\int_0^\infty e^{tu^2}\Phi(u)\cosh(yu)\dd u>0
+ \quad(t,y\in\mathbb R).
+\end{equation}
+
+There is a finite constant $\Lambda$ such that all zeros of $H_t$ are real
+exactly for $t\ge\Lambda$. RH is equivalent to $\Lambda\le0$, and
+Rodgers--Tao prove $\Lambda\ge0$ \cite{rodgerstao}. De Bruijn's strip
+contraction, in this normalization, says that a strip of half-width $a$
+at time $t_0$ becomes a strip of half-width
+\begin{equation}\label{eq:strip}
+ \sqrt{\max\{a^2-2h,0\}}\qquad\text{at time }t_0+h,
+ \quad h\ge0.
+\end{equation}
+The original critical strip gives $a=1$ at time zero and hence
+$\Lambda\le1/2$. A zero-free half-plane $\Rea s>\theta$, together with
+the functional equation, gives $a=2\theta-1$ when $1/2\le\theta\le1$.
+Repeated use of \eqref{eq:strip} alone preserves the absolute endpoint
+$t_0+a^2/2$.
+
+The results proved here are deductions from these imported theorems.
+Their novelty in the literature has not been established. The
+projected-field framework of \cite{planat} is credited in
+Section~\ref{sec:field}; its numerical certificates and reported endpoints
+are not inputs. Our central distinction is between a strictly improved
+positive-time landing estimate and a mechanism excluding every positive
+collision. The latter would be an RH-strength theorem.
+
+\section{Finite collisions and the endpoint obstruction}
+\label{sec:collisions}
+The uniform localization input needed here is
+\cite[Theorem~1.5(i)]{polymath}: for an absolute $C$, a zero
+$H_t(x+iy)=0$ with $0<t\le1/2$ and $x\ge e^{C/t}$ has $y=0$.
+Evenness handles negative $x$. Uniformity for $t\ge\varepsilon>0$ is
+essential; mere finiteness of the exceptional set separately at each
+time would not give the following compactness argument.
+
+\begin{proposition}[A positive threshold entails a finite collision]
+\label{prop:finitecollision}
+If $\Lambda>0$, there is $x_*\in\mathbb R\setminus\{0\}$ such that
+\begin{equation}\label{eq:collision}
+ H_\Lambda(x_*)=H_\Lambda'(x_*)=0.
+\end{equation}
+\end{proposition}
+\begin{proof}
+Choose $\Lambda/2\le t_j<\Lambda$ increasing to $\Lambda$, and a
+nonreal zero $z_j$ at each time. Strip contraction confines their imaginary
+parts to $[-1,1]$, while the imported localization confines their real
+parts to $[-e^{2C/\Lambda},e^{2C/\Lambda}]$. A subsequence converges
+to $z_*$, and continuity gives $H_\Lambda(z_*)=0$. The threshold property
+makes $z_*=x_*$ real. If the root were simple, the implicit-function
+theorem would give a unique nearby zero for real times near $\Lambda$;
+conjugation would force it to be real. This contradicts the nearby
+nonreal $z_j$. Finally \eqref{eq:imaginarypositive} excludes $x_*=0$.
+\end{proof}
+
+For later use, the imported local splitting theorem
+\cite[Proposition~3.1]{polymath} states that a real zero of multiplicity
+$m\ge2$ at $(T,x_*)$ has nearby roots
+\begin{equation}\label{eq:hermite}
+ x_*+\sqrt{2(t-T)}\,\lambda_j+O(|t-T|),
+\end{equation}
+where the $\lambda_j$ are the distinct real roots of the probabilists'
+Hermite polynomial $\operatorname{He}_m$. For $t<T$, at least one of
+these roots is nonreal. For $t>T$, all are real and simple sufficiently
+close to $T$.
+
+\begin{corollary}[Exact endpoint target]\label{cor:rhcollision}
+RH is equivalent to the absence of a common real zero of $H_t,H_t'$ for
+every $t>0$. If the time-zero zeros lie in $|\Ima z|\le a$, it suffices
+to exclude such a zero for $0<t\le a^2/2$.
+\end{corollary}
+\begin{proof}
+Under RH, all zeros are real for $t\ge0$. A multiple root at positive
+time would contradict this through \eqref{eq:hermite} at a slightly
+earlier nonnegative time. If RH fails, the threshold equivalence gives
+$\Lambda>0$ and Proposition~\ref{prop:finitecollision} applies.
+After $a^2/2$ all roots are real by \eqref{eq:strip}; a later multiple
+root is excluded by the same local splitting argument.
+\end{proof}
+
+\begin{proposition}[Ordinary collision geometry]\label{prop:double}
+At an exact double real zero of a real analytic heat flow at $(T,x_*)$,
+the nearby conjugate roots for $t<T$ have the form
+\begin{equation}\label{eq:double}
+ a(t)\pm iy(t),\qquad a(t)=x_*+O(T-t),\qquad
+ y(t)^2=2(T-t)+O((T-t)^2).
+\end{equation}
+The collision is already transverse as an intersection of the two real
+equations $H=H'=0$:
+\begin{equation}\label{eq:jacobian}
+ \det\frac{\partial(H,H')}{\partial(x,t)}(T,x_*)=(H''(T,x_*))^2>0.
+\end{equation}
+\end{proposition}
+\begin{proof}
+Translate $x_*$ to zero and apply real Weierstrass preparation:
+$H_t(z)=A(t,z)(z^2+b(t)z+c(t))$, with $A(T,0)\ne0$ and
+$b(T)=c(T)=0$. The heat equation at this point gives $c'(T)=-2$.
+Completing the square gives
+$(z+b(t)/2)^2=2(t-T)+O((t-T)^2)$, proving \eqref{eq:double}.
+For \eqref{eq:jacobian}, the two rows of the Jacobian, in the stated
+column order $(x,t)$, are $(H',-H'')$ and $(H'',-H''')$.
+\end{proof}
+
+Consequently $t+y(t)^2/2=T+O((T-t)^2)$. Finite additional attraction
+can improve the quadratic term while remaining compatible with $T>0$.
+Transversality, or a theorem that every collision is double, would not
+exclude this event. A bound on $\Lambda$ also cannot be propagated
+backward into a new strip at an earlier time: \eqref{eq:strip} evolves
+forward. These facts are the endpoint obstruction to interpreting a
+sequence of strictly improved positive bounds as descent to zero.
+
+\section{A positive-kernel counterexample to a general mechanism}
+\label{sec:counterexample}
+This section concerns a different entire function, not zeta. It excludes
+an argument based only on positive even kernels, rapid decay, a narrow
+zero strip, and finitely many exceptional zeros.
+
+\begin{proposition}\label{prop:kernel}
+Put $\varphi(u)=e^{-\cosh u}$ and
+$q(u)=\varphi^{(4)}(u)+324\varphi(u)$. Then $q$ is even, strictly
+positive, strictly decreasing for $u>0$, and double-exponentially
+decaying. The flow
+\begin{equation}\label{eq:qflow}
+ J_t(z)=\int_{\mathbb R}e^{tu^2}q(u)e^{izu}\dd u
+\end{equation}
+has a finite threshold $0<\Lambda_q\le9/2$. At time zero exactly four
+zeros are nonreal, namely $\pm3\pm3i$, and all other zeros are real.
+\end{proposition}
+\begin{proof}
+Write $c=\cosh u\ge1$. Direct differentiation gives
+\begin{align*}
+ q(u)&=(c^4-6c^3+5c^2+5c+321)e^{-c},\\
+ c^4-6c^3+5c^2+5c+321
+ &=\frac{(2c-9)^2(4c^2+12c+27)}{16}
+   +5(c^2-1)+5(c-1)+\frac{3109}{16}.
+\end{align*}
+Thus positivity, evenness, and decay hold. Moreover
+\[
+ q'(u)=-\sinh(u)e^{-c}r(c),\qquad
+ r(c)=c^2(c-5)^2-2c^2-5c+316.
+\]
+For $1\le c\le8$, $r(c)\ge316-128-40=148$; for $c\ge8$,
+$r(c)\ge7c^2-5c+316>0$. This proves monotonicity. The defining
+integral and all its derivatives converge for every fixed Gaussian
+weight. In particular the general de Bruijn kernel assumptions, as
+recorded in \cite[Theorem~7]{newmanwu}, are satisfied.
+
+Let $B(z)=\int_{\mathbb R}e^{-\cosh u}e^{izu}\dd u=2K_{iz}(1)$.
+The all-real-zero property of this Bessel function is classical; see
+\cite{gasper}. Here is a spectral proof of the required special case.
+If $K_{iz}(1)=0$, the nonzero decaying function $v(x)=K_{iz}(e^x)$,
+$x\ge0$, satisfies
+\[
+ -v''+e^{2x}v=z^2v,\qquad v(0)=0.
+\]
+Integration against $\overline v$, with the vanishing boundary term,
+gives
+\[
+ z^2\int_0^\infty|v|^2\dd x
+ =\int_0^\infty(|v'|^2+e^{2x}|v|^2)\dd x>0.
+\]
+The standard decaying large-argument asymptotic of $K_\nu$ shows that
+$v$ is not identically zero and justifies both integrals. Thus $z^2$
+is positive real and $z$ is real. Four integrations by parts give
+\[
+ J_0(z)=(z^4+324)B(z).
+\]
+The four polynomial roots $\pm3\pm3i$ are simple and $B$ has no
+nonreal root, giving the asserted zero set and a strip of half-width
+three.
+
+De Bruijn's theorem makes the zeros all real at $t\ge9/2$ and preserves
+this property upward in time. The all-real property is closed under
+locally uniform convergence, by Hurwitz's theorem applied to disks
+off the real axis; the limit cannot be identically zero because
+$J_t(0)>0$. Its set of times is therefore a closed upper ray.
+The four simple nonreal roots persist for small positive $t$, so the
+lower endpoint of that ray is strictly positive.
+\end{proof}
+
+\begin{corollary}\label{cor:rescale}
+For $a>0$, the kernel $q_a(u)=a q(au)$ has
+\[
+ J_t^{[a]}(z)=J_{t/a^2}(z/a),\qquad
+ \Lambda_{q_a}=a^2\Lambda_q>0.
+\]
+Its time-zero zeros lie in $|\Ima z|\le3a$, and only four are nonreal.
+\end{corollary}
+\begin{proof}
+Substitute $v=au$ in the integral; zeros and the threshold scale as
+displayed.
+\end{proof}
+The scale changes the function. It does not produce successively sharper
+strips for one fixed zeta function, and it does not preserve zeta's prime
+coefficients, Euler product, explicit formula, or zero density.
+Vanishing of all odd endpoint jets also holds for this smooth even
+counterexample; that property alone cannot be a zeta-specific sign
+mechanism.
+
+\section{The exact theta interface and a cutoff obstruction}
+\label{sec:theta}
+Define the collision vector and Wronskian on the real axis by
+\[
+ C_t(x)=H_t(x)^2+H_t'(x)^2,\qquad
+ W_t(x)=H_t'(x)^2-H_t(x)H_t''(x).
+\]
+$C_t(x)>0$ is equivalent to absence of a collision at that point.
+$W_t(x)>0$ is sufficient, whereas $W_t(x)\ge0$ allows a common zero.
+With $f_t(u)=e^{tu^2}\Phi(u)$, symmetrization and the product-to-sum
+identities give the exact formula
+\begin{equation}\label{eq:wronskianintegral}
+ W_t(x)=\frac14\int_0^\infty\!\int_0^\infty f_t(u)f_t(v)
+ \big((u+v)^2\cos(x(u-v))+(u-v)^2\cos(x(u+v))\big)\dd u\dd v.
+\end{equation}
+The actual squared-integer coefficients from \eqref{eq:theta} are
+positive, but the cosines need not be. Kernel positivity therefore does
+not give the desired sign term by term.
+
+Another exact interface, obtained by $v=\pi n^2e^{4u}$ in each summand,
+is
+\begin{equation}\label{eq:exactarithmetic}
+ H_t(x)=\frac{\pi^{-1/4}}4\int_\pi^\infty (2v-3)v^{1/4}e^{-v}
+ \sum_{n\le\sqrt{v/\pi}}n^{-1/2}
+ e^{t\ell_n(v)^2/16}\cos(x\ell_n(v)/4)\dd v,
+ \quad \ell_n(v)=\log\frac{v}{\pi n^2}.
+\end{equation}
+For the $j$th spatial derivative, multiply the summand by
+$(\ell_n(v)/4)^j$ and replace its cosine by
+$\cos(x\ell_n(v)/4+j\pi/2)$. Absolute convergence justifies these
+operations. The finite sum depends on $v$ and the outer integral is
+infinite. Formula~\eqref{eq:exactarithmetic} is not an Euler product for
+$H_t$, and a family estimate for these weights would be an additional
+theorem.
+
+\begin{proposition}[Every fixed theta cutoff has a negative tail]
+\label{prop:thetacutoff}
+For $N\ge1$, set $\Phi_N=\sum_{n\le N}\phi_n$ and
+$H_{t,N}(x)=\int_0^\infty e^{tu^2}\Phi_N(u)\cos(xu)\dd u$.
+Then, uniformly for $t$ in any compact real interval,
+\begin{align}\label{eq:thetaasymp}
+ H_{t,N}(x)&=-A_Nx^{-2}+O(x^{-4}),&
+ H_{t,N}'(x)&=2A_Nx^{-3}+O(x^{-5}),\\
+ H_{t,N}''(x)&=-6A_Nx^{-4}+O(x^{-6}),&
+ W_{t,N}(x)&=-2A_N^2x^{-6}+O(x^{-8}),\nonumber
+\end{align}
+where, with $a_n=\pi n^2$,
+\begin{equation}\label{eq:endpointjet}
+ A_N=\Phi_N'(0)
+ =\sum_{n>N}a_n(8a_n^2-30a_n+15)e^{-a_n}>0.
+\end{equation}
+In particular $W_{t,N}(x)<0$ for all sufficiently large $|x|$.
+\end{proposition}
+\begin{proof}
+Direct differentiation gives
+$\phi_n'(0)=-a_n(8a_n^2-30a_n+15)e^{-a_n}$.
+The full even kernel has $\Phi'(0)=0$, so Gaussian convergence of the
+derivative sum gives \eqref{eq:endpointjet}. Its tail terms are positive
+because $n>N\ge1$ implies $a_n\ge4\pi$, beyond the larger root
+$(15+\sqrt{105})/8$ of the quadratic. For
+$f(u)=e^{tu^2}\Phi_N(u)$, all derivatives are integrable uniformly
+on compact time intervals and $f'(0)=A_N$. Repeated integration by
+parts gives
+\[
+ \int_0^\infty f(u)\cos(xu)\dd u
+ =-\frac{f'(0)}{x^2}+\frac{f'''(0)}{x^4}+O(x^{-6}).
+\]
+Apply integration by parts separately to $-u f(u)\sin(xu)$ and
+$-u^2 f(u)\cos(xu)$. Their first nonzero coefficients are
+$2f'(0)$ and $-6f'(0)$, respectively. This avoids differentiating
+an uncontrolled asymptotic remainder. Substitution gives the
+Wronskian assertion.
+\end{proof}
+
+All odd jets of the full kernel, including after multiplication by
+$e^{tu^2}$, cancel exactly. The first omitted tail jet is $-A_N$,
+so \eqref{eq:thetaasymp} describes a cutoff defect rather than a sign
+change of the full zeta Wronskian. Indeed $H_{t,N}$ cannot have all
+zeros real at any finite time. Its integral gives growth
+$\log\max_{|z|\le r}|H_{t,N}(z)|=O(r\log(r+2))$, hence order at
+most one. A real entire function of order less than two with all zeros
+real satisfies the Laguerre inequality $F'^2-FF''\ge0$, by its
+Hadamard product. This contradicts \eqref{eq:thetaasymp}.
+
+Simple analytic symmetrization is not a remedy at positive time:
+$\Phi_N(-u)\sim-3\pi(\sum_{n\le N}n^2)e^{-5u}$ as $u\to\infty$,
+so $(\Phi_N(u)+\Phi_N(-u))/2$ is not absolutely heat-integrable
+after multiplication by $e^{tu^2}$ for $t>0$. A suitable replacement
+must preserve both the cancellations and heat integrability.
+
+\section{A normalized holomorphic collision criterion}
+\label{sec:normalization}
+We now use a different finite approximation, the effective
+Riemann--Siegel representation from \cite[Theorem~1.3]{polymath}.
+Its scalar theorem applies to $0<t\le1/2$, $x\ge200$,
+$0\le y\le1$. We keep this domain, rewrite the reflected sum
+holomorphically, freeze its integer cutoff, and derive the spatial
+derivative error by Cauchy's formula.
+
+\subsection{The fixed-cutoff analytic representation}
+Put $s=(1-iz)/2$ and use principal logarithms in
+\begin{align}\label{eq:m0}
+ m_0(s)={}&\Log s+\Log(s-1)-\frac s2\log\pi
+ +\log\frac{\sqrt{2\pi}}{16}
+ +\left(\frac s2-\frac12\right)\Log\frac s2-\frac s2,\\
+ \alpha(s)={}&\frac1{2s}+\frac1{s-1}+\frac12\Log\frac{s}{2\pi},
+ \qquad m_t(s)=m_0(s)+\frac t4\alpha(s)^2,
+ \qquad M_t(s)=e^{m_t(s)}.\nonumber
+\end{align}
+For positive real part of $z$, both $s$ and $1-s$ avoid the cut
+$(-\infty,1]$. For a fixed $N\ge1$, define
+\begin{align}\label{eq:p}
+ p_{t,n}(s)&=\exp\left(\frac t4\log^2n
+                  -(s+\tfrac t2\alpha(s))\log n\right),&
+ P_{t,N}(s)&=\sum_{n\le N}p_{t,n}(s),\\
+ G_{t,N}(z)&=M_t(s)P_{t,N}(s)+M_t(1-s)P_{t,N}(1-s).\nonumber
+\end{align}
+The source theorem uses the natural cutoff
+\begin{equation}\label{eq:naturalcutoff}
+ n(t,x)=\left\lfloor\sqrt{\frac{x}{4\pi}+\frac t{16}}\right\rfloor.
+\end{equation}
+Its seemingly conjugated reflected sum equals the second term of
+\eqref{eq:p}: $\overline s-y=1-s$, and its correction
+$\kappa=\tfrac t2(\alpha(1-s)-\alpha(\overline s))$ converts the
+exponent $-\overline{s+t\alpha(s)/2}-\kappa+y$ to
+$-(1-s)-t\alpha(1-s)/2$. Thus no conjugate variable remains.
+$G_{t,N}$ is holomorphic when $N$ is fixed and has real symmetry.
+
+Define the nonvanishing analytic normalizer and its phase by
+\begin{align}\label{eq:symmetricnormalization}
+ A_t(z)&=\exp\frac{m_t(s)+m_t(1-s)}2,&
+ \theta_t(z)&=\frac{m_t(s)-m_t(1-s)}{2i},\\
+ Q_t(z)&=\frac{H_t(z)}{A_t(z)},&
+ F_{t,N}(z)&=\frac{G_{t,N}(z)}{A_t(z)}
+ =e^{i\theta_t}P_{t,N}(s)+e^{-i\theta_t}P_{t,N}(1-s).\nonumber
+\end{align}
+On the real axis $A_t(x)>0$ and $\theta_t,Q_t,F_{t,N}$ are real.
+The remainder has real symmetry throughout its neighborhood. Since
+$A_t$ has no zeros,
+\begin{equation}\label{eq:collisionnormalized}
+ H_t(x)=H_t'(x)=0\quad\Longleftrightarrow\quad Q_t(x)=Q_t'(x)=0.
+\end{equation}
+Normalization removes the exponentially small common archimedean factor;
+it does not provide a lower bound for the collision vector.
+
+For exact derivative evaluation put
+$a_{t,n}(s)=M_t(s)p_{t,n}(s)$ and
+$\lambda_{t,n}(s)=(\alpha(s)-\log n)(1+t\alpha'(s)/2)$. Then
+\begin{align}\label{eq:normalizedderivative}
+ G_{t,N}'&=\frac i2\sum_{n\le N}
+  \big(\lambda_{t,n}(1-s)a_{t,n}(1-s)
+       -\lambda_{t,n}(s)a_{t,n}(s)\big),\\
+ b_t:=\frac{A_t'}{A_t}&=-\frac i4\big(m_t'(s)-m_t'(1-s)\big),
+ \qquad F_{t,N}'=G_{t,N}'/A_t-b_tF_{t,N},\nonumber\\
+ m_t'(s)&=\alpha(s)(1+t\alpha'(s)/2).\nonumber
+\end{align}
+The fixed $N$ in these formulas is essential: differentiating a formula
+with the jumping cutoff \eqref{eq:naturalcutoff} is invalid at a jump.
+
+\subsection{Explicit disk, reflection, and cutoff errors}
+Fix $0<\varepsilon\le\tau\le1/2$, $0<R\le1$, and $X-R\ge200$.
+Set
+\[
+ x_-=X-R,\quad x_+=X+R,\quad q_\pm=\frac{x_\pm}{4\pi},
+ \quad V=\frac{x_-}{2},\quad S=\frac12\sqrt{x_+^2+(1+R)^2},
+\]
+and define
+\begin{align}\label{eq:diskconstants}
+ \alpha_-&=\frac12\log q_- -V^{-2}>0,&
+ A_*&=\frac{3}{2V}+\frac12
+           \sqrt{\log^2(S/(2\pi))+\pi^2/4},\\
+ D_*&=\frac{3}{2V^2}+\frac1{2V},&
+ L_*&=A_*(1+\tau D_*/2),\qquad K_*=e^{RL_*/2}.\nonumber
+\end{align}
+Throughout the upper enclosing rectangle
+$x_-\le\Rea z\le x_+$, $0\le\Ima z\le R$, both $s,1-s$ have
+real parts in $[0,1]$, imaginary modulus at least $V$, and modulus
+at most $S$. Consequently
+\begin{equation}\label{eq:alphabounds}
+ \Rea\alpha\ge\alpha_-,\quad |\alpha|\le A_*,\quad
+ |\alpha'|\le D_*,\quad |m_t'|\le L_*.
+\end{equation}
+For the first inequality use
+$\Rea(1/(2s))\ge0$, $\Rea(1/(s-1))\ge-V^{-2}$, and $|s|\ge V$;
+the others follow directly from \eqref{eq:m0}, including
+$|\arg s|\le\pi/2$. Integrating vertically from the real axis gives
+\begin{equation}\label{eq:normalizercost}
+ |M_t(s)/A_t|,\ |M_t(1-s)/A_t|\le K_*.
+\end{equation}
+
+The permitted natural cutoffs are among
+\[
+ m_-:=\left\lfloor\sqrt{q_-+\varepsilon/16}\right\rfloor,
+ \qquad m_+:=\left\lfloor\sqrt{q_++\tau/16}\right\rfloor.
+\]
+Here $m_-\ge3$ and $m_+-m_-\le1$: the range under the square
+root has length at most $1/(2\pi)+1/32<1$, and its square-root
+range also has length less than one. Define positive majorants
+\begin{align}\label{eq:termmajorants}
+ d_n&=\tfrac14\log^2n-\tfrac12\alpha_-\log n,&
+ V_n&=n^{-1/2}e^{\max\{\varepsilon d_n,\tau d_n\}},&
+ P_n&=n^{R/2}V_n,\\
+ \ell_n&=\max\{|\log(q_-/n^2)|,|\log(q_+/n^2)|\},&
+ k_*&=\frac{\tau R}{2(x_--6)},&
+ U_n&=\exp\frac{\tau^2\ell_n^2/16+0.626}{x_--6.66}-1.\nonumber
+\end{align}
+The endpoint maximum in $V_n$ preserves the sign of the heat exponent;
+its logarithm is affine in $t$. For each permitted $m$, put
+\begin{align}\label{eq:eta}
+ E_m^{AB}&=\sum_{n\le m}(1+m^{k_*}n^R)V_nU_n,\\
+ E_m^C&=q_-^{-1/4}\exp\left(-\frac\varepsilon{16}\log^2q_-
+ +\frac{1.24(3^R+3^{-R})}{m-0.125}
+ +\frac{3\sqrt{\log^2q_++\pi^2/4}+10.44}{x_--12}\right),\nonumber\\
+ \eta_N&=K_*\max_{m_-\le m\le m_+}
+ \left(E_m^{AB}+E_m^C
+ +2\sum_{n=\min(m,N)+1}^{\max(m,N)}P_n\right).\nonumber
+\end{align}
+An empty sum is zero. The decimal constants retain their exact meanings
+in the imported inequalities of \cite{polymath}; these are not empirical
+fit constants.
+
+\begin{proposition}[Holomorphic remainder and derivative control]
+\label{prop:diskerror}
+For every $t\in[\varepsilon,\tau]$ and $|z-X|\le R$,
+\begin{equation}\label{eq:diskerror}
+ |Q_t(z)-F_{t,N}(z)|\le\eta_N.
+\end{equation}
+For real $|x-X|\le a<R$, this also gives
+\begin{equation}\label{eq:derivativeerror}
+ |Q_t'(x)-F_{t,N}'(x)|\le\frac{\eta_N}{R-a}.
+\end{equation}
+\end{proposition}
+\begin{proof}
+On the upper rectangle, apply \cite[Theorem~1.3, equations~(23)--(24)]{polymath}
+with its actual cutoff $m=n(t,x)$. The source error is bounded, in
+its $M_t(s)$ normalization, by $E_m^{AB}+E_m^C$:
+$|\gamma|\le e^{0.02y}(x/(4\pi))^{-y/2}\le1$,
+$m^{|\kappa|}\le m^{k_*}$, $n^y\le n^R$, and
+$|p_{t,n}(s)|\le V_n$ follow from the source inequalities and
+\eqref{eq:alphabounds}. The remaining terms are majorized
+monotonically as in \eqref{eq:eta}. Changing to the symmetric
+normalizer costs $K_*$ by \eqref{eq:normalizercost}. Changing $m$ to
+the fixed $N$ adds or removes exactly the finite terms shown in
+\eqref{eq:eta}; each reflected normalized term is at most $K_*P_n$,
+since both real parts are at least $(1-R)/2$. Real symmetry of
+$Q_t-F_{t,N}$ reflects the upper-half estimate to the lower half-disk.
+This proves \eqref{eq:diskerror} on the full disk. Cauchy's estimate
+on the radius-$R-a$ circle about an inner real point proves
+\eqref{eq:derivativeerror}; the remainder is holomorphic and the
+normalizer has no zeros in the neighborhood.
+\end{proof}
+
+\begin{corollary}[Cell criterion]\label{cor:cell}
+On $t\in[\varepsilon,\tau]$, $|x-X|\le a<R$, either uniform inequality
+\[
+ |F_{t,N}(x)|>\eta_N\qquad\text{or}\qquad
+ |F_{t,N}'(x)|>\eta_N/(R-a)
+\]
+excludes collisions. A cover may use a different successful alternative
+in each cell.
+\end{corollary}
+\begin{proof}
+At a common zero of $Q_t,Q_t'$, both opposite weak inequalities
+would follow from Proposition~\ref{prop:diskerror}. Then use
+\eqref{eq:collisionnormalized}.
+\end{proof}
+The uniform cell bounds require interval enclosures or analytic
+variation bounds, not point samples. Reflection after an asymmetric
+normalization would not preserve the same error; the factor $K_*$
+is part of the proof.
+
+\subsection{A leading-pair exclusion and its remaining gap}
+For $N=1$, the entire finite tail is still paid in \eqref{eq:eta}, while
+\begin{equation}\label{eq:leadingpair}
+ F_{t,1}(x)=2\cos\theta_t(x),\qquad
+ F_{t,1}'(x)=-2\theta_t'(x)\sin\theta_t(x),\qquad
+ \theta_t'(x)=-\tfrac12\Rea m_t'((1-ix)/2).
+\end{equation}
+Put $\omega_*=(\alpha_- -\tau A_*D_*/2)/2$. If $\omega_*>0$,
+then $|\theta_t'|\ge\omega_*$ by \eqref{eq:alphabounds}.
+A candidate collision therefore contradicts $\cos^2\theta+\sin^2\theta=1$
+whenever
+\begin{equation}\label{eq:paircriterion}
+ \left(\frac{\eta_1}{2}\right)^2+
+ \left(\frac{\eta_1}{2(R-a)\omega_*}\right)^2<1.
+\end{equation}
+
+\begin{corollary}[Explicit eventual exclusion]\label{cor:eventual}
+For $0<\varepsilon\le1/2$,
+\begin{equation}\label{eq:expheight}
+ \varepsilon\le t\le\tfrac12,\qquad |x|\ge e^{64/\varepsilon}
+ \quad\Longrightarrow\quad(H_t(x),H_t'(x))\ne(0,0).
+\end{equation}
+\end{corollary}
+\begin{proof}
+By evenness take $X=x>0$, $\tau=1/2$,
+$L=\log(X/(4\pi))$, $R=1/L$, and $a=0$. From $X\ge e^{128}$,
+$\log(4\pi)<2.6$, and \eqref{eq:diskconstants}--\eqref{eq:termmajorants},
+the following relaxed elementary bounds hold:
+\begin{gather*}
+ L>125,\quad\log q_->125,\quad\varepsilon\log q_->62,
+ \quad R<1/125,\\
+ \alpha_-\ge\tfrac12\log q_- -0.001,
+ \quad\log m_+\le\tfrac12\log q_-+0.01,\\
+ A_*\le0.51L,\quad D_*<0.001,\quad K_*<1.3,
+ \quad R\omega_*>0.24.
+\end{gather*}
+For example $|\log q_\pm-L|\le2R/X$, and
+$\log m_+\le\tfrac12\log(q_++1/32)$ give the middle estimates.
+Also $L_*/L<0.52$ gives $K_*<e^{0.26}<1.3$;
+$\alpha_-/L>0.499$ and $\tau A_*D_*/(2L)<0.000128$ give the
+phase estimate. In particular $d_n\le0$ for $n\le m_+$. With
+\[
+ p=\frac{1-R}{2}+\frac\varepsilon2\alpha_-
+                       -\frac\varepsilon4\log m_+>8,
+\]
+we have $P_n\le n^{-8}$ and hence
+\[
+ \sum_{n=2}^{m_+}P_n\le\frac1{256}+\frac1{896}.
+\]
+The bound $\ell_n\le\log X$ and monotonic decrease of
+$(\log X)^2/X$ for $X\ge e^{128}$ give $U_n<10^{-40}$.
+Since $m_+^{k_*}<2$ and $p-R>7$, the two power sums in
+$E_m^{AB}$ give $E_m^{AB}<4\cdot10^{-40}$.
+In $E_m^C$ the negative heat exponent is below $-484$ and the
+positive terms together are below three, so $E_m^C<e^{-481}<10^{-100}$.
+Uniformly over the permitted cutoffs,
+\[
+ \eta_1<1.3\left(4\cdot10^{-40}+10^{-100}
+               +2\left(\frac1{256}+\frac1{896}\right)\right)<0.014.
+\]
+The left side of \eqref{eq:paircriterion} is at most
+$(0.014/2)^2+(0.014/0.48)^2<0.001$. This excludes the collision
+at the arbitrary point $X$.
+\end{proof}
+
+This corollary rederives known positive-time eventual simplicity with
+a deliberately large explicit height; it is not a new bound near zero
+or a record. The remaining finite height grows without bound as
+$\varepsilon\downarrow0$. No fixed finite certificate removes that
+quantifier gap. The effective finite approximation here differs from
+the theta cutoff of Section~\ref{sec:theta}: every omitted finite and
+analytic term is paid as an error.
+
+\section{The exact attraction field and a sharp probe comparison}
+\label{sec:field}
+Let $z=x+iy$, $y>0$, be a simple nonreal zero whose imaginary height
+is globally maximal, and put $w=y^2$. Zeros are counted with multiplicity.
+Canonical-product sums below are grouped under the real and even
+symmetries; this is the convention in the imported zero-motion theorem
+\cite[Proposition~3.1]{polymath}. Define
+\begin{equation}\label{eq:fields}
+ E_t(z)=\frac1y\sum_{\rho\ne z,\overline z}
+ \frac{y-\Ima\rho}{(x-\Rea\rho)^2+(y-\Ima\rho)^2},
+ \qquad
+ G_t(z)=\sum_{\rho\ne z,\overline z}
+ \frac1{(x-\Rea\rho)^2+4w}.
+\end{equation}
+$E$ is the exact external field; $G$ is its projected counterpart.
+The latter is the field used in the collective-contraction framework
+of \cite[Section~2]{planat}. The present comparison below concerns $E$.
+
+\begin{lemma}[Zero motion and projected floor]\label{lem:motion}
+At such a zero,
+\begin{equation}\label{eq:motion}
+ w'=-2-4wE_t(z),\qquad E_t(z)\ge G_t(z)\ge0.
+\end{equation}
+\end{lemma}
+\begin{proof}
+Implicit differentiation of $H_t(z(t))=0$ and the canonical product
+give $z'=H_t''(z)/H_t'(z)=2\sum_{\rho\ne z}(z-\rho)^{-1}$ in
+the grouped convention. The own conjugate contributes $-2$ to $w'$.
+The remaining imaginary parts give the definition of $E$.
+A real external root at horizontal distance $d$ contributes
+$1/(d^2+w)$ to $E$, which exceeds its contribution to $G$.
+For an external conjugate pair at heights $\pm v$, $0<v\le y$,
+put $s=d^2/y^2$ and $u=1-v^2/y^2\in[0,1]$. Its exact contribution
+is $2(s+u)/(wD_E)$, where
+$D_E=s^2+2(2-u)s+u^2$, while its projected contribution is
+$2/(w(s+4))$. The difference has nonnegative numerator
+$(s+u)(s+4)-D_E=3us+u(4-u)$. Summation proves the assertion.
+The excluded configuration $s=u=0$ would be the target pair itself.
+\end{proof}
+
+For $\eta>y$ the point $x+i\eta$ lies above every zero. Define
+\begin{equation}\label{eq:probe}
+ L_\eta(t,x)=-\Ima\frac{H_t'}{H_t}(x+i\eta),\qquad
+ Q_\eta=\frac{L_\eta}{\eta}-\frac2{\eta^2-w}\ge0,
+ \qquad K(c)=\min\{1,(c^2-1)/4\}.
+\end{equation}
+The subtraction removes exactly the own conjugate pair in the
+canonical-product logarithmic derivative.
+
+\begin{theorem}[Sharp exact-field comparison]\label{thm:probe}
+Every $\eta>y$ satisfies
+\begin{equation}\label{eq:sharpbridge}
+ E_t(z)\ge K(\eta/y)
+ \left(\frac{L_\eta(t,x)}{\eta}-\frac2{\eta^2-w}\right).
+\end{equation}
+The factor is sharp for the allowed pairwise geometry. In particular,
+if $y<\eta\le\sqrt5\,y$, then
+\begin{equation}\label{eq:nearprobe}
+ w'\le-(\eta^2-w)\frac{L_\eta(t,x)}{\eta}.
+\end{equation}
+\end{theorem}
+\begin{proof}
+For an external pair put $s=d^2/y^2$, $u=1-v^2/y^2$, and
+$q=\eta^2/y^2-1>0$. Apart from the common factor $2/y^2$,
+the exact and probe contributions are respectively
+\[
+ e=\frac{s+u}{D_E},\qquad p=\frac{s+q+u}{D_Q},\quad
+ D_E=s^2+2(2-u)s+u^2,\quad
+ D_Q=s^2+2(q+2-u)s+(q+u)^2.
+\]
+For $0<q\le4$, the cleared numerator of $4e-qp$ is
+\begin{align*}
+ &4(s+u)D_Q-q(s+q+u)D_E\\
+ &=(4-q)s^3+[12+4(1-u)+q(4-q)+uq]s^2\\
+ &\quad+u[12+4(1-u)+12q+2q^2+qu]s
+       +u(u+q)[(4-q)u+4q]\ge0.
+\end{align*}
+For $q\ge4$, the numerator of $e-p$ is
+\[
+ (s+u)D_Q-(s+q+u)D_E
+ =q[s^2+(q-4+6u)s+u(q+u)]\ge0.
+\]
+A real root has exact-to-probe ratio $(s+q+1)/(s+1)\ge1$.
+Summing these termwise comparisons proves \eqref{eq:sharpbridge}.
+At $u=0$, the pair ratio tends to $q/4$ as $s\downarrow0$ and
+to one as $s\to\infty$, establishing pairwise sharpness. This
+does not assert that these extremal configurations occur for zeta.
+For $q\le4$, insert the comparison into \eqref{eq:motion}; the
+own-pair terms cancel exactly and give \eqref{eq:nearprobe}.
+\end{proof}
+
+At $\eta\ge\sqrt5\,y$ the comparison is a consequence of the
+existing projected-field bridge \cite[Proposition~2.3]{planat}.
+The nearer-probe assertion concerns $E$ and has the explicit smaller
+factor; we do not assert it for $G$. An adaptive probe $\eta(w)$ is
+evaluated instantaneously and is not differentiated in the zero-motion
+formula. For a fixed $\eta>\sqrt{w_0}$ and a uniform bound
+$L_\eta\ge L_0$ throughout a region containing every maximizer,
+\begin{equation}\label{eq:fixedprobefloor}
+ E_t(z)\ge K(\eta/\sqrt{w_0})
+ \max\left\{0,\frac{L_0}{\eta}-\frac2{\eta^2-w_0}\right\}
+ \quad(0<w\le w_0).
+\end{equation}
+Both factors on the right of \eqref{eq:sharpbridge} can only improve
+as $w$ decreases under these bounds. Spatial and temporal coverage
+is part of the hypothesis; a high-height sector alone cannot imply
+a global landing endpoint.
+
+\section{Uniform counts, global coverage, and landing}
+\label{sec:landing}
+Let $N_t(R)$ count all zeros with $0<\Rea\rho\le R$, including
+nonreal zeros and multiplicity. The imported
+\cite[Theorem~1.5(iv)]{polymath} supplies an absolute $A\ge0$ such that
+\begin{equation}\label{eq:count}
+ |N_t(R)-p_t(R)|\le A\log(2+R),\qquad 0<t\le\tfrac12,\quad R\ge4\pi,
+\end{equation}
+where
+\[
+ p_t(R)=\frac R{4\pi}\log\frac R{4\pi}-\frac R{4\pi}
+          +\frac{11}{8}+\frac t{16}\log\frac R{4\pi}.
+\]
+The error constant is independent of $t$. Endpoint conventions can
+be absorbed into $A$ using the same theorem's local count bound.
+No numerical value of this constant is supplied here.
+
+\begin{proposition}[A global field from all-zero counts]\label{prop:countfloor}
+Set
+\begin{equation}\label{eq:countparameters}
+ D=8\pi(4A+1),\quad X_* =\max\{(4\pi)^2,2D,3\},
+ \quad n=\log X_*,\quad B=X_*+2D.
+\end{equation}
+For every simple globally maximal nonreal zero at $0<t\le1/2$,
+\begin{equation}\label{eq:globalfloor}
+ E_t(z)\ge G_t(z)\ge\frac{n}{B^2+4w}.
+\end{equation}
+\end{proposition}
+\begin{proof}
+Evenness permits $x\ge0$. If $x\ge X_*$, use only the zeros with
+real parts in $(x+D,x+2D]$. They exclude both own-pair roots. On
+this interval,
+\[
+ p_t'(R)=\frac1{4\pi}\log\frac R{4\pi}+\frac{t}{16R}
+ \ge\frac{\log x}{8\pi},
+\]
+since $x\ge(4\pi)^2$. Also $x\ge2D,3$ gives
+$2+x+2D\le2+2x\le x^2$, so each endpoint error logarithm is at
+most $2\log x$. The count in the block is at least
+\[
+ \left(\frac{D}{8\pi}-4A\right)\log x=\log x.
+\]
+Every horizontal distance is at most $2D$, giving
+$G_t\ge\log x/(4D^2+4w)$. If $0\le x\le X_*$, use instead
+the fixed block $(X_*+D,X_*+2D]$, which has at least $n$ zeros
+by the same argument and distances at most $B$. For large $x$,
+use $\log x\ge n$ and $B\ge2D$ to obtain the same bound.
+Finally apply Lemma~\ref{lem:motion}.
+\end{proof}
+
+This proposition uses all-zero counts; replacing them by a count
+of real zeros would lose its uniformity near time zero. No horizontal
+confinement assumption is needed. Another available floor comes
+from the reflected external pair $-x\pm iy$: by
+\eqref{eq:imaginarypositive}, $x\ne0$, and
+\begin{equation}\label{eq:mirrorfloor}
+ E_t(z)\ge G_t(z)\ge\frac1{2(x^2+w)}.
+\end{equation}
+The density, reflected-pair, and probe fields ordinarily overlap in
+their zero contributions. Their floors may be combined by a maximum.
+Adding them requires disjoint blocks or a separately proved joint
+comparison.
+
+\begin{theorem}[State-dependent landing]\label{thm:landing}
+Suppose the zeros at time $t_0\ge0$ lie in $|\Ima z|\le\sqrt{w_0}$,
+where $w_0>0$ and $t_0+w_0/2\le1/2$. With the parameters in
+\eqref{eq:countparameters}, define
+\begin{equation}\label{eq:landingfunction}
+ \mathcal F_{n,B}(w)=\frac{w}{n+2}
+ +\frac{B^2n}{4(n+2)^2}\log\left(1+\frac{2(n+2)w}{B^2}\right).
+\end{equation}
+Then
+\begin{equation}\label{eq:landingbound}
+ \Lambda\le t_0+\mathcal F_{n,B}(w_0)<t_0+\frac{w_0}{2}.
+\end{equation}
+More generally, if a continuous global floor $E_t(z)\ge g(w)\ge0$
+holds at every simple maximizing zero throughout the relevant times,
+the landing duration is at most
+\begin{equation}\label{eq:generallanding}
+ \int_0^{w_0}\frac{\dd u}{2+4u g(u)}.
+\end{equation}
+\end{theorem}
+\begin{proof}
+First take a compact positive-time interval. Uniform eventual reality
+confines all its nonreal roots to a common compact rectangle; locally
+uniform analyticity and the argument principle give a uniform finite
+bound on their number there. The local Hermite expansion
+\eqref{eq:hermite} separates the branches near every multiple root.
+The same local argument applies at a complex multiple root: its
+nonzero leading coefficient multiplies the heat evolution of
+$(z-z_*)^m$, whose square-root rescaling has the same distinct Hermite
+roots. The analytic implicit-function theorem after this rescaling
+gives distinct branches analytic in the square-root time parameter.
+Therefore multiple-root events in this compact region are locally
+isolated, hence finite by compactness. Branches are analytic away
+from these events, and analytic in a local square-root time parameter
+near an event. Their derivatives have integrable singularities.
+
+The maximal squared imaginary height $\mathcal W(t)$, with zero
+included, is thus continuous and absolutely continuous on this
+interval: locally it is the maximum of finitely many absolutely
+continuous squared-height branches. At almost every time with
+$\mathcal W>0$, a maximizing simple branch obeys
+\[
+ \mathcal W'\le-2-\frac{4n\mathcal W}{B^2+4\mathcal W}.
+\]
+All maximizers have the same field floor, so switches do not alter
+the inequality. Direct differentiation gives
+\begin{equation}\label{eq:landingderivative}
+ \mathcal F_{n,B}'(w)
+ =\frac{B^2+4w}{2B^2+4(n+2)w}
+ =\frac1{2+4wn/(B^2+4w)}.
+\end{equation}
+Consequently $d\mathcal F_{n,B}(\mathcal W(t))/dt\le-1$ almost
+everywhere while $\mathcal W>0$. Integrate across the finite
+multiple-root events. If the maximal height has not vanished by
+$t_0+\mathcal F_{n,B}(w_0)$, the integrated inequality contradicts
+nonnegativity. Once it vanishes, upward persistence of real zeros
+gives \eqref{eq:landingbound}. The same argument, with the integral
+in \eqref{eq:generallanding} as the comparison function, proves the
+general statement.
+
+When $t_0=0$, start at $\varepsilon>0$ instead.
+Strip contraction gives
+$\mathcal W(\varepsilon)\le\max\{w_0-2\varepsilon,0\}$.
+Apply the positive-time result and let $\varepsilon\downarrow0$.
+This uses no attained nonreal maximum at time zero. The comparison
+intervals stay within $t\le1/2$, since their duration is at most
+the classical duration $w_0/2$.
+\end{proof}
+
+The strictly positive gain is explicit in the count parameters:
+\begin{equation}\label{eq:landinggain}
+ \frac w2-\mathcal F_{n,B}(w)
+ =\int_0^w\frac{nu}{B^2+2(n+2)u}\dd u
+ \ge\frac{nw^2}{2[B^2+2(n+2)w]}.
+\end{equation}
+It begins at $nw^2/(2B^2)$ as $w\downarrow0$. Applied to the
+original unit strip this recovers the known qualitative conclusion
+$\Lambda<1/2$ \cite{kikimlee}, without a new numerical endpoint. Making the
+unprinted counting constant effective is a separate analytic task;
+assigning an arbitrary number to the source's $O$-term is not a proof.
+
+For a constant field floor $h>0$, the general duration is
+\begin{equation}\label{eq:constantlanding}
+ \mathcal T_h(w)=\frac{\log(1+2hw)}{4h}
+ =\frac w2-\frac h2w^2+O(w^3).
+\end{equation}
+At a hypothetical ordinary collision from
+Proposition~\ref{prop:double}, $t+\mathcal T_h(y(t)^2)\to T$.
+Thus a bounded attraction field, including the count floor, is
+compatible with a strictly positive limiting threshold.
+
+% Consolidation of Heat Notes 8--10; insertion before the final analytic outlook.
+% Prepared for Edward Baker with substantial LLM assistance, 9 October 2026.
+% Model: GPT-6.1-sol (Codex); reasoning effort: ultra, verified from recorded configuration.
+
+\section{The actual signed collision vector in shrinking time}
+\label{sc:section}
+The holomorphic interface of Section~\ref{sec:normalization} can be paid
+uniformly in a shrinking-time regime. It then exposes a signed arithmetic
+target, rather than a phase-independent tail estimate. We first record that
+target and an actual signed edge reduction. Two phase-relaxation theorems
+then delimit mechanisms that discard the genuine height correlations.
+None of the results in this section supplies the missing local lower bound.
+
+\subsection{Exact coordinates and complete disk payments}
+Use
+\begin{equation}\label{sc:scaling}
+ 1\le\kappa\le2,\quad 0<t\le1/20,\quad L=\kappa/t,\quad
+ x=4\pi e^L,\quad R=L^{-1},\quad
+ N=\left\lfloor\sqrt{e^L+t/16}\right\rfloor,
+\end{equation}
+and put
+\begin{equation}\label{sc:exponents}
+ \mathfrak a=\frac{\kappa(4-\kappa)}{16},\qquad
+ \mathfrak b=\frac{\kappa(\kappa+4)}{16},\qquad
+ \mathfrak d=\frac{\kappa(\kappa+12)}{16}.
+\end{equation}
+Thus $\mathfrak a+\mathfrak b=\kappa/2$,
+$\mathfrak d-\mathfrak b=\kappa/2$, and
+$\mathfrak d=\kappa-\mathfrak a$. All limits in this section are uniform
+in $\kappa\in[1,2]$. Spatial derivatives hold time and the integer cutoff
+fixed. When $L$ scales a derivative coordinate, it is the fixed center
+value, not a quantity differentiated along \eqref{sc:scaling}.
+
+\begin{proposition}[Complete shrinking-time error]
+\label{sc:paiderror}
+In \eqref{sc:scaling}, use $X=x$ and $\varepsilon=\tau=t$ in
+\eqref{eq:diskconstants}--\eqref{eq:eta}, with the indicated natural
+center cutoff $N$. Then
+\begin{equation}\label{sc:diskpayment}
+ \begin{aligned}
+ \eta_N&\le5e^{-\mathfrak b/t},\qquad
+ |Q_t(z)-F_{t,N}(z)|\le\eta_N\quad(|z-x|\le1/L),\\
+ |Q_t^{(j)}(x)-F_{t,N}^{(j)}(x)|&\le j!L^j\eta_N
+ \quad(j\ge0).
+ \end{aligned}
+\end{equation}
+The estimates include reflection, conversion to the symmetric
+normalizer, every possible cutoff change, and the spatial derivative errors.
+\end{proposition}
+\begin{proof}
+We give the numerical ledger for the existing positive majorant. Here
+$L\ge20$, $x>10^9$, $R\le1/20$, and $m_-\ge22000$.
+The definitions in \eqref{eq:diskconstants} give
+\[
+ |\log q_\pm-L|<10^{-9},\quad
+ |\alpha_- -L/2|<10^{-9},\quad
+ A_*/L<.502,\quad D_*<1.01/x,\quad K_*<1.3.
+\]
+For example $|\log q_\pm-L|\le2R/x$, and
+$K_*\le\exp\{RA_*(1+tD_*/2)/2\}$. There are at most two permitted
+natural cutoffs, differing by at most one, and the center cutoff is one of
+them. Every correction index $j$ satisfies
+$|\log j-L/2|<10^{-4}$; substitution in \eqref{eq:termmajorants} gives
+\[
+ \log P_j\le-\mathfrak b/t+.251,\qquad
+ 2\sum_{\text{cutoff correction}}P_j\le2.6e^{-\mathfrak b/t}.
+\]
+The two positive corrections in $E_m^C$ together are less than $.001$;
+the first is at most $2.5/(22000-.125)$, and the second follows from
+the decrease of $L/e^L$ for $L\ge20$. Consequently
+$E_m^C\le1.01e^{-\mathfrak b/t}$.
+
+The many-term absolute sum used to pay the approximation error obeys
+\[
+ \sum_{n\le m}V_n\le5e^{\mathfrak a/t},\qquad
+ 1+m^{k_*}n^R<2.7,\qquad U_n\le.9/x.
+\]
+Indeed the decreasing-weight integral, with $n=e^{L/2-v}$, is at most
+\[
+ (1+10^{-8})e^{\mathfrak a/t}
+ \int_0^{L/2}e^{-v/2+tv^2/4}\dd v
+ \le(1+10^{-8})4e^{\mathfrak a/t}.
+\]
+Here $tv\le\kappa/2\le1$. Its first summand and possible edge interval
+fit in the reserve to five because $\mathfrak a/t\ge15/4$.
+The logarithmic weight slope is at most $-1/2+3\cdot10^{-6}$.
+Also $n^R\le e^{1/2+5\cdot10^{-6}}$, $m^{k_*}\le e^{10^{-9}}$,
+and $t^2\ell_n^2/16\le1/4+10^{-8}$; the numerator defining $U_n$
+is at most $.87600001$. The resulting error bound is
+\[
+ E_m^{AB}\le\frac{5(2.7)(.9)}{4\pi}e^{-\mathfrak d/t}
+ <e^{-\mathfrak d/t}\le.01e^{-\mathfrak b/t}.
+\]
+The last comparison uses $\kappa/(2t)\ge10$. Thus
+\[
+ \eta_N\le1.3(1.01+2.6+.01)e^{-\mathfrak b/t}<5e^{-\mathfrak b/t}.
+\]
+Proposition~\ref{prop:diskerror} now gives the full disk estimate and
+Cauchy's formula gives every fixed-order center derivative. In particular
+this proof applies arbitrarily near a natural-cutoff crossing; it never
+differentiates that jumping cutoff.
+\end{proof}
+
+At the real center put $s=(1-ix)/2$, $\alpha=\alpha_r+i\alpha_i$,
+and $\alpha'=U+iV$. Define the exact data
+\begin{align}\label{sc:coefficients}
+ w_n&=\exp\{t\log^2n/4-(1/2+t\alpha_r/2)\log n\},&
+ \phi_n&=\theta_t(x)+(x-t\alpha_i)\log n/2,\\
+ c&=\tfrac12(1+tU/2),&
+ \Omega&=\tfrac12\Rea\{\alpha(1+t\alpha'/2)\},\nonumber\\
+ \lambda_n&=\Omega-c\log n,&
+ r_n&=4\lambda_n/L
+      =\tfrac2L\Rea\{(\alpha-\log n)(1+t\alpha'/2)\},\nonumber\\
+ c_n&=tV\log n/L,& z_n&=r_n-ic_n.\nonumber
+\end{align}
+These quantities retain the amplitude drift:
+$(\log w_n)'=-tV\log n/4$ and $\phi_n'=-\lambda_n$.
+In particular, with $h_n=(\cos\phi_n,r_n\sin\phi_n-c_n\cos\phi_n)$,
+\begin{equation}\label{sc:vector}
+ \mathcal V_N:=\left(F_{t,N}/2,2F_{t,N}'/L\right)
+ =\sum_{n\le N}w_nh_n
+ =\left(\Rea\sum_{n\le N}w_ne^{i\phi_n},
+         \Ima\sum_{n\le N}w_nz_ne^{i\phi_n}\right).
+\end{equation}
+The term $c_n$ must not be removed when converting the derivative.
+At a genuine collision, \eqref{eq:collisionnormalized} and
+Proposition~\ref{sc:paiderror} imply
+\begin{equation}\label{sc:collision}
+ |\mathcal V_{N,1}|\le\eta_N/2,\qquad
+ |\mathcal V_{N,2}|\le2\eta_N,\qquad
+ |\mathcal V_N|^2\le17\eta_N^2/4
+       \le\frac{425}{4}e^{-2\mathfrak b/t}.
+\end{equation}
+A uniform strict reverse of the squared bound for the actual phases would
+exclude collisions in this regime. It has not been established.
+
+The correlations required in such a bound can be written exactly. Put
+$\Delta=\phi_n-\phi_m$ and $\Sigma=\phi_n+\phi_m$. Then
+\begin{align}\label{sc:kernel}
+ 2h_n\cdot h_m={}&(1+r_nr_m+c_nc_m)\cos\Delta
+ +(1-r_nr_m+c_nc_m)\cos\Sigma\nonumber\\
+ &+(c_nr_m-c_mr_n)\sin\Delta
+ -(c_mr_n+c_nr_m)\sin\Sigma.
+\end{align}
+Here $\Delta=(x-t\alpha_i)\log(n/m)/2$ and
+$\Sigma=2\theta_t+(x-t\alpha_i)\log(nm)/2$.
+Summing \eqref{sc:kernel} over all ordered pairs with weights $w_nw_m/2$
+gives $|\mathcal V_N|^2$, including every diagonal and reflected
+sum-frequency term.
+
+For later estimates the exact real-axis formulas are
+\begin{align}\label{sc:realaxis}
+ \alpha_r&=L/2+\tfrac14\log(1+x^{-2})-(1+x^2)^{-1},&
+ \alpha_i&=3x/(1+x^2)-\tfrac12\arctan x,\\
+ U&=(7x^2-5)/(1+x^2)^2,&
+ V&=x(x^2+5)/(1+x^2)^2.\nonumber
+\end{align}
+They imply, uniformly up to $N$,
+\begin{equation}\label{sc:coordinateasymptotics}
+ r_n=1-2\log n/L+O(t/(Lx)+1/(Lx^2)),\qquad c_n=O(t/x).
+\end{equation}
+\subsection{Absolute terminal-block budgets}
+
+\begin{proposition}[Last-block absolute mass]\label{prop:absmass}
+Take $x=4\pi e^{\kappa/t}$ and let
+$N=\lfloor\sqrt{x/(4\pi)+t/16}\rfloor$. Uniformly for $\kappa$
+in compact subsets of $(0,4)$, the real-axis coefficients in
+\eqref{eq:p} satisfy
+\begin{equation}\label{eq:lastblock}
+ \sum_{N/2\le n\le N}|p_{t,n}((1-ix)/2)|
+ =\left(2(1-2^{-1/2})+o(1)\right)
+    \exp\left(\frac{\kappa(4-\kappa)}{16t}\right).
+\end{equation}
+At $\kappa=4$, a fixed logarithmic block
+$Ne^{-M}\le n\le N$ instead has limiting absolute mass
+$2(1-e^{-M/2})$ for each fixed $M>0$.
+\end{proposition}
+\begin{proof}
+On the real axis a direct calculation from \eqref{eq:m0} gives
+\[
+ \Rea\alpha((1-ix)/2)
+ =\tfrac12\log\frac{x}{4\pi}
+      +\tfrac14\log(1+x^{-2})-\frac1{1+x^2}.
+\]
+Thus
+$\log|p_n|=-(1/2+\kappa/4)\log n+(t/4)\log^2n+o(1)$,
+with the error uniform on the indicated block. Write
+$n=Ne^{-v}$, $0\le v\le\log2$, and use
+$\log N=\kappa/(2t)+o(1)$. The weighted Riemann sum is
+\[
+ (1+o(1))e^{\kappa(4-\kappa)/(16t)}
+ \int_0^{\log2}e^{-v/2}e^{tv^2/4}\dd v.
+\]
+Its integral tends to $2(1-2^{-1/2})$. The errors from $\alpha$
+and the floor in $N$ are exponentially small in this scaling.
+The same calculation on $[0,M]$ at $\kappa=4$ proves the final
+assertion.
+\end{proof}
+
+This is a coefficient diagnostic, not a collision theorem for the
+true heat function. It shows why treating the last block as a small
+absolute perturbation of the leading term fails for $0<\kappa<4$.
+A finite Dirichlet mollifier with constant coefficient one and
+indices supported on a fixed finite set of primes cannot remove
+this coefficient-wise absolute obstruction. In its convolution,
+coefficients at integers coprime to those primes are unchanged;
+their positive periodic density in the long block leaves the same
+exponential scale in \eqref{eq:lastblock}. This observation excludes
+that specific absolute method, not every mollifier or collision
+argument. Genuine signed phase cancellation or the joint equations
+must enter a successful proof in this range.
+
+The last-block calculation in
+Proposition~\ref{prop:absmass} is therefore not repaired by adding the
+derivative coordinate. With $q=\log2$ its absolute scaled derivative
+budget is
+\begin{equation}\label{sc:derivativemass}
+ \sum_{N/2\le n\le N}w_n\sqrt{r_n^2+c_n^2}
+ =\left(\frac{2t}{\kappa}C_1+o(t)\right)e^{\mathfrak a/t},
+ \quad C_1=\int_0^qv e^{-v/2}\dd v>0.
+\end{equation}
+To obtain this extension, use the same substitution as in that proof;
+on its bounded logarithmic block $r_n=2tv/\kappa+o(t)$ and $c_n=o(t)$.
+The extra polynomial factor $t$ does not overcome
+$\mathfrak a\ge3/16$. This is an absolute-budget diagnostic, not a
+lower bound on the actual signed derivative.
+
+\subsection{An actual signed edge with explicit payment}
+\begin{proposition}[The original value edge]
+\label{sc:valueedge}
+Let $H_v=\lfloor N^{3/4}\rfloor$ and $K_v=N-H_v$.
+In \eqref{sc:scaling},
+\begin{equation}\label{sc:edgetails}
+ \left|\sum_{K_v<n\le N}w_ne^{i\phi_n}\right|\le40N^{-1/24},
+ \qquad
+ \left|\sum_{K_v<n\le N}w_nz_ne^{i\phi_n}\right|
+     \le\frac{800}{L}N^{-7/24}.
+\end{equation}
+Consequently every genuine collision satisfies
+\begin{equation}\label{sc:edgecollision}
+ |F_{t,K_v}/2|\le\eta_N/2+40N^{-1/24},\qquad
+ |2F_{t,K_v}'/L|\le2\eta_N+800N^{-7/24}/L.
+\end{equation}
+\end{proposition}
+\begin{proof}
+Put $T=(x-t\alpha_i)/2$ and $f(u)=T\log u/(2\pi)$.
+The common phase does not affect a sum's modulus. Since
+$N\ge22000$, $K_v\ge.9N$, and
+$N^2-t/16\le e^L<(N+1)^2$, one has
+\[
+ 1/N\le f'''(u)=T/(\pi u^3)\le4/N\quad(K_v\le u\le N).
+\]
+For the upper bound use $T/\pi\le2.01N^2$ and $2.01/.9^3<4$;
+for the lower one use $T/\pi\ge N^2$.
+The explicit theorem \cite[equation~(2)]{arias}, with derivative order
+three, gives for a real smooth phase with $0<\lambda\le f'''\le\Lambda$
+on an interval of length $Y$, $\lfloor Y\rfloor>3$,
+\[
+ \left|\sum e(f(n))\right|
+ \le11\max\{Y^{3/4}(\Lambda/\lambda)^{1/4},
+             Y(\Lambda^2/\lambda)^{1/6},Y^{1/4}\lambda^{-1/4}\}.
+\]
+Taking $\lambda=1/N$, $\Lambda=4/N$, every partial interval of this
+edge is bounded by
+\begin{equation}\label{sc:partialsum}
+ 11\max\{4^{1/4}N^{9/16},16^{1/6}N^{7/12},N^{7/16}\}
+ \le18N^{7/12}.
+\end{equation}
+Intervals with at most three terms satisfy this estimate trivially.
+
+Write $\delta=\log N-L/2$. The floor gives $|\delta|\le2/N$ and
+\eqref{sc:realaxis} gives $|\alpha_r-L/2|\le x^{-2}$.
+With $s_\kappa=1/2+\kappa/8$, the exact endpoint identity is
+\[
+ \log w_N+s_\kappa\log N
+ =\frac t4\log N\,\delta-\frac t2(\alpha_r-L/2)\log N.
+\]
+Thus $w_N\le1.01N^{-s_\kappa}$. The logarithmic weight slope on
+$[K_v,N]$ lies between $-.504$ and $-.499$; hence $w$ decreases and
+$w_{K_v}\le2N^{-s_\kappa}$. Abel summation with
+\eqref{sc:partialsum} bounds the value tail by
+$36N^{7/12-s_\kappa}\le40N^{-1/24}$.
+
+For the index interpolation of $z_n$, direct differentiation gives
+\[
+ |z_N|\le6/(LN),\qquad
+ z'(u)=-\frac1u\left\{\frac2L(1+tU/2)+i\frac{tV}L\right\},
+ \qquad |z'(u)|\le3/(Lu).
+\]
+Here the prime is an index derivative. For example the endpoint bound
+uses $|U|\le8/x^2$, $|V|\le2/x$, $x\ge11N^2$, and
+$|\alpha_r-\log N|\le2/N+x^{-2}$.
+It follows that
+\[
+ \operatorname{TV}(z)\le4H_v/(LN),\qquad
+ \sup|z|\le10H_v/(LN),
+\]
+\[
+ |w_Nz_N|+\operatorname{TV}(wz)
+ \le(6.06+28H_v)\frac{N^{-s_\kappa}}{LN}
+ \le40\frac{H_vN^{-s_\kappa}}{LN}.
+\]
+Abel summation bounds the derivative sum by
+$720N^{1/3-s_\kappa}/L\le800N^{-7/24}/L$.
+This proves \eqref{sc:edgetails}; \eqref{sc:diskpayment} and
+\eqref{sc:vector} give \eqref{sc:edgecollision} by exact signed
+subtraction. The raw value and derivative tail payments are respectively
+$80N^{-1/24}$ and $400N^{-7/24}$.
+\end{proof}
+
+The absolute mass of this same edge is
+$(1+o(1))N^{1/4-\kappa/8}$, which grows for $\kappa<2$.
+Thus Proposition~\ref{sc:valueedge} removes a genuinely growing signed
+set of terms. Its retained core still contains $N-o(N)$ terms.
+The displayed third-derivative estimate permits a value edge $N^\beta$
+when $\beta<2/3+\kappa/8$, giving the uniform threshold $\beta<19/24$.
+The larger derivative core and the derivative-order comparison below
+refine this observable-specific statement.
+
+\subsection{A long-block exponent-pair budget}
+\label{sc:longblock}
+For a logarithmic-phase exponent pair $(p,q)$, its partial-interval bound
+on a dyadic block near $M=e^{\vartheta L}$ is
+$O(T^pM^{q-p})$; the phase meets the logarithmic case of the definition
+in \cite[Sections~1.1--1.2]{trudgianyang}.
+Abel summation with the exact decreasing weight gives
+\begin{equation}\label{sc:pairbudget}
+ |\text{weighted block}|
+ \le\exp\{L(E_{p,q}(\vartheta,\kappa)+o(1))\},\qquad
+ E_{p,q}=p+\vartheta(q-p-1/2-\kappa/4)+\kappa\vartheta^2/4.
+\end{equation}
+At the endpoint block $\vartheta=1/2$, a strictly decaying bound of
+this form requires
+\begin{equation}\label{sc:pairthreshold}
+ p+q<1/2+\kappa/8.
+\end{equation}
+The Bourgain pair in the cited survey is
+$(13/84+\epsilon,55/84+\epsilon)$; its endpoint exponent is
+$13/84-\kappa/16+\epsilon\ge5/168+\epsilon>0$.
+More generally, the particular convex hull $\mathscr H$ defined in
+\cite[Section~1.4]{trudgianyang} has
+\begin{equation}\label{sc:surveyedminimum}
+ \min_{(p,q)\in\mathscr H}(p+q)=17/21.
+\end{equation}
+Here is the elementary minimum check, so the scope of the diagnostic is
+explicit. The first five nonnegative-index vertices are
+\[
+ (13/84,55/84),\quad(4742/38463,35731/51284),\quad
+ (18/199,593/796),\quad(2779/38033,58699/76066),\quad
+ (715/10238,7955/10238).
+\]
+Their sums are at least $17/21$ by direct rational comparison, with
+equality at the first. The next four are the $A$-transforms of the last
+four displayed vertices, where
+$A(p,q)=(p/(2p+2),(p+q+1)/(2p+2))$.
+Each has $q\ge2/3$, so its transformed sum is at least $5/6>17/21$.
+The negative-index vertices are $B$-reflections, which preserve $p+q$.
+For the remaining family indexed by integers $m\ge5$, its deficit from
+one is
+\[
+ \frac{3m^2-7m+2}{m(m-1)^2(m+2)}
+ \le\frac3{(m-1)(m+2)}\le\frac3{28}<\frac4{21}.
+\]
+The limiting endpoints have sum one, and convexity preserves this linear
+minimum. This proves \eqref{sc:surveyedminimum} for that specified hull,
+which misses \eqref{sc:pairthreshold} throughout the present range.
+It is not a claim about every later exponent-pair result or every signed
+method. A positive exponent in an upper bound is a deficit of the bound,
+not a lower bound asserting growth of the actual signed block.
+
+\subsection{A genuine adjacent packet defeats diagonal coercivity}
+\begin{proposition}\label{sc:packet}
+Let $M\to\infty$ be integral, $x_M=4\pi M^2$, and
+$t_M=\kappa/(2\log M)$, $1\le\kappa\le2$.
+The natural cutoff is $N=M$. For its two genuine terms put
+\[
+ D_M=|w_Mh_M|^2+|w_{M-1}h_{M-1}|^2,\qquad
+ J_M=|w_Mh_M+w_{M-1}h_{M-1}|^2.
+\]
+Then uniformly in $\kappa$,
+\begin{equation}\label{sc:packetenergy}
+ D_M=(2\cos^2(\pi/8)+o(1))w_M^2,\qquad
+ J_M=O(w_M^2/M^2),\qquad J_M/D_M\longrightarrow0.
+\end{equation}
+The same ratio tends to zero after summing over any fixed finite collection
+of bounded spatial translations, with time and the two indices fixed.
+\end{proposition}
+\begin{proof}
+The exact branch of \eqref{eq:symmetricnormalization} gives
+\[
+ \theta_t=-\pi+\tfrac14\arctan x+\tfrac x4(1-L)
+ -\tfrac x8\log(1+x^{-2})+\tfrac t2\alpha_r\alpha_i.
+\]
+At the specified points $L=2\log M$, so
+\[
+ \phi_M=\pi M^2-7\pi/8+O(M^{-2}),\qquad
+ \phi_M-\phi_{M-1}=2\pi M+\pi+O(M^{-1}).
+\]
+For the second expansion use
+$-\log(1-1/M)=M^{-1}+(2M^2)^{-1}+O(M^{-3})$ and
+$T=2\pi M^2+O(t)$.
+The two cosines have opposite signs up to $O(M^{-1})$, and each squared
+cosine tends to $\cos^2(\pi/8)$. The exact weights satisfy
+\[
+ w_M=M^{-(4+\kappa)/8}(1+o(1)),\qquad
+ w_{M-1}/w_M=1+O(M^{-1}).
+\]
+Equation~\eqref{sc:coordinateasymptotics} gives
+$r_M=O(t/(LM^2)+1/(LM^4))$, $r_{M-1}=O(1/(ML))$,
+and $c_n=O(t/M^2)$. The packet's value coordinate is therefore
+$O(w_M/M)$ and its scaled derivative coordinate is $O(w_M/(ML))$.
+This proves \eqref{sc:packetenergy}; its cross term equals
+$-D_M+O(w_M^2/M^2)$.
+For a bounded translation $y$, exact spatial differentiation gives
+$\phi_M'=O(M^{-2})$ and $\phi_{M-1}'=O(M^{-1})$ in the corresponding
+neighborhood; the weight and derivative-coordinate bounds remain uniform.
+For finitely many such probes, the total packet energy is still
+$O(w_M^2/M^2)$, while the total diagonal has the stated positive leading
+coefficient multiplied by the number of probes.
+\end{proof}
+This disproves a positive constant packetwise lower bound by separate
+diagonal energies, even with genuine phases and fixed bounded probes.
+The packet is itself on the small cutoff-coefficient scale. The statement
+does not concern cancellation of the complete sum or exclude larger-range
+probes that use correlations between different packets.
+
+\subsection{Independent coefficient phases can cancel the exact joint vector}
+\begin{proposition}\label{sc:independent}
+For all sufficiently small $t>0$, uniformly in $\kappa\in[1,2]$, there
+exist phases $\psi_n$, with $\psi_1=\theta_t(x)$, such that
+\begin{equation}\label{sc:independentzero}
+ \sum_{n\le N}w_n(\cos\psi_n,r_n\sin\psi_n-c_n\cos\psi_n)=0.
+\end{equation}
+Every weight and local derivative coefficient is the exact one in
+\eqref{sc:coefficients}.
+\end{proposition}
+\begin{proof}
+Uniformly as $t\to0$, fixed-index weights tend to $n^{-\sigma}$ with
+$\sigma=1/2+\kappa/4\in[3/4,1]$. The exact weight slope is negative up
+to $N$. Equations~\eqref{sc:realaxis}--\eqref{sc:coordinateasymptotics}
+therefore give, for sufficiently small $t$,
+\[
+ \max|r_n|\le1.01,\quad w_{257}\le.02,\quad |r_1-1|\le.005,
+ \quad\max_{n\le256}\sqrt{c_n^2+(r_n-1)^2}\le.01,
+\]
+\[
+ 4.5\le S:=\sum_{n=2}^{256}w_n\le16,\qquad w_2\le.61.
+\]
+For the head-sum margins use $H_{256}-1>4.5$ and
+$\int_1^{256}u^{-3/4}\dd u=12$.
+For $n>256$ choose $\psi_n=\pm\pi/2$. Greedy signing of the real
+numbers $w_nr_n$ leaves a derivative residual $d$ with
+$|d|\le.0202<.025$; both value and amplitude-drift coordinates vanish.
+The target including the fixed leading term is
+\[
+ T_0=(\cos\theta_t,r_1\sin\theta_t+d),\qquad .97\le|T_0|\le1.03.
+\]
+Partition the remaining head greedily into groups of masses $A,B$, putting
+each next weight in the lighter group. Then $A+B=S$, $|A-B|\le.61$,
+and $A,B\ge1.945>|T_0|$. Common phases in the groups give vectors
+$L_Ae(u),L_Be(v)$, $e(u)=(\cos u,\sin u)$, with
+\[
+ \|L_A-AI\|\le.01A,\qquad \|L_B-BI\|\le.01B.
+\]
+Here the exact first row is $(A,0)$ and the second row is
+$(-\sum_Aw_nc_n,\sum_Aw_nr_n)$, and similarly for $B$.
+Put $r=|T_0|$. Since $r-|A-B|\ge.36>.01(A+B)$, the quantity
+$|L_B^{-1}(T_0+L_Ae(u))|$ is above one at $e(u)=T_0/r$ and below
+one at $e(u)=-T_0/r$. The singular values of $L_B$ lie between
+$B(1-.01)$ and $B(1+.01)$, which verifies both strict comparisons.
+Continuity supplies a crossing; choose
+$e(v)=-L_B^{-1}(T_0+L_Ae(u))$ there. This cancels the entire vector.
+\end{proof}
+Multiplying the first analytic term by a constant phase and its reflection
+by the opposite phase realizes this construction with real symmetry and
+unchanged local derivative data. These phases generally violate
+$\phi_n=\theta_t+T\log n$. Proposition~\ref{sc:independent} is a
+theorem about a relaxation, not a collision of $F_{t,N}$ or $H_t$.
+
+\subsection{Even complete multiplicativity does not force a positive vector}
+\begin{theorem}[Complete multiplicative-phase obstruction]
+\label{sc:character}
+There exists $t_0>0$ such that at every parameter point
+$0<t<t_0$, $\kappa\in[1,2]$, a completely multiplicative function
+$\chi:\mathbb N\to\mathbb C$ with $\chi(1)=1$ and $|\chi(n)|=1$
+satisfies
+\begin{equation}\label{sc:characterzero}
+ \mathcal V_\chi:=\sum_{n\le N}w_n
+  (\cos\psi_n,r_n\sin\psi_n-c_n\cos\psi_n)=0,
+ \qquad\psi_n=\phi_n+\arg\chi(n).
+\end{equation}
+All terms are retained and the leading phase is fixed. No explicit value
+of $t_0$, common twist for a neighborhood, or genuine-height realization
+is asserted.
+\end{theorem}
+\begin{proof}
+We select a bounded complete residual, then cancel it using isolated
+primes. The coefficient formulas give, uniformly for small $t$,
+\begin{equation}\label{sc:charactersquarebound}
+ \max_{n\le N}|r_n|\le1.01,\quad\max|c_n|\le.01,
+ \qquad w_n^2\le n^{-6/5}.
+\end{equation}
+For the last bound, the coefficient of $\log n$ in $\log w_n^2$ is at
+most $-(1+t\alpha_r)+(t/2)\log N=-1-\kappa/4+o(1)$.
+The logarithmic slope of $w$ is at most $-.49$ up to $N$.
+
+Select $\mathcal P=\{p\text{ prime}:N/2<p\le3N/4\}$.
+Since $2p>N$, each selected prime divides only its own term among the
+retained integers. Its twist phase can be changed independently while
+preserving complete multiplicativity of the whole twist.
+Assign independent Haar unit phases to every unselected prime at most
+$N$, and extend them multiplicatively to the retained integers outside
+$\mathcal P$. Their complete vector sum, including $n=1$, is $T_0$.
+Unique factorization gives
+\[
+ \mathbb E\chi(n)\overline{\chi(m)}=\mathbf1_{n=m},\qquad
+ \mathbb E\chi(n)\chi(m)=0
+\]
+for these indices, with the second identity excepting $n=m=1$.
+Every nonzero prime-exponent vector is annihilated by Haar integration.
+It follows that every cross term is paid and
+\[
+ \mathbb E|T_0|^2
+ =|(\cos\theta_t,r_1\sin\theta_t)|^2
+ +\frac12\sum_{\substack{2\le n\le N\\n\notin\mathcal P}}
+    w_n^2(1+r_n^2+c_n^2)
+ \le1.0201+1.0101\int_1^\infty u^{-6/5}\dd u<7.
+\]
+Fix a realization with $|T_0|\le\sqrt7$. No selected-prime phase has
+entered that sum.
+
+For $p=Nz$, $1/2<z\le3/4$, direct substitution gives
+$w_p=e^{-\mathfrak b/t}z^{-1/2}(1+o(1))$ uniformly.
+Import only the classical prime number theorem
+$\pi(y)\sim y/\log y$, as recorded in
+\href{https://dlmf.nist.gov/27.12\#E4}{NIST DLMF, equation 27.12.4}.
+Partial summation on this fixed relative interval gives
+\begin{equation}\label{sc:primereservoir}
+ S:=\sum_{p\in\mathcal P}w_p
+ =\left(\frac{2t}{\kappa}(\sqrt3-\sqrt2)+o(t)\right)e^{\mathfrak a/t},
+ \qquad tS\longrightarrow\infty.
+\end{equation}
+Uniformity follows because the smallest permitted $N$ tends to infinity.
+Furthermore
+$r_p/t=2\log(N/p)/\kappa+o(1)$, so
+\[
+ t/4\le r_p\le1.5t,\qquad c_p=O(t/x).
+\]
+The three sequences $w_p,w_pr_p,w_pc_p$, in increasing prime order,
+are positive and decreasing. The second assertion uses the exact affine
+decrease of $r_p$ in $\log p$. For the third, $V>0$ and its
+logarithmic derivative has sign
+$\{d\log w/d\log p\}\log p+1<0$ for small $t$.
+
+Assign the selected primes cyclically to three groups. For a decreasing
+nonnegative sequence $a_1,\ldots,a_m$, their group sums differ by at
+most $a_1$: extend by zeros and telescope
+\[
+ \sum_{j\ge0}(a_{3j+1}-a_{3j+3})
+ \le\sum_{j\ge0}(a_{3j+1}-a_{3j+4})=a_1.
+\]
+Apply this to each of the three sequences. Giving group $j$ a common
+total phase $\beta_j$ yields the exact vector $L_je(\beta_j)$, with
+\[
+ L_j=\begin{pmatrix}\sum_jw_p&0\\-\sum_jw_pc_p&\sum_jw_pr_p\end{pmatrix},
+ \quad B=\frac13\sum_jL_j=\frac13\begin{pmatrix}S&0\\-C&D\end{pmatrix},
+\]
+where $C=\sum_{\mathcal P}w_pc_p$, $D=\sum_{\mathcal P}w_pr_p$.
+Since $D/S\in[t/4,1.5t]$ and $C/S=O(t/x)$,
+\[
+ B^{-1}=\frac3S\begin{pmatrix}1&0\\C/D&S/D\end{pmatrix},
+ \quad\|B^{-1}\|=O((tS)^{-1}),\quad
+ \max_j\|L_j-B\|=O(e^{-\mathfrak b/t}).
+\]
+Consequently, with Euclidean and induced matrix norms,
+\begin{equation}\label{sc:contractionsmallness}
+ \epsilon:=\max_j\|B^{-1}(L_j-B)\|
+ =O(e^{-\mathfrak b/t}/(tS))\longrightarrow0,
+ \qquad\tau:=|B^{-1}T_0|=O((tS)^{-1})\longrightarrow0.
+\end{equation}
+
+For completeness an explicit uniform contraction solves the two real
+coordinates exactly. Put $q_1=0$, $q_2=2\pi/3$, $q_3=4\pi/3$,
+hold $\beta_3=q_3$, and set $\beta_1=z_1$, $\beta_2=q_2+z_2$.
+The equation is
+\[
+ h(z)+E(z)+B^{-1}T_0=0,
+ \quad h(z)=e(z_1)+e(q_2+z_2)+e(q_3),
+ \quad E(z)=\sum_jB^{-1}(L_j-B)e(\beta_j).
+\]
+At zero,
+\[
+ J=Dh(0)=\begin{pmatrix}0&-\sqrt3/2\\1&-1/2\end{pmatrix},
+ \qquad\|J^{-1}\|=\sqrt2.
+\]
+Writing $h(z)=Jz+R(z)$ gives
+$|R(z)|\le|z|^2/2$, $\|DR(z)\|\le|z|$,
+$|E(z)|\le3\epsilon$, and $\|DE(z)\|\le\sqrt2\epsilon$.
+For small enough $t$, take $\epsilon\le1/100$, $\tau\le1/50$.
+On $|z|\le1/10$, the map
+$-J^{-1}\{R(z)+E(z)+B^{-1}T_0\}$ has norm at most
+\[
+ \frac32\left(\frac1{200}+\frac3{100}+\frac1{50}\right)
+ =\frac{33}{400}<\frac1{10},
+\]
+and Lipschitz constant at most
+$\frac32\frac1{10}+2/100=17/100<1$.
+Banach's theorem supplies the required exact solution.
+For a selected prime in group $j$, set
+$\chi(p)=e^{i(\beta_j-\phi_p)}$; keep the fixed unselected prime phases,
+assign unused prime phases arbitrarily, and extend completely
+multiplicatively. Isolation ensures this final assignment alters only
+the selected-prime terms among all $n\le N$. It proves
+\eqref{sc:characterzero} with no omitted composite or small-prime term.
+\end{proof}
+
+The heat weight has not been made multiplicative: its exact cross factor
+$e^{(t/2)\log m\log n}$ remains when indices are multiplied.
+Only $\chi$ is completely multiplicative. Multiplying first analytic
+terms by $\chi(n)$ and their reflections by $\overline{\chi(n)}$
+preserves real symmetry and, with the twist held fixed, every local
+amplitude derivative and phase frequency. No approximation theorem for
+a twisted heat function is asserted. The genuine case is $\chi\equiv1$;
+the constructed twists generally depart from its logarithmic height orbit.
+Approximating finitely many prime phases by a different height does not
+transfer the theorem: that movement also changes the cutoff, weights,
+normalizer, carrier, and derivative coefficients. These joint changes
+have not been paid by the twist construction.
+
+\subsection{The local input that remains}
+\label{sc:remaining}
+Writing $D=\sum_nw_n^2|h_n|^2$, an equivalent sufficient signed target
+for the full vector is
+\begin{equation}\label{sc:signedtarget}
+ 2\sum_{n<m}w_nw_mh_n\cdot h_m>-D+17\eta_N^2/4.
+\end{equation}
+For the original edge core one may instead prove a strict reverse of
+either bound in \eqref{sc:edgecollision}. Both targets must retain the
+actual shared-height phases and every stated error.
+Propositions~\ref{sc:packet} and \ref{sc:independent}, and
+Theorem~\ref{sc:character}, respectively rule out packetwise diagonal
+coercivity and positive joint lower bounds valid for all independent or
+all completely multiplicative unit phases. They do not rule out a
+height-conditioned signed estimate for the genuine sum.
+
+The earlier complete value-coordinate probe used the sufficient range
+$H_p=CLe^{2\mathfrak a/t}$. The weighted derivative probe in
+Theorem~\ref{lj:derivativeaverage} below supplies a shorter sufficient
+range and pays the genuine physical movement and heat remainder.
+We therefore use that stronger averaged result instead of duplicating
+the earlier mean-square proof. An average alone still permits isolated
+double zeros. The following sections quantify its remaining local
+transfer deficit and add an all-real-threshold jet constraint. The
+regime \eqref{sc:scaling} also leaves other scales and low heights to
+control; no global collision exclusion or RH conclusion follows here.
+
+
+% Integration insert for Heat Notes 11--12, 9 October 2026.
+% Prepared for Edward Baker with substantial LLM assistance.
+% Model: GPT-6.1-sol (Codex); reasoning effort: ultra, verified from recorded configuration.
+% Internal same-model audits are not independent validation.
+% This fragment has no preamble. It follows the signed shrinking-time section.
+
+\section{Asymmetric signed cores and complete derivative averages}
+\label{lj:cores}
+
+We retain the scaling \eqref{sc:scaling}, the symmetric normalizer
+\eqref{eq:symmetricnormalization}, and the exact genuine coefficients from
+the preceding section. In particular,
+\[
+ L=\kappa/t,\qquad x=4\pi e^L,\qquad
+ N=\left\lfloor\sqrt{e^L+t/16}\right\rfloor,\qquad
+ 1\le\kappa\le2,\quad 0<t\le1/20,
+\]
+\[
+ \mathfrak a=\frac{\kappa(4-\kappa)}{16},\qquad
+ \mathfrak b=\frac{\kappa(\kappa+4)}{16},\qquad
+ s_\kappa=\frac12+\frac{\kappa}{8}.
+\]
+Unless stated otherwise, limits and implicit constants are uniform in this
+range. Every spatial derivative holds time and its integer cutoff fixed.
+When \(L\) scales a derivative coordinate at a translated point, it is the
+fixed value at the original center.
+
+Write \(s=(1-ix)/2\), \(\alpha(s)=\alpha_r+i\alpha_i\), and
+\(\alpha'(s)=U+iV\). The exact summands \(q_n=w_ne^{i\phi_n}\) satisfy
+\begin{align}
+ w_n&=\exp\left\{\frac t4\log^2n-
+             \left(\frac12+\frac{t\alpha_r}{2}\right)\log n\right\},
+ &\phi_n&=\theta_t(x)+\frac{x-t\alpha_i}{2}\log n,
+ \label{lj:exactdata}\\
+ c&=\frac12(1+tU/2),
+ &\Omega&=\frac12\Rea\{\alpha(1+t\alpha'/2)\},\nonumber\\
+ \lambda_n&=\Omega-c\log n,\qquad r_n=4\lambda_n/L,
+ &c_n&=tV\log n/L,\qquad z_n=r_n-ic_n.\nonumber
+\end{align}
+Thus the real-axis identities, including amplitude differentiation, are
+\begin{equation}\label{lj:exactcoordinates}
+ \frac{F_{t,N}}2=\Rea\sum_{n\le N}q_n,\qquad
+ \frac{2F_{t,N}'}L=\Ima\sum_{n\le N}q_nz_n.
+\end{equation}
+The complete radius-\(1/L\) holomorphic payment from the preceding
+section gives
+\begin{equation}\label{lj:cauchypayment}
+ \eta_N\le5e^{-\mathfrak b/t},\qquad
+ |Q_t^{(j)}(x)-F_{t,N}^{(j)}(x)|\le j!L^j\eta_N.
+\end{equation}
+This payment already includes conversion to the symmetric normalizer,
+reflection, and every possible natural-cutoff change.
+
+\subsection{A larger signed edge for the derivative coordinate}
+
+Put
+\[
+ H_{e,v}=\lfloor N^{3/4}\rfloor,\quad K_v=N-H_{e,v},
+ \qquad H_{e,d}=\lfloor N^{7/8}\rfloor,\quad K_d=N-H_{e,d}.
+\]
+The signed value estimate in Proposition~\ref{sc:valueedge} retains \(K_v\).
+The derivative coordinate permits the wider removal \(N-K_d\).
+
+\begin{proposition}[Asymmetric derivative core]\label{lj:derivativecore}
+In the stated range,
+\begin{equation}\label{lj:derivativetail}
+ \left|\sum_{K_d<n\le N}w_nz_ne^{i\phi_n}\right|
+       \le\frac{800}{L}N^{-1/24},\qquad
+ |F_{t,N}'-F_{t,K_d}'|\le400N^{-1/24}.
+\end{equation}
+Consequently every genuine collision satisfies
+\begin{equation}\label{lj:mixedcollision}
+ \left|\frac{F_{t,K_v}}2\right|
+       \le\eta_N/2+40N^{-1/24},\qquad
+ \left|\frac{2F_{t,K_d}'}L\right|
+       \le2\eta_N+\frac{800}{L}N^{-1/24}.
+\end{equation}
+The two quantities in \eqref{lj:mixedcollision} have different fixed
+cutoffs; the second is not the derivative of the first.
+\end{proposition}
+
+\begin{proof}
+The scaling implies \(N\ge22000>(10/3)^8\), hence \(K_d\ge.7N\).
+Set
+\[
+ T=\frac{x-t\alpha_i}{2},\qquad f(u)=\frac{T\log u}{2\pi}.
+\]
+On \(K_d\le u\le N\), the exact real logarithmic phase obeys
+\[
+ \frac1N\le f'''(u)=\frac{T}{\pi u^3}\le\frac6N.
+\]
+Indeed \(N^2\le T/\pi\le2.01N^2\) and \(2.01/.7^3<6\).
+The explicit third-derivative theorem
+\cite[equation (2)]{arias}, with lower and upper derivative bounds
+\(1/N\) and \(6/N\), bounds every partial interval of length at most
+\(N^{7/8}\) by
+\begin{equation}\label{lj:thirdpartials}
+ \left|\sum e(f(n))\right|
+ \le11\max\{6^{1/4}N^{21/32},
+           36^{1/6}N^{17/24},N^{15/32}\}
+ \le20N^{17/24}.
+\end{equation}
+The theorem requires the integer part of the interval length to exceed
+three; the remaining partial intervals are bounded trivially.
+The constant reserves are
+\(6\cdot11^4<20^4\), \(36\cdot11^6<20^6\), and \(11<20\).
+
+For the continuous index interpolation, the exact endpoint estimates are
+\[
+ w_N\le1.01N^{-s_\kappa},\qquad
+ |z_N|\le\frac6{LN},\qquad
+ \left|\frac{dz(u)}{du}\right|\le\frac3{Lu}.
+\]
+The logarithmic slope
+\[
+ \frac{d\log w(u)}{d\log u}
+       =\frac t2\log u-\frac12-\frac{t\alpha_r}{2}
+\]
+lies between \(-.511\) and \(-.499\) on \([.7N,N]\).
+Here one uses \(|\log N-L/2|\le2/N\),
+\(|\alpha_r-L/2|\le x^{-2}\), and \(|\log .7|<.4\).
+In particular \(w\) decreases and
+\(w_{K_d}\le(10/7)w_N\le2N^{-s_\kappa}\). Its index variation and the
+variation of \(z\) give
+\[
+ \operatorname{TV}(z)<\frac{5H_{e,d}}{LN},\qquad
+ \sup|z|\le\frac{11H_{e,d}}{LN},
+\]
+\begin{equation}\label{lj:productvariation}
+ |w_Nz_N|+\operatorname{TV}(wz)
+ \le(6.06+32H_{e,d})\frac{N^{-s_\kappa}}{LN}
+ \le40\frac{H_{e,d}N^{-s_\kappa}}{LN}.
+\end{equation}
+For the product estimate, use
+\(\operatorname{TV}(wz)\le
+ w_{K_d}\operatorname{TV}(z)+\sup|z|\operatorname{TV}(w)\)
+and \(\operatorname{TV}(w)\le2N^{-s_\kappa}\).
+Abel summation with \eqref{lj:thirdpartials} therefore gives
+\[
+ \left|\sum_{K_d<n\le N}q_nz_n\right|
+ \le\frac{800}{L}N^{17/24+7/8-1-s_\kappa}
+ =\frac{800}{L}N^{7/12-s_\kappa}
+ \le\frac{800}{L}N^{-1/24}.
+\]
+Identity \eqref{lj:exactcoordinates} proves the raw derivative bound.
+At a collision \(Q_t=Q_t'=0\), combine
+\eqref{lj:cauchypayment} with this exact signed subtraction and the
+value edge Proposition~\ref{sc:valueedge}. This proves
+\eqref{lj:mixedcollision}.
+\end{proof}
+
+\subsection{Exact raw jets and a diagnostic for fixed derivative orders}
+
+Raw higher derivatives must be estimated directly; differentiating an
+edge length or a parameter-dependent cutoff would change the question.
+Define the exact logarithmic derivative
+\begin{equation}\label{lj:rawmultiplier}
+ v_n=\frac{q_n'}{q_n}
+       =-\frac{tV\log n}{4}-i\lambda_n.
+\end{equation}
+If written as \(-tV\log n/4-iLr_n/4\), the last term still means
+the unscaled expression
+\(\frac12\Rea\{(\alpha-\log n)(1+t\alpha'/2)\}\);
+it is differentiated with \(t,n\) fixed.
+
+\begin{proposition}[Fixed-time raw derivative tails]\label{lj:rawtails}
+For every fixed \(j\ge1\),
+\begin{align}
+ |F_{t,N}^{(j)}-F_{t,K_v}^{(j)}|
+    &=O_j(N^{7/12-s_\kappa-j/4}),\label{lj:shortjets}\\
+ |F_{t,N}^{(j)}-F_{t,K_d}^{(j)}|
+    &=O_j(N^{17/24-s_\kappa-j/8}).\label{lj:deepjets}
+\end{align}
+For \(j=2,3,4\), their uniform exponents are respectively
+\((-13/24,-19/24,-25/24)\) and
+\((-1/6,-7/24,-5/12)\).
+The constants in these higher-jet bounds are uniform constants; the
+explicit first-derivative certificate is
+\eqref{lj:derivativetail}.
+\end{proposition}
+
+\begin{proof}
+On an endpoint edge of length \(H=\lfloor N^\beta\rfloor\), with fixed
+\(0<\beta<1\), put \(h=H/N\). The real-axis formulas for \(\alpha\)
+and the endpoint frequency estimate give
+\begin{equation}\label{lj:variationjets}
+ \sup|v_n|+\operatorname{TV}_n(v_n)=O(h),\qquad
+ \sup|\partial_x^kv_n|=O_k(N^{-2k}),\qquad
+ \operatorname{TV}_n(\partial_x^kv_n)=O_k(hN^{-2k})
+ \quad(k\ge1).
+\end{equation}
+Here \(\operatorname{TV}_n\) varies the continuous index at fixed
+\(t,x\). To check the spatial estimates, use
+\[
+ \partial_x^k\alpha_r=O_k(x^{-k}),\quad
+ \partial_x^k\alpha_i=O_k(x^{-k-1}),\quad
+ \partial_x^kU=O_k(x^{-k-2}),\quad
+ \partial_x^kV=O_k(x^{-k-1})\quad(k\ge1),
+\]
+with \(t\log n=O(1)\) and \(x\asymp N^2\).
+Each \(\partial_x^kv_n\) is affine in \(\log n\); its varying
+coefficient is \(O_k(x^{-k})\). The logarithmic length of the edge
+is \(O(h)\), proving its total-variation estimate. For \(k=0\),
+the index slope of \(\lambda_n\) is \(O(1/n)\), and
+\(|v_N|=O(1/N)\).
+
+Write \(q_n^{(j)}=q_nP_j\). The complete derivative polynomials through
+the order used below are
+\begin{align}
+ P_1&=v,\qquad P_2=v^2+v',\qquad
+ P_3=v^3+3vv'+v'',\nonumber\\
+ P_4&=v^4+6v^2v'+3(v')^2+4vv''+v'''.\label{lj:bell}
+\end{align}
+Every monomial has differential weight \(j\), assigning weight \(k+1\)
+to \(v^{(k)}\). Since \(N^{-2k}=O(h^{k+1})\) for \(k\ge1\),
+product variation in \eqref{lj:variationjets} gives
+\[
+ \sup|P_j|+\operatorname{TV}_n(P_j)=O_j(h^j),\qquad
+ |w_NP_j(N)|+\operatorname{TV}_n(wP_j)
+             =O_j(N^{-s_\kappa}h^j).
+\]
+All amplitude and frequency derivatives in \eqref{lj:bell} are included.
+For \(H=N^{7/8}+O(1)\), use \eqref{lj:thirdpartials}; for
+\(H=N^{3/4}+O(1)\), the same source theorem bounds every partial sum
+by \(O(N^{7/12})\). Indeed its three powers are
+\(9/16,7/12,7/16\), and short intervals are again trivial.
+Abel summation proves \eqref{lj:shortjets}--\eqref{lj:deepjets}.
+\end{proof}
+
+The calculation admits a precise limitation within the imported
+fixed-order derivative theorem. For a fixed \(d\ge3\), the phase satisfies
+\[
+ f^{(d)}(u)=(-1)^{d-1}\frac{(d-1)!T}{2\pi u^d}
+                   \asymp_d N^{2-d}.
+\]
+For even \(d\), conjugate the sum and apply the theorem to \(-f\).
+Put \(A_d^{\rm pow}=2^{1-d}\) and
+\(B_d^{\rm pow}=(d-2)/(2^d-2)\). These denote exponents, not the
+constants named \(A_d,B_d\) in \cite{arias}. Its three terms, multiplied
+by the interval length, give the partial-sum exponent
+\begin{equation}\label{lj:orderdiagnostic}
+ v_d(\beta)=\max\{\beta(1-A_d^{\rm pow}),\
+                 \beta-B_d^{\rm pow},\
+                 \beta(1-dA_d^{\rm pow})+(d-2)A_d^{\rm pow}\}.
+\end{equation}
+All interval-length powers are nonnegative. The same upper bound thus
+holds for every partial interval, including the trivial short ones.
+The raw-\(j\) tail bound supplied by this calculation is
+\begin{equation}\label{lj:generalrawtail}
+ O_{d,j}\bigl(N^{v_d(\beta)-s_\kappa+j(\beta-1)}\bigr).
+\end{equation}
+
+For \(d=3\), the middle term determines its strict decay threshold:
+\begin{equation}\label{lj:rawthreshold}
+ \beta<\frac{j+s_\kappa+1/6}{j+1}
+       =1-\frac{5/6-s_\kappa}{j+1};
+ \qquad \beta<1-\frac{5}{24(j+1)}
+       \quad\hbox{uniformly}.
+\end{equation}
+This includes \(j=0\), for which the uniform value threshold is
+\(\beta<19/24\). For completeness, the cross-differences between
+the other two thresholds and the middle one have positive numerators
+\((2j+6s_\kappa-3)/24\) and
+\(j/3+3s_\kappa/4-7/24\).
+For \(d\ge4\), the first term alone caps the threshold by
+\((j+s_\kappa)/(j+7/8)\). It is smaller than
+\eqref{lj:rawthreshold}, since the opposite cross-difference is
+\((2j-6s_\kappa+7)/48>0\). Thus order three is optimal for each
+fixed raw derivative order within this derivative-bound and Abel
+calculation.
+
+The value estimate also has a macroscopic-block deficit:
+\(v_3(1)=5/6\), whereas \(v_d(1)\ge7/8\) for \(d\ge4\), and
+\(5/6-s_\kappa\ge1/12>0\). Splitting a fixed-proportion endpoint
+block into \(N^{1-\beta}\) pieces and adding these upper bounds
+retains the exponent \(1-B_3^{\rm pow}=5/6\); for \(d\ge4\) it
+retains \(1-\beta A_d^{\rm pow}\ge7/8\).
+This is a deficit of the displayed upper bounds and triangle
+aggregation. It is not a lower bound on a genuine sum or an obstruction
+to transformations retaining correlations between pieces.
+
+\subsection{Complete derivative mean square without a logarithmic loss}
+
+The exact derivative weights near the cutoff improve a sufficient
+averaging range by a factor \(t^2\). This is an averaged statement,
+including every coefficient of the original approximant.
+
+\begin{theorem}[Complete genuine derivative average]
+\label{lj:derivativeaverage}
+There are absolute \(D,t_0>0\) such that, for \(0<t<t_0\), put
+\[
+ H_d=Dt^2e^{2\mathfrak a/t},\qquad
+ G_F(y)=2F_{t,N}'(x+y)/L,\qquad G_Q(y)=2Q_t'(x+y)/L.
+\]
+Then
+\begin{equation}\label{lj:averagelower}
+ \frac1{H_d}\int_0^{H_d}G_F(y)^2\dd y\ge\frac14,\qquad
+ \frac1{H_d}\int_0^{H_d}G_Q(y)^2\dd y\ge\frac18.
+\end{equation}
+The corresponding complete joint energies, obtained by adding
+\((F_{t,N}(x+y)/2)^2\) or \((Q_t(x+y)/2)^2\), inherit these lower
+bounds. The denominator \(L\) is fixed at the original center.
+\end{theorem}
+
+\begin{proof}
+For distinct real frequencies \(\omega_j\), let
+\(\delta_j=\min_{k\ne j}|\omega_j-\omega_k|\).
+The weighted Montgomery--Vaughan inequality
+\cite[Theorem 2, equation (1.7), and Corollary 2, equation (1.9)]
+{montgomeryvaughan} states
+\[
+ \left|\sum_{j\ne k}\frac{a_j\overline{a_k}}{\omega_j-\omega_k}\right|
+ \le\frac{3\pi}{2}\sum_j\frac{|a_j|^2}{\delta_j}.
+\]
+Integrating the exponential sum and applying this inequality to its two
+endpoint phase products gives
+\begin{equation}\label{lj:hilbertaverage}
+ \left|\frac1H\int_0^H\left|\sum_ja_je^{i\omega_jy}\right|^2\dd y
+                     -\sum_j|a_j|^2\right|
+ \le\frac{3\pi}{H}\sum_j\frac{|a_j|^2}{\delta_j}.
+\end{equation}
+The local weighted gaps, rather than a common minimum gap, are essential.
+
+Temporarily omit only \(n=N\), freeze the center data in
+\eqref{lj:exactdata}, and write
+\[
+ g_-(y)=\sum_{n<N}w_n
+       \{r_n\sin(\phi_n-\lambda_ny)-c_n\cos(\phi_n-\lambda_ny)\}.
+\]
+Its reflected exponential coefficients are exactly
+\[
+ a_{n,-}=\frac{w_n}{2}e^{i\phi_n}(-c_n-ir_n),\
+ \omega_{n,-}=-\lambda_n,\qquad
+ a_{n,+}=\overline{a_{n,-}},\
+ \omega_{n,+}=\lambda_n.
+\]
+Its diagonal is therefore
+\begin{equation}\label{lj:reflecteddiagonal}
+ \sum_{n<N}(|a_{n,-}|^2+|a_{n,+}|^2)
+             =\frac12\sum_{n<N}w_n^2(r_n^2+c_n^2).
+\end{equation}
+This frequency set retains the difference phases and the reflected sum
+phases, including the oscillating reflected diagonal.
+
+The exact phase center has the expansion
+\begin{equation}\label{lj:phasecenter}
+ M_\phi=e^{\Omega/c}
+       =\sqrt{x/(4\pi)+t/16}+O(x^{-3/2}),\qquad c=\tfrac12+o(1).
+\end{equation}
+One may verify the needed accuracy directly from
+\[
+ \alpha_r=L/2+\tfrac14\log(1+x^{-2})-(1+x^2)^{-1},\qquad
+ \alpha_i=3x/(1+x^2)-\tfrac12\arctan x,
+\]
+\[
+ U=(7x^2-5)/(1+x^2)^2,\qquad V=x(x^2+5)/(1+x^2)^2.
+\]
+In fact \(\Omega/c=\alpha_r-t\alpha_iV/(2(1+tU/2))
+=L/2+t\pi/(8x)+O(x^{-2})\);
+the logarithm of the square root in \eqref{lj:phasecenter} has the same
+first two terms. Hence, for \(n<N\) and small \(t\),
+\[
+ \lambda_n=c\log(M_\phi/n)\ge.45\log(N/n)>0.
+\]
+The possible error \(O(x^{-2})\) in \(\log(M_\phi/N)\) is negligible
+beside \(\log(N/(N-1))\ge1/N\).
+Same-sign successor and predecessor gaps are at least \(c/(2n)\)
+and \(c/n\). An opposite-sign gap is at least \(\lambda_n\);
+concavity of \(u\log(N/u)\) and its endpoint values on \([1,N-1]\)
+give \(n\log(N/n)\ge1/2\). Thus every local gap obeys
+\begin{equation}\label{lj:localgaps}
+ \delta_{n,\pm}\ge1/(8n)\quad(n<N).
+\end{equation}
+No division by the possibly very small or slightly negative
+\(\lambda_N\) has occurred.
+
+The complete positive budget has the sharper uniform asymptotic
+\begin{equation}\label{lj:derivativebudget}
+ B_d:=\sum_{n\le N}nw_n^2(r_n^2+c_n^2)
+       =\left(\frac{8t^2}{\kappa^2}+o(t^2)\right)e^{2\mathfrak a/t}.
+\end{equation}
+To see this, put \(u=e^{L/2-v}\) in the index integral. The exact
+weight gives
+\[
+ uw(u)^2\dd u
+ =e^{2\mathfrak a/t}e^{-v+tv^2/2}(1+o(1))\dd v,
+ \qquad r(u)=2tv/\kappa+o(t),\quad c(u)=O(t/x)
+\]
+on bounded \(v\)-intervals. Since \(0\le tv\le1\), the normalized
+integrand is dominated by
+\(C t^2(1+v)^2e^{-v/2}\). The errors in \(r/t\) tend uniformly to
+zero, and the \(c(u)^2\) contribution is bounded by
+\(O(t^2x^{-2}\sum nw_n^2)\).
+On each bounded \(v\)-interval the mesh tends exponentially to zero.
+The discrete-integral error is at most a polynomial in \(L\):
+indeed \(uw(u)^2=O(1)\) on the full index range, and its variation
+and that of \(r(u)^2+c(u)^2\) are polynomially bounded in \(L\).
+This error is negligible beside \(t^2e^{2\mathfrak a/t}\).
+The floor and the interval beyond \(e^{L/2}\) are negligible as well.
+Dominated convergence now gives
+\[
+ \frac{4t^2}{\kappa^2}\int_0^\infty v^2e^{-v}\dd v
+                         =\frac{8t^2}{\kappa^2},
+\]
+proving \eqref{lj:derivativebudget}.
+
+Equations \eqref{lj:hilbertaverage}--\eqref{lj:localgaps} yield
+\begin{equation}\label{lj:frozenpaid}
+ \frac1H\int_0^Hg_-(y)^2\dd y
+ \ge\frac12\sum_{n<N}w_n^2(r_n^2+c_n^2)
+             -\frac{12\pi}{H}\sum_{n<N}nw_n^2(r_n^2+c_n^2).
+\end{equation}
+The factor \(12\pi\) includes both reflected coefficient families.
+Since \(w_1=1,c_1=0,r_1=1+o(1)\), the diagonal is at least
+\(1/2+o(1)\). Taking \(H=H_d\) and then choosing an absolute
+\(D\) sufficiently large makes the right side at least \(3/8\).
+Restore the exact last frozen term, obtaining \(g_0\). Its supremum is
+\[
+ w_N\sqrt{r_N^2+c_N^2}=o(1),
+\]
+because \(w_N=O(e^{-\mathfrak b/t})\) and \(r_N,c_N\) are bounded.
+The normalized \(L^2\) triangle inequality restores this coefficient
+with an \(o(1)\) loss.
+
+It remains to pay genuine physical movement. The averaging range satisfies
+\begin{equation}\label{lj:physicalsize}
+ H_d/N=O(t^2e^{-\kappa^2/(8t)})=o(1),\qquad
+ H_d^2/x=O(t^4e^{-\kappa^2/(4t)})=o(1).
+\end{equation}
+At fixed time, uniformly for \(n\le N\) and \(0\le y\le H_d\),
+\[
+ |(\log w_n)'|=O(x^{-1}),\quad
+ |\phi_n''|=O(x^{-1}),\quad
+ |r_n'|=O((Lx)^{-1}),\quad |c_n'|=O(t/x^2).
+\]
+Here the last two coefficients use the fixed denominator \(L\).
+Using \(|r_n|+|c_n|\le2\) and
+\(\sum_{n\le N}w_n=O(e^{\mathfrak a/t})\), proved below in
+\eqref{lj:absolutejets}, Taylor's formula in each exact summand gives
+\begin{equation}\label{lj:movement}
+ \sup_{0\le y\le H_d}|G_F(y)-g_0(y)|
+ \le C e^{\mathfrak a/t}(H_d/x+H_d^2/x)=o(1).
+\end{equation}
+This pays amplitude, derivative-weight, and nonlinear phase changes.
+The largest exponential factor is
+\(e^{(5\mathfrak a-\kappa)/t}\), with
+\(5\mathfrak a-\kappa=\kappa(4-5\kappa)/16\le-1/16\).
+The first inequality in \eqref{lj:averagelower} follows.
+
+For the exact heat function use, at each center \(x+y\), a separate
+disk of radius \(1/L_y\), where \(L_y=\log((x+y)/(4\pi))\).
+By \eqref{lj:physicalsize}, its continuous natural cutoff and that of
+the whole interval vary by \(o(1)\); every natural integer cutoff
+differs from the fixed \(N\) by at most one. The preceding complete
+disk majorant pays this coefficient, normalization, and lower-half
+reflection before Cauchy's estimate is applied. Thus
+\[
+ |Q_t'(x+y)-F_{t,N}'(x+y)|\le L_y\eta_{N,y}.
+\]
+The strict reserves of that ledger persist for
+\(tL_y\in[1,2+o(1)]\), in particular \(tL_y\le2.01\) for small \(t\).
+Also \(L_y/L=1+o(1)\), and the change in its error exponent is
+\(O(H_d/x)=o(1)\). Consequently
+\begin{equation}\label{lj:physicalcauchy}
+ \sup_{0\le y\le H_d}|G_Q(y)-G_F(y)|
+ \le\sup_{0\le y\le H_d}2(L_y/L)\eta_{N,y}
+                  =O(e^{-\mathfrak b/t})=o(1).
+\end{equation}
+This uses separate small disks, not an unpaid remainder on a disk of
+radius \(H_d\). A final normalized \(L^2\) triangle inequality proves
+the second assertion.
+\end{proof}
+
+For comparison, the same reflected Hilbert calculation for the complete
+value and derivative coordinates has budget
+\(\sum nw_n^2(1+r_n^2+c_n^2)=O(e^{2\mathfrak a/t})\).
+It removes the earlier logarithm already on the sufficient range
+\(H=De^{2\mathfrak a/t}\). The derivative theorem is shorter because
+its endpoint squared weight contains \(r_n^2\asymp t^2v^2\).
+Neither sufficient range is a necessary lower bound for all possible
+probe methods.
+
+\begin{remark}[The remaining Taylor deficit]\label{lj:taylor}
+The complete absolute jet and Cauchy budgets give
+\(|Q_t''|\le M_2=C_2e^{\mathfrak a/t}\) on the physical interval.
+If its left endpoint is a collision, Taylor's theorem gives
+\[
+ |Q_t'(x+y)|\le M_2y,\qquad
+ \frac1H\int_0^H(2Q_t'(x+y)/L)^2\dd y
+                         \le\frac{4M_2^2H^2}{3L^2}.
+\]
+This proved upper bound is small only on the sufficient Taylor scale
+\(H=O(Le^{-\mathfrak a/t})\), whereas
+\[
+ \frac{H_d}{Le^{-\mathfrak a/t}}
+               =\frac{Dt^2}{L}e^{3\mathfrak a/t}\longrightarrow\infty.
+\]
+At \(H=H_d\) the lower average only forces
+\(\sup|Q_t''|\ge\sqrt{3/32}\,L/H_d\), compatible with the
+absolute upper budget. The improved average therefore does not exclude
+an isolated collision.
+It also yields a limited measure statement: the absolute first-jet
+budget gives \(\sup|G_Q|\le Ct e^{\mathfrak a/t}\), so, for
+\(E=\{y\in[0,H_d]:|G_Q(y)|\ge1/4\}\),
+\[
+ |E|/H_d\ge c_0t^{-2}e^{-2\mathfrak a/t},\qquad |E|\ge c_1>0.
+\]
+Indeed its mean square is at most
+\(1/16+C^2t^2e^{2\mathfrak a/t}|E|/H_d\).
+The lower bound on relative measure tends to zero and still permits
+isolated double zeros.
+\end{remark}
+
+\section{Threshold collision jets and a paid Laguerre condition}
+\label{lj:threshold}
+
+The heat equation supplies exact identities at a collision. The extra
+sign used below instead comes from the global all-real property at the
+threshold time. These two inputs must be kept distinct.
+
+\subsection{Normalized backward evolution and collision compatibility}
+
+Let \(\ell(t,x)=\log A_t(x)\),
+\(b_t=\partial_x\ell\), \(a_0=\partial_t\ell\), and
+\(\mathcal V_t=a_0+\partial_xb_t+b_t^2\). Direct differentiation of
+\(H_t=A_tQ_t\) in \eqref{eq:heat} gives
+\begin{equation}\label{lj:normalizedpde}
+ \partial_tQ_t=-Q_t''-2b_tQ_t'-\mathcal V_tQ_t,\qquad
+ (\partial_t+a_0)Q_t=-(\partial_x+b_t)^2Q_t.
+\end{equation}
+At \(Q_t=Q_t'=0\),
+\begin{equation}\label{lj:collisionpde}
+ \partial_tQ_t=-Q_t'',\qquad
+ \partial_tQ_t'=-Q_t'''-2b_tQ_t''.
+\end{equation}
+At an ordinary double zero, the Jacobian of \((Q_t,Q_t')\) in
+column order \((x,t)\) therefore has determinant \((Q_t'')^2>0\).
+The normalizer and its transport coefficient retain the transverse
+ordinary collision geometry.
+
+The exact normalizer coefficients, with \(s=(1-ix)/2\), are
+\begin{align}
+ a_0&=\frac14\Rea(\alpha(s)^2),&
+ b_t&=\frac12\Ima m_t'(s),&
+ m_t'&=\alpha(1+t\alpha'/2),\nonumber\\
+ \partial_xb_t
+   &=-\frac14\Rea\left\{\alpha'
+        +\frac t2(\alpha'^2+\alpha\alpha'')\right\},&
+ \alpha''(s)&=s^{-3}+2(s-1)^{-3}-\frac12s^{-2}.
+ \label{lj:bx}
+\end{align}
+In \eqref{sc:scaling}, \(\partial_xb_t=O(x^{-2})\):
+\(\Rea\alpha'=O(x^{-2})\),
+\(\alpha'^2=O(x^{-2})\), and the remaining product after
+multiplication by \(t\) is \(O(x^{-2})\), since \(t\log x=O(1)\).
+The heat correction in the normalizer is included.
+
+There is an exact carrier conjugation as well. Put
+\(M=M_t(s)=A_te^{i\theta_t}\) and
+\(\mathcal U=H_t/M=e^{-i\theta_t}Q_t\). Since
+\(M_x/M=b_t-i\Omega\),
+\begin{equation}\label{lj:carrierpde}
+ \partial_t\mathcal U=-\mathcal U''-2(b_t-i\Omega)\mathcal U'
+                       -v_M\mathcal U,\qquad
+ v_M=\frac14\{\alpha^2-(m_t')^2-m_t''\},
+\end{equation}
+where \(m_t''=\alpha'+t(\alpha'^2+\alpha\alpha'')/2\).
+The real potential in \eqref{lj:normalizedpde} satisfies
+\(\mathcal V_t=\Omega^2+\Rea v_M\).
+At \(\mathcal U=\mathcal U'=0\), this still gives
+\(\partial_t\mathcal U=-\mathcal U''\); conjugation alone supplies
+no nonvanishing condition.
+
+For the genuine unnormalized function define
+\(W=(H_t')^2-H_tH_t''\). Its backward evolution is
+\begin{equation}\label{lj:laguerreevolution}
+ \partial_tW=-W''+2\{(H_t'')^2-H_t'H_t'''\}.
+\end{equation}
+At an ordinary double real collision \((T,x_*)\),
+\[
+ W=0,\qquad W''=\partial_tW=(H_T''(x_*))^2>0.
+\]
+In particular \(W(T-h,x_*)=-h(H_T''(x_*))^2+O(h^2)<0\)
+for small \(h>0\), consistent with nonreal roots immediately before
+the collision. Equation \eqref{lj:laguerreevolution} is backward
+parabolic with a nonzero collision source. All-real Laguerre
+nonnegativity at time \(T\) does not turn it into an exclusion by a
+forward maximum principle.
+The corresponding exact normalized identity is
+\begin{equation}\label{lj:normalizedlaguerre}
+ W/A_t^2=(Q_t')^2-Q_tQ_t''-(\partial_xb_t)Q_t^2.
+\end{equation}
+At an ordinary double collision its value and first spatial derivative
+vanish, while its time and second spatial derivatives equal
+\((Q_t'')^2\). These identities are proved by differentiating
+\(H_t=A_tQ_t\) and \(\partial_tH_t=-H_t''\); no signed arithmetic
+estimate has entered.
+
+\subsection{The deflated mirror inequality and its multiplicity hierarchy}
+
+If \(\Lambda>0\), Proposition~\ref{prop:finitecollision} supplies a
+finite multiple real zero at time \(\Lambda\). At that specific time
+all zeros are real by the threshold theorem. This global fact is not
+inferred from a maximizing root, the local PDE, or an arbitrary real
+collision at positive time.
+
+We use the canonical-product facts in
+\cite[Section 3 and the proof of Proposition 3.1]{polymath}:
+\(H_T\) is real entire of order one, even, nonzero at zero, and has
+a locally uniformly convergent Hadamard product grouped in opposite-root
+pairs. At an all-real time it is a constant times
+\(\prod_{\rho>0}(1-z^2/\rho^2)\), with multiplicities.
+The inverse-square sum obtained by a second logarithmic derivative
+converges absolutely off the roots. Deflating finitely many roots
+removes exactly their terms from that sum; a possible linear exponential
+factor has zero second logarithmic derivative.
+
+\begin{proposition}[Deflated forced-mirror condition]\label{lj:mirror}
+Suppose all zeros of \(H_T\) are real, and \(x_*>0\) is a root of
+multiplicity \(m\ge2\). Put \(H_j=H_T^{(j)}(x_*)\). Then
+\begin{equation}\label{lj:unnormalizedmirror}
+ 2H_3^2-3H_2H_4\ge9H_2^2/x_*^2.
+\end{equation}
+Writing \(q_j=Q_T^{(j)}(x_*)\) and
+\begin{equation}\label{lj:gamma}
+ \gamma(T,x_*)=18\partial_xb_T(x_*)+9/x_*^2,\qquad
+ \mathscr L(q)=2q_3^2-3q_2q_4-\gamma q_2^2,
+\end{equation}
+the exact normalized condition is
+\begin{equation}\label{lj:normalizedmirror}
+ \mathscr L(q)\ge0.
+\end{equation}
+It applies in particular to every finite positive threshold collision.
+For \(m\ge4\) this fourth-jet condition is the uninformative equality
+zero.
+\end{proposition}
+
+\begin{proof}
+Deflate two copies, \(g(z)=H_T(z)/(z-x_*)^2\). Evenness leaves at
+least two copies of the real mirror root \(-x_*\).
+For real \(z\) away from roots, the canonical product gives
+\[
+ (g')^2-gg''
+       =g(z)^2\sum_{\rho\ {\rm root\ of}\ g}\frac1{(z-\rho)^2}
+       \ge\frac{2g(z)^2}{(z+x_*)^2}.
+\]
+Pass to the continuous limit \(z\to x_*\), along nonroots. This is
+valid also when \(m>2\), for which \(g(x_*)=0\); a logarithmic
+derivative is not taken at that zero. The Taylor coefficients are
+\[
+ g(x_*)=H_2/2,\qquad g'(x_*)=H_3/6,\qquad g''(x_*)=H_4/12.
+\]
+Multiplication by 72 proves \eqref{lj:unnormalizedmirror}.
+At the collision \(q_0=q_1=0\), and exact product differentiation gives
+\[
+ H_2=A_Tq_2,\quad
+ H_3=A_T(q_3+3b_Tq_2),\quad
+ H_4=A_T\{q_4+4b_Tq_3+6(\partial_xb_T+b_T^2)q_2\}.
+\]
+Substitution cancels all \(b_T\)-terms except
+\(-18(\partial_xb_T)q_2^2\), proving
+\eqref{lj:normalizedmirror}.
+At exact multiplicity three \(q_2=0,q_3\ne0\); at multiplicity
+at least four \(q_2=q_3=0\). The latter case is allowed, not excluded,
+by this condition.
+\end{proof}
+
+At an exact multiplicity \(m\ge2\), deflating all \(m\) copies instead
+gives the higher-order condition
+\begin{equation}\label{lj:hierarchy}
+ \frac{q_{m+1}^2}{(m+1)^2}
+ -\frac{2q_mq_{m+2}}{(m+1)(m+2)}
+ -\left(\partial_xb_T+\frac{m}{4x_*^2}\right)q_m^2\ge0.
+\end{equation}
+To derive it, use \(g=H_T/(z-x_*)^m\), which is nonzero at \(x_*\)
+and retains \(m\) mirror copies. Its inverse-square sum is at least
+\(m/(4x_*^2)\). Substituting
+\[
+ g(x_*)=H_m/m!,\quad
+ g'(x_*)=H_{m+1}/(m+1)!,\quad
+ g''(x_*)=2H_{m+2}/(m+2)!
+\]
+and multiplying by \((m!)^2\) gives the unnormalized version.
+At exact multiplicity \(m\),
+\begin{align*}
+ H_m&=A_Tq_m,\\
+ H_{m+1}&=A_T\{q_{m+1}+(m+1)b_Tq_m\},\\
+ H_{m+2}&=A_T\{q_{m+2}+(m+2)b_Tq_{m+1}
+               +\tbinom{m+2}{2}(\partial_xb_T+b_T^2)q_m\}.
+\end{align*}
+The \(b_T\)-terms cancel, leaving \eqref{lj:hierarchy}.
+This hierarchy requires jets \(m,m+1,m+2\) and their own approximation
+payments. It is not resolved by a bounded second-through-fourth-jet
+certificate.
+
+\subsection{Complete measured payment for the threshold jet}
+
+The sign condition \eqref{lj:normalizedmirror} becomes an arithmetic
+target only after all products of approximation errors are paid.
+For an integer \(K\le N\), fixed when differentiating, put
+\(f_j=F_{t,K}^{(j)}(x)\). Choose proved nonnegative tail payments
+\(\tau_j\ge|F_{t,N}^{(j)}-F_{t,K}^{(j)}|\), \(j=2,3,4\), and define
+\begin{equation}\label{lj:jeterrors}
+ \delta_j=j!L^j\eta_N+\tau_j.
+\end{equation}
+Then \(|Q_t^{(j)}-f_j|\le\delta_j\) by the original disk payment
+followed by exact signed subtraction.
+
+\begin{proposition}[Measured paid threshold test]\label{lj:paidtest}
+At each parameter point in \eqref{sc:scaling}, define
+\begin{align}
+ \Delta(f,\delta)={}&4|f_3|\delta_3+2\delta_3^2
+       +3|f_2|\delta_4+3|f_4|\delta_2+3\delta_2\delta_4\nonumber\\
+       &+|\gamma|\{2|f_2|\delta_2+\delta_2^2\},
+       \qquad \gamma=18\partial_xb_t+9/x^2.
+       \label{lj:measuredpayment}
+\end{align}
+The strict genuine arithmetic inequality
+\begin{equation}\label{lj:negativetest}
+ 2f_3^2-3f_2f_4-\gamma f_2^2<-\Delta(f,\delta)
+\end{equation}
+excludes an all-real-time collision at that point.
+The full cutoff \(K=N\) has \(\Delta_N=o(1)\) uniformly.
+The original value core \(K_v\) also has a uniformly vanishing absolute
+payment, in fact
+\(\Delta_{K_v}=O(N^{-1/6})\). The deeper derivative core \(K_d\)
+does not inherit this conclusion uniformly from the displayed absolute
+jet bounds.
+\end{proposition}
+
+\begin{proof}
+Write \(q_j=f_j+e_j\), \(|e_j|\le\delta_j\).
+Expansion of \(2q_3^2\), \(-3q_2q_4\), and \(-\gamma q_2^2\)
+gives
+\begin{equation}\label{lj:productpayment}
+ |\mathscr L(q)-\mathscr L(f)|\le\Delta(f,\delta).
+\end{equation}
+In particular the \(3\delta_2\delta_4\) and
+\(|\gamma|\delta_2^2\) products cannot be discarded.
+At an all-real-time collision Proposition~\ref{lj:mirror} gives
+\(\mathscr L(q)\ge0\), contradicting
+\eqref{lj:negativetest} and \eqref{lj:productpayment}.
+
+For the absolute ledger, for every fixed \(0\le j\le4\) and either
+retained prefix,
+\begin{equation}\label{lj:absolutejets}
+ |F_{t,N}^{(j)}|+|F_{t,K}^{(j)}|
+       =O_j(e^{\mathfrak a/t})
+       =O_j(N^{(4-\kappa)/8}).
+\end{equation}
+To prove this without signed cancellation, put \(y=L/2-\log u\).
+The index mass satisfies
+\[
+ uw(u)\le C e^{\mathfrak a/t}e^{-y/4}
+                       \quad(0\le y\le L/2),
+\]
+since its exponent is
+\(\mathfrak a/t-y/2+ty^2/4+O(x^{-2})\) and
+\(ty^2/4\le\kappa y/8\le y/4\).
+The complete raw derivative multiplier has size
+\(O_j((1+y)^j)\), by \eqref{lj:rawmultiplier} and its fixed-time
+spatial derivatives. Index integration is therefore
+\(O_j(e^{\mathfrak a/t})\).
+For a direct discrete comparison, \(w(u)\) decreases throughout this
+range, as does \((1+L/2-\log u)^j\); their product is decreasing.
+The initial term is \(O_j(L^j)\), absorbed by \(e^{\mathfrak a/t}\).
+The negligible endpoint displacement beyond \(e^{L/2}\) is absorbed
+as well. This proves \eqref{lj:absolutejets}.
+The same proof on the physical interval, followed by the separate
+small-disk Cauchy estimates, supplies the curvature and first-jet
+budgets used in Remark~\ref{lj:taylor}.
+
+For \(K=N\), \(\tau_j=0\). Equations
+\eqref{lj:cauchypayment}, \eqref{lj:bx}, and
+\eqref{lj:measuredpayment} yield
+\begin{equation}\label{lj:fullquadraticpayment}
+ \Delta_N=O\left(L^4e^{(\mathfrak a-\mathfrak b)/t}
+                         +L^6e^{-2\mathfrak b/t}\right)
+         =O\left(L^4e^{-\kappa^2/(8t)}
+                         +L^6e^{-2\mathfrak b/t}\right)=o(1).
+\end{equation}
+Thus growing absolute jets do not prevent a vanishing absolute error
+for this quadratic test.
+
+For \(K=K_v\), use \eqref{lj:shortjets} in \eqref{lj:jeterrors}.
+The largest linear tail product is the second-derivative payment times
+an absolute fourth jet:
+\[
+ e^{\mathfrak a/t}\tau_2
+ =O\left(N^{7/12-s_\kappa-1/2+(4-\kappa)/8}\right)
+ =O(N^{1/12-\kappa/4})=O(N^{-1/6}).
+\]
+The other linear products have extra powers \(N^{-1/4}\) and
+\(N^{-1/2}\); quadratic tail products decay faster, and
+\(\gamma=O(x^{-2})\). Consequently
+\begin{equation}\label{lj:corequadraticpayment}
+ \Delta_{K_v}
+ =O\left(N^{-1/6}+L^4e^{-\kappa^2/(8t)}
+                         +L^6e^{-2\mathfrak b/t}\right)
+ =O(N^{-1/6}).
+\end{equation}
+The last equality uses the strict reserve
+\(e^{-\kappa^2/(8t)}=O(N^{-\kappa/4})\), which absorbs every
+fixed power of \(L\) relative to \(N^{-1/6}\).
+
+For \(K=K_d\), \eqref{lj:deepjets} pays every individual derivative
+tail, but the same absolute linear products have powers
+\[
+ N^{11/24-\kappa/4},\qquad
+ N^{1/3-\kappa/4},\qquad N^{5/24-\kappa/4}.
+\]
+The first budget is positive for \(\kappa<11/6\).
+It tends to zero only on closed subranges
+\([11/6+\varepsilon,2]\); at \(\kappa=11/6\) it is merely bounded.
+This is a limitation of the absolute transfer, not evidence that the
+genuine quadratic difference grows. The measured test
+\eqref{lj:measuredpayment}--\eqref{lj:negativetest} remains valid
+with these payments retained.
+\end{proof}
+
+No negative sign in \eqref{lj:negativetest} is proved for the actual
+height phases. At a putative positive threshold collision, one may
+condition that arithmetic task on the necessary small coordinates
+\eqref{lj:mixedcollision}; those conditions alone have not been shown
+to force the opposite sign. The all-real hypothesis is still required.
+The test is not an assertion about an arbitrary positive-time collision
+when other roots are nonreal, and this shrinking-time regime leaves
+other times and heights untreated.
+
+\subsection{A sharp model for the PDE and Laguerre mechanism}
+
+The mirror coefficient and compatibility with a positive threshold are
+sharp in a general even polynomial heat-flow class.
+
+\begin{proposition}[Quartic threshold model]\label{lj:quartic}
+Fix \(T>0\), \(a>0\), set \(\delta=t-T\), and put
+\begin{equation}\label{lj:quarticflow}
+ P_t(z)=z^4-(2a^2+12\delta)z^2
+          +a^4+4a^2\delta+12\delta^2
+       =e^{-\delta\partial_z^2}(z^2-a^2)^2.
+\end{equation}
+Then \(\partial_tP_t=-P_t''\), and all its zeros are real exactly
+for \(t\ge T\). At \((T,a)\) it attains equality in
+\eqref{lj:unnormalizedmirror}. If \(a^2>6T\), it also satisfies
+\(P_t(iy)>0\) for every \(t\ge0\) and \(y\in\mathbb R\).
+\end{proposition}
+
+\begin{proof}
+The finite exponential in \eqref{lj:quarticflow}, or direct
+differentiation, proves the heat equation. As a quadratic in \(z^2\),
+its discriminant is \(32\delta(a^2+3\delta)\), and its constant
+coefficient is positive for every real \(\delta\).
+For \(\delta\ge0\), both roots in \(z^2\) are positive.
+For \(-a^2/3<\delta<0\), the discriminant is negative.
+For \(\delta\le-a^2/3\), both roots in \(z^2\) are negative,
+including the equal-root endpoint. Thus the all-real threshold is
+exactly \(T\).
+If \(a^2>6T\), substituting \(z=iy\) leaves positive coefficients
+in \(y^4\), \(y^2\), and the constant for all \(t\ge0\).
+At the collision,
+\[
+ P_2=8a^2,\qquad P_3=24a,\qquad P_4=24,\qquad
+ 2P_3^2-3P_2P_4=576a^2=9P_2^2/a^2.
+\]
+This is the asserted saturation.
+\end{proof}
+
+Dividing the model by the same explicit zero-free normalizer on its
+analytic domain yields \eqref{lj:normalizedpde}, with the same
+normalizer coefficients, and retains its positive-time collisions.
+The model therefore shows that the backward heat PDE, normalization,
+threshold real-rootedness, and the stated Laguerre signs alone do not
+exclude an ordinary positive collision. It is not the zeta heat
+function, has no zeta infinite zero set or arithmetic coefficients,
+and is not asserted to come from a positive theta kernel.
+Additional genuine signed arithmetic could distinguish it.
+The remaining task is a proved local joint lower bound, or a strict
+paid opposite jet test for the actual phases, with a higher-jet
+hierarchy where necessary.
+
+
+\section{The next analytic route: paid collision exclusion}
+\label{sec:outlook}
+The preceding sections supply signed reductions and complete error
+payments in addition to the geometric and landing tools. They do not
+exclude a genuine positive-time collision. Corollary~\ref{cor:rhcollision}
+permits the direct target $H_t=H_t'=0$ at every positive time. For an
+RH argument it would also suffice to exclude positive all-real threshold
+collisions: if $\Lambda>0$, Proposition~\ref{prop:finitecollision}
+produces exactly such an event. The latter route may use the extra
+real-root sign in the threshold jet test. Neither route has been completed,
+and the shrinking sector alone leaves other heights and scaling regimes.
+
+\subsection{A conditional amplitude and phase criterion}
+On the real axis write the fixed-cutoff approximation as
+$F=2\Rea(e^{i\theta}P)$. Wherever $P\ne0$, put
+$m=|P|$ and $\phi=\theta+\arg P$ locally. Then
+\begin{equation}\label{eq:phaseform}
+ F=2m\cos\phi,\qquad
+ F'=2m'\cos\phi-2m\phi'\sin\phi,
+ \qquad\phi'=\theta'+\Ima(P'/P).
+\end{equation}
+No absolute choice of phase branch enters the derivative.
+
+\begin{lemma}[Error-paid phase exclusion]\label{lem:phase}
+Suppose $|Q-F|\le\epsilon_0$ and $|Q'-F'|\le\epsilon_1$ on a
+region, and
+$m\ge m_0>\epsilon_0/2$, $|m'|\le m_1$, and $|\phi'|\ge\Omega>0$.
+Then
+\begin{equation}\label{eq:phasecriterion}
+ 2\Omega\sqrt{m_0^2-\epsilon_0^2/4}
+       -\frac{m_1}{m_0}\epsilon_0>\epsilon_1
+\end{equation}
+excludes a common zero of $Q,Q'$.
+A simpler sufficient criterion, under
+$|P|\ge p_0$, $|P'|\le p_1$, $|\theta'|\ge\omega_0>0$, is
+\begin{equation}\label{eq:carriercriterion}
+ \epsilon_0<2p_0,\qquad
+ 2\omega_0\sqrt{p_0^2-\epsilon_0^2/4}>2p_1+\epsilon_1.
+\end{equation}
+\end{lemma}
+\begin{proof}
+At a candidate common zero, $|F|\le\epsilon_0$ and
+$|F'|\le\epsilon_1$. The first bound gives
+$m|\sin\phi|\ge\sqrt{m^2-\epsilon_0^2/4}$, while the amplitude
+derivative contribution in \eqref{eq:phaseform} is at most
+$(m_1/m_0)\epsilon_0$. The reverse triangle inequality now
+contradicts \eqref{eq:phasecriterion}. For the second version,
+differentiate $F=2\Rea(e^{i\theta}P)$ directly. The carrier term
+has modulus at least
+$2\omega_0\sqrt{p_0^2-\epsilon_0^2/4}$, and the remaining
+term is at most $2p_1$.
+\end{proof}
+These are conditional comparison lemmas. No many-term amplitude
+lower bound or phase-speed bound has been proved here. A global
+nonvanishing requirement on $P$ may be stronger than necessary:
+a successful argument may instead use the two candidate collision
+conditions jointly. The errors must come from a proved complex
+neighborhood estimate, as in Section~\ref{sec:normalization}.
+
+\subsection{The shrinking-time regime and an absolute-value obstruction}
+The proved signed reductions concern the genuine many-term sum in
+\begin{equation}\label{eq:kapparegime}
+ \kappa=t\log(x/(4\pi))\in[1,2],\qquad t\downarrow0.
+\end{equation}
+The full error, growing-edge cancellation, and shorter derivative
+average have now been proved in this sector. A uniform local signed
+implication at candidate collisions is still missing. Proposition~\ref{prop:absmass} explains why the successful short-edge
+subtraction cannot simply be extended by positive tail summation.
+Decreasing the constant in Corollary~\ref{cor:eventual} does not
+settle the shrinking-time target.
+
+\subsection{The two remaining local signed targets}
+At a candidate collision the value and derivative cores satisfy the
+small-coordinate bounds proved above. One sufficient next input is a
+uniform lower bound for that genuine mixed-cutoff vector exceeding its
+complete error budget. Because its two cutoffs differ, its second
+coordinate is not the derivative of its first. A same-cutoff formulation
+may instead retain the original value core and its paid derivative.
+
+At an all-real candidate there is a second interface. Evaluate the
+fourth-derivative expression $\mathscr L$ on the full approximant or the
+value core, and retain the measured product error $\Delta$. A proof that
+the candidate value and derivative conditions force
+$\mathscr L(F)<-\Delta$ would contradict the necessary threshold sign.
+The approximation payment is already available; the strict signed
+implication has not been proved. A collection of small individual
+derivative errors is insufficient unless their products are also paid.
+The deeper derivative core has no uniform vanishing product budget on
+the entire sector. Multiplicity at least four makes the fourth-derivative
+condition vacuous, so a successful local argument must also handle that
+case, either directly or through the higher deflation hierarchy.
+
+Complete multiplicative twists with freely chosen prime phases satisfy
+less structure than the physical height orbit. Their joint zeros prevent
+a lower bound based only on complete multiplicativity. The shorter
+derivative average likewise permits isolated double zeros: its interval
+still exceeds the scale on which the paid curvature bound transfers a
+collision to a small derivative. Thus the next estimate must use genuine
+arithmetic correlations at the candidate, or a stronger local mechanism.
+
+\subsection{Other analytic tools and their proof checkpoints}
+The translated-probe discussion in \cite[Section~8]{planat} motivates
+retaining correlated information from the same arithmetic sum.
+The complete derivative average in Theorem~\ref{lj:derivativeaverage}
+now pays such an averaged estimate, while Proposition~\ref{sc:packet}
+shows why a fixed number of bounded packet probes cannot supply diagonal
+coercivity. A next useful local estimate must use the candidate conditions
+and retain the adverse signed cross terms and physical errors.
+Generic derivative nondegeneracy alone permits the transverse collision
+\eqref{eq:jacobian}.
+
+The parallel arithmetic investigations in the repository suggest
+three other proof checkpoints. First, a fixed-scale contraction of
+the actual normalized prime variance would be an endpoint
+mechanism if it bounded the entire net energy change, including
+the squared defect and every boundary term, by a strict negative
+fraction plus a power remainder. A negative covariance alone does
+not establish that budget. Second, short-family extraction can
+approach the critical line only under a hierarchy of actual
+moment and compensation estimates whose positive scale parameters
+approach zero; the retained deletion variance must be paid.
+Third, the developed gated mixed covariance is an arithmetic
+target for a first local strip improvement, but no iteration of
+that architecture to RH has been proved. The detailed conditional
+hypotheses and stopping conditions remain in the companion
+short-family and mixed-character manuscripts and the continuation
+note dated 9 October 2026. These programs are alternatives to be
+judged by signed arithmetic estimates, not by equivalent endpoint
+reformulations or expanding numerical campaigns.
+
+For the present heat route, the next bounded checkpoint is the
+candidate-conditioned signed jet implication or a direct local joint
+lower bound in \eqref{eq:kapparegime}, including higher multiplicities
+and every approximation payment. Its proof in this sector would be a
+partial exclusion result; a separate coverage argument would still be
+needed for RH. The collective attraction tools remain available for a
+positive-time application, while an additional finite field improvement
+alone remains compatible with a positive collision.
+
+\appendix
+% Appendix fragment. Prepared for Edward Baker, 9 October 2026.
+% Model: gpt-6.1-sol (Codex); reasoning effort: ultra.
+% Same-model assistance and cross-review are not independent validation.
+
+\section{An effective probe and its spatial cost}\label{app:effective-probe}
+
+This appendix records an effective consequence of the approximation theorem
+of \cite[Theorem~1.3, equations (20)--(24)]{polymath}.  It uses analytic
+tail bounds rather than evaluations of the heat function or a zero search.
+The threshold is deliberately conservative.  The resulting attraction bound
+applies throughout an unbounded spatial sector; the global consequence below
+also needs a separate estimate for the complementary sector.
+
+\begin{proposition}[Effective probe]\label{prop:effective-probe}
+For \(x\ge 10^{16}\) and \(1/5\le t\le 3/10\),
+\[
+ H_t(x+9i/10)\ne0,\qquad
+ L_{9/10}(t,x):=-\Im\frac{H_t'}{H_t}(x+9i/10)
+ >\frac{12749}{2000}>6.
+\]
+Consequently, at any simple nonreal zero \(z=x+iy\) of globally maximal
+imaginary height, with \(|x|\ge10^{16}\) and \(0<y\le1/5\), the exact
+attraction field satisfies
+\[
+ E_t(z)\ge\frac{940}{231}>4.
+\]
+\end{proposition}
+
+\begin{proof}
+Put \(r=1/20\), \(h=x-r\), \(q_-=h/(4\pi)\),
+\(\ell=\log q_-\), and
+\[
+ D_x=\{z:|z-(x+9i/10)|\le r\},\qquad
+ N=\left\lfloor\sqrt{q_-+1/80}\right\rfloor.
+\]
+Every point \(z=u+iy\) of this disk satisfies
+\(u>9\cdot10^{15}\) and \(17/20\le y\le19/20\), so the entire disk
+lies in the upper-half-plane domain of the imported theorem.  There is no
+need to reflect its error estimate below the real axis in this application.
+The reflected Dirichlet term must still be included.  The inequalities
+\(4\pi<13\), \(e^{67/2}<4\cdot10^{14}\), and
+\(q_->9\cdot10^{15}/13>4\cdot10^{14}\) give
+\(\ell>67/2\).  On the disk define
+\[
+ s=(1-iz)/2,\quad B_t(z)=M_t(s),\quad U_t(z)=H_t(z)/B_t(z),
+\]
+and retain the fixed holomorphic approximant
+\[
+ f_{t,N}(z)=P_{t,N}(s)+\gamma_t(z)P_{t,N}(1-s)=:P+R,
+ \qquad \gamma_t=M_t(1-s)/M_t(s).
+\]
+The logarithm branches defining \(M_t\) are analytic here, and \(B_t\)
+is nowhere zero.  In all the estimates that follow, \(N\) is fixed on
+the whole disk and throughout the time interval.
+
+The source coefficient bound has vanishing positive-part correction on
+this disk, since \(1-3y+4y(1+y)/u^2<0\).  Thus
+\[
+ |p_{t,n}(s)|\le
+ n^{-37/40-(t/4)(\ell-\log n)}.
+\]
+All retained indices obey \(\log n\le\ell/2+1/100\).
+For \(2\le n\le16\), the weaker bound \(\log n<3\) gives
+\(|p_{t,n}(s)|\le n^{-12/5}\); for \(n>16\), it gives
+\(|p_{t,n}(s)|\le n^{-7/4}\).  Decreasing integral tails yield
+\begin{align*}
+ |P-1|&<\frac{19}{100}+\frac{19}{50}\frac57+\frac16
+       =\frac{1319}{2100}<\frac23,\\
+ \sum_{n=2}^{N}(\log n)|p_{t,n}(s)|
+ &<\frac{13}{25}+\frac{13}{18}=\frac{559}{450}<\frac54.
+\end{align*}
+For completeness, the first head bound uses
+\(2^{-12/5}<19/100\), \(2^{-7/5}<19/50\), and
+\(\int_{16}^{\infty}u^{-7/4}\,du=1/6\).
+The logarithm-weighted head is bounded by
+\[
+ \frac{19}{100}\frac7{10}
+ +\frac{19}{50}\left(\frac12+\frac{25}{49}\right)
+ =\frac{25327}{49000}<\frac{13}{25},
+\]
+using \(\log2<7/10\).  The logarithm-weighted tail is bounded by
+\(\int_{16}^{\infty}(\log u)u^{-7/4}\,du<13/18\).
+Directly from
+\[
+ \alpha'(s)=-\frac1{2s^2}-\frac1{(s-1)^2}+\frac1{2s},
+\]
+one has \(|\alpha'|\le2/h\) for both arguments.  Hence
+\(|1+t\alpha'/2|<1001/1000\).  Differentiation of the fixed polynomial
+gives
+\[
+ |P'|<\frac12\frac{1001}{1000}\frac54
+       =\frac{1001}{1600}<\frac{63}{100}.
+\]
+
+For the reflected argument, \(\Re(1-s)\ge1/40\) and
+\(\Re\alpha(1-s)\ge\ell/2-4/h^2\).  Its coefficients are bounded
+by \(n^{-3/2}\) for \(n\le16\), and by \(n^{-17/20}\) for
+\(n>16\).  The loss \(2t/h^2\) is covered by the strict slack in
+these exponents.  Therefore
+\[
+ |P_{t,N}(1-s)|\le3+\frac{20}{3}N^{3/20}
+                 \le3+7e^{3\ell/40}.
+\]
+The source reflection bound gives
+\(|\gamma_t|\le(103/100)e^{-17\ell/40}\).  Consequently, uniformly
+on the full disk,
+\[
+ |R|\le\frac{103}{100}
+       \left(3e^{-17\ell/40}+7e^{-7\ell/20}\right)
+       <\frac{7519}{10^8}<10^{-4}.
+\]
+Here \(e^{-1139/80}<10^{-6}\) and \(e^{-469/40}<10^{-5}\) suffice.
+Cauchy's estimate for this holomorphic reflected term gives at the center
+\[
+ |R'|<20\frac{7519}{10^8}<\frac1{500}.
+\]
+
+We now pay the source remainder and every possible cutoff change before
+applying Cauchy to the total remainder.  The natural cutoff at a source
+point is
+\(m=\lfloor\sqrt{u/(4\pi)+t/16}\rfloor\).
+Across the disk and the time interval the squared parameters vary by
+\(1/(40\pi)+1/160<1\).  Thus \(m\in\{N,N+1\}\).
+Every index that actually occurs obeys
+\[
+ \log n\le\ell/2+\rho,\qquad
+ \rho=\frac12\log\left(1+
+            \frac{1/(40\pi)+3/160}{q_-}\right)<10^{-16}.
+\]
+In particular \(m>10^7+1\) and
+\(\sum_{n\le m}|p_{t,n}(s)|\le7/3\).
+The exact rewriting of the source's reflected term gives its modulus
+multiplier as
+\[
+ |\gamma_t|m^{|\kappa|}n^y
+ \le e^{.02y}
+      \left(\frac{m^2}{u/(4\pi)}\right)^{y/2}
+      e^{|\kappa|\log m}<\frac{103}{100}.
+\]
+This bound also holds for a crossing index \(n=N+1\).
+Indeed the squared-index quotient is at most \(e^{2\rho}\), and
+\(|\kappa|\log m<10^{-14}\), using
+\(|\kappa|\le ty/[2(u-6)]\) and the monotonicity of \((\log u)/u\).
+The total exponent is below \(.02\), and
+\(e^{.02}\le50/49<103/100\).
+
+For the source's two sum errors (equation (23) of \cite{polymath}),
+the individual error exponent is bounded by
+\[
+ v(u)=\frac{.006(\log u)^2+1}{.99u}<1.1\cdot10^{-15}.
+\]
+This majorant decreases for \(u\ge9\cdot10^{15}\), and its endpoint
+bound follows from \(\log(9\cdot10^{15})<37\).
+Also \(|\log(u/(4\pi n^2))|\le\log u\); the possible negative
+endpoint is bounded by \(\log(1+t/(16q))\), where \(q=u/(4\pi)\).
+It follows from \(e^v-1\le v/(1-v)<1.12\cdot10^{-15}\), the
+\(7/3\) sum bound, and the \(103/100\) reflected multiplier that
+\(e_A+e_B<10^{-14}\).
+For the source's remaining error (equation (24) of \cite{polymath}),
+the two positive corrections have sum less than \(10^{-6}\): the first
+is at most \(1.24(3+1)/(m-.125)<5\cdot10^{-7}\), and the second is at
+most \((3\log u+16)/(.99u)<2\cdot10^{-14}\).
+Its negative exponent has magnitude at least
+\[
+ \frac{37\ell}{80}+\frac{\ell^2}{80}
+ \ge\frac{9447}{320}>29.5+10^{-6}.
+\]
+Thus \(e_{C,0}<e^{-29.5}<2\cdot10^{-13}\).
+
+If \(m=N+1\), the complete difference between the two approximants is
+\(p_{t,N+1}(s)+\gamma_t p_{t,N+1}(1-s)\).
+For \(v=\log(N+1)\), one has \(\ell/2<v\le\ell/2+\rho\).
+Completing the square \(v^2-\ell v=(v-\ell/2)^2-\ell^2/4\) gives
+\[
+ |p_{t,N+1}(s)|\le
+ e^{-37\ell/80-\ell^2/80+\rho^2/20}
+ <2\cdot10^{-13}.
+\]
+Its reflected companion is at most \(103/100\) times this value.
+The entire cutoff jump is therefore less than \(5\cdot10^{-13}\).
+All three payments yield
+\[
+ |U_t-f_{t,N}|<10^{-12}\quad\hbox{on }D_x,
+ \qquad |(U_t-f_{t,N})'(x+9i/10)|<2\cdot10^{-11}.
+\]
+The latter is Cauchy's estimate with radius \(1/20\), applied to the
+holomorphic fixed-cutoff remainder.  It does not differentiate a
+moving-cutoff formula.
+
+Finally, \(B_t'/B_t=-im_t'(s)/2\), where
+\(m_t'\!=\alpha(1+t\alpha'/2)\).
+The direct bounds
+\[
+ |\alpha|<3\ell/5,\qquad
+ \Re\alpha\ge\ell/2-4/h^2,\qquad |\alpha'|\le2/h
+\]
+give \(\Re m_t'(s)\ge\ell/2-1/1000\).
+For example \(\ell\le\log h\le\sqrt h\) and \(h>10^{15}\)
+pay the heat correction.  Hence at the probe center
+\[
+ -\Im B_t'/B_t\ge67/8-1/2000,\qquad
+ |U_t|>33/100,\qquad |U_t'|<13/20.
+\]
+In particular \(|U_t'/U_t|<2\), proving the stated nonvanishing and
+\(L_{9/10}>67/8-1/2000-2=12749/2000\).
+At a maximal zero with \(y\le1/5\), the ratio \((9/10)/y\) exceeds
+\(\sqrt5\).  The exact-field comparison has factor one and gives
+\[
+ E_t(z)\ge\frac{L_{9/10}}{9/10}
+               -\frac2{81/100-y^2}
+ >\frac{20}{3}-\frac{200}{77}=\frac{940}{231}>4.
+\]
+Evenness gives the same assertion for negative real parts.
+\end{proof}
+
+The scalar reserves above are reproduced by
+\href{../numerics/check_effective_collective_probe.py}{the effective-probe checker}
+and retained in
+\href{../numerics/effective_collective_probe_record_20261009.json}{its dated record}.
+It verifies 105 exact rational, polynomial, and Taylor-series assertions,
+including an outward enclosure of the conditional landing time below.
+For a positive rational exponential argument \(a<122\), the degree-120
+Taylor sum is a lower bound and adding
+\( (a^{121}/121!)/(1-a/122)\) gives an upper bound.
+The checker evaluates no heat functions, zeros, phases, or large cutoff
+sums.  These scalar checks do not replace the imported approximation
+theorem or the analytic arguments applying it.  Further proof details and
+the scoped internal audit are in
+\href{notes/7_EFFECTIVE_COLLECTIVE_PROBE_AND_SPATIAL_COST_20261009.md}{Heat Note 7}
+and
+\href{../reviews/EFFECTIVE_COLLECTIVE_PROBE_REVIEW_20261009.md}{its review}.
+
+\begin{corollary}[Conditional sector landing]
+Suppose the squared maximal height at \(t_0=1/5\) is at most \(1/25\),
+and every globally maximizing nonreal zero remains in
+\(|\Re z|\ge10^{16}\) until landing.  Then the flow has only real zeros by
+\[
+ t_{\mathrm{sector}}=\frac15+\frac1{16}\log\frac{33}{25}
+ \in(0.21735,0.21736).
+\]
+\end{corollary}
+\begin{proof}
+On that population \(E>4\), so \(w'\le-2-16w\).
+Integration, with the maximum-envelope continuation at switches and
+multiple-root events, gives the stated time.
+\end{proof}
+
+The spatial premise of this corollary is additional.  The high-sector
+proposition does not establish that premise, and the displayed time is not
+a global Newman bound supplied by the proposition.
+
+\begin{proposition}[Global patch relative to a published canopy]
+Accept the proved canopy \(W(1/5)\le1/25\) in the proof of
+\cite[Proposition~3.3 and Section~8]{polymath}, including the published
+finite RH and barrier inputs used there.  Then
+\[
+ \Lambda\le\frac{11}{50}
+      -\frac1{2500\cdot10^{32}+200}.
+\]
+\end{proposition}
+\begin{proof}
+The positive kernel gives \(H_t(iy)>0\), so a nonreal zero has nonzero
+real part.  At a simple maximal zero \(z=x+iy\), with \(x,y>0\), its
+distinct reflected pair \(-x\pm iy\) contributes exactly
+\[
+ E_t(z)\ge\frac1{2(x^2+w)},\qquad w=y^2.
+\]
+The same-height member contributes zero to \(E\); the other contributes
+\(2/(4x^2+4w)\).  All other grouped contributions are nonnegative.
+With \(X=10^{16}\), this supplies
+\(E\ge1/[2(X^2+w)]\) on \(0<x\le X\), and the effective-probe
+proposition supplies a stronger bound on \(x\ge X\).
+Evenness covers negative real parts.  Combining by a spatial minimum
+therefore gives the uniform floor
+\[
+ E_t(z)\ge\frac1{2(X^2+w)},\quad
+ 0<w\le1/25,\quad 1/5\le t\le3/10.
+\]
+We do not add the symmetry and probe estimates, since they can contain
+the same roots.  Put \(a=X^2\) and
+\[
+ M_a(w)=\frac w4+\frac a8\log(1+2w/a),\qquad
+ M_a'(w)=\frac{a+w}{2(a+2w)}.
+\]
+This derivative is the reciprocal speed corresponding to
+\(w'\le-2-2w/(a+w)\).  The maximum-envelope comparison gives landing
+by \(1/5+M_a(1/25)\), entirely within the time interval because
+\(M_a(w)<w/2\).  The gain is conveniently bounded without subtraction
+of nearly equal logarithms:
+\[
+ \frac w2-M_a(w)=\int_0^w\frac{u}{2(a+2u)}\,du
+ \ge\frac{w^2}{4(a+2w)}.
+\]
+At \(w=1/25\), the last expression is \(1/(2500a+200)\), proving
+the assertion.  Compactness and continuation use the positive-time
+eventual-reality theorem and the maximum-envelope argument; no effective
+value of the auxiliary compactness cutoff is needed.
+\end{proof}
+
+The gain in this historical comparison is about \(4\cdot10^{-36}\).
+It is mathematically strict but quantitatively negligible.  We make no
+record-bound or literature-novelty claim.  The actual earlier-time canopy
+is the relevant published input: the bare statement \(\Lambda\le0.22\)
+would not imply \(W(1/5)\le1/25\).  Increasing the high-sector field
+above four alone does not improve the limiting low-sector floor.
+
+\section{Two certificates on a compact positive-time interval}
+\label{app:compact-certificates}
+
+The following worked certificates illustrate the normalized value and
+derivative alternatives.  They are local real-zero assertions.  They do
+not cover all heights, exclude all complex zeros, or control times tending
+to zero.  Both use \(1/5\le t\le3/10\), the symmetric normalization
+\(Q_t=H_t/A_t\), and a fixed holomorphic approximant \(F_{t,N}\).
+
+\begin{center}
+\begin{tabular}{c|c|c|c}
+Real interval & Fixed \(N\) & Natural cutoffs & Certified conclusion\\
+\hline
+\([451.9,452.5]\) & 6 & 5, 6 & \(Q_t>1/4\)\\
+\([4005.2,4005.8]\) & 17 & 17 & \(Q'_t>2.3\)
+\end{tabular}
+\end{center}
+
+For the first rectangle, outer disk center \(452.2\), radius \(R=.35\),
+and inner radius \(a=.3\) give the full-disk error
+\(\eta_6<2.248\).  The fixed approximant's value is bounded below by
+\(2.507\) on 120 complete parameter cells (12 spatial by ten time cells).
+Thus \(Q_t>2.507-2.248=.259>1/4\).  The natural cutoff changes across
+\[
+ x_6(t)=4\pi(36-t/16),
+\]
+whose entire range lies in
+\([452.1537226679109918457,452.2322624842507366767]\).
+The sixth summand and its reflected companion are paid in the full-disk
+error wherever the natural cutoff is five.  No derivative of the moving
+cutoff is taken.
+
+For the second rectangle, outer center \(4005.5\), radius \(R=.7\),
+and inner radius \(a=.3\) give \(\eta_{17}<.554\) and
+\(|Q_t'-F_{t,17}'|<1.385\).  The entire outer rectangle has natural
+cutoff 17.  Interval evaluation on 600 complete cells (30 spatial by
+20 time cells) gives \(F_{t,17}'>3.70369\), hence \(Q_t'>2.3\).
+The endpoints, enclosed over each of the 20 time cells, satisfy
+\[
+ Q_t(4005.2)<-.44,\qquad Q_t(4005.8)>.59.
+\]
+The intermediate value theorem and strict increase prove exactly one real
+zero in \((4005.2,4005.8)\) for each time, and that zero is simple:
+at a zero, \(H_t'=A_tQ_t'\ne0\).  Evenness gives both reflected
+intervals.
+
+Here are sufficient formulas to reproduce the finite evaluations.  For
+real \(x>0\), put
+\begin{align*}
+ d&=1+x^2, & L&=\tfrac12\log d-\log(4\pi),
+ & v&=\arctan(1/x),\\
+ \alpha_r&=L/2-1/d,&
+ \alpha_i&=-\pi/4+v/2+3x/d,\\
+ \theta&=-7\pi/8-v/4+\tfrac x4(1-L)
+                     +\tfrac t2\alpha_r\alpha_i,\\
+ a_n&=\exp\{\tfrac t4\log^2n
+                -(\tfrac12+\tfrac t2\alpha_r)\log n\},&
+ \phi_n&=\theta+\tfrac12(x-t\alpha_i)\log n.
+\end{align*}
+Then \(F_{t,N}=2\sum_{n\le N}a_n\cos\phi_n\).
+With
+\[
+ u=6(x^2-1)/d^2+1/d,\quad b=4x/d^2+x/d,\quad l_n=\log n,
+\]
+and \(L_n=(\alpha_r-l_n)(1+tu/2)-\alpha_i tb/2\), direct
+differentiation gives the cancellation-aware expression
+\[
+ F_{t,N}'=\sum_{n\le N}a_n
+        \left(L_n\sin\phi_n-\frac{tb l_n}{2}\cos\phi_n\right).
+\]
+These are exact consequences of the same logarithm branches used in the
+analytic approximant; no finite-difference derivative is involved.
+
+The certificates use 50-digit Decimal intervals with directed arithmetic
+and widened correctly rounded elementary functions.  The software
+guarantees for those elementary functions remain explicit computational
+inputs.  A Machin identity supplies an enclosed value of \(\pi\), and
+arctangent, sine, and cosine use Taylor series with explicit remainders.
+The error bounds are established on the whole complex outer disk, including
+the symmetric-normalization factor, reflection of the lower half-disk, and
+every cutoff correction, before Cauchy's derivative bound is applied on
+the inner interval.  Parameter-cell intervals cover the entire rectangles;
+sampled values alone would not do so.
+
+The regenerable certificates are
+\href{../numerics/check_fixed_heat_checkpoint.py}{the cutoff-crossing checker}
+and
+\href{../numerics/fixed_heat_checkpoint_record_20261009.json}{its record},
+and
+\href{../numerics/check_zero_bearing_heat_cell.py}{the zero-bearing checker}
+and
+\href{../numerics/zero_bearing_heat_cell_record_20261009.json}{its record}.
+The first script also contains unrelated fixed-scale bookkeeping; only
+its heat certificate is used here.  Detailed parameters and outward
+endpoints are retained in
+\href{notes/4_CERTIFIED_COMPACT_CUTOFF_CROSSING_20261009.md}{Heat Note 4}
+and
+\href{notes/5_CERTIFIED_ZERO_BEARING_DERIVATIVE_CELL_20261009.md}{Heat Note 5}.
+The imported approximation theorem and the analytic disk majorant are
+mathematical inputs to these computations.  Internal replay and same-model
+review do not constitute independent specialist validation of those inputs.
+
+
+\section*{Acknowledgements and research provenance}
+This manuscript was drafted for Edward Baker with substantial assistance
+from GPT-6.1-sol (Codex), using reasoning effort ultra, for mathematical
+derivation, source comparison, organization, and checking. Parallel
+same-model reviews were used as internal checks and do not constitute
+independent validation. The manuscript consolidates Heat Notes 1--12 and the dated research
+notes in the \texttt{newman\_collisions} investigation and their scoped
+reviews. Literature inputs are identified at the point of use; the
+classical threshold theorem, the effective Polymath approximation,
+the uniform count theorem, the local zero dynamics, and the cited
+exponential-sum and Hilbert inequalities are not new
+results of this manuscript. No claim of literature priority is made.
+The source and small verification records are intended to remain
+reviewable; a future independent mathematical review is still needed.
+
+\begin{thebibliography}{99}
+\bibitem{polymath}
+D. H. J. Polymath,
+\emph{Effective approximation of heat flow evolution of the Riemann
+$\xi$ function, and a new upper bound for the de Bruijn--Newman constant},
+2019, arXiv:1904.12438v2.
+\url{https://arxiv.org/abs/1904.12438v2}.
+
+\bibitem{rodgerstao}
+B. Rodgers and T. Tao,
+\emph{The de Bruijn--Newman constant is non-negative},
+2018, arXiv:1801.05914.
+\url{https://arxiv.org/abs/1801.05914}.
+
+\bibitem{newmanwu}
+C. M. Newman and W. Wu,
+\emph{Constants of de Bruijn--Newman type in analytic number theory
+and statistical physics}, 2019, arXiv:1901.06596.
+\url{https://arxiv.org/abs/1901.06596}.
+
+\bibitem{kikimlee}
+H. Ki, Y.-O. Kim, and J. Lee,
+\emph{On the de Bruijn--Newman constant},
+Advances in Mathematics \textbf{222} (2009), 281--306.
+\url{https://doi.org/10.1016/j.aim.2009.04.003}.
+
+\bibitem{gasper}
+G. Gasper,
+\emph{Using integrals of squares of certain real-valued special functions
+to prove that the P\'olya $\Xi^*(z)$ function, the functions $K_{iz}(a)$,
+$a>0$, and some other entire functions have only real zeros},
+2008, arXiv:0801.2996.
+\url{https://arxiv.org/abs/0801.2996}.
+
+\bibitem{planat}
+M. Planat,
+\emph{Collective Contraction in the de Bruijn--Newman Heat Flow:
+Off-Zero Logarithmic Derivatives and Certified Barrier Refinements},
+2026, arXiv:2609.37164v2 (preprint).
+\url{https://arxiv.org/abs/2609.37164v2}.
+\bibitem{arias}
+J. Arias de Reyna,
+\emph{Explicit van der Corput's $d$-th derivative estimate},
+2024, arXiv:2407.02094v1.
+\url{https://arxiv.org/html/2407.02094v1}.
+
+\bibitem{trudgianyang}
+T. S. Trudgian and A. Yang,
+\emph{Toward optimal exponent pairs}, arXiv:2306.05599v3,
+Sections 1.1, 1.2, and 1.4.
+\url{https://arxiv.org/html/2306.05599v3}.
+
+\bibitem{montgomeryvaughan}
+H. L. Montgomery and R. C. Vaughan,
+\emph{Hilbert's Inequality},
+Journal of the London Mathematical Society (2) \textbf{8} (1974), 73--82.
+\url{https://personal.science.psu.edu/rcv4/personal/Publications/s2-8-1-73.pdf}.
+
+\bibitem{dlmf}
+NIST Digital Library of Mathematical Functions,
+\emph{Asymptotic Formulas: Primes}, Section 27.12, equation 27.12.4
+(prime number theorem, leading term).
+\url{https://dlmf.nist.gov/27.12\#E4}.
+
+\end{thebibliography}
+\end{document}

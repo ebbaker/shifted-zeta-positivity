@@ -1,5 +1,95 @@
 # Investigation summary and notes index
 
+Heat Notes 8–12 are now included in the
+[stable heat manuscript](../newman_collisions/newman_collision_reductions.tex).
+[The recent heat overview](../newman_collisions/notes/13_RECENT_HEAT_RESULTS_AND_PATHS_FORWARD_20261009.md) describes
+the signed cores, shorter derivative average, and paid threshold jet test,
+with five bounded next tasks. The missing signed implication remains open.
+[Integration review](../reviews/HEAT_SIGNED_RESULTS_MANUSCRIPT_INTEGRATION_REVIEW_20261009.md);
+[chat 2 and numbering registry](../chat-histories/index.json), next number 3.
+Integration: GPT-6.1-sol (Codex), reasoning effort ultra, verified from the
+recorded configuration.
+
+The [stable heat manuscript](../newman_collisions/newman_collision_reductions.tex)
+now integrates the achieved heat propositions, obstruction proofs, normalized
+error interface and worked examples.
+[Integration review and next-chat handoff](../reviews/HEAT_MANUSCRIPT_INTEGRATION_REVIEW_20261009.md)
+records the positive-time collision-exclusion task and the new dated
+[conversation registry](../chat-histories/index.json), beginning at chat 1
+with continuation chat 2 and next number 3. Integration: GPT-6.1-sol (Codex), ultra.
+
+The [signed shrinking-time continuation](../newman_collisions/notes/8_SIGNED_SHRINKING_COLLISION_VECTOR_AND_PHASE_OBSTRUCTION_20261009.md)
+pays exponentially small value, derivative and cutoff errors on kappa in
+[1,2]. It proves a genuine adjacent-packet obstruction and an exact zero
+under independent phase relaxation, with the complete actual signed
+estimate still open.
+[Scoped review](../reviews/HEAT_SIGNED_SHRINKING_COLLISION_REVIEW_20261009.md).
+
+The [genuine signed edge and averaged probes](../newman_collisions/notes/9_GENUINE_SIGNED_EDGE_CANCELLATION_AND_AVERAGED_PROBES_20261009.md)
+now control a growing cutoff edge and prove a complete translated mean-square
+lower bound, with a paid curvature gap to pointwise collision exclusion.
+The [complete multiplicative-phase obstruction](../newman_collisions/notes/10_COMPLETE_MULTIPLICATIVE_PHASE_OBSTRUCTION_20261009.md)
+preserves all terms and exact local derivative data while admitting a twisted
+joint zero. It does not realize a genuine height or heat collision.
+[Latest review](../reviews/HEAT_GENUINE_SIGNED_INPUT_REVIEW_20261009.md).
+
+[Asymmetric derivative cores and complete joint probes](../newman_collisions/notes/11_ASYMMETRIC_DERIVATIVE_CORES_AND_JOINT_PROBES_20261009.md)
+use a deeper signed derivative cutoff and prove complete derivative mean
+square on a shorter sufficient interval. The
+[threshold collision jet test](../newman_collisions/notes/12_THRESHOLD_COLLISION_JETS_AND_PAID_LAGUERRE_TEST_20261009.md)
+retains the genuine function, uses the all-real threshold hypothesis,
+and pays its quadratic products. Its strict signed opposite is still missing;
+higher multiplicities need the separately stated hierarchy.
+[Latest local-input review](../reviews/HEAT_LOCAL_JET_AND_DERIVATIVE_INPUT_REVIEW_20261009.md).
+Model: GPT-6 (Codex), inherited configuration; exact serving variant and
+configured reasoning effort are not exposed and are not inferred.
+
+Start with the [analytic continuation and manuscript inventory](ANALYTIC_RH_CONTINUATION_AND_MANUSCRIPT_RESULTS_20261009.md).
+It separates achieved heat propositions and obstruction results from the
+missing endpoint estimate. The recommended analytic scout is a signed
+many-term collision-vector estimate in a shrinking-time scaling regime;
+collective attraction remains available for an optional positive-time
+application. The same note compares fixed-scale descent, short-family
+compensation, gated mixed covariance, and correlated probe tools.
+[Review](../reviews/ANALYTIC_CONTINUATION_ASSESSMENT_REVIEW_20261009.md).
+
+The [effective collective probe](../newman_collisions/notes/7_EFFECTIVE_COLLECTIVE_PROBE_AND_SPATIAL_COST_20261009.md)
+completed a uniform high-sector theorem on [0.2, 0.3] with all errors paid.
+Its limiting global mirror gain is negligible; a smaller high threshold
+alone does not exclude a positive collision.
+
+[Heat Note 6](../newman_collisions/notes/6_ANALYTIC_COLLECTIVE_ATTRACTION_AND_LANDING_20261009.md) established the collective-attraction comparison and landing tools.
+It gives a sharp exact-field probe comparison and a global counting floor,
+including maximum-switch and multiple-root continuation, with a strictly
+shorter landing formula. The unprinted count constant limits effectiveness;
+there is no new numerical Newman bound. [Review](../reviews/COLLECTIVE_ATTRACTION_ANALYTIC_REVIEW_20261009.md).
+Compact numerical cover expansion is deferred.
+
+The [next-step continuation](../reviews/HIGH_PRIORITY_NEXT_STEPS_20261009.md)
+adds the actual gated row covariance, the local deletion-mode covariance
+obstruction and a certified zero-containing heat derivative cell. It also
+links the parallel upstream amplification audit. The central arithmetic
+estimates remain open; see the report for exact targets and loss budgets.
+
+The [highest-priority continuation](../reviews/HIGH_PRIORITY_CONTINUATION_20261009.md)
+adds local amplification proof audits,
+[mixed Note 31](../mixed_character_families/notes/31_GATED_INVERSE_MASS_AND_POSITIVE_MOMENT_LIMIT_20261009.md)
+on the forced-conductor gate and sharp marginal limitation, and
+[short Note 28](../short_families/notes/28_GROWING_NORM_COMPENSATED_COFACTOR_BARRIER_20261009.md)
+on growing norm-compensated cofactor differences.
+
+The earlier [comparative follow-up](../reviews/COMPARATIVE_PROGRAM_FOLLOWUP_20261009.md)
+reassesses all programs after new work. Its six proof notes are:
+
+| Program | New continuation |
+| --- | --- |
+| Character amplification | [Conditional geometry theorem and dependency ledger](../../quasi-rh-character-amplification/notes/GEOMETRY_CONDITIONAL_THEOREM_AND_DEPENDENCY_LEDGER_20261009.md) |
+| Mixed characters | [Note 30: surviving annular pair, sharp Fourier kernel, and gated count target](../mixed_character_families/notes/30_SURVIVING_BLOCK_AND_GATED_COUNT_CHECKPOINT_20261009.md) |
+| Short families | [Note 27: finite signed-span barrier and coherent covariance requirements](../short_families/notes/27_COHERENT_COVARIANCE_AND_FINITE_SPAN_BARRIER_20261009.md) |
+| Integer quadratic lift | [Note 3: affordable near-pair sector and separated finishing form](../integer_quadratic_lift/notes/3_SEPARATED_PRIME_PAIR_CHECKPOINT_20261009.md) |
+| Fixed-scale descent | [Note 4: complete fixed delay and covariance obstruction](../fixed_scale_descent/notes/4_COMPLETE_FIXED_DELAY_AND_COVARIANCE_OBSTRUCTION_20261009.md) |
+| Newman collisions | [Note 4: certified compact rectangle across a cutoff change](../newman_collisions/notes/4_CERTIFIED_COMPACT_CUTOFF_CROSSING_20261009.md) |
+
 8 October 2026. Prepared for Edward Baker with substantial LLM assistance.
 Model: GPT-6 (Codex), inherited configuration; exact serving variant and
 configured reasoning effort are not exposed and are not inferred.
@@ -116,6 +206,8 @@ records these proofs and their validation limits.
 24. [Complete-cofactor obstruction](../short_families/notes/24_SHORT_FAMILY_FINITE_COFACTOR_PAIRING_20261008.md): for the permitted trivial twist, a genuine semiprime/odd-product pairing retains coherent power 16/15 uniformly for growing cofactor norm below D^(1/20); no full-tail lower bound follows.
 25. [Pairing remainder](../short_families/notes/25_SHORT_FAMILY_PAIRING_REMAINDER_20261008.md): exact finite-prime resummation, negligible auxiliary free response with both norm costs paid, and an unbounded signed arithmetic complement.
 26. [Cofactor continuation](../short_families/notes/26_SHORT_FAMILY_COFACTOR_CONTINUATION_20261008.md): completed cofactor test, mixed actual-probe reassessment, reproducible checks and the distinct-character open-chain task.
+27. [Coherent covariance and finite spans](../short_families/notes/27_COHERENT_COVARIANCE_AND_FINITE_SPAN_BARRIER_20261009.md): exact required mean/variance cancellation and a fixed finite signed-span power obstruction.
+28. [Growing norm-compensated cofactor differences](../short_families/notes/28_GROWING_NORM_COMPENSATED_COFACTOR_BARRIER_20261009.md): exact Jacobian compensation kills growing logarithmic orders but retains coherent power in an explicit PNT-controlled range; larger-order actual transfer remains open.
 
 The [signed packet review](../reviews/SHORT_FAMILY_SIGNED_PACKET_REVIEW_20261008.md)
 records the proof audits and finite checks. The full tail moment remains open.
@@ -157,6 +249,8 @@ estimate, remains unproved.
 27. [Centered auxiliary control](../mixed_character_families/notes/27_CENTERED_AUXILIARY_CONTROL_AND_SIGNED_REMAINDER_20261009.md): negligible principal layer, growing nonprincipal conductor sectors, exact centered coefficient and gated projector; signed remainder remains open.
 28. [Signed support and conductor reductions](../mixed_character_families/notes/28_SIGNED_HIGH_CONDUCTOR_SUPPORT_AND_DEFECT_20261009.md): full common-support pair count, actual squarefree-core sieve radius, moving valuation-defect frontier and exact remaining signed theorem; Mellin/derivative centering supplies no automatic power gain.
 29. [Further signed-form bounds](../mixed_character_families/notes/29_SIGNED_FORM_SECTORS_AND_SIXTHPOWER_TAIL_20261009.md): small primitive full-column quotient conductors, a core frontier without the defect ceiling, and native sixth-power column-tail removal with every cross term; the precise remaining signed correlation is open.
+30. [Surviving block and gated count checkpoint](../mixed_character_families/notes/30_SURVIVING_BLOCK_AND_GATED_COUNT_CHECKPOINT_20261009.md): actual zero-slot annular witness, sharp Fourier kernel, complete pair remainder and weaker selected inverse/count target.
+31. [Gated inverse mass and positive-moment limit](../mixed_character_families/notes/31_GATED_INVERSE_MASS_AND_POSITIVE_MOMENT_LIMIT_20261009.md): forced high-conductor domain, native conditional mass bounds and paid marginal strips; all legal fixed-length scalar marginal capacities still leave a quantified central deficit.
 
 The [cofactor and mixed-probe review](../reviews/SHORT_FAMILY_COFACTOR_PAIRING_REVIEW_20261008.md)
 records the scoped proof audits and finite checks. The remaining open-chain

@@ -1,5 +1,127 @@
 # Exact checks and collision reconnaissance
 
+## Local heat jets and asymmetric derivative inputs
+
+Run [check_local_heat_jet_input.py](check_local_heat_jet_input.py) with
+Python 3.10 or later. It prints deterministic JSON; optional `--output`
+saves the same bytes. Its [small record](local_heat_jet_input_record_20261009.json)
+binds the source by SHA-256 and records 2,386 exact passing assertions.
+Two fresh runs reproduced it byte for byte.
+
+The checks cover symbolic normalized-jet and backward-heat identities,
+scalar edge and averaging reserves, exact exponent polynomials, paid jet
+perturbations, and finite real-root polynomial deflation/mirror models.
+They do not evaluate the actual heat function, genuine phases, huge cutoffs,
+or zeros, and do not certify imported inequalities, canonical products,
+analytic limits, the missing signed implication, or collision exclusion.
+See [Heat Note 11](../newman_collisions/notes/11_ASYMMETRIC_DERIVATIVE_CORES_AND_JOINT_PROBES_20261009.md),
+[Heat Note 12](../newman_collisions/notes/12_THRESHOLD_COLLISION_JETS_AND_PAID_LAGUERRE_TEST_20261009.md),
+and the [review](../reviews/HEAT_LOCAL_JET_AND_DERIVATIVE_INPUT_REVIEW_20261009.md).
+Model: GPT-6 (Codex), inherited configuration; exact serving variant and
+configured reasoning effort are not exposed and are not inferred.
+
+## Genuine signed heat input
+
+Run [check_genuine_signed_heat_input.py](check_genuine_signed_heat_input.py)
+with Python 3.10 or later. It prints deterministic JSON; optional `--output`
+saves the same bytes. The
+[small record](genuine_signed_heat_input_record_20261009.json) contains
+186,693 passing exact assertions and binds the checker source by SHA-256.
+Two fresh runs reproduced it byte for byte. The checks cover polynomial
+exponents, short-edge and contraction scalar reserves, the cited surveyed
+exponent-pair hull, finite cyclic monotone groups, isolated primes, and
+formal multiplicative orthogonality at cutoffs 64, 128 and 256.
+
+The checker evaluates no physical phases, heat functions, zero grids, or
+huge cutoffs. Imported theorems, analytic uniform limits, prime asymptotics,
+and the actual complete local collision bound remain proof inputs.
+See [Heat Note 9](../newman_collisions/notes/9_GENUINE_SIGNED_EDGE_CANCELLATION_AND_AVERAGED_PROBES_20261009.md),
+[Heat Note 10](../newman_collisions/notes/10_COMPLETE_MULTIPLICATIVE_PHASE_OBSTRUCTION_20261009.md),
+and the [review](../reviews/HEAT_GENUINE_SIGNED_INPUT_REVIEW_20261009.md).
+Model: GPT-6 (Codex); exact serving variant and configured reasoning effort
+are not exposed and are not inferred.
+
+## Signed shrinking time collision scout
+
+Run [check_signed_heat_collision_scout.py](check_signed_heat_collision_scout.py)
+with Python 3.10 or later. It prints deterministic JSON and writes no files.
+The [small record](signed_heat_collision_scout_record_20261009.json)
+contains 3,930 passing exact rational assertions for the complete signed
+kernel, exponent and error-payment reserves, ellipse margins, finite
+signing/partition invariants and logarithmic expansion bounds. Two runs
+reproduced it byte for byte. It evaluates no heat function, genuine phase,
+zero grid or large cutoff; analytic limits and the imported approximation
+remain proof inputs. See
+[Heat Note 8](../newman_collisions/notes/8_SIGNED_SHRINKING_COLLISION_VECTOR_AND_PHASE_OBSTRUCTION_20261009.md)
+and its [review](../reviews/HEAT_SIGNED_SHRINKING_COLLISION_REVIEW_20261009.md).
+
+## Effective collective probe
+
+Run [check_effective_collective_probe.py](check_effective_collective_probe.py)
+with Python 3.10 or later. It prints deterministic JSON and writes no files.
+The [small record](effective_collective_probe_record_20261009.json) verifies
+fixed rational, exponential and logarithmic reserves, including all paid
+source errors and the landing cost. Replay uses exact rational Taylor bounds
+and outward intervals, evaluates no heat function or zero, and enumerates
+no large cutoff. The approximation theorem and published initial canopy are
+imported analytic inputs. See [Heat Note 7](../newman_collisions/notes/7_EFFECTIVE_COLLECTIVE_PROBE_AND_SPATIAL_COST_20261009.md)
+and its [review](../reviews/EFFECTIVE_COLLECTIVE_PROBE_REVIEW_20261009.md).
+
+## Analytic collective attraction
+
+Run [check_collective_attraction_algebra.py](check_collective_attraction_algebra.py)
+with Python 3.10 or later. It prints deterministic JSON and writes no files.
+The [small record](collective_attraction_algebra_record_20261009.json)
+contains nine universal polynomial identities verified by exact coefficient
+equality and 511 supplementary rational assertions. Two runs reproduced
+the record byte-for-byte. The checker evaluates no heat functions and
+searches no zeros; it does not supply an effective counting constant or a
+numerical Newman bound. See [Heat Note 6](../newman_collisions/notes/6_ANALYTIC_COLLECTIVE_ATTRACTION_AND_LANDING_20261009.md)
+and the [review](../reviews/COLLECTIVE_ATTRACTION_ANALYTIC_REVIEW_20261009.md).
+
+## Next steps from the high priority review
+
+The [continuation report](../reviews/HIGH_PRIORITY_NEXT_STEPS_20261009.md)
+links the new proof notes and scoped reviews. Run from this directory:
+
+| Command | Small record | Scope |
+| --- | --- | --- |
+| `python3 check_gated_large_values_covariance.py` | [Gated covariance](gated_large_values_covariance_record_20261009.json) | Writes JSON; exact sextic phase/mask, original convolution and amplitude-covariance checks, with a separate floating normalized-phase diagnostic; no native zero bin or unbounded estimate |
+| `python3 check_deletion_mode_covariance.py` | [Deletion covariance](deletion_mode_covariance_record_20261009.json) | Writes JSON; exact physical deletion coefficients, conditional complex means, tensor modes, full-response/complement identities and exponents |
+| `python3 check_zero_bearing_heat_cell.py` | [Heat derivative cell](zero_bearing_heat_cell_record_20261009.json) | Prints JSON; uses the existing interval backend, covers 600 closed derivative cells and 40 endpoint time cells; certifies one simple real zero at every t in [0.2,0.3] in (4005.2,4005.8) under the analytic inputs |
+
+The finite arithmetic checks do not supply the open signed covariance bounds.
+The heat checker pays both value and derivative errors. Its source and backend
+hashes identify the replay inputs; they are not proof substitutes.
+
+## Highest-priority continuation
+
+[check_gated_inverse_continuation.py](check_gated_inverse_continuation.py)
+writes [its small record](gated_inverse_continuation_record_20261009.json)
+and prints a summary. Its 764 exact assertions check whole-slot capacities,
+the fixed-length scalar envelope, continuous central-band bounds and
+literal conductor/loss/paid-strip ledgers. The table is not native
+character data or an evaluated detector manifest. See
+[mixed Note 31](../mixed_character_families/notes/31_GATED_INVERSE_MASS_AND_POSITIVE_MOMENT_LIMIT_20261009.md)
+and the [continuation report](../reviews/HIGH_PRIORITY_CONTINUATION_20261009.md).
+
+## Comparative program follow-up
+
+The [follow-up report](../reviews/COMPARATIVE_PROGRAM_FOLLOWUP_20261009.md)
+links the six new proof notes. Run these from this directory:
+
+| Command | Record | Scope and output |
+| --- | --- | --- |
+| `python3 check_mixed_program_checkpoint.py` | [Mixed checkpoint](mixed_program_checkpoint_record_20261009.json) | Writes JSON and prints a summary; 9,529 assertions, exact annular ownership and detector budgets, plus floating finite Fourier diagnostics; requires NumPy |
+| `python3 check_short_quadratic_checkpoint.py` | [Short and quadratic checkpoint](short_quadratic_checkpoint_record_20261009.json) | Writes JSON and prints a summary; 42,049 exact assertions, signed covariance/span/pair decompositions and rational reserves; standard library |
+| `python3 check_fixed_heat_checkpoint.py` | [Fixed scale and heat checkpoint](fixed_heat_checkpoint_record_20261009.json) | Prints JSON without writing; 55,296 rational partitions, five phase identities, and 120 full outward interval heat cells; standard library |
+
+The finite mixed/short/quadratic and fixed-scale identities do not certify
+an unbounded arithmetic estimate. The heat intervals provide the stated
+compact rectangle certificate under the imported approximation and disk-error
+theorems and documented Decimal guarantees. The source-scoped geometry
+ledger checker is in the adjacent amplification project's numerics folder.
+
 Prepared for Edward Baker, 8 October 2026, with substantial LLM assistance.
 Model: GPT-6 (Codex); exact serving variant and configured reasoning effort
 are not exposed and are not inferred.
@@ -471,3 +593,15 @@ multi-affine arithmetic certificate. Its synthetic kernel does not
 certify native transfer, global growth, ideal asymptotics, source
 height propagation or the full signed correlation.
 See [Note 29](../mixed_character_families/notes/29_SIGNED_FORM_SECTORS_AND_SIXTHPOWER_TAIL_20261009.md) and its [review](../reviews/MIXED_SIGNED_FORM_BOUND_REVIEW_20261009.md).
+
+## Growing cofactor compensation checks
+
+[check_growing_cofactor_barrier.py](check_growing_cofactor_barrier.py) writes
+[a deterministic record](growing_cofactor_barrier_record_20261009.json).
+Two runs passed 5,881 exact assertions: 636 divisor-coefficient cases,
+88 formal shift moments, 504 polynomial integral identities and 4,500
+derivative-term comparisons, with the remaining assertions checking costs,
+positive-series coefficients and exponents. Distinct ideal symbols of equal
+norm are included. Rational shifts are explicitly formal; the checker does
+not certify PNT, lattice counts, analytic limits or full-response covariance.
+See [short-family Note 28](../short_families/notes/28_GROWING_NORM_COMPENSATED_COFACTOR_BARRIER_20261009.md).

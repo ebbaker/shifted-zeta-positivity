@@ -1,15 +1,32 @@
 # Exact parameter and geometry checks
 
+## Upstream arithmetic interfaces
+
+[check_upstream_reflection_interfaces.py](check_upstream_reflection_interfaces.py)
+writes the small
+[record](upstream_reflection_interfaces_record_20261009.json). It verifies
+local split and inert residue-field Fourier factors in exact cyclotomic
+arithmetic, primitive conductor orientation, physical zero masks, actual
+Eisenstein cusp congruences and additive CRT factors. See the
+[source audit](../reviews/UPSTREAM_REFLECTION_POISSON_SIEVE_AUDIT_20261009.md)
+for the uniformity argument and remaining imported analytic inputs. The
+finite checks do not prove global automorphy, reciprocity, the sieve
+inequalities or the family baseline.
+
 8 October 2026. Prepared for Edward Baker with substantial LLM assistance.
 Model: GPT-6 (Codex); serving variant and configured reasoning effort were
 not exposed.
 
 The certificate scripts use only the Python standard library and exact
 rational arithmetic. Decimal values are explanatory conversions. Run each script
-from this directory to print its small retained JSON record.
+from this directory; most print their small retained JSON record. The centered
+fourth checker writes its record and prints a summary.
 
 | Command | Record | Scope |
 | --- | --- | --- |
+| `python3 -B check_reflection_inverse_proof_audit.py` | [Reflection/inverse audit record](reflection_inverse_proof_audit_record_20261009.json) | Prints JSON without writing; exact coefficient identities, support-loss ledgers, local phases/zeros/valuations, amplification and finite-depth checks; no upstream analytic theorem is certified. |
+| `python3 -B check_centered_fourth_proof_audit.py` | [Centered-fourth audit record](centered_fourth_proof_audit_record_20261009.json) | Writes JSON and prints a summary; 49,273 exact assertions, six symbolic ledgers, local field correlations, complete centering/masks and induction diagnostics; no unbounded fourth theorem is certified. |
+| `python3 check_geometry_dependency_ledger.py` | [Dependency ledger record](geometry_dependency_ledger_check_20261009.json) | 450 exact assertions for the unspecialized high identity, normalizer threshold, height absorption and common contradiction gap; the accompanying note proves the analytic continuation step, while source arithmetic estimates remain assumptions. |
 | `python3 check_geometry_optimization.py` | [Current geometry record](geometry_optimization_check.json) | Exact scale identities, complete low subset inequality, continuous quadratic positivity certificate, all range margins, and a rational interval for the fixed-geometry endpoint limit. |
 | `python3 check_parameter_extension.py` | [First extension record](parameter_extension_check.json) | Original source polynomial, ratio factorization, first displacement, Euler-region exponents, and conditional amplification examples. |
 | `python3 check_localized_target.py` | [Conditional next-target record](localized_target_check.json) | Exact Bernstein certificate outside the hard box and inside it **assuming a new row gain**; geometry and remaining margins. |

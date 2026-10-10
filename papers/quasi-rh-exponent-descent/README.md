@@ -1,5 +1,100 @@
 # Quasi-RH exponent descent
 
+The [heat manuscript](newman_collisions/newman_collision_reductions.tex)
+now incorporates Heat Notes 8–12: complete shrinking-time errors, genuine
+signed core reductions, phase-relaxation obstructions, a shorter complete
+derivative average, and the paid all-real-threshold jet condition.
+The [recent results and paths forward](newman_collisions/notes/13_RECENT_HEAT_RESULTS_AND_PATHS_FORWARD_20261009.md)
+explain what these estimates achieve and set out bounded next tasks.
+The opposite local signed implication and global collision exclusion remain
+open. [Integration review](reviews/HEAT_SIGNED_RESULTS_MANUSCRIPT_INTEGRATION_REVIEW_20261009.md).
+The current continuation is saved as chat **2** in the
+[conversation registry](chat-histories/index.json), with next number **3**.
+Integration: GPT-6.1-sol (Codex), reasoning effort ultra, verified from the
+recorded configuration. No new snapshot or Git commit is created.
+
+The achieved heat results are now consolidated in the
+[stable heat manuscript](newman_collisions/newman_collision_reductions.tex),
+with proofs, attributed analytic inputs, and a worked-example appendix.
+[Integration review and next-chat handoff](reviews/HEAT_MANUSCRIPT_INTEGRATION_REVIEW_20261009.md).
+The bounded shrinking-time collision attempt is recorded in
+[Heat Note 8](newman_collisions/notes/8_SIGNED_SHRINKING_COLLISION_VECTOR_AND_PHASE_OBSTRUCTION_20261009.md):
+all approximation and cutoff errors decay exponentially; genuine adjacent
+terms obstruct packetwise coercivity, and independent phases admit an exact
+joint zero with the same weights and derivative data. The full actual signed
+collision inequality remains open.
+[Continuation review](reviews/HEAT_SIGNED_SHRINKING_COLLISION_REVIEW_20261009.md).
+
+[Heat Note 9](newman_collisions/notes/9_GENUINE_SIGNED_EDGE_CANCELLATION_AND_AVERAGED_PROBES_20261009.md)
+adds genuine signed cancellation in a growing cutoff edge and a complete
+translated mean-square lower bound with physical errors paid.
+[Heat Note 10](newman_collisions/notes/10_COMPLETE_MULTIPLICATIVE_PHASE_OBSTRUCTION_20261009.md)
+proves exact joint zeros after complete multiplicative twists. The actual
+local collision inequality remains open; the average plus the available
+curvature budget does not imply it.
+[Latest review](reviews/HEAT_GENUINE_SIGNED_INPUT_REVIEW_20261009.md).
+
+[Heat Note 11](newman_collisions/notes/11_ASYMMETRIC_DERIVATIVE_CORES_AND_JOINT_PROBES_20261009.md)
+adds a deeper derivative core and complete derivative mean square on the
+shorter sufficient interval D t^2 exp(2a/t).
+[Heat Note 12](newman_collisions/notes/12_THRESHOLD_COLLISION_JETS_AND_PAID_LAGUERRE_TEST_20261009.md)
+adds an all-real-threshold fourth-derivative condition with explicit
+quadratic error payments. Its strict signed opposite remains open.
+[New review](reviews/HEAT_LOCAL_JET_AND_DERIVATIVE_INPUT_REVIEW_20261009.md)
+records the research-stage results subsequently integrated above.
+The integration conversation is recorded as **chat 1** in
+[chat-histories](chat-histories/README.md); the registry now reserves **3** for
+the next new chat and retains dates separately from capture/import order.
+Integration prepared with GPT-6.1-sol (Codex), reasoning effort ultra.
+
+The [analytic continuation assessment](notes/ANALYTIC_RH_CONTINUATION_AND_MANUSCRIPT_RESULTS_20261009.md)
+inventories the achieved manuscript results and distinguishes positive-time
+collective attraction from exclusion of every positive-time real collision.
+It recommends one signed many-term collision-vector attempt in a shrinking-time
+scaling regime. The previous attraction target near the published barrier
+remains an optional positive-bound task. Fixed-scale contraction, short-family
+compensation, gated mixed covariance, and correlated probes are compared by
+their exact open estimates and stopping conditions.
+[Scoped review](reviews/ANALYTIC_CONTINUATION_ASSESSMENT_REVIEW_20261009.md).
+
+The [effective collective probe](newman_collisions/notes/7_EFFECTIVE_COLLECTIVE_PROBE_AND_SPATIAL_COST_20261009.md)
+is a completed worked theorem with all approximation and derivative errors:
+exact attraction exceeds four for maximal nonreal zeros of height at most
+0.2, x >= 10^16, and t in [0.2, 0.3]. Its global mirror patch has a negligible
+gain over the historical 0.22 baseline. The comparison and obstruction
+lemmas are the main manuscript material; no route to zero is yet established.
+
+[Heat Note 6](newman_collisions/notes/6_ANALYTIC_COLLECTIVE_ATTRACTION_AND_LANDING_20261009.md)
+supplies the sharp exact-field probe comparison and maximum-envelope
+continuation. Its separate all-zero counting floor retains an implicit
+constant. Compact numerical rectangle expansion remains deferred.
+
+The [next-step continuation](reviews/HIGH_PRIORITY_NEXT_STEPS_20261009.md)
+derives a gate-specific signed row covariance and conditionally absorbs its
+low-conductor pair sectors, while leaving the central mixed count open.
+[Short Note 29](short_families/notes/29_DELETION_MODE_COVARIANCE_AND_FULL_RESPONSE_LEDGER_20261009.md)
+shows that scalar coherent mean subtraction leaves local deletion variance.
+[Heat Note 5](newman_collisions/notes/5_CERTIFIED_ZERO_BEARING_DERIVATIVE_CELL_20261009.md)
+certifies exactly one simple real zero for every time from 0.2 to 0.3 in
+(4005.2, 4005.8), under the imported approximation and disk-error inputs.
+The conditional amplification boundary remains unchanged.
+
+The [highest-priority continuation](reviews/HIGH_PRIORITY_CONTINUATION_20261009.md)
+completes local amplification proof audits, forces the gated mixed target
+onto a stronger high-conductor domain, pays two conditional marginal
+strips and isolates the central positive-moment deficit. A growing
+norm-compensated cofactor test also retains the short-family coherent
+power. New arithmetic should focus on the central gated count, with
+upstream analytic validation in parallel and broader short-family
+covariance as the main alternative.
+
+The [comparative follow-up](reviews/COMPARATIVE_PROGRAM_FOLLOWUP_20261009.md)
+adds work on all five branches and character amplification. The main ranking
+holds, with a weaker selected inverse/count checkpoint first within mixed
+arithmetic, a stronger finite-cofactor obstruction for short families, and
+the first compact heat certificate across a natural-cutoff change. The new
+unbounded arithmetic estimates and an established improved strip remain open.
+
 The latest [bounds for the signed form](mixed_character_families/notes/29_SIGNED_FORM_SECTORS_AND_SIXTHPOWER_TAIL_20261009.md) control small primitive column quotient conductors, additional higher-defect auxiliary rows, and columns with a sixth-power factor exceeding U^(1/10), including all cross terms. The universal tail proof uses the existing native arbitrary-vector sieve; the optional U^(2/25) cutoff retains its additional source scalar hypotheses. The exact remaining correlation still needs saving 1/700. Its [review](reviews/MIXED_SIGNED_FORM_BOUND_REVIEW_20261009.md) records the conditional inputs and finite verification.
 
 Prepared for Edward Baker, 8 October 2026, with substantial LLM assistance.
@@ -15,7 +110,12 @@ and the [prime-variance project](../prime-variance-exponents/README.md).
 The [investigation summary and notes index](notes/README.md) maps the five
 project folders and their current results and open tasks.
 For the next research session, start with the
-[latest signed-form bounds](mixed_character_families/notes/29_SIGNED_FORM_SECTORS_AND_SIXTHPOWER_TAIL_20261009.md)
+[positive-time collision handoff](reviews/HEAT_MANUSCRIPT_INTEGRATION_REVIEW_20261009.md)
+and [analytic continuation assessment](notes/ANALYTIC_RH_CONTINUATION_AND_MANUSCRIPT_RESULTS_20261009.md).
+For the separate arithmetic route, retain the
+[gated inverse continuation](mixed_character_families/notes/31_GATED_INVERSE_MASS_AND_POSITIVE_MOMENT_LIMIT_20261009.md),
+[highest-priority report](reviews/HIGH_PRIORITY_CONTINUATION_20261009.md),
+[latest signed-form bounds](mixed_character_families/notes/29_SIGNED_FORM_SECTORS_AND_SIXTHPOWER_TAIL_20261009.md),
 and [dependency ledger](notes/RESEARCH_LEDGER_20261008.md), then consult the detailed
 [Codex continuation note](notes/CODEX_CONTINUATION_20261008.md) for the broader program.
 It integrates a review of
