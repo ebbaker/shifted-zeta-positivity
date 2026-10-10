@@ -204,3 +204,63 @@ the imported full holomorphic approximation. The
 [manuscript review](../reviews/6_MANUSCRIPT_INTERNAL_REVIEW_20261010.md)
 records these checks and their limits. New review metadata: GPT-6 (Codex),
 exact serving variant and effort not exposed and not inferred.
+
+## Curvature and sharp candidate-null support controls
+
+The new read-only exact checker uses only the Python standard library:
+
+```bash
+python3 papers/quasi-rh-exponent-descent/newman_collisions/13_microlocal_phase_space/numerics/check_candidate_localization_and_support.py
+```
+
+[The small record](CANDIDATE_LOCALIZATION_SUPPORT_RECORD_20261010.json)
+reports PASS with 6914 Fraction controls for the curvature complete square,
+physical candidate-null identity, sharp support, golden-ratio comparison
+and monotone upper endpoints. These are finite algebra/support controls,
+not a proof of the imported analytic interface or an actual arithmetic sign.
+Optional `--output` writes a specified replay record; omit it for no writes.
+
+## Bounded complete-orbit and Möbius pilots
+
+These numerical diagnostics require NumPy. Tested environment: Python
+3.10.0, NumPy 1.25.1; no dependencies were installed. Decimal protects the
+large common-height phases before complex128 operations. Run from the
+repository root, writing replays outside the repository:
+
+```bash
+PYTHONDONTWRITEBYTECODE=1 python3 papers/quasi-rh-exponent-descent/newman_collisions/13_microlocal_phase_space/numerics/pilot_complete_centered_jets.py --output /tmp/complete-centered-pilot-replay.json --calibration-certificate papers/quasi-rh-exponent-descent/newman_collisions/13_microlocal_phase_space/numerics/COMPLETE_CURRENT_RECTANGLE_CERTIFICATE_20261010.json
+PYTHONDONTWRITEBYTECODE=1 python3 papers/quasi-rh-exponent-descent/newman_collisions/13_microlocal_phase_space/numerics/pilot_coupled_mobius_frontier.py --output /tmp/coupled-mobius-pilot-replay.json
+```
+
+[The primary source](pilot_complete_centered_jets.py) and
+[record](PILOT_COMPLETE_CENTERED_JETS_20261010.json) retain all terms at
+M=22066,50000,100000 and nine height offsets, physical raw jets through
+order four, complete centered moments through degree six, block/complement
+interference, current and candidate-null payments. The counting constant
+remains symbolic. Selected 75-digit complete sums, raw derivative controls
+and retained-certificate midpoint calibration pass. Its critical-point
+scan makes no root-completeness or interval-coverage claim. No sampled
+joint candidate is found. The available fourth Cauchy upper payment remains
+about 25295–37050, despite tiny Bell residuals; this is an upper payment,
+not a measured genuine approximation error.
+
+[The coupled source](pilot_coupled_mobius_frontier.py) and
+[record](PILOT_COUPLED_MOBIUS_FRONTIER_20261010.json) retain every nonzero
+c_J(q), both phase channels and BB/CC/BC terms at N=100000,J=100 and two
+heights. They check the exact divisor identity for every integer through N,
+and 234 formal Fraction controls through N=12. Singleton Jdagger terms
+q>N/2 vanish identically and are optimized exactly. The first active band
+has coefficients -1 and contributes negatively at both heights; the full
+frontier stays positive because q=1 dominates. Candidate equations are
+never imposed separately on a sublattice. The source checks the preserved
+primary source hash before import. Use `--N` only for a separate experiment.
+
+[The build/summary record](PILOT_SUMMARY_BUILD_RECORD_20261010.json) binds
+both sources and records and reports their scope. Separate full internal
+replays match every retained field except elapsed time. Neither diagnostic
+is an outward enclosure, verifies the all-real/counting hypotheses, or
+supplies the missing uniform signed threshold inequality. See
+[Heat Note 24](../../notes/24_CURVATURE_CONES_SHARP_NULL_PAYMENTS_AND_LOCALIZED_POISSON_20261010.md)
+and [Review 7](../reviews/7_CANDIDATE_LOCALIZATION_AND_SIGNED_PILOT_INTERNAL_REVIEW_20261010.md).
+New metadata: GPT-6 (Codex); exact serving variant and effort not exposed
+and not inferred. Internal LLM validation only.

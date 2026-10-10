@@ -92,3 +92,26 @@ records internal audits and fresh byte-identical replays.
 snapshot folder. New drafting metadata: GPT-6 (Codex), exact serving variant
 and configured effort not exposed and not inferred; earlier records retain
 their original metadata.
+
+## Candidate localization and coupled signed continuation
+
+[Heat Note 23](../notes/23_SIGNED_CANDIDATE_LOCALIZATION_AND_RESONANT_BOUNDARY_PROGRAM_20261010.md)
+sets the joint program with investigation 09. Its first continuation,
+[Heat Note 24](../notes/24_CURVATURE_CONES_SHARP_NULL_PAYMENTS_AND_LOCALIZED_POISSON_20261010.md),
+derives exact ordinary-threshold curvature cones, a sharp first-jet payment
+for the diagonal-annihilating kernel, rational-frequency sublattice coupling,
+a localized finite Poisson remainder, and a uniform endpoint-bundle envelope.
+The sharper linear support can reduce the slab payment by at most about
+38.2%; it does not change its asymptotic scale.
+
+[The bounded pilots](numerics/README.md) calculate complete physical moments
+and signed Möbius frontiers, preserving every nonzero coefficient, both
+phase channels and all mixed terms. They are numerical diagnostics, not
+outward sign certificates or new zero atlases. The fourth Cauchy upper
+payment remains large at the tested cutoffs, and the complete frontier has
+no negative sign at the two Möbius pilot heights. The candidate-conditioned
+signed main estimate remains open.
+[Review 7](reviews/7_CANDIDATE_LOCALIZATION_AND_SIGNED_PILOT_INTERNAL_REVIEW_20261010.md)
+records the proofs, exact controls, calibration and independent full
+internal replays. Preparation: GPT-6 (Codex); exact serving variant and
+configured effort not exposed and not inferred.

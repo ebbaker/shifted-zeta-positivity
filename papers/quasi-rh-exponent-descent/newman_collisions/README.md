@@ -187,3 +187,18 @@ signed inequality, higher multiplicity, and uniform coverage are open.
 [chat 7 record](../chat-histories/0007_2026-10-10T06-56-08Z_summarize-newman-collision-progress.json).
 Drafting: GPT-6.1-sol (Codex), reasoning effort ultra, verified from this
 turn's recorded configuration. Reviews are internal LLM checks.
+
+The next joint program for investigations 09 and 13 is outlined in
+[Heat Note 23](notes/23_SIGNED_CANDIDATE_LOCALIZATION_AND_RESONANT_BOUNDARY_PROGRAM_20261010.md).
+Its first execution is in
+[Heat Note 24](notes/24_CURVATURE_CONES_SHARP_NULL_PAYMENTS_AND_LOCALIZED_POISSON_20261010.md):
+exact curvature localization, sharp candidate-null support with a quantified
+constant gain, coupled rational-frequency saddles, a macroscopic Fourier
+ceiling of order N, and an endpoint-bundle payment. Bounded complete pilots
+at cutoffs 22066, 50000 and 100000 retain symbolic counting data and expose
+the large fourth Cauchy upper payment. At N=100000 the first active Möbius
+band is negative at two tested heights, but the complete frontier stays
+positive. No joint candidate or uniform threshold exclusion is demonstrated.
+[Internal review](13_microlocal_phase_space/reviews/7_CANDIDATE_LOCALIZATION_AND_SIGNED_PILOT_INTERNAL_REVIEW_20261010.md)
+records exact controls and full independent internal replays. Preparation:
+GPT-6 (Codex); exact serving variant and effort not exposed and not inferred.
