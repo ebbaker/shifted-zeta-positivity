@@ -55,8 +55,12 @@ effort is not exposed to this session and is not inferred.
   explicit conditional 11/12-to-33/41 arithmetic step, threshold
   coverage obligations and exact divisor pairing of all theta cross terms.
 - [Working manuscript](enlarged_state_transport_and_heat_flow.tex): exact
-  structures, conditional visibility, sharp transport residuals, the
-  primes 2 and 3 obstruction, and a bounded regular calibration.
+  structures, conditional visibility, sharp transport residuals, complete
+  paired contours and Mellin endpoints, the signed carrier and phase-current
+  reductions, fixed-product obstruction, and three stationary calibrations.
+  Notes 9–15 are now integrated, with the arithmetic synopsis retaining
+  its separate conditional premises. The final standalone source compiled
+  successfully in the native editor.
 - [Sharp adjoint residuals](notes/2_SHARP_ADJOINT_RESIDUALS_AND_RESTRICTED_PRIME_OBSTRUCTION_20261010.md):
   explicit tree witnesses, optimality and the effective obstruction for
   retaining only primes 2 and 3 when L is at least 160.
@@ -136,3 +140,11 @@ reserve. Fixed-product positivity at time zero also fails. The new bounded
 high-height branch confirms that the full third-jet payment can be overcome
 locally, but it supplies no uniform relative estimate or new joint-zero
 coverage. See the [internal signed-continuation review](reviews/7_SIGNED_CARRIER_SADDLE_AND_HIGH_STATIONARY_INTERNAL_REVIEW_20261010.md).
+
+The [signed-results manuscript integration review](reviews/8_SIGNED_RESULTS_MANUSCRIPT_INTEGRATION_REVIEW_20261010.md)
+checks notation, proof scope, references and numerical bounds, and records
+the successful native compilation and final source hash. This integration
+used GPT-6-astra (Codex), reasoning effort ultra, verified from the recorded
+integration-turn configuration. Earlier preparation records retain their
+original attribution. The public conversation is preserved as chat 10 in
+[the exponent-descent history](../../chat-histories/index.json).

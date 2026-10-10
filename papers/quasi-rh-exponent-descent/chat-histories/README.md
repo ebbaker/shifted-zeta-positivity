@@ -10,8 +10,9 @@ The first captured chat is **1**. “Continue manuscript integration” is **2**
 is **4**. "Create 15 project folders" is **5**. "Continue RH exponent descent"
 is **6**. “Summarize Newman collision progress” is **7**.
 “Assess Newman collision program” is **8**.
-“Continue enlarged-state transport” is **9**. Read `index.json` before
-recording another chat: the next new conversation is **10**. Numbers belong to this investigation's
+“Continue enlarged-state transport” is **9**. “Continue quasi-RH strategy”
+is **10**. Read `index.json` before recording another chat: the next new
+conversation is **11**. Numbers belong to this investigation's
 folder and remain stable. A later refresh of the same conversation retains
 its number. Retrospective imports receive the next unused number and retain
 their original conversation dates; importing an older chat does not renumber
@@ -396,3 +397,55 @@ current mixed budgets. A new complete shorter-family mean square would
 conditionally give 33/41; an exact theta divisor-pair identity supplies
 channels for a signed estimate. Neither missing estimate, uniform coverage
 nor RH is established. The existing manuscript remains the current source.
+
+
+## Signed stationary continuation and manuscript integration
+
+Chat **10**, “Continue quasi-RH strategy”, retains its recorded creation
+time 2026-10-10T19:24:43.012Z (2026-10-10T15:24:43.012-04:00 in
+America/New_York). Its
+[public conversation record](0010_2026-10-10T19-24-43Z_continue-quasi-rh-strategy.json)
+contains the request to continue the RH strategy, the assessment of
+lifted dynamics and coordinate changes, the signed stationary
+continuation, and the request to integrate the results into the manuscript
+and archive this chat. Exact completed public text is preserved through
+capture, including commentary. Creation time and capture time are separate.
+
+The manuscript integration is complete, and the captured public commentary
+records successful compilation in the native LaTeX editor. This capture is
+a snapshot before the manuscript/archive response's final delivery. Later
+messages require a refresh of chat 10; its number and original creation
+time remain unchanged. Chats 1–9 and their registry entries are unchanged.
+The next new conversation is **11**.
+The root session's recorded turn configuration is GPT-6-astra (Codex),
+reasoning effort ultra. That verified configuration identifies this
+integration and archive work; it does not rewrite the historical metadata
+in earlier notes. Prepared for Edward Baker with LLM assistance.
+
+The updated
+[project 17 manuscript](../newman_collisions/17_enlarged_state_transport/enlarged_state_transport_and_heat_flow.tex)
+and [strategy note](../newman_collisions/17_enlarged_state_transport/notes/8_RH_STRATEGY_WITH_QUASI_RH_AND_NEXT_ANALYTIC_TARGET_20261010.md)
+organize the continuation. The
+[manuscript integration review](../newman_collisions/17_enlarged_state_transport/reviews/8_SIGNED_RESULTS_MANUSCRIPT_INTEGRATION_REVIEW_20261010.md)
+records the integration checks and limitations.
+[Note 12](../newman_collisions/17_enlarged_state_transport/notes/12_EXACT_CARRIER_DEFECT_AND_CUTOFF_EDGE_MASS_20261010.md)
+gives the exact stationary carrier defect and the limiting absolute-cost
+obstruction.
+[Note 13](../newman_collisions/17_enlarged_state_transport/notes/13_PHASE_CURRENTS_RELATIVE_CONES_AND_BANDWIDTH_OBSTRUCTION_20261010.md)
+gives phase-current and relative-cone criteria and rules out positivity
+from positive narrow-band coefficients alone.
+[Note 14](../newman_collisions/17_enlarged_state_transport/notes/14_FIXED_PRODUCT_SADDLES_AND_SIGN_OSCILLATION_20261010.md)
+retains the endpoint partner and proves fixed-product sign oscillation at
+time zero.
+[Note 15](../newman_collisions/17_enlarged_state_transport/notes/15_NONVACUOUS_HIGH_HEIGHT_SECOND_STATIONARY_SIGN_20261010.md)
+certifies a nonempty high-height second stationary branch after the full
+third-derivative payment, conditional on the imported complete disk
+approximation. See also the
+[internal signed-continuation review](../newman_collisions/17_enlarged_state_transport/reviews/7_SIGNED_CARRIER_SADDLE_AND_HIGH_STATIONARY_INTERNAL_REVIEW_20261010.md).
+
+The unresolved analytic target is a signed estimate for the complete
+correction relative to the physical slope on the genuine second stationary
+set, including the slope's vanishing scale. The bounded high-height
+certificate has a nonzero slope and supplies no additional multiple-zero
+coverage. Uniform relative cancellation and predecessor coverage remain
+open; no RH conclusion is asserted.
