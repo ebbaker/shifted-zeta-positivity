@@ -136,3 +136,26 @@ The endpoint calculation tests a distinct source issue described in
 [Note 10](../notes/10_MATCHED_MELLIN_BESSEL_TRANSFORM_AND_RAW_CHANNEL_OBSTRUCTION_20261010.md).
 Model: GPT-6 (Codex); effort not exposed and not inferred. Internal LLM
 checks are not independent mathematical validation.
+
+## Nonempty high-height second stationary branch
+
+- [High stationary S1 checker](check_high_stationary_s1_cell.py) and
+  [record](HIGH_STATIONARY_S1_CELL_RECORD_20261010.json): all 22,066 terms,
+  twelve height subcells, and all physical derivatives through order three
+  certify exactly one genuine Hxx zero per time on
+  t=t0+[0,1e-8], x=x0+[87.38,87.44]. Five candidate subcells confine it
+  to x-x0 in [87.400,87.425], with Hx Hxxx/A squared < -13941.95.
+  The imported complete disk is assumed. Its third physical-jet error
+  472.218960 is fully paid. The first derivative is nonzero throughout,
+  so this is a sign calibration without additional collision coverage.
+
+Replay from this directory without overwriting the retained record:
+
+```sh
+python3 check_high_stationary_s1_cell.py
+```
+
+Use `--record PATH` to save a fresh record. The standard-library checker
+regenerates the new midpoint and validates the same two program 13 interval
+source hashes. The earlier .5 midpoint is not reused at 87.41. Detailed
+bounds and scope appear in [Note 15](../notes/15_NONVACUOUS_HIGH_HEIGHT_SECOND_STATIONARY_SIGN_20261010.md).

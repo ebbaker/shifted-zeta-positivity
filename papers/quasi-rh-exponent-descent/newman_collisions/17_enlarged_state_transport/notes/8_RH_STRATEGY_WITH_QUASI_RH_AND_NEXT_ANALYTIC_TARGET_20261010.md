@@ -428,3 +428,49 @@ These are exact restrictions of the full integer preparation. They do
 not imply positivity: B_P is negative for sufficiently large |rho|,
 and the oscillatory Fourier phase remains. Their purpose is to supply
 explicit arithmetic channels for the next signed estimate.
+
+
+## Signed continuation: revised analytic target
+
+10 October 2026. Prepared with GPT-6 (Codex); active effort is not exposed
+and is not inferred. The following updates the next-step recommendation;
+the earlier reductions and their hypotheses are unchanged.
+
+[Note 12](12_EXACT_CARRIER_DEFECT_AND_CUTOFF_EDGE_MASS_20261010.md) now
+constructs an exact real operator annihilating the prescribed Stirling
+carrier. On the genuine physical set \(H_{xx}=0\), it gives
+\[
+\mathscr L_1=B H_x^2-H_x\mathcal R,
+\qquad B\sim L^2/16,
+\]
+with all drift and complete third-jet error explicit. The actual absolute
+coefficient masses of \(\mathcal R\) and \(H_x\) satisfy
+\(M_R/(bM_1)\to1\), with \(b\sim B\); relative to the first carrier alone,
+the defect cost grows exponentially. Thus an absolute small-perturbation
+proof cannot supply a fixed asymptotic reserve. The useful next target is
+the **signed correlation of the complete defect with the physical slope**,
+conditioned on stationarity and controlled at the slope's vanishing scale.
+
+[Note 13](13_PHASE_CURRENTS_RELATIVE_CONES_AND_BANDWIDTH_OBSTRUCTION_20261010.md)
+gives an equivalent phase-current interface away from its explicit
+exceptional set, a sufficient relative cone covering that set, and a
+complete shifted channel with its algebraic imaginary endpoint removed.
+Positive coefficients and arbitrarily narrow relative bandwidth do not
+force the sign; an exact counterexample rules out that generic substitute.
+
+[Note 14](14_FIXED_PRODUCT_SADDLES_AND_SIGN_OSCILLATION_20261010.md)
+derives the exact time-zero signed gamma insertion and proves each fixed
+matched product channel changes sign indefinitely, with the endpoint
+partner retained. The saddle transition is near \(P=x/(4\pi)\), with
+geometric width \(\sqrt x\). This does not shorten the proved absolute
+cutoff, and its fixed-product time-zero expansion is not uniform in
+positive heat or across the transition.
+
+The first nonempty high-height \(H_{xx}=0\) calibration is now supplied by
+[Note 15](15_NONVACUOUS_HIGH_HEIGHT_SECOND_STATIONARY_SIGN_20261010.md).
+It pays the full imported third-jet error and yields a strict second sign
+on one bounded branch. This is evidence that the local sign test can be
+useful; it adds no collision coverage because the physical slope is already
+separated from zero. Uniform relative cancellation and predecessor
+coverage remain the decisive open steps. The arithmetic short-family
+route remains a parallel possibility under its separately stated premises.

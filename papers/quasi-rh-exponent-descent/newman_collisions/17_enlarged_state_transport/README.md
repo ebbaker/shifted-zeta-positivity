@@ -16,9 +16,11 @@ obstruction, and certifies one bounded physical cell. Uniform multiplier
 bounds and signed theta correlations remain open. The implicit-function
 continuation proves a sufficient two-sign criterion excluding every finite
 multiplicity on an open positive-time domain, and identifies its complete
-theta overlap targets. Two genuine bounded rectangles now calibrate
+theta overlap targets. Three genuine bounded rectangles now calibrate
 each stationary sign nonvacuously, using a complete imported disk at
-large height and direct full-theta integrals at low height. Exact paired
+large height and direct full-theta integrals at low height. The newest
+high rectangle contains a genuine Hxx stationary branch and pays the
+full third-derivative error. Exact paired
 Laguerre kernels identify the remaining Fourier conditions. Uniform signs
 and predecessor coverage remain open.
 
@@ -26,6 +28,19 @@ Continuation record: GPT-6 (Codex), 10 October 2026; the active reasoning
 effort is not exposed to this session and is not inferred.
 
 ## Entry points
+
+- [Exact carrier defect and cutoff-edge mass](notes/12_EXACT_CARRIER_DEFECT_AND_CUTOFF_EDGE_MASS_20261010.md):
+  drift-corrected physical stationary identity, complete error payments,
+  and an asymptotic obstruction to absolute carrier dominance.
+- [Phase currents and relative cones](notes/13_PHASE_CURRENTS_RELATIVE_CONES_AND_BANDWIDTH_OBSTRUCTION_20261010.md):
+  degenerate-set handling, endpoint-subtracted complete channel, and a
+  positive narrow-band counterexample to generic sign arguments.
+- [Fixed-product saddles and sign oscillation](notes/14_FIXED_PRODUCT_SADDLES_AND_SIGN_OSCILLATION_20261010.md):
+  exact gamma insertion and retained endpoint prove that every fixed
+  time-zero matched product channel changes sign; no positive-time claim.
+- [Nonempty high-height second stationary set](notes/15_NONVACUOUS_HIGH_HEIGHT_SECOND_STATIONARY_SIGN_20261010.md):
+  complete third-jet payment certifies one Hxx zero per time with
+  Hx Hxxx / A squared < -13941.95, conditional on the imported disk.
 
 - [Paid paired contours and product remainder](notes/9_PAIRED_CONTOUR_BOUNDS_ON_THE_SHRINKING_SECTOR_20261010.md):
   complete matched contours, explicit source norms and a product cutoff of
@@ -79,7 +94,7 @@ printed residual gap at large scale. The bounded cell is a calibration,
 and the same recorded subcells also pass separate scalar tests. The
 parallel route now has precise stationary-set targets using D and D',
 with physical derivatives through order three and predecessor coverage.
-The two bounded stationary calibrations add no collision coverage: their
+The bounded stationary calibrations add no collision coverage: their
 first jets already exclude joint zeros. The first Laguerre sign is locally
 nonnegative around every analytic exact triple; the second target is
 essential. A negative genuine J1 kernel value is compatible with its
@@ -111,3 +126,13 @@ response on genuine stationary sets, larger than its paid error, together
 with predecessor coverage. The [internal continuation review](reviews/6_PAIRED_CONTOUR_MELLIN_AND_COFACTOR_INTERNAL_REVIEW_20261010.md)
 records the analytic audits and both replays. No uniform sign, shorter-family
 moment, new collision exclusion or RH conclusion has been obtained.
+
+The signed continuation in Notes 12–15 identifies a more precise next
+estimate: the signed carrier defect must be controlled relative to the
+physical slope on the genuine Hxx stationary set, including its vanishing
+scale. Absolute coefficient costs have limiting defect-to-slope ratio one
+after the positive carrier coefficient is included, so they give no fixed
+reserve. Fixed-product positivity at time zero also fails. The new bounded
+high-height branch confirms that the full third-jet payment can be overcome
+locally, but it supplies no uniform relative estimate or new joint-zero
+coverage. See the [internal signed-continuation review](reviews/7_SIGNED_CARRIER_SADDLE_AND_HIGH_STATIONARY_INTERNAL_REVIEW_20261010.md).
