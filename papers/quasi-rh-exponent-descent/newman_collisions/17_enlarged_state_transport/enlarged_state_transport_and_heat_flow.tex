@@ -45,9 +45,14 @@ A continuous theta wavefunction gives a chord equation and a coupled
 signed gradient overlap. A retained angular theta field supplies an exact
 differential-shift identity with an endpoint source. Logarithmic reflection
 organizes the natural cutoff as matched interior and exterior channels.
-These are exact reductions and conditional criteria. No useful uniform
-multiplier construction, theta-specific overlap sign, new collision
-exclusion, or proof of the Riemann hypothesis is established.
+Explicit prime-division trees attain the sharp residual, showing that
+unrestricted pointwise certificates recover exactly the correlated
+value-and-slope test. A bounded complete-state cell has a regular
+direction with a strict paid margin, conditional on the imported disk
+interface. Certificates retaining only the primes 2 and 3 cannot achieve
+a residual gap for $L\ge160$ in the stated sector.
+No uniform multiplier theorem, theta-specific overlap sign, global
+collision exclusion, or proof of the Riemann hypothesis is established.
 \end{abstract}
 
 \section{The genuine flow and the paid observation}
@@ -471,8 +476,9 @@ This contradicts \eqref{eq:certificate-margin}; applying the exact
 support function instead gives \eqref{eq:directional-margin}.
 \end{proof}
 
-The theorem proves a certificate lemma, not existence of effective
-certificates. Unrestricted inversion that divides by the unknown pair
+The theorem is a certificate lemma. The construction below provides a
+bounded calibration, while effective uniform certificates remain open.
+Unrestricted inversion that divides by the unknown pair
 $(F,F')$ merely restates the nonvanishing question. A useful proof must
 construct regular multipliers and bound their residuals without such
 division. Using only the edges for $p=2,3$ leaves disconnected source
@@ -510,7 +516,161 @@ Eventually this is less than $2\delta$, establishing
 \end{proof}
 
 The uniform hypotheses \eqref{eq:uniform-target} are open proof targets.
-No multiplier theorem or asymptotic exclusion has been obtained.
+No uniform multiplier theorem or asymptotic exclusion has been obtained.
+
+\subsection{Regular trees and the sharp residual}
+\label{sec:sharp-adjoint}
+
+Use complex covectors with real pairing
+$\Rea\sum\overline{h_n}v_n$. The coefficients of $C^Ty$ are
+\begin{equation}
+ \gamma_n=y_1-\frac{d\ell_n}{L}y_2
+                   +i\frac{\Omega-c\ell_n}{L}y_2,\qquad
+ Z=\sum_{n\le N}\gamma_n\overline{q_n}.
+ \label{eq:adjoint-gamma}
+\end{equation}
+Then $\Rea Z=y\cdot Cq_R$ and $\Ima Z=y\cdot C(iq)_R$.
+
+\begin{proposition}[Attained residual and explicit tree witness]
+\label{prop:sharp-residual}
+For fixed $y$, the minimum weighted residual in
+\eqref{eq:certificate}, optimizing all edge and phase multipliers, is
+\begin{equation}
+ \mathcal R_{\mathrm{full}}^{\min}(y)=|1-y\cdot Cq_R|.
+ \label{eq:sharp-residual}
+\end{equation}
+Choose one prime divisor of each $n>1$ to form a prime-division tree,
+and let $\mathcal T_n$ denote the descendants of $n$, including $n$.
+A minimizing witness is
+\begin{equation}
+ \lambda_n=-\sum_{m\in\mathcal T_n}
+       \overline{q_m/q_n}\,\gamma_m\quad(n>1),\qquad
+ z_0=-\Ima Z,\qquad r=(1-\Rea Z)b,
+ \label{eq:tree-witness}
+\end{equation}
+with zero multipliers on the other edges. It is regular on every compact
+fixed-cutoff physical cell, including at joint observation zeros.
+\end{proposition}
+\begin{proof}
+Pairing with $q_R$ gives $\mathcal R\ge|1-y\cdot Cq_R|$. On the tree,
+put $h_j=q_j/q_{\operatorname{par}(j)}$. At $n>1$ the adjoint coefficient is
+$\lambda_n-\sum_{\operatorname{par}(j)=n}\overline{h_j}\lambda_j
+=-\gamma_n$. Its coefficient at one is
+$(Z-\gamma_1\overline{q_1})/\overline{q_1}$.
+Since $1/\overline{q_1}=q_1$, the displayed phase and residual complete
+the certificate. Its cost is $|1-\Rea Z|$. The tree sums divide only by
+the prescribed nonzero $q_n$ and satisfy
+$|\lambda_n|\le\sum_{m\in\mathcal T_n}(w_m/w_n)|\gamma_m|$.
+\end{proof}
+
+With $o=Cq_R$, $e=\eta_N/2$, and
+$\rho(o)=(|o_2|+\sqrt{o_2^2+4o_1^2})/2$, the gauge-support inequality
+for the correlated body gives
+\begin{equation}
+ \inf_y\{|1-y\cdot o|+e h(|y_2|,|y_1|)\}
+ =\min\{1,e/\rho(o)\}\quad(o\ne0),
+ \label{eq:sharp-directional}
+\end{equation}
+and the value is one at $o=0$. Equality follows by normalizing
+$(s,v)=o/\rho$ and using
+$(2s,\operatorname{sgn}v)/[\rho(1+s^2)]$, or $y=0$, with
+$\operatorname{sgn}0=0$.
+Thus strict pointwise directional certificates are equivalent to
+violation of \eqref{eq:body}. The optimized formula is not a globally
+regular witness across $o_2=0$. A fixed cell direction can instead be
+certified independently of such division.
+
+\subsection{The payment for disconnected prime components}
+
+For selected primes $P$, write $\mathcal C_m$ for the components rooted
+at integers $m$ without a prime factor in $P$, and set
+$Z_m=\sum_{n\in\mathcal C_m}\gamma_n\overline{q_n}$.
+Complex pairing on each component and the same tree construction give
+the attained optimum
+\begin{equation}
+ \mathcal R_P^{\min}(y)=|1-\Rea Z_1|+\sum_{m\ne1}|Z_m|.
+ \label{eq:restricted-residual}
+\end{equation}
+Only the component containing one has the phase anchor. The minimizing
+residuals at the other roots are $r_m=-Z_m/\overline{q_m}$.
+
+\begin{proposition}[Effective obstruction for the primes 2 and 3]
+\label{prop:two-prime-obstruction}
+On \eqref{eq:sector} with $L\ge160$, certificates using only the edges
+for $P=\{2,3\}$ and the source phase anchor satisfy
+\begin{equation}
+ \mathcal R_{\{2,3\}}^{\min}(y)\ge1+82\|y\|_2.
+ \label{eq:two-prime-obstruction}
+\end{equation}
+They cannot achieve a strict residual gap in the printed norm.
+\end{proposition}
+\begin{proof}
+Uniformly here, the real-axis formulas give $0.49\le c\le0.51$,
+$|\Omega/c-\log N|\le0.01$, $|d\log n/L|\le0.01$,
+$|\gamma_n|\le2\|y\|_2$, and
+$n^{-1/2}\ge w_n\ge w_N\ge N^{-11/16}/2$.
+For detail, $\alpha_r=L/2+\log(1+x^{-2})/4-1/(1+x^2)$,
+$|\alpha_i|\le1$, $|\alpha'|\le7/x$, and
+$|\log N-L/2|\le2e^{-L/2}$ suffice; the complete elementary estimates
+are given in \cite{transportcontinuation}.
+The component at one has weighted mass less than
+$[(1-2^{-1/2})(1-3^{-1/2})]^{-1}<9$, so
+$|\Rea Z_1|\le18\|y\|_2$.
+At least $N/18-2\ge N/20$ integers coprime to six lie in
+$(N/2,2N/3]$, each a singleton component. Their coefficient map is
+$(y_1,y_2)\mapsto(y_1-a_my_2,\beta_my_2)$, where
+$|a_m|\le0.01$ and $0.19/L\le\beta_m\le0.37/L$.
+The determinant divided by the Frobenius norm bounds its smallest
+singular value below by $1/(20L)$. Hence
+\[
+ \sum_{m\ne1}|Z_m|\ge\frac{N^{5/16}}{800L}\|y\|_2
+ \ge\frac{e^{5L/32}}{1600L}\|y\|_2\ge100\|y\|_2.
+\]
+The final coefficient increases for $L\ge160$; at 160 use
+$e^{25}>2^{25}>25{,}600{,}000$. Insert these bounds into
+\eqref{eq:restricted-residual} and use
+$|1-\Rea Z_1|\ge1-|\Rea Z_1|$.
+\end{proof}
+
+This obstruction concerns the selected edges and absolute block residual
+payment. Additional prescribed component-root data, more edges, or a
+justified signed residual estimate change those hypotheses.
+
+\subsection{A bounded regular certificate on the actual state}
+\label{sec:regular-cell}
+
+Let $N=22066$, $t_0=(2\log N)^{-1}$ and $x_0=4\pi N^2$. On
+\begin{equation}
+ t_0\le t\le t_0+8\cdot10^{-6},\qquad
+ x_0+0.3\le x\le x_0+0.7,
+ \label{eq:regular-cell}
+\end{equation}
+the natural cutoff remains $N$, $0<t<1/20$, and $1<tL<1.00016002870$.
+The complete outward calculation in \cite{transportcontinuation} uses
+$y=(1,0.15L)$ and proves
+\[
+ y\cdot Cq_R=\Rea(S+0.15S')\in[0.5701248,1.3556811],\quad
+ \mathcal R<0.4298752,\quad \eta_N<0.00964146,
+\]
+\[
+ h(|y_2|,|y_1|)<3.083857,\qquad
+ 1-\mathcal R-\eta_N h/2>0.5552583.
+\]
+Together with \eqref{eq:tree-witness}, this excludes joint zeros on
+\eqref{eq:regular-cell}, conditional on Input~\ref{input:disk}
+throughout the rectangle. All multiplicities are covered there.
+Both complete separate value and slope hulls contain zero. Paid endpoint
+signs show that $Q_t$ and $Q_t'$ each change sign across the spatial
+interval for every time; their zeros cannot coincide.
+
+The calculation retains all $N$ terms, degree-11 frozen frequency jets,
+forty closed spatial subcells, complete Taylor tails, and physical spatial
+and fixed-height time drift payments. Source hashes bind the retained
+outward arithmetic; the small record contains the full budget. The same
+subcells also exclude by separate scalar tests, 38 by value and two by
+derivative. This is a bounded correlated calibration, without an
+advantage over subdivision. Uniform multiplier bounds and a new
+theta-specific source estimate remain open.
 
 \section{A continuous chord lift and its signed gradient source}
 \label{sec:chord}
@@ -777,8 +937,10 @@ steps are suitable for investigation.
  \eqref{eq:certificate} on one fixed-cutoff shrinking-sector cell, using
  literal prime transport and matched cutoff channels. Pay every residual
  block and multiplier, and aim at \eqref{eq:certificate-margin} or the
- directional margin. A cell excluded when the separately enclosed value
- and slope tests are inconclusive would demonstrate useful interference.
+ directional margin. Section~\ref{sec:regular-cell} provides a bounded
+ calibration where the separate global value and slope hulls are
+ inconclusive. Proposition~\ref{prop:sharp-residual} shows that an
+ arithmetic improvement still requires an independent uniform estimate.
  A restricted-family failure should identify its precise residual or
  multiplier loss. Uniform estimates \eqref{eq:uniform-target}, if proved,
  would extend that mechanism to eventual subsector exclusion.
@@ -797,7 +959,7 @@ steps are suitable for investigation.
 
 The exact lifts provide a useful route to source visibility with a
 first-jet budget, which avoids the fourth-jet payment of the ordinary-double
-threshold route. They do not prove visibility. In particular, the positive
+threshold route. They do not prove uniform visibility. In particular, the positive
 parent operator and its guaranteed hidden-block inverse are structural
 facts, while the observed source response remains oscillatory. The chord
 slice is autonomous, and its nonlocal theta constraints are still open.
@@ -815,13 +977,17 @@ or the open multiplier hypotheses. No new RH conclusion follows.
 
 \section*{Acknowledgements and preparation record}
 
-This initial manuscript was drafted for Edward Baker with substantial
+The initial manuscript was drafted for Edward Baker with substantial
 GPT-6.1-sol (Codex) LLM assistance, reasoning effort ultra, verified from
 the recorded drafting-turn configuration. The displayed derivations,
 source reading, algebra controls and parallel cross-audits are internal
 LLM work, not independent mathematical validation. Classical heat-flow,
 approximation, theta and stationary-phase inputs are credited below.
-No mathematical novelty or priority claim is made. The standalone source
+The sharp residuals, restricted-prime obstruction and bounded-cell
+continuation were prepared with GPT-6 (Codex) assistance on 10 October
+2026. The active reasoning effort is not exposed to that session and is
+not inferred. These proofs and outward replays also remain internal LLM
+checks. No mathematical novelty or priority claim is made. The standalone source
 uses no external input, image or bibliography files.
 
 \begin{thebibliography}{99}
@@ -891,5 +1057,14 @@ Heat Note 25, 10 October 2026, with its algebra replay and internal review.
 Repository source:
 \texttt{newman\_collisions/notes/25\_ENLARGED\_STATE\_TRANSPORT\_CHORD\_}
 \texttt{DYNAMICS\_AND\_THETA\_GLUING\_20261010.md}.
+\bibitem{transportcontinuation}
+Edward Baker research project, with GPT-6 (Codex) LLM assistance,
+\emph{Sharp adjoint residuals and the obstruction from restricted primes},
+and \emph{A regular adjoint certificate on a complete physical cell},
+program 17 Notes 2--3 and their retained algebra and outward arithmetic
+checkers, 10 October 2026. Repository source directory:
+\texttt{newman\_collisions/17\_enlarged\_state\_transport/}.
+The cell exclusion is conditional on the imported complete disk interface;
+no uniform multiplier theorem or RH conclusion is established.
 \end{thebibliography}
 \end{document}

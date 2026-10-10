@@ -102,9 +102,19 @@ The imported real-symmetric holomorphic error disk forces
 \(R+\eta Y/2<1\) excludes that zero. A directional support version uses
 the stronger correlated first-jet body.
 
-No useful multiplier construction or theta-specific signed correlation
-has yet been established. Positive anchored energy supplies source
-coercivity; obtaining observation coercivity is the missing theorem.
+The continuation in [Note 2](2_SHARP_ADJOINT_RESIDUALS_AND_RESTRICTED_PRIME_OBSTRUCTION_20261010.md)
+constructs regular prime-division tree multipliers and proves that their
+sharp pointwise residual is exactly the scalar observation defect.
+It also proves that using only primes 2 and 3 cannot give a strict
+residual gap for L at least 160 on the stated sector. A
+[complete N=22066 cell](3_REGULAR_ADJOINT_CELL_CERTIFICATE_20261010.md)
+now has a regular correlated certificate and paid margin greater than
+0.5552583, conditional on the imported disk input. Its two global
+coordinate hulls are inconclusive, although its forty subcells also
+exclude by separate scalar tests. This is a bounded calibration.
+Uniform multiplier bounds and a theta-specific signed correlation remain
+open. Positive anchored energy supplies source coercivity; a uniform
+observation estimate is still the missing theorem.
 Purity and phase-space positivity also permit the bounded-time collision
 control. Leading reflection preserves the existing threshold quadratic.
 The four earlier finite zero atlases remain calibration data in
@@ -120,6 +130,12 @@ sampled joint candidate and do not certify interval coverage.
    Enclose their costs throughout the cell. An informative first success
    would resolve a cell where the existing separate value and derivative
    enclosures remain inconclusive.
+
+   **Bounded calibration completed:** Note 3 gives such a cell for the
+   separate global hulls. Note 2 proves that unrestricted pointwise
+   optimization adds no information beyond the correlated first jet.
+   The same recorded subcells pass scalar tests, so an arithmetic gain
+   from the lift remains unproved.
 
 2. **Control the multiplier growth on a shrinking family.** Seek uniform
    bounds \(R\le1-\delta\), \(Y\le C N^\alpha\), with
@@ -173,9 +189,14 @@ boundaries and gaps, cover complementary time/height relations and compact
 regions, and control the small-time limit. The threshold branch retains
 its separate multiplicity hierarchy. A first-jet visibility theorem
 already handles every multiplicity inside its domain. The initial
-manuscript records exact structures and conditional implications; its
-next substantive milestone is a strict, fully paid source-to-observation
-bound on a stated nonempty parameter domain.
+manuscript records exact structures and conditional implications. The
+continuation supplies a strict, fully paid bound on a nonempty bounded
+domain; the next substantive milestone is a uniform complete-source
+estimate on a growing family with the required multiplier growth.
+
+Continuation preparation record, 10 October 2026: GPT-6 (Codex), active
+reasoning effort unavailable to this session and not inferred. The
+new proofs, outward replay and parallel review are internal LLM checks.
 
 Initial manuscript: [Enlarged-state transport and heat-flow visibility](../enlarged_state_transport_and_heat_flow.tex).
 Historical context: [Heat Note 14](../../notes/14_DIMENSIONAL_REDUCTION_AND_SUPERSYMMETRIC_HEAT_PROGRAM_20261010.md),

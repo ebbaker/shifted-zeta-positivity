@@ -20,9 +20,37 @@ From the repository root, replay without replacing the shared record:
 python3 papers/quasi-rh-exponent-descent/newman_collisions/13_microlocal_phase_space/numerics/check_enlarged_state_identities.py /tmp/project17_enlarged_state_replay.json
 ```
 
-Future project-specific experiments belong here. The first useful
-experiment should test a specified regular adjoint multiplier family on
-the complete prescribed state, retaining all residual and boundary costs.
+## Continuation checks
+
+10 October 2026 continuation: GPT-6 (Codex), reasoning effort unavailable
+to this session and not inferred; internal LLM checks.
+
+- [Exact adjoint checker](check_adjoint_transport_optimality.py) and
+  [record](ADJOINT_TRANSPORT_OPTIMALITY_RECORD_20261010.json): 1,878 exact
+  Fraction assertions for full and restricted trees, support geometry,
+  source cancellations and disconnected-sector payments.
+- [Regular cell checker](check_regular_adjoint_cell.py) and
+  [record](REGULAR_ADJOINT_CELL_RECORD_20261010.json): complete N=22066
+  outward enclosure on t0 to t0+0.000008 and x0+0.3 to x0+0.7. The paid
+  directional margin is greater than 0.5552583, conditional on the
+  imported complete disk interface. The same forty subcells also exclude
+  by separate paid tests, 38 by value and two by derivative.
+
+Replay from the repository root without replacing the saved records:
+
+```sh
+python3 papers/quasi-rh-exponent-descent/newman_collisions/17_enlarged_state_transport/numerics/check_adjoint_transport_optimality.py /tmp/project17_adjoint_algebra_replay.json
+python3 papers/quasi-rh-exponent-descent/newman_collisions/17_enlarged_state_transport/numerics/check_regular_adjoint_cell.py /tmp/project17_regular_cell_replay.json
+```
+
+The cell checker validates both retained program 13 source hashes before
+importing them. Its default source directory is relative to its location;
+`--interval-source-dir` permits a staged replay. No extra dependencies
+are required. Runtime metadata can vary; the small records include source
+hashes, all directed endpoints and explicit complete error payments.
+
+Future experiments should test a uniform correlated direction or source
+estimate on a growing family, retaining all residual and boundary costs.
 Every claimed visibility margin requires outward enclosures on a stated
 parameter domain. Store source code and small records; keep large derived
 data outside Git under the repository's
