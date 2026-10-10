@@ -51,6 +51,11 @@ value-and-slope test. A bounded complete-state cell has a regular
 direction with a strict paid margin, conditional on the imported disk
 interface. Certificates retaining only the primes 2 and 3 cannot achieve
 a residual gap for $L\ge160$ in the stated sector.
+An implicit-function argument gives an alternative sufficient criterion:
+two signed curvature conditions on the stationary sets of $H$ and $H'$
+exclude every finite multiplicity on an open positive-time domain.
+Their exact theta score dictionary uses derivatives through order three;
+the required signs and predecessor coverage remain unproved.
 No uniform multiplier theorem, theta-specific overlap sign, global
 collision exclusion, or proof of the Riemann hypothesis is established.
 \end{abstract}
@@ -787,6 +792,213 @@ use an actual theta coefficient or gluing property absent from this
 control, and constrain the signed gradient overlap or the complete finite
 current with all cross terms retained.
 
+\section{Implicit charts and a stationary-sign criterion}
+\label{sec:implicit}
+
+Changing coordinates can regularize a root trajectory without removing a
+physical collision. Under a passive state change $\widetilde q=Tq$, the
+same observation is $\widetilde C=CT^{-1}$, so
+$\widetilde C\widetilde q=Cq$. A position-dependent basis also requires
+its connection terms when computing a physical derivative. Similarly,
+an invertible time-preserving chart $s=\varphi(t)$, $y=\psi(t,x)$ and
+a nonzero scalar normalization preserve $H=H_x=0$. A general chart must
+transform the physical spatial vector as well as the scalar field.
+
+\subsection{The ordinary double is a regular fold}
+
+Suppose $H=H_x=0$ at $(T,a)$ and write
+$A=H_{xx}\ne0$, $B=H_{xxx}$, $C=H_{xxxx}$ at that point.
+Since $H_t=-A\ne0$, the implicit function theorem expresses the zero
+set as $t=T+\tau(x-a)$. Heat differentiation gives
+\begin{equation}
+ \tau'=0,\qquad \tau''=1,\qquad
+ \tau'''=-2B/A,\qquad \tau''''=8(B/A)^2-2C/A
+ \quad\text{at }0.
+ \label{eq:fold-jets}
+\end{equation}
+The zero curve is smooth, but its projection onto physical time has a
+nondegenerate fold. The full Jacobian of $J=(H,H_x)$, with columns
+$(t,x)$, is
+\begin{equation}
+ DJ=\begin{pmatrix}-A&0\\-B&A\end{pmatrix},\qquad \det DJ=-A^2.
+ \label{eq:joint-jacobian}
+\end{equation}
+Its invertibility makes the joint zero isolated; it does not exclude it.
+For $H_\varepsilon=H+\varepsilon V+O(\varepsilon^2)$, the implicit
+function theorem in fact preserves a nearby ordinary collision, with
+$T_\varepsilon'|_0=V/A$ and
+$a_\varepsilon'|_0=BV/A^2-V_x/A$. Small even bounded multiplicative
+perturbations of Proposition~\ref{prop:control}'s density preserve its
+positivity, pure lift and a local collision on a bounded time interval.
+These perturbations do not preserve genuine theta preparation.
+
+At an all-real ordinary-double threshold with $a>0$, the parent mirror
+test $2B^2-3AC-gA^2\ge0$, $g=9/a^2$, is exactly
+\begin{equation}
+ 3\tau''''-5(\tau''')^2\ge2g.
+ \label{eq:fold-threshold}
+\end{equation}
+The density-strengthened coefficient can replace $g$ when its input is
+available. This is a reformulation of the fourth-jet test, not a new
+constraint. A Morse chart can make the graph $t=T+y^2/2$ exactly, but
+for $y=f(x)$ the transformed heat equation is
+$\widetilde H_t=-\alpha\widetilde H_{yy}
+-\alpha_y\widetilde H_y/2$, $\alpha=f_x^2$.
+Discarding these physical coefficients invalidates
+\eqref{eq:fold-threshold} in that chart.
+
+\subsection{An earlier critical branch through every even multiplicity}
+
+\begin{lemma}[Predecessor critical curve]
+\label{lem:predecessor}
+Let $F_t=-F_{xx}$ be real analytic near $(T,a)$ and have exact even
+spatial multiplicity $m=2r$ there. Put $F_j=\partial_x^jF(T,a)$.
+For sufficiently small $h=T-t>0$ there is an analytic real curve
+\begin{align}
+ \chi(h)&=a-\frac{F_{m+1}}{rF_m}h+O(h^2),
+ &F_x(T-h,\chi(h))&=0,\label{eq:predecessor-curve}\\
+ F(T-h,\chi(h))&=\frac{F_m}{r!}h^r+O(h^{r+1}),
+ &F_{xx}(T-h,\chi(h))&=\frac{F_m}{(r-1)!}h^{r-1}+O(h^r).
+ \nonumber
+\end{align}
+In particular, $FF_{xx}>0$ along that earlier critical branch.
+\end{lemma}
+\begin{proof}
+The heat Taylor expansion is
+$F(T-h,a+z)=\sum_{p,q\ge0}F_{2p+q}h^pz^q/(p!q!)$.
+After $z=hy$, the quotient
+$K(h,y)=h^{-r}F_x(T-h,a+hy)$ extends analytically through $h=0$:
+every nonzero term has $2p+q+1\ge2r$, hence $p+q\ge r$.
+The two terms of degree $r$ give
+$K(0,y)=F_my/(r-1)!+F_{m+1}/r!$.
+Its $y$ derivative is nonzero, so the implicit function theorem produces
+an analytic $y(h)$ with $K(h,y(h))=0$. Set $\chi=a+hy(h)$.
+The same expansion proves \eqref{eq:predecessor-curve} and
+\begin{equation}
+ FF_{xx}=\frac{F_m^2}{r!(r-1)!}h^{2r-1}+O(h^{2r})>0.
+ \label{eq:predecessor-positive}
+\end{equation}
+\end{proof}
+
+This is consistent with the standard local Hermite splitting of
+\cite[Proposition~3.1]{polymath}. The rescaled critical chart is useful
+because it remains applicable to higher even multiplicities.
+
+\begin{theorem}[Two stationary signs exclude all finite multiplicities]
+\label{thm:stationary-signs}
+Let $H_t=-H_{xx}$ be real analytic on an open set
+$\Omega\subset(0,\infty)\times\mathbb R$, with finite spatial
+multiplicity at every zero under consideration. Suppose throughout
+$\Omega$ that
+\begin{align}
+ H_x=0&\ \Longrightarrow\ HH_{xx}\le0,\label{eq:stationary-zero}\\
+ H_{xx}=0&\ \Longrightarrow\ H_xH_{xxx}\le0.\label{eq:stationary-one}
+\end{align}
+Then $H=H_x=0$ has no solution in $\Omega$.
+\end{theorem}
+\begin{proof}
+An even multiple zero contradicts \eqref{eq:stationary-zero} by
+Lemma~\ref{lem:predecessor} with $F=H$. For an odd multiplicity
+$m\ge3$, apply the lemma to $F=H_x$, an analytic heat solution with
+even multiplicity $m-1$, contradicting \eqref{eq:stationary-one}.
+Openness keeps the earlier critical curve in $\Omega$, and $h<T$
+keeps its time positive.
+\end{proof}
+
+The genuine theta flow has the required joint analyticity by its
+super-exponential kernel decay; its spatial zeros have finite order
+since $H_t(0)>0$. The theorem needs neither an all-real hypothesis nor
+a nonzero second derivative. For a closed target cell it requires a
+certified predecessor neighborhood for every boundary candidate. A sign
+only at the hypothetical collision, where the products can vanish, is
+insufficient. Global positive-time signs would give the desired collision
+exclusion under the imported threshold and no-escape reduction. No such
+signs are proved here, and no simplicity assertion at $t=0$ follows.
+
+\subsection{The complete theta overlap targets and their payments}
+
+At fixed time put $A(x)=\mathcal A_t(x,0)=2H_t(x)$, let $C$ be the
+transverse curvature in \eqref{eq:gradient-source}, and freeze $\beta>0$
+under spatial differentiation. With
+\begin{equation}
+ E=\widehat{\mathfrak m_t(W'-\beta u)^2},\qquad D=4C+E,
+ \qquad
+ D=-\beta^2A''-2\beta xA'-(x^2+2\beta)A,
+ \label{eq:stationary-score}
+\end{equation}
+the exact score dictionary of \cite{heat25} makes the sufficient targets
+\begin{align}
+ A'=0&\ \Longrightarrow\
+ A[D+(x^2+2\beta)A]\ge0,\label{eq:stationary-target-zero}\\
+ A''=0&\ \Longrightarrow\
+ A'[D'+(x^2+4\beta)A'+2xA]\ge0.\label{eq:stationary-target-one}
+\end{align}
+Their left sides equal $-\beta^2AA''$ and $-\beta^2A'A'''$ on the
+respective stationary sets. Only $D,D'$ are needed, but they still encode
+the scalar jets. Positivity of the score-square density does not give
+these Fourier correlation signs. Both the complete state and the
+stationary constraints must be retained. A spatially varying $\beta$
+would require additional derivative terms.
+
+For a complete approximation $a_j$ to the physical $H_j$, with
+$|H_j-a_j|\le\epsilon_j$ for $0\le j\le3$, put
+$B_{ij}=|a_i|\epsilon_j+|a_j|\epsilon_i+\epsilon_i\epsilon_j$.
+Sufficient paid signs are
+\begin{equation}
+ a_0a_2+B_{02}\le0\ \text{on }|a_1|\le\epsilon_1,
+ \qquad
+ a_1a_3+B_{13}\le0\ \text{on }|a_2|\le\epsilon_2.
+ \label{eq:stationary-paid}
+\end{equation}
+Every genuine stationary point belongs to its candidate band. If the
+approximation normalizes $H$, its normalizer derivatives through order
+three must be restored before using these physical jets. The normalized
+stationary set generally differs. Near a collision the adverse product
+in \eqref{eq:predecessor-positive} tends to zero; a fixed absolute error
+budget cannot be assumed harmless. No new third-jet error payment or
+genuine stationary-set cover has been certified in this continuation.
+
+The two signs use fewer derivative orders than the threshold fourth-jet
+test, at the cost of signs on two complete stationary sets and predecessor
+coverage. This does not establish cheaper estimates. The first-jet
+transport target remains a separate route.
+
+\subsection{Controls for both parity and higher multiplicity}
+
+At Proposition~\ref{prop:control}'s double zero, with
+$K=(\sqrt\pi/2)e^{-3/2}$, one has
+$H_{xx}=48K$, $H_{xxx}=-48\sqrt6K$, $H_{xxxx}=24K$.
+Thus $\tau'''=2\sqrt6$, $\tau''''=47$, and
+$3\tau''''-5(\tau''')^2=21$, whereas the mirror lower bound is $3$.
+The regular fold and its necessary threshold sign permit the collision.
+Lemma~\ref{lem:predecessor} gives $HH_{xx}>0$ just before it, showing
+that the control violates the new sufficient sign.
+
+A higher-multiplicity positive control has density
+\begin{equation}
+ \Phi_4(u)=[256u^8+4096u^6+42240u^4+245760u^2+646080]
+ e^{-(1+1/40)u^2}.
+ \label{eq:quadruple-density}
+\end{equation}
+Since its polynomial times $e^{-u^2}$ is
+$(-\partial_u^2-30)^4e^{-u^2}$, its slice at $t=1/40$ is
+$2H=\sqrt\pi e^{-x^2/4}(x^2-30)^4$.
+It has quadruple zeros at $\pm\sqrt{30}$ and a positive pure lift on a
+bounded time interval. It also violates the first stationary sign before
+the collision. No global theta or all-real threshold claim is made for it.
+An odd positive-density control is obtained from
+$[256u^8+4736u^6+51840u^4+317760u^2+871680]e^{-(1+1/40)u^2}$.
+Its slice at $t=1/40$ is
+$2H=\sqrt\pi e^{-x^2/4}(x^2-30)^3(x^2-40)$, giving exact triple
+zeros at $\pm\sqrt{30}$. The inverse Fourier identity is
+$(-\partial_u^2-30)^3(-\partial_u^2-40)e^{-u^2}$.
+It violates the second stationary sign before the collision while
+retaining a positive pure lift on a bounded time interval.
+Finally, $H(s,z)=z^3-6sz$ has a triple zero at the origin. For $s<0$
+it has no real critical points, but $H_{xx}=0$ at $z=0$ and
+$H_xH_{xxx}=-36s>0$. Translating $s$ to a positive collision time shows
+why the second stationary sign cannot be dropped.
+
 \section{Retained theta angular dynamics and gluing}
 \label{sec:angular}
 
@@ -945,7 +1157,9 @@ steps are suitable for investigation.
  multiplier loss. Uniform estimates \eqref{eq:uniform-target}, if proved,
  would extend that mechanism to eventual subsector exclusion.
  \item Seek a full theta gradient/score correlation for
- \eqref{eq:chord-system}--\eqref{eq:gradient-source}. It must restrict a
+ \eqref{eq:chord-system}--\eqref{eq:gradient-source}, or prove the two
+ stationary targets \eqref{eq:stationary-target-zero}--\eqref{eq:stationary-target-one}
+ on a predecessor neighborhood with \eqref{eq:stationary-paid}. It must restrict a
  signed overlap or the complete current, and visibly distinguish the
  actual theta state from Proposition~\ref{prop:control}. Independent
  positive bulk energies, purity and absolute moment envelopes do not
@@ -967,7 +1181,9 @@ Neither leading stationary reflection nor angular heat symmetry implies
 uniform nonvanishing.
 
 A successful certificate based on \eqref{eq:body} covers all multiplicities
-on its stated domain. Global conclusions still require cutoff changes,
+on its stated domain. Theorem~\ref{thm:stationary-signs} also covers all
+finite multiplicities where its two signs and predecessor coverage hold.
+Global conclusions still require cutoff changes,
 intervening cells, remaining shrinking sectors, complementary parameter
 ranges, and the small-time endpoint. If one instead returns to an
 ordinary-double fourth-jet test, higher deflation remains a separate
@@ -983,8 +1199,9 @@ the recorded drafting-turn configuration. The displayed derivations,
 source reading, algebra controls and parallel cross-audits are internal
 LLM work, not independent mathematical validation. Classical heat-flow,
 approximation, theta and stationary-phase inputs are credited below.
-The sharp residuals, restricted-prime obstruction and bounded-cell
-continuation were prepared with GPT-6 (Codex) assistance on 10 October
+The sharp residuals, restricted-prime obstruction, bounded-cell,
+implicit-chart and stationary-sign continuations were prepared with
+GPT-6 (Codex) assistance on 10 October
 2026. The active reasoning effort is not exposed to that session and is
 not inferred. These proofs and outward replays also remain internal LLM
 checks. No mathematical novelty or priority claim is made. The standalone source

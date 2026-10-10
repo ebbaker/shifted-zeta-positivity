@@ -35,12 +35,21 @@ to this session and not inferred; internal LLM checks.
   directional margin is greater than 0.5552583, conditional on the
   imported complete disk interface. The same forty subcells also exclude
   by separate paid tests, 38 by value and two by derivative.
+- [Heat transversality checker](check_heat_transversality.py) and
+  [record](HEAT_TRANSVERSALITY_RECORD_20261010.json): 1,819 exact rational
+  and quadratic-field assertions. These check implicit fold jets, full
+  Jacobians, stationary precursor coefficients for both parities,
+  positive Gaussian double/triple/quadruple controls, frozen-beta score targets,
+  physical normalization through order three and product error payments.
+  The analytic stationary-sign theorem is proved in Note 5; the replay
+  establishes no genuine theta sign or stationary-set coverage.
 
 Replay from the repository root without replacing the saved records:
 
 ```sh
 python3 papers/quasi-rh-exponent-descent/newman_collisions/17_enlarged_state_transport/numerics/check_adjoint_transport_optimality.py /tmp/project17_adjoint_algebra_replay.json
 python3 papers/quasi-rh-exponent-descent/newman_collisions/17_enlarged_state_transport/numerics/check_regular_adjoint_cell.py /tmp/project17_regular_cell_replay.json
+python3 papers/quasi-rh-exponent-descent/newman_collisions/17_enlarged_state_transport/numerics/check_heat_transversality.py --record /tmp/project17_heat_transversality_replay.json
 ```
 
 The cell checker validates both retained program 13 source hashes before
@@ -50,7 +59,8 @@ are required. Runtime metadata can vary; the small records include source
 hashes, all directed endpoints and explicit complete error payments.
 
 Future experiments should test a uniform correlated direction or source
-estimate on a growing family, retaining all residual and boundary costs.
+estimate on a growing family, or the complete signed stationary-set
+targets in Note 5, retaining all physical, residual and boundary costs.
 Every claimed visibility margin requires outward enclosures on a stated
 parameter domain. Store source code and small records; keep large derived
 data outside Git under the repository's

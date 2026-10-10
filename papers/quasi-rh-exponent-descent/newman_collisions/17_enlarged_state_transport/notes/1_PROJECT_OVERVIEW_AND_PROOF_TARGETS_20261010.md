@@ -115,6 +115,16 @@ exclude by separate scalar tests. This is a bounded calibration.
 Uniform multiplier bounds and a theta-specific signed correlation remain
 open. Positive anchored energy supplies source coercivity; a uniform
 observation estimate is still the missing theorem.
+The [coordinate/IFT continuation](4_COORDINATE_INVARIANCE_AND_IMPLICIT_HEAT_FOLDS_20261010.md)
+shows that ordinary collisions are regular folds in the time-height plane
+and persist under small positive-density source perturbations. Passive
+charts preserve the prescribed observation. A rescaled implicit chart
+also proves a new conditional [two-sign criterion](5_STATIONARY_SIGN_CRITERION_AND_THETA_TARGETS_20261010.md):
+on an open positive-time domain, the signs HH''<=0 when H'=0 and
+H'H'''<=0 when H''=0 exclude every finite multiplicity. Their exact
+theta overlap targets use D and D', and derivatives through order three.
+The signs, predecessor coverage and genuine third-jet costs remain open;
+fewer jets do not establish cheaper global estimates.
 Purity and phase-space positivity also permit the bounded-time collision
 control. Leading reflection preserves the existing threshold quadratic.
 The four earlier finite zero atlases remain calibration data in
@@ -154,6 +164,13 @@ sampled joint candidate and do not certify interval coverage.
    complete readout. The aim is a signed correlation, rather than separate
    absolute bounds reproducing the current error loss.
 
+   **Precise alternative target:** Note 5 gives two signed correlations on
+   the complete stationary sets of H and H'. If proved on a predecessor
+   neighborhood with the printed physical-jet payments, they exclude all
+   finite multiplicities without an all-real hypothesis. The rescaled IFT
+   proof and 1,819 exact algebra assertions are complete; the theta signs
+   and a genuine stationary-set cover are not.
+
 4. **Use angular gluing when the source estimate needs more arithmetic
    data.** Preserve the genuine theta coefficients, modular partner, and
    endpoint source. First bound the growth and error cost of the fixed
@@ -177,6 +194,12 @@ constant-coefficient transverse closure is already obstructed by the
 exponential theta score. The angular PDE alone allows different Fourier
 coefficients, and leading stationary coefficients require endpoint and
 remainder payments before use in a full signed estimate.
+Changing coordinates must transform the physical slope, heat coefficients
+and observation covectors. A chart that straightens a fold does not remove
+its collision. The stationary-sign route requires earlier critical-branch
+coverage at every target boundary; a sign at the collision alone is
+insufficient. Physical normalizer derivatives must be restored before
+testing the stationary sets.
 
 Computations should choose a lemma and test complete costs. Floating
 samples and smaller isolated errors cannot decide a proof assertion;
@@ -191,8 +214,11 @@ its separate multiplicity hierarchy. A first-jet visibility theorem
 already handles every multiplicity inside its domain. The initial
 manuscript records exact structures and conditional implications. The
 continuation supplies a strict, fully paid bound on a nonempty bounded
-domain; the next substantive milestone is a uniform complete-source
-estimate on a growing family with the required multiplier growth.
+domain. It also supplies the conditional stationary-sign theorem and
+complete theta targets. The next substantive milestone is a uniform
+complete-source estimate on a growing family with the required multiplier
+growth, or a proved theta stationary-set correlation with its full
+predecessor coverage and error costs.
 
 Continuation preparation record, 10 October 2026: GPT-6 (Codex), active
 reasoning effort unavailable to this session and not inferred. The

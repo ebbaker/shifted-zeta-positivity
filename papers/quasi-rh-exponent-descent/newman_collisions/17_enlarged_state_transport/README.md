@@ -13,7 +13,10 @@ specified domain. The initial results are exact identities and a
 conditional certificate lemma. The continuation constructs regular tree
 multipliers, proves sharp residual formulas and a restricted-prime
 obstruction, and certifies one bounded physical cell. Uniform multiplier
-bounds and signed theta correlations remain open.
+bounds and signed theta correlations remain open. The implicit-function
+continuation proves a sufficient two-sign criterion excluding every finite
+multiplicity on an open positive-time domain, and identifies its complete
+theta overlap targets. Their signs and predecessor coverage remain open.
 
 Continuation record: GPT-6 (Codex), 10 October 2026; the active reasoning
 effort is not exposed to this session and is not inferred.
@@ -29,6 +32,12 @@ effort is not exposed to this session and is not inferred.
 - [Bounded regular cell](notes/3_REGULAR_ADJOINT_CELL_CERTIFICATE_20261010.md):
   complete N=22066 outward certificate with paid margin greater than
   0.5552583, conditional on the imported disk interface.
+- [Coordinates and implicit heat folds](notes/4_COORDINATE_INVARIANCE_AND_IMPLICIT_HEAT_FOLDS_20261010.md):
+  physical projection invariance, regular fold geometry, persistence under
+  source perturbations, and positive-density double/quadruple controls.
+- [Stationary signs and theta targets](notes/5_STATIONARY_SIGN_CRITERION_AND_THETA_TARGETS_20261010.md):
+  a rescaled IFT proof covering every finite multiplicity, two exact
+  score/curvature targets, and third-jet approximation payments.
 - [Project overview and milestones](notes/1_PROJECT_OVERVIEW_AND_PROOF_TARGETS_20261010.md):
   conceptual direction, priorities, failure tests, and coverage obligations.
 - [Reviews](reviews/): scoped internal checks and manuscript review.
@@ -39,13 +48,16 @@ effort is not exposed to this session and is not inferred.
 - [Draft history](DRAFT_HISTOR.md): concise milestone index. Future
   milestones point to commits or tags; no manuscript snapshot folders.
 
-The immediate continuation is a uniform correlated estimate for the
-complete source, with a residual gap and controlled multiplier growth.
+The immediate continuation seeks either a uniform correlated estimate for
+the complete source, with a residual gap and controlled multiplier growth,
+or the two signed theta correlations on the stationary sets of H and H'.
 Unrestricted pointwise transport optimization exactly reproduces the
 correlated first-jet test; the primes 2 and 3 alone cannot achieve the
 printed residual gap at large scale. The bounded cell is a calibration,
 and the same recorded subcells also pass separate scalar tests. The
-parallel route seeks a theta-specific signed gradient/score correlation.
+parallel route now has precise stationary-set targets using D and D',
+with physical derivatives through order three and predecessor coverage.
+Fewer derivative orders alone do not establish a cheaper estimate.
 The shared algebra checker supplies finite exact controls, not a theta
 sign or collision certificate. Keep research in `notes/`, computations in
 `numerics/`, and reviews in `reviews/`, following the repository
