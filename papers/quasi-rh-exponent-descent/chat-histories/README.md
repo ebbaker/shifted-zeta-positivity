@@ -8,9 +8,9 @@ This folder keeps dated conversation records and a numbering registry.
 The first captured chat is **1**. “Continue manuscript integration” is **2**.
 "Review Newman collision program" is **3**. "Investigate analytic Gaussian"
 is **4**. "Create 15 project folders" is **5**. "Continue RH exponent descent"
-is **6**. “Summarize Newman collision progress” is **7**. Read
-`index.json` before recording another chat: the next new conversation is
-**8**. Numbers belong to this investigation's
+is **6**. “Summarize Newman collision progress” is **7**.
+“Assess Newman collision program” is **8**. Read `index.json` before
+recording another chat: the next new conversation is **9**. Numbers belong to this investigation's
 folder and remain stable. A later refresh of the same conversation retains
 its number. Retrospective imports receive the next unused number and retain
 their original conversation dates; importing an older chat does not renumber
@@ -329,3 +329,36 @@ These prove paid reductions and vanishing transformation remainders. The
 remaining proof target is a candidate-conditioned signed estimate for the
 coupled resonant integrals and retained boundaries, strong enough to beat
 all physical and candidate payments. No RH conclusion is claimed.
+
+## Enlarged-state transport and project 17
+
+Chat **8**, “Assess Newman collision program”, retains its recorded creation
+time 2026-10-10T15:56:19.112Z (2026-10-10T11:56:19.112-04:00 in
+America/New_York). Its [22-message public conversation record](0008_2026-10-10T15-56-19Z_assess-newman-collision-program.json)
+contains the assessment of Heat Notes 23–24, the return to higher-dimensional
+programs 09 and 13, the enlarged-state research and Note 25 delivery, and
+the request and completed progress messages for establishing project 17.
+Capture time is separate in the registry. This snapshot preserves recorded
+public text through capture, omitting internal reasoning, runtime instructions,
+tool activity and subagent correspondence. The final delivery after capture
+requires a later refresh of the same chat; its number stays 8. Chats 1–7
+retain their numbers and registry entries. The next new conversation is **9**.
+
+Start further research with
+[project 17](../newman_collisions/17_enlarged_state_transport/README.md),
+[its initial manuscript](../newman_collisions/17_enlarged_state_transport/enlarged_state_transport_and_heat_flow.tex),
+[the project overview](../newman_collisions/17_enlarged_state_transport/notes/1_PROJECT_OVERVIEW_AND_PROOF_TARGETS_20261010.md),
+and [the internal review](../newman_collisions/17_enlarged_state_transport/reviews/1_INITIAL_MANUSCRIPT_INTERNAL_REVIEW_20261010.md).
+[Heat Note 25](../newman_collisions/notes/25_ENLARGED_STATE_TRANSPORT_CHORD_DYNAMICS_AND_THETA_GLUING_20261010.md)
+contains the fuller precursor derivations. The manuscript compiled successfully
+with the native editor. Drafting used GPT-6.1-sol (Codex), reasoning effort
+ultra, verified from the recorded turn configuration; LLM reviews are internal.
+
+The next proof target is a regular adjoint-transport certificate for the
+complete prescribed source with a strict residual gap and controlled
+multiplier growth, or a theta-specific signed chord/gradient correlation
+feeding that margin. The uniform residual and growth estimates have not
+been obtained. All first-jet approximation payments, literal cutoff boundaries,
+complete interference, and wider angular-shift costs remain part of the
+proof task. Global time/height coverage remains open; no new collision
+exclusion or RH conclusion is claimed.

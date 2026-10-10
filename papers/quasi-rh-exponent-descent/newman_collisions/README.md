@@ -202,3 +202,24 @@ positive. No joint candidate or uniform threshold exclusion is demonstrated.
 [Internal review](13_microlocal_phase_space/reviews/7_CANDIDATE_LOCALIZATION_AND_SIGNED_PILOT_INTERNAL_REVIEW_20261010.md)
 records exact controls and full independent internal replays. Preparation:
 GPT-6 (Codex); exact serving variant and effort not exposed and not inferred.
+
+## Project 17 enlarged-state transport
+
+The enlarged-state continuation in
+[Heat Note 25](notes/25_ENLARGED_STATE_TRANSPORT_CHORD_DYNAMICS_AND_THETA_GLUING_20261010.md)
+now has its own [project 17](17_enlarged_state_transport/README.md).
+It joins program 09's prescribed divisor transport and anchored source
+response with program 13's chord dynamics and signed gradient overlap,
+retaining angular theta gluing and matched cutoff boundaries.
+The [initial standalone manuscript](17_enlarged_state_transport/enlarged_state_transport_and_heat_flow.tex)
+proves exact reductions and a conditional first-jet visibility certificate;
+useful multiplier bounds and signed theta correlations remain open.
+Native compilation succeeded. The
+[project overview](17_enlarged_state_transport/notes/1_PROJECT_OVERVIEW_AND_PROOF_TARGETS_20261010.md)
+sets the proof milestones, and the
+[internal review](17_enlarged_state_transport/reviews/1_INITIAL_MANUSCRIPT_INTERNAL_REVIEW_20261010.md)
+records scoped checks. Preparation: GPT-6.1-sol (Codex), reasoning effort
+ultra, verified from the recorded drafting-turn configuration; internal
+LLM work is not independent mathematical validation. The
+[manuscript history](17_enlarged_state_transport/DRAFT_HISTOR.md)
+indexes the initial working source without creating snapshot folders.

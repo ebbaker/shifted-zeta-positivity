@@ -1,0 +1,895 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{microtype}
+\usepackage[hidelinks,breaklinks]{hyperref}
+\usepackage{enumitem}
+\setlist{itemsep=3pt,topsep=5pt}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{assumption}[theorem]{Imported input}
+\newtheorem{definition}[theorem]{Definition}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\newcommand{\dd}{\,\mathrm d}
+\newcommand{\Rea}{\operatorname{Re}}
+\newcommand{\Ima}{\operatorname{Im}}
+\DeclareMathOperator{\Log}{Log}
+\newcommand{\Hspec}{\mathsf H}
+\newcommand{\Abulk}{A_{\mathrm{bulk}}}
+\newcommand{\one}{\mathbf1}
+\newcommand{\Sch}{\mathcal S}
+\title{Enlarged-state transport and visibility\texorpdfstring{\\}{ }for the Newman heat flow}
+\author{Drafted for Edward Baker}
+\date{10 October 2026}
+
+\begin{document}
+\maketitle
+\begin{abstract}
+We organize an enlarged-state approach to real multiple zeros of the
+Riemann heat flow. A complete finite prime state obeys both commuting
+spectral dynamics and noncommuting divisor transport. Anchoring its
+arithmetic source produces a strictly positive operator with an exact
+source-response formula. A conditional adjoint-transport certificate then
+bounds the joint value and slope using only the imported first-jet
+approximation, and therefore applies to every multiplicity on its domain.
+We prove an eventual exclusion criterion conditional on uniform residual
+and multiplier bounds; on the stated shrinking sector a sufficient
+multiplier growth exponent is less than $5/8$.
+A continuous theta wavefunction gives a chord equation and a coupled
+signed gradient overlap. A retained angular theta field supplies an exact
+differential-shift identity with an endpoint source. Logarithmic reflection
+organizes the natural cutoff as matched interior and exterior channels.
+These are exact reductions and conditional criteria. No useful uniform
+multiplier construction, theta-specific overlap sign, new collision
+exclusion, or proof of the Riemann hypothesis is established.
+\end{abstract}
+
+\section{The genuine flow and the paid observation}
+\label{sec:flow}
+
+The normalization throughout is
+\begin{align}
+ H_t(z)&=\int_0^\infty e^{tu^2}\Phi(u)\cos(zu)\dd u,
+ &H_0(z)&=\tfrac18\xi(\tfrac12+iz/2),\label{eq:heat}\\
+ \Phi(u)&=\sum_{n\ge1}
+ (2\pi^2n^4e^{9u}-3\pi n^2e^{5u})e^{-\pi n^2e^{4u}}
+ \quad(u\ge0).\label{eq:theta-kernel}
+\end{align}
+Here $\xi(s)=s(s-1)\pi^{-s/2}\Gamma(s/2)\zeta(s)/2$ is the completed
+Riemann function. Let $\Phi_e$ denote the smooth even extension of
+$\Phi$. Theta transformation gives this evenness. On $u\ge0$ every
+summand in \eqref{eq:theta-kernel} is positive, and the decay is faster
+than every fixed Gaussian and exponential weight. These standard
+normalizations and the effective heat-flow framework are recorded in
+\cite{polymath}; the classical real-zero threshold originates in
+\cite{debruijn,newman}.
+
+\begin{proposition}[Physical equation and observation domain]
+\label{prop:physical}
+For real $t$ the function $H_t$ is entire in $z$, is real on the real
+axis, and satisfies
+\begin{equation}
+ \partial_tH_t=-\partial_z^2H_t.
+ \label{eq:newman-sign}
+\end{equation}
+Its derivatives of every fixed order may be taken under the integral,
+locally uniformly in bounded complex $z$ and bounded real $t$.
+\end{proposition}
+\begin{proof}
+The theta envelope dominates $e^{tu^2+|\Ima z|u}$ times each fixed
+polynomial in $u$. Dominated differentiation is therefore available on
+compact parameter sets. Time differentiation inserts $u^2$, while
+$\partial_z^2\cos(zu)=-u^2\cos(zu)$. Reflection gives the stated real
+symmetry.
+\end{proof}
+
+The local target is $H_t(x)=H_t'(x)=0$ at real $x$. Every prime on a
+spatial function means differentiation at fixed time. In the finite
+model the integer cutoff is also fixed; derivatives never follow a
+shrinking-sector scaling curve. A direct exclusion of this pair excludes
+all real multiplicities at least two. Relating uniform positive-time
+collision exclusion to RH additionally uses the genuine threshold,
+localization, and splitting inputs of the parent investigation
+\cite{heatnotes}; no such global transfer is newly proved here.
+
+For motivation we import the parent's finite-threshold collision reduction.
+If the genuine de Bruijn--Newman threshold $\Lambda$ were positive,
+the bound $\Lambda\le0.22$ and the effective large-height reality and
+simplicity statements of \cite[Theorem~1.5(i),(ii)]{polymath} apply
+uniformly on a time neighborhood bounded away from zero. Thus zeros
+outside a fixed compact height region cannot cause loss of all-realness
+there. Continuation of simple real zeros
+\cite[Proposition~3.1(i)]{polymath} and compact zero control in the
+remaining region force a finite real multiple zero at the threshold.
+This uses the imported global heat-flow reduction and its compactness
+hypotheses, rather than the local identities proved below. The project
+seeks a visibility mechanism on restricted domains first; the full
+threshold-covering theorem remains open.
+
+\subsection{The full fixed-cutoff dictionary}
+
+For a complex spatial argument $z$ set $s=(1-iz)/2$. On the large-height
+neighborhoods avoiding the principal logarithm cuts, define
+\begin{align}
+ m_0(s)&=\Log s+\Log(s-1)-\tfrac{s}{2}\log\pi
+  +\log\frac{\sqrt{2\pi}}{16}
+  +(\tfrac{s}{2}-\tfrac12)\Log\tfrac{s}{2}-\tfrac{s}{2},\label{eq:m0}\\
+ \alpha(s)&=m_0'(s)=\frac1{2s}+\frac1{s-1}
+                  +\frac12\Log\frac{s}{2\pi},
+ &m_t(s)&=m_0(s)+\frac t4\alpha(s)^2.\nonumber
+\end{align}
+With a fixed positive integer $N$ put
+\begin{align}
+ P_{t,N}(s)&=\sum_{n\le N}
+  \exp\{t\log^2n/4-(s+t\alpha(s)/2)\log n\},\nonumber\\
+ G_{t,N}(z)&=e^{m_t(s)}P_{t,N}(s)
+            +e^{m_t(1-s)}P_{t,N}(1-s),\nonumber\\
+ A_t(z)&=\exp\{(m_t(s)+m_t(1-s))/2\},
+ &\theta(t,z)&=\frac{m_t(s)-m_t(1-s)}{2i},\label{eq:normalizer}\\
+ Q_t(z)&=H_t(z)/A_t(z),
+ &F_{t,N}(z)&=G_{t,N}(z)/A_t(z).\nonumber
+\end{align}
+The normalizer is nonvanishing; on the real axis it is positive and
+$Q_t,F_{t,N},\theta$ are real. Consequently
+\begin{equation}
+ H_t(x)=H_t'(x)=0\quad\Longleftrightarrow\quad
+ Q_t(x)=Q_t'(x)=0.
+ \label{eq:normalizer-zero}
+\end{equation}
+
+\begin{assumption}[Complete holomorphic approximation]
+\label{input:disk}
+At a chosen real center in the sector
+\begin{equation}
+ 0<t\le1/20,\quad 1\le\kappa\le3/2,\quad
+ L=\kappa/t,\quad x=4\pi e^L,\quad
+ N=\left\lfloor\sqrt{e^L+t/16}\right\rfloor,
+ \label{eq:sector}
+\end{equation}
+freeze $N$ on the complex disk and choose a strictly positive $\eta_N$
+in the complete bound
+\begin{equation}
+ |Q_t(z)-F_{t,N}(z)|\le\eta_N\quad(|z-x|\le L^{-1}),
+ \qquad \eta_N\le5e^{-\kappa(\kappa+4)/(16t)}.
+ \label{eq:disk}
+\end{equation}
+This includes normalization, reflection, and natural-cutoff changes in
+the disk. It is the precise interface imported from the parent heat
+investigation using the approximation machinery of \cite{polymath};
+it is not asserted as a new theorem of this paper, or as an unqualified
+verbatim theorem of that source. No smaller block inherits this input.
+\end{assumption}
+
+Cauchy's formula gives
+$|Q_t^{(j)}(x)-F_{t,N}^{(j)}(x)|\le j!L^j\eta_N$.
+We use the full disk to retain the correlation between its first two jets.
+
+\begin{lemma}[Correlated candidate and its support]
+\label{lem:paid-body}
+Under Input~\ref{input:disk}, any genuine joint zero satisfies
+\begin{equation}
+ \left(\frac{F_{t,N}}{\eta_N}\right)^2+
+ \left|\frac{F_{t,N}'}{L\eta_N}\right|\le1.
+ \label{eq:body}
+\end{equation}
+For $D,B\ge0$, define the continuous support function
+\begin{equation}
+ h(D,B)=
+ \begin{cases}
+ D+B^2/(4D),&D>0,\ B\le2D,\\
+ B,&D=0\text{ or }B\ge2D.
+ \end{cases}
+ \label{eq:support}
+\end{equation}
+For $\mathcal C_0=\{(s,v):s^2+|v|\le1\}$,
+$\sup_{\mathcal C_0}|Bs+Dv|=h(D,B)$.
+\end{lemma}
+\begin{proof}
+Apply Schwarz--Pick to
+$g(\omega)=(Q_t-F_{t,N})(x+\omega/L)/\eta_N$ on the unit disk.
+At a joint zero its real first jet is
+$g(0)=-F_{t,N}/\eta_N$,
+$g'(0)=-F_{t,N}'/(L\eta_N)$, and
+$|g'(0)|\le1-|g(0)|^2$. This proves \eqref{eq:body}.
+For the support, align signs and maximize
+$B y+D(1-y^2)$ over $0\le y\le1$.
+For $D>0$ the maximizer is $\min\{B/(2D),1\}$; the degenerate case is
+direct.
+\end{proof}
+
+Writing $S=\sum q_n=u+iv$, so that $F=2u$, the complete current
+$\mathcal J=-\Ima(S'\overline S)=u'v-uv'$ obeys at a candidate
+\begin{equation}
+ |\mathcal J|\le\frac{\eta_N}{2}
+                   h(L|v|,|v'|).
+ \label{eq:current-support}
+\end{equation}
+This is a support consequence of \eqref{eq:body}; useful current
+exclusion still requires a strict reverse estimate from the full state.
+
+\section{Finite spectral dynamics and arithmetic transport}
+\label{sec:finite}
+
+At a real center write $\alpha=\alpha_r+i\alpha_i$,
+$\alpha'=U+iV$, with the latter derivative taken in $s$. Define
+\begin{align}
+ \sigma&=\tfrac12+t\alpha_r/2,&T&=(x-t\alpha_i)/2,
+ &\zeta&=\sigma-iT,\nonumber\\
+ c&=\tfrac12(1+tU/2),&d&=tV/4,
+ &\Omega&=\tfrac12\Rea\{\alpha(1+t\alpha'/2)\}.\label{eq:physical-data}
+\end{align}
+Then $\theta_x=-\Omega$, $\zeta_x=d-ic$, and the complete physical
+coefficients and reduction are
+\begin{equation}
+ q_n=e^{t\ell_n^2/4-\sigma\ell_n+i(\theta+T\ell_n)},
+ \quad\ell_n=\log n,\quad
+ w_n=|q_n|,\quad F=2\Rea\sum_{n\le N}q_n.
+ \label{eq:q}
+\end{equation}
+The physical derivative includes drift:
+$q_n'=(-i\Omega+(-d+ic)\ell_n)q_n$.
+
+On $\mathbb C^N$ define $\Hspec e_n=\ell_ne_n$ and
+$\one_N=\sum_{n\le N}e_n$. The spectral state is exactly
+\begin{equation}
+ q=e^{i\theta}e^{t\Hspec^2/4-\zeta\Hspec}\one_N.
+ \label{eq:state}
+\end{equation}
+For independent variables $\tau,\zeta$, the carrier-free vector
+$\psi_N=e^{\tau\Hspec^2/4-\zeta\Hspec}\one_N$ satisfies
+\begin{equation}
+ \partial_\tau\psi_N=\Hspec^2\psi_N/4
+                     =\partial_\zeta^2\psi_N/4.
+ \label{eq:spectral-heat}
+\end{equation}
+Equivalently the prime polynomial
+$P_\tau(W)=\sum_{n\le N}e^{\tau\ell_n^2/4}W^{\nu(n)}$ obeys
+$\partial_\tau P_\tau=\mathcal D^2P_\tau/4$, where
+$\mathcal D=\sum_{p\le N}(\log p)W_p\partial_{W_p}$.
+Unique prime factorization gives $\mathcal DW^{\nu(n)}=\ell_nW^{\nu(n)}$.
+
+The physical pullback has connection matrices
+\begin{equation}
+ q_x=(i\theta_xI-\zeta_x\Hspec)q,
+ \qquad q_t=(i\theta_tI+\Hspec^2/4-\zeta_t\Hspec)q.
+ \label{eq:pullback}
+\end{equation}
+They commute, and their mixed derivatives agree, so the connection is
+flat. Every constant diagonal phase matrix commutes with these equations.
+In particular $q_n^\chi=\chi(n)q_n$ for a constant completely multiplicative unit
+twist obeys the same local diagonal dynamics. Flatness therefore does
+not select the physical initial preparation. The finite scalar $F$ is
+not an autonomous Newman solution: its physical carrier, spectral
+coordinates, and normalization move, and the exact finite heat residual
+in program 09 remains present \cite{torusnotes}.
+
+For $t>0$ an auxiliary realization is
+\begin{equation}
+ e^{t\Hspec^2/4-\zeta\Hspec}\one_N
+ =\frac1{\sqrt{\pi t}}\int_{\mathbb R}e^{-\lambda^2/t}
+             e^{-(\zeta-\lambda)\Hspec}\one_N\dd\lambda.
+ \label{eq:gaussian}
+\end{equation}
+Completion of the square proves it. The same real $\lambda$ couples all
+prime channels. Separate slices are not candidates; positivity of this
+measure does not give a joint observation lower bound. All expressions
+above are finite. Positive-time exponentiation is unbounded on an
+unrestricted infinite spectral span, and $\sum_n e^{t\log^2n/4}n^{-s}$
+diverges for each fixed $s$ when $t>0$.
+
+\subsection{Noncommuting divisor transport}
+
+For a prime $p\le N$ let $S_pe_n=e_{pn}$ if $pn\le N$, and zero
+otherwise. With $a_p=\log p$,
+\begin{equation}
+ [\Hspec,S_p]=a_pS_p,\qquad
+ [\Hspec^2,S_p]=2a_pS_p\Hspec+a_p^2S_p.
+ \label{eq:prime-commutators}
+\end{equation}
+Define $B_p:\mathbb C^N\to\mathbb C^{\lfloor N/p\rfloor}$ by
+\begin{equation}
+ (B_pv)_n=v_{pn}-r_{p,n}v_n,
+ \quad r_{p,n}=e^{t(2a_p\ell_n+a_p^2)/4-\zeta a_p}.
+ \label{eq:edges}
+\end{equation}
+
+\begin{proposition}[Fixed physical transport and its tangent]
+\label{prop:transport}
+The prescribed state satisfies $B_pq=0$ and $q_1=e^{i\theta}$.
+These equations uniquely specify it on the complete cutoff.
+Moreover
+\begin{align}
+ (B_pq_x)_n&=-\zeta_xa_pq_{pn},\nonumber\\
+ (B_pq_t)_n&=(a_p\ell_n/2+a_p^2/4-\zeta_ta_p)q_{pn}.\label{eq:tangent}
+\end{align}
+A completely multiplicative unit twist has defect
+\begin{equation}
+ (B_pq^\chi)_n=\chi(n)(\chi(p)-1)q_{pn}.
+ \label{eq:twist-defect}
+\end{equation}
+\end{proposition}
+\begin{proof}
+The ratio $q_{pn}/q_n$ from \eqref{eq:q} is exactly $r_{p,n}$.
+Every $n\le N$ reaches $1$ by prime division within the cutoff, proving
+uniqueness. Differentiating $B_pq=0$ gives
+$B_pq_x=(r_{p,n})_xq_n$, with
+$(\log r_{p,n})_x=-\zeta_xa_p$; its time derivative gives the second
+formula. The carrier cancels in these differences. Complete
+multiplicativity gives \eqref{eq:twist-defect}.
+\end{proof}
+
+Fixed edge values and the known source retain information lost by the
+diagonal connection. Abstract flatness around prime cycles is insufficient:
+$r_{p,qn}r_{q,n}=r_{q,pn}r_{p,n}$ still holds if all edges are altered
+by a completely multiplicative unit twist. An exact dilation/source-shift identity is
+\begin{equation}
+ \sum_{n\le N/p}q_{pn}
+ =e^{-\zeta a_p+ta_p^2/4}e^{i\theta}
+   \sum_{n\le N/p}e^{t\ell_n^2/4-(\zeta-ta_p/2)\ell_n}.
+ \label{eq:shifted-source}
+\end{equation}
+The shifted state has a smaller literal cutoff and receives no separate
+candidate equation.
+
+\section{Anchored source response and visibility}
+\label{sec:visibility}
+
+Stack all edge operators into $B$. This includes every prime and every
+edge retained in \eqref{eq:edges}. The graph is connected, so
+$\ker B=\mathbb Cq$.
+
+\begin{proposition}[Positive source-response operator]
+\label{prop:source}
+With $e_1$ the $n=1$ coordinate source,
+\begin{equation}
+ \Abulk=B^*B+e_1e_1^*>0,
+ \qquad q=\Abulk^{-1}e_1e^{i\theta}.
+ \label{eq:anchored-response}
+\end{equation}
+Every hidden principal coordinate block of $\Abulk$ is positive and
+invertible independently of any observation nonvanishing.
+\end{proposition}
+\begin{proof}
+Zero quadratic energy would give $Bv=0$ and $v_1=0$, hence $v=0$
+by connectivity. Also $\Abulk q=e_1q_1=e_1e^{i\theta}$.
+A principal block has the energy of the corresponding vector extended
+by zeros, so its positivity follows from that of the full matrix.
+\end{proof}
+
+For a coordinate split $v=(v_o,v_h)$, write the source equation as
+\[
+ \begin{pmatrix}A_{oo}&A_{oh}\\A_{ho}&A_{hh}\end{pmatrix}
+ \begin{pmatrix}v_o\\v_h\end{pmatrix}
+ =\begin{pmatrix}f_o\\f_h\end{pmatrix},\qquad
+ f=e_1e^{i\theta}.
+\]
+The proved hidden-block inverse gives the exact reduction
+\begin{align}
+ v_h&=A_{hh}^{-1}(f_h-A_{ho}v_o),\nonumber\\
+ (A_{oo}-A_{oh}A_{hh}^{-1}A_{ho})v_o
+    &=f_o-A_{oh}A_{hh}^{-1}f_h.
+ \label{eq:schur-source}
+\end{align}
+Thus both the effective operator and the induced source retain the
+hidden-coordinate coupling. This is finite Schur elimination; for a
+modern operator formulation see \cite{feshbach}. It concerns coordinate
+blocks of the positive bulk operator, and supplies no lower bound for
+the separate oscillatory observation $C$ below.
+For elimination at coordinate $1$, the hidden block of
+$B^*B$ is already positive by the same zero-extension argument. Its
+unanchored source Schur complement is zero; adding the anchor changes
+it to one. For example,
+\begin{equation}
+ B=\begin{pmatrix}-2&1&0\\0&-3&1\end{pmatrix},\quad
+ q=(1,2,6)^T,\quad
+ \Abulk=\begin{pmatrix}5&-2&0\\-2&10&-3\\0&-3&1\end{pmatrix}
+ \label{eq:rational-source}
+\end{equation}
+has $\Abulk q=e_1$ and leading principal minors $5,46,1$.
+The source construction assumes no zero-free observation. It differs
+from a proposed elimination at a spectral value where the hidden inverse
+has not been independently justified.
+
+At fixed $t,\sigma$, put $U_Te_n=e^{iT\ell_n}e_n$.
+Unitary multiplication of the edge row $(p,n)$ by $e^{iT\log(pn)}$
+gives $B(T)U_T=U_EB(0)$, and therefore
+\begin{equation}
+ \Abulk(t,\sigma,T)=U_T\Abulk(t,\sigma,0)U_T^*.
+ \label{eq:gauge}
+\end{equation}
+Its spectrum is independent of $T$ at fixed $t,\sigma$, while its
+projected source response can cancel. Along physical $x$, $\sigma$
+also changes. Positivity and a bulk gap thus supply no free observation
+coercivity. Differentiation of the actual response does give
+\begin{equation}
+ q_x=i\theta_xq-\Abulk^{-1}(\partial_x\Abulk)q.
+ \label{eq:source-derivative}
+\end{equation}
+The new proof object is this prescribed source response together with
+its observation, rather than the positive spectrum alone.
+
+\subsection{A real adjoint-transport certificate}
+
+Realify $\mathbb C^N$ as $\mathbb R^{2N}$ with blocks
+$(\Rea v_n,\Ima v_n)$, and denote by $B_R$ the realification of $B$.
+Represent real covectors by column coefficient vectors. Define
+\begin{align}
+ Cv_R&=\left(\Rea\sum v_n,\;
+    \frac1L\Rea\sum[-i\Omega+(-d+ic)\ell_n]v_n\right),\label{eq:C}\\
+ b^Tv_R&=\Rea(e^{-i\theta}v_1),&
+ a^Tv_R&=\Ima(e^{-i\theta}v_1).\nonumber
+\end{align}
+Then $Cq_R=(F/2,F'/(2L))$, $b^Tq_R=1$, $a^Tq_R=0$.
+The latter anchor removes the free imaginary rotation of the complex
+transport groundstate.
+
+\begin{theorem}[Conditional anchored visibility certificate]
+\label{thm:certificate}
+Suppose real $y\in\mathbb R^2$, edge multipliers $\lambda$, a real scalar
+$z_0$, and a residual covector $r$ satisfy
+\begin{equation}
+ b=C^Ty+B_R^T\lambda+z_0a+r.
+ \label{eq:certificate}
+\end{equation}
+Write $r_n\in\mathbb R^2$ for its integer blocks and let
+$\mathcal R=\sum_{n\le N}w_n\|r_n\|_2$.
+If $\mathcal R<1$ and $y\ne0$, then
+\begin{equation}
+ \|Cq_R\|_2\ge\frac{1-\mathcal R}{\|y\|_2}.
+ \label{eq:certificate-lower}
+\end{equation}
+Under Input~\ref{input:disk}, uniform outward cell bounds
+$\mathcal R\le R_{\rm up}<1$, $\|y\|_2\le Y_{\rm up}$,
+$\eta_N\le\eta_{\rm up}$ exclude every genuine joint zero whenever
+\begin{equation}
+ \frac{1-R_{\rm up}}{Y_{\rm up}}>\frac{\eta_{\rm up}}2.
+ \label{eq:certificate-margin}
+\end{equation}
+Alternatively a sufficient directional margin is
+\begin{equation}
+ R_{\rm up}+\tfrac12\eta_{\rm up}
+       \sup_{\rm cell}h(|y_2|,|y_1|)<1.
+ \label{eq:directional-margin}
+\end{equation}
+\end{theorem}
+\begin{proof}
+Pair \eqref{eq:certificate} with $q_R$ and use both source anchors and
+$B_Rq_R=0$. This gives $1=y\cdot Cq_R+r\cdot q_R$.
+Since the $n$th state block has norm $w_n$,
+$|r\cdot q_R|\le\mathcal R$, proving
+\eqref{eq:certificate-lower} by Cauchy--Schwarz.
+At a joint zero, Lemma~\ref{lem:paid-body} gives
+$Cq_R=(\eta_N/2)(s,v)$ with $(s,v)\in\mathcal C_0$.
+Because $v^2\le|v|$, its Euclidean norm is at most $\eta_N/2$.
+This contradicts \eqref{eq:certificate-margin}; applying the exact
+support function instead gives \eqref{eq:directional-margin}.
+\end{proof}
+
+The theorem proves a certificate lemma, not existence of effective
+certificates. Unrestricted inversion that divides by the unknown pair
+$(F,F')$ merely restates the nonvanishing question. A useful proof must
+construct regular multipliers and bound their residuals without such
+division. Using only the edges for $p=2,3$ leaves disconnected source
+sectors; they must stay in the state and residual budget. The exact
+transport constraints contain all phase channels and the complete cutoff;
+a scalar block sign cannot replace them.
+
+\begin{corollary}[Uniform shrinking-sector growth criterion]
+\label{cor:growth}
+Let $K\subset[1,3/2]$ be a closed interval. Suppose certificates
+\eqref{eq:certificate} exist for the complete states throughout
+\eqref{eq:sector} with $\kappa\in K$ and sufficiently small $t$, and
+satisfy uniformly
+\begin{equation}
+ \mathcal R\le1-\delta,\qquad
+ 0<\|y\|_2\le C N^{\alpha_{\rm vis}},\qquad
+ \delta>0,\quad
+ \alpha_{\rm vis}<\inf_{\kappa\in K}\frac{\kappa+4}{8}.
+ \label{eq:uniform-target}
+\end{equation}
+Then Input~\ref{input:disk} implies eventual joint-zero exclusion on
+that subsector. The conservative sufficient exponent for all
+$1\le\kappa\le3/2$ is $\alpha_{\rm vis}<5/8$.
+\end{corollary}
+\begin{proof}
+Uniformly on the closed sector,
+$\log N=\kappa/(2t)+o(1)$. Thus
+\[
+ \eta_N C N^{\alpha_{\rm vis}}
+ \le5C\exp\left\{-\frac{\kappa(\kappa+4-8\alpha_{\rm vis})}{16t}
+                         +o(1)\right\}\longrightarrow0.
+\]
+Eventually this is less than $2\delta$, establishing
+\eqref{eq:certificate-margin}.
+\end{proof}
+
+The uniform hypotheses \eqref{eq:uniform-target} are open proof targets.
+No multiplier theorem or asymptotic exclusion has been obtained.
+
+\section{A continuous chord lift and its signed gradient source}
+\label{sec:chord}
+
+The continuous lift complements the doubled coherent arithmetic observations
+and phase-space dynamics of program 13 \cite{microlocalnotes}.
+For the genuine kernel let
+\begin{equation}
+ \mathfrak m_t(u)=e^{tu^2}\Phi_e(u),\qquad \psi_t(u)=\sqrt{\mathfrak m_t(u)},\qquad
+ \partial_t\psi_t=\tfrac12u^2\psi_t.
+ \label{eq:wave}
+\end{equation}
+Theta decay and its logarithmic derivative estimates give
+$\psi_t\in\Sch(\mathbb R)$ with every fixed time derivative locally
+uniformly on compact real time sets. Define the chord field and the
+derivative-wavefunction overlap
+\begin{align}
+ \mathcal A_t(k,\ell)&=\int_{\mathbb R}e^{iku}
+       \psi_t(u+\ell/2)\psi_t(u-\ell/2)\dd u,\label{eq:chord}\\
+ \mathcal B_t(k,\ell)&=\int_{\mathbb R}e^{iku}
+       \psi_t'(u+\ell/2)\psi_t'(u-\ell/2)\dd u.\nonumber
+\end{align}
+Both are real Schwartz fields on real $(k,\ell)$, and entire in $k$ for
+each real $\ell$. No global complex-$\ell$ square-root branch is assumed.
+The full fields retain pure-state coherence; the observed slice is
+$\mathcal A_t(k,0)=2H_t(k)$.
+
+\begin{proposition}[Chord and gradient-overlap equations]
+\label{prop:chord}
+Writing $\mathcal L=-\partial_k^2+\ell^2/4$ and
+$\mathcal D_\perp=\partial_\ell^2+k^2/4$, one has
+\begin{align}
+ \partial_t\mathcal A&=\mathcal L\mathcal A,
+ &\mathcal D_\perp\mathcal A&=-\mathcal B,\label{eq:chord-system}\\
+ \partial_t\mathcal B&=\mathcal L\mathcal B
+       -(k\partial_k+\ell\partial_\ell+1)\mathcal A.\nonumber
+\end{align}
+The transverse jets $C_{2r}=\partial_\ell^{2r}\mathcal A|_{\ell=0}$
+satisfy
+\begin{equation}
+ \partial_tC_{2r}=-\partial_k^2C_{2r}
+                         +\tfrac12r(2r-1)C_{2r-2}\quad(r\ge1).
+ \label{eq:jet-hierarchy}
+\end{equation}
+\end{proposition}
+\begin{proof}
+The time multiplier of the product in \eqref{eq:chord} is
+$(u+\ell/2)^2/2+(u-\ell/2)^2/2=u^2+\ell^2/4$.
+Fourier transformation replaces $u^2$ by $-\partial_k^2$.
+If $f=\psi_t(u+\ell/2)\psi_t(u-\ell/2)$, direct differentiation gives
+$f_{\ell\ell}=f_{uu}/4-\psi_t'(u+\ell/2)\psi_t'(u-\ell/2)$.
+Integration by parts proves the second identity. Finally
+$[\mathcal D_\perp,\mathcal L]=k\partial_k+\ell\partial_\ell+1$;
+apply $-\mathcal D_\perp$ to the first identity. Differentiating
+$\ell^2\mathcal A/4$ $2r$ times at zero proves the hierarchy.
+All integrations have vanishing Schwartz boundary terms.
+\end{proof}
+
+The observed slice is autonomous: transverse jets receive information
+from it, but the hierarchy does not feed back into $H$. Any restriction
+on its zeros must enter through the prepared theta state. Let
+$C(k)=\mathcal A_{\ell\ell}(k,0)$ and use the Fourier convention
+$\widehat f(k)=\int e^{iku}f(u)\dd u$. Then
+\begin{equation}
+ C=-k^2\mathcal A(k,0)/4-\widehat{|\psi_t'|^2}(k),
+ \qquad |\psi_t'|^2=\mathfrak m_t\left(tu+\frac{\Phi_e'}{2\Phi_e}\right)^2.
+ \label{eq:gradient-source}
+\end{equation}
+At a collision this identifies a signed full-theta gradient observation.
+Positivity of its density gives no Fourier sign. With $W=-\log \mathfrak m_t$,
+$C=-\widehat{\mathfrak m_tW''}/4$. If $C=P(\partial_k)\mathcal A(k,0)$ for a
+finite constant-coefficient polynomial $P$, Fourier injectivity would
+force $W''$ to be a polynomial in $u$. But the genuine tail gives
+$W''(u)\sim16\pi e^{4|u|}$, excluding that particular finite local
+closure. Nonlocal and arithmetic gluing relations remain possible.
+
+\subsection{A bounded positive-threshold control}
+
+The next estimate must distinguish genuine theta preparation from
+generic purity and positive bulk norms.
+
+\begin{proposition}[Pure-state lift with a positive double threshold]
+\label{prop:control}
+Put $t_*=1/40$ and
+$\Phi_{\rm ctrl}(u)=(16u^4+24)e^{-(1+t_*)u^2}$.
+For $0\le t\le1/20$, let $a_t=1+t_*-t>0$. Its even positive Schwartz
+wavefunction satisfies \eqref{eq:chord-system} and has slice
+\begin{equation}
+ \mathcal A_t^{\rm ctrl}(k,0)=\sqrt\pi a_t^{-9/2}
+ e^{-k^2/(4a_t)}
+ [k^4-12a_tk^2+12a_t^2+24a_t^4].
+ \label{eq:control}
+\end{equation}
+At $t=t_*$ the zeros are ordinary doubles at $k=\pm\sqrt6$.
+The four polynomial zeros are nonreal for $t<t_*$ and all real for
+$t\ge t_*$ in the stated interval.
+\end{proposition}
+\begin{proof}
+Apply $16\partial_k^4+24$ to the Gaussian Fourier integral
+$\sqrt{\pi/a_t}\,e^{-k^2/(4a_t)}$ to obtain
+\eqref{eq:control}. At $a_t=1$ the polynomial is $(k^2-6)^2$.
+Its discriminant in $k^2$ is $96a_t^2(1-a_t^2)$.
+For $a_t>1$ its two roots in $k^2$ are nonreal. For $0<a_t\le1$ they
+are $a_t(6\pm\sqrt{24(1-a_t^2)})$, both positive, establishing the
+assertion. The wavefunction is the positive square root of its smooth
+positive Gaussian density, so the preceding differential identities apply.
+\end{proof}
+
+This control has Gaussian tails and is a bounded-time heat family; it is
+not the full all-time theta flow. It nevertheless rules out a claimed
+local collision exclusion based only on the displayed chord equations,
+rank-one purity, or positive phase-space norms. A useful new lemma must
+use an actual theta coefficient or gluing property absent from this
+control, and constrain the signed gradient overlap or the complete finite
+current with all cross terms retained.
+
+\section{Retained theta angular dynamics and gluing}
+\label{sec:angular}
+
+Before taking a rotor trace, retain the periodic angular field
+\begin{equation}
+ \Theta(r,y)=\sum_{n\in\mathbb Z}e^{-\pi n^2r+2\pi iny},
+ \qquad k(u,y)=e^u[\Theta(e^{4u},y)-1],\quad u\ge0.
+ \label{eq:angular}
+\end{equation}
+For $r>0$ its exact differential equation and Jacobi gluing are
+\begin{align}
+ \Theta_r&=\Theta_{yy}/(4\pi),
+ &k_u&=k+e^{4u}k_{yy}/\pi,\label{eq:angular-pde}\\
+ \Theta(r,y)&=r^{-1/2}\sum_{m\in\mathbb Z}
+                        e^{-\pi(m-y)^2/r}.\label{eq:jacobi}
+\end{align}
+The first identities follow termwise; the last is Poisson/Jacobi
+transformation \cite{dlmftheta}. The actual preparation has coefficient
+one in every integer mode. Periodicity and the PDE alone permit other
+initial Fourier coefficients, so they are not sufficient arithmetic
+selection. Full coefficients and gluing must enter a new estimate.
+
+For bounded complex parameters define
+\begin{equation}
+ \mathcal T_t(z,y)=\int_0^\infty e^{tu^2+izu}k(u,y)\dd u.
+ \label{eq:Tfield}
+\end{equation}
+The nonzero theta modes have super-exponential $u$ decay, locally
+uniformly with fixed derivatives in $y$; this justifies the integral,
+its parameter derivatives, and $\partial_t\mathcal T=-\mathcal T_{zz}$.
+
+\begin{proposition}[Angular differential-shift identity]
+\label{prop:angular-shift}
+The retained field obeys
+\begin{equation}
+ \frac1\pi\mathcal T_{yy}(z-4i,y)
+ =-k(0,y)+2it\mathcal T_z(z,y)-(1+iz)\mathcal T(z,y).
+ \label{eq:angular-shift}
+\end{equation}
+\end{proposition}
+\begin{proof}
+Multiply $k_u-k=e^{4u}k_{yy}/\pi$ by $e^{tu^2+izu}$ and integrate.
+The left derivative integral is
+$-k(0,y)-\int(2tu+iz)e^{tu^2+izu}k\dd u$.
+Since $\mathcal T_z=i\int u e^{tu^2+izu}k\dd u$, subtraction of the
+$k$ integral yields the right-hand side. The factor $e^{4u}$ is precisely
+the shift $z\mapsto z-4i$. The boundary at infinity vanishes.
+\end{proof}
+
+At $y=0$, $k''-k=16\Phi$ and $k'(0)=-1$; differentiating the theta
+series and using Jacobi evenness proves these identities. Hence
+$J_t(x)=\Rea\mathcal T_t(x,0)$ is the usual auxiliary rotor cosine
+readout, and two integrations by parts give
+\begin{equation}
+ 16H_t(x)=1+(2t-1-x^2)J_t(x)+4txJ_t'(x)-4t^2J_t''(x).
+ \label{eq:affine-ward}
+\end{equation}
+The endpoint constant is retained. The scalar endpoint identity itself
+is shared by normalized positive Green-kernel controls and does not close
+the sign \cite{thetanotes}; the retained angular field offers the fuller
+arithmetic package to investigate.
+
+The shift in \eqref{eq:angular-shift} is not covered by the imported
+radius-$1/L$ disk at large height. Entireness does not pay for its use in
+a finite approximation. For example, for real $y$ and $z=x-ib$,
+absolute differentiation gives, for real $t,y,b$, a valid growth envelope
+\begin{equation}
+ |\partial_y^j\mathcal T_t(x-ib,y)|
+ \le2(2\pi)^j\sum_{n\ge1}n^j
+       \int_0^\infty e^{tu^2+(1+b)u-\pi n^2e^{4u}}\dd u.
+ \label{eq:angular-growth}
+\end{equation}
+This is finite uniformly on compact $(t,b)$ sets. Its size is not a
+small normalized approximation error. A source-to-observation estimate
+using the shift must additionally control normalization, phase correlation,
+and any finite-source remainder on that wider strip. This payment remains
+an open analytical obligation.
+
+\section{Logarithmic reflection and matched cutoff channels}
+\label{sec:reflection}
+
+For $P>0$ the map on $L^2(\mathbb R_+,\dd v)$
+\begin{equation}
+ (\mathcal I_Pf)(v)=\frac{\sqrt P}{v}f(P/v)
+ \label{eq:inversion}
+\end{equation}
+is a linear unitary involution. Indeed substitution $w=P/v$ preserves
+the norm, and applying the map twice gives $f$. The unitary logarithmic
+coordinate change
+\begin{equation}
+ g(y)=P^{1/4}e^{y/2}f(\sqrt P\,e^y)
+ \label{eq:logunitary}
+\end{equation}
+conjugates it to $g(y)\mapsto g(-y)$. Composition with complex
+conjugation is a different, antiunitary map. A literal interval $[A,B]$
+reflects to $[P/B,P/A]$.
+
+For a carried chirp $f(v)=a(v)e^{iT\log v}$ with smooth local amplitude,
+the Fourier phase $T\log v-2\pi kv$ has a positive-frequency saddle
+$v_*=P/k$, where $P=T/(2\pi)>0$. Its leading local stationary coefficient
+is
+\begin{equation}
+ e^{-i(T+\pi/4)}(\mathcal I_Pf)(k)
+ =\frac{\sqrt P}{k}a(P/k)
+          e^{i(T\log(P/k)-T-\pi/4)}.
+ \label{eq:stationary-reflection}
+\end{equation}
+This identifies the coefficient by the usual stationary method
+\cite{dlmfstationary}. It is not a uniform endpoint replacement or a
+global remainder theorem. Such uses require exact finite Poisson integrals
+or an endpoint-uniform approximation with an explicit global payment.
+
+For the prescribed real weight $w(v)=e^{t\log^2v/4-\sigma\log v}$,
+the modulus of \eqref{eq:logunitary} is proportional to $e^{ty^2/4}$
+at the ideal center $\sigma=1/2+(t/4)\log P$.
+It is even, but not globally square integrable at positive time; compact
+blocks or justified weighted domains are required. The cutoff near
+$N=\sqrt P$ is a reflection boundary at $y=0$.
+In particular $[N/2,N]$ reflects approximately to $[N,2N]$, not to itself.
+For a frozen physical point with $c\ne0$, put $\mu=\Omega/c$ and
+$M_j=\sum_{n\le N}q_n(\log n-\mu)^j=X_j+iY_j$; let $\Gamma$ be a
+frozen real coefficient. The ideal algebraic coefficient reflection
+$M_j\mapsto(-1)^j\overline{M_j}$ fixes
+$2Y_3^2+3X_2X_4-\Gamma X_2^2$ and supplies no opposite threshold sign
+\cite{torusnotes,heat25}. Applying that ideal map to actual blocks still
+requires payment for the center, carrier and weight mismatches.
+
+The opportunity is a complete matched source or flux calculation:
+resonant integrals, literal endpoints and half-weights, physical carrier
+mismatch, and reflection defects together. These may generate regular
+adjoint multipliers in \eqref{eq:certificate} or a theta-specific current
+bound. The rational-frequency organization of the exact sublattice
+integrals and the macroscopic local Fourier ceiling in Heat Note 24
+\cite{heatnotes} provide an existing effective organization.
+The lower-index complement, shifted
+sublattices, both arithmetic channels and every mixed contribution must
+remain in the selected representation. Alternate complete representations
+are alternatives, not extra disjoint corrections to be added.
+
+\section{A bounded proof program and its limits}
+\label{sec:program}
+
+The principal target is a theorem about the actual anchored source,
+not a general positivity assertion on an enlarged space. Three bounded
+steps are suitable for investigation.
+\begin{enumerate}
+ \item Construct a regular arithmetic adjoint-transport witness
+ \eqref{eq:certificate} on one fixed-cutoff shrinking-sector cell, using
+ literal prime transport and matched cutoff channels. Pay every residual
+ block and multiplier, and aim at \eqref{eq:certificate-margin} or the
+ directional margin. A cell excluded when the separately enclosed value
+ and slope tests are inconclusive would demonstrate useful interference.
+ A restricted-family failure should identify its precise residual or
+ multiplier loss. Uniform estimates \eqref{eq:uniform-target}, if proved,
+ would extend that mechanism to eventual subsector exclusion.
+ \item Seek a full theta gradient/score correlation for
+ \eqref{eq:chord-system}--\eqref{eq:gradient-source}. It must restrict a
+ signed overlap or the complete current, and visibly distinguish the
+ actual theta state from Proposition~\ref{prop:control}. Independent
+ positive bulk energies, purity and absolute moment envelopes do not
+ furnish that restriction.
+ \item If the needed source correlation is absent after a scalar trace,
+ use the integer coefficients and Jacobi gluing in
+ \eqref{eq:angular-pde}--\eqref{eq:angular-shift}. First make the
+ complex-shift growth and normalization payment effective. Another
+ scalar endpoint Ward identity is not yet the required new theorem.
+\end{enumerate}
+
+The exact lifts provide a useful route to source visibility with a
+first-jet budget, which avoids the fourth-jet payment of the ordinary-double
+threshold route. They do not prove visibility. In particular, the positive
+parent operator and its guaranteed hidden-block inverse are structural
+facts, while the observed source response remains oscillatory. The chord
+slice is autonomous, and its nonlocal theta constraints are still open.
+Neither leading stationary reflection nor angular heat symmetry implies
+uniform nonvanishing.
+
+A successful certificate based on \eqref{eq:body} covers all multiplicities
+on its stated domain. Global conclusions still require cutoff changes,
+intervening cells, remaining shrinking sectors, complementary parameter
+ranges, and the small-time endpoint. If one instead returns to an
+ordinary-double fourth-jet test, higher deflation remains a separate
+obligation. The preparation records and finite algebra controls in
+\cite{heat25} verify identities and bookkeeping, not a huge-height sign
+or the open multiplier hypotheses. No new RH conclusion follows.
+
+\section*{Acknowledgements and preparation record}
+
+This initial manuscript was drafted for Edward Baker with substantial
+GPT-6.1-sol (Codex) LLM assistance, reasoning effort ultra, verified from
+the recorded drafting-turn configuration. The displayed derivations,
+source reading, algebra controls and parallel cross-audits are internal
+LLM work, not independent mathematical validation. Classical heat-flow,
+approximation, theta and stationary-phase inputs are credited below.
+No mathematical novelty or priority claim is made. The standalone source
+uses no external input, image or bibliography files.
+
+\begin{thebibliography}{99}
+\bibitem{debruijn}
+N.~G.~de Bruijn, \emph{The roots of trigonometric integrals},
+Duke Math. J. \textbf{17} (1950), 197--226.
+\url{https://doi.org/10.1215/S0012-7094-50-01720-0}.
+
+\bibitem{newman}
+C.~M.~Newman, \emph{Fourier transforms with only real zeros},
+Proc. Amer. Math. Soc. \textbf{61} (1976), 245--251.
+\url{https://www.jstor.org/stable/2041319}.
+
+\bibitem{polymath}
+D.~H.~J.~Polymath, \emph{Effective approximation of heat flow evolution
+of the Riemann $\xi$ function, and a new upper bound for the
+de Bruijn--Newman constant}, arXiv:1904.12438v2 (2019).
+\url{https://arxiv.org/abs/1904.12438}.
+
+\bibitem{dlmftheta}
+NIST Digital Library of Mathematical Functions, equation 20.7.32,
+\emph{Theta modular transformations}.
+\url{https://dlmf.nist.gov/20.7.E32}.
+
+\bibitem{dlmfstationary}
+NIST Digital Library of Mathematical Functions, \S2.3(iv),
+\emph{Method of stationary phase}.
+\url{https://dlmf.nist.gov/2.3#iv}.
+
+\bibitem{feshbach}
+G.~Dusson, I.~M.~Sigal, and B.~Stamm,
+\emph{The Feshbach--Schur map and perturbation theory},
+arXiv:2105.02058 (2021).
+\url{https://arxiv.org/abs/2105.02058}.
+
+\bibitem{heatnotes}
+Edward Baker research project, with LLM assistance,
+\emph{Newman collision reductions}, internal Heat Notes 8, 12, 14,
+and 23--24, 9--10 October 2026. Repository source directory:
+\texttt{papers/quasi-rh-exponent-descent/newman\_collisions/notes/}.
+The complete disk interface and global threshold transfer remain imported
+inputs from that investigation.
+
+\bibitem{torusnotes}
+Edward Baker research project, with LLM assistance,
+\emph{Prime-phase torus signed reductions}, manuscript and internal
+Notes 1--9, 10 October 2026. Repository source directory:
+\texttt{newman\_collisions/09\_prime\_phase\_torus/}.
+
+\bibitem{microlocalnotes}
+Edward Baker research project, with LLM assistance,
+\emph{Microlocal observations, coherent currents, and finite zero atlases
+for the Riemann heat flow}, program 13 manuscript and internal notes,
+10 October 2026. Repository source directory:
+\texttt{newman\_collisions/13\_microlocal\_phase\_space/}.
+
+\bibitem{thetanotes}
+Edward Baker research project, with LLM assistance,
+\emph{Theta lattice}, internal Notes 1--2, 10 October 2026.
+Repository source directory:
+\texttt{newman\_collisions/06\_theta\_lattice/}.
+
+\bibitem{heat25}
+Edward Baker research project, with LLM assistance,
+\emph{Enlarged-state transport, chord dynamics, and theta gluing},
+Heat Note 25, 10 October 2026, with its algebra replay and internal review.
+Repository source:
+\texttt{newman\_collisions/notes/25\_ENLARGED\_STATE\_TRANSPORT\_CHORD\_}
+\texttt{DYNAMICS\_AND\_THETA\_GLUING\_20261010.md}.
+\end{thebibliography}
+\end{document}
