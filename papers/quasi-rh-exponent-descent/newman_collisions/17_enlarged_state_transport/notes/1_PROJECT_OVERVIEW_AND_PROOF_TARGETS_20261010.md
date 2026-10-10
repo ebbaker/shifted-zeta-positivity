@@ -123,8 +123,19 @@ also proves a new conditional [two-sign criterion](5_STATIONARY_SIGN_CRITERION_A
 on an open positive-time domain, the signs HH''<=0 when H'=0 and
 H'H'''<=0 when H''=0 exclude every finite multiplicity. Their exact
 theta overlap targets use D and D', and derivatives through order three.
-The signs, predecessor coverage and genuine third-jet costs remain open;
-fewer jets do not establish cheaper global estimates.
+[Note 6](6_PAID_GENUINE_THETA_STATIONARY_SIGNS_20261010.md) now gives a
+paid physical critical-maximum branch in the N=22066 cell and a direct
+full-theta inflection branch on 0≤t≤0.05, 8≤x≤12. These calibrate each sign
+nonvacuously in separate rectangles; first-jet reasoning already excludes
+joint zeros there. The high-cell physical third-jet Cauchy cost is about
+472. Uniform signs and predecessor coverage remain open; fewer jets do
+not establish cheaper global estimates.
+[Note 7](7_COMPLETE_LAGUERRE_KERNELS_AND_TRIPLE_ZERO_LIMIT_20261010.md)
+identifies exact kernels J0 and J1 whose conditional Fourier signs are
+needed. It proves the first Laguerre sign cannot detect any exact triple
+locally. The genuine J1 kernel can be negative while its Fourier response
+is certified positive in the low-height rectangle. Pointwise source
+positivity is therefore not the next target.
 Purity and phase-space positivity also permit the bounded-time collision
 control. Leading reflection preserves the existing threshold quadratic.
 The four earlier finite zero atlases remain calibration data in
@@ -168,8 +179,20 @@ sampled joint candidate and do not certify interval coverage.
    the complete stationary sets of H and H'. If proved on a predecessor
    neighborhood with the printed physical-jet payments, they exclude all
    finite multiplicities without an all-real hypothesis. The rescaled IFT
-   proof and 1,819 exact algebra assertions are complete; the theta signs
-   and a genuine stationary-set cover are not.
+   proof and 1,819 exact algebra assertions are complete. Note 6 now pays
+   bounded genuine stationary sets, including a nonempty inflection set
+   from direct full-source integration. Note 7 adds 167 exact kernel and
+   hierarchy assertions, and reduces the analytic target to conditional
+   Fourier signs of the complete paired kernels. Uniform signs, transition
+   coverage and predecessor neighborhoods remain open.
+
+   **Next analytic checkpoint:** seek a uniform conditional Fourier lower
+   bound for J0 and J1 on their physical stationary sets, or the stronger
+   positive-definiteness property of those kernels. Retain every theta
+   cross term and exploit a source-specific or modular identity. Neither
+   pointwise density positivity nor descending the Laguerre hierarchy
+   closes the sign gap. A nonvacuous huge-height second-sign test must also
+   pay or improve the approximately 472 physical third-jet remainder.
 
 4. **Use angular gluing when the source estimate needs more arithmetic
    data.** Preserve the genuine theta coefficients, modular partner, and
@@ -228,3 +251,8 @@ Initial manuscript: [Enlarged-state transport and heat-flow visibility](../enlar
 Historical context: [Heat Note 14](../../notes/14_DIMENSIONAL_REDUCTION_AND_SUPERSYMMETRIC_HEAT_PROGRAM_20261010.md),
 [Note 23](../../notes/23_SIGNED_CANDIDATE_LOCALIZATION_AND_RESONANT_BOUNDARY_PROGRAM_20261010.md),
 and [Note 24](../../notes/24_CURVATURE_CONES_SHARP_NULL_PAYMENTS_AND_LOCALIZED_POISSON_20261010.md).
+
+Continuation preparation for Notes 6–7 and the stationary/kernel records:
+GPT-6 (Codex), 10 October 2026; active reasoning effort unavailable to the
+session and not inferred. The initial drafting configuration above is
+preserved as a historical record.

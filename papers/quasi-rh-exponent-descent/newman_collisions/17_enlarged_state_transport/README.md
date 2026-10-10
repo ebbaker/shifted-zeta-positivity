@@ -16,7 +16,11 @@ obstruction, and certifies one bounded physical cell. Uniform multiplier
 bounds and signed theta correlations remain open. The implicit-function
 continuation proves a sufficient two-sign criterion excluding every finite
 multiplicity on an open positive-time domain, and identifies its complete
-theta overlap targets. Their signs and predecessor coverage remain open.
+theta overlap targets. Two genuine bounded rectangles now calibrate
+each stationary sign nonvacuously, using a complete imported disk at
+large height and direct full-theta integrals at low height. Exact paired
+Laguerre kernels identify the remaining Fourier conditions. Uniform signs
+and predecessor coverage remain open.
 
 Continuation record: GPT-6 (Codex), 10 October 2026; the active reasoning
 effort is not exposed to this session and is not inferred.
@@ -38,6 +42,12 @@ effort is not exposed to this session and is not inferred.
 - [Stationary signs and theta targets](notes/5_STATIONARY_SIGN_CRITERION_AND_THETA_TARGETS_20261010.md):
   a rescaled IFT proof covering every finite multiplicity, two exact
   score/curvature targets, and third-jet approximation payments.
+- [Paid genuine-theta stationary signs](notes/6_PAID_GENUINE_THETA_STATIONARY_SIGNS_20261010.md):
+  one critical maximum per time in the shrinking cell and one inflection
+  per time at heights 8–12; complete physical error and theta-tail costs.
+- [Complete kernels and triple-zero limitation](notes/7_COMPLETE_LAGUERRE_KERNELS_AND_TRIPLE_ZERO_LIMIT_20261010.md):
+  exact conditional Fourier targets, local blindness of the first Laguerre
+  sign to triples, and a signed genuine theta derivative kernel.
 - [Project overview and milestones](notes/1_PROJECT_OVERVIEW_AND_PROOF_TARGETS_20261010.md):
   conceptual direction, priorities, failure tests, and coverage obligations.
 - [Reviews](reviews/): scoped internal checks and manuscript review.
@@ -57,7 +67,14 @@ printed residual gap at large scale. The bounded cell is a calibration,
 and the same recorded subcells also pass separate scalar tests. The
 parallel route now has precise stationary-set targets using D and D',
 with physical derivatives through order three and predecessor coverage.
-Fewer derivative orders alone do not establish a cheaper estimate.
+The two bounded stationary calibrations add no collision coverage: their
+first jets already exclude joint zeros. The first Laguerre sign is locally
+nonnegative around every analytic exact triple; the second target is
+essential. A negative genuine J1 kernel value is compatible with its
+certified positive Fourier response on physical heights 8–12. The next
+source target is a uniform conditional Fourier estimate or positive
+definiteness of the complete kernels. Fewer derivative orders alone do
+not establish a cheaper estimate.
 The shared algebra checker supplies finite exact controls, not a theta
 sign or collision certificate. Keep research in `notes/`, computations in
 `numerics/`, and reviews in `reviews/`, following the repository

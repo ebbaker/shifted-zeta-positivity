@@ -44,6 +44,30 @@ to this session and not inferred; internal LLM checks.
   The analytic stationary-sign theorem is proved in Note 5; the replay
   establishes no genuine theta sign or stationary-set coverage.
 
+- [Physical stationary cell checker](check_theta_stationary_cell.py) and
+  [record](THETA_STATIONARY_CELL_RECORD_20261010.json): eighty complete
+  height subcells certify one physical Hx zero per time in [0.590,0.605]
+  relative to x0, with HHxx/normalizer² < -90.3133241620. The imported
+  complete holomorphic disk is assumed; all physical derivatives and
+  third-jet costs are restored. Hxx has no zeros in this cell.
+- [Direct full-theta inflection checker](check_theta_stationary_low_height.py)
+  and [record](THETA_STATIONARY_LOW_HEIGHT_RECORD_20261010.json): on all
+  0≤t≤0.05, 8≤x≤12, exactly one Hxx zero per time lies in [9.4,9.6],
+  with HxHxxx < -3.78300454912e-7. Uses 2,048 outward integration cells,
+  eighty height cells, all theta terms and complete integral tails;
+  no finite-sum approximation disk. Also certifies L1(H)>2.43219610004e-7
+  on the whole rectangle. Hx never vanishes there.
+- [Complete theta kernel checker](check_theta_laguerre_kernel.py) and
+  [record](THETA_LAGUERRE_KERNEL_RECORD_20261010.json): complete directed
+  source integration proves J1,t(0.3)<-1.683363e-9 for 0≤t≤0.05.
+  Negative source values do not refute positive definiteness or Fourier
+  nonnegativity. The coordinate 0.3 is not a physical stationary height.
+- [Exact Laguerre kernel algebra](check_laguerre_kernel_algebra.py) and
+  [record](LAGUERRE_KERNEL_ALGEBRA_RECORD_20261010.json): 167 exact
+  assertions for heat hierarchy, cubic/triple controls, autocorrelation
+  symbols and full/half Fourier normalization. These do not verify the
+  analytic remainder proof or establish any uniform theta sign.
+
 Replay from the repository root without replacing the saved records:
 
 ```sh
@@ -51,6 +75,25 @@ python3 papers/quasi-rh-exponent-descent/newman_collisions/17_enlarged_state_tra
 python3 papers/quasi-rh-exponent-descent/newman_collisions/17_enlarged_state_transport/numerics/check_regular_adjoint_cell.py /tmp/project17_regular_cell_replay.json
 python3 papers/quasi-rh-exponent-descent/newman_collisions/17_enlarged_state_transport/numerics/check_heat_transversality.py --record /tmp/project17_heat_transversality_replay.json
 ```
+
+All four new checkers write a record only when `--record` is explicitly
+provided. Replay into temporary paths from the repository root:
+
+```sh
+python3 papers/quasi-rh-exponent-descent/newman_collisions/17_enlarged_state_transport/numerics/check_theta_stationary_cell.py --record /tmp/project17_stationary_cell_replay.json
+python3 papers/quasi-rh-exponent-descent/newman_collisions/17_enlarged_state_transport/numerics/check_theta_stationary_low_height.py --record /tmp/project17_stationary_low_height_replay.json
+python3 papers/quasi-rh-exponent-descent/newman_collisions/17_enlarged_state_transport/numerics/check_theta_laguerre_kernel.py --record /tmp/project17_theta_kernel_replay.json
+python3 papers/quasi-rh-exponent-descent/newman_collisions/17_enlarged_state_transport/numerics/check_laguerre_kernel_algebra.py --record /tmp/project17_laguerre_algebra_replay.json
+```
+
+The high checker also validates and regenerates the retained regular-cell
+source. `--project17-numerics` and `--interval-source-dir` support staged
+replays. Defaults resolve relative to the source location; no machine
+paths are required. The direct and paired theta checkers validate the two
+retained program 13 interval source hashes. Kernel, integral and high-cell
+replays use 60-digit directed Decimal arithmetic. Neither bounded
+stationary calibration adds collision coverage or proves a predecessor
+buffer, uniform positive definiteness or RH.
 
 The cell checker validates both retained program 13 source hashes before
 importing them. Its default source directory is relative to its location;

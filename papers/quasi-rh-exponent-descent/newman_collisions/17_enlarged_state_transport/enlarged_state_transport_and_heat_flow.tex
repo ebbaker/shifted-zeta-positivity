@@ -3,6 +3,7 @@
 \usepackage{amsmath,amssymb,amsthm,mathtools}
 \usepackage[T1]{fontenc}
 \usepackage{lmodern}
+\usepackage{mathrsfs}
 \usepackage{microtype}
 \usepackage[hidelinks,breaklinks]{hyperref}
 \usepackage{enumitem}
@@ -54,9 +55,13 @@ a residual gap for $L\ge160$ in the stated sector.
 An implicit-function argument gives an alternative sufficient criterion:
 two signed curvature conditions on the stationary sets of $H$ and $H'$
 exclude every finite multiplicity on an open positive-time domain.
-Their exact theta score dictionary uses derivatives through order three;
-the required signs and predecessor coverage remain unproved.
-No uniform multiplier theorem, theta-specific overlap sign, global
+Their exact theta score and paired-kernel dictionaries identify the
+required Fourier signs. Separate bounded rectangles calibrate each
+stationary condition nonvacuously, with paid physical errors or direct
+full-theta integrals. The first Laguerre sign is locally nonnegative
+around every analytic exact triple and cannot detect it by itself.
+Uniform signs and predecessor coverage remain unproved.
+No uniform multiplier theorem, uniform theta overlap sign, global
 collision exclusion, or proof of the Riemann hypothesis is established.
 \end{abstract}
 
@@ -955,8 +960,10 @@ approximation normalizes $H$, its normalizer derivatives through order
 three must be restored before using these physical jets. The normalized
 stationary set generally differs. Near a collision the adverse product
 in \eqref{eq:predecessor-positive} tends to zero; a fixed absolute error
-budget cannot be assumed harmless. No new third-jet error payment or
-genuine stationary-set cover has been certified in this continuation.
+budget cannot be assumed harmless. Section~\ref{sec:theta-signs}
+below pays physical derivatives and genuine stationary sets on two
+bounded rectangles. Uniform third-jet control and predecessor
+coverage remain open.
 
 The two signs use fewer derivative orders than the threshold fourth-jet
 test, at the cost of signs on two complete stationary sets and predecessor
@@ -998,6 +1005,222 @@ Finally, $H(s,z)=z^3-6sz$ has a triple zero at the origin. For $s<0$
 it has no real critical points, but $H_{xx}=0$ at $z=0$ and
 $H_xH_{xxx}=-36s>0$. Translating $s$ to a positive collision time shows
 why the second stationary sign cannot be dropped.
+
+\section{Complete Laguerre kernels and bounded theta signs}
+\label{sec:theta-signs}
+
+The stationary targets admit a complete two-variable source dictionary.
+It identifies the needed Fourier sign, while two outward calibrations
+test each stationary condition nonvacuously on the actual theta flow.
+
+\subsection{The paired source and its Fourier condition}
+
+Put $m_t(u)=e^{tu^2}\Phi_e(u)$ and $A=\widehat m_t=2H_t$, with
+$\widehat f(x)=\int_{\mathbb R}e^{ixu}f(u)\dd u$. Define
+\begin{align}
+ K_{n,t}(s)&=\int_{\mathbb R}r^{2n}m_t(s+r)m_t(s-r)\dd r,\nonumber\\
+ J_{j,t}(s)&=\int_{\mathbb R}r^2(r^2-s^2)^j
+       m_t(s+r)m_t(s-r)\dd r.\label{eq:laguerre-kernels}
+\end{align}
+The complete theta product includes every term and cross contribution.
+Its decay justifies Fubini and fixed polynomial insertions locally
+uniformly in time. For
+$\mathscr L_j(A)=(A^{(j+1)})^2-A^{(j)}A^{(j+2)}$, symmetrizing the
+double Fourier integral gives the multiplier
+$\tfrac12(u-v)^2(-uv)^j$. The change $u=s+r$, $v=s-r$ has absolute
+Jacobian two, whence
+\begin{equation}
+ \mathscr L_j(A;x)=4\widehat J_{j,t}(2x),\qquad
+ \mathscr L_j(H;x)=\widehat J_{j,t}(2x).
+ \label{eq:laguerre-fourier}
+\end{equation}
+In particular $J_0=K_1$ and $J_1=K_2-s^2K_1$. The index $j$ denotes
+the first Laguerre expression of the $j$th derivative, not the $j+1$st
+generalized Laguerre coefficient of $A$.
+
+The exact sufficient targets are therefore
+\begin{equation}
+ \widehat J_{0,t}(2x)\ge0\text{ on }A'=0,\qquad
+ \widehat J_{1,t}(2x)\ge0\text{ on }A''=0,
+ \label{eq:conditional-fourier}
+\end{equation}
+on the required predecessor neighborhood. Global Fourier nonnegativity
+would suffice and, for these real even Schwartz kernels, is equivalent
+to positive definiteness of $J_j$ as a translation kernel. This is
+different from pointwise positivity of its values. Pointwise $J_0>0$
+is automatic for a positive density; it does not give the needed
+Fourier sign. Weighted-autocorrelation formulations are classical;
+\cite[Theorem 3.7 and Open Problems 4.7, 4.11]{csordas} discusses
+generalized Laguerre inequalities and this polynomial-weighted family.
+That discussion supplies no low-order theorem for
+\eqref{eq:conditional-fourier}.
+
+\begin{remark}[A signed genuine source can have a positive response]
+The complete outward kernel calculation in \cite{thetacontinuation},
+including every omitted theta term and the integral tail, proves
+\begin{equation}
+ -1.824617\cdot10^{-9}<J_{1,t}(0.3)
+ <-1.683363\cdot10^{-9}<0\qquad(0\le t\le0.05).
+ \label{eq:negative-theta-kernel}
+\end{equation}
+Here $0.3$ is a source coordinate. A negative kernel value does not
+refute positive definiteness or its Fourier sign. For example, a
+Gaussian source $m(u)=e^{-au^2}$ has
+$J_1(s)=(3/(4a)-s^2)J_0(s)$, whereas
+$\mathscr L_1(A)=A^2(1/(4a^2)+x^2/(8a^3))>0$.
+Proposition~\ref{prop:low-theta-sign} below gives a positive bounded
+Fourier response for the actual theta source in
+\eqref{eq:negative-theta-kernel}.
+\end{remark}
+
+\subsection{The first Laguerre sign is locally blind to triples}
+
+\begin{lemma}[Local triple-zero limitation]
+\label{lem:triple-laguerre}
+Every analytic heat solution with an exact triple zero has a neighborhood
+on which $\mathscr L_0(H)\ge0$, strictly away from that zero.
+\end{lemma}
+\begin{proof}
+Let $s=t-T$, $y=x-a$ and $c=H_{xxx}(T,a)/6\ne0$.
+The convergent heat Taylor series, grouped with spatial weight one and
+time weight two, gives, for $w=|y|+\sqrt{|s|}$,
+\[
+ H=c(y^3-6sy)+O(w^4),\quad H_x=c(3y^2-6s)+O(w^3),
+ \quad H_{xx}=6cy+O(w^2).
+\]
+Consequently
+\[
+ \mathscr L_0(H)=c^2(3y^4+36s^2)+R,\qquad |R|\le Mw^5
+\]
+in some neighborhood. Since $w^4\le8(y^4+s^2)$, the leading term
+is at least $3c^2w^4/8$. Taking $w$ within that neighborhood and
+$0<w<3c^2/(16M)$ leaves a positive margin $3c^2w^4/16$;
+if $M=0$ no additional radius restriction is needed.
+\end{proof}
+
+This is a local obstruction to using the first sign alone, including
+for the positive even Gaussian triple control above. The exact cubic
+heat solution $H=y^3-6sy$ has
+$\mathscr L_0=3y^4+36s^2\ge0$ everywhere but
+$\mathscr L_1=18y^2+36s<0$ at $y=0$, $s<0$. The predecessor argument
+for $H_x$ therefore requires the second condition independently.
+
+The source hierarchy also does not give a sign closure. Directly,
+\begin{equation}
+ (\partial_t+\partial_x^2)\mathscr L_j=2\mathscr L_{j+1}.
+ \label{eq:laguerre-hierarchy}
+\end{equation}
+The first identity was already recorded in Heat Note 12 of
+\cite{heatnotes}. With $P_\tau$ the forward Gaussian heat semigroup,
+where the convolutions are justified,
+\[
+ \mathscr L_0(t)=P_{T-t}\mathscr L_0(T)
+ -2\int_t^T P_{s-t}\mathscr L_1(s)\dd s.
+\]
+A positive second source is subtracted on descent; terminal positivity
+alone does not establish the earlier-time first sign.
+
+\subsection{Paid physical stationary sets}
+
+\begin{proposition}[Conditional shrinking-time stationary calibration]
+\label{prop:high-theta-sign}
+Under Imported input~\ref{input:disk}, put
+$N=22066$, $t_0=1/(2\log N)$ and $x_0=4\pi N^2$.
+On $t\in[t_0,t_0+8\cdot10^{-6}]$,
+$x-x_0\in[0.3,0.7]$, each time has exactly one physical $H_x=0$
+point, lying in $x-x_0\in[0.590,0.605]$. At all such points,
+\[
+ H>0,
+ \qquad HH_{xx}/\mathcal N^2<-90.3133241620,
+ \qquad \mathcal N=A_t>0.
+\]
+Here $\mathcal N=A_t$ is the real normalizer of Section~\ref{sec:flow},
+whereas the chord readout above is $A=2H$. Moreover $H_{xx}<0$ throughout
+the rectangle, so the second stationary condition is vacuous there.
+\end{proposition}
+\begin{proof}
+The source-bound outward calculation in \cite{thetacontinuation}
+regenerates the complete finite moments and pays spatial Taylor,
+time transport and Cauchy errors. It restores physical derivatives of
+$H=\mathcal N Q$. With $\lambda=(\log\mathcal N)_x$, these are
+\[
+ \frac{H_x}{\mathcal N}=Q'+\lambda Q,\quad
+ \frac{H_{xx}}{\mathcal N}=Q''+2\lambda Q'+(\lambda^2+\lambda_x)Q,
+\]
+\[
+ \frac{H_{xxx}}{\mathcal N}=Q'''+3\lambda Q''
+ +3(\lambda^2+\lambda_x)Q'
+ +(\lambda^3+3\lambda\lambda_x+\lambda_{xx})Q.
+\]
+The physical Cauchy error upper bounds through order three are
+$(0.009641459,0.196649946,7.868895202,472.218960911)$.
+Eighty complete height subcells give
+$-65.043341<H_{xx}/\mathcal N<-13.004812$,
+and endpoint slopes divided by $\mathcal N$ greater than $12.7522169$
+on the left and less than $-4.8624084$ on the right. Strict decrease
+and continuity give the unique critical point. Only three paid slope
+subcells contain zero. On their full union,
+$H/\mathcal N>1.9879895535$ and
+$H_{xx}/\mathcal N<-45.2890285603$, with the stated paid product bound.
+\end{proof}
+
+\begin{proposition}[Direct full-theta derivative stationary calibration]
+\label{prop:low-theta-sign}
+On $0\le t\le0.05$, $8\le x\le12$, each time has exactly one
+$H_{xx}=0$ point, lying in $[9.4,9.6]$. On that stationary set,
+\[
+ -4.17828941255\cdot10^{-7}<H_xH_{xxx}
+ <-3.78300454912\cdot10^{-7}.
+\]
+Throughout the whole rectangle $H_x<0$, $H_{xxx}>0$, and
+\begin{equation}
+ \widehat J_{1,t}(2x)=H_{xx}^2-H_xH_{xxx}
+ >2.43219610004\cdot10^{-7}.
+ \label{eq:bounded-theta-response}
+\end{equation}
+This calculation uses the full theta integral without a finite-sum
+approximation disk. The first stationary condition is vacuous there.
+\end{proposition}
+\begin{proof}
+The direct outward half-line jet integrals in \cite{thetacontinuation}
+give
+\[
+ -0.004248758920<H_x<-0.003823911011,\qquad
+ 0.00006360493465<H_{xxx}<0.00010664729466.
+\]
+They enclose $H_{xx}(8)<-0.0001447758850$ and
+$H_{xx}(12)>0.0001964016309$. Thus strict increase of $H_{xx}$ gives
+the unique root. Four complete height subcells contain every possible
+root and give the stated product bound. Multiplying the whole-domain
+derivative hulls and using $H_{xx}^2\ge0$ gives
+\eqref{eq:bounded-theta-response}.
+
+The calculation uses 2,048 full integration intervals on $[0,1]$ and
+eighty height intervals, retaining all times in every cell. Terms
+$n=1,2,3$ and the positive complete $n\ge4$ geometric tail are included.
+Rigorous trigonometric interval rotations, padded by the maximum phase
+error and the derivative bound one, cover all physical heights and
+integration variables. For $u>R=1$ use
+$\Phi(u)\le C e^{-8\pi u^2}$, $C=4\pi^2e^{-\pi}$, and
+$a=8\pi-0.05$. The three absolute jet tail payments are
+\[
+ Ce^{-aR^2}\left(\frac1{2a},\quad
+ \frac R{2a}+\frac1{4a^2R},\quad
+ \frac{R^2}{2a}+\frac1{2a^2}\right).
+\]
+The odd moments are exact; the even bound follows from Gaussian Mills.
+All signs use directed 60-digit arithmetic and complete cell ranges,
+with no sampled-sign or unproved quadrature remainder.
+\end{proof}
+
+These are two separate bounded calibrations, each with one nonempty
+stationary set. Their first jets already exclude joint zeros; neither
+extends collision coverage. No earlier-time buffer at the lower time
+boundaries, uniform Fourier sign, global positive-definiteness theorem,
+or global RH consequence is asserted. The approximately $472$ high-cell
+third-jet Cauchy cost remains paid and limits nonvacuous huge-height
+tests. The next analytic target is \eqref{eq:conditional-fourier} with
+uniform source-specific bounds and predecessor coverage.
 
 \section{Retained theta angular dynamics and gluing}
 \label{sec:angular}
@@ -1161,9 +1384,11 @@ steps are suitable for investigation.
  stationary targets \eqref{eq:stationary-target-zero}--\eqref{eq:stationary-target-one}
  on a predecessor neighborhood with \eqref{eq:stationary-paid}. It must restrict a
  signed overlap or the complete current, and visibly distinguish the
- actual theta state from Proposition~\ref{prop:control}. Independent
- positive bulk energies, purity and absolute moment envelopes do not
- furnish that restriction.
+ actual theta state from Proposition~\ref{prop:control}. The complete
+ kernel version is \eqref{eq:conditional-fourier}; its bounded
+ calibrations in Section~\ref{sec:theta-signs} give no uniform sign
+ or additional collision coverage. Independent positive bulk energies,
+ purity and absolute moment envelopes do not furnish that restriction.
  \item If the needed source correlation is absent after a scalar trace,
  use the integer coefficients and Jacobi gluing in
  \eqref{eq:angular-pde}--\eqref{eq:angular-shift}. First make the
@@ -1200,7 +1425,8 @@ source reading, algebra controls and parallel cross-audits are internal
 LLM work, not independent mathematical validation. Classical heat-flow,
 approximation, theta and stationary-phase inputs are credited below.
 The sharp residuals, restricted-prime obstruction, bounded-cell,
-implicit-chart and stationary-sign continuations were prepared with
+implicit-chart, stationary-sign, complete-kernel and direct-theta
+calibrations were prepared with
 GPT-6 (Codex) assistance on 10 October
 2026. The active reasoning effort is not exposed to that session and is
 not inferred. These proofs and outward replays also remain internal LLM
@@ -1233,6 +1459,11 @@ NIST Digital Library of Mathematical Functions, equation 20.7.32,
 NIST Digital Library of Mathematical Functions, \S2.3(iv),
 \emph{Method of stationary phase}.
 \url{https://dlmf.nist.gov/2.3#iv}.
+
+\bibitem{csordas}
+G.~Csordas, \emph{Fourier transforms of positive definite kernels
+and the Riemann $\xi$-function}, arXiv:1309.0055v2 (2014).
+\url{https://arxiv.org/pdf/1309.0055v2}.
 
 \bibitem{feshbach}
 G.~Dusson, I.~M.~Sigal, and B.~Stamm,
@@ -1283,5 +1514,15 @@ checkers, 10 October 2026. Repository source directory:
 \texttt{newman\_collisions/17\_enlarged\_state\_transport/}.
 The cell exclusion is conditional on the imported complete disk interface;
 no uniform multiplier theorem or RH conclusion is established.
+\bibitem{thetacontinuation}
+Edward Baker research project, with GPT-6 (Codex) LLM assistance,
+\emph{Paid genuine-theta stationary signs on two bounded rectangles},
+and \emph{Complete Laguerre kernels and the triple-zero limit},
+program 17 Notes 6--7 and four retained checker/record pairs,
+10 October 2026. Repository source directory:
+\texttt{newman\_collisions/17\_enlarged\_state\_transport/}.
+The shrinking cell assumes the complete disk interface; the low-height
+stationary and signed-kernel integrals use the full theta source.
+No uniform sign or global collision exclusion is established.
 \end{thebibliography}
 \end{document}
