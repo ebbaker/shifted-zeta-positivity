@@ -1,6 +1,9 @@
 # Numerical and algebraic replay
 
-10 October 2026. Model: GPT-6 (Codex); exact serving variant and configured reasoning effort unavailable and not inferred. Checks are internal, not independent mathematical review.
+10 October 2026. Latest continuation: GPT-6.1-sol (Codex), configured
+reasoning effort ultra, verified from the parent chat recording. Earlier
+retained records keep their original metadata. Checks are internal, not
+independent mathematical review.
 
 Run from the repository root:
 
@@ -75,3 +78,129 @@ The [build record](COMPLETE_CURRENT_RECTANGLE_BUILD_RECORD_20261010.json)
 binds the new source, its preserved imported source and the certificate.
 The replay decides each sign by arithmetic; hashes identify files. No
 large data or nonstandard Python dependencies are required.
+
+## Complete candidate-current atlas and thirteen genuine zero branches
+
+Run from the repository root:
+
+```bash
+python3 papers/quasi-rh-exponent-descent/newman_collisions/13_microlocal_phase_space/numerics/check_candidate_current_atlas.py
+```
+
+To write a fresh replay without changing the retained certificate:
+
+```bash
+python3 papers/quasi-rh-exponent-descent/newman_collisions/13_microlocal_phase_space/numerics/check_candidate_current_atlas.py --output /tmp/candidate-current-atlas-replay.json
+```
+
+The new standard-library source checks the unchanged Note 3 source hash
+before import; that source checks the unchanged Note 2 interval source.
+It computes all 22066 genuine terms once into 64 signed midpoint jets and
+the complete 64th absolute frequency moment. A degree-63 coherent
+polynomial with its real-variable remainder covers the full height width
+eight; exact polynomial shifts allow adaptive local enclosures without
+dropping signed cancellation. Physical spatial residuals and fixed-height
+time/mixed derivatives are paid on the whole rectangle.
+
+The exact theorem domain is `t0=1/(2*log(22066)) <= t <= 1/20` and
+`x0=4*pi*22066^2 <= x <= x0+8`. Numerical outer hulls bound computations;
+the certificate distinguishes them from the exact domain at the sector
+edge. The natural cutoff is always 22066. The full holomorphic value and
+derivative payments satisfy `eta < 0.009642`, `L*eta < 0.192864`.
+
+Status: **PASS**. The [retained certificate](CANDIDATE_CURRENT_ATLAS_CERTIFICATE_20261010.json)
+has 46 closed height strips covering every exact allowed time. It proves
+29 value-away strips and 17 candidate strips with simultaneously positive
+paid derivative and full-current margins. The minimum normalized joint
+vector norm is greater than `0.03728`; the candidate current gap is greater
+than `0.11934`. All thirteen connected candidate bands have strict
+opposite all-time endpoint signs and a strict all-time derivative sign.
+Consequently there are exactly thirteen simple genuine heat zeros at each
+time, with no other zero and no joint `H_t,H_t'` zero in the rectangle.
+
+The [build record](CANDIDATE_CURRENT_ATLAS_BUILD_RECORD_20261010.json) binds
+the final source, preserved dependencies and the approximately 122 KB
+certificate. A separate internal agent's complete replay was byte
+identical. Both candidate tolerances and every cell adjacency/endpoint are
+checked; no ordinary float enters a proof assertion. The correlated
+holomorphic candidate quantity from Heat Note 18 is also reported, but
+the acceptance rules already prove the result using the older rectangular
+payments. See Note 4 and Review 4 for the finite scope; no uniform-sector
+or RH conclusion follows from this bounded atlas.
+
+## Finite multi-cutoff family with direct Schur checks
+
+Run the new generic checker from the repository root:
+
+```bash
+python3 papers/quasi-rh-exponent-descent/newman_collisions/13_microlocal_phase_space/numerics/check_multi_cutoff_candidate_family.py --M 22067
+```
+
+The retained cases are `M=22067`, `22068` and `22080`. To replay all three
+without changing their retained certificates:
+
+```bash
+for task_M in 22067 22068 22080; do
+  python3 papers/quasi-rh-exponent-descent/newman_collisions/13_microlocal_phase_space/numerics/check_multi_cutoff_candidate_family.py --M "$task_M" --output "/tmp/current-family-M$task_M.json"
+done
+```
+
+For each selected cutoff the exact domain is
+`1/(2*log(M)) <= t <= 1/20`, `4*pi*M^2 <= x <= 4*pi*M^2+8`.
+The windows are disconnected, have their own constant natural cutoff,
+and do not cover entire cutoff cells or the gaps between them. The source
+hash-checks the preserved Note 4 source before import and inherits its
+preserved dependency chain. Every genuine term and physical spatial/time
+payment is rebuilt at the new actual common orbit.
+
+All three cases are **PASS**. Their complete records are
+[22067](MULTI_CUTOFF_M22067_CERTIFICATE_20261010.json),
+[22068](MULTI_CUTOFF_M22068_CERTIFICATE_20261010.json) and
+[22080](MULTI_CUTOFF_M22080_CERTIFICATE_20261010.json). They have 29, 28 and
+32 closed strips and prove exactly 12, 12 and 13 simple genuine heat
+zeros per time. Their normalized joint-vector floors exceed `0.03117`,
+`0.02205` and `0.0032919`, respectively. No unresolved strip is omitted.
+
+Every value-screen survivor actively passes the first-jet Schur candidate
+condition in reverse and a strict fully paid derivative test. The
+derivative test already implies that Schur predicate for these particular
+records; additional curved-body exclusion is not demonstrated here.
+Only two retained strips per cutoff also pass the coarse rectangular
+complete-current test. Other current enclosures are inconclusive, with
+no negative actual-current assertion. Full `eta`, `L*eta`, all complete
+coherent interference, endpoint signs, derivative signs and exact closed
+coverage remain retained.
+
+The [family build record](MULTI_CUTOFF_CANDIDATE_FAMILY_BUILD_RECORD_20261010.json)
+binds the generic source, preserved dependencies and three small
+certificates. Separate internal full replays were byte identical to all
+three. Other `--M` values are separate experiments and may fail acceptance
+or counting assertions; no uniform cutoff theorem is encoded by the three
+retained successes. See Note 5 and Review 5 for scope and the remaining
+signed arithmetic obligation.
+
+## Manuscript certificate summary
+
+The read-only checker [check_manuscript_certificate_summary.py](check_manuscript_certificate_summary.py)
+uses exact rational arithmetic to audit the stored enclosures and coverage:
+
+```bash
+python3 papers/quasi-rh-exponent-descent/newman_collisions/13_microlocal_phase_space/numerics/check_manuscript_certificate_summary.py
+```
+
+[The summary](MANUSCRIPT_CERTIFICATE_SUMMARY_20261010.json) reports **PASS**:
+12 build-record hash/size entries, all 135 closed atlas leaves and all
+50 zero bands. It verifies conservative normalized joint floors, the
+correct L-up derivative denominator, conservative Schur lower bounds,
+acceptance predicates, exact closed adjacency and strict all-time
+endpoint/derivative signs. It requires only the standard library and
+performs no writes. `--numerics-dir` can select another copy of the records.
+
+This is an exact-rational logical inspection of retained outward intervals;
+use the original sources above for fresh interval-sum replays. Those fresh
+replays were also performed for the working manuscript and were
+byte-identical to the retained certificates. Neither operation re-proves
+the imported full holomorphic approximation. The
+[manuscript review](../reviews/6_MANUSCRIPT_INTERNAL_REVIEW_20261010.md)
+records these checks and their limits. New review metadata: GPT-6 (Codex),
+exact serving variant and effort not exposed and not inferred.

@@ -91,3 +91,64 @@ and [Review 3](../reviews/3_PAID_DUAL_KERNEL_INTERNAL_REVIEW_20261010.md)
 explain what the genuine rank witness, formal controls, and Hilbert-space
 relaxation establish. A fresh replay reproduced the small record byte
 for byte. No negative threshold bound or genuine collision is certified.
+
+## Prescribed heat-weight covariance
+
+Run the continuation checker from the repository root:
+
+```bash
+python3 papers/quasi-rh-exponent-descent/newman_collisions/09_prime_phase_torus/numerics/check_prescribed_heat_covariance.py
+```
+
+Its [source-bound record](prescribed_heat_covariance_record_20261010.json)
+retains **327 exact assertions**. Gaussian moments, the centered prescribed
+quadratic weight and its multiplicative cross term, all four covariance
+kernel signs, the complete block/core recombination, and the shifted
+signed-moment hierarchy are checked through exact formal degree 12 in
+`sqrt(t/2)`. The finite models retain one common rational phase generator
+and the prescribed quadratic heat coefficient shape. They are algebraic
+controls, not actual huge-height arithmetic evaluations.
+
+For an independent replay without replacing the retained record, add
+`--output /tmp/prescribed_heat_covariance_replay.json`. The fresh replay
+matches the default small record byte for byte. No external dependency,
+library install, or full phase dataset is needed.
+
+[Note 4](../notes/4_PRESCRIBED_HEAT_WEIGHT_COVARIANCE_AND_SIGNED_HIERARCHY_20261010.md)
+proves the exact Gaussian decomposition, infinite signed hierarchy,
+finite tail payment, and uniform asymptotic order of the explicitly
+positive covariance envelope. The envelope's lower bound is independent
+of phases; it does not give a lower bound for the signed covariance.
+[Review 4](../reviews/4_PRESCRIBED_HEAT_COVARIANCE_INTERNAL_REVIEW_20261010.md)
+records that distinction. No negative threshold sign is certified.
+
+## Sharp one-sided dual payment
+
+Run from the repository root:
+
+```bash
+python3 papers/quasi-rh-exponent-descent/newman_collisions/09_prime_phase_torus/numerics/check_curved_one_sided_dual_payment.py
+```
+
+The [record](curved_one_sided_dual_payment_record_20261010.json) retains
+**10,081 exact assertions** and 233 critical root intervals evaluated.
+The checker solves the finite quadratic payment on `s^2+|v|<=1` using
+exact square-free cubic isolation and rational interval evaluation.
+Known sharp diagonal, linear and cross cases, singular ridges, constant
+edges, and interior stationary points are tested. Twelve physical-drift
+coordinate controls compare the sharp one-sided payment with the old
+absolute square. Eight common higher-moment corners and 32 common
+transformed-coefficient corners give exact payments for their declared
+independent boxes. All four sine/cosine dual channels remain present.
+
+Use `--output /tmp/curved_one_sided_dual_payment_replay.json` for a fresh
+replay without replacing the retained record; that output matches byte
+for byte. The source uses only standard-library Fraction arithmetic.
+The rational controls verify payment geometry and algebra, not actual
+large-height arithmetic candidates or a negative threshold margin.
+
+[Note 5](../notes/5_SHARP_ONE_SIDED_DUAL_PAYMENTS_ON_CORRELATED_CANDIDATES_20261010.md)
+proves the general finite critical-set formula and one-sided certificate.
+[Review 5](../reviews/5_CURVED_ONE_SIDED_DUAL_PAYMENT_INTERNAL_REVIEW_20261010.md)
+records degeneracy, root-counting and sharpness scope. The prescribed
+four-channel signed upper bound remains the missing research input.

@@ -1,6 +1,9 @@
 # Microlocal phase space and coherent observations
 
-10 October 2026. Model: GPT-6 (Codex); exact serving variant and configured reasoning effort unavailable and not inferred. Checks are internal, not independent mathematical review.
+10 October 2026. Latest continuation: GPT-6.1-sol (Codex), configured
+reasoning effort ultra, verified from the parent chat recording. Earlier
+retained records keep their original metadata. Checks are internal, not
+independent mathematical review.
 
 This folder implements program 13 in [Heat Note 14](../notes/14_DIMENSIONAL_REDUCTION_AND_SUPERSYMMETRIC_HEAT_PROGRAM_20261010.md), beside the existing `01_analytic_gaussian` project.
 
@@ -37,3 +40,55 @@ This certificate proves local joint nonvanishing on the stated rectangle.
 No sectorwide collision exclusion, uniform current sign or RH conclusion
 is claimed. Follow [LARGE_FILES.md](../../../../LARGE_FILES.md); the present
 sources and small check records need no external archive.
+
+[Note 4](notes/4_CANDIDATE_CURRENT_ATLAS_AND_THIRTEEN_SIMPLE_ZERO_BRANCHES_20261010.md)
+extends complete coverage to the exact closed rectangle
+`t0 <= t <= 1/20`, `x0 <= x <= x0 + 8`. Its adaptive atlas has 46 closed
+height strips: 29 pass the paid value screen and 17 remaining strips pass
+both the complete paid candidate-current and physical derivative tests.
+The normalized joint-vector norm exceeds `0.03728` everywhere; the minimum
+candidate current gap exceeds `0.11934`. Thirteen disjoint signed-monotone
+bands prove **exactly thirteen simple genuine heat zeros at every time**
+in that interval. All 22066 terms, coherent interference, spatial/time
+transport errors, full `eta` and `L*eta`, constant natural cutoff and closed
+coverage are retained. [Review 4](reviews/4_CANDIDATE_CURRENT_ATLAS_INTERNAL_REVIEW_20261010.md)
+records an independent internal agent replay with byte-identical final
+certificate. This remains a finite result; the uniform shrinking-sector
+signed arithmetic obligation is still open.
+
+[Note 5](notes/5_MULTI_CUTOFF_CORRELATED_CANDIDATE_FAMILY_20261010.md)
+rebuilds the complete genuine data at three other cutoffs, `M=22067`,
+`22068` and `22080`. On each exact rectangle
+`1/(2*log(M)) <= t <= 1/20`, `4*pi*M^2 <= x <= 4*pi*M^2+8`,
+the new generic checker certifies complete joint nonvanishing and exactly
+12, 12 and 13 simple genuine heat zeros, respectively. These are three
+separate local windows in distinct cutoff cells; no intervening height
+or entire-cell coverage is implied. The first-jet Schur predicate is now
+checked directly on all value-screen survivors, together with the paid
+derivative needed for exact counting. That derivative condition already
+implies the Schur condition in these certificates. Coarse full-current
+enclosures pass on two retained strips per cutoff and are otherwise
+inconclusive. [Review 5](reviews/5_MULTI_CUTOFF_CANDIDATE_FAMILY_INTERNAL_REVIEW_20261010.md)
+records separate internal full replays with byte-identical certificates.
+The old sources and certificates remain preserved; a uniform signed
+arithmetic theorem is still required.
+
+## Working manuscript
+
+[Microlocal observations, coherent currents, and finite zero atlases for the Riemann heat flow](microlocal_coherent_currents_and_zero_atlases.tex)
+consolidates Notes 1–5, with the background of the prime phase torus
+manuscript and Heat Note 22. It preserves the explicit imported full-disk
+interface, exact Husimi observations, physical drift, both coherent phase
+channels, complete-current tests, finite certificate domains and the open
+uniform signed estimate. Native compilation and fresh replays succeed.
+
+[Note 6](notes/6_CORRELATED_CURRENT_SUPPORT_AND_MANUSCRIPT_SYNTHESIS_20261010.md)
+adds the sharp current support on the correlated first-jet body; this is a
+derived bound, not an additional numerical exclusion. The later directed
+integer-power arithmetic supplies the manuscript's adverse-block evidence.
+[Manuscript review](reviews/6_MANUSCRIPT_INTERNAL_REVIEW_20261010.md)
+records internal audits and fresh byte-identical replays.
+[DRAFT_HISTOR.md](DRAFT_HISTOR.md) indexes the working source without a
+snapshot folder. New drafting metadata: GPT-6 (Codex), exact serving variant
+and configured effort not exposed and not inferred; earlier records retain
+their original metadata.

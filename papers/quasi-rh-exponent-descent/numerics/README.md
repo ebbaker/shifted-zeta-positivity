@@ -607,6 +607,44 @@ certify native transfer, global growth, ideal asymptotics, source
 height propagation or the full signed correlation.
 See [Note 29](../mixed_character_families/notes/29_SIGNED_FORM_SECTORS_AND_SIXTHPOWER_TAIL_20261009.md) and its [review](../reviews/MIXED_SIGNED_FORM_BOUND_REVIEW_20261009.md).
 
+## Correlated holomorphic collision payments
+
+[check_correlated_holomorphic_payments.py](check_correlated_holomorphic_payments.py)
+prints the [small retained record](CORRELATED_HOLOMORPHIC_PAYMENT_RECORD_20261010.json)
+without writing files. Run `python3 check_correlated_holomorphic_payments.py`
+from this folder. It passes 163340 exact Fraction assertions for the
+parabolic first-error-jet body, its sharp support and current-distance
+extremizers, norm corollaries and second Schur coefficient constraints.
+It hash-checks the preserved complete-rectangle certificate before using
+its rational endpoints to certify the stronger paid current bound.
+The general analytic proofs are in
+[Heat Note 18](../newman_collisions/notes/18_CORRELATED_HOLOMORPHIC_PAYMENTS_AND_CANDIDATE_COVERAGE_20261010.md).
+These checks do not prove a uniform prescribed-arithmetic margin.
+The companion complete finite candidate atlas and prescribed covariance
+checkers are documented in
+[project 13 numerics](../newman_collisions/13_microlocal_phase_space/numerics/README.md)
+and [project 09 numerics](../newman_collisions/09_prime_phase_torus/numerics/README.md).
+
+## Fourth-order Schur threshold payments
+
+[check_higher_schur_threshold_payments.py](check_higher_schur_threshold_payments.py)
+prints the [source-bound retained record](HIGHER_SCHUR_THRESHOLD_PAYMENT_RECORD_20261010.json)
+without writing files. Run `python3 check_higher_schur_threshold_payments.py`
+from this folder. It passes 50157 exact Fraction assertions, including
+3125 parameter controls and 125 exact last-two-parameter maxima. Rational
+series composition and inverse Schur recovery check all coefficients
+through order four, including terminating boundary parameters. The final
+two parameter maxima reduce exactly to a signed endpoint and a quadratic
+maximum. A negative formal finite-jet control and an ordinary-double
+positive control distinguish a useful paid improvement from the missing
+arithmetic sign. General proofs and the remaining one-variable maximum
+are in [Heat Note 19](../newman_collisions/notes/19_HIGHER_SCHUR_PAYMENTS_AND_MULTI_CUTOFF_SIGNED_CONTINUATION_20261010.md).
+The rational grid checks identities and controls; it does not certify a
+maximum for arbitrary actual input intervals or a uniform heat theorem.
+Companion exact one-sided dual payments and the three additional cutoff
+atlases are documented in the project 09 and 13 numerics guides above.
+[Shared review](../reviews/HEAT_HIGHER_SCHUR_AND_MULTI_CUTOFF_CONTINUATION_REVIEW_20261010.md).
+
 ## Growing cofactor compensation checks
 
 [check_growing_cofactor_barrier.py](check_growing_cofactor_barrier.py) writes

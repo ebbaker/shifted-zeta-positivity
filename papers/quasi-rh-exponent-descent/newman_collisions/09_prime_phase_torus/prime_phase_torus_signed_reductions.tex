@@ -1,0 +1,2041 @@
+\documentclass[11pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage[margin=1in]{geometry}
+\usepackage[colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue]{hyperref}
+\usepackage{enumitem}
+\allowdisplaybreaks
+\setlength{\emergencystretch}{2em}
+\numberwithin{equation}{section}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{assumption}[theorem]{Imported input}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\DeclareMathOperator{\Rea}{Re}
+\DeclareMathOperator{\Ima}{Im}
+\DeclareMathOperator{\Log}{Log}
+\DeclareMathOperator{\erf}{erf}
+\DeclareMathOperator{\erfi}{erfi}
+\newcommand{\dd}{\,d}
+\newcommand{\PV}{\operatorname{PV}}
+\title{Signed Arithmetic Reductions on the Prime Torus\\
+for Riemann Heat-Flow Collisions}
+\author{Drafted for Edward Baker}
+\date{10 October 2026}
+\begin{document}
+\maketitle
+\begin{abstract}
+We develop finite arithmetic reductions for a necessary fourth-jet test at
+an ordinary real collision of the Riemann heat flow. The state uses the
+prescribed quadratic logarithmic heat weights and one actual height
+frequency; no independent prime phases are imposed. Complete centered
+moments express the genuine finite candidates, raw-jet residuals, and
+candidate-paid quadratic corrections. An extended correction makes every
+ratio and product pair kernel vanish on the diagonal. A macroscopic pair
+band of width comparable to the square root of the natural cutoff then has
+a vanishing absolute payment. Large-common-factor difference coefficients
+admit an Euler--Maclaurin transformation with a globally vanishing remainder.
+For product terms we prove an oscillation-preserving finite
+Poisson/incomplete-Fresnel formula with explicit endpoint transitions and
+a globally paid error. An exact M\"obius decomposition keeps the primitive
+ratio and product frontier coupled, with a uniform sublattice Poisson error.
+The prescribed leading stationary reflection has small weight, center,
+and carrier mismatches, but preserves the threshold quadratic and changes
+the cutoff range. The required opposite signed bound for the retained
+resonant and boundary terms remains open. The paper establishes reductions
+and scoped obstructions, not a uniform collision exclusion or a proof of
+the Riemann hypothesis.
+\end{abstract}
+\tableofcontents
+
+\section{Problem, scope, and main reductions}
+\label{sec:intro}
+Project 09 investigates the arithmetic information visible in the complete
+finite approximation to the Riemann heat flow. Its purpose is to replace
+generic moment or independent-phase estimates by expressions that retain
+the prescribed coefficients, the common height frequency, and both
+ratio and product correlations.
+
+The genuine heat function is normalized by
+\[
+H_t(z)=\int_0^\infty e^{tu^2}\Phi(u)\cos(zu)\dd u,
+\qquad
+\Phi(u)=\sum_{n\ge1}(2\pi^2n^4e^{9u}-3\pi n^2e^{5u})
+                           e^{-\pi n^2e^{4u}},
+\]
+so that $\partial_tH_t=-H_t''$ and
+$H_0(z)=\xi(1/2+iz/2)/8$. The classical threshold and the effective
+approximation and zero count used here are recorded in
+\cite{polymath}; this paper does not reprove those imported results.
+At an all-real threshold an ordinary real double zero has a necessary
+fourth-derivative inequality. After normalization, its paid arithmetic
+counterpart is a quadratic in centered moments.
+Our objective is an opposite inequality for the actual finite state.
+
+The finite algebra below holds with the physical center, time, natural
+integer cutoff, and selected coefficients frozen. Derivatives in
+auxiliary summation variables are distinguished from genuine spatial
+derivatives. Uniform asymptotic bounds mean all sufficiently small
+positive times on the closed sector
+$1\le\kappa\le3/2$; they do not supply estimates over complementary
+parameters or the time-zero endpoint.
+
+The principal analytical results have four components. First, a
+candidate-paid degree-six extension cancels the diagonal separately in
+each of the four pair kernels. Second, smoothing of difference
+coefficients and a finite incomplete-Fresnel transformation of product
+coefficients give explicit main terms with globally controlled errors.
+Third, M\"obius inversion represents the small-common-factor frontier by
+coupled sublattice quadratics without imposing candidate equations on the
+sublattices. Fourth, exact physical reflection identities explain both
+the useful near symmetry and the limitation of a leading stationary
+reflection argument.
+
+The proofs consolidate the project research notes \cite{projectnotes}
+and the analytical heat continuations \cite{heatnotes}. Numerical controls
+from the earlier scouts motivate some obstructions but are not used to
+prove the analytical transformation theorems. No novelty in the literature
+is asserted.
+
+\section{The prescribed finite orbit and its raw jets}
+\label{fo:state}
+
+The finite state used here is the prescribed reflected approximation,
+rather than a trigonometric polynomial with arbitrary coefficients.
+For a complex spatial argument $z$, put $s=(1-iz)/2$ and, with
+principal logarithms, define
+\begin{align}
+m_0(s)&=\Log s+\Log(s-1)-\frac{s}{2}\log\pi
+ +\log\frac{\sqrt{2\pi}}{16}
+ +\left(\frac{s}{2}-\frac12\right)\Log\frac{s}{2}-\frac{s}{2},
+ \label{fo:m0}\\
+\alpha(s)&=m_0'(s)=\frac1{2s}+\frac1{s-1}
+ +\frac12\Log\frac{s}{2\pi},\qquad
+m_t(s)=m_0(s)+\frac{t}{4}\alpha(s)^2.\nonumber
+\end{align}
+The relevant neighborhoods of the large positive real spatial axis
+avoid the logarithmic cuts.  For a fixed positive integer $N$, let
+\begin{align}
+P_{t,N}(s)&=\sum_{n\le N}
+ \exp\left\{\frac{t}{4}\log^2 n
+       -\left(s+\frac{t}{2}\alpha(s)\right)\log n\right\},
+ \label{fo:approximation}\\
+G_{t,N}(z)&=e^{m_t(s)}P_{t,N}(s)
+           +e^{m_t(1-s)}P_{t,N}(1-s),\nonumber\\
+A_t(z)&=\exp\frac{m_t(s)+m_t(1-s)}2,\qquad
+\theta_t(z)=\frac{m_t(s)-m_t(1-s)}{2i},\nonumber\\
+F_{t,N}(z)&=G_{t,N}(z)/A_t(z),
+ \qquad Q_t(z)=H_t(z)/A_t(z).\nonumber
+\end{align}
+Thus $A_t$ is nonvanishing, and on the real axis $A_t>0$ and
+$F_{t,N},Q_t,\theta_t$ are real.  Consequently
+\begin{equation}
+H_t(x)=H_t'(x)=0\quad\Longleftrightarrow\quad
+Q_t(x)=Q_t'(x)=0.
+\label{fo:collision-equivalence}
+\end{equation}
+
+Throughout the analytical estimates we use the closed parameter sector
+\begin{equation}
+0<t\le\frac1{20},\qquad 1\le\kappa\le\frac32,\qquad
+L=\frac{\kappa}{t},\qquad x=4\pi e^L,\qquad
+N=\left\lfloor\sqrt{e^L+t/16}\right\rfloor.
+\label{fo:sector}
+\end{equation}
+Every spatial derivative holds $t$ and this integer $N$ fixed.
+The scale $L$ and the centering used below are the values at the chosen
+center; neither is differentiated along \eqref{fo:sector}.
+The complete fixed-cutoff disk estimate established for the parent
+investigation will be used in the form
+\begin{equation}
+\left|Q_t(z)-F_{t,N}(z)\right|\le\eta_N
+ \quad (|z-x|\le L^{-1}),\qquad
+\eta_N\le5e^{-\mathfrak b/t},\qquad
+\mathfrak b=\frac{\kappa(\kappa+4)}{16}.
+\label{fo:disk-input}
+\end{equation}
+It includes conversion to $A_t$, reflection, and all possible
+natural-cutoff changes in the disk.  This is an imported approximation
+input \cite{polymath,heatnotes}, not a new smaller-cutoff theorem.
+Cauchy's formula gives
+\begin{equation}
+\left|Q_t^{(j)}(x)-F_{t,N}^{(j)}(x)\right|
+ \le j!L^j\eta_N\qquad(j\ge0).
+\label{fo:cauchy}
+\end{equation}
+
+At the real center, write $\alpha=\alpha_r+i\alpha_i$ and
+$\alpha'=U+iV$, where the prime on $\alpha$ means its complex
+$s$ derivative.  Define
+\begin{align}
+\sigma&=\frac12+\frac{t\alpha_r}{2},&
+w_n&=n^{-\sigma}e^{t\log^2 n/4},&
+T&=\frac{x-t\alpha_i}{2},\label{fo:physical-data}\\
+\phi_n&=\theta_t+T\log n,&
+c&=\frac12\left(1+\frac{tU}{2}\right),&
+d&=\frac{tV}{4},\nonumber\\
+\Omega&=\frac12\operatorname{Re}\{\alpha(1+t\alpha'/2)\},&
+\mu&=\frac{\Omega}{c},&
+\epsilon&=\frac dc.\nonumber
+\end{align}
+The exact real-axis formulas are
+\begin{align}
+\alpha_r&=\frac L2+\frac14\log(1+x^{-2})-\frac1{1+x^2},&
+\alpha_i&=\frac{3x}{1+x^2}-\frac12\arctan x,\label{fo:real-data}\\
+U&=\frac{7x^2-5}{(1+x^2)^2},&
+V&=\frac{x(x^2+5)}{(1+x^2)^2},\nonumber\\
+\theta_t&=-\pi+\frac14\arctan x+\frac x4(1-L)
+ -\frac x8\log(1+x^{-2})+\frac t2\alpha_r\alpha_i.\nonumber
+\end{align}
+In particular $c$ is uniformly bounded above and away from zero;
+$0.49<c<0.51$ is a convenient reserve on \eqref{fo:sector}.
+The physical sum is
+\begin{equation}
+q_n=w_ne^{i\phi_n},\qquad F_{t,N}(x)=2\operatorname{Re}\sum_{n\le N}q_n,
+\qquad
+M_j=\sum_{n\le N}q_n\rho_n^j=X_j+iY_j,\quad
+\rho_n=\log n-\mu.
+\label{fo:moments}
+\end{equation}
+
+If $\nu_p(n)$ is the exponent of $p$ in $n$, the same sum is a finite
+prime-torus polynomial:
+\begin{equation}
+\sum_{n\le N}q_n
+ =e^{i\theta_t}\sum_{n\le N}w_n
+       \prod_{p\le N}\left(e^{iT\log p}\right)^{\nu_p(n)}.
+\label{fo:torus}
+\end{equation}
+Unique factorization proves this identity without a density theorem.
+All composites and all prescribed weights remain present.  Haar
+orthogonality on the enlarged torus is an averaged statement; it is not
+orthogonality at this one common height.  Moreover, for
+$\mathcal D=\sum_{p\le N}\log p\,\partial_{\arg Z_p}$,
+a monomial has $\mathcal D^2=-\log^2 n$.  The heat factor is generated
+by $-\mathcal D^2/4$ on the finite monomial span.  Its positive-time
+exponential on the full infinite span is unbounded.  The physical state
+also moves $T$, its coefficients, and its carrier.
+
+\subsection{Frozen centering and exact Bell rows}
+\label{fo:raw-jets}
+Direct differentiation of \eqref{fo:physical-data} gives
+\begin{equation}
+\frac{q_n'}{q_n}=-i\Omega+(-d+ic)\log n.
+\label{fo:log-derivative}
+\end{equation}
+In a local differentiation calculation freeze $\mu$ and write
+\begin{equation}
+v_n=A+B\rho_n,\qquad A=-i\Omega+B\mu,\qquad B=-d+ic.
+\label{fo:AB}
+\end{equation}
+At the center $A=a_{\rm c}:=-d\mu$ is real.  Its derivatives are
+$A^{(h)}=-i\Omega^{(h)}+B^{(h)}\mu$ with $\mu$ frozen, and need not
+be real.  Differentiating the center identity $A=-d\mu$ as though it
+held on a moving centered chart would lose terms.
+
+The raw multipliers are
+\begin{align}
+\mathcal B_0&=1,&\mathcal B_1&=v,\nonumber\\
+\mathcal B_2&=v^2+v',&
+\mathcal B_3&=v^3+3vv'+v'',\label{fo:Bell}\\
+\mathcal B_4&=v^4+6v^2v'+3(v')^2+4vv''+v'''.\nonumber
+\end{align}
+Indeed differentiating $q_n\mathcal B_j$ proves
+$\mathcal B_{j+1}=v_n\mathcal B_j+\mathcal B_j'$ and
+$F_{t,N}^{(j)}/2=\operatorname{Re}\sum_n q_n\mathcal B_j(v_n)$.
+For an explicit independent coefficient description let
+$\mathcal B_j(v_n)=\sum_{k=0}^j p_{jk}\rho_n^k$.  Then
+\begin{align}
+p_{20}&=A^2+A',&p_{21}&=2AB+B',&p_{22}&=B^2,\nonumber\\
+p_{30}&=A^3+3AA'+A'',&
+p_{31}&=3A^2B+3(AB'+BA')+B'',\label{fo:Bell-rows}\\
+p_{32}&=3AB^2+3BB',&p_{33}&=B^3,\nonumber
+\end{align}
+and
+\begin{align}
+p_{40}&=A^4+6A^2A'+3(A')^2+4AA''+A''',\nonumber\\
+p_{41}&=4A^3B+6(A^2B'+2ABA')+6A'B'
+                  +4(AB''+BA'')+B''',\nonumber\\
+p_{42}&=6A^2B^2+6(2ABB'+B^2A')+3(B')^2+4BB'',
+ \label{fo:fourth-row}\\
+p_{43}&=4AB^3+6B^2B',\qquad p_{44}=B^4.\nonumber
+\end{align}
+
+The two observed lower coordinates are exactly
+\begin{equation}
+X_0=F_{t,N}/2,\qquad e_1=F_{t,N}'/2
+   =a_{\rm c}X_0-dX_1-cY_1=a_{\rm c}X_0-cZ_1,
+\qquad Z_1=Y_1+\epsilon X_1.
+\label{fo:candidate-coordinates}
+\end{equation}
+At a genuine collision, \eqref{fo:cauchy} therefore implies
+\begin{equation}
+|X_0|\le a_0:=\eta_N/2,\quad |e_1|\le L\eta_N/2,
+\quad |Z_1|\le a_1:=\frac{(L+|a_{\rm c}|)\eta_N}{2c}.
+\label{fo:candidate-box}
+\end{equation}
+Neither $Y_0$ nor $X_1$ is independently zero.  For example, writing
+$p_{j0}=u_0+iv_0$, $p_{j1}=u_1+iv_1$, exact elimination of $Y_1$
+in \eqref{fo:Bell-rows}--\eqref{fo:fourth-row} yields
+\begin{align}
+F_{t,N}^{(j)}/2={}&-v_0Y_0+(u_1+dv_1/c)X_1
+     +\operatorname{Re}\sum_{k=2}^j p_{jk}M_k\nonumber\\
+&+(u_0-a_{\rm c}v_1/c)X_0+(v_1/c)e_1,
+\qquad 2\le j\le4.
+\label{fo:elimination}
+\end{align}
+The last line costs at most
+$\eta_N|u_0-a_{\rm c}v_1/c|/2+L\eta_N|v_1|/(2c)$.
+This identifies the actual hidden quadratures rather than replacing a
+real value/derivative candidate by a complex zero of the torus sum.
+
+\subsection{The exact finite heat residual}
+\label{fo:heat-residual}
+Let
+\begin{equation}
+b_n(s,t)=\exp\{m_0(s)-s\log n+t(\alpha(s)-\log n)^2/4\},
+\quad h=\alpha-\log n,\quad B_s=1+t\alpha'/2.
+\end{equation}
+The logarithmic derivatives are $(\log b_n)_s=hB_s$ and
+$(\log b_n)_{ss}=\alpha'B_s+(t/2)h\alpha''$.  Hence
+\begin{equation}
+\partial_t b_n-\frac14\partial_s^2b_n=R_n b_n,
+\quad
+R_n=\frac14\{h^2(1-B_s^2)-\alpha'B_s-(t/2)h\alpha''\}.
+\label{fo:summand-residual}
+\end{equation}
+Using $\partial_x^2=-\partial_s^2/4$ on both branches gives
+\begin{equation}
+\partial_tG_{t,N}+G_{t,N}''=R_G,
+\quad
+R_G=\sum_{n\le N}\{R_n(s)b_n(s)+R_n(1-s)b_n(1-s)\}.
+\label{fo:G-residual}
+\end{equation}
+With $\beta_A=A_t'/A_t$ and
+$\varrho_A=A_t''/A_t+(\partial_tA_t)/A_t$, division by the same
+normalizer gives
+\begin{equation}
+\partial_tF_{t,N}=-F_{t,N}''-2\beta_AF_{t,N}'-\varrho_AF_{t,N}
+                   +R_G/A_t,\qquad
+\partial_tQ_t=-Q_t''-2\beta_AQ_t'-\varrho_AQ_t.
+\label{fo:normalized-residual}
+\end{equation}
+Already at $t=0$, $R_n=-\alpha'/4$.  The finite state is thus an
+approximation to the scalar heat flow, not an invariant finite heat
+manifold.  A spatial disk bound alone does not bound the time derivative
+of its approximation error.
+
+\section{A complete paid threshold reduction}
+\label{fo:threshold-section}
+
+\begin{lemma}[Uniform complete centered moments]
+\label{fo:moment-lemma}
+For every fixed nonnegative integer $j$, uniformly as $t\downarrow0$
+in \eqref{fo:sector},
+\begin{equation}
+B_j:=\sum_{n\le N}w_n|\rho_n|^j\le C_jNw_N,
+\quad \mu=\log N+O(N^{-1}),\quad
+Nw_N\asymp e^{\mathfrak a/t},\quad
+\mathfrak a=\frac{\kappa(4-\kappa)}{16}.
+\label{fo:moment-bounds}
+\end{equation}
+The more general real-common-factor bound is
+\begin{equation}
+\sum_{a\le N/u}w(ua)(1+|\log(ua)-\mu|)^j
+ \le C_j\frac Nu w_N\qquad(1\le u\le N),
+\label{fo:real-index-moments}
+\end{equation}
+where $w(v)=v^{-\sigma}e^{t\log^2v/4}$.
+\end{lemma}
+\begin{proof}
+The explicit data \eqref{fo:real-data} and the natural floor give
+$\mu=\log N+O(N^{-1})$ and
+$c_\sigma:=\sigma-(t/2)\log N=1/2+o(1)$.  They also give
+$\log(Nw_N)=\mathfrak a/t+o(1)$, uniformly.  Set $A_u=N/u$ and
+$y_a=\log(A_u/a)$.  The exact weight ratio is
+\begin{equation}
+w(ua)/w_N=\exp(c_\sigma y_a+t y_a^2/4).
+\label{fo:weight-distance}
+\end{equation}
+For all sufficiently small time choose the uniform reserves
+$7/16\le c_\sigma\le9/16$, $t\log N\le13/16$, and
+$|\mu-\log N|\le1$.  Then
+$c_\sigma+ty_a/4\le49/64$.  The bin $h\le y_a<h+1$ contains at
+most $A_ue^{-h}$ integers.  In that bin the weight ratio is at most
+$e^{49(h+1)/64}$ and the polynomial factor at most $(h+3)^j$.
+Thus \eqref{fo:real-index-moments} holds with the admissible constant
+\begin{equation}
+C_j=e^{49/64}\sum_{h\ge0}e^{-15h/64}(h+3)^j<\infty.
+\end{equation}
+This counts the final low-index bin too.  Taking $u=1$ proves the
+complete moment bound.  No endpoint term or macroscopic complement is
+removed.
+\end{proof}
+
+For $j=2,3,4$, define the measured complete Bell residual
+\begin{equation}
+E_j=2\sum_{n\le N}w_n
+       |\mathcal B_j(v_n)-(ic\rho_n)^j|.
+\label{fo:Ej}
+\end{equation}
+For clarity put $b=ic\rho_n$ and $\xi=-d\log n$, so $v_n=b+\xi$
+at the center.  Their exact residual polynomials are
+\begin{align}
+\mathcal B_2-b^2&=2b\xi+\xi^2+v',\nonumber\\
+\mathcal B_3-b^3&=3b^2\xi+3b\xi^2+\xi^3+3(b+\xi)v'+v'',
+ \label{fo:residual-polynomials}\\
+\mathcal B_4-b^4&=4b^3\xi+6b^2\xi^2+4b\xi^3+\xi^4
+ +6(b+\xi)^2v'+3(v')^2+4(b+\xi)v''+v'''.\nonumber
+\end{align}
+It follows, with no approximation to the coefficients, that
+\begin{equation}
+g_2=-2c^2X_2,\qquad g_3=2c^3Y_3,\qquad g_4=2c^4X_4,
+\qquad |F_{t,N}^{(j)}-g_j|\le E_j.
+\label{fo:leading-jets}
+\end{equation}
+The explicit data give $\xi=O(x^{-1})$ uniformly up to $N$, and
+$v_n^{(h)}=O_h(x^{-h})$ for fixed $h\ge1$; these are fixed-time,
+fixed-index derivatives.  Lemma~\ref{fo:moment-lemma} and
+\eqref{fo:residual-polynomials} consequently show
+\begin{equation}
+E_j=O_j(Nw_N/x)=O_j(e^{\mathfrak a/t}/x),\qquad 2\le j\le4.
+\label{fo:Ej-scale}
+\end{equation}
+The measured quantity used at a particular center remains
+\eqref{fo:Ej}, rather than an unspecified asymptotic constant.
+
+\subsection{The strengthened necessary sign}
+\label{fo:count-threshold}
+The following counting and canonical-product hypotheses are imported
+from the genuine heat flow.  At an all-real time, opposite-root pairing
+permits logarithmic differentiation of the canonical product.  Also an
+absolute symbolic constant $C_{\rm count}\ge0$ may be fixed so that
+\begin{equation}
+|N_\tau(R)-p_\tau(R)|\le C_{\rm count}\log(2+R),
+\quad 0<\tau\le\frac12,\quad R\ge4\pi,
+\label{fo:count-input}
+\end{equation}
+where $N_\tau$ counts all zeros with $0<\operatorname{Re}\rho\le R$
+including multiplicity, and
+\begin{equation}
+p_\tau(R)=\frac R{4\pi}\log\frac R{4\pi}-\frac R{4\pi}
+             +\frac{11}{8}+\frac\tau{16}\log\frac R{4\pi}.
+\end{equation}
+The time $\tau$ in this input is distinct from the arithmetic
+frequency $T$ \cite{polymath,heatnotes}.  No numerical value of
+$C_{\rm count}$ is asserted.
+Define
+\begin{equation}
+D_0=8\pi(4C_{\rm count}+1),\qquad
+x_{\rm count}=\max\{(4\pi)^2,2D_0,3\},\qquad
+\gamma=18(\log A_t)''+9/x^2,
+\end{equation}
+\begin{equation}
+\gamma_{\rm count}=\gamma+\frac{9\log x}{2D_0^2},\qquad
+\Gamma=\gamma_{\rm count}/c^2.
+\label{fo:Gamma}
+\end{equation}
+All kernel algebra below is valid for any real frozen $\Gamma$;
+the physical scale estimates use \eqref{fo:Gamma}.  In that case
+$\gamma=O(x^{-2})$ and $\Gamma=\Theta(L)$ as $t\downarrow0$.
+
+\begin{proposition}[Necessary ordinary-double threshold sign]
+\label{fo:threshold-sign}
+Assume $x\ge x_{\rm count}$ is an ordinary double zero at an all-real
+time of the genuine even heat function.  Let $q_j=Q_t^{(j)}(x)$.
+Then
+\begin{equation}
+2q_3^2-3q_2q_4-\gamma_{\rm count}q_2^2\ge0.
+\label{fo:necessary-sign}
+\end{equation}
+\end{proposition}
+\begin{proof}
+Deflate the double root and write $h(z)=Q_t(z)/(z-x)^2$ locally.
+For $S_0$ the inverse-square sum over the roots of $H_t$ remaining
+after removing its two copies of $x$, logarithmic differentiation gives
+\begin{equation}
+S_0=\left(\frac{q_3}{3q_2}\right)^2
+       -\frac{q_4}{6q_2}-(\log A_t)''.
+\end{equation}
+The mirror root $-x$ contributes $1/(2x^2)$.  On
+$[x+D_0,x+2D_0]$ the derivative of $p_t$ is at least
+$\log x/(8\pi)$ and each endpoint error in
+\eqref{fo:count-input} is at most $2C_{\rm count}\log x$.
+Therefore this disjoint interval contains at least
+$(D_0/(8\pi)-4C_{\rm count})\log x=\log x$ roots counted with
+multiplicity.  At the all-real time each supplies at least
+$(2D_0)^{-2}$ to $S_0$.  Hence
+\begin{equation}
+S_0\ge\frac1{2x^2}+\frac{\log x}{4D_0^2}.
+\end{equation}
+Multiplication by $18q_2^2$ gives \eqref{fo:necessary-sign}.
+The all-real hypothesis is essential in converting the counted roots
+to a positive inverse-square sum.
+\end{proof}
+
+Let
+\begin{equation}
+\widehat\delta_j=j!L^j\eta_N+E_j,\qquad
+\mathcal K=2Y_3^2+3X_2X_4-\Gamma X_2^2.
+\label{fo:threshold-K}
+\end{equation}
+The complete measured quadratic perturbation payment is
+\begin{align}
+\widehat\Delta_{\rm count}={}&
+4|g_3|\widehat\delta_3+2\widehat\delta_3^2
+ +3\bigl(|g_2|\widehat\delta_4+|g_4|\widehat\delta_2
+                         +\widehat\delta_2\widehat\delta_4\bigr)
+ \nonumber\\
+&+|\gamma_{\rm count}|
+              (2|g_2|\widehat\delta_2+\widehat\delta_2^2).
+\label{fo:Delta}
+\end{align}
+Indeed \eqref{fo:cauchy} and \eqref{fo:leading-jets} give
+$|q_j-g_j|\le\widehat\delta_j$.  Expanding squares and products
+proves the payment, and substitution gives
+\begin{equation}
+2g_3^2-3g_2g_4-\gamma_{\rm count}g_2^2=4c^6\mathcal K.
+\label{fo:threshold-scaling}
+\end{equation}
+A sufficient exclusion of the collision in
+Proposition~\ref{fo:threshold-sign} is consequently
+\begin{equation}
+\mathcal K+\widehat\Delta_{\rm count}/(4c^6)<0.
+\label{fo:exclusion-target}
+\end{equation}
+This is the missing opposite arithmetic sign, not an established
+inequality.  The strengthened coefficient must be included when
+recomputing \eqref{fo:Delta}; the old payment with $\gamma$ cannot
+be reused automatically.  The estimates above yield the admissible
+uniform upper scale
+\begin{equation}
+\widehat\Delta_{\rm count}
+ =O\left(L^4N^{-\kappa/4}+L^6N^{-(\kappa+4)/4}\right)=o(1).
+\label{fo:Delta-scale}
+\end{equation}
+For example the products of a leading jet $O(e^{\mathfrak a/t})$
+and a holomorphic jet error $O(L^je^{-\mathfrak b/t})$ have exponent
+$\mathfrak a-\mathfrak b=-\kappa^2/8$, giving $N^{-\kappa/4}$.
+Two holomorphic errors have exponent $-2\mathfrak b$, giving
+$N^{-(\kappa+4)/4}$.  The new $O(L)$ normalizer factor contributes
+at most $L^3$ and $L^5$ in these two cases and is absorbed by
+\eqref{fo:Delta-scale}; Bell residual products are smaller.
+The displayed scale is an upper budget, not a positive lower bound for
+the measured payment.  A fourth-jet test can be vacuous at higher
+multiplicity, so this ordinary-double criterion alone is not global
+collision exclusion.
+
+\section{Candidate-paid duals and the signed channels}
+\label{fo:duals}
+
+Set $e=(X_0,Z_1)^T$, $u=(X_2,Y_3,X_4)^T$, and
+\begin{equation}
+Q=\begin{pmatrix}-\Gamma&0&3/2\\0&2&0\\3/2&0&0\end{pmatrix},
+\qquad \mathcal K=u^TQu.
+\end{equation}
+For a real symmetric $2\times2$ matrix $\Lambda$ and a real
+$2\times3$ matrix $B$, chosen and frozen at the center, define
+\begin{equation}
+\mathcal K_{\Lambda,B}=\mathcal K+e^T\Lambda e+2e^TBu,
+\qquad
+\mathbb Q=\begin{pmatrix}\Lambda&B\\B^T&Q\end{pmatrix}.
+\label{fo:dual-definition}
+\end{equation}
+The added expression vanishes on the exact finite candidate $e=0$.
+On the paid box \eqref{fo:candidate-box}, its absolute value is at most
+\begin{equation}
+\Pi_{\Lambda,B}=
+|\Lambda_{00}|a_0^2+2|\Lambda_{01}|a_0a_1+|\Lambda_{11}|a_1^2
+ +2\sum_{j=0}^2(a_0|B_{0j}|+a_1|B_{1j}|)|u_j|.
+\label{fo:box-dual-payment}
+\end{equation}
+Thus $\mathcal K_{\Lambda,B}\le U_{\Lambda,B}$ would be useful only
+with the same parameters in the paid sufficient criterion
+\begin{equation}
+U_{\Lambda,B}+\Pi_{\Lambda,B}
+                +\widehat\Delta_{\rm count}/(4c^6)<0.
+\end{equation}
+Large dual coefficients have no free margin.
+
+Define the real feature vectors
+\begin{equation}
+r(\rho)=(1,\epsilon\rho,\rho^2,0,\rho^4)^T,
+\qquad s(\rho)=(0,\rho,0,\rho^3,0)^T.
+\end{equation}
+For an ordered pair, let $R_{nm}=r_n^T\mathbb Qr_m$,
+$S_{nm}=s_n^T\mathbb Qs_m$, and $C_{nm}=r_n^T\mathbb Qs_m$.
+Product-to-sum proves exactly
+\begin{align}
+\mathcal K_{\Lambda,B}=\sum_{n,m\le N}w_nw_m\{&
+D_c(n,m)\cos\Delta_{nm}+D_s(n,m)\sin\Delta_{nm}\nonumber\\
+&+P_c(n,m)\cos\Sigma_{nm}+P_s(n,m)\sin\Sigma_{nm}\},
+\label{fo:four-channels}\\
+D_c&=(R+S)/2,\qquad P_c=(R-S)/2,\nonumber\\
+D_s&=(C_{mn}-C_{nm})/2,\qquad
+P_s=(C_{nm}+C_{mn})/2,\nonumber\\
+\Delta_{nm}&=T\log(n/m),\qquad
+\Sigma_{nm}=2\theta_t+T\log(nm).\nonumber
+\end{align}
+The difference-sine orientation follows from
+$\sin(\phi_n-\phi_m)=\sin\phi_n\cos\phi_m-\cos\phi_n\sin\phi_m$.
+Its coefficient and phase are both antisymmetric, so the ordered
+sum does not cancel.  The prescribed weight factors as
+\begin{equation}
+w_nw_m=(nm)^{-\sigma}
+  \exp\{t\log^2(nm)/8+t\log^2(n/m)/8\}.
+\label{fo:pair-weight}
+\end{equation}
+Difference terms can be grouped by $n=ja,m=jb$ with $(a,b)=1$;
+product terms can be grouped by $nm=k$ and its divisors.  These are
+identities with one common $T$ and carrier, not independent Euler
+factors.  For the physical block
+$\mathcal B=\{\lfloor N/2\rfloor+1,\ldots,N\}$ and its complete
+complement $\mathcal C$, every one of
+$\mathcal B\times\mathcal B$, $\mathcal B\times\mathcal C$,
+$\mathcal C\times\mathcal B$, $\mathcal C\times\mathcal C$
+is retained by inserting its literal indicator inside the grouped sum.
+
+For zero dual parameters both sine kernels vanish.  With
+$h=\rho_n+\rho_m$ and $\delta=\rho_n-\rho_m$ the remaining kernels are
+\begin{align}
+D_c&=\frac{(h^2-\delta^2)^2(5h^2+\delta^2)}{128}
+                  -\frac{\Gamma(h^2-\delta^2)^2}{32},\nonumber\\
+P_c&=\frac{(h^2-\delta^2)^2(h^2+5\delta^2)}{128}
+                  -\frac{\Gamma(h^2-\delta^2)^2}{32}.
+\label{fo:base-kernels}
+\end{align}
+The leading coefficients are nonnegative while their cosine factors are
+signed.  This does not supply the negative sign in
+\eqref{fo:exclusion-target}.
+
+\subsection{A sharp one-sided correlated payment}
+\label{fo:curved-payment}
+The disk error has a sharper first-jet body than the rectangle
+\eqref{fo:candidate-box}.  At a collision apply Schwarz--Pick to
+$g(\zeta)=(Q_t-F_{t,N})(x+\zeta/L)/\eta_N$ on the unit disk.
+Real symmetry and $Q_t=Q_t'=0$ give the necessary condition
+\begin{equation}
+(2X_0/\eta_N)^2+2|a_{\rm c}X_0-cZ_1|/(L\eta_N)\le1.
+\label{fo:curved-body}
+\end{equation}
+Indeed $|g'(0)|\le1-|g(0)|^2$.  Put
+\begin{equation}
+\mathcal C_0=\{(s,v):s^2+|v|\le1\},\qquad
+\mathsf D=\begin{pmatrix}\eta_N/2&0\\
+ a_{\rm c}\eta_N/(2c)&-L\eta_N/(2c)\end{pmatrix}.
+\end{equation}
+Then $e=\mathsf Dz$ for a $z\in\mathcal C_0$.  The sharp one-sided
+payment on this necessary body is
+\begin{equation}
+\Pi^-_{\Lambda,B}(u)=
+ -\min_{z\in\mathcal C_0}\{(\mathsf Dz)^T\Lambda\mathsf Dz
+                            +2(\mathsf Dz)^TBu\}\ge0.
+\label{fo:onesided}
+\end{equation}
+It bounds $\mathcal K-\mathcal K_{\Lambda,B}$ from above, and is
+no larger than \eqref{fo:box-dual-payment}.  The sharpness here is
+for the stated first-jet body, not a characterization of every
+prescribed arithmetic state.
+
+\begin{proposition}[Finite exact payment minimization]
+\label{fo:cubic-payment}
+Let $H=\mathsf D^T\Lambda\mathsf D=\left(\begin{smallmatrix}h&k\\k&r\end{smallmatrix}\right)$,
+$g=\mathsf D^TBu=(l,m)^T$, and
+$q(s,v)=hs^2+2ksv+rv^2+2ls+2mv$.
+Its minimum on $\mathcal C_0$ is the minimum of its values at
+$(\pm1,0)$, at every real derivative root in $(-1,1)$ of
+\begin{equation}
+P_\tau(s)=rs^4-2\tau ks^3+(h-2r-2\tau m)s^2
+                +(2\tau k+2l)s+r+2\tau m,
+\quad \tau=\pm1,
+\label{fo:boundary-polynomial}
+\end{equation}
+and, if $\delta_H=hr-k^2\ne0$, at the feasible stationary point
+\begin{equation}
+s_*=(km-rl)/\delta_H,\quad v_*=(kl-hm)/\delta_H,
+\quad q(s_*,v_*)=(-rl^2+2klm-hm^2)/\delta_H.
+\label{fo:payment-stationary}
+\end{equation}
+An identically constant boundary is already covered by its endpoints.
+No additional interior value is necessary when $H$ is singular.
+\end{proposition}
+\begin{proof}
+The two boundary arcs are $v=\tau(1-s^2)$, and substitution gives
+\eqref{fo:boundary-polynomial}; their critical equations are cubic.
+An interior minimum satisfies $Hz+g=0$, which gives
+\eqref{fo:payment-stationary} in the nonsingular case.  If $H$ is
+singular and a stationary point exists, the objective is constant on
+a line through that point in a nonzero null direction of $H$.
+The line reaches the boundary of the compact body with the same value.
+This includes stationary ridges and the identically zero quadratic.
+\end{proof}
+For a complete independent moment box, the payment is exactly the
+maximum of \eqref{fo:onesided} over its at most eight common corners:
+for fixed $z$ the objective is affine in $u$, so the two maxima can be
+interchanged.  Likewise an independent interval box for
+$(h,k,r,l,m)$ can be paid at its at most 32 common corners.
+These are exact finite optimization facts; actual correlations lost
+when forming a box can improve the payment further.
+
+\subsection{What norm relaxation and Gaussian averaging retain}
+\label{fo:relaxations}
+The threshold matrix $Q$ has two positive and one negative eigenvalue:
+its $Y_3$ diagonal is $2$ and its $X_2,X_4$ block has determinant
+$-9/4$.  This limits a precise candidate-conditioned norm relaxation.
+To state it, put $W=\sum_nw_n$, $p_n=w_n/W$, and
+$R_*^2=\sum_np_n\rho_n^2>0$.  In the real Hilbert space with weights
+$p_n$, use the two lower shapes
+\begin{equation}
+a_n=\cos\phi_n,\quad
+b_n=(\rho_n/R_*)(\sin\phi_n+\epsilon\cos\phi_n)
+\end{equation}
+and the three upper shapes
+$f_2=(\rho/R_*)^2\cos\phi$,
+$f_3=(\rho/R_*)^3\sin\phi$,
+$f_4=(\rho/R_*)^4\cos\phi$.  Let $G$ be the lower Gram matrix,
+$C$ the lower--upper Gram block, $F$ the upper Gram matrix, and
+$H=F-C^TG^{-1}C$ when $G$ is invertible.  If
+\begin{equation}
+z=\left(X_0/W,Z_1/(WR_*)\right)^T,\quad
+m=\left(X_2/(WR_*^2),Y_3/(WR_*^3),X_4/(WR_*^4)\right)^T,
+\quad v=C^TG^{-1}z,
+\end{equation}
+projection and Cauchy--Schwarz give
+\begin{equation}
+(m-v)(m-v)^T\preceq(1-z^TG^{-1}z)H.
+\label{fo:Gram-relaxation}
+\end{equation}
+To verify it against any vector of upper coefficients, project the
+constant function and the corresponding upper shape off the lower
+span.  Their squared residual norms are respectively
+$1-z^TG^{-1}z$ and the appropriate quadratic form in $H$.
+At an exact candidate $z=0$, the sharp norm-ball maximum is
+\begin{equation}
+\sup_{mm^T\preceq H}m^TQ_*m
+ =\max\{0,\lambda_{\max}(H^{1/2}Q_*H^{1/2})\},\qquad
+Q_*=\begin{pmatrix}-\Gamma/R_*^2&0&3/2\\0&2&0\\3/2&0&0\end{pmatrix}.
+\label{fo:relaxation-maximum}
+\end{equation}
+If $H$ is positive definite this maximum is strictly positive by
+congruence and inertia.  This particular relaxation cannot prove an
+opposite threshold sign.  If a Gram is singular, projection onto its
+range, or a Moore--Penrose inverse, is required; positivity is not
+asserted for every actual height.
+
+The prescribed coefficients themselves give an additional exact
+Gaussian relation.  Set
+\begin{equation}
+b_n=e^{-\sigma\mu+t\mu^2/4}
+          e^{-(\sigma-t\mu/2)\rho_n},\qquad
+a_n(Z)=b_n e^{\sqrt{t/2}\,Z\rho_n},
+\label{fo:Gaussian-tilt}
+\end{equation}
+where $Z$ is a standard real Gaussian.  Completing the square shows
+$\mathbb Ea_n(Z)=w_n$.  For the actual five-vector shape
+$f_n=r(\rho_n)\cos\phi_n+s(\rho_n)\sin\phi_n$, let
+$V(Z)=\sum_na_n(Z)f_n$ and $V=\mathbb EV(Z)=(e,u)$.  Then
+\begin{align}
+\mathcal K_{\Lambda,B}(V)
+ &=\mathbb E\mathcal K_{\Lambda,B}(V(Z))
+                  -\operatorname{tr}(\mathbb Q\mathcal C_t),
+ \label{fo:covariance}\\
+\mathcal C_t
+ &=\sum_{n,m\le N}w_nw_m
+       (e^{t\rho_n\rho_m/2}-1)f_nf_m^T
+ =\sum_{k\ge1}\frac{(t/2)^k}{k!}V^{[k]}(V^{[k]})^T,\nonumber\\
+V^{[k]}
+ &=\left(X_k,Y_{k+1}+\epsilon X_{k+1},
+                      X_{k+2},Y_{k+3},X_{k+4}\right)^T.\nonumber
+\end{align}
+The sums over $n,m$ are finite and the series converges absolutely,
+so Gaussian integration and exponential expansion justify all
+interchanges.  The same four kernels of \eqref{fo:four-channels}
+occur in the covariance, multiplied inside every pair coefficient by
+$e^{t\rho_n\rho_m/2}-1$.  The contraction of a positive covariance
+with the indefinite $\mathbb Q$ has no automatic sign.  Only the mean
+lower coordinates are constrained by the actual candidate; neither
+each tilted state nor each shifted vector $V^{[k]}$ is a candidate.
+
+For completeness the specified absolute covariance envelope has size
+\begin{equation}
+\mathcal E_t:=\sum_{n,m\le N}w_nw_m
+ |e^{t\rho_n\rho_m/2}-1|\,\|f_n\|\|f_m\|
+ \asymp t(Nw_N)^2.
+\label{fo:covariance-envelope}
+\end{equation}
+Here is an elementary bound retaining the complete cutoff.  In bins
+$j\le y_n=\log(N/n)<j+1$, there are at most $2Ne^{-j}$ indices,
+$|\rho_n|\le y_n+O(N^{-1})$, and
+$\|f_n\|\le C(1+y_n)^4$.  The inequality
+$|e^z-1|\le|z|e^{|z|}$ combines the two heat exponents and its
+covariance multiplier into $t(y_n+y_m+o(1))^2/4$.
+After the bin counts the exponential factor is at most
+\begin{equation}
+\exp\{-(1/2-o(1))(j+k)+t(j+k+2+o(1))^2/4+O(1)\}.
+\end{equation}
+Since $j+k\le2\log N=\kappa/t+o(1)$ and $\kappa\le3/2$,
+it is bounded by a constant times $e^{-(j+k)/16}$ for sufficiently
+small time.  All fixed polynomial factors are summable, proving the
+upper bound in \eqref{fo:covariance-envelope}.  For the lower bound
+keep $Ne^{-2}\le n,m\le Ne^{-1}$.  This supplies a fixed positive
+proportion of pairs, each with weight at least a fixed multiple of
+$w_N^2$, $\rho_n\rho_m\ge0.81$, and
+\begin{equation}
+\|f_n\|^2\ge\cos^2\phi_n+\rho_n^6\sin^2\phi_n\ge0.9^6.
+\end{equation}
+Also $e^{t\rho_n\rho_m/2}-1\ge0.405t$.
+This proves the lower bound for every carrier and common height.
+Thus a triangle payment $\|\mathbb Q\|\mathcal E_t$ is exponentially
+large, since $Nw_N\asymp e^{\mathfrak a/t}$.  This diagnoses that
+specified absolute covariance method, not the size or sign of the
+actual signed contraction in \eqref{fo:covariance}.
+
+\section{A diagonal-annihilating extension and the near-pair theorem}
+\label{fo:annihilation}
+
+Define the complete finite-moment extension
+\begin{equation}
+\mathcal J^\dagger=\mathcal K
+       +X_0(\Gamma X_4-3X_6+2\epsilon Y_6)-2Z_1Y_5.
+\label{fo:Jdag}
+\end{equation}
+It agrees with $\mathcal K$ on the exact finite candidate, and
+\begin{equation}
+\mathcal K-\mathcal J^\dagger
+ =X_0(3X_6-\Gamma X_4-2\epsilon Y_6)+2Z_1Y_5.
+\label{fo:Jdag-difference}
+\end{equation}
+Two valid measured candidate payments are
+\begin{align}
+\Pi^\dagger_{\rm box}
+ &=a_0|3X_6-\Gamma X_4-2\epsilon Y_6|+2a_1|Y_5|,
+ \label{fo:Jdag-payment}\\
+\Pi^\dagger_{\rm slab}
+ &=\frac{\eta_N}{2}
+ \left|3X_6-\Gamma X_4-2\epsilon Y_6+\frac{2a_{\rm c}}cY_5\right|
+             +\frac{L\eta_N}{c}|Y_5|.\nonumber
+\end{align}
+The second follows by substituting
+$Z_1=(a_{\rm c}X_0-e_1)/c$ into \eqref{fo:Jdag-difference}.
+Either, or their minimum, bounds
+$|\mathcal K-\mathcal J^\dagger|$.  Lemma~\ref{fo:moment-lemma}
+applies to $j=5,6$, and
+$\epsilon=O(t/x)$, $a_{\rm c}=O(x^{-1})$, $\Gamma=O(L)$ give
+\begin{equation}
+\Pi^\dagger_{\rm box}=O(L\eta_NNw_N)
+                        =O(LN^{-\kappa/4})=o(1).
+\label{fo:Jdag-payment-scale}
+\end{equation}
+Only the two genuine lower-jet tolerances are used.
+The objects $X_6,Y_6,Y_5$ are exact finite logarithmic moments; they
+are not identified with genuine fifth or sixth spatial jets, and no
+such jet approximation is asserted.  The older dual family in
+\eqref{fo:dual-definition} adds features of degree at most five to
+the pair kernel and cannot identically remove its degree-six parts.
+The new expression extends that feature family; it cancels the diagonal
+rather than the entire kernel.
+
+\begin{theorem}[Four exact diagonal-annihilating kernels]
+\label{fo:Jdag-kernels}
+For $a=\rho_n$, $b=\rho_m$, $h=a+b$, and $\delta=a-b$, one has
+\begin{align}
+\mathcal J^\dagger=\sum_{n,m\le N}w_nw_m\{&
+D_c^\dagger\cos\Delta_{nm}+D_s^\dagger\sin\Delta_{nm}\nonumber\\
+&+P_c^\dagger\cos\Sigma_{nm}+P_s^\dagger\sin\Sigma_{nm}\},
+ \label{fo:Jdag-pairs}\\
+D_c^\dagger&=\frac14h^2\delta^2(\Gamma-2h^2-\delta^2),
+ &P_c^\dagger&=\frac14h^2\delta^2(\Gamma-h^2-2\delta^2),\nonumber\\
+D_s^\dagger&=\frac\epsilon2(a-b)(a^5+b^5),
+ &P_s^\dagger&=\frac\epsilon2(a-b)(a^5-b^5).\nonumber
+\end{align}
+All four kernels vanish individually on $n=m$.
+\end{theorem}
+\begin{proof}
+The expansion of \eqref{fo:Jdag}, symmetrized in its full ordered
+pair sum, has a summand
+\begin{equation}
+R\cos\phi_n\cos\phi_m+S\sin\phi_n\sin\phi_m
+ +C_{nm}\cos\phi_n\sin\phi_m+C_{mn}\sin\phi_n\cos\phi_m,
+\end{equation}
+where
+\begin{align}
+R={}&-\Gamma a^2b^2+\frac32(a^2b^4+a^4b^2)
+       +\frac\Gamma2(a^4+b^4)-\frac32(a^6+b^6),\nonumber\\
+S={}&2a^3b^3-ab^5-a^5b,\qquad
+C_{nm}=\epsilon b^5(b-a).\label{fo:Jdag-RSC}
+\end{align}
+For example the drift contribution is
+$2\epsilon(X_0Y_6-X_1Y_5)$, whose unsymmetrized coefficient is
+$2\epsilon(b^6-ab^5)\cos\phi_n\sin\phi_m$.
+Product-to-sum therefore gives $(R+S)/2$, $(R-S)/2$,
+$(C_{mn}-C_{nm})/2$, and $(C_{mn}+C_{nm})/2$ for the four
+channels.  For the cosine factors,
+\begin{equation}
+R=(a^2-b^2)^2\{\Gamma/2-3(a^2+b^2)/2\},\qquad
+S=-ab(a^2-b^2)^2.
+\end{equation}
+Use $a^2-b^2=h\delta$, $a^2+b^2=(h^2+\delta^2)/2$, and
+$ab=(h^2-\delta^2)/4$ to obtain the claimed cosine kernels.
+Also $C_{mn}=\epsilon a^5(a-b)$, so
+\begin{equation}
+C_{mn}-C_{nm}=\epsilon(a-b)(a^5+b^5),\qquad
+C_{mn}+C_{nm}=\epsilon(a-b)(a^5-b^5).
+\end{equation}
+This verifies the difference-sine sign and both factors of $1/2$.
+Every displayed kernel contains $\delta$; the product sine has
+another factor because $a^5-b^5$ is divisible by $a-b$.
+\end{proof}
+The difference-sine coefficient is antisymmetric and its phase is
+antisymmetric too.  Both cosine kernels and the product-sine kernel
+are symmetric.  The ratio diagonal $(a,b)=(1,1)$ is now exactly zero.
+For a product square only its diagonal divisor pair vanishes; its
+off-diagonal divisor pairs remain.  The same true pair weight
+\eqref{fo:pair-weight}, common height, and four block/complement classes
+are retained.
+
+\begin{theorem}[Uniform macroscopic near-pair bound]
+\label{fo:near-pair}
+Fix $0<\lambda<1$ and $1\le H\le N$.  For any subset $\mathcal E$
+of the ordered pairs
+\begin{equation}
+\lambda N\le n,m\le N,\qquad |n-m|\le H,
+\end{equation}
+let
+\begin{align}
+\mathsf B_c&=\sum_{(n,m)\in\mathcal E}w_nw_m
+                   (|D_c^\dagger|+|P_c^\dagger|),\nonumber\\
+\mathsf B_s&=\sum_{(n,m)\in\mathcal E}w_nw_m
+                   (|D_s^\dagger|+|P_s^\dagger|).
+\end{align}
+Uniformly for all sufficiently small positive time in
+\eqref{fo:sector},
+\begin{equation}
+\mathsf B_c\le C_\lambda(1+|\Gamma|)w_N^2H^3/N,
+\qquad
+\mathsf B_s\le C_\lambda|\epsilon|w_N^2H^2.
+\label{fo:near-pair-bounds}
+\end{equation}
+The product sine part alone is at most
+$C_\lambda|\epsilon|w_N^2H^3/N$.
+\end{theorem}
+\begin{proof}
+The centering estimate gives $|\rho_n|,|\rho_m|\le
+1+\log(1/\lambda)$, and the mean value theorem gives
+$|\delta|=|\log(n/m)|\le|n-m|/(\lambda N)$.
+The exact weight-distance formula \eqref{fo:weight-distance}, now with
+$0\le y_n\le\log(1/\lambda)$, gives $w_n,w_m\le C_\lambda w_N$.
+Writing $k=|n-m|$, Theorem~\ref{fo:Jdag-kernels} yields
+\begin{equation}
+|D_c^\dagger|+|P_c^\dagger|
+ \le C_\lambda(1+|\Gamma|)k^2/N^2,
+\quad |D_s^\dagger|\le C_\lambda|\epsilon|k/N,
+\quad |P_s^\dagger|\le C_\lambda|\epsilon|k^2/N^2.
+\end{equation}
+For each positive integer gap $k$, at most $2N$ ordered pairs have
+that gap.  The gap-zero contribution is exactly zero.  Consequently
+the squared-gap sum is at most
+$(2/N)\sum_{k\le H}k^2\le CH^3/N$, and the linear-gap sum is at
+most $2\sum_{k\le H}k\le CH^2$.  Multiplication by the weight
+bound proves the theorem, using $H^3/N\le H^2$ for the total sine
+bound.  This is an absolute bound for the stated band, requiring no
+phase cancellation.
+\end{proof}
+Since
+\begin{equation}
+(Nw_N)^2\asymp N^{1-\kappa/4},\qquad x\asymp N^2,
+\qquad \epsilon=O(t/N^2),
+\end{equation}
+the choice $H=\lceil\sqrt N\rceil$ gives
+\begin{equation}
+\mathsf B_c=O(LN^{-1/2-\kappa/4}),\qquad
+\mathsf B_s=O(tN^{-2-\kappa/4}),
+\label{fo:near-pair-scales}
+\end{equation}
+and the product sine part is $O(tN^{-5/2-\kappa/4})$.
+Both are $o(N^{-\kappa/4})$.  Taking $\lambda=1/2$ covers the
+macroscopic block.  Taking $\lambda=1/4$ also covers all near pairs
+crossing its boundary for this choice of $H$ and sufficiently large
+$N$.  Low-index near pairs outside this range remain exact.
+
+Let $\mathcal J^\dagger_{\rm near}$ be precisely the part of
+\eqref{fo:Jdag-pairs} with $\min(n,m)\ge N/4$ and
+$|n-m|\le H$, and put
+$\mathcal J^\dagger_{\rm rem}=\mathcal J^\dagger-
+\mathcal J^\dagger_{\rm near}$.  An actual-phase bound
+$\mathcal J^\dagger_{\rm rem}\le U_{\rm rem}$ would give
+\begin{equation}
+\mathcal K\le U_{\rm rem}+\mathsf B_c+\mathsf B_s+\Pi^\dagger.
+\end{equation}
+The fully paid sufficient ordinary-double exclusion is therefore
+\begin{equation}
+U_{\rm rem}+\mathsf B_c+\mathsf B_s+\Pi^\dagger
+                    +\widehat\Delta_{\rm count}/(4c^6)<0.
+\label{fo:final-paid-target}
+\end{equation}
+Any subsequent signed transformation must add its proved error.
+An alternative representation of the same sum is not an additional
+disjoint contribution.  The theorem pays a narrow band; it supplies no
+sign for the retained separated primitive and product terms.
+
+Finally, the algebraic antilinear map
+$\mathcal R:M_j\mapsto(-1)^j\overline{M_j}$ fixes $X_{2j}$ and
+$Y_{2j+1}$ and hence fixes $\mathcal K$ for the same frozen
+$\Gamma$.  At fixed physical drift it gives
+\begin{equation}
+Z_1\mapsto Z_1-2\epsilon X_1,\qquad
+\mathcal J^\dagger(\mathcal RM;\epsilon)
+ =\mathcal J^\dagger(M;-\epsilon)
+ =\mathcal J^\dagger(M;\epsilon)
+       -4\epsilon X_0Y_6+4\epsilon X_1Y_5.
+\label{fo:reflection-parity}
+\end{equation}
+The full moment envelope pays this fixed-drift discrepancy by
+$4|\epsilon|(B_0B_6+B_1B_5)=O(tN^{-1-\kappa/4})$.
+Its relation to the prescribed stationary transformation still requires
+the transformed cutoff and boundary terms; the parity calculation alone
+cannot change the sign of the threshold quadratic.
+
+\section{Common-factor smoothing of the difference channel}
+\label{em:section}
+Let $D_c,D_s$ be the two difference polynomials of a frozen paid quadratic.
+For both the original five-feature dual family and the
+diagonal-annihilating extension they have total degree at most six.
+Let $\mathfrak M$ bound the absolute values of their polynomial
+coefficients. For example the original family admits the scale
+$(1+|\epsilon|)^2(1+|\Gamma|+\|\Lambda\|+\|B\|)$.
+All constants below retain this scale.
+
+Every ordered pair is uniquely $n=ja,m=jb$ with $(a,b)=1$.
+Write $J_{a,b}=\lfloor N/\max(a,b)\rfloor$, and define
+\begin{align}
+ W_{a,b}&=(ab)^{-\sigma}
+       \exp\{t(\log^2a+\log^2b)/4\},&
+ \beta_{a,b}&=2\sigma-\tfrac t2\log(ab),\notag\\
+ H_{a,b,\chi}(z)&=D_\chi(z+\log a-\mu,z+\log b-\mu),&
+ f_{a,b,\chi}(u)&=W_{a,b}u^{-\beta_{a,b}}
+             e^{t\log^2u/2}H_{a,b,\chi}(\log u).
+ \label{em:coefficient}
+\end{align}
+Then $f_{a,b,\chi}(j)=w(ja)w(jb)D_\chi(\rho_{ja},\rho_{jb})$,
+and the exact difference channel is
+\[
+\sum_{\substack{(a,b)=1\\\max(a,b)\le N}}
+\left\{\cos(T\log(a/b))\sum_{j=1}^{J_{a,b}}f_{a,b,c}(j)
+      +\sin(T\log(a/b))\sum_{j=1}^{J_{a,b}}f_{a,b,s}(j)\right\}.
+\]
+The phase is independent of $j$ in this channel.
+
+Let $K=\lfloor N/2\rfloor$, $\mathcal B=\{K+1,\ldots,N\}$,
+$\mathcal C=\{1,\ldots,K\}$, and $k_a=\lfloor K/a\rfloor$,
+$k_b=\lfloor K/b\rfloor$. The following literal integer intervals
+partition $1\le j\le J_{a,b}$:
+\[
+\begin{array}{c|cc}
+\text{class}&\ell&v\\ \hline
+\mathcal C\times\mathcal C&1&\min(J_{a,b},k_a,k_b)\\
+\mathcal B\times\mathcal B&\max(1,k_a+1,k_b+1)&J_{a,b}\\
+\mathcal B\times\mathcal C&\max(1,k_a+1)&\min(J_{a,b},k_b)\\
+\mathcal C\times\mathcal B&\max(1,k_b+1)&\min(J_{a,b},k_a)
+\end{array}
+\]
+Rows with $\ell>v$ are empty. For an integer $J_*\ge1$, retain all
+$j\le J_*$ exactly and transform only $p=\max(\ell,J_*+1)\le j\le v=q$.
+
+\begin{lemma}[Uniform centered coefficient moments]
+\label{em:moment-bound}
+For every fixed integer $d\ge0$, uniformly for real $1\le u\le N$,
+\[
+\sum_{a\le N/u}w(ua)(1+|\log(ua)-\mu|)^d
+                      \le C_d (N/u)w_N .
+\]
+\end{lemma}
+\begin{proof}
+This is \eqref{fo:real-index-moments}; the logarithmic bin proof in
+Lemma~\ref{fo:moment-lemma} applies for real $u$ and includes the final
+low-index bin. We state it here to emphasize the real-index estimate
+needed inside the remainder integrals.
+\end{proof}
+
+Fix an integer order $r\ge1$. For an integer interval $p\le q$, define
+\[
+\mathsf E_r[f;p,q]=\int_p^q f(u)\dd u+\frac{f(p)+f(q)}2
+ +\sum_{h=1}^r\frac{B_{2h}}{(2h)!}
+                      \{f^{(2h-1)}(q)-f^{(2h-1)}(p)\}.
+\]
+Euler--Maclaurin and the Bernoulli Fourier series \cite{dlmfem,dlmfbern}
+give exactly
+\begin{equation}
+ \sum_{j=p}^q f(j)=\mathsf E_r[f;p,q]
+ -\frac1{(2r)!}\int_p^q\widetilde B_{2r}(u)f^{(2r)}(u)\dd u,
+ \qquad
+ |R_r|\le\frac{2\zeta(2r)}{(2\pi)^{2r}}\int_p^q|f^{(2r)}(u)|\dd u .
+ \label{em:formula}
+\end{equation}
+Singleton intervals have zero remainder. All derivative corrections are
+explicit: with $P_0=H_{a,b,\chi}$ and
+$P_{k+1}(z)=P_k'(z)+(tz-\beta_{a,b}-k)P_k(z)$,
+\[
+f_{a,b,\chi}^{(k)}(u)=
+W_{a,b}u^{-\beta_{a,b}-k}e^{t\log^2u/2}P_k(\log u).
+\]
+The recurrence follows by $d/du=u^{-1}d/dz$.
+If $H(z)=\sum_{m=0}^6h_mz^m$ and $\lambda=1-\beta_{a,b}$,
+the main integral is
+\[
+W_{a,b}\sum_{m=0}^6h_m\partial_\lambda^m
+\left\{\sqrt{\frac\pi{2t}}e^{-\lambda^2/(2t)}
+\left[\erfi\left(\frac{tz+\lambda}{\sqrt{2t}}\right)\right]
+                          _{\log p}^{\log q}\right\}.
+\]
+
+\begin{theorem}[Global paid difference transformation]
+\label{em:remainder}
+Replace every large-common-factor interval by $\mathsf E_r$, keeping
+all floors, all four pair classes, and all $j\le J_*$ exact.
+The complete difference-channel error is bounded by
+\[
+ C_r\mathfrak M(Nw_N)^2J_*^{-2r-1}.
+\]
+For the density-strengthened coefficient $\Gamma=O(L)$ and bounded
+other dual parameters, $r=1$, $J_*=\lceil N^{2/5}\rceil$ give
+$O(LN^{-1/5-\kappa/4})=o(N^{-\kappa/4})$.
+\end{theorem}
+\begin{proof}
+The recurrence and bounded physical quantities $t\log u,\beta_{a,b}$
+show, for each fixed $k$,
+\[
+|f_{a,b,\chi}^{(k)}(u)|\le C_k\mathfrak M u^{-k}w(ua)w(ub)
+(1+|\rho(ua)|)^6(1+|\rho(ub)|)^6 .
+\]
+Differentiation increases only a fixed polynomial degree; its coefficients
+remain uniformly bounded because $t\le1/20$ and $t\log u$ is bounded.
+At a fixed $u$, drop coprimality for this positive error envelope and apply
+Lemma~\ref{em:moment-bound} twice. This contributes at most
+$C_r\mathfrak M (Nw_N)^2u^{-2r-2}$.
+The four intervals are disjoint for each pair, so their remainder
+integrals do not multiply the coverage of $u$; the two kernels add
+only a fixed constant. Integrating for $u\ge J_*$ proves the bound.
+Finally $(Nw_N)^2\asymp N^{1-\kappa/4}$ gives the stated power.
+\end{proof}
+
+This theorem does not smooth the product phase by absolute derivatives.
+That phase contains $u^{2iT}$; inserting it into the same derivative
+envelope introduces $(1+|T|)^{2r}$. Since $T\asymp N^2$, the resulting
+upper envelope grows even when $J_*$ is comparable to $N$, for each
+fixed $r\ge1$. This is a loss of that specific envelope, not a lower
+bound for the true oscillatory remainder. The next section keeps the
+product phase inside the oscillatory integrals.
+
+\section{Oscillation-preserving product transformations}
+\label{tr:product-section}
+
+All data in this section are frozen at one physical center.  Derivatives
+are derivatives of an auxiliary summation variable, never raw spatial
+jet derivatives.  Write
+\[
+ w(u)=u^{-\sigma}\exp\!\left(\frac t4\log^2u\right),\qquad
+ \rho_u=\log u-\mu,\qquad \phi_u=\theta_t+T\log u,\qquad
+ P=\frac{T}{2\pi}.
+\]
+We use the sector $L=\kappa/t$, $1\le\kappa\le3/2$, with the literal
+natural cutoff $N=\lfloor\sqrt{e^L+t/16}\rfloor$.  The prescribed physical
+center has, uniformly as $t\downarrow0$,
+\begin{equation}
+\label{tr:physical-scales}
+ T\asymp N^2,\quad P/N^2\longrightarrow1,\quad \mu=\log N+O(N^{-1}),\quad
+ c_\sigma:=\sigma-\frac t2\log N=\frac12+o(1),\quad
+ t\log N=\frac\kappa2+o(1),\quad
+ Nw_N\asymp N^{1/2-\kappa/8},
+\end{equation}
+where $w_N=w(N)$.  All asymptotic constants below are uniform for
+sufficiently small $t$ on this closed $\kappa$ interval.  Exact identities
+keep their stated data and floors.
+
+For small enough time we use the numerical reserves
+\begin{equation}
+\label{tr:reserves}
+ \frac7{16}\le c_\sigma\le\frac9{16},\qquad
+ \frac7{16}\le t\log N\le\frac{13}{16},\qquad
+ |\mu-\log N|\le1.
+\end{equation}
+The centered sublattice moment bound proved in
+Lemma~\ref{em:moment-bound} gives, for every fixed nonnegative integer $d$,
+\begin{equation}
+\label{tr:weighted-moments}
+ \sum_{u\le N/q}w(qu)(1+|\rho_{qu}|)^d
+ \le C_d\frac Nq w_N\qquad(1\le q\le N).
+\end{equation}
+Sums over real upper limits mean sums over integers not exceeding that limit.
+
+Consider a product pair kernel
+\[
+ w(n)w(m)\{P_c(n,m)\cos(2\theta_t+T\log(nm))
+             +P_s(n,m)\sin(2\theta_t+T\log(nm))\},
+\]
+where $P_c,P_s$ are real polynomials in $(\rho_n,\rho_m)$ of total
+ degree at most six.  Let $\mathfrak M\ge1$ bound their coefficients,
+including their frozen drift factors.  The original paid dual and the
+extended diagonal-annihilating dual both have this degree.  Define
+\begin{equation}
+\label{tr:product-amplitude}
+ A_{a,b}(u)=w(ua)w(ub)\{P_c(ua,ub)-iP_s(ua,ub)\}.
+\end{equation}
+The sign is fixed by
+$\operatorname{Re}[(P_c-iP_s)e^{i\Phi}]=P_c\cos\Phi+P_s\sin\Phi$.
+Unique common-factor decomposition gives the exact product channel
+\begin{equation}
+\label{tr:product-cf}
+ \mathcal P=\operatorname{Re}\left[
+ e^{2i\theta_t}\sum_{\substack{(a,b)=1\\\max(a,b)\le N}}
+ e^{iT\log(ab)}
+ \sum_{j=1}^{\lfloor N/\max(a,b)\rfloor}
+ A_{a,b}(j)e^{2iT\log j}\right].
+\end{equation}
+
+The literal block/core partition is retained before transformation.
+Put $K_N=\lfloor N/2\rfloor$, $k_a=\lfloor K_N/a\rfloor$,
+$k_b=\lfloor K_N/b\rfloor$, and $J_{a,b}=\lfloor N/\max(a,b)\rfloor$.
+The four integer intervals are
+\[
+\begin{array}{c|cc}
+ \text{class}&\text{left endpoint}&\text{right endpoint}\\\hline
+ \mathcal C\times\mathcal C&1&\min(J_{a,b},k_a,k_b)\\
+ \mathcal B\times\mathcal B&\max(1,k_a+1,k_b+1)&J_{a,b}\\
+ \mathcal B\times\mathcal C&\max(1,k_a+1)&\min(J_{a,b},k_b)\\
+ \mathcal C\times\mathcal B&\max(1,k_b+1)&\min(J_{a,b},k_a).
+\end{array}
+\]
+Only empty intervals are discarded.  Intersect every remaining interval
+with the disjoint integer cells $[U,2U-1]$, $U=2^h$, $h\ge0$.
+Their resulting endpoints $[p,q]$ satisfy
+$U\le p\le q<2U$ and $qa,qb\le N$.  Singletons are kept exactly.
+
+\subsection{A finite interval theorem with endpoint transitions}
+
+Let $\tau>0$ denote an oscillation parameter, distinct from the heat
+time $t$.  For a nonsingleton integer interval $[p,q]$ in one dyadic
+cell, put
+\[
+ \Sigma_\tau[A;p,q]=\sum_{j=p}^qA(j)e^{2i\tau\log j},\qquad
+ \psi_k(u)=2\tau\log u-2\pi ku,\qquad
+ I_k=\int_p^qA(u)e^{i\psi_k(u)}\,du.
+\]
+Define the finite expanded stationary band
+\begin{equation}
+\label{tr:stationary-band}
+ \mathcal K=\left\{k\in\mathbb Z_{>0}:
+       \frac{\tau}{2\pi q}\le k\le\frac{2\tau}{\pi p}\right\}.
+\end{equation}
+For $k\in\mathcal K$, $u_k=\tau/(\pi k)\in[p/2,2q]$.
+For excluded modes write $V_k(u)=2\tau/u-2\pi k$ and
+\[
+ S_m(u)=\sum_{k\notin\mathcal K}V_k(u)^{-m}\quad(m=2,3),\qquad
+ S_1(u)=\lim_{R\to\infty}
+ \sum_{\substack{|k|\le R\\k\notin\mathcal K}}V_k(u)^{-1}.
+\]
+The last limit pairs positive and negative modes.  Its summands beyond
+any fixed finite set have canceling leading $1/k$ terms.  Define
+\begin{equation}
+\label{tr:outside-boundary}
+ B_{\mathrm{out}}[A;p,q]=
+ \left[e^{2i\tau\log u}
+ \left\{\frac{A(u)}i S_1(u)+A'(u)S_2(u)
+             +\frac{2\tau A(u)}{u^2}S_3(u)\right\}\right]_p^q.
+\end{equation}
+These are explicit endpoint functions.  With $z=\tau/(\pi u)$ and
+$\mathcal K$ fixed, one can equivalently use
+\begin{equation}
+\label{tr:cotangent}
+ C_1(z)=\pi\cot(\pi z)-\sum_{k\in\mathcal K}\frac1{z-k},\qquad
+ C_2=-C_1',\qquad C_3=\tfrac12 C_1'',\qquad
+ S_m=(2\pi)^{-m}C_m.
+\end{equation}
+Any integer $z$ occurring for $p\le u\le q$ belongs to $\mathcal K$,
+so the apparent poles are removable.  The cotangent partial-fraction
+identity \cite{dlmfcot} gives the same paired series as above.
+
+For the retained modes introduce the exact quadratic coordinate
+\[
+ \xi(v)=\operatorname{sgn}(v-1)\sqrt{2(v-1-\log v)},\qquad
+ \xi(1)=0,
+\]
+and let $v=\mathcal V(\xi)$ be its smooth increasing inverse.  Set
+\[
+ a_k=\xi(p/u_k),\quad b_k=\xi(q/u_k),\qquad
+ g_k(\xi)=u_kA(u_k\mathcal V(\xi))\mathcal V'(\xi).
+\]
+For smooth $g$ define regular operators
+\[
+ \mathcal Bg(\xi)=\frac{g(\xi)-g(0)}\xi,
+ \quad \mathcal Bg(0)=g'(0),\qquad
+ \mathcal Dg=(\mathcal Bg)',\qquad
+ \mathcal F_\tau(a,b)=\int_a^be^{-i\tau\xi^2}\,d\xi.
+\]
+The finite retained-mode expression is
+\begin{align}
+\label{tr:retained-Fresnel}
+ F_k[A;p,q]=e^{i\psi_k(u_k)}\bigg\{&
+ \left(g_k(0)+\frac{g_k''(0)}{4i\tau}\right)
+       \mathcal F_\tau(a_k,b_k)\notag\\
+ &-\frac{[\mathcal Bg_k(\xi)e^{-i\tau\xi^2}]_{a_k}^{b_k}}{2i\tau}
+ -\frac{[\mathcal B\mathcal Dg_k(\xi)e^{-i\tau\xi^2}]_{a_k}^{b_k}}
+              {(2i\tau)^2}\bigg\}.
+\end{align}
+Here
+\[
+ g_k(0)=u_kA(u_k),\qquad
+ g_k''(0)=u_k\{u_k^2A''(u_k)+2u_kA'(u_k)+A(u_k)/6\},
+\]
+and the entire-function representation is
+\[
+ \mathcal F_\tau(a,b)=
+ \frac{\sqrt\pi e^{-i\pi/4}}{2\sqrt\tau}
+ \left[\operatorname{erf}(e^{i\pi/4}\sqrt\tau\,\xi)\right]_a^b.
+\]
+In particular the curvature sign is negative and all regular quotients
+remain defined when an endpoint is stationary.
+
+\begin{theorem}[Finite product Poisson--Fresnel transformation]
+\label{tr:finite-product}
+Suppose $\tau\ge U$ and $A$ is $C^4$ on $[U/2,4U]$, with
+\[
+ |A^{(h)}(u)|\le C_h\mathfrak M U^{-h}W_U
+       \quad(0\le h\le4).
+\]
+Define
+\begin{equation}
+\label{tr:finite-main}
+ \mathsf T_\tau[A;p,q]=
+ \tfrac12\{A(p)e^{2i\tau\log p}+A(q)e^{2i\tau\log q}\}
+ +B_{\mathrm{out}}[A;p,q]
+ +\sum_{k\in\mathcal K}F_k[A;p,q].
+\end{equation}
+Then
+\[
+ |\Sigma_\tau[A;p,q]-\mathsf T_\tau[A;p,q]|
+ \le C\mathfrak M W_U/\tau.
+\]
+The constant depends only on the derivative-envelope constants.  No
+separation of a stationary point from an endpoint is assumed.  For a
+singleton define $\mathsf T_\tau$ to be its exact summand.
+\end{theorem}
+\begin{proof}
+Periodize the finitely many unit intervals by
+$G(v)=\sum_{j=p}^{q-1}A(j+v)e^{2i\tau\log(j+v)}$, $0<v<1$.
+Its $k$th Fourier coefficient is $I_k$.  The symmetric Fourier series
+at zero converges to the average of the two one-sided limits.  Thus
+\begin{equation}
+\label{tr:finite-poisson}
+ \Sigma_\tau[A;p,q]=
+ \tfrac12\{A(p)e^{2i\tau\log p}+A(q)e^{2i\tau\log q}\}
+ +\lim_{R\to\infty}\sum_{|k|\le R}I_k.
+\end{equation}
+This elementary piecewise-smooth Fourier convergence is the only
+Fourier input \cite{dlmffourier}.
+
+Outside $\mathcal K$, $V_k$ never vanishes.  For $k\le0$ its
+magnitude is at least $2\tau/q+2\pi|k|$; for
+$0<k<\tau/(2\pi q)$ it is at least $\tau/q$; and for
+$k>2\tau/(\pi p)$ it is at least $\pi k$.  Counting the low positive
+range and integrating the two tails gives, uniformly on $[p,q]$,
+\begin{equation}
+\label{tr:inverse-phase-bounds}
+ \sum_{k\notin\mathcal K}|V_k|^{-2}\le CU/\tau,
+ \qquad \sup_{k\notin\mathcal K}|V_k|^{-1}\le CU/\tau.
+\end{equation}
+Write $\mathcal L_kA=(A/V_k)'$.  Two exact integrations by parts give
+\[
+ I_k=\left[e^{i\psi_k}
+       \left\{\frac A{iV_k}+\frac{\mathcal L_kA}{V_k}\right\}
+       \right]_p^q
+       -\int_p^qe^{i\psi_k}\mathcal L_k^2A\,du,
+\]
+where
+\[
+ \mathcal L_k^2A=
+ \frac{A''}{V_k^2}-\frac{3A'V_k'}{V_k^3}
+ -\frac{AV_k''}{V_k^3}+\frac{3A(V_k')^2}{V_k^4}.
+\]
+At integer endpoints $e^{-2\pi iku}=1$, so the summed boundaries are
+exactly \eqref{tr:outside-boundary}.  Since
+$|V_k'|\le C\tau/U^2$ and $|V_k''|\le C\tau/U^3$,
+\eqref{tr:inverse-phase-bounds} and the amplitude bounds imply
+\[
+ \sum_{k\notin\mathcal K}|\mathcal L_k^2A(u)|
+ \le C\mathfrak M W_U/(U\tau).
+\]
+Multiplication by the interval length $\le U$ pays the entire excluded
+integral tail by $C\mathfrak M W_U/\tau$.
+
+For a retained mode the coordinate is exact:
+$\psi_k(u)=\psi_k(u_k)-\tau\xi^2$, and
+$I_k=e^{i\psi_k(u_k)}\int_{a_k}^{b_k}g_k e^{-i\tau\xi^2}\,d\xi$.
+Expanding the inverse at zero gives
+$\mathcal V(\xi)=1+\xi+\xi^2/3+\xi^3/36+O(\xi^4)$ and hence the
+stated formulas for $g_k(0)$ and $g_k''(0)$.  Direct integration by
+parts gives
+\[
+ \int_a^bge^{-i\tau\xi^2}\,d\xi
+ =g(0)\mathcal F_\tau(a,b)
+ -\frac{[\mathcal Bg\,e^{-i\tau\xi^2}]_a^b}{2i\tau}
+ +\frac1{2i\tau}\int_a^b\mathcal Dg\,e^{-i\tau\xi^2}\,d\xi.
+\]
+Applying this twice yields \eqref{tr:retained-Fresnel} and the exact
+remainder
+\[
+ I_k-F_k=
+ \frac{e^{i\psi_k(u_k)}}{(2i\tau)^2}
+ \int_{a_k}^{b_k}\mathcal D^2g_k(\xi)e^{-i\tau\xi^2}\,d\xi.
+\]
+The regular quotient satisfies
+\[
+ \mathcal Dg(\xi)=\int_0^1s\,g''(s\xi)\,ds,\qquad
+ \mathcal D^2g(\xi)=\int_0^1\!\int_0^1r s^3
+              g^{(4)}(sr\xi)\,ds\,dr,
+\]
+so $\|\mathcal D^2g\|_\infty\le\|g^{(4)}\|_\infty/8$.
+All required ratios $u/u_k$ lie in $[1/4,4]$; the inverse and its first
+five derivatives are bounded on this compact interval.  The amplitude
+hypothesis therefore gives $\|g_k^{(4)}\|_\infty\le
+C\mathfrak M UW_U$, and the $\xi$ interval has bounded length.
+The per-mode error is $C\mathfrak M UW_U/\tau^2$.  There are at most
+$C\tau/U$ retained modes, so their total error is
+$C\mathfrak M W_U/\tau$.  Combining both errors with
+\eqref{tr:finite-poisson} proves the theorem.
+\end{proof}
+
+\subsection{Global product payments}
+
+\begin{theorem}[Complete product-channel transformation]
+\label{tr:global-product}
+Let $\widetilde{\mathcal P}^{\mathrm{CF}}$ be obtained from
+\eqref{tr:product-cf} by replacing every literal masked dyadic interval
+with \eqref{tr:finite-main}, with $\tau=T$, before taking the real
+part.  Then
+\[
+ |\mathcal P-\widetilde{\mathcal P}^{\mathrm{CF}}|
+ \le C\mathfrak M (Nw_N)^2/T
+ =O(\mathfrak M N^{-1-\kappa/4}).
+\]
+Alternatively, hold $m$ fixed, apply the same theorem to the original
+$n$ index with $\tau=T/2$ and amplitude
+$A_m(u)=w(u)w_m\{P_c(u,m)-iP_s(u,m)\}$, retaining the literal block
+and core intervals for both indices.  Provided the physical relation
+\begin{equation}
+\label{tr:sharper-sigma}
+ \sigma-\frac t4\log N=s_\kappa+O(t/N),
+ \qquad s_\kappa=\frac12+\frac\kappa8,
+\end{equation}
+holds, its full transformed product satisfies
+\[
+ |\mathcal P-\widetilde{\mathcal P}^{\mathrm{orig}}|
+ \le C\mathfrak M L^6(Nw_N)/T
+ =O(\mathfrak M L^6N^{-1-s_\kappa}).
+\]
+Both formulas transform the entire product channel, including common
+factor $j=1$.  All singleton, mixed-class, and endpoint terms are retained.
+\end{theorem}
+\begin{proof}
+For the common-factor amplitude use
+\[
+ W_{a,b,U}=w(Ua)w(Ub)
+ (1+|\rho_{Ua}|)^6(1+|\rho_{Ub}|)^6.
+\]
+The logarithmic weight derivative $-\sigma+(t/2)\log v$ and its next
+logarithmic derivative $t/2$ are bounded on $1/2\le v\le4N$.
+Changing an index by a factor in $[1/2,4]$ changes its weight by a
+bounded factor and its centered log by a bounded amount.  Four amplitude
+derivatives therefore satisfy the hypothesis of
+Theorem~\ref{tr:finite-product} with this envelope.  The real-index
+extension beyond the cutoff is only an amplitude device; it introduces
+no additional heat approximation.
+Equation~\eqref{tr:weighted-moments}, with $q=U$, gives
+\[
+ \sum_{a\le N/U}w(Ua)(1+|\rho_{Ua}|)^6
+ \le C(N/U)w_N.
+\]
+For each dyadic cell and coprime pair there are at most four mask
+intervals.  Dropping coprimality only in the positive error envelope,
+\[
+ \sum_{a,b\le N/U}W_{a,b,U}\le C(Nw_N)^2/U^2.
+\]
+Now sum the finite theorem and use $\sum_{h\ge0}2^{-2h}=4/3$.
+The first bound follows from \eqref{tr:physical-scales}.
+
+For the original-index version an envelope is
+$W_{m,U}=w(U)w_m(1+|\rho_U|)^6(1+|\rho_m|)^6$.
+Equation~\eqref{tr:sharper-sigma} implies $w(U)\le CU^{-s_\kappa}$
+for $1\le U\le N$: the adverse exponent error times $\log U$ is at
+most $O(t\log N/N)=O(N^{-1})$.  Since $|\rho_U|\le CL$,
+\[
+ \sum_{U=2^h\le N}w(U)(1+|\rho_U|)^6\le CL^6.
+\]
+The complete $m$ moment is $O(Nw_N)$ by
+Equation~\eqref{tr:weighted-moments}.  Sum the finite theorem with
+$\tau=T/2$ to obtain the second bound.  For the prescribed center,
+\eqref{tr:sharper-sigma} follows from
+$\operatorname{Re}\alpha-L/2=O(x^{-2})$ and
+$\log N=L/2+O(N^{-1})$.
+\end{proof}
+
+With the density-strengthened dual $\mathfrak M=O(L)$, both product
+remainders are $o(N^{-\kappa/4})$.  This comparison uses the available
+physical upper-budget scale.  It asserts no positive lower bound for the
+measured physical error, and the actual candidate and physical payments
+remain necessary.
+
+\section{The coupled primitive frontier}
+\label{tr:primitive-section}
+
+Let $v(\rho)$ be a complex vector polynomial of fixed dimension and degree
+at most $D$.  Choose $A_v\ge1$ bounding its coefficient norms, and let
+$Q$ be a real symmetric matrix.  Define
+\[
+ z_n=w(n)e^{i\phi_n}v(\rho_n),\qquad y_n=\operatorname{Re}z_n.
+\]
+The original five-feature dual has
+\[
+ v(\rho)=r(\rho)-is(\rho),\quad
+ r=(1,\epsilon\rho,\rho^2,0,\rho^4)^T,\quad
+ s=(0,\rho,0,\rho^3,0)^T,
+\]
+so $D=4$ and $A_v\le C(1+|\epsilon|)$.  The extended dual uses $D=6$.
+For any such vector,
+\begin{equation}
+\label{tr:complete-pair}
+ y_n^TQy_m=\tfrac12\operatorname{Re}
+ \{z_n^TQ\overline{z_m}+z_n^TQz_m\}.
+\end{equation}
+These are the complete ratio and product terms, with both sine
+orientations fixed by the actual complex features.
+
+\begin{proposition}[Exact coupled M\"obius frontier]
+\label{tr:mobius}
+For $1\le J\le N$ set
+\[
+ \mathcal F_J=\sum_{\substack{n,m\le N\\\gcd(n,m)\le J}}y_n^TQy_m,
+ \quad
+ c_J(q)=\sum_{\substack{j\mid q\\j\le J}}\mu_{\mathrm{Mob}}(q/j),
+ \quad V_q=\sum_{u=1}^{\lfloor N/q\rfloor}z_{qu}.
+\]
+Then
+\begin{equation}
+\label{tr:mobius-formula}
+ \mathcal F_J=\sum_{q\le N}c_J(q)
+ (\operatorname{Re}V_q)^TQ(\operatorname{Re}V_q)
+ =\tfrac12\operatorname{Re}\sum_{q\le N}c_J(q)
+ \{V_q^TQ\overline{V_q}+V_q^TQV_q\}.
+\end{equation}
+Moreover $|c_J(q)|\le\tau(q)$, $c_J(1)=1$, and
+$c_J(q)=0$ for $1<q\le J$.  For $J=1$ the coefficients are
+$\mu_{\mathrm{Mob}}(q)$; for $J=N$ only $q=1$ survives.
+\end{proposition}
+\begin{proof}
+For any positive integer $g$,
+\[
+ \sum_{q\mid g}c_J(q)=
+ \sum_{\substack{j\mid g\\j\le J}}
+ \sum_{d\mid g/j}\mu_{\mathrm{Mob}}(d)
+ =\mathbf1_{\{g\le J\}}.
+\]
+Insert this identity at $g=\gcd(n,m)$, interchange finite sums, and sum
+over $n=qu,m=qv$.  Formula~\eqref{tr:complete-pair} gives the second
+equality.  The coefficient checks follow immediately from the same
+ordinary divisor identity.
+\end{proof}
+
+The $q>J$ terms generally survive; they cannot be truncated at $J$.
+With $K_N=\lfloor N/2\rfloor$, let
+\[
+ m_q=\lfloor N/q\rfloor,\quad k_q=\lfloor K_N/q\rfloor,\quad
+ V_q^{\mathcal C}=\sum_{u=1}^{k_q}z_{qu},\quad
+ V_q^{\mathcal B}=\sum_{u=k_q+1}^{m_q}z_{qu}.
+\]
+Expanding $V_q=V_q^{\mathcal C}+V_q^{\mathcal B}$ in
+\eqref{tr:mobius-formula} retains both mixed orientations and both
+same-class terms.  The genuine paid candidate coordinates constrain the
+complete vector $\operatorname{Re}V_1$, not each sublattice vector.
+No separate candidate vanishing condition for $q>1$ is implied.
+
+\subsection{An endpoint-paid sublattice transformation}
+
+For one nonempty literal integer interval $p\le u\le r$ use
+$a_0=p-1/2$, $b_0=r+1/2$.  For the core and block these are respectively
+$[1/2,k_q+1/2]$ and $[k_q+1/2,m_q+1/2]$; empty sums give zero.
+Define
+\[
+ a_q(u)=w(qu)v(\rho_{qu}),\qquad
+ \Phi_q(u)=\theta_t+T\log(qu),\qquad
+ I_{q,k}[a_0,b_0]=\int_{a_0}^{b_0}
+ a_q(u)e^{i\Phi_q(u)-2\pi iku}\,du.
+\]
+Choose an integer $M\ge4P$.  At a half integer $z\ge1/2$ let
+$\omega=P/z$ and
+\[
+ S_\ell(\omega,M)=\sum_{|k|>M}^{\mathrm{sym}}
+       \frac{(-1)^k}{(\omega-k)^\ell},\qquad \ell=1,2,3.
+\]
+There is no pole, since $|\omega|\le2P\le M/2$.  The first series
+converges absolutely after pairing $k,-k$:
+$(\omega-k)^{-1}+(\omega+k)^{-1}=2\omega/(\omega^2-k^2)$.
+The other two converge absolutely without pairing.  These endpoint
+coefficients have a fixed-integral representation.  For $z>0$ put
+\[
+ F(z)=\int_0^1\frac{s^{z-1}}{1+s}\,ds
+     =\sum_{n\ge0}\frac{(-1)^n}{n+z}.
+\]
+Integrating the finite geometric expansion proves the equality.  Then
+\begin{equation}
+\label{tr:tail-functions}
+ S_1(\omega,M)=(-1)^{M+1}
+ \{F(M+1+\omega)-F(M+1-\omega)\},\qquad
+ S_2=-\partial_\omega S_1,\quad S_3=\tfrac12\partial_\omega^2S_1.
+\end{equation}
+Define the exact endpoint term and finite transformed vector by
+\begin{align}
+\label{tr:sublattice-endpoint}
+ E_{q,M}(z)=e^{i\Phi_q(z)}\bigg\{&
+ \frac{a_q(z)}{2\pi i}S_1(\omega,M)
+ +\frac{a_q'(z)}{(2\pi)^2}S_2(\omega,M)\notag\\
+ &+\frac{T a_q(z)}{z^2(2\pi)^3}S_3(\omega,M)\bigg\},\\
+\label{tr:sublattice-main}
+ \widetilde V_q[a_0,b_0]&=
+ \sum_{|k|\le M}I_{q,k}[a_0,b_0]
+ +E_{q,M}(b_0)-E_{q,M}(a_0).
+\end{align}
+All retained resonant integrals are exact.  In particular no
+full-Gaussian replacement is part of this formula.
+
+\begin{theorem}[Uniform sublattice payment]
+\label{tr:sublattice-error}
+Under \eqref{tr:reserves}, for every such literal interval,
+\[
+ \left\|\sum_{u=p}^rz_{qu}-\widetilde V_q[a_0,b_0]\right\|
+ \le \frac{C_DA_v}{M}w(q)(1+|\rho_q|)^D.
+\]
+Constants may depend on $D$, dimension, and the fixed norm convention,
+but not on $q,J,N,M$, or the frozen physical center.
+\end{theorem}
+\begin{proof}
+Periodize the compactly supported function
+$\mathbf1_{[a_0,b_0]}a_qe^{i\Phi_q}$.  Its periodization is piecewise
+smooth and continuous at the integer evaluation point, because both
+support endpoints are half integers.  Fourier convergence gives exactly
+\[
+ \sum_{u=p}^rz_{qu}=\lim_{R\to\infty}
+                       \sum_{|k|\le R}I_{q,k}[a_0,b_0].
+\]
+There is no half weight on an integer summand.
+For $|k|>M$ set $g_k=T/u-2\pi k$ and
+$\mathcal D_k a=(a/(ig_k))'$.  Twice integrating by parts yields
+\[
+ I_{q,k}=\left[e^{i\Phi_q-2\pi iku}
+ \left\{\frac{a_q}{ig_k}+\frac{a_q'}{g_k^2}
+                   -\frac{a_qg_k'}{g_k^3}\right\}\right]_{a_0}^{b_0}
+ +\int_{a_0}^{b_0}\mathcal D_k^2a_q\,
+                   e^{i\Phi_q-2\pi iku}\,du.
+\]
+At a half integer $e^{-2\pi ikz}=(-1)^k$ and $g_k'=-T/u^2$.
+The summed boundaries are therefore exactly
+\eqref{tr:sublattice-endpoint}.  For $u\ge1/2$, $|k|>M\ge4P$,
+\[
+ |g_k|\ge\pi|k|,\qquad |g_k'|\le\pi|k|/u,
+ \qquad |g_k''|\le2\pi|k|/u^2.
+\]
+Expansion of the two quotient derivatives gives
+\[
+ \|\mathcal D_k^2a\|
+ \le\frac1{\pi^2k^2}
+       \{\|a''\|+3\|a'\|/u+5\|a\|/u^2\}.
+\]
+The auxiliary range satisfies $q/2\le qu\le3N/2$.
+Write $\zeta=-\sigma+(t/2)\log(qu)$.  The reserves imply both
+$|\zeta|\le C$ and $-\zeta\ge3/8$.  Direct differentiation gives
+\[
+ a_q'=\frac{w(qu)}u(\zeta v+v'),\qquad
+ a_q''=\frac{w(qu)}{u^2}
+ \{(\zeta^2-\zeta+t/2)v+(2\zeta-1)v'+v''\},
+\]
+and hence
+$\|a_q^{(j)}\|\le C_DA_vw(qu)u^{-j}(1+|\rho_{qu}|)^D$ for
+$j=0,1,2$.  For $u\ge1$ the weight ratio is at most $u^{-3/8}$;
+for $1/2\le u\le1$ it is bounded.  Also
+$1+|\rho_{qu}|\le(1+|\rho_q|)(1+|\log u|)$.  Thus
+\[
+ \int_{1/2}^{N/q+1/2}w(qu)u^{-2}(1+|\rho_{qu}|)^D\,du
+ \le C_Dw(q)(1+|\rho_q|)^D.
+\]
+Summing $\sum_{|k|>M}k^{-2}\le2/M$ proves the claim.  The large
+frequency has been integrated into the actual phase, so no factor $T^2$
+occurs in the remainder.
+\end{proof}
+
+\begin{theorem}[Global coupled primitive transformation]
+\label{tr:global-primitive}
+Apply \eqref{tr:sublattice-main} to the literal core and block
+intervals and set
+$\widetilde V_q=\widetilde V_q^{\mathcal C}+\widetilde V_q^{\mathcal B}$.
+Define
+\[
+ \widetilde{\mathcal F}_J=\sum_{q\le N}c_J(q)
+ (\operatorname{Re}\widetilde V_q)^TQ
+ (\operatorname{Re}\widetilde V_q).
+\]
+Uniformly for every $1\le J\le N$,
+\begin{equation}
+\label{tr:primitive-global-bound}
+ |\mathcal F_J-\widetilde{\mathcal F}_J|
+ \le C_D\|Q\|A_v^2
+ \left\{\frac{(Nw_N)L^D}{M}+\frac{L^{2D}}{M^2}\right\}.
+\end{equation}
+For $M=\lceil4P\rceil\asymp N^2$, this is
+\[
+ O_D\!\left(\|Q\|A_v^2
+       \{L^DN^{-3/2-\kappa/8}+L^{2D}N^{-4}\}\right).
+\]
+For fixed $D$ and coefficient scales growing by any fixed power of $L$,
+it is $o(N^{-\kappa/4})$.
+\end{theorem}
+\begin{proof}
+The reserves imply for $1\le q\le N$
+\[
+ w(q)\le q^{-s_0},\qquad s_0=35/64>1/2,
+\]
+since $\sigma-(t/4)\log q\ge c_\sigma+(t/4)\log N\ge35/64$.
+The elementary divisor convolution therefore gives
+\[
+ \sum_{q\le N}\frac{\tau(q)w(q)}q\le\zeta(1+s_0)^2,
+ \qquad
+ \sum_{q\le N}\tau(q)w(q)^2\le\zeta(2s_0)^2.
+\]
+Indeed $\sum_{q\ge1}\tau(q)q^{-s}=\sum_{a,b\ge1}(ab)^{-s}
+=\zeta(s)^2$ for $s>1$.  No M\"obius cancellation is used.
+Let $E_q=\|V_q-\widetilde V_q\|$.  The preceding theorem gives
+$E_q\le C_DA_vM^{-1}w(q)(1+|\rho_q|)^D$, while
+Equation~\eqref{tr:weighted-moments} gives
+$\|V_q\|\le C_DA_v(N/q)w_N$.  The quadratic perturbation inequality is
+\[
+ \left|(\operatorname{Re}V_q)^TQ\operatorname{Re}V_q
+ -(\operatorname{Re}\widetilde V_q)^TQ\operatorname{Re}\widetilde V_q
+ \right|\le\|Q\|E_q(2\|V_q\|+E_q).
+\]
+Multiply by $|c_J(q)|\le\tau(q)$ and sum.  Since
+$1+|\rho_q|\le CL$, the two divisor bounds give exactly
+\eqref{tr:primitive-global-bound}.  Shared half-integer endpoint terms
+cancel when block and core vectors are added; keeping them separately
+retains the mixed terms without altering this payment.  The final powers
+follow from \eqref{tr:physical-scales}.
+\end{proof}
+
+For the original degree-four features the displayed logarithmic powers
+are $L^4,L^8$; for the degree-six extension they are $L^6,L^{12}$.
+Every matrix and feature scale remains explicit.  As with the product
+theorem, a remainder smaller than an available physical upper-budget
+scale does not remove the need for the measured physical payment.
+
+\subsection{Resonant sublattices and the remaining signed estimate}
+
+For $k>0$, the phase of $I_{q,k}$ has its unique stationary point at
+\[
+ u_*=P/k,\qquad n_*=qP/k,
+\]
+which lies in the open auxiliary interval precisely when
+$P/b_0<k<P/a_0$.  Equalities are endpoint transitions.  At the stationary
+point the phase is exactly
+\[
+ \theta_t+T\{\log(qP)-1\}-T\log k.
+\]
+An isolated interior stationary point with a suitable smooth local
+cutoff has leading Gaussian coefficient
+\[
+ \frac{\sqrt P}{k}w(qP/k)
+ v(\log(qP/k)-\mu)
+ e^{i\{\theta_t+T(\log(qP)-1)-T\log k-\pi/4\}}.
+\]
+No replacement of the exact retained integrals by this coefficient was
+used in Theorem~\ref{tr:global-primitive}.  Its weight and center have the
+exact algebraic reflection
+\begin{align*}
+ \frac{\sqrt P}{k}w(qP/k)&=C_qk^{-\sigma_q^*}e^{t\log^2k/4},&
+ C_q&=\sqrt P(qP)^{-\sigma}e^{t\log^2(qP)/4},\\
+ \sigma_q^*&=1-\sigma+\tfrac t2\log(qP),&
+ \mu_q^*&=\log(qP)-\mu.
+\end{align*}
+Thus $\log(qP/k)-\mu=-(\log k-\mu_q^*)$.  Relative to $q=1$,
+\[
+ \sigma_q^*=\sigma_1^*+\tfrac t2\log q,\qquad
+ \mu_q^*=\mu_1^*+\log q,\qquad
+ \theta_q^*=\theta_1^*+T\log q,
+\]
+where $\theta_q^*=\theta_t+T(\log(qP)-1)-\pi/4$.
+For fixed $q$ in a macroscopic physical block the modes range
+asymptotically from $qN$ to $2qN$, since $P/N^2\to1$; their exact
+endpoint ranges remain the half-integer ranges above.  The cutoff is
+therefore changed by reflection.  In the ratio term of
+\eqref{tr:mobius-formula} the two carriers at a fixed $q$ cancel; in its
+product term they remain, including $2T\log q$.  The sublattices cannot
+be replaced by independent phases or by a shared $q=1$ reflected sum.
+
+For a disjoint recombination of the complete signed dual, use
+\[
+ \mathcal K=\mathcal F_J+\mathcal D_{>J}+\mathcal P_{>J},
+\]
+where the latter terms are exactly the ratio and product contributions
+with actual common factor greater than $J$.  The coupled primitive
+expression already contains both channels for the small-common-factor
+piece.  Adding a separately transformed full product channel to it
+would count that product piece twice.  The product theorem may instead
+be restricted to the matching $j>J$ intervals.  An arbitrary quadratic
+on degree-six features can have total pair degree twelve; its coupled
+primitive theorem is valid as stated, but any separate product or
+common-factor smoothing invocation must supply the corresponding
+fixed-degree amplitude bounds rather than silently invoke the
+special degree-six case.
+
+The retained main expression has no proved one-sided sign.  Its
+M\"obius coefficients may be negative, and the genuine candidate
+conditions constrain only the complete moments.  The remaining
+analytical target is a candidate-conditioned upper bound on the coupled
+resonant and endpoint terms after this disjoint recombination, strong
+enough to beat the transformation, candidate, and physical payments.
+The results in these sections neither exclude collisions nor establish
+higher-multiplicity or complementary-parameter coverage.
+
+\section{The prescribed leading stationary reflection}
+\label{sr:section}
+In this section write $a_r=\alpha_r$ and $a_i=\alpha_i$ for the physical
+alpha coordinates in \eqref{fo:real-data}.
+The following identities concern the leading stationary coefficient,
+not a replacement of an endpoint-crossing integral by a full Gaussian.
+For the original-index phase $T\log v-2\pi kv$ the positive-frequency
+saddle is $v_k=P/k$, where $P=T/(2\pi)$.
+It has negative second derivative $-T/v_k^2$, hence leading amplitude
+$w(P/k)\sqrt P/k$ and stationary phase
+$T\log(P/k)-T-\pi/4$ \cite{dlmfstationary}.
+
+\begin{proposition}[Exact heat-weight reflection]
+\label{sr:weight}
+For positive $P,k$,
+\begin{align}
+\frac{\sqrt P}{k}w(P/k)
+ &= C_{\rm sd}\,k^{-\sigma^*}e^{t\log^2k/4},\notag\\
+\sigma^*&=1-\sigma+\tfrac t2\log P,\qquad
+C_{\rm sd}=P^{1/2-\sigma}e^{t\log^2P/4}.
+\end{align}
+With $\delta_\sigma=\sigma-(1/2+(t/4)\log P)$ this is equivalently
+\begin{equation}
+\frac{\sqrt P}{k}w(P/k)
+ =w(k)e^{\delta_\sigma(2\log k-\log P)} .
+\label{sr:amplitude}
+\end{equation}
+For the physical data,
+$\delta_\sigma=O(tx^{-2}+t^2x^{-1})$.
+\end{proposition}
+\begin{proof}
+Expand $\log^2(P/k)=(\log P-\log k)^2$.
+Since $\log P=L+\log(1-ta_i/x)$ and $a_r-L/2=O(x^{-2})$,
+\[
+\delta_\sigma=\frac t2
+\{a_r-L/2-\tfrac12\log(1-ta_i/x)\},
+\]
+which gives the bound. On $c_1\sqrt P\le k\le c_2\sqrt P$,
+$2\log k-\log P$ is bounded. The prefactor and power in the
+first formula must be combined before bounding them.
+\end{proof}
+
+\begin{proposition}[Actual center and carrier cancellation]
+\label{sr:reflection}
+Set
+\[
+\Delta_\mu=\log P-2\mu,\qquad
+\Theta=2\theta_t+T\log P-T-\pi/4 .
+\]
+Then $\rho(P/k)=-\rho(k)+\Delta_\mu$, and uniformly for the
+physical sector,
+\[
+\Delta_\mu=O(x^{-2}),\qquad \Theta+2\pi=O(x^{-1}).
+\]
+\end{proposition}
+\begin{proof}
+Let $z=ta_i/x$. Using the actual $\mu$,
+\[
+\Delta_\mu=\log(1-z)-2(a_r-L/2)
+                     +z\frac{xV}{1+tU/2}.
+\]
+Here $xV=1+O(x^{-2})$, $U=O(x^{-2})$, and
+$\log(1-z)+z=O(z^2)$. The terms of nominal order $t/x$
+therefore cancel.
+For the carrier let $T_0=x/2$, $\delta=T-T_0=-ta_i/2$, and
+$F(u)=u\log(u/(2\pi))-u$. Taylor's formula gives
+\[
+F(T)-F(T_0)=\delta L+
+\delta^2\int_0^1\frac{1-v}{T_0+v\delta}\dd v.
+\]
+Substitution of the physical carrier yields exactly
+\[
+\begin{split}
+\Theta+2\pi={}&\tfrac12\arctan x-\tfrac\pi4
+ -\frac x4\log(1+x^{-2})+ta_i(a_r-L/2)\\
+ &+\delta^2\int_0^1\frac{1-v}{T_0+v\delta}\dd v .
+\end{split}
+\]
+Each term is $O(x^{-1})$ for $t\le1/20$. The nominal $tL$
+terms cancel between the thermal carrier and the frequency correction.
+\end{proof}
+
+Let $q(v)=w(v)e^{i(\theta_t+T\log v)}$.
+The leading carried stationary datum of fixed logarithmic degree $j$ is
+exactly
+\[
+B_j(k)= e^{i\Theta}e^{\delta_\sigma(2\log k-\log P)}
+                    \overline{q(k)}\,\{-\rho(k)+\Delta_\mu\}^{j}.
+\]
+On any fixed macroscopic dual interval
+$c_1\sqrt P\le k\le c_2\sqrt P$,
+\[
+|B_j(k)-(-1)^j\overline{q(k)}\rho(k)^j|\le C_jw(k)/x.
+\]
+Indeed $\rho(k)$ is bounded there, and the preceding propositions
+control the exponential and polynomial differences. There are $O(N)$
+indices of weight $O(w_N)$, since $\sqrt P/N\to1$.
+The moment comparison costs $O_j(Nw_N/x)$; any fixed quadratic
+with coefficient scale $\mathfrak M$ costs
+$O(\mathfrak M(Nw_N)^2/x)=O(\mathfrak M N^{-1-\kappa/4})$.
+This is a static coefficient comparison on that range, not a global
+stationary-phase remainder theorem.
+
+The algebraic reflection $M_j\mapsto(-1)^j\overline{M_j}$
+fixes even cosine and odd sine moments. It fixes
+$\mathcal K=2Y_3^2+3X_2X_4-\Gamma X_2^2$.
+It changes $Z_1=Y_1+\epsilon X_1$ to $Z_1-2\epsilon X_1$,
+and, holding the physical drift fixed,
+\[
+\mathcal J^\dagger(\mathcal R M;\epsilon)
+=\mathcal J^\dagger(M;\epsilon)-4\epsilon X_0Y_6
+                                      +4\epsilon X_1Y_5
+=\mathcal J^\dagger(M;-\epsilon).
+\]
+The difference has absolute envelope
+$O(|\epsilon|(Nw_N)^2)=O(tN^{-1-\kappa/4})$.
+An arbitrary reversal of the physical drift is not allowed.
+
+Moreover the saddle maps $[A,B]$ to $[P/B,P/A]$:
+$[N/2,N]$ maps approximately to $[N,2N]$, rather than to the
+original natural cutoff. Sublattices carry the additional $q$-shifts
+already described in the M\"obius section. Thus the useful coefficient
+reflection does not identify the complete transformed cutoff with the
+original sum and does not turn the threshold quadratic into a negative
+square.
+
+\section{The remaining signed implication}
+\label{sec:remaining}
+One valid exact common-factor split of the extended quadratic is
+\[
+\mathcal J^\dagger
+=\mathcal F_J^\dagger+\mathcal D_{>J}^\dagger
+                         +\mathcal P_{>J}^\dagger .
+\]
+The frontier is coupled, the large-common-factor difference part uses
+Theorem~\ref{em:remainder}, and its matching product part uses the finite
+Poisson/Fresnel theorem. Alternatively one may transform the entire product
+channel and retain the matching difference representation. The two
+complete product representations are alternatives; they cannot be added
+as disjoint contributions.
+
+If a macroscopic near-pair band is paid separately, subtract that band's
+exact contribution from the retained main expression first.
+Let $\mathcal J^\dagger_{\rm rem}\le U_{\rm rem}$ be a proved signed
+bound for the complement, let $E_{\rm tr}$ be the sum of the errors
+of the particular representation used, and let $\mathsf B_c,\mathsf B_s$
+be its near-band envelopes. A sufficient ordinary-threshold exclusion is
+\begin{equation}
+U_{\rm rem}+E_{\rm tr}+\mathsf B_c+\mathsf B_s+\Pi^\dagger
+                  +\frac{\widehat\Delta_{\rm count}}{4c^6}<0.
+\label{eq:open-target}
+\end{equation}
+The quantities in this formula include the measured candidate payment
+and the physical raw-jet payment with the selected normalizer. Statements
+that transformation errors lie below a displayed asymptotic upper-budget
+scale do not assert a positive lower bound for a measured error.
+
+The transformations now give explicit analytical main and boundary terms
+with vanishing remainders. What is still missing is a one-sided bound for
+their complete coupled resonant contribution under the genuine full-sum
+candidate constraints. A sign on an isolated block or an independent
+sublattice candidate does not imply \eqref{eq:open-target}. Absolute
+moment envelopes need not yield its sign. The invariant leading reflection
+does not yield it either.
+
+The proposed next analytical step is therefore to seek an inequality for
+the coupled stationary integrals and boundary functions with their actual
+M\"obius coefficients, shifted centers, thermal weights, and common
+frequency. Higher multiplicities and small-curvature branches require
+their own tests. Coverage of complementary parameters and the
+small-time endpoint is also necessary for a uniform collision theorem.
+No assertion in this paper closes those obligations or proves RH.
+
+\section*{Acknowledgements and preparation record}
+This manuscript was drafted for Edward Baker with substantial assistance
+from OpenAI's Codex large language model. The recorded configuration for
+this drafting turn is GPT-6.1-sol, reasoning effort ultra. LLM assistance
+included synthesis of research notes, algebraic derivation, exposition,
+and internal cross-audits. Those checks are not independent mathematical
+validation. Earlier notes retain their own preparation metadata.
+The classical heat-flow normalization and imported effective inputs are
+credited to the sources below; the analytical reductions are written with
+their proof obligations and limits explicit.
+
+\begin{thebibliography}{99}
+\bibitem{polymath}
+D.\ H.\ J.\ Polymath,
+\emph{Effective approximation of heat flow evolution of the Riemann
+$\xi$ function, and a new upper bound for the de Bruijn--Newman constant},
+arXiv:1904.12438v2 (2019).
+\url{https://arxiv.org/abs/1904.12438}.
+
+\bibitem{dlmffourier}
+NIST Digital Library of Mathematical Functions, \S1.8,
+\emph{Fourier series and Poisson's summation formula}.
+\url{https://dlmf.nist.gov/1.8}.
+
+\bibitem{dlmfstationary}
+NIST Digital Library of Mathematical Functions, \S2.3(iv),
+\emph{Method of stationary phase}.
+\url{https://dlmf.nist.gov/2.3#iv}.
+
+\bibitem{dlmfcot}
+NIST Digital Library of Mathematical Functions, equation 4.22.3,
+\emph{Cotangent partial fractions}.
+\url{https://dlmf.nist.gov/4.22.E3}.
+
+\bibitem{dlmfem}
+NIST Digital Library of Mathematical Functions, equation 2.10.1,
+\emph{Euler--Maclaurin formula}.
+\url{https://dlmf.nist.gov/2.10.E1}.
+
+\bibitem{dlmfbern}
+NIST Digital Library of Mathematical Functions, equation 24.8.1,
+\emph{Bernoulli polynomial Fourier series}.
+\url{https://dlmf.nist.gov/24.8.E1}.
+
+\bibitem{projectnotes}
+Edward Baker research project, with LLM assistance,
+\emph{Prime-phase torus investigation}, internal Notes 1--9,
+10 October 2026. Source directory:
+\texttt{09\_prime\_phase\_torus/notes/}.
+Individual notes state their model, preparation record, and audit scope.
+
+\bibitem{heatnotes}
+Edward Baker research project, with LLM assistance,
+\emph{Signed shrinking-sector approximation, threshold jets, analytical
+Schur cones, density-strengthened thresholds, and stationary reflection},
+internal Heat Notes 8, 12, and 20--22, 9--10 October 2026.
+Source directory: \texttt{newman\_collisions/notes/}.
+\end{thebibliography}
+\end{document}

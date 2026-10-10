@@ -7,8 +7,10 @@ as recorded in this chat's session configuration.
 This folder keeps dated conversation records and a numbering registry.
 The first captured chat is **1**. “Continue manuscript integration” is **2**.
 "Review Newman collision program" is **3**. "Investigate analytic Gaussian"
-is **4**. "Create 15 project folders" is **5**. Read `index.json` before recording
-another chat: the next new conversation is **6**. Numbers belong to this investigation's
+is **4**. "Create 15 project folders" is **5**. "Continue RH exponent descent"
+is **6**. “Summarize Newman collision progress” is **7**. Read
+`index.json` before recording another chat: the next new conversation is
+**8**. Numbers belong to this investigation's
 folder and remain stable. A later refresh of the same conversation retains
 its number. Retrospective imports receive the next unused number and retain
 their original conversation dates; importing an older chat does not renumber
@@ -189,3 +191,141 @@ estimate with the prescribed coefficients that beats all payments. Keep
 the common height and carrier, physical derivatives, both candidate
 tolerances and complete complement interference. The uniform sector
 theorem remains open.
+
+## Correlated payments and complete candidate atlas continuation
+
+Chat **6**, "Continue RH exponent descent", retains the recorded original
+creation time 2026-10-10T06:19:45.729Z (10 October 2026 at
+02:19:45.729 America/New_York). Its
+[conversation record](0006_2026-10-10T06-19-45Z_continue-rh-exponent-descent.json)
+preserves completed public messages through capture. The registry records
+the separate capture time. This is a snapshot during the research response;
+a later refresh can include its final delivery while retaining number 6.
+Chats 1–5 and their registry entries are unchanged. The next new
+conversation receives **7**.
+
+Start the next research session with
+[Heat Note 18](../newman_collisions/notes/18_CORRELATED_HOLOMORPHIC_PAYMENTS_AND_CANDIDATE_COVERAGE_20261010.md),
+[project 13 Note 4](../newman_collisions/13_microlocal_phase_space/notes/4_CANDIDATE_CURRENT_ATLAS_AND_THIRTEEN_SIMPLE_ZERO_BRANCHES_20261010.md),
+[project 09 Note 4](../newman_collisions/09_prime_phase_torus/notes/4_PRESCRIBED_HEAT_WEIGHT_COVARIANCE_AND_SIGNED_HIERARCHY_20261010.md),
+and [the shared internal review and replay record](../reviews/HEAT_CORRELATED_PAYMENT_AND_CANDIDATE_ATLAS_REVIEW_20261010.md).
+The recorded configuration is GPT-6.1-sol (Codex), reasoning effort ultra;
+all LLM audits and replays are internal checks.
+
+The holomorphic remainder yields the exact real candidate body
+`(F/eta)^2+|Fprime|/(L*eta)<=1`, improving the independent square
+payments. Its support gives a stronger sharp complete-current test, and
+a second Schur step correlates the second derivative error with the
+measured first two errors. Project 13 retains all 22066 terms and certifies
+the closed rectangle `t0<=t<=1/20`, `x0<=x<=x0+8`, where
+`t0=1/(2*log(22066))`, `x0=4*pi*22066^2`. It has exactly thirteen
+simple genuine heat zeros at every time and no joint heat collision
+anywhere. All 46 closed strips, their candidate screens and endpoint
+signs are paid; this is complete finite coverage.
+
+Project 09 now has an exact prescribed-weight Gaussian coefficient tilt,
+four signed covariance channels and an infinite shifted-moment hierarchy.
+The specific absolute covariance envelope has size
+`Theta(t exp(2 a/t))` on `kappa in [1,3/2]`, so that chosen absolute
+recombination does not give a vanishing payment. It does not establish
+the actual covariance sign or rule out a larger negative margin.
+
+The next target is a uniform prescribed-coefficient current margin
+conditional on the stronger candidate body, or a signed dual bound
+retaining the complete covariance and successive Schur error constraints.
+The finite atlas can test a proposed mechanism across further cutoff cells;
+it provides no uniform bound as time tends to zero. Keep the common height,
+carrier, physical raw derivatives, normalizer, both candidates, full
+complement interference and every error payment. Higher multiplicity and
+global parameter coverage remain open; no RH or global Newman conclusion
+is claimed.
+
+## Further continuation within chat 6
+
+The request to continue the proposed next steps and save this additional
+discussion refreshes the same
+[chat 6 record](0006_2026-10-10T06-19-45Z_continue-rh-exponent-descent.json).
+Its conversation identity, original creation timestamp and number are
+preserved. The archive includes the preceding research delivery, the new
+continuation request and completed public messages through this refresh.
+This remains a snapshot; the refresh response's final delivery enters on
+a later capture. Chats 1–5 are unchanged, and the next new conversation
+is still **7**.
+
+Start the next research session with
+[Heat Note 19](../newman_collisions/notes/19_HIGHER_SCHUR_PAYMENTS_AND_MULTI_CUTOFF_SIGNED_CONTINUATION_20261010.md),
+[project 09 Note 5](../newman_collisions/09_prime_phase_torus/notes/5_SHARP_ONE_SIDED_DUAL_PAYMENTS_ON_CORRELATED_CANDIDATES_20261010.md),
+[project 13 Note 5](../newman_collisions/13_microlocal_phase_space/notes/5_MULTI_CUTOFF_CORRELATED_CANDIDATE_FAMILY_20261010.md),
+and [the latest shared internal review](../reviews/HEAT_HIGHER_SCHUR_AND_MULTI_CUTOFF_CONTINUATION_REVIEW_20261010.md).
+The recorded configuration remains GPT-6.1-sol (Codex), reasoning effort
+ultra; all agent audits and arithmetic replays are internal checks.
+
+The full real Schur body through the fourth derivative makes the exact
+conditional threshold maximum a one-variable optimization. A formal
+finite-jet control shows that correlation can supply a strict negative
+bound missed by independent errors. A separate ordinary-double control
+shows that the error body alone still permits a positive threshold sign.
+Physical raw finite jets remain distinct from the separately paid Bell
+residuals of moment approximations.
+
+Project 09 now solves the sharp one-sided candidate-null quadratic
+payment. Its finite critical set consists of two boundary cubic problems
+and a feasible nonsingular stationary point. Eight common moment corners
+or 32 common transformed-coefficient corners provide exact box payments.
+The prescribed signed four-channel pair estimate still has to beat this
+payment and every physical residual; a smaller payment supplies no free
+arithmetic sign.
+
+Project 13 certifies the three exact rectangles
+`1/(2*log(M)) <= t <= 1/20`, `4*pi*M^2 <= x <= 4*pi*M^2+8`,
+at `M=22067,22068,22080`. They contain exactly `12,12,13` simple genuine
+heat zeros per allowed time and exclude all joint heat collisions. These
+are disconnected local windows, with no coverage of the gaps or full
+cutoff cells. The derivative tests already imply the checked first-jet
+Schur exclusions, and inconclusive current bounds do not establish
+negative actual currents.
+
+The next arithmetic target is a certified strict conditional threshold
+maximum for the actual complete physical finite jets, or a prescribed
+signed dual bound with the sharp one-sided payment. A rational critical-set
+solver for the remaining one-variable threshold maximum would make the
+first route directly reusable. Both routes still need uniform control on
+a specified shrinking subsector, full higher-multiplicity handling and
+all approximation payments. No uniform shrinking-sector, global Newman
+or RH conclusion is claimed.
+
+## Analytical continuation and project 09 manuscript
+
+Chat **7**, “Summarize Newman collision progress”, retains the original
+creation time 2026-10-10T06:56:08.618Z (10 October 2026 at
+02:56:08.618 America/New_York). Its
+[conversation record](0007_2026-10-10T06-56-08Z_summarize-newman-collision-progress.json)
+preserves the original progress-summary request, the shift toward analytical
+proof work, the ensuing analytical continuations and their completed
+deliveries, and the project 09 manuscript/archive request, together with
+completed public progress messages through capture. The archive contains
+exact recorded public text, not reconstructed turn summaries. Original
+message start/completion times and the separate capture time are retained.
+
+This is a snapshot during the manuscript/archive response. Messages sent
+after its capture, including the later final delivery, require a refresh of
+chat 7; its number and creation time remain unchanged. Chats 1–6 and their
+registry entries are unchanged. The next new conversation receives **8**.
+The latest recorded manuscript-turn configuration is GPT-6.1-sol (Codex),
+reasoning effort ultra. This configuration comes from that turn's recorded
+context; it does not retrospectively change metadata in older research notes.
+
+Read the [project 09 manuscript](../newman_collisions/09_prime_phase_torus/prime_phase_torus_signed_reductions.tex)
+and its [internal review](../newman_collisions/09_prime_phase_torus/reviews/10_MANUSCRIPT_INTERNAL_REVIEW_20261010.md)
+alongside the [project 09 guide](../newman_collisions/09_prime_phase_torus/README.md).
+The captured completion commentary records that the standalone source was
+saved and compiled successfully. Begin further research with
+[Heat Note 22](../newman_collisions/notes/22_SIGNED_PAIR_TRANSFORMS_AND_STATIONARY_REFLECTION_20261010.md),
+[the diagonal-annihilating kernels](../newman_collisions/09_prime_phase_torus/notes/7_DIAGONAL_ANNIHILATING_PAID_KERNELS_AND_NEAR_PAIR_BOUNDS_20261010.md),
+[the product Poisson transform](../newman_collisions/09_prime_phase_torus/notes/8_OSCILLATION_PRESERVING_PRODUCT_POISSON_TRANSFORM_20261010.md),
+[the coupled Möbius frontier](../newman_collisions/09_prime_phase_torus/notes/9_COUPLED_MOBIUS_PRIMITIVE_FRONTIER_AND_RESONANT_SUBLATTICES_20261010.md),
+and [the internal review](../reviews/HEAT_SIGNED_PAIR_KERNEL_AND_OSCILLATORY_TRANSFORM_REVIEW_20261010.md).
+These prove paid reductions and vanishing transformation remainders. The
+remaining proof target is a candidate-conditioned signed estimate for the
+coupled resonant integrals and retained boundaries, strong enough to beat
+all physical and candidate payments. No RH conclusion is claimed.

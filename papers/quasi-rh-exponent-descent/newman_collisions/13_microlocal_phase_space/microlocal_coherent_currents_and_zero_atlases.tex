@@ -1,0 +1,1156 @@
+\documentclass[11pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage[margin=1in]{geometry}
+\usepackage{booktabs,array}
+\usepackage[colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue]{hyperref}
+\allowdisplaybreaks
+\setlength{\emergencystretch}{2em}
+\numberwithin{equation}{section}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{importedinput}[theorem]{Imported input}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\DeclareMathOperator{\Rea}{Re}
+\DeclareMathOperator{\Ima}{Im}
+\DeclareMathOperator{\Log}{Log}
+\DeclareMathOperator{\dist}{dist}
+\newcommand{\dd}{\,d}
+\newcommand{\HH}{\mathcal H}
+\newcommand{\JJ}{\mathcal J}
+\title{Microlocal Observations, Coherent Currents,\texorpdfstring{\\}{ }and Finite Zero Atlases for the Riemann Heat Flow}
+\author{Drafted for Edward Baker}
+\date{10 October 2026}
+\begin{document}
+\maketitle
+\begin{abstract}
+We organize phase space observations of the Riemann heat flow and their
+finite arithmetic counterparts. A positive Husimi lift has an exact
+generator with negative momentum diffusion, spatial drift, and a contact
+term. Gaussian reconstruction retains these features in the observed
+spatial jets; positivity alone does not exclude a real collision. A doubled
+arithmetic density matrix retains both phase differences and reflected
+phase sums. Centered logarithmic moments give exact block observations and
+physical derivatives, while a complete coherent current yields a paid
+necessary condition at a joint value--derivative zero. We also derive its
+sharp support bound on the correlated first-jet error body. Under an
+explicit imported holomorphic approximation estimate, outward interval
+certificates prove joint nonvanishing and exactly 13, 12, 12, and 13 simple
+heat zeros at every allowed time in four separate closed height windows.
+Their proofs retain every natural-cutoff summand, physical spatial and
+time transport, and the full value and derivative error payments. The
+finite results do not cover the intervening heights or give a bound
+uniform as time tends to zero. The remaining signed arithmetic estimate
+is related to the density-strengthened threshold test and to the
+threshold-preserving leading stationary reflection of the prime-torus reduction.
+\end{abstract}
+\tableofcontents
+
+\section{Problem and scope}
+The genuine scalar function is
+\begin{equation}
+ H_t(z)=\int_0^\infty e^{tu^2}\Phi(u)\cos(zu)\dd u,
+ \quad
+ \Phi(u)=\sum_{n\ge1}(2\pi^2n^4e^{9u}-3\pi n^2e^{5u})
+                         e^{-\pi n^2e^{4u}}.
+ \label{eq:heat}
+\end{equation}
+It satisfies $H_0(z)=\xi(1/2+iz/2)/8$ and
+$\partial_tH_t=-\partial_z^2H_t$ \cite{polymath}.
+The question motivating this investigation is whether its actual
+arithmetic correlations supply an error-paid exclusion of
+$H_t(x)=H_t'(x)=0$ at large real heights. Here a prime means a spatial
+derivative at fixed time. It never means differentiation along a scaling
+curve.
+
+The continuous lift and the finite arithmetic approximant are different
+objects. The lift represents \eqref{eq:heat} exactly. The finite sum
+approximates a nonvanishing normalization of it through
+Input~\ref{input:disk}. The exact finite algebra does not require that
+input; all finite-certificate conclusions about genuine heat zeros do. The certificates
+verify arithmetic signs and coverage after importing the analytic
+approximation interface. They do not independently establish that
+interface.
+
+The principal finite conclusion is the following. Its quantitative data
+and proof are given in Section~\ref{sec:certificates}.
+\begin{theorem}[Four finite windows, under Input~\ref{input:disk}]
+\label{thm:main}
+For $M\in\{22066,22067,22068,22080\}$ put
+\[
+ t_M=\frac1{2\log M},\qquad x_M=4\pi M^2,\qquad
+ \mathcal R_M=[t_M,1/20]\times[x_M,x_M+8].
+\]
+On each entire closed rectangle, the genuine pair $(H_t,H_t')$ has no
+joint zero. For each allowed time, the numbers of zeros in its closed
+height interval are respectively $13,12,12,13$, and every zero is simple.
+With $Q_t=H_t/A_t$ and $L=\log(x/(4\pi))$, the corresponding uniform
+lower bounds for $\|(Q_t,Q_t'/L)\|_2$ are
+$0.03728,0.03117,0.02205,0.0032919$, each strict.
+\end{theorem}
+These are four disconnected windows, each with constant natural cutoff.
+They are not complete cutoff cells. In their common time interval
+$[t_{22066},1/20]$, their union contains exactly fifty simple zeros at
+each time. This count concerns only that union. No assertion about zeros
+in its gaps follows.
+
+The analytical results explain why the finite certificates preserve the
+information needed for this conclusion. Husimi positivity observes an
+oscillatory Fourier transform. A positive rank-one arithmetic matrix can
+have zero observed coordinates. A genuine macroscopic block can have
+negative phase current. Its complement and interference can reverse that
+sign. None of these facts decides the complete current on every genuine
+candidate state. This paper consolidates the five microlocal notes
+\cite{micro1,micro2,micro3,micro4,micro5}, with the signed-transform
+background \cite{torus,reflection}; no literature novelty is asserted.
+
+\section{Exact Wigner and Husimi observations}
+\label{sec:lift}
+Let $\Phi_e(u)=\Phi(|u|)$ denote the smooth even theta kernel in
+\eqref{eq:heat}.
+Its evenness follows from the theta transformation. For $u\ge0$, every
+summand is positive since $2\pi n^2e^{4u}>3$; evenness gives positivity
+on the whole real line. Define
+\begin{equation}
+ \psi_t(u)=e^{tu^2/2}\sqrt{\Phi_e(u)},\qquad
+ \mathfrak m_t(u)=|\psi_t(u)|^2.
+ \label{eq:wave}
+\end{equation}
+The theta tails are super-exponential. Their derivatives, and the
+logarithmic derivatives of their positive square root, show that
+$\psi_t\in\mathcal S(\mathbb R)$, with every finite time derivative
+on compact real time intervals. In particular all polynomial
+multiplication domains below contain the genuine trajectory.
+
+With the convention
+\begin{equation}
+ W_t(u,p)=\frac1{2\pi}\int_{\mathbb R}e^{-ips}
+     \psi_t(u+s/2)\overline{\psi_t(u-s/2)}\dd s,
+ \label{eq:wigner}
+\end{equation}
+the Wigner function is real and Schwartz. Its momentum marginal is $\mathfrak m_t$.
+Direct differentiation gives
+\begin{equation}
+ \partial_tW_t=u^2W_t-\frac14\partial_p^2W_t,
+ \qquad H_t(z)=\frac12\int_{\mathbb R^2}e^{izu}W_t(u,p)\dd u\dd p.
+ \label{eq:wigner-gen}
+\end{equation}
+Indeed the time multiplier inside \eqref{eq:wigner} is
+$u^2+s^2/4$, whose Fourier image is $u^2-\partial_p^2/4$.
+Integrating its momentum derivative gives zero boundary flux. The
+negative scalar heat sign is therefore retained by this lift. Wigner
+positivity is not assumed.
+
+\begin{proposition}[Positive Husimi trajectory and its full generator]
+\label{prop:husimi}
+Fix $a>0$, $b_p=1/(16a)$, and set
+\begin{equation}
+ \HH_t=e^{a\partial_u^2+b_p\partial_p^2}W_t.
+ \label{eq:husimi}
+\end{equation}
+This is a nonnegative function. On the genuine trajectory its exact
+evolution is
+\begin{equation}
+ \partial_t\HH_t=\left(u^2+4au\partial_u+2a
+                   +4a^2\partial_u^2-\frac14\partial_p^2\right)\HH_t.
+ \label{eq:husimi-gen}
+\end{equation}
+\end{proposition}
+\begin{proof}
+For $g(y)=(\pi\sigma_g^2)^{-1/4}e^{-y^2/(2\sigma_g^2)}$,
+$\sigma_g^2=4a$, the Wigner density is
+$\pi^{-1}e^{-u^2/\sigma_g^2-\sigma_g^2p^2}$. It is exactly the
+convolution kernel of \eqref{eq:husimi}: its variances are $2a,2b_p$.
+Expanding the overlap integral gives
+\[
+ \HH_t(u,p)=\frac1{2\pi}\left|
+ \int_{\mathbb R}\psi_t(y)
+       \overline{e^{ip(y-u/2)}g(y-u)}\dd y\right|^2\ge0.
+\]
+Also $\int\HH_t=\|\psi_t\|_2^2$.
+For Gaussian convolution,
+$e^{a\partial_u^2}(uf)=(u+2a\partial_u)e^{a\partial_u^2}f$.
+Applying this twice to \eqref{eq:wigner-gen} gives
+$(u+2a\partial_u)^2=u^2+4au\partial_u+2a+4a^2\partial_u^2$.
+Momentum convolution commutes with $\partial_p^2$. All operations can
+be justified by convolution and integration by parts on Schwartz
+functions, without a bounded inverse smoothing operator.
+\end{proof}
+The first-order term in \eqref{eq:husimi-gen} is spatial drift, and
+$2a$ is its contact term. Negative momentum diffusion remains. The
+proposition proves positivity of the actual smoothed trajectory; it
+does not give positivity-preserving evolution on arbitrary nonnegative
+phase space data. For general background on Husimi observations see
+\cite{trushechkin}; the quantum evolution there is different from the
+heat evolution here.
+
+\subsection{Reconstruction and the spatial jet dictionary}
+Define the smoothed scalar observation
+\begin{equation}
+ R_t^a(z)=\frac12\int_{\mathbb R^2}e^{izu}\HH_t(u,p)\dd u\dd p.
+\end{equation}
+Its marginal is the $u$-Gaussian convolution of $\mathfrak m_t$, so
+\begin{equation}
+ R_t^a(z)=e^{-az^2}H_t(z),\qquad
+ H_t(z)=e^{az^2}R_t^a(z).
+ \label{eq:reconstruction}
+\end{equation}
+The super-exponential marginal and its Gaussian convolution permit
+entire extension of these identities. Thus the positive observation is
+still oscillatory, and multiplication by a nonvanishing Gaussian
+does not change joint value--derivative vanishing.
+
+Put $p_k(x)=e^{-ax^2}\partial_x^ke^{ax^2}$. The first rows are
+\begin{align}
+ p_0&=1,&p_1&=2ax,&p_2&=2a+4a^2x^2,\\
+ p_3&=12a^2x+8a^3x^3,&
+ p_4&=12a^2+48a^3x^2+16a^4x^4.\nonumber
+\end{align}
+The recurrence $p_{k+1}=p_k'+2axp_k$ and the product rule give
+\begin{equation}
+ H_t^{(j)}=e^{ax^2}\sum_{k=0}^j\binom jk p_{j-k}(R_t^a)^{(k)}.
+ \label{eq:gaussian-jets}
+\end{equation}
+At a collision this specializes to
+\begin{align}
+ H_t''&=e^{ax^2}(R_t^a)'',\nonumber\\
+ H_t'''&=e^{ax^2}\bigl((R_t^a)'''+6ax(R_t^a)''\bigr),\\
+ H_t^{(4)}&=e^{ax^2}\bigl((R_t^a)^{(4)}+8ax(R_t^a)'''
+                  +(12a+24a^2x^2)(R_t^a)''\bigr).\nonumber
+\end{align}
+The reduced evolution is
+\begin{equation}
+ \partial_tR_t^a=-(\partial_x+2ax)^2R_t^a.
+ \label{eq:reduced-husimi}
+\end{equation}
+If $a=a(t)$ moves, the generator additionally contains
+$a'\partial_u^2+b_p'\partial_p^2$, and
+\eqref{eq:reduced-husimi} additionally contains $-a'x^2R_t^a$.
+
+For the normalizer $A_t$ defined below, write $\beta_A=A_t'/A_t$.
+The correctly normalized observation and its derivative are
+\begin{equation}
+ Q_t=\frac{e^{ax^2}}{A_t}R_t^a,\qquad
+ Q_t'=\frac{e^{ax^2}}{A_t}\bigl((R_t^a)'+(2ax-\beta_A)R_t^a\bigr).
+ \label{eq:normalized-husimi}
+\end{equation}
+Equivalently the smoothed normalizer is $A_te^{-ax^2}$. Higher normalized
+jets require differentiating the whole prefactor in
+\eqref{eq:normalized-husimi}. An arbitrary numerical error $\varepsilon$
+in $R_t^a(x)$ reconstructs to $e^{ax^2}\varepsilon$ in $H_t(x)$;
+derivative errors use all coefficients of \eqref{eq:gaussian-jets}.
+Exact smoothing of a known scalar error is different: its Gaussian
+factor cancels upon reconstruction. No phase space truncation error
+small enough for the large-height collision test is established here.
+
+\section{The physical finite orbit and the imported analytic interface}
+\label{sec:orbit}
+For $s=(1-iz)/2$, with principal logarithms near the large positive
+spatial axis, put
+\begin{align}
+ m_0(s)&=\Log s+\Log(s-1)-\frac s2\log\pi
+       +\log\frac{\sqrt{2\pi}}{16}
+       +\left(\frac s2-\frac12\right)\Log\frac s2-\frac s2,\nonumber\\
+ \alpha(s)&=m_0'(s)=\frac1{2s}+\frac1{s-1}
+                        +\frac12\Log\frac{s}{2\pi},\qquad
+ m_t(s)=m_0(s)+\frac t4\alpha(s)^2.\label{eq:normalizer-data}
+\end{align}
+Define
+\begin{align}
+ P_{t,N}(s)&=\sum_{n\le N}
+ e^{t\log^2n/4-(s+t\alpha(s)/2)\log n},\nonumber\\
+ A_t(z)&=e^{(m_t(s)+m_t(1-s))/2},\qquad
+ \theta_t(z)=\frac{m_t(s)-m_t(1-s)}{2i},\\
+ F_{t,N}(z)&=e^{i\theta_t(z)}P_{t,N}(s)
+               +e^{-i\theta_t(z)}P_{t,N}(1-s),\qquad
+ Q_t(z)=H_t(z)/A_t(z).\nonumber
+\end{align}
+These are analytic at fixed $N$ on the neighborhoods in use. On the real
+axis $A_t>0$, $F_{t,N}$ and $Q_t$ are real, and
+\begin{equation}
+ H_t=H_t'=0\quad\Longleftrightarrow\quad Q_t=Q_t'=0.
+ \label{eq:joint-equivalence}
+\end{equation}
+
+At a real center define $L=\log(x/(4\pi))$, $\kappa=tL$, and
+\begin{equation}
+ 0<t\le1/20,\qquad 1\le\kappa\le2,\qquad
+ N=\left\lfloor\sqrt{x/(4\pi)+t/16}\right\rfloor.
+ \label{eq:sector}
+\end{equation}
+All spatial derivatives use the same fixed time and integer cutoff.
+The local scale $L$ specifies a Cauchy radius at that center; it is not
+differentiated as a coordinate factor.
+
+\begin{importedinput}[Complete fixed-cutoff disk estimate]
+\label{input:disk}
+For each center in \eqref{eq:sector}, the analytic fixed-cutoff
+approximant above satisfies
+\begin{equation}
+ |Q_t(z)-F_{t,N}(z)|\le\eta(t,x)
+ \quad (|z-x|\le1/L),\qquad
+ \eta(t,x)=5e^{-tL^2/16-L/4}.
+ \label{eq:disk}
+\end{equation}
+This is the repository's full interface from Heat Notes 8 and 13
+\cite{heatinterface}, deduced there from the effective approximation
+\cite{polymath}. It includes the symmetric normalizer, reflected branch,
+and all changes of natural cutoff within the disk. The fixed integer in
+$F_{t,N}$ is the center cutoff throughout that disk.
+\end{importedinput}
+Cauchy's formula then gives
+\begin{equation}
+ |Q_t^{(j)}(x)-F_{t,N}^{(j)}(x)|\le j!L^j\eta(t,x).
+ \label{eq:cauchy}
+\end{equation}
+In particular the checker may use outward upper bounds for $\eta$ and
+$L\eta$. The expression in \eqref{eq:disk} is the chosen majorant,
+not a measured approximation error.
+
+Write $\alpha=\alpha_r+i\alpha_i$, $\alpha'=U+iV$, where this prime
+is the complex $s$ derivative. At the real center the exact formulas are
+\begin{align}
+ \alpha_r&=\frac L2+\frac14\log(1+x^{-2})-\frac1{1+x^2},&
+ \alpha_i&=\frac{3x}{1+x^2}-\frac12\arctan x,\nonumber\\
+ U&=\frac{7x^2-5}{(1+x^2)^2},&
+ V&=\frac{x(x^2+5)}{(1+x^2)^2},\label{eq:real-data}\\
+ \theta_t&=-\pi+\frac14\arctan x+\frac x4(1-L)
+          -\frac x8\log(1+x^{-2})+\frac t2\alpha_r\alpha_i.\nonumber
+\end{align}
+Let
+\begin{align}
+ \sigma&=\frac12+\frac t2\alpha_r,&
+ w_n&=n^{-\sigma}e^{t\log^2n/4},& T&=\frac{x-t\alpha_i}{2},\nonumber\\
+ q_n&=w_ne^{i(\theta_t+T\log n)},&
+ c&=\frac12(1+tU/2),& d&=tV/4,\label{eq:qdata}\\
+ \Omega&=\frac12\Rea\{\alpha(1+t\alpha'/2)\},&
+ \mu&=\Omega/c,&\epsilon&=d/c.\nonumber
+\end{align}
+Then, on the real axis,
+\begin{equation}
+ S=\sum_{n\le N}q_n,\qquad F_{t,N}=2\Rea S,\qquad
+ \gamma_n:=q_n'/q_n=-d\log n-i(\Omega-c\log n).
+ \label{eq:physical-derivative}
+\end{equation}
+The frequency $T$ is not the heat time. All $q_n$ use one actual common
+frequency and carrier; no prime phase can be selected independently.
+Off the real axis the approximant is the two analytic branches above,
+not a real-part operation on a varying complex argument.
+
+The finite approximation has a heat residual, as calculated in
+\cite{torus}. For $b_n=e^{m_0(s)-s\log n+t(\alpha-\log n)^2/4}$,
+$h_n=\alpha-\log n$, and $B_s=1+t\alpha'/2$,
+\begin{equation}
+ (\partial_t-\tfrac14\partial_s^2)b_n
+ =\tfrac14\{h_n^2(1-B_s^2)-\alpha'B_s-(t/2)h_n\alpha''\}b_n.
+ \label{eq:finite-residual}
+\end{equation}
+This follows from $(\log b_n)_s=h_nB_s$. Already at $t=0$ the
+multiplier is $-\alpha'/4$. The finite sum is not an invariant finite
+Newman heat manifold. A spatial error disk by itself does not bound
+the time derivative of its error.
+
+\section{Complete interference and centered block observations}
+\label{sec:coherence}
+For the doubled column $v=(q_1,\ldots,q_N,\overline q_1,\ldots,
+\overline q_N)^T$ set $D=vv^*$. Let $\ell_0$ have all entries one
+and let $\ell_1=(\gamma_n;\overline\gamma_n)_{n\le N}$. Then
+\begin{equation}
+ F=\ell_0v,\qquad F'=\ell_1v,\qquad
+ \|\mathcal V_N\|_2^2=\tfrac14\ell_0D\ell_0^*
+                         +\frac4{L^2}\ell_1D\ell_1^*,
+ \quad\mathcal V_N=(F/2,2F'/L).
+ \label{eq:density-observation}
+\end{equation}
+The upper-left matrix block contains $q_n\overline q_m$, with
+phase differences. The upper-right contains $q_nq_m$, with reflected
+phase sums. Positivity and rank one of $D$ do not ensure a nonzero
+observed row. Dropping its phase-sum blocks changes the real
+value--derivative observation.
+
+For $B=\{\lfloor N/2\rfloor+1,\ldots,N\}$ and its complete
+complement $C$, put $S_E=\sum_Eq_n$, $W_E=4iS_E'/L$,
+and $\mathcal V_E=(\Rea S_E,\Ima W_E)$. Product-to-sum gives
+\begin{align}
+ \|\mathcal V_E\|_2^2
+ &=\tfrac12\{|S_E|^2+|W_E|^2+\Rea(S_E^2-W_E^2)\},\nonumber\\
+ \|\mathcal V_N\|_2^2
+ &=\|\mathcal V_B\|_2^2+\|\mathcal V_C\|_2^2
+     +E_{BC}^-+E_{BC}^+,\label{eq:recombination}\\
+ E_{BC}^-&=\Rea(S_B\overline S_C+W_B\overline W_C),&
+ E_{BC}^+&=\Rea(S_BS_C-W_BW_C).\nonumber
+\end{align}
+Neither cross term has an automatic sign. The actual adjacent cutoff
+packet at $x=4\pi M^2$, $t=\kappa/(2\log M)$ has retained diagonal
+energy asymptotic to $2\cos^2(\pi/8)w_M^2$ but coherent energy
+$O(w_M^2/M^2)$ \cite{heatinterface,micro1}. Thus a positive fixed
+fraction of that diagonal is not a universal packet lower bound.
+This obstruction is not a collision of $H_t$.
+
+\subsection{An exact relative-block moment transform}
+Put $\ell_N=\log N$, $\delta_n=\log(N/n)$,
+$a_N=\sigma-t\ell_N/2$, and
+\begin{equation}
+ Z_k=\sum_{n\in B}\delta_n^k
+       e^{a_N\delta_n+t\delta_n^2/4-iT\delta_n},\qquad k\ge0.
+ \label{eq:Z}
+\end{equation}
+Each $\delta_n\in[0,\log2)$. Completing the logarithmic square gives
+the exact identity $S_B=q_NZ_0$. Define
+$\lambda_N=\Omega-c\ell_N$, $\gamma_N=-d\ell_N-i\lambda_N$,
+and $g=d-ic$. Physical differentiation at fixed $t,N$ gives
+\begin{equation}
+ a_N'=d,\qquad T'=c,\qquad
+ S_B'=q_N(\gamma_NZ_0+gZ_1).
+ \label{eq:block-first}
+\end{equation}
+The auxiliary identity $Z_1=i\partial_TZ_0$ freezes $a_N,t,N$;
+it cannot replace \eqref{eq:block-first} in a physical derivative.
+The signed block coordinates follow from
+\[
+ W_B=q_N\left[
+ \left(\frac{4\lambda_N}{L}-\frac{4id\ell_N}{L}\right)Z_0
+ +\left(\frac{4c}{L}+\frac{4id}{L}\right)Z_1\right].
+\]
+
+For higher jets set $\Gamma_n=\gamma_N+g\delta_n=\gamma_n$ and
+use its physical coefficient derivatives with $\delta_n$ fixed.
+The Bell multipliers are
+\begin{align}
+ P_0&=1,&P_1&=\Gamma_n,&P_2&=\Gamma_n^2+\Gamma_n',\nonumber\\
+ P_3&=\Gamma_n^3+3\Gamma_n\Gamma_n'+\Gamma_n'',\label{eq:bell}\\
+ P_4&=\Gamma_n^4+6\Gamma_n^2\Gamma_n'
+        +3(\Gamma_n')^2+4\Gamma_n\Gamma_n''+\Gamma_n'''.\nonumber
+\end{align}
+The recurrence $P_{j+1}=\Gamma_nP_j+P_j'$ proves
+$q_n^{(j)}=q_nP_j$. Writing $P_j=\sum_{k\le j}p_{jk}\delta_n^k$
+therefore gives
+\begin{equation}
+ S_B^{(j)}=q_N\sum_{k\le j}p_{jk}Z_k,\qquad
+ f_j=F_{t,N}^{(j)}=2\Rea(S_B^{(j)}+S_C^{(j)}).
+ \label{eq:complete-jets}
+\end{equation}
+This includes derivatives of $U,V,c,\Omega$, amplitude drift and
+normalizer motion. Its complete genuine payment is still
+\eqref{eq:cauchy}. Removing the complement has no new analytic
+approximation theorem attached to it.
+
+\section{Paid complete-current and correlated candidate tests}
+\label{sec:current}
+Define the current without dividing by an amplitude:
+\begin{equation}
+ \JJ=-\Ima(S'\overline S),\qquad S=u+iv_0,\quad S'=u'+iv_1,
+ \qquad\JJ=u'v_0-uv_1.
+ \label{eq:current}
+\end{equation}
+The symbols $v_0,v_1$ here are scalar invisible quadratures, not the
+doubled vector of \eqref{eq:density-observation}. The block formula is
+\begin{equation}
+ \frac{\JJ_B}{w_N^2}
+ =\lambda_N|Z_0|^2+c\Rea(Z_1\overline Z_0)
+                         -d\Ima(Z_1\overline Z_0),
+ \label{eq:block-current}
+\end{equation}
+and the complete recombination is
+\begin{equation}
+ \JJ=\JJ_B+\JJ_C-\Ima(S_B'\overline S_C+S_C'\overline S_B).
+ \label{eq:current-recombination}
+\end{equation}
+The common carrier phase value cancels from the current, which uses
+phase differences. Its spatial motion remains through $\lambda_N$.
+In fact $S\mapsto e^{i\chi(x)}S$ changes the current by
+$-\chi'(x)|S|^2$; only a fixed common rotation leaves it invariant.
+The actual real energy in \eqref{eq:recombination}
+additionally retains reflected phase sums. The current is a
+candidate-conditioned test, not an identification of that energy
+with a positive complex norm.
+
+\begin{proposition}[Rectangular current necessity]
+\label{prop:current}
+Under Input~\ref{input:disk}, a genuine joint zero at the center requires
+\begin{equation}
+ |u|\le\eta/2,\quad |u'|\le L\eta/2,\qquad
+ |\JJ|\le\frac\eta2(L|v_0|+|v_1|).
+ \label{eq:current-rect}
+\end{equation}
+Consequently a strict reverse of the last inequality for the complete
+physical sum excludes a joint zero.
+\end{proposition}
+\begin{proof}
+The first two bounds follow from $Q_t=Q_t'=0$, \eqref{eq:cauchy},
+and $F=2u$, $F'=2u'$. Insert them in \eqref{eq:current}.
+For fixed actual $v_0,v_1$, the right side is exactly the support of
+this rectangle for the linear functional $u'v_0-uv_1$.
+\end{proof}
+There is no assumption $S\ne0$. The current test remains valid when
+the complex coherent sum vanishes.
+
+The error disk supplies a stronger necessary condition
+\cite{schur,torus}:
+\begin{equation}
+ \left(\frac{2u}{\eta}\right)^2+\frac{2|u'|}{L\eta}\le1.
+ \label{eq:schur}
+\end{equation}
+To derive it, apply Schwarz--Pick at zero to
+$(Q_t-F_{t,N})(x+\zeta/L)/\eta$. Real symmetry makes its value
+and derivative real there, and $|g'(0)|\le1-|g(0)|^2$ gives
+\eqref{eq:schur} at a joint zero. Equality or a constant boundary
+function follows by a limiting argument.
+
+\begin{proposition}[Sharp correlated support for the current]
+\label{prop:curved-current}
+Set $A=L|v_0|$, $B_1=|v_1|$, and define
+\begin{equation}
+ h(A,B_1)=
+ \begin{cases}
+ A+B_1^2/(4A),&A>0,\ B_1\le2A,\\
+ B_1,&A=0\ \text{or}\ B_1\ge2A.
+ \end{cases}
+ \label{eq:support}
+\end{equation}
+At a genuine joint zero under the same input,
+$|\JJ|\le(\eta/2)h(A,B_1)$. This is the sharp support bound on
+the first-jet body \eqref{eq:schur}, and is no larger than the
+rectangular bound $(\eta/2)(A+B_1)$.
+\end{proposition}
+\begin{proof}
+Let $s=2u/\eta$ and $r=2u'/(L\eta)$. Their necessary body is
+$s^2+|r|\le1$. For fixed actual invisible quadratures the maximum of
+$|Lv_0r-v_1s|$ is
+\[
+ \max_{0\le y\le1}\{A(1-y^2)+B_1y\}.
+\]
+Signs of $r,s$ can align the terms, and $y=|s|$.
+For $A>0$ the stationary maximum has $y=B_1/(2A)$ when this is
+at most one; otherwise the maximum is at $y=1$. For $A=0$ it is
+$B_1$. This proves \eqref{eq:support}, including both degenerate cases.
+\end{proof}
+This proposition is a derived support refinement in the present
+manuscript, also recorded in \cite{micro6}. It is sharp for the stated necessary body, not a
+characterization of realizable arithmetic states. None of the retained
+certificates below requires this sharper current test. A finite current
+margin there uses \eqref{eq:current-rect}; the newer first-jet predicate
+uses \eqref{eq:schur} directly.
+
+\subsection{A genuine negative block and its complete recombination}
+At $M=N=22066$, $t=t_M$, $x=x_M$, all $11033$ relative-block
+terms are retained. The directed-power recomputation in the complete
+rectangle checker certifies \cite{micro2,micro3}
+\begin{equation}
+ -181.169106<\JJ_B/w_M^2<-181.169105.
+ \label{eq:negative-block}
+\end{equation}
+This stops a nonnegative-current claim for every genuine relative
+block, even with coherent interference and physical drift retained.
+It does not assert a complete-state collision. The same point
+certificate gives the deliberately wider strict enclosures
+\begin{center}
+\begin{tabular}{lr}
+\toprule
+Quantity at $(t_M,x_M)$ & Enclosure\\
+\midrule
+$\JJ_B$ & $(-0.000673643,-0.000673642)$\\
+$\JJ_C$ & $(12.32324,12.32325)$\\
+Cross current & $(-0.215813,-0.215811)$\\
+Complete $\JJ$ & $(12.10675,12.10677)$\\
+$\|\mathcal V_M\|_2^2$ & $(3.13574,3.13575)$\\
+\bottomrule
+\end{tabular}
+\end{center}
+The two cross energies are approximately
+$E_{BC}^-=-0.0437599560$ and $E_{BC}^+=0.00922600702$;
+their signs are opposite. The complete-current tolerance is below
+$0.061241$, leaving a paid gap above $12.0455$. These data show
+why the actual complement must be recombined before judging a current.
+
+\section{Coherent transport with complete physical payments}
+\label{sec:transport}
+The atlas machinery encloses a whole time--height rectangle, not just
+samples of its center. For a selected $M$ put
+$q_n^0=q_n(t_M,x_M)$, $\delta_n=\log(M/n)$,
+$\omega_n=\delta_n/2$, and introduce the auxiliary sum
+\begin{equation}
+ G_M(h)=\sum_{n\le M}q_n^0e^{-i\omega_nh}.
+ \label{eq:G}
+\end{equation}
+It is a coherent comparison function; the following payments relate
+it to the physical sum $S_M(t,x_M+h)$.
+
+\subsection{Spatial residual}
+At fixed $t_M$ and cutoff $M$ define
+\begin{equation}
+ r_n=\gamma_n+i\omega_n
+ =-\frac{t_MV\log n}{4}
+ -i\{\Omega-c\log M+(c-1/2)\delta_n\}.
+ \label{eq:r}
+\end{equation}
+This is centered before taking its absolute bound, so the nearly
+cancelling carrier terms do not incur separate large payments. If
+$|r_n|\le R_n$ throughout $0\le h\le H$, integration gives exactly
+\begin{equation}
+ q_n(t_M,x_M+h)=q_n^0e^{-i\omega_nh}
+                 \exp\left\{\int_0^h r_n(x_M+y)\dd y\right\}.
+\end{equation}
+The elementary inequality $|e^z-1|\le e^{|z|}-1$ then proves
+\begin{align}
+ |S_M(t_M,x_M+h)-G_M(h)|&\le\varepsilon_{x,0}
+   :=\sum_nw_n^0(e^{HR_n}-1),\nonumber\\
+ |S_M'(t_M,x_M+h)-G_M'(h)|&\le\varepsilon_{x,1}
+   :=\sum_nw_n^0\{\omega_n(e^{HR_n}-1)+R_ne^{HR_n}\}.
+ \label{eq:spatial-payment}
+\end{align}
+Both are complete sums. They retain amplitude drift, carrier
+curvature and the physical first derivative.
+
+\subsection{Time and mixed derivatives at fixed physical height}
+For $\ell=\log n$ direct differentiation gives
+\begin{align}
+ \chi_n:=q_{n,t}/q_n
+ &=\ell^2/4-\alpha_r\ell/2
+                      +i\alpha_i(\alpha_r-\ell)/2,\nonumber\\
+ \gamma_{n,t}&=-V\ell/4
+       -i\{U(\alpha_r-\ell)-\alpha_iV\}/4,\label{eq:time-multipliers}\\
+ S_t&=\sum_nq_n\chi_n,\qquad
+ S_{xt}=\sum_nq_n(\gamma_{n,t}+\gamma_n\chi_n).\nonumber
+\end{align}
+The imaginary part of $\chi_n$ includes the common time carrier
+$\partial_t\theta_t=\alpha_r\alpha_i/2$. The mixed row includes
+the time derivative of the spatial multiplier. Neither derivative
+is taken along $tL=1$.
+
+If $W_n,C_n,D_n,A_n^{\rm mix}$ bound respectively
+$|q_n|,|\chi_n|,|\gamma_n|,|\gamma_{n,t}|$ on the whole rectangle,
+set
+\begin{equation}
+ B_{t,0}=\sum_nW_nC_n,\qquad
+ B_{t,1}=\sum_nW_n(A_n^{\rm mix}+D_nC_n).
+ \label{eq:time-payment}
+\end{equation}
+Time displacement at most $\Delta t$ costs
+$\Delta t B_{t,0}$ and $\Delta t B_{t,1}$. These are absolute
+budgets only for the small physical motion; the signed main sum remains
+coherent.
+
+\subsection{Signed midpoint jets and their real Taylor remainder}
+At midpoint $h_*$ compute every signed jet
+\begin{equation}
+ g_j=G_M^{(j)}(h_*)=\sum_{n\le M}(-i\omega_n)^jq_n^0e^{-i\omega_nh_*},
+ \quad 0\le j\le K-1,
+ \quad B_K=\sum_{n\le M}w_n^0\omega_n^K.
+\end{equation}
+For the degree-$K-1$ polynomial
+$P(h)=\sum_{j<K}g_j(h-h_*)^j/j!$, the real Taylor integral
+remainder gives, on $|h-h_*|\le d_*$,
+\begin{equation}
+ |G_M-P|\le B_Kd_*^K/K!,\qquad
+ |G_M'-P'|\le B_Kd_*^{K-1}/(K-1)!.
+ \label{eq:taylor}
+\end{equation}
+The derivative version expands $G_M'$ to degree $K-2$.
+Along the real segment every phase exponential has modulus one,
+so there is no additional exponential loss in these remainders.
+Every low-index and complementary summand is present in $g_j,B_K$.
+
+Combining \eqref{eq:spatial-payment}, \eqref{eq:time-payment},
+and \eqref{eq:taylor} gives the componentwise enclosure radii
+\begin{equation}
+ E_0=B_Kd_*^K/K!+\varepsilon_{x,0}+\Delta tB_{t,0},\qquad
+ E_1=B_Kd_*^{K-1}/(K-1)!+\varepsilon_{x,1}+\Delta tB_{t,1}.
+ \label{eq:E}
+\end{equation}
+Each complex modulus bound safely encloses each real component.
+To transfer the observations to $Q_t,Q_t'$, add respectively
+$\eta$ and $L\eta$ to the real finite-sum errors $2E_0,2E_1$.
+
+For the height width eight, $K=64$, $h_*=4$, $d_*=4$.
+Each adaptive leaf uses an algebraic translation of the same polynomial
+to its own midpoint. Interval Horner evaluation then uses a small
+displacement. This changes the expression of $P$, not its coefficients'
+meaning or the global Taylor remainder. It preserves the cancellations
+already present in the signed jets.
+
+\section{Finite certified rectangles and exact zero counts}
+\label{sec:certificates}
+\subsection{The first simple-zero rectangle}
+The complete checker first encloses
+\[
+ [t_{22066},t_{22066}+8\cdot10^{-6}]
+       \times[x_{22066}+0.3,x_{22066}+0.4].
+\]
+It uses the degree-five midpoint polynomial ($K=6$) about $h_*=0.35$
+and radius $d_*=0.05$. Under Input~\ref{input:disk}, its fully
+paid bounds are \cite{micro3}
+\begin{align}
+ -0.337&<Q_t(x_{22066}+0.3)<-0.246,\nonumber\\
+ 0.851&<Q_t(x_{22066}+0.4)<0.941,\\
+ 10.20&<Q_t'(x)<13.46.\nonumber
+\end{align}
+Its complete current lies between $5.07$ and $11.10$; the current
+gap of \eqref{eq:current-rect} exceeds $4.92$. Opposite endpoint
+signs and strict monotonicity give exactly one simple genuine zero
+at each allowed time and joint nonvanishing everywhere in this smaller
+rectangle. This rectangle lies inside the larger $M=22066$ atlas.
+
+\subsection{Exact domains and arithmetic hulls}
+For the four domains $\mathcal R_M$ of Theorem~\ref{thm:main},
+the lower time is the exact expression $t_M$, not a rounded decimal.
+For $h\ge0$ and $t\ge t_M$, monotonicity and
+$t_M(2\log M)=1$ prove the exact sector lower edge $tL\ge1$.
+The outward upper bounds in the records give $tL<1.000243<2$.
+They also give throughout all four domains
+\begin{equation}
+ M^2+0.0031242<x/(4\pi)+t/16<M^2+0.639745<(M+1)^2.
+ \label{eq:cutoff-check}
+\end{equation}
+Thus $N=M$ everywhere on each real rectangle. The complex disks may
+still meet a cutoff change, already paid by Input~\ref{input:disk}.
+Rounded endpoint hulls extend microscopically beyond exact $t_M,x_M$;
+they are computational enclosures. The sector assertion concerns the
+exact domain, with its lower edge proved symbolically.
+
+The uniform payments satisfy $\eta<0.009642$ on all four windows.
+The $M=22066$ atlas has $L\eta<0.192864$; each newer window has
+$L\eta<0.192860$. The complete transport bounds for the three newer
+windows include
+\begin{center}
+\begin{tabular}{lr}
+\toprule
+Budget & Outward upper bound\\
+\midrule
+Value Taylor remainder & $1.486\cdot10^{-6}$\\
+Derivative Taylor remainder & $2.3775\cdot10^{-5}$\\
+Spatial value payment & $2.598\cdot10^{-7}$\\
+Spatial derivative payment & $3.306\cdot10^{-7}$\\
+$B_{t,0}$ & $2202$\\
+$B_{t,1}$ & $2194$\\
+$E_0$ & $0.026720$\\
+$E_1$ & $0.026647$\\
+\bottomrule
+\end{tabular}
+\end{center}
+The older atlas has the stronger total bounds
+$E_0<0.019732$, $E_1<0.019684$. All signs below include these
+physical and polynomial payments as well as the full analytic payments.
+
+\subsection{Acceptance rules and complete closed coverage}
+For a closed height leaf covering the whole allowed time interval,
+let $a_0,a_1$ be lower distances from zero of the physical component
+intervals for $u=\Rea S$ and $u'=\Rea S'$. Let
+$\eta_{\rm up}$, $(L\eta)_{\rm up}$, $L_{\rm up}$ be outward
+upper bounds. Define paid component gaps
+\begin{equation}
+ g_0=2a_0-\eta_{\rm up},\qquad
+ g_1=2a_1-(L\eta)_{\rm up}.
+ \label{eq:component-gaps}
+\end{equation}
+A leaf with $g_0>0$ has no genuine value zero. For $M=22066$,
+every remaining accepted leaf has $g_1>0$ and a strict reverse of
+\eqref{eq:current-rect} for its complete current enclosure.
+The successful paid derivative condition alone already excludes a
+joint zero; the current test records additional complete signed information.
+For the three newer cutoffs every remaining leaf has $g_1>0$ and
+the direct correlated predicate
+\begin{equation}
+ \underline{\mathcal P}
+ =\left(\frac{2a_0}{\eta_{\rm up}}\right)^2
+                 +\frac{2a_1}{(L\eta)_{\rm up}}>1.
+ \label{eq:schur-lower}
+\end{equation}
+The calculation uses outward arithmetic to form a lower bound for
+the left side of \eqref{eq:schur}. In these particular records,
+$g_1>0$ already implies the second term of
+\eqref{eq:schur-lower} exceeds one. The Schur check is active but
+redundant for exclusion. No extra arithmetic exclusion from the curved
+body alone is demonstrated.
+
+The algorithm bisects any unresolved height leaf. Every retained leaf
+is closed and covers the full exact time interval. Exact dyadic
+adjacency, both height endpoints, and total width eight are verified;
+every final leaf passes an acceptance rule. There are no omitted
+unresolved strips. Quantitative joint floors follow from
+\begin{equation}
+ |Q_t|\ge g_0\quad\hbox{on value leaves},\qquad
+ |Q_t'|/L\ge 2a_1/L_{\rm up}-\eta_{\rm up}>0
+       \quad\hbox{on derivative leaves}.
+ \label{eq:joint-floor}
+\end{equation}
+Taking the least of these component margins bounds
+$\|(Q_t,Q_t'/L)\|_2$ on the whole rectangle. This normalized pair
+has different scaling from $\mathcal V_N=(F/2,2F'/L)$.
+
+\begin{center}
+\small
+\begin{tabular}{rrrrrr}
+\toprule
+$M$ & Leaves & Value leaves & Remaining & Zeros/time & Joint floor\\
+\midrule
+22066 & 46 & 29 & 17 & 13 & $>0.03728$\\
+22067 & 29 & 16 & 13 & 12 & $>0.03117$\\
+22068 & 28 & 14 & 14 & 12 & $>0.02205$\\
+22080 & 32 & 15 & 17 & 13 & $>0.0032919$\\
+\bottomrule
+\end{tabular}
+\end{center}
+On the seventeen remaining $M=22066$ leaves the minimum paid
+complete-current gap exceeds $0.11934$. For the newer cutoffs the
+minimum first-jet lower bounds exceed respectively
+$4.2338,3.2875,1.3415$. Only two remaining leaves per newer cutoff
+also pass the coarse complete-current test. The other current
+enclosures are inconclusive; a negative lower enclosure for a gap
+does not certify a negative actual current. Even the older atlas
+does not assert current positivity on every value-pruned leaf.
+
+\subsection{Exact counts and smooth branches}
+Merge adjacent non-value leaves into connected height bands. Each
+band is checked again at both endpoints for all allowed times, with
+the full value payment. Their signs are strictly opposite. The paid
+$Q_t'$ has one strict nonzero sign on the whole band. Therefore
+each band has exactly one zero per time. Every point outside these
+bands belongs to a value leaf, so no other zero is possible.
+
+For $M=22066$ the thirteen fixed offset bands and derivative signs are
+\begin{center}
+\begin{tabular}{ll@{\qquad}ll}
+\toprule
+Band & Sign & Band & Sign\\
+\midrule
+$[0.25,0.375]$ & $+$ & $[0.875,1]$ & $-$\\
+$[1.5,1.625]$ & $+$ & $[2,2.25]$ & $-$\\
+$[2.625,2.875]$ & $+$ & $[3.25,3.375]$ & $-$\\
+$[3.75,3.875]$ & $+$ & $[4.375,4.5]$ & $-$\\
+$[5,5.125]$ & $+$ & $[5.625,5.75]$ & $-$\\
+$[6.125,6.5]$ & $+$ & $[7,7.125]$ & $-$\\
+$[7.5,7.75]$ & $+$ & & \\
+\bottomrule
+\end{tabular}
+\end{center}
+Every such band has $|Q_t'|>3.08$. The certificates for the other
+three cutoffs retain all their individual endpoint and derivative
+intervals as well. At any normalized zero,
+$H_t'=A_tQ_t'\ne0$. The implicit-function theorem, uniqueness,
+and fixed disjoint trapping bands give smooth simple-zero branches
+through the entire certified time interval, with local continuation
+at its endpoints. No further continuation is asserted.
+
+\begin{proof}[Proof of Theorem~\ref{thm:main}]
+The complete interval calculations in the retained records
+\cite{micro4,micro5} establish \eqref{eq:cutoff-check}, every
+acceptance inequality, the closed coverage assertions, and the
+endpoint and monotonicity signs just described. Their arithmetic
+contract and reproducible sources are specified in
+Section~\ref{sec:replay}. Input~\ref{input:disk} transfers each
+component gap and endpoint sign to the genuine normalized function.
+Equation~\eqref{eq:joint-floor} gives the displayed joint floors.
+The band argument gives exactly $13,12,12,13$ zeros at every
+allowed time, and \eqref{eq:joint-equivalence} transfers
+nonvanishing and simplicity to $H_t$. Strict bounds apply at shared
+leaf boundaries and at $t=1/20$ because all enclosures are closed.
+\end{proof}
+
+\section{Threshold jets and the stationary-reflection limitation}
+\label{sec:threshold}
+The finite current test does not require an all-real zero set. A
+threshold fourth-jet test does, and it is a separate route.
+For an ordinary double zero at an all-real time, the canonical-product
+and zero-count inputs in \cite{torus,threshold} give, at sufficiently
+large $x$,
+\begin{equation}
+ 2q_3^2-3q_2q_4-\gamma_{\rm count}q_2^2\ge0,
+ \quad q_j=Q_t^{(j)}(x),\quad
+ \gamma_{\rm count}=18(\log A_t)''+\frac9{x^2}
+                              +\frac{9\log x}{2D_0^2},
+ \label{eq:threshold}
+\end{equation}
+where $D_0=8\pi(4C_{\rm count}+1)$ and $C_{\rm count}$ is the
+symbolic constant in the imported count error. No numerical value of
+that constant is used by the finite atlases. Opposite-root pairing
+and additional counted real roots produce the last two terms.
+The earlier microlocal notes printed the unstrengthened coefficient;
+the complete density-strengthened version is used here.
+
+Assemble the exact $f_j$ from \eqref{eq:complete-jets} and set
+$\delta_j=j!L^j\eta$. A direct product perturbation payment is
+\begin{align}
+ \Delta={}&4|f_3|\delta_3+2\delta_3^2
+    +3(|f_2|\delta_4+|f_4|\delta_2+\delta_2\delta_4)\nonumber\\
+ &+|\gamma_{\rm count}|(2|f_2|\delta_2+\delta_2^2).
+ \label{eq:threshold-payment}
+\end{align}
+Thus an opposite inequality sufficient to exclude this particular
+ordinary threshold double zero is
+\begin{equation}
+ 2f_3^2-3f_2f_4-\gamma_{\rm count}f_2^2+\Delta<0.
+ \label{eq:open-raw}
+\end{equation}
+No finite-current certificate above establishes this inequality
+uniformly. The selected normalizer coefficient must be retained
+when recomputing its payment. Higher multiplicities can make a
+fourth-jet test vacuous and require additional tests.
+
+For comparison with the signed prime-torus reductions, define
+\[
+ M_j=\sum_{n\le N}q_n(\log n-\mu)^j=X_j+iY_j,
+ \qquad \Gamma_{\rm count}=\gamma_{\rm count}/c^2.
+\]
+After paying the physical Bell residuals, the corresponding leading
+centered quadratic is
+\begin{equation}
+ \mathcal K=2Y_3^2+3X_2X_4-\Gamma_{\rm count}X_2^2.
+ \label{eq:centered-K}
+\end{equation}
+The raw leading jets are $-2c^2X_2,2c^3Y_3,2c^4X_4$.
+They yield $4c^6\mathcal K$ in \eqref{eq:threshold}.
+The measured payment in \cite{torus} adds their complete Bell
+residuals to the genuine Cauchy errors. They cannot be dropped
+merely because $x$ is large.
+
+Heat Note 22 \cite{reflection} explains an exact near symmetry of
+the prescribed leading stationary coefficient. For positive real $v$,
+put $w(v)=v^{-\sigma}e^{t\log^2v/4}$, $P=T/(2\pi)$,
+$\rho(v)=\log v-\mu$, and $q(v)=w(v)e^{i(\theta_t+T\log v)}$.
+Define the leading coefficient of logarithmic degree $j$ at the
+original-index saddle $v=P/k$ by
+\begin{equation}
+ B_j(k)=e^{i\theta_t}\frac{\sqrt P}{k}w(P/k)\rho(P/k)^j
+          e^{i\{T\log(P/k)-T-\pi/4\}}.
+\end{equation}
+It can be written exactly as
+\begin{equation}
+ B_j(k)=e^{i\Theta}e^{\delta_\sigma(2\log k-\log P)}
+          \overline{q(k)}\{-\rho(k)+\Delta_\mu\}^j,
+ \label{eq:reflection}
+\end{equation}
+where
+\[
+ \delta_\sigma=\sigma-(1/2+(t/4)\log P),\quad
+ \Delta_\mu=\log P-2\mu,\quad
+ \Theta=2\theta_t+T\log P-T-\pi/4.
+\]
+Negative saddle curvature gives the phase $-\pi/4$
+\cite{stationary}. The identity follows by expanding
+$\log^2(P/k)$, the center and the carrier. For the prescribed data
+on the closed subsector $1\le\kappa\le3/2$ as $t\downarrow0$,
+\[
+ \delta_\sigma=O(tx^{-2}+t^2x^{-1}),\qquad
+ \Delta_\mu=O(x^{-2}),\qquad \Theta+2\pi=O(x^{-1}).
+\]
+On a fixed macroscopic dual range
+$c_1\sqrt P\le k\le c_2\sqrt P$, $0<c_1<c_2$, this compares the coefficient to
+$(-1)^j\overline{q(k)}\rho(k)^j$ with error $O_j(w(k)/x)$.
+It is not an endpoint-uniform approximation theorem for the full
+stationary integral.
+
+The limiting algebraic map $M_j\mapsto(-1)^j\overline M_j$
+fixes even cosine and odd sine moments, hence fixes
+\eqref{eq:centered-K}. It changes the lower drift coordinate
+$Y_1+\epsilon X_1$ to $Y_1-\epsilon X_1$; that discrepancy must
+be paid. Moreover the saddle sends $[A,B]$ to $[P/B,P/A]$,
+so $[N/2,N]$ maps approximately to $[N,2N]$, not the same
+natural cutoff. Resonant sublattices acquire their own shifted
+weights, centers and carriers. Thus the reflection alone supplies
+neither a complete-cutoff identification nor an opposite threshold
+sign. The coupled primitive-frontier representation in \cite{torus}
+overlaps a full product-channel representation. Use one complete
+representation or a disjoint common-factor split, with the appropriate
+endpoint payments, so that product terms are not counted twice.
+
+\section{Reproducibility and the remaining uniform estimate}
+\label{sec:replay}
+The numerical sources live under
+\path{13_microlocal_phase_space/numerics/} relative to the
+Newman-collisions investigation. The source hierarchy is
+\begin{center}
+\small
+\begin{tabular}{ll}
+\toprule
+Source & Role\\
+\midrule
+\path{check_phase_space.py} & Rational algebra and floating diagnostics\\
+\path{check_block_current.py} & Initial genuine block interval source\\
+\path{check_complete_current_rectangle.py} & Complete current and small rectangle\\
+\path{check_candidate_current_atlas.py} & $M=22066$ closed atlas\\
+\path{check_multi_cutoff_candidate_family.py} & Three newer cutoff atlases\\
+\bottomrule
+\end{tabular}
+\end{center}
+The first source has exact rational controls and floating diagnostic
+checks; those diagnostics are not genuine arithmetic sign certificates.
+The other sources use 60-digit outward Decimal intervals. Pi comes
+from the alternating Machin arctangent identity with first-omitted-term
+bounds. Large arctangent uses its reciprocal argument. Reduced
+trigonometric polynomials have explicit Taylor remainders on their
+checked argument range. Monotone logarithm and exponential endpoints
+are enclosed by adjacent values around correctly rounded outputs
+\cite{decimal}. No binary float enters a certificate assertion.
+
+The original block source used \texttt{Context.power}. The later
+complete-rectangle source replaces nonnegative integer interval
+powers locally by repeated directed multiplication with exact
+sign/parity and zero-crossing rules. Both atlas sources inherit this
+override. The documentation gives a weaker rounding contract for
+the C implementation of general power \cite{decimal}; therefore
+the proof record for \eqref{eq:negative-block} here uses the later
+complete recomputation. The preserved older files are not rewritten.
+Rational endpoint/parity and polynomial-shift controls test the
+relevant arithmetic routines.
+
+Each later source verifies its predecessor's retained SHA-256 before
+importing it. The build records identify those dependencies and the
+small retained certificates. Hashes establish file identity; fresh
+outward arithmetic decides the signs and coverage. The analytic
+interface and the Decimal operation contracts remain explicit
+dependencies of the computer-assisted theorem, not formalized proofs
+of those contracts. Internal replays do not constitute independent
+mathematical review.
+
+From the repository root, reproducible fresh atlas outputs can be
+requested without replacing retained records:
+\begin{quote}\small
+\path{python3 papers/quasi-rh-exponent-descent/newman_collisions/13_microlocal_phase_space/numerics/check_candidate_current_atlas.py}
+\path{--output /tmp/microlocal-atlas-replay.json}
+
+\path{python3 papers/quasi-rh-exponent-descent/newman_collisions/13_microlocal_phase_space/numerics/check_multi_cutoff_candidate_family.py}
+\path{--M 22067 --output /tmp/microlocal-M22067-replay.json}
+\end{quote}
+Use the latter with $M=22068$ and $22080$ for the other windows.
+The complete-rectangle source prints its JSON to standard output,
+which can be redirected to a temporary file. All retained source and
+certificate files satisfy the repository's small-file policy; no
+large derived archive or manuscript snapshot folder is needed.
+
+The additional \path{check_manuscript_certificate_summary.py} inspects
+the retained records using exact rational arithmetic. It verifies twelve
+build-record file identities, all 135 adjacent atlas leaves, their
+conservative joint floors and Schur predicates, and fifty signed-monotone
+zero bands. It does not replace the fresh interval-sum replays or prove
+the imported analytic interface. Its small summary is retained as
+\path{numerics/MANUSCRIPT_CERTIFICATE_SUMMARY_20261010.json}.
+
+The finite successes identify a precise next obligation. Under the
+same full-sum candidate constraints, one needs a complete-current
+margin exceeding its invisible-quadrature support payment, or the
+opposite paid threshold sign \eqref{eq:open-raw}, uniformly on a
+specified growing family. The present time windows stay near
+$t=1/20$. They neither approach zero time through a controlled
+infinite family nor bridge the height gaps or cutoff boundaries.
+Higher multiplicities, small-curvature cases, complementary
+parameters and the time-zero endpoint remain separate obligations
+for the global research program. Positivity of the continuous lift,
+block signs, and the invariant leading stationary reflection do not
+close them.
+
+\section*{Acknowledgements and preparation record}
+This manuscript was drafted for Edward Baker with substantial assistance
+from OpenAI's Codex large language model. The model is identified in this
+session as GPT-6 (Codex); the exact serving variant and configured
+reasoning effort are not exposed and are not inferred. LLM assistance
+included source synthesis, algebraic derivation, exposition and internal
+cross-audits. Those checks are not independent mathematical validation.
+Earlier source notes and certificates retain their own preparation
+metadata. The genuine analytic approximation and classical heat
+normalization are credited below. The sharp correlated current-support
+formula is derived in Proposition~\ref{prop:curved-current}; the finite
+certificates use their preserved acceptance rules.
+
+\begin{thebibliography}{99}
+\bibitem{polymath}
+D. H. J. Polymath,
+\emph{Effective approximation of heat flow evolution of the Riemann
+$\xi$ function, and a new upper bound for the de Bruijn--Newman constant},
+arXiv:1904.12438v2 (2019), Theorem 1.3.
+\url{https://arxiv.org/abs/1904.12438}.
+
+\bibitem{trushechkin}
+A. S. Trushechkin,
+\emph{Semiclassical evolution of quantum wave packets on the torus beyond
+the Ehrenfest time in terms of Husimi distributions},
+arXiv:1607.07572 (2016).
+\url{https://arxiv.org/abs/1607.07572}.
+
+\bibitem{decimal}
+Python documentation, \emph{decimal---Decimal fixed-point and
+floating-point arithmetic}, logarithm, exponential and power contracts.
+\url{https://docs.python.org/3/library/decimal.html}.
+
+\bibitem{stationary}
+NIST Digital Library of Mathematical Functions, \S2.3(iv),
+\emph{Method of stationary phase}.
+\url{https://dlmf.nist.gov/2.3#iv}.
+
+\bibitem{micro1}
+Edward Baker research project, with LLM assistance,
+\emph{Husimi readout drift and coherent interference}, microlocal Note 1,
+10 October 2026; corresponding internal Review 1 and scout record.
+\path{notes/1_HUSIMI_READOUT_DRIFT_AND_COHERENT_INTERFERENCE_20261010.md}.
+
+\bibitem{micro2}
+Same project, \emph{Centered relative block and an adverse genuine
+coherent current}, microlocal Note 2, 10 October 2026; internal Review 2.
+\path{notes/2_CENTERED_RELATIVE_BLOCK_AND_ADVERSE_COHERENT_CURRENT_20261010.md}.
+
+\bibitem{micro3}
+Same project, \emph{Complete current and a paid rectangle of genuine
+simple heat zeros}, microlocal Note 3, 10 October 2026; internal Review 3.
+\path{notes/3_COMPLETE_CURRENT_AND_PAID_SIMPLE_ZERO_RECTANGLE_20261010.md}.
+Certificate: \path{numerics/COMPLETE_CURRENT_RECTANGLE_CERTIFICATE_20261010.json}.
+
+\bibitem{micro4}
+Same project, \emph{A complete candidate-current atlas and thirteen
+simple heat-zero branches}, microlocal Note 4, 10 October 2026;
+internal Review 4.
+\path{notes/4_CANDIDATE_CURRENT_ATLAS_AND_THIRTEEN_SIMPLE_ZERO_BRANCHES_20261010.md}.
+Certificate: \path{numerics/CANDIDATE_CURRENT_ATLAS_CERTIFICATE_20261010.json}.
+
+\bibitem{micro5}
+Same project, \emph{A finite multi-cutoff family with active correlated
+candidate tests}, microlocal Note 5, 10 October 2026; internal Review 5.
+\path{notes/5_MULTI_CUTOFF_CORRELATED_CANDIDATE_FAMILY_20261010.md}.
+Certificates: \path{numerics/MULTI_CUTOFF_M22067_CERTIFICATE_20261010.json},
+\path{numerics/MULTI_CUTOFF_M22068_CERTIFICATE_20261010.json},
+\path{numerics/MULTI_CUTOFF_M22080_CERTIFICATE_20261010.json}.
+
+\bibitem{micro6}
+Same project, \emph{Correlated current support and manuscript synthesis},
+microlocal Note 6, 10 October 2026.
+\path{notes/6_CORRELATED_CURRENT_SUPPORT_AND_MANUSCRIPT_SYNTHESIS_20261010.md}.
+The manuscript audit and fresh replay record are in
+\path{reviews/6_MANUSCRIPT_INTERNAL_REVIEW_20261010.md}.
+
+\bibitem{heatinterface}
+Same project, \emph{Signed shrinking-time collision vector and phase
+obstructions}, Heat Note 8, 9 October 2026, and
+\emph{Recent heat results and paths forward}, Heat Note 13,
+9 October 2026. Source directory: \path{../notes/}.
+The fixed-cutoff disk deduction is in Note 8, Proposition 1,
+and the parent \path{../newman_collision_reductions.tex}, Section 5.
+
+\bibitem{schur}
+Same project, \emph{Correlated holomorphic payments and candidate
+coverage}, Heat Note 18, 10 October 2026.
+\path{../notes/18_CORRELATED_HOLOMORPHIC_PAYMENTS_AND_CANDIDATE_COVERAGE_20261010.md}.
+
+\bibitem{threshold}
+Same project, \emph{Analytical Schur cones and density-strengthened
+thresholds}, Heat Note 20, and \emph{Deflated local growth,
+density-strengthened thresholds, and multiplicity}, Heat Note 21,
+10 October 2026. Source directory:
+\path{../notes/}.
+
+\bibitem{torus}
+Same project, \emph{Signed Arithmetic Reductions on the Prime Torus
+for Riemann Heat-Flow Collisions}, manuscript, 10 October 2026.
+\path{../09_prime_phase_torus/prime_phase_torus_signed_reductions.tex}.
+Its Notes 1--9 and internal manuscript Review 10 supply the detailed
+signed transformations, payments and limitations.
+
+\bibitem{reflection}
+Same project, \emph{Signed pair transforms and the prescribed stationary
+reflection}, Heat Note 22, 10 October 2026.
+\path{../notes/22_SIGNED_PAIR_TRANSFORMS_AND_STATIONARY_REFLECTION_20261010.md}.
+\end{thebibliography}
+\end{document}
