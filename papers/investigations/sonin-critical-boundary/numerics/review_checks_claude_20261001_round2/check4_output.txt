@@ -1,0 +1,39 @@
+=== A. Blaschke energies (grid T=4000, dt=0.004) ===
+  m=1, zero at 0-0.1i                       E/(4pi^2) = 1.00000   (claim: 1)
+  m=2, zeros 3-0.1i, -5-2i                  E/(4pi^2) = 2.00000   (claim: 2)
+  m=3, zeros 0-0.05i, 0.3-0.05i, 7-1i       E/(4pi^2) = 3.00000   (claim: 3)
+  m=3, triple zero at 1-0.2i                E/(4pi^2) = 3.00000   (claim: 3)
+  m+=1 (0+0.1i), m-=1 (0-10i)  [rational model eps=0.1]   E/(4pi^2) = 1.92161; manuscript bound 2(m+ + m-) = 4; sharper bound (m+ + m-) = 2
+  m+=1 (0+0.1i), m-=1 (0-0.1i)                            E/(4pi^2) = 0.00000; manuscript bound 2(m+ + m-) = 4; sharper bound (m+ + m-) = 2
+  m+=2 (0+0.1i, 2+0.3i), m-=1 (-1-0.5i)                   E/(4pi^2) = 2.59971; manuscript bound 2(m+ + m-) = 6; sharper bound (m+ + m-) = 3
+  (rational model prediction from rank-one blocks: E/(4pi^2) = 2 q^2 = 1.92158)
+
+=== B. E(f) <= 2 pi ||f||_2 ||f'||_2 ===
+  gaussian exp(-t^2/2)                 E =    6.2830   2pi||f|| ||f'|| =    7.8748   ratio = 0.798
+  chirp bump exp(-t^2/2) e^{i 5 t}     E =   55.6833   2pi||f|| ||f'|| =   56.2363   ratio = 0.990
+  sech(t)                              E =    5.5449   2pi||f|| ||f'|| =    7.2552   ratio = 0.764
+
+=== C. window energy E(b_j v_sigma) for the zeta phase ===
+  E(b_0)/(4pi^2) = 0.2629  (fixed cutoff energy)
+
+  sigma = 0.6
+       j  E/(4pi^2)  E/log(2+j)  E/log^2(2+j)  zeros in (j-2,j+2)  zeros weighted by b_j^2   time
+      10     0.2630      4.1778        1.6813                   0                    0.000     1s
+      30     1.1646     13.2656        3.8276                   1                    1.000     1s
+     100     0.9423      8.0430        1.7390                   2                    0.861     4s
+     300     1.2526      8.6598        1.5165                   2                    1.052     7s
+    1000     1.8076     10.3276        1.4946                   3                    1.753    11s
+    3000     2.1737     10.7175        1.3385                   4                    2.064    17s
+   10000     3.1512     13.5068        1.4665                   5                    3.117    37s
+   30000     3.6410     13.9430        1.3525                   6                    3.713    45s
+
+  sigma = 0.51
+       j  E/(4pi^2)  E/log(2+j)  E/log^2(2+j)  zeros in (j-2,j+2)  zeros weighted by b_j^2   time
+      10     0.2629      4.1767        1.6808                   0                    0.000     1s
+      30     1.2523     14.2651        4.1160                   1                    1.000     1s
+     100     1.0637      9.0799        1.9632                   2                    0.861     5s
+     300     1.2988      8.9793        1.5724                   2                    1.052     8s
+    1000     1.9655     11.2295        1.6252                   3                    1.753    13s
+    3000     2.3255     11.4657        1.4320                   4                    2.064    19s
+   10000     3.3512     14.3640        1.5595                   5                    3.117    38s
+   30000     3.9120     14.9810        1.4532                   6                    3.713    47s
