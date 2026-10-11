@@ -11,8 +11,10 @@ is **4**. "Create 15 project folders" is **5**. "Continue RH exponent descent"
 is **6**. “Summarize Newman collision progress” is **7**.
 “Assess Newman collision program” is **8**.
 “Continue enlarged-state transport” is **9**. “Continue quasi-RH strategy”
-is **10**. Read `index.json` before recording another chat: the next new
-conversation is **11**. Numbers belong to this investigation's
+is **10**. The existing Claude export occupies **11** and remains unregistered.
+“Review Newman collision progress” is **12**. Read `index.json` and check
+existing numbered files before recording another chat: the next new
+conversation is **13**. Numbers belong to this investigation's
 folder and remain stable. A later refresh of the same conversation retains
 its number. Retrospective imports receive the next unused number and retain
 their original conversation dates; importing an older chat does not renumber
@@ -449,3 +451,25 @@ set, including the slope's vanishing scale. The bounded high-height
 certificate has a nonzero slope and supplies no additional multiple-zero
 coverage. Uniform relative cancellation and predecessor coverage remain
 open; no RH conclusion is asserted.
+
+
+## Chat 12 Review Newman collision progress
+
+Captured 11 October 2026 from the conversation created on 10 October 2026
+at 20:14:52.765 UTC (16:14:52.765 America/New_York). The
+[public conversation record](0012_2026-10-10T20-14-52Z_review-newman-collision-progress.json)
+preserves the project 17 continuation, the updated external Claude review,
+and the discussion and companion brainstorm about paths from quasi-RH to RH.
+It includes 46 completed public user and assistant messages through this
+archive response’s capture point, including commentary and the export request.
+The final delivery of this archive response will require a later refresh.
+
+The recorded model configuration is GPT-6-astra (Codex), reasoning effort
+ultra. Prepared for Edward Baker with LLM assistance. The export preserves
+original text and message timestamps and omits runtime instructions, internal
+reasoning, tools, and subagent correspondence as described above.
+
+Chats 1–10 and their registry entries are unchanged. The existing file
+`0011_Claude-Radial Bessel work overview-20261011-1414.json` is also unchanged;
+number 11 was reserved without inventing import metadata. The next new
+conversation is **13**.
