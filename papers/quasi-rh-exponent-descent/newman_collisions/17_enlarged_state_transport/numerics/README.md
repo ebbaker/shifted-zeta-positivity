@@ -203,3 +203,79 @@ No mathematical claim depends on a hash. The full proofs and numerical scope
 are in [Note 18](../notes/18_CORRELATED_ERROR_JETS_AND_LOCAL_HEAT_AMBIGUITY_20261010.md)
 and [Note 19](../notes/19_STATIONARY_SURVEY_AND_CERTIFIED_DISK_AMBIGUITY_20261010.md).
 Model: GPT-6 (Codex); effort not exposed and not inferred. Internal LLM work.
+
+
+## Explicit theta correction and weak stationary cell
+
+`check_theta_corrected_stationary_cell.py` retains the leading correction
+from Polymath Corollary 6.4, uses Proposition 6.6 to bound the complete
+residual, and pays the replacement of the printed nonholomorphic correction
+by a local holomorphic exponential. It uses the same hash-checked directed
+interval modules and finite-moment transport method as the retained high
+stationary checker. The source theorem and new comparison argument are
+stated in [Note 20](../notes/20_EXPLICIT_THETA_CORRECTION_AND_CORRELATED_PHYSICAL_JETS_20261011.md).
+
+From this directory, replay with:
+
+```sh
+python3 check_theta_corrected_stationary_cell.py --record /tmp/THETA_CORRECTED_STATIONARY_CELL_RECORD_20261011.json
+```
+
+The default shared-source directory resolves to investigation 13's
+`numerics/`; an explicit `--interval-source-dir` is also supported.
+The [retained small record](THETA_CORRECTED_STATIONARY_CELL_RECORD_20261011.json)
+certifies the whole time interval `[t0,t0+1e-8]`, `t0=1/(2 log 22066)`,
+and spatial offsets `[58.567,58.571]` from `4 pi 22066^2`. Every time has
+one genuine Hxx zero, in offsets `[58.5690,58.5695]`, with strictly negative
+Hx Hxxx. Conditional derivative combinations also verify the sign after
+eliminating the leading correction amplitude algebraically.
+
+The analytic remainder is divided by the holomorphic normalizer before
+Cauchy estimates; all normalizer derivatives through order three are paid.
+The physical third derivative error is below 0.015346692, compared with
+about 472.219 in Note 19's particular coarse disk payment. This is a sharper
+source estimate and a genuine stationary-sign calibration, not new
+collision coverage: the earlier interface already separates the slope.
+The checker verifies its fixed-cutoff and local profile hypotheses; the
+broader analytic profile corollary in Note 20 is not used numerically.
+All outputs are small; no new large derived archive is retained.
+
+## Complete theta correction across a cutoff change
+
+The [cutoff matching checker](check_theta_cutoff_matching.py) and
+[record](THETA_CUTOFF_MATCHING_RECORD_20261011.json) verify the complete
+corrected disk error on `t=t0+[0,1e-8]`, `t0=1/(2 log 22066)`, for all
+centers in `4 pi 22066^2+[-0.1,0.1]`, with radius 0.05. The enclosing
+rectangle has natural cutoffs 22065 and 22066; the fixed reference cutoff
+is 22066 even for individual disks wholly to the left of the moving edge.
+Both reflected entering waves and the complete source remainder are paid.
+
+The added matching cost is below 1.484686e-12 and the complete disk
+residual is below 3.135204e-7. Direct normalization by the constant
+positive center value `A_t(X)` gives physical derivative payments
+`j! eta/r^j`; the third is below 0.015048978. These parameters and the
+normalization convention differ from the preceding stationary checker.
+No genuine first-jet lower bound or stationary product is evaluated here.
+
+A separate real-edge finite-term evaluation finds a positive discrepancy
+of about 3.920037e-13, within the full complex matching allowance. The
+natural piecewise leading approximation is therefore not exactly
+continuous; all derivative bounds use the frozen holomorphic expression.
+The general analytic proof and candidate localization are in
+[Note 22](../notes/22_THETA_CUTOFF_MATCHING_AND_UNIFORM_PHYSICAL_JETS_20261011.md),
+and a separate-agent replay and original-carrier phase audit are in the
+[review](../reviews/11_THETA_CUTOFF_MATCHING_REVIEW_20261011.md).
+
+Replay from this directory without overwriting the saved record:
+
+```sh
+python3 check_theta_cutoff_matching.py --record /tmp/THETA_CUTOFF_MATCHING_RECORD_20261011.json
+```
+
+The standard-library script uses the same two hash-checked interval modules,
+60-digit directed arithmetic and optional `--interval-source-dir` as above.
+The published source theorem is an imported analytic input. This bounded
+numerical record does not verify the theorem formally or establish uniform
+stationary loss or collision exclusion. All retained files are small.
+Preparation: GPT-6 (Codex), 11 October 2026; effort unavailable and not
+inferred. Internal LLM checks are not independent mathematical validation.

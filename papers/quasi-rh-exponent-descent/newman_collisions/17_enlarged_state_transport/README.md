@@ -29,6 +29,20 @@ effort is not exposed to this session and is not inferred.
 
 ## Entry points
 
+- [Theta cutoff matching and uniform physical derivatives](notes/22_THETA_CUTOFF_MATCHING_AND_UNIFORM_PHYSICAL_JETS_20261011.md):
+  the entering finite term matches the explicit correction jump with a
+  paid smaller error. A frozen holomorphic approximation extends the
+  complete derivative bounds across every natural cutoff change; a
+  certificate verifies the transition 22065 to 22066.
+- [Explicit theta correction and correlated derivatives](notes/20_EXPLICIT_THETA_CORRECTION_AND_CORRELATED_PHYSICAL_JETS_20261011.md):
+  the retained Riemann–Siegel correction gives a common exponential error
+  component and a much smaller complete residual. Its annihilating derivative
+  combination supplies a sharper collision test. An outward certificate
+  resolves the weak genuine stationary cell from Note 19.
+- [Complete Gaussian Hermite readout](notes/21_COMPLETE_THETA_GAUSSIAN_HERMITE_READOUT_20261011.md):
+  four exact Gaussian moments of the complete xi function recover the four
+  physical jets and formulate the remaining signed source correlation.
+
 - [Bounded loss and next steps](notes/16_NEXT_STEPS_AND_BOUNDED_LOSS_COLLISION_CRITERION_20261010.md):
   the stationary products may have a locally bounded loss relative to the
   squared joint first jet; the predecessor proof still excludes all finite multiplicities.
@@ -174,3 +188,39 @@ interface, not an adverse genuine-theta point or additional collision coverage.
 See the [continuation review](reviews/9_BOUNDED_LOSS_CORRELATED_JETS_AND_DISK_AMBIGUITY_REVIEW_20261010.md).
 These notes have not been integrated into the manuscript. Preparation:
 GPT-6 (Codex), active reasoning effort unavailable and not inferred.
+
+The 11 October continuation in Notes 20–21 retains the leading actual theta
+correction and pays its comparison with a holomorphic exponential. On the
+verified fixed-cutoff rectangle, the corrected disk residual is below
+3.135063e-7 and its physical third derivative payment is below 0.015347.
+The genuine Hxx stationary branch there has Hx Hxxx / A squared < -270.41505.
+This resolves an ambiguity of the coarse error interface; the earlier
+slope separation already excluded collisions in that rectangle. Uniform
+profile bounds now handle the removable correction singularities. This left
+cutoff matching and a signed residual bound at a vanishing joint first jet
+as the next targets; Note 22 below completes the cutoff matching step. Neither the bounded-loss
+criterion nor the Hölder-loss criterion is yet proved for the full source.
+See the [internal correction review](reviews/10_EXPLICIT_THETA_CORRECTION_AND_STATIONARY_CELL_REVIEW_20261011.md).
+These notes have not been integrated into the manuscript. Preparation:
+GPT-6 (Codex), active reasoning effort unavailable and not inferred.
+
+The [cutoff continuation in Note 22](notes/22_THETA_CUTOFF_MATCHING_AND_UNIFORM_PHYSICAL_JETS_20261011.md)
+now proves an explicit comparison of the entering reflected term with the
+correction jump on the full complex disk. Freezing one finite cutoff and
+its holomorphic correction preserves the improved O(Z/N) residual through
+natural cutoff changes; the added matching cost is O(Z/N squared).
+On the certified family of centers within 0.1 of `4 pi 22066^2`, with radius
+0.05 and `t=t0+[0,1e-8]`, that extra cost is below 1.484686e-12 and the
+complete corrected disk error is below 3.135204e-7. The natural piecewise
+approximation retains a small nonzero jump; derivatives always use the
+frozen holomorphic expression. An independent internal replay and edge
+phase calculation pass in the [review](reviews/11_THETA_CUTOFF_MATCHING_REVIEW_20261011.md).
+
+The next target is a signed complete-theta estimate on the smaller
+correlated first-jet candidate neighborhood in Note 22, including the
+required predecessor stationary branches. Absolute remainder control
+alone does not prove the bounded-loss or Hölder-loss target. This step
+removes a cutoff restriction from the approximation interface; it adds no
+global collision exclusion. Note 22 is not integrated into the manuscript.
+Preparation: GPT-6 (Codex), 11 October 2026; active reasoning effort
+unavailable and not inferred. Internal LLM work, not independent validation.
