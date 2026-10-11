@@ -159,3 +159,47 @@ Use `--record PATH` to save a fresh record. The standard-library checker
 regenerates the new midpoint and validates the same two program 13 interval
 source hashes. The earlier .5 midpoint is not reused at 87.41. Detailed
 bounds and scope appear in [Note 15](../notes/15_NONVACUOUS_HIGH_HEIGHT_SECOND_STATIONARY_SIGN_20261010.md).
+
+## Bounded loss and correlated disk continuation
+
+- [Exact correlated-jet checker](check_correlated_jet_geometry.py) and
+  [record](CORRELATED_JET_GEOMETRY_RECORD_20261010.json): exact Fraction
+  controls for Schur coefficients, conditional intervals, physical drift,
+  degenerate parameter faces and disk-only failure models. No theta values.
+- [Small-first-jet survey](survey_stationary.py) and
+  [summary record](STATIONARY_SMALL_JET_SURVEY_RECORD_20261010.json): exploratory
+  connected windows at N=22066 and N=100000. The summary retains parameters,
+  root counts, weakest rows, validation, source hashes and raw/canonical data
+  hashes. Floating sign-change detection is not complete root isolation or
+  certification of a genuine stationary branch. Full root arrays are generated
+  outside the repository; NumPy is required only for this survey.
+- [Outward disk-ambiguity checker](check_stationary_disk_ambiguity.py) and
+  [record](STATIONARY_DISK_AMBIGUITY_RECORD_20261010.json): complete finite
+  N=22066 physical jets at offset58.57 admit two strict coarse-disk
+  perturbations with the same value/slope and opposite Hx Hxxx signs on exact
+  Hxx=0. The result concerns alternative observations, not genuine theta.
+
+Replay the exact and outward checks from this numerics directory:
+
+```sh
+python3 check_correlated_jet_geometry.py
+python3 check_stationary_disk_ambiguity.py
+```
+
+The outward checker validates the two retained interval-source hashes and
+uses only the standard library. Both write new records only with `--record`.
+Regenerate the detailed floating sweeps to locations outside the repository:
+
+```sh
+python3 survey_stationary.py --N 22066 --record /tmp/project17_survey_n22066.json
+python3 survey_stationary.py --N 22066 --time-shift 0.00000001 --record /tmp/project17_survey_n22066_tplus.json
+python3 survey_stationary.py --N 100000 --record /tmp/project17_survey_n100000.json
+```
+
+The canonical data hash is SHA-256 of the UTF-8 compact JSON serialization
+of `all_detected_roots`, with sorted object keys and no trailing newline.
+This omits timing but is not a portability guarantee for floating arithmetic.
+No mathematical claim depends on a hash. The full proofs and numerical scope
+are in [Note 18](../notes/18_CORRELATED_ERROR_JETS_AND_LOCAL_HEAT_AMBIGUITY_20261010.md)
+and [Note 19](../notes/19_STATIONARY_SURVEY_AND_CERTIFIED_DISK_AMBIGUITY_20261010.md).
+Model: GPT-6 (Codex); effort not exposed and not inferred. Internal LLM work.

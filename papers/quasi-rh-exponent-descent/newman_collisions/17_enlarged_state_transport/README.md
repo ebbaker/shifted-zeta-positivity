@@ -29,6 +29,19 @@ effort is not exposed to this session and is not inferred.
 
 ## Entry points
 
+- [Bounded loss and next steps](notes/16_NEXT_STEPS_AND_BOUNDED_LOSS_COLLISION_CRITERION_20261010.md):
+  the stationary products may have a locally bounded loss relative to the
+  squared joint first jet; the predecessor proof still excludes all finite multiplicities.
+- [Multiplicity budgets and Hölder losses](notes/17_MULTIPLICITY_BUDGETS_AND_HOLDER_LOSS_CRITERION_20261010.md):
+  positive theta integrals give independent finite-window multiplicity budgets,
+  allowing a sharp Hölder relaxation of the required source estimate.
+- [Correlated jets and local heat ambiguity](notes/18_CORRELATED_ERROR_JETS_AND_LOCAL_HEAT_AMBIGUITY_20261010.md):
+  exact Schur error jets and reduced stationary tests, together with a proof
+  that strict interior first-jet candidates admit alternative local heat collisions.
+- [Stationary survey and certified disk ambiguity](notes/19_STATIONARY_SURVEY_AND_CERTIFIED_DISK_AMBIGUITY_20261010.md):
+  two-scale exploratory survey and an outward example where the same lower
+  jets admit opposite stationary signs within 52 percent of the coarse disk allowance.
+
 - [Exact carrier defect and cutoff-edge mass](notes/12_EXACT_CARRIER_DEFECT_AND_CUTOFF_EDGE_MASS_20261010.md):
   drift-corrected physical stationary identity, complete error payments,
   and an asymptotic obstruction to absolute carrier dominance.
@@ -148,3 +161,16 @@ used GPT-6-astra (Codex), reasoning effort ultra, verified from the recorded
 integration-turn configuration. Earlier preparation records retain their
 original attribution. The public conversation is preserved as chat 10 in
 [the exponent-descent history](../../chat-histories/index.json).
+
+The bounded-loss continuation in Notes 16–19 refines the next proof target.
+Nonnegative stationary Laguerre expressions are sufficient but unnecessary:
+a locally bounded loss relative to the joint first-jet energy also excludes
+collisions, and an independent multiplicity budget permits a Hölder loss.
+These weaker source estimates remain unproved. Exact Schur correlation
+improves the finite error interface but cannot exclude strict interior
+first-jet candidates from disk control and local heat analyticity alone.
+The new outward example certifies ambiguity of the coarse approximation
+interface, not an adverse genuine-theta point or additional collision coverage.
+See the [continuation review](reviews/9_BOUNDED_LOSS_CORRELATED_JETS_AND_DISK_AMBIGUITY_REVIEW_20261010.md).
+These notes have not been integrated into the manuscript. Preparation:
+GPT-6 (Codex), active reasoning effort unavailable and not inferred.
