@@ -2,9 +2,11 @@
 
 [Investigation index](../README.md)
 
-12 October 2026. Prepared for Edward Baker. Model: GPT-6 Astra
-(`gpt-6-astra`). Reasoning effort: ultra. Prepared with substantial LLM
-assistance. Internal model reviews are not independent mathematical
+12 October 2026. Prepared for Edward Baker with substantial LLM assistance.
+Initial setup: GPT-6 Astra (`gpt-6-astra`), reasoning effort ultra.
+The continuation records identify their own model and effort; this pass
+uses GPT-6 (Codex), with exact serving variant and configured reasoning
+effort not exposed. Internal model reviews are not independent mathematical
 validation or formal verification.
 
 ## Objective and current status
@@ -15,23 +17,102 @@ October 5 argument. The objective is a closed analytic chain or a precise
 account of an unresolved step. It is not another conditional exponent-descent
 paper.
 
-**Status: the first branch and the theta transformation have received
-scoped internal audits on 12 October 2026.** The October 5 source is
-pinned, a nonempty cube-tail branch is traced through both Poisson
-transforms, and the fixed-character extraction and decreasing recurrence
-have been checked conditional on their inputs. The subsequent audit
-matches the cusp formulas, derives the multipliers and Mellin normalization,
-and checks moving-prime uniformity. No substantive defect was established
-in these inspected steps. Classical theta, reciprocity, and sieve theorems
-remain imports; the full zero-free theorem remains unvalidated.
+**Status: the pinned October 5 main-theorem chain has received a complete
+scoped internal source audit on 12 October 2026.** The first branch,
+theta transformation, initial Poisson reduction, completed mean square,
+full two-Poisson transfer, finite canonical induction, and final assembly
+close under their identified classical inputs. No additional unresolved
+defect was found in the final links. This is not independent mathematical
+validation or a newly established zero-free result.
 
-The September 30 reflection argument has now been compared directly with
-the pinned October 5 proof. Its PDF hash matches the earlier audit's
-artifact, and the correspondence is recorded explicitly. This does not
-validate the entire September 30 global family theorem. The next bounded
-source task is the **full initial Poisson reduction and its arithmetic
-conversion identities**, including the diagonal, shared column factors,
-masks, smooth norms, and initial dual ranges.
+The final ledger matches the canonical gap and short ranges to the
+original moment, restores its outside factor D, extracts the fixed
+character using sixth-power rows with strictly positive parameter choices,
+and checks Mellin holomorphy and the meromorphic product identity. It
+also handles the principal pole, norm-lift conductor shrinkage, finite
+Euler corrections, and primitive or imprimitive Dirichlet characters.
+The common qualitative exponent boundary does not require uniform
+constants in conductor or zero height.
+
+Earlier audits retain their own scopes and version correspondence.
+The primary theta comparison uses Dunn–Radziwiłł v3; the original
+Patterson proof was not independently read. The deep theta and
+quadratic large-sieve theorems remain imports. The next scrutiny is
+independent review of the full argument and those interfaces. The
+manuscript's quantitative introduction corollaries and stronger later
+strips were outside this source assembly.
+
+## Manuscript
+
+The [standalone manuscript](arithmetic_source_audit.tex) consolidates the
+conditional source audit, from the initial reduction and completed mean
+square through the full two-Poisson transfer and final assembly. It is
+drafted for Edward Baker and includes an LLM acknowledgement. The final
+source compiled successfully with the built-in LaTeX compiler.
+
+See the [manuscript integration review](reviews/MANUSCRIPT_INTEGRATION_REVIEW_20261012.md),
+[build record](numerics/manuscript_build_record_20261012.json), and
+[concise manuscript history](DRAFT_HISTOR.md). The manuscript retains the
+explicit classical dependencies and the audit's independent-review boundary.
+
+## Final assembly records
+
+- [End-to-end review and dependency boundary](reviews/FINAL_ASSEMBLY_REVIEW_20261012.md).
+- [Canonical energy to the original mean square](notes/FINAL_ORIGINAL_MOMENT_ASSEMBLY_20261012.md).
+- [Sixth-power extraction, positive loss choices, and Dirichlet norm lift](notes/FINAL_EXTRACTION_AND_BASE_CHANGE_20261012.md).
+- [Mellin holomorphy, principal pole, and zero-dependent test](notes/FINAL_MELLIN_AND_ZERO_FREE_ASSEMBLY_20261012.md).
+- [Exact final-assembly record](numerics/final_assembly_record_20261012.json), [CLI validation](numerics/final_assembly_cli_validation_20261012.json), and [replay guide](numerics/README.md#final-assembly-bookkeeping).
+
+The new diagnostic passes 622 exact assertions, zero floating
+comparisons, and thirteen negative-control families. It checks finite
+normalization, exponent, scale-boundary and Euler-polynomial algebra;
+it does not prove the analytic estimates or the zero-free theorem.
+
+## Full two-Poisson transfer records
+
+- [Combined review and next obligation](reviews/TWO_POISSON_TRANSFER_REVIEW_20261012.md).
+- [Both arithmetic conversions and the complete signed preimage count](notes/TWO_POISSON_ARITHMETIC_LEDGER_20261012.md).
+- [Smooth norms, principal modes, positive intermediate scales, and short ranges](notes/TWO_POISSON_SMOOTH_AND_SHORT_RANGES_20261012.md).
+- [Every returned child, exclusion removal, and finite termination](notes/TWO_POISSON_RETURN_AND_TERMINATION_20261012.md).
+- [Full-transfer exact record](numerics/full_transfer_bookkeeping_record_20261012.json), [CLI validation](numerics/full_transfer_bookkeeping_cli_validation_20261012.json), and [replay guide](numerics/README.md#full-two-poisson-transfer-bookkeeping).
+
+The full cancellation is \(\tau(r)\mathbf1_{f'\mid k'}\), with the same
+kernel for every preimage. It gives the child lower bound after all
+divisor shifts. In a nonempty cube tail the row range decreases by at
+least the squared gap ratio. These are analytical bookkeeping deductions
+under the stated arithmetic and completed-family inputs.
+
+The extended diagnostic passes 4,186,781 exact assertions with no floating
+comparisons and eleven negative-control families. It includes 62,208
+signed cases, 438,012 actual preimages, zero masks, short ranges, and
+child scales. Finite parameter checks do not certify nonzero kernels,
+analytic transformations, or an unbounded theorem.
+
+## Completed mean-square audit records
+
+- [Combined review, imported inputs, and next obligation](reviews/COMPLETED_MEAN_SQUARE_REVIEW_20261012.md).
+- [All local branches and simultaneous exceptional-prime collisions](notes/COMPLETED_MEAN_SQUARE_LOCAL_LEDGER_20261012.md).
+- [Primitive quadratic family, smooth separation, and infinite sums](notes/COMPLETED_MEAN_SQUARE_SIEVE_AND_SUMMATION_20261012.md).
+- [General rows, shared factors, and inverse-square normalization](notes/COMPLETED_MEAN_SQUARE_GENERAL_ROWS_20261012.md).
+- [Exact bookkeeping record](numerics/completed_bookkeeping_record_20261012.json), [CLI checks](numerics/completed_bookkeeping_cli_validation_20261012.json), and [replay guide](numerics/README.md#completed-mean-square-bookkeeping).
+
+The new checker passes 198,323 exact finite assertions, with zero floating
+comparisons and eleven negative-control families. The analytic proof
+audit closes under its stated theta and quadratic large-sieve imports;
+the finite checks diagnose identities and normalization rather than
+establishing those imports or an unbounded theorem.
+
+## Initial Poisson and arithmetic audit records
+
+- [Combined review and next obligation](reviews/INITIAL_POISSON_AND_ARITHMETIC_REVIEW_20261012.md).
+- [Gauss conversion, finite ray classes, and coefficient masks](notes/INITIAL_ARITHMETIC_CONVERSION_AUDIT_20261012.md).
+- [Complete initial Poisson reduction, smooth norms, and dual ranges](notes/INITIAL_POISSON_REDUCTION_AUDIT_20261012.md).
+- [Finite arithmetic record](numerics/initial_arithmetic_record_20261012.json) and [replay guide](numerics/README.md#initial-arithmetic-and-poisson-bookkeeping).
+
+The new checker passes 113,748 exact finite assertions and 19,868 ordinary
+floating comparisons, with twelve negative-control families. These
+checks diagnose signs, masks, Gauss phases, and finite reindexing; they
+do not prove the analytic estimates or an unbounded theorem.
 
 ## Theta audit records
 

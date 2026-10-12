@@ -11,6 +11,7 @@ audit of a specified argument, or a measurable improvement in a certificate.
 Each project begins with a bounded task and an explicit decision about
 whether further work is warranted. The setup initialized the folders;
 the [arithmetic source audit](arithmetic_source_audit/README.md) has since
+<<<<<<< HEAD
 completed its first conditional branch check and a scoped audit of the
 theta transformation and its uniformity, and the
 [Newman certificate audit](newman_certificate_audit/README.md) has completed
@@ -18,6 +19,21 @@ its first bounded task (pin, seal check, dependency ledger and row replay of
 the Gomila package; Claude Fable 5.1, 12 October) with a negative benchmark:
 the corrected heat interface cannot change that certificate's feasibility or
 cost. The other projects remain at their initial scopes. No new zero-free strip, Newman bound, or RH
+=======
+completed its first conditional branch check, the theta transformation
+and uniformity audit, and the initial Poisson and arithmetic conversion
+audit. The completed mean-square audit now also closes under its stated
+theta and quadratic large-sieve inputs. The full two-Poisson transfer
+and finite canonical-recursion bookkeeping also close under their stated
+inputs. The [final assembly review](arithmetic_source_audit/reviews/FINAL_ASSEMBLY_REVIEW_20261012.md)
+now completes the scoped main-theorem source chain: original moment,
+fixed-character extraction, Mellin nonvanishing, and the Dirichlet norm
+lift. Its conclusion remains internal and conditional on the identified
+classical imports; independent review and the original Patterson-source
+access limitation remain explicit.
+The other projects remain
+at their initial scopes. No new zero-free strip, Newman bound, or RH
+>>>>>>> bfa01cf (Work on the arithmetic_source investigation)
 mechanism is established here.
 
 ## Projects and priorities

@@ -1,0 +1,665 @@
+{
+  "date": "2026-10-12",
+  "prepared_for": "Edward Baker",
+  "model": "GPT-6 (Codex); inherited configuration",
+  "effort": "configured reasoning effort not exposed; not inferred",
+  "source_path": "/private/tmp/arithmetic-source-audit-20261012/paper2.tex",
+  "expected_source_sha256": "d9a8f15aa770cf883d0eabd2b775fad694ce20b44cba7928f5c0c9a6d8750d4d",
+  "source_sha256": "d9a8f15aa770cf883d0eabd2b775fad694ce20b44cba7928f5c0c9a6d8750d4d",
+  "source_hash_verified": true,
+  "script_sha256": "f5e4ef92bfec4bd36d1798077afe9ec02a84d4181fa0b6af858a165e92029e8a",
+  "python_version": "3.10.0",
+  "python_implementation": "CPython",
+  "source_physical_lines": [
+    [
+      1040,
+      1220
+    ],
+    [
+      2690,
+      2890
+    ]
+  ],
+  "status": "pass",
+  "exact_check_count": 113748,
+  "exact_checks": {
+    "gcd_common_column": 64,
+    "mobius_common_column": 64,
+    "inverse_e_is_actual_gcd": 4374,
+    "inverse_coprimality": 4374,
+    "inverse_squarefree": 4374,
+    "bijection_forward_inverse": 4374,
+    "bijection_injective": 4374,
+    "column_product_identity": 4374,
+    "twist_argument_identity": 4374,
+    "mobius_factor_identity": 4374,
+    "norm_coefficient_identity": 4374,
+    "poisson_norm_argument_identity": 4374,
+    "zero_extension_f_mask": 34992,
+    "scale_XF": 54,
+    "exclusion_shift_scale": 54,
+    "mod4_square_subgroup_count": 1,
+    "mod4_square_cosets_distinct": 1,
+    "mod4_square_cosets_cover": 1,
+    "mod4_quadratic_square_invariance": 36,
+    "mod4_quadratic_representative_table": 4,
+    "ray_class_count": 1,
+    "ray_R_sign": 10944,
+    "ray_R_symmetric": 144,
+    "ray_G_quotient": 144,
+    "ray_R_multiplicative_first": 1728,
+    "ray_R_multiplicative_second": 1728,
+    "four_square_classes_sign_table": 16,
+    "prime_cubic_jacobi_exact": 8,
+    "common_column_character_mask": 19728,
+    "character_zero_extension": 296
+  },
+  "floating_tolerance": 1e-10,
+  "floating_check_count": 19868,
+  "floating_checks": {
+    "prime_gamma2_cube": {
+      "count": 8,
+      "max_abs_error": 2.0539125955565396e-15
+    },
+    "prime_gamma1_gamma2": {
+      "count": 8,
+      "max_abs_error": 1.5423711185402538e-15
+    },
+    "prime_inverse_gauss": {
+      "count": 8,
+      "max_abs_error": 1.066637261555548e-15
+    },
+    "prime_convert2": {
+      "count": 8,
+      "max_abs_error": 7.468261590855957e-16
+    },
+    "prime_G_ray_evaluation": {
+      "count": 8,
+      "max_abs_error": 7.301351988545593e-16
+    },
+    "prime_quadratic_gauss": {
+      "count": 8,
+      "max_abs_error": 6.688807699951874e-16
+    },
+    "principal_gauss_unit_mask": {
+      "count": 8,
+      "max_abs_error": 5.941613702009752e-16
+    },
+    "common_column_absolute_square": {
+      "count": 19728,
+      "max_abs_error": 1.1102230246251565e-15
+    },
+    "paired_gauss_direct_CRT": {
+      "count": 28,
+      "max_abs_error": 2.44312138127538e-15
+    },
+    "prime_pair_sextic_reciprocity": {
+      "count": 28,
+      "max_abs_error": 5.551115123125783e-16
+    },
+    "coefficient_CRT_direct": {
+      "count": 28,
+      "max_abs_error": 4.091524622677201e-15
+    }
+  },
+  "negative_controls": {
+    "drop_common_column_mobius_sign": {
+      "detected": 37,
+      "example": {
+        "s": [
+          0,
+          0,
+          1
+        ],
+        "t": [
+          0,
+          0,
+          1
+        ]
+      }
+    },
+    "incorrect_inverse_e_equals_f": {
+      "detected": 1302,
+      "example": {
+        "f": [
+          -5,
+          0
+        ],
+        "k": [
+          1,
+          0
+        ]
+      }
+    },
+    "omit_chi_m_f_fourth_power": {
+      "detected": 2382,
+      "example": {
+        "m": [
+          -5,
+          0
+        ],
+        "f": [
+          -5,
+          0
+        ],
+        "k": [
+          1,
+          0
+        ]
+      }
+    },
+    "drop_one_e_twist_power": {
+      "detected": 2316,
+      "example": {
+        "e": [
+          -5,
+          0
+        ],
+        "h": [
+          1,
+          0
+        ],
+        "v": [
+          1,
+          0
+        ]
+      }
+    },
+    "drop_h_v_coprimality_breaks_inverse": {
+      "detected": 3,
+      "example": {
+        "g": [
+          1,
+          0
+        ],
+        "v": [
+          -2,
+          -3
+        ],
+        "e": [
+          1,
+          0
+        ],
+        "h": [
+          -2,
+          -3
+        ]
+      }
+    },
+    "drop_g_v_coprimality_breaks_squarefree_f": {
+      "detected": 3,
+      "example": {
+        "g": [
+          -2,
+          -3
+        ],
+        "v": [
+          -2,
+          -3
+        ],
+        "e": [
+          -2,
+          -3
+        ],
+        "h": [
+          1,
+          0
+        ]
+      }
+    },
+    "omit_fh_bicharacter_sign": {
+      "detected": 4,
+      "example": {
+        "e": 0,
+        "f": 1,
+        "g": 0,
+        "h": 1
+      }
+    },
+    "principal_power_zero_must_be_mask": {
+      "detected": 8,
+      "example": {
+        "prime": [
+          -2,
+          -3
+        ],
+        "x": 0
+      }
+    },
+    "omit_prime_mobius_sign": {
+      "detected": 8,
+      "example": {
+        "prime": [
+          -2,
+          -3
+        ]
+      }
+    },
+    "omit_chi_minus_one_convert2": {
+      "detected": 4,
+      "example": {
+        "prime": [
+          -2,
+          -3
+        ]
+      }
+    },
+    "conjugate_paired_ray_factor": {
+      "detected": 24,
+      "example": {
+        "a": [
+          -2,
+          -3
+        ],
+        "b": [
+          1,
+          -3
+        ]
+      }
+    },
+    "omit_paired_ray_factor": {
+      "detected": 24,
+      "example": {
+        "a": [
+          -2,
+          -3
+        ],
+        "b": [
+          1,
+          -3
+        ]
+      }
+    }
+  },
+  "primes": [
+    {
+      "primary_prime": [
+        -2,
+        -3
+      ],
+      "rational_prime": 7,
+      "norm": 7,
+      "type": "split"
+    },
+    {
+      "primary_prime": [
+        1,
+        -3
+      ],
+      "rational_prime": 13,
+      "norm": 13,
+      "type": "split"
+    },
+    {
+      "primary_prime": [
+        -2,
+        3
+      ],
+      "rational_prime": 19,
+      "norm": 19,
+      "type": "split"
+    },
+    {
+      "primary_prime": [
+        1,
+        6
+      ],
+      "rational_prime": 31,
+      "norm": 31,
+      "type": "split"
+    },
+    {
+      "primary_prime": [
+        7,
+        3
+      ],
+      "rational_prime": 37,
+      "norm": 37,
+      "type": "split"
+    },
+    {
+      "primary_prime": [
+        7,
+        6
+      ],
+      "rational_prime": 43,
+      "norm": 43,
+      "type": "split"
+    },
+    {
+      "primary_prime": [
+        -5,
+        0
+      ],
+      "rational_prime": 5,
+      "norm": 25,
+      "type": "inert"
+    },
+    {
+      "primary_prime": [
+        -11,
+        0
+      ],
+      "rational_prime": 11,
+      "norm": 121,
+      "type": "inert"
+    }
+  ],
+  "paired_CRT_moduli": [
+    {
+      "a": [
+        -2,
+        -3
+      ],
+      "b": [
+        1,
+        -3
+      ],
+      "modulus_norm": 91
+    },
+    {
+      "a": [
+        -2,
+        -3
+      ],
+      "b": [
+        -2,
+        3
+      ],
+      "modulus_norm": 133
+    },
+    {
+      "a": [
+        -2,
+        -3
+      ],
+      "b": [
+        1,
+        6
+      ],
+      "modulus_norm": 217
+    },
+    {
+      "a": [
+        -2,
+        -3
+      ],
+      "b": [
+        7,
+        3
+      ],
+      "modulus_norm": 259
+    },
+    {
+      "a": [
+        -2,
+        -3
+      ],
+      "b": [
+        7,
+        6
+      ],
+      "modulus_norm": 301
+    },
+    {
+      "a": [
+        -2,
+        -3
+      ],
+      "b": [
+        -5,
+        0
+      ],
+      "modulus_norm": 175
+    },
+    {
+      "a": [
+        -2,
+        -3
+      ],
+      "b": [
+        -11,
+        0
+      ],
+      "modulus_norm": 847
+    },
+    {
+      "a": [
+        1,
+        -3
+      ],
+      "b": [
+        -2,
+        3
+      ],
+      "modulus_norm": 247
+    },
+    {
+      "a": [
+        1,
+        -3
+      ],
+      "b": [
+        1,
+        6
+      ],
+      "modulus_norm": 403
+    },
+    {
+      "a": [
+        1,
+        -3
+      ],
+      "b": [
+        7,
+        3
+      ],
+      "modulus_norm": 481
+    },
+    {
+      "a": [
+        1,
+        -3
+      ],
+      "b": [
+        7,
+        6
+      ],
+      "modulus_norm": 559
+    },
+    {
+      "a": [
+        1,
+        -3
+      ],
+      "b": [
+        -5,
+        0
+      ],
+      "modulus_norm": 325
+    },
+    {
+      "a": [
+        1,
+        -3
+      ],
+      "b": [
+        -11,
+        0
+      ],
+      "modulus_norm": 1573
+    },
+    {
+      "a": [
+        -2,
+        3
+      ],
+      "b": [
+        1,
+        6
+      ],
+      "modulus_norm": 589
+    },
+    {
+      "a": [
+        -2,
+        3
+      ],
+      "b": [
+        7,
+        3
+      ],
+      "modulus_norm": 703
+    },
+    {
+      "a": [
+        -2,
+        3
+      ],
+      "b": [
+        7,
+        6
+      ],
+      "modulus_norm": 817
+    },
+    {
+      "a": [
+        -2,
+        3
+      ],
+      "b": [
+        -5,
+        0
+      ],
+      "modulus_norm": 475
+    },
+    {
+      "a": [
+        -2,
+        3
+      ],
+      "b": [
+        -11,
+        0
+      ],
+      "modulus_norm": 2299
+    },
+    {
+      "a": [
+        1,
+        6
+      ],
+      "b": [
+        7,
+        3
+      ],
+      "modulus_norm": 1147
+    },
+    {
+      "a": [
+        1,
+        6
+      ],
+      "b": [
+        7,
+        6
+      ],
+      "modulus_norm": 1333
+    },
+    {
+      "a": [
+        1,
+        6
+      ],
+      "b": [
+        -5,
+        0
+      ],
+      "modulus_norm": 775
+    },
+    {
+      "a": [
+        1,
+        6
+      ],
+      "b": [
+        -11,
+        0
+      ],
+      "modulus_norm": 3751
+    },
+    {
+      "a": [
+        7,
+        3
+      ],
+      "b": [
+        7,
+        6
+      ],
+      "modulus_norm": 1591
+    },
+    {
+      "a": [
+        7,
+        3
+      ],
+      "b": [
+        -5,
+        0
+      ],
+      "modulus_norm": 925
+    },
+    {
+      "a": [
+        7,
+        3
+      ],
+      "b": [
+        -11,
+        0
+      ],
+      "modulus_norm": 4477
+    },
+    {
+      "a": [
+        7,
+        6
+      ],
+      "b": [
+        -5,
+        0
+      ],
+      "modulus_norm": 1075
+    },
+    {
+      "a": [
+        7,
+        6
+      ],
+      "b": [
+        -11,
+        0
+      ],
+      "modulus_norm": 5203
+    },
+    {
+      "a": [
+        -5,
+        0
+      ],
+      "b": [
+        -11,
+        0
+      ],
+      "modulus_norm": 3025
+    }
+  ],
+  "coverage": {
+    "bookkeeping": "3 primary primes (2 split, 1 inert), all disjoint squarefree b/f, k valuations 0..2, all 6 units; 4374 bijection inputs",
+    "ray_group": "all 12 primary unit classes modulo 12, all pairs and triples; square subgroup modulo 4 computed by ring operations, all four cosets, Gamma square invariance and table",
+    "characters": "all residues and every nonzero exclusion e at 8 primes; principal powers explicitly zero-extended",
+    "paired": "28 unordered pairs of distinct chosen primary primes, direct finite CRT sums, trivial original ray twist nu",
+    "limits": "finite diagnostics only; no analytic Poisson, smoothing, norm-range estimates, asymptotics, general reciprocity proof, or family baseline certified"
+  }
+}

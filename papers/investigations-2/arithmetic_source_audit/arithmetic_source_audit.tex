@@ -1,0 +1,1718 @@
+\documentclass[11pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools,mathrsfs}
+\usepackage{array,booktabs,tabularx}
+\usepackage{microtype}
+\usepackage[colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue]{hyperref}
+\hypersetup{pdftitle={An arithmetic source audit of the October 5 quasi-Riemann hypothesis argument},pdfauthor={Drafted for Edward Baker}}
+\setlength{\emergencystretch}{3em}
+\Urlmuskip=0mu plus 1mu
+\numberwithin{equation}{section}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{assumption}[theorem]{Source interface}
+\newtheorem{definition}[theorem]{Definition}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\newcommand{\OO}{\mathcal O}
+\newcommand{\E}{\mathcal E}
+\newcommand{\N}{\mathrm N}
+\newcommand{\ind}{\mathbf 1}
+\newcommand{\norm}[1]{\left\|#1\right\|}
+\newcommand{\sfstar}{\sideset{}{^*}\sum}
+\newcommand{\ray}{\mathscr X}
+\newcommand{\dd}{\,d}
+\newcommand{\eps}{\epsilon}
+
+\title{An arithmetic source audit of the October 5\\
+quasi-Riemann hypothesis argument}
+\author{Drafted for Edward Baker}
+\date{12 October 2026}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+We consolidate an internal source audit of the October 5, 2026
+quasi-Riemann hypothesis manuscript of OpenAI. The audit follows its
+special cubic Gauss-sum family through the initial Poisson reduction,
+theta reflection, quadratic large sieve, cube inversion, and full
+two-Poisson return. The central bookkeeping facts are a local
+exceptional-prime reindexing, a signed preimage count
+\(\tau(r)\ind_{f'\mid k'}\), an admissible divisor-shifted child, and a
+strict decrease by the squared positive-gap ratio. We give the
+resulting finite induction and the final deductions from the original
+mean square to the fixed-character exponent \(11/12+\delta\), Mellin
+nonvanishing, and the Dirichlet norm lift, including principal and
+imprimitive characters. These deductions are conditional on the
+explicit analytic interfaces stated here and the identified classical
+imports. Finite computations diagnose algebra and normalization; they
+do not certify the analytic theorems. No additional unresolved defect
+was identified in this internal audit, but independent mathematical
+validation of the source's claimed zero-free theorem remains outstanding.
+\end{abstract}
+
+\tableofcontents
+
+\section{Scope and the assembled statement}\label{sec:scope}
+
+The source of this investigation is \emph{The Quasi-Riemann Hypothesis},
+dated October 5, 2026, by OpenAI \cite{Source}. Its main theorem asserts
+nonvanishing of every finite-order Hecke \(L\)-function over
+\(K=\mathbb Q(\sqrt{-3})\) in \(\Re s>11/12\), and consequently
+the same statement for every Dirichlet \(L\)-function. The purpose
+here is to make the audited dependencies and deductions reviewable.
+The manuscript records an audit of that argument; it does not attribute
+an independently verified new proof of quasi-RH to the author for whom
+it was drafted.
+
+Three levels of evidence must be kept distinct. The arithmetic
+identities and parameter calculations below have explicit derivations.
+The source's analytic transformations are stated at the precise
+interfaces inspected in the accompanying notes. Cubic theta automorphy
+and cusp coefficients, global reciprocity, the quadratic large sieve,
+prime-ideal counting, and Hecke continuation remain classical imports.
+The detailed original proofs of every such theorem have not been
+independently re-proved in this investigation.
+
+\begin{theorem}[Conditional assembly]\label{thm:assembly}
+Fix a finite-order Hecke character \(\nu\) of \(K\) and a finite set
+\(S\) containing the primes above \(2,3\) and the conductor primes of
+\(\nu\). Assume the arithmetic, theta-reflection, smooth-weight,
+Poisson-return interfaces stated in this
+manuscript, with their uniformities and their indicated classical
+inputs. Then for every \(0<\vartheta\le1/10\) and \(\epsilon>0\)
+there is a finite integer \(k=k(\vartheta,\epsilon)\), independent
+of the compact support interval \(I\), such that
+\begin{equation}\label{eq:main-moment}
+ \sum_{0<\N(u)\le D^{1+\vartheta}}|A_u(D)|^2
+ \ll_{\nu,S,I,\vartheta,\epsilon}
+ \norm{W}_{C^k(I)}^2D^{2+\vartheta+\epsilon},
+ \qquad D\ge2.
+\end{equation}
+For every fixed smooth \(W\) and every \(\delta>0\),
+\begin{equation}\label{eq:fixed-saving}
+ A_1(D)\ll_{\nu,S,W,\delta}D^{11/12+\delta}.
+\end{equation}
+With the classical prime-ideal theorem and Hecke continuation, these
+bounds imply that \(L_K(s,\nu)\) has no zeros in \(\Re s>11/12\).
+Applying this conclusion to Dirichlet norm lifts gives the same
+qualitative half-plane for every Dirichlet character.
+\end{theorem}
+
+The source interfaces in this statement are hypotheses of the
+assembled deductions. The audit inspected their proofs and found no
+additional unresolved defect under the stated imports, but that review
+status is not a substitute for independent mathematical validation.
+In particular, finite check counts are not hypotheses or proofs of
+Theorem~\ref{thm:assembly}.
+
+\subsection{Exact source version}
+
+All source references use the physical lines of the October 5
+LaTeX file at openai/math commit
+\begin{center}
+\texttt{fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb}.
+\end{center}
+Its SHA-256, grouped solely for legibility, is
+\begin{center}\small\ttfamily
+d9a8f15aa770cf88 3d0eabd2b775fad6\\
+94ce20b44cba7928 f5c0c9a6d8750d4d.
+\end{center}
+Concatenating the four groups gives the recorded hash. The commit
+date is October 8; the manuscript date is October 5. They are
+different pieces of provenance.
+
+\begin{center}\small
+\begin{tabularx}{\textwidth}{@{}lX@{}}
+\toprule
+Physical lines & Audited component\\
+\midrule
+665--770 & Original moment, fixed-character extraction, Mellin and Dirichlet deduction\\
+1000--1248 & Initial Poisson reduction and original-family normalization\\
+1261--1629 & Canonical estimate, cube comparison, transfer interface and finite induction\\
+1649--2215 & Theta realization, local reflection, quadratic sieve and completed mean square\\
+2217--2683 & Full two-Poisson transfer proof\\
+2905--3478 & Fixed-ray theta construction, cusp multipliers, Mellin normalization and uniformity\\
+\bottomrule
+\end{tabularx}
+\end{center}
+The companion notes retain the separate September 30 correspondence.
+That comparison does not assert that the two source texts or all
+later claims in them are identical.
+
+\section{Arithmetic family and the initial reduction}\label{sec:initial}
+
+Write \(\OO=\mathbb Z[\omega]\), where
+\(\omega=e^{2\pi i/3}\), and \(\lambda=1+2\omega=i\sqrt3\).
+For an element \(a\), \(\N(a)=|a|^2\); for an ideal it is the
+absolute ideal norm. The field has class number one. Ideals prime
+to \(3\) are represented by their unique primary generators
+\(a\equiv1\pmod3\). In row sums, elements of \(\OO\) are counted,
+including their six unit associates; in starred column sums,
+squarefree ideals prime to \(S\) are counted once.
+
+For primary squarefree \(n\) prime to \(S\), let
+\(\chi_n(x)=(x/n)_6\). Every local power is extended by zero
+on nonunits:
+\[
+ \chi_p^j(x)=0\quad(p\mid x),\qquad
+ \chi_p^0(x)=\ind_{p\nmid x}.
+\]
+The latter identity is essential: a zero local exponent does not
+remove its original zero extension. When a nonsquarefree primary
+ideal denominator occurs later, \(\chi_a\) is the product of its
+local powers over the positive prime valuations, with each local
+zero extension retained. The unit denominator has character one.
+ Let \(\mu\) be the ideal
+M\"obius function and define
+\begin{equation}\label{eq:A}
+ A_u(D)=\sum_{(n,S)=1}\mu(n)\nu(n)\chi_n(u)
+                      W(\N(n)/D).
+\end{equation}
+Because \(\mu\) vanishes on nonsquarefree ideals, these are the
+source's squarefree columns. The weight is complex-valued, smooth,
+and supported in a fixed compact interval in \((0,\infty)\).
+
+\subsection{The special Gauss-sum coefficients}
+
+Set
+\[
+ e(z)=\exp(4\pi i\,\operatorname{Im}z/\sqrt3),\qquad
+ \alpha(n)=n/|n|,\qquad
+ \gamma_j(n)=\N(n)^{-1/2}\sum_{x\bmod n}\chi_n(x)^j e(x/n).
+\]
+For a fixed ray character \(\xi\), the returned coefficient is
+\begin{equation}\label{eq:a}
+ a_\xi(n)=\overline{\alpha(n)}\gamma_2(n)\xi(n).
+\end{equation}
+It has modulus one on the squarefree column domain. The finite
+ray group is chosen before \(D\) and the moving primes; it accounts
+for \(\nu\), reciprocity signs and supplementary Gauss phases.
+
+\begin{assumption}[Arithmetic conversion interface]\label{in:arith}
+The fixed ray group supports a unit-modulus function \(G\) and a
+symmetric sign bicharacter \(\mathcal R\), with
+\begin{align}
+ \chi_b(a)&=\mathcal R(a,b)\chi_a(b),&
+ G(ab)&=G(a)G(b)\mathcal R(a,b),\label{eq:recip-audit}\\
+ \gamma_2(n)^3&=\mu(n)\alpha(n),&
+ \gamma_1(n)\gamma_2(n)&=\mu(n)\alpha(n)G(n),\label{eq:gauss-audit}\\
+ G(n)&=\overline{\chi_n(4)}\gamma_3(n),&
+ \gamma_1(n)\gamma_{-1}(n)&=\chi_n(-1).
+\end{align}
+Here the residue-symbol reciprocity identities require the displayed
+coprimalities, and the Gauss identities require squarefree \(n\)
+prime to \(S\). The multiplicative identity for \(G\) is on the
+fixed ray group. Consequently, for coprime squarefree \(a,b\),
+\begin{align}
+ a_\xi(ab)&=a_\xi(a)a_\xi(b)\chi_b(a)^4,\label{eq:crt-audit}\\
+ \mu(n)\gamma_{-1}(n)
+ &=\chi_n(-1)G(n)^{-1}a_1(n).\label{eq:conversion}
+\end{align}
+\end{assumption}
+
+These are the source's finite Gauss--Jacobi and reciprocity
+identities, audited with the inert-prime sign and the normalization
+of \(e\) retained. The completed family below uses precisely
+\eqref{eq:a}; no estimate for arbitrary sextic coefficients is inferred.
+
+\begin{definition}[Dual energy]\label{def:energy}
+For \(F\ge1\) and \(X,\mathcal H>0\), put
+\begin{equation}\label{eq:energy-audit}
+ \E(\mathcal H,X,F;\xi,W)=\frac1{XF}
+ \sfstar_{F\le\N(f)<2F}\sum_{0<\N(k)\le\mathcal H}
+ \left|\sfstar_n a_\xi(n)\chi_n(k)\chi_n(f)^4W(\N(n)/X)\right|^2.
+\end{equation}
+Write \(\E_r\) for the same energy with \((n,r)=1\).
+\end{definition}
+
+\begin{lemma}[Removal of column exclusions]\label{lem:exclusions}
+Let \(r_0\) be the squarefree product of primes of \(r\) outside
+\(S\). Then
+\begin{equation}\label{eq:exclusions-audit}
+ \E_r(\mathcal H,X,F;\xi,W)
+ \le\tau(r_0)\sum_{d\mid r_0}
+       \E(\mathcal H,X/\N(d),F\N(d);\xi,W).
+\end{equation}
+Every shift preserves \(XF\) and \(\mathcal H\).
+\end{lemma}
+\begin{proof}
+Insert \(\sum_{d\mid(n,r_0)}\mu(d)\) in the column sum and put
+\(n=dm\). Identity~\eqref{eq:crt-audit} supplies the factor
+\(\chi_m(d)^4\), which enforces \((m,d)=1\); the twist with
+\(f\) similarly makes terms with \((d,f)>1\) zero.
+The remaining column has auxiliary twist \(df\) and scale
+\(X/\N(d)\), times a coefficient of modulus at most one.
+Cauchy--Schwarz over \(d\), followed by enlargement of the injective
+squarefree image \(f\mapsto df\), gives \eqref{eq:exclusions-audit}.
+The denominator remains
+\((X/\N(d))(F\N(d))=XF\). No vanishing character value is divided out.
+\end{proof}
+
+\subsection{Excluded Poisson and normalization}
+
+For a primitive finite character \(\chi\) of modulus \(\mathfrak m\),
+the normalized excluded Poisson formula used in the source is
+\begin{equation}\label{eq:poisson-audit}
+\begin{split}
+ \sum_k\chi(k)\ind_{(k,r)=1}\Phi(\N(k)/\mathcal H)
+ ={}&\frac{\mathcal H\gamma(\chi)}{\sqrt{\N(\mathfrak m)}}
+ \sum_{d\mid\operatorname{rad}r}\frac{\mu(d)\chi(d)}{\N(d)}\\
+ &\hspace{4mm}\times\sum_h\overline{\chi(h)}
+  \widehat\Phi\!\left(\frac{\mathcal H\N(h)}
+                           {\N(d)\N(\mathfrak m)}\right).
+\end{split}
+\end{equation}
+The lattice measure is normalized to give \(\OO\) covolume one.
+For the principal primitive character, the modulus is \(1\) and
+the zero frequency is
+\(\mathcal H\widehat\Phi(0)\prod_{p\mid r}(1-\N(p)^{-1})\).
+For nonprincipal primitive characters the zero frequency vanishes.
+This analytic identity is a classical Poisson input, with the
+primitive finite Fourier identity specifying its normalization.
+
+Choose nonnegative radial \(\Phi\ge1\) on \([0,1]\) with compact
+Fourier support. The initial smoothed moment is
+\begin{equation}\label{eq:MD}
+ \mathcal M_D=\frac1D\sum_{u\in\OO}\Phi(\N(u)/H)|A_u(D)|^2,
+ \qquad H=D^{1+\vartheta}.
+\end{equation}
+In the expanded columns write \(n_j=gz_j\), with
+\((z_1,z_2)=(g,z_1z_2)=1\). The common column factor produces
+\(\ind_{(u,g)=1}\), which belongs in \eqref{eq:poisson-audit}.
+The zero frequency occurs only for \(z_1=z_2=1\), and gives
+\[
+ Z=\frac HD\widehat\Phi(0)\sfstar_g |W(\N(g)/D)|^2
+       \prod_{p\mid g}(1-\N(p)^{-1})
+ \ll_I H\norm{W}_\infty^2.
+\]
+Nonzero frequencies with \(z_1=z_2=1\) remain in the off-zero
+expression; deleting them would not be a diagonal subtraction.
+
+After inserting the remaining coprimality M\"obius sum, the exact
+change of variables is
+\[
+ b=g/e,\quad f=ev,\quad k=eh,\qquad
+ e=(f,k),\quad v=f/e,\quad g=be,\quad h=k/e.
+\]
+It yields \(gv=bf\), \(he^5v^4=kf^4\),
+\(\mu(e)\mu(v)=\mu(f)\), and \(\N(g)/\N(e)=\N(b)\).
+The common-factor masks are part of the inverse map. The paired
+Gauss conversion and fixed ray expansion return \(a_\xi\) and its
+conjugate, while the column exclusion left over is \((n,b)=1\).
+
+\begin{assumption}[Initial analytic reduction]\label{in:initial}
+The source reduction, with these masks and the full diagonal,
+has the following interface. For fixed \(C\ge1\), dyadic \(B,F\ge1\)
+give
+\begin{equation}\label{eq:initial-ranges}
+ X=D/(BF),\qquad
+ 0<\mathcal H\le CD^{1-\vartheta}/B^2,\qquad
+ XF=D/B.
+\end{equation}
+A bound
+\(\E(\mathcal H,X,F;\xi,U)
+ \ll D^\epsilon XF\norm{U}_{C^J}^2\)
+for every common test implies \eqref{eq:main-moment}.
+The row-dependent two-column kernel is controlled by its
+\(C^{2J+4}\) norm, bounded by
+\(C_{I,J}\norm{W}_{C^{2J+4}(I)}^2\).
+\end{assumption}
+
+The source's smooth-weight lemma is used only after the common-test
+bound is available. The final recovery, including short divisor shifts
+and the outside factor \(D\), is proved explicitly in
+Section~\ref{sec:moment-final}.
+
+\section{Theta reflection and the completed mean square}\label{sec:completed}
+
+\subsection{Completed family and reflected interface}
+
+For a completely multiplicative ideal function \(\Psi\), zero at
+primes in \(S\), let \(V_*(y)=\sqrt y\,W(y)\) and define
+\begin{equation}\label{eq:T-audit}
+ T(X;\Psi)=\sfstar_n\sum_{\substack{b\equiv1\ (3)\\(b,S)=1}}
+ \frac{\overline{\alpha(n)}\gamma_2(n)\Psi(n)
+        \overline{\alpha(b)}^{\,3}\Psi(b)^3}
+      {\sqrt{\N(n)}\N(b)}
+ V_*(\N(n)\N(b)^3/X).
+\end{equation}
+Only \(n\) is squarefree. For the energy family,
+\(\Psi_{k,f}(n)=\xi(n)\chi_n(k)\chi_n(f)^4\) on \((n,S)=1\)
+and zero otherwise; write \(T(X;k,f)\). The term \(b=1\)
+is \(X^{-1/2}\) times the uncompleted column.
+
+The angular Mellin calculation gives the transform
+\begin{equation}\label{eq:sharp}
+ V_*^\sharp(x)=\frac1{2\pi i}\int_{(0)}
+ \widehat V_*(-t)
+ \frac{\Gamma(7/6+t)\Gamma(5/6+t)}
+      {\Gamma(7/6-t)\Gamma(5/6-t)}
+ \left(\frac{(2\pi)^4x}{27}\right)^{-t}\dd t.
+\end{equation}
+The reflected kernel uses \(\N(\ell)X/\N(c)^2\).
+Thus its denominator is \(\N(c)^2=|c|^4\), not \(\N(c)\).
+The scalar is \(-i/81\) times the bounded Fourier and arithmetic
+phases. These normalizations were independently derived within
+the audit from the differentiated theta Mellin integral.
+
+\begin{assumption}[Theta reflection and moving-row uniformity]\label{in:theta}
+For
+\(\Psi=\Psi_0\prod_{p\in\mathcal P}\chi_p^{j_p}\),
+\(0\le j_p\le5\), the completed sum is a finite sum of terms
+\begin{equation}\label{eq:reflected}
+ C\sum_{\ell\ne0}\frac{d(\ell)\alpha(\ell)}{\sqrt{\N(\ell)}}
+ \psi(\lambda^4\ell)
+ \prod_{p\in\mathcal A}B_{p,j_p}(\lambda^4\ell)
+ V_*^\sharp\!\left(\frac{\N(\ell)X}{\N(c)^2}\right),
+\end{equation}
+where \(\{p:j_p\ne0\}\subseteq\mathcal A\subseteq\mathcal P\),
+\(c=c_0\prod_{p\in\mathcal A}p\), and \(C\) is bounded independently
+of moving prime norms. The local factors are
+\begin{equation}\label{eq:B}
+ B_{p,j}(x)=
+ \begin{cases}
+  \chi_p(x)^{-j-2},&j\notin\{0,4\},\\
+  q^{-1/2}(-1+q\ind_{p\mid x}),&j=4,\\
+  q^{-1/2}\chi_p(x)^{-2},&j=0,
+ \end{cases}\qquad q=\N(p).
+\end{equation}
+The cusp coefficient \(d\), additive character \(\psi\), and
+fixed denominator \(c_0\) lie in a fixed finite family. For residual
+squarefree moving row \(k_0\), every prime of \(k_0\) is active with
+exponent one. After partitioning \(k_0\) into fixed ray classes,
+\((d,\psi,c_0)\) is independent of the moving row within a sector.
+The moving denominator still contains \(k_0\).
+
+The coefficient support and bounds are
+\begin{equation}\label{eq:theta-bounds-audit}
+ \ell=u\lambda^mnb^3,\quad m\ge-4,\quad n\text{ squarefree},
+ \qquad |d(\ell)|\le27\,3^{m/6}\sqrt{\N(b)}.
+\end{equation}
+Here \(u\) is a unit and \(n,b\) are primary and prime to
+\(3\). The original \(S\)-exclusion is not reimposed on dual columns,
+and there is no condition \((n,b)=1\). Finally,
+\begin{equation}\label{eq:decay}
+ |(x\partial_x)^jV_*^\sharp(x)|
+ \ll_{A,j,I}\norm{W}_{C^J(I)}
+              \min(x^{1/4},x^{-A}),\qquad
+ J=\lceil4A\rceil+j+4
+\end{equation}
+is a sufficient finite-order bound for every fixed \(A>0,j\ge0\).
+\end{assumption}
+
+The cusp formulas were compared with Dunn--Radziwi{\l}{\l}
+\cite{DR}. Their coefficients are conjugated and their frequencies
+reversed in \eqref{eq:reflected}; ignoring this distinction changes
+the two nonidentity cusps. The original Patterson proof \cite{Pat}
+was not independently read. The source's reduced-denominator
+construction, which permits nonunit fixed Fourier frequencies,
+was audited separately; the coprime-frequency statements in
+\cite{DR} alone do not supply that extension.
+
+Two analytic clarifications matter. Cusp representatives and CRT
+solutions can be moved within their allowed congruences to avoid
+the finitely many zero matrix entries used in residue symbols.
+For a fixed arithmetic twist, differentiating the theta function
+removes the constant mode; exponential decay at both height
+endpoints makes its Mellin transform entire. The direct and dual
+series give polynomial bounds on strip edges. A crude interior
+exponential bound, together with
+\(\exp(\eta s^2)(B+s)^{-M}\) on expanding rectangles, gives
+polynomial strip growth by the maximum principle and then
+\(\eta\downarrow0\). Kernel contours are shifted individually before
+their rapidly decaying values are summed; an unweighted dual
+series is not interchanged with the zero-line integral.
+
+The gamma quotient in \eqref{eq:sharp} has no poles in
+\(-1/4\le\Re t\le A\) and has polynomial growth
+\(O_A((1+|\operatorname{Im}t|)^{4\Re t})\).
+Compact support and finitely many integrations by parts therefore
+give \eqref{eq:decay}, uniformly in the moving primes. Constants
+used to establish the exact fixed-twist identity may depend on
+that twist; they are not subsequently claimed as uniform estimates.
+
+\subsection{Exceptional primes and their exact cost}
+
+For a squarefree row write \(s=tk_0\), with \(t\) supported on
+the primes of \(gS\), and put \(\mathcal H_0=\mathcal H/\N(t)\).
+The original sextic twist is \(k=u_0tk_0\) with auxiliary \(g\),
+not necessarily squarefree. Away from \(S\) its local exponent is
+\(j_p=v_p(k)+4v_p(g)\pmod6\).
+If \(p\mid k_0\), then \(j_p=1\) and
+\(B_{p,1}(nb^3)=\chi_p(nb)^3\), including its zeros.
+If \(p\mid t\) with \(p\notin S\), the exponent
+\(1+4v_p(g)\) is odd; a shared prime of \(t\) and \(g\)
+must not be charged as a second exceptional prime. Primes in
+\(S\) belong to the fixed denominator and finite-sector data,
+rather than this sextic local table.
+
+At a prime of norm \(q\) with \(j=4\), the exact disjoint split is
+\begin{equation}\label{eq:j4}
+ q^{-1/2}(-1+q\ind_{p\mid nb})
+ =-q^{-1/2}+q^{1/2}\ind_{p\mid n}
+                    +q^{1/2}\ind_{p\nmid n,\ p\mid b}.
+\end{equation}
+A collision \(p\mid n,b\) belongs to the second term once.
+Reindexing \(n=pn'\) requires \(p\nmid n'\); reindexing \(b=pb'\)
+requires \(p\nmid n\), with no restriction on further powers in
+\(b'\). The coefficient at all other primes is evaluated at the
+original substituted pair. This argument uses its magnitude bound,
+not multiplicativity of the cusp coefficient.
+
+Let a prepared coefficient have bound \(27a\) and auxiliary length
+\(Y\). The complete local cost is:
+\begin{center}\small
+\begin{tabular}{@{}lccc@{}}
+\toprule
+Branch & New \(a^2\) & New \(Y\) & Cost in \(a^2Y\)\\
+\midrule
+Active \(j=1,2,3,5\) & \(a^2\) & \(q^2Y\) & \(q^2\)\\
+Inactive \(j=0\) & \(\le a^2\) & \(Y\) & \(\le1\)\\
+Active \(j=0\) & \(a^2/q\) & \(q^2Y\) & \(q\)\\
+\(j=4\), constant & \(a^2/q\) & \(q^2Y\) & \(q\)\\
+\(j=4\), squarefree column & \(a^2\) & \(qY\) & \(q\)\\
+\(j=4\), cube column & \(a^2/q\) & \(Y/q\) & \(q^{-2}\)\\
+\bottomrule
+\end{tabular}
+\end{center}
+The inactive zero-exponent branch has scalar \(1-q^{-1}\) and
+no transformed column mask at \(p\). Restoring the original mask
+after reflection would change the exact identity.
+
+Starting at \(Y=\N(c_0)^2\mathcal H_0^2/X\), the table gives
+\begin{equation}\label{eq:cost}
+ a^2\le1,\qquad
+ a^2Y\ll_{\xi,S}\mathcal H_0^2\N(t)^2\N(g)/X.
+\end{equation}
+Indeed, primes of \(t\) cost \(q^2\). For a prime of \(g\) outside
+\(t\), valuation \(r\equiv0,1,2\pmod3\) gives respectively
+\(j=0,4,2\), with cost at most \(q,q,q^2\), bounded by \(q^r\).
+The number of branches is divisor bounded in the polynomial norm
+range. Fixed ray partitioning, zero masks, fixed substitutions and
+bounded exterior row phases leave each prepared coefficient
+independent of \(k_0\).
+
+\subsection{The primitive quadratic family}
+
+For squarefree primary \(k\) prime to \(2,3\), define
+\[
+ e_k=\begin{cases}0,&\N(k)\equiv1\pmod4,\\1,&\N(k)\equiv3\pmod4,\end{cases}
+ \qquad
+ \Xi_k(x)=(x/k)_2\kappa_\lambda(x)^{e_k},
+\]
+with \(\kappa_\lambda\) the nontrivial quadratic character modulo
+\(\lambda\). The supplement is absent when \(e_k=0\).
+Since \(\omega\) is a square unit and
+\((-1/k)_2=(-1)^{e_k}\), the supplement makes \(\Xi_k\)
+trivial on the units. Its primitive conductor is
+\((k)\lambda^{e_k}\), its infinite type is trivial, and its order
+divides two. There is no added conductor at \(2\) in this realization.
+For a primary column \(n\), \(\kappa_\lambda(n)=1\), so
+\(\Xi_k((n))=\chi_k(n)^3\).
+
+Partition into the fixed reciprocity classes, including the parity
+of \(\N(k)\) modulo \(4\). For coprime \(k_1,k_2\) in the same
+class, the supplements cancel, and the primitive inducing product
+has conductor \(k_1k_2\). This is the inducing-product convention
+in Goldmakher--Louvel \cite{GL}, not a claim that every
+zero-extended product at \(\lambda\) has that conductor.
+Their quadratic-family theorem, together with fixed-class
+reciprocity or duality, gives
+\begin{equation}\label{eq:Q-audit}
+ \sfstar_{\N(k)\le\mathcal H_0}
+ \left|\sfstar_{\N(n)\asymp U}\beta(n)\chi_k(n)^3\right|^2
+ \ll_\sigma(\mathcal H_0U)^\sigma
+                    (\mathcal H_0+U)\sum_n|\beta(n)|^2.
+\end{equation}
+Dual columns meeting fixed \(S\)-primes are handled by writing
+\(n=s_0n_0\), with \(s_0\) a squarefree \(S\)-supported ideal.
+There are finitely many choices; its character value is a bounded
+row scalar. This permits, in particular, the cubic theta coefficient
+at the norm-\(4\) prime without extending the original sextic
+denominator notation there.
+
+\subsection{Common Mellin majorant and all infinite sums}
+
+In a fixed ray sector, unit \(u\), and ramified index \(m\ge-4\),
+the prepared sum has the form
+\[
+ \mathscr S_m(k_0)=
+ \sum_{n,b}\frac{A_m(n,b)\chi_{k_0}(nb)^3}
+                   {3^{m/3}\sqrt{\N(n)}\N(b)}
+ V_*^\sharp\!\left(
+  \frac{3^m\N(n)\N(b)^3\mathcal H_0^2}{Y\N(k_0)^2}\right),
+ \quad |A_m(n,b)|\le27a .
+\]
+For dyadic \(\N(n)\asymp U,\N(b)\asymp B\), let
+\(z_*=3^mUB^3/Y\). Mellin inversion in the column variable
+has the common pointwise bound
+\[
+ |c_{b,k_0}(\tau)|\ll
+ \norm{W}_{C^J}(1+z_*)^{-A}(1+|\tau|)^{-2}.
+\]
+The lower bound for the kernel argument uses
+\(\N(k_0)\le\mathcal H_0\). A separate bounded integral for each
+row would not justify exchanging the moving row sum with Mellin;
+the displayed common bound does.
+
+For the sieve coefficients
+\(\beta(n)=A_m(n,b)\N(n)^{-1/2}(\N(n)/U)^{i\tau}\),
+ideal counting gives \(\sum_n|\beta(n)|^2\ll a^2\).
+Weighted Cauchy in Mellin keeps two factors of kernel decay.
+Cauchy in the cube index uses
+\(\sum_{\N(b)\asymp B}\N(b)^{-1}\ll1\), leaving no extra \(B\).
+Together with \eqref{eq:Q-audit}, this gives
+\begin{equation}\label{eq:block-completed}
+ \sum_{k_0}|\mathscr S_{m;U,B}(k_0)|^2
+ \ll a^2 3^{-2m/3}\norm{W}_{C^J}^2
+  (\mathcal H_0U)^\sigma(\mathcal H_0+U)
+  (1+3^mUB^3/Y)^{-2A}.
+\end{equation}
+
+The needed dyadic sums, for every \(Z>0\), are
+\[
+ \sum_{U,B\ge1}(1+UB^3/Z)^{-2}\ll\log^2(2+Z),\qquad
+ \sum_{U,B\ge1}\sqrt U(1+UB^3/Z)^{-2}\ll\sqrt Z .
+\]
+For \(Z\le1\), the left sides are \(O(Z^2)\), by geometric sums
+of \(U^{-2}B^{-6}\) and \(U^{-3/2}B^{-6}\). For \(Z\ge1\),
+the region \(UB^3\le Z\) contributes the stated orders and the
+complement has geometric decay. Thus no restriction \(Y\ge1\)
+is introduced. For \(z_*=3^mUB^3/Y\), one has
+\(U\le\max(1,Y/3^m)(1+z_*)\). Since \(m\ge-4\) and \(Y\)
+has a fixed polynomial bound, the small sieve factor \(U^\sigma\)
+is absorbed by a reserved power of \(D\) and a small reduction in
+the decay exponent; no unbounded \(U\) is simply declared polynomial.
+Minkowski applied to \eqref{eq:block-completed},
+with reserved small losses and \(A\ge3\), gives for each prepared
+term the bound \(D^\epsilon(\mathcal H_0a^2+a^2Y)\)
+after summing \(U,B\) and \(m\ge-4\).
+The row part has geometric factor \(3^{-m/3}\), while the column
+part has \(3^{-5m/6}\sqrt Y\), with only finitely many negative \(m\).
+Polynomial bounds for \(Y\), branch counts and logarithms allow
+all the small losses to be chosen before summation.
+For this separation and decay step, \(J\ge18\) is a sufficient
+order; later compositions may require a larger finite order.
+
+Using \eqref{eq:cost} and summing the divisor-bounded \(t\)-sectors
+therefore gives the squarefree-row bound
+\begin{equation}\label{eq:sf-completed}
+ \sum_{\substack{0<\N(s)\le\mathcal H\\s\ {\rm squarefree}}}
+ |T(X;u_0s,g)|^2
+ \ll D^\epsilon\norm{W}_{C^J}^2
+             \left(\mathcal H+\frac{\mathcal H^2\N(g)}X\right)
+\end{equation}
+in any fixed polynomial parameter range, for arbitrary nonzero
+\(g\), including its repeated factors and primes in \(S\).
+
+\begin{proposition}[General rows in the completed family]\label{prop:completed}
+Under the reflected and quadratic interfaces above, for
+\(1\le\mathcal H,X,\N(f)\le D^{C_0}\) and squarefree primary
+\((f,S)=1\),
+\begin{equation}\label{eq:completed-bound}
+ \sum_{0<\N(k)\ll\mathcal H}|T(X;k,f)|^2
+ \ll_{I,\xi,S,\epsilon,C_0}D^\epsilon\norm{W}_{C^J(I)}^2
+                 \left(\mathcal H+\frac{\mathcal H^2\N(f)}X\right).
+\end{equation}
+The order \(J=J(\epsilon,C_0)\) is finite and independent of \(I\).
+\end{proposition}
+\begin{proof}
+Write uniquely \(k=u_0sv^2\), with \(s\) squarefree and one
+multiplicatively chosen generator per ideal for \(s,v\).
+The supports of \(s,v\) may overlap. Complete multiplicativity,
+including zero values, and \(8\equiv2\pmod6\) give
+\[
+ T(X;u_0sv^2,f)=T(X;u_0s,fv^2).
+\]
+For each \(v\), let \(\mathcal H_v=\mathcal H/\N(v)^2\) and
+\(g=fv^2\). A nonempty range has \(\mathcal H_v\ge1\) and
+\(\N(g)\le\mathcal H\N(f)\le D^{2C_0}\), so
+\eqref{eq:sf-completed} applies with range \(2C_0\). Its term is
+exactly
+\[
+ \mathcal H_v+\mathcal H_v^2\N(g)/X
+ =\frac1{\N(v)^2}
+        \left(\mathcal H+\frac{\mathcal H^2\N(f)}X\right).
+\]
+The ideal sum \(\sum_v\N(v)^{-2}=\zeta_K(2)\) converges.
+The six units cost a fixed factor. This proves the proposition
+without an extra count of \(v\) or a restriction \((s,v)=1\).
+\end{proof}
+
+
+% Prepared for Edward Baker, 12 October 2026, with substantial LLM assistance.
+% GPT-6 (Codex), inherited configuration; exact variant/effort unavailable.
+% Conditional reconstruction from the pinned source and three transfer notes.
+% Fragment only: the parent manuscript supplies packages, macros and bibliography.
+
+\section{Two Poisson transformations and finite descent}
+\label{sec:consolidated-transfer}
+
+We retain the field, fixed excluded set $S$, ray characters $\xi$, and
+coefficients $a_\xi(n)$ of the preceding sections. Ideal indices are
+represented by primary generators; a star means squarefree and prime to
+$S$. Rows are actual elements of $\OO$, with their unit associates retained.
+All residue characters have their zero extensions. The present section
+reconstructs the return and descent argument of \cite{Source}, physical
+lines 1335--1629 and 2217--2683. Its arithmetic Poisson and completed-sum
+inputs remain identified interfaces, rather than independently proved
+theta or large-sieve theorems.
+
+\begin{assumption}[Interfaces used in the return argument]
+\label{ass:transfer-interfaces}
+We use the source's first positive-form and second Poisson identities,
+with their full enlarged outer domains, common kernels, zero modes
+and arbitrary positive intermediate scales, as described below.
+Their analytic identities are source interfaces; the signed
+regrouping and admissible-scale algebra following them are derived
+in this section.
+
+The coefficients have modulus one on the starred domain and obey
+$a_\xi(cn)=a_\xi(c)a_\xi(n)\chi_n(c)^4$ on coprime squarefree indices.
+We use the normalized excluded Poisson formula \eqref{eq:poisson-audit}
+for every positive row scale, including its principal modulus-one case.
+The Fourier and primitive Gauss normalization is retained. The paired Gauss
+conversions on coprime squarefree columns are
+\[
+\begin{aligned}
+ a_\xi(u_1)\overline{a_\xi(u_2)}\gamma(\chi_{u_1}\overline{\chi_{u_2}})
+ &=\mu(u_1)\mu(u_2)\sum_{\xi_1}\ell_{\xi_1}
+       \xi_1(u_1)\overline{\xi_1(u_2)},\\
+ \mu(z_1)\mu(z_2)\xi_1(z_1)\overline{\xi_1(z_2)}
+ \gamma(\overline{\chi_{z_1}}\chi_{z_2})
+ &=\sum_{\xi'}c_{\xi'}a_{\xi'}(z_1)\overline{a_{\xi'}(z_2)}.
+\end{aligned}
+\]
+The character sets and coefficients are finite and fixed once $\xi$ or
+$\xi_1$ is fixed; they do not depend on the moving ideal or row indices.
+These are the source's CRT, reciprocity and Gauss conversion interfaces.
+
+We also use the following common-test smooth interface. For a finite row
+set with $w_r\ge0$, put $S_{j,r}(V)=\sum_n a_{j,r}(n)V(x_{j,r,n})$
+with finite column sums, and suppose both families satisfy
+$\sum_r w_r|S_{j,r}(V)|^2\le M_j\norm{V}_{C^m(J_*)}^2$ for every
+common test $V$, where $J\subset\operatorname{int}J_*$. If
+$|b_r|\le w_r$ and $K_r$ is supported in $J^2$, then
+\[
+ \left|\sum_r b_r\sum_{n_1,n_2}
+ a_{1,r}(n_1)\overline{a_{2,r}(n_2)}K_r(x_{1,r,n_1},x_{2,r,n_2})\right|
+ \ll\sqrt{M_1M_2}\sup_r\norm{K_r}_{C^{2m+4}(J^2)}.
+\]
+This is the row-dependent Mellin separation interface of the source,
+lines 3570--3650: its Fourier coefficients have one common pointwise
+majorant before rows are summed.
+
+Finally, with $\Psi_k(n)=\xi(n)\chi_n(k)\chi_n(f)^4$ and its fixed
+$S$-zero extension, the completed family of the preceding section is
+\[
+ T(X;k,f)=\frac1{\sqrt X}\sum_n^*\sum_{(b,S)=1}
+ \sqrt{\N(b)}\,\overline{\alpha(b)}^{\,3}\Psi_k(b)^3
+ a_\xi(n)\chi_n(k)\chi_n(f)^4W(\N(n)\N(b)^3/X),
+\]
+and satisfies
+\[
+ \sum_{0<\N(k)\le H}|T(X;k,f)|^2
+ \ll D^\eta\norm{W}_{C^{J_R}(I)}^2
+       \left(H+\frac{H^2\N(f)}X\right)
+\]
+for $1\le H,X,\N(f)\le D^C$, every $\eta>0$, and
+$J_R=J_R(\eta,C)$ independent of $I$. The theta transformation and
+quadratic sieve underlying this estimate are the preceding section's
+deep inputs. No arbitrary sextic coefficient family is substituted.
+\end{assumption}
+
+Write $\E_{(r)}$ for the normalized energy with the extra column condition
+$(n,r)=1$. Its normalization is $1/(XF)$. Inclusion--exclusion and the CRT
+law give, for squarefree $r$ prime to $S$,
+\begin{equation}\label{eq:transfer-exclusions}
+ \E_{(r)}(\mathcal H,X,F;\xi,V)
+ \le\tau_{\rm div}(r)\sum_{j\mid r}
+ \E(\mathcal H,X/\N(j),F\N(j);\xi,V).
+\end{equation}
+As in Lemma~\ref{lem:exclusions}, $n=jm$ changes $f$ to $jf$ without
+changing the test; Cauchy--Schwarz in $j$ and enlargement of that injective
+image prove the inequality. The product $(X/\N(j))(F\N(j))=XF$ is unchanged.
+
+\subsection{The two-Poisson return estimate}
+Fix a nonnegative radial Schwartz $\Phi$, with $\Phi\ge1$ on $[0,1]$ and
+$\operatorname{supp}\widehat\Phi\subset[0,C_\Phi]$. For $I=[u,v]$, set
+$I_*=[u/2,2v]$ and $I'=[u/16,4v]$. Define
+\[
+ \mathcal A(W)=\frac1{LF}\sum_{F\le\N(f)<2F}^*
+ \sum_{k\in\OO}\Phi(\N(k)/\mathcal H)
+ \left|\sum_n^*a_\xi(n)\chi_n(k)\chi_n(f)^4W(\N(n)/L)\right|^2.
+\]
+In particular $\E(\mathcal H,L,F;\xi,W)\le\mathcal A(W)$.
+
+\begin{proposition}[Return to the same arithmetic family]
+\label{prop:consolidated-transfer}
+Let $D\ge2$ and $C_0\ge1$. Suppose $1\le\mathcal H,L,F,\Sigma\le D^{C_0}$ and
+$\max\{\mathcal H,LF\}\le\Sigma$, where the target $\Sigma$ is independent
+of $LF$. For every integer $m\ge0$ and $\epsilon>0$,
+\[
+ \mathcal A(W)\ll D^\epsilon\Sigma
+       (1+S_m)\norm{W}_{C^{4m+12}(I)}^2.
+\]
+Here $S_m$ is the supremum of
+$\E(\mathcal H',X',F';\xi',V)/\Sigma'$, with $\Sigma'=X'F'$,
+$\mathcal H',X',F'\ge1$, $V$ supported in $I'$ and
+$\norm{V}_{C^m(I')}\le1$, over precisely the restrictions
+\begin{equation}\label{eq:consolidated-child}
+ \mathcal H'\le\frac{\mathcal HL}{\Sigma F},\qquad
+ \frac{\mathcal H'}{\Sigma'}\le\frac{\mathcal H}{\Sigma},\qquad
+ \Sigma'\le L.
+\end{equation}
+An empty supremum is zero. Constants may depend on $I,m,C_0,\epsilon$
+and the fixed arithmetic data, but not on moving scales or indices.
+The returned $\xi'$ ranges over the fixed finite set of ray characters.
+\end{proposition}
+
+\begin{proof}
+Choose $c_I\ge\max(1,4C_\Phi v^2)$. For disjoint squarefree $C,t$ and
+$d\mid C$, put
+\[
+ \ell=\frac L{\N(C)\N(t)},\quad
+ w_{C,d}=\frac{\mathcal H\N(C)}{\N(d)L^2F},\quad
+ Y_{C,d}=\frac{c_I\Sigma LF\N(d)}{\mathcal H\N(C)^2},
+\]
+and retain the full outer domain $\N(Ct)\le2vL$. Define
+\[
+\begin{aligned}
+ p_y(n)&=\mu(n)\xi_1(n)\mathbf1_{(n,t)=1}
+       \overline{\chi_n(y)}\chi_n(C)^4\chi_n(d),\\
+ \mathcal Q_{\xi_1}(U)&=\sum_{C,t}\sum_{d\mid C}w_{C,d}
+       \sum_{y\in\OO}\Phi(\N(y)/Y_{C,d})
+       \left|\sum_n^*p_y(n)U(\N(n)/\ell)\right|^2.
+\end{aligned}
+\]
+The outer sums are finite and the $y$-sum is absolutely convergent.
+No first-stage Fourier-support restriction is imposed on this outer domain.
+
+For the first Poisson application extract $C=(n_1,n_2)$, write $n_i=Cu_i$,
+and use the first paired conversion in Assumption~\ref{ass:transfer-interfaces}.
+Insert $\sum_{t\mid u_1,u_2}\mu(t)$ and put $u_i=tx_i$.
+The common factors give exactly $(f,Ct)=(h,t)=1$; individual column zeros
+remain in $p_{hf^2}$. The nonzero contribution is a finite signed sum,
+with exterior weight $w_{C,d}$ and coupled kernel
+\[
+ (z_1z_2)^{-1/2}W(z_1)\overline{W(z_2)}
+ \widehat\Phi\!\left(\frac{\mathcal H\N(h)\N(C)^2}
+ {L^2\N(d)z_1z_2}\right),\qquad z_i=\N(x_i)/\ell.
+\]
+This is the expanded identity in \cite{Source}, lines 2293--2327.
+Its $C^q$ norm is $\ll\norm{W}_{C^q(I)}^2$ uniformly on the finite
+frequency range. The zero Fourier mode requires $u_1=u_2=1$ and costs
+$O_I(\mathcal H\norm{W}_\infty^2)$; all principal nonzero frequencies remain.
+The map $(f,h)\mapsto y=hf^2$ has divisor-bounded multiplicity and
+$0<\N(y)\le Y_{C,d}$, since $\Sigma\ge LF$. Its image norms are polynomial
+in $D$. If $Y_{C,d}<1$ the nonzero image is empty. Positivity and the smooth
+interface therefore imply that a common bound
+$\mathcal Q_{\xi_1}(U)\le M\norm{U}_{C^j(I_*)}^2$ yields
+\begin{equation}\label{eq:transfer-first-bound}
+ \mathcal A(W)\ll D^{\epsilon_0}(\Sigma+M)
+                  \norm{W}_{C^{2j+4}(I)}^2.
+\end{equation}
+
+Apply Poisson again to $\sum_y\Phi(\N(y)/Y)|P(y)|^2$, initially for any
+$\ell,Y>0$. Extract the common column $g$, take $e\mid g$ from its row
+exclusion, and insert the second column divisor $w$. The second paired
+conversion returns the coefficient
+\[
+ a^\sharp(n)=a_{\xi'}(n)\mathbf1_{(n,tg/e)=1}
+                      \chi_n(deh)\chi_n(Cew)^4.
+\]
+The ranges are $(g,Ct)=(w,gCth)=1$,
+$\N(gw)\le2v\ell$, and
+$0<\N(h)\le4C_\Phi v^2\ell^2\N(e)/(Y\N(g)^2)$.
+With $U_0(x)=x^{-1/2}U(x)$, the exterior coefficient and kernel are
+$Y\mu(e)\mu(w)c_{\xi'}\N(g)/(\N(e)\ell)$ and
+$U_0(x_1)\overline{U_0(x_2)}
+\widehat\Phi(Y\N(h)\N(g)^2/(\N(e)\ell^2x_1x_2))$.
+The individual column scale is $\ell/\N(gw)$. This exact finite output
+is the second Poisson interface at source lines 2407--2494. Its residual
+mask follows from zero extension, including
+$\chi_z(dh)\overline{\chi_z(e)}\chi_z(C)^4
+=\chi_z(deh)\chi_z(Ce)^4$; no inverse of a zero character value is used.
+Its zero Fourier term is
+\[
+ Z_2=Y\widehat\Phi(0)\sum_{(g,Ct)=1}^*
+ |U(\N(g)/\ell)|^2\prod_{p\mid g}(1-\N(p)^{-1})
+ \ll Y\ell\norm{U}_\infty^2.
+\]
+This holds also for $Y<1$: if $2v\ell<1$ columns are empty, and otherwise
+their number is $O_I(\ell)$. It does not bound the entire row sum by $O(Y)$.
+
+Now substitute $Y=Y_{C,d}$ and set $r=tg/e$, $f'=Cew$, $k'=deh$.
+Then $r,f'$ are disjoint squarefree indices, and exactly
+\begin{equation}\label{eq:transfer-common-normalization}
+ X'_0=\frac L{\N(r)\N(f')},\quad
+ w_{C,d}\frac{Y_{C,d}\N(g)}{\N(e)\ell}
+ =\frac{c_I\Sigma\N(r)}{L^2},\quad
+ \frac{Y_{C,d}\N(h)\N(g)^2}{\N(e)\ell^2}
+ =\frac{c_I\Sigma F\N(k')\N(r)^2}{\mathcal HL}.
+\end{equation}
+Thus all preimages have the same kernel and unsigned normalization.
+For fixed $r,f',k'$, every preimage is obtained by choosing
+$t\mid r$, a disjoint factorization $f'=Cew$, $e\mid k'$,
+$(w,k')=1$, and $d\mid(C,k')$, then taking $g=e(r/t)$ and $h=k'/(de)$.
+These choices satisfy every old coprimality condition. Since
+$Ctgw=rf'$, all belong to the enlarged outer domain whenever the common
+kernel is nonzero; the frequency conditions also become the same common bound.
+
+The $t$ choices contribute $\tau_{\rm div}(r)$. For $p\mid f'$ put
+$\delta_p=\mathbf1_{p\mid k'}$. Placement in $C,e,w$ contributes respectively
+$(1+\delta_p),-\delta_p,-(1-\delta_p)$ to the signed sum of
+$\mu(e)\mu(w)$, whose local total is $\delta_p$. Therefore
+\[
+ \sum_{\text{preimages}}\mu(e)\mu(w)
+ =\tau_{\rm div}(r)\mathbf1_{f'\mid k'}.
+\]
+This includes arbitrary valuations in $k'$, its unit factor, intersections
+with $r$, and unit ideal indices. Regrouping is performed before absolute
+values. Only afterwards may positive mean squares be enlarged.
+
+Nonzero evaluated terms satisfy $\N(rf')\le2vL$ and
+$0<\N(k')\le\mathcal HL/(\Sigma F\N(r)^2)$.
+In a dyadic block $R\le\N(r)<2R$, $F'\le\N(f')<2F'$, put
+\[
+ X'=\frac L{RF'},\qquad\Sigma'=\frac LR,\qquad
+ \mathcal H'=\frac{\mathcal HL}{\Sigma FR^2}.
+\]
+Retain only $r$ with an actual surviving term in this block, before
+enlarging $f',k'$. Its witness has
+$F'\le\N(f')\le\N(k')\le\mathcal HL/(\Sigma F\N(r)^2)$.
+Consequently $\mathcal H'\ge1$ and, for every $j\mid r$,
+\[
+ \frac{X'}{\N(j)}\ge
+ \frac{\Sigma F\N(r)^2}{\mathcal HR\N(j)}
+ \ge\frac{\Sigma F}{\mathcal H}\ge1.
+\]
+The exclusion-shifted child
+$(\mathcal H',X'/\N(j),F'\N(j))$ therefore has all scales at least one,
+preserves $\Sigma'$, and satisfies \eqref{eq:consolidated-child}.
+Its individual scales are bounded by $D^{C_0}$. No additional $r$ is admitted.
+
+The ratio $s=X'/X'_0$ lies in $[1,4)$, so the rescaled kernels are supported
+in $[u/8,2v]^2\subset\operatorname{int}(I'^2)$ and have uniformly bounded
+$C^{2m+4}$ norm $\ll\norm{U}_{C^{2m+4}(I_*)}^2$. The Fourier parameter
+is bounded on nonzero support; there is no $Y^{-1}$ or divisor cost in this norm.
+For each retained $r$, \eqref{eq:transfer-exclusions} and $S_m$ bound the
+unnormalized common-test square sum by
+$D^\delta(\Sigma')^2S_m\norm{V}_{C^m(I')}^2$.
+The square of $\Sigma'$ includes undoing the energy normalization.
+There are $O(R)$ retained $r$ and their exterior factor costs
+$\Sigma R/L^2$ times a divisor loss. Smooth separation bounds this block by
+\[
+ D^{2\delta}\frac{\Sigma R}{L^2}R(\Sigma')^2S_m
+ \norm{U}_{C^{2m+4}(I_*)}^2
+ =D^{2\delta}\Sigma S_m\norm{U}_{C^{2m+4}(I_*)}^2.
+\]
+The total second zero modes use the exact identity
+$w_{C,d}Y_{C,d}\ell=c_I\Sigma/(\N(C)^2\N(t))$ and cost
+\[
+ \ll\Sigma\norm{U}_\infty^2
+ \sum_C\frac{\tau_{\rm div}(C)}{\N(C)^2}
+ \sum_{\N(t)\le2vL}\frac1{\N(t)}
+ \ll D^\delta\Sigma\norm{U}_\infty^2.
+\]
+The first series converges and the second is logarithmic. The number of
+dyadic blocks is $O_I((\log(2D))^2)$; taking $\delta=\epsilon_0/4$ gives
+$\mathcal Q_{\xi_1}(U)\ll D^{\epsilon_0}\Sigma(1+S_m)
+\norm{U}_{C^{2m+4}(I_*)}^2$.
+The actual positive scales satisfy $Y_{C,d}\gg_I D^{-C_0}$, so all output
+frequencies and divisor factors are polynomially bounded even when $Y_{C,d}<1$.
+Moreover $S_m$ is finite without induction: triangle and lattice counting give
+$\E/\Sigma'\ll_{I'}\mathcal H'/F'\le\mathcal H$ for normalized tests.
+An empty $S_m$ means there is no retained nonzero block.
+Finally apply \eqref{eq:transfer-first-bound} with $j=2m+4$ and allocate
+loss $\epsilon/4$ to each stage. Its order is
+$2(2m+4)+4=4m+12$, and its total loss is at most $D^{\epsilon/2}$,
+within the asserted $D^\epsilon$ budget.
+\end{proof}
+
+\subsection{Cube removal and the terminating induction}
+For $\Sigma=XF$ and $\mathcal H\le\Sigma$, put
+$H_c^3=\min(X,X^2/\mathcal H^2)$ and $L_b=X/\N(b)^3$.
+Complete multiplicativity, including zeros, gives the exact cube inversion
+\[
+ X^{-1/2}\sum_n^*a_\xi(n)\chi_n(k)\chi_n(f)^4W(\N(n)/X)
+ =\sum_{(h,S)=1}\frac{\mu(h)\overline{\alpha(h)}^{\,3}\Psi_k(h)^3}
+ {\N(h)}T(X/\N(h)^3;k,f).
+\]
+Indeed the coefficient of the total cube index $b$ contains
+$\sum_{h\mid b}\mu(h)=\mathbf1_{b=1}$. No coprimality with the
+squarefree column is imposed. For $\N(h)\le H_c$, weighted Cauchy and the
+completed interface with range $C_0+1$ give
+$D^{\epsilon/2}\norm{W}_{C^{J_c}(I)}^2
+(\mathcal H+\mathcal H^2FH_c^3/X)\ll
+D^{\epsilon/2}\Sigma\norm{W}_{C^{J_c}(I)}^2$;
+here $X/\N(h)^3\ge1$ and reciprocal-norm sums are logarithmic.
+The larger range covers $\N(f)<2F$. If $H_c<1$, this short sum is empty.
+
+Expanding the remaining $T$ and writing $b=hc$ yields the coefficient
+\[
+ \beta(b,f)=\overline{\alpha(b)}^{\,3}\xi(b)^3\mathbf1_{(b,f)=1}
+       \sum_{\substack{h\mid b\\\N(h)>H_c}}\mu(h),
+ \qquad |\beta(b,f)|\le\tau_{\rm div}(b).
+\]
+It multiplies the normalized original column at scale $L_b$ with weight
+$\chi_b(k)^3/\N(b)$; no new column coefficient sequence is introduced.
+Support requires $\N(b)^3\le vX$. Weighted Cauchy costs only the square
+of $\sum_{\N(b)\le(vX)^{1/3}}\tau_{\rm div}(b)/\N(b)
+\ll_I\log^2(2+X)$.
+For $L_b\le1$ columns are empty unless $L_b\ge1/v$; otherwise direct
+counting gives $\E(\mathcal H,L_b,F)\ll_I
+(\mathcal H/L_b)\norm{W}_\infty^2\ll_I\Sigma\norm{W}_\infty^2$.
+Thus, with a finite $J_c=J_c(\epsilon,C_0)$ independent of $I$,
+\begin{equation}\label{eq:consolidated-cubes}
+ \E(\mathcal H,X,F;\xi,W)\ll D^\epsilon
+ \left(\Sigma\norm{W}_{C^{J_c}(I)}^2+
+ \sup_{\N(b)>H_c,\ L_b>1}\E(\mathcal H,L_b,F;\xi,W)\right).
+\end{equation}
+If $\mathcal H^2\le X$, the supremum is empty. If $H_c<1$, the unit cube
+belongs to the long range: its full divisor sum annihilates $b\ne1$,
+but the larger displayed supremum is still a valid upper bound.
+
+\begin{proposition}[Canonical estimate under a positive gap]
+\label{prop:canonical-audit}
+For $D\ge2$, $\kappa>0$, $C_0\ge1$, suppose $\mathcal H,X,F\ge1$,
+$\Sigma=XF\le D^{C_0}$ and $\mathcal H\le\Sigma D^{-\kappa}$.
+For every $\epsilon>0$ there is a finite integer $J=J(\kappa,C_0,\epsilon)$,
+independent of $I$, such that
+$\E(\mathcal H,X,F;\xi,W)\ll
+D^\epsilon\Sigma\norm{W}_{C^J(I)}^2$.
+\end{proposition}
+\begin{proof}
+Induct with the additional condition $\mathcal H\le D^{j\kappa}$.
+For $j=0$, counting gives $\E\ll_I\mathcal HX\norm{W}_\infty^2
+\le\Sigma\norm{W}_\infty^2$, so $J_0=1$ suffices.
+For the step, take $m=J_j(\epsilon/3)$ and apply
+\eqref{eq:consolidated-cubes} with loss $\epsilon/3$.
+Every nonempty tail has $\mathcal H^2>X$ and $H_c^3=X^2/\mathcal H^2$.
+Apply Proposition~\ref{prop:consolidated-transfer} at $L=L_b$, retaining
+the independent target $\Sigma=XF$. Every returned child satisfies
+\[
+ \mathcal H'\le\frac{\mathcal HL_b}{\Sigma F}
+ =\frac{\mathcal H}{\N(b)^3F^2}
+ <\mathcal H\left(\frac{\mathcal H}{\Sigma}\right)^2
+ \le D^{-2\kappa}\mathcal H,\qquad
+ \frac{\mathcal H'}{\Sigma'}\le D^{-\kappa},\quad\Sigma'\le D^{C_0}.
+\]
+For $\mathcal H\le D^{(j+1)\kappa}$ it is covered by level $j$;
+at the first step the sharper bound is $\mathcal H'<1$, so no child exists.
+The strict contraction also holds for the unit cube when $H_c<1$.
+Apply induction on $I'$, with loss $\epsilon/3$, and transfer with loss
+$\epsilon/3$. Together with cube removal this spends exactly the allowed
+$\epsilon$. It suffices to choose
+$J_{j+1}(\epsilon)\ge\max\{J_c(\epsilon/3,C_0),4J_j(\epsilon/3)+12\}$.
+Constants may depend on the finitely enlarged support interval; derivative
+orders do not. Finally $j=\lceil C_0/\kappa\rceil$ covers
+$\mathcal H\le\Sigma\le D^{C_0}$. All stages and derivative orders are finite.
+\end{proof}
+
+For later original-family applications, $\mathcal H<1$ gives an empty
+nonzero row sum. If $X<1$, nonempty support forces $X\ge1/v$ and direct
+counting gives $\E\ll_I\mathcal H\norm{W}_\infty^2$; a positive gap bounds
+this by $\Sigma\norm{W}_\infty^2$. Exclusion shifts preserve that gap and
+product, so the same short-scale argument applies after every shift.
+These elementary endpoints and the finite descent add no new theta or
+sieve cancellation premise to the declared interfaces.
+
+
+\section{Returning to the original mean square}\label{sec:moment-final}
+
+We now match the canonical estimate to
+Source interface~\ref{in:initial}, including every boundary range.
+The original row length is \(H=D^{1+\vartheta}\), whereas the
+dual row length is \(\mathcal H\). From
+\eqref{eq:initial-ranges}, with \(\Sigma=XF\), one has
+\begin{equation}\label{eq:initial-gap-final}
+ \mathcal H/\Sigma\le CD^{-\vartheta}/B\le CD^{-\vartheta}.
+\end{equation}
+For sufficiently large \(D\), this is at most
+\(D^{-\kappa}\), with the fixed positive choice
+\(\kappa=\vartheta/2\). The constant \(C\) changes the
+starting threshold; it does not eliminate the exponent gap.
+
+If the dual energy is nonempty, the compact support \(I=[a,b]\)
+forces \(X\ge1/b\). Hence \(F=\Sigma/X\le bD/B\).
+For \(X\ge1\), the canonical hypotheses hold with \(C_0=2\)
+and the stated gap: \(\Sigma=D/B\le D\).
+An exclusion shift \(d\mid\mathfrak b\), with \(\mathfrak b\) the
+ideal exclusion index in the initial reduction, preserves
+\(\Sigma,\mathcal H\) and the initial ranges. Its column length
+can fall below one, so the next cases are needed before applying
+the canonical proposition.
+
+If \(\mathcal H<1\), the nonzero row set is empty. If \(X<1/b\),
+the column set is empty. For \(1/b\le X<1\), the inner column sum
+has bounded cardinality depending only on \(I\), and all coefficient
+and character magnitudes are at most one. Since the \(f\)-shell has
+\(O(F)\) ideals, direct counting gives
+\[
+ \E(\mathcal H,X,F;\xi,W)\ll_I
+       \mathcal H\norm{W}_\infty^2
+ \ll_I\Sigma\norm{W}_\infty^2
+\]
+for large \(D\) in the initial gap. The same reasoning applies
+after every exclusion shift. The common-test interval of the
+initial reduction is actually \(I_*=[a/8,2b]\);
+there one uses the lower support bound \(X/\N(d)\ge1/(2b)\)
+and constants for \(I_*\). Its enlargement is fixed.
+
+For bounded \(D\ge2\), nonempty rows imply
+\(B^2\le CD^{1-\vartheta}\), and nonempty columns imply
+\(F\le bD/B\). Thus \(\Sigma\) is bounded away from zero and
+all relevant ranges are bounded with permitted constants.
+Counting covers them. These cases establish the auxiliary target
+for every initial pair \(B,F\), not just the convenient long-column
+subrange.
+
+\begin{proposition}[Original moment under the audited interfaces]
+\label{prop:original-moment}
+The canonical estimate and Source interface~\ref{in:initial}
+give \eqref{eq:main-moment}, with finite order
+\(k=k(\vartheta,\epsilon)\) independent of \(I\).
+\end{proposition}
+\begin{proof}
+For a common test \(U\) supported in \(I_*\), define
+\[
+ S_U(\mathfrak b,f,k)=
+ \sfstar_{(n,\mathfrak b)=1}a_\xi(n)\chi_n(k)\chi_n(f)^4
+                              U(\N(n)/X).
+\]
+In the following column moment, \(f\) ranges over squarefree primary
+ideals prime to \(S\) with \(F\le\N(f)<2F\), and \(k\) over
+nonzero elements with \(0<\N(k)\le\mathcal H\). Its initial
+normalization is
+\[
+ \sum_{f,k}|S_U(\mathfrak b,f,k)|^2=XF\,\E_{\mathfrak b}.
+\]
+Apply the auxiliary target with loss \(\epsilon/4\).
+Lemma~\ref{lem:exclusions} introduces the divisor count squared
+of \(\mathfrak b\), where \(\N(\mathfrak b)\ll_I D\). Reserve a further
+\(\epsilon/4\) for this loss, obtaining
+\[
+ \sum_{f,k}|S_U(\mathfrak b,f,k)|^2
+ \ll D^{\epsilon/2}(XF)^2\norm{U}_{C^J(I_*)}^2.
+\]
+One factor \(XF\) is the auxiliary bound; the other undoes
+the defining energy normalization. The coupled smooth-kernel
+lemma in the initial reduction then uses \(q=2J+4\).
+Its kernel norm is \(O_{I,q}(\norm{W}_{C^q(I)}^2)\),
+so one dyadic \(B,F\) block has size at most
+\[
+ D^{\epsilon/2}\norm{W}_{C^q(I)}^2
+  \frac{HB}{D^2}\cdot O(B)\cdot(XF)^2
+ \ll D^{\epsilon/2}\norm{W}_{C^q(I)}^2H.
+\]
+Here \(XF=D/B\). The factors are the original Poisson
+coefficient, the ideal count in the \(\mathfrak b\)-shell, and the
+unnormalized column energy. The \(O_I((1+\log D)^2)\)
+nonempty dyadic blocks use the remaining loss
+\(\epsilon/2\). Sum the fixed finite ray-character expansion
+and include \(Z\ll_I H\norm{W}_\infty^2\).
+Consequently \(\mathcal M_D\ll
+D^\epsilon H\norm{W}_{C^q(I)}^2\).
+
+By \(\Phi\ge1\) on \([0,1]\) and \eqref{eq:MD},
+\[
+ \sum_{0<\N(u)\le H}|A_u(D)|^2
+ \le D\mathcal M_D
+ \ll D^\epsilon DH\norm{W}_{C^q(I)}^2
+ =D^{2+\vartheta+\epsilon}\norm{W}_{C^q(I)}^2 .
+\]
+The lattice point \(u=0\) only has the unit column under
+the source's character extension. That term vanishes for
+large \(D\), and is counted for bounded \(D\). The order
+\(J\) is chosen through finitely many canonical stages for
+the fixed \(\vartheta,\epsilon\); its finite composition
+with \(2J+4\) is independent of \(I\). This proves the claim.
+\end{proof}
+
+
+
+% Prepared for Edward Baker, 12 October 2026, with substantial LLM assistance.
+% Model: GPT-6 (Codex), inherited configuration. Exact serving variant and
+% configured reasoning effort are unavailable and are not inferred.
+% Fragment only: no preamble, author field, bibliography, or compilation.
+% Source: openai/math fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb, paper2.tex.
+% SHA-256: d9a8f15aa770cf883d0eabd2b775fad694ce20b44cba7928f5c0c9a6d8750d4d.
+
+\section{Fixed-character extraction and the zero-free implication}
+\label{sec:final-extraction}
+
+This section records the consequences of the original moment assembled
+in the preceding sections. Its conclusions are conditional on that
+moment estimate and on the classical continuation and prime-counting
+inputs stated below. The argument reorganizes the concluding deductions
+of \cite{Source}; it does not independently establish the new arithmetic
+mean square or furnish a separate proof of the quasi-Riemann hypothesis.
+
+Let \(K=\mathbb Q(\sqrt{-3})\), and retain its ring of integers
+\(\OO\), the ideal norm \(\N\), and the zero-extended sextic characters
+\(\chi_n\). Ideals prime to the primes above 3 are represented by their
+unique primary generators. Fix a finite-order Hecke character \(\nu\)
+and a finite set \(S\) containing its conductor primes and the primes
+above 2 and 3. For a smooth complex-valued test \(W\) of compact support
+in \((0,\infty)\), put
+\begin{equation}\label{eq:final-A}
+ A_u(D)=\sum_{(n,S)=1}^{*}\mu(n)\nu(n)\chi_n(u)
+                  W\!\left(\frac{\N(n)}D\right),\qquad D>0,
+\end{equation}
+where the star means squarefree integral ideals, with their primary
+representatives. The fixed-character moment input is the following:
+for every \(0<\vartheta\le1/10\) and \(\eta>0\), there is an integer
+\(k=k(\vartheta,\eta)\ge1\), independent of the character, its fixed
+excluded set and the support interval, such that for every compact
+interval \(I\subset(0,\infty)\), every smooth \(W\) supported in
+\(I\), and \(D\ge2\),
+\begin{equation}\label{eq:final-moment-input}
+ \sum_{0<\N(u)\le D^{1+\vartheta}}|A_u(D)|^2
+ \ll_{\nu,S,I,\vartheta,\eta}
+       \norm{W}_{C^k(I)}^2 D^{2+\vartheta+\eta},
+ \qquad
+ \norm{W}_{C^k(I)}=\max_{0\le j\le k}\sup_{y\in I}|W^{(j)}(y)|.
+\end{equation}
+The sum over \(u\) is over nonzero elements of \(\OO\). In particular,
+the input includes the principal character \(\nu=1\).
+
+\subsection{Coherent sixth-power rows}
+
+\begin{proposition}[Extraction from the original moment]
+\label{prop:final-extraction}
+Assume \eqref{eq:final-moment-input}. For every \(\delta>0\) there is
+an integer \(k_\delta\), depending only on \(\delta\), such that,
+for every fixed \(\nu,S,I\) as above and every smooth \(W\) supported
+in \(I\),
+\begin{equation}\label{eq:final-saving}
+ |A_1(D)|\ll_{\nu,S,I,\delta}
+          \norm{W}_{C^{k_\delta}(I)}D^{11/12+\delta}
+          \qquad(D\ge2).
+\end{equation}
+\end{proposition}
+
+\begin{proof}
+First fix \(0<\vartheta\le1/10\), and set
+\[
+ H=D^{1+\vartheta},\qquad Y=H^{1/6}.
+\]
+For each prime ideal \(\mathfrak p\notin S\) with
+\(Y/2<\N(\mathfrak p)\le Y\), let \(p\) denote its primary
+generator. The zero-extension convention gives the exact identity
+\begin{equation}\label{eq:final-coherent}
+ \chi_n(p^6)=\mathbf 1_{\mathfrak p\nmid n}.
+\end{equation}
+Indeed, a nonzero sextic character value has sixth power one; if
+\(\mathfrak p\mid n\), its value is zero. Moreover
+\(\N(p^6)\le H\). These are distinct element rows: an equality
+\(p_1^6=p_2^6\) implies equality of the sixth powers of their prime
+ideals, hence equality of the ideals and of their primary generators.
+
+Write \(I=[a,b]\). The Eisenstein lattice gives
+\(\#\{\mathfrak a:\N(\mathfrak a)\le R\}\ll1+R\).
+Consequently, uniformly over the selected primes,
+\[
+ \#\{n:\mathfrak p\mid n,\ aD\le\N(n)\le bD\}
+ \le\#\{\mathfrak a:\N(\mathfrak a)\le bD/\N(\mathfrak p)\}
+ \ll_I D/Y.
+\]
+Here \(D/Y=D^{(5-\vartheta)/6}\ge1\), so the constant term in the
+lattice estimate is absorbed. Since \(|\mu(n)\nu(n)|\le1\),
+\begin{equation}\label{eq:final-prime-error}
+ |A_1(D)-A_{p^6}(D)|\ll_I\norm{W}_\infty D/Y.
+\end{equation}
+No cancellation or varying-ray-class prime count is used in this error.
+
+We import the classical fixed-field prime ideal theorem, as in the
+source argument \cite{Source}; see also the primary presentation
+\cite{Burgin}. With the character and \(S\) fixed
+before \(D\) grows, it gives
+\[
+ J=\#\{\mathfrak p\notin S:Y/2<\N(\mathfrak p)\le Y\}
+       \sim\frac{Y}{2\log Y}.
+\]
+Removing the finite set \(S\) changes the starting threshold, not this
+asymptotic. Positivity, \eqref{eq:final-prime-error}, and the moment
+with loss \(\eta\) now imply
+\begin{align*}
+ |A_1(D)|^2
+ &\le\frac2J\sum_p|A_{p^6}(D)|^2
+       +O_I\!\left(\norm{W}_\infty^2D^2/Y^2\right)\\
+ &\ll_{\nu,S,I,\vartheta,\eta,\lambda}
+       \norm{W}_{C^{k(\vartheta,\eta)}(I)}^2
+       D^{11/6+5\vartheta/6+\eta+\lambda}
+       +\norm{W}_\infty^2D^{5/3-\vartheta/3},
+\end{align*}
+where \(\lambda>0\) absorbs \(\log Y\ll_\lambda D^\lambda\).
+Thus the two exponents after taking square roots are
+\[
+ \frac{11}{12}+\frac{5\vartheta}{12}
+                  +\frac{\eta+\lambda}{2},
+ \qquad \frac56-\frac{\vartheta}{6}.
+\]
+For the requested \(\delta>0\), choose in order
+\[
+ \vartheta=\min\{1/10,3\delta/5\}>0,
+ \qquad \eta=\lambda=\delta/2,
+ \qquad k_\delta=k(\vartheta,\eta).
+\]
+The loss in the first exponent is at most \(3\delta/4<\delta\),
+and the second exponent is below \(11/12\). The permitted constant
+also covers the bounded initial range before the prime asymptotic
+applies. This proves \eqref{eq:final-saving}. The proof uses only the
+unit-modulus bound on \(\nu\), so it applies unchanged to \(\nu=1\).
+\end{proof}
+
+\subsection{Mellin holomorphy and a test at a fixed alleged zero}
+
+Let \(L_K(s,\nu)\) denote the Hecke \(L\)-function with its actual
+finite conductor, and let \(L_K^S\) be its Euler product with primes
+in \(S\) removed. At a conductor prime use \(\nu(\mathfrak p)=0\).
+Then
+\begin{equation}\label{eq:final-missing-factors}
+ L_K^S(s,\nu)=L_K(s,\nu)
+       \prod_{\mathfrak p\in S}
+       \bigl(1-\nu(\mathfrak p)\N(\mathfrak p)^{-s}\bigr).
+\end{equation}
+Every factor in this finite product, and its inverse, is holomorphic and
+nonvanishing on \(\Re s>0\), because
+\(|\nu(\mathfrak p)\N(\mathfrak p)^{-s}|<1\) there whenever
+the character value is nonzero.
+
+We import classical Hecke continuation in the form supplied, for
+example, by \cite[Theorem 5.22 and Section 5.11]{Poonen}. A finite-order
+character at the complex place is trivial, since a continuous map from
+the connected group \(\mathbb C^\times\) into a finite group is
+constant. Thus the finite Hecke \(L\)-function is holomorphic in
+\(\Re s>0\), except for the possible simple pole at \(s=1\) of the
+principal character. This continuation theorem is an external input.
+
+\begin{proposition}[Conditional Hecke zero-free conclusion]
+\label{prop:final-hecke}
+Assume \eqref{eq:final-moment-input} and the classical inputs just
+stated. For every fixed finite-order Hecke character \(\nu\) of
+\(K\), \(L_K(s,\nu)\) has no zeros in
+\(\Re s>11/12\). The principal pole at \(s=1\) is permitted.
+\end{proposition}
+
+\begin{proof}
+For a fixed test \(W\), define
+\[
+ \widehat W(s)=\int_0^\infty W(y)y^s\,\frac{dy}{y},
+ \qquad
+ M_W(s)=\int_0^\infty A_1(D)D^{-s}\,\frac{dD}{D}.
+\]
+If \(\operatorname{supp}W\subset[a,b]\), then \(A_1(D)=0\)
+for \(D<1/b\), because every nonzero integral ideal has norm at
+least one. On any bounded positive interval in \(D\), only finitely
+many ideals occur. Its contribution to \(M_W\) is therefore entire.
+
+Put \(\alpha=11/12\), and let \(T\) be a compact subset of
+\(\{\Re s>\alpha\}\). Choose one positive loss
+\(\delta<\min_{s\in T}\Re s-\alpha\) in
+\eqref{eq:final-saving}. The resulting tail majorant is integrable
+with respect to \(dD/D\), uniformly for \(s\in T\); every derivative
+in \(s\) adds an integrable power of \(\log D\). Consequently
+\(M_W\) is holomorphic on all of \(\Re s>\alpha\). A separate loss
+on each compact subset suffices, with \(W\) unchanged.
+
+For \(\sigma=\Re s>1\), absolute interchange is justified by
+\[
+ \sum_n\int_0^\infty
+   |\mu(n)\nu(n)W(\N(n)/D)|D^{-\sigma}\,\frac{dD}{D}
+ \le
+ \left(\int_0^\infty|W(y)|y^\sigma\,\frac{dy}{y}\right)
+ \sum_n\N(n)^{-\sigma}<\infty.
+\]
+Changing variables \(y=\N(n)/D\) gives
+\begin{equation}\label{eq:final-mellin-identity}
+ M_W(s)=\widehat W(s)
+      \sum_{(n,S)=1}\mu(n)\nu(n)\N(n)^{-s}
+      =\frac{\widehat W(s)}{L_K^S(s,\nu)}
+      \qquad(\Re s>1).
+\end{equation}
+The meromorphic identity theorem therefore extends
+\begin{equation}\label{eq:final-product-identity}
+ L_K^S(s,\nu)M_W(s)=\widehat W(s)
+       \qquad(\Re s>\alpha).
+\end{equation}
+This formulation does not assume a holomorphic reciprocal at an
+unknown zero. In the principal case it makes the product's possible
+singularity at 1 removable; its nonzero residue also forces
+\(M_W(1)=0\). That pole is not a zero.
+
+Suppose that \(L_K(s,\nu)\) has a zero \(\rho\) with
+\(\Re\rho>\alpha\). Choose a nonzero nonnegative
+\(\phi\in C_c^\infty((1,2))\), and fix
+\[
+ W_\rho(y)=\exp(-\rho\log y)\phi(y),
+\]
+using the real logarithm on positive \(y\). This is an admissible
+complex smooth test, fixed after \(\rho\) has been specified, and
+\[
+ \widehat W_\rho(\rho)=\int_0^\infty\phi(y)\,\frac{dy}{y}>0.
+\]
+Its derivative norms may depend on \(\rho\); the fixed-test estimate
+allows that dependence. The finite factors in
+\eqref{eq:final-missing-factors} preserve the zero at \(\rho\).
+At that point \(L_K^S\) is regular, while \(M_{W_\rho}\) is
+holomorphic. Evaluating \eqref{eq:final-product-identity} gives
+\(0=\widehat W_\rho(\rho)>0\), a contradiction. This also handles
+a zero at 1 for a nonprincipal character.
+\end{proof}
+
+\subsection{Dirichlet characters and the norm lift}
+
+Let \(\chi\) be a Dirichlet character modulo \(q\), and put
+\(\Delta=\chi_{-3}\). Define, initially on integral ideals prime
+to \(q\OO\),
+\[
+ \nu_\chi(\mathfrak a)=\chi\bigl(\N(\mathfrak a)\bigr).
+\]
+Extend it multiplicatively to fractional ideals prime to that modulus,
+using \(\chi\) on positive rational \(q\)-units. For a ray principal
+ideal generated by \(\beta\equiv1\pmod{q\OO}\),
+\(\N(\beta)\equiv1\pmod q\), so \(\nu_\chi((\beta))=1\).
+The norm lift is therefore a finite-order ray character with actual
+finite conductor \(\mathfrak f_\chi\mid q\OO\) and trivial infinity
+type. Oddness of \(\chi\) introduces no extra infinite type: the
+complex norm is positive, and the real sign character is trivial on
+its image.
+
+Write \(L_K^{[q]}(s,\nu_\chi)\) for the Euler product omitting all
+prime ideals above primes dividing \(q\). The local comparison can
+be made directly. For \(p\nmid q\), put \(z=\chi(p)p^{-s}\).
+The factors are
+\[
+\begin{array}{c|c|c}
+ \text{rational prime} & L_K^{[q]}(s,\nu_\chi)
+                        & L(s,\chi)L(s,\chi\Delta)\\ \hline
+ p\equiv1\pmod3 &(1-z)^{-2}&(1-z)^{-1}(1-z)^{-1}\\
+ p\equiv2\pmod3 &(1-z^2)^{-1}&(1-z)^{-1}(1+z)^{-1}\\
+ p=3, 3\nmid q &(1-\chi(3)3^{-s})^{-1}
+                    &(1-\chi(3)3^{-s})^{-1}.
+\end{array}
+\]
+The first row comes from two prime ideals of norm \(p\), the second
+from one prime ideal of norm \(p^2\), and the last from the ramified
+prime of norm 3, with \(\Delta(3)=0\). The inert row includes
+\(p=2\); its exclusion during the arithmetic argument does not omit
+it from this full Euler comparison. At \(p\mid q\), both sides of
+the modulus-product comparison have local factor one. Here
+\(\chi\Delta\) is regarded as the pointwise product character with
+natural modulus \(\operatorname{lcm}(q,3)\). Hence, first for
+\(\Re s>1\) and then by meromorphic continuation,
+\begin{equation}\label{eq:final-normlift}
+ L_K(s,\nu_\chi)=E_q(s)L(s,\chi)L(s,\chi\Delta),
+\end{equation}
+where the actual-conductor correction is
+\[
+ E_q(s)=\prod_{\substack{\mathfrak p\mid q\OO\\
+                         \mathfrak p\nmid\mathfrak f_\chi}}
+       \bigl(1-\nu_\chi(\mathfrak p)\N(\mathfrak p)^{-s}\bigr)^{-1}.
+\]
+This finite product and its inverse are holomorphic and nonvanishing
+on \(\Re s>0\).
+
+The conductor distinction is necessary. The norm lift of \(\Delta\)
+is trivial away from 3, since split prime norms are 1 modulo 3 and inert
+prime norms are squares. Its actual conductor is one, and
+\[
+ L_K(s,\nu_\Delta)=\zeta_K(s),\qquad
+ E_3(s)=(1-3^{-s})^{-1}.
+\]
+Thus removing the finite correction in
+\eqref{eq:final-normlift} would give the wrong exact identity, even
+though the positive-half-plane zero comparison is unaffected.
+
+\begin{proposition}[Conditional Dirichlet conclusion]
+\label{prop:final-dirichlet}
+Under the assumptions of Proposition~\ref{prop:final-hecke}, every
+Dirichlet \(L\)-function, including those of imprimitive and principal
+characters, has no zeros in \(\Re s>11/12\). Principal poles at 1
+are permitted.
+\end{proposition}
+
+\begin{proof}
+If \(\chi\) is induced by a primitive character \(\chi^*\) of
+conductor \(q_0\mid q\), then comparison of Euler products gives
+\[
+ L(s,\chi)=L(s,\chi^*)
+       \prod_{\substack{p\mid q\\p\nmid q_0}}
+       (1-\chi^*(p)p^{-s}).
+\]
+All finite factors are nonzero on \(\Re s>0\). The same statement
+applies to the possibly imprimitive character \(\chi\Delta\).
+Classical Dirichlet continuation \cite[Section 25.15]{DLMF} says
+that nonprincipal primitive factors are entire and principal factors
+have only a simple pole at 1. Thus, away from 1, a zero of either factor
+in \eqref{eq:final-normlift} forces a zero of the Hecke function,
+contrary to Proposition~\ref{prop:final-hecke}.
+
+At 1, if one primitive factor is principal, the other primitive factor
+is \(\Delta\): either \(\chi^*=1\), or the primitive character
+inducing \(\chi\Delta\) is principal and \(\chi^*=\Delta\).
+They cannot both be principal. The quadratic value is nonzero, as is
+also seen directly from the convergent positive paired series
+\[
+ L(1,\Delta)=\sum_{j\ge0}
+       \left(\frac1{3j+1}-\frac1{3j+2}\right)>0.
+\]
+Nonzero imprimitive Euler corrections cannot change this fact, so the
+principal pole cannot cancel a zero of the other factor. If neither
+primitive factor is principal, both are holomorphic at 1, and their
+product cannot vanish there by the Hecke conclusion. These cases cover
+all characters.
+\end{proof}
+
+\begin{remark}[Scope of the conclusion]
+The boundary \(11/12\) is common to all fixed characters. The moment
+and extraction derivative orders depend on the chosen exponent losses,
+but not on the fixed character or support interval. Constants,
+prime-counting thresholds, and the test norms used for a fixed alleged
+zero may depend on that character, its fixed conductor and excluded
+set, the support, and the alleged zero. The argument establishes a
+qualitative assertion for every fixed character and every fixed zero;
+it does not supply quantitative uniformity over conductor or height,
+nor the source's further quantitative corollaries. All conclusions
+here retain their dependence on the preceding original moment and the
+stated classical imports.
+\end{remark}
+
+
+\section{Finite diagnostics and reproducibility}\label{sec:verification}
+
+% Prepared for Edward Baker, 12 October 2026, with substantial LLM assistance.
+% Model: GPT-6 (Codex), inherited configuration. Exact serving variant and
+% configured reasoning effort are not exposed and are not inferred.
+% Internal record inventory; no new tests were run for this writing task.
+% Requires booktabs and tabularx. No additional manuscript macros are needed.
+% The table is an inventory of saved records, not a combined validation count.
+
+The saved diagnostics provide finite checks of the arithmetic identities
+and parameter bookkeeping used in the audit. Table~\ref{tab:finite-audit}
+records the counters in the verified run records. These counters have
+different meanings, include repeated checks within enumerations, and
+are not added together or interpreted as numbers of independent theorem
+obligations. The first branch reports cases rather than a total assertion
+count; the theta row is a replay of an existing suite, which also contains
+primitive-Poisson tests.
+
+\begin{table}[htbp]
+\centering
+\small
+\setlength{\tabcolsep}{4pt}
+\renewcommand{\arraystretch}{1.12}
+\begin{tabularx}{\linewidth}{@{}p{0.16\linewidth}p{0.29\linewidth}X@{}}
+\toprule
+Audit stage & Recorded diagnostics & Principal finite coverage \\
+\midrule
+Selected branch & 729 regrouping cases; 4,913 preimage normalizations;
+one unsigned control
+& 55 retained scale cases and 65 exclusion shifts; rational scale and
+necessary-support inequalities. \\
+Theta replay & 69,881 exact assertions, including eight counterchecks
+& 4,860 cusp constructions, all three cusp cases, local finite
+Fourier transforms and additive CRT. \\
+Initial reduction & 113,748 exact assertions; 19,868 floating comparisons;
+12 negative-control families
+& 4,374 gcd-bijection inputs; finite ray phases and zero masks; direct
+Gauss sums at six split and two inert primes, and 28 prime pairs. \\
+Completed mean square & 198,323 exact assertions; 11 negative-control families
+& 40 local reindexing sums, 7,776 Eisenstein rows, valuation budgets,
+general-row zero extensions and inverse-square normalization. \\
+Full transfer & 4,186,781 exact assertions; 11 negative-control families
+& 62,208 signed regrouping cases and 438,012 Eisenstein preimages;
+mask identities, scale changes and finite descent bookkeeping. \\
+Final assembly & 622 exact assertions; 13 negative-control families
+& Moment normalization, sixth-power extraction, positive loss budgets,
+short-scale boundaries and local Euler polynomials. \\
+\bottomrule
+\end{tabularx}
+\caption{Saved finite diagnostic records of 12 October 2026. The theta
+suite was originally recorded on 9 October and replayed unchanged on
+12 October. Negative controls alter a sign, mask, normalization or
+admissibility rule and detect the resulting failure.}
+\label{tab:finite-audit}
+\end{table}
+
+All suites except the initial reduction use exact arithmetic without
+floating comparisons. Its ordinary floating diagnostics have tolerance
+$10^{-10}$ and maximum recorded absolute discrepancy
+$4.091524622677201\times10^{-15}$; no interval certification is supplied.
+The prime-pair test sets the original ray twist to one, so its extension
+to a general fixed twist rests on the algebraic ray-character argument.
+The full-transfer record additionally lists 271 retained scale cases,
+309 exclusion-shifted children and 1,311 eligible cube-tail parameter
+cases. Eligibility is a statement about parameter inequalities, not
+about nonzero M\"obius coefficients, energies or smooth kernels. No
+actual smooth kernel or theta function is numerically evaluated by these
+suites. The recorded hashes and Python versions fix the tested artifacts;
+the legacy theta checker embeds a historical PDF hash, which the later
+version comparison verified separately, rather than reading that PDF
+during the replay.
+
+These checks do not establish analytic Poisson summation, global cubic
+reciprocity, theta automorphy and cusp-coefficient theorems, the quadratic
+large sieve, infinite estimates, Hecke continuation or Dirichlet
+nonvanishing. The audit compares the cusp formulas directly with the
+Dunn--Radziwi\l\l\ v3 presentation. Patterson's original proof was
+not independently read; the underlying cubic theta theorem remains an
+import. The analytic conclusions in the manuscript are therefore stated
+under the recorded interfaces and imports. They concern fixed characters
+and a fixed excluded set; conductor or height uniformity is not
+provided by these records. Internal parallel LLM read-throughs are not
+independent mathematical review or formal verification.
+
+% Record basenames, all under arithmetic_source_audit/numerics/:
+% transfer_regrouping_record_20261012.json
+% theta_version_crosswalk_record_20261012.json
+% initial_arithmetic_record_20261012.json
+% completed_bookkeeping_record_20261012.json
+% full_transfer_bookkeeping_record_20261012.json
+% final_assembly_record_20261012.json
+% Theta legacy record, replayed verbatim:
+% quasi-rh-character-amplification/numerics/
+%   upstream_reflection_interfaces_record_20261009.json
+
+
+\section{Conclusion of the audit}
+
+The conditional assembly in Theorem~\ref{thm:assembly} now follows
+from Propositions~\ref{prop:completed}, \ref{prop:consolidated-transfer}
+and \ref{prop:canonical-audit}, Proposition~\ref{prop:original-moment},
+and Propositions~\ref{prop:final-extraction},
+\ref{prop:final-hecke}, and \ref{prop:final-dirichlet}.
+The principal M\"obius estimate is extracted from the positive
+original moment; it was not assumed as a separate cancellation
+theorem. The special coefficient class and its zero extensions
+survive the signed return, and the positive gap supplies
+a strictly decreasing recursion parameter.
+
+No further unassembled source link was identified in this
+bounded main-theorem audit. The next level of scrutiny is
+independent mathematical review of the full argument and its
+deep imported interfaces, particularly the original cubic theta
+theorem and the cusp coefficients used here. The quantitative
+introduction corollaries, effective conductor or height estimates,
+and later stronger strips were outside this assembly.
+
+\section*{Acknowledgement and research provenance}
+\addcontentsline{toc}{section}{Acknowledgement and research provenance}
+
+This manuscript was drafted for Edward Baker with substantial
+assistance from GPT-6 (Codex), including parallel internal
+read-throughs, mathematical organization, and finite diagnostic
+bookkeeping. The session used its inherited configuration; the
+exact serving variant and configured reasoning effort were not
+exposed and are not inferred. The model-assisted read-throughs
+are internal checks, not independent specialist validation.
+The source argument and its claimed theorem belong to the
+authors of \cite{Source}; the audit's derivations and their
+conditional scope are identified in the text.
+
+\appendix
+\section{Repository evidence and replay guide}\label{app:evidence}
+
+The stable manuscript is
+\path{arithmetic_source_audit.tex} in the investigation root.
+Incremental research remains in \path{notes/}, assessments in
+\path{reviews/}, and standard-library diagnostics and small
+records in \path{numerics/}. This manuscript consolidates those
+records rather than replacing their detailed source locators.
+
+\begin{center}\small
+\begin{tabularx}{\textwidth}{@{}lX@{}}
+\toprule
+Stage & Detailed local records\\
+\midrule
+Initial arithmetic and Poisson &
+\path{notes/INITIAL_ARITHMETIC_CONVERSION_AUDIT_20261012.md};
+\path{notes/INITIAL_POISSON_REDUCTION_AUDIT_20261012.md}\\
+Theta inputs and normalization &
+\path{notes/THETA_CUSP_AND_UNIFORMITY_AUDIT_20261012.md};
+\path{notes/THETA_MELLIN_AND_KERNEL_AUDIT_20261012.md};
+\path{notes/THETA_PRIMARY_SOURCE_COMPARISON_20261012.md}\\
+Completed mean square &
+\path{notes/COMPLETED_MEAN_SQUARE_LOCAL_LEDGER_20261012.md};
+\path{notes/COMPLETED_MEAN_SQUARE_SIEVE_AND_SUMMATION_20261012.md};
+\path{notes/COMPLETED_MEAN_SQUARE_GENERAL_ROWS_20261012.md}\\
+Full transfer and termination &
+\path{notes/TWO_POISSON_ARITHMETIC_LEDGER_20261012.md};
+\path{notes/TWO_POISSON_SMOOTH_AND_SHORT_RANGES_20261012.md};
+\path{notes/TWO_POISSON_RETURN_AND_TERMINATION_20261012.md}\\
+Final deductions &
+\path{notes/FINAL_ORIGINAL_MOMENT_ASSEMBLY_20261012.md};
+\path{notes/FINAL_EXTRACTION_AND_BASE_CHANGE_20261012.md};
+\path{notes/FINAL_MELLIN_AND_ZERO_FREE_ASSEMBLY_20261012.md}\\
+Combined assessment &
+\path{reviews/FINAL_ASSEMBLY_REVIEW_20261012.md}\\
+\bottomrule
+\end{tabularx}
+\end{center}
+
+From this folder, the final finite diagnostic can be replayed with
+\begin{quote}\small\ttfamily
+python3 numerics/check\_final\_assembly.py\\
+\hspace*{1em}--output /tmp/final-assembly-replay.json
+\end{quote}
+To verify the source version as well, add
+\path{--source /path/to/paper2.tex}, using the immutable URL and hash
+in \path{notes/source_provenance_20261012.json}. A supplied
+mismatched source is rejected before diagnostic arithmetic or
+output; a run without a source explicitly records that its hash
+was not verified. Full commands and limitations for every suite
+are in \path{numerics/README.md}. The third-party source and PDFs
+remain outside this repository, in accordance with its large-file
+policy.
+
+\begin{thebibliography}{9}
+\bibitem{Source}
+OpenAI, \emph{The Quasi-Riemann Hypothesis}, manuscript dated
+October 5, 2026, openai/math revision
+\texttt{fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb},
+\path{preprints/The-Quasi-Riemann-Hypothesis-October-5-2026/build/paper2.tex}.
+\href{https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/The-Quasi-Riemann-Hypothesis-October-5-2026/build/paper2.tex}{Immutable source}.
+
+\bibitem{GL}
+L. Goldmakher and B. Louvel,
+\emph{A quadratic large sieve inequality over number fields},
+arXiv:1112.1642v2, Definition 1, Theorem 1.1 and Section 2.
+\url{https://arxiv.org/html/1112.1642v2}.
+
+\bibitem{DR}
+A. Dunn and M. Radziwi{\l}{\l},
+\emph{Bias in cubic Gauss sums: Patterson's conjecture},
+arXiv:2109.07463v3, May 14, 2024, Section 5 and Appendix A.
+\url{https://arxiv.org/html/2109.07463v3}.
+
+\bibitem{Pat}
+S. J. Patterson, \emph{A cubic analogue of the theta series},
+Journal f\"ur die reine und angewandte Mathematik 296 (1977),
+125--161. \url{https://doi.org/10.1515/crll.1977.296.125}.
+The original proof was not independently accessed in this audit.
+
+\bibitem{Poonen}
+B. Poonen, \emph{Tate's thesis}, MIT 18.786 lecture notes,
+Spring 2015, Theorem 5.22 and Section 5.11.
+\url{https://math.mit.edu/~poonen/786/notes.pdf}.
+
+\bibitem{DLMF}
+NIST Digital Library of Mathematical Functions,
+Section 25.15, \emph{Dirichlet \(L\)-functions}.
+\url{https://dlmf.nist.gov/25.15}.
+
+\bibitem{Burgin}
+A. Burgin, \emph{A New Elementary Proof of Landau's Prime Ideal
+Theorem, and Associated Results}, arXiv:2406.08565v1.
+\url{https://arxiv.org/html/2406.08565v1}.
+\end{thebibliography}
+\end{document}
