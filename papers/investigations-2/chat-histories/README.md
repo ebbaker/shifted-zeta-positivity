@@ -46,7 +46,10 @@ was also archived as chat 2:
   the PDF upload and its reply; and the request to record the chat, whose
   reply was still in progress and enters only on a refresh.
 
-**How the Cowork chats are captured.** The recorder has no Cowork importer.
+**How the Cowork chats are captured.** The recorder has no Cowork importer;
+the repository-root [record_cowork_chat.py](../../../record_cowork_chat.py)
+supplies one (see
+[Capture a Cowork conversation](#capture-a-cowork-conversation)).
 Claude converts the session's Claude Agent SDK transcript into one
 ChatGPT-style conversation of the same shape as the Codex captures and
 registers it with `record_chat.py --import-json`. Kept: the user's typed
@@ -72,6 +75,28 @@ from validation of the October 5 applications. See the
 The snapshot includes the request to record this conversation and completed
 public messages through capture. The recorded session configuration is
 `gpt-6.1-sol`, reasoning effort **ultra**.
+
+[Chat 4 — Brainstorm review for shifted-zeta-positivity](0004_2026-10-12T21-44-56Z_brainstorm-review-for-shifted-zeta-positivity.json)
+records the Claude review of the
+[Codex response](../brainstorm/reviews/PRIORITY_RESPONSE_REVIEW_CODEX_20261012.md)
+and its proposed parallel split. It produced the
+[saved review](../brainstorm/reviews/REVIEW_OF_CODEX_RESPONSE_AND_PARALLEL_PLAN_CLAUDE_20261012.md)
+and its [check records](../brainstorm/numerics/README.md).
+
+- *Session.* A Claude Cowork session with Claude Opus 5.5
+  (`claude-opus-5-5`, reasoning effort max per the transcript), started
+  12 October 2026 at 17:44 America/New_York.
+- *Capture.* It was captured at 18:44 the same day and holds seven
+  messages over two turns: the review request; a question card about
+  folder access and the option selected; a note that the arXiv HTML fetch
+  was rate-limited; a message sent while the reply was in progress (Liu's
+  paper added to the project files); the reply ending the turn; and the
+  request to record the chat, whose reply was still in progress and enters
+  only on a refresh.
+- *Coverage.* As for the earlier Cowork captures, plus two chat-visible
+  items that travel through tools, labelled in each message's metadata:
+  the question card with the selected option, and the one note sent
+  between tool calls.
 
 ## Capture a Codex conversation
 
@@ -104,6 +129,33 @@ python3 record_chat.py \
 sets a history directory directly; it cannot be combined with `--project`.
 The recorder uses only Python's standard library. Run one writer at a time
 for each registry.
+
+## Capture a Cowork conversation
+
+A Cowork transcript stays in the session's cloud workspace, so the
+conversion runs there and the registration runs on this computer. The
+repository-root [record_cowork_chat.py](../../../record_cowork_chat.py)
+does both, applying the coverage rules above; `--help` gives the full
+procedure.
+
+```sh
+# In the Cowork cloud workspace (newest transcript unless --transcript is given):
+python3 record_cowork_chat.py convert --output conv.json --b64-output conv.b64
+
+# On this computer, from the repository root, with the base64 text of conv.b64:
+python3 record_cowork_chat.py register --input-b64 - --expect-sha256 HEX \
+  [--project PROJECT_NAME] <<'EOF'
+...
+EOF
+
+# Draft this guide's paragraph for the new chat:
+python3 record_cowork_chat.py readme-stub [--project PROJECT_NAME]
+```
+
+Repeating the steps later refreshes the same chat number. If the transcript
+and the repository are on the same machine, `record` does the first two
+steps at once. Files written by shell commands are not detected
+automatically; pass them to `convert` with `--delivered`.
 
 ## Import a selected conversation
 
