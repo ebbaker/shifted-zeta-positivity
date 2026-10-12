@@ -12,8 +12,12 @@ Each project begins with a bounded task and an explicit decision about
 whether further work is warranted. The setup initialized the folders;
 the [arithmetic source audit](arithmetic_source_audit/README.md) has since
 completed its first conditional branch check and a scoped audit of the
-theta transformation and its uniformity. The other projects remain
-at their initial scopes. No new zero-free strip, Newman bound, or RH
+theta transformation and its uniformity, and the
+[Newman certificate audit](newman_certificate_audit/README.md) has completed
+its first bounded task (pin, seal check, dependency ledger and row replay of
+the Gomila package; Claude Fable 5.1, 12 October) with a negative benchmark:
+the corrected heat interface cannot change that certificate's feasibility or
+cost. The other projects remain at their initial scopes. No new zero-free strip, Newman bound, or RH
 mechanism is established here.
 
 ## Projects and priorities

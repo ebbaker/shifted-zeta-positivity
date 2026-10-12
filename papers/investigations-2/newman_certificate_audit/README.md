@@ -1,14 +1,51 @@
 # Newman certificate audit and corrected-interface benchmark
 
-12 October 2026. Prepared for Edward Baker. Model: GPT-6-astra (Codex); reasoning effort: ultra, verified from the session configuration. Prepared with substantial LLM assistance. Internal checks are not independent mathematical validation.
+12 October 2026. Prepared for Edward Baker. Scope: GPT-6-astra (Codex);
+reasoning effort: ultra, verified from the session configuration. First
+audit session the same day: Claude Fable 5.1 (`claude-fable-5-1`), Cowork.
+Prepared with substantial LLM assistance. Internal checks are not
+independent mathematical validation.
 
 [Investigation portfolio](../README.md)
 
 ## Objective and status
 
-**Scoped; research not started.** Independently replay a public de Bruijn–Newman upper-bound certificate, then measure whether the repository's corrected heat approximation improves its margins, admissible parameters, or certification cost. A reproducible audit or a useful evaluator improvement is a successful outcome even without a new bound. No public claim is validated by creating this project.
+Independently replay a public de Bruijn–Newman upper-bound certificate, then measure whether the repository's corrected heat approximation improves its margins, admissible parameters, or certification cost. A reproducible audit or a useful evaluator improvement is a successful outcome even without a new bound. No public claim is validated by creating this project.
+
+**Status: first bounded task completed on 12 October 2026, with a
+negative benchmark result.** The Gomila package
+(`judegomila/dbn-lambda-01787854-candidate-audit`, commit `a74738de…`,
+claim `Λ ≤ 0.1787854`, self-labelled not peer reviewed) was pinned, its
+443-file seal verified, its four hypothesis lanes mapped with their error
+budgets and margins, and its weakest finite rows reproduced by an
+independent floating implementation to the stored digits. At the only
+cells where the approximation error matters (the first finite windows,
+`T_N ≈ 7.9·10^{−7}` against `E_max = 2.33·10^{−7}`), the corrected
+interface's smaller budget (`e_C/e_{C,0} = 3.7·10^{−6}`) cannot be used at
+all, because the lane is uniform in `x`; and even if it could, the row's
+measured sensitivities bound the gain by `ΔΛ ≈ 1.2·10^{−8}`. The barrier
+has margins `400×` its approximation allowance, the tail `10^{4}×`. The
+README's stop condition for a record-bound campaign is met. See the
+[benchmark note](notes/2_FINITE_LANE_REPLAY_AND_CORRECTED_BUDGET_BENCHMARK_20261012.md)
+and the [dependency ledger](notes/1_SOURCE_PIN_AND_DEPENDENCY_LEDGER_20261012.md).
+
+A side observation (not pursued): the package's own producer has an unused
+"sharp" weight, the Polymath §8.5 improved triangle inequality, which at
+the certified row gives a lower bound `0.077` instead of `7.9·10^{−7}` and
+would move the lane's boundary by about `0.004–0.006` in `Λ` at the same
+verification height, subject to re-proving the package's `y`-transfer for
+that weight. The lever in this certificate class is the finite-lane
+lower-bound lemma, not the Riemann–Siegel error term.
 
 This combines certificate review and interface benchmarking in one investigation. It reuses project 17's approximation work rather than reopening its unsuccessful collision-exclusion program. The ordering of public packages is provisional: inspect current source availability, exact claims, dependencies, and replay requirements before selecting one and pinning its revision.
+
+## Records of the first session
+
+- [Dependency ledger](notes/1_SOURCE_PIN_AND_DEPENDENCY_LEDGER_20261012.md): pin, seal, row, hypotheses, lanes, contracts, remaining obligations.
+- [Replay and benchmark](notes/2_FINITE_LANE_REPLAY_AND_CORRECTED_BUDGET_BENCHMARK_20261012.md): stored-row reproduction, sensitivities, budgets, decision.
+- [Numerics](numerics/README.md): standard-library error-budget replay with record; numpy row replay with record (benchmark tool, not a check programme).
+- Reviews: none yet; an independent review of the two notes is the natural next item.
+- Chat histories: this session ran in Claude Cowork, for which the base recorder has no importer; no conversation was captured.
 
 ## First bounded task
 
@@ -16,16 +53,27 @@ Select 20–50 difficult cells from one pinned barrier or final-time certificate
 
 For each cell record the finite-sum margin, displacement caused by the correction, source remainder, interval overestimation, derivative allowance, cutoff payment, runtime, precision, and exact domain. State separately what the sample establishes and which obligations remain for the entire certificate.
 
+*Outcome (12 October):* the pinned certificate has no cells on which the
+three evaluators could differ materially. Its barrier cells are evaluated
+pointwise but have margins `0.52–1.89` against an allowance `0.00125`; its
+final-time cells are not pointwise at all. Ten representative finite rows
+(the five weakest and the first row of each prime leg and the last row)
+and the barrier transcript were replayed instead, and the comparison was
+carried out analytically at the weakest row. The per-cell ledger asked for
+above therefore collapses to the two tables in the notes.
+
 ## Deliverables
 
-- A dependency and domain ledger for the selected bound, including the verified initial region, intermediate-time barrier, final-time nonvanishing, and unbounded analytic tail.
-- A reproducible cell selection and replay procedure, small retained records, and a comparison table with complete error accounting.
-- A review locating any discrepancy precisely, or confirming the tested assertions within their stated scope.
-- A decision on full replay, further evaluator work, or closure before any new bound campaign.
+- A dependency and domain ledger for the selected bound, including the verified initial region, intermediate-time barrier, final-time nonvanishing, and unbounded analytic tail. *Delivered (note 1).*
+- A reproducible cell selection and replay procedure, small retained records, and a comparison table with complete error accounting. *Delivered (note 2, numerics).*
+- A review locating any discrepancy precisely, or confirming the tested assertions within their stated scope. *Partially: no discrepancy found in the replayed rows, the error-budget transcription, or the barrier transcript; the analytic reductions were not audited.*
+- A decision on full replay, further evaluator work, or closure before any new bound campaign. *Delivered: no further evaluator work for this class; full replay only as audit.*
 
 ## Continue and stop tests
 
 Continue if the corrected interface resolves previously undecidable cells, supports a justified parameter improvement, or materially reduces cost. Expand from the sample to a complete audit only after all analytic dependencies and coverage obligations are identified. Stop a record-bound campaign if finite-sum cancellation or the tail dominates and the correction changes neither feasibility nor cost. If the package cannot be replayed from available source, report the exact reproducibility gap; that is not a disproof of its mathematical claim.
+
+*Applied:* finite-sum cancellation dominates; the correction changes neither feasibility nor cost. The record-bound campaign is stopped. The package replays from source at the levels attempted (seal, stored transcripts, independent recomputation of rows and budgets).
 
 ## Scope constraints and inherited work
 
