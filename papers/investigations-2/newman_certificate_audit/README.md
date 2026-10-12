@@ -77,7 +77,9 @@ This combines certificate review and interface benchmarking in one investigation
 
   Each has a retained record.
 - [Cross-model review of notes 1–2](reviews/1_CROSS_MODEL_REVIEW_OF_NOTES_1_2_20261012.md) (Claude Opus 5.5).
-- Chat histories: both sessions ran in Claude Cowork, for which the base recorder has no importer; no conversation was captured.
+- [Chat histories](chat-histories/README.md):
+  - The second session's conversation is chat 1. It was converted from the Cowork session transcript and registered with `record_chat.py --import-json`.
+  - The first session's conversation was not captured.
 
 ## First bounded task
 
