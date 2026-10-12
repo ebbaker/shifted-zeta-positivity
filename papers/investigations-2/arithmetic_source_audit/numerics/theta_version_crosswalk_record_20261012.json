@@ -1,0 +1,101 @@
+{
+  "audit_date": "2026-10-12",
+  "prepared_for": "Edward Baker",
+  "model": "GPT-6 (Codex), inherited configuration; exact serving variant not exposed",
+  "reasoning_effort": "not exposed; not inferred",
+  "review_scope": "Internal mathematical source comparison and replay of existing finite diagnostics, not independent validation or formal verification",
+  "sources": [
+    {
+      "manuscript_date": "2026-10-05",
+      "revision": "fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb",
+      "repository_path": "preprints/The-Quasi-Riemann-Hypothesis-October-5-2026/build/paper2.tex",
+      "url": "https://raw.githubusercontent.com/openai/math/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/The-Quasi-Riemann-Hypothesis-October-5-2026/build/paper2.tex",
+      "sha256": "d9a8f15aa770cf883d0eabd2b775fad694ce20b44cba7928f5c0c9a6d8750d4d",
+      "bytes": 169005,
+      "lines": 3988
+    },
+    {
+      "manuscript_date": "2026-09-30",
+      "revision": "fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb",
+      "repository_path": "preprints/The-Quasi-Riemann-Hypothesis-September-30-2026/build/paper.tex",
+      "url": "https://raw.githubusercontent.com/openai/math/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/The-Quasi-Riemann-Hypothesis-September-30-2026/build/paper.tex",
+      "sha256": "42a5ee0febca59fd1def55cfd6c6808c322ef4237d7726303ea52f711deac6a3",
+      "bytes": 766316,
+      "lines": 16677
+    },
+    {
+      "manuscript_date": "2026-09-30",
+      "revision": "fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb",
+      "repository_path": "preprints/The-Quasi-Riemann-Hypothesis-September-30-2026/paper.pdf",
+      "url": "https://raw.githubusercontent.com/openai/math/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/The-Quasi-Riemann-Hypothesis-September-30-2026/paper.pdf",
+      "sha256": "8fe93046f8cf5ef1ba5969c89addc02d76311adc4ee907509ff9cd96f7ec99e7",
+      "bytes": 1588969
+    }
+  ],
+  "source_comparison": {
+    "kind": "Mathematical comparison of statements, definitions and proof steps; not an assertion of identical source text",
+    "october_scope": "lem:reflection, lem:reflection-uniformity, lem:theta-bounds; statements 1731-1881, proof 2874-3478",
+    "september_scope": "prop:completed-reflection; statement 1676-1881, proof 1883-2463",
+    "identifications": {
+      "field": "Both use Z[omega], lambda=1+2*omega",
+      "norm": "September q_a = October N_K(a)",
+      "Fourier_index": "September mu = October ell",
+      "fixed_denominator": "September c_F = October c_0",
+      "cusp_coefficients": "September (F_1,F_19,F_10) = October (d_0,d_-,d_+) after conjugate-frequency conversion",
+      "kernel_test": "September V = October V_*",
+      "Gauss_phase": "September tau_(p,j)^- = October chi_p(-1)^j gamma_j(p), and tau_(p,j)^+ = gamma_j(p)"
+    },
+    "clarifications": [
+      "October 5 omits September 30 explicit avoidance of zero entries in residue-symbol calculations; allowed period translations and CRT lifts provide the choice without modifying sector data.",
+      "October 5 compresses the strip-growth and contour argument; the new Mellin note supplies the maximum-principle step and separates arithmetic-dependent continuation constants from uniform kernel constants."
+    ],
+    "proof_notes": [
+      "../notes/THETA_CUSP_AND_UNIFORMITY_AUDIT_20261012.md",
+      "../notes/THETA_MELLIN_AND_KERNEL_AUDIT_20261012.md",
+      "../notes/THETA_PRIMARY_SOURCE_COMPARISON_20261012.md"
+    ]
+  },
+  "replay": {
+    "executed_date": "2026-10-12",
+    "python": "3.10.0",
+    "checker_path": "papers/quasi-rh-character-amplification/numerics/check_upstream_reflection_interfaces.py",
+    "checker_sha256": "bb84355f19d9f7e0a21c5d2d884acd1984fc1feac77663c828b0f8f28e62222b",
+    "original_record_path": "papers/quasi-rh-character-amplification/numerics/upstream_reflection_interfaces_record_20261009.json",
+    "original_record_sha256": "0e8cd4cc90c0ec16f95ad9ce88835cf0be00f7748bd69884a68013c0d39fc6bd",
+    "replay_record_sha256": "0e8cd4cc90c0ec16f95ad9ce88835cf0be00f7748bd69884a68013c0d39fc6bd",
+    "same_json_as_original": true,
+    "source_pdf_hash_verified_externally": true,
+    "source_hash_check_note": "The unchanged legacy checker embeds the historical PDF hash but does not read a PDF; this audit separately fetched and hashed the pinned PDF and verified that hash.",
+    "assertions": 69881,
+    "checks": {
+      "additive_crt": 24300,
+      "countercheck": 8,
+      "cubic_prime_two": 5,
+      "cusp_matrix": 9720,
+      "cusp_reduced": 5184,
+      "finite_fourier": 1776,
+      "fixed_sector": 6480,
+      "gauss_norm": 48,
+      "local_orientation": 15552,
+      "local_reflection": 5328,
+      "primitive_orientation": 1480
+    },
+    "cusp_cases": 4860,
+    "fixed_frequency_count": 324,
+    "nonunit_fixed_frequencies": 162,
+    "all_three_cusp_branches": [
+      "3_divides_c",
+      "lambda_exactly_once",
+      "lambda_unit"
+    ],
+    "passed": true,
+    "replay_command": "python3 papers/quasi-rh-character-amplification/numerics/check_upstream_reflection_interfaces.py --output /path/to/theta-interface-replay.json"
+  },
+  "scope_limits": [
+    "The old suite also includes primitive Poisson tests; 69881 is its complete assertion count, not a new count of distinct theta proof obligations.",
+    "Finite exact local Fourier, cusp congruence and additive CRT checks do not prove global cubic reciprocity, theta automorphy, cusp coefficient formulas, Mellin estimates or a large sieve.",
+    "Cubic multipliers and analytic uniformity are checked by the accompanying derivations, not evaluated by the finite cusp checker.",
+    "No theta function was numerically sampled; no new zero-free theorem is established.",
+    "The original Patterson proof was not independently read; the primary published Dunn-Radziwill statement comparison is recorded separately."
+  ]
+}

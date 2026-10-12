@@ -9,9 +9,12 @@ This portfolio develops six directions selected from the quasi-RH
 exponent-descent brainstorms. The aim is a justified new estimate, a complete
 audit of a specified argument, or a measurable improvement in a certificate.
 Each project begins with a bounded task and an explicit decision about
-whether further work is warranted. The folders are initialized; their
-research tasks have not been carried out by this setup. No new zero-free
-strip, Newman bound, or RH mechanism is established here.
+whether further work is warranted. The setup initialized the folders;
+the [arithmetic source audit](arithmetic_source_audit/README.md) has since
+completed its first conditional branch check and a scoped audit of the
+theta transformation and its uniformity. The other projects remain
+at their initial scopes. No new zero-free strip, Newman bound, or RH
+mechanism is established here.
 
 ## Projects and priorities
 

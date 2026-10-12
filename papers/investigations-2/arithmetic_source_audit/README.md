@@ -15,12 +15,50 @@ October 5 argument. The objective is a closed analytic chain or a precise
 account of an unresolved step. It is not another conditional exponent-descent
 paper.
 
-**Status: scoped; research not started in this project.** The existing
-September 30 upstream audit inspected reflection, primitive Poisson, and
-sieve interfaces, but explicitly left the global sextic norm recursion and
-combined induction unresolved. Repeating those local checks would not
-complete this project. Neither the imported baseline nor a stronger strip
-is validated by this scaffold.
+**Status: the first branch and the theta transformation have received
+scoped internal audits on 12 October 2026.** The October 5 source is
+pinned, a nonempty cube-tail branch is traced through both Poisson
+transforms, and the fixed-character extraction and decreasing recurrence
+have been checked conditional on their inputs. The subsequent audit
+matches the cusp formulas, derives the multipliers and Mellin normalization,
+and checks moving-prime uniformity. No substantive defect was established
+in these inspected steps. Classical theta, reciprocity, and sieve theorems
+remain imports; the full zero-free theorem remains unvalidated.
+
+The September 30 reflection argument has now been compared directly with
+the pinned October 5 proof. Its PDF hash matches the earlier audit's
+artifact, and the correspondence is recorded explicitly. This does not
+validate the entire September 30 global family theorem. The next bounded
+source task is the **full initial Poisson reduction and its arithmetic
+conversion identities**, including the diagonal, shared column factors,
+masks, smooth norms, and initial dual ranges.
+
+## Theta audit records
+
+- [Combined review, version correspondence, and next obligation](reviews/THETA_TRANSFORMATION_REVIEW_20261012.md).
+- [Cusp construction and moving-prime uniformity](notes/THETA_CUSP_AND_UNIFORMITY_AUDIT_20261012.md).
+- [Mellin normalization, continuation, and kernel bounds](notes/THETA_MELLIN_AND_KERNEL_AUDIT_20261012.md).
+- [Primary theta coefficient comparison](notes/THETA_PRIMARY_SOURCE_COMPARISON_20261012.md).
+- [Source versions and replay record](numerics/theta_version_crosswalk_record_20261012.json).
+
+The audit supplies two explicit clarifications to the October 5
+presentation: avoiding zero matrix entries before residue-symbol
+manipulations, and expanding the strip-growth argument for the contour
+shift. Both close under the stated inputs. The original Patterson proof
+was not independently read; the primary formula comparison uses
+Dunn–Radziwiłł v3.
+
+## First audit records
+
+- [Scoped review and source of the saving](reviews/FIRST_BRANCH_REVIEW_20261012.md).
+- [Dependency map, principal case, and extraction](notes/DEPENDENCY_MAP_AND_EXTRACTION_20261012.md).
+- [Nonempty cube-tail branch and return ledger](notes/CUBE_TAIL_BRANCH_AUDIT_20261012.md).
+- [Pinned source provenance](notes/source_provenance_20261012.json).
+- [Exact regrouping checks and replay instructions](numerics/README.md).
+
+These are LLM-assisted research records, not independent validation. The
+finite checker diagnoses divisor cancellation and normalization; it does
+not prove the analytic transformations or an unbounded theorem.
 
 ## First bounded task
 
