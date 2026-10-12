@@ -16,16 +16,19 @@ histories refer to this shared context instead of duplicating the file.
 Consult [index.json](index.json) for the filename, dates, message count,
 capture time, hashes, and next number.
 
-<<<<<<< HEAD
+Two independently numbered captures were joined by an earlier merge and
+both retain number 2 and their original filenames. Identify them by title
+and filename; new captures continue with number 3.
+
 [Chat 2 — Brainstorm investigation next steps](0002_2026-10-12T20-27-39Z_brainstorm-investigation-next-steps.json)
 records the arithmetic and Newman audit assessment, the new brainstorm,
 and the consolidated base project overview. Its snapshot includes the
 request to add this conversation to the history and completed public
 messages through capture. The recorded session configuration is
 `gpt-6.1-sol`, reasoning effort **ultra**.
-=======
-The second conversation, **Investigations-2 brainstorm priorities review**,
-is archived as chat 2:
+
+A separate conversation, **Investigations-2 brainstorm priorities review**,
+was also archived as chat 2:
 [0002_2026-10-12T20-52-40Z_investigations-2-brainstorm-priorities-review.json](0002_2026-10-12T20-52-40Z_investigations-2-brainstorm-priorities-review.json).
 
 - *Session.* A Claude Cowork session with Claude Fable 5.1
@@ -57,7 +60,18 @@ setting, the SHA-256 of the transcript bytes read, and the repository paths
 of the files the session delivered through tool calls, which are not
 embedded. The first Cowork capture of this kind is the
 [Newman project's chat 1](../newman_certificate_audit/chat-histories/README.md).
->>>>>>> 4e70caa (Review of next steps and new literature check)
+
+[Chat 3 — Review Claude’s priority changes](0003_2026-10-12T21-32-30Z_review-claude-s-priority-changes.json)
+records the review of Claude’s proposed priorities and the suggested parallel
+split: Codex on formal replay and statement scope, Claude on the Newman
+uniform error budget and barrier contracts. The assessment agrees with the
+main reprioritization while correcting the barrier slack argument, retaining
+producer correctness and coverage checks, and distinguishing formal replay
+from validation of the October 5 applications. See the
+[saved review](../brainstorm/reviews/PRIORITY_RESPONSE_REVIEW_CODEX_20261012.md).
+The snapshot includes the request to record this conversation and completed
+public messages through capture. The recorded session configuration is
+`gpt-6.1-sol`, reasoning effort **ultra**.
 
 ## Capture a Codex conversation
 
