@@ -3,6 +3,8 @@
 12 October 2026. Prepared for Edward Baker. Scope: GPT-6-astra (Codex);
 reasoning effort: ultra, verified from the session configuration. First
 audit session the same day: Claude Fable 5.1 (`claude-fable-5-1`), Cowork.
+Second session the same day (review of the first, finite-lane audit):
+Claude Opus 5.5 (`claude-opus-5-5`), Cowork, reasoning effort max.
 Prepared with substantial LLM assistance. Internal checks are not
 independent mathematical validation.
 
@@ -37,15 +39,45 @@ verification height, subject to re-proving the package's `y`-transfer for
 that weight. The lever in this certificate class is the finite-lane
 lower-bound lemma, not the Riemann–Siegel error term.
 
+**Second session (12 October): review and finite-lane audit.** A
+cross-model [review](reviews/1_CROSS_MODEL_REVIEW_OF_NOTES_1_2_20261012.md)
+confirmed notes 1–2; it found no error that changes a conclusion and
+recorded refinements. [Note 3](notes/3_CERTIFIED_ROW_REPLAY_AND_FINITE_LANE_REDUCTIONS_20261012.md)
+then audited every link of the finite lane except the uniform error
+budget:
+
+- the native binding and window freeze, checked by hand;
+- an independent standard-library certificate of 32 stored rows, which
+  gives `L_690988 ∈ [7.9136674559412, 7.9136674559419]·10^{−7}`, reproduces
+  all twelve singleton-time first-of-run floors to 12 decimals, and leaves
+  `L_690988 − E_max ≥ 5.58·10^{−7}`;
+- an independent re-verification of the Dini `y`-transfer gate with
+  supremum `≤ 3/4`. The package's reported worst ratio `0.99999860767` is
+  an artifact of its bisection stopping rule, not a `10^{−6}` margin.
+
+No defect was found. The review also shows that the improved
+inequality's bound is monotone in the `γ`-bound. At the same `X` and
+`y0`, a sharp-weight lane at `t0 ≈ 0.157` (`Λ ≈ 0.1745`) would therefore
+reuse hypotheses (i) and (iii) unchanged. It is recorded as an option,
+not pursued. The largest unaudited piece is now the barrier's Lemma 8.4
+derivative majorants, which require the Polymath PDF in the session.
+
 This combines certificate review and interface benchmarking in one investigation. It reuses project 17's approximation work rather than reopening its unsuccessful collision-exclusion program. The ordering of public packages is provisional: inspect current source availability, exact claims, dependencies, and replay requirements before selecting one and pinning its revision.
 
-## Records of the first session
+## Records of the audit sessions
 
 - [Dependency ledger](notes/1_SOURCE_PIN_AND_DEPENDENCY_LEDGER_20261012.md): pin, seal, row, hypotheses, lanes, contracts, remaining obligations.
 - [Replay and benchmark](notes/2_FINITE_LANE_REPLAY_AND_CORRECTED_BUDGET_BENCHMARK_20261012.md): stored-row reproduction, sensitivities, budgets, decision.
-- [Numerics](numerics/README.md): standard-library error-budget replay with record; numpy row replay with record (benchmark tool, not a check programme).
-- Reviews: none yet; an independent review of the two notes is the natural next item.
-- Chat histories: this session ran in Claude Cowork, for which the base recorder has no importer; no conversation was captured.
+- [Certified replay and finite-lane reductions](notes/3_CERTIFIED_ROW_REPLAY_AND_FINITE_LANE_REDUCTIONS_20261012.md): native binding, window freeze, certified replay of 32 stored rows, Dini gate re-verified with margin, sharp-lane option (second session).
+- [Numerics](numerics/README.md):
+  - standard-library error-budget replay;
+  - numpy row replay (benchmark tool);
+  - standard-library certified row replay and Dini gate re-verification;
+  - numpy Dini-gate landscape (exploration).
+
+  Each has a retained record.
+- [Cross-model review of notes 1–2](reviews/1_CROSS_MODEL_REVIEW_OF_NOTES_1_2_20261012.md) (Claude Opus 5.5).
+- Chat histories: both sessions ran in Claude Cowork, for which the base recorder has no importer; no conversation was captured.
 
 ## First bounded task
 
@@ -66,7 +98,7 @@ above therefore collapses to the two tables in the notes.
 
 - A dependency and domain ledger for the selected bound, including the verified initial region, intermediate-time barrier, final-time nonvanishing, and unbounded analytic tail. *Delivered (note 1).*
 - A reproducible cell selection and replay procedure, small retained records, and a comparison table with complete error accounting. *Delivered (note 2, numerics).*
-- A review locating any discrepancy precisely, or confirming the tested assertions within their stated scope. *Partially: no discrepancy found in the replayed rows, the error-budget transcription, or the barrier transcript; the analytic reductions were not audited.*
+- A review locating any discrepancy precisely, or confirming the tested assertions within their stated scope. *Partially. The first session found no discrepancy in the replayed rows, the error-budget transcription or the barrier transcript. The second session audited the finite lane's native binding, window freeze and Dini `y`-transfer and certified 32 stored rows independently, also without discrepancy. The barrier majorants, the tail gates and the uniform error budget remain.*
 - A decision on full replay, further evaluator work, or closure before any new bound campaign. *Delivered: no further evaluator work for this class; full replay only as audit.*
 
 ## Continue and stop tests
@@ -83,4 +115,4 @@ Start from the [benchmark proposal](../../quasi-rh-exponent-descent/brainstorm/N
 
 ## Records
 
-Place research in `notes/`, computations and small records in `numerics/`, reviews in `reviews/`, and conversation provenance in `chat-histories/`. Follow the [large-file policy](../../../LARGE_FILES.md). At notable milestones update `DRAFT_HISTOR.md` with concise commit/tag references and links; do not create manuscript snapshot directories.
+Place research in `notes/`, computations and small records in `numerics/`, reviews in `reviews/`, and conversation provenance in `chat-histories/`. Follow the [large-file policy](../../../LARGE_FILES.md). At notable milestones update `DRAFT_HISTORY.md` with concise commit/tag references and links; do not create manuscript snapshot directories.

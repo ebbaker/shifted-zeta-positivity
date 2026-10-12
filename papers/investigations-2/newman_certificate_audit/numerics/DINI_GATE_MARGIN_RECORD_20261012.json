@@ -1,0 +1,277 @@
+{
+ "title": "Interval re-verification of the Dini y-transfer gate with margin",
+ "date": "2026-10-12",
+ "model": "Claude Opus 5.5 (claude-opus-5-5)",
+ "source_package": {
+  "repository": "https://github.com/judegomila/dbn-lambda-01787854-candidate-audit",
+  "commit": "a74738deb6d5e0f76887cb36901da08b68dca705"
+ },
+ "theta": "3/4,3/4,1/4,0",
+ "precision_digits": 30,
+ "package_reported_ratio_ub": {
+  "235711": "0.99999860767275095",
+  "2357": "0.99997108988463879",
+  "235": "0.99999531405046582",
+  "23": "0.99224052112549543"
+ },
+ "legs": [
+  {
+   "patterns": 243,
+   "leaves": 268748,
+   "h_nonpositive": 82411,
+   "splits": 266244,
+   "max_ratio_ub": "0.749998309301900998131992568048",
+   "worst": {
+    "G0": [
+     2,
+     3,
+     5,
+     11
+    ],
+    "sector": [
+     10,
+     11
+    ],
+    "L": [
+     "15.8124993565130555795632463558",
+     "15.8132439672927768675323397318"
+    ],
+    "y": [
+     "0.187427227097168055331382782900",
+     "0.187582459491444135512592093351"
+    ],
+    "low_branch": true
+   },
+   "undecided": 0,
+   "passed": true,
+   "P": [
+    2,
+    3,
+    5,
+    7,
+    11
+   ],
+   "N_range": [
+    690988,
+    728999
+   ],
+   "theta": "3/4",
+   "seconds": 197.7
+  },
+  {
+   "patterns": 81,
+   "leaves": 50301,
+   "h_nonpositive": 16734,
+   "splits": 49185,
+   "max_ratio_ub": "0.749981046660539430996471908540",
+   "worst": {
+    "G0": [
+     3,
+     5,
+     7
+    ],
+    "sector": [
+     0,
+     1
+    ],
+    "L": [
+     "0.69891924268303613719262644843",
+     "0.700843263390733079784424557455"
+    ],
+    "y": [
+     "0.188824318645652776962266576963",
+     "0.189134783434204937324685197866"
+    ],
+    "low_branch": true
+   },
+   "undecided": 0,
+   "passed": true,
+   "P": [
+    2,
+    3,
+    5,
+    7
+   ],
+   "N_range": [
+    729000,
+    818999
+   ],
+   "theta": "3/4",
+   "seconds": 24.3
+  },
+  {
+   "patterns": 27,
+   "leaves": 19673,
+   "h_nonpositive": 7424,
+   "splits": 19167,
+   "max_ratio_ub": "0.249995979727716682737451571937",
+   "worst": {
+    "G0": [
+     2,
+     3,
+     5
+    ],
+    "sector": [
+     0,
+     1
+    ],
+    "L": [
+     "0.79216420299023952809149439871",
+     "0.79410571323397078728118581591"
+    ],
+    "y": [
+     "0.188513853857100616599847956060",
+     "0.188824318645652776962266576963"
+    ],
+    "low_branch": true
+   },
+   "undecided": 0,
+   "passed": true,
+   "P": [
+    2,
+    3,
+    5
+   ],
+   "N_range": [
+    819000,
+    1027999
+   ],
+   "theta": "1/4",
+   "seconds": 6.8
+  },
+  {
+   "patterns": 9,
+   "leaves": 771,
+   "h_nonpositive": 771,
+   "splits": 489,
+   "max_ratio_ub": "0",
+   "worst": null,
+   "undecided": 0,
+   "passed": true,
+   "P": [
+    2,
+    3
+   ],
+   "N_range": [
+    1028000,
+    3840000
+   ],
+   "theta": "0",
+   "seconds": 0.2
+  }
+ ],
+ "negative_control": [
+  {
+   "P": [
+    2,
+    3,
+    5,
+    7,
+    11
+   ],
+   "G0": [
+    2,
+    5,
+    7
+   ],
+   "sector": [
+    0,
+    1
+   ],
+   "L": [
+    "0.693147180559945309417232121358",
+    "0.6931471806"
+   ],
+   "y": "y0",
+   "where": "covered domain (L = log 2 is not attained by n = 70k)",
+   "ratio_lower_bound": "0.710765381971679121700771884608",
+   "exceeds": "0.70",
+   "confirmed": true
+  },
+  {
+   "P": [
+    2,
+    3,
+    5,
+    7,
+    11
+   ],
+   "G0": [
+    2,
+    3,
+    5,
+    11
+   ],
+   "sector": [
+    10,
+    11
+   ],
+   "L": [
+    "15.7484830900956697811298883203",
+    "15.7484830900956697811298883235"
+   ],
+   "y": "y0",
+   "where": "attained: n = 6910020 at N = 690988, where the q-bound is exact",
+   "ratio_lower_bound": "0.660557701296330570401679317827",
+   "exceeds": "0.66",
+   "confirmed": true
+  },
+  {
+   "P": [
+    2,
+    3,
+    5,
+    7
+   ],
+   "G0": [
+    2,
+    5,
+    7
+   ],
+   "sector": [
+    0,
+    1
+   ],
+   "L": [
+    "0.693147180559945309417232121358",
+    "0.6931471806"
+   ],
+   "y": "y0",
+   "where": "covered domain",
+   "ratio_lower_bound": "0.702989065113926091731485257946",
+   "exceeds": "0.70",
+   "confirmed": true
+  },
+  {
+   "P": [
+    2,
+    3,
+    5
+   ],
+   "G0": [
+    2,
+    3,
+    5
+   ],
+   "sector": [
+    0,
+    1
+   ],
+   "L": [
+    "0.693147180559945309417232121358",
+    "0.6931471806"
+   ],
+   "y": "y0",
+   "where": "covered domain",
+   "ratio_lower_bound": "0.185773217422834502343527152843",
+   "exceeds": "0.18",
+   "confirmed": true
+  }
+ ],
+ "result": "PASS",
+ "software": {
+  "python": "3.13.16",
+  "implementation": "CPython"
+ },
+ "checker_sha256": "e674614a3bd43d0bec5ea43a9d0c46369a0eb88ae165c288fa62d913eb513a1a"
+}

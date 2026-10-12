@@ -33,7 +33,13 @@ classical imports; independent review and the original Patterson-source
 access limitation remain explicit.
 The other projects remain
 at their initial scopes. No new zero-free strip, Newman bound, or RH
+mechanism is established here.
+
 >>>>>>> bfa01cf (Work on the arithmetic_source investigation)
+cost. A second session (Claude Opus 5.5) reviewed that work and audited
+the finite lane's reductions, with independent certificates for its weakest
+rows and its `y`-transfer gate; no defect was found. The other projects
+remain at their initial scopes. No new zero-free strip, Newman bound, or RH
 mechanism is established here.
 
 ## Projects and priorities
