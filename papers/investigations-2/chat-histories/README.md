@@ -16,12 +16,48 @@ histories refer to this shared context instead of duplicating the file.
 Consult [index.json](index.json) for the filename, dates, message count,
 capture time, hashes, and next number.
 
+<<<<<<< HEAD
 [Chat 2 — Brainstorm investigation next steps](0002_2026-10-12T20-27-39Z_brainstorm-investigation-next-steps.json)
 records the arithmetic and Newman audit assessment, the new brainstorm,
 and the consolidated base project overview. Its snapshot includes the
 request to add this conversation to the history and completed public
 messages through capture. The recorded session configuration is
 `gpt-6.1-sol`, reasoning effort **ultra**.
+=======
+The second conversation, **Investigations-2 brainstorm priorities review**,
+is archived as chat 2:
+[0002_2026-10-12T20-52-40Z_investigations-2-brainstorm-priorities-review.json](0002_2026-10-12T20-52-40Z_investigations-2-brainstorm-priorities-review.json).
+
+- *Session.* A Claude Cowork session with Claude Fable 5.1
+  (`claude-fable-5-1`, reasoning effort xhigh per the transcript; the
+  harness reported the configured identifier `claude-opus-5-5`), started
+  12 October 2026 at 16:52 America/New_York. It reviewed the
+  [12 October Codex brainstorm](../brainstorm/NEW_PATHS_FORWARD_AFTER_AUDITS_CODEX_20261012.md)
+  and the portfolio README, read arXiv:2610.12234v1 (supplied by the author
+  as a PDF), and produced the
+  [priority review](../brainstorm/PRIORITY_REVIEW_AFTER_AUDITS_CLAUDE_20261012.md)
+  plus one reading-map line in the [overview](../README.md).
+- *Capture.* It was captured at 17:29 the same day and holds thirteen
+  messages over four turns: the review request and its reply; a pasted
+  arXiv link whose fetch the author declined (an interruption marker);
+  the PDF upload and its reply; and the request to record the chat, whose
+  reply was still in progress and enters only on a refresh.
+
+**How the Cowork chats are captured.** The recorder has no Cowork importer.
+Claude converts the session's Claude Agent SDK transcript into one
+ChatGPT-style conversation of the same shape as the Codex captures and
+registers it with `record_chat.py --import-json`. Kept: the user's typed
+messages and the assistant's text replies shown in the chat, including the
+short progress lines between tool calls (phase `commentary`) and the reply
+ending each turn (phase `final_answer`). Omitted: harness reminders,
+internal reasoning, tool calls and outputs, subagent records, attachments
+and runtime state, following the coverage rules below. The record's
+`archive_metadata` gives the session id, the turn times, the model
+setting, the SHA-256 of the transcript bytes read, and the repository paths
+of the files the session delivered through tool calls, which are not
+embedded. The first Cowork capture of this kind is the
+[Newman project's chat 1](../newman_certificate_audit/chat-histories/README.md).
+>>>>>>> 4e70caa (Review of next steps and new literature check)
 
 ## Capture a Codex conversation
 
