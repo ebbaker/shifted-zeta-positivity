@@ -16,6 +16,13 @@ histories refer to this shared context instead of duplicating the file.
 Consult [index.json](index.json) for the filename, dates, message count,
 capture time, hashes, and next number.
 
+[Chat 2 — Brainstorm investigation next steps](0002_2026-10-12T20-27-39Z_brainstorm-investigation-next-steps.json)
+records the arithmetic and Newman audit assessment, the new brainstorm,
+and the consolidated base project overview. Its snapshot includes the
+request to add this conversation to the history and completed public
+messages through capture. The recorded session configuration is
+`gpt-6.1-sol`, reasoning effort **ultra**.
+
 ## Capture a Codex conversation
 
 Run the recorder from the investigations-2 base folder. Supply the actual
