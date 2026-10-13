@@ -113,7 +113,7 @@ effort is not exposed to this session and is not inferred.
   reuse the [shared exact checker](../13_microlocal_phase_space/numerics/check_enlarged_state_identities.py)
   and [identity record](../13_microlocal_phase_space/numerics/ENLARGED_STATE_IDENTITY_RECORD_20261010.json)
   rather than copying their sources.
-- [Draft history](DRAFT_HISTOR.md): concise milestone index. Future
+- [Draft history](DRAFT_HISTORY.md): concise milestone index. Future
   milestones point to commits or tags; no manuscript snapshot folders.
 
 The immediate continuation seeks either a uniform correlated estimate for

@@ -316,4 +316,4 @@ Add new investigation notes to the relevant project's `notes/` folder.
 Keep shared coordination records here, reproducible calculations and small
 records in [`numerics/`](../numerics/README.md), scoped reviews in
 [`reviews/`](../reviews/), and milestones in
-[DRAFT_HISTOR.md](../DRAFT_HISTOR.md).
+[DRAFT_HISTORY.md](../DRAFT_HISTORY.md).

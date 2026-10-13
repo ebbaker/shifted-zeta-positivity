@@ -78,7 +78,7 @@ audit is claimed.
 Final source SHA-256: `339b9afe75a422ce17386d0e2707006952e92c3eb6f69048522f56a97aacc938`.
 The source remains in the same manuscript file and editor. No draft
 snapshot, third-party PDF, new commit or tag was created. The existing
-manuscript row in [DRAFT_HISTOR.md](../DRAFT_HISTOR.md) now records this
+manuscript row in [DRAFT_HISTORY.md](../DRAFT_HISTORY.md) now records this
 working-tree integration; the detailed research stays in the linked notes.
 
 ## Research links

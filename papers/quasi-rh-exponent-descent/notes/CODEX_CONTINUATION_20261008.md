@@ -893,7 +893,7 @@ and dependency records in `notes/`, calculations and small records in
 `numerics/`, and reviews in `reviews/`. Link to the original projects
 rather than silently revising their claims. Include model/effort metadata
 honestly. Follow [LARGE_FILES.md](../../../LARGE_FILES.md).
-Use the concise [DRAFT_HISTOR.md](../DRAFT_HISTOR.md) for milestones;
+Use the concise [DRAFT_HISTORY.md](../DRAFT_HISTORY.md) for milestones;
 do not create manuscript snapshot folders. Write a manuscript only when
 there is a coherent result, with authorship and LLM acknowledgement.
 

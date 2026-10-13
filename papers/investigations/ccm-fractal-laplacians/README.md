@@ -28,7 +28,7 @@ remains a conditional quantitative target. Applying it to CCM still requires a d
 - [Exact controls, arithmetic computations, and precision checks](numerics/README.md).
 - [Initial critical review](reviews/RESISTANCE_REALIZATION_CRITICAL_REVIEW_20260926.md).
 - [Critical review of the new construction test](reviews/PRIME_JUMP_GEOMETRY_CRITICAL_REVIEW_20260926.md).
-- [Concise research/milestone index](DRAFT_HISTOR.md).
+- [Concise research/milestone index](DRAFT_HISTORY.md).
 
 The simple-even Weil ground-state hypothesis in general, its original energy sign, an arithmetic geometric embedding, Xi identification, and a full spectral-triple realization remain unresolved. Support length \(L\), Fourier cutoff \(N\), and geometric refinement parameters remain distinct. The untouched Fourier tail remains part of the full CCM determinant.
 

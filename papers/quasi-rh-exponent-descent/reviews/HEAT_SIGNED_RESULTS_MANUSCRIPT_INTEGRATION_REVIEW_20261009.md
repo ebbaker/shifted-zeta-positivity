@@ -146,7 +146,7 @@ through completed messages during the current response; its later final
 delivery belongs in a future refresh of the same chat 2, not an invented
 message or a new number.
 
-[DRAFT_HISTOR.md](../DRAFT_HISTOR.md) and the relevant indexes now link this
+[DRAFT_HISTORY.md](../DRAFT_HISTORY.md) and the relevant indexes now link this
 integration and the overview. All deliverables remain below the repository's
 small-file limit. No draft snapshot folder, Git commit, large derived
 artifact, raw session archive, or modification to synced project sources is

@@ -15,7 +15,7 @@ Section 7 retains the brief retrospective of earlier tests. Section 8 lists the 
 - [Finite-place interface note](notes/FINITE_PLACE_RADIATION_INTERFACE_TEST_20260923.md), [144 controls](numerics/records/finite-place-interface-20260923.json), and [research audit](reviews/review_codex_finite_place_interface_20260923.md).
 - [Thermal boundary/front-rigidity note](notes/THERMAL_BOUNDARY_COUPLING_AND_FRONT_RIGIDITY_TEST_20260923.md), [203 controls](numerics/records/thermal-boundary-structure-20260923.json), and [research audit](reviews/review_codex_thermal_boundary_structure_20260923.md).
 - [Current manuscript integration audit](reviews/review_codex_interface_manuscript_integration_20260923.md), including claim boundaries, note links and all-page review. All audits are by the same assistant; no independent specialist review has been completed.
-- [Build instructions](BUILD.md), [build identity record](BUILD_RECORD.json), and [concise milestone index](DRAFT_HISTOR.md).
+- [Build instructions](BUILD.md), [build identity record](BUILD_RECORD.json), and [concise milestone index](DRAFT_HISTORY.md).
 - [Notes index](notes/README.md), [numerical replay instructions](numerics/README.md), and [reviews index](reviews/README.md).
 
 ## Detailed earlier investigations

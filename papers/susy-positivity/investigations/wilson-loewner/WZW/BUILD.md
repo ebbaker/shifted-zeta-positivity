@@ -35,6 +35,6 @@ The manuscript revision is an editorial integration of the completed research an
 
 ## Milestones and package identity
 
-Use [DRAFT_HISTOR.md](DRAFT_HISTOR.md) for concise milestones, pointing to the containing commit or tag when available and the detailed note and review. Do not create dated manuscript snapshots.
+Use [DRAFT_HISTORY.md](DRAFT_HISTORY.md) for concise milestones, pointing to the containing commit or tag when available and the detailed note and review. Do not create dated manuscript snapshots.
 
 The parent `PACKAGE_RECORD.json` inventories this folder. Refresh its file identities after edits while preserving all unrelated numerical records and custom research metadata. Then run `python3 -B validation/check_package.py check` from the parent Wilson–Loewner directory. The validator's `refresh` command also reruns and rewrites older diagnostics, so it should not be used for a purely editorial update.

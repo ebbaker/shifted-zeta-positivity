@@ -57,7 +57,7 @@ These checks organize the arguments already present in the research notes. They 
 - The original analytical notes, substantive reviews, numerical programs, and small records are preserved byte for byte. Only the project outline and selected indexes receive additive manuscript/pause notices.
 - Existing numerical records are summarized, not rerun. The 76-control electric-parity review is explicitly a rerun of 57 plus 19 existing controls, not an additional unique suite.
 - The parent package inventory was already stale: 45 mismatches within YM and 92 outside YM. Only its YM inventory and standalone-manuscript registration are refreshed. The 92 unrelated discrepancies remain documented rather than silently overwritten.
-- No commit or dated snapshot directory is created. The current version is indexed in [DRAFT_HISTOR.md](../DRAFT_HISTOR.md), with exact source and research fingerprints in [BUILD_RECORD.json](../BUILD_RECORD.json).
+- No commit or dated snapshot directory is created. The current version is indexed in [DRAFT_HISTORY.md](../DRAFT_HISTORY.md), with exact source and research fingerprints in [BUILD_RECORD.json](../BUILD_RECORD.json).
 
 ## Remaining mathematical gap
 

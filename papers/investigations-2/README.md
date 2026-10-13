@@ -323,7 +323,7 @@ independent review. Cite earlier work instead of copying its entire history.
 Manuscripts should identify Edward Baker as author, or state that they are
 drafted for him, as appropriate, and acknowledge LLM assistance. Maintain a
 stable manuscript source. At a manuscript milestone, create or update
-`DRAFT_HISTOR.md` in that project's root with a concise date, investigation,
+`DRAFT_HISTORY.md` in that project's root with a concise date, investigation,
 commit/tag or existing snapshot path, reason it matters, and links to the
 supporting notes and reviews. Do not create new draft snapshot directories.
 

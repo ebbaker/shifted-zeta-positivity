@@ -39,7 +39,7 @@ Baker. It presents the conditional reduction and its proofs, keeps the
 remaining signed estimate explicit, and includes an LLM acknowledgement.
 The [manuscript review](reviews/MANUSCRIPT_REVIEW_20261008.md) records the
 scoped checks and successful native compilation. The concise
-[manuscript history](DRAFT_HISTOR.md) replaces draft snapshot folders.
+[manuscript history](DRAFT_HISTORY.md) replaces draft snapshot folders.
 
 The current **conditional extension** supports the candidate boundary
 `7/8 - 1/24000 = 20999/24000`, with local variance consequence

@@ -156,7 +156,7 @@ Within each investigation, incremental research belongs in `notes/`, numerical
 work in `numerics/`, and reviews in `reviews/`, with model and reasoning-effort
 metadata in notes and reviews. Existing snapshots are historical records;
 future manuscript milestones should point to Git commits or tags in the local
-`DRAFT_HISTOR.md` (or existing `DRAFT_HISTORY.md`), without new snapshot folders.
+`DRAFT_HISTORY.md`, without new snapshot folders.
 
 ## Large files
 

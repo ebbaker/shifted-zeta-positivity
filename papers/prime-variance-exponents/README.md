@@ -111,7 +111,7 @@ power saving remains open. See the
 [fresh internal review](reviews/SIGNED_MELLIN_CONTINUATION_REVIEW_20261004.md).
 
 See [verification status](VERIFICATION_STATUS.md) for the precise check
-scope and [draft history](DRAFT_HISTOR.md) for the manuscript milestone.
+scope and [draft history](DRAFT_HISTORY.md) for the manuscript milestone.
 No independent specialist refereeing or mathematical priority is claimed.
 
 ## Review and reproduction

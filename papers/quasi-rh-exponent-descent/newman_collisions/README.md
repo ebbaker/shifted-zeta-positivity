@@ -57,7 +57,7 @@ No signed opposite condition or pointwise exclusion is proved. Heat Notes
 Detailed derivations remain in `notes/`; small certificate programs and
 records live in [the shared numerics folder](../numerics/README.md), and
 scoped reviews in `../reviews/`. New manuscript milestones belong in
-[DRAFT_HISTOR.md](../DRAFT_HISTOR.md), with no new snapshot folders.
+[DRAFT_HISTORY.md](../DRAFT_HISTORY.md), with no new snapshot folders.
 The investigation's dated conversations are recorded in
 [chat-histories](../chat-histories/README.md); its registry is the numbering
 authority and the latest handoff is at the end of that guide.
@@ -183,7 +183,7 @@ with complete analytical payments and explicit imported hypotheses.
 Native compilation succeeded. The remaining coupled resonant/boundary
 signed inequality, higher multiplicity, and uniform coverage are open.
 [Manuscript review](09_prime_phase_torus/reviews/10_MANUSCRIPT_INTERNAL_REVIEW_20261010.md);
-[project manuscript history](09_prime_phase_torus/DRAFT_HISTOR.md);
+[project manuscript history](09_prime_phase_torus/DRAFT_HISTORY.md);
 [chat 7 record](../chat-histories/0007_2026-10-10T06-56-08Z_summarize-newman-collision-progress.json).
 Drafting: GPT-6.1-sol (Codex), reasoning effort ultra, verified from this
 turn's recorded configuration. Reviews are internal LLM checks.
@@ -221,5 +221,5 @@ sets the proof milestones, and the
 records scoped checks. Preparation: GPT-6.1-sol (Codex), reasoning effort
 ultra, verified from the recorded drafting-turn configuration; internal
 LLM work is not independent mathematical validation. The
-[manuscript history](17_enlarged_state_transport/DRAFT_HISTOR.md)
+[manuscript history](17_enlarged_state_transport/DRAFT_HISTORY.md)
 indexes the initial working source without creating snapshot folders.

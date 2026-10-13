@@ -52,7 +52,7 @@ source compiled successfully with the built-in LaTeX compiler.
 
 See the [manuscript integration review](reviews/MANUSCRIPT_INTEGRATION_REVIEW_20261012.md),
 [build record](numerics/manuscript_build_record_20261012.json), and
-[concise manuscript history](DRAFT_HISTOR.md). The manuscript retains the
+[concise manuscript history](DRAFT_HISTORY.md). The manuscript retains the
 explicit classical dependencies and the audit's independent-review boundary.
 
 ## Final assembly records
@@ -192,5 +192,5 @@ checks and small records, `reviews/` for scoped assessments, and
 [large-file policy](../../../LARGE_FILES.md); third-party PDFs and large
 regenerable outputs stay outside Git. Keep any manuscript at a stable path,
 with author and LLM acknowledgement. Do not create manuscript snapshot
-folders. Record notable milestones in a concise `DRAFT_HISTOR.md`, linking
+folders. Record notable milestones in a concise `DRAFT_HISTORY.md`, linking
 the relevant commit or tag, notes, and reviews.

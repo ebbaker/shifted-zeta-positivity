@@ -37,4 +37,4 @@ Start from the [feature proposal and density correction](../../quasi-rh-exponent
 
 ## Records
 
-Place research in `notes/`, computations and small records in `numerics/`, reviews in `reviews/`, and conversation provenance in `chat-histories/`. Follow the [large-file policy](../../../LARGE_FILES.md). At notable milestones update `DRAFT_HISTOR.md` with concise commit/tag references and links; do not create manuscript snapshot directories.
+Place research in `notes/`, computations and small records in `numerics/`, reviews in `reviews/`, and conversation provenance in `chat-histories/`. Follow the [large-file policy](../../../LARGE_FILES.md). At notable milestones update `DRAFT_HISTORY.md` with concise commit/tag references and links; do not create manuscript snapshot directories.

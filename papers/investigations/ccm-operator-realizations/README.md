@@ -55,7 +55,7 @@ The ninth continuation proves density of the exact threshold profiles in the bar
 - [Continuation round 9: threshold energy and deflation obstruction](notes/CCM_THRESHOLD_ENERGY_OBSTRUCTION_20260928.md).
 - [Sequential adversarial review of round 9](reviews/CCM_THRESHOLD_ENERGY_REVIEW_20260928.md).
 - [Executed threshold-index handoff](notes/CCM_THRESHOLD_INDEX_CONTINUATION_20260928.md).
-- [Concise milestone index](DRAFT_HISTOR.md).
+- [Concise milestone index](DRAFT_HISTORY.md).
 - [Numerical reconstruction and checks](numerics/README.md).
 - [Initial derivation check](reviews/INITIAL_DERIVATION_CHECK_20260926.md).
 - [Critical review of the string realization](reviews/STRING_REALIZATION_CRITICAL_REVIEW_20260926.md).

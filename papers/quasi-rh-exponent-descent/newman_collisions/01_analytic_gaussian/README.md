@@ -48,4 +48,4 @@ Save derivations in `notes/`, numerical programs and small records in
 [numerics/](numerics/README.md), and scoped checks in `reviews/`.
 Follow [LARGE_FILES.md](../../../../LARGE_FILES.md). The stable manuscript
 remains [newman_collision_reductions.tex](../newman_collision_reductions.tex);
-milestone history belongs in [DRAFT_HISTOR.md](../../DRAFT_HISTOR.md).
+milestone history belongs in [DRAFT_HISTORY.md](../../DRAFT_HISTORY.md).

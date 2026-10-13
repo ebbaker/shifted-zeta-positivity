@@ -59,7 +59,7 @@ fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb, whose TeX SHA256 is
 d9a8f15aa770cf883d0eabd2b775fad694ce20b44cba7928f5c0c9a6d8750d4d.
 The manuscript retains its immutable source citation and physical-line
 crosswalk. Its integration is an uncommitted working-tree milestone based
-on repository HEAD 85b0c79, recorded in the [concise history](../DRAFT_HISTOR.md).
+on repository HEAD 85b0c79, recorded in the [concise history](../DRAFT_HISTORY.md).
 
 The [build record](../numerics/manuscript_build_record_20261012.json)
 records the native compilation result and structural checks. All new

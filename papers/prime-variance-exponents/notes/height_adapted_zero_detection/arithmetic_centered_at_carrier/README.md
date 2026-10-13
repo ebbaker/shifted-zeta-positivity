@@ -67,5 +67,5 @@ Save continuation notes here, numerical sources and small records in the
 linked numerics directory, and reviews in the linked reviews directory.
 Follow [LARGE_FILES.md](../../../../../LARGE_FILES.md). No manuscript
 snapshot is created. Future notable commits or tags belong in the
-prime-variance project's existing DRAFT_HISTOR.md; no commit was made
+prime-variance project's existing DRAFT_HISTORY.md; no commit was made
 for this opening investigation.

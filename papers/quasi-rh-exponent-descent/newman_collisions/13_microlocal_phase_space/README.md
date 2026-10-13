@@ -88,7 +88,7 @@ derived bound, not an additional numerical exclusion. The later directed
 integer-power arithmetic supplies the manuscript's adverse-block evidence.
 [Manuscript review](reviews/6_MANUSCRIPT_INTERNAL_REVIEW_20261010.md)
 records internal audits and fresh byte-identical replays.
-[DRAFT_HISTOR.md](DRAFT_HISTOR.md) indexes the working source without a
+[DRAFT_HISTORY.md](DRAFT_HISTORY.md) indexes the working source without a
 snapshot folder. New drafting metadata: GPT-6 (Codex), exact serving variant
 and configured effort not exposed and not inferred; earlier records retain
 their original metadata.

@@ -6,7 +6,7 @@ research in its `notes/`, computations and small execution records in
 author, LLM assistance, and the actual recorded model and effort when
 available; do not infer unavailable settings. Manuscripts name Edward Baker
 or state they were drafted for him and acknowledge LLM assistance. Maintain
-concise milestone entries in the investigation's `DRAFT_HISTOR.md`; create
+concise milestone entries in the investigation's `DRAFT_HISTORY.md`; create
 no new manuscript snapshot folders.
 
 ## Automatic research chat history

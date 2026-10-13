@@ -40,4 +40,4 @@ The concrete WZW question remains the actual slit-sewing map on the boundary aff
 
 ## Preservation and validation
 
-The 72 WZW and 60 arithmetic-source controls are the existing recorded runs of 22 September. The write-up does not add cases or replace those records. See [BUILD.md](../BUILD.md), [the manuscript audit](../reviews/review_codex_manuscript_20260923.md), and [the milestone index](../DRAFT_HISTOR.md). New research notes go in this folder, numerical work in `WZW/numerics` when required, and reviews in `WZW/reviews`.
+The 72 WZW and 60 arithmetic-source controls are the existing recorded runs of 22 September. The write-up does not add cases or replace those records. See [BUILD.md](../BUILD.md), [the manuscript audit](../reviews/review_codex_manuscript_20260923.md), and [the milestone index](../DRAFT_HISTORY.md). New research notes go in this folder, numerical work in `WZW/numerics` when required, and reviews in `WZW/reviews`.

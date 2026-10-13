@@ -121,4 +121,4 @@ Keep large logs, caches, dependencies and regenerable output external.
 The source manifest is reached through `FORMAL_REPLAY_ARCHIVES`. Maintain
 any future manuscript at a stable path, identify Edward Baker or state
 drafted for him, acknowledge LLM assistance, and record milestones in
-`DRAFT_HISTOR.md`. Create no draft snapshot folders.
+`DRAFT_HISTORY.md`. Create no draft snapshot folders.

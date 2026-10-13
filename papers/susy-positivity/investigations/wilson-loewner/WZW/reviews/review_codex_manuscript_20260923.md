@@ -36,4 +36,4 @@ The final PDF has **15 pages**. It compiled with no undefined references or cita
 
 The final inspection covered the title and author line, abstract and complete contents, boundary labels, matrix and block formulas, boxed generator and norm identities, both tables, the source and weighted-operator formulas, appendix, acknowledgements and references. No clipping, overlap, missing glyphs or broken equation labels was observed. PDF text and page-boundary checks supplement the visual inspection; they are not substitutes for it.
 
-The author field says “Drafted for Edward Baker,” and Appendix A.3 acknowledges the substantial LLM assistance and unexposed effort setting. The package follows the no-new-snapshot policy; the live milestone is indexed in [DRAFT_HISTOR.md](../DRAFT_HISTOR.md).
+The author field says “Drafted for Edward Baker,” and Appendix A.3 acknowledges the substantial LLM assistance and unexposed effort setting. The package follows the no-new-snapshot policy; the live milestone is indexed in [DRAFT_HISTORY.md](../DRAFT_HISTORY.md).

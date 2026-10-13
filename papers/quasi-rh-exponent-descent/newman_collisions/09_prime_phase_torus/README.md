@@ -148,7 +148,7 @@ Imported approximation/count inputs and the remaining signed implication
 are explicit. The source compiled successfully with the native LaTeX
 editor and includes the author credit and LLM acknowledgement.
 [Manuscript review](reviews/10_MANUSCRIPT_INTERNAL_REVIEW_20261010.md);
-[concise manuscript history](DRAFT_HISTOR.md);
+[concise manuscript history](DRAFT_HISTORY.md);
 [chat 7 archive](../../chat-histories/0007_2026-10-10T06-56-08Z_summarize-newman-collision-progress.json).
 Drafting: GPT-6.1-sol (Codex), reasoning effort ultra, verified from the
 recorded drafting-turn configuration. All audits are internal LLM checks.

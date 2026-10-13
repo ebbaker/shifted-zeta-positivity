@@ -412,7 +412,7 @@ Research notes live in each investigation's `<project>/notes/` folder;
 the [shared notes index](notes/README.md), continuation plans, and dependency
 ledger live in `notes/`. Checks remain in `reviews/`, and reproducible
 calculations in `numerics/`. This research package contains organized short- and mixed-family manuscripts
-and separate working notes. [DRAFT_HISTOR.md](DRAFT_HISTOR.md) records the initial working
+and separate working notes. [DRAFT_HISTORY.md](DRAFT_HISTORY.md) records the initial working
 state and will index later commits or tags without draft snapshot folders.
 Third-party PDFs and large derived data stay outside the repository under
 [LARGE_FILES.md](../../LARGE_FILES.md).

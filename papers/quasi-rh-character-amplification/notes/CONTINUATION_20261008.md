@@ -191,7 +191,7 @@ hypotheses of the imported reflection, moment, and contour results. A fresh
 LLM critique is useful, but does not replace that validation.
 
 Incorporate checked advances into the existing manuscript in place. Record
-later meaningful Git commits or tags in [DRAFT_HISTOR.md](../DRAFT_HISTOR.md),
+later meaningful Git commits or tags in [DRAFT_HISTORY.md](../DRAFT_HISTORY.md),
 with links to the detailed notes and reviews. Do not create new manuscript
 snapshot folders. This continuation note is a plan, not a new theorem or
 commit milestone.

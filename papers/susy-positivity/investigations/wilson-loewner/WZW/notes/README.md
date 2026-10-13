@@ -28,4 +28,4 @@ The [standalone manuscript](../manuscript.pdf) is the current synthesis. Detaile
 - [Completed deterministic SU(2)_2 pilot](../../notes/SU2_LEVEL2_DETERMINISTIC_LOEWNER_PILOT_20260922.md).
 - [Arithmetic source and generalized Loewner evolution](../../notes/ARITHMETIC_SOURCE_AND_GENERALIZED_LOEWNER_EVOLUTION_20260922.md).
 
-New notes should state their assumptions and result status, identify the model and exposed effort setting when relevant, and link any numerical record or review. Keep detailed research history in these notes and milestone summaries in [DRAFT_HISTOR.md](../DRAFT_HISTOR.md).
+New notes should state their assumptions and result status, identify the model and exposed effort setting when relevant, and link any numerical record or review. Keep detailed research history in these notes and milestone summaries in [DRAFT_HISTORY.md](../DRAFT_HISTORY.md).

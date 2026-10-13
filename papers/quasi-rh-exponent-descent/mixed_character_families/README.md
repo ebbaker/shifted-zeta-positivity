@@ -39,5 +39,5 @@ The [preceding incorporated continuation](notes/28_SIGNED_HIGH_CONDUCTOR_SUPPORT
 
 Research notes remain in `notes/`; finite checks and small records are in
 [the shared numerics folder](../numerics/README.md), and reviews are in
-`../reviews/`. [DRAFT_HISTOR.md](../DRAFT_HISTOR.md) indexes the stable source;
+`../reviews/`. [DRAFT_HISTORY.md](../DRAFT_HISTORY.md) indexes the stable source;
 no draft snapshot folder or new commit was created.

@@ -80,5 +80,5 @@ experiments and small records, `reviews/` for scoped assessments, and
 `chat-histories/` for selected discussion records. Follow the repository
 [large-file policy](../../../LARGE_FILES.md). Keep manuscripts at stable
 paths, with author and LLM acknowledgement, and create no snapshot folders.
-Use a concise `DRAFT_HISTOR.md` for notable milestones, linking commits or
+Use a concise `DRAFT_HISTORY.md` for notable milestones, linking commits or
 tags and the relevant notes and reviews.

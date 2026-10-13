@@ -1,5 +1,11 @@
 # Changelog
 
+## 2026-10-13 — correct draft-history filenames
+
+- Renamed all 11 `DRAFT_HISTOR.md` files to `DRAFT_HISTORY.md`; updated active instructions, links, and affected manifest paths and hashes.
+- Preserved archived conversations and historical discussions of the former spelling.
+- Prepared for Edward Baker with LLM assistance; recorded model `gpt-6.1-sol`, reasoning effort **ultra**.
+
 ## 2026-09-29 — arithmetic-storage: scalar Sonin traces and consolidated project summary
 
 - Enclosed the four prescribed real-place smoothed traces to width below `10^-5`, including the full gamma/contact term and the epsilon correction with complete source and operator errors.
