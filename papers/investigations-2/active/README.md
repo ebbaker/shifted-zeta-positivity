@@ -21,6 +21,13 @@ polynomial controls. There are now 17 active folders. Its first
 genuine-theta boundary pilot now passes on a compact rectangle, with no
 cost advantage over the matched interior test.
 
+Update, 13 October 2026 (note added with Claude Opus 5.5, Claude Cowork): the
+[Claude review](../brainstorm/reviews/REVIEW_OF_ACTIVE_LIFTED_THETA_DIRECTIONS_CLAUDE_20261013.md)
+is now available. It recommends 02, 01 and a new rank-two automorphic lift
+(absorbing 09) as the first bounded tasks, keeps 03 and 06 as destinations,
+and recommends merging or closing 04, 07, 10, 11, 14, 15 and 16. Its
+proposals are recommendations only; no folder has been moved or created.
+
 | Card | Research program | Readiness | First proposed output |
 | --- | --- | --- | --- |
 | 1 | [Complete cutoff reflection](01_complete_cutoff_reflection/README.md) | Bounded first test complete | Exact paired block; shared endpoint survives conjugated reflection |

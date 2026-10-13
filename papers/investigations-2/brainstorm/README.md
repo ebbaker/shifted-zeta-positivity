@@ -30,6 +30,7 @@ certificate targets. It records an exact angular refinement and adds
 as direction 17 for a separate boundary-certificate comparison.
 The review and new records use `gpt-6-astra`, reasoning effort **ultra**.
 
+<<<<<<< HEAD
 ## First research execution
 
 The [first research pass](reviews/PRIORITY_RESEARCH_FIRST_PASS_CODEX_20261013.md)
@@ -47,3 +48,19 @@ and [this research conversation](chat-histories/README.md) accompany the
 pass (`gpt-6-astra`, effort **ultra**). These are internal analytic checks,
 diagnostics and one bounded outward certificate; no global sign or RH
 conclusion is established.
+=======
+## Claude review of the active directions
+
+The [Claude review](reviews/REVIEW_OF_ACTIVE_LIFTED_THETA_DIRECTIONS_CLAUDE_20261013.md)
+(Claude Opus 5.5, configured identifier `claude-opus-5-5`, reasoning effort
+**max**) is the review that the active programs were waiting for. It endorses
+the Codex ranking with changes. It argues that the theta source is already
+selected by reflection plus the integral lattice law, so a new symmetry
+matters only if it carries a sign through the Newman deformation. It adds
+Euler-factor control sources with positive de Bruijn–Newman constant, and
+proposes a new first-group direction: the rank-two automorphic lift, in which
+the paired kernels are geodesic moments of the Eisenstein series, with a
+verified exact formula for the first Laguerre expression of \(\xi\). Its
+[checks](numerics/README.md#claude-review-of-the-active-directions) accompany
+it. No folder was moved or created.
+>>>>>>> f2e4b17 (Reviews from Claude and new directions)

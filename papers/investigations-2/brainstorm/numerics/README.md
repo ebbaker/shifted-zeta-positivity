@@ -77,6 +77,7 @@ boundary dictionaries have direct derivations; they are not additional
 claims of computational certification. All retained files are small and
 no third-party PDFs or large generated data were added.
 
+<<<<<<< HEAD
 ## Prioritized research first pass
 
 13 October 2026. Prepared for Edward Baker with substantial LLM assistance;
@@ -94,3 +95,30 @@ New checkers and their detailed records live in their own investigations:
 The shared record distinguishes exact rational checks, floating theta/chirp
 diagnostics and the fully paid compact theta certificate. No broader
 certificate campaign or large dataset was produced.
+=======
+## Claude review of the active directions
+
+13 October 2026. Prepared for Edward Baker with LLM assistance by Claude
+Opus 5.5 (configured identifier `claude-opus-5-5`; the serving model may
+differ), Claude Cowork, reasoning effort **max**. Internal checks, not
+independent mathematical validation.
+
+- [check_active_directions_review_claude_20261013.py](check_active_directions_review_claude_20261013.py):
+  standard library only, deterministic, about two seconds.
+- [ACTIVE_DIRECTIONS_REVIEW_CHECKS_CLAUDE_20261013.json](ACTIVE_DIRECTIONS_REVIEW_CHECKS_CLAUDE_20261013.json):
+  the retained record, generated on this machine with Python 3.10.12.
+- Consumer: the [Claude review](../reviews/REVIEW_OF_ACTIVE_LIFTED_THETA_DIRECTIONS_CLAUDE_20261013.md).
+
+Part A is 27 exact rational assertions: the Newman dilation lemma, the
+Laguerre product rule, the pair second-derivative identity and the folded
+pole terms. Part B is a double-precision quadrature replay of the
+rank-two (Eisenstein) formulas for \(G^2\) and \(G'^2-GG''\) at six heights,
+including the first zero, and of the first Laguerre expression of \(H_0\)
+against direct theta integrals at five. It also covers the Eisenstein
+normalization, evenness of the raw theta series, and the Euler-factor control
+table. Part B is evidence, not interval arithmetic.
+
+```sh
+python3 -I check_active_directions_review_claude_20261013.py --output /tmp/claude-review-check.json
+```
+>>>>>>> f2e4b17 (Reviews from Claude and new directions)
