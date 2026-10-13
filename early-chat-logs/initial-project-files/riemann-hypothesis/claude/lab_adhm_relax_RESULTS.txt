@@ -1,0 +1,147 @@
+
+==============================================================================
+PART 1  sanity: the complex adjoint and right-eigenvalue classes
+==============================================================================
+  T = (i) as a 1x1 quaternionic matrix: eigenvalues of chi(T) = [0.+1.j 0.-1.j] -> class is the unit sphere, NOT real
+  T = diag(2,-3) real:                  classes = [-3.+0.j -3.-0.j  2.+0.j  2.-0.j] -> real
+  200 random quaternionic HERMITIAN 3x3 (T_0 sym, T_1..3 antisym):
+    max |Im| over all right-eigenvalue classes = 1.43e-15  (spectral theorem)
+
+==============================================================================
+PART 2  R1: what matching on ONE slice forces
+==============================================================================
+  Setting.  Delta^dag Delta real gives (memo7 §2)
+      M(q) = C + |q|^2 I - 2 sum_a x_a T_a ,  C = sum_a T_a^2 + Re(lam^dag lam),
+  all T_a real symmetric.  Restricting to Pi_e and substituting u = x_0 + eta,
+  v = x_0 - eta after y -> i.eta gives, exactly as in memo7 but for this ONE e,
+      det( uv I - u N - v Nbar + C ) = p(u) p(v),      N = T_0 + i T_e .
+  The u^{k-1}v^{k-1} coefficient still gives the trace relation
+      tr C = tr T_0^2 + tr T_e^2 .                                   (*)
+
+  Consequences of (*) alone.  Write g_ab = tr(T_a T_b), a,b >= 1 -- the Gram
+  matrix of T_1,T_2,T_3 in the Frobenius inner product, so g >= 0.  Then
+  tr T_e^2 = e^T g e and sum_{a>=1} tr T_a^2 = tr g, so (*) reads
+      tr g + ||lam||^2 = e^T g e  <=  lam_max(g)  <=  tr g ,
+  forcing  ||lam|| = 0,  rank g <= 1,  and e a top eigenvector: g = kappa e e^T.
+  Then ||T_a - e_a T_e||^2 = kappa e_a^2 - 2 kappa e_a^2 + kappa e_a^2 = 0, i.e.
+      lambda = 0    and    T_a = e_a S   for a = 1,2,3,  S := T_e .
+  So T = T_0 + S e is C_e-VALUED.  The ADHM equations then read
+  e_a [T_0,S] - eps_abc [e_b S, e_c S] = e_a [T_0,S] = 0, so [T_0,S] = 0.
+  Finally C = T_0^2 + S^2 = Nbar N, so det M = pbar(u) p(v) on the slice, with
+      p(v) = det(vI - T_0 - i S),   T_0, S commuting real symmetric.
+
+  ONE MORE CONDITION IS NEEDED for sufficiency, and it was missing from the
+  first draft of this characterisation (caught by an adversarial review): the
+  identity requires pbar = p, i.e. p must have REAL coefficients.  Since T_0
+  and S commute they are simultaneously orthogonally diagonalisable, with joint
+  eigenvalues (tau_j, sigma_j) and p(v) = prod_j (v - tau_j - i sigma_j); so
+  the extra condition is that the joint spectrum be invariant under
+  sigma -> -sigma.  Equivalently tr(T_0^m S^n) = 0 for all odd n; in particular
+  tr S = 0 is forced, and for k = 2 with p non-hyperbolic T_0 must be scalar.
+  Counterexample to the version without it: k = 2, T_0 = 0, S = diag(1,2) meets
+  every other listed condition but matches no real p at all.
+
+  Also worth stating: lambda = 0 makes the last row of Delta vanish, so the
+  matched data is not a REGULAR ADHM datum -- it sits outside the instanton
+  moduli space proper.  (memo7's matched data has the same defect.  It is
+  expected, since a nonempty jumping locus is exactly what we asked for, but it
+  means the objects being produced are degenerate as gauge theory.)
+
+  Verifying the characterisation numerically: solve R1 and inspect the
+  structure of the solution (e chosen generically).
+    k=2  z^2-1  (hyperbolic)      residual 3.36e-15   |lam| 1.6e-08   max|T_a - e_a S| 1.8e-08   |[T_0,S]| 1.3e-16
+    k=2  z^2+1  (NOT hyp)         residual 2.31e-15   |lam| 1.3e-08   max|T_a - e_a S| 9.2e-09   |[T_0,S]| 5.1e-17
+    k=3  (z^2+1)(z-1) (NOT hyp)   residual 5.19e-15   |lam| 2.7e-08   max|T_a - e_a S| 4.6e-09   |[T_0,S]| 4.3e-16
+
+  Explicit data realising an arbitrary real monic p on one slice
+  (T_0 = diag of real parts, S = diag of imaginary parts, e arbitrary):
+    z^2+1                            hyperbolic False   ADHM residual 0.0e+00   rel. slice error 9.4e-16
+    z^2+z+1                          hyperbolic False   ADHM residual 0.0e+00   rel. slice error 8.5e-16
+    X^4+10X^3+26X^2+22X+3 [memo5]    hyperbolic False   ADHM residual 0.0e+00   rel. slice error 2.6e-14
+    (z^2+1)(z^2+4)                   hyperbolic False   ADHM residual 0.0e+00   rel. slice error 2.6e-14
+
+  => R1 is satisfiable for EVERY real monic p.  No discriminating power,
+     and the data is forced commutative and C_e-valued anyway.
+
+==============================================================================
+PART 3  R2: the threshold is one slice plus ONE POINT
+==============================================================================
+  Within the R1 family, diagonalise (T_0,S) jointly and put t = <Im q, e>,
+  r = |Im q|, A_j = (x_0 - tau_j)^2, B_j = A_j + r^2 + sigma_j^2.  Then
+      det M(q) = prod_j (B_j - 2 t sigma_j),     P_p(q) = prod_j (B_j - 2 r sigma_j).
+  Conjugate pairing (sigma -> -sigma) turns each into a product over pairs of
+      B^2 - 4 s sigma^2   with s = t^2 (left) or r^2 (right),
+  and B^2 - 4 r^2 sigma^2 = (A + (r-sigma)^2)(A + (r+sigma)^2) >= 0, so every
+  factor is positive and strictly decreasing in s on [0, r^2].  Cauchy-Schwarz
+  gives t^2 <= r^2 with equality EXACTLY when Im q is parallel to e, i.e. on
+  Pi_e.  Hence
+      det M(q) - P_p(q) > 0   for every q outside Pi_e,  whenever S != 0,
+  and identically 0 when S = 0.  So ONE off-slice point already forces S = 0,
+  i.e. T_1 = T_2 = T_3 = 0 and p hyperbolic.  Two slices is sufficient but far
+  from minimal: for e' not parallel to e, S' = (e.e') S and e_a S = (e.e') e'_a S
+  force e = (e.e') e', so |e.e'| = 1 and e' = +-e, contradiction; hence S = 0.
+
+  Two caveats.  (1) Pi_e and Pi_{e'} always meet in the real axis, so "the real
+  axis of a second slice" adds nothing -- the extra point must be genuinely off
+  Pi_e.  (2) The forcing is not uniform: for two slices at angle theta the best
+  residual for S != 0 data scales as O(theta^2), so any APPROXIMATE two-slice
+  condition with tolerance eps admits non-hyperbolic p once eps >~ theta^2.
+
+  configuration           p = z^2+1 (NOT hyp)    p = z^2-1 (hyp)
+  1 slice                            3.43e-15           3.28e-15
+  2 slices (generic)                 1.52e+00           4.72e-15
+  2 slices (orthog.)                 1.93e+00           4.34e-15
+  3 slices (i, j, k)                 3.29e+00           4.84e-15
+  1 slice + 1 point    p = z^2+1 (NOT hyp)   best residual 4.22e-01
+  1 slice + 1 point    p = z^2-1 (hyp)       best residual 4.23e-15
+
+  the deficit formula, checked on 4000 random points of H:
+    z^2+1                            formula err 9.9e-15 / 5.9e-15   min deficit +2.606e-03   frac>0 1.000
+    (z-1)((z+2)^2+9)                 formula err 1.2e-14 / 5.4e-15   min deficit +6.898e-03   frac>0 1.000
+    X^4+10X^3+26X^2+22X+3 [memo5]    formula err 9.8e-14 / 4.5e-14   min deficit +2.960e-04   frac>0 1.000
+    (z-1)(z-2)  [hyperbolic]         formula err 1.2e-14 / 6.1e-15   min deficit -4.547e-13   frac>0 0.000
+
+==============================================================================
+PART 4  R3: does the ADHM variety force real eigenvalue classes?
+==============================================================================
+  ADHM reality makes T quaternionic SYMMETRIC (T_a all symmetric,
+  i.e. T^transpose = T), NOT quaternionic Hermitian -- so the spectral
+  theorem does not apply and non-real classes are not excluded a priori.
+
+  k=2: 150 admissible data; fraction with a NON-REAL eigenvalue class (|Im|/|T| > 1e-6): 1.00;  median |Im|/|T| = 1.411
+  k=3: 150 admissible data; fraction with a NON-REAL eigenvalue class (|Im|/|T| > 1e-6): 1.00;  median |Im|/|T| = 1.573
+  k=4: 150 admissible data; fraction with a NON-REAL eigenvalue class (|Im|/|T| > 1e-6): 1.00;  median |Im|/|T| = 1.772
+
+  => the ADHM equations place no reality constraint on the spectrum:
+     zero spheres are permitted, so the class supplies no isolation.
+
+==============================================================================
+SUMMARY
+==============================================================================
+  R1 (one slice) is completely characterised: lambda = 0, T_a = e_a S,
+  [T_0,S] = 0, C = T_0^2 + S^2, joint spectrum of (T_0,S) invariant under
+  sigma -> -sigma, and p = char poly of T_0 + iS.  Every real monic p arises, so
+  the condition has NO discriminating power -- and the data is commutative and
+  C_e-valued anyway, so the noncommutativity is lost too.  Relaxing to one slice
+  is worse on both counts than the full matching of memo7.
+
+  R2: the threshold is one slice plus ONE off-slice point, by the exact deficit
+  formula.  Two slices is sufficient but far from minimal, and non-uniform:
+  the forcing degrades as O(theta^2) in the angle between slices.
+
+  R3: admissible ADHM data generically has non-real right-eigenvalue classes,
+  so dropping matching in favour of the quaternionic spectrum gives a class
+  that permits zero spheres -- no isolation, hence nothing to contradict.
+
+  Mechanism, sharply.  The entire discriminant is r^2 - t^2 -- the deviation of
+  Im q from the slice direction e -- weighted by the sigma_j, i.e. by the
+  imaginary parts of the roots.  It is supported exactly on the 2-sphere
+  directions transverse to any single slice, and the slice is precisely the
+  equality locus of the Cauchy-Schwarz inequality t^2 <= r^2.  So a one-slice
+  condition is evaluated exactly where the discriminant vanishes: not merely
+  weak, but blind by construction.  Two secondary consequences: restricted to
+  the slice the data abelianises (T_0 + S e with [T_0,S] = 0 is a C_e-valued
+  NORMAL matrix, i.e. ordinary one-variable complex linear algebra), and within
+  the R1 family "p hyperbolic" becomes exactly "S = 0", i.e. "T_0 + iS is
+  SELF-ADJOINT" -- the relaxation lands on the Hilbert-Polya statement with no
+  new input, which is a named destination but not a mechanism.

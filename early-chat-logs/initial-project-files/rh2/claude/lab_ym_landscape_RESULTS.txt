@@ -1,0 +1,155 @@
+
+==============================================================================
+Q1  the GKS energy gap is ADDITIVE, so its relative size vanishes
+==============================================================================
+  Bogomolny minimum for charge k:  E_min(k) = 8 pi^2 k.
+  GKS: any non-self-dual YM connection has E >= E_min(k) + 16 pi^2.
+  So the gap is a FIXED 2 instanton actions, independent of k.
+
+   charge k  E_min / 8pi^2  gap / 8pi^2   relative gap
+          1              1            2         2.0000
+          2              2            2         1.0000
+          3              3            2         0.6667
+          5              5            2         0.4000
+         10             10            2         0.2000
+         50             50            2         0.0400
+        100            100            2         0.0200
+       1000           1000            2         0.0020
+
+  => the gap theorems isolate the (anti-)self-dual STRATUM.  They do not
+     become stronger at high charge; the relative gap -> 0.  Whatever
+     rigidity they give is a statement about a neighbourhood of the ASD
+     locus, and says nothing about the non-self-dual sector where the
+     freedom actually is.
+
+==============================================================================
+Q2  the known non-self-dual solutions are increasingly unstable saddles
+==============================================================================
+  Sadun's quadrupole family (CMP 163, 1994), r,t odd >= 3:
+    c_2 = (r^2 - t^2)/8,  Morse index = r*t,  nullity = 12.
+  Taubes' lower bound for any non-minimal YM connection: i >= 2(|c_2| + 1).
+
+       (r,t)       c_2  index r*t  nullity  Taubes 2(|c2|+1)  index/|c2|
+       (3,3)       0.0          9       12               2.0         inf
+       (5,3)       2.0         15       12               6.0       7.500
+       (5,5)       0.0         25       12               2.0         inf
+       (7,3)       5.0         21       12              12.0       4.200
+       (7,5)       3.0         35       12               8.0      11.667
+       (7,7)       0.0         49       12               2.0         inf
+       (9,3)       9.0         27       12              20.0       3.000
+       (9,5)       7.0         45       12              16.0       6.429
+       (9,7)       4.0         63       12              10.0      15.750
+      (11,3)      14.0         33       12              30.0       2.357
+      (11,5)      12.0         55       12              26.0       4.583
+      (11,7)       9.0         77       12              20.0       8.556
+      (15,3)      27.0         45       12              56.0       1.667
+      (15,5)      25.0         75       12              52.0       3.000
+      (15,7)      22.0        105       12              46.0       4.773
+      (21,3)      54.0         63       12             110.0       1.167
+      (21,5)      52.0        105       12             106.0       2.019
+      (21,7)      49.0        147       12             100.0       3.000
+
+  Two readings.  (i) index grows without bound, so these are deep saddles --
+  no local minimum, no stability, and by Bourguignon-Lawson any WEAKLY
+  STABLE Yang-Mills field on S^4 (SU(2), SU(3), U(2)) is (anti-)self-dual.
+  (ii) index/|c_2| stays O(1), matching the GKS index-energy bound: the
+  instability scales linearly with the energy.  There is no regime in which
+  a non-self-dual solution becomes rigid.
+
+==============================================================================
+Q3  what the programme needs, against what the literature supplies
+==============================================================================
+  requirement                                   self-dual / ADHM         full YM
+  existence cheap (big solution space)                no  (8k-3)   YES (inf-dim)
+  solution space determined vs overdetermined           overdet.      determined
+  nonzero current available                                   no             YES
+  Bogomolny / energy bound available              yes (equality)    yes (strict)
+  isolation theorem for the class                gap thms nearby      NONE known
+  solutions isolated in moduli                 yes (smooth mod.)   NO (families)
+  weakly stable members                             yes (minima)   NONE (Taubes)
+  2-sphere excluded from degeneracy locus       n/a (no jumping) NO -- it is the
+                                                                   generic locus
+
+  The last row is the decisive one and it is not our computation.  In Sadun's
+  family -- the standard construction of non-self-dual Yang-Mills fields on S^4 --
+  the solutions are parametrised partly by the HOLONOMY AROUND A 2-SPHERE
+  S_+ subset S^4 (a singular orbit of the SO(3) action), and the family includes
+  connections with a holonomy singularity along exactly that 2-sphere
+  (classification: Sibner-Sibner, CMP 1992).
+
+  So in the very sector where full Yang-Mills has its freedom, a 2-sphere is the
+  STANDARD degeneracy locus rather than a forbidden one.  The programme needs
+  "no 2-sphere" as a theorem about the class.  The literature says 2-spheres are
+  where the interesting non-self-dual solutions live.
+
+==============================================================================
+SUMMARY  the trade-off of brief §3, now external
+==============================================================================
+  Full Yang-Mills buys EXISTENCE at exactly the cost of ISOLATION, and the
+  exchange rate is documented by other people's theorems:
+
+    * existence: the YM system after gauge fixing is a DETERMINED second-order
+      elliptic system, so local solutions are parametrised by boundary data --
+      infinite-dimensional.  The ASD equations are OVERDETERMINED (first order,
+      3 equations for 4 unknowns modulo gauge), which is the structural reason
+      the instanton moduli space is a finite 8k-3 and full YM has no analogue.
+      This is the one place in the whole programme where the finiteness
+      criticism of memo15 §0(5) is answered.
+
+    * isolation: every rigidity theorem in the subject has the form
+      "small ==> (anti-)self-dual or flat" -- Bourguignon-Lawson-Simons, Min-Oo,
+      Dodziuk-Min-Oo, Gerhardt, Nakajima, Feehan I/II, Feehan discreteness,
+      Gursky-Kelleher-Streets, Vieira.  Not one isolates a NON-self-dual
+      solution.  And Sadun's continuous 2-parameter family shows non-self-dual
+      solutions are not isolated even within a single symmetry class.
+
+  So the freedom that makes full Yang-Mills attractive is the same freedom that
+  destroys the sphere-free property.  That is brief §3's rigidity/existence
+  trade-off again -- but for the first time it is instantiated by an external
+  literature rather than by our own matrix computations, at the level of a whole
+  PDE theory.
+
+==============================================================================
+Q4  do the candidate degeneracy loci even have the right DIMENSION?
+==============================================================================
+  The zero set of R Xi in H is a union of 2-SPHERES (2-dimensional, one per
+  conjugate pair) and POINTS (0-dimensional, one per real zero).  Any locus we
+  propose to match it against must be able to be 2-dimensional.
+
+  For a Yang-Mills field on a 4-manifold with structure group G, dim g = d, the
+  anti-self-dual curvature F^- is a section of Lambda^2_- tensor g, i.e. a
+  3 x d matrix of functions.  The rank-degeneracy loci have codimension
+      codim{ rank F^- <= r } = (3 - r)(d - r).
+  In a 4-manifold, a locus can contain a 2-sphere only if its dimension is >= 2,
+  i.e. codimension <= 2.
+
+  G          d = dim g         r<=0      r<=1      r<=2
+  U(1)               1        3(1d)     0(4d)        --
+  SU(2)/SO(3)         3     9(empty)     4(0d)     1(3d)
+  U(2)               4    12(empty)  6(empty)     2(2d)
+  SU(3)              8    24(empty) 14(empty)  6(empty)
+  SO(4)              6    18(empty) 10(empty)     4(0d)
+
+  Reading (codim c gives a locus of dimension 4 - c, 'empty' if c > 4):
+   * SU(2)/SO(3), d = 3:  codims 9, 4, 1  ->  loci are EMPTY, POINTS, or a
+     HYPERSURFACE.  Nothing 2-dimensional.  So no curvature rank locus of an
+     SU(2) Yang-Mills field can BE a union of 2-spheres.  The dimensions
+     simply do not line up, before any analysis.
+   * and the two that are not empty are both dead for other reasons: the
+     0-dimensional one is counted by a Thom polynomial in characteristic
+     classes (Feher-Nemethi-Rimanyi), hence a deformation invariant, hence
+     brief §6.3; the hypersurface can contain spheres, so it supplies no
+     isolation theorem.
+
+   * U(2), d = 4, is the ONE case where codim 2 occurs: {rank F^- <= 2} =
+     {det of the 3x4 minors degenerate} has codim (3-2)(4-2) = 2, i.e. a
+     2-DIMENSIONAL locus, which can be a union of 2-spheres.  This is the
+     only slot in the whole family that is not excluded on dimension
+     grounds, and U(2) is also inside the Bourguignon-Lawson stability
+     theorem's hypothesis.  It is the one concrete thing here worth a day.
+
+  CAVEAT.  'codim c' is the GENERIC codimension.  For a particular Yang-Mills
+  field the locus can be larger than generic, so these counts exclude
+  matching-by-dimension but do NOT by themselves give an isolation theorem
+  (which would need the reverse: a proof that the locus can never be
+  2-dimensional for ANY member of the class).

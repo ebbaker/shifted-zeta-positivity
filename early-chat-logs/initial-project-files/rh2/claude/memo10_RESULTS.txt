@@ -1,0 +1,323 @@
+# Results for memo 10 (2026-08-23)
+# Sources: lab_q_normal_form.py, lab_laguerre_grade{,2,3}.py, lab_obstruction_groups.py
+
+################ lab_q_normal_form.py
+
+==============================================================================
+CHECK 1  eta(w) is a unit imaginary quaternion; w -> eta(w) is stereographic
+==============================================================================
+  max |real part|        = 2.78e-17
+  max | |eta(w)| - 1 |   = 2.22e-16
+  max |sin^2(theta/2) - |w-v|^2/((1+|w|^2)(1+|v|^2))| = 3.33e-16
+  => eta is the standard stereographic chart, chordal metric included.
+
+==============================================================================
+CHECK 2  rho acts ANTIPODALLY on the w-sphere: eta(-1/conj w) = -eta(w)
+==============================================================================
+  max | eta(-1/conj w) + eta(w) | = 2.31e-16
+
+==============================================================================
+CHECK 3  no Ruling-B line is rho-invariant (but Ruling-A lines are, iff zeta real)
+==============================================================================
+  rho maps the Ruling-B line {w = w0} to {w = -1/conj w0}.  Fixed would need
+  w0 = -1/conj w0, i.e. |w0|^2 = -1: impossible.  Distances on the sphere:
+    w0 =           0j   eta(w0).eta(rho w0) = -1.000000   (always -1: antipodal)
+    w0 =       (1+0j)   eta(w0).eta(rho w0) = -1.000000   (always -1: antipodal)
+    w0 =   (0.3-0.7j)   eta(w0).eta(rho w0) = -1.000000   (always -1: antipodal)
+    w0 =       (5+2j)   eta(w0).eta(rho w0) = -1.000000   (always -1: antipodal)
+
+  Ruling A: rho(L_zeta) = L_(conj zeta), invariant iff zeta real -- this is
+  exactly the sigma-type invariant of twistor_lift §3.  So the invariant lives
+  on Ruling A, while a SLICE is a Ruling-B line, and no slice is rho-real.
+
+==============================================================================
+CHECK 4  nu^2 = y^2 sin^2(theta) = 4 y^2 * g_FS(dw,dw) + O(|dw|^4)
+==============================================================================
+  nu^2 := r^2 - t^2 with r = |Im q|, t = <Im q, e>, e = eta(w0), q = x + y eta(w)
+
+            w0      y       |dw|     nu^2 (exact)   4y^2 |dw|^2/(1+|w0|^2)^2      ratio
+            0j    0.8      1e-01 2.5095578865e-02           2.5600000000e-02   0.980296
+            0j    0.8      1e-02 2.5594880768e-04           2.5600000000e-04   0.999800
+            0j    0.8      1e-03 2.5599948801e-06           2.5600000000e-06   0.999998
+    (0.4-0.9j)    0.8      1e-01 6.7320128197e-03           6.5964080497e-03   1.020557
+    (0.4-0.9j)    0.8      1e-02 6.6142915433e-05           6.5964080497e-05   1.002711
+    (0.4-0.9j)    0.8      1e-03 6.5982375053e-07           6.5964080497e-07   1.000277
+    (1.7+0.6j)    0.8      1e-01 1.3095464384e-03           1.4173010381e-03   0.923972
+    (1.7+0.6j)    0.8      1e-02 1.4060989698e-05           1.4173010381e-05   0.992096
+    (1.7+0.6j)    0.8      1e-03 1.4161765083e-07           1.4173010381e-07   0.999207
+
+  isotropy: nu^2 must depend on dw only through |dw| (a Hermitian form).
+            w0     |dw|  spread of nu^2 over 12 phases of dw
+            0j    1e-01  spread 0.000e+00   mean 2.509558e-02
+            0j    1e-02  spread 1.110e-16   mean 2.559488e-04
+    (0.4-0.9j)    1e-01  spread 1.305e-03   mean 6.578734e-03
+    (0.4-0.9j)    1e-02  spread 1.312e-06   mean 6.596233e-05
+
+==============================================================================
+SUMMARY
+==============================================================================
+  A slice Pi_e is a Ruling-B line {w = w0} in the incidence quadric Q, whose
+  normal direction is ONE COMPLEX dimension (Q is 2-dimensional, the line is 1).
+  memo9's two real transverse directions in H are that one complex direction, and
+
+      nu^2  =  r^2 - t^2  =  y^2 sin^2(theta)  =  4 y^2 g_FS(dw,dw) + O(|dw|^4),
+
+  so memo9's transverse Hessian is a POSITIVE HERMITIAN FORM on the normal bundle
+  of a Ruling-B line -- a real multiple of the Fubini-Study metric on the sphere of
+  complex structures, with coefficient 4 y^2 * 4 R_0 sum_p sigma_p^2 prod(...).
+  The isotropy that memo9 observed numerically is exactly the U(1)-invariance of
+  the round metric.  "Second transverse jet along a slice" = "second-order normal
+  data along a Ruling-B line of Q".
+
+  AND: rho maps {w = w0} to the ANTIPODAL Ruling-B line {w = -1/conj w0}, always
+  disjoint from it.  So no slice is rho-real, and the sigma-type invariant -- which
+  is a property of RULING-A components and of how rho permutes them -- cannot be
+  read off any finite-order jet along a single Ruling-B line, at any order: rho
+  moves the base line to a line at finite distance, which no jet reaches.
+
+################ lab_obstruction_groups.py
+==============================================================================
+h^1(Q, O(a,b)) on Q = P^1 x P^1  (nonzero only for mixed signs)
+==============================================================================
+      b:      -8    -7    -6    -5    -4    -3    -2    -1     0     1     2
+  a= -8        0     0     0     0     0     0     0     0     7    14    21
+  a= -7        0     0     0     0     0     0     0     0     6    12    18
+  a= -6        0     0     0     0     0     0     0     0     5    10    15
+  a= -5        0     0     0     0     0     0     0     0     4     8    12
+  a= -4        0     0     0     0     0     0     0     0     3     6     9
+  a= -3        0     0     0     0     0     0     0     0     2     4     6
+  a= -2        0     0     0     0     0     0     0     0     1     2     3
+  a= -1        0     0     0     0     0     0     0     0     0     0     0
+  a=  0        7     6     5     4     3     2     1     0     0     0     0
+  a=  1       14    12    10     8     6     4     2     0     0     0     0
+  a=  2       21    18    15    12     9     6     3     0     0     0     0
+  a=  3       28    24    20    16    12     8     4     0     0     0     0
+  a=  4       35    30    25    20    15    10     5     0     0     0     0
+  a=  5       42    36    30    24    18    12     6     0     0     0     0
+  a=  6       49    42    35    28    21    14     7     0     0     0     0
+  a=  7       56    48    40    32    24    16     8     0     0     0     0
+  a=  8       63    54    45    36    27    18     9     0     0     0     0
+
+  => h^1(Q,O(a,b)) != 0 iff (a >= 0 and b <= -2) or (a <= -2 and b >= 0):
+     the two rulings must enter with OPPOSITE signs.  A symmetric twist
+     O(-c,-c) has h^1 = 0 for every c, so a bundle whose End is built from
+     symmetric line bundles has NO obstruction at any order.
+
+==============================================================================
+the model bundle from twistor_lift: E = O + O(-d,0),  End E > O(d,0) + O(-d,0)
+==============================================================================
+  twistor_lift §3: the zero divisor of the product-type lift F x id is
+  Z(F) x P^1_w = sum over zeros of {zeta = zeta_i}, i.e. the pullback of a degree-d
+  divisor from P^1_zeta.  So O(Z) = O(d,0) -- ASYMMETRIC between the rulings, which
+  is exactly the sign pattern the table above requires.  Orders m = n+1:
+
+  Convention: the obstruction to extending from Q^(m-1) to Q^(m) involves the
+  m-th power of the conormal bundle.  Row m is therefore the obstruction to
+  REACHING the m-th formal neighbourhood Q^(m).
+
+   reach Q^(m)   h^1(Q, O(d-2m, -2m))  for d =
+                      0     2     4     6     8    10    12    14
+         m = 1        0     1     3     5     7     9    11    13
+         m = 2        0     0     3     9    15    21    27    33
+         m = 3        0     0     0     5    15    25    35    45
+         m = 4        0     0     0     0     7    21    35    49
+         m = 5        0     0     0     0     0     9    27    45
+
+  nonzero iff d >= 2m.  So:
+    reaching Q^(1): needs deg >= 2
+    reaching Q^(2): needs deg >= 4
+    reaching Q^(3): needs deg >= 6      <-- the Yang-Mills slot in the ambitwistor ladder
+    reaching Q^(4): needs deg >= 8
+
+  READING.  The obstruction group is nonzero exactly when the divisor degree
+  is large enough relative to the order -- and the THIRD-order slot, the one
+  that carries the field equation in the ambitwistor correspondence, first
+  opens at degree 6.  So the Jensen truncations J^{d,n} of Xi with d >= 6 are
+  the smallest ones for which a third-order obstruction is not excluded on
+  dimension grounds alone.  Below d = 6 the route is dead for free.
+
+  What this does NOT say: that any such obstruction is nonzero, or that it
+  encodes reality of zeros.  See the caveat in the docstring.
+
+################ lab_laguerre_grade.py
+
+==============================================================================
+PART 1  hyperbolic controls (must show NO detection at any n, m)
+==============================================================================
+  p                                                        Turan  first n: L_n<0  first m: P_m<0
+  z^2-1                                                   2.0000       none <= 2       none <= 8
+  (z-1)(z-2)                                              1.2500       none <= 2       none <= 8
+  (z-1)(z-2)(z-3)                                         1.5556       none <= 3       none <= 8
+  (z^2-1)(z^2-4)                                          2.5000       none <= 4       none <= 8
+  (z-1)^2(z+3)                                            1.2222       none <= 3       none <= 8
+
+==============================================================================
+PART 2  standard non-hyperbolic set (brief §9.2)
+==============================================================================
+  p                                                        Turan  first n: L_n<0  first m: P_m<0
+  z^2+1                                                  -2.0000               1               1
+  z^2+z+1                                                -1.0000               1               1
+  (z^2+1)(z-1)                                           -1.0000               1               1
+  (z^2+1)(z^2-1)                                          0.0000               2       none <= 8
+  (z^2+1)(z^2+4)                                         -2.5000               1               1
+  (z-1)((z+2)^2+9)                                       -0.6923               1               1
+  memo5 quartic                                           1.1298               1               1
+
+==============================================================================
+PART 3  HARD cases: conjugate pairs shielded by real zeros
+==============================================================================
+  p                                                        Turan  first n: L_n<0  first m: P_m<0
+  (z^2-1)(z^2+100)          [pair at +-10i, shielded by +-1]   -1.9800               3       none <= 8
+  (z^2-1)(z^2-4)(z^2+400)   [pair at +-20i, shielded]    -1.9750               5       none <= 8
+  (z^2-1)(z^2-4)(z^2-9)(z^2+2500) [pair at +-50i, shielded]   -1.9888       none <= 6       none <= 8
+  (z-1)(z+1)((z-0.5)^2+64)  [asymmetric shielded pair]   -1.9533               3       none <= 8
+
+==============================================================================
+PART 4  detail on the memo-5 quartic and on the shielded cases
+==============================================================================
+  memo5 quartic   normalised roots [-1.      +0.j       -0.254256+0.008822j -0.254256-0.008822j
+ -0.025679+0.j      ]
+      n        min_x L_n   |     m        min_x P_m     argmin
+      1    -4.521918e-06           |     1    -2.567943e+04    -0.2543
+      2     2.323687e-02           |     2    -1.144551e+08    -0.2607
+      3     5.413606e-01           |     3    -4.243820e+12    -0.2543
+      4     1.000000e+00           |     4    -3.115557e+16    -0.2510
+
+  (z^2-1)(z^2+100)   normalised roots [ 0.1+0.j -0.1+0.j  0. +1.j -0. -1.j]
+      n        min_x L_n   |     m        min_x P_m     argmin
+      1     1.980000e-02           |     1     2.290408e-01    -4.0000
+      2     7.967500e-01           |     2     1.171675e-02    -4.0000
+      3    -1.980000e+00           |     3     5.357289e-04    -4.0000
+      4     1.000000e+00           |     4     2.212557e-05    -4.0000
+
+  (z^2-1)(z^2-4)(z^2+400)   normalised roots [ 0.05+0.j -0.05+0.j  0.1 +0.j -0.1 +0.j  0.  +1.j -0.  -1.j]
+      n        min_x L_n   |     m        min_x P_m     argmin
+      1     5.347690e-07           |     1     3.540995e-01    -4.0000
+      2     2.050006e-04           |     2     1.954147e-02    -4.0000
+      3     2.458813e-02           |     3     1.025614e-03    -4.0000
+      4     3.651125e-01           |     4     5.281506e-05     4.0000
+      5    -1.975000e+00           |     5     2.812472e-06    -4.0000
+      6     1.000000e+00           |     6     1.645746e-07    -4.0000
+
+
+==============================================================================
+PART 5  why shielding defeats a POINTWISE graded family
+==============================================================================
+  P_m(x) is dominated, as m -> infinity, by whichever zero is NEAREST to x:
+      P_m(x) ~ 2 |x - z_0|^{-2m} cos(2 m phi)   if the nearest zero is a pair at
+      angle phi = arg(x - z_0), and  ~ |x - rho|^{-2m} > 0 if it is real.
+  So the graded family detects a conjugate pair as soon as that pair is strictly
+  nearer to SOME real point than every other zero -- then cos(2 m phi) < 0 for
+  infinitely many m and P_m(x) < 0.  A pair a +- i y_0 is nearest at x = a iff
+  y_0 < dist(a, other zeros).  If every pair is SHIELDED -- some other zero
+  always closer -- the leading term is positive for every real x and every m, and
+  the whole pointwise family is blind.  Measured below: the shielding margin.
+
+  p                                            y_0   nearest other zero to a  shielded
+  (z^2-1)(z^2+100)                           10.00                    1.0000      True
+  (z^2-1)(z^2-4)(z^2+400)                    20.00                    1.0000      True
+  (z^2-1)(z^2-4)(z^2-9)(z^2+2500)            50.00                    1.0000      True
+  (z-1)(z+1)((z-0.5)^2+64)                    8.00                    0.5000      True
+
+==============================================================================
+PART 6  control: Jensen polynomials of Xi (must pass everything)
+==============================================================================
+  moments check: 4*M_0 = 0.4971207782  vs  xi(1/2) = 0.4971207174
+  J^{2,0}: nonreal roots 0;  first n with L_n<0: none;  first m with P_m<0: none
+  J^{2,1}: nonreal roots 0;  first n with L_n<0: none;  first m with P_m<0: none
+  J^{3,0}: nonreal roots 0;  first n with L_n<0: none;  first m with P_m<0: none
+  J^{3,1}: nonreal roots 0;  first n with L_n<0: none;  first m with P_m<0: none
+  J^{4,0}: nonreal roots 0;  first n with L_n<0: none;  first m with P_m<0: none
+  J^{4,1}: nonreal roots 0;  first n with L_n<0: none;  first m with P_m<0: none
+  J^{5,0}: nonreal roots 0;  first n with L_n<0: none;  first m with P_m<0: none
+  J^{5,1}: nonreal roots 0;  first n with L_n<0: none;  first m with P_m<0: none
+  J^{6,0}: nonreal roots 0;  first n with L_n<0: none;  first m with P_m<0: none
+  J^{6,1}: nonreal roots 0;  first n with L_n<0: none;  first m with P_m<0: none
+
+################ lab_laguerre_grade2.py
+
+==============================================================================
+PART 7  the shielded cases with n run all the way to deg
+==============================================================================
+  (z^2-1)(z^2+100)   (deg 4)   first n with L_n < 0: 3
+    n=1:+1.980e-02  n=2:+7.968e-01  n=3:-1.980e+00  n=4:+1.000e+00
+
+  (z^2-1)(z^2-4)(z^2+400)   (deg 6)   first n with L_n < 0: 5
+    n=1:+5.348e-07  n=2:+2.050e-04  n=3:+2.459e-02  n=4:+3.651e-01  n=5:-1.975e+00  n=6:+1.000e+00
+
+  (z^2-1)(z^2-4)(z^2-9)(z^2+2500)   (deg 8)   first n with L_n < 0: 7
+    n=1:+1.896e-14  n=2:+8.720e-11  n=3:+9.224e-08  n=4:+4.686e-05  n=5:+1.111e-02  n=6:+9.476e-02  n=7:-1.989e+00  n=8:+1.000e+00
+
+  (z^2-1)(z^2-4)(z^2-9)(z^2-16)(z^2+10000)   (deg 10)   first n with L_n < 0: 8
+    n=1:+3.677e-23  n=2:+9.443e-19  n=3:+4.821e-15  n=4:+1.248e-11  n=5:+1.800e-08  n=6:+1.442e-05  n=7:+5.971e-03  n=8:-9.435e-02  n=9:-1.994e+00  n=10:+1.000e+00
+
+  => every shielded case IS detected, but only once n is large enough.
+     Small spheres are caught at LOW n, large spheres at HIGH n: the
+     hierarchy is graded by sphere radius, which is what §5a predicted
+     the Bessel index would do.
+
+==============================================================================
+PART 8  which n first detects a pair of radius y_0 (fixed real background)
+==============================================================================
+  background real roots +-1, +-2, +-3, +-4; one implanted pair at 0 +- i y_0.
+       y_0    first n with L_n<0       min_x L_1       min_x P_1
+      0.01                     1      -9.655e-10      -3.200e+05
+      0.05                     1      -2.405e-08      -1.275e+04
+      0.20                     1      -3.642e-07      -7.544e+02
+      0.50                     1      -1.555e-06      -8.244e+01
+      0.90                     2       1.198e-06       6.714e-01
+      1.50                     3       4.786e-05       6.693e-01
+      3.00                     5       6.383e-04       6.601e-01
+      6.00                     7       5.230e-06       6.240e-01
+     12.00                     8       2.945e-10       6.087e-01
+     30.00                     8       7.719e-16       6.046e-01
+
+==============================================================================
+PART 9  the y_0^2 scaling law for the L_1 margin (brief §6.4 consistency)
+==============================================================================
+  fixed real roots at +-1 and 0.3; pair implanted at a = -0.25 +- i y_0.
+  Prediction: min L_1 ~ -2 f'(a)-type constant * y_0^2, i.e. EXACTLY quadratic
+  in the sphere radius, so the discriminant degrades continuously to 0 as a
+  conjugate pair collides on the axis.
+
+         y_0       min_x L_1     |min L_1| / y_0^2   ratio to previous
+     1.0e-01     -5.2421e-03              0.524214                 nan
+     5.0e-02     -1.3251e-03              0.530054            1.011141
+     2.0e-02     -2.1259e-04              0.531479            1.002687
+     1.0e-02     -5.3167e-05              0.531674            1.000367
+     5.0e-03     -1.3293e-05              0.531722            1.000091
+     2.0e-03     -2.1269e-06              0.531736            1.000025
+     1.0e-03     -5.3174e-07              0.531738            1.000004
+     5.0e-04     -1.3293e-07              0.531738            1.000001
+
+  A constant column 3 confirms the exponent is exactly 2.
+
+################ lab_laguerre_grade3.py
+
+==============================================================================
+PART 10  adversarial search: non-hyperbolic p with ALL L_n >= 0 ?
+==============================================================================
+  Degree 4: two real roots r1,r2 and one pair a +- i y (y > 0), normalised so
+  max|root| = 1.  Maximise min_n min_x L_n over the parameters.  A positive
+  optimum would be a counterexample to completeness.
+
+  best min_n min_x L_n over 300 starts = 9.192647e-14
+    at roots [-0.929864+0.j -0.746249+0.j -1.      +0.j -1.      -0.j]   (pair radius 1.1204e-08)
+    worst n = 1,  value 9.192647e-14
+
+  Degree 6: four real roots and one pair.
+  best min_n min_x L_n over 150 starts = 1.576683e-12
+    at roots [1.      +0.0e+00j 0.921357+0.0e+00j 0.67733 +0.0e+00j 0.229051+0.0e+00j
+ 0.982379+1.2e-05j 0.982379-1.2e-05j]   (pair radius 1.1841e-05)
+    worst n = 1,  value 1.576683e-12
+
+==============================================================================
+PART 11  hyperbolic controls under the same objective (sanity)
+==============================================================================
+  z^2-1                        min_n min_x L_n =  1.000000e+00   (worst n = 2)
+  (z^2-1)(z^2-4)               min_n min_x L_n =  5.307760e-01   (worst n = 1)
+  (z-1)(z-2)(z-3)(z-4)         min_n min_x L_n =  6.866455e-04   (worst n = 1)
+  (z^2-1)(z^2-4)(z^2-9)        min_n min_x L_n =  3.130976e-02   (worst n = 1)
+
+  Hyperbolic p must give >= 0 (Laguerre-Polya); any negative value here
+  would indicate a bug rather than a discovery.

@@ -1,0 +1,1662 @@
+[
+  {
+    "title": "Inverse bulk realization brainstorm",
+    "create_time": 1789520800.969546,
+    "update_time": 1789537766.631,
+    "mapping": {
+      "root": {
+        "id": "root",
+        "message": null,
+        "parent": null,
+        "children": [
+          "9476f6fa-535e-40bd-bd8c-51b81f4456d7"
+        ]
+      },
+      "9476f6fa-535e-40bd-bd8c-51b81f4456d7": {
+        "id": "9476f6fa-535e-40bd-bd8c-51b81f4456d7",
+        "message": {
+          "id": "9476f6fa-535e-40bd-bd8c-51b81f4456d7",
+          "author": {
+            "role": "user",
+            "name": null,
+            "metadata": {}
+          },
+          "create_time": 1789521029.649345,
+          "update_time": 1789521029.649345,
+          "content": {
+            "content_type": "text",
+            "parts": [
+              "Please look at the paper in /papers/susy-positivity/investigations/inverse-bulk-realization. I'd like to brainstorm about paths forward. I have some ideas. One question first though, what boundary conditions are on the test functions in the interval, if any?"
+            ]
+          },
+          "status": "finished_successfully",
+          "end_turn": null,
+          "metadata": {
+            "source": "Claude Cowork session event, completed public message",
+            "source_turn_id": "9476f6fa-535e-40bd-bd8c-51b81f4456d7",
+            "source_event_seq": 15,
+            "created_at_utc": "2026-09-16T01:10:29.649Z",
+            "completed_at_utc": "2026-09-16T01:10:29.649Z",
+            "created_at_local": "2026-09-15T21:10:29.649-04:00",
+            "phase": null
+          },
+          "recipient": "all"
+        },
+        "parent": "root",
+        "children": [
+          "bac1cac9-1836-4bf9-b534-3165f5339c10"
+        ]
+      },
+      "bac1cac9-1836-4bf9-b534-3165f5339c10": {
+        "id": "bac1cac9-1836-4bf9-b534-3165f5339c10",
+        "message": {
+          "id": "bac1cac9-1836-4bf9-b534-3165f5339c10",
+          "author": {
+            "role": "assistant",
+            "name": null,
+            "metadata": {}
+          },
+          "create_time": 1789521164.742,
+          "update_time": 1789521164.742,
+          "content": {
+            "content_type": "text",
+            "parts": [
+              "Read the v0.5 manuscript (sections 02, 03, 07, 08) plus the relevant notes.\n\n**Short answer: none. The only constraint on the test functions is a support condition.**\n\nThe specifics, in the manuscript's own terms:\n\n- §2.1 fixes the class: for $L>0$, $I_L=(-L/2,L/2)$, and \"unless another domain is specified, $f\\in C_c^\\infty(I_L;\\mathbb C)$ and $F=E_Lf$,\" with $E_L$ extension by zero. So $f$ vanishes to all orders at $\\pm L/2$, but that is a *consequence* of compact support strictly inside the open interval, not an imposed boundary condition — and nothing is imposed on the extended $F$ beyond being the zero-extension.\n\n- The form's natural home is the energy domain $\\mathcal D_{\\gamma,L}=\\{f\\in L^2(I_L):\\int\\log(2+|\\tau|)|\\widehat{E_Lf}|^2\\,d\\tau<\\infty\\}$ (eq. 2.11), described as \"the restriction of the closed nonnegative Fourier-multiplier form to the closed subspace of functions supported in $\\overline I_L$.\" That is a support constraint on $\\overline I_L$, again not a trace condition. Since $b(\\tau^2)\\sim\\log|\\tau|$, this space is only logarithmically stronger than $L^2$ — far below $H^{1/2}$ — so there is no trace operator and no boundary condition *could* be meaningfully imposed. The $H^1_0$ vs. $H^1$ distinction collapses here.\n\n- The proof of Thm. 7.? (two-channel exclusion) makes this concrete and load-bearing: it establishes that $C_c^\\infty(I_L)$ is dense in $\\mathcal D_{\\gamma,L}$ (via the $K[g]=O(\\varepsilon\\log(1/\\varepsilon))$ cutoff estimate) precisely so it can test with $f=\\mathbf 1_{I_L}$ — the indicator, which emphatically does not vanish at the endpoints. So the sharpest exclusion in the paper depends on there being no boundary condition.\n\nTwo places where side conditions *appear* but are not restrictions on the test class:\n\n- Prop. 7.? (no orthogonal augmentation) works on the codimension-two subspace $\\int f\\cosh(x/2)=\\int f\\sinh(x/2)=0$, but only as a device to kill $P_L$ inside the argument.\n- §8 notes that the Connes–Consani restatement of Yoshida's theorem carries the extra hypothesis $\\widehat f(\\pm i/2)=0$ — by Lemma 2.? (hyperbolic pole pair) exactly $P_L[f]=0$ — and the manuscript deliberately does *not* adopt it, keeping both pole terms inside the target. Yoshida's own theorem imposes no side condition.\n\nOne distinction that may matter for whatever you're about to propose: endpoint-vanishing conditions are *free* — any \"$f$ and its derivatives vanish at $\\pm L/2$\" restriction costs nothing, since $\\bigcup_L C_c^\\infty(I_L)=C_c^\\infty(\\mathbb R)$ and you can always pass to a slightly larger $L$. Moment conditions like $\\widehat F(\\pm i/2)=0$ are *not* free — they are not recovered by varying $L$, and dropping the pole term is a strictly weaker criterion. So if a path forward wants to buy positivity by restricting test functions, the first question is which of those two kinds it is.\n\nWhat are your ideas?\n\n**Sources:**\n- [sections/02_weil_background.tex](computer:///Users/teddy/Documents/shifted-zeta-positivity/papers/susy-positivity/investigations/inverse-bulk-realization/sections/02_weil_background.tex)\n- [sections/07_gluing.tex](computer:///Users/teddy/Documents/shifted-zeta-positivity/papers/susy-positivity/investigations/inverse-bulk-realization/sections/07_gluing.tex)\n- [sections/08_outlook.tex](computer:///Users/teddy/Documents/shifted-zeta-positivity/papers/susy-positivity/investigations/inverse-bulk-realization/sections/08_outlook.tex)"
+            ]
+          },
+          "status": "finished_successfully",
+          "end_turn": true,
+          "metadata": {
+            "source": "Claude Cowork session event, completed public message",
+            "source_turn_id": "9476f6fa-535e-40bd-bd8c-51b81f4456d7",
+            "source_event_seq": 85,
+            "created_at_utc": "2026-09-16T01:12:44.742Z",
+            "completed_at_utc": "2026-09-16T01:12:44.742Z",
+            "created_at_local": "2026-09-15T21:12:44.742-04:00",
+            "phase": "final_answer"
+          },
+          "recipient": "all"
+        },
+        "parent": "9476f6fa-535e-40bd-bd8c-51b81f4456d7",
+        "children": [
+          "f7cf4758-997d-4d78-aefa-a92253bc1147"
+        ]
+      },
+      "f7cf4758-997d-4d78-aefa-a92253bc1147": {
+        "id": "f7cf4758-997d-4d78-aefa-a92253bc1147",
+        "message": {
+          "id": "f7cf4758-997d-4d78-aefa-a92253bc1147",
+          "author": {
+            "role": "user",
+            "name": null,
+            "metadata": {}
+          },
+          "create_time": 1789522242.277195,
+          "update_time": 1789522242.277195,
+          "content": {
+            "content_type": "text",
+            "parts": [
+              "Ok thanks, the reason I'm asking is because I was considering Wilson loop operators, which we already considered, but was thinking Wilson lines might be more appropriate without periodic boundary conditions. The idea I had is, instead of looking for the theory with a given operator to match the Weil term, what if instead we looked for the operator within a fixed theory. Perhaps within a fixed theory one could search for a family of operators that lead to functionals giving the Weil term for different values of L. Because Wilson line operators can be deformed significantly, so there is a lot of room for changing things, and also the choice of operator could be changed. \n\nAlso, I think I need to understand more deeply where the bottleneck really is here, so that I can help more. I think sometimes the papers are written in a way that assumes a lot of knowledge and some of it is scattered, so it is easier for me to ask you clarifying questions than to search all of the documents for the answers. If you can help me understand the bottlenecks better I could potentially help more. \n\nI realize that relating the form of the Weil operator the the operator expectation values is the major difficulty. Another idea I had was that one could search for existence proofs for operators within a theory that have the desired Weil form, without necessary computing them explicitly. Another idea was to do some perturbative calculations and make a conjecture about the full operator expectation value. Finally another idea was to use operator product expansions. These are all just ideas.\n\nPlease write your notes in the /papers/susy-positivity/brainstorm/inverse-bulk-brainstorm/ folder"
+            ]
+          },
+          "status": "finished_successfully",
+          "end_turn": null,
+          "metadata": {
+            "source": "Claude Cowork session event, completed public message",
+            "source_turn_id": "f7cf4758-997d-4d78-aefa-a92253bc1147",
+            "source_event_seq": 104,
+            "created_at_utc": "2026-09-16T01:30:42.277Z",
+            "completed_at_utc": "2026-09-16T01:30:42.277Z",
+            "created_at_local": "2026-09-15T21:30:42.277-04:00",
+            "phase": null
+          },
+          "recipient": "all"
+        },
+        "parent": "bac1cac9-1836-4bf9-b534-3165f5339c10",
+        "children": [
+          "5887b6f9-664b-4928-8fcc-be3c4ea7d29a"
+        ]
+      },
+      "5887b6f9-664b-4928-8fcc-be3c4ea7d29a": {
+        "id": "5887b6f9-664b-4928-8fcc-be3c4ea7d29a",
+        "message": {
+          "id": "5887b6f9-664b-4928-8fcc-be3c4ea7d29a",
+          "author": {
+            "role": "assistant",
+            "name": null,
+            "metadata": {}
+          },
+          "create_time": 1789523009.571,
+          "update_time": 1789523009.571,
+          "content": {
+            "content_type": "text",
+            "parts": [
+              "Notes are in `brainstorm/inverse-bulk-brainstorm/` (plus a README for the folder), and a condensed copy is in the project.\n\n**Where the bottleneck actually is.** Not the primes — and that's where the effort has gone. Layered:\n\n- **The object is unique.** Cor 2.2: a realization compatible in $L$ *is* evaluation on the zeros, up to unitary. There is no approximate target to aim at, and no inequality about $Q_L$ can decide membership.\n- **One interval is free.** As soon as $Q_L\\ge0$, $\\Phi=Q_L^{1/2}$ works; Remark 3.3 (Krein) even makes it stationary. All content is uniformity in $L$.\n- **The architecture is forced.** Thm 7.5 + Prop 7.3: a compression, never a sum of channels.\n- **The real difficulty:** the contraction of Prop 7.14 must be *critical* — $\\|\\Pi_L\\|=1$ to within $10^{-15}$ at every $L$. Any mechanism with a dialable margin is proving something false. Pure existence is free here (the dilation theorem hands you $\\Pi$ the moment $\\|\\Pi\\|\\le1$, which is the criterion itself).\n- **Weight-matching is cheap.** §6.5: the reachable states are *all* functions analytic past the unit circle. Exhibited weight identities carry almost no information.\n\n**One new result.** I rebuilt $K_+,T_L,Q_L$ independently (400-cell Galerkin, Toeplitz gamma energy). The identity $Q_L=K_+-T_L$ checks to $10^{-15}$. More interestingly: **the critical subspace of $\\Pi_L$ is bandlimited below $\\gamma_1=14.1347$** — near-null eigenvectors carry >99.9% of $|\\widehat F|^2$ below the first zero, generic modes a few percent; the in-band count tracks $L\\gamma_1/\\pi$ to ~25%. That's Cor 2.2 made visible, but it gives a cheap falsifiable test: compute the frequency content of a candidate's near-null directions; if the band edge isn't at 14.13, it's dead, with no prime matching required. **One flag:** I get $\\lambda_{\\min}=1.9\\times10^{-6}$ at $L=1$ against the manuscript's $1.9\\times10^{-7}$. One of those is wrong.\n\n**On your ideas, briefly:**\n\n- *Wilson lines over loops* — right instinct, wrong reason. Not periodicity; the loop benchmark died because $W=2\\cos\\theta$ has **bounded** spectrum (entire kernel, no atoms, and it violates Prop 3.4). Lines with a charge lattice fix exactly that. But what you cannot deform is the *trace* — if the arithmetic is anywhere, it's there, not in the line.\n- *Fixed theory, search the operator* — already the Schur strategy, and the state search proved too flexible to inform. The version that isn't dead: search for a **projection**, not a state. Projections in a protected algebra are rigid, and there's a short list (the Weyl constraint of (8.8) first).\n- *$L$-family* — over-counts the freedom: $Q_L$ is one functional restricted by support, so compatibility is automatic for any model producing $\\mathcal W$, and an incompatible family proves nothing. The real $L$-dependence is in how $\\Pi_L$'s critical subspace grows, which is now measurable.\n- *Non-constructive existence* — the best of the five, but only if what's proved is **membership in a specified algebra**. Concrete route: how complete are the EKRS/Klyuev classifications of positive twisted traces?\n- *Perturbation theory* — fatal for matching (8-order cancellation; Thm 7.5 shows every term can match while no realization exists), but genuinely useful as a **density-of-states filter** against $\\frac{1}{2\\pi}\\log\\frac{\\tau}{2\\pi}$.\n- *OPE* — the least exploited, and it gives two sharp selection rules that aren't written down anywhere yet: $n_\\gamma(r)\\sim 1/(2r)$ makes the archimedean part the **borderline** Gagliardo case, a marginal $\\Delta=1/2$ kernel with *unit* coefficient; and $n_\\gamma=\\sum_n e^{-(2n+1/2)r}$ is an exact channel spectrum $\\{2n+\\tfrac12\\}$ with all residues 1. But the OPE is structurally blind to the primes, which are non-coincident atoms wanting a periodic-orbit mechanism — and Thm 7.5 forbids the two mechanisms from being two channels. That's the architecture problem in one sentence.\n\n**Sources:** [BOTTLENECK_AND_OPERATOR_SEARCH_20260916.md](computer:///Users/teddy/Documents/shifted-zeta-positivity/papers/susy-positivity/brainstorm/inverse-bulk-brainstorm/BOTTLENECK_AND_OPERATOR_SEARCH_20260916.md) · [manuscript.tex](computer:///Users/teddy/Documents/shifted-zeta-positivity/papers/susy-positivity/investigations/inverse-bulk-realization/manuscript.tex) · [CONTINUATION_20260915.md](computer:///Users/teddy/Documents/shifted-zeta-positivity/papers/susy-positivity/investigations/inverse-bulk-realization/notes/CONTINUATION_20260915.md)"
+            ]
+          },
+          "status": "finished_successfully",
+          "end_turn": true,
+          "metadata": {
+            "source": "Claude Cowork session event, completed public message",
+            "source_turn_id": "f7cf4758-997d-4d78-aefa-a92253bc1147",
+            "source_event_seq": 203,
+            "created_at_utc": "2026-09-16T01:43:29.571Z",
+            "completed_at_utc": "2026-09-16T01:43:29.571Z",
+            "created_at_local": "2026-09-15T21:43:29.571-04:00",
+            "phase": "final_answer"
+          },
+          "recipient": "all"
+        },
+        "parent": "f7cf4758-997d-4d78-aefa-a92253bc1147",
+        "children": [
+          "a1fe6587-2426-4da4-b005-15d8ff35789b"
+        ]
+      },
+      "a1fe6587-2426-4da4-b005-15d8ff35789b": {
+        "id": "a1fe6587-2426-4da4-b005-15d8ff35789b",
+        "message": {
+          "id": "a1fe6587-2426-4da4-b005-15d8ff35789b",
+          "author": {
+            "role": "user",
+            "name": null,
+            "metadata": {}
+          },
+          "create_time": 1789523376.754677,
+          "update_time": 1789523376.754677,
+          "content": {
+            "content_type": "text",
+            "parts": [
+              "Can you investigate the non-constructive existence, and also use OPE's if they continue to be helpful"
+            ]
+          },
+          "status": "finished_successfully",
+          "end_turn": null,
+          "metadata": {
+            "source": "Claude Cowork session event, completed public message",
+            "source_turn_id": "a1fe6587-2426-4da4-b005-15d8ff35789b",
+            "source_event_seq": 222,
+            "created_at_utc": "2026-09-16T01:49:36.754Z",
+            "completed_at_utc": "2026-09-16T01:49:36.754Z",
+            "created_at_local": "2026-09-15T21:49:36.754-04:00",
+            "phase": null
+          },
+          "recipient": "all"
+        },
+        "parent": "5887b6f9-664b-4928-8fcc-be3c4ea7d29a",
+        "children": [
+          "8d0572b5-3b82-4d30-b19b-c9362c429cec"
+        ]
+      },
+      "8d0572b5-3b82-4d30-b19b-c9362c429cec": {
+        "id": "8d0572b5-3b82-4d30-b19b-c9362c429cec",
+        "message": {
+          "id": "8d0572b5-3b82-4d30-b19b-c9362c429cec",
+          "author": {
+            "role": "assistant",
+            "name": null,
+            "metadata": {}
+          },
+          "create_time": 1789523969.331,
+          "update_time": 1789523969.331,
+          "content": {
+            "content_type": "text",
+            "parts": [
+              "Note written to `brainstorm/inverse-bulk-brainstorm/NONCONSTRUCTIVE_EXISTENCE_AND_THETA_SYMBOL_20260916.md`. The OPE angle turned out to be the more productive of the two.\n\n**The identity the OPE handed over.** $b(\\tau^2)+w_0 = \\Re\\psi(\\tfrac14+\\tfrac{i\\tau}{2}) - \\log\\pi = 2\\theta'(\\tau)$, exactly. So\n\n$$K[E_Lf] + w_0\\|f\\|^2 = \\int_{\\mathbb R}|\\widehat F(\\tau)|^2\\,d\\bar N(\\tau),\\qquad \\bar N(T)=\\tfrac{\\theta(T)}{\\pi}+1.$$\n\nThe gamma energy plus the contact **is** integration against the smooth zero-counting measure. Two lines from (2.6), (2.7) and Plancherel; the manuscript has every ingredient and stops one step short. Consequences:\n\n- **The contact needs no mechanism.** $w_0$ is the $-\\log\\pi$ inside $\\theta'$ — not an extra constant, the normalization of the density.\n- **All archimedean negativity sits in a shrinking low band.** The source symbol is $\\sigma_L=2\\theta'+\\Sigma_L$, negative only on $|\\tau|<\\tau_L$: 3.55 at $L=1$, 0.475 at $L=2$, **empty for $L>\\log 13$**. With last session's result — critical subspace below $\\gamma_1=14.13$ — the whole difficulty is now localized: negativity below 3.55, criticality below 14.13, primes elsewhere.\n- **\"$c_L$ turns positive at $p=13$\" now means something:** the prime contacts overtake $-2\\theta'(0)=5.3722$, the peak negativity of the smooth density.\n- Graded checklist: $\\log(\\tau/2\\pi) + 0\\cdot\\tau^{-1} - \\tfrac{1}{24}\\tau^{-2} + 0\\cdot\\tau^{-3} - \\tfrac{7}{960}\\tau^{-4}$, all verified. Four cheap falsifications instead of one.\n\n**A sharper compression.** Split the archimedean form by the sign of its *symbol* rather than by the constant — only the band $|\\tau|<\\tau_L$ moves. Identity checked to $10^{-10}$ independently; $\\lambda_{\\min}$ gains ×3.8 at $L=1$, ×1.35 at $L=2$. **It does not remove the criticality** — still saturated to six digits. I'd propose it as the manuscript's presentation anyway, with 7.14 as the special case.\n\n**On non-constructive existence.** The blunt fact first: existence of a realization *is* RH, and Cor 7.9 already manufactures the dilation from $\\|\\Pi\\|\\le1$, so abstract operator theory applied to the target returns its input. What's left is a taxonomy — rigidity (N1), family exclusion (N2), and one real shortcut:\n\n- **(N4) finite-moment determination.** **Klyuev Prop 5.5**: a $g_t$-twisted trace on a generalized $q$-Weyl algebra — the family containing the elementary representation of §6.1 — is determined by its $n$ values $T(1),\\dots,T(Z^{n-1})$, $n$ = number of nonzero roots of $P$. So an infinite identity collapses to $n$ numbers. (EKRS: uniqueness outright for $n\\le4$.)\n- The same $n$ is a **budget** in the other direction, which I think is the sharper half: a fixed algebra of this type can carry only finitely many prime parameters, so the two-prime gluing obstruction is a dimension count, not an accident. I've flagged it as a conjecture — it needs the root ↔ $a_p=qp^{-1/2}$ correspondence made precise.\n- **Important caveat:** the construction is a state norm, not a trace, and the Bloch lift (6.18) uses infinitely many orthogonal copies. The classification bounds *one copy*; the lift evades it — and that is exactly the step the manuscript already flags as having no field-theoretic interpretation. So this localizes the unjustified step rather than excluding the construction.\n\n**One genuine (N2) exclusion.** Bloch-lifted circle weights give multipliers that are periodic and **bounded**, with **purely atomic** off-diagonal kernels. The archimedean symbol is unbounded with a smooth, nowhere-vanishing kernel. So no finite sum of lifts — any parameters, any number of primes, any $q$ — is the archimedean form. The family reaches it only through an infinite-prime limit, and Thm 7.5 forbids the only bookkeeping that would make that limit an addition. That's stronger than the manuscript's existing exclusions, which each kill one preparation.\n\n**Sources:** [NONCONSTRUCTIVE_EXISTENCE_AND_THETA_SYMBOL_20260916.md](computer:///Users/teddy/Documents/shifted-zeta-positivity/papers/susy-positivity/brainstorm/inverse-bulk-brainstorm/NONCONSTRUCTIVE_EXISTENCE_AND_THETA_SYMBOL_20260916.md) · [Klyuev, SIGMA 18 (2022) 009](https://sigma-journal.com/2022/009/) · [EKRS, SIGMA 17 (2021) 029](https://sigma-journal.com/2021/029/)"
+            ]
+          },
+          "status": "finished_successfully",
+          "end_turn": true,
+          "metadata": {
+            "source": "Claude Cowork session event, completed public message",
+            "source_turn_id": "a1fe6587-2426-4da4-b005-15d8ff35789b",
+            "source_event_seq": 291,
+            "created_at_utc": "2026-09-16T01:59:29.331Z",
+            "completed_at_utc": "2026-09-16T01:59:29.331Z",
+            "created_at_local": "2026-09-15T21:59:29.331-04:00",
+            "phase": "final_answer"
+          },
+          "recipient": "all"
+        },
+        "parent": "a1fe6587-2426-4da4-b005-15d8ff35789b",
+        "children": [
+          "860d4e2e-a30c-4c78-86b8-0d6040a2e005"
+        ]
+      },
+      "860d4e2e-a30c-4c78-86b8-0d6040a2e005": {
+        "id": "860d4e2e-a30c-4c78-86b8-0d6040a2e005",
+        "message": {
+          "id": "860d4e2e-a30c-4c78-86b8-0d6040a2e005",
+          "author": {
+            "role": "user",
+            "name": null,
+            "metadata": {}
+          },
+          "create_time": 1789527766.392298,
+          "update_time": 1789527766.392298,
+          "content": {
+            "content_type": "text",
+            "parts": [
+              "Ok please continue, I committed the changes and merged into main. Please create a new folder in investigations with a name that is appropriate for this new investigation, and continue there, following the same conventions of the other folders for organization."
+            ]
+          },
+          "status": "finished_successfully",
+          "end_turn": null,
+          "metadata": {
+            "source": "Claude Cowork session event, completed public message",
+            "source_turn_id": "860d4e2e-a30c-4c78-86b8-0d6040a2e005",
+            "source_event_seq": 310,
+            "created_at_utc": "2026-09-16T03:02:46.392Z",
+            "completed_at_utc": "2026-09-16T03:02:46.392Z",
+            "created_at_local": "2026-09-15T23:02:46.392-04:00",
+            "phase": null
+          },
+          "recipient": "all"
+        },
+        "parent": "8d0572b5-3b82-4d30-b19b-c9362c429cec",
+        "children": [
+          "d28a1d4b-5d28-4249-b2fc-197c21b982f8"
+        ]
+      },
+      "d28a1d4b-5d28-4249-b2fc-197c21b982f8": {
+        "id": "d28a1d4b-5d28-4249-b2fc-197c21b982f8",
+        "message": {
+          "id": "d28a1d4b-5d28-4249-b2fc-197c21b982f8",
+          "author": {
+            "role": "assistant",
+            "name": null,
+            "metadata": {}
+          },
+          "create_time": 1789528582.171,
+          "update_time": 1789528582.171,
+          "content": {
+            "content_type": "text",
+            "parts": [
+              "New investigation at `investigations/source-selection-rules/`, following the sibling folders' layout (README, `notes/`, `numerics/` with preserved `records/`, `reviews/`, `validation/drafts.py` with a `CHECKS` registry). Uncommitted — I left the tree dirty for you.\n\n**Why that name.** The object isn't a construction. Every exclusion in the sibling investigation is \"this particular preparation fails,\" while Thm 7.5 shows all terms can match with no realization existing. So this folder collects the *necessary conditions* — eight, four new — and the presentation that makes them cheap to apply.\n\n**Three results, each with a check programme (standard library only, JSON to stdout, records preserved, replay passes; 32,664 cases in ~1.5 s total):**\n\n1. **Density identity**, now proved and written up: $b(\\tau^2)+w_0=2\\theta'(\\tau)$, hence $K[E_Lf]+w_0\\|f\\|^2=\\int|\\widehat F|^2\\,d\\bar N$. The two sides are computed by different routines in the check (partial-fraction digamma vs. a numerically differentiated Stirling $\\log\\Gamma$), so the agreement isn't definitional.\n\n2. **The symbol split**, now a proposition with a proof: split the archimedean form by the sign of its *symbol*, not the constant. Identity exact, both sides positive term by term, strictly less moved to the subtracted side. Gains ×3.9 at $L=0.8$ falling to ×1.0 at $\\log 13$ — and **it does not change the criticality**. Also: the check computes the gamma energy in closed form (the triangle overlap has Laplace transform $4\\sinh^2(ah/2)/a^2$, so the cell matrix is Toeplitz), agreeing with direct quadrature of (2.5) to $10^{-14}$.\n\n3. **The algebra, identified — and a retraction.** Composing (6.1): $u_+u_-=1+qv$, $u_-u_+=1+q^{-1}v$, $vu_\\mp v^{-1}=q^{\\pm2}u_\\mp$. With $U=u_-,V=u_+,Z=v$ these are Klyuev's relations with **$P(y)=1+y$** — verified in exact rational arithmetic. One nonzero root, at $-1$, so $n=1$: the twisted-trace space is **one-dimensional**.\n\nThat last one kills my own conjecture from last session. The prime parameters are *not* roots of $P$ — the algebra of §6.1 has a single root independent of every prime. So the budget claim is retracted in the note. What replaces it is sharper: the algebra carries no arithmetic parameter at all, which confirms §6.5 from the algebra side; and since the classification bounds *one copy* while the Bloch lift (6.18) uses infinitely many, the classification **localizes** the step that needs justification — the step the manuscript already flags as lacking a field-theoretic interpretation.\n\nOn non-constructive existence generally: it's exactly RH, and Cor 7.9 already supplies everything abstract operator theory can. That's now written down so it doesn't get re-attempted.\n\n**Top of the next-steps list:** rule 7 (the $\\gamma_1$ band edge) still needs a repo check programme, and while writing it — the manuscript reports $\\lambda_{\\min}=1.9\\times10^{-7}$ at $L=1$ and my independent 400-cell implementation gives $1.9\\times10^{-6}$. One of those is wrong, and it's the manuscript's headline saturation figure.\n\n**Sources:** [source-selection-rules/README.md](computer:///Users/teddy/Documents/shifted-zeta-positivity/papers/susy-positivity/investigations/source-selection-rules/README.md) · [notes/SELECTION_RULES.md](computer:///Users/teddy/Documents/shifted-zeta-positivity/papers/susy-positivity/investigations/source-selection-rules/notes/SELECTION_RULES.md) · [notes/CONTINUATION_20260916.md](computer:///Users/teddy/Documents/shifted-zeta-positivity/papers/susy-positivity/investigations/source-selection-rules/notes/CONTINUATION_20260916.md)"
+            ]
+          },
+          "status": "finished_successfully",
+          "end_turn": true,
+          "metadata": {
+            "source": "Claude Cowork session event, completed public message",
+            "source_turn_id": "860d4e2e-a30c-4c78-86b8-0d6040a2e005",
+            "source_event_seq": 393,
+            "created_at_utc": "2026-09-16T03:16:22.171Z",
+            "completed_at_utc": "2026-09-16T03:16:22.171Z",
+            "created_at_local": "2026-09-15T23:16:22.171-04:00",
+            "phase": "final_answer"
+          },
+          "recipient": "all"
+        },
+        "parent": "860d4e2e-a30c-4c78-86b8-0d6040a2e005",
+        "children": [
+          "ceefedcc-6b49-420a-be91-022fb78db01c"
+        ]
+      },
+      "ceefedcc-6b49-420a-be91-022fb78db01c": {
+        "id": "ceefedcc-6b49-420a-be91-022fb78db01c",
+        "message": {
+          "id": "ceefedcc-6b49-420a-be91-022fb78db01c",
+          "author": {
+            "role": "user",
+            "name": null,
+            "metadata": {}
+          },
+          "create_time": 1789528872.258326,
+          "update_time": 1789528872.258326,
+          "content": {
+            "content_type": "text",
+            "parts": [
+              "You don't think that a generalized fixed point theorem could be useful for existence?"
+            ]
+          },
+          "status": "finished_successfully",
+          "end_turn": null,
+          "metadata": {
+            "source": "Claude Cowork session event, completed public message",
+            "source_turn_id": "ceefedcc-6b49-420a-be91-022fb78db01c",
+            "source_event_seq": 412,
+            "created_at_utc": "2026-09-16T03:21:12.258Z",
+            "completed_at_utc": "2026-09-16T03:21:12.258Z",
+            "created_at_local": "2026-09-15T23:21:12.258-04:00",
+            "phase": null
+          },
+          "recipient": "all"
+        },
+        "parent": "d28a1d4b-5d28-4249-b2fc-197c21b982f8",
+        "children": [
+          "6df79755-ab25-42a1-8ac0-0bda2a4e9745"
+        ]
+      },
+      "6df79755-ab25-42a1-8ac0-0bda2a4e9745": {
+        "id": "6df79755-ab25-42a1-8ac0-0bda2a4e9745",
+        "message": {
+          "id": "6df79755-ab25-42a1-8ac0-0bda2a4e9745",
+          "author": {
+            "role": "assistant",
+            "name": null,
+            "metadata": {}
+          },
+          "create_time": 1789528974.98,
+          "update_time": 1789528974.98,
+          "content": {
+            "content_type": "text",
+            "parts": [
+              "You're right that I overstated it. Let me check a couple of things before answering properly."
+            ]
+          },
+          "status": "finished_successfully",
+          "end_turn": false,
+          "metadata": {
+            "source": "Claude Cowork session event, completed public message",
+            "source_turn_id": "ceefedcc-6b49-420a-be91-022fb78db01c",
+            "source_event_seq": 417,
+            "created_at_utc": "2026-09-16T03:22:54.980Z",
+            "completed_at_utc": "2026-09-16T03:22:54.980Z",
+            "created_at_local": "2026-09-15T23:22:54.980-04:00",
+            "phase": "commentary"
+          },
+          "recipient": "all"
+        },
+        "parent": "ceefedcc-6b49-420a-be91-022fb78db01c",
+        "children": [
+          "84dabeb5-dd7b-476f-85e0-53cc97c8af8f"
+        ]
+      },
+      "84dabeb5-dd7b-476f-85e0-53cc97c8af8f": {
+        "id": "84dabeb5-dd7b-476f-85e0-53cc97c8af8f",
+        "message": {
+          "id": "84dabeb5-dd7b-476f-85e0-53cc97c8af8f",
+          "author": {
+            "role": "assistant",
+            "name": null,
+            "metadata": {}
+          },
+          "create_time": 1789529133.811,
+          "update_time": 1789529133.811,
+          "content": {
+            "content_type": "text",
+            "parts": [
+              "The `lambda_min` discrepancy is worse than a typo — let me pin it down while I think about the fixed-point question."
+            ]
+          },
+          "status": "finished_successfully",
+          "end_turn": false,
+          "metadata": {
+            "source": "Claude Cowork session event, completed public message",
+            "source_turn_id": "ceefedcc-6b49-420a-be91-022fb78db01c",
+            "source_event_seq": 436,
+            "created_at_utc": "2026-09-16T03:25:33.811Z",
+            "completed_at_utc": "2026-09-16T03:25:33.811Z",
+            "created_at_local": "2026-09-15T23:25:33.811-04:00",
+            "phase": "commentary"
+          },
+          "recipient": "all"
+        },
+        "parent": "6df79755-ab25-42a1-8ac0-0bda2a4e9745",
+        "children": [
+          "20f08456-312b-43bb-91f5-12da436f860c"
+        ]
+      },
+      "20f08456-312b-43bb-91f5-12da436f860c": {
+        "id": "20f08456-312b-43bb-91f5-12da436f860c",
+        "message": {
+          "id": "20f08456-312b-43bb-91f5-12da436f860c",
+          "author": {
+            "role": "assistant",
+            "name": null,
+            "metadata": {}
+          },
+          "create_time": 1789530185.811,
+          "update_time": 1789530185.811,
+          "content": {
+            "content_type": "text",
+            "parts": [
+              "You're right, and I've corrected it in the repo. Two things were wrong with how I put it: \"an existence proof would be a proof of RH\" is the *goal*, not an objection; and what's actually circular is only an argument whose **sole** input is $\\|\\Pi\\|\\le1$. A fixed point theorem takes structure from the model, so nothing there is circular.\n\n**But I'd still push back, for a different reason.** This isn't an existence problem. The source isn't underdetermined — Cor 2.2 makes it unique up to unitary — and $\\Pi$ is given by a formula. Fixed point theorems answer *\"does a solution to this equation exist\"*; here the solution is determined and the question is whether it lies in the model's cone. That's **membership**, whose canonical non-constructive tools are separation and duality. Which gives a formulation worth having on its own: RH on $I_L$ is the *non-existence* of a separating functional — and non-existence proofs by invariant are exactly what the selection rules are.\n\nRunning the four families against the structure:\n\n| | needs | status |\n|---|---|---|\n| **Banach** | strict contraction | open; the natural map is \"adjoin one prime\", whose contacts diverge like $4\\sqrt X$ |\n| **Schauder / Ky Fan** | compact convex set + self-map | **the set now exists** — Klyuev Thm 4.7 gives the positive-trace cone as $C_l\\times\\mathbb R^r_{>0}$. The self-map is the problem, and since the matching conditions are *linear*, the fitting fixed-point method is alternating projections — whose gap vector *is* the separating certificate, so one formulation yields both directions |\n| **Knaster–Tarski** | complete lattice | **blocked** on operators by Kadison's antilattice theorem; available on simplicial trace cones ($l=0$), which §6.1's algebra isn't ($l=1$) |\n| **RG fixed point** | scale invariance | **excluded** — dilation sends $\\log p\\mapsto\\lambda\\log p$, so the primes fix an absolute scale |\n\n**And a measurement that constrains every method, not just this one.** I rebuilt $Q_L$ from its *spectral* form — $\\sum_\\rho|\\hat F(\\gamma_\\rho)|^2$, positive terms, zero cancellation — in a smooth basis whose transform is a spherical Bessel function, at 50 digits with 80 zero ordinates. The margin:\n\n$$\\lambda_{\\min}\\lesssim 10^{-9}\\ (L{=}1),\\quad 2.5\\times10^{-14}\\ (1.5),\\quad 1.7\\times10^{-17}\\ (2),\\quad 1.2\\times10^{-24}\\ (3)$$\n\nSo: **any hypothesis supplying a margin uniform in $L$ — a self-map into a fixed compact subset of the interior, a uniform contraction ratio, a spectral gap — proves something false.** Schauder is safe on that count (asks for no margin, gives no control on location); Banach is the one to be suspicious of.\n\n**Three findings about §7.6 of manuscript 0.5, which fell out of this.** Its figures are not reproduced by the check registered against them: `check_gamma_compression.py` uses 40 indicator cells — not the \"41 Fourier modes\" the text claims — and gives $5.5\\times10^{-4}$ at $L=1$, three orders off. The $1.9\\times10^{-7}$ *is* real, though: it's the $K{=}8$ entry above, to two digits. And \"1 to within $10^{-15}$\" is far too **weak** — the true values are near $10^{-17}$ at $L=2$ and $10^{-24}$ at $L=3$. Conclusion right and understated, numbers attached to a computation that doesn't produce them.\n\nAlso: the direct double-precision assembly of $Q_L$ is worse than useless — at $L=1$ it disagrees with the spectral assembly by $1.6\\times10^{-6}$ while the entries themselves are $\\sim10^{-7}$. That's the manuscript's own eight-order cancellation warning turning lethal.\n\nTwo housekeeping notes: the saturation table uses `mpmath`, so it isn't yet a registered check — porting it (via `decimal`, elementary half-integer Bessel, and zero ordinates) is now item 0 in the continuation note. And a git command left a stale `.git/index.lock` that this session can't delete; `rm -f .git/index.lock` in the repo before your next commit.\n\n**Sources:** [notes/FIXED_POINTS_AND_THE_MARGIN_20260916.md](computer:///Users/teddy/Documents/shifted-zeta-positivity/papers/susy-positivity/investigations/source-selection-rules/notes/FIXED_POINTS_AND_THE_MARGIN_20260916.md) · [notes/SELECTION_RULES.md](computer:///Users/teddy/Documents/shifted-zeta-positivity/papers/susy-positivity/investigations/source-selection-rules/notes/SELECTION_RULES.md) · [Klyuev, SIGMA 18 (2022) 009](https://sigma-journal.com/2022/009/)"
+            ]
+          },
+          "status": "finished_successfully",
+          "end_turn": true,
+          "metadata": {
+            "source": "Claude Cowork session event, completed public message",
+            "source_turn_id": "ceefedcc-6b49-420a-be91-022fb78db01c",
+            "source_event_seq": 528,
+            "created_at_utc": "2026-09-16T03:43:05.811Z",
+            "completed_at_utc": "2026-09-16T03:43:05.811Z",
+            "created_at_local": "2026-09-15T23:43:05.811-04:00",
+            "phase": "final_answer"
+          },
+          "recipient": "all"
+        },
+        "parent": "84dabeb5-dd7b-476f-85e0-53cc97c8af8f",
+        "children": [
+          "231f6950-3e4f-4abb-acb3-a79a0c920c54"
+        ]
+      },
+      "231f6950-3e4f-4abb-acb3-a79a0c920c54": {
+        "id": "231f6950-3e4f-4abb-acb3-a79a0c920c54",
+        "message": {
+          "id": "231f6950-3e4f-4abb-acb3-a79a0c920c54",
+          "author": {
+            "role": "user",
+            "name": null,
+            "metadata": {}
+          },
+          "create_time": 1789530796.000245,
+          "update_time": 1789530796.000245,
+          "content": {
+            "content_type": "text",
+            "parts": [
+              "So does that mean you've ruled out the fixed point angle as a proof strategy?"
+            ]
+          },
+          "status": "finished_successfully",
+          "end_turn": null,
+          "metadata": {
+            "source": "Claude Cowork session event, completed public message",
+            "source_turn_id": "231f6950-3e4f-4abb-acb3-a79a0c920c54",
+            "source_event_seq": 547,
+            "created_at_utc": "2026-09-16T03:53:16.000Z",
+            "completed_at_utc": "2026-09-16T03:53:16.000Z",
+            "created_at_local": "2026-09-15T23:53:16.000-04:00",
+            "phase": null
+          },
+          "recipient": "all"
+        },
+        "parent": "20f08456-312b-43bb-91f5-12da436f860c",
+        "children": [
+          "af948282-7f4c-4db7-b614-a42592e1fcc6"
+        ]
+      },
+      "af948282-7f4c-4db7-b614-a42592e1fcc6": {
+        "id": "af948282-7f4c-4db7-b614-a42592e1fcc6",
+        "message": {
+          "id": "af948282-7f4c-4db7-b614-a42592e1fcc6",
+          "author": {
+            "role": "assistant",
+            "name": null,
+            "metadata": {}
+          },
+          "create_time": 1789530841.871,
+          "update_time": 1789530841.871,
+          "content": {
+            "content_type": "text",
+            "parts": [
+              "No. I ruled out exactly two instantiations, and I've added an explicit verdict to the note so it isn't misread that way.\n\n**Actually ruled out:**\n\n- **Knaster–Tarski on the operator interval $[0,K_+]$** — Kadison's antilattice theorem. That's a genuine exclusion, but it's specific to the operator-order formulation.\n- **The source at a *scale-invariant* RG fixed point** — the primes fix an absolute scale. Kills the scale-invariant reading only; RG trajectories are untouched.\n\n**Open, and one of them improved this session:**\n\n- **Schauder / Ky Fan / Kakutani on the trace cone** — not ruled out, and in better shape than before, because the compact convex set such a theorem needs didn't exist as a usable object until Klyuev and EKRS classified those cones.\n- **Banach on the prime-completion map** — open. The divergent contacts obstruct the obvious metric; that's not a proof no good metric exists.\n- **Knaster–Tarski on a simplicial trace cone** ($l=0$) — available in principle, just not for §6.1's algebra.\n- **Nonexpansive / alternating projections** — open, with the bonus that failure hands you the dual certificate.\n\nThe two things I raised are constraints on *hypotheses*, not vetoes. The margin result says any hypothesis giving a uniform-in-$L$ margin is false — Schauder asks for no margin and is fine; a Banach argument with a uniform contraction ratio isn't. And the membership-vs-existence point is a reason to expect a detour, not an obstruction.\n\nThat second point actually cuts in a useful direction, and I've written it up as its own section. Fixed point theorems are the natural tool for **nonlinear solvability**; separation is the natural tool for **linear membership**. Prescribing values of a trace is linear — which is why the angle looks awkward *for that step*. But it becomes the right tool the moment the model determines its own pairing self-consistently: a Dyson–Schwinger equation, a bootstrap, a flow whose invariant state is characterised rather than written down. Then the nonlinearity is real, there's something for a fixed point to find, and the convex set is already in hand.\n\nSo the question I'd put to a candidate model isn't \"can a fixed point theorem be applied\" but **\"is the pairing characterised self-consistently, or written down?\"** If it's written down, use separation. If it's characterised — which is exactly the situation in the Schur RG setting, where the pairing comes from a flow — Schauder is the right tool and nothing in that note stands in its way.\n\nWorth saying plainly: I can't rule out a proof strategy in general, only specific instantiations of it. Two are gone; the rest of the ground is open."
+            ]
+          },
+          "status": "finished_successfully",
+          "end_turn": true,
+          "metadata": {
+            "source": "Claude Cowork session event, completed public message",
+            "source_turn_id": "231f6950-3e4f-4abb-acb3-a79a0c920c54",
+            "source_event_seq": 556,
+            "created_at_utc": "2026-09-16T03:54:01.871Z",
+            "completed_at_utc": "2026-09-16T03:54:01.871Z",
+            "created_at_local": "2026-09-15T23:54:01.871-04:00",
+            "phase": "final_answer"
+          },
+          "recipient": "all"
+        },
+        "parent": "231f6950-3e4f-4abb-acb3-a79a0c920c54",
+        "children": [
+          "3e349941-da79-4529-979c-9f87fdc9a7ca"
+        ]
+      },
+      "3e349941-da79-4529-979c-9f87fdc9a7ca": {
+        "id": "3e349941-da79-4529-979c-9f87fdc9a7ca",
+        "message": {
+          "id": "3e349941-da79-4529-979c-9f87fdc9a7ca",
+          "author": {
+            "role": "user",
+            "name": null,
+            "metadata": {}
+          },
+          "create_time": 1789530992.811003,
+          "update_time": 1789530992.811003,
+          "content": {
+            "content_type": "text",
+            "parts": [
+              "Ok great, I think I misread the sentence from your previous message \"So: any hypothesis supplying a margin uniform in LL L — a self-map into a fixed compact subset of the interior, a uniform contraction ratio, a spectral gap — proves something false.\"\n\nThis sounds like a good avenue to continue pursuing, please continue with the investigation. I would prioritize a broad sweep to make sure to be thorough with possibilities, and then we can look into multiple angles after that."
+            ]
+          },
+          "status": "finished_successfully",
+          "end_turn": null,
+          "metadata": {
+            "source": "Claude Cowork session event, completed public message",
+            "source_turn_id": "3e349941-da79-4529-979c-9f87fdc9a7ca",
+            "source_event_seq": 563,
+            "created_at_utc": "2026-09-16T03:56:32.811Z",
+            "completed_at_utc": "2026-09-16T03:56:32.811Z",
+            "created_at_local": "2026-09-15T23:56:32.811-04:00",
+            "phase": null
+          },
+          "recipient": "all"
+        },
+        "parent": "af948282-7f4c-4db7-b614-a42592e1fcc6",
+        "children": [
+          "dfb936b6-d07e-4c69-847c-f59f3f432ab6"
+        ]
+      },
+      "dfb936b6-d07e-4c69-847c-f59f3f432ab6": {
+        "id": "dfb936b6-d07e-4c69-847c-f59f3f432ab6",
+        "message": {
+          "id": "dfb936b6-d07e-4c69-847c-f59f3f432ab6",
+          "author": {
+            "role": "assistant",
+            "name": null,
+            "metadata": {}
+          },
+          "create_time": 1789531039.372,
+          "update_time": 1789531039.372,
+          "content": {
+            "content_type": "text",
+            "parts": [
+              "Good — that sentence was a constraint on hypotheses, not a veto. Let me run the broad sweep."
+            ]
+          },
+          "status": "finished_successfully",
+          "end_turn": false,
+          "metadata": {
+            "source": "Claude Cowork session event, completed public message",
+            "source_turn_id": "3e349941-da79-4529-979c-9f87fdc9a7ca",
+            "source_event_seq": 568,
+            "created_at_utc": "2026-09-16T03:57:19.372Z",
+            "completed_at_utc": "2026-09-16T03:57:19.372Z",
+            "created_at_local": "2026-09-15T23:57:19.372-04:00",
+            "phase": "commentary"
+          },
+          "recipient": "all"
+        },
+        "parent": "3e349941-da79-4529-979c-9f87fdc9a7ca",
+        "children": [
+          "1eb1bf07-0db4-45b4-96bd-c29e8494e9a4"
+        ]
+      },
+      "1eb1bf07-0db4-45b4-96bd-c29e8494e9a4": {
+        "id": "1eb1bf07-0db4-45b4-96bd-c29e8494e9a4",
+        "message": {
+          "id": "1eb1bf07-0db4-45b4-96bd-c29e8494e9a4",
+          "author": {
+            "role": "assistant",
+            "name": null,
+            "metadata": {}
+          },
+          "create_time": 1789531430.351,
+          "update_time": 1789531430.351,
+          "content": {
+            "content_type": "text",
+            "parts": [
+              "Two strong reports back. Launching the remaining three sweeps."
+            ]
+          },
+          "status": "finished_successfully",
+          "end_turn": false,
+          "metadata": {
+            "source": "Claude Cowork session event, completed public message",
+            "source_turn_id": "3e349941-da79-4529-979c-9f87fdc9a7ca",
+            "source_event_seq": 832,
+            "created_at_utc": "2026-09-16T04:03:50.351Z",
+            "completed_at_utc": "2026-09-16T04:03:50.351Z",
+            "created_at_local": "2026-09-16T00:03:50.351-04:00",
+            "phase": "commentary"
+          },
+          "recipient": "all"
+        },
+        "parent": "dfb936b6-d07e-4c69-847c-f59f3f432ab6",
+        "children": [
+          "e120c753-6119-4b42-b478-017a28cec5ea"
+        ]
+      },
+      "e120c753-6119-4b42-b478-017a28cec5ea": {
+        "id": "e120c753-6119-4b42-b478-017a28cec5ea",
+        "message": {
+          "id": "e120c753-6119-4b42-b478-017a28cec5ea",
+          "author": {
+            "role": "assistant",
+            "name": null,
+            "metadata": {}
+          },
+          "create_time": 1789531859.616,
+          "update_time": 1789531859.616,
+          "content": {
+            "content_type": "text",
+            "parts": [
+              "Five reports in. Synthesizing."
+            ]
+          },
+          "status": "finished_successfully",
+          "end_turn": false,
+          "metadata": {
+            "source": "Claude Cowork session event, completed public message",
+            "source_turn_id": "3e349941-da79-4529-979c-9f87fdc9a7ca",
+            "source_event_seq": 1220,
+            "created_at_utc": "2026-09-16T04:10:59.616Z",
+            "completed_at_utc": "2026-09-16T04:10:59.616Z",
+            "created_at_local": "2026-09-16T00:10:59.616-04:00",
+            "phase": "commentary"
+          },
+          "recipient": "all"
+        },
+        "parent": "1eb1bf07-0db4-45b4-96bd-c29e8494e9a4",
+        "children": [
+          "0217e754-a0b6-4300-93c9-1cc12a288961"
+        ]
+      },
+      "0217e754-a0b6-4300-93c9-1cc12a288961": {
+        "id": "0217e754-a0b6-4300-93c9-1cc12a288961",
+        "message": {
+          "id": "0217e754-a0b6-4300-93c9-1cc12a288961",
+          "author": {
+            "role": "assistant",
+            "name": null,
+            "metadata": {}
+          },
+          "create_time": 1789532030.356,
+          "update_time": 1789532030.356,
+          "content": {
+            "content_type": "text",
+            "parts": [
+              "Sweep done — five parallel surveys, written up in `notes/EXISTENCE_MECHANISM_SWEEP_20260916.md`. Most of it is second-hand and marked as such in the note; papers still need reading directly.\n\n**The headline is a clean dichotomy.** Every existence theorem in this subject *transports* positivity — de Branges' inverse spectral theorem, Krein–Langer continuation, OS reconstruction, RG constructions all take positivity in and give positive structure out. The one mechanism in mathematics that *manufactures* it is **Ruelle–Perron–Frobenius / Birkhoff cone contraction**: the positive object is the leading eigenvector of a positive map, existing because the map contracts the Hilbert projective metric. Three independent searches found that mechanism **nowhere** in the Weil-positivity literature — and our $\\|\\Pi_L\\|\\le1$ is the first thing in this programme shaped to receive it.\n\nIt also comes with a test we can run now: Birkhoff's ratio is $\\tanh(\\Delta/4)$, which $\\to1$ exactly as the projective diameter diverges. Compute $\\Delta_L$ for $\\Pi_L$'s image and check it against $1-\\lambda_{\\min}(L)$. If they track, the cone picture and the margin collapse are one phenomenon. (Caveat on record: Krein–Rutman gives the eigenvector *given* the operator, not the spectral radius — so it isn't yet a proof strategy.)\n\n**Three more openings.** Kadison blocked Knaster–Tarski on operator intervals, but not on the object the subject actually orders: Suzuki reportedly shows the Weil-distribution Hilbert space **is** a de Branges space with a totally ordered family of subspaces — a chain, which is what order-theoretic fixed points need. Bombieri's Thm 8 (#negative eigenvalues = #conjugate pairs off the line, by deformation) is an *index*, hence an integer, hence immune to the collapsing margin. And Gaiotto–Teschner reportedly give a bijection between positive traces and unitary reps containing a spherical vector cut out by a $q$-difference system — which turns existence of the pairing into normalizability of a solution, and which §5.2 of our own manuscript currently treats as an obstacle rather than a handle.\n\n**One promising lead closed itself.** Krein–Langer screw continuation — local positive-definite kernel extends to a global spectral measure, non-constructively — looked like the best item in the whole sweep. It **is** the manuscript's Remark 3.3: the extension is non-unique and the arithmetic lives in the compatibility as $L$ grows. The theorem now has a name; the conclusion is unchanged.\n\n**Two things I need to flag against my own work.** Zhu's certified upper bounds reach $3.2\\times10^{-283}$ at $L=2$ with sine-basis trial functions — different normalization from mine, so not directly comparable, but my margin table is a very weak bound, off by hundreds of orders of magnitude. And his \"barrier\" bounds only his own envelope method, not any proof; his Remark 1.5 concedes it, and the $2\\pi^2$ law is fitted on four points and fails at $L=0.8$. Reliability flags on that preprint are worth knowing: unrefereed, author name changed between versions, single-author `mpmath` certificates.\n\n**And one thing I'd fix first.** Manuscript 0.5 cites Suzuki arXiv:2606.09096 only for a normalization — I checked `references.tex`. That paper reportedly also proves, unconditionally, that the localized form is $\\langle A_a v,v\\rangle$ for a self-adjoint operator built from a screw function, with the lowest eigenvalue positive and simple. That bears directly on §7.6 and on selection rule 7. Reading it and its numerical companion is now item 0 in the continuation note.\n\n**Sources:** [notes/EXISTENCE_MECHANISM_SWEEP_20260916.md](computer:///Users/teddy/Documents/shifted-zeta-positivity/papers/susy-positivity/investigations/source-selection-rules/notes/EXISTENCE_MECHANISM_SWEEP_20260916.md) · [Suzuki arXiv:2606.09096](https://arxiv.org/abs/2606.09096) · [Suzuki arXiv:2301.00421](https://arxiv.org/abs/2301.00421) · [Zhu arXiv:2608.24827](https://arxiv.org/abs/2608.24827) · [Bombieri 2000](http://www.bdim.eu/item?fmt=pdf&id=RLIN_2000_9_11_3_183_0) · [Gaiotto–Teschner arXiv:2406.09171](https://arxiv.org/abs/2406.09171) · [Rugh, complex cones](https://arxiv.org/abs/0811.2930)"
+            ]
+          },
+          "status": "finished_successfully",
+          "end_turn": true,
+          "metadata": {
+            "source": "Claude Cowork session event, completed public message",
+            "source_turn_id": "3e349941-da79-4529-979c-9f87fdc9a7ca",
+            "source_event_seq": 1238,
+            "created_at_utc": "2026-09-16T04:13:50.356Z",
+            "completed_at_utc": "2026-09-16T04:13:50.356Z",
+            "created_at_local": "2026-09-16T00:13:50.356-04:00",
+            "phase": "final_answer"
+          },
+          "recipient": "all"
+        },
+        "parent": "e120c753-6119-4b42-b478-017a28cec5ea",
+        "children": [
+          "90f132b3-b918-43d5-b03e-ede596ba275e"
+        ]
+      },
+      "90f132b3-b918-43d5-b03e-ede596ba275e": {
+        "id": "90f132b3-b918-43d5-b03e-ede596ba275e",
+        "message": {
+          "id": "90f132b3-b918-43d5-b03e-ede596ba275e",
+          "author": {
+            "role": "user",
+            "name": null,
+            "metadata": {}
+          },
+          "create_time": 1789532313.811209,
+          "update_time": 1789532313.811209,
+          "content": {
+            "content_type": "text",
+            "parts": [
+              "Excellent, please make the fix and then continue with the investigation of the Ruelle-Perron-Frobenius / Birkhoff cone route"
+            ]
+          },
+          "status": "finished_successfully",
+          "end_turn": null,
+          "metadata": {
+            "source": "Claude Cowork session event, completed public message",
+            "source_turn_id": "90f132b3-b918-43d5-b03e-ede596ba275e",
+            "source_event_seq": 1257,
+            "created_at_utc": "2026-09-16T04:18:33.811Z",
+            "completed_at_utc": "2026-09-16T04:18:33.811Z",
+            "created_at_local": "2026-09-16T00:18:33.811-04:00",
+            "phase": null
+          },
+          "recipient": "all"
+        },
+        "parent": "0217e754-a0b6-4300-93c9-1cc12a288961",
+        "children": [
+          "cb3803e3-b1d5-4dae-9a38-9f251262da4a"
+        ]
+      },
+      "cb3803e3-b1d5-4dae-9a38-9f251262da4a": {
+        "id": "cb3803e3-b1d5-4dae-9a38-9f251262da4a",
+        "message": {
+          "id": "cb3803e3-b1d5-4dae-9a38-9f251262da4a",
+          "author": {
+            "role": "assistant",
+            "name": null,
+            "metadata": {}
+          },
+          "create_time": 1789532414.701,
+          "update_time": 1789532414.701,
+          "content": {
+            "content_type": "text",
+            "parts": [
+              "Making the fix first, and setting up the cone experiment in parallel."
+            ]
+          },
+          "status": "finished_successfully",
+          "end_turn": false,
+          "metadata": {
+            "source": "Claude Cowork session event, completed public message",
+            "source_turn_id": "90f132b3-b918-43d5-b03e-ede596ba275e",
+            "source_event_seq": 1262,
+            "created_at_utc": "2026-09-16T04:20:14.701Z",
+            "completed_at_utc": "2026-09-16T04:20:14.701Z",
+            "created_at_local": "2026-09-16T00:20:14.701-04:00",
+            "phase": "commentary"
+          },
+          "recipient": "all"
+        },
+        "parent": "90f132b3-b918-43d5-b03e-ede596ba275e",
+        "children": [
+          "851dc35c-1b37-448d-abf0-150a648c9d41"
+        ]
+      },
+      "851dc35c-1b37-448d-abf0-150a648c9d41": {
+        "id": "851dc35c-1b37-448d-abf0-150a648c9d41",
+        "message": {
+          "id": "851dc35c-1b37-448d-abf0-150a648c9d41",
+          "author": {
+            "role": "assistant",
+            "name": null,
+            "metadata": {}
+          },
+          "create_time": 1789532914.226,
+          "update_time": 1789532914.226,
+          "content": {
+            "content_type": "text",
+            "parts": [
+              "Suzuki read, and the cone route has resolved — into one structural result and one clean negative.\n\n**The structural result.** Add and subtract the prime symbol's value at $\\tau=0$ and the whole target goes into Lévy–Khinchine form:\n\n$$Q_L[f] = \\mathcal E_{\\mu_L}[E_Lf] + \\gamma_L\\|f\\|^2 + P_L[f],\\qquad \\mu_L = 2n_\\gamma(r)\\,dr + 2\\!\\!\\sum_{m\\log p<L}\\!\\!\\frac{\\log p}{p^{m/2}}\\,\\delta_{m\\log p}$$\n\nwith $\\gamma_L = w_0 - 2\\sum(\\log p)p^{-m/2}$. Since $\\mu_L\\ge0$, **the entire non-pole part of the Weil form is a single jump Dirichlet form** — verified as a matrix identity to $10^{-17}$. The archimedean density and the prime atoms are the continuous and atomic parts of *one measure*. Thm 7.5 forbids two positive channels and I'd been saying the two halves want different physical mechanisms; they aren't two things. The source is a Lévy jump process whose jumps are the primes, mass $2(\\log p)p^{-m/2}$ at length $m\\log p$. That's now selection rule 9, and it subsumes rules 3 and 4.\n\n**The cone, and why it closes.** The jump form does carry a genuine Perron–Frobenius cone — $(K+\\lambda)^{-1}$ has *zero* negative entries at every $L$, exactly as Beurling–Deny predicts. Adding the pole term takes that to 40–73% negative, worsening with $L$. The mechanism is Sherman–Morrison: adding a positive rank-one to a cone-positive operator subtracts a nonnegative rank-one from its inverse. Third independent appearance of the pole as *the* obstruction.\n\nBut a cone wouldn't have been enough anyway, and this is the part I got wrong last session. By Vandergraft an invariant cone always exists for a self-adjoint operator, so its existence carries no information. Krein–Rutman gives nothing beyond the spectral theorem here — its value in dynamics is that transfer operators *aren't* self-adjoint. And **Birkhoff's $\\tanh(\\Delta/4)$ bounds the spectral gap, never the spectral radius** — which retires the projective-diameter test I proposed. The one cone theorem that bounds a spectral radius is **Collatz–Wielandt**: a single pointwise supersolution $\\sum_p\\tilde B_p u \\preceq A_L u$ would certify it. That's the real prize, and the pole is exactly what blocks it.\n\n**What replaces it.** $\\lambda_{\\min}(\\mathcal E_{\\mu_L}+P_L;\\|\\cdot\\|^2) = -\\gamma_L + \\lambda_{\\min}(Q_L)$ — so Weil positivity is a **ground-state energy** statement: the ground state of the jump form plus poles must reach $2\\sum(\\log p)p^{-m/2} - w_0$. That puts the criterion where spectral-gap theory for nonlocal Dirichlet forms applies, which this programme has never touched.\n\n**On Suzuki** — all unconditional: Thm 1.3 gives $\\lambda_a$ continuous in $a$; Thm 1.4 gives it positive and simple for small $a$, with $\\lambda_a = \\log(1/a) + \\mu_1 - \\log 2\\pi + \\psi(2) - 1 + O(a)$. One thing worth flagging: our density identity says the symbol is $2\\theta'(\\tau)=\\log(\\tau/2\\pi)+O(\\tau^{-2})$, and at an interval's natural frequency scale $\\tau\\sim1/a$ that's $\\log(1/a)-\\log 2\\pi$ — **exactly Suzuki's first two terms, constant included.** Independent corroboration of the density identity from a completely different route, and it's in neither place.\n\nI've drafted but not applied the manuscript changes (cite Suzuki for Thms 1.3/1.4 rather than just the normalization; correct §7.6's figures and attribution) — your working preference is to finish an investigation before amending it, so say the word.\n\n**Sources:** [notes/PERRON_FROBENIUS_AND_THE_JUMP_FORM_20260916.md](computer:///Users/teddy/Documents/shifted-zeta-positivity/papers/susy-positivity/investigations/source-selection-rules/notes/PERRON_FROBENIUS_AND_THE_JUMP_FORM_20260916.md) · [notes/SELECTION_RULES.md](computer:///Users/teddy/Documents/shifted-zeta-positivity/papers/susy-positivity/investigations/source-selection-rules/notes/SELECTION_RULES.md) · [Suzuki arXiv:2606.09096](https://arxiv.org/abs/2606.09096)"
+            ]
+          },
+          "status": "finished_successfully",
+          "end_turn": true,
+          "metadata": {
+            "source": "Claude Cowork session event, completed public message",
+            "source_turn_id": "90f132b3-b918-43d5-b03e-ede596ba275e",
+            "source_event_seq": 1309,
+            "created_at_utc": "2026-09-16T04:28:34.226Z",
+            "completed_at_utc": "2026-09-16T04:28:34.226Z",
+            "created_at_local": "2026-09-16T00:28:34.226-04:00",
+            "phase": "final_answer"
+          },
+          "recipient": "all"
+        },
+        "parent": "cb3803e3-b1d5-4dae-9a38-9f251262da4a",
+        "children": [
+          "091721c9-11a8-484e-a515-c6d0beb9f676"
+        ]
+      },
+      "091721c9-11a8-484e-a515-c6d0beb9f676": {
+        "id": "091721c9-11a8-484e-a515-c6d0beb9f676",
+        "message": {
+          "id": "091721c9-11a8-484e-a515-c6d0beb9f676",
+          "author": {
+            "role": "user",
+            "name": null,
+            "metadata": {}
+          },
+          "create_time": 1789533133.583053,
+          "update_time": 1789533133.583053,
+          "content": {
+            "content_type": "text",
+            "parts": [
+              "Yes please apply the manuscript changes. Then please continue with the Collatz-Wielandt analysis."
+            ]
+          },
+          "status": "finished_successfully",
+          "end_turn": null,
+          "metadata": {
+            "source": "Claude Cowork session event, completed public message",
+            "source_turn_id": "091721c9-11a8-484e-a515-c6d0beb9f676",
+            "source_event_seq": 1315,
+            "created_at_utc": "2026-09-16T04:32:13.583Z",
+            "completed_at_utc": "2026-09-16T04:32:13.583Z",
+            "created_at_local": "2026-09-16T00:32:13.583-04:00",
+            "phase": null
+          },
+          "recipient": "all"
+        },
+        "parent": "851dc35c-1b37-448d-abf0-150a648c9d41",
+        "children": [
+          "5650a42e-9cf9-48e8-b905-4a88d35d1899"
+        ]
+      },
+      "5650a42e-9cf9-48e8-b905-4a88d35d1899": {
+        "id": "5650a42e-9cf9-48e8-b905-4a88d35d1899",
+        "message": {
+          "id": "5650a42e-9cf9-48e8-b905-4a88d35d1899",
+          "author": {
+            "role": "assistant",
+            "name": null,
+            "metadata": {}
+          },
+          "create_time": 1789533234.911,
+          "update_time": 1789533234.911,
+          "content": {
+            "content_type": "text",
+            "parts": [
+              "Applying the manuscript changes first."
+            ]
+          },
+          "status": "finished_successfully",
+          "end_turn": false,
+          "metadata": {
+            "source": "Claude Cowork session event, completed public message",
+            "source_turn_id": "091721c9-11a8-484e-a515-c6d0beb9f676",
+            "source_event_seq": 1320,
+            "created_at_utc": "2026-09-16T04:33:54.911Z",
+            "completed_at_utc": "2026-09-16T04:33:54.911Z",
+            "created_at_local": "2026-09-16T00:33:54.911-04:00",
+            "phase": "commentary"
+          },
+          "recipient": "all"
+        },
+        "parent": "091721c9-11a8-484e-a515-c6d0beb9f676",
+        "children": [
+          "d526fb49-3da7-4010-ac47-da1bfc9efc0e"
+        ]
+      },
+      "d526fb49-3da7-4010-ac47-da1bfc9efc0e": {
+        "id": "d526fb49-3da7-4010-ac47-da1bfc9efc0e",
+        "message": {
+          "id": "d526fb49-3da7-4010-ac47-da1bfc9efc0e",
+          "author": {
+            "role": "assistant",
+            "name": null,
+            "metadata": {}
+          },
+          "create_time": 1789533378.976,
+          "update_time": 1789533378.976,
+          "content": {
+            "content_type": "text",
+            "parts": [
+              "Manuscript builds clean at 41 pages, no undefined references. Now the Collatz–Wielandt analysis."
+            ]
+          },
+          "status": "finished_successfully",
+          "end_turn": false,
+          "metadata": {
+            "source": "Claude Cowork session event, completed public message",
+            "source_turn_id": "091721c9-11a8-484e-a515-c6d0beb9f676",
+            "source_event_seq": 1341,
+            "created_at_utc": "2026-09-16T04:36:18.976Z",
+            "completed_at_utc": "2026-09-16T04:36:18.976Z",
+            "created_at_local": "2026-09-16T00:36:18.976-04:00",
+            "phase": "commentary"
+          },
+          "recipient": "all"
+        },
+        "parent": "5650a42e-9cf9-48e8-b905-4a88d35d1899",
+        "children": [
+          "17568155-f964-4899-a0b6-74e005758bcf"
+        ]
+      },
+      "17568155-f964-4899-a0b6-74e005758bcf": {
+        "id": "17568155-f964-4899-a0b6-74e005758bcf",
+        "message": {
+          "id": "17568155-f964-4899-a0b6-74e005758bcf",
+          "author": {
+            "role": "assistant",
+            "name": null,
+            "metadata": {}
+          },
+          "create_time": 1789533682.812,
+          "update_time": 1789533682.812,
+          "content": {
+            "content_type": "text",
+            "parts": [
+              "**Manuscript is at 0.6** — builds clean, 41 pages, no undefined references or overfull boxes, PDF updated. §7.6's figures now report what the registered programme actually produces (40 cells: $5.5\\times10^{-4}$ at $L=1$), with a new eq. (7.27) giving the smooth-basis upper bounds explicitly flagged as *not* among the registered checks. New Remark 7.12 records Suzuki's unconditional results and the observation that (2.7)+(2.13) give $b(\\tau^2)+w_0=\\log(\\tau/2\\pi)+O(\\tau^{-2})$, so $\\tau\\sim1/a$ reproduces his first two terms including the constant. One thing to know: `BUILD_RECORD.json` is now stale, so `drafts.py check` fails until you do a visual review and run `record` — I didn't fake that.\n\n**Then Collatz–Wielandt, which turned out better than I expected.**\n\nSplit off the pole: $Q_L = S_L + P_L$ with $S_L := \\mathcal E_{\\mu_L} + \\gamma_L\\|f\\|^2$. That $S_L$ is a **Z (Stieltjes) operator** — symmetric, nonpositive off-diagonal, constant diagonal — so $S_L = d_LI - N_L$ with $N_L\\ge0$ entrywise and $\\lambda_{\\min}(S_L) = d_L - \\rho(N_L)$, a **Perron root**.\n\n- **One positive trial function brackets it from both sides.** At $L=2$ (exact $-4.3037$) the constant function gives $-4.7732 \\le \\lambda_{\\min}(S_L)\\le -3.8465$ — within 12%, from one evaluation and no spectral computation. This is the first place in the programme where the cone does work the spectral theorem doesn't do for free.\n- **$S_L$ has exactly one negative direction**, and it is $\\cosh(x/2)$ — the pole form's *positive* direction — with overlap 0.9844 → 0.9998 across $L=0.5$ to $4$. The count is forced by RH; the coincidence of the two directions isn't forced by anything, and it's the sharpest statement I have of what the pole term is *for*.\n- **A proved necessary condition.** Evaluating $Q_L$ at the unit ground state $\\psi$ and applying Cauchy–Schwarz:\n$$\\alpha_L := -\\lambda_{\\min}(S_L)\\ \\le\\ 2|\\langle\\cosh(x/2),\\psi\\rangle|^2\\ \\le\\ 2\\sinh(L/2)+L.$$\n- **And it's sharp.** Relative margin $9.1\\times10^{-2}$ at $L=0.5$ down to $2.2\\times10^{-3}$ at $L=4$; the absolute margin sits near $0.03$ while both sides grow like $e^{L/2}$.\n\nSo this is a rigorous **disproof test**: Collatz–Wielandt lower-bounds $\\alpha_L$ from *any* positive $u$, and if that ever exceeded $2\\sinh(L/2)+L$, RH is false. No optimality needed, and it'd be decisive with a trial function good to ~1%, which power iteration supplies. It is not a proof route — necessary, not sufficient, and the residue it spends is exactly the rank-two pole that keeps $Q_L$ out of any cone.\n\nOne more thing worth flagging: $S_L$'s *second* eigenvalue is already tiny ($8\\times10^{-4}$ for $L\\ge1.5$), so $Q_L$'s near-degeneracy is **inherited from $S_L$**, not created by the pole. The pole only cancels one large negative eigenvalue.\n\nThe necessary condition is the first statement in this programme that could in principle be violated, so I'd put it into the manuscript next to Prop 7.3 — say the word.\n\n**Sources:** [notes/COLLATZ_WIELANDT_20260916.md](computer:///Users/teddy/Documents/shifted-zeta-positivity/papers/susy-positivity/investigations/source-selection-rules/notes/COLLATZ_WIELANDT_20260916.md) · [manuscript.tex §7.6](computer:///Users/teddy/Documents/shifted-zeta-positivity/papers/susy-positivity/investigations/inverse-bulk-realization/sections/07_gluing.tex)"
+            ]
+          },
+          "status": "finished_successfully",
+          "end_turn": true,
+          "metadata": {
+            "source": "Claude Cowork session event, completed public message",
+            "source_turn_id": "091721c9-11a8-484e-a515-c6d0beb9f676",
+            "source_event_seq": 1366,
+            "created_at_utc": "2026-09-16T04:41:22.812Z",
+            "completed_at_utc": "2026-09-16T04:41:22.812Z",
+            "created_at_local": "2026-09-16T00:41:22.812-04:00",
+            "phase": "final_answer"
+          },
+          "recipient": "all"
+        },
+        "parent": "d526fb49-3da7-4010-ac47-da1bfc9efc0e",
+        "children": [
+          "5cdcaf6c-a6dc-42f2-ad95-61b7b16a7f46"
+        ]
+      },
+      "5cdcaf6c-a6dc-42f2-ad95-61b7b16a7f46": {
+        "id": "5cdcaf6c-a6dc-42f2-ad95-61b7b16a7f46",
+        "message": {
+          "id": "5cdcaf6c-a6dc-42f2-ad95-61b7b16a7f46",
+          "author": {
+            "role": "user",
+            "name": null,
+            "metadata": {}
+          },
+          "create_time": 1789534246.049238,
+          "update_time": 1789534246.049238,
+          "content": {
+            "content_type": "text",
+            "parts": [
+              "Great, this sounds very promising. When you say it is not a proof route, can you elaborate on that? After elaborating please proceed with the disproof test."
+            ]
+          },
+          "status": "finished_successfully",
+          "end_turn": null,
+          "metadata": {
+            "source": "Claude Cowork session event, completed public message",
+            "source_turn_id": "5cdcaf6c-a6dc-42f2-ad95-61b7b16a7f46",
+            "source_event_seq": 1386,
+            "created_at_utc": "2026-09-16T04:50:46.049Z",
+            "completed_at_utc": "2026-09-16T04:50:46.049Z",
+            "created_at_local": "2026-09-16T00:50:46.049-04:00",
+            "phase": null
+          },
+          "recipient": "all"
+        },
+        "parent": "17568155-f964-4899-a0b6-74e005758bcf",
+        "children": [
+          "572159fe-cbb5-4a42-b323-d50fbc645277"
+        ]
+      },
+      "572159fe-cbb5-4a42-b323-d50fbc645277": {
+        "id": "572159fe-cbb5-4a42-b323-d50fbc645277",
+        "message": {
+          "id": "572159fe-cbb5-4a42-b323-d50fbc645277",
+          "author": {
+            "role": "user",
+            "name": null,
+            "metadata": {}
+          },
+          "create_time": 1789534277.683648,
+          "update_time": 1789534277.683648,
+          "content": {
+            "content_type": "text",
+            "parts": [
+              "And also yes please put that into the manuscript"
+            ]
+          },
+          "status": "finished_successfully",
+          "end_turn": null,
+          "metadata": {
+            "source": "Claude Cowork session event, completed public message",
+            "source_turn_id": "5cdcaf6c-a6dc-42f2-ad95-61b7b16a7f46",
+            "source_event_seq": 1391,
+            "created_at_utc": "2026-09-16T04:51:17.683Z",
+            "completed_at_utc": "2026-09-16T04:51:17.683Z",
+            "created_at_local": "2026-09-16T00:51:17.683-04:00",
+            "kind": "queued",
+            "sent_while_reply_in_progress": true,
+            "phase": null
+          },
+          "recipient": "all"
+        },
+        "parent": "5cdcaf6c-a6dc-42f2-ad95-61b7b16a7f46",
+        "children": [
+          "1b306023-b216-4acb-8470-00e7cd2f033f"
+        ]
+      },
+      "1b306023-b216-4acb-8470-00e7cd2f033f": {
+        "id": "1b306023-b216-4acb-8470-00e7cd2f033f",
+        "message": {
+          "id": "1b306023-b216-4acb-8470-00e7cd2f033f",
+          "author": {
+            "role": "assistant",
+            "name": null,
+            "metadata": {}
+          },
+          "create_time": 1789534332.526,
+          "update_time": 1789534332.526,
+          "content": {
+            "content_type": "text",
+            "parts": [
+              "Elaborating first, with a computation to make it concrete."
+            ]
+          },
+          "status": "finished_successfully",
+          "end_turn": false,
+          "metadata": {
+            "source": "Claude Cowork session event, completed public message",
+            "source_turn_id": "5cdcaf6c-a6dc-42f2-ad95-61b7b16a7f46",
+            "source_event_seq": 1394,
+            "created_at_utc": "2026-09-16T04:52:12.526Z",
+            "completed_at_utc": "2026-09-16T04:52:12.526Z",
+            "created_at_local": "2026-09-16T00:52:12.526-04:00",
+            "phase": "commentary"
+          },
+          "recipient": "all"
+        },
+        "parent": "572159fe-cbb5-4a42-b323-d50fbc645277",
+        "children": [
+          "71671505-9452-440e-bfae-f1b78adba529"
+        ]
+      },
+      "71671505-9452-440e-bfae-f1b78adba529": {
+        "id": "71671505-9452-440e-bfae-f1b78adba529",
+        "message": {
+          "id": "71671505-9452-440e-bfae-f1b78adba529",
+          "author": {
+            "role": "assistant",
+            "name": null,
+            "metadata": {}
+          },
+          "create_time": 1789534404.927,
+          "update_time": 1789534404.927,
+          "content": {
+            "content_type": "text",
+            "parts": [
+              "The sufficiency picture is sharp. Now the test at scale."
+            ]
+          },
+          "status": "finished_successfully",
+          "end_turn": false,
+          "metadata": {
+            "source": "Claude Cowork session event, completed public message",
+            "source_turn_id": "5cdcaf6c-a6dc-42f2-ad95-61b7b16a7f46",
+            "source_event_seq": 1404,
+            "created_at_utc": "2026-09-16T04:53:24.927Z",
+            "completed_at_utc": "2026-09-16T04:53:24.927Z",
+            "created_at_local": "2026-09-16T00:53:24.927-04:00",
+            "phase": "commentary"
+          },
+          "recipient": "all"
+        },
+        "parent": "1b306023-b216-4acb-8470-00e7cd2f033f",
+        "children": [
+          "2505f50d-e35a-4ab9-8791-cfc6e73cf688"
+        ]
+      },
+      "2505f50d-e35a-4ab9-8791-cfc6e73cf688": {
+        "id": "2505f50d-e35a-4ab9-8791-cfc6e73cf688",
+        "message": {
+          "id": "2505f50d-e35a-4ab9-8791-cfc6e73cf688",
+          "author": {
+            "role": "assistant",
+            "name": null,
+            "metadata": {}
+          },
+          "create_time": 1789535470.098,
+          "update_time": 1789535470.098,
+          "content": {
+            "content_type": "text",
+            "parts": [
+              "No crossing. Putting the result into the manuscript."
+            ]
+          },
+          "status": "finished_successfully",
+          "end_turn": false,
+          "metadata": {
+            "source": "Claude Cowork session event, completed public message",
+            "source_turn_id": "5cdcaf6c-a6dc-42f2-ad95-61b7b16a7f46",
+            "source_event_seq": 1494,
+            "created_at_utc": "2026-09-16T05:11:10.098Z",
+            "completed_at_utc": "2026-09-16T05:11:10.098Z",
+            "created_at_local": "2026-09-16T01:11:10.098-04:00",
+            "phase": "commentary"
+          },
+          "recipient": "all"
+        },
+        "parent": "71671505-9452-440e-bfae-f1b78adba529",
+        "children": [
+          "a9331655-d898-4b37-adaa-0b0ec104a2e9"
+        ]
+      },
+      "a9331655-d898-4b37-adaa-0b0ec104a2e9": {
+        "id": "a9331655-d898-4b37-adaa-0b0ec104a2e9",
+        "message": {
+          "id": "a9331655-d898-4b37-adaa-0b0ec104a2e9",
+          "author": {
+            "role": "assistant",
+            "name": null,
+            "metadata": {}
+          },
+          "create_time": 1789535570.016,
+          "update_time": 1789535570.016,
+          "content": {
+            "content_type": "text",
+            "parts": [
+              "**Why it isn't a proof route — the quantitative version.**\n\nThe condition tests $Q_L$ on *one* vector, the ground state $\\psi$ of $S_L$. That's the easy direction: $S_L$ is very negative there, the pole form very positive, and they cancel to within ~0.03. The difficulty lives on $\\psi^\\perp$, and the numbers are stark:\n\n| $L$ | 0.8 | 1.0 | 1.5 | 2.0 | 3.0 | 4.0 |\n|---|---|---|---|---|---|---|\n| $\\lambda_2(S_L)$ | 0.0301 | 0.0122 | 2.9e-4 | 2.5e-4 | 2.2e-4 | 2.4e-4 |\n| $2\\|\\sinh(x/2)\\|^2$ | 0.0215 | 0.0422 | 0.145 | 0.350 | 1.259 | 3.254 |\n| ratio | 1.40 | 0.288 | 2.0e-3 | 7.0e-4 | 1.7e-4 | 7.4e-5 |\n\nOn the complement $S_L$ is bounded below only by $\\lambda_2(S_L)$, while the pole still contributes $-2|\\langle\\sinh,f\\rangle|^2$. For $L\\ge1.5$ the available positivity is **three to four orders of magnitude short**. So the insufficiency is quantitative, not a missing lemma — and Perron–Frobenius and Collatz–Wielandt are theories of the *extreme* eigenvalue only; nothing there reaches $\\lambda_2$. (The ratio crosses 1 near $L\\approx0.85$, just above Yoshida's $\\log 2$ — that's the range where a one-vector test is nearly sufficient.)\n\n**The test, run.** $S_L$ is symmetric **Toeplitz**, so FFT matvecs, and $\\alpha_L=(\\lambda_{\\max}(N_L)-d_L)/h$ with $\\lambda_{\\max}$ of a *nonnegative* operator — the easy end for Lanczos. 0.2 s per $L$ at $m=4000$. Crucially the cell span is a *subspace*, so the Galerkin minimum is ≥ the continuum one: **every computed $\\alpha^{(m)}_L$ is a rigorous lower bound on the true $\\alpha_L$**, which is the direction a disproof needs. Convergence at $L=1$: 1.9873106 → 1.9874935 over $m=250\\ldots64000$.\n\n**7713 values of $L$ in $[1/2,10]$, every prime-power threshold sampled on both sides. No crossing.** Least absolute margin **0.0187 at $L=5.3396$** (relative $9.5\\times10^{-4}$); the ten smallest all sit in $L\\in[3.5,6.3]$. The absolute margin does *not* tend to zero — it oscillates in roughly $[0.019, 0.09]$ while both sides grow like $e^{L/2}$.\n\nThat's the expected outcome and it is not evidence for RH. What it does establish: the condition is **not asymptotically tight** — a margin bounded away from zero means it's weaker than Weil positivity by a fixed amount, exactly as the insufficiency analysis predicts. A condition that had closed up would have been the interesting result.\n\nOne honest caveat: floating point, Lanczos tolerance $10^{-12}$, discretisation error $\\sim10^{-5}$ — both far below the 0.0187 margin, but this is not interval arithmetic and not a certificate.\n\n**Manuscript 0.6, second edit — new §7.7, 42 pages, builds clean.** Prop 7.13 (jump form), the Stieltjes structure of $S_L$, Prop 7.14 (the necessary condition), and Remark 7.15 carrying the scan, the Collatz–Wielandt bound (7.29) with the disproof criterion, and the quantitative account of insufficiency. `BUILD_RECORD.json` is still stale — it needs your visual review plus `validation/drafts.py record`.\n\n**Sources:** [notes/COLLATZ_WIELANDT_20260916.md](computer:///Users/teddy/Documents/shifted-zeta-positivity/papers/susy-positivity/investigations/source-selection-rules/notes/COLLATZ_WIELANDT_20260916.md) · [sections/07_gluing.tex](computer:///Users/teddy/Documents/shifted-zeta-positivity/papers/susy-positivity/investigations/inverse-bulk-realization/sections/07_gluing.tex)"
+            ]
+          },
+          "status": "finished_successfully",
+          "end_turn": true,
+          "metadata": {
+            "source": "Claude Cowork session event, completed public message",
+            "source_turn_id": "5cdcaf6c-a6dc-42f2-ad95-61b7b16a7f46",
+            "source_event_seq": 1510,
+            "created_at_utc": "2026-09-16T05:12:50.016Z",
+            "completed_at_utc": "2026-09-16T05:12:50.016Z",
+            "created_at_local": "2026-09-16T01:12:50.016-04:00",
+            "phase": "final_answer"
+          },
+          "recipient": "all"
+        },
+        "parent": "2505f50d-e35a-4ab9-8791-cfc6e73cf688",
+        "children": [
+          "488f1074-5ed5-4a29-bbf0-b5d36325a130"
+        ]
+      },
+      "488f1074-5ed5-4a29-bbf0-b5d36325a130": {
+        "id": "488f1074-5ed5-4a29-bbf0-b5d36325a130",
+        "message": {
+          "id": "488f1074-5ed5-4a29-bbf0-b5d36325a130",
+          "author": {
+            "role": "user",
+            "name": null,
+            "metadata": {}
+          },
+          "create_time": 1789535662.225658,
+          "update_time": 1789535662.225658,
+          "content": {
+            "content_type": "text",
+            "parts": [
+              "Oh that's a bummer, worth a try at least"
+            ]
+          },
+          "status": "finished_successfully",
+          "end_turn": null,
+          "metadata": {
+            "source": "Claude Cowork session event, completed public message",
+            "source_turn_id": "488f1074-5ed5-4a29-bbf0-b5d36325a130",
+            "source_event_seq": 1515,
+            "created_at_utc": "2026-09-16T05:14:22.225Z",
+            "completed_at_utc": "2026-09-16T05:14:22.225Z",
+            "created_at_local": "2026-09-16T01:14:22.225-04:00",
+            "phase": null
+          },
+          "recipient": "all"
+        },
+        "parent": "a9331655-d898-4b37-adaa-0b0ec104a2e9",
+        "children": [
+          "5ed7377e-ed23-43fe-be38-481804d65598"
+        ]
+      },
+      "5ed7377e-ed23-43fe-be38-481804d65598": {
+        "id": "5ed7377e-ed23-43fe-be38-481804d65598",
+        "message": {
+          "id": "5ed7377e-ed23-43fe-be38-481804d65598",
+          "author": {
+            "role": "assistant",
+            "name": null,
+            "metadata": {}
+          },
+          "create_time": 1789535689.599,
+          "update_time": 1789535689.599,
+          "content": {
+            "content_type": "text",
+            "parts": [
+              "Honestly, a crossing would have disproved RH — so \"no crossing\" was always the overwhelming favourite. The value was never in hoping for it; it was in having a test that *could* have fired and finding out exactly how close it gets.\n\nAnd it did pay, in three ways worth keeping:\n\n- **§7.7 is new mathematics in the manuscript** — the jump form and Prop 7.14 exist because we went looking for something to violate.\n- **The apparatus is now cheap.** $\\alpha_L$ at $m=4000$ in 0.2 s, Toeplitz + FFT, with the Galerkin direction proved safe. Any future one-vector test on this form runs in minutes, not a session.\n- **The margin is bounded away from zero**, which is a real diagnostic. It says the condition is weaker than positivity by a *fixed* amount rather than asymptotically tight — so we know precisely how much room a sharper test would have to close.\n\nThere's also an obvious upgrade sitting right there. The condition I tested uses one vector. But $P_L$ has rank **two**, so the exact criterion — not a relaxation — is a two-scalar condition: $Q_L\\succeq0$ iff $\\langle c, S_L^{-1}c\\rangle$ and $\\langle s, S_L^{-1}s\\rangle$ satisfy explicit inequalities for $c=\\cosh(x/2)$, $s=\\sinh(x/2)$. That's the sharp version of what I ran, it's in the same Collatz–Wielandt language, and the manuscript already has something of this shape (the \"two-scalar parity reduction\" for $A_L$ in the prime-free check). Whether it's *testable* depends on how well $S_L^{-1}$ can be bounded on those two vectors — and $S_L$ being Stieltjes-with-one-negative-direction is a good starting point for that.\n\nWant me to work that out? The other live threads are the nonlocal Dirichlet-form spectral gap (§5 of the jump-form note), the de Branges chain, and the spherical-vector correspondence — happy to go wherever you'd rather."
+            ]
+          },
+          "status": "finished_successfully",
+          "end_turn": true,
+          "metadata": {
+            "source": "Claude Cowork session event, completed public message",
+            "source_turn_id": "488f1074-5ed5-4a29-bbf0-b5d36325a130",
+            "source_event_seq": 1520,
+            "created_at_utc": "2026-09-16T05:14:49.599Z",
+            "completed_at_utc": "2026-09-16T05:14:49.599Z",
+            "created_at_local": "2026-09-16T01:14:49.599-04:00",
+            "phase": "final_answer"
+          },
+          "recipient": "all"
+        },
+        "parent": "488f1074-5ed5-4a29-bbf0-b5d36325a130",
+        "children": [
+          "d6001091-8cab-4a3c-bc53-1cdb0bf54b5c"
+        ]
+      },
+      "d6001091-8cab-4a3c-bc53-1cdb0bf54b5c": {
+        "id": "d6001091-8cab-4a3c-bc53-1cdb0bf54b5c",
+        "message": {
+          "id": "d6001091-8cab-4a3c-bc53-1cdb0bf54b5c",
+          "author": {
+            "role": "user",
+            "name": null,
+            "metadata": {}
+          },
+          "create_time": 1789535768.501945,
+          "update_time": 1789535768.501945,
+          "content": {
+            "content_type": "text",
+            "parts": [
+              "What do you think is the most promising at this moment?"
+            ]
+          },
+          "status": "finished_successfully",
+          "end_turn": null,
+          "metadata": {
+            "source": "Claude Cowork session event, completed public message",
+            "source_turn_id": "d6001091-8cab-4a3c-bc53-1cdb0bf54b5c",
+            "source_event_seq": 1526,
+            "created_at_utc": "2026-09-16T05:16:08.501Z",
+            "completed_at_utc": "2026-09-16T05:16:08.501Z",
+            "created_at_local": "2026-09-16T01:16:08.501-04:00",
+            "phase": null
+          },
+          "recipient": "all"
+        },
+        "parent": "5ed7377e-ed23-43fe-be38-481804d65598",
+        "children": [
+          "055e8519-8747-4812-ab2a-9f054df30861"
+        ]
+      },
+      "055e8519-8747-4812-ab2a-9f054df30861": {
+        "id": "055e8519-8747-4812-ab2a-9f054df30861",
+        "message": {
+          "id": "055e8519-8747-4812-ab2a-9f054df30861",
+          "author": {
+            "role": "assistant",
+            "name": null,
+            "metadata": {}
+          },
+          "create_time": 1789535813.286,
+          "update_time": 1789535813.286,
+          "content": {
+            "content_type": "text",
+            "parts": [
+              "If I had to pick one: **read Suzuki properly** — specifically arXiv:2301.00421, the de Branges paper.\n\nMy reasoning is information economics more than depth. It's the only place where someone has brought serious machinery to bear on *our exact object*, and everything I know about it is second-hand from a subagent. The one claim I did verify directly from his other paper — Thm 1.4's $\\lambda_a = \\log(1/a) - \\log 2\\pi + \\ldots$ — turned out to reproduce our density identity exactly, constant included, from a completely independent route. That's a strong signal the rest of his work connects too, and we're currently citing him for a normalization.\n\nAnd the specific claim is potentially a change of kind, not an increment: that he converts the RH criterion **from inequalities to equalities**. Our single biggest structural problem is that the criterion is an inequality critical to twenty-odd digits — which is why no margin-based method can touch it and why the disproof test came back with a fixed gap. An equality formulation sidesteps that entirely. It's also the cheapest item on the list: one session of careful reading, no new machinery.\n\nSecond, and genuinely interesting on its own: **why is $\\lambda_2(S_L)\\approx 2\\times10^{-4}$, roughly constant in $L$?** That's a spectral-gap question about an explicit jump Dirichlet form, it's where the criticality actually originates (we showed $Q_L$ inherits its near-degeneracy from $S_L$, not from the pole), and it's well-posed enough to have an answer. Nonlocal Dirichlet forms have a real literature this programme hasn't touched.\n\nThe two-scalar reduction I floated last message I'd now rank **lower** than I implied. It's exact, but $S_L^{-1}$ is dominated by that same $\\lambda_2\\approx10^{-4}$ direction, so the two scalars are numerically delicate in precisely the way the original problem is. It relocates the difficulty rather than reducing it. Cheap to write down, unlikely to open anything.\n\nThe spherical-vector correspondence I'd hold. It's the strongest physics-side handle, but selection rule 6 — Bloch-lifted circle weights can't produce the archimedean part — is an unresolved obstruction sitting directly in that path. Pursuing it before resolving rule 6 seems like building on a known crack.\n\nOne more option worth naming, because I don't think it's a consolation prize: **consolidate**. The selection rules, the density identity, the jump form and Prop 7.14 now form a coherent contribution that is entirely unconditional and doesn't depend on the inverse-bulk construction working. That's a publishable piece of the programme in a way the construction currently isn't. If your goal this month is a paper rather than a proof, finishing that is the highest-expected-value thing on the list — and it doesn't foreclose any of the above."
+            ]
+          },
+          "status": "finished_successfully",
+          "end_turn": true,
+          "metadata": {
+            "source": "Claude Cowork session event, completed public message",
+            "source_turn_id": "d6001091-8cab-4a3c-bc53-1cdb0bf54b5c",
+            "source_event_seq": 1531,
+            "created_at_utc": "2026-09-16T05:16:53.286Z",
+            "completed_at_utc": "2026-09-16T05:16:53.286Z",
+            "created_at_local": "2026-09-16T01:16:53.286-04:00",
+            "phase": "final_answer"
+          },
+          "recipient": "all"
+        },
+        "parent": "d6001091-8cab-4a3c-bc53-1cdb0bf54b5c",
+        "children": [
+          "5c66bd0e-4ce5-4c0b-b71c-d7c458d1a3c1"
+        ]
+      },
+      "5c66bd0e-4ce5-4c0b-b71c-d7c458d1a3c1": {
+        "id": "5c66bd0e-4ce5-4c0b-b71c-d7c458d1a3c1",
+        "message": {
+          "id": "5c66bd0e-4ce5-4c0b-b71c-d7c458d1a3c1",
+          "author": {
+            "role": "user",
+            "name": null,
+            "metadata": {}
+          },
+          "create_time": 1789536059.304213,
+          "update_time": 1789536059.304213,
+          "content": {
+            "content_type": "text",
+            "parts": [
+              "Yes let's consolidate, this is probably a good place to do that. If you think writing a paper is the best way to do that, please do so, and please write it in a way where it flows naturally so that I can read it only assuming background from the susy-positivity folder. For the additional brainstorming ideas, please include those in a comprehensive note in the notes folder. \n\nRegarding reading Suzuki, did you want me to do that? Does it have to do with the normalization? If so I already started that process."
+            ]
+          },
+          "status": "finished_successfully",
+          "end_turn": null,
+          "metadata": {
+            "source": "Claude Cowork session event, completed public message",
+            "source_turn_id": "5c66bd0e-4ce5-4c0b-b71c-d7c458d1a3c1",
+            "source_event_seq": 1537,
+            "created_at_utc": "2026-09-16T05:20:59.304Z",
+            "completed_at_utc": "2026-09-16T05:20:59.304Z",
+            "created_at_local": "2026-09-16T01:20:59.304-04:00",
+            "phase": null
+          },
+          "recipient": "all"
+        },
+        "parent": "055e8519-8747-4812-ab2a-9f054df30861",
+        "children": [
+          "b7ab587c-23f2-421a-af0b-6d15dcc82600"
+        ]
+      },
+      "b7ab587c-23f2-421a-af0b-6d15dcc82600": {
+        "id": "b7ab587c-23f2-421a-af0b-6d15dcc82600",
+        "message": {
+          "id": "b7ab587c-23f2-421a-af0b-6d15dcc82600",
+          "author": {
+            "role": "assistant",
+            "name": null,
+            "metadata": {}
+          },
+          "create_time": 1789536114.863,
+          "update_time": 1789536114.863,
+          "content": {
+            "content_type": "text",
+            "parts": [
+              "On Suzuki — no, nothing needed from you. I read arXiv:2606.09096's PDF myself this session (that's where Thms 1.1/1.3/1.4/1.5 came from), and the normalization citation in §2.1 was already correct and is now also pointing at Remark 7.12. The paper I haven't read directly is a *different* one, arXiv:2301.00421, on de Branges spaces — unrelated to normalization. I can fetch that whenever we pick the thread back up.\n\nNow, consolidating."
+            ]
+          },
+          "status": "finished_successfully",
+          "end_turn": false,
+          "metadata": {
+            "source": "Claude Cowork session event, completed public message",
+            "source_turn_id": "5c66bd0e-4ce5-4c0b-b71c-d7c458d1a3c1",
+            "source_event_seq": 1542,
+            "created_at_utc": "2026-09-16T05:21:54.863Z",
+            "completed_at_utc": "2026-09-16T05:21:54.863Z",
+            "created_at_local": "2026-09-16T01:21:54.863-04:00",
+            "phase": "commentary"
+          },
+          "recipient": "all"
+        },
+        "parent": "5c66bd0e-4ce5-4c0b-b71c-d7c458d1a3c1",
+        "children": [
+          "2a8ad97d-ef30-4b6a-a0cc-e217eb3d7cc2"
+        ]
+      },
+      "2a8ad97d-ef30-4b6a-a0cc-e217eb3d7cc2": {
+        "id": "2a8ad97d-ef30-4b6a-a0cc-e217eb3d7cc2",
+        "message": {
+          "id": "2a8ad97d-ef30-4b6a-a0cc-e217eb3d7cc2",
+          "author": {
+            "role": "assistant",
+            "name": null,
+            "metadata": {}
+          },
+          "create_time": 1789536459.288,
+          "update_time": 1789536459.288,
+          "content": {
+            "content_type": "text",
+            "parts": [
+              "All 15 pages reviewed. Recording the build."
+            ]
+          },
+          "status": "finished_successfully",
+          "end_turn": false,
+          "metadata": {
+            "source": "Claude Cowork session event, completed public message",
+            "source_turn_id": "5c66bd0e-4ce5-4c0b-b71c-d7c458d1a3c1",
+            "source_event_seq": 1601,
+            "created_at_utc": "2026-09-16T05:27:39.288Z",
+            "completed_at_utc": "2026-09-16T05:27:39.288Z",
+            "created_at_local": "2026-09-16T01:27:39.288-04:00",
+            "phase": "commentary"
+          },
+          "recipient": "all"
+        },
+        "parent": "b7ab587c-23f2-421a-af0b-6d15dcc82600",
+        "children": [
+          "441992c0-d07f-46ce-841d-2eb6f4929613"
+        ]
+      },
+      "441992c0-d07f-46ce-841d-2eb6f4929613": {
+        "id": "441992c0-d07f-46ce-841d-2eb6f4929613",
+        "message": {
+          "id": "441992c0-d07f-46ce-841d-2eb6f4929613",
+          "author": {
+            "role": "assistant",
+            "name": null,
+            "metadata": {}
+          },
+          "create_time": 1789536630.101,
+          "update_time": 1789536630.101,
+          "content": {
+            "content_type": "text",
+            "parts": [
+              "Done. **`manuscript.pdf` — *A jump-process presentation of the localized Weil form***, 15 pages, drafted for Edward Baker, in the `source-selection-rules` investigation. It builds clean, I read all 15 rendered pages myself, `BUILD_RECORD.json` is written with that review note, snapshot `drafts/2026-09-16-v01` is saved, and `check --replay` passes over 44,289 cases.\n\nIt's self-contained — no shared background inputs, and the companion manuscript is cited only for the programme's objective and for results quoted by number. It reads straight through:\n\n§3 the density identity and its four consequences · §4 the jump form (Prop 4.1) · §5 the symbol split, with the honest verdict that it's a constant factor and not a change of kind · §6 the Perron–Frobenius structure, its destruction by the poles, and the precise account of what Vandergraft/Krein–Rutman/Birkhoff/Collatz–Wielandt each can and cannot supply · §7 the necessary condition, the disproof test as run, and the quantitative reason it isn't sufficient · §8 the nine selection rules · §9 what remains. Appendix A says exactly what the five check programmes do and don't establish, and flags the three computations deliberately outside them.\n\nThe introduction has an explicit **\"What is not claimed\"** subsection, and the scope paragraph in §9 says plainly that none of it is proposed as a route to RH.\n\n**`notes/OPEN_DIRECTIONS_20260916.md`** carries everything else, grouped and ranked: **A** ready now (Suzuki's de Branges paper at the top, the spectral gap, the $\\cosh$ coincidence, two computations to port); **B** open with a named obstruction — including one thing I hadn't written down before, that Birkhoff *does* apply to $N_L$, where it would bound exactly the gap in A2; **C** nine items closed with reasons, not to be redone; **D** external work; **E** method notes, including the ones that cost real time this round (never assemble $Q_L$ term-by-term in double precision; choose the basis for the direction of the bound; the $\\psi'$ tail correction at offset one).\n\nOne outstanding item on your side: **inverse-bulk-realization 0.6** (42 pp) has a stale `BUILD_RECORD.json` — it needs your visual review and `validation/drafts.py record`. I didn't fake that one since you'll want to read the new §7.7 yourself anyway."
+            ]
+          },
+          "status": "finished_successfully",
+          "end_turn": true,
+          "metadata": {
+            "source": "Claude Cowork session event, completed public message",
+            "source_turn_id": "5c66bd0e-4ce5-4c0b-b71c-d7c458d1a3c1",
+            "source_event_seq": 1626,
+            "created_at_utc": "2026-09-16T05:30:30.101Z",
+            "completed_at_utc": "2026-09-16T05:30:30.101Z",
+            "created_at_local": "2026-09-16T01:30:30.101-04:00",
+            "phase": "final_answer"
+          },
+          "recipient": "all"
+        },
+        "parent": "2a8ad97d-ef30-4b6a-a0cc-e217eb3d7cc2",
+        "children": [
+          "81dafecc-97df-4c6d-a708-e50f20e0d6fc"
+        ]
+      },
+      "81dafecc-97df-4c6d-a708-e50f20e0d6fc": {
+        "id": "81dafecc-97df-4c6d-a708-e50f20e0d6fc",
+        "message": {
+          "id": "81dafecc-97df-4c6d-a708-e50f20e0d6fc",
+          "author": {
+            "role": "user",
+            "name": null,
+            "metadata": {}
+          },
+          "create_time": 1789537617.348718,
+          "update_time": 1789537617.348718,
+          "content": {
+            "content_type": "text",
+            "parts": [
+              "I looked at BUILD_RECORD.json but not sure what I'm looking for, same for drafts.py. Also, please draft a continuation note for the next session. Please include information about both the brainstorming angles and the recommended continuation pathway for the current investigation."
+            ]
+          },
+          "status": "finished_successfully",
+          "end_turn": null,
+          "metadata": {
+            "source": "Claude Cowork session event, completed public message",
+            "source_turn_id": "81dafecc-97df-4c6d-a708-e50f20e0d6fc",
+            "source_event_seq": 1646,
+            "created_at_utc": "2026-09-16T05:46:57.348Z",
+            "completed_at_utc": "2026-09-16T05:46:57.348Z",
+            "created_at_local": "2026-09-16T01:46:57.348-04:00",
+            "phase": null
+          },
+          "recipient": "all"
+        },
+        "parent": "441992c0-d07f-46ce-841d-2eb6f4929613",
+        "children": [
+          "d0d88044-9c9d-4e59-bfcd-a59cab28ba27"
+        ]
+      },
+      "d0d88044-9c9d-4e59-bfcd-a59cab28ba27": {
+        "id": "d0d88044-9c9d-4e59-bfcd-a59cab28ba27",
+        "message": {
+          "id": "d0d88044-9c9d-4e59-bfcd-a59cab28ba27",
+          "author": {
+            "role": "assistant",
+            "name": null,
+            "metadata": {}
+          },
+          "create_time": 1789537766.631,
+          "update_time": 1789537766.631,
+          "content": {
+            "content_type": "text",
+            "parts": [
+              "Both explained properly in the build guide now, and there's a live demonstration below.\n\n**`BUILD_RECORD.json` isn't meant to be read for content.** It's a provenance record — SHA-256 hashes pinning one PDF to the exact sources, check programmes and records that produced it, plus the page count, engine banner, build command, and a free-text note asserting someone looked at the rendered pages. Its only job is to **fail later**. The only fields worth your eye are `version`, `pages` and `visual_review`; the rest is hashes.\n\n**`validation/drafts.py` writes and enforces it.** Three commands:\n\n| Command | Does | Refuses |\n|---|---|---|\n| `check [--replay]` | Verifies the record against the files and every archived snapshot; `--replay` also re-runs all five check programmes and demands byte-identical output | any drifted file, any edited snapshot, any changed check output |\n| `record --date --pages --review-note` | Writes `BUILD_RECORD.json` | undefined/multiply-defined refs or overfull boxes in the log; page count ≠ log; `manuscript.pdf` ≠ `build/manuscript.pdf`; a source newer than the PDF; an empty review note |\n| `save NAME` | Copies a complete standalone package into `drafts/NAME` | overwriting an existing snapshot; a name not of the form `YYYY-MM-DD-vNN`; any file over 1 MiB |\n\nThe `--review-note` is the one thing the tool can't verify — it's a human assertion, stored verbatim so a later reader knows what was and wasn't checked.\n\n**The live demonstration:** I edited `BUILD.md` just now, and `check` immediately said `FAIL: Changed recorded file: .../BUILD.md`. That's the whole mechanism. I re-recorded (PDF and all TeX byte-identical), and the snapshot `drafts/2026-09-16-v01` still verifies independently, because snapshots carry their own copy of everything including the tool.\n\n**For 0.6**, the pending action is:\n\n```sh\ncd papers/susy-positivity/investigations/inverse-bulk-realization\nlatexmk -pdf -interaction=nonstopmode -halt-on-error -outdir=build manuscript.tex\ncp build/manuscript.pdf manuscript.pdf\n# read the pages, especially the new §7.7\npython3 validation/drafts.py record --date 2026-09-16 --pages 42 --review-note \"...\"\npython3 validation/drafts.py save 2026-09-16-v06\n```\n\nI can do the review and record for 0.6 myself if you'd rather — I can read the rendered pages, which is how I recorded 0.1 honestly. You may want to read §7.7 regardless, since it's new mathematics rather than a correction.\n\n**The continuation note is rewritten** at `notes/CONTINUATION_20260916.md`, replacing the mid-session version. It carries: the state of both manuscripts including the stale record; the five facts a new session needs (the density identity, the jump form, the pole as the obstruction in three independent ways, the collapsing margin, and which direction a one-sided value certifies); the recommended pathway in order with the reasoning for the order — Suzuki's de Branges paper first because it's cheapest and could change what the rest is for, then the spectral gap of the jump form with the untested Birkhoff-on-$N_L$ connection, then the $\\cosh$ coincidence, then porting the two computations; a summary of all five brainstorming groups pointing into `OPEN_DIRECTIONS`; what not to redo; and the conventions, including the `.git/index.lock` gotcha."
+            ]
+          },
+          "status": "finished_successfully",
+          "end_turn": true,
+          "metadata": {
+            "source": "Claude Cowork session event, completed public message",
+            "source_turn_id": "81dafecc-97df-4c6d-a708-e50f20e0d6fc",
+            "source_event_seq": 1664,
+            "created_at_utc": "2026-09-16T05:49:26.631Z",
+            "completed_at_utc": "2026-09-16T05:49:26.631Z",
+            "created_at_local": "2026-09-16T01:49:26.631-04:00",
+            "phase": "final_answer"
+          },
+          "recipient": "all"
+        },
+        "parent": "81dafecc-97df-4c6d-a708-e50f20e0d6fc",
+        "children": []
+      }
+    },
+    "current_node": "d0d88044-9c9d-4e59-bfcd-a59cab28ba27",
+    "conversation_id": "cse_01Qdz19yc4XF6tFzdjNHfCkG",
+    "id": "cse_01Qdz19yc4XF6tFzdjNHfCkG",
+    "archive_metadata": {
+      "format": "ChatGPT-style conversation mapping; local conversion, not an official provider export",
+      "source_kind": "Claude Cowork cloud session event log (claude.ai GET /v1/code/sessions/{id}/events), read in the signed-in browser and reduced to completed public messages",
+      "message_timestamps": "Event times, in seconds since Unix epoch and ISO 8601: the session's own timestamp where the event carries one, otherwise the server's event time (typed messages); the conversation create_time is the session's creation time in the session list",
+      "coverage": "Messages typed by the person (including any sent while a reply was in progress, with the names of files sent with them) and interruption markers; the options the person selected in question cards; the assistant text shown in the chat: progress lines between tool calls, question cards rendered as text, notes and file-card captions sent through tools (phase commentary), and the text ending each completed turn (phase final_answer); recorded through the event log as read",
+      "omitted_record_types": [
+        "system, developer and harness text (reminders, date notes, memory snapshots, continuation summaries, hook feedback, skill text, local command output)",
+        "internal reasoning",
+        "tool calls and outputs, except the chat-visible items named in coverage",
+        "permission prompts, control and environment events, usage and cost figures",
+        "subagent messages",
+        "attachment contents (file names are kept in message metadata)"
+      ],
+      "source_public_message_records": 42,
+      "model_configurations": [
+        {
+          "model": "claude-opus-5",
+          "reasoning_effort": "xhigh"
+        }
+      ],
+      "serving_models_per_events": [
+        "claude-opus-5"
+      ],
+      "turns": {
+        "9476f6fa-535e-40bd-bd8c-51b81f4456d7": {
+          "status": "completed",
+          "started_at": "2026-09-16T01:10:29.649Z",
+          "completed_at": "2026-09-16T01:12:44.742Z"
+        },
+        "f7cf4758-997d-4d78-aefa-a92253bc1147": {
+          "status": "completed",
+          "started_at": "2026-09-16T01:30:42.277Z",
+          "completed_at": "2026-09-16T01:43:29.571Z"
+        },
+        "a1fe6587-2426-4da4-b005-15d8ff35789b": {
+          "status": "completed",
+          "started_at": "2026-09-16T01:49:36.754Z",
+          "completed_at": "2026-09-16T01:59:29.331Z"
+        },
+        "860d4e2e-a30c-4c78-86b8-0d6040a2e005": {
+          "status": "completed",
+          "started_at": "2026-09-16T03:02:46.392Z",
+          "completed_at": "2026-09-16T03:16:22.171Z"
+        },
+        "ceefedcc-6b49-420a-be91-022fb78db01c": {
+          "status": "completed",
+          "started_at": "2026-09-16T03:21:12.258Z",
+          "completed_at": "2026-09-16T03:43:05.811Z"
+        },
+        "231f6950-3e4f-4abb-acb3-a79a0c920c54": {
+          "status": "completed",
+          "started_at": "2026-09-16T03:53:16.000Z",
+          "completed_at": "2026-09-16T03:54:01.871Z"
+        },
+        "3e349941-da79-4529-979c-9f87fdc9a7ca": {
+          "status": "completed",
+          "started_at": "2026-09-16T03:56:32.811Z",
+          "completed_at": "2026-09-16T04:13:50.356Z"
+        },
+        "90f132b3-b918-43d5-b03e-ede596ba275e": {
+          "status": "completed",
+          "started_at": "2026-09-16T04:18:33.811Z",
+          "completed_at": "2026-09-16T04:28:34.226Z"
+        },
+        "091721c9-11a8-484e-a515-c6d0beb9f676": {
+          "status": "completed",
+          "started_at": "2026-09-16T04:32:13.583Z",
+          "completed_at": "2026-09-16T04:41:22.812Z"
+        },
+        "5cdcaf6c-a6dc-42f2-ad95-61b7b16a7f46": {
+          "status": "completed",
+          "started_at": "2026-09-16T04:50:46.049Z",
+          "completed_at": "2026-09-16T05:12:50.016Z",
+          "prompts_in_turn": 2
+        },
+        "488f1074-5ed5-4a29-bbf0-b5d36325a130": {
+          "status": "completed",
+          "started_at": "2026-09-16T05:14:22.225Z",
+          "completed_at": "2026-09-16T05:14:49.599Z"
+        },
+        "d6001091-8cab-4a3c-bc53-1cdb0bf54b5c": {
+          "status": "completed",
+          "started_at": "2026-09-16T05:16:08.501Z",
+          "completed_at": "2026-09-16T05:16:53.286Z"
+        },
+        "5c66bd0e-4ce5-4c0b-b71c-d7c458d1a3c1": {
+          "status": "completed",
+          "started_at": "2026-09-16T05:20:59.304Z",
+          "completed_at": "2026-09-16T05:30:30.101Z"
+        },
+        "81dafecc-97df-4c6d-a708-e50f20e0d6fc": {
+          "status": "completed",
+          "started_at": "2026-09-16T05:46:57.348Z",
+          "completed_at": "2026-09-16T05:49:26.631Z"
+        }
+      },
+      "session": {
+        "app": "Claude Cowork (cloud session)",
+        "session_id": "cse_01Qdz19yc4XF6tFzdjNHfCkG",
+        "claude_ai_session": "https://claude.ai/cowork/cse_01Qdz19yc4XF6tFzdjNHfCkG",
+        "title_source": "the session's title in the Cowork session list",
+        "project": {
+          "name": "RH4",
+          "uuid": "01a0a294-2491-75ab-90c4-aef59fd72754",
+          "chat_project_id": "claude_proj_011Cf4KXnndRHkK9fQSFVzHH",
+          "chat_project_id_decodes_to_uuid": true
+        },
+        "created_at_utc": "2026-09-16T01:06:40.969546Z",
+        "last_event_at_utc": "2026-09-16T05:49:28.455575Z",
+        "status_bucket_when_read": "completed",
+        "origin": "desktop_app",
+        "permission_mode": "auto",
+        "user_selected_folders": [
+          "shifted-zeta-positivity",
+          "Documents"
+        ],
+        "sdk_session_ids": [
+          "03cce733-2c50-49d8-91a6-f4b248835c07",
+          "48b606d0-3041-52d5-9776-62e9413de743",
+          "cse_01Qdz19yc4XF6tFzdjNHfCkG",
+          "91d994ff-9f07-4964-9c7d-d6e5ec4010f7",
+          "c9e9e766-5880-4e8b-8789-6f795a2df43d",
+          "7b44685e-10c6-4b85-85a5-fb43f54c8774",
+          "54bc1de3-73ce-4fed-82e9-1befa2de3188",
+          "5bfb3554-812a-4e9a-850a-af0c7f47722b",
+          "2bcec45c-4bb3-49c1-8a14-39e394648196",
+          "c796fc4a-0ecc-41f4-a2e4-8e29fe8946b0",
+          "7184a6d8-571b-48cc-9a08-1858d4a2e26d"
+        ]
+      },
+      "source_events": {
+        "events_file": "rh_cowork_sessions_20261013.json",
+        "events_file_sha256": "57c0932ae604f345b858e91bd554e49a4a7469b601ef0b8914e63b99bbc2cece",
+        "events_read": 1672,
+        "event_pages": 17,
+        "first_sequence_num": 1,
+        "last_sequence_num": 1672,
+        "sha256_of_events_json": "011e3965ee69a9017ee6438e0bd11e34b3aa146464f08c021c4ebd2bb95be9ad",
+        "events_json_bytes": 7207292,
+        "event_counts": {
+          "env_manager_log": 55,
+          "system": 389,
+          "active_goal": 9,
+          "autocompact_state": 9,
+          "control_request": 41,
+          "user": 402,
+          "control_response": 37,
+          "result": 15,
+          "rate_limit_event": 47,
+          "assistant": 515,
+          "tool_progress": 141,
+          "prompt_suggestion": 12
+        },
+        "subagent_messages_omitted": 371,
+        "reduced_session_sha256": "9e8d8b338c885b29c9fa152812451a7e044eec9fcb51af0904ceb888b258a7bb",
+        "read_by": "Claude Opus 5.5 (claude-opus-5-5) in Claude Cowork, via Claude in Chrome",
+        "read_between_utc": [
+          "2026-10-13T02:13:46.617Z",
+          "2026-10-13T02:16:06.709Z"
+        ],
+        "note": "sha256_of_events_json is the SHA-256 of JSON.stringify(events sorted by sequence_num) computed in the browser; neither the event log nor the events file is stored in the repository, since they hold instructions, reasoning and tool traffic that the coverage rules exclude"
+      },
+      "delivered_files_not_embedded": [],
+      "delivered_files_note": "Paths reported by device_commit_files and names of file cards; files written by shell commands or saved as project documents are not detected",
+      "converter": {
+        "script": "record_Claude_export_chat.py",
+        "sha256": "24dde53bd6b17a4a14d874b00901150b7c65d3a40ac3e185bf1f6546c5ad22da"
+      },
+      "history_number": 5,
+      "captured_at_utc": "2026-10-13T02:26:58.396Z",
+      "captured_at_local": "2026-10-12T22:26:58.396-04:00"
+    }
+  }
+]

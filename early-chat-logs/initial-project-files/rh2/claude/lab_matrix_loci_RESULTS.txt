@@ -1,0 +1,54 @@
+PART 1 -- invariant theory of the 3x3 curvature matrix M_{ai} = <F-, eta_a (x) T_i>
+   gauge  M -> M R^T (R in Ad SU(2) = SO(3));  frame  M -> Q M (Q in SO(3) on Lambda^2_-)
+   => complete pointwise invariants are sigma_1 >= sigma_2 >= sigma_3 and sign(det M).
+   locus                         invariant                  codim  dim in R^4
+   det F- = 0                    sigma_3 = 0                    1           3
+   repeated singular value       sigma_i = sigma_j              2           2
+   rank <= 1                     sigma_2 = sigma_3 = 0          4       empty
+   all singular values equal     sigma_1=sigma_2=sigma_3        5       empty
+   F- = 0                        all sigma = 0                  9       empty
+   Brief section 4.6 tabulated only RANK loci and concluded that no SU(2) curvature
+   locus is ever 2-dimensional.  The repeated-singular-value locus is, and it is
+   canonical.  That conclusion in section 4.6 is therefore wrong.
+
+PART 2 -- ADHM structure theorem and its consequence
+   T(w) = sum_{jl} f_{jl} c_j w conj(c_l), f real symmetric k x k.  Diagonalising
+   f = sum_m mu_m u_m u_m^T and setting d_m = sum_j (u_m)_j c_j gives
+        T = sum_{m=1}^{k} nu_m R_m,   nu_m real, R_m in SO(3).
+   k=2:  T T^T = (nu1^2+nu2^2) I + nu1 nu2 (S + S^T),  S = R1^T R2 in SO(3),
+         and S + S^T has eigenvalues 2, 2cos(t), 2cos(t)  =>  REPEATED SINGULAR VALUE.
+      k=1: max min-gap over 3000 random draws = 4.59e-16   <= repeated value FORCED
+      k=2: max min-gap over 3000 random draws = 1.24e-15   <= repeated value FORCED
+      k=3: max min-gap over 3000 random draws = 4.76e-01   <= generic, no degeneracy
+      k=4: max min-gap over 3000 random draws = 4.72e-01   <= generic, no degeneracy
+
+PART 3 -- explicit 't Hooft instantons (irreducible, finite energy, exactly ASD)
+   charge 1 (BPST)      max min-gap = 2.15e-16   ||F+||max = 1.4e-16   sigma = [1.26247 1.26247 1.26247]
+   charge 2             max min-gap = 2.46e-16   ||F+||max = 5.4e-17   sigma = [1.23373 1.17925 1.17925]
+   charge 3 (generic)   max min-gap = 6.15e-02   ||F+||max = 2.9e-16   sigma = [2.47102 2.17363 2.17003]
+   charge 4 (generic)   max min-gap = 1.59e-01   ||F+||max = 1.2e-15   sigma = [2.32988 1.84471 1.82284]
+   => charge 1 and 2 sit identically in the degeneracy stratum, as predicted.
+
+PART 4 -- symmetry also forces degeneracy
+   charge 3, COLLINEAR centres (residual SO(3) rotating the orthogonal R^3):
+      x=(0.7, 0, 0, 0.4): min-gap = 0.00e+00
+      x=(1.9, 0, 0, -1.2): min-gap = 0.00e+00
+      x=(0.3, 0.9, -1.1, 2.0): min-gap = 0.00e+00
+      => degenerate EVERYWHERE.  But an SO(3)-invariant 2-dimensional set is a
+         union of 2-SPHERES -- so the only symmetry that could produce a sphere
+         is exactly the symmetry that destroys the locus.  Rigidity/existence again.
+
+   charge 3, COPLANAR centres (residual SO(2) on the orthogonal 2-plane):
+      in  the centre-plane (t=0.8, x3=0.3): min-gap = 2.85e-16
+      in  the centre-plane (t=-1.7, x3=2.0): min-gap = 1.25e-16
+      in  the centre-plane (t=2.5, x3=-1.1): min-gap = 2.39e-16
+      off the centre-plane (off=0.5):        min-gap = 4.02e-02
+      off the centre-plane (off=0.9):        min-gap = 4.65e-03
+      off the centre-plane (off=0.3):        min-gap = 1.06e-03
+      => the locus is exactly the 2-plane containing the centres: 2-dimensional,
+         canonical, and NON-COMPACT.  No sphere.
+
+   charge 4, centres spanning a 3-plane (no continuous residual symmetry):
+      22/40 bounded starts hit the locus; bounding box min [-2.67 -0.83 -1.6  -2.95] max [2.66 2.4  1.9  2.64]
+      => a genuine 2-dimensional locus with NO symmetry explanation. Topology OPEN.
+

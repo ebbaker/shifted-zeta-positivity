@@ -1,0 +1,1703 @@
+\documentclass[11pt]{amsart}
+
+\usepackage[margin=1.2in]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\definecolor{linkblue}{rgb}{0.1,0.1,0.5}
+\usepackage[colorlinks=true,linkcolor=linkblue,citecolor=linkblue,urlcolor=linkblue]{hyperref}
+
+\theoremstyle{plain}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{mainthm}{Theorem}
+\renewcommand{\themainthm}{\Alph{mainthm}}
+\newtheorem*{theoremA}{Theorem A}
+
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{problem}[theorem]{Problem}
+
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+
+\newcommand{\HH}{\mathbb{H}}
+\newcommand{\CC}{\mathbb{C}}
+\newcommand{\RR}{\mathbb{R}}
+\newcommand{\ZZ}{\mathbb{Z}}
+\newcommand{\NN}{\mathbb{N}}
+\newcommand{\CP}{\mathbb{CP}}
+\newcommand{\HP}{\mathbb{HP}}
+\newcommand{\RP}{\mathbb{RP}}
+\renewcommand{\SS}{\mathbb{S}}
+\newcommand{\Xii}{\Xi}
+\newcommand{\re}{\operatorname{Re}}
+\newcommand{\im}{\operatorname{Im}}
+\newcommand{\id}{\operatorname{id}}
+\newcommand{\Aut}{\operatorname{Aut}}
+\newcommand{\LP}{\mathcal{LP}}
+\newcommand{\EE}{\mathcal{E}}
+\newcommand{\dd}{\,d}
+
+\begin{document}
+
+\title[The zero-sphere program]{The zero-sphere program: a quaternionic--twistor framework for the Riemann Hypothesis}
+
+\author{Edward B. Baker III}
+\email{edwardbaker86@gmail.com}
+
+\date{\today}
+
+\begin{abstract}
+We describe a research program on the Riemann Hypothesis organized around the canonical extension of
+the completed zeta function $\Xi$ to the quaternions as an intrinsic slice regular function. The zero
+set of this extension consists of real points and round $2$-spheres, and RH is equivalent to the
+absence of spheres. We develop three faithful formulations of this dichotomy: a twistor-geometric one
+(the zero divisor of an induced self-map of an incidence quadric is invariant under the real structure
+component-by-component), a positivity hierarchy graded by spherical Bessel tags whose bottom rung is
+the Laguerre inequality, and an explicit-formula criterion --- a numerically certified,
+prime-computable quadratic form whose boundedness in every frequency window is an unconditional
+consequence of RH, and which, under a mild non-accumulation hypothesis on the zeros, grows at
+exponential rate exactly twice the supremal sphere radius, making RH equivalent to
+subexponential growth. Two no-go theorems delimit the
+framework: no continuous linear functional of a rotational extension, and no deformation-invariant
+degree count, distinguishes real zeros from spheres. The organizing statement is that RH asserts the
+agreement, on the zero set, of the holomorphic involution $\rho\mapsto 1-\rho$ with the
+antiholomorphic involution $\rho\mapsto\bar\rho$; the central open problem is to import the latter
+into explicit-formula arithmetic. The Davenport--Heilbronn function serves as control throughout, and
+all numerical claims are reproducible from the included code. This is a program paper: it proves
+structure theorems and delimiting results, states one sharp organizing question, and claims no
+progress on RH itself.
+\end{abstract}
+
+\maketitle
+\tableofcontents
+
+%=====================================================================
+\section{Introduction}\label{sec:intro}
+
+Rotate the critical line onto the real axis. Writing $s=\tfrac12+iz$ and
+\[
+\xi(s)=\tfrac12 s(s-1)\pi^{-s/2}\Gamma(s/2)\zeta(s),\qquad
+\Xi(z):=\xi\!\left(\tfrac12+iz\right),
+\]
+the function $\Xi$ is entire, even, of order $1$, and real on $\RR$, and the Riemann Hypothesis is
+the statement that all zeros of $\Xi$ are real. Because the Taylor coefficients of $\Xi$ at the
+origin are real, $\Xi$ extends canonically to the quaternions $\HH$ as an \emph{intrinsic slice
+regular} function, and by the zero-structure theorem for such functions its zero set is a union of
+isolated real points and isolated round $2$-spheres $x+y\,\SS$, where $\SS$ is the sphere of
+imaginary units. A real zero of the complex $\Xi$ gives a point; a conjugate pair $a\pm iy_0$ of
+nonreal zeros gives the sphere $a+y_0\SS$. Hence:
+
+\begin{theoremA}[Reformulation; proved as Theorem~\ref{thm:reformulation} in \S\ref{sec:prelim}]
+RH holds if and only if the zero set of the quaternionic extension
+$\Xi\colon\HH\to\HH$ contains no $2$-sphere.
+\end{theoremA}
+
+By itself this is a relabeling, not progress, and we say so plainly: every statement in this paper
+should be read against the standing question \emph{``what does the reformulation buy?''}. The
+program's answer is that the sphere/point dichotomy admits three faithful and interlocking
+formulations --- geometric, positivity-theoretic, and arithmetic --- each of which exposes structure
+that the complex formulation leaves implicit, and that the framework comes with built-in
+falsification tests that delimit what can and cannot work. Concretely, the paper proves:
+
+\begin{itemize}
+\item two structure theorems (Theorems~\ref{thm:lift} and \ref{thm:dichotomy}): every intrinsic
+slice regular function lifts to a holomorphic, equivariant self-map of an incidence quadric
+$Q\cong\CP^1\times\CP^1$ inside twistor space $\CP^3$, and on $Q$ the zero divisor of the lifted
+$\Xi$ distinguishes real zeros from zero spheres \emph{equivariantly} --- by the action of the real
+structure on its components --- though not homologically; RH becomes the statement that every
+component of the zero locus in the quotient $Q/\sigma$ is nonorientable;
+\item two no-go theorems (Theorems~\ref{thm:linear-nogo} and \ref{thm:degree-nogo}): no continuous
+linear functional of any rotational extension of $\Xi$, and no deformation-invariant degree count,
+can detect spheres --- delimiting results that any candidate mechanism must respect;
+\item one certified criterion (Theorem~\ref{thm:rate}): a prime-computable quadratic form
+$|Z(c,\lambda)|^2$ built from a Gaussian test family in the explicit formula. Unconditionally, RH
+implies boundedness in every frequency window, so exponential growth in any window disproves RH;
+under a mild non-accumulation hypothesis on the zeros, the growth rate equals exactly twice the
+supremal sphere radius and RH is equivalent to subexponential growth in every window. The explicit
+formula underlying it is certified numerically to $10^{-8}$--$10^{-10}$ against $250$ zeros, and
+the criterion recovers the radius of the first Davenport--Heilbronn sphere to four decimal places
+from zero-side data;
+\item one organizing question (Section~\ref{sec:involutions}): the zero multiset carries the
+holomorphic involution $\rho\mapsto1-\rho$ (functional equation), which the explicit formula sees
+natively, and the antiholomorphic involution $\rho\mapsto\bar\rho$ (reality), which defines the
+spheres and which the explicit formula is structurally blind to. RH is the statement that the two
+involutions agree on the zero set. The program's central problem is to import the antiholomorphic
+involution into explicit-formula arithmetic --- to find unconditional identities or bounds for
+\emph{conjugate-paired sums} $\sum_\gamma F(\gamma,\bar\gamma)$.
+\end{itemize}
+
+Two hardness checks run through everything. First, the Davenport--Heilbronn function
+\cite{DavenportHeilbronn1936a,DavenportHeilbronn1936b,Titchmarsh1986} shares the symmetry and growth
+of $\Xi$ but has zeros off the critical line --- genuine zero spheres, computed explicitly in
+Section~\ref{sec:hardness} --- and no Euler product; any mechanism that would exclude spheres from
+symmetry and growth alone is therefore wrong, and the arithmetic input is not optional. Second, the
+nonnegativity of the de Bruijn--Newman constant \cite{RodgersTao2020} places $\Xi$ at the exact
+boundary of the sphere-free regime, so any true criterion must degrade only polynomially (or worse)
+as the sphere radius shrinks to zero; a soft argument stable under small perturbations proves too
+much. We treat these checks as specifications, and each proposed structure in this paper is tested
+against both.
+
+\subsection*{Provenance}
+The program synthesizes two threads. The first is a sequence of single-author manuscripts
+(2015--2026) that searched for a quaternionic function class adapted to the rotated $\Xi$: a 2015
+manuscript \cite{Baker2015} built a Fueter-regular extension hierarchy with an
+$SU(2)$-representation-theoretic decomposition, raising/lowering operators, spherical Bessel
+kernels, and a quaternionic Mellin inversion theory, together with a negative result on linear
+pairings that Section~\ref{sec:nogo} promotes to a theorem; a companion 2016 manuscript
+\cite{Baker2016} developed the associated quaternionic exponential and plane-wave expansion and
+connected it to the Clifford--Fourier kernel of Clifford analysis
+\cite{BrackxDeSchepperSommen2005,DeBieXu2011,BoryReyesShapiro2010}; manuscripts from 2017--2024
+\cite{Baker2017,Baker2023,Baker2022arXiv,Baker2023arXiv} developed twistor-geometric machinery ---
+a rigidity theorem for fiberwise degree-one self-maps of twistor space, and generalized conformal
+morphisms defined on twistor correspondence spaces, applied there to Yang--Mills symmetries in the
+tradition of \cite{MasonWoodhouse1996}. The
+second thread is the modern theory of slice regular functions (Gentili--Struppa
+\cite{GentiliStruppa2007} and its development
+\cite{GentiliStoppato2008,CGSS2009,GSSbook,GhiloniPerotti2011}), whose intrinsic subclass turns out
+to be exactly the function class the first thread was searching for, and whose twistor branch
+\cite{GSS2014,Altavilla2018,AltavillaSarfatti2019} realizes the intended geometry. The synthesis,
+the specific computations, and the numerical laboratory reported here were carried out in August
+2026; the historical manuscripts are archived unaltered at \cite{ZenodoArchive}.
+
+The role of the twistor correspondence here instantiates a pattern from the Yang--Mills thread
+\cite{Baker2022arXiv,Baker2023arXiv}: transformations that are not holomorphic (or not even
+well-defined pointwise) downstairs become honest holomorphic, structure-preserving maps on a twistor
+correspondence space. Theorem~\ref{thm:lift} is that phenomenon in Euclidean signature for $\HH$,
+with the incidence quadric as the correspondence space.
+
+\subsection*{What this paper is not}
+It is not a proof strategy with a claimed endgame. The no-go theorems and hardness checks were
+derived precisely to prevent self-deception, and Section~\ref{sec:bridge} identifies exactly where
+the program currently reduces to classical difficulty: at the exponential-rate level, the growth
+criterion of Theorem~\ref{thm:rate} is a Gaussian-mollified form of the classical equivalence
+between zero-free regions and prime-counting error terms. The candidates for genuinely new leverage
+--- the graded positivity cone, the cross-term calculus, conjugate-paired identities --- are stated
+as open problems in Section~\ref{sec:involutions}, each with its hardness-check annotation.
+
+\subsection*{Acknowledgements}
+The synthesis of this program, the twistor-lift and explicit-formula computations, the numerical
+experiments, and substantial portions of the exposition were carried out with Claude (Anthropic) as
+a research assistant in August 2026; all mathematical claims were reviewed by the author, who takes
+sole responsibility for them. Code and archival materials are available at \cite{ZenodoArchive}.
+
+%=====================================================================
+\section{Preliminaries: intrinsic slice regular functions and the reformulation}\label{sec:prelim}
+
+Let $\HH$ denote the quaternions and $\SS=\{J\in\HH: J^2=-1\}$ the $2$-sphere of imaginary units.
+For $J\in\SS$ write $\CC_J=\RR+J\RR$ for the corresponding slice, a copy of $\CC$. A domain
+$\Omega\subseteq\HH$ is \emph{axially symmetric} if it is invariant under all rotations about the
+real axis, i.e.\ $x+yJ\in\Omega$ for one $J\in\SS$ implies $x+yJ'\in\Omega$ for all $J'\in\SS$.
+
+\begin{definition}[\cite{GentiliStruppa2007}]
+A function $f\colon\Omega\to\HH$ on an axially symmetric slice domain is \emph{slice regular} if for
+every $J\in\SS$ the restriction of $f$ to $\Omega\cap\CC_J$ is holomorphic with respect to the
+complex structure given by left multiplication by $J$.
+\end{definition}
+
+Slice regular functions on axially symmetric slice domains satisfy the \emph{representation
+formula} of Colombo--Gentili--Sabadini--Struppa \cite{CGSS2009}: $f$ is determined by its
+restriction to a single slice, via
+\begin{equation}\label{eq:repformula}
+f(x+yI)=\tfrac12\bigl[f(x+yJ)+f(x-yJ)\bigr]+\tfrac{IJ}{2}\bigl[f(x-yJ)-f(x+yJ)\bigr]
+\qquad(I,J\in\SS).
+\end{equation}
+A slice regular $f$ is \emph{intrinsic} (or slice preserving) if its power-series expansion at a
+real point has real coefficients; equivalently, $f(\bar q)=\overline{f(q)}$, equivalently
+\begin{equation}\label{eq:intrinsic}
+f(x+yJ)=\alpha(x,y)+J\beta(x,y)\qquad\text{with }F:=\alpha+i\beta\ \text{holomorphic on
+}\Omega\cap\CC_i \text{ and real on }\RR.
+\end{equation}
+We call $F$ the \emph{stem function} of $f$ (in the sense of Ghiloni--Perotti
+\cite{GhiloniPerotti2011}); the map $F\mapsto f$ is the \emph{slice extension}, denoted $R$, and it
+coincides with the rotation map of \cite[eq.~(2.5)]{Baker2015}. Since $f(q)\in\CC_{e_q}$ for
+intrinsic $f$ (where $q=x+ye_q$, $e_q\in\SS$, $y>0$), pointwise products of intrinsic functions stay
+in the slice: the intrinsic functions on $\Omega$ form a \emph{commutative real algebra under
+pointwise operations}, restriction to a slice being an algebra homomorphism onto the intrinsic
+holomorphic functions; for intrinsic functions the slice product $\star$ coincides with the
+pointwise product, and composition also preserves the class \cite{GSSbook}. This pointwise algebra
+closure is what distinguishes the slice extension from the Fueter-type extensions of
+\cite{Baker2015}, which destroy multiplicativity; the two extension hierarchies are compared in
+Section~\ref{sec:sectors}.
+
+The zero sets of slice regular functions have a rigid structure.
+
+\begin{theorem}[Zero structure; Gentili--Stoppato \cite{GentiliStoppato2008}; see also
+{\cite[Ch.~3]{GSSbook}}]\label{thm:zerostructure}
+Let $f\not\equiv0$ be slice regular on an axially symmetric slice domain $\Omega$. Then the zero
+set of $f$ consists of isolated points and isolated $2$-spheres of the form $x+y\SS$ with
+$x,y\in\RR$, $y\neq0$.
+\end{theorem}
+
+For an intrinsic $f$ with stem function $F$, the dictionary is exact: a real zero of $F$ gives an
+isolated real point zero of $f$; a conjugate pair $a\pm iy_0$ ($y_0>0$) of zeros of $F$ gives the
+zero sphere $a+y_0\SS$; and nonreal zeros of $F$ occur in conjugate pairs because $F$ is real on
+$\RR$.
+
+\subsection{The extension of \texorpdfstring{$\Xi$}{Xi}}
+Riemann's integral representation (see \cite[\S10.1]{Titchmarsh1986}) reads, in the rotated
+variable,
+\begin{equation}\label{eq:cosine}
+\Xi(z)=4\int_0^\infty\Phi(u)\cos(zu)\dd u,\qquad
+\Phi(u)=\sum_{n\ge1}\bigl(2\pi^2n^4e^{9u/2}-3\pi n^2e^{5u/2}\bigr)e^{-\pi n^2e^{2u}},
+\end{equation}
+where $\Phi$ is even, positive, and decays like $e^{-\pi e^{2u}}$; the positivity and decay are due
+to P\'olya (see \cite{Polya1926,Polya1927} and the summary in
+\cite[Theorem~A]{CsordasNorfolkVarga1986}). The normalizing constant $4$ in \eqref{eq:cosine}
+depends on conventions for $\Phi$; with the convention displayed it is certified numerically in
+Appendix~\ref{app:numerics} (the identity \eqref{eq:cosine} holds to ten digits at
+$x\in\{0,5,20,30\}$, and the right-hand side vanishes to the quadrature floor at the first zero
+ordinate).
+
+Since $\cos(qu)$ is an entire intrinsic slice regular function of $q$ (its power series has real
+coefficients), with
+\[
+\cos((x+ye_q)u)=\cos(xu)\cosh(yu)-e_q\,\sin(xu)\sinh(yu),
+\]
+and since $|\cos(qu)|\le e^{|\im q|\,u}\cdot O(1)$ while $\Phi$ decays super-exponentially, the
+integral \eqref{eq:cosine} converges absolutely for all $q\in\HH$ and defines the \emph{entire
+intrinsic slice regular extension}
+\begin{equation}\label{eq:Xiq}
+\Xi(q)=4\int_0^\infty\Phi(u)\cos(qu)\dd u=\sum_{n\ge0}c_{2n}q^{2n},
+\end{equation}
+where $c_{2n}$ are the (real) Taylor coefficients of the complex $\Xi$. This is the canonical
+rotation of $\Xi$ into $\HH$: no Laplacian is applied, multiplicativity is retained, and the
+extension is determined by the complex $\Xi$ through the representation formula
+\eqref{eq:repformula}.
+
+\begin{mainthm}[Reformulation]\label{thm:reformulation}
+The Riemann Hypothesis holds if and only if the zero set of $\Xi\colon\HH\to\HH$ defined by
+\eqref{eq:Xiq} contains no $2$-sphere; equivalently, if and only if every zero of the quaternionic
+$\Xi$ is a real point.
+\end{mainthm}
+
+\begin{proof}
+Immediate from Theorem~\ref{thm:zerostructure} and the dictionary above: the zeros of the stem
+function $\Xi|_{\CC_i}$ are the zeros of the complex $\Xi$, whose nonreal members occur in
+conjugate pairs $a\pm iy_0$ and correspond exactly to the zero spheres $a+y_0\SS$ of the extension.
+RH says there are no such pairs.
+\end{proof}
+
+\begin{remark}\label{rem:relabel}
+Theorem~\ref{thm:reformulation} is a relabeling; it is stated as a theorem for citability, and
+because the relabeling has consequences: it places the zeros of $\zeta$ inside the zero-structure
+theory of a function class with complex-analysis-grade rigidity (identity principle, open mapping,
+representation formula), makes the conjugate-pair symmetry a \emph{geometric} object (a round
+sphere with a center and a radius), and gives the two involutions of Section~\ref{sec:involutions}
+distinct carriers. Everything after this point is an attempt to convert the relabeling into
+leverage, and the reader is entitled to keep score.
+\end{remark}
+
+%=====================================================================
+\section{Twistor geometry: the incidence quadric and the equivariant dichotomy}\label{sec:twistor}
+
+This section locates the intrinsic function class inside twistor geometry and proves the two
+structure theorems. Throughout we use the twistor fibration
+$\pi\colon\CP^3\to\HP^1\cong S^4$, restricted over the affine chart $\HH\subset\HP^1$; our
+coordinate conventions follow \cite{Baker2017,Baker2023}, and agree up to notation with those of
+Gentili--Salamon--Stoppato \cite{GSS2014}. Write homogeneous coordinates
+$[z_1,z_2,z_3,z_4]\in\CP^3$ with
+\[
+\pi[z_1,z_2,z_3,z_4]=[z_1+z_2j,\;z_3+z_4j]\in\HP^1,\qquad
+q=(z_3+j)^{-1}(z_1+z_2j)\ \text{ on the chart }z_4=1 .
+\]
+The fiber coordinate is the stereographic parametrization of the sphere of complex structures,
+\[
+\eta(w)=(w+j)^{-1}\,i\,(w+j)\in\SS,\qquad w\in\CC\cup\{\infty\},
+\]
+and the real structure is the fixed-point-free antiholomorphic involution
+\[
+\sigma[z_1,z_2,z_3,z_4]=[-\bar z_2,\bar z_1,-\bar z_4,\bar z_3],
+\]
+whose invariant lines are exactly the fibers of $\pi$.
+
+\subsection{Lines over spheres and the incidence quadric}
+
+For $\zeta=x+iy\in\CC$ consider the \emph{graph line}
+\[
+L_\zeta=\{(x+\eta y,\ \eta):\eta\in\SS\},
+\]
+the tautological lift of the sphere $x+y\SS$ (for $y\neq0$), degenerating to the twistor fiber
+$\pi^{-1}(x)$ when $y=0$. Substituting $\eta(w)$ and clearing denominators gives the linear
+parametrization
+\begin{equation}\label{eq:line}
+L_\zeta=\bigl\{[\zeta w,\ \zeta,\ w,\ 1]: w\in\CP^1\bigr\},
+\end{equation}
+a projective line for every $\zeta\in\CP^1$, with $\sigma(L_\zeta)=L_{\bar\zeta}$; for real $\zeta$
+the line is $\sigma$-invariant with the antipodal map acting on the parameter,
+$w\mapsto-1/\bar w$. The Pl\"ucker image of the family is
+\[
+[p_{12}:p_{13}:p_{14}:p_{23}:p_{24}:p_{34}]=[\zeta^2:0:\zeta:-\zeta:0:1],
+\]
+a conic in the Klein quadric. The union of the family is the smooth quadric
+\begin{equation}\label{eq:quadric}
+Q:\ z_1z_4=z_2z_3,\qquad
+Q=\{(q,\eta):q\in\CC_\eta\}\ \cong\ \CP^1_\zeta\times\CP^1_w ,
+\end{equation}
+the \emph{incidence variety of points with their own slice's complex structure}. Its two rulings
+have transparent meaning: ruling~A ($\zeta$ constant) consists of the lines $L_\zeta$ --- lifts of
+spheres, degenerating to twistor fibers over $\RR\cup\{\infty\}$; ruling~B ($w$ constant) consists
+of full slices $\{(q,\eta_0):q\in\CC_{\eta_0}\}$ with a fixed complex structure. The chart identity
+$q=(w+j)^{-1}\zeta(w+j)$ says that the point of $Q$ with coordinates $(\zeta,w)$ is $x+y\,\eta(w)$
+with $\zeta=x+iy$: the coordinates \emph{are} (complex label of the sphere, complex structure). The
+real structure restricts to
+\begin{equation}\label{eq:rho}
+\rho(\zeta,w)=(\bar\zeta,\ -1/\bar w),
+\end{equation}
+conjugation times the antipodal map, again fixed-point free.
+
+\subsection{The lift}
+
+\begin{mainthm}[Lift]\label{thm:lift}
+Let $f$ be an intrinsic slice regular function on an axially symmetric slice domain
+$\Omega\subseteq\HH$, with stem function $F$ as in \eqref{eq:intrinsic}, and let
+$\Omega_Q\subseteq Q$ be the part of the quadric over $\Omega$. Then the product map
+\[
+\tilde f=F\times\id\colon\ \Omega_Q\longrightarrow Q,\qquad
+(\zeta,w)\longmapsto(F(\zeta),\,w),
+\]
+is holomorphic and $\rho$-equivariant, and covers $f$: over the point $q=x+y\,\eta(w)$ of
+$\Omega$ it returns $f(q)=\alpha(x,y)+\beta(x,y)\,\eta(w)$ with the same complex-structure label
+$w$. If $f$ is entire, $\tilde f$ is defined on all of $Q$ minus the ruling at infinity.
+\end{mainthm}
+
+\begin{proof}
+Holomorphy is immediate: $F$ is holomorphic in $\zeta$ by intrinsicness \eqref{eq:intrinsic} and
+the second factor is the identity. Equivariance is the computation
+$\tilde f(\rho(\zeta,w))=(F(\bar\zeta),-1/\bar w)=(\overline{F(\zeta)},-1/\bar w)
+=\rho(\tilde f(\zeta,w))$, using $F(\bar\zeta)=\overline{F(\zeta)}$, i.e.\ reality of $F$ on $\RR$.
+Covering: the point $(\zeta,w)\in Q$ is $q=x+y\,\eta(w)$ where $\zeta=x+iy$; writing
+$F(\zeta)=\alpha(x,y)+i\beta(x,y)$, the image point $(F(\zeta),w)$ is
+$\alpha+\beta\,\eta(w)$, which equals $f(q)$ by \eqref{eq:intrinsic} applied in the slice
+$\CC_{\eta(w)}$.
+\end{proof}
+
+\begin{remark}[Relation to the Gentili--Salamon--Stoppato lift]\label{rem:GSS}
+Gentili--Salamon--Stoppato \cite[Theorem~5.3 and eq.~(5.6)]{GSS2014} construct the twistor lift of
+an arbitrary slice regular function as a holomorphic map into $\CP^3$ (equivalently, a holomorphic
+curve in the Klein quadric satisfying a reality condition, \cite[Theorem~5.7]{GSS2014}); the ruled
+geometry of such lifts is developed by Altavilla and Altavilla--Sarfatti
+\cite{Altavilla2018,AltavillaSarfatti2019}, and the $PGL(2,\HH)$-orbit structure of lifts has
+recently been studied in \cite{LiuMorenoShi2026}. For an \emph{intrinsic} $f$ their lift formula
+degenerates precisely to the product form of Theorem~\ref{thm:lift} (in their affine coordinates,
+$(u,v)\mapsto(u,g(v))$ with $g$ the stem function; substitute $h=0$, $\hat g=g$ in
+\cite[eq.~(5.6)]{GSS2014}). What we add here is the systematic use of this product form: the
+identification of its natural domain and target as the incidence quadric $(Q,\rho)$ with its two
+rulings, the equivariance, and the divisor-level dichotomy of Theorem~\ref{thm:dichotomy} below. We
+have not found these statements in the literature, but the ingredients are all close to
+\cite{GSS2014,Altavilla2018,AltavillaSarfatti2019}, and we make no strong novelty claim.
+\end{remark}
+
+The intrinsic class thereby acquires a geometric characterization: \emph{the rotationally symmetric
+function theory on $\HH$ is the theory of holomorphic, $\rho$-equivariant self-maps of the incidence
+quadric of product type $F\times\id$} --- a commutative function theory in one complex variable,
+fibered trivially over the sphere of complex structures. Closure under addition, multiplication and
+composition is visible by inspection in this model.
+
+\subsection{Maximality of the quadric}\label{subsec:maximality}
+
+In what sense is $Q$ the natural home of the lift, rather than an ambient $\CP^3$-neighborhood?
+Some care is needed to make this question well posed: $Q$ is a smooth hypersurface in $\CP^3$, so
+\emph{any} holomorphic map defined on $Q$ extends holomorphically to a neighborhood --- take local
+coordinates in which $Q$ is a coordinate hyperplane and extend independently of the transverse
+variable. Unconstrained local extension is therefore trivially possible and trivially
+uninteresting; the correct question fixes the twistor structure. Two precise statements result: a
+fiberwise computation (the extension cannot respect the incidence structure off $Q$), and a global
+rigidity theorem (holomorphic immersions of the closed quadric into $\CP^3$ are projectively
+linear, so no non-M\"obius lift extends to an immersive map of $Q$ into the ambient space other
+than through $Q$ itself).
+
+\begin{proposition}[The na\"ive extension is holomorphic only along $Q$]\label{prop:naive}
+Fix an intrinsic slice regular $f$ on an axially symmetric slice domain, not affine
+($f\not\equiv aq+b$, $a,b\in\RR$), and consider the fiber-preserving assignment
+\[
+\Psi_f\colon\ \HH\times\SS\to\HH\times\SS,\qquad (q,\eta)\mapsto(f(q),\eta),
+\]
+on the full correspondence space, where the complex structure at $(q,\eta)$ is left multiplication
+by $\eta$ on the $\HH$-factor and the standard one (via the coordinate $w$, $\eta=\eta(w)$) on the
+$\SS$-factor. Then the Cauchy--Riemann system for $\Psi_f$ holds at every point of $Q$
+(where it reduces to slice holomorphy), and there is \emph{no open subset of}
+$(\HH\times\SS)\setminus Q$ on which it holds: the locus where $\Psi_f$ satisfies the
+Cauchy--Riemann equations is $Q\cup E$ with $E$ a proper real-analytic subset of the complement,
+empty for $f=q^2$.
+\end{proposition}
+
+\begin{proof}
+Holomorphy at $(q,\eta)$ in the $\HH$-directions requires the real differential $d_qf$ to
+intertwine left multiplication by $\eta$: $d_qf(\eta v)=\eta\,d_qf(v)$ for all $v\in\HH$.
+Decompose $T_q\HH=\CC_J\oplus\CC_J^\perp$ where $q=x+yJ$, $y>0$. For a monomial $f=q^m$ one
+computes, for $v$ in the slice plane, $d_qf(v)=m q^{m-1}v$ if $v\in\CC_J$ (slice holomorphy), while
+for $v\perp\CC_J$, using $vq=\bar qv$,
+\[
+d_qf(v)=\Bigl(\sum_{i=0}^{m-1}q^i\bar q^{\,m-1-i}\Bigr)v=\frac{q^m-\bar q^m}{q-\bar q}\,v .
+\]
+(The middle expression is a two-sided sum collapsing to the divided difference because
+$q\bar q=|q|^2$ is real; see also Lemma~\ref{lem:jacobian} below, where these two blocks reappear
+as the slice and spherical derivatives.) By $\RR$-linearity and locally uniform convergence the
+same block decomposition holds for any slice regular $f$:
+\begin{equation}\label{eq:blocks}
+d_qf(v)=f'(q)\,v \quad (v\in\CC_J),\qquad
+d_qf(v)=\partial_s f(q)\,v \quad (v\in\CC_J^\perp),
+\end{equation}
+where $f'$ is the slice derivative and
+$\partial_sf(q)=(f(q)-f(\bar q))(q-\bar q)^{-1}$ is the \emph{spherical derivative}
+\cite{GhiloniPerotti2011,GSSbook}. Both act by left multiplication by elements of $\CC_J$. Now take
+$\eta\notin\{\pm J\}$ and decompose $\eta=\eta_\parallel+\eta_\perp$ with
+$\eta_\parallel\in\CC_J$, $\eta_\perp\in\CC_J^\perp$, $\eta_\perp\neq0$. Testing the intertwining
+condition on $v\in\CC_J$: $\eta v=\eta_\parallel v+\eta_\perp v$ splits into slice and orthogonal
+parts, so
+\[
+d_qf(\eta v)=f'(q)\eta_\parallel v+\partial_sf(q)\eta_\perp v,
+\qquad
+\eta\,d_qf(v)=\eta_\parallel f'(q)v+\eta_\perp f'(q)v .
+\]
+The slice parts agree ($\CC_J$ is commutative); the orthogonal parts require
+$\partial_sf(q)\,\eta_\perp v=\eta_\perp f'(q)v$, i.e.\ (since $\eta_\perp w=\bar w\eta_\perp$ for
+$w\in\CC_J$) the pointwise identity $\partial_sf(q)=\overline{f'(q)}$. For intrinsic $f$ with
+stem $F=\alpha+i\beta$, the spherical derivative $\partial_sf(x+yJ)=\beta(x,y)/y$ is
+\emph{real}, so on any open set where the identity holds, $F'$ is real-valued; a holomorphic
+function with real values on an open set is constant (open mapping theorem), and a real constant
+$F'\equiv a$ gives $F$ affine with real coefficients --- and then $\beta/y=a=F'$, so the identity
+does hold, consistently with the M\"obius case. Hence for non-affine intrinsic $f$ the
+Cauchy--Riemann system fails on a dense open subset of every neighborhood in
+$(\HH\times\SS)\setminus Q$; the exceptional locus $E$ where the pointwise identity happens to
+hold off $Q$ is the real-analytic set $\{\partial_sf=\overline{f'}\}$, proper by the above (and
+empty off $Q$ for $f=q^2$: there the identity reads $2x=2\bar q$, forcing $q\in\RR$, which lies
+on $Q$). On $Q$ itself ($\eta=\pm J$; the copy $\eta=-J$ is
+identified with $Q$ under the antipode $w\mapsto-1/\bar w$), the intertwining condition is exactly
+slice holomorphy, which holds. The fiber directions impose nothing: $\Psi_f$ is the identity in
+$\eta$ at fixed $q$, holomorphic for the standard structure.
+\end{proof}
+
+\begin{proposition}[Rigidity of quadric immersions]\label{prop:immersion}
+Every holomorphic immersion $\Phi\colon\CP^1\times\CP^1\to\CP^3$ is of the form
+$\Phi=p\circ\iota\circ(m\times\tilde m)$, possibly precomposed with the factor swap, where $\iota$
+is the Segre embedding, $p\in PGL_4(\CC)$, and $m,\tilde m\in PGL_2(\CC)$. In particular the image
+is a smooth quadric, and $\Aut(Q)\cong(PGL_2(\CC)\times PGL_2(\CC))\rtimes\ZZ/2$ consists entirely
+of restrictions of projective transformations of\, $\CP^3$.
+\end{proposition}
+
+\begin{proof}
+Write $S=\CP^1\times\CP^1$ and $L=\Phi^*\mathcal O(1)=\mathcal O(a,b)$. The image spans $\CP^3$:
+if it lay in a hyperplane $\CP^2$, then $\Phi$ would be a holomorphic immersion of a compact
+surface into a surface, hence a covering map onto the simply connected $\CP^2$, forcing
+$S\cong\CP^2$, false. If $a=0$ (or $b=0$), $\Phi$
+is constant on the corresponding ruling family in one direction and cannot be immersive, so
+$a,b\ge1$. The line bundle $\mathcal O(a,b)$ with $a,b\ge1$ is very ample with complete linear
+system of dimension $N=(a+1)(b+1)-1$, embedding $S$ into $\CP^N$; $\Phi$ is the composition of
+this embedding with a linear projection $\CP^N\dashrightarrow\CP^3$ from a center
+$\Lambda\cong\CP^{N-4}$ disjoint from $S$. Such a projection is an immersion if and only if
+$\Lambda$ avoids the embedded tangent variety $\mathrm{Tan}(S)\subset\CP^N$. Since $S$ is smooth,
+non-planar and not a cone or a developable, $\dim\mathrm{Tan}(S)=4$ (surfaces with degenerate
+tangent varieties are classified; see \cite{GriffithsHarris1979} or \cite[Ch.~I]{Zak1993}).
+As $\dim\Lambda+\dim\mathrm{Tan}(S)=N-4+4=N$, in $\CP^N$ the center always meets
+$\mathrm{Tan}(S)$ unless the projection is trivial, i.e.\ unless $N=3$. Hence $(a,b)=(1,1)$,
+$\Phi$ is the Segre embedding composed with $p\in PGL_4$, and the identifications of the factors
+are M\"obius. For the last statement: any automorphism of $Q$ preserves
+$-K_Q=\mathcal O(2,2)$ and hence its unique square root $\mathcal O(1,1)$ (the Picard group is
+torsion free), and $Q\subset\CP^3$ is embedded by the complete system $|\mathcal O(1,1)|$, so the
+automorphism extends to $\CP^3$; explicitly, $\CP^3=\mathbb P(\CC^2\otimes\CC^2)$, both $PGL_2$
+factors act through the tensor product and the ruling swap is induced by $u\otimes v\mapsto
+v\otimes u$. The classical background on quadrics is in \cite[Ch.~6]{GriffithsHarris1978}.
+\end{proof}
+
+\begin{remark}[What maximality does and does not say]\label{rem:maximality}
+Proposition~\ref{prop:naive} says the incidence relation $q\in\CC_\eta$ is forced: the lift cannot
+be prolonged off $Q$ compatibly with the fibration by complex structures unless $f$ is M\"obius
+(over $\RR$, affine; adding the point at infinity, fractional linear). Proposition~\ref{prop:immersion}
+complements it globally: the closed quadric admits no immersive holomorphic repositioning in
+$\CP^3$ other than the linear ones, so there is no ``bigger'' holomorphic model of the intrinsic
+class inside twistor space --- and by Riemann--Hurwitz, $\tilde f=F\times\id$ composed with the
+Segre embedding is an immersion if and only if $F$ has no critical points on $\CP^1$, i.e.\ if and
+only if $F$ is M\"obius. This resolves the rigidity tension of \cite[Prop.~3.1]{Baker2017} (a
+holomorphic self-map of twistor space restricting to degree-one maps on all fibers is a M\"obius
+transformation): the rotational function class does not live on twistor space; it lives on the
+incidence quadric. We do not claim, and do not need, a statement excluding arbitrary
+(fibration-incompatible) local extensions, which exist trivially across any smooth hypersurface.
+The na\"ive-extension computation for $f=q^2$ appears in the working notes \cite{ZenodoArchive};
+the general case is Proposition~\ref{prop:naive}. A version of Proposition~\ref{prop:immersion}
+may well be classical; we could not locate a reference stating it in this form, and the proof
+above is assembled from classical facts. (We take this occasion to note that the smooth-topology
+paper of Li--Peterson on immersions of $n$-manifolds in $(2n{-}2)$-manifolds, sometimes cited in
+adjacent contexts, concerns a different category and does not apply here.)
+\end{remark}
+
+\subsection{The equivariant dichotomy}
+
+Consider now the zero divisor of the lifted function. For intrinsic $f$ with stem $F$, the zero
+divisor of $\tilde f$ in $Q$ is
+\[
+Z(\tilde f)=F^{-1}(0)\times\CP^1_w=\sum_{F(\zeta_0)=0}L_{\zeta_0},
+\]
+a union of ruling-A lines with multiplicities, one per zero of $F$.
+
+\begin{example}\label{ex:modelcases}
+$f(q)=q^2-1$: $F(\zeta)=\zeta^2-1$, zeros $\pm1$ real; $Z(\tilde f)=L_1+L_{-1}$ is a pair of
+$\sigma$-fixed lines (twistor fibers); downstairs, two real point zeros.
+$f(q)=q^2+1$: $F(\zeta)=\zeta^2+1$, zeros $\pm i$; $Z(\tilde f)=L_i+L_{-i}$ is a
+$\sigma$-\emph{swapped pair} of lines, each individually not invariant, each transverse to the
+fibers; downstairs, the single zero sphere $\SS$.
+\end{example}
+
+In both cases the homology class of the divisor in $H_2(Q;\ZZ)$ is $2[\text{ruling A}]$ ---
+identical. The discriminating invariant is equivariant, not homological:
+
+\begin{mainthm}[Equivariant dichotomy]\label{thm:dichotomy}
+Let $f\not\equiv0$ be intrinsic slice regular on an axially symmetric slice domain, with lift
+$\tilde f=F\times\id$ and zero divisor $Z(\tilde f)=\sum_k m_k L_{\zeta_k}$. Then:
+\begin{enumerate}
+\item Each component $L_{\zeta_k}$ is a ruling-A line; $\sigma(L_{\zeta_k})=L_{\bar\zeta_k}$.
+A real zero of $f$ contributes a $\sigma$-\emph{fixed} component (a twistor fiber); a zero sphere
+contributes a $\sigma$-\emph{swapped pair} of components. The multiset $\{\zeta_k\}$ with
+multiplicities is $\sigma$-invariant.
+\item In $H_2(Q;\ZZ)$, a real zero of multiplicity $m$ contributes $m[\mathrm{ruling~A}]$ and a
+zero sphere of multiplicity $m$ contributes $2m[\mathrm{ruling~A}]$ (one per swapped component);
+in particular a pair of simple real zeros and a single simple sphere have the same class
+$2[\mathrm{ruling~A}]$: homology cannot separate the two cases.
+\item The quotient $Y=Q/\sigma$ is a smooth $4$-manifold ($\sigma$ acts freely), fibered over the
+closed half-plane $\{\im\zeta\ge0\}\cup\{\infty\}$; a real zero descends to a component $\cong\RP^2$
+(nonorientable) and a zero sphere to a component $\cong S^2$ (orientable). Consequently, for
+$f=\Xi$:
+\[
+\text{RH}\iff\text{every component of the zero locus of }\tilde\Xi\text{ in }Y=Q/\sigma
+\text{ is nonorientable.}
+\]
+\end{enumerate}
+\end{mainthm}
+
+\begin{proof}
+(1) The divisor description precedes the statement; $\sigma(L_\zeta)=L_{\bar\zeta}$ was computed
+after \eqref{eq:line}; the multiset is $\sigma$-invariant because $F$ is real on $\RR$, so its
+zeros are closed under conjugation with multiplicity.
+
+(2) In $H_2(Q;\ZZ)=\ZZ[\text{A}]\oplus\ZZ[\text{B}]$ each line $L_\zeta$ has class $[\text{A}]$. A
+real zero of the intrinsic $f$ at $x_0$ of multiplicity $m$ downstairs corresponds to
+$F(\zeta)=(\zeta-x_0)^m(\cdots)$, contributing $m[\text{A}]$; a sphere $(a,y_0)$ of multiplicity
+$m$ contributes the pair $mL_{a+iy_0}+mL_{a-iy_0}$, class $2m[\text{A}]$. Two simple real zeros and
+one simple sphere both give $2[\text{A}]$.
+
+(3) $\sigma$ has no fixed points on $\CP^3$ (hence none on $Q$), so $Y$ is a smooth compact
+$4$-manifold and $Q\to Y$ is a double cover. In coordinates \eqref{eq:rho}, $\rho$ covers
+$\zeta\mapsto\bar\zeta$ on the first factor, so $Y$ fibers over
+$\{\im\zeta\ge0\}\cup\{\infty\}$; over interior points the fiber is the $2$-sphere $\CP^1_w$ (the
+two lines $L_\zeta,L_{\bar\zeta}$ are identified into one), while over boundary points
+($\zeta\in\RR\cup\{\infty\}$) the fiber is $L_\zeta/(\text{antipodal})\cong\RP^2$. A
+$\sigma$-fixed component $L_{x_0}$ descends to the boundary fiber $\RP^2$; a $\sigma$-swapped pair
+$L_{a\pm iy_0}$ descends to a single interior fiber $S^2$. The displayed equivalence is then
+Theorem~\ref{thm:reformulation} read in $Y$.
+\end{proof}
+
+\begin{remark}[Value-curve form]\label{rem:valuecurve}
+An equivalent formulation, useful for enumerative experiments: the Pl\"ucker image of the moving
+line $\zeta\mapsto L_{F(\zeta)}$ is the curve $[F^2:0:F:-F:0:1]$ in the Klein quadric, which
+passes through the fiber point $[0:\cdots:0:1]$ once per zero of $F$. At a double passage the
+curve has a node whose two branches are individually $\sigma$-real for a pair of real zeros
+(crunode type), and exchanged by $\sigma$ for a conjugate pair (acnode/solitary type). Real zeros
+versus zero spheres is the hyperbolic-versus-elliptic dichotomy of real nodes of the value curve
+at real points of the Klein quadric. Under the de Bruijn--Newman heat flow (\S\ref{sec:hardness}),
+an acnode converts to a crunode through a tacnode --- in $Y$, an $S^2$ component collides with the
+$\RP^2$ boundary stratum and splits into two $\RP^2$'s.
+\end{remark}
+
+\begin{remark}[Positioning]\label{rem:positioning}
+The lift-and-divisor picture should be read against three bodies of work. The twistor lifts of
+slice regular functions and the induced orthogonal complex structures (OCS) are due to
+Gentili--Salamon--Stoppato \cite{GSS2014}; the ruled-surface geometry of such lifts was developed
+by Altavilla and Altavilla--Sarfatti \cite{Altavilla2018,AltavillaSarfatti2019}; and the rigidity
+and removability theory for OCS on domains of $\RR^4$, which constrains what the lift geometry can
+do at singularities, is Salamon--Viaclovsky \cite{SalamonViaclovsky2009} (in particular their
+Liouville-type Theorem~1.3 and the quadric constructions of their Theorem~1.13). The equivariant
+component-type invariant of Theorem~\ref{thm:dichotomy}, elementary as it is, does not appear in
+these works to our knowledge; its interest is that it is precisely \emph{not} a deformation
+invariant (components change type exactly when zeros collide on the axis), which by
+Theorem~\ref{thm:degree-nogo} and the hardness checks of Section~\ref{sec:hardness} is a necessary
+feature of any true discriminant.
+\end{remark}
+
+%=====================================================================
+\section{Two no-go theorems}\label{sec:nogo}
+
+The reformulation invites a search for a functional that ``sees'' spheres. This section proves
+that the two most natural classes of candidates --- linear functionals of rotational extensions,
+and deformation-invariant degree counts --- cannot work. Both results are dictated by the hardness
+checks: the Davenport--Heilbronn function (\S\ref{sec:hardness}) shows that soft mechanisms must
+fail, and these theorems say \emph{how} they fail.
+
+\subsection{The linear no-go}
+
+The slice extension $R\colon F\mapsto f$ of \eqref{eq:intrinsic} and the Fueter-side hierarchy
+$Q_\ell=(B_+)^\ell\circ Q_0$ of \cite{Baker2015} (recalled in \S\ref{sec:sectors}) are both
+$\RR$-linear in the complex input and injective on the relevant classes. This has a blunt
+consequence.
+
+\begin{mainthm}[Linear no-go]\label{thm:linear-nogo}
+Let $\mathcal O_{\mathrm{int}}(\CC)$ denote the intrinsic entire functions (real Taylor
+coefficients), with the Fr\'echet topology of locally uniform convergence, and let $E$ be any
+$\RR$-linear continuous ``rotational extension'' map from $\mathcal O_{\mathrm{int}}(\CC)$ to a
+topological $\RR$-vector space of $\HH$-valued functions on $\HH$ (e.g.\ the slice extension
+$E=R$, or the Fueter-side maps $E=Q_\ell$ of \S\ref{sec:sectors}, any $\ell$). Then:
+\begin{enumerate}
+\item every continuous $\RR$-linear functional $\Lambda$ of $E(F)$ is a continuous
+$\RR$-linear functional $\Lambda_0=\Lambda\circ E$ of $F$ itself: the extension carries no new
+linearly accessible information;
+\item no continuous $\RR$-linear functional detects reality of zeros: there exist no continuous
+$\RR$-linear $\Lambda_0$ on $\mathcal O_{\mathrm{int}}(\CC)$ and threshold $c\in\RR$ such that,
+on any subset of $\mathcal O_{\mathrm{int}}(\CC)$ containing the two-parameter family
+$F_{t,s}(\zeta)=(\zeta^2+t)(\zeta^2+s)$, the reality locus
+$\{F:\text{all zeros of }F\text{ real}\}$ coincides with $\{\Lambda_0(F)\ge c\}$ or with
+$\{\Lambda_0(F)=c\}$.
+\end{enumerate}
+In particular, no linear pairing of any rotational extension of\, $\Xi$-like functions ---
+against any fixed test function, over any contour, in any sector --- can separate on-axis from
+off-axis zeros.
+\end{mainthm}
+
+\begin{proof}
+(1) is the composition of continuous $\RR$-linear maps.
+
+(2) The zeros of $F_{t,s}$ are all real if and only if $t\le0$ and $s\le0$ (a quarter-plane
+$P$ in the $(t,s)$-parameters). Expanding,
+$F_{t,s}=\zeta^4+(t+s)\zeta^2+ts$, so by linearity
+\[
+\Lambda_0(F_{t,s})=A+(t+s)B+ts\,C,\qquad
+A=\Lambda_0(\zeta^4),\ B=\Lambda_0(\zeta^2),\ C=\Lambda_0(1).
+\]
+Suppose the reality locus equals $\{\Lambda_0\ge c\}$. The boundary of $P$ contains the ray
+$\{t=0,\,s\le0\}$, along which $\Lambda_0(F_{0,s})=A+sB$ must equal the threshold behavior of a
+boundary: since points with $t=0^+$ are outside $P$ and $t=0^-$ inside, continuity forces
+$A+sB=c$ for all $s\le0$, hence $B=0$ and $A=c$. The condition $\Lambda_0\ge c$ then reads
+$ts\,C\ge0$, whose solution set is $\{ts\ge0\}$ (if $C>0$), $\{ts\le0\}$ (if $C<0$), or
+everything (if $C=0$) --- none of which equals the quarter-plane $P$. The case
+$\{\Lambda_0=c\}$ is identical: the level set $\{A+(t+s)B+tsC=c\}$ is empty, a line, all of
+$\RR^2$, a hyperbola, or a pair of crossed full lines --- never the boundary of a quarter-plane
+(two half-lines meeting at a corner).
+\end{proof}
+
+\begin{remark}\label{rem:nogo-history}
+Theorem~\ref{thm:linear-nogo} formalizes and generalizes the negative result of
+\cite[\S4]{Baker2015}, where it was proved by an explicit Laurent-expansion computation that the
+$4$-dimensional pairings of the Fueter extension against rotationally symmetric regular test
+functions reproduce the $2$-dimensional contour integrals of the complex input exactly ---
+including for the kernels singular on spheres. That computation is the concrete instance
+($E=Q_0$, $\Lambda=$ Cauchy--Fueter pairing) of the abstract statement above; the theorem explains
+why a decade of linear attempts had to fail and redirects the search to functionals that are
+nonlinear (quadratic, \S\ref{sec:positivity}--\ref{sec:bridge}), geometric-equivariant
+(\S\ref{sec:twistor}), or spectral.
+\end{remark}
+
+\subsection{The degree no-go}
+
+The second candidate is topological: the quaternionic winding number, i.e.\ the Brouwer degree of
+$f/|f|$ on $3$-cycles, which is the natural $4$-dimensional argument principle. We first record
+the Jacobian structure of intrinsic maps.
+
+\begin{lemma}[Jacobian factorization]\label{lem:jacobian}
+Let $f$ be slice regular near $q=x+yJ$, $y>0$. With respect to the orthogonal splitting
+$T_q\HH=\CC_J\oplus\CC_J^\perp$, the real differential of $f$ acts as left multiplication by
+$f'(q)$ on $\CC_J$ and by the spherical derivative $\partial_sf(q)=(f(q)-f(\bar q))(q-\bar q)^{-1}$
+on $\CC_J^\perp$, as in \eqref{eq:blocks}. Consequently
+\[
+\det(d_qf)=|f'(q)|^2\,|\partial_sf(q)|^2\ \ge 0 :
+\]
+slice regular maps are orientation-preserving away from the degenerate set
+$\{f'=0\}\cup\{\partial_sf=0\}$.
+\end{lemma}
+
+\begin{proof}
+The block decomposition \eqref{eq:blocks} was established in the proof of
+Proposition~\ref{prop:naive} (for monomials by the divided-difference computation, extended by
+linearity and locally uniform convergence; the identification of the orthogonal block with the
+spherical derivative is the standard one \cite{GhiloniPerotti2011,GSSbook}). Left multiplication
+by $a\in\HH$ on a $2$-plane it preserves acts with determinant $|a|^2$; both blocks are left
+multiplications by elements of $\CC_J$, each preserving its plane, giving the product formula.
+\end{proof}
+
+\begin{mainthm}[Degree no-go]\label{thm:degree-nogo}
+Let $f$ be intrinsic slice regular. The local Brouwer degree of $f/|f|\colon\partial N\to S^3$ on
+the boundary of a small tubular neighborhood $N$ of a zero component is: $m$ at a real zero of
+multiplicity $m$, and $2m$ at a zero sphere of multiplicity $m$. That is, the quaternionic winding
+number weights a zero sphere exactly as it weights the corresponding conjugate pair of complex
+zeros: deformation-invariant integer counts cannot detect spheres.
+\end{mainthm}
+
+\begin{proof}
+\emph{Real zero.} For $f=q^m$ on $|q|=1$, a generic target value has exactly the $m$ slice roots
+as preimages, and by Lemma~\ref{lem:jacobian} each preimage is positively oriented (on the slice
+plane $\det=m^2|q|^{2(m-1)}$; on the orthogonal plane the divided difference
+$(q^m-\bar q^m)(q-\bar q)^{-1}=\sin m\psi/\sin\psi\cdot$(unit) for $q=e^{J\psi}$, again of
+nonnegative determinant, and positive at generic points); hence local degree $m$. A general
+intrinsic $f$ with a real zero of multiplicity $m$ factors locally as $(q-x_0)^m\tilde f(q)$ with
+$\tilde f(x_0)\neq0$ real, and the degree is stable under this real perturbation.
+
+\emph{Zero sphere.} For the model $f=q^2+1$ near the sphere $\SS$: writing $q=x+yJ$, the local
+model is $f(x+yJ)=(x^2-y^2+1)+2xyJ\approx-2(y-1)+2xJ$ near $(x,y)=(0,1)$. On the boundary
+$S^1_\phi\times S^2_J$ of a tubular neighborhood of the zero sphere the map is
+$(\phi,J)\mapsto\cos\phi'+J\sin\phi'$ (with $\phi'$ the angular coordinate of
+$(-2(y-1),2x)$), which hits a generic target value twice, at $(\phi_0,J_0)$ and $(-\phi_0,-J_0)$.
+Both preimages count positively: by Lemma~\ref{lem:jacobian} the map is orientation-preserving
+where nondegenerate, and global consistency forces the count. Indeed the family $q^2+t$,
+$t\in[0,1]$, is nonvanishing on the fixed large sphere $|q|=R>1$, so the degree there is constant
+in $t$; at $t=0$ it is the degree of $q^2$, which equals $2$ by the real-zero computation above
+(a real zero of multiplicity $2$); and at $t=1$ the zero set is the unit sphere $\SS$. In
+$H_3(\HH\setminus\SS)\cong\ZZ$ the large sphere $S^3_R$ is homologous to the boundary
+$S^2\times S^1$ of the tubular neighborhood (the region between them is a $4$-chain avoiding
+$\SS$), so the local degree at the zero sphere is $2$. Multiplicity
+$m$ gives $2m$ by the same argument applied to $(q^2+1)^m\cdot(\text{unit})$.
+\end{proof}
+
+\begin{remark}\label{rem:c2}
+The count $r+2s$ (real zeros plus twice spheres) is exactly the count the complex argument
+principle produces for the even function $\Xi$ --- the ``$c=2$ conspiracy'' of
+\cite[\S7]{Baker2015} persists for the nonlinear degree. This is consistent with, and required
+by, the hardness checks: the degree is a deformation invariant, spheres are destroyed by
+arbitrarily small deformations (\S\ref{sec:hardness}), so the degree \emph{must not} see them.
+Any successful discriminant must be finer than homology and finer than degree; the equivariant
+component type of Theorem~\ref{thm:dichotomy} is the minimal such refinement, and it is not
+deformation-invariant --- components change type precisely when zeros collide on the real axis.
+\end{remark}
+
+%=====================================================================
+\section{Hardness checks}\label{sec:hardness}
+
+Any proposed sphere-excluding mechanism must pass two tests. We state them as requirements,
+with the data that makes them concrete.
+
+\subsection{The Davenport--Heilbronn test}\label{subsec:DH}
+
+Let $\chi$ be the odd Dirichlet character mod $5$ with $\chi(2)=i$, and set
+\[
+\kappa=\frac{\sqrt{10-2\sqrt5}-2}{\sqrt5-1},\qquad
+f_{DH}(s)=\tfrac12\bigl[(1-i\kappa)L(s,\chi)+(1+i\kappa)L(s,\bar\chi)\bigr],
+\]
+\[
+\Lambda_{DH}(s)=\Bigl(\frac{5}{\pi}\Bigr)^{s/2}\Gamma\Bigl(\frac{s+1}{2}\Bigr)f_{DH}(s),
+\qquad \Xi_{DH}(z)=\Lambda_{DH}\bigl(\tfrac12+iz\bigr).
+\]
+Then $\Xi_{DH}$ is entire of order $1$, even, and real on $\RR$ (evenness and reality verified
+numerically to relative $10^{-16}$ in Appendix~\ref{app:numerics}, and provable directly from
+the functional equations of $L(s,\chi)$, $L(s,\bar\chi)$ and the choice of $\kappa$), so it
+possesses an intrinsic slice regular extension
+with exactly the symmetry of $\Xi$ --- but $f_{DH}$ has zeros off the critical line
+\cite{DavenportHeilbronn1936a,DavenportHeilbronn1936b,Titchmarsh1986}, and no Euler product. Its
+quaternionic extension therefore has genuine zero spheres. The first three, recomputed here by
+Newton iteration at 25-digit precision (Appendix~\ref{app:numerics}) and matching Spira's
+computations \cite{Spira1994} (see also \cite{BalanzarioSanchez2007}):
+\begin{equation}\label{eq:DHspheres}
+\begin{array}{lll}
+s=0.808517182\ldots+85.699348485\ldots i, & a=85.699348, & y_0=0.308517,\\
+s=0.650830081\ldots+114.163342686\ldots i, & a=114.163343, & y_0=0.150830,\\
+s=0.574356050\ldots+166.479305\ldots i, & a=166.479306, & y_0=0.074356 .
+\end{array}
+\end{equation}
+(Here $(a,y_0)$ are the center and radius of the corresponding sphere in rotated coordinates:
+$s=\sigma+i\tau$ off the line gives $\gamma=\tau- i(\sigma-\tfrac12)$ and the sphere
+$a=\tau$, $y_0=\sigma-\tfrac12$.)
+
+\textbf{Requirement 1.} \emph{Symmetry plus growth cannot exclude spheres; a candidate mechanism
+must consume arithmetic input (Euler product / explicit formula / positivity of $\Phi$ used in an
+essential way), and must fail --- demonstrably --- for $\Xi_{DH}$.} Every structure proposed in
+this paper is run against DH: the Laguerre detector dips negative exactly inside the predicted
+windows at the spheres \eqref{eq:DHspheres} (\S\ref{sec:positivity}), the sector energies pick up
+exactly the predicted $y_0^{2\ell}$ signal (\S\ref{sec:positivity}), and the growth criterion
+recovers the first radius to four decimals (\S\ref{sec:bridge}).
+
+\subsection{The small-sphere (de Bruijn--Newman) test}\label{subsec:dBN}
+
+For $t\in\RR$ let $H_t(z)=\int_0^\infty e^{tu^2}\,\Phi(u)\cos(zu)\dd u$ (up to normalization,
+the heat-flow deformation of $\Xi$), and let $\Lambda_{dBN}$ be the de Bruijn--Newman constant:
+$H_t$ has only real zeros iff $t\ge\Lambda_{dBN}$, and RH is equivalent to $\Lambda_{dBN}\le0$.
+Rodgers--Tao \cite{RodgersTao2020} proved $\Lambda_{dBN}\ge0$: RH, if true, is \emph{barely}
+true. In the present language: for $t<0$ the deformations $H_t$ have zero spheres of arbitrarily
+small radius accumulating along the axis, and under the flow a sphere shrinks, collides with the
+axis, and splits into two real zeros (the tacnode transition of Remark~\ref{rem:valuecurve});
+$\Xi$ sits exactly at the closure of the sphere-free regime.
+
+\textbf{Requirement 2.} \emph{Any true criterion degrades only polynomially or worse as the sphere
+radius $y_0\to0$; a soft argument stable under small perturbations of the function proves too much
+and is therefore wrong.} The structures of \S\S\ref{sec:positivity}--\ref{sec:bridge} comply
+quantitatively: the sector-$\ell$ signal of a sphere scales as $y_0^{2\ell}$
+(Lemma~\ref{lem:grading}), and the growth criterion needs frequencies $\lambda\gtrsim1/y_0$
+(Theorem~\ref{thm:rate} and Remark~\ref{rem:honest}) --- arbitrarily weak, never zero.
+
+%=====================================================================
+\section{The positivity hierarchy}\label{sec:positivity}
+
+The no-go theorems force nonlinearity; the simplest nonlinear invariants are quadratic. This
+section develops the quadratic family on the ``unitary'' side: a hierarchy of positivity
+statements graded by spherical Bessel tags, whose bottom rung is the classical Laguerre
+inequality. Section~\ref{sec:sectors} grounds the tags in the quaternionic harmonic analysis of
+\cite{Baker2015,Baker2016}, and Section~\ref{sec:bridge} develops the ``analytic'' twin.
+
+\subsection{The bottom rung: Laguerre positivity}\label{subsec:laguerre}
+
+For $\Xi$ real entire of order $1$ with Hadamard product over zeros $\rho$ (in the rotated
+variable, so RH says $\rho\in\RR$),
+\begin{equation}\label{eq:logsecond}
+-(\log\Xi)''(x)=\sum_\rho\frac{1}{(x-\rho)^2},\qquad x\in\RR,\ \Xi(x)\neq0 .
+\end{equation}
+A real zero contributes $(x-\rho)^{-2}>0$; a conjugate pair $\rho=a\pm iy_0$ (a zero sphere of
+center $a$, radius $y_0$) contributes
+\[
+2\,\re\frac{1}{(x-a-iy_0)^2}
+=\frac{2\bigl((x-a)^2-y_0^2\bigr)}{\bigl((x-a)^2+y_0^2\bigr)^2},
+\]
+which is \emph{negative exactly on the interval} $|x-a|<y_0$ --- the equatorial shadow of the
+sphere. Positivity of \eqref{eq:logsecond} against $\Xi^2$ is the Laguerre inequality
+\[
+L_1[\Xi](x)=\Xi'(x)^2-\Xi(x)\Xi''(x)\ge0\qquad(x\in\RR),
+\]
+a necessary condition for RH. The full hierarchy characterizes RH:
+
+\begin{theorem}[Csordas--Varga; Csordas--Vishnyakova]\label{thm:laguerre}
+For a real entire function $\varphi\not\equiv0$ define
+\[
+L_n(x;\varphi)=\sum_{j=0}^{2n}\frac{(-1)^{j+n}}{(2n)!}\binom{2n}{j}
+\varphi^{(j)}(x)\,\varphi^{(2n-j)}(x),
+\qquad\text{so that }\ |\varphi(x+iy)|^2=\sum_{n\ge0}L_n(x;\varphi)\,y^{2n}.
+\]
+If $\varphi$ belongs to the Laguerre--P\'olya class then $L_n(x;\varphi)\ge0$ for all $n\ge0$ and
+all $x\in\RR$ \textup{(\cite[Theorem~2.9]{CsordasVarga1990})}. Conversely, if
+$L_n(x;\varphi)\ge0$ for all $n\ge0$ and all $x\in\RR$, then $\varphi$ belongs to the
+Laguerre--P\'olya class \textup{(\cite[Theorem~2.3]{CsordasVishnyakova2013}; no a priori
+order or genus restriction)}. Since $\Xi$ is real entire of order $1$, membership
+$\Xi\in\LP$ is equivalent to all zeros of $\Xi$ being real, so
+\[
+\text{RH}\iff L_n(x;\Xi)\ge0\ \text{ for all }n\in\NN_0\text{ and all }x\in\RR .
+\]
+\end{theorem}
+
+\begin{remark}
+For $\Xi$ the ``inequalities $\Rightarrow$ reality'' direction is also elementary, without
+citation: if $\Xi(x_0+iy_0)=0$ with $y_0\neq0$, then
+$0=|\Xi(x_0+iy_0)|^2=\sum_nL_n(x_0;\Xi)\,y_0^{2n}$; if all $L_n(x_0)\ge0$ then every term
+vanishes, so $|\Xi(x_0+iy)|=0$ for all $y$, forcing $\Xi\equiv0$.
+\end{remark}
+
+In the twistor language of Section~\ref{sec:twistor}, $L_1\ge0$ is the statement that the value
+curve meets the real Klein quadric ``from the crunode side'' at each passage
+(Remark~\ref{rem:valuecurve}); the higher $L_n$ are its jets, cf.\ the expansion of
+$|\varphi(x+iy)|^2$ in the sphere-radius variable $y$. The hyperbolicity of Jensen polynomials
+--- equivalent to RH in the aggregate, and proved for all but finitely many polynomials of each
+degree by Griffin--Ono--Rolen--Zagier \cite{GORZ2019} --- is the polynomial-truncation face of
+the same Laguerre--P\'olya membership. The hierarchy complies with both hardness
+checks: it fails for DH (next paragraph), and the sphere signal degrades polynomially in $y_0$.
+
+\textbf{Numerics} (Appendix~\ref{app:numerics}, Experiments 1--2). On $[0,52]$, computed purely
+from the cosine transform \eqref{eq:cosine}, the relative margin
+$L_1[\Xi]/(\Xi'^2+|\Xi\Xi''|)$ has minimum $0.173$. For DH (after the sign-preserving rescaling
+$W=e^{\pi x/4}\Xi_{DH}$, which leaves $\operatorname{sign}L_1$ invariant since
+$L_1[e^{cx}g]=e^{2cx}L_1[g]$): $L_1[W]<0$ exactly on $[85.417,85.982]$ at the first sphere
+(predicted window $|x-a|<y_0$: $[85.391,86.008]$) and on $[114.025,114.302]$ at the second
+(predicted $[114.013,114.314]$) --- the observed windows sit just inside the predictions, the
+shaving accounted for by the positive contributions of neighboring on-line zeros --- while on the
+sphere-free control stretch $[78,82]$ the minimum is $\approx7.2\times10^2>0$ (rescaled units).
+A zero sphere of radius $y_0$ forces $L_1<0$ on an interval of length $\approx2y_0$ at its
+projection: \emph{the equivariant dichotomy of Theorem~\ref{thm:dichotomy} has an axis-visible,
+quantitative certificate, computed from function data alone.}
+
+\subsection{The graded family: sector energies}\label{subsec:sectors-energies}
+
+The Laguerre inequality mixes all sphere radii. The grading that separates them is by spherical
+Bessel tags. For a zero multiset $\{\rho\}$ written as $\rho=a_\rho+iy_\rho$ ($y_\rho\ge0$; each
+conjugate pair counted once by its upper member), define the \emph{sector energies}
+\begin{equation}\label{eq:sector}
+\EE_\ell=\int_0^\infty\Bigl|\sum_\rho j_\ell(\lambda y_\rho)\,e^{i\lambda a_\rho}\Bigr|^2
+w(\lambda)\dd\lambda,\qquad \ell=0,1,2,\ldots
+\end{equation}
+for a positive weight $w$ (the laboratory uses a Gaussian window), where $j_\ell$ is the
+spherical Bessel function. These are quadratic in the zeros --- Theorem~\ref{thm:linear-nogo}
+does not apply --- and graded:
+
+\begin{lemma}[Grading]\label{lem:grading}
+Let the zero multiset be finite (in practice: windowed) and closed under conjugation, and let
+$w>0$ be continuous with all moments finite. Then:
+\begin{enumerate}
+\item Real zeros contribute nothing to any $\ell\ge1$ sector: $j_\ell(0)=0$ for $\ell\ge1$, so
+if all $y_\rho=0$ then $\EE_\ell=0$ for every $\ell\ge1$, exactly.
+\item A single sphere of radius $y_0$ contributes to $\EE_\ell$ at order $y_0^{2\ell}$ as
+$y_0\to0$: from $j_\ell(t)=t^\ell/(2\ell+1)!!\,\bigl(1+O(t^2)\bigr)$,
+\[
+\EE_\ell(\text{one sphere }(a,y_0))
+=\frac{y_0^{2\ell}}{((2\ell+1)!!)^2}\int_0^\infty\lambda^{2\ell}w(\lambda)\dd\lambda
+\;\bigl(1+O(y_0^2)\bigr).
+\]
+\item All zeros are real $\iff$ $\EE_\ell=0$ for all $\ell\ge1$ $\iff$ $\EE_1=0$: the $\ell$-th
+sector detects a sphere of radius $y_0$ with sensitivity $y_0^{2\ell}$, and the $\ell\ge1$
+sectors jointly (indeed singly, at $\ell=1$) certify reality.
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+(1) and (2) are immediate from the Taylor expansion of $j_\ell$ at $0$
+(e.g.\ \cite[10.52.1]{DLMF}). For (3): suppose $\EE_1=0$. Since $w>0$ and the integrand is
+continuous in $\lambda$, the finite sum $S(\lambda)=\sum_\rho j_1(\lambda y_\rho)e^{i\lambda
+a_\rho}$ vanishes identically on $\lambda\ge0$. As $\lambda\to0^+$,
+$j_1(\lambda y_\rho)=\tfrac13\lambda y_\rho+O(\lambda^3)$ and $e^{i\lambda a_\rho}=1+O(\lambda)$,
+so $S(\lambda)=\tfrac{\lambda}{3}\sum_\rho y_\rho+O(\lambda^2)$; hence $\sum_\rho y_\rho=0$,
+and since every $y_\rho\ge0$, all vanish.
+\end{proof}
+
+\textbf{Numerics} (Appendix~\ref{app:numerics}, Experiment 3). With $20$ real Riemann ordinates
+plus one implanted sphere at $a=28$ of radius $y_0$ swept over $[10^{-3},10^{-0.5}]$, and
+Gaussian weight: the measured log--log slopes of $\EE_\ell$ versus $y_0$ are $2.000$, $4.000$,
+$6.000$ for $\ell=1,2,3$; $\EE_1$ of the real ordinates alone is exactly $0$; and on real DH
+data the three spheres \eqref{eq:DHspheres} give per-sphere $\EE_1$ values
+$4.360\times10^{-3}$, $1.062\times10^{-3}$, $2.593\times10^{-4}$, with successive ratios
+$4.11$, $4.10$ against the predicted $(y_0/y_0')^2=4.18$, $4.11$.
+
+The polynomial (never exponential, never zero) decay in $y_0$ is the quantitative face of
+Requirement 2: near-axis spheres emit an arbitrarily weak but nonvanishing signal, so a
+successful positivity proof must control these functionals to all orders --- which is where the
+arithmetic must enter, since DH shows that symmetry alone permits the signal to be present.
+
+\subsection{Where the tags come from: the quaternionic sector decomposition}\label{sec:sectors}
+
+The Bessel tags in \eqref{eq:sector} are not ad hoc: they are the radial profiles of the
+$SU(2)$-isotypic decomposition of the rotationally extended function theory, worked out in
+\cite{Baker2015,Baker2016}, which we now summarize in the form needed. (This subsection uses the
+Fueter-regular extension hierarchy; it is the harmonic-analysis complement of the slice-regular
+algebra used elsewhere, the two being linked by Fueter's theorem. See
+\cite{BoryReyesShapiro2010} for the dictionary between the quaternionic and Clifford-analytic
+settings, in which this machinery has parallel developments
+\cite{BrackxDeSchepperSommen2005,DeBieXu2011}.)
+
+Rotations about the real axis act on $\HH$-valued functions by
+$M_\eta(F)(q)=\bar\eta F(\eta q\bar\eta)$, $\eta\in\HH$, $|\eta|=1$, with infinitesimal
+generators $J_i=\tfrac{e_i}2+L_i$; harmonic and Fueter-regular functions decompose into the
+irreducible summands $V_{2\ell+1}$ of this $SU(2)$-action, with quaternionic spherical harmonics
+$\mathcal Y_\ell^m$ as angular factors \cite[\S\S5--6]{Baker2015}. The intrinsic (slice)
+extension $R$ is the $\ell=0$ sector; raising and lowering operators $B_\pm$ move between
+sectors, and $Q_\ell=(B_+)^\ell\circ Q_0$ (with $Q_0=-\tfrac14\Delta\circ R$ the Fueter map)
+produces the regular representative of the $\ell$-th sector from a complex input
+\cite[\S\S6--7]{Baker2015}. The key computation \cite[\S6]{Baker2016}: the image of the
+exponential is
+\begin{equation}\label{eq:Eell}
+E_\ell(\lambda,z)=\frac{2}{\lambda^{2+\ell}}\,Q_\ell\bigl(e^{\lambda z}\bigr)
+=i^\ell\bigl(j_\ell(\lambda y)+i\,j_{\ell+1}(\lambda y)\bigr)e^{\lambda x},
+\end{equation}
+an eigenfunction of the sector derivative with eigenvalue $\lambda$, by Rayleigh's formula.
+So \emph{the spherical Bessel factor $j_\ell(\lambda y)$ is the radial profile with which a point
+at height $y$ above the axis enters the $\ell$-th rotational sector at frequency $\lambda$}. The
+manuscripts further develop the completeness of the $(\ell,m)$-decomposition, a Mellin/Laplace
+inversion theory on each sector, and a fully quaternionic plane-wave expansion built from
+\eqref{eq:Eell} with the addition theorem for the $\mathcal Y_\ell^m$
+\cite[\S\S5--7]{Baker2016}; as a byproduct that manuscript derives a closed form for the
+three-dimensional Clifford--Fourier kernel of
+\cite{BrackxDeSchepperSommen2005,DeBieXu2011}, where closed forms had been known in even
+dimensions only.
+
+For present purposes the content is the following grounding of the definition
+\eqref{eq:sector}. Apply the sector map $Q_\ell$ to the logarithmic derivative: for
+$\xi'/\xi(z)=\sum_\rho(z-\rho)^{-1}$ (suitably paired), each zero at height $y$ above the axis
+enters the $\ell$-th sector, at real frequency $\lambda$ of the sector Mellin/Laplace transform
+\cite[Lemma~6.1, Thm.~6.2]{Baker2016}, with the radial profile $j_\ell(\lambda y)$ of
+\eqref{eq:Eell}. The tags of \eqref{eq:sector} combine this radial profile with the unitary
+axial character $e^{i\lambda a}$; rotating the radial profile as well produces the analytic
+tags $i_\ell(\lambda y)e^{i\lambda a}$ of \S\ref{subsec:graded-anomaly} --- the two families
+are the two real forms of one complexified family, matching at order $y^{2\ell}$. The sector
+energies
+\eqref{eq:sector} are thus the natural quadratic pairings
+$\EE_\ell=\langle Q_\ell(\xi'/\xi),Q_\ell(\xi'/\xi)\rangle_w$ of the extension with itself ---
+the $B_\pm$/Bessel machinery of \cite{Baker2015} put to quadratic use, as
+Theorem~\ref{thm:linear-nogo} demands. We do not need the full strength of this dictionary
+anywhere below: Lemma~\ref{lem:grading} and everything after it use \eqref{eq:sector} as a
+definition, and this subsection explains why it is the canonical one.
+
+\begin{remark}
+The reader preferring to stay entirely within the slice-regular framework may take
+\eqref{eq:sector} as a definition and skip \S\ref{sec:sectors}; nothing downstream depends on
+it. Conversely, making the correspondence
+$\{\text{sector energies}\}\leftrightarrow\{\text{spherical-harmonic content of the extended
+zero set}\}$ into a theorem with a precise domain of validity (the natural route is the
+plane-wave expansion of \cite[\S\S6--7]{Baker2016} applied to the Cauchy--Fueter kernel of the
+extended $\xi'/\xi$) is worthwhile foundational work; it is listed with the open problems.
+\end{remark}
+
+%=====================================================================
+\section{The explicit-formula bridge}\label{sec:bridge}
+
+The unitary family of Section~\ref{sec:positivity} detects spheres from the zero side. To attack
+RH one needs functionals computable from the \emph{prime} side. This section constructs the
+analytic twin: a certified, prime-computable quadratic form whose growth rate reads off the
+largest sphere radius.
+
+\subsection{The certified explicit formula}\label{subsec:EF}
+
+Rotated coordinates throughout: $\rho=\tfrac12+i\gamma$, the zero multiset $\{\gamma\}$ closed
+under $\gamma\mapsto-\gamma$ (functional equation) and $\gamma\mapsto\bar\gamma$ (reality). For
+$h$ even, holomorphic in $|\im r|\le\tfrac12+\varepsilon$, with sufficient decay, and
+$g(u)=\tfrac1{2\pi}\int h(r)e^{-iur}\dd r$, the Guinand--Weil explicit formula
+\cite{Guinand1948,Weil1952}, in the normalization of \cite[Thm.~5.12]{IwaniecKowalski2004}
+specialized to $\zeta$ and rotated, reads
+\begin{equation}\label{eq:EF}
+\sum_\gamma h(\gamma)=h\bigl(\tfrac i2\bigr)+h\bigl(-\tfrac i2\bigr)
++\frac1{2\pi}\int_{-\infty}^\infty h(t)\Bigl[\re\,\psi\bigl(\tfrac14+\tfrac{it}2\bigr)
+-\log\pi\Bigr]\dd t
+-2\sum_{n\ge2}\frac{\Lambda(n)}{\sqrt n}\,g(\log n),
+\end{equation}
+with $\psi=\Gamma'/\Gamma$ and $\Lambda$ the von Mangoldt function. Because conventions differ
+across sources, we certify \eqref{eq:EF} numerically as stated: on the Gaussian family below,
+the zero side computed from $250$ zeros matches pole${}+{}$archimedean${}+{}$prime side to
+$10^{-8}$--$10^{-10}$ at five $(c,\lambda)$ configurations (Appendix~\ref{app:numerics},
+Table~\ref{tab:EF}).
+
+\subsection{The linear building block and the quadratic form}
+
+For a window center $c$, frequency $\lambda\ge0$ and width $\sigma$ (fixed at $\sigma=2$ in the
+laboratory), take the even test function
+\begin{equation}\label{eq:hfamily}
+h_{c,\lambda}(r)=e^{i\lambda(r-c)}e^{-\frac{(r-c)^2}{2\sigma^2}}
++e^{-i\lambda(r+c)}e^{-\frac{(r+c)^2}{2\sigma^2}},
+\qquad
+Z(c,\lambda)=\sum_\gamma h_{c,\lambda}(\gamma).
+\end{equation}
+Its Fourier side is a Gaussian window at logarithmic scale $\lambda$:
+\[
+g(u)=\frac{\sigma}{\sqrt{2\pi}}\Bigl[e^{-iuc}e^{-\sigma^2(u-\lambda)^2/2}
++e^{iuc}e^{-\sigma^2(u+\lambda)^2/2}\Bigr],
+\]
+so by \eqref{eq:EF}, $Z(c,\lambda)$ is \emph{unconditionally computable from primes} with
+$\log n\in[\lambda-O(1/\sigma),\lambda+O(1/\sigma)]$ plus explicit archimedean and pole terms:
+the frequency $\lambda$ \emph{is} the logarithmic prime scale. The quadratic form is
+$|Z(c,\lambda)|^2$ (pointwise, or integrated against a weight in $\lambda$).
+
+\begin{lemma}[Diagonal anomaly]\label{lem:anomaly}
+Fix $c>0$ and $\sigma$, and write $Y=\sup_\rho y_\rho$ for the zero multiset under
+consideration, assumed to satisfy $y_\rho\le\tfrac12$ and $N(T)\ll T\log T$.
+\begin{enumerate}
+\item A real zero pair $\{\pm a\}$ contributes a bounded oscillatory amount to $Z(c,\lambda)$,
+uniformly in $\lambda$.
+\item A zero sphere $(a,y_0)$ --- the quadruple $\{\pm a\pm iy_0\}$ --- contributes to
+$|Z(c,\lambda)|^2$ a diagonal block whose size oscillates, for large $\lambda$, between
+\[
+4(G-G')^2\,e^{2\lambda y_0}\quad\text{and}\quad4(G+G')^2\,e^{2\lambda y_0},
+\qquad
+G=e^{-\frac{(a-c)^2-y_0^2}{2\sigma^2}},\quad G'=e^{-\frac{(a+c)^2-y_0^2}{2\sigma^2}},
+\]
+up to $O(e^{\lambda y_0})$: exponential growth at rate exactly $2y_0$ in the $\limsup$ sense
+(note $G>G'$ for $a,c>0$), weighted by the Gaussian distance of the sphere's center from the
+window.
+\item Unconditionally, $|Z(c,\lambda)|\le C_{c,\sigma}\,e^{\lambda Y}$, uniformly in $\lambda$;
+in particular every product of two zero-terms in $|Z|^2$ is $O(e^{2\lambda Y})$, and the total
+of all products in which at least one factor comes from a zero of height $\le Y-\varepsilon$ is
+$O\bigl(e^{\lambda(2Y-\varepsilon)}\bigr)$.
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+Write $h=h_{c,\lambda}$ as in \eqref{eq:hfamily}. (1) For real $\gamma$,
+$|h(\gamma)|\le e^{-(\gamma-c)^2/2\sigma^2}+e^{-(\gamma+c)^2/2\sigma^2}\le2$, so a real pair
+contributes at most $4$ to $|Z|$, uniformly in $\lambda$.
+
+(2) Since $h$ is even, the quadruple contributes $2h(\gamma)+2h(\bar\gamma)$, $\gamma=a+iy_0$.
+In $h(\bar\gamma)$ the first window term is
+$e^{i\lambda(a-c)}e^{\lambda y_0}\cdot Ge^{i\theta}$ (with $\theta=(a-c)y_0/\sigma^2$ from the
+complex Gaussian), and in $h(\gamma)$ the second window term is
+$e^{-i\lambda(a+c)}e^{\lambda y_0}\cdot G'e^{i\theta'}$; all other terms have modulus
+$e^{-\lambda y_0}\cdot O(1)$. Hence
+\[
+2h(\gamma)+2h(\bar\gamma)
+=2e^{\lambda y_0}\Bigl(Ge^{i\lambda(a-c)+i\theta}+G'e^{-i\lambda(a+c)+i\theta'}\Bigr)
++O\bigl(e^{-\lambda y_0}\bigr),
+\]
+whose squared modulus oscillates between $4(G-G')^2e^{2\lambda y_0}$ and
+$4(G+G')^2e^{2\lambda y_0}$, up to the stated error.
+
+(3) Each zero $\gamma_k=a_k+iy_k$ satisfies $|h(\gamma_k)|\le
+2e^{\lambda y_k}e^{y_k^2/2\sigma^2}e^{-(a_k-c)^2/2\sigma^2}$
+(and the mirror term likewise). With $y_k\le\tfrac12$ the middle factor is bounded, and summing
+the Gaussian factor against the zero-counting measure of density $O(\log(2+|a_k|))$ gives
+$\sum_k|h(\gamma_k)|\le C_{c,\sigma}e^{\lambda Y}$, uniformly in $\lambda$. The refined bound
+follows by using $e^{\lambda y_k}\le e^{\lambda(Y-\varepsilon)}$ on the low factor of each such
+product.
+\end{proof}
+
+\begin{mainthm}[Rate criterion]\label{thm:rate}
+Let the zero multiset satisfy the hypotheses of Lemma~\ref{lem:anomaly}, and set
+$Y=\sup_\rho y_\rho$.
+\begin{enumerate}
+\item[(a)] \textup{(Unconditional.)} For every window $(c,\sigma)$,
+$\limsup_{\lambda\to\infty}\lambda^{-1}\log|Z(c,\lambda)|\le Y$. In particular, if RH holds
+then $Z(c,\lambda)$ is bounded in $\lambda$ for every window; contrapositively, exponential
+growth of $Z$ in any single window disproves RH. $Z$ is unconditionally computable from primes
+at logarithmic scale $\lambda$.
+\item[(b)] \textup{(Exact rate. Hypothesis: either $Y=0$, or $Y>0$ and for some $\varepsilon>0$
+only finitely many zeros satisfy $y_\rho>Y-\varepsilon$ --- a non-accumulation hypothesis; note
+the $Y=0$ case must be listed separately, since when all zeros are real every zero satisfies
+$y_\rho>-\varepsilon$ and the finiteness clause is vacuously false.)} For every fixed window,
+\[
+\limsup_{\lambda\to\infty}\frac{\log|Z(c,\lambda)|}{\lambda}
+=\sup_\rho y_\rho=\Theta-\tfrac12,
+\]
+with $\Theta$ the supremum of real parts of the zeros of $\zeta$. Under this hypothesis:
+\emph{RH holds if and only if $Z(c,\lambda)$ grows subexponentially in $\lambda$ for every
+window}, and when the rate is positive it equals twice the supremal sphere radius, $2Y$, in the
+$|Z|^2$ normalization.
+\end{enumerate}
+\end{mainthm}
+
+\begin{proof}
+(a) is part (3) of Lemma~\ref{lem:anomaly} (with $Y=0$, part (1) gives boundedness directly).
+
+(b) If $Y=0$, part (a) gives $\limsup\le0$, and the mean-value argument below (applied to the
+bounded, $\lambda$-independent-amplitude real-zero sum) shows $|Z|$ is bounded below along a
+subsequence, so the $\limsup$ is exactly $0$. Now suppose $Y>0$ with the non-accumulation
+hypothesis. Lower bound: fix $\varepsilon$ as given, let
+$\gamma_1,\dots,\gamma_K$ (with their mirrors) be the finitely many zeros of height
+$>Y-\varepsilon$, and split $Z=Z_{\mathrm{top}}+Z_{\mathrm{rest}}$ accordingly; part (3) of the
+lemma gives $|Z_{\mathrm{rest}}|\le Ce^{\lambda(Y-\varepsilon)}$. By part (2), each
+$\gamma_k=a_k+iy_k$ contributes to $Z_{\mathrm{top}}$ terms
+$c_k^\pm e^{\lambda y_k}e^{\pm i\lambda(a_k\mp c)}$ with $\lambda$-independent amplitudes
+$|c_k^\pm|>0$ plus $O(e^{-\lambda(Y-\varepsilon)})$, so
+$e^{-\lambda Y}Z_{\mathrm{top}}$ is, up to $o(1)$ along $\lambda\to\infty$, a finite
+exponential sum $\sum_k d_k e^{-\lambda(Y-y_k)}e^{i\lambda b_k}$ with distinct frequencies
+$b_k$ after grouping (coincident frequencies group with coherent, non-cancelling coefficients:
+the two growing contributions at frequency $a_k-c$ carry the same Gaussian phase). Let
+$y_{\max}=\max_ky_k\in(Y-\varepsilon,Y]$. The Besicovitch mean value over windows
+$[\Lambda,2\Lambda]$ of $|e^{-\lambda y_{\max}}Z_{\mathrm{top}}|^2$ tends to
+$\sum_{k:y_k=y_{\max}}|d_k|^2>0$, so there is a sequence $\lambda_n\to\infty$ with
+$|Z(c,\lambda_n)|\ge c'e^{\lambda_n y_{\max}}-Ce^{\lambda_n(Y-\varepsilon)}
+\ge\tfrac{c'}2e^{\lambda_n(Y-\varepsilon)}$ eventually; hence
+$\limsup\lambda^{-1}\log|Z|\ge Y-\varepsilon$. Shrinking $\varepsilon$ (the hypothesis for
+$\varepsilon$ implies it for smaller $\varepsilon'$, with a possibly larger finite top set)
+gives the equality with (a). The identification $Y=\Theta-\tfrac12$ is the
+rotation $s=\tfrac12+iz$.
+\end{proof}
+
+\begin{remark}\label{rem:accumulation}
+The hypothesis in (b) is automatic for the Davenport--Heilbronn function in
+any fixed height range and for every finite or implanted configuration in the laboratory; for
+$\zeta$ it holds under RH (the $Y=0$ branch), while under $\neg$RH the non-accumulation clause
+would follow if the supremum $\Theta$ is attained, which is not
+known. Removing it --- heights accumulating at the supremum, centers escaping to infinity ---
+requires a multi-scale refinement of the mean-value argument that we have not carried out; we
+flag this as a genuine, if technical, gap between (a) and the clean equivalence. Nothing in the
+honest accounting of Remark~\ref{rem:honest} changes either way, and direction (a), which is the
+falsifiable one, is unconditional.
+\end{remark}
+
+\textbf{Numerics} (Appendix~\ref{app:numerics}, Table~\ref{tab:rate}; Figure~\ref{fig:bridge}). With
+$\sigma=2$, $\lambda\in[0.5,25]$, rate fitted on $\lambda>15$: $250$ real Riemann ordinates at
+$c=20$ give rate $-0.0003$ ($|Z|^2=3.2$ at $\lambda=25$); the same data plus one implanted
+sphere of radius $0.1$ at the window center give rate $0.105$
+($|Z|^2=6.9\times10^2$) --- the fit is biased by the oscillatory background, since
+$e^{2\lambda y_0}=e^5$ at the window edge barely clears it; the DH on-line zeros near $c=85.7$
+alone give rate $-0.009$ ($|Z|^2=5.8$); and DH with its first sphere gives
+\emph{rate $0.3085$ against the true $y_0=0.30852$} ($|Z|^2=2.1\times10^7$): the radius of a
+genuine off-line zero recovered to four decimals from the growth of a single window.
+
+\begin{remark}[Honest accounting]\label{rem:honest}
+At the exponential-rate level, Theorem~\ref{thm:rate} is a Gaussian-mollified form of the
+classical equivalence between zero-free regions and prime-counting error terms
+($\psi(x)-x\ll x^{\Theta+\epsilon}$): detecting a sphere of radius $y_0$ through the growth of
+$Z$ requires frequencies $\lambda\gtrsim1/y_0$, i.e.\ primes up to $e^{1/y_0}$. The wall is the
+old wall; what the criterion adds is its geometry (window length $\leftrightarrow$ sphere
+radius; growth rate $\leftrightarrow$ radius, exactly), a certified computational pipeline, and
+a decomposition of the anomaly (below) over the same sectors as
+Section~\ref{sec:positivity}. Genuinely new leverage, if any, lies below the exponential scale;
+see Problems~\ref{prob:cone}--\ref{prob:matched}.
+\end{remark}
+
+\subsection{The graded decomposition of the anomaly}\label{subsec:graded-anomaly}
+
+The sphere anomaly kernel $\cosh(2\lambda y_0)$ of Lemma~\ref{lem:anomaly} decomposes over the
+quaternionic sectors with \emph{modified} Bessel tags: by the Gegenbauer addition theorem
+(specialize \cite[10.60.2]{DLMF} at $u=v=z$, $\alpha=\pi$ and rotate by
+\cite[10.47.12]{DLMF}; classically \cite[\S11.4]{Watson1944}),
+\begin{equation}\label{eq:gegenbauer}
+\frac{\sinh(2z)}{2z}=\sum_{\ell\ge0}(2\ell+1)\,i_\ell(z)^2 ,
+\end{equation}
+where $i_\ell$ is the modified spherical Bessel function of the first kind (verified to
+$3\times10^{-14}$ at $z\in\{0.5,1,2,4\}$; Appendix~\ref{app:numerics}). The unitary family
+($j_\ell$ tags, \S\ref{sec:positivity}) and the analytic family ($i_\ell$ tags) are Wick
+rotations of each other --- $j_\ell(\lambda y)$ and $i_\ell(\lambda y)$ agree at leading order
+$y^{2\ell}$ for small radius, and the analytic one is exponentially amplified once
+$\lambda y_0\gtrsim1$. This is the same $j\leftrightarrow i$ rotation that runs through the
+quaternionic extension itself: $\cos(qu)$ restricted to the sphere direction is a $\cosh$. Each
+truncation of \eqref{eq:gegenbauer} splits the sphere anomaly into a positive series over
+sectors, giving a family of inequalities interpolating between the Laguerre level ($\ell=1$) and
+full Weil-type positivity; whether this graded family has a better cone than the classical one
+is Problem~\ref{prob:cone}.
+
+%=====================================================================
+\section{The organizing statement: two involutions, and open problems}\label{sec:involutions}
+
+\subsection{Two involutions}
+
+The zero multiset of $\Xi$ (rotated coordinates, $\rho=\tfrac12+i\gamma$) carries two
+involutions:
+\[
+\underbrace{\gamma\mapsto-\gamma}_{\text{holomorphic (functional equation, }
+\rho\mapsto1-\rho)}
+\qquad\text{and}\qquad
+\underbrace{\gamma\mapsto\bar\gamma}_{\text{antiholomorphic (reality, }\rho\mapsto\bar\rho
+\text{; the real structure }\sigma)} .
+\]
+The explicit formula \eqref{eq:EF} computes sums of functions \emph{analytic} in $\gamma$: it
+natively sees the holomorphic involution (its test functions are taken even) and is structurally
+blind to the antiholomorphic one. The sphere tags of Sections~\ref{sec:positivity} and
+\ref{sec:bridge} are functions of the \emph{conjugate pair}: e.g.\ the analytic tag is exactly a
+divided difference across the pair $(\gamma,\bar\gamma)$,
+\[
+i_0(\lambda y)\,e^{i\lambda a}
+=\frac{e^{i\lambda\bar\gamma}-e^{i\lambda\gamma}}{-i\lambda(\gamma-\bar\gamma)},
+\qquad\gamma=a+iy,
+\]
+and the unitary tag $j_0(\lambda y)e^{i\lambda a}$ is the same divided difference across the
+rotated pair $(a+y,\,a-y)$ --- either way, the tags belong to the
+class of \emph{conjugate-paired sums} $\sum_\gamma F(\gamma,\bar\gamma)$, strictly between
+Weil-linear and fully quadratic. The sharpest scalar instance of the asymmetry:
+\[
+\sum_\rho\frac1{\rho(1-\rho)}=2+\gamma_{\mathrm{Euler}}-\log4\pi
+\quad(\text{pairs by the functional equation; classical, see
+\cite[Ch.~12]{Davenport2000}}),
+\]
+while $\sum_\rho1/(\rho\bar\rho)$ --- pairing by reality --- is not prime-computable by any
+known identity; the termwise difference vanishes exactly on-line ($1-\rho=\bar\rho$), so the
+defect between the two pairings is itself a sphere detector.
+
+\begin{center}
+\fbox{\parbox{0.92\textwidth}{\textbf{Organizing statement.} RH is the statement that the two
+involutions coincide on the zero set: arithmetically, functional-equation pairing $=$
+conjugation pairing; geometrically (Theorem~\ref{thm:dichotomy}), the zero divisor on the
+incidence quadric is $\sigma$-invariant component-by-component. The program's central problem is
+to import the antiholomorphic involution into explicit-formula arithmetic.}}
+\end{center}
+
+\subsection{Open problems}
+
+Each problem carries its hardness-check annotation (\S\ref{sec:hardness}).
+
+\begin{problem}[The graded cone]\label{prob:cone}
+Does the $i_\ell$-graded decomposition \eqref{eq:gegenbauer} of the Weil-type quadratic form
+define a positivity cone with better prime-side realizability, or better cross-term control,
+than the classical Weil cone? \emph{(Must fail for DH --- it does structurally, DH having no
+prime side; must degrade polynomially in $y_0$ --- it does, $y_0^{2\ell}$.)}
+\end{problem}
+
+\begin{problem}[Conjugate-paired explicit formulas]\label{prob:paired}
+Find any unconditional identity, asymptotic, or one-sided bound for sums
+$\sum_\gamma F(\gamma,\bar\gamma)$ beyond the trivial cases ($F$ depending on one variable, or
+on $\gamma+\bar\gamma=2\re\gamma$ summed against known densities). Even partial results would
+be new tools with reach beyond this program.
+\end{problem}
+
+\begin{problem}[Cross-term calculus]\label{prob:cross}
+Quantify the off-diagonal of $|Z(c,\lambda)|^2$ (smoothed pair correlation; Montgomery's regime
+\cite{Montgomery1973} is the on-line part) under RH$+$GUE and unconditionally; determine the
+minimal sphere radius detectable at prime scale $e^\lambda$. This is the precise, quantitative
+form of the wall of Remark~\ref{rem:honest} --- the gap any new idea must close.
+\end{problem}
+
+\begin{problem}[Coherent-mode detection]\label{prob:matched}
+A sphere contributes a coherent $e^{\pm\lambda y_0}$-asymmetric mode to the pair-correlation
+field, unlike GUE-type fluctuation. Formulate sphere-detection as matched filtering and
+determine whether coherence buys detection below the $\lambda\sim1/y_0$ wall.
+\emph{(Failure modes informative; must degrade polynomially near the axis.)}
+\end{problem}
+
+\begin{problem}[Equivariant/OCS route]\label{prob:ocs}
+Compute local models of the lift and of the induced orthogonal complex structures at point-zeros
+versus sphere-zeros (the technology of \cite{GSS2014,Altavilla2018,AltavillaSarfatti2019}
+suffices for polynomial truncations), and determine whether Salamon--Viaclovsky-type
+removability \cite{SalamonViaclovsky2009}, combined with order-$1$ growth and positivity of
+$\Phi$, constrains $\sigma$-swapped components. \emph{(Must not be deformation-soft ---
+Requirement 2.)}
+\end{problem}
+
+\begin{problem}[Spectral route]\label{prob:spectral}
+The zero set of the intrinsic $\Xi$ is an axially symmetric set of exactly S-spectrum type
+\cite{CSS2008,ColomboSabadiniStruppa2011}; quaternionic self-adjointness forces a real
+S-spectrum. Realize $Z(\Xi)$ as the S-spectrum of a natural quaternionic operator built from the
+explicit formula or from $\Phi$ --- a quaternionic Hilbert--P\'olya problem: same classical
+difficulty, possibly better-shaped invariants (de Branges canonical systems are
+quaternion-sized; the rotation about the real axis becomes a gauge action). Relatedly, make the
+sector-energy/zero-set correspondence of \S\ref{sec:sectors} a theorem.
+\end{problem}
+
+%=====================================================================
+\section{Formalization targets}\label{sec:formalization}
+
+The program's foundations form a self-contained formalization target of independent value. As of
+this writing (August 2026), mathlib \cite{mathlib} contains the quaternions as a normed
+$\RR$-algebra with the expected analytic instances, but no slice analysis; the only formalization
+of basic quaternionic (Fueter-regular) function theory we are aware of is in HOL Light
+\cite{GabrielliMaggesi2017}. On the analytic side, mathlib has the completed Riemann zeta
+function with its functional equation and Euler product (following the zeta/L-series
+formalization program of Loeffler--Stoll \cite{LoefflerStoll2025}), and the Prime Number Theorem
+has been proved in Lean by the PrimeNumberTheoremAnd project \cite{PNTand} (not yet merged into
+mathlib at the time of writing).
+
+Tier 1 (self-contained, valuable regardless of RH): slice regular basics, the representation
+formula \eqref{eq:repformula}, the zero-structure theorem (Theorem~\ref{thm:zerostructure}), and
+the reformulation (Theorem~\ref{thm:reformulation}) --- a new mathlib theory comparable in scope
+to existing one-variable complex analysis developments. Tier 2: the incidence-quadric lift and
+the equivariant statements of Section~\ref{sec:twistor}; the no-go theorems of
+Section~\ref{sec:nogo}. Tier 3: the explicit formula \eqref{eq:EF} in a certified form ---
+a natural continuation of \cite{LoefflerStoll2025,PNTand}. The numerics of
+Appendix~\ref{app:numerics} (about $400$ lines of Python, reproducing in minutes) provide test
+oracles for all formalized statements.
+
+%=====================================================================
+\appendix
+\section{Numerical appendix}\label{app:numerics}
+
+All computations reproduce from the ancillary files (\texttt{anc/xi\_lib.py},
+\texttt{anc/run\_validation.py}, \texttt{anc/run\_experiments.py},
+\texttt{anc/explicit\_formula.py}, \texttt{anc/run\_bridge.py}; Python with numpy, scipy,
+mpmath, matplotlib; about $420$ lines total) in a few minutes on commodity hardware, plus a
+one-time computation of $250$ zero ordinates via mpmath.
+Figures~\ref{fig:lab} and \ref{fig:bridge} are generated by the included scripts.
+
+\subsection{Validation of the extension and of DH (\texttt{run\_validation.py})}
+$\Xi(x)=4\int_0^\infty\Phi(u)\cos(xu)\dd u$ ($6$ theta terms, trapezoid rule,
+$du=5\times10^{-5}$ on $[0,3.2]$) matches $\xi(\tfrac12+ix)$ computed independently via mpmath
+($\Gamma$, $\zeta$) to relative error $\le8\times10^{-10}$ at $x\in\{0,5,20,30\}$
+($\xi(\tfrac12)=0.4971207781\ldots$; at $x\le20$ the agreement is $\sim10^{-14}$ or better),
+and vanishes at the first zero ordinate
+$x=14.134725141\ldots$ to $7\times10^{-18}$ (the quadrature floor). $\Xi_{DH}$ built from
+Hurwitz zeta values is real and even in $z$ to relative $10^{-16}$ at $30$-digit working
+precision (sampled); Newton iteration on $f_{DH}$ from crude seeds recovers the off-line zeros
+\eqref{eq:DHspheres} with residuals $|f_{DH}|\le8\times10^{-30}$, matching \cite{Spira1994}.
+The DH on-line ordinates in $[74,97]$, recovered by sign-change bisection of $\Xi_{DH}$ and
+used in the rate experiment:
+$74.325$, $75.909$, $77.226$, $78.717$, $80.328$, $81.925$, $83.109$, $87.647$, $89.439$,
+$90.725$, $92.183$, $93.781$, $95.349$, $96.292$.
+
+\subsection{Experiments 1--2: Laguerre detector (\texttt{run\_experiments.py})}
+$L_1[\Xi](x)=\Xi'(x)^2-\Xi(x)\Xi''(x)$ with all three functions from the cosine transform:
+the relative margin has minimum $0.173$ on $[0,52]$; beyond $x\approx55$ the float64 quadrature
+floor ($|\Xi'|\sim10^{-18}$, $L_1\sim10^{-34}$) is reached and higher-precision quadrature would
+be required for a verdict. For DH (rescaled $W=e^{\pi x/4}\Xi_{DH}$): $L_1<0$ exactly on
+$[85.417,85.982]$ (predicted $[85.391,86.008]$) and $[114.025,114.302]$ (predicted
+$[114.013,114.314]$); control $[78,82]$: $\min L_1\approx7.18\times10^2>0$.
+
+\subsection{Experiment 3: sector energies (\texttt{run\_experiments.py})}
+Weight $e^{-\lambda^2}$ on $\lambda\in[0,2]$; zero set $=20$ real Riemann ordinates plus an
+implanted sphere at $a=28$, radius $y_0\in[10^{-3},10^{-0.5}]$: log--log slopes of $\EE_\ell$
+versus $y_0$ (fitted over the six smallest radii, where the sphere term is unsaturated) are
+$2.000/4.000/6.000$ for $\ell=1,2,3$; $\EE_1(\text{real ordinates only})=0$
+exactly; per-sphere $\EE_1$ for the three DH spheres:
+$4.360\times10^{-3}$, $1.062\times10^{-3}$, $2.593\times10^{-4}$ (successive ratios $4.11$,
+$4.10$ vs.\ predicted $(y_0/y_0')^2=4.18$, $4.11$).
+
+\subsection{Explicit-formula certification and rate experiment}
+\begin{table}[h]
+\centering
+\caption{Certification of \eqref{eq:EF} on the family \eqref{eq:hfamily}, $\sigma=2$, $250$
+zeros: zero side vs.\ pole${}+{}$archimedean${}+{}$prime side.}\label{tab:EF}
+\begin{tabular}{lll}
+\hline
+$(c,\lambda)$ & zero side & $|\Delta|$ \\
+\hline
+$(20,0)$ & $1.86901176$ & $1.1\times10^{-10}$\\
+$(20,1)$ & $0.96584078+1.42563531i$ & $1.2\times10^{-9}$\\
+$(20,2)$ & $-0.85353747+1.53365468i$ & $6.4\times10^{-9}$\\
+$(20,3)$ & $-1.80938739+0.21232192i$ & $1.8\times10^{-8}$\\
+$(35,2)$ & $-0.38300486+0.14677138i$ & $4.8\times10^{-9}$\\
+\hline
+\end{tabular}
+\end{table}
+
+\begin{table}[h]
+\centering
+\caption{Rate experiment: $\sigma=2$, $\lambda\in[0.5,25]$, rate fitted to
+$\log|Z|$ on $\lambda>15$.}\label{tab:rate}
+\begin{tabular}{lccc}
+\hline
+zero set & $|Z|^2$ at $\lambda=25$ & fitted rate & true $\sup y_\rho$ \\
+\hline
+$\zeta$ zeros ($250$, real), $c=20$ & $3.2$ & $-0.0003$ & $0$\\
+same $+$ implanted sphere $y_0=0.1$ at $a=c$ & $6.9\times10^2$ & $0.105$ & $0.1$\\
+DH on-line ordinates only, $c=85.7$ & $5.8$ & $-0.009$ & $0$\\
+DH with its first sphere, $c=85.7$ & $2.1\times10^7$ & $\mathbf{0.3085}$ & $\mathbf{0.30852}$\\
+\hline
+\end{tabular}
+\end{table}
+
+The implant fit is biased (here slightly high) because $e^{2\lambda y_0}=e^5$ at the window edge
+barely clears the oscillatory background; the DH sphere, with $e^{2\lambda y_0}=e^{15.4}$, gives
+the rate to four digits. The Gegenbauer identity \eqref{eq:gegenbauer} holds to
+$\le3\times10^{-14}$ at $z\in\{0.5,1,2,4\}$ with $80$ terms.
+
+\begin{figure}[p]
+\centering
+\includegraphics[width=\textwidth]{lab_results.pdf}
+\caption{Left: $L_1[\Xi]>0$ on $[0,60]$ (semilog). Center: $L_1[\Xi_{DH}]$ dips negative
+exactly inside the predicted windows $|x-a|<y_0$ at the first two DH spheres (shaded).
+Right: sector energies $\EE_\ell\propto y_0^{2\ell}$, measured slopes $2.00/4.00/6.00$.}
+\label{fig:lab}
+\end{figure}
+
+\begin{figure}[p]
+\centering
+\includegraphics[width=0.8\textwidth]{bridge_results.pdf}
+\caption{The rate criterion (Theorem~\ref{thm:rate}) on real data: $|Z(c,\lambda)|^2$ versus
+$\lambda$ for $250$ real Riemann ordinates ($c=20$), the same plus an implanted sphere of radius
+$0.1$, the DH on-line ordinates near $c=85.7$, and DH with its first sphere ($y_0=0.30852$;
+fitted rate $0.3085$).}
+\label{fig:bridge}
+\end{figure}
+
+%=====================================================================
+\begin{thebibliography}{99}
+
+\bibitem{Altavilla2018}
+A.~Altavilla,
+\emph{Twistor interpretation of slice regular functions},
+J. Geom. Phys. \textbf{123} (2018), 184--208.
+
+\bibitem{AltavillaSarfatti2019}
+A.~Altavilla and G.~Sarfatti,
+\emph{Slice-polynomial functions and twistor geometry of ruled surfaces in $\mathbb{CP}^3$},
+Math. Z. \textbf{291} (2019), no. 3--4, 1059--1092.
+
+\bibitem{Baker2015}
+E.~B. Baker III,
+\emph{Quaternionic analysis with applications to the Riemann zeta function},
+manuscript (2015); archived in \cite{ZenodoArchive}.
+
+\bibitem{Baker2016}
+E.~B. Baker III,
+\emph{The quaternion-regular exponential and the three dimensional Clifford--Fourier kernel},
+manuscript (2016); archived in \cite{ZenodoArchive}.
+
+\bibitem{Baker2017}
+E.~B. Baker III,
+\emph{Twistor holomorphicity},
+manuscript (2017); archived in \cite{ZenodoArchive}.
+
+\bibitem{Baker2022arXiv}
+E.~B. Baker III,
+\emph{Causal and self-dual morphisms in four complex dimensions},
+arXiv:2203.07952 (2022).
+
+\bibitem{Baker2023arXiv}
+E.~B. Baker III,
+\emph{Generalized conformal maps as classical symmetries of Yang--Mills fields},
+arXiv:2301.00029 (2023).
+
+\bibitem{Baker2023}
+E.~B. Baker III,
+\emph{Frustrated conformal transformations and holomorphic maps on ambitwistor space},
+manuscript (2023); archived in \cite{ZenodoArchive}.
+
+\bibitem{ZenodoArchive}
+E.~B. Baker III,
+\emph{The zero-sphere program: archival manuscripts, working memos, and code (2015--2026)},
+Zenodo, DOI: [to appear].
+
+\bibitem{BalanzarioSanchez2007}
+E.~P. Balanzario and J.~S\'anchez-Ortiz,
+\emph{Zeros of the Davenport--Heilbronn counterexample},
+Math. Comp. \textbf{76} (2007), no. 260, 2045--2049.
+
+\bibitem{BoryReyesShapiro2010}
+J.~Bory Reyes and M.~Shapiro,
+\emph{Clifford analysis versus its quaternionic counterparts},
+Math. Methods Appl. Sci. \textbf{33} (2010), no. 9, 1089--1101.
+
+\bibitem{BrackxDeSchepperSommen2005}
+F.~Brackx, N.~De Schepper, and F.~Sommen,
+\emph{The Clifford--Fourier transform},
+J. Fourier Anal. Appl. \textbf{11} (2005), no. 6, 669--681.
+
+\bibitem{CGSS2009}
+F.~Colombo, G.~Gentili, I.~Sabadini, and D.~C. Struppa,
+\emph{Extension results for slice regular functions of a quaternionic variable},
+Adv. Math. \textbf{222} (2009), no. 5, 1793--1808.
+
+\bibitem{CSS2008}
+F.~Colombo, I.~Sabadini, and D.~C. Struppa,
+\emph{A new functional calculus for noncommuting operators},
+J. Funct. Anal. \textbf{254} (2008), no. 8, 2255--2274.
+
+\bibitem{ColomboSabadiniStruppa2011}
+F.~Colombo, I.~Sabadini, and D.~C. Struppa,
+\emph{Noncommutative Functional Calculus: Theory and Applications of Slice Hyperholomorphic
+Functions},
+Progress in Mathematics \textbf{289}, Birkh\"auser, Basel, 2011.
+
+\bibitem{CsordasNorfolkVarga1986}
+G.~Csordas, T.~S. Norfolk, and R.~S. Varga,
+\emph{The Riemann hypothesis and the Tur\'an inequalities},
+Trans. Amer. Math. Soc. \textbf{296} (1986), no. 2, 521--541.
+
+\bibitem{CsordasVarga1990}
+G.~Csordas and R.~S. Varga,
+\emph{Necessary and sufficient conditions and the Riemann hypothesis},
+Adv. in Appl. Math. \textbf{11} (1990), no. 3, 328--357.
+
+\bibitem{CsordasVishnyakova2013}
+G.~Csordas and A.~Vishnyakova,
+\emph{The generalized Laguerre inequalities and functions in the Laguerre--P\'olya class},
+Cent. Eur. J. Math. \textbf{11} (2013), no. 9, 1643--1650.
+
+\bibitem{Davenport2000}
+H.~Davenport,
+\emph{Multiplicative Number Theory}, 3rd ed., revised by H.~L. Montgomery,
+Graduate Texts in Mathematics \textbf{74}, Springer, New York, 2000.
+
+\bibitem{DavenportHeilbronn1936a}
+H.~Davenport and H.~Heilbronn,
+\emph{On the zeros of certain Dirichlet series (I)},
+J. London Math. Soc. \textbf{11} (1936), 181--185.
+
+\bibitem{DavenportHeilbronn1936b}
+H.~Davenport and H.~Heilbronn,
+\emph{On the zeros of certain Dirichlet series (II)},
+J. London Math. Soc. \textbf{11} (1936), 307--312.
+
+\bibitem{DeBieXu2011}
+H.~De Bie and Y.~Xu,
+\emph{On the Clifford--Fourier transform},
+Int. Math. Res. Not. IMRN \textbf{2011}, no. 22, 5123--5163.
+
+\bibitem{DLMF}
+\emph{NIST Digital Library of Mathematical Functions}, \url{https://dlmf.nist.gov/},
+Release 1.2.x; F.~W.~J. Olver et al., eds.
+
+\bibitem{GabrielliMaggesi2017}
+A.~Gabrielli and M.~Maggesi,
+\emph{Formalizing basic quaternionic analysis},
+in: Interactive Theorem Proving (ITP 2017), Lecture Notes in Comput. Sci. \textbf{10499},
+Springer, 2017, pp. 225--240.
+
+\bibitem{GentiliStoppato2008}
+G.~Gentili and C.~Stoppato,
+\emph{Zeros of regular functions and polynomials of a quaternionic variable},
+Michigan Math. J. \textbf{56} (2008), no. 3, 655--667.
+
+\bibitem{GSSbook}
+G.~Gentili, C.~Stoppato, and D.~C. Struppa,
+\emph{Regular Functions of a Quaternionic Variable}, 2nd ed.,
+Springer Monographs in Mathematics, Springer, Cham, 2022.
+
+\bibitem{GentiliStruppa2007}
+G.~Gentili and D.~C. Struppa,
+\emph{A new theory of regular functions of a quaternionic variable},
+Adv. Math. \textbf{216} (2007), no. 1, 279--301.
+
+\bibitem{GSS2014}
+G.~Gentili, S.~Salamon, and C.~Stoppato,
+\emph{Twistor transforms of quaternionic functions and orthogonal complex structures},
+J. Eur. Math. Soc. (JEMS) \textbf{16} (2014), no. 11, 2323--2353.
+
+\bibitem{GhiloniPerotti2011}
+R.~Ghiloni and A.~Perotti,
+\emph{Slice regular functions on real alternative algebras},
+Adv. Math. \textbf{226} (2011), no. 2, 1662--1691.
+
+\bibitem{GORZ2019}
+M.~Griffin, K.~Ono, L.~Rolen, and D.~Zagier,
+\emph{Jensen polynomials for the Riemann zeta function and other sequences},
+Proc. Natl. Acad. Sci. USA \textbf{116} (2019), no. 23, 11103--11110.
+
+\bibitem{GriffithsHarris1978}
+P.~Griffiths and J.~Harris,
+\emph{Principles of Algebraic Geometry},
+Wiley, New York, 1978.
+
+\bibitem{GriffithsHarris1979}
+P.~Griffiths and J.~Harris,
+\emph{Algebraic geometry and local differential geometry},
+Ann. Sci. \'Ecole Norm. Sup. (4) \textbf{12} (1979), 355--432.
+
+\bibitem{Guinand1948}
+A.~P. Guinand,
+\emph{A summation formula in the theory of prime numbers},
+Proc. London Math. Soc. (2) \textbf{50} (1948), 107--119.
+
+\bibitem{IwaniecKowalski2004}
+H.~Iwaniec and E.~Kowalski,
+\emph{Analytic Number Theory},
+American Mathematical Society Colloquium Publications \textbf{53},
+Amer. Math. Soc., Providence, RI, 2004.
+
+\bibitem{LiuMorenoShi2026}
+C.~Liu, G.~Moreno, and H.~Shi,
+\emph{Classifying slice-regular polynomials via group actions on the twistor space},
+arXiv:2605.22788 (2026).
+
+\bibitem{LoefflerStoll2025}
+D.~Loeffler and M.~Stoll,
+\emph{Formalizing zeta and L-functions in Lean},
+Ann. Formalized Math. \textbf{1} (2025); arXiv:2503.00959.
+
+\bibitem{mathlib}
+The mathlib Community,
+\emph{The Lean mathematical library},
+\url{https://github.com/leanprover-community/mathlib4}.
+
+\bibitem{MasonWoodhouse1996}
+L.~J. Mason and N.~M.~J. Woodhouse,
+\emph{Integrability, Self-Duality, and Twistor Theory},
+London Mathematical Society Monographs, Clarendon Press, Oxford, 1996.
+
+\bibitem{Montgomery1973}
+H.~L. Montgomery,
+\emph{The pair correlation of zeros of the zeta function},
+in: Analytic Number Theory (Proc. Sympos. Pure Math. XXIV, St. Louis, 1972),
+Amer. Math. Soc., Providence, RI, 1973, pp. 181--193.
+
+\bibitem{PNTand}
+A.~Kontorovich, T.~Tao, et al.,
+\emph{PrimeNumberTheoremAnd},
+Lean formalization project,
+\url{https://github.com/AlexKontorovich/PrimeNumberTheoremAnd}.
+
+\bibitem{Polya1926}
+G.~P\'olya,
+\emph{Bemerkung \"uber die Integraldarstellung der Riemannschen $\xi$-Funktion},
+Acta Math. \textbf{48} (1926), no. 3--4, 305--317.
+
+\bibitem{Polya1927}
+G.~P\'olya,
+\emph{\"Uber die algebraisch-funktionentheoretischen Untersuchungen von J.~L.~W.~V. Jensen},
+Kgl. Danske Vid. Sel. Math.-Fys. Medd. \textbf{7} (1927), 3--33.
+
+\bibitem{RodgersTao2020}
+B.~Rodgers and T.~Tao,
+\emph{The de Bruijn--Newman constant is non-negative},
+Forum Math. Pi \textbf{8} (2020), e6, 62 pp.
+
+\bibitem{SalamonViaclovsky2009}
+S.~Salamon and J.~Viaclovsky,
+\emph{Orthogonal complex structures on domains in $\mathbb{R}^4$},
+Math. Ann. \textbf{343} (2009), no. 4, 853--899.
+
+\bibitem{Spira1994}
+R.~Spira,
+\emph{Some zeros of the Titchmarsh counterexample},
+Math. Comp. \textbf{63} (1994), no. 208, 747--748.
+
+\bibitem{Titchmarsh1986}
+E.~C. Titchmarsh,
+\emph{The Theory of the Riemann Zeta-Function}, 2nd ed.,
+edited and with a preface by D.~R. Heath-Brown,
+Oxford University Press, 1986.
+
+\bibitem{Watson1944}
+G.~N. Watson,
+\emph{A Treatise on the Theory of Bessel Functions}, 2nd ed.,
+Cambridge University Press, 1944.
+
+\bibitem{Weil1952}
+A.~Weil,
+\emph{Sur les ``formules explicites'' de la th\'eorie des nombres premiers},
+Comm. S\'em. Math. Univ. Lund (1952), Tome Suppl\'ementaire, 252--265.
+
+\bibitem{Zak1993}
+F.~L. Zak,
+\emph{Tangents and Secants of Algebraic Varieties},
+Translations of Mathematical Monographs \textbf{127},
+Amer. Math. Soc., Providence, RI, 1993.
+
+\end{thebibliography}
+
+\end{document}

@@ -1,0 +1,47 @@
+PART 1 -- d_A F+ = d_A F- = 0 separately
+   Bianchi  d_A F = 0  and  YM  d_A *F = 0,  with *F = F+ - F-, give
+      d_A(F+ + F-) = 0  and  d_A(F+ - F-) = 0   =>   d_A F+ = d_A F- = 0.
+   So F- is a covariantly CLOSED anti-self-dual 2-form (and co-closed, since
+   d_A^* F- = -*d_A*F- = *d_A F- = 0).  Hence (d_A + d_A^*) F- = 0 with
+   d_A + d_A^*: Omega^even(g) -> Omega^odd(g) elliptic with isomorphism symbol.
+   CONSEQUENCES (Aronszajn / Baer, Invent. Math. 138 (1999) 183-202):
+     * strong unique continuation  -> answers brief section 6.2(1) YES;
+     * dim_H {F- = 0} <= 2, countably 2-rectifiable, locally finite H^2,
+       unless F- == 0.  A genuine dimension theorem, not a generic count.
+
+PART 2 -- d(omega) = 0 for ASD omega  <=>  Fueter regularity
+   *eta_a = -eta_a : [True, True, True]
+   div f is one component : True
+   (df/dx0 + curl f) are the other three : [True, True, True]
+   The Fueter operator on B = f1 i + f2 j + f3 k has real part -div f and
+   imaginary part df/dx0 + curl f, so  d omega = 0  <=>  B Fueter-regular.
+   Equivalently, on C^2: omega = i ddbar u with u HARMONIC, and {omega=0} is
+   the vanishing locus of the complex Hessian of a harmonic function.
+
+PART 3 -- the SO(3)-equivariant sector is ZERO-FREE
+   An SO(3)-equivariant field on R^3 valued in R^3 must be radial: B = phi(x0,r) xhat.
+   A radial field is curl-free, so df/dx0 = -curl f gives d(phi)/dx0 = 0, and
+   div B = 0 gives d(r^2 phi)/dr = 0, hence phi = c/r^2.
+   => B = c xhat / r^2, which has NO ZEROS at all.  This is the predecessor's
+      Vekua obstruction in concrete form: the equivariant class is sphere-free
+      for the trivial reason, and that is exactly why it was useless.
+
+PART 4 -- an explicit source-free YM field on R^4 whose {F-=0} contains a 2-SPHERE
+   f1 = -5*x0**2*x2/2 - x0*x1*x3 + x1**2*x2/2 + x2**3/2 + x2*x3**2/2 - x2/2
+   f2 = 5*x0**2*x1/2 - x0*x2*x3 - x1**3/2 - x1*x2**2/2 - x1*x3**2/2 + x1/2
+   f3 = -5*x0**3/3 + 2*x0*x1**2 + 2*x0*x2**2 + x0*x3**2 - x0
+   Fueter:  div f = 0   df/dx0 + curl f = [0, 0, 0]
+   F = omega- + omega+  with omega+ = e01+e23 constant self-dual.
+   dF  = 0 (Bianchi) : True
+   d*F = 0 (YM)      : True
+   F- = omega : True    F+ = omega+ nonzero  => NOT (anti-)self-dual
+   ZERO SET:
+     f1|_(x0=0) = x2*(x1**2 + x2**2 + x3**2 - 1)/2
+     f2|_(x0=0) = -x1*(x1**2 + x2**2 + x3**2 - 1)/2
+     f3|_(x0=0) = 0
+     on {x1=x2=0}:  f1=f2=0 and f3 = -x0*(5*x0**2 - 3*x3**2 + 3)/3
+     => {F-=0} = S^2  U  {x1=x2=x0=0}  U  {x1=x2=0, x3^2-(5/3)x0^2=1}
+        the 2-dimensional part is exactly the unit 2-sphere in the hyperplane x0=0.
+   |F|^2 is a polynomial of degree 6  => INFINITE energy on R^4;
+   holonomy is abelian => REDUCIBLE.  Both caveats matter: see memo 20 section 3.
+

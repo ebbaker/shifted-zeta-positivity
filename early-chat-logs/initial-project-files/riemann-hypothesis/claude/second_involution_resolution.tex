@@ -1,0 +1,446 @@
+\documentclass[11pt]{amsart}
+\usepackage[margin=1.15in]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+
+\usepackage[activate=false]{microtype}
+\usepackage{booktabs}
+\usepackage{xcolor}
+\definecolor{linkcol}{rgb}{0.1,0.1,0.45}
+\usepackage[colorlinks=true,linkcolor=linkcol,citecolor=linkcol,urlcolor=linkcol]{hyperref}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{question}[theorem]{Question}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{example}[theorem]{Example}
+
+\newcommand{\CC}{\mathbb{C}}
+\newcommand{\RR}{\mathbb{R}}
+\newcommand{\ZZ}{\mathbb{Z}}
+\newcommand{\NN}{\mathbb{N}}
+\newcommand{\eE}{\mathrm{e}}
+\DeclareMathOperator{\Rre}{Re}
+\DeclareMathOperator{\Iim}{Im}
+\DeclareMathOperator{\osc}{osc}
+
+\title[Notes on the Second Involution Conjecture]{Notes on the Second Involution Conjecture:\\ it is true as stated, and why that is bad news for the statement ---\\ adaptive samples, an oscillation lemma, and a repair}
+\date{August 2026 --- research memo, unreviewed; see the provenance note below}
+
+\begin{document}
+
+\begin{abstract}
+We prove, unconditionally, the Second Involution Conjecture exactly as formulated in the companion introduction \cite{SI}: for the windowed reality defect $D(c)$ of the zeros of $\zeta$, there is a semialgebraic function $S$ of $N=2$ variables and a scale $\Lambda=\log 2$ (independent of $\varepsilon$) such that for every $c\in\RR$ one can choose sample points $Z(c_1,\log 2), Z(c_2,\log 2)$ with $|c_j-c|\le\sigma$ and $D(c)=S(Z(c_1,\log2),Z(c_2,\log2))$ \emph{exactly}. The proof is a genuine unconditional argument --- its only substantive ingredient is a uniform-oscillation lemma for the prime-computable function $c\mapsto\Rre Z(c,\log 2)$, proved from the Guinand--Weil formula and certified numerically to height $10^6$ --- but the theorem is bad news rather than good: the mechanism is an \emph{encoding}, not a formula. Because the conjecture lets the sample points $c_j$ be chosen adaptively (depending on $c$, hence on the answer), the selection map is an unbounded side channel, and the intermediate value theorem lets one write any bounded-below-oscillation observable into the difference of two samples. The construction consumes no arithmetic: it applies verbatim to any two-involutions zero multiset whose window observable oscillates --- demonstrated numerically on a synthetic off-line multiset, recovering a nonzero defect of $0.125$ to $10^{-15}$ with no Euler product in sight --- so it passes the paper's own hardness checks only vacuously. We diagnose the loophole, restate the conjecture in a non-adaptive (translation-covariant) form that we believe captures the original intent, prove that the repaired statement is genuinely rigid --- a near-recurrence argument in the Bohr-almost-periodic structure of finite-scale prime data shows that non-adaptive continuous semialgebraic estimators at scale $\Lambda$ cannot resolve an isolated defect at height $x_0$ unless $\Lambda\ge(1-o(1))\log\log x_0$ --- and record the class-uniform formulation on which, we argue, the conjecture should finally rest.
+\end{abstract}
+
+\maketitle
+\setcounter{tocdepth}{1}
+\tableofcontents
+
+%======================================================================
+\subsection*{How this document came about, and what it is asking for}
+
+This memo grew out of a private research program on quaternionic and twistor-geometric reformulations of the Riemann Hypothesis, maintained by an independent researcher and developed in close collaboration with an AI research assistant (Claude, Anthropic). That program produced two unpublished companion drafts: a program paper \cite{ZS} and an expository introduction \cite{SI} which formulated the \emph{Second Involution Conjecture} (restated in full as Conjecture~\ref{conj:main} below, so this memo is self-contained). When the AI assistant was subsequently asked to \emph{attempt to prove} that conjecture, the outcome was the present document: the conjecture as literally stated turned out to be an unconditional theorem, but through a quantifier loophole that its formulation did not intend --- and the diagnosis, the salvageable unconditional mathematics (an oscillation lemma for explicit-formula data), a repaired formulation, and a first lower bound for the repaired version seemed worth writing up carefully. The mathematics below was drafted by the AI assistant, then attacked by two further independent AI reviewers (one adversarial proof audit, one blind re-derivation of every formula and constant); the errors they found --- all in Section~\ref{sec:lower}'s first draft --- were repaired, and every numerical claim is certified by the included scripts (\texttt{lab\_si\_lib.py}, \texttt{lab\_run\_si\_check.py}). What this document has \emph{not} had is review by a human expert, and that is precisely what it is circulated to request. The maintainer of the program does not claim the expertise to referee it and is not posting it publicly; a reader with expertise in analytic number theory, almost periodic functions, or real algebraic geometry who is willing to check, break, formalize, or extend any part of it is warmly invited to do so. Suggested order of scrutiny: the encoding proof of Theorem~\ref{thm:main} (Section~\ref{sec:proof}; elementary given Lemma~\ref{lem:osc}, and the heart of the matter), then Lemma~\ref{lem:osc} itself (Section~\ref{sec:osc}; classical ingredients only: Guinand--Weil, Gaussian Fourier transforms, Bochner's criterion), then the model lower bound (Section~\ref{sec:lower}; the least polished part --- Lemma~\ref{lem:holder}'s proof leans on cited facts from \cite{BCR}, and Theorem~\ref{thm:lower} constrains continuous estimators only). Nothing here bears on RH itself; Section~\ref{sec:intro} makes the logical placement explicit.
+
+%======================================================================
+\section{Statement of the problem and of the results}\label{sec:intro}
+
+This note answers, and then re-poses, the main conjecture of \cite{SI}; every definition needed to read it is reproduced here. Write $\rho=\tfrac12+i\gamma$ for the nontrivial zeros of $\zeta$, so the zero multiset $\{\gamma\}$ (with multiplicity) is closed under $\gamma\mapsto-\gamma$ and $\gamma\mapsto\bar\gamma$, and $|\Iim\gamma|<\tfrac12$. Fix $\sigma>0$ and set $G(u)=\eE^{-u^2/2\sigma^2}$. For $c\in\RR$, $\lambda\ge0$, let
+\begin{equation}\label{eq:h}
+h_{c,\lambda}(r)=\eE^{i\lambda(r-c)}G(r-c)+\eE^{-i\lambda(r+c)}G(r+c),
+\qquad
+Z(c,\lambda)=\sum_\gamma h_{c,\lambda}(\gamma),
+\end{equation}
+the sum over the full zero multiset. Each $h_{c,\lambda}$ is even, entire, and Gaussian-decaying on horizontal strips, so the Guinand--Weil explicit formula (\cite[Thm.~5.12]{IwaniecKowalski}; eq.~(1.2) of \cite{SI}) applies and expresses $Z(c,\lambda)$ unconditionally in terms of $\{\Lambda(n):|\log n-\lambda|=O(1/\sigma)\}$ together with explicit archimedean integrals. The \emph{prime data at scale $\Lambda$} is $\mathcal A(\Lambda)=\{Z(c,\lambda):c\in\RR,\ 0\le\lambda\le\Lambda\}$, and the \emph{windowed reality defect} is
+\begin{equation}\label{eq:defect}
+D(c)=\sum_\gamma(\Iim\gamma)^2\,\eE^{-(\Rre\gamma-c)^2/2\sigma^2}\;\ge0,
+\end{equation}
+which vanishes identically if and only if RH holds. The conjecture under discussion is:
+
+\begin{conjecture}[{Second Involution Conjecture; \cite[Conj.~6.1]{SI}}]\label{conj:main}
+For every $\varepsilon>0$ there exist a finite scale $\Lambda(\varepsilon)<\infty$, an integer $N$, and a semialgebraic function $S$ of $N$ variables, such that for every $c\in\RR$ there are points $Z(c_1,\lambda_1),\dots,Z(c_N,\lambda_N)\in\mathcal A(\Lambda(\varepsilon))$ with $|c_j-c|=O(\sigma)$ and
+\[
+\big|\,D(c)-S\big(Z(c_1,\lambda_1),\dots,Z(c_N,\lambda_N)\big)\,\big|<\varepsilon.
+\]
+\end{conjecture}
+
+Our first result is that this is a theorem --- unconditionally, in a form far stronger than conjectured.
+
+\begin{theorem}[Adaptive samples trivialize Conjecture~\ref{conj:main}]\label{thm:main}
+Fix $\sigma>0$ and set $\lambda^*=\log2$. There exist a constant $r=r(\sigma)>0$ and a semialgebraic function $S:\CC^2\to\RR$ (explicitly, with $u:=\Rre z_1-\Rre z_2$,
+\[
+S(z_1,z_2)=
+\begin{cases}
+\dfrac{u-r/4}{\,r/8-(u-r/4)\,}, & r/4\le u<3r/8,\\[4pt]
+0,&\text{otherwise},
+\end{cases}
+\]
+whose graph is cut out by polynomial equalities and inequalities in $(\Rre z_1,\Rre z_2,S)$), such that for every $c\in\RR$ there are points $c_1,c_2\in[c-\sigma,c+\sigma]$, $c_1\ne c_2$, with
+\[
+D(c)\;=\;S\big(Z(c_1,\log2),\,Z(c_2,\log2)\big)\qquad\text{exactly}.
+\]
+In particular Conjecture~\ref{conj:main} holds with $N=2$, with $\Lambda(\varepsilon)=\log2$ for every $\varepsilon$, with error $0$ rather than $\varepsilon$, and with $|c_j-c|\le\sigma$.
+\end{theorem}
+
+The only substantive ingredient is:
+
+\begin{lemma}[Uniform oscillation]\label{lem:osc}
+Fix $\sigma>0$, $\lambda^*=\log2$, and let $F(c):=\Rre Z(c,\lambda^*)$. Then $F$ is real-analytic on $\RR$, and for every window half-length $a>0$ there is $r=r(a,\sigma)>0$ such that
+\[
+\osc_{[c-a,\,c+a]}F\;:=\;\max_{[c-a,c+a]}F-\min_{[c-a,c+a]}F\;\ge\;r
+\qquad\text{for every }c\in\RR.
+\]
+Moreover, for the specific half-length $a_0=(2/B_2)\big(B_2/2\omega+C_1+2C_0/\omega\big)$, $\omega:=\log2$, the bound holds for all $|c|\ge C_3$ with the explicit value $r=B_2/8$, where $B_2>0$, $C_0$, $C_1$, $C_3$ are the effective constants of Section~\ref{sec:osc} (numerically, at $\sigma=1$: $B_2=0.5407$, $C_0=2.6975$, $C_1=3.7164$, $a_0=43.98$, $B_2/8=0.0676$).
+\end{lemma}
+
+Theorem~\ref{thm:main} should not be mistaken for progress toward RH, nor even for progress toward the intended content of Conjecture~\ref{conj:main}. It is a \emph{diagnosis}: the conjecture as formulated permits the sample points $c_j$ to be chosen \emph{after} $c$ --- hence, since nothing constrains the selection rule, chosen with full knowledge of $D(c)$ --- and a two-point selection inside a window on which a continuous prime-computable observable has oscillation bounded below is an information channel of unbounded capacity. The ``formula'' of Theorem~\ref{thm:main} is an encoding: all knowledge of the defect enters through the choice of $(c_1,c_2)$ and none through arithmetic. Section~\ref{sec:diagnosis} makes this precise by checking the construction against the two hardness criteria of \cite[\S2]{SI} and finding that it passes both \emph{vacuously}: it works verbatim for the Davenport--Heilbronn zero multiset (no Euler product), and its scale $\Lambda$ does not degrade as $\varepsilon\to0$ (indeed does not depend on $\varepsilon$).
+
+The remainder of the note is constructive. Section~\ref{sec:repair} restates the conjecture in the non-adaptive, translation-covariant form we believe was intended (Conjecture~\ref{conj:repaired}), together with the class-uniform strengthening (Conjecture~\ref{conj:uniform}) that we argue is the correct final formulation. Section~\ref{sec:lower} proves that the repaired statement has real content: in a sampling model that abstracts exactly the structure of finite-scale prime data (bounded Bohr-almost-periodic $+$ slowly varying $+$ exponentially small), non-adaptive estimators built from continuous semialgebraic functions cannot resolve an isolated defect quadruple at height $x_0$ at scale $\Lambda$ unless
+\[
+\Lambda\;\ge\;(1-o(1))\log\log x_0 ,
+\]
+(Theorem~\ref{thm:lower}); adaptivity was hiding an infinite such wall. Section~\ref{sec:numerics} records the numerical certifications (explicit-formula implementation to $10^{-14}$; the oscillation lemma to height $10^6$; the encoding demonstrated end-to-end on a synthetic multiset carrying an off-line quadruple, whose defect $0.125$ is recovered to $1.8\times10^{-15}$). Section~\ref{sec:consequences} states what we believe should now change in \cite{SI}.
+
+\subsection*{Logical placement}
+Two remarks frame everything that follows. First, RH implies Conjecture~\ref{conj:main} in one line ($D\equiv0$; take $S\equiv0$), so the conjecture was never falsifiable short of disproving RH; Theorem~\ref{thm:main} closes the remaining case unconditionally, but by a mechanism that makes the truth of the statement uninformative. Second, and in the other direction: nothing in this note bears on RH itself. The defect is computed by Theorem~\ref{thm:main} only in the sense that a sealed envelope ``computes'' its contents once someone who knows the answer has put it there.
+
+%======================================================================
+\section{The oscillation lemma}\label{sec:osc}
+
+Throughout, $\sigma>0$ is fixed, $\omega=\lambda^*=\log2$, $F(c)=\Rre Z(c,\lambda^*)$, and $C,C',\dots$ denote positive constants depending only on $\sigma$ (all effectively computable; numerical values at $\sigma=1$ are collected in Section~\ref{sec:numerics}).
+
+\subsection{Analyticity}
+\begin{lemma}\label{lem:analytic}
+For each $\lambda\ge0$, the function $c\mapsto Z(c,\lambda)$ extends to an entire function of $c$. Moreover $Z(-c,\lambda)=\overline{Z(c,\lambda)}$ for $c\in\RR$; in particular $F$ is real-analytic and even.
+\end{lemma}
+
+\begin{proof}
+Each summand in \eqref{eq:h} is entire in $c$. For $c$ in a compact subset of $\CC$, say $|c|\le R$, and $\gamma=x+iy$ with $|y|<\tfrac12$, we have $|\eE^{i\lambda(\gamma-c)}G(\gamma-c)|\le \eE^{\lambda(1/2+R)}\eE^{-\Rre((\gamma-c)^2)/2\sigma^2}$ and $\Rre((\gamma-c)^2)\ge(x-\Rre c)^2-(\tfrac12+R)^2\ge x^2/2-C_R$ for $|x|\ge 4R$. Since the zero counting function satisfies $N(T)\ll T\log T$, the sum converges uniformly on $|c|\le R$; hence $Z(\cdot,\lambda)$ is entire. For the symmetry: for real $c$ and any $r$, $h_{-c,\lambda}(r)=\overline{h_{c,\lambda}(\bar r)}$ directly from \eqref{eq:h}; since the multiset $\{\gamma\}$ is closed under $\gamma\mapsto\bar\gamma$ (with multiplicity), summing gives $Z(-c,\lambda)=\overline{Z(c,\lambda)}$.
+\end{proof}
+
+\subsection{The Guinand--Weil decomposition}
+Applying the explicit formula to $h_{c,\lambda^*}$ (legitimate: $h_{c,\lambda^*}$ is even, entire, and $\ll\eE^{-\Rre(r)^2/4\sigma^2}$ on the strip $|\Iim r|\le\tfrac12+\varepsilon$) and computing the Fourier transform
+\[
+g_c(u)=\frac1{2\pi}\int h_{c,\lambda^*}(r)\eE^{-iur}\,dr
+=\frac{\sigma}{\sqrt{2\pi}}\Big[\eE^{-iuc}\eE^{-\sigma^2(u-\lambda^*)^2/2}+\eE^{iuc}\eE^{-\sigma^2(u+\lambda^*)^2/2}\Big],
+\]
+we obtain, for every $c\in\RR$, the exact decomposition
+\begin{equation}\label{eq:decomp}
+F(c)\;=\;A(c)\;+\;E(c)\;+\;P(c),
+\end{equation}
+where:
+\begin{itemize}
+\item[$\bullet$] $P(c)=-\sum_{n\ge2}B_n\cos(c\log n)$ with
+\[
+B_n=\frac{2\Lambda(n)}{\sqrt n}\cdot\frac{\sigma}{\sqrt{2\pi}}\Big(\eE^{-\sigma^2(\log n-\lambda^*)^2/2}+\eE^{-\sigma^2(\log n+\lambda^*)^2/2}\Big)\;\ge\;0 ,
+\]
+so that $C_0:=\sum_{n\ge2}B_n<\infty$ (Gaussian decay in $\log n$) and $B_2>0$;
+\item[$\bullet$] $A(c)=\Rre\frac1{2\pi}\int h_{c,\lambda^*}(t)\big[\Rre\tfrac{\Gamma'}{\Gamma}(\tfrac14+\tfrac{it}2)-\log\pi\big]dt$, the archimedean term;
+\item[$\bullet$] $E(c)=\Rre\big[h_{c,\lambda^*}(\tfrac i2)+h_{c,\lambda^*}(-\tfrac i2)\big]$, the pole term.
+\end{itemize}
+
+\begin{lemma}\label{lem:AE}
+There are effective constants $C_A,C_E$ (depending on $\sigma,\lambda^*$) with
+\[
+|A'(c)|\le \frac{C_A}{1+|c|}\quad(c\in\RR),\qquad
+|E(c)|\le C_E\,\eE^{-c^2/2\sigma^2}.
+\]
+\end{lemma}
+
+\begin{proof}
+Write $\Psi(t):=\Rre\frac{\Gamma'}{\Gamma}(\tfrac14+\tfrac{it}{2})-\log\pi$, an even function of $t$. Substituting $t=c+v$ in the first hump of $h_{c,\lambda^*}$ and $t=-c+v$ in the second, then $v\mapsto-v$ in the second and using evenness of $\Psi$, the two integrals are equal, so
+\[
+A(c)=\frac1\pi\,\Rre\int \eE^{i\lambda^*v}G(v)\,\Psi(c+v)\,dv,
+\qquad
+A'(c)=\frac1\pi\,\Rre\int \eE^{i\lambda^*v}G(v)\,\Psi'(c+v)\,dv .
+\]
+From $(\Gamma'/\Gamma)'(z)=\sum_{k\ge0}(z+k)^{-2}$ one gets $|\Psi'(t)|\le\min\big(C,\,2\pi/|t|\big)$ on $\RR$. Splitting the integral at $|v|\le|c|/2$ gives $|A'(c)|\le C/(1+|c|)$ with an effective constant. For $E$: $|h_{c,\lambda^*}(\pm i/2)|\le2\,\eE^{\lambda^*/2}\eE^{1/8\sigma^2}\eE^{-c^2/2\sigma^2}$ directly.
+\end{proof}
+
+\subsection{Oscillation at large height: the frequency-$\log 2$ test}
+
+\begin{proposition}\label{prop:largec}
+Let $C_1:=\sum_{n\ge3}B_n\big(|\log(n/2)|^{-1}+(\log 2n)^{-1}\big)<\infty$ and
+\[
+a_0:=\frac{2}{B_2}\Big(\frac{B_2}{2\omega}+C_1+\frac{2C_0}{\omega}\Big).
+\]
+Then there is an effective $C_3=C_3(\sigma)$ such that for all $|c|\ge C_3$,
+\[
+\osc_{[c-a_0,\,c+a_0]}F\;\ge\;\frac{B_2}{8}.
+\]
+\end{proposition}
+
+\begin{proof}
+By evenness (Lemma~\ref{lem:analytic}) assume $c\ge C_3$. Write $W=[c-a_0,c+a_0]$, $|W|=2a_0$. For any $t_0\in W$,
+\begin{equation}\label{eq:test}
+\sup_{t\in W}\big|P(t)-P(t_0)\big|\;\ge\;\frac1{2a_0}\Big|\int_W\big(P(t)-P(t_0)\big)\eE^{-i\omega t}\,dt\Big|.
+\end{equation}
+We lower-bound the right side. First, $\big|\int_W P(t_0)\eE^{-i\omega t}dt\big|\le|P(t_0)|\cdot\frac2\omega\le\frac{2C_0}{\omega}$ (here boundedness of $P$ --- \emph{not} of $F$ --- is what matters; the unbounded archimedean part has already been split off in \eqref{eq:decomp}). Next,
+\[
+\int_W\cos(t\log n)\,\eE^{-i\omega t}\,dt=\tfrac12\int_W \eE^{i(\log n-\omega)t}dt+\tfrac12\int_W \eE^{-i(\log n+\omega)t}dt .
+\]
+For $n=2$ the first term equals $a_0$ (the $\tfrac12$ prefactor times $2a_0$) and the second is $\le\frac1{2\omega}$ in modulus; for $n\ge3$ the two terms together are $\le\frac1{|\log(n/2)|}+\frac1{\log 2n}$ in modulus (note $\min_{n\ge3}|\log(n/2)|=\log\frac32$, so $C_1$ converges by the Gaussian decay of $B_n$). Hence
+\[
+\Big|\int_W P(t)\,\eE^{-i\omega t}dt\Big|\;\ge\;B_2\Big(a_0-\frac1{2\omega}\Big)-C_1 ,
+\]
+and combining, the right side of \eqref{eq:test} is at least
+\[
+\frac1{2a_0}\Big[B_2 a_0-\frac{B_2}{2\omega}-C_1-\frac{2C_0}{\omega}\Big]
+=\frac{B_2}{2}-\frac1{2a_0}\Big(\frac{B_2}{2\omega}+C_1+\frac{2C_0}{\omega}\Big)
+=\frac{B_2}{2}-\frac{B_2}{4}=\frac{B_2}{4},
+\]
+by the choice of $a_0$. Thus $\osc_W P\ge B_2/4$. Finally, by Lemma~\ref{lem:AE},
+\[
+\osc_W F\ \ge\ \osc_W P-\osc_W A-\osc_W E\ \ge\ \frac{B_2}4-\frac{2a_0\,C_A}{1+c-a_0}-2C_E\eE^{-(c-a_0)^2/2\sigma^2}\ \ge\ \frac{B_2}8
+\]
+once $c\ge C_3$ with $C_3$ chosen effectively so the two error terms total $\le B_2/8$.
+\end{proof}
+
+\subsection{Arbitrary window length via the Bohr hull; the compact range}
+
+\begin{proof}[Proof of Lemma~\ref{lem:osc}]
+Fix $a>0$. \emph{Large $|c|$.} The series $P(s)=-\sum B_n\cos(s\log n)$ converges absolutely and uniformly on every horizontal strip $|\Iim s|\le T$, since $\sum B_n n^{T}<\infty$ by the Gaussian decay of $B_n$ in $\log n$; thus $P$ is the restriction to $\RR$ of an entire function, bounded on every strip, and is Bohr almost periodic on $\RR$. Let $H(P)$ denote its hull, the closure of the translate set $\{P(\cdot+\tau):\tau\in\RR\}$ in $(C_b(\RR),\|\cdot\|_\infty)$; $H(P)$ is compact (Bochner's criterion) and every $Q\in H(P)$ is again the restriction of an entire function bounded on strips (normal-family limit of the translates, which are uniformly bounded on strips). Every $Q\in H(P)$ has Fourier--Bohr coefficient of modulus $B_2/2\neq0$ at the frequency $\omega$, because $|M_s\{Q(s)\eE^{-i\omega s}\}|$ is continuous under uniform limits and equals $B_2/2$ for every translate of $P$. Consequently no $Q\in H(P)$ is constant on any interval: constancy on an interval would force constancy on $\RR$ (identity theorem, $Q$ entire), hence all nonzero-frequency Fourier--Bohr coefficients would vanish, contradicting $|b_Q(\omega)|=B_2/2>0$. The functional $\mathcal O_a:H(P)\to(0,\infty)$, $\mathcal O_a(Q)=\osc_{[-a,a]}Q$, is continuous and strictly positive on the compact $H(P)$, so
+\[
+r_H(a):=\min_{Q\in H(P)}\ \osc_{[-a,a]}Q\;>\;0 .
+\]
+For any $c$, $\osc_{[c-a,c+a]}P=\mathcal O_a(P(\,\cdot+c))\ge r_H(a)$, whence by Lemma~\ref{lem:AE}
+\[
+\osc_{[c-a,c+a]}F\ \ge\ r_H(a)-\frac{2a\,C_A}{1+|c|-a}-2C_E\eE^{-(|c|-a)^2/2\sigma^2}\ \ge\ \frac{r_H(a)}2
+\]
+for $|c|\ge C_4(a)$.
+
+\emph{Compact range.} $F$ is real-analytic (Lemma~\ref{lem:analytic}) and nonconstant (its oscillation at large $c$ is $\ge r_H(a)/2>0$). By the identity theorem $F$ is nonconstant on every interval, so $\phi(c):=\osc_{[c-a,c+a]}F>0$ for every $c$; and $\phi$ is continuous, so $r_0:=\min_{|c|\le C_4(a)}\phi(c)>0$. Take $r(a,\sigma):=\min(r_0,\ r_H(a)/2)$. The effective variant is Proposition~\ref{prop:largec}.
+\end{proof}
+
+\begin{remark}\label{rem:deserts}
+The constant $r$ can be extremely small when $a$ is small: on windows lying in ``zero deserts'' (e.g.\ windows near $c=0$, whose distance to the first ordinate $\gamma_1=14.13\dots$ exceeds several $\sigma$), $F$ is a doubly-exponentially small --- but, by analyticity, nonzero --- function, and $\osc$ degrades accordingly. Numerically, at $\sigma=1$: $\osc_{[-6,6]}F\approx8\times10^{-15}$, while $\osc_{[c-15,c+15]}F\ge2.01$ for \emph{all} sampled $c\in[0,1160]\cup\{10^4,10^5,10^6\}$ (Section~\ref{sec:numerics}). The existence statement of Lemma~\ref{lem:osc} is all Theorem~\ref{thm:main} needs; the point of recording the effective variant is to stress that no part of the argument is soft except the compact minimum $r_0$, which is in principle certifiable by interval arithmetic on finitely many zeros.
+\end{remark}
+
+%======================================================================
+\section{Proof of Theorem \ref{thm:main}}\label{sec:proof}
+
+\begin{proof}[Proof of Theorem~\ref{thm:main}]
+Fix $\sigma>0$; apply Lemma~\ref{lem:osc} with $a=\sigma$ to get $r=r(\sigma,\sigma)>0$; let $W_c=[c-\sigma,c+\sigma]$, so $\osc_{W_c}F\ge r$ for every $c$. The defect \eqref{eq:defect} converges ($(\Iim\gamma)^2<\tfrac14$, $N(T)\ll T\log T$, Gaussian weights) and $D(c)\in[0,\infty)$.
+
+Define the encoder $f:[0,\infty)\to[\,r/4,\,3r/8)$ by
+\[
+f(d)\;=\;\frac r4+\frac r8\cdot\frac{d}{1+d},
+\]
+a strictly increasing rational (hence semialgebraic) bijection onto $[\,r/4,\,3r/8)$, with inverse $f^{-1}(u)=\dfrac{u-r/4}{\,r/8-(u-r/4)\,}$.
+
+Given $c\in\RR$, put $u:=f(D(c))\in[r/4,3r/8)$. Choose $t_-,t_+\in W_c$ with $F(t_-)=\min_{W_c}F$ and $F(t_+)=\max_{W_c}F$; then $F(t_+)-F(t_-)=\osc_{W_c}F\ge r>u>0$. The continuous function $s\mapsto F(s)-F(t_-)$ equals $0$ at $s=t_-$ and $\ge r$ at $s=t_+$; by the intermediate value theorem there is $c_1$ strictly between (or equal to $t_+$'s side of) $t_-$ and $t_+$ with
+\[
+F(c_1)-F(t_-)=u .
+\]
+Set $c_2:=t_-$. Since $u>0$, $c_1\ne c_2$; both lie in $W_c$, i.e.\ $|c_j-c|\le\sigma$. By construction
+\[
+\Rre Z(c_1,\log2)-\Rre Z(c_2,\log2)=F(c_1)-F(c_2)=u\in[r/4,3r/8),
+\]
+so the semialgebraic function $S$ of the theorem statement returns
+\[
+S\big(Z(c_1,\log2),Z(c_2,\log2)\big)=f^{-1}(u)=D(c)
+\]
+exactly. Both samples lie in $\mathcal A(\log2)$, and $\log2$ did not depend on $\varepsilon$. That $S$ is semialgebraic is immediate: its graph is $\{(z_1,z_2,y):\ (r/4\le u<3r/8)\wedge(y(r/8-u+r/4)=u-r/4)\}\ \cup\ \{(z_1,z_2,0):\ u<r/4\ \vee\ u\ge3r/8\}$ with $u=\Rre z_1-\Rre z_2$, a finite Boolean combination of polynomial equalities and inequalities in the real coordinates.
+\end{proof}
+
+\begin{remark}[The general conjugation-paired family]\label{rem:family}
+The ``more generally'' clause of \cite[Conj.~6.1]{SI} follows by the same argument: for any conjugation-paired sum $T(c)=\sum_\gamma\Phi(\gamma,\bar\gamma)$ (absolutely convergent, real-valued; complex-valued handled coordinatewise), replace $f$ by the semialgebraic homeomorphism $d\mapsto \frac r4+\frac r8\big(\frac12+\frac{d}{2(1+|d|)}\big)$ of $\RR$ onto a subinterval of $[r/4,3r/8)$ and encode with the same two samples, or with two disjoint pairs ($N=4$) for real and imaginary parts. Nothing about the specific kernel $(\Iim\gamma)^2$ was used.
+\end{remark}
+
+\begin{remark}[Where each hypothesis of the conjecture went]\label{rem:audit}
+It is instructive to audit which clauses of Conjecture~\ref{conj:main} did work in the proof. \emph{Semialgebraicity of $S$}: used only to invert one rational function --- the class is so rich that a single Möbius map suffices. \emph{Finite scale $\Lambda(\varepsilon)$}: satisfied with the single scale $\log2$; the only role of prime data is to guarantee, via $B_2>0$ in the Guinand--Weil decomposition, that the observable $F$ oscillates. \emph{Locality $|c_j-c|=O(\sigma)$}: satisfied with constant $1$; locality is not the binding constraint. The one clause doing \emph{all} the work is the existential quantifier ``there are points'': the selection map $c\mapsto(c_1,c_2)$ is unconstrained, and it alone carries the information.
+\end{remark}
+
+%======================================================================
+\section{Diagnosis: the conjecture's hardness checks are passed vacuously}\label{sec:diagnosis}
+
+The introduction \cite[\S2]{SI} imposes two hardness checks on any candidate mechanism, and it is exactly by auditing Theorem~\ref{thm:main} against them that one sees the statement has failed to capture its intent.
+
+\subsection{Davenport--Heilbronn is computed too}
+The first check demands that a correct formula ``visibly consume prime data'', on the grounds that the Davenport--Heilbronn function has the same symmetry, reality, and growth as $\Xi$ but zeros off the line and no Euler product. Theorem~\ref{thm:main}'s mechanism fails this check in the only way that matters: it does not consume arithmetic at all. The proof used the Euler product in exactly one place --- to know the Fourier--Bohr coefficient $B_2\neq0$ of one accessible observable --- and any zero multiset $\Gamma$ closed under the two involutions, of order-one counting growth, whose associated $F_\Gamma(c)=\Rre\sum_{\gamma\in\Gamma}h_{c,\log2}(\gamma)$ has positive uniform window oscillation, is ``computed'' by the identical encoding, defect and all. For the Davenport--Heilbronn multiset we do not prove the uniform oscillation (its coefficient side has no absolutely convergent region, so the decomposition \eqref{eq:decomp} is not available verbatim; on any compact range of heights, real-analyticity already suffices), but nothing about the encoding asks for arithmetic --- only for oscillation of one observable --- and Section~\ref{sec:numerics} demonstrates it numerically on a synthetic Euler-product-free multiset carrying an off-line quadruple at height $\approx100$: the nonzero defect $D=0.125$ is recovered to $1.8\times10^{-15}$ from two samples of the multiset's own $Z$-data. A ``formula'' that computes the reality defect of Euler-product-free zero sets with the same two samples is not the object \cite{SI} set out to specify.
+
+\subsection{The de Bruijn--Newman profile is bypassed, and $\Lambda(\varepsilon)$ does not move}
+The second check demands that a correct criterion degrade non-strictly as zeros approach the line, and the conjecture's commentary (clause (i)) locates its content in the finiteness of the modulus $\Lambda(\varepsilon)$, with the classical wall at $\Lambda(\varepsilon)\asymp\varepsilon^{-1/2}$. Theorem~\ref{thm:main} produces $\Lambda(\varepsilon)=\log2$, constant in $\varepsilon$, and exact recovery. A statement whose conjectured exchange rate is the entire quantitative question, but which admits a proof with \emph{no} exchange rate at all, has been formalized at the wrong joint. The joint is identifiable precisely: nothing in the statement requires the estimate to be \emph{measurable in the data} --- the map from $(c,\text{prime data})$ to the sample set may depend on the zeros themselves.
+\subsection{The side channel, quantified}
+The information-theoretic content is worth making explicit. On a window $W_c$ where the continuous observable $F$ has oscillation $\ge r$, the set $\{F(s)-F(t):s,t\in W_c\}$ contains the interval $[0,r]$; a choice of an ordered pair $(c_1,c_2)\in W_c^2$ therefore transmits an arbitrary real number in $[0,r]$ --- infinite capacity, before $S$ is even consulted. Any formulation in which a selection of continuum-valued sample parameters may depend on the target instance must be read as granting the prover an oracle for the answer. The repair, accordingly, is not to shrink the window or restrict $S$, but to make the sampling rule \emph{non-adaptive}.
+
+%======================================================================
+\section{The repaired conjecture}\label{sec:repair}
+
+\begin{conjecture}[Second Involution Conjecture, non-adaptive form]\label{conj:repaired}
+Fix $\sigma>0$. For every $\varepsilon>0$ there exist a finite scale $\Lambda(\varepsilon)<\infty$, an integer $N$, \emph{fixed} offsets $\xi_1,\dots,\xi_N\in[-1,1]$ and \emph{fixed} frequencies $\lambda_1,\dots,\lambda_N\in[0,\Lambda(\varepsilon)]$, and a semialgebraic function $S$ of $N$ variables, such that
+\[
+\sup_{c\in\RR}\ \big|\,D(c)-S\big(Z(c+\xi_1\sigma,\lambda_1),\dots,Z(c+\xi_N\sigma,\lambda_N)\big)\big|\;<\;\varepsilon .
+\]
+\end{conjecture}
+
+The sampling rule is now translation-covariant: the estimator is one fixed local formula slid along the critical line, the natural analogue of a convolution-type explicit formula, and the encoding of Theorem~\ref{thm:main} is dead --- the samples are values of $N$ fixed functions of $c$, and any two heights whose data agree must be assigned the same estimate.
+
+Two structural comments, both of which we regard as findings of this note rather than defects of Conjecture~\ref{conj:repaired}.
+
+\emph{First: the statement is still RH-trivial.} If RH holds, $S\equiv0$ verifies it. This cannot be repaired from inside a single $L$-function: any existence statement about estimators for an object that RH makes zero is implied by RH. The content one wants is uniformity over a class in which nonzero defects certifiably occur:
+
+\begin{conjecture}[Second Involution Conjecture, class-uniform form]\label{conj:uniform}
+Let $\mathcal X$ be the class of \emph{explicit-formula systems}: pairs $(\Gamma,\beta)$ of a zero multiset $\Gamma\subset\{|\Iim\gamma|\le\tfrac12\}$ closed under the two involutions with $N_\Gamma(T)\ll T\log T$, and a coefficient sequence $\beta=(\beta_n)_{n\ge2}$ with $|\beta_n|\le C\log n$, such that the Guinand--Weil identity holds for all test functions $h_{c,\lambda}$ of \eqref{eq:h}:
+\[
+\sum_{\gamma\in\Gamma}h_{c,\lambda}(\gamma)\;=\;\mathrm{Arch}(c,\lambda)\;-\;2\sum_{n\ge2}\frac{\beta_n}{\sqrt n}\,g_c(\log n),
+\]
+with the fixed archimedean shape $\mathrm{Arch}$ of Section~\ref{sec:osc} (poles optional). For every $\varepsilon>0$ there exist $\Lambda(\varepsilon)$, $N$, offsets, frequencies, and a single semialgebraic $S$ as in Conjecture~\ref{conj:repaired} such that for \emph{every} $(\Gamma,\beta)\in\mathcal X$,
+\[
+\sup_{c\in\RR}\ \frac{\big|\,D_\Gamma(c)-S\big(Z_\Gamma(c+\xi_1\sigma,\lambda_1),\dots\big)\big|}{1+D_\Gamma(c)}\;<\;\varepsilon .
+\]
+\end{conjecture}
+
+\emph{Second: the class must be chosen with care, and the choice is itself informative.} Three observations calibrate it.
+\begin{itemize}
+\item[(a)] Davenport--Heilbronn does \emph{not} belong to $\mathcal X$ as literally axiomatized: its logarithmic derivative has no absolutely convergent Dirichlet coefficient side precisely because it has zeros in the region where that series would need to converge. This is the honest reading of \cite[\S6, comment (iii)]{SI}: DH lacks an analogue of $\mathcal A(\Lambda)$. Whether $\mathcal X$ contains members with off-line zeros is therefore not obvious --- and \emph{that} question (does the explicit-formula constraint alone force reality?) is a positivity question of exactly Weil--Bombieri--Connes type. If it does, Conjecture~\ref{conj:uniform} collapses to the trivial $S=0$ and the two-involutions problem is solved outright; nobody expects this to be cheap.
+\item[(b)] $\mathcal X$ does contain members with \emph{known, nonzero, unbounded} defect: for $0<\alpha<\tfrac12$ the shifted product $\Xi_\alpha(z):=\Xi(z+i\alpha)\Xi(z-i\alpha)$ lies in (a poles-adjusted version of) $\mathcal X$ with coefficients $\beta_n=\Lambda(n)(n^{\alpha}+n^{-\alpha})$ and zero multiset $\{\gamma\pm i\alpha\}$, and satisfies the exact identity
+\[
+D_{\Xi_\alpha}(c)\;=\;2\,D_\zeta(c)\;+\;2\alpha^2\!\sum_{\gamma}\eE^{-(\Rre\gamma-c)^2/2\sigma^2}.
+\]
+Under RH the right side is $2\alpha^2\cdot(\text{a smoothed zero count})$, which \emph{is} computable at finite scale; unconditionally, the family $\{\Xi_\alpha\}$ reduces exactly to the $\zeta$ case plus one new conjugation-paired sum (the paired count). So the class-uniform conjecture has honest, nontrivial, partially provable instances, and the shifted family is the natural first testbed for the cross-term calculus.
+\item[(c)] The normalization $1+D_\Gamma(c)$ in Conjecture~\ref{conj:uniform} (relative rather than additive accuracy) is motivated by Theorem~\ref{thm:lower} below: for \emph{continuous} semialgebraic estimators over the sampling model of Definition~\ref{def:model}, additive accuracy uniform in height is impossible at any fixed scale, for reasons that have nothing to do with RH. (Discontinuous semialgebraic estimators are constrained only conjecturally; see Remark~\ref{rem:lowerhonest}(i).)
+\end{itemize}
+
+%======================================================================
+\section{The repaired statement is rigid: a lower bound at fixed scale}\label{sec:lower}
+
+We now show that non-adaptivity restores real content: at fixed scale $\Lambda$, fixed-window continuous semialgebraic estimators cannot see an isolated defect at height $x_0$ once $x_0$ is doubly-exponentially large in $\Lambda$. We work in a sampling model that abstracts exactly the structure established for prime data in Section~\ref{sec:osc}.
+
+\begin{definition}[Finite-scale local sampling model]\label{def:model}
+A \emph{data map at scale $\Lambda$} is $V=(V_1,\dots,V_N):\RR\to\CC^N$ with
+\[
+V_j\;=\;A_j+P_j+E_j,
+\]
+where each $P_j$ is Bohr almost periodic with an absolutely convergent Fourier--Bohr expansion $P_j(c)=\sum_{n\ge2}b_{j,n}\eE^{\pm ic\log n}$ whose coefficients obey $\sum_n|b_{j,n}|\le C_P$ and $|b_{j,n}|\le C\,\eE^{-\sigma^2(\log n-\Lambda)^2/2}$ for $\log n\ge\Lambda$ (Gaussian truncation tail above scale $\Lambda$), each $A_j$ satisfies $|A_j(c+\tau)-A_j(c)|\le C_A(1+\tau)/(1+|c|)$ and $|A_j(c)|\le C_A\log(2+|c|)$, and $|E_j(c)|\le C_E\eE^{-|c|/C_E}$. A \emph{defect profile with an isolated quadruple at height $x_0$} is $D:\RR\to[0,\infty)$ with $D(x_0)\ge d_0>0$ and $D\le d_0/4$ on $[x_0+2\sigma,\,2x_0]$.
+\end{definition}
+
+By \eqref{eq:decomp} and Lemma~\ref{lem:AE}, the non-adaptive samples $V_j(c)=Z(c+\xi_j\sigma,\lambda_j)$, $\lambda_j\le\Lambda$, of Conjecture~\ref{conj:repaired} form a data map at scale $\Lambda$ for any zero multiset in $\mathcal X$; and a member whose only off-line zeros are one conjugate quadruple at $\pm x_0\pm iy_0$ has a defect profile with $d_0=2y_0^2$.
+
+\begin{lemma}[H\"older--growth regularity of continuous semialgebraic functions]\label{lem:holder}
+Let $S:\RR^m\to\RR$ be continuous and semialgebraic. There are $C,q>0$ and $\theta\in(0,1]$ such that $|S(u)-S(v)|\le C(1+R)^q\,|u-v|^\theta$ for all $u,v$ in the ball $|u|,|v|\le R$, for every $R\ge1$.
+\end{lemma}
+
+\begin{proof}
+Let $\Phi(R,s):=\sup\{|S(u)-S(v)|:\ |u|,|v|\le R,\ |u-v|\le s\}$ for $R\ge1$, $s\in[0,1]$; it is finite (continuity of $S$ on compacta), nondecreasing and continuous in $s$ with $\Phi(R,0)=0$, and semialgebraic in $(R,s)$ (its graph is first-order definable over the reals; quantifier elimination). For each fixed $R$, the \L ojasiewicz inequality for continuous semialgebraic functions on the compact ball (\cite[Prop.~2.6.4]{BCR}) gives $\Phi(R,s)\le C_R\,s^{\theta_R}$ on $[0,1]$ with $\theta_R>0$. By Hardt's semialgebraic triviality (\cite[Thm.~9.3.2]{BCR}) applied to the family $R\mapsto\Phi(R,\cdot)$, the parameter half-line $[1,\infty)$ splits into finitely many semialgebraic intervals over each of which the fibers are semialgebraically equivalent; hence only finitely many exponents occur, and we may take $\theta:=\min_R\theta_R>0$ uniformly. The optimal constant $C(R):=\sup_{0<s\le1}\Phi(R,s)/s^{\theta}$ is then finite for every $R$ and semialgebraic in $R$, hence polynomially bounded (\cite[Prop.~2.6.2]{BCR}), giving the claim for $|u-v|\le1$; for $|u-v|\ge1$ it follows directly from the polynomial growth of $|S|$ on balls (\cite[Prop.~2.6.2]{BCR} again).
+\end{proof}
+
+\begin{theorem}[Height-uniformity is impossible at fixed scale]\label{thm:lower}
+Fix a data map $V$ at scale $\Lambda$ and a defect profile $D$ with an isolated quadruple at height $x_0$, in the sense of Definition~\ref{def:model}. Let $S:\CC^N\to\RR$ be continuous and semialgebraic, and suppose
+\[
+\sup_{c\in\RR}\big|D(c)-S(V(c))\big|\;\le\;\frac{d_0}{8}.
+\]
+Then $\Lambda\ge(1-o(1))\log\log x_0$, where $o(1)\to0$ as $x_0\to\infty$ for fixed $(d_0,\sigma,N)$ and fixed regularity data $(C,q,\theta)$ of $S$.
+\end{theorem}
+
+\begin{proof}
+We may assume $\Lambda\le\log\log x_0$, else there is nothing to prove. Fix $\delta\in(0,1)$, to be chosen. Truncate each $P_j$ at level $M=M(\delta)$. The sup norm of the discarded tail is at most $\sum_{n>M}|b_{j,n}|$, and by the Gaussian coefficient hypothesis together with the integer count ($\eE^{\ell}\,d\ell$ integers per $d\ell$ of $\log n$), completing the square gives
+\[
+\sum_{n>M}|b_{j,n}|\;\le\;C\!\int_{\log M}^{\infty}\!\eE^{\ell-\sigma^2(\ell-\Lambda)^2/2}\,d\ell
+\;\le\;C\,\eE^{\Lambda+1/2\sigma^2}\cdot\frac{\sqrt{2\pi}}{\sigma}\,\eE^{-\sigma^2(\log M-\Lambda-1/\sigma^2)^2/2},
+\]
+which is $<\delta/4$ upon choosing
+\[
+\log M\;=\;\Lambda+\frac1{\sigma^2}+\frac1\sigma\sqrt{2\big(\Lambda+\log(C''N C/\delta)\big)} .
+\]
+This leaves trigonometric polynomials with a common frequency set contained in $\{\log n:2\le n\le M\}$, of cardinality $K\le M$. By the pigeonhole principle on the $K$-torus (partition $[0,2\pi)^K$ into $(C'/\delta)^K$ cells and consider the times $\tau_m=2\sigma m$, $m=0,1,\dots,(C'/\delta)^K$; two of the points $(\tau_m\log n)_{n\le M}\bmod2\pi$ share a cell), there exists
+\[
+\tau\in\big[2\sigma,\ T(\delta)\big],\qquad T(\delta):=2\sigma\Big(\frac{C'}{\delta}\Big)^{K},
+\]
+with $\|\tau\log n\|_{2\pi\ZZ}$ small enough that all truncated $P_j$ satisfy $\|P_j(\cdot+\tau)-P_j\|_\infty<\delta/4$; hence $\|P_j(\cdot+\tau)-P_j\|_\infty<3\delta/4$ for the untruncated $P_j$ (two tail evaluations of $\delta/4$ each).
+
+Now compare the data at $c=x_0$ and $c=x_0+\tau$. Provided
+\begin{equation}\label{eq:heightcond}
+T(\delta)\;\le\;\frac{\delta}{4C_A}\,x_0 ,
+\end{equation}
+we get $\tau\le x_0$ (so $x_0+\tau\in[x_0+2\sigma,2x_0]$ and $D(x_0+\tau)\le d_0/4$), $|A_j(x_0+\tau)-A_j(x_0)|\le C_A(1+\tau)/(1+x_0)\le C_A/x_0+\delta/4\le\delta/2$ for $x_0$ large, and the $E_j$ contribute $O(\eE^{-x_0/C_E})\le\delta/4$; altogether
+\[
+\big|V(x_0+\tau)-V(x_0)\big|\;\le\;2N\delta .
+\]
+Both values lie in the ball of radius $R=C''\log x_0$. By Lemma~\ref{lem:holder},
+\[
+\big|S(V(x_0))-S(V(x_0+\tau))\big|\;\le\;C(1+C''\log x_0)^q\,(2N\delta)^\theta .
+\]
+Choose $\delta=\delta(x_0):=(\log x_0)^{-2q/\theta}$, so this bound is $\le C'''(\log x_0)^{-q}\to0$; in particular $\le d_0/4$ for $x_0$ large. Then
+\[
+d_0-\frac{d_0}4\;\le\;\big|D(x_0)-D(x_0+\tau)\big|
+\;\le\;2\cdot\frac{d_0}8+\big|S(V(x_0))-S(V(x_0+\tau))\big|\;\le\;\frac{d_0}4+\frac{d_0}4,
+\]
+a contradiction. Hence \eqref{eq:heightcond} must fail: $T(\delta(x_0))\ge c\,\delta(x_0)\,x_0$. Taking logarithms, and using $K\le M=\exp\big(\Lambda+\sigma^{-2}+\sigma^{-1}\sqrt{2(\Lambda+\log(C''NC/\delta))}\big)$ with $\Lambda\le\log\log x_0$ and $\log(1/\delta)\asymp\log\log x_0$, so that $\log M\le\Lambda+O_\sigma\big(\sqrt{\log\log x_0}\big)$:
+\[
+\log x_0+O(\log\log x_0)\;\le\;K\log(C'/\delta)\;\le\;\exp\Big(\Lambda+O_\sigma\big(\sqrt{\log\log x_0}\big)\Big)\cdot O(\log\log x_0),
+\]
+whence $\Lambda\ge\log\log x_0-O_\sigma(\sqrt{\log\log x_0})=(1-o(1))\log\log x_0$.
+\end{proof}
+
+\begin{remark}\label{rem:lowerhonest}
+Three honest caveats. (i) The theorem constrains \emph{continuous} semialgebraic estimators; a semialgebraic $S$ may be discontinuous along a lower-dimensional wall, and ruling out wall-crossing tricks would require controlling where the data curve $c\mapsto V(c)$ meets the wall set --- we leave this open, noting only that an estimator that changes its answer discontinuously under an $o(1)$ perturbation of its inputs fails the de Bruijn--Newman robustness profile of \cite[\S2]{SI} in spirit. (ii) The Dirichlet bound $T(\delta)\le(C/\delta)^K$ is wasteful; any improvement (e.g.\ from measure-theoretic recurrence) strengthens the conclusion. The point is qualitative: \emph{some} wall exists for non-adaptive estimators, at every scale, growing with height --- whereas Theorem~\ref{thm:main} shows no wall whatsoever exists for adaptive ones. (iii) Whether the actual $\zeta$ multiset realizes the isolated-quadruple hypothesis is exactly as unknowable as RH; the theorem is a statement about the estimator class over the model, i.e.\ about what a proof of Conjecture~\ref{conj:repaired} or \ref{conj:uniform} is allowed to look like. It is, to our knowledge, the first quantitative statement in this program of the form ``formulas of type $T$ cannot compute the defect below cost $f$'', the genre that \cite[Question~6.2]{SI} asks for on the $\varepsilon$-axis.
+\end{remark}
+
+\begin{remark}[Relation to the exchange rate]
+Theorem~\ref{thm:lower} lives on an axis orthogonal to \cite[Question~6.2]{SI}: it bounds the scale needed for uniformity in the \emph{height} $x_0$ at fixed defect size, while the classical wall $\Lambda(\varepsilon)\asymp\varepsilon^{-1/2}$ concerns the defect \emph{size} $\varepsilon\sim y_0^2$ at a given height. The two should be read together as the beginning of a two-parameter lower-bound theory for the repaired conjecture: adaptivity had been silently projecting both walls to zero.
+\end{remark}
+
+%======================================================================
+\section{Numerical certification}\label{sec:numerics}
+
+All computations are at $\sigma=1$, $\lambda^*=\log2$, with the first $800$ zeros of $\zeta$ (heights $\le1183.71$, computed to $25$ digits) and the von Mangoldt data $n\le2\cdot10^4$; code in the ancillary files \texttt{lab\_si\_lib.py}, \texttt{lab\_run\_si\_check.py}.
+
+\emph{(V1) Explicit formula.} The zero side and prime side of $Z(c,\lambda^*)$ agree to $|\Delta|\le2.7\times10^{-14}$ at $c\in\{30,100,250,500\}$, certifying the implementation of \eqref{eq:decomp} (and reconfirming, incidentally, the rotated Guinand--Weil formula of \cite{SI,ZS}).
+
+\emph{(V2) Oscillation.} With window half-length $a=15$: $\min\,\osc_{[c-15,c+15]}F=2.0157$ over $32$ windows with centers spanning $[0,1160]$ (zero side), and $\osc=2.89,\,3.25,\,2.49$ at $c=10^4,10^5,10^6$ (prime side; the archimedean term varies by $\le2.1\times10^{-3}$ across each window at $c=10^4$, confirming Lemma~\ref{lem:AE}'s slow variation). The effective constants of Proposition~\ref{prop:largec} evaluate to $B_2=0.5407$, $C_0=2.6975$, $C_1=3.7164$, $a_0=43.98$, giving the guaranteed asymptotic bound $B_2/8=0.0676$ --- a factor $\approx30$ below the observed oscillation, as expected from a first-moment argument. As a control on Remark~\ref{rem:deserts}, $\osc_{[-6,6]}F=8\times10^{-15}$: windows must reach the first zero, or the constant $r$ collapses to the (still positive) analytic floor.
+
+\emph{(V3) The encoding, end to end.} From the $800$ ordinates, the two nearest $100$ ($98.8312$, $101.3179$) were deleted and replaced by the conjugate quadruple $\pm100.0745\pm0.25i$, producing a synthetic two-involutions multiset with an off-line sphere and $\sup_cD(c)=0.125$. With $r=2$ and the encoder/decoder of Section~\ref{sec:proof} ($f(d)=(r/2)d/(1+d)$ variant), the two-sample estimate $S(Z(c_1,\log2),Z(c_2,\log2))$ reproduced $D(c)$ at $13$ test heights $c\in\{0,\dots,900\}$ with worst error $1.8\times10^{-15}$ (heights where $D>10^{-13}$), including $D(100.07)=0.125$ exactly to machine precision, and correctly returned $0$ in the zero-defect regions. The samples were found by bisection inside $[c-15,c+15]$ --- i.e.\ $|c_j-c|\le15\sigma$, comfortably within the conjecture's $O(\sigma)$ and chosen so that the empirical oscillation constant $r=2$ is comfortable; the $|c_j-c|\le\sigma$ version of Theorem~\ref{thm:main} holds with a smaller $r$ --- and \emph{no arithmetic input about the synthetic multiset's ``primes'' exists or was used}. This is the numerical face of Section~\ref{sec:diagnosis}: the adaptive mechanism computes defects that the conjecture's own hardness principle says must be uncomputable without arithmetic.
+
+\begin{center}
+\small
+\begin{tabular}{rccc}
+\toprule
+$c$ & $D(c)$ & two-sample estimate & error\\
+\midrule
+$95.00$ & $3.20036\times10^{-7}$ & $3.20036\times10^{-7}$ & $3.5\times10^{-17}$\\
+$98.00$ & $1.45340\times10^{-2}$ & $1.45340\times10^{-2}$ & $1.8\times10^{-15}$\\
+$100.07$ & $1.25000\times10^{-1}$ & $1.25000\times10^{-1}$ & $1.2\times10^{-15}$\\
+$103.00$ & $1.73170\times10^{-3}$ & $1.73170\times10^{-3}$ & $2.6\times10^{-16}$\\
+$400.00$ & $0$ & $0$ & $0$\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+%======================================================================
+\section{What should change in the program}\label{sec:consequences}
+
+We summarize the recommended edits to \cite{SI} and the resulting state of the program.
+
+\begin{enumerate}
+\item \emph{Conjecture 6.1 must be replaced}, not merely reinterpreted: as stated it is a theorem (Theorem~\ref{thm:main}) whose proof violates the paper's declared intent. The minimal correct statement is the non-adaptive Conjecture~\ref{conj:repaired}; the statement we recommend as the program's headline is the class-uniform Conjecture~\ref{conj:uniform}, whose relative-accuracy normalization is motivated by Theorem~\ref{thm:lower} and whose class $\mathcal X$ finally gives the Davenport--Heilbronn hardness check a home \emph{inside} the conjecture (via the boundary question (a) of Section~\ref{sec:repair}) rather than outside it.
+\item \emph{The oscillation lemma is a keeper.} Lemma~\ref{lem:osc} is, to our knowledge, a new unconditional statement about prime-computable data --- the windowed explicit-formula observable $\Rre Z(\cdot,\log2)$ has uniform positive oscillation at every height, at every window length, with effective constants at natural window lengths --- and it, not the encoding, is the honest mathematical content of Theorem~\ref{thm:main}. It quantifies something the program needs anyway: the arithmetic term $B_2\cos(c\log2)$ is never drowned by the archimedean drift.
+\item \emph{Lower bounds are now part of the program.} Theorem~\ref{thm:lower} is the first entry of the ``matching lower bound'' genre anticipated in \cite[\S6]{SI}, and its proof isolates the enemy of any finite-scale formula: Kronecker near-recurrence of finite-frequency prime data across heights with different defects. The cross-term calculus (the program's declared first test) should be developed with this adversary in view: an upper-bound formula and the recurrence obstruction must meet at a genuine exchange rate on both the $\varepsilon$- and height axes.
+\item \emph{The shifted family $\Xi_\alpha$ is the recommended testbed}: it lies in $\mathcal X$, its defect is nonzero, unbounded, and exactly decomposable (Section~\ref{sec:repair}(b)), and proving Conjecture~\ref{conj:repaired} \emph{for the family $\{\Xi_\alpha\}$ relative to $\zeta$} --- i.e., computing the paired count $\sum_\gamma\eE^{-(\Rre\gamma-c)^2/2\sigma^2}$ from finite-scale data up to $o(1)$ --- is a sharply posed, RH-free open problem strictly easier than, and on the road to, the full conjecture.
+\end{enumerate}
+
+Finally, the meta-lesson, which we record because the program of \cite{ZS,SI} is explicitly in the business of writing functional specifications for missing objects: a specification with an existential quantifier over continuum-valued sample parameters, ranging after the instance, is satisfiable by an envelope. Weil positivity does not have this defect --- its test objects are quantified before the zeros. The repaired conjectures restore that ordering, and everything unconditional proved here (Lemmas~\ref{lem:analytic}--\ref{lem:osc}, Proposition~\ref{prop:largec}, Theorem~\ref{thm:lower}) survives as infrastructure for them.
+
+\subsection*{Reproducibility}
+All numerical certifications in Section~\ref{sec:numerics} are reproducible from the code circulated with this memo (\texttt{lab\_si\_lib.py}, \texttt{lab\_run\_si\_check.py}; the file \texttt{zeros.txt} of the first $800$ zero ordinates regenerates in a few minutes via \texttt{mpmath.zetazero}). The provenance and review status of the mathematics are described in the unnumbered note preceding Section~\ref{sec:intro}; corrections, refutations, and offers to formalize any part are welcome via the program maintainer.
+
+%======================================================================
+\begin{thebibliography}{9}
+\itemsep3pt
+
+\bibitem{BCR} J.~Bochnak, M.~Coste, M.-F.~Roy, \emph{Real Algebraic Geometry}, Ergeb. Math. Grenzgeb. (3) \textbf{36}, Springer (1998), \S2.6.
+
+\bibitem{IwaniecKowalski} H.~Iwaniec, E.~Kowalski, \emph{Analytic Number Theory}, AMS Colloquium Publications \textbf{53} (2004), Ch.~5.
+
+\bibitem{SI} \emph{The second involution: conjugation-paired sums over the zeros of the Riemann zeta function}, unpublished companion draft (2026); available from the program maintainer on request. The conjecture addressed here is restated in full as Conjecture~\ref{conj:main}, so this memo can be read without it.
+
+\bibitem{ZS} \emph{The zero-sphere program: a quaternionic--twistor framework for the Riemann Hypothesis}, unpublished companion draft (2026), in preparation; available from the program maintainer on request.
+
+\end{thebibliography}
+
+\end{document}

@@ -1,0 +1,57 @@
+lab_positivity_refuted.py -- RESULTS
+generated 2026-08-24 (v2, with Theorems C and D)
+
+PART 1  --  k=2 coefficient conditions of det(uvI - uN - vNbar + C) = p(u)p(v)
+   u^0 v^0 : True
+   u^0 v^1 : True
+   u^0 v^2 : True
+   u^1 v^0 : True
+   u^1 v^1 : True
+   u^1 v^2 : True
+   u^2 v^0 : True
+   u^2 v^1 : True
+   ALL EIGHT MATCH: True
+   Gram of tr(XY) on sl(2,R) in basis (h,m,J): [[2, 0, 0], [0, 2, 0], [0, 0, -2]] -> signature (2,1); hence kappa = 0.
+   Endgame: kappa=0 => d = det T0, tr C = tr T0^2 = s^2 - 2d;
+            C>=0 => tr C >= 2 sqrt(det C) = 2|d| => disc(p) = s^2-4d >= 0.
+   Converse: p hyperbolic => tr C = r1^2+r2^2 >= 0, det C = (r1 r2)^2 >= 0 => C>=0.
+   THEOREM A:  at k=2,  C >= 0  <=>  p hyperbolic.   spec(C) = {rho_1^2, rho_2^2}.
+
+PART 2  --  exact (rational) verification of the k=4 counterexamples
+   Clifford blocks: real, traceless, anticommuting, T_a^2 = +I.  OK
+   B1  T0=aI,  C=(a^2+s^2)I  [DOUBLED pair]:  det M - P_p = 0   (zero: True);  spec(C) = [34/25]
+      p(u) = (25*u**2 - 30*u + 34)**2/625,  roots {3/5 - I: 2, 3/5 + I: 2}
+   B2  T0=bJ,  C=(s^2-b^2)I  [2 SIMPLE pairs]:  det M - P_p = 0   (zero: True);  spec(C) = [2]
+      p(u) = (u**2 + 1)*(u**2 + 4),  roots {-I: 1, I: 1, -2*I: 1, 2*I: 1}
+   BOTH EXACT: True  -- C is positive definite in both. 3.7 IS FALSE.
+
+   B1 full-H match over 6000 random q: max rel err = 2.144e-13
+   B2 full-H match over 6000 random q: max rel err = 3.752e-13
+
+PART 3  --  the quaternionic branch, Omega = T_e^2 = -I  (contrast case)
+   L_a^2 = -I: [True, True, True]   kappa = tr(L_a^2) = -4.0
+   mu purely imaginary: C = [-1.49 -1.49 -1.49 -1.49] (PSD: False),  max|Im root| = 7.00e-01  -> NON-hyperbolic
+       full-H match over 4000 random q: max rel err = 3.432e-13
+   mu real, |mu| > 1: C = [0.96 0.96 0.96 0.96] (PSD: True),  max|Im root| = 8.53e-08  -> hyperbolic
+       full-H match over 4000 random q: max rel err = 2.567e-13
+   => sign(Omega) decides hyperbolicity; C>=0 is achievable on either branch.
+
+PART 4  --  PSD-constrained search record (C = LL^T, T_a free, 76 sample points)
+   k  p                          roots                best RMS   reading
+   2  z^2+1                      simple pair          4.4e-02    plateau (Theorem A)
+   4  (z^2+1)^2                  doubled pair         2.9e-15    solved (B1)
+   4  ((z-.6)^2+1)^2             doubled pair         4.7e-15    solved (B1)
+   4  (z^2+1)(z^2+4)             2 simple pairs       8.9e-06    solved exactly (B2)
+   4  near-miss quartic          simple pair off-axis 1.3e-07    INCONCLUSIVE
+   Calibration: (z^2+1)(z^2+4) is exactly solvable (B2) yet the optimiser only
+   reached 8.9e-06 on the same budget, so 1.3e-07 is NOT evidence of a plateau.
+
+PART 5  --  Theorem C: T_0 = z, T_a = M_a w, C = (z^2+w^2) I,  z^2+w^2 real > 0
+   z = 3+1i, w = 3-1i,  ab+sigma*tau = 0,  lambda = 16
+   C = 16 * I_4  (positive definite);  tr T_a = [0, 0, 0]
+   p(u) = (u**2 - 8*u + 32)*(u**2 - 4*u + 8)
+   roots = {4 - 4*I: 1, 4 + 4*I: 1, 2 - 2*I: 1, 2 + 2*I: 1}   <-- FOUR SIMPLE roots, real parts 4 and 2
+   det M - P_p = 0   IDENTICALLY ZERO: True
+   Theorem D check (C = lam I => c0 = lam^2, c1 = lam c3): 256=256, -192=-192
+   => a SIMPLE conjugate pair OFF the imaginary axis is realisable with C > 0.
+

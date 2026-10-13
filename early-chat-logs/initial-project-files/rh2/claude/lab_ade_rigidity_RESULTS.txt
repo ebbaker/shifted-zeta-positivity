@@ -1,0 +1,104 @@
+
+==============================================================================
+PART 1  the ADE forms: definite, integral, and how many per rank
+==============================================================================
+    type  rank  even?    neg. def. (as -Cartan)  det Cartan
+      A1     1   True                      True           2
+      A2     2   True                      True           3
+      A3     3   True                      True           4
+      A4     4   True                      True           5
+      A5     5   True                      True           6
+      A6     6   True                      True           7
+      A7     7   True                      True           8
+      A8     8   True                      True           9
+      A9     9   True                      True          10
+     A10    10   True                      True          11
+      D4     4   True                      True           4
+      D5     5   True                      True           4
+      D6     6   True                      True           4
+      D7     7   True                      True           4
+      D8     8   True                      True           4
+      D9     9   True                      True           4
+     D10    10   True                      True           4
+      E6     6   True                      True           3
+      E7     7   True                      True           2
+      E8     8   True                      True           1
+
+  forms available at each rank d (ALE / Kronheimer):
+    d =  1:  ['A1']   (1 form(s))
+    d =  2:  ['A2']   (1 form(s))
+    d =  3:  ['A3']   (1 form(s))
+    d =  4:  ['A4', 'D4']   (2 form(s))
+    d =  5:  ['A5', 'D5']   (2 form(s))
+    d =  6:  ['A6', 'D6', 'E6']   (3 form(s))
+    d =  7:  ['A7', 'D7', 'E7']   (3 form(s))
+    d =  8:  ['A8', 'D8', 'E8']   (3 form(s))
+    d =  9:  ['A9', 'D9']   (2 form(s))
+    d = 10:  ['A10', 'D10']   (2 form(s))
+  => every rank is reachable (A_d), but with at most THREE forms at that
+     rank, all root lattices, and each one a single fixed matrix.
+
+==============================================================================
+PART 2  Q1: does ALE inherit memo5's RANK gap?  (No.)
+==============================================================================
+  compact hyperkahler Hodge-Riemann tower (memo5 / Lab_Tower_Check Part 1):
+    reachable ranks in 1..40:  [1, 7, 8, 23, 24, 27, 35]     (7 of 40)
+  ALE gravitational instantons (Kronheimer):
+    reachable ranks in 1..40:  all of them via A_d      (40 of 40)
+
+  => memo5's rank obstruction is SPECIFIC to the compact Hodge-Riemann
+     tower.  The ALE side supplies a definite integral form of every rank.
+     So on rank alone, the ALE route is not excluded -- unlike memo5's.
+
+==============================================================================
+PART 3  Q2: can a union of LINEAR subspaces bound the hyperbolic locus?
+==============================================================================
+  Kronheimer's existence condition is the complement of a finite union of real
+  linear subspaces of codimension 3 (one per root xi: all three periods annihilate
+  xi).  So any discriminant the ALE existence condition can express is a finite
+  union of linear conditions.  The boundary of the hyperbolic locus is the
+  discriminant hypersurface {disc(p) = 0}.  Test: is disc irreducible, and is it a
+  product of linear forms in the coefficients?
+
+  d = 2:  deg(disc) =  2;  irreducible factors = 1;  linear factors = 0;  product of linear forms: False
+  d = 3:  deg(disc) =  4;  irreducible factors = 1;  linear factors = 0;  product of linear forms: False
+  d = 4:  deg(disc) =  6;  irreducible factors = 1;  linear factors = 0;  product of linear forms: False
+  d = 5:  deg(disc) =  8;  irreducible factors = 1;  linear factors = 0;  product of linear forms: False
+
+  => the discriminant is irreducible of degree 2(d-1) for every d tested and
+     is never a product of linear forms.  So no finite union of linear
+     subspaces has the hyperbolic locus as its closure, and the ALE
+     existence condition cannot express hyperbolicity.
+
+==============================================================================
+PART 4  the rationality dichotomy, stated as a screen
+==============================================================================
+  brief §6.5 says the missing ingredient is rationality.  The gravitational-
+  instanton literature sharpens that into a dichotomy.  Two classes of object:
+
+    (a) forms that are INTEGRAL but RIGID.  ADE root lattices (ALE); A_k and D_k
+        only (ALF); -I_k (ALF compactified); Hirzebruch-Jung tridiagonal strings
+        (toric non-hyperkahler).  Entries are small fixed integers (0, +-1, 2).
+        Over Z, definite -- and carrying NO dependence on Xi whatsoever.
+
+    (b) forms that DEPEND ON Xi but are REAL.  The trace forms of the Jensen
+        polynomials (Lab_Tower_Check Part 3): entries are power sums of roots of a
+        polynomial whose coefficients are gamma(m) = 4 m! M_{2m}/(2m)!, with
+        M_k = int Phi(u) u^k du.  Definite, but with no known Q-structure.
+
+  The rationality wall is exactly the statement that NO KNOWN CONSTRUCTION IS IN
+  BOTH CLASSES.  (a) has rationality without content; (b) has content without
+  rationality.  Weil's argument needs one object with both.
+
+  Screen: for any proposed object, ask two questions -- does the form VARY with
+  Xi's data, and is it defined over Q?  Every object in this programme so far
+  answers 'yes' to exactly one.
+
+  object                                          varies with Xi?   over Q?
+  ADE root lattice (ALE instanton)                             NO       yes
+  -I_k (ALF compactification)                                  NO       yes
+  Hirzebruch-Jung string (toric)                               NO       yes
+  hyperkahler BB form q_X                                      NO       yes
+  trace form of J^{d,n} (Lab_Tower_Check)                     yes        NO
+  ADHM C = sum T_a^2 + Re(lam^dag lam)                        yes        NO
+  memo9 transverse Hessian c_2                                yes        NO

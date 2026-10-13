@@ -43,8 +43,9 @@ Neither the transcript nor the intermediate conversion is stored in the
 repository.
 
 **The first session.** The first audit session (Claude Fable 5.1, notes
-1–2) was not captured; its transcript was not available to the second
-session.
+1–2) was not captured at the time. On 13 October 2026 it was recovered from
+its event log on claude.ai and recorded as chat 1 of the
+[Claude registry](claude-cowork/README.md) (Claude Opus 5.5, Claude Cowork).
 
 Use the [base recorder](../../record_chat.py) from the investigations-2 folder
 with `--project newman_certificate_audit` and the actual source conversation metadata.

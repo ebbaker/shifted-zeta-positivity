@@ -16,6 +16,12 @@ histories refer to this shared context instead of duplicating the file.
 Consult [index.json](index.json) for the filename, dates, message count,
 capture time, hashes, and next number.
 
+Claude conversations recorded from 13 October 2026 go in the
+[claude-cowork/](claude-cowork/README.md) registry, which keeps its own
+numbering (note added with Claude Opus 5.5 in Claude Cowork). Chats 2 and 4
+below are Claude Cowork sessions captured before that subfolder existed;
+they stay here under their numbers.
+
 Two independently numbered captures were joined by an earlier merge and
 both retain number 2 and their original filenames. Identify them by title
 and filename; new captures continue with number 3.
@@ -47,7 +53,7 @@ was also archived as chat 2:
   reply was still in progress and enters only on a refresh.
 
 **How the Cowork chats are captured.** The recorder has no Cowork importer;
-the repository-root [record_cowork_chat.py](../../../record_cowork_chat.py)
+the repository-root [record_Claude_cowork_chat.py](../../../record_Claude_cowork_chat.py)
 supplies one (see
 [Capture a Cowork conversation](#capture-a-cowork-conversation)).
 Claude converts the session's Claude Agent SDK transcript into one
@@ -134,22 +140,22 @@ for each registry.
 
 A Cowork transcript stays in the session's cloud workspace, so the
 conversion runs there and the registration runs on this computer. The
-repository-root [record_cowork_chat.py](../../../record_cowork_chat.py)
+repository-root [record_Claude_cowork_chat.py](../../../record_Claude_cowork_chat.py)
 does both, applying the coverage rules above; `--help` gives the full
 procedure.
 
 ```sh
 # In the Cowork cloud workspace (newest transcript unless --transcript is given):
-python3 record_cowork_chat.py convert --output conv.json --b64-output conv.b64
+python3 record_Claude_cowork_chat.py convert --output conv.json --b64-output conv.b64
 
 # On this computer, from the repository root, with the base64 text of conv.b64:
-python3 record_cowork_chat.py register --input-b64 - --expect-sha256 HEX \
+python3 record_Claude_cowork_chat.py register --input-b64 - --expect-sha256 HEX \
   [--project PROJECT_NAME] <<'EOF'
 ...
 EOF
 
 # Draft this guide's paragraph for the new chat:
-python3 record_cowork_chat.py readme-stub [--project PROJECT_NAME]
+python3 record_Claude_cowork_chat.py readme-stub [--project PROJECT_NAME]
 ```
 
 Repeating the steps later refreshes the same chat number. If the transcript

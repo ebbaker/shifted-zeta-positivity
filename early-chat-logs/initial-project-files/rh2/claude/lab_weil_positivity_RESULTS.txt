@@ -1,0 +1,45 @@
+PARTS 1-2  --  Lambda (revalidated) and the Li instrument, brief section 7 test set
+p                                     Lambda(norm)      brief    max|w|      n*    lam_{n*}
+--------------------------------------------------------------------------------------------
+z^2-1                      (hyp)       -5.0000e-01       -0.5   1.00000  >20000   1.445e-08
+(z-1)(z-2)                 (hyp)       -3.1250e-02     -0.031   1.00000  >20000   1.704e-05
+(z^2-1)(z^2-4)             (hyp)       -3.3517e-02     -0.034   1.00000  >20000   3.408e-05
+z^2+1                                   5.0000e-01        0.5   3.00000       1      -1.333
+z^2+z+1                                 3.7500e-01      0.375   2.34752       1     -0.3077
+(z^2+1)(z-1)                            3.6898e-01      0.369   3.00000       1     -0.9333
+(z^2+1)(z^2+4)                          1.7482e-01      0.175   3.00000       1        -1.6
+(z-1)((z+2)^2+9)                        2.5545e-01      0.255   1.25911       6     -0.2722
+near-miss quartic                       3.8847e-05   3.88e-05   1.01935      43     -0.5521
+(z^2-1)(z^2+100)  SHIELDED              1.6990e-01       0.17   1.10526       7     -0.4682
+(z^2-1)(z^2-4)(z^2+400) SHIELDED        1.0083e-01      0.101   1.05128      13     -0.1926
+   Every Lambda reproduces the brief. The Li instrument detects every non-hyperbolic
+   case, INCLUDING both shielded cases (n* = 7, 13) which defeat L_1 and the pointwise
+   graded family, and the near-miss quartic (n* = 43).  Hyperbolic controls stay >= 0
+   but their infimum is 0 -- the criterion has no margin on the hyperbolic side.
+
+PART 3  --  margin scaling in the sphere radius:  p = z^2 + y0^2
+         y0  Lambda=y0^2/2    n*         lam_10   lam_10/y0^2
+        0.3      4.500e-02     2    -1.0486e+06 -11650822.2222
+        0.1      5.000e-03     2    -5.5682e+01    -5568.2381
+       0.03      4.500e-04     2    -1.6257e+00    -1806.3017
+       0.01      5.000e-05     2    -1.6219e-01    -1621.8857
+      0.003      4.500e-06     2    -1.4418e-02    -1601.9594
+      0.001      5.000e-07     2    -1.6002e-03    -1600.2176
+   lam_n at fixed n is a constant multiple of y0^2: section 2.4's quadratic
+   degradation is respected; the escape is that n is unbounded, not uniform.
+
+PART 4  --  section 2.6: a conjugate quadruple at HEIGHT a, off-line part b
+   p = ((z-a)^2+b^2)((z+a)^2+b^2)
+        a       b       Lambda   log|w|max      n*     lam_{n*}
+        1     0.1   4.9755e-03   7.953e-02       7   -5.744e-01
+        3     0.1   4.9972e-03   1.080e-02      19   -8.409e-02
+       10     0.1   4.9998e-03   9.974e-04      63   -7.659e-03
+       30     0.1   5.0000e-03   1.111e-04     188   -2.826e-04
+      100     0.1   5.0000e-03   1.000e-05     628   -5.783e-05
+       10    0.01   5.0000e-05   9.975e-05     377   -9.648e-04
+   Lambda is HEIGHT-INDEPENDENT (~ b^2/2 throughout).  Li's detection order grows
+   like a and its depth collapses like b/a^2, because the Cayley image of a zero at
+   height a sits only ~ b/a^2 off the unit circle.  As a fixed global sequence the
+   Li shadow is therefore WORSE than Lambda at height -- which is exactly the
+   argument for the test-function (Weil) form, where g can be localised at height T.
+

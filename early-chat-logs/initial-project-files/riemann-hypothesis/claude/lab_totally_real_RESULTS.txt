@@ -1,0 +1,114 @@
+
+==============================================================================
+PART 1  the same 2-plane: complex line vs maximally totally real
+==============================================================================
+  eta = i, I_0 = j  (orthogonal)      <J(span),span> = 0.0e+00   |J(span) mod span| = 1.0e+00   -> TOTALLY REAL
+  eta = j, I_0 = i  (orthogonal)      <J(span),span> = 0.0e+00   |J(span) mod span| = 1.0e+00   -> TOTALLY REAL
+  eta = i, I_0 = i  (parallel)        <J(span),span> = 1.0e+00   |J(span) mod span| = 0.0e+00   -> COMPLEX LINE
+
+  same real 2-plane C_j: a complex line for J_j, totally real for J_i.
+  Remark A.7's codimension-two objection applies to the first reading only.
+
+==============================================================================
+PART 2  holomorphic coordinates, existence and uniqueness
+==============================================================================
+  Take eta = i, I_0 = j.  Write q = z_1 + z_2 j with z_1,z_2 in C_i.  Then
+      q*i = (i z_1) + (-i z_2) j ,
+  so J_i acts as +i on z_1 and -i on z_2: the holomorphic coordinates are
+  (z_1, w) with w = conj(z_2).  The slice C_j = {x + y j} is {z_1, w both REAL},
+  i.e. R^2 -- maximally totally real, as Part 1 says.
+
+  A real-analytic map R^2 -> R^4 = C^2 complexifies uniquely, so restriction
+  from J_i-holomorphic maps to C_j is a BIJECTION on germs, and entire data
+  gives an entire extension.  Uniqueness is the identity theorem: a holomorphic
+  function vanishing on a maximally totally real submanifold vanishes.
+  G = z^2+1          A,B holomorphic in (z_1,w): True;   restriction to C_j equals the stem alpha + I_0 beta: True
+  G = z^2-1          A,B holomorphic in (z_1,w): True;   restriction to C_j equals the stem alpha + I_0 beta: True
+  G = (z^2+1)(z-1)   A,B holomorphic in (z_1,w): True;   restriction to C_j equals the stem alpha + I_0 beta: True
+  G = z^3-2z         A,B holomorphic in (z_1,w): True;   restriction to C_j equals the stem alpha + I_0 beta: True
+
+==============================================================================
+PART 3  the zero set is Z(G) x Z(G): discrete, no spheres
+==============================================================================
+  F = 0  <=>  A = B = 0  <=>  G(zeta_+) = G(zeta_-) = 0, and
+  (zeta_+, zeta_-) is a linear change of coordinates on C^2, so
+  Z(F) = Z(G) x Z(G) -- always DISCRETE for nonconstant G.
+
+  G = z^2+1          #Z(G) = 2   #Z(F) solved = 4   #Z(G)^2 = 4   match: True
+  G = (z^2+1)(z-1)   #Z(G) = 3   #Z(F) solved = 9   #Z(G)^2 = 9   match: True
+
+  And independently of the formula: C^2 is Stein, so a zero set has no
+  compact positive-dimensional component -- no 2-sphere can occur in the
+  zero set of ANY holomorphic map C^2 -> C^2.  Isolation is FREE, with no
+  symmetry assumed.  This is what Remark A.7 says cannot happen.
+
+==============================================================================
+PART 4  the reality involution and the discriminating invariant
+==============================================================================
+  The slice is C_j = {z_1, w real} = {zeta_- = conj(zeta_+)}, i.e. the fixed
+  locus of  tau(zeta_+, zeta_-) = (conj zeta_-, conj zeta_+).  Then:
+    * Z(F) cap C_j = {(rho, conj rho) : rho in Z(G)}  -- the k slice zeros,
+      matching F|_{C_j} = f.
+    * the DIAGONAL point (rho, rho) is tau-fixed iff rho is REAL.
+  So reality of the zeros is the tau-type of the diagonal of Z(G) x Z(G) --
+  the crunode/acnode invariant of twistor_lift_computation.md §3 again, in the
+  simplest possible setting.  In the coordinates (z_1, w):
+      the point with zeta_+ = rho, zeta_- = rho' has w = (rho - rho')/(2i),
+  so w = 0 exactly on the diagonal, and (rho, conj rho) has w = Im(rho).
+
+  G = z^2+1   
+    rho = +0.000-1.000j:  w on the diagonal = 0.0   w at (rho, conj rho) = -1.000   -> rho real: False
+    rho = +0.000+1.000j:  w on the diagonal = 0.0   w at (rho, conj rho) = +1.000   -> rho real: False
+  G = z^2-1   
+    rho = -1.000+0.000j:  w on the diagonal = 0.0   w at (rho, conj rho) = +0.000   -> rho real: True
+    rho = +1.000+0.000j:  w on the diagonal = 0.0   w at (rho, conj rho) = +0.000   -> rho real: True
+
+==============================================================================
+PART 5  THE OBSTRUCTION: the symmetry hypothesis is unsatisfiable
+==============================================================================
+  Which rotations preserve the class?  R_u(q) = u q ubar is J_eta-holomorphic
+  iff u eta ubar = eta, i.e. iff u lies in C_eta: only the CIRCLE U(1) fixing
+  eta, not SO(3).  (Verified below.)  Its fixed locus in H is
+      Fix(U(1)) = {q : u q ubar = q for all u in C_eta} = C_eta ,
+  the slice through eta -- in coordinates, {w = 0}.
+
+  Now suppose we ask only for Z(F) to be U(1)-INVARIANT (zero-set symmetry, not
+  function symmetry -- the weakest hypothesis that still manufactures spheres
+  from off-axis zeros).  A U(1)-orbit is connected; Z(F) is discrete; a
+  connected subset of a discrete set is a point; so every point of Z(F) must be
+  U(1)-FIXED, i.e. Z(F) subset {w = 0}.  But Z(F) = Z(G) x Z(G) contains
+  off-diagonal points (rho, rho') with w = (rho - rho')/(2i) != 0 whenever
+  |Z(G)| >= 2.
+
+  So Z(F) is U(1)-invariant only if G has a single zero.  The hypothesis is
+  UNSATISFIABLE for any G of degree >= 2, RH or no RH.
+
+  R_u is J_eta-holomorphic for u in C_eta: violations in 400 trials = 0
+  ... and NOT for generic u: violations in 400 trials = 400 (i.e. SO(3) is broken to U(1))
+
+  G = z^2+1              |Z(G)| = 2   points of Z(F) OFF the fixed locus {w=0} : 2   -> U(1)-invariant: False
+  G = z^2-1              |Z(G)| = 2   points of Z(F) OFF the fixed locus {w=0} : 2   -> U(1)-invariant: False
+  G = (z^2+1)(z-1)       |Z(G)| = 3   points of Z(F) OFF the fixed locus {w=0} : 6   -> U(1)-invariant: False
+  G = z-1  [degree 1]    |Z(G)| = 1   points of Z(F) OFF the fixed locus {w=0} : 0   -> U(1)-invariant: True
+
+==============================================================================
+SUMMARY
+==============================================================================
+  Remark A.7 of the appendix is FALSE as stated.  A rigid, non-equivariant
+  class with existence, uniqueness AND automatic isolation does exist: the
+  J_eta-holomorphic maps, with the slice C_{I_0} (I_0 perp eta) as maximally
+  totally real Cauchy data.  Uniqueness comes from neither symmetry nor twistor
+  geometry upstairs but from OVERdetermined ellipticity; the codimension-two
+  objection fails because it silently fixes the complex structure for which the
+  slice is a complex line.
+
+  But the class fails at the same joint as every other rigid class tried.  Its
+  symmetry group is only the circle fixing eta, whose fixed locus is a slice;
+  the zero set is the product Z(G) x Z(G), which cannot fit inside a slice; so
+  even the WEAKEST useful symmetry hypothesis -- invariance of the zero SET, not
+  of the function -- is unsatisfiable in degree >= 2.
+
+  Rigidity up, existence of the symmetric member down.  Recorded as the third
+  independent instance of that trade (Fueter/Vekua, ADHM matching, and now the
+  totally-real complexification), across three classes with nothing in common
+  beyond living on H.

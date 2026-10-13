@@ -1,0 +1,1330 @@
+\documentclass[11pt]{amsart}
+
+\usepackage[margin=1.15in]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{xcolor}
+\definecolor{linkblue}{rgb}{0.1,0.1,0.45}
+\usepackage[colorlinks=true,linkcolor=linkblue,citecolor=linkblue,urlcolor=linkblue]{hyperref}
+
+\theoremstyle{plain}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{question}[theorem]{Question}
+\newtheorem{mainthm}{Theorem}
+\renewcommand{\themainthm}{\Alph{mainthm}}
+
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{problem}[theorem]{Problem}
+
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{example}[theorem]{Example}
+
+\newcommand{\HH}{\mathbb{H}}
+\newcommand{\CC}{\mathbb{C}}
+\newcommand{\RR}{\mathbb{R}}
+\newcommand{\ZZ}{\mathbb{Z}}
+\newcommand{\NN}{\mathbb{N}}
+\newcommand{\CP}{\mathbb{CP}}
+\newcommand{\HP}{\mathbb{HP}}
+\newcommand{\RP}{\mathbb{RP}}
+\renewcommand{\SS}{\mathbb{S}}
+\newcommand{\re}{\operatorname{Re}}
+\newcommand{\im}{\operatorname{Im}}
+\newcommand{\id}{\operatorname{id}}
+\newcommand{\Aut}{\operatorname{Aut}}
+\newcommand{\eE}{\mathrm{e}}
+\newcommand{\EE}{\mathcal{E}}
+\newcommand{\dd}{\,d}
+\DeclareMathOperator{\osc}{osc}
+
+\begin{document}
+
+\title[The zero-sphere program and the Second Involution Conjecture]{The zero-sphere program for the Riemann Hypothesis\\ and the Second Involution Conjecture}
+
+\author{Edward B. Baker III}
+\email{edwardbaker86@gmail.com}
+
+\date{August 2026}
+
+\begin{abstract}
+We describe a research program on the Riemann Hypothesis organized around the
+canonical extension of the completed zeta function $\Xi$ to the quaternions as an intrinsic slice
+regular function. The zero set of the extension consists of real points and round $2$-spheres, and RH
+is equivalent to the absence of spheres. We prove the program's structure theorems (a twistor lift to
+an incidence quadric on which RH becomes an equivariant statement about the components of a divisor),
+its two no-go theorems (no continuous linear functional of a rotational extension, and no
+deformation-invariant degree count, detects spheres), and its numerically certified explicit-formula
+growth criterion. The program culminates in the \emph{Second Involution Conjecture}: the
+zero multiset carries the holomorphic involution $\rho\mapsto1-\rho$ and the antiholomorphic
+involution $\rho\mapsto\bar\rho$, RH says they agree, and the conjecture asserts that the
+conjugation-paired ``reality defect'' is approximable by a semialgebraic function of finitely many
+prime-computable explicit-formula samples at finite logarithmic prime scale. The final sections prove
+that this conjecture, exactly as first formulated, is \emph{true unconditionally --- but for a
+degenerate reason}: its adaptive sampling quantifier admits an intermediate-value-theorem encoding
+that writes the answer into the choice of two sample points, consuming no arithmetic (the mechanism
+works verbatim for any Euler-product-free zero multiset whose window observable oscillates). The
+proof's one substantive ingredient is of independent interest: an unconditional
+uniform-oscillation lemma for the prime-computable observable $c\mapsto\re Z(c,\log2)$, with
+effective constants at a natural window length. We diagnose the loophole, prove a
+Kronecker-recurrence lower bound showing that the non-adaptive version of the conjecture has genuine
+content (continuous semialgebraic estimators at scale $\Lambda$ cannot resolve an isolated defect at
+height $x_0$ unless $\Lambda\ge(1-o(1))\log\log x_0$), and restate the conjecture in the
+class-uniform form on which the program now rests, with the shifted family
+$\Xi_\alpha(z)=\Xi(z+i\alpha)\Xi(z-i\alpha)$ as first testbed. This is a program paper: it claims no
+progress on RH itself.
+\end{abstract}
+
+\maketitle
+\setcounter{tocdepth}{1}
+\tableofcontents
+
+%=====================================================================
+\section{Introduction}\label{sec:intro}
+
+Rotate the critical line onto the real axis: with
+\[
+\xi(s)=\tfrac12 s(s-1)\pi^{-s/2}\Gamma(s/2)\zeta(s),\qquad
+\Xi(z):=\xi\!\left(\tfrac12+iz\right),
+\]
+$\Xi$ is entire, even, of order $1$, real on $\RR$, and the Riemann Hypothesis says all its zeros
+are real. Because the Taylor coefficients of $\Xi$ are real, $\Xi$ extends canonically to the
+quaternions $\HH$ as an \emph{intrinsic slice regular} function, and by the zero-structure theorem
+for such functions its zero set is a union of isolated real points and isolated round $2$-spheres:
+real zeros of the complex $\Xi$ give points, conjugate pairs $a\pm iy_0$ give spheres $a+y_0\SS$.
+\textbf{RH holds if and only if the quaternionic $\Xi$ has no zero spheres} (Theorem~\ref{thm:A}).
+
+This paper is a self-contained account of the program built on that dichotomy, together with a
+complete treatment of its newest development. The program's foundational results --- two structure
+theorems, two no-go theorems, one certified growth criterion --- are proved in
+\S\S\ref{sec:reformulation}--\ref{sec:bridge}, and the numerical laboratory certifying every
+computational claim is included as ancillary code (\S\ref{sec:numerics}). The paper's second half
+(\S\S\ref{sec:conjecture}--\ref{sec:repair}) states the program's organizing conjecture --- the
+\emph{Second Involution Conjecture} --- and then proves three things about it.
+
+\begin{enumerate}
+\item \emph{The conjecture as first formulated is true, unconditionally --- by a loophole}
+(Theorem~\ref{thm:encoding}). Its sampling quantifier lets the sample points be chosen after the
+target height, and an intermediate-value-theorem selection then encodes the answer into the choice
+of two points. The mechanism consumes no arithmetic and applies verbatim to any Euler-product-free
+zero multiset whose window observable oscillates; it passes the conjecture's own hardness checks
+vacuously. The result is a diagnosis, not
+progress: a specification with an existential quantifier over continuum-valued sample parameters,
+ranging after the instance, is satisfiable by a sealed envelope.
+\item \emph{The proof's one substantive ingredient survives as unconditional infrastructure}
+(Lemma~\ref{lem:osc}): the prime-computable explicit-formula observable $F(c)=\re Z(c,\log2)$ has
+uniform positive oscillation on every window of every fixed length, at every height, with
+effective constants at a natural window length --- the prime-$2$ term is never drowned by the
+archimedean drift.
+\item \emph{The repaired, non-adaptive conjecture has genuine content}
+(Theorem~\ref{thm:lower}): in a sampling model abstracting exactly the structure of finite-scale
+prime data, non-adaptive continuous semialgebraic estimators at scale $\Lambda$ cannot resolve an
+isolated defect at height $x_0$ unless $\Lambda\ge(1-o(1))\log\log x_0$. Adaptivity had been
+silently projecting this wall to zero.
+\end{enumerate}
+
+The paper ends with the two repaired formulations --- the class-uniform
+Conjecture~\ref{conj:uniform}, which we adopt as the program's headline, and the single-function
+non-adaptive form Conjecture~\ref{conj:repaired} --- and with a sharply posed, RH-free first test: compute
+the smoothed paired zero count from finite-scale prime data for the shifted family
+$\Xi_\alpha(z)=\Xi(z+i\alpha)\Xi(z-i\alpha)$, whose reality defect is nonzero, unbounded, and
+exactly decomposable.
+
+\subsection*{What this paper is not}
+It is not a proof strategy with a claimed endgame, and Theorem~\ref{thm:encoding} is not a proof of
+a standing open conjecture in any useful sense: it shows the original statement was formalized at
+the wrong joint, salvages its unconditional content, and repairs it. The no-go theorems and the two
+hardness checks (Davenport--Heilbronn; de Bruijn--Newman) run through everything precisely to
+prevent over-reading, and \S\ref{sec:bridge} states plainly where the program currently reduces to
+classical difficulty. The reader is entitled to keep score against the standing question
+\emph{``what does the reformulation buy?''}
+
+\subsection*{Provenance}
+The program synthesizes a sequence of single-author manuscripts (2015--2026) --- a quaternionic
+extension hierarchy for $\xi'/\xi$ with an $SU(2)$-representation-theoretic decomposition and a
+negative result on linear pairings \cite{Baker2015,Baker2016}, and twistor-geometric machinery
+developed for generalized conformal maps and Yang--Mills symmetries
+\cite{Baker2017,Baker2022arXiv,Baker2023arXiv} --- with the modern theory of slice regular
+functions (Gentili--Struppa \cite{GentiliStruppa2007} and its development
+\cite{GentiliStoppato2008,CGSS2009,GSSbook,GhiloniPerotti2011}), whose intrinsic subclass is
+exactly the function class the manuscripts were searching for, and whose twistor branch
+\cite{GSS2014,Altavilla2018,AltavillaSarfatti2019} realizes the intended geometry. The historical
+manuscripts are archived unaltered at \cite{ZenodoArchive}. The synthesis, the computations, the
+numerical laboratory, the formulation of the Second Involution Conjecture, and the resolution and
+repair reported in \S\S\ref{sec:resolution}--\ref{sec:repair} were carried out in August 2026 with
+substantial AI research assistance; see the Acknowledgements for a precise statement.
+
+%=====================================================================
+\section{The reformulation}\label{sec:reformulation}
+
+Let $\SS=\{J\in\HH:J^2=-1\}$ be the $2$-sphere of imaginary units; each $J\in\SS$ spans a slice
+$\CC_J=\RR+J\RR\cong\CC$. A function on an axially symmetric slice domain is \emph{slice regular}
+\cite{GentiliStruppa2007} if it is holomorphic on every slice, and \emph{intrinsic} if its power
+series has real coefficients; equivalently $f(x+yJ)=\alpha(x,y)+J\beta(x,y)$ with
+$F:=\alpha+i\beta$ holomorphic and real on $\RR$ (the \emph{stem function}; the extension
+$F\mapsto f$ is the rotation map of \cite[eq.~(2.5)]{Baker2015}). Intrinsic functions form a
+commutative real algebra under \emph{pointwise} operations, restricting on each slice to the
+ordinary complex algebra, and are determined by one slice via the representation formula
+\cite{CGSS2009,GSSbook}. The zero set of a nonzero slice regular function is a union of isolated
+points and isolated spheres $x+y\SS$ (Gentili--Stoppato \cite{GentiliStoppato2008}).
+
+Riemann's integral representation extends verbatim: with $\Phi$ the positive, even, rapidly
+decaying kernel of \cite[\S10.1]{Titchmarsh1986},
+\begin{equation}\label{eq:cosine}
+\Xi(q)=4\int_0^\infty\Phi(u)\cos(qu)\dd u=\sum_{n\ge0}c_{2n}q^{2n},\qquad q\in\HH,
+\end{equation}
+absolutely convergent on all of $\HH$ since $\cos(qu)$ is entire intrinsic and $\Phi$ decays like
+$\eE^{-\pi\eE^{2u}}$; the positivity and decay are due to P\'olya \cite{Polya1926}. The
+normalizing constant $4$ depends on conventions for $\Phi$; with the convention displayed it is
+certified numerically (\S\ref{sec:numerics}: the identity holds to ten digits against an
+independent computation of $\xi(\tfrac12+ix)$, and the right side vanishes to the quadrature
+floor at the first zero ordinate).
+
+\begin{mainthm}[Reformulation]\label{thm:A}
+RH holds if and only if the zero set of $\Xi:\HH\to\HH$ defined by \eqref{eq:cosine} contains no
+$2$-sphere.
+\end{mainthm}
+
+\begin{proof}
+Immediate from the zero-structure theorem and the stem-function dictionary: nonreal zeros of the
+complex $\Xi$ occur in conjugate pairs $a\pm iy_0$ (reality on $\RR$) and correspond exactly to the
+zero spheres $a+y_0\SS$ of the extension.
+\end{proof}
+
+By itself this is a relabeling; its value is the structures it makes available, and everything
+below is an attempt to convert the relabeling into leverage.
+
+%=====================================================================
+\section{Twistor geometry: the equivariant dichotomy}\label{sec:twistor}
+
+Inside the twistor space $\CP^3\to\HP^1\supset\HH$ of $S^4$, with real structure $\sigma$ (the
+fixed-point-free antiholomorphic involution whose invariant lines are the twistor fibers), sits the
+smooth \emph{incidence quadric}
+\[
+Q=\{(q,\eta):\eta\in\SS,\ q\in\CC_\eta\}\ \cong\ \CP^1_\zeta\times\CP^1_w ,
+\]
+swept by the lines $L_\zeta=\{(x+\eta y,\eta)\}$, $\zeta=x+iy$ --- the tautological lifts of the
+spheres $x+y\SS$, degenerating to twistor fibers over $\RR$. Here $w\in\CC\cup\{\infty\}$
+parametrizes the sphere of complex structures stereographically,
+$\eta(w)=(w+j)^{-1}\,i\,(w+j)\in\SS$, so that the antipodal map $\eta\mapsto-\eta$ is
+$w\mapsto-1/\bar w$; the point of $Q$ with coordinates $(\zeta,w)$ is $q=x+y\,\eta(w)$. The two
+rulings are the sphere-lifts ($\zeta$ fixed) and the fixed-complex-structure slices ($w$ fixed);
+$\sigma$ restricts to $\rho(\zeta,w)=(\bar\zeta,-1/\bar w)$, conjugation times the antipodal
+map, again fixed-point free.
+
+\begin{mainthm}[Lift]\label{thm:B}
+Let $f$ be intrinsic slice regular on an axially symmetric slice domain $\Omega$, with stem
+function $F$, and let $\Omega_Q\subseteq Q$ be the part of the quadric over $\Omega$. Then the
+product map $\tilde f=F\times\id:\Omega_Q\to Q$ is holomorphic and $\rho$-equivariant, and
+covers $f$: over the point $q=x+y\,\eta(w)$ it returns
+$f(q)=\alpha(x,y)+\beta(x,y)\,\eta(w)$ with the same complex-structure label $w$. If $f$ is
+entire, $\tilde f$ is defined on all of $Q$ minus the ruling at infinity.
+\end{mainthm}
+
+\begin{proof}
+Holomorphy is immediate: $F$ is holomorphic in $\zeta$ by intrinsicness and the second factor is
+the identity. Equivariance is the computation
+$\tilde f(\rho(\zeta,w))=(F(\bar\zeta),-1/\bar w)=(\overline{F(\zeta)},-1/\bar w)
+=\rho(\tilde f(\zeta,w))$, using reality of $F$ on $\RR$. Covering: the point $(\zeta,w)\in Q$ is
+$q=x+y\,\eta(w)$ where $\zeta=x+iy$; writing $F(\zeta)=\alpha(x,y)+i\beta(x,y)$, the image point
+$(F(\zeta),w)$ is $\alpha+\beta\,\eta(w)$, which equals $f(q)$ by the intrinsic form
+$f(x+yJ)=\alpha+J\beta$ applied in the slice $\CC_{\eta(w)}$.
+\end{proof}
+
+\begin{remark}[Relation to the Gentili--Salamon--Stoppato lift]\label{rem:GSS}
+For intrinsic $f$, Theorem~\ref{thm:B} is the degenerate product form of the
+Gentili--Salamon--Stoppato twistor lift \cite[Thm.~5.3 and eq.~(5.6)]{GSS2014} (substitute
+$h=0$, $\hat g=g$ there); the ruled geometry of such lifts is developed in
+\cite{Altavilla2018,AltavillaSarfatti2019}. What we add is the systematic use of this product
+form: the identification of its natural domain and target as the incidence quadric $(Q,\rho)$
+with its two rulings, the equivariance, the maximality statements below, and the divisor-level
+dichotomy of Theorem~\ref{thm:C}. We have not found these statements in the literature, but the
+ingredients are all close to \cite{GSS2014,Altavilla2018,AltavillaSarfatti2019}, and we make no
+strong novelty claim.
+\end{remark}
+
+\subsection*{Maximality of the quadric}
+In what sense is $Q$ the natural home of the lift? Care is needed: $Q$ is a smooth hypersurface,
+so unconstrained local holomorphic extensions off $Q$ always exist and the interesting question
+fixes the twistor structure. Two statements result.
+
+\begin{proposition}[The na\"ive extension is holomorphic only along $Q$]\label{prop:naive}
+Let $f$ be intrinsic slice regular and not affine ($f\not\equiv aq+b$, $a,b\in\RR$), and consider
+the fiber-preserving assignment $\Psi_f:(q,\eta)\mapsto(f(q),\eta)$ on the full correspondence
+space $\HH\times\SS$, with the complex structure at $(q,\eta)$ given by left multiplication by
+$\eta$ on the $\HH$-factor and the standard one on the $\SS$-factor. Then the Cauchy--Riemann
+system for $\Psi_f$ holds at every point of $Q$ (where it reduces to slice holomorphy), and on no
+open subset of $(\HH\times\SS)\setminus Q$.
+\end{proposition}
+
+\begin{proof}
+Holomorphy at $(q,\eta)$ in the $\HH$-directions requires $d_qf(\eta v)=\eta\,d_qf(v)$ for all
+$v\in\HH$. Decompose $T_q\HH=\CC_J\oplus\CC_J^\perp$ where $q=x+yJ$, $y>0$. For a monomial
+$f=q^m$: on the slice plane $d_qf(v)=mq^{m-1}v$ (slice holomorphy), while for $v\perp\CC_J$,
+using $vq=\bar qv$,
+\[
+d_qf(v)=\Bigl(\sum_{i=0}^{m-1}q^i\bar q^{\,m-1-i}\Bigr)v
+=\frac{q^m-\bar q^m}{q-\bar q}\,v
+\]
+(the sum collapses to the divided difference because $q\bar q=|q|^2$ is real). By
+$\RR$-linearity and locally uniform convergence, for any slice regular $f$,
+\begin{equation}\label{eq:blocks}
+d_qf(v)=f'(q)\,v \quad (v\in\CC_J),\qquad
+d_qf(v)=\partial_s f(q)\,v \quad (v\in\CC_J^\perp),
+\end{equation}
+where $f'$ is the slice derivative and
+$\partial_sf(q)=(f(q)-f(\bar q))(q-\bar q)^{-1}$ is the \emph{spherical derivative}
+\cite{GhiloniPerotti2011,GSSbook}; both act by left multiplication by elements of $\CC_J$. Take
+$\eta\notin\{\pm J\}$ and split $\eta=\eta_\parallel+\eta_\perp$, $\eta_\perp\neq0$. Testing the
+intertwining condition on $v\in\CC_J$, the slice parts agree ($\CC_J$ is commutative) and the
+orthogonal parts require $\partial_sf(q)\,\eta_\perp v=\eta_\perp f'(q)v$, i.e.\ (since
+$\eta_\perp w=\bar w\eta_\perp$ for $w\in\CC_J$) the pointwise identity
+$\partial_sf(q)=\overline{f'(q)}$. For intrinsic $f$ with stem $F=\alpha+i\beta$ the spherical
+derivative $\beta(x,y)/y$ is \emph{real}, so on any open set where the identity holds, $F'$ is
+real-valued, hence constant (open mapping theorem), hence $F$ is affine with real coefficients
+--- excluded. So the identity fails on a dense open subset of every neighborhood off $Q$. On $Q$
+itself ($\eta=\pm J$) the intertwining condition is exactly slice holomorphy, and the fiber
+directions impose nothing.
+\end{proof}
+
+\begin{proposition}[Rigidity of quadric immersions]\label{prop:immersion}
+Every holomorphic immersion $\Phi:\CP^1\times\CP^1\to\CP^3$ is the Segre embedding composed with
+projective and M\"obius transformations (possibly after the factor swap); in particular the image
+is a smooth quadric and $\Aut(Q)$ consists of restrictions of projective transformations.
+\end{proposition}
+
+\begin{proof}
+Write $S=\CP^1\times\CP^1$, $\Phi^*\mathcal O(1)=\mathcal O(a,b)$. The image spans $\CP^3$ (an
+immersion of a compact surface into a hyperplane $\CP^2$ would be a covering, forcing
+$S\cong\CP^2$), and immersivity forces $a,b\ge1$. The complete system $|\mathcal O(a,b)|$ embeds
+$S$ into $\CP^N$, $N=(a+1)(b+1)-1$, and $\Phi$ is this embedding followed by a projection from a
+center $\Lambda\cong\CP^{N-4}$; the projection is an immersion iff $\Lambda$ avoids the tangent
+variety $\mathrm{Tan}(S)$, which has dimension $4$ (surfaces with degenerate tangent varieties
+are classified; see \cite{GriffithsHarris1979} or \cite[Ch.~I]{Zak1993}). Since
+$\dim\Lambda+\dim\mathrm{Tan}(S)=N$, the center always meets $\mathrm{Tan}(S)$ unless $N=3$,
+i.e.\ $(a,b)=(1,1)$: $\Phi$ is the Segre embedding up to $PGL_4\times(PGL_2\times PGL_2)$. For
+the last claim, any automorphism of $Q$ preserves $\mathcal O(1,1)$ (the square root of $-K_Q$ in
+the torsion-free Picard group), by which $Q$ is embedded, so it extends to $\CP^3$. Classical
+background: \cite[Ch.~6]{GriffithsHarris1978}.
+\end{proof}
+
+\begin{remark}\label{rem:maximality}
+Proposition~\ref{prop:naive} says the incidence relation $q\in\CC_\eta$ is forced: the lift
+cannot be prolonged off $Q$ compatibly with the fibration by complex structures unless $f$ is
+M\"obius. Proposition~\ref{prop:immersion} complements it globally: there is no ``bigger''
+holomorphic model of the intrinsic class inside twistor space (by Riemann--Hurwitz,
+$\tilde f$ composed with the Segre embedding is an immersion iff $F$ is M\"obius). Together they
+resolve the rigidity tension of \cite{Baker2017} --- fiberwise degree-one self-maps of all of
+twistor space are M\"obius --- by relocating the rotational function class from twistor space to
+the incidence quadric. A version of Proposition~\ref{prop:immersion} may well be classical; we
+could not locate a reference in this form, and the proof is assembled from classical facts.
+\end{remark}
+
+\subsection*{The equivariant dichotomy}
+The zero divisor of $\tilde f$ in $Q$ is $Z(\tilde f)=F^{-1}(0)\times\CP^1_w$, a union of
+first-ruling lines with multiplicities, one per zero of $F$.
+
+\begin{mainthm}[Equivariant dichotomy]\label{thm:C}
+Let $f\not\equiv0$ be intrinsic slice regular, with zero divisor
+$Z(\tilde f)=\sum_km_kL_{\zeta_k}$. Then:
+\textup{(1)} a real zero of $f$ contributes a $\sigma$-\emph{fixed} component (a twistor fiber)
+and a zero sphere a $\sigma$-\emph{swapped pair} of components, the multiset $\{\zeta_k\}$ being
+$\sigma$-invariant with multiplicity;
+\textup{(2)} in $H_2(Q;\ZZ)$ a real zero of multiplicity $m$ contributes $m[\mathrm{ruling}]$
+and a sphere of multiplicity $m$ contributes $2m[\mathrm{ruling}]$ --- a pair of simple real
+zeros and a simple sphere have the same class, so homology cannot separate the two cases;
+\textup{(3)} the quotient $Y=Q/\sigma$ is a smooth compact $4$-manifold on which real zeros
+descend to $\RP^2$ components of the zero locus and zero spheres to $S^2$ components.
+Consequently, for $f=\Xi$:
+\emph{RH holds iff every component of the zero locus of $\tilde\Xi$ in $Y$ is nonorientable.}
+\end{mainthm}
+
+\begin{proof}
+(1) $\sigma(L_\zeta)=L_{\bar\zeta}$ directly from $\rho(\zeta,w)=(\bar\zeta,-1/\bar w)$ (for
+real $\zeta$ the line is $\sigma$-invariant with the antipodal map $w\mapsto-1/\bar w$ acting on
+the parameter); the multiset is conjugation-closed with multiplicity because $F$ is real on
+$\RR$. (2) In $H_2(Q;\ZZ)=\ZZ[\mathrm{A}]\oplus\ZZ[\mathrm{B}]$ each $L_\zeta$ has class
+$[\mathrm{A}]$; a real zero of multiplicity $m$ gives $mL_{x_0}$, a sphere the pair
+$mL_{a+iy_0}+mL_{a-iy_0}$. (3) $\sigma$ is fixed-point free on $\CP^3$, hence on $Q$, so $Y$ is
+smooth and $Q\to Y$ is a double cover; $\rho$ covers $\zeta\mapsto\bar\zeta$, so $Y$ fibers over
+the closed half-plane $\{\im\zeta\ge0\}\cup\{\infty\}$, with interior fiber the $2$-sphere
+$\CP^1_w$ (the swapped pair $L_\zeta,L_{\bar\zeta}$ identified into one) and boundary fiber
+$L_x/(\text{antipodal})\cong\RP^2$. The displayed equivalence is Theorem~\ref{thm:A} read in
+$Y$.
+\end{proof}
+
+%=====================================================================
+\section{Two no-go theorems}\label{sec:nogo}
+
+\begin{mainthm}[Linear no-go]\label{thm:D}
+Let $E$ be any continuous $\RR$-linear ``rotational extension'' map from the intrinsic entire
+functions (locally uniform topology) to a topological vector space of $\HH$-valued functions ---
+e.g.\ the slice extension, or any Fueter-type extension.
+Then every continuous linear functional of $E(F)$ is a continuous linear functional of $F$ itself,
+and no continuous linear functional detects reality of zeros: no linear pairing of any rotational
+extension --- against any test function, over any contour, in any sector --- separates on-axis from
+off-axis zeros.
+\end{mainthm}
+
+\begin{proof}
+The first claim is the composition of continuous linear maps. For the second, suppose a
+continuous linear $\Lambda_0$ and a threshold $c$ cut out the reality locus on the two-parameter
+family $F_{t,s}(\zeta)=(\zeta^2+t)(\zeta^2+s)$, whose zeros are all real iff $t\le0$ and $s\le0$
+(a quarter-plane $P$). Expanding, $F_{t,s}=\zeta^4+(t+s)\zeta^2+ts$, so by linearity
+$\Lambda_0(F_{t,s})=A+(t+s)B+ts\,C$ with $A=\Lambda_0(\zeta^4)$, $B=\Lambda_0(\zeta^2)$,
+$C=\Lambda_0(1)$. If the reality locus were $\{\Lambda_0\ge c\}$: along the boundary ray
+$\{t=0,\,s\le0\}$, points with $t=0^-$ are inside $P$ and $t=0^+$ outside, so continuity forces
+$A+sB=c$ for all $s\le0$, hence $B=0$, $A=c$; the condition then reads $ts\,C\ge0$, whose
+solution set is $\{ts\ge0\}$, $\{ts\le0\}$, or everything --- never the quarter-plane. If it
+were $\{\Lambda_0=c\}$: the level set of an affine function of $(t+s,ts)$ is empty, a line, all
+of $\RR^2$, a hyperbola, or a pair of crossed lines --- never the boundary of a quarter-plane.
+This formalizes and explains the negative result of \cite[\S4]{Baker2015}, where the concrete
+instance ($E=$ Fueter extension, $\Lambda=$ Cauchy--Fueter pairing) was verified by explicit
+Laurent-expansion computation.
+\end{proof}
+
+\begin{mainthm}[Degree no-go]\label{thm:E}
+For intrinsic slice regular $f$, the real differential at $q=x+yJ$ ($y>0$) splits as left
+multiplication by the slice derivative $f'(q)$ on $\CC_J$ and by the spherical derivative
+$\partial_sf(q)=(f(q)-f(\bar q))(q-\bar q)^{-1}$ on $\CC_J^\perp$, so
+$\det(d_qf)=|f'(q)|^2|\partial_sf(q)|^2\ge0$. The local Brouwer degree of $f/|f|$ (the
+$4$-dimensional argument principle) is $m$ at a real zero of multiplicity $m$ and $2m$ at a zero
+sphere of multiplicity $m$ --- exactly the complex count: deformation-invariant integer counts
+cannot detect spheres.
+\end{mainthm}
+
+\begin{proof}
+The block decomposition is \eqref{eq:blocks}, established in the proof of
+Proposition~\ref{prop:naive}; left multiplication by $a\in\HH$ on a $2$-plane it preserves acts
+with determinant $|a|^2$, giving the product formula for $\det(d_qf)$.
+
+\emph{Real zero.} For $f=q^m$ on $|q|=1$, a generic target value has exactly the $m$ slice roots
+as preimages, each positively oriented by the determinant formula (on the orthogonal plane the
+divided difference is $\sin m\psi/\sin\psi\cdot(\text{unit})$ for $q=e^{J\psi}$, positive at
+generic points); hence local degree $m$. A general intrinsic $f$ with a real zero of multiplicity
+$m$ factors locally as $(q-x_0)^m\tilde f(q)$ with $\tilde f(x_0)\neq0$ real, and the degree is
+stable under this perturbation.
+
+\emph{Zero sphere.} For the model $f=q^2+1$ near the sphere $\SS$: the family $q^2+t$,
+$t\in[0,1]$, is nonvanishing on a fixed large sphere $|q|=R>1$, so the degree there is constant
+in $t$; at $t=0$ it equals the degree of $q^2$, which is $2$ by the real-zero computation (a real
+zero of multiplicity $2$); and at $t=1$ the zero set is $\SS$. In
+$H_3(\HH\setminus\SS)\cong\ZZ$ the large sphere is homologous to the boundary $S^2\times S^1$ of
+a tubular neighborhood of $\SS$ (the region between them is a $4$-chain avoiding $\SS$), and the
+map is orientation-preserving where nondegenerate, so the local degree at the zero sphere is
+$2$; multiplicity $m$ gives $2m$ by the same argument applied to
+$(q^2+1)^m\cdot(\text{unit})$.
+\end{proof}
+
+\begin{remark}
+The count ``real zeros plus twice spheres'' is exactly what the complex argument principle
+produces for the even $\Xi$. This is required by the hardness checks of \S\ref{sec:hardness}:
+the degree is a deformation invariant and spheres are destroyed by arbitrarily small
+deformations, so the degree \emph{must not} see them. The equivariant component type of
+Theorem~\ref{thm:C} is the minimal refinement that does --- and it is precisely not
+deformation-invariant: components change type exactly when zeros collide on the axis.
+\end{remark}
+
+Any successful discriminant must therefore be nonlinear \emph{and} finer than homology and degree
+--- equivariant (\S\ref{sec:twistor}), positivity-type (\S\ref{sec:positivity}), or spectral.
+
+%=====================================================================
+\section{Hardness checks}\label{sec:hardness}
+
+Two tests are run against every candidate mechanism in the program.
+
+\emph{Davenport--Heilbronn.} Let $\chi$ be the odd Dirichlet character mod $5$ with $\chi(2)=i$,
+and set
+\[
+\kappa=\frac{\sqrt{10-2\sqrt5}-2}{\sqrt5-1},\quad
+f_{DH}(s)=\tfrac12\bigl[(1-i\kappa)L(s,\chi)+(1+i\kappa)L(s,\bar\chi)\bigr],\quad
+\Lambda_{DH}(s)=\Bigl(\tfrac{5}{\pi}\Bigr)^{s/2}\Gamma\Bigl(\tfrac{s+1}{2}\Bigr)f_{DH}(s).
+\]
+The function $\Xi_{DH}(z)=\Lambda_{DH}(\tfrac12+iz)$
+\cite{DavenportHeilbronn1936a,DavenportHeilbronn1936b,Titchmarsh1986} is entire of order $1$, even,
+real on $\RR$ --- so it has an intrinsic slice regular extension with exactly the symmetry of $\Xi$
+--- but has zeros off the critical line and no Euler product. Its extension has genuine zero
+spheres; the first three, recomputed here by Newton iteration at $25$-digit precision
+(\S\ref{sec:numerics}; matching Spira \cite{Spira1994}), have centers and radii
+\begin{equation}\label{eq:DHspheres}
+(a,y_0)=(85.699348,\,0.308517),\quad(114.163343,\,0.150830),\quad(166.479306,\,0.074356).
+\end{equation}
+\textbf{Requirement 1:} symmetry plus growth cannot exclude spheres; a candidate mechanism must
+consume arithmetic input and must demonstrably fail for $\Xi_{DH}$.
+
+\emph{De Bruijn--Newman.} By Rodgers--Tao \cite{RodgersTao2020} the de Bruijn--Newman constant is
+nonnegative: under backward heat flow the zeros leave the axis immediately, so $\Xi$ sits at the
+exact boundary of the sphere-free regime, with spheres of arbitrarily small radius appearing under
+arbitrarily small deformation. \textbf{Requirement 2:} any true criterion degrades only
+polynomially (or worse) as the sphere radius $y_0\to0$; a soft argument stable under small
+perturbations proves too much and is wrong.
+
+%=====================================================================
+\section{The positivity hierarchy}\label{sec:positivity}
+
+On the real axis, $-(\log\Xi)''(x)=\sum_\rho(x-\rho)^{-2}$: real zeros contribute positively, and a
+sphere $(a,y_0)$ contributes negatively \emph{exactly on} $|x-a|<y_0$, its equatorial shadow. The
+Laguerre inequality $L_1[\Xi]=\Xi'^2-\Xi\Xi''\ge0$ is thus the dichotomy's bottom certificate, and
+the full generalized Laguerre family characterizes Laguerre--P\'olya membership --- hence RH ---
+by Csordas--Varga \cite[Thm.~2.9]{CsordasVarga1990} (necessity) and Csordas--Vishnyakova
+\cite[Thm.~2.3]{CsordasVishnyakova2013} (sufficiency, with no order or genus restriction).
+Numerically (\S\ref{sec:numerics}): $L_1[\Xi]>0$ with relative margin $0.173$ on $[0,52]$, while
+$L_1[\Xi_{DH}]<0$ precisely inside the predicted windows $|x-a|<y_0$ at the computed spheres.
+
+The grading that separates sphere radii is by spherical Bessel tags: the \emph{sector energies}
+\begin{equation}\label{eq:sector}
+\EE_\ell=\int_0^\infty\Bigl|\sum_\rho j_\ell(\lambda y_\rho)\,\eE^{i\lambda a_\rho}\Bigr|^2
+w(\lambda)\dd\lambda,\qquad \rho=a_\rho+iy_\rho,\ y_\rho\ge0
+\end{equation}
+(each conjugate pair counted once, by its upper member), are quadratic in the zeros, so
+Theorem~\ref{thm:D} does not apply, and they are graded:
+
+\begin{lemma}[Grading]\label{lem:grading}
+Let the zero multiset be finite (in practice: windowed) and closed under conjugation, and let
+$w>0$ be continuous with all moments finite. Then \textup{(1)} real zeros contribute nothing to
+any $\ell\ge1$ sector ($j_\ell(0)=0$); \textup{(2)} a single sphere of radius $y_0$ contributes
+to $\EE_\ell$ at order $y_0^{2\ell}$ as $y_0\to0$, with leading coefficient
+$((2\ell+1)!!)^{-2}\int\lambda^{2\ell}w\dd\lambda$; \textup{(3)} all zeros are real $\iff$
+$\EE_\ell=0$ for all $\ell\ge1$ $\iff$ $\EE_1=0$.
+\end{lemma}
+
+\begin{proof}
+(1) and (2) are immediate from $j_\ell(t)=t^\ell/(2\ell+1)!!\,(1+O(t^2))$
+\cite[10.52.1]{DLMF}. For (3): if $\EE_1=0$ then, since $w>0$, the finite sum
+$S(\lambda)=\sum_\rho j_1(\lambda y_\rho)\eE^{i\lambda a_\rho}$ vanishes identically; as
+$\lambda\to0^+$, $S(\lambda)=\tfrac\lambda3\sum_\rho y_\rho+O(\lambda^2)$, so
+$\sum_\rho y_\rho=0$, and since every $y_\rho\ge0$, all vanish.
+\end{proof}
+
+The tags are not ad hoc: they arise as the radial profiles of the $SU(2)$-isotypic decomposition
+of the rotational extension developed in the program's underlying manuscripts
+\cite{Baker2015,Baker2016} (archived at \cite{ZenodoArchive}), where the image of the exponential
+in the $\ell$-th sector is $i^\ell(j_\ell(\lambda y)+i\,j_{\ell+1}(\lambda y))\eE^{\lambda x}$:
+$j_\ell(\lambda y)$ is the profile with which a zero at height $y$ enters sector $\ell$ at
+frequency $\lambda$. We stress that this grounding is motivation only --- \eqref{eq:sector} is
+used as a \emph{definition} here, and nothing below depends on the unpublished material.
+Numerically (\S\ref{sec:numerics}): measured log--log slopes of $\EE_\ell$ versus $y_0$ are
+$2.000$, $4.000$, $6.000$ for $\ell=1,2,3$; the DH spheres fit the $y_0^2$ law in $\ell=1$ to
+$2\%$.
+
+%=====================================================================
+\section{The explicit-formula bridge}\label{sec:bridge}
+
+Rotated coordinates throughout: $\rho=\tfrac12+i\gamma$, the zero multiset $\{\gamma\}$ closed
+under $\gamma\mapsto-\gamma$ and $\gamma\mapsto\bar\gamma$, $|\im\gamma|<\tfrac12$. For $h$ even,
+holomorphic and decaying on $|\im r|\le\tfrac12+\varepsilon$, with
+$g(u)=\tfrac1{2\pi}\int h(r)\eE^{-iur}\dd r$, the Guinand--Weil explicit formula
+\cite{Guinand1948,Weil1952}, in the normalization of \cite[Thm.~5.12]{IwaniecKowalski2004} rotated,
+reads
+\begin{equation}\label{eq:EF}
+\sum_\gamma h(\gamma)=h\bigl(\tfrac i2\bigr)+h\bigl(-\tfrac i2\bigr)
++\frac1{2\pi}\int_{-\infty}^\infty h(t)\Bigl[\re\,\psi\bigl(\tfrac14+\tfrac{it}2\bigr)
+-\log\pi\Bigr]\dd t
+-2\sum_{n\ge2}\frac{\Lambda(n)}{\sqrt n}\,g(\log n),
+\end{equation}
+certified numerically as stated (\S\ref{sec:numerics}): on the Gaussian family below, the zero
+side computed from $250$ zeros matches pole${}+{}$archimedean${}+{}$prime side to
+$10^{-8}$--$10^{-10}$ at five $(c,\lambda)$ configurations, and the $\sigma=1$,
+$\lambda^*=\log2$ implementation of \S\ref{sec:resolution} agrees to $2.7\times10^{-14}$. Fix a width $\sigma>0$, set
+$G(u)=\eE^{-u^2/2\sigma^2}$, and take the test family and linear building block
+\begin{equation}\label{eq:Z}
+h_{c,\lambda}(r)=\eE^{i\lambda(r-c)}G(r-c)+\eE^{-i\lambda(r+c)}G(r+c),
+\qquad
+Z(c,\lambda)=\sum_\gamma h_{c,\lambda}(\gamma).
+\end{equation}
+By \eqref{eq:EF}, $Z(c,\lambda)$ is \emph{unconditionally computable} from
+$\{\Lambda(n):|\log n-\lambda|=O(1/\sigma)\}$ plus explicit archimedean terms: the frequency
+$\lambda$ is the logarithmic prime scale.
+
+\begin{lemma}[Diagonal anomaly]\label{lem:anomaly}
+Fix $c>0$ and $\sigma$, and write $Y=\sup_\rho y_\rho$ for a zero multiset with
+$y_\rho\le\tfrac12$ and $N(T)\ll T\log T$. \textup{(1)} A real zero pair $\{\pm a\}$ contributes
+a bounded oscillatory amount to $Z(c,\lambda)$, uniformly in $\lambda$. \textup{(2)} A zero
+sphere $(a,y_0)$ --- the quadruple $\{\pm a\pm iy_0\}$ --- contributes to $|Z(c,\lambda)|^2$ a
+diagonal block oscillating, for large $\lambda$, between $4(G\mp G')^2\eE^{2\lambda y_0}$ up to
+$O(\eE^{\lambda y_0})$, where $G=\eE^{-((a-c)^2-y_0^2)/2\sigma^2}$,
+$G'=\eE^{-((a+c)^2-y_0^2)/2\sigma^2}$ (note $G>G'$ for $a,c>0$): exponential growth at rate exactly
+$2y_0$ in the $\limsup$ sense, weighted by the Gaussian distance of the sphere's center from the
+window. \textup{(3)} Unconditionally $|Z(c,\lambda)|\le C_{c,\sigma}\,\eE^{\lambda Y}$, and the
+total of all products in $|Z|^2$ with at least one factor from a zero of height
+$\le Y-\varepsilon$ is $O(\eE^{\lambda(2Y-\varepsilon)})$.
+\end{lemma}
+
+\begin{proof}
+(1) For real $\gamma$, $|h_{c,\lambda}(\gamma)|\le G(\gamma-c)+G(\gamma+c)\le2$. (2) Since
+$h_{c,\lambda}$ is even, the quadruple contributes $2h(\gamma)+2h(\bar\gamma)$,
+$\gamma=a+iy_0$; the growing terms are the first window term of $h(\bar\gamma)$,
+$\eE^{i\lambda(a-c)}\eE^{\lambda y_0}G\eE^{i\theta}$ (with $\theta=(a-c)y_0/\sigma^2$ from the
+complex Gaussian), and the second window term of $h(\gamma)$,
+$\eE^{-i\lambda(a+c)}\eE^{\lambda y_0}G'\eE^{i\theta'}$; all other terms have modulus
+$\eE^{-\lambda y_0}O(1)$, and the squared modulus of the sum oscillates between the stated
+bounds. (3) Each $\gamma_k=a_k+iy_k$ satisfies
+$|h(\gamma_k)|\le2\eE^{\lambda y_k}\eE^{y_k^2/2\sigma^2}\eE^{-(a_k-c)^2/2\sigma^2}$; with
+$y_k\le\tfrac12$ the middle factor is bounded, and summing the Gaussian against the zero-counting
+measure of density $O(\log(2+|a_k|))$ gives the bound; the refined estimate uses
+$\eE^{\lambda y_k}\le\eE^{\lambda(Y-\varepsilon)}$ on the low factor of each such product.
+\end{proof}
+
+\begin{mainthm}[Rate criterion]\label{thm:F}
+Let $Y=\sup_\rho y_\rho$ for a zero multiset satisfying the hypotheses of
+Lemma~\ref{lem:anomaly}.
+\textup{(a)} Unconditionally,
+$\limsup_{\lambda\to\infty}\lambda^{-1}\log|Z(c,\lambda)|\le Y$ for every window; in particular RH
+implies $Z$ bounded in $\lambda$ in every window, so exponential growth in any single window
+disproves RH. \textup{(b)} If either $Y=0$, or $Y>0$ and for some $\varepsilon>0$ only finitely
+many zeros have $y_\rho>Y-\varepsilon$ (a non-accumulation hypothesis; the $Y=0$ case is listed
+separately since under RH every zero satisfies $y_\rho>-\varepsilon$ and the finiteness clause
+is vacuously false), then for every fixed window
+\[
+\limsup_{\lambda\to\infty}\frac{\log|Z(c,\lambda)|}{\lambda}=Y=\Theta-\tfrac12,
+\]
+with $\Theta$ the supremum of real parts of the zeros; under this hypothesis RH is equivalent to
+subexponential growth of $Z$ in every window, and a positive rate reads off the supremal sphere
+radius exactly.
+\end{mainthm}
+
+\begin{proof}
+(a) is Lemma~\ref{lem:anomaly}(3). (b) If $Y=0$, part (a) gives $\limsup\le0$, and the
+mean-value argument below, applied to the bounded real-zero sum with $\lambda$-independent
+amplitudes, bounds $|Z|$ below along a subsequence, so the $\limsup$ is exactly $0$. If $Y>0$:
+fix $\varepsilon$ as given, let $\gamma_1,\dots,\gamma_K$ (with mirrors) be the finitely many
+zeros of height $>Y-\varepsilon$, and split $Z=Z_{\mathrm{top}}+Z_{\mathrm{rest}}$ with
+$|Z_{\mathrm{rest}}|\le C\eE^{\lambda(Y-\varepsilon)}$ by Lemma~\ref{lem:anomaly}(3). By part
+(2) of the lemma, $\eE^{-\lambda Y}Z_{\mathrm{top}}$ is, up to $o(1)$, a finite exponential sum
+$\sum_kd_k\eE^{-\lambda(Y-y_k)}\eE^{i\lambda b_k}$ with distinct frequencies after grouping
+(coincident frequencies group coherently: the growing contributions at frequency $a_k-c$ carry
+the same Gaussian phase). With $y_{\max}=\max_ky_k\in(Y-\varepsilon,Y]$, the Besicovitch mean
+value of $|\eE^{-\lambda y_{\max}}Z_{\mathrm{top}}|^2$ over $[\Lambda,2\Lambda]$ tends to
+$\sum_{k:y_k=y_{\max}}|d_k|^2>0$, so along a sequence $\lambda_n\to\infty$,
+$|Z(c,\lambda_n)|\ge\tfrac{c'}2\eE^{\lambda_n(Y-\varepsilon)}$ eventually; hence
+$\limsup\ge Y-\varepsilon$, and shrinking $\varepsilon$ gives equality with (a). The
+identification $Y=\Theta-\tfrac12$ is the rotation $s=\tfrac12+iz$.
+\end{proof}
+
+\begin{remark}[The non-accumulation gap]\label{rem:accumulation}
+The hypothesis in (b) is automatic for Davenport--Heilbronn in any fixed height range and holds
+for $\zeta$ under RH (the $Y=0$ branch); under $\neg$RH it would follow if the supremum $\Theta$
+is attained, which is not known. Removing it --- heights accumulating at the supremum, centers
+escaping to infinity --- requires a multi-scale refinement of the mean-value argument that we
+have not carried out; we flag this as a genuine, if technical, gap between (a) and the clean
+unconditional equivalence. Direction (a), the falsifiable one, is unconditional.
+\end{remark}
+
+On real data (\S\ref{sec:numerics}): $250$ Riemann ordinates give fitted rate $-0.0003$; DH with
+its first sphere gives rate $0.3085$ against the true $y_0=0.30852$ --- the radius of a genuine
+off-line zero recovered to four decimals from the growth of a single window.
+
+\begin{remark}[Honest accounting]\label{rem:honest}
+At the exponential-rate level Theorem~\ref{thm:F} is a Gaussian-mollified form of the classical
+equivalence between zero-free regions and prime-counting error terms: detecting a sphere of radius
+$y_0$ through growth requires frequencies $\lambda\gtrsim1/y_0$, i.e.\ primes up to
+$\eE^{1/y_0}$. The wall is the old wall, with its geometry exposed. Genuinely new leverage, if
+any, lies below the exponential scale --- which is what the Second Involution Conjecture is about.
+\end{remark}
+
+%=====================================================================
+\section{Two involutions, and the Second Involution Conjecture}\label{sec:conjecture}
+
+The zero multiset carries two commuting involutions:
+\[
+\iota_{\mathrm{FE}}:\rho\mapsto1-\rho\ \ (\gamma\mapsto-\gamma),\qquad
+\iota_{\mathrm{R}}:\rho\mapsto\bar\rho\ \ (\gamma\mapsto\bar\gamma),
+\]
+the first holomorphic (functional equation), the second antiholomorphic (reality; the real
+structure $\sigma$ of \S\ref{sec:twistor}). RH is precisely the statement that they coincide on
+the zeros. The explicit formula \eqref{eq:EF} computes sums of \emph{analytic} functions of
+$\gamma$; since the multiset is conjugation-closed, $\sum_\gamma h(\bar\gamma)=\sum_\gamma
+h(\gamma)$ for every such $h$: \emph{the explicit formula natively sees $\iota_{\mathrm{FE}}$ and
+is structurally blind to $\iota_{\mathrm{R}}$}. The sharpest scalar illustration: the
+functional-equation-paired sum $\sum_\rho\rho^{-1}(1-\rho)^{-1}=2+\gamma_{\mathrm{E}}-\log4\pi$ is
+classical \cite[Ch.~12]{Davenport2000}, while the conjugation-paired twin
+$\sum_\rho|\rho|^{-2}$ is computed by no known method --- and the comparison is one-sided:
+
+\begin{proposition}\label{prop:gateway}
+Unconditionally $\sum_\rho|\rho|^{-2}\ \ge\ \sum_\rho\rho^{-1}(1-\rho)^{-1}
+=2+\gamma_{\mathrm{E}}-\log4\pi$, with equality if and only if RH holds.
+\end{proposition}
+
+\begin{proof}
+Both sums converge absolutely, so group zeros into orbits $\{\rho,\bar\rho,1-\rho,1-\bar\rho\}$ of
+the group generated by the two involutions and set $a=1/\rho$, $b=1/(1-\rho)$: a full orbit
+contributes $2|a|^2+2|b|^2$ to the left side and $4\re(ab)$ to the right, and
+$4\re(ab)\le4|a||b|\le2|a|^2+2|b|^2$, with $|a|=|b|$ iff $|\rho|=|1-\rho|$ iff
+$\re\rho=\tfrac12$; on the line the orbit degenerates to $\{\rho,\bar\rho\}$ and the two
+contributions agree.
+\end{proof}
+
+RH is thus the statement that a single convergent sum achieves its known classical lower bound.
+The object the program asks to compute is the \emph{windowed reality defect}
+\begin{equation}\label{eq:defect}
+D(c)=\sum_\gamma(\im\gamma)^2\,\eE^{-(\re\gamma-c)^2/2\sigma^2}\ \ge\ 0,
+\end{equation}
+which vanishes identically iff RH holds --- a regularized diagonal of the quadratic class, the
+part pairing each zero with its own conjugate. The off-diagonal is smoothed pair correlation
+\cite{Montgomery1973,GoldstonMontgomery1987}; the diagonal has no dictionary. In the exact
+algebraic model (real polynomials, with coefficients playing the role of primes),
+conjugation-paired sums of roots \emph{are} computable from the coefficients --- but only
+semialgebraically, never analytically: already for $x^2+bx+c$,
+$\sum r_i^2=b^2-2c$ while $\sum|r_i|^2=\max(b^2-2c,\,2c)$, non-analytic across the discriminant.
+(Real roots: $\sum|r_i|^2=b^2-2c\ge2c$ since $b^2\ge4c$; a conjugate pair:
+$\sum|r_i|^2=2r\bar r=2c$ with $b^2<4c$.) This dictates the shape of the conjecture. With
+$\mathcal A(\Lambda)=\{Z(c,\lambda):c\in\RR,\ 0\le\lambda\le\Lambda\}$ the \emph{prime data at
+scale $\Lambda$} (every element unconditionally prime-computable by \S\ref{sec:bridge}), the
+program's working notes (August 2026; archived at \cite{ZenodoArchive}) first formulated:
+
+\begin{conjecture}[Second Involution Conjecture, original form]\label{conj:original}
+For every $\varepsilon>0$ there exist a finite scale $\Lambda(\varepsilon)<\infty$, an integer $N$,
+and a semialgebraic function $S$ of $N$ variables, such that for every $c\in\RR$ there are points
+$Z(c_1,\lambda_1),\dots,Z(c_N,\lambda_N)\in\mathcal A(\Lambda(\varepsilon))$ with
+$|c_j-c|=O(\sigma)$ and
+\[
+\bigl|\,D(c)-S\bigl(Z(c_1,\lambda_1),\dots,Z(c_N,\lambda_N)\bigr)\bigr|<\varepsilon.
+\]
+More generally, the same holds for the natural family of conjugation-paired sums
+$\sum_\gamma\Psi(\gamma,\bar\gamma)$ with $\Psi$ a divided-difference kernel of exponentials
+across the pair $(\gamma,\bar\gamma)$, of which $D(c)$ is the leading example.
+\end{conjecture}
+
+The intent was that the defect --- the explicit formula's structural blind spot --- should
+nevertheless be a finite-scale, positivity-type functional of prime data, with the quantitative
+question (how fast must $\Lambda(\varepsilon)$ grow?) deliberately severed as a separate question.
+The next section shows that the statement, as written, failed to capture that intent.
+
+%=====================================================================
+\section{Resolution: the conjecture is true as stated, by an encoding}\label{sec:resolution}
+
+\begin{theorem}[Adaptive samples trivialize Conjecture~\ref{conj:original}]\label{thm:encoding}
+Fix $\sigma>0$ and set $\lambda^*=\log2$. There exist a constant $r=r(\sigma)>0$ and a
+semialgebraic function $S:\CC^2\to\RR$ --- explicitly, with $u:=\re z_1-\re z_2$,
+\[
+S(z_1,z_2)=
+\begin{cases}
+\dfrac{u-r/4}{\,r/8-(u-r/4)\,}, & r/4\le u<3r/8,\\[4pt]
+0,&\text{otherwise},
+\end{cases}
+\]
+--- such that for every $c\in\RR$ there are points $c_1,c_2\in[c-\sigma,c+\sigma]$, $c_1\ne c_2$,
+with
+\[
+D(c)\;=\;S\bigl(Z(c_1,\log2),\,Z(c_2,\log2)\bigr)\qquad\text{exactly}.
+\]
+In particular Conjecture~\ref{conj:original} holds unconditionally, with $N=2$, with
+$\Lambda(\varepsilon)=\log2$ for every $\varepsilon$, and with error $0$.
+\end{theorem}
+
+The only substantive ingredient is an unconditional oscillation lemma for the observable
+$F(c):=\re Z(c,\lambda^*)$, which is of independent interest and survives the diagnosis below as
+program infrastructure.
+
+\begin{lemma}[Uniform oscillation]\label{lem:osc}
+Fix $\sigma>0$, $\lambda^*=\log2$. Then $F(c)=\re Z(c,\lambda^*)$ is real-analytic and even on
+$\RR$, and for every window half-length $a>0$ there is $r=r(a,\sigma)>0$ with
+\[
+\osc_{[c-a,\,c+a]}F\;\ge\;r\qquad\text{for every }c\in\RR .
+\]
+Moreover the bound is effective at a natural window length: with $\omega=\log2$ and the constants
+$B_2,C_0,C_1$ of the decomposition \eqref{eq:decomp} below, for
+$a_0=(2/B_2)\bigl(B_2/2\omega+C_1+2C_0/\omega\bigr)$ there is an effective $C_3(\sigma)$ such that
+$\osc_{[c-a_0,c+a_0]}F\ge B_2/8$ for all $|c|\ge C_3$ (numerically at $\sigma=1$:
+$B_2=0.5407$, $C_0=2.6975$, $C_1=3.7164$, $a_0=43.98$, $B_2/8=0.0676$).
+\end{lemma}
+
+\begin{proof}
+\emph{Analyticity and decomposition.} Each summand of \eqref{eq:Z} is entire in $c$; uniform
+convergence on compacta (Gaussian decay against $N(T)\ll T\log T$) makes $Z(\cdot,\lambda)$ entire,
+and closure of $\{\gamma\}$ under conjugation gives $Z(-c,\lambda)=\overline{Z(c,\lambda)}$, so
+$F$ is real-analytic and even. Applying \eqref{eq:EF} to $h_{c,\lambda^*}$ and computing the
+Gaussian Fourier transform yields the exact decomposition
+\begin{equation}\label{eq:decomp}
+F(c)=A(c)+E(c)+P(c),\qquad
+P(c)=-\sum_{n\ge2}B_n\cos(c\log n),
+\end{equation}
+where
+$B_n=\frac{2\Lambda(n)}{\sqrt n}\cdot\frac{\sigma}{\sqrt{2\pi}}
+\bigl(\eE^{-\sigma^2(\log n-\lambda^*)^2/2}+\eE^{-\sigma^2(\log n+\lambda^*)^2/2}\bigr)\ge0$
+with $C_0:=\sum_nB_n<\infty$ and $B_2>0$ (this is the Euler product's one appearance), $A$ is the
+archimedean term, with $|A'(c)|\le C_A/(1+|c|)$ by the digamma asymptotics, and $E$ is the pole
+term, $|E(c)|\le C_E\,\eE^{-c^2/2\sigma^2}$.
+
+\emph{Large $|c|$, effective (the frequency-$\log2$ test).} By evenness take $c\ge C_3$ and
+$W=[c-a_0,c+a_0]$. For any $t_0\in W$,
+\[
+\sup_{t\in W}|P(t)-P(t_0)|\ \ge\ \frac1{2a_0}\Bigl|\int_W\bigl(P(t)-P(t_0)\bigr)\eE^{-i\omega t}\dd
+t\Bigr|.
+\]
+The constant term contributes at most $|P(t_0)|\cdot\frac2\omega\le\frac{2C_0}\omega$. In
+$\int_W\cos(t\log n)\eE^{-i\omega t}\dd t$, the $n=2$ resonant term equals $a_0$ plus an error
+$\le\frac1{2\omega}$, and the $n\ge3$ terms total at most
+$C_1:=\sum_{n\ge3}B_n(|\log(n/2)|^{-1}+(\log2n)^{-1})<\infty$. Hence
+$\osc_WP\ge\frac1{2a_0}[B_2a_0-\frac{B_2}{2\omega}-C_1-\frac{2C_0}\omega]=\frac{B_2}4$ by the
+choice of $a_0$, and $\osc_WF\ge B_2/4-2a_0C_A/(1+c-a_0)-2C_E\eE^{-(c-a_0)^2/2\sigma^2}\ge B_2/8$
+once $c\ge C_3$, $C_3$ effective.
+
+\emph{Arbitrary window length via the Bohr hull.} $P$ has an absolutely convergent almost periodic
+expansion, converging uniformly on horizontal strips (since $\sum B_nn^T<\infty$), so $P$ is Bohr
+almost periodic and its hull $H(P)$ --- the uniform closure of its translates --- is compact
+(Bochner's criterion), consisting of restrictions of entire functions bounded on strips. Every
+$Q\in H(P)$ has Fourier--Bohr coefficient of modulus $B_2/2\ne0$ at frequency $\omega$ (the
+coefficient functional is continuous under uniform limits), so no $Q$ is constant on any interval:
+interval-constancy plus entirety would force constancy on $\RR$ and kill the coefficient. The
+oscillation functional $Q\mapsto\osc_{[-a,a]}Q$ is continuous and strictly positive on the compact
+$H(P)$, so $r_H(a):=\min_{H(P)}\osc_{[-a,a]}>0$, and
+$\osc_{[c-a,c+a]}P\ge r_H(a)$ for every $c$; subtracting the $A,E$ oscillations as above gives
+$\osc_{[c-a,c+a]}F\ge r_H(a)/2$ for $|c|\ge C_4(a)$. On the remaining compact range, $F$ is
+real-analytic and nonconstant (its oscillation at large $|c|$ is $\ge r_H(a)/2>0$), hence by the
+identity theorem nonconstant on every interval, so $\phi(c)=\osc_{[c-a,c+a]}F$ is continuous and
+strictly positive, with a positive minimum $r_0$; take $r=\min(r_0,r_H(a)/2)$.
+\end{proof}
+
+\begin{remark}\label{rem:deserts}
+The constant $r$ collapses (while remaining positive) on windows in zero deserts: numerically at
+$\sigma=1$, $\osc_{[-6,6]}F\approx8\times10^{-15}$, while $\osc_{[c-15,c+15]}F\ge2.01$ for all
+sampled $c\in[0,1160]\cup\{10^4,10^5,10^6\}$ (\S\ref{sec:numerics}). Lemma~\ref{lem:osc}
+quantifies something the program needs anyway: \emph{the prime-$2$ term of the explicit formula is
+never drowned by the archimedean drift}, at any height, in any window.
+\end{remark}
+
+\begin{proof}[Proof of Theorem~\ref{thm:encoding}]
+Apply Lemma~\ref{lem:osc} with $a=\sigma$ to get $r=r(\sigma,\sigma)>0$, and let
+$W_c=[c-\sigma,c+\sigma]$, so $\osc_{W_c}F\ge r$ for every $c$. The defect \eqref{eq:defect}
+converges, $D(c)\in[0,\infty)$. Define the encoder
+$f(d)=\frac r4+\frac r8\cdot\frac d{1+d}$, a semialgebraic increasing bijection of $[0,\infty)$
+onto $[r/4,3r/8)$ with inverse $f^{-1}(u)=\frac{u-r/4}{r/8-(u-r/4)}$. Given $c$, put
+$u:=f(D(c))$, choose $t_\pm\in W_c$ with $F(t_-)=\min_{W_c}F$, $F(t_+)=\max_{W_c}F$; then
+$F(t_+)-F(t_-)\ge r>u>0$, and by the intermediate value theorem there is $c_1$ between $t_-$ and
+$t_+$ with $F(c_1)-F(t_-)=u$. Set $c_2:=t_-$. Then
+$\re Z(c_1,\log2)-\re Z(c_2,\log2)=u\in[r/4,3r/8)$, so
+$S(Z(c_1,\log2),Z(c_2,\log2))=f^{-1}(u)=D(c)$ exactly. The graph of $S$ is a finite Boolean
+combination of polynomial equalities and inequalities in the real coordinates, hence
+semialgebraic; both samples lie in $\mathcal A(\log2)$; and $\log2$ never depended on
+$\varepsilon$. The same argument handles any absolutely convergent real-valued conjugation-paired
+sum $\sum_\gamma\Psi(\gamma,\bar\gamma)$ (encode through a semialgebraic homeomorphism of $\RR$
+onto a subinterval; complex values coordinatewise), covering the conjecture's ``more generally''
+clause.
+\end{proof}
+
+\subsection*{Diagnosis}
+Theorem~\ref{thm:encoding} must not be mistaken for progress --- not toward RH (nothing here bears
+on RH: if RH holds the conjecture is verified by $S\equiv0$ in one line, and the theorem merely
+closes the remaining case), and not toward the intended content of the conjecture. It is a
+diagnosis, and the two hardness checks of \S\ref{sec:hardness} are the instruments. \emph{First},
+the mechanism consumes no arithmetic: the Euler product enters only through $B_2\ne0$ ---
+oscillation of one observable --- and the identical encoding ``computes'' the defect of any
+two-involutions zero multiset whose window observable oscillates. This is demonstrated numerically
+(\S\ref{sec:numerics}) on a synthetic, Euler-product-free multiset carrying an off-line quadruple:
+its nonzero defect $0.125$ is recovered to $1.8\times10^{-15}$ from two samples. A formula that
+computes the reality defect of Euler-product-free zero sets is not the object the conjecture set
+out to specify. \emph{Second}, the conjectured modulus $\Lambda(\varepsilon)$ --- whose growth rate was
+the entire quantitative question, with the classical wall at
+$\Lambda(\varepsilon)\asymp\varepsilon^{-1/2}$ --- comes out constant, with exact recovery. The
+loophole is precisely identifiable: the ``there are points'' quantifier lets the sample points be
+chosen after $c$, hence with full knowledge of $D(c)$, and on a window where a continuous
+observable has oscillation $\ge r$, a choice of an ordered pair of points transmits an arbitrary
+real number in $[0,r]$ --- an information channel of unbounded capacity, before $S$ is consulted.
+All information flows through the selection map; none flows through arithmetic. The repair is
+not to shrink the window or restrict $S$, but to make the sampling rule non-adaptive.
+
+%=====================================================================
+\section{Repair: the non-adaptive and class-uniform conjectures, and a lower bound}\label{sec:repair}
+
+\subsection{The repaired statements}
+
+\begin{conjecture}[Second Involution Conjecture, non-adaptive form]\label{conj:repaired}
+Fix $\sigma>0$. For every $\varepsilon>0$ there exist a finite scale $\Lambda(\varepsilon)<\infty$,
+an integer $N$, \emph{fixed} offsets $\xi_1,\dots,\xi_N\in[-1,1]$ and \emph{fixed} frequencies
+$\lambda_1,\dots,\lambda_N\in[0,\Lambda(\varepsilon)]$, and a semialgebraic function $S$ of $N$
+variables, such that
+\[
+\sup_{c\in\RR}\ \bigl|\,D(c)-S\bigl(Z(c+\xi_1\sigma,\lambda_1),\dots,
+Z(c+\xi_N\sigma,\lambda_N)\bigr)\bigr|\;<\;\varepsilon .
+\]
+\end{conjecture}
+
+The estimator is now one fixed local formula slid along the critical line --- the natural analogue
+of a convolution-type explicit formula, restoring the quantifier ordering of Weil positivity (test
+objects before zeros) --- and the encoding of Theorem~\ref{thm:encoding} is dead: the samples are
+values of $N$ fixed functions of $c$, and any two heights whose data agree must receive the same
+estimate. One residual triviality remains: if RH holds, $S\equiv0$ verifies
+Conjecture~\ref{conj:repaired}, so the statement is RH-trivial \emph{for $\zeta$ alone}. The
+content one actually wants is uniformity over a class in which nonzero defects certifiably occur.
+We adopt the following as the program's headline conjecture.
+
+\begin{conjecture}[Second Involution Conjecture, class-uniform form]\label{conj:uniform}
+Let $\mathcal X$ be the class of \emph{explicit-formula systems}: pairs $(\Gamma,\beta)$ of a zero
+multiset $\Gamma\subset\{|\im\gamma|\le\tfrac12\}$ closed under both involutions with
+$N_\Gamma(T)\ll T\log T$, and coefficients $|\beta_n|\le C\log n$, satisfying the Guinand--Weil
+identity
+\[
+\sum_{\gamma\in\Gamma}h_{c,\lambda}(\gamma)=\mathrm{Arch}(c,\lambda)
+-2\sum_{n\ge2}\frac{\beta_n}{\sqrt n}\,g_c(\log n)
+\]
+for all test functions \eqref{eq:Z}, with the fixed archimedean shape of \eqref{eq:decomp} (poles
+optional). For every $\varepsilon>0$ there exist $\Lambda(\varepsilon)$, $N$, offsets, frequencies,
+and a single semialgebraic $S$ as in Conjecture~\ref{conj:repaired} such that for \emph{every}
+$(\Gamma,\beta)\in\mathcal X$,
+\[
+\sup_{c\in\RR}\ \frac{\bigl|\,D_\Gamma(c)-S\bigl(Z_\Gamma(c+\xi_1\sigma,\lambda_1),\dots\bigr)
+\bigr|}{1+D_\Gamma(c)}\;<\;\varepsilon .
+\]
+\end{conjecture}
+
+Three calibrating observations. \emph{(a)} Davenport--Heilbronn does \emph{not} belong to
+$\mathcal X$ as axiomatized: its logarithmic derivative has no absolutely convergent coefficient
+side precisely because it has zeros where that series would need to converge. Whether $\mathcal X$
+contains members with off-line zeros is therefore not obvious --- and that question (does the
+explicit-formula constraint alone force reality?) is a positivity question of exactly
+Weil--Bombieri--Connes type \cite{Weil1952,Bombieri2000,Connes2016}; if the constraint does force
+reality --- if $\mathcal X$ has no off-line members --- the conjecture collapses to the trivial
+$S=0$ and the two-involutions problem is solved outright, which nobody expects to be cheap. \emph{(b)} $\mathcal X$ does contain members with known, nonzero, unbounded
+defect: for $0<\alpha<\tfrac12$ the shifted product
+$\Xi_\alpha(z)=\Xi(z+i\alpha)\Xi(z-i\alpha)$ lies in a poles-adjusted version of $\mathcal X$ with
+$\beta_n=\Lambda(n)(n^\alpha+n^{-\alpha})$, zero multiset $\{\gamma\pm i\alpha\}$, and the exact
+identity
+\begin{equation}\label{eq:shifted}
+D_{\Xi_\alpha}(c)\;=\;2D_\zeta(c)\;+\;2\alpha^2\sum_\gamma\eE^{-(\re\gamma-c)^2/2\sigma^2}.
+\end{equation}
+\emph{(c)} The relative-accuracy normalization $1+D_\Gamma(c)$ is forced by the lower bound below:
+additive accuracy uniform in height is impossible for continuous semialgebraic estimators at any
+fixed scale, for reasons independent of RH.
+
+\subsection{The lower bound: non-adaptivity restores content}
+
+We work in a sampling model abstracting exactly the structure established for prime data in the
+proof of Lemma~\ref{lem:osc}.
+
+\begin{definition}\label{def:model}
+A \emph{data map at scale $\Lambda$} is $V=(V_1,\dots,V_N):\RR\to\CC^N$ with $V_j=A_j+P_j+E_j$,
+where each $P_j$ is Bohr almost periodic with absolutely convergent expansion
+$P_j(c)=\sum_{n\ge2}b_{j,n}\eE^{\pm ic\log n}$, $\sum_n|b_{j,n}|\le C_P$, and Gaussian truncation
+tail $|b_{j,n}|\le C\eE^{-\sigma^2(\log n-\Lambda)^2/2}$ for $\log n\ge\Lambda$; each $A_j$
+satisfies $|A_j(c+\tau)-A_j(c)|\le C_A(1+\tau)/(1+|c|)$ and $|A_j(c)|\le C_A\log(2+|c|)$; and
+$|E_j(c)|\le C_E\eE^{-|c|/C_E}$. A \emph{defect profile with an isolated quadruple at height
+$x_0$} is $D:\RR\to[0,\infty)$ with $D(x_0)\ge d_0>0$ and $D\le d_0/4$ on $[x_0+2\sigma,2x_0]$.
+\end{definition}
+
+Non-adaptive samples $V_j(c)=Z(c+\xi_j\sigma,\lambda_j)$, $\lambda_j\le\Lambda$, of any member of
+$\mathcal X$ form a data map at scale $\Lambda$; a member whose only off-line zeros are one
+conjugate quadruple at $\pm x_0\pm iy_0$ has a defect profile with $d_0=2y_0^2$.
+
+\begin{lemma}[H\"older--growth regularity]\label{lem:holder}
+Let $S:\RR^m\to\RR$ be continuous and semialgebraic. There are $C,q>0$ and $\theta\in(0,1]$ such
+that $|S(u)-S(v)|\le C(1+R)^q|u-v|^\theta$ for all $|u|,|v|\le R$, every $R\ge1$.
+\end{lemma}
+
+\begin{proof}
+The modulus $\Phi(R,s)=\sup\{|S(u)-S(v)|:|u|,|v|\le R,\ |u-v|\le s\}$ is finite, continuous and
+nondecreasing in $s$ with $\Phi(R,0)=0$, and semialgebraic in $(R,s)$ (first-order definability
+plus quantifier elimination). For fixed $R$, the \L ojasiewicz inequality for continuous
+semialgebraic functions \cite[Prop.~2.6.4]{BCR} gives $\Phi(R,s)\le C_Rs^{\theta_R}$ on $[0,1]$;
+Hardt semialgebraic triviality \cite[Thm.~9.3.2]{BCR} applied to the family $R\mapsto\Phi(R,\cdot)$
+shows only finitely many exponents occur, so $\theta=\min_R\theta_R>0$ is uniform; and the optimal
+constant $C(R)$ is semialgebraic in $R$, hence polynomially bounded \cite[Prop.~2.6.2]{BCR}. For
+$|u-v|\ge1$ use polynomial growth of $|S|$ on balls directly.
+\end{proof}
+
+\begin{theorem}[Height-uniformity is impossible at fixed scale]\label{thm:lower}
+Fix a data map $V$ at scale $\Lambda$ and a defect profile $D$ with an isolated quadruple at
+height $x_0$. If $S:\CC^N\to\RR$ is continuous, semialgebraic, and satisfies
+$\sup_{c\in\RR}|D(c)-S(V(c))|\le d_0/8$, then
+\[
+\Lambda\;\ge\;(1-o(1))\,\log\log x_0 ,
+\]
+where $o(1)\to0$ as $x_0\to\infty$ for fixed $(d_0,\sigma,N)$ and fixed regularity data
+$(C,q,\theta)$ of $S$.
+\end{theorem}
+
+\begin{proof}
+Assume $\Lambda\le\log\log x_0$. Fix $\delta\in(0,1)$. Truncating each $P_j$ at level $M$ costs
+$\sum_{n>M}|b_{j,n}|\le C\int_{\log M}^\infty\eE^{\ell-\sigma^2(\ell-\Lambda)^2/2}\dd\ell
+<\delta/4$ upon choosing
+$\log M=\Lambda+\sigma^{-2}+\sigma^{-1}\sqrt{2(\Lambda+\log(C''NC/\delta))}$ (complete the square;
+the factor $\eE^\ell$ is the integer count per unit of $\log n$). The truncated parts are
+trigonometric polynomials on a common frequency set of size $K\le M$. By pigeonhole on the
+$K$-torus (partition into $(C'/\delta)^K$ cells; consider the times $\tau_m=2\sigma m$,
+$0\le m\le(C'/\delta)^K$), there is $\tau\in[2\sigma,T(\delta)]$, $T(\delta)=2\sigma(C'/\delta)^K$,
+with $\|P_j(\cdot+\tau)-P_j\|_\infty<3\delta/4$ for all $j$ (two tail evaluations included).
+Provided
+\begin{equation}\label{eq:heightcond}
+T(\delta)\le\frac{\delta}{4C_A}\,x_0 ,
+\end{equation}
+we get $\tau\le x_0$, so $x_0+\tau\in[x_0+2\sigma,2x_0]$ and $D(x_0+\tau)\le d_0/4$, while
+$|V(x_0+\tau)-V(x_0)|\le2N\delta$ (slow variation of $A_j$, exponential smallness of $E_j$). Both
+data values lie in a ball of radius $R=C''\log x_0$, so by Lemma~\ref{lem:holder}
+\[
+|S(V(x_0))-S(V(x_0+\tau))|\le C(1+C''\log x_0)^q(2N\delta)^\theta\ \le\ d_0/4
+\]
+for the choice $\delta(x_0)=(\log x_0)^{-2q/\theta}$ and $x_0$ large. Then
+$\tfrac{3d_0}4\le|D(x_0)-D(x_0+\tau)|\le\tfrac{d_0}8+\tfrac{d_0}8+\tfrac{d_0}4$, a contradiction.
+Hence \eqref{eq:heightcond} fails: $T(\delta(x_0))\ge c\,\delta(x_0)x_0$. Taking logarithms, with
+$K\le M=\exp(\Lambda+O_\sigma(\sqrt{\log\log x_0}))$ and $\log(1/\delta)\asymp\log\log x_0$,
+\[
+\log x_0+O(\log\log x_0)\ \le\ K\log(C'/\delta)\ \le\
+\exp\bigl(\Lambda+O_\sigma(\sqrt{\log\log x_0})\bigr)\cdot O(\log\log x_0),
+\]
+whence $\Lambda\ge\log\log x_0-O_\sigma(\sqrt{\log\log x_0})$.
+\end{proof}
+
+\begin{remark}[Caveats and reading]\label{rem:caveats}
+(i) Theorem~\ref{thm:lower} constrains \emph{continuous} semialgebraic estimators; a semialgebraic
+$S$ may be discontinuous along a lower-dimensional wall, and ruling out wall-crossing requires
+controlling where the data curve meets the wall set --- open, though an estimator that changes its
+answer discontinuously under $o(1)$ input perturbations violates the de Bruijn--Newman robustness
+profile in spirit. (ii) The Dirichlet-type bound $T(\delta)\le(C/\delta)^K$ is wasteful; any
+improvement strengthens the conclusion. The point is qualitative: some wall exists for
+non-adaptive estimators at every scale, growing with height --- whereas
+Theorem~\ref{thm:encoding} shows no wall whatsoever exists for adaptive ones. (iii) Whether the
+$\zeta$ multiset realizes the isolated-quadruple hypothesis is exactly as unknowable as RH; the
+theorem is a statement about the estimator class over the model --- about what a proof of
+Conjectures~\ref{conj:repaired} or \ref{conj:uniform} is allowed to look like. It lives on an axis
+orthogonal to the classical exchange-rate wall $\Lambda(\varepsilon)\asymp\varepsilon^{-1/2}$
+(defect \emph{size} at given height versus uniformity in \emph{height} at given size); the two
+should be read together as the beginning of a two-parameter lower-bound theory that adaptivity had
+been projecting to zero.
+\end{remark}
+
+\subsection{The first test}
+The sharply posed, RH-free entry point is the shifted family: by \eqref{eq:shifted}, proving
+Conjecture~\ref{conj:repaired} \emph{for $\{\Xi_\alpha\}$ relative to $\zeta$} is exactly the
+problem of computing the smoothed paired count
+$\sum_\gamma\eE^{-(\re\gamma-c)^2/2\sigma^2}$ from finite-scale prime data to $o(1)$ --- a
+conjugation-paired sum with known nonzero defect, strictly easier than, and on the road to, the
+full conjecture. Its cross-term calculus (unconditional and RH-conditional bounds on the
+off-diagonal, pair-correlation part of $|Z|^2$ \cite{Montgomery1973,GoldstonMontgomery1987}) is
+the program's declared first test, now to be developed with the recurrence adversary of
+Theorem~\ref{thm:lower} in view. We also record the predicted mechanism for the eventual
+formula, as a signpost rather than a claim: quaternionic $S$-spectrum theory
+\cite{ColomboSabadiniStruppa2011,ACK2016} is natively conjugation-paired --- its resolvent kernel
+$(T^2-2\re(s)T+|s|^2)^{-1}$ is a function of $(s,\bar s)$ by construction, and axially symmetric
+zero sets of exactly our type are exactly the $S$-spectra --- so a trace formula for
+$S$-resolvents would be a conjugation-paired explicit formula; to our knowledge that machinery has
+never been aimed at number theory.
+
+%=====================================================================
+\section{Numerical certifications and reproducibility}\label{sec:numerics}
+
+Every numerical claim in the paper is reproducible from the ancillary files
+(\texttt{anc/}: \texttt{xi\_lib.py}, \texttt{explicit\_formula.py}, \texttt{si\_lib.py},
+drivers \texttt{run\_validation.py}, \texttt{run\_experiments.py}, \texttt{run\_bridge.py},
+\texttt{run\_si\_check.py}, the generator \texttt{make\_zeros.py}, a precomputed
+\texttt{zeros.txt}, and a README mapping each script to the claims it certifies; Python with
+numpy, scipy, mpmath, matplotlib; total runtime about $15$ minutes on commodity hardware).
+Figures~\ref{fig:lab} and \ref{fig:bridge} are generated by the included scripts.
+
+\emph{Validation} (\texttt{run\_validation.py}). The extension \eqref{eq:cosine} ($6$ theta
+terms, trapezoid rule, $du=5\times10^{-5}$ on $[0,3.2]$) matches $\xi(\tfrac12+ix)$ computed
+independently via mpmath to relative error $\le8\times10^{-10}$ at $x\in\{0,5,20,30\}$
+(at $x\le20$ the agreement is $\sim10^{-14}$ or better), and vanishes at the first zero ordinate
+to $7\times10^{-18}$, the quadrature floor. $\Xi_{DH}$ is real and even to relative $10^{-16}$
+at $30$-digit precision (sampled); Newton iteration on $f_{DH}$ from crude seeds recovers the
+off-line zeros \eqref{eq:DHspheres} with residuals $\le8\times10^{-30}$; the DH on-line
+ordinates in $[74,97]$ are recovered by sign-change bisection.
+
+\emph{Positivity experiments} (\texttt{run\_experiments.py}). Laguerre: relative margin of
+$L_1[\Xi]$ has minimum $0.173$ on $[0,52]$ (beyond $x\approx55$ the float64 quadrature floor is
+reached); for DH (rescaled $W=\eE^{\pi x/4}\Xi_{DH}$, sign-preserving since
+$L_1[\eE^{cx}g]=\eE^{2cx}L_1[g]$), $L_1<0$ exactly on $[85.417,85.982]$ (predicted
+$[85.391,86.008]$) and $[114.025,114.302]$ (predicted $[114.013,114.314]$), the shaving
+accounted for by neighboring on-line zeros, while the sphere-free control $[78,82]$ has
+$\min L_1\approx7.2\times10^2>0$. Sector energies (Gaussian weight, $20$ real ordinates plus an
+implanted sphere at $a=28$ with $y_0\in[10^{-3},10^{-0.5}]$): log--log slopes
+$2.000/4.000/6.000$ for $\ell=1,2,3$; $\EE_1$ of the real ordinates alone is exactly $0$;
+per-sphere $\EE_1$ for the three DH spheres: $4.360\times10^{-3}$, $1.062\times10^{-3}$,
+$2.593\times10^{-4}$ (successive ratios $4.11$, $4.10$ vs.\ predicted $(y_0/y_0')^2=4.18$,
+$4.11$).
+
+\emph{Bridge} (\texttt{run\_bridge.py}). Tables~\ref{tab:EF} and \ref{tab:rate}; the Gegenbauer
+identity \eqref{eq:gegenbauer2} below holds to $\le3\times10^{-14}$ at $z\in\{0.5,1,2,4\}$ with
+$80$ terms, where
+\begin{equation}\label{eq:gegenbauer2}
+\frac{\sinh(2z)}{2z}=\sum_{\ell\ge0}(2\ell+1)\,i_\ell(z)^2
+\end{equation}
+(the modified-Bessel decomposition of the sphere anomaly kernel over the same sectors as
+\S\ref{sec:positivity}; specialize \cite[10.60.2, 10.47.12]{DLMF}, classically
+\cite[\S11.4]{Watson1944}). The implant fit in Table~\ref{tab:rate} is biased because
+$\eE^{2\lambda y_0}=\eE^5$ at the window edge barely clears the oscillatory background; the DH
+sphere, with $\eE^{2\lambda y_0}=\eE^{15.4}$, gives the rate to four digits.
+
+\begin{table}[ht]
+\centering
+\caption{Certification of \eqref{eq:EF} on the family \eqref{eq:Z}, $\sigma=2$, $250$ zeros:
+zero side vs.\ pole${}+{}$archimedean${}+{}$prime side.}\label{tab:EF}
+\begin{tabular}{lll}
+\toprule
+$(c,\lambda)$ & zero side & $|\Delta|$ \\
+\midrule
+$(20,0)$ & $1.86901176$ & $1.1\times10^{-10}$\\
+$(20,1)$ & $0.96584078+1.42563531i$ & $1.2\times10^{-9}$\\
+$(20,2)$ & $-0.85353747+1.53365468i$ & $6.4\times10^{-9}$\\
+$(20,3)$ & $-1.80938739+0.21232192i$ & $1.8\times10^{-8}$\\
+$(35,2)$ & $-0.38300486+0.14677138i$ & $4.8\times10^{-9}$\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[ht]
+\centering
+\caption{Rate experiment: $\sigma=2$, $\lambda\in[0.5,25]$, rate fitted to $\log|Z|$ on
+$\lambda>15$.}\label{tab:rate}
+\begin{tabular}{lccc}
+\toprule
+zero set & $|Z|^2$ at $\lambda=25$ & fitted rate & true $\sup y_\rho$ \\
+\midrule
+$\zeta$ zeros ($250$, real), $c=20$ & $3.2$ & $-0.0003$ & $0$\\
+same $+$ implanted sphere $y_0=0.1$ at $a=c$ & $6.9\times10^2$ & $0.105$ & $0.1$\\
+DH on-line ordinates only, $c=85.7$ & $5.8$ & $-0.009$ & $0$\\
+DH with its first sphere, $c=85.7$ & $2.1\times10^7$ & $\mathbf{0.3085}$ & $\mathbf{0.30852}$\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\emph{Second involution} (\texttt{si\_lib.py}, \texttt{run\_si\_check.py}; $800$ zeros at $25$
+digits, von Mangoldt data $n\le2\times10^4$, $\sigma=1$). The zero and prime sides of
+$Z(c,\log2)$ agree to $2.7\times10^{-14}$ at $c\in\{30,100,250,500\}$;
+$\osc_{[c-15,c+15]}F\ge2.01$ over $32$ windows spanning $[0,1160]$ and
+$\osc=2.89,\,3.25,\,2.49$ at $c=10^4,10^5,10^6$ (prime side), against the guaranteed effective
+bound $B_2/8=0.0676$ of Lemma~\ref{lem:osc}; and the encoding of Theorem~\ref{thm:encoding} is
+demonstrated end to end on a synthetic multiset (two on-line ordinates near $100$ replaced by the
+quadruple $\pm100.0745\pm0.25i$): the defect, $\sup_cD=0.125$, is recovered at $13$ test heights
+with worst error $1.8\times10^{-15}$, with correct zeros in the defect-free regions, and with no
+arithmetic input about the synthetic multiset used or even defined --- the numerical face of the
+diagnosis of \S\ref{sec:resolution}. (The demonstration uses the comfortable windows
+$[c-15,c+15]$, where the empirical oscillation constant is $r=2$, and a variant encoder; the
+$|c_j-c|\le\sigma$ form of Theorem~\ref{thm:encoding} holds with a smaller $r$.)
+
+\begin{figure}[p]
+\centering
+\includegraphics[width=\textwidth]{lab_results.pdf}
+\caption{Left: $L_1[\Xi]>0$ on $[0,60]$ (semilog). Center: $L_1[\Xi_{DH}]$ dips negative
+exactly inside the predicted windows $|x-a|<y_0$ at the first two DH spheres (shaded).
+Right: sector energies $\EE_\ell\propto y_0^{2\ell}$, measured slopes $2.00/4.00/6.00$.}
+\label{fig:lab}
+\end{figure}
+
+\begin{figure}[p]
+\centering
+\includegraphics[width=0.8\textwidth]{bridge_results.pdf}
+\caption{The rate criterion (Theorem~\ref{thm:F}) on real data: $|Z(c,\lambda)|^2$ versus
+$\lambda$ for $250$ real Riemann ordinates ($c=20$), the same plus an implanted sphere of radius
+$0.1$, the DH on-line ordinates near $c=85.7$, and DH with its first sphere ($y_0=0.30852$;
+fitted rate $0.3085$).}
+\label{fig:bridge}
+\end{figure}
+
+\subsection*{Acknowledgements}
+The synthesis of this program, the twistor-lift and explicit-formula computations, the numerical
+experiments, and substantial portions of the exposition were carried out with Claude (Anthropic)
+as a research assistant in August 2026. In particular, the Second Involution Conjecture was
+formulated in that collaboration; when the assistant was subsequently asked to attempt a proof,
+the outcome was the resolution reported in \S\S\ref{sec:resolution}--\ref{sec:repair} ---
+Theorem~\ref{thm:encoding}, Lemma~\ref{lem:osc}, Theorem~\ref{thm:lower}, and the repaired
+conjectures --- whose mathematics was drafted by the assistant and then checked by two further
+independent AI reviewers (an adversarial proof audit and a blind re-derivation of the formulas and
+constants), with the errors they found --- all in the first draft of the lower-bound section ---
+repaired. All mathematical claims were reviewed by the author, who takes sole responsibility for
+them, while not claiming the expertise to referee \S\S\ref{sec:resolution}--\ref{sec:repair};
+those sections have not yet had expert human review, which is warmly invited. Code and archival materials are available at \cite{ZenodoArchive}.
+
+%=====================================================================
+\begin{thebibliography}{99}
+\itemsep2pt
+
+\bibitem{ACK2016}
+D.~Alpay, F.~Colombo, and D.~P. Kimsey,
+\emph{The spectral theorem for quaternionic unbounded normal operators based on the $S$-spectrum},
+J. Math. Phys. \textbf{57} (2016), 023503.
+
+\bibitem{Altavilla2018}
+A.~Altavilla,
+\emph{Twistor interpretation of slice regular functions},
+J. Geom. Phys. \textbf{123} (2018), 184--208.
+
+\bibitem{AltavillaSarfatti2019}
+A.~Altavilla and G.~Sarfatti,
+\emph{Slice-polynomial functions and twistor geometry of ruled surfaces in $\mathbb{CP}^3$},
+Math. Z. \textbf{291} (2019), 1059--1092.
+
+\bibitem{Baker2015}
+E.~B. Baker III,
+\emph{Quaternionic analysis with applications to the Riemann zeta function},
+manuscript (2015); archived in \cite{ZenodoArchive}.
+
+\bibitem{Baker2016}
+E.~B. Baker III,
+\emph{The quaternion-regular exponential and the three dimensional Clifford--Fourier kernel},
+manuscript (2016); archived in \cite{ZenodoArchive}.
+
+\bibitem{Baker2017}
+E.~B. Baker III,
+\emph{Twistor holomorphicity},
+manuscript (2017); archived in \cite{ZenodoArchive}.
+
+\bibitem{Baker2022arXiv}
+E.~B. Baker III,
+\emph{Causal and self-dual morphisms in four complex dimensions},
+arXiv:2203.07952 (2022).
+
+\bibitem{Baker2023arXiv}
+E.~B. Baker III,
+\emph{Generalized conformal maps as classical symmetries of Yang--Mills fields},
+arXiv:2301.00029 (2023).
+
+\bibitem{ZenodoArchive}
+E.~B. Baker III,
+\emph{The zero-sphere program: archival manuscripts, working memos, and code (2015--2026)},
+Zenodo, DOI: [to appear].
+
+\bibitem{BCR}
+J.~Bochnak, M.~Coste, and M.-F. Roy,
+\emph{Real Algebraic Geometry},
+Ergeb. Math. Grenzgeb. (3) \textbf{36}, Springer, Berlin, 1998.
+
+\bibitem{Bombieri2000}
+E.~Bombieri,
+\emph{Remarks on Weil's quadratic functional in the theory of prime numbers, I},
+Atti Accad. Naz. Lincei Rend. Lincei Mat. Appl. \textbf{11} (2000), 183--233.
+
+\bibitem{CGSS2009}
+F.~Colombo, G.~Gentili, I.~Sabadini, and D.~C. Struppa,
+\emph{Extension results for slice regular functions of a quaternionic variable},
+Adv. Math. \textbf{222} (2009), 1793--1808.
+
+\bibitem{ColomboSabadiniStruppa2011}
+F.~Colombo, I.~Sabadini, and D.~C. Struppa,
+\emph{Noncommutative Functional Calculus},
+Progress in Mathematics \textbf{289}, Birkh\"auser, Basel, 2011.
+
+\bibitem{Connes2016}
+A.~Connes,
+\emph{An essay on the Riemann Hypothesis},
+in \emph{Open Problems in Mathematics} (J.~F. Nash Jr., M.~Th. Rassias, eds.), Springer, 2016,
+225--257.
+
+\bibitem{CsordasVarga1990}
+G.~Csordas and R.~S. Varga,
+\emph{Necessary and sufficient conditions and the Riemann hypothesis},
+Adv. in Appl. Math. \textbf{11} (1990), 328--357.
+
+\bibitem{CsordasVishnyakova2013}
+G.~Csordas and A.~Vishnyakova,
+\emph{The generalized Laguerre inequalities and functions in the Laguerre--P\'olya class},
+Cent. Eur. J. Math. \textbf{11} (2013), 1643--1650.
+
+\bibitem{Davenport2000}
+H.~Davenport,
+\emph{Multiplicative Number Theory}, 3rd ed., revised by H.~L. Montgomery,
+Graduate Texts in Mathematics \textbf{74}, Springer, New York, 2000.
+
+\bibitem{DavenportHeilbronn1936a}
+H.~Davenport and H.~Heilbronn,
+\emph{On the zeros of certain Dirichlet series (I)},
+J. London Math. Soc. \textbf{11} (1936), 181--185.
+
+\bibitem{DavenportHeilbronn1936b}
+H.~Davenport and H.~Heilbronn,
+\emph{On the zeros of certain Dirichlet series (II)},
+J. London Math. Soc. \textbf{11} (1936), 307--312.
+
+\bibitem{DLMF}
+\emph{NIST Digital Library of Mathematical Functions}, \url{https://dlmf.nist.gov/},
+Release 1.2.x; F.~W.~J. Olver et al., eds.
+
+\bibitem{GentiliStoppato2008}
+G.~Gentili and C.~Stoppato,
+\emph{Zeros of regular functions and polynomials of a quaternionic variable},
+Michigan Math. J. \textbf{56} (2008), 655--667.
+
+\bibitem{GSSbook}
+G.~Gentili, C.~Stoppato, and D.~C. Struppa,
+\emph{Regular Functions of a Quaternionic Variable}, 2nd ed.,
+Springer Monographs in Mathematics, Springer, Cham, 2022.
+
+\bibitem{GentiliStruppa2007}
+G.~Gentili and D.~C. Struppa,
+\emph{A new theory of regular functions of a quaternionic variable},
+Adv. Math. \textbf{216} (2007), 279--301.
+
+\bibitem{GSS2014}
+G.~Gentili, S.~Salamon, and C.~Stoppato,
+\emph{Twistor transforms of quaternionic functions and orthogonal complex structures},
+J. Eur. Math. Soc. (JEMS) \textbf{16} (2014), 2323--2353.
+
+\bibitem{GhiloniPerotti2011}
+R.~Ghiloni and A.~Perotti,
+\emph{Slice regular functions on real alternative algebras},
+Adv. Math. \textbf{226} (2011), 1662--1691.
+
+\bibitem{GoldstonMontgomery1987}
+D.~A. Goldston and H.~L. Montgomery,
+\emph{Pair correlation of zeros and primes in short intervals},
+in \emph{Analytic Number Theory and Diophantine Problems}, Birkh\"auser, 1987, 183--203.
+
+\bibitem{GriffithsHarris1978}
+P.~Griffiths and J.~Harris,
+\emph{Principles of Algebraic Geometry},
+Wiley, New York, 1978.
+
+\bibitem{GriffithsHarris1979}
+P.~Griffiths and J.~Harris,
+\emph{Algebraic geometry and local differential geometry},
+Ann. Sci. \'Ecole Norm. Sup. (4) \textbf{12} (1979), 355--432.
+
+\bibitem{Guinand1948}
+A.~P. Guinand,
+\emph{A summation formula in the theory of prime numbers},
+Proc. London Math. Soc. (2) \textbf{50} (1948), 107--119.
+
+\bibitem{IwaniecKowalski2004}
+H.~Iwaniec and E.~Kowalski,
+\emph{Analytic Number Theory},
+AMS Colloquium Publications \textbf{53}, Amer. Math. Soc., Providence, RI, 2004.
+
+\bibitem{Montgomery1973}
+H.~L. Montgomery,
+\emph{The pair correlation of zeros of the zeta function},
+Proc. Sympos. Pure Math. \textbf{24}, Amer. Math. Soc., 1973, 181--193.
+
+\bibitem{Polya1926}
+G.~P\'olya,
+\emph{Bemerkung \"uber die Integraldarstellung der Riemannschen $\xi$-Funktion},
+Acta Math. \textbf{48} (1926), 305--317.
+
+\bibitem{RodgersTao2020}
+B.~Rodgers and T.~Tao,
+\emph{The de Bruijn--Newman constant is non-negative},
+Forum Math. Pi \textbf{8} (2020), e6.
+
+\bibitem{Spira1994}
+R.~Spira,
+\emph{Some zeros of the Titchmarsh counterexample},
+Math. Comp. \textbf{63} (1994), 747--748.
+
+\bibitem{Titchmarsh1986}
+E.~C. Titchmarsh,
+\emph{The Theory of the Riemann Zeta-Function}, 2nd ed., revised by D.~R. Heath-Brown,
+Oxford University Press, 1986.
+
+\bibitem{Watson1944}
+G.~N. Watson,
+\emph{A Treatise on the Theory of Bessel Functions}, 2nd ed.,
+Cambridge University Press, 1944.
+
+\bibitem{Weil1952}
+A.~Weil,
+\emph{Sur les ``formules explicites'' de la th\'eorie des nombres premiers},
+Comm. S\'em. Math. Univ. Lund (1952), Tome Suppl\'ementaire, 252--265.
+
+\bibitem{Zak1993}
+F.~L. Zak,
+\emph{Tangents and Secants of Algebraic Varieties},
+Translations of Mathematical Monographs \textbf{127},
+Amer. Math. Soc., Providence, RI, 1993.
+
+\end{thebibliography}
+
+\end{document}

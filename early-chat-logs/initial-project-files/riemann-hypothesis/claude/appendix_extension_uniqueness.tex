@@ -1,0 +1,980 @@
+%%=====================================================================
+%% APPENDIX: Uniqueness of the canonical extension
+%% (multiplicative, linear-equivariant, and twistor-geometric)
+%%
+%% Standalone-compilable draft, prepared August 2026 with AI research
+%% assistance (Claude, Anthropic).  All identities marked [S] were
+%% verified symbolically (sympy); the verification script is part of
+%% the ancillary lab code.
+%%
+%% DROP-IN INSTRUCTIONS: delete everything between the PREAMBLE markers
+%% (the main paper already provides the document class, theorem
+%% environments, and most macros -- all custom macros below are
+%% \providecommand'ed, so they will not clash), keep everything between
+%% the BODY markers, and place it after \appendix in the main file.
+%% Citation keys are new; merge the thebibliography block at the end
+%% into the main bibliography.  Bibliographic data flagged
+%% "[verify]" should be added to the author's verbatim-check list.
+%%=====================================================================
+
+%%---------------------- PREAMBLE (delete on drop-in) ----------------
+\documentclass[11pt]{amsart}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage[margin=1.2in]{geometry}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+
+\title{Appendix: uniqueness of the canonical extension}
+\begin{document}
+\maketitle
+\appendix
+%%---------------------- END PREAMBLE --------------------------------
+
+%%---------------------- BODY ----------------------------------------
+\providecommand{\HH}{\mathbb{H}}
+\providecommand{\CC}{\mathbb{C}}
+\providecommand{\RR}{\mathbb{R}}
+\providecommand{\PP}{\mathbb{P}}
+\providecommand{\Sph}{\mathbb{S}}
+\providecommand{\CF}{\mathcal{D}}
+\providecommand{\OR}{\mathcal{O}_{\RR}(\CC)}
+\providecommand{\Rext}{\mathsf{R}}
+\providecommand{\im}{\operatorname{Im}}
+\providecommand{\re}{\operatorname{Re}}
+
+\section{Uniqueness of the canonical extension: multiplicative, linear-equivariant, and twistor-geometric}\label{app:uniqueness}
+
+This appendix addresses a foundational question raised by the very shape of
+the slice regular extension: the extension $\Rext f$ of an intrinsic
+holomorphic function $f$ carries \emph{the same} stem function on every
+slice, so the two new real dimensions of $\HH$ appear to do no analytic
+work --- in contrast with the passage from $\RR$ to $\CC$, where the
+harmonic conjugate is a nontrivial transform of the boundary data.  Why,
+then, is this the canonical extension?  And if one drops multiplicativity
+and asks only for an extension of $f$ from a \emph{single} slice into a
+richer function class (Fueter regular functions, or holomorphic geometry on
+twistor space), does a unique, ``harder-working'' extension exist?
+
+We prove three uniqueness theorems that together answer these questions.
+Informally: \emph{(i)} the slice extension is the unique multiplicative
+extension --- with no equivariance or regularity assumed, and for the
+elementary algebraic reason that $\HH$ contains no commutative subalgebra
+larger than a slice (Theorem~\ref{thm:mult}); \emph{(ii)} extension from a
+slice into Fueter-regular functions is never unique without symmetry
+(Proposition~\ref{prop:kernel}), is \emph{empty} as a restriction problem
+under symmetry (Corollary~\ref{cor:mismatch}), and, recast as a transform,
+is classified: every rotation- and translation-equivariant linear
+extension operator factors through the Fueter map $\Delta\circ\Rext$
+composed with a multiplier in $d/dz$, and dilation weight two singles out
+the Fueter map itself, up to a scalar
+(Theorem~\ref{thm:linclass}, Corollary~\ref{cor:fueterunique});
+\emph{(iii)} on twistor space, the extensions of $f$ from one slice within
+the fibration-compatible holomorphic class form a positive-dimensional
+moduli --- containing a circle of ``rotational moments,'' realized
+downstairs by the elementary family $q\mapsto uf(q)u^{-1}$ --- and exactly
+one member is slice regular, singled out by the incidence condition
+(Theorem~\ref{thm:twistormoduli}).
+% In the main text these results are quoted at: [cross-reference to the
+% discussion following Theorem B and the linear no-go Theorem D].
+
+Identities marked [S] were verified symbolically; the script is included
+with the ancillary code.
+
+\subsection{Notation}\label{app:notation}
+
+$\HH$ denotes the quaternions, $\Sph=\{J\in\HH: J^2=-1\}$ the sphere of
+imaginary units, $\CC_J=\RR+J\RR$ the slice through $J\in\Sph$.  A generic
+point is $q=x+yJ$ ($x,y\in\RR$, $J\in\Sph$); we write $r=|\im q|$ and
+$\omega=\im q/r\in\Sph$ for $q\notin\RR$.  Let
+\[
+\OR=\Bigl\{f(z)=\textstyle\sum_{n\ge0}c_nz^n \text{ entire},\ c_n\in\RR\Bigr\}
+\]
+be the real entire functions (equivalently: $f(\bar z)=\overline{f(z)}$;
+equivalently: entire and real on $\RR$), a commutative unital
+$\RR$-algebra under pointwise operations.  The \emph{slice (rotational)
+extension} of $f=\sum c_nz^n\in\OR$ is
+\[
+\Rext f(q)=\sum_{n\ge0}c_nq^n=\alpha(x,y)+J\beta(x,y),\qquad q=x+yJ,
+\]
+where $F=\alpha+i\beta$ is the stem of $f$ (so $\alpha$ is even and $\beta$
+odd in $y$, and $\alpha,\beta$ satisfy the Cauchy--Riemann equations
+$\alpha_x=\beta_y$, $\alpha_y=-\beta_x$).  These are precisely the entire
+\emph{intrinsic slice regular} functions \cite{app-GentiliStruppa,
+app-GhiloniPerotti}.
+% This R is the rotation map of [QuatRiemann2015, eq. 2.5]; insert the
+% main text's citation/cross-reference here.
+
+Writing $q=x_0+x_1i+x_2j+x_3k$, the left Cauchy--Fueter operator is
+\[
+\CF=\partial_{x_0}+i\,\partial_{x_1}+j\,\partial_{x_2}+k\,\partial_{x_3},
+\]
+acting by left multiplication; $\ker\CF$ on a domain is the space of
+(left) \emph{Fueter regular} (monogenic) functions there.  Since
+$\overline{\CF}\CF=\Delta$ (the Laplacian of $\RR^4$), the components of a
+Fueter regular function are harmonic, hence real-analytic.  Fueter's
+theorem \cite{app-Fueter,app-Sce,app-Qian} states that
+$\Delta\circ\Rext$ maps $\OR$ into entire Fueter regular functions; we
+reprove it in passing (Lemma~\ref{lem:fueter}).
+% Normalization note: the operator Q_0 of [QuatRiemann2015] equals
+% -(1/4) Delta o R in the present notation.
+
+\subsection{The multiplicative extension is unique}\label{app:mult}
+
+We first record the algebraic fact that ultimately forces the slice
+structure.
+
+\begin{lemma}\label{lem:commutant}
+Let $S\subseteq\HH$ be a commutative subset containing a nonreal element
+$p$.  Then $S\subseteq\CC_J$, where $J\in\Sph$ is determined (up to sign)
+by $p=a+bJ$, $b\neq0$.
+\end{lemma}
+
+\begin{proof}
+Commuting with $p=a+bJ$ ($a,b$ real, $b\neq0$) is equivalent to commuting
+with $J$.  Choose $K\in\Sph$ orthogonal to $J$, so that $\{1,J,K,JK\}$ is a
+real basis of $\HH$ and $KJ=-JK$.  For
+$w=\alpha+\beta J+\gamma K+\delta JK$ one computes
+$Jw-wJ=2\gamma JK-2\delta K$, which vanishes iff $\gamma=\delta=0$, i.e.\
+iff $w\in\CC_J$.
+\end{proof}
+
+By Frobenius' theorem the slices are the maximal commutative unital
+subalgebras of $\HH$: there is no commutative room in $\HH$ beyond a copy
+of $\CC$.
+
+\begin{theorem}[multiplicative rigidity]\label{thm:mult}
+Let $T$ assign to every $f\in\OR$ a function $Tf:\HH\to\HH$, subject to:
+\begin{enumerate}
+\item[\textup{(T1)}] $T$ is a unital $\RR$-algebra homomorphism into the
+algebra of all $\HH$-valued functions on $\HH$ with \emph{pointwise}
+operations: $T(f+g)=Tf+Tg$, $T(fg)=(Tf)(Tg)$, $T(\lambda f)=\lambda\,Tf$
+for $\lambda\in\RR$, and $T(1)=1$;
+\item[\textup{(T2)}] $T(\mathrm{id})(q)=q$ for all $q\in\HH$, where
+$\mathrm{id}(z)=z$;
+\item[\textup{(T3)}] for each fixed $q\in\HH$, the map $f\mapsto Tf(q)$ is
+sequentially continuous from the topology of locally uniform convergence
+on $\CC$ to $\HH$.
+\end{enumerate}
+Then $T=\Rext$.  In particular the slice extension is the unique
+multiplicative extension procedure, and its characteristic properties ---
+that $Tf$ restricts to $f$ on every slice, is slice regular, intrinsic,
+and takes each sphere $x+y\Sph$ to the sphere or point
+$\alpha+\beta\,\Sph$ --- are consequences, not assumptions.
+\end{theorem}
+
+\begin{proof}
+Fix $q\in\HH$ and let $\varphi=\mathrm{ev}_q\circ T:\OR\to\HH$, a unital
+$\RR$-algebra homomorphism by (T1).  By (T2) and multiplicativity,
+$\varphi(z^n)=\varphi(\mathrm{id})^n=q^n$, and by unitality with
+$\RR$-linearity, $\varphi(c)=c$ for $c\in\RR$; hence $\varphi(p)=p(q)$ for
+every real polynomial $p$.  If $f=\sum c_nz^n\in\OR$, its partial sums
+$S_Nf$ are real polynomials converging to $f$ locally uniformly on $\CC$,
+so by (T3)
+\[
+Tf(q)=\lim_{N\to\infty}\varphi(S_Nf)=\lim_{N\to\infty}\sum_{n\le N}c_nq^n
+=\Rext f(q).\qedhere
+\]
+\end{proof}
+
+\begin{remark}[general form without the normalization
+\textup{(T2)}]\label{rem:symbol}
+Dropping (T2), let $p(q):=T(\mathrm{id})(q)$.  For fixed $q$ the image of
+$\varphi=\mathrm{ev}_q\circ T$ is a homomorphic image of a commutative
+algebra, hence commutative, so by Lemma~\ref{lem:commutant} it lies in
+$\RR$ or in a slice $\CC_{J}$; in either case the argument above gives
+$Tf(q)=\Rext f\bigl(p(q)\bigr)$.  Thus \emph{every} continuous unital
+morphism from $\OR$ to pointwise $\HH$-valued functions is the pullback of
+the slice extension along an arbitrary ``symbol'' $p:\HH\to\HH$: the slice
+extension generates all of them, and (T2) merely normalizes $p=\mathrm{id}$.
+This is where Lemma~\ref{lem:commutant} --- i.e.\ Frobenius --- enters: the
+value algebra at each point must sit inside a single slice, so a
+multiplicative theory has no choice but to recycle the one-variable stem
+slice by slice.  The contrast with the passage $\RR\to\CC$ is now exact:
+$\CC$ is a commutative field extension of $\RR$, so a multiplicative
+extension can weave a genuinely new component (the harmonic conjugate)
+into the algebra; $\HH$ admits no commutative extension of $\CC$, so it
+cannot.
+\end{remark}
+
+\begin{remark}
+Hypothesis (T3) is used only to pass from polynomials to entire functions;
+no continuity in $q$, no measurability, and no equivariance is assumed.
+It is plausible that (T3) can be removed via automatic-continuity results
+for characters of Stein algebras; we do not pursue this.
+\end{remark}
+
+\subsection{Failure of uniqueness for unconstrained Fueter
+extension}\label{app:kernel}
+
+Suppose now we drop multiplicativity and ask, as in classical function
+theory, for an extension of a holomorphic $f$ from one slice into
+$\ker\CF$.  Existence is not the issue; uniqueness fails badly.
+
+\begin{proposition}\label{prop:kernel}
+With $q=x_0+x_1i+x_2j+x_3k$ and the slice $\CC_i=\{x_2=x_3=0\}$, the
+functions
+\[
+K_n(q)=(x_2-ix_3)^n,\qquad n\ge1,
+\]
+are entire Fueter regular and vanish identically on $\CC_i$; they span an
+infinite-dimensional subspace of $\ker\CF$.  Consequently, whenever a
+holomorphic function on $\CC_i\cap\Omega$ admits one Fueter-regular
+extension to an axially symmetric domain $\Omega$, it admits an
+infinite-dimensional affine family of them.  \textup{[S]}
+\end{proposition}
+
+\begin{proof}
+$K_n$ takes values in $\CC_i$ and is independent of $x_0,x_1$, so
+$\CF K_n=j\,\partial_{x_2}K_n+k\,\partial_{x_3}K_n
+=n\,j\,K_{n-1}+k\,(-i)\,n\,K_{n-1}=n\,(j-ki)\,K_{n-1}=0$,
+since $K_{n-1}$ commutes with $-i$ and $ki=j$.
+\end{proof}
+
+\begin{remark}[why symmetry is unavoidable]\label{rem:codim}
+The failure is structural, not accidental.  A first-order elliptic system
+in four variables is determined by data on a \emph{codimension-one}
+hypersurface --- this is the Cauchy--Kovalevskaya extension of Clifford
+analysis, which uniquely extends real-analytic data from
+$\RR^3\subset\HH$ to a monogenic function \cite{app-BDS}.  A slice has
+codimension two: as Cauchy data it is massively underdetermined.  Worse,
+codimension-two sets are polar (harmonic-capacity zero, removable) in
+$\RR^4$, so no potential-theoretic principle can even see slice data.
+Uniqueness of an extension from a slice can therefore only come from
+symmetry (\S\ref{app:linclass}) or from holomorphic geometry upstairs
+(\S\ref{app:twistor}) --- never from ellipticity alone.
+\end{remark}
+
+\subsection{Equivariance and the axial Vekua system}\label{app:axial}
+
+The group $Sp(1)$ of unit quaternions acts on $\HH$ by the rotations
+$q\mapsto uq\bar u$, which fix $\RR$ pointwise and realize $SO(3)$ on
+$\im\HH$.  Call $F:\Omega\to\HH$ (on an axially symmetric domain)
+\emph{equivariant} if
+\begin{equation}\label{eq:equiv}
+F(uq\bar u)=u\,F(q)\,\bar u\qquad\text{for all unit }u.
+\end{equation}
+Intrinsic slice regular functions are equivariant; equivariance is the
+precise meaning of ``rotational symmetry'' for extensions.
+
+\begin{lemma}[axial form]\label{lem:axialform}
+$F$ on $\Omega\setminus\RR$ satisfies \eqref{eq:equiv} iff
+\[
+F(q)=A(x,r)+\omega\,B(x,r),\qquad q=x+r\omega,
+\]
+with $A,B$ real-valued.  If $F$ is defined and continuous on
+$\Omega\cap\RR$ as well, then $B(x,r)\to0$ as $r\to0$.
+\end{lemma}
+
+\begin{proof}
+Split $F=F_0+F_v$ into real and imaginary parts; \eqref{eq:equiv} splits
+accordingly (the real part of $uw\bar u$ is the real part of $w$).  Then
+$F_0$ is invariant, hence a function $A(x,r)$.  For fixed $x$, the map
+$P\mapsto F_v(x+P)$ is an $SO(3)$-equivariant field on a spherical shell
+in $\RR^3\cong\im\HH$.  For $P\neq0$ the stabilizer of $P$ in $SO(3)$ is
+the circle of rotations about $P$, and \eqref{eq:equiv} forces $F_v(x+P)$
+to be fixed by it, hence parallel to $P$: $F_v=B(x,r)\,\omega$ with
+$B=\langle F_v,\omega\rangle$ real, invariant, so a function of $(x,r)$.
+At $P=0$, equivariance forces $F_v(x)=0$, giving the boundary statement.
+The converse is a direct check.
+\end{proof}
+
+\begin{lemma}[axial Cauchy--Fueter system]\label{lem:axialsystem}
+For $F=A(x,r)+\omega B(x,r)$ of class $C^1$ on $\Omega\setminus\RR$,
+\begin{equation}\label{eq:vekua}
+\CF F=\Bigl(A_x-B_r-\frac{2}{r}B\Bigr)
++\omega\,\bigl(A_r+B_x\bigr).
+\end{equation}
+In particular $F$ is Fueter regular iff $(A,B)$ solves the Vekua-type
+system $A_x=B_r+\tfrac2rB$, $\ A_r=-B_x$.  \textup{[S]}
+\end{lemma}
+
+\begin{proof}
+Write $\CF=\partial_x+\sum_{i=1}^3e_i\partial_i$ with
+$e_1,e_2,e_3=i,j,k$ and $\partial_i=\partial_{x_i}$.  First,
+$\CF A=A_x+\sum_ie_i\tfrac{x_i}{r}A_r=A_x+\omega A_r$.  Next,
+$\CF(\omega B)=\omega B_x
++\bigl(\sum_ie_i\partial_i\omega\bigr)B
++\bigl(\sum_ie_i\tfrac{x_i}{r}\bigr)\omega\,B_r$.
+The last factor is $\omega\cdot\omega=-1$.  For the middle one,
+\[
+\sum_ie_i\,\partial_i\Bigl(\frac{\im q}{r}\Bigr)
+=\sum_ie_i\Bigl(\frac{e_i}{r}-\frac{x_i}{r^3}\im q\Bigr)
+=\frac{-3}{r}-\omega\cdot\frac{r\omega}{r^2}
+=-\frac{3}{r}+\frac{1}{r}=-\frac{2}{r}.
+\]
+Collecting terms gives \eqref{eq:vekua}.
+\end{proof}
+
+The $\tfrac2rB$ term --- the trace of the two transverse dimensions --- is
+the entire obstruction to compatibility between Fueter regularity and
+holomorphy:
+
+\begin{corollary}[Vekua mismatch]\label{cor:mismatch}
+Let $F$ be equivariant and Fueter regular on a connected axially symmetric
+$\Omega$, and suppose its restriction to (one half of) a single slice is
+holomorphic, i.e.\ $(A,B)$ satisfies the Cauchy--Riemann equations
+$A_x=B_r$, $A_r=-B_x$.  Then $F$ is constant.  Consequently \emph{no}
+nonconstant holomorphic function admits an equivariant Fueter-regular
+extension in the sense of restriction: posed as a boundary-value problem,
+the equivariant extension problem into $\ker\CF$ is empty, and any
+equivariant passage from holomorphic data to $\ker\CF$ must be a
+\emph{transform} rather than an extension.
+\end{corollary}
+
+\begin{proof}
+Subtracting the two first-order systems gives $\tfrac2rB\equiv0$, so
+$B\equiv0$, whence $A_x=A_r=0$.
+\end{proof}
+
+The same computation quantifies the failure for the slice extension
+itself and yields Fueter's theorem with its inverse-square structure
+visible:
+
+\begin{lemma}[Fueter's theorem, with defect]\label{lem:fueter}
+For $f\in\OR$ with stem $\alpha+i\beta$,
+\[
+\CF(\Rext f)=-\frac{2\beta(x,r)}{r}
+\qquad\text{and}\qquad
+\Delta(\Rext f)\in\ker\CF \text{ on }\HH .
+\]
+Moreover $\partial_x\bigl(\Delta q^n\bigr)=n\,\Delta q^{n-1}$ for all
+$n\ge1$ \textup{(}Appell property\textup{)}, $\Delta1=\Delta q=0$,
+$\Delta q^2=-4$, and $\Delta q^n\neq0$ for all $n\ge2$.  \textup{[S]}
+\end{lemma}
+
+\begin{proof}
+The first identity is Lemma~\ref{lem:axialsystem} with $(A,B)=
+(\alpha,\beta)$ satisfying Cauchy--Riemann: the vector part cancels and
+the scalar part collapses to $-2\beta/r$.  Since $\CF$ and $\Delta$ have
+constant coefficients, $\CF\Delta(\Rext f)=\Delta\bigl(-2\beta/r\bigr)$;
+for a function $g(x,r)$ one has $\Delta g=g_{xx}+g_{rr}+\tfrac2rg_r$, and
+with $g=\beta/r$,
+\[
+\Delta\frac{\beta}{r}
+=\frac{\beta_{xx}+\beta_{rr}}{r}
+-\frac{2\beta_r}{r^2}+\frac{2\beta}{r^3}
++\frac{2}{r}\Bigl(\frac{\beta_r}{r}-\frac{\beta}{r^2}\Bigr)=0,
+\]
+because $\beta$ is harmonic in $(x,r)$.  This proves regularity on
+$\HH\setminus\RR$; on all of $\HH$ it follows by continuity of
+$\CF\Delta\Rext f$ (the components of $\Delta\Rext f$ are real-analytic,
+see Lemma~\ref{lem:homog} below, or by removability of the polar set
+$\RR$).  For the Appell property, $x$ is central, so
+$(q+t)^n=\sum_m\binom nm t^mq^{n-m}$ for real $t$ and
+$\partial_xq^n=nq^{n-1}$; $\partial_x$ commutes with $\Delta$.  Direct
+computation gives $\Delta q^2=-4$ [S].  If $\Delta q^n=0$ for some
+$n\ge2$, repeated application of $\partial_x$ gives $\Delta q^2=0$, a
+contradiction.
+\end{proof}
+
+\subsection{Classification of the equivariant linear
+extensions}\label{app:linclass}
+
+We now classify the linear extension procedures.  The result is a
+complete, explicitly parametrized description; the Fueter map is then
+pinned by its dilation weight.
+
+\begin{definition}\label{def:extop}
+An \emph{equivariant extension operator} is an $\RR$-linear map
+$T:\OR\to C(\HH,\HH)$ such that
+\begin{enumerate}
+\item[\textup{(L1)}] for each $q\in\HH$, $f\mapsto Tf(q)$ is sequentially
+continuous with respect to locally uniform convergence on $\CC$;
+\item[\textup{(L2)}] $T\bigl(f(\cdot+a)\bigr)(q)=Tf(q+a)$ for all
+$a\in\RR$;
+\item[\textup{(L3)}] $Tf(uq\bar u)=u\,Tf(q)\,\bar u$ for all unit $u$;
+\item[\textup{(L4)}] $Tf$ is Fueter regular on all of $\HH$.
+\end{enumerate}
+$T$ has \emph{weight} $w\in\RR$ if moreover
+\begin{enumerate}
+\item[\textup{(L5)}] $T\bigl(f(\lambda\cdot)\bigr)(q)
+=\lambda^{w}\,Tf(\lambda q)$ for all $\lambda>0$.
+\end{enumerate}
+\end{definition}
+
+Note that (L4) makes each $Tf$ real-analytic (components are harmonic),
+and that $\Delta\circ\Rext$ satisfies (L1)--(L5) with $w=2$, while
+$\Rext$ itself satisfies (L1)--(L3), (L5) with $w=0$ but of course not
+(L4).
+
+\begin{lemma}\label{lem:derivative}
+\textup{(L1)}$+$\textup{(L2)} imply $T(f')=\partial_x(Tf)$ for all
+$f\in\OR$.
+\end{lemma}
+
+\begin{proof}
+For real $a\to0$, $\bigl(f(\cdot+a)-f\bigr)/a\to f'$ locally uniformly on
+$\CC$ (Cauchy estimates).  Apply (L1) at fixed $q$ and (L2) to the left
+side; the right side becomes the $x$-difference quotient of $Tf$ at $q$,
+which converges to $\partial_xTf(q)$ since $Tf$ is real-analytic.
+\end{proof}
+
+\begin{lemma}\label{lem:xindep}
+An equivariant $G\in\ker\CF$ defined on all of $\HH$ with
+$\partial_xG=0$ is a real constant.
+\end{lemma}
+
+\begin{proof}
+Write $G=A(r)+\omega B(r)$ (Lemma~\ref{lem:axialform}).  The system
+\eqref{eq:vekua} gives $B_r+\tfrac2rB=0$, i.e.\ $(r^2B)_r=0$, so
+$B=c/r^2$; continuity of $G$ at the axis (Lemma~\ref{lem:axialform})
+forces $c=0$, then $A_r=0$.
+\end{proof}
+
+\begin{lemma}[homogeneous axial monogenics]\label{lem:homog}
+For $k\in\mathbb{Z}$ let $V_k$ be the real vector space of equivariant
+Fueter-regular $F:\HH\to\HH$, continuous on $\HH$, positively homogeneous
+of degree $k$.  Then
+\[
+V_k=\RR\cdot\Delta q^{k+2}\ (\dim_\RR V_k=1)\ \text{ for }k\ge0,
+\qquad V_k=0\ \text{ for }k<0.  \quad\textup{[S]}
+\]
+\end{lemma}
+
+\begin{proof}
+\emph{Existence.}  $\Delta q^{k+2}$ is Fueter regular
+(Lemma~\ref{lem:fueter}), equivariant ($\Rext$ is equivariant because
+$q\mapsto uq\bar u$ fixes $\RR$ and real coefficients pass through;
+$\Delta$ is rotation-invariant), homogeneous of degree $k$, and nonzero.
+
+\emph{Dimension bound.}  Components of $F$ are harmonic, hence
+real-analytic on $\HH$; comparing Taylor expansions at $0$ with
+homogeneity shows each component equals its degree-$k$ Taylor term, so
+components are homogeneous polynomials of degree $k$ (and $V_k=0$ for
+$k<0$, since a negative-degree homogeneous function is unbounded at $0$
+unless zero).  Write $F=A+\omega B$ as in Lemma~\ref{lem:axialform} and
+put $A(x,r)=F_0(x,r,0,0)$, $B(x,r)=F_1(x,r,0,0)$ (values at
+$\im q=r\,i$): these are polynomials in $(x,r)$.  The rotation by $\pi$
+about $j$ maps $(x,r,0,0)\mapsto(x,-r,0,0)$ and, acting on values, fixes
+the real part and reverses the $i$-component; equivariance therefore
+gives $A(x,-r)=A(x,r)$ and $B(x,-r)=-B(x,r)$.  Hence
+\[
+A=\sum_{m\ge0}a_m\,x^{k-2m}r^{2m},\qquad
+B=\sum_{m\ge0}b_m\,x^{k-1-2m}r^{2m+1}
+\]
+(finite sums; coefficients vanish when an exponent is negative).
+Substituting into the system \eqref{eq:vekua} and matching coefficients
+of $x^{k-1-2m}r^{2m}$ and of $x^{k-2-2m}r^{2m+1}$ gives
+\[
+(k-2m)\,a_m=(2m+3)\,b_m,\qquad
+2(m+1)\,a_{m+1}=-(k-1-2m)\,b_m ,
+\]
+so all $a_m,b_m$ are determined recursively by $a_0$.  Thus
+$\dim V_k\le1$, and the existence part gives equality.
+\end{proof}
+
+Introduce the normalized Appell family
+\[
+\psi_n:=-\frac{n!}{2\,(n+2)!}\,\Delta q^{\,n+2}\in V_n,
+\qquad n\ge0,
+\]
+so that $\psi_0=1$, $\psi_1=x+\tfrac13\,r\omega$, and
+$\partial_x\psi_n=n\,\psi_{n-1}$ [S].  Let
+$(n)_m=n(n-1)\cdots(n-m+1)$ denote the falling factorial.
+% These psi_n are, up to normalization, the axial monogenic Appell
+% polynomials of Falcao--Malonek [app-FalcaoMalonek]; flag for the
+% literature pass.
+
+\begin{theorem}[classification]\label{thm:linclass}
+Equivariant extension operators are classified by real sequences
+$(\lambda_m)_{m\ge0}$ via
+\begin{equation}\label{eq:classform}
+T(z^n)\;=\;\sum_{m=0}^{n}\lambda_m\,(n)_m\,\psi_{n-m},
+\qquad n\ge0,
+\end{equation}
+and $T$ is determined on all of $\OR$ by its values on polynomials.
+More precisely: the map $T\mapsto(\lambda_m)$ is injective; on the
+polynomial subalgebra the correspondence \eqref{eq:classform} is a
+bijection onto all real sequences; and every finitely supported sequence
+arises from an operator on all of $\OR$.  Equivalently, on polynomials
+$T=\Delta\circ\Rext\circ M$, where
+$M=-\tfrac12\sum_m\lambda_m\,I^2\partial^m$ is a translation-invariant
+``multiplier'' operator \textup{(}$I$ denoting antiderivative;
+$\Delta\circ\Rext$ annihilates the affine ambiguity of $I^2$, so $M$ is
+well defined\textup{)}: \emph{every equivariant linear extension
+procedure factors through the Fueter map}, and the moduli is exactly one
+real constant for each derivative order.
+\end{theorem}
+
+\begin{proof}
+Let $T$ be an equivariant extension operator and $\varphi_n:=T(z^n)$.  By
+(L3), (L4) each $\varphi_n$ is equivariant, entire Fueter regular; by
+Lemma~\ref{lem:derivative}, $\partial_x\varphi_n=n\varphi_{n-1}$
+(Appell system).  We show by induction that
+$\varphi_n\in\Psi_n:=\mathrm{span}\{\psi_0,\dots,\psi_n\}$ with the stated
+coefficients.  For $n=0$: $\partial_x\varphi_0=0$, so
+Lemma~\ref{lem:xindep} gives $\varphi_0=\lambda_0\psi_0$ for a unique
+$\lambda_0\in\RR$.  For the step, suppose
+$\varphi_{n-1}=\sum_{m=0}^{n-1}\lambda_m(n-1)_m\psi_{n-1-m}$.  The
+element $\chi_n:=\sum_{m=0}^{n-1}\lambda_m(n)_m\psi_{n-m}$ satisfies
+$\partial_x\chi_n=\sum_m\lambda_m(n)_m(n-m)\psi_{n-m-1}
+=n\,\varphi_{n-1}$, using $(n)_m(n-m)=n\,(n-1)_m$.  Hence
+$\partial_x(\varphi_n-\chi_n)=0$ and Lemma~\ref{lem:xindep} gives
+$\varphi_n=\chi_n+\lambda_n\psi_0$, which is \eqref{eq:classform}; the new
+constant $\lambda_n$ is uniquely determined as the coefficient of
+$\psi_0$.  This proves injectivity of $T\mapsto(\lambda_m)$, and (L1)
+determines $T$ on $\OR$ from the polynomials:
+$Tf(q)=\lim_NT(S_Nf)(q)$.
+
+Conversely, \eqref{eq:classform} defines, for an arbitrary sequence
+$(\lambda_m)$, an operator on polynomials with values in entire
+equivariant Fueter regular functions; the Appell relation gives
+\textup{(}the polynomial form of\textup{)} (L2) via the real Taylor
+identity $\psi_n(q+a)=\sum_k\binom nk a^k\psi_{n-k}(q)$, valid because
+$\partial_x\psi_n=n\psi_{n-1}$ and $\psi_n$ is real-analytic.  For a
+finitely supported sequence the operator extends to $\OR$ by
+$Tf=\sum_m\lambda_m\,\Delta\Rext\bigl(I^2f^{(m)}\bigr)\cdot(-\tfrac12)$,
+convergent by Lemma~\ref{lem:series}.  The multiplier form follows from
+$\Delta\Rext\bigl(I^2z^{\,j}\bigr)
+=\tfrac{j!}{(j+2)!}\,\Delta q^{\,j+2}=-2\,\psi_{j}$
+together with $\partial^mz^n=(n)_mz^{n-m}$.
+\end{proof}
+
+\begin{corollary}[uniqueness of the Fueter map]\label{cor:fueterunique}
+Let $T$ be an equivariant extension operator of weight $w$
+\textup{(L1)--(L5)}.  Then:
+\begin{enumerate}
+\item if $w\notin\mathbb{Z}_{\ge0}$, then $T=0$;
+\item if $w\in\mathbb{Z}_{\ge0}$, then
+$T=c\,\Delta\circ\Rext\circ\partial^{\,w-2}$ for a unique $c\in\RR$,
+where $\partial=\tfrac{d}{dz}$ and, for $w\in\{0,1\}$, the negative
+powers $\partial^{-1},\partial^{-2}$ denote antiderivatives on $\OR$
+\textup{(}whose affine ambiguity is annihilated by
+$\Delta\circ\Rext$\textup{)}.
+\end{enumerate}
+In particular $w=2$ forces $T=c\,\Delta\circ\Rext$: \emph{up to
+normalization, the Fueter map is the unique derivative-free equivariant
+linear extension of holomorphic data into Fueter regular functions, and
+every equivariant linear extension of any weight is obtained from it by
+composing with a power of $d/dz$.}
+\end{corollary}
+
+\begin{proof}
+Nonzero homogeneous equivariant monogenics of distinct degrees are
+linearly independent, and in \eqref{eq:classform} the summand
+$\lambda_m(n)_m\psi_{n-m}$ is homogeneous of degree $n-m$.  Applying
+(L5) to $z^n$ gives $\varphi_n(\lambda q)=\lambda^{\,n-w}\varphi_n(q)$,
+so every summand of $\varphi_n$ must have degree $n-w$: hence
+$\lambda_m(n)_m=0$ whenever $m\neq w$, and taking $n=m$ gives
+$\lambda_m=0$ for all $m\neq w$.  If $w\notin\mathbb{Z}_{\ge0}$ this
+kills every coefficient, and $T=0$ on polynomials, hence on $\OR$ by
+(L1).  If $w\in\mathbb{Z}_{\ge0}$, then
+$T(z^n)=\lambda_w\,(n)_w\,\psi_{n-w}$, while
+\[
+\Delta\Rext\,\partial^{\,w-2}z^n
+=\frac{n!}{(n-w+2)!}\,\Delta q^{\,n-w+2}
+\quad\text{and}\quad
+\psi_{n-w}=-\frac{(n-w)!}{2\,(n-w+2)!}\,\Delta q^{\,n-w+2},
+\]
+so, using $(n)_w\,(n-w)!=n!$, the two agree up to the constant
+$c=-\lambda_w/2$, for every $n$.  Thus $T=c\,\Delta\Rext\,
+\partial^{\,w-2}$ on polynomials; both sides satisfy (L1) (the right
+side by Lemma~\ref{lem:series}, applied to $\partial^{\,w-2}f\in\OR$),
+so they agree on $\OR$.
+\end{proof}
+
+\begin{remark}\label{rem:integralweights}
+The weight grading is thus a $\mathbb{Z}_{\ge0}$-tower generated by a
+single operator, $\Delta\circ\Rext$, composed with powers of $d/dz$:
+one real parameter in each nonnegative integer weight and nothing else.
+The slice extension $\Rext$ is \emph{not} in the tower (it fails (L4));
+it is instead the unique \emph{multiplicative} extension
+(Theorem~\ref{thm:mult}).  The two canonical objects --- $\Rext$ and
+$\Delta\circ\Rext$ --- therefore admit intrinsic characterizations on
+opposite sides of the same divide: algebra forces triviality of the
+fibers; equivariant linearity forces the Laplacian.
+\end{remark}
+
+\begin{lemma}\label{lem:series}
+For $f=\sum c_nz^n\in\OR$, the series $\sum_nc_n\,q^n$ and all its
+termwise partial derivatives converge locally uniformly on $\HH$; in
+particular $\Delta\Rext f=\sum_nc_n\,\Delta q^n$ locally uniformly, and
+$\Rext f$, $\Delta\Rext f$ are real-analytic on $\HH$ with globally
+convergent power series.
+\end{lemma}
+
+\begin{proof}
+Since $x$ is central,
+\[
+q^n=\sum_{j}\binom njx^{\,n-j}(\im q)^j,\qquad
+(\im q)^{2m}=(-1)^mr^{2m},\quad
+(\im q)^{2m+1}=(-1)^mr^{2m}\,\im q;
+\]
+thus
+each $q^n$ is a polynomial in $(x_0,\dots,x_3)$ whose terms are
+dominated in absolute value by the terms of $(|x|+r)^n$.  Hence the
+convergent series $\sum_n|c_n|(|x|+r)^n$ dominates the multivariate
+series of $\sum c_nq^n$ absolutely and locally uniformly, and the
+standard theory of convergent power series in $\RR^4$ permits termwise
+differentiation.
+\end{proof}
+
+\begin{remark}[what this classification does and does not
+give]\label{rem:noinfo}
+Every operator in Theorem~\ref{thm:linclass} is $\RR$-linear and
+injective in $f$ (compose with $\partial_x^{\,m}$ and restrict), so the
+linear no-go of the main text applies verbatim: no continuous linear
+functional of any equivariant linear extension distinguishes on-axis from
+off-axis zeros.
+% cross-reference Theorem D of the main text here.
+The content of the classification is therefore \emph{foundational} rather
+than discriminatory: it locates the Fueter map as the unique bottom of
+the linear tower (the ``harmonic-conjugate-like'' transform whose
+existence one might have doubted), while confirming that new information
+about zeros cannot enter through any linear extension --- consistent with
+the program's use of the tower \emph{quadratically}, through the sector
+energies.
+\end{remark}
+
+\begin{remark}[the graded tower and the inverse
+map]\label{rem:elltower}
+Two natural strengthenings are known or expected but not proved here.
+(i) By the inverse Fueter mapping theorem of Colombo--Sabadini--Sommen
+\cite{app-CSS}, $\Delta\circ\Rext$ surjects onto axially symmetric entire
+Fueter regular functions, with an explicit integral inverse: combined
+with Corollary~\ref{cor:fueterunique} this makes the weight-two operator
+an isomorphism onto its natural target, the exact analogue of
+$u\mapsto u+iv$.  (ii) Allowing the rotation group to act on values
+through the higher irreducible summands (spherical-harmonic weight
+$\ell\ge1$ rather than the axial case $\ell=0$ treated here) should
+produce, by the same Appell-plus-homogeneity scheme with Gegenbauer
+recursions replacing the two-term recursion of Lemma~\ref{lem:homog}, a
+unique generator in each $(\ell,w)$; these generators are the operators
+$Q_\ell$ of the underlying manuscripts and Sommen's axial monogenics of
+higher spin.  We flag this as expected and do not use it.
+% cite [QuatRiemann2015, §§5–8] and Sommen here.
+\end{remark}
+
+\subsection{The twistor picture: moduli of one-slice extensions and the
+incidence condition}\label{app:twistor}
+
+Finally we treat the geometric class.  We work on the incidence quadric
+in the notation of the main text%
+% cross-reference: §3 / Theorem B of the main text
+: $Q\cong\CC\PP^1_\zeta\times\CC\PP^1_w$ with the point $(\zeta,w)$,
+$\zeta=x+iy$, corresponding to $x+y\,\eta(w)\in\HH$, where
+$\eta:\CC\PP^1\to\Sph$ is the stereographic fiber coordinate.  Write
+$a(w)=-1/\bar w$ for the antipodal involution, so
+$\eta(a(w))=-\eta(w)$; the identification
+\begin{equation}\label{eq:deck}
+(\zeta,w)\sim(\bar\zeta,\,a(w))
+\end{equation}
+realizes $\HH\setminus\RR$ as the quotient of
+$\{\,\im\zeta\neq0\,\}\subset Q$ by the fixed-point-free involution
+\eqref{eq:deck}.  The two rulings of $Q$ are the sphere lifts
+($\zeta=\mathrm{const}$) and the slices with frozen complex structure
+($w=\mathrm{const}$); a \emph{fibration-compatible} holomorphic map is a
+holomorphic $\Phi$ on $Q$ mapping each ruling into itself (first ruling
+to first ruling, second to second).
+
+\begin{lemma}\label{lem:product}
+A fibration-compatible holomorphic $\Phi:Q\to Q$ is a product:
+$\Phi=F\times G$ with $F,G$ holomorphic self-maps of $\CC\PP^1$.
+\end{lemma}
+
+\begin{proof}
+Preservation of the first ruling means the first component of $\Phi$ is
+independent of $w$; of the second, that the second component is
+independent of $\zeta$.
+\end{proof}
+
+\begin{lemma}[descent]\label{lem:descent}
+$F\times G$ descends through \eqref{eq:deck} to a well-defined map on
+$\HH\setminus\RR$ iff $F(\bar\zeta)=\overline{F(\zeta)}$ and
+$G\circ a=a\circ G$.  If $F$ is the stem of $f\in\OR$ restricted
+suitably, the descended map is
+\begin{equation}\label{eq:twisted}
+\Phi_G\bigl(x+y\,\eta(w)\bigr)
+=\alpha(x,y)+\beta(x,y)\,\eta\bigl(G(w)\bigr).
+\end{equation}
+\end{lemma}
+
+\begin{proof}
+Compatibility with \eqref{eq:deck} requires
+$F(\bar\zeta)=\overline{F(\zeta)}$ in the first factor and
+$G(a(w))=a(G(w))$ in the second; then, writing $F=\alpha+i\beta$, the two
+representatives $(\zeta,w)$ and $(\bar\zeta,a(w))$ give
+$\alpha(x,y)+\beta(x,y)\eta(G(w))$ and
+$\alpha(x,-y)+\beta(x,-y)\,\eta\bigl(a(G(w))\bigr)
+=\alpha(x,y)+\beta(x,y)\,\eta(G(w))$, using $\alpha$ even, $\beta$ odd,
+$\eta\circ a=-\eta$.
+\end{proof}
+
+\begin{lemma}[equivariant self-maps of the fiber
+sphere]\label{lem:equivmaps}
+Let $G:\CC\PP^1\to\CC\PP^1$ be holomorphic with $G\circ a=a\circ G$.
+Then:
+\begin{enumerate}
+\item if $G$ is M\"obius, $G\in PSU(2)$, i.e.\ $G$ is a rotation of the
+sphere; conversely every rotation is equivariant;
+\item every continuous equivariant $G$ has odd degree, and equivariant
+holomorphic maps of every odd degree exist \textup{(}e.g.\
+$w\mapsto w^d$, $d$ odd, and its conjugates by rotations\textup{)};
+\item for every $w_0$, the equivariant M\"obius maps fixing $w_0$ form
+the circle of rotations about the axis through $\eta(w_0)$.
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+(1) Write $G$ as the M\"obius action of
+$M=\bigl(\begin{smallmatrix}p&s\\t&v\end{smallmatrix}\bigr)$, normalized
+to $pv-st=1$.  Since $a$ is the M\"obius-type action of
+$w\mapsto\overline{Jw}$ with
+$J=\bigl(\begin{smallmatrix}0&-1\\1&0\end{smallmatrix}\bigr)$, the
+relation $G\circ a=a\circ G$ reads $\overline{M}=\lambda\,J^{-1}MJ$ for
+some $\lambda\in\CC^\times$ (projective equality of matrices), i.e.\
+$\bar p=\lambda v$, $\bar s=-\lambda t$, $\bar t=-\lambda s$,
+$\bar v=\lambda p$.  Taking determinants, $\bar1=\lambda^2$, so
+$\lambda=\pm1$.  If $\lambda=1$, $v=\bar p$, $t=-\bar s$: $M\in SU(2)$.
+If $\lambda=-1$, $v=-\bar p$, $t=\bar s$, and
+$1=pv-st=-|p|^2-|s|^2<0$, impossible.
+(2) The degree statement is the odd-map theorem
+\cite[Prop.~2B.6]{app-Hatcher}.  For existence, $w\mapsto w^d$ with $d$
+odd satisfies $(-1/\bar w)^d=-1/\overline{w^d}$; conjugating by a
+rotation carrying $w_0$ to $0$ produces equivariant maps of degree $d$
+fixing any prescribed $w_0$.
+(3) A rotation fixing $w_0$ fixes the antipode $a(w_0)$ automatically and
+is a rotation about that axis; these form a circle in
+$PSU(2)\cong SO(3)$.
+\end{proof}
+
+\begin{theorem}[moduli of one-slice extensions; incidence
+rigidity]\label{thm:twistormoduli}
+Let $f\in\OR$ be nonconstant with stem $F=\alpha+i\beta$, fix
+$w_0\in\CC\PP^1$ and set $I_0=\eta(w_0)$.  For each equivariant
+holomorphic $G$ with $G(w_0)=w_0$ define $\Phi_G$ by \eqref{eq:twisted}.
+Then:
+\begin{enumerate}
+\item \textup{(extensions)} Each $\Phi_G$ is real-analytic on
+$\HH\setminus\RR$, extends continuously to $\RR$ by $f|_\RR$, restricts
+to $f$ on the slice $\CC_{I_0}$, and for each $w$ maps the slice
+$\CC_{\eta(w)}$ into $\CC_{\eta(G(w))}$ holomorphically with respect to
+the pair of complex structures $\bigl(\eta(w),\eta(G(w))\bigr)$.
+Distinct $G$ give distinct $\Phi_G$.
+\item \textup{(the circle of rotational moments)}  For $G$ the rotation
+by angle $\theta$ about the $I_0$-axis,
+\[
+\Phi_G(q)\;=\;u\,\Rext f(q)\,u^{-1},
+\qquad u=\cos\tfrac\theta2+I_0\sin\tfrac\theta2\in\CC_{I_0},
+\]
+which is real-analytic on all of $\HH$.  Thus already among everywhere
+real-analytic maps, the extensions of $f|_{\CC_{I_0}}$ in this class form
+at least a circle.  \textup{[S]}
+\item \textup{(incidence rigidity)}  $\Phi_G$ is slice regular if and
+only if $G=\mathrm{id}$, in which case $\Phi_G=\Rext f$ and its lift is
+the twistor lift $F\times\mathrm{id}$.  \textup{[S]}
+\end{enumerate}
+\end{theorem}
+
+\begin{proof}
+(1) Well-definedness is Lemma~\ref{lem:descent}; real-analyticity off
+$\RR$ is clear from \eqref{eq:twisted} in the chart $w$; the continuous
+extension follows from $\beta(x,y)\to0$ as $y\to0$.  On $\CC_{I_0}$:
+$G(w_0)=w_0$ (and $G(a(w_0))=a(w_0)$ by equivariance) give
+$\Phi_G(x+yI_0)=\alpha+\beta I_0=f(x+yI_0)$.  Slice-to-slice holomorphy:
+in the coordinates $(x,y)$ of $\CC_{\eta(w)}$ the map is
+$\alpha(x,y)+\beta(x,y)\eta(G(w))$ with $\alpha+i\beta$ holomorphic.
+Distinctness: if $\eta(G_1(w))\neq\eta(G_2(w))$ for some $w$, then since
+$f$ is nonconstant and intrinsic, $\beta\not\equiv0$ (else $f$ is
+real-valued on $\CC$, hence constant by the open mapping theorem), so
+$\Phi_{G_1}\neq\Phi_{G_2}$ on the slice $\CC_{\eta(w)}$.
+
+(2) A rotation of $\Sph$ about $I_0$ is realized as $J\mapsto uJ\bar u$
+with $u=\cos\tfrac\theta2+I_0\sin\tfrac\theta2$, and $\eta$ intertwines
+it with the corresponding element of $PSU(2)$ acting on $w$.  Then, since
+$\alpha,\beta$ are real,
+\[
+\Phi_G(x+y\,\eta(w))=\alpha+\beta\,u\,\eta(w)\bar u
+=u\bigl(\alpha+\beta\,\eta(w)\bigr)\bar u
+=u\,\Rext f(q)\,\bar u .
+\]
+This is a composition of $\Rext f$ with a fixed rotation of $\HH$, hence
+real-analytic on $\HH$.
+
+(3) Fix $w$ and write $\eta=\eta(w)$, $\eta'=\eta(G(w))$.  On the slice
+$\CC_\eta$, using Cauchy--Riemann,
+\[
+\tfrac12\bigl(\partial_x+\eta\,\partial_y\bigr)
+\bigl(\alpha+\beta\eta'\bigr)
+=\tfrac12\Bigl[\beta_y\bigl(1+\eta\eta'\bigr)
++\beta_x\bigl(\eta'-\eta\bigr)\Bigr].
+\]
+If $\eta'=\eta$ this vanishes identically ($1+\eta^2=0$): $\Phi_G$ is
+holomorphic on the slice with respect to the slice's own structure.  If
+$\eta'\neq\eta$: the real part of $1+\eta\eta'$ is
+$1-\langle\eta,\eta'\rangle>0$, while $\eta'-\eta$ is purely imaginary;
+vanishing of the bracket at every point of the slice forces first
+$\beta_y\equiv0$ (real parts) and then $\beta_x\equiv0$, so $\beta$ is
+constant, hence $\equiv0$ ($\beta$ vanishes on $\RR$), contradicting
+nonconstancy.  So slice regularity --- the vanishing of
+$\partial_x+\eta(w)\partial_y$ applied with each slice's \emph{own}
+structure --- holds iff $\eta(G(w))=\eta(w)$ for all $w$, i.e.\
+$G=\mathrm{id}$.  The lift of $\Phi_{\mathrm{id}}=\Rext f$ is
+$F\times\mathrm{id}$ by \eqref{eq:twisted}.
+\end{proof}
+
+\begin{remark}\label{rem:momentsdiscussion}
+Three comments.
+(i) The circle in (2) is the ``rotational moment'' ambiguity that
+motivated the search, beyond slice regularity, for a more rigid
+quaternionic function theory: it shows that \emph{holomorphy on the
+source slice plus any amount of smoothness} cannot single out an
+extension --- the conjugates $u\,\Rext f\,u^{-1}$ are everywhere
+real-analytic, agree with $f$ on $\CC_{I_0}$, and are even
+$I_0$-holomorphic there.  What kills the circle is the \emph{tautological
+(incidence) requirement} that each slice be mapped holomorphically with
+respect to its own complex structure --- the defining condition of slice
+regularity, and precisely the incidence-quadric geometry of the main
+text.
+(ii) The higher-degree twists in Lemma~\ref{lem:equivmaps}(2) give
+further extensions $\Phi_G$; near a real point $x_0$ with
+$f'(x_0)\neq0$ one has
+$\Phi_G(x_0+\delta)\approx f(x_0)+f'(x_0)\bigl(\re\delta
++|\im\delta|\,\eta(G(w(\widehat{\im\delta})))\bigr)$, and the
+positively homogeneous map
+$P\mapsto|P|\,\eta\bigl(G(w(\widehat P))\bigr)$ is differentiable at
+$0$ only when $\eta\circ G\circ w$ is the restriction of a linear map
+of $\RR^3$, i.e.\ when $G$ is a rotation.  So on domains meeting the
+real axis the moduli of \emph{everywhere-differentiable} extensions in
+this class is exactly the circle of (2), while on axially symmetric
+domains avoiding $\RR$ the full odd-degree moduli survives.
+(iii) Uniqueness through geometry thus has the same logical shape as
+uniqueness through algebra (Theorem~\ref{thm:mult}) and through
+equivariant linearity (Corollary~\ref{cor:fueterunique}): in each case a
+canonical object exists, and the apparent freedom --- symbols $p(q)$,
+multiplier sequences $(\lambda_m)$, equivariant fiber maps $G$ --- is
+exactly parametrized and then eliminated by one natural normalization
+(multiplicativity with $T(\mathrm{id})=q$; dilation weight two;
+incidence).
+\end{remark}
+
+\subsection{Summary}\label{app:summary}
+
+\begin{theorem}\label{thm:summary}
+Let $f$ be a nonconstant real entire function.
+\begin{enumerate}
+\item \textup{(Algebra.)}  The slice extension $\Rext f$ is the value at
+$f$ of the unique continuous unital $\RR$-algebra morphism $T$ from
+$\OR$ to pointwise $\HH$-valued functions with $T(\mathrm{id})(q)=q$
+\textup{(Theorem~\ref{thm:mult})}; the fiberwise triviality of $\Rext f$
+--- the same stem on every slice --- is forced by the absence of
+commutative subalgebras of $\HH$ larger than a slice.
+\item \textup{(Equivariant linearity.)}  The equivariant linear extension
+operators into entire Fueter regular functions are classified by
+\eqref{eq:classform} and all factor through the Fueter map; those of
+dilation weight $w$ form the one-real-parameter family
+$c\,\Delta\circ\Rext\circ\partial^{\,w-2}$ for each $w\in\mathbb{Z}_{\ge0}$
+\textup{(}and vanish for all other $w$\textup{)}, and weight two gives
+the Fueter map itself --- the unique derivative-free,
+harmonic-conjugate-like transform
+\textup{(Theorem~\ref{thm:linclass},
+Corollary~\ref{cor:fueterunique})}.
+\item \textup{(Geometry.)}  The fibration-compatible holomorphic
+extensions of $f$ from a single slice $\CC_{I_0}$ are exactly the maps
+$\Phi_G$ of \eqref{eq:twisted} with $G$ an equivariant holomorphic
+self-map of the fiber sphere fixing $w_0$; they include the circle
+$q\mapsto u\,\Rext f(q)\,u^{-1}$, $u\in\CC_{I_0}$, $|u|=1$, and exactly
+one of them is slice regular: $G=\mathrm{id}$, whose lift is the twistor
+lift \textup{(Theorem~\ref{thm:twistormoduli})}.
+\end{enumerate}
+\end{theorem}
+
+\begin{remark}
+Because every operator in (2) is linear in $f$, the linear no-go theorem
+of the main text applies to the entire classified family: none of these
+extensions, however nontrivially it mixes the components of $f$, can
+distinguish real zeros from zero spheres through a linear pairing.  The
+theorems of this appendix are therefore foundational for the program ---
+they certify that the object $\Xi(q)$, its Fueter transform, and its
+twistor lift are each \emph{the} canonical object of its kind, with the
+apparent alternatives exactly enumerated and normalized away --- while
+the discriminating structures must remain, as in the main text,
+nonlinear, equivariant-geometric, or spectral.
+\end{remark}
+
+%%---------------------- BIBLIOGRAPHY (merge into main bib) ----------
+\begin{thebibliography}{99}
+
+\bibitem{app-BDS}
+F.~Brackx, R.~Delanghe, F.~Sommen,
+\emph{Clifford Analysis},
+Research Notes in Mathematics 76, Pitman, Boston, 1982.
+% CK extension: Chapter II. [verify chapter/page]
+
+\bibitem{app-CSS}
+F.~Colombo, I.~Sabadini, F.~Sommen,
+The inverse Fueter mapping theorem,
+\emph{Commun.\ Pure Appl.\ Anal.}\ \textbf{10} (2011).
+% [verify volume/pages; there is also "The inverse Fueter mapping
+% theorem in integral form", Math. Methods Appl. Sci., ~2011.]
+
+\bibitem{app-FalcaoMalonek}
+M.~I.~Falc\~ao, H.~R.~Malonek,
+Generalized exponentials through Appell sets in $\mathbb{R}^{n+1}$ and
+Bessel functions,
+AIP Conference Proceedings \textbf{936} (2007), 738--741.
+% Appell systems of axial monogenic polynomials. [verify; related:
+% Ca\c{c}\~ao–Falc\~ao–Malonek]
+
+\bibitem{app-Fueter}
+R.~Fueter,
+Die Funktionentheorie der Differentialgleichungen $\Delta u=0$ und
+$\Delta\Delta u=0$ mit vier reellen Variablen,
+\emph{Comment.\ Math.\ Helv.}\ \textbf{7} (1935), 307--330.
+% [verify pages]
+
+\bibitem{app-GentiliStruppa}
+G.~Gentili, D.~C.~Struppa,
+A new theory of regular functions of a quaternionic variable,
+\emph{Adv.\ Math.}\ \textbf{216} (2007), 279--301.
+
+\bibitem{app-GhiloniPerotti}
+R.~Ghiloni, A.~Perotti,
+Slice regular functions on real alternative algebras,
+\emph{Adv.\ Math.}\ \textbf{226} (2011), 1662--1691.
+% [verify pages]
+
+\bibitem{app-GSS}
+G.~Gentili, S.~Salamon, C.~Stoppato,
+Twistor transforms of quaternionic functions and orthogonal complex
+structures,
+\emph{J.\ Eur.\ Math.\ Soc.}\ \textbf{16} (2014), 2323--2353.
+% [verify pages] arXiv:1205.3513.
+
+\bibitem{app-Hatcher}
+A.~Hatcher,
+\emph{Algebraic Topology},
+Cambridge University Press, 2002.
+% Odd-map theorem: Proposition 2B.6. [verify numbering]
+
+\bibitem{app-Qian}
+T.~Qian,
+Generalization of Fueter's result to $\mathbb{R}^{n+1}$,
+\emph{Atti Accad.\ Naz.\ Lincei Cl.\ Sci.\ Fis.\ Mat.\ Natur.\ Rend.\
+Lincei (9) Mat.\ Appl.}\ \textbf{8} (1997), 111--117.
+% [verify]
+
+\bibitem{app-Sce}
+M.~Sce,
+Osservazioni sulle serie di potenze nei moduli quadratici,
+\emph{Atti Accad.\ Naz.\ Lincei Rend.\ Cl.\ Sci.\ Fis.\ Mat.\ Nat.\ (8)}
+\textbf{23} (1957), 220--225.
+% [verify]
+
+% Also cite here, with the main text's keys: the underlying manuscript
+% [QuatRiemann2015] (rotation map R, eq. 2.5; operators Q_ell; E_ell
+% kernels) and F. Sommen's papers on axial monogenics / plane waves for
+% Remark on the graded tower.
+
+\end{thebibliography}
+%%---------------------- END BODY ------------------------------------
+
+\end{document}

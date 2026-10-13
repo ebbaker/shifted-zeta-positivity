@@ -1,0 +1,67 @@
+
+==============================================================================
+PART 1  anchor: Lambda(z^2 + y0^2) must equal y0^2 / 2 exactly
+==============================================================================
+          y0   Lambda (bisected)        y0^2/2     ratio
+       2.000        2.0000000000  2.0000000000  1.000000
+       1.000        0.5000000000  0.5000000000  1.000000
+       0.500        0.1250000000  0.1250000000  1.000000
+       0.200        0.0200000000  0.0200000000  1.000000
+       0.100        0.0050000000  0.0050000000  1.000000
+       0.050        0.0012500000  0.0012500000  1.000000
+       0.020        0.0002000000  0.0002000000  1.000000
+
+==============================================================================
+PART 2  Lambda(p) on the standard test set (roots normalised to max 1)
+==============================================================================
+  p                               max |Im root|     Lambda(p)     min_x L_1  sign agree
+  z^2-1                  [hyp]         0.000000 -5.000000e-01     2.000e+00        True
+  (z-1)(z-2)             [hyp]         0.000000 -3.125000e-02     1.250e-01        True
+  (z^2-1)(z^2-4)         [hyp]         0.000000 -3.351740e-02     5.308e-01        True
+  z^2+1                  [NOT]         1.000000  5.000000e-01    -2.000e+00        True
+  z^2+z+1                [NOT]         0.866025  3.750000e-01    -1.500e+00        True
+  (z^2+1)(z-1)           [NOT]         1.000000  3.689772e-01    -1.949e+00        True
+  (z^2+1)(z^2+4)         [NOT]         1.000000  1.748159e-01    -6.250e-01        True
+  (z-1)((z+2)^2+9)       [NOT]         0.832050  2.554457e-01    -9.343e-01        True
+  memo5 quartic          [NOT]         0.008822  3.884689e-05    -4.522e-06        True
+  (z^2-1)(z^2+100)       [NOT]         1.000000  1.699047e-01     1.980e-02       False
+  (z^2-1)(z^2-4)(z^2+400)[NOT]         1.000000  1.008325e-01     5.348e-07       False
+
+  Lambda(p) <= 0 exactly for the hyperbolic cases and > 0 for the rest:
+  it is a genuine signed distance to hyperbolicity, unlike min_x L_1 which
+  is only a necessary condition.
+
+==============================================================================
+PART 3  is Lambda quadratic in the sphere radius, like everything else?
+==============================================================================
+  implanted pair at -0.25 +- i y0, fixed real roots at +-1 and 0.3;
+  NOT normalised, so y0 is literal.
+
+         y0      Lambda(p)   Lambda/y0^2     |min L_1|   |L_1|/y0^2  |L_1|/Lambda
+    1.0e-01   4.746502e-03      0.474650    5.2421e-03     0.524214      1.104422
+    5.0e-02   1.232685e-03      0.493074    1.3251e-03     0.530054      1.074999
+    2.0e-02   1.995445e-04      0.498861    2.1259e-04     0.531479      1.065384
+    1.0e-02   4.997142e-05      0.499714    5.3167e-05     0.531674      1.063956
+    5.0e-03   1.249821e-05      0.499928    1.3293e-05     0.531722      1.063596
+    2.0e-03   1.999954e-06      0.499989    2.1269e-06     0.531736      1.063496
+    1.0e-03   4.999971e-07      0.499997    5.3174e-07     0.531738      1.063481
+
+  Both columns 3 and 5 constant => BOTH quantities are exactly quadratic
+  in y0.  Column 6 constant => they are the SAME quantity up to a
+  configuration-dependent constant.
+
+==============================================================================
+PART 4  does the constant depend on the configuration?
+==============================================================================
+  same pair radius y0 = 0.01, different real backgrounds:
+  real roots                           Lambda/y0^2    |L_1|/y0^2  |L_1|/Lambda
+  [1.0, -1.0, 0.3]                        0.499714    5.3167e-01    1.0640e+00
+  [1.0, -1.0]                             0.499879    1.7576e+00    3.5161e+00
+  [2.0, -2.0, 0.5, -0.5]                  0.499090    1.0900e+00    2.1839e+00
+  [1.0, -1.0, 2.0, -2.0, 3.0, -3.0]       0.499842    2.1767e+03    4.3548e+03
+  [0.5, -0.4]                             0.497728    2.5325e-02    5.0882e-02
+
+  Lambda/y0^2 -> 1/2 regardless of background (the isolated-pair value),
+  while |L_1|/y0^2 varies by orders of magnitude with it.  So Lambda is the
+  CANONICAL quadratic, and the programme's discriminants are
+  configuration-dependent multiples of it.

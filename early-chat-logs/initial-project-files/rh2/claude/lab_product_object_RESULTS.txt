@@ -1,0 +1,147 @@
+
+PART 1 -- log|x| is the biharmonic Green's function of R^4
+----------------------------------------------------------
+  box(log r)          = 2/r**2    (= 2/r^2)
+  box(2/r^2)          = 0    => box^2 log r = 0 for r>0
+  (1/(4 pi^2 r^2) is the Laplace Green's fn in R^4, so box^2 log r = -8 pi^2 delta)
+
+  charge-1 datum: tr_k log f = -log(|x|^2 + c),  c = 2 rho^2
+  box^2 (-log(r^2+c)) = 96*c**2/(c + r**2)**4
+  integral over R^4   = 157.913670417  vs 16 pi^2 = 157.913670417
+  (closed form: 96 c^2/(r^2+c)^4 integrates to exactly 16 pi^2 for every c)
+
+  concentration as the size -> 0 (fraction of the 16 pi^2 inside r < 0.1):
+    c =  1.0e+00   mass(r<0.1)/16pi^2 = 0.000292
+    c =  1.0e-01   mass(r<0.1)/16pi^2 = 0.023291
+    c =  1.0e-02   mass(r<0.1)/16pi^2 = 0.500000
+    c =  1.0e-03   mass(r<0.1)/16pi^2 = 0.976709
+    c =  1.0e-04   mass(r<0.1)/16pi^2 = 0.999708
+  => the smooth density converges to 16 pi^2 * delta.  A zero-size
+     instanton IS a point mass of the biharmonic potential.
+
+PART 2 -- 't Hooft data: det f^{-1} = phi * prod |x-X_i|^2
+----------------------------------------------------------
+  f^{-1} = 2 wbar w + sum_n (a'_n + x_n)^2 ;  't Hooft: a' diagonal (centres),
+  all w_i aligned => 2 wbar w = 2 rho rho^T, rank one.  Matrix-determinant
+  lemma then gives det f^{-1} = (prod_i d_i) * (1 + sum_i 2 rho_i^2 / d_i),
+  d_i = |x - X_i|^2.  The second factor is the 't Hooft phi.
+
+   k    max rel. error over 400 random points
+   1                                4.151e-16
+   2                                9.402e-16
+   3                                1.845e-15
+   4                                2.326e-15
+   5                                3.207e-15
+
+  the point masses cancel exactly.  log det f^{-1} = log phi + sum log d_i,
+  and near a centre  phi ~ 2 rho_i^2/d_i,  so the two log singularities
+  cancel and log det f^{-1} -> log(2 rho_i^2) + regular.  Checked:
+      dist to centre 0     log det f^{-1}
+               1.0e-01      -0.4006984865
+               1.0e-02      -0.4717490333
+               1.0e-03      -0.4759913016
+               1.0e-04      -0.4763812593
+               1.0e-06      -0.4764237681
+               1.0e-08      -0.4764241928
+    limit predicted: log(2 rho_0^2 * prod_{i>0} d_i(X_0)) = -0.4764241970
+  => with a NONZERO size the potential is smooth at the centre and the
+     action density is smooth and positive.  Set every size to zero and
+     phi == 1: the cancellation switches off and box^2 log det is pure
+     point masses -- k charges, no field.
+
+PART 3 -- when does the product object have k real roots?
+---------------------------------------------------------
+  det[sum_n (a'_n + x_n)^2] = 0 at a real x  <=>  the four Hermitian k x k
+  matrices a'_n have a COMMON null vector for (a'_n + x_n), i.e. -x is a
+  SIMULTANEOUS eigenvalue.  So the roots of the product object are the
+  simultaneous eigenvalues of the position matrices, and they exist only
+  on the commuting locus.  Direct search over x in R^4:
+
+  case                                    k    min_x det (best of 25 starts)
+  commuting a'_n  (simultaneous eigs)     2                      -1.2986e-14   ||[a,a]||=3.38e-16
+  generic non-commuting a'_n              2                       1.4955e+01   ||[a,a]||=3.93e+00
+  commuting a'_n  (simultaneous eigs)     3                      -2.7278e-13   ||[a,a]||=3.18e-16
+  generic non-commuting a'_n              3                       1.0493e+03   ||[a,a]||=1.32e+01
+  commuting a'_n  (simultaneous eigs)     4                      -9.9717e-13   ||[a,a]||=7.14e-16
+  generic non-commuting a'_n              4                       3.3340e+04   ||[a,a]||=1.80e+01
+
+  => commuting: the determinant reaches 0 (the k real roots exist).
+     non-commuting: bounded away from 0 -- NO real roots at all, so the
+     product object cannot be a product of real quadratic factors.
+
+PART 4 -- gauge group: the degree of det f^{-1} is 2k, independent of N
+-----------------------------------------------------------------------
+  f^{-1} = 2 wbar^adot w_adot + sum_n (a'_n + x_n)^2 :  w is N x k, and it
+  enters WITHOUT x.  So N changes only the constant term.
+
+    N  k   deg_x det f^{-1}  #moduli 4kN
+    2  1                  2            8
+    2  2                  4           16
+    2  3                  6           24
+    3  1                  2           12
+    3  2                  4           24
+    3  3                  6           36
+    4  1                  2           16
+    4  2                  4           32
+    4  3                  6           48
+    6  1                  2           24
+    6  2                  4           48
+    6  3                  6           72
+
+  => the shape of the product object is set by the charge k alone.
+     Changing the gauge group buys moduli, not factors.  And the whole
+     of Part 3 is a statement about k x k Hermitian matrices, so it is
+     identical for every classical group (and ADHM has no exceptional case).
+
+
+(a) the minimal witness:  p = z^2 + a,  a real
+----------------------------------------------
+   roots +-sqrt(-a).   sum|rho|^2 = 2|a|,   s_2 = sum rho^2 = -2a
+   => sum Im(rho)^2 = (sum|rho|^2 - s_2)/2 = |a| + a = 2*ReLU(a)
+
+            a   sum Im^2 (numeric)    2*ReLU(a)   s_2 = Turan
+     -2.0e+00         0.0000000000     0.000000        4.0000
+     -5.0e-01         0.0000000000     0.000000        1.0000
+     -1.0e-06         0.0000000000     0.000000        0.0000
+      0.0e+00         0.0000000000     0.000000       -0.0000
+      1.0e-06         0.0000020000     0.000002       -0.0000
+      5.0e-01         1.0000000000     1.000000       -1.0000
+      2.0e+00         4.0000000000     4.000000       -4.0000
+
+   sum Im^2 is continuous, >= 0, vanishes EXACTLY on the hyperbolic region,
+   and is NOT real-analytic -- its kink sits on the discriminant a = 0.
+   Turan's s_2 is the analytic part and is only necessary (it is < 0 for
+   a > 0 but also fails to see anything at all when other roots dominate).
+
+(b) the same functional on the project's standard test set
+----------------------------------------------------------
+polynomial                                   sum Im^2  -> total size^2   verdict
+z^2-1                       (hyp)        0.000000e+00     0.000000e+00       HYP
+(z-1)(z-2)                  (hyp)        0.000000e+00     0.000000e+00       HYP
+(z^2-1)(z^2-4)              (hyp)        0.000000e+00     0.000000e+00       HYP
+z^2+1                       (NOT)        2.000000e+00     1.000000e+00   not hyp
+z^2+z+1                     (NOT)        1.500000e+00     7.500000e-01   not hyp
+(z^2+1)(z-1)                (NOT)        2.000000e+00     1.000000e+00   not hyp
+(z^2+1)(z^2+4)              (NOT)        1.000000e+01     5.000000e+00   not hyp
+(z-1)((z+2)^2+9)            (NOT)        1.800000e+01     9.000000e+00   not hyp
+near-miss quartic           (NOT)        6.612438e-03     3.306219e-03   not hyp
+(z^2-1)(z^2+100)  shielded  (NOT)        2.000000e+02     1.000000e+02   not hyp
+(z^2-1)(z^2-4)(z^2+400) shd (NOT)        8.000000e+02     4.000000e+02   not hyp
+
+  complete, like the Bezoutian signature and Lambda -- and for the same
+  structural reason (memo 24 sec 0(3)): it is a real chamber object.
+
+(c) relation to the canonical instrument Lambda
+-----------------------------------------------
+  Lambda(z^2 + y0^2) = y0^2/2 exactly;  sum Im^2 = 2 y0^2.  So on a single
+  implanted pair  Lambda = (sum Im^2)/4 = rho^2, the instanton size squared.
+          y0    Lambda = y0^2/2     sum Im^2 / 4   rho^2 = y0^2/2
+       1.000         0.50000000       0.50000000       0.50000000
+       0.500         0.12500000       0.12500000       0.12500000
+       0.100         0.00500000       0.00500000       0.00500000
+       0.010         0.00005000       0.00005000       0.00005000
+
+  => brief sec 6.4's universal y0^2/2 law IS the instanton size squared.
+     Rodgers-Tao's Lambda >= 0 becomes rho^2 >= 0, which is automatic;
+     Newman's Lambda = 0 becomes 'the configuration sits exactly on the
+     small-instanton boundary of the moduli space'.

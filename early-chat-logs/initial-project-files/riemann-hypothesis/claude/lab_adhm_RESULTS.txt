@@ -1,0 +1,150 @@
+# lab_adhm_check.py -- run log (2026-08-23)
+#
+# Parts 0-5 and the summary are the recorded output of the full run.
+# Part 6 was rerun after a fix: the original off-axis test points all lay
+# inside a single slice {x_2=x_3=0}, where the two polynomials agree --
+# which turned out to be the more interesting statement and is now the
+# content of that section.
+
+PART 0  quaternionic matrix algebra: sanity
+==============================================================================
+  multiplication table i*j=k, j*i=-k, j*k=i, k*i=j, i^2=j^2=k^2=-1 : OK
+  |symbolic Im blocks - numeric adhm_residual| = 4.44e-16
+  |det(real block) - detM| = 4.55e-12
+
+==============================================================================
+PART 1  what 'Delta^dag Delta real' forces  (derived, not assumed)
+==============================================================================
+  k=2: 8 distinct x-linear conditions (each of the form T_a[i,j] - T_a[j,i] = 0: True), 6 x-independent ones
+  k=3: 24 distinct x-linear conditions (each of the form T_a[i,j] - T_a[j,i] = 0: True), 18 x-independent ones
+
+  imposing symmetric blocks:
+    k=2:  Re = C + |q|^2 I - 2 sum_a x_a T_a  with C = sum_a T_a^2 + Re(lam^dag lam) : True
+           Im_a = [T_0,T_a] - eps_abc [T_b,T_c] + Im_a(lam^dag lam) : True
+    k=3:  Re = C + |q|^2 I - 2 sum_a x_a T_a  with C = sum_a T_a^2 + Re(lam^dag lam) : True
+           Im_a = [T_0,T_a] - eps_abc [T_b,T_c] + Im_a(lam^dag lam) : True
+
+  => reality  <=>  (i) all four blocks T_a real SYMMETRIC
+                   (ii) [T_0,T_a] - eps_abc[T_b,T_c] + Im_a(lam^dag lam) = 0.
+     These are the classical ADHM equations; (ii) is nonlinear and
+     noncommutative.  C = sum_a T_a^2 + Re(lam^dag lam) is automatically PSD:
+     that is the positivity the construction supplies.
+
+==============================================================================
+PART 2  TEST (a): does the ADHM variety fail to commute?
+==============================================================================
+  exact witness  T_0 = [[0,1],[1,0]], T_1 = diag(1,-1), T_2 = T_3 = 0, lambda = (1, 2i):
+    ADHM residual = 0.0e+00   [T_0,T_1] = [[ 0. -2.]
+ [ 2.  0.]]  -> noncommutative
+
+  census: solve the ADHM equations alone from 120 random starts
+    k=2: 120/120 exact solutions, largest normalised max_ab|[T_a,T_b]|/|T|^2 = 1.453
+    k=3: 120/120 exact solutions, largest normalised max_ab|[T_a,T_b]|/|T|^2 = 1.611
+    k=4: 120/120 exact solutions, largest normalised max_ab|[T_a,T_b]|/|T|^2 = 1.360
+
+  ANSWER (a): YES.  The ADHM variety is richly noncommutative at every
+  k >= 2.  memo6 §4's commutativity objection is NOT automatic here.
+
+==============================================================================
+PART 3  the identity chain behind the theorem, verified
+==============================================================================
+  admissible test data, ADHM residual 2.7e-15, max|[T_a,T_b]| = 1.102
+  (i) on the slice Pi_e, continuing y -> i.eta and setting u = x+eta, v = x-eta:
+      M  =  uv I - u N - v Nbar + C   with  N = T_0 + i T_e ;  max error 4.3e-14
+  (ii) k=2: coeff(u^1 v^1) of det(uvI - uN - vNbar + C)  ==  tr C + tr N tr Nbar - tr(N Nbar) : True
+  (ii) k=3: coeff(u^2 v^2) of det(uvI - uN - vNbar + C)  ==  tr C + tr N tr Nbar - tr(N Nbar) : True
+
+==============================================================================
+PART 4  THE THEOREM
+==============================================================================
+  Let Delta = [T - qI ; lambda] with Delta^dag Delta real, and suppose
+      det(Delta^dag Delta)(q) = P_p(q) = p(x_0 + i r) p(x_0 - i r)
+  for a monic real p of degree k >= 2.  Then lambda = 0, T_1 = T_2 = T_3 = 0,
+  T = T_0 is real symmetric, and p = char poly of T_0.  In particular p is
+  HYPERBOLIC.
+
+  Proof.  By Part 1, Delta^dag Delta = C + |q|^2 I - 2 sum_a x_a T_a with all
+  T_a real symmetric and C = sum_a T_a^2 + Re(lam^dag lam) >= 0.  Restrict q to
+  a slice Pi_e = {x_0 + y e}, continue y -> i.eta, and put u = x_0+eta,
+  v = x_0-eta.  Then P_p becomes p(u)p(v) and, by Part 3(i),
+      det( uv I - u N - v Nbar + C ) = p(u) p(v),      N = T_0 + i T_e .
+  The u^k v^k coefficient is 1 on both sides.  Comparing the coefficient of
+  u^{k-1} v^{k-1} (Part 3(ii)) and using p(u) = det(uI - Nbar), p(v) =
+  det(vI - N) -- which is the u^k, resp. v^k, leading coefficient of the same
+  identity -- gives
+      tr C  =  tr(N Nbar)  =  tr T_0^2 + tr T_e^2        for EVERY unit e.
+  The left side is independent of e, so the quadratic form e -> tr T_e^2 =
+  sum_{ab} e_a e_b tr(T_a T_b) is constant on S^2, hence tr(T_a T_b) =
+  kappa delta_ab (a,b >= 1) and tr T_e^2 = kappa.  But
+      tr C = tr T_0^2 + 3 kappa + ||lambda||^2 ,
+  so 3 kappa + ||lambda||^2 = kappa, i.e. 2 kappa + ||lambda||^2 = 0.  Both
+  terms are >= 0, so kappa = 0 and lambda = 0; kappa = tr T_a^2 = 0 with T_a
+  real symmetric forces T_1 = T_2 = T_3 = 0.  Then C = T_0^2 and
+      det(Delta^dag Delta) = det( (T_0 - x_0 I)^2 + r^2 I )
+                           = prod_j [ (x_0 - tau_j)^2 + r^2 ],
+  tau_j the eigenvalues of the real symmetric T_0, hence real; matching with
+  P_p = prod_m [ (x_0 - rho_m)^2 + r^2 ] gives {rho_m} = {tau_j}.  QED
+  numerical confirmation of the two conclusions on solved data follows in Part 5.
+
+==============================================================================
+PART 5  TEST (b): existence search, hyperbolic vs non-hyperbolic
+==============================================================================
+  moments: 4*M_0 = 0.4971207782  vs  xi(1/2) = 0.4971207174   (rel err 1.2e-07)
+
+  residual = || ADHM eqs ||  +  || det M - P_p || / scale,  40 random starts
+   k  p                                          hyperbolic  best residual   |T_1..3|
+   2  z^2-1                                             yes      6.230e-15   9.49e-16
+   2  z^2+1                                              NO      3.044e+00   5.62e-02
+   2  (z-1)(z-2)                                        yes      2.242e-14   1.21e-14
+   2  z^2+z+1                                            NO      1.752e+00   3.88e-02
+   3  (z-1)(z-2)(z-3)                                   yes      6.757e-13   3.85e-12
+   3  (z^2+1)(z-1)                                       NO      2.985e+00   2.01e-01
+   4  (z^2-1)(z^2-4)                                    yes      9.180e-13   4.70e-13
+   4  (z^2+1)(z^2-1)                                     NO      5.581e-01   1.31e-01
+   4  X^4+10X^3+26X^2+22X+3  [memo5 counterexample]         NO      1.008e-03   5.24e-03
+   2  J^{2,0} of Xi                                     yes      7.180e-15   6.60e-15
+   3  J^{3,0} of Xi                                     yes      2.375e-13   2.49e-12
+   3  J^{3,1} of Xi                                     yes      2.305e-13   2.93e-12
+
+  existence tracks hyperbolicity exactly on all 12 cases: True
+  and on every solved (hyperbolic) case the data lands on T_1=T_2=T_3=0,
+  lambda=0: max over solved cases of |T_1..3| = 3.85e-12, of |lambda| = 1.11e-06
+
+==============================================================================
+
+==============================================================================
+PART 6  where the discriminating power actually sits
+==============================================================================
+  Matching only on the REAL AXIS, det(C + x^2 I - 2x T_0) = p(x)^2, is
+  satisfiable for non-hyperbolic p: k=2, T_0 = 0, T_1 = diag(1,-1),
+  T_2 = T_3 = 0, lambda = 0, so C = I and
+    ADHM residual = 0.0e+00
+    det M on the real axis vs (x^2+1)^2 : max diff 3.6e-15   (p = x^2+1, NOT hyperbolic)
+    in fact det M = P_p on the whole 2-plane {x_2=x_3=0}: max diff 1.8e-15
+    this datum is just the x_0 <-> x_1 rotation of the p = x^2-1 solution,
+    and ONE SLICE cannot tell which axis is the real one.  Moving to a
+    different slice at the same (x_0, r) breaks it:
+      max |det M - P_p| off that plane = 1.960
+    => the discriminating power is not 'off the real axis' but 'off any
+       single slice': it is carried by the full 2-sphere of complex
+       structures, exactly the invariant of twistor_lift_computation §3.
+==============================================================================
+SUMMARY
+==============================================================================
+  (a) YES: the ADHM variety is genuinely noncommutative at every k >= 2, and
+      the positivity it carries (C = sum T_a^2 + Re(lam^dag lam) >= 0) is
+      structural, not assumed.  This is the first object in this program with
+      the algebraic shape memo6 §4 said was missing.
+
+  (b) NO: the matching condition det(Delta^dag Delta) = P_p forces lambda = 0
+      and T_1 = T_2 = T_3 = 0 -- the data collapses onto the COMMUTATIVE REAL
+      locus -- and then "p hyperbolic" is the spectral theorem for real
+      symmetric matrices.  Proved (Part 4), and confirmed on 12 cases (Part 5):
+      admissible data exists exactly for the hyperbolic targets, including a
+      NO for the memo5 quartic that passes the Newton/Turan test.
+
+  So the noncommutativity is real but the dictionary annihilates it.  memo6 §4
+  stands, now re-derived from the gauge-theory side: the obstruction is not that
+  a noncommutative algebra with a positive involution is unavailable -- it is
+  that pinning the jumping locus to the zero set of a slice extension is
+  precisely the condition that kills the noncommutative directions.

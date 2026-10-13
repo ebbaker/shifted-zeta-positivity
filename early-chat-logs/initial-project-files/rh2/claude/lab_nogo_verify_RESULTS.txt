@@ -1,0 +1,75 @@
+
+==============================================================================
+PART 1  the closed-form counterexample, checked on the standard test set
+==============================================================================
+  T_0 = companion(p),  T_1 = T_2 = T_3 = 0,  C = T_0^2.
+  Then M(q) = (T_0 - x_0 I)^2 + r^2 I  identically, so det M = P_p.
+
+  p                          max |det M - P_p| / scale   T_0 symmetric?   C PSD?  ADHM resid
+  z^2-1              [hyp]                   7.884e-15             True     True     0.0e+00
+  (z-1)(z-2)         [hyp]                   1.036e-14            False    False     0.0e+00
+  z^2+1              [NOT]                   1.556e-14            False    False     0.0e+00
+  z^2+z+1            [NOT]                   1.148e-14            False    False     0.0e+00
+  (z-1)((z+2)^2+9)   [NOT]                   3.810e-14            False    False     0.0e+00
+  (z^2+1)(z^2+4)     [NOT]                   7.755e-14            False    False     0.0e+00
+  memo5 quartic      [NOT]                   1.749e-13            False    False     0.0e+00
+
+  Exact identity for EVERY p, hyperbolic or not.  Note the two hypotheses
+  that are violated: T_0 is not symmetric, and C = T_0^2 is not symmetric
+  PSD, exactly in the non-hyperbolic cases.
+
+==============================================================================
+PART 2  exact symbolic check at k = 2 for a symbolic monic p
+==============================================================================
+  det M - P_p simplifies to: 0
+  charpoly(T_0) = a0 + a1*z + z**2
+  -> identity holds for symbolic a1, a0, with NO reality assumption on the
+     roots.  T_0 symmetric would force a1^2 - 4 a0 >= 0, i.e. p hyperbolic.
+
+==============================================================================
+PART 3  which hypothesis is load-bearing: searches over the three families
+==============================================================================
+  E : T_a symmetric, C symmetric   (memo7's setting minus the nonlinear eqs)
+  D : T_a general,   C = L L^T PSD
+  C : T_a general,   C general
+
+  p                             family E    family D    family C
+  z^2-1              [hyp]      1.35e-14    3.63e-15    3.62e-15
+  (z-1)(z-2)         [hyp]      9.65e-15    5.07e-15    5.10e-15
+  z^2+1              [NOT]      9.78e-01    6.18e-01    1.35e-14
+  z^2+z+1            [NOT]      6.45e-01    3.16e-01    1.32e-14
+  (z-1)((z+2)^2+9)   [NOT]      1.83e+00    1.17e+00    1.40e-14
+
+==============================================================================
+PART 4  memo7's proof chain, step by step, on the counterexample
+==============================================================================
+  p = z^2+1, T_0 = companion, T_1..3 = 0, lambda = 0, C = T_0^2
+    T_0 = [[0.0, -1.0], [1.0, -0.0]],  C = [[-1.0, 0.0], [0.0, -1.0]]
+    tr C = tr T_0^2 + tr T_e^2 ?   -2.000000 = -2.000000 + 0.000000   -> HOLDS
+    kappa = tr T_a^2 = 0, lambda = 0                              -> HOLDS
+    T_1 = T_2 = T_3 = 0                                           -> HOLDS
+    C = T_0^2 ?  max diff 0.0e+00                            -> HOLDS
+    eigenvalues of T_0 are REAL ?  eig = [1j, (-0-1j)]        -> **FAILS**
+
+  Every step of memo7 §4.4 survives except the last, which is exactly the
+  spectral theorem for real symmetric matrices.
+
+  Converse (the theorem's real content): T_0 symmetric => eigenvalues real.
+    400 random real symmetric 4x4: max |Im eigenvalue| = 0.00e+00
+
+==============================================================================
+CONTROL  isolating positivity of C from symmetry
+==============================================================================
+  D1 : T_a general,   C symmetric, NOT constrained PSD
+  D2 : T_a general,   C symmetric PSD
+  E2 : T_a symmetric, C symmetric PSD
+
+  p                                   D1          D2          E2
+  z^2-1              [hyp]      3.44e-15    3.63e-15    5.53e-15
+  z^2+1              [NOT]      1.20e-14    6.18e-01    9.78e-01
+  z^2+z+1            [NOT]      1.40e-01    3.16e-01    6.45e-01
+
+  Reading: the closed-form counterexample has T_0 NON-symmetric and
+  C = T_0^2 SYMMETRIC but negative definite.  So C symmetric alone does not
+  restore the collapse (D1 succeeds), while C symmetric PSD does (D2 fails).
+  POSITIVITY of C is load-bearing, independently of symmetry of T_a.

@@ -1,0 +1,93 @@
+
+==============================================================================
+PART 1  exact symbolic identity: deficit = 4 nu^2 (...) + O(nu^4)
+==============================================================================
+  1 conj pair(s) + 0 real root(s):  nu-powers present [2];  c1 == 0: True;  c2 == predicted: True
+  1 conj pair(s) + 1 real root(s):  nu-powers present [2, 4];  c1 == 0: True;  c2 == predicted: True
+  2 conj pair(s) + 0 real root(s):  nu-powers present [2, 4, 6];  c1 == 0: True;  c2 == predicted: True
+  2 conj pair(s) + 1 real root(s):  nu-powers present [2, 4, 6, 8];  c1 == 0: True;  c2 == predicted: True
+  1 conj pair(s) + 2 real root(s):  nu-powers present [2, 4, 6];  c1 == 0: True;  c2 == predicted: True
+  => the deficit is an EVEN polynomial in nu with no constant term; its
+     lowest nonvanishing order is nu^2, with the stated coefficient.
+
+==============================================================================
+PART 2  numeric transverse Taylor coefficients, via the real detM / P_p code
+==============================================================================
+  slice point x_0 = 0.37, t = 0.83;  coefficients of det M - P_p in nu
+  p                                c0         c1            c2         c3   predicted c2
+  z^2+1                      5.46e-16   0.00e+00      4.000000  -8.79e-16       4.000000
+  z^2+z+1                   -1.78e-16  -4.44e-16      3.000000   5.73e-16       3.000000
+  (z-1)((z+2)^2+9)           1.22e-13  -1.42e-14     39.088800   4.55e-14      39.088800
+  (z^2+1)(z^2+4)             1.24e-14  -2.13e-14     58.310913   1.37e-13      58.310913
+  memo5 quartic             -2.91e-13  -3.32e-14      0.622363  -1.95e-12       0.622363
+  (z-1)(z-2)  [hyp]          3.86e-16   6.13e-16      0.000000  -6.66e-16       0.000000
+  (z^2-1)(z^2-4) [hyp]       1.67e-14  -4.35e-14      0.000000   2.49e-13       0.000000
+
+  isotropy in the transverse 2-plane (spread over 7 directions at nu = 0.3):
+    z^2+1                    spread 1.89e-15   (mean value 0.360000)
+    memo5 quartic            spread 2.27e-13   (mean value 0.061283)
+
+==============================================================================
+PART 3  the ladder: J0 (slice) / J1 (1st nbhd) / J2 (2nd nbhd) / P1 (slice+point)
+==============================================================================
+  Each condition is solved by least squares from random starts over the FULL
+  admissible ADHM data -- the R1 family is an output, not an input.
+
+    J0 : det M = P_p on the slice Pi_e                      (memo8 R1)
+    J1 : J0 plus all FIRST transverse derivatives match     (1st neighbourhood)
+    J2 : J1 plus all SECOND transverse derivatives match    (2nd neighbourhood)
+    P1 : J0 plus one finite off-slice point                 (memo8 §3(i))
+
+  Caveat: J1/J2 use central differences with h = 1e-3, so residual |S| is
+  amplified by h^-1 / h^-2.  The hyperbolic J2 entries are therefore convergence
+  artifacts of the optimiser, not signal; the separation to look at is the
+  non-hyperbolic plateau (order 1) against the hyperbolic decay.
+
+  p                                  J0         J1         J2         P1    |S| at J2 opt
+  z^2+1  (NOT hyp)             2.31e-15   1.73e-12   4.37e+00   4.44e-01         1.02e-01
+  z^2+z+1  (NOT hyp)           4.72e-15   2.57e-12   2.60e+00   9.16e-02         9.28e-02
+  z^2-1  (hyperbolic)          3.48e-15   1.63e-12   9.82e-06   1.84e-15         5.35e-07
+  (z-1)(z-2) (hyp)             2.91e-14   1.25e-11   2.31e-03   2.55e-14         2.42e-03
+
+==============================================================================
+PART 4  the second-order jet condition IS 'S = 0', at every slice point
+==============================================================================
+  c2 = 4 R sum_p sigma_p^2 prod_{q!=p}(B_q^2 - 4 t^2 sigma_q^2), sampled over
+  400 random slice points (x_0, t).  Every factor is strictly positive, so
+  c2 > 0 unless every sigma_p = 0.
+
+  p                          min c2 over 400 slice pts        max c2   S = 0
+  z^2+1                                   4.000000e+00    4.0000e+00   False
+  z^2+z+1                                 3.000000e+00    3.0000e+00   False
+  (z-1)((z+2)^2+9)                        8.712831e-02    5.8060e+02   False
+  (z^2+1)(z^2+4)                          2.908497e+01    2.6285e+03   False
+  memo5 quartic                           7.749016e-04    1.8464e+01   False
+  (z-1)(z-2)  [hyp]                       0.000000e+00    0.0000e+00    True
+  (z^2-1)(z^2-4) [hyp]                    0.000000e+00    0.0000e+00    True
+
+==============================================================================
+SUMMARY
+==============================================================================
+  The transverse jet order at which a slice condition stops being blind is
+  exactly TWO, and at order two the condition is already maximally strong.
+
+    order 0  (the slice itself)        : every real monic p, no information
+    order 1  (1st formal neighbourhood): STILL every real monic p -- the deficit
+                                         has no linear transverse term at all
+    order 2  (2nd formal neighbourhood): forces S = 0, i.e. p hyperbolic; the
+                                         transverse Hessian IS the discriminant
+
+  The Hessian is isotropic of rank 2 -- exactly the two sphere directions the
+  equivariance quotients out, and the same 2 as the -(2/r)B Vekua trace term.
+  Its size is 4 R sum_p sigma_p^2 prod(...), quadratic in the sphere radius, so
+  it degrades continuously to 0 as a conjugate pair collides on the axis: the
+  Lambda >= 0 consistency requirement of the brief §6.4 is met, now in a sharp
+  form (the discriminant is exactly the second transverse jet, and it is exactly
+  quadratic in the imaginary parts of the roots).
+
+  What this does NOT do: it does not rescue matching.  The order-2 condition
+  collapses the data exactly as a single finite off-slice point does, so the
+  rigidity/existence trade-off (brief §3, screen 7) holds at the level of jets
+  too, and there is no intermediate order.  What it DOES do is fix the currency:
+  any future proposal can now be asked "at what order does your discriminant
+  live?", and the answer must be >= 2.

@@ -1,0 +1,58 @@
+
+==============================================================================
+(A)  INSIDE the R1 family: the 2-jet is nonzero exactly when p is not hyperbolic
+==============================================================================
+  slice point x_0 = 0.37, t = 0.83.  Deficit jets (value, d/dnu, d2/dnu2).
+
+  p                                value   1st deriv     2nd deriv   S = 0?
+  z^2-1        [hyperbolic]    -4.44e-16    0.00e+00      0.000000     True
+  z^2+1        [NOT hyp]       -4.44e-16    0.00e+00      8.000000    False
+  z^2+z+1      [NOT hyp]       -4.44e-16   -2.22e-14      6.000000    False
+  memo5 quartic[NOT hyp]       -6.82e-13    0.00e+00      1.244856    False
+
+  The 2nd derivative is the ONLY nonzero entry, and it is nonzero exactly
+  for the non-hyperbolic p.  But note what the theorem then does with it:
+    2nd deriv = 0  =>  S = 0  =>  T_0 real symmetric  =>  spectrum real
+                   =>  p hyperbolic.
+  The last three arrows are ALGEBRA (the spectral theorem).  Nothing in the
+  chain is a statement about zeros in a neighbourhood of the slice.
+
+==============================================================================
+(B)  ONE STEP OUTSIDE the family: ALL jets vanish, and p is NOT hyperbolic
+==============================================================================
+  memo12's datum: T_0 = companion(p) (NOT symmetric), T_1=T_2=T_3=0,
+  lambda = 0, C = T_0^2.  Then M(q) = (T_0 - x_0 I)^2 + r^2 I identically.
+
+  p                                value   1st deriv   2nd deriv  global sup|deficit|
+  z^2-1        [hyperbolic]    -4.44e-16    0.00e+00    8.88e-12             7.88e-15
+  z^2+1        [NOT hyp]        0.00e+00    0.00e+00    0.00e+00             1.62e-14
+  z^2+z+1      [NOT hyp]        0.00e+00    0.00e+00   -8.88e-12             1.31e-14
+  memo5 quartic[NOT hyp]       -1.59e-12    0.00e+00    3.64e-08             1.65e-13
+
+  Every jet vanishes -- at order 2 and at every other order -- because the
+  deficit is identically zero on ALL of H (last column).  And p is not
+  hyperbolic.  So outside the R1 family, not merely the 2-jet but the FULL
+  GLOBAL matching condition fails to force hyperbolicity.
+
+==============================================================================
+(C)  what this means for the 'order >= 2' screen
+==============================================================================
+  The 2-jet threshold is a statement about how much data pins down the R1
+  FAMILY -- a finite-dimensional family of polynomials, where local data
+  determines global data cheaply.  It is not a statement that infinitesimal
+  information detects hyperbolicity.
+
+  In particular:
+    * order 0 empty  -- proved for R1 (memo8); a well-supported PRINCIPLE
+                        elsewhere (5 instances), not a theorem.
+    * order 1 empty  -- proved for R1 only, via evenness of the deficit in nu,
+                        which follows from M depending on q through (x_0,t,nu^2).
+                        A general family's deficit need not be even.
+    * order 2 collapse -- proved for R1 only, and (B) shows it FAILS one step
+                        outside, where even all orders together do not suffice.
+
+  So memo9 §5's "whatever object is built from Xi, the reality information must
+  appear at transverse order >= 2" is OVERCLAIMED.  The defensible version is:
+  within a family whose deficit depends on q only through (x_0, t, nu^2), orders
+  0 and 1 are empty by evenness.  That is a statement about the family, and it
+  should be checked for each new one rather than assumed.

@@ -1,0 +1,284 @@
+\documentclass[11pt]{amsart}
+\usepackage[margin=1.15in]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{microtype}
+\usepackage{xcolor}
+\definecolor{linkcol}{rgb}{0.1,0.1,0.45}
+\usepackage[colorlinks=true,linkcolor=linkcol,citecolor=linkcol,urlcolor=linkcol]{hyperref}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{question}[theorem]{Question}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{example}[theorem]{Example}
+
+\newcommand{\CC}{\mathbb{C}}
+\newcommand{\RR}{\mathbb{R}}
+\newcommand{\ZZ}{\mathbb{Z}}
+\newcommand{\HH}{\mathbb{H}}
+\newcommand{\QQ}{\mathbb{Q}}
+\renewcommand{\SS}{\mathbb{S}}
+\newcommand{\CP}{\mathbb{CP}}
+\newcommand{\Xii}{\Xi}
+\newcommand{\eE}{\mathrm{e}}
+\DeclareMathOperator{\Rre}{Re}
+\DeclareMathOperator{\Iim}{Im}
+\DeclareMathOperator{\Tr}{Tr}
+
+\title[The second involution]{The second involution:\\ conjugation-paired sums over the zeros of the Riemann zeta function}
+\author{Edward B.\ Baker III}
+\email{edwardbaker86@gmail.com}
+\date{August 2026 --- draft}
+
+\begin{document}
+
+\begin{abstract}
+The nontrivial zeros of $\zeta(s)$ carry two involutions: the holomorphic involution $\rho\mapsto 1-\rho$ coming from the functional equation, and the antiholomorphic involution $\rho\mapsto\bar\rho$ coming from the reality of $\zeta$ on the real axis. The Riemann Hypothesis is precisely the statement that the two involutions agree on the zero multiset. The explicit formula of Guinand and Weil computes sums $\sum_\rho h(\rho)$ for $h$ \emph{analytic}, and is therefore structurally blind to the second involution: no known unconditional method computes conjugation-paired sums such as $\sum_\rho |\rho|^{-2}$, even though the corresponding functional-equation-paired sum $\sum_\rho \rho^{-1}(1-\rho)^{-1} = 2+\gamma-\log 4\pi$ is classical. We formulate the \emph{Second Involution Conjecture}: conjugation-paired sums admit unconditional explicit formulas of their own --- necessarily of positivity (semialgebraic) type rather than analytic type, and at finite prime scale rather than as the infinite-scale growth criteria that constitute the only known instances. We assemble the introductory material needed to read the conjecture from several directions: the elementary two-line inequality that makes RH the statement that a single convergent sum achieves its known lower bound; the quaternionic and twistor-geometric origin of the conjecture, in which the second involution becomes a real structure on a quadric and RH becomes an equivariant statement about the components of a divisor; the exact algebraic model (real polynomials), where conjugation-paired formulas exist and are provably semialgebraic and non-analytic in the coefficients; and the position of the conjecture relative to Weil's proof of RH in the function-field case and to the Bombieri--Connes reading of Weil positivity. The conjecture is not offered as a path to RH; it is offered as a precise specification of an object that any path must control, whose partial instances would be new unconditional tools.
+\end{abstract}
+
+\maketitle
+\setcounter{tocdepth}{1}
+\tableofcontents
+
+%======================================================================
+\section{Two pairings of the zeros}\label{sec:two}
+
+Let $\xi(s)=\tfrac12 s(s-1)\pi^{-s/2}\Gamma(s/2)\zeta(s)$ denote the completed zeta function, an entire function of order one, real on the real axis and on the critical line, whose zeros are exactly the nontrivial zeros $\rho$ of $\zeta$. The zero multiset is invariant under two commuting involutions:
+\begin{equation}\label{eq:involutions}
+\iota_{\mathrm{FE}}:\ \rho\mapsto 1-\rho \qquad\text{and}\qquad \iota_{\mathrm{R}}:\ \rho\mapsto\bar\rho,
+\end{equation}
+the first because of the functional equation $\xi(s)=\xi(1-s)$, the second because $\xi$ is real on $\RR$. The first is holomorphic in $\rho$; the second is antiholomorphic. The Riemann Hypothesis is the statement that the two involutions \emph{coincide on the zeros}:
+\[
+\mathrm{RH}\iff 1-\rho=\bar\rho \text{ for every zero } \rho \iff \Rre\rho=\tfrac12 \text{ for every zero }\rho.
+\]
+This trivial observation acquires content when one asks which pairing the analytic machinery of the subject can see. The explicit formula --- in the form due to Guinand and Weil (see \cite{IwaniecKowalski}) --- computes, for suitable even test functions, sums of \emph{analytic} functions over the zeros. Writing $\rho=\tfrac12+i\gamma$ (so that RH says $\gamma\in\RR$, and the multiset $\{\gamma\}$ is closed under $\gamma\mapsto-\gamma$ and $\gamma\mapsto\bar\gamma$), it reads: for $h$ even, holomorphic and suitably decaying on $|\Iim r|\le\tfrac12+\varepsilon$, with $g(u)=\tfrac1{2\pi}\int h(r)\eE^{-iur}\,dr$,
+\begin{equation}\label{eq:GW}
+\sum_\gamma h(\gamma)
+= h(\tfrac i2)+h(-\tfrac i2)
++\frac1{2\pi}\int_{-\infty}^\infty h(t)\Big[\Rre\frac{\Gamma'}{\Gamma}\Big(\tfrac14+\tfrac{it}2\Big)-\log\pi\Big]\,dt
+-2\sum_{n\ge2}\frac{\Lambda(n)}{\sqrt n}\,g(\log n).
+\end{equation}
+The left side is a sum of an analytic function of $\gamma$. Since the multiset is closed under conjugation, $\sum_\gamma h(\bar\gamma)=\sum_\gamma h(\gamma)$ for every $h$: \emph{no sum of an analytic function over the zeros can distinguish the two pairings}. The explicit formula natively implements $\iota_{\mathrm{FE}}$ (evenness of $h$ is exactly $\iota_{\mathrm{FE}}$-symmetry in the rotated variable) and is structurally blind to $\iota_{\mathrm{R}}$.
+
+The sharpest scalar illustration is classical on one side and inaccessible on the other. From the Hadamard product one has the well-known evaluation
+\begin{equation}\label{eq:classical}
+\sum_\rho\frac1{\rho(1-\rho)} \;=\; 2+\gamma_{\mathrm{E}}-\log 4\pi \;=\; 0.04619\ldots,
+\end{equation}
+a sum in which each zero is paired with its image under $\iota_{\mathrm{FE}}$. Pair each zero instead with its image under $\iota_{\mathrm{R}}$ and one obtains $\sum_\rho (\rho\bar\rho)^{-1}=\sum_\rho|\rho|^{-2}$, which converges absolutely but which no known method evaluates or expresses in terms of primes. The two sums are comparable in exactly one direction:
+
+\begin{proposition}\label{prop:gateway}
+Unconditionally,
+\[
+\sum_\rho\frac1{|\rho|^{2}}\;\ge\;\sum_\rho\frac1{\rho(1-\rho)}\;=\;2+\gamma_{\mathrm{E}}-\log4\pi,
+\]
+with equality if and only if the Riemann Hypothesis holds.
+\end{proposition}
+
+\begin{proof}
+Both sums converge absolutely, so we may group the zeros into orbits of the group generated by the two involutions: $\{\rho,\bar\rho,1-\rho,1-\bar\rho\}$. Set $a=1/\rho$ and $b=1/(1-\rho)$. Using $\overline{1/(\rho(1-\rho))}=1/(\bar\rho(1-\bar\rho))$, the orbit's contribution to the left-hand sum is $2|a|^2+2|b|^2$ and to the right-hand sum is $4\Rre(ab)$. Now $4\Rre(ab)\le4|a||b|\le2|a|^2+2|b|^2$, and $|a|=|b|$ holds iff $|\rho|=|1-\rho|$ iff $\Rre\rho=\tfrac12$; on the line the orbit degenerates to $\{\rho,\bar\rho\}$ and the two contributions agree. \end{proof}
+
+Thus RH is the statement that a single convergent sum over the zeros achieves its known, classical lower bound. Variants of this observation are folklore; we highlight it because it displays, in one line, the asymmetry this paper is about. The quantity
+\begin{equation}\label{eq:scalardefect}
+\delta \;:=\; \sum_\rho\Big(\frac1{|\rho|^{2}}-\frac1{\rho(1-\rho)}\Big)\;\ge\;0
+\end{equation}
+is a sum of nonnegative terms, each vanishing iff the corresponding zero is on the line. It is a perfectly well-defined real number. Nothing in analytic number theory computes it.
+
+\begin{definition}\label{def:paired}
+A \emph{conjugation-paired sum} is a sum of the form $\sum_\gamma F(\gamma,\bar\gamma)$ over the nontrivial zeros (in the rotated variable $\rho=\tfrac12+i\gamma$), where $F$ is analytic in two variables and the sum converges absolutely. The primary example in this paper is the \emph{windowed reality defect}
+\begin{equation}\label{eq:defect}
+D(c)\;=\;\sum_\gamma (\Iim\gamma)^2\, \eE^{-(\Rre\gamma-c)^2/2\sigma^2},\qquad c\in\RR,\ \sigma>0,
+\end{equation}
+which vanishes identically iff RH holds, and which measures, near height $c$, the sum of squared distances of the zeros from the critical line.
+\end{definition}
+
+Conjugation-paired sums sit strictly between two classes that \emph{are} accessible. Linear sums $\sum_\gamma h(\gamma)$ with $h$ analytic are computed by \eqref{eq:GW}. Fully quadratic sums $\sum_{\gamma,\gamma'}h(\gamma)\overline{h(\bar\gamma')}=\big|\sum_\gamma h(\gamma)\big|^2$ are products of two accessible numbers. What is inaccessible is the \emph{diagonal} of the quadratic class --- the terms pairing each zero with its own conjugate --- and the reality defect \eqref{eq:defect} is exactly a regularized diagonal. The off-diagonal of the quadratic class is a smoothed form of Montgomery's pair correlation \cite{Montgomery}; the dictionary between such second-order statistics and prime data is a developed subject (Goldston--Montgomery \cite{GoldstonMontgomery}; for consequences of zero-spacing statistics toward exceptional zeros, see Conrey--Iwaniec \cite{ConreyIwaniec}). The diagonal has no such dictionary. The conjecture formulated in Section~\ref{sec:conj} asserts that it should have one.
+
+%======================================================================
+\section{What cannot compute the defect}\label{sec:nogo}
+
+Before proposing what the missing formula should look like, we record what it provably cannot look like, and the two examples that any proposal must survive. Proofs and precise statements are in the companion program paper \cite{ZS}; the shapes matter here.
+
+\emph{Linear blindness.} As noted above, closure of the zero multiset under conjugation makes every linear statistic $\sum h(\gamma)$, $h$ analytic, identical on the two pairings. More generally, the natural rotation-equivariant extensions of $\Xi$ (Section~\ref{sec:geom}) are $\RR$-linear in the complex input, so \emph{every} continuous linear functional of any such extension reduces to a linear functional of the complex $\Xi$ \cite{Baker2015,ZS}. Any formula for $D(c)$ must be nonlinear in the zero data.
+
+\emph{Topological blindness.} Nonlinearity alone does not suffice if the nonlinear invariant is deformation-invariant. In the quaternionic extension of Section~\ref{sec:geom}, a conjugate pair of zeros becomes a two-sphere of zeros, and one can compute the natural degree-type invariants: the homology class of the corresponding divisor component, and the Brouwer degree of $f/|f|$ (the four-dimensional argument principle). Both weight a conjugate pair of simple zeros \emph{exactly} as they weight two simple real zeros \cite{ZS}. Deformation-invariant counts cannot see the defect --- and, by the first example below, they must not.
+
+\emph{First hardness check: Davenport--Heilbronn.} The function $\Xi_{\mathrm{DH}}(z)=\Lambda_{\mathrm{DH}}(\tfrac12+iz)$ built from the Davenport--Heilbronn $L$-series \cite{DavenportHeilbronn,TitchmarshBook} is even, real, entire of order one, satisfies the same symmetries and growth as $\Xi(z):=\xi(\tfrac12+iz)$ --- and has zeros off the critical line (the first three conjugate pairs are at heights $\approx85.70,\ 114.16,\ 166.48$ with $|\!\Iim\gamma|\approx 0.3085,\ 0.1508,\ 0.0744$; recomputed and certified in \cite{ZS}). It has no Euler product. Consequently no formula for the reality defect can be a soft consequence of symmetry, reality, and growth: \emph{the arithmetic input is not optional}, and a correct conjugation-paired formula must visibly consume prime data.
+
+\emph{Second hardness check: de Bruijn--Newman.} By Rodgers--Tao \cite{RodgersTao}, the de Bruijn--Newman constant satisfies $\Lambda\ge0$: under the backward heat flow the zeros of $\Xi$ leave the real axis immediately. RH, if true, is ``barely true.'' Any correct criterion must therefore degrade only non-strictly as $\Iim\gamma\to0$; a proposed mechanism that is robust under small perturbations proves too much and is wrong. The defect \eqref{eq:defect} degrades quadratically in the distance to the line, which is the expected profile.
+
+These constraints triangulate the conjecture's target: the missing object is nonlinear, finer than every homological or degree-type invariant, necessarily arithmetic, and quantitatively fragile near the line in a prescribed way.
+
+%======================================================================
+\section{The geometric origin of the second involution}\label{sec:geom}
+
+The conjecture can be read entirely inside classical analytic number theory, but it was found by geometrizing the involution $\iota_{\mathrm{R}}$, and the geometry explains why the conjugation pairing is the \emph{minimal} sphere-detecting structure. We summarize; details and proofs are in \cite{ZS}, building on the slice regular function theory of Gentili--Struppa \cite{GentiliStruppa} and its twistor interpretation \cite{GentiliSalamonStoppato,AltavillaSarfatti}.
+
+Let $\HH$ be the quaternions and $\SS=\{J\in\HH:J^2=-1\}$ the two-sphere of imaginary units; each $J\in\SS$ spans a slice $\CC_J=\RR+J\RR\cong\CC$. A function on an axially symmetric domain is \emph{slice regular} \cite{GentiliStruppa} if it is holomorphic on every slice, and \emph{intrinsic} if its power series has real coefficients. Since $\Xi(z)=\xi(\tfrac12+iz)$ is entire, even, and real on $\RR$, it extends canonically to an entire intrinsic slice regular $\Xi:\HH\to\HH$ (concretely, $\Xi(q)=\sum c_{2n}q^{2n}$ with the real Taylor coefficients of $\Xi$; equivalently Riemann's integral formula extends verbatim, $\Xi(q)=4\int_0^\infty\Phi(u)\cos(qu)\,du$ with Riemann's positive kernel $\Phi$). The zero set of a nonzero slice regular function is a union of isolated real points and isolated round two-spheres $x+y\,\SS$ (Gentili--Stoppato \cite{GentiliStoppato}); for intrinsic $\Xi$, real zeros of the complex $\Xi$ give points and conjugate pairs $a\pm iy$ give the sphere $a+y\,\SS$. Hence:
+\begin{theorem}[{Reformulation; \cite{ZS}}]\label{thm:reform}
+RH holds if and only if the zero set of the quaternionic $\Xi$ contains no two-sphere.
+\end{theorem}
+
+The involution $\iota_{\mathrm{R}}$ now becomes an honest geometric real structure. Intrinsic slice regular functions lift to the \emph{incidence quadric} $Q=\{(q,J):q\in\CC_J\}\cong\CP^1\times\CP^1$ inside the twistor space $\CP^3$ of $S^4$; the antiholomorphic, fixed-point-free real structure $\sigma$ of twistor space restricts to $Q$, and the lift of $\Xi$ is holomorphic and $\sigma$-equivariant, with zero divisor a union of ruling lines, one per zero \cite{ZS} (the twistor lift of slice regular functions is due to \cite{GentiliSalamonStoppato}). The dichotomy of Theorem~\ref{thm:reform} then reads:
+a real zero contributes a component \emph{fixed} by $\sigma$ (a twistor fiber); a zero sphere contributes a pair of components \emph{swapped} by $\sigma$. The homology classes of the two configurations are identical --- this is the geometric face of the topological blindness of Section~\ref{sec:nogo} --- and the discriminating datum is purely equivariant. Passing to the free quotient:
+\begin{theorem}[{\cite{ZS}}]\label{thm:orient}
+In $Y=Q/\sigma$, real zeros descend to $\mathbb{RP}^2$ components of the zero locus and zero spheres to $S^2$ components; hence \emph{RH holds iff every component of the zero locus of the lifted $\Xi$ in $Y$ is nonorientable}.
+\end{theorem}
+
+The moral for the present paper is this: the second involution is not one structure among many that might detect off-line zeros; after the no-go results it is the \emph{only} surviving structure, and Theorem~\ref{thm:orient} shows it suffices. RH is an equivariant statement --- component-by-component $\sigma$-invariance of a divisor --- and the analytic side of the subject currently possesses no equivariant tools. The Second Involution Conjecture asks for the first one.
+
+%======================================================================
+\section{The exact algebraic model}\label{sec:poly}
+
+Does \emph{any} setting exist in which conjugation-paired sums are computable from the same data that computes analytic sums? Yes: the polynomial model, and it dictates the shape of the conjecture.
+
+Let $p$ be a monic real polynomial with roots $r_1,\dots,r_d$ (with multiplicity), a multiset closed under conjugation. Newton's identities express every power sum $\sum r_i^k$ --- every \emph{analytic} symmetric function of the roots --- as a polynomial in the coefficients: this is the algebraic shadow of the explicit formula \eqref{eq:GW}, with coefficients playing the role of prime data. Conjugation-paired sums are also determined by the coefficients (the roots are), but not polynomially, and not analytically:
+
+\begin{proposition}\label{prop:quadratic}
+For $p(x)=x^2+bx+c$,
+\[
+\sum_i r_i^2 \;=\; b^2-2c \qquad\text{always, while}\qquad
+\sum_i |r_i|^2 \;=\; \max\,(\,b^2-2c,\ 2c\,),
+\]
+an exact identity: the two branches meet along the discriminant locus $b^2=4c$, across which $\sum|r_i|^2$ is continuous but not analytic in $(b,c)$. Moreover, for any monic real $p$,
+\begin{equation}\label{eq:polydefect}
+\sum_i\big(|r_i|^2-r_i^2\big)\;=\;4\!\!\sum_{\text{conjugate pairs } x\pm iy}\!\! y^2,
+\end{equation}
+so the reality defect of the root multiset is the failure of one conjugation-paired sum to agree with its Newton-computable analytic twin.
+\end{proposition}
+
+\begin{proof}
+If the roots are real, $\sum|r_i|^2=\sum r_i^2=b^2-2c$ and $b^2-2c\ge2c$ by nonnegativity of the discriminant; if they form a conjugate pair, $\sum|r_i|^2=2r\bar r=2c$ and $b^2-4c<0$. For \eqref{eq:polydefect}: a real root contributes $0$; a pair $x\pm iy$ contributes $2(x^2+y^2)-2(x^2-y^2)=4y^2$.
+\end{proof}
+
+In general, symmetric functions of the multiset $\{r_i\}\cup\{\bar r_i\}$ are \emph{semialgebraic} functions of the coefficients --- piecewise analytic, with the pieces separated by discriminant-type walls --- and Proposition~\ref{prop:quadratic} shows the non-analyticity is genuine already in degree two. Three conclusions transfer to the transcendental problem. First, no impossibility theorem forbids conjugation-paired formulas: in the algebraic model they \emph{exist}. Second, such formulas are never single analytic identities; they are of \emph{positivity type} --- built from inequalities, maxima, moduli --- which is consistent with, and explains, the linear no-go of Section~\ref{sec:nogo}. Third, the obstruction that the explicit formula \eqref{eq:GW} runs into is not computability but \emph{analyticity}: the explicit formula is an analytic identity, and the object to be computed is only semialgebraically related to the data. The missing formula lives in a different function class than the one the subject has been searching in.
+
+%======================================================================
+\section{The known instance: infinite scale}\label{sec:degenerate}
+
+One conjugation-paired formula for $\zeta$'s zeros \emph{is} known, and inspecting it shows both that the conjectured class is nonempty and what is deficient about its only known member. For a Gaussian window, set
+\[
+h_{c,\lambda}(r)=\eE^{i\lambda(r-c)}\eE^{-(r-c)^2/2\sigma^2}+\eE^{-i\lambda(r+c)}\eE^{-(r+c)^2/2\sigma^2},
+\qquad
+Z(c,\lambda)=\sum_\gamma h_{c,\lambda}(\gamma).
+\]
+By \eqref{eq:GW}, $Z(c,\lambda)$ is \emph{unconditionally computable} from the primes with $\log n$ in an $O(1/\sigma)$-window around $\lambda$, plus explicit archimedean terms: the frequency $\lambda$ is the logarithmic prime scale. A direct computation (\cite{ZS}, certified numerically there against both $\zeta$ and Davenport--Heilbronn data) shows that real zeros contribute boundedly to $|Z(c,\lambda)|^2$ uniformly in $\lambda$, while a conjugate pair at $a\pm iy_0$ contributes $2\cosh(2\lambda y_0)\,\eE^{-((a-c)^2-y_0^2)/\sigma^2}+O(1)$. Hence, for every fixed window,
+\begin{equation}\label{eq:limsup}
+\limsup_{\lambda\to\infty}\frac{\log|Z(c,\lambda)|}{\lambda}\;=\;\sup_\gamma\,|\!\Iim\gamma|\;=\;\Theta-\tfrac12,
+\end{equation}
+where $\Theta$ is the supremum of real parts of the zeros: \emph{RH is equivalent to subexponential growth of a prime-computable quantity, and the growth rate reads off the largest sphere radius.}
+
+Formula \eqref{eq:limsup} is a conjugation-paired formula of exactly the predicted shape: a non-analytic ($\limsup$-type) expression in analytic prime data. But it is the \emph{degenerate} member of the class, in two respects. It computes only the crudest functional of the defect (the supremum of $|\!\Iim\gamma|$, not $D(c)$), and it does so only at \emph{infinite scale}: the $\limsup$ consumes prime data at all scales $\lambda\to\infty$. Quantitatively, resolving a defect at distance $y_0$ from the line requires $\lambda\gtrsim1/y_0$, i.e.\ primes up to $\eE^{1/y_0}$ --- and at this level \eqref{eq:limsup} is a Gaussian-mollified form of the classical equivalence between zero-free regions and prime-counting error terms. The known instance is the old wall, with its geometry exposed. The conjecture asks for non-degenerate members of the class.
+
+%======================================================================
+\section{The conjecture}\label{sec:conj}
+
+Fix $\sigma>0$. Call the collection
+\[
+\mathcal A(\Lambda)\;=\;\big\{\,Z(c,\lambda)\ :\ c\in\RR,\ 0\le\lambda\le\Lambda\,\big\}
+\]
+the \emph{prime data at scale $\Lambda$}: by Section~\ref{sec:degenerate} every element is unconditionally computable from $\{\Lambda(n):\log n\le\Lambda+O(1/\sigma)\}$ together with explicit archimedean integrals. Recall the windowed reality defect $D(c)$ of \eqref{eq:defect}, and call a function of finitely many real variables \emph{semialgebraic} if its graph is cut out by finitely many polynomial equalities and inequalities (so: compositions of polynomials, moduli, maxima, and case splits along algebraic walls --- the function class of Proposition~\ref{prop:quadratic}).
+
+\begin{conjecture}[Second Involution Conjecture]\label{conj:main}
+The reality defect is a finite-scale, positivity-type functional of prime data. Precisely: for every $\varepsilon>0$ there exist a finite scale $\Lambda(\varepsilon)<\infty$, an integer $N$, and a semialgebraic function $S$ of $N$ variables, such that for every $c\in\RR$ there are points $Z(c_1,\lambda_1),\dots,Z(c_N,\lambda_N)\in\mathcal A(\Lambda(\varepsilon))$ with $|c_j-c|=O(\sigma)$ and
+\[
+\big|\,D(c)-S\big(Z(c_1,\lambda_1),\dots,Z(c_N,\lambda_N)\big)\,\big|\;<\;\varepsilon .
+\]
+More generally, the same holds for the natural family of conjugation-paired sums $\sum_\gamma F(\gamma,\bar\gamma)$ with $F$ a divided-difference kernel of exponentials across the pair $(\gamma,\bar\gamma)$, of which $D(c)$ is the leading example.
+\end{conjecture}
+
+Three comments on the statement.
+
+\emph{(i) What is being conjectured is finiteness of scale.} The $\limsup$ criterion \eqref{eq:limsup} shows that the defect's crudest functional is determined by prime data at infinite scale. Conjecture~\ref{conj:main} asserts that the defect itself is \emph{approximable at finite scale}, with a modulus $\Lambda(\varepsilon)$. It does not by itself assert any particular growth of $\Lambda(\varepsilon)$; even a formula with the classically expected exchange rate would be new, since no finite-scale formula of any kind is currently known.
+
+\emph{(ii) The semialgebraic shape is forced, not chosen.} By the linear no-go, $S$ cannot be linear; by the algebraic model (Proposition~\ref{prop:quadratic}), already for polynomials the true dependence is semialgebraic and non-analytic. The conjecture places the formula in the smallest function class not excluded.
+
+\emph{(iii) The hardness checks are passed structurally.} For Davenport--Heilbronn there is no Euler product and hence no analogue of $\mathcal A(\Lambda)$: the conjectured formula consumes exactly the input DH lacks, as Section~\ref{sec:nogo} requires. And the conjectured output $D(c)$ degrades quadratically in the distance to the line, matching the non-strict degeneration that $\Lambda_{\mathrm{dBN}}\ge0$ \cite{RodgersTao} mandates.
+
+The quantitative question is deliberately severed from the conjecture, because its status is different: the classical wall corresponds, in this normalization, to $\Lambda(\varepsilon)\asymp\varepsilon^{-1/2}$ (a defect produced by a sphere at distance $y_0$ has size $\asymp y_0^2$ in its window, and its detection through growth requires scale $1/y_0$).
+
+\begin{question}[The exchange rate]\label{q:rate}
+Does Conjecture \ref{conj:main} hold with $\Lambda(\varepsilon)=o(\varepsilon^{-1/2})$? Equivalently: can the coherent structure of the defect's contribution to the pair-correlation field --- a single phase-coherent mode, as opposed to GUE-like fluctuation --- be exploited to resolve the defect below the classical scale?
+\end{question}
+
+A positive answer to Question~\ref{q:rate} would improve the classical equivalence between zero-free regions and prime error terms and should be regarded as correspondingly unlikely to be cheap; a sharp negative answer --- a matching lower bound showing no semialgebraic functional of sub-wall prime data can approximate the defect --- would be equally interesting, as it would give the classical wall the status of a theorem about a precisely delimited class of methods. Either resolution requires, as a first step, the cross-term calculus for $|Z(c,\lambda)|^2$: unconditional and RH-conditional bounds for the off-diagonal (pair-correlation) part, quantifying the minimal defect visible over the arithmetic noise at scale $\Lambda$. We regard that calculus as the first serious test of the conjecture.
+
+\subsection*{Predicted mechanism}
+The conjecture comes with a candidate mechanism, which we record as a signpost rather than a claim. In the quaternionic operator theory built on the $S$-spectrum (Colombo--Sabadini--Struppa \cite{CSSbook}; spectral theorem: Alpay--Colombo--Kimsey \cite{ACK}), the resolvent-type kernel attached to $s\in\CC$ is
+\[
+\mathcal Q_s(T)^{-1}=\big(T^2-2\Rre(s)\,T+|s|^2\big)^{-1},
+\]
+a function of the pair $(s,\bar s)$ \emph{by construction}: quaternionic spectral theory is natively conjugation-paired, and axially symmetric sets of exactly the form of the quaternionic zero set of Section~\ref{sec:geom} are exactly the $S$-spectra. A trace formula in this calculus --- a Guinand--Weil analogue for $S$-resolvents --- would be a conjugation-paired explicit formula; e.g.\ the inaccessible sum in Proposition~\ref{prop:gateway} is $\sum_\rho\mathcal Q_\rho(0)^{-1}$ termwise. This machinery was developed for quaternionic quantum mechanics and has, to our knowledge, never been aimed at number theory. Conversely, the arithmetic side of any such formula is expected to live in prime pair-correlation data $\Lambda(m)\Lambda(n)$ (the off-diagonal of $|Z|^2$ is smoothed pair correlation), placing the conjecture in the same second-order regime as \cite{Montgomery,GoldstonMontgomery,ConreyIwaniec}.
+
+%======================================================================
+\section{The function-field template and the Weil--Connes square}\label{sec:weil}
+
+The two-involutions formulation is not an analogy invented here; it is the statement that was actually proved in the one case where a Riemann hypothesis has been proved. For a smooth projective curve $C/\mathbb F_q$, the zeta zeros correspond to the eigenvalues $\alpha_i$ of Frobenius on $H^1$, and the eigenvalue multiset carries two involutions: $\alpha\mapsto q/\alpha$ (functional equation, from Poincar\'e duality) and $\alpha\mapsto\bar\alpha$ (reality, since the characteristic polynomial is integral). RH for $C$ is $|\alpha_i|=\sqrt q$, i.e.\ \emph{exactly} the statement that the two involutions agree. Weil's proof \cite{Weil1948} does not compute the conjugation pairing directly; it works on the surface $C\times C$, where the transpose of a correspondence implements the functional-equation involution and the Hodge index theorem (Castelnuovo--Severi) supplies a \emph{positivity} of the accessible pairing on a cone of correspondences rich enough to force the two involutions to coincide. The surface's gift is a positivity, not a formula.
+
+For number fields, Weil's explicit-formula positivity criterion \cite{Weil1952} is the exact shadow of this mechanism: RH is equivalent to the nonnegativity of the Weil functional on the appropriate cone of test functions, and the Weil adjoint pairs each zero $\rho$ with $1-\bar\rho$ --- the \emph{composite} of the two involutions, which RH asserts is the identity on zeros. What is missing is the number-field analogue of the surface, the source of positivity; this reading of the situation is due in this form to Bombieri \cite{Bombieri} and Connes \cite{ConnesEssay}. Connes' trace formula reformulation on the adele class space \cite{Connes1999} and the Connes--Consani program of characteristic-one geometry (the arithmetic and scaling sites, Riemann--Roch, and the emerging intersection-theoretic structures \cite{ConnesConsani}) constitute a sustained construction of that geometry \emph{from the arithmetic side}.
+
+The present conjecture approaches the identical missing object from the opposite corner. The program of \cite{ZS} possesses the geometric half outright --- a surface ($Q\cong\CP^1\times\CP^1$), a divisor (the lifted zero divisor), an involution ($\sigma$), and the theorem that RH is the equivariant statement about them (Theorem~\ref{thm:orient}) --- but the surface is analytic and carries no Frobenius, no intersection theory with finiteness, and no arithmetic; what it lacks is precisely the formula/positivity. Conjecture~\ref{conj:main} is therefore best read as a \emph{functional specification, written from the analytic side, of what any surface-substitute must deliver}: an unconditional, finite-scale, positivity-type expression of the conjugation pairing in arithmetic data. If the Connes--Consani construction succeeds, such an expression should drop out of the trace formula on (the square of) their site; conversely, a proof of Conjecture~\ref{conj:main} by any means would deliver the output of the dreamed-of surface without the surface. The polynomial model of Section~\ref{sec:poly} adds a consistency check to this convergence: the conjectured formula is necessarily of positivity type, so the ``find the formula'' road and the ``find the positivity'' road are, at their foundation, the same road.
+
+%======================================================================
+\section{What would follow, and what would not}\label{sec:honesty}
+
+We state plainly what this conjecture is not. It is not a path to the Riemann Hypothesis. Even a full proof of Conjecture~\ref{conj:main} at the classical exchange rate would leave open the problem of showing that the defect vanishes --- and Section~\ref{sec:degenerate} shows that, at the level of exponential rates, that problem \emph{is} the classical equivalence between zero-free regions and prime error terms. The de Bruijn--Newman bound $\Lambda_{\mathrm{dBN}}\ge0$ guarantees that no mechanism with a margin of safety exists. Question~\ref{q:rate}, the only clause that would move the classical wall, is stated as a question because its difficulty plausibly matches the wall's.
+
+What the conjecture is: a precise, falsifiable specification of an object that is missing from analytic number theory and whose absence the no-go results of Section~\ref{sec:nogo} show to be the exact obstruction to seeing the zeros' reality. Its billing is as a waypoint, not a route: since RH \emph{is} the agreement of the two involutions, any proof, by any method, must implicitly control the conjugation pairing against the functional-equation pairing; the conjecture makes that control an explicit object of study, with a known algebraic model (Section~\ref{sec:poly}), a known degenerate instance (Section~\ref{sec:degenerate}), a candidate mechanism with an existing analytic machinery behind it (Section~\ref{sec:conj}), and a stated first test (the cross-term calculus). Partial results are unconditional mathematics: an identity for any restricted class of paired test functions, a one-sided bound, an asymptotic, a trace formula for $S$-resolvents over any zero multiset, or a proof that no formula of a stated type exists --- each of these would be a new tool, and the statements extend verbatim to the Selberg class. Finally, the conjecture connects two communities --- quaternionic spectral theory, which owns a natively conjugation-paired functional calculus, and analytic number theory, which owns the explicit formula --- that have had, to date, essentially no contact.
+
+\subsection*{Acknowledgements}
+This document and the companion program paper \cite{ZS} were prepared with substantial research assistance from Claude (Anthropic); all mathematical claims were reviewed by the author, who takes sole responsibility for them. Numerical certifications referenced above are reproducible from the code archived with \cite{ZS}.
+
+%======================================================================
+\begin{thebibliography}{99}
+\itemsep3pt
+
+\bibitem{ACK} D.~Alpay, F.~Colombo, D.~P.~Kimsey, \emph{The spectral theorem for quaternionic unbounded normal operators based on the $S$-spectrum}, J. Math. Phys. \textbf{57} (2016), 023503.
+
+\bibitem{AltavillaSarfatti} A.~Altavilla, G.~Sarfatti, \emph{Slice-polynomial functions and twistor geometry of ruled surfaces in $\mathbb{CP}^3$}, Math. Z. \textbf{291} (2019), 1059--1092.
+
+\bibitem{Baker2015} E.~B.~Baker III, \emph{Quaternionic analysis with applications to the Riemann zeta function}, manuscript (2015); archived with \cite{ZS}.
+
+\bibitem{Bombieri} E.~Bombieri, \emph{Remarks on Weil's quadratic functional in the theory of prime numbers, I}, Atti Accad. Naz. Lincei Rend. Lincei Mat. Appl. \textbf{11} (2000), 183--233.
+
+\bibitem{CSSbook} F.~Colombo, I.~Sabadini, D.~C.~Struppa, \emph{Noncommutative Functional Calculus: Theory and Applications of Slice Hyperholomorphic Functions}, Birkh\"auser (2011); and \emph{Entire Slice Regular Functions}, Springer (2016).
+
+\bibitem{Connes1999} A.~Connes, \emph{Trace formula in noncommutative geometry and the zeros of the Riemann zeta function}, Selecta Math. (N.S.) \textbf{5} (1999), 29--106.
+
+\bibitem{ConnesEssay} A.~Connes, \emph{An essay on the Riemann Hypothesis}, in \emph{Open Problems in Mathematics} (J.~F.~Nash Jr., M.~Th.~Rassias, eds.), Springer (2016), 225--257.
+
+\bibitem{ConnesConsani} A.~Connes, C.~Consani, \emph{The scaling site}, C. R. Math. Acad. Sci. Paris \textbf{354} (2016), 1--6; \emph{The Riemann--Roch strategy: complex lift of the scaling site}, in \emph{Advances in Noncommutative Geometry}, Springer (2019); and subsequent works.
+
+\bibitem{ConreyIwaniec} J.~B.~Conrey, H.~Iwaniec, \emph{Spacing of zeros of Hecke $L$-functions and the class number problem}, Acta Arith. \textbf{103} (2002), 259--312.
+
+\bibitem{DavenportHeilbronn} H.~Davenport, H.~Heilbronn, \emph{On the zeros of certain Dirichlet series}, J. London Math. Soc. \textbf{11} (1936), 181--185.
+
+\bibitem{GentiliSalamonStoppato} G.~Gentili, S.~Salamon, C.~Stoppato, \emph{Twistor transforms of quaternionic functions and orthogonal complex structures}, J. Eur. Math. Soc. \textbf{16} (2014), 2323--2353.
+
+\bibitem{GentiliStoppato} G.~Gentili, C.~Stoppato, \emph{Zeros of regular functions and polynomials of a quaternionic variable}, Michigan Math. J. \textbf{56} (2008), 655--667.
+
+\bibitem{GentiliStruppa} G.~Gentili, D.~C.~Struppa, \emph{A new theory of regular functions of a quaternionic variable}, Adv. Math. \textbf{216} (2007), 279--301.
+
+\bibitem{GoldstonMontgomery} D.~A.~Goldston, H.~L.~Montgomery, \emph{Pair correlation of zeros and primes in short intervals}, in \emph{Analytic Number Theory and Diophantine Problems}, Birkh\"auser (1987), 183--203.
+
+\bibitem{IwaniecKowalski} H.~Iwaniec, E.~Kowalski, \emph{Analytic Number Theory}, AMS Colloquium Publications \textbf{53} (2004), Ch.~5.
+
+\bibitem{Montgomery} H.~L.~Montgomery, \emph{The pair correlation of zeros of the zeta function}, Proc. Sympos. Pure Math. \textbf{24}, AMS (1973), 181--193.
+
+\bibitem{RodgersTao} B.~Rodgers, T.~Tao, \emph{The de Bruijn--Newman constant is non-negative}, Forum Math. Pi \textbf{8} (2020), e6.
+
+\bibitem{TitchmarshBook} E.~C.~Titchmarsh, \emph{The Theory of the Riemann Zeta-Function}, 2nd ed. (revised by D.~R.~Heath-Brown), Oxford Univ. Press (1986), \S10.25.
+
+\bibitem{Weil1948} A.~Weil, \emph{Sur les courbes alg\'ebriques et les vari\'et\'es qui s'en d\'eduisent}, Hermann, Paris (1948).
+
+\bibitem{Weil1952} A.~Weil, \emph{Sur les ``formules explicites'' de la th\'eorie des nombres premiers}, Comm. S\'em. Math. Univ. Lund (1952), 252--265.
+
+\bibitem{ZS} E.~B.~Baker III, \emph{The zero-sphere program: a quaternionic--twistor framework for the Riemann Hypothesis}, companion paper (2026), in preparation; program documents, code, and numerical certifications archived on Zenodo.
+
+\end{thebibliography}
+
+\end{document}
