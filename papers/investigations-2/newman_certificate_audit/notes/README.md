@@ -2,8 +2,9 @@
 
 12 October 2026. Folder prepared for Edward Baker using GPT-6-astra (Codex;
 `gpt-6-astra`), reasoning effort **ultra**; notes 1–2 added the same day
-with Claude Fable 5.1 (`claude-fable-5-1`) and note 3 with Claude Opus 5.5
-(`claude-opus-5-5`, reasoning effort max), with substantial LLM assistance.
+with Claude Fable 5.1 (`claude-fable-5-1`) and notes 3–5 with Claude Opus 5.5
+(`claude-opus-5-5`, reasoning effort max; note 5 on 13 October), with
+substantial LLM assistance.
 
 Save dated incremental arguments here. Identify hypotheses, proved steps,
 source dependencies, the remaining estimate, and a concrete next decision.
@@ -44,3 +45,39 @@ Each note must record its own model and reasoning effort. Follow the
 
    Remaining: the barrier majorants, the tail gates and the uniform
    error budget.
+4. [Tail lemma and uniform error budget](4_TAIL_LEMMA_AND_UNIFORM_ERROR_BUDGET_AUDIT_20261012.md):
+   - checks the exact convolution partition (4.3), and shows that `OV` is
+     redundant padding. The tail's real contraction is
+     `D' = 0.960478`, with reserve `0.0395`.
+   - checks the endpoint caps, the all-`N`, `y` and `t` reductions, and
+     the error terms with the `10.50` weld.
+   - records one thin gate, `1.29·10⁻⁶`, which fixes the head
+     `M = 153814` and is avoidable by reversing two reductions.
+   - checks U1–U5 of the uniform budget,
+     `E_max ≤ 2.33494905212·10⁻⁷`, and gives proof-to-code maps for both
+     Arb programs.
+   - records two Polymath displays that do not follow from their written
+     proofs, both true and unused by the tail and `E_max` (note 5 §4.1
+     corrects a broader remark); proves `B_t ≠ 0`; and updates the
+     tolerance table.
+
+   Remaining: the barrier (Lemma 8.4 majorants, prism gate, `t → 0`)
+   and the producer's amortized rows.
+5. [Barrier certificate](5_BARRIER_CERTIFICATE_AUDIT_20261013.md):
+   - checks Lemma 8.4, one intermediate display of whose proof does not
+     follow by its stated step, and its extension to the box and to
+     `t = 0`;
+   - records that Polymath's gate (91) divides the time term by `2n`,
+     which the package does not inherit;
+   - checks the head-plus-integral bound (one thin but structural gate,
+     margin `2.24·10⁻⁷`, equivalent to `N² < X/4π`), the prism gate and
+     its homotopy, the stored-sum identity, the Taylor tail, the uniform
+     budget and `t → 0`;
+   - recomputes all 883 prism gates of both transcripts and the direct
+     majorant sums at five prisms, replays the four Arb programs, and
+     corroborates the stored-sum values by direct summation;
+   - corrects note 4: the finite lane and the barrier use (21) as
+     displayed, which is true.
+
+   Remaining: the producer's amortized rows (B3), then consolidation
+   (B4).

@@ -1,0 +1,63 @@
+Instrumentation used for note 5 section 9.3 of the Newman certificate audit
+(13 October 2026; prepared with Claude Opus 5.5, claude-opus-5-5).  Apply to
+barrier/src/TloopSinglemat_closed_cert.c of the pinned package
+(judegomila/dbn-lambda-01787854-candidate-audit at a74738de...) to obtain
+barrier_dump.c.  With the environment variable BARRIER_DUMP set, the program
+prints one line
+    DUMP t re_s im_s re_f im_f rad_re rad_im rad_s_re rad_s_im
+for every mesh point of its first prism only.  It also drops the ts == 0
+requirement, so that one prism can be rerun from a later seam.  Not a
+certificate; the sealed program is unchanged.
+
+Runs used (DATA = barrier/data/storedsum_nolemma_6000000185827_dig_20.txt):
+    BARRIER_DUMP=1 ./barrier_dump 0 0.0000358178128594897487241369766568 0.1809 0 DATA > dump1.txt
+    BARRIER_DUMP=1 ./barrier_dump 0.151525661350318739691458184216 0.156572747705793230403959988906 0.1809 0 DATA > dump882.txt
+
+--- barrier/src/TloopSinglemat_closed_cert.c
++++ barrier_dump.c
+@@ -22,6 +22,7 @@
+ #define DERIVATIVE_HEAD 16
+ 
+ static slong ddz_analytic_calls = 0;
++static int dump_active = 1;
+ static slong ddt_analytic_calls = 0;
+ 
+ // prepare the function as integrand for the integral
+@@ -615,6 +616,20 @@
+        therefore did not necessarily retain the smallest lower endpoint. */
+     arb_min(minmodabb, minmodabb, ab, prec);
+ 
++    if (getenv("BARRIER_DUMP") != NULL && dump_active)
++    {
++        printf("DUMP ");
++        arf_printd(arb_midref(t), 45); printf(" ");
++        arf_printd(arb_midref(acb_realref(s)), 45); printf(" ");
++        arf_printd(arb_midref(acb_imagref(s)), 45); printf(" ");
++        arf_printd(arb_midref(acb_realref(acb_mat_entry(ests, k, 0))), 30); printf(" ");
++        arf_printd(arb_midref(acb_imagref(acb_mat_entry(ests, k, 0))), 30); printf(" ");
++        mag_printd(arb_radref(acb_realref(acb_mat_entry(ests, k, 0))), 5); printf(" ");
++        mag_printd(arb_radref(acb_imagref(acb_mat_entry(ests, k, 0))), 5); printf(" ");
++        mag_printd(arb_radref(acb_realref(s)), 5); printf(" ");
++        mag_printd(arb_radref(acb_imagref(s)), 5); printf("\n");
++    }
++
+     arb_clear(ab);
+     arb_clear(negt);
+     arb_clear(truncation_error);
+@@ -985,7 +1000,7 @@
+ 
+     arb_set_si(a, 1);
+     arb_div_ui(a, a, 5, prec);
+-    if (!arb_is_zero(ts) || !arb_gt(target_cover, ts) ||
++    if (!arb_gt(target_cover, ts) ||
+         !arb_le(target_cover, a) || !arb_is_positive(y0))
+     {
+         fprintf(stderr, "FAIL: invalid closed-slab endpoints.\n");
+@@ -1467,6 +1482,7 @@
+ 
+         acb_mat_clear(ests);
+         ests_live = 0;
++        dump_active = 0;
+         if (!covered)
+             arb_set(t, t_next);
+     }

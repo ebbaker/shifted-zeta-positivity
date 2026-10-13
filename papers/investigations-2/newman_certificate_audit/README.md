@@ -5,6 +5,10 @@ reasoning effort: ultra, verified from the session configuration. First
 audit session the same day: Claude Fable 5.1 (`claude-fable-5-1`), Cowork.
 Second session the same day (review of the first, finite-lane audit):
 Claude Opus 5.5 (`claude-opus-5-5`), Cowork, reasoning effort max.
+Third session, 12–13 October (steps B1, B2 and B5 of the parallel plan:
+tail lemma and uniform error budget; barrier; cross-review of the formal
+lane): Claude Opus 5.5 (`claude-opus-5-5`; the serving model may differ),
+Cowork, reasoning effort max.
 Prepared with substantial LLM assistance. Internal checks are not
 independent mathematical validation.
 
@@ -26,8 +30,11 @@ cells where the approximation error matters (the first finite windows,
 interface's smaller budget (`e_C/e_{C,0} = 3.7·10^{−6}`) cannot be used at
 all, because the lane is uniform in `x`; and even if it could, the row's
 measured sensitivities bound the gain by `ΔΛ ≈ 1.2·10^{−8}`. The barrier
-has margins `400×` its approximation allowance, the tail `10^{4}×`. The
-README's stop condition for a record-bound campaign is met. See the
+has margins `400×` its approximation allowance, the tail `10^{4}×`. Those
+two figures measure approximation allowances only. Note 4 §6 and note 5
+§10 give the derivative and contraction tolerances: the tail's contraction reserve is
+`0.0395`, and the barrier's derivative majorants would have to be `×1.497`
+too small. The README's stop condition for a record-bound campaign is met. See the
 [benchmark note](notes/2_FINITE_LANE_REPLAY_AND_CORRECTED_BUDGET_BENCHMARK_20261012.md)
 and the [dependency ledger](notes/1_SOURCE_PIN_AND_DEPENDENCY_LEDGER_20261012.md).
 
@@ -59,8 +66,65 @@ No defect was found. The review also shows that the improved
 inequality's bound is monotone in the `γ`-bound. At the same `X` and
 `y0`, a sharp-weight lane at `t0 ≈ 0.157` (`Λ ≈ 0.1745`) would therefore
 reuse hypotheses (i) and (iii) unchanged. It is recorded as an option,
-not pursued. The largest unaudited piece is now the barrier's Lemma 8.4
-derivative majorants, which require the Polymath PDF in the session.
+not pursued.
+
+**Third session (12 October): tail lemma and uniform error budget.**
+[Note 4](notes/4_TAIL_LEMMA_AND_UNIFORM_ERROR_BUDGET_AUDIT_20261012.md)
+audits the two remaining analytic suppliers of hypothesis (ii): the tail
+lemma for all `N ≥ 3840000`, and the uniform budget `E_max`. No defect was
+found.
+
+- The convolution partition (4.3) is exact.
+- The term `OV` is redundant padding: its caps lie inside the routed
+  caps. Without it, the contraction is `D' = 0.960478`, so the reserve is
+  `0.0395`, not `2.8·10⁻⁴`.
+- One all-`N` gate is thin, `1.29·10⁻⁶` on the extended `y`-hull, and it
+  fixes the head `M = 153814`. It is not load-bearing: with the `y`- and
+  `N`-reductions taken in the other order, the gate is needed only on the
+  `y`-box, where it is `2.02`.
+- The reduction U1–U5 behind `E_max` is correct and uniform in `N`, `y`
+  and `t`. `E_max ≤ 2.33494905212·10⁻⁷`, and `L_690988/E_max ≥ 3.389`.
+- Two displayed Polymath bounds, (21) and (24), do not follow from their
+  written proofs. Both are true. The tail and `E_max` use neither; the
+  finite lane and the barrier use (21) as displayed (note 5 §4.1).
+- A standard-library recomputation passes all 54 gates and agrees with
+  the package's Arb values, which are always the more conservative.
+- Both Arb programs, rebuilt here, reproduce the sealed transcripts byte
+  for byte.
+
+Polymath's §8 is now read from the paper's TeX source (`km-git-acc/dbn_upper_bound`),
+so the remaining barrier audit (Lemma 8.4 majorants, prism gate,
+`t → 0`) does not need the PDF. `B_t ≠ 0` is proved in note 4 §3.8.
+
+**Third session, continued (13 October): the barrier.**
+[Note 5](notes/5_BARRIER_CERTIFICATE_AUDIT_20261013.md) audits hypothesis
+(iii): no zero of `H_t` in `[X, X+1] × [0.1809, 1]` for `0 ≤ t ≤ t0`. No
+defect was found.
+
+- Lemma 8.4 is correct. One intermediate display of its proof does not
+  follow by its stated step, but it is true and the lemma follows.
+- Polymath's own gate (91) divides the time term by `2n`, which its
+  argument does not justify. The package's gate has no such division.
+- The derivative-box lemma, the head-plus-integral bound, the prism gate
+  with its homotopy, the stored-sum identity, the Taylor-tail bound
+  (`1.95·10⁻²² < 10⁻²⁰`), the uniform approximation budget
+  (`3.57·10⁻⁴ < 0.00125`) and the extension to `t = 0` all check.
+- A standard-library checker passes 44 gates. It recomputes all 883
+  prism gates of both sealed transcripts (smallest margin
+  `0.5198498946`, at prism 882), and its direct sums of the Lemma 8.4
+  majorants at five prisms lie below the transcript's ceilings.
+- The four Arb programs reproduce their sealed outputs. An independent
+  direct-summation evaluator of `f_t` agrees with the stored-sum values
+  at 117 mesh points.
+- The derivative majorants could be `×1.497` too small, jointly, before
+  prism 882 fails.
+
+With notes 1–5, every analytic link of hypotheses (ii) and (iii) has been
+checked. What remains is the imported theorems and libraries, and the
+producer's 3,148,981 rows that were not recomputed (step B3). The same
+session also wrote the cross-family review of the formal-replay lane's
+first milestone, which is filed in that lane's
+[reviews](../formal_replay_crosswalk/reviews/CROSS_FAMILY_REVIEW_OF_FIRST_MILESTONE_CLAUDE_20261013.md).
 
 This combines certificate review and interface benchmarking in one investigation. It reuses project 17's approximation work rather than reopening its unsuccessful collision-exclusion program. The ordering of public packages is provisional: inspect current source availability, exact claims, dependencies, and replay requirements before selecting one and pinning its revision.
 
@@ -69,11 +133,19 @@ This combines certificate review and interface benchmarking in one investigation
 - [Dependency ledger](notes/1_SOURCE_PIN_AND_DEPENDENCY_LEDGER_20261012.md): pin, seal, row, hypotheses, lanes, contracts, remaining obligations.
 - [Replay and benchmark](notes/2_FINITE_LANE_REPLAY_AND_CORRECTED_BUDGET_BENCHMARK_20261012.md): stored-row reproduction, sensitivities, budgets, decision.
 - [Certified replay and finite-lane reductions](notes/3_CERTIFIED_ROW_REPLAY_AND_FINITE_LANE_REDUCTIONS_20261012.md): native binding, window freeze, certified replay of 32 stored rows, Dini gate re-verified with margin, sharp-lane option (second session).
+- [Tail lemma and uniform error budget](notes/4_TAIL_LEMMA_AND_UNIFORM_ERROR_BUDGET_AUDIT_20261012.md): partition and `OV`, caps and all-`N`, `y`, `t` and error gates, U1–U5, proof-to-code maps, updated tolerances (third session).
+- [Barrier certificate](notes/5_BARRIER_CERTIFICATE_AUDIT_20261013.md): Lemma 8.4 and its extension to the box, head plus integral, prism gate and homotopy, stored sums and Taylor tail, uniform budget and `t → 0`, proof-to-code map, tolerances (third session, continued).
 - [Numerics](numerics/README.md):
   - standard-library error-budget replay;
   - numpy row replay (benchmark tool);
   - standard-library certified row replay and Dini gate re-verification;
-  - numpy Dini-gate landscape (exploration).
+  - numpy Dini-gate landscape (exploration);
+  - standard-library recomputation of the tail lemma and of `E_max`, with
+    a byte replay of the package's two Arb verifiers;
+  - standard-library recomputation of the barrier's suppliers and of all
+    883 prism gates;
+  - byte replays of the barrier's four Arb programs, and a
+    direct-summation Arb corroboration of the stored-sum values.
 
   Each has a retained record.
 - [Cross-model review of notes 1–2](reviews/1_CROSS_MODEL_REVIEW_OF_NOTES_1_2_20261012.md) (Claude Opus 5.5).
@@ -100,7 +172,7 @@ above therefore collapses to the two tables in the notes.
 
 - A dependency and domain ledger for the selected bound, including the verified initial region, intermediate-time barrier, final-time nonvanishing, and unbounded analytic tail. *Delivered (note 1).*
 - A reproducible cell selection and replay procedure, small retained records, and a comparison table with complete error accounting. *Delivered (note 2, numerics).*
-- A review locating any discrepancy precisely, or confirming the tested assertions within their stated scope. *Partially. The first session found no discrepancy in the replayed rows, the error-budget transcription or the barrier transcript. The second session audited the finite lane's native binding, window freeze and Dini `y`-transfer and certified 32 stored rows independently, also without discrepancy. The barrier majorants, the tail gates and the uniform error budget remain.*
+- A review locating any discrepancy precisely, or confirming the tested assertions within their stated scope. *Partially. The first session found no discrepancy in the replayed rows, the error-budget transcription or the barrier transcript. The second session audited the finite lane's native binding, window freeze and Dini `y`-transfer and certified 32 stored rows independently, also without discrepancy. The third session audited the tail lemma, the uniform error budget and then the barrier, again without discrepancy. The producer's amortized rows remain.*
 - A decision on full replay, further evaluator work, or closure before any new bound campaign. *Delivered: no further evaluator work for this class; full replay only as audit.*
 
 ## Continue and stop tests
