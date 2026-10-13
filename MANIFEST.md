@@ -15,6 +15,7 @@ blueprint/README.md  blueprint/first-slab/statements.md
 statements/README.md  statements/ledger.yaml
 environment/{requirements,requirements_metadata}.txt
 tools/{check_citations,check_repository_hygiene}.py
+tools/{record_Claude_cowork_chat,record_Claude_export_chat}.py   (Claude chat recorders; moved from the root, 13 Oct 2026)
 papers/README.md
 papers/{shifted-zeta,misc}/README.md              (project indexes)
 papers/shifted-zeta/*/{README,STATUS,VERIFICATION_STATUS}.md  (where applicable; six folders)

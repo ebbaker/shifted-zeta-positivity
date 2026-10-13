@@ -53,7 +53,7 @@ was also archived as chat 2:
   reply was still in progress and enters only on a refresh.
 
 **How the Cowork chats are captured.** The recorder has no Cowork importer;
-the repository-root [record_Claude_cowork_chat.py](../../../record_Claude_cowork_chat.py)
+[tools/record_Claude_cowork_chat.py](../../../tools/record_Claude_cowork_chat.py)
 supplies one (see
 [Capture a Cowork conversation](#capture-a-cowork-conversation)).
 Claude converts the session's Claude Agent SDK transcript into one
@@ -61,13 +61,13 @@ ChatGPT-style conversation of the same shape as the Codex captures and
 registers it with `record_chat.py --import-json`. Kept: the user's typed
 messages and the assistant's text replies shown in the chat, including the
 short progress lines between tool calls (phase `commentary`) and the reply
-ending each turn (phase `final_answer`). Omitted: harness reminders,
-internal reasoning, tool calls and outputs, subagent records, attachments
-and runtime state, following the coverage rules below. The record's
-`archive_metadata` gives the session id, the turn times, the model
-setting, the SHA-256 of the transcript bytes read, and the repository paths
-of the files the session delivered through tool calls, which are not
-embedded. The first Cowork capture of this kind is the
+ending each turn (phase `final_answer`). Omitted: harness reminders and the
+summaries that resume a compacted session, internal reasoning, tool calls
+and outputs, subagent records, attachments and runtime state, following the
+coverage rules below. The record's `archive_metadata` gives the session id,
+the turn times, the model setting, the SHA-256 of the transcript bytes read,
+and the repository paths of the files the session delivered through tool
+calls, which are not embedded. The first Cowork capture of this kind is the
 [Newman project's chat 1](../newman_certificate_audit/chat-histories/README.md).
 
 [Chat 3 — Review Claude’s priority changes](0003_2026-10-12T21-32-30Z_review-claude-s-priority-changes.json)
@@ -138,30 +138,49 @@ for each registry.
 
 ## Capture a Cowork conversation
 
-A Cowork transcript stays in the session's cloud workspace, so the
-conversion runs there and the registration runs on this computer. The
-repository-root [record_Claude_cowork_chat.py](../../../record_Claude_cowork_chat.py)
-does both, applying the coverage rules above; `--help` gives the full
-procedure.
+From 13 October 2026 a Claude Cowork session working in this repository
+records itself, by standing instruction: at the end of every turn, before
+its reply, Claude refreshes the session's record in the Claude registry of
+the project it worked in (`chat-histories/claude-cowork/` inside the
+project), or in [claude-cowork/](claude-cowork/README.md) for work on the
+whole portfolio, and adds the registry README entry at the first capture. It
+does not commit. (Section revised with Claude Opus 5.5 in Claude Cowork.)
+
+The transcript stays in the session's cloud workspace and the repository on
+this computer, so the registry's files make the round trip through the
+desktop app's file tools rather than the chat.
+[tools/record_Claude_cowork_chat.py](../../../tools/record_Claude_cowork_chat.py)
+does both halves; `--help` gives the full procedure.
 
 ```sh
-# In the Cowork cloud workspace (newest transcript unless --transcript is given):
-python3 record_Claude_cowork_chat.py convert --output conv.json --b64-output conv.b64
+# Cloud workspace, at the start of each turn: keep the transcript's records
+# in a spool outside the repository, and print the session id.
+python3 STAGED/tools/record_Claude_cowork_chat.py spool
 
-# On this computer, from the repository root, with the base64 text of conv.b64:
-python3 record_Claude_cowork_chat.py register --input-b64 - --expect-sha256 HEX \
-  [--project PROJECT_NAME] <<'EOF'
-...
-EOF
+# This computer, from the repository root, at the end of each turn: the
+# registry that holds the session, and the files to stage.
+python3 tools/record_Claude_cowork_chat.py locate --conversation-id SESSION_ID \
+  [--registry papers/investigations-2/PROJECT/chat-histories/claude-cowork]
 
-# Draft this guide's paragraph for the new chat:
-python3 record_Claude_cowork_chat.py readme-stub [--project PROJECT_NAME]
+# Cloud workspace, after staging those files: convert, merge into the staged
+# record, and write the changed registry files for committing back.
+python3 STAGED/tools/record_Claude_cowork_chat.py capture --registry REGISTRY \
+  [--reserve NAME ...] [--delivered PATH ...]
 ```
 
-Repeating the steps later refreshes the same chat number. If the transcript
-and the repository are on the same machine, `record` does the first two
-steps at once. Files written by shell commands are not detected
-automatically; pass them to `convert` with `--delivered`.
+STAGED is the staged copy of the repository root. A refresh keeps the
+chat's number and file name and never shortens the record, because the new
+conversion is merged into the registered one. A context compaction can
+rewrite the transcript so that it starts at the compaction: the spool keeps
+what earlier reads saw, and a window that no read covered is listed in the
+record's `archive_metadata.gaps`. Files written by shell commands are not
+detected automatically; name them with `--delivered`. A capture holds
+everything up to the moment it runs, so the reply it precedes enters with
+the next refresh. Where the transcript and the repository are on the same
+machine, `record` converts and registers in one step; `convert` and
+`register --input-b64` carry a conversion through the chat instead. Earlier
+conversations are recovered from claude.ai with
+[tools/record_Claude_export_chat.py](../../../tools/record_Claude_export_chat.py).
 
 ## Import a selected conversation
 

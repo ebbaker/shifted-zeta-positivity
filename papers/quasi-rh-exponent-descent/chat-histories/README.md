@@ -481,6 +481,6 @@ Cowork) with LLM assistance. Claude conversations about this investigation
 now have their own registry in [claude-cowork/](claude-cowork/README.md), with
 its own numbering. It holds the claude.ai chat *Quasi-RH exponent descent
 brainstorm review* (11 October 2026), recovered with
-[record_Claude_export_chat.py](../../../record_Claude_export_chat.py). The
+[record_Claude_export_chat.py](../../../tools/record_Claude_export_chat.py). The
 Claude Exporter file `0011_Claude-Radial Bessel work overview-20261011-1414.json`
 stays here unchanged and was not converted again.

@@ -3,8 +3,9 @@
 
 Prepared for Edward Baker with LLM assistance. Model: Claude Opus 5.5
 (configured identifier claude-opus-5-5), Claude Cowork, 13 October 2026.
+Moved to tools/ the same day (same model).
 
-record_Claude_cowork_chat.py captures a Cowork session from inside that
+tools/record_Claude_cowork_chat.py captures a Cowork session from inside that
 session, using the session's own transcript. This script recovers the
 conversations from before that practice began, from two sources kept outside
 the repository:
@@ -48,12 +49,12 @@ message tree, so a reply left behind by an edited prompt stays on its own
 branch; current_node is the end of the most recent branch.
 
 Usage, from the repository root:
-  python3 record_Claude_export_chat.py list --events FILE
-  python3 record_Claude_export_chat.py cowork --events FILE --session-id cse_... --folder DIR
-  python3 record_Claude_export_chat.py chat --export conversations.json \\
+  python3 tools/record_Claude_export_chat.py list --events FILE
+  python3 tools/record_Claude_export_chat.py cowork --events FILE --session-id cse_... --folder DIR
+  python3 tools/record_Claude_export_chat.py chat --export conversations.json \\
       --conversation-id UUID --project-name NAME --project-uuid UUID --model ID --folder DIR
-  python3 record_Claude_export_chat.py readme-stub --folder DIR [--number N]
-  python3 record_Claude_export_chat.py extractor
+  python3 tools/record_Claude_export_chat.py readme-stub --folder DIR [--number N]
+  python3 tools/record_Claude_export_chat.py extractor
 Add --dry-run --output PATH to write a conversion without registering it.
 Neither the export nor the events file is copied into the repository; each
 record stores their SHA-256 instead.
@@ -75,7 +76,15 @@ from datetime import datetime, timezone
 from pathlib import Path
 from zoneinfo import ZoneInfo
 
-ROOT = Path(__file__).resolve().parent
+def find_root(start):
+    """The repository root: the nearest folder holding papers/ beside tools/ or .git."""
+    for folder in (start, *start.parents):
+        if (folder / "papers").is_dir() and ((folder / "tools").is_dir() or (folder / ".git").exists()):
+            return folder
+    return start.parent if start.name == "tools" else start
+
+
+ROOT = find_root(Path(__file__).resolve().parent)
 DEFAULT_RECORDER = ROOT / "papers" / "investigations-2" / "record_chat.py"
 UTC = timezone.utc
 LOCAL = ZoneInfo("America/New_York")

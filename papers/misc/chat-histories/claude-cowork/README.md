@@ -14,14 +14,14 @@ from the RH3 project on the Yang–Mills analysis and the
 [rh-detector](../../rh-detector/README.md) draft.
 
 Later Claude conversations about this work are recorded here with
-[record_Claude_cowork_chat.py](../../../../record_Claude_cowork_chat.py)
-(`register --folder papers/misc/chat-histories/claude-cowork`).
+[record_Claude_cowork_chat.py](../../../../tools/record_Claude_cowork_chat.py)
+(`capture --registry papers/misc/chat-histories/claude-cowork`, refreshed at the end of every turn).
 
 ## How the records were recovered
 
 - *Cowork sessions.* Each session's event log was read from claude.ai in the
   signed-in browser, reduced to its public messages, and converted with
-  [record_Claude_export_chat.py](../../../../record_Claude_export_chat.py)
+  [record_Claude_export_chat.py](../../../../tools/record_Claude_export_chat.py)
   (`cowork`). The project comes from the Cowork session list; the converter
   checks that the session's project tag encodes that project's UUID.
 - *claude.ai chats.* Taken from the account data export and converted with the

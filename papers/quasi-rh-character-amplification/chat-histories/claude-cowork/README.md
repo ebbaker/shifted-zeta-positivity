@@ -10,6 +10,6 @@ recorded yet. ChatGPT and Codex conversations are in [chatgpt-codex/](../chatgpt
 numbering is local to each registry.
 
 Record a Cowork session with
-[record_Claude_cowork_chat.py](../../../../record_Claude_cowork_chat.py)
-(`register --folder papers/quasi-rh-character-amplification/chat-histories/claude-cowork`), or recover an earlier conversation with
-[record_Claude_export_chat.py](../../../../record_Claude_export_chat.py).
+[record_Claude_cowork_chat.py](../../../../tools/record_Claude_cowork_chat.py)
+(`capture --registry papers/quasi-rh-character-amplification/chat-histories/claude-cowork`, refreshed at the end of every turn), or recover an earlier conversation with
+[record_Claude_export_chat.py](../../../../tools/record_Claude_export_chat.py).

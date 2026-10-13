@@ -47,6 +47,11 @@ repository.
 its event log on claude.ai and recorded as chat 1 of the
 [Claude registry](claude-cowork/README.md) (Claude Opus 5.5, Claude Cowork).
 
+**The third session.** The third audit session (Claude Opus 5.5; steps B1,
+B2 and B5 of the parallel plan) is chat 2 of the same
+[Claude registry](claude-cowork/README.md). It was captured from its
+transcript on 13 October 2026.
+
 Use the [base recorder](../../record_chat.py) from the investigations-2 folder
 with `--project newman_certificate_audit` and the actual source conversation metadata.
 See the [recording guide](../../chat-histories/README.md) for complete capture
