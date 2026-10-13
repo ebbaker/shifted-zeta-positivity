@@ -12,4 +12,6 @@ Initialized 12 October 2026; updated 13 October 2026. Prepared for Edward Baker 
 
 - [Fixed-character row dictionary](7_FIXED_CHARACTER_ROW_DICTIONARY_SOURCE_PASS_20261013.md): conditional character/exclusion dictionary, original zero support and exact central normalization; new applications remain uncompiled.
 
+- [Canonical-energy crosswalk](8_CANONICAL_ENERGY_CROSSWALK_20261013.md): conditional U4 route preserving the full element-row ball, dyadic normalization, label weights, original exclusions, derivative-order quantifiers and shifted/bounded scales; new applications remain uncompiled.
+
 The first three notes preserve their original source-inspection scope. Current execution status is recorded in the [lane README](../README.md) and [Linux environment record](../numerics/linux_vm_environment_20261013.json). Future notes must preserve source pins, hypotheses, model/effort disclosure and remaining obligations. Internal model assessments are not independent mathematical validation.

@@ -1,0 +1,320 @@
+{
+  "accepted_export_sha256": null,
+  "actual_axioms": null,
+  "archive_lookup": "Resolve relative paths first under this lane’s ignored numerics-archives directory, then under FORMAL_REPLAY_ARCHIVES. Verify stored and canonical hashes before use; absent or mismatched evidence cannot establish an outcome.",
+  "attempt": "001",
+  "axiom_allowed_set_compliance": "passed",
+  "axiom_and_export_scope": "The unchanged pinned comparator verifies allowed-set compliance but emits neither the exact used-axiom set nor an accepted-export digest. Exported extra axiom roots do not establish actual theorem dependencies.",
+  "canonical_encoding": "UTF-8 json.dumps(sort_keys=True, ensure_ascii=False, separators=(',', ':')); no final newline; complete structured object, including incidental metadata.",
+  "command": [
+    "systemd-run",
+    "--property=RestrictAddressFamilies=~AF_UNIX",
+    "--user",
+    "--pty",
+    "--unit=rh-replay-dirichlet-001",
+    "--property=RuntimeMaxSec=21600s",
+    "-E",
+    "PATH=/home/ubuntu/rh-replay-tools/bin:/home/ubuntu/rh-replay-tools/toolchain/lean-4.34.1-linux_aarch64/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+    "-E",
+    "ELAN_TOOLCHAIN=leanprover/lean4:v4.34.1",
+    "--working-directory=/home/ubuntu/rh-replay-source/lean",
+    "--",
+    "bash",
+    "-c",
+    "lake env comparator \"$1\"",
+    "bash",
+    "ComparatorChallenges/DirichletSevenEighths.json"
+  ],
+  "configuration": {
+    "challenge_module": "ComparatorChallenges.DirichletSevenEighths",
+    "definition_names": [],
+    "enable_nanoda": false,
+    "permitted_axioms": [
+      "propext",
+      "Quot.sound",
+      "Classical.choice"
+    ],
+    "solution_module": "OAI.NumberTheory.DirichletL.Nonvanishing",
+    "theorem_names": [
+      "OAI.DirichletCharacter.LFunction_ne_zero_of_seven_eighths_lt_re"
+    ]
+  },
+  "configuration_source": {
+    "bytes": 369,
+    "git_blob_sha1": "a946bfcf544ad212fbd46056dbff913c2d75247c",
+    "path": "lean/ComparatorChallenges/DirichletSevenEighths.json",
+    "sha256": "cfc8d85d49ec5f180e75990d95c59c45f9bd5b9f453a101308870b9c4df9e1d9"
+  },
+  "dependency_evidence": {
+    "cache_trust_policy": "Official Mathlib master/release/staging cache and default read-only legacy fallback only; no forks, alternative scopes or unsafe history search. Cache artifact contents are trusted to match their source inputs, as allowed by comparator README.",
+    "full_identity_set": "The preserved host_result.json lists all 42 commit/tree/diff identities; they were checked here against the hash-bound dependency-preparation record.",
+    "mathlib_commit": "d13f23b723b8a846827a245b89c10fc7d3f11612",
+    "original_manifest_sha256": "cf6105a25d9dca2f166b241d9191bd12c7e13305890dc9c4d0952351cccc0794",
+    "package_count": 42,
+    "pinned_and_patched_dependency_identity_set_canonical_sha256": "90e8d2358936c3fd44af1e18fee24c73d01a913c3467f53e76b6b483619298a3",
+    "prescribed_patch_count": 23
+  },
+  "effort": "not exposed; not inferred",
+  "elapsed_seconds": 4258.699506,
+  "execution": {
+    "baseline": "rh-replay.pre-math-replay-20261013",
+    "baseline_metadata": {
+      "children": [],
+      "comment": "Pinned source fd4aeeb; Lean 4.34.1; 42 dependency pins and 23 patches; trusted Mathlib cache; 16 sandbox controls; no OAI mathematical solution built.",
+      "cpu_count": "6",
+      "created": "Tue Oct 13 00:24:37 2026 EDT",
+      "disk_space": "150.0GiB",
+      "memory_size": "16.0GiB",
+      "mounts": {},
+      "parent": "",
+      "size": ""
+    },
+    "compiled_OAI_modules": 2924,
+    "final_probe_active_units": [],
+    "final_probe_math_processes": [],
+    "fresh_OAI_and_challenge_build_trees_absent_at_start": true,
+    "guard": "Unchanged comparator through the tested Landrun profiles, systemd user service RestrictAddressFamilies=~AF_UNIX; Landlock ABI 8 best-effort behavior, not a general IPC or operating-system-isolation proof.",
+    "guest_uid": 1000,
+    "service_completion_evidence": "durable unchanged systemd-run exit and complete comparator/kernel output; live unit explicitly not-found",
+    "untrusted_solution_compilation_outside_guard": false,
+    "vm": "rh-replay"
+  },
+  "finished_utc": "2026-10-13T07:01:39.739992+00:00",
+  "integration_checks": {
+    "all_five_per_attempt_checksum_entries_verified": true,
+    "config_hash_matches_pinned_source_manifest": true,
+    "config_matches_historical_statement_contract": true,
+    "dependency_identity_set_matches_preparation_record": true,
+    "final_queue_state_preserved_as_immutable_exact_copy": true,
+    "host_guest_log_preflight_and_final_probe_consistent": true,
+    "preparation_context_stored_hashes_and_sizes_verified": true,
+    "structured_record_canonical_hashes_computed": true,
+    "tool_binary_hashes_match_preparation_record": true
+  },
+  "kernel": "Lean default kernel",
+  "kernel_result": "accepted",
+  "limitations": [
+    "This is one replay of the pinned seven-eighths dirichlet target; it does not establish an independent review of the arithmetic argument or settle the Riemann Hypothesis.",
+    "Each other target has its own preserved attempt and result record; its outcome is not inferred from this target.",
+    "The October 5 arithmetic application ledger U1–U7 remains separate; new application terms are uncompiled.",
+    "A later supplemental export cannot be presumed byte-identical to the export accepted in this attempt.",
+    "Hash agreement establishes identity of preserved evidence; hashes are not mathematical proof steps."
+  ],
+  "llm_acknowledgement": "Prepared with substantial LLM assistance; integration of machine replay evidence is not independent mathematical validation.",
+  "model": "GPT-6 (Codex), inherited configuration; exact serving variant not exposed",
+  "prepared_for": "Edward Baker",
+  "preserved_attempt": {
+    "SHA256SUMS.txt": {
+      "bytes": 424,
+      "relative_archive_path": "linux-replay-20261013/replay-queue-20261013T051902Z-3d320a39/attempts/Dirichlet-001/SHA256SUMS.txt",
+      "stored_sha256": "83c6a609d372b460183164d5d22cf5750d117db52f5db25bd94c1681746f1b0d"
+    },
+    "comparator.log": {
+      "bytes": 3413044,
+      "relative_archive_path": "linux-replay-20261013/replay-queue-20261013T051902Z-3d320a39/attempts/Dirichlet-001/comparator.log",
+      "stored_sha256": "4896aaf441aa18498de0203b40555073fac7fadc120d162021e209a9f7d59a35"
+    },
+    "guest_final_probe.json": {
+      "bytes": 5771,
+      "canonical_sha256": "7c9c778aa157908e07a6f156fce27ead86174c3bff835a4a568ce3cd794f78e0",
+      "relative_archive_path": "linux-replay-20261013/replay-queue-20261013T051902Z-3d320a39/attempts/Dirichlet-001/guest_final_probe.json",
+      "stored_sha256": "af966c4e6b0e23f15015cf0a4027af97414993a7d3854631bf89d0c4cefec56e"
+    },
+    "guest_record.json": {
+      "bytes": 3209,
+      "canonical_sha256": "1d3c26da0b63178e89257c0f6121cf9358b3d833883b86ad6d1d512f52165834",
+      "relative_archive_path": "linux-replay-20261013/replay-queue-20261013T051902Z-3d320a39/attempts/Dirichlet-001/guest_record.json",
+      "stored_sha256": "aa7dac44398a65ef522c6e550eda8042301d113ab09792ff056f9c81f0576971"
+    },
+    "host_result.json": {
+      "bytes": 16699,
+      "canonical_sha256": "12282bc557e3e242f07f693d477f065dcb66cc3ce460ad1f0b9cf31d70fe1006",
+      "relative_archive_path": "linux-replay-20261013/replay-queue-20261013T051902Z-3d320a39/attempts/Dirichlet-001/host_result.json",
+      "stored_sha256": "74a6b267edc8a5e3eb4348d04aea019f4b536f9925db6dce0d2033e936ef727a"
+    },
+    "source_preflight.log": {
+      "bytes": 1613,
+      "canonical_sha256": "6bab698586b3fa2816b492da3ed205ac07c6a03abceed86494419adf01d90737",
+      "relative_archive_path": "linux-replay-20261013/replay-queue-20261013T051902Z-3d320a39/attempts/Dirichlet-001/source_preflight.log",
+      "stored_sha256": "ffdcb9e7c9aabe07be9e4a451fa042844b74d4ebc5a922f3e226281ec8ff3001"
+    }
+  },
+  "preserved_preparation_context": {
+    "comparator_smoke_20261013.json": {
+      "bytes": 1061,
+      "canonical_sha256": "53deee73201f1b2e565ebd2b4b29d8f1cd106c0dce3ab0dee95483ba788b250e",
+      "relative_archive_path": "linux-replay-20261013/replay-queue-20261013T051902Z-3d320a39/context/comparator_smoke_20261013.json",
+      "stored_sha256": "c2618b008f4062df6d7671600b0cf8a8323d2fa66665428cfa8dee0655822f0e"
+    },
+    "formal_statement_contracts_20261012.json": {
+      "bytes": 23961,
+      "canonical_sha256": "4c2cd593e1617973d78e4ad102e7e1580b0b28e0e53ad09c2bbec3911db222e5",
+      "relative_archive_path": "linux-replay-20261013/replay-queue-20261013T051902Z-3d320a39/context/formal_statement_contracts_20261012.json",
+      "stored_sha256": "ed6f618b2005807ba5016cc5c5574e545c8b4ada1aca586849a8924aedf1a078"
+    },
+    "linux_dependencies_20261013.json": {
+      "bytes": 273512,
+      "canonical_sha256": "04d4aa7e1810a793d3e02c4c4f42abfe77b059dab4d180cbf7a0cdaa5c148b14",
+      "relative_archive_path": "linux-replay-20261013/replay-queue-20261013T051902Z-3d320a39/context/linux_dependencies_20261013.json",
+      "stored_sha256": "57d8d14bcd2f7f5e34dff651eb942767dfb18768ef46a0db67c01ff992014bce"
+    },
+    "linux_isolation_20261013.json": {
+      "bytes": 48123,
+      "canonical_sha256": "9619a8db92ce77d63ef7d20149bd8fa66d6e5e8760d8f503050050f0af01ba50",
+      "relative_archive_path": "linux-replay-20261013/replay-queue-20261013T051902Z-3d320a39/context/linux_isolation_20261013.json",
+      "stored_sha256": "f4a6993b6adb2a9851f1055017d2921b36ca63ed322ad2e496b651211971963b"
+    },
+    "linux_tool_build_20261013.json": {
+      "bytes": 43247,
+      "canonical_sha256": "01ba1e9122eb98a1a9c129fe103216dcf6c81cdd63b5d4a6f44a67c0aec0990e",
+      "relative_archive_path": "linux-replay-20261013/replay-queue-20261013T051902Z-3d320a39/context/linux_tool_build_20261013.json",
+      "stored_sha256": "2826dd6bd00322432e9ac1b8b6e83d598aa9b200412c9243ae9cdd14479719b9"
+    },
+    "linux_vm_environment_20261013.json": {
+      "bytes": 5307,
+      "canonical_sha256": "e05bd75bd9b0f7bd39b6c7b3ba592dcc64ea0f30a324984004630a3791b55266",
+      "relative_archive_path": "linux-replay-20261013/replay-queue-20261013T051902Z-3d320a39/context/linux_vm_environment_20261013.json",
+      "stored_sha256": "0d36515ed08a849571ffb23b78e1a1bf36304b140dffc9008c26f41a42e48607"
+    },
+    "run_guarded_comparator.py": {
+      "bytes": 5040,
+      "relative_archive_path": "linux-replay-20261013/replay-queue-20261013T051902Z-3d320a39/context/run_guarded_comparator.py",
+      "stored_sha256": "3a11a35a5d28c376c9bbe8be9087a6003056de4c911d9eb9932ace2feb173f42"
+    },
+    "run_replay_queue.py": {
+      "bytes": 52659,
+      "relative_archive_path": "linux-replay-20261013/replay-queue-20261013T051902Z-3d320a39/context/run_replay_queue.py",
+      "stored_sha256": "a2468085fb8369994c561c8536307c0a6f2ff774d926fb91c20c819236b9cb11"
+    },
+    "source_inventory_20261012.json": {
+      "bytes": 71006,
+      "canonical_sha256": "1f122e8415b5477ca53d855dba390eec626d96f17bb5c4becb75c246dc7c079b",
+      "relative_archive_path": "linux-replay-20261013/replay-queue-20261013T051902Z-3d320a39/context/source_inventory_20261012.json",
+      "stored_sha256": "122c153264c38a40f1af9674deec329026c432c8f12992536d9def529168cfcf"
+    },
+    "trusted_mathlib_cache_20261013.json": {
+      "bytes": 1299,
+      "canonical_sha256": "9a0c0bc0cb06355eacf12fce86361727cc758b1d94f4f0ff306ca359ca6c6495",
+      "relative_archive_path": "linux-replay-20261013/replay-queue-20261013T051902Z-3d320a39/context/trusted_mathlib_cache_20261013.json",
+      "stored_sha256": "3bae4d577b001591c1d42a485515150b80cf44e1b6fd23499121ef0bab83cd25"
+    }
+  },
+  "process_result": {
+    "exit_code": 0,
+    "timed_out": false,
+    "timeout_cleanup_errors": []
+  },
+  "queue_completion": {
+    "completed_utc": "2026-10-13T08:01:53.917496+00:00",
+    "copied_from_live_relative_path": "linux-replay-20261013/replay_queue_state.json",
+    "final_state": {
+      "bytes": 21008,
+      "canonical_sha256": "bc22a1b48a557056354f6f6c832e059a2a8ae5fe57721b49f6003c188bbc0987",
+      "relative_archive_path": "linux-replay-20261013/replay-queue-20261013T051902Z-3d320a39/queue_final_state_20261013.json",
+      "stored_sha256": "1440ea1bcaf676c943878606f7f4b58c00515a08d2b98dc496a4c60b89765eba"
+    },
+    "phase": "complete",
+    "snapshot_scope": "Exact preserved bytes of the phase-complete queue state; the original queue state was not modified. Queue status supplements the per-attempt outcome and is not kernel acceptance evidence."
+  },
+  "record_date": "2026-10-13",
+  "schema": "formal-replay-preserved-milestone-v1",
+  "source_evidence": {
+    "challenge_source": {
+      "bytes": 379,
+      "git_blob_sha1": "baa55bebc509e8aed472a293e884de5ae2884508",
+      "module": "ComparatorChallenges.DirichletSevenEighths",
+      "path": "lean/ComparatorChallenges/DirichletSevenEighths.lean",
+      "sha256": "8fb13ad977bca104591fcbc6ef01a58496e7385053c9b1445f95749afc0eff54"
+    },
+    "local_modules_union_including_challenges": 2929,
+    "solution_source": {
+      "bytes": 1247,
+      "git_blob_sha1": "46c67f4000906b1391a471d6e6396ac0da3c16a5",
+      "module": "OAI.NumberTheory.DirichletL.Nonvanishing",
+      "path": "lean/OAI/NumberTheory/DirichletL/Nonvanishing.lean",
+      "sha256": "d98c4a7e074469b429890e1c21b8cc76c410026525a776895293cdc0f9e6ae89"
+    },
+    "source_closure_manifest": {
+      "bytes": 1958471,
+      "canonical_sha256": "b376fb72817e7bc0bd88c1de0bffb7eedde6f7dd670781c3b593d39fd3f00862",
+      "relative_archive_path": "source_closure_manifest.json",
+      "stored_sha256": "b0bd1f6b77e23bec0a78811a644114eb12dea6e55138620c82ef76a00af77c48"
+    },
+    "source_preflight": "record_and_manifest_identity_verified",
+    "source_preflight_fixture_controls": 10,
+    "target_inventory_scope": "Historical source inventory describes source identities; its not_run outcome fields retain their original date and are superseded for this target by the preserved attempt.",
+    "target_source_inventory": {
+      "challenge_module": "ComparatorChallenges.DirichletSevenEighths",
+      "config_path": "lean/ComparatorChallenges/DirichletSevenEighths.json",
+      "definition_names": [],
+      "enable_nanoda": false,
+      "external_import_count": 252,
+      "formal_replay_status": "not_run",
+      "local_module_count_including_challenge": 2925,
+      "local_modules_canonical_sha256": "1c2a13293a3a0a42b19d28cdde65a717afe62d4ef532984cfceb7beab0238eef",
+      "local_source_bytes": 25009580,
+      "oai_module_count": 2924,
+      "permitted_axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "reported_axioms": null,
+      "solution_module": "OAI.NumberTheory.DirichletL.Nonvanishing",
+      "theorem_names": [
+        "OAI.DirichletCharacter.LFunction_ne_zero_of_seven_eighths_lt_re"
+      ]
+    },
+    "upstream_commit": "fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb"
+  },
+  "started_utc": "2026-10-13T05:50:41.019182+00:00",
+  "statement_comparison": "passed",
+  "status": "comparator_accepted",
+  "success_markers": [
+    "Lean default kernel accepts the solution",
+    "Your solution is okay!"
+  ],
+  "target": "Dirichlet",
+  "tool_evidence": {
+    "binaries": {
+      "comparator": {
+        "architecture": "aarch64",
+        "elf_class": 64,
+        "elf_machine": 183,
+        "path": "/home/ubuntu/rh-replay-tools/bin/comparator",
+        "sha256": "3320b451a96d912bea42e4e55516e895cab7f05ee7f0e277b0caa026ebe58266",
+        "size_bytes": 133684664,
+        "source_build_path": "/home/ubuntu/rh-replay-tools/sources/comparator/.lake/build/bin/comparator"
+      },
+      "landrun": {
+        "architecture": "aarch64",
+        "elf_class": 64,
+        "elf_machine": 183,
+        "path": "/home/ubuntu/rh-replay-tools/bin/landrun",
+        "sha256": "d89541d39126a33f0eca4a676594533ed6da95d7f1183fe317b9f7de2354f887",
+        "size_bytes": 6136504,
+        "source_build_path": "/home/ubuntu/rh-replay-tools/bin/landrun"
+      },
+      "lean4export": {
+        "architecture": "aarch64",
+        "elf_class": 64,
+        "elf_machine": 183,
+        "path": "/home/ubuntu/rh-replay-tools/bin/lean4export",
+        "sha256": "cf5d18bcb62e92bf3446a7f88c1d709dae77ba2ddca9cd049dfd46e94e84904f",
+        "size_bytes": 255380032,
+        "source_build_path": "/home/ubuntu/rh-replay-tools/sources/lean4export/.lake/build/bin/lean4export"
+      }
+    },
+    "source_commits": {
+      "comparator": "d03acab154d269c06e60e4de7e4cc85deebff94b",
+      "landrun": "811cfff51ceaf3d9843708aa6d22e9b84ccac8b4",
+      "lean4export": "076e8e57707e813375e8f9da8bf989799ace9680"
+    },
+    "toolchain": "Lean (version 4.34.1, aarch64-unknown-linux-gnu, commit 5045d0056413266e57c625dcd7c365b10e377c52, Release)"
+  },
+  "written_contract": {
+    "physical_line": 19,
+    "source_contract": "theorem LFunction_ne_zero_of_seven_eighths_lt_re\n    {q : ℕ} [NeZero q] (χ : DirichletCharacter ℂ q) {s : ℂ}\n    (hs : (7 / 8 : ℝ) < s.re) (hpole : ¬ (χ = 1 ∧ s = 1)) :\n    _root_.DirichletCharacter.LFunction χ s ≠ 0",
+    "whitespace_normalized_contract": "theorem LFunction_ne_zero_of_seven_eighths_lt_re {q : ℕ} [NeZero q] (χ : DirichletCharacter ℂ q) {s : ℂ} (hs : (7 / 8 : ℝ) < s.re) (hpole : ¬ (χ = 1 ∧ s = 1)) : _root_.DirichletCharacter.LFunction χ s ≠ 0"
+  }
+}

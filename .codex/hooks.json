@@ -1,0 +1,31 @@
+{
+  "description": "Refresh already registered public research chat histories; one-time hook trust required.",
+  "hooks": {
+    "UserPromptSubmit": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 \"$(git rev-parse --show-toplevel)/tools/refresh_chat_history.py\" --hook --wait-seconds 5",
+            "async": true,
+            "timeout": 15,
+            "statusMessage": "Updating research chat history"
+          }
+        ]
+      }
+    ],
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 \"$(git rev-parse --show-toplevel)/tools/refresh_chat_history.py\" --hook --wait-seconds 60",
+            "async": true,
+            "timeout": 90,
+            "statusMessage": "Saving completed research reply"
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -230,3 +230,20 @@ The recorder refuses individual conversation files of 1 MiB or more.
 Follow [LARGE_FILES.md](../../../LARGE_FILES.md) for large non-regenerable
 histories: preserve them externally with a small dated hash and lookup
 record. Keep source exports outside the repository.
+
+## Automatic Codex refreshes
+
+The [automatic history workflow](../../../tools/CHAT_HISTORY.md) and
+[refresh tool](../../../tools/refresh_chat_history.py) provide standing
+capture and refresh for registered research chats. They preserve the
+original identity and earlier messages, verify both registry hashes,
+serialize writers and recover interrupted archive/index updates. Public
+prompt and reply captures use actual recorded messages; no planned final
+answer is inserted. The user authorizes routine updates without repeated
+confirmation. Native hooks require one-time platform review and trust.
+
+Use the wrapper for ongoing Codex captures and do not run the legacy
+recorder concurrently with an automatic writer. The original recorder
+remains the format implementation for explicit imports. Current counts
+and capture times come from each folder's index; first-capture facts remain
+historical. Raw sessions and private runtime records stay outside Git.

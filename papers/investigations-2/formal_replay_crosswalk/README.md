@@ -6,7 +6,9 @@ Model: GPT-6 (Codex), inherited session configuration; exact serving variant
 and reasoning effort are not exposed and are not inferred. Internal model
 assessments are not independent mathematical validation.
 
-Status at the 13 October launch checkpoint: Linux setup is complete and the one-off replay queue is running. Its first zeta attempt is compiling; no target result is available yet. The [launch record](numerics/replay_queue_launch_20261013.json) points to live status and subsequent attempt evidence. The arithmetic crosswalk remains partial; the new applications are uncompiled.
+Current replay status, 13 October 2026: the one-off queue completed at 04:01:53 EDT. All three pinned targets were accepted by the unchanged comparator and the Lean default kernel: [zeta](numerics/replay_zeta_001_20261013.json) in 78 minutes 36 seconds, [Dirichlet](numerics/replay_dirichlet_001_20261013.json) in 70 minutes 59 seconds, and [Hecke](numerics/replay_hecke_001_20261013.json) in 58 minutes 39 seconds. Each record binds its exact configuration, guarded fresh-baseline execution, statement agreement, permitted-axiom compliance and preserved raw evidence. The arithmetic crosswalk remains partial; new applications are uncompiled.
+
+The [completion checkpoint](numerics/replay_queue_completion_20261013.json) binds all three result records and the immutable final queue state. Total wall time from the first zeta attempt through final preservation was 3 hours 30 minutes 49 seconds, including baseline resets. At the later VM check, Multipass was running with zero load and no reported errors.
 
 This lane checks the pinned seven-eighths formal statements and builds an
 application crosswalk from the October 5 arithmetic argument to the
@@ -32,20 +34,21 @@ permission-profile behavior, not comprehensive operating-system isolation.
 The cache remains an explicitly trusted distribution artifact.
 
 The stopped-VM baseline `rh-replay.pre-math-replay-20261013` was saved before
-mathematical compilation. Zeta is the first target underway. Preserve each
-completed attempt's record and raw logs externally before restoring that
-baseline for another target. The [replay guide](numerics/REPLAY_GUIDE.md)
+mathematical compilation. Each of the three accepted attempts started
+from that baseline; every completed record, full raw log, source preflight
+and final probe was preserved externally before a subsequent restoration. The [replay guide](numerics/REPLAY_GUIDE.md)
 describes the checked command syntax, direct tool paths and restoration
 protocol.
 
-An accepted comparator result would establish statement agreement,
+The three preserved acceptances establish statement agreement,
 permitted-axiom compliance and the default-kernel outcome under the checker
 assumptions. The pinned checker does not emit an exact used-axiom set or
 the digest of its accepted export. Actual axiom sets remain unset, and a
 later supplementary export cannot be presumed identical to the accepted
-one. No zeta, Dirichlet or Hecke acceptance is claimed at this checkpoint.
+one. All three exact nominated targets were accepted; this does not compile
+the new October 5 application terms.
 
-The reviewed [one-off replay queue](numerics/REPLAY_QUEUE_GUIDE.md) has adopted the existing zeta attempt. It will preserve each result and restore the clean baseline for subsequent targets; queued attempts have six-hour bounds. All 54 offline controls passed. Current status and completed attempt paths are reached through the [launch checkpoint](numerics/replay_queue_launch_20261013.json) and [archive guide](ARCHIVES.md). The Mac is temporarily kept awake against idle sleep while the queue runs.
+The reviewed [one-off replay queue](numerics/REPLAY_QUEUE_GUIDE.md) completed its sequence of zeta, Dirichlet and Hecke attempts, preserving each result and restoring the clean baseline between targets. All 54 offline controls passed before launch. The [historical launch checkpoint](numerics/replay_queue_launch_20261013.json) and [archive guide](ARCHIVES.md) locate the preparation and completed evidence. An immutable copy of the final phase-complete queue state is bound in both final target records. The recorded temporary keep-awake process was no longer present at the 07:49 EDT observation; no other processes were stopped.
 
 ## Arithmetic source continuation: 13 October 2026
 
@@ -54,6 +57,8 @@ The [smooth-weight source pass](notes/5_SMOOTH_WEIGHT_UNIFORMITY_SOURCE_PASS_202
 The [unit-row source pass](notes/6_UNIT_ROW_AMPLIFICATION_SOURCE_PASS_20261013.md) locates the arbitrary-column-scale amplification declaration and derives the unit-row exponent with exact cutoffs and losses. [Smooth-weight](reviews/SMOOTH_WEIGHT_SOURCE_SCOPE_REVIEW_20261013.md) and [unit-row](reviews/UNIT_ROW_SOURCE_SCOPE_REVIEW_20261013.md) scope assessments found no concrete defect in these conditional derivations; they remain same-family reviews and new applications remain uncompiled.
 
 The [fixed-character source pass](notes/7_FIXED_CHARACTER_ROW_DICTIONARY_SOURCE_PASS_20261013.md) gives the explicit RowData dictionary, conditional on a residue presentation agreeing with the supplied character and its original zeros. Its [scope review](reviews/FIXED_CHARACTER_SOURCE_SCOPE_REVIEW_20261013.md) found no concrete defect. The classical-character presentation, arbitrary finite mask and combined Lean application remain uncompiled.
+
+The [canonical-energy crosswalk](notes/8_CANONICAL_ENERGY_CROSSWALK_20261013.md) gives a conditional source route for U4 with exact row support, unit-label weight domination, the dyadic factor four, finite restoration of extra excluded primes and derivative order chosen before arbitrary support intervals. Its [source-contract record](numerics/canonical_energy_crosswalk_20261013.json) identifies 38 Lean files and 43 anchors; all 2,926 copied OAI source files were verified against the preserved manifest. The [scope review](reviews/CANONICAL_ENERGY_SOURCE_SCOPE_REVIEW_20261013.md) found no concrete mathematical defect in this conditional derivation. The genuine character presentation and new assembled Lean applications remain uncompiled.
 
 ## First source milestone: 12 October 2026
 
@@ -78,11 +83,10 @@ and its two-Poisson transfer remain separately unresolved.
 
 ## Next bounded tasks
 
-1. Complete and classify the current zeta attempt, then replay Dirichlet
-   and Hecke from fresh restored baselines. Record exact configurations,
-   source/tool/dependency identities, patches, commands, allowed-axiom
-   compliance and kernel outcomes. Separate operational failures from
-   statement mismatch, excess axioms or kernel rejection.
+1. Obtain a scoped review of the three completed replay records, including
+   exact configurations, source/tool/dependency bindings, permitted-axiom
+   compliance, kernel outcomes and trust assumptions. The original checker
+   does not emit exact used-axiom sets or accepted-export digests.
 2. Continue the October 5 to September 30 to Lean application crosswalk.
    Preserve normalization, signs, zero extensions, exclusions,
    smooth-profile classes, parameter ranges and uniformity. Classify each
