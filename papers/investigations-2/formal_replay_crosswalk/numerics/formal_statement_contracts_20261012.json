@@ -1,0 +1,415 @@
+{
+  "date": "2026-10-12",
+  "prepared_for": "Edward Baker",
+  "model": "GPT-6 (Codex), inherited session configuration",
+  "reasoning_effort": "not exposed; not inferred",
+  "llm_assistance": "Substantial; this source-inspection artifact is not independent mathematical validation.",
+  "scope": "Written target contracts and finite-order Hecke semantic bridge; no builds or comparator executions.",
+  "upstream_repository": "https://github.com/openai/math",
+  "upstream_revision": "fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb",
+  "read_checkout": "/private/tmp/formal-replay-crosswalk-20261012/upstream/openai-math",
+  "mathlib_revision": "d13f23b723b8a846827a245b89c10fc7d3f11612",
+  "formal_replay_performed": false,
+  "actual_axiom_reports_produced": false,
+  "proof_acceptance_claimed": false,
+  "targets": [
+    {
+      "family": "zeta",
+      "configuration_path": "lean/ComparatorChallenges/QuasiRiemannHypothesis.json",
+      "configuration": {
+        "challenge_module": "ComparatorChallenges.QuasiRiemannHypothesis",
+        "solution_module": "OAI.NumberTheory.DirichletL.Nonvanishing",
+        "theorem_names": [
+          "OAI.riemannZeta_ne_zero_of_seven_eighths_lt_re"
+        ],
+        "definition_names": [],
+        "permitted_axioms": [
+          "propext",
+          "Quot.sound",
+          "Classical.choice"
+        ],
+        "enable_nanoda": false
+      },
+      "challenge_path": "lean/ComparatorChallenges/QuasiRiemannHypothesis.lean",
+      "solution_path": "lean/OAI/NumberTheory/DirichletL/Nonvanishing.lean",
+      "challenge_written_contract": {
+        "physical_line": 5,
+        "source_contract": "theorem riemannZeta_ne_zero_of_seven_eighths_lt_re\n    {s : ℂ} (hs : (7 / 8 : ℝ) < s.re) : riemannZeta s ≠ 0",
+        "whitespace_normalized_contract": "theorem riemannZeta_ne_zero_of_seven_eighths_lt_re {s : ℂ} (hs : (7 / 8 : ℝ) < s.re) : riemannZeta s ≠ 0"
+      },
+      "solution_written_contract": {
+        "physical_line": 29,
+        "source_contract": "theorem riemannZeta_ne_zero_of_seven_eighths_lt_re\n    {s : ℂ} (hs : (7 / 8 : ℝ) < s.re) : riemannZeta s ≠ 0",
+        "whitespace_normalized_contract": "theorem riemannZeta_ne_zero_of_seven_eighths_lt_re {s : ℂ} (hs : (7 / 8 : ℝ) < s.re) : riemannZeta s ≠ 0"
+      },
+      "normalized_written_contracts_identical": true,
+      "source_signature_status": "inspected",
+      "comparator_status": "not_run",
+      "actual_reported_axioms": null
+    },
+    {
+      "family": "dirichlet",
+      "configuration_path": "lean/ComparatorChallenges/DirichletSevenEighths.json",
+      "configuration": {
+        "challenge_module": "ComparatorChallenges.DirichletSevenEighths",
+        "solution_module": "OAI.NumberTheory.DirichletL.Nonvanishing",
+        "theorem_names": [
+          "OAI.DirichletCharacter.LFunction_ne_zero_of_seven_eighths_lt_re"
+        ],
+        "definition_names": [],
+        "permitted_axioms": [
+          "propext",
+          "Quot.sound",
+          "Classical.choice"
+        ],
+        "enable_nanoda": false
+      },
+      "challenge_path": "lean/ComparatorChallenges/DirichletSevenEighths.lean",
+      "solution_path": "lean/OAI/NumberTheory/DirichletL/Nonvanishing.lean",
+      "challenge_written_contract": {
+        "physical_line": 8,
+        "source_contract": "theorem LFunction_ne_zero_of_seven_eighths_lt_re\n    {q : ℕ} [NeZero q] (χ : DirichletCharacter ℂ q) {s : ℂ}\n    (hs : (7 / 8 : ℝ) < s.re) (hpole : ¬ (χ = 1 ∧ s = 1)) :\n    _root_.DirichletCharacter.LFunction χ s ≠ 0",
+        "whitespace_normalized_contract": "theorem LFunction_ne_zero_of_seven_eighths_lt_re {q : ℕ} [NeZero q] (χ : DirichletCharacter ℂ q) {s : ℂ} (hs : (7 / 8 : ℝ) < s.re) (hpole : ¬ (χ = 1 ∧ s = 1)) : _root_.DirichletCharacter.LFunction χ s ≠ 0"
+      },
+      "solution_written_contract": {
+        "physical_line": 19,
+        "source_contract": "theorem LFunction_ne_zero_of_seven_eighths_lt_re\n    {q : ℕ} [NeZero q] (χ : DirichletCharacter ℂ q) {s : ℂ}\n    (hs : (7 / 8 : ℝ) < s.re) (hpole : ¬ (χ = 1 ∧ s = 1)) :\n    _root_.DirichletCharacter.LFunction χ s ≠ 0",
+        "whitespace_normalized_contract": "theorem LFunction_ne_zero_of_seven_eighths_lt_re {q : ℕ} [NeZero q] (χ : DirichletCharacter ℂ q) {s : ℂ} (hs : (7 / 8 : ℝ) < s.re) (hpole : ¬ (χ = 1 ∧ s = 1)) : _root_.DirichletCharacter.LFunction χ s ≠ 0"
+      },
+      "normalized_written_contracts_identical": true,
+      "source_signature_status": "inspected",
+      "comparator_status": "not_run",
+      "actual_reported_axioms": null
+    },
+    {
+      "family": "hecke",
+      "configuration_path": "lean/ComparatorChallenges/HeckeSevenEighths.json",
+      "configuration": {
+        "challenge_module": "ComparatorChallenges.HeckeSevenEighths",
+        "solution_module": "OAI.NumberTheory.DirichletL.Hecke.Nonvanishing",
+        "theorem_names": [
+          "OAI.SevenEighths.HeckeFamily.LFunction_ne_zero_of_seven_eighths_lt_re"
+        ],
+        "definition_names": [],
+        "permitted_axioms": [
+          "propext",
+          "Quot.sound",
+          "Classical.choice"
+        ],
+        "enable_nanoda": false
+      },
+      "challenge_path": "lean/ComparatorChallenges/HeckeSevenEighths.lean",
+      "solution_path": "lean/OAI/NumberTheory/DirichletL/Hecke/Nonvanishing.lean",
+      "challenge_written_contract": {
+        "physical_line": 237,
+        "source_contract": "theorem LFunction_ne_zero_of_seven_eighths_lt_re\n    (χ : Character) {s : ℂ} (hs : (7 / 8 : ℝ) < s.re)\n    (hpole : ¬ (χ.residue = 1 ∧ s = 1)) : LFunction χ s ≠ 0",
+        "whitespace_normalized_contract": "theorem LFunction_ne_zero_of_seven_eighths_lt_re (χ : Character) {s : ℂ} (hs : (7 / 8 : ℝ) < s.re) (hpole : ¬ (χ.residue = 1 ∧ s = 1)) : LFunction χ s ≠ 0"
+      },
+      "solution_written_contract": {
+        "physical_line": 13,
+        "source_contract": "theorem LFunction_ne_zero_of_seven_eighths_lt_re\n    (χ : Character) {s : ℂ} (hs : (7 / 8 : ℝ) < s.re)\n    (hpole : ¬ (χ.residue = 1 ∧ s = 1)) : LFunction χ s ≠ 0",
+        "whitespace_normalized_contract": "theorem LFunction_ne_zero_of_seven_eighths_lt_re (χ : Character) {s : ℂ} (hs : (7 / 8 : ℝ) < s.re) (hpole : ¬ (χ.residue = 1 ∧ s = 1)) : LFunction χ s ≠ 0"
+      },
+      "normalized_written_contracts_identical": true,
+      "source_signature_status": "inspected",
+      "comparator_status": "not_run",
+      "actual_reported_axioms": null
+    }
+  ],
+  "hecke_family": {
+    "namespace": "OAI.SevenEighths.HeckeFamily",
+    "K": "CyclotomicField 3 ℚ",
+    "O": "NumberField.RingOfIntegers K",
+    "Character_fields": [
+      "modulus : Ideal O",
+      "modulus_ne_bot : modulus ≠ ⊥",
+      "residue : MulChar (O ⧸ modulus) ℂ",
+      "unit_trivial : ∀ u : Oˣ, residue (Ideal.Quotient.mk modulus (u : O)) = 1",
+      "period : ℕ",
+      "period_pos : 0 < period",
+      "period_mem : (period : O) ∈ modulus"
+    ],
+    "constructor": "OAI.SevenEighths.HeckeFamily.Character.ofResidue",
+    "constructor_period": "Fintype.card (O ⧸ M)",
+    "period_family_restriction": false,
+    "ray_units_quotient": "(O ⧸ M)ˣ ⧸ RayOrthogonality.globalUnits M",
+    "pid_instance": "IsCyclotomicExtension.Rat.three_pid K",
+    "finite_order_evidence": "Finite residue-unit group; IdealCharacter.norm_residue_le_one invokes MulChar.apply_mem_rootsOfUnity.",
+    "zero_extension": "MulChar.map_nonunit and idealCoeff_source_mask; zero ideal mapped to zero.",
+    "lattice_L": "HeckeTheta.latticeL (coefficients χ)",
+    "ideal_L": "continuedLattice χ s / 6",
+    "normalization_evidence": "continuedLattice_eq_six_ideal_tsum and LFunction_eq_ideal_tsum for 1 < s.re; UnrestrictedIdealReindex.tsum_unit_invariant_of_zero uses exactly six units.",
+    "idelic_interface_status": "Classical semantic bridge through finite ray characters; no generic abstract idelic Lean equivalence found in the inspected modules.",
+    "unit_quotient_interface_status": "Explicit source definitions and written theorem contracts inspected; not replayed.",
+    "finite_euler_product": "∏ P | M, (1 - idealCoeff ψ P * (absNorm P)^(-s))",
+    "finite_euler_nonzero_domain": "0 < s.re",
+    "finite_euler_identity_domain": "0 < s.re, and s ≠ 1 or nonprincipal χ, assuming exact ideal coefficient mask.",
+    "primitive_presentation": "χ.modulus ≤ ψ.modulus; IsPrimitiveOnIdeals ψ.residue; absNorm ψ.modulus ≤ absNorm χ.modulus; exact coefficient mask on ideals coprime to χ.modulus.",
+    "principal_pole_evidence": [
+      "HeckeOrigin.poleRemoved_eq",
+      "HeckeOrigin.poleRemoved_one_ne_zero",
+      "HeckePrincipalResidue.principal_residue_positive"
+    ],
+    "IsPrimitiveOnIdeals": "∀ I : Ideal R, I ≠ ⊥ → ∃ u : Rˣ, (u : R) - 1 ∈ I ∧ χ (u : R) ≠ 1",
+    "primitive_completedL": "(scale c : ℂ)^(-s) * (Real.pi : ℂ)^(-s) * Complex.Gamma s * LFunction (character c χ hu) s",
+    "primitive_scale": "2 / (Real.sqrt 3 * ‖eisEmbedding c‖)",
+    "primitive_completed_identity_hypotheses": [
+      "c : O, [NeZero c]",
+      "χ : MulChar (O ⧸ Ideal.span {c}) ℂ",
+      "unit triviality hu",
+      "FiniteFourier.IsPrimitiveOnIdeals χ",
+      "s ≠ 0",
+      "s ≠ 1",
+      "Complex.Gamma s ≠ 0"
+    ],
+    "primitive_functional_equation_orientation": "completedL c χ hu hp (1-s) = TraceCharacter.normalizedGauss c χ * completedL c χ⁻¹ (inverse_unit_trivial c χ hu) hp.inv s"
+  },
+  "primary_external_semantic_source": {
+    "title": "J. S. Milne, Class Field Theory v4.03, Chapter V, Theorem 1.7",
+    "url": "https://www.jmilne.org/math/CourseNotes/CFT.pdf#page=159",
+    "use": "Classical inference of residue-unit quotient description from ray-class exact sequence, class number one, and no real places; not executed formal correspondence."
+  },
+  "source_files": {
+    "lean/docs/003.md": {
+      "sha256": "41e52ed718260e6feb1db218f8e97287e703cb63c6f16e6c36f5563e6e2395ce",
+      "bytes": 1911,
+      "physical_lines": 25,
+      "url": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/docs/003.md"
+    },
+    "lean/lake-manifest.json": {
+      "sha256": "cf6105a25d9dca2f166b241d9191bd12c7e13305890dc9c4d0952351cccc0794",
+      "bytes": 14622,
+      "physical_lines": 426,
+      "url": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/lake-manifest.json"
+    },
+    "lean/lean-toolchain": {
+      "sha256": "d5edba4e4b8faad9c1baeadb265716d20d03be4d1a2647dc5e35b0c0325bea7b",
+      "bytes": 25,
+      "physical_lines": 1,
+      "url": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/lean-toolchain"
+    },
+    "lean/OAI/NumberTheory/DirichletL/Nonvanishing.lean": {
+      "sha256": "d98c4a7e074469b429890e1c21b8cc76c410026525a776895293cdc0f9e6ae89",
+      "bytes": 1247,
+      "physical_lines": 33,
+      "url": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/NumberTheory/DirichletL/Nonvanishing.lean"
+    },
+    "lean/OAI/NumberTheory/DirichletL/Foundation.lean": {
+      "sha256": "ebfe6353a647f9e09bce1891343398e49094bc60f72b9b525f1e0fe97ee9e59d",
+      "bytes": 18060,
+      "physical_lines": 286,
+      "url": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/NumberTheory/DirichletL/Foundation.lean"
+    },
+    "lean/OAI/NumberTheory/DirichletL/Detector/FinalAssemblyUnconditional.lean": {
+      "sha256": "0f52159a2929e7b20646f8394589d25a1a637c2f78746ad9d1447871577af615",
+      "bytes": 1607,
+      "physical_lines": 50,
+      "url": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/NumberTheory/DirichletL/Detector/FinalAssemblyUnconditional.lean"
+    },
+    "lean/OAI/NumberTheory/DirichletL/RayOrthogonality.lean": {
+      "sha256": "85ff7487c61c123c298ed50f372be88338689a5d9d83ed4827bae30664243eed",
+      "bytes": 8025,
+      "physical_lines": 213,
+      "url": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/NumberTheory/DirichletL/RayOrthogonality.lean"
+    },
+    "lean/OAI/NumberTheory/DirichletL/IdealCharacter.lean": {
+      "sha256": "ae9e08095d0eaa044a305e11db19c7d363302159897fcd54d07f65f952cc1f6e",
+      "bytes": 11400,
+      "physical_lines": 258,
+      "url": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/NumberTheory/DirichletL/IdealCharacter.lean"
+    },
+    "lean/OAI/NumberTheory/DirichletL/CubicSieve/ResidualSectors.lean": {
+      "sha256": "af8d601f6afdf6c21a37503080f62050ea51220ed4e8a58b706b9c82305bfdca",
+      "bytes": 29717,
+      "physical_lines": 616,
+      "url": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/NumberTheory/DirichletL/CubicSieve/ResidualSectors.lean"
+    },
+    "lean/OAI/NumberTheory/DirichletL/Reciprocity/RamifiedSymbol.lean": {
+      "sha256": "b393ffbece71820d28827135c26a9e81139329825d452aff1b70ecae9ce80249",
+      "bytes": 36295,
+      "physical_lines": 758,
+      "url": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/NumberTheory/DirichletL/Reciprocity/RamifiedSymbol.lean"
+    },
+    "lean/ComparatorChallenges/QuasiRiemannHypothesis.lean": {
+      "sha256": "065f8c9a01d28db78c8b1bfc5083b535082a2d2aac2230d563f98b8caa812cc5",
+      "bytes": 169,
+      "physical_lines": 9,
+      "url": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/ComparatorChallenges/QuasiRiemannHypothesis.lean"
+    },
+    "lean/ComparatorChallenges/QuasiRiemannHypothesis.json": {
+      "sha256": "46ebb7edc11f69536210f502b4bcbd36bbaf3f0872c16748b6c8ce43991bf320",
+      "bytes": 353,
+      "physical_lines": 14,
+      "url": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/ComparatorChallenges/QuasiRiemannHypothesis.json"
+    },
+    "lean/ComparatorChallenges/DirichletSevenEighths.lean": {
+      "sha256": "8fb13ad977bca104591fcbc6ef01a58496e7385053c9b1445f95749afc0eff54",
+      "bytes": 379,
+      "physical_lines": 16,
+      "url": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/ComparatorChallenges/DirichletSevenEighths.lean"
+    },
+    "lean/ComparatorChallenges/DirichletSevenEighths.json": {
+      "sha256": "cfc8d85d49ec5f180e75990d95c59c45f9bd5b9f453a101308870b9c4df9e1d9",
+      "bytes": 369,
+      "physical_lines": 14,
+      "url": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/ComparatorChallenges/DirichletSevenEighths.json"
+    },
+    "lean/ComparatorChallenges/HeckeSevenEighths.lean": {
+      "sha256": "cb5e404fa65a502c0a9006b9ad45c28914feb79e4b7b1ffcf05e4af82ed0cfc2",
+      "bytes": 10095,
+      "physical_lines": 245,
+      "url": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/ComparatorChallenges/HeckeSevenEighths.lean"
+    },
+    "lean/ComparatorChallenges/HeckeSevenEighths.json": {
+      "sha256": "04eb947847df3c1717bdb660f70a74600d0991490bb67d52cbcf0b3186e0bd5e",
+      "bytes": 377,
+      "physical_lines": 14,
+      "url": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/ComparatorChallenges/HeckeSevenEighths.json"
+    },
+    "lean/OAI/NumberTheory/DirichletL/Hecke/Family.lean": {
+      "sha256": "9871d175749b34ec40cf66ccc14b4faa0a9ef08831cb3fa901c944e57c7b9ec6",
+      "bytes": 3888,
+      "physical_lines": 102,
+      "url": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/NumberTheory/DirichletL/Hecke/Family.lean"
+    },
+    "lean/OAI/NumberTheory/DirichletL/Hecke/Coordinates.lean": {
+      "sha256": "0bd4412f7f9599222632de140616fc1cb0105d9c47e3d730a12857c47b0918ab",
+      "bytes": 3861,
+      "physical_lines": 92,
+      "url": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/NumberTheory/DirichletL/Hecke/Coordinates.lean"
+    },
+    "lean/OAI/NumberTheory/DirichletL/Hecke/CharacterAnalytic.lean": {
+      "sha256": "e426e0a61e9e7caaa8bf95071dd6a2b86464fee067bcb43c0ac7b58ca989ea28",
+      "bytes": 5140,
+      "physical_lines": 116,
+      "url": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/NumberTheory/DirichletL/Hecke/CharacterAnalytic.lean"
+    },
+    "lean/OAI/NumberTheory/DirichletL/Hecke/Theta.lean": {
+      "sha256": "5fe20e38278c74632a0b77aac4bc7a2b6217360378178e0b7dc5085cd73954c9",
+      "bytes": 10476,
+      "physical_lines": 232,
+      "url": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/NumberTheory/DirichletL/Hecke/Theta.lean"
+    },
+    "lean/OAI/NumberTheory/DirichletL/Hecke/ThetaSeries.lean": {
+      "sha256": "25d74f312961971c15115137887094db35e9ee466127444694a4da29a007a2d1",
+      "bytes": 2931,
+      "physical_lines": 73,
+      "url": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/NumberTheory/DirichletL/Hecke/ThetaSeries.lean"
+    },
+    "lean/OAI/NumberTheory/DirichletL/Hecke/FamilySeries.lean": {
+      "sha256": "e1f13693e9b19dcdca6ff4da5e2bba935790506dd253228372fdc23356ce946a",
+      "bytes": 3066,
+      "physical_lines": 69,
+      "url": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/NumberTheory/DirichletL/Hecke/FamilySeries.lean"
+    },
+    "lean/OAI/NumberTheory/DirichletL/Hecke/IdealBridge.lean": {
+      "sha256": "6c1fc33b7372108323bf3af3d4ab6f6e454ea9896b89e78964463a8e35df735f",
+      "bytes": 5193,
+      "physical_lines": 118,
+      "url": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/NumberTheory/DirichletL/Hecke/IdealBridge.lean"
+    },
+    "lean/OAI/NumberTheory/DirichletL/Hecke/IdealOperations.lean": {
+      "sha256": "81fb7846d22a952e64ca4e97177b11aa443a0a7b9be827a6be13da8576c8f01e",
+      "bytes": 2047,
+      "physical_lines": 49,
+      "url": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/NumberTheory/DirichletL/Hecke/IdealOperations.lean"
+    },
+    "lean/OAI/NumberTheory/DirichletL/Hecke/Euler.lean": {
+      "sha256": "3c2d31189b4eb5efa3417c73fa7390c7add3350143df5e98fd951a375631558d",
+      "bytes": 2024,
+      "physical_lines": 49,
+      "url": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/NumberTheory/DirichletL/Hecke/Euler.lean"
+    },
+    "lean/OAI/NumberTheory/DirichletL/Hecke/Origin.lean": {
+      "sha256": "6ff6b0c08619fc86f0ebb63c3ba9d6bdb2e14cff8a4328a85fb9e00e73af9f2f",
+      "bytes": 3197,
+      "physical_lines": 81,
+      "url": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/NumberTheory/DirichletL/Hecke/Origin.lean"
+    },
+    "lean/OAI/NumberTheory/DirichletL/Hecke/Reciprocal.lean": {
+      "sha256": "d243f1e44bb2fcec20d209300980172dcaf2f5a09e31c45dcb761343b9c9e89b",
+      "bytes": 5082,
+      "physical_lines": 122,
+      "url": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/NumberTheory/DirichletL/Hecke/Reciprocal.lean"
+    },
+    "lean/OAI/NumberTheory/DirichletL/Hecke/PrincipalResidue.lean": {
+      "sha256": "35e58be12c947041e0b0116d08023f892d8dca637bca32b69dd891a48ded4d80",
+      "bytes": 2642,
+      "physical_lines": 57,
+      "url": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/NumberTheory/DirichletL/Hecke/PrincipalResidue.lean"
+    },
+    "lean/OAI/NumberTheory/DirichletL/Hecke/Primitive.lean": {
+      "sha256": "6f1f8df20ee09e62dcafc8cbcd966761d0114302684965732159fb570902a7c6",
+      "bytes": 7497,
+      "physical_lines": 167,
+      "url": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/NumberTheory/DirichletL/Hecke/Primitive.lean"
+    },
+    "lean/OAI/NumberTheory/DirichletL/Hecke/Presentation.lean": {
+      "sha256": "6d3ab5d6b1fe51409d259d966a4031d0257ba0c488e535660efcd08af6b15b47",
+      "bytes": 4443,
+      "physical_lines": 99,
+      "url": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/NumberTheory/DirichletL/Hecke/Presentation.lean"
+    },
+    "lean/OAI/NumberTheory/DirichletL/Hecke/RayFamily.lean": {
+      "sha256": "86c80381f402618d744802694f1f09a9ab6a197d8730bcdd50d99a646c871c7e",
+      "bytes": 2928,
+      "physical_lines": 66,
+      "url": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/NumberTheory/DirichletL/Hecke/RayFamily.lean"
+    },
+    "lean/OAI/NumberTheory/DirichletL/Hecke/RayQuotient.lean": {
+      "sha256": "7eed3879d118ca87d25dfeb78babe3b7fc2b4204cb1cc32404aaf0203b23a3a6",
+      "bytes": 2973,
+      "physical_lines": 65,
+      "url": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/NumberTheory/DirichletL/Hecke/RayQuotient.lean"
+    },
+    "lean/OAI/NumberTheory/DirichletL/Hecke/FiniteDeletion.lean": {
+      "sha256": "dfb26a8cb221175f3c7cef4e854e21c467b040ca903bde1ff75bca00ff7eeee1",
+      "bytes": 7526,
+      "physical_lines": 163,
+      "url": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/NumberTheory/DirichletL/Hecke/FiniteDeletion.lean"
+    },
+    "lean/OAI/NumberTheory/DirichletL/Hecke/ModulusRefinement.lean": {
+      "sha256": "10760a970f8dc85bb90e2d797f12f13a34f280e5899b55fa34bc1111d73736c0",
+      "bytes": 2699,
+      "physical_lines": 65,
+      "url": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/NumberTheory/DirichletL/Hecke/ModulusRefinement.lean"
+    },
+    "lean/OAI/NumberTheory/DirichletL/Hecke/Dirichlet.lean": {
+      "sha256": "8b33d23c18ec5b85a13043aa775841389903247645fc00536cc2b3286332ff7d",
+      "bytes": 8502,
+      "physical_lines": 185,
+      "url": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/NumberTheory/DirichletL/Hecke/Dirichlet.lean"
+    },
+    "lean/OAI/NumberTheory/DirichletL/Hecke/ConditionalNonvanishing.lean": {
+      "sha256": "b628ed950a6e85f6fc8014c951a1450b965f11c36539bd6830a577fa9c470804",
+      "bytes": 717,
+      "physical_lines": 21,
+      "url": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/NumberTheory/DirichletL/Hecke/ConditionalNonvanishing.lean"
+    },
+    "lean/OAI/NumberTheory/DirichletL/Hecke/Nonvanishing.lean": {
+      "sha256": "9e120752d0067e9b645f173846833396de6282dfa83dff7dc83b7fd500af47d5",
+      "bytes": 1708,
+      "physical_lines": 47,
+      "url": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/NumberTheory/DirichletL/Hecke/Nonvanishing.lean"
+    },
+    "lean/OAI/NumberTheory/DirichletL/FiniteFourier.lean": {
+      "sha256": "2bf96ef222c6a2d587e00567ca46688b378bb11547621ea3037270e0905ff84c",
+      "bytes": 6179,
+      "physical_lines": 162,
+      "url": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/NumberTheory/DirichletL/FiniteFourier.lean"
+    },
+    "lean/OAI/NumberTheory/DirichletL/GaussianTheta.lean": {
+      "sha256": "ae3496a86f536df3c5eb068eb006818cfe15c1de183946de06b1b46a250d1e8f",
+      "bytes": 15352,
+      "physical_lines": 361,
+      "url": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/NumberTheory/DirichletL/GaussianTheta.lean"
+    }
+  },
+  "limitations": [
+    "Hashes establish identity of inspected source bytes, not acceptance of their proofs.",
+    "Challenge files contain intentional sorry placeholders; comparator must check their named solution proofs.",
+    "Permitted axioms are configuration entries, not reported proof dependencies.",
+    "Foundation imports are navigation evidence, not discharge of a manuscript application.",
+    "No automatic certification of the October 5 proof route or later applications."
+  ]
+}
