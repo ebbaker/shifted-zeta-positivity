@@ -76,3 +76,21 @@ nonvanishing. The brainstorm's analytic Stein, Volterra, squeeze and weak
 boundary dictionaries have direct derivations; they are not additional
 claims of computational certification. All retained files are small and
 no third-party PDFs or large generated data were added.
+
+## Prioritized research first pass
+
+13 October 2026. Prepared for Edward Baker with substantial LLM assistance;
+recorded configuration `gpt-6-astra`, effort **ultra**.
+
+The [first-pass record](PRIORITY_RESEARCH_FIRST_PASS_RECORD_20261013.json)
+binds the inputs and outputs of the
+[execution review](../reviews/PRIORITY_RESEARCH_FIRST_PASS_CODEX_20261013.md).
+New checkers and their detailed records live in their own investigations:
+
+- [01 reflected-block diagnostics](../../active/01_complete_cutoff_reflection/numerics/README.md).
+- [02 elliptic transport controls](../../active/02_angular_jacobi_gluing/numerics/README.md).
+- [17 outward genuine-theta boundary comparison](../../active/17_spacetime_collision_degree/numerics/README.md).
+
+The shared record distinguishes exact rational checks, floating theta/chirp
+diagnostics and the fully paid compact theta certificate. No broader
+certificate campaign or large dataset was produced.

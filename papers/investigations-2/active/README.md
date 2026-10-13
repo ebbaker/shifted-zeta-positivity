@@ -3,22 +3,28 @@
 13 October 2026. Prepared for Edward Baker with substantial LLM assistance.
 Model: `gpt-6.1-sol` (Codex); reasoning effort **ultra**.
 
+First research execution update on the same date: `gpt-6-astra` (Codex),
+reasoning effort **ultra**, verified from the recorded session.
+
 The original 16 folders organize the directions from the
 [broad lifted theta symmetry search](../brainstorm/LIFTED_THETA_SYMMETRY_SEARCH_CODEX_20261013.md).
-All are **initialized and awaiting Claude review**. The folder setup records
-research programs; it starts no numerical campaign or theorem proof.
+The folder setup initialized research programs for Claude review. Its
+historical notes remain unchanged. The user-requested
+[first research pass](../brainstorm/reviews/PRIORITY_RESEARCH_FIRST_PASS_CODEX_20261013.md)
+has now completed bounded tasks in **01, 02 and 17**; the other programs
+remain initialized. A Claude review of these new results is outstanding.
 
 A subsequent [Codex review](../brainstorm/reviews/ACTIVE_DIRECTIONS_REVIEW_CODEX_20261013.md)
 (`gpt-6-astra`, effort **ultra**) ranks the bounded first tasks and adds
 **direction 17, spacetime collision degree**, with an analytic seed and exact
-polynomial controls. There are now 17 active folders. The original programs
-still await the proposed Claude review; no genuine-theta campaign has begun
-in the new direction.
+polynomial controls. There are now 17 active folders. Its first
+genuine-theta boundary pilot now passes on a compact rectangle, with no
+cost advantage over the matched interior test.
 
 | Card | Research program | Readiness | First proposed output |
 | --- | --- | --- | --- |
-| 1 | [Complete cutoff reflection](01_complete_cutoff_reflection/notes/INITIAL_RESEARCH_PROGRAM_20261013.md) | First tier | A complete interior and exterior identity with boundary payments |
-| 2 | [Angular Jacobi gluing](02_angular_jacobi_gluing/notes/INITIAL_RESEARCH_PROGRAM_20261013.md) | First tier | Full angular gluing and its Newman heat compatibility defect |
+| 1 | [Complete cutoff reflection](01_complete_cutoff_reflection/README.md) | Bounded first test complete | Exact paired block; shared endpoint survives conjugated reflection |
+| 2 | [Angular Jacobi gluing](02_angular_jacobi_gluing/README.md) | Bounded first test complete | Inserted elliptic identity and convergent short-period transport; no new sign |
 | 3 | [Anchored source observability](03_anchored_source_observability/notes/INITIAL_RESEARCH_PROGRAM_20261013.md) | First tier | An independent source identity and a paid two-channel certificate |
 | 4 | [Chord geometry and nonlocal closure](04_chord_nonlocal_closure/notes/INITIAL_RESEARCH_PROGRAM_20261013.md) | First tier | A theta-specific constraint on transverse and gradient correlations |
 | 5 | [Metaplectic coordinate atlas](05_metaplectic_coordinate_atlas/notes/INITIAL_RESEARCH_PROGRAM_20261013.md) | Supporting tool | Regular charts with controlled physical reconstruction |
@@ -33,7 +39,7 @@ in the new direction.
 | 14 | [Theta Volterra integrability](14_theta_volterra_integrability/notes/INITIAL_RESEARCH_PROGRAM_20261013.md) | Bounded operator test | A theta-specific recurrence or string relation beyond generic integrability |
 | 15 | [Adelic and automorphic compatibility](15_adelic_automorphic_compatibility/notes/INITIAL_RESEARCH_PROGRAM_20261013.md) | Arithmetic continuation | A global signed identity on the actual common-height orbit |
 | 16 | [Radial geometry and sine moments](16_radial_sine_geometry/notes/INITIAL_RESEARCH_PROGRAM_20261013.md) | Bounded geometry test | A source-conditioned sign retaining the nonlocal generator |
-| 17 | [Spacetime collision degree](17_spacetime_collision_degree/notes/INITIAL_RESEARCH_PROGRAM_20261013.md) | Bounded certificate comparison | A genuine-theta boundary winding certificate with measured cost |
+| 17 | [Spacetime collision degree](17_spacetime_collision_degree/README.md) | Bounded pilot complete | Genuine-theta winding zero; 4 boundary pair integrals versus 1 interior pair integral |
 
 ## Review priorities
 
@@ -42,7 +48,10 @@ prioritizes 02, 01 and 09; treats 03 and 06 as downstream certificate
 targets; and retains 08 as a separate arithmetic task. Its
 [angular refinement](02_angular_jacobi_gluing/notes/ANGULAR_GLUING_AND_RIGIDITY_REVIEW_SEEDS_20261013.md)
 gives an exact balanced lift and a precise next elliptic-transport test.
-The original review guidance follows.
+The [execution review](../brainstorm/reviews/PRIORITY_RESEARCH_FIRST_PASS_CODEX_20261013.md)
+now records that test and the outcomes in 01/17. Continue 02 only with a
+named inequality for its complete nonlocal channels; 09 is the next
+distinct identity task. The original review guidance follows.
 
 Start with complete cutoff reflection, angular Jacobi gluing, and rank two
 addition. Anchored source observability is the quantitative destination

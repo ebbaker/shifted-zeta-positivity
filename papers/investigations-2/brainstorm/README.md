@@ -29,3 +29,21 @@ certificate targets. It records an exact angular refinement and adds
 [spacetime collision degree](../active/17_spacetime_collision_degree/README.md)
 as direction 17 for a separate boundary-certificate comparison.
 The review and new records use `gpt-6-astra`, reasoning effort **ultra**.
+
+## First research execution
+
+The [first research pass](reviews/PRIORITY_RESEARCH_FIRST_PASS_CODEX_20261013.md)
+executes two bounded discovery tasks, 02 and 01, and the small comparison
+in 17. Angular transport now has a complete moving-period identity, a
+convergent short-period construction and an all-order scalar-jet dictionary;
+the simplest auxiliary-source positivity claim fails. The complete
+reflection block retains a noncancelling shared endpoint. A genuine-theta
+winding certificate passes on a low-height rectangle, but a matched
+interior test is cheaper. The review gives the next decision gates and
+keeps rank two addition as the next distinct identity calculation.
+
+The [input and execution record](numerics/PRIORITY_RESEARCH_FIRST_PASS_RECORD_20261013.json)
+and [this research conversation](chat-histories/README.md) accompany the
+pass (`gpt-6-astra`, effort **ultra**). These are internal analytic checks,
+diagnostics and one bounded outward certificate; no global sign or RH
+conclusion is established.

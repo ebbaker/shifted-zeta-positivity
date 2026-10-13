@@ -13,7 +13,16 @@ certified boundary windings for heat polynomials of multiplicity 2 through
 with cancelling indices. Every curved edge is connected to its polygon
 inside a certified open half-plane.
 
-These are exact finite polynomial controls. No genuine-theta rectangle has
-been evaluated. See the [program](../notes/INITIAL_RESEARCH_PROGRAM_20261013.md)
-for the analytic argument and proposed benchmark. Keep large regenerable
-artifacts outside Git under [LARGE_FILES.md](../../../../../LARGE_FILES.md).
+The [genuine-theta pilot](check_genuine_theta_boundary_pilot.py) now adds a
+fully paid 60-digit outward certificate on `[0,0.05] × [8,12]`. Run
+`python3 check_genuine_theta_boundary_pilot.py --record /tmp/genuine-theta-boundary-pilot.json`.
+Its [retained record](GENUINE_THETA_BOUNDARY_PILOT_RECORD_20261013.json)
+certifies zero winding with four complete boundary pair integrals; the same
+evaluator excludes joint zeros with one interior pair integral. All theta
+and integration tails are included. No performance advantage is established.
+
+See the [initial program](../notes/INITIAL_RESEARCH_PROGRAM_20261013.md)
+for the degree argument and the
+[pilot note](../notes/1_GENUINE_THETA_BOUNDARY_PILOT_20261013.md) for payments
+and the stop decision. Keep large regenerable artifacts outside Git under
+[LARGE_FILES.md](../../../../../LARGE_FILES.md).

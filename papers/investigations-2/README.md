@@ -3,13 +3,20 @@
 13 October 2026. Prepared for Edward Baker with substantial LLM assistance.
 Model: `gpt-6.1-sol` (Codex); reasoning effort **ultra**.
 
+First research execution update on the same date: `gpt-6-astra` (Codex),
+reasoning effort **ultra**, verified from the recorded session.
+
 The current portfolio has [17 programs in active](active/README.md),
-with a research document in every project's `notes/` folder. The original
-16 await Claude's review before execution. A subsequent
+with a research document in every project's `notes/` folder. A subsequent
 [Codex assessment](brainstorm/reviews/ACTIVE_DIRECTIONS_REVIEW_CODEX_20261013.md)
 (`gpt-6-astra`, effort **ultra**) ranks their first tasks and adds spacetime
-collision degree with an analytic seed and exact polynomial controls; its
-genuine-theta pilot remains unstarted. Five older project folders are now
+collision degree with an analytic seed and exact polynomial controls. The
+[first research pass](brainstorm/reviews/PRIORITY_RESEARCH_FIRST_PASS_CODEX_20261013.md)
+now completes bounded tasks in angular gluing, cutoff reflection and
+spacetime winding. It gives exact identities and obstructions, plus a
+genuine-theta boundary certificate whose matched interior test is cheaper.
+The remaining programs stay initialized, and independent review of the
+new results remains outstanding. Five older project folders are now
 in [inactive](inactive/README.md).
 The shared [brainstorm folder](brainstorm/README.md) remains at this level.
 `formal_replay_crosswalk` and `newman_certificate_audit` remain at this level.
