@@ -3,10 +3,17 @@
 13 October 2026. Prepared for Edward Baker with substantial LLM assistance.
 Model: `gpt-6.1-sol` (Codex); reasoning effort **ultra**.
 
-These 16 folders organize the directions from the
+The original 16 folders organize the directions from the
 [broad lifted theta symmetry search](../brainstorm/LIFTED_THETA_SYMMETRY_SEARCH_CODEX_20261013.md).
 All are **initialized and awaiting Claude review**. The folder setup records
 research programs; it starts no numerical campaign or theorem proof.
+
+A subsequent [Codex review](../brainstorm/reviews/ACTIVE_DIRECTIONS_REVIEW_CODEX_20261013.md)
+(`gpt-6-astra`, effort **ultra**) ranks the bounded first tasks and adds
+**direction 17, spacetime collision degree**, with an analytic seed and exact
+polynomial controls. There are now 17 active folders. The original programs
+still await the proposed Claude review; no genuine-theta campaign has begun
+in the new direction.
 
 | Card | Research program | Readiness | First proposed output |
 | --- | --- | --- | --- |
@@ -26,8 +33,16 @@ research programs; it starts no numerical campaign or theorem proof.
 | 14 | [Theta Volterra integrability](14_theta_volterra_integrability/notes/INITIAL_RESEARCH_PROGRAM_20261013.md) | Bounded operator test | A theta-specific recurrence or string relation beyond generic integrability |
 | 15 | [Adelic and automorphic compatibility](15_adelic_automorphic_compatibility/notes/INITIAL_RESEARCH_PROGRAM_20261013.md) | Arithmetic continuation | A global signed identity on the actual common-height orbit |
 | 16 | [Radial geometry and sine moments](16_radial_sine_geometry/notes/INITIAL_RESEARCH_PROGRAM_20261013.md) | Bounded geometry test | A source-conditioned sign retaining the nonlocal generator |
+| 17 | [Spacetime collision degree](17_spacetime_collision_degree/notes/INITIAL_RESEARCH_PROGRAM_20261013.md) | Bounded certificate comparison | A genuine-theta boundary winding certificate with measured cost |
 
 ## Review priorities
+
+The [new assessment](../brainstorm/reviews/ACTIVE_DIRECTIONS_REVIEW_CODEX_20261013.md)
+prioritizes 02, 01 and 09; treats 03 and 06 as downstream certificate
+targets; and retains 08 as a separate arithmetic task. Its
+[angular refinement](02_angular_jacobi_gluing/notes/ANGULAR_GLUING_AND_RIGIDITY_REVIEW_SEEDS_20261013.md)
+gives an exact balanced lift and a precise next elliptic-transport test.
+The original review guidance follows.
 
 Start with complete cutoff reflection, angular Jacobi gluing, and rank two
 addition. Anchored source observability is the quantitative destination

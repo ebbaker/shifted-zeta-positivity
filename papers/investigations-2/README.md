@@ -3,9 +3,13 @@
 13 October 2026. Prepared for Edward Baker with substantial LLM assistance.
 Model: `gpt-6.1-sol` (Codex); reasoning effort **ultra**.
 
-The current portfolio has [16 new programs in active](active/README.md),
-with an initial document in every project's `notes/` folder. They await
-Claude's review before research execution. Five older project folders are now
+The current portfolio has [17 programs in active](active/README.md),
+with a research document in every project's `notes/` folder. The original
+16 await Claude's review before execution. A subsequent
+[Codex assessment](brainstorm/reviews/ACTIVE_DIRECTIONS_REVIEW_CODEX_20261013.md)
+(`gpt-6-astra`, effort **ultra**) ranks their first tasks and adds spacetime
+collision degree with an analytic seed and exact polynomial controls; its
+genuine-theta pilot remains unstarted. Five older project folders are now
 in [inactive](inactive/README.md).
 The shared [brainstorm folder](brainstorm/README.md) remains at this level.
 `formal_replay_crosswalk` and `newman_certificate_audit` remain at this level.
@@ -14,7 +18,7 @@ because they are portfolio infrastructure.
 
 ```text
 investigations-2/
-  active/                       16 initialized research programs
+  active/                       17 research programs
   inactive/                     5 existing project folders
   brainstorm/                   shared research planning and reviews
   formal_replay_crosswalk/       retained audit and conversation history

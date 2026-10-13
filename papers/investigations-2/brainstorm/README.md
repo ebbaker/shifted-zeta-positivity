@@ -18,3 +18,14 @@ Its strategic context is [New paths forward after audits](NEW_PATHS_FORWARD_AFTE
 and the [reviewed parallel layout](reviews/STRATEGY_AND_PARALLEL_LAYOUT_REVIEW_CODEX_20261012.md).
 The new search extends those discussions; their original audit and proof
 scopes remain in the linked documents.
+
+## Review of the active directions
+
+The [13 October assessment](reviews/ACTIVE_DIRECTIONS_REVIEW_CODEX_20261013.md)
+reviews all sixteen programs against the originating chats. It recommends
+angular gluing, complete cutoff reflection and rank two addition as the
+first bounded identity tasks, with observability and paired kernels as their
+certificate targets. It records an exact angular refinement and adds
+[spacetime collision degree](../active/17_spacetime_collision_degree/README.md)
+as direction 17 for a separate boundary-certificate comparison.
+The review and new records use `gpt-6-astra`, reasoning effort **ultra**.
