@@ -41,13 +41,14 @@ the simplest auxiliary-source positivity claim fails. The complete
 reflection block retains a noncancelling shared endpoint. A genuine-theta
 winding certificate passes on a low-height rectangle, but a matched
 interior test is cheaper. The review gives the next decision gates and
-keeps rank two addition as the next distinct identity calculation.
+selected rank two addition as the next distinct identity calculation.
 
 The [input and execution record](numerics/PRIORITY_RESEARCH_FIRST_PASS_RECORD_20261013.json)
 and [this research conversation](chat-histories/README.md) accompany the
 pass (`gpt-6-astra`, effort **ultra**). These are internal analytic checks,
 diagnostics and one bounded outward certificate; no global sign or RH
 conclusion is established.
+<<<<<<< HEAD
 =======
 ## Claude review of the active directions
 
@@ -64,3 +65,22 @@ verified exact formula for the first Laguerre expression of \(\xi\). Its
 [checks](numerics/README.md#claude-review-of-the-active-directions) accompany
 it. No folder was moved or created.
 >>>>>>> f2e4b17 (Reviews from Claude and new directions)
+=======
+
+## Rank-two addition to paired kernels
+
+The [09-to-06 continuation](reviews/RANK_TWO_TO_PAIRED_KERNEL_REVIEW_CODEX_20261013.md)
+now completes the unequal-scale two-coset identity, with both source
+insertions, both paired kernels, modular characteristics and boundary/tail
+payments. The same-parity coset fails positive definiteness for both
+kernels: the positive folded split has analytically negative Fourier
+tails, and the smooth resummed raw split has certified negative responses
+at zero frequency. Complete outward checks reproduce both obstructions.
+
+This closes the independent positive coset factorization attempt, while
+the complete kernels and their stationary signs remain open. Their
+cross-coset cancellation must be retained in any new estimate. See the
+[source and execution record](numerics/RANK_TWO_TO_PAIRED_KERNEL_EXECUTION_20261013.json)
+and the [09 numerical guide](../active/09_rank_two_theta_addition/numerics/README.md).
+This continuation uses `gpt-6-astra`, reasoning effort **ultra**.
+>>>>>>> 40f4385 (Work on rank two theta addition)

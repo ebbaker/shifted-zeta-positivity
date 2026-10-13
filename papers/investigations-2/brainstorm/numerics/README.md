@@ -95,6 +95,7 @@ New checkers and their detailed records live in their own investigations:
 The shared record distinguishes exact rational checks, floating theta/chirp
 diagnostics and the fully paid compact theta certificate. No broader
 certificate campaign or large dataset was produced.
+<<<<<<< HEAD
 =======
 ## Claude review of the active directions
 
@@ -122,3 +123,21 @@ table. Part B is evidence, not interval arithmetic.
 python3 -I check_active_directions_review_claude_20261013.py --output /tmp/claude-review-check.json
 ```
 >>>>>>> f2e4b17 (Reviews from Claude and new directions)
+=======
+
+## Rank-two transfer to paired kernels
+
+13 October 2026. Prepared for Edward Baker with substantial LLM assistance;
+recorded configuration `gpt-6-astra`, effort **ultra**.
+
+The [continuation execution record](RANK_TWO_TO_PAIRED_KERNEL_EXECUTION_20261013.json)
+pins the sources, output files and root replay for the
+[09-to-06 review](../reviews/RANK_TWO_TO_PAIRED_KERNEL_REVIEW_CODEX_20261013.md).
+The [09 numerical guide](../../active/09_rank_two_theta_addition/numerics/README.md)
+documents the single reproducible checker and its detailed interval record.
+Both paired kernels have a negative same-parity sector response, certified
+at `t=0,x=60` for the positive folded split and at `t=x=0` for the smooth
+raw split. Exact algebra and finite modular calibrations are separately
+labelled. No sign for the complete kernels is inferred from these sector
+obstructions.
+>>>>>>> 40f4385 (Work on rank two theta addition)

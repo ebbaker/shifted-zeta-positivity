@@ -11,8 +11,11 @@ The original 16 folders organize the directions from the
 The folder setup initialized research programs for Claude review. Its
 historical notes remain unchanged. The user-requested
 [first research pass](../brainstorm/reviews/PRIORITY_RESEARCH_FIRST_PASS_CODEX_20261013.md)
-has now completed bounded tasks in **01, 02 and 17**; the other programs
-remain initialized. A Claude review of these new results is outstanding.
+completed bounded tasks in **01, 02 and 17**. The subsequent
+[09-to-06 continuation](../brainstorm/reviews/RANK_TWO_TO_PAIRED_KERNEL_REVIEW_CODEX_20261013.md)
+completes the rank-two identity and disproves independent positive parity
+coset factorizations in two natural realizations. The other programs remain
+initialized. Independent review of these new results is outstanding.
 
 A subsequent [Codex review](../brainstorm/reviews/ACTIVE_DIRECTIONS_REVIEW_CODEX_20261013.md)
 (`gpt-6-astra`, effort **ultra**) ranks the bounded first tasks and adds
@@ -35,10 +38,10 @@ proposals are recommendations only; no folder has been moved or created.
 | 3 | [Anchored source observability](03_anchored_source_observability/notes/INITIAL_RESEARCH_PROGRAM_20261013.md) | First tier | An independent source identity and a paid two-channel certificate |
 | 4 | [Chord geometry and nonlocal closure](04_chord_nonlocal_closure/notes/INITIAL_RESEARCH_PROGRAM_20261013.md) | First tier | A theta-specific constraint on transverse and gradient correlations |
 | 5 | [Metaplectic coordinate atlas](05_metaplectic_coordinate_atlas/notes/INITIAL_RESEARCH_PROGRAM_20261013.md) | Supporting tool | Regular charts with controlled physical reconstruction |
-| 6 | [Complete paired kernel factorization](06_paired_kernel_factorization/notes/INITIAL_RESEARCH_PROGRAM_20261013.md) | Direct but difficult | A source-derived factorization or both conditional stationary signs |
+| 6 | [Complete paired kernel factorization](06_paired_kernel_factorization/README.md) | First candidate rejected | Folded and raw same-parity sectors fail; complete cross-coset signs remain open |
 | 7 | [Divisor and product transport](07_divisor_product_transport/notes/INITIAL_RESEARCH_PROGRAM_20261013.md) | Bounded algebra test | A signed physical relation beyond built-in divisor exchange |
 | 8 | [Cusp reflection and unit sector saving](08_cusp_unit_sector_saving/notes/INITIAL_RESEARCH_PROGRAM_20261013.md) | Arithmetic continuation | One complete short-cofactor branch with a paid saving including units |
-| 9 | [Rank two theta addition](09_rank_two_theta_addition/notes/INITIAL_RESEARCH_PROGRAM_20261013.md) | Bounded identity test | An exact two-coset paired-source identity with unequal-scale coupling |
+| 9 | [Rank two theta addition](09_rank_two_theta_addition/README.md) | First identity task complete | Complete unequal-scale two-coset identity for both paired kernels, with insertions and endpoint ledger |
 | 10 | [Gaussian Hermite correlations](10_gaussian_hermite_correlations/notes/INITIAL_RESEARCH_PROGRAM_20261013.md) | Supporting comparator | A source-selected relation among the actual first four coefficients |
 | 11 | [Stein and SUSY correlations](11_stein_susy_correlations/notes/INITIAL_RESEARCH_PROGRAM_20261013.md) | Bounded operator test | A nonlocal theta partner controlling both stationary products |
 | 12 | [Canonical boundary reflection](12_canonical_boundary_reflection/notes/INITIAL_RESEARCH_PROGRAM_20261013.md) | Deep missing input | An independent arithmetic transfer map in a verified positive channel |
@@ -56,9 +59,13 @@ targets; and retains 08 as a separate arithmetic task. Its
 [angular refinement](02_angular_jacobi_gluing/notes/ANGULAR_GLUING_AND_RIGIDITY_REVIEW_SEEDS_20261013.md)
 gives an exact balanced lift and a precise next elliptic-transport test.
 The [execution review](../brainstorm/reviews/PRIORITY_RESEARCH_FIRST_PASS_CODEX_20261013.md)
-now records that test and the outcomes in 01/17. Continue 02 only with a
-named inequality for its complete nonlocal channels; 09 is the next
-distinct identity task. The original review guidance follows.
+records that test and the outcomes in 01/17. The
+[09-to-06 review](../brainstorm/reviews/RANK_TWO_TO_PAIRED_KERNEL_REVIEW_CODEX_20261013.md)
+now records the complete rank-two identity and two sector obstructions.
+Continue 02 only with a named inequality for its complete nonlocal
+channels. Continue 06 through a source-derived estimate retaining the
+cross-coset cancellation; independent positive coset channels fail.
+The original review guidance follows.
 
 Start with complete cutoff reflection, angular Jacobi gluing, and rank two
 addition. Anchored source observability is the quantitative destination

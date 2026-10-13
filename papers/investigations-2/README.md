@@ -15,8 +15,11 @@ collision degree with an analytic seed and exact polynomial controls. The
 now completes bounded tasks in angular gluing, cutoff reflection and
 spacetime winding. It gives exact identities and obstructions, plus a
 genuine-theta boundary certificate whose matched interior test is cheaper.
-The remaining programs stay initialized, and independent review of the
-new results remains outstanding. Five older project folders are now
+The [09-to-06 continuation](brainstorm/reviews/RANK_TWO_TO_PAIRED_KERNEL_REVIEW_CODEX_20261013.md)
+now completes the unequal-scale rank-two identity and rejects separate
+positive parity coset factorizations for both paired kernels. The complete
+stationary signs remain open. The remaining programs stay initialized,
+and independent review of the new results remains outstanding. Five older project folders are now
 in [inactive](inactive/README.md).
 The shared [brainstorm folder](brainstorm/README.md) remains at this level.
 `formal_replay_crosswalk` and `newman_certificate_audit` remain at this level.
