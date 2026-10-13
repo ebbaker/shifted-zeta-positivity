@@ -15,7 +15,7 @@ This classification describes the next useful calculation, not the probability
 of an RH proof. Research execution has not begun in this folder.
 
 The [active portfolio](../README.md) maps related programs. The original
-[broad brainstorm](../../inactive/brainstorm/LIFTED_THETA_SYMMETRY_SEARCH_CODEX_20261013.md)
+[broad brainstorm](../../brainstorm/LIFTED_THETA_SYMMETRY_SEARCH_CODEX_20261013.md)
 remains the common context.
 
 Save derivations in `notes/`, reproducible code and small records in

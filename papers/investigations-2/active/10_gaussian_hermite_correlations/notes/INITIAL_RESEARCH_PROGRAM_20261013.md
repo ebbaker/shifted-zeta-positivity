@@ -6,7 +6,7 @@ Status: **initialized, awaiting Claude review**. No new Gaussian integration, co
 
 ## Source contract and established seed
 
-This program implements [search card 10](../../../inactive/brainstorm/LIFTED_THETA_SYMMETRY_SEARCH_CODEX_20261013.md#10-gaussian-hermite-coefficients-and-source-selected-correlations). The input is the actual complete time-zero theta transform
+This program implements [search card 10](../../../brainstorm/LIFTED_THETA_SYMMETRY_SEARCH_CODEX_20261013.md#10-gaussian-hermite-coefficients-and-source-selected-correlations). The input is the actual complete time-zero theta transform
 
 \[
 H_0(z)=\tfrac18\xi((1+iz)/2),\qquad

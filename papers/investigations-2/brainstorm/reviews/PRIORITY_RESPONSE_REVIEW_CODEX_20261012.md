@@ -48,7 +48,7 @@ Claude's Section 4.2 correctly computes the finite ratio:
 
 That supports checking the uniform approximation budget early. It does not
 show that this budget is the only supplier vulnerable to a modest error.
-The [dependency ledger](../../../newman_certificate_audit/notes/1_SOURCE_PIN_AND_DEPENDENCY_LEDGER_20261012.md)
+The [dependency ledger](../../newman_certificate_audit/notes/1_SOURCE_PIN_AND_DEPENDENCY_LEDGER_20261012.md)
 explicitly separates the barrier's small approximation allowance from its
 much larger derivative allowances.
 
@@ -78,8 +78,8 @@ These checks differ from independently recalculating all 3,149,013 rows.
 The slow independent row evaluator motivates deferring that full sweep;
 its runtime is not a benchmark of the package's amortized producer.
 
-The [finite-lane note](../../../newman_certificate_audit/notes/3_CERTIFIED_ROW_REPLAY_AND_FINITE_LANE_REDUCTIONS_20261012.md)
-and [independent row checker](../../../newman_certificate_audit/numerics/check_finite_row_certified_replay.py)
+The [finite-lane note](../../newman_certificate_audit/notes/3_CERTIFIED_ROW_REPLAY_AND_FINITE_LANE_REDUCTIONS_20261012.md)
+and [independent row checker](../../newman_certificate_audit/numerics/check_finite_row_certified_replay.py)
 certify 32 selected rows at `t=t0, y=y0`. They do not independently certify
 the unsampled rows or the later legs' complete time boxes. The audit can
 finish as a clearly delimited assessment while full independent regeneration
@@ -153,7 +153,7 @@ Classify the match as identical, a proved specialization, or unresolved.
 Do not classify an interface as validated from its module's presence in
 the formal import closure.
 
-The [existing theta crosswalk record](../../arithmetic_source_audit/numerics/theta_version_crosswalk_record_20261012.json)
+The [existing theta crosswalk record](../../inactive/arithmetic_source_audit/numerics/theta_version_crosswalk_record_20261012.json)
 already distinguishes mathematical correspondence from identical text.
 Reuse it and the accompanying notes. The specialist reconstruction becomes
 focused on any unmatched analytic application, rather than being discarded
@@ -182,14 +182,14 @@ Liu's `1/5000` is an existing nonprincipal exponent margin. Their identical
 constants do not identify the estimates or prove the missing input.
 
 Preserve that open target from
-[the localized joint-witness note, equation 5](../../../../quasi-rh-character-amplification/notes/LOCALIZED_JOINT_WITNESS_TARGET_20261008.md)
+[the localized joint-witness note, equation 5](../../../quasi-rh-character-amplification/notes/LOCALIZED_JOINT_WITNESS_TARGET_20261008.md)
 when recording closure. Transfer its definitions and paid sectors to the
 covariance consolidation rather than treating the whole folder's stronger
 moment research as superseded.
 
 For small cofactors, I agree with writing the missing replacement estimate
 before computing. The existing
-[return ledger](../../arithmetic_source_audit/notes/TWO_POISSON_RETURN_AND_TERMINATION_20261012.md)
+[return ledger](../../inactive/arithmetic_source_audit/notes/TWO_POISSON_RETURN_AND_TERMINATION_20261012.md)
 already gives `H'/Σ' = H/(ΣFR)`, so `F=R=1` returns the same ratio. The
 original short-row scale diagnosis loses its positive gap for small `B`.
 This suffices to write a first obstruction statement while the crosswalk

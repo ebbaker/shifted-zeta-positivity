@@ -5,7 +5,7 @@ Model: `gpt-6.1-sol`; reasoning effort: ultra.
 Status: initialized, awaiting Claude review. No canonical-system replay or
 new positivity assertion is reported by this note.
 
-This project develops [brainstorm card 12](../../../inactive/brainstorm/LIFTED_THETA_SYMMETRY_SEARCH_CODEX_20261013.md#12-canonical-systems-and-arithmetic-boundary-reflection).
+This project develops [brainstorm card 12](../../../brainstorm/LIFTED_THETA_SYMMETRY_SEARCH_CODEX_20261013.md#12-canonical-systems-and-arithmetic-boundary-reflection).
 The intended gain is an arithmetic boundary pairing whose positivity
 constrains the actual value-and-slope observation, with independently
 verified source and endpoint contracts.

@@ -16,7 +16,7 @@ The other four investigations should remain bounded support projects until
 they identify a source of information that these two main routes lack.
 
 The starting point is the requested
-[11 October Codex brainstorm](../../../quasi-rh-exponent-descent/brainstorm/NEW_PATHS_FORWARD_BRAINSTORM_CODEX_20261011.md),
+[11 October Codex brainstorm](../../quasi-rh-exponent-descent/brainstorm/NEW_PATHS_FORWARD_BRAINSTORM_CODEX_20261011.md),
 read in full, together with the investigations, dated notes, reviews and
 small numerical records. Its distinction between a sufficient estimate and
 a circular proof remains essential. So do its exact diagonal tests,
@@ -37,9 +37,9 @@ its classical imports and the reviewed interfaces. The Newman conclusion
 is partial auditing of a pinned public candidate. Neither changes the
 independent-validation status of the underlying mathematical claims.
 See the
-[arithmetic final assembly review](../arithmetic_source_audit/reviews/FINAL_ASSEMBLY_REVIEW_20261012.md)
+[arithmetic final assembly review](../inactive/arithmetic_source_audit/reviews/FINAL_ASSEMBLY_REVIEW_20261012.md)
 and
-[Newman finite-lane audit](../../newman_certificate_audit/notes/3_CERTIFIED_ROW_REPLAY_AND_FINITE_LANE_REDUCTIONS_20261012.md).
+[Newman finite-lane audit](../newman_certificate_audit/notes/3_CERTIFIED_ROW_REPLAY_AND_FINITE_LANE_REDUCTIONS_20261012.md).
 
 The portfolio README contains unresolved merge markers and overlapping
 status passages. Resolve that presentation issue before packaging a
@@ -70,10 +70,10 @@ additional nonunit treatment. Match the precise Hecke-family hypotheses in
 [Goldmakher–Louvel Theorem 1.1](https://arxiv.org/html/1112.1642v2#S1)
 to the completed family rather than cite a generic large-sieve slogan.
 The detailed local starting points are the
-[theta primary-source comparison](../arithmetic_source_audit/notes/THETA_PRIMARY_SOURCE_COMPARISON_20261012.md),
-[cusp and uniformity audit](../arithmetic_source_audit/notes/THETA_CUSP_AND_UNIFORMITY_AUDIT_20261012.md),
+[theta primary-source comparison](../inactive/arithmetic_source_audit/notes/THETA_PRIMARY_SOURCE_COMPARISON_20261012.md),
+[cusp and uniformity audit](../inactive/arithmetic_source_audit/notes/THETA_CUSP_AND_UNIFORMITY_AUDIT_20261012.md),
 and
-[sieve and summation audit](../arithmetic_source_audit/notes/COMPLETED_MEAN_SQUARE_SIEVE_AND_SUMMATION_20261012.md).
+[sieve and summation audit](../inactive/arithmetic_source_audit/notes/COMPLETED_MEAN_SQUARE_SIEVE_AND_SUMMATION_20261012.md).
 
 **Bounded deliverable:** a theorem-to-application contract and one
 self-contained reconstruction of the most delicate interface, with exact
@@ -119,7 +119,7 @@ For one fixed \(0<h<1\) and \(a\ge0\), the proposed new estimate is
 \]
 
 The existing
-[short-family extraction refinement](../../../quasi-rh-exponent-descent/short_families/notes/1_SHORT_FAMILY_DESCENT_REFINEMENT_20261008.md)
+[short-family extraction refinement](../../quasi-rh-exponent-descent/short_families/notes/1_SHORT_FAMILY_DESCENT_REFINEMENT_20261008.md)
 already shows that finite reuse of this single moment removes the
 prime-mask error. Its conditional consequence is
 
@@ -163,9 +163,9 @@ One plausible probe is to retain the exact signed return restriction
 by positivity. Reparametrize \(k'=f'm\), retain the exclusion
 \((r,n)=1\), and measure whether the actual restricted sum is smaller
 than the envelope used in the existing proof. The
-[return ledger](../arithmetic_source_audit/notes/TWO_POISSON_RETURN_AND_TERMINATION_20261012.md)
+[return ledger](../inactive/arithmetic_source_audit/notes/TWO_POISSON_RETURN_AND_TERMINATION_20261012.md)
 and
-[signed arithmetic ledger](../arithmetic_source_audit/notes/TWO_POISSON_ARITHMETIC_LEDGER_20261012.md)
+[signed arithmetic ledger](../inactive/arithmetic_source_audit/notes/TWO_POISSON_ARITHMETIC_LEDGER_20261012.md)
 give the exact starting objects.
 
 The mandatory negative control is the unit sector. When \(F=R=1\),
@@ -188,7 +188,7 @@ the canonical Gauss coefficient energy, and the auxiliary compensated
 responses in the old short-family program. Their normalizations and
 coefficients differ. A theorem for one does not automatically control the
 others. In particular, the
-[deletion-mode covariance ledger](../../../quasi-rh-exponent-descent/short_families/notes/29_DELETION_MODE_COVARIANCE_AND_FULL_RESPONSE_LEDGER_20261009.md)
+[deletion-mode covariance ledger](../../quasi-rh-exponent-descent/short_families/notes/29_DELETION_MODE_COVARIANCE_AND_FULL_RESPONSE_LEDGER_20261009.md)
 shows why subtracting a scalar coherent mean does not repair those
 auxiliary responses: local deletion modes and the full complement still
 need payment.
@@ -202,9 +202,9 @@ old sum. The finite lane's lower-bound mechanism is the relevant lever.
 The reported local sensitivity estimate of a possible gain around
 \(10^{-8}\) is useful scale information, not a proved global optimum.
 See the
-[benchmark](../../newman_certificate_audit/notes/2_FINITE_LANE_REPLAY_AND_CORRECTED_BUDGET_BENCHMARK_20261012.md)
+[benchmark](../newman_certificate_audit/notes/2_FINITE_LANE_REPLAY_AND_CORRECTED_BUDGET_BENCHMARK_20261012.md)
 and
-[cross-model review](../../newman_certificate_audit/reviews/1_CROSS_MODEL_REVIEW_OF_NOTES_1_2_20261012.md).
+[cross-model review](../newman_certificate_audit/reviews/1_CROSS_MODEL_REVIEW_OF_NOTES_1_2_20261012.md).
 
 Complete the audit in four concrete pieces:
 
@@ -335,7 +335,7 @@ c_p\overline{c_q}J_Q(pq),
 \]
 
 The
-[separated-prime checkpoint](../../../quasi-rh-exponent-descent/integer_quadratic_lift/notes/3_SEPARATED_PRIME_PAIR_CHECKPOINT_20261009.md)
+[separated-prime checkpoint](../../quasi-rh-exponent-descent/integer_quadratic_lift/notes/3_SEPARATED_PRIME_PAIR_CHECKPOINT_20261009.md)
 gives
 
 \[
@@ -351,7 +351,7 @@ scalar/sieve combination has exponent \(15/8\), leaving a saving
 normalization improvement. The full target also controls the simultaneous
 odd quadratic family, including the principal row; it does not concern
 zeta alone. See the
-[quadratic strength and barrier note](../../../quasi-rh-exponent-descent/integer_quadratic_lift/notes/2_QUADRATIC_MOMENT_STRENGTH_AND_BARRIER_20261008.md).
+[quadratic strength and barrier note](../../quasi-rh-exponent-descent/integer_quadratic_lift/notes/2_QUADRATIC_MOMENT_STRENGTH_AND_BARRIER_20261008.md).
 
 **Bounded deliverable:** match one named dispersion, bilinear, or spectral
 input against this exact kernel, prepared profile, squarefree-removal
@@ -378,7 +378,7 @@ would conceal the intended signal. A large-field fixed-degree theorem
 does not control growing degrees automatically. Continue only if a
 matched theorem or exact model reveals information beyond known diagonal
 and coherent terms. See the
-[function-field scope](../function_field_covariance/README.md).
+[function-field scope](../inactive/function_field_covariance/README.md).
 
 **Heat counterkernels.** Complete the feature table first: full counting
 law, linear term, remainder, simplicity, and quantifiers in positive heat
@@ -392,7 +392,7 @@ necessary moment condition may reject a candidate, but passing it does
 not prove positivity. Continue for a counterexample satisfying every
 declared feature or a precise construction obstruction, not because a
 bounded scan looks positive. See the
-[counterkernel scope](../heat_counterkernel_features/README.md).
+[counterkernel scope](../inactive/heat_counterkernel_features/README.md).
 
 **Weil packets.** Run one complete cost comparison at declared
 \(a\ge a_{\min}>0\) and \(|\gamma|\le T\). The negative contribution
@@ -402,7 +402,7 @@ matter. The support reaches a prime scale of order \(e^{L+2w}\).
 There is no supplied positive lower bound on displacement, so this should
 remain a finite detection experiment. Continue if the complete certified
 test improves the existing basis at the same target and cost. See the
-[Weil scope](../weil_two_packet_detector/README.md).
+[Weil scope](../inactive/weil_two_packet_detector/README.md).
 
 **Joint-jet persistence.** Keep the earlier brainstorm's sublevel-area
 idea parked unless an actual-source estimate is identified. A collision
@@ -434,7 +434,7 @@ currently provides a path all the way to RH.
 
 Save follow-on derivations in each investigation's `notes/`, reproducible
 code and small records in `numerics/`, and scoped assessments in
-`reviews/`. Follow [LARGE_FILES.md](../../../../LARGE_FILES.md): large sweeps
+`reviews/`. Follow [LARGE_FILES.md](../../../LARGE_FILES.md): large sweeps
 remain external with reproducible parameters, stored and canonical-content
 hashes, a tracked lookup guide, and hash-bound consumers. Keep manuscript
 sources stable and record notable milestones in concise `DRAFT_HISTOR.md`

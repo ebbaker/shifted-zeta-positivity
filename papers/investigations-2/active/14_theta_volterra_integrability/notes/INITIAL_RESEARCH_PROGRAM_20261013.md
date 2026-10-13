@@ -5,7 +5,7 @@ Model: `gpt-6.1-sol`; reasoning effort: ultra.
 Status: initialized, awaiting Claude review. No recurrence-coefficient run,
 new Darboux invariant or signed certificate is reported by this note.
 
-This project develops [brainstorm card 14](../../../inactive/brainstorm/LIFTED_THETA_SYMMETRY_SEARCH_CODEX_20261013.md#14-orthogonal-polynomial-volterra-flow-and-integrable-transformations).
+This project develops [brainstorm card 14](../../../brainstorm/LIFTED_THETA_SYMMETRY_SEARCH_CODEX_20261013.md#14-orthogonal-polynomial-volterra-flow-and-integrable-transformations).
 Its objective is a transformation tied to the actual theta preparation
 that constrains its physical observation beyond generic integrability.
 

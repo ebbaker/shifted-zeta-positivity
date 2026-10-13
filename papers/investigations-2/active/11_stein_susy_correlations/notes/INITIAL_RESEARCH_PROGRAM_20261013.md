@@ -5,7 +5,7 @@ Model: `gpt-6.1-sol`; reasoning effort: ultra.
 Status: initialized, awaiting Claude review. No research run or new sign
 certificate is reported by this note.
 
-This project develops [brainstorm card 11](../../../inactive/brainstorm/LIFTED_THETA_SYMMETRY_SEARCH_CODEX_20261013.md#11-supersymmetric-identities-and-a-theta-stein-kernel).
+This project develops [brainstorm card 11](../../../brainstorm/LIFTED_THETA_SYMMETRY_SEARCH_CODEX_20261013.md#11-supersymmetric-identities-and-a-theta-stein-kernel).
 Its question is whether an exact nonlinear partner of the complete theta
 source carries a signed correlation absent from generic SUSY positivity.
 

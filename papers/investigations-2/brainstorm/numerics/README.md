@@ -21,12 +21,12 @@ Consumer: the
 | C | Gomila `E_max` Arb log, SHA-256 `995651e4…b244` | `L_690988 / E_max = 3.39` |
 | D | Liu closure manifest at `7d10420d` (upstream `adc7f124`), SHA-256 `b34b902e…043f`; openai/math modules at `fd4aeeb2` | 2,925 of 2,925 git blobs identical; Hecke solution module in the closure, zeta/Dirichlet wrapper module not |
 | E | openai/math comparator, scope, toolchain and manifest files at both revisions | byte-identical |
-| F | this repository's [certified row record](../../../newman_certificate_audit/numerics/CERTIFIED_ROW_REPLAY_RECORD_20261012.json) | `1 − g_N − S_N = 1.40·10⁻⁶`; relative room in `S_N` with `E_max` is `1.07·10⁻⁶` |
+| F | this repository's [certified row record](../../newman_certificate_audit/numerics/CERTIFIED_ROW_REPLAY_RECORD_20261012.json) | `1 − g_N − S_N = 1.40·10⁻⁶`; relative room in `S_N` with `E_max` is `1.07·10⁻⁶` |
 
 ## Replay
 
 The inputs are third-party files. They stay outside this repository, under
-the [large-file policy](../../../../../LARGE_FILES.md). The programme can fetch
+the [large-file policy](../../../../LARGE_FILES.md). The programme can fetch
 them by pinned commit URL. About 2,950 files are fetched, mostly small Lean
 sources.
 

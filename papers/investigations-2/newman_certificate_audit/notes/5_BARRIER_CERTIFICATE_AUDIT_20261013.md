@@ -7,9 +7,9 @@ max. This is an internal LLM-assisted audit record, not independent
 mathematical validation or formal verification.
 
 This note carries out step B2 of the parallel plan: the
-[Claude amended plan](../../inactive/brainstorm/reviews/REVIEW_OF_CODEX_RESPONSE_AND_PARALLEL_PLAN_CLAUDE_20261012.md)
+[Claude amended plan](../../brainstorm/reviews/REVIEW_OF_CODEX_RESPONSE_AND_PARALLEL_PLAN_CLAUDE_20261012.md)
 §4.3, as confirmed by the
-[Codex strategy assessment](../../inactive/brainstorm/reviews/STRATEGY_AND_PARALLEL_LAYOUT_REVIEW_CODEX_20261012.md).
+[Codex strategy assessment](../../brainstorm/reviews/STRATEGY_AND_PARALLEL_LAYOUT_REVIEW_CODEX_20261012.md).
 It audits the package's proof of hypothesis (iii) of Polymath Theorem 1.2:
 that `H_t` has no zero in the closed rectangle
 `R = [X, X+1] + i[0.1809, 1]` for every `0 ≤ t ≤ t0`. It covers the

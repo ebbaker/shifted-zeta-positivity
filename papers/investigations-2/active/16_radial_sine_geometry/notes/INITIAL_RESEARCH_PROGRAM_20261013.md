@@ -6,7 +6,7 @@ Status: **initialized, awaiting Claude review**. No new dimension classification
 
 ## Source contract and established seed
 
-This program develops [search card 16](../../../inactive/brainstorm/LIFTED_THETA_SYMMETRY_SEARCH_CODEX_20261013.md#16-radial-geometry-and-reflected-sine-moments). Use the actual complete density `m_t(u)=e^{tu²}Φ_e(u)`. The [three-dimensional radial scout](../../../../quasi-rh-exponent-descent/newman_collisions/12_radial_bessel/notes/1_POSITIVE_THREE_DIMENSIONAL_THETA_LIFT_AND_NONLOCAL_GENERATOR_20261010.md) defines
+This program develops [search card 16](../../../brainstorm/LIFTED_THETA_SYMMETRY_SEARCH_CODEX_20261013.md#16-radial-geometry-and-reflected-sine-moments). Use the actual complete density `m_t(u)=e^{tu²}Φ_e(u)`. The [three-dimensional radial scout](../../../../quasi-rh-exponent-descent/newman_collisions/12_radial_bessel/notes/1_POSITIVE_THREE_DIMENSIONAL_THETA_LIFT_AND_NONLOCAL_GENERATOR_20261010.md) defines
 
 \[
 R_{3,t}(r)=-m_t'(r)/(2\pi r),\qquad

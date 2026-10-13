@@ -6,7 +6,7 @@ the session was configured as `claude-opus-5-5` and the serving model
 identifies itself as Fable 5.1. Reasoning effort: not exposed in this
 session and not inferred. This note reviews the
 [12 October Codex brainstorm](NEW_PATHS_FORWARD_AFTER_AUDITS_CODEX_20261012.md)
-and the [portfolio README](../../README.md). It proposes a changed order of
+and the [portfolio README](../README.md). It proposes a changed order of
 work; it establishes no new zero-free strip, Newman bound, or RH mechanism.
 Internal model checks, including this one, are not independent mathematical
 validation.
@@ -94,7 +94,7 @@ The revised order is in Section 3.
 
 The audited source is `openai/math` at commit
 `fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb` (the same commit the
-[final assembly review](../arithmetic_source_audit/reviews/FINAL_ASSEMBLY_REVIEW_20261012.md)
+[final assembly review](../inactive/arithmetic_source_audit/reviews/FINAL_ASSEMBLY_REVIEW_20261012.md)
 pins). I read, from a sparse clone of that commit on 12 October:
 
 - `CONTENTS.md`, entry 003: the September 30 paper "proves that every
@@ -396,7 +396,7 @@ bounded, as the brainstorm says.
 
 ### 4.2 Newman: order by what can change a conclusion [read, checked]
 
-From [note 3](../../newman_certificate_audit/notes/3_CERTIFIED_ROW_REPLAY_AND_FINITE_LANE_REDUCTIONS_20261012.md)
+From [note 3](../newman_certificate_audit/notes/3_CERTIFIED_ROW_REPLAY_AND_FINITE_LANE_REDUCTIONS_20261012.md)
 and the project README: the certified weakest row is
 `L_690988 ≥ 7.9137·10^{−7}` against the package's `E_max = 2.33·10^{−7}`,
 a ratio of `0.29` **[checked]**; the barrier's minimum margin `0.5198`

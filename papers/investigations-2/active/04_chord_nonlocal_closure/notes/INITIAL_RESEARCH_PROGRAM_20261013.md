@@ -6,7 +6,7 @@ Status: **initialized, awaiting Claude review**. This note defines a bounded inv
 
 ## Source contract and established seed
 
-This program implements [search card 4](../../../inactive/brainstorm/LIFTED_THETA_SYMMETRY_SEARCH_CODEX_20261013.md#4-chord-geometry-and-nonlocal-gradient-closure). Use the complete genuine source `m_t(u)=e^{tu²}Φ_e(u)` and its real positive wavefunction `ψ_t=√m_t`. The chord field is
+This program implements [search card 4](../../../brainstorm/LIFTED_THETA_SYMMETRY_SEARCH_CODEX_20261013.md#4-chord-geometry-and-nonlocal-gradient-closure). Use the complete genuine source `m_t(u)=e^{tu²}Φ_e(u)` and its real positive wavefunction `ψ_t=√m_t`. The chord field is
 
 \[
 \mathcal A_t(k,\ell)=\int e^{iku}

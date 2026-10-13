@@ -5,7 +5,7 @@ Model: `gpt-6.1-sol`; reasoning effort: ultra.
 Status: initialized, awaiting Claude review. No inverse spin fit, stable
 symbol computation or new hyperbolicity certificate is reported here.
 
-This project develops [brainstorm card 13](../../../inactive/brainstorm/LIFTED_THETA_SYMMETRY_SEARCH_CODEX_20261013.md).
+This project develops [brainstorm card 13](../../../brainstorm/LIFTED_THETA_SYMMETRY_SEARCH_CODEX_20261013.md).
 The missing input is constructive preparation of the actual theta source
 by admissible operations, rather than an assumed real-zero input.
 

@@ -6,7 +6,7 @@ Status: **initialized, awaiting Claude review**. No new chart benchmark, certifi
 
 ## Source contract and established seed
 
-This supporting program implements [search card 5](../../../inactive/brainstorm/LIFTED_THETA_SYMMETRY_SEARCH_CODEX_20261013.md#5-metaplectic-covariance-and-a-regular-coordinate-atlas). Its purpose is to make a genuine source identity or its error ledger simpler to analyze, while preserving the physical observation `(H,H_x)` and Newman backward heat. A coordinate atlas is potentially useful even when it adds no new inequality by itself.
+This supporting program implements [search card 5](../../../brainstorm/LIFTED_THETA_SYMMETRY_SEARCH_CODEX_20261013.md#5-metaplectic-covariance-and-a-regular-coordinate-atlas). Its purpose is to make a genuine source identity or its error ledger simpler to analyze, while preserving the physical observation `(H,H_x)` and Newman backward heat. A coordinate atlas is potentially useful even when it adds no new inequality by itself.
 
 The [Wigner/Husimi scout](../../../../quasi-rh-exponent-descent/newman_collisions/13_microlocal_phase_space/notes/1_HUSIMI_READOUT_DRIFT_AND_COHERENT_INTERFERENCE_20261010.md) already supplies the genuine state, full phase-space generator and exact reconstruction, including negative momentum diffusion, drift and contact terms. [De Gosson's symplectic Radon analysis, section 3](https://arxiv.org/html/2204.07106v1#S3) supplies a primary covariance precedent, not invariance of theta preparation.
 

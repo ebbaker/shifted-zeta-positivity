@@ -11,6 +11,6 @@ Use this project's full `--history-dir` when first registering a chat;
 subsequent refreshes preserve that chat's existing identity.
 
 The planning conversation remains stored once as
-[formal replay chat 2](../../../formal_replay_crosswalk/chat-histories/0002_2026-10-13T12-54-02Z_review-newman-certificate-audit.json).
+[the shared planning conversation](../../../chat-histories/0002_2026-10-13T12-54-02Z_review-newman-certificate-audit.json).
 The [portfolio archive](../../../chat-histories/README.md) holds the earlier
 shared planning context. Registered JSON histories must not be edited by hand.

@@ -5,8 +5,9 @@ Model: `gpt-6.1-sol` (Codex); reasoning effort **ultra**.
 
 The current portfolio has [16 new programs in active](active/README.md),
 with an initial document in every project's `notes/` folder. They await
-Claude's review before research execution. Six older project folders,
-including the supporting brainstorm, are now in [inactive](inactive/README.md).
+Claude's review before research execution. Five older project folders are now
+in [inactive](inactive/README.md).
+The shared [brainstorm folder](brainstorm/README.md) remains at this level.
 `formal_replay_crosswalk` and `newman_certificate_audit` remain at this level.
 The shared `chat-histories/` directory and recording tools also remain here
 because they are portfolio infrastructure.
@@ -14,17 +15,20 @@ because they are portfolio infrastructure.
 ```text
 investigations-2/
   active/                       16 initialized research programs
-  inactive/                     6 existing project folders
+  inactive/                     5 existing project folders
+  brainstorm/                   shared research planning and reviews
   formal_replay_crosswalk/       retained audit and conversation history
   newman_certificate_audit/      retained certificate audit
   chat-histories/                shared planning archive
   record_chat.py                 archive format and explicit import tool
 ```
 
-The [relocation record](REORGANIZATION_RECORD_20261013.json) preserves the
-old-to-new directory map and identifies link maintenance. This conversation
-remains registered once as
-[formal replay chat 2](formal_replay_crosswalk/chat-histories/0002_2026-10-13T12-54-02Z_review-newman-certificate-audit.json).
+The [initial reorganization record](REORGANIZATION_RECORD_20261013.json)
+preserves the original setup snapshot. The
+[layout update](PORTFOLIO_LAYOUT_UPDATE_20261013.json) records restoration
+of the brainstorm folder and relocation of this conversation. It is
+registered once as
+[the shared portfolio conversation](chat-histories/0002_2026-10-13T12-54-02Z_review-newman-certificate-audit.json).
 Its registry is refreshed through the standing workflow.
 
 ## Original portfolio context as of 12 October 2026
@@ -52,7 +56,7 @@ certificate. The other four projects remain scoped; research has not
 started in those folders.
 
 For the detailed next-step assessment, read the
-[current brainstorm after the audits](inactive/brainstorm/NEW_PATHS_FORWARD_AFTER_AUDITS_CODEX_20261012.md).
+[current brainstorm after the audits](brainstorm/NEW_PATHS_FORWARD_AFTER_AUDITS_CODEX_20261012.md).
 The dated project notes and reviews supply the arguments and exact scope
 behind this overview.
 
@@ -316,8 +320,8 @@ has changed.
 
 ## Original reading map
 
-- **12 October strategy:** [brainstorm after the audits](inactive/brainstorm/NEW_PATHS_FORWARD_AFTER_AUDITS_CODEX_20261012.md).
-- **Priority review of that strategy:** [Claude priority review](inactive/brainstorm/PRIORITY_REVIEW_AFTER_AUDITS_CLAUDE_20261012.md) (proposes a Lean replay of the formalized 7/8 theorem as priority 0, closes the character-amplification lane against arXiv:2610.12234, and reorders the Newman track).
+- **12 October strategy:** [brainstorm after the audits](brainstorm/NEW_PATHS_FORWARD_AFTER_AUDITS_CODEX_20261012.md).
+- **Priority review of that strategy:** [Claude priority review](brainstorm/PRIORITY_REVIEW_AFTER_AUDITS_CLAUDE_20261012.md) (proposes a Lean replay of the formalized 7/8 theorem as priority 0, closes the character-amplification lane against arXiv:2610.12234, and reorders the Newman track).
 - **Original discussion:** [Claude proposal](../quasi-rh-exponent-descent/brainstorm/NEW_PATHS_FORWARD_BRAINSTORM_CLAUDE_20261011.md), [Codex corrections](../quasi-rh-exponent-descent/brainstorm/NEW_PATHS_FORWARD_BRAINSTORM_CODEX_20261011.md), and [Claude cross-assessment](../quasi-rh-exponent-descent/brainstorm/NEW_PATHS_FORWARD_CROSS_ASSESSMENT_CLAUDE_20261011.md).
 - **Arithmetic dependencies:** [upstream audit](../quasi-rh-character-amplification/reviews/UPSTREAM_REFLECTION_POISSON_SIEVE_AUDIT_20261009.md), [analytic dependency ledger](../quasi-rh-character-amplification/notes/GEOMETRY_CONDITIONAL_THEOREM_AND_DEPENDENCY_LEDGER_20261009.md), and [current final assembly review](inactive/arithmetic_source_audit/reviews/FINAL_ASSEMBLY_REVIEW_20261012.md).
 - **Moment obligations:** [quadratic strength and barrier](../quasi-rh-exponent-descent/integer_quadratic_lift/notes/2_QUADRATIC_MOMENT_STRENGTH_AND_BARRIER_20261008.md), [short sextic extraction](../quasi-rh-exponent-descent/short_families/notes/1_SHORT_FAMILY_DESCENT_REFINEMENT_20261008.md), and the covariance project's [starting references](inactive/arithmetic_covariance_targets/README.md#starting-references).

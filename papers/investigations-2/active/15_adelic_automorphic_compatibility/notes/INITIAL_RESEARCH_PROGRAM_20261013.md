@@ -79,7 +79,7 @@ Time-zero matching alone is not a positive-time observability theorem.
 
 ## Starting records
 
-- [Brainstorm card 15](../../../inactive/brainstorm/LIFTED_THETA_SYMMETRY_SEARCH_CODEX_20261013.md#15-adelic-compatibility-and-the-automorphic-spectral-channel).
+- [Brainstorm card 15](../../../brainstorm/LIFTED_THETA_SYMMETRY_SEARCH_CODEX_20261013.md#15-adelic-compatibility-and-the-automorphic-spectral-channel).
 - [Shared coordinate and rational compatibility](../../../../quasi-rh-exponent-descent/newman_collisions/08_adelic_local_models/notes/1_SHARED_HEAT_COORDINATE_AND_DIAGONAL_RATIONAL_COMPATIBILITY_20261010.md).
 - [Exact Eisenstein extraction and heat commutator](../../../../quasi-rh-exponent-descent/newman_collisions/07_automorphic_scattering/notes/1_EISENSTEIN_EXTRACTION_HEAT_COMMUTATOR_AND_SPECTRAL_SLICE_20261010.md).
 - [Tate's original thesis, §§2.3 and 4.2–4.4](https://sites.math.rutgers.edu/~alexk/2023S572/Tate1950.pdf).

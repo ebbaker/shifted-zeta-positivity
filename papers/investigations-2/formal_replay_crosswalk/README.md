@@ -14,7 +14,7 @@ This lane checks the pinned seven-eighths formal statements and builds an
 application crosswalk from the October 5 arithmetic argument to the
 September 30 source and its Lean constants. Claude's parallel lane is
 [Newman certificate auditing](../newman_certificate_audit/README.md).
-The [strategy assessment](../inactive/brainstorm/reviews/STRATEGY_AND_PARALLEL_LAYOUT_REVIEW_CODEX_20261012.md)
+The [strategy assessment](../brainstorm/reviews/STRATEGY_AND_PARALLEL_LAYOUT_REVIEW_CODEX_20261012.md)
 gives the agreed order and remaining qualifications.
 
 ## Linux checkpoint: 13 October 2026

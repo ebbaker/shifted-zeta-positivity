@@ -74,7 +74,7 @@ and both multiplicity-relevant signs.
 
 ## Starting records
 
-- [Brainstorm card 9](../../../inactive/brainstorm/LIFTED_THETA_SYMMETRY_SEARCH_CODEX_20261013.md#9-rank-two-theta-addition-and-the-two-source-parity-decomposition).
+- [Brainstorm card 9](../../../brainstorm/LIFTED_THETA_SYMMETRY_SEARCH_CODEX_20261013.md#9-rank-two-theta-addition-and-the-two-source-parity-decomposition).
 - [Complete paired kernels](../../../../quasi-rh-exponent-descent/newman_collisions/17_enlarged_state_transport/notes/7_COMPLETE_LAGUERRE_KERNELS_AND_TRIPLE_ZERO_LIMIT_20261010.md).
 - [Full angular source](../../../../quasi-rh-exponent-descent/newman_collisions/notes/25_ENLARGED_STATE_TRANSPORT_CHORD_DYNAMICS_AND_THETA_GLUING_20261010.md).
 - [DLMF addition formula](https://dlmf.nist.gov/20.7.E14), [modular characteristics](https://dlmf.nist.gov/21.5), and [Riemann product identities](https://dlmf.nist.gov/21.6).

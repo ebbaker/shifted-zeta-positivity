@@ -138,7 +138,7 @@ Two tasks remain. One is the proof route of `thm:ms`: October 5's completion
 section against Lemmas 17.2–17.3, Corollary 17.4 and Lemma 14.3. The
 small-cofactor branch needs this; the conclusion does not. The other is the
 Lean constant for each link. The
-[theta crosswalk record](../../arithmetic_source_audit/numerics/theta_version_crosswalk_record_20261012.json)
+[theta crosswalk record](../../inactive/arithmetic_source_audit/numerics/theta_version_crosswalk_record_20261012.json)
 already covers the reflection step in the form Codex describes. The
 crosswalk is therefore likely to be short, which supports re-aiming
 priority 1 at it.
@@ -174,7 +174,7 @@ The two values of `1/5000` are different objects:
   certificate. The rational extension spends part of it and keeps
   `E ≤ −19/320000`.
 - The lane's `1/5000` is `η_mix` in
-  [its equation (5)](../../../../quasi-rh-character-amplification/notes/LOCALIZED_JOINT_WITNESS_TARGET_20261008.md).
+  [its equation (5)](../../../quasi-rh-character-amplification/notes/LOCALIZED_JOINT_WITNESS_TARGET_20261008.md).
   It is a new restricted correlation saving, and its payoff `F·η_mix` must
   exceed the count-level shortfall of `1/10000`. The lane's geometry also
   uses the increment `ℓ = 1/6 + 1/5000`. Nothing identifies either quantity
@@ -190,7 +190,7 @@ Carry equation (5) into the covariance consolidation, as Codex says.
   independent parse of all fifteen certificate shards for coverage and for
   minimum floor above `E_max`. The shards total 24.6 MB compressed.
 - **Small cofactors.** The obligation statement can be written now, since
-  the [return ledger](../../arithmetic_source_audit/notes/TWO_POISSON_RETURN_AND_TERMINATION_20261012.md)
+  the [return ledger](../../inactive/arithmetic_source_audit/notes/TWO_POISSON_RETURN_AND_TERMINATION_20261012.md)
   gives `H'/Σ' = H/(ΣFR)`. Only probes should wait for the crosswalk.
 - **Method comparison and support projects.** I agree, including Codex's
   point that the function-field test is parked, not moot.

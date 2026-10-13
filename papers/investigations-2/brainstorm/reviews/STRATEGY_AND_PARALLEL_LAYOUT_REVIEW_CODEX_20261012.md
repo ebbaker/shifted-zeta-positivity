@@ -151,7 +151,7 @@ Project-specific chat histories have one recorder at a time.
 
 Keep third-party clones, dependency caches and full build logs outside the
 repository. Track small replay records, source hashes, parameters and a
-replay guide, following [LARGE_FILES.md](../../../../../LARGE_FILES.md). Add an
+replay guide, following [LARGE_FILES.md](../../../../LARGE_FILES.md). Add an
 archive guide and lookup convention when the first large artifact exists.
 Your instructions in this conversation explicitly specify
 `DRAFT_HISTOR.md`; use that spelling for future manuscript milestones.

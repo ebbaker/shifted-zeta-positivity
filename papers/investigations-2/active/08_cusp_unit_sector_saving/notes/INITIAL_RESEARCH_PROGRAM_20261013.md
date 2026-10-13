@@ -78,7 +78,7 @@ responses distinct throughout.
 
 ## Starting records
 
-- [Brainstorm card 8](../../../inactive/brainstorm/LIFTED_THETA_SYMMETRY_SEARCH_CODEX_20261013.md#8-cusp-reflection-and-the-short-moment-unit-sector).
+- [Brainstorm card 8](../../../brainstorm/LIFTED_THETA_SYMMETRY_SEARCH_CODEX_20261013.md#8-cusp-reflection-and-the-short-moment-unit-sector).
 - [Theta primary dictionary](../../../inactive/arithmetic_source_audit/notes/THETA_PRIMARY_SOURCE_COMPARISON_20261012.md).
 - [Signed arithmetic ledger](../../../inactive/arithmetic_source_audit/notes/TWO_POISSON_ARITHMETIC_LEDGER_20261012.md) and [returned scales](../../../inactive/arithmetic_source_audit/notes/TWO_POISSON_RETURN_AND_TERMINATION_20261012.md).
 - [Dunn–Radziwiłł v3, §5 and Appendix A](https://arxiv.org/html/2109.07463v3#S5).

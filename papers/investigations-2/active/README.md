@@ -4,7 +4,7 @@
 Model: `gpt-6.1-sol` (Codex); reasoning effort **ultra**.
 
 These 16 folders organize the directions from the
-[broad lifted theta symmetry search](../inactive/brainstorm/LIFTED_THETA_SYMMETRY_SEARCH_CODEX_20261013.md).
+[broad lifted theta symmetry search](../brainstorm/LIFTED_THETA_SYMMETRY_SEARCH_CODEX_20261013.md).
 All are **initialized and awaiting Claude review**. The folder setup records
 research programs; it starts no numerical campaign or theorem proof.
 
@@ -58,7 +58,7 @@ at their original locations. The [portfolio overview](../README.md)
 contains the dated original audit context.
 
 Each new project has `notes/`, `numerics/`, `reviews/` and `chat-histories/`.
-No new chat copies were made. This conversation retains its
-[formal replay history identity](../formal_replay_crosswalk/chat-histories/README.md).
+No new chat copies were made. The planning conversation now lives in the
+[shared portfolio archive](../chat-histories/README.md).
 Follow [the standing recording workflow](../../../tools/CHAT_HISTORY.md)
 and [LARGE_FILES.md](../../../LARGE_FILES.md).

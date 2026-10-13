@@ -6,7 +6,7 @@ Status: **initialized, awaiting Claude review**. No new kernel factorization, Gr
 
 ## Source contract and established seed
 
-This program develops [search card 6](../../../inactive/brainstorm/LIFTED_THETA_SYMMETRY_SEARCH_CODEX_20261013.md#6-paired-kernels-and-positive-factorizations). Use the complete theta source `m_t(u)=e^{tu²}Φ_e(u)`, with every theta term and every cross contribution retained. With Fourier convention `f̂(x)=∫e^{ixu}f(u)du`, define
+This program develops [search card 6](../../../brainstorm/LIFTED_THETA_SYMMETRY_SEARCH_CODEX_20261013.md#6-paired-kernels-and-positive-factorizations). Use the complete theta source `m_t(u)=e^{tu²}Φ_e(u)`, with every theta term and every cross contribution retained. With Fourier convention `f̂(x)=∫e^{ixu}f(u)du`, define
 
 \[
 J_{j,t}(s)=\int_{\mathbb R}r^2(r^2-s^2)^j
