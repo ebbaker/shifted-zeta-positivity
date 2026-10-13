@@ -14,7 +14,7 @@ This lane checks the pinned seven-eighths formal statements and builds an
 application crosswalk from the October 5 arithmetic argument to the
 September 30 source and its Lean constants. Claude's parallel lane is
 [Newman certificate auditing](../newman_certificate_audit/README.md).
-The [strategy assessment](../brainstorm/reviews/STRATEGY_AND_PARALLEL_LAYOUT_REVIEW_CODEX_20261012.md)
+The [strategy assessment](../inactive/brainstorm/reviews/STRATEGY_AND_PARALLEL_LAYOUT_REVIEW_CODEX_20261012.md)
 gives the agreed order and remaining qualifications.
 
 ## Linux checkpoint: 13 October 2026
@@ -110,7 +110,7 @@ successful formal replay.
 - `reviews/`: scoped assessments of this lane.
 - `chat-histories/`: selected conversations with a single recorder.
 
-Treat the existing [arithmetic source audit](../arithmetic_source_audit/README.md)
+Treat the existing [arithmetic source audit](../inactive/arithmetic_source_audit/README.md)
 as reference material. Cite its records without copying, renaming or
 rewriting its history. Keep shared portfolio and brainstorm indexes for a
 single integration writer. Separate folders do not isolate Git operations;

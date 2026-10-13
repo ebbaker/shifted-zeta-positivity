@@ -7,9 +7,9 @@ max. This is an internal LLM-assisted audit record, not independent
 mathematical validation or formal verification.
 
 This note carries out step B1 of the parallel plan: the
-[Claude amended plan](../../brainstorm/reviews/REVIEW_OF_CODEX_RESPONSE_AND_PARALLEL_PLAN_CLAUDE_20261012.md)
+[Claude amended plan](../../inactive/brainstorm/reviews/REVIEW_OF_CODEX_RESPONSE_AND_PARALLEL_PLAN_CLAUDE_20261012.md)
 §4.3, as confirmed by the
-[Codex strategy assessment](../../brainstorm/reviews/STRATEGY_AND_PARALLEL_LAYOUT_REVIEW_CODEX_20261012.md).
+[Codex strategy assessment](../../inactive/brainstorm/reviews/STRATEGY_AND_PARALLEL_LAYOUT_REVIEW_CODEX_20261012.md).
 It audits the tail lemma, starting with the partition and the status of
 `OV` and then its caps and its all-`N`, `y` and error gates. It also
 audits the uniformity gates of the finite-lane error budget `E_max`.

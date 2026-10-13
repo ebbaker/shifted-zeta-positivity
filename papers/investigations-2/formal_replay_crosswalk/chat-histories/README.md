@@ -45,3 +45,19 @@ The registry binds stored and canonical conversation-content SHA-256
 identities. Those hashes identify data and do not validate mathematical
 claims. Follow [LARGE_FILES.md](../../../../LARGE_FILES.md) for histories
 reaching the 1 MiB limit; automatic refresh must not truncate them.
+
+## Chat 2 and the lifted research programs
+
+[Chat 2 — Review Newman certificate audit](0002_2026-10-13T12-54-02Z_review-newman-certificate-audit.json)
+retains the conversation's original identity, number and filename. It includes
+the cross-model Newman review, the program assessment, the lifted theta
+symmetry brainstorm, and the request to reorganize investigations-2 into
+active and inactive projects. The source configuration is `gpt-6.1-sol`,
+reasoning effort **ultra**. Current capture dates, message count and hashes
+are in [index.json](index.json).
+
+The [initialized active programs](../../active/README.md) await Claude review;
+the [supporting brainstorm](../../inactive/brainstorm/LIFTED_THETA_SYMMETRY_SEARCH_CODEX_20261013.md)
+provides their common research map. The archive is stored once here and is
+refreshed with the standing tool, including a bounded capture after each
+actual final reply. No registered conversation JSON is edited manually.

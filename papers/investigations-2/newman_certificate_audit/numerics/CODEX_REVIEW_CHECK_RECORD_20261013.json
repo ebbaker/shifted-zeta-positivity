@@ -1,0 +1,306 @@
+{
+  "title": "Codex review checks of the Claude Newman certificate audit",
+  "date": "2026-10-13",
+  "prepared_for": "Edward Baker",
+  "llm_assistance": "Substantial LLM assistance; internal review and replay, not independent specialist validation or formal verification",
+  "model": "gpt-6.1-sol",
+  "reasoning_effort": "ultra",
+  "session_id": "01a13553-ba81-7473-9b59-6288ce3973cc",
+  "reviewed_repository_commit": "d3773473f507f2c7e7fa6f1b99c040d92f2e593e",
+  "source_package": {
+    "repository": "https://github.com/judegomila/dbn-lambda-01787854-candidate-audit",
+    "commit": "a74738deb6d5e0f76887cb36901da08b68dca705",
+    "seal_files_checked": 443,
+    "seal_mismatches": 0
+  },
+  "software": {
+    "python": "3.10.0",
+    "implementation": "CPython"
+  },
+  "reviewed_note_sha256": {
+    "notes/1_SOURCE_PIN_AND_DEPENDENCY_LEDGER_20261012.md": "6f9c2702cdfd75536b79d49778c90ee22cd78002b1d644b004b170d0685c6007",
+    "notes/2_FINITE_LANE_REPLAY_AND_CORRECTED_BUDGET_BENCHMARK_20261012.md": "21c390f8b9d3a81763863bec1bee5cd759749f26a91f7064613c0cbe067b43c6",
+    "notes/3_CERTIFIED_ROW_REPLAY_AND_FINITE_LANE_REDUCTIONS_20261012.md": "1d665a3d395319bd53444098b756acc1363d7ec320c59fdf449011a839bb9b7a",
+    "notes/4_TAIL_LEMMA_AND_UNIFORM_ERROR_BUDGET_AUDIT_20261012.md": "f7bc58591918a9e5ca28a9404ed234c8d32a410864b274bbe923d5bc65ed6479",
+    "notes/5_BARRIER_CERTIFICATE_AUDIT_20261013.md": "6d849e5d03be3989d37b4b12fe0e7ae7a8e9b436261af9865c579c2e036b2f03"
+  },
+  "polymath_source": {
+    "repository": "https://github.com/km-git-acc/dbn_upper_bound",
+    "commit": "8e8a6ab1115d67aad66f6dbef374eef64922a060",
+    "path": "Writeup/debruijn.tex",
+    "sha256": "0115d452da906c5bbaacb1ee0ce851e568d8d5f62f27c71a4bf8d281b5788647",
+    "arxiv_v2_byte_identity_checked": false
+  },
+  "retained_source_hash_bindings": [
+    {
+      "record": "BARRIER_SUPPLIERS_RECORD_20261013.json",
+      "sha256_field": "checker_sha256",
+      "matching_source": [
+        "check_barrier_suppliers.py"
+      ],
+      "pass": true
+    },
+    {
+      "record": "CERTIFIED_ROW_REPLAY_RECORD_20261012.json",
+      "sha256_field": "checker_sha256",
+      "matching_source": [
+        "check_finite_row_certified_replay.py"
+      ],
+      "pass": true
+    },
+    {
+      "record": "DINI_GATE_LANDSCAPE_RECORD_20261012.json",
+      "sha256_field": "script_sha256",
+      "matching_source": [
+        "explore_dini_gate_landscape.py"
+      ],
+      "pass": true
+    },
+    {
+      "record": "DINI_GATE_MARGIN_RECORD_20261012.json",
+      "sha256_field": "checker_sha256",
+      "matching_source": [
+        "check_dini_gate_margin.py"
+      ],
+      "pass": true
+    },
+    {
+      "record": "DIRECT_SUM_CORROBORATION_RECORD_20261013.json",
+      "sha256_field": "script_sha256",
+      "matching_source": [
+        "compare_direct_and_stored_sum_values.py"
+      ],
+      "pass": true
+    },
+    {
+      "record": "ERROR_BUDGET_REPLAY_RECORD_20261012.json",
+      "sha256_field": "checker_sha256",
+      "matching_source": [
+        "check_newman_error_budget.py"
+      ],
+      "pass": true
+    },
+    {
+      "record": "FINITE_ROW_REPLAY_RECORD_20261012.json",
+      "sha256_field": "script_sha256",
+      "matching_source": [
+        "replay_triangle_row.py"
+      ],
+      "pass": true
+    },
+    {
+      "record": "TAIL_AND_UNIFORM_ERROR_BUDGET_RECORD_20261012.json",
+      "sha256_field": "checker_sha256",
+      "matching_source": [
+        "check_tail_and_uniform_error_budget.py"
+      ],
+      "pass": true
+    }
+  ],
+  "replays": {
+    "budget": {
+      "cases_match_retained": true,
+      "benchmark_fields_match_retained": true,
+      "command": "python3 numerics/check_newman_error_budget.py --output OUTPUT.json"
+    },
+    "finite_row": {
+      "N": 690988,
+      "L_N": [
+        "7.91366745594125134859763706221890573633320804E-7",
+        "7.91366745594188364412870631974216863412952246E-7"
+      ],
+      "margin_over_package_Emax_lower": "5.57871840381787285966127140272890573633320804E-7",
+      "selftest": [
+        {
+          "N": 37,
+          "primes": [
+            2,
+            3,
+            5,
+            7,
+            11
+          ],
+          "S_bruteforce": "10.0976020541678075034362013217937163736921581",
+          "S_fixed": "10.0976020541678075034362013217927679098561725",
+          "difference": "-9.484638359856E-31",
+          "error_bound": "7.78529446627340917401595077207583645565640643E-28",
+          "agree": true
+        },
+        {
+          "N": 61,
+          "primes": [
+            2,
+            3,
+            5,
+            7
+          ],
+          "S_bruteforce": "9.53975946567117183455474624111355917873781516",
+          "S_fixed": "9.53975946567117183455474624111270633999022494",
+          "difference": "-8.5283874759022E-31",
+          "error_bound": "3.35337529312861222473718322624648306907362352E-28",
+          "agree": true
+        },
+        {
+          "N": 150,
+          "primes": [
+            2,
+            3,
+            5
+          ],
+          "S_bruteforce": "8.96775736458207097934296819940574961181188678",
+          "S_fixed": "8.96775736458207097934296819940445487540326405",
+          "difference": "-1.29473640862273E-30",
+          "error_bound": "2.92227513437697335138913312357827293809205485E-28",
+          "agree": true
+        },
+        {
+          "N": 999,
+          "primes": [
+            2,
+            3
+          ],
+          "S_bruteforce": "8.32005797486179478826283751187386356410669307",
+          "S_fixed": "8.32005797486179478826283751186591582884789312",
+          "difference": "-7.94773525879995E-30",
+          "error_bound": "1.58661806604113713067589330387796075561620407E-27",
+          "agree": true
+        }
+      ],
+      "fresh_rows": 1,
+      "all_32_retained_floors_and_first_of_run_flags_bound_to_pinned_shards": true,
+      "command": "python3 numerics/check_finite_row_certified_replay.py --selftest --package PINNED_PACKAGE --output OUTPUT.json"
+    },
+    "dini": {
+      "result": "PASS",
+      "thresholds": "3/4,3/4,1/4,0",
+      "legs": [
+        {
+          "P": [
+            2,
+            3,
+            5,
+            7,
+            11
+          ],
+          "leaves": 268748,
+          "h_nonpositive": 82411,
+          "undecided": 0,
+          "passed": true,
+          "max_ratio_ub": "0.749998309301900998131992568048"
+        },
+        {
+          "P": [
+            2,
+            3,
+            5,
+            7
+          ],
+          "leaves": 50301,
+          "h_nonpositive": 16734,
+          "undecided": 0,
+          "passed": true,
+          "max_ratio_ub": "0.749981046660539430996471908540"
+        },
+        {
+          "P": [
+            2,
+            3,
+            5
+          ],
+          "leaves": 19673,
+          "h_nonpositive": 7424,
+          "undecided": 0,
+          "passed": true,
+          "max_ratio_ub": "0.249995979727716682737451571937"
+        },
+        {
+          "P": [
+            2,
+            3
+          ],
+          "leaves": 771,
+          "h_nonpositive": 771,
+          "undecided": 0,
+          "passed": true,
+          "max_ratio_ub": "0"
+        }
+      ],
+      "command": "python3 numerics/check_dini_gate_margin.py --theta 3/4,3/4,1/4,0 --negative-control --output OUTPUT.json",
+      "non_timing_fields_match_retained": true
+    },
+    "tail_and_uniform_budget": {
+      "gates": 54,
+      "all_pass": true,
+      "results_match_retained": true,
+      "command": "python3 numerics/check_tail_and_uniform_error_budget.py --selftest --output OUTPUT.json"
+    },
+    "barrier": {
+      "gates": 44,
+      "all_pass": true,
+      "results_match_retained": true,
+      "prisms_per_transcript": 883,
+      "direct_majorant_prisms": [
+        1,
+        2,
+        441,
+        882,
+        883
+      ],
+      "command": "python3 numerics/check_barrier_suppliers.py --transcript PINNED_PACKAGE/barrier/certificates/barrier_target_closed.log --corroborating-transcript PINNED_PACKAGE/barrier/certificates/barrier_target_closed_macos_arm64_flint36.log --output OUTPUT.json"
+    }
+  },
+  "counterexamples": {
+    "frozen_cap": {
+      "frozen_sigma": "1.67770988985377282904783187031",
+      "t_hi": "0.161250001",
+      "directed_cap_evaluations": {
+        "690988": "0.94302790835877212067699895682483032424098344569794",
+        "1381976": "1.4253916260077902406371649038639952121520051381086"
+      }
+    },
+    "inward_endpoint_export": {
+      "computed_Emax_hi": "2.3349490521233784876597101852111302315385982043498E-7",
+      "serialized_Emax_hi": "2.33494905212337848765971018521E-7",
+      "computed_ratio_lo": "3.3892248949691612192487636316647706934412064831255",
+      "serialized_ratio_lo": "3.3892249E+0"
+    },
+    "overlap_labelled_containment": {
+      "stored_real_interval": [
+        "-1",
+        "1"
+      ],
+      "direct_real_interval": [
+        "0.5",
+        "2.5"
+      ],
+      "current_predicate_returns": true,
+      "actual_containment": false
+    },
+    "adaptive_step": {
+      "prism": 882,
+      "assumption": "Only approximation allowance changes; values and derivatives held fixed",
+      "allowance_before": "0.00125",
+      "allowance_after": "1e-9",
+      "relative_candidate_step_gain_approx": 0.0012022691674569428,
+      "total_prism_count_gain_established": false
+    }
+  },
+  "retained_direct_comparison_recheck": {
+    "pairs": 117,
+    "components": 234,
+    "predicate": "abs(c_direct-c_stored) + r_direct <= r_stored",
+    "arithmetic": "Exact Fraction evaluation of recorded decimal fields",
+    "output_rounding_padding": "One full last printed place added for each midpoint; direct radius increased and stored radius decreased by one full last place",
+    "failures": [],
+    "max_used_fraction_of_conservative_stored_radius_exact": "14116873333333333333333333333333333333336549/14000000000000000000000000000000000000000000000",
+    "max_used_fraction_approx": 0.0010083480952380952,
+    "input_coordinate_displacement_paid": false,
+    "new_direct_evaluator_run": false
+  },
+  "limits": [
+    "No complete finite producer or 3,149,013-row sweep replay",
+    "No fresh C/Arb rebuild or direct evaluator execution",
+    "No independent proof of imported theorems or arithmetic libraries",
+    "Numerical records produced by rerunning Claude checkers retain their original author labels; this record identifies the current reviewing model"
+  ]
+}

@@ -403,3 +403,13 @@ They do not establish Theorem 1.3, the analytic reductions (which notes
 3–5 check by reading), the remaining 3,148,981 stored rows, FLINT's
 quadrature at the 878 prisms whose majorants were not summed directly, or
 any new bound on `Λ`.
+
+## 10. Codex review check record
+
+13 October 2026. GPT-6.1-sol (`gpt-6.1-sol`), Codex, reasoning effort ultra,
+with substantial LLM assistance. The [review check record](CODEX_REVIEW_CHECK_RECORD_20261013.json)
+retains source hashes, the 443-file seal result, selected finite-row and
+complete Dini replays, all 54 tail and uniform-budget gates, all 44 barrier
+gates, and the corrected comparison checks. It records counterexamples to
+auxiliary audit statements and distinguishes these checks from a complete
+producer or fresh C/Arb replay. See the [review](../reviews/CROSS_MODEL_REVIEW_OF_CLAUDE_AUDIT_CODEX_20261013.md).

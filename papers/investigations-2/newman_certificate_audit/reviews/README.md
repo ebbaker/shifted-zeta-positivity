@@ -21,3 +21,10 @@ See the [project scope](../README.md) and [portfolio conventions](../../README.m
      that verified height is the only lever.
 
    It also updates the ledger's open obligations.
+
+2. [Codex review of the complete Claude audit](CROSS_MODEL_REVIEW_OF_CLAUDE_AUDIT_CODEX_20261013.md),
+   13 October 2026, GPT-6.1-sol (`gpt-6.1-sol`, reasoning effort ultra).
+   Reviews notes 1–5 and the numerical evidence. The selected checks reproduce;
+   five findings concern the uniform-cap exposition, outward rounding,
+   containment comparisons, benchmark scope, and Dini exploration labels.
+   The full finite producer remains open.

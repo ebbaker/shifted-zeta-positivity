@@ -41,10 +41,10 @@ was also archived as chat 2:
   (`claude-fable-5-1`, reasoning effort xhigh per the transcript; the
   harness reported the configured identifier `claude-opus-5-5`), started
   12 October 2026 at 16:52 America/New_York. It reviewed the
-  [12 October Codex brainstorm](../brainstorm/NEW_PATHS_FORWARD_AFTER_AUDITS_CODEX_20261012.md)
+  [12 October Codex brainstorm](../inactive/brainstorm/NEW_PATHS_FORWARD_AFTER_AUDITS_CODEX_20261012.md)
   and the portfolio README, read arXiv:2610.12234v1 (supplied by the author
   as a PDF), and produced the
-  [priority review](../brainstorm/PRIORITY_REVIEW_AFTER_AUDITS_CLAUDE_20261012.md)
+  [priority review](../inactive/brainstorm/PRIORITY_REVIEW_AFTER_AUDITS_CLAUDE_20261012.md)
   plus one reading-map line in the [overview](../README.md).
 - *Capture.* It was captured at 17:29 the same day and holds thirteen
   messages over four turns: the review request and its reply; a pasted
@@ -77,17 +77,17 @@ uniform error budget and barrier contracts. The assessment agrees with the
 main reprioritization while correcting the barrier slack argument, retaining
 producer correctness and coverage checks, and distinguishing formal replay
 from validation of the October 5 applications. See the
-[saved review](../brainstorm/reviews/PRIORITY_RESPONSE_REVIEW_CODEX_20261012.md).
+[saved review](../inactive/brainstorm/reviews/PRIORITY_RESPONSE_REVIEW_CODEX_20261012.md).
 The snapshot includes the request to record this conversation and completed
 public messages through capture. The recorded session configuration is
 `gpt-6.1-sol`, reasoning effort **ultra**.
 
 [Chat 4 — Brainstorm review for shifted-zeta-positivity](0004_2026-10-12T21-44-56Z_brainstorm-review-for-shifted-zeta-positivity.json)
 records the Claude review of the
-[Codex response](../brainstorm/reviews/PRIORITY_RESPONSE_REVIEW_CODEX_20261012.md)
+[Codex response](../inactive/brainstorm/reviews/PRIORITY_RESPONSE_REVIEW_CODEX_20261012.md)
 and its proposed parallel split. It produced the
-[saved review](../brainstorm/reviews/REVIEW_OF_CODEX_RESPONSE_AND_PARALLEL_PLAN_CLAUDE_20261012.md)
-and its [check records](../brainstorm/numerics/README.md).
+[saved review](../inactive/brainstorm/reviews/REVIEW_OF_CODEX_RESPONSE_AND_PARALLEL_PLAN_CLAUDE_20261012.md)
+and its [check records](../inactive/brainstorm/numerics/README.md).
 
 - *Session.* A Claude Cowork session with Claude Opus 5.5
   (`claude-opus-5-5`, reasoning effort max per the transcript), started
@@ -118,11 +118,11 @@ python3 record_chat.py \
 ```
 
 The example values are placeholders. The default destination is this base
-history. To record a project conversation, add its exact folder name:
+history. For an explicit import into a nested project, use its full history path:
 
 ```sh
 python3 record_chat.py \
-  --project arithmetic_source_audit \
+  --folder inactive/arithmetic_source_audit/chat-histories \
   --codex-rollout /path/to/rollout.jsonl \
   --thread-id ACTUAL_THREAD_ID \
   --title 'Actual chat title' \
@@ -130,8 +130,8 @@ python3 record_chat.py \
 ```
 
 `--project` accepts an existing direct project directory with `README.md`,
-`notes/`, `numerics/`, and `reviews/`. The six names are listed in the
-[overview](../README.md). Alternatively, `--folder /explicit/history/path`
+`notes/`, `numerics/`, and `reviews/`. For projects under `active/` or `inactive/`, use the explicit directory
+shown in the [overview](../README.md). Alternatively, `--folder /explicit/history/path`
 sets a history directory directly; it cannot be combined with `--project`.
 The recorder uses only Python's standard library. Run one writer at a time
 for each registry.
@@ -160,7 +160,7 @@ python3 STAGED/tools/record_Claude_cowork_chat.py spool
 # This computer, from the repository root, at the end of each turn: the
 # registry that holds the session, and the files to stage.
 python3 tools/record_Claude_cowork_chat.py locate --conversation-id SESSION_ID \
-  [--registry papers/investigations-2/PROJECT/chat-histories/claude-cowork]
+  [--registry papers/investigations-2/active/PROJECT/chat-histories/claude-cowork]
 
 # Cloud workspace, after staging those files: convert, merge into the staged
 # record, and write the changed registry files for committing back.
@@ -186,7 +186,7 @@ conversations are recovered from claude.ai with
 
 ```sh
 python3 record_chat.py \
-  --project function_field_covariance \
+  --folder inactive/function_field_covariance/chat-histories \
   --import-json /path/to/conversations.json \
   --conversation-id ACTUAL_CONVERSATION_ID
 ```
@@ -247,3 +247,16 @@ recorder concurrently with an automatic writer. The original recorder
 remains the format implementation for explicit imports. Current counts
 and capture times come from each folder's index; first-capture facts remain
 historical. Raw sessions and private runtime records stay outside Git.
+
+## Folder layout update on 13 October 2026
+
+Prepared for Edward Baker with substantial LLM assistance by
+`gpt-6.1-sol` (Codex), reasoning effort **ultra**.
+The shared archive stays at this location. Old project histories moved
+with their [inactive projects](../inactive/README.md), preserving registered
+JSON bytes and numbering. Future program chats belong to the selected
+[active project](../active/README.md). For ongoing Codex capture, use the
+wrapper in the standing guide above rather than the legacy capture examples.
+The conversation covering the lifted brainstorm and this reorganization
+retains its existing [formal replay chat 2](../formal_replay_crosswalk/chat-histories/0002_2026-10-13T12-54-02Z_review-newman-certificate-audit.json)
+identity and is not copied into this base registry.

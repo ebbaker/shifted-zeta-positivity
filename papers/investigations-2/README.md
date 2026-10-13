@@ -1,5 +1,34 @@
 # Second investigation portfolio
 
+13 October 2026. Prepared for Edward Baker with substantial LLM assistance.
+Model: `gpt-6.1-sol` (Codex); reasoning effort **ultra**.
+
+The current portfolio has [16 new programs in active](active/README.md),
+with an initial document in every project's `notes/` folder. They await
+Claude's review before research execution. Six older project folders,
+including the supporting brainstorm, are now in [inactive](inactive/README.md).
+`formal_replay_crosswalk` and `newman_certificate_audit` remain at this level.
+The shared `chat-histories/` directory and recording tools also remain here
+because they are portfolio infrastructure.
+
+```text
+investigations-2/
+  active/                       16 initialized research programs
+  inactive/                     6 existing project folders
+  formal_replay_crosswalk/       retained audit and conversation history
+  newman_certificate_audit/      retained certificate audit
+  chat-histories/                shared planning archive
+  record_chat.py                 archive format and explicit import tool
+```
+
+The [relocation record](REORGANIZATION_RECORD_20261013.json) preserves the
+old-to-new directory map and identifies link maintenance. This conversation
+remains registered once as
+[formal replay chat 2](formal_replay_crosswalk/chat-histories/0002_2026-10-13T12-54-02Z_review-newman-certificate-audit.json).
+Its registry is refreshed through the standing workflow.
+
+## Original portfolio context as of 12 October 2026
+
 12 October 2026. Prepared for Edward Baker with substantial LLM assistance.
 Initial portfolio setup: GPT-6 Astra (`gpt-6-astra`), reasoning effort ultra.
 Overview update: GPT-6 (Codex), inherited session configuration; exact
@@ -23,7 +52,7 @@ certificate. The other four projects remain scoped; research has not
 started in those folders.
 
 For the detailed next-step assessment, read the
-[current brainstorm after the audits](brainstorm/NEW_PATHS_FORWARD_AFTER_AUDITS_CODEX_20261012.md).
+[current brainstorm after the audits](inactive/brainstorm/NEW_PATHS_FORWARD_AFTER_AUDITS_CODEX_20261012.md).
 The dated project notes and reviews supply the arguments and exact scope
 behind this overview.
 
@@ -75,12 +104,12 @@ creating a new project for every brainstorm label.
 
 | Project | Status on 12 October 2026 | Next bounded task |
 | --- | --- | --- |
-| [Arithmetic source audit](arithmetic_source_audit/README.md) | Scoped main-theorem chain closes internally under identified inputs | Independent reconstruction of the reflection-to-sieve interface |
+| [Arithmetic source audit](inactive/arithmetic_source_audit/README.md) | Scoped main-theorem chain closes internally under identified inputs | Independent reconstruction of the reflection-to-sieve interface |
 | [Newman certificate audit](newman_certificate_audit/README.md) | Negative corrected-interface benchmark; selected row enclosures and plain-weight transfer checks | Audit barrier, uniform error, tail and producer; screen sharp-weight feasibility |
-| [Arithmetic covariance targets](arithmetic_covariance_targets/README.md) | Scoped; substantial inherited ledgers available | Consolidate the exact families and match one theorem to a surviving signed target |
-| [Function-field covariance](function_field_covariance/README.md) | Scoped; depends on a selected integer ledger | One matched finite model with an explicit family and limiting regime |
-| [Weil two-packet detector](weil_two_packet_detector/README.md) | Scoped | One complete finite-horizon margin, conditioning and cost comparison |
-| [Heat counterkernel features](heat_counterkernel_features/README.md) | Scoped | Feature table and one controlled construction attempt |
+| [Arithmetic covariance targets](inactive/arithmetic_covariance_targets/README.md) | Scoped; substantial inherited ledgers available | Consolidate the exact families and match one theorem to a surviving signed target |
+| [Function-field covariance](inactive/function_field_covariance/README.md) | Scoped; depends on a selected integer ledger | One matched finite model with an explicit family and limiting regime |
+| [Weil two-packet detector](inactive/weil_two_packet_detector/README.md) | Scoped | One complete finite-horizon margin, conditioning and cost comparison |
+| [Heat counterkernel features](inactive/heat_counterkernel_features/README.md) | Scoped | Feature table and one controlled construction attempt |
 
 Arithmetic scrutiny and Newman auditing can proceed independently. For new
 arithmetic, the current brainstorm favors the small-cofactor obstruction
@@ -90,7 +119,7 @@ completed audit milestones. Function-field work follows the selection of
 an exact covariance family; the Weil and counterkernel projects remain
 capped exploratory tasks.
 
-## What the two active audits now establish
+## What the two original audits established by 12 October
 
 **Arithmetic source audit.** The internal audit now assembles the initial
 reduction, theta transformation, completed mean square, both Poisson
@@ -102,9 +131,9 @@ primary theta comparison uses Dunn–Radziwiłł v3; Patterson's original
 proof was not directly read. Quantitative introduction corollaries,
 effective constants, and later stronger strips are outside this assembly.
 See the
-[final assembly review](arithmetic_source_audit/reviews/FINAL_ASSEMBLY_REVIEW_20261012.md)
+[final assembly review](inactive/arithmetic_source_audit/reviews/FINAL_ASSEMBLY_REVIEW_20261012.md)
 and
-[stable audit manuscript](arithmetic_source_audit/arithmetic_source_audit.tex).
+[stable audit manuscript](inactive/arithmetic_source_audit/arithmetic_source_audit.tex).
 
 The next review should reconstruct the delicate interface from its source:
 conjugated cusp coefficients, nonunit fixed Fourier frequencies, moving
@@ -167,7 +196,7 @@ profiles; one fixed-profile estimate gives its own sum bound. Start with
 the
 [short-family refinement](../quasi-rh-exponent-descent/short_families/notes/1_SHORT_FAMILY_DESCENT_REFINEMENT_20261008.md)
 and
-[audited return ledger](arithmetic_source_audit/notes/TWO_POISSON_RETURN_AND_TERMINATION_20261012.md).
+[audited return ledger](inactive/arithmetic_source_audit/notes/TWO_POISSON_RETURN_AND_TERMINATION_20261012.md).
 
 **Covariance ledgers.** Record row weights, coefficient energy, masks,
 exact diagonal, coherent mass, and signed remainder. State whether the
@@ -285,13 +314,13 @@ stationary-sign recalibrations, scalar moment rewritings, or amplification
 parameter tuning should resume only when their missing source estimate
 has changed.
 
-## Reading map
+## Original reading map
 
-- **Current strategy:** [brainstorm after the audits](brainstorm/NEW_PATHS_FORWARD_AFTER_AUDITS_CODEX_20261012.md).
-- **Priority review of that strategy:** [Claude priority review](brainstorm/PRIORITY_REVIEW_AFTER_AUDITS_CLAUDE_20261012.md) (proposes a Lean replay of the formalized 7/8 theorem as priority 0, closes the character-amplification lane against arXiv:2610.12234, and reorders the Newman track).
+- **12 October strategy:** [brainstorm after the audits](inactive/brainstorm/NEW_PATHS_FORWARD_AFTER_AUDITS_CODEX_20261012.md).
+- **Priority review of that strategy:** [Claude priority review](inactive/brainstorm/PRIORITY_REVIEW_AFTER_AUDITS_CLAUDE_20261012.md) (proposes a Lean replay of the formalized 7/8 theorem as priority 0, closes the character-amplification lane against arXiv:2610.12234, and reorders the Newman track).
 - **Original discussion:** [Claude proposal](../quasi-rh-exponent-descent/brainstorm/NEW_PATHS_FORWARD_BRAINSTORM_CLAUDE_20261011.md), [Codex corrections](../quasi-rh-exponent-descent/brainstorm/NEW_PATHS_FORWARD_BRAINSTORM_CODEX_20261011.md), and [Claude cross-assessment](../quasi-rh-exponent-descent/brainstorm/NEW_PATHS_FORWARD_CROSS_ASSESSMENT_CLAUDE_20261011.md).
-- **Arithmetic dependencies:** [upstream audit](../quasi-rh-character-amplification/reviews/UPSTREAM_REFLECTION_POISSON_SIEVE_AUDIT_20261009.md), [analytic dependency ledger](../quasi-rh-character-amplification/notes/GEOMETRY_CONDITIONAL_THEOREM_AND_DEPENDENCY_LEDGER_20261009.md), and [current final assembly review](arithmetic_source_audit/reviews/FINAL_ASSEMBLY_REVIEW_20261012.md).
-- **Moment obligations:** [quadratic strength and barrier](../quasi-rh-exponent-descent/integer_quadratic_lift/notes/2_QUADRATIC_MOMENT_STRENGTH_AND_BARRIER_20261008.md), [short sextic extraction](../quasi-rh-exponent-descent/short_families/notes/1_SHORT_FAMILY_DESCENT_REFINEMENT_20261008.md), and the covariance project's [starting references](arithmetic_covariance_targets/README.md#starting-references).
+- **Arithmetic dependencies:** [upstream audit](../quasi-rh-character-amplification/reviews/UPSTREAM_REFLECTION_POISSON_SIEVE_AUDIT_20261009.md), [analytic dependency ledger](../quasi-rh-character-amplification/notes/GEOMETRY_CONDITIONAL_THEOREM_AND_DEPENDENCY_LEDGER_20261009.md), and [current final assembly review](inactive/arithmetic_source_audit/reviews/FINAL_ASSEMBLY_REVIEW_20261012.md).
+- **Moment obligations:** [quadratic strength and barrier](../quasi-rh-exponent-descent/integer_quadratic_lift/notes/2_QUADRATIC_MOMENT_STRENGTH_AND_BARRIER_20261008.md), [short sextic extraction](../quasi-rh-exponent-descent/short_families/notes/1_SHORT_FAMILY_DESCENT_REFINEMENT_20261008.md), and the covariance project's [starting references](inactive/arithmetic_covariance_targets/README.md#starting-references).
 - **Certificate evidence:** [Newman dependency ledger](newman_certificate_audit/notes/1_SOURCE_PIN_AND_DEPENDENCY_LEDGER_20261012.md), [benchmark](newman_certificate_audit/notes/2_FINITE_LANE_REPLAY_AND_CORRECTED_BUDGET_BENCHMARK_20261012.md), and [finite-lane audit](newman_certificate_audit/notes/3_CERTIFIED_ROW_REPLAY_AND_FINITE_LANE_REDUCTIONS_20261012.md).
 - **Finite Weil baseline:** [Weil-depth status](../shifted-zeta/weil-depth/STATUS.md).
 
@@ -301,7 +330,7 @@ proposals do not override completed notes or theorem hypotheses.
 
 ## Research records and manuscripts
 
-Each of the six projects has the same working layout:
+The original six projects have the same working layout, also used by the new active programs:
 
 ```text
 project/
@@ -341,12 +370,16 @@ Every project has a separate history folder and numbering registry for its
 own research chats. Project history READMEs link back to the shared context;
 the initial conversation is stored once in the base archive.
 
-Use the base [record_chat.py](record_chat.py) to capture completed public
-Codex text messages or import one selected ChatGPT-style conversation.
-The default destination is the base history; `--project PROJECT_NAME`
-selects a project's history. Refreshing the same conversation retains its
-number. The [recording guide](chat-histories/README.md) explains the commands,
-timestamp provenance, size limit, exclusions, and refresh checks.
+Use [tools/refresh_chat_history.py](../../tools/refresh_chat_history.py)
+and the [standing guide](../../tools/CHAT_HISTORY.md) for ongoing Codex
+capture and refresh. Supply the full history directory when first registering
+a conversation in an `active/` or `inactive/` project; later refreshes
+preserve its existing identity and numbering. The base
+[record_chat.py](record_chat.py) remains the format implementation and
+explicit import tool. Its `--project` option accepts direct project names;
+nested projects require `--folder`. The
+[recording guide](chat-histories/README.md) explains provenance, size limits,
+exclusions and integrity checks.
 
 A capture taken while a response is in progress is a snapshot through that
 moment. Later messages, including the final delivery of the capture task,
