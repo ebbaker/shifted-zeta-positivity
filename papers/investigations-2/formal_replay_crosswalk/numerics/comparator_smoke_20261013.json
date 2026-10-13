@@ -1,0 +1,30 @@
+{
+  "argv": [
+    "systemd-run",
+    "--property=RestrictAddressFamilies=~AF_UNIX",
+    "--user",
+    "--pty",
+    "--unit=rh-replay-smoke",
+    "--property=RuntimeMaxSec=120s",
+    "-E",
+    "PATH=/home/ubuntu/rh-replay-tools/bin:/home/ubuntu/rh-replay-tools/toolchain/lean-4.34.1-linux_aarch64/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+    "-E",
+    "ELAN_TOOLCHAIN=leanprover/lean4:v4.34.1",
+    "--working-directory=/home/ubuntu/rh-replay-integration/simple-match",
+    "--",
+    "bash",
+    "-c",
+    "lake env comparator config.json"
+  ],
+  "working_directory": "/home/ubuntu/rh-replay-integration/simple-match",
+  "pty_allocated": true,
+  "elapsed_seconds": 1.767551,
+  "exit_code": 0,
+  "timed_out": false,
+  "timeout_cleanup_errors": [],
+  "log": "/home/ubuntu/rh-replay-preparation/comparator_smoke.log",
+  "log_bytes": 1563,
+  "log_sha256": "4f83b45e15afb1cf691277c47a2d9c9b7b54f77ec31801db25d244b04bbc050a",
+  "source_profile": "pinned comparator simple_match fixture; sourcefullyread",
+  "mathematical_replay_run": false
+}
