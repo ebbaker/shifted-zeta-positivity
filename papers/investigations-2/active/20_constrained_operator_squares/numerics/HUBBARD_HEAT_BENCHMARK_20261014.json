@@ -1,0 +1,353 @@
+{
+  "date": "2026-10-14",
+  "prepared_for": "Edward Baker",
+  "LLM_assistance": "substantial",
+  "model": "gpt-6.1-sol",
+  "reasoning_effort": "ultra",
+  "status": "rigorous selected-state enclosures; grid optimization evidence is numerical",
+  "Hamiltonian": {
+    "sector": "N_up=N_down=1, hence N=2",
+    "basis": [
+      "L_up L_down",
+      "L_up R_down",
+      "R_up L_down",
+      "R_up R_down"
+    ],
+    "hopping": 1,
+    "repulsion": 4,
+    "shift": 3,
+    "surrogate": "B=H_hop+3I",
+    "beta": 1,
+    "time": 6,
+    "H": [
+      [
+        "4",
+        "-1",
+        "-1",
+        "0"
+      ],
+      [
+        "-1",
+        "0",
+        "0",
+        "-1"
+      ],
+      [
+        "-1",
+        "0",
+        "0",
+        "-1"
+      ],
+      [
+        "0",
+        "-1",
+        "-1",
+        "4"
+      ]
+    ]
+  },
+  "state_family": "rho=(1,p)_up tensor (1,q)_down, including localized endpoints; Psi=int_0^T exp(-tB)rho dt",
+  "grid": [
+    "0",
+    "1/8",
+    "1/4",
+    "3/8",
+    "1/2",
+    "3/4",
+    "1",
+    "4/3",
+    "2",
+    "8/3",
+    "4",
+    "8",
+    "infinity"
+  ],
+  "integration": {
+    "method": "closed exponential moments, common analytic integration for every method; no time-node quadrature",
+    "rigorous_arithmetic": "Fraction endpoints; alternating e^-1 series through 31/32, integer powers; integer-isqrt outward square roots",
+    "enclosure_width_target": "1e-25"
+  },
+  "ground_energy": {
+    "lo": "-0.82842712474619009760337744842",
+    "hi": "-0.82842712474619009760337744841"
+  },
+  "single_product_Slater_global_minimum": {
+    "exact": "-1/2",
+    "proof": "E >= 2-s-sqrt(5-4s^2) >= -1/2, 0<=s<=1; equality at s=1/2"
+  },
+  "same_169_candidates": {
+    "uncorrected": {
+      "evaluated_candidates": 169,
+      "minimum_numeric": -1.9999262635620798,
+      "p": "1",
+      "q": "1"
+    },
+    "integrated_trial_direct_variational": {
+      "evaluated_candidates": 169,
+      "minimum_numeric": -0.5074618532377526,
+      "p": "infinity",
+      "q": "0"
+    },
+    "endpoint_projector_residual": {
+      "evaluated_candidates": 169,
+      "minimum_numeric": -0.5021539761267766,
+      "p": "0",
+      "q": "infinity"
+    }
+  },
+  "actual_counted_work_for_same_169_candidates": {
+    "uncorrected": {
+      "multiplications": 10478,
+      "additions": 6929,
+      "dot_products": 507,
+      "H_actions": 0,
+      "V_actions": 0,
+      "A_actions": 0,
+      "projector_actions": 507,
+      "linear_combinations": 0,
+      "square_roots": 0,
+      "multiply_add_work_units": 17407
+    },
+    "integrated_trial_direct_variational": {
+      "multiplications": 12506,
+      "additions": 8112,
+      "dot_products": 338,
+      "H_actions": 169,
+      "V_actions": 0,
+      "A_actions": 0,
+      "projector_actions": 507,
+      "linear_combinations": 169,
+      "square_roots": 0,
+      "multiply_add_work_units": 20618
+    },
+    "endpoint_projector_residual": {
+      "multiplications": 16900,
+      "additions": 10647,
+      "dot_products": 845,
+      "H_actions": 0,
+      "V_actions": 507,
+      "A_actions": 0,
+      "projector_actions": 507,
+      "linear_combinations": 338,
+      "square_roots": 338,
+      "multiply_add_work_units": 27547
+    }
+  },
+  "direct_variational_at_residual_arithmetic_budget": {
+    "work_metric": "instrumented vector/mode multiplications plus additions, including initial tensor product; scalar exponentials precomputed for all methods; scalar final quotient/sqrt operations not priced, sqrt counts shown separately",
+    "budget": 27547,
+    "fixed_per_candidate_work": 122,
+    "rejected_evaluations_performed": 0,
+    "used_work": 27450,
+    "candidate_count": 225,
+    "minimum_numeric": -0.5074618532377526,
+    "p": "infinity",
+    "q": "0",
+    "work_counts": {
+      "multiplications": 16650,
+      "additions": 10800,
+      "dot_products": 450,
+      "H_actions": 225,
+      "V_actions": 0,
+      "A_actions": 0,
+      "projector_actions": 675,
+      "linear_combinations": 225,
+      "square_roots": 0
+    }
+  },
+  "generic_Cauchy_grid_diagnostic": {
+    "certified": false,
+    "positive_denominator_candidate_count": 0,
+    "largest_denominator_divided_by_initial_norm_squared": -1.1322207435500162,
+    "rigorous_failure_at_selected_states": "see rational interval certificates"
+  },
+  "selected_state_rational_interval_certificates": {
+    "uncorrected": {
+      "finite_time_seed_energy_and_norm_identity_interval_checks": true,
+      "parameters": {
+        "p": "1",
+        "q": "1"
+      },
+      "uncorrected_energy": {
+        "lo": "-1.9999262635620797356015026704",
+        "hi": "-1.9999262635620797356015026703"
+      },
+      "integrated_trial_rayleigh": {
+        "lo": "-4.6206831952926383656887038508E-37",
+        "hi": "4.6206831952926383656887038508E-37"
+      },
+      "endpoint_projector_residual_upper": {
+        "lo": "0.0052104602471449955781627428972",
+        "hi": "0.0052104602471449955781627428973"
+      },
+      "exact_projector_residual_rayleigh": {
+        "lo": "-9.2413663905852767313774077015E-37",
+        "hi": "9.2413663905852767313774077015E-37"
+      },
+      "N": {
+        "lo": "3.9801945594360824454546733897",
+        "hi": "3.9801945594360824454546733898"
+      },
+      "N_lower": {
+        "lo": "3.9798758523684711180377927935",
+        "hi": "3.9798758523684711180377927936"
+      },
+      "Q0": {
+        "lo": "1.9999877115752933435804826353",
+        "hi": "1.9999877115752933435804826354"
+      },
+      "Q1": {
+        "lo": "0.99992012523940673327313712999",
+        "hi": "0.99992012523940673327313713000"
+      },
+      "integrated_residual_norm_squared": {
+        "lo": "31.841556475488659563637387118",
+        "hi": "31.841556475488659563637387119"
+      },
+      "generic_Cauchy_denominator": {
+        "lo": "-18.367445444563893909688202388",
+        "hi": "-18.367445444563893909688202387"
+      },
+      "generic_delta_E": {
+        "lo": "11.244167535755686408044611846",
+        "hi": "11.244167535755686408044611847"
+      },
+      "generic_delta_N": {
+        "lo": "22.367125945521520842780750907",
+        "hi": "22.367125945521520842780750908"
+      },
+      "beats_single_product_Slater_global_lower_minus_half": false,
+      "rayleigh_interval_width_below_1e_minus_25": true,
+      "upper_interval_width_below_1e_minus_25": true,
+      "uncorrected_violates_ground_bound": true
+    },
+    "integrated_trial_direct_variational": {
+      "finite_time_seed_energy_and_norm_identity_interval_checks": true,
+      "parameters": {
+        "p": "infinity",
+        "q": "0"
+      },
+      "uncorrected_energy": {
+        "lo": "-1.5210380380561113217015136122",
+        "hi": "-1.5210380380561113217015136121"
+      },
+      "integrated_trial_rayleigh": {
+        "lo": "-0.50746185323775255650394405705",
+        "hi": "-0.50746185323775255650394405704"
+      },
+      "endpoint_projector_residual_upper": {
+        "lo": "-0.50215397612677637283871231970",
+        "hi": "-0.50215397612677637283871231969"
+      },
+      "exact_projector_residual_rayleigh": {
+        "lo": "-0.50746185323775255650394405705",
+        "hi": "-0.50746185323775255650394405704"
+      },
+      "N": {
+        "lo": "0.31431771382808887812338032736",
+        "hi": "0.31431771382808887812338032737"
+      },
+      "N_lower": {
+        "lo": "0.31414474450337973690196221527",
+        "hi": "0.31414474450337973690196221528"
+      },
+      "Q0": {
+        "lo": "0.23333256530678914797775657912",
+        "hi": "0.23333256530678914797775657913"
+      },
+      "Q1": {
+        "lo": "0.078883896716351690520758959550",
+        "hi": "0.078883896716351690520758959551"
+      },
+      "integrated_residual_norm_squared": {
+        "lo": "1.2720802814594340126909469871",
+        "hi": "1.2720802814594340126909469872"
+      },
+      "generic_Cauchy_denominator": {
+        "lo": "-1.1322207435500161168879089247",
+        "hi": "-1.1322207435500161168879089246"
+      },
+      "generic_delta_E": {
+        "lo": "0.89743125525098522244816195974",
+        "hi": "0.89743125525098522244816195975"
+      },
+      "generic_delta_N": {
+        "lo": "1.4477563304154228789709447628",
+        "hi": "1.4477563304154228789709447629"
+      },
+      "beats_single_product_Slater_global_lower_minus_half": true,
+      "rayleigh_interval_width_below_1e_minus_25": true,
+      "upper_interval_width_below_1e_minus_25": true,
+      "uncorrected_violates_ground_bound": true
+    },
+    "endpoint_projector_residual": {
+      "finite_time_seed_energy_and_norm_identity_interval_checks": true,
+      "parameters": {
+        "p": "0",
+        "q": "infinity"
+      },
+      "uncorrected_energy": {
+        "lo": "-1.5210380380561113217015136122",
+        "hi": "-1.5210380380561113217015136121"
+      },
+      "integrated_trial_rayleigh": {
+        "lo": "-0.50746185323775255650394405705",
+        "hi": "-0.50746185323775255650394405704"
+      },
+      "endpoint_projector_residual_upper": {
+        "lo": "-0.50215397612677637283871231970",
+        "hi": "-0.50215397612677637283871231969"
+      },
+      "exact_projector_residual_rayleigh": {
+        "lo": "-0.50746185323775255650394405705",
+        "hi": "-0.50746185323775255650394405704"
+      },
+      "N": {
+        "lo": "0.31431771382808887812338032736",
+        "hi": "0.31431771382808887812338032737"
+      },
+      "N_lower": {
+        "lo": "0.31414474450337973690196221527",
+        "hi": "0.31414474450337973690196221528"
+      },
+      "Q0": {
+        "lo": "0.23333256530678914797775657912",
+        "hi": "0.23333256530678914797775657913"
+      },
+      "Q1": {
+        "lo": "0.078883896716351690520758959550",
+        "hi": "0.078883896716351690520758959551"
+      },
+      "integrated_residual_norm_squared": {
+        "lo": "1.2720802814594340126909469871",
+        "hi": "1.2720802814594340126909469872"
+      },
+      "generic_Cauchy_denominator": {
+        "lo": "-1.1322207435500161168879089247",
+        "hi": "-1.1322207435500161168879089246"
+      },
+      "generic_delta_E": {
+        "lo": "0.89743125525098522244816195974",
+        "hi": "0.89743125525098522244816195975"
+      },
+      "generic_delta_N": {
+        "lo": "1.4477563304154228789709447628",
+        "hi": "1.4477563304154228789709447629"
+      },
+      "beats_single_product_Slater_global_lower_minus_half": true,
+      "rayleigh_interval_width_below_1e_minus_25": true,
+      "upper_interval_width_below_1e_minus_25": true,
+      "uncorrected_violates_ground_bound": true
+    }
+  },
+  "limitations": [
+    "The four-dimensional state representation makes direct Rayleigh evaluation cheaper than residual accumulation.",
+    "The interaction-gap estimate applies to repulsive Hubbard V, not to arbitrary signed interactions or gapless continuum potentials.",
+    "No floating grid minimum is claimed globally optimal.",
+    "This small benchmark demonstrates a certified correlated trial bound, not scalable many-body computational advantage or literature novelty."
+  ],
+  "reproducibility": {
+    "python_version": "3.10.0",
+    "script_sha256": "917df24bee6e715daa79505016449925f75d294134e4e9dea7a8ea56a284a6dc"
+  }
+}

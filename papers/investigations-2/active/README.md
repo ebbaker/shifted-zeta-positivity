@@ -4,8 +4,12 @@
 Consolidation: `gpt-6-astra` (Codex), reasoning effort **ultra**.
 
 The [accepted closure review](../brainstorm/reviews/PORTFOLIO_CLOSURE_REVIEW_CODEX_20261013.md)
-has been implemented. These **10 retained homes** include completed
+has been implemented. These **11 program homes** include new investigations, completed
 bounded trials, paused programs, downstream targets, tools and reading.
+On 14 October 2026, the author requested the new
+[operator-square investigation 20](20_constrained_operator_squares/README.md),
+initialized with a review of his three 2017--2018 notes and exact seed identities.
+This addition uses gpt-6-astra (Codex), reasoning effort **ultra**.
 The [14 October execution](../brainstorm/reviews/MATCHED_01_18_AND_19_RESULTS_CODEX_20261014.md)
 completed the matched 01/18 pilot and 19's fixed outward witness. This
 status update was prepared for Edward Baker with LLM assistance by
@@ -25,13 +29,8 @@ theorem.
 | [12 Canonical boundary reflection](12_canonical_boundary_reflection/README.md) | Reading and bridge | An independently defined arithmetic transfer map and a proved quantitative comparison. |
 | [13 Stability Jensen and Lee Yang](13_stability_jensen_lee_yang/README.md) | Deferred reading | A specified admissible stable preparation or a precise obstruction to a concrete construction. |
 | [18 Rank two automorphic lift](18_rank_two_automorphic_lift/README.md) | Paused after the bounded A4 pilot | A new complete signed finite-mode estimate, justified positive structure, or demonstrated matched saving; retain the declared domain, both stationary targets and every mode/tail payment. |
-<<<<<<< HEAD
 | [19 Euler-factor controls](19_euler_factor_controls/README.md) | Shared control screen; fixed witness complete; manuscript drafted | Certified `Lambda_(1/2,41)>0.2`; the [manuscript](19_euler_factor_controls/manuscript/euler_factor_controls.tex) extends this to every prime `p<=41` and adds an asymptotic lower bound. Next: independent review of the manuscript. Further control work must address a named hypothesis or domain; preserve local/global collision distinctions. |
-=======
-| [18 Rank two automorphic lift](18_rank_two_automorphic_lift/README.md) | One bounded continuation | A4 with a declared domain, complete higher-mode payments, stationary constraints and comparison against the existing remainder estimate. |
-| [19 Euler-factor controls](19_euler_factor_controls/README.md) | Shared control screen; fixed witness complete | Certified `Lambda_(1/2,41)>0.2`. Further control work must address a named hypothesis or domain; preserve local/global collision distinctions. |
-| [19 - Claude](19_euler_factor_controls/README.md) | Shared control screen; manuscript drafted | Witnesses certified on 14 October 2026 in the [manuscript](19_euler_factor_controls/manuscript/euler_factor_controls.pdf); next, independent review and its open problems (§10). |
->>>>>>> 94745f3 (Merged work from ChatGPT)
+| [20 Constrained operator squares](20_constrained_operator_squares/README.md) | Active at the author's request; source review and exact seed identities recorded | Derive useful residual bounds for approximate quantum trajectories and a source-specific constrained square for the physical stationary Laguerre forms. First run bounded tests with complete defects and endpoints. |
 
 ## Consolidated work and its principal homes
 

@@ -4,13 +4,12 @@
 Consolidation: `gpt-6-astra` (Codex), reasoning effort **ultra**.
 
 The [accepted closure review](brainstorm/reviews/PORTFOLIO_CLOSURE_REVIEW_CODEX_20261013.md)
-is now implemented. The [active index](active/README.md) contains **10
-retained program homes**, including paused programs, destinations and tools.
+is now implemented. The [active index](active/README.md) contains **11
+program homes**, including paused programs, destinations and tools.
 The [inactive index](inactive/README.md) contains **14 folders**: five older
 investigations and nine newly consolidated, completed or dormant programs.
 Inactive status does not assert mathematical impossibility.
 
-ChatGPT:
 The [14 October matched experiment and witness](brainstorm/reviews/MATCHED_01_18_AND_19_RESULTS_CODEX_20261014.md)
 are complete (`gpt-6-astra`, effort **ultra**, prepared for Edward Baker with
 LLM assistance). [01](active/01_complete_cutoff_reflection/README.md) and
@@ -20,7 +19,6 @@ stationary-sign certificate or matched saving. Their completed identities,
 new bounded results and explicit reopening gates are preserved.
 [19](active/19_euler_factor_controls/README.md) now has an outward raw
 Laguerre witness proving `Lambda_(1/2,41)>0.2`; it remains the shared
-<<<<<<< HEAD
 control screen. Its
 [manuscript](active/19_euler_factor_controls/manuscript/euler_factor_controls.tex)
 extends the certified bound to every prime `p<=41`, adds an asymptotic
@@ -28,24 +26,17 @@ lower bound, and awaits independent review (Claude Opus 5.5,
 `claude-opus-5-5`, Claude Cowork, effort **max**).
 [02](active/02_angular_jacobi_gluing/README.md) remains paused and eligible
 for its focused full-gluing candidate search.
-=======
-control screen. [02](active/02_angular_jacobi_gluing/README.md) remains
-paused and eligible for its focused full-gluing candidate search.
-Claude:
-Current research allocation is one bounded continuation in
-[18](active/18_rank_two_automorphic_lift/README.md) and, in
-[19](active/19_euler_factor_controls/README.md), review of the
-Euler-factor-control manuscript, whose outward witness certificates were
-completed on 14 October 2026 (status update by Claude Opus 5.5,
-`claude-opus-5-5`, Claude Cowork, effort **max**).
-[01](active/01_complete_cutoff_reflection/README.md) and
-[02](active/02_angular_jacobi_gluing/README.md) are paused at explicit gates;
-02 remains eligible for its focused full-gluing candidate search.
->>>>>>> 94745f3 (Merged work from ChatGPT)
 [08](active/08_cusp_unit_sector_saving/README.md) remains a separate optional
 arithmetic track. The remaining retained homes organize downstream targets,
 tools and reading. The indexes and individual READMEs state the conditions
 for renewed work.
+
+On 14 October 2026, the author opened
+[20 Constrained operator squares and heat flow](active/20_constrained_operator_squares/README.md).
+Its initial source review separates the theta stationary-sign target from
+quantum variational applications and records exact residual/end-point
+corrections for approximate heat trajectories. This setup was prepared for
+Edward Baker with LLM assistance by gpt-6-astra, effort **ultra**.
 
 ## Completed results and retained obligations
 
@@ -85,7 +76,7 @@ those records describe their original capture; they are not rewritten.
 
 ```text
 investigations-2/
-  active/                       10 retained program homes
+  active/                       11 program homes
   inactive/                     14 merged, completed or dormant folders
   brainstorm/                   shared planning, reviews and milestones
   formal_replay_crosswalk/       retained audit and this chat history

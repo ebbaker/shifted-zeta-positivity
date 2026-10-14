@@ -10,6 +10,16 @@ Preserve the [folded parity obstruction](notes/1_FOLDED_PARITY_CUSP_AND_FACTORIS
 
 **Continuation gate:** supply a source-derived estimate or factorization retaining the full cross-coset cancellation, all boundary and tail terms, and both required derivative-level stationary targets. Do not restart the excluded independent positive-coset attempts.
 
+## Operator square continuation
+
+14 October 2026. At the author's request,
+[20 Constrained operator squares](../20_constrained_operator_squares/README.md)
+is the active home for the new operator method and the
+[stationary-energy research note](../20_constrained_operator_squares/notes/DIRAC_SQUARES_AND_STATIONARY_LAGUERRE_ENERGY_20261014.md).
+This program retains the complete paired-kernel targets and its existing
+continuation gate. Prepared for Edward Baker with LLM assistance by
+gpt-6-astra (Codex), reasoning effort **ultra**.
+
 ## Preserved research record
 
 13 October 2026. Prepared for Edward Baker with substantial LLM assistance.

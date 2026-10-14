@@ -1,0 +1,1988 @@
+\documentclass[11pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{amsmath,amssymb,amsthm,mathtools,mathrsfs}
+\usepackage[margin=1in]{geometry}
+\usepackage{booktabs,array}
+\usepackage[colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue]{hyperref}
+\usepackage{enumitem}
+\allowdisplaybreaks
+\setlength{\emergencystretch}{2em}
+\numberwithin{equation}{section}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\DeclareMathOperator{\Rea}{Re}
+\DeclareMathOperator{\Ima}{Im}
+\DeclareMathOperator{\Dom}{Dom}
+\DeclareMathOperator{\supp}{supp}
+\newcommand{\dd}{\,d}
+\newcommand{\Lag}{\mathscr L}
+\newcommand{\RH}{\mathrm{RH}}
+\title{Constrained operator squares and stationary Laguerre energy}
+\author{Drafted for Edward Baker}
+\date{Draft, 14 October 2026}
+\begin{document}
+\maketitle
+\begin{abstract}
+We develop a self-contained account of constrained operator squares for the
+Riemann theta heat flow and for integrated imaginary-time trial states.
+The theta background includes the precise normalization of the heat family,
+the de Bruijn--Newman threshold, the finite-collision reduction of the
+Riemann hypothesis, and a two-level stationary-sign criterion covering
+every finite multiplicity. We derive paired Dirac representations of the
+physical Laguerre forms and explain why a positive generator leaves an
+indefinite oscillatory observation. Local linear stationary multipliers
+cannot turn that observation into a positive operator identity on the full
+paired core; positive smooth source controls can also preserve finitely
+many declared linear observations while both stationary signs fail.
+Full imaginary Jacobi gluing remains an arithmetic constraint requiring a
+quantitative signed consequence. Separately, Gaussian translation channels
+supply the corrected smoothing machinery with its product defect and
+normal-ordering contraction, and residual-corrected heat identities retain
+the variational meaning of approximate trajectories. A positive-interaction
+bound and exact finite-time diagonal identities delineate useful quantum
+subclasses. The final discussion states the remaining bottlenecks and
+possible constructions. Numerical work is referenced in the supporting
+notes. No global theta sign theorem or proof of the Riemann hypothesis is
+claimed.
+\end{abstract}
+\tableofcontents
+
+\section{Purpose and notation}\label{sec:purpose}
+The purpose is to collect the setup and the conditional route to the
+Riemann hypothesis in the same document as investigation 20's operator
+identities and obstructions. The background was previously distributed
+between the parent collision reductions \cite{parentcollision}, the
+stationary-sign and paired-kernel notes \cite{stationarynote,kernelnote},
+the upstream manuscript \cite{upstreamtransport}, and the investigation's first research notes
+\cite{diracnote,residualnote,localobstruction,smoothingnote}.
+The Euler-factor control manuscript \cite{eulercontrols} uses the same
+heat family, but tests which shared hypotheses fail to force real zeros;
+it does not supply the missing theta sign. Here the arithmetic question
+is whether the complete theta preparation forces a signed observation to
+be nonnegative under its physical stationary constraint.
+
+The motivation comes from Edward B. Baker III's continuum sigma notes
+of November 2017, February 2018 and August 2018
+\cite{baker2017,baker2018heat,baker2018dirac}. Their source review
+\cite{seedreview} distinguishes valid heat/resolvent identities from
+unfinished smoothing and square-completion steps. The useful method is
+to retain the constraint and every correction when completing a square.
+The theta and quantum applications have different generators, domains and
+success criteria. There is no transfer theorem from a quantum variational
+bound to the theta stationary signs.
+
+Throughout the theta sections, $t$ is Newman time and $x$ the real spectral
+coordinate. We write $H(t,x)=H_t(x)$ and
+$H^{(j)}(t,x)=\partial_x^jH(t,x)$; a prime always differentiates $x$
+at fixed $t$. The subscript on $H_t$ denotes a time slice, not a derivative.
+The index $n$ labels theta-series terms, whereas $j$ labels a spatial
+derivative level. Our two physical targets use $j=0,1$.
+In the angular-lift section, $z$ is explicitly reassigned to the balanced
+angular coordinate, and $x$ remains the spectral coordinate.
+In the quantum sections $s$ is dissipative imaginary time and $T$ is a
+finite terminal time. Inner products are conjugate-linear in their first
+argument. Selfadjoint unbounded operators are used only on the explicitly
+stated vector or form domains.
+
+The basic logical distinction is between a positive operator on its whole
+Hilbert space and a positive observation on a prescribed arithmetic state.
+A multiplier that is indefinite on the whole space can have a positive
+expectation on a constrained family. Conversely, the existence of a
+positive square for an evolution generator does not decide an oscillatory
+matrix element of that evolution. The construction problem is to display
+the extra state constraint and use it quantitatively.
+
+
+\section{The theta heat flow and the exact route to RH}
+\label{sec:background-heat}
+
+The scalar observation in this investigation is the de Bruijn--Newman
+heat deformation of the Riemann $\xi$ function. We use $H(t,z)$ for
+the joint function and $H_t(z)=H(t,z)$ for a time slice; a subscript $t$
+on $H_t$ is therefore a parameter, whereas $\partial_tH$ is a derivative.
+For $\Rea s>1$, $\zeta(s)=\sum_{n\ge1}n^{-s}$, and elsewhere
+we use its meromorphic continuation. Its nontrivial zeros lie in the
+critical strip $0<\Rea s<1$. The completed function below is entire;
+its zeros are precisely those nontrivial zeros. Set
+\begin{align}
+ \xi(s)&=\frac{s(s-1)}2\pi^{-s/2}\Gamma(s/2)\zeta(s),\nonumber\\
+ \Phi(u)&=\sum_{n\ge1}
+ \bigl(2\pi^2n^4e^{9u}-3\pi n^2e^{5u}\bigr)
+ e^{-\pi n^2e^{4u}},\qquad u\ge0,\label{eq:bg-Phi}\\
+ H(t,z)&=\int_0^\infty e^{tu^2}\Phi(u)\cos(zu)\,du,
+ &H(0,z)&=\frac18\xi\!\left(\frac12+\frac{iz}2\right).
+ \label{eq:bg-H}
+\end{align}
+This normalization is the one in the parent collision reduction and in
+the standard heat-flow literature \cite{polymath,newmanwu,parentcollision}.
+The theta functional equation supplies an even extension $\Phi_e$ of
+$\Phi$ to the full real line. Each term in \eqref{eq:bg-Phi} is strictly
+positive on $u\ge0$, since
+$2\pi n^2e^{4u}>3$. The even extension is consequently positive.
+
+The double exponential decay of the complete theta source dominates
+every fixed Gaussian, exponential, and polynomial factor on $u\ge0$.
+Thus the integral and all fixed parameter derivatives converge locally
+uniformly in the complex variables $t,z$. In particular $H$ is jointly
+entire, real on real $(t,x)$, even in $z$, and satisfies
+\begin{equation}
+ \partial_t H=-\partial_z^2H.
+ \label{eq:bg-backward-heat}
+\end{equation}
+The minus sign matters: increasing Newman time is backward heat
+evolution. Moreover,
+\begin{equation}
+ H(t,iy)=\int_0^\infty e^{tu^2}\Phi(u)\cosh(yu)\,du>0
+ \qquad(t,y\in\mathbb R),
+ \label{eq:bg-imaginary-positive}
+\end{equation}
+so no time slice is identically zero and every spatial zero has finite
+multiplicity.
+
+\subsection{Imported global inputs and a finite collision reduction}
+
+The following classical inputs concern the genuine theta flow; they are
+not consequences of an abstract operator square. The threshold theorem
+gives a finite real constant $\Lambda$ such that
+\begin{equation}
+ H_t\text{ has only real zeros}\quad\Longleftrightarrow\quad t\ge\Lambda.
+ \label{eq:bg-threshold}
+\end{equation}
+De Bruijn's strip contraction maps a strip of half-width $a$ at time
+$t_0$ into the strip of half-width
+$\sqrt{\max\{a^2-2h,0\}}$ at time $t_0+h$, $h\ge0$.
+These facts and the Riemann functional equation give
+\begin{equation}
+ \mathrm{RH}\quad\Longleftrightarrow\quad
+ H_0\text{ has only real zeros}\quad\Longleftrightarrow\quad\Lambda\le0.
+ \label{eq:bg-RH-threshold}
+\end{equation}
+Under $s=1/2+iz/2$, the critical line corresponds to real $z$,
+and the original critical strip corresponds to $|\Ima z|<1$.
+Strip contraction therefore also gives the classical bound $\Lambda\le1/2$.
+Rodgers--Tao prove $\Lambda\ge0$ \cite{rodgerstao}, so RH would give
+$\Lambda=0$; that lower bound is not needed in the collision argument.
+
+We also import two more specific inputs from \cite{polymath}.
+First, Theorem~1.5(i) supplies an absolute $C$ such that a zero
+$H_t(x+iy)=0$ with $0<t\le1/2$ and $|x|\ge e^{C/t}$ is real.
+Second, Proposition~3.1 gives local Hermite splitting: at a real zero
+of multiplicity $m\ge2$ at $(T,a)$, the $m$ nearby zeros have expansions
+\begin{equation}
+ a+\sqrt{2(t-T)}\,\lambda_k+O(|t-T|),\qquad 1\le k\le m,
+ \label{eq:bg-Hermite}
+\end{equation}
+where $\lambda_k$ are the distinct real roots of the probabilists'
+Hermite polynomial
+\[
+ \operatorname{He}_m(z)=(-1)^m e^{z^2/2}
+             \frac{d^m}{dz^m}e^{-z^2/2}.
+\]
+A nonzero $\lambda_k$
+produces a nonreal root immediately before $T$.
+
+\begin{proposition}[A positive threshold produces a finite collision]
+\label{prop:bg-finite-collision}
+If $\Lambda>0$, there is $a\in\mathbb R\setminus\{0\}$ with
+\begin{equation}
+ H(\Lambda,a)=H_x(\Lambda,a)=0.
+ \label{eq:bg-positive-collision}
+\end{equation}
+\end{proposition}
+\begin{proof}
+Take $\Lambda/2\le t_k<\Lambda$ tending upward to $\Lambda$, and
+choose a nonreal zero $z_k$ of each $H_{t_k}$. The original critical
+strip and strip contraction bound their imaginary parts. The uniform
+localization input bounds their real parts by $e^{2C/\Lambda}$, using
+the classical bound $\Lambda\le1/2$. A subsequence converges to a finite
+$z_*$. Continuity gives $H(\Lambda,z_*)=0$, and
+\eqref{eq:bg-threshold} makes $z_*=a$ real. If this zero were simple,
+the holomorphic implicit-function theorem would give a unique nearby
+zero for real times near $\Lambda$. Complex conjugation would force
+that zero to be real, contradicting the nearby $z_k$. Hence $H_x$ also
+vanishes. Equation~\eqref{eq:bg-imaginary-positive} excludes $a=0$.
+\end{proof}
+
+The uniformity of localization for times bounded away from zero is
+essential here. Merely knowing a separate finite exceptional region at
+each time would not prevent the chosen zeros from escaping as
+$t_k\uparrow\Lambda$.
+
+\begin{corollary}[The exact positive-time endpoint target]
+\label{cor:bg-exact-route}
+RH is equivalent to the absence of a real common zero of $H_t,H_t'$
+at every $t>0$. If the time-zero zeros lie in a strip of half-width $a$,
+it suffices to exclude such common zeros for $0<t\le a^2/2$.
+\end{corollary}
+\begin{proof}
+If RH holds, all zeros are real at every nonnegative time. A multiple
+real zero at a positive time would contradict
+\eqref{eq:bg-Hermite} at a slightly earlier nonnegative time. If RH
+fails, $\Lambda>0$ and Proposition~\ref{prop:bg-finite-collision}
+supplies the forbidden common zero. For the restricted time range, strip
+contraction makes all zeros real at $t\ge a^2/2$, and Hermite splitting
+excludes a multiple root at a later time.
+\end{proof}
+
+This is the parent manuscript's endpoint reduction
+\cite{parentcollision}. A better positive bound for $\Lambda$, or a
+more regular coordinate description of a collision, does not by itself
+exclude \eqref{eq:bg-positive-collision}. The present task is to supply
+an arithmetic sign that does exclude it.
+
+\section{Derivative levels and the stationary Laguerre criterion}
+\label{sec:background-stationary}
+
+For spatial derivatives write $H^{(j)}=\partial_x^jH$ and define
+\begin{equation}
+ h_j=H^{(j)},\qquad
+ \mathscr L_j(H)=(\partial_xh_j)^2-h_j\partial_x^2h_j
+ =(H^{(j+1)})^2-H^{(j)}H^{(j+2)}.
+ \label{eq:bg-Laguerre-level}
+\end{equation}
+The index $j$ denotes the derivative to which the ordinary first
+Laguerre expression is applied. It is not the index of a generalized
+Laguerre coefficient. Only the following two levels are needed for the
+criterion:
+\begin{align}
+ j=0:\quad &h_0=H,
+ &\mathscr L_0&=H_x^2-HH_{xx},
+ &\partial_xh_0=0&\iff H_x=0,\nonumber\\
+ j=1:\quad &h_1=H_x,
+ &\mathscr L_1&=H_{xx}^2-H_xH_{xxx},
+ &\partial_xh_1=0&\iff H_{xx}=0.
+ \label{eq:bg-two-levels}
+\end{align}
+Every $h_j$ satisfies the same backward heat equation.
+
+For context, the usual Laguerre inequality of a real-rooted
+genus-one canonical product is immediate from its logarithmic second
+derivative. If
+$f(x)=C x^m e^{bx}\prod_n(1-x/\rho_n)e^{x/\rho_n}$, with real
+$\rho_n$, $b,C$ and $\sum_n\rho_n^{-2}<\infty$, then away from its
+zeros
+\begin{equation}
+ \frac{(f')^2-ff''}{f^2}
+ =-\partial_x^2\log|f|
+ =\frac m{x^2}+\sum_n\frac1{(x-\rho_n)^2}\ge0.
+ \label{eq:bg-real-root-Laguerre}
+\end{equation}
+Continuity handles the zeros. Our proof target is weaker than global
+Laguerre nonnegativity: it asks for the two signs only on their physical
+stationary sets,
+\begin{align}
+ H_x=0&\quad\Longrightarrow\quad\mathscr L_0=-HH_{xx}\ge0,
+ \label{eq:bg-S0}\\
+ H_{xx}=0&\quad\Longrightarrow\quad\mathscr L_1=-H_xH_{xxx}\ge0.
+ \label{eq:bg-S1}
+\end{align}
+These signs are to be proved without assuming the real-rootedness that
+is the desired conclusion.
+
+\subsection{A predecessor critical curve at every even multiplicity}
+
+\begin{lemma}[Rescaled critical chart]
+\label{lem:bg-predecessor}
+Let $F_t=-F_{xx}$ be real analytic near $(T,a)$ and let $F(T,\cdot)$
+have exact even multiplicity $m=2r$ at $a$. Put
+$F_k=\partial_x^kF(T,a)$, so $F_m\ne0$. For sufficiently small
+$h=T-t>0$ there is an analytic real curve $\chi(h)$ satisfying
+\begin{align}
+ \chi(h)&=a-\frac{F_{m+1}}{rF_m}h+O(h^2),
+ &F_x(T-h,\chi(h))&=0,\label{eq:bg-chi}\\
+ F(T-h,\chi(h))&=\frac{F_m}{r!}h^r+O(h^{r+1}),
+ &F_{xx}(T-h,\chi(h))&=
+ \frac{F_m}{(r-1)!}h^{r-1}+O(h^r).
+ \label{eq:bg-critical-jets}
+\end{align}
+In particular,
+\begin{equation}
+ FF_{xx}(T-h,\chi(h))=
+ \frac{F_m^2}{r!(r-1)!}h^{2r-1}+O(h^{2r})>0.
+ \label{eq:bg-critical-positive}
+\end{equation}
+\end{lemma}
+\begin{proof}
+The heat relation and analytic Taylor expansion give
+\begin{equation}
+ F(T-h,a+z)=\sum_{p,q\ge0}
+ \frac{F_{2p+q}}{p!q!}h^pz^q.
+ \label{eq:bg-heat-Taylor}
+\end{equation}
+Set $z=hy$. The quotient
+$K(h,y)=h^{-r}F_x(T-h,a+hy)$ extends analytically to $h=0$:
+a nonzero term must have $2p+q+1\ge2r$, which implies $p+q\ge r$.
+The two terms of degree $r$ are
+\[
+ K(0,y)=\frac{F_m}{(r-1)!}y+\frac{F_{m+1}}{r!}.
+\]
+Its derivative in $y$ is nonzero. The real analytic implicit-function
+theorem therefore gives a real analytic $y(h)$ with $K(h,y(h))=0$.
+Taking $\chi(h)=a+hy(h)$ proves \eqref{eq:bg-chi}; substitution into
+\eqref{eq:bg-heat-Taylor} gives \eqref{eq:bg-critical-jets} and
+\eqref{eq:bg-critical-positive}.
+\end{proof}
+
+\begin{theorem}[Two stationary signs exclude every finite multiplicity]
+\label{thm:bg-stationary}
+Let $H_t=-H_{xx}$ be real analytic on an open set
+$\Omega\subset(0,\infty)\times\mathbb R$. Suppose every spatial
+zero under consideration has finite multiplicity and
+\eqref{eq:bg-S0}--\eqref{eq:bg-S1} hold throughout $\Omega$.
+Then there is no $(T,a)\in\Omega$ with $H(T,a)=H_x(T,a)=0$.
+\end{theorem}
+\begin{proof}
+For an even multiplicity $m\ge2$, apply
+Lemma~\ref{lem:bg-predecessor} to $F=H$. Its predecessor branch
+has $H_x=0$ and $HH_{xx}>0$, violating \eqref{eq:bg-S0}.
+For an odd multiplicity $m\ge3$, apply the lemma to $F=H_x$.
+This is an analytic heat solution of even multiplicity $m-1$ at the
+same point. Its predecessor branch has $H_{xx}=0$ and
+$H_xH_{xxx}>0$, violating \eqref{eq:bg-S1}. Openness of $\Omega$
+keeps both predecessor curves in the assumed sign domain, and taking
+$h<T$ keeps their times positive.
+\end{proof}
+
+The theorem and its analytic chart were developed upstream in the
+stationary-sign note \cite{stationarynote}. For genuine theta, a proof
+of both signs at all positive times and real heights gives RH through
+Corollary~\ref{cor:bg-exact-route}. It is enough to provide a sign
+domain containing every possible positive threshold collision and its
+earlier critical curve. For a closed rectangle or time strip, boundary
+candidates require a predecessor neighborhood; a sign just at the
+collision is insufficient because the relevant products vanish there.
+A bounded sign theorem gives bounded collision exclusion until its
+time and spatial coverage are established. The result makes no
+simplicity assertion about the time-zero zeros.
+
+The second derivative level is indispensable to this argument. The
+polynomial heat solution
+\begin{equation}
+ F(t,x)=x^3-6(t-T)x
+ \label{eq:bg-cubic-control}
+\end{equation}
+has a triple zero at $(T,0)$. Before $T$ it has no real stationary
+point because $F_x=3x^2+6(T-t)>0$, so the first stationary sign is
+vacuous. But $F_{xx}=0$ at $x=0$ and
+$F_xF_{xxx}=36(T-t)>0$, violating the second sign. In fact
+$\mathscr L_0(F)=3x^4+36(t-T)^2\ge0$ everywhere: even a full first
+Laguerre sign can miss this local triple collision.
+
+\subsection{Complete paired kernels for the two levels}
+\label{subsec:bg-kernels}
+
+To connect these physical signs with operator formulas, put
+\begin{equation}
+ m_t(u)=e^{tu^2}\Phi_e(u),\qquad
+ A_t(x)=\widehat m_t(x)=2H_t(x),\qquad
+ \widehat f(x)=\int_{\mathbb R}e^{ixu}f(u)\,du.
+ \label{eq:bg-full-Fourier}
+\end{equation}
+Define the complete paired source kernels
+\begin{align}
+ K_{n,t}(s)&=\int_{\mathbb R}r^{2n}m_t(s+r)m_t(s-r)\,dr,
+ \nonumber\\
+ J_{j,t}(s)&=\int_{\mathbb R}r^2(r^2-s^2)^j
+ m_t(s+r)m_t(s-r)\,dr.
+ \label{eq:bg-pair-kernels}
+\end{align}
+The decay of the full theta source justifies all displayed double
+integrals, changes of variables, and fixed polynomial insertions,
+locally uniformly in time. Symmetrizing the double Fourier expression
+for \eqref{eq:bg-Laguerre-level} gives the multiplier
+$\tfrac12(u-v)^2(-uv)^j$. With $u=s+r$, $v=s-r$ and absolute
+Jacobian two, one obtains
+\begin{equation}
+ \mathscr L_j(A_t;x)=4\widehat J_{j,t}(2x),\qquad
+ \mathscr L_j(H_t;x)=\widehat J_{j,t}(2x).
+ \label{eq:bg-Laguerre-Fourier}
+\end{equation}
+In particular $J_{0,t}=K_{1,t}$ and
+$J_{1,t}=K_{2,t}-s^2K_{1,t}$. All kernels are even and real.
+The stationary targets are therefore precisely
+\begin{equation}
+ \widehat J_{0,t}(2x)\ge0\ \text{when }A_t'(x)=0,
+ \qquad
+ \widehat J_{1,t}(2x)\ge0\ \text{when }A_t''(x)=0.
+ \label{eq:bg-pair-targets}
+\end{equation}
+The source product in \eqref{eq:bg-pair-kernels} contains the complete
+theta sum in both factors, including every cross contribution. Dropping
+cross terms changes the target.
+
+Global nonnegativity of $\widehat J_{j,t}$ would be a stronger sufficient
+condition. For these real even Schwartz kernels, that condition is
+equivalent to positive definiteness as a translation kernel:
+$\sum_{a,b}c_a\overline{c_b}J_{j,t}(s_a-s_b)\ge0$ for all finite
+choices. It is distinct from pointwise positivity of $J_{j,t}$.
+For instance, $J_{0,t}>0$ follows directly from the positive source but
+does not establish the sign of its cosine transform; the weight
+$r^2-s^2$ already permits a signed $J_{1,t}$. The complete derivation,
+the distinction from generalized Laguerre coefficients, and the local
+triple limitation are recorded in \cite{kernelnote}. These formulas
+specify the sign that a constrained square must produce; they do not
+prove either theta target.
+
+\section{Stationary Laguerre energy and the local observation}\label{sec:critical-energy}
+The stationary conditions have a direct dynamical meaning for the
+unnormalized heat solution. They concern the critical value of a spatial
+slice rather than the energy integrated over that slice.
+
+\begin{proposition}[Derivative of a squared critical value]\label{prop:critical-energy}
+Let $h$ be a real $C^{1,4}$ solution of $h_t=-h_{xx}$ on a neighborhood
+of a differentiable curve $x_s(t)$ with $h_x(t,x_s(t))=0$. Put
+$g(t)=h(t,x_s(t))$. Then
+\begin{equation}\label{eq:critical-energy}
+ g'=-h_{xx},\qquad
+ h_x^2-hh_{xx}=gg'=\frac12\frac{d}{dt}g^2
+ \quad\text{on the curve}.
+\end{equation}
+If $h_{xx}\ne0$ along the curve and the displayed higher derivatives
+exist, then
+\begin{equation}\label{eq:critical-higher-jets}
+ x_s'=\frac{h_{xxx}}{h_{xx}},\qquad
+ g''=h_{xxxx}-\frac{h_{xxx}^2}{h_{xx}}.
+\end{equation}
+\end{proposition}
+\begin{proof}
+The chain rule gives $g'=h_t+x_s'h_x=-h_{xx}$. Differentiating
+$h_x(t,x_s(t))=0$ gives $-h_{xxx}+x_s'h_{xx}=0$.
+A further differentiation of $g'=-h_{xx}$ gives
+$g''=h_{xxxx}-x_s'h_{xxx}$. These are precisely the displayed identities.
+\end{proof}
+Apply this proposition to $h=h_j=\partial_x^jH$, $j=0,1$.
+Thus the two stationary signs require the squared critical values of
+$H$ and of $H_x$ to be nondecreasing in Newman time. Equation
+\eqref{eq:critical-higher-jets} supplies a possible comparison equation,
+but neither term in $g''$ has an automatic favorable sign. Its denominator
+also requires a separate chart at a degenerate stationary point. The
+predecessor argument of the preceding section treats finite multiplicity
+without assuming this ordinary chart remains nonsingular.
+
+\subsection{The curvature term lost by spatial integration}
+For any real heat solution $h$,
+\begin{equation}\label{eq:local-square-defect}
+ (\partial_t+\partial_x^2)h^2=2h_x^2,\qquad
+ h_x^2-hh_{xx}=2h_x^2-\frac12\partial_x^2(h^2).
+\end{equation}
+With sufficient decay and Sobolev regularity for integration by parts,
+\begin{equation}\label{eq:integrated-energy}
+ \frac{d}{dt}\|h\|_{L^2(\mathbb R)}^2
+ =2\|h_x\|_{L^2(\mathbb R)}^2\ge0.
+\end{equation}
+On $h_x=0$, however, the local Laguerre form equals
+$-\partial_x^2(h^2)/2$. Spatial integration removes exactly this curvature
+term. Consequently the positive integrated square cannot supply the
+stationary sign without an additional local constraint.
+
+An exact elementary control illustrates the distinction:
+\begin{equation}\label{eq:elementary-critical-control}
+ h(t,x)=1+ce^t\cos x,\qquad 0<c<1.
+\end{equation}
+It satisfies backward heat and has a positive even discrete spectral
+measure. At $x=\pi$, with $C=ce^t$,
+\begin{equation}
+ h_x=0,\quad h=1-C,\quad h_{xx}=C,\quad
+ \mathscr L_0=-C(1-C)<0\quad\text{when }0<C<1.
+\end{equation}
+At $C=1$ it has an ordinary double zero. The finite spectral representation
+\begin{equation}
+ \mathsf D=\operatorname{diag}(0,1,-1),\quad
+ v=(1,\sqrt{c/2},\sqrt{c/2}),\quad
+ h(t,x)=\langle v,e^{t\mathsf D^2}e^{ix\mathsf D}v\rangle
+\end{equation}
+retains a positive square generator and the wrong stationary sign.
+This control screens the generic operator inference; it is not claimed
+to obey the genuine theta arithmetic or its source decay. The smooth
+Euler-factor controls provide a stronger source comparison
+\cite{eulercontrols,stationarycontrols}.
+
+\subsection{Time normalization changes the energy identity}
+Let $m_0(t)=H_t(0)>0$ and $C_t(x)=H_t(x)/m_0(t)$. Put
+\begin{equation}
+ \mu_2(t)=\frac{\int_0^\infty u^2e^{tu^2}\Phi(u)\dd u}{m_0(t)}.
+\end{equation}
+Then $m_0'/m_0=\mu_2$, so
+\begin{equation}\label{eq:normalized-newman}
+ \partial_t C=-C_{xx}-\mu_2 C.
+\end{equation}
+Writing $c_j=\partial_x^jC$, a stationary curve of $c_j$ satisfies
+\begin{equation}\label{eq:normalized-critical-energy}
+ \frac12\frac{d}{dt}c_j(t,x_s(t))^2
+ =\mathscr L_j(C;t,x_s(t))-\mu_2(t)c_j(t,x_s(t))^2.
+\end{equation}
+Because this normalizer depends only on time, the physical stationary
+sets are unchanged. The critical-value energy evolution is changed.
+A spatially varying normalizer would change the stationary sets as well.
+The source normalization must therefore be fixed before stating a
+monotonicity target.
+
+\subsection{A weaker sufficient bound on stationary loss}
+Nonnegative stationary Laguerre forms are a sufficient target, not a
+necessary condition for excluding collisions. The upstream bounded-loss
+criterion \cite{boundedloss} gives a useful alternative that keeps its
+hypotheses free of division by a possibly vanishing physical observation.
+
+\begin{proposition}[Locally bounded loss excludes collisions]\label{prop:bounded-loss}
+Let $H$ be a real analytic solution of backward heat on an open
+positive-time set $\Omega$, with finite spatial multiplicity at every
+zero under consideration, and put
+$\mathcal E=H^2+H_x^2$. Suppose nonnegative functions $C_0,C_1$ are
+locally bounded on $\Omega$ and
+\begin{align}
+ H_x=0&\ \Longrightarrow\ \mathscr L_0(H)\ge-C_0\mathcal E,\nonumber\\
+ H_{xx}=0&\ \Longrightarrow\ \mathscr L_1(H)\ge-C_1\mathcal E.
+ \label{eq:bounded-loss-target}
+\end{align}
+Then $H=H_x=0$ has no solution in $\Omega$.
+\end{proposition}
+\begin{proof}
+At an even multiple zero of order $2r$, the predecessor curve from the
+preceding section has, for $h=T-t\downarrow0$,
+$H=ch^r+O(h^{r+1})$, $H_x=0$,
+$H_{xx}=rc h^{r-1}+O(h^r)$, with $c\ne0$. Hence
+$HH_{xx}/\mathcal E=r/h+O(1)$, contradicting local boundedness of $C_0$.
+At an odd multiple zero of order $2r+1$, apply that lemma to $H_x$.
+The curve has $H_{xx}=0$, $H_x=ch^r+O(h^{r+1})$ and
+$H_{xxx}=rc h^{r-1}+O(h^r)$. The heat Taylor expansion along its
+$x=a+hy(h)$ chart gives $H=O(h^{r+1})$: terms with $p+q\le r$ have
+$2p+q\le2r$ and thus vanish at the putative zero. Consequently
+$H_xH_{xxx}/\mathcal E=r/h+O(1)$, contradicting local boundedness of $C_1$.
+All divisions in this argument occur only on predecessor branches with
+$\mathcal E>0$. Openness retains those branches in $\Omega$.
+\end{proof}
+The loss coefficients must remain locally finite through every candidate
+joint zero. Defining them by an uncontrolled inverse power of
+$\mathcal E$ does not establish this hypothesis. The criterion permits
+some negative stationary values, but the allowance still vanishes
+quadratically in the joint first jet. No such full-source theta bound
+is established here. The finite-observation wrong-sign controls below
+screen the stronger nonnegativity target; their negative values alone
+do not refute \eqref{eq:bounded-loss-target}.
+
+
+\section{Dirac squares and the physical stationary energy}
+\label{sec:theta-dirac}
+
+The useful principle in the Dirac source notes is to construct a positive
+quadratic form from a first-order operator while retaining every term in
+the expression to be factored.  For a selfadjoint geometric Dirac operator
+$D$ with $D^2=-\Delta$, for example,
+\[
+ \langle f,(-\Delta)^{-1}f\rangle=\|D^{-1}f\|^2
+\]
+on a domain where both inverses exist.  This principle does not identify
+the Newman observation with an inverse-Laplacian form.  It also does not
+identify $e^{sD}$ with the positive square root $e^{-sD^2/2}$ of the
+dissipative heat operator.  Newman evolution has the growing multiplier
+$e^{tD^2}$ in the spectral representation; for positive $t$ it is
+unbounded on an unrestricted $L^2$ space.  The theta source supplies the
+analytic vectors needed here.  These distinctions, and the limitations
+of the unfinished many-body square completion in the source notes,
+are recorded in \cite{seedreview,diracnote}.
+
+\subsection{An exact paired Hilbert-space formula}
+\label{sec:theta-paired}
+
+Use the genuine even source, and let
+\[
+ d\mu(u)=\frac12\Phi_e(u)\,du,\qquad
+ \mathcal H=L^2(\mathbb R,d\mu).
+\]
+Multiplication by $u$ defines a selfadjoint operator $\mathsf D$ on its
+maximal multiplication domain.  Set
+\[
+ w_t(u)=e^{tu^2/2},\quad W_t=w_t\otimes w_t,\quad
+ \mathsf A=\mathsf D\otimes I-I\otimes\mathsf D,\quad
+ \mathsf S=\mathsf D\otimes I+I\otimes\mathsf D.
+\]
+These are spectral multiplication operators; no extra Clifford
+structure is needed for this representation.  Theta decay places
+$W_t$ in every polynomial form domain used below, locally uniformly in
+real time.  The physical observation is exactly
+\begin{equation}
+ H_t(x)=\langle w_t,e^{ix\mathsf D}w_t\rangle
+       =\int_{\mathbb R}e^{tu^2}e^{ixu}\,d\mu(u).
+ \label{eq:theta-one-body}
+\end{equation}
+Differentiating and symmetrizing the two spectral variables gives
+\begin{align}
+ \mathscr L_j(t,x)
+ &=\frac12\iint_{\mathbb R^2}
+     (-uv)^j(u-v)^2e^{t(u^2+v^2)}
+                  \cos\bigl(x(u+v)\bigr)\,d\mu(u)d\mu(v)
+ \notag\\
+ &=\frac12\langle\mathsf A W_t,
+       (-\mathsf D\otimes\mathsf D)^j
+                       \cos(x\mathsf S)\mathsf A W_t\rangle,
+ \qquad j=0,1.
+ \label{eq:theta-paired-identity}
+\end{align}
+For completeness, the unsymmetrized difference of derivative products
+has multiplier
+$(-uv)^j(v^2-uv)e^{ix(u+v)}$.  Averaging with the multiplier obtained by
+interchanging $u$ and $v$ produces $(u-v)^2/2$; evenness removes the
+imaginary part.  This proves \eqref{eq:theta-paired-identity} with its
+normalization and its extra signed factor at $j=1$.
+
+For $j=0$, define by spectral calculus
+\[
+ \mathsf C_\pm=\frac{|\cos(x\mathsf S)|\pm\cos(x\mathsf S)}2.
+\]
+Then the complete signed expression is
+\begin{equation}
+ 2\mathscr L_0
+ =\|\mathsf C_+^{1/2}\mathsf A W_t\|^2
+    -\|\mathsf C_-^{1/2}\mathsf A W_t\|^2.
+ \label{eq:theta-cosine-sectors}
+\end{equation}
+There already is a squared first-order factor.  The unresolved input is
+domination of its negative cosine sector under the physical stationary
+constraint.  For $j=1$, the same positive/negative-part decomposition
+can be applied to the multiplier $-uv\cos(x(u+v))$, but controlling
+the cosine alone would leave the sign of $-uv$ untreated.  The complete
+paired kernels and the derivative-level distinction are also discussed
+in \cite{kernelnote,diracnote}.
+
+\section{What a local stationary square cannot do}
+\label{sec:theta-local-obstruction}
+
+The following result concerns an operator identity on a full paired
+core.  That requirement is stronger than an identity after expectation
+in the physical vector $W_t$, and the distinction is essential.
+
+Let $\mathcal K=L^2(\mathbb R^2,d\mu\otimes d\mu)$, with common
+compact-support core $C_c^\infty(\mathbb R^2)$, and define multiplication
+kernels
+\begin{align*}
+ k_{0,x}(u,v)&=\frac12(u-v)^2\cos\bigl(x(u+v)\bigr),\\
+ k_{1,x}(u,v)&=-\frac12uv(u-v)^2\cos\bigl(x(u+v)\bigr).
+\end{align*}
+For a real locally essentially bounded function $m_x$, with enough
+theta-weighted integrability for the displayed scalar product, put
+\[
+ M_{t,x}=\int e^{tu^2}m_x(u)\,d\mu(u).
+\]
+The stationary factors at the two derivative levels are
+\[
+ b_{0,x}(u)=u\sin(xu),\qquad
+ b_{1,x}(u)=u^2\cos(xu),
+\]
+since $H_t'=-\int e^{tu^2}b_{0,x}\,d\mu$ and
+$H_t''=-\int e^{tu^2}b_{1,x}\,d\mu$.  Thus
+$H_t^{(j+1)}M_{t,x}$ is the expectation in $W_t$ of the multiplication
+kernel
+\begin{equation}
+ p_{j,x}(u,v)=-\frac12\bigl(
+       b_{j,x}(u)m_x(v)+m_x(u)b_{j,x}(v)\bigr).
+ \label{eq:theta-stationary-kernel}
+\end{equation}
+
+\begin{theorem}[Full-core stationary-multiplier obstruction]
+\label{thm:theta-local-no-go}
+For each $x\ne0$ and each locally essentially bounded $m_x$, both
+$K_{j,x}-P_{j,x}$, $j=0,1$, have strictly negative quadratic forms on
+some vector in $C_c^\infty(\mathbb R^2)$.  In particular, on that core
+neither can equal $Q^*Q$ or a sum of positive operator forms.  This
+exclusion applies whether those positive operators are local or
+nonlocal.
+\end{theorem}
+
+\begin{proof}
+For $j=0$, put $a=\pi/|x|$.  At $(u,v)=(0,a)$ both $b_{0,x}$ factors
+vanish, while $k_{0,x}(0,a)=-a^2/2$.  Pointwise evaluation of $m_x$
+is unnecessary.  Choose $r_0\le a/8$ and a common essential bound $C$
+for $|m_x|$ on the neighborhoods of $0$ and $a$ of radius $r_0$.
+For
+\[
+ 0<r\le\min\left\{r_0,\frac{a}{32(1+C)|x|}\right\},\qquad
+ \mathcal R=[-r,r]\times[a-r,a+r],
+\]
+one has
+\[
+ |u-v|\ge3a/4,\quad \cos(x(u+v))\le-1/2,\quad
+ k_{0,x}<-a^2/8.
+\]
+Also $|b_{0,x}(u)|\le |x|r^2$ and
+$|b_{0,x}(v)|\le(9a/8)|x|r$, so that
+$|p_{0,x}|\le2C|x|ar\le a^2/16$.  Consequently
+\begin{equation}
+ k_{0,x}-p_{0,x}\le-a^2/16\quad\hbox{a.e. on }\mathcal R.
+ \label{eq:theta-negative-rectangle}
+\end{equation}
+The strictly positive theta measure gives positive mass to every open
+rectangle.  A nonzero smooth vector supported in the interior of
+$\mathcal R$ therefore has strictly negative form.
+
+For $j=1$, put $a=\pi/(2|x|)$.  At $(a,3a)$ both $b_{1,x}$ factors
+vanish, and
+\[
+ k_{1,x}(a,3a)=-6a^4.
+\]
+By continuity of $k_{1,x}$ and $b_{1,x}$ and local essential
+boundedness of $m_x$, a sufficiently small open rectangle about that
+point satisfies $k_{1,x}-p_{1,x}<0$ almost everywhere.  The same
+compact-support argument applies.  Finally every $Q^*Q$ has
+nonnegative form on its domain, so neither negative form can equal
+such a positive form, independently of the locality of $Q$.
+\end{proof}
+
+This theorem includes any finite first-order multiplication ansatz
+\[
+ q_{\ell,x}(u,v)=\alpha_{\ell,x}(u,v)(u-v)
+       +\beta_{\ell,x}(u,v)(u+v)+\gamma_{\ell,x}(u,v),
+\]
+with defined domains, because $\sum_\ell|q_{\ell,x}|^2$ is
+nonnegative.  It also includes coefficients chosen from the genuine
+theta source.  The relevant hypothesis is local boundedness of the
+linear stationary multiplier near the displayed nodes.  Poles there
+would require a different domain and a new boundary analysis.
+
+There is a quantitative consequence for any multiplication identity
+with an explicit remainder,
+\[
+ k_{0,x}=\sum_\ell|q_{\ell,x}|^2+p_{0,x}+e_x.
+\]
+Writing $(e_x)_-=\max\{-e_x,0\}$,
+\begin{equation}
+ \int (e_x)_-|W_t|^2\,d\mu\,d\mu
+ \ge\frac{a^2}{16}\int_{\mathcal R}
+          e^{t(u^2+v^2)}\,d\mu(u)d\mu(v)>0.
+ \label{eq:theta-negative-payment}
+\end{equation}
+This lower bound concerns the negative part.  It does not determine the
+sign of the total remainder, which may have positive contributions
+elsewhere.  It identifies a signed payment that such a completion must
+retain \cite{localobstruction}.
+
+At $x=0$, $k_{0,0}=(u-v)^2/2$ is already a positive square, so the
+$j=0$ obstruction is a nonzero-frequency one.  More generally, a
+gluing defect may have zero expectation on the genuine theta state
+while being a nonzero operator on the full core.  Removing it as an
+operator would be invalid.  An identity restricted to an explicitly
+arithmetic state space, or a scalar identity keeping such a gluing
+term, remains outside Theorem~\ref{thm:theta-local-no-go}.  Merely
+making $Q$ nonlocal while preserving the same full-core equality
+$K_{j,x}-P_{j,x}=Q^*Q$ does not avoid the theorem.
+
+\section{Finite source observations do not enforce the stationary signs}
+\label{sec:theta-finite-observations}
+
+A second obstruction concerns the information used to restrict the
+source, rather than the operator domain.  It permits any prescribed
+finite collection of linear source observations and local source jets.
+It does not test full imaginary Jacobi gluing.
+
+For an even source $\psi$, write
+\[
+ H_{\psi,t_0}(x)=\frac12\int_{\mathbb R}
+             e^{t_0u^2}\psi(u)e^{ixu}\,du.
+\]
+Declare finitely many real linear observations
+\begin{equation}
+ \ell_i(\psi)=\int_{\mathbb R}K_i(u)\psi(u)\,du,
+ \qquad i=1,\ldots,r,
+ \label{eq:theta-finite-measurements}
+\end{equation}
+where $K_i$ is locally integrable and every displayed integral exists
+for the base source and the perturbations below.  A complex observation
+can be replaced by its two real parts.  Also declare finitely many jets
+$\psi^{(k)}(s_j)$.
+
+\begin{theorem}[Two wrong stationary signs with identical finite data]
+\label{thm:theta-finite-controls}
+Fix a real time $t_0$ and the finite data just described.  For every
+sufficiently large $X$ there is a positive even smooth source $\psi_X$
+such that $\psi_X/\Phi_e-1$ has support in a common compact set,
+\[
+ \ell_i(\psi_X)=\ell_i(\Phi_e),\qquad
+ \psi_X^{(k)}(s_j)=\Phi_e^{(k)}(s_j),
+\]
+and $\psi_X/\Phi_e-1$ tends to zero in every fixed derivative supremum
+norm. Every Gaussian-weighted polynomial moment remains finite. With
+$\varepsilon_X=e^{-\sqrt X}$, the same source can be chosen to satisfy
+\begin{align}
+ H_{\psi_X,t_0}(X)&=\varepsilon_X,&
+ H_{\psi_X,t_0}'(X)&=0,&
+ H_{\psi_X,t_0}''(X)&=\varepsilon_X,
+ \label{eq:theta-j0-control}\\
+ H_{\psi_X,t_0}'(2X)&=\varepsilon_X,&
+ H_{\psi_X,t_0}''(2X)&=0,&
+ H_{\psi_X,t_0}'''(2X)&=\varepsilon_X.
+ \label{eq:theta-j1-control}
+\end{align}
+Thus $\mathscr L_0(X)=\mathscr L_1(2X)=-\varepsilon_X^2<0$.
+Both stationary points are nondegenerate and their wrong signs persist
+locally in heat time.
+\end{theorem}
+
+\begin{proof}
+Choose a symmetric bounded open set $\Omega$ avoiding neighborhoods of
+the declared jet points and their reflections.  Let $V$ be the even
+$C_c^\infty(\Omega)$ functions.  Restrict the observation functionals
+to $q\mapsto\ell_i(\Phi_eq)$ on $V$, retain an independent basis of
+their range, and choose $b_1,\ldots,b_s\in V$ dual to that basis:
+\[
+ \ell_i(\Phi_eb_j)=\delta_{ij},\qquad i,j=1,\ldots,s.
+\]
+The observations discarded as redundant on $V$ will be preserved
+whenever the retained ones are preserved.
+
+Choose a nonzero nonnegative $\phi\in V$ whose support contains an
+interval.  Put
+\[
+ F(x)=H_{\Phi_e\phi,t_0}(x),\qquad
+ I_{2k}=\frac12\int e^{t_0u^2}\Phi_e(u)\phi(u)u^{2k}\,du.
+\]
+Strict Cauchy--Schwarz for this positive interval-supported measure
+gives $I_0I_4>I_2^2$ and $I_2I_6>I_4^2$.  For sufficiently small
+fixed $d>0$,
+\begin{align}
+ F'(d)&=-I_2d+O(d^3)\ne0,\notag\\
+ F(d)F''(0)-F(0)F''(d)
+     &=\frac12(I_2^2-I_0I_4)d^2+O(d^4)\ne0,
+ \label{eq:theta-first-moment-determinant}\\
+ F'(d)F'''(2d)-F'(2d)F'''(d)
+     &=(I_2I_6-I_4^2)d^4+O(d^6)>0.
+ \label{eq:theta-second-moment-determinant}
+\end{align}
+For a central frequency $Y$ and fixed offset $a$, project the carrier
+off the finite observation space:
+\begin{equation}
+ q_{a,Y}(u)=\phi(u)\cos((Y+a)u)
+ -\sum_{i=1}^s
+       \ell_i\bigl(\Phi_e\phi\cos((Y+a)\cdot)\bigr)b_i(u).
+ \label{eq:theta-projected-carrier}
+\end{equation}
+It is exactly observation-null and vanishes near all jet nodes.  The
+coefficients of the subtracted functions tend to zero by the
+Riemann--Lebesgue lemma on the common compact support.
+
+Take three carriers centered at $Y=X$ with offsets $-d,0,d$.  Their
+responses in $(H(X),H'(X),H''(X))$ tend to
+\begin{equation}
+ R_0=\frac12
+ \begin{pmatrix}
+ F(d)&F(0)&F(d)\\
+ F'(d)&0&-F'(d)\\
+ F''(d)&F''(0)&F''(d)
+ \end{pmatrix}.
+ \label{eq:theta-three-carrier-j0}
+\end{equation}
+For example, the unprojected carrier response in $H(X)$ is
+$\{F(a)+F(2X+a)\}/2$; the high-frequency term and the projected basis
+responses tend to zero.  Differentiation supplies the other rows,
+including their signs.  By
+\eqref{eq:theta-first-moment-determinant}, $R_0$ is invertible.
+
+Use another three carriers centered at $Y=2X$ with offsets $0,d,2d$.
+Their responses in $(H'(2X),H''(2X),H'''(2X))$ tend to
+\begin{equation}
+ R_1=\frac12
+ \begin{pmatrix}
+ 0&-F'(d)&-F'(2d)\\
+ F''(0)&F''(d)&F''(2d)\\
+ 0&-F'''(d)&-F'''(2d)
+ \end{pmatrix}.
+ \label{eq:theta-three-carrier-j1}
+\end{equation}
+Here $F''(0)=-I_2<0$, and
+\eqref{eq:theta-second-moment-determinant} makes $R_1$ invertible.
+
+Stack the six desired derivative observations and the six carriers
+into a response matrix $R_X$.  Cross-block responses tend to zero
+because the two central frequencies separate by $X$.  Hence
+$R_X\to\operatorname{diag}(R_0,R_1)$ and its inverses are uniformly
+bounded for all sufficiently large $X$.  Let $J_X$ be the stacked
+six-jet vector of the genuine heat transform and solve
+\begin{equation}
+ c_X=R_X^{-1}
+ \left[
+ (\varepsilon_X,0,\varepsilon_X,
+                  \varepsilon_X,0,\varepsilon_X)^T-J_X
+ \right],\qquad
+ \psi_X=\Phi_e\left(1+\sum_{\nu=1}^6(c_X)_\nu q_{\nu,X}\right),
+ \label{eq:theta-six-carrier-solution}
+\end{equation}
+where $q_{\nu,X}$ lists the six projected carriers.  The heated theta
+source and its polynomial insertions are Schwartz, so $J_X$ and
+$\varepsilon_X$ are $O_N(X^{-N})$ for every fixed $N$.  The coefficient
+vector $c_X$ has that same decay.  The carriers are uniformly bounded,
+and every fixed-order derivative grows at most polynomially in $X$.
+Thus the relative perturbation and each fixed derivative tend to zero
+superalgebraically.  Its supremum is eventually less than $1/2$,
+giving strict positivity.  Outside the common compact support the
+source is exactly $\Phi_e$, so its Gaussian moments remain finite.
+The projected carriers and the solved system prove all equalities and
+both negative signs.  Finally $H''(X)\ne0$ and $H'''(2X)\ne0$ permit
+the two stationary curves by the implicit-function theorem; continuity
+preserves the strict wrong signs for a local time interval.
+\end{proof}
+
+No effective lower bound on $X$ or uniform time radius is asserted.
+The proof gives a source-class obstruction, not a counterexample for
+the genuine theta preparation.  It also does not say that every
+finite symbolic formula is inadequate.  A finite formula imposing an
+entire functional identity, a nonlinear restriction on the whole
+source class, or a statement restricted to a fixed compact frequency
+region need not fall under this theorem.  A finite angular test is
+covered only after its evaluated source-to-lift map has been shown to
+be an observation of the form
+\eqref{eq:theta-finite-measurements} or a declared local jet.
+The detailed construction and a conditional analytic-source variant
+are in \cite{localobstruction}.
+In particular, a strict wrong stationary sign does not by itself
+refute a weaker bounded-loss estimate of the form
+$\mathscr L_j\ge-C_j(H^2+H_x^2)$ with a locally bounded $C_j$.
+The finite-observation conclusion here excludes a zero-defect,
+nonnegative stationary target based only on the declared data; it
+does not exclude that weaker collision criterion.
+
+\section{Full Jacobi gluing and the insertion that must be transported}
+\label{sec:theta-gluing}
+
+The preceding controls leave an arithmetic constraint available: the
+full imaginary quasiperiod law.  To see its exact content, consider a
+normally convergent coefficient preparation
+\[
+ \Theta_c(r,y)=\sum_{n\in\mathbb Z}
+                 c_ne^{-\pi rn^2+2\pi iny}.
+\]
+The classical theta law in this convention is
+\begin{equation}
+ \Theta(r,y+ir)=e^{\pi r-2\pi iy}\Theta(r,y).
+ \label{eq:theta-imaginary-law}
+\end{equation}
+It is a rescaling of Jacobi quasiperiodicity \cite{dlmf}.
+Reindexing the series gives its defect exactly:
+\begin{align}
+ E_c(r,y)
+ &:=e^{-\pi r}\bigl[
+      \Theta_c(r,y+ir)-e^{\pi r-2\pi iy}\Theta_c(r,y)\bigr]
+ \notag\\
+ &=\sum_n(c_n-c_{n+1})
+                  e^{-\pi r(n+1)^2}e^{2\pi iny}.
+ \label{eq:theta-coefficient-defect}
+\end{align}
+Fourier uniqueness therefore forces $c_n=c_{n+1}$ for every $n$ when
+the complete defect vanishes.  With $c_0=1$ this selects genuine theta.
+Parseval gives the quantitative formula
+\begin{equation}
+ \int_0^1|E_c(r,y)|^2\,dy
+ =\sum_n|c_n-c_{n+1}|^2e^{-2\pi r(n+1)^2}.
+ \label{eq:theta-weighted-gluing-norm}
+\end{equation}
+At fixed $r$, the weights weaken at high index.  Exact rigidity and a
+uniform estimate from a small defect are consequently different
+claims.  A quantitative argument must control these weights, any
+cutoff, and angular continuation.
+
+\subsection{Balanced lift and moving-period connection}
+\label{sec:theta-moving-period}
+
+Introduce a balanced angular coordinate $z$, distinct from the real
+spectral variable $x$, and define
+\begin{equation}
+ F(u,z)=e^{u+\pi z^2/2}\Theta(e^{4u},e^{2u}z),\qquad
+ M(u,z)=\frac{(\partial_u^2-1)F(u,z)}{16},
+ \label{eq:theta-balanced-insertion}
+\end{equation}
+where $\partial_u$ holds $z$ fixed.  Jacobi inversion gives
+$F(u,z)=F(-u,-iz)$ and the same reflection for $M$.  The zero-mode
+carrier is annihilated by $\partial_u^2-1$, and
+$M(u,0)=\Phi_e(u)$.  The resulting physical lift
+\[
+ K_t(x,z)=\frac12\int_{\mathbb R}e^{tu^2+ixu}M(u,z)\,du
+\]
+is entire in its complex parameters and has $K_t(x,0)=H_t(x)$.
+For bounded $z$, the nonzero theta modes and any fixed derivatives
+are dominated at large positive $u$ by a polynomial factor times
+$\exp(-\pi n^2e^{4u}/2)$; reflection pays the other tail.
+
+Both real and imaginary balanced periods have the shape
+\[
+ F(u,z+p)=e^qF(u,z),\qquad
+ q=\kappa(pz+p^2/2),
+\]
+with
+\[
+ \begin{array}{c|c|c|c}
+ &p(u)&\kappa&p'(u)\\ \hline
+ \text{real period}&\pm e^{-2u}&\pi&-2p\\
+ \text{imaginary quasiperiod}&\pm i e^{2u}&-\pi&2p
+ \end{array}
+ \qquad p''=4p.
+\]
+Set $B_\kappa=\partial_z-\kappa z$.  Transport through the physical
+insertion yields the exact identity
+\begin{equation}
+ e^{-q}M(u,z+p)
+ =M(u,z)+\frac{-2p'B_\kappa F_u-p''B_\kappa F
+                          +(p')^2B_\kappa^2F}{16}.
+ \label{eq:theta-inserted-law}
+\end{equation}
+Indeed, if $T_pf(u,z)=f(u,z+p(u))$ and
+$D_u=\partial_u|_z$, then
+\[
+ T_pD_u=(D_u-p'\partial_z)T_p,\qquad
+ e^{-q}(D_u-p'\partial_z)e^q=D_u-p'B_\kappa.
+\]
+Expanding $\{(D_u-p'B_\kappa)^2-1\}F/16$ proves
+\eqref{eq:theta-inserted-law}.  In particular the connection term
+$-p''B_\kappa F$ and the scalar term $-\kappa$ in
+\[
+ B_\kappa^2=\partial_z^2-2\kappa z\partial_z
+                      +\kappa^2z^2-\kappa
+\]
+are required.  Holding the period fixed during differentiation loses
+physical terms.
+
+Symmetrizing $p$ and $-p$ cancels exactly the odd connection terms:
+\begin{equation}
+ \frac12\sum_{\sigma=\pm1}
+    e^{-\kappa(\sigma pz+p^2/2)}M(u,z+\sigma p)
+       =M(u,z)+\frac{p^2}{4}B_\kappa^2F(u,z).
+ \label{eq:theta-symmetric-law}
+\end{equation}
+This is an algebraic cancellation, not a sign estimate.
+
+\subsection{Convergent channels and physical recovery}
+\label{sec:theta-recovery}
+
+Let $h(u)=F(u,0)=e^u\Theta(e^{4u},0)$.  The normalized real and
+imaginary period fields at $z=0$ are respectively
+\[
+ N_a(u,0)=\Phi_e(u)+\frac\pi4e^{-4u}(h'-h),\qquad
+ N_b(u,0)=\Phi_e(u)-\frac\pi4e^{4u}(h'+h).
+\]
+Since $h(u)=e^u$ plus a superexponentially small remainder at positive
+infinity and $h$ is even,
+\[
+ N_a(u,0)\sim-\frac\pi2e^{-5u}\quad(u\to-\infty),
+ \qquad
+ N_b(u,0)\sim-\frac\pi2e^{5u}\quad(u\to+\infty).
+\]
+Neither single normalized period field can be integrated over the
+whole real line against $e^{tu^2+ixu}$ at positive real time.  The
+growing carrier is not removed by the normalization in
+\eqref{eq:theta-inserted-law}.  An analytic continuation or subtraction
+would be a new operation requiring its own endpoint and domain ledger.
+
+An exact convergent repair uses the symmetric short real period on
+$u\ge0$ and the symmetric short imaginary period on $u<0$:
+\begin{equation}
+ \mathcal A(u,z)=
+ \begin{cases}
+ M(u,z)+e^{-4u}B_+^2F(u,z)/4,&u\ge0,\\
+ M(u,z)-e^{4u}B_-^2F(u,z)/4,&u<0,
+ \end{cases}
+ \qquad B_\pm=\partial_z\mp\pi z.
+ \label{eq:theta-short-field}
+\end{equation}
+For $u\ge0$, let
+\[
+ f(u,z)=F(u,z)-e^{u+\pi z^2/2},\qquad
+ J_t(x,z)=\int_0^\infty e^{tu^2+ixu}f(u,z)\,du.
+\]
+All these half-line integrals converge locally uniformly with their
+fixed derivatives. Define the full short-period transform by
+\[
+ \mathscr A_t(x,z)=\frac12\int_{\mathbb R}
+       e^{tu^2+ixu}\mathcal A(u,z)\,du.
+\]
+It satisfies
+\begin{equation}
+ \mathscr A_t(x,z)=K_t(x,z)+\frac18
+ \left[(B_w^2J_t)(x+4i,z)
+              +(B_w^2J_t)(-x+4i,-iz)\right],
+ \label{eq:theta-short-channel}
+\end{equation}
+where $B_w=\partial_w-\pi w$ acts on the own angular argument of $J$
+before evaluation.  The imaginary spectral shifts supply the factor
+$e^{-4u}$ on the half-line and are paid by the defining integrals.
+In an unsymmetrized period relation, integration by parts additionally
+produces the explicit lower endpoint $-f(0,z)$; it cancels in
+\eqref{eq:theta-short-channel} under the exact opposite-period average.
+The derivation, unsymmetrized endpoint formula, and complete compact-set
+tail bounds are in \cite{ellipticnote}.
+
+The convergent channel changes the observed source.  At $z=0$ put
+\begin{equation}
+ R(u)=2\pi^2e^u\sum_{n\ge1}n^2e^{-\pi n^2e^{4u}}>0,
+ \qquad
+ P_t(x)=\int_0^\infty e^{tu^2}R(u)\cos(xu)\,du.
+ \label{eq:theta-correction-source}
+\end{equation}
+Then $\mathcal A(u,0)=\Phi_e(u)-R(|u|)$ and the exact physical
+recovery is
+\begin{equation}
+ H_t=\mathscr A_t(\cdot,0)+P_t.
+ \label{eq:theta-physical-recovery}
+\end{equation}
+For brevity write $\mathscr A_t(x)=\mathscr A_t(x,0)$.  Even a positive
+$P_t$ does not control the physical Laguerre form, because
+\begin{equation}
+ \mathscr L_0(H)
+ =\mathscr L_0(\mathscr A)+\mathscr L_0(P)
+     +2\mathscr A'P'-\mathscr A P''-P\mathscr A''.
+ \label{eq:theta-cross-balance}
+\end{equation}
+The derivatives and cross terms are part of the target.  There is no
+sign estimate for them from positivity of $P$ alone.
+
+The splice also explains a potentially misleading auxiliary
+large-frequency term.  With $C(u)=-R(u)$ on $u\ge0$,
+\[
+ C'(0+)=\frac\pi4\bigl(16\Phi_e(0)+5h(0)\bigr)>0.
+\]
+Even reflection gives a cusp in the short-period source, and half-line
+integration by parts yields, for fixed real $t$,
+\[
+ \mathscr A_t(x)=-\frac{C'(0+)}{x^2}+O_t(x^{-4}),
+ \qquad
+ P_t(x)=\frac{C'(0+)}{x^2}+O_t(x^{-4}).
+\]
+The original heated theta source is smooth and Schwartz, so its real
+Fourier transform decays faster than every power.  The artificial
+algebraic terms cancel in the physical recovery.  Their apparent
+visibility cannot be transferred to $H$ separately.
+
+\subsection{A positive Volterra correction still leaves both targets open}
+\label{sec:theta-volterra}
+
+Differentiating the source in
+\eqref{eq:theta-correction-source} gives
+\begin{equation}
+ R'+5R=-4\pi e^{-4u}\Phi(u),\qquad
+ R(u)=4\pi e^{-5u}\int_u^\infty e^v\Phi(v)\,dv.
+ \label{eq:theta-volterra-law}
+\end{equation}
+The second formula uses the vanishing upper boundary $e^{5u}R(u)$.
+The same Volterra definition can be made for any positive decaying
+source $\psi$ on the positive half-line.  Writing
+$r_{\psi,t}=e^{tu^2}R_\psi$ gives
+\begin{equation}
+ r_{\psi,t}''=e^{tu^2}\left(
+   [(2tu-5)^2+2t]R_\psi
+    +4\pi e^{-4u}[(9-4tu)\psi-\psi']\right).
+ \label{eq:theta-correction-curvature}
+\end{equation}
+For $t\ge0$, the sufficient condition
+$\psi'/\psi<9-4tu$ makes this strictly positive.  Rapid decay then
+pays two integrations by parts, yielding
+\begin{equation}
+ P_{\psi,t}(x)=\frac1{x^2}\int_0^\infty
+                r_{\psi,t}''(u)(1-\cos(xu))\,du>0
+ \quad(x\ne0).
+ \label{eq:theta-positive-correction}
+\end{equation}
+Positivity at $x=0$ follows from the source integral.  The genuine
+theta summands give the logarithmic derivative bound
+\[
+ \frac{\Phi'}{\Phi}\le13-4\pi e^{4u},\qquad u\ge0,
+\]
+which meets this condition throughout $0\le t\le1$.
+
+The same correction positivity survives the controls in
+Theorem~\ref{thm:theta-finite-controls} when $t_0\in[0,1]$.  Indeed
+their relative perturbations $q_X=\psi_X/\Phi_e-1$ and first
+derivatives tend uniformly to zero.  For large $X$,
+$|q_X'/(1+q_X)|\le1$, hence
+\[
+ \frac{\psi_X'}{\psi_X}\le14-4\pi e^{4u}<9-4tu
+ \quad(0\le t\le1).
+\]
+The strict gap follows from $4u\le e^{4u}-1$:
+\[
+ 9-4tu-(14-4\pi e^{4u})
+ \ge(4\pi-1)e^{4u}-4>0.
+\]
+Thus these sources retain the scalar Volterra law, a positive
+decreasing and convex heated correction source, and a positive Fourier
+correction, while both physical stationary signs fail.  Those scalar
+inputs cannot replace the missing arithmetic bound
+\cite{localobstruction,volterranote}.
+
+The remaining inequalities can be written without hiding a
+normalization term.  Where $P>0$, set
+\[
+ Y=\frac HP=1+\frac{\mathscr A}P,\qquad
+ p=\frac{P'}P,\qquad Z=Y'+pY=\frac{H'}P.
+\]
+Straight differentiation gives
+\begin{equation}
+ \frac{\mathscr L_0(H)}{P^2}=Y'^2-YY''-p'Y^2,
+ \qquad
+ \frac{\mathscr L_1(H)}{P^2}=Z'^2-ZZ''-p'Z^2.
+ \label{eq:theta-normalized-targets}
+\end{equation}
+The two stationary equations become $Y'+pY=0$ and $Z'+pZ=0$.
+Therefore proving the corresponding signs requires
+\[
+ Y'^2-YY''\ge p'Y^2\quad\hbox{when }Y'+pY=0,
+ \qquad
+ Z'^2-ZZ''\ge p'Z^2\quad\hbox{when }Z'+pZ=0.
+\]
+These are exact reformulations of the targets, not inequalities
+already obtained from gluing or correction positivity.
+
+\subsection{Why finite angular jets are not new independent anchors}
+\label{sec:theta-angular-dictionary}
+
+Termwise theta heat in scale and angle gives the balanced equation
+\[
+ F_u=\pi^{-1}F_{zz}-\pi z^2F.
+\]
+The same equation holds for $M$.  If $D_u=\partial_u|_z$, then
+\[
+ [z^{2m}]M=Q_m(D_u)\Phi_e,
+ \qquad
+ Q_{-1}=0,\quad Q_0=1,\quad
+ Q_{m+1}=\frac{\pi D_uQ_m+\pi^2Q_{m-1}}{(2m+2)(2m+1)}.
+\]
+Full-line integration by parts, with the original smooth theta tails,
+therefore gives
+\begin{equation}
+ [z^{2m}]K_t(x,z)=Q_m\bigl(i(2t\partial_x-x)\bigr)H_t(x).
+ \label{eq:theta-angular-dictionary}
+\end{equation}
+Operator powers here retain the noncommutation of $x$ and
+$\partial_x$.  In particular $Q_1=\pi D_u/2$, so
+\[
+ [z^2]K_t=\frac{i\pi}{2}(2tH_x-xH).
+\]
+At a joint zero this first angular coefficient vanishes automatically.
+Higher coefficients need not vanish: they encode higher physical
+derivatives.  The entire finite hierarchy is a scalar derivative
+dictionary, rather than a separate nonvanishing source quantity.
+Changing symmetric integer coefficients leaves the local balanced
+equation and the real period intact, whereas the complete imaginary
+law requires the recurrence in
+\eqref{eq:theta-coefficient-defect}.  This is why the full gluing law
+contains information beyond a finite jet list, while uniqueness alone
+still supplies no signed physical inequality \cite{ellipticnote}.
+
+
+\section{Corrected heat and operator machinery}
+\label{sec:corrected-heat}
+
+The earlier continuum, quantum, and Dirac notes
+\cite{baker2017,baker2018heat,baker2018dirac} motivate the present
+operator program.  Their exact semigroup identities survive, but several
+operations must be distinguished.  If $\mathsf D$ is selfadjoint, spectral
+calculus gives the state-space identity
+\begin{equation}\label{eq:dirac-gaussian-average}
+ e^{-a\mathsf D^2}
+ =\frac1{\sqrt{4\pi a}}\int_{\mathbb R}
+       e^{-s^2/(4a)}e^{is\mathsf D}\,ds,\qquad a>0,
+\end{equation}
+with a strong operator integral.  Averaging conjugations of a bounded
+observable instead gives
+\begin{equation}\label{eq:observable-dirac-average}
+ \frac1{\sqrt{4\pi a}}\int_{\mathbb R}e^{-s^2/(4a)}
+ e^{is\mathsf D}Be^{-is\mathsf D}\,ds
+ =e^{-a\operatorname{ad}_{\mathsf D}^2}(B).
+\end{equation}
+The right side denotes the resulting observable semigroup; a generator
+formula applies on its commutator domain.  A single first-order
+propagator, a nonunitary similarity, state-space heat, and this unital
+completely positive observable channel are different constructions.
+None directly changes the sign of the backward Newman heat equation.
+
+For example, suppose a balanced finite spin representation satisfies
+$D^2=LI$ and $\operatorname{tr}_{\mathrm{spin}}D=0$, with normalized
+spin trace and scalar $L$.  Its entire series is
+\begin{equation}\label{eq:spin-trace-obstruction}
+ \operatorname{tr}_{\mathrm{spin}}e^{sD}
+ =\sum_{m\ge0}\frac{s^{2m}L^m}{(2m)!}
+ =\cosh(s\sqrt L).
+\end{equation}
+For $L=-|k|^2$ this is $\cos(s|k|)$.  The coefficient of $s^2L$
+is $1/2$, rather than the coefficient $1$ in $e^{s^2L}$.
+Replacing $s$ by $\sqrt2s$ repairs that coefficient but gives $1/6$
+instead of $1/2$ at $s^4L^2$.  More generally a finite positive spin
+trace of $e^{iskS}$, $S=S^*$, is a finite characteristic function.
+Its continuation at $k=iR$ has at most exponential growth in $|R|$;
+it cannot equal the Gaussian $e^{-ak^2}$, whose continuation grows
+as $e^{aR^2}$.  Gaussian averaging in
+\eqref{eq:dirac-gaussian-average} is the valid replacement
+\cite{smoothingnote,seedreview}.
+
+The proposed constrained square in the Dirac source also needs its full
+expansion.  If $\mathcal G$ is a density-linear, number-preserving field
+and $c$ an annihilation field, with $\nu\ge0$, then
+\[
+ (\mathcal G+\sqrt\nu c)^*(\mathcal G+\sqrt\nu c)
+ =\mathcal G^*\mathcal G
+  +\sqrt\nu(\mathcal G^*c+c^*\mathcal G)+\nu c^*c.
+\]
+Its cross terms change particle number; on a fixed-number state their
+expectations vanish instead of becoming a kinetic contribution.
+Moreover $\mathcal G^*\mathcal G$ retains the density self-contraction
+before it can be identified with a pair interaction.  These are
+specific missing terms in that source's square completion, rather than
+an exclusion of all Dirac constructions \cite{seedreview}.
+
+\subsection{Translation channels and their product defect}
+Let $U_y$, $y\in\mathbb R^d$, be a strongly continuous unitary
+representation on a Hilbert space, and set
+\begin{equation}\label{eq:gaussian-channel}
+ \alpha_y(B)=U_yBU_y^*,\qquad
+ P_a(B)=\int_{\mathbb R^d}K_a(y)\alpha_y(B)\,dy,\qquad
+ K_a(y)=(4\pi a)^{-d/2}e^{-|y|^2/(4a)}.
+\end{equation}
+For bounded observables the integral is weak or ultraweak.  It is a
+norm integral on the algebra with norm-continuous translation orbits.
+Each $P_a$ is normal, unital, and completely positive, and
+$P_aP_b=P_{a+b}$.  On the norm $C^2$ translation algebra put
+\begin{equation}
+ \delta_\ell B=\left.\partial_{y_\ell}\alpha_y(B)\right|_{y=0},
+ \quad \mathcal L=\sum_\ell\delta_\ell^2,
+ \quad \Gamma(B,C)=\sum_\ell(\delta_\ell B)^*\delta_\ell C.
+\end{equation}
+The product rule implies the exact defect
+\begin{equation}\label{eq:channel-product-defect}
+ P_a(B^*C)-P_a(B)^*P_a(C)
+ =2\int_0^aP_{a-s}\bigl(\Gamma(P_sB,P_sC)\bigr)\,ds.
+\end{equation}
+Indeed, the derivative of
+$P_{a-s}((P_sB)^*P_sC)$ is minus the integrand in
+\eqref{eq:channel-product-defect}.  Its endpoint values give the
+identity.  No smoothness is needed for the alternative formula
+\begin{equation}\label{eq:channel-double-square}
+ \begin{split}
+ P_a(B^*C)-P_a(B)^*P_a(C)
+ =\frac12\iint K_a(y)K_a(z)
+ [\alpha_y(B)-\alpha_z(B)]^*
+ [\alpha_y(C)-\alpha_z(C)]\,dy\,dz .
+ \end{split}
+\end{equation}
+Expanding the four products proves it.  For $B=C$ it is a positive
+operator, in agreement with the usual Schwarz inequality for unital
+completely positive maps \cite{choi}.
+
+The equality case also matters.  The defect for $B=C$ is
+\[
+ \int K_a(y)[\alpha_y(B)-P_a(B)]^*
+                   [\alpha_y(B)-P_a(B)]\,dy.
+\]
+If it vanishes, testing on any vector makes a nonnegative continuous
+scalar integrand vanish everywhere, since $K_a>0$.  Thus
+$\alpha_y(B)=P_a(B)$ for all $y$, and $y=0$ gives $B=P_a(B)$.
+Conversely translation invariance makes the defect zero.  Hence the
+multiplicative domain is exactly the translation-invariant algebra
+$\{U_y:y\in\mathbb R^d\}'$.  A single invertible similarity preserves
+all products and cannot implement this channel on an algebra containing
+a noninvariant observable together with its products.  For commuting
+momenta $U_y=e^{iy\cdot P}$, the generator is
+$-\sum_\ell[P_\ell,[P_\ell,B]]$, a square of derivations rather than
+left multiplication by $-\sum_\ell P_\ell^2$.
+
+\subsection{Independent density smoothing and normal ordering}
+On $\bigwedge^N L^2(\mathbb R^d)$, with spin labels allowed, define
+the bounded multiplication observables, for $a>0$,
+\begin{equation}
+ \rho_a(x)=\sum_{i=1}^NK_a(x-X_i),\qquad
+ :\rho_a(x)^2:=\rho_a(x)^2-\sum_i K_a(x-X_i)^2.
+\end{equation}
+Normal ordering here removes exactly equal particle indices.  Gaussian
+convolution gives
+\begin{equation}\label{eq:normal-pair-Q}
+ Q_a:=\int:\rho_a(x)^2:\,dx
+ =\sum_{i\ne j}K_{2a}(X_i-X_j),\qquad
+ \int\rho_a(x)^2\,dx=Q_a+NK_{2a}(0)I,
+\end{equation}
+so $0\le Q_a\le N(N-1)K_{2a}(0)I$.  The spatial integrals are
+positive weak or quadratic-form integrals specified by these
+multiplication formulas, rather than norm Bochner integrals over $x$.
+
+Common translation of all particles yields
+$P_s(\rho_a(x))=\rho_{a+s}(x)$, up to the immaterial translation
+sign convention.  Smoothing the two density factors independently
+and subtracting their same-index contraction produces $Q_{a+s}$.
+Common translation of their already integrated pair instead gives
+\begin{equation}\label{eq:common-translation-pair}
+ P_s(Q_a)=Q_a,
+\end{equation}
+because it leaves $X_i-X_j$ unchanged.  The independent operation
+diffuses the relative displacement; the common operation does not.
+Spatially integrating the ordinary Schwarz defect gives only
+\begin{equation}\label{eq:normal-order-nonmonotonicity}
+ Q_a-Q_{a+s}+N[K_{2a}(0)-K_{2(a+s)}(0)]I\ge0.
+\end{equation}
+Deleting the positive self-contraction does not imply $Q_a\ge Q_{a+s}$.
+For two distinct particle positions separated by $r>0$ the pair value is
+\begin{equation}
+ Q_a=2(8\pi a)^{-d/2}e^{-r^2/(8a)},\qquad
+ \partial_a\log Q_a=-\frac d{2a}+\frac{r^2}{8a^2},
+\end{equation}
+which increases for $a<r^2/(4d)$ and decreases afterward.  This also
+gives form counterexamples using wavefunctions supported near such
+separations.  In $d=3$ the positive integrated Coulomb cutoff is a
+different quantity:
+\begin{equation}\label{eq:coulomb-scale-cutoff}
+ 2\pi e^2\int_b^\infty Q_{\tau/2}\,d\tau
+ =e^2\sum_{i<j}
+ \frac{\operatorname{erf}(|X_i-X_j|/(2\sqrt b))}{|X_i-X_j|},
+ \qquad b>0.
+\end{equation}
+It decreases with $b$.  Its monotonicity supplies no monotonicity of
+the scale density $Q_a$.  Unsmeared self and pair terms cannot be
+split into individually divergent integrals and then discarded.
+The bounded fermionic examples and verification details are recorded
+in \cite{smoothingnote}; the formulas above are the relevant mechanism.
+
+\section{Residual-corrected integrated quantum paths}
+\label{sec:quantum-paths}
+This secondary application tests the same discipline of retaining a
+discarded term.  It does not imply a stationary theta sign.  In the
+2018 quantum construction \cite{baker2018heat}, if
+$\mathsf A=\mathsf A^*\ge\alpha I>0$, $\rho$ is any Hilbert-space
+vector, and $u(s)=e^{-s\mathsf A}\rho$, then
+\begin{equation}\label{eq:infinite-quantum-identities}
+ \Psi=\int_0^\infty u(s)\,ds=\mathsf A^{-1}\rho,\qquad
+ \langle\Psi,\mathsf A\Psi\rangle
+ =2\int_0^\infty\|u(s)\|^2\,ds,\qquad
+ \|\Psi\|^2=4\int_0^\infty s\|u(s)\|^2\,ds.
+\end{equation}
+Spectral calculus proves these equalities by integrating
+$e^{-2s\lambda}$ and $s e^{-2s\lambda}$ for $\lambda>0$.
+The gap ensures convergence and inverse domains.  An integral of
+Slater determinants can define a correlated trial state even though
+each slice is a determinant.  Replacing its evolution without a
+correction, however, loses the diagonal quotient's variational meaning.
+
+\begin{theorem}[Finite-time path identity]\label{thm:residual-path}
+Let $\mathsf A$ be selfadjoint and let $u:[0,T]\to\operatorname{Dom}
+\mathsf A$ be continuously differentiable in Hilbert norm and
+continuous in the graph norm.  Set
+\begin{equation}\label{eq:path-defects}
+ r(s)=u'(s)+\mathsf A u(s),\quad
+ U(s)=\int_s^T u(v)\,dv,\quad
+ d(s)=\int_s^T r(v)\,dv-u(T),\quad \Psi=U(0).
+\end{equation}
+Then $\mathsf A U=u+d$, and
+\begin{align}
+ E:=\langle\Psi,\mathsf A\Psi\rangle
+ &=2\int_0^T\|u\|^2\,ds
+   +2\operatorname{Re}\int_0^T\langle u,d\rangle\,ds,
+   \label{eq:residual-energy}\\
+ N:=\|\Psi\|^2
+ &=4\int_0^T s\|u\|^2\,ds
+   +4\operatorname{Re}\int_0^T s\langle u,d\rangle\,ds
+   -2\operatorname{Re}\int_0^T\langle U,d\rangle\,ds.
+   \label{eq:residual-norm}
+\end{align}
+In finite dimension it suffices that $u$ be continuously differentiable.
+\end{theorem}
+\begin{proof}
+Integration of $r$ gives $\mathsf A U=u+d$.  The real function
+$F(s)=\langle U(s),\mathsf A U(s)\rangle$ satisfies
+\[
+ F'=-2\operatorname{Re}\langle u,\mathsf A U\rangle
+    =-2\|u\|^2-2\operatorname{Re}\langle u,d\rangle,
+ \qquad F(T)=0,
+\]
+which proves \eqref{eq:residual-energy}.  Since $U'=-u$,
+\[
+ N=2\operatorname{Re}\int_0^T\langle U,u\rangle\,ds
+  =2\int_0^T F(s)\,ds
+   -2\operatorname{Re}\int_0^T\langle U,d\rangle\,ds.
+\]
+The identity $\int_0^TF=-\int_0^TsF'$ proves
+\eqref{eq:residual-norm}.  The graph-norm hypothesis justifies
+integration in $\operatorname{Dom}\mathsf A$ and all derivatives.
+\end{proof}
+
+For $\Psi\ne0$, $E/N$ is its exact Rayleigh quotient regardless of
+the quality of the path; hence $\inf\sigma(\mathsf A)\le E/N$.
+For a quantum Hamiltonian $\mathsf H$ and a declared scalar energy shift
+$E_{\mathrm{sh}}$, set $\mathsf A=\mathsf H+E_{\mathrm{sh}}I$ and subtract
+$E_{\mathrm{sh}}$ from the quotient.  Even when $r=0$, finite time
+leaves $d=-u(T)$, so omitting the endpoint changes both the energy
+and norm.  For the scalar example $\mathsf A=aI$ and approximate
+$u(s)=e^{-bs}v$, $a,b>0$, the uncorrected infinite-time diagonal
+quotient is $b$ whereas the Rayleigh quotient is $a$.  Thus $b<a$
+violates the claimed upper bound.  These elementary corrections and
+their finite-time formulation are documented in \cite{residualnote}.
+
+Write $Q_0=\int\|u\|^2$, $Q_1=\int s\|u\|^2$,
+$D_0=\int\|d\|^2$, $D_1=\int s\|d\|^2$, and
+$V_0=\int\|U\|^2$, all on $[0,T]$.  Cauchy--Schwarz gives
+\begin{equation}\label{eq:generic-residual-bounds}
+ |E-2Q_0|\le\delta_E:=2\sqrt{Q_0D_0},\qquad
+ |N-4Q_1|\le\delta_N:=4\sqrt{Q_1D_1}+2\sqrt{V_0D_0}.
+\end{equation}
+If $\mathsf A\ge0$ and $4Q_1>\delta_N$, then
+\begin{equation}\label{eq:generic-rayleigh-upper}
+ \inf\sigma(\mathsf A)\le\frac EN
+ \le\frac{2Q_0+\delta_E}{4Q_1-\delta_N}.
+\end{equation}
+The strict denominator condition is a substantive gate.  Bounding
+the correction terms separately loses their cancellations; the path
+identity alone does not make this lower bound positive.
+
+\subsection{A positive-interaction estimate}
+In finite dimension let $\mathsf B=\mathsf B^*\ge\beta I>0$,
+$\mathsf A=\mathsf B+\mathsf V$, and $\mathsf V\ge0$ with
+$\mathsf V^2\ge\nu\mathsf V$, $\nu>0$.  Use the declared fixed
+surrogate path
+\begin{equation}
+ u(s)=e^{-s\mathsf B}\rho,\qquad
+ r(s)=\mathsf V u(s),\qquad
+ R=\int_0^Tr(s)\,ds=\mathsf V\Psi.
+\end{equation}
+Let $\ell=\sqrt{4Q_1}-\|u(T)\|/\beta$.  If $\ell>0$, then
+\begin{equation}\label{eq:positive-interaction-upper}
+ \inf\sigma(\mathsf A)\le\frac{\langle\Psi,\mathsf A\Psi\rangle}
+ {\|\Psi\|^2}
+ \le\frac{2Q_0+\|R\|^2/\nu}{\ell^2}.
+\end{equation}
+To prove the denominator bound, put $S=\mathsf B^{-1}\rho$.
+Spectral calculus gives
+$\|S\|^2=4\int_0^\infty s\|u(s)\|^2ds\ge4Q_1$ and
+$\Psi=S-\mathsf B^{-1}u(T)$, so $\|\Psi\|\ge\ell$.
+For the numerator,
+\begin{equation}
+ E_{\mathsf B}:=\langle\Psi,\mathsf B\Psi\rangle
+ =2Q_0-2\operatorname{Re}\langle\Psi,u(T)\rangle\le2Q_0.
+\end{equation}
+The endpoint overlap is nonnegative because its spectral weight is
+$(1-e^{-T\lambda})e^{-T\lambda}/\lambda$.  Finally
+$\langle\Psi,\mathsf V\Psi\rangle\le\|\mathsf V\Psi\|^2/\nu$
+proves \eqref{eq:positive-interaction-upper}.  No commutation between
+$\mathsf B$ and $\mathsf V$ is required.  The exact endpoint relation
+is $\mathsf A\Psi=\rho+R-u(T)$.  A signed interaction or a positive
+interaction with spectrum accumulating at zero does not meet the gap
+hypothesis.  When $\mathsf V=\nu P$ for a projection, the interaction
+estimate is an equality \cite{hubbardnote}.
+
+The interaction gap does not eliminate the main representation
+bottleneck:
+\begin{equation}\label{eq:residual-cross-kernel}
+ \|R\|^2=\int_0^T\!\int_0^T
+ \langle\mathsf V u(s),\mathsf V u(v)\rangle\,ds\,dv.
+\end{equation}
+Residual cross overlaps remain, and $\mathsf V$ need not preserve
+a single determinant.  Replacing this norm of an integral by the
+integral of norms gives a valid but generally weaker estimate.  A
+useful quantum application requires a representation in which these
+corrections are economical; an exact residual reformulation alone
+does not establish an advantage over direct Rayleigh evaluation.
+The bounded comparison and its limitations are in \cite{hubbardnote}.
+
+\subsection{Elementary diagonal deductions and possible alternatives}
+For the same fixed selfadjoint $\mathsf B$, put $q(s)=\|u(s)\|^2$.
+The semigroup identity
+$\langle u(s),u(v)\rangle=q((s+v)/2)$ gives the exact finite-time
+formulas
+\begin{align}
+ N&=4\int_0^{T/2}s q(s)\,ds
+       +4\int_{T/2}^T(T-s)q(s)\,ds,
+       \label{eq:triangular-diagonal-norm}\\
+ E_{\mathsf B}&=2\int_0^{T/2}q(s)\,ds
+                  -2\int_{T/2}^Tq(s)\,ds.
+       \label{eq:triangular-diagonal-energy}
+\end{align}
+For \eqref{eq:triangular-diagonal-norm}, integrate the double overlap
+over $[0,T]^2$; the level set $s+v=r$ has measure $r$ for $r<T$
+and $2T-r$ for $r>T$.  Substitute $r=2s$.
+For \eqref{eq:triangular-diagonal-energy}, use
+$\langle u(s),\mathsf B u(v)\rangle=-q'((s+v)/2)/2$ and integrate
+the same triangular weights by parts.  Spectral calculus justifies
+the result for arbitrary $\rho$; a Hilbert-norm derivative at $s=0$
+is unnecessary.  These are elementary deductions of fixed-generator
+evolution, rather than a novelty claim.  In particular the exact
+denominator is obtainable from diagonal data, with strictly positive
+weights when $\rho\ne0$.  This observation does not apply to an
+arbitrary time-dependent approximate path.
+
+A possible gap-free replacement for the interaction bound is
+\begin{equation}\label{eq:gapfree-diagonal-interaction}
+ \langle\Psi,\mathsf V\Psi\rangle
+ =\left\|\int_0^T\mathsf V^{1/2}u(s)\,ds\right\|^2
+ \le\left(\int_0^T
+       \sqrt{\langle u(s),\mathsf V u(s)\rangle}\,ds\right)^2.
+\end{equation}
+This is the triangle inequality and requires only $\mathsf V\ge0$.
+For an unbounded interaction it is a form identity under integrability
+in the $\mathsf V^{1/2}$ graph norm.  A form bound
+$\mathsf V\le a\mathsf B+bI$, $a,b\ge0$, further bounds the
+integrand by
+$\sqrt{a\langle u,\mathsf B u\rangle+bq}$.
+Combining \eqref{eq:triangular-diagonal-norm} with
+\eqref{eq:gapfree-diagonal-interaction} could replace a two-time
+interaction kernel by diagonal interaction information.  Its sharpness
+and useful applications remain to be established; it is a candidate
+estimate, not a completed many-body method.
+
+\subsection{An analytic benchmark model}
+For context, the benchmark in \cite{hubbardnote} uses the two-site
+Hubbard model with hopping $1$, repulsion $4$, and
+$N_\uparrow=N_\downarrow=1$.  In the basis
+$(L_\uparrow L_\downarrow,L_\uparrow R_\downarrow,
+R_\uparrow L_\downarrow,R_\uparrow R_\downarrow)$ it has
+\begin{equation}
+ \mathsf H=\mathsf H_{\mathrm{hop}}+\mathsf V,\quad
+ \mathsf H_{\mathrm{hop}}=\begin{pmatrix}0&-1&-1&0\\-1&0&0&-1\\-1&0&0&-1\\0&-1&-1&0\end{pmatrix},
+ \qquad \mathsf V=\operatorname{diag}(4,0,0,4).
+\end{equation}
+The symmetric two-dimensional block is
+$\left(\begin{smallmatrix}4&-2\\-2&0\end{smallmatrix}\right)$,
+giving the exact ground energy $2-2\sqrt2$.  Every normalized
+sector-preserving single Slater determinant is a product of an up
+orbital and a down orbital.  Let their site polarizations be $z,w$.
+Minimizing their phases gives
+\begin{equation}
+ E_{\mathrm{Slater}}(z,w)
+ =-\sqrt{1-z^2}-\sqrt{1-w^2}+2(1+zw).
+\end{equation}
+Minimization over $w$ and $s=\sqrt{1-z^2}\in[0,1]$ yields
+$E_{\mathrm{Slater}}\ge2-s-\sqrt{5-4s^2}\ge-1/2$, because
+\[
+ (5/2-s)^2-(5-4s^2)=5(s-1/2)^2\ge0.
+\]
+Equality occurs at $s=1/2$ with opposite polarizations.  The trial
+family integrates the determinant slices
+$e^{-s(\mathsf H_{\mathrm{hop}}+3I)}(a_\uparrow\otimes b_\downarrow)$, and its integral
+can have Schmidt rank two.  This supplies an analytic comparison
+class and a nonzero correlated-energy target.  The actual certified
+trial energies, residual enclosures, and evaluation comparison are
+reported only in the benchmark note \cite{hubbardnote}; no numerical
+table is needed for the operator conclusions here.
+
+\section{Bottlenecks and open construction targets}\label{sec:bottlenecks}
+The formulas distinguish several difficulties that require different
+remedies. This section records possible directions without selecting a
+new implementation or assuming a missing positivity statement.
+
+\subsection{From a generator square to a stationary observation}
+Equations \eqref{eq:local-square-defect}--\eqref{eq:integrated-energy}
+show the basic loss of information. The squared first-order derivative
+controls an integrated energy, while the stationary Laguerre form is
+spatial curvature of $h_j^2$. The paired representation makes the same
+loss visible as the negative part of an oscillatory spectral multiplier.
+The right target remains the unnormalized physical observation.
+Changing its normalization requires the correction in
+\eqref{eq:normalized-critical-energy}.
+
+A first possible direction is a comparison law for critical values.
+Equation \eqref{eq:critical-higher-jets} identifies the exact higher-jet
+combination requiring an arithmetic bound. Merely assuming appropriate
+critical curvature, real-root interlacing, or log-concavity of the physical
+transform would import the desired conclusion. A useful comparison lemma
+must come from the complete theta preparation and remain valid near the
+candidate degeneracies. The weaker stationary-loss target
+\eqref{eq:bounded-loss-target} offers a second endpoint for such a lemma:
+it permits an adverse sign provided the loss is bounded relative to the
+vanishing joint first jet, locally through every possible collision.
+
+\subsection{Why a nonlocal square alone does not repair the core identity}
+The local multiplier obstruction produces a negative compact-support
+quadratic form of the same $K_x-P_x$. Consequently this operator cannot
+be equal to \emph{any} positive quadratic form on that full core, even if
+its proposed square factor is nonlocal. A viable construction must retain
+an additional constraint term that is nonzero on general vectors, or
+prove positivity on a precisely declared arithmetic family.
+
+The distinction is important for gluing. A gluing term may vanish on the
+actual theta state without being a zero operator. Its one-state vanishing
+cannot justify removing it from a full-domain identity. Similarly,
+compressing the target to a state family already uniquely selected by
+full gluing does not prove positivity of that compression. The latter is
+still the missing signed estimate unless an independent factorization or
+domination has been constructed.
+
+\subsection{A possible adjoint gluing certificate}
+An explicit lifted identity could have the shape
+\begin{equation}\label{eq:open-adjoint-gluing}
+\begin{split}
+ \mathscr L_j(H;t,x)={}&\|\mathcal Q_{j,t,x}\Psi_t\|^2
+ +2\Rea\langle\mathcal G_t\Psi_t,
+                  \mathcal R_{j,t,x}\Psi_t\rangle\\
+ &+H^{(j+1)}(t,x)M_{j,t,x}+E_{j,t,x}.
+\end{split}
+\end{equation}
+This is a research target, not an identity constructed in this paper.
+The lifted state, its domain, and its physical readout must be explicit.
+The operator $\mathcal G_t$ must encode the full imaginary Jacobi law
+and its transported insertion, rather than finitely many scalar tests.
+For genuine theta $\mathcal G_t\Psi_t=0$; the relevant stationary
+constraint eliminates the next term. The square must then dominate every
+negative part of $E_j$, or $E_j$ must satisfy an independently proved
+bound sufficient for \eqref{eq:bounded-loss-target}.
+
+The coefficient recurrence $c_n-c_{n+1}=0$ suggests a discrete adjoint
+summation or telescoping identity. The substantive intermediate lemma
+would construct $\mathcal R_j$ from that summation and prove convergence
+of the infinite coefficient pairing after the physical insertion. It must
+retain the moving-period connection, zero-mode subtraction, endpoint
+partners and both source tails. A finite symbolic operator can encode the
+infinite recurrence: the finite-observation obstruction does not rule out
+such a construction. A square obtained by taking the unknown square root
+of $\mathscr L_j$ or dividing by $H$ at unlocated zeros would not supply
+an independent certificate.
+
+A simple Gaussian embedding illustrates both the availability and the
+limitation of a gluing square. For fixed $r>0$ and coefficient sequences whose Gaussian embedding
+belongs to $\ell^2(\mathbb Z)$, set
+\begin{equation}
+ g_n=c_n e^{-\pi rn^2/2},\qquad
+ (Q_rf)_n=f_{n+1}-e^{-\pi r(n+1/2)}f_n.
+ \label{eq:gluing-weighted-shift}
+\end{equation}
+On $\ell^2(\mathbb Z)$, $Q_r$ is a bounded bilateral shift minus a
+closed multiplication operator, on the domain of that multiplier.
+It is closed and densely defined. For $c_n=1$ the Gaussian vector lies
+in this domain and satisfies $Q_rg=0$, so $Q_r^*Q_r$ supplies a positive
+quadratic form with the arithmetic preparation as a null vector.
+But this is a square of the preparation constraint, not the physical
+Laguerre observation. Its coefficients grow on one index tail, and the
+radial dependence $r=e^{4u}$ introduces additional derivatives when the
+physical insertion is applied. An annihilating Hamiltonian by itself
+therefore does not provide the missing signed physical projection.
+
+\subsection{A possible transport between the signed sectors}
+For $j=0$ let $A$ multiply by $u-v$, let $S$ multiply by $u+v$, and
+write
+\begin{equation}
+ C_\pm=\frac{|\cos(xS)|\pm\cos(xS)}2,\qquad
+ p=C_+^{1/2}AW_t,\quad n=C_-^{1/2}AW_t.
+\end{equation}
+Then $2\mathscr L_0=\|p\|^2-\|n\|^2$. Another possible intermediate
+lemma would prescribe, from gluing, a map $T_{t,x}$ with
+\begin{equation}\label{eq:open-contraction}
+ n=T_{t,x}p+\text{explicit stationary and gluing defects},
+ \qquad \|T_{t,x}\|\le1
+\end{equation}
+on a declared domain. At genuine stationarity this proves domination.
+For $j=1$ the signed split must instead use $(-uv)\cos[x(u+v)]$;
+the first-level cosine split cannot simply be reused.
+
+Constructing a rank-one map from the already given vectors $p,n$ has
+norm $\|n\|/\|p\|$ and merely repackages the target. The transport must
+be prescribed independently and its norm proved before the physical sign
+is inferred. Equation \eqref{eq:gluing-weighted-shift} shows why an exact
+lattice shift is not automatically a contraction under the Gaussian and
+physical heat weights. The admissible norm and all weight ratios are part
+of the missing lemma.
+
+\subsection{Residual cancellation and the interaction class}
+The quantum path identities are exact. Their generic upper estimate loses
+usefulness when signed cross terms are separately replaced by absolute
+errors, especially when the lower norm bound ceases to be positive.
+Equations \eqref{eq:triangular-diagonal-norm} and
+\eqref{eq:triangular-diagonal-energy} remove that denominator loss within
+fixed selfadjoint surrogate evolution, but do not apply automatically to
+an arbitrary time-dependent approximation.
+
+The positive-interaction residual bound uses a known gap on the positive
+spectrum of the interaction. Its residual norm retains the two-time cross
+kernel in \eqref{eq:residual-cross-kernel}; the rewriting does not remove
+the overlap problem. The gap-free diagonal inequality
+\eqref{eq:gapfree-diagonal-interaction}, a sufficiently sharp relative
+form bound, or a block Gram estimate preserving signed correlations are
+possible alternatives. Their utility depends on obtaining those inputs
+without reintroducing more expensive direct energy and norm calculations.
+The corresponding theorem would concern a declared quantum approximation,
+not the theta stationary sign.
+
+\subsection{Normal ordering and coverage remain separate obligations}
+The positive Gaussian channel defect controls an ordinary operator square.
+After pair-index subtraction, only
+\eqref{eq:normal-order-nonmonotonicity} follows. A first-order construction
+for normal-ordered interactions must therefore retain and control the
+self contraction, and distinguish independent relative diffusion from
+common translation. The corrected machinery settles the operator
+implementation issue; it supplies no positivity transfer to Newman time.
+
+For the theta application, a signed estimate must also cover the required
+positive-time candidate set and its predecessor neighborhoods. Source
+cutoffs and normalization must remain compatible across chart boundaries.
+A theorem covering every possible candidate is sufficient even if it
+leaves unrelated regions untreated; that candidate coverage itself needs
+a proof. No local favorable sign, fixed positive time, or finite sample
+provides this endpoint coverage. The global conditional implications are
+precise, while their required genuine-theta estimate remains open.
+
+\section{Supporting notes and computational records}\label{sec:records}
+The analytic formulas above are the subject of this manuscript. The
+supporting notes retain the bounded computations and their full error
+ledgers. The stationary theta and Euler-control note
+\cite{stationarycontrols} proves local signs on declared stationary curves
+using complete theta, shifted-source and parameter remainders. Those
+results test the physical readout and distinguish the control, but do not
+supply global collision coverage.
+The Hubbard note \cite{hubbardnote} records the selected variational
+comparison, residual enclosure and matched work accounting for the
+declared fixed-number model. Its useful bounded energy certificate and
+its representation-dependent cost limitation are not a scalable
+performance theorem. The smoothing note \cite{smoothingnote} retains the
+exact finite CAR checks. No numerical table or measured margin is used
+as a premise of the analytic theorems in this manuscript.
+
+\section*{Acknowledgements and preparation record}
+This draft was prepared for Edward Baker with substantial LLM assistance
+using OpenAI Codex, recorded model \texttt{gpt-6.1-sol}, reasoning effort
+\textbf{ultra}, on 14 October 2026. Parallel LLM drafting and mathematical
+checks assisted organization, derivations, references and source review.
+Earlier supporting notes retain their own model and effort provenance.
+The author's 2017--2018 source notes remain his work and are cited
+separately. Internal LLM checks are not independent specialist validation.
+The conditional theta construction remains open, and no literature
+priority claim is assigned to the elementary heat, spectral-calculus or
+semigroup identities collected here.
+
+
+\begin{thebibliography}{99}
+\bibitem{polymath}
+D. H. J. Polymath,
+\emph{Effective approximation of heat flow evolution of the Riemann
+$\xi$ function, and a new upper bound for the de Bruijn--Newman constant},
+Research in the Mathematical Sciences \textbf{6} (2019), article 31.
+\url{https://arxiv.org/abs/1904.12438v2}.
+The normalization, threshold framework, Theorem 1.5(i), and Proposition 3.1
+are the imported inputs used here.
+
+\bibitem{newmanwu}
+C. M. Newman and W. Wu,
+\emph{Constants of de Bruijn--Newman type in analytic number theory and
+statistical physics}, Bulletin of the American Mathematical Society
+\textbf{57} (2020), 595--614.
+\url{https://arxiv.org/abs/1901.06596}.
+
+\bibitem{rodgerstao}
+B. Rodgers and T. Tao,
+\emph{The de Bruijn--Newman constant is non-negative},
+Forum of Mathematics, Pi \textbf{8} (2020), e6.
+\url{https://arxiv.org/abs/1801.05914}.
+
+\bibitem{dlmf}
+NIST Digital Library of Mathematical Functions,
+Sections 20.2 and 20.7, especially equations 20.2.8 and 20.7.32,
+Jacobi quasiperiodicity and inversion.
+\url{https://dlmf.nist.gov/20.2.E8};
+\url{https://dlmf.nist.gov/20.7.E32}.
+
+\bibitem{choi}
+M.-D. Choi,
+\emph{A Schwarz inequality for positive linear maps on $C^*$-algebras},
+Illinois Journal of Mathematics \textbf{18} (1974), 565--574.
+\url{https://doi.org/10.1215/ijm/1256051007}.
+The Gaussian channel identities in this manuscript have direct proofs;
+this reference provides the general Schwarz-inequality context.
+
+\bibitem{baker2017}
+Edward B. Baker III,
+\emph{Notes on the continuum sigma limit}, 22 November 2017,
+unpublished author-supplied notes, source file
+\texttt{Continuum\_sigma.pdf}. Source identity and original location are
+recorded in the investigation's \nolinkurl{../SOURCE_DOCUMENTS.json}.
+
+\bibitem{baker2018heat}
+Edward B. Baker III,
+\emph{Notes on the continuum sigma limit}, 28 February 2018,
+unpublished author-supplied notes, source file
+\texttt{Heat\_Quantum.pdf}. Source manifest as in \cite{baker2017}.
+
+\bibitem{baker2018dirac}
+Edward B. Baker III,
+\emph{Notes on the continuum sigma limit}, 17 August 2018,
+unpublished author-supplied notes, source file
+\texttt{Dirac\_operator\_flow.pdf}. Source manifest as in \cite{baker2017}.
+
+\bibitem{parentcollision}
+\emph{Collision Exclusion and Collective Attraction in the Riemann Heat
+Flow: Reductions, Quantitative Tools, and Endpoint Obstructions},
+drafted for Edward Baker, 9 October 2026, project manuscript, Sections 1--2.
+Repository path:
+\nolinkurl{papers/quasi-rh-exponent-descent/newman_collisions/newman_collision_reductions.tex}.
+
+\bibitem{upstreamtransport}
+\emph{Enlarged-state transport and visibility for the Newman heat flow},
+drafted for Edward Baker, 10 October 2026, project manuscript,
+Sections 5--6 for the stationary criterion and paired Laguerre kernels.
+Repository path:
+\nolinkurl{papers/quasi-rh-exponent-descent/newman_collisions/17_enlarged_state_transport/enlarged_state_transport_and_heat_flow.tex}.
+
+\bibitem{stationarynote}
+\emph{A stationary-sign criterion and complete theta targets},
+10 October 2026, upstream project note.
+Repository path:
+\nolinkurl{papers/quasi-rh-exponent-descent/newman_collisions/17_enlarged_state_transport/notes/5_STATIONARY_SIGN_CRITERION_AND_THETA_TARGETS_20261010.md}.
+
+\bibitem{kernelnote}
+\emph{Complete Laguerre kernels and the triple-zero limit},
+10 October 2026, upstream project note.
+Repository path:
+\nolinkurl{papers/quasi-rh-exponent-descent/newman_collisions/17_enlarged_state_transport/notes/7_COMPLETE_LAGUERRE_KERNELS_AND_TRIPLE_ZERO_LIMIT_20261010.md}.
+
+\bibitem{boundedloss}
+\emph{Next steps and a bounded loss criterion for heat collisions},
+10 October 2026, upstream project note.
+Repository path:
+\nolinkurl{papers/quasi-rh-exponent-descent/newman_collisions/17_enlarged_state_transport/notes/16_NEXT_STEPS_AND_BOUNDED_LOSS_COLLISION_CRITERION_20261010.md}.
+
+\bibitem{eulercontrols}
+\emph{Euler-Factor Controls for the de Bruijn--Newman Constant:
+Certified and Asymptotic Lower Bounds}, drafted for Edward Baker,
+14 October 2026, investigation 19 manuscript.
+Repository path:
+\nolinkurl{papers/investigations-2/active/19_euler_factor_controls/manuscript/euler_factor_controls.tex}.
+
+\bibitem{ellipticnote}
+\emph{Elliptic insertion transport and its heat obstructions},
+13 October 2026, investigation 02 research note.
+Repository path:
+\nolinkurl{papers/investigations-2/active/02_angular_jacobi_gluing/notes/ELLIPTIC_INSERTION_TRANSPORT_AND_HEAT_OBSTRUCTIONS_20261013.md}.
+
+\bibitem{volterranote}
+\emph{Complete-channel Volterra reduction and stationary-sign controls},
+13 October 2026, investigation 02 research note.
+Repository path:
+\nolinkurl{papers/investigations-2/active/02_angular_jacobi_gluing/notes/3_COMPLETE_CHANNEL_VOLTERRA_CONTROLS_20261013.md}.
+
+\bibitem{seedreview}
+\emph{Review of the three heat and operator source notes},
+14 October 2026, investigation 20 source review.
+\nolinkurl{../reviews/THREE_SOURCE_NOTES_REVIEW_20261014.md}.
+
+\bibitem{diracnote}
+\emph{Dirac squares and stationary Laguerre energy},
+14 October 2026, investigation 20 research note.
+\nolinkurl{../notes/DIRAC_SQUARES_AND_STATIONARY_LAGUERRE_ENERGY_20261014.md}.
+
+\bibitem{residualnote}
+\emph{Residual corrected heat trajectory identities},
+14 October 2026, investigation 20 research note.
+\nolinkurl{../notes/RESIDUAL_CORRECTED_HEAT_TRAJECTORY_IDENTITIES_20261014.md}.
+
+\bibitem{localobstruction}
+\emph{Local multipliers and obstructions from finite observations},
+14 October 2026, investigation 20 research note.
+\nolinkurl{../notes/LOCAL_MULTIPLIER_AND_FINITE_OBSERVATION_OBSTRUCTIONS_20261014.md}.
+
+\bibitem{smoothingnote}
+\emph{Gaussian translation defects independent smoothing and normal ordering},
+14 October 2026, investigation 20 research note.
+\nolinkurl{../notes/GAUSSIAN_TRANSLATION_DEFECTS_AND_NORMAL_ORDERING_20261014.md}.
+
+\bibitem{hubbardnote}
+\emph{Certified Hubbard heat trial and its cost limitation},
+14 October 2026, investigation 20 research note and bounded computational record.
+\nolinkurl{../notes/HUBBARD_HEAT_RESIDUAL_BENCHMARK_20261014.md}.
+
+\bibitem{stationarycontrols}
+\emph{Certified stationary theta and Euler controls},
+14 October 2026, investigation 20 research note and bounded computational record.
+\nolinkurl{../notes/2_CERTIFIED_STATIONARY_THETA_AND_EULER_CONTROLS_20261014.md}.
+\end{thebibliography}
+\end{document}
+
