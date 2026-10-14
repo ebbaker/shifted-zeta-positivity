@@ -83,6 +83,15 @@ The local positive boxes are validation records, not a global factorization.
 
 ## Potential research leads
 
+**14 October 2026 — Quaternion branch promoted.** At Edward Baker's
+request, [investigation 21](../21_quaternion_theta_geometry/README.md)
+is now the home for quaternion theta continuation. Its
+[criteria note](../21_quaternion_theta_geometry/notes/1_RH_CRITERIA_AND_QUATERNION_SETUP_20261014.md)
+and [initial program](../21_quaternion_theta_geometry/notes/2_INITIAL_RESEARCH_PROGRAM_20261014.md)
+develop the branch from its original formulas here. Promotion: prepared
+for Edward Baker with LLM assistance by `gpt-6.1-sol` (Codex), effort
+**ultra**.
+
 The [brainstorm folder](brainstorm/README.md) keeps brief notes on vertical
 spectral paths and the quaternion derivative-state proposal, including
 the exact rewritings and the additional arithmetic signs they would need.

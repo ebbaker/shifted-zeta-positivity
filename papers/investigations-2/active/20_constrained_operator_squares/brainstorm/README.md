@@ -13,8 +13,13 @@ rewritings and the additional signs they would need are kept together.
   a first-order heat square, and signed quaternion components of the
   Laguerre expressions.
 
-For a new conversation focused on the quaternion branch, start with the
-[continuation handoff](03_QUATERNION_CONTINUATION_20261014.md).
+The quaternion branch was promoted at Edward Baker's request to
+[investigation 21](../../21_quaternion_theta_geometry/README.md) on
+14 October 2026. Start new quaternion work with its
+[criteria note](../../21_quaternion_theta_geometry/notes/1_RH_CRITERIA_AND_QUATERNION_SETUP_20261014.md)
+and [research program](../../21_quaternion_theta_geometry/notes/2_INITIAL_RESEARCH_PROGRAM_20261014.md).
+The [original handoff](03_QUATERNION_CONTINUATION_20261014.md) retains
+the formula baseline and provenance.
 
 The [manuscript](../manuscript/constrained_operator_squares.tex) supplies
 the common theta setup. Detailed derivations remain in the investigation's

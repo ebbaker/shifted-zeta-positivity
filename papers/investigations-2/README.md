@@ -4,7 +4,7 @@
 Consolidation: `gpt-6-astra` (Codex), reasoning effort **ultra**.
 
 The [accepted closure review](brainstorm/reviews/PORTFOLIO_CLOSURE_REVIEW_CODEX_20261013.md)
-is now implemented. The [active index](active/README.md) contains **11
+is now implemented. The [active index](active/README.md) contains **12
 program homes**, including paused programs, destinations and tools.
 The [inactive index](inactive/README.md) contains **14 folders**: five older
 investigations and nine newly consolidated, completed or dormant programs.
@@ -37,6 +37,14 @@ Its initial source review separates the theta stationary-sign target from
 quantum variational applications and records exact residual/end-point
 corrections for approximate heat trajectories. This setup was prepared for
 Edward Baker with LLM assistance by gpt-6-astra, effort **ultra**.
+
+On 14 October 2026, the author promoted the quaternion theta branch into
+[21 Quaternion theta geometry and RH criteria](active/21_quaternion_theta_geometry/README.md).
+Its [criteria baseline](active/21_quaternion_theta_geometry/notes/1_RH_CRITERIA_AND_QUATERNION_SETUP_20261014.md)
+states the exact positive-time quaternion endpoint and the scalar
+spectral-curvature alternative; its first task is a theta-specific
+signed identity or a scoped operator obstruction. Setup: prepared for
+Edward Baker with LLM assistance by `gpt-6.1-sol` (Codex), effort **ultra**.
 
 ## Completed results and retained obligations
 
@@ -76,7 +84,7 @@ those records describe their original capture; they are not rewritten.
 
 ```text
 investigations-2/
-  active/                       11 program homes
+  active/                       12 program homes
   inactive/                     14 merged, completed or dormant folders
   brainstorm/                   shared planning, reviews and milestones
   formal_replay_crosswalk/       retained audit and this chat history

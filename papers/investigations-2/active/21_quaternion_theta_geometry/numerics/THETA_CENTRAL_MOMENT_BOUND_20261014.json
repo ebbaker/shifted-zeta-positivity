@@ -1,0 +1,45 @@
+{
+  "checker_source_sha256": "c005f89e61d70ddbaf13c4df5ef725285c4e9a9b312ff63649b9b017f939f377",
+  "arithmetic": "fractions.Fraction (exact)",
+  "date": "2026-10-14",
+  "prepared_for": "Edward Baker",
+  "model": "gpt-6.1-sol",
+  "reasoning_effort": "ultra",
+  "scope": "Exact constant checks supporting the analytic proof; no global theta sign certificate",
+  "classical_pi_bounds_used": "25/8 < pi < 22/7; pi^2 < 10",
+  "time_domain": "0 <= t <= 1",
+  "source_bounds": {
+    "core": "Phi(r) > 6/25 for 0 <= r <= 1/10",
+    "complete_tail": "exp(t*r^2)*Phi(r) < exp(-28*(r-7/25))/20 for r >= 7/25"
+  },
+  "signed_moment_margin": "2413193/268912000000",
+  "central_scalar_margin": "7733/350000",
+  "consequences": {
+    "moment": "M2-(25/2)*M4 > 1/120000",
+    "slope": "-Hx(t,x) > x/120000 for 0 < x <= 8",
+    "curvature": "Hxx(t,x) < -1/120000 for |x| <= 5",
+    "central_scalar": "H(t,x) > 1/50 for |x| <= 1",
+    "physical_fueter_norm": "|F(t,x)| > 1/120000 for |x| <= 8",
+    "stationary_L0": "L0(t,0) > 1/5000000"
+  },
+  "checks": {
+    "exp_1_upper_lt_11_over_4": true,
+    "exp_1_lower_gt_8_over_3": true,
+    "exp_2_over_5_upper_lt_3_over_2": true,
+    "exp_28_over_25_lower_gt_153_over_50": true,
+    "complete_series_ratio_lt_half": true,
+    "theta_core_lower_gt_6_over_25": true,
+    "tail_exponent_lt_minus_69_over_10": true,
+    "tail_slope_lt_minus_28": true,
+    "exp_69_over_10_lower_gt_800": true,
+    "positive_integrand_through_b": true,
+    "signed_tail_integral_exact_value": true,
+    "signed_moment_margin_exact_value": true,
+    "signed_moment_margin_gt_1_over_120000": true,
+    "central_scalar_margin_gt_1_over_50": true,
+    "slope_domain_contains_8": true,
+    "curvature_domain_contains_5": true,
+    "stationary_L0_margin": true
+  },
+  "all_pass": true
+}

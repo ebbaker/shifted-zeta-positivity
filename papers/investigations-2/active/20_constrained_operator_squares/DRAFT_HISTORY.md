@@ -28,3 +28,12 @@ Model: gpt-6-astra (Codex), reasoning effort **ultra**.
   route and analytic results, with numerical work referenced in notes.
   [Integration review](reviews/MANUSCRIPT_INTEGRATION_REVIEW_20261014.md);
   [build record](manuscript/BUILD_RECORD.json). No snapshot folder created.
+
+- **14 October 2026 — Quaternion theta branch promoted to investigation 21.**
+  Working-tree reference: [new program](../21_quaternion_theta_geometry/README.md);
+  no new commit, tag, or snapshot folder created. `gpt-6.1-sol` (Codex),
+  effort **ultra**, prepared for Edward Baker with LLM assistance.
+  The [RH criteria baseline](../21_quaternion_theta_geometry/notes/1_RH_CRITERIA_AND_QUATERNION_SETUP_20261014.md)
+  and [first research task](../21_quaternion_theta_geometry/notes/2_INITIAL_RESEARCH_PROGRAM_20261014.md)
+  provide a separate home for quaternion continuation; original source
+  notes and the general operator program remain here.

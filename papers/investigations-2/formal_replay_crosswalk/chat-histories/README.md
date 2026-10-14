@@ -56,3 +56,13 @@ Its original identity, number 2, filename and first-capture provenance are
 preserved; it is no longer registered in this formal replay folder.
 Chat 1 remains here. The [relocation record](../../CHAT_HISTORY_RELOCATION_20261013.json)
 documents the transfer; no public transcript text was rewritten.
+
+## Quaternion conversation moved to investigation 21
+
+At Edward Baker's request on 14 October 2026,
+[Explain RH criteria in quaternionism](../../active/21_quaternion_theta_geometry/chat-histories/0007_2026-10-14T18-39-36Z_explain-rh-criteria-in-quaternionism.json)
+now lives in investigation 21. Its identity, historical number 7, filename,
+creation time and first-capture provenance were preserved. Its archive
+bytes were unchanged at relocation, and it is no longer registered here.
+The [relocation record](../../active/21_quaternion_theta_geometry/CHAT_HISTORY_RELOCATION_20261014.json)
+documents the move. Future refreshes follow the investigation 21 registry.

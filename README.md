@@ -158,6 +158,30 @@ metadata in notes and reviews. Existing snapshots are historical records;
 future manuscript milestones should point to Git commits or tags in the local
 `DRAFT_HISTORY.md`, without new snapshot folders.
 
+## Research chat histories
+
+Save each research conversation in its investigation's `chat-histories/`;
+use the shared portfolio archive for conversations spanning the program.
+The [chat-history guide](tools/CHAT_HISTORY.md) covers registration,
+automatic refresh, final-reply capture, integrity checks and
+[moves between investigations](tools/CHAT_HISTORY.md#move-an-existing-chat-to-another-investigation).
+
+When the user requests a move, preserve the original conversation identity,
+number, filename, creation time, first-capture provenance and public text:
+
+1. Refresh the existing archive, lock both registries, recover pending
+   transactions, and validate the source and destination.
+2. Back up both registry states and the archive, then transfer its exact
+   bytes and complete entry. Verify the destination before removing the
+   source registration and file; preserve numbering reservations.
+3. Check that only the new registration remains, record the relocation,
+   update links, and resume refresh and bounded final capture there.
+
+The refresh tool's `--history-dir` flag does not relocate an existing
+registration. Follow the detailed guide for destination initialization,
+ordered locks, transaction helpers, rollback and interrupted transfers;
+do not hand-edit registered histories or create a second canonical copy.
+
 ## Large files
 
 Git holds sources and small records only. Derived data that committed code

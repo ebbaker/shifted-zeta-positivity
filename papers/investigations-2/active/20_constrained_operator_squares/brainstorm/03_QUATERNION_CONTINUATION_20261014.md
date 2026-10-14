@@ -3,7 +3,16 @@
 14 October 2026. Prepared for Edward Baker with substantial LLM assistance.
 Recorded model: **gpt-6.1-sol (Codex)**; reasoning effort: **ultra**.
 
-Continue the quaternion branch of investigation 20 in a new conversation.
+**Promotion, 14 October 2026.** At Edward Baker's request, the quaternion
+branch now has its own active home in
+[investigation 21](../../21_quaternion_theta_geometry/README.md).
+Use its [RH criteria note](../../21_quaternion_theta_geometry/notes/1_RH_CRITERIA_AND_QUATERNION_SETUP_20261014.md)
+and [initial research program](../../21_quaternion_theta_geometry/notes/2_INITIAL_RESEARCH_PROGRAM_20261014.md)
+for new continuation. This original handoff preserves the starting
+formulas and provenance; new quaternion research should be saved in 21.
+The adopted [standard Fueter lift](../../21_quaternion_theta_geometry/notes/3_STANDARD_FUETER_LIFT_WITH_INDEPENDENT_TIME_20261014.md)
+keeps real Newman time independent of the quaternion argument; the
+\(q=t+\mathbf jz\) embedding below is the earlier convention.
 The immediate question is whether its exact first-order rewriting exposes
 a theta-specific signed identity. The quaternion packaging and operator
 identities below have been checked; no required arithmetic sign estimate
@@ -12,8 +21,8 @@ has yet been obtained.
 ## Read first and preserve the scope
 
 Work in `/Users/ebbaker/Documents/shifted-zeta-positivity` and follow its
-`AGENTS.md`, `LARGE_FILES.md`, and `tools/CHAT_HISTORY.md`. A new research
-chat should normally register in this investigation's `chat-histories/`,
+`AGENTS.md`, `LARGE_FILES.md`, and `tools/CHAT_HISTORY.md`. A new quaternion research
+chat should normally register in investigation 21's `chat-histories/`,
 unless its own existing registration determines another destination.
 
 Read these sources in order:
