@@ -6,7 +6,7 @@ Model: `gpt-6.1-sol` (Codex); reasoning effort **ultra**.
 First research execution update on the same date: `gpt-6-astra` (Codex),
 reasoning effort **ultra**, verified from the recorded session.
 
-The current portfolio has [17 programs in active](active/README.md),
+The current portfolio has [19 programs in active](active/README.md),
 with a research document in every project's `notes/` folder. A subsequent
 [Codex assessment](brainstorm/reviews/ACTIVE_DIRECTIONS_REVIEW_CODEX_20261013.md)
 (`gpt-6-astra`, effort **ultra**) ranks their first tasks and adds spacetime
@@ -15,6 +15,7 @@ collision degree with an analytic seed and exact polynomial controls. The
 now completes bounded tasks in angular gluing, cutoff reflection and
 spacetime winding. It gives exact identities and obstructions, plus a
 genuine-theta boundary certificate whose matched interior test is cheaper.
+<<<<<<< HEAD
 The [09-to-06 continuation](brainstorm/reviews/RANK_TWO_TO_PAIRED_KERNEL_REVIEW_CODEX_20261013.md)
 now completes the unequal-scale rank-two identity and rejects separate
 positive parity coset factorizations for both paired kernels. The complete
@@ -28,6 +29,14 @@ proves a positive correction transform at every real frequency for
 transfer remains blocked by a precise cancellation inequality; the linked
 brief records that question for a new brainstorm and the controls any
 candidate must distinguish.
+=======
+The remaining programs stay initialized, and independent review of the
+new results remains outstanding. A
+[Claude review](brainstorm/reviews/REVIEW_OF_ACTIVE_LIFTED_THETA_DIRECTIONS_CLAUDE_20261013.md)
+and [close and merge recommendations](active/CLOSE_AND_MERGE_RECOMMENDATIONS_CLAUDE_20261013.md)
+(Claude Opus 5.5, effort **max**) add programs 18 and 19 with first results.
+Five older project folders are now in [inactive](inactive/README.md).
+>>>>>>> 22649b7 (Further work from Claude on investigation overview with some early work on rank two automorphic lifts and Euler-factor controls)
 The shared [brainstorm folder](brainstorm/README.md) remains at this level.
 `formal_replay_crosswalk` and `newman_certificate_audit` remain at this level.
 The shared `chat-histories/` directory and recording tools also remain here
@@ -35,7 +44,7 @@ because they are portfolio infrastructure.
 
 ```text
 investigations-2/
-  active/                       17 research programs
+  active/                       19 research programs
   inactive/                     5 existing project folders
   brainstorm/                   shared research planning and reviews
   formal_replay_crosswalk/       retained audit and conversation history

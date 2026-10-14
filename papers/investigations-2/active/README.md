@@ -35,8 +35,17 @@ Update, 13 October 2026 (note added with Claude Opus 5.5, Claude Cowork): the
 [Claude review](../brainstorm/reviews/REVIEW_OF_ACTIVE_LIFTED_THETA_DIRECTIONS_CLAUDE_20261013.md)
 is now available. It recommends 02, 01 and a new rank-two automorphic lift
 (absorbing 09) as the first bounded tasks, keeps 03 and 06 as destinations,
-and recommends merging or closing 04, 07, 10, 11, 14, 15 and 16. Its
-proposals are recommendations only; no folder has been moved or created.
+and recommends merging or closing 04, 07, 10, 11, 14, 15 and 16. At that
+stage no folder had been moved or created.
+
+Second update, 13 October 2026 (Claude Opus 5.5, Claude Cowork, effort
+**max**): at Edward Baker's request two folders now hold the review's new
+directions, [18 rank two automorphic lift](18_rank_two_automorphic_lift/README.md)
+and [19 Euler-factor controls](19_euler_factor_controls/README.md), each with
+first results. The [close and merge recommendations](CLOSE_AND_MERGE_RECOMMENDATIONS_CLAUDE_20261013.md)
+take the Codex first pass into account and say which folders to close, merge
+or pause. No existing folder was moved or closed. There are now 19 active
+folders.
 
 | Card | Research program | Readiness | First proposed output |
 | --- | --- | --- | --- |
@@ -57,8 +66,16 @@ proposals are recommendations only; no folder has been moved or created.
 | 15 | [Adelic and automorphic compatibility](15_adelic_automorphic_compatibility/notes/INITIAL_RESEARCH_PROGRAM_20261013.md) | Arithmetic continuation | A global signed identity on the actual common-height orbit |
 | 16 | [Radial geometry and sine moments](16_radial_sine_geometry/notes/INITIAL_RESEARCH_PROGRAM_20261013.md) | Bounded geometry test | A source-conditioned sign retaining the nonlocal generator |
 | 17 | [Spacetime collision degree](17_spacetime_collision_degree/README.md) | Bounded pilot complete | Genuine-theta winding zero; 4 boundary pair integrals versus 1 interior pair integral |
+| 18 | [Rank two automorphic lift](18_rank_two_automorphic_lift/README.md) | Bounded tasks A1–A3 complete | Cusp-only formula for both Laguerre expressions at every Newman time; the two-coset identity is the Hecke correspondence at 2; no sign |
+| 19 | [Euler-factor controls](19_euler_factor_controls/README.md) | Shared control screen | Three-controls protocol; exact flow, Laguerre witnesses, \(\Lambda_{c,p}\) table and expansion |
 
 ## Review priorities
+
+Where they differ, the
+[close and merge recommendations](CLOSE_AND_MERGE_RECOMMENDATIONS_CLAUDE_20261013.md)
+supersede the allocation below. Their working set is 18 and 19, with 08
+optional; 01 and 02 pause at their gates; and nine folders would close as
+separate projects if the recommendations are accepted.
 
 The [new assessment](../brainstorm/reviews/ACTIVE_DIRECTIONS_REVIEW_CODEX_20261013.md)
 prioritizes 02, 01 and 09; treats 03 and 06 as downstream certificate
