@@ -4,7 +4,18 @@
 
 Implementation: 13 October 2026. Prepared for Edward Baker with substantial LLM assistance. Recorded model: `gpt-6-astra` (Codex), reasoning effort **ultra**. The dated initial programs and earlier readiness labels are historical; this status governs the current allocation.
 
-**Status: paused at the signed-remainder gate.**
+**Status: paused after the matched stationary-remainder allowance screen.**
+
+Update: 14 October 2026, prepared for Edward Baker with substantial LLM
+assistance by `gpt-6-astra`, effort **ultra**. The
+[matched calculation](notes/2_MATCHED_STATIONARY_REMAINDER_ALLOWANCE_SCREEN_20261014.md)
+fails both stationary signs at four tested disk radii; for the second
+sign the separate Cauchy-box allowance fails for every permitted radius.
+This is a limitation of the retained error bound, not a lower bound on
+the true remainder. Direct-source evaluation certifies the actual signs.
+See the [shared comparison](../../brainstorm/reviews/MATCHED_01_18_AND_19_RESULTS_CODEX_20261014.md).
+No new independently controlled signed contour remainder or physical
+first-jet error reduction was obtained.
 
 Preserve the [complete reflected-block identity and endpoint obstruction](notes/COMPLETE_REFLECTED_BLOCK_AND_ENDPOINT_OBSTRUCTION_20261013.md) and [diagnostic record](numerics/COMPLETE_REFLECTED_BLOCK_RECORD_20261013.json). The tested automatic shared-endpoint cancellation fails; the broader signed-remainder question remains open.
 

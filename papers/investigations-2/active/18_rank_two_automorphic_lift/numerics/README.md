@@ -31,3 +31,34 @@ Part N is a quadrature replay with contour shifts, not an interval
 certificate. See [Note 1](../notes/1_CUSP_FORMULA_HECKE_AND_CONTROLS_20261013.md)
 for statements and proofs. Keep large regenerable data outside Git under
 [LARGE_FILES.md](../../../../../LARGE_FILES.md).
+
+## Bounded stationary comparison, 14 October 2026
+
+Prepared for Edward Baker with substantial LLM assistance by `gpt-6-astra`
+(Codex), reasoning effort **ultra**. The
+[matched checker](check_rank_two_matched_pilot_20261014.py) and
+[small record](RANK_TWO_MATCHED_PILOT_RECORD_20261014.json) use python-flint
+0.9.0 at 256 bits. The exact two cells, direct-source comparator and complete
+omitted-mode/domain bounds are in
+[note 2](../notes/2_MATCHED_STATIONARY_SIGNED_MODE_PILOT_20261014.md).
+
+```sh
+python3 -B check_rank_two_matched_pilot_20261014.py \
+  --record /tmp/rank-two-matched-replay.json
+```
+
+The supplied baseline is hash-bound. Its normal location is
+`investigations-2/brainstorm/numerics/MATCHED_STATIONARY_BASELINE_RECORD_20261014.json`;
+if absent, the same `brainstorm/numerics/` relative path is tried under
+`MATCHED_STATIONARY_ARCHIVES`. An explicit `--baseline PATH` still must
+match the committed hash. `--tail-only` checks just the complete analytic
+payments. The `--cell` option selects `j0`, `j1` or both.
+
+Both finite signed cubatures exhausted the declared one-million-primitive
+cap. The complete fallback intervals contain both signs; this is a recorded
+bounded failure, not a positive-sign certificate. The direct-source baseline
+certifies both targets at much smaller observed cost. Exit code zero means
+the bounded experiment and record completed normally; it does **not** mean
+the positivity gate passed. Inspect `positive_on_target`, the cubature stop
+reason and the note before interpreting the record. The original Claude
+checker and its diagnostic record remain historical evidence.

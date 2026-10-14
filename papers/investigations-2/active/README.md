@@ -4,15 +4,19 @@
 Consolidation: `gpt-6-astra` (Codex), reasoning effort **ultra**.
 
 The [accepted closure review](../brainstorm/reviews/PORTFOLIO_CLOSURE_REVIEW_CODEX_20261013.md)
-has been implemented. These **10 retained homes** include two current
-bounded tasks, paused programs, downstream targets, tools and reading.
+has been implemented. These **10 retained homes** include completed
+bounded trials, paused programs, downstream targets, tools and reading.
+The [14 October execution](../brainstorm/reviews/MATCHED_01_18_AND_19_RESULTS_CODEX_20261014.md)
+completed the matched 01/18 pilot and 19's fixed outward witness. This
+status update was prepared for Edward Baker with LLM assistance by
+`gpt-6-astra`, reasoning effort **ultra**.
 Nine former active folders are preserved in [inactive](../inactive/README.md).
 No completed result has been discarded, and dormant status is not a no-go
 theorem.
 
 | Program | Current role | Next task or reopening condition |
 | --- | --- | --- |
-| [01 Complete cutoff reflection](01_complete_cutoff_reflection/README.md) | Paused | New complete signed relation or certified reduction of the physical first-jet payment; a Riemann–Siegel/Mordell comparison is one candidate. |
+| [01 Complete cutoff reflection](01_complete_cutoff_reflection/README.md) | Paused after the matched allowance screen | New complete signed relation or certified reduction of the physical first-jet payment. The retained Cauchy-box estimate fails the tested stationary targets; a signed Riemann–Siegel/Mordell estimate remains a candidate. |
 | [02 Angular Jacobi gluing](02_angular_jacobi_gluing/README.md) | Paused at the latest gate | A named full-imaginary-gluing multiplier or inequality controlling physical cancellation on a declared domain, with endpoints, tails and control separation. |
 | [03 Anchored source observability](03_anchored_source_observability/README.md) | Destination | Independently derived source relation with a complete quantitative observation certificate. |
 | [05 Metaplectic coordinate atlas](05_metaplectic_coordinate_atlas/README.md) | Tool on demand | A named identity needing a regular chart and controlled physical reconstruction. |
@@ -20,8 +24,8 @@ theorem.
 | [08 Cusp unit sector saving](08_cusp_unit_sector_saving/README.md) | Optional separate arithmetic track | A complete short-cofactor moment saving including units, with the correct scale-transfer hypotheses. |
 | [12 Canonical boundary reflection](12_canonical_boundary_reflection/README.md) | Reading and bridge | An independently defined arithmetic transfer map and a proved quantitative comparison. |
 | [13 Stability Jensen and Lee Yang](13_stability_jensen_lee_yang/README.md) | Deferred reading | A specified admissible stable preparation or a precise obstruction to a concrete construction. |
-| [18 Rank two automorphic lift](18_rank_two_automorphic_lift/README.md) | One bounded continuation | A4 with a declared domain, complete higher-mode payments, stationary constraints and comparison against the existing remainder estimate. |
-| [19 Euler-factor controls](19_euler_factor_controls/README.md) | Shared control screen | Certify a fixed negative Laguerre witness, initially at `p=41,c=1/2,t=0.2`, with an absolute error budget. |
+| [18 Rank two automorphic lift](18_rank_two_automorphic_lift/README.md) | Paused after the bounded A4 pilot | A new complete signed finite-mode estimate, justified positive structure, or demonstrated matched saving; retain the declared domain, both stationary targets and every mode/tail payment. |
+| [19 Euler-factor controls](19_euler_factor_controls/README.md) | Shared control screen; fixed witness complete | Certified `Lambda_(1/2,41)>0.2`. Further control work must address a named hypothesis or domain; preserve local/global collision distinctions. |
 
 ## Consolidated work and its principal homes
 
@@ -57,11 +61,15 @@ The [09-to-06 review](../brainstorm/reviews/RANK_TWO_TO_PAIRED_KERNEL_REVIEW_COD
 preserves both negative sector results. Further work in 06 must retain the
 physical cross terms and stationarity of the sum for both Laguerre forms.
 
-18 stops after A4 if it yields only another representation or the existing
-main-term/remainder structure. A complete new signed estimate or justified
-positive structure can warrant continuation; passing first-mode samples
-alone cannot. 19 tests proposed implications against explicit controls;
-passing those tests supplies no proof of the desired conclusion.
+18's bounded A4 pilot has stopped: complete tails meet the target, but
+signed integration of the retained modes exhausts the declared budget.
+A complete new signed estimate, justified positive structure or demonstrated
+matched saving can reopen it; passing first-mode samples alone cannot.
+01's failed allowance is not a lower bound for its true remainder. These
+scoped outcomes do not prove that broader approaches are impossible.
+19's fixed negative witness is complete. It continues to test proposed
+implications against explicit controls; passing those tests supplies no
+proof of the desired conclusion.
 
 The original [Claude recommendations](CLOSE_AND_MERGE_RECOMMENDATIONS_CLAUDE_20261013.md)
 remain a historical proposal. The [implementation note](../PORTFOLIO_CONSOLIDATION_20261013.md)

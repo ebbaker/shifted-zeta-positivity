@@ -24,3 +24,11 @@ verification pass wherever `Lambda` labels actually denote tracked
 growing absolute margin. See the [numerical interpretation guide](../numerics/README.md#legacy-labels-and-what-the-record-establishes).
 The correction changes no numerical record and supplies no certified
 positive-time bound.
+
+## Current execution review, 14 October 2026
+
+The [matched 01/18 and certified 19 review](../../../brainstorm/reviews/MATCHED_01_18_AND_19_RESULTS_CODEX_20261014.md)
+records the completed experiment, root replays and current stopping gates.
+Prepared for Edward Baker with LLM assistance by `gpt-6-astra`, effort
+**ultra**. Earlier pending-task and uncertified-witness descriptions are
+historical; the linked execution and the main README give current status.

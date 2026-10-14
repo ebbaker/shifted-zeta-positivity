@@ -12,3 +12,11 @@ Model: `gpt-6-astra` (Codex), reasoning effort **ultra**.
   preserving checker code and scientific JSON. Detailed earlier research
   history remains in [brainstorm milestones](brainstorm/DRAFT_HISTORY.md)
   and the individual investigations; no new snapshot folder was created.
+
+- **2026-10-14 — Matched 01/18 pilot and certified 19 witness.** Saved the
+  [execution review](brainstorm/reviews/MATCHED_01_18_AND_19_RESULTS_CODEX_20261014.md)
+  and linked source-bound records. Direct-source evaluation certifies both
+  stationary signs; the two candidate implementations do not improve it.
+  19 now certifies `Lambda_(1/2,41)>0.2`. 01/18 remain paused with explicit
+  reopening gates. Prepared for Edward Baker with LLM assistance;
+  `gpt-6-astra`, **ultra**. No snapshot folder created.

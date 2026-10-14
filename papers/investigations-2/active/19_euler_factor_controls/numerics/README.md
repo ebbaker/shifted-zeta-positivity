@@ -10,6 +10,38 @@ Claude provenance above is retained. This revision distinguishes tracked
 collision times from the global Newman constant and corrects the witness
 margin; it introduces no new numerical certificate.
 
+## Certified raw witness, 14 October 2026
+
+Prepared for Edward Baker with LLM assistance by `gpt-6-astra` (Codex),
+reasoning effort **ultra**.
+
+The new [outward checker](certify_euler_factor_witness.py) proves
+\(\Lambda_{1/2,41}>1/5\) at \(x=168413/100000\). The
+[execution record](EULER_FACTOR_WITNESS_RECORD_20261014.json) contains
+exact dyadic endpoints, the source hash, all three jet enclosures, and
+separate theta-index and complete source/control-shift tail payments.
+The raw \(\mathscr L_0\) lies strictly between
+\(-0.000005299994533574706\) and
+\(-0.000005299994533574704\). The
+[proof note](../notes/2_CERTIFIED_EULER_FACTOR_WITNESS_20261014.md)
+derives the integral and every analytic tail bound.
+
+Requires `python-flint` (tested with version 0.9.0 and Python 3.10.0).
+From this directory:
+
+```sh
+python3 -B certify_euler_factor_witness.py --output /tmp/euler-factor-witness.json
+```
+
+No external data files or machine-specific paths are needed. The script
+prints a small JSON record and fails unless all analytic hypotheses,
+finite enclosures, and the strictly negative raw sign pass. A second run
+at 192 bits with five retained theta terms confirmed the sign and the
+same rational display bracket. This establishes one lower bound; it does
+not establish any global collision-time equality.
+
+## Historical exploratory checker
+
 Run, in this directory:
 
 ```sh
@@ -34,8 +66,9 @@ and exits nonzero if any check fails.
   numerical \(T_0(1/2,p)\) for all primes \(p\le47\).
 
 Part N uses contour-shifted trapezoid quadrature and Newton iteration. It
-is numerical evidence, not an interval certificate; certification of one
-witness is the folder's next task. Keep large regenerable data outside Git
+is numerical evidence, not an interval certificate. The separate outward
+checker above certifies one witness without changing this record. Keep
+large regenerable data outside Git
 under [LARGE_FILES.md](../../../../../LARGE_FILES.md).
 
 ## Legacy labels and what the record establishes

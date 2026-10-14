@@ -1,0 +1,112 @@
+{
+  "date": "2026-10-14",
+  "prepared_for": "Edward Baker",
+  "model": "gpt-6-astra",
+  "reasoning_effort": "ultra",
+  "acknowledgment": "Substantial LLM assistance; internal arithmetic review, not independent validation.",
+  "status": "BOUNDED_COMPARISON",
+  "arithmetic": {
+    "library": "python-flint",
+    "precision_bits": 256,
+    "python": "3.10.0",
+    "python_flint": "0.9.0"
+  },
+  "source_sha256": "67c98c3f9a5000d2a029d60cc2b1394ba17b2a8145a207874c4e88dc90369f4f",
+  "parameters": {
+    "t": "1/20",
+    "theta": "1.3",
+    "r_radius": "1.5",
+    "v_radius": "6",
+    "mode_cutoff": 32,
+    "primitive_limit_per_cell": 1000000,
+    "wall_seconds_per_cell": 60,
+    "primitive_definition": "one mode polynomial/exponential evaluation, or one divisor phase/heat evaluation"
+  },
+  "baseline_sha256": "e98a91f7c3abe8e8e9302ca3cf4c372329ec84d8668a5777eaf68bf86e0a0e47",
+  "rows": [
+    {
+      "j": 0,
+      "x_cell": [
+        "204.087",
+        "204.089"
+      ],
+      "center": "204.088",
+      "bounds_uniform_on_cell": {
+        "mode_tail": "[4.628383170873586492411026686956093147871e-76 +/- 4.13e-116]",
+        "r_tail": "[1.068225918839729855783260728726033537384e-192 +/- 3.89e-232]",
+        "v_tail": "[4.443527432332355589036131291385381957319e-119 +/- 1.87e-159]",
+        "complete_absolute": "[4.695033643221021763695254911085297578480e-52 +/- 3.53e-92]"
+      },
+      "stationary_root_bracket_from_baseline": [
+        "28049622440935437/137438953472000",
+        "112198489763741749/549755813888000"
+      ],
+      "cubature": {
+        "mode_kernel": 214124,
+        "spectral_divisor": 785876,
+        "inner_callbacks": 6748,
+        "outer_callbacks": 22,
+        "cache_hits": 88,
+        "elapsed_seconds": 3.2428535419967375,
+        "stop": "primitive_evaluation_budget",
+        "cache_entries": 6604
+      },
+      "complete_integral_uniform_fallback": "[+/- 4.70e-52]",
+      "positive_on_target": false,
+      "numerical_radius_goal_met": false
+    },
+    {
+      "j": 1,
+      "x_cell": [
+        "205.556",
+        "205.558"
+      ],
+      "center": "205.557",
+      "bounds_uniform_on_cell": {
+        "mode_tail": "[2.981214023854442877605244738627553464461e-76 +/- 1.98e-116]",
+        "r_tail": "[3.557086462159036004192980822763104173943e-193 +/- 3.94e-233]",
+        "v_tail": "[1.479650605271745157558133875675888379071e-119 +/- 4.50e-159]",
+        "complete_absolute": "[8.694623612534111817432569796643010953128e-53 +/- 2.45e-93]"
+      },
+      "stationary_root_bracket_from_baseline": [
+        "113006192888344153/549755813888000",
+        "56503096444172077/274877906944000"
+      ],
+      "cubature": {
+        "mode_kernel": 214124,
+        "spectral_divisor": 785876,
+        "inner_callbacks": 6772,
+        "outer_callbacks": 22,
+        "cache_hits": 88,
+        "elapsed_seconds": 4.040639833001478,
+        "stop": "primitive_evaluation_budget",
+        "cache_entries": 6604
+      },
+      "complete_integral_uniform_fallback": "[+/- 8.70e-53]",
+      "positive_on_target": false,
+      "numerical_radius_goal_met": false
+    }
+  ],
+  "limitations": [
+    "No root existence or stationary constraint is inferred from midpoint quadrature.",
+    "If cubature exhausts the budget, only the displayed analytic complete absolute envelope is certified.",
+    "No favorable sample or finite cutoff establishes a global sign or an RH implication."
+  ],
+  "result_status": "NO_CERTIFIED_SIGN_WITHIN_BUDGET",
+  "invalid_attempt_history": [
+    "An initial nested-callback attempt raised a Python budget exception inside acb.integral and triggered a Cython callback error; no numerical certificate from that attempt was retained.",
+    "The repaired numerical run uses a shared stop flag and nonfinite callback return, terminates normally at the declared cap, and records only its complete analytic fallback."
+  ],
+  "verification_history": [
+    {
+      "kind": "pre_hardening_bounded_run",
+      "source_sha256": "051a32966bb4cd4d24e5ebb41d7dec1202e264e3b83cdc6f2a37b2ace4b8a666",
+      "result": "Same analytic bounds and exact primitive counts as the retained final run."
+    },
+    {
+      "kind": "final_source_replay",
+      "source_sha256": "67c98c3f9a5000d2a029d60cc2b1394ba17b2a8145a207874c4e88dc90369f4f",
+      "result": "Input hardening and explicit proof guards included; normal termination at primitive cap on both targets; complete fallback only."
+    }
+  ]
+}
