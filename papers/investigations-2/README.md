@@ -21,6 +21,13 @@ positive parity coset factorizations for both paired kernels. The complete
 stationary signs remain open. The remaining programs stay initialized,
 and independent review of the new results remains outstanding. Five older project folders are now
 in [inactive](inactive/README.md).
+
+The [further angular continuation](active/02_angular_jacobi_gluing/reviews/CONTINUATION_AND_BRAINSTORM_BRIEF_20261013.md)
+proves a positive correction transform at every real frequency for
+`0<=t<=1`, together with stable Volterra source recovery. The physical
+transfer remains blocked by a precise cancellation inequality; the linked
+brief records that question for a new brainstorm and the controls any
+candidate must distinguish.
 The shared [brainstorm folder](brainstorm/README.md) remains at this level.
 `formal_replay_crosswalk` and `newman_certificate_audit` remain at this level.
 The shared `chat-histories/` directory and recording tools also remain here

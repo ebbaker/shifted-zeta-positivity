@@ -21,3 +21,12 @@ Recorded configuration for this entry: `gpt-6-astra` (Codex), effort **ultra**.
   retained record. Saved the [continuation review](reviews/RANK_TWO_TO_PAIRED_KERNEL_REVIEW_CODEX_20261013.md)
   and source/execution record. Closed the independent positive coset
   attempt; full stationary signs remain open. No manuscript snapshot.
+
+- **2026-10-13 — Further angular continuation.** Continued 02 through
+  exact Volterra recovery, a stable source-norm bound, and an explicit
+  positive correction transform for all real frequency and `0<=t<=1`.
+  Strengthened collision controls and identified the specific complete
+  cancellation inequality still missing. Prepared the
+  [self-contained brainstorm brief](../active/02_angular_jacobi_gluing/reviews/CONTINUATION_AND_BRAINSTORM_BRIEF_20261013.md).
+  Outward checks and root replay pass; no physical stationary sign or
+  new collision-exclusion region established. Same recorded model and effort.

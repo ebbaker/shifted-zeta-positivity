@@ -4,9 +4,9 @@
 Current execution model: `gpt-6-astra` (Codex); reasoning effort **ultra**.
 The original initialization configuration is preserved in its research note.
 
-Status: **first bounded Codex calculation completed; no new physical sign or
-observation bound**. The original Claude review remains a separate proposed
-review.
+Status: **continued through a proved positive correction bound and stable
+source recovery; physical transfer blocked at a specific cancellation
+inequality**. Independent review remains outstanding.
 
 This project develops brainstorm card 2. Its first proposed output is:
 Full angular gluing and its Newman heat compatibility defect.
@@ -24,16 +24,37 @@ period has a growing carrier. The short-period repair has a negative value
 at the origin and introduces a cusp; its auxiliary visibility cannot be
 transferred to the physical pair without paying the correction. The entire
 finite angular Taylor hierarchy is explicitly a scalar derivative dictionary.
-Full elliptic preparation still supplies a global restriction, but no
-stationary sign or value-and-slope lower bound was obtained.
+Full elliptic preparation still supplies a global restriction, but that
+first calculation obtained no stationary sign or value-and-slope lower bound.
+
+The [Volterra continuation](notes/2_VOLTERRA_RECOVERY_POSITIVE_ANCHOR_AND_TRANSFER_GAP_20261013.md)
+now proves exact recovery, a stable weighted source-norm inverse, and
+`P_t(x)>1/[3000(1+x²)]` for the complete correction transform at all real
+frequencies and `0<=t<=1`. Its positive density is strictly convex after
+heating. The physical sum `H=A+P` still cancels every algebraic endpoint
+term; no constant or polynomial-scale relative transfer bound can hold.
+The [source controls](notes/3_COMPLETE_CHANNEL_VOLTERRA_CONTROLS_20261013.md)
+show that nearby positive sources with exact remote collisions retain
+even this positive correction bound. They violate full imaginary gluing.
+
+The [continuation assessment and ChatGPT brainstorm brief](reviews/CONTINUATION_AND_BRAINSTORM_BRIEF_20261013.md)
+states the exact remaining inequality and supplies a self-contained
+question about an adjoint multiplier using the genuine integer preparation.
+That source-dependent cancellation estimate is the current blocker;
+no physical stationary sign or new collision-exclusion region is claimed.
 
 The [standard-library checker](numerics/check_elliptic_transport.py) and
 [small execution record](numerics/ELLIPTIC_TRANSPORT_RECORD_20261013.json)
 verify exact polynomial identities through angular order 24, an elementary
 rational negative-source bound, and diagnostic direct theta evaluations.
-The numerical residuals are not interval enclosures. Next gate: a signed
-multiplier or observation estimate for the complete identity and correction;
-otherwise move the next bounded identity calculation to rank-two addition.
+Those original numerical residuals are not interval enclosures. The new
+[complete-channel checker](numerics/check_complete_angular_channels.py)
+verifies the positive-anchor constants and certifies `|A|>P` at `t=0,x=32`,
+with all tails paid, rejecting a simple absolute-value transfer. Its
+[record](numerics/COMPLETE_ANGULAR_CHANNELS_RECORD_20261013.json) keeps finite
+Volterra diagnostics separate from outward bounds. The rank-two task has
+already been completed; current work stops at the explicit angular
+cancellation inequality instead of repeating either identity calculation.
 This 13 October execution was prepared for Edward Baker with substantial
 LLM assistance using the recorded `gpt-6-astra`, effort **ultra** configuration.
 

@@ -17,6 +17,13 @@ completes the rank-two identity and disproves independent positive parity
 coset factorizations in two natural realizations. The other programs remain
 initialized. Independent review of these new results is outstanding.
 
+A [second continuation of 02](02_angular_jacobi_gluing/reviews/CONTINUATION_AND_BRAINSTORM_BRIEF_20261013.md)
+now proves an all-frequency positive correction bound and stable source
+recovery. It stops at a specific physical cancellation inequality; nearby
+collision controls show that correction positivity alone is insufficient.
+The linked brief is prepared for a separate brainstorm on full imaginary
+Jacobi gluing.
+
 A subsequent [Codex review](../brainstorm/reviews/ACTIVE_DIRECTIONS_REVIEW_CODEX_20261013.md)
 (`gpt-6-astra`, effort **ultra**) ranks the bounded first tasks and adds
 **direction 17, spacetime collision degree**, with an analytic seed and exact
@@ -34,7 +41,7 @@ proposals are recommendations only; no folder has been moved or created.
 | Card | Research program | Readiness | First proposed output |
 | --- | --- | --- | --- |
 | 1 | [Complete cutoff reflection](01_complete_cutoff_reflection/README.md) | Bounded first test complete | Exact paired block; shared endpoint survives conjugated reflection |
-| 2 | [Angular Jacobi gluing](02_angular_jacobi_gluing/README.md) | Bounded first test complete | Inserted elliptic identity and convergent short-period transport; no new sign |
+| 2 | [Angular Jacobi gluing](02_angular_jacobi_gluing/README.md) | Positive correction bound proved; transfer inequality open | Exact Volterra recovery and positive correction anchor; full-gluing cancellation estimate still required |
 | 3 | [Anchored source observability](03_anchored_source_observability/notes/INITIAL_RESEARCH_PROGRAM_20261013.md) | First tier | An independent source identity and a paid two-channel certificate |
 | 4 | [Chord geometry and nonlocal closure](04_chord_nonlocal_closure/notes/INITIAL_RESEARCH_PROGRAM_20261013.md) | First tier | A theta-specific constraint on transverse and gradient correlations |
 | 5 | [Metaplectic coordinate atlas](05_metaplectic_coordinate_atlas/notes/INITIAL_RESEARCH_PROGRAM_20261013.md) | Supporting tool | Regular charts with controlled physical reconstruction |
@@ -62,8 +69,10 @@ The [execution review](../brainstorm/reviews/PRIORITY_RESEARCH_FIRST_PASS_CODEX_
 records that test and the outcomes in 01/17. The
 [09-to-06 review](../brainstorm/reviews/RANK_TWO_TO_PAIRED_KERNEL_REVIEW_CODEX_20261013.md)
 now records the complete rank-two identity and two sector obstructions.
-Continue 02 only with a named inequality for its complete nonlocal
-channels. Continue 06 through a source-derived estimate retaining the
+The [02 continuation](02_angular_jacobi_gluing/reviews/CONTINUATION_AND_BRAINSTORM_BRIEF_20261013.md)
+now names the physical cancellation inequality after proving its positive
+correction bound. Continue it with a multiplier using full imaginary
+gluing. Continue 06 through a source-derived estimate retaining the
 cross-coset cancellation; independent positive coset channels fail.
 The original review guidance follows.
 

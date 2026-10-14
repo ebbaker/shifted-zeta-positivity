@@ -83,4 +83,18 @@ cross-coset cancellation must be retained in any new estimate. See the
 [source and execution record](numerics/RANK_TWO_TO_PAIRED_KERNEL_EXECUTION_20261013.json)
 and the [09 numerical guide](../active/09_rank_two_theta_addition/numerics/README.md).
 This continuation uses `gpt-6-astra`, reasoning effort **ultra**.
+
+## Further angular continuation
+
+The [02 continuation and brainstorm brief](../active/02_angular_jacobi_gluing/reviews/CONTINUATION_AND_BRAINSTORM_BRIEF_20261013.md)
+now proves exact Volterra recovery, a stable weighted source inverse and
+`P_t(x)>1/[3000(1+x²)]` for the complete correction transform at every real
+frequency and `0<=t<=1`. The physical sum still cancels its algebraic
+endpoint terms. Nearby positive sources with remote collisions can retain
+the same correction bound, so a source-specific inequality using full
+imaginary Jacobi gluing is necessary for this route. The brief states
+the exact remaining gap and provides the question for a separate chat.
+Its [execution record](../active/02_angular_jacobi_gluing/numerics/ANGULAR_CONTINUATION_EXECUTION_20261013.json)
+distinguishes analytic bounds, control sources and outward genuine-theta
+checks. Recorded configuration: `gpt-6-astra`, effort **ultra**.
 >>>>>>> 40f4385 (Work on rank two theta addition)
