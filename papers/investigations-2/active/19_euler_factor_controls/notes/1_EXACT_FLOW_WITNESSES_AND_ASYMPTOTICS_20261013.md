@@ -1,12 +1,18 @@
-# Euler-factor controls: exact flow, Laguerre witnesses and the size of \(\Lambda_{c,p}\)
+# Euler-factor controls: exact flow, Laguerre witnesses and tracked collision times
 
 13 October 2026. Prepared for Edward Baker with LLM assistance.
 Model: Claude Opus 5.5 (configured identifier `claude-opus-5-5`; the serving
 model may differ), Claude Cowork, reasoning effort **max**.
 
+**Correction, 13 October 2026.** Prepared for Edward Baker with LLM
+assistance by `gpt-6-astra` (Codex), reasoning effort **ultra**. Original
+Claude provenance above is retained. This revision distinguishes tracked
+collision times from the global Newman constant and corrects the witness
+margin; it introduces no new numerical certificate.
+
 First results of the [program](INITIAL_RESEARCH_PROGRAM_20261013.md).
 Statements labelled Proposition have proofs here. The expansion of §4 is a
-formal derivation confirmed numerically, not a theorem. Numbers come from
+formal derivation supported by numerical agreement, not a theorem. Numbers come from
 the [checker](../numerics/check_euler_factor_controls_claude_20261013.py)
 and its [record](../numerics/EULER_FACTOR_CONTROLS_RECORD_20261013.json):
 double precision, not interval certificates. No collision exclusion,
@@ -17,28 +23,35 @@ zero-free region or RH implication is claimed.
 1. **Exact flow (Proposition 1).** At every Newman time the control's
    transform is theta's transform plus two complex-shifted copies.
 2. **Laguerre witnesses (Proposition 2).** One real point with
-   \(\mathscr L_0(H^{c,p}_t;x_0)<0\) proves \(\Lambda_{c,p}>t\). Close to
-   the last collision a witness always exists, at the real part of the
-   colliding pair, so one-point evaluations can certify lower bounds
-   arbitrarily close to it. In the computed cases witnesses exist at every
-   sampled \(t\); far below the collision they can fail (§2).
+   \(\mathscr L_0(H^{c,p}_t;x_0)<0\) proves \(\Lambda_{c,p}>t\). Near
+   an isolated simple-pair collision, with the remaining factor nonzero
+   and uniformly regular, a witness exists at the pair's real part. The
+   normalized ratio diverges negatively, but the raw negative margin
+   tends to zero. In the computed cases witnesses exist at every sampled
+   \(t\); far below the collision they can fail (§2).
 3. **Table (§3).** In all twelve cases computed, the lowest off-line pair
    collides last among the three lowest pairs, near
-   \(x^*\approx2\pi/\log p\). Its collision time \(T_0\) is a lower bound
-   for \(\Lambda_{c,p}\) and equals it if every other pair collides
-   earlier; the table writes \(\Lambda_{c,p}\) for \(T_0\). Throughout,
+   \(x^*\approx2\pi/\log p\). Write \(T_0=T_0(c,p)\) for that
+   collision time. A rigorously established branch gives
+   \(T_0\le\Lambda_{c,p}\); the displayed values are numerical estimates
+   of \(T_0\), not certified bounds. Equality requires all remaining
+   zeros to be real by \(T_0\), including any zeros inherited from
+   \(H_0\). Throughout the numerical table,
    \(T_0<t_m=4\log(1/c)/(\log p)^2<\delta^2/2\).
-4. **Expansion (§4).** As \(p\to\infty\) at fixed \(c\),
+4. **Formal expansion (§4).** For the tracked lowest-pair branch, as
+   \(p\to\infty\) at fixed \(c\),
    \[
-   \Lambda_{c,p}=t_m-S_2\,t_m^2+O(t_m^3),\qquad
+   T_0(c,p)=t_m-S_2\,t_m^2+O(t_m^3),\qquad
    S_2=\frac{\xi''(1/2)}{2\,\xi(1/2)}=0.0231049931\ldots,
    \]
    where \(S_2=\sum_{\gamma>0}\gamma^{-2}\) under RH. The ratio
-   \((t_m-\Lambda_{c,p})/(S_2t_m^2)\) is 0.9997 at \(p=10007,\ c=\tfrac12\)
-   and 1.0004 at \(p=10007,\ c=0.9\). The controls see theta, to first
-   order, only through the curvature of \(\xi\) at the centre.
+   \((t_m-T_0)/(S_2t_m^2)\) is 0.9997 at \(p=10007,\ c=\tfrac12\)
+   and 1.0004 at \(p=10007,\ c=0.9\). To this order, the local branch
+   calculation sees theta through the curvature of \(\xi\) at the
+   centre. Promoting the expansion to \(\Lambda_{c,p}\) additionally
+   requires global zero control.
 5. **Screening (§5).** Rigorously, every finite set of Euler factors is
-   shared by a control with \(\Lambda>0\). Numerically,
+   shared by a control with \(\Lambda>0\). Numerical tracking suggests
    \(\Lambda_{1/2,p}>0.2\) for every prime \(p\le41\), while the lowest
    pair of \(\Phi_{1/2,43}\) collides at \(0.1951\).
 
@@ -76,13 +89,29 @@ the Laguerre–Pólya class. Its Hadamard product then gives
 \(-(\log H)''=\sum_k(x-x_k)^{-2}\ge0\), hence
 \(\mathscr L_0=H^2\cdot(-(\log H)'')\ge0\) on \(\mathbb R\). \(\square\)
 
-Near an off-line pair \(X\pm iy\), the pair contributes
-\(2((x-X)^2-y^2)/((x-X)^2+y^2)^2\) to \(\mathscr L_0/H^2\), which is
-\(-2/y^2\) at \(x=X\). Let \(S\) be the total contribution of all other
-zeros at \(x=X\); it is positive when they are real, or farther from \(X\)
-than their own imaginary parts. A witness exists at \(x_0=X\) whenever
-\(2/y^2>S\). As the pair approaches its collision, \(y\to0\) while \(S\)
-stays bounded, so the witness grows like \(-2/y^2\).
+For an isolated off-line conjugate pair \(X\pm iy\), factor locally
+\[
+H(x)=((x-X)^2+y^2)g(x),
+\]
+where \(g(X)\ne0\). The exact product rule gives
+\[
+\mathscr L_0(H;X)=-2y^2g(X)^2+y^4\mathscr L_0(g;X),\qquad
+\frac{\mathscr L_0(H;X)}{H(X)^2}
+=-\frac2{y^2}+\frac{\mathscr L_0(g;X)}{g(X)^2}.
+\]
+Thus a negative witness exists when the second normalized term is less
+than \(2/y^2\). If the pair approaches an isolated ordinary double-zero
+collision and \(g\), its first two derivatives and \(1/g\) stay uniformly
+bounded locally, this condition holds for all sufficiently small \(y\).
+These isolation and regularity hypotheses exclude a simultaneous
+higher-multiplicity collision; no unconditional claim about a globally
+last collision is made.
+
+Under those hypotheses, \(\mathscr L_0/H^2\sim-2/y^2\), whereas the raw
+witness satisfies \(\mathscr L_0(H;X)=-2y^2g(X)^2+O(y^4)\to0^-\).
+Only the normalized ratio grows in magnitude. Absolute interval
+certification must resolve the shrinking raw margin, or justify a
+normalization with a certified nonzero denominator.
 
 Witnesses need not exist far below the collision. For the weak control
 \((p,c)=(2,0.05)\) at \(t=0\), the off-line zero is at \(9.065+10.642i\),
@@ -90,7 +119,7 @@ but \(\mathscr L_0>0\) at every point of a 1200-point grid on \((0,60]\);
 at \(x=\pi/a\), \(\mathscr L_0/H^2=+0.0066\). This was found by the
 verification pass and confirmed here; it is not in the record.
 
-| \((p,c)\) | \(t/\Lambda\) | \(x_0=\operatorname{Re}z\) | \(\operatorname{Im}z\) | \(\mathscr L_0/H^2\) at \(x_0\) |
+| \((p,c)\) | \(t/T_0\) | \(x_0=\operatorname{Re}z\) | \(\operatorname{Im}z\) | \(\mathscr L_0/H^2\) at \(x_0\) |
 | --- | --- | --- | --- | --- |
 | (2, 0.5) | 0 | 9.0647 | 3.7999 | \(-0.107\) |
 | (2, 0.5) | 0.9 | 8.1156 | 1.0244 | \(-1.87\) |
@@ -99,17 +128,22 @@ verification pass and confirmed here; it is not in the record.
 | (101, 0.5) | 0.99 | 1.3574 | 0.0510 | \(-768\) |
 | (10007, 0.9) | 0.99 | 0.6821 | 0.0100 | \(-2.0\cdot10^4\) |
 
-At \(t=1.01\,\Lambda_{c,p}\) the normalized \(\mathscr L_0\) is positive at
-all 1200 grid points on \((0,3x^*+10]\) in each case (record N3).
+At \(t=1.01\,T_0\) the normalized \(\mathscr L_0\) is positive at all
+1200 grid points on \((0,3x^*+10]\) in each case (record N3). This finite
+sample establishes neither global nonnegativity nor
+\(\Lambda_{c,p}\le1.01T_0\).
 
-This makes certification cheap. One interval evaluation of
-\(H,H_x,H_{xx}\) at one point proves \(\Lambda_{c,p}>t\), and the margin
-grows as \(t\uparrow\Lambda_{c,p}\). For \((p,c)=(41,\tfrac12)\) and
+One certified interval evaluation of \(H,H_x,H_{xx}\) with strictly
+negative raw \(\mathscr L_0\) at one point proves \(\Lambda_{c,p}>t\).
+Choose a point with a resolvable absolute margin rather than assuming
+that a time closer to collision is easier to certify. For
+\((p,c)=(41,\tfrac12)\) and
 \(t=0.2\), the pair has \(\operatorname{Im}z=0.0153\), and
-\(\mathscr L_0/H^2=-8.6\cdot10^3\) at \(x_0=1.68413\) (record N4). Any
-\(x_0\) within about \(0.01\) of that point is still a witness.
+\(\mathscr L_0/H^2=-8.6\cdot10^3\) at \(x_0=1.68413\) (record N4).
+Numerically, points within about \(0.01\) of that location also have a
+negative value; a certified interval bound is still required.
 
-## 3. Table of \(\Lambda_{c,p}\)
+## 3. Numerical table of lowest-pair collision times \(T_0(c,p)\)
 
 Method: follow the \(k\)-th off-line zero from its exact position
 \((2k+1)\pi/a+i\delta\) at \(t=0\), with adaptive steps in \(t\), until it
@@ -118,7 +152,7 @@ Jacobian is \(\begin{pmatrix}-H_{xx}&H_x\\-H_{xxx}&H_{xx}\end{pmatrix}\).
 Quadrature is the trapezoid rule on \(\operatorname{Im}u=0.25\), stable
 to 13 digits under grid refinement.
 
-| \(p\) | \(c\) | \(\delta\) | \(t_m\) | \(\delta^2/2\) | \(\Lambda_{c,p}\) (lowest pair) | \(x^*\) | \(\Lambda/t_m\) | collisions of pairs \(k=1,2\) |
+| \(p\) | \(c\) | \(\delta\) | \(t_m\) | \(\delta^2/2\) | \(T_0(c,p)\) (lowest pair) | \(x^*\) | \(T_0/t_m\) | collisions of pairs \(k=1,2\) |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | 2 | 0.5 | 3.800 | 5.7708 | 7.220 | 5.04322 | 8.012 | 0.8739 | 3.069, 3.229 |
 | 3 | 0.5 | 2.397 | 2.2972 | 2.874 | 2.17782 | 5.432 | 0.9480 | 2.119, 1.135 |
@@ -143,12 +177,13 @@ Observations, all numerical:
   they collide earlier still.
 - \(x^*\to2\pi/\log p\): for \(p=10007\), \(x^*=0.6816\) against
   \(2\pi/\log p=0.6822\).
-- \(\Lambda_{c,p}<t_m<\delta^2/2\) throughout. Under RH, de Bruijn's
-  theorem gives only the last bound.
+- \(T_0<t_m<\delta^2/2\) throughout the numerical table. Under RH,
+  de Bruijn's theorem gives \(\Lambda_{c,p}\le\delta^2/2\); the table
+  does not establish \(\Lambda_{c,p}<t_m\).
 - The values for \((2,\tfrac12)\) and \((101,\tfrac12)\) agree with the
   estimates of the review's verification pass (5.04 and 0.1298).
 
-## 4. The expansion \(\Lambda_{c,p}=t_m-S_2t_m^2+\cdots\)
+## 4. Formal expansion of \(T_0(c,p)=t_m-S_2t_m^2+\cdots\)
 
 *Derivation (formal).* Put \(A(z)=H_t(z)/H_t(0)=1+\tfrac12\kappa_tz^2+O(z^4)\)
 with \(\kappa_t=H_t''(0)/H_t(0)\). Scale \(x=\xi/a\) and \(t=\tau/a^2\), and
@@ -168,28 +203,38 @@ R(\pi,\tau)=O(\varepsilon^2)\) and \(\eta=O(\varepsilon)\), so
 the same for every \(k\). Since \(\kappa_t=\kappa_0+O(t)\), this gives
 \(\tau=\tau_0+2\kappa_0\tau_0^2/a^2+O(a^{-4})\). Dividing by \(a^2\),
 \[
-\Lambda_{c,p}=t_m+2\kappa_0t_m^2+\cdots=t_m-S_2t_m^2+\cdots,\qquad
+T_0(c,p)=t_m+2\kappa_0t_m^2+\cdots=t_m-S_2t_m^2+\cdots,\qquad
 S_2=-2\kappa_0=\frac{\xi''(1/2)}{2\xi(1/2)} .
 \]
 Unconditionally \(S_2=-\tfrac12\sum_\rho(\rho-\tfrac12)^{-2}\), which equals
 \(\sum_{\gamma>0}\gamma^{-2}\) under RH. Quadrature gives
 \(S_2=0.0231049931154\) (record N0, with \(8H_0(0)=\xi(1/2)=0.497120778188\)).
 
-*What is assumed.* That the lowest pair determines \(\Lambda_{c,p}\), as in
-§3, and that the remainders are uniform. A proof of the lower half,
-\(\Lambda_{c,p}\ge t_m-S_2t_m^2-O(t_m^3)\), needs only Proposition 2 at
-\(x_0=\pi/a\) and explicit Taylor bounds for \(H_t\) near 0. The upper half
-needs every other pair to have collided, which uses information about all
-zeros.
+*What remains to prove.* Uniform Taylor bounds and control of the local
+double-zero branch would turn the displayed formal expansion for
+\(T_0(c,p)\) into a theorem. Applying the same expansion to a fixed
+higher pair is local in its index \(k\); the expansion is not uniform
+over all pairs. Numerical agreement of the first three pairs does not
+identify the global Newman constant.
 
-*Numerical confirmation.* \((t_m-\Lambda)/(S_2t_m^2)\) equals 0.946,
+A lower estimate
+\(\Lambda_{c,p}\ge t_m-S_2t_m^2-O(t_m^3)\) could instead be proved
+using Proposition 2 at \(x_0=\pi/a\), with explicit Taylor bounds and a
+strictly negative witness at suitable nearby times. This proof is not
+yet supplied. An upper estimate for \(\Lambda_{c,p}\) would require
+control of every remaining zero, including any inherited from \(H_0\),
+and therefore substantially more than this local expansion.
+
+*Numerical confirmation.* \((t_m-T_0)/(S_2t_m^2)\) equals 0.946,
 0.979, 0.990, 0.9957, 0.9982, 0.99884, 0.99948, 0.99971 for
 \(c=\tfrac12\) and \(p=2,3,5,11,41,101,1009,10007\). For \(c=0.9\) and
-\(p=2,101,10007\) it equals 1.085, 1.0017, 1.0004. The second-order term
-changes sign between these two values of \(c\).
+\(p=2,101,10007\) it equals 1.085, 1.0017, 1.0004. The observed next correction beyond the
+displayed
+\(-S_2t_m^2\) term changes sign between these two values of \(c\).
 
-*Meaning.* To first order, a control sees theta only through \(S_2\), the
-curvature of \(\xi\) at the centre. The multiplier sets the time scale.
+*Meaning.* At the displayed order, the tracked local collision sees theta
+through \(S_2\), the curvature of \(\xi\) at the centre. The multiplier
+sets the time scale.
 The curvature of \(\xi\) speeds the collision: \(|H_t|\) grows away from
 the real axis near \(x=0\), so the shifted copies in (1.1) act with more
 than strength \(c\).
@@ -205,29 +250,38 @@ than strength \(c\).
   \(\Lambda\le0\).
 - **Rigorous once certified.** Each witness of Proposition 2 proves a
   specific bound \(\Lambda_{c,p}>t\).
-- **Numerical.** For \(c=\tfrac12\), \(\Lambda_{1/2,p}>0.2\) for every
-  prime \(p\le41\); this needs only the lowest pair, so it is a lower
-  bound. All fifteen primes up to 47 were computed:
-  \(\Lambda_{1/2,41}\ge0.20012\), while the lowest pairs of
-  \(\Phi_{1/2,43}\) and \(\Phi_{1/2,47}\) collide at 0.19510 and 0.18623.
+- **Numerical.** For \(c=\tfrac12\), tracking suggests
+  \(T_0(1/2,p)>0.2\) for every prime \(p\le41\), hence suggests the
+  corresponding lower bounds \(\Lambda_{1/2,p}>0.2\). All fifteen
+  primes up to 47 were computed: \(T_0(1/2,41)\approx0.2001166725\),
+  while \(T_0(1/2,43)\approx0.19510\) and
+  \(T_0(1/2,47)\approx0.18623\). These rounded estimates are not
+  certified inequalities. In particular, the last two values do not
+  establish \(\Lambda_{1/2,43}<0.2\) or
+  \(\Lambda_{1/2,47}<0.2\).
   The best bound in the refereed literature, \(\Lambda\le0.2\), is due to
   Platt and Trudgian ([arXiv:2004.09765](https://arxiv.org/abs/2004.09765),
   Bull. LMS 53 (2021)), using Polymath's method with their verification of
   RH to height \(3\cdot10^{12}\). The sharper, not peer-reviewed claim
   \(\Lambda\le0.1787854\), pinned in the
   [Newman certificate audit](../../../newman_certificate_audit/README.md),
-  is not used here; the same screen applies to it with every \(p\le47\).
-  Any argument for such a bound must use, for each of these primes, some
+  is not used here; the numerical evidence suggests the same screen
+  against it for every \(p\le47\), pending certified witnesses.
+  Once a control's lower bound is certified, any argument for the
+  corresponding upper bound must use, for that control, some
   input that \(\Phi_{1/2,p}\) lacks: the Euler factor at \(p\), or, as in
   the existing proofs, direct evaluation of the genuine function at the low
-  heights \(x^*\le8.1\) where these controls collide. Smaller \(c\) raises
-  \(t_m\) and, by §4, \(\Lambda_{c,p}\) for large \(p\); it extends the
-  list.
-- **Where the screen bites.** The decisive collision is at low height,
-  \(x^*\approx2\pi/\log p\). A method that checks low heights by direct
-  evaluation of the genuine function sees these controls fail there.
-  Large-height arguments are screened only by the higher pairs, whose
-  collision times are smaller (task 4 of the program).
+  heights \(x^*\le8.1\) where the tracked pairs collide. Smaller
+  \(c\) raises \(t_m\); the formal local expansion suggests larger
+  \(T_0\) at sufficiently large \(p\), which may extend the numerical
+  candidate list for certification.
+- **Where the current screen bites.** The tracked lowest-pair collision
+  is at low height, \(x^*\approx2\pi/\log p\). A method that checks
+  low heights by direct evaluation of the genuine function can distinguish
+  these controls there. Screening an argument restricted to large heights
+  requires witnesses in that argument's own range. The sampled higher
+  pairs collide earlier, but their general behavior and any global last
+  collision remain unresolved (task 4 of the program).
 
 ## 6. Checks
 
@@ -247,7 +301,12 @@ Standard library only; about 20 seconds.
 - **Part N, double precision.**
   - N0: \(S_2\) and \(\xi(1/2)\).
   - N1: the exact flow (1.1).
-  - N2: the table, collision order and expansion ratios.
-  - N3: witnesses below \(\Lambda\) and nonnegativity above.
-  - N4: \(\Lambda_{1/2,p}\) for all primes \(p\le47\), and the witness for
-    \(\Lambda_{1/2,41}>0.2\).
+  - N2: numerical \(T_0\) table, sampled collision order and expansion ratios.
+  - N3: sampled witnesses below \(T_0\) and sampled positive normalized
+    values at \(1.01T_0\); neither assertion is a global certificate.
+  - N4: numerical \(T_0(1/2,p)\) for all primes \(p\le47\), and the
+    candidate witness for \(\Lambda_{1/2,41}>0.2\).
+
+The unchanged checker and JSON retain historical `Lambda` labels for
+\(T_0\). See the [legacy-key guide](../numerics/README.md#legacy-labels-and-what-the-record-establishes)
+before interpreting those fields or the checker's comments.

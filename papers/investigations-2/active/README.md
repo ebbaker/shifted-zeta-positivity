@@ -1,128 +1,76 @@
-# Active research programs
+# Retained research programs
 
 13 October 2026. Prepared for Edward Baker with substantial LLM assistance.
-Model: `gpt-6.1-sol` (Codex); reasoning effort **ultra**.
+Consolidation: `gpt-6-astra` (Codex), reasoning effort **ultra**.
 
-First research execution update on the same date: `gpt-6-astra` (Codex),
-reasoning effort **ultra**, verified from the recorded session.
+The [accepted closure review](../brainstorm/reviews/PORTFOLIO_CLOSURE_REVIEW_CODEX_20261013.md)
+has been implemented. These **10 retained homes** include two current
+bounded tasks, paused programs, downstream targets, tools and reading.
+Nine former active folders are preserved in [inactive](../inactive/README.md).
+No completed result has been discarded, and dormant status is not a no-go
+theorem.
 
-The original 16 folders organize the directions from the
-[broad lifted theta symmetry search](../brainstorm/LIFTED_THETA_SYMMETRY_SEARCH_CODEX_20261013.md).
-The folder setup initialized research programs for Claude review. Its
-historical notes remain unchanged. The user-requested
-[first research pass](../brainstorm/reviews/PRIORITY_RESEARCH_FIRST_PASS_CODEX_20261013.md)
-completed bounded tasks in **01, 02 and 17**. The subsequent
-[09-to-06 continuation](../brainstorm/reviews/RANK_TWO_TO_PAIRED_KERNEL_REVIEW_CODEX_20261013.md)
-completes the rank-two identity and disproves independent positive parity
-coset factorizations in two natural realizations. The other programs remain
-initialized. Independent review of these new results is outstanding.
+| Program | Current role | Next task or reopening condition |
+| --- | --- | --- |
+| [01 Complete cutoff reflection](01_complete_cutoff_reflection/README.md) | Paused | New complete signed relation or certified reduction of the physical first-jet payment; a Riemann–Siegel/Mordell comparison is one candidate. |
+| [02 Angular Jacobi gluing](02_angular_jacobi_gluing/README.md) | Paused at the latest gate | A named full-imaginary-gluing multiplier or inequality controlling physical cancellation on a declared domain, with endpoints, tails and control separation. |
+| [03 Anchored source observability](03_anchored_source_observability/README.md) | Destination | Independently derived source relation with a complete quantitative observation certificate. |
+| [05 Metaplectic coordinate atlas](05_metaplectic_coordinate_atlas/README.md) | Tool on demand | A named identity needing a regular chart and controlled physical reconstruction. |
+| [06 Paired kernel factorization](06_paired_kernel_factorization/README.md) | Destination | Complete cross-coset stationary estimate or new source-derived factorization; tested independent positive-coset attempts are stopped. |
+| [08 Cusp unit sector saving](08_cusp_unit_sector_saving/README.md) | Optional separate arithmetic track | A complete short-cofactor moment saving including units, with the correct scale-transfer hypotheses. |
+| [12 Canonical boundary reflection](12_canonical_boundary_reflection/README.md) | Reading and bridge | An independently defined arithmetic transfer map and a proved quantitative comparison. |
+| [13 Stability Jensen and Lee Yang](13_stability_jensen_lee_yang/README.md) | Deferred reading | A specified admissible stable preparation or a precise obstruction to a concrete construction. |
+| [18 Rank two automorphic lift](18_rank_two_automorphic_lift/README.md) | One bounded continuation | A4 with a declared domain, complete higher-mode payments, stationary constraints and comparison against the existing remainder estimate. |
+| [19 Euler-factor controls](19_euler_factor_controls/README.md) | Shared control screen | Certify a fixed negative Laguerre witness, initially at `p=41,c=1/2,t=0.2`, with an absolute error budget. |
 
-A [second continuation of 02](02_angular_jacobi_gluing/reviews/CONTINUATION_AND_BRAINSTORM_BRIEF_20261013.md)
-now proves an all-frequency positive correction bound and stable source
-recovery. It stops at a specific physical cancellation inequality; nearby
-collision controls show that correction positivity alone is insufficient.
-The linked brief is prepared for a separate brainstorm on full imaginary
-Jacobi gluing.
+## Consolidated work and its principal homes
 
-A subsequent [Codex review](../brainstorm/reviews/ACTIVE_DIRECTIONS_REVIEW_CODEX_20261013.md)
-(`gpt-6-astra`, effort **ultra**) ranks the bounded first tasks and adds
-**direction 17, spacetime collision degree**, with an analytic seed and exact
-polynomial controls. There are now 17 active folders. Its first
-genuine-theta boundary pilot now passes on a compact rectangle, with no
-cost advantage over the matched interior test.
+- [04](../inactive/04_chord_nonlocal_closure/README.md),
+  [10](../inactive/10_gaussian_hermite_correlations/README.md) and
+  [11](../inactive/11_stein_susy_correlations/README.md) are supporting
+  representations under **06**. Their proposed source-specific inputs
+  remain unproved.
+- [07](../inactive/07_divisor_product_transport/README.md) and
+  [15](../inactive/15_adelic_automorphic_compatibility/README.md) are
+  consolidated under **18**. Their cutoff, normalization, heat-coordinate
+  and global compatibility obligations remain explicit.
+- [09](../inactive/09_rank_two_theta_addition/README.md) is a completed
+  identity task shared by **06 and 18**. Its folded reduction, endpoint
+  ledger and certified negative sector responses remain distinct from
+  18's raw-source Hecke identity.
+- [14](../inactive/14_theta_volterra_integrability/README.md) and
+  [16](../inactive/16_radial_sine_geometry/README.md) are dormant proposals.
+  Their theta-specific tasks were not disproved by generic obstructions.
+- [17](../inactive/17_spacetime_collision_degree/README.md) is a completed
+  easy-cell calibration, eligible to reopen for a specified hard cell or
+  uniform boundary homotopy with a credible cost advantage.
 
-Update, 13 October 2026 (note added with Claude Opus 5.5, Claude Cowork): the
-[Claude review](../brainstorm/reviews/REVIEW_OF_ACTIVE_LIFTED_THETA_DIRECTIONS_CLAUDE_20261013.md)
-is now available. It recommends 02, 01 and a new rank-two automorphic lift
-(absorbing 09) as the first bounded tasks, keeps 03 and 06 as destinations,
-and recommends merging or closing 04, 07, 10, 11, 14, 15 and 16. At that
-stage no folder had been moved or created.
+## Preserved results and stopping conditions
 
-Second update, 13 October 2026 (Claude Opus 5.5, Claude Cowork, effort
-**max**): at Edward Baker's request two folders now hold the review's new
-directions, [18 rank two automorphic lift](18_rank_two_automorphic_lift/README.md)
-and [19 Euler-factor controls](19_euler_factor_controls/README.md), each with
-first results. The [close and merge recommendations](CLOSE_AND_MERGE_RECOMMENDATIONS_CLAUDE_20261013.md)
-take the Codex first pass into account and say which folders to close, merge
-or pause. No existing folder was moved or closed. There are now 19 active
-folders.
+The [latest 02 brief](02_angular_jacobi_gluing/reviews/CONTINUATION_AND_BRAINSTORM_BRIEF_20261013.md)
+is authoritative for its cancellation gate. Positive correction and stable
+source recovery do not prove physical observability. A focused search for
+a full-gluing inequality is eligible; repeating scalar transport is not a
+new task. No equivalence theorem makes 18 an exhaustive replacement for 02.
 
-| Card | Research program | Readiness | First proposed output |
-| --- | --- | --- | --- |
-| 1 | [Complete cutoff reflection](01_complete_cutoff_reflection/README.md) | Bounded first test complete | Exact paired block; shared endpoint survives conjugated reflection |
-| 2 | [Angular Jacobi gluing](02_angular_jacobi_gluing/README.md) | Positive correction bound proved; transfer inequality open | Exact Volterra recovery and positive correction anchor; full-gluing cancellation estimate still required |
-| 3 | [Anchored source observability](03_anchored_source_observability/notes/INITIAL_RESEARCH_PROGRAM_20261013.md) | First tier | An independent source identity and a paid two-channel certificate |
-| 4 | [Chord geometry and nonlocal closure](04_chord_nonlocal_closure/notes/INITIAL_RESEARCH_PROGRAM_20261013.md) | First tier | A theta-specific constraint on transverse and gradient correlations |
-| 5 | [Metaplectic coordinate atlas](05_metaplectic_coordinate_atlas/notes/INITIAL_RESEARCH_PROGRAM_20261013.md) | Supporting tool | Regular charts with controlled physical reconstruction |
-| 6 | [Complete paired kernel factorization](06_paired_kernel_factorization/README.md) | First candidate rejected | Folded and raw same-parity sectors fail; complete cross-coset signs remain open |
-| 7 | [Divisor and product transport](07_divisor_product_transport/notes/INITIAL_RESEARCH_PROGRAM_20261013.md) | Bounded algebra test | A signed physical relation beyond built-in divisor exchange |
-| 8 | [Cusp reflection and unit sector saving](08_cusp_unit_sector_saving/notes/INITIAL_RESEARCH_PROGRAM_20261013.md) | Arithmetic continuation | One complete short-cofactor branch with a paid saving including units |
-| 9 | [Rank two theta addition](09_rank_two_theta_addition/README.md) | First identity task complete | Complete unequal-scale two-coset identity for both paired kernels, with insertions and endpoint ledger |
-| 10 | [Gaussian Hermite correlations](10_gaussian_hermite_correlations/notes/INITIAL_RESEARCH_PROGRAM_20261013.md) | Supporting comparator | A source-selected relation among the actual first four coefficients |
-| 11 | [Stein and SUSY correlations](11_stein_susy_correlations/notes/INITIAL_RESEARCH_PROGRAM_20261013.md) | Bounded operator test | A nonlocal theta partner controlling both stationary products |
-| 12 | [Canonical boundary reflection](12_canonical_boundary_reflection/notes/INITIAL_RESEARCH_PROGRAM_20261013.md) | Deep missing input | An independent arithmetic transfer map in a verified positive channel |
-| 13 | [Stability Jensen and Lee Yang preparation](13_stability_jensen_lee_yang/notes/INITIAL_RESEARCH_PROGRAM_20261013.md) | Deep missing input | An admissible source preparation or a precise construction obstruction |
-| 14 | [Theta Volterra integrability](14_theta_volterra_integrability/notes/INITIAL_RESEARCH_PROGRAM_20261013.md) | Bounded operator test | A theta-specific recurrence or string relation beyond generic integrability |
-| 15 | [Adelic and automorphic compatibility](15_adelic_automorphic_compatibility/notes/INITIAL_RESEARCH_PROGRAM_20261013.md) | Arithmetic continuation | A global signed identity on the actual common-height orbit |
-| 16 | [Radial geometry and sine moments](16_radial_sine_geometry/notes/INITIAL_RESEARCH_PROGRAM_20261013.md) | Bounded geometry test | A source-conditioned sign retaining the nonlocal generator |
-| 17 | [Spacetime collision degree](17_spacetime_collision_degree/README.md) | Bounded pilot complete | Genuine-theta winding zero; 4 boundary pair integrals versus 1 interior pair integral |
-| 18 | [Rank two automorphic lift](18_rank_two_automorphic_lift/README.md) | Bounded tasks A1–A3 complete | Cusp-only formula for both Laguerre expressions at every Newman time; the two-coset identity is the Hecke correspondence at 2; no sign |
-| 19 | [Euler-factor controls](19_euler_factor_controls/README.md) | Shared control screen | Three-controls protocol; exact flow, Laguerre witnesses, \(\Lambda_{c,p}\) table and expansion |
+The [09-to-06 review](../brainstorm/reviews/RANK_TWO_TO_PAIRED_KERNEL_REVIEW_CODEX_20261013.md)
+preserves both negative sector results. Further work in 06 must retain the
+physical cross terms and stationarity of the sum for both Laguerre forms.
 
-## Review priorities
+18 stops after A4 if it yields only another representation or the existing
+main-term/remainder structure. A complete new signed estimate or justified
+positive structure can warrant continuation; passing first-mode samples
+alone cannot. 19 tests proposed implications against explicit controls;
+passing those tests supplies no proof of the desired conclusion.
 
-Where they differ, the
-[close and merge recommendations](CLOSE_AND_MERGE_RECOMMENDATIONS_CLAUDE_20261013.md)
-supersede the allocation below. Their working set is 18 and 19, with 08
-optional; 01 and 02 pause at their gates; and nine folders would close as
-separate projects if the recommendations are accepted.
+The original [Claude recommendations](CLOSE_AND_MERGE_RECOMMENDATIONS_CLAUDE_20261013.md)
+remain a historical proposal. The [implementation note](../PORTFOLIO_CONSOLIDATION_20261013.md)
+and this index govern current allocation. Dated initial programs retain
+their historical research scope; their READMEs state current status.
+Independent specialist validation of the research remains outstanding.
 
-The [new assessment](../brainstorm/reviews/ACTIVE_DIRECTIONS_REVIEW_CODEX_20261013.md)
-prioritizes 02, 01 and 09; treats 03 and 06 as downstream certificate
-targets; and retains 08 as a separate arithmetic task. Its
-[angular refinement](02_angular_jacobi_gluing/notes/ANGULAR_GLUING_AND_RIGIDITY_REVIEW_SEEDS_20261013.md)
-gives an exact balanced lift and a precise next elliptic-transport test.
-The [execution review](../brainstorm/reviews/PRIORITY_RESEARCH_FIRST_PASS_CODEX_20261013.md)
-records that test and the outcomes in 01/17. The
-[09-to-06 review](../brainstorm/reviews/RANK_TWO_TO_PAIRED_KERNEL_REVIEW_CODEX_20261013.md)
-now records the complete rank-two identity and two sector obstructions.
-The [02 continuation](02_angular_jacobi_gluing/reviews/CONTINUATION_AND_BRAINSTORM_BRIEF_20261013.md)
-now names the physical cancellation inequality after proving its positive
-correction bound. Continue it with a multiplier using full imaginary
-gluing. Continue 06 through a source-derived estimate retaining the
-cross-coset cancellation; independent positive coset channels fail.
-The original review guidance follows.
-
-Start with complete cutoff reflection, angular Jacobi gluing, and rank two
-addition. Anchored source observability is the quantitative destination
-for an identity that survives the complete source and boundary payments.
-Chord, paired-kernel and Stein programs address the stationary signs;
-metaplectic and Gaussian Hermite programs support coordinates and comparison.
-The cusp program retains a separate arithmetic moment target.
-
-Claude's review should check the source and admissible domain, generator,
-physical projection, preparation law, boundary and tail obligations, and
-whether the proposed new relation adds information beyond generic positivity
-or a previously excluded architecture. Each initial note names a bounded
-first deliverable, a collision control or other diagnostic, and a stopping
-condition. Global canonical, stable-preparation and positivity targets keep
-their RH-strength missing inputs explicit.
-
-A shared claim should have one principal home. Programs can cite a sibling's
-exact result rather than repeat its derivation. The first review can select
-which tasks warrant execution and correct their scopes; the current folder
-order is the brainstorm's card numbering, not a claim of equal priority.
-
-## Existing work and records
-
-The earlier projects are indexed in [inactive](../inactive/README.md).
-[Formal replay and crosswalk](../formal_replay_crosswalk/README.md) and
-[Newman certificate audit](../newman_certificate_audit/README.md) remain
-at their original locations. The [portfolio overview](../README.md)
-contains the dated original audit context.
-
-Each new project has `notes/`, `numerics/`, `reviews/` and `chat-histories/`.
-No new chat copies were made. The planning conversation now lives in the
-[shared portfolio archive](../chat-histories/README.md).
-Follow [the standing recording workflow](../../../tools/CHAT_HISTORY.md)
-and [LARGE_FILES.md](../../../LARGE_FILES.md).
+See the [portfolio overview](../README.md), [brainstorm history](../brainstorm/README.md),
+[formal replay](../formal_replay_crosswalk/README.md), and
+[Newman audit](../newman_certificate_audit/README.md).
+Follow [chat-history capture](../../../tools/CHAT_HISTORY.md) and
+[LARGE_FILES.md](../../../LARGE_FILES.md).

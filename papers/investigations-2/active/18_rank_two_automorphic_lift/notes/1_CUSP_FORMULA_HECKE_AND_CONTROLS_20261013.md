@@ -1,5 +1,12 @@
 # The insertion-transported rank-two lift: cusp formula, Newman time, Hecke at 2 and the control test
 
+**Scope correction, 13 October 2026.** Prepared for Edward Baker with
+substantial LLM assistance by `gpt-6-astra` (Codex), effort **ultra**.
+Control summaries now distinguish tracked branch times from the global
+constant and raw from normalized witness margins. The finite-prime
+obstruction and A4 gate have their complete hypotheses stated. The
+identities, original numerical records and Claude provenance are preserved.
+
 13 October 2026. Prepared for Edward Baker with LLM assistance.
 Model: Claude Opus 5.5 (configured identifier `claude-opus-5-5`; the serving
 model may differ), Claude Cowork, reasoning effort **max**.
@@ -37,8 +44,9 @@ region or RH implication is claimed.
 4. **Control test (Proposition 4).** Every Euler-factor control
    \(\Phi_{c,p}\) has the same cusp kernel, tested against translated
    weights, and satisfies the Hecke relation at every prime \(q\ne p\).
-   Since \(\Lambda_{c,p}>0\), no argument whose arithmetic input is a
-   finite set of Hecke relations can prove \(\Lambda\le0\).
+   Since \(\Lambda_{c,p}>0\), a finite set of these Hecke relations,
+   together with other hypotheses also shared by the controls, cannot
+   prove \(\Lambda\le0\).
 5. **Diagnostics.** At the tested heights \(x\le42\) the first Whittaker
    mode carries \(\mathscr L_0\) to within 13%. From \(x\approx46\) the
    second mode is a quarter or more of \(\mathscr L_0\), and at \(x=100\)
@@ -47,8 +55,9 @@ region or RH implication is claimed.
    from \(x\approx22.5\).
 
 **Decision.** A1–A3 are complete as identities, and no sign has appeared.
-By the stop rule, one bounded task remains (A4, §6). Close 18 with this
-note as its identity record unless A4 finds a positive-definite structure.
+By the stop rule, one bounded task remains (A4, §6). Stop with this note
+as the identity record unless A4 supplies a new complete signed estimate,
+justified positive structure or demonstrated quantitative saving.
 
 ## 1. Source, pair and the two Laguerre expressions
 
@@ -344,13 +353,20 @@ replay N6, defect below \(10^{-15}\) for \(q\ne p\) and of order one for
 §1.3), and it has the listed properties. \(\square\)
 
 For intermediate targets the screen is quantitative. With \(c=\tfrac12\),
-19 finds numerically \(\Lambda_{1/2,p}>0.2\) for every prime \(p\le41\)
-(for example \(\Lambda_{1/2,41}\ge0.20012\), from the lowest off-line
-pair alone). A proof of \(\Lambda\le0.2\) must therefore use, for each
-such prime, some input that \(\Phi_{1/2,p}\) lacks: the Euler factor at
-\(p\), or, as in the existing proof, direct evaluation of the genuine
-function at the low heights where these controls collide. Rigorous
-versions need certified witnesses (19, task 2).
+19 numerically tracks lowest-pair collision times \(T_0>0.2\) for primes
+\(p\le41\), including \(T_0(1/2,41)\approx0.20011667246\). These are
+numerical branch times, not certified values of the global constant
+\(\Lambda_{c,p}\). A rigorously established branch gives
+\(T_0\le\Lambda_{c,p}\); equality requires all other zeros to be real
+by that time. A fixed outward negative Laguerre witness at \(t=0.2\)
+would establish the desired lower bound directly, without global equality.
+
+Any proposed genuine-theta bound must use an input that its relevant
+countercontrols lack, such as a local factor or a quantitative genuine
+low-height evaluation. No claim that all-prime relations are the only
+possible useful input is made. Certification must resolve the raw witness
+margin, which shrinks near an isolated pair collision even though the
+normalized ratio grows. See the [corrected 19 note](../../19_euler_factor_controls/notes/1_EXACT_FLOW_WITNESSES_AND_ASYMPTOTICS_20261013.md).
 
 ## 6. What remains: A4
 
@@ -379,8 +395,12 @@ compare the result with the main-sum and remainder structure of 01.
 \(|E^*|^2\) along this geodesic, not these signed moments; I now rank it
 lowest.
 
-Stop: if (i)–(ii) give only the known main-term and remainder structure,
-close 18. W1 stays deferred.
+A4 must specify its time-height domain and comparator, retain the complete
+stationary constraints and both Laguerre obligations, and pay every omitted
+mode and tail. A first-mode result alone does not give a complete sign.
+Stop if (i)–(ii) give only the known main-term and remainder structure,
+without a new complete estimate, justified positive structure or measured
+saving. W1 stays deferred.
 
 ## 7. Checks
 

@@ -6,7 +6,7 @@ parent chat's verified current-turn configuration. The parallel analytic
 and computational checks are internal LLM work, not independent validation.
 
 This completes the first identity task in the [initial program](INITIAL_RESEARCH_PROGRAM_20261013.md)
-and supplies the source decomposition for [direction 06](../../06_paired_kernel_factorization/README.md).
+and supplies the source decomposition for [direction 06](../../../active/06_paired_kernel_factorization/README.md).
 The result is an absolutely convergent, modular-folded two-coset identity
 for **both** `J_0` and `J_1`, with the genuine differential insertions. The
 two cosets are exactly same-parity and opposite-parity source products.
@@ -327,7 +327,7 @@ opposite derivative cusps:
 \]
 Their sum is smooth. This is why high-frequency sector observations can
 have algebraic endpoint terms although the complete observation has
-rapid decay. The [06 endpoint calculation](../../06_paired_kernel_factorization/notes/1_FOLDED_PARITY_CUSP_AND_FACTORISATION_OBSTRUCTION_20261013.md)
+rapid decay. The [06 endpoint calculation](../../../active/06_paired_kernel_factorization/notes/1_FOLDED_PARITY_CUSP_AND_FACTORISATION_OBSTRUCTION_20261013.md)
 uses this exact interface to determine the signs of those terms.
 
 There is an earlier, distinct distributional endpoint if the theta

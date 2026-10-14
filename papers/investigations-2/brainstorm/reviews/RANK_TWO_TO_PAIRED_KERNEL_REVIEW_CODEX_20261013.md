@@ -19,9 +19,9 @@ This continues the [first research pass](PRIORITY_RESEARCH_FIRST_PASS_CODEX_2026
 and executes the next identity task selected in the
 [active-directions review](ACTIVE_DIRECTIONS_REVIEW_CODEX_20261013.md).
 The derivations have their principal homes in the
-[09 identity note](../../active/09_rank_two_theta_addition/notes/1_COMPLETE_TWO_COSET_REDUCTION_20261013.md)
+[09 identity note](../../inactive/09_rank_two_theta_addition/notes/1_COMPLETE_TWO_COSET_REDUCTION_20261013.md)
 and the [06 factorization note](../../active/06_paired_kernel_factorization/notes/1_FOLDED_PARITY_CUSP_AND_FACTORISATION_OBSTRUCTION_20261013.md).
-The [checker and numerical guide](../../active/09_rank_two_theta_addition/numerics/README.md)
+The [checker and numerical guide](../../inactive/09_rank_two_theta_addition/numerics/README.md)
 give reproduction instructions; the [source and execution record](../numerics/RANK_TWO_TO_PAIRED_KERNEL_EXECUTION_20261013.json)
 pins this continuation.
 

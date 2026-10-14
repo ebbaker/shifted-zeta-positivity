@@ -4,8 +4,8 @@
 Model: `gpt-6.1-sol` (Codex); reasoning effort **ultra**.
 
 The 13 October `gpt-6-astra` continuation (reasoning effort **ultra**)
-uses the shared [09 replay](../../09_rank_two_theta_addition/numerics/check_rank_two_to_paired.py)
-and [small record](../../09_rank_two_theta_addition/numerics/RANK_TWO_TO_PAIRED_RECORD_20261013.json).
+uses the shared [09 replay](../../../inactive/09_rank_two_theta_addition/numerics/check_rank_two_to_paired.py)
+and [small record](../../../inactive/09_rank_two_theta_addition/numerics/RANK_TWO_TO_PAIRED_RECORD_20261013.json).
 They certify both folded same-parity responses negative at `t=0,x=60`
 and both raw same-parity responses negative at `t=x=0`, including every
 source and theta tail. The code and record are kept in 09 without

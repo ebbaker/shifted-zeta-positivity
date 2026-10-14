@@ -19,7 +19,7 @@ bounded calculation, not a probability of proving RH.
 
 The review strengthens 02 by giving it a specific exact coordinate change,
 and also finds why its first angular jet is insufficient. It adds one
-separate program, [17 spacetime collision degree](../../active/17_spacetime_collision_degree/README.md),
+separate program, [17 spacetime collision degree](../../inactive/17_spacetime_collision_degree/README.md),
 for a boundary certificate based on the common orientation of heat
 collisions. This is a possible computational and geometric complement to the
 symmetry search; it supplies no theta-specific global inequality.
@@ -142,7 +142,7 @@ collision,
 \det DV=-H_{xx}^2<0.
 \]
 The sign cannot cancel against another ordinary heat collision. The
-[new program](../../active/17_spacetime_collision_degree/notes/INITIAL_RESEARCH_PROGRAM_20261013.md)
+[new program](../../inactive/17_spacetime_collision_degree/notes/INITIAL_RESEARCH_PROGRAM_20261013.md)
 extends the local calculation: an analytic heat zero of spatial multiplicity
 \(m\ge2\) has index \(-\lfloor m/2\rfloor\). Hence, on a compact
 rectangle with a nonzero boundary pair,

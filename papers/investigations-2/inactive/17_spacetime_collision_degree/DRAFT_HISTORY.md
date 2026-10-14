@@ -12,3 +12,11 @@ Prepared for Edward Baker with substantial LLM assistance.
   advantage; stop expansion pending a new boundary identity or hard-cell
   target. Saved one note, reproducible script and small execution record;
   no manuscript snapshot or large derived data.
+
+- **2026-10-13 — Qualified portfolio consolidation.** Prepared for Edward
+  Baker with substantial LLM assistance by `gpt-6-astra`, effort **ultra**.
+  The [current disposition](README.md) preserves this investigation's
+  completed results and explicit continuation gate. See the
+  [implementation record](../../PORTFOLIO_CONSOLIDATION_20261013.md) and
+  [accepted review](../../brainstorm/reviews/PORTFOLIO_CLOSURE_REVIEW_CODEX_20261013.md).
+  No mathematical result was promoted beyond its recorded scope.

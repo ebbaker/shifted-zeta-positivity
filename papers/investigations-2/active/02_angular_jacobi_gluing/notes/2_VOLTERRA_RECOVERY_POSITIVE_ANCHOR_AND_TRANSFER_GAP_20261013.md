@@ -6,7 +6,7 @@ from the parent session. This is an incremental analytic continuation, not
 a manuscript or independent mathematical validation.
 
 This develops the [complete short-period identity](ELLIPTIC_INSERTION_TRANSPORT_AND_HEAT_OBSTRUCTIONS_20261013.md)
-after the [09 two-coset reduction](../../09_rank_two_theta_addition/notes/1_COMPLETE_TWO_COSET_REDUCTION_20261013.md)
+after the [09 two-coset reduction](../../../inactive/09_rank_two_theta_addition/notes/1_COMPLETE_TWO_COSET_REDUCTION_20261013.md)
 and the [06 factorization obstruction](../../06_paired_kernel_factorization/notes/1_FOLDED_PARITY_CUSP_AND_FACTORISATION_OBSTRUCTION_20261013.md).
 All identities below are derived from those exact sources. No external
 positivity theorem is assumed.

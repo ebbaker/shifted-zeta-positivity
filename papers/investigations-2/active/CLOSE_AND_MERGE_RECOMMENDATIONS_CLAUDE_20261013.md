@@ -1,5 +1,30 @@
 # Recommended closures, merges and pauses for the active portfolio
 
+## Implemented status and qualifications
+
+13 October 2026. Prepared for Edward Baker with substantial LLM assistance
+by `gpt-6-astra` (Codex), reasoning effort **ultra**.
+The proposal below is historical. Edward Baker authorized the qualified
+[closure review](../brainstorm/reviews/PORTFOLIO_CLOSURE_REVIEW_CODEX_20261013.md),
+now implemented in the [current index](README.md) and
+[consolidation record](../PORTFOLIO_CONSOLIDATION_20261013.md).
+
+The nine folders have moved to `inactive/`: 04/10/11 under 06, 07/15 under
+18, 09 as a distinct completed identity task, 14/16 as dormant proposals,
+and 17 as a completed easy-cell calibration. 01/02 are paused at their
+explicit gates. The full-gluing gap in 02 is not proved equivalent to
+18's Hecke formulation; 09's folded endpoint and obstruction results remain
+distinct. Dormancy of 14/16 is not a mathematical exclusion. 17's easy-cell
+cost result does not decide the hard-cell question.
+
+The finite-prime control obstruction applies only when the other hypotheses
+are also shared by the controls. The table and formal expansion in 19 now
+refer to the lowest-pair time `T_0`, with global `Lambda` identification
+conditional; the raw witness margin shrinks near an isolated collision.
+These corrections supersede broader or ambiguous wording in the proposal.
+
+## Original recommendation
+
 13 October 2026. Prepared for Edward Baker with LLM assistance.
 Model: Claude Opus 5.5 (configured identifier `claude-opus-5-5`; the serving
 model may differ), Claude Cowork, reasoning effort **max**.

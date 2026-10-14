@@ -5,7 +5,7 @@ Model: `gpt-6-astra` (Codex); reasoning effort **ultra**. This is an
 internal assessment of the current derivation and replay, not an
 independent mathematical review.
 
-The [09 complete two-coset reduction](../../09_rank_two_theta_addition/notes/1_COMPLETE_TWO_COSET_REDUCTION_20261013.md)
+The [09 complete two-coset reduction](../../../inactive/09_rank_two_theta_addition/notes/1_COMPLETE_TWO_COSET_REDUCTION_20261013.md)
 successfully transports the unequal-scale theta product and its actual
 differential insertions into both complete paired kernels. It retains
 both parity cosets, zero-axis annihilation, the unequal-scale mixed
@@ -27,7 +27,7 @@ identifies two distinct obstructions:
   kernel with its reflection leaves that zero-frequency value unchanged,
   so this simple Hermitianization does not repair the factorization.
 
-The shared [outward replay record](../../09_rank_two_theta_addition/numerics/RANK_TWO_TO_PAIRED_RECORD_20261013.json)
+The shared [outward replay record](../../../inactive/09_rank_two_theta_addition/numerics/RANK_TWO_TO_PAIRED_RECORD_20261013.json)
 also certifies both folded negative signs at `t=0,x=60`. Its retained
 terms, quadrature remainders, omitted theta terms, and source tails
 are all paid. These certificates concern Fourier responses of specific

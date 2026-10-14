@@ -1,65 +1,71 @@
 # Second investigation portfolio
 
 13 October 2026. Prepared for Edward Baker with substantial LLM assistance.
-Model: `gpt-6.1-sol` (Codex); reasoning effort **ultra**.
+Consolidation: `gpt-6-astra` (Codex), reasoning effort **ultra**.
 
-First research execution update on the same date: `gpt-6-astra` (Codex),
-reasoning effort **ultra**, verified from the recorded session.
+The [accepted closure review](brainstorm/reviews/PORTFOLIO_CLOSURE_REVIEW_CODEX_20261013.md)
+is now implemented. The [active index](active/README.md) contains **10
+retained program homes**, including paused programs, destinations and tools.
+The [inactive index](inactive/README.md) contains **14 folders**: five older
+investigations and nine newly consolidated, completed or dormant programs.
+Inactive status does not assert mathematical impossibility.
 
-The current portfolio has [19 programs in active](active/README.md),
-with a research document in every project's `notes/` folder. A subsequent
-[Codex assessment](brainstorm/reviews/ACTIVE_DIRECTIONS_REVIEW_CODEX_20261013.md)
-(`gpt-6-astra`, effort **ultra**) ranks their first tasks and adds spacetime
-collision degree with an analytic seed and exact polynomial controls. The
-[first research pass](brainstorm/reviews/PRIORITY_RESEARCH_FIRST_PASS_CODEX_20261013.md)
-now completes bounded tasks in angular gluing, cutoff reflection and
-spacetime winding. It gives exact identities and obstructions, plus a
-genuine-theta boundary certificate whose matched interior test is cheaper.
-<<<<<<< HEAD
-The [09-to-06 continuation](brainstorm/reviews/RANK_TWO_TO_PAIRED_KERNEL_REVIEW_CODEX_20261013.md)
-now completes the unequal-scale rank-two identity and rejects separate
-positive parity coset factorizations for both paired kernels. The complete
-stationary signs remain open. The remaining programs stay initialized,
-and independent review of the new results remains outstanding. Five older project folders are now
-in [inactive](inactive/README.md).
+Current research allocation is one bounded continuation in
+[18](active/18_rank_two_automorphic_lift/README.md) and the fixed outward
+witness certification in [19](active/19_euler_factor_controls/README.md).
+[01](active/01_complete_cutoff_reflection/README.md) and
+[02](active/02_angular_jacobi_gluing/README.md) are paused at explicit gates;
+02 remains eligible for its focused full-gluing candidate search.
+[08](active/08_cusp_unit_sector_saving/README.md) remains a separate optional
+arithmetic track. The remaining retained homes organize downstream targets,
+tools and reading. The indexes and individual READMEs state the conditions
+for renewed work.
 
-The [further angular continuation](active/02_angular_jacobi_gluing/reviews/CONTINUATION_AND_BRAINSTORM_BRIEF_20261013.md)
-proves a positive correction transform at every real frequency for
-`0<=t<=1`, together with stable Volterra source recovery. The physical
-transfer remains blocked by a precise cancellation inequality; the linked
-brief records that question for a new brainstorm and the controls any
-candidate must distinguish.
-=======
-The remaining programs stay initialized, and independent review of the
-new results remains outstanding. A
-[Claude review](brainstorm/reviews/REVIEW_OF_ACTIVE_LIFTED_THETA_DIRECTIONS_CLAUDE_20261013.md)
-and [close and merge recommendations](active/CLOSE_AND_MERGE_RECOMMENDATIONS_CLAUDE_20261013.md)
-(Claude Opus 5.5, effort **max**) add programs 18 and 19 with first results.
-Five older project folders are now in [inactive](inactive/README.md).
->>>>>>> 22649b7 (Further work from Claude on investigation overview with some early work on rank two automorphic lifts and Euler-factor controls)
-The shared [brainstorm folder](brainstorm/README.md) remains at this level.
-`formal_replay_crosswalk` and `newman_certificate_audit` remain at this level.
-The shared `chat-histories/` directory and recording tools also remain here
-because they are portfolio infrastructure.
+## Completed results and retained obligations
+
+- The [angular continuation](active/02_angular_jacobi_gluing/reviews/CONTINUATION_AND_BRAINSTORM_BRIEF_20261013.md)
+  proves stable Volterra recovery and an all-frequency positive correction
+  bound for `0<=t<=1`. The complete physical cancellation estimate is open;
+  18 has not been proved to exhaust full imaginary Jacobi gluing.
+- The [09-to-06 continuation](brainstorm/reviews/RANK_TWO_TO_PAIRED_KERNEL_REVIEW_CODEX_20261013.md)
+  completes the unequal-scale two-coset reduction and rejects separate
+  positive coset factorizations in the tested folded and raw realizations.
+  [09's records](inactive/09_rank_two_theta_addition/README.md) remain a
+  distinct completed result; [06](active/06_paired_kernel_factorization/README.md)
+  retains the complete cross-coset stationary targets.
+- [17](inactive/17_spacetime_collision_degree/README.md) retains its exact
+  collision-degree controls and completed easy-cell boundary pilot. Its
+  cost comparison does not exclude savings on harder cells.
+- [18](active/18_rank_two_automorphic_lift/README.md) preserves its exact
+  pair-moment identities, with no new complete sign. [19](active/19_euler_factor_controls/README.md)
+  distinguishes numerical lowest-pair collision times `T_0` from the global
+  constant `Lambda`, and normalized witness ratios from raw error margins.
+
+The [consolidation record](PORTFOLIO_CONSOLIDATION_20261013.md) explains the
+relocations and surviving obligations. Its [path and integrity manifest](PORTFOLIO_CONSOLIDATION_RECORD_20261013.json)
+maps old paths to current paths. Existing scientific JSON, checker code and
+registered histories retain their bytes, except for the separately
+authorized refresh of this conversation. Historical paths and hashes in
+those records describe their original capture; they are not rewritten.
 
 ```text
 investigations-2/
-  active/                       19 research programs
-  inactive/                     5 existing project folders
-  brainstorm/                   shared research planning and reviews
-  formal_replay_crosswalk/       retained audit and conversation history
+  active/                       10 retained program homes
+  inactive/                     14 merged, completed or dormant folders
+  brainstorm/                   shared planning, reviews and milestones
+  formal_replay_crosswalk/       retained audit and this chat history
   newman_certificate_audit/      retained certificate audit
-  chat-histories/                shared planning archive
-  record_chat.py                 archive format and explicit import tool
+  chat-histories/                shared portfolio planning archive
+  record_chat.py                 archive format and import tool
 ```
 
-The [initial reorganization record](REORGANIZATION_RECORD_20261013.json)
-preserves the original setup snapshot. The
-[layout update](PORTFOLIO_LAYOUT_UPDATE_20261013.json) records restoration
-of the brainstorm folder and relocation of this conversation. It is
-registered once as
-[the shared portfolio conversation](chat-histories/0002_2026-10-13T12-54-02Z_review-newman-certificate-audit.json).
-Its registry is refreshed through the standing workflow.
+The earlier [reorganization](REORGANIZATION_RECORD_20261013.json) and
+[layout update](PORTFOLIO_LAYOUT_UPDATE_20261013.json) remain historical
+records. The shared planning conversation retains its
+[original identity](chat-histories/0002_2026-10-13T12-54-02Z_review-newman-certificate-audit.json).
+This consolidation chat retains its separate formal-replay identity.
+Follow [the history workflow](../../tools/CHAT_HISTORY.md) and
+[LARGE_FILES.md](../../LARGE_FILES.md).
 
 ## Original portfolio context as of 12 October 2026
 

@@ -11,8 +11,8 @@ not independent mathematical validation. The prior initialization used
 From the repository root:
 
 ```sh
-python3 papers/investigations-2/active/09_rank_two_theta_addition/numerics/check_rank_two_to_paired.py \
-  --record papers/investigations-2/active/09_rank_two_theta_addition/numerics/RANK_TWO_TO_PAIRED_RECORD_20261013.json
+python3 papers/investigations-2/inactive/09_rank_two_theta_addition/numerics/check_rank_two_to_paired.py \
+  --record papers/investigations-2/inactive/09_rank_two_theta_addition/numerics/RANK_TWO_TO_PAIRED_RECORD_20261013.json
 ```
 
 The [script](check_rank_two_to_paired.py) uses the Python standard library and
@@ -23,7 +23,7 @@ all directed endpoints and every error payment. No external data are needed.
 Follow [LARGE_FILES.md](../../../../../LARGE_FILES.md) for larger future outputs.
 
 This implements the [complete two-coset reduction](../notes/1_COMPLETE_TWO_COSET_REDUCTION_20261013.md)
-and the [06 factorization assessment](../../06_paired_kernel_factorization/notes/1_FOLDED_PARITY_CUSP_AND_FACTORISATION_OBSTRUCTION_20261013.md).
+and the [06 factorization assessment](../../../active/06_paired_kernel_factorization/notes/1_FOLDED_PARITY_CUSP_AND_FACTORISATION_OBSTRUCTION_20261013.md).
 Its two negative tests concern individual parity sectors; neither contradicts
 positivity of the complete Fourier response or a physical stationary sign.
 

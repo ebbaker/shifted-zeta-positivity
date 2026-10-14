@@ -1,5 +1,15 @@
 # Internal verification pass on the first notes of 18 and 19
 
+**Subsequent correction, 13 October 2026.** Prepared for Edward Baker with
+LLM assistance by `gpt-6-astra` (Codex), effort **ultra**. This is the
+historical internal verification record. Its numerical “Lambda collision
+times” mean tracked branch times, with \(k=0\) denoted \(T_0\); no
+global equality is certified. The formal expansion is for that branch.
+The isolated-pair witness criterion remains valid, but the raw negative
+margin tends to zero near collision. The [corrected 19 note](../../19_euler_factor_controls/notes/1_EXACT_FLOW_WITNESSES_AND_ASYMPTOTICS_20261013.md)
+and [current allocation](../README.md) supersede broader readings of the
+earlier verification summary below. Original evidence is retained.
+
 13 October 2026. Prepared for Edward Baker with LLM assistance.
 Model: Claude Opus 5.5 (configured identifier `claude-opus-5-5`; the serving
 model may differ), Claude Cowork, reasoning effort **max**. The pass was run

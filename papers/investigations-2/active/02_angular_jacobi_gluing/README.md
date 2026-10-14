@@ -1,19 +1,28 @@
 # Angular Jacobi gluing
 
+## Current disposition
+
+Implementation: 13 October 2026. Prepared for Edward Baker with substantial LLM assistance. Recorded model: `gpt-6-astra` (Codex), reasoning effort **ultra**. The dated initial programs and earlier readiness labels are historical; this status governs the current allocation.
+
+**Status: paused at the full-gluing cancellation gate.**
+
+Preserve the [stable Volterra recovery and positive correction bound](notes/2_VOLTERRA_RECOVERY_POSITIVE_ANCHOR_AND_TRANSFER_GAP_20261013.md), [collision controls](notes/3_COMPLETE_CHANNEL_VOLTERRA_CONTROLS_20261013.md), and [complete outward record](numerics/COMPLETE_ANGULAR_CHANNELS_RECORD_20261013.json). Positivity of the correction does not prevent cancellation in the physical sum; a constant or inverse-polynomial global relative margin is impossible. The allocation to [18](../18_rank_two_automorphic_lift/README.md) does not mathematically supersede full imaginary Jacobi gluing.
+
+**Reopening gate:** the [focused brainstorm brief](reviews/CONTINUATION_AND_BRAINSTORM_BRIEF_20261013.md) may supply a concrete multiplier or inequality using full imaginary gluing. It must control the complete physical cancellation or both stationary targets on a declared domain, pay all endpoints and tails, and identify hypotheses violated by the controls. Return a bounded test or a recorded failure; further unguided scalar transport is not allocated.
+
+## Preserved research record
+
 13 October 2026. Prepared for Edward Baker with substantial LLM assistance.
 Current execution model: `gpt-6-astra` (Codex); reasoning effort **ultra**.
 The original initialization configuration is preserved in its research note.
 
-Status: **continued through a proved positive correction bound and stable
-source recovery; physical transfer blocked at a specific cancellation
-inequality**. Independent review remains outstanding.
 
 This project develops brainstorm card 2. Its first proposed output is:
 Full angular gluing and its Newman heat compatibility defect.
 
 Read the [initial research program](notes/INITIAL_RESEARCH_PROGRAM_20261013.md)
 for the exact source, generator, physical reduction, bounded first task,
-validation criteria and exclusions. Readiness: **first tier**.
+validation criteria and exclusions. Historical initialization readiness: **first tier**.
 This classification describes the next useful calculation, not the probability
 of an RH proof.
 

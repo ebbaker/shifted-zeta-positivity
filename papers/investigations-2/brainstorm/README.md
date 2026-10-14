@@ -1,11 +1,25 @@
 # Brainstorm and research directions
 
+## Current allocation
+
+13 October 2026. Consolidation prepared for Edward Baker with substantial
+LLM assistance by `gpt-6-astra` (Codex), reasoning effort **ultra**.
+The [closure review](reviews/PORTFOLIO_CLOSURE_REVIEW_CODEX_20261013.md) is now
+implemented in the [active](../active/README.md) and [inactive](../inactive/README.md)
+indexes. Current work is one bounded task in 18 and the fixed witness
+certification in 19; 01/02 are paused at their explicit gates, and 08 is a
+separate arithmetic option. The dated reviews below retain the sequence
+of discoveries and earlier allocations; they do not override current status.
+See the [implementation record](../PORTFOLIO_CONSOLIDATION_20261013.md).
+
+## Research history
+
 13 October 2026. Prepared for Edward Baker with substantial LLM assistance.
 This reading guide was prepared by GPT-6.1-sol (`gpt-6.1-sol`), Codex,
 reasoning effort **ultra**. The linked documents retain their own authorship,
 model and scope statements.
 
-The current search is [Broad search for symmetries in lifted theta systems](LIFTED_THETA_SYMMETRY_SEARCH_CODEX_20261013.md).
+The original broad search is [Broad search for symmetries in lifted theta systems](LIFTED_THETA_SYMMETRY_SEARCH_CODEX_20261013.md).
 It maps 16 directions around the higher-dimensional lifts, with exact seeds,
 missing source constraints, first tests, and conditions for reopening earlier
 obstructions. It establishes no new global theta sign or RH conclusion.
@@ -26,11 +40,10 @@ reviews all sixteen programs against the originating chats. It recommends
 angular gluing, complete cutoff reflection and rank two addition as the
 first bounded identity tasks, with observability and paired kernels as their
 certificate targets. It records an exact angular refinement and adds
-[spacetime collision degree](../active/17_spacetime_collision_degree/README.md)
+[spacetime collision degree](../inactive/17_spacetime_collision_degree/README.md)
 as direction 17 for a separate boundary-certificate comparison.
 The review and new records use `gpt-6-astra`, reasoning effort **ultra**.
 
-<<<<<<< HEAD
 ## First research execution
 
 The [first research pass](reviews/PRIORITY_RESEARCH_FIRST_PASS_CODEX_20261013.md)
@@ -48,8 +61,6 @@ and [this research conversation](chat-histories/README.md) accompany the
 pass (`gpt-6-astra`, effort **ultra**). These are internal analytic checks,
 diagnostics and one bounded outward certificate; no global sign or RH
 conclusion is established.
-<<<<<<< HEAD
-=======
 ## Claude review of the active directions
 
 The [Claude review](reviews/REVIEW_OF_ACTIVE_LIFTED_THETA_DIRECTIONS_CLAUDE_20261013.md)
@@ -63,9 +74,7 @@ proposes a new first-group direction: the rank-two automorphic lift, in which
 the paired kernels are geodesic moments of the Eisenstein series, with a
 verified exact formula for the first Laguerre expression of \(\xi\). Its
 [checks](numerics/README.md#claude-review-of-the-active-directions) accompany
-it. No folder was moved or created.
->>>>>>> f2e4b17 (Reviews from Claude and new directions)
-=======
+it. At the time of that review, no folder was moved or created.
 
 ## Rank-two addition to paired kernels
 
@@ -81,7 +90,7 @@ This closes the independent positive coset factorization attempt, while
 the complete kernels and their stationary signs remain open. Their
 cross-coset cancellation must be retained in any new estimate. See the
 [source and execution record](numerics/RANK_TWO_TO_PAIRED_KERNEL_EXECUTION_20261013.json)
-and the [09 numerical guide](../active/09_rank_two_theta_addition/numerics/README.md).
+and the [09 numerical guide](../inactive/09_rank_two_theta_addition/numerics/README.md).
 This continuation uses `gpt-6-astra`, reasoning effort **ultra**.
 
 ## Further angular continuation
@@ -97,4 +106,3 @@ the exact remaining gap and provides the question for a separate chat.
 Its [execution record](../active/02_angular_jacobi_gluing/numerics/ANGULAR_CONTINUATION_EXECUTION_20261013.json)
 distinguishes analytic bounds, control sources and outward genuine-theta
 checks. Recorded configuration: `gpt-6-astra`, effort **ultra**.
->>>>>>> 40f4385 (Work on rank two theta addition)

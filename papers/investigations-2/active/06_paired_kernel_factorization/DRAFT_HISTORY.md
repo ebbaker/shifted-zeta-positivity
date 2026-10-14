@@ -13,3 +13,11 @@
   outward replay certifies both folded signs at `t=0,x=60` and both
   raw same-parity signs at `t=x=0`; even reflection retains the raw
   negative zero-frequency values.
+
+- **2026-10-13 — Qualified portfolio consolidation.** Prepared for Edward
+  Baker with substantial LLM assistance by `gpt-6-astra`, effort **ultra**.
+  The [current disposition](README.md) preserves this investigation's
+  completed results and explicit continuation gate. See the
+  [implementation record](../../PORTFOLIO_CONSOLIDATION_20261013.md) and
+  [accepted review](../../brainstorm/reviews/PORTFOLIO_CLOSURE_REVIEW_CODEX_20261013.md).
+  No mathematical result was promoted beyond its recorded scope.

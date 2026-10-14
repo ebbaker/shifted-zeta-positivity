@@ -30,3 +30,21 @@ Recorded configuration for this entry: `gpt-6-astra` (Codex), effort **ultra**.
   [self-contained brainstorm brief](../active/02_angular_jacobi_gluing/reviews/CONTINUATION_AND_BRAINSTORM_BRIEF_20261013.md).
   Outward checks and root replay pass; no physical stationary sign or
   new collision-exclusion region established. Same recorded model and effort.
+
+- **2026-10-13 — Closure recommendation review.** Reviewed the nineteen
+  programs against the angular and paired-kernel continuations at checkout
+  `4acfa9c`. Recommended consolidation with narrower closure claims; preserved
+  02's full-gluing gate and 09/06's distinct obstruction records, and corrected
+  the interpretation of 19's near-collision witness margin. Angular and
+  paired-kernel replays match retained records except runtime. Saved the
+  [review](reviews/PORTFOLIO_CLOSURE_REVIEW_CODEX_20261013.md). No investigation
+  moved or closed. Model `gpt-6-astra`, effort **ultra**.
+
+- **2026-10-13 — Implemented qualified consolidation.** Moved nine whole
+  program folders to inactive; ten retained homes now distinguish current
+  tasks, pauses, destinations, tools and reading. Preserved 09/06 results
+  and reopening gates, reconciled portfolio guides, and corrected 19's
+  branch-time and witness-margin claims. See the
+  [implementation record](../PORTFOLIO_CONSOLIDATION_20261013.md) and
+  [accepted review](reviews/PORTFOLIO_CLOSURE_REVIEW_CODEX_20261013.md).
+  Prepared for Edward Baker with LLM assistance; `gpt-6-astra`, **ultra**.

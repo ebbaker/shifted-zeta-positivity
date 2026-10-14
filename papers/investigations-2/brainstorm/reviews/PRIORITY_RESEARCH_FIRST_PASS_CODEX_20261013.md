@@ -162,7 +162,7 @@ to direction 03.
 
 ## 17: an actual certificate and a negative cost comparison
 
-The [genuine-theta pilot](../../active/17_spacetime_collision_degree/notes/1_GENUINE_THETA_BOUNDARY_PILOT_20261013.md)
+The [genuine-theta pilot](../../inactive/17_spacetime_collision_degree/notes/1_GENUINE_THETA_BOUNDARY_PILOT_20261013.md)
 uses the compact rectangle
 \[
 [0,0.05]\times[8,12]

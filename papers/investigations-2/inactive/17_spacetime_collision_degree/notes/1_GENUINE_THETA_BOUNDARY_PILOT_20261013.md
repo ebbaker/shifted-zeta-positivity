@@ -169,8 +169,8 @@ unbounded-height coverage, positive-time threshold, or RH consequence.
 Reproduce from the repository root:
 
 ```sh
-python3 papers/investigations-2/active/17_spacetime_collision_degree/numerics/check_collision_degree.py
-python3 papers/investigations-2/active/17_spacetime_collision_degree/numerics/check_genuine_theta_boundary_pilot.py --record /tmp/genuine-theta-boundary-pilot.json
+python3 papers/investigations-2/inactive/17_spacetime_collision_degree/numerics/check_collision_degree.py
+python3 papers/investigations-2/inactive/17_spacetime_collision_degree/numerics/check_genuine_theta_boundary_pilot.py --record /tmp/genuine-theta-boundary-pilot.json
 ```
 
 All generated retained files are small. No large archive or manuscript

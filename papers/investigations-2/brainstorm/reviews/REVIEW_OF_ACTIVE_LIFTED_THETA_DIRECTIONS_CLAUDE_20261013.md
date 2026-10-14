@@ -15,7 +15,7 @@ and its [record](../numerics/ACTIVE_DIRECTIONS_REVIEW_CHECKS_CLAUDE_20261013.jso
 and its seed records; the seventeen initial programs in [active](../../active/README.md);
 the [GPT-6-astra review](ACTIVE_DIRECTIONS_REVIEW_CODEX_20261013.md), its
 [angular seeds](../../active/02_angular_jacobi_gluing/notes/ANGULAR_GLUING_AND_RIGIDITY_REVIEW_SEEDS_20261013.md)
-and the new [project 17](../../active/17_spacetime_collision_degree/notes/INITIAL_RESEARCH_PROGRAM_20261013.md);
+and the new [project 17](../../inactive/17_spacetime_collision_degree/notes/INITIAL_RESEARCH_PROGRAM_20261013.md);
 the [13 October planning conversation](../../chat-histories/0002_2026-10-13T12-54-02Z_review-newman-certificate-audit.json)
 and the [GPT-6-astra conversation](../../formal_replay_crosswalk/chat-histories/0003_2026-10-13T17-10-52Z_review-investigation-directions.json);
 upstream [Heat Note 14](../../../quasi-rh-exponent-descent/newman_collisions/notes/14_DIMENSIONAL_REDUCTION_AND_SUPERSYMMETRIC_HEAT_PROGRAM_20261010.md),

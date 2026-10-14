@@ -5,7 +5,7 @@ Recorded model: `gpt-6-astra` (Codex); reasoning effort **ultra**.
 This is an internal analytic continuation, not independent mathematical
 validation. It develops the first bounded task in the
 [06 program](INITIAL_RESEARCH_PROGRAM_20261013.md) using the exact
-[09 two-coset reduction](../../09_rank_two_theta_addition/notes/1_COMPLETE_TWO_COSET_REDUCTION_20261013.md).
+[09 two-coset reduction](../../../inactive/09_rank_two_theta_addition/notes/1_COMPLETE_TWO_COSET_REDUCTION_20261013.md).
 
 **Result.** The modular-folded even-even lattice coset has a negative
 Fourier response at all sufficiently large real frequencies, for both
@@ -271,9 +271,9 @@ autocorrelations for either one. This inference uses a **negative
 Fourier value**, not a negative source-kernel value. No explicit finite
 Gram minor or claim of a two-point obstruction is needed or supplied.
 
-The [outward replay](../../09_rank_two_theta_addition/numerics/check_rank_two_to_paired.py)
+The [outward replay](../../../inactive/09_rank_two_theta_addition/numerics/check_rank_two_to_paired.py)
 also supplies an effective witness at `t=0,x=60`, hence kernel Fourier
-frequency `2x=120`. Its [small record](../../09_rank_two_theta_addition/numerics/RANK_TWO_TO_PAIRED_RECORD_20261013.json)
+frequency `2x=120`. Its [small record](../../../inactive/09_rank_two_theta_addition/numerics/RANK_TWO_TO_PAIRED_RECORD_20261013.json)
 gives, with the endpoints below rounded outwards,
 
 \[

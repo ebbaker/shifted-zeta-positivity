@@ -1,5 +1,10 @@
 # Initial research program for the rank-two automorphic lift
 
+**Allocation update, 13 October 2026.** Prepared for Edward Baker with
+substantial LLM assistance by `gpt-6-astra` (Codex), effort **ultra**.
+The current origin and A4 gate below incorporate the accepted consolidation;
+the original Claude provenance and completed identities are retained.
+
 13 October 2026. Prepared for Edward Baker with LLM assistance.
 Model: Claude Opus 5.5 (configured identifier `claude-opus-5-5`; the serving
 model may differ), Claude Cowork, reasoning effort **max**.
@@ -11,13 +16,12 @@ collision exclusion, zero-free region or RH implication is claimed.
 
 This is direction A of the
 [Claude review](../../../brainstorm/reviews/REVIEW_OF_ACTIVE_LIFTED_THETA_DIRECTIONS_CLAUDE_20261013.md)
-(§3). It absorbs card 09 (rank-two theta addition), and the
-[recommendation note](../../CLOSE_AND_MERGE_RECOMMENDATIONS_CLAUDE_20261013.md)
-proposes folding 07 (divisor transport) and 15 (adelic compatibility) into
-it. It also executes the next allocation of the
-[Codex first pass](../../../brainstorm/reviews/PRIORITY_RESEARCH_FIRST_PASS_CODEX_20261013.md),
-which recommends "the bounded 09-to-06 calculation" once the angular gate
-of 02 is not met.
+(§3). Following the accepted consolidation, 07 and 15 are organized
+under this program, with their unfinished cutoff and compatibility tasks
+preserved. [09's completed reduction](../../../inactive/09_rank_two_theta_addition/README.md)
+is an input shared with [06](../../06_paired_kernel_factorization/README.md);
+its folded endpoint ledger and negative sector results remain distinct
+from this program's raw-source Hecke identity.
 
 The physical quadratic observations of the heat flow are pair transforms of
 \(\Phi(u_1)\Phi(u_2)\). In volume and shape coordinates \(u_{1,2}=s\pm r\),
@@ -49,7 +53,8 @@ through the Newman deformation.
 2. **A2 (done).** Write the Hecke correspondence at 2 as an exact identity
    between the imaginary-axis geodesic and the geodesic
    \(\operatorname{Re}z=\tfrac12\), and in physical form at every Newman
-   time. This is card 09's two-coset identity.
+   time. This is the raw-source Hecke form of the parity relation; the
+   separate folded 09-to-06 reduction and its endpoints remain preserved.
 3. **A3 (done).** Control test: express the Euler-factor controls
    \(\Phi_{c,p}\) of [direction 19](../../19_euler_factor_controls/README.md)
    in the lift and determine which Hecke relations they satisfy.
@@ -73,11 +78,13 @@ itself prove \(\Lambda\le t_0\).
 
 ## Stop rule
 
-If, after A4, the stationary targets reduce to positivity of a folded cusp
-moment with no positive-definite structure (no expression as
-\(\langle f,f\rangle\), no positive Selberg-type transform, no
-Hermite–Biehler pair) and no saving beyond the known main-term/remainder
-structure, close 18 with Note 1 as its identity record.
+A4 must declare its time-height domain and comparator, retain the actual
+stationary constraints, and account for both Laguerre targets and every
+higher-mode, endpoint and tail payment. A favorable first mode alone is
+insufficient. A new complete signed estimate, justified positive structure,
+or demonstrated saving can support continuation. If A4 yields only another
+representation or the known main-term/remainder structure, stop with Note 1
+as the identity record. W1 remains deferred.
 
 ## Literature anchors
 
