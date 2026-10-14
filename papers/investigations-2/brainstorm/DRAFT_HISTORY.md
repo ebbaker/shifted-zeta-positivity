@@ -48,3 +48,12 @@ Recorded configuration for this entry: `gpt-6-astra` (Codex), effort **ultra**.
   [implementation record](../PORTFOLIO_CONSOLIDATION_20261013.md) and
   [accepted review](reviews/PORTFOLIO_CLOSURE_REVIEW_CODEX_20261013.md).
   Prepared for Edward Baker with LLM assistance; `gpt-6-astra`, **ultra**.
+
+- **2026-10-13 — Post-consolidation brainstorming.** Saved the
+  [candidate assessment](reviews/PATHS_FORWARD_AFTER_CONSOLIDATION_CODEX_20261013.md):
+  a matched 01/18 comparison, a restricted 02 gluing multiplier, and a
+  local implicit-function route to 19's collision expansion. Retained
+  08 as a separate arithmetic option and identified heat invariance as
+  a limitation of a recent source-concavity result. Proposals only; no
+  program reopened or numerical certificate claimed. Prepared for Edward
+  Baker with LLM assistance; `gpt-6-astra`, **ultra**.

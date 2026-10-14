@@ -12,6 +12,16 @@ separate arithmetic option. The dated reviews below retain the sequence
 of discoveries and earlier allocations; they do not override current status.
 See the [implementation record](../PORTFOLIO_CONSOLIDATION_20261013.md).
 
+## Next research candidates
+
+The [post-consolidation brainstorm](reviews/PATHS_FORWARD_AFTER_CONSOLIDATION_CODEX_20261013.md)
+compares a matched 01/18 signed-remainder test, a restricted full-gluing
+certificate in 02, a local collision-branch theorem in 19, and the separate
+08 arithmetic option. It also screens a recent nonlinear theta-concavity
+lead. These are proposed tests; the current allocation and reopening gates
+above remain unchanged. Prepared for Edward Baker with LLM assistance by
+`gpt-6-astra`, reasoning effort **ultra**.
+
 ## Research history
 
 13 October 2026. Prepared for Edward Baker with substantial LLM assistance.
