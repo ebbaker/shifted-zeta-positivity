@@ -8,8 +8,13 @@ code, and its findings were then applied and rechecked by the drafting
 instance. This is an internal review, not independent specialist
 validation.
 
+<<<<<<< HEAD
 Subject: the [manuscript source](../manuscript/euler_factor_controls.tex)
 (compiled PDFs are not stored), the
+=======
+Subject: the [manuscript](../manuscript/euler_factor_controls.pdf)
+([source](../manuscript/euler_factor_controls.tex)), the
+>>>>>>> 94745f3 (Merged work from ChatGPT)
 [certificate program](../numerics/check_euler_control_witnesses_claude_20261014.py)
 and its [record](../numerics/EULER_CONTROL_WITNESS_CERTIFICATES_20261014.json).
 
@@ -83,6 +88,7 @@ and its [record](../numerics/EULER_CONTROL_WITNESS_CERTIFICATES_20261014.json).
 5. The program itself: an independent implementation of the certificate,
    preferably with a different interval library, would be the strongest
    check.
+<<<<<<< HEAD
 
 ## Addendum: comparison with Note 2 (14 October 2026)
 
@@ -116,3 +122,5 @@ The value of \(\mathscr L_0\) also agrees with the centre of Note 2's
 every displayed digit. The two programs share no code, arithmetic library
 or quadrature rule, so the agreement checks both. The comparison was run
 under Python 3.13.16 and 3.10.12 with identical output.
+=======
+>>>>>>> 94745f3 (Merged work from ChatGPT)

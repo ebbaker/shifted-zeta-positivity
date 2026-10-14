@@ -10,6 +10,7 @@ Claude provenance above is retained. This revision distinguishes tracked
 collision times from the global Newman constant and corrects the witness
 margin; it introduces no new numerical certificate.
 
+<<<<<<< HEAD
 ## Certified raw witness, 14 October 2026
 
 Prepared for Edward Baker with LLM assistance by `gpt-6-astra` (Codex),
@@ -40,6 +41,11 @@ at 192 bits with five retained theta terms confirmed the sign and the
 same rational display bracket. This establishes one lower bound; it does
 not establish any global collision-time equality.
 
+<<<<<<< HEAD
+=======
+## Historical exploratory checker
+=======
+>>>>>>> 94745f3 (Merged work from ChatGPT)
 ## Certified witnesses for the manuscript (14 October 2026)
 
 Prepared for Edward Baker with LLM assistance. Model: Claude Opus 5.5
@@ -76,6 +82,7 @@ inexact operations.
   \(m_0(0)=\xi(\tfrac12)/8\) against an independent value.
 
 The record is identical, apart from timing and the Python version, under
+<<<<<<< HEAD
 Python 3.10.12 and 3.13.16. The [manuscript](../manuscript/euler_factor_controls.tex)
 describes the method; the [internal verification](../reviews/1_MANUSCRIPT_AND_CERTIFICATE_VERIFICATION_CLAUDE_20261014.md)
 records the rounding defect found in, and removed from, the first version.
@@ -88,6 +95,14 @@ Evaluated at Note 2's point, this program's enclosures of
 inside Note 2's. The verification's addendum gives the command and values.
 
 ## Historical exploratory checker (Note 1, 13 October 2026)
+=======
+Python 3.10.12 and 3.13.16. The [manuscript](../manuscript/euler_factor_controls.pdf)
+describes the method; the [internal verification](../reviews/1_MANUSCRIPT_AND_CERTIFICATE_VERIFICATION_CLAUDE_20261014.md)
+records the rounding defect found in, and removed from, the first version.
+
+## Floating-point checks of Note 1 (13 October 2026)
+>>>>>>> dce5643 (Manuscript for euler control)
+>>>>>>> 94745f3 (Merged work from ChatGPT)
 
 Run, in this directory:
 
@@ -113,9 +128,20 @@ and exits nonzero if any check fails.
   numerical \(T_0(1/2,p)\) for all primes \(p\le47\).
 
 Part N uses contour-shifted trapezoid quadrature and Newton iteration. It
+<<<<<<< HEAD
 is numerical evidence, not an interval certificate. The two outward
 checkers above certify witnesses without changing this record. Keep large
 regenerable data outside Git
+=======
+<<<<<<< HEAD
+is numerical evidence, not an interval certificate. The separate outward
+checker above certifies one witness without changing this record. Keep
+large regenerable data outside Git
+=======
+is numerical evidence, not an interval certificate; the certified
+witnesses come from the 14 October program above. Keep large regenerable data outside Git
+>>>>>>> dce5643 (Manuscript for euler control)
+>>>>>>> 94745f3 (Merged work from ChatGPT)
 under [LARGE_FILES.md](../../../../../LARGE_FILES.md).
 
 ## Legacy labels and what the record establishes
