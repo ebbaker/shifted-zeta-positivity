@@ -4,11 +4,22 @@
 
 Implementation: 13 October 2026. Prepared for Edward Baker with substantial LLM assistance. Recorded model: `gpt-6-astra` (Codex), reasoning effort **ultra**. The dated initial programs and earlier readiness labels are historical; this status governs the current allocation.
 
-**Status: active for one bounded A4 continuation.**
+**Status: paused after the bounded matched A4 pilot.**
+
+Update: 14 October 2026, prepared for Edward Baker with substantial LLM
+assistance by `gpt-6-astra`, effort **ultra**. The
+[matched pilot](notes/2_MATCHED_STATIONARY_SIGNED_MODE_PILOT_20261014.md)
+pays complete higher-mode and domain tails below the numerical target,
+but the finite signed cubature exhausts its declared work budget for both
+stationary targets. The full absolute fallback does not certify either
+sign. The [direct-source comparator](../../brainstorm/reviews/MATCHED_01_18_AND_19_RESULTS_CODEX_20261014.md)
+certifies both; no matched saving or new complete signed estimate was
+obtained. This stops the tested implementation, not all automorphic
+methods.
 
 The [A1–A3 identity record](notes/1_CUSP_FORMULA_HECKE_AND_CONTROLS_20261013.md) is preserved. This program receives [07](../../inactive/07_divisor_product_transport/README.md), [09](../../inactive/09_rank_two_theta_addition/README.md) and [15](../../inactive/15_adelic_automorphic_compatibility/README.md), with their outstanding obligations; the complete physical target remains in [06](../06_paired_kernel_factorization/README.md). Here the cusp kernel is the nonconstant Fourier part of an Eisenstein series, not an established positive cuspidal form. The completed 09 reduction and its sector obstructions remain separate evidence.
 
-**Continuation and stop gate:** [A4](notes/INITIAL_RESEARCH_PROGRAM_20261013.md) must declare a time-height domain and comparator, pay all remaining modes and tails, impose the actual stationary constraints, and address both Laguerre targets. A controlled complete signed estimate or positive-definite structure can justify continuation. A favorable first mode alone cannot. If A4 supplies neither such an estimate nor a demonstrated saving, stop with the identity record. Use [19](../19_euler_factor_controls/README.md) as a shared falsification screen; finite-prime obstructions apply only with additional hypotheses also shared by its controls.
+**Preserved reopening and stop gate:** [A4](notes/INITIAL_RESEARCH_PROGRAM_20261013.md) must declare a time-height domain and comparator, pay all remaining modes and tails, impose the actual stationary constraints, and address both Laguerre targets. A controlled complete signed estimate or positive-definite structure can justify continuation. A favorable first mode alone cannot. If A4 supplies neither such an estimate nor a demonstrated saving, stop with the identity record. Use [19](../19_euler_factor_controls/README.md) as a shared falsification screen; finite-prime obstructions apply only with additional hypotheses also shared by its controls.
 
 ## Preserved research record
 

@@ -8,8 +8,8 @@ code, and its findings were then applied and rechecked by the drafting
 instance. This is an internal review, not independent specialist
 validation.
 
-Subject: the [manuscript](../manuscript/euler_factor_controls.pdf)
-([source](../manuscript/euler_factor_controls.tex)), the
+Subject: the [manuscript source](../manuscript/euler_factor_controls.tex)
+(compiled PDFs are not stored), the
 [certificate program](../numerics/check_euler_control_witnesses_claude_20261014.py)
 and its [record](../numerics/EULER_CONTROL_WITNESS_CERTIFICATES_20261014.json).
 
@@ -83,3 +83,36 @@ and its [record](../numerics/EULER_CONTROL_WITNESS_CERTIFICATES_20261014.json).
 5. The program itself: an independent implementation of the certificate,
    preferably with a different interval library, would be the strongest
    check.
+
+## Addendum: comparison with Note 2 (14 October 2026)
+
+Claude Opus 5.5 (`claude-opus-5-5`; the serving model may differ), Claude
+Cowork, reasoning effort **max**, after merging this work with the Codex
+line of work.
+
+[Note 2](../notes/2_CERTIFIED_EULER_FACTOR_WITNESS_20261014.md) certifies
+\(\Lambda_{1/2,41}>1/5\) at \((c,p,t,x)=(\tfrac12,41,\tfrac15,\tfrac{168413}{100000})\)
+with Arb ball arithmetic and validated quadrature of a rearranged
+integral. The manuscript's program was evaluated at the same point, with
+step \(h=1/64\) and the \(h=1/32\) consistency check. From `numerics/`:
+
+```sh
+python3 -B -c "import sys; sys.path.insert(0, '.'); import check_euler_control_witnesses_claude_20261014 as C; from decimal import Decimal as D; r = C.certify('1/2', 41, '0.2', '1.68413', D(1)/64, D(1)/32); print(*(k + ' ' + ' '.join(r[k]) for k in ('H', 'H_x', 'H_xx', 'L0')), sep='\n')"
+```
+
+Each of its enclosures lies inside the corresponding Note 2 enclosure,
+compared exactly against the dyadic endpoints stored in
+`EULER_FACTOR_WITNESS_RECORD_20261014.json`:
+
+| Quantity | Value (this program) | Width here | Width in Note 2 | Difference of centres |
+| --- | --- | --- | --- | --- |
+| \(H\) | \(2.48694907959608368273107572369\ldots\cdot10^{-5}\) | \(2.9\cdot10^{-51}\) | \(5.9\cdot10^{-29}\) | \(1.1\cdot10^{-35}\) |
+| \(H'\) | \(-1.28552501616067574161657072468\ldots\cdot10^{-6}\) | \(4.0\cdot10^{-51}\) | \(1.5\cdot10^{-28}\) | \(8.2\cdot10^{-35}\) |
+| \(H''\) | \(0.213112372490154397876305453984\ldots\) | \(5.9\cdot10^{-51}\) | \(4.1\cdot10^{-28}\) | \(1.1\cdot10^{-32}\) |
+| \(\mathscr L_0\) | \(-5.29999453357470506705202763817\ldots\cdot10^{-6}\) | \(6.2\cdot10^{-52}\) | \(1.3\cdot10^{-29}\) | \(2.7\cdot10^{-36}\) |
+
+The value of \(\mathscr L_0\) also agrees with the centre of Note 2's
+192-bit replay, \(-5.2999945335747050670520276381688873\cdot10^{-6}\), in
+every displayed digit. The two programs share no code, arithmetic library
+or quadrature rule, so the agreement checks both. The comparison was run
+under Python 3.13.16 and 3.10.12 with identical output.

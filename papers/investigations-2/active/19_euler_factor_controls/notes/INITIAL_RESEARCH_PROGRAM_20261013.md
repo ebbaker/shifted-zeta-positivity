@@ -1,5 +1,12 @@
 # Initial research program for the Euler-factor controls
 
+**Status update, 14 October 2026:** the fixed outward witness is now
+[certified in Note 2](2_CERTIFIED_EULER_FACTOR_WITNESS_20261014.md), proving
+`Lambda_(1/2,41)>0.2`. Prepared for Edward Baker with LLM assistance by
+`gpt-6-astra`, effort **ultra**. The dated plans and numerical claims below
+retain their original scope; the local expansion remains formal and no
+tracked collision is identified with the global constant.
+
 13 October 2026. Prepared for Edward Baker with LLM assistance.
 Model: Claude Opus 5.5 (configured identifier `claude-opus-5-5`; the serving
 model may differ), Claude Cowork, reasoning effort **max**.

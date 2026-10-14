@@ -10,6 +10,36 @@ Claude provenance above is retained. This revision distinguishes tracked
 collision times from the global Newman constant and corrects the witness
 margin; it introduces no new numerical certificate.
 
+## Certified raw witness, 14 October 2026
+
+Prepared for Edward Baker with LLM assistance by `gpt-6-astra` (Codex),
+reasoning effort **ultra**.
+
+The new [outward checker](certify_euler_factor_witness.py) proves
+\(\Lambda_{1/2,41}>1/5\) at \(x=168413/100000\). The
+[execution record](EULER_FACTOR_WITNESS_RECORD_20261014.json) contains
+exact dyadic endpoints, the source hash, all three jet enclosures, and
+separate theta-index and complete source/control-shift tail payments.
+The raw \(\mathscr L_0\) lies strictly between
+\(-0.000005299994533574706\) and
+\(-0.000005299994533574704\). The
+[proof note](../notes/2_CERTIFIED_EULER_FACTOR_WITNESS_20261014.md)
+derives the integral and every analytic tail bound.
+
+Requires `python-flint` (tested with version 0.9.0 and Python 3.10.0).
+From this directory:
+
+```sh
+python3 -B certify_euler_factor_witness.py --output /tmp/euler-factor-witness.json
+```
+
+No external data files or machine-specific paths are needed. The script
+prints a small JSON record and fails unless all analytic hypotheses,
+finite enclosures, and the strictly negative raw sign pass. A second run
+at 192 bits with five retained theta terms confirmed the sign and the
+same rational display bracket. This establishes one lower bound; it does
+not establish any global collision-time equality.
+
 ## Certified witnesses for the manuscript (14 October 2026)
 
 Prepared for Edward Baker with LLM assistance. Model: Claude Opus 5.5
@@ -46,11 +76,18 @@ inexact operations.
   \(m_0(0)=\xi(\tfrac12)/8\) against an independent value.
 
 The record is identical, apart from timing and the Python version, under
-Python 3.10.12 and 3.13.16. The [manuscript](../manuscript/euler_factor_controls.pdf)
+Python 3.10.12 and 3.13.16. The [manuscript](../manuscript/euler_factor_controls.tex)
 describes the method; the [internal verification](../reviews/1_MANUSCRIPT_AND_CERTIFICATE_VERIFICATION_CLAUDE_20261014.md)
 records the rounding defect found in, and removed from, the first version.
 
-## Floating-point checks of Note 1 (13 October 2026)
+The two certificate programs are independent. Note 2 integrates a
+rearranged integral with Arb's validated quadrature; this program uses
+decimal intervals and the trapezoid rule with a strip error bound.
+Evaluated at Note 2's point, this program's enclosures of
+\(H,H',H''\) and \(\mathscr L_0\), each narrower than \(10^{-50}\), lie
+inside Note 2's. The verification's addendum gives the command and values.
+
+## Historical exploratory checker (Note 1, 13 October 2026)
 
 Run, in this directory:
 
@@ -76,8 +113,9 @@ and exits nonzero if any check fails.
   numerical \(T_0(1/2,p)\) for all primes \(p\le47\).
 
 Part N uses contour-shifted trapezoid quadrature and Newton iteration. It
-is numerical evidence, not an interval certificate; the certified
-witnesses come from the 14 October program above. Keep large regenerable data outside Git
+is numerical evidence, not an interval certificate. The two outward
+checkers above certify witnesses without changing this record. Keep large
+regenerable data outside Git
 under [LARGE_FILES.md](../../../../../LARGE_FILES.md).
 
 ## Legacy labels and what the record establishes

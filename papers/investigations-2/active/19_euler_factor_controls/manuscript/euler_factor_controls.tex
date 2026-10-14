@@ -561,7 +561,10 @@ a point near the real part of the lowest off-line pair.}
 For $p=41$ the pair is close to its collision. Tracking gives
 $T_0(\tfrac12,41)\approx0.2001167$ (Section~\ref{sec:numerics}). The
 normalized witness is large, but the raw value is only $-5.3\cdot10^{-6}$, as
-Remark~\ref{rem:margin} predicts. For $p\ge43$ the lowest pair has already
+Remark~\ref{rem:margin} predicts. A separate certificate of this case, with
+different arithmetic and quadrature, is described in the acknowledgements;
+at its point $x=1.68413$ the method of this section gives enclosures inside
+those of the separate certificate. For $p\ge43$ the lowest pair has already
 collided by $t=0.2$, so the bound is certified at $t=0.1787854$ instead.
 
 \subsection{Method}
@@ -1035,7 +1038,14 @@ were introduced in an internal review of the investigation portfolio in the
 repository \texttt{ebbaker/shifted-zeta-positivity}, and their first study is
 recorded in \texttt{papers/investigations-2/active/19\_euler\_factor\_controls}.
 An internal review there by GPT-6 Astra (Codex) corrected two points of that
-first study, and those corrections are used here. Tracked collision times
+first study, and those corrections are used here. GPT-6 Astra also certified
+$\Lambda_{1/2,41}>0.2$ independently, at $x=168413/100000$, with Arb ball
+arithmetic (through python-flint) and validated quadrature of a rearranged
+integral; this is Note~2 of the same folder. Evaluated at that point, the
+program of Section~\ref{sec:certified} gives enclosures of $H$, $H'$, $H''$
+and $\Lag$, of widths below $10^{-50}$, that lie inside the enclosures of
+Note~2, whose widths are below $10^{-27}$. The two programs share no code,
+arithmetic library or quadrature rule. Tracked collision times
 are numerical estimates of the last collision of a branch, not values of
 $\Lambda_{c,p}$. Near an isolated collision the raw witness margin shrinks,
 as in Remark~\ref{rem:margin}.

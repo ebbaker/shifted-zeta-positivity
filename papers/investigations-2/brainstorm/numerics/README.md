@@ -135,3 +135,23 @@ at `t=0,x=60` for the positive folded split and at `t=x=0` for the smooth
 raw split. Exact algebra and finite modular calibrations are separately
 labelled. No sign for the complete kernels is inferred from these sector
 obstructions.
+
+## Matched stationary baseline and execution, 14 October 2026
+
+Prepared for Edward Baker with LLM assistance by `gpt-6-astra`, effort **ultra**.
+The [checker](check_matched_stationary_baseline.py) and
+[record](MATCHED_STATIONARY_BASELINE_RECORD_20261014.json) certify two
+fixed-time stationary roots and both conditional Laguerre signs. The
+[proof note](../notes/MATCHED_STATIONARY_BASELINE_20261014.md) pays all
+source/index tails and the parameter Taylor remainder. Requires
+`python-flint==0.9.0`; from the repository root:
+
+```sh
+python3 -B papers/investigations-2/brainstorm/numerics/check_matched_stationary_baseline.py \
+  --record /tmp/MATCHED_STATIONARY_BASELINE_RECORD_20261014.json
+```
+
+The [execution manifest](MATCHED_01_18_AND_19_EXECUTION_20261014.json)
+and [shared review](../reviews/MATCHED_01_18_AND_19_RESULTS_CODEX_20261014.md)
+link the matched 01/18 records and 19's completed outward witness. The
+baseline is a comparator, not a new mechanism for either candidate.

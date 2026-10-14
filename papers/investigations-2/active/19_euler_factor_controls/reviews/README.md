@@ -25,7 +25,18 @@ growing absolute margin. See the [numerical interpretation guide](../numerics/RE
 The correction changes no numerical record and supplies no certified
 positive-time bound.
 
+## Current execution review, 14 October 2026
+
+The [matched 01/18 and certified 19 review](../../../brainstorm/reviews/MATCHED_01_18_AND_19_RESULTS_CODEX_20261014.md)
+records the completed experiment, root replays and current stopping gates.
+Prepared for Edward Baker with LLM assistance by `gpt-6-astra`, effort
+**ultra**. Earlier pending-task and uncertified-witness descriptions are
+historical; the linked execution and the main README give current status.
+
+## Manuscript verification, 14 October 2026
+
 The [internal verification of the manuscript](1_MANUSCRIPT_AND_CERTIFICATE_VERIFICATION_CLAUDE_20261014.md)
-(14 October 2026; Claude Opus 5.5, `claude-opus-5-5`, Claude Cowork,
-effort **max**) checks the manuscript, its certificate program and record.
-It is internal; independent specialist review is still outstanding.
+(Claude Opus 5.5, `claude-opus-5-5`, Claude Cowork, effort **max**) checks
+the manuscript, its certificate program and record. Its addendum compares
+the program with Note 2's independent certificate. It is internal;
+independent specialist review is still outstanding.
