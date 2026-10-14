@@ -10,6 +10,7 @@ The [inactive index](inactive/README.md) contains **14 folders**: five older
 investigations and nine newly consolidated, completed or dormant programs.
 Inactive status does not assert mathematical impossibility.
 
+ChatGPT:
 The [14 October matched experiment and witness](brainstorm/reviews/MATCHED_01_18_AND_19_RESULTS_CODEX_20261014.md)
 are complete (`gpt-6-astra`, effort **ultra**, prepared for Edward Baker with
 LLM assistance). [01](active/01_complete_cutoff_reflection/README.md) and
@@ -19,8 +20,28 @@ stationary-sign certificate or matched saving. Their completed identities,
 new bounded results and explicit reopening gates are preserved.
 [19](active/19_euler_factor_controls/README.md) now has an outward raw
 Laguerre witness proving `Lambda_(1/2,41)>0.2`; it remains the shared
+<<<<<<< HEAD
+control screen. Its
+[manuscript](active/19_euler_factor_controls/manuscript/euler_factor_controls.tex)
+extends the certified bound to every prime `p<=41`, adds an asymptotic
+lower bound, and awaits independent review (Claude Opus 5.5,
+`claude-opus-5-5`, Claude Cowork, effort **max**).
+[02](active/02_angular_jacobi_gluing/README.md) remains paused and eligible
+for its focused full-gluing candidate search.
+=======
 control screen. [02](active/02_angular_jacobi_gluing/README.md) remains
 paused and eligible for its focused full-gluing candidate search.
+Claude:
+Current research allocation is one bounded continuation in
+[18](active/18_rank_two_automorphic_lift/README.md) and, in
+[19](active/19_euler_factor_controls/README.md), review of the
+Euler-factor-control manuscript, whose outward witness certificates were
+completed on 14 October 2026 (status update by Claude Opus 5.5,
+`claude-opus-5-5`, Claude Cowork, effort **max**).
+[01](active/01_complete_cutoff_reflection/README.md) and
+[02](active/02_angular_jacobi_gluing/README.md) are paused at explicit gates;
+02 remains eligible for its focused full-gluing candidate search.
+>>>>>>> 94745f3 (Merged work from ChatGPT)
 [08](active/08_cusp_unit_sector_saving/README.md) remains a separate optional
 arithmetic track. The remaining retained homes organize downstream targets,
 tools and reading. The indexes and individual READMEs state the conditions
@@ -49,7 +70,11 @@ for renewed work.
 - [19's outward witness](active/19_euler_factor_controls/notes/2_CERTIFIED_EULER_FACTOR_WITNESS_20261014.md)
   proves `Lambda_(1/2,41)>0.2`. Numerical lowest-pair times `T_0` remain
   distinct from the global constant; the old table and formal expansion
-  are not promoted to global claims.
+  are not promoted to global claims. 19's
+  [manuscript](active/19_euler_factor_controls/manuscript/euler_factor_controls.tex)
+  certifies `Lambda_(1/2,p)>0.2` for every prime `p<=41` with an
+  independent program, which agrees with the outward witness at its point,
+  and proves `Lambda_(c,p)>t_m-S_2 t_m^2-Q a^(-6)` with explicit `Q`.
 
 The [consolidation record](PORTFOLIO_CONSOLIDATION_20261013.md) explains the
 relocations and surviving obligations. Its [path and integrity manifest](PORTFOLIO_CONSOLIDATION_RECORD_20261013.json)

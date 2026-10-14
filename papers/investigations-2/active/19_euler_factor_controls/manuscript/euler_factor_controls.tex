@@ -1,0 +1,1163 @@
+\documentclass[11pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage{mathrsfs}
+\usepackage[margin=1in]{geometry}
+\usepackage{booktabs}
+\usepackage[colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue]{hyperref}
+\usepackage{enumitem}
+\allowdisplaybreaks
+\setlength{\emergencystretch}{2em}
+\numberwithin{equation}{section}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{lemma}[theorem]{Lemma}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\DeclareMathOperator{\Rea}{Re}
+\DeclareMathOperator{\Ima}{Im}
+\DeclareMathOperator{\arccosh}{arccosh}
+\newcommand{\RH}{\mathrm{RH}}
+\newcommand{\dd}{\,d}
+\newcommand{\Lag}{\mathscr L_0}
+\newcommand{\Sh}{\mathcal S^\sharp}
+
+\title{Euler-Factor Controls for the de Bruijn--Newman Constant:\protect\\
+Certified and Asymptotic Lower Bounds}
+\author{Drafted for Edward Baker}
+\date{14 October 2026}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+For a prime $p$ and $c>0$ we change the Riemann $\xi$-function at one
+Euler factor. In the Newman normalization this replaces the Riemann kernel
+$\Phi$ by $\Phi_{c,p}=\Phi+\tfrac c2[\Phi(\cdot+a)+\Phi(\cdot-a)]$ with
+$a=\tfrac12\log p$, and the time-zero transform $H_0(x)$ by
+$H_0(x)(1+c\cos ax)$. The associated Dirichlet series is
+$\zeta(s)\bigl(1+\tfrac{2\sqrt p}{c}p^{-s}+p^{1-2s}\bigr)$. It has every
+Euler factor of $\zeta$ except the one at $p$, lies in the extended Selberg
+class with conductor $p^2$, and its local factor at $p$ is tempered exactly
+when $c\ge1$. For $c\ge1$ the de Bruijn--Newman constant $\Lambda_{c,p}$
+satisfies $\Lambda_{c,p}\le0$ if and only if the Riemann hypothesis holds.
+For $0<c<1$ we prove three results.
+(i)~The heat flow of $\Phi_{c,p}$ is that of $\Phi$ plus two copies of
+$H_t$ at complex spectral shifts $x\pm2ita$.
+(ii)~By outward-rounded interval evaluation of one Laguerre expression,
+$\Lambda_{1/2,p}>0.2$ for every prime $p\le41$, and
+$\Lambda_{1/2,p}>0.1787854$ for $p=43,47$.
+(iii)~With $t_m=4\log(1/c)/(\log p)^2$ and
+$S_2=\xi''(\tfrac12)/(2\xi(\tfrac12))$,
+\[
+\Lambda_{c,p}>t_m-S_2t_m^2-\tfrac1{50}\bigl(\tfrac12\log p\bigr)^{-6}
+\qquad(\tfrac12\le c<1,\ p\ge29).
+\]
+Numerically, the lowest off-line pair of zeros collides at
+$t_m-S_2t_m^2+O(t_m^3)$. Since the best refereed upper bound is
+$\Lambda\le0.2$, these kernels show that any proof of an upper bound
+below $\Lambda_{c,p}$ must use an input that $\Phi_{c,p}$ lacks, such as
+the Euler factor of $\zeta$ at $p$ or direct information about the zeros of
+$\xi$; the controls already have non-real zeros at height $\pi/a<10$. We
+describe how the existing proofs supply such inputs. No new
+information about the zeros of $\zeta$ is claimed.
+\end{abstract}
+
+\tableofcontents
+
+\section{Introduction}\label{sec:intro}
+
+\subsection{The de Bruijn--Newman constant}
+Let
+\begin{equation}\label{eq:Phi}
+\Phi(u)=\sum_{n\ge1}\bigl(2\pi^2n^4e^{9u}-3\pi n^2e^{5u}\bigr)
+\exp\bigl(-\pi n^2e^{4u}\bigr),
+\end{equation}
+and for an even real kernel $K$ of sufficiently rapid decay put
+\begin{equation}\label{eq:Ht}
+H_t[K](z)=\int_0^\infty e^{tu^2}K(u)\cos(zu)\dd u ,\qquad
+H_t=H_t[\Phi].
+\end{equation}
+Then $H_0(z)=\tfrac18\xi(\tfrac12+\tfrac{iz}2)$, where
+$\xi(s)=\tfrac12s(s-1)\pi^{-s/2}\Gamma(s/2)\zeta(s)$, and
+$\partial_tH_t=-\partial_z^2H_t$. De Bruijn~\cite{debruijn} showed that
+real-rootedness of $H_t$ persists as $t$ increases and that $H_t$ has only
+real zeros for $t\ge\tfrac12$. Newman~\cite{newman} showed that there is a
+constant $\Lambda\in(-\infty,\tfrac12]$ such that $H_t$ has only real zeros
+exactly when $t\ge\Lambda$. The Riemann hypothesis
+is equivalent to $\Lambda\le0$. Earlier lower bounds for $\Lambda$ came
+from Lehmer pairs, pairs of unusually close zeros of
+$\zeta$~\cite{csordassmithvarga}; the witnesses of Section~\ref{sec:witness}
+also rest on the local behaviour of a single pair of zeros. Rodgers and
+Tao~\cite{rodgerstao} proved $\Lambda\ge0$; Dobner~\cite{dobner} gave a new proof and extended it to the
+extended Selberg class. On the other side, Ki, Kim and Lee~\cite{kikimlee}
+proved $\Lambda<\tfrac12$, the Polymath project~\cite{polymath} proved
+$\Lambda\le0.22$, and Platt and Trudgian~\cite{platttrudgian} proved
+$\Lambda\le0.2$, the best bound in the refereed literature. A computer-assisted
+claim $\Lambda\le0.1787854$~\cite{gomila} has not been refereed and is not
+used below. The survey~\cite{newmanwu} describes the wider landscape.
+
+\subsection{Controls}
+An upper bound $\Lambda\le t_0$ needs information about $\zeta$. One way to
+see which information is to exhibit kernels that share many properties
+with $\Phi$ but have de Bruijn--Newman constant larger than $t_0$. Analytic
+shape alone gives no upper bound: $e^{-Tu^2}\Phi(u)$ is positive, even and
+rapidly decaying, and its constant is $\Lambda+T$, because
+$H_t[e^{-Tu^2}K]=H_{t-T}[K]$. This paper studies kernels that are much closer to $\Phi$
+arithmetically: they differ from it at one Euler factor.
+
+Fix a prime $p$, write
+\begin{equation}\label{eq:a}
+a=a_p=\tfrac12\log p,
+\end{equation}
+and for $c>0$ define
+\begin{equation}\label{eq:control}
+\Phi_{c,p}(u)=\Phi(u)+\frac c2\bigl[\Phi(u+a)+\Phi(u-a)\bigr],\qquad
+H^{c,p}_t=H_t[\Phi_{c,p}],
+\end{equation}
+and let $\Lambda_{c,p}$ be the de Bruijn--Newman constant of
+$\Phi_{c,p}$ (Definition~\ref{def:Lambda}). At $t=0$,
+\begin{equation}\label{eq:t0}
+H^{c,p}_0(x)=H_0(x)\,(1+c\cos ax).
+\end{equation}
+For $0<c<1$ the multiplier lies in $[1-c,1+c]$ on the real line, so
+$H^{c,p}_0$ has exactly the real zeros of $H_0$. Its additional zeros lie
+on the lines $\Ima x=\pm\delta$, where
+\begin{equation}\label{eq:delta}
+\delta=\delta_{c,p}=\frac{\arccosh(1/c)}{a}.
+\end{equation}
+We also use
+\begin{equation}\label{eq:tm}
+\tau_0=\log\frac1c,\qquad
+t_m=\frac{\tau_0}{a^2}=\frac{4\log(1/c)}{(\log p)^2},\qquad
+S_2=\frac{\xi''(\tfrac12)}{2\,\xi(\tfrac12)}=0.0231049931154\ldots .
+\end{equation}
+The quantity $S_2$ equals $\sum_{\gamma}\gamma^{-2}$, summed over the zeros
+$\tfrac12+i\gamma$ of $\xi$ with $\Rea\gamma>0$; under RH this is the sum
+over the positive ordinates.
+
+\subsection{Results}
+The first theorem collects the structural facts (Section~\ref{sec:controls}
+and Proposition~\ref{prop:basic}).
+
+\begin{theorem}[structure]\label{thm:structure}
+Let $p$ be prime and $c>0$.
+\begin{enumerate}[label=\textup{(\alph*)}]
+\item $\Phi_{c,p}$ is positive and even, and $H^{c,p}_t$ is an even entire
+function of order at most one for every real $t$.
+\item The Dirichlet series attached to $H^{c,p}_0$ is
+$F_{c,p}(s)=\zeta(s)Q_p(p^{-s})$ with
+$Q_p(X)=1+\tfrac{2\sqrt p}{c}X+pX^2$. It has positive coefficients and the
+Euler factor of $\zeta$ at every prime $q\ne p$. It belongs to the extended
+Selberg class with degree one and conductor $p^2$. Its local factor at $p$
+is tempered (its roots lie on $|X|=p^{-1/2}$) if and only if $c\ge1$.
+\item If $c\ge1$, then $\Lambda_{c,p}\ge0$, and $\Lambda_{c,p}\le0$ if and
+only if RH holds.
+\item If $0<c<1$, then $0<\Lambda_{c,p}\le\max(1,\delta)^2/2$, and
+$\Lambda_{c,p}\le\delta^2/2$ under RH.
+\end{enumerate}
+\end{theorem}
+
+The heat flow of a control is determined by the heat flow of $\Phi$.
+
+\begin{theorem}[exact flow]\label{thm:flow}
+For every real $t$ and complex $z$,
+\[
+H^{c,p}_t(z)=H_t(z)+\frac c2\,e^{ta^2}\Bigl[e^{-iaz}H_t(z+2ita)
++e^{iaz}H_t(z-2ita)\Bigr].
+\]
+\end{theorem}
+
+To first order the bracket acts like the multiplier
+$1+ce^{ta^2}\cos az$, whose extra zeros become real when
+$ce^{ta^2}=1$, that is at $t=t_m$. The factor
+$e^{ta^2}=\exp(\tfrac t4\log^2p)$ is the weight $b_p^t$ with which the heat
+flow multiplies the $p$-th Dirichlet coefficient in the effective
+approximation of~\cite{polymath}. At $t_m$ the amplified local factor
+reaches the tempered boundary (Remark~\ref{rem:model}).
+
+A single negative value of the Laguerre expression
+$\Lag(f;x)=f'(x)^2-f(x)f''(x)$ proves a lower bound for
+$\Lambda_{c,p}$ (Proposition~\ref{prop:witness}). Interval evaluation of
+such witnesses gives the following.
+
+\begin{theorem}[certified bounds]\label{thm:certified}
+$\Lambda_{1/2,p}>0.2$ for every prime $p\le41$, and
+$\Lambda_{1/2,p}>0.1787854$ for $p\in\{43,47\}$.
+\end{theorem}
+
+For large $p$ we obtain an asymptotic lower bound with explicit
+constants.
+
+\begin{theorem}[asymptotic lower bound]\label{thm:asymptotic}
+Let $p$ be prime and $0<c<1$, and let $a,\tau_0,t_m,S_2$ be as above.
+\begin{enumerate}[label=\textup{(\roman*)}]
+\item If $\tfrac12\le c<1$ and $p\ge29$, then
+$\Lambda_{c,p}>t_m-S_2t_m^2-\tfrac1{50}\,a^{-6}$.
+\item If $e^{-2}\le c<1$ and $p\ge293$, then
+$\Lambda_{c,p}>t_m-S_2t_m^2-\tfrac1{10}\,a^{-6}$.
+\end{enumerate}
+In both cases the Laguerre expression of $H^{c,p}_t$ at $x=\pi/a$ is negative
+at the displayed time $t$ whenever $t\ge0$. For every fixed $c\in(0,1)$,
+$\Lambda_{c,p}\ge t_m-S_2t_m^2-O(t_m^3)$ as $p\to\infty$.
+\end{theorem}
+
+For $c=\tfrac12$ the bound of Theorem~\ref{thm:asymptotic}(i) exceeds
+$0.2$ for $29\le p\le37$ and exceeds $0.1787854$ for $29\le p\le47$. So the
+analytic and the computational results confirm each other for
+$p\in\{29,31,37,43,47\}$; for $p=41$ only the computation reaches $0.2$. Under RH, Theorem~\ref{thm:structure}(d) gives
+the upper bound $\delta^2/2=t_m(1+\tfrac13(1-c)+O((1-c)^2))$, so that
+\[
+1-S_2t_m-\frac{1}{50\,\tau_0a^4}<\frac{\Lambda_{c,p}}{t_m}
+\le1+\frac{1-c}3+O\bigl((1-c)^2\bigr),
+\]
+and both sides tend to $1$ if $p\to\infty$ and then $c\to1$
+(Corollary~\ref{cor:sandwich}).
+
+Numerical tracking of the zeros (Section~\ref{sec:numerics}) indicates that
+the lowest off-line pair is the last of the tracked pairs to collide, at a time
+$T_0(c,p)=t_m-S_2t_m^2+O(t_m^3)$. We do not prove an upper bound
+$\Lambda_{c,p}\le T_0(c,p)$; that would require control of all other zeros.
+
+\subsection{What the controls say about proofs}
+Theorem~\ref{thm:certified} is a statement about specific entire functions.
+It also has a methodological reading (Section~\ref{sec:screening}): any
+collection of hypotheses satisfied by some $\Phi_{1/2,p}$ with $p\le41$
+cannot imply $\Lambda_K\le0.2$ for all kernels $K$ satisfying them. The
+shared hypotheses include positivity, evenness and the decay of the kernel;
+the real zeros of $H_0$; bounded relative distortion of $H_0$ on the real
+line; the Euler factors and Hecke relations at
+every prime other than $p$; and membership in the extended Selberg class. The
+existing proofs of upper bounds avoid this obstruction by using inputs that
+the controls do not have, namely numerical verification of RH up to a large
+height and effective approximations built from the Dirichlet coefficients
+and small Euler factors of $\zeta$. The controls make precise that these
+direct inputs, which the controls fail already at height $\pi/a\le9.1$,
+cannot be replaced by structural facts shared with $\Phi_{c,p}$.
+
+\subsection{Organization}
+Section~\ref{sec:controls} gives the arithmetic of the controls.
+Section~\ref{sec:Lambda} recalls the de Bruijn--Newman theory for general
+kernels and proves Theorem~\ref{thm:structure}. Section~\ref{sec:flow}
+proves Theorem~\ref{thm:flow}. Section~\ref{sec:witness} treats Laguerre
+witnesses. Section~\ref{sec:certified} proves Theorem~\ref{thm:certified},
+and Section~\ref{sec:asymptotic} proves Theorem~\ref{thm:asymptotic}.
+Section~\ref{sec:numerics} reports the numerical collision times,
+Section~\ref{sec:screening} discusses consequences for proof strategies, and
+Section~\ref{sec:open} lists open problems.
+
+\section{The controls}\label{sec:controls}
+
+\begin{lemma}\label{lem:kernel}
+Let $p$ be prime and $c>0$.
+\begin{enumerate}[label=\textup{(\alph*)}]
+\item $\Phi_{c,p}$ is positive and even on $\mathbb R$, and
+$\Phi_{c,p}(u)=O\bigl(\exp(9|u|-\pi e^{4|u|-4a})\bigr)$.
+\item For every real $t$, $H^{c,p}_t$ is an even entire function, real on
+the real axis, of order at most one.
+\item $H^{c,p}_0(x)=H_0(x)(1+c\cos ax)$.
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+The function $\Phi$ is even, by the functional equation of the theta function,
+and positive on $\mathbb R$ (P\'olya~\cite{polya}; see
+also~\cite{csordasnorfolkvarga}). Hence $\Phi_{c,p}$ is positive, and it is even
+because the bracket in~\eqref{eq:control} is. For $u\ge0$ the series
+\eqref{eq:Phi} gives $0<\Phi(u)\le C e^{9u}\exp(-\pi e^{4u})$, and by
+evenness this holds with $|u|$ in place of $u$. Since
+$|u\pm a|\ge|u|-a$, part (a) follows.
+
+For complex $z$ with $|\Ima z|=y$,
+$|H^{c,p}_t(z)|\le\int_0^\infty e^{tu^2}\Phi_{c,p}(u)\cosh(yu)\dd u$. By
+(a) the integrand is at most
+$C\exp\bigl(tu^2+(9+y)u-\pi e^{4u-4a}\bigr)$, and the maximum over $u$ of
+the exponent is $O(y\log y)$ as $y\to\infty$. Hence
+$|H^{c,p}_t(z)|\le\exp(O(|z|\log|z|))$, which gives order at most one.
+The function is even and real on $\mathbb R$ because the kernel is even and
+real.
+
+For (c), extend $\Phi$ evenly and write
+$H_0[K](x)=\tfrac12\int_{\mathbb R}K(u)e^{ixu}\dd u$ for even $K$. Then
+$\tfrac12\int_{\mathbb R}[\Phi(u+a)+\Phi(u-a)]e^{ixu}\dd u
+=(e^{-iax}+e^{iax})H_0(x)=2\cos(ax)\,H_0(x)$.
+\end{proof}
+
+\begin{proposition}[arithmetic]\label{prop:arith}
+Let $s=\tfrac12+\tfrac{ix}2$ and $Q_p(X)=1+\tfrac{2\sqrt p}{c}X+pX^2$.
+\begin{enumerate}[label=\textup{(\alph*)}]
+\item $1+c\cos ax=\tfrac c2\,p^{s-1/2}Q_p(p^{-s})$, so
+$H^{c,p}_0(x)=\tfrac c{16}\,p^{s-1/2}\,\xi(s)\,Q_p(p^{-s})$.
+\item $F_{c,p}(s)=\zeta(s)Q_p(p^{-s})=\sum_{n\ge1}a_nn^{-s}$ with
+$a_n=1+\tfrac{2\sqrt p}c\mathbf 1_{p\mid n}+p\,\mathbf 1_{p^2\mid n}>0$,
+and
+\[
+F_{c,p}(s)=\frac{Q_p(p^{-s})}{1-p^{-s}}\prod_{q\ne p}\frac1{1-q^{-s}}
+\qquad(\Rea s>1).
+\]
+\item The completed function $\Lambda_{c,p}^{\mathrm{L}}(s)=(p/\sqrt\pi)^s\,
+\Gamma(s/2)F_{c,p}(s)$ satisfies
+$\Lambda^{\mathrm L}_{c,p}(s)=\Lambda^{\mathrm L}_{c,p}(1-s)$. Thus
+$F_{c,p}$ belongs to the extended Selberg class $\Sh$, with degree one and
+conductor $p^2$.
+\item The roots $X_\pm$ of $Q_p$ satisfy $X_+X_-=1/p$. If $c\ge1$ they lie on
+$|X|=p^{-1/2}$, and they coincide when $c=1$. If $0<c<1$ they are real and
+negative, with $|X_\pm|=p^{-1/2}e^{\mp\arccosh(1/c)}$. Consequently the zeros
+of $Q_p(p^{-s})$ lie on $\Rea s=\tfrac12$ if $c\ge1$. If $c<1$ they lie on
+$\Rea s=\tfrac12\pm\arccosh(1/c)/\log p$, which in the variable $x$ are the
+lines $\Ima x=\pm\delta$.
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+(a) Here $p^{s-1/2}=e^{iax}$ and $p^{-s}=p^{-1/2}e^{-iax}$, so
+$\tfrac c2p^{s-1/2}Q_p(p^{-s})=\tfrac c2e^{iax}+1+\tfrac c2e^{-iax}$.
+Combine with~\eqref{eq:t0} and $H_0=\xi/8$.
+(b) is the expansion of $\zeta(s)Q_p(p^{-s})$.
+(c) By (a), $\Lambda^{\mathrm L}_{c,p}(s)
+=\frac{2\sqrt p}{s(s-1)}\cdot\frac2c\,(1+c\cos ax)\,\xi(s)$. Each factor is
+invariant under $s\mapsto1-s$, that is $x\mapsto-x$. The function $F_{c,p}$
+is a Dirichlet series absolutely convergent for $\Rea s>1$, $(s-1)F_{c,p}$
+is entire of finite order, and the functional equation has the shape required
+in~\cite{dobner}. The conductor is $(2\pi)\cdot(p/\sqrt\pi)^2\cdot\tfrac12
+=p^2$.
+(d) The discriminant of $pX^2+\tfrac{2\sqrt p}cX+1$ is $4p(c^{-2}-1)$. If
+$c\ge1$ the roots are conjugate, or equal when $c=1$, and $|X_\pm|^2=X_+X_-=1/p$.
+If $c<1$, then $X_\pm=-p^{-1/2}(c^{-1}\mp\sqrt{c^{-2}-1})
+=-p^{-1/2}e^{\mp\arccosh(1/c)}$. Finally $p^{-s}=X$ forces
+$\Rea s=-\log|X|/\log p$, and $\Ima x=-2(\Rea s-\tfrac12)$.
+\end{proof}
+
+\begin{remark}[Hecke interpretation]\label{rem:hecke}
+For the normalized Hecke operator
+$T_pf(z)=p^{-1/2}\bigl(f(pz)+\sum_{j=0}^{p-1}f((z+j)/p)\bigr)$, the
+Eisenstein series $E(z,\tfrac12+i\nu)$ has eigenvalue
+$\lambda_p(\nu)=p^{i\nu}+p^{-i\nu}=2\cos(\nu\log p)$. With $\nu=x/2$,
+\[
+1+c\cos ax=1+\tfrac c2\,\lambda_p(x/2).
+\]
+Thus $H^{c,p}_0$ is the spectral density of $\Phi$ multiplied by the
+eigenvalue of the Hecke element $1+\tfrac c2T_p$. A multiplier that depends
+only on $\lambda_p$ leaves the local data at every prime $q\ne p$ unchanged;
+this is the spectral form of Proposition~\ref{prop:arith}(b).
+\end{remark}
+
+\begin{remark}[the Selberg class]\label{rem:selberg}
+$F_{c,p}$ has an Euler product, but its local factor at $p$,
+$Q_p(p^{-s})/(1-p^{-s})$, has zeros. The coefficients of $\log F_{c,p}$ at
+$p^k$ are $-(X_+^{-k}+X_-^{-k})/k$ plus the contribution of
+$(1-p^{-s})^{-1}$, and they have size at least a constant times $p^{k/2}/k$
+for infinitely many $k$. So $F_{c,p}$ violates the Euler-product axiom of the
+Selberg class for every $c>0$, while it lies in $\Sh$, which imposes no such
+axiom.
+\end{remark}
+
+\section{De Bruijn--Newman constants of the controls}\label{sec:Lambda}
+
+\begin{lemma}\label{lem:dbn}
+Let $K$ be a real even kernel with $K(u)=O(\exp(-|u|^{2+\eta}))$ for some
+$\eta>0$.
+\begin{enumerate}[label=\textup{(\alph*)}]
+\item \textup{(de Bruijn~\cite[Theorem~13]{debruijn}; see
+also~\cite[Theorem~3.2]{polymath})} If all zeros of $H_{t_0}[K]$ lie in
+$|\Ima z|\le\Delta$, then for $t\ge t_0$ all zeros of $H_t[K]$ lie in
+$|\Ima z|\le\sqrt{\max(\Delta^2-2(t-t_0),0)}$. In particular, real-rootedness
+persists as $t$ increases.
+\item The set $Z_K$ of $t\in\mathbb R$ for which $H_t[K]$ has only real zeros
+is closed.
+\item If $H_t[K]$ is of order less than two and has only real zeros, then
+$\Lag(H_t[K];x)\ge0$ for every real $x$.
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+(b) The map $t\mapsto H_t[K]$ is continuous into the entire functions with
+the topology of locally uniform convergence, and $H_t[K]\not\equiv0$. By
+Hurwitz's theorem, a locally uniform limit of entire functions with only real
+zeros has only real zeros.
+(c) By Hadamard's theorem, an entire function $f$ of order less than two,
+real on $\mathbb R$, with only real zeros $x_k$, has the form
+$f(z)=Cz^me^{\beta z}\prod_k(1-z/x_k)e^{z/x_k}$ with real $\beta$. For real
+$x$ that is not a zero,
+$-(\log f)''(x)=mx^{-2}+\sum_k(x-x_k)^{-2}\ge0$, so
+$\Lag(f;x)=-f(x)^2(\log f)''(x)\ge0$. At a zero, $\Lag(f;x)=f'(x)^2\ge0$.
+\end{proof}
+
+\begin{definition}\label{def:Lambda}
+For $K$ as in Lemma~\ref{lem:dbn} put $\Lambda_K=\inf Z_K\in[-\infty,\infty]$.
+By Lemma~\ref{lem:dbn}, $Z_K=[\Lambda_K,\infty)$ whenever $\Lambda_K$ is
+finite. We write $\Lambda=\Lambda_\Phi$ and $\Lambda_{c,p}=\Lambda_{\Phi_{c,p}}$.
+\end{definition}
+
+Lemma~\ref{lem:kernel}(a) shows that $\Phi_{c,p}$ satisfies the hypothesis of
+Lemma~\ref{lem:dbn}.
+
+\begin{proposition}\label{prop:basic}
+Let $p$ be prime.
+\begin{enumerate}[label=\textup{(\alph*)}]
+\item If $0<c<1$, then $0<\Lambda_{c,p}\le\max(1,\delta)^2/2$, and under RH
+$\Lambda_{c,p}\le\delta^2/2$.
+\item If $c\ge1$, then $\Lambda_{c,p}\ge0$, and $\Lambda_{c,p}\le0$ holds if
+and only if RH holds. Under RH, $\Lambda_{c,p}=0$.
+\item For every $c>0$, $\Lambda_{c,p}\ge0$.
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+By Lemma~\ref{lem:kernel}(c), the zeros of $H^{c,p}_0$ are those of $H_0$,
+which lie in $|\Ima x|<1$ because the nontrivial zeros of $\zeta$ lie in
+$0<\Rea s<1$, together with the zeros of $1+c\cos ax$.
+(a) For $c<1$ the latter lie on $|\Ima x|=\delta$
+(Proposition~\ref{prop:arith}(d)). Lemma~\ref{lem:dbn}(a) with
+$\Delta=\max(1,\delta)$, or $\Delta=\delta$ under RH, gives the upper bounds.
+Since $H^{c,p}_0$ has non-real zeros, $0\notin Z_{\Phi_{c,p}}$, hence
+$\Lambda_{c,p}>0$.
+(b) For $c\ge1$ the zeros of $1+c\cos ax$ are real. Hence $H^{c,p}_0$ has only
+real zeros if and only if $H_0$ does, that is, if and only if RH holds. By
+Definition~\ref{def:Lambda} this is equivalent to $\Lambda_{c,p}\le0$.
+(c) By Proposition~\ref{prop:arith}(c), $F_{c,p}\in\Sh$. Its completed
+function in the sense of~\cite[Section~2]{dobner} is a constant multiple of
+$H^{c,p}_0((s-\tfrac12)\cdot\tfrac2i)$, and Dobner's heat deformation agrees
+with $H^{c,p}_t$ up to the same constant. Dobner's theorem~\cite[Theorem~2]{dobner}
+gives $\Lambda_{c,p}\ge0$. Together with (b) this proves the remaining claims.
+\end{proof}
+
+Theorem~\ref{thm:structure} is Lemma~\ref{lem:kernel},
+Proposition~\ref{prop:arith} and Proposition~\ref{prop:basic}.
+
+\section{The exact flow}\label{sec:flow}
+
+\begin{proof}[Proof of Theorem~\ref{thm:flow}]
+Extend $\Phi$ evenly and write
+$N_t[K](z)=\tfrac12\int_{\mathbb R}e^{tu^2}K(u)e^{izu}\dd u$, so that
+$N_t[\Phi]=H_t$ and $H^{c,p}_t=H_t+\tfrac c2(N_t[\Phi(\cdot+a)]
++N_t[\Phi(\cdot-a)])$. Substituting $v=u\pm a$,
+\[
+N_t[\Phi(\cdot\pm a)](z)
+=\tfrac12\int_{\mathbb R}e^{t(v\mp a)^2}\Phi(v)e^{iz(v\mp a)}\dd v
+=e^{ta^2}e^{\mp iaz}\,\tfrac12\int_{\mathbb R}e^{tv^2}\Phi(v)
+e^{i(z\pm2ita)v}\dd v ,
+\]
+which is $e^{ta^2}e^{\mp iaz}H_t(z\pm2ita)$. All integrals converge
+absolutely by Lemma~\ref{lem:kernel}(a).
+\end{proof}
+
+For real $x$, $H_t(x-2ita)=\overline{H_t(x+2ita)}$, so
+\begin{equation}\label{eq:flowreal}
+H^{c,p}_t(x)=H_t(x)+C\,\Rea\bigl[e^{-iax}H_t(x+2ita)\bigr],\qquad
+C=ce^{ta^2}.
+\end{equation}
+
+\begin{remark}[the model multiplier]\label{rem:model}
+Replacing $H_t(x\pm2ita)$ by $H_t(x)$ in Theorem~\ref{thm:flow} gives
+$H_t(x)(1+C\cos ax)$. With $C=ce^{ta^2}$, the extra zeros of the multiplier
+are non-real for $C<1$, double for $C=1$ and real for $C>1$. They become real
+at $t=t_m=\tau_0/a^2$. By Proposition~\ref{prop:arith}(d), the condition
+$C\ge1$ says that the local factor $Q_p$ with $c$ replaced by $C$ is
+tempered. The amplification $e^{ta^2}=\exp(\tfrac t4\log^2p)$ is the weight
+$b_p^t=\exp(\tfrac t4\log^2p)$ that the heat flow attaches to the $p$-th
+Dirichlet coefficient in the effective approximation of~\cite{polymath}. To
+first order, the control collides when that weight has amplified its local
+perturbation to the tempered boundary. The shifts $\pm2ita$ produce the
+correction $-S_2t_m^2$ of Theorem~\ref{thm:asymptotic}.
+\end{remark}
+
+\section{Laguerre witnesses}\label{sec:witness}
+
+\begin{proposition}[witness criterion]\label{prop:witness}
+If $\Lag(H^{c,p}_t;x_0)<0$ for some real $x_0$, then $H^{c,p}_t$ has a
+non-real zero and $\Lambda_{c,p}>t$.
+\end{proposition}
+
+\begin{proof}
+If $t\ge\Lambda_{c,p}$, then $t\in Z_{\Phi_{c,p}}$ by
+Definition~\ref{def:Lambda}, so $H^{c,p}_t$ has only real zeros. It has
+order at most one by Lemma~\ref{lem:kernel}(b), so
+Lemma~\ref{lem:dbn}(c) gives $\Lag(H^{c,p}_t;x)\ge0$ for all real $x$.
+\end{proof}
+
+Near an isolated pair of non-real zeros the Laguerre expression has a simple
+local form.
+
+\begin{proposition}\label{prop:local}
+Suppose that $H(x)=((x-X)^2+y^2)\,g(x)$ near a real point $X$, with $g$
+smooth and real and $y>0$. Then
+\[
+\Lag(H;X)=-2y^2g(X)^2+y^4\Lag(g;X),\qquad
+\frac{\Lag(H;X)}{H(X)^2}=-\frac2{y^2}+\frac{\Lag(g;X)}{g(X)^2}.
+\]
+\end{proposition}
+
+\begin{proof}
+With $q(x)=(x-X)^2+y^2$ one has $q(X)=y^2$, $q'(X)=0$ and $q''=2$. Then
+$H(X)=y^2g$, $H'(X)=y^2g'$ and $H''(X)=2g+y^2g''$, evaluated at $X$. So
+$H'^2-HH''=y^4(g'^2-gg'')-2y^2g^2$.
+\end{proof}
+
+\begin{remark}\label{rem:margin}
+As a pair approaches an ordinary collision, with $g$, $g'$, $g''$ and $1/g$
+locally bounded, a witness exists at the real part of the pair. The
+normalized value tends to $-\infty$ like $-2/y^2$, but the raw value
+$\Lag(H;X)=-2y^2g(X)^2+O(y^4)$ tends to $0$. A certification must therefore
+resolve a raw negative number, not merely a large normalized ratio. In the
+computations of Section~\ref{sec:certified} the raw values are at least
+$5\cdot10^{-6}$ in absolute value, and their enclosures are narrower than
+$10^{-51}$.
+
+Far from a collision, witnesses need not exist, since the other zeros
+contribute positive terms $(x-x_k)^{-2}$ to $\Lag/H^2$. For example,
+for $(p,c)=(2,0.05)$ at $t=0$ the off-line zero lies at about
+$9.065+10.642i$. A numerical scan nevertheless found $\Lag(H^{c,p}_0)>0$
+at $1200$ points of $(0,60]$.
+\end{remark}
+
+\section{Certified lower bounds}\label{sec:certified}
+
+\subsection{Statement}
+Theorem~\ref{thm:certified} follows from Proposition~\ref{prop:witness} and
+the following computation.
+
+\begin{proposition}\label{prop:table}
+For $c=\tfrac12$ and each row of Table~\ref{tab:certified}, the enclosure of
+$\Lag(H^{1/2,p}_t;x_0)$ is contained in $(-\infty,0)$. The table lists the
+upper endpoint, rounded upward.
+\end{proposition}
+
+\begin{table}[ht]
+\centering
+\begin{tabular}{rllrrr}
+\toprule
+$p$ & $t$ & $x_0$ & $H^{1/2,p}_t(x_0)$ & upper bound for $\Lag$ & $\Lag/H^2$ \\
+\midrule
+2 & $0.2$ & 9.0194 & $1.8797\cdot10^{-2}$ & $-4.046\cdot10^{-5}$ & $-0.1145$ \\
+3 & $0.2$ & 5.6906 & $2.4165\cdot10^{-2}$ & $-1.945\cdot10^{-4}$ & $-0.3332$ \\
+5 & $0.2$ & 3.8844 & $2.4561\cdot10^{-2}$ & $-5.144\cdot10^{-4}$ & $-0.8529$ \\
+7 & $0.2$ & 3.2128 & $2.3184\cdot10^{-2}$ & $-7.795\cdot10^{-4}$ & $-1.450$ \\
+11 & $0.2$ & 2.6072 & $1.9911\cdot10^{-2}$ & $-1.149\cdot10^{-3}$ & $-2.900$ \\
+13 & $0.2$ & 2.4374 & $1.8303\cdot10^{-2}$ & $-1.268\cdot10^{-3}$ & $-3.786$ \\
+17 & $0.2$ & 2.2066 & $1.5239\cdot10^{-2}$ & $-1.395\cdot10^{-3}$ & $-6.011$ \\
+19 & $0.2$ & 2.1232 & $1.3781\cdot10^{-2}$ & $-1.411\cdot10^{-3}$ & $-7.433$ \\
+23 & $0.2$ & 1.9939 & $1.0997\cdot10^{-2}$ & $-1.359\cdot10^{-3}$ & $-11.24$ \\
+29 & $0.2$ & 1.8566 & $7.0966\cdot10^{-3}$ & $-1.094\cdot10^{-3}$ & $-21.74$ \\
+31 & $0.2$ & 1.8206 & $5.8577\cdot10^{-3}$ & $-9.624\cdot10^{-4}$ & $-28.05$ \\
+37 & $0.2$ & 1.7314 & $2.2927\cdot10^{-3}$ & $-4.443\cdot10^{-4}$ & $-84.53$ \\
+41 & $0.2$ & 1.6835 & $2.4913\cdot10^{-5}$ & $-5.291\cdot10^{-6}$ & $-8525$ \\
+43 & $0.1787854$ & 1.6622 & $3.4657\cdot10^{-3}$ & $-7.142\cdot10^{-4}$ & $-59.47$ \\
+47 & $0.1787854$ & 1.6238 & $1.6833\cdot10^{-3}$ & $-3.750\cdot10^{-4}$ & $-132.4$ \\
+\bottomrule
+\end{tabular}
+\caption{Certified Laguerre witnesses for $c=\tfrac12$. The values of $H$
+and $\Lag/H^2$ are rounded midpoints of their enclosures. The enclosures
+of $H$ are narrower than $2\cdot10^{-50}$, those of $\Lag$ narrower than
+$10^{-51}$, and those of $\Lag/H^2$ narrower than $10^{-41}$. Each $x_0$ is
+a point near the real part of the lowest off-line pair.}
+\label{tab:certified}
+\end{table}
+
+For $p=41$ the pair is close to its collision. Tracking gives
+$T_0(\tfrac12,41)\approx0.2001167$ (Section~\ref{sec:numerics}). The
+normalized witness is large, but the raw value is only $-5.3\cdot10^{-6}$, as
+<<<<<<< HEAD
+Remark~\ref{rem:margin} predicts. A separate certificate of this case, with
+different arithmetic and quadrature, is described in the acknowledgements;
+at its point $x=1.68413$ the method of this section gives enclosures inside
+those of the separate certificate. For $p\ge43$ the lowest pair has already
+=======
+Remark~\ref{rem:margin} predicts. For $p\ge43$ the lowest pair has already
+>>>>>>> 94745f3 (Merged work from ChatGPT)
+collided by $t=0.2$, so the bound is certified at $t=0.1787854$ instead.
+
+\subsection{Method}
+All integrands below are even, so
+$\int_0^\infty F=\tfrac12\int_{\mathbb R}F$. We use the trapezoid rule on the
+real line.
+
+\begin{lemma}[Trefethen--Weideman~\cite{trefethenweideman}, Theorem~5.1]
+\label{lem:trap}
+Let $F$ be analytic in the strip $|\Ima u|<b$, with $F(u)\to0$ uniformly as
+$|u|\to\infty$ in the strip, and $\int_{\mathbb R}|F(u+iv)|\dd u\le M$ for
+$|v|<b$. Then for every $h>0$,
+\[
+\Bigl|\int_{\mathbb R}F(u)\dd u-h\sum_{k\in\mathbb Z}F(kh)\Bigr|
+\le\frac{2M}{e^{2\pi b/h}-1}.
+\]
+\end{lemma}
+
+\begin{lemma}[strip majorant]\label{lem:majorant}
+The function $\Phi$ extends analytically to the strip $|\Ima w|<\pi/8$, where
+it is even. For $0\le b<\pi/8$, $\kappa=\cos4b$ and $|\Ima w|\le b$,
+\[
+|\Phi(w)|\le\widetilde\Phi_\kappa(|\Rea w|),\qquad
+\widetilde\Phi_\kappa(r)=\sum_{n\ge1}\bigl(2\pi^2n^4e^{9r}+3\pi n^2e^{5r}\bigr)
+\exp\bigl(-\pi\kappa n^2e^{4r}\bigr).
+\]
+\end{lemma}
+
+\begin{proof}
+For $|\Ima w|<\pi/8$ we have $\Rea e^{4w}=e^{4\Rea w}\cos(4\Ima w)>0$, and
+\[
+\bigl|\exp(-\pi n^2e^{4w})\bigr|=\exp\bigl(-\pi n^2e^{4\Rea w}\cos(4\Ima w)\bigr).
+\]
+Hence the series~\eqref{eq:Phi} converges locally uniformly on the strip and
+defines an analytic function there, which equals $\Phi$ on $\mathbb R$ and is
+therefore even. For $\Rea w\ge0$ the displayed identity gives the bound
+termwise, using $\cos(4\Ima w)\ge\cos4b=\kappa$. For $\Rea w<0$ apply the bound
+to $-w$.
+\end{proof}
+
+\begin{lemma}[tails]\label{lem:tails}
+Let $\kappa\in[\tfrac13,1]$ and $r\ge2$. Then
+$\widetilde\Phi_\kappa(r)\le2(2\pi^2+3\pi)\exp(9r-\pi\kappa e^{4r})$, and
+the right side decreases in $r$. For $N\ge8$ and
+$r\ge0$,
+\[
+\sum_{n>N}\bigl(2\pi^2n^4e^{9r}+3\pi n^2e^{5r}\bigr)e^{-\pi\kappa n^2e^{4r}}
+\le\frac{(2\pi^2+3\pi)9^4e^{9r}e^{-81\pi\kappa e^{4r}}}
+{1-(10/9)^4e^{-19\pi\kappa e^{4r}}} .
+\]
+\end{lemma}
+
+\begin{proof}
+Use $3\pi n^2e^{5r}\le3\pi n^4e^{9r}$ for $r\ge0$. The ratio of consecutive
+terms of $n^4e^{-\pi\kappa n^2E}$ is at most $(10/9)^4e^{-19\pi\kappa E}$ for
+$n\ge9$. For the first bound, the factor
+$\sum_n n^4e^{-\pi\kappa(n^2-1)e^{4r}}$ is at most $2$ when $r\ge2$, because
+$\pi\kappa e^{8}>3000$; and $9-4\pi\kappa e^{4r}<0$ there.
+\end{proof}
+
+\medskip\noindent\emph{The computation.} Fix $c,p,t,x_0$. The functions
+\[
+F_0(u)=e^{tu^2}\Phi_{c,p}(u)\cos x_0u,\quad
+F_1(u)=-ue^{tu^2}\Phi_{c,p}(u)\sin x_0u,\quad
+F_2(u)=-u^2e^{tu^2}\Phi_{c,p}(u)\cos x_0u
+\]
+are even, and $\int_0^\infty F_j$ equals $H$, $H'$ and $H''$ at $x_0$.
+Take $b=3/10$, so that $\kappa=\cos(6/5)>0.36$, and $h=1/64$. For
+$|\Ima u|\le b$, Lemma~\ref{lem:majorant} gives
+\[
+|F_j(u+iv)|\le\cosh(x_0b)\,(u^2+b^2)^{j/2}e^{tu^2}
+\Bigl[\widetilde\Phi_\kappa(|u|)+\tfrac c2\bigl(\widetilde\Phi_\kappa(|u+a|)
++\widetilde\Phi_\kappa(|u-a|)\bigr)\Bigr].
+\]
+We bound $M_j$ by an interval Riemann upper sum of this majorant over
+$[0,U]$, with $U\ge a+2$ and cells of width $1/16$, doubled by evenness. The
+contribution of $|u|>U$ is bounded with Lemma~\ref{lem:tails}, using
+$e^{4s}\ge1+4s+8s^2$; it is below $10^{-1400}$. The discretization error of
+Lemma~\ref{lem:trap} for the half-line integral is then at most
+$M_j/(e^{2\pi b/h}-1)$, which is below $10^{-50}$ in every case. The
+trapezoid sum is truncated at $U$, and the omitted terms are bounded by the
+same tail estimate. On the grid $u=k/64$ the shifted thetas use the exact
+relations $e^{4(u\pm a)}=p^{\pm2}e^{4u}$, $e^{5(u\pm a)}=p^{\pm5/2}e^{5u}$
+and $e^{9(u\pm a)}=p^{\pm9/2}e^{9u}$. For $u<a$, the evenness of $\Phi$ is
+used. Eight terms of each theta series are summed explicitly, and the rest is
+bounded by Lemma~\ref{lem:tails}.
+
+\medskip\noindent\emph{Arithmetic.} Every quantity is an interval with $60$-digit
+decimal endpoints, rounded outward at each operation. Python's
+\texttt{decimal} module computes $\exp$ and $\log$ correctly rounded, and
+we widen the result by one unit in the last place. Negation is exact. Any
+operation performed outside the two directed-rounding contexts must be
+exact: the default context is set to raise an exception on any inexact or
+rounded result. Square roots of integers are verified by squaring. We
+compute $\pi$ by Machin's formula with alternating-series remainders, and
+$\sin$ and $\cos$ by Taylor series after reduction by $2\pi$, with Lagrange
+remainders. As consistency checks, every case was recomputed with $h=1/32$,
+and the two enclosures of each of $H,H',H''$ overlap; the enclosure of $\pi$
+is compared with $70$ known decimals; and the enclosure of
+$m_0(0)=\xi(\tfrac12)/8$ of Lemma~\ref{lem:moments} is compared with an
+independent value of $\xi(\tfrac12)$. The program uses only the Python
+standard library and runs in about $45$ seconds; its location is given in
+the acknowledgements.
+
+\section{An asymptotic lower bound}\label{sec:asymptotic}
+
+\subsection{Moments}
+For $t\ge0$ and $r\ge0$ put
+\begin{equation}\label{eq:moments}
+m_k(t)=\int_0^\infty e^{tu^2}\Phi(u)u^k\dd u,\qquad
+\mu_4(t,r)=\int_0^\infty e^{tu^2}\Phi(u)u^4\cosh(ru)\dd u,
+\end{equation}
+and $k_t=m_2(t)/m_0(t)$. Since $\Phi>0$, all of these are positive and
+increase in $t$ and $r$. Moreover $H_t(0)=m_0(t)$ and $H_t''(0)=-m_2(t)$.
+Since $H_0(z)=\xi(\tfrac12+\tfrac{iz}2)/8$, we get $k_0=\xi''(\tfrac12)/(4\xi(\tfrac12))$, that
+is,
+\begin{equation}\label{eq:S2k0}
+S_2=2k_0 .
+\end{equation}
+Also $\tfrac{d}{dt}k_t=(m_4m_0-m_2^2)/m_0^2\in[0,m_4/m_0]$ by the
+Cauchy--Schwarz inequality.
+
+\begin{lemma}\label{lem:moments}
+The following enclosures hold.
+\begin{center}
+\begin{tabular}{lll}
+\toprule
+quantity & value & enclosure width \\
+\midrule
+$m_0(0)=\xi(\tfrac12)/8$ & $0.06214009727353926373\ldots$ & $<2\cdot10^{-51}$\\
+$m_2(0)$ & $7.17873259848294922976\ldots\cdot10^{-4}$ & $<10^{-51}$\\
+$S_2=2m_2(0)/m_0(0)$ & $0.02310499311541897078\ldots$ & $<10^{-50}$\\
+$m_2(\tfrac14)$ & $7.23696857055556974027\ldots\cdot10^{-4}$ & $<10^{-51}$\\
+$m_4(\tfrac14)$ & $2.34423514799060488665\ldots\cdot10^{-5}$ & $<10^{-52}$\\
+$\mu_4(\tfrac14,3)$ & $2.90765558946641021959\ldots\cdot10^{-5}$ & $<10^{-51}$\\
+\bottomrule
+\end{tabular}
+\end{center}
+Consequently, for $0\le t\le\tfrac14$ and $0\le r\le3$,
+\begin{equation}\label{eq:constants}
+k_t\le\bar k:=0.0116463,\qquad
+k_t-k_0\le\bar d\,t,\quad \bar d:=0.000378,\qquad
+\frac{\mu_4(t,r)}{m_0(t)}\le\bar\mu:=0.00046792 .
+\end{equation}
+\end{lemma}
+
+\begin{proof}
+The enclosures are computed by the method of Section~\ref{sec:certified}
+with $\Phi$ in place of $\Phi_{c,p}$. The weights $u^k$ and $\cosh(ru)$ are
+bounded on the strip by $(u^2+b^2)^{k/2}$ and $e^{r|u|}$. The constants
+follow from monotonicity: $m_0(t)\ge m_0(0)$, $m_2(t)\le m_2(\tfrac14)$,
+$m_4(t)\le m_4(\tfrac14)$ and $\mu_4(t,r)\le\mu_4(\tfrac14,3)$. The program
+checks that the rounded values in~\eqref{eq:constants} are upper bounds for
+the certified ratios, and it uses these rounded values below.
+\end{proof}
+
+\subsection{Local expansion}
+Let $A(z)=H_t(z)/H_t(0)$. Expanding the cosine,
+\begin{equation}\label{eq:Aexp}
+A(z)=1-\tfrac12k_tz^2+\rho(z),\qquad
+\rho(z)=\frac1{m_0(t)}\int_0^\infty e^{tu^2}\Phi(u)
+\bigl[\cos zu-1+\tfrac12(zu)^2\bigr]\dd u .
+\end{equation}
+
+\begin{lemma}\label{lem:remainder}
+For complex $z$ with $|z|\le R$,
+\[
+|\rho(z)|\le\frac{|z|^4}{24}\,\mu,\qquad
+|\rho'(z)|\le\frac{|z|^3}{6}\,\mu,\qquad
+|\rho''(z)|\le\frac{|z|^2}{2}\,\mu,\qquad
+\mu=\frac{\mu_4(t,R)}{m_0(t)} .
+\]
+\end{lemma}
+
+\begin{proof}
+With $y=|zu|$: $|\cos zu-1+\tfrac12(zu)^2|\le\cosh y-1-\tfrac12y^2\le
+\tfrac1{24}y^4\cosh y$. Next, $|{-u}\sin zu+zu^2|\le|u|(\sinh y-y)\le
+\tfrac16|u|y^3\cosh y$. Finally, $|u^2(1-\cos zu)|\le u^2(\cosh y-1)\le
+\tfrac12u^2y^2\cosh y$. Each comparison is termwise in the power series.
+Integrate against the positive weight $e^{tu^2}\Phi(u)$ and use
+$\cosh y\le\cosh(Ru)$.
+\end{proof}
+
+\subsection{The witness at \texorpdfstring{$x_0=\pi/a$}{x0 = pi/a}}
+Fix $0<c<1$, a prime $p$, and $0\le t<t_m$. Put $\tau=ta^2$, $C=ce^\tau
+=e^{\tau-\tau_0}<1$ and $\varepsilon=a^{-2}$. For real $\theta$ set
+$x=(\pi+\theta)/a$, so that $e^{-iax}=-e^{-i\theta}$. By~\eqref{eq:flowreal},
+\begin{equation}\label{eq:F}
+F(\theta):=\frac{H^{c,p}_t\bigl((\pi+\theta)/a\bigr)}{H_t(0)}
+=A\Bigl(\frac{\pi+\theta}a\Bigr)
+-C\,\Rea\Bigl[e^{-i\theta}A\Bigl(\frac{\pi+\theta+2i\tau}a\Bigr)\Bigr].
+\end{equation}
+Since $\Lag(H^{c,p}_t;\pi/a)=a^2m_0(t)^2\bigl(F'(0)^2-F(0)F''(0)\bigr)$,
+a witness at $\pi/a$ means $F(0)F''(0)>F'(0)^2$. Write $x_0=\pi/a$ and
+$w_0=(\pi+2i\tau)/a$. Differentiating~\eqref{eq:F},
+\begin{align*}
+F(0)&=A(x_0)-C\Rea A(w_0),\\
+F'(0)&=A'(x_0)/a-C\bigl[\Ima A(w_0)+\Rea A'(w_0)/a\bigr],\\
+F''(0)&=A''(x_0)/a^2+C\Rea A(w_0)-2C\Ima A'(w_0)/a-C\Rea A''(w_0)/a^2 .
+\end{align*}
+Inserting~\eqref{eq:Aexp}, with $k=k_t$,
+\begin{align}
+F(0)&=(1-C)\bigl(1-\tfrac12k\pi^2\varepsilon\bigr)-2Ck\tau^2\varepsilon
++\rho(x_0)-C\Rea\rho(w_0),\label{eq:F0}\\
+F'(0)&=-k\pi\varepsilon(1-C-2C\tau)+\rho'(x_0)/a-C\Ima\rho(w_0)
+-C\Rea\rho'(w_0)/a,\label{eq:F1}\\
+F''(0)&=C-k\varepsilon(1-C)-\tfrac12Ck\pi^2\varepsilon
++2Ck\tau^2\varepsilon+4Ck\tau\varepsilon+R_2,\label{eq:F2}
+\end{align}
+where
+$R_2=\rho''(x_0)\varepsilon+C\Rea\rho(w_0)-2C\Ima\rho'(w_0)/a
+-C\Rea\rho''(w_0)\varepsilon$.
+
+\begin{lemma}\label{lem:Fbounds}
+Suppose $\tau_0\le\bar\tau_0$, $\varepsilon\le\bar\varepsilon$,
+$\bar\tau_0\bar\varepsilon\le\tfrac14$ and
+$(\pi^2+4\bar\tau_0^2)\bar\varepsilon\le9$. Put $P=\pi^2+4\tau_0^2$ and
+$\sigma=\tau_0-\tau$. Then, with the constants of~\eqref{eq:constants},
+\begin{align*}
+F(0)&\ge\bigl(\sigma-\tfrac12\sigma^2\bigr)\bigl(1-\tfrac12\bar k\pi^2\varepsilon\bigr)
+-2k_0\tau_0^2\varepsilon-2\bar d\tau_0^3\varepsilon^2
+-\tfrac1{24}\bar\mu(\pi^4+P^2)\varepsilon^2,\\
+|F'(0)|&\le\varepsilon D_1,\qquad D_1=\bar k\pi(1+2\tau_0)
++\bar\mu\bigl(\tfrac{\pi^3}6+\tfrac{P^2}{24}+\tfrac{P^{3/2}}6\bigr)\varepsilon,\\
+F''(0)&\ge e^{-\sigma}-\bar k\varepsilon\bigl(1+\tfrac{\pi^2}2\bigr)
+-\bar\mu D_2\varepsilon^2,\qquad
+D_2=\tfrac{\pi^2}2+\tfrac{P^2}{24}+\tfrac{P^{3/2}}3+\tfrac P2 .
+\end{align*}
+\end{lemma}
+
+\begin{proof}
+Here $t=\tau\varepsilon\le\tau_0\varepsilon\le\tfrac14$, and
+$|x_0|\le|w_0|=\sqrt{(\pi^2+4\tau^2)\varepsilon}\le\sqrt{P\varepsilon}\le3$.
+So Lemma~\ref{lem:remainder} applies with $R=3$ and
+$\mu\le\bar\mu$. Also $x_0^4=\pi^4\varepsilon^2$,
+$|w_0|^4\le P^2\varepsilon^2$, $x_0^3/a=\pi^3\varepsilon^2$,
+$|w_0|^3/a\le P^{3/2}\varepsilon^2$, $x_0^2\varepsilon=\pi^2\varepsilon^2$
+and $|w_0|^2\varepsilon\le P\varepsilon^2$. In~\eqref{eq:F0} use
+$1-C=1-e^{-\sigma}\ge\sigma-\tfrac12\sigma^2$, $k\le\bar k$, $C\le1$,
+$\tau\le\tau_0$ and $k\le k_0+\bar dt\le k_0+\bar d\tau_0\varepsilon$.
+In~\eqref{eq:F1} use $|1-C-2C\tau|\le1+2\tau_0$. In~\eqref{eq:F2} drop the
+two nonnegative terms $2Ck\tau^2\varepsilon$ and $4Ck\tau\varepsilon$, and
+use $(1-C)+\tfrac12C\pi^2\le1+\tfrac12\pi^2$.
+\end{proof}
+
+\subsection{Proof of Theorem~\ref{thm:asymptotic}}
+Let $Q>0$ and choose $\sigma=\varepsilon s$ with
+$s=2k_0\tau_0^2+Q\varepsilon$, that is,
+\[
+t=\frac{\tau_0-\sigma}{a^2}=t_m-2k_0t_m^2-Q\varepsilon^3
+=t_m-S_2t_m^2-Q\,a^{-6},
+\]
+by~\eqref{eq:S2k0}. If $t<0$ there is nothing to prove, since
+$\Lambda_{c,p}>0$. Otherwise Lemma~\ref{lem:Fbounds} gives, after dropping
+the nonnegative term $\tfrac14\bar k\pi^2\sigma^2\varepsilon$,
+\[
+\frac{F(0)}{\varepsilon^2}\ge Q-\frac{s^2}2-\frac{\bar k\pi^2}2s
+-2\bar d\tau_0^3-\frac{\bar\mu}{24}(\pi^4+P^2) .
+\]
+Write $F_2=e^{-\varepsilon s}-\bar k\varepsilon(1+\tfrac{\pi^2}2)
+-\bar\mu D_2\varepsilon^2$. Then $F(0)F''(0)>F'(0)^2$ follows from $F_2>0$
+and
+\begin{equation}\label{eq:W}
+Q>\frac{s^2}2+\frac{\bar k\pi^2}2s+2\bar d\tau_0^3
++\frac{\bar\mu}{24}(\pi^4+P^2)+\frac{D_1^2}{F_2}.
+\end{equation}
+Indeed, \eqref{eq:W} gives $F(0)>\varepsilon^2D_1^2/F_2\ge F'(0)^2/F''(0)$.
+Every term on the right of~\eqref{eq:W} increases with $\tau_0$ and with
+$\varepsilon$, and $F_2$ decreases with both. So~\eqref{eq:W} holds for all
+$\tau_0\le\bar\tau_0$ and $\varepsilon\le\bar\varepsilon$ once it holds at
+$(\bar\tau_0,\bar\varepsilon)$, with $k_0$ replaced by an upper bound.
+
+For (i) take $\bar\tau_0=\log2$ and $\bar\varepsilon=4/\log^229$, so
+$\bar\tau_0\bar\varepsilon<0.2446$ and $(\pi^2+4\bar\tau_0^2)\bar\varepsilon
+<4.16$. With $Q=\tfrac1{50}$, interval arithmetic gives $F_2>0.967$ and the
+right side of~\eqref{eq:W} below $0.01449$.
+For (ii) take $\bar\tau_0=2$ and $\bar\varepsilon=4/\log^2293$, so
+$\bar\tau_0\bar\varepsilon<0.2480$ and $(\pi^2+16)\bar\varepsilon<3.21$.
+With $Q=\tfrac1{10}$, interval arithmetic gives $F_2>0.977$ and the right
+side below $0.0680$. In both cases $\Lag(H^{c,p}_t;\pi/a)<0$, and
+Proposition~\ref{prop:witness} gives $\Lambda_{c,p}>t$.
+
+For fixed $c$ and $p\to\infty$, $\varepsilon\to0$. The hypotheses of
+Lemma~\ref{lem:Fbounds} then hold with $\bar\tau_0=\tau_0$, and the right
+side of~\eqref{eq:W} tends to a finite limit. Any larger $Q$ works for all
+large $p$, which gives the $O(t_m^3)$ statement, since
+$a^{-6}=t_m^3/\tau_0^3$. \qed
+
+\begin{corollary}[under RH]\label{cor:sandwich}
+Assume RH. For $\tfrac12\le c<1$ and $p\ge29$,
+\[
+t_m-S_2t_m^2-\tfrac1{50}a^{-6}<\Lambda_{c,p}\le\frac{\delta^2}2
+=t_m\,g(c),\qquad g(c)=\frac{\arccosh^2(1/c)}{2\log(1/c)}
+=1+\frac{1-c}3+O\bigl((1-c)^2\bigr).
+\]
+\end{corollary}
+
+\begin{proof}
+Combine Theorem~\ref{thm:asymptotic}(i) with
+Proposition~\ref{prop:basic}(a), and note $\delta^2/2=
+\arccosh^2(1/c)/(2a^2)$. The expansion of $g$ follows from
+$\arccosh(1+\eta)^2=2\eta-\tfrac13\eta^2+O(\eta^3)$ and
+$\log(1+\eta)=\eta-\tfrac12\eta^2+O(\eta^3)$ with $1/c=1+\eta$.
+\end{proof}
+
+\section{Numerical collision times}\label{sec:numerics}
+
+This section is numerical evidence, not a certificate. We followed the
+$k$-th off-line zero of $H^{c,p}_t$ from its position $(2k+1)\pi/a+i\delta$
+at $t=0$ for $k=0,1,2$, with adaptive steps in $t$. Near the axis we solved
+$H=H'=0$ by Newton's method in $(t,x)$. The integrals were computed with
+the trapezoid rule on the contour $\Ima u=\tfrac14$, which was stable to
+about thirteen digits under grid refinement, and Theorem~\ref{thm:flow}
+was checked against direct quadrature to relative accuracy $10^{-13}$. Let
+$T_0(c,p)$ denote the computed collision time of the lowest pair ($k=0$).
+
+\begin{table}[ht]
+\centering\small
+\begin{tabular}{rrrrrrr}
+\toprule
+$p$ & $c$ & $t_m$ & $T_0(c,p)$ & $(t_m-T_0)/(S_2t_m^2)$ & Thm.~\ref{thm:asymptotic} & $\delta^2/2$\\
+\midrule
+2 & 0.5 & 5.7708 & 5.04322 & 0.946 & -- & 7.220\\
+3 & 0.5 & 2.2972 & 2.17782 & 0.979 & -- & 2.874\\
+5 & 0.5 & 1.0704 & 1.04416 & 0.990 & -- & 1.339\\
+11 & 0.5 & 0.48220 & 0.476849 & 0.9957 & -- & 0.6033\\
+29 & 0.5 & 0.244525 & 0.243146 & 0.998 & 0.242265 & 0.3059\\
+41 & 0.5 & 0.201049 & 0.200117 & 0.9982 & 0.199627 & 0.2515\\
+43 & 0.5 & 0.195989 & 0.195103 & 0.9983 & 0.194650 & 0.2452\\
+47 & 0.5 & 0.187038 & 0.186231 & 0.998 & 0.185837 & 0.2340\\
+101 & 0.5 & 0.130173 & 0.129781 & 0.99884 & 0.129649 & 0.1629\\
+1009 & 0.5 & 0.057954 & 0.0578767 & 0.99948 & 0.0578650 & 0.0725\\
+10007 & 0.5 & 0.032679 & 0.0326543 & 0.99971 & 0.0326522 & 0.0409\\
+2 & 0.9 & 0.87718 & 0.857882 & 1.085 & -- & 0.908\\
+101 & 0.9 & 0.019787 & 0.0197776 & 1.0017 & 0.0196451 & 0.0205\\
+10007 & 0.9 & 0.0049673 & 0.00496673 & 1.0004 & 0.0049646 & 0.00514\\
+\bottomrule
+\end{tabular}
+\caption{Computed lowest-pair collision times (floating point) and the
+rigorous lower bound of Theorem~\ref{thm:asymptotic}, where it applies. The
+last column is the upper bound for $\Lambda_{c,p}$ under RH.}
+\label{tab:numerics}
+\end{table}
+
+The computations show the following.
+\begin{enumerate}[label=(\arabic*)]
+\item In the twelve cases in which three pairs were tracked (all rows
+except $p=29$ and $p=47$), the lowest pair collides last among them. The higher pairs do not collide in order of $k$: for
+$p=3$ the pair near $x=28.6$, next to the first zero of $\xi$, collides
+first. Pairs with $k\ge3$ were not tracked.
+\item For $c=\tfrac12$ we also computed $T_0(\tfrac12,p)$ for every prime
+$p\le47$; Table~\ref{tab:numerics} lists some of these values. They
+decrease in $p$ and exceed $0.2$ exactly for $p\le41$, with
+$T_0(\tfrac12,43)\approx0.19510$ and $T_0(\tfrac12,47)\approx0.18623$.
+\item The ratio $(t_m-T_0)/(S_2t_m^2)$ tends to $1$, consistent with
+$T_0=t_m-S_2t_m^2+O(t_m^3)$. The next correction has opposite signs for
+$c=\tfrac12$ and $c=0.9$.
+\item The collision height $x^*$ approaches $2\pi/\log p=\pi/a$; for
+$(p,c)=(10007,\tfrac12)$, $x^*=0.6816$ against $\pi/a=0.68214$.
+\end{enumerate}
+
+\begin{remark}[formal upper half]
+The derivation of Section~\ref{sec:asymptotic} also predicts the time at which
+the lowest pair actually collides. By~\eqref{eq:F0}--\eqref{eq:F2}, the two
+equations $F(\theta)=F'(\theta)=0$ have, formally, a solution with
+$\theta=O(\varepsilon)$ and $1-C=2k_0\tau_0^2\varepsilon+O(\varepsilon^2)$.
+Since $1-C=1-e^{\tau-\tau_0}$, this is
+$T_0=t_m-S_2t_m^2+O(t_m^3)$, in agreement with Table~\ref{tab:numerics}.
+Turning this into an upper bound for $\Lambda_{c,p}$ would require showing
+that every other zero of $H^{c,p}_t$, including those inherited from $H_0$,
+is real by time $T_0$. We do not attempt this.
+\end{remark}
+
+\section{What upper-bound proofs must use}\label{sec:screening}
+
+\begin{corollary}\label{cor:screen}
+Let $\mathcal P$ be a collection of properties of real even kernels, and
+suppose every property in $\mathcal P$ holds for $\Phi_{1/2,p}$ for some prime
+$p\le41$. Then $\mathcal P$ does not imply $\Lambda_K\le0.2$. If the
+properties hold for $\Phi_{1/2,43}$ or $\Phi_{1/2,47}$, then $\mathcal P$
+does not imply $\Lambda_K\le0.1787854$.
+\end{corollary}
+
+\begin{proof}
+Otherwise Theorem~\ref{thm:certified} would be contradicted with
+$K=\Phi_{1/2,p}$.
+\end{proof}
+
+The content of the corollary is the list of properties that the controls
+share with $\Phi$. For $0<c<1$ and every prime $p$, Sections~\ref{sec:controls}
+and~\ref{sec:Lambda} show:
+\begin{enumerate}[label=(S\arabic*)]
+\item $\Phi_{c,p}$ is positive and even, and decays like $\exp(-\pi e^{4|u|-4a})$.
+\item $H^{c,p}_0$ has exactly the real zeros of $H_0$, with the same
+multiplicities, and $1-c\le H^{c,p}_0/H_0\le1+c$ on $\mathbb R$.
+\item The Dirichlet coefficients are positive and multiplicative, and the
+Euler factor at every prime $q\ne p$ is that of $\zeta$; equivalently,
+every Hecke relation at $q\ne p$ holds (Remark~\ref{rem:hecke}).
+\item The Dirichlet series lies in $\Sh$ with the gamma factor $\Gamma(s/2)$
+of $\zeta$ and conductor $p^2$, and $\Lambda_{c,p}\ge0$, as for $\zeta$.
+\item The heat flow is determined by the heat flow of $\Phi$
+(Theorem~\ref{thm:flow}).
+\end{enumerate}
+They do not share:
+\begin{enumerate}[label=(D\arabic*)]
+\item the Euler factor of $\zeta$ at $p$, equivalently conductor one, or the
+full level-one modularity of the theta function;
+\item real-rootedness of $H_0$: $H^{c,p}_0$ has the non-real zeros
+$\pm(2k+1)\pi/a\pm i\delta$ for every $k\ge0$, so at every height; the
+lowest have real part $\pi/a=2\pi/\log p\le9.1$;
+\item the values of $\xi$ away from the zeros of $\cos ax$.
+\end{enumerate}
+
+The existing proofs of $\Lambda\le0.22$ and $\Lambda\le0.2$
+\cite{polymath,platttrudgian} combine three ingredients. The first is a
+numerical verification of RH up to a large height, which is an input of type
+(D2) and (D3). The second is a barrier computation by direct evaluation of the
+genuine heat-flowed function, again (D3). The third is an effective
+approximation at large height built from the Dirichlet coefficients of
+$\zeta$, with Euler mollifiers at small primes, which is (D1). The controls
+fail the first input already at height $\pi/a\le9.1$, where their lowest
+non-real pair lies. So these proofs are consistent with
+Corollary~\ref{cor:screen}. The
+corollary says something about arguments that avoid such inputs.
+
+A structural argument for $\Lambda\le0.2$ uses no direct evaluation of $\xi$.
+Examples are identities, positivity statements or symmetries of the theta
+function and its lifts. Such an argument must use, for each prime $p\le41$, an
+input that distinguishes $\zeta$ from $\Phi_{1/2,p}$, such as the Euler factor
+of $\zeta$ at $p$ or level-one modularity. Finitely many Euler factors or Hecke
+relations cannot suffice for $\Lambda\le0$ on their own: for every finite set
+$S$ of primes and every $p\notin S$, the controls $\Phi_{c,p}$ with $c<1$ share
+the factors at $S$ and have $\Lambda_{c,p}>0$. Hypotheses beyond those shared
+by the controls, for instance quantitative information about $\xi$, are not
+affected by this observation.
+
+\begin{remark}
+For $c\ge1$ the controls are RH-equivalent twins of $\Phi$
+(Theorem~\ref{thm:structure}(c)). Under RH, $\Lambda_{c,p}=0$ for $c\ge1$
+and $\Lambda_{c,p}>0$ for $0<c<1$, so the transition between
+$\Lambda_{c,p}>0$ and $\Lambda_{c,p}\le0$ in the family is governed by the
+temperedness of one local factor. This is the sense in which the screen of
+Corollary~\ref{cor:screen} is arithmetic and not analytic.
+\end{remark}
+
+\section{Open problems}\label{sec:open}
+\begin{enumerate}[label=(\arabic*)]
+\item Prove $\Lambda_{c,p}\le t_m-S_2t_m^2+O(t_m^3)$, at least under RH, by
+showing that all other zeros of $H^{c,p}_t$ are real by the time the
+lowest pair collides.
+\item The witnesses of Theorem~\ref{thm:certified} lie at height below $10$,
+near the lowest off-line pair, which numerically collides last. Construct
+controls whose last collision occurs at large height, for example from
+Hecke polynomials at several primes, so as to screen arguments that use
+only information at large height.
+\item Extend the construction to Dirichlet $L$-functions and to other members
+of $\Sh$, where Dobner's theorem gives $\Lambda\ge0$ throughout.
+\item Determine the minimal arithmetic input. Does any upper bound below
+$\max_{p\le41}\Lambda_{1/2,p}$ follow from the Euler factors at the primes
+up to $41$ together with properties (S1)--(S5)?
+\end{enumerate}
+
+\section*{Acknowledgements and research provenance}\label{sec:provenance}
+\addcontentsline{toc}{section}{Acknowledgements and research provenance}
+This manuscript was drafted for Edward Baker with substantial assistance
+from Claude Opus 5.5 (Anthropic; configured identifier
+\texttt{claude-opus-5-5}), working in Claude Cowork at reasoning effort
+max. The assistant contributed the mathematical derivations, the computer
+programs, the drafting and the internal checks. The Euler-factor controls
+were introduced in an internal review of the investigation portfolio in the
+repository \texttt{ebbaker/shifted-zeta-positivity}, and their first study is
+recorded in \texttt{papers/investigations-2/active/19\_euler\_factor\_controls}.
+An internal review there by GPT-6 Astra (Codex) corrected two points of that
+<<<<<<< HEAD
+first study, and those corrections are used here. GPT-6 Astra also certified
+$\Lambda_{1/2,41}>0.2$ independently, at $x=168413/100000$, with Arb ball
+arithmetic (through python-flint) and validated quadrature of a rearranged
+integral; this is Note~2 of the same folder. Evaluated at that point, the
+program of Section~\ref{sec:certified} gives enclosures of $H$, $H'$, $H''$
+and $\Lag$, of widths below $10^{-50}$, that lie inside the enclosures of
+Note~2, whose widths are below $10^{-27}$. The two programs share no code,
+arithmetic library or quadrature rule. Tracked collision times
+=======
+first study, and those corrections are used here. Tracked collision times
+>>>>>>> 94745f3 (Merged work from ChatGPT)
+are numerical estimates of the last collision of a branch, not values of
+$\Lambda_{c,p}$. Near an isolated collision the raw witness margin shrinks,
+as in Remark~\ref{rem:margin}.
+
+The certificates of Theorem~\ref{thm:certified} and Lemma~\ref{lem:moments},
+and the inequality~\eqref{eq:W} in Theorem~\ref{thm:asymptotic}, are produced
+by a standard-library program in the \texttt{numerics} subfolder of that
+folder, which also writes a JSON record. The floating-point data of
+Section~\ref{sec:numerics} come from a second program in the same
+subfolder:
+\begin{center}\small
+\begin{tabular}{l}
+\texttt{check\_euler\_control\_witnesses\_claude\_20261014.py}\\
+\texttt{EULER\_CONTROL\_WITNESS\_CERTIFICATES\_20261014.json}\\
+\texttt{check\_euler\_factor\_controls\_claude\_20261013.py}
+\end{tabular}
+\end{center}
+An internal review by a separate Claude instance recomputed every witness
+and moment with independent high-precision quadrature. It found that the
+first version of the certificate program rounded negation in Python's
+default $28$-digit context, so that its enclosures were not rigorous,
+although the computed values were correct to at least $24$ significant
+digits. The program was
+corrected as described in Section~\ref{sec:certified} and the certificates
+were regenerated; the new enclosures contain the independent $75$-digit
+values. These checks, and the parallel internal reviews, are not
+independent specialist validation. Independent review of the arguments and
+the code is still needed. No claim of literature priority is made.
+
+\begingroup\raggedright
+\begin{thebibliography}{99}
+
+\bibitem{csordasnorfolkvarga}
+G.~Csordas, T.~S.~Norfolk and R.~S.~Varga,
+\emph{The Riemann hypothesis and the Tur\'an inequalities},
+Trans. Amer. Math. Soc. \textbf{296} (1986), 521--541.
+
+\bibitem{csordassmithvarga}
+G.~Csordas, W.~Smith and R.~S.~Varga,
+\emph{Lehmer pairs of zeros, the de Bruijn--Newman constant $\Lambda$, and
+the Riemann hypothesis},
+Constr. Approx. \textbf{10} (1994), 107--129.
+
+\bibitem{debruijn}
+N.~G.~de Bruijn,
+\emph{The roots of trigonometric integrals},
+Duke Math. J. \textbf{17} (1950), 197--226.
+
+\bibitem{dobner}
+A.~Dobner,
+\emph{A proof of Newman's conjecture for the extended Selberg class},
+Acta Arith. \textbf{201} (2021), 29--62. arXiv:2005.05142.
+
+\bibitem{gomila}
+J.~Gomila,
+\emph{A computer-assisted upper bound $\Lambda\le0.1787854$ for the
+de Bruijn--Newman constant}, announcement and audit repository
+\texttt{judegomila/dbn-lambda-01787854-candidate-audit}, 2026; not peer
+reviewed.
+\url{https://www.judegomila.com/posts/riemann-lambda-0.1787854}.
+
+\bibitem{kikimlee}
+H.~Ki, Y.-O.~Kim and J.~Lee,
+\emph{On the de Bruijn--Newman constant},
+Adv. Math. \textbf{222} (2009), 281--306.
+
+\bibitem{newman}
+C.~M.~Newman,
+\emph{Fourier transforms with only real zeros},
+Proc. Amer. Math. Soc. \textbf{61} (1976), 245--251.
+
+\bibitem{newmanwu}
+C.~M.~Newman and W.~Wu,
+\emph{Constants of de Bruijn--Newman type in analytic number theory and
+statistical physics},
+Bull. Amer. Math. Soc. \textbf{57} (2020), 595--614.
+
+\bibitem{platttrudgian}
+D.~Platt and T.~Trudgian,
+\emph{The Riemann hypothesis is true up to $3\cdot10^{12}$},
+Bull. Lond. Math. Soc. \textbf{53} (2021), 792--797.
+
+\bibitem{polya}
+G.~P\'olya,
+\emph{Bemerkung \"uber die Integraldarstellung der Riemannschen
+$\xi$-Funktion},
+Acta Math. \textbf{48} (1926), 305--317.
+
+\bibitem{polymath}
+D.~H.~J.~Polymath,
+\emph{Effective approximation of heat flow evolution of the Riemann $\xi$
+function, and a new upper bound for the de Bruijn--Newman constant},
+Res. Math. Sci. \textbf{6} (2019), Paper No.~31.
+
+\bibitem{rodgerstao}
+B.~Rodgers and T.~Tao,
+\emph{The de Bruijn--Newman constant is non-negative},
+Forum Math. Pi \textbf{8} (2020), e6.
+
+\bibitem{trefethenweideman}
+L.~N.~Trefethen and J.~A.~C.~Weideman,
+\emph{The exponentially convergent trapezoidal rule},
+SIAM Rev. \textbf{56} (2014), 385--458.
+
+\end{thebibliography}
+\endgroup
+\end{document}
