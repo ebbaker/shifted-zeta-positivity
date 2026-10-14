@@ -24,3 +24,8 @@ verification pass wherever `Lambda` labels actually denote tracked
 growing absolute margin. See the [numerical interpretation guide](../numerics/README.md#legacy-labels-and-what-the-record-establishes).
 The correction changes no numerical record and supplies no certified
 positive-time bound.
+
+The [internal verification of the manuscript](1_MANUSCRIPT_AND_CERTIFICATE_VERIFICATION_CLAUDE_20261014.md)
+(14 October 2026; Claude Opus 5.5, `claude-opus-5-5`, Claude Cowork,
+effort **max**) checks the manuscript, its certificate program and record.
+It is internal; independent specialist review is still outstanding.

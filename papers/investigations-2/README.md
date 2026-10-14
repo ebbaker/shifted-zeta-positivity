@@ -11,8 +11,11 @@ investigations and nine newly consolidated, completed or dormant programs.
 Inactive status does not assert mathematical impossibility.
 
 Current research allocation is one bounded continuation in
-[18](active/18_rank_two_automorphic_lift/README.md) and the fixed outward
-witness certification in [19](active/19_euler_factor_controls/README.md).
+[18](active/18_rank_two_automorphic_lift/README.md) and, in
+[19](active/19_euler_factor_controls/README.md), review of the
+Euler-factor-control manuscript, whose outward witness certificates were
+completed on 14 October 2026 (status update by Claude Opus 5.5,
+`claude-opus-5-5`, Claude Cowork, effort **max**).
 [01](active/01_complete_cutoff_reflection/README.md) and
 [02](active/02_angular_jacobi_gluing/README.md) are paused at explicit gates;
 02 remains eligible for its focused full-gluing candidate search.

@@ -21,7 +21,7 @@ theorem.
 | [12 Canonical boundary reflection](12_canonical_boundary_reflection/README.md) | Reading and bridge | An independently defined arithmetic transfer map and a proved quantitative comparison. |
 | [13 Stability Jensen and Lee Yang](13_stability_jensen_lee_yang/README.md) | Deferred reading | A specified admissible stable preparation or a precise obstruction to a concrete construction. |
 | [18 Rank two automorphic lift](18_rank_two_automorphic_lift/README.md) | One bounded continuation | A4 with a declared domain, complete higher-mode payments, stationary constraints and comparison against the existing remainder estimate. |
-| [19 Euler-factor controls](19_euler_factor_controls/README.md) | Shared control screen | Certify a fixed negative Laguerre witness, initially at `p=41,c=1/2,t=0.2`, with an absolute error budget. |
+| [19 Euler-factor controls](19_euler_factor_controls/README.md) | Shared control screen; manuscript drafted | Witnesses certified on 14 October 2026 in the [manuscript](19_euler_factor_controls/manuscript/euler_factor_controls.pdf); next, independent review and its open problems (§10). |
 
 ## Consolidated work and its principal homes
 
