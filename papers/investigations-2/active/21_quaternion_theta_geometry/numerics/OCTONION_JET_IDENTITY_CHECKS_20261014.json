@@ -1,0 +1,136 @@
+{
+  "arithmetic": "exact rational sparse polynomial expansion; Python standard library",
+  "checker_source_name": "check_octonion_jet_identities.py",
+  "checker_source_sha256": "800e47adcc28cdc4c4142f325c9f59a656f4601aaee1991594a871ea5dd7fe89",
+  "checks_by_group": {
+    "arithmetic_kernel": 6,
+    "complex_jet_packaging": 7,
+    "differential_extension": 32,
+    "hamilton_convention": 11,
+    "heat_collision_examples": 20,
+    "octonion_algebra": 34,
+    "physical_jet_identities": 7,
+    "physical_subalgebra": 80,
+    "rational_samples": 24,
+    "signed_associators": 24,
+    "transverse_identity": 3
+  },
+  "checks_failed": 0,
+  "checks_total": 248,
+  "completed_utc": "2026-10-14T22:50:43.828838+00:00",
+  "failures": [],
+  "llm_assistance": true,
+  "prepared_for": "Edward Baker",
+  "python_version": "3.10.0",
+  "recorded_effort": "ultra",
+  "recorded_model": "gpt-6-astra",
+  "research_date": "2026-10-14",
+  "results": {
+    "basis_order": [
+      "1",
+      "i",
+      "j",
+      "k",
+      "ell",
+      "ell*i",
+      "ell*j",
+      "ell*k"
+    ],
+    "collision_examples": [
+      {
+        "H": "2*T - 2*t + a^2 - 2*a*x + x^2",
+        "before_collision_parameter": "t=T-epsilon, x=a, epsilon>0",
+        "collision_at": "t=T, x=a (T may be any positive constant)",
+        "collision_norm": "4*epsilon^2",
+        "doubled_norm_at_collision": "4",
+        "family": "quadratic",
+        "jet_at_collision": [
+          "0",
+          "0",
+          "2",
+          "0"
+        ],
+        "ratio": "L/N=-1/epsilon",
+        "stationary_L": "-4*epsilon",
+        "stationary_test_index": 0
+      },
+      {
+        "H": "-6*T*a + 6*T*x + 6*a*t - 6*t*x - a^3 + 3*a^2*x - 3*a*x^2 + x^3",
+        "before_collision_parameter": "t=T-epsilon, x=a, epsilon>0",
+        "collision_at": "t=T, x=a (T may be any positive constant)",
+        "collision_norm": "36*epsilon^2",
+        "doubled_norm_at_collision": "36",
+        "family": "cubic",
+        "jet_at_collision": [
+          "0",
+          "0",
+          "0",
+          "6"
+        ],
+        "ratio": "L/N=-1/epsilon",
+        "stationary_L": "-36*epsilon",
+        "stationary_test_index": 1
+      }
+    ],
+    "complex_commutator_G0_G1": [
+      "0",
+      "-2*a1*b2 + 2*a2*b1",
+      "2*b0*b2 - 2*b1^2",
+      "-2*a1*b1 + 2*a2*b0"
+    ],
+    "complex_jet_coordinates": "G_m=(a_m,b_m,a_(m+1),-b_(m+1))",
+    "convention": "(a,b)=a+ell*b; (a,b)(c,d)=(ac-d*conj(b),conj(a)*d+cb)",
+    "differential_extension": {
+      "checked": [
+        "D8 O_0=0",
+        "O_0(q,0)=(G_0,G_2)",
+        "partial_x0 O_0=O_1",
+        "partial_t O_0=-O_2"
+      ],
+      "corrected_lift": "O_m(q,r)=(G_m(q)-(1/2)*G_(m+3)(q)*conj(r),G_(m+2)(q))",
+      "naive_defect": "D8(G_0,G_2)=(0,2G_3)",
+      "scope": "formal algebra under stated Fueter/heat jet recurrences; correction uses additional jets"
+    },
+    "interpretation": [
+      "The physical four-jet package lies in an associative quaternion subalgebra.",
+      "The complex jet extension can have a nonzero octonionic associator.",
+      "Its first transverse derivative recovers an existing signed Laguerre form.",
+      "Associators with fixed i/k multipliers retain the collision norm and stationary signs exactly.",
+      "The corrected standard left-monogenic extension needs jets beyond the four boundary values.",
+      "Norms square that form and therefore do not determine its sign.",
+      "Generic algebra and the backward heat equation also admit positive-time collisions.",
+      "No theta-specific sign estimate, analytic continuation bound, or RH conclusion is checked."
+    ],
+    "physical_subalgebra_indices": [
+      0,
+      2,
+      4,
+      6
+    ],
+    "primitive_identity_scope": "L0 analogue requires G_-1 built from a holomorphic primitive; no additional four-jet constraint follows",
+    "signed_associator_identities": {
+      "collision_detector": "[F*i,F*k,ell]=2*u*(H^2+H_x^2)",
+      "dot_product": "[G_m*i,G_n*k,ell]=2*u*(h_m*h_n+h_(m+1)*h_(n+1))",
+      "minor": "[G_m*i,G_n*i,ell]=-2*u*(h_m*h_(n+1)-h_(m+1)*h_n)",
+      "scope": "exact on the physical real slice; fixed multipliers and orientation are part of each identity",
+      "stationary_sign": "[G_j*i,G_(j+1)*i,ell]=2*u*L_j",
+      "time_velocity": "[F*i,F_t*k,ell]=u*partial_t(H^2+H_x^2)",
+      "u": "ell*j"
+    },
+    "transverse_associator_coordinates": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "2*a1*a3 - 2*a2^2",
+      "0",
+      "0"
+    ],
+    "transverse_identity": "d_y[G0,G1,ell]|_(y=0)=-2*ell*i*L1, z=x+iy"
+  },
+  "schema": "inv21_octonion_four_jet_exact_checks_v1",
+  "scope": "computational algebra checks; not formal proof verification or theta-specific positivity",
+  "started_utc": "2026-10-14T22:50:43.715924+00:00",
+  "status": "PASS"
+}

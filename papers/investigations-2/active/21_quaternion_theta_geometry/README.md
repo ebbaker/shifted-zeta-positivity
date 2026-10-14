@@ -8,10 +8,13 @@ quaternion first jet of the theta heat family as a possible source of a
 signed current or boundary identity that excludes positive-time zero
 collisions. The exact first-order equations and RH criterion map are the
 starting point. Complete-source central estimates, quantitative
-imaginary-gluing stability, and a compensated certificate for both
+imaginary-gluing stability, and complete-source certificates for both
 stationary signs over the full possible positive-threshold time range
-through height 100 are now established, with an explicit physical norm
-gap. The signed estimate at arbitrary heights remains open.
+through height 104 are now established, with an explicit physical norm
+gap. The latest extension uses a complete-source centered residual cone.
+A uniform analytic continuation now proves both Laguerre forms positive
+at sufficiently large heights whenever t log(|x|/(4 pi))>=4+epsilon,
+for each fixed epsilon>0. The inner small-time region remains open.
 
 This program was promoted from the quaternion branch of
 [investigation 20](../20_constrained_operator_squares/README.md).
@@ -21,14 +24,41 @@ retain the proposal's provenance. New quaternion research belongs here.
 
 ## Start here
 
-The [current summary and continuation note](notes/14_SUMMARY_AND_CONTINUATION_20261014.md)
-consolidates the established results, remaining signed theorem, replay
-commands, and a concrete next session prompt.
+The [uniform outer-region theorem](notes/17_UNIFORM_OUTER_CUSP_SIGNS_AND_THRESHOLD_FOUR_20261014.md) is the latest result. For every epsilon>0, both Laguerre forms are strictly
+positive and the first jet is nonzero whenever 0<t<=1/2, |x|>=X_epsilon,
+and t log(|x|/(4 pi))>=4+epsilon. The four physical derivatives share one
+nonzero zeta amplitude, with uniform relative errors. This is an analytic
+consequence of the effective Polymath approximation; X_epsilon has not
+been evaluated numerically. It gives asymptotic collision localization at
+4, with the inner region and finite transition strip still unresolved.
+See the [independent internal review](reviews/12_UNIFORM_OUTER_CUSP_INTERNAL_REVIEW_20261014.md).
+Prepared 14 October 2026 with substantial LLM assistance,
+**gpt-6-astra**, effort **ultra**.
+
+The [centered residual continuation](notes/16_THETA_CENTERED_RESIDUAL_AND_SHARED_ARITHMETIC_20261014.md)
+gives the preceding bounded result: an exact common arithmetic representation, explicit
+sum-of-squares stationary loss identities, and a relative residual cone
+on 32 closed cells covering 0<=t<=1/2, 100<=x<=104. It extends the
+strict physical gap |F|>1e-16 through height 104. The all-height signed
+arithmetic estimate remains open. Prepared 14 October 2026 with substantial
+LLM assistance, **gpt-6-astra**, effort **ultra**.
+
+The [height-100 summary and continuation note](notes/14_SUMMARY_AND_CONTINUATION_20261014.md)
+consolidates the preceding baseline, remaining signed theorem, and replay
+commands.
+
+The subsequent [octonionic continuation](notes/15_OCTONIONIC_LIFT_AND_ASSOCIATOR_SIGN_TARGET_20261014.md)
+constructs an eight-dimensional monogenic extension and expresses the
+collision energy and stationary signs as oriented associators. A positive
+entire-source collision control shows why an additional theta-specific
+estimate is still needed. This continuation was prepared on 14 October
+2026 with substantial LLM assistance, **gpt-6-astra**, effort **ultra**.
 
 Read the [height-100 continuation](notes/11_CORRELATED_TRANSPORT_AND_HEIGHT_100_CERTIFICATE_20261014.md)
+and the [centered residual extension](notes/16_THETA_CENTERED_RESIDUAL_AND_SHARED_ARITHMETIC_20261014.md)
 for the current bounded result: both stationary signs on 0<=t<=1/2,
-|x|<=100, and |F|>1e-16 there. Any positive threshold collision must
-have |a|>100. The [shifted-contour payments](notes/12_SHIFTED_CONTOUR_FOUR_JET_PAYMENTS_20261014.md)
+|x|<=104, and |F|>1e-16 there. Any positive threshold collision must
+have |a|>104. The [shifted-contour payments](notes/12_SHIFTED_CONTOUR_FOUR_JET_PAYMENTS_20261014.md)
 give absolute jet errors at the gamma exponential scale for arbitrary
 heights. The remaining signed target is specified in the
 [normalized collision-cusp note](notes/13_NORMALIZED_SIGN_TARGET_IN_THE_COLLISION_CUSP_20261014.md). The [guarded time-collar theorem](notes/10_FORWARD_STATIONARY_COLLARS_AND_BRANCH_CREATION_20261014.md)
@@ -85,8 +115,31 @@ preserves its target and workflow.
     states the signed or locally bounded-loss remainder still unproved.
 
 15. [Summary and continuation](notes/14_SUMMARY_AND_CONTINUATION_20261014.md)
-    gives the current baseline and prioritizes a whole-cell normalized
+    gives the height-100 baseline and prioritizes a whole-cell normalized
     contour pilot near height 100 before the global signed estimate.
+
+16. [Octonionic lift and associator sign target](notes/15_OCTONIONIC_LIFT_AND_ASSOCIATOR_SIGN_TARGET_20261014.md)
+    proves the explicit monogenic extension, signed associator identities,
+    and positive analytic-source collision control. Its
+    [internal review](reviews/10_OCTONIONIC_LIFT_AND_ASSOCIATOR_INTERNAL_REVIEW_20261014.md)
+    includes independent replay of 248 exact algebra checks; the proposed
+    all-height theta-specific radial residual estimate remains unproved.
+
+17. [Theta centered residual and shared arithmetic](notes/16_THETA_CENTERED_RESIDUAL_AND_SHARED_ARITHMETIC_20261014.md)
+    proves an exact common-kernel representation with logarithmic weights,
+    complete new tail payments, and stationary sum-of-squares identities.
+    A validated relative cone on 32 closed cells extends both stationary
+    signs and the physical gap through height 104; its
+    [internal review](reviews/11_THETA_CENTERED_RESIDUAL_INTERNAL_REVIEW_20261014.md)
+    independently replays the calculation and audits the exact endpoints.
+
+18. [Uniform outer-region signs and threshold four](notes/17_UNIFORM_OUTER_CUSP_SIGNS_AND_THRESHOLD_FOUR_20261014.md)
+    proves both full Laguerre inequalities beyond X_epsilon in the region
+    t log(|x|/(4 pi))>=4+epsilon, retaining a common nonzero arithmetic
+    amplitude. Shrinking complex discs pay all four derivative errors
+    without differentiating a moving cutoff. Signed inner-region targets
+    remain necessary; small residual cones and phase-free integrand
+    positivity impose stronger conditions.
 
 ## Objective and first target
 
@@ -131,10 +184,12 @@ supply bounded source-specific results. The
 [compensated certificate](notes/8_COMPENSATED_STATIONARY_SIGN_DERIVATION_20261014.md)
 controls the full signed arithmetic cross terms on its padded rectangle.
 The [full-time result](notes/9_FULL_THRESHOLD_TIME_COVER_AND_HEIGHT_41_GAP_20261014.md)
-and [correlated-source extension](notes/11_CORRELATED_TRANSPORT_AND_HEIGHT_100_CERTIFICATE_20261014.md)
+and [correlated-source extension](notes/11_CORRELATED_TRANSPORT_AND_HEIGHT_100_CERTIFICATE_20261014.md),
+together with the [centered residual band](notes/16_THETA_CENTERED_RESIDUAL_AND_SHARED_ARITHMETIC_20261014.md),
 now prove both stationary signs and a direct physical norm gap on
-0<=t<=1/2, |x|<=100. Every sign, norm and merged branch window is
-resolved in this bounded cover. At arbitrary heights,
+0<=t<=1/2, |x|<=104. Every stationary sign and physical norm decision is
+resolved in this bounded cover; the new band does not assert branch
+existence or uniqueness. At arbitrary heights,
 [contour payments](notes/12_SHIFTED_CONTOUR_FOUR_JET_PAYMENTS_20261014.md)
 address absolute approximation; the
 [normalized signed target](notes/13_NORMALIZED_SIGN_TARGET_IN_THE_COLLISION_CUSP_20261014.md)

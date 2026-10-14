@@ -40,6 +40,23 @@ The [higher-height review](9_HIGHER_HEIGHT_CERTIFICATES_INTERNAL_REVIEW_20261014
 independently replays all three height bands and audits correlated raw
 transport, all 510 cells, norm extraction and general retained pairings.
 
+The [octonionic lift and associator review](10_OCTONIONIC_LIFT_AND_ASSOCIATOR_INTERNAL_REVIEW_20261014.md)
+checks the full differential extension, twisted and transverse
+associators, complete-source kernels, and positive analytic-source
+collision control, with independent replay of 248 exact algebra checks.
+It retains the unproved theta-specific signed residual obligation.
+Added 14 October 2026, prepared for Edward Baker with substantial LLM
+assistance, **gpt-6-astra**, effort **ultra**.
+
+The [theta centered residual review](11_THETA_CENTERED_RESIDUAL_INTERNAL_REVIEW_20261014.md)
+checks the shared arithmetic representation, centered tails, stationary
+sum-of-squares identities, and the 32-cell relative residual certificate.
+It independently replays the validated quadrature and audits the complete
+cover and outward endpoints. The bounded extension reaches height 104;
+the arbitrary-height signed arithmetic estimate remains open. Added
+14 October 2026, prepared for Edward Baker with substantial LLM assistance,
+**gpt-6-astra**, effort **ultra**.
+
 Review proposed identities against the
 [criteria baseline](../notes/1_RH_CRITERIA_AND_QUATERNION_SETUP_20261014.md)
 and [validation conditions](../notes/2_INITIAL_RESEARCH_PROGRAM_20261014.md).
@@ -54,3 +71,11 @@ Label internal LLM checks as internal. Independent specialist review and
 formal verification require their own evidence. Include date, intended
 author, LLM assistance, model, effort, the version assessed, and the exact
 remaining obligation.
+
+12. [Uniform outer-region theorem](12_UNIFORM_OUTER_CUSP_INTERNAL_REVIEW_20261014.md)
+    checks the uniform weighted-sum estimate, the holomorphic two-branch
+    zeta model, shrinking-disc four-jet control, and strict Laguerre
+    consequences. It retains the unevaluated height cutoff and open inner
+    region, and audits the separate phase-obstruction diagnostics.
+    Prepared 14 October 2026 with substantial LLM assistance,
+    **gpt-6-astra**, effort **ultra**.

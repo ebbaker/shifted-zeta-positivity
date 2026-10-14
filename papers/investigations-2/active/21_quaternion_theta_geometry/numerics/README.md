@@ -105,3 +105,70 @@ python3 audit_correlated_source_height_records.py --output /tmp/inv21-height-aud
 
 This complements the independent validated-quadrature replay; it does not
 replace the analytic source bounds or establish an all-height sign.
+
+The [octonion jet checker](check_octonion_jet_identities.py) and
+[small record](OCTONION_JET_IDENTITY_CHECKS_20261014.json) verify 248 exact
+identities using standard-library rational polynomial arithmetic. They
+cover Cayley--Dickson multiplication, norm composition, associators,
+physical energy and stationary signs, the transverse derivative, the
+eight-dimensional differential extension, and polynomial collision
+controls. Replay from this directory:
+
+```sh
+python3 check_octonion_jet_identities.py --output /tmp/inv21-octonion-replay.json
+```
+
+The [derivation](../notes/15_OCTONIONIC_LIFT_AND_ASSOCIATOR_SIGN_TARGET_20261014.md)
+and [internal review](../reviews/10_OCTONIONIC_LIFT_AND_ASSOCIATOR_INTERNAL_REVIEW_20261014.md)
+separate these algebra checks from the analytic positive-source control
+and the unproved theta-specific estimate. Added 14 October 2026, prepared
+for Edward Baker with substantial LLM assistance, **gpt-6-astra**, effort
+**ultra**. This is not a new theta sign certificate.
+
+The [centered residual driver](certify_phase_centered_residual.py) and
+[certificate](THETA_CENTERED_RESIDUAL_100_104_20261014.json) prove the
+complete-source relative bound C0²+C1²<E/9 and mu>=2/5 on 32 closed
+cells covering [0,1/2] x [100,104]. Shared centered coefficients are
+formed before time/space Taylor transport, with all source and parameter
+remainders paid. Both genuine stationary signs and |F|>4e-16 are also
+certified on this band. With python-flint available, replay:
+
+```sh
+python3 certify_phase_centered_residual.py --output /tmp/theta-residual-replay.json
+python3 check_theta_centered_residual_identities.py --output /tmp/theta-residual-identities.json
+```
+
+The [exact algebra checker](check_theta_centered_residual_identities.py)
+and [record](THETA_CENTERED_RESIDUAL_IDENTITY_CHECKS_20261014.json) check
+nine identities using standard-library rational polynomial arithmetic.
+The [retained record auditor](audit_theta_centered_residual_record.py)
+and [audit record](THETA_CENTERED_RESIDUAL_RECORD_AUDIT_20261014.json)
+bind the generating sources and independently verify the exact cover,
+outward endpoints, cone and stationary decisions, and stated norm floors.
+Replay with the standard library:
+
+```sh
+python3 audit_theta_centered_residual_record.py --record THETA_CENTERED_RESIDUAL_100_104_20261014.json --output /tmp/theta-residual-audit.json
+```
+
+The [derivation](../notes/16_THETA_CENTERED_RESIDUAL_AND_SHARED_ARITHMETIC_20261014.md)
+and [internal review](../reviews/11_THETA_CENTERED_RESIDUAL_INTERNAL_REVIEW_20261014.md)
+state the source representation, complete payments, independent replay,
+and remaining all-height obligation. Added 14 October 2026, prepared for
+Edward Baker with substantial LLM assistance, **gpt-6-astra**, effort
+**ultra**.
+
+The [outer-region algebra and phase diagnostic](check_outer_cusp_and_phase_obstructions.py)
+and [record](OUTER_CUSP_AND_PHASE_OBSTRUCTION_CHECKS_20261014.json)
+check the exact four-jet perturbation algebra, reject a phase-independent
+positivity condition for two exact shared-carrier arithmetic sums, and
+retain selected complete-source point enclosures and staircase identities.
+These computations do not prove the uniform asymptotic theorem; its proof
+is in [Note 17](../notes/17_UNIFORM_OUTER_CUSP_SIGNS_AND_THRESHOLD_FOUR_20261014.md).
+They give no new finite height cover. Prepared 14 October 2026 with
+substantial LLM assistance, **gpt-6-astra**, effort **ultra**. Replay with
+python-flint available:
+
+```sh
+python3 check_outer_cusp_and_phase_obstructions.py --output /tmp/outer-cusp-checks.json
+```

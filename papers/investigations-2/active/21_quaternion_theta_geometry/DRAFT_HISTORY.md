@@ -119,3 +119,35 @@ Recorded model: **gpt-6.1-sol (Codex)**; reasoning effort: **ultra**.
   next whole-cell contour pilot. The current chat remains registration 9
   in this investigation and is refreshed through the shared recorder.
   No manuscript source or compiled artifact was changed for this handoff.
+
+- **14 October 2026 — Investigation 21 octonionic continuation.**
+  Working-tree reference: [Note 15](notes/15_OCTONIONIC_LIFT_AND_ASSOCIATOR_SIGN_TARGET_20261014.md).
+  Constructs an explicit eight-dimensional monogenic extension and
+  oriented associators for the collision energy and both stationary signs.
+  A strictly positive entire-source collision control isolates the need
+  for a theta-specific estimate. The [internal review](reviews/10_OCTONIONIC_LIFT_AND_ASSOCIATOR_INTERNAL_REVIEW_20261014.md)
+  independently replays 248 exact checks. No new theta sign bound or
+  manuscript revision; no new commit, tag, or snapshot folder. Prepared
+  with substantial LLM assistance, **gpt-6-astra**, effort **ultra**.
+
+- **14 October 2026 — Investigation 21 theta centered residual.**
+  Working-tree reference: [Note 16](notes/16_THETA_CENTERED_RESIDUAL_AND_SHARED_ARITHMETIC_20261014.md).
+  Gives the exact shared arithmetic carrier and logarithmic covariance,
+  complete tail payments, and stationary sum-of-squares loss identities.
+  A complete-source relative residual cone on 32 closed cells extends
+  both stationary signs and |F|>1e-16 through height 104. The
+  [internal review](reviews/11_THETA_CENTERED_RESIDUAL_INTERNAL_REVIEW_20261014.md)
+  independently replays the bounded calculation; the all-height signed
+  estimate remains open. No manuscript revision, commit, tag, or snapshot
+  folder. Substantial LLM assistance, **gpt-6-astra**, effort **ultra**.
+
+- **14 October 2026 — Investigation 21 uniform outer-region signs.**
+  Working-tree reference: [Note 17](notes/17_UNIFORM_OUTER_CUSP_SIGNS_AND_THRESHOLD_FOUR_20261014.md).
+  Derives both full Laguerre inequalities uniformly for sufficiently
+  large |x| with t log(|x|/(4 pi))>=4+epsilon, sharpening asymptotic
+  collision localization to 4. The finite cutoff is not evaluated; the
+  inner-region signed estimate remains open. The
+  [internal review](reviews/12_UNIFORM_OUTER_CUSP_INTERNAL_REVIEW_20261014.md) and
+  [diagnostics](numerics/OUTER_CUSP_AND_PHASE_OBSTRUCTION_CHECKS_20261014.json) preserve those limits.
+  No manuscript revision, commit, tag, or snapshot folder. Substantial
+  LLM assistance, **gpt-6-astra**, effort **ultra**.
