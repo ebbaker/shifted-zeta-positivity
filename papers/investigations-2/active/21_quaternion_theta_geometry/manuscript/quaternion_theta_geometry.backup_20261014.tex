@@ -1,0 +1,2767 @@
+\documentclass[11pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{amsmath,amssymb,amsthm,mathtools,mathrsfs}
+\usepackage[margin=1in]{geometry}
+\usepackage{booktabs,array,enumitem}
+\usepackage[colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue]{hyperref}
+\hypersetup{pdftitle={Fueter regular theta fields and formulations of the Riemann hypothesis},
+ pdfauthor={Drafted for Edward Baker},
+ pdfsubject={Investigation 21: conventions, RH formulations, and bounded theta estimates}}
+\allowdisplaybreaks
+\setlength{\emergencystretch}{2em}
+\numberwithin{equation}{section}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{classicalinput}[theorem]{Classical input}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\DeclareMathOperator{\Rea}{Re}
+\DeclareMathOperator{\Ima}{Im}
+\DeclareMathOperator{\supp}{supp}
+\newcommand{\dd}{\,d}
+\newcommand{\R}{\mathbb R}
+\newcommand{\C}{\mathbb C}
+\newcommand{\HH}{\mathbb H}
+\newcommand{\ii}{\mathbf i}
+\newcommand{\jj}{\mathbf j}
+\newcommand{\kk}{\mathbf k}
+\newcommand{\Lag}{\mathscr L}
+\newcommand{\RH}{\mathrm{RH}}
+\newcommand{\Ephys}{\mathcal E}
+\title{Fueter regular theta fields and formulations of the Riemann hypothesis}
+\author{Drafted for Edward Baker}
+\date{14 October 2026}
+\begin{document}
+\maketitle
+\begin{abstract}
+We construct an entire left Fueter regular quaternion field from the first
+spectral jet of the theta heat family, with Newman time retained as an
+independent real parameter. Starting with the theta Mellin transform, we
+derive the normalization relating this family to the Riemann xi function.
+We state the classical global heat-flow inputs and prove the equivalence
+between the Riemann hypothesis and nonvanishing of the quaternion field
+at every real argument and positive time. A translation identity gives
+an equivalent zero-free half-plane for one fixed quaternion field.
+Two stationary Laguerre signs, a locally bounded loss formulation, and
+a scalar vertical-convexity criterion are derived and translated with
+explicit coordinate and multiplication conventions. Cauchy--Fueter
+reproduction yields signed boundary correlations; harmonic currents and
+norm identities retain their precise limitations. For the complete theta
+source we prove an explicit norm gap on $0\le t\le1$, $|x|\le8$, and a
+quantitative transfer from a full angular gluing defect to four physical
+jets. Remote perturbation controls and endpoint cancellations identify
+why absolute estimates and separate theta-index diagonals do not settle
+the remaining all-height sign problem. A validated compensated calculation
+extends both stationary signs to $0\le t\le1/2$, $7\le|x|\le41$;
+combined with the central theorem it gives an explicit physical norm gap
+through height 41. Correlated Taylor transport extends the validated
+norm gap and both signs through height 100. A guarded continuation theorem propagates strict
+stationary signs forward until branch regularity or boundary control
+fails. Shifted complete-source contours give absolute jet errors at the
+gamma exponential scale for arbitrary heights; the remaining signed
+target is localized to a moving small-time region. No proof of the Riemann hypothesis
+is claimed.
+\end{abstract}
+\tableofcontents
+
+\section{Scope and conventions}\label{sec:scope}
+The Riemann hypothesis concerns the zeros of a particular scalar entire
+function. Quaternion regularity is a property of its constrained lift;
+the arithmetic content remains the complete theta source. The central
+equivalence proved here is
+\[
+ \RH\quad\Longleftrightarrow\quad
+ F(t,x)\ne0\quad\hbox{for all }t>0,\ x\in\R,
+\]
+where $F$ is the explicit field constructed below. This is pointwise
+nonvanishing. It requires neither a positive lower bound uniform in all
+heights nor a simplicity assertion at time zero.
+
+Hamilton units satisfy
+$\ii^2=\jj^2=\kk^2=\ii\jj\kk=-1$ and $\ii\jj=\kk$.
+The complex field $\C_i=\R+\ii\R$ is identified with the usual complex
+numbers. Quaternion components are written on the right of $\jj$:
+$Q=A+\jj B$, $A,B\in\C_i$. In particular
+$\jj A=\overline A\jj$. Quaternion conjugation is denoted by a bar;
+when its argument is complex it is ordinary complex conjugation.
+The real part of a quaternion is $\Rea Q$, its imaginary quaternion
+part is $\Ima Q$, and $|Q|^2=\overline QQ$.
+
+We keep the following roles distinct:
+\begin{center}
+\begin{tabular}{@{}ll@{}}
+\toprule
+Symbol & Role \\
+\midrule
+$t\in\R$ & independent Newman time \\
+$z=x+iy\in\C_i$ & scalar spectral variable \\
+$q=z_0+\jj z_1\in\HH$ & quaternion argument with independent complex coordinates \\
+$\tau=t+\overline{z_1}$ & complex heat-time displacement inside the lift \\
+$h_m=\partial_z^mH$ & scalar spectral derivative of order $m$ \\
+$\Lag_\ell=h_{\ell+1}^2-h_\ell h_{\ell+2}$ & Laguerre form, $\ell=0,1$ \\
+$n,m\ge1$ & theta-series indices when a double sum is displayed \\
+\bottomrule
+\end{tabular}
+\end{center}
+Derivative-order indices may be written $j$ or $\ell$; the quaternion
+unit $\jj$ is always bold. All quaternion differential operators multiply
+units on the left unless
+a right action is stated. A prime on a scalar heat slice differentiates
+its spectral argument, never its time parameter. An angular theta
+argument used later will be called $y_{\rm ang}$ when a distinction is
+needed. The known threshold and localization theorems are stated as
+classical inputs; the deductions from them and every coordinate
+translation used here are proved in the text. The theta estimates have
+the explicitly bounded domains displayed in their statements.
+
+
+% Foundation fragment for Edward Baker's investigation 21 manuscript.
+% Prepared 14 October 2026 with substantial LLM assistance.
+% Recorded model: gpt-6.1-sol (Codex); reasoning effort: ultra.
+% Citation keys: debruijn, newman, polymath, rodgerstao, dlmf, csordasescassut.
+
+\section{The scalar theta family and its normalization}
+\label{sec:rh-foundations}
+
+The quaternion construction begins with a fixed scalar family.  We derive
+its normalization so that subsequent changes of coordinates cannot change
+the meaning of the Riemann hypothesis.  Write
+\[
+ \vartheta(y)=\sum_{n\in\mathbb Z}e^{-\pi n^2y},\qquad
+ \vartheta_+(y)=\sum_{n\ge1}e^{-\pi n^2y},\qquad y>0.
+\]
+The Gaussian Fourier transform and Poisson summation give
+\begin{equation}
+ \vartheta(y)=y^{-1/2}\vartheta(1/y).
+ \label{eq:rh-poisson}
+\end{equation}
+Consequently the balanced real-variable field
+\[
+ P(u)=e^u\vartheta(e^{4u}),\qquad
+ A(u)=e^u\vartheta_+(e^{4u}),\qquad P(u)=e^u+2A(u)
+\]
+is even.  These series and their derivatives converge locally uniformly
+on the real line, and in a complex neighborhood of every real point.
+Differentiating the series gives
+\begin{align}
+ \Phi(u)&=\frac{P''(u)-P(u)}{16}
+         =\frac{A''(u)-A(u)}8\nonumber\\
+ &=\sum_{n\ge1}
+ \left(2\pi^2n^4e^{9u}-3\pi n^2e^{5u}\right)
+ e^{-\pi n^2e^{4u}}.
+ \label{eq:rh-theta-source}
+\end{align}
+Thus the full real source is even and real analytic; in particular all
+its odd derivatives at zero vanish.  For $u\ge0$, each summand is
+positive, since its prefactor is
+$\pi n^2e^{5u}(2\pi n^2e^{4u}-3)$.  Also
+\begin{equation}
+ 0<\Phi(u)<4\pi^2e^{9u-\pi e^{4u}},\qquad u\ge0.
+ \label{eq:rh-source-majorant}
+\end{equation}
+Indeed, after dropping the negative term, successive terms of
+$n^4e^{-\pi n^2e^{4u}}$ have ratio at most $16e^{-3\pi}<1/2$.
+The geometric sum proves \eqref{eq:rh-source-majorant}.
+
+For $\operatorname{Re}s>1$, termwise integration gives the theta Mellin
+identity
+\[
+ \pi^{-s/2}\Gamma(s/2)\zeta(s)
+ =\int_0^\infty y^{s/2-1}\vartheta_+(y)\,dy.
+\]
+This is also the standard Mellin representation in \cite{dlmf}.
+Splitting at one and using \eqref{eq:rh-poisson}, namely
+$\vartheta_+(y)=(y^{-1/2}-1)/2+y^{-1/2}\vartheta_+(1/y)$,
+gives
+\begin{equation}
+ \xi(s)=\frac12+\frac{s(s-1)}2
+ \int_1^\infty
+ \left(y^{s/2-1}+y^{(1-s)/2-1}\right)\vartheta_+(y)\,dy,
+ \label{eq:rh-xi-mellin}
+\end{equation}
+where $\xi(s)=s(s-1)\pi^{-s/2}\Gamma(s/2)\zeta(s)/2$ in its
+initial domain.  The integral on the right is entire in $s$, providing
+analytic continuation and $\xi(s)=\xi(1-s)$.  The usual completion
+cancels the trivial zeta zeros and its removable singularities; its
+zeros are the nontrivial zeta zeros.  The Euler product in
+$\operatorname{Re}s>1$ and the functional equation place these zeros
+in $0\le\operatorname{Re}s\le1$.
+
+Set $s=1/2+iz/2$ in \eqref{eq:rh-xi-mellin} and substitute
+$y=e^{4u}$.  Since $s(s-1)=-(1+z^2)/4$, one obtains
+\begin{equation}
+ \xi(1/2+iz/2)=\frac12-(1+z^2)
+ \int_0^\infty A(u)\cos(zu)\,du.
+ \label{eq:rh-xi-cosine}
+\end{equation}
+Evenness of $P$ gives $A'(0)=-1/2$.  The field $A$ and its derivatives
+decay double exponentially at positive infinity.  Two integrations by
+parts therefore yield
+\[
+ \int_0^\infty A''(u)\cos(zu)\,du
+ =-A'(0)-z^2\int_0^\infty A(u)\cos(zu)\,du.
+\]
+Using \eqref{eq:rh-theta-source} and \eqref{eq:rh-xi-cosine} proves
+the precise normalization
+\begin{equation}
+ H(t,z):=\int_0^\infty e^{tu^2}\Phi(u)\cos(zu)\,du,
+ \qquad
+ H(0,z)=\frac18\xi\!\left(\frac12+\frac{iz}{2}\right).
+ \label{eq:rh-H-normalization}
+\end{equation}
+It agrees with the heat-family convention in \cite{polymath}.
+Under this affine change of variable, the critical line is precisely
+real $z$, while the critical strip is contained in $|\operatorname{Im}z|\le1$.
+Thus RH is equivalent to every zero of $H(0,\cdot)$ being real.
+
+\subsection{Analytic properties and the physical heat sign}
+
+On a compact subset of complex $(t,z)$, the integrands for every fixed
+mixed derivative are bounded by a constant times
+\[
+ u^N\exp\{T u^2+(Z+9)u-\pi e^{4u}\},
+\]
+which is integrable.  Differentiation under the integral and local uniform
+convergence prove joint entireness in $(t,z)$ and
+\begin{equation}
+ \partial_tH=-\partial_z^2H.
+ \label{eq:rh-physical-heat}
+\end{equation}
+Increasing Newman time is therefore backward heat in the spectral
+coordinate.  For real $t$, the function is real entire and even, with
+Schwarz reflection $H(t,\bar z)=\overline{H(t,z)}$.  Positivity of
+the source gives
+\begin{equation}
+ H(t,iy)=\int_0^\infty e^{tu^2}\Phi(u)\cosh(yu)\,du>0,
+ \qquad t,y\in\mathbb R.
+ \label{eq:rh-imaginary-nonzero}
+\end{equation}
+No real-time slice is identically zero, and every spatial zero has finite
+multiplicity.
+
+Each fixed-time slice has order at most one.  To see this directly, absorb
+$|t|u^2+9u$ into $(\pi/2)e^{4u}+C_t$ in
+\eqref{eq:rh-source-majorant}.  For $R\ge1$ the maximum on $|z|\le R$
+is bounded by
+\[
+ C_t\int_0^\infty e^{Ru-(\pi/2)e^{4u}}\,du
+ \le\frac{C_t}4(\pi/2)^{-R/4}\Gamma(R/4).
+\]
+Stirling's estimate consequently gives
+$\log\max_{|z|\le R}|H(t,z)|\le C_t+C R\log(2+R)$.
+This growth condition will be used in the real-rooted factorization;
+it is not dispensable for the necessity of the whole-plane sign criteria.
+
+\section{The imported global heat-flow inputs}
+\label{sec:rh-global-inputs}
+
+We state the classical results used below rather than attribute them to
+quaternion regularity.  In the normalization
+\eqref{eq:rh-H-normalization}, de Bruijn's strip contraction says that
+zeros in $|\operatorname{Im}z|\le a$ at time $t_0$ lie in
+$|\operatorname{Im}z|\le\sqrt{\max(a^2-2h,0)}$ at time $t_0+h$,
+$h\ge0$.  Newman supplies a finite real threshold $\Lambda$ such that
+$H(t,\cdot)$ has only real zeros exactly for $t\ge\Lambda$.
+These statements are from \cite{debruijn,newman}; the conventions are
+recorded in \cite{polymath}, Theorem~3.2 and its introduction.
+The threshold endpoint is included: local uniform convergence and
+Hurwitz's theorem preserve absence of zeros in every nonreal disk.
+Consequently
+\begin{equation}
+ \mathrm{RH}\iff\Lambda\le0,\qquad \Lambda\le\frac12.
+ \label{eq:rh-threshold-equivalence}
+\end{equation}
+Rodgers and Tao prove $\Lambda\ge0$ \cite{rodgerstao}, so RH is also
+equivalent to $\Lambda=0$.  Their lower bound is not needed for the
+collision argument below.
+
+One further, genuinely uniform input is required: there is an absolute
+$C>0$ such that for $0<t\le1/2$, a zero with
+$|\operatorname{Re}z|\ge e^{C/t}$ is real.  This is
+\cite{polymath}, Theorem~1.5(i), together with evenness for negative
+real parts.  Separate, uncontrolled localization radii for individual
+times would not suffice for the compactness argument.
+
+\section{A finite collision criterion for RH}
+\label{sec:rh-collision}
+
+\begin{lemma}[Local Hermite splitting]\label{lem:rh-hermite}
+Let $W_t=-W_{zz}$ be jointly holomorphic near $(T,a)$, real for real
+$(t,z)$, and suppose $W(T,\cdot)$ has exact multiplicity $m\ge2$ at
+real $a$.  If $\lambda_1,\ldots,\lambda_m$ are the roots of the
+probabilists' Hermite polynomial $\operatorname{He}_m$, its nearby zeros
+satisfy
+\begin{equation}
+ a+\sqrt{2(t-T)}\,\lambda_k+O(|t-T|),\qquad 1\le k\le m.
+ \label{eq:rh-hermite-roots}
+\end{equation}
+At least one is nonreal immediately before $T$.
+\end{lemma}
+\begin{proof}
+Put $W_\ell=\partial_z^\ell W(T,a)$.  The heat equation and convergent
+Taylor expansion give
+\[
+ W(T+\delta,a+w)=\sum_{p,q\ge0}
+ \frac{(-\delta)^p w^q}{p!q!}W_{2p+q}.
+\]
+Take $\delta=\eta^2$ and $w=\sqrt2\eta\lambda$.  Division by
+$\eta^m$ extends holomorphically to $\eta=0$, with value
+\[
+ \frac{2^{m/2}W_m}{m!}\operatorname{He}_m(\lambda),\qquad
+ \operatorname{He}_m(\lambda)=m!\sum_{p=0}^{\lfloor m/2\rfloor}
+ \frac{(-1)^p\lambda^{m-2p}}{2^p p!(m-2p)!}.
+\]
+The identity
+$\operatorname{He}_m(\lambda)=(-1)^m e^{\lambda^2/2}
+(d/d\lambda)^m e^{-\lambda^2/2}$ and $m$ integrations by parts
+give orthogonality to every lower-degree polynomial for the positive
+Gaussian measure.  If there were fewer than $m$ real sign-changing
+roots, multiplying their linear factors would give a lower-degree
+polynomial with a nonzero, constant-sign Gaussian pairing with
+$\operatorname{He}_m$, a contradiction.  Thus the Hermite roots are
+distinct and real.
+The holomorphic implicit-function theorem gives
+$\lambda_k(\eta)=\lambda_k+O(\eta)$, proving
+\eqref{eq:rh-hermite-roots}.  Rouch\'e's theorem on a fixed small disk
+around $a$ shows these are precisely its $m$ nearby zeros.
+For $t=T-h$ take $\eta=i\sqrt h$.  A nonzero Hermite root gives
+imaginary displacement $\sqrt{2h}\lambda_k+O(h)$, which is nonzero
+for small positive $h$.  At least one root is nonzero when $m\ge2$.
+\end{proof}
+
+\begin{proposition}[A positive threshold has a finite collision]
+\label{prop:rh-finite-collision}
+If $\Lambda>0$, some real $a\ne0$ satisfies
+$H(\Lambda,a)=H_x(\Lambda,a)=0$.
+\end{proposition}
+\begin{proof}
+Choose $\Lambda/2\le t_k<\Lambda$ tending to $\Lambda$, and a
+nonreal zero $z_k$ at each $t_k$.  Strip contraction from time zero
+gives $|\operatorname{Im}z_k|\le1$.  The uniform localization theorem
+gives $|\operatorname{Re}z_k|<e^{2C/\Lambda}$.  A subsequence therefore
+converges to a finite $z_*$.  Joint continuity gives
+$H(\Lambda,z_*)=0$, and the threshold property makes $z_*=a$ real.
+If this zero were simple, the holomorphic implicit-function theorem
+would give a unique nearby zero for times near $\Lambda$.  Reflection
+forces that zero to be real at real times, contradicting $z_k$.
+Hence $H_x(\Lambda,a)=0$.  Equation
+\eqref{eq:rh-imaginary-nonzero} excludes $a=0$.
+\end{proof}
+
+\begin{theorem}[Exact positive-time endpoint]\label{thm:rh-endpoint}
+For the genuine theta family,
+\begin{equation}
+ \mathrm{RH}\iff
+ \{(t,x)\in(0,\infty)\times\mathbb R:
+ H(t,x)=H_x(t,x)=0\}=\varnothing.
+ \label{eq:rh-no-joint-zero}
+\end{equation}
+It suffices to exclude these common zeros for $0<t\le1/2$.
+\end{theorem}
+\begin{proof}
+Under RH, the threshold theorem gives real-rootedness at every $t\ge0$.
+A multiple real zero at $T>0$ would yield a nonreal zero at a slightly
+earlier positive time by Lemma~\ref{lem:rh-hermite}, a contradiction.
+Conversely failure of RH gives $0<\Lambda\le1/2$, and
+Proposition~\ref{prop:rh-finite-collision} supplies the forbidden zero.
+Zeros at times strictly beyond $1/2$ cannot be multiple by the same
+splitting argument and de Bruijn's real-rootedness there.
+\end{proof}
+The criterion makes no simplicity assertion at time zero.  Its converse
+uses uniform finite-height localization; no unproved assertion that
+collisions cannot escape to infinity has been substituted for it.
+
+\section{Stationary Laguerre observations and bounded loss}
+\label{sec:rh-stationary}
+
+For real $(t,x)$ write $h_j=\partial_x^jH$ and
+\begin{equation}
+ \mathscr L_j=h_{j+1}^2-h_jh_{j+2},\qquad
+ \mathcal E=H^2+H_x^2.
+ \label{eq:rh-laguerre-energy}
+\end{equation}
+Each $h_j$ obeys the same heat equation.  On a differentiable stationary
+curve $h_{j+1}(t,\chi(t))=0$, the chain rule gives
+\begin{equation}
+ \frac12\frac d{dt}h_j(t,\chi(t))^2
+ =-h_jh_{j+2}=\mathscr L_j.
+ \label{eq:rh-stationary-evolution}
+\end{equation}
+We shall use the two levels
+\begin{equation}
+ H_x=0\Longrightarrow\mathscr L_0=-HH_{xx}\ge0,
+ \qquad
+ H_{xx}=0\Longrightarrow\mathscr L_1=-H_xH_{xxx}\ge0.
+ \label{eq:rh-two-signs}
+\end{equation}
+
+\subsection{Necessity under real-rootedness}
+
+If a real-time slice $f=H(t,\cdot)$ has only real zeros, evenness, the
+order bound, and $f(0)>0$ give its paired Hadamard product
+\begin{equation}
+ f(z)=f(0)\prod_{\gamma>0}(1-z^2/\gamma^2),\qquad
+ \sum_{\gamma>0}\gamma^{-2}<\infty,
+ \label{eq:rh-paired-product}
+\end{equation}
+with multiplicities.  Pairing the genus-one factors cancels their linear
+exponentials, and evenness removes the remaining exponential linear
+factor.  Finite products $p_N$ are real-rooted and converge locally
+uniformly, with every fixed derivative.  Rolle's theorem gives
+real-rootedness of their derivatives.  For a real-rooted polynomial $p$,
+away from its zeros,
+\[
+ \frac{(p')^2-pp''}{p^2}
+ =\sum_\rho\frac{m_\rho}{(x-\rho)^2}\ge0.
+\]
+Continuity handles its zeros.  Applying this to $p_N^{(j)}$ and passing
+to the limit proves $\mathscr L_j(t,x)\ge0$ for every real $x$ and
+every fixed $j$.  Under RH this applies to all $t\ge0$, proving the
+necessity of \eqref{eq:rh-two-signs} without assuming simplicity at time zero.
+
+\subsection{The predecessor branch at every even multiplicity}
+
+\begin{lemma}[Real stationary predecessor]\label{lem:rh-predecessor}
+Let $W_t=-W_{xx}$ be real analytic near $(T,a)$ and have exact even
+spatial multiplicity $m=2r$ there.  Put $W_k=\partial_x^kW(T,a)$.
+For small $h=T-t>0$ there is a real analytic curve $\chi(h)$ with
+\begin{align}
+ \chi(h)&=a-\frac{W_{m+1}}{rW_m}h+O(h^2),
+ &W_x(T-h,\chi(h))&=0,\label{eq:rh-predecessor-chart}\\
+ W(T-h,\chi(h))&=\frac{W_m}{r!}h^r+O(h^{r+1}),
+ &W_{xx}(T-h,\chi(h))&=\frac{W_m}{(r-1)!}h^{r-1}+O(h^r).
+ \label{eq:rh-predecessor-jets}
+\end{align}
+In particular $WW_{xx}>0$ along the predecessor branch.
+\end{lemma}
+\begin{proof}
+The heat Taylor expansion is
+\[
+ W(T-h,a+z)=\sum_{p,q\ge0}\frac{W_{2p+q}}{p!q!}h^pz^q.
+\]
+Set $z=hy$.  Because $W_k=0$ for $k<m$, the quotient
+$h^{-r}W_x(T-h,a+hy)$ extends analytically to $h=0$; a nonzero
+term requires $2p+q+1\ge2r$, hence $p+q\ge r$.  Its value at zero is
+\[
+ \frac{W_m}{(r-1)!}y+\frac{W_{m+1}}{r!}.
+\]
+Its derivative in $y$ is nonzero.  The real analytic implicit-function
+theorem gives $y(h)$ and $\chi(h)=a+hy(h)$, proving
+\eqref{eq:rh-predecessor-chart}.  Substituting in the convergent Taylor
+series proves \eqref{eq:rh-predecessor-jets} and
+\[
+ WW_{xx}=\frac{W_m^2}{r!(r-1)!}h^{2r-1}+O(h^{2r})>0.
+\]
+\end{proof}
+
+\begin{theorem}[Two signs exclude finite collisions]
+\label{thm:rh-stationary-local}
+Suppose \eqref{eq:rh-two-signs} holds throughout an open set
+$\Omega\subset(0,\infty)\times\mathbb R$.  Then the genuine theta
+family has no common zero of $H,H_x$ in $\Omega$.
+\end{theorem}
+\begin{proof}
+Any such zero has finite multiplicity $m\ge2$.  If $m$ is even,
+Lemma~\ref{lem:rh-predecessor} applied to $W=H$ supplies a branch
+with $H_x=0$ and $HH_{xx}>0$, contradicting the first sign.  If
+$m=2r+1\ge3$, apply the lemma to $W=H_x$, of even multiplicity $2r$.
+Its branch has $H_{xx}=0$ and $H_xH_{xxx}>0$, contradicting the
+second sign.  Openness keeps these predecessor branches inside $\Omega$;
+take $h<T$ so their times remain positive.
+\end{proof}
+This argument applies to any real analytic heat solution whose candidate
+zeros have finite spatial multiplicity.  Both levels are needed:
+$W(t,x)=x^3-6(t-T)x$ has $\mathscr L_0=3x^4+36(t-T)^2\ge0$, yet
+a triple collision at $(T,0)$; its second stationary sign fails before
+$T$.  At a common zero, the products $HH_{xx}$ and $H_xH_{xxx}$ vanish.
+Checking only the collision point therefore loses the contradiction on
+its predecessor branch.  At a double zero, $\mathscr L_1=H_{xx}^2>0$;
+it is not a point of the second stationary set.
+
+\begin{theorem}[Locally bounded stationary loss]
+\label{thm:rh-bounded-loss}
+On an open positive-time domain $\Omega$, suppose nonnegative functions
+$K_0,K_1$ are locally bounded, including at every candidate common zero,
+and satisfy
+\begin{equation}
+ H_x=0\Longrightarrow\mathscr L_0\ge-K_0\mathcal E,
+ \qquad
+ H_{xx}=0\Longrightarrow\mathscr L_1\ge-K_1\mathcal E.
+ \label{eq:rh-bounded-loss}
+\end{equation}
+Then no common zero occurs in $\Omega$.
+\end{theorem}
+\begin{proof}
+At an even collision $m=2r$, the predecessor branch has $H_x=0$,
+$\mathcal E=H^2>0$, and
+\[
+ \frac{-\mathscr L_0}{\mathcal E}
+ =\frac{H_{xx}}H=\frac r h+O(1).
+\]
+At an odd collision $m=2r+1$, its derivative predecessor branch has
+$H_{xx}=0$.  Lemma~\ref{lem:rh-predecessor} gives
+$H_x=c h^r+O(h^{r+1})$ and
+$H_{xxx}=r c h^{r-1}+O(h^r)$, $c\ne0$.
+The Taylor series for $H$ at $z=\chi(h)-a=O(h)$ has no term of
+degree less than $r+1$ in $h$, because $2p+q\ge2r+1$ forces
+$p+q\ge r+1$.  Hence $H=O(h^{r+1})$ and
+$\mathcal E=H_x^2(1+O(h^2))>0$.  Therefore
+\[
+ \frac{-\mathscr L_1}{\mathcal E}
+ =\frac{H_xH_{xxx}}{H^2+H_x^2}=\frac r h+O(1).
+\]
+Either divergence contradicts the assumed local boundedness of the
+corresponding $K_j$.  All divisions are on nonzero predecessor branches,
+not at the common zero itself.
+\end{proof}
+
+\begin{corollary}[Global stationary criteria]\label{cor:rh-global-signs}
+For the genuine theta family, RH is equivalent to
+\eqref{eq:rh-two-signs} for every $t>0,x\in\mathbb R$.  It is also
+equivalent to existence of nonnegative locally bounded $K_0,K_1$ on
+$(0,\infty)\times\mathbb R$ satisfying \eqref{eq:rh-bounded-loss}.
+\end{corollary}
+\begin{proof}
+Necessity follows from the paired polynomial approximation, with
+$K_0=K_1=0$.  Sufficiency combines either local exclusion theorem with
+Theorem~\ref{thm:rh-endpoint}.
+\end{proof}
+Limited-domain estimates exclude only collisions in their covered
+predecessor neighborhoods.  No estimate obtained by dividing by the
+unproved physical norm establishes bounded loss at its possible zeros.
+
+An equivalent single constrained observation uses the norm's time
+derivative.  Directly from \eqref{eq:rh-physical-heat},
+\[
+ \partial_t\mathcal E=-2(HH_{xx}+H_xH_{xxx}).
+\]
+It equals $2\mathscr L_0$ on $H_x=0$ and $2\mathscr L_1$ on
+$H_{xx}=0$.  Thus the two stationary signs are precisely
+\begin{equation}
+ \partial_t\mathcal E\ge0\quad\hbox{where }H_xH_{xx}=0.
+ \label{eq:rh-unified-stationary}
+\end{equation}
+Likewise \eqref{eq:rh-bounded-loss} is equivalent to existence of one
+nonnegative locally bounded $K$ with
+$\partial_t\mathcal E\ge-2K\mathcal E$ on that union; take
+$K=\max(K_0,K_1)$ in one direction and $K_0=K_1=K$ in the other.
+
+\section{Whole-plane scalar curvature criteria}
+\label{sec:rh-complex-curvature}
+
+These are the classical complex Laguerre criteria
+\cite[Theorems 2.3--2.4]{csordasescassut}; the following proof
+uses the specific even, order-at-most-one theta class rather than any
+unstated restriction on a general entire function.
+Fix real time $t$ and set $f(z)=H(t,z)$,
+$M(x,y)=|f(x+iy)|^2$.  Componentwise complex differentiation gives
+\begin{equation}
+ M_y=-2\operatorname{Im}(f'\bar f),\qquad
+ \frac12M_{yy}=|f'|^2-\operatorname{Re}(f''\bar f)
+ =:\mathcal C_0(t,x+iy).
+ \label{eq:rh-Hermitian-curvature}
+\end{equation}
+On $y=0$ this equals $\mathscr L_0$, but away from that slice it
+is a real Hermitian observation rather than the complex bilinear
+$f'^2-ff''$.
+
+\begin{theorem}[Vertical scalar criteria]\label{thm:rh-vertical}
+For a fixed real theta time, the following conditions are equivalent:
+\begin{enumerate}
+ \item all zeros of $H(t,\cdot)$ are real;
+ \item $M_y(x,y)\ge0$ for all real $x$ and $y>0$;
+ \item $M_{yy}(x,y)\ge0$ for all real $x,y$;
+ \item $-\operatorname{Im}(f'(z)/f(z))\ge0$ for every
+ upper-half-plane point where the quotient is defined.
+\end{enumerate}
+In particular each condition at $t=0$ is equivalent to RH.
+\end{theorem}
+\begin{proof}
+Under real-rootedness, \eqref{eq:rh-paired-product} supplies finite
+real-rooted polynomials converging with their derivatives.  Their squared
+moduli on a vertical line are positive constants times products of
+$((x-\rho)^2+y^2)$.  Each is a polynomial in $y^2$ with nonnegative
+coefficients, nondecreasing for $y>0$ and convex for all real $y$.
+Local derivative convergence passes both inequalities to $M$.
+
+Conversely suppose $f(a+ib)=0$, $b>0$.  Monotonicity and nonnegativity
+force $M(a,y)=0$ for $0<y<b$, contradicting the identity theorem.
+For the convexity condition, reflection also gives $M(a,-b)=0$;
+convexity between the two zero endpoints, together with nonnegativity,
+forces the same contradiction.  Reflection supplies an upper-half-plane
+zero whenever any nonreal zero exists.
+
+Away from zeros, $M_y/(2M)=-\operatorname{Im}(f'/f)$.
+A zero $a+ib$ of multiplicity $m$ produces the pole
+$m/(z-a-ib)$ plus a locally bounded holomorphic term.  At
+$z=a+i(b+\varepsilon)$ its negative imaginary part is
+$m/\varepsilon+O(1)$, which changes sign for small positive and
+negative $\varepsilon$, both still inside the upper half-plane.
+Thus the fourth condition also excludes all nonreal zeros and is
+equivalent to the second.
+\end{proof}
+The growth condition was used only for real-rootedness to imply these
+signs.  It matters: $e^{z^2}$ is real and zero-free but its vertical
+modulus decreases.  Convexity or monotonicity excludes nonreal zeros
+without a growth assumption.  For the theta family the exact endpoint is
+\begin{equation}
+ \mathrm{RH}\iff\mathcal C_0(0,z)\ge0
+ \quad\hbox{for every }z\in\mathbb C.
+ \label{eq:rh-whole-plane-criterion}
+\end{equation}
+Reality and source positivity make the pure imaginary axis positive
+already; the equivalent condition requires every translated vertical
+line.  Under real-rootedness the logarithmic derivative also satisfies
+\[
+ -\operatorname{Im}\frac{f'(x+iy)}{f(x+iy)}
+ =\sum_{\rho\in\mathbb R}\frac{m_\rho y}{(x-\rho)^2+y^2},\qquad y>0.
+\]
+This partial-fraction representation is a consequence of the real-zero
+assumption, not an unconditional arithmetic representation for proving it.
+
+For the trace $f_{\mathrm{jet}}=H+\mathbf jH_z$, the scalar observation
+in \eqref{eq:rh-whole-plane-criterion} cannot be replaced by its total
+norm.  Indeed
+$\tfrac12\partial_y^2|f_{\mathrm{jet}}|^2=\mathcal C_0+\mathcal C_1$,
+where $\mathcal C_1=|H_{zz}|^2-\operatorname{Re}(H_{zzz}\overline{H_z})$.
+The heat solution $H(t,z)=z^2-2t+1$ has nonreal time-zero roots,
+but its total-norm curvature is $2x^2+6y^2+2>0$.  This distinguishes
+the scalar curvature criterion from an unsigned jet-norm estimate.
+
+
+% Manuscript component drafted for Edward Baker, 14 October 2026.
+% Substantial LLM assistance: gpt-6.1-sol (Codex), reasoning effort ultra.
+% All formulas below are derived for the declared lift, not arbitrary regular data.
+% Primary sources checked against their original text on 14 October 2026:
+% sudbery: DOI 10.1017/S0305004100055638;
+% https://dougsweetser.github.io/Q/Stuff/pdfs/Quaternionic-analysis.pdf
+% frenkellibine: DOI 10.1016/j.aim.2008.03.021;
+% https://arxiv.org/pdf/0711.2699 (Lemma 6, Proposition 7, Theorems 9 and 34).
+
+\section{Hamilton conventions and a regular lift with independent time}
+\label{sec:q21-conventions}
+
+We use Hamilton units satisfying
+\[
+ \mathbf i^2=\mathbf j^2=\mathbf k^2=-1,
+ \qquad \mathbf i\mathbf j=\mathbf k,
+ \quad \mathbf j\mathbf k=\mathbf i,
+ \quad \mathbf k\mathbf i=\mathbf j.
+\]
+The complex field is the subalgebra
+\(\mathbb C_{\mathbf i}=\mathbb R+\mathbf i\mathbb R\).
+Complex coefficients are placed on the right of \(\mathbf j\).
+For complex numbers \(a,b,c,d\), direct Hamilton multiplication gives
+\begin{equation}
+ (a+\mathbf jb)(c+\mathbf jd)
+ =ac-\overline b d+\mathbf j(bc+\overline a d),
+ \qquad
+ \overline{a+\mathbf jb}=\overline a-\mathbf jb.
+ \label{eq:q21-product}
+\end{equation}
+Consequently \(|a+\mathbf jb|^2=|a|^2+|b|^2\).
+Throughout this section an overline on a quaternion is quaternion
+conjugation, and an overline on a complex coefficient is complex
+conjugation. These operations agree on \(\mathbb C_{\mathbf i}\).
+
+Write the independent quaternion coordinates as
+\begin{equation}
+ q=z_0+\mathbf jz_1,
+ \qquad z_0=a+\mathbf ib,
+ \quad z_1=c+\mathbf id.
+ \label{eq:q21-coordinates}
+\end{equation}
+Since \(\mathbf j\mathbf i=-\mathbf k\), this is
+\(q=a+\mathbf ib+\mathbf jc-\mathbf kd\).
+Thus the oriented real Hamilton coordinates are
+\((q_0,q_1,q_2,q_3)=(a,b,c,-d)\).
+The normalized left Cauchy--Riemann--Fueter operator and its conjugate
+are
+\begin{align}
+ \overline\partial_q
+ &=\tfrac12(\partial_{q_0}+\mathbf i\partial_{q_1}
+       +\mathbf j\partial_{q_2}+\mathbf k\partial_{q_3})
+ =\tfrac12(\partial_a+\mathbf i\partial_b
+       +\mathbf j\partial_c-\mathbf k\partial_d),
+ \label{eq:q21-fueter-operator}\\
+ \partial_q
+ &=\tfrac12(\partial_{q_0}-\mathbf i\partial_{q_1}
+       -\mathbf j\partial_{q_2}-\mathbf k\partial_{q_3}).
+ \label{eq:q21-conjugate-operator}
+\end{align}
+All units in these expressions multiply on the left. A field is
+left Fueter regular if \(\overline\partial_qF=0\).
+This is the usual Hamilton orientation; the minus sign on
+\(\partial_d\) comes solely from \(q_3=-d\).
+The real definition and classical integral theory are reviewed in
+\cite{sudbery,frenkellibine}.
+
+For complex-valued differentiable functions \(U,V\), the coordinate
+calculation is particularly useful. The \(a,b\) terms in
+\(2\overline\partial_q(U+\mathbf jV)\) equal
+\(2U_{\bar z_0}+2\mathbf jV_{z_0}\), and the \(c,d\) terms equal
+\(-2V_{z_1}+2\mathbf jU_{\bar z_1}\). Hence
+\begin{equation}
+ \overline\partial_q(U+\mathbf jV)
+ =U_{\bar z_0}-V_{z_1}
+       +\mathbf j(V_{z_0}+U_{\bar z_1}).
+ \label{eq:q21-component-fueter}
+\end{equation}
+Here subscripts denote ordinary Wirtinger derivatives of the complex
+coefficients. When applied to a quaternion field, complex coordinate
+derivatives always act componentwise:
+\((U+\mathbf jV)_{z_0}=U_{z_0}+\mathbf jV_{z_0}\).
+They are not defined by left multiplication of the whole field by
+\(\mathbf i\) in a Wirtinger operator. This derivation fixes the
+convention without importing complex coordinate formulas from a
+different placement of coefficients.
+
+Let \(H(\tau,z)\) be the jointly entire theta heat family defined
+earlier, with
+\(H_\tau=-H_{zz}\). The real Newman time \(t\) remains an independent
+external parameter. Define
+\begin{equation}
+ \tau=t+\overline{z_1},\qquad
+ F(t,q)=H(\tau,z_0)+\mathbf jH_z(\tau,z_0).
+ \label{eq:q21-adopted-lift}
+\end{equation}
+Both quaternion coordinates are independent. The second coordinate
+enters through a complex heat-time translation; it does not evaluate
+the derivative at an independent spectral point.
+
+\begin{proposition}
+\label{prop:q21-regular-lift}
+For every fixed real \(t\), the field \(F(t,\cdot)\) is globally
+defined, real analytic, and left Fueter regular. It obeys
+\[
+ U_{z_0}=V,\qquad
+ F_t=F_{\bar z_1}=-F_{z_0z_0},
+ \qquad U=H(\tau,z_0),\ V=H_z(\tau,z_0).
+\]
+\end{proposition}
+\begin{proof}
+Joint entireness of \(H\) makes the composition in
+\eqref{eq:q21-adopted-lift} real analytic on all quaternion space.
+Holomorphy gives \(U_{\bar z_0}=V_{z_1}=0\), while
+\(V_{z_0}=H_{zz}\) and \(U_{\bar z_1}=H_\tau\).
+Equation \eqref{eq:q21-component-fueter} therefore becomes
+\(\overline\partial_qF=\mathbf j(H_{zz}+H_\tau)=0\).
+The remaining identities follow by differentiating the declared lift.
+\end{proof}
+
+The extension is part of the construction, not a general uniqueness
+claim for Fueter fields with a given trace. For instance, adding an
+entire scalar \(g(z_1)\), with \(g(0)=0\), preserves regularity, the
+physical trace, the jet relation, and the external heat equation.
+It generally changes the declared antiholomorphic dependence on
+\(z_1\), so later identities requiring that dependence apply to
+\eqref{eq:q21-adopted-lift}, not to every such extension.
+In contrast, the separated expression
+\(H(t,z_0)+\mathbf jH_z(t,z_1)\) has regularity defect
+\(-H_{zz}(t,z_1)\); at real \(q=x\), evenness gives
+\(H_z(t,0)=0\), so that expression also loses the physical first jet.
+
+The operators satisfy
+\begin{equation}
+ \partial_q+\overline\partial_q=\partial_{q_0},
+ \qquad
+ 4\partial_q\overline\partial_q
+ =4\overline\partial_q\partial_q=\Delta_4.
+ \label{eq:q21-factorization}
+\end{equation}
+The anticommutation of distinct Hamilton units cancels mixed second
+derivatives in the product, and each diagonal imaginary term contributes
+\(+\partial_{q_\nu}^2\). On a regular field,
+\(\partial_qF=\partial_{q_0}F\).
+Every real coordinate derivative preserves regularity, so induction gives
+\begin{equation}
+ G_m:=\partial_q^mF=\partial_{q_0}^mF
+ =h_m+\mathbf jh_{m+1},\qquad
+ h_m=\partial_z^mH(\tau,z_0),\qquad
+ \overline\partial_qG_m=0.
+ \label{eq:q21-regular-jets}
+\end{equation}
+Holomorphy in \(z_0\) identifies the \(q_0\) derivative with the
+componentwise spectral derivative. The external evolution is therefore
+\begin{equation}
+ \boxed{\overline\partial_qF=0,\qquad F_t=-\partial_q^2F.}
+ \label{eq:q21-quaternion-heat}
+\end{equation}
+These equations retain the declared theta trace and jet constraint;
+regularity by itself does not impose either of them.
+
+For comparison, on the physical complex pair \(u=H(t,z)\),
+\(v=H_z(t,z)\), the jet and heat equations can also be packaged by
+the matrix differential operator
+\begin{equation}
+ \mathcal D=
+ \begin{pmatrix}\partial_z&-1\\-\partial_t&-\partial_z\end{pmatrix},
+ \qquad
+ \mathcal D\binom uv
+ =\binom{u_z-v}{-u_t-v_z}=0,
+ \qquad
+ \mathcal D^2=(\partial_t+\partial_z^2)I.
+ \label{eq:q21-complex-pair-square}
+\end{equation}
+The off-diagonal entries of the square vanish because constant
+coefficient derivatives commute: the upper-right entry is
+\(-\partial_z+\partial_z=0\), and the lower-left entry is
+\(-\partial_t\partial_z+\partial_z\partial_t=0\).
+Both diagonal entries are \(\partial_t+\partial_z^2\).
+This is an operator on a two-dimensional complex vector, with matrix
+endomorphisms rather than fixed Hamilton units. It is distinct from
+the Euclidean Fueter factorization in \eqref{eq:q21-factorization};
+neither factorization alone asserts a selfadjoint realization or a
+positive physical observation.
+
+\section{Physical trace, RH translation, and signed observations}
+\label{sec:q21-physical-observations}
+
+At a real quaternion argument \(q=x\), one has \(z_0=x,z_1=0\).
+Since \(H(t,x)\) and its derivatives are real,
+\begin{equation}
+ F(t,x)=H(t,x)+\mathbf jH_x(t,x),\qquad
+ \mathcal E(t,x):=|F(t,x)|^2=H(t,x)^2+H_x(t,x)^2.
+ \label{eq:q21-physical-trace}
+\end{equation}
+Thus \(F(t,x)=0\) is exactly the simultaneous scalar condition
+\(H(t,x)=H_x(t,x)=0\), namely a multiple real zero of the scalar
+heat family. A simple zero of \(H\) is not a zero of \(F\).
+
+The scalar positive-time collision theorem for the genuine theta family,
+proved in the scalar part of this manuscript, consequently translates to
+\begin{equation}
+ \boxed{\mathrm{RH}\quad\Longleftrightarrow\quad
+ F(t,x)\ne0\quad\hbox{for all }t>0,\ x\in\mathbb R.}
+ \label{eq:q21-rh-real-quaternion}
+\end{equation}
+No assertion of nonvanishing throughout quaternion space is made, and
+the restriction \(t>0\) permits multiple scalar zeros at time zero.
+The quaternion statement uses the scalar collision theorem rather than
+deducing that theorem from regularity.
+
+The external parameter has an exact translation covariance:
+\begin{equation}
+ F(t,q)=F(0,q+\mathbf jt).
+ \label{eq:q21-time-translation}
+\end{equation}
+Indeed \(q+\mathbf jt=z_0+\mathbf j(z_1+t)\), and real \(t\)
+commutes with conjugation, giving
+\(\overline{z_1+t}=\bar z_1+t\).
+For \(\mathcal F(q)=F(0,q)\),
+\eqref{eq:q21-rh-real-quaternion} becomes
+\begin{equation}
+ \boxed{\mathrm{RH}\quad\Longleftrightarrow\quad
+ \mathcal F(x+\mathbf js)\ne0
+ \quad(x\in\mathbb R,\ s>0).}
+ \label{eq:q21-rh-fixed-field}
+\end{equation}
+This is a statement on the positive \(\mathbf j\) half-plane of one
+explicit entire Fueter field. In the original definition, \(t\) remains
+an independent parameter; translation covariance merely permits the
+equivalent fixed-field description. The real coordinate \(x\) of that
+half-plane is spectral position, not Newman time.
+
+For the complex observations define
+\(\Lag_\ell=h_{\ell+1}^2-h_\ell h_{\ell+2}\).
+Applying \eqref{eq:q21-product} to the regular jets gives
+\begin{equation}
+ \overline{G_\ell}G_{\ell+1}
+ =\overline{h_\ell}h_{\ell+1}
+   +\overline{h_{\ell+1}}h_{\ell+2}-\mathbf j\Lag_\ell.
+ \label{eq:q21-laguerre-product}
+\end{equation}
+The scalar complex products are Hermitian, whereas the
+\(\mathbf j\) coefficient is the un-conjugated complex Laguerre
+polynomial. On the physical real slice all \(h_\ell\) are real and
+\begin{equation}
+ \Lag_\ell(t,x)
+ =\operatorname{Re}\bigl(\mathbf j\overline{G_\ell(t,x)}G_{\ell+1}(t,x)\bigr)
+ =-[\overline{G_\ell(t,x)}G_{\ell+1}(t,x)]_{\mathbf j}.
+ \label{eq:q21-signed-projection}
+\end{equation}
+Here \([Q]_{\mathbf j}\) denotes the real coefficient of
+\(\mathbf j\) in the Hamilton expansion of \(Q\).
+Away from the real physical slice \(\Lag_\ell\) is generally
+complex, so \(\operatorname{Re}(\mathbf j\overline{G_\ell}G_{\ell+1})\)
+recovers only its real part.
+
+The scalar projection of the field is also algebraic:
+\begin{equation}
+ P_0(A+\mathbf jB)=A,
+ \qquad P_0Q=\tfrac12(Q-\mathbf iQ\mathbf i).
+ \label{eq:q21-scalar-projection}
+\end{equation}
+It is a projection onto \(\mathbb C_{\mathbf i}\), not onto the real
+part alone. On the real physical slice its value is real.
+
+The heat equation gives the exact norm evolution
+\begin{equation}
+ \mathcal E_t=-2(h_0h_2+h_1h_3),\qquad
+ (\partial_t+\partial_x^2)\mathcal E=2(h_1^2+h_2^2).
+ \label{eq:q21-norm-time}
+\end{equation}
+The latter follows by differentiating \(h_0^2+h_1^2\) twice in
+\(x\) and using \(h_{\ell,t}=-h_{\ell+2}\).
+In particular,
+\begin{equation}
+ h_1=0\Longrightarrow\mathcal E_t=2\Lag_0,
+ \qquad
+ h_2=0\Longrightarrow\mathcal E_t=2\Lag_1.
+ \label{eq:q21-stationary-norm}
+\end{equation}
+Thus the two stationary sign hypotheses are exactly equivalent to
+\begin{equation}
+ \mathcal E_t\ge0\quad\hbox{on}\quad
+ \{(t,x):h_1(t,x)h_2(t,x)=0\}.
+ \label{eq:q21-stationary-union}
+\end{equation}
+The same set is
+\((P_0\partial_qF)(P_0\partial_q^2F)=0\) on the physical slice.
+A single nonnegative locally bounded function \(K\) gives both
+bounded-loss hypotheses if
+\(\mathcal E_t\ge-2K\mathcal E\) on that union.
+Conversely, from separate coefficients \(K_0,K_1\) one can take
+\(K=\max(K_0,K_1)\), wherever both are locally bounded.
+These reformulations retain the domain and predecessor coverage needed
+by the collision-exclusion theorem. The positive source term in
+\eqref{eq:q21-norm-time} is a backward-heat identity and supplies no
+forward minimum principle.
+
+The alternative whole-plane curvature criterion must retain the scalar
+projection. On the complex slice \(z_1=0\), put \(z=x+\mathbf iy\).
+Then \(P_0F(t,z)=H(t,z)\), whereas
+\(|F(t,z)|^2=|H(t,z)|^2+|H_z(t,z)|^2\). Define
+\[
+ \mathcal C_\ell(t,z)
+ =|h_{\ell+1}(t,z)|^2
+   -\operatorname{Re}\bigl(h_{\ell+2}(t,z)\overline{h_\ell(t,z)}\bigr).
+\]
+Since \(\partial_yh_\ell=\mathbf i h_{\ell+1}\) and
+\(\partial_y^2h_\ell=-h_{\ell+2}\), differentiating the scalar squared
+modulus gives
+\begin{equation}
+ \mathcal C_0(t,z)=\tfrac12\partial_y^2|P_0F(t,z)|^2,
+ \qquad
+ \tfrac12\partial_y^2|F(t,z)|^2
+       =\mathcal C_0(t,z)+\mathcal C_1(t,z).
+ \label{eq:q21-projected-curvature}
+\end{equation}
+Consequently the scalar whole-plane criterion for this theta growth
+class translates to
+\begin{equation}
+ \mathrm{RH}\quad\Longleftrightarrow\quad
+ \partial_y^2|P_0F(0,x+\mathbf iy)|^2\ge0
+       \quad\hbox{for all }x,y\in\mathbb R.
+ \label{eq:q21-rh-projected-curvature}
+\end{equation}
+The classical complex Laguerre criterion is stated in
+\cite[Theorem~2.4]{csordasescassut}; the growth and scalar RH
+identifications are supplied in the scalar part of this manuscript.
+Replacing the projection by the total quaternion norm would change
+the assertion. Indeed \(P(\tau,z)=z^2-2\tau+1\) has at \(t=0\)
+\[
+ \mathcal C_0=2x^2+6y^2-2,\qquad
+ \mathcal C_1=4,\qquad
+ \tfrac12\partial_y^2|F_P(0,z)|^2=2x^2+6y^2+2>0,
+\]
+although \(P(0,z)\) has the nonreal zeros \(\pm\mathbf i\).
+
+\section{Cauchy--Fueter reconstruction, residuals, and boundary moments}
+\label{sec:q21-boundary-formulas}
+
+Fix real \(t\). Let \(\Omega\) be a bounded domain in
+\(\mathbb H\), with piecewise \(C^1\) boundary, and let \(n(p)\)
+be its outward unit normal expressed in the oriented Hamilton basis.
+Set
+\begin{equation}
+ \mathcal K(r)=\frac{\bar r}{2\pi^2|r|^4}
+ \qquad(r\ne0),\qquad D=2\overline\partial_q.
+ \label{eq:q21-cauchy-kernel}
+\end{equation}
+For smooth quaternion fields \(A,B\), the real divergence theorem,
+with the multiplication order retained, is
+\begin{equation}
+ \int_{\partial\Omega}B(p)n(p)A(p)\,dS_p
+ =\int_\Omega\bigl((B D)A+B(D A)\bigr)\,dV_p,
+ \label{eq:q21-bilinear-stokes}
+\end{equation}
+where \(B D=\sum_{\mu=0}^3(\partial_{q_\mu}B)e_\mu\)
+is the right operator, with
+\((e_0,e_1,e_2,e_3)=(1,\mathbf i,\mathbf j,\mathbf k)\).
+This is Proposition 7 and Lemma 6 of \cite{frenkellibine} in our
+normal notation.
+
+The kernel \(\mathcal K\) is both left and right regular away from
+zero and has unit outward flux on every centered sphere:
+\[
+ \int_{|r|=\varepsilon}\mathcal K(r)\frac r\varepsilon\,dS_r=1.
+\]
+Indeed the integrand is the scalar \((2\pi^2\varepsilon^3)^{-1}\)
+and the sphere has area \(2\pi^2\varepsilon^3\).
+It is the fundamental kernel for the unnormalized operator \(D\);
+the fundamental kernel for \(\overline\partial\) is
+\(2\mathcal K\). The boundary formula still uses
+\(\mathcal K\) with the normalization displayed here.
+
+Apply \eqref{eq:q21-bilinear-stokes} on
+\(\Omega\setminus\overline{B_\varepsilon(q)}\), with
+\(B(p)=\mathcal K(p-q)\). The inward orientation on the removed
+sphere contributes \(-A(q)\) in the limit, because \(A\) is
+continuous and the flux is one. Thus every \(C^1\) field \(A\)
+defined near \(\overline\Omega\) satisfies
+\begin{equation}
+ A(q)=\int_{\partial\Omega}\mathcal K(p-q)n(p)A(p)\,dS_p
+       -2\int_\Omega\mathcal K(p-q)\overline\partial_pA(p)\,dV_p.
+ \label{eq:q21-borel-pompeiu}
+\end{equation}
+The volume kernel behaves as \(|p-q|^{-3}\) and is locally
+integrable in four dimensions. This argument asserts no differentiation
+of that singular volume integral. For regular \(F\), the volume term
+vanishes and gives the left Cauchy--Fueter formula
+\begin{equation}
+ F(t,q)=\int_{\partial\Omega}\mathcal K(p-q)n(p)F(t,p)\,dS_p.
+ \label{eq:q21-cauchy-formula}
+\end{equation}
+Its factor order is kernel, normal, field, as in Theorem 9 of
+\cite{frenkellibine}.
+
+For \(q\) in a compact interior set, define
+\[
+ \mathcal K_m(p;q)=
+     \bigl(\partial_{q_0}^m\mathcal K(p-q)\bigr)n(p),
+ \qquad
+ A_m(t,q)=\int_{\partial\Omega}\mathcal K_m(p;q)F(t,p)\,dS_p.
+\]
+The boundary kernel is smooth and uniformly separated from its pole,
+so differentiating \eqref{eq:q21-cauchy-formula} gives \(A_m=G_m\).
+For \(q=x\in\mathbb R\),
+\eqref{eq:q21-signed-projection} becomes the exact signed boundary
+correlation
+\begin{align}
+ \Lag_\ell(t,x)
+ &=\operatorname{Re}\bigl(\mathbf j\overline{A_\ell(t,x)}A_{\ell+1}(t,x)\bigr)
+ \label{eq:q21-boundary-laguerre}\\
+ &=\operatorname{Re}\left[
+ \mathbf j\iint_{\partial\Omega\times\partial\Omega}
+ \overline{F(t,p)}\,\overline{\mathcal K_\ell(p;x)}
+ \mathcal K_{\ell+1}(r;x)F(t,r)\,dS_p\,dS_r\right].
+ \nonumber
+\end{align}
+Quaternion conjugation reverses the order of the first kernel-field
+product. This is a signed quadratic observation, not a positive square.
+
+To make the first three observations explicit, take a ball of radius
+\(R\) centered at a real \(x\), and write
+\[
+ B(\omega)=F(t,x+R\omega),\qquad
+ \langle B\rangle=\frac1{2\pi^2}\int_{S^3}B(\omega)\,dS_\omega.
+\]
+Regularity implies harmonicity by \eqref{eq:q21-factorization}.
+The componentwise harmonic Poisson formula is
+\begin{equation}
+ F(t,x+Ry)=\left\langle
+ \frac{1-|y|^2}{|\omega-y|^4}B(\omega)\right\rangle,
+ \qquad |y|<1.
+ \label{eq:q21-poisson-formula}
+\end{equation}
+This is the dimension-four formula in Theorem 34 of
+\cite{frenkellibine}. At \(y=0\), its kernel and its first two
+\(y_0\) derivatives are respectively
+\(1\), \(4\omega_0\), and \(24\omega_0^2-6\).
+Thus, differentiating with the boundary sphere fixed,
+\begin{equation}
+ \boxed{
+ A_0=\langle B\rangle,
+ \qquad A_1=\frac4R\langle\omega_0B\rangle,
+ \qquad A_2=\frac6{R^2}\langle(4\omega_0^2-1)B\rangle.}
+ \label{eq:q21-sphere-moments}
+\end{equation}
+The \(R^{-1}\) and \(R^{-2}\) factors come from
+\(q_0=x+Ry_0\). These are harmonic moment formulas, not pointwise
+equalities between differentiated Cauchy and Poisson kernels.
+For example, differentiating the Cauchy kernel directly at the center
+gives \(R^{-1}\langle(4\omega_0-\omega)B\rangle\), which agrees
+with \eqref{eq:q21-sphere-moments} because
+\(\langle\omega B\rangle=0\) by the regular Stokes theorem.
+
+Stationarity of \(H\) or \(H_x\) is respectively
+\(P_0A_1=0\) or \(P_0A_2=0\). The physical energy is
+\(|A_0|^2\), and the two Laguerre observations follow from
+\eqref{eq:q21-boundary-laguerre}. For
+\(M=\sup_{\partial B_R}|F|\), the moment formulas give
+\[
+ |A_1|\le4M/R,\qquad |A_2|\le18M/R^2.
+\]
+The constants use \(|\omega_0|\le1\) and
+\(|6(4\omega_0^2-1)|\le18\). These upper estimates do not bound
+the signed correlations from below through a cancellation of \(A_0\).
+Moreover, the boundary trace samples complex heat times
+\(\tau=t+\bar z_1\), so physical real-time signs are not automatically
+signs of the boundary data.
+
+\section{Currents, harmonic norms, orientation, and reciprocal controls}
+\label{sec:q21-currents}
+
+For each regular jet \(G_\ell\), define the pure-imaginary-quaternion
+current
+\[
+ J_\mu^{(\ell)}=\operatorname{Im}_{\mathbb H}
+       (\overline{G_\ell}\,\partial_{q_\mu}G_\ell),
+ \qquad \operatorname{Im}_{\mathbb H}Q=Q-\operatorname{Re}Q.
+\]
+Since \(\Delta_4G_\ell=0\), the product rule gives
+\begin{equation}
+ \sum_{\mu=0}^3\partial_{q_\mu}J_\mu^{(\ell)}
+ =\operatorname{Im}_{\mathbb H}\left(
+   \sum_\mu|\partial_{q_\mu}G_\ell|^2+\overline{G_\ell}\Delta_4G_\ell\right)=0.
+ \label{eq:q21-current-conservation}
+\end{equation}
+At real physical points,
+\([J_0^{(\ell)}]_{\mathbf j}=-\Lag_\ell\) by
+\eqref{eq:q21-laguerre-product}. Thus a Laguerre sign is an oriented
+component of a conserved current. Zero closed-boundary flux does not
+determine its sign at a point.
+
+For the adopted lift, put \(e=q_3=-d\). Then
+\(z_0=a+\mathbf ib\) and \(\tau=t+c+\mathbf ie\).
+Differentiation of complex coefficients, with their placement retained,
+gives
+\[
+ F_a=G_1,\quad F_b=G_1\mathbf i,
+ \qquad F_c=-G_2,\quad F_e=-G_2\mathbf i.
+\]
+For instance \(\partial_b(U+\mathbf jV)
+=\mathbf iU_{z_0}+\mathbf j\mathbf iV_{z_0}
+=(U_{z_0}+\mathbf jV_{z_0})\mathbf i\).
+Consequently harmonicity yields
+\begin{equation}
+ \Delta_4|F|^2
+ =2\sum_\mu|\partial_{q_\mu}F|^2
+ =4\bigl(|h_1|^2+2|h_2|^2+|h_3|^2\bigr).
+ \label{eq:q21-norm-laplacian}
+\end{equation}
+
+There is a further logarithmic identity special to the holomorphic pair
+\((u,v)=(H,H_z)\) in \((z_0,\tau)\). Wherever
+\(E=|u|^2+|v|^2>0\), direct complex differentiation gives, for
+\(\alpha=z_0\) or \(\tau\),
+\[
+ \partial_\alpha\partial_{\bar\alpha}\log E
+ =\frac{E(|u_\alpha|^2+|v_\alpha|^2)
+       -|\bar uu_\alpha+\bar vv_\alpha|^2}{E^2}
+ =\frac{|uv_\alpha-vu_\alpha|^2}{E^2}.
+\]
+The two determinants are
+\(uv_{z_0}-vu_{z_0}=-\Lag_0\) and
+\(uv_\tau-vu_\tau=h_1h_2-h_0h_3=\partial_z\Lag_0\).
+Since
+\(\Delta_4=4(\partial_{z_0}\partial_{\bar z_0}
+ +\partial_\tau\partial_{\bar\tau})\) at fixed external time,
+\begin{equation}
+ \boxed{\Delta_4\log|F|^2
+ =\frac{4\bigl(|\Lag_0|^2+
+       |\partial_z\Lag_0|^2\bigr)}{|F|^4}.}
+ \label{eq:q21-lognorm-laplacian}
+\end{equation}
+This statement is restricted to \(F\ne0\) and uses the declared
+two-variable holomorphic pair, beyond general Fueter regularity.
+Both norm identities erase the orientation by taking squares;
+subharmonicity of a norm or logarithmic norm does not exclude zeros.
+
+The real Jacobian has a fixed orientation sign. With domain coordinates
+\((a,b,c,e)\), the pair \((z_0,\tau)=(a+\mathbf ib,t+c+\mathbf ie)\)
+has the usual complex orientation. Its complex derivative matrix is
+\[
+ \begin{pmatrix}h_1&-h_2\\h_2&-h_3\end{pmatrix},
+ \qquad\det_{\mathbb C}=h_2^2-h_1h_3=\Lag_1.
+\]
+The real determinant of a complex-linear map is the squared modulus of
+its complex determinant. But the quaternion output coordinates of
+\(u+\mathbf jv\) are
+\((\operatorname{Re}u,\operatorname{Im}u,
+  \operatorname{Re}v,-\operatorname{Im}v)\), reversing one coordinate.
+Therefore
+\begin{equation}
+ \det_{\mathbb R}(d_qF)=-|\Lag_1(\tau,z_0)|^2.
+ \label{eq:q21-jacobian}
+\end{equation}
+The complex determinant in the opposite variable order \((\tau,z_0)\)
+is \(-\Lag_1\). At a double physical zero,
+\(h_0=h_1=0\) and \(h_2\ne0\), so
+\(\Lag_1=h_2^2\ne0\). Such a scalar collision is a
+nondegenerate zero of the quaternion map, not a forbidden degeneracy.
+
+Conjugating the left equation gives
+\[
+ \overline F\,D^-:=
+ \partial_{q_0}\overline F
+ -\partial_{q_1}\overline F\,\mathbf i
+ -\partial_{q_2}\overline F\,\mathbf j
+ -\partial_{q_3}\overline F\,\mathbf k=0.
+\]
+Thus \(\overline F\) is right regular for the conjugate operator;
+it is not generally right regular for \(D\).
+In \eqref{eq:q21-bilinear-stokes}, substituting
+\(B=\overline F,A=F\) leaves the volume term
+\((\overline F D)F\). Dropping it would not be justified.
+
+Pointwise reciprocal and logarithmic derivative arguments likewise
+require care. The entire backward-heat solution \(H(\tau,z)=z\)
+has the regular, nowhere-zero lift \(F=z_0+\mathbf j\), but
+\begin{equation}
+ F^{-1}=\frac{\bar z_0-\mathbf j}{1+|z_0|^2},\qquad
+ \overline\partial_q(F^{-1})
+ =\frac{1+\mathbf j\bar z_0}{(1+|z_0|^2)^2}\ne0.
+ \label{eq:q21-inverse-control}
+\end{equation}
+For this calculation, write
+\(U=\bar z_0/(1+|z_0|^2)\),
+\(V=-1/(1+|z_0|^2)\) in
+\eqref{eq:q21-component-fueter}; then
+\(U_{\bar z_0}=(1+|z_0|^2)^{-2}\) and
+\(V_{z_0}=\bar z_0(1+|z_0|^2)^{-2}\).
+Here \(F^{-1}\partial_qF=F^{-1}\) is also nonregular.
+The general failure of ordinary products and compositions to preserve
+Fueter regularity is discussed in \cite{sudbery}; the explicit
+control supplies the reciprocal obstruction needed here.
+
+On the real physical slice only, whenever \(F\ne0\),
+\begin{equation}
+ F^{-1}F_x
+ =\tfrac12\partial_x\log\mathcal E
+       -\mathbf j\frac{\Lag_0}{\mathcal E}.
+ \label{eq:q21-physical-logderivative}
+\end{equation}
+This is an algebraic identity obtained by dividing
+\eqref{eq:q21-laguerre-product} by \(\mathcal E\); it asserts no
+ambient regularity of the quotient. Locally writing
+\(F=\sqrt{\mathcal E}\,e^{\mathbf j\theta}\) identifies its
+\(\mathbf j\) component with the phase derivative
+\(\theta_x=-\Lag_0/\mathcal E\).
+
+Finally, the backward-heat polynomial
+\(P(\tau,z)=z^2-2\tau+1\) gives
+\[
+ F_P=z_0^2-2t-2\bar z_1+1+2\mathbf jz_0,
+ \qquad
+ A_0=x^2-2t+1+2\mathbf jx,
+ \quad A_1=2x+2\mathbf j,
+ \quad A_2=2.
+\]
+Equations \eqref{eq:q21-signed-projection} and
+\eqref{eq:q21-jacobian} give
+\(\Lag_0=2x^2+4t-2\), \(\Lag_1=4\), and
+\(\det d_qF_P=-16\).
+The physical field nevertheless vanishes at \((t,x)=(1/2,0)\).
+This control satisfies the lift, regularity, heat, and boundary identities,
+but it violates the first stationary sign before its collision.
+The equations therefore organize the RH observation without replacing
+the needed estimate from the complete theta source.
+
+
+% Drafted for Edward Baker, 14 October 2026.
+% LLM-assisted derivation and internal audit: gpt-6.1-sol, ultra.
+
+\section{A complete theta estimate on a bounded spectral domain}
+\label{sec:theta-central}
+
+For clarity, all source variables in this section are denoted by \(u\).
+The physical spectral coordinate is \(x\), and \(t\) is independent
+real Newman time.  We use the normalization
+\begin{align}
+ \phi_n(u)&=\bigl(2\pi^2n^4e^{9u}-3\pi n^2e^{5u}\bigr)
+                 e^{-\pi n^2e^{4u}}, \qquad u\geq0,\quad n\geq1,
+ \label{eq:theta-summands}\\
+ \Phi(u)&=\sum_{n\geq1}\phi_n(u),\qquad
+ H(t,x)=\int_0^\infty e^{tu^2}\Phi(u)\cos(xu)\,du .
+ \label{eq:theta-halfline}
+\end{align}
+Thus \(H(0,z)=\xi(1/2+iz/2)/8\).  The complete source extends to an
+even smooth function on the real line.  In particular, every odd
+endpoint derivative of \(\Phi\) vanishes.  One direct way to see this
+is to put
+\[
+ h(u)=e^u\Theta(e^{4u},0),\qquad
+ \Theta(r,y)=\sum_{n\in\mathbb Z}e^{-\pi n^2r+2\pi iny}.
+\]
+Jacobi inversion gives \(h(-u)=h(u)\), and differentiation of its
+normally convergent series gives
+\(\Phi=(h''-h)/16\) on \(u\geq0\).
+Every fixed source derivative has superexponential decay at infinity.
+Consequently the cosine transform in \eqref{eq:theta-halfline} is
+entire in \((t,x)\), differentiation under its integral is legitimate,
+and its real spectral restriction is Schwartz for each fixed real \(t\).
+No finite theta truncation is made here.
+
+For \(0\leq t\leq1\), define
+\[
+ w_t(u)=e^{tu^2}\Phi(u),\qquad
+ M_j(t)=\int_0^\infty u^jw_t(u)\,du,\qquad
+ \delta=\frac1{120000}.
+\]
+Every \(\phi_n(u)\) is strictly positive on this half-line:
+writing \(q=\pi n^2e^{4u}\), its factor \(2q-3\) is positive.
+
+\begin{theorem}[Complete-source central moment estimate]
+\label{thm:central-moment}
+For every \(0\leq t\leq1\),
+\begin{equation}
+ M_2(t)-\frac{25}{2}M_4(t)>
+ \frac{2413193}{268912000000}>\delta .
+ \label{eq:central-moment}
+\end{equation}
+Both the entire theta-index sum and the negative integration tail are
+included in this estimate.
+\end{theorem}
+
+\begin{proof}
+First consider \(0\leq u\leq1/10\).  With \(q=\pi e^{4u}\),
+\[
+ \phi_1(u)=e^u g(q),\qquad
+ g(q)=q(2q-3)e^{-q},\qquad
+ g'(q)=-(2q-1)(q-3)e^{-q}.
+\]
+The elementary bounds \(\pi<22/7\) and \(e^{2/5}<3/2\) give
+\(3<q<33/7\).  Hence \(g\) is decreasing on the required interval,
+and \(e<11/4\), \(e^{2/7}>9/7\) give
+\begin{equation}
+ \Phi(u)\geq\phi_1(u)>g(33/7)
+ >\frac{1485}{49}\frac97\left(\frac4{11}\right)^5
+ >\frac6{25}.
+ \label{eq:theta-core}
+\end{equation}
+Only positive summands have been discarded.
+
+For the complete upper tail let \(y=\pi e^{4u}\geq\pi\).
+The ratio between successive terms of \(n^4e^{-yn^2}\) is at most
+\[
+ 16e^{-3y}\leq16e^{-3\pi}<\frac12.
+\]
+Dropping the negative part of each summand in
+\eqref{eq:theta-summands} and summing its full geometric majorant yields
+\begin{equation}
+ \Phi(u)<4\pi^2e^{9u-\pi e^{4u}},\qquad u\geq0.
+ \label{eq:complete-theta-majorant}
+\end{equation}
+Set \(b=7/25\) and \(L_t(u)=9u+tu^2-\pi e^{4u}\).
+Using \(\pi>25/8\) and \(e^{28/25}>153/50\), one obtains
+\[
+ L_t(b)<\frac{1624}{625}-\frac{153}{16}<-\frac{69}{10},
+ \qquad
+ L_t'(b)<9+\frac{14}{25}-\frac{153}{4}<-28.
+\]
+Moreover \(L_t''(u)=2t-16\pi e^{4u}<0\) for \(u\geq b\).
+Thus \(L_t(u)<-69/10-28(u-b)\) on the full tail.
+Finally \(4\pi^2<40\) and
+\[
+ e^{69/10}>
+ \left(\frac83\right)^6
+ \left(1+\frac9{10}+\frac12\left(\frac9{10}\right)^2\right)>800
+\]
+prove the uniform envelope
+\begin{equation}
+ w_t(u)<\frac1{20}e^{-28(u-b)},\qquad u\geq b.
+ \label{eq:heated-tail}
+\end{equation}
+
+On \([0,b]\), the factor \(u^2(1-25u^2/2)\) is nonnegative.
+On \(u\geq b\) it is bounded below by
+\(-25u^2(u^2-b^2)/2\), because \(1-25b^2/2=1/50\).
+Apply \eqref{eq:theta-core} to the positive core,
+discard the nonnegative remainder in \([0,b]\), and pay the whole
+negative tail using \eqref{eq:heated-tail}.  This gives
+\[
+ M_2-\frac{25}{2}M_4>
+ \frac6{25}\int_0^{1/10}u^2(1-25u^2/2)\,du-\frac58 I,
+\]
+where, after the substitution \(u=b+s\),
+\begin{align*}
+ I&=\int_b^\infty u^2(u^2-b^2)e^{-28(u-b)}\,du\\
+  &=\frac{2b^3}{28^2}+\frac{10b^2}{28^3}
+    +\frac{24b}{28^4}+\frac{24}{28^5}
+    =\frac{3497259}{33614000000}.
+\end{align*}
+The retained difference is exactly
+\[
+ \frac{37}{500000}-\frac58 I
+ =\frac{2413193}{268912000000}>\frac1{120000}.
+\]
+This proves \eqref{eq:central-moment}.
+\end{proof}
+
+\begin{corollary}[Physical norm and stationary signs on the central domain]
+\label{cor:central-gap}
+For \(0\leq t\leq1\),
+\begin{align}
+ H_{xx}(t,x)&<-\delta &&(|x|\leq5), \label{eq:central-curvature}\\
+ -H_x(t,x)&>x\delta &&(0<x\leq8), \label{eq:central-slope}\\
+ H(t,x)&>\frac{7733}{350000}>\frac1{50} &&(|x|\leq1), \label{eq:central-value}\\
+ |H(t,x)+\mathbf jH_x(t,x)|&>\delta &&(|x|\leq8).
+ \label{eq:central-physical-gap}
+\end{align}
+On \(|x|\leq5\), the only first stationary point is \(x=0\), and the
+second stationary set is empty.  At that first stationary point,
+\begin{equation}
+ \mathscr L_0(t,0)=H(t,0)M_2(t)>\frac1{5000000}.
+ \label{eq:central-stationary}
+\end{equation}
+\end{corollary}
+
+\begin{proof}
+For every real \(y\), \(\cos y\geq1-y^2/2\).
+Integrating this inequality from zero gives
+\(\sin y\geq y-y^3/6\) for every \(y\geq0\).
+Because \(w_t\) is positive, these global inequalities imply
+\[
+ -H_{xx}\geq M_2-\frac{x^2}{2}M_4,\qquad
+ -H_x\geq x\left(M_2-\frac{x^2}{6}M_4\right)\quad(x>0).
+\]
+The first right side exceeds \(\delta\) for \(|x|\leq5\).
+The second exceeds \(x\delta\) for \(0<x\leq8\), since
+\(8^2/6<25/2\).  Evenness handles negative \(x\).
+These estimates keep the oscillatory source tail rather than replacing
+its cosine or sine by a presumed sign.
+
+For \(|x|\leq1\), the core satisfies
+\(\cos(xu)\geq199/200\) on \(0\leq u\leq1/10\).
+The interval \(1/10\leq u\leq b\) has positive cosine.
+The remaining tail costs at most \(1/560\), by
+\eqref{eq:heated-tail}.  Therefore
+\[
+ H(t,x)>\frac6{25}\frac1{10}\frac{199}{200}-\frac1{560}
+ =\frac{7733}{350000}>\frac1{50}.
+\]
+Use this scalar component for \(|x|\leq1\), and
+\eqref{eq:central-slope} for \(1\leq|x|\leq8\), to prove
+\eqref{eq:central-physical-gap}.
+Strict concavity and evenness give the assertion about stationary sets.
+Finally \(H(t,0)>3/125\) follows by integrating the positive core alone,
+and \(M_2>\delta\) follows from \eqref{eq:central-moment}.
+Their product is greater than \(1/5000000\).
+\end{proof}
+
+The bounded range \(|x|\leq8\) is part of the theorem.
+It does not exclude collisions at unknown spectral heights.
+
+\subsection{The second stationary sign throughout the central domain}
+
+\begin{proposition}[A fourth--sixth moment gap]
+\label{prop:central-fourth-sixth}
+For \(0\le t\le1\),
+\begin{equation}
+ M_4-\frac{32}{3}M_6>
+ \frac{2092283587}{3853516800000000}>\frac1{2000000}.
+ \label{eq:fourth-sixth-gap}
+\end{equation}
+Consequently, for \(0<|x|\le8\),
+\begin{equation}
+ \Lag_1(t,x)>\frac{x^2}{240000000000}.
+ \label{eq:central-second-sign}
+\end{equation}
+On \(|x|\le8\), the first stationary set is exactly \(x=0\),
+with the margin in \eqref{eq:central-stationary}; the second stationary
+sign holds wherever \(H_{xx}=0\).
+\end{proposition}
+
+\begin{proof}
+The decreasing function \(g(q)=q(2q-3)e^{-q}\) used above gives
+two additional source cores:
+\[
+ \Phi(u)>3/25\quad(0\le u\le3/20),\qquad
+ \Phi(u)>1/20\quad(0\le u\le1/5).
+\]
+Indeed \(e^{3/5}<11/6\), \(\pi<22/7\) imply \(q<6\)
+on the first interval, and
+\(g(6)>54(4/11)^6>3/25\). On the second,
+\(e^{4/5}<9/4\) gives \(q<36/5\); using
+\(e<11/4\), \(e^{1/5}<5/4\),
+\[
+ g(36/5)>\frac{2052}{25}(4/11)^7(4/5)>1/20.
+\]
+Keep \(\Phi>6/25\) on the first interval \([0,1/10]\).
+
+For the full upper tail set \(b=3/10\). The rational bounds
+\(\pi>333/106\), \(e^{6/5}>83/25\) give, uniformly for \(t\le1\),
+\[
+ L_t(b)<-40491/5300<-38/5,\qquad
+ L_t'(b)<-42558/1325<-32.
+\]
+Since \(L_t''<0\), \(4\pi^2<40\), and \(e^{38/5}>1960\),
+the complete-index envelope is
+\[
+ w_t(u)<\frac1{49}e^{-32(u-b)}\qquad(u\ge b).
+\]
+Put \(f(u)=u^4(1-32u^2/3)\). This is nonnegative on \([0,b]\),
+and on the entire tail it is bounded below by
+\(-(32/3)u^4(u^2-b^2)\). Hence
+\[
+ M_4-\frac{32}{3}M_6>P-\frac{32}{147}I,
+\]
+where the three successive positive cores and the full negative tail give
+\begin{align*}
+ P&=\frac6{25}\int_0^{1/10}f
+   +\frac3{25}\int_{1/10}^{3/20}f
+   +\frac1{20}\int_{3/20}^{1/5}f
+   =\frac{111799}{33600000000},\\
+ I&=\int_b^\infty u^4(u^2-b^2)e^{-32(u-b)}\,du
+   =\frac{85837761}{6710886400000}.
+\end{align*}
+Their exact difference proves \eqref{eq:fourth-sixth-gap}.
+The exponential comparisons follow from finite rational Taylor sums
+with geometric remainder bounds; the sharper bound on \(\pi\)
+follows from the Machin sums described in the appendix.
+
+For \(0<x\le8\), the global sine inequality and source positivity give
+\[
+ h_3\ge x(M_4-x^2M_6/6)>x/2000000.
+\]
+Combine this with \(-h_1>x/120000\) to obtain
+\(h_2^2-h_1h_3>x^2/240000000000\). Evenness transfers the sign
+to negative heights. The central slope excludes every nonzero first
+stationary point. At zero, \(h_2=-M_2<0\), so the second stationary
+set does not meet the origin.
+\end{proof}
+
+\section{Full angular gluing and absolute observation stability}
+\label{sec:gluing-stability}
+
+Let \((c_n)_{n\in\mathbb Z}\) be a bounded real sequence satisfying
+\(c_{-n}=c_n\) and \(c_0=1\).  Its prepared theta field is
+\[
+ \Theta_c(r,y)=\sum_{n\in\mathbb Z}c_ne^{-\pi n^2r+2\pi iny},
+ \qquad r>0.
+\]
+Boundedness guarantees normal convergence on compact angular sets.
+The complete imaginary elliptic defect is
+\begin{equation}
+ E_c(r,y)=e^{-\pi r}
+ \left[\Theta_c(r,y+ir)-e^{\pi r-2\pi iy}\Theta_c(r,y)\right].
+ \label{eq:elliptic-defect}
+\end{equation}
+We use its full angular norm at the \emph{single} scale \(r=1\).
+This is an infinite Fourier observation, not a finite jet condition or
+an estimate over all theta scales.
+
+\begin{proposition}[Exact defect norm and balanced gauge]
+\label{prop:defect-parseval}
+Put \(d_m=c_m-c_{m-1}\) for \(m\geq1\) and
+\(w_m=e^{-2\pi m^2}+e^{-2\pi(m-1)^2}\).  Then
+\begin{equation}
+ D^2:=\int_0^1|E_c(1,y)|^2\,dy
+ =\sum_{m\geq1}|d_m|^2w_m.
+ \label{eq:defect-parseval}
+\end{equation}
+For \(\mathcal B_c(0,z)=e^{\pi z^2/2}\Theta_c(1,z)\),
+\begin{equation}
+ D^2=\int_0^1 e^{-\pi(1+y^2)}
+ \left|\mathcal B_c(0,y+i)
+ -e^{\pi/2-\pi iy}\mathcal B_c(0,y)\right|^2dy.
+ \label{eq:defect-balanced}
+\end{equation}
+In particular \(D=0\) forces \(c_n=1\) for every \(n\).
+\end{proposition}
+
+\begin{proof}
+Termwise substitution into \eqref{eq:elliptic-defect}, followed by the
+index change in the second term, gives the normally convergent series
+\[
+ E_c(r,y)=\sum_{n\in\mathbb Z}(c_n-c_{n+1})
+ e^{-\pi(n+1)^2r}e^{2\pi iny}.
+\]
+Parseval on \([0,1]\) gives its squared coefficient norm.
+For \(n=m-1\geq0\), the coefficient difference is \(-d_m\) and its
+weight is \(e^{-2\pi m^2}\).  For \(n=-m\leq-1\), symmetry gives
+the difference \(d_m\) and the weight \(e^{-2\pi(m-1)^2}\).
+Their sum proves \eqref{eq:defect-parseval}.
+Every weight is positive; \(c_0=1\) proves the rigidity statement.
+
+For real \(y\), direct multiplication of the balanced gauge gives
+\[
+ E_c(1,y)=e^{-\pi-\pi(y+i)^2/2}
+ \left[\mathcal B_c(0,y+i)
+ -e^{\pi/2-\pi iy}\mathcal B_c(0,y)\right].
+\]
+The squared modulus of the prefactor is \(e^{-\pi(1+y^2)}\), proving
+\eqref{eq:defect-balanced}.
+\end{proof}
+
+The stability observation below is explicitly defined on the half-line:
+\begin{equation}
+ \Phi_c^+(u)=\sum_{n\geq1}c_n\phi_n(u),\qquad
+ H_c(t,x)=\int_0^\infty e^{tu^2}\Phi_c^+(u)\cos(xu)\,du.
+ \label{eq:perturbed-halfline}
+\end{equation}
+For general \(c\), its even source extension need not be smooth at
+zero or equal the projection of the full modular prepared field.
+It is nonetheless entire in \((t,x)\), obeys backward heat, and is real
+and even in real \(x\).  If all \(c_n>0\), its source is positive.
+
+\begin{theorem}[Four-jet gluing stability]
+\label{thm:four-jet-gluing}
+For every real \(x\), \(0\leq t\leq1\), and \(j=0,1,2,3\),
+\begin{equation}
+ |\partial_x^j(H_c-H)(t,x)|\leq DC_j,\qquad
+ C_j^2=\sum_{m\geq1}\frac{A_{jm}^2}{w_m},
+ \label{eq:four-jet-stability}
+\end{equation}
+where the full positive sums are
+\[
+ A_{jm}=\sum_{n\geq m}
+ \frac{2\pi^2n^4j!e^{-\pi n^2}}{(4\pi n^2-9)^{j+1}}.
+\]
+These finite constants satisfy
+\begin{equation}
+ C_0<\frac12,\qquad C_1<\frac18,\qquad
+ C_2<\frac1{12},\qquad C_3<\frac1{12}.
+ \label{eq:four-jet-rational}
+\end{equation}
+The same four rational constants bound the genuine jets
+\(|\partial_x^jH|\) on this domain.
+\end{theorem}
+
+\begin{proof}
+Let \(\Delta h_j=\partial_x^j(H_c-H)\).
+Using \(c_n-1=\sum_{m=1}^n d_m\), the complete series can be regrouped as
+\[
+ \Delta h_j=\sum_{m\geq1}d_m B_{jm},\qquad
+ B_{jm}=\sum_{n\geq m}\int_0^\infty
+ e^{tu^2}\phi_n(u)u^j\cos(xu+j\pi/2)\,du.
+\]
+Absolute convergence justifies this regrouping: the coefficient
+sequence is bounded, so \(\sum_{m\leq n}|d_m|=O(n)\), while the
+moment bounds below decay as \(e^{-\pi n^2}\).
+For \(u\geq0\), \(e^{4u}\geq1+4u+8u^2\).
+Drop the negative summand in \(\phi_n\), and note \(t-8\pi n^2<0\):
+\[
+ e^{tu^2}\phi_n(u)
+ \leq2\pi^2n^4e^{-\pi n^2}
+ e^{-(4\pi n^2-9)u}.
+\]
+Integrating \(u^j\) against this full half-line envelope proves
+\(|B_{jm}|\leq A_{jm}\).  Cauchy--Schwarz against the exact
+weights in \eqref{eq:defect-parseval} proves
+\eqref{eq:four-jet-stability}.
+
+To bound the constants, set
+\[
+ a_j=\frac{2\pi^2j!}{(4\pi-9)^{j+1}},\quad
+ \rho_0=4e^{-3\pi},\quad
+ \rho_j=e^{-3\pi}\ (j\geq1),\quad r_*=e^{-4\pi}.
+\]
+Since \(4\pi n^2-9\geq(4\pi-9)n^2\), the summand in \(A_{jm}\)
+is at most \(a_jn^{2-2j}e^{-\pi n^2}\).
+Successive ratios of this majorant are bounded by \(\rho_j\), giving
+\[
+ A_{jm}\leq\frac{a_jm^{2-2j}e^{-\pi m^2}}{1-\rho_j}.
+\]
+Because \(w_m\geq e^{-2\pi(m-1)^2}\), this implies
+\begin{align*}
+ C_0^2&\leq
+ \left(\frac{a_0e^{-\pi}}{1-\rho_0}\right)^2
+ \frac{1+11r_*+11r_*^2+r_*^3}{(1-r_*)^5},\\
+ C_j^2&\leq
+ \left(\frac{a_je^{-\pi}}{1-\rho_j}\right)^2
+ \frac1{1-r_*},\qquad j=1,2,3.
+\end{align*}
+Here the first identity uses
+\(\sum_{m\geq1}m^4r^{m-1}=(1+11r+11r^2+r^3)/(1-r)^5\);
+for \(j\geq1\), \(m^{4-4j}\leq1\).
+The elementary bounds
+\[
+ 3<\pi<22/7,\quad e^3>20,\quad
+ e^{-\pi}<1/20,\quad
+ \rho_0<1/2000,\quad \rho_j<1/8000,\quad r_*<1/160000
+\]
+reduce the asserted strict rational bounds to finite rational
+comparisons, detailed in the reproducibility appendix.
+Finally the genuine moment bound is \(|\partial_x^jH|\leq A_{j1}\);
+the same majorants give its stated rational bounds.
+\end{proof}
+
+\begin{corollary}[Absolute signed-form stability and a robust central gap]
+\label{cor:robust-gluing}
+Let \(\mathscr L_j(f)=(f^{(j+1)})^2-f^{(j)}f^{(j+2)}\).
+On every real \(x\) and \(0\leq t\leq1\),
+\begin{align}
+ |\mathscr L_0(H_c)-\mathscr L_0(H)|
+ &\leq\frac{11}{192}(2D+D^2), \label{eq:L0-defect-transfer}\\
+ |\mathscr L_1(H_c)-\mathscr L_1(H)|
+ &\leq\frac5{288}(2D+D^2). \label{eq:L1-defect-transfer}
+\end{align}
+If \(D\leq1/30000\), then
+\begin{equation}
+ |H_c(t,x)+\mathbf jH_{c,x}(t,x)|>
+ \frac1{240000},\qquad |x|\leq8,\quad 0\leq t\leq1.
+ \label{eq:robust-central-gap}
+\end{equation}
+On \(|x|\leq5\), \(H_{c,xx}<-1/180000\); the only first stationary
+point is zero, the second stationary set is empty, and
+\(\mathscr L_0(H_c;t,0)>1/9000000\).
+\end{corollary}
+
+\begin{proof}
+Write \(S_0=1/2,S_1=1/8,S_2=S_3=1/12\).
+Expansion of the quadratic Laguerre form, followed by
+\(|h_j|<S_j\) and \(|\Delta h_j|\leq DS_j\), bounds its error by
+\[
+ (S_{j+1}^2+S_jS_{j+2})(2D+D^2).
+\]
+The two coefficients are \(11/192\) and \(5/288\).
+This comparison is at the same spectral point; it does not assume
+that stationary sets of \(H\) and \(H_c\) coincide.
+
+For the norm bound, on \(|x|\leq1\) the scalar component satisfies
+\[
+ H_c>1/50-D/2>1/100.
+\]
+On \(1\leq|x|\leq8\), the derivative component satisfies
+\[
+ |H_{c,x}|>\delta-D/8\geq1/240000.
+\]
+The curvature transfer gives
+\(H_{c,xx}<-\delta+D/12\leq-1/180000\).
+Evenness now identifies the stationary sets.
+At zero \(H_c>3/125-D/2>1/50\), and multiplication of the last
+curvature gap by \(1/50\) proves the stated Laguerre margin.
+\end{proof}
+
+The estimates \eqref{eq:L0-defect-transfer}--\eqref{eq:L1-defect-transfer}
+transfer a separately established margin.  They do not supply the
+genuine theta sign, or a loss bounded relative to \(H^2+H_x^2\).
+
+\section{The scope of an approximate gluing certificate}
+\label{sec:remote-control}
+
+\begin{proposition}[Arbitrarily small defects with remote joint zeros]
+\label{prop:remote-gluing-controls}
+Fix \(T\in(0,1)\).  There are bounded positive symmetric coefficient
+sequences with \(c_0=1\), defects \(D_X>0\) tending to zero, and
+half-line observations \eqref{eq:perturbed-halfline} satisfying
+\[
+ H_c(T,X)=H_{c,x}(T,X)=0
+\]
+at an unbounded sequence of real heights \(X\).
+The coefficient changes and \(D_X\) decrease faster than every
+inverse power of \(X\).  These observations fail exact imaginary
+gluing and smooth modular reflection; they are not genuine theta
+counterexamples.
+\end{proposition}
+
+\begin{proof}
+Put \(K_n(x)=\int_0^\infty e^{Tu^2}\phi_n(u)\cos(xu)\,du\),
+and \(\alpha_n=\pi n^2\).
+The polynomial recurrence
+\[
+ P_0(q)=2q-3,\qquad
+ P_{k+1}(q)=(5-4q)P_k(q)+4qP_k'(q)
+\]
+gives
+\(\phi_n^{(k)}(0)=\alpha_ne^{-\alpha_n}P_k(\alpha_n)\).
+In particular,
+\[
+ P_1(q)=-8q^2+30q-15,\quad
+ P_3(q)=-128q^4+1440q^3-4232q^2+3270q-375.
+\]
+Write \(b_n=\phi_n'(0)\) and \(e_n=\phi_n'''(0)\).
+Repeated integration by parts, with all derivatives integrable, gives
+\[
+ K_n=-b_nx^{-2}+(e_n+6Tb_n)x^{-4}+O(x^{-6}),
+\]
+\[
+ K_n'=2b_nx^{-3}-4(e_n+6Tb_n)x^{-5}+O(x^{-7}).
+\]
+The derivative expansion can be obtained independently from its sine
+integral, so no differentiation of an unspecified remainder is needed.
+Consequently
+\[
+ \det\begin{pmatrix}K_1&K_2\\K_1'&K_2'\end{pmatrix}
+ =8\pi^2e^{-5\pi}P(\pi)x^{-7}+O(x^{-9}),
+\]
+where
+\[
+ P(q)=-113400q+907200q^2-2570400q^3
+       +3081600q^4-1520640q^5+245760q^6.
+\]
+This polynomial is \(P_1(q)P_3(4q)-P_1(4q)P_3(q)\).
+Exact rational interval evaluation gives
+\(4.598266<P(\pi)<4.598268\), as detailed in the appendix.
+The matrix is therefore invertible for every sufficiently large \(x\),
+and its inverse grows at most polynomially.
+
+Choose an unbounded sequence of sufficiently large \(X\) with
+\(H(T,X)\ne0\), possible because \(H(T,\cdot)\) is nonzero entire.
+Solve
+\[
+ \begin{pmatrix}K_1(X)&K_2(X)\\K_1'(X)&K_2'(X)\end{pmatrix}
+ \binom{a_X}{b_X}
+ =-\binom{H(T,X)}{H_x(T,X)} .
+\]
+The right side is Schwartz, so \(a_X,b_X\) decrease faster than every
+inverse power of \(X\).  Let \(c_1=1+a_X,c_2=1+b_X\), retain
+\(c_n=1\) for \(n\geq3\), and impose symmetry and \(c_0=1\).
+For large \(X\) all coefficients are positive and the defining system
+gives the exact joint zero.  The coefficient change is nonzero, and
+\[
+ D_X^2=a_X^2w_1+(b_X-a_X)^2w_2+b_X^2w_3>0
+\]
+tends to zero at the same superalgebraic rate.
+The unheated odd-jet matrix
+\(\bigl(\begin{smallmatrix}b_1&b_2\\e_1&e_2\end{smallmatrix}\bigr)\)
+has determinant \(4\pi^2e^{-5\pi}P(\pi)\ne0\).
+Thus the nonzero perturbation cannot leave both the first and third
+odd endpoint jets zero.  Its even extension is not smooth, and cannot
+be a smooth modular projection.
+\end{proof}
+
+\section{Signed paired kernels and endpoint compensation}
+\label{sec:paired-compensation}
+
+For real \(t,x\), put \(g_{n,t}(u)=e^{tu^2}\phi_n(u)\).
+Direct expansion of the physical Laguerre forms gives the exact
+complete paired identity
+\begin{equation}
+\begin{split}
+ \mathscr L_j(t,x)=\frac14\sum_{n,m\geq1}
+ \iint_{(0,\infty)^2}
+ &g_{n,t}(u)g_{m,t}(v)(uv)^j\\
+ {}\times\bigl[&(u+v)^2\cos x(u-v)
+ +(-1)^j(u-v)^2\cos x(u+v)\bigr]\,du\,dv,
+ \qquad j=0,1 .
+\end{split}
+\label{eq:complete-paired-kernel}
+\end{equation}
+Absolute convergence follows from the complete theta source moments
+through order four.  To derive it, write
+\(H^{(j)}=\sum_n\int u^jg_{n,t}(u)\cos(xu+j\pi/2)\,du\),
+symmetrize \(H^{(j)}H^{(j+2)}\) in \(u,v\), and use the
+product-to-sum identities.  Both terms, and all off-diagonal
+indices \(n\ne m\), remain.  Substitution of the same source into
+Fueter boundary reproduction produces this identity: the boundary
+radius disappears under exact reproduction, rather than creating a
+new positive multiplier.
+
+The individual scalar channel \(H_{n,t}=\int g_{n,t}\cos(xu)\,du\)
+has an algebraic endpoint tail:
+\[
+ H_{n,t}(x)=-b_nx^{-2}+O(x^{-4}),
+ \qquad b_n=\phi_n'(0).
+\]
+Repeated endpoint expansions of its derivatives give, when \(b_n\ne0\),
+\begin{equation}
+ \mathscr L_j(H_{n,t};x)=
+ -(j+2)((j+1)!)^2b_n^2x^{-2j-6}
+ +O(x^{-2j-8}),\qquad j=0,1 .
+ \label{eq:individual-negative-tail}
+\end{equation}
+Indeed the leading coefficient is
+\((j+2)!^2-(j+1)!(j+3)!=-(j+2)((j+1)!)^2\).
+Thus separate diagonal channels are eventually negative.
+For the complete source, in contrast,
+\[
+ \sum_{n\geq1}\phi_n^{(2k+1)}(0)=0,\qquad k\geq0.
+\]
+The full heated source has the same cancellation of every odd
+endpoint jet, because \(e^{tu^2}\) is even.
+This is necessary compensation for its Schwartz Fourier decay.
+It rules out a global proof that treats individual diagonal channels
+as nonnegative or ignores endpoint cancellation in a theta truncation.
+
+\begin{proposition}[Compensated all-index truncation]
+\label{prop:compensated-tails}
+Fix a positive integer \(K\).  There exist odd Schwartz functions
+\(\beta_0,\ldots,\beta_{K-1}\) on \(\mathbb R\), each an odd
+polynomial times \(e^{-u^2}\), satisfying
+\[
+ \beta_k^{(2\ell+1)}(0)=\delta_{k\ell},\qquad 0\leq k,\ell<K.
+\]
+Define, on \(u\geq0\),
+\[
+ \widetilde g_{n,t}(u)=g_{n,t}(u)
+ -\sum_{k=0}^{K-1}g_{n,t}^{(2k+1)}(0)\beta_k(u),
+ \qquad
+ R_N(u)=\sum_{n>N}\widetilde g_{n,t}(u).
+\]
+Then
+\(\sum_{n\geq1}\widetilde g_{n,t}=e^{tu^2}\Phi\), and, for
+\(j=0,1,2,3\), \(x\ne0\),
+\begin{equation}
+ \left|\int_0^\infty u^jR_N(u)\cos(xu+j\pi/2)\,du\right|
+ \leq |x|^{-2K}\left\|(u^jR_N)^{(2K)}\right\|_{L^1(0,\infty)}.
+ \label{eq:compensated-ibp}
+\end{equation}
+The norm on the right includes every omitted index and is finite.
+The following explicit majorant gives an all-index payment for it.
+\end{proposition}
+
+\begin{proof}
+The jets of \(u^{2k+1}e^{-u^2}\) form a triangular matrix, with
+nonzero diagonal, so finite triangular interpolation constructs
+the \(\beta_k\).  For example \(\beta_0=ue^{-u^2}\) when \(K=1\).
+Every compensated summand has its first \(K\) odd jets zero.
+Absolute convergence of the endpoint-jet sums and full-source
+cancellation show that their complete sum is unchanged.
+For even \(j\), the cosine integral in \eqref{eq:compensated-ibp}
+has boundary terms involving odd derivatives of \(u^jR_N\);
+for odd \(j\), its sine integral has boundary terms involving even
+derivatives.  Each relevant derivative below order \(2K\) is zero,
+because its surviving derivative of \(R_N\) is odd and below \(2K\).
+All upper endpoints vanish.  Repeating integration by parts \(2K\)
+times therefore proves \eqref{eq:compensated-ibp}.
+\end{proof}
+
+Here is an explicit positive-polynomial majorant for the remainder norm;
+it avoids leaving a finite theta cutoff unpaid.
+Put \(\alpha_n=\pi n^2\), \(q=\alpha_ne^{4u}\).
+The derivative representation
+\[
+ g_{n,t}^{(k)}(u)=
+ \alpha_ne^{tu^2+5u-q}P_{k,t}(u,q)
+\]
+has the exact recurrence
+\[
+ P_{0,t}=2q-3,\quad
+ P_{k+1,t}=(2tu+5-4q)P_{k,t}
+ +\partial_uP_{k,t}+4q\partial_qP_{k,t}.
+\]
+For \(0\leq t\leq1\), define nonnegative-coefficient polynomials
+\[
+ Q_0=2q+3,\quad
+ Q_{k+1}=(2u+5+4q)Q_k+\partial_uQ_k+4q\partial_qQ_k.
+\]
+Coefficientwise absolute-value comparison in the polynomial variables
+\(t,u,q\), followed by \(0\leq t\leq1\), proves
+\(|P_{k,t}(u,q)|\leq Q_k(u,q)\) for \(u,q\geq0\).
+Leibniz's rule gives the positive polynomial
+\[
+ W_{Kj}(u,q)=
+ \sum_{\ell=0}^{\min(j,2K)}
+ \binom{2K}{\ell}\frac{j!}{(j-\ell)!}
+ u^{j-\ell}Q_{2K-\ell}(u,q)
+ =\sum_{a,b}\omega_{ab}u^aq^b .
+\]
+All \(\omega_{ab}\) are nonnegative.  Also write
+\(Q_{2k+1}(0,q)=\sum_b\eta_{kb}q^b\), and put
+\[
+ B_{Kjk}=\left\|(u^j\beta_k)^{(2K)}\right\|_{L^1(0,\infty)}.
+\]
+These are explicit finite Gaussian-polynomial integrals.  An elementary
+upper bound is obtained by summing absolute polynomial coefficients
+times
+\(\int_0^\infty u^ae^{-u^2}\,du=\Gamma((a+1)/2)/2\).
+
+Choose \(N\) so that
+\(\alpha_{N+1}=\pi(N+1)^2\geq8K+9\).
+For every integer \(s\) occurring below, define
+\[
+ T_s(N)=
+ \frac{\alpha_{N+1}^{\,s}e^{-\alpha_{N+1}}}
+ {1-e^{-\pi(N+2)}}.
+\]
+Then the complete all-index estimate is
+\begin{equation}
+ \left\|(u^jR_N)^{(2K)}\right\|_1
+ \leq
+ \sum_{a,b}\omega_{ab}\frac{a!}{3^{a+1}}T_{b-a}(N)
+ +\sum_{k=0}^{K-1}B_{Kjk}\sum_b\eta_{kb}T_{b+1}(N).
+ \label{eq:explicit-compensated-tail}
+\end{equation}
+To prove this, a monomial \(u^aq^b\) in the derivative bound contributes
+\[
+ \alpha_n^{b+1}\int_0^\infty
+ u^ae^{u^2+(5+4b)u-\alpha_ne^{4u}}\,du
+ \leq \frac{a!}{3^{a+1}}\alpha_n^{b-a}e^{-\alpha_n}.
+\]
+Here \(b\leq2K+1\), so \(5+4b\leq8K+9\leq\alpha_n\).
+The inequality \(e^{4u}\geq1+4u+8u^2\) leaves a linear decay rate
+at least \(3\alpha_n\) and a nonpositive quadratic exponent.
+The endpoint coefficients obey
+\[
+ |g_{n,t}^{(2k+1)}(0)|
+ \leq e^{-\alpha_n}\sum_b\eta_{kb}\alpha_n^{b+1}.
+\]
+Finally every positive exponent \(s\) in these bounds satisfies
+\(s\leq2K+1\), hence \(2s\leq\alpha_n\).
+For \(n\geq N+1\), the successive ratio of
+\(\alpha_n^se^{-\alpha_n}\) is at most \(e^{-\pi(n+1)}\):
+use \(\log(1+1/n)\leq1/n\) if \(s>0\);
+for \(s\leq0\) the bound is even smaller.
+Summing the whole geometric majorant gives
+\(\sum_{n>N}\alpha_n^se^{-\alpha_n}\leq T_s(N)\).
+Applying the triangle inequality to the compensated source proves
+\eqref{eq:explicit-compensated-tail}.
+
+Compensation is a decomposition at each fixed time.  Its separate
+channels need not solve heat or be positive.  Finite \(K\) improves a
+bounded-height certificate by paying known endpoint cancellations;
+it still gives algebraic error, not a global error relative to the
+potentially much smaller physical norm.
+
+\subsection{The explicit two-jet compensation}
+\label{sec:explicit-two-jet}
+
+For \(K=2\), choose
+\[
+ \beta_0=(u+u^3)e^{-u^2},\qquad \beta_1=u^3e^{-u^2}/6,
+ \qquad b_n=\phi_n'(0),\quad e_n=\phi_n'''(0).
+\]
+Their first and third endpoint jets are respectively \((1,0)\) and
+\((0,1)\). Thus
+\(\widetilde g_{n,t}=g_{n,t}-b_n\beta_0-(e_n+6tb_n)\beta_1\).
+Write \(G_n=\int_0^\infty g_{n,t}\cos(xu)\,du\),
+\(B_k=\int_0^\infty\beta_k\cos(xu)\,du\), and
+\(a_n=G_n-b_nB_0-(e_n+6tb_n)B_1\). The exact residual is
+\begin{equation}
+ (\partial_t+\partial_x^2)a_n
+ =-b_nB_0''-(e_n+6tb_n)B_1''-6b_nB_1.
+ \label{eq:compensated-heat-residual}
+\end{equation}
+The raw channel \(G_n\) obeys heat. Its compensation is carried
+explicitly as an affine function of time; treating \(a_n\) as a
+homogeneous heat solution would omit \eqref{eq:compensated-heat-residual}.
+
+For \(N=3\), the complete-index payments from
+\eqref{eq:explicit-compensated-tail} can be made rational. If
+\(A=16\pi\), then for every integer exponent in that formula,
+\[
+ T_s(3)<\frac{(3/8)^{50}}{1-(3/8)^{15}}
+ \begin{cases}(352/7)^s,&s\ge0,\\50^s,&s<0.\end{cases}
+\]
+Here \(25/8<\pi<22/7\) and \(e>8/3\) suffice.
+Four Gaussian-polynomial differentiations give upper bounds for
+\(B_{2jk}\), with rows \(j=0,1,2,3\) and columns \(k=0,1\):
+\[
+ \begin{pmatrix}
+ 316&67\\702&747/5\\1566&328\\18819/5&1539/2
+ \end{pmatrix}.
+\]
+Insert these into the positive-polynomial formula, using
+\[
+ Q_1(0,q)=15+30q+8q^2,\quad
+ Q_3(0,q)=465+3450q+4280q^2+1440q^3+128q^4.
+\]
+If \(P_3=\sum_{n\le3}a_n\) and \(r_k=h_k-\partial_x^kP_3\),
+the resulting complete remainders satisfy, uniformly for \(0\le t\le1\),
+\begin{equation}
+ |r_k|<c_k|x|^{-4},\qquad
+ (c_0,c_1,c_2,c_3)=(2,4,9,20)10^{-9}.
+ \label{eq:rational-four-jet-payment}
+\end{equation}
+The exact unrounded rational comparisons also give
+\((|r_0|,|r_1|,|r_2|,|r_3|)<(1,2,4,9)10^{-12}\) for \(|x|\ge7\).
+These are index-tail payments; retained quadrature and parameter
+approximation errors require separate enclosures.
+
+\subsection{The correlated stationary observation}
+\label{sec:correlated-stationary}
+
+For \(a_{n,k}=\partial_x^ka_n\), \(p_k=\sum_{n\le N}a_{n,k}\), put
+\begin{align*}
+ D_j^N&=\sum_{n\le N}(a_{n,j+1}^2-a_{n,j}a_{n,j+2}),\\
+ X_j^N&=\sum_{n<m\le N}
+ (2a_{n,j+1}a_{m,j+1}-a_{n,j}a_{m,j+2}-a_{m,j}a_{n,j+2}).
+\end{align*}
+Then \(D_j^N+X_j^N=p_{j+1}^2-p_jp_{j+2}\) exactly.
+At genuine stationarity, \(h_{j+1}=0\), substitution of
+\(p_{j+1}=-r_{j+1}\) gives
+\begin{equation}
+ \Lag_j(H)=D_j^N+X_j^N-r_{j+1}^2
+ -p_jr_{j+2}-p_{j+2}r_j-r_jr_{j+2}.
+ \label{eq:genuine-stationary-compensation}
+\end{equation}
+Thus for \(|r_k|\le\varepsilon_k\), the payment is
+\begin{equation}
+ E_j=\varepsilon_{j+1}^2+|p_j|\varepsilon_{j+2}
+ +|p_{j+2}|\varepsilon_j+\varepsilon_j\varepsilon_{j+2}.
+ \label{eq:stationary-error-payment}
+\end{equation}
+A lower enclosure \(D_j^N+X_j^N-E_j>\mu_j>0\) on a cell
+proves \(\Lag_j(H)>\mu_j\) wherever that cell meets the genuine
+stationary set. Aggregate evaluation can preserve correlation, while
+the exact identity retains every off-diagonal term. Neither \(D_j^N\)
+nor \(X_j^N\) is assigned an individual sign.
+
+For example, on \([1/200,3/50]\times[7,8]\),
+\eqref{eq:central-second-sign} gives
+\(\Lag_1(H)>49/240000000000\). With the uniform four-jet
+index errors above and the genuine jet caps
+\((1/2,1/8,1/12,1/12)\),
+\[
+ E_1<13\,10^{-13},\qquad
+ |\Lag_1(H)-\Lag_1(P_3)|
+ \le2|p_2|\varepsilon_2+E_1<2\,10^{-12}.
+\]
+Consequently \(X_1^3>-D_1^3+E_1+10^{-10}\) throughout that band.
+This analytic cross-term bound does not require stationarity there.
+
+\subsection{Guarded forward continuation of stationary signs}
+\label{sec:forward-collars}
+
+\begin{proposition}[A paid stationary time collar]
+\label{prop:stationary-time-collar}
+Fix \(j\in\{0,1\}\), a spatial interval \([a,b]\), and
+\(0\le t_0<t_0+\Delta\le\tau\le1\). Suppose at time \(t_0\),
+\[
+ \inf_{[a,b]}\sqrt{h_{j+1}^2+h_{j+2}^2}\ge d_j>0,
+ \qquad
+ \min_{x=a,b}|h_{j+1}|\ge e_j>0.
+\]
+Assume \(-h_jh_{j+2}>0\) at every stationary root on that slice.
+Set \(B_j=\sqrt{M_{j+3}(\tau)^2+M_{j+4}(\tau)^2}\).
+If
+\begin{equation}
+ \Delta B_j<d_j,\qquad \Delta M_{j+3}(\tau)<e_j,
+ \label{eq:stationary-collar-guards}
+\end{equation}
+then every stationary root throughout the closed slab lies on a unique
+regular continuation of an initial root, remains in \((a,b)\), and
+satisfies \(\Lag_j>0\). On a branch with initial
+\(a_\nu=|h_j(t_0,x_\nu)|\),
+\[
+ \Lag_j(t,\chi_\nu(t))
+ \ge a_\nu[d_j-(t-t_0)B_j]>0,
+ \qquad \mathcal E(t,\chi_\nu(t))\ge a_\nu^2.
+\]
+\end{proposition}
+
+\begin{proof}
+Source positivity gives \(|h_m(t,x)|\le M_m(\tau)\).
+The heat equation therefore bounds the change of the derivative pair
+in time by \((t-t_0)B_j\), and its norm stays at least
+\(d_j-(t-t_0)B_j>0\). The edge derivative retains its strict sign
+by the second guard. Consequently stationary roots neither become
+degenerate nor cross the vertical edges. The implicit function theorem
+and compactness give complete branch continuation forward and backward
+inside the slab; in particular no stationary pair can appear unseen.
+There are finitely many initial roots, since they are regular and the
+edges are nonzero.
+
+On such a branch put \(A=h_j\), \(C=h_{j+2}\). Differentiation gives
+\[
+ \chi_\nu'=h_{j+3}/C,\qquad A'=-C.
+\]
+The nonzero \(C\) has constant sign, opposite the initial sign of \(A\).
+Thus \(|A|\) increases forward and is at least \(a_\nu\).
+At stationarity the derivative-pair bound is a lower bound on \(|C|\).
+Multiplying proves the stated signed margin. Energy contains \(A^2\)
+for either \(j=0\) or \(j=1\), which proves its bound without division
+by an unproved physical norm.
+\end{proof}
+
+All moments in these guards include the full theta source. For example,
+for \(m\ge0\), \(0\le\tau\le1\),
+\[
+ M_m(\tau)\le2m!\sum_{n\ge1}
+ \frac{\alpha_n^2e^{-\alpha_n}}{(4\alpha_n-9)^{m+1}}.
+\]
+The tail beyond \(N\) is bounded by its first omitted term divided by
+\(1-\rho_N\), where
+\(\rho_N=((N+2)/(N+1))^4e^{-\pi(2N+3)}<1\).
+The guards remain absolute: they can demand very short time steps at
+large heights, and require independent slice and edge certificates.
+
+They cannot be omitted. With \(y=x-a\), \(\delta=t-T\), \(A_*>0\),
+the backward-heat control
+\[
+ Q=y^4/4-3\delta y^2+3\delta^2-A_*
+\]
+has a positive first stationary sign and an empty second stationary set
+at \(\delta=-h\), \(0<h<\sqrt{A_*/3}\). At \(\delta=0\) its
+stationary derivative is \(Q_x=y^3\), so the derivative-pair gap closes.
+For small \(\delta>0\), the central stationary sign becomes
+\(\Lag_0(t,a)=-6\delta(A_*-3\delta^2)<0\), even though
+\(Q(T,a)=-A_*\ne0\). Degeneracy of a stationary branch must therefore
+be checked before any physical collision, not inferred absent from its
+initial sign.
+
+
+\subsection{A certificate over the full threshold time range}
+\label{sec:full-time-certificate}
+
+\begin{theorem}[Validated signs and norm through height 41]
+\label{thm:full-time-height-41}
+For the complete theta family, on the closed domain
+\(0\le t\le1/2\), \(7\le|x|\le41\),
+\begin{equation}
+ h_1=0\Longrightarrow\Lag_0>5\,10^{-10},\qquad
+ h_2=0\Longrightarrow\Lag_1>10^{-11}.
+ \label{eq:full-time-stationary-signs}
+\end{equation}
+On the entire central strip at these times,
+\begin{equation}
+ |F(t,x)|>\frac9{5000000},\qquad
+ 0\le t\le1/2,\quad |x|\le41.
+ \label{eq:height-41-norm-gap}
+\end{equation}
+Both stationary signs hold on this entire strip. Consequently any
+positive threshold collision, if one exists, has \(|a|>41\).
+\end{theorem}
+
+\begin{proof}[Validated calculation]
+The reproducible implementation uses two Python sources:
+\begin{center}
+\small
+\nolinkurl{certify_compensated_stationary_time_extension.py}\\
+\nolinkurl{certify_compensated_stationary_theta.py}.
+\end{center}
+The second supplies the retained-channel machinery imported by the first.
+The small execution record binds both source hashes.
+The driver covers \([0,1/2]\times[7,41]\)
+by the 272 closed cells
+\[
+ [r/16,(r+1)/16]\times[k,k+1],\qquad
+ 0\le r<8,\quad 7\le k<41.
+\]
+All endpoints and the gap-free cover are checked with exact fractions.
+The run uses \(K=2\), \(N=3\), 256-bit Arb/Acb arithmetic, and a
+retained-source integration cutoff \(U=1\).
+
+Here are the complete parameter and integration payments. For each time
+slab use its midpoint \(t_c\), radius \(d=1/32\), maximum \(t_+\),
+spatial midpoint \(x_c\), and radius \(\rho=1/2\).
+With \(J_{n,k}=\partial_x^kG_n(t_c,x_c)\), the raw-channel polynomial is
+\[
+ T_{n,k}=\sum_{\ell=0}^4\sum_{m=0}^{11}
+ \frac{(-(t-t_c))^\ell(x-x_c)^m}{\ell!m!}J_{n,k+2\ell+m}.
+\]
+Writing \(M_{n,q}(t_+)=\int_0^\infty u^qg_{n,t_+}(u)\,du\),
+its remainder is at most
+\[
+ \sum_{\ell=0}^4\frac{d^\ell}{\ell!}
+ \frac{\rho^{12}}{12!}M_{n,k+2\ell+12}(t_+)
+ +\frac{d^5}{5!}M_{n,k+10}(t_+).
+\]
+This is Taylor's theorem first in time and then in space, applied to
+the raw heat solution, with positive source moments at the slab maximum.
+Validated Acb quadrature encloses its returned error on \([0,1]\).
+For the entire remaining half-line put
+\(L_n=t_++9-\alpha_ne^4\),
+\(\lambda_n=4\alpha_ne^4-9-2t_+>0\). Concavity gives the tail bound
+\[
+ 2\alpha_n^2e^{L_n}
+ \sum_{\ell=0}^q\binom q\ell\frac{\ell!}{\lambda_n^{\ell+1}}.
+\]
+The same payment is included in every moment quadrature.
+
+The Gaussian compensation is evaluated on the whole half-line by
+\[
+ I_0=\tfrac{\sqrt\pi}{2}e^{-x^2/4}(1+i\operatorname{erfi}(x/2)),
+ \quad I_1=(1+ixI_0)/2,\quad
+ I_{m+1}=(mI_{m-1}+ixI_m)/2,
+\]
+where \(I_m=\int_0^\infty u^me^{-u^2+ixu}\,du\).
+Then \(B_0^{(k)}=\operatorname{Re}[i^k(I_{k+1}+I_{k+3})]\),
+\(B_1^{(k)}=\operatorname{Re}[i^kI_{k+3}/6]\).
+Their spatial Taylor polynomials through degree 23 have remainders
+\(\rho^{24}(\mu_{k+25}+\mu_{k+27})/24!\) and
+\(\rho^{24}\mu_{k+27}/(6\cdot24!)\), respectively, with
+\(\mu_q=\Gamma((q+1)/2)/2\).
+Explicit affine-time compensation retains
+\eqref{eq:compensated-heat-residual}. The complete-index bound
+\eqref{eq:explicit-compensated-tail} is valid uniformly for \(0\le t\le1\),
+so every omitted index is paid on each slab.
+
+At level zero, stationarity is excluded in 263 cells and a signed
+surplus is certified in nine. At level one the corresponding counts
+are 255 and seventeen. The smallest exact lower surpluses exceed
+\(5.44\,10^{-10}\) and \(1.44\,10^{-11}\), respectively;
+their outward dyadic endpoints decide the rational targets in
+\eqref{eq:full-time-stationary-signs} through
+\eqref{eq:genuine-stationary-compensation}--\eqref{eq:stationary-error-payment}.
+Every exclusion is a genuine derivative separation or a uniform
+endpoint-sign test with strict spatial monotonicity. Adjacent signed
+cells are joined when a branch crosses a cell boundary. Strict next
+derivative signs and opposite outer endpoint signs isolate one first
+and two second stationary branches at each time. No sign cell or
+branch window remains unresolved.
+
+There is a separate direct norm payment. On a cell let \(J_0,J_1\)
+be its full genuine jet intervals, including all errors above, and put
+\(v_k=\operatorname{dist}(0,J_k)\). Exact rational evaluation gives
+\[
+ H^2+H_x^2\ge v_0^2+v_1^2>\left(\frac9{5000000}\right)^2
+\]
+on every cell. The certified global norm lower bound is approximately
+\(1.89166\,10^{-6}\); the rational comparison, rather than this
+decimal display, establishes \eqref{eq:height-41-norm-gap}.
+Evenness covers negative heights. The central norm gap and
+Proposition~\ref{prop:central-fourth-sixth} cover \(|x|\le8\), with
+overlap. The threshold criterion restricts a positive threshold to
+\(0<t\le1/2\); the direct norm bound therefore excludes its collision
+through height 41, including the boundaries.
+\end{proof}
+
+\subsection{Correlated transport through height 100}
+\label{sec:height-100-certificate}
+
+\begin{theorem}[Higher-height validated cover]
+\label{thm:height-100-certificate}
+On \(0\le t\le1/2\), \(40\le|x|\le100\),
+\[
+ h_1=0\Longrightarrow\Lag_0>10^{-30},\qquad
+ h_2=0\Longrightarrow\Lag_1>2\,10^{-32}.
+\]
+Moreover,
+\begin{equation}
+ |F(t,x)|>10^{-16}\qquad(0\le t\le1/2,\ |x|\le100).
+ \label{eq:height-100-norm-gap}
+\end{equation}
+Both stationary signs hold on this whole strip. Any positive threshold
+collision must therefore have \(|a|>100\).
+\end{theorem}
+
+\begin{proof}[Validated calculation]
+The new driver evaluates the aggregate raw-source Taylor polynomial by
+first summing center jets over theta indices:
+\[
+ \sum_{n\le N}\sum_{\ell<L}\sum_{m<M}
+ \frac{(-\tau)^\ell\eta^m}{\ell!m!}J_{n,k+2\ell+m}
+ =\sum_{\ell<L}\sum_{m<M}\frac{(-\tau)^\ell\eta^m}{\ell!m!}
+ \sum_{n\le N}J_{n,k+2\ell+m}.
+\]
+This exact reordering retains cancellation in common coefficients.
+It still adds every center-jet radius and every positive per-channel
+Taylor remainder, before applying the summed affine-time compensation.
+Individual channels and all diagonal and cross terms remain enclosed.
+The same physical observation is computed; no error payment is removed.
+
+The run uses \(K=2,N=4\), 256-bit Arb/Acb arithmetic, cutoff \(U=1\),
+space order 16, time order 8, and Gaussian order 32. Its eight closed
+time slabs are \([r/16,(r+1)/16]\), \(0\le r<8\). The three closed
+spatial bands \([40,60],[60,80],[80,100]\) use 160, 170, and 180 cells,
+respectively. Unit spatial cells are bisected where signs or a direct
+norm remain unresolved, to depth at most two; no time bisection is used.
+Exact two-dimensional cover checks include every shared and outer
+boundary. All 510 final cells have both stationary observations resolved,
+a positive direct norm floor, and resolved merged branch windows.
+
+The complete-index, retained integration, Gaussian, quadrature, rounding,
+and parameter payments are those above with the new declared orders
+and \(N\). The general finite-pair identity retains every ordered
+index pair at \(N=4\). The smallest exact lower stationary surpluses
+exceed \(1.8018\,10^{-30}\) and \(2.1514\,10^{-32}\), respectively.
+The genuine-jet interval-distance calculation gives the norm floor
+\[
+ \frac{22271745300542300149807}
+ {85070591730234615865843651857942052864}>10^{-16}.
+\]
+The minimizing cell is \([1/16,1/8]\times[96,97]\). This is a direct
+lower bound from paid observations. Evenness and the overlap with
+Theorem~\ref{thm:full-time-height-41} prove
+\eqref{eq:height-100-norm-gap}.
+The three compact records bind the new driver and imported source;
+independent internal replay audits their exact decisions. They are
+finite-height certificates, not an all-height coverage argument.
+\end{proof}
+
+\section{Shifted contours and the remaining moving-domain target}
+\label{sec:shifted-contours}
+
+\begin{proposition}[Complete-source shifted physical jets]
+\label{prop:shifted-physical-jets}
+For \(0\le t\le\tau\le1/2\), \(x\ge0\), \(0<a<\pi/8\), and
+every integer \(k\ge0\),
+\begin{equation}
+ h_k(t,x)=e^{-ax}\operatorname{Re}\int_0^\infty
+ (i(u+ia))^k e^{t(u+ia)^2}\Phi(u+ia)e^{ixu}\,du.
+ \label{eq:shifted-physical-jets}
+\end{equation}
+This identity is first established for the complete theta source.
+\end{proposition}
+
+\begin{proof}
+The theta series is normally convergent on compact subsets of
+\(|\operatorname{Im}z|<\pi/8\), because
+\(\operatorname{Re}e^{4z}>0\). Analytic continuation of Jacobi
+reflection gives \(\Phi(-z)=\Phi(z)\) there. Schwarz reflection then
+makes \(\Phi(iy)\) real for \(|y|<\pi/8\).
+Shift the half-line Fourier integral to height \(a\). On its left
+vertical segment \(z=iy\), all factors of
+\((iz)^ke^{tz^2}\Phi(z)e^{ixz}\) are real, whereas \(dz=i\,dy\).
+This segment therefore has zero real part for every physical jet.
+On the right edge, \(\cos(4y)\ge\cos(4a)>0\) ensures uniform
+double-exponential decay. Its integral tends to zero. Cauchy's theorem
+proves \eqref{eq:shifted-physical-jets}. Individual theta summands do
+not have this vertical cancellation; truncation follows the complete
+identity, with the omitted horizontal source paid below.
+\end{proof}
+
+\begin{proposition}[Explicit horizontal truncation payments]
+\label{prop:shifted-truncation-payments}
+Put \(c_a=\cos(4a)>0\), \(m=N+1\), \(\alpha=\pi m^2\), and
+\[
+ \beta=c_a\alpha,\quad \lambda=4\beta-9,\quad
+ \rho=((m+1)/m)^4e^{-\pi c_a(2m+1)},\quad
+ S_k(\lambda,b)=\sum_{r=0}^k\binom kr\frac{b^{k-r}r!}{\lambda^{r+1}}.
+\]
+If \(\rho<1\), \(\lambda>0\), \(8\beta\ge\tau\), the complete
+omitted-index error in \eqref{eq:shifted-physical-jets} is at most
+\begin{equation}
+ E_{N,k}=e^{-ax}
+ \frac{(2\alpha^2+3\alpha)e^{-\beta}}{1-\rho}S_k(\lambda,a).
+ \label{eq:shifted-index-payment}
+\end{equation}
+For an integration cutoff \(U\ge0\), put
+\[
+ b_U=\pi c_a e^{4U},\quad \rho_U=16e^{-3b_U},\quad
+ \lambda_U=4b_U-9-2\tau U,\quad L_U=\tau U^2+9U-b_U.
+\]
+If \(\rho_U<1\), \(\lambda_U>0\), \(8b_U\ge\tau\), the entire
+source on \(u\ge U\) contributes at most
+\begin{equation}
+ E_{U,k}=e^{-ax}
+ \frac{(2\pi^2+3\pi)e^{L_U}}{1-\rho_U}S_k(\lambda_U,U+a).
+ \label{eq:shifted-integration-payment}
+\end{equation}
+Thus the finite \(N\)-term integral on \([0,U]\) has total error
+at most \(E_{N,k}+E_{U,k}\), before adding validated retained
+quadrature and parameter errors.
+\end{proposition}
+
+\begin{proof}
+On the shifted half-line,
+\[
+ |\phi_n(u+ia)|\le(2\alpha_n^2+3\alpha_n)
+ e^{9u-c_a\alpha_ne^{4u}},\quad
+ |e^{t(u+ia)^2}|\le e^{\tau u^2},\quad |u+ia|^k\le(u+a)^k.
+\]
+For indices \(n\ge m\), the successive ratios of the two coefficient
+majorants are at most \(\rho\), uniformly in \(u\ge0\).
+The lower bound \(e^{4u}\ge1+4u+8u^2\) gives
+\[
+ \tau u^2+9u-\beta e^{4u}
+ \le-\beta-\lambda u-(8\beta-\tau)u^2
+ \le-\beta-\lambda u.
+\]
+Integrate \((u+a)^k\) against this exponential after summing the
+complete geometric index bound to obtain \eqref{eq:shifted-index-payment}.
+For \(u\ge U\), the corresponding index ratio is at most \(\rho_U\).
+The exponent \(L(u)=\tau u^2+9u-\pi c_ae^{4u}\) is concave there
+and has slope \(-\lambda_U\) at \(U\). Its tangent bound proves
+\eqref{eq:shifted-integration-payment}. Adding these two payments
+overcounts their intersection, which is harmless for an upper bound.
+\end{proof}
+
+\begin{corollary}[Absolute errors at the gamma exponential scale]
+\label{cor:adaptive-contour-scale}
+For \(x\ge41\), fixed \(p>0\), and \(\ell=\log x\), choose
+\[
+ a_x=\pi/8-1/x,\quad
+ m=\left\lceil\sqrt{\frac{x}{2\pi}(p\ell+32)}\right\rceil,
+ \quad N=m-1,\quad U=\frac{\ell+2\log(\ell+8)}4.
+\]
+All hypotheses of Proposition~\ref{prop:shifted-truncation-payments}
+hold. For each fixed \(k\), uniformly in \(0\le t\le1/2\),
+\begin{equation}
+ e^{\pi x/8}E_{N,k}
+ =O_{p,k}\bigl(x^{5/2-p}(\log x)^{3/2}\bigr),
+ \qquad e^{\pi x/8}E_{U,k}=O_{k,A}(x^{-A})\quad(A>0).
+ \label{eq:adaptive-contour-errors}
+\end{equation}
+These are absolute error estimates, with no sign or lower norm assertion.
+\end{corollary}
+
+\begin{proof}
+Here \(c_a=\sin(4/x)\ge2/x\), \(\beta\ge p\ell+32\), and
+\(m^2\ge2x/\pi\). Therefore
+\[
+ -\log\rho\ge4\pi m/x-4/m\ge2\pi m/x,
+ \qquad (1-\rho)^{-1}\le1+x/(2\pi m).
+\]
+Also \(e^{-a_xx}=e\,e^{-\pi x/8}\). Substitution in
+\eqref{eq:shifted-index-payment} proves its stated order, including
+the growing geometric denominator. For the integration tail,
+\(b_U\ge2\pi(\ell+8)^2\) and \(U\le\ell/2+2\). Hence
+\[
+ L_U\le-47\ell^2/8-181\ell/2-364.
+\]
+The remaining factors in \eqref{eq:shifted-integration-payment} grow
+at most polynomially in \(\ell\), proving the second estimate.
+\end{proof}
+
+On a closed spatial cell \([X,Y]\) with \(Y\ge41\), freeze \(a=a_Y\), \(N=N(Y)\),
+and \(U=U(Y)\). Then \(e^{(\pi/8-a_Y)x}\le e\) throughout the
+cell, giving uniform normalized truncation payments. Every physical jet
+is formed by \eqref{eq:shifted-physical-jets} before choosing the contour;
+differentiating a finite approximation with variable shift or cutoffs
+would introduce additional terms. Retained quadrature and whole-cell
+parameter variation remain separate obligations. No all-height cell
+calculation is asserted by \eqref{eq:adaptive-contour-errors}.
+
+\subsection{The moving small-time region and its signed target}
+
+The imported uniform localization theorem \cite[Theorem 1.5(i)]{polymath}
+has a sufficiently large absolute constant \(C\): a nonreal zero at
+\(0<t\le1/2\) has \(|\operatorname{Re}z|<e^{C/t}\).
+At a multiple real zero \((T,a)\) with \(0<T\le1/2\), local Hermite splitting produces
+nonreal zeros at \(T-h\) with real parts tending to \(a\).
+Taking the limit in that localization bound gives
+\begin{equation}
+ T\log|a|\le C\qquad(|a|>1).
+ \label{eq:collision-cusp-bound}
+\end{equation}
+Strictness is lost in the limit. No explicit numerical \(C\) is
+imported. A padded moving domain uses \(t\log|x|<C'\) with \(C'>C\),
+which contains every sufficiently close predecessor of a candidate
+collision. Fixed-positive-time asymptotics do not alone cover its
+unbounded-height limit as \(t\downarrow0\).
+
+Put \(c=\pi/8\) and define normalized physical jets
+\(Z_k=e^{cx}h_k\), \(\mathcal N=Z_0^2+Z_1^2\). Then
+\[
+ \partial_xZ_k=Z_{k+1}+cZ_k,\quad \partial_tZ_k=-Z_{k+2},\quad
+ \mathcal Q_j=Z_{j+1}^2-Z_jZ_{j+2}=e^{2cx}\Lag_j.
+\]
+Stationarity is \(Z_{j+1}=0\), not \(\partial_xZ_j=0\).
+On a moving genuine stationary branch,
+\[
+ \tfrac12\frac d{dt}Z_j(t,\chi(t))^2
+ =\mathcal Q_j+c\chi'(t)Z_j(t,\chi(t))^2.
+\]
+Thus normalized amplitude growth does not by itself give the physical
+signed observation. For paid normalized approximations
+\(Z_k=p_k+r_k\), \(|r_k|\le\varepsilon_k\), genuine stationarity yields
+\[
+ \mathcal Q_j=p_{j+1}^2-p_jp_{j+2}-r_{j+1}^2
+ -p_jr_{j+2}-p_{j+2}r_j-r_jr_{j+2}.
+\]
+The stationary payment \eqref{eq:stationary-error-payment} therefore
+applies verbatim to the normalized jets. Proving a nonnegative surplus,
+or a loss locally bounded by \(\mathcal N\), throughout the padded
+moving domain remains the arithmetic obligation. Absolute error tending
+to zero does not establish that surplus. The criterion requires positive
+time; it does not impose simplicity of all time-zero scalar zeros.
+
+\section{What remains to prove}\label{sec:remaining}
+The quaternion field is fixed by its theta trace, its jet constraint, and
+its heat-time displacement. Its regularity and its Cauchy formula are
+exact identities. The bounded central estimate proves nonvanishing on
+its declared rectangle, and the gluing theorem quantitatively controls
+errors in a declared coefficient class. The validated extension now
+covers the full possible positive-threshold time range through height
+100. Any positive threshold collision must therefore occur at \(|a|>100\).
+No estimate here supplies a collision-excluding sign at every height.
+
+A sufficient next result would bound the two signed physical observations
+on predecessor neighborhoods by a loss locally bounded through joint
+zeros. Equivalently, one may control the time derivative of the physical
+norm on the union of the two stationary sets. The boundary expressions
+give the same signed observations as full theta-index pairings. Their
+cross terms and endpoint cancellations must be retained. The scalar
+whole-plane curvature criterion provides a separate exact route, with
+the scalar projection of the quaternion trace as its observation.
+
+These statements specify several equivalent or sufficient mathematical
+targets. They do not promote Fueter regularity, a subharmonic quaternion
+norm, or an absolute boundary derivative estimate to an arithmetic sign
+theorem.
+
+Proposition~\ref{prop:stationary-time-collar} reduces a forward step
+to complete-source derivative-pair and edge gaps plus an initial signed
+amplitude. At increasing heights those gaps can be much smaller than
+the absolute moment constants. A moving-domain program must prove every
+step's regularity, entry and creation guards, and full predecessor
+coverage. Fixed-order algebraic compensation errors cannot be divided
+by a potentially much smaller unproved physical norm to obtain a global
+relative estimate. The shifted-contour family removes that particular
+algebraic approximation ceiling, but leaves the normalized stationary
+surplus unproved in \(t\log|x|<C'\). This moving small-time region,
+with its genuine stationary constraint, is the next signed target.
+
+\appendix
+\section{Reproducible algebra and constant checks}\label{app:checks}
+All analytic arguments used for the stated theorems are in the text.
+The following small standard-library Python checks independently replay
+polynomial identities and exact constants; they do not decide an
+unproved theta sign by sampling.
+
+The file \nolinkurl{check_fueter_boundary_identities.py} tests polynomial
+backward-heat solutions of degrees $0,1,2,3,4,6$, and the quadratic
+control, at two rational choices of time, center, and radius. Its 14
+cases check the real-coordinate Fueter residual, the first three
+normalized spherical moments, and the signed boundary correlations.
+Additional controls check a positive-time joint zero and a negative
+stationary sign. Integration of polynomial sphere monomials uses
+\[
+ \langle\omega_0^{2a_0}\cdots\omega_3^{2a_3}\rangle
+ =\frac{\prod_{\mu=0}^3(2a_\mu-1)!!}
+ {4\cdot6\cdots(4+2\sum a_\mu-2)},
+\]
+with the empty product equal to one; a monomial with an odd exponent has
+zero average. Thus no numerical sphere quadrature enters these checks.
+
+The file \nolinkurl{check_theta_central_moment_bound.py} verifies 17 exact
+rational comparisons for the complete-source core and tail, the signed
+moment margin, and its consequences. The file
+\nolinkurl{check_theta_gluing_defect_constants.py} verifies 22 comparisons
+or polynomial identities for the four jet constants, the signed-form
+error bounds, the robust central margins, and the remote-control
+determinant. Exponential comparisons follow from finite positive Taylor
+sums or a geometric bound on their remaining terms. A rational interval
+for $\pi$ in the determinant check follows from Machin's identity and
+alternating arctangent series. The 39 decisions use exact fractions.
+
+The scripts and their small execution records are in the investigation's
+\texttt{numerics/} directory. Each accepts \texttt{--output} followed by
+a JSON path. The records bind the source scripts by SHA-256 and record
+the arithmetic and scope. Matching hashes establish file identity;
+the displayed analytic proofs establish the mathematical implications.
+The additional file \nolinkurl{check_quaternion_coordinate_algebra.py}
+checks the Hamilton pair product and conjugation, complex lift values,
+standard Fueter and external heat identities, signed complex Laguerre
+components, and the real Jacobian orientation at rational complex
+coordinate values. All 58 exact checks pass. It records both its own
+source hash and that of the polynomial utility it imports.
+
+The additional \nolinkurl{check_compensated_tail_and_signed_overlap.py}
+replays 46 exact rational comparisons for the two-jet index payments
+and the fourth--sixth moment gap. The full-time extension's compact
+record \nolinkurl{COMPENSATED_STATIONARY_TIME_EXTENSION_20261014.json}
+contains the 272 closed cells, their paid genuine jets, exact cover
+checks, signed decisions, merged branch windows, and direct norm lower
+bound. Its independent replay agrees except for elapsed runtime.
+The file \nolinkurl{check_forward_stationary_collars.py} supplies 234
+exact checks, including polynomial branch identities, the quartic
+control, and a concrete short theta time collar derived from the older
+certificate. The guarded continuation proof remains the analytic
+argument in Proposition~\ref{prop:stationary-time-collar}.
+
+The higher-height driver is
+\begin{center}\small
+\nolinkurl{certify_correlated_source_height_extension.py}.
+\end{center}
+Its three records, with prefix \texttt{CORRELATED\_SOURCE\_HEIGHT},
+cover the bands 40--60, 60--80, and 80--100. Independent replay agrees
+except for elapsed runtime; 6682 exact semantic and rational audit
+checks verify the cover, general four-index pair identity, stationary
+decisions, branch windows, source bindings, and direct norm extraction.
+The shifted-contour checker verifies the payment hypotheses at five
+selected heights from 41 to \(10^{12}\), and compares eight paid
+shifted and unshifted jet enclosures at height 41. Its large-height
+checks evaluate the analytic tail formulas, not millions of theta
+terms or an all-height sign. The universal contour and cusp arguments
+are the analytic proofs in Section~\ref{sec:shifted-contours}.
+
+\subsection{Exact constants and their elementary bounds}
+\label{app:theta-reproducibility}
+
+The accompanying standard-library Python checkers use exact rational
+arithmetic for every decision.  Their two execution records contain
+39 passing checks, together with the SHA-256 hash of each checker
+source.  Seventeen checks support the complete-source central theorem:
+finite exponential-series bounds for \(e<11/4\), \(e>8/3\),
+\(e^{2/5}<3/2\), \(e^{28/25}>153/50\);
+the complete-index geometric ratio; the core constant; the tail
+exponent and slope; the \(e^{69/10}>800\) payment; the signed tail
+integral and moment margin; and the scalar, slope, curvature and
+origin stationary consequences.
+For \(x>0\), a finite lower exponential sum is
+\(\sum_{k=0}^Lx^k/k!\).  When \(x<L+2\), a valid upper sum adds
+\[
+ \frac{x^{L+1}}{(L+1)!}\frac1{1-x/(L+2)}.
+\]
+These inequalities supply the finite rational comparisons used above.
+The classical rational bounds on \(\pi\) are
+\(25/8<\pi<22/7\) and \(\pi^2<10\).
+
+The remaining 22 checks support the gluing theorem and control:
+\(e^3>20\); all four squared constant comparisons;
+the linear and quadratic coefficients in the two signed-form
+transfers; the robust slope, curvature, inner-value and norm gaps;
+the origin stationary margin; the symbolic recurrences for
+\(P_1,P_2,P_3\); the determinant polynomial; and its strict sign.
+For the last sign, Machin's identity
+\[
+ \pi=16\arctan(1/5)-4\arctan(1/239)
+\]
+and alternating rational sums (12 terms and 4 terms, respectively)
+enclose
+\[
+ \frac{314159265358979}{10^{14}}<\pi<
+ \frac{314159265358980}{10^{14}}.
+\]
+Rational interval Horner evaluation on this interval gives
+\(4598266/10^6<P(\pi)<4598268/10^6\).
+No numerical quadrature, sampled Fourier sign, finite-source
+substitution, or zeta-zero table enters any sign decision.
+The checks verify the stated finite comparisons; the analytic
+arguments above supply the domain, convergence, complete-tail and
+source-class implications.  These are reproducibility checks with
+internal LLM-assisted review, not independent specialist validation
+or a global Riemann-hypothesis certificate.
+
+\clearpage
+\section*{Acknowledgment and research provenance}
+This manuscript was drafted for Edward Baker with substantial assistance
+from OpenAI's Codex using the recorded model \texttt{gpt-6.1-sol} at
+reasoning effort \texttt{ultra}, including parallel LLM checks of the RH
+foundation, quaternion conventions, and theta estimates. The mathematical
+development consolidates investigation 21's research notes of 14 October
+2026 and the collision framework developed in investigation 20.
+The checks described here are internal verification, not independent
+specialist refereeing or machine-checked formal proofs. 
+\begin{thebibliography}{99}
+\raggedright
+\bibitem{dlmf}
+NIST Digital Library of Mathematical Functions,
+\emph{Theta functions: Mellin transforms}, Equation 20.10.2.
+\url{https://dlmf.nist.gov/20.10.E2}.
+
+\bibitem{debruijn}
+N. G. de Bruijn,
+\emph{The roots of trigonometric integrals},
+Duke Mathematical Journal \textbf{17} (1950), 197--226.
+\url{https://doi.org/10.1215/S0012-7094-50-01720-0}.
+
+\bibitem{newman}
+C. M. Newman,
+\emph{Fourier transforms with only real zeros},
+Proceedings of the American Mathematical Society \textbf{61} (1976),
+245--251.
+\url{https://doi.org/10.1090/S0002-9939-1976-0434982-5}.
+
+\bibitem{polymath}
+D. H. J. Polymath,
+\emph{Effective approximation of heat flow evolution of the Riemann
+$\xi$ function, and a new upper bound for the de Bruijn--Newman constant},
+arXiv:1904.12438v2 (2019).
+\url{https://arxiv.org/abs/1904.12438}.
+
+\bibitem{newmanwu}
+C. M. Newman and W. Wu,
+\emph{Constants of de Bruijn--Newman type in analytic number theory
+and statistical physics},
+arXiv:1901.06596 (2019).
+\url{https://arxiv.org/abs/1901.06596}.
+
+\bibitem{rodgerstao}
+B. Rodgers and T. Tao,
+\emph{The de Bruijn--Newman constant is non-negative},
+Forum of Mathematics, Pi \textbf{8} (2020), e6.
+\url{https://arxiv.org/abs/1801.05914}.
+
+\bibitem{sudbery}
+A. Sudbery,
+\emph{Quaternionic analysis},
+Mathematical Proceedings of the Cambridge Philosophical Society
+\textbf{85} (1979).
+\url{https://doi.org/10.1017/S0305004100055638}.
+
+\bibitem{frenkellibine}
+I. Frenkel and M. Libine,
+\emph{Quaternionic analysis, representation theory and physics},
+Advances in Mathematics \textbf{218} (2008), 1806--1877.
+\url{https://arxiv.org/abs/0711.2699}.
+
+\bibitem{csordasescassut}
+G. Csordas and A. Escassut,
+\emph{The Laguerre inequality and the distribution of zeros of entire functions},
+Annales mathematiques Blaise Pascal \textbf{12} (2005), 331--345.
+\url{https://www.numdam.org/item/AMBP_2005__12_2_331_0/}.
+\end{thebibliography}
+\end{document}

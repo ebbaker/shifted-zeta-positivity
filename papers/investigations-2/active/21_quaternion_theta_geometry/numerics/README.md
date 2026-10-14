@@ -172,3 +172,13 @@ python-flint available:
 ```sh
 python3 check_outer_cusp_and_phase_obstructions.py --output /tmp/outer-cusp-checks.json
 ```
+
+## Manuscript rewrite checks, 14 October 2026
+
+The [rewrite check receipt](MANUSCRIPT_REWRITE_CHECKS_20261014.json) records
+6682 higher-height record checks, 547 centered-band record checks, 248
+exact octonion identities, and nine centered-residual identities freshly
+replayed for the rewritten manuscript. No full interval quadratures were
+rerun in this editorial pass; the earlier independent replays remain in
+Reviews 6, 9, and 11. Prepared for Edward Baker with substantial LLM
+assistance, **gpt-6-astra**, reasoning effort **ultra**.

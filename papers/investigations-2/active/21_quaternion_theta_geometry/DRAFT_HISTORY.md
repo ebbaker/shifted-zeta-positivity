@@ -151,3 +151,15 @@ Recorded model: **gpt-6.1-sol (Codex)**; reasoning effort: **ultra**.
   [diagnostics](numerics/OUTER_CUSP_AND_PHASE_OBSTRUCTION_CHECKS_20261014.json) preserve those limits.
   No manuscript revision, commit, tag, or snapshot folder. Substantial
   LLM assistance, **gpt-6-astra**, effort **ultra**.
+
+- **14 October 2026 — Investigation 21 manuscript rewritten around the new results.**
+  Working-tree version: [stable source](manuscript/quaternion_theta_geometry.tex);
+  preserved version: [requested backup](manuscript/quaternion_theta_geometry.backup_20261014.tex).
+  Replaces the chronological 35-page exposition with a 24-page account
+  led by uniform outer positivity, the hypercomplex jets, exact shared
+  arithmetic residual, and the height-104 certificate. The
+  [integration review](reviews/13_MANUSCRIPT_REWRITE_INTEGRATION_REVIEW_20261014.md)
+  and [continuation](notes/18_MANUSCRIPT_REWRITE_AND_CONTINUATION_20261014.md)
+  record validation and the unresolved targets. No new commit, tag, or
+  snapshot folder; the explicit backup request was fulfilled with
+  individual files. Substantial LLM assistance, **gpt-6-astra**, **ultra**.

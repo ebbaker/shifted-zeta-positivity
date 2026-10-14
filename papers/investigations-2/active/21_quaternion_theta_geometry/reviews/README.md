@@ -79,3 +79,10 @@ remaining obligation.
     region, and audits the separate phase-obstruction diagnostics.
     Prepared 14 October 2026 with substantial LLM assistance,
     **gpt-6-astra**, effort **ultra**.
+
+13. [Manuscript rewrite integration review](13_MANUSCRIPT_REWRITE_INTEGRATION_REVIEW_20261014.md)
+    binds the new 24-page source and export, records the focused independent
+    review and resolved notation issues, and documents 7486 fresh exact
+    checks, compilation, references, and visual inspection. Earlier full
+    numerical replays remain separate. Prepared 14 October 2026 with
+    substantial LLM assistance, **gpt-6-astra**, effort **ultra**.

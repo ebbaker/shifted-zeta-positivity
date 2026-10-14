@@ -1,7 +1,9 @@
 # Quaternion theta geometry and RH criteria
 
 14 October 2026. Prepared for Edward Baker with substantial LLM assistance.
-Recorded model: **gpt-6.1-sol (Codex)**; reasoning effort: **ultra**.
+Latest manuscript and continuation: **gpt-6-astra (Codex)**, reasoning
+effort **ultra**. Earlier investigation setup and certificates also used
+**gpt-6.1-sol**, effort **ultra**.
 
 **Investigation 21 is active at Edward Baker's request.** It develops the
 quaternion first jet of the theta heat family as a possible source of a
@@ -23,6 +25,18 @@ and [original handoff](../20_constrained_operator_squares/brainstorm/03_QUATERNI
 retain the proposal's provenance. New quaternion research belongs here.
 
 ## Start here
+
+The [rewritten manuscript](manuscript/quaternion_theta_geometry.tex) is the
+current unified exposition, titled **Uniform Laguerre signs and hypercomplex
+jets of the theta heat flow**. Its [24-page PDF](../../../../output/pdf/quaternion_theta_geometry.pdf)
+leads with the outer positivity theorem, then develops the collision
+criterion, quaternionic/octonionic geometry, centered residual and shared
+carrier, finite certificate through 104, and the remaining inner estimate.
+The [continuation note](notes/18_MANUSCRIPT_REWRITE_AND_CONTINUATION_20261014.md)
+records the next targets and the explicit
+[backup](manuscript/BACKUP_RECORD_20261014.json) of the prior 35-page version.
+See the [integration review](reviews/13_MANUSCRIPT_REWRITE_INTEGRATION_REVIEW_20261014.md)
+for the current checks and their scope.
 
 The [uniform outer-region theorem](notes/17_UNIFORM_OUTER_CUSP_SIGNS_AND_THRESHOLD_FOUR_20261014.md) is the latest result. For every epsilon>0, both Laguerre forms are strictly
 positive and the first jet is nonzero whenever 0<t<=1/2, |x|>=X_epsilon,
@@ -66,11 +80,14 @@ gives a precise next continuation mechanism. The
 [continuation note](notes/7_CONTINUATION_AND_NEXT_SIGNED_ESTIMATE_20261014.md)
 preserves its target and workflow.
 
-1. [Self-contained manuscript](manuscript/quaternion_theta_geometry.tex)
-   derives the scalar RH criteria and their quaternion translations, with
-   complete proofs of the bounded theta estimates. Its
-   [integration review](reviews/4_MANUSCRIPT_CONVENTION_AND_FOUNDATION_AUDIT_20261014.md)
-   records the convention, foundation, and equation checks.
+1. [Rewritten manuscript](manuscript/quaternion_theta_geometry.tex)
+   gives the complete uniform outer proof, the collision and hypercomplex
+   constructions, the shared arithmetic residual, and the bounded results.
+   Its [current integration review](reviews/13_MANUSCRIPT_REWRITE_INTEGRATION_REVIEW_20261014.md)
+   records the source checks, focused independent assessment, compact
+   replays, and final PDF verification. The
+   [earlier audit](reviews/4_MANUSCRIPT_CONVENTION_AND_FOUNDATION_AUDIT_20261014.md)
+   remains historical foundation/convention provenance.
 2. [Standard Fueter lift with independent time](notes/3_STANDARD_FUETER_LIFT_WITH_INDEPENDENT_TIME_20261014.md)
    fixes the adopted quaternion coordinates and proves regularity while
    keeping Newman time separate.
@@ -140,6 +157,10 @@ preserves its target and workflow.
     without differentiating a moving cutoff. Signed inner-region targets
     remain necessary; small residual cones and phase-free integrand
     positivity impose stronger conditions.
+
+19. [Manuscript rewrite and continuation](notes/18_MANUSCRIPT_REWRITE_AND_CONTINUATION_20261014.md)
+    describes the new exposition, preserved backup, validation scope, and
+    the signed inner-region and explicit outer-cutoff targets.
 
 ## Objective and first target
 
