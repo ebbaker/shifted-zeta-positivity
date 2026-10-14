@@ -57,3 +57,11 @@ Recorded configuration for this entry: `gpt-6-astra` (Codex), effort **ultra**.
   a limitation of a recent source-concavity result. Proposals only; no
   program reopened or numerical certificate claimed. Prepared for Edward
   Baker with LLM assistance; `gpt-6-astra`, **ultra**.
+
+- **2026-10-14 — Executed matched comparison and fixed witness.** The
+  [shared review](reviews/MATCHED_01_18_AND_19_RESULTS_CODEX_20261014.md)
+  records the complete-source baseline, 01 allowance obstruction, 18
+  bounded cubature stop with fully paid tails, and 19 outward negative
+  witness. Preserved all local/global distinctions and reopening gates;
+  no new global genuine-theta sign claimed. Prepared for Edward Baker
+  with LLM assistance; `gpt-6-astra`, **ultra**.

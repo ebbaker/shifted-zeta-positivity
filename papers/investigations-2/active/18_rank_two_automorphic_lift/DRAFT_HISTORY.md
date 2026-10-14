@@ -19,3 +19,13 @@ Prepared for Edward Baker with LLM assistance.
   [implementation record](../../PORTFOLIO_CONSOLIDATION_20261013.md) and
   [accepted review](../../brainstorm/reviews/PORTFOLIO_CLOSURE_REVIEW_CODEX_20261013.md).
   No mathematical result was promoted beyond its recorded scope.
+
+- **2026-10-14 — Matched A4 pilot ended at its cost gate.** Prepared for
+  Edward Baker with substantial LLM assistance by `gpt-6-astra`, effort
+  **ultra**. [Note 2](notes/2_MATCHED_STATIONARY_SIGNED_MODE_PILOT_20261014.md)
+  derives a direct inserted-mode contour formula and pays all omitted modes
+  and domain tails. The [bounded record](numerics/RANK_TWO_MATCHED_PILOT_RECORD_20261014.json)
+  reaches the common primitive cap on both certified stationary targets;
+  complete fallback intervals contain both signs, while the direct-source
+  comparator succeeds for less work. No new sign or cost saving established.
+  Paths identify this uncommitted milestone; no manuscript snapshot created.

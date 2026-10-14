@@ -10,12 +10,17 @@ The [inactive index](inactive/README.md) contains **14 folders**: five older
 investigations and nine newly consolidated, completed or dormant programs.
 Inactive status does not assert mathematical impossibility.
 
-Current research allocation is one bounded continuation in
-[18](active/18_rank_two_automorphic_lift/README.md) and the fixed outward
-witness certification in [19](active/19_euler_factor_controls/README.md).
-[01](active/01_complete_cutoff_reflection/README.md) and
-[02](active/02_angular_jacobi_gluing/README.md) are paused at explicit gates;
-02 remains eligible for its focused full-gluing candidate search.
+The [14 October matched experiment and witness](brainstorm/reviews/MATCHED_01_18_AND_19_RESULTS_CODEX_20261014.md)
+are complete (`gpt-6-astra`, effort **ultra**, prepared for Edward Baker with
+LLM assistance). [01](active/01_complete_cutoff_reflection/README.md) and
+[18](active/18_rank_two_automorphic_lift/README.md) remain paused: the tested
+complete remainder bounds and bounded signed cubature supplied no new
+stationary-sign certificate or matched saving. Their completed identities,
+new bounded results and explicit reopening gates are preserved.
+[19](active/19_euler_factor_controls/README.md) now has an outward raw
+Laguerre witness proving `Lambda_(1/2,41)>0.2`; it remains the shared
+control screen. [02](active/02_angular_jacobi_gluing/README.md) remains
+paused and eligible for its focused full-gluing candidate search.
 [08](active/08_cusp_unit_sector_saving/README.md) remains a separate optional
 arithmetic track. The remaining retained homes organize downstream targets,
 tools and reading. The indexes and individual READMEs state the conditions
@@ -36,10 +41,15 @@ for renewed work.
 - [17](inactive/17_spacetime_collision_degree/README.md) retains its exact
   collision-degree controls and completed easy-cell boundary pilot. Its
   cost comparison does not exclude savings on harder cells.
-- [18](active/18_rank_two_automorphic_lift/README.md) preserves its exact
-  pair-moment identities, with no new complete sign. [19](active/19_euler_factor_controls/README.md)
-  distinguishes numerical lowest-pair collision times `T_0` from the global
-  constant `Lambda`, and normalized witness ratios from raw error margins.
+- The [matched 01/18 test](brainstorm/reviews/MATCHED_01_18_AND_19_RESULTS_CODEX_20261014.md)
+  preserves the exact identities and certifies two fixed-time stationary
+  signs by direct-source evaluation. The competing methods do not improve
+  that baseline: 01 has a retained-allowance obstruction, and 18 exhausts
+  its finite signed-integration budget despite small complete tails.
+- [19's outward witness](active/19_euler_factor_controls/notes/2_CERTIFIED_EULER_FACTOR_WITNESS_20261014.md)
+  proves `Lambda_(1/2,41)>0.2`. Numerical lowest-pair times `T_0` remain
+  distinct from the global constant; the old table and formal expansion
+  are not promoted to global claims.
 
 The [consolidation record](PORTFOLIO_CONSOLIDATION_20261013.md) explains the
 relocations and surviving obligations. Its [path and integrity manifest](PORTFOLIO_CONSOLIDATION_RECORD_20261013.json)

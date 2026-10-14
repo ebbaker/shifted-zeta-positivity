@@ -22,3 +22,14 @@ Prepared for Edward Baker with LLM assistance.
   shrinking raw margin. Added the [legacy-key guide](numerics/README.md#legacy-labels-and-what-the-record-establishes);
   checker and numerical records are unchanged. Snapshot reference: the
   commit containing this correction; no new manuscript snapshot.
+
+- **14 October 2026 — Certified positive-time Euler-factor obstruction.**
+  Prepared for Edward Baker with LLM assistance by `gpt-6-astra` (Codex),
+  effort **ultra**. [Note 2](notes/2_CERTIFIED_EULER_FACTOR_WITNESS_20261014.md)
+  proves \(\Lambda_{1/2,41}>1/5\) using the
+  [outward checker](numerics/certify_euler_factor_witness.py) and
+  [exact-endpoint record](numerics/EULER_FACTOR_WITNESS_RECORD_20261014.json).
+  Validated quadrature and analytic bounds pay every source and shifted
+  tail; a 192-bit, five-term replay confirms the sign. Historical tables
+  remain unchanged. Snapshot reference: the commit containing this
+  certificate; no new manuscript snapshot.

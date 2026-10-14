@@ -1,5 +1,12 @@
 # Initial research program for the rank-two automorphic lift
 
+**Status update, 14 October 2026:** the
+[bounded matched A4 pilot](2_MATCHED_STATIONARY_SIGNED_MODE_PILOT_20261014.md)
+is complete and stopped without a new sign or matched saving. The exact
+identities, completed tail bounds and the original stopping/reopening
+conditions are preserved; see the [current disposition](../README.md).
+Prepared for Edward Baker with LLM assistance by `gpt-6-astra`, effort **ultra**.
+
 **Allocation update, 13 October 2026.** Prepared for Edward Baker with
 substantial LLM assistance by `gpt-6-astra` (Codex), effort **ultra**.
 The current origin and A4 gate below incorporate the accepted consolidation;

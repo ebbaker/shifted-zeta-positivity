@@ -2,14 +2,16 @@
 
 ## Current allocation
 
-13 October 2026. Consolidation prepared for Edward Baker with substantial
+14 October 2026. Update prepared for Edward Baker with substantial
 LLM assistance by `gpt-6-astra` (Codex), reasoning effort **ultra**.
-The [closure review](reviews/PORTFOLIO_CLOSURE_REVIEW_CODEX_20261013.md) is now
+The [closure review](reviews/PORTFOLIO_CLOSURE_REVIEW_CODEX_20261013.md) remains
 implemented in the [active](../active/README.md) and [inactive](../inactive/README.md)
-indexes. Current work is one bounded task in 18 and the fixed witness
-certification in 19; 01/02 are paused at their explicit gates, and 08 is a
-separate arithmetic option. The dated reviews below retain the sequence
-of discoveries and earlier allocations; they do not override current status.
+indexes. The [matched 01/18 experiment and fixed 19 witness](reviews/MATCHED_01_18_AND_19_RESULTS_CODEX_20261014.md)
+are complete. 01 and 18 are paused after their bounded negative comparisons;
+19 is a shared screen with a certified positive-time control obstruction.
+02 retains its explicit full-gluing gate, and 08 remains a separate
+arithmetic option. The dated reviews below retain the sequence of
+discoveries and earlier allocations; they do not override current status.
 See the [implementation record](../PORTFOLIO_CONSOLIDATION_20261013.md).
 
 ## Next research candidates
@@ -18,8 +20,10 @@ The [post-consolidation brainstorm](reviews/PATHS_FORWARD_AFTER_CONSOLIDATION_CO
 compares a matched 01/18 signed-remainder test, a restricted full-gluing
 certificate in 02, a local collision-branch theorem in 19, and the separate
 08 arithmetic option. It also screens a recent nonlinear theta-concavity
-lead. These are proposed tests; the current allocation and reopening gates
-above remain unchanged. Prepared for Edward Baker with LLM assistance by
+lead. The matched 01/18 test and fixed 19 witness have now been executed in the
+[14 October results](reviews/MATCHED_01_18_AND_19_RESULTS_CODEX_20261014.md).
+The restricted 02 candidate, 19 local theorem and 08 arithmetic probe remain
+proposals; their existing gates are preserved. Prepared for Edward Baker with LLM assistance by
 `gpt-6-astra`, reasoning effort **ultra**.
 
 ## Research history
