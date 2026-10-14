@@ -7,9 +7,11 @@ Recorded model: **gpt-6.1-sol (Codex)**; reasoning effort: **ultra**.
 quaternion first jet of the theta heat family as a possible source of a
 signed current or boundary identity that excludes positive-time zero
 collisions. The exact first-order equations and RH criterion map are the
-starting point. A complete-source central norm bound and quantitative
-imaginary-gluing stability estimate are now proved; the collision-excluding
-signed estimate at unknown heights remains open.
+starting point. Complete-source central estimates, quantitative
+imaginary-gluing stability, and a compensated certificate for both
+stationary signs over the full possible positive-threshold time range
+through height 100 are now established, with an explicit physical norm
+gap. The signed estimate at arbitrary heights remains open.
 
 This program was promoted from the quaternion branch of
 [investigation 20](../20_constrained_operator_squares/README.md).
@@ -19,8 +21,20 @@ retain the proposal's provenance. New quaternion research belongs here.
 
 ## Start here
 
-For the next session, read the [continuation note](notes/7_CONTINUATION_AND_NEXT_SIGNED_ESTIMATE_20261014.md),
-which fixes the next bounded signed estimate and the recommended workflow.
+The [current summary and continuation note](notes/14_SUMMARY_AND_CONTINUATION_20261014.md)
+consolidates the established results, remaining signed theorem, replay
+commands, and a concrete next session prompt.
+
+Read the [height-100 continuation](notes/11_CORRELATED_TRANSPORT_AND_HEIGHT_100_CERTIFICATE_20261014.md)
+for the current bounded result: both stationary signs on 0<=t<=1/2,
+|x|<=100, and |F|>1e-16 there. Any positive threshold collision must
+have |a|>100. The [shifted-contour payments](notes/12_SHIFTED_CONTOUR_FOUR_JET_PAYMENTS_20261014.md)
+give absolute jet errors at the gamma exponential scale for arbitrary
+heights. The remaining signed target is specified in the
+[normalized collision-cusp note](notes/13_NORMALIZED_SIGN_TARGET_IN_THE_COLLISION_CUSP_20261014.md). The [guarded time-collar theorem](notes/10_FORWARD_STATIONARY_COLLARS_AND_BRANCH_CREATION_20261014.md)
+gives a precise next continuation mechanism. The
+[continuation note](notes/7_CONTINUATION_AND_NEXT_SIGNED_ESTIMATE_20261014.md)
+preserves its target and workflow.
 
 1. [Self-contained manuscript](manuscript/quaternion_theta_geometry.tex)
    derives the scalar RH criteria and their quaternion translations, with
@@ -47,6 +61,32 @@ which fixes the next bounded signed estimate and the recommended workflow.
 8. [Investigation 20's manuscript](../20_constrained_operator_squares/manuscript/constrained_operator_squares.tex)
    supplies the imported collision reduction, predecessor charts,
    locally bounded loss theorem, and existing operator obstructions.
+9. [Compensated stationary signs](notes/8_COMPENSATED_STATIONARY_SIGN_DERIVATION_20261014.md)
+   pays the K=2, N=3 four-jet remainder and certifies both genuine
+   stationary observations on \(1/200\le t\le3/50,\ 7\le x\le41\).
+   Its [internal review](reviews/5_COMPENSATED_STATIONARY_SIGN_INTERNAL_REVIEW_20261014.md)
+   audits the full cell cover, arithmetic cross terms, and shifted controls.
+
+10. [Full threshold time cover](notes/9_FULL_THRESHOLD_TIME_COVER_AND_HEIGHT_41_GAP_20261014.md)
+    certifies 272 cells with no unresolved signs or branch windows and
+    derives a direct physical norm lower bound.
+11. [Guarded forward collars](notes/10_FORWARD_STATIONARY_COLLARS_AND_BRANCH_CREATION_20261014.md)
+    propagate signed amplitudes along regular branches, with complete
+    source-moment guards against branch creation and boundary entry.
+
+12. [Correlated transport through height 100](notes/11_CORRELATED_TRANSPORT_AND_HEIGHT_100_CERTIFICATE_20261014.md)
+    preserves theta-index cancellation in common Taylor coefficients and
+    verifies 510 further closed cells.
+13. [Shifted complete-source contours](notes/12_SHIFTED_CONTOUR_FOUR_JET_PAYMENTS_20261014.md)
+    provide explicit all-index and integration payments with normalized
+    error arbitrarily small as a power of height.
+14. [Normalized moving-domain sign target](notes/13_NORMALIZED_SIGN_TARGET_IN_THE_COLLISION_CUSP_20261014.md)
+    derives the necessary condition T log|a|<=C for a collision, and
+    states the signed or locally bounded-loss remainder still unproved.
+
+15. [Summary and continuation](notes/14_SUMMARY_AND_CONTINUATION_20261014.md)
+    gives the current baseline and prioritizes a whole-cell normalized
+    contour pilot near height 100 before the global signed estimate.
 
 ## Objective and first target
 
@@ -87,8 +127,18 @@ The [boundary and current note](notes/4_CAUCHY_FUETER_BOUNDARY_AND_CURRENT_REFOR
 records exact general identities and their remaining signed target.
 The [central bound](notes/5_COMPLETE_THETA_CENTRAL_ESTIMATE_20261014.md) and
 [gluing defect estimate](notes/6_IMAGINARY_GLUING_STABILITY_AND_HEIGHT_OBSTRUCTION_20261014.md)
-supply bounded source-specific results. The next deliverable must control
-the full signed arithmetic cross terms on unknown-height predecessor domains.
+supply bounded source-specific results. The
+[compensated certificate](notes/8_COMPENSATED_STATIONARY_SIGN_DERIVATION_20261014.md)
+controls the full signed arithmetic cross terms on its padded rectangle.
+The [full-time result](notes/9_FULL_THRESHOLD_TIME_COVER_AND_HEIGHT_41_GAP_20261014.md)
+and [correlated-source extension](notes/11_CORRELATED_TRANSPORT_AND_HEIGHT_100_CERTIFICATE_20261014.md)
+now prove both stationary signs and a direct physical norm gap on
+0<=t<=1/2, |x|<=100. Every sign, norm and merged branch window is
+resolved in this bounded cover. At arbitrary heights,
+[contour payments](notes/12_SHIFTED_CONTOUR_FOUR_JET_PAYMENTS_20261014.md)
+address absolute approximation; the
+[normalized signed target](notes/13_NORMALIZED_SIGN_TARGET_IN_THE_COLLISION_CUSP_20261014.md)
+in the moving small-time region remains open.
 
 Produce one short formula note giving either an exact theta-specific
 current or boundary identity with its unresolved signed remainder, or a

@@ -11,6 +11,12 @@ theta channels while retaining every arithmetic cross term. The present
 manuscript establishes the reformulations and central estimates; the
 collision-excluding signed estimate at unknown heights remains open.
 
+**Bounded construction completed on 14 October 2026.**
+[Note 8](8_COMPENSATED_STATIONARY_SIGN_DERIVATION_20261014.md) now gives
+the paid analytic estimate and a complete certificate for both stationary
+signs on the padded rectangle below. It is the current continuation point.
+This note preserves the construction's original requirements.
+
 ## Read first and preserve the conventions
 
 Read the [manuscript](../manuscript/quaternion_theta_geometry.tex), especially

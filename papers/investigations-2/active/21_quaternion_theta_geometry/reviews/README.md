@@ -19,6 +19,27 @@ The [manuscript audit](4_MANUSCRIPT_CONVENTION_AND_FOUNDATION_AUDIT_20261014.md)
 checks the scalar RH derivations, every quaternion convention, the signed
 translations and complete-source estimates, and the compiled document.
 
+The [compensated stationary sign review](5_COMPENSATED_STATIONARY_SIGN_INTERNAL_REVIEW_20261014.md)
+checks the signed diagonal/cross-term identity, complete four-jet payments,
+gap-free cell coverage, stationary branch isolation, exact shifted
+controls, and independent replay of the bounded certificate.
+
+The [full-time certificate review](6_FULL_TIME_STATIONARY_CERTIFICATE_INTERNAL_REVIEW_20261014.md)
+independently replays and audits the 272-cell cover, direct norm gap,
+complete time-dependent errors and merged stationary branch windows.
+
+The [forward-collar review](7_GUARDED_FORWARD_COLLARS_INTERNAL_REVIEW_20261014.md)
+checks forward sign propagation, the strict creation/entry guards, and the
+quartic degeneracy control.
+
+The [shifted-contour and cusp review](8_SHIFTED_CONTOUR_AND_COLLISION_CUSP_INTERNAL_REVIEW_20261014.md)
+checks the complete-source vertical cancellation, adaptive tail scaling,
+normalized signed target, primary-source localization, and checker replay.
+
+The [higher-height review](9_HIGHER_HEIGHT_CERTIFICATES_INTERNAL_REVIEW_20261014.md)
+independently replays all three height bands and audits correlated raw
+transport, all 510 cells, norm extraction and general retained pairings.
+
 Review proposed identities against the
 [criteria baseline](../notes/1_RH_CRITERIA_AND_QUATERNION_SETUP_20261014.md)
 and [validation conditions](../notes/2_INITIAL_RESEARCH_PROGRAM_20261014.md).
