@@ -10,7 +10,7 @@ status: active
 
 **Objective:** Complete the closed strip beginning at theta=5/2 through the actual weighted remainder or a signed substitute.
 
-[Research overview](../../research-overview/RESEARCH_OVERVIEW_20261015.md) · [Current target](TARGET_AND_VALIDATION_20261015.md)
+[Research overview](../../research-overview/RESEARCH_OVERVIEW_20261015_CORRELATION_KERNELS.md) · [Current target](TARGET_AND_VALIDATION_20261015.md)
 
 ## Canonical research sources
 
@@ -21,3 +21,7 @@ status: active
 - [Note 33](../33_RESEARCH_PRIORITIES_WEIGHTED_REMAINDERS_AND_SIGNED_CUSP_20261014.md)
 
 These links tag existing notes without moving or duplicating them. Place new incremental research for PR01 in this folder, using dated descriptive filenames and the research_program metadata field. Cross-program handoffs belong in [research coordination](../00_research_coordination/README.md). Computations and reviews retain their dedicated investigation folders.
+
+## Convex dyadic refinement
+
+[Note 39](39_CONVEX_DYADIC_WEIGHTED_REMAINDER_AUDIT_20261015.md) removes one log-height factor from the existing high-index remainder using convexity and an explicit geometric summation factor below 1435. The imported constants and effective starting height remain unevaluated; the sign domain is unchanged. It also audits the precise obstruction interval for the five existing majorants at theta five halves.

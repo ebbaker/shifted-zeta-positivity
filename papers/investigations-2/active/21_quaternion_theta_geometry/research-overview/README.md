@@ -1,16 +1,18 @@
 # Research overview and program directory
 
-15 October 2026. Prepared for Edward Baker with substantial LLM assistance. Recorded model **gpt-6-astra**, reasoning effort **ultra**, verified from the current turn metadata.
+15 October 2026, America/New_York. Prepared for Edward Baker with substantial LLM assistance. Recorded model **gpt-6-astra**, reasoning effort **ultra**.
 
-Start with the [research overview](RESEARCH_OVERVIEW_20261015.md). This folder holds notes describing the broader research program: its mathematical objective, chosen approach, dependencies, and decision points. Specific workstreams and their incremental research live in the tagged subfolders under `notes/`.
+Start with the [current research overview: octonionic reductions and theta correlation kernels](RESEARCH_OVERVIEW_20261015_CORRELATION_KERNELS.md). It supersedes the [earlier 15 October overview](RESEARCH_OVERVIEW_20261015.md), retained as a historical record. The [notes index](../notes/README.md) links the detailed program definitions and incremental arguments.
 
-| Tag | Program | Incremental notes |
+| Tag | Role | Detailed work |
 | --- | --- | --- |
-| PR01 | [Weighted outer remainders](../notes/01_weighted_outer_remainders/README.md) | [notes/01_weighted_outer_remainders](../notes/01_weighted_outer_remainders/README.md) |
-| PR02 | [Signed control in the inner cusp](../notes/02_signed_cusp_control/README.md) | [notes/02_signed_cusp_control](../notes/02_signed_cusp_control/README.md) |
-| PR03 | [Effective heights and finite bridging](../notes/03_effective_bridge/README.md) | [notes/03_effective_bridge](../notes/03_effective_bridge/README.md) |
-| COORD | Integration, reviews, and continuation | [notes/00_research_coordination](../notes/00_research_coordination/README.md) |
+| PR01 | Principal program: weighted outer remainders | [01_weighted_outer_remainders](../notes/01_weighted_outer_remainders/README.md) |
+| PR02 | Principal program: signed inner-cusp control | [02_signed_cusp_control](../notes/02_signed_cusp_control/README.md) |
+| PR03 | Principal program: effective heights, finite bridge and discriminating certificates | [03_effective_bridge](../notes/03_effective_bridge/README.md) |
+| ALG | Supporting lane: finite octonionic reductions and exact checks | [04_octonionic_reductions](../notes/04_octonionic_reductions/README.md) |
+| PR02-CORR | Focused PR02 branch: complete-source theta correlations | [05_theta_correlation_kernels](../notes/05_theta_correlation_kernels/README.md) |
+| COORD | Integration, assessment and continuation | [00_research_coordination](../notes/00_research_coordination/README.md) |
 
-Program tags are stable identifiers. A new incremental note should identify its primary tag, list any secondary tags, and link its program definition. Use dated descriptive filenames inside the matching folder. Keep numerics in `numerics/` and reviews in `reviews/`, with the same program tags in their metadata or text. Cross-program integration and continuation belong in `notes/00_research_coordination/`.
+This folder holds broader program decisions and dependencies. Detailed arguments belong in the tagged notes folders, computations and small receipts in `numerics/`, and assessments in `reviews/`. The new lanes preserve PR01–PR03 and do not claim new sign coverage.
 
-Existing numbered Notes 1–33 remain at their canonical paths so their citations and provenance remain valid. The program indexes below tag them by reference; they are not duplicate transcripts or copies. This directory organizes investigation 21 and can be extended when a genuinely different research program is adopted. It does not relocate any chat history.
+Use the existing numbered historical notes by link; do not move or duplicate them. New notes record a primary tag and any secondary tags. Program organization does not relocate or re-register a chat history. Use `DRAFT_HISTORY.md` for concise manuscript milestones, with links to the detailed notes and reviews.

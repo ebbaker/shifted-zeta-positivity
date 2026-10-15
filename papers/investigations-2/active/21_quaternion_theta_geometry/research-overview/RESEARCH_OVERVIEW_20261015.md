@@ -1,3 +1,5 @@
+> **Superseded:** use the [octonionic reductions and correlation-kernel overview](RESEARCH_OVERVIEW_20261015_CORRELATION_KERNELS.md) for the current program. The original overview below is retained as historical context.
+
 # Research overview for quaternion theta geometry
 
 15 October 2026. Prepared for Edward Baker with substantial LLM assistance. Recorded model **gpt-6-astra**, reasoning effort **ultra**, verified from the current turn metadata.

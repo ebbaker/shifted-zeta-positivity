@@ -162,3 +162,26 @@ links the existing mathematical validation and the next signed block
 estimate. Later refreshes legitimately change archive counts and hashes;
 current values remain in the registry. Added 14 October 2026, prepared
 for Edward Baker with substantial LLM assistance, **gpt-6.1-sol**, **ultra**.
+
+25. [Octonionic simplifications and literature review](25_OCTONIONIC_MACHINERY_LITERATURE_REVIEW_20261015.md)
+    assesses algebraic, analytic, and exceptional-theta machinery; derives a
+    reflected monogenic lift and complete scalar correlation reductions;
+    retains the unresolved energy-relative stationary sign estimate.
+    Includes 325 exact algebra checks and independent internal LLM review.
+    Prepared 15 October 2026 for Edward Baker with substantial LLM assistance,
+    **gpt-6-astra**, reasoning effort **ultra**.
+
+26. [Octonionic reductions and correlation manuscript integration](26_OCTONIONIC_CORRELATION_MANUSCRIPT_INTEGRATION_20261015.md)
+    records the requested verified backup, reflected and planar reductions,
+    complete correlation formulas, primary literature integration, superseding
+    overview, and new notes lanes. All 767 exact checks pass; the 69-page
+    PDF compiles cleanly and every page passed visual inspection. No new
+    sign domain or quadrature coverage. Prepared 15 October 2026 for Edward
+    Baker with substantial LLM assistance, **gpt-6-astra**, effort **ultra**.
+
+27. [Poisson obstruction and weighted remainder review](27_POISSON_OBSTRUCTION_AND_WEIGHTED_REMAINDER_REVIEW_20261015.md)
+    audits the exact parity identity, positive-time sector divergence, removal
+    of one logarithmic factor from the existing remainder, and six fresh
+    fixed-theta full stationary roots. Sign domains remain unchanged.
+    Prepared 15 October 2026 for Edward Baker with substantial LLM assistance,
+    **gpt-6-astra**, effort **ultra**.

@@ -17,3 +17,5 @@ Fix delta>0 in advance and focus on E<=delta Gamma^2, using the nonzero Stirling
 The proposed arithmetic mechanisms are exact theta/Poisson relations among actual block amplitudes and integrated cumulative-moment cancellation. Retain independent source coordinates, both paired sectors, every stationary defect and boundary term, and complete omitted-pair payments. Do not impose stationarity separately on blocks.
 
 A first pilot should use a small predetermined family of source partitions, find genuine roots of both full stationary observations, and compare combined signed contributions. Freeze any coefficient rule before validation on fresh cells. A new source-specific inequality is the desired result; another representation or favorable finite samples alone do not establish it.
+
+The focused [PR02-CORR branch](../05_theta_correlation_kernels/README.md) now gives an exact complete-source and hybrid-correlation formulation of this unchanged target; [Note 36](../05_theta_correlation_kernels/36_COMPLETE_THETA_CORRELATIONS_AND_SIGN_TARGETS_20261015.md) specifies its next arithmetic deliverable.

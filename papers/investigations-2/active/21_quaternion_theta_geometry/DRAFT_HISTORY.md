@@ -292,3 +292,24 @@ Recorded model: **gpt-6.1-sol (Codex)**; reasoning effort: **ultra**.
   record 2,615 exact checks, the 59-page export, and chat verification.
   No new snapshot, commit, or tag; substantial LLM assistance,
   **gpt-6-astra**, effort **ultra**.
+
+- **15 October 2026 — Octonionic reductions and complete theta correlations integrated.**
+  Stable [69-page manuscript](manuscript/quaternion_theta_geometry.tex); the
+  explicitly requested [backup receipt](manuscript/BACKUP_RECORD_20261015.json)
+  preserves the preceding 59-page source/PDF/build record. Simplifies the
+  physical algebra, adds a reflected lift and complete correlation formulas,
+  and integrates the literature with precise applicability limits. The
+  [superseding overview](research-overview/RESEARCH_OVERVIEW_20261015_CORRELATION_KERNELS.md),
+  [Notes 35–37](notes/README.md), and [Review 26](reviews/26_OCTONIONIC_CORRELATION_MANUSCRIPT_INTEGRATION_20261015.md)
+  record the program organization, 767 exact checks, and full visual review.
+  Sign coverage unchanged; no new snapshot folder, commit, or tag.
+  Substantial LLM assistance, **gpt-6-astra**, effort **ultra**.
+
+- **15 October 2026 — Poisson identity, heat obstruction, and convex remainder refinement.**
+  Working-tree research continuation of `d12b117dbcdd644ebb64f7d5662a0c4441a35b01`;
+  [Notes 38–41](notes/00_research_coordination/41_POISSON_OBSTRUCTION_AND_REMAINDER_CONTINUATION_20261015.md)
+  derive the parity identity, reject its divergent global sector split,
+  remove one log-height factor from the existing remainder, and certify six
+  bounded stationary observations. [Review 27](reviews/27_POISSON_OBSTRUCTION_AND_WEIGHTED_REMAINDER_REVIEW_20261015.md).
+  No sign-domain enlargement, manuscript revision, snapshot, commit, or tag.
+  Substantial LLM assistance, **gpt-6-astra**, effort **ultra**.

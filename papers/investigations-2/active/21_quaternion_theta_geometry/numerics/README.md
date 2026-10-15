@@ -311,3 +311,11 @@ contains the complete proof and reproduction commands; the
 records fresh exact replay plus two complete 192-bit quadrature replays,
 matching every field except elapsed time. The analytic comparison adds no
 asymptotic coverage, and the unbounded inner cusp remains open.
+
+## Poisson identity and remainder continuation of 15 October 2026
+
+- [Poisson checker](check_poisson_parity_heat_obstruction.py) and [receipt](POISSON_PARITY_HEAT_OBSTRUCTION_CHECKS_20261015.json): 27 exact/sensitivity assertions and 12 paid primitive-identity comparisons. The unbounded heat obstruction is proved analytically in Note 38.
+- [Convex dyadic checker](check_convex_dyadic_weighted_remainder.py) and [receipt](CONVEX_DYADIC_WEIGHTED_REMAINDER_CHECKS_20261015.json): 129 exact rational assertions supporting Note 39, with imported constants unevaluated.
+- [Fixed-theta baseline driver](certify_theta_stationary_baseline.py) and [receipt](THETA_STATIONARY_BASELINE_20261015.json): six fresh unique full-stationary roots in their final brackets, all with positive signed products at theta 1/2, 3/4, and 1. Complete source and transport errors are paid. No new sign domain or Poisson-mechanism validation.
+
+Prepared for Edward Baker with substantial LLM assistance, **gpt-6-astra**, effort **ultra**. [Review 27](../reviews/27_POISSON_OBSTRUCTION_AND_WEIGHTED_REMAINDER_REVIEW_20261015.md) records the proof and computation boundaries.

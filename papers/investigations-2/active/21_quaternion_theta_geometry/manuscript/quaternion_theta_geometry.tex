@@ -6,8 +6,8 @@
 \usepackage{booktabs,array,longtable,enumitem}
 \usepackage{microtype}
 \usepackage[colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue]{hyperref}
-\hypersetup{pdftitle={Uniform Laguerre signs and hypercomplex jets of the theta heat flow},
- pdfauthor={Drafted for Edward Baker},pdfsubject={Four-jet positivity, quaternionic and octonionic geometry, and the remaining inner region}}
+\hypersetup{pdftitle={Theta correlations, Laguerre signs, and hypercomplex jets of the theta heat flow},
+ pdfauthor={Drafted for Edward Baker},pdfsubject={Complete theta correlations, reflected monogenic lifts, and stationary energy-relative signs}}
 \allowdisplaybreaks
 \setlength{\emergencystretch}{2em}
 \numberwithin{equation}{section}
@@ -33,33 +33,32 @@
 \newcommand{\Ephys}{E}
 \DeclareMathOperator{\Rea}{Re}
 \DeclareMathOperator{\Ima}{Im}
-\title{Uniform Laguerre signs and hypercomplex jets\\of the theta heat flow}
+\title{Theta correlations, Laguerre signs, and\\hypercomplex jets of the theta heat flow}
 \author{Drafted for Edward Baker}
 \date{15 October 2026}
 \begin{document}
 \maketitle
 \begin{abstract}
-For the theta heat family $H$, the two forms
-$H_x^2-HH_{xx}$ and $H_{xx}^2-H_xH_{xxx}$ control the evolution of its
-first jet at genuine stationary points. We prove both forms strictly
-positive, uniformly for $0<t\le1/2$ and sufficiently large $|x|$, when
-$t\log(|x|/(4\pi))\ge61/24$, including the closed boundary.
-Five exponent pairs and Polymath's effective Riemann--Siegel approximation
-give a common nonzero amplitude for all four derivatives; shrinking
-complex discs pay the derivative errors. Exact staircase cutoffs satisfy
-energy-relative and complete Gaussian-tail lower bounds. A conditional
-middle-block estimate would extend the signs to the closed strip
-$5/2\le t\log(|x|/(4\pi))\le8/3$; that hypothesis remains unproved.
-Complete-source certificates establish both stationary signs and a
-physical first-jet gap through $|x|\le112$. Quaternionic and octonionic
-fields preserve the signed observations. Delay obstructions, a
-phase-controlled outer comparison, and all-earlier-time finite
-comparisons distinguish valid correlations from unsupported signs.
-Collision expansions, analytic rigidity of logarithmic losses, and
-conditional cutoff transfers isolate a signed estimate near small
-physical energy as a remaining route to collision exclusion. A weaker
-weighted-remainder hypothesis also suffices for eventual signs. The
-inner cusp and the finite transition to the asymptotic region remain open.
+The physical first jet of the theta heat flow has energy
+$E=H^2+H_x^2$. Its evolution at two stationary sets is governed by
+$\Lag_0=H_x^2-HH_{xx}$ and $\Lag_1=H_{xx}^2-H_xH_{xxx}$.
+We express both forms and $E$ through one complete-source correlation
+family, retaining the full arithmetic interactions and the original
+cutoff errors. The octonionic observations reduce to planar dot products
+and determinants. A reflected monogenic extension preserves the physical
+four-jet without the auxiliary correction required by a stronger
+off-slice prescription. Exact calibration and logarithmic-norm identities
+clarify which information these geometric descriptions retain.
+For the theta source, both full Laguerre forms are strictly positive at
+sufficiently large height when $0<t\le1/2$ and
+$t\log(|x|/(4\pi))\ge61/24$, including the closed boundary; the
+starting height is unevaluated. Complete-source certificates give both
+stationary signs and $\sqrt E>10^{-17}$ on $0\le t\le1/2$, $|x|\le112$.
+Collision expansions and analytic rigidity turn prescribed all-cutoff
+lower bounds into a sufficient logarithmic-loss criterion.
+The reviewed octonionic, Fourier-kernel, and exceptional-theta theories
+identify possible tools, but do not supply the missing theta-specific
+signed estimate. The inner cusp and the finite transition remain open.
 \end{abstract}
 \tableofcontents
 
@@ -219,9 +218,16 @@ the classical heat-flow inputs imply
 Section~\ref{sec:fc-collision} gives the reduction and the sufficient
 stationary bounded-loss criterion. Theorem~\ref{thm:outer} and
 \eqref{eq:intro-bounded} leave an inner small-time region and a finite
-transition strip. The exact shared-source formula later in the paper
-formulates the remaining arithmetic estimate without discarding its
-signed cross terms.
+transition strip. The remaining problem has two exact descriptions.
+Section~\ref{sec:hypercomplex} reduces the oriented octonionic observations
+to two-dimensional determinants and dot products, and gives a simpler
+reflected lift of the physical trace. Section~\ref{sec:complete-correlations}
+expresses both signs and the energy in one complete theta correlation
+family. Its hybrid version retains the full-amplitude cutoff used in
+Proposition~\ref{pg:J-transfer}. These reductions simplify the objects
+to be estimated; they add no unconditional sign region.
+The applicability of further octonionic analysis is assessed in
+Section~\ref{subsec:octonionic-analysis-literature}.
 
 % Prepared for Edward Baker; gpt-6-astra, effort ultra; 14 October 2026.
 \section{Proof of the uniform outer-region theorem}\label{sec:outer-proof}
@@ -1191,16 +1197,23 @@ coefficients.  These finite polynomial checks support the algebra;
 they do not prove analytic branch existence, the logarithmic limit, or
 a theta-specific sign estimate.  Review 20 records the internal audit.
 
+% Prepared for Edward Baker, 15 October 2026.
+% Substantial LLM assistance: recorded model gpt-6-astra, effort ultra,
+% as verified and supplied by the parent turn metadata.
 \section{The four jets as quaternionic and octonionic fields}
 \label{sec:hypercomplex}
 
-The four scalar jets enter the collision problem in overlapping pairs:
-\(H,H_x\) detect a multiple zero, while the two stationary signs involve
-\((H,H_x,H_{xx})\) and \((H_x,H_{xx},H_{xxx})\).
-Quaternion multiplication keeps both the norms of these pairs and their
-signed determinants. A compatible octonionic extension retains these
-observations as oriented associators. We give the constructions explicitly
-so that their analytic content and their limitations are visible.
+The physical geometry is planar.  The vectors
+\(v_j=(h_j,h_{j+1})\) satisfy
+\[
+ E=|v_0|^2,\qquad \Lag_j=-\det(v_j,v_{j+1}),\qquad
+ \tfrac12E_t=-v_0\cdot v_2.
+\]
+Quaternionic fields extend these overlapping pairs away from the real
+slice; octonionic associators preserve their signed dot products and
+determinants.  We first give this scalar dictionary, then construct two
+monogenic extensions with different off-slice traces.  The constructions
+organize the observations but impose no additional theta inequality.
 
 \subsection{A quaternionic heat field with independent external time}
 
@@ -1285,6 +1298,8 @@ identity. Finally \(D_q+\overline D_q=2\partial_{x_0}\) proves the
 remaining assertion.
 \end{proof}
 
+\subsection{The planar observations and their exact identities}
+
 On the physical slice \(q=x\in\R\), write
 \(h_m=h_m(t,x)=\partial_x^mH(t,x)\). The jets are real and
 \begin{equation}
@@ -1329,7 +1344,66 @@ These formulas preserve the two different stationary conditions. The
 positive source term in the backward-heat identity
 \eqref{eq:hc-energy-evolution} does not give a forward minimum principle.
 
-\subsection{An eight-dimensional monogenic extension}
+For \(a=A+\jj B\) and \(b=C+\jj D\) in this physical plane, put
+\[
+ a\cdot b=AC+BD,\qquad a\wedge b=AD-BC.
+\]
+Then \(\bar a b=a\cdot b+\jj(a\wedge b)\), and the planar Gram
+identity gives
+\begin{equation}
+ |a|^2|b|^2=(a\cdot b)^2+(a\wedge b)^2.
+ \label{eq:hc-planar-gram}
+\end{equation}
+In particular, for any physical residual \(R\in\R+\jj\R\),
+\begin{equation}
+ E|F_x|^2=\tfrac14E_x^2+\Lag_0^2,\qquad
+ E|R|^2=(F\cdot R)^2+(F\wedge R)^2.
+ \label{eq:hc-radial-transverse}
+\end{equation}
+A lower bound for \(F\cdot R\) need not control the transverse
+component \(F\wedge R\).  This distinction will matter when a full
+residual-norm bound is replaced by a one-sided signed estimate.
+
+There is also a quotient-free relation among the consecutive pairs.
+Writing \(\mathfrak d=h_0h_3-h_1h_2\), the two-by-three determinant
+identity gives
+\begin{equation}
+ \Lag_0F_t=\Lag_1F+\mathfrak d F_x.
+ \label{eq:hc-plucker}
+\end{equation}
+Indeed, its real and \(\jj\) components are respectively
+\(-\Lag_0h_2=\Lag_1h_0+\mathfrak d h_1\) and
+\(-\Lag_0h_3=\Lag_1h_1+\mathfrak d h_2\).  These polynomial
+identities remain valid when a jet or a Laguerre form vanishes.
+
+On any interval where \(h_j+ih_{j+1}\ne0\), the same orientation has
+the scalar phase description
+\begin{equation}
+ \partial_x\arg(h_j+ih_{j+1})
+ =-\frac{\Lag_j}{h_j^2+h_{j+1}^2}.
+ \label{eq:hc-phase}
+\end{equation}
+This formula describes phase away from a common zero; the polynomial
+observations above remain the appropriate quantities at a candidate
+collision.
+
+The quadratic form itself has only three real coordinates, with
+\begin{equation}
+ \Lag_j=h_{j+1}^2+\tfrac14(h_j-h_{j+2})^2
+                         -\tfrac14(h_j+h_{j+2})^2.
+ \label{eq:hc-inertia}
+\end{equation}
+Its inertia is \((2,1)\).  Each frequency kernel
+\((y+z)^2\) and \((y-z)^2\), considered separately, uses only the
+features \(1,y,y^2\), since \((y\pm z)^2=y^2+z^2\pm2yz\).
+Each corresponding finite frequency matrix therefore has rank at most
+three; no such rank bound is asserted here for the combined weighted
+Hermitian and bilinear expression.
+Shared moments can therefore be evaluated without constructing every
+pair separately.  An invertible change of coordinates preserves the
+negative direction; low rank does not give positivity.
+
+\subsection{Two octonionic extensions and their different traces}
 
 For a reader unfamiliar with octonions, it suffices here to regard
 \(\OO\) as two copies of \(\HH\), with a specified multiplication.
@@ -1355,10 +1429,62 @@ Let \(r=y_0+\ii y_1+\jj y_2+\kk y_3\), so that
  \label{eq:hc-D8}
 \end{equation}
 We call a field \emph{left monogenic} if \(\mathcal D_8\mathcal O=0\).
-This fixes the operator convention explicitly; general octonionic
-Cauchy--Riemann systems are discussed in \cite{kauhanenorelma}.
+The pair convention gives the component formula
+\begin{equation}
+ \mathcal D_8(A,B)=
+ \left(D_qA-\sum_{\mu=0}^3B_{y_\mu}\overline e_\mu,
+       \overline D_qB+\sum_{\mu=0}^3A_{y_\mu}e_\mu\right).
+ \label{eq:hc-D8-components}
+\end{equation}
+This follows by applying \eqref{eq:hc-octonion-product} to each basis
+term of \eqref{eq:hc-D8}.  General octonionic Cauchy--Riemann systems
+are discussed in \cite{kauhanenorelma}; their regularity classes must
+be distinguished from the distinct Clifford and slice formulations
+\cite[Proposition 3.5 and Section 4]{kauhanenorelma19}.
 
-\begin{proposition}[Explicit octonionic extension]
+\begin{proposition}[Reflected extension of the physical trace]
+\label{prop:hc-reflected-extension}
+For every \(m\ge0\), the field
+\begin{equation}
+ \widetilde{\mathcal O}_m(t,q,r)
+ =\bigl(G_m(t,q),G_{m+2}(t,\bar q)\bigr)
+ \label{eq:hc-reflected-lift}
+\end{equation}
+is globally real analytic and left monogenic.  It satisfies
+\begin{equation}
+ \partial_{x_0}\widetilde{\mathcal O}_m
+       =\widetilde{\mathcal O}_{m+1},\qquad
+ \partial_t\widetilde{\mathcal O}_m
+       =-\widetilde{\mathcal O}_{m+2},\qquad
+ \widetilde{\mathcal O}_m(t,x,0)=(G_m(t,x),G_{m+2}(t,x)).
+ \label{eq:hc-reflected-identities}
+\end{equation}
+\end{proposition}
+\begin{proof}
+Reflection reverses all three imaginary quaternion coordinates, hence
+\[
+ \bar D_q[B(\bar q)]=(D_qB)(\bar q).
+\]
+Both \(r\)-derivatives in \eqref{eq:hc-D8-components} vanish, and
+both remaining components vanish by \(D_qG_k=0\).  Reflection
+commutes with \(\partial_{x_0}\) and \(\partial_t\), proving the
+derivative statements.  Real analyticity follows from that of the
+\(G_k\), and \(\bar x=x\) gives the physical trace.
+\end{proof}
+
+This extension is constant in the four \(r\) coordinates. Its second
+component uses \(z_0=x_0-\ii x_1\) and
+\(\tau=t-x_2-\ii x_3\), whereas the first uses the original
+arguments. A nonzero such field is not in whole-space
+\(L^2(\R^8)\); its local square integrability on bounded domains
+is unaffected. For
+\(m=0\), its values use derivatives of \(H\) only through order
+three, evaluated at the original and reflected arguments.  Its
+derivatives still generate higher jets.  If the full quaternionic
+trace \((G_m(t,q),G_{m+2}(t,q))\) at \(r=0\) is required, the
+following extension retains that stronger prescription.
+
+\begin{proposition}[Extension with the original quaternionic trace]
 \label{prop:hc-octonion-extension}
 For each \(m\ge0\), the field
 \begin{equation}
@@ -1377,14 +1503,6 @@ is globally real analytic and satisfies
 \end{equation}
 \end{proposition}
 \begin{proof}
-Applying \eqref{eq:hc-octonion-product} separately to each term of
-\eqref{eq:hc-D8} gives the component formula
-\begin{equation}
- \mathcal D_8(A,B)=
- \left(D_qA-\sum_{\mu=0}^3B_{y_\mu}\overline e_\mu,
-       \overline D_qB+\sum_{\mu=0}^3A_{y_\mu}e_\mu\right).
- \label{eq:hc-D8-components}
-\end{equation}
 For \eqref{eq:hc-octonion-lift}, \(B\) is independent of \(r\).
 Moreover \(D_q(G_{m+3}\overline r)=(D_qG_{m+3})\overline r=0\),
 since the component algebra is associative and \(r\) is held fixed.
@@ -1400,15 +1518,16 @@ The derivative identities follow directly from
 real analyticity.
 \end{proof}
 
-The correction is necessary: the extension \((G_m,G_{m+2})\) constant
-in \(r\) has defect \((0,2G_{m+3})\). More generally, two left
+The uncorrected pair with the same \(q\) argument, held constant in
+\(r\), has defect \((0,2G_{m+3})\).  This does not apply to the
+reflected pair.  More generally, two left
 Fueter-regular fields \(A(q),B(q)\) admit the extension
 \((A-\tfrac12B_{x_0}\overline r,B)\), by the same calculation.
 Thus the construction imposes no new condition on the original pair.
 For \(m=0\), its value away from \(r=0\) involves \(G_3\), hence
 \(h_4\); it is not a closed evolution of only four jets.
 
-On the physical trace \((q,r)=(x,0)\),
+Both extensions have the same physical trace \((q,r)=(x,0)\):
 \[
  \mathcal O_0=(h_0+\jj h_1)+\ell(h_2+\jj h_3)
  \in\operatorname{span}_{\R}\{1,\jj,\ell,\ell\jj\}.
@@ -1498,6 +1617,85 @@ the coefficient on this ray is \(E_t+2KE\). Thus the associators
 preserve both the collision detector and the required orientation.
 Their norms alone would replace the signed quantities by absolute values.
 
+\subsection{What calibration, symmetry, and logarithmic norms retain}
+
+For imaginary octonions, the Harvey--Lawson identity is
+\begin{equation}
+ \varphi(a,b,c)^2+\tfrac14|[a,b,c]|^2=|a\wedge b\wedge c|^2,
+ \qquad \varphi(a,b,c)=\langle a,bc\rangle.
+ \label{eq:hc-calibration}
+\end{equation}
+Here the wedge denotes exterior volume, and
+\(\langle a,b\rangle=\Rea(\bar a b)\).  See
+\cite[Chapter IV, Theorem 1.6]{harveylawson} and
+\cite[Corollary 3.52]{karigiannis}.  For the twisted triples
+in Lemma~\ref{lem:hc-twisted-associators}, \(\varphi=0\), since the
+first two arguments lie in \(\HH\) and the third is \(\ell\).
+Thus \eqref{eq:hc-calibration} reduces to the planar identity
+\eqref{eq:hc-planar-gram}.  In particular \(F\ii\) and \(F\kk\)
+are orthogonal with norm \(|F|\), and
+\[
+ |[F\ii,F\kk,\ell]|=2E.
+\]
+Whenever \(F\ne0\), this triple spans the fixed three-plane
+\(\operatorname{span}_{\R}\{\ii,\kk,\ell\}\).  Its volume is a
+useful consistency check, but its norm does not retain a signed
+coefficient.  No calibrated-submanifold condition on a varying tangent
+plane has been established by this construction.
+
+An octonion automorphism \(g\in G_2\) satisfies
+\([gA,gB,gC]=g[A,B,C]\).  Transforming both the observation and the
+oriented ray therefore leaves \eqref{eq:hc-oriented-loss} unchanged.
+The larger triality symmetry acts through three related
+representations, rather than a single algebra automorphism
+\cite[Section 2.4]{baez}\cite{schraymanogue}.
+Any use of it here must also transport the distinguished first-pair
+projection and the stationary constraints.  Mixing that pair with the
+second pair without transporting the projection changes the collision
+detector, as \eqref{eq:hc-total-norm} already shows.
+
+The special holomorphic structure does give an exact logarithmic-norm
+identity.  Put
+\[
+ \widehat E(t,q)=|H(\tau,z_0)|^2+|H_z(\tau,z_0)|^2,
+ \qquad \Delta_q=\sum_{\mu=0}^3\partial_{x_\mu}^2.
+\]
+At a physical point with \(E>0\),
+\begin{equation}
+ \left.\Delta_q\log\widehat E\right|_{q=x}
+ =\frac{4\{\Lag_0^2+(h_0h_3-h_1h_2)^2\}}{E^2}.
+ \label{eq:hc-log-energy}
+\end{equation}
+To verify it, write \(v=(H,H_z)\).  In either complex coordinate
+\(\zeta=z_0,\tau\), holomorphy gives
+\[
+ \partial_\zeta\partial_{\bar\zeta}\log|v|^2
+ =\frac{|v|^2|v_\zeta|^2-|\langle v,v_\zeta\rangle_{\C}|^2}
+        {|v|^4}
+ =\frac{|\det(v,v_\zeta)|^2}{|v|^4}.
+\]
+The complex inner product is Hermitian. The same formula in any complex
+direction proves that \(\log\widehat E\) is plurisubharmonic away
+from the common zero set. On the physical slice the two
+determinants are \(-\Lag_0\) and
+\(-(h_0h_3-h_1h_2)\), while
+\(\Delta_q=4(\partial_{z_0}\partial_{\bar z_0}
+                   +\partial_\tau\partial_{\bar\tau})\).
+This proves \eqref{eq:hc-log-energy}.  The nonnegative right side has
+squared away the required orientation and is defined only where
+\(E>0\); it supplies no sign for the external derivative \(E_t\).
+
+This logarithmic positivity comes from the holomorphic pair, not
+generic octonionic monogenicity.  The monogenic Cauchy kernel
+\(\bar p/|p|^8\), away from the origin in eight dimensions, has norm
+\(|p|^{-7}\), and
+\[
+ \Delta_8\log|p|^{-7}=-42/|p|^2<0.
+\]
+Likewise a frame chosen using \(F/|F|\) is singular at a potential
+collision.  A source-prescribed frame can be used, with its derivative
+terms retained, but cannot assume the desired first-pair nonvanishing.
+
 \subsection{Why a source-specific estimate remains necessary}
 
 The constructions above apply to every jointly entire backward-heat
@@ -1571,6 +1769,7 @@ $\mathcal A_0$ and $\mathcal A_1$ lie strictly on
 $\mathcal C_{\mathbf u}$ there. At genuine stationary points the same
 is true of $\mathcal A_t$. This is the geometric consequence of the
 common arithmetic amplitude, not a consequence of monogenicity alone.
+
 
 
 \section{Centered residuals and the common theta carrier}\label{sec:residuals}
@@ -2051,6 +2250,536 @@ It obeys
 Thus $\mathcal J_j^{(N)}$ vanishes at $E=0$ without imposing positivity
 of a raw truncated quadratic form. This is an exact error identity,
 not a new signed estimate in the remaining cusp.
+
+% Proposed insertion: after eq:full-amplitude-cutoff-error and its
+% concluding paragraph, before sec:fc-certificate.
+% Drafted for Edward Baker, 15 October 2026.
+% Substantial LLM assistance; parent session supplies recorded model/effort.
+% New bibliography keys: csordas, dimitrovxu, elkiesgross,
+% kim93, pollackg2, pollackspin8, shan26, viazovska, romik, lee24,
+% lee26polynomial, lee26positive.
+
+\section{Complete-source correlation kernels}
+\label{sec:complete-correlations}
+
+The paired observations can also be organized on the complete real
+source.  This gives a scalar correlation family containing both
+Laguerre forms and the physical energy.  The construction is related
+to the associated kernels of \cite[Theorem~3.7]{csordas} and the
+Wronskian identities of \cite[Theorem~1.3]{dimitrovxu}.
+We derive the formulas with the present normalization rather than
+importing additional log-concavity hypotheses for the deformed source.
+They preserve the signed problem and do not establish a new sign region.
+
+\subsection{The correlation identities and their heat hierarchy}
+
+Use the even extension of the complete source and put
+\begin{equation}
+\begin{gathered}
+ w_t(u)=e^{tu^2}\Phi(u),\qquad
+ H(t,x)=\frac12\int_{\R}w_t(u)e^{ixu}\dd u,\\
+ \mathscr K_m(t,s)=
+ \int_{\R}r^{2m}w_t(s+r)w_t(s-r)\dd r,
+ \qquad m\ge0.
+\end{gathered}
+ \label{eq:corr-definitions}
+\end{equation}
+Here \(t,x,s\) are real and \(m\) is an integer.  The following
+complete-source identities hold at every real time; their domination
+is uniform when time is restricted to a bounded interval.
+
+\begin{proposition}[Complete scalar correlations]
+\label{prop:complete-correlations}
+Each \(\mathscr K_m(t,\cdot)\) is real, even, positive, and integrable
+with every polynomial weight.  The two Laguerre observations are
+\begin{align}
+ \Lag_0(t,x)
+ &=\int_{\R}\mathscr K_1(t,s)\cos(2xs)\dd s,
+ \label{eq:corr-L0}\\
+ \Lag_1(t,x)
+ &=\int_{\R}
+   \{\mathscr K_2(t,s)-s^2\mathscr K_1(t,s)\}
+                     \cos(2xs)\dd s.
+ \label{eq:corr-L1}
+\end{align}
+The exact time identities are
+\begin{align}
+ \mathscr K_m(t,s)
+ &=e^{2ts^2}\int_{\R}r^{2m}e^{2tr^2}
+                    \Phi(s+r)\Phi(s-r)\dd r,
+ \label{eq:corr-heat-factor}\\
+ \partial_t^\ell\mathscr K_m(t,s)
+ &=2^\ell\sum_{k=0}^{\ell}\binom{\ell}{k}
+                   s^{2(\ell-k)}\mathscr K_{m+k}(t,s)
+ \qquad(\ell\ge0).
+ \label{eq:corr-heat-hierarchy}
+\end{align}
+In particular,
+\begin{equation}
+ (\partial_t+\partial_x^2)\Lag_0=2\Lag_1.
+ \label{eq:corr-L-heat}
+\end{equation}
+\end{proposition}
+\begin{proof}
+By evenness, \eqref{eq:source-majorant} gives a
+double-exponential majorant in \(|u|\).  On \(|t|\le T\), multiplying
+that majorant by \(e^{Tu^2}\) still gives double-exponential decay.
+Thus the source's
+absolute moments of every order are finite.  Under
+\[
+ u=s+r,\qquad v=s-r,\qquad du\,dv=2\,ds\,dr,
+\]
+every polynomial in \(s,r\) is a polynomial in \(u,v\).
+The double integrals below therefore converge absolutely, and the
+same argument pays every finite time or Fourier derivative.
+Evenness and positivity of \(\mathscr K_m\) follow directly from
+evenness and strict positivity of \(w_t\); for \(m>0\) the integrand
+vanishes only at \(r=0\).
+
+The full-line formula for \(h_k\) has multiplier \((iu)^k/2\).
+Symmetrizing the product defining \(\Lag_j\), for \(j=0,1\), gives
+\[
+ \Lag_j(t,x)=\frac18\iint_{\R^2}
+     (-uv)^j(u-v)^2w_t(u)w_t(v)e^{ix(u+v)}\dd u\dd v.
+\]
+The change of variables has \((u-v)^2=4r^2\),
+\(-uv=r^2-s^2\), and phase \(e^{2ixs}\).
+Its Jacobian cancels the remaining factor \(1/2\), proving
+\eqref{eq:corr-L0}--\eqref{eq:corr-L1} after taking real parts.
+The imaginary parts vanish by evenness in \(s\).
+
+Since \((s+r)^2+(s-r)^2=2(s^2+r^2)\), differentiation of
+\eqref{eq:corr-heat-factor} and the binomial theorem give
+\eqref{eq:corr-heat-hierarchy}.  At \(\ell=1,m=1\),
+\[
+ \partial_t\mathscr K_1=2s^2\mathscr K_1+2\mathscr K_2.
+\]
+Inserting this into \eqref{eq:corr-L0}, and using
+\(\partial_x^2\cos(2xs)=-4s^2\cos(2xs)\), proves
+\eqref{eq:corr-L-heat}.
+\end{proof}
+
+The last identity has the independent jet verification
+\[
+ \partial_t\Lag_0=h_2^2-2h_1h_3+h_0h_4,\qquad
+ \partial_x^2\Lag_0=h_2^2-h_0h_4.
+\]
+It does not make the second stationary observation redundant: a
+nonnegative function need not have a nonnegative value of
+\(\partial_t+\partial_x^2\).
+
+\begin{proposition}[The energy in the same correlation family]
+\label{prop:correlation-energy}
+Define
+\begin{equation}
+ \mathscr E(t,s)=\frac12
+       \{(1-s^2)\mathscr K_0(t,s)+\mathscr K_1(t,s)\}.
+ \label{eq:corr-energy-kernel}
+\end{equation}
+Then
+\begin{equation}
+ E(t,x)=\int_{\R}\mathscr E(t,s)\cos(2xs)\dd s.
+ \label{eq:corr-energy}
+\end{equation}
+Writing
+\(\mathscr A_0=\mathscr K_1\) and
+\(\mathscr A_1=\mathscr K_2-s^2\mathscr K_1\), a prescribed
+coefficient \(\kappa_j(t,x)\ge0\) satisfies the stationary loss
+\(\Lag_j\ge-\kappa_jE\) if and only if
+\begin{equation}
+ \int_{\R}\{\mathscr A_j(t,s)+
+       \kappa_j(t,x)\mathscr E(t,s)\}\cos(2xs)\dd s\ge0
+       \quad\hbox{on }S_j=\{h_{j+1}=0\}.
+ \label{eq:corr-stationary-target}
+\end{equation}
+\end{proposition}
+\begin{proof}
+The product expression for \(h_0^2+h_1^2\) has multiplier
+\((1-uv)/4\) in the \(u,v\) coordinates.  The same substitution gives
+\[
+ E=\frac12\iint_{\R^2}
+       (1-s^2+r^2)w_t(s+r)w_t(s-r)e^{2ixs}\dd r\dd s,
+\]
+which proves \eqref{eq:corr-energy}.  Subtracting the target
+inequalities and using
+\eqref{eq:corr-L0}--\eqref{eq:corr-L1} proves the equivalence.
+\end{proof}
+
+In \eqref{eq:corr-stationary-target}, stationarity and energy are
+still those of the full physical function.  The coefficient must
+be obtained independently of an unknown energy floor and have the
+local boundedness required by \eqref{fc:stationary-loss}.
+Because \(\kappa_j\) may depend on \(x\), this is generally not the
+Fourier transform of one fixed kernel as \(x\) varies.
+
+The positivity \(\mathscr K_1>0\) is not positive definiteness.
+For a continuous integrable kernel, positive definiteness imposes
+nonnegativity of its Fourier transform; pointwise positivity alone
+does not.  In particular the associated-kernel criteria in
+\cite{csordas} retain a substantive hypothesis.  Requiring a
+positive-definite decomposition everywhere would be stronger than
+the stationary bounded-loss target
+\eqref{eq:corr-stationary-target}.  All complete source correlations
+have been retained, but their oscillatory sign is still to be proved.
+
+\begin{remark}[Gaussian normalization and a signed kernel]
+\label{rem:corr-gaussian}
+For the control \(w(u)=e^{-\alpha u^2}\), \(\alpha>0\),
+\begin{align*}
+ H(x)&=\frac{\sqrt\pi}{2\sqrt\alpha}e^{-x^2/(4\alpha)},&
+ \mathscr K_0(s)&=\sqrt{\frac{\pi}{2\alpha}}e^{-2\alpha s^2},\\
+ \mathscr K_1&=\frac{\mathscr K_0}{4\alpha},&
+ \mathscr K_2&=\frac{3\mathscr K_0}{16\alpha^2}.
+\end{align*}
+The formulas above give
+\[
+ \Lag_0=\frac{\pi}{8\alpha^2}e^{-x^2/(2\alpha)}
+       =\frac{H^2}{2\alpha},\qquad
+ \Lag_1=\Lag_0\left(\frac1{2\alpha}
+                              +\frac{x^2}{4\alpha^2}\right).
+\]
+Both agree with direct differentiation.  Nevertheless
+\(\mathscr K_2-s^2\mathscr K_1
+ =\mathscr K_1(3/(4\alpha)-s^2)\) changes sign.
+Thus a demand that this correlation integrand be pointwise positive
+would already reject this favorable control.
+\end{remark}
+
+\subsection{The existing staircase cutoff as a cross-correlation}
+
+We now retain exactly the cutoff
+\eqref{eq:signed-staircase-domain}, with \(a=\pi/16\),
+integer \(N\ge8\), \(V_N=\frac12\log N\),
+\(0\le t\le1/2\), and \(x\ge0\).  No new source truncation is
+introduced.  In the original, rather than shared, integration
+coordinate \(y=v-d_n\), define
+\begin{equation}
+ \psi_{a,N}(t,y)=
+ \begin{cases}
+ e^{t(y+ia)^2}
+   \displaystyle\sum_{\substack{n\ge1\\y+d_n\le V_N}}
+                  \phi_n(y+ia),&0\le y\le V_N,\\
+ 0,&\text{otherwise}.
+ \end{cases}
+ \label{eq:corr-cutoff-source}
+\end{equation}
+The staircase is precisely \(n\le N e^{-2y}\).
+Endpoint values at its finitely many jumps do not affect any integral.
+The source translation \eqref{eq:theta-translation} gives
+\(W_\alpha=e^{t(y+ia)^2}\phi_n(y+ia)e^{ixy}\)
+when \(y=v-d_n\).  Reversing that change of variables therefore gives
+\begin{equation}
+ h_k^{(N)}(t,x)
+  =e^{-ax}\Re\int_0^{V_N}
+         (-a+iy)^k\psi_{a,N}(t,y)e^{ixy}\dd y.
+ \label{eq:corr-cutoff-jet}
+\end{equation}
+This reversal takes place in the retained, already shifted integral;
+it does not shift individual theta summands across an unpaid contour.
+
+\begin{proposition}[Full-amplitude hybrid cross-correlation]
+\label{prop:corr-hybrid}
+For \(j=0,1\), put
+\begin{equation}
+ \begin{split}
+ \mathscr C_{j,N}^{a}(t,s)
+ =-\int_{s-V_N}^{s}
+ &[i(s+r)]^j[-a+i(s-r)]^{j+2}\\
+ &\quad\cdot w_t(s+r)\psi_{a,N}(t,s-r)\dd r.
+ \end{split}
+ \label{eq:corr-hybrid-kernel}
+\end{equation}
+The full-amplitude observation, defined at every point by
+\(\mathcal J_j^{(N)}=-h_jh_{j+2}^{(N)}\), has the exact representation
+\begin{equation}
+ \mathcal J_j^{(N)}(t,x)
+   =e^{-ax}\Re\int_{\R}
+          \mathscr C_{j,N}^{a}(t,s)e^{2ixs}\dd s.
+ \label{eq:corr-hybrid-transform}
+\end{equation}
+On the full stationary set \(S_j\) it obeys
+\begin{equation}
+ \left|\mathcal J_j^{(N)}-\Lag_j\right|
+ \le\sqrt E\,e^{-ax}T_{j+2}^{(N)}
+ \le\mathsf D_0e^{-ax}\sqrt E\,e^{-cN^2},
+ \label{eq:corr-hybrid-tail}
+\end{equation}
+with \(c,\mathsf D_0\) from \eqref{eq:signed-cutoff-constants}
+and the complete omitted moments
+\eqref{eq:signed-cutoff-tail-moments}.
+\end{proposition}
+\begin{proof}
+Multiply the full-line formula for \(h_j\) by
+\eqref{eq:corr-cutoff-jet}.  Since \(h_j\) is real, its full-line
+integral can be placed inside the real part:
+\[
+ -h_jh_{j+2}^{(N)}
+ =-\frac{e^{-ax}}2\Re\int_{\R}\int_0^{V_N}
+       (iu)^j(-a+iy)^{j+2}
+       w_t(u)\psi_{a,N}(t,y)e^{ix(u+y)}\dd y\dd u.
+\]
+The finite retained source is bounded on its compact integration
+interval, and \(w_t\) has every absolute moment.  Thus Fubini and
+the change of variables \(u=s+r,\ y=s-r\) apply.  The Jacobian is
+two and the interval \(0\le y\le V_N\) becomes
+\(s-V_N\le r\le s\), proving
+\eqref{eq:corr-hybrid-transform}.
+
+Before stationarity,
+\[
+ \mathcal J_j^{(N)}-\Lag_j
+   =h_j(h_{j+2}-h_{j+2}^{(N)})-h_{j+1}^2.
+\]
+On \(S_j\) the square vanishes and \(|h_j|\le\sqrt E\).
+The complete omitted-moment bound proves
+\eqref{eq:corr-hybrid-tail}.
+\end{proof}
+
+The discontinuities and entering-index boundaries remain in
+\(\psi_{a,N}\); the cross-correlation formula has not removed them.
+Any integration by parts must include their boundary or distributional
+terms.  There is also no replacement of the full stationary derivative
+by its retained approximation.  At \(E=0\) both
+\(\mathcal J_j^{(N)}\) vanish by their full-amplitude factorization,
+independently of the sign of the retained source.
+An all-\(N\) signed estimate for
+\eqref{eq:corr-hybrid-transform} is therefore another way to address
+the existing cutoff transfer, with exactly the same tail obligation.
+
+\subsection{An optional common observation for the two stationary sets}
+
+The two hybrid products can be combined if a common scalar observation
+is useful.  Put
+\begin{equation}
+ \mathcal B_N=-h_0h_2^{(N)}-h_1h_3^{(N)},\qquad
+ \varepsilon_k^{(N)}=e^{-ax}T_k^{(N)}.
+ \label{eq:corr-common-cutoff}
+\end{equation}
+This is an optional bookkeeping device; the separate products can
+give sharper estimates.
+
+\begin{corollary}[Common cutoff and its full energy derivative]
+\label{cor:corr-common-cutoff}
+At every point in the preceding cutoff domain,
+\begin{equation}
+ \left|\mathcal B_N-\frac12E_t\right|
+ \le\sqrt E\,
+       \sqrt{(\varepsilon_2^{(N)})^2+
+                         (\varepsilon_3^{(N)})^2}.
+ \label{eq:corr-common-tail}
+\end{equation}
+Moreover,
+\begin{align}
+ \mathcal B_N&=\mathcal J_0^{(N)}
+                 &&\text{on }S_0,
+ \label{eq:corr-common-S0}\\
+ \mathcal B_N-\mathcal J_1^{(N)}
+    &=h_0(h_2-h_2^{(N)})
+                 &&\text{on }S_1.
+ \label{eq:corr-common-S1}
+\end{align}
+Consequently, for \(j=0,1\),
+\begin{equation}
+ |\mathcal B_N-\Lag_j|
+ \le\sqrt2\,\mathsf D_0e^{-ax}\sqrt E\,e^{-cN^2}
+                    \quad\text{on }S_j.
+ \label{eq:corr-common-stationary-tail}
+\end{equation}
+\end{corollary}
+\begin{proof}
+Subtract \eqref{eq:stationary-energy-intro} before imposing
+stationarity.  The difference is
+\[
+ h_0(h_2-h_2^{(N)})+h_1(h_3-h_3^{(N)}).
+\]
+Cauchy--Schwarz gives \eqref{eq:corr-common-tail}.
+Setting \(h_1=0\) or \(h_2=0\) proves
+\eqref{eq:corr-common-S0}--\eqref{eq:corr-common-S1}.
+The complete Gaussian moment bounds and
+\eqref{eq:stationary-energy-intro} then give
+\eqref{eq:corr-common-stationary-tail}.
+\end{proof}
+
+In the associator notation of
+Lemma~\ref{lem:hc-twisted-associators}, set
+\(G_2^{(N)}=h_2^{(N)}+\jj h_3^{(N)}\) and
+\(\mathbf u=\ell\jj\).  Then
+\[
+ -\frac12[F\ii,G_2^{(N)}\kk,\ell]=\mathbf u\,\mathcal B_N.
+\]
+The coefficient, rather than its absolute value, is still the
+observation.  Both the scalar and octonionic forms vanish when \(E=0\).
+On \(S_1\), the combined cutoff pays an additional second-derivative
+tail which the separate \(\mathcal J_1^{(N)}\) avoids.
+
+For example, if a new source estimate were to prove
+\(\mathcal B_N\ge-A_jN^pE\) on \(S_j\) for every \(N\ge N_0\ge8\),
+with the prescribed coefficients and local boundedness required by
+Lemma~\ref{lem:polynomial-cutoff-transfer}, Young's inequality would
+give
+\[
+ \Lag_j\ge-(A_jN^p+1/2)E
+       -\mathsf D_0^2e^{-2ax}e^{-2cN^2}.
+\]
+This is within the existing conditional logarithmic-loss transfer.
+It is not a proof of the proposed lower bound for \(\mathcal B_N\).
+Neither the combined notation nor the correlation transform strengthens
+the arithmetic input already available.
+
+\subsection{What modular reflection and exceptional arithmetic would add}
+
+For \(\Theta(y)=\sum_{n\in\mathbb Z}e^{-\pi n^2y}\), \(y>0\),
+Poisson summation gives
+\[
+ \Theta(y)=y^{-1/2}\Theta(1/y),\qquad
+ P(u)=e^u\Theta(e^{4u})=P(-u),\qquad
+ \Phi=(P''-P)/16.
+\]
+The factor \(e^{tu^2}\) preserves this reflection.
+In the complete pair \(w_t(s+r)w_t(s-r)\), inversion of either
+theta variable amounts to exchanging \(s,r\), up to signs, after
+the prefactors and differentiations are included.  That exchange is
+already a consequence of evenness for any source.  It therefore
+cannot by itself distinguish the theta family from the collision
+controls of Proposition~\ref{prop:hc-positive-source-control}.
+
+The two theta arguments \(e^{4(s+r)}\) and \(e^{4(s-r)}\) have
+product \(e^{8s}\) and are reciprocal only when \(s=0\).
+There is no automatic diagonalization of the full correlation.
+Nor can the heat deformation be suppressed in a modular identity:
+under \(y=e^{4u}\) it is
+\(\exp\{t(\log y)^2/16\}\).
+It is invariant under \(y\mapsto1/y\), but is not a fixed modular
+weight.  With \(\tau=ie^{4u}\), even the modular translation
+\(\tau\mapsto\tau+1\) changes the logarithmic variable to
+\(\frac14\log(e^{4u}-i)\), on a consistent branch, and changes both
+the heat multiplier and the Fourier phase.  A useful additional
+theta identity must retain these factors and, for a filtered source,
+every transformed boundary contribution.
+
+Integral octonions offer genuine additional arithmetic, but through
+a different source.  The Coxeter order has the \(E_8\) quadratic
+lattice \cite[Section~1]{elkiesgross}; in the standard lattice
+normalization its theta series is
+\[
+ \Theta_{E_8}(\tau)=E_4(\tau)
+     =1+240\sum_{n\ge1}\sigma_3(n)e^{2\pi in\tau}.
+\]
+Termwise Mellin integration and \(n=dm\) in the divisor sum give
+\begin{equation}
+ \int_0^\infty(\Theta_{E_8}(iy)-1)y^{s-1}\dd y
+  =240(2\pi)^{-s}\Gamma(s)\zeta(s)\zeta(s-3),
+          \qquad\Re s>4.
+ \label{eq:corr-E8-mellin}
+\end{equation}
+Thus replacing the scalar theta source by the octonionic lattice
+theta series changes both its multiplicities and its Mellin
+transform.  Positive representation counts do not by themselves
+give the signed products in \eqref{eq:corr-stationary-target}.
+
+Exceptional theta forms and their classical restrictions are
+developed in \cite{kim93,pollackg2,pollackspin8,shan26}.
+They justify investigating an arithmetic bridge, rather than
+identifying the two sources merely because both involve theta
+functions.  For example, \cite[Theorem~B]{shan26} proves nonvanishing
+of the stated global lift for a cuspidal Hecke eigenform in
+\(S_{2n+12}(\Gamma_0(N))\), \(n\ge0\), in its
+\(\mathrm{PGL}_2\) setting.  Its Theorem~E spans
+\(S_{2n+12}(\mathrm{SL}_2(\mathbb Z))\) by the specified weighted
+exceptional theta series for \(n>0\).
+These are genuine classical modular bridges, with their stated
+weight and level restrictions.
+
+For the present problem such a bridge would have to
+reproduce \(H\), its four physical derivatives, or the complete
+correlations above; preserve the heat deformation and genuine
+stationary constraints; and yield a signed estimate with all errors
+paid at the physical energy scale.
+The modular Fourier-sign constructions of \cite{viazovska} and the
+modular inequalities of \cite{romik,lee24} give a useful model for
+the last step: retain a specifically identified transformed expression
+and prove its sign.  The polynomial/quasimodular inequalities of
+\cite{lee26polynomial} and Fourier-eigenfunction estimates of
+\cite{lee26positive} offer further tools when their hypotheses can
+be verified.  None applies solely from the presence of the theta
+source or the number eight.  No required identification or new
+stationary sign estimate is established by this section.
+
+\subsection{Analytic tools and the signed physical observation}
+\label{subsec:octonionic-analysis-literature}
+
+The available octonionic function theories provide integral representations,
+boundary projections, and regularity estimates for the fields above.
+Their application to collision exclusion must preserve the distinguished
+first pair and estimate the signed radial observation at its energy scale.
+Proposition~\ref{prop:hc-positive-source-control} supplies a control family
+against which any claimed consequence of generic monogenicity can be tested.
+
+For differential calculations there is an associative real-matrix
+realization.  Let $L_a v=av$ on $\OO\cong\R^8$, and let
+$\epsilon_1,\ldots,\epsilon_7$ be an orthonormal basis of imaginary
+octonions. Alternativity gives
+\[
+ L_{\epsilon_i}L_{\epsilon_j}+L_{\epsilon_j}L_{\epsilon_i}=-2\delta_{ij}I
+ \qquad(1\le i,j\le7),
+\]
+so the imaginary left-multiplication operators form a Clifford
+representation; see \cite[Section~2.3]{baez}.  With the declared basis,
+$\mathcal D_8$ is therefore a real matrix Dirac operator and its conjugate
+composition is $\Delta_8 I$.  This is useful for elliptic estimates and
+symbolic checks.  It is not a multiplicative embedding of the octonion
+algebra: generally $L_{ab}\ne L_aL_b$.  The actual associators and their
+orientation must still be retained in the physical observations.
+The component conventions are treated in \cite{kauhanenorelma}.
+
+The Cauchy formulas of Li--Peng \cite{lipeng} depend on parenthesization.
+Colombo--Krau\ss har--Sabadini \cite[Proposition~2.2 and Sections~3--4]{colombokraussharsabadini} distinguish monogenic and slice-monogenic
+reproducing spaces and construct the relevant Hardy/Bergman framework
+using real parts of appropriately weighted para-linear inner products.
+Constales--Krau\ss har \cite{constaleskrausshar} develop boundary projection
+methods in the same nonassociative setting.  The Teodorescu and
+projection calculus of \cite{teodorescu24} includes the necessary
+associator compensation and can be useful when an approximate field has
+a quantified monogenic defect.  These tools provide norm and evaluation
+estimates.  To yield the present criterion, a boundary or defect estimate
+must additionally control the adverse radial component relative to $E$;
+an absolute error does not give such control near a candidate zero.
+The present lifts are already exactly monogenic, so an integral
+reconstruction needs a specific further estimate to justify its use.
+
+The regularity class is another substantive hypothesis.  Octonionic
+slice regularity \cite{gentilistruppa}, quaternionic-slice Fueter
+regularity \cite{ghiloni}, and the partial-slice theory of
+\cite{xusabadini26} have distinct defining equations.  The latter's
+Cauchy--Pompeiu, maximum-modulus and extension results organize these
+classes but do not imply that a distinguished two-component trace of a
+nonzero field is nonvanishing.  The integral Fueter mapping in
+\cite{fuetermapping} transfers slice data to monogenic functions in the
+Clifford/quaternionic setting; such a transfer changes the field and
+requires preservation or reconstruction of the collision observation.
+Differential transforms can annihilate low-degree collision controls,
+so the transformed norm cannot be substituted for $E$ without that step.
+
+Refined Kato inequalities \cite{feehan} concern norm gradients in the
+ambient variables.  Frequency and nodal-set results, including
+\cite{borrelliwu26}, describe the structure and dimension of possible
+Dirac zeros; they do not exclude an intersection with the physical
+slice.  Moreover, an ordinary double collision has $E=0$ and $h_2\ne0$,
+so the doubled four-jet field need not vanish there.  The explicit
+ambient log-energy calculation above identifies the stronger property
+of this particular holomorphic lift, while also showing the loss of
+orientation in the resulting squared determinants.
+
+The phase/Wronskian description similarly connects the physical signs
+with familiar complex-analytic positivity questions.  A Hermite--Biehler
+or reproducing-kernel hypothesis must nevertheless be proved for the
+specific source.  Conrey--Li \cite{conreyli} give counterexamples to
+particular proposed de Branges shift-positivity conditions associated
+with zeta and Dirichlet $L$-functions; their result concerns those
+conditions, not every de Branges approach.  Here the operative next step
+is a complete theta identity or factorization yielding the declared
+signed energy-relative estimate, with both stationary conditions and
+all cutoff payments preserved.
 
 \section{The bounded region: complete certificates through height 112}
 \label{sec:fc-certificate}
@@ -3900,14 +4629,29 @@ infinity or as $t\downarrow0$ is compatible with the local criterion.
 
 \subsection{Arithmetic directions and limits of the present coverage}
 
-The main proposed cusp program is to prove
-\eqref{pg:J-target}, or its paid raw-cutoff analogue, using relations
-among the actual theta amplitudes.  Exact Poisson or modular relations
-are candidates only if they constrain adverse interactions at the
-physical energy scale.  Both Hermitian and bilinear sectors, independent
-source coordinates, and all staircase boundary terms must remain.
-The paired kernel has no universal sign for arbitrary amplitudes;
-positive source weights and the heat equation alone are insufficient.
+The principal cusp target remains \eqref{pg:J-target}, preferably on
+the small-energy region \eqref{pg:small-energy-domain}. The complete
+correlations in Section~\ref{sec:complete-correlations} give a focused
+way to investigate it: derive an exact identity for
+$\mathscr A_j+\kappa_j\mathscr E$, or for the hybrid kernel
+$\mathscr C_{j,N}^{a}$, and estimate its adverse transform with
+source-prescribed coefficients. A positive-definite component with a
+paid signed remainder could suffice; global positive definiteness is
+stronger than the stationary target. The first deliverable is the
+identity with its complete remainder, followed by an all-$N$ estimate
+on a declared domain. Pointwise positivity of a correlation density
+is not that estimate.
+
+Poisson reflection alone exchanges the two correlation coordinates
+and is already shared by arbitrary even sources. An additional theta
+relation must improve the signed remainder, retain the logarithmic
+heat factor, and pay every transformed boundary. The hybrid formula
+\eqref{eq:corr-hybrid-transform} keeps the original staircase inside
+$\psi_{a,N}$, so it cannot justify discarding entering-index terms.
+The reflected lift and planar dictionary are useful finite algebraic
+reductions; further triality, integral-operator, or exceptional-theta
+work should proceed only after specifying a source- and
+observation-preserving identity that could improve this estimate.
 
 The cumulative identity \eqref{eq:cumulative-signed-identity}
 provides a related diagnostic. Grouping consecutive oscillatory lobes
@@ -4400,7 +5144,7 @@ accepts both paths through repeated \texttt{--record} options and an
 \texttt{--output} path. Its 1321 checks retain all 64 closed cells,
 128 stationary observations, and 16 genuine branch/time cases.
 The source quadratures were independently replayed in Review 19; the
-present integration reruns the exact auditor, not those quadratures.
+preceding manuscript integration reran the exact auditor, not those quadratures.
 
 The newly integrated arithmetic and collision material is audited by
 \path{numerics/check_proportional_delay_identities.py} (20 checks),
@@ -4412,8 +5156,8 @@ The proportional checker takes a positional output path; the phase and
 strip checkers accept \texttt{--output}. The collision driver writes its
 named receipt beside its source; the integration replay calls its pure
 check routines without replacing that historical receipt.
-Together with the finite-band audit, the integration executes 2615 exact
-checks. The new receipt is
+Together with the finite-band audit, the preceding integration executed
+2615 exact checks. Its receipt is
 \path{numerics/MANUSCRIPT_PROGRAM_INTEGRATION_CHECKS_20261015.json}.
 These checks verify finite algebra, rational margins, and recorded
 interval decisions. They do not prove the imported arithmetic theorems,
@@ -4421,13 +5165,27 @@ the unproved middle-block or weighted-remainder hypotheses, or an
 all-height theta sign estimate. Review 24 records the integrated proof
 and layout audit, including the conditional deductions from Note 33.
 
+The octonionic simplification and literature integration is documented
+in Reviews 25--26. The standard-library checker
+\path{numerics/check_octonion_reflected_lift.py}, run with
+\texttt{--output}, verifies 325 exact polynomial assertions: the full
+eight-dimensional reflected operator, physical trace, heat and jet
+identities, and the planar bilinear reductions. The original 248-check
+octonion driver was also replayed. The independent moment and multiplier
+checks for the correlation formulas are supplied by
+\path{numerics/check_theta_correlation_identities.py}; its scope and
+the consolidated receipt are recorded in Review 26. These finite
+controls support the general proofs above; they add no theta sign
+certificate or interval-quadrature coverage.
+
 The main remaining obligation is the one-sided inner-region bound
-\eqref{eq:final-target}, with all cross terms retained and losses locally
-bounded through candidate positive-time collisions. The complete-source
-Gaussian identities make a specific cross-time correlation available for
-that task. Improving the explicit height and connecting the finite cover
-remain separate quantitative work. Neither a fixed-time asymptotic nor
-a ratio divided by an unknown physical energy supplies the missing bound.
+\eqref{eq:final-target}, with losses locally bounded through candidate
+positive-time collisions. Equations~\eqref{eq:corr-stationary-target}
+and~\eqref{eq:corr-hybrid-transform} organize that same obligation
+using complete source correlations. Improving the explicit height and
+connecting the finite cover remain separate quantitative work.
+Neither a fixed-time asymptotic nor a ratio divided by unknown physical
+energy supplies the missing bound.
 
 \par\endgroup
 
@@ -4491,7 +5249,8 @@ The Cayley--Dickson convention is in Section~2.2;
 \bibitem{kauhanenorelma}
 J. Kauhanen and H. Orelma,
 \emph{Cauchy--Riemann operators in octonionic analysis},
-arXiv:1701.08698 (2017).
+Advances in Applied Clifford Algebras \textbf{28} (2018), article 1.
+\url{https://doi.org/10.1007/s00006-018-0826-2};
 \url{https://arxiv.org/abs/1701.08698}.
 
 \bibitem{bourgain14}
@@ -4518,6 +5277,157 @@ T. Tao, T. Trudgian, and A. Yang,
 \emph{New exponent pairs, zero density estimates, and zero additive
 energy estimates: a systematic approach}, arXiv:2501.16779v1 (2025),
 Table 1. \url{https://arxiv.org/abs/2501.16779v1}.
+
+\bibitem{harveylawson}
+R. Harvey and H. B. Lawson, Jr.,
+\emph{Calibrated geometries}, Acta Mathematica \textbf{148} (1982), 47--157,
+Chapter IV, Theorem 1.6.
+\url{https://doi.org/10.1007/BF02392726}.
+
+\bibitem{karigiannis}
+S. Karigiannis, \emph{Introduction to $G_2$ geometry},
+Fields Institute Communications \textbf{84} (2020), 3--50,
+especially Corollary 3.52.
+\url{https://arxiv.org/abs/1909.09717}.
+
+\bibitem{schraymanogue}
+J. Schray and C. A. Manogue,
+\emph{Octonionic representations of Clifford algebras and triality},
+Foundations of Physics \textbf{26} (1996), 17--70.
+\url{https://arxiv.org/abs/hep-th/9407179}.
+
+\bibitem{kauhanenorelma19}
+J. Kauhanen and H. Orelma, \emph{On the structure of octonion regular
+functions}, Advances in Applied Clifford Algebras \textbf{29} (2019),
+article 77. \url{https://doi.org/10.1007/s00006-019-0983-y}.
+
+\bibitem{lipeng}
+X. Li and L. Peng, \emph{The Cauchy integral formulas on the octonions},
+Bulletin of the Belgian Mathematical Society \textbf{9} (2002), 47--64.
+\url{https://doi.org/10.36045/bbms/1102715140}.
+
+\bibitem{colombokraussharsabadini}
+F. Colombo, R. S. Krau{\ss}har, and I. Sabadini,
+\emph{Octonionic monogenic and slice monogenic Hardy and Bergman spaces},
+Forum Mathematicum \textbf{36} (2024), no. 4.
+\url{https://doi.org/10.1515/forum-2023-0039};
+\url{https://arxiv.org/abs/2311.07691}.
+
+\bibitem{constaleskrausshar}
+D. Constales and R. S. Krau{\ss}har,
+\emph{Octonionic Kerzman--Stein operators} (2021).
+\url{https://doi.org/10.1007/s11785-021-01152-0};
+\url{https://arxiv.org/abs/2012.11925}.
+
+\bibitem{teodorescu24}
+R. S. Krau{\ss}har, M. Ferreira, N. Vieira, and M. M. Rodrigues,
+\emph{The Teodorescu and the $\Pi$-operator in octonionic analysis and
+some applications}, Journal of Geometry and Physics \textbf{206}
+(2024), 105328. \url{https://doi.org/10.1016/j.geomphys.2024.105328}.
+
+\bibitem{gentilistruppa}
+G. Gentili and D. C. Struppa,
+\emph{Regular functions on the space of Cayley numbers},
+Rocky Mountain Journal of Mathematics \textbf{40} (2010), 225--241.
+\url{https://doi.org/10.1216/RMJ-2010-40-1-225}.
+
+\bibitem{ghiloni}
+R. Ghiloni, \emph{Slice Fueter-regular functions},
+Journal of Geometric Analysis \textbf{31} (2021), 11988--12033.
+\url{https://doi.org/10.1007/s12220-021-00709-x}.
+
+\bibitem{xusabadini26}
+Z. Xu and I. Sabadini,
+\emph{Generalized partial-slice monogenic functions: the octonionic case},
+Transactions of the American Mathematical Society \textbf{379} (2026),
+3257--3291. \url{https://doi.org/10.1090/tran/9646};
+\url{https://arxiv.org/abs/2503.12409v4}.
+
+\bibitem{fuetermapping}
+F. Colombo, I. Sabadini, and F. Sommen,
+\emph{The Fueter mapping theorem in integral form and the F-functional
+calculus}, Mathematical Methods in the Applied Sciences \textbf{33}
+(2010), 2050--2066. \url{https://doi.org/10.1002/mma.1315}.
+
+\bibitem{feehan}
+P. M. N. Feehan, \emph{A Kato--Yau inequality for harmonic spinors and
+decay estimate for eigenspinors}, Journal of Geometric Analysis
+\textbf{11} (2001), 469--489.
+\url{https://arxiv.org/abs/math/9903021}.
+
+\bibitem{borrelliwu26}
+W. Borrelli and R. Wu, \emph{On the nodal set of solutions to Dirac
+equations}, Journal of Geometric Analysis \textbf{36} (2026), article 195.
+\url{https://doi.org/10.1007/s12220-026-02443-8}.
+
+\bibitem{csordas}
+G. Csordas, \emph{Fourier transforms, positive definite kernels and the
+Riemann $\xi$-function}, arXiv:1309.0055v2 (2014),
+especially Theorems 3.5 and 3.7.
+\url{https://arxiv.org/abs/1309.0055v2}.
+
+\bibitem{dimitrovxu}
+D. K. Dimitrov and Y. Xu, \emph{Wronskians of Fourier and Laplace
+transforms}, Transactions of the American Mathematical Society
+\textbf{372} (2019), 4107--4125.
+\url{https://arxiv.org/abs/1606.05011}.
+
+\bibitem{elkiesgross}
+N. D. Elkies and B. H. Gross, \emph{Embeddings into the integral
+octonions}, Pacific Journal of Mathematics \textbf{181} (1997),
+special issue, 147--161.
+\url{https://msp.org/pjm/1997/181-3/pjm-v181-n3-p06-s.pdf}.
+
+\bibitem{kim93}
+H. H. Kim, \emph{Exceptional modular form of weight 4 on an exceptional
+domain contained in $\mathbb C^{27}$}, Revista Matem\'atica Iberoamericana
+\textbf{9} (1993), 139--200. \url{https://doi.org/10.4171/RMI/134}.
+
+\bibitem{pollackg2}
+A. Pollack, \emph{Exceptional theta functions and arithmeticity of
+modular forms on $G_2$}, arXiv:2211.05280v2 (2023).
+\url{https://arxiv.org/abs/2211.05280v2}.
+
+\bibitem{pollackspin8}
+A. Pollack, \emph{Exceptional Siegel--Weil theorems for compact
+$\operatorname{Spin}_8$}, arXiv:2308.09100 (2023).
+\url{https://arxiv.org/abs/2308.09100}.
+
+\bibitem{shan26}
+Y. Shan, \emph{The global exceptional theta correspondence for
+$F_4\times\operatorname{PGL}_2$}, arXiv:2501.19101v2,
+revised 12 October 2026, especially Theorems B and E.
+\url{https://arxiv.org/abs/2501.19101v2}.
+
+\bibitem{viazovska}
+M. S. Viazovska, \emph{The sphere packing problem in dimension 8},
+Annals of Mathematics \textbf{185} (2017), 991--1015.
+\url{https://doi.org/10.4007/annals.2017.185.3.7}.
+
+\bibitem{romik}
+D. Romik, \emph{On Viazovska's modular form inequalities},
+Proceedings of the National Academy of Sciences \textbf{120} (2023),
+e2304891120. \url{https://doi.org/10.1073/pnas.2304891120}.
+
+\bibitem{lee24}
+S. Lee, \emph{Algebraic proof of modular form inequalities for optimal
+sphere packings}, arXiv:2406.14659 (2024).
+\url{https://arxiv.org/abs/2406.14659}.
+
+\bibitem{lee26polynomial}
+S. Lee, \emph{Inequalities involving polynomials and quasimodular forms},
+arXiv:2602.10536 (2026), preprint.
+\url{https://arxiv.org/abs/2602.10536}.
+
+\bibitem{lee26positive}
+S. Lee, \emph{Positive quasimodular forms and the sign uncertainty
+principle}, arXiv:2608.15415v2 (2026), preprint.
+\url{https://arxiv.org/abs/2608.15415v2}.
+
+\bibitem{conreyli}
+J. B. Conrey and X.-J. Li, \emph{A note on some positivity conditions
+related to zeta- and $L$-functions}, arXiv:math/9812166 (1998).
+\url{https://arxiv.org/abs/math/9812166}.
 
 \end{thebibliography}
 \end{document}

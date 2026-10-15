@@ -10,7 +10,11 @@ status: active
 
 **Objective:** Derive a paid signed cutoff inequality at the physical energy scale on both full stationary sets, especially near small normalized energy.
 
-[Research overview](../../research-overview/RESEARCH_OVERVIEW_20261015.md) · [Current target](TARGET_AND_VALIDATION_20261015.md)
+[Research overview](../../research-overview/RESEARCH_OVERVIEW_20261015_CORRELATION_KERNELS.md) · [Current target](TARGET_AND_VALIDATION_20261015.md)
+
+## Focused supporting branch
+
+[PR02-CORR: complete theta correlation kernels](../05_theta_correlation_kernels/README.md) develops the exact reductions and open signed target in [Note 36](../05_theta_correlation_kernels/36_COMPLETE_THETA_CORRELATIONS_AND_SIGN_TARGETS_20261015.md). It preserves the full-amplitude cutoff and every source-tail obligation; no new sign estimate is asserted. [ALG](../04_octonionic_reductions/README.md) supplies finite algebraic simplifications.
 
 ## Canonical research sources
 
