@@ -182,3 +182,44 @@ replayed for the rewritten manuscript. No full interval quadratures were
 rerun in this editorial pass; the earlier independent replays remain in
 Reviews 6, 9, and 11. Prepared for Edward Baker with substantial LLM
 assistance, **gpt-6-astra**, reasoning effort **ultra**.
+
+## Oscillatory continuation checks, 14 October 2026
+
+The [pair/block checker](check_signed_carrier_pair_identities.py) and
+[receipt](SIGNED_CARRIER_PAIR_IDENTITY_CHECKS_20261014.json) verify 34 exact
+rational identities and exponent checks for the paired observations,
+stationary correction, tail expansions, threshold-three block proof,
+staircase recurrence, and entry-phase cancellation. The
+[constant checker](check_explicit_outer_constants.py) and
+[receipt](EXPLICIT_OUTER_CONSTANT_CHECKS_20261014.json) verify 52 rational
+budgets and half-line polynomial inequalities for the explicit
+threshold-five height 4 pi exp(10^9). Both use the Python standard library:
+
+```sh
+python3 check_signed_carrier_pair_identities.py --output /tmp/inv21-pair-checks.json
+python3 check_explicit_outer_constants.py --output /tmp/inv21-outer-constants.json
+```
+
+The [integration receipt](OSCILLATORY_CONTINUATION_CHECKS_20261014.json)
+binds these small sources and records. The [internal review](../reviews/14_OSCILLATORY_BLOCKS_AND_EXPLICIT_HEIGHT_REVIEW_20261014.md)
+independently checks the analytic arguments and replays both drivers.
+The finite algebra does not replace the proofs in Notes 19 and 20; no new
+interval quadrature or finite-height cover is asserted. Prepared for
+Edward Baker with substantial LLM assistance, **gpt-6-astra**, effort
+**ultra**.
+
+
+The [signed-curvature split checker](check_signed_curvature_split.py) and
+[receipt](SIGNED_CURVATURE_SPLIT_IDENTITY_CHECKS_20261014.json) check 14
+exact polynomial identities and controls. The [genuine-branch pilot](check_stationary_favorable_curvature_pilot.py)
+and [receipt](STATIONARY_FAVORABLE_CURVATURE_PILOT_20261014.json) extract
+eight paid time slabs from the existing 100--104 certificate. They prove
+a prescribed zero-loss signed estimate on a genuine h1=0 branch in
+101<x<102, with a deliberate alternative centering for which every norm
+cone eta<=mu fails. The original saddle-centered eta=1/3 cone still passes.
+No new quadrature, height extension, or proper finite-block filter is
+claimed. [Note 21](../notes/21_ONE_SIDED_STATIONARY_ESTIMATES_AND_THETA_PILOT_20261014.md)
+gives the formulas, limitations, and standard-library replay commands;
+[Review 15](../reviews/15_ONE_SIDED_STATIONARY_ESTIMATES_REVIEW_20261014.md)
+records independent checks. Prepared 14 October 2026 for Edward Baker
+with substantial LLM assistance, **gpt-6-astra**, effort **ultra**.

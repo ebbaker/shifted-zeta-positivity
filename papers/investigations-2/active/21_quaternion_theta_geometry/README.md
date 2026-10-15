@@ -14,9 +14,11 @@ imaginary-gluing stability, and complete-source certificates for both
 stationary signs over the full possible positive-threshold time range
 through height 104 are now established, with an explicit physical norm
 gap. The latest extension uses a complete-source centered residual cone.
-A uniform analytic continuation now proves both Laguerre forms positive
-at sufficiently large heights whenever t log(|x|/(4 pi))>=4+epsilon,
-for each fixed epsilon>0. The inner small-time region remains open.
+Oscillatory block cancellation now proves both Laguerre forms positive
+at sufficiently large heights whenever t log(|x|/(4 pi))>=3+epsilon,
+for each fixed epsilon>0. A separate fully explicit bound applies at
+|x|>=4 pi exp(10^9) with t log(|x|/(4 pi))>=5. The finite transition
+strip and inner small-time region remain open.
 
 This program was promoted from the quaternion branch of
 [investigation 20](../20_constrained_operator_squares/README.md).
@@ -25,6 +27,31 @@ and [original handoff](../20_constrained_operator_squares/brainstorm/03_QUATERNI
 retain the proposal's provenance. New quaternion research belongs here.
 
 ## Start here
+
+The current main route is the direct one-sided stationary estimate.
+[Note 21](notes/21_ONE_SIDED_STATIONARY_ESTIMATES_AND_THETA_PILOT_20261014.md)
+proves an auxiliary favorable-curvature split identity and identifies its
+residual-vanishing limitation at candidate collisions. A certified genuine
+theta stationary branch in 101<x<102 shows a zero-loss signed estimate
+where specified stricter norm cones fail under an alternative centering.
+The [internal review](reviews/15_ONE_SIDED_STATIONARY_ESTIMATES_REVIEW_20261014.md)
+checks 14 exact algebra/control tests and independently replays eight
+closed time slabs. This supports the signed approach without extending
+height coverage or proving an all-height theta estimate. Proper source
+block filters remain untested; both stationary sets remain necessary.
+
+The preceding analytic continuation is [Note 19](notes/19_OSCILLATORY_BLOCKS_AND_PAIRED_LAGUERRE_FORMS_20261014.md):
+maximal oscillatory blocks lower the sufficient asymptotic threshold from
+four to three, uniformly in time and all four physical derivatives. It also
+gives exact paired Laguerre/residual integrals and complete pair-tail
+payments. [Note 20](notes/20_EXPLICIT_OUTER_HEIGHT_BOUND_20261014.md) evaluates
+a conservative explicit height for the separate threshold-five region.
+The [independent internal review](reviews/14_OSCILLATORY_BLOCKS_AND_EXPLICIT_HEIGHT_REVIEW_20261014.md)
+checks the proofs and replays 34 algebra checks plus 52 constant checks.
+These developments follow the current manuscript; its source and build
+record retain the previously delivered exposition. Prepared 14 October
+2026 for Edward Baker with substantial LLM assistance, **gpt-6-astra**,
+reasoning effort **ultra**.
 
 The [rewritten manuscript](manuscript/quaternion_theta_geometry.tex) is the
 current unified exposition, titled **Uniform Laguerre signs and hypercomplex
@@ -38,13 +65,15 @@ records the next targets and the explicit
 See the [integration review](reviews/13_MANUSCRIPT_REWRITE_INTEGRATION_REVIEW_20261014.md)
 for the current checks and their scope.
 
-The [uniform outer-region theorem](notes/17_UNIFORM_OUTER_CUSP_SIGNS_AND_THRESHOLD_FOUR_20261014.md) is the latest result. For every epsilon>0, both Laguerre forms are strictly
+The [uniform outer-region theorem](notes/17_UNIFORM_OUTER_CUSP_SIGNS_AND_THRESHOLD_FOUR_20261014.md) is the preceding analytic result. For every epsilon>0, both Laguerre forms are strictly
 positive and the first jet is nonzero whenever 0<t<=1/2, |x|>=X_epsilon,
 and t log(|x|/(4 pi))>=4+epsilon. The four physical derivatives share one
 nonzero zeta amplitude, with uniform relative errors. This is an analytic
-consequence of the effective Polymath approximation; X_epsilon has not
-been evaluated numerically. It gives asymptotic collision localization at
-4, with the inner region and finite transition strip still unresolved.
+consequence of the effective Polymath approximation. Its original note
+leaves X_epsilon unevaluated and localizes asymptotic collisions at 4;
+Notes 19 and 20 give the subsequent threshold-three improvement and the
+explicit threshold-five height, with the inner region and finite transition
+strip still unresolved.
 See the [independent internal review](reviews/12_UNIFORM_OUTER_CUSP_INTERNAL_REVIEW_20261014.md).
 Prepared 14 October 2026 with substantial LLM assistance,
 **gpt-6-astra**, effort **ultra**.

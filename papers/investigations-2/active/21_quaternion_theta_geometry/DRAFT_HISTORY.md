@@ -163,3 +163,28 @@ Recorded model: **gpt-6.1-sol (Codex)**; reasoning effort: **ultra**.
   record validation and the unresolved targets. No new commit, tag, or
   snapshot folder; the explicit backup request was fulfilled with
   individual files. Substantial LLM assistance, **gpt-6-astra**, **ultra**.
+
+- **14 October 2026 — Oscillatory threshold three and an explicit outer height.**
+  Working-tree references: [Note 19](notes/19_OSCILLATORY_BLOCKS_AND_PAIRED_LAGUERRE_FORMS_20261014.md)
+  and [Note 20](notes/20_EXPLICIT_OUTER_HEIGHT_BOUND_20261014.md), continuing
+  commit `f723c7bbd36984e3ca83e0e4e68918373a335a46`. Oscillatory blocks
+  lower the sufficient uniform threshold from four to three; exact paired
+  Laguerre integrals retain all cross terms and pay omitted pairs. A
+  separate explicit bound X_1=4 pi exp(10^9) applies at t log(|x|/(4 pi))>=5.
+  The [internal review](reviews/14_OSCILLATORY_BLOCKS_AND_EXPLICIT_HEIGHT_REVIEW_20261014.md)
+  independently checks both proofs and replays 34+52 exact checks.
+  Inner signs and finite bridging remain open. No new manuscript version,
+  commit, tag or snapshot folder; substantial LLM assistance,
+  **gpt-6-astra**, effort **ultra**.
+
+
+- **14 October 2026 — Direct signed route selected; favorable-curvature pilot.**
+  Working-tree reference: [Note 21](notes/21_ONE_SIDED_STATIONARY_ESTIMATES_AND_THETA_PILOT_20261014.md),
+  continuing commit `f723c7bbd36984e3ca83e0e4e68918373a335a46`.
+  An auxiliary split identity permits favorable curvature but requires
+  exact residual cancellation at a candidate zero. A genuine theta branch
+  supplies a zero-loss signed comparison against specified stricter norm
+  cones under alternative centering. [Review 15](reviews/15_ONE_SIDED_STATIONARY_ESTIMATES_REVIEW_20261014.md)
+  audits 14 exact checks and eight closed time slabs. No height extension,
+  all-height estimate, manuscript revision, commit, tag or snapshot folder.
+  Substantial LLM assistance, **gpt-6-astra**, effort **ultra**.

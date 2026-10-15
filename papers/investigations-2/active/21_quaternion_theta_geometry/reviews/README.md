@@ -86,3 +86,22 @@ remaining obligation.
     checks, compilation, references, and visual inspection. Earlier full
     numerical replays remain separate. Prepared 14 October 2026 with
     substantial LLM assistance, **gpt-6-astra**, effort **ultra**.
+
+14. [Oscillatory blocks and explicit height](14_OSCILLATORY_BLOCKS_AND_EXPLICIT_HEIGHT_REVIEW_20261014.md)
+    independently checks the sufficient threshold-three theorem, complete
+    paired Laguerre/residual observations and omitted-pair payments, and
+    the separate threshold-five cutoff 4 pi exp(10^9). Independently
+    replayed 34 algebra checks and 52 explicit constant checks pass.
+    No finite-height extension or remaining inner sign estimate is claimed.
+    Prepared 14 October 2026 for Edward Baker with substantial LLM
+    assistance, **gpt-6-astra**, reasoning effort **ultra**.
+
+
+The [one-sided stationary review](15_ONE_SIDED_STATIONARY_ESTIMATES_REVIEW_20261014.md)
+audits the favorable-curvature sufficient lemma, paired factors, exact
+collision controls, and forced residual cancellation at a candidate zero.
+It independently replays 14 algebra/control checks and eight genuine
+stationary-branch slabs. The finite theta comparison uses an alternative
+centering and a full residual; a proper source filter and the all-height
+signed estimate remain open. Prepared 14 October 2026 for Edward Baker
+with substantial LLM assistance, **gpt-6-astra**, effort **ultra**.

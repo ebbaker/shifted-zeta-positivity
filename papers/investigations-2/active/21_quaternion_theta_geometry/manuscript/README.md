@@ -40,3 +40,14 @@ The previous **35-page** version was preserved before replacement:
 The [backup receipt](BACKUP_RECORD_20261014.json) verifies their identity.
 This individual-file backup fulfills the author's explicit request; no
 new manuscript snapshot directory, commit, or tag was created.
+
+## Subsequent research, 14 October 2026
+
+[Note 19](../notes/19_OSCILLATORY_BLOCKS_AND_PAIRED_LAGUERRE_FORMS_20261014.md)
+proves a sufficient asymptotic threshold of three and develops exact paired
+Laguerre integrals; [Note 20](../notes/20_EXPLICIT_OUTER_HEIGHT_BOUND_20261014.md)
+gives an explicit height for the separate threshold-five region. These
+internally reviewed developments are saved as research notes and have not
+yet been integrated into this manuscript. The current source, PDF and
+build record retain their delivered identities. Prepared for Edward Baker
+with substantial LLM assistance, **gpt-6-astra**, effort **ultra**.
