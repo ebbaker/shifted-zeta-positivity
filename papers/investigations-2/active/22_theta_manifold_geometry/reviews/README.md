@@ -11,3 +11,11 @@ The [arithmetic, contour and chord review](03_ARITHMETIC_CONTOUR_AND_CHORD_REVIE
 The [manuscript integration review](04_MANUSCRIPT_INTEGRATION_REVIEW_20261015.md) checks the strengthened theorems, complete-source formulas, arithmetic discrimination, research-note links and 31-page reading copy. It records the independent proof audits and the distinction between current build identity and historical computation receipts.
 
 The [research progress and priority review](05_RESEARCH_PROGRESS_AND_PRIORITY_PATHS_20261015.md) ranks the next arithmetic experiments, explains the factor preserving and averaged chord refinements, and assesses endpoint controls and the practical outer-domain budget. It preserves the manuscript and distinguishes new conditional deductions from an unproved theta estimate.
+
+The [coefficient core and two-endpoint review](06_COEFFICIENT_CORE_AND_TWO_ENDPOINT_REVIEW_20261015.md) checks four new results and independent replays: 2,136 exact assertions and 26 mixed or validated assertions. It records the remaining arithmetic sign gap and preserves the manuscript boundary.
+
+The [coupled product and reflected-control review](07_COUPLED_PRODUCT_AND_REFLECTION_CONTROL_REVIEW_20261015.md) records independent analytic audits, 3,278 exact checks, 38 mixed or validated checks, and separate chat-history verification. It distinguishes the closed Gram ansatz from the still-open theta signed estimate.
+
+The [adjoint recurrence and geometric review](08_ADJOINT_RECURRENCE_AND_GEOMETRIC_REVIEW_20261015.md) records separate analytic audits and an independent replay of 6,892 exact checks. It distinguishes endpoint approximation and sharp recurrence stability from the still-open signed boundary estimate.
+
+The [recurrence manuscript integration review](09_RECURRENCE_MANUSCRIPT_INTEGRATION_REVIEW_20261015.md) records the 43-page revision, separate proof audits, 12,271 exact replay assertions, all-page visual inspection, corrected research-note typography and verified history provenance.

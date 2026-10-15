@@ -6,7 +6,7 @@
 \usepackage{booktabs,array,longtable,enumitem}
 \usepackage{microtype}
 \usepackage[colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue]{hyperref}
-\hypersetup{pdftitle={Theta manifold geometry and signed heat-flow collision control},pdfauthor={Drafted for Edward Baker},pdfsubject={Starting-energy chord exclusion, arithmetic rigidity, complete theta correlations and jet geometry}}
+\hypersetup{pdftitle={Theta manifold geometry and signed heat-flow collision control},pdfauthor={Drafted for Edward Baker},pdfsubject={Endpoint averaging, recurrence stability, signed arithmetic boundary traces and theta jet geometry}}
 \allowdisplaybreaks
 \setlength{\emergencystretch}{2em}
 \numberwithin{equation}{section}
@@ -33,22 +33,25 @@
 \begin{abstract}
 We study the collision detector $E=H^2+H_x^2$ for the complete theta
 heat flow through signed jet geometry and arithmetic source identities.
-Every finite collision forces a negative two-point chord of order
-$\sqrt{E}$ at its stationary predecessor and a fixed nearby endpoint.
-Consequently a source-prescribed lower bound with error $o(\sqrt E)$,
-uniform on the required short intervals, excludes all finite collision
-multiplicities. The exponent $1/2$ is sharp for arbitrary power-law
-allowances. An all-cutoff estimate transfers to this criterion even with
-Gaussian cutoff growth when its rate is strictly below the tail rate.
-We give complete signed correlation formulas, including primitive
-endpoints and transverse theta-jet commutators, in an explicit curved
-elliptic-family geometry. A validated weighted-square collision shows
-that support positivity and the first source endpoint are insufficient;
-full modular reflection instead forces the theta coefficients, without
-by itself proving the needed sign. Holomorphic jet surfaces and their
-real Gauss maps explain the collision concentration. The remaining
-problem is a theta-specific chord estimate with full domain coverage.
-No new global theta sign bound or proof of RH is claimed.
+Every finite collision forces a negative fixed-endpoint chord of order
+$\sqrt E$. An exponential average removes the endpoint derivative, and
+cutting off only the endpoint preserves a $\sqrt E$ factor in the error.
+This yields a conditional exclusion criterion with independently chosen
+spatial lengths and cutoffs, without a prescribed cutoff-growth rate.
+The normalized coefficient recurrence identifies theta and admits an
+exact defect-to-observation formula. Positive finite recurrence
+relaxations have sharp $O(1/N)$ physical stability; fixing their affine
+slope improves the bound to a Gaussian tail. A finite-depth adjoint current
+gives a recurrence-adapted endpoint approximation, while its unresolved
+lower trace explains why recurrence inversion alone supplies no sign.
+The geometric formulation separates physical orientation from radial
+vanishing order and gives a weaker signed boundary criterion. Complete
+source identities retain their phases, transverse jets and primitive
+endpoints. Positive-source collision controls and coupled-product
+obstructions are summarized with references to their detailed proofs.
+The remaining problem is an independent theta-specific signed trace
+estimate with full domain coverage. No new global theta sign bound or
+proof of RH is claimed.
 \end{abstract}
 \setcounter{tocdepth}{2}
 \tableofcontents
@@ -106,35 +109,41 @@ inequality remains open.
 \subsection{Results and their logical status}
 The principal results and the remaining candidate are as follows.
 \begin{enumerate}[leftmargin=*,itemsep=3pt]
- \item An all-multiplicity fixed-endpoint chord theorem gives conditional
- collision exclusion from an $o(\sqrt E)$ starting-energy error.
- The threshold exponent is sharp. The inner and parabolic heat profiles
- explain the same positive turning concentration at shrinking scales.
- \item A uniform all-cutoff estimate with cost $\exp(aN^\beta)$ and
- Gaussian tail transfers to exclusion for $\beta<2$. For the chord,
- $\beta=2$ also works under a strict local gap between the growth and
- tail rates, with the integer-rounding loss retained.
- \item Exact complete-source formulas express the chord and stationary
- Laguerre observations in both covariant theta jets and primitive
- variables. The affine endpoint terms and the distinction between
- flat path restriction and transverse differentiation are explicit.
- \item A validated non-theta weighted-square collision rejects support
- positivity and the first endpoint as sufficient hypotheses. An analytic
- reflection-rigidity theorem identifies a stronger coefficient coupling
- that any successful arithmetic mechanism may use.
- \item Signed Hodge identities, holomorphic jet surfaces and calibrated
- inclusions give the geometric setting. A nonflat semi-flat
- hyperk\"ahler metric and an abelian ASD theta connection are constructed;
- the latter's base metric freedom removes its displayed physical-path
- growth without producing the missing sign estimate.
+ \item The fixed-endpoint chord theorem gives conditional collision
+ exclusion from an $o(\sqrt E)$ starting-energy error at every finite
+ multiplicity. The exponent $1/2$ is sharp for arbitrary power-law
+ allowances; the inner heat profiles resolve the turning concentration.
+ \item Exponential averaging gives the endpoint observation
+ $W^2-e^{-\delta}W(x)W(x+\delta)$. Endpoint-only approximation preserves
+ the full starting factor. A mixed bound $-K_NE-\varepsilon_N\sqrt E$
+ suffices with independently chosen cutoffs, even when the locally
+ bounded constants $K_N$ grow arbitrarily with $N$. The earlier
+ additive-tail transfer remains available under its stated rate bounds.
+ \item Exact normalized recurrence defects control physical mode
+ observations with Gaussian dual weights. Positive recurrence
+ relaxations through index $N$ have sharp $O(1/N)$ stability, improved
+ to a Gaussian beta tail by a slope anchor. These are stability results,
+ not favorable-sign estimates at the exact theta coefficients.
+ \item A finite neighboring-mode current gives an explicit
+ $O(L^{-1/2})\sqrt E$ endpoint transfer error. Its lower trace retains
+ the unknown observation; the failed normalization cancellation and
+ the finite-source obstruction are stated briefly with note references.
+ \item Complete signed source formulas and coupled addition retain
+ independent source variables, parity, exchange terms and primitive
+ endpoints. Positive-source controls show why weakened arithmetic
+ hypotheses are insufficient; complete reflection fixes the input.
+ \item Signed forms, holomorphic jet surfaces, calibrated inclusions
+ and theta connections supply the geometric setting. The recurrence
+ trace has a one-dimensional cokernel, and bounded endpoint descent to
+ the physical-jet quotient requires control through degeneration. A
+ signed trace estimate is weaker than absolute endpoint reconstruction.
 \end{enumerate}
-The strongest prospective route is a complete signed chord bound using
-coefficient coupling, with a remainder paid by the cutoff-transfer
-theorem. No such theta bound is proved here. The analytic exclusion
-theorems are conditional; the weighted-square result concerns a control
-source; the finite checks validate specified calculations. These roles
-must not be conflated with a new theta sign domain or a proof of RH.
-We make no novelty claim for the standard geometric constructions.
+The remaining task is an independently proved signed boundary estimate
+using the complete theta coupling. The analytic collision criteria are
+conditional; the control sources are not theta; finite checks validate
+specified calculations. These roles must not be conflated with a new
+theta sign domain or an RH conclusion. We make no novelty claim for the
+standard geometric constructions.
 
 \subsection{Relation to the preceding investigation}
 This investigation separates the manifold and connection direction
@@ -1081,8 +1090,10 @@ sum of starting and endpoint energies also permits this collision.
 \subsection{Transfer from a complete family of cutoff estimates}
 
 The chord criterion permits quantitative losses that need not be
-linear in $E$.  The cutoff must be chosen only after a single prescribed
-family of estimates has been proved for every integer cutoff.
+linear in $E$. For the transfer theorem in this subsection, choose the
+cutoff only after proving a single prescribed family of estimates for
+every integer cutoff. The endpoint-only criterion below has weaker
+cutoff requirements.
 
 \begin{proposition}[All-cutoff transfer]
 \label{phy:cutoff-transfer}
@@ -1168,6 +1179,155 @@ checking finitely many cutoffs.  A separately truncated observation
 requires its own complete error estimate; a proved error
 $Q_0\sqrt e\exp(-c_1N^2)$ can be paid by
 $e/2+(Q_0^2/2)\exp(-2c_1N^2)$.
+
+\subsection{Exponential averages and complete-start cutoff transfer}
+\label{obs:exponential-average}
+
+The endpoint derivative can be removed by a positive average without
+losing the collision obstruction.  For $W=h_j$, $j=0,1$, define
+\begin{equation}
+ \mathcal A_{j,\delta}(t,x)
+ =W(t,x)^2-e^{-\delta}W(t,x)W(t,x+\delta),\qquad \delta>0.
+ \label{obs:average-definition}
+\end{equation}
+The fundamental theorem of calculus gives, without stationarity,
+\begin{equation}
+ \mathcal A_{j,\delta}(t,x)
+ =\int_0^\delta e^{-z}\mathcal C_j(t;x,x+z)\,dz.
+ \label{obs:average-identity}
+\end{equation}
+Indeed, $\partial_z(e^{-z}W(t,x+z))=e^{-z}(W_x-W)(t,x+z)$.
+The normalization by $1-e^{-\delta}$ is a positive probability
+average, but its density does not vanish at the endpoints; no rapid
+Fourier-decay claim for a compactly supported smooth density is used.
+
+\begin{proposition}[Fixed-length averaged collision law]
+\label{obs:average-collision}
+At a multiplicity $2r+j$ event $(T,a)$, $r\ge1$, let $\chi(s)$ be the full
+stationary predecessor and set
+$a_0=\partial_x^{2r}W(T,a)/(2r)!\ne0$.
+For every sufficiently small fixed $\delta>0$, the whole interval
+$[\chi(s),\chi(s)+\delta]$ is $W$-zero-free for sufficiently small
+$s>0$, and
+\begin{align}
+ \frac{\mathcal A_{j,\delta}(T-s,\chi(s))}
+ {\sqrt{E(T-s,\chi(s))}}&\longrightarrow-d_{j,\delta}<0,
+ \label{obs:average-collision-limit}\\
+ d_{j,\delta}
+ &=e^{-\delta}\operatorname{sgn}(a_0)W(T,a+\delta)
+ =e^{-\delta}|a_0|\delta^{2r}(1+O(\delta)).\nonumber
+\end{align}
+The energy is $E=H^2+H_x^2$ on both branches.
+\end{proposition}
+\begin{proof}
+The positive heat polynomial in the proof of
+Theorem~\ref{phy:fixed-endpoint-chord} proves the whole-interval
+assertion, since $\chi(s)-a=O(s)$.
+Equation~\eqref{phy:chord-start-energy} gives
+$W/\sqrt E\to\operatorname{sgn}(a_0)$ on the predecessor.
+Moreover $W^2/\sqrt E\le\sqrt E\to0$.
+Continuity at the moving endpoint, whose limit is $a+\delta$, proves
+the limit; the Taylor expansion
+$W(T,a+\delta)=a_0\delta^{2r}+O(\delta^{2r+1})$ proves its sign.
+\end{proof}
+
+For theta, let $\Phi_N$ be the first $N$ summands of
+\eqref{phy:source}, and put
+\[
+ W_N(t,y)=\partial_y^j\int_0^\infty e^{tu^2}\Phi_N(u)\cos(yu)\,du.
+\]
+Truncate only the endpoint:
+\begin{equation}
+ \mathcal A_{j,\delta,N}
+ =W(t,x)^2-e^{-\delta}W(t,x)W_N(t,x+\delta).
+ \label{obs:average-endpoint-cutoff}
+\end{equation}
+Both the starting $W$ and stationarity $h_{j+1}(t,x)=0$ remain
+complete.  For $t\le T_*$ and real $y$, the source estimate gives
+\begin{align}
+ |W(t,y)-W_N(t,y)|
+ &\le B_j(T_*)e^{-\pi(N+1)^2/4},\label{obs:average-value-tail}\\
+ B_j(T_*)&=2\pi^2\left(\sum_{n\ge1}n^4e^{-\pi n^2/4}\right)
+ \int_0^\infty u^j e^{T_*u^2+9u-(\pi/2)e^{4u}}\,du<\infty.
+ \nonumber
+\end{align}
+To check this bound, dominate the $n$th source summand by
+$2\pi^2n^4e^{9u-\pi n^2e^{4u}}$ and use
+$n^2e^{4u}\ge(n^2+e^{4u})/2$.
+Splitting the remaining Gaussian sum into two equal exponent shares
+extracts $e^{-\pi(N+1)^2/4}$.
+Consequently
+\begin{equation}
+ |\mathcal A_{j,\delta}-\mathcal A_{j,\delta,N}|
+ \le e^{-\delta}B_j(T_*)e^{-\pi(N+1)^2/4}\sqrt{E(t,x)}.
+ \label{obs:average-mixed-tail}
+\end{equation}
+Preserving the complete starting factor is what produces $\sqrt E$;
+a separately truncated starting factor does not inherit this estimate.
+
+\begin{theorem}[Fixed-length mixed-error exclusion]
+\label{obs:average-mixed-exclusion}
+For the complete theta field, fix prescribed positive lengths $\delta_k\to0$.
+Near each covered candidate event, for each branch $j=0,1$ and every
+sufficiently large fixed $k$, suppose there is a prescribed unbounded
+cutoff sequence $N_{k,\ell}\to\infty$ with estimates
+\begin{equation}
+ \mathcal A_{j,\delta_k,N_{k,\ell}}(t,x)
+ \ge-K_{j,k,\ell}(t,x)E(t,x)
+       -\varepsilon_{j,k,\ell}\sqrt{E(t,x)}.
+ \label{obs:average-mixed-hypothesis}
+\end{equation}
+Here $K_{j,k,\ell}\ge0$ has a finite local upper bound through the
+event for each fixed pair $(k,\ell)$, and the nonnegative local error
+bounds satisfy $\varepsilon_{j,k,\ell}\to0$ as $\ell\to\infty$ for
+each fixed $j,k$.
+The estimates hold on declared full-stationary domains containing all
+sufficiently close predecessors and their entire $W$-zero-free intervals
+of length $\delta_k$.
+Each fixed-index time threshold may differ; the error bounds must be
+uniform over these approaching starts, and the coefficient rules must
+be prescribed independently of an observed positive energy floor.
+Then no covered finite multiple real zero occurs.
+\end{theorem}
+\begin{proof}
+At a putative event choose its parity branch, and first fix $k$ so
+that Proposition~\ref{obs:average-collision} gives
+$d_{j,\delta_k}>0$ and the interval lies in the covered neighborhood.
+Next choose one fixed $\ell$ with
+\[
+ \varepsilon_{j,k,\ell}
+ +e^{-\delta_k}B_j(T_*)e^{-\pi(N_{k,\ell}+1)^2/4}
+ <d_{j,\delta_k}/2.
+\]
+Combine \eqref{obs:average-mixed-hypothesis} and
+\eqref{obs:average-mixed-tail}, divide by $\sqrt E$, and let
+$s\downarrow0$ along the full predecessor with both indices fixed.
+Local boundedness makes $K_{j,k,\ell}\sqrt E\to0$.
+The lower bound contradicts \eqref{obs:average-collision-limit}.
+\end{proof}
+
+No growth restriction on $K_{j,k,\ell}$ as the indices increase is
+needed, and an unbounded certified cutoff subsequence suffices.
+The proof uses neither a simultaneous cutoff/time limit nor one
+constant uniform in spectral height or as the event time tends to zero.
+Every positive-time finite-height event must nevertheless be covered.
+For the complete theta field, coverage of $0<T\le1/2$ has the
+consequence stated in Remark~\ref{phy:imported-bridge}.
+
+If only one shrinking length $\delta_N$ is available per cutoff,
+the same argument works when the total mixed-error coefficient obeys
+$\varepsilon_N=o(\delta_N^m)$ for every fixed positive integer $m$.
+Indeed, choose a single $N$ with error smaller than the collision
+signal $d_{j,\delta_N}\asymp\delta_N^{2r}$ before taking the time
+limit.  A Gaussian total mixed error permits $\delta_N=N^{-q}$ for
+every fixed $q>0$; an algebraic total error suffices for
+$\delta_N=1/\log(N+2)$.
+The independent-cutoff version requires only convergence at each
+fixed length, but asks for a broader certificate domain.
+These refinements are developed in
+\cite{ThetaFactorChord,ThetaExponential,ThetaResearchPaths}.
+The theta core estimate \eqref{obs:average-mixed-hypothesis} remains
+unproved; the tail bound alone supplies no favorable sign.
 
 \subsection{The inner profile and quarter-turn concentration}
 
@@ -1316,9 +1476,10 @@ the orientation and allow negative turning; neither follows from a
 curvature-magnitude bound or from continuity on individual regular
 slices.  No global regularity of the second branch is assumed.
 
-The resulting hierarchy identifies concrete conditional source targets,
-with \eqref{phy:chord-target} the most tolerant energy-scale target
-proved here.  The exact polynomial controls in \cite{ThetaTurning,ThetaChord}
+The resulting hierarchy identifies concrete conditional source targets.
+The averaged criterion in Theorem~\ref{obs:average-mixed-exclusion}
+retains the sharp starting-energy scale while relaxing the endpoint
+observations and cutoff growth required of a certificate.  The exact polynomial controls in \cite{ThetaTurning,ThetaChord}
 test the local identities and their scope; they establish no sign bound
 for the theta source.  The remaining task is a complete-theta estimate
 with the required signs, starting-point energy, and uniform interval
@@ -2142,86 +2303,731 @@ that support-only positivity omits.  They identify the theta input, but
 an additional argument must still transfer that coupling to a favorable
 sign of the physical chord or stationary observation.
 
+\subsection{A normalized coefficient recurrence}
+\label{core:recurrence-subsection}
+
+The projected elliptic law supplies a convenient arithmetic input for the
+adjoint calculation below.  Its normalization is essential: the projected
+law alone retains an affine ambiguity in the square coefficients.
+
+\begin{proposition}[The normalized recurrence core]
+\label{core:normalized-recurrence}
+Let $(a_n)_{n\ge0}$ have polynomial growth, extend it evenly to $\mathbb Z$,
+and put
+\[
+ \beta_n=(4\pi n^2-1)e^{-\pi n^2},\qquad
+ \Delta a_n=a_{n-1}-2a_n+a_{n+1}.
+\]
+Then the conditions
+\begin{equation}
+ a_0=1,\qquad \Delta a_n=0\quad(n\ge1),\qquad
+ \sum_{n\ge1}\beta_na_n=\tfrac12
+ \label{core:normalized-input}
+\end{equation}
+force $a_n=1$ for every $n$.  No positivity assumption on $a_n$ is needed.
+Moreover, the recurrence is exactly the vanishing of the complete
+one-shift defect after the physical source projection.
+\end{proposition}
+\begin{proof}
+For the last assertion define
+\[
+ \Theta_a(z,\tau)=\sum_{n\in\mathbb Z}
+             a_ne^{\pi i n^2\tau+2\pi inz},\qquad
+ (\mathsf TF)(z,\tau)=e^{\pi i\tau+2\pi iz}F(z+\tau,\tau).
+\]
+At $q=e^{4u}\ge1$, use the complete ordinary source operator
+from \eqref{theta:ordinary-source},
+\[
+ \mathcal S_qF
+ =\left.e^u\left(\frac{q^2}{16\pi^2}\partial_z^4
+             +\frac{3q}{8\pi}\partial_z^2\right)F(z,iq)\right|_{z=0}.
+\]
+Reindexing the shifted series and pairing opposite modes gives
+\begin{equation}
+ \mathcal S_q(\mathsf T\Theta_a-\Theta_a)
+       =\tfrac12\sum_{n\ge1}(\Delta a_n)\phi_n(u).
+ \label{core:projected-recurrence}
+\end{equation}
+The zero mode is annihilated.  If the right side vanishes for every
+$q\ge1$, its least nonzero coefficient, if any, dominates as $q\to\infty$:
+its nonzero quadratic polynomial in $q$ times $e^{-\pi n^2q}$
+decays more slowly than every later mode.  Polynomial coefficient growth
+controls the remaining tail.  Thus every $\Delta a_n$ vanishes;
+the converse is immediate.  This proves the stated equivalence.
+
+The recurrence and $a_0=1$ give $a_n=1+bn$.  The complete theta primitive
+has $\sum_{n\ge1}\beta_n=1/2$, so the endpoint in
+\eqref{core:normalized-input} implies
+\[
+ b\sum_{n\ge1}n\beta_n=0.
+\]
+The last sum is strictly positive and finite, hence $b=0$.
+The complete projected calculation and its primitive endpoints are
+recorded in \cite{ThetaEllipticCore}.
+\end{proof}
+
+The endpoint in \eqref{core:normalized-input} is
+$-\psi_a'(0)=1/2$.  It restores information lost by source projection;
+it does not turn coefficient rigidity into a signed transform estimate.
+In particular, the ramp $a_n=1+bn$ passes the projected recurrence
+before that normalization is imposed.
+
+\begin{remark}[Scope of finite endpoint restrictions]
+\label{core:finite-endpoint-control}
+Positive weights on four square modes can satisfy
+$\Phi_a'(0)=\Phi_a'''(0)=0$ and the normalized primitive endpoint
+while their physical field has a nondegenerate positive-time double zero
+\cite{ThetaTwoEndpoint}.  Thus adding that second source endpoint
+does not replace the complete recurrence or reflection hypotheses.
+This control does not assert failure of every finite endpoint hierarchy.
+\end{remark}
+
+\subsection{Coupled addition and the complete starting factor}
+\label{core:coupled-subsection}
+
+The arithmetic product must retain independent source points.  Write
+$\Theta=\Theta_1$, $q=e^{4u}$, $r=e^{4v}$, with $u,v\ge0$, and set
+$p=n+m$, $k=n-m$, $X=z+w$, $Y=z-w$.  The inverse lattice map is
+$n=(p+k)/2$, $m=(p-k)/2$, with $p\equiv k\pmod2$.  Hence
+\begin{equation}
+ \Theta(z,iq)\Theta(w,ir)
+ =\sum_{p\equiv k\ (2)}
+       e^{-\pi Q_{q,r}(p,k)+\pi i(pX+kY)},
+ \quad
+ Q_{q,r}=\frac{q+r}{4}(p^2+k^2)+\frac{q-r}{2}pk .
+ \label{core:coupled-addition}
+\end{equation}
+The quadratic form has eigenvalues $q/2,r/2>0$, so these series and
+their fixed jets converge normally on compact parameter sets.
+
+For an explicit parity form, put $A=q+r$, $B=q-r$ and
+\[
+ \vartheta_\epsilon(Z,iA)=\sum_{a\in\mathbb Z}
+ e^{-\pi A(a+\epsilon/2)^2+2\pi i(a+\epsilon/2)Z},
+ \qquad \epsilon=0,1.
+\]
+Then the same identity is
+\begin{equation}
+ \Theta(z,iq)\Theta(w,ir)
+ =\exp\!\left(\frac{B}{2\pi}\partial_X\partial_Y\right)
+  \sum_{\epsilon=0}^1
+       \vartheta_\epsilon(X,iA)\vartheta_\epsilon(Y,iA).
+ \label{core:mixed-parity}
+\end{equation}
+The derivative expansion is normally convergent by the Gaussian margin
+$A-|B|=2\min(q,r)>0$.  Its mixed derivative cannot be discarded:
+$q=r$ represents only the diagonal $u=v$ of the physical double integral.
+
+Applying the two complete source operators to
+\eqref{core:coupled-addition} gives
+\begin{equation}
+ \Phi(u)\Phi(v)=\sum_{p\equiv k\ (2)}M_{p,k}(u,v),\qquad
+ M_{p,k}=\tfrac14
+ \phi_{|(p+k)/2|}(u)\phi_{|(p-k)/2|}(v),\quad \phi_0=0.
+ \label{core:coupled-source}
+\end{equation}
+This follows because each nonzero integer mode contributes
+$\phi_{|n|}/2$.  The lines $p=k$ and $p=-k$ are annihilated by the
+source operators.  Formula \eqref{core:coupled-source} retains positive
+source coefficients, but the physical transform still inserts its
+heat weights and oscillatory phases \cite{ThetaCoupled}.
+
+\begin{proposition}[Endpoint cutoff in the coupled lattice]
+\label{core:complete-start-strip}
+Let $h_{j,n}=\partial_x^jH_n$, $W=h_j(t,x)$ and
+$V_N=\sum_{m=1}^Nh_{j,m}(t,y)$.  The product $WV_N$, with its complete
+starting factor, uses precisely the coupled lattice strip
+\begin{equation}
+ p\equiv k\pmod2,\qquad |p-k|\le2N,
+ \label{core:endpoint-strip}
+\end{equation}
+with no restriction on $p+k$.  More generally, bounded endpoint weights
+$d_m$ give the mask $d_{|(p-k)/2|}$, independent of the starting index.
+\end{proposition}
+\begin{proof}
+The endpoint index is $m=(p-k)/2$, while
+$n=(p+k)/2$ is unrestricted.  Pairing the signs of the original integer
+indices gives the positive-index product
+$\sum_{n\ge1}\sum_{m=1}^Nh_{j,n}(t,x)h_{j,m}(t,y)$.
+The same argument gives the weighted mask; its zero-index value is
+irrelevant because $\phi_0=0$.  Absolute source bounds justify the
+exchanges \cite{ThetaParityStrip}.
+\end{proof}
+
+\begin{remark}[Constraints on a signed use of the product]
+\label{core:coupled-scope}
+The source addition matrix is not a positive Gram kernel: its principal
+block on $\{0,2\}$ has zero diagonal and strictly positive off-diagonal
+entries.  The factor-preserving estimates used here recombine arithmetic parity
+sectors and the physical exchange sectors of a complete-start/cutoff-endpoint
+product before charging the error to the starting energy
+\cite{ThetaCoupled,ThetaParityStrip,ThetaReflectedControl}.
+Full source reflection and generic source/Fourier Gram positivity
+also do not supply the missing sign: an explicit positive even source
+retains every odd primitive endpoint and nevertheless collides
+\cite{ThetaReflectedControl}.  That source has no nonzero
+polynomial-growth integer-square expansion, so it does not contradict
+Theorem~\ref{arith:reflection-rigidity}.  The coupled identities fix
+the arithmetic bookkeeping; the following estimates must still control
+its complete signed physical observation.
+\end{remark}
+
+% Prepared for Edward Baker with substantial LLM assistance.
+% Integration draft; mathematical scope and internal review in \cite{ThetaAdjoint}.
+\section{Quantitative recurrence stability and endpoint currents}
+\label{adj:section}
+
+The coefficient recurrence also gives quantitative information.
+We prove stability for weighted perturbations and a finite endpoint
+approximation whose error retains the complete starting amplitude.
+Neither result supplies a theta sign; the unresolved lower boundary
+is identified explicitly.
+
+\subsection{Physical mode bounds and the imaginary anchor}
+
+Write $\Phi=\sum_{n\ge1}\phi_n$, where
+\[
+ \phi_n(u)=e^u(2\pi^2n^4e^{8u}-3\pi n^2e^{4u})
+                  e^{-\pi n^2e^{4u}},
+ \quad
+ H_n(t,x)=\int_0^\infty e^{tu^2}\phi_n(u)\cos(xu)\,du,
+\]
+and put $h_{j,n}=\partial_x^jH_n$.  Define
+\begin{equation}
+ \beta_n=(4\pi n^2-1)e^{-\pi n^2},\qquad
+ \sum_{n\ge1}\beta_n=\tfrac12,\qquad
+ m_\beta=\sum_{n\ge1}n\beta_n\ge\tfrac12.
+ \label{adj:beta}
+\end{equation}
+The sum is the complete primitive endpoint $-\psi'(0)$.
+
+\begin{lemma}[Physical bound and endpoint evaluation]
+\label{adj:physical-bound}
+For every integer $j\ge0$ and finite real $T_{\max}$, the constants
+\[
+ M_j(T_{\max})=\sup_{u\ge0}u^j
+ e^{T_{\max}u^2+9u-(\pi/2)(e^{4u}-1)},\qquad
+ C_j(T_{\max})=\frac{\pi M_j(T_{\max})}{4\pi-1}
+\]
+are finite, and
+\begin{equation}
+ |h_{j,n}(t,x)|\le C_j(T_{\max})\beta_n
+ \qquad(t\le T_{\max},\ x\in\R).
+ \label{adj:mode-bound}
+\end{equation}
+Moreover $\beta_n=8H_n(0,i)$.  Thus, for
+$\sum\beta_n|a_n|<\infty$, the mode sum $H_a=\sum a_nH_n$
+and its real spatial jets converge absolutely, and
+$\sum\beta_na_n=1/2$ is exactly $H_a(0,i)=1/16$.
+\end{lemma}
+\begin{proof}
+Positivity of $\phi_n$ and its explicit formula give
+\[
+ \frac{\phi_n(u)}{\beta_n}\le
+ \frac{2\pi^2}{4\pi-1}n^2
+ e^{9u-\pi n^2(e^{4u}-1)}.
+\]
+Use $e^{4u}-1\ge4u$ and $n^2-1/2\ge n^2/2$,
+then integrate $n^2e^{-2\pi n^2u}$, to obtain
+\eqref{adj:mode-bound}.  For
+$p_n(u)=e^ue^{-\pi n^2e^{4u}}$,
+$p_n''-p_n=8\phi_n$ and $p_n'(0)=-\beta_n$.
+Integration against $\cosh u$ has zero upper boundary and gives
+$8\int_0^\infty\phi_n(u)\cosh u\,du=\beta_n$.
+Absolute summability justifies the stated mode sums and evaluation.
+\end{proof}
+
+The weighted class in this lemma need not have a smooth source density
+at zero.  Its observations are defined by the convergent mode sums;
+polynomial growth of the coefficients is not required.
+
+\subsection{An exact normalized defect identity}
+
+For $a_0=1$ and $\sum\beta_n|a_n|<\infty$, set
+\[
+ d_k=a_{k-1}-2a_k+a_{k+1},\qquad
+ e_a=\sum_{n\ge1}\beta_na_n-\tfrac12.
+\]
+For a real or complex test sequence with $|f_n|\le C\beta_n$, define
+\[
+ F_a=\sum a_nf_n,\quad F_\theta=\sum f_n,\quad m_f=\sum nf_n,
+ \qquad G_f(k)=\sum_{n>k}(n-k)f_n\quad(k\ge0).
+\]
+Use $G_\beta$ for the same construction with $f=\beta$, so
+$G_\beta(0)=m_\beta$.
+
+\begin{theorem}[Normalized recurrence stability]
+\label{adj:defect-stability}
+Put
+\[
+ \eta_f=\frac{m_f}{m_\beta},\qquad
+ D_k(f)=G_f(k)-\eta_fG_\beta(k).
+\]
+Then all the following series converge absolutely:
+\begin{align}
+ F_a-F_\theta&=\eta_fe_a+\sum_{k\ge1}D_k(f)d_k,
+ \label{adj:defect-identity}\\
+ |F_a-F_\theta|&\le
+ C\left(|e_a|+2\sum_{k\ge1}G_\beta(k)|d_k|\right).
+ \label{adj:defect-estimate}
+\end{align}
+The coefficients satisfy
+$|\eta_f|\le C$ and
+$|D_k(f)|\le2CG_\beta(k)\le8C\beta_{k+1}$.
+Their exact lower traces are
+\begin{equation}
+ \Delta D_k=f_k-\eta_f\beta_k\quad(k\ge1),\qquad
+ D_0=0,\qquad D_1=-F_\theta+\eta_f/2.
+ \label{adj:dual-traces}
+\end{equation}
+\end{theorem}
+\begin{proof}
+Writing $b=a_1-1$, the finite-index recurrence solution is
+$a_n=1+nb+\sum_{k<n}(n-k)d_k$.
+Since $\beta_{n+1}/\beta_n<1/2$,
+$G_\beta(k)\le4\beta_{k+1}$.
+Expanding $d_k$ into its three neighboring coefficients shows
+$\sum G_\beta(k)|d_k|<\infty$ under the stated weighted assumption.
+The recurrence may therefore be summed against both $\beta_n$ and
+$f_n$, giving
+\[
+ e_a=bm_\beta+\sum G_\beta(k)d_k,\qquad
+ F_a-F_\theta=bm_f+\sum G_f(k)d_k.
+\]
+Eliminating $b$ proves \eqref{adj:defect-identity}.
+The bounds follow from $|G_f(k)|\le CG_\beta(k)$.
+Finally $\Delta G_f(k)=f_k$,
+$G_f(0)=m_f$, and $G_f(1)=m_f-F_\theta$, proving
+\eqref{adj:dual-traces}.
+\end{proof}
+
+For physical jets the estimate is uniform in real $x$ and
+$t\le T_{\max}$.  Its coefficients use no division by $H$, $E$,
+or stationarity.  Gaussian decay of the dual weights does not,
+without a uniform defect-tail bound, imply a uniform Gaussian
+remainder after truncating the sum.
+At theta, $d=e_a=0$; the identity then retains the unknown
+observation in $D_1$, rather than estimating its sign.
+
+\subsection{A finite positive hierarchy and its sharp rate}
+
+\begin{proposition}[Finite recurrence stability]
+\label{adj:finite-hierarchy}
+Suppose $a_0=1$, $a_n\ge0$, $\sum\beta_na_n=1/2$, and
+$d_k=0$ for $1\le k\le N$.  Put $M=N+1$ and
+\[
+ R^\beta_M=\sum_{n>M}\beta_n,\qquad
+ m_M=\sum_{n=1}^M n\beta_n.
+\]
+Then
+\begin{equation}
+ \sum_{n\ge1}\beta_n|a_n-1|
+ \le2R^\beta_M+\frac{2m_M}{M},\qquad
+ |F_a-F_\theta|\le2C\left(R^\beta_M+\frac{m_M}{M}\right).
+ \label{adj:finite-bound}
+\end{equation}
+The first bound is the exact supremum over this class.
+The order $M^{-1}$ also occurs for the physical observation $H_a(0,0)$.
+If $a_1=1$ is additionally imposed, both bounds improve respectively
+to $2R^\beta_M$ and $2CR^\beta_M$, where
+$R^\beta_M=O((M+1)^2e^{-\pi(M+1)^2})$.
+\end{proposition}
+\begin{proof}
+The recurrence gives $a_n=1+bn$ for $0\le n\le M$.
+Positivity and normalization give
+$-1/M\le b\le R^\beta_M/m_M$ and tail mass
+$\sum_{n>M}\beta_na_n=R^\beta_M-bm_M$.
+Hence the weighted distance is at most
+$2R^\beta_M+(|b|-b)m_M$, proving \eqref{adj:finite-bound}.
+If $a_1=1$, then $b=0$, giving the improved estimate.
+
+For sharpness, choose $K>M$, set $a_n=(1-n/M)_+$ except at $K$,
+and set $a_K=(R^\beta_M+m_M/M)/\beta_K$.
+This finite nonnegative sequence has every required constraint.
+For sufficiently large $K$, its weighted distance is
+$2R^\beta_M+2m_M/M-2\beta_K$.
+For the physical assertion put $\omega_n=\int_0^\infty p_n(u)\,du$.
+Integration by parts and $e^{4u}\ge1+4u$ give
+\[
+ H_n(0,0)=\frac{\beta_n-\omega_n}{8},\qquad
+ 0<\frac{\omega_n}{\beta_n}
+ \le(4\pi n^2-1)^{-2}.
+\]
+The ramp-and-spike deviation consequently tends, as $K\to\infty$, to
+\[
+ \frac{\sum_{n\le M}n\omega_n+
+                     M\sum_{n>M}\omega_n}{8M}
+ \sim\frac1{8M}\sum_{n\ge1}n\omega_n>0.
+\]
+For each $M$, sufficiently large finite $K$ realizes at least half
+this positive limit.  Finally the Gaussian tail bound for
+$R^\beta_M$ follows directly from the explicit $\beta_n$.
+\end{proof}
+
+These controls establish a stability rate, not a collision.
+Even the anchored Gaussian absolute error is not automatically
+an $o(\sqrt E)$ error near an unknown event.
+
+\subsection{A finite current preserving the starting amplitude}
+
+For a sequence $f$ with $\sum_{n\ge1}n|f_n|<\infty$, adjoin $f_0=0$
+and define
+\[
+ (\mathsf Pf)_0=0,\qquad
+ (\mathsf Pf)_n=\tfrac12(f_{n-1}+f_{n+1})\quad(n\ge1).
+\]
+The zeroth coordinate is reset to zero at every iteration.
+For an integer depth $L\ge1$, put
+$J^{[L]}=-\frac12\sum_{k=0}^{L-1}\mathsf P^kf$ and $J^{[L]}_0=0$.
+
+\begin{proposition}[Absorption current and remainder]
+\label{adj:absorption-current}
+Let $c_L=2^{-L}\binom L{\lfloor L/2\rfloor}$ and set
+\[
+ p_L(k)=2^{-L}\binom L{(L+k)/2},\qquad
+ s_L(m)=\sum_{k=1-m}^{m}p_L(k),\qquad q_L(m)=1-s_L(m),
+\]
+with inadmissible binomial coefficients interpreted as zero.
+Then $q_L(m)=0$ for $m>L$, $0\le q_L,s_L\le1$, and
+\begin{align}
+ \Delta J^{[L]}&=f-\mathsf P^Lf,\qquad
+ \sum f_n=B_L(f)+R_L(f), \label{adj:current-identity}\\
+ B_L(f)&=-J^{[L]}_1=\sum_{m=1}^Lq_L(m)f_m,\qquad
+ R_L(f)=\sum_{m\ge1}s_L(m)f_m, \label{adj:current-weights}\\
+ |R_L(f)|&\le c_L\sum_{m\ge1}m|f_m|
+ \le\sqrt{\frac2{L+1}}\sum_{m\ge1}m|f_m|.
+ \label{adj:current-error}
+\end{align}
+The first moment $\sum n(\mathsf P^Lf)_n=\sum nf_n$ is conserved.
+\end{proposition}
+\begin{proof}
+On sequences with zero zeroth coordinate, $\Delta=2(\mathsf P-I)$,
+so the current identity telescopes.
+Reflection at zero gives the nonnegative kernel
+$p_L(n-m)-p_L(n+m)$ for $\mathsf P^L$.
+Summing over $n\ge1$ gives $s_L(m)$.
+Its defining interval contains $m$ admissible parity indices, so
+$s_L(m)\le\min(1,mc_L)$.
+The elementary central-binomial bound gives
+$c_L\le\sqrt{2/(L+1)}$.
+Finite iterates preserve weighted absolute summability.
+Thus the upper boundaries in
+$\sum_{n=1}^Q\Delta J_n=J_0-J_1+J_{Q+1}-J_Q$
+and
+$\sum_{n=1}^Q n\Delta J_n=J_0-(Q+1)J_Q+QJ_{Q+1}$
+vanish as $Q\to\infty$, proving the remaining assertions.
+\end{proof}
+
+Apply this construction only at the endpoint, defining
+\[
+ W^{[L]}(t,y)=\sum_{m=1}^Lq_L(m)h_{j,m}(t,y),\qquad W=h_j.
+\]
+Lemma~\ref{adj:physical-bound} and
+Proposition~\ref{adj:absorption-current} give
+$|W-W^{[L]}|\le c_LC_j(T_{\max})m_\beta$ uniformly for real $y$
+and $t\le T_{\max}$.
+For $j=0,1$ and $\delta>0$, define
+\[
+ \mathcal A^{[L]}_{j,\delta}
+ =W(t,x)^2-e^{-\delta}W(t,x)W^{[L]}(t,x+\delta),
+ \quad
+ \mathcal A_{j,\delta}=W(t,x)^2-e^{-\delta}W(t,x)W(t,x+\delta).
+\]
+Because the starting field remains complete,
+\begin{equation}
+ |\mathcal A_{j,\delta}-\mathcal A^{[L]}_{j,\delta}|
+ \le e^{-\delta}c_LC_j(T_{\max})m_\beta\sqrt{E(t,x)}.
+ \label{adj:factor-preserving-current}
+\end{equation}
+This identity requires no stationarity assumption.
+Any independent signed-core bound must use the complete condition
+$h_{j+1}(t,x)=0$ and its required interval domain.
+The coefficient of $\sqrt E$ in this error tends to zero at fixed
+$\delta$; it is also smaller than every fixed power of
+$\delta_L=1/\log(L+2)$.
+The finite primitive endpoint is
+$\beta^{[L]}=\sum_{m=1}^Lq_L(m)\beta_m<1/2$, with exact deficit
+$R_L(\beta)$, and cannot be replaced by $1/2$.
+
+\begin{remark}[Scope of the negative results]
+\label{adj:limitations}
+The current gives an approximation, not its sign.
+For a fixed residual with $\sum n|r_n|<\infty$, cancelling its
+boundary-plus-normalization
+term with $\eta_L=-B_L(r)/R_L(\beta)$ leaves exactly
+$R_L(r-\eta_L\beta)=\sum r_n$.
+The unknown observation has moved to the remainder.
+A separate finite-range result rules out the specified exact pointwise
+endpoint reconstruction by finitely many neighboring square modes,
+polynomial source multipliers and finitely many spectral frequencies.
+Its precise hypotheses require a nonzero diagonal target mode beyond
+the current's range and exclude an independent source-divergence term.
+These scoped obstructions, proved in \cite{ThetaAdjoint}, do not exclude
+integrated identities, source-divergence corrections with complete
+boundary terms, or one-sided bilocal estimates.
+\end{remark}
+
+\section{Arithmetic boundary traces and signed observation}
+\label{obs:boundary-geometry}
+
+The recurrence experiment exposes a boundary obstruction that the
+physical geometry can identify more precisely.
+The conclusions below concern exact sequence spaces, finite linear
+relaxations, and conditional physical estimates; they do not establish
+a signed theta inequality.  Details are recorded in
+\cite{ThetaBoundaryGeometry}.
+
+Let $\mathcal S_+$ and $\mathcal S_0$ denote the real rapidly
+decreasing sequences on $n\ge1$ and $n\ge0$, respectively, and set
+\[
+ (\Delta J)_n=J_{n-1}-2J_n+J_{n+1},\qquad
+ \mathcal N=\{J\in\mathcal S_0:J_0=J_1\}.
+\]
+\begin{proposition}[The recurrence boundary class]
+\label{obs:trace-cokernel}
+The map $\Delta:\mathcal N\to\mathcal S_+$ is injective and
+\begin{equation}
+ \operatorname{range}(\Delta|_{\mathcal N})
+ =\left\{r\in\mathcal S_+:\sum_{n\ge1}r_n=0\right\}.
+ \label{obs:trace-range}
+\end{equation}
+Its algebraic cokernel is one-dimensional, detected by total sum.
+\end{proposition}
+\begin{proof}
+Telescoping gives $\sum_{n\ge1}\Delta J_n=J_0-J_1$.
+For any $r\in\mathcal S_+$, the current
+\begin{equation}
+ J_n=\sum_{m>n}(m-n)r_m
+ \label{obs:tail-current}
+\end{equation}
+is rapidly decreasing, satisfies $\Delta J=r$, and has
+$J_0-J_1=\sum r_n$.
+Rapid decrease follows from arbitrarily high weighted tail bounds.
+A homogeneous solution is affine in $n$, hence is zero if rapidly
+decreasing.  This proves the range assertion and injectivity.
+\end{proof}
+
+The primitive endpoint sequence
+$\beta_n=(4\pi n^2-1)e^{-\pi n^2}$ has $\sum\beta_n=1/2$.
+Its class therefore spans this cokernel: uniquely,
+\[
+ r=\Delta J+\eta\beta,\qquad J\in\mathcal N,
+ \qquad \eta=2\sum r_n.
+\]
+Choosing $\eta$ from the unknown physical residual does not estimate
+that residual.  An effective arithmetic construction must control
+the lower trace independently, while retaining every finite-cutoff
+boundary.  Parameter-dependent estimates additionally require locally
+uniform weighted bounds; a pointwise sequence identity does not
+supply them.
+
+\begin{proposition}[Bounded descent to the physical observation quotient]
+\label{obs:quotient-norm}
+Let $V$ be a finite-dimensional real inner-product space describing a
+homogeneous linear relaxation of arithmetic and stationarity
+constraints.  Let $\mathsf J:V\to\R^2$ be its physical first-jet map
+and $\ell:V\to\R$ an endpoint functional.
+There exists a finite $C$ such that
+\begin{equation}
+ |\ell(c)|\le C\|\mathsf Jc\|\quad(c\in V)
+ \label{obs:quotient-bound}
+\end{equation}
+if and only if $\ker\mathsf J\subseteq\ker\ell$.
+In orthonormal coordinates the least constant is
+$C_{\min}=\|\ell\mathsf J^\dagger\|$, where
+$\mathsf J^\dagger$ is the Moore--Penrose inverse.
+\end{proposition}
+\begin{proof}
+Necessity follows on kernel vectors.  Under kernel inclusion,
+$b(\mathsf Jc)=\ell(c)$ is a well-defined covector on
+$\operatorname{im}\mathsf J$, with least bound its operator norm.
+The row $\ell\mathsf J^\dagger$ represents that covector and
+vanishes on the orthogonal complement of the image.
+\end{proof}
+
+Affine normalization requires retaining the basepoint contribution
+separately.  This proposition does not assert that actual theta
+coefficients range over every vector in a chosen relaxation.
+Moreover, pointwise descent does not imply local boundedness through
+degeneration: for
+\[
+ \mathsf J(\tau)=\operatorname{diag}(1,\tau^2),\qquad
+ \ell(\tau)=(0,\tau),
+\]
+the kernel condition holds even at $\tau=0$, but
+$C_{\min}=|\tau|^{-1}$ for $\tau\ne0$.
+This is an analytic matrix example, not a theta heat field.
+It makes a vanishing-order estimate necessary after the rank test.
+
+For the actual field, put $F=(H,H_x)$, $\rho=\|F\|=\sqrt E$,
+$W=h_j$, and $S=h_{j+1}$, with $j=0,1$.
+If an endpoint observation $V$ has a reconstruction
+\begin{equation}
+ V=AH+BH_x+CS+R,\qquad |R|\le\varepsilon,
+ \label{obs:reconstruction}
+\end{equation}
+then full stationarity with $E>0$ gives the necessary estimate
+\begin{equation}
+ \|(A,B)\|\ge\frac{(|V|-\varepsilon)_+}{\sqrt E}.
+ \label{obs:reconstruction-cost}
+\end{equation}
+At a multiplicity $2r+j$ predecessor, $\sqrt E\asymp s^r$.
+A sufficiently close fixed endpoint, or a sufficiently accurate fixed
+cutoff of that endpoint, has a nonzero limit $v$.
+If $\varepsilon<|v|/2$, the coefficients in
+\eqref{obs:reconstruction} must therefore grow at least as $s^{-r}$.
+An independently bounded reconstruction would exclude the event;
+division or pseudoinversion alone does not prove its boundedness.
+Bounded nonsingular changes of first-jet frame preserve this
+obstruction.  A singular frame moves it into the comparison with
+the physical norm.
+
+The actual chord target is less restrictive than absolute endpoint
+reconstruction.  For $\rho>0$ put $\theta=F/\rho$ and let $e_j$
+select the $H$ or $H_x$ coordinate.  With $\alpha=e^{-\delta}$,
+\begin{equation}
+ \frac{W^2-\alpha WV}{E}
+ =(e_j\cdot\theta)^2
+   -\alpha\frac{(e_j\cdot\theta)V}{\rho}.
+ \label{obs:radial-signed-observation}
+\end{equation}
+For fixed $\delta>0$, a lower bound by $-KE$ with locally bounded $K\ge0$ is
+equivalent to local boundedness of $[WV]_+/E$.
+A large endpoint opposite in sign to $W$ is harmless.
+The manuscript's marked real Gauss map retains orientation; here
+one must additionally retain the radial vanishing order relative
+to $\sqrt E$.
+
+\begin{proposition}[A sufficient signed boundary-trace estimate]
+\label{obs:signed-trace}
+Suppose a complete arithmetic decomposition gives
+\[
+ V=AH+BH_x+CS+B_{\partial}+R,\qquad |R|\le\varepsilon.
+\]
+On full stationary starts with $\rho>0$, suppose
+\begin{equation}
+ \frac{W}{\rho}B_{\partial}
+ \le C_0\rho+\varepsilon_0,
+ \label{obs:signed-boundary-target}
+\end{equation}
+where $C_0,\varepsilon,\varepsilon_0\ge0$.
+Then
+\begin{equation}
+ WV\le(|A|+|B|+C_0)E
+       +(\varepsilon+\varepsilon_0)\sqrt E.
+ \label{obs:signed-boundary-transfer}
+\end{equation}
+\end{proposition}
+\begin{proof}
+Multiply \eqref{obs:signed-boundary-target} by $\rho$, use $S=0$,
+and bound $|WH|$, $|WH_x|$ by $E$ and $|WR|$ by
+$\varepsilon\sqrt E$.
+\end{proof}
+
+If $A,B,C_0$ are locally bounded and the errors meet the prescribed
+fixed-length or shrinking-length requirements, this gives the
+mixed-error bound for the exponential chord on both branches.
+The complete trace may take the recurrence form
+$B_{\partial}=J_0-J_1+\eta/2$, with additional cutoff or source
+boundaries retained explicitly.
+Neither the cokernel description nor a change of geometry proves
+\eqref{obs:signed-boundary-target}.
+The new geometric task is an independent oriented estimate for this
+arithmetic trace with the required radial order; the nonnegative
+metric and its curvature magnitude do not supply that estimate.
+
 \section{The remaining arithmetic-to-physical estimate}\label{next:section}
 
-The strongest open target is now a specific two-point inequality, not
-an additional geometric realization. On a neighborhood of every
-candidate event, for both $j=0,1$, seek a source-prescribed estimate
+The most focused open target combines the complete coefficient
+recurrence with the signed physical boundary observation. For both
+$j=0,1$, put $W=h_j$ and retain full stationarity $h_{j+1}(t,x)=0$.
+For source-prescribed endpoint approximations $V_N(t,x+\delta)$, seek
 \begin{equation}
- \mathcal C_j(t;x,y)\ge-K E(t,x)^\gamma,
- \qquad \gamma>\tfrac12,
+ W(t,x)^2-e^{-\delta}W(t,x)V_N(t,x+\delta)
+ \ge-K_{\delta,N}E(t,x)
+       -\varepsilon_{\delta,N}\sqrt{E(t,x)}.
  \label{next:chord-target}
 \end{equation}
-with locally bounded $K$, a fixed positive allowed interval length,
-full stationarity at $x$, and $h_j$ zero-free on $[x,y]$.
-The fixed-endpoint theorem proves the transfer to collision exclusion;
-the complete theta source has not been shown to satisfy this estimate.
-Its quantifiers include the fixed nearby endpoints used by the proof,
-not only a single shrinking window. The original one-sided turning
-modulus and stationary Laguerre bounds remain alternative sufficient
-targets, with their own domains.
+For each chosen length and cutoff, the coefficient must stay locally
+bounded through a hypothetical event. The endpoint approximation error
+and $\varepsilon_{\delta,N}$ must tend to zero along a prescribed
+cutoff sequence. The independent-cutoff criterion fixes a sufficiently
+small length, then an accurate cutoff, and finally approaches the event;
+it imposes no growth restriction on $K_{\delta,N}$ across cutoffs.
+The theta field has not been shown to satisfy this bound.
 
-\subsection{Coefficient coupling with a complete remainder}
-The square-support control and reflection theorem distinguish two
-arithmetical inputs. Even all support-only localizers leave the weights
-free and permit a collision. Full modular reflection fixes the weights,
-but uniqueness alone says nothing about the signed physical transform.
-A useful next identity must use that coupling inside the complete
-bilocal chord, preserve full stationarity, and retain both source
-variables and their affine lower endpoints. The theta line-bundle
-translation law is another exact way to express the same coefficient
-coupling; scalar period two alone does not impose it.
+The original chord bound $\mathcal C_j\ge-KE^\gamma$,
+$\gamma>1/2$, and the stationary and angular criteria remain
+alternative sufficient hypotheses with their own coverage requirements.
+For a family available only at shrinking lengths, a sufficient uniform condition is that the error decay
+faster than every fixed power of those lengths, covering arbitrary finite
+multiplicity. Polynomial cutoff error permits lengths such as
+$1/\log(N+2)$; it does not justify an arbitrary faster schedule.
 
-A concrete candidate is an all-integer-cutoff family
+\subsection{A signed trace from a joint source identity}
+The exact recurrence identifies the input and its dual quantifies
+defects, but at theta those defects vanish and the unresolved physical
+observation survives in the lower boundary. The finite-current
+normalization experiment does not remove it. A different bounded
+experiment would seek a source-prescribed joint identity
 \[
- \mathcal C_j\ge-A E(t,x)e^{aN^2}-B e^{-cN^2},
- \qquad a\le a_*<c_0\le c,
+ r_n(u)=\Delta_n J_n(u)+\partial_u K_n(u)+\varrho_n(u),
 \]
-with source-derived locally uniform constants and cutoff threshold.
-The strict rate gap would give an error $o(\sqrt{E(t,x)})$ after
-optimization. Sub-Gaussian cutoff growth is also sufficient. Neither
-the complete decomposition nor its rate gap is established. The cutoff
-$N$ is distinct from the unbounded spectral coordinate $x$; favorable
-cutoff scaling does not supply spectral coverage.
+retaining both lower boundaries and every cutoff correction after
+summation and integration. Source divergence and primitive endpoints
+already occur in the complete-source formulas. Their mere reappearance
+is not an additional sign mechanism.
 
-The transverse jet recurrence provides exact differential relations
-available for such an identity. The path-restricted ASD curvature does
-not itself provide a positive term, and an auxiliary norm still needs
-a proved comparison to the physical observation before it can pay a
-remainder.
+The useful geometric target concerns the complete resulting trace
+$B_{\partial}$. If
+\[
+ V=AH+BH_x+Ch_{j+1}+B_{\partial}+R,
+ \qquad |R|\le\varepsilon,
+\]
+with locally bounded $A,B$, seek
+\begin{equation}
+ \frac{W}{\sqrt E}B_{\partial}
+ \le C_0\sqrt E+\varepsilon_0
+ \qquad(E>0,\ h_{j+1}=0).
+ \label{next:signed-trace}
+\end{equation}
+The resulting mixed chord bound retains favorable large boundary
+values with the opposite sign from $W$. Absolute reconstruction is
+stronger than necessary. A new metric, normalization coefficient or
+pseudoinverse must produce an independent estimate of this signed
+trace and its radial order; a change of representation alone does not.
 
-\subsection{A tested contour route and its limitation}
-The period-two contour deformation in \cite{ThetaContour} gives an
-exact identity $h_j=V_j+B_j$ with the shifted ray and bottom edge kept
-together. The leading exponential terms of the two sectors cancel;
-the bilocal observation accordingly contains all four sector products.
-Separate absolute sector bounds have exponential cost in spectral
-height and cannot provide a polynomial-in-height payment against
-bounded physical energy. This rejects that particular estimate, not
-the complete contour identity or a coefficient allowed to be merely
-locally bounded at each finite height. Detailed asymptotics and
-validated samples remain in the note.
-
-Other proposals, including the natural fiber-norm lift, unchanged
-compact ASD completion, and global Pick-type positivity, are assessed
-in the numbered research overview and its linked strategy note
-\cite{ThetaOverview,ThetaStrategy}. They are not additional premises
-of the theorems here. Their next useful contribution would be a new
-cancellation-preserving identity reaching
-\eqref{next:chord-target}, with a complete remainder.
+\subsection{Earlier unsuccessful constructions}
+The coupled-product Gram ansatz, finite elliptic projection, and
+primitive normalization correction have the specific limitations
+recorded above and in their notes. These conclusions do not exclude all
+arithmetic currents, integrated cancellations or one-sided estimates.
+The period-two contour identity in \cite{ThetaContour} retains its
+shifted ray and bottom edge, whose leading terms cancel. Separate
+absolute sector bounds lose that cancellation and have exponential
+cost in spectral height. The detailed asymptotics remain in the note.
+Other geometric and outer-bridge alternatives are assessed in
+\cite{ThetaOverview,ThetaStrategy,ThetaResearchPaths}. None supplies
+the missing signed trace or extends a theorem's physical domain.
 
 \subsection{Validation and coverage}
-A proposed coefficient rule should first be tested against the
-asymmetric heat-polynomial controls and the validated weighted-square
-collision. This identifies which extra arithmetic hypothesis is doing
-work. A theta pilot must then evaluate the complete signed observation,
-full stationary root, interval regularity, endpoints and tails using
-coefficients fixed before the calculation. A finite success motivates
-an analytic extension; it does not prove an all-cutoff estimate or
-coverage of the unbounded spectral line and the small-time limit.
-Those requirements, and the imported global hypotheses in
-Remark~\ref{phy:imported-bridge}, remain indispensable for an RH
-conclusion.
+A proposed coefficient rule should be tested against the asymmetric
+heat-polynomial and weighted-square controls, using the complete
+stationary condition. The positive recurrence hierarchy supplies an
+additional quantitative test: an argument claiming Gaussian convergence
+from its unanchored finite constraints conflicts with the sharp ramp
+controls. Conversely, even Gaussian absolute proximity to theta does
+not establish the sign of theta's observation.
+
+A theta pilot must evaluate the complete signed pairing, full stationary
+root, interval conditions, endpoints and tails with coefficients fixed
+before the calculation. A finite success motivates an analytic extension; it does not prove
+the required cutoff family or coverage of every positive-time
+finite-height event. The declared local uniformity, event coverage and
+imported global hypotheses in Remark~\ref{phy:imported-bridge} remain
+indispensable for an RH conclusion. A single constant uniform as
+$t\downarrow0$ or $|x|\to\infty$ is not asserted or required by the
+fixed-length mixed-error criterion. The next-chat continuation is \cite{ThetaContinuation}.
 
 \section*{Acknowledgments and research status}
 This research manuscript was prepared for Edward Baker with
@@ -2256,13 +3062,28 @@ negativity. The weighted-square calculation certifies a non-theta
 collision. The contour samples check complete identities and are not
 stationary theta sign certificates.
 
+The later coefficient-core and endpoint package records 2,136 exact
+and 26 mixed or validated checks; the coupled-product package records
+3,278 exact and 38 mixed or validated checks. The recurrence checker
+adds 6,892 exact rational assertions, independently replayed. Its rational
+surrogate weights test finite current, defect and hierarchy algebra;
+they are not actual-theta numerical sign data. The physical beta bound,
+sharp hierarchy rate, sequence-space range and quotient-norm statements
+are analytic proofs. These packages are indexed in the
+\researchnote{numerics/COEFFICIENT_CORE_AND_TWO_ENDPOINT_CHECKS_20261015.json}
+{coefficient-core manifest},
+\researchnote{numerics/COUPLED_PRODUCT_CONTINUATION_CHECKS_20261015.json}
+{coupled-product manifest}, and
+\researchnote{numerics/ADJOINT_RECURRENCE_CONTINUATION_CHECKS_20261015.json}
+{recurrence research manifest}.
+
 The reproducible scripts, output receipts and source hashes are indexed
 in the \researchnote{numerics/CONNECTION_BRIDGE_AND_INNER_TURNING_CHECKS_20261015.json}
 {connection and profile manifest} and
 \researchnote{numerics/ARITHMETIC_CONTOUR_CHORD_CHECKS_20261015.json}
 {arithmetic, contour and chord manifest}. The
-\researchnote{reviews/04_MANUSCRIPT_INTEGRATION_REVIEW_20261015.md}
-{integration review} records the manuscript-specific proof and layout
+\researchnote{reviews/09_RECURRENCE_MANUSCRIPT_INTEGRATION_REVIEW_20261015.md}
+{current integration review} records the manuscript-specific proof and layout
 checks; the \researchnote{manuscript/BUILD_RECORD.json}{build record}
 identifies this source and its exported PDF. Older manifests describe
 their own research checkpoints, including the then-unchanged initial
@@ -2271,11 +3092,11 @@ manuscript. They are not silently rewritten as current build records.
 The foundational material comes from Investigation 21
 \cite{BakerTheta} and its Notes 56--63. Principal geometric arguments
 are restated, while the global theta-to-RH bridge retains its imported
-status. The present integration adds the stronger chord criterion,
-complete source bridge, metric classification and arithmetic
-discrimination from the linked Investigation 22 notes. The period-two
-experiment is summarized; less developed proposals remain in
-\cite{ThetaOverview,ThetaStrategy}. Local research links are relative
+status. The current integration adds exponential-average transfer, normalized
+coefficient coupling, quantitative recurrence stability, finite endpoint
+currents and the signed boundary formulation. Negative findings are
+summarized with their precise scopes and links to detailed notes; less
+developed proposals remain in \cite{ThetaOverview,ThetaResearchPaths}. Local research links are relative
 to the repository reading copy in \texttt{output/pdf}; the source
 remains the stable editable manuscript, with milestones indexed in
 \texttt{DRAFT\_HISTORY.md} and no new snapshot folders.
@@ -2394,6 +3215,72 @@ prepared for Edward Baker with substantial LLM assistance.
 E. Baker (research project),
 \researchnote{notes/00_research_coordination/03_PRIORITIZED_SIGNED_BOUND_RESEARCH_PATHS_20261015.md}{\emph{Prioritized signed-bound research paths}},
 Investigation 22, Research coordination Note 03, 15 October 2026;
+prepared for Edward Baker with substantial LLM assistance.
+
+\bibitem{ThetaFactorChord}
+E. Baker (research project),
+\researchnote{notes/02_signed_turning_control/03_FACTOR_PRESERVING_AND_AVERAGED_CHORD_TARGETS_20261015.md}{\emph{Factor-preserving and averaged chord targets}},
+Investigation 22, Signed turning Note 03, 15 October 2026;
+prepared for Edward Baker with substantial LLM assistance.
+
+\bibitem{ThetaExponential}
+E. Baker (research project),
+\researchnote{notes/02_signed_turning_control/04_EXPONENTIAL_AVERAGE_AND_SHRINKING_CHORD_TARGETS_20261015.md}{\emph{Exponential average and shrinking chord targets}},
+Investigation 22, Signed turning Note 04, 15 October 2026;
+prepared for Edward Baker with substantial LLM assistance.
+
+\bibitem{ThetaEllipticCore}
+E. Baker (research project),
+\researchnote{notes/03_theta_bundles_and_connections/05_ELLIPTIC_SHIFT_CORE_AND_PROJECTION_OBSTRUCTION_20261015.md}{\emph{Elliptic shift core and projection obstruction}},
+Investigation 22, Theta connections Note 05, 15 October 2026;
+prepared for Edward Baker with substantial LLM assistance.
+
+\bibitem{ThetaCoupled}
+E. Baker (research project),
+\researchnote{notes/03_theta_bundles_and_connections/06_COUPLED_THETA_PRODUCT_AND_PARITY_SECTORS_20261015.md}{\emph{Coupled theta product and parity sectors}},
+Investigation 22, Theta connections Note 06, 15 October 2026;
+prepared for Edward Baker with substantial LLM assistance.
+
+\bibitem{ThetaParityStrip}
+E. Baker (research project),
+\researchnote{notes/03_theta_bundles_and_connections/07_PARITY_STRIP_CUTOFF_AND_FULL_STARTING_FACTOR_20261015.md}{\emph{Parity strip cutoff and full starting factor}},
+Investigation 22, Theta connections Note 07, 15 October 2026;
+prepared for Edward Baker with substantial LLM assistance.
+
+\bibitem{ThetaTwoEndpoint}
+E. Baker (research project),
+\researchnote{notes/05_control_families/03_TWO_ENDPOINT_SQUARE_COLLISION_20261015.md}{\emph{Two-endpoint square collision}},
+Investigation 22, Control families Note 03, 15 October 2026;
+prepared for Edward Baker with substantial LLM assistance.
+
+\bibitem{ThetaReflectedControl}
+E. Baker (research project),
+\researchnote{notes/05_control_families/04_REFLECTION_POSITIVE_SOURCE_COLLISION_AND_MIXED_SECTORS_20261015.md}{\emph{Reflection-positive source collision and mixed sectors}},
+Investigation 22, Control families Note 04, 15 October 2026;
+prepared for Edward Baker with substantial LLM assistance.
+
+\bibitem{ThetaAdjoint}
+E. Baker (research project),
+\researchnote{notes/03_theta_bundles_and_connections/08_ADJOINT_RECURRENCE_ENDPOINT_EXPERIMENT_20261015.md}{\emph{Adjoint recurrence endpoint experiment and quantitative stability}},
+Investigation 22, Theta connections Note 08, 15 October 2026;
+prepared for Edward Baker with substantial LLM assistance.
+
+\bibitem{ThetaBoundaryGeometry}
+E. Baker (research project),
+\researchnote{notes/01_physical_jet_geometry/01_ARITHMETIC_BOUNDARY_TRACE_AND_SIGNED_OBSERVATION_20261015.md}{\emph{Arithmetic boundary traces and signed physical observation}},
+Investigation 22, Physical jet geometry Note 01, 15 October 2026;
+prepared for Edward Baker with substantial LLM assistance.
+
+\bibitem{ThetaResearchPaths}
+E. Baker (research project),
+\researchnote{notes/00_research_coordination/07_RESEARCH_PATHS_AFTER_COUPLED_PRODUCT_20261015.md}{\emph{Research paths after the coupled-product experiment}},
+Investigation 22, Research coordination Note 07, 15 October 2026;
+prepared for Edward Baker with substantial LLM assistance.
+
+\bibitem{ThetaContinuation}
+E. Baker (research project),
+\researchnote{notes/00_research_coordination/09_MANUSCRIPT_RECURRENCE_INTEGRATION_AND_NEXT_CHAT_20261015.md}{\emph{Recurrence manuscript integration and next-chat continuation}},
+Investigation 22, Research coordination Note 09, 15 October 2026;
 prepared for Edward Baker with substantial LLM assistance.
 
 \end{thebibliography}

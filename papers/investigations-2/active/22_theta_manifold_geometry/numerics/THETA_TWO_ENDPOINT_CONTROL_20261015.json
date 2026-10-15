@@ -1,0 +1,168 @@
+{
+  "date": "2026-10-15",
+  "prepared_for": "Edward Baker",
+  "model": "gpt-6-astra",
+  "reasoning_effort": "ultra",
+  "llm_assistance": "Substantial LLM assistance",
+  "checker": "check_theta_two_endpoint_control.py",
+  "checker_sha256": "576936dd13c5b53c93f7f9a34a20d26f27227cc2b1db26702d49e7a5bfa6207e",
+  "precision_bits": 160,
+  "python_version": "3.10.0",
+  "python_flint_version": "0.9.0",
+  "P1": {
+    "2": 30,
+    "3": -8,
+    "1": -15
+  },
+  "P3": {
+    "2": 3270,
+    "3": -4232,
+    "4": 1440,
+    "5": -128,
+    "1": -375
+  },
+  "P5": {
+    "2": 285870,
+    "3": -1008968,
+    "4": 976320,
+    "5": -343040,
+    "6": 46592,
+    "7": -2048,
+    "1": -9375
+  },
+  "r_values": {
+    "1": "[1067.2723729951462233071417547360409 +/- 2.03e-32]",
+    "2": "[1067.2548379854983973699990358089703 +/- 3.85e-32]",
+    "3": "[9447.0225161998734616834163651679251 +/- 9.60e-33]",
+    "4": "[34443.022501185318810383393443330148 +/- 4.72e-31]",
+    "5": "[89320.258391662254681498831981363672 +/- 4.97e-31]",
+    "6": "[191133.43295928500925107742424312262 +/- 4.52e-31]"
+  },
+  "eta_values": {
+    "3": "[2.0925412638125107308864751207449729e-6 +/- 3.13e-41]",
+    "4": "[5.2538146312541806603621863750411267e-7 +/- 3.99e-42]",
+    "5": "[1.9869023083345701708876293058317847e-7 +/- 1.40e-42]",
+    "6": "[9.2257390668607861320689058450956371e-8 +/- 5.71e-44]"
+  },
+  "uniform_mass_bound": "[2.0925412638125107308864751207449729e-6 +/- 3.13e-41]",
+  "checks": [
+    "rational_ratio_identity_exact",
+    "r1_exceeds_r2",
+    "r3_exceeds_r1",
+    "first_P1_positive",
+    "P1_negative_n2_through6",
+    "ratio_derivative_positive_for_a_at_least_4pi_32a_minus120",
+    "ratio_derivative_positive_for_a_at_least_4pi_16a_minus30",
+    "ratio_denominator_positive_for_a_at_least_4pi",
+    "uniform_high_mode_mass_below_0p000002093",
+    "uniform_high_mode_mass_above_0p000002092",
+    "tail_envelope_for_t_at_most_half_k_at_most6",
+    "Wronskian_negative_at_left",
+    "Wronskian_positive_at_right",
+    "vertex_value_difference_nonzero_on_bracket",
+    "mixture_q_positive",
+    "mixture_q_less_than_one",
+    "collision_second_derivative_positive_on_bracket",
+    "Wronskian_derivative_positive_on_bracket",
+    "all_four_scaled_mode_weights_positive",
+    "first_endpoint_ball_contains_exact_algebraic_zero",
+    "third_endpoint_ball_contains_exact_algebraic_zero",
+    "fifth_endpoint_nonzero",
+    "primitive_derivative_negative",
+    "primitive_normalization_positive",
+    "endpoint_elimination_minor_nonzero",
+    "infinite_tail_reduced_Jacobian_nonzero"
+  ],
+  "assertions_passed": 26,
+  "search": {
+    "performed": false,
+    "status": "not performed"
+  },
+  "discovery_history": {
+    "description": "Exploratory discovery run completed the declared five time grids before candidate refinement was interrupted after robust candidates were found. The fixed-bracket certificate is separate and replayed by this checker. No absence claim is inferred from the grid.",
+    "times": [
+      "0.01",
+      "0.05",
+      "0.1",
+      "0.25",
+      "0.5"
+    ],
+    "x_grid_start": 20,
+    "x_grid_end": 300,
+    "x_grid_step": 1,
+    "support_nodes": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "pair_determinant_sign_changes_total_reported": 468,
+    "first_selected_pair": [
+      3,
+      4
+    ],
+    "first_selected_candidate_x": "83.53237296145",
+    "scope": "No completeness claim for candidate refinements; no assertion that each determinant crossing gives an admissible collision."
+  },
+  "collision_certificate": {
+    "status": "validated unique Wronskian root and nondegenerate positive-weight collision",
+    "T_exact": "1/100",
+    "x_bracket_exact_decimal": [
+      "83.5323729",
+      "83.5323730"
+    ],
+    "definition": "F_n=G1+c2*G2+eta_n*(c_n*G_n-c2*G2), G_n=exp(pi*n^2)H_n, c_n=-P1(pi)/P1(pi*n^2), eta_n=(r1-r2)/(rn-r2). F=qF3+(1-q)F4, q=-F4/(F3-F4) at unique Wronskian root. Fixed raw weights a_n=v_n exp((n^2-1)pi), then positive primitive normalization.",
+    "Wronskian_at_left": "[-2.9089832626198736840309131794286575e-29 +/- 6.02e-48]",
+    "Wronskian_at_right": "[1.8244152568367060261800907718628153e-29 +/- 6.02e-48]",
+    "Wronskian_derivative_on_bracket": "[4.7333985194565791892849556720191107e-22 +/- 7.13e-29]",
+    "q_enclosure": "[0.83774750796875343226977062016658238 +/- 2.81e-9]",
+    "F3_minus_F4_on_bracket": "[-7.7080713272584916107680644209826740e-11 +/- 1.30e-19]",
+    "scaled_transform_second_x_derivative": "[6.1408338331244969632953598614674645e-12 +/- 9.49e-19]",
+    "raw_weights": {
+      "1": "1.0000000000000000000000000000000000",
+      "2": "[1.0000002542761046457659666057047588 +/- 7.35e-15]",
+      "3": "[0.83774751358710071327234733412744245 +/- 2.81e-9]",
+      "4": "[24193346.365903732952376079424918559 +/- 0.419]"
+    },
+    "scaled_mode_weights_v": {
+      "1": "1.0000000000000000000000000000000000",
+      "2": "[8.0699538090263573808806590152570973e-5 +/- 5.93e-19]",
+      "3": "[1.0188313894656170427572821880645094e-11 +/- 3.42e-20]",
+      "4": "[8.2803870115899370917933887870117305e-14 +/- 1.44e-21]"
+    },
+    "source_first_and_third_endpoint": "exactly zero by vertex construction; ball consistency checked",
+    "raw_source_fifth_endpoint": "[-2.6568441121651304290012757739300658 +/- 7.96e-8]",
+    "primitive_first_endpoint_before_final_scale": "[-0.50000000003484322319846394717123364 +/- 1.44e-18]",
+    "positive_final_normalization": "[0.99999999993031355360792830550665508 +/- 2.88e-18]",
+    "normalized_source_fifth_endpoint": "[-2.6568441119799844042067890961452623 +/- 7.96e-8]",
+    "endpoint_minor": "[14926732054330.541092139172431936841 +/- 5.00e-22]",
+    "reduced_continuation_jacobian": "[9.2749977082457198679102150158910852e-10 +/- 1.45e-16]",
+    "tail_bound_per_G_n_jet_order_0_through6": {
+      "1": "[7.5532848744861824318692552304785094e-38 +/- 2.12e-73]",
+      "2": "[6.8341989019092536967317282515259218e-145 +/- 4.54e-180]",
+      "3": "[5.9936272443316750240086024007359407e-324 +/- 3.48e-359]",
+      "4": "[7.1567301045387491657776153216102237e-575 +/- 1.96e-610]"
+    },
+    "vertex_boxes": {
+      "3": {
+        "0": "[-1.2506537816022885625055586298358804e-11 +/- 2.10e-20]",
+        "1": "[4.1888613488712628613906811453653217e-13 +/- 3.07e-19]",
+        "2": "[6.1260602095968448955571386625194429e-12 +/- 9.14e-19]"
+      },
+      "4": {
+        "0": "[6.4574175456562030482625057911467936e-11 +/- 1.09e-19]",
+        "1": "[-2.1628073725333902044770613323038382e-12 +/- 3.11e-19]",
+        "2": "[6.2171135015537226049240325132100107e-12 +/- 9.14e-19]"
+      }
+    },
+    "fourth_absolute_moment_bounds": {
+      "3": "[0.00053591442869655099058223340562775916 +/- 3.25e-37]",
+      "4": "[0.00053591442869863094710185425385174574 +/- 3.22e-37]"
+    },
+    "complete_integral_evaluations_in_this_run": 44,
+    "infinite_tail_continuation": "Qualitative only: positive fixed weights on every node persist after adding a sufficiently small positive unweighted tail and solving the two endpoints plus H=Hx=0 using the nonzero reduced Jacobian. No explicit epsilon radius."
+  },
+  "elapsed_seconds": 0.06900250000762753
+}

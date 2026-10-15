@@ -43,3 +43,40 @@ Each checker accepts `--output PATH`. The first two use the Python standard libr
 ## Manuscript integration and handoff
 
 The [integration checks](MANUSCRIPT_INTEGRATION_CHECKS_20261015.json) record source-reference, saved-research integrity, local-link and PDF checks for the revised manuscript. The [chat-history checkpoint](CHAT_HISTORY_VERIFICATION_20261015.json) is a separate provenance check; its hashes describe the capture at verification time and will change on subsequent legitimate refreshes. Neither record is a theta sign certificate.
+
+## Coefficient core and two-endpoint replay
+
+The [continuation manifest](COEFFICIENT_CORE_AND_TWO_ENDPOINT_CHECKS_20261015.json) records four new installed checkers, receipts, note hashes and independent replays. They pass **2,136 overlapping exact assertions** and **26 mixed or validated assertions**. These counts are not counts of distinct theorems.
+
+| Checker | Assertions | Scope | Receipt |
+| --- | ---: | --- | --- |
+| [Exponential average](check_exponential_average_chords.py) | 1,620 exact | 36 heat germs, 108 complete stationary starts, 216 whole zero-free intervals, averaged-chord limits | [Record](EXPONENTIAL_AVERAGE_CHORD_CHECKS_20261015.json) |
+| [Elliptic core](check_theta_elliptic_core.py) | 481 exact | Full translated fourth-jet operator, cutoff bands, projected ramp controls, finite primitive endpoints | [Record](THETA_ELLIPTIC_CORE_CHECKS_20261015.json) |
+| [Outer budget](check_theta_outer_budget_audit.py) | 35 exact | Four low-index ranges, improved constants, conditional height allocations | [Record](THETA_OUTER_BUDGET_AUDIT_20261015.json) |
+| [Two-endpoint control](check_theta_two_endpoint_control.py) | 26 mixed or validated | Positive four-square collision with two odd source endpoints; 44 complete integrals with real tails at 160 bits | [Record](THETA_TWO_ENDPOINT_CONTROL_20261015.json) |
+
+Each script accepts `--output PATH` and prints its result. The first three use the Python standard library; the two-endpoint checker requires python-flint 0.9.0. Its default mode certifies the saved bracket; `--search` also performs a bounded exploratory search and is not needed for replay. No remote data or large generated archive is required.
+
+The new collision is non-theta. The outer budget retains unevaluated exponent-pair constants and the original domain restrictions. The general shrinking-window criterion, infinite-series rigidity and outer analytic estimates are proved in the notes, not by assertion counts. No theta signed-core bound, new global sign certificate, or RH conclusion follows from these records.
+
+## Coupled product, parity strip and reflection control
+
+The [continuation manifest](COUPLED_PRODUCT_CONTINUATION_CHECKS_20261015.json) binds three new notes, checkers and independent replays. The new checks pass **3,278 exact assertions** and **38 mixed or validated assertions**, with overlapping algebra explicitly distinguished from general analytic arguments.
+
+| Checker | Assertions | Scope | Receipt |
+| --- | ---: | --- | --- |
+| [Coupled theta product](check_coupled_theta_product.py) | 1,739 exact | Mixed addition, complete double source operator, coefficient controls, indefinite parity blocks, zero-sum witnesses and primitive endpoints | [Record](COUPLED_THETA_PRODUCT_ALGEBRA_20261015.json) |
+| [Parity strip cutoff](check_parity_strip_cutoff.py) | 1,539 exact | Lattice masks, box corrections, full-start factor criterion, parity algebra and asymptotic coefficients | [Record](PARITY_STRIP_CUTOFF_CHECKS_20261015.json) |
+| [Center/separation and reflected control](check_theta_center_separation.py) | 38 mixed or validated | Essential mixed sectors and exact-time non-theta collision; six validated complete integrals at 160 bits | [Record](THETA_CENTER_SEPARATION_CHECKS_20261015.json) |
+
+Each script prints its JSON result and accepts `--output PATH`. The first two use only the Python standard library. The last requires python-flint 0.9.0 and includes explicit real-tail allowances. No remote data, root search, or large derived archive is needed.
+
+The [chat-history verification](COUPLED_PRODUCT_CHAT_HISTORY_VERIFICATION_20261015.json) separately checks registration 19, preserved provenance, stored/canonical hashes, the source prefix, and the preceding final's successful deferred capture. Its hashes describe a verification snapshot and legitimately change on later refreshes; they do not validate mathematics.
+
+The actual-theta parity asymptotic and infinite coefficient-rigidity statements are analytic proofs in the notes. The reflected control is rigorously outside the polynomial-growth square-source class. None of these records supplies a theta signed-core inequality or an RH conclusion.
+
+## Adjoint recurrence endpoint experiment
+
+The [exact checker](check_adjoint_recurrence_boundary.py) passes **6,892 rational assertions** in the [saved receipt](ADJOINT_RECURRENCE_BOUNDARY_CHECKS_20261015.json). It verifies killed-walk reflection weights, finite currents, boundary and moment identities, normalization cancellation, recurrence-defect algebra, and finite-hierarchy controls. It uses the Python standard library and accepts `--output PATH`. Rational surrogate weights test the finite algebra; they are not actual-theta numerical sign data. The [manifest](ADJOINT_RECURRENCE_CONTINUATION_CHECKS_20261015.json) records the independent replay and the associated note, review, and manuscript identities. No signed endpoint estimate is certified.
+
+The [recurrence manuscript integration manifest](RECURRENCE_MANUSCRIPT_INTEGRATION_CHECKS_20261015.json) identifies the revised source and 43-page export, current note identities, 12,271 exact replay assertions and page checks. Historical research manifests retain their old manuscript/note hashes. The separate [history audit](RECURRENCE_MANUSCRIPT_CHAT_HISTORY_VERIFICATION_20261015.json), produced by the read-only [history checker](check_recurrence_manuscript_chat_history.py), verifies formal replay identity 20 and prior completed finals without editing the archive.
