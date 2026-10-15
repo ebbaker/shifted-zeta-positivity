@@ -188,3 +188,49 @@ Recorded model: **gpt-6.1-sol (Codex)**; reasoning effort: **ultra**.
   audits 14 exact checks and eight closed time slabs. No height extension,
   all-height estimate, manuscript revision, commit, tag or snapshot folder.
   Substantial LLM assistance, **gpt-6-astra**, effort **ultra**.
+
+
+- **14 October 2026 — Proper filters, analytic obstructions, and theta time correlations.**
+  Working-tree reference: [Note 22](notes/22_PROPER_SOURCE_FILTERS_AND_THETA_CORRELATIONS_20261014.md),
+  continuing commit `560684890d84ab2287ae6ddcd69d763a21f8c0f2`.
+  Two-index filters absorb an adverse complement on both stationary
+  branches; the tested sharp filters also have rigorous endpoint and
+  rational-jet closure obstructions. A full-source Gaussian supplies
+  an exact time comparison and a second bounded signed certificate.
+  [Review 16](reviews/16_SOURCE_FILTERS_AND_THETA_CORRELATIONS_REVIEW_20261014.md)
+  independently replays 64+14 cases. No new height coverage, all-height
+  sign theorem, manuscript revision, commit, tag, or snapshot folder.
+  Substantial LLM assistance, **gpt-6-astra**, effort **ultra**.
+
+
+- **14 October 2026 — Integrated threshold-three and signed-filter manuscript.**
+  Stable [39-page manuscript](manuscript/quaternion_theta_geometry.tex),
+  continuing commit `560684890d84ab2287ae6ddcd69d763a21f8c0f2`; final hashes
+  in [BUILD_RECORD](manuscript/BUILD_RECORD.json). Incorporates Notes 19–22
+  and separates proved outer signs, finite pilots, and the open cross-time
+  target. [Review 17](reviews/17_MANUSCRIPT_CONTINUATION_INTEGRATION_REVIEW_20261014.md)
+  and [Note 23](notes/23_MANUSCRIPT_INTEGRATION_AND_CROSS_TIME_CONTINUATION_20261014.md)
+  record validation and continuation. No new snapshot, commit, or tag.
+  Substantial LLM assistance, **gpt-6-astra**, effort **ultra**.
+
+- **14 October 2026 — Proportional Gaussian delay and stationary phase obstruction.**
+  Working-tree [Note 24](notes/24_PROPORTIONAL_DELAY_PHASE_OBSTRUCTION_AND_CONTINUATION_20261014.md),
+  continuing commit `560684890d84ab2287ae6ddcd69d763a21f8c0f2`.
+  The half-time filter passes all 16 bounded cases, but height-independent
+  delays with 0<delta(t)<t at a positive time fail global retained
+  positivity on both genuine stationary sets. [Review 18](reviews/18_PROPORTIONAL_DELAY_PHASE_OBSTRUCTION_REVIEW_20261014.md)
+  audits the proof, 20 exact identities, and independent pilot replay.
+  Guides the next phase-controlled or combined-loss target. No manuscript
+  revision, new snapshot, commit, tag, or height extension. Substantial
+  LLM assistance, **gpt-6.1-sol**, effort **ultra**.
+
+- **14 October 2026 — Phase controlled delay and finite cusp cover through 112.**
+  Working-tree [Note 25](notes/25_PHASE_CONTROLLED_DELAY_AND_CUSP_EXTENSION_20261014.md),
+  continuing commit `560684890d84ab2287ae6ddcd69d763a21f8c0f2`.
+  Repairs the delay comparison in an already proved outer region, including
+  the arithmetic phase. New complete-source cells extend both stationary
+  implications and |F|>1e-17 through 112; both new branches have favorable
+  products at every earlier time. [Review 19](reviews/19_PHASE_CONTROLLED_DELAY_AND_CUSP_EXTENSION_REVIEW_20261014.md)
+  records 21 identities, 1,321 exact checks, and two fresh quadrature replays.
+  No manuscript revision, snapshot folder, commit, or tag. Substantial
+  LLM assistance, **gpt-6.1-sol**, effort **ultra**.

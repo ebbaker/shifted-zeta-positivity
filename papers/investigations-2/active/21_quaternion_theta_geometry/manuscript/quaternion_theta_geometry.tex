@@ -39,22 +39,25 @@
 \begin{document}
 \maketitle
 \begin{abstract}
-For the theta heat family $H$, the two quadratic forms
+For the theta heat family $H$, the two forms
 $H_x^2-HH_{xx}$ and $H_{xx}^2-H_xH_{xxx}$ control the evolution of its
-first jet at genuine stationary points. We prove that both forms are
-strictly positive, uniformly for $0<t\le1/2$ and sufficiently large
-$|x|$, whenever $t\log(|x|/(4\pi))\ge4+\varepsilon$, for any fixed
-$\varepsilon>0$. The proof derives a common nonvanishing complex
-amplitude for all four derivatives from Polymath's effective
-Riemann--Siegel approximation. Shrinking complex discs control derivative
-errors without differentiating a moving arithmetic cutoff. A
-quaternionic first jet and an explicit octonionic monogenic extension
-express the two signs as oriented associators. An exact common theta
-carrier and centered residual identities formulate the remaining
-inner-region estimate. Complete-source certificates establish both
-stationary signs and a physical first-jet gap through $|x|\le104$ for
-$0\le t\le1/2$. The outer theorem has no evaluated height cutoff, and
-the inner small-time region remains unresolved.
+first jet at genuine stationary points. We prove both forms strictly
+positive, uniformly for $0<t\le1/2$ and sufficiently large $|x|$, when
+$t\log(|x|/(4\pi))\ge3+\varepsilon$ for any fixed $\varepsilon>0$.
+Oscillatory arithmetic blocks and Polymath's effective Riemann--Siegel
+approximation give a common nonzero amplitude for all four derivatives;
+shrinking complex discs pay the derivative errors. A separate explicit
+bound applies at $|x|\ge4\pi\exp(10^9)$ and
+$t\log(|x|/(4\pi))\ge5$. Quaternionic and octonionic fields express the
+signed observations geometrically. Exact paired theta integrals retain
+all arithmetic and integration cross terms and give complete omitted-pair
+payments. Complete-source certificates establish both stationary signs
+and a physical first-jet gap through $|x|\le104$. Prescribed source-filter
+pilots demonstrate direct absorption of an adverse residual, while
+endpoint and Fourier arguments identify limitations of fixed compact
+filters. Full-source Gaussian filters give exact cross-time identities
+and a further finite signed comparison. The all-height stationary bound
+near possible collisions and the finite transition strip remain open.
 \end{abstract}
 \tableofcontents
 
@@ -137,7 +140,7 @@ For every $\varepsilon>0$ there is $X_\varepsilon>4\pi$ with the
 following property. Uniformly for
 \begin{equation}
  x\ge X_\varepsilon,\qquad 0<t\le\tfrac12,\qquad
- \theta:=tL\ge4+\varepsilon,\qquad L:=\log\frac{x}{4\pi},
+ \theta:=tL\ge3+\varepsilon,\qquad L:=\log\frac{x}{4\pi},
  \label{eq:outer-domain}
 \end{equation}
 there is an explicitly defined nonzero complex amplitude $Q=Q_t(x)$
@@ -162,11 +165,28 @@ positive everywhere in \eqref{eq:outer-domain}, and $F(t,x)\ne0$ there.
 Evenness gives the reflected statements at negative heights.
 \end{theorem}
 
-The theorem is a consequence of the effective approximation in
-\cite[Theorem 1.3]{polymath}, proved below with uniform control of the
-four derivatives. Its height cutoff is not evaluated numerically here.
-The number four is the sufficient summability threshold in this proof,
-not an asserted optimal boundary for positivity.
+The theorem combines the effective approximation in
+\cite[Theorem 1.3]{polymath} with oscillatory arithmetic blocks, uniformly
+in all four derivatives. The cutoff for $3+\varepsilon$ has not been
+evaluated numerically. Three is a sufficient threshold of this argument;
+no optimality or boundary-case claim at $\varepsilon=0$ is made.
+A different, more conservative region has a fully explicit height.
+\begin{proposition}[An explicit outer region]\label{prop:explicit-outer}
+Set $X_{\mathrm{exp}}=4\pi\exp(10^9)$. For $x\ge X_{\mathrm{exp}}$,
+$0<t\le1/2$, and $tL\ge5$, every coordinate error in
+\eqref{eq:main-four-jet} is at most $108000000/L\le0.108<1/8$.
+Consequently
+\begin{equation}
+ \frac{h_0^2+(h_1/\omega)^2}{4|Q|^2}\ge\frac12,
+ \qquad
+ \frac{\Lag_j}{4|Q|^2\omega^{2j+2}}\ge\frac{31}{64},\quad j=0,1.
+ \label{eq:explicit-signs-intro}
+\end{equation}
+Reflection gives the negative-height statements.
+\end{proposition}
+The complete explicit estimates are in Appendix~\ref{app:explicit-height}.
+This enormous cutoff does not provide a practical bridge from height 104,
+and it is not an evaluated cutoff for the sharper $3+\varepsilon$ theorem.
 
 The geometric interpretation is that a common nonzero amplitude controls
 all four jets, including at phases where individual leading components
@@ -197,6 +217,7 @@ transition strip. The exact shared-source formula later in the paper
 formulates the remaining arithmetic estimate without discarding its
 signed cross terms.
 
+% Prepared for Edward Baker; gpt-6-astra, effort ultra; 14 October 2026.
 \section{Proof of the uniform outer-region theorem}\label{sec:outer-proof}
 
 \subsection{A holomorphic comparison amplitude}
@@ -260,103 +281,227 @@ No derivatives of this finite approximation will be taken. Its cutoff
 can jump with $u$; the analytic model \eqref{eq:analytic-model} will
 remove that difficulty before differentiation.
 
-\subsection{Uniform replacement of the weighted sums}
-Fix $(t,x)$ in \eqref{eq:outer-domain} and put
+\subsection{A maximal estimate for logarithmic-phase blocks}
+The gain over absolute summation comes from retaining the oscillation in
+$n^{-iT}$ before estimating each arithmetic block.
+\begin{lemma}[Logarithmic-phase blocks]\label{lem:logarithmic-block}
+For $T\ge1$, $M\ge1$, and every interval $I$ of integers contained in
+$(M,2M]$,
 \begin{equation}
- D_x=\{z:|z-x|\le L^{-1}\},\qquad \theta_u=tL_u.
+ \left|\sum_{n\in I}n^{-iT}\right|
+ \ll T^{1/6}M^{1/2}+T^{-1/6}M.
+ \label{eq:logarithmic-block}
+\end{equation}
+The implied constant is absolute. The same estimate holds with $T$
+replaced by $-T$, and is uniform over all shortened terminal blocks.
+\end{lemma}
+\begin{proof}
+Apply the third derivative test, in the form of
+\cite[Theorem 2 and its preceding proof]{robert}, to
+$f(y)=-(T/(2\pi))\log y$. On $(M,2M]$ its third derivative has
+magnitude comparable to $T/M^3$, with an absolute comparison ratio.
+For an interval of length $J\le M$, the test gives
+\[
+ J(T/M^3)^{1/6}+J^{1/2}(T/M^3)^{-1/6}
+ \le T^{1/6}M^{1/2}+T^{-1/6}M.
+\]
+Empty intervals contribute zero; one-point intervals are absorbed by
+increasing the absolute constant. Conjugation handles the opposite phase.
+\end{proof}
+
+For a continuously differentiable, possibly complex weight $W$, Abel
+summation on a shortened block is the exact identity
+\begin{equation}
+ \sum_{M<n\le R}W(n)n^{-iT}
+ =W(R)S_M(R)-\int_M^R W'(y)S_M(y)\dd y,
+ \quad S_M(y)=\sum_{M<n\le y}n^{-iT},
+ \quad M\le R\le2M.
+ \label{eq:abel-logarithmic-block}
+\end{equation}
+Thus \eqref{eq:logarithmic-block} is multiplied by
+$|W(R)|+\int_M^R|W'(y)|\dd y$. For a nonnegative decreasing weight,
+this total-variation factor is exactly $W(M)$. The maximal form of the
+lemma is needed because the last block ends at the actual cutoff $N$.
+
+\subsection{Uniform replacement of the weighted sums above three}
+Fix $(t,x)$ in \eqref{eq:outer-domain}. It is enough to consider
+$0<\varepsilon\le1$, since larger positive gaps give smaller domains.
+Set
+\begin{equation}
+ D_x=\{z:|z-x|\le L^{-1}\},\qquad
+ L_u=\log(u/(4\pi)),\qquad\theta_u=tL_u.
  \label{eq:shrinking-disc}
 \end{equation}
 Throughout this disc,
-$L_u=L+O((xL)^{-1})$, $|v|\le L^{-1}$, and
-$\theta_u\ge4+\varepsilon/2$ for sufficiently large $x$ depending on
-$\varepsilon$. All constants below are independent of $t$ in the
-stated range. The elementary formula for $\alpha$ gives
+$L_u=L+O((xL)^{-1})$ and $|v|\le L^{-1}$. For sufficiently large
+$x$ depending on $\varepsilon$, the elementary formula
+\eqref{eq:alpha-Mt} gives, for either branch $w=\sigma+i\tau=w_\pm(z)$,
 \begin{equation}
- \Re w_\pm\ge\frac12-\frac{|v|}{2}+\frac{\theta_u}{4}-O(t/u),
- \qquad \log N\le\frac{L_u}{2}+O(u^{-1}).
+ \begin{gathered}
+ \theta_u\ge3+\varepsilon/2,\qquad |\tau|\asymp u,\qquad
+ \log N\le L_u/2+O(u^{-1}),\\
+ \sigma\ge\tfrac12+\tfrac{\theta_u}{4}-\delta_x,\qquad
+ 0\le\delta_x=O(L^{-1}),\qquad\delta_x\le\varepsilon/72.
+ \end{gathered}
  \label{eq:exponent-bounds}
 \end{equation}
-For $n\le N$ it follows that
+The constants are uniform for $0<t\le1/2$, including when $tL$ grows.
+In particular, $\sigma\ge5/4$. The full weighted absolute majorant
+still has the form
 \begin{equation}
- e^{t\log^2n/4}n^{-\Re w_\pm}\le n^{-p},\qquad
- p=\frac12+\frac{\theta_u}{8}-\delta_x,
- \quad 0\le\delta_x=\frac{|v|}{2}+O(u^{-1}).
+ e^{t\log^2n/4}n^{-\sigma}\le n^{-p},\qquad
+ p=\frac12+\frac{\theta_u}{8}-O(L^{-1}),\qquad n\le N,
  \label{eq:weight-majorant}
 \end{equation}
-Choose $x$ large enough that $\delta_x\le\varepsilon/32$. With
-$\theta_0=4+\varepsilon/2$, this gives
-\begin{equation}
- p\ge1+\frac{\varepsilon}{32}
-                   +\frac{\theta_u-\theta_0}{8}.
- \label{eq:summable-p}
-\end{equation}
-The weighted absolute sums are uniformly bounded, and
-\eqref{eq:exponent-bounds} also gives the convenient weaker bound
-$\Re w_\pm\ge5/4$.
+but it need not be summable when $3<\theta_u\le4$. We use absolute
+summation only for the smaller indices and oscillatory blocks for the rest.
 
-Using $e^q-1\le qe^q$ for $q\ge0$, we have
+\begin{lemma}[Weighted logarithmic moments]\label{lem:weighted-moments}
+Under \eqref{eq:exponent-bounds}, for every fixed nonnegative integer $r$,
 \begin{equation}
- |S_{t,N}(w)-\zeta(w)|
- \le\frac t4\sum_{n=2}^\infty(\log n)^2n^{-p}
-       +\frac{N^{1-\Re w}}{\Re w-1}.
- \label{eq:weighted-zeta-difference}
-\end{equation}
-The dependence on time needs care: $\theta_u$ may grow with $x$, so a
-fixed-$\theta$ argument would not suffice. Put $r=\theta_u-\theta_0\ge0$
-and
-$D_\varepsilon=\sum_{n\ge2}(\log n)^2n^{-1-\varepsilon/32}<\infty$.
-Then the first term in \eqref{eq:weighted-zeta-difference} is at most
-\begin{equation}
- \frac{D_\varepsilon}{4L_u}(\theta_0+r)2^{-r/8}
-                       =O_\varepsilon(L^{-1}),
- \label{eq:uniform-growing-theta}
-\end{equation}
-because the numerator is bounded for $r\ge0$. The ordinary zeta tail
-is $O(N^{-1/4})=O(x^{-1/8})$. Hence, uniformly on the whole disc,
-\begin{equation}
- S_{t,N}(w_\pm)-\zeta(w_\pm)=O_\varepsilon(L^{-1}).
+ \sum_{n\le N}(\log n)^r e^{t\log^2n/4}n^{-w}
+       -(-1)^r\zeta^{(r)}(w)=O_{\varepsilon,r}(L^{-1}),
+ \qquad z\in D_x.
  \label{eq:sum-replacement}
 \end{equation}
-The threshold four enters precisely through the strict inequality
-$1/2+\theta/8>1$ in the weighted absolute sum.
+For $r=0$ the factor at $n=1$ is interpreted as one. In particular the
+estimate is simultaneous for $r=0,1,2,3$.
+\end{lemma}
+\begin{proof}
+Write $\ell=L_u$ and split at the real number $Y=e^{\ell/3}$, with
+$n\le Y$ interpreted as the exact integer cutoff. For sufficiently
+large $x$ one has $Y<N$. If $n\le Y$, the inequality
+$e^q-1\le qe^q$ gives
+\begin{equation}
+ \left|\sum_{n\le Y}(\log n)^r
+          (e^{t\log^2n/4}-1)n^{-w}\right|
+ \le\frac t4\sum_{n=2}^{\infty}(\log n)^{r+2}
+          n^{-(1/2+\theta_u/6-\delta_x)}.
+ \label{eq:weighted-zeta-difference}
+\end{equation}
+Put $\theta_0=3+\varepsilon/2$ and $s=\theta_u-\theta_0\ge0$.
+The exponent on the right satisfies
+\begin{equation}
+ \frac12+\frac{\theta_u}{6}-\delta_x
+       \ge1+\frac{\varepsilon}{24}+\frac s6.
+ \label{eq:summable-p}
+\end{equation}
+Consequently, with
+$D_{\varepsilon,r}=\sum_{n\ge2}(\log n)^{r+2}
+ n^{-1-\varepsilon/24}<\infty$, its right side is at most
+\begin{equation}
+ \frac{D_{\varepsilon,r}}{4\ell}(\theta_0+s)2^{-s/6}
+              =O_{\varepsilon,r}(\ell^{-1}).
+ \label{eq:uniform-growing-theta}
+\end{equation}
+The boundedness of the numerator for every $s\ge0$ supplies the required
+uniformity in time. The unweighted zeta tail beyond $Y$ is bounded by
+\begin{equation}
+ \sum_{n>Y}(\log n)^r n^{-\sigma}
+ \ll_r(1+\log^rY)Y^{-1/4}
+ \ll_r\ell^r e^{-\ell/12},
+ \label{eq:ordinary-zeta-tail-three}
+\end{equation}
+using $\sigma\ge5/4$.
+
+It remains to estimate the weighted terms $Y<n\le N$. Partition them
+into the exact intervals $(M,\min(2M,N)]$, starting at $M=Y$ and
+successively doubling. On each block put
+\[
+ W_r(y)=(\log y)^r e^{t\log^2y/4}y^{-\sigma}.
+\]
+This weight is nonnegative and, for sufficiently large $\ell$,
+monotonically decreasing: throughout $Y\le y\le N$,
+\begin{equation}
+ y(\log W_r)'=\frac r{\log y}+\frac t2\log y-\sigma
+ \le\frac{3r}{\ell}-\frac12+\delta_x+O(u^{-1})<0.
+ \label{eq:weighted-block-monotonicity}
+\end{equation}
+Apply Lemma~\ref{lem:logarithmic-block} with $T=|\tau|\asymp u$ and
+\eqref{eq:abel-logarithmic-block}. The block has modulus at most
+\begin{equation}
+ \ll W_r(M)\{u^{1/6}M^{1/2}+u^{-1/6}M\}.
+ \label{eq:weighted-oscillatory-block}
+\end{equation}
+Let $\beta=(\log M)/\ell$. Apart from a factor $O_r(\ell^r)$ and
+bounded constants, the two terms in \eqref{eq:weighted-oscillatory-block}
+are bounded by $e^{E_1\ell}$ and $e^{E_2\ell}$, where
+\begin{align}
+ E_1&=\frac16-\frac{\theta_u}{4}\beta(1-\beta)+\delta_x\beta,\notag\\
+ E_2&=-\frac16+\frac\beta2
+       -\frac{\theta_u}{4}\beta(1-\beta)+\delta_x\beta.
+ \label{eq:oscillatory-block-exponents}
+\end{align}
+On $1/3\le\beta\le1/2$, one has $\beta(1-\beta)\ge2/9$, hence
+\[
+ E_1\le\frac16-\frac{\theta_u}{18}+\frac{\delta_x}{2}
+       \le-\frac{\varepsilon}{48}.
+\]
+For the second exponent at $\theta_u=3$, its convex quadratic part has
+endpoint values $-1/6$ and $-5/48$; increasing $\theta_u$ decreases it.
+Together with $\delta_x\le\varepsilon/72\le1/72$, this gives
+$E_2\le-1/16$ after an arbitrarily small increase of the lower height.
+The possible extension to
+$\beta\le1/2+O((u\ell)^{-1})$ changes these exponents by $O(u^{-1})$
+uniformly, since $\theta_u\le\ell/2$. It can therefore be absorbed by
+weakening the first exponential decay to $\varepsilon/100$.
+There are $O(\ell)$ blocks, so, with
+$c_\varepsilon=\min(\varepsilon/100,1/16)>0$,
+\begin{equation}
+ \sum_{Y<n\le N}(\log n)^r e^{t\log^2n/4}n^{-w}
+       =O_{\varepsilon,r}(\ell^{r+1}e^{-c_\varepsilon\ell}).
+ \label{eq:high-index-decay}
+\end{equation}
+Combining \eqref{eq:weighted-zeta-difference},
+\eqref{eq:ordinary-zeta-tail-three}, and \eqref{eq:high-index-decay}
+proves the claim. The final block is shortened at the actual $N$;
+no derivative of that cutoff has been taken.
+\end{proof}
 
 \subsection{Complete value errors and derivative control}
-On the upper half of $D_x$, \eqref{eq:RS-ratios} bounds the extra
-factors in \eqref{eq:RS-AB}. Multiplication by $n^v$ changes the
-leading real part $(1+v)/2$ to $(1-v)/2$, already covered by
-\eqref{eq:weight-majorant}. Also
-$|\log(u/(4\pi n^2))|\le L_u+O(u^{-1})$ for $n\le N$.
-Since $\theta_u\le L_u/2$, the exponential error multiplier in
-\eqref{eq:RS-AB} is $O((1+\theta_u^2)/u)$. Equations
-\eqref{eq:RS-AB}--\eqref{eq:RS-C} therefore give
+The positive weight sums in the imported errors do not require the
+summability of \eqref{eq:weight-majorant}. For $n\le N$,
+\[
+ e^{t\log^2n/4}n^{-\theta_u/4}
+ =\exp\{-\tfrac t4\log n(L_u-\log n)\}\ll1,
+ \qquad n^{\delta_x}\ll1.
+\]
+The second estimate uses $\delta_x=O(L^{-1})$ and $\log N=O(L)$.
+On the upper half-disc, \eqref{eq:RS-ratios} also bounds $|\gamma|$
+and $N^{|\kappa|}$ uniformly. Multiplication by $n^v$ replaces the
+first branch's real part $(1+v)/2$ by $(1-v)/2$, already covered by
+\eqref{eq:exponent-bounds}. Hence the entire positive weight sum in
+\eqref{eq:RS-AB} is
+$O(\sum_{n\le N}n^{-1/2})=O(u^{1/4})$.
+The per-index error multiplier is $O(L^2/u)$, uniformly for
+$t\le1/2$, because
+$|\log(u/(4\pi n^2))|\le L_u+O(u^{-1})$. Thus all three imported
+errors are paid by
 \begin{equation}
- e_A+e_B=O_\varepsilon(L^2/x),\qquad
- e_{C,0}=O_\varepsilon(x^{-1/2}).
+ e_A+e_B=O(L^2u^{-3/4}),\qquad
+ e_{C,0}\ll e^{-L_u/4-\theta_uL_u/16}\ll u^{-7/16}.
  \label{eq:RS-small-errors}
 \end{equation}
-For the latter bound use
-$\exp(-L_u/4-\theta_uL_u/16)\le C_\varepsilon x^{-1/2}$;
-the remaining correction exponent in \eqref{eq:RS-C} tends uniformly
-to zero.
+For the second estimate the positive correction exponent in
+\eqref{eq:RS-C} tends uniformly to zero.
 
 Let $\Gamma=|M_t(s_+(x))|$. The logarithmic $z$-derivative of either
-$M_t(s_\pm(z))$ is $O(L)$ uniformly for $0<t\le1/2$. Integrating
-along paths of length at most $1/L$ yields
+$M_t(s_\pm(z))$ is $O(L)$ uniformly for $0<t\le1/2$. Integration
+along a segment of length at most $1/L$ gives
 \begin{equation}
  |M_t(s_\pm(z))|\asymp\Gamma\qquad(z\in D_x).
  \label{eq:gamma-comparison}
 \end{equation}
-This is the reason for the shrinking disc: a fixed-radius disc would
-permit powers of $x$ in this comparison. Combining
-\eqref{eq:RS-input}, \eqref{eq:sum-replacement},
-\eqref{eq:RS-small-errors}, and \eqref{eq:gamma-comparison} gives
+This is why the complex disc shrinks: a fixed-radius disc would permit
+powers of $x$ in the amplitude comparison. Combining
+\eqref{eq:RS-input}, Lemma~\ref{lem:weighted-moments} at $r=0$, and
+\eqref{eq:RS-small-errors}--\eqref{eq:gamma-comparison}, we obtain
 \begin{equation}
  H(t,z)-\mathcal P_t(z)=O_\varepsilon(\Gamma/L).
  \label{eq:analytic-value-error}
 \end{equation}
-Initially this holds on the upper half-disc. Schwarz symmetry of both
-$H$ and $\mathcal P_t$ extends it to the lower half, without any new
-hypothesis on the imported approximation.
+Initially the imported approximation proves this on the upper half-disc.
+Schwarz symmetry of $H$ and $\mathcal P_t$ extends it to the lower half.
 
 Absolute convergence of the Dirichlet series for $\zeta$ and $1/\zeta$
 in $\Re w\ge5/4$ gives
@@ -364,20 +509,18 @@ in $\Re w\ge5/4$ gives
  \zeta(5/4)^{-1}\le|\zeta(w)|\le\zeta(5/4).
  \label{eq:zeta-nonzero}
 \end{equation}
-Thus $Q\ne0$ and $|Q|\asymp\Gamma$. This lower bound is obtained
-in a known zero-free half-plane and does not assume a physical gap for
-$H$ or its derivatives.
-The difference in \eqref{eq:analytic-value-error} is holomorphic on
-a neighborhood of the closed disc. Cauchy's formula, with time fixed,
-now gives
+Thus $Q\ne0$ and $|Q|\asymp\Gamma$, using only a known zero-free
+half-plane. The difference in \eqref{eq:analytic-value-error} is
+holomorphic on a neighborhood of the closed disc. Cauchy's formula,
+with time fixed, therefore yields
 \begin{equation}
  \partial_x^k(H(t,\cdot)-\mathcal P_t)(x)
-      =O_{\varepsilon,k}(|Q|L^{k-1}),\qquad k=0,1,2,3.
+       =O_{\varepsilon,k}(|Q|L^{k-1}),\qquad k=0,1,2,3.
  \label{eq:analytic-jet-error}
 \end{equation}
-The $k=0$ error is $O_\varepsilon(|Q|/L)$. The pointwise finite-sum
-bound has been replaced by a holomorphic comparison before applying
-Cauchy's formula, so no moving-cutoff derivative is present.
+At $k=0$ this means $O_\varepsilon(|Q|/L)$. Only the holomorphic
+difference is differentiated; the discontinuous arithmetic cutoff is
+absent from that step.
 
 \subsection{The common phase and the two signs}
 At the real center,
@@ -386,70 +529,66 @@ At the real center,
  \alpha^{(r)}(s_+(x))=O_r(x^{-r})\quad(r\ge1).
  \label{eq:alpha-asymptotics}
 \end{equation}
-All fixed logarithmic derivatives of $\zeta$ are uniformly bounded in
-$\Re w\ge5/4$. Differentiating a local logarithm of $Q_+$ gives
+The absolutely convergent prime-power series bounds every fixed
+logarithmic derivative of $\zeta$ uniformly in $\Re w\ge5/4$.
+Differentiating a local logarithm of $Q_+$ gives
 \begin{align}
  (\log Q_+)'&=\frac i2\left[\alpha+\frac t2\alpha\alpha'
-       +\left(1+\frac t2\alpha'\right)\frac{\zeta'(w_+)}{\zeta(w_+)}
-                    \right]=i\omega+O(1),\label{eq:phase-derivative}\\
+       +\left(1+\frac t2\alpha'\right)
+                      \frac{\zeta'(w_+)}{\zeta(w_+)}\right]
+             =i\omega+O(1),\label{eq:phase-derivative}\\
  (\log Q_+)''&=O(1),\qquad (\log Q_+)'''=O(1).
  \label{eq:higher-log-derivatives}
 \end{align}
-Here all $\alpha$ terms are evaluated at $s_+(x)$, and time is held
-fixed. The bounds remain uniform as $\theta=tL$ grows because
-$t\le1/2$. The exponential derivative formulas imply
+All $\alpha$ terms are evaluated at $s_+(x)$, and time is fixed.
+The bounds remain uniform as $\theta=tL$ grows because $t\le1/2$.
+The exponential derivative formulas imply
 \[
  Q_+^{(k)}(x)=Q\bigl((i\omega)^k+O(L^{k-1})\bigr),\qquad k=1,2,3.
 \]
-The derivatives of $Q_-$ are their conjugates on the real axis.
-Together with \eqref{eq:analytic-jet-error}, this proves
-\eqref{eq:main-four-jet}.
+The real-axis derivatives of $Q_-$ are their conjugates. Together with
+\eqref{eq:analytic-jet-error}, this proves \eqref{eq:main-four-jet}.
 
-To pass to signs, set $P_k=h_k/(2|Q|\omega^k)$ and write
-$P=(c,-s,-c,s)+e$, where $c^2+s^2=1$ and every component of $e$ is
-$O_\varepsilon(L^{-1})$. Direct expansion yields
+Set $P_k=h_k/(2|Q|\omega^k)$ and write
+$P=(c,-s,-c,s)+e$, where $c^2+s^2=1$ and each component of $e$ is
+$O_\varepsilon(L^{-1})$. Direct expansion gives
 \[
  P_0^2+P_1^2=1+O_\varepsilon(L^{-1}),\quad
  P_1^2-P_0P_2=1+O_\varepsilon(L^{-1}),\quad
  P_2^2-P_1P_3=1+O_\varepsilon(L^{-1}).
 \]
 This proves \eqref{eq:main-balanced}--\eqref{eq:main-signs}, uniformly
-in phase, and finishes the proof of Theorem~\ref{thm:outer}.
-
-There is an explicit algebraic stopping condition for any future
-numerical evaluation of $X_\varepsilon$. If $|e_j|\le\delta$, then
+in phase, and completes the proof of Theorem~\ref{thm:outer}.
+More explicitly, if $|e_j|\le d$, then
 \begin{equation}
- P_0^2+P_1^2\ge1-4\delta,\qquad
- P_1^2-P_0P_2,\ P_2^2-P_1P_3\ge1-4\delta-\delta^2.
+ P_0^2+P_1^2\ge1-4d,\qquad
+ P_1^2-P_0P_2,\ P_2^2-P_1P_3\ge1-4d-d^2.
  \label{eq:explicit-perturbation}
 \end{equation}
 For example the first signed form is
-$1-2se_1+e_1^2-ce_2+ce_0-e_0e_2$; keep its nonnegative square
-and bound the other terms. At $\delta=1/8$ the two signed margins are
+$1-2se_1+e_1^2-ce_2+ce_0-e_0e_2$; retain its nonnegative square
+and bound the remaining terms. At $d=1/8$, the two signed margins are
 at least $31/64$ and the balanced norm is at least $1/2$.
+Appendix~\ref{app:explicit-height} gives a fully explicit height at the
+stronger condition $tL\ge5$. The threshold-three theorem has an
+unevaluated height and asserts no optimality of the number three.
 
-\begin{corollary}[Asymptotic collision localization]\label{cor:threshold-four}
+\begin{corollary}[Asymptotic collision localization]
+\label{cor:threshold-three}\label{cor:threshold-four}
 If $H(T_m,a_m)=H_x(T_m,a_m)=0$, $0<T_m\le1/2$, and
 $|a_m|\to\infty$, then
 \[
- \limsup_{m\to\infty}T_m\log\frac{|a_m|}{4\pi}\le4.
+ \limsup_{m\to\infty}T_m\log\frac{|a_m|}{4\pi}\le3.
 \]
 \end{corollary}
 \begin{proof}
-For each fixed $\varepsilon>0$, Theorem~\ref{thm:outer} excludes all
-sufficiently high terms with the displayed product at least
-$4+\varepsilon$.
+For each fixed $\varepsilon>0$, Theorem~\ref{thm:outer} excludes every
+sufficiently high term whose displayed product is at least
+$3+\varepsilon$.
 \end{proof}
-The corollary is asymptotic. It does not replace the localization
-constant by exactly four at every finite height, and it gives no
-uniform conclusion on the boundary obtained by setting
-$\varepsilon=0$.
-
-
-% Staged fragment for the 14 October 2026 rewrite.
-% Prepared for Edward Baker with gpt-6-astra, reasoning effort ultra.
-% Assumes the scalar theta family and h_j, F, E, mathcal L_j are defined.
-% Labels in this fragment use the prefix fc:.
+This is an asymptotic localization. It does not impose the constant
+three at every finite height, and setting $\varepsilon=0$ in the
+uniform estimates is not justified.
 
 \section{Why positive-time collisions are the obstruction}
 \label{sec:fc-collision}
@@ -1021,8 +1160,9 @@ common arithmetic amplitude, not a consequence of monogenicity alone.
 
 \section{Centered residuals and the common theta carrier}\label{sec:residuals}
 
-The outer theorem uses an absolutely convergent arithmetic comparison.
-To study the remaining region, we return to the exact theta source.
+The outer theorem uses oscillatory cancellation to reach a nonzero zeta
+comparison amplitude. To study the remaining region, we return to the
+exact theta source.
 The aim is to retain the same four derivatives and their signed
 correlations before estimating any error.
 
@@ -1056,13 +1196,14 @@ requires information about the retained, correlated jets.
 
 \subsection{A residual adapted to genuine stationarity}
 Freeze real $a,b$ with $0<a<\pi/8$ and $b\ge0$, and put $\mu=a^2+b^2$.
-For $j=0,1$, define
+For every integer $j\ge0$, define
 \begin{equation}
  C_j=e^{-ax}\Re\int_0^\infty (u^2-b^2)(i(u+ia))^j
              e^{t(u+ia)^2}\Phi(u+ia)e^{ixu}\dd u.
  \label{eq:C-integral}
 \end{equation}
-The polynomial identity
+The required stationary forms use $j=0,1$; higher residuals will enter
+exact heat-transport identities. The polynomial identity
 $u^2-b^2=-(i(u+ia))^2-2a\,i(u+ia)-\mu$ gives
 \begin{equation}
  C_j=-h_{j+2}-2ah_{j+1}-\mu h_j,
@@ -1207,6 +1348,170 @@ the additional term is
 $\jj(a_t\Re W/b-b_t\Im_{\jj}W/b)$; all cell computations below freeze
 them before differentiating.
 
+
+\subsection{Staircase derivatives and exact entry terms}
+Put $T=x/2+ta$ and, for integers $r\ge0$,
+\[
+ B_r(v)=\sum_{n\le e^{2v}}(\log n)^r A_n(t,x;v),
+ \qquad
+ D_j(v)=\sum_{n\le e^{2v}}A_n(t,x;v)[i(v+ia-d_n)]^j.
+\]
+For $r=0$ the logarithmic weight is one, including at $n=1$.
+On $v>0$, distributional differentiation gives
+\begin{equation}
+ B_r'=-tB_{r+1}+
+ \sum_{n\ge2}(\log n)^r A_n(t,x;d_n)\delta(v-d_n).
+ \label{eq:staircase-recurrence}
+\end{equation}
+Between entry points,
+\begin{equation}
+ D_j'=-2t(v+ia)D_j-2itD_{j+1}+ijD_{j-1},
+ \label{eq:staircase-jet-recurrence}
+\end{equation}
+where the last term is omitted for $j=0$. The jump at $d_n$ is
+$A_n(t,x;d_n)(-a)^j$. If
+$K(v)=e^{t(v+ia)^2}\phi_1(v+ia)e^{ixv}$, its full contribution is
+\begin{equation}
+ K(d_n)A_n(t,x;d_n)(-a)^j
+   =e^{-ta^2}\phi_n(ia)(-a)^j.
+ \label{eq:staircase-cancellation}
+\end{equation}
+Indeed $\partial_v A_n=-2td_nA_n$ and
+$d_n=v+ia+i[i(v+ia-d_n)]$ give the smooth recurrence; direct
+substitution and \eqref{eq:theta-translation} give the jump formula.
+At $v=0$ the index $n=1$ is already present and belongs to the lower
+endpoint of any integration by parts. Every entering-index phase in
+\eqref{eq:staircase-cancellation} cancels in $x$. These terms cannot
+be assigned an artificial oscillatory gain.
+
+The oscillatory block estimate in Section~\ref{sec:outer-proof} can also
+be applied to this exact carrier. On a block $M<n\le R(v)$, where
+$R(v)=\min(2M,e^{2v})$, the logarithmic-moment weight is
+\[
+ w_r(y)=(\log y)^r e^{t\log^2y/4}y^{-1/2-tv}.
+\]
+For $M\ge e^{2r}$ it is decreasing, since
+$y(\log w_r)'\le r/\log y-1/2\le0$; for $r=0$ this holds for
+all $M\ge1$. Abel summation therefore gives, when $|T|\ge1$,
+\[
+ \left|\sum_{M<n\le R(v)}w_r(n)n^{-iT}\right|
+ \ll w_r(M)\bigl(|T|^{1/6}M^{1/2}+|T|^{-1/6}M\bigr).
+\]
+For other blocks use the full total variation of $w_r$, and for
+$|T|<1$ use the trivial bound. The actual shortened endpoint remains
+$R(v)$; these complex block estimates do not imply a signed product
+bound.
+
+\subsection{The complete paired observations}
+Define the staircase measure space and its coordinates by
+\begin{equation}
+ \begin{split}
+ \Omega&=\{(v,n):n\ge1,\ v\ge d_n\},\qquad
+ d\nu=dv\times\text{counting measure},\\
+ y_\alpha&=v-d_n,\qquad q_\alpha=-a+iy_\alpha,\\
+ W_\alpha&=e^{t(v+ia)^2}\phi_1(v+ia)e^{ixv}A_n(t,x;v),
+ \qquad \alpha=(v,n).
+ \end{split}
+ \label{eq:pair-domain}
+\end{equation}
+Then $h_k=e^{-ax}\Re\int_\Omega W_\alpha q_\alpha^k\,d\nu(\alpha)$.
+The two factors in the following integrals have independent coordinates
+and independent indices.
+\begin{proposition}[Paired Laguerre and residual forms]
+For $j=0,1$,
+\begin{align}
+ \Lag_j=\frac{e^{-2ax}}4\Re\iint_{\Omega^2}\bigl[&
+ (y_\alpha+y_\beta)^2 W_\alpha\overline{W_\beta}
+       (q_\alpha\overline{q_\beta})^j\notag\\
+ &+(y_\alpha-y_\beta)^2 W_\alpha W_\beta
+       (q_\alpha q_\beta)^j\bigr]\,d\nu(\alpha)d\nu(\beta).
+ \label{eq:paired-laguerre}
+\end{align}
+Writing
+\begin{equation}
+ J_j(\alpha,\beta)=W_\alpha\overline{W_\beta}
+       (q_\alpha\overline{q_\beta})^j
+       +W_\alpha W_\beta(q_\alpha q_\beta)^j,
+ \label{eq:paired-J}
+\end{equation}
+the centered product is
+\begin{equation}
+ h_jC_j=\frac{e^{-2ax}}4\Re\iint_{\Omega^2}
+ (y_\alpha^2+y_\beta^2-2b^2)J_j(\alpha,\beta)\,
+ d\nu(\alpha)d\nu(\beta).
+ \label{eq:paired-residual}
+\end{equation}
+Before imposing stationarity, the exact difference is
+\begin{equation}
+ \Lag_j-\mu h_j^2-h_jC_j
+       =h_{j+1}(h_{j+1}+2ah_j).
+ \label{eq:stationary-ideal}
+\end{equation}
+\end{proposition}
+\begin{proof}
+Use $\Re A\Re B=\tfrac12\Re(A\overline B+AB)$ and symmetrize
+in $\alpha,\beta$. The Hermitian difference in the Laguerre form is
+\[
+ q_\alpha\overline{q_\beta}
+ -\tfrac12(q_\alpha^2+\overline{q_\beta}^{2})
+ =-\tfrac12(q_\alpha-\overline{q_\beta})^2
+ =\tfrac12(y_\alpha+y_\beta)^2;
+\]
+the bilinear difference is
+$-\tfrac12(q_\alpha-q_\beta)^2
+=\tfrac12(y_\alpha-y_\beta)^2$.
+Conjugate-swapping the Hermitian term preserves its real integral.
+The same polarization applied to the real multiplier $y^2-b^2$
+gives \eqref{eq:paired-residual}, and \eqref{eq:C-stationary} gives
+\eqref{eq:stationary-ideal}. The majorant
+\eqref{eq:shared-majorant} has every polynomial moment integrable.
+Together with $(y\pm z)^2\le2(y^2+z^2)$, this proves absolute
+convergence of each displayed integral and justifies Fubini.
+\end{proof}
+
+The squared frequencies in \eqref{eq:paired-laguerre} do not give the
+phase of either amplitude product a sign. As a finite algebra control,
+two real signed atoms at frequencies $1,2$, with weights $1,-1/2$
+and $a=0$, give $(h_0,h_1,h_2)=(1/2,0,1)$ and $\Lag_0=-1/2$.
+The diagonal contributions sum to $2$ and the ordered cross terms to
+$-5/2$. This control lies outside the theta class and positive-contour
+hypotheses; it explains why retaining only diagonal pairs loses the
+observation.
+
+\subsection{A complete omitted-pair payment}
+For a measurable retained set $A\subset\Omega$, denote its jets by
+$h_k^A$ and set $\Lag_j^A=(h_{j+1}^A)^2-h_j^Ah_{j+2}^A$. Define
+absolute masses before the exterior exponential normalization:
+\[
+ M_k^A=\int_A|W_\alpha||q_\alpha|^k\,d\nu,
+ \qquad T_k^A=\int_{\Omega\setminus A}|W_\alpha||q_\alpha|^k\,d\nu.
+\]
+Then
+\begin{equation}
+ |\Lag_j-\Lag_j^A|\le e^{-2ax}
+ \bigl(M_j^AT_{j+2}^A+M_{j+2}^AT_j^A+T_j^AT_{j+2}^A\bigr).
+ \label{eq:pair-tail-payment}
+\end{equation}
+Indeed, including the factor $1/4$ in \eqref{eq:paired-laguerre},
+the absolute sum of its two kernels is at most
+\[
+ \tfrac12\bigl(|W_\alpha||q_\alpha|^{j+2}
+              |W_\beta||q_\beta|^j
+       +|W_\alpha||q_\alpha|^j
+              |W_\beta||q_\beta|^{j+2}\bigr),
+\]
+using $(y+z)^2+(y-z)^2=2(y^2+z^2)$ and $y^2\le|q|^2$.
+Integrating over $A\times A^c$, $A^c\times A$, and $A^c\times A^c$
+gives the claim, including all omitted mixed and omitted--omitted pairs.
+No bound for $T_{j+1}^A$ is required.
+
+For $A=\{(v,n)\in\Omega:v\le V,\ n\le N\}$, use the complete
+index payment and the shared-coordinate integration payment in
+Appendix~\ref{app:payments}, removing their $e^{-ax}$ normalization
+before using them for $T_k^A$. Overlap may be overpaid. Retained
+quadrature and parameter variation require their own errors. The
+absolute payment \eqref{eq:pair-tail-payment} is not a relative bound
+through an unknown zero of $E$.
 
 \section{The bounded region: a complete certificate through height 104}
 \label{sec:fc-certificate}
@@ -1451,62 +1756,69 @@ The computations establish the stated closed bounded region; they do
 not extend it to arbitrary heights.
 
 
-\section{Obstructions and the remaining signed estimate}\label{sec:remaining}
+% Prepared for Edward Baker, 14 October 2026.
+% LLM assistance: gpt-6-astra (Codex), reasoning effort ultra.
+% Replacement for the former Section 7, integrating Notes 21--22.
+
+\section{One-sided stationary estimates and their obstructions}
+\label{sec:remaining}
 
 The outer theorem and the finite cover give complementary information.
-For any fixed $\varepsilon>0$, the unresolved positive-time domain is
-contained in the finite transition strip $104<|x|<X_\varepsilon$ and
-the high-height inner region
+For each fixed $\varepsilon>0$, the unresolved positive-time domain is
+contained in the transition strip $104<|x|<X_\varepsilon$ and the
+high-height inner region
 \begin{equation}
- 0<t\le1/2,\quad |x|\ge X_\varepsilon,\quad
-       t\log(|x|/(4\pi))<4+\varepsilon.
+ 0<t\le\tfrac12,\qquad |x|\ge X_\varepsilon,\qquad
+ t\log(|x|/(4\pi))<3+\varepsilon.
  \label{eq:remaining-domain}
 \end{equation}
-The first missing quantitative task is to evaluate a usable
-$X_\varepsilon$. The second is an arithmetic sign estimate in
-\eqref{eq:remaining-domain}. Several tempting stronger statements can
-be ruled out before pursuing that estimate.
+The threshold-three assertion is asymptotic: it does not supply a usable
+numerical value of $X_\varepsilon$. The explicit threshold-five bound
+proved separately is not a numerical implementation of threshold three.
+The remaining analytic problem is a signed estimate in
+\eqref{eq:remaining-domain}, with constants regular through a candidate
+positive-time collision. The following obstructions delimit that problem.
 
-\subsection{Absolute first-channel dominance fails below four}
-At the exact common-carrier coordinate $v$, let $M=\lfloor e^{2v}\rfloor$.
-For the indices $\lceil M/2\rceil\le n\le M$, we have
+\subsection{Absolute dominance and pointwise positivity are too strong}
+
+At the exact common-carrier coordinate $v$, put
+$M=\lfloor e^{2v}\rfloor$. For $\lceil M/2\rceil\le n\le M$,
 \[
  td_n^2-2td_nv=t[(d_n-v)^2-v^2]\ge-tv^2.
 \]
 Consequently
 \begin{equation}
  \sum_{n\le e^{2v}}|A_n|
-       \ge(M/2-1)M^{-1/2}e^{-tv^2}.
+ \ge(M/2-1)M^{-1/2}e^{-tv^2}.
  \label{eq:absolute-channel-obstruction}
 \end{equation}
 With fixed $a$, $v=b_1$, and $t=\vartheta/\log x$ for fixed
-$0\le\vartheta<4$, the right side grows as a positive constant times
-$x^{1/4-\vartheta/16}$. The first weight has modulus one. Thus the
-remaining channels are not a small absolute perturbation of the first
-at this point of the carrier. The estimate leaves cancellation within
-the sum and after integration available.
+$0\le\vartheta<4$, this grows as a positive constant times
+$x^{1/4-\vartheta/16}$, whereas $|A_1|=1$. Absolute first-channel
+dominance therefore fails in this scaling. Cancellation within the sum
+and after integration remains available; indeed it is essential to the
+improved outer theorem.
 
-\subsection{The pointwise integrand need not have the desired sign}
-For a fixed $v=b$, write
+Pointwise positivity is also unavailable. For fixed $v=b$, write
 \[
- D_j=\sum_{n\le e^{2b}}A_n(t,x;b)[-a+i(b-d_n)]^j,
- \qquad p_j=\Re(UD_j),
+ D_j=\sum_{n\le e^{2b}}A_n(t,x;b)[-a+i(b-d_n)]^j,\qquad p_j=\Re(UD_j),
 \]
 where $U$ is the unit phase of
-$e^{t(b+ia)^2}\phi_1(b+ia)e^{ixb}$. Define
+$e^{t(b+ia)^2}\phi_1(b+ia)e^{ixb}$. Put
 \[
  \mathfrak H_j=|D_{j+1}|^2-\Re(D_j\overline{D_{j+2}}),\qquad
  \mathfrak W_j=D_{j+1}^2-D_jD_{j+2}.
 \]
-The elementary real-part identity gives
+Then
 \begin{equation}
  2(p_{j+1}^2-p_jp_{j+2})
-      =\mathfrak H_j+\Re(U^2\mathfrak W_j).
+ =\mathfrak H_j+\Re(U^2\mathfrak W_j).
  \label{eq:phase-projection}
 \end{equation}
-A sufficient condition independent of phase would be
-$\mathfrak H_j\ge|\mathfrak W_j|$. The exact common-carrier sums,
-enclosed with Arb/Acb arithmetic, reject that stronger condition:
+The stronger phase-independent condition
+$\mathfrak H_j\ge|\mathfrak W_j|$ fails for the actual common-carrier
+sums. With $a=\pi/16$ and $b=b_1$ from
+\eqref{eq:channel-centers}, retained Arb/Acb enclosures give
 \begin{center}
 \begin{tabular}{@{}lll@{}}
 \toprule
@@ -1517,67 +1829,652 @@ $4898.7$ & $2/\log4898.7$ & $-1.26105$\\
 \bottomrule
 \end{tabular}
 \end{center}
-Here $a=\pi/16$ and $b=b_1$ from \eqref{eq:channel-centers}.
-At the second point, the actual carrier phase also gives
-$p_1^2-p_0p_2\approx-0.01099197<0$. The retained record encloses these
-values strictly below zero; Appendix~\ref{app:replay} identifies the
-replay. These are pointwise integrand forms. They do not equal the
-Laguerre forms after integration, whose products include cross terms
-between different carrier coordinates as well as different indices.
-A proof based on the pointwise positivity of this integrand cannot
-cover those points. Their convention is $t\log x=1$ or $2$, placing
-them outside Theorem~\ref{thm:outer}.
+At the second point the actual phase also gives
+$p_1^2-p_0p_2\approx-0.01099197<0$. The stored enclosures are strictly
+negative; Appendix~\ref{app:replay} identifies their replay. These are
+pointwise integrand forms, not the integrated Laguerre forms, and no
+physical stationarity is asserted at these points. The paired identities
+in Section~\ref{sec:residuals} retain correlations between distinct
+coordinates as well as distinct indices. A proof requiring every
+integrand to be positive would discard that possibility.
+The staircase boundary identity \eqref{eq:staircase-cancellation} must
+likewise be retained: entering terms have an exact cancellation of their
+arithmetic $x$-phase, not a freely discardable endpoint error.
 
-The staircase endpoints also carry structure. When index $n$ enters at
-$v=d_n$, direct substitution in \eqref{eq:An} gives
+\subsection{A sufficient split that preserves favorable curvature}
+
+Throughout this section let $0<a<\pi/8$, prescribe a real $b$, and put
+$\mu=a^2+b^2$. At each point the centered observations are
 \begin{equation}
- e^{t(d_n+ia)^2}\phi_1(d_n+ia)e^{ixd_n}
- A_n(t,x;d_n)(-a)^j
-       =e^{-ta^2}\phi_n(ia)(-a)^j.
- \label{eq:staircase-cancellation}
+ C_k=-h_{k+2}-2ah_{k+1}-\mu h_k,\qquad k\ge0.
+ \label{eq:all-centered-observations}
 \end{equation}
-The oscillatory arithmetic factor cancels at this boundary. Replacing
-the staircase by a fixed sum and ignoring these boundary terms would
-lose part of the complete-source identity.
+Whenever these observations are differentiated or compared at different
+times below, $a,b$ are held fixed. The exact identity is
+\[
+ \Lag_j=\mu h_j^2+h_jC_j+h_{j+1}(h_{j+1}+2ah_j).
+\]
+Thus the remaining target can be stated as
+\begin{equation}
+ \boxed{h_jC_j\ge-\mu h_j^2-K_jE
+ \quad\hbox{on }h_{j+1}=0,\qquad j=0,1,}
+ \label{eq:final-target}
+\end{equation}
+where $K_j\ge0$ is prescribed without dividing by an unknown energy and
+is locally bounded through every candidate positive-time collision.
+This is precisely the stationary loss condition in
+Section~\ref{sec:fc-collision}.
 
-\subsection{A small residual norm can impose an unnecessary condition}
-Consider the real-rooted backward-heat control
-$P(t,y)=y^2-d^2-2t$, with $d\ge0$ and $t>0$. Its Laguerre forms are
-$2y^2+2d^2+4t>0$ and $4$. At $y=0$, put $D=d^2+2t$. Then
-$P=-D$, $P_y=0$, $E=D^2$, and the centered residuals are
-$C_0=-2+\mu D$, $C_1=-4a$. The cone
-$C_0^2+C_1^2\le\eta^2E$ would require
+\begin{lemma}[Favorable curvature and a residual square]
+\label{lem:favorable-split}
+Prescribe an exact split $C_j=G_j+R_j$ and parameters
+$0<\kappa\le\mu$, $\rho\ge0$. Define
+\begin{equation}
+ \Delta_j=4\kappa h_jG_j+\rho^2E-R_j^2.
+ \label{eq:split-slack}
+\end{equation}
+Without imposing stationarity,
+\begin{align}
+ 4\kappa\Lag_j+\rho^2E
+ &=(R_j+2\kappa h_j)^2+\Delta_j
+       +4\kappa(\mu-\kappa)h_j^2 \notag\\
+ &\quad+4\kappa h_{j+1}(h_{j+1}+2ah_j).
+ \label{eq:split-stationary-ideal}
+\end{align}
+In particular, $\Delta_j\ge0$ on $h_{j+1}=0$ implies
+$\Lag_j\ge-\rho^2E/(4\kappa)$. This loss is locally bounded if
+$\rho$ is locally bounded and $\kappa$ is locally bounded below by a
+positive constant.
+\end{lemma}
+\begin{proof}
+Expand the square and use $G_j+R_j=C_j$. All terms are polynomial in
+the physical jets, so neither $E>0$ nor division by a jet is required.
+On stationarity the last term vanishes and the other displayed squares
+and $4\kappa(\mu-\kappa)h_j^2$ are nonnegative.
+\end{proof}
+
+The split must expose an independently estimable source contribution.
+For the exact domain and fields of \eqref{eq:pair-domain}, choose a
+prescribed real multiplier $m_j(\alpha)$ with at most polynomial growth
+in $y_\alpha$, and set
+\begin{align}
+ G_j&=e^{-ax}\Re\int_\Omega m_j(\alpha)W_\alpha q_\alpha^j\dd\nu(\alpha),
+       \notag\\
+ R_j&=e^{-ax}\Re\int_\Omega r_j(\alpha)W_\alpha q_\alpha^j\dd\nu(\alpha),
+ \qquad r_j(\alpha)=y_\alpha^2-b^2-m_j(\alpha).
+ \label{eq:prescribed-source-split}
+\end{align}
+A proper source filter takes
+$m_j=(y_\alpha^2-b^2)\mathbf1_A$, with the retained set $A$ intersected
+with the original staircase. The filter and its parameters are fixed
+before evaluating the physical observations. For real $m_j,r_j$, the
+polarization \eqref{eq:paired-J} gives the exact scalar obligation
+\begin{align}
+ \Delta_j=\frac{e^{-2ax}}2\Re\iint_{\Omega^2}
+ \big[&\{2\kappa(m_j(\alpha)+m_j(\beta))
+                  -r_j(\alpha)r_j(\beta)\}J_j(\alpha,\beta)\notag\\
+       &+\rho^2(J_0(\alpha,\beta)+J_1(\alpha,\beta))\big]
+       \dd\nu(\alpha)\dd\nu(\beta).
+ \label{eq:paired-split-slack}
+\end{align}
+Indeed $h_jG_j$ is $e^{-2ax}/4$ times the real part of the integral
+of $(m_j(\alpha)+m_j(\beta))J_j$, whereas $R_j^2$ has coefficient
+$e^{-2ax}/2$ and integrand $r_j(\alpha)r_j(\beta)J_j$.
+The complete source majorants justify these identities and their tail
+payments; they do not prove the sign in \eqref{eq:paired-split-slack}.
+The formula requires real multipliers. A complex filter requires its
+own conjugated polarization or an independent physical-field identity.
+
+Even a quotient-free split can be vacuous: choosing
+$m_j=y_\alpha^2-b^2+2\kappa$ makes $R_j=-2\kappa h_j$ and cancels
+the first square in \eqref{eq:split-stationary-ideal}. With $\kappa=\mu$,
+the resulting slack condition only restates the target and supplies no
+theta estimate.
+
+\subsection{Collision controls and the limitation of the square criterion}
+
+For the backward-heat polynomial $P(t,y)=y^2-d^2-2t$, put
+$D=d^2+2t>0$. Its Laguerre forms are $2y^2+2D>0$ and $4$.
+At $y=0$, $h_0=-D$, $h_1=0$, $E=D^2$, $C_0=-2+\mu D$, and
+$C_1=-4a$. The whole-residual cone would require
 \begin{equation}
  \eta\ge\frac{\sqrt{(2-\mu D)^2+16a^2}}{D}.
  \label{eq:close-pair-cone}
 \end{equation}
-For bounded prescribed $a,\mu$, this can become large as the pair
-closes even though the required negative loss is zero. This is a
-control example, not a statement that the theta cone fails. It shows
-why favorable curvature should not be paid as an adverse error.
-Growth as $t\downarrow0$ is also compatible with local boundedness at
-every positive time.
+For bounded $a,\mu$, this grows without bound as the pair closes,
+although the required negative loss is zero. The prescribed split
+$G_0=-2$, $R_0=\mu D$ instead gives
+\[
+ \Delta_0=8\kappa D+(\rho^2-\mu^2)D^2.
+\]
+It accepts $\rho=0$ whenever $0<D\le8\kappa/\mu^2$, preserving the
+large favorable curvature. This control is not a theta counterexample;
+growth as $t\downarrow0$ is also compatible with local boundedness at
+each positive time.
 
-The focused remaining target is therefore the one-sided estimate
+The same algebra rejects adverse collision predecessors. For
+$P=y^2-2(t-T)$ at $y=0$, $t=T-s<T$, the split
+$G_0=-2$, $R_0=-2\mu s$ yields
+\[
+ \Delta_0=-16\kappa s+4(\rho^2-\mu^2)s^2,\qquad
+ \Lag_0=-4s,\qquad E=4s^2.
+\]
+For $P=y^3-6(t-T)y$ at $y=0$, $t=T-s<T$, the second stationary
+set $h_2=0$ has $h_1=6s$, $h_3=6$. Taking $G_1=-6$,
+$R_1=-6\mu s$ gives
+\[
+ \Delta_1=-144\kappa s+36(\rho^2-\mu^2)s^2,\qquad
+ \Lag_1=-36s,\qquad E=36s^2.
+\]
+Both slacks are negative for sufficiently small $s>0$ when $\rho$
+is bounded and $\kappa$ stays positively bounded below. The second
+stationary set cannot be omitted.
+
+There is also a precise restriction at the candidate collision itself:
+if $h_0=h_1=0$, then $\Delta_0=-R_0^2$. The square criterion therefore
+forces $R_0=0$ exactly; if also $h_2=0$, it forces $R_1=0$.
+A small absolute bound on an omitted source does not imply this
+vanishing. Thus Lemma~\ref{lem:favorable-split} is a sufficient
+criterion with an extra cancellation obligation, not a solution of the
+remaining theta problem.
+
+Nor can its sign be justified by arbitrary-source positivity. On
+$h_1=0$ the arbitrary-jet form $\Lag_0+KE=-h_0h_2+Kh_0^2$ is
+indefinite for every finite $K$; on $h_2=0$ the form is
+$-h_1h_3+K(h_0^2+h_1^2)$ and is likewise indefinite. Terms in the
+stationary ideal vanish there. Any useful positivity argument must
+therefore use relations of the actual theta source.
+
+\subsection{Direct product absorption}
+
+The residual-square condition can be replaced by a one-sided product
+condition which imposes no residual vanishing at $E=0$.
+\begin{lemma}[Fixed-fraction absorption]\label{lem:direct-absorption}
+For a prescribed split $C_j=G_j+R_j$, let $0\le\lambda\le1$ and
+$K_j\ge0$. On the genuine stationary set $h_{j+1}=0$, suppose
 \begin{equation}
- \boxed{h_jC_j\ge-\mu h_j^2-K_jE
-       \quad\hbox{on }h_{j+1}=0,\qquad j=0,1,}
- \label{eq:final-target}
+ h_jG_j\ge0,\qquad h_j(R_j+\lambda G_j)\ge-K_jE.
+ \label{eq:direct-absorption}
 \end{equation}
-where $K_j\ge0$ is locally bounded through every candidate positive-time
-collision. By \eqref{eq:C-stationary}, this is exactly the sufficient
-stationary inequality $\Lag_j\ge-K_jE$. In particular, $K_j$ may not
-be defined by an uncontrolled quotient with the unknown energy in its
-denominator. All arithmetic cross terms and complete source errors
-remain part of the estimate.
+Then $\Lag_j\ge-K_jE$.
+\end{lemma}
+\begin{proof}
+On this set,
+\[
+ \Lag_j=\mu h_j^2+(1-\lambda)h_jG_j
+                      +h_j(R_j+\lambda G_j)\ge-K_jE.
+\]
+\end{proof}
+At a first-pair zero the displayed products vanish automatically, but
+the estimate must still hold with a locally bounded prescribed loss in
+a neighborhood of that point. A favorable retained product alone does
+not suffice. The finite results below use $\lambda=1/2$ and
+$K_0=K_1=0$, without fitting a loss to an observed energy floor.
 
-A natural next analytic step is to replace the absolute majorant in
-\eqref{eq:weight-majorant} by bounds for oscillatory arithmetic blocks
-and their logarithmic moments. This may lower the sufficient threshold
-four, but such an improvement has not been proved here. The octonionic
-formulation continues to identify the required orientation; the new
-content must come from the theta-specific arithmetic estimate.
 
+\section{Proper source filters and complete theta correlations}
+\label{sec:source-filters}
+
+We first test the preceding mechanisms on populated stationary branches
+inside the existing height-$104$ cover. We then prove why fixed sharp
+filters cannot support uniformly small separate payments at arbitrary
+heights, and derive a complete-source alternative. The finite tests do
+not extend the bounded cover or settle \eqref{eq:remaining-domain}.
+
+\subsection{Two certified stationary branches and a signed comparison}
+
+Fix
+\begin{equation}
+ a=\pi/16,\qquad b=1/4,\qquad \mu=a^2+b^2,\qquad
+ \lambda=1/2,\qquad K_0=K_1=0.
+ \label{eq:filter-pilot-parameters}
+\end{equation}
+Use the constant normalization $Z_k=e^{\pi x_c/8}h_k$, with
+$x_c=101.5$ on $[101,102]$ and $x_c=103.5$ on $[103,104]$.
+Hats denote the same normalization of centered observations.
+The complete-source certificate and paid endpoint Taylor transport give,
+for every $t\in[0,1/2]$,
+\begin{align}
+ Z_1(t,101)>37,\qquad& Z_1(t,102)<-20,\qquad Z_2<0
+                       \quad(101\le x\le102),\notag\\
+ Z_2(t,103)<-26,\qquad& Z_2(t,104)>14,\qquad Z_3>0
+                       \quad(103\le x\le104).
+ \label{eq:pilot-stationary-endpoints}
+\end{align}
+The intermediate value theorem and strict monotonicity therefore prove
+exactly one $h_1=0$ point in $(101,102)$ and exactly one $h_2=0$ point
+in $(103,104)$ at each time. The implicit function theorem gives smooth
+branches. These are stationary points of the physical derivatives,
+not derivatives of a variable normalization.
+
+A first signed comparison uses the full residual on the first branch.
+Exact rational extraction from the eight stored closed time slabs gives
+\begin{equation}
+ \begin{gathered}
+ Z_0>0,\qquad\widehat C_0>0,\qquad
+ Z_0\widehat C_0>6000,\qquad\widehat C_0-\mu Z_0>7/5,\\
+ \mu Z_0^2+Z_0\widehat C_0>9400,\qquad
+ \mu^2Z_0^2-\widehat C_0^2-\widehat C_1^2<-78.
+ \end{gathered}
+ \label{eq:full-residual-signed-pilot}
+\end{equation}
+Thus the signed condition holds with $K_0=0$, whereas every prescribed
+whole-residual cone budget $\eta\le\mu$ fails on this branch.
+The previously certified saddle-centered $\eta=1/3$ cone still passes;
+the comparison concerns the different fixed centering
+\eqref{eq:filter-pilot-parameters}, not a failure of every norm cone.
+Taking $G=C$, $R=0$ here is a full-residual comparison, not a proper
+source split. The next experiment supplies such a split.
+
+\subsection{A proper filter absorbs an adverse complement on 64 cells}
+
+Before evaluating partial integrals, prescribe the four filters
+\[
+ (N,U)\in\{(1,1),(1,3/2),(2,1),(2,3/2)\}.
+\]
+For $z=u+ia$, define
+\begin{align}
+ g_k(t,x)&=e^{-ax}\Re\sum_{n=1}^N\int_0^U
+             (iz)^k e^{tz^2+ixu}\phi_n(z)\dd u,\notag\\
+ G_j&=-g_{j+2}-2ag_{j+1}-\mu g_j,\qquad R_j=C_j-G_j.
+ \label{eq:rectangular-filter}
+\end{align}
+This is precisely the real source multiplier
+$(u^2-b^2)\mathbf1_{n\le N,\,0\le u\le U}$. Its shared-carrier
+domain is $n\le N$, $d_n\le v\le d_n+U$, so all entry boundaries
+are retained. Each of the eight time slabs
+$[r/16,(r+1)/16]$, $0\le r\le7$, is tested on both branches:
+four filters, two branches, and eight slabs give $64$ closed-cell tests.
+Even-index slabs were designated development and odd-index slabs holdout
+before evaluation; no filter, parameter, or loss was changed between them.
+Their interiors are disjoint and their common boundary times are covered.
+
+Both values of $U$ give the following conservative bounds on every
+corresponding slab. Products are normalized by $e^{\pi x_c/4}$.
+\begin{center}
+\begin{tabular}{@{}ccrrr@{}}
+\toprule
+$N$ & $j$ & $Z_j\widehat G_j$ & $Z_j\widehat R_j$
+    & $Z_j(\widehat R_j+\widehat G_j/2)$\\
+\midrule
+$1$ & $0$ & $>0$ & $<0$ & $<-1{,}200{,}000$\\
+$1$ & $1$ & $>0$ & $<0$ & $<-250{,}000$\\
+$2$ & $0$ & $>7800$ & $(-212,-120)$ & $>3800$\\
+$2$ & $1$ & $>3800$ & $(-46,-25)$ & $>1900$\\
+\bottomrule
+\end{tabular}
+\end{center}
+Here $j=0$ means the $h_1=0$ branch and $j=1$ the $h_2=0$ branch.
+The two-index filters therefore pay a genuinely adverse complementary
+product with the prescribed half of a favorable retained product.
+Lemma~\ref{lem:direct-absorption} applies with the fixed zero loss.
+For one index the same prescribed absorption test actually fails on
+nonempty stationary sets: the negative upper bounds are not an interval
+precision failure. The large one-index terms nearly cancel in the
+complete residual.
+
+For completeness, the certification encloses retained center derivatives
+through order $28$ with $192$-bit Arb quadrature, then uses space order
+$12$ and time order $8$ for transport. Fixed endpoints give
+$\partial_xg_k=g_{k+1}$ and $\partial_tg_k=-g_{k+2}$ exactly.
+The complete-source moment payments remain valid for the three masks
+$\mathbf1_A$, $1-\mathbf1_A$, and $1-\mathbf1_A/2$, all of which
+lie in $[0,1]$. Centered payments are bounded by
+$P_{j+2}+2aP_{j+1}+\mu P_j$ for each spatial or temporal remainder.
+The full $C$ arrays already include quadrature error, all omitted theta
+indices, and the infinite integration tail. The complement is the exact
+difference $C-G$, and $C-G/2$ is formed before transport to preserve
+cancellation. On current stationarity its enclosure is intersected with
+$-h_{j+2}-\mu h_j-G_j/2$; the complement is treated similarly.
+The product always uses the full physical jet and an integrated
+observation, retaining all cross terms. No individual theta index is
+assigned the vanishing vertical contour integral of the complete source.
+The complete $64$-case receipt, including failures, is identified in
+Appendix~\ref{app:replay}.
+
+\subsection{The endpoint terms of a fixed sharp filter}
+
+Now fix $t\in(0,1/2]$, $0<a<\pi/8$, $b\ge0$, $N\ge1$, and
+$U>0$, independently of $x$. Write
+\[
+ \Phi_N(z)=\sum_{n=1}^N\phi_n(z),\qquad q=-a+iu=iz,\qquad
+ f_{N,j}(u)=(u^2-b^2)q^j e^{tz^2}\Phi_N(z).
+\]
+Then the retained residual in \eqref{eq:rectangular-filter} is
+\begin{equation}
+ G_j(x)=e^{-ax}\Re\int_0^U f_{N,j}(u)e^{ixu}\dd u,\qquad R_j=C_j-G_j.
+ \label{eq:sharp-filter-integral}
+\end{equation}
+These fixed filtered fields still solve backward heat. The following
+effect comes from source integration by parts, not a heat-equation defect.
+
+\begin{lemma}[Complete endpoint expansion]\label{lem:sharp-endpoints}
+For $x>0$,
+\begin{align}
+ e^{ax}G_j(x)&=\frac{B_j(x)}x+\mathcal E_j(x),\qquad
+ B_j(x)=\Im\{f_{N,j}(U)e^{ixU}-f_{N,j}(0)\},\notag\\
+ |\mathcal E_j(x)|&\le\frac{M_{N,j}}{x^2},\qquad
+ M_{N,j}=|f'_{N,j}(U)|+|f'_{N,j}(0)|
+                      +\int_0^U|f''_{N,j}(u)|\dd u.
+ \label{eq:sharp-endpoint-expansion}
+\end{align}
+In particular the lower coefficient is
+\begin{equation}
+ -\Im f_{N,j}(0)=b^2(-a)^j e^{-ta^2}\Im\Phi_N(ia).
+ \label{eq:raw-index-endpoint}
+\end{equation}
+\end{lemma}
+\begin{proof}
+Twice integrating $\int_0^Ufe^{ixu}\dd u$ by parts gives
+\[
+ \frac{[fe^{ixu}]_0^U}{ix}
+ -\frac{[f'e^{ixu}]_0^U}{(ix)^2}
+ +\frac{1}{(ix)^2}\int_0^Uf''e^{ixu}\dd u.
+\]
+Taking real parts uses $\Re(-iZ)=\Im Z$ and gives the stated bound.
+Substitution at $u=0$ proves \eqref{eq:raw-index-endpoint}.
+\end{proof}
+
+For the complete theta source, evenness and Schwarz symmetry make
+$\Phi(ia)$ real. More generally its centered integrand obeys
+$f_j(-u)=\overline{f_j(u)}$. Its even derivatives at zero are real
+and its odd derivatives purely imaginary, so every lower-endpoint
+coefficient in the real integration-by-parts expansion vanishes.
+A finite raw-index sum need not have this symmetry.
+If instead a common cutoff $v\le V$ is used, retain
+$U_n=V-d_n>0$ for every included index; the leading term becomes
+\[
+ \Im\left\{\sum_{\substack{n\le N\\d_n<V}}
+ f_{n,j}(U_n)e^{ixU_n}
+ -\sum_{\substack{n\le N\\d_n<V}}f_{n,j}(0)\right\}.
+\]
+Here $f_{n,j}$ is defined with the individual term $\phi_n$ in place
+of $\Phi_N$. The remainder is the sum of the bounds in
+\eqref{eq:sharp-endpoint-expansion}. An index with $d_n=V$ has an
+empty interval and contributes zero, not a single unmatched endpoint.
+This is the same entry cancellation as
+\eqref{eq:staircase-cancellation}.
+
+The upper endpoint is provably nonzero for the pilot family, without a
+genericity assumption. More generally suppose
+$a=\pi/16$, $U\ge1$, and $U\ne b$. Put $D_4=e^{4U}>50$ and
+$\beta=\pi\cos(4a)D_4>100$. For $n\ge2$,
+\[
+ \left|\frac{\phi_n(U+ia)}{\phi_1(U+ia)}\right|
+ \le n^2\frac{2\pi n^2D_4+3}{2\pi D_4-3}
+             e^{-\beta(n^2-1)}
+ \le2n^4e^{-100(n^2-1)}.
+\]
+Here $\phi_1(U+ia)\ne0$ since
+$|2\pi e^{4(U+ia)}-3|\ge2\pi D_4-3>0$.
+Using $n^4\le e^{n^2-1}$ and
+$n^2-1\ge3+5(n-2)$ gives
+\begin{equation}
+ \sum_{n=2}^\infty2n^4e^{-100(n^2-1)}
+ \le\frac{2e^{-297}}{1-e^{-495}}<\tfrac12.
+ \label{eq:nonzero-sharp-endpoint}
+\end{equation}
+Thus $\Phi_N(U+ia)\ne0$ for every finite $N$, and
+$f_{N,0}(U)\ne0$. This includes $U=1,3/2$, $b=1/4$.
+
+\begin{theorem}[Adverse sharp-filter products on genuine stationary sets]
+\label{thm:sharp-filter-obstruction}
+Fix the parameters of \eqref{eq:sharp-filter-integral} and assume
+$f_{N,0}(U)\ne0$. For each $j=0,1$ there is a sequence
+$x_k\to\infty$ of genuine stationary points $h_{j+1}(t,x_k)=0$ such
+that $h_jG_j>0$, $h_jR_j<0$, and
+\begin{equation}
+ \frac{-h_jR_j}{E}(t,x_k)
+   =\exp\{(\pi/8-a)x_k+o(x_k)\}.
+ \label{eq:sharp-filter-adverse-rate}
+\end{equation}
+For every fixed $0\le\lambda<1$, along the same sequence eventually
+\begin{equation}
+ h_j(R_j+\lambda G_j)<0,\qquad
+ \frac{-h_j(R_j+\lambda G_j)}E
+   =\exp\{(\pi/8-a)x_k+o(x_k)\}.
+ \label{eq:sharp-filter-absorption-rate}
+\end{equation}
+There are also stationary sequences with $h_jR_j>0$ and the same
+exponential rate for its absolute ratio. All these points eventually
+belong to the proved outer region, where $E>0$ and both complete
+Laguerre forms are positive.
+\end{theorem}
+\begin{proof}
+At fixed $t>0$, the outer four-jet estimates apply for all sufficiently
+large $x$. With $A(x)=2|Q_t(x)|$, $\omega=\log(x/(4\pi))/4$, and
+a continuous phase $\varphi=\arg Q_t$, their fixed-time consequences are
+\begin{equation}
+ \begin{gathered}
+ h_k=A\omega^k\{\cos(\varphi+k\pi/2)+O(1/\log x)\},
+       \qquad 0\le k\le3,\\
+ \varphi'(x)=\omega+O(1)>0,\qquad
+ \log A(x)=-\pi x/8+O_t((\log x)^2).
+ \end{gathered}
+ \label{eq:fixed-time-phase-windows}
+\end{equation}
+For $j=0$, take phase windows centered at $\varphi=k\pi$ with
+half-width $\pi/6$. For all sufficiently large windows, $h_1$ has
+opposite endpoint signs and $h_2$ has a fixed nonzero sign throughout.
+There is exactly one $h_1=0$ point in each window, and the sign of
+$h_0$ alternates. There $|h_0|\asymp A$ and $E=h_0^2\asymp A^2$.
+
+For $j=1$, center the windows at $\varphi=\pi/2+k\pi$. Now $h_2$
+has opposite endpoint signs and $h_3$ has a fixed nonzero sign.
+There is exactly one $h_2=0$ point in each window and $h_1$ alternates
+sign. At these points $|h_1|\asymp A\omega$, while $h_2=0$ in
+\eqref{eq:fixed-time-phase-windows} gives $h_0=O(A/\log x)$;
+therefore $E\asymp A^2\omega^2$.
+
+Since $q(U)\ne0$, the hypothesis makes each $B_j$ a nonconstant
+sinusoid plus a constant. It has infinitely many fixed-width intervals
+on which its sign is fixed and $|B_j|\ge c_j>0$. The spacing of the
+stationary points just constructed is $O(1/\log x)$. Each such interval
+at sufficiently large height therefore contains stationary points of
+both signs of $h_j$. By \eqref{eq:sharp-endpoint-expansion}, $G_j$
+has the sign of $B_j$ there and $|G_j|\asymp e^{-ax}/x$.
+In contrast, $C_j$ is a fixed linear combination of complete physical
+jets, so \eqref{eq:fixed-time-phase-windows} makes it exponentially
+smaller than $G_j$. Hence $R_j=-G_j(1+o(1))$ on these intervals.
+
+Choose the stationary points with $h_jG_j>0$ or with $h_jG_j<0$.
+The energy estimates above give \eqref{eq:sharp-filter-adverse-rate}
+and its opposite-sign version: all powers of $x,\log x$ and the
+$O_t((\log x)^2)$ amplitude correction contribute $o(x)$ to the
+logarithm. Finally
+$h_j(R_j+\lambda G_j)=h_jC_j-(1-\lambda)h_jG_j$, and the same
+comparison proves \eqref{eq:sharp-filter-absorption-rate}.
+\end{proof}
+
+Thus no constant, polynomial, or other budget $K_j(x)=\exp(o(x))$
+can make the second inequality in \eqref{eq:direct-absorption} hold
+globally for this fixed sharp filter and a fixed $\lambda<1$.
+This conclusion does not exclude losses locally bounded at every finite
+positive-time point: exponential growth in $x$ is still locally bounded.
+It is a fixed-positive-time obstruction in an already favorable region,
+not an obstruction to an adaptive filter in the unresolved moving cusp.
+Neither $\lambda=1$ nor a fraction tending exponentially fast to one is
+covered. In the complete product $h_jC_j$, the artificial endpoint
+terms cancel exactly.
+
+\subsection{A compact filter has no finite rational jet closure}
+
+\begin{proposition}\label{prop:no-rational-filter-closure}
+For any fixed $t,a,b,N,U$ as in
+\eqref{eq:sharp-filter-integral}, no finite family of real rational
+functions $r_0,\ldots,r_m$ can satisfy
+\begin{equation}
+ R_j(x)=\sum_{k=0}^m r_k(x)h_k(t,x)
+ \label{eq:forbidden-rational-closure}
+\end{equation}
+on a nonempty open real interval free of their poles, for $j=0$ or $1$.
+\end{proposition}
+\begin{proof}
+Since $C_j$ is a constant-coefficient combination of physical jets,
+clearing denominators would give
+\[
+ p(x)G_j(x)=\sum_{k=0}^m p_k(x)h_k(t,x),\qquad p\ne0,
+\]
+with polynomials. Both sides extend to entire functions, so this
+identity holds for all real $x$.
+Complete evenness and Schwarz symmetry give
+\begin{equation}
+ e^{ax}h_k(t,x)=\frac12\int_{\R}
+ e^{t(u+ia)^2}\Phi(u+ia)[i(u+ia)]^k e^{ixu}\dd u.
+ \label{eq:whole-line-filter-closure}
+\end{equation}
+The Fourier density is real analytic on all of $\R$, and it and all its
+derivatives decay rapidly: holomorphy follows from the open theta strip,
+positive-end decay from the theta series, and negative-end decay from
+the complete evenness. Polynomial multiplication in $x$ corresponds
+to finite derivatives in $u$, preserving real analyticity.
+
+By contrast, $e^{ax}G_j$ is the Fourier transform of the compactly
+supported $L^1$ density equal to $f_{N,j}(u)/2$ on $(0,U)$,
+$\overline{f_{N,j}(-u)}/2$ on $(-U,0)$, and zero elsewhere.
+Multiplication by $p(x)$ gives a compactly supported distribution.
+Fourier injectivity for tempered distributions equates this compact
+distribution to a real analytic function. That function vanishes on
+$(U,\infty)$, hence everywhere. Therefore $pG_j=0$ and $G_j=0$.
+
+This is impossible. The finite sum $\Phi_N$ is a nonzero holomorphic
+function, since every $\phi_n$ is positive on the positive real axis.
+The other factors in $f_{N,j}$ have only isolated zeros, so its compact
+Hermitian extension is not zero. Fourier injectivity implies $G_j$ is
+not identically zero. The injectivity used here follows, for example,
+by Gaussian regularization and the approximate-identity limit; it
+requires no information about zeros of $H$.
+\end{proof}
+
+The proposition excludes rational-coefficient finite-jet identities for
+these fixed filters, including constant and polynomial coefficients.
+It does not exclude general transcendental coefficients, merely locally
+bounded coefficients, or moving filters. Nor can complete symmetry be
+restored by naively adding $\Phi_N(-z)$: as real $u\to\infty$,
+\[
+ \Phi_N(-u)=-3\pi\Big(\sum_{n=1}^Nn^2\Big)e^{-5u}+O_N(e^{-9u}),
+\]
+so multiplication by $e^{tu^2}$ destroys integrability at every
+positive time. Complete theta evenness is an infinite-index identity.
+A vertical contour correction alone does not restore this raw-index
+symmetry. Smooth compact cutoffs still require matched endpoint
+derivatives and a new relative signed estimate.
+
+\subsection{Complete-source Gaussian transport and a 14-cell pilot}
+
+There is an exact alternative without sharp source endpoints. For
+fixed $\delta\ge0$, multiply the complete source on the shifted
+contour by $e^{-\delta z^2}$, $z=u+ia$. With the same frozen $a,b$
+at both times, its retained observation and complement are
+\begin{equation}
+ G_j(t,x)=C_j(t-\delta,x),\qquad
+ R_j(t,x)=C_j(t,x)-C_j(t-\delta,x).
+ \label{eq:complex-gaussian-transport}
+\end{equation}
+This follows directly from $e^{tz^2}e^{-\delta z^2}=e^{(t-\delta)z^2}$
+and the complete contour identity. The multiplier preserves the
+symmetry on the imaginary segment and introduces no raw-index or upper
+cutoff boundary. It is generally complex on the horizontal contour:
+\[
+ e^{-\delta(u+ia)^2}
+     =e^{\delta a^2-\delta u^2}e^{-2i\delta au}.
+\]
+Accordingly \eqref{eq:paired-split-slack}, which assumes real
+multipliers, is not applied unchanged. Formula
+\eqref{eq:complex-gaussian-transport} supplies the physical products
+directly. Numerical truncation errors still require full payment.
+
+For the parameters \eqref{eq:filter-pilot-parameters}, fix
+$\delta=1/16$ before testing. The two current-time branches in
+\eqref{eq:pilot-stationary-endpoints} and the seven closed time slabs
+$[r/16,(r+1)/16]$, $1\le r\le7$, give $14$ predeclared cases.
+All satisfy $h_jG_j>0$, $h_jR_j>0$, and
+$h_j(R_j+G_j/2)>0$. Conservative normalized margins are
+\begin{center}
+\begin{tabular}{@{}crrr@{}}
+\toprule
+$j$ & $Z_j\widehat G_j$ & $Z_j\widehat R_j$
+    & $Z_j(\widehat R_j+\widehat G_j/2)$\\
+\midrule
+$0$ & $>8300$ & $>54$ & $>4200$\\
+$1$ & $>4200$ & $>7$ & $>2100$\\
+\bottomrule
+\end{tabular}
+\end{center}
+Thus this second finite pilot has favorable retained and complementary
+products, with the same prescribed zero loss. Stationarity is imposed
+only at $(t,x)$, never at $(t-\delta,x)$.
+
+The proof is exact rational extraction from the stored full-source
+certificate and requires no new quadrature. Previous and current slabs
+have the same spatial center and time displacements. Center coefficient
+differences are formed before transport. The complete spatial and
+temporal payments are $P_{\rm prior}$ for $G$,
+$P_{\rm current}+P_{\rm prior}$ for $R$, and
+$P_{\rm current}+P_{\rm prior}/2$ for $R+G/2$.
+All full center arrays already contain the complete index and integration
+tails. Intersecting with the current stationary identity
+$C_j=-h_{j+2}-\mu h_j$ preserves that constraint, and products of full
+integrated observations retain every cross term. The receipt in
+Appendix~\ref{app:replay} records all $14$ cases. It proves the stated
+finite comparison on $1/16\le t\le1/2$, not persistence of the
+correlation near an unknown collision or suitability of a fixed delay
+as $t\downarrow0$.
+
+The distinct real Gaussian multiplier
+$(u^2-b^2)e^{-\delta u^2}$ also retains the complete source. Denote
+its retained residual by $G^{\rm real}_{\delta,j}$. It satisfies
+\begin{equation}
+ G^{\rm real}_{\delta,j}(t,x)
+     =e^{a^2\delta}C_j(t-\delta,x+2a\delta).
+ \label{eq:real-gaussian-transport}
+\end{equation}
+Indeed
+$tz^2-\delta u^2=(t-\delta)z^2+2i\delta au-\delta a^2$.
+After including the physical prefactor $e^{-ax}$, the corresponding
+filtered jet is $e^{a^2\delta}h_k(t-\delta,x+2a\delta)$.
+Applying $-\partial_x^2-2a\partial_x-\mu$ proves
+\eqref{eq:real-gaussian-transport}.
+Both identities converge for all real times; $0\le\delta\le t$
+is imposed when using a theorem restricted to nonnegative time.
+The real mask obeys the hypotheses of the paired multiplier formula,
+but no numerical certificate for this additional mask is asserted.
+These are standard Fourier/heat identities specialized to the complete
+theta source, not consequences of an unproved positivity property.
+
+Their exact complementary remainders expose the next analytic obligation.
+Since the frozen observations satisfy $\partial_tC_j=-C_{j+2}$,
+\begin{align}
+ R_j(t,x)&=-\int_0^\delta C_{j+2}(t-s,x)\dd s,
+       \label{eq:complex-gaussian-remainder}\\
+ C_j(t,x)-G^{\rm real}_{\delta,j}(t,x)
+   &=-\int_0^\delta e^{a^2s}
+       [C_{j+2}+2aC_{j+1}+a^2C_j](t-s,x+2as)\dd s.
+       \label{eq:real-gaussian-remainder}
+\end{align}
+The earlier or displaced point need not be stationary.
+
+\subsection{The remaining cross-time estimate}
+
+A concrete next target is to prescribe a delay rule $0<\delta(t,x)\le t$,
+a fraction $0\le\lambda<1$, and losses locally bounded through a
+candidate collision, and prove on the \emph{current} set $h_{j+1}(t,x)=0$
+that
+\begin{align}
+ h_j(t,x)C_j(t-\delta,x)&\ge0,\notag\\
+ h_j(t,x)\{C_j(t,x)-(1-\lambda)C_j(t-\delta,x)\}
+        &\ge-K_j(t,x)E(t,x),\qquad j=0,1.
+ \label{eq:cross-time-target}
+\end{align}
+Lemma~\ref{lem:direct-absorption} would then supply the required
+stationary loss. This is a theta-specific correlation statement: neither
+backward heat, complete-source symmetry, nor the transport identities
+prove its sign. The finite pilot establishes it only on the declared
+cells. Any adaptive parameters remain prescribed independently of the
+unknown energy; differentiating an adaptive filter additionally requires
+all chain-rule and moving-boundary terms. The paired source formulas and
+the geometric formulation identify what must be controlled, while
+\eqref{eq:cross-time-target} remains an open all-height analytic estimate.
 
 \appendix
 \section{Complete source and integration error bounds}\label{app:payments}
@@ -1685,6 +2582,249 @@ freeze the contour and cutoffs before differentiating or transporting
 physical jets.
 
 
+% Prepared for Edward Baker; gpt-6-astra, effort ultra; 14 October 2026.
+\section{An explicit height at the condition \texorpdfstring{$tL\ge5$}{tL >= 5}}
+\label{app:explicit-height}
+
+The oscillatory argument in Section~\ref{sec:outer-proof} gives the
+stronger asymptotic condition $tL\ge3+\varepsilon$, with an unevaluated
+height. The following elementary absolute-sum calculation supplies an
+explicit height for $tL\ge5$. These are distinct quantitative statements.
+
+\begin{proposition}[Explicit outer height]\label{prop:explicit-height}
+Let $L=\log(x/(4\pi))$, $\omega=L/4$, and let $Q=Q_+(x)$ be the
+amplitude in \eqref{eq:analytic-model}. If
+\[
+ x\ge X_{\mathrm{exp}}:=4\pi e^{10^9},\qquad
+ 0<t\le\tfrac12,\qquad tL\ge5,
+\]
+then every coordinate error in \eqref{eq:main-four-jet} is at most
+\begin{equation}
+ \frac{108000000}{L}\le0.108<\frac18.
+ \label{eq:effective-four-jet-budget}
+\end{equation}
+In particular, for $P_k=h_k/(2|Q|\omega^k)$,
+\[
+ P_0^2+P_1^2\ge\tfrac12,\qquad
+ P_1^2-P_0P_2\ge\tfrac{31}{64},\qquad
+ P_2^2-P_1P_3\ge\tfrac{31}{64}.
+\]
+The same conclusions hold at negative heights after reflection.
+\end{proposition}
+
+\subsection{Explicit weights on the complex disc}
+All bounds until the last sign step hold for $L\ge1000$,
+$0<t\le1/2$, and $tL\ge5$. On $D_x$ from
+\eqref{eq:shrinking-disc}, write $z=u+iv$ and $\theta_u=tL_u$. Then
+\begin{equation}
+ u\ge x/2\ge e^L,\qquad |L_u-L|\le\frac2{xL}<1,
+ \qquad\theta_u\ge5-\frac1{xL}\ge\frac{19}{4}.
+ \label{eq:effective-disc-geometry}
+\end{equation}
+For $s=s_\pm(z)$, one has $0\le\Re s\le1$ and
+$|s|,|s-1|\ge u/2$. Formula~\eqref{eq:alpha-Mt} therefore yields
+\begin{equation}
+ \Re\alpha(s)\ge L_u/2-3/u,\qquad
+ |\alpha(s)|\le L_u/2+1\le L,
+ \qquad |\alpha'(s)|\le1/u+6/u^2\le2/u.
+ \label{eq:effective-alpha-disc}
+\end{equation}
+For the magnitude estimate, use
+$|s|\le(u/2)\sqrt{1+4/u^2}$, $|\arg s|\le\pi/2$, and the bound
+$3/u$ for the rational terms. It follows that
+\begin{equation}
+ \sigma_\pm:=\Re w_\pm
+ \ge\frac12-\frac1{2L}+\frac{\theta_u}{4}-\frac{3t}{2u}
+ \ge\frac32.
+ \label{eq:effective-zeta-half-plane}
+\end{equation}
+The cutoff satisfies
+\[
+ \tfrac12e^{L_u/2}\le N,\qquad\log N\le L_u/2+1/u.
+\]
+Indeed the upper correction is at most $\pi t/(8u)$, and flooring
+reduces a number at least two by at most a factor of two.
+Consequently, for $n\le N$,
+\begin{equation}
+ e^{t\log^2n/4}n^{-\sigma_\pm}\le n^{-p},\qquad
+ p=\frac12+\frac{\theta_u}{8}-\delta,\qquad
+ \delta=\frac1{2L}+\frac{7t}{4u}\le\frac1{32}.
+ \label{eq:effective-weight}
+\end{equation}
+Writing $s_0=\theta_u-19/4\ge0$, we obtain
+$p\ge17/16+s_0/8$. On the upper half-disc, the same bound holds for
+the first branch after multiplication by $n^v$: its leading real part
+changes from $(1+v)/2$ to $(1-v)/2$, already included in the estimate.
+
+For $\eta>0$ and an integer $m\ge0$, comparison on $[n-1,n]$ gives
+\begin{equation}
+ \sum_{n=2}^{\infty}(\log n)^m n^{-1-\eta}
+ \le\int_1^\infty(\log y+1)^m y^{-1-\eta}\dd y.
+ \label{eq:effective-log-moments}
+\end{equation}
+At $m=2$, $\eta=1/16$, the right side is
+$2/\eta^3+2/\eta^2+1/\eta=8720<9000$. Hence
+\begin{align}
+ |S_{t,N}(w_\pm)-\zeta(w_\pm)|
+ &\le\frac{9000}{4L_u}(19/4+s_0)2^{-s_0/8}+2N^{-1/2}
+ \notag\\
+ &\le\frac{29250}{L_u}+3e^{-L_u/4}
+ \le\frac{31000}{L}.
+ \label{eq:effective-sum-discrepancy}
+\end{align}
+Here $s_0e^{-s_0\log2/8}\le8/(e\log2)<8$, so the time-dependent
+numerator is less than $13$. Moreover,
+$29250/(L-1)<30000/L$ for $L\ge1000$, while
+$e^{(L-1)/4}\ge(L-1)^2/32\ge3L$. Thus the displayed bound includes
+both the weighted discrepancy and the complete ordinary zeta tail,
+uniformly even as $tL$ grows.
+
+\subsection{All imported approximation errors}
+On the upper half-disc, \eqref{eq:RS-ratios} gives $|\gamma|\le2$ and
+\[
+ |\kappa|\log N
+ \le\frac{tv}{2(u-6)}(L_u/2+1/u)<\tfrac12,
+ \qquad N^{|\kappa|}\le2.
+\]
+Since $\zeta(17/16)\le17$, the full positive weight sum in
+\eqref{eq:RS-AB} is at most $5\cdot17=85$. Denote that equation's
+exponent by
+\[
+ q_n=\frac{(t^2/16)\log^2(u/(4\pi n^2))+0.626}{u-6.66}.
+\]
+The estimates $-2/u\le\log(u/(4\pi n^2))\le L_u$,
+$(L+1)^2/64+1\le L^2/32$, and $u-6.66\ge u/2$ imply
+$0\le q_n\le L^2/(16u)<1$. Using $e^q-1\le2q$ on $[0,1]$ gives
+\begin{equation}
+ e_A+e_B\le\frac{85L^2}{8u}\le\frac{11L^2}{u}\le\frac1L.
+ \label{eq:effective-AB}
+\end{equation}
+For the final inequality, $u\ge e^L\ge L^4/24\ge11L^3$ suffices.
+
+The positive correction exponent in \eqref{eq:RS-C} is at most
+\[
+ \frac{1.24(3^v+3^{-v})}{N-0.125}
+ +\frac{3|L_u+i\pi/2|+10.44}{u-12}
+ \le20e^{-L_u/2}+7L/u\le1.
+\]
+To verify the last inequality, use
+$20e^{-(L-1)/2}\le160/(L-1)^2<1/2$ and
+$7Le^{-L}\le168/L^3<1/2$. Its negative main exponent therefore gives
+\begin{equation}
+ e_{C,0}\le e\exp\{-(1/4+19/64)L_u\}
+       \le3e^{-L_u/2}\le\frac1L,
+ \qquad e_A+e_B+e_{C,0}\le\frac2L.
+ \label{eq:effective-C-and-total}
+\end{equation}
+All three errors in the imported theorem are included; the constant
+$0.626$ in $q_n$ is independent of $t$.
+
+\subsection{Amplitude comparison and all four derivatives}
+Let $\Gamma=|M_t(s_+(x))|=|M_t(s_-(x))|$. On $D_x$,
+\[
+ \left|\frac{d}{dz}\log M_t(s_\pm(z))\right|
+ \le\frac{|\alpha|}{2}(1+t|\alpha'|/2)\le L.
+\]
+Integration along a segment of length at most $1/L$ yields
+$|M_t(s_\pm(z))|\le e\Gamma<3\Gamma$. Also
+\eqref{eq:effective-zeta-half-plane} and the zeta and reciprocal-zeta
+Dirichlet series give
+$|\zeta(w)|,|1/\zeta(w)|\le\zeta(3/2)\le3$, hence
+$\Gamma\le3|Q|$. Combining \eqref{eq:effective-sum-discrepancy} and
+\eqref{eq:effective-C-and-total} with \eqref{eq:RS-input} gives
+\begin{align}
+ |H(t,z)-\mathcal P_t(z)|
+ &\le 2(3\Gamma)\frac{31000}{L}+(3\Gamma)\frac2L
+   =\frac{186006\Gamma}{L}
+ \notag\\
+ &\le\frac{558018|Q|}{L}\le\frac{560000|Q|}{L}.
+ \label{eq:effective-disc-error}
+\end{align}
+Schwarz symmetry extends this upper-half-disc estimate to the full disc.
+Cauchy's inequality now gives
+\begin{equation}
+ \frac{|\partial_x^k(H(t,\cdot)-\mathcal P_t)(x)|}
+      {2|Q|\omega^k}
+ \le\frac{280000\,k!\,4^k}{L}
+ \le\frac{107520000}{L},\qquad 0\le k\le3.
+ \label{eq:effective-cauchy-error}
+\end{equation}
+
+For the analytic carrier, at $s=(1+ix)/2$ direct differentiation of
+\eqref{eq:alpha-Mt} gives
+\begin{equation}
+ |\alpha-(L/2+i\pi/4)|\le4/x,\quad
+ |\alpha'|\le2/x,\quad |\alpha''|\le3/x^2,\quad
+ |\alpha'''|\le9/x^3.
+ \label{eq:effective-alpha-center}
+\end{equation}
+The first estimate follows from $s=(ix/2)(1-i/x)$ and
+$|\operatorname{Log}(1-i/x)|\le2/x$. For the others one uses
+\[
+ \alpha'=-\frac1{2s^2}-\frac1{(s-1)^2}+\frac1{2s},\qquad
+ \alpha''=\frac1{s^3}+\frac2{(s-1)^3}-\frac1{2s^2},\qquad
+ \alpha'''=-\frac3{s^4}-\frac6{(s-1)^4}+\frac1{s^3}.
+\]
+Let $J(x)=\log M_t(s(x))$. Then
+\begin{align*}
+ J'&=(i/2)\alpha(1+t\alpha'/2),\\
+ J''&=-\tfrac14\{\alpha'+(t/2)[(\alpha')^2+\alpha\alpha'']\},\\
+ J'''&=-\tfrac i8\{\alpha''+(t/2)[3\alpha'\alpha''+\alpha\alpha''']\}.
+\end{align*}
+Equations~\eqref{eq:effective-alpha-disc} and
+\eqref{eq:effective-alpha-center} imply
+$|J'-i\omega|\le1$, $|J''|,|J'''|\le1$ and
+$|w'|,|w''|,|w'''|\le1$. A majorant for the first bound is
+$\pi/8+2/x+L/(4x)<1$; the remaining bounds follow by inserting the
+stated powers of $x^{-1}$ and $x\ge e^L$.
+
+The prime-power series and \eqref{eq:effective-log-moments} at
+$\eta=1/2$ give
+\[
+ |(\log\zeta)'(w)|\le6,\qquad
+ |(\log\zeta)''(w)|\le26,\qquad
+ |(\log\zeta)'''(w)|\le158.
+\]
+Thus for a local logarithm $g=\log Q_+$, the chain rule yields
+\[
+ |g'-i\omega|\le7,\qquad |g''|\le1+26+6=33,
+ \qquad |g'''|\le1+158+3\cdot26+6=243.
+\]
+The resulting carrier errors are
+\begin{equation}
+\begin{array}{c|c}
+ k&\displaystyle\frac{|Q_+^{(k)}/Q-(i\omega)^k|}{\omega^k}\\[2pt]
+ \hline
+ 1&28/L\\
+ 2&56/L+1312/L^2\\
+ 3&84/L+3936/L^2+81856/L^3
+\end{array}
+\label{eq:effective-carrier-table}
+\end{equation}
+Every entry in the right-hand column is at most $100/L$ for $L\ge1000$.
+At order three, for instance, expanding
+$(i\omega+d)^3+3(i\omega+d)g''+g'''$ with $|d|\le7$ bounds the
+unnormalized discrepancy by $21\omega^2+246\omega+1279$.
+The conjugate branch contributes the same normalized bound; the factor
+two is already included in $2|Q|\omega^k$. The carrier error at order
+zero is exactly zero.
+
+Adding \eqref{eq:effective-cauchy-error} and
+\eqref{eq:effective-carrier-table}, every coordinate error is at most
+$107520100/L<108000000/L$. For $L\ge10^9$ this is less than $1/8$,
+and \eqref{eq:explicit-perturbation} proves
+Proposition~\ref{prop:explicit-height}.
+
+The value $X_{\mathrm{exp}}$ is an explicit consequence of the primary
+approximation and elementary inequalities. Its exponential need not be
+evaluated numerically. The accompanying exact checker verifies 52 rational
+budgets and sufficient polynomial inequalities for every $L\ge1000$ by
+shifting $L=1000+y$ and checking nonnegative coefficients. It audits the
+arithmetic in this proof, rather than replacing its analytic arguments.
+The bound supplies no practical finite-strip coverage between 104 and
+$X_{\mathrm{exp}}$, and it does not evaluate the height in the stronger
+threshold-three theorem.
+
 \section{Reproducibility and scope of the checks}\label{app:replay}
 \begingroup\raggedright
 
@@ -1735,17 +2875,53 @@ twelve staircase boundary checks, exact four-jet perturbation algebra,
 and selected complete-source point enclosures. It does not certify a
 new rectangle or prove the uniform asymptotic theorem.
 
-The continuation is governed by two distinct obligations: making the
-outer threshold effective and obtaining the one-sided inner-region
-bound \eqref{eq:final-target}. A fixed-time asymptotic, a selected-point
-calculation, or a relative error divided by an unknown physical norm
-cannot replace either obligation.
+The subsequent paired algebra, explicit outer constants, and signed-split
+controls are audited by
+\path{numerics/check_signed_carrier_pair_identities.py},
+\path{numerics/check_explicit_outer_constants.py}, and
+\path{numerics/check_signed_curvature_split.py}.
+They require only the Python standard library and an \texttt{--output}
+path, and check 34, 52, and 14 exact statements respectively. Their
+records are
+\path{numerics/SIGNED_CARRIER_PAIR_IDENTITY_CHECKS_20261014.json},
+\path{numerics/EXPLICIT_OUTER_CONSTANT_CHECKS_20261014.json}, and
+\path{numerics/SIGNED_CURVATURE_SPLIT_IDENTITY_CHECKS_20261014.json}.
+These checks support algebra and explicit inequalities; the infinite
+source and asymptotic arguments require the proofs in the text.
+
+The full-residual branch comparison is recorded in
+\path{numerics/STATIONARY_FAVORABLE_CURVATURE_PILOT_20261014.json}.
+The proper source-filter and Gaussian pilots are produced by
+\path{numerics/certify_predetermined_source_filter_pilot.py} and
+\path{numerics/check_gaussian_source_filter_pilot.py}.
+Each accepts \texttt{--record}, \texttt{--original-driver},
+\texttt{--contour-source}, and \texttt{--output}; the inputs are the
+centered-band record, its driver, and
+\path{numerics/check_shifted_contour_payments.py}.
+The proper-filter run uses python-flint 0.9.0 at 192 bits and retains
+all 64 classifications, including 32 failed absorption conditions.
+The Gaussian extraction uses exact rational arithmetic and retains all
+14 cases. Their records are
+\path{numerics/PREDETERMINED_SOURCE_FILTER_PILOT_20261014.json} and
+\path{numerics/GAUSSIAN_SOURCE_FILTER_PILOT_20261014.json}.
+Reviews 14--16 document the analytic audits and independent replays,
+including the eight full-residual branch slabs. Review 17 audits the
+present manuscript integration; its fresh exact checks are distinct
+from the preceding full interval replays.
+
+The main remaining obligation is the one-sided inner-region bound
+\eqref{eq:final-target}, with all cross terms retained and losses locally
+bounded through candidate positive-time collisions. The complete-source
+Gaussian identities make a specific cross-time correlation available for
+that task. Improving the explicit height and connecting the finite cover
+remain separate quantitative work. Neither a fixed-time asymptotic nor
+a ratio divided by an unknown physical energy supplies the missing bound.
 
 \par\endgroup
 
 \section*{Acknowledgment}
 This manuscript was drafted for Edward Baker with substantial assistance
-from OpenAI language models. The present rewrite used Codex with the
+from OpenAI language models. The present integration used Codex with the
 recorded model \texttt{gpt-6-astra} and reasoning effort \texttt{ultra};
 earlier research and numerical certificates also used
 \texttt{gpt-6.1-sol}. LLM assistance included derivations, exposition,
@@ -1775,6 +2951,14 @@ D. H. J. Polymath,
 $\xi$ function, and a new upper bound for the de Bruijn--Newman constant},
 arXiv:1904.12438v2 (2019).
 \url{https://arxiv.org/abs/1904.12438}.
+
+\bibitem{robert}
+O. Robert,
+\emph{On van der Corput's $k$-th derivative test for exponential sums},
+Indagationes Mathematicae \textbf{27} (2016), 559--589.
+\url{https://doi.org/10.1016/j.indag.2015.11.009}.
+Author manuscript:
+\url{https://perso.univ-st-etienne.fr/rool6510/robert-2015-indag.pdf}.
 
 \bibitem{sudbery}
 A. Sudbery,

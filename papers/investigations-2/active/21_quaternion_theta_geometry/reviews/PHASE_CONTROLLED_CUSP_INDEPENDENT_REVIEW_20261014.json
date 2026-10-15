@@ -1,0 +1,199 @@
+{
+  "schema": "inv21_phase_controlled_cusp_independent_review_v1",
+  "date": "2026-10-14",
+  "timezone": "America/New_York",
+  "prepared_for": "Edward Baker",
+  "llm_assistance": "Substantial; separate internal analytic and numerical review by an inherited-model subagent. This is not external peer review or formal verification.",
+  "recorded_model": "gpt-6.1-sol",
+  "recorded_effort": "ultra",
+  "status": "PASS",
+  "reviewer_scope": {
+    "repo_and_history_files_modified": false,
+    "fresh_quadrature_run_by_this_reviewer": false,
+    "quadrature_replay_provenance": "The root agent separately reports fresh 192-bit replays; those receipts are recorded separately and are not represented as this reviewer's computation.",
+    "independent_exact_endpoint_replay": true,
+    "manual_complete_source_and_tail_proof_review": true
+  },
+  "analytic_theorem_review": {
+    "status": "PASS",
+    "delay": "delta=t/[2(1+t log(1+x^2))]",
+    "comparison_time": "tau=t-delta",
+    "rational_outer_domain": "0<t<=1/2, |x|>=an unevaluated finite X, theta=t log(|x|/(4pi))>=13/4",
+    "checks": [
+      "ell>2L implies 0<delta L<1/4 and tau L>91/30=3+1/30; both physical four-jet asymptotics inherit a fixed uniform margin.",
+      "The entire zeta-argument segment lies in Re w>=5/4 eventually. The absolutely convergent Euler logarithm pays the arithmetic phase; sum Lambda(n)n^(-5/4)<=sum log(n)n^(-5/4)<18.",
+      "The complete carrier phase difference satisfies |D|<=pi/64+18/16+o(1)<5/4 uniformly; cos D>=1-D^2/2>=7/32.",
+      "Current stationarity, not earlier stationarity, gives P/(A_t A_tau omega^(2j+2))=cos D+O(1/L), and hence the conservative eventual bound1/8.",
+      "Uniformly delta L>=1/5 eventually; |zeta(w_tau)/zeta(w_t)|<=25 gives A_tau/A_t=O(exp(-L/80)). The absorption product divided by A_t^2 omega^(2j+2) is therefore eventually>=1/2.",
+      "Physical-jet parity handles negative heights; the delayed first-derivative drift changes sign but remains within the uniform O(1/L) error.",
+      "All listed first and second delay chain rules, the heat-equation defect, and regular stationary-branch transport identities were independently checked. The pointwise sign theorem needs no branch-regularity assumption."
+    ],
+    "scope_limit": "This region already has favorable full Laguerre signs by Note19. The result repairs the comparison mechanism there and extends no asymptotic coverage; the moving inner cusp remains open.",
+    "derivation_source_name": "inv21-capped-delay-analysis.md",
+    "derivation_source_sha256": "55d5c6c358bfd9792d584b58e15b068ea2e44e31099e9be1c72d4d66e91b7ca4"
+  },
+  "manual_complete_source_review": {
+    "status": "PASS",
+    "checks": [
+      "The complete even theta contour identity is established before finite source truncation. No finite-index vertical contribution is silently discarded.",
+      "The full omitted-index payment covers all u>=0; the full omitted-integration payment covers every theta index. Their overlap is conservatively overpaid. The implemented geometric-ratio, decay-slope, and curvature hypotheses match Note12.",
+      "Absolute moment majorants use |u+ia|^k<=(u+a)^k and exp(t(u^2-a^2))<=exp(u^2/2), and include both complete omitted-domain payments.",
+      "The positive normalization e^(pi*xc/8) is constant on each cell. Its spatial variation against the contour factor is paid by exp((c-a)xc+a dx). Centering parameters remain frozen during heat Taylor transport.",
+      "The space-order12,time-order8 tensor expansion and both Taylor remainders use the heat equation exactly. All center jets through28 and complete moment bounds through29 are present.",
+      "Each original uniform1/9 cone result remains separately recorded. Whole-cell norm positivity and exact stationary implications are valid independently of that sufficient cone.",
+      "Shared closed boundaries join the new104--108 and108--112 rectangles to the prior cover through104; physical E and both Laguerre forms are even. Therefore the bounded norm and stationary-sign cover legitimately extends through112."
+    ]
+  },
+  "universal_earlier_time_formula_review": {
+    "status": "PASS",
+    "observation": "P=h_j(t,x)C_j(s,x), Q=h_j(t,x)[C_j(t,x)-C_j(s,x)/2], for every0<=s<=t on both new current stationary branches.",
+    "checks": [
+      "All prior slab indices0,...,k conservatively cover the causal triangle for current slabk; including s>t within slabk only enlarges the tested set.",
+      "Current and earlier fields share the same physical spatial displacement eta and constant positive normalization. Their time displacements are independent interval variables.",
+      "common_space_independent_times forms current-minus-half-earlier spatial coefficients before ranging eta. Independent interval products for the two time factors give an enclosure without assuming equal times.",
+      "The full current remainder plus half the full earlier remainder is added. Intersection with -Z_(j+2)-mu Z_j-C_j(s,x)/2 uses only current stationarity.",
+      "The coarse8undecided verdicts remain in the receipt; shared-space refinement proves all16 required cases with the same fixed a,b,lambda and losses. No source filter or loss was changed.",
+      "The stronger causal comparison includes both half-time and capped-delay rules on these finite branches. It uses direct paid earlier-field enclosures, so no shortened Gaussian-multiplier payment is incorrectly reused."
+    ]
+  },
+  "provenance_review": {
+    "status": "PASS",
+    "band_selection": "104--108 was declared before its evaluation;108--112 was declared after the first result and before its own evaluation. The wrapper explicitly records that this was not a jointly blind band selection.",
+    "actual_import_binding": "Final auditor binds the actual imported exact-transport and cached exponential-helper source hashes to the reported source directory, closing the optional--source-dir reproducibility gap.",
+    "all_source_files_below_one_MiB": true
+  },
+  "exact_replay": {
+    "status": "PASS",
+    "checks_total": 1321,
+    "checks_by_group": {
+      "affine_transport": 48,
+      "branch_cover": 48,
+      "branch_creation": 16,
+      "cone": 192,
+      "coverage": 3,
+      "delay_signs": 32,
+      "metadata": 76,
+      "norm": 192,
+      "payments": 262,
+      "protocol": 12,
+      "shape": 128,
+      "source_binding": 8,
+      "stationarity": 272,
+      "universal_delay_signs": 32
+    },
+    "total_cells": 64,
+    "total_stationary_observations": 128,
+    "comparison_rows": 16,
+    "full_json_equal_to_generating_agent_audit": true,
+    "audit_script_sha256": "d6be075e931b47ff97b81bc9e9464c113f03e96da0494d6dff0fb04153e7ade5",
+    "audit_result_sha256": "aebdd50ea2960a3559e9ce68c7401ef4b2be339d74e19a91354c6a7b2d49430e",
+    "source_bindings": {
+      "certify_fixed_cusp_band_extension.py": "8dd3d516379a82f1310ba56fbf9c634922f8de169f7ff1951ca43ccd25051465",
+      "certify_phase_centered_residual.py": "6da9b9c05b465a0067809f9e11bb7d7414f51330afe91c2c38e7cb02fc939afb",
+      "check_shifted_contour_payments.py": "b6f0114e1a4de2e1848f20ab0ab2f1022d9b55015184a879ae0c0536a62d6ad6",
+      "check_proportional_gaussian_source_filter_pilot.py": "dbc5be224cb7e88171f3e8f29bde87606edc29833eb2752ea1d20c9e4178e72f",
+      "audit_theta_centered_residual_record.py": "acdb78b91c8dff8af31f21b84d808fb0296a7f64ad8503575969825a1aa551a6"
+    },
+    "input_records": [
+      {
+        "name": "FIXED_CUSP_BAND_104_108_20261014.json",
+        "sha256": "c62053818da7cf3e7c06db79788d9309c12a6a63fea8451a6ca184cf81662247"
+      },
+      {
+        "name": "FIXED_CUSP_BAND_108_112_20261014.json",
+        "sha256": "fc9530ab1b5d6315f65ed8349f0a207184b7a544641b9b8187a1ccf48b482a63"
+      }
+    ]
+  },
+  "bands": [
+    {
+      "domain": {
+        "x": [
+          "104",
+          "108"
+        ],
+        "t": [
+          "0",
+          "1/2"
+        ]
+      },
+      "cells": 32,
+      "stationary_observations": 64,
+      "stationary_classification_counts": {
+        "j0:stationarity_excluded": 24,
+        "j0:stationary_sign_certified_by_centered_identity": 8,
+        "j1:stationarity_excluded": 32
+      },
+      "norm_positive_everywhere": true,
+      "genuine_current_branch_slabs": 8,
+      "all_possible_branches_covered": true,
+      "branch_creation_excluded_in_candidate_cells": true,
+      "original_cone_status": "INCOMPLETE",
+      "original_cone_undecided_cells": 24,
+      "half_time_minimum_product_lower_bounds_conservative_integers": {
+        "P": "15586",
+        "Q": "7718"
+      },
+      "universal_earlier_time_coarse_verdicts": {
+        "CERTIFIED_PASS": 5,
+        "UNDECIDED": 3
+      },
+      "universal_earlier_time_refined_verdicts": {
+        "CERTIFIED_PASS": 8
+      },
+      "universal_minimum_product_lower_bounds_conservative_integers": {
+        "P": "15511",
+        "Q": "7559"
+      },
+      "physical_norm_lower_bound_strict": "1/100000000000000000",
+      "normalized_energy_lower_bound_strict": "3000"
+    },
+    {
+      "domain": {
+        "x": [
+          "108",
+          "112"
+        ],
+        "t": [
+          "0",
+          "1/2"
+        ]
+      },
+      "cells": 32,
+      "stationary_observations": 64,
+      "stationary_classification_counts": {
+        "j0:stationarity_excluded": 32,
+        "j1:stationarity_excluded": 24,
+        "j1:stationary_sign_certified_by_centered_identity": 8
+      },
+      "norm_positive_everywhere": true,
+      "genuine_current_branch_slabs": 8,
+      "all_possible_branches_covered": true,
+      "branch_creation_excluded_in_candidate_cells": true,
+      "original_cone_status": "INCOMPLETE",
+      "original_cone_undecided_cells": 16,
+      "half_time_minimum_product_lower_bounds_conservative_integers": {
+        "P": "6945",
+        "Q": "3438"
+      },
+      "universal_earlier_time_coarse_verdicts": {
+        "CERTIFIED_PASS": 3,
+        "UNDECIDED": 5
+      },
+      "universal_earlier_time_refined_verdicts": {
+        "CERTIFIED_PASS": 8
+      },
+      "universal_minimum_product_lower_bounds_conservative_integers": {
+        "P": "6910",
+        "Q": "3371"
+      },
+      "physical_norm_lower_bound_strict": "1/100000000000000000",
+      "normalized_energy_lower_bound_strict": "3000"
+    }
+  ],
+  "remaining_limits": [
+    "No arbitrary-height collision-cusp estimate or proof of RH is supplied.",
+    "The finite arithmetic certificates trust Arb/Acb integration and the manually reviewed analytic source lemmas; this receipt is not a formal verification.",
+    "The new comparison theorem has an unevaluated asymptotic height threshold."
+  ]
+}

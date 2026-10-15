@@ -66,3 +66,28 @@ creation time and first-capture provenance were preserved. Its archive
 bytes were unchanged at relocation, and it is no longer registered here.
 The [relocation record](../../active/21_quaternion_theta_geometry/CHAT_HISTORY_RELOCATION_20261014.json)
 documents the move. Future refreshes follow the investigation 21 registry.
+
+## Quaternion continuation in the formal replay lane
+
+Under the explicit local standing instruction, the conversation
+[Continue quaternion theta geometry](0010_2026-10-15T00-47-29Z_continue-quaternion-theta-geometry.json)
+is registered here as number 10, thread
+`01a13d07-4714-7f83-a8f5-700a61bc5e0e`. It continues
+[investigation 21 Note 23](../../active/21_quaternion_theta_geometry/notes/23_MANUSCRIPT_INTEGRATION_AND_CROSS_TIME_CONTINUATION_20261014.md)
+with [Note 24](../../active/21_quaternion_theta_geometry/notes/24_PROPORTIONAL_DELAY_PHASE_OBSTRUCTION_AND_CONTINUATION_20261014.md).
+The preceding conversation's number 9 and identity remain unchanged.
+The archive filename uses its actual UTC creation date, 15 October 2026;
+the author's local date at creation was 14 October. Current counts,
+hashes, timestamps, and configurations are in the registry.
+The same number-10 conversation next continued with
+[Note 25](../../active/21_quaternion_theta_geometry/notes/25_PHASE_CONTROLLED_DELAY_AND_CUSP_EXTENSION_20261014.md):
+a phase-controlled outer comparison and the finite cusp extension through
+112. Its existing registration and history identity are preserved.
+
+
+The [continuation and archive handoff](../../active/21_quaternion_theta_geometry/notes/26_CONTINUATION_AND_CHAT_HISTORY_HANDOFF_20261014.md)
+consolidates this number-10 conversation's current research state and next
+task. Its [verification receipt](../../active/21_quaternion_theta_geometry/reviews/CHAT_HISTORY_CONTINUATION_VERIFICATION_20261014.json)
+checks the point-in-time archive against completed public source text,
+including both preceding final replies. No relocation or re-registration
+was performed; the registry supplies current capture counts and hashes.

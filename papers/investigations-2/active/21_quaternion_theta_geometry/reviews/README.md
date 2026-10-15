@@ -105,3 +105,60 @@ stationary-branch slabs. The finite theta comparison uses an alternative
 centering and a full residual; a proper source filter and the all-height
 signed estimate remain open. Prepared 14 October 2026 for Edward Baker
 with substantial LLM assistance, **gpt-6-astra**, effort **ultra**.
+
+
+The [source-filter and theta-correlation review](16_SOURCE_FILTERS_AND_THETA_CORRELATIONS_REVIEW_20261014.md)
+audits sharp-filter endpoint terms, actual stationary subsequences, and
+the compact-Fourier-support obstruction to rational-coefficient jet closure.
+It independently replays 64 proper-filter cases and 14 Gaussian cases,
+preserving complete source payments and current-time stationarity. It
+checks the distinct real and complex Gaussian transport identities and
+leaves their all-height signed correlations open. Prepared 14 October 2026
+for Edward Baker with substantial LLM assistance, **gpt-6-astra**, **ultra**.
+
+
+The [continuation integration review](17_MANUSCRIPT_CONTINUATION_INTEGRATION_REVIEW_20261014.md)
+audits the manuscript integration of Notes 19–22, replays 100 exact checks,
+checks identity of the earlier independently replayed finite pilots,
+and inspects the compiled PDF. The
+[history verification receipt](CHAT_HISTORY_INTEGRATION_VERIFICATION_20261014.json)
+separately records point-in-time public transcript equality and archive
+integrity; it does not certify mathematical claims. The exact-turn worker
+captures the closing reply after that verification snapshot. Prepared
+14 October 2026 for Edward Baker with substantial LLM assistance,
+**gpt-6-astra**, reasoning effort **ultra**.
+
+The [proportional-delay review](18_PROPORTIONAL_DELAY_PHASE_OBSTRUCTION_REVIEW_20261014.md)
+audits the genuine-theta stationary phase obstruction, complete complex
+polarization and all tail sectors, and the moving half-time derivatives.
+It independently reproduces all 16 bounded pilot cases and 20 exact
+identities, with 1,200 additional rational affine-transport evaluations.
+The [compact receipt](PROPORTIONAL_DELAY_INDEPENDENT_REVIEW_20261014.json)
+records the independent replay. Finite success does not repair global
+retained-sign failure; no new height cover or manuscript revision.
+Prepared 14 October 2026 for Edward Baker with substantial LLM assistance,
+**gpt-6.1-sol**, effort **ultra**.
+
+The [phase-controlled delay and cusp extension review](19_PHASE_CONTROLLED_DELAY_AND_CUSP_EXTENSION_REVIEW_20261014.md)
+checks the full arithmetic phase, all moving-delay and complete-source
+payments, and the new finite cover through 112. Both genuine new branches
+have favorable retained and absorption products for every earlier time.
+The [independent receipt](PHASE_CONTROLLED_CUSP_INDEPENDENT_REVIEW_20261014.json)
+records the analytic and source audit plus an exact byte-matching replay
+of all 1,321 finite checks. Separate fresh 192-bit quadrature replays and
+21 symbolic checks are bound in the continuation validation receipt.
+The original cone failures and coarse undecided signs remain explicit;
+no unbounded-cusp result or new manuscript version is claimed.
+Prepared 14 October 2026 for Edward Baker with substantial LLM assistance,
+**gpt-6.1-sol**, effort **ultra**.
+
+
+The [history continuation verification](CHAT_HISTORY_CONTINUATION_VERIFICATION_20261014.json)
+records a point-in-time comparison of chat 10 with all completed public
+source messages, preserving its original identity and first-capture
+provenance. It confirms the two preceding research finals were captured.
+The [resume handoff](../notes/26_CONTINUATION_AND_CHAT_HISTORY_HANDOFF_20261014.md)
+links the existing mathematical validation and the next signed block
+estimate. Later refreshes legitimately change archive counts and hashes;
+current values remain in the registry. Added 14 October 2026, prepared
+for Edward Baker with substantial LLM assistance, **gpt-6.1-sol**, **ultra**.

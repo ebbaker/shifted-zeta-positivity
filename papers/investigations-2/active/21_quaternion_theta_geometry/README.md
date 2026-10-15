@@ -1,9 +1,9 @@
 # Quaternion theta geometry and RH criteria
 
 14 October 2026. Prepared for Edward Baker with substantial LLM assistance.
-Latest manuscript and continuation: **gpt-6-astra (Codex)**, reasoning
-effort **ultra**. Earlier investigation setup and certificates also used
-**gpt-6.1-sol**, effort **ultra**.
+Latest research continuation: **gpt-6.1-sol**, reasoning effort **ultra**.
+The integrated manuscript used **gpt-6-astra (Codex)**, effort **ultra**;
+earlier investigation setup and certificates also used **gpt-6.1-sol**.
 
 **Investigation 21 is active at Edward Baker's request.** It develops the
 quaternion first jet of the theta heat family as a possible source of a
@@ -12,8 +12,11 @@ collisions. The exact first-order equations and RH criterion map are the
 starting point. Complete-source central estimates, quantitative
 imaginary-gluing stability, and complete-source certificates for both
 stationary signs over the full possible positive-threshold time range
-through height 104 are now established, with an explicit physical norm
-gap. The latest extension uses a complete-source centered residual cone.
+through height 112 are now established, with the safe physical norm gap
+|F|>1e-17. The newest cells certify both stationary implications directly,
+even where the previous uniform residual-cone enclosure is unresolved.
+The current continuation proves an outer comparison for a height-dependent
+delay and a full earlier-time comparison on both new finite branches.
 Oscillatory block cancellation now proves both Laguerre forms positive
 at sufficiently large heights whenever t log(|x|/(4 pi))>=3+epsilon,
 for each fixed epsilon>0. A separate fully explicit bound applies at
@@ -28,42 +31,69 @@ retain the proposal's provenance. New quaternion research belongs here.
 
 ## Start here
 
-The current main route is the direct one-sided stationary estimate.
-[Note 21](notes/21_ONE_SIDED_STATIONARY_ESTIMATES_AND_THETA_PILOT_20261014.md)
-proves an auxiliary favorable-curvature split identity and identifies its
-residual-vanishing limitation at candidate collisions. A certified genuine
-theta stationary branch in 101<x<102 shows a zero-loss signed estimate
-where specified stricter norm cones fail under an alternative centering.
-The [internal review](reviews/15_ONE_SIDED_STATIONARY_ESTIMATES_REVIEW_20261014.md)
-checks 14 exact algebra/control tests and independently replays eight
-closed time slabs. This supports the signed approach without extending
-height coverage or proving an all-height theta estimate. Proper source
-block filters remain untested; both stationary sets remain necessary.
+The [resume handoff](notes/26_CONTINUATION_AND_CHAT_HISTORY_HANDOFF_20261014.md)
+records the current results, validation, next signed arithmetic-block
+estimate, and verified chat-history identity. The
+[latest research](notes/25_PHASE_CONTROLLED_DELAY_AND_CUSP_EXTENSION_20261014.md)
+proves a prescribed height-dependent Gaussian delay has favorable retained
+and absorption products on both current stationary sets when
+t log(|x|/(4 pi))>=13/4 and height is sufficiently large. The proof pays
+the full zeta phase. This comparison lies in the already favorable outer
+region, with an unevaluated cutoff.
 
-The preceding analytic continuation is [Note 19](notes/19_OSCILLATORY_BLOCKS_AND_PAIRED_LAGUERRE_FORMS_20261014.md):
-maximal oscillatory blocks lower the sufficient asymptotic threshold from
-four to three, uniformly in time and all four physical derivatives. It also
-gives exact paired Laguerre/residual integrals and complete pair-tail
-payments. [Note 20](notes/20_EXPLICIT_OUTER_HEIGHT_BOUND_20261014.md) evaluates
-a conservative explicit height for the separate threshold-five region.
-The [independent internal review](reviews/14_OSCILLATORY_BLOCKS_AND_EXPLICIT_HEIGHT_REVIEW_20261014.md)
-checks the proofs and replays 34 algebra checks plus 52 constant checks.
-These developments follow the current manuscript; its source and build
-record retain the previously delivered exposition. Prepared 14 October
-2026 for Edward Baker with substantial LLM assistance, **gpt-6-astra**,
-reasoning effort **ultra**.
+New complete-source calculations extend the finite cover from 104 to 112.
+On both genuine new stationary branches, the products are positive for
+**every earlier time** s in [0,t], including both the half-time and smooth
+delay rules. Common spatial coefficients preserve the needed correlation.
+The [internal review](reviews/19_PHASE_CONTROLLED_DELAY_AND_CUSP_EXTENSION_REVIEW_20261014.md)
+and [validation receipt](numerics/PHASE_CONTROLLED_CUSP_CONTINUATION_CHECKS_20261014.json)
+record 21 exact identities, 1,321 exact audit checks, and two fresh
+192-bit quadrature replays. The unbounded inner cusp remains open.
 
-The [rewritten manuscript](manuscript/quaternion_theta_geometry.tex) is the
-current unified exposition, titled **Uniform Laguerre signs and hypercomplex
-jets of the theta heat flow**. Its [24-page PDF](../../../../output/pdf/quaternion_theta_geometry.pdf)
-leads with the outer positivity theorem, then develops the collision
-criterion, quaternionic/octonionic geometry, centered residual and shared
-carrier, finite certificate through 104, and the remaining inner estimate.
-The [continuation note](notes/18_MANUSCRIPT_REWRITE_AND_CONTINUATION_20261014.md)
-records the next targets and the explicit
-[backup](manuscript/BACKUP_RECORD_20261014.json) of the prior 35-page version.
-See the [integration review](reviews/13_MANUSCRIPT_REWRITE_INTEGRATION_REVIEW_20261014.md)
-for the current checks and their scope.
+[Note 24](notes/24_PROPORTIONAL_DELAY_PHASE_OBSTRUCTION_AND_CONTINUATION_20261014.md)
+explains the preceding obstruction: every nontrivial height-independent
+delay with both comparison times positive fails global exact retained
+positivity. The new height-dependent rule repairs that outer mechanism.
+
+The [integrated manuscript](manuscript/quaternion_theta_geometry.tex) and
+its [39-page PDF](../../../../output/pdf/quaternion_theta_geometry.pdf)
+incorporate Notes 19–22. The
+[manuscript integration handoff](notes/23_MANUSCRIPT_INTEGRATION_AND_CROSS_TIME_CONTINUATION_20261014.md),
+[integration review](reviews/17_MANUSCRIPT_CONTINUATION_INTEGRATION_REVIEW_20261014.md),
+and [build record](manuscript/BUILD_RECORD.json) record that version's
+proof audit, 100 fresh exact checks, compilation, and visual inspection.
+The newer research in Notes 24–25 is saved separately and has not yet
+been integrated into that manuscript.
+
+The main analytic theorem uses oscillatory blocks to prove uniform outer
+positivity at t log(|x|/(4 pi)) >= 3 + epsilon. A separate fully explicit
+threshold-five theorem uses |x| >= 4 pi exp(10^9). Exact paired integrals
+preserve all arithmetic and integration cross terms. The manuscript also
+contains the auxiliary signed-curvature identity, the direct product
+absorption criterion, and complete proofs of the sharp-endpoint and finite
+rational-jet closure obstructions.
+
+[Note 22](notes/22_PROPER_SOURCE_FILTERS_AND_THETA_CORRELATIONS_20261014.md)
+certifies a proper two-index split absorbing an adverse complement on both
+stationary branches; the prescribed one-index split fails. A full-source
+Gaussian gives an exact time comparison and 14 favorable branch/time
+cells. [Note 21](notes/21_ONE_SIDED_STATIONARY_ESTIMATES_AND_THETA_PILOT_20261014.md)
+supplies the eight-slab full-residual comparison and explains the extra
+vanishing obligation imposed by a squared-residual condition. Those
+earlier pilots stay inside the height-104 cover; Note 25 adds the new
+104–112 results. The unbounded comparison near possible collisions
+remains unproved.
+
+[Note 19](notes/19_OSCILLATORY_BLOCKS_AND_PAIRED_LAGUERRE_FORMS_20261014.md)
+and [Note 20](notes/20_EXPLICIT_OUTER_HEIGHT_BOUND_20261014.md)
+retain the detailed outer and paired-source derivations. Reviews
+[14](reviews/14_OSCILLATORY_BLOCKS_AND_EXPLICIT_HEIGHT_REVIEW_20261014.md),
+[15](reviews/15_ONE_SIDED_STATIONARY_ESTIMATES_REVIEW_20261014.md), and
+[16](reviews/16_SOURCE_FILTERS_AND_THETA_CORRELATIONS_REVIEW_20261014.md)
+record their earlier independent internal audits and replays. The
+[previous rewrite note](notes/18_MANUSCRIPT_REWRITE_AND_CONTINUATION_20261014.md)
+and [backup receipt](manuscript/BACKUP_RECORD_20261014.json) retain the
+older manuscript provenance.
 
 The [uniform outer-region theorem](notes/17_UNIFORM_OUTER_CUSP_SIGNS_AND_THRESHOLD_FOUR_20261014.md) is the preceding analytic result. For every epsilon>0, both Laguerre forms are strictly
 positive and the first jet is nonzero whenever 0<t<=1/2, |x|>=X_epsilon,
@@ -97,11 +127,13 @@ entire-source collision control shows why an additional theta-specific
 estimate is still needed. This continuation was prepared on 14 October
 2026 with substantial LLM assistance, **gpt-6-astra**, effort **ultra**.
 
-Read the [height-100 continuation](notes/11_CORRELATED_TRANSPORT_AND_HEIGHT_100_CERTIFICATE_20261014.md)
-and the [centered residual extension](notes/16_THETA_CENTERED_RESIDUAL_AND_SHARED_ARITHMETIC_20261014.md)
+Read the [phase-controlled delay and cusp extension](notes/25_PHASE_CONTROLLED_DELAY_AND_CUSP_EXTENSION_20261014.md)
 for the current bounded result: both stationary signs on 0<=t<=1/2,
-|x|<=104, and |F|>1e-16 there. Any positive threshold collision must
-have |a|>104. The [shifted-contour payments](notes/12_SHIFTED_CONTOUR_FOUR_JET_PAYMENTS_20261014.md)
+|x|<=112, and |F|>1e-17 there. The prior
+[height-100](notes/11_CORRELATED_TRANSPORT_AND_HEIGHT_100_CERTIFICATE_20261014.md)
+and [height-104](notes/16_THETA_CENTERED_RESIDUAL_AND_SHARED_ARITHMETIC_20261014.md)
+records retain their stronger local floors. Any positive threshold
+collision must have |a|>112. The [shifted-contour payments](notes/12_SHIFTED_CONTOUR_FOUR_JET_PAYMENTS_20261014.md)
 give absolute jet errors at the gamma exponential scale for arbitrary
 heights. The remaining signed target is specified in the
 [normalized collision-cusp note](notes/13_NORMALIZED_SIGN_TARGET_IN_THE_COLLISION_CUSP_20261014.md). The [guarded time-collar theorem](notes/10_FORWARD_STATIONARY_COLLARS_AND_BRANCH_CREATION_20261014.md)
@@ -112,7 +144,7 @@ preserves its target and workflow.
 1. [Rewritten manuscript](manuscript/quaternion_theta_geometry.tex)
    gives the complete uniform outer proof, the collision and hypercomplex
    constructions, the shared arithmetic residual, and the bounded results.
-   Its [current integration review](reviews/13_MANUSCRIPT_REWRITE_INTEGRATION_REVIEW_20261014.md)
+   Its [current integration review](reviews/17_MANUSCRIPT_CONTINUATION_INTEGRATION_REVIEW_20261014.md)
    records the source checks, focused independent assessment, compact
    replays, and final PDF verification. The
    [earlier audit](reviews/4_MANUSCRIPT_CONVENTION_AND_FOUNDATION_AUDIT_20261014.md)
@@ -190,6 +222,28 @@ preserves its target and workflow.
 19. [Manuscript rewrite and continuation](notes/18_MANUSCRIPT_REWRITE_AND_CONTINUATION_20261014.md)
     describes the new exposition, preserved backup, validation scope, and
     the signed inner-region and explicit outer-cutoff targets.
+
+20. [Oscillatory blocks and paired forms](notes/19_OSCILLATORY_BLOCKS_AND_PAIRED_LAGUERRE_FORMS_20261014.md)
+    proves the sufficient threshold-three theorem and exact source pairings.
+21. [Explicit outer height](notes/20_EXPLICIT_OUTER_HEIGHT_BOUND_20261014.md)
+    evaluates a separate conservative threshold-five cutoff.
+22. [One-sided stationary estimates](notes/21_ONE_SIDED_STATIONARY_ESTIMATES_AND_THETA_PILOT_20261014.md)
+    gives the favorable-curvature split and its full-theta pilot.
+23. [Proper filters and theta correlations](notes/22_PROPER_SOURCE_FILTERS_AND_THETA_CORRELATIONS_20261014.md)
+    gives both proper-filter pilots and the analytic obstructions.
+24. [Integrated manuscript and cross-time continuation](notes/23_MANUSCRIPT_INTEGRATION_AND_CROSS_TIME_CONTINUATION_20261014.md)
+    records the current manuscript, validation, next objective, and verified
+    history identity.
+25. [Proportional delay phase obstruction](notes/24_PROPORTIONAL_DELAY_PHASE_OBSTRUCTION_AND_CONTINUATION_20261014.md)
+    derives the exact complex cross-time products, certifies 16 bounded
+    half-time cases, and excludes height-independent delays with
+    0<delta(t)<t at a positive time from global exact retained positivity.
+26. [Phase controlled delay and cusp extension](notes/25_PHASE_CONTROLLED_DELAY_AND_CUSP_EXTENSION_20261014.md)
+    proves the repaired outer comparison and extends the finite cover
+    through 112, with all-earlier-time signs on both new branches.
+27. [Continuation and chat-history handoff](notes/26_CONTINUATION_AND_CHAT_HISTORY_HANDOFF_20261014.md)
+    consolidates the current domains, exact next task, reproduction links,
+    manuscript status, and preserved history identity.
 
 ## Objective and first target
 

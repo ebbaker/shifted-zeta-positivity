@@ -223,3 +223,91 @@ gives the formulas, limitations, and standard-library replay commands;
 [Review 15](../reviews/15_ONE_SIDED_STATIONARY_ESTIMATES_REVIEW_20261014.md)
 records independent checks. Prepared 14 October 2026 for Edward Baker
 with substantial LLM assistance, **gpt-6-astra**, effort **ultra**.
+
+
+The [proper-source-filter driver](certify_predetermined_source_filter_pilot.py)
+and [compact record](PREDETERMINED_SOURCE_FILTER_PILOT_20261014.json)
+retain all 64 predeclared filter/branch/time cases. Fixed two-index filters
+absorb an adverse complement with lambda=1/2 and zero loss on both genuine
+stationary branches; one-index filters fail the same condition. The
+[Gaussian checker](check_gaussian_source_filter_pilot.py) and
+[record](GAUSSIAN_SOURCE_FILTER_PILOT_20261014.json) certify positive retained
+and complementary products in 14 cases using the exact full-source
+identity G_j=C_j(t-1/16,x). New partial quadratures use python-flint 0.9.0
+at 192 bits; the Gaussian extraction uses the Python standard library.
+[Note 22](../notes/22_PROPER_SOURCE_FILTERS_AND_THETA_CORRELATIONS_20261014.md)
+gives definitions, errors, analytic limitations, and replay commands.
+[Review 16](../reviews/16_SOURCE_FILTERS_AND_THETA_CORRELATIONS_REVIEW_20261014.md)
+independently reproduces all classifications and numerical bounds. No
+height extension or global correlation estimate. Prepared 14 October 2026
+for Edward Baker with substantial LLM assistance, **gpt-6-astra**, **ultra**.
+
+
+## Manuscript integration audit, 14 October 2026
+
+[MANUSCRIPT_CONTINUATION_CHECKS_20261014.json](MANUSCRIPT_CONTINUATION_CHECKS_20261014.json)
+records 100 fresh exact checks (34 paired/block, 52 outer constants,
+14 signed-split/control) and hash identity of the three previously
+independently replayed finite pilots. This integration does not repeat
+interval quadrature or extend height coverage. See
+[Review 17](../reviews/17_MANUSCRIPT_CONTINUATION_INTEGRATION_REVIEW_20261014.md)
+and [Note 23](../notes/23_MANUSCRIPT_INTEGRATION_AND_CROSS_TIME_CONTINUATION_20261014.md).
+Prepared for Edward Baker with substantial LLM assistance,
+**gpt-6-astra**, reasoning effort **ultra**.
+
+## Proportional Gaussian delay checks 14 October 2026
+
+The [half-time pilot](check_proportional_gaussian_source_filter_pilot.py)
+and [16-case record](PROPORTIONAL_GAUSSIAN_SOURCE_FILTER_PILOT_20261014.json)
+certify retained and absorption products on both current stationary
+branches for all eight closed time slabs covering [0,1/2]. The protocol
+fixes delta=t/2, lambda=1/2, a=pi/16, b=1/4, and zero loss before testing.
+Exact common-variable binomial transport preserves cross-time polynomial
+correlation and pays all original complete-source errors. The separate
+complement is undecided on four cases and positive on the other twelve.
+The [20-check algebra driver](check_proportional_delay_identities.py)
+and [receipt](PROPORTIONAL_DELAY_IDENTITY_CHECKS_20261014.json) include
+complex conjugation controls, moving-delay derivatives, and pair-tail
+payments. These standard-library replays do not repeat quadrature or
+extend height coverage. [Note 24](../notes/24_PROPORTIONAL_DELAY_PHASE_OBSTRUCTION_AND_CONTINUATION_20261014.md)
+proves the all-height phase obstruction to this rule despite finite
+success; [Review 18](../reviews/18_PROPORTIONAL_DELAY_PHASE_OBSTRUCTION_REVIEW_20261014.md)
+records independent replay and 1,200 additional exact affine evaluations.
+Prepared for Edward Baker with substantial LLM assistance,
+**gpt-6.1-sol**, reasoning effort **ultra**.
+
+The [independent affine audit](audit_proportional_delay_affine_transport.py)
+and [receipt](PROPORTIONAL_DELAY_AFFINE_AUDIT_20261014.json) reproduce all
+1,200 rational Taylor comparisons cited in Review 18, with four input
+source-hash checks. They check the finite transport polynomial, with no
+quadrature, analytic-tail, or new theta-sign claim.
+
+## Phase controlled delay and cusp cover through 112
+
+14 October 2026. Prepared for Edward Baker with substantial LLM assistance,
+**gpt-6.1-sol**, reasoning effort **ultra**.
+
+The [new generator](certify_fixed_cusp_band_extension.py) runs the unchanged
+full-source driver on [104–108](FIXED_CUSP_BAND_104_108_20261014.json) and
+[108–112](FIXED_CUSP_BAND_108_112_20261014.json), using python-flint 0.9.0
+at 192 bits. All 64 whole-cell norm tests and 128 stationary implications
+pass. The original uniform 1/9 cone remains INCOMPLETE in the saved records
+and is reported separately.
+
+The [exact auditor](audit_fixed_cusp_band_extension.py) and
+[1,321-check receipt](FIXED_CUSP_BAND_EXTENSION_AUDIT_20261014.json) certify
+both genuine stationary branches, the half-time products, and positive
+retained/absorption products at **every earlier time** s in [0,t]. They
+preserve a common spatial coordinate while separately paying both time
+ranges. All old coarse undecided verdicts are retained. This includes the
+proposed smooth delay on these finite cells, with no fitted losses.
+
+The [symbolic driver](check_phase_controlled_delay_identities.py) and
+[21-check record](PHASE_CONTROLLED_DELAY_IDENTITY_CHECKS_20261014.json)
+verify moving-delay derivatives and rational budgets for the analytic
+outer theorem. [Note 25](../notes/25_PHASE_CONTROLLED_DELAY_AND_CUSP_EXTENSION_20261014.md)
+contains the complete proof and reproduction commands; the
+[validation receipt](PHASE_CONTROLLED_CUSP_CONTINUATION_CHECKS_20261014.json)
+records fresh exact replay plus two complete 192-bit quadrature replays,
+matching every field except elapsed time. The analytic comparison adds no
+asymptotic coverage, and the unbounded inner cusp remains open.
