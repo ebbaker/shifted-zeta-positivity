@@ -2,36 +2,33 @@
 
 Investigation 21 — 15 October 2026. Prepared for Edward Baker with substantial LLM assistance. Recorded model **gpt-6-astra**, reasoning effort **ultra**.
 
-Start with the [current research overview](research-overview/RESEARCH_OVERVIEW_20261015_CORRELATION_KERNELS.md) and the [manuscript](manuscript/quaternion_theta_geometry.tex). The octonionic reduction and literature review are now integrated: the physical observations are planar dot products and determinants, a reflected monogenic lift preserves the physical four-jet with fewer terms, and complete theta correlations express both Laguerre forms and the physical energy in one family.
+Start with the [current research overview](research-overview/RESEARCH_OVERVIEW_20261015_SIGNED_FORMS_AND_PRIMITIVE.md) and [manuscript](manuscript/quaternion_theta_geometry.tex). The current 96-page revision integrates Notes 38–53, including the signed-form and positive-primitive continuation. [Review 32](reviews/32_SIGNED_FORMS_PRIMITIVE_MANUSCRIPT_INTEGRATION_20261015.md) and the [build record](manuscript/BUILD_RECORD.json) record the checks and scope.
 
-The objective is to exclude every positive-time real collision of the theta heat flow. With \(h_j=\partial_x^jH\), the collision detector is \(E=h_0^2+h_1^2\), and the stationary observations are \(\mathcal L_j=h_{j+1}^2-h_jh_{j+2}\) on \(S_j=\{h_{j+1}=0\}\), for \(j=0,1\). A source-derived bound \(\mathcal L_j\ge-\kappa_jE\), locally bounded through all covered candidate collisions, is sufficient. The all-cutoff and logarithmic-loss versions remain available. The new reductions do not prove that missing theta estimate.
+The objective is to exclude every positive-time real collision of the theta heat flow. With \(h_j=\partial_x^jH\), the detector is \(E=h_0^2+h_1^2\); the signed observations are \(\mathcal L_j=h_{j+1}^2-h_jh_{j+2}\) on the full stationary sets \(S_j=\{h_{j+1}=0\}\), for \(j=0,1\). A source-prescribed bound \(\mathcal L_j\ge-\kappa_jE\), locally bounded through covered candidate events, would suffice. The all-cutoff logarithmic and subpower alternatives are conditional transfers. The required theta estimate remains open.
 
-| Established result | Scope |
+| Established coverage | Scope |
 | --- | --- |
 | Finite physical gap and both stationary signs | \(0\le t\le1/2\), \(|x|\le112\), \(\sqrt E>10^{-17}\) |
 | Uniform four-jet asymptotic and both full strict signs | Sufficiently large \(|x|\), \(0<t\le1/2\), \(t\log(|x|/(4\pi))\ge61/24\), with unevaluated starting height |
 | Explicit conservative outer result | \(|x|\ge4\pi e^{10^9}\), \(t\log(|x|/(4\pi))\ge5\) |
-| Octonionic and correlation reductions | Exact identities preserving the detector, signed observations, and original cutoff payments; no new sign region |
 
-The inner cusp and finite transition to asymptotic coverage remain open. The current leading task is a theta-specific signed estimate for the complete or hybrid correlation kernel near small physical energy. The research overview explains the dependencies and acceptance tests.
+Exact source identities, sharp integrated positivity, and the positive theta primitive add analytic structure without enlarging this sign coverage. The inner cusp and finite transition remain open. The next task is an energy-relative estimate for the complete signed primitive reconstruction or boundary current, preserving cancellation and both predecessor branches.
 
 | Program | Notes |
 | --- | --- |
 | PR01 — weighted outer remainders | [01_weighted_outer_remainders](notes/01_weighted_outer_remainders/README.md) |
 | PR02 — signed control in the inner cusp | [02_signed_cusp_control](notes/02_signed_cusp_control/README.md) |
 | PR03 — effective heights and finite bridging | [03_effective_bridge](notes/03_effective_bridge/README.md) |
-| ALG — octonionic reductions | [04_octonionic_reductions](notes/04_octonionic_reductions/README.md) |
-| PR02-CORR — complete theta correlation kernels | [05_theta_correlation_kernels](notes/05_theta_correlation_kernels/README.md) |
+| ALG — octonionic and signed-form reductions | [04_octonionic_reductions](notes/04_octonionic_reductions/README.md) |
+| PR02-CORR — complete theta correlations and primitive | [05_theta_correlation_kernels](notes/05_theta_correlation_kernels/README.md) |
 | COORD — integration and continuation | [00_research_coordination](notes/00_research_coordination/README.md) |
 
-The [notes index](notes/README.md) preserves the historical numbered notes at their original paths. Current continuation is [Note 49](notes/00_research_coordination/49_OCTONIONIC_SIGNED_BOUND_ANALYTIC_CONTINUATION_20261015.md). Detailed history remains in those notes and the [reviews](reviews/README.md); concise milestones are in [DRAFT_HISTORY.md](DRAFT_HISTORY.md).
+The [notes index](notes/README.md) preserves historical numbered notes. Current handoff is [Note 59](notes/00_research_coordination/59_PRIMITIVE_CONTROLS_AND_COMPLETED_PHASE_BUDGET_CONTINUATION_20261015.md); detailed assessments are in [reviews](reviews/README.md), and concise milestones in [DRAFT_HISTORY.md](DRAFT_HISTORY.md). The [compiled PDF](../../../../output/pdf/quaternion_theta_geometry.pdf) is built from the stable source. Historical backups remain unchanged; no new snapshot, commit, or tag was created.
 
-The [compiled PDF](../../../../output/pdf/quaternion_theta_geometry.pdf), [build record](manuscript/BUILD_RECORD.json), and [integration review](reviews/26_OCTONIONIC_CORRELATION_MANUSCRIPT_INTEGRATION_20261015.md) identify the current manuscript and validation. The [literature review](reviews/25_OCTONIONIC_MACHINERY_LITERATURE_REVIEW_20261015.md) preserves the assessment that motivated this revision. The explicitly requested pre-integration [source backup](manuscript/quaternion_theta_geometry.backup_20261015.tex), [PDF backup](manuscript/quaternion_theta_geometry.backup_20261015.pdf), and [backup receipt](manuscript/BACKUP_RECORD_20261015.json) retain the preceding 59-page manuscript.
+The author's two unpublished 2014 working notes are in `source-documents/`; [Review 30](reviews/30_QUATERNION_FORMS_DRAFT_COMPARISON_AND_RELEVANCE_20261015.md) compares their approaches and records their acknowledged incompleteness. Source files are preserved.
 
-Save incremental arguments in the tagged notes, calculations and small receipts in `numerics/`, and assessments in `reviews/`. Keep the manuscript as one stable source; future milestones should refer to commits or tags. Follow the repository [research instructions](../../../../AGENTS.md), [chat-history workflow](../../../../tools/CHAT_HISTORY.md), and [large-file policy](../../../../LARGE_FILES.md). Synced project references remain read-only.
+Follow the repository [research instructions](../../../../AGENTS.md), [history workflow](../../../../tools/CHAT_HISTORY.md), and [large-file policy](../../../../LARGE_FILES.md). Investigation conversations normally belong in [chat-histories](chat-histories/README.md). This integration conversation retains its explicitly authorized formal-replay history **16**; its [verification receipt](reviews/CHAT_HISTORY_SIGNED_FORMS_INTEGRATION_VERIFICATION_20261015.json) confirms the original identity and preceding final replies. Other conversations retain their own registrations.
 
-Investigation-specific conversations normally belong in [chat-histories](chat-histories/README.md). The current continuation chat retains its separately authorized formal-replay registration, number 15; adding program folders does not move or renumber it.
+## Subsequent research continuation
 
-The localized Poisson and explicit constant-package continuation is internally reviewed in [Review 28](reviews/28_LOCALIZED_POISSON_AND_EFFECTIVE_BUDGET_REVIEW_20261015.md). The strengthened mode/compensation obstructions and conditional subpower transfer do not enlarge the established sign domains. Updated 15 October 2026 for Edward Baker with substantial LLM assistance, **gpt-6.1-sol**, effort **ultra**.
-
-The analytic octonionic signed-bound attempt is reviewed in [Review 29](reviews/29_OCTONIONIC_SIGNED_BOUND_ANALYTIC_REVIEW_20261015.md). It proves a boundary-defect bound, a sharp spatially averaged energy payment, and an exact finite E8 projection; the pointwise theta energy-relative estimate remains open. Updated 15 October 2026 for Edward Baker with substantial LLM assistance, **gpt-6.1-sol**, effort **ultra**. No numerical pilot was run.
+[Notes 56–59](notes/00_research_coordination/59_PRIMITIVE_CONTROLS_AND_COMPLETED_PHASE_BUDGET_CONTINUATION_20261015.md) add a primitive-compatible collision control, quantify circle negative-mass overpayment, and complete the explicit carrier-to-phase budget at 409/L. [Review 33](reviews/33_PRIMITIVE_CIRCLE_AND_CARRIER_CONTINUATION_REVIEW_20261015.md) records the independent internal checks. The imported exponent-pair constants and theta stationary estimate remain open; these results are not yet incorporated into the stable manuscript. This continuation preserves formal-replay history **17** under the explicit local instruction. Updated 15 October 2026 for Edward Baker with substantial LLM assistance, **gpt-6-astra**, effort **ultra**.

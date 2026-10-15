@@ -28,4 +28,8 @@ These links tag existing notes without moving or duplicating them. Place new inc
 
 ## Explicit elementary constant package
 
-[Note 43](43_EXPLICIT_WEIGHTED_REMAINDER_CONSTANT_PACKAGE_20261015.md) gives conservative numerical disc thresholds, a fully explicit low-index term, surviving saving above 1/14000, complete Riemann–Siegel error budgets, and an analytic four-jet replacement allowance. The actual five maximal-interval constants remain unevaluated, as does the separate carrier-to-phase derivative budget. No full sign height or new theta domain follows. Updated 15 October 2026 for Edward Baker with substantial LLM assistance, **gpt-6.1-sol**, effort **ultra**.
+[Note 43](43_EXPLICIT_WEIGHTED_REMAINDER_CONSTANT_PACKAGE_20261015.md) gives conservative numerical disc thresholds, a fully explicit low-index term, surviving saving above 1/14000, complete Riemann–Siegel error budgets, and an analytic four-jet replacement allowance. The actual five maximal-interval constants remain unevaluated. The separate carrier-to-phase derivative budget has since been evaluated in [Note 58](58_EXPLICIT_CARRIER_PHASE_AND_CONDITIONAL_HEIGHT_20261015.md). No full sign height or new theta domain follows. Updated 15 October 2026 for Edward Baker with substantial LLM assistance, **gpt-6.1-sol**, effort **ultra**.
+
+## Completed carrier phase budget
+
+[Note 58](58_EXPLICIT_CARRIER_PHASE_AND_CONDITIONAL_HEIGHT_20261015.md) proves the explicit carrier error 409/L, completing the total conditional four-jet budget 1728 B_C(L)+409/L. It gives a closed height formula in the actual imported exponent-pair constant, which remains unevaluated. The middle-block obstruction and finite bridge remain open. Updated 15 October 2026 for Edward Baker with substantial LLM assistance, **gpt-6-astra**, effort **ultra**.

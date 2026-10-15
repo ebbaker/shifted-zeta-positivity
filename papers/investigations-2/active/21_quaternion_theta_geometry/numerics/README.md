@@ -323,3 +323,7 @@ Prepared for Edward Baker with substantial LLM assistance, **gpt-6-astra**, effo
 ## Localized Poisson and explicit weighted budgets, 15 October 2026
 
 Prepared for Edward Baker with substantial LLM assistance; **gpt-6.1-sol**, effort **ultra**. `check_poisson_mode_cutoff_obstructions.py` records 260 exact assertions in `POISSON_MODE_CUTOFF_OBSTRUCTIONS_20261015.json`; `check_explicit_weighted_budget.py` records 50 exact assertions in `EXPLICIT_WEIGHTED_BUDGET_CHECKS_20261015.json`. Both use the Python standard library and accept `--output /tmp/replay.json`. Independent replay is byte-identical. These are finite algebraic audits, not stationary-root or sign certificates. `LOCALIZED_POISSON_CONTINUATION_VALIDATION_20261015.json` records final hashes, links, sizes, manuscript identity, and scope.
+
+## Exact local manifold geometry
+
+[check_theta_manifold_geometry.py](check_theta_manifold_geometry.py) verifies the semi-flat closed triple, inverse metric, Ricci-flatness, nonzero horizontal sectional curvature, totally geodesic base slices and formal source operator using rational Laurent polynomials. [Execution receipt](THETA_MANIFOLD_GEOMETRY_CHECKS_20261015.json): 55 exact assertions, independently replayed. Run `python3 check_theta_manifold_geometry.py` from this directory. It is not a theta sign certificate. Updated 15 October 2026 for Edward Baker with substantial LLM assistance, **gpt-6-astra**, effort **ultra**.

@@ -36,3 +36,11 @@ These links tag existing notes without moving or duplicating them. Place new inc
 ## Oriented boundary signed target
 
 [Note 46](46_OCTONIONIC_BOUNDARY_CURRENT_AND_SIGNED_CUTOFF_TARGET_20261015.md) proves a pointwise signed bound with an explicit boundary negative-mass defect, together with exact holomorphic staircase and Gaussian-circle payments. Its energy-relative signed theta premise remains open. The [analytic continuation](../00_research_coordination/49_OCTONIONIC_SIGNED_BOUND_ANALYTIC_CONTINUATION_20261015.md) prioritizes that premise, with no numerical pilot. Updated 15 October 2026 for Edward Baker with substantial LLM assistance, **gpt-6.1-sol**, effort **ultra**.
+
+## Circle defect and collision multiplicity
+
+[Note 57](57_CIRCLE_DEFECT_MULTIPLICITY_AND_RADIUS_20261015.md) quantifies the stronger poles created by separate negative-mass payments at higher-multiplicity collisions. The square-root radius profile and its strict excess retain the need for the complete signed current. These are conditional collision controls, with 240 finite exact algebra checks and no new theta sign domain. Updated 15 October 2026 for Edward Baker with substantial LLM assistance, **gpt-6-astra**, effort **ultra**.
+
+## Geometric signed target
+
+[Note 61](61_JET_SURFACES_REAL_GAUSS_MAP_AND_ORIENTED_TURNING_20261015.md) constructs the physical jet surface and its real Gauss map. Every finite collision forces a positive quarter-turn on a shrinking interval; a prescribed uniform one-sided modulus would exclude it. The theta premise is unproved, and second-branch regularity is explicit. [Review 34](../../reviews/34_MANIFOLD_GEOMETRY_AND_THETA_BUNDLE_REVIEW_20261015.md). Updated 15 October 2026 for Edward Baker with substantial LLM assistance, **gpt-6-astra**, effort **ultra**.

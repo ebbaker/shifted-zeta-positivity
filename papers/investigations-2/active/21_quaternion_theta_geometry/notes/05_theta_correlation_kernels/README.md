@@ -40,3 +40,15 @@ Historical inputs remain at [Note 22](../22_PROPER_SOURCE_FILTERS_AND_THETA_CORR
 ## Finite E8-character source bridge
 
 [Note 48](48_E8_CHARACTER_PROJECTION_AND_SIGNED_HEAT_SECTORS_20261015.md) recovers the actual two-coordinate source by an exact index-eight E8 character selector. Every differentiated character sector is globally heat-integrable as a finite translated full-source combination. Its negative untwisted sector and complex-shift controls show why auxiliary norms do not supply the physical signed-energy estimate. Use the complete packet in [Note 46](../02_signed_cusp_control/46_OCTONIONIC_BOUNDARY_CURRENT_AND_SIGNED_CUTOFF_TARGET_20261015.md) before taking negative parts. Updated 15 October 2026 for Edward Baker with substantial LLM assistance, **gpt-6.1-sol**, effort **ultra**; analytic work only.
+
+## Positive theta primitive and source-shape limits
+
+[Note 52](52_POSITIVE_THETA_PRIMITIVE_AND_DIFFERENTIAL_CLOSURE_20261015.md) proves strict positivity of a complete auxiliary transform, retains its modular boundary constant in an exact reconstruction, and excludes exact finite rational-jet closure on open intervals. [Note 53](53_SOURCE_CONCAVITY_AND_POSITIVE_TIME_COLLISION_CONTROL_20261015.md) gives a smooth strongly log-concave double-exponential source with a positive-time collision, ruling out shape-only arguments. [Continuation 54](../00_research_coordination/54_SIGNED_FORMS_AND_POSITIVE_THETA_PRIMITIVE_CONTINUATION_20261015.md) and [Review 31](../../reviews/31_SIGNED_FORMS_PRIMITIVE_AND_SOURCE_CONTROL_REVIEW_20261015.md) record scope and independent internal checks. Updated 15 October 2026 for Edward Baker with substantial LLM assistance, **gpt-6-astra**, effort **ultra**.
+
+## A collision control with the full positive primitive structure
+
+[Note 56](56_POSITIVE_PRIMITIVE_COLLISION_CONTROL_20261015.md) constructs a smooth positive source whose primitive remains positive throughout the physical heat interval and matches the theta reconstruction constant, even completion and every algebraic spectral asymptotic coefficient, while retaining a positive-time collision. Source shape and rational nonclosure also persist. A successful signed estimate must use additional complete-theta information that excludes this control. [Continuation 59](../00_research_coordination/59_PRIMITIVE_CONTROLS_AND_COMPLETED_PHASE_BUDGET_CONTINUATION_20261015.md) records the refined task. Updated 15 October 2026 for Edward Baker with substantial LLM assistance, **gpt-6-astra**, effort **ultra**.
+
+## Theta bundles and a hyperkähler family
+
+[Note 62](62_THETA_JET_BUNDLE_AND_SEMIFLAT_HYPERKAHLER_GEOMETRY_20261015.md) identifies the complete source as a theta jet along a family of elliptic curves and gives a curved local hyperkähler metric on that family. It verifies the metric and isolates the jet-connection, modular and physical-transform obligations. No signed estimate or global K3 realization is asserted. [Review 34](../../reviews/34_MANIFOLD_GEOMETRY_AND_THETA_BUNDLE_REVIEW_20261015.md). Updated 15 October 2026 for Edward Baker with substantial LLM assistance, **gpt-6-astra**, effort **ultra**.

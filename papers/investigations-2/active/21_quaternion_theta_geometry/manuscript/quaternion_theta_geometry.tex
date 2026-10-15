@@ -49,17 +49,27 @@ and determinants. A reflected monogenic extension preserves the physical
 four-jet without the auxiliary correction required by a stronger
 off-slice prescription. Exact calibration and logarithmic-norm identities
 clarify which information these geometric descriptions retain.
+We further prove a signed boundary-defect formula, sharp spatial and disk
+integral bounds, centered-average positivity, and an exact finite
+$E_8$-character reconstruction. A positive auxiliary theta transform
+reconstructs $H$ through a signed differential combination with a modular
+boundary constant. Complete Poisson localization and its heat-integrability
+obstructions, a finite rational-closure obstruction, and a smooth
+strongly log-concave collision control delimit these approaches.
 For the theta source, both full Laguerre forms are strictly positive at
 sufficiently large height when $0<t\le1/2$ and
 $t\log(|x|/(4\pi))\ge61/24$, including the closed boundary; the
 starting height is unevaluated. Complete-source certificates give both
 stationary signs and $\sqrt E>10^{-17}$ on $0\le t\le1/2$, $|x|\le112$.
 Collision expansions and analytic rigidity turn prescribed all-cutoff
-lower bounds into a sufficient logarithmic-loss criterion.
+lower bounds into sufficient logarithmic and subpower loss criteria.
 The reviewed octonionic, Fourier-kernel, and exceptional-theta theories
 identify possible tools, but do not supply the missing theta-specific
 signed estimate. The inner cusp and the finite transition remain open.
 \end{abstract}
+\makeatletter
+\renewcommand*\l@subsection{\@dottedtocline{2}{1.5em}{3em}}
+\makeatother
 \tableofcontents
 
 \section{The theta heat flow and the main result}\label{sec:introduction}
@@ -218,7 +228,7 @@ the classical heat-flow inputs imply
 Section~\ref{sec:fc-collision} gives the reduction and the sufficient
 stationary bounded-loss criterion. Theorem~\ref{thm:outer} and
 \eqref{eq:intro-bounded} leave an inner small-time region and a finite
-transition strip. The remaining problem has two exact descriptions.
+transition strip. The remaining problem admits several exact descriptions.
 Section~\ref{sec:hypercomplex} reduces the oriented octonionic observations
 to two-dimensional determinants and dot products, and gives a simpler
 reflected lift of the physical trace. Section~\ref{sec:complete-correlations}
@@ -226,8 +236,13 @@ expresses both signs and the energy in one complete theta correlation
 family. Its hybrid version retains the full-amplitude cutoff used in
 Proposition~\ref{pg:J-transfer}. These reductions simplify the objects
 to be estimated; they add no unconditional sign region.
-The applicability of further octonionic analysis is assessed in
-Section~\ref{subsec:octonionic-analysis-literature}.
+Sections~\ref{sf:section} and~\ref{pp:section} add signed-form identities,
+integrated bounds, and a positive primitive with exact reconstruction.
+Section~\ref{upd:section} records the Poisson integrability obstructions,
+sharper weighted budgets, and a broader conditional loss transfer.
+These results preserve the distinction between auxiliary positivity and
+the pointwise stationary estimate. The applicability of further octonionic
+analysis is assessed in Section~\ref{subsec:octonionic-analysis-literature}.
 
 % Prepared for Edward Baker; gpt-6-astra, effort ultra; 14 October 2026.
 \section{Proof of the uniform outer-region theorem}\label{sec:outer-proof}
@@ -529,10 +544,12 @@ Equations \eqref{eq:closed-margin}--\eqref{eq:closed-paid-margin}
 therefore yield
 \begin{equation}
  \sum_{Y<n\le N_{\rm RS}}(\log n)^r e^{t\log^2n/4}n^{-w}
-       =O_r(\ell^{r+1}e^{-\ell/20000}).
+       =O_r(\ell^re^{-\ell/20000}).
  \label{eq:high-index-decay}
 \end{equation}
-There are $O(\ell)$ blocks, including the shortened final block. Combining
+The convex dyadic summation in Proposition~\ref{upd:convex-dyadic}
+pays their total with a bounded geometric multiplier, including the
+shortened final block. Combining
 \eqref{eq:weighted-zeta-difference},
 \eqref{eq:ordinary-zeta-tail-three}, and \eqref{eq:high-index-decay}
 proves the lemma.
@@ -2653,9 +2670,10 @@ It is invariant under \(y\mapsto1/y\), but is not a fixed modular
 weight.  With \(\tau=ie^{4u}\), even the modular translation
 \(\tau\mapsto\tau+1\) changes the logarithmic variable to
 \(\frac14\log(e^{4u}-i)\), on a consistent branch, and changes both
-the heat multiplier and the Fourier phase.  A useful additional
-theta identity must retain these factors and, for a filtered source,
-every transformed boundary contribution.
+the heat multiplier and the Fourier phase.  The explicit parity identity and its localized form in
+Section~\ref{upd:section} retain these factors and all differential
+terms. Their separate global modes are not positive-heat integrable;
+the required cancellations must precede integration.
 
 Integral octonions offer genuine additional arithmetic, but through
 a different source.  The Coxeter order has the \(E_8\) quadratic
@@ -2690,11 +2708,14 @@ exceptional theta series for \(n>0\).
 These are genuine classical modular bridges, with their stated
 weight and level restrictions.
 
-For the present problem such a bridge would have to
-reproduce \(H\), its four physical derivatives, or the complete
-correlations above; preserve the heat deformation and genuine
-stationary constraints; and yield a signed estimate with all errors
-paid at the physical energy scale.
+For the present problem an arithmetic bridge must reproduce $H$, its
+physical derivatives, or the complete correlations, and preserve the heat
+deformation and full stationary constraints. Section~\ref{sf:e8-bridge}
+supplies an exact eight-character restriction of an anisotropic $E_8$
+theta series to the required two-coordinate source. Its finite sectors
+are globally integrable with positive heat. The remaining step is a
+signed estimate paid at the physical energy scale; separate sector norms
+do not provide it.
 The modular Fourier-sign constructions of \cite{viazovska} and the
 modular inequalities of \cite{romik,lee24} give a useful model for
 the last step: retain a specifically identified transformed expression
@@ -2702,8 +2723,8 @@ and prove its sign.  The polynomial/quasimodular inequalities of
 \cite{lee26polynomial} and Fourier-eigenfunction estimates of
 \cite{lee26positive} offer further tools when their hypotheses can
 be verified.  None applies solely from the presence of the theta
-source or the number eight.  No required identification or new
-stationary sign estimate is established by this section.
+source or the number eight.  The exact finite identification in Section~\ref{sf:e8-bridge} establishes no new
+stationary sign estimate.
 
 \subsection{Analytic tools and the signed physical observation}
 \label{subsec:octonionic-analysis-literature}
@@ -2780,6 +2801,1301 @@ conditions, not every de Branges approach.  Here the operative next step
 is a complete theta identity or factorization yielding the declared
 signed energy-relative estimate, with both stationary conditions and
 all cutoff payments preserved.
+
+% Integration of research Notes 46--48, 50--51, reviewed in Reviews 29--31.
+% Prepared for Edward Baker with substantial LLM assistance.
+% Recorded model gpt-6-astra; reasoning effort ultra; 15 October 2026.
+\section{Signed boundary currents and integrated positivity}
+\label{sf:section}
+
+The preceding identities retain the physical observation.  We now prove
+boundary and averaged estimates for that observation, and give an exact
+finite \(E_8\)-character realization of its complete source.  The
+arithmetic energy payment in the unresolved region remains a separate
+hypothesis.  In particular, every stationary set below is
+\(S_j=\{h_{j+1}=0\}\) for the full field, and every relative loss is paid
+by \(E=h_0^2+h_1^2\).
+
+\subsection{A spectral-circle current and its exact defect}
+
+Fix real \(t,x\), \(R>0\), and write
+\[
+ z_\theta=x+Re^{i\theta},\qquad
+ \langle v\rangle=\frac1{2\pi}\int_0^{2\pi}v(\theta)\dd\theta,\qquad
+ q(\theta)=1-\cos2\theta.
+\]
+For a physical quaternion \(a=A+\jj B\) and an arbitrary
+\(b=C+iD+\jj E+\kk F\), the multiplication convention of
+Lemma~\ref{lem:hc-twisted-associators} gives
+\[
+ \frac12\langle\mathbf u,[a\ii,b\kk,\ell]\rangle=AC+BE
+                 =\Re(\bar a b),\qquad\mathbf u=\ell\jj .
+\]
+Indeed, the \(\jj\)-coefficient of \([a\ii,b\kk]\) is
+\(-2(AC+BE)\).  Other off-slice components of the associator need not
+vanish; only the stated projection is being observed.
+
+\begin{proposition}[Exact circle reconstruction and negative defect]
+\label{sf:boundary}
+Define the combined and separate currents by
+\[
+ \varphi(\theta)=
+ \Re\{h_0(t,x)H(t,z_\theta)+h_1(t,x)H_z(t,z_\theta)\},\qquad
+ \varphi_j(\theta)=h_j(t,x)\Re h_j(t,z_\theta).
+\]
+Then, at every real point,
+\begin{equation}
+ \langle\varphi\rangle=E,\qquad
+ \frac12E_t=-\frac4{R^2}E+\frac4{R^2}\langle q\varphi\rangle .
+ \label{sf:combined-circle}
+\end{equation}
+For \(j=0,1\), on \(S_j\),
+\begin{equation}
+ \langle\varphi_j\rangle=h_j^2,\qquad
+ \Lag_j=-\frac4{R^2}h_j^2+
+                      \frac4{R^2}\langle q\varphi_j\rangle .
+ \label{sf:stationary-circle}
+\end{equation}
+With \(v_-=\max(0,-v)\), set
+\(\mathfrak D_R=\langle q\varphi_-\rangle\) and
+\(\mathfrak D_{j,R}=\langle q(\varphi_j)_-\rangle\).  Consequently
+\begin{equation}
+ \frac12E_t\ge-\frac4{R^2}(E+\mathfrak D_R),\qquad
+ \Lag_j\ge-\frac4{R^2}(h_j^2+\mathfrak D_{j,R})
+                  \quad\hbox{on }S_j.
+ \label{sf:boundary-defect}
+\end{equation}
+\end{proposition}
+\begin{proof}
+If \(F\) is holomorphic on the disk, its Taylor series gives
+\[
+ \langle\Re F(z_\theta)\rangle=\Re F(x),\qquad
+ \langle\cos2\theta\,\Re F(z_\theta)\rangle
+                         =\frac{R^2}{4}\Re F''(x).
+\]
+Apply this first to \(h_0H+h_1H_z\), whose second derivative is
+\(-E_t/2\), and then to \(h_jh_j(t,\cdot)\).  On \(S_j\) the latter
+has second derivative \(h_jh_{j+2}=-\Lag_j\).  The inequalities follow
+from \(q\ge0\).  No division by \(E\) is used.
+\end{proof}
+
+The separate currents are precisely the projected associators with
+\(a=G_j(t,x)\), \(b=G_j(t,z_\theta)\) on \(S_j\).  On \(S_1\), the
+combined current has an extra \(h_0\Re H\) term with zero second Fourier
+coefficient, but possibly a larger negative part.  Thus the separate
+current can yield a sharper sufficient hypothesis.
+
+A source-prescribed bound
+\begin{equation}
+ \mathfrak D_{j,R(t,x)}\le\eta_j(t,x)E
+ \quad\Longrightarrow\quad
+ \Lag_j\ge-\frac{4(1+\eta_j)}{R(t,x)^2}E
+ \label{sf:defect-target}
+\end{equation}
+would provide the desired relative loss.  Here \(\eta_j\ge0\) and
+\(R,1/R,\eta_j\) must be locally bounded through the covered candidate
+events, on a domain containing the required predecessor neighborhoods.
+The weaker signed requirement
+\(\langle q\varphi_j\rangle\ge-C_jE\) also suffices.  A radius allowed
+to collapse with unknown \(E\) does not give a locally bounded
+coefficient.  The combined defect may be used similarly on both sets.
+
+All source coordinates remain present in these currents.  With
+\(w_t(u)=e^{tu^2}\Phi(u)\), \(a_\theta=x+R\cos\theta\), and
+\(b_\theta=R\sin\theta\),
+\begin{align}
+ \varphi(\theta)&=\int_0^\infty w_t(u)\cosh(b_\theta u)
+       \{h_0\cos(a_\theta u)-h_1u\sin(a_\theta u)\}\dd u,
+       \label{sf:source-current}\\
+ \varphi_0(\theta)&=h_0\int_0^\infty w_t(u)
+                   \cosh(b_\theta u)\cos(a_\theta u)\dd u,\nonumber\\
+ \varphi_1(\theta)&=-h_1\int_0^\infty u w_t(u)
+                   \cosh(b_\theta u)\sin(a_\theta u)\dd u.\nonumber
+\end{align}
+The double-exponential source bound gives compact-uniform convergence
+in \(t,x,R\).  The negative part must be taken after the complete source
+is summed and integrated.  Absolute source moments give only
+\[
+ \mathfrak D_{j,R}\le |h_j|
+       \int_0^\infty u^j w_t(u)\cosh(Ru)\dd u,
+\]
+which has the \(\sqrt E\) scale, not the \(E\) scale in
+\eqref{sf:defect-target}.
+
+The constant four is optimal under nonnegative boundary current, even
+at a stationary center.  At a fixed time the polynomial
+\[
+ P_n(z)=1+2\sum_{k=1}^n\left(1-\frac{k}{n+1}\right)(z/R)^{2k}
+\]
+has \(P_n(0)=1\), \(P_n'(0)=0\), and nonnegative boundary real part,
+the Fej\'er kernel at angle \(2\theta\).  Its signed value is
+\(-P_n(0)P_n''(0)=-4n/((n+1)R^2)\); its polynomial backward-heat
+extension is exact.  For the quadratic collision
+\(H=z^2-2(t-T)\), at \(t=T-\delta,x=0\),
+\[
+ E=4\delta^2,\qquad
+ \varphi_0=2\delta(2\delta+R^2\cos2\theta),\qquad
+ \frac{\mathfrak D_{0,R}}E\sim
+ \frac{R^2}{2\delta}\left(\frac1\pi+\frac14\right).
+\]
+The cubic \(H=z^3-6(t-T)z\) gives the identical defect ratio on
+\(S_1\).  These follow from
+\(\langle(-\cos2\theta)_+\rangle=1/\pi\) and
+\(\langle\cos^22\theta\,1_{\{\cos2\theta<0\}}\rangle=1/4\).
+Conversely, the slice \(H=\varepsilon-z^2\) has favorable
+\(\Lag_0=2\varepsilon\) at zero while
+\(\mathfrak D_{0,R}/E\to\infty\).  An eight-dimensional harmonic-ball reconstruction under a nonnegative
+scalar-boundary hypothesis gives the weaker constant
+\((8+2)(8-1)/R^2=70/R^2\); enlarging the ambient domain does not
+improve the spectral-circle observation.  Thus payment of all negative mass
+is a strictly stronger sufficient mechanism than the signed bound;
+it can discard favorable cancellation.
+
+\subsection{The original staircase on a complex circle}
+
+The cutoff in \eqref{eq:corr-cutoff-source} has an entire spectral
+extension.  More generally fix \(0<a<\pi/8\), \(0\le t\le T<\infty\),
+\(V_N=\frac12\log N\), and retain exactly
+\(n\le Ne^{-2y}\), \(0\le y\le V_N\).  Define
+\begin{equation}
+ \mathscr H_N(t,z)=\frac12\int_0^{V_N}
+ \left\{\psi_{a,N}(t,y)e^{(-a+iy)z}
+       +\overline{\psi_{a,N}(t,y)}e^{(-a-iy)z}\right\}\dd y ,
+ \label{sf:entire-cutoff}
+\end{equation}
+where \(\psi_{a,N}=e^{t(y+ia)^2}\sum_{n\le Ne^{-2y}}\phi_n(y+ia)\);
+conjugation refers to real \(t\).  Its derivatives on the real axis
+are the retained jets in \eqref{eq:corr-cutoff-jet}.  The complete
+version equals \(H(t,z)\), first by the complete contour identity on
+the real axis and then by entireness.  The complete-source vertical
+cancellation is used before separating theta indices.
+
+\begin{proposition}[Complete Gaussian circle payment]
+\label{sf:circle-tail}
+Put \(\beta=\pi\cos4a>0\), \(c_a=\beta/2\), and
+\begin{equation}
+ Q_j(T,R,a)=\int_0^\infty(a+y)^je^{Ty^2+Ry}
+ \sum_{n\ge1}(2\pi^2n^4e^{9y}+3\pi n^2e^{5y})
+                     e^{-c_an^2e^{4y}}\dd y .
+ \label{sf:Q}
+\end{equation}
+These constants are finite and locally bounded for finite \(T,R\)
+and \(a\) in the open strip.  Uniformly on \(|z-x|\le R\),
+\begin{equation}
+ |h_j(t,z)-\partial_z^j\mathscr H_N(t,z)|
+ \le e^{-a(x-R)}Q_j(T,R,a)e^{-c_aN^2}
+ =:\epsilon_{j,N}.
+ \label{sf:circle-tail-bound}
+\end{equation}
+Retaining the full real factor \(h_j(t,x)\), set
+\[
+ \mathfrak D_{j,R,N}
+ =\left\langle q
+ \{h_j(t,x)\Re\partial_z^j\mathscr H_N(t,z_\theta)\}_-\right\rangle .
+\]
+On the full stationary set,
+\begin{equation}
+ |\mathfrak D_{j,R}-\mathfrak D_{j,R,N}|
+                       \le\sqrt E\,\epsilon_{j,N}.
+ \label{sf:defect-stability}
+\end{equation}
+\end{proposition}
+\begin{proof}
+The omitted domain is exactly \(n^2e^{4y}>N^2\).
+Extract \(e^{-c_aN^2}\) from \(e^{-\beta n^2e^{4y}}\);
+the remaining exponential is that in \eqref{sf:Q}.  Both conjugate
+branches cost at most \(e^{-a(x-R)+Ry}\), a spectral derivative
+costs \((a+y)^j\), and the heat factor costs \(e^{Ty^2}\).
+Their factors \(1/2\) pay the two equal bounds.  For finiteness, use
+\[
+ e^{-c_an^2e^{4y}}
+ \le e^{-(c_a/2)n^2}e^{-(c_a/2)e^{4y}}.
+\]
+The resulting theta-index sums and remaining integral converge
+locally uniformly.  Finally \(v\mapsto v_-\) is 1-Lipschitz,
+\(\langle q\rangle=1\), and \(|h_j|\le\sqrt E\) for \(j=0,1\).
+Only spectral derivatives were taken, so no staircase edge was
+differentiated or discarded.
+\end{proof}
+
+This yields a quantitative conditional route into the cutoff transfer.
+Suppose, for every integer \(N\ge N_{0,j}\ge8\), one proves
+\[
+ \mathfrak D_{j,R,N}\le
+ \alpha_j\mathfrak C_{j,N}E+B_je^{-d_jN^2},\qquad
+ \mathfrak C_{j,N}=N^pe^{\sigma_j(\log N)^2},
+\]
+where \(p\ge0\) is fixed, \(\alpha_j,B_j,\sigma_j\ge0\), \(d_j>0\),
+and the coefficients, inverse rates, \(N_{0,j},R,1/R\) are
+source-prescribed and locally bounded through candidate events.
+Young's inequality and \(\mathfrak C_{j,N}\ge1\) give
+\begin{equation}
+ \begin{split}
+ \Lag_j\ge{}&
+ -\frac4{R^2}(\alpha_j+\tfrac32)\mathfrak C_{j,N}E\\
+ &-\frac4{R^2}\left\{B_j+
+             \tfrac12e^{-2a(x-R)}Q_j(T,R,a)^2\right\}
+                         e^{-\min(d_j,2c_a)N^2}.
+ \end{split}
+ \label{sf:conditional-boundary-cutoff}
+\end{equation}
+For \(\sigma_j=0\) this has the polynomial transfer form.
+The additional factor \(e^{\sigma_j(\log N)^2}\), after optimizing
+a Gaussian tail, has subpower growth in \(1/E\) and is also covered
+by the corresponding analytic-rigidity transfer.  The original
+manuscript cutoff is recovered by \(a=\pi/16\), \(T=1/2\).
+The circle tail and its payment are proved here; the all-cutoff signed
+hypothesis is not.
+
+\subsection{Sharp translated averages and source certificates}
+
+For a real \(f=h_j(t,\cdot)\) and a positive \(C^1\) weight \(\chi\),
+direct differentiation gives
+\begin{equation}
+ \chi\Lag_j+\frac{\chi'^2}{8\chi}f^2+
+       \partial_x(\chi ff')
+ =2\chi\left(f'+\frac{\chi'}{4\chi}f\right)^2.
+ \label{sf:spatial-flux}
+\end{equation}
+Thus, if the endpoint flux vanishes and
+\(|(\log\chi)'|\le a\), then
+\(\int\chi\Lag_j\ge-(a^2/8)\int\chi h_j^2\).
+On an interval with \(ff'=0\) at both endpoints the unweighted
+identity is \(\int\Lag_j=2\int h_{j+1}^2\ge0\).
+Multiplying \eqref{sf:spatial-flux} by \(2\mathbf u\) is an exact
+oriented associator identity; the derivative remains a signed
+spatial flux.
+
+\begin{theorem}[Sharp hyperbolic-secant average]
+\label{sf:sech}
+For any \(a>0\), \(x_0\in\R\), set
+\[
+ \chi(x)=\operatorname{sech}(a(x-x_0)),\qquad
+ \nu=\frac{\sqrt2-1}{2},\qquad c_*=2\nu^2=\frac{3-2\sqrt2}{2}.
+\]
+For the complete theta field, at every real time,
+\begin{equation}
+ \int_{\R}\chi\Lag_j\dd x
+       \ge-c_*a^2\int_{\R}\chi h_j^2\dd x,\qquad
+ \int_{\R}\chi(\Lag_0+\Lag_1)\dd x
+       \ge-c_*a^2\int_{\R}\chi E\dd x .
+ \label{sf:sech-bound}
+\end{equation}
+The constant \(c_*\) is sharp in the general weighted Sobolev class.
+\end{theorem}
+\begin{proof}
+For \(g=\sqrt\chi f\), integration by parts and
+\(\nu(\nu+1)=1/4\) give
+\[
+ \int\chi(f'^2-ff'')=
+ 2\int g'^2+\frac12\int(\log\chi)''g^2,
+\]
+and therefore
+\begin{equation}
+ \int\chi\Lag_j+c_*a^2\int\chi f^2
+   =2\int\{g'+\nu a\tanh(a(x-x_0))g\}^2\ge0 .
+ \label{sf:sech-square}
+\end{equation}
+Adding the two branches uses \(h_0^2+h_1^2=E\).
+Equality in the general class holds for
+\(g=\operatorname{sech}^{\nu}(a(x-x_0))\),
+\(f=\cosh^{1-1/\sqrt2}(a(x-x_0))\), and compactly supported smooth
+truncations approach equality.  For theta jets, a fixed complete-source
+contour shift with \(0<a_0<\pi/8\) gives
+\(|h_k(t,x)|\le C_{k,a_0}e^{-a_0|x|}\) on compact real-time
+intervals.  The source tail pays the heat and polynomial factors.
+All integrations converge and their endpoint fluxes vanish.
+\end{proof}
+Each individual bound also has right side at least
+\(-c_*a^2\int\chi E\).  Sharpness is not asserted within the theta
+subfamily.  Narrowing the weight to width \(1/a\) costs \(a^2\);
+the theorem therefore gives no locally bounded pointwise coefficient.
+
+There is a useful source target which does not penalize angular
+motion.  Identify \(F=h_0+\jj h_1\) with \((h_0,h_1)\), and let
+\(J(A,B)=(-B,A)\).  If \(M=S+\omega J\), \(S=S^*\), then
+\(F\cdot MF=F\cdot SF\).  Hence, on \(S_j\), an independently proved
+identity
+\[
+ F_t=MF+c_jh_{j+1}+R_j,\qquad
+ S\succeq-\kappa_jI,\qquad F\cdot R_j\ge-b_jE
+\]
+would give \(\Lag_j\ge-(\kappa_j+b_j)E\).
+The identity must be defined on its domain, but the magnitude of
+\(\omega\) need not enter the loss.  A full residual-norm bound is
+a stronger condition than the stated signed pairing.
+
+For explicit source certificates put \(w=e^{tu^2}\Phi\) on
+\(u\ge0\), and define
+\[
+ w\mathsf T_wA=(wA)',\qquad
+ \mathsf T_wA=A'+(2tu+\Phi'/\Phi)A .
+\]
+Require \(wA\to0\) at both endpoints.  If prescribed real
+coefficients and fields satisfy
+\begin{align}
+ (u^2-a_0)\cos(xu)+b_0u\sin(xu)
+       &=\mathsf T_wA_0,\label{sf:certificate0}\\
+ -u^3\sin(xu)-a_1\cos(xu)+b_1u\sin(xu)+c_1u^2\cos(xu)
+       &=\mathsf T_wA_1,\label{sf:certificate1}
+\end{align}
+then integration gives
+\[
+ -h_2=a_0h_0+b_0h_1,\qquad
+ -h_3=a_1h_0+b_1h_1+c_1h_2.
+\]
+On the respective full stationary sets this proves
+\begin{equation}
+ \Lag_0=a_0E,\qquad
+ \Lag_1=a_1h_0h_1+b_1h_1^2
+ \ge-\frac{\sqrt{a_1^2+b_1^2}-b_1}{2}E .
+ \label{sf:certificate-losses}
+\end{equation}
+The second constant is the negative of the smallest eigenvalue of
+\(\left(\begin{smallmatrix}0&a_1/2\\a_1/2&b_1\end{smallmatrix}\right)\).
+An arithmetic certificate should prescribe \(A_j\) as a finite
+differential expression in complete theta data and phase parameters,
+with paid endpoint and residual terms.  Defining it by an incomplete
+integral merely hides the unknown cancellation at an endpoint.
+Unknown physical quotients such as \(-h_2/h_0\) do not prescribe
+locally bounded coefficients.  No theta certificate
+\eqref{sf:certificate0}--\eqref{sf:certificate1} is established here.
+
+Frequency-dependent angular motion has an additional exact term.
+Set
+\[
+ v_x(u)=(\cos xu,-u\sin xu),\qquad
+ Q_\omega=\int_0^\infty w(u)\omega(u)Jv_x(u)\dd u.
+\]
+Symmetrization yields
+\begin{equation}
+ F\cdot Q_\omega=\frac12\iint_{[0,\infty)^2}
+ w(u)w(v)\{\omega(u)-\omega(v)\}
+ \{u\sin(xu)\cos(xv)-v\cos(xu)\sin(xv)\}\dd u\dd v .
+ \label{sf:angular-commutator}
+\end{equation}
+For \(x>0\), a source supported in \(0\le u\le\pi/(2x)\), and
+nondecreasing \(\omega\), this is nonnegative: the displayed
+determinant has the sign of \(u-v\), as follows from monotonicity of
+\(u\tan(xu)\) in the interior and continuity at the endpoints.
+The full theta source has unbounded support, and its exterior cannot
+be omitted or paid at energy scale by an absolute moment.  Thus this
+compact-support observation does not prove the theta target.
+
+\subsection{An exact finite exceptional-lattice source bridge}
+\label{sf:e8-bridge}
+
+Use the coordinate model
+\[
+ L=\{\xi\in\mathbb Z^8:\textstyle\sum_i\xi_i\in2\mathbb Z\}
+ \ \cup\
+ \{\xi\in(\mathbb Z+\tfrac12)^8:
+                       \textstyle\sum_i\xi_i\in2\mathbb Z\}
+\]
+of \(E_8\).  For independent \(u=s+r,v=s-r\) put
+\[
+ y_+=e^{4u},\quad y_-=e^{4v},\quad
+ Q_\Lambda=\operatorname{diag}(y_+/4,y_-/4,\Lambda,\ldots,\Lambda),
+ \quad \Lambda>0,
+\]
+and define the eight twisted theta series
+\[
+ T_{a,b}^{\Lambda}(u,v)=
+ \sum_{\xi\in L}e^{-\pi\xi^TQ_\Lambda\xi}
+             e^{\pi i[(a-b)\xi_1+b\xi_2]},
+ \qquad 0\le a\le3,\quad 0\le b\le1.
+\]
+Here and below
+\(\Theta_3(y)=\sum_ne^{-\pi n^2y}\),
+\(\Theta_4(y)=\sum_n(-1)^ne^{-\pi n^2y}\), and
+\(\Theta_2(y)=\sum_ne^{-\pi(n+1/2)^2y}\).
+
+\begin{proposition}[Exact index-eight character projection]
+\label{sf:E8-projection}
+With
+\(A_6(\Lambda)=(\Theta_3(\Lambda)^6+\Theta_4(\Lambda)^6)/2>0\),
+\begin{equation}
+ \frac18\sum_{a=0}^3\sum_{b=0}^1T_{a,b}^{\Lambda}(u,v)
+       =A_6(\Lambda)\Theta_3(y_+)\Theta_3(y_-).
+ \label{sf:E8-theta}
+\end{equation}
+Consequently, for
+\[
+ \mathcal D=(\partial_s^2-\partial_r^2)^2
+                    -8(\partial_s^2+\partial_r^2)+16,
+\]
+the complete physical product is
+\begin{equation}
+ \Phi(s+r)\Phi(s-r)=\frac1{4096A_6(\Lambda)}
+ \mathcal D\left[\frac{e^{2s}}8\sum_{a,b}
+                      T_{a,b}^{\Lambda}(s+r,s-r)\right].
+ \label{sf:E8-source}
+\end{equation}
+Every differentiated character sector is a finite linear combination
+of products of translated complete theta sources.  Its full
+polynomially weighted heat transform is absolutely convergent on
+compact real-time and complex-spectral parameter sets.
+\end{proposition}
+\begin{proof}
+The character average
+\[
+ \frac18\sum_{a=0}^3\sum_{b=0}^1
+        e^{\pi i[a\xi_1+b(\xi_2-\xi_1)]}
+\]
+selects \(\xi_1\in2\mathbb Z\) and then \(\xi_2\in2\mathbb Z\).
+It is the indicator of
+\(M=2\mathbb Z^2\oplus D_6\), where
+\(D_6=\{n\in\mathbb Z^6:\sum n_i\in2\mathbb Z\}\).
+This sublattice has index eight.  Summing the selected coordinates
+proves \eqref{sf:E8-theta}.  Since
+\((\partial_u^2-1)(\partial_v^2-1)=\mathcal D/16\) and
+\(\Phi=(P''-P)/16\), \(P(u)=e^u\Theta_3(e^{4u})\), the source
+normalization is \(16\cdot16^2=4096\).
+
+For the sector assertion set \(c=(\log2)/2\),
+\(P_\nu(u)=e^u\Theta_\nu(e^{4u})\),
+\(\Phi_\nu=(P_\nu''-P_\nu)/16\), and
+\(\widetilde\Phi_2=(\partial_u^2-1)
+[e^u\Theta_2(e^{4u}/4)]/16\).  Splitting even and odd indices gives
+\begin{equation}
+ \begin{split}
+ \Phi_2(u)&=e^c\Phi(u-c)-\Phi(u),\\
+ \Phi_4(u)&=e^c\Phi(u+c)-\Phi(u),\\
+ \widetilde\Phi_2(u)&=e^{2c}\Phi(u-2c)-e^c\Phi(u-c).
+ \end{split}
+ \label{sf:duplication}
+\end{equation}
+For completeness an explicit formula for each character is obtained
+by writing \(\Theta_{[m]}=\Theta_3\) for even \(m\), \(\Theta_4\)
+for odd \(m\), \(r_0=a-b\), and \(C_6=\Theta_2(\Lambda)^6/2\):
+\begin{align*}
+ T_{a,b}^{\Lambda,\mathrm{int}}
+ &=\tfrac12\{
+ \Theta_{[r_0]}(y_+/4)\Theta_{[b]}(y_-/4)\Theta_3(\Lambda)^6\\
+ &\hspace{18mm}+
+ \Theta_{[r_0+1]}(y_+/4)\Theta_{[b+1]}(y_-/4)
+                                      \Theta_4(\Lambda)^6\},\\
+ T_{a,b}^{\Lambda,\mathrm{half}}
+ &=1_{\{b=0,\ a\ {\rm even}\}}(-1)^{a/2}
+                     C_6\Theta_2(y_+/4)\Theta_2(y_-/4).
+\end{align*}
+The parity-weighted half-integer sums vanish under \(n\mapsto-n-1\);
+even phases give the displayed sign.  Applying \((\partial_u^2-1)/16\) to
+\(e^u\Theta_3(e^{4u}/4)\) gives \(e^c\Phi(u-c)\); applying the
+same operator to \(e^u\Theta_4(e^{4u}/4)\) gives
+\(e^{2c}\Phi(u)-e^c\Phi(u-c)\).  Together with
+\eqref{sf:duplication} these prove the finite translated-source
+description.  Each translate retains double-exponential decay in
+both directions, paying every polynomial, heat factor and bounded
+complex spectral displacement.  The eight-sector sum is finite,
+so no global infinite Poisson-mode interchange is needed.
+\end{proof}
+
+The bridge is exact at every \(\Lambda>0\) and preserves both
+independent physical coordinates.  In the correlations its heat
+multiplier is still \(e^{2t(s^2+r^2)}\).  Nevertheless the projector
+does not preserve exceptional mixing of the physical plane.  The
+norm-two roots of \(M\) are exactly the \(D_6\) roots; their span is
+the transverse six-plane.  Any lattice isometry preserving \(M\)
+preserves this span and its orthogonal physical plane, acting there
+by signed coordinate permutations.  More general transformations
+must carry both the anisotropic form and the projector with them.
+Coefficientwise positivity of a selected theta series does not
+establish positivity after \(\mathcal D\).
+
+Indeed the untwisted sector has an explicit adverse region.  Put
+\(B_6=(\Theta_3(\Lambda)^6-\Theta_4(\Lambda)^6)/2\).  Splitting the
+integer parity and half-integer sectors gives
+\begin{align}
+ T_{0,0}^{\Lambda}={}&
+ A_6\{\Theta_3(y_+)\Theta_3(y_-)+\Theta_2(y_+)\Theta_2(y_-)\}
+ \nonumber\\
+ &+B_6\{\Theta_3(y_+)\Theta_2(y_-)+
+                    \Theta_2(y_+)\Theta_3(y_-)\}
+       +C_6\Theta_2(y_+/4)\Theta_2(y_-/4).
+ \label{sf:E8-untwisted}
+\end{align}
+After multiplying by \(e^{2s}\) and applying \(\mathcal D/4096\),
+this is the same combination of \(\Phi,\Phi_2,\widetilde\Phi_2\)
+products.  Modular reflection gives \(\Phi_2(-u)=\Phi_4(u)\).
+For \(u\ge0\),
+\[
+ \Phi_4(u)=2e^u\sum_{n\ge1}(-1)^n
+ z_n(z_n-\tfrac32)e^{-z_n}<0,\qquad z_n=\pi n^2e^{4u}.
+\]
+The inequality follows because \(z(z-\tfrac32)e^{-z}\) is positive
+and strictly decreasing for \(z>3\); its derivative is
+\(-e^{-z}(z-3)(z-\tfrac12)\).  In contrast \(\Phi_2(u)>0\) when
+\(e^{4u}\ge6/\pi\).
+As \(R\to\infty\),
+\[
+ \Phi(R)\sim2\pi^2e^{9R-\pi e^{4R}},\quad
+ \Phi_2(R)\sim\frac{\pi^2}{8}e^{9R-(\pi/4)e^{4R}},\quad
+ \Phi_4(R)\sim-2\pi^2e^{9R-\pi e^{4R}}.
+\]
+First let \(\Lambda\to\infty\), so \(A_6\to1\), \(B_6,C_6\to0\).
+At \((u,v)=(R,-R)\) the differentiated untwisted expression becomes
+\begin{equation}
+ \Phi(R)^2+\Phi_2(R)\Phi_4(R)
+ \sim-\frac{\pi^4}{4}e^{18R-(5\pi/4)e^{4R}}<0,
+ \label{sf:E8-negative}
+\end{equation}
+and the adverse term divided by \(\Phi(R)^2\) is asymptotic to
+\(-\frac1{16}\exp\{(3\pi/4)e^{4R}\}\).
+For each sufficiently large fixed \(R\), continuity gives the same
+negativity for sufficiently large finite \(\Lambda\).  This order
+of limits proves a pointwise signed obstruction to untwisted
+positivity, not a failure of heat integrability.
+
+Translation also identifies exactly which auxiliary fields a
+sector norm would observe.  Define
+\[
+ \mathcal T_cH(t,z)=e^{c+tc^2+icz}H(t,z-2itc).
+\]
+Changing the source variable in \eqref{sf:duplication} gives
+\begin{equation}
+ \int_{\R}e^{tu^2}\Phi_2(u)e^{izu}\dd u
+          =2\{\mathcal T_cH(t,z)-H(t,z)\}.
+ \label{sf:heat-translation}
+\end{equation}
+At \(t=0\) the result is proportional to \(H(0,z)\).  At positive
+time its imaginary displacement is indispensable.  At a possible
+double collision the displaced value contains the complete series
+\[
+ H(t,x-2itc)=\sum_{k\ge2}\frac{(-2itc)^k}{k!}h_k(t,x);
+\]
+it need not vanish with \(E\).
+
+This is an exact obstruction to a universal auxiliary-norm payment.
+For fixed \(t_*>0\), take
+\(\Phi_{\rm ctrl}(u)=e^{-(1+t_*)u^2}(u^2-\frac34)^2\).  Gaussian
+differentiation gives
+\[
+ H_{\rm ctrl}(t_*,z)=\frac{\sqrt\pi}{32}
+                          e^{-z^2/4}(z^2-3)^2 .
+\]
+At \(x_*=\sqrt3\), \(H=H_z=0\), \(h_2\ne0\), whereas
+\(H(t_*,x_*-2it_*c)\ne0\).  Replacing the square in the source by
+\((u^2-\frac34)^2+\varepsilon\) makes it strictly positive.
+The Jacobian of \((H,H_z)\) in \((t,x)\) has determinant
+\(-h_2^2\ne0\), so for every sufficiently small fixed
+\(\varepsilon>0\) the real implicit-function theorem preserves a
+positive-time double collision and the nonzero shifted amplitude.
+Thus no finite coefficient can bound
+\(|\mathcal T_cH-H|^2\) by \(E\) at that collision, even for that
+fixed strictly positive source.  This Gaussian control is locally
+heat-analytic; it is not claimed to have the theta tail envelope.
+
+Finally define \(\mathscr F_\Lambda\) by the right side of
+\eqref{sf:E8-source}, and put
+\(q_0=r^2\), \(q_1=r^4-s^2r^2\),
+\(b=(1-s^2+r^2)/2\).  The exact source gate is
+\begin{equation}
+ \iint_{\R^2}e^{2t(s^2+r^2)}
+       \{q_j+\kappa_jb\}\cos(2xs)\mathscr F_\Lambda(s,r)
+                         \dd s\dd r\ge0\quad\hbox{on }S_j.
+ \label{sf:E8-gate}
+\end{equation}
+By the complete-correlation formulas this is precisely
+\(\Lag_j+\kappa_jE\ge0\).  The boundary current likewise has the
+complete two-source formula
+\[
+ \varphi_j(\theta)=\frac14\Re\iint_{\R^2}
+ (iu)^j(iv)^je^{t(u^2+v^2)}e^{iz_\theta u+ixv}
+                              \Phi(u)\Phi(v)\dd u\dd v .
+\]
+The eight-character packet can be inserted into this formula
+exactly, but must be reconstructed before a negative-part estimate.
+The bridge proves the identification required for an exceptional
+arithmetic approach; it does not prove either signed gate.
+
+\subsection{Closed self-dual forms and a sharp disk completion}
+
+Unpublished quaternion-form working notes of Edward B.~Baker~III
+dated 21 January and 14 February 2014 motivate retaining a polarized
+form pairing.  They were circulated as incomplete exploratory notes.
+The construction here uses direct exterior algebra and Stokes'
+theorem; it assumes none of their unfinished singular-kernel or
+nonabelian boundary formulas.
+
+On oriented Euclidean four-space,
+\[
+ \Omega\wedge\Omega=(|\Omega_+|^2-|\Omega_-|^2)\,\mathrm{vol},
+ \qquad
+ \Omega\wedge*\Omega=(|\Omega_+|^2+|\Omega_-|^2)\,\mathrm{vol}.
+\]
+The wedge pairing has signature \((3,3)\).
+For orthonormal self-dual forms \(\sigma_1^+,\sigma_2^+\) and an
+orthonormal anti-self-dual form \(\sigma_1^-\),
+\[
+ \Omega=b\sigma_1^++\tfrac12(a-c)\sigma_2^+
+                    +\tfrac12(a+c)\sigma_1^-
+\]
+has wedge square \((b^2-ac)\mathrm{vol}\), but norm
+\(b^2+(a^2+c^2)/2\).  Substituting three consecutive jets therefore
+realizes \(\Lag_j\) algebraically while introducing an uncontrolled
+higher jet into its positive norm.  This variable-coefficient
+mixed-Hodge form also need not be closed.
+
+There is a closed realization of the inputs.  Use coordinates
+\((x,y,u,v)\), orientation \(dx\wedge dy\wedge du\wedge dv\),
+\(z=x+iy\), and \(w=u+iv\).  For holomorphic \(f(z)\), put
+\begin{equation}
+ \alpha_f=\frac1{\sqrt2}\Re\{f(z)\dd z\wedge\dd w\}.
+ \label{sf:alpha}
+\end{equation}
+With
+\(A=dx\wedge du-dy\wedge dv\),
+\(B=dx\wedge dv+dy\wedge du\), one has
+\(*A=A\), \(*B=B\), \(A^2=B^2=2\,\mathrm{vol}\), \(A\wedge B=0\).
+Thus
+\begin{equation}
+ d\alpha_f=0,\qquad *\alpha_f=\alpha_f,\qquad
+ \alpha_f\wedge\alpha_g=\Re(f\bar g)\,\mathrm{vol}.
+ \label{sf:closed-pairing}
+\end{equation}
+Closedness also follows immediately from
+\(d(f(z)dz\wedge dw)=0\).  Heat time is external to this exterior
+derivative.  Taking \(\alpha_r=\alpha_{h_r(t,\cdot)}\) yields
+\[
+ \alpha_{j+1}\wedge\alpha_{j+1}-\alpha_j\wedge\alpha_{j+2}
+ =\ell_{h_j}\,\mathrm{vol},\qquad
+ \ell_f=|f'|^2-\Re(f\overline{f''}).
+\]
+At \(y=0\) this coefficient is \(\Lag_j\).  This is evaluation of
+a coefficient, not pullback of a four-form onto a line.
+The coefficient-space matrix has entries
+\(Q_{13}=Q_{31}=-1/2\), \(Q_{22}=1\), all others zero, and spectrum
+\(\{1,1/2,-1/2\}\); closed self-dual inputs do not make this
+polarized combination positive.  In particular, the quadratic and cubic
+backward-heat collision controls above retain closed self-dual inputs
+while their stationary ratios diverge as \(-1/(T-t)\).
+
+For a holomorphic primitive \(P_f'=f\), the one-form
+\(\beta_f=\Re(P_f\,dw)/\sqrt2\) has \(d\beta_f=\alpha_f\).
+On any smooth bounded four-domain with these forms defined nearby,
+\[
+ \int_\Omega\alpha_f\wedge\alpha_g
+                =\int_{\partial\Omega}\beta_f\wedge\alpha_g .
+\]
+Theta jets have global primitives.  Taking the first factor to be the
+constant \(a=h_j(t,x_0)\) realizes exactly
+\(\varphi_j(\theta)\) as the coefficient of
+\(\alpha_a\wedge\alpha_{h_j}\) on the spectral circle.  Thus the
+closed-form lift preserves the signed current already isolated above.
+
+\begin{theorem}[Exact disk Dirichlet completion]
+\label{sf:disk}
+Let \(f\) be holomorphic near the closure of
+\(D_R(x_0)=\{|z-x_0|<R\}\), \(x_0\in\R\), and set
+\[
+ g_R(z)=\left(1-\frac{(z-x_0)^2}{R^2}\right)f(z).
+\]
+Then
+\begin{equation}
+ \int_{D_R(x_0)}\ell_f\dd A+
+       \frac1{2R}\int_{\partial D_R(x_0)}|f|^2\dd s
+       =\frac12\int_{D_R(x_0)}|g_R'|^2\dd A\ge0.
+ \label{sf:disk-completion}
+\end{equation}
+The boundary coefficient is sharp even among real-reflection
+polynomials stationary at \(x_0\).
+\end{theorem}
+\begin{proof}
+Expand \(f(x_0+R\zeta)=\sum_{n\ge0}b_n\zeta^n\), with negative-index
+coefficients zero.  Angular orthogonality gives
+\[
+ \pi^{-1}\int_{D_R}\ell_f=
+ \sum_{n\ge0}n|b_n|^2
+       -\Re\sum_{n\ge0}(n+2)b_n\overline{b_{n+2}},
+\]
+while the normalized boundary term is \(\sum|b_n|^2\) and
+\(\pi^{-1}\int|g_R'|^2=\sum_{n\ge1}n|b_n-b_{n-2}|^2\).
+Expanding this square proves the identity.  For
+\[
+ f_N(z)=\sum_{m=0}^N\left(1-\frac m{N+1}\right)
+                         ((z-x_0)/R)^{2m},
+\]
+one has \(f_N(x_0)=1\), \(f_N'(x_0)=0\), and, writing
+\(B_R=(2R)^{-1}\int_{\partial D_R}|f_N|^2ds\),
+\[
+ B_R=\pi\frac{(N+2)(2N+3)}{6(N+1)},\qquad
+ \frac{\int_{D_R}\ell_{f_N}dA}{B_R}
+                         =-\frac{2N}{2N+3}\longrightarrow-1 .
+\]
+This proves sharpness in the stated general class.
+\end{proof}
+
+For \(U(x,y)=|f(x+iy)|^2\), the Cauchy--Riemann equations give
+\begin{equation}
+ \ell_f=\tfrac12U_{yy}=2|f'|^2-\tfrac12U_{xx},\qquad
+ \int_{D_R}\ell_f\dd A=\tfrac12\int_{\partial D_R}U_y n_y\dd s .
+ \label{sf:normal-density}
+\end{equation}
+Real-reflection data have \(U_y(x,0)=0\), which gives no sign for
+\(U_{yy}(x,0)\).  On an annulus the inner boundary contributes its
+own signed flux.  The sharpness sequence also shows that the disk
+loss cannot be paid by the central first-jet energy for arbitrary
+holomorphic fields.  Neither a boundary norm nor a positive
+Dirichlet remainder establishes central pointwise positivity.
+
+\subsection{Positive centered averages from the complete source}
+
+\begin{theorem}[Centered source positivity]
+\label{sf:centered}
+Let \(\chi\) be a nonzero real, even, nonnegative integrable weight,
+and put
+\[
+ \widehat\chi(\xi)=\int_{\R}\chi(x)\cos(\xi x)\dd x,\qquad
+ W_j(t,y)=\int_{\R}\chi(x)\ell_{h_j}(t,x+iy)\dd x .
+\]
+For every real \(t,y\), \(W_0(t,y)>0\) if
+\(\widehat\chi\ge0\).  If in addition \(\widehat\chi\) is
+nonincreasing on \([0,\infty)\), then \(W_1(t,y)>0\).
+Both conclusions hold for every centered Gaussian
+\(\chi(x)=e^{-a^2x^2}\), \(a>0\).
+\end{theorem}
+\begin{proof}
+With \(\rho_t(u)=w_t(|u|)/2\), symmetrizing the Hermitian products
+in the full-line Fourier representation gives
+\[
+ \ell_{h_j}(t,x+iy)=\frac12\iint_{\R^2}
+ \rho_t(u)\rho_t(v)(uv)^j(u+v)^2
+                 \cos((u-v)x)e^{-(u+v)y}\dd u\dd v .
+\]
+Integration against \(\chi\) and folding the four quadrants yield
+\begin{equation}
+ \begin{split}
+ W_j(t,y)=\frac14\int_0^\infty\!\int_0^\infty
+ &w_t(u)w_t(v)(uv)^j\\
+ {}\times\bigl\{&
+ (u+v)^2\widehat\chi(u-v)\cosh((u+v)y)\\
+ &+(-1)^j(u-v)^2\widehat\chi(u+v)\cosh((u-v)y)
+                      \bigr\}\dd u\dd v .
+ \end{split}
+ \label{sf:centered-fold}
+\end{equation}
+For \(j=0\) both terms are nonnegative.  For \(j=1\), the first
+dominates the second since \(u+v\ge|u-v|\), the Fourier weight
+decreases with absolute frequency, and \(\cosh\) increases with
+absolute argument.  Strict positivity holds on a region near
+\(u=v>0\), using continuity and \(\widehat\chi(0)>0\).
+The complete double-exponential source pays every polynomial and
+\(e^{|y|(|u|+|v|)}\), locally uniformly in \(t,y\); integrability
+of \(\chi\) therefore justifies every interchange.  For a Gaussian,
+\(\widehat\chi(\xi)=\sqrt\pi\,a^{-1}e^{-\xi^2/(4a^2)}\).
+\end{proof}
+
+At \(y=0\), these are strictly positive centered averages of the
+physical branches, without the loss in \eqref{sf:sech-bound}.
+The origin is essential: replacing \(\chi(x)\) by \(\chi(x-x_0)\)
+inserts \(\cos((u-v)x_0)\) in the first folded term and
+\(\cos((u+v)x_0)\) in the second.  They can have independent signs.
+
+An exact positive atomic-source control quantifies the localization
+gap.  Take \(a,k>0\) and
+\[
+ H(t,z)=a+b(t)\cos(kz),\qquad b(t)=ae^{k^2(t-T)}.
+\]
+At \(x_*=\pi/k\), \(\delta=T-t>0\), and
+\(\varepsilon=a-b>0\), one has
+\[
+ h_1=0,\quad E=\varepsilon^2,\quad
+ \Lag_0=-bk^2\varepsilon,\quad
+ \frac{\Lag_0}{E}=-\frac{k^2}{e^{k^2\delta}-1}
+                           =-\frac1\delta+O(1).
+\]
+On the centered disk use \(\zeta=z-x_*\) and write
+\(f(\zeta)=a-b\cos(k\zeta)\).  Direct
+calculation gives
+\(\ell_f=b^2k^2\cosh(2k\Im\zeta)-abk^2\Re\cos(k\zeta)\).
+The harmonic mean-value formula and termwise integration yield
+\begin{equation}
+ \frac1{\pi R^2}\int_{D_R(0)}\ell_f\dd A
+ =k^2b^2\{M(kR)-e^{k^2\delta}\},\qquad
+ M(s)=\frac{I_1(2s)}s
+       =\sum_{n\ge0}\frac{s^{2n}}{n!(n+1)!}.
+ \label{sf:atomic-disk}
+\end{equation}
+Every fixed positive-radius disk has positive average sufficiently
+near the event, even though its central value is negative.
+Since \(M\) strictly increases for positive arguments and
+\(M(s)=1+s^2/2+O(s^4)\), the unique sign-changing radius obeys
+\(R_{\rm crit}^2=2\delta+O(\delta^2)\); the average is negative only
+for smaller radii.  Detecting this adverse center by its disk mean
+therefore forces localization at the collision scale.  This is a
+control, not the theta source.  Closed self-dual forms and positive
+source averages retain useful signed information, but do not
+supply the remaining translated, stationary, energy-relative bound.
+
+
+% Prepared 15 October 2026 for Edward Baker with substantial LLM assistance.
+% Recorded model: gpt-6-astra; reasoning effort: ultra.
+% Integrates Notes 52--53 and their internal cross-review in Review 31.
+% Suggested insertion: after signed forms, before bounded-region certificates.
+
+\section{A positive theta primitive and source-shape obstructions}
+\label{pp:section}
+
+This section gives a positive complete-theta auxiliary channel and its
+exact signed reconstruction, then separates that structure from two
+insufficient replacements for the missing estimate: finite rational
+jet closure and general source-shape assumptions. All results are
+analytic; they add no finite certificate or new pointwise theta sign
+domain.
+
+\subsection{A positive theta primitive and its signed reconstruction}
+\label{pp:primitive-section}
+
+The complete theta source admits a positive auxiliary transform whose
+relation to the physical field retains an essential lower-boundary term.
+This is useful source structure, but its positivity does not imply the
+sign of the differentiated physical observation.
+
+\begin{proposition}[Positive complete theta primitive]
+\label{pp:positive-primitive}
+For \(u\ge0\), put
+\begin{equation}
+ \psi(u)=e^u\sum_{n\ge1}e^{-\pi n^2e^{4u}},\qquad
+ J(t,z)=\int_0^\infty e^{tu^2}\psi(u)\cos(zu)\dd u.
+ \label{pp:primitive-definition}
+\end{equation}
+The integral defines a jointly entire function of \((t,z)\).
+For every real \(t,x\),
+\begin{equation}
+ 8H(t,x)=\frac12+(2t-x^2-1)J(t,x)
+                    +4txJ_x(t,x)-4t^2J_{xx}(t,x).
+ \label{pp:primitive-reconstruction}
+\end{equation}
+Moreover,
+\begin{equation}
+ J(t,x)>0\qquad(0\le t\le1/2,\ x\in\R).
+ \label{pp:primitive-positive}
+\end{equation}
+Uniformly for \(0\le t\le T<\infty\), as real \(|x|\to\infty\),
+\begin{equation}
+ J(t,x)=\frac1{2x^2}-\frac{1+6t}{2x^4}+O_T(x^{-6}).
+ \label{pp:primitive-asymptotic}
+\end{equation}
+\end{proposition}
+\begin{proof}
+Let \(\vartheta(r)=\sum_{n\in\mathbb Z}e^{-\pi n^2r}\).
+Poisson summation gives
+\[
+ P(u):=e^u\vartheta(e^{4u})=P(-u),\qquad P=e^u+2\psi.
+\]
+Differentiating the complete series gives
+\begin{equation}
+ \Phi=\frac{P''-P}{16}=\frac{\psi''-\psi}{8},\qquad
+ \psi^{(2k+1)}(0)=-\frac12\quad(k\ge0).
+ \label{pp:primitive-source}
+\end{equation}
+The last identities follow by differentiating the even function \(P\).
+The complete series for \(\psi\), and every fixed derivative, decay
+double exponentially as \(u\to+\infty\). On compact sets of complex
+\((t,z)\), this decay dominates every polynomial derivative factor,
+the heat multiplier, and \(e^{|\operatorname{Im}z|u}\). This proves
+joint entirety and justifies the following differentiations and
+integrations by parts.
+
+With \(F(u)=e^{tu^2}\cos(xu)\), two integrations by parts give
+\[
+ 8H=-\psi'(0)F(0)+\psi(0)F'(0)
+                      +\int_0^\infty\psi(u)(F''(u)-F(u))\dd u.
+\]
+Here \(F(0)=1\), \(F'(0)=0\), and all upper boundary terms vanish.
+Expanding \(F''\) and using spectral derivatives of \(J\) gives
+\eqref{pp:primitive-reconstruction}, including the constant \(1/2\).
+
+To prove positivity, fix \(0\le t\le1/2\) and write
+\[
+ f(u)=e^{tu^2}\psi(u)=\sum_{n\ge1}f_n(u),\quad
+ f_n(u)=e^{tu^2+u-q_n(u)},\quad q_n(u)=\pi n^2e^{4u}.
+\]
+For \(u\ge0\), \(0<2tu+1\le u+1\le q_n(u)\). Consequently
+\[
+ \frac{f_n''(u)}{f_n(u)}
+  =(2tu+1-4q_n)^2+2t-16q_n
+  \ge9q_n^2-16q_n>0.
+\]
+Thus \(f''>0\), while \(f'(0)=-1/2\) and
+\(f'(u)\to0\) at infinity. For \(x\ne0\), integration by parts and
+\(\int_0^\infty f''=1/2\) yield
+\begin{equation}
+ J(t,x)=\frac1{x^2}\int_0^\infty
+                  f''(u)(1-\cos(xu))\dd u>0.
+ \label{pp:primitive-convex-representation}
+\end{equation}
+Strict positivity at \(x=0\) follows from \(f>0\).
+
+Finally, \eqref{pp:primitive-source} gives
+\(f'(0)=-1/2\) and \(f'''(0)=-(1+6t)/2\).
+Repeated integration by parts therefore gives
+\[
+ J=-\frac{f'(0)}{x^2}+\frac{f'''(0)}{x^4}
+       -\frac{f^{(5)}(0)}{x^6}
+       -\frac1{x^6}\int_0^\infty f^{(6)}(u)\cos(xu)\dd u.
+\]
+The endpoint value and the last derivative integral are uniformly
+bounded for \(0\le t\le T\), proving
+\eqref{pp:primitive-asymptotic}.
+\end{proof}
+
+This is a direct convex-kernel argument of the type in
+\cite[Theorem~3.4]{csordas}. The even extension of
+\(e^{tu^2}\psi(u)\) has a cusp at zero, with one-sided derivative
+\(-1/2\). It is different from the smooth even physical source
+\(e^{tu^2}\Phi(u)\). One cannot instead integrate the modular-even
+\(P\) at positive time: \(P(u)\sim e^u\), so its proposed heat
+integral diverges. The constant in
+\eqref{pp:primitive-reconstruction} retains precisely the boundary
+contribution that the decaying half-line primitive requires.
+
+\begin{proposition}[Operator factorization and the scale of the primitive]
+\label{pp:primitive-limitations}
+For \(D_t=2t\partial_x-x\),
+\begin{equation}
+ 8H=\frac12-(D_t^2+1)J.
+ \label{pp:primitive-factorization}
+\end{equation}
+For \(t>0\), the closure of \(D_t\) initially defined on
+\(C_c^\infty(\R)\) is skew-adjoint in
+\(L^2(\R,e^{-x^2/(2t)}\dd x)\). The self-adjoint operator
+\(-D_t^2-1\) has spectrum \([-1,\infty)\), and its quadratic
+form takes both signs. For each fixed real \(t\), no bound
+\(J(t,x)^2\le C(1+|x|)^M E(t,x)\), with finite
+\(C,M\ge0\), holds for all sufficiently large \(|x|\).
+\end{proposition}
+\begin{proof}
+Expanding \(D_t^2\) proves
+\eqref{pp:primitive-factorization}. The unitary map from the weighted
+space to ordinary \(L^2\) is
+\[
+ (U_tf)(x)=e^{-x^2/(4t)}f(x),\qquad
+ U_tD_tU_t^{-1}=2t\partial_x.
+\]
+The derivative on its \(H^1\) domain is skew-adjoint. Thus the
+conjugated second-order operator is
+\(-4t^2\partial_x^2-1\), with Fourier multiplier
+\(4t^2\xi^2-1\). This proves the spectral and form assertions.
+
+For any fixed \(0<a<\pi/8\), complete theta-strip holomorphy
+permits shifting the full-line Fourier integral to
+\(u+ia\) when \(x>0\), and to \(u-ia\) when \(x<0\).
+On each shifted line the positive-end series decays like a polynomial
+in \(e^{4|u|}\) times
+\(\exp\{-\pi\cos(4a)e^{4|u|}\}\); complete evenness supplies
+the same bound at the other end. Every fixed derivative is integrable
+after multiplication by the heat factor. Hence
+\[
+ |h_k(t,x)|\le C_{t,a,k}e^{-a|x|},\qquad k=0,1.
+\]
+The same endpoint integration argument as above gives
+\(J(t,x)\sim1/(2x^2)\) at any fixed real \(t\).
+Exponential decay of \(E\) is incompatible with the proposed
+polynomial-height payment of \(J^2\).
+\end{proof}
+
+The last statement concerns a uniform or polynomial-height budget;
+it does not exclude coefficients merely locally bounded at every
+finite height. There is a separate local limitation at a hypothetical
+real collision in \(0\le t\le1/2\): there \(E=0\) but
+\(J>0\), so a bound \(J^2\le C E\) cannot hold through that
+event with locally bounded \(C\). At time zero the exact identity is
+\begin{equation}
+ J(0,x)=\frac{1}{2(1+x^2)}-\frac{8H(0,x)}{1+x^2}.
+ \label{pp:primitive-time-zero}
+\end{equation}
+Thus the physical field is a small difference involving a positive
+auxiliary channel. At positive time the full differential operator
+in \eqref{pp:primitive-reconstruction} performs that cancellation.
+A useful estimate must retain this complete operator and its signed
+products with the physical jets. Positivity or separate derivative
+norms of \(J\) do not give the required stationary lower bound.
+
+\subsection{The complete theta field has no rational finite-jet closure}
+\label{pp:closure-section}
+
+\begin{proposition}[Complete-source rational closure obstruction]
+\label{pp:no-rational-closure}
+Fix any real \(t\). There are no rational functions
+\(r_0(x),\ldots,r_m(x)\), not all zero, for which
+\begin{equation}
+ \sum_{k=0}^m r_k(x)h_k(t,x)=0
+ \label{pp:forbidden-closure}
+\end{equation}
+on a nonempty open real interval free of their poles.
+\end{proposition}
+\begin{proof}
+Set \(w_t(u)=e^{tu^2}\Phi(u)\). For \(u\to+\infty\),
+the first theta index gives
+\[
+ \Phi(u)=2\pi^2e^{9u-\pi e^{4u}}\{1+O(e^{-4u})\}.
+\]
+For each fixed integer \(k\ge0\), direct differentiation of the
+complete series gives
+\begin{equation}
+ \frac{w_t^{(k)}(u)}{w_t(u)}
+       =(-4\pi)^k e^{4ku}\{1+o(1)\}.
+ \label{pp:source-derivative-asymptotic}
+\end{equation}
+Indeed, the leading term differentiates
+\(e^{-\pi e^{4u}}\) at every step. Differentiation of the
+Gaussian-polynomial prefactors, or of factors generated at earlier
+steps, lowers the power of \(e^{4u}\). After any fixed number of
+derivatives, each index \(n\ge2\) still carries the additional
+factor \(e^{-\pi(n^2-1)e^{4u}}\); the polynomial factors in
+\(n\) and \(e^{4u}\) are dominated by this gap, including in
+the sum over \(n\).
+
+Suppose \(\sum_{k=0}^M p_k(u)w_t^{(k)}(u)=0\), where the
+\(p_k\) are polynomials and \(p_M\ne0\). For all sufficiently
+large \(u\), divide by \(p_M(u)w_t(u)e^{4Mu}\).
+By \eqref{pp:source-derivative-asymptotic}, the highest term tends
+to \((-4\pi)^M\), whereas every lower term tends to zero.
+Ratios of polynomials cannot compensate for
+\(e^{-4(M-k)u}\). This contradiction excludes every nonzero
+polynomial-coefficient differential operator annihilating \(w_t\).
+
+Now suppose \eqref{pp:forbidden-closure} holds. Clearing its
+denominators gives a nonzero polynomial-coefficient differential
+operator annihilating \(H(t,\cdot)\). Entirety extends this
+identity from the given interval to the whole spectral line.
+The complete even source is a Schwartz function, and
+\[
+ H(t,x)=\frac12\int_{\R}w_t(u)e^{ixu}\dd u.
+\]
+For this Fourier convention, conjugation sends multiplication by
+\(x\) to \(i\partial_u\), and \(\partial_x\) to
+multiplication by \(iu\), respecting the order of composed factors.
+This is an invertible correspondence on polynomial differential
+operators. Fourier injectivity therefore produces a nonzero
+polynomial differential operator annihilating \(w_t\), contrary
+to the preceding paragraph.
+\end{proof}
+
+This is distinct from the compact-filter obstruction of
+Proposition~\ref{prop:no-rational-filter-closure}: it applies to the
+untruncated complete field itself. In particular, exact identities
+\(-h_2=a_0h_0+b_0h_1\) or
+\(-h_3=a_1h_0+b_1h_1+c_1h_2\) cannot hold on an open spectral
+interval with all coefficients rational in \(x\). The proposition
+does not exclude identities restricted to a stationary set,
+transcendental coefficients, signed residuals, inequalities, or
+infinite and nonlocal relations. The auxiliary transform \(J\)
+is a new channel and does not supply the excluded finite closure
+among the original jets.
+
+\subsection{A smooth concave source with a positive-time collision}
+\label{pp:collision-section}
+
+The next control rules out a deduction of the needed energy-relative
+bound from positivity, strong log-concavity, square-variable
+log-concavity, and fast source decay alone. It does not reproduce
+the theta arithmetic and is not a counterexample for \(\Phi\).
+
+\begin{theorem}[A double-exponential source-shape control]
+\label{pp:smooth-collision}
+There exists a positive, even, smooth source \(\phi\), with
+double-exponential decay of every derivative, such that
+\[
+ H_\phi(t,z)=\int_0^\infty e^{tu^2}\phi(u)\cos(zu)\dd u
+\]
+is jointly entire and obeys \(\partial_tH_\phi=-\partial_z^2H_\phi\).
+For every real \(t\),
+\[
+ v\longmapsto\log\{e^{tv}\phi(\sqrt v)\}
+\]
+has strictly negative second derivative for \(v\ge0\).
+For any fixed \(\tau\in(1/2,4/5)\), the deformed source
+\(e^{tu^2}\phi(u)\) is strictly decreasing on \(u>0\) and
+uniformly strongly log-concave in \(u\) for \(t\le\tau\).
+Nevertheless, there is a nondegenerate double collision
+\((T,x_*)\), with \(0<T<1/2\) and \(x_*>0\), and a genuine
+stationary predecessor curve \(x=x(t)\) on which
+\begin{equation}
+ \frac{\Lag_{0,\phi}(t,x(t))}{E_\phi(t,x(t))}
+           =-\frac1{T-t}+O(1)\qquad(t\uparrow T).
+ \label{pp:smooth-adverse-pole}
+\end{equation}
+Here \(h_{k,\phi}=\partial_x^kH_\phi\),
+\(E_\phi=h_{0,\phi}^2+h_{1,\phi}^2\),
+\(\Lag_{0,\phi}=h_{1,\phi}^2-h_{0,\phi}h_{2,\phi}\), and
+\(h_{1,\phi}(t,x(t))=0\).
+\end{theorem}
+\begin{proof}
+Start with an explicitly computable Gaussian-polynomial source:
+\[
+ b=\frac15,\quad c=\frac1{50},\quad b^2=2c,\qquad
+ \phi_0(u)=e^{-u^2}(1+bu^2+cu^4).
+\]
+For \(a=1-t>0\), differentiation of the Gaussian cosine integral
+gives
+\begin{align}
+ H_0(t,x)&=\frac{\sqrt\pi}{2\sqrt a}e^{-x^2/(4a)}
+                           \frac{P_a(x^2)}{16a^4},
+ \label{pp:gaussian-control}\\
+ P_a(y)&=cy^2-(4ba^2+12ca)y+16a^4+8ba^3+12ca^2.
+ \label{pp:gaussian-polynomial}
+\end{align}
+For verification, before collecting denominators its multiplier is
+\[
+ 1+b\left(\frac1{2a}-\frac{x^2}{4a^2}\right)
+   +c\left(\frac3{4a^2}-\frac{3x^2}{4a^3}
+                         +\frac{x^4}{16a^4}\right).
+\]
+The discriminant of \(P_a\), as a polynomial in \(y\), is
+\[
+ \Delta(a)=16a^2\{(b^2-4c)a^2+4bca+6c^2\}
+          =32ca^2(-a^2+2ba+3c).
+\]
+It vanishes at
+\begin{equation}
+ a_c=\frac{2+\sqrt{10}}{10},\qquad
+ T_0=1-a_c=\frac{8-\sqrt{10}}{10}\in(0,1/2).
+ \label{pp:gaussian-time}
+\end{equation}
+At this value,
+\[
+ P_{a_c}(y)=c(y-y_c)^2,\qquad
+ y_c=\frac{2ba_c^2}{c}+6a_c=4+\frac{7\sqrt{10}}5>0.
+\]
+With \(x_c=\sqrt{y_c}\), one has
+\(H_0(T_0,x_c)=\partial_xH_0(T_0,x_c)=0\), and
+\begin{equation}
+ d_0:=\partial_x^2H_0(T_0,x_c)
+   =\frac{\sqrt\pi}{2\sqrt{a_c}}e^{-y_c/(4a_c)}
+                        \frac{c y_c}{2a_c^4}>0.
+ \label{pp:gaussian-second-derivative}
+\end{equation}
+
+For \(\delta>0\), replace this source by
+\begin{equation}
+ \phi_\delta(u)=e^{-u^2-\delta\cosh(4u)}(1+bu^2+cu^4).
+ \label{pp:damped-source}
+\end{equation}
+For any fixed positive \(\delta\), compact parameter sets and
+any fixed numbers of heat and spectral derivatives are dominated by
+\[
+ C(1+u^M)\exp\{A u^2+B u-\delta\cosh(4u)\},
+\]
+with finite \(A,B,C,M\). This proves joint entirety of its transform
+and the backward heat equation. Differentiating the source in \(u\)
+adds only polynomial factors and finite products of hyperbolic
+functions. These are absorbed by the same double-exponential damping,
+which proves the derivative-decay assertion.
+
+On a compact neighborhood of \((T_0,x_c)\) with \(t<1\),
+\(e^{-\delta\cosh(4u)}\le1\) permits a fixed Gaussian majorant
+for every required finite derivative. Dominated convergence therefore
+gives local uniform convergence of these derivatives as
+\(\delta\downarrow0\). Apply the continuous-parameter implicit
+function theorem to
+\[
+ \mathscr F_\delta(t,x)
+       =(H_\delta(t,x),\partial_xH_\delta(t,x)).
+\]
+Its derivative in \((t,x)\) at \((0,T_0,x_c)\) is
+\[
+ D_{t,x}\mathscr F_0=
+ \begin{pmatrix}
+ -d_0&0\\ -\partial_x^3H_0(T_0,x_c)&d_0
+ \end{pmatrix},\qquad \det D_{t,x}\mathscr F_0=-d_0^2<0.
+\]
+Consequently, for all sufficiently small positive \(\delta\),
+there are collision points \((T_\delta,x_\delta)\to(T_0,x_c)\)
+with
+\begin{equation}
+ H_\delta(T_\delta,x_\delta)
+  =\partial_xH_\delta(T_\delta,x_\delta)=0,\qquad
+ d_\delta:=\partial_x^2H_\delta(T_\delta,x_\delta)>0.
+ \label{pp:damped-collision}
+\end{equation}
+After reducing the parameter interval, \(0<T_\delta<1/2\) and
+\(x_\delta>0\). Only continuity in the one-sided parameter and
+continuous first derivatives in \((t,x)\) are needed. Alternatively,
+the one-sided parameter derivative is Gaussian dominated even with
+the extra factor \(\cosh(4u)\). Extending \(\mathscr F\) to
+negative parameters by \(2\mathscr F_0-\mathscr F_{-\delta}\)
+gives a \(C^1\) map to which the ordinary implicit function theorem
+applies; it does not integrate a negatively damped source.
+
+It remains to verify all shape properties for the same fixed positive
+\(\delta\). Write
+\[
+ Q(v)=1+bv+cv^2,\quad C(v)=\cosh(4\sqrt v),\quad
+ \eta_{\delta,t}(v)=-(1-t)v-\delta C(v)+\log Q(v).
+\]
+The entire power series
+\(C(v)=\sum_{k\ge0}16^kv^k/(2k)!\) gives
+\(C'(v)\ge8\) and \(C''(v)>0\) for \(v\ge0\).
+Also
+\begin{equation}
+ (\log Q)''(v)
+  =\frac{2c-b^2-2bcv-2c^2v^2}{Q(v)^2}
+  =-\frac{2bcv+2c^2v^2}{Q(v)^2}.
+ \label{pp:shape-log-polynomial}
+\end{equation}
+Thus \(\eta_{\delta,t}''(v)<0\) for all real \(t\) and
+\(v\ge0\). Since \((\log Q)'\le b\),
+\(\eta_{\delta,t}'\le-(1-t)+b-8\delta\). For
+\(t\le\tau<4/5=1-b\), this implies
+\begin{align*}
+ \partial_u\log(e^{tu^2}\phi_\delta(u))
+       &=2u\eta_{\delta,t}'(u^2)<0 &&(u>0),\\
+ \partial_u^2\log(e^{tu^2}\phi_\delta(u))
+       &=2\eta_{\delta,t}'(u^2)+4u^2\eta_{\delta,t}''(u^2)
+         \le-2(1-\tau-b)<0.
+\end{align*}
+Positivity and evenness follow directly from
+\eqref{pp:damped-source}. These bounds hold throughout a time
+neighborhood of the collision and its predecessors.
+
+Finally fix any sufficiently small positive \(\delta\), and set
+\(\phi=\phi_\delta\), \(T=T_\delta\), \(x_*=x_\delta\).
+By \eqref{pp:damped-collision}, the implicit function theorem for
+\(\partial_xH_\delta=0\) gives a smooth stationary curve through
+the collision. Along this curve,
+\[
+ \frac{\dd}{\dd t}H_\delta(t,x(t))
+  =\partial_tH_\delta+\partial_xH_\delta x'(t)
+  =-\partial_x^2H_\delta(t,x(t)).
+\]
+Writing \(\varepsilon=T-t\downarrow0\), Taylor expansion gives
+\[
+ h_{0,\phi}=d_\delta\varepsilon+O(\varepsilon^2),\quad
+ h_{1,\phi}=0,\quad h_{2,\phi}=d_\delta+O(\varepsilon),
+\]
+and hence
+\[
+ E_\phi=d_\delta^2\varepsilon^2+O(\varepsilon^3),\qquad
+ \Lag_{0,\phi}=-d_\delta^2\varepsilon+O(\varepsilon^2).
+\]
+This proves \eqref{pp:smooth-adverse-pole}. All predecessors use
+the same fixed, strictly positive damping and the complete transform.
+\end{proof}
+
+No numerically certified damping size is asserted: the theorem is an
+existence result for every sufficiently small positive \(\delta\).
+The explicitly solvable source at \(\delta=0\) establishes the
+nondegeneracy used to obtain a fixed double-exponentially decaying
+source. The adverse limit then varies time, not the source.
+
+The source properties in this theorem imply no locally bounded
+coefficient through the event satisfying
+\(\Lag_{0,\phi}\ge-\kappa E_\phi\) on its full stationary
+predecessors. Failure on this branch already excludes a deduction
+of both branch bounds from those properties alone. The complete
+correlation identity \eqref{eq:corr-L0}, applied to this source,
+has a positive source kernel but a negative cosine transform on
+these predecessors. Positive moments, admissibility of associated
+kernels, and Fourier positivity are different assertions; compare
+\cite[Theorems~3.5 and~4.2(b), Remark~2.1, and Example~3.12]{csordas}.
+The exact closed-form lifts apply to the entire jets of this control
+as well. Additional theta-specific structure must therefore enter
+at the step that bounds the signed physical observation by its
+first-jet energy.
+
 
 \section{The bounded region: complete certificates through height 112}
 \label{sec:fc-certificate}
@@ -4356,6 +5672,751 @@ an energy-relative signed estimate.
 % as verified and supplied by the parent session for this turn.
 % eq:wpm, eq:RS-input, eq:shared-majorant, fc:predecessor.
 
+% Prepared for Edward Baker, 15 October 2026.
+% Substantial LLM assistance: gpt-6-astra, reasoning effort ultra.
+% Integrates research Notes 38--44; internal review is not formal verification.
+\section{Poisson localization, sharper remainders, and subpower losses}
+\label{upd:section}
+
+The complete correlation identities admit a genuinely two-coordinate
+arithmetic transformation.  Its separate sectors, however, lose the
+decay needed by positive-time heat integration.  We prove this obstruction,
+give two admissible localizations, and quantify why their absolute budgets
+do not yet supply the stationary energy estimate.  We also sharpen the
+existing weighted remainder and extend the conditional cutoff transfer.
+None of these results enlarges the proved sign domain.
+
+\subsection{The complete parity--Poisson identity}
+
+Write $\Theta(y)=\sum_{n\in\mathbb Z}e^{-\pi n^2y}$ and
+$P(u)=e^u\Theta(e^{4u})$. For independent $s,r\in\R$, set
+\[
+ C=2\cosh(4r),\quad \tau=\tanh(4r),\quad f=C^{-1/2},\quad
+ \Pi(s,r)=P(s+r)P(s-r),
+\]
+and let
+\[
+ \mathscr D=(\partial_s^2-\partial_r^2)^2
+                    -8(\partial_s^2+\partial_r^2)+16.
+\]
+\begin{proposition}[Arithmetic transformation with both coordinates retained]
+\label{upd:parity-poisson}
+The exact identities
+\begin{align}
+ \Pi(s,r)&=\frac1{\sqrt C}\sum_{p,k\in\mathbb Z}
+ e^{-\pi(e^{4s}p^2+e^{-4s}k^2)/C}
+                  (-1)^{pk}\cos(\pi pk\tau),\label{upd:parity-series}\\
+ \Phi(s+r)\Phi(s-r)&=\frac1{4096}\mathscr D\Pi(s,r),
+ \label{upd:parity-source}\\
+ \mathscr K_m(t,s)&=\frac{e^{2ts^2}}{4096}
+       \int_{\R}r^{2m}e^{2tr^2}\mathscr D\Pi(s,r)\dd r
+ \label{upd:parity-correlation}
+\end{align}
+hold.  The series and all its finite coordinate derivatives converge
+normally on compact subsets of $\R^2$.
+\end{proposition}
+\begin{proof}
+Put $u=s+r,v=s-r,y_+=e^{4u},y_-=e^{4v}$ and change the two
+theta indices to $p=m+n,q=m-n$.  This is a bijection onto the parity
+lattice $p\equiv q\pmod2$.  With $A=y_++y_-$ and $B=y_+-y_-$,
+\[
+ y_+m^2+y_-n^2=\frac A4(q+(B/A)p)^2+\frac{y_+y_-}{A}p^2.
+\]
+Write $q=p+2\ell$ and apply Poisson summation in $\ell$:
+\[
+ \sum_{\ell\in\mathbb Z}e^{-\pi A(\ell+\alpha p)^2}
+ =A^{-1/2}\sum_{k\in\mathbb Z}e^{-\pi k^2/A}e^{2\pi i k\alpha p},
+ \qquad \alpha=\frac{1+\tau}{2}.
+\]
+Since $A=e^{4s}C$ and $y_+y_-=e^{8s}$, taking real parts gives
+\eqref{upd:parity-series}.  On a compact coordinate set the Gaussian
+coefficients are bounded below; differentiation introduces only fixed
+polynomials in the indices.  This proves normal convergence.
+Finally $\Phi=(P''-P)/16$ and
+$\partial_u=(\partial_s+\partial_r)/2$,
+$\partial_v=(\partial_s-\partial_r)/2$ give
+\eqref{upd:parity-source}.  The heat factor remains exactly
+$e^{2t(s^2+r^2)}$, proving \eqref{upd:parity-correlation}.
+\end{proof}
+
+\subsection{Why undamped sectors and modes cannot be integrated separately}
+
+Split the axes, counting $(0,0)$ once, from the mixed modes:
+\begin{align}
+ \Pi_{\rm ax}&=f\{\Theta(e^{4s}/C)+\Theta(e^{-4s}/C)-1\}\notag\\
+ &=e^{-2s}\Theta(Ce^{-4s})+e^{2s}\Theta(Ce^{4s})-f,
+ \qquad \Pi_{\rm mix}=\Pi-\Pi_{\rm ax}.\label{upd:axis-definition}
+\end{align}
+\begin{proposition}[Positive-time nonintegrability]
+\label{upd:sector-obstruction}
+Uniformly for $s$ in each bounded interval, as $|r|\to\infty$,
+\[
+ \frac{\mathscr D\Pi_{\rm ax}}{4096}
+       =\frac98e^{-10|r|}(1+o(1)),\qquad
+ \frac{\mathscr D\Pi_{\rm mix}}{4096}
+       =-\frac98e^{-10|r|}(1+o(1)).
+\]
+Thus for every fixed $t>0,s\in\R,m\ge0$, their separate
+$r^{2m}e^{2t(s^2+r^2)}$ integrals diverge to $+\infty$ and
+$-\infty$, respectively.  Every individual undamped mode in
+\eqref{upd:parity-series}, and every nonempty centered finite
+rectangular packet of modes, also has divergent absolute positive-time
+heat integral.
+\end{proposition}
+\begin{proof}
+For $|s|\le S$, the axis formula is
+$2\cosh(2s)-f+O_S(e^{-\pi Ce^{-4S}})$; its derivatives through order
+four have the same bound with an additional factor $O_S(C^4)$.
+This follows by differentiating the nonconstant theta terms and
+summing their Gaussian majorants.  The first term is annihilated by
+$\mathscr D$.  Put $q=\operatorname{sech}^2(4r)$. Direct differentiation
+gives
+\[
+ (\partial_r^2-4)f=-12qf,\quad
+ (\partial_r^2-4)(qf)=(96-140q)qf,\quad
+ -\mathscr Df=48fq(24-35q).
+\]
+Consequently $-\mathscr Df/4096=(9/8)e^{-10|r|}
+(O(e^{-18|r|}))$.  In contrast, for $r\ge S$, the complete source obeys
+\[
+ 0<\Phi(s+r)\Phi(s-r)
+ \le16\pi^4e^{18r}\exp\{-2\pi e^{4r}\cosh(4s)\}.
+\]
+Subtracting proves the mixed-sector asymptotic and both divergences.
+
+For the mode
+$A_{p,k}=f e^{-\pi(e^{4s}p^2+e^{-4s}k^2)/C}
+(-1)^{pk}\cos(\pi pk\tau)$, put $z=e^{-4r}$ and
+$B=e^{4s}p^2+e^{-4s}k^2$.  At fixed indices, uniformly on a bounded
+$s$-strip and with four differentiated remainders,
+\[
+ A_{p,k}=z^{1/2}\left[1-\pi Bz+
+            \left(\frac{\pi^2B^2}{2}-\frac12\right)z^2
+            +O_{p,k,S}(z^3)\right].
+\]
+The symbol of $\mathscr D$ on $e^{\lambda s-ar}$ is
+$\lambda^4-(2a^2+8)\lambda^2+(a^2-4)^2$.
+It vanishes at $(a,\lambda)=(2,0),(6,\pm4),(10,\pm8)$, and equals
+$9216$ at $(10,0)$. Hence
+\begin{equation}
+ \frac{\mathscr DA_{p,k}}{4096}
+ =\left(\frac94\pi^2p^2k^2-\frac98\right)e^{-10r}
+                  +O_{p,k,S}(e^{-14r}).\label{upd:mode-asymptotic}
+\end{equation}
+The leading coefficient never vanishes.  Summing over
+$|p|\le P_0,|k|\le K_0$ gives coefficient
+\[
+ \frac98(2P_0+1)(2K_0+1)
+ \left\{\frac{2\pi^2P_0(P_0+1)K_0(K_0+1)}9-1\right\}.
+\]
+It is negative when either cutoff is zero, and positive otherwise.
+Every stated absolute heat integral therefore diverges.
+\end{proof}
+
+The opposite signs of the single axis modes and the complete axis sum
+are consistent: the fixed-index expansion is not uniform in the indices
+as $r$ grows.  Neither this expansion nor the compact normal convergence
+permits unbounded heat integration term by term.  The same tail
+obstruction persists for $r^2$, $r^4-s^2r^2$, and either of these plus
+a fixed nonnegative multiple of $(1-s^2+r^2)/2$.
+
+\begin{proposition}[Limits of finite diagonal compensation]
+\label{upd:diagonal-compensation}
+Adding $f$ to $\Pi_{\rm ax}$ repairs its fixed-$s$ tail but does not
+give an absolutely heat-integrable source in both coordinates.
+Moreover, no fixed-order subtraction of the modular Taylor profiles
+described below from $\Pi_{\rm ax}+f$ repairs positive-time absolute
+heat integrability.
+\end{proposition}
+\begin{proof}
+For fixed $r$ and $s\to+\infty$, scalar Poisson summation gives
+$\Pi_{\rm ax}=e^{2s}+o(1)$ with superexponentially small differentiated
+remainders.  Thus $\mathscr D(\Pi_{\rm ax}+f)\to\mathscr Df(r)$,
+which is nonzero on an open set ($\mathscr Df(0)=528/\sqrt2$).
+The $s$ heat factor prevents absolute integration.
+For a more precise joint-escape statement put $u=s+r,v=s-r$.
+For fixed $K\ge0$, uniformly on compact $v$ intervals,
+\[
+ \Pi_{\rm ax}+f=e^{u+v}+\sum_{n=0}^{K}e^{-(4n+1)u}F_n(v)
+                       +O_K(e^{-(4K+5)u}),\qquad
+ F_n(v)=\frac{e^{-v}}{n!}\Theta^{(n)}(e^{-4v}).
+\]
+This follows by Taylor expansion of the axis theta formula, and remains
+valid after four derivatives.  Here $F_0=P$ and
+$\mathscr D/4096=(\partial_u^2-1)(\partial_v^2-1)/256$, which
+annihilates the first two displayed terms. For $n\ge1$,
+\[
+ (F_n''-F_n)(0)=\frac{(-1)^n}{n!}\sum_{\ell\ne0}
+   (\pi\ell^2)^{n+1}(16\pi\ell^2-24)e^{-\pi\ell^2}\ne0.
+\]
+Indeed applying $\partial_v^2-1$ to $e^{-v}g(e^{-4v})$ gives
+$e^{-v}(24yg'(y)+16y^2g''(y))$, and the terms in the last sum
+have one strict sign.  After subtracting profiles $1,\ldots,K$, the
+leading differentiated remainder is
+\[
+ \frac{(4K+5)^2-1}{256}e^{-(4K+5)u}
+                        (F_{K+1}''-F_{K+1})(v).
+\]
+Its coefficient is nonzero near $v=0$, so multiplication by the exact
+heat $e^{t(u^2+v^2)}$ forces divergence on that tube.
+\end{proof}
+This rules out the specified finite subtraction class, not exact
+resummations or localized compensation.
+
+\subsection{Two admissible localized signed budgets}
+
+Set $\Omega=s^2+r^2$, $q_0=r^2$, $q_1=r^4-s^2r^2$,
+$b_E=(1-s^2+r^2)/2$, and
+\[
+ W_{j,\kappa}=e^{2t\Omega}(q_j+\kappa_jb_E)\cos(2xs).
+\]
+The nonnegative coefficient $\kappa_j(t,x)$ is prescribed independently
+of the unknown energy and is locally bounded on the stated domain.
+For any window $0\le\chi\le1$ for which the following sector integrals
+exist, define
+\[
+ M_j^\chi=\frac1{4096}\iint\chi W_{j,\kappa}\mathscr D\Pi_{\rm ax},
+ \quad R_j^\chi=\frac1{4096}\iint\chi W_{j,\kappa}\mathscr D\Pi_{\rm mix},
+ \quad T_j^\chi=\iint(1-\chi)W_{j,\kappa}\Phi(s+r)\Phi(s-r).
+\]
+All double integrals here use $\dd s\dd r$. The complete correlation
+and energy identities imply
+\begin{equation}
+ \Lag_j+\kappa_jE=M_j^\chi+R_j^\chi+T_j^\chi.
+ \label{upd:localized-budget}
+\end{equation}
+The exterior is always the complete unsplit source.
+
+\begin{proposition}[Compact-box and smooth-window payments]
+\label{upd:localization}
+For $\chi=1_{[-S,S]\times[-R,R]}$, all terms in
+\eqref{upd:localized-budget} are finite. Put $U=\min(S,R)$ and
+\[
+ \mathsf M_k(t)=\int_{\R}|u|^kw_t(u)\dd u,\qquad
+ \mathsf T_k(t,U)=\int_{|u|>U}|u|^kw_t(u)\dd u.
+\]
+Then, for $j=0,1$,
+\begin{align}
+ |T_j^\chi|\le{}&\frac12(\mathsf T_{2j+2}\mathsf M_0+
+                                  \mathsf T_0\mathsf M_{2j+2})\notag\\
+ &+\kappa_j\left\{\frac12\mathsf T_0\mathsf M_0+
+              \frac14(\mathsf T_2\mathsf M_0+\mathsf T_0\mathsf M_2)
+                    \right\}.\label{upd:box-tail}
+\end{align}
+For $0\le t\le1/2,U\ge1,0\le k\le4$ one may use
+\begin{equation}
+ \mathsf T_k(t,U)\le4\pi e^{-4U}
+                              e^{-(\pi/2)e^{4U}}.\label{upd:box-tail-bound}
+\end{equation}
+Alternatively, for $\chi_\varepsilon=e^{-\varepsilon\Omega^2}$,
+$\varepsilon>0$, both sector sums can be integrated term by term
+absolutely, uniformly for $\varepsilon\ge\varepsilon_0>0$, bounded
+heat ceiling, and locally bounded $\kappa_j$. With
+\[
+ \mu_k(t)=2^{-k-1}\sum_{\ell=0}^{k}\binom{k}{\ell}
+                   \mathsf M_{2\ell}(t)\mathsf M_{2k-2\ell}(t),
+\]
+the complete exterior satisfies
+\begin{equation}
+ |T_j^{\chi_\varepsilon}|\le\varepsilon\left[
+ \mu_{j+3}+\frac{\kappa_j}{2}(\mu_2+\mu_3)\right].
+ \label{upd:smooth-tail}
+\end{equation}
+\end{proposition}
+\begin{proof}
+For the box, compact convergence pays its interior. Under
+$u=s+r,v=s-r$, the exterior lies in
+$\{\max(|u|,|v|)>U\}$ and $\dd s\dd r=\dd u\dd v/2$.
+Use
+$|q_0|\le(u^2+v^2)/2$, $|q_1|\le(u^4+v^4)/2$, and
+$|b_E|\le1/2+(u^2+v^2)/4$ to obtain \eqref{upd:box-tail}.
+The source envelope and
+$k\log u+tu^2+9u\le u^2/2+13u\le(\pi/2)e^{4u}$ for $u\ge1$
+give \eqref{upd:box-tail-bound} by integrating the remaining
+exponential with its derivative.
+
+For smooth localization put $a=e^{4s}/C,b=e^{-4s}/C$ and
+$Z=ap^2+bk^2$. All positive-order derivatives, through the required
+order, of $\log a,\log b,\log f$ and $\tau$ are bounded.
+For $|\alpha|\le4$ it follows that
+\[
+ |\partial^\alpha A_{p,k}|
+ \le c_\alpha f e^{-\pi Z}(1+Z)^4(1+|pk|)^4
+ \le c'_\alpha f e^{-\pi Z/2}(1+|pk|^4).
+\]
+The elementary bounds
+\[
+ \sum_n e^{-\pi zn^2/2}\le1+\sqrt{2/z},\qquad
+ \sum_n n^4e^{-\pi zn^2/2}\le\frac{128}{\pi^2e^2}z^{-5/2}
+\]
+follow from decreasing Gaussian integral comparison, absorbing
+$(zn^2)^2$ into $e^{-\pi zn^2/4}$ for the second. Since $ab=C^{-2}$,
+\[
+ \sum_{p,k}|\partial^\alpha A_{p,k}|
+                  \le C_\alpha(e^{2|s|}+e^{18|r|}).
+\]
+Thus a uniform integrable majorant is a constant times
+$(1+\Omega^2)e^{-\varepsilon_0\Omega^2+2T\Omega}
+(e^{2|s|}+e^{18|r|})$. Its negative quartic term controls every
+joint escape direction, including bounded-$u$ or bounded-$v$ tubes.
+This proves absolute interchange and \eqref{upd:localized-budget}.
+Finally $\mu_k=\iint\Omega^ke^{2t\Omega}\Phi(s+r)\Phi(s-r)$ by
+the same coordinate change. Apply
+$1-\chi_\varepsilon\le\varepsilon\Omega^2$,
+$|q_j|\le\Omega^{j+1}$, and $|b_E|\le(1+\Omega)/2$ to obtain
+\eqref{upd:smooth-tail}.
+\end{proof}
+
+The window multiplies $\mathscr D\Pi$ after differentiation; no
+integration by parts, window commutator, or boundary omission is used.
+For completeness, if one moves $\mathscr D$ onto $W$ in a box with
+primitive $G$, the exact boundary payment is
+\[
+ \iint W\mathscr DG=\iint G\mathscr DW+\mathfrak B_s+\mathfrak B_r
+                                      -2\mathfrak B_{sr},
+\]
+where
+\begin{align*}
+ \mathfrak B_s&=\int_{-R}^{R}
+ [WG_{sss}-W_sG_{ss}+W_{ss}G_s-W_{sss}G
+                      -8(WG_s-W_sG)]_{-S}^{S}\dd r,\\
+ \mathfrak B_r&=\int_{-S}^{S}
+ [WG_{rrr}-W_rG_{rr}+W_{rr}G_r-W_{rrr}G
+                      -8(WG_r-W_rG)]_{-R}^{R}\dd s,\\
+ \mathfrak B_{sr}&=\int_{-R}^{R}[WG_{srr}-W_sG_{rr}]_{-S}^{S}\dd r
+       +\int_{-S}^{S}[W_{ss}G_r-W_{ssr}G]_{-R}^{R}\dd s.
+\end{align*}
+These are repeated one-dimensional integration-by-parts identities.
+Tangential edge derivatives have not been integrated further; doing so
+would also require their corner terms.
+
+\begin{proposition}[Growth of separate absolute sector budgets]
+\label{upd:absolute-sector-growth}
+Fix $t>0$ and finite $x$, and use $\kappa_j\ge0$. For sufficiently
+small $\varepsilon>0$, the absolute axis budget satisfies
+\[
+ \iint\chi_\varepsilon e^{2t\Omega}|q_j+\kappa_jb_E|
+          \left|\mathscr D\Pi_{\rm ax}/4096\right|\dd s\dd r
+ \ge c(t/\varepsilon)^{j+1}
+       e^{t^2/\varepsilon-10\sqrt{t/\varepsilon}-C}.
+\]
+For boxes with $S_N=R_N=(\log N)/2$, its analogue retaining
+$|\cos(2xs)|$ is at least
+\begin{equation}
+ c(\log N)^{2j+1}
+             e^{(t/2)(\log N)^2-5\log N}.
+ \label{upd:box-sector-growth}
+\end{equation}
+Constants may depend on the fixed parameters. Neither is a bound on
+the signed integral.
+\end{proposition}
+\begin{proof}
+On a small fixed strip $|s|\le s_0$ and for large $r$,
+$|\mathscr D\Pi_{\rm ax}/4096|\ge ce^{-10r}$,
+$b_E\ge0$, and $q_j\ge c_jr^{2j+2}$.
+For the smooth window restrict further to
+$R\le r\le R+1$, $R=\sqrt{t/\varepsilon}$, and use
+\[
+ 2t\Omega-\varepsilon\Omega^2
+       =t^2/\varepsilon-\varepsilon(\Omega-t/\varepsilon)^2.
+\]
+The final term is bounded there, proving the first claim.  An extra
+$|\cos(2xs)|$ can be retained by shrinking $s_0$.
+For the box use $R_N-1/R_N\le r\le R_N$ and
+$2tr^2-10r\ge2tR_N^2-10R_N-4t$.  The strip width is $1/R_N$,
+which leaves the power $R_N^{2j+1}$ and gives
+\eqref{upd:box-sector-growth}.
+\end{proof}
+
+Choosing $\varepsilon=e^{-cN^2}$ makes the complete smooth exterior
+Gaussian-small but this absolute sector budget at least
+$\exp\{t^2e^{cN^2}-O(e^{cN^2/2})\}$.  The expanding box has a
+Gaussian-small exterior by \eqref{upd:box-tail-bound}, but its absolute
+sector cost exceeds every fixed power of $N$.  These facts reject the
+corresponding absolute-payment strategies. They do not reject a signed
+bound carrying an $E$ factor.  In particular,
+\eqref{upd:localized-budget} remains an identity, not a proof that
+$R_j^\chi+T_j^\chi\ge-M_j^\chi$ on the full $S_j$.
+
+\subsection{Convex dyadic summation and an explicit conditional budget}
+
+\begin{proposition}[Removal of the dyadic block-count factor]
+\label{upd:convex-dyadic}
+On the same discs and sufficiently large domain as
+Lemma~\ref{lem:weighted-moments}, for every fixed integer $r\ge0$,
+\begin{equation}
+ \begin{gathered}
+ \left|\sum_{e^{\ell/5}<n\le N_{\rm RS}}(\log n)^r
+                e^{t\log^2n/4}n^{-w_\pm}\right|
+ \le G_0C_r\ell^r e^{-m\ell},\\
+ G_0=\frac{962773}{671}<1435,\qquad
+ m=\frac{76399}{1273600000}>\frac1{20000}.
+ \end{gathered}
+ \label{upd:convex-remainder}
+\end{equation}
+The common imported block constant $C_r$ remains unevaluated.
+\end{proposition}
+\begin{proof}
+Use the exact grid $M_q=e^{\ell/5}2^q$ and assign each block by its
+left endpoint $\beta_q=1/5+q\log2/\ell$ to the existing five
+intervals and pairs.  In an interval $[a,b]$ of width $\Delta$,
+the quadratic exponent satisfies
+\[
+ F(\beta;\theta_*)=\frac{b-\beta}{\Delta}F(a;\theta_*)
+ +\frac{\beta-a}{\Delta}F(b;\theta_*)
+ -\frac{\theta_*}{4}(\beta-a)(b-\beta).
+\]
+With $d(\beta)=\min(\beta-a,b-\beta)$, the paid exponent is at most
+$-m-c_\Delta d(\beta)$, $c_\Delta=61\Delta/192$.
+On each half interval the distances of successive grid points differ
+by $\log2/\ell$, so their total additional weight is at most
+$2/(1-2^{-c_\Delta})$, even for a shifted grid.  A crossing block
+is valid by the imported maximal-interval estimate; shortened terminal
+blocks are included. There is at most one left endpoint above $1/2$,
+already paid by the extra $\rho$ in $m$. The five widths are
+$1/10,3/40,3/100,33/1400,1/14$. Thus the total multiplier is less than
+\[
+ 1+2\sum_\Delta(1-2^{-c_\Delta})^{-1}
+ <11+\frac{768}{61}\sum_\Delta\Delta^{-1}
+                         =\frac{962773}{671}.
+\]
+Here $(1-e^{-v})^{-1}\le1+v^{-1}$ and $\log2>1/2$ were used.
+Multiplying by the common block majorant proves the result.
+\end{proof}
+
+The five fixed limiting pairs themselves have an exact majorant
+bottleneck. Their affine lower envelope changes at
+\[
+ \frac{1430}{4789},\quad\frac{362}{957},\quad
+ \frac{62831}{155153},\quad\frac37.
+\]
+For $q_{k,l}(\beta)=4\{k+(l-k-1/2)\beta\}/[\beta(1-\beta)]$,
+the derivative has the sign of
+$(l-k-1/2)\beta^2+2k\beta-k$, which is increasing for $\beta>0$.
+Thus each envelope interval has its maximum at an endpoint. Comparing
+the endpoint fractions yields
+\begin{equation}
+ \max_{1/5\le\beta\le1/2}\min_{(k,l)}q_{k,l}(\beta)
+    =\frac{4911678521}{1933561194}
+    \simeq2.5402239847600088,
+ \label{upd:five-pair-bottleneck}
+\end{equation}
+at the $D,R$ crossover.  This does not pay the positive exponent losses
+needed at a closed boundary.  At $\theta=5/2$, all five weighted
+majorants have strictly positive exponent on
+\[
+ \frac{13}{45}<\beta<\frac{105-\sqrt{105}}{210}.
+\]
+Indeed the $A^2P$ roots are $4/23,13/45$, the $P$ lower root is the
+right endpoint displayed, and the other three quadratics have negative
+discriminant and positive leading coefficient. At $\beta=2/5$ the
+least exponent is $9/3980>0$. These are limitations of these fixed
+majorants, not lower bounds for the actual exponential sum.
+
+\begin{proposition}[Elementary constants with the arithmetic input isolated]
+\label{upd:explicit-weighted-budget}
+For $\eta=\rho=10^{-5}$ suppose the five assigned pairs have numerical
+constants $C_i>0$ such that
+\[
+ \sup_{I\subset(M,2M]}\left|\sum_{n\in I}n^{-iT}\right|
+ \le C_iT^{k_i+\eta}M^{l_i-k_i},\qquad M\ge1, T\ge2\pi M.
+\]
+Put $C_{\rm EP}=\max_iC_i$,
+$A_0=36138917/16$, and
+\[
+ \lambda=\frac{21807}{254720000}-\frac{63}{50}\rho
+        =\frac{2324691}{31840000000}>\frac1{14000}.
+\]
+If $L\ge100002$, $0<t\le1/2$, $tL\ge61/24$, and
+$|z-x|\le L^{-1}$, then, with $\ell=\log(\Re z/(4\pi))$,
+\begin{equation}
+ \left|\sum_{n\le N_{\rm RS}}e^{t\log^2n/4}n^{-w_\pm(z)}
+                      -\zeta(w_\pm(z))\right|
+ \le\frac{A_0}{\ell}+16e^{-\ell/40}
+                    +2G_0C_{\rm EP}e^{-\lambda\ell}.
+ \label{upd:explicit-sum}
+\end{equation}
+If the imported constants require $T\ge T_{\rm EP}$, also assume
+$x-L^{-1}\ge3T_{\rm EP}$.  Their numerical values are an unresolved
+input; qualitative exponent-pair existence does not assign them a value.
+\end{proposition}
+\begin{proof}
+Write $z=u+iv$, $w_\pm=\sigma+i\tau$. The explicit carrier gives
+\begin{gather*}
+ |\ell-L|\le[L(x-L^{-1})]^{-1},\quad u\ge10^{12},
+ \quad\theta_u\ge\theta_0:=\theta_*-\rho/100,\\
+ \sigma\ge\tfrac12+\theta_u/4-\delta,
+ \quad\delta=(2L)^{-1}+3/(4u)<\rho/2,\quad
+ u/3\le|\tau|\le u,\\
+ \log N_{\rm RS}\le\ell/2+e^{-\ell}/64.
+\end{gather*}
+The rational terms of $\alpha$ have total modulus at most $3/u$,
+which proves these bounds directly from \eqref{eq:alpha-Mt}.
+The phase condition $|\tau|\ge2\pi M$ follows for every retained
+block. Split at $Y=e^{\ell/5}$. The low-index discrepancy is at most
+\[
+ \frac{\theta_u}{4\ell}\sum_{n\ge2}(\log n)^2
+                             n^{-1/2-\theta_u/5+\delta}.
+\]
+Write $\theta_u=\theta_0+s$. Since
+$1/2+\theta_0/5-\rho/2>1+1/121$ and
+$(\theta_0+s)n^{-s/5}\le\theta_*+5/(e\log n)$, it suffices to use
+the unimodal sum--integral bounds
+\[
+ \sum_{n\ge2}(\log n)^j n^{-1-1/121}
+      \le j!121^{j+1}+j^j=:D_j\quad(j=1,2).
+\]
+These follow by comparing the increasing and decreasing parts with
+adjacent unit integrals and paying the central discrepancy by the
+maximum.  As $D_1=14642,D_2=3543126,5/e<2$, the low-index term is
+at most $(\theta_*D_2+2D_1)/(4\ell)=A_0/\ell$.  Also
+$\sigma\ge9/8$, so the ordinary zeta tail is at most
+$8\lfloor Y\rfloor^{-1/8}\le16e^{-\ell/40}$.
+
+The actual heat weight is decreasing on every high block. Abel
+summation costs exactly its left endpoint weight, since endpoint plus
+variation is $W(R)+\int_M^R|W'|=W(M)$.  Moreover
+$T^{k+\eta}\le(4\pi)^{k+\eta}e^{(k+\eta)\ell}
+<2e^{(k+\eta)\ell}$. For $\beta\le1/2$, the perturbation of the
+weighted exponent is at most
+$\eta+\rho/4+\rho/1600<(63/50)\rho$.
+Convex summation therefore gives the last term of
+\eqref{upd:explicit-sum}.  The possible sole block above $1/2$,
+assigned to $P$, has exponent at most
+\[
+ -\frac{11}{2688}+\rho\left(1+\frac1{1600}+\frac{33}{128}\right)
+                 +\frac1{32768}<-\frac1{300}<-\lambda.
+\]
+This pays its small endpoint displacement separately and completes
+the estimate.
+\end{proof}
+
+The imported Riemann--Siegel errors and analytic replacement can also
+be paid explicitly on this domain. Put $\Lambda=L-1$ and
+\begin{equation}
+ B_C(L)=\frac{4A_0}{\Lambda}+64e^{-\Lambda/40}
+       +8G_0C e^{-\lambda\Lambda}
+       +16\Lambda^2e^{-3\Lambda/4}+6e^{-2\Lambda/5}.
+ \label{upd:BC-budget}
+\end{equation}
+Then, for the existing analytic comparison $\mathcal P_t$,
+\begin{equation}
+ \sup_{z\in D_x}\frac{|H(t,z)-\mathcal P_t(z)|}{\Gamma}
+ \le B_{C_{\rm EP}}(L),\qquad
+ \max_{0\le k\le3}
+ \frac{|\partial_x^k(H-\mathcal P_t)(t,x)|}
+                         {2|Q|(L/4)^k}
+ \le1728 B_{C_{\rm EP}}(L).
+ \label{upd:explicit-analytic-jets}
+\end{equation}
+Here is the complete error accounting.  In the upper half-disc the
+extra coefficient $|\gamma|N^{|\kappa|}n^v$ is below two, since its
+logarithm is at most
+$1/(50L)+1/[2(u-6)]+e^{-\ell}/(64L)$.
+Each positive heat weight is at most $2n^{-1/2}$; the complete positive
+weight sum with that coefficient is at most $24e^{\ell/4}$.
+The per-index error multiplier is at most $4\ell^2/u$, giving
+$e_A+e_B\le8\ell^2e^{-3\ell/4}$.
+The correction exponent in the third imported error is at most
+$10e^{-\ell/2}+\ell e^{-\ell}<1$; its principal exponent is
+$-\ell/4-\theta_u\ell/16\le-2\ell/5$. Thus
+$e_{C,0}\le3e^{-2\ell/5}$.  These are bounds for all the errors in
+\eqref{eq:RS-AB}--\eqref{eq:RS-C}, not only their principal terms.
+The carrier estimates $|\alpha|\le\ell/2+1$, $|\alpha'|\le2/u$
+give $|\partial_z\log M_t(s_\pm)|<L/3$, hence
+$|M_t(s_\pm(z))|\le2\Gamma$.
+Combining both branches with \eqref{upd:explicit-sum}, and using
+Schwarz reflection and the monotonicity of each error at
+$\ell\ge\Lambda$, proves the first inequality in
+\eqref{upd:explicit-analytic-jets}. Since $\zeta(9/8)\le9$,
+$|Q|\ge\Gamma/9$; Cauchy's formula gives the second with
+$\max_{k\le3}(9/2)k!4^k=1728$.
+
+For example, \eqref{upd:explicit-sum} is at most $\epsilon\in(0,1)$
+if
+\[
+ \ell\ge\max\left\{100001,\frac{3A_0}{\epsilon},
+ 40\log\frac{48}{\epsilon},
+ 14000\log\frac{6G_0C_{\rm EP}}{\epsilon}\right\},
+\]
+with the optional imported threshold retained. This is a conditional
+formula in the actual arithmetic constant. The separate differentiation
+error from $\mathcal P_t$ to its phase vector is not part of
+\eqref{upd:explicit-analytic-jets}.  Hence no numerical full sign
+threshold or effective bridge follows; the floor cutoff has never been
+differentiated.
+
+\subsection{Six complete-source stationary baseline roots}
+\label{upd:stationary-baseline}
+
+For $\theta\in\{1/2,3/4,1\}$ put
+$t_\theta(x)=\theta/\log(x/(4\pi))$.  Fresh complete-source interval
+calculations certify exactly one root of each indicated full stationary
+observation in each final bracket below, and certify a positive
+stationary product $\Lag_j=-h_jh_{j+2}$ there.  The final column gives
+a conservative lower bound after multiplying by $e^{\pi x_c/4}$,
+where $x_c$ is that bracket's midpoint.
+\begin{center}\small
+\begin{tabular}{@{}llll@{}}
+\toprule
+$\theta$ & Full condition & Final $x$ bracket & Scaled lower bound\\
+\midrule
+$1/2$ &$h_1=0$ &$[3249/32,6499/64]$ &$>17532$\\
+$1/2$ &$h_2=0$ &$[3313/32,6627/64]$ &$>8914$\\
+$3/4$ &$h_1=0$ &$[3247/32,6495/64]$ &$>18207$\\
+$3/4$ &$h_2=0$ &$[3311/32,6623/64]$ &$>9226$\\
+$1$ &$h_1=0$ &$[6489/64,3245/32]$ &$>18843$\\
+$1$ &$h_2=0$ &$[6617/64,3309/32]$ &$>9524$\\
+\bottomrule
+\end{tabular}
+\end{center}
+The protocol fixed the initial windows $[101,102]$, $[103,104]$,
+six bisections, contour displacement $a=\pi/16$, source cutoff eight,
+integration cutoff $3/2$, 192-bit Arb/Acb arithmetic, spatial Taylor
+order eight, temporal order four, and $\kappa_0=\kappa_1=0$ before
+these evaluations. All six cases are retained. The windows came from
+known branch neighborhoods, so this is not an independent holdout of
+the prior height cover.
+
+The heat equation gives the curve derivative
+\[
+ \frac{d}{dx}h_{j+1}(t_\theta(x),x)
+ =h_{j+2}+\frac{\theta}{x\log^2(x/(4\pi))}h_{j+3}.
+\]
+Certified opposite endpoint signs give existence; the derivative is
+strictly negative for the three $h_1$ brackets and strictly positive
+for the three $h_2$ brackets, proving uniqueness only in the final
+brackets.  In particular $h_4$ is required on the second branch.
+The computation uses independent paid center jets through order 17.
+For rectangle half-widths $d_x,d_t$ and complete normalized contour
+moments $\widehat M_k$, its additional Taylor payments are
+\[
+ R_{x,k}=\sum_{\ell=0}^{3}\frac{d_t^\ell}{\ell!}
+              \frac{d_x^8}{8!}\widehat M_{k+2\ell+8},\qquad
+ R_{t,k}=\frac{d_t^4}{4!}\widehat M_{k+8}\quad(0\le k\le4).
+\]
+Moments through order 18 suffice.  Center quadrature, complete omitted
+source-index tails, integration tails, and both Taylor remainders are
+paid separately.  Rectangle jets use the constant normalization
+$e^{\pi x_c/8}$, whereas endpoint sign checks may use their own
+positive normalization. No normalization divides by $E$.
+The driver \texttt{certify\_theta\_stationary\_baseline.py} and receipt
+\texttt{THETA\_STATIONARY\_BASELINE\_20261015.json} in the numerics
+directory give the full interval payments and source hashes.
+These bounded certificates lie within the existing height-112 cover;
+they neither validate the divergent global Poisson sectors nor evaluate
+the localized sector contributions.
+
+\subsection{A larger cutoff class still excludes finite analytic collisions}
+
+\begin{proposition}[Conditional subpower cutoff transfer]
+\label{upd:subpower-transfer}
+On a declared positive-time domain suppose, for both full stationary
+sets $S_j$, that one has proved
+\begin{equation}
+ \Lag_j\ge-A_jN^p e^{a_j(\log N)^2}E-B_je^{-c_jN^2}
+ \quad\hbox{for every integer }N\ge N_{0,j}\ge1.
+ \label{upd:subpower-premise}
+\end{equation}
+Here $p\ge0$ is fixed; the nonnegative $A_j,B_j,a_j$, positive $c_j$,
+and integer $N_{0,j}$ are source-prescribed independently of $E,N$,
+and $A_j,B_j,a_j,c_j^{-1},N_{0,j}$ are locally bounded through every
+covered finite positive-time event. Fix $M>0$, put
+\[
+ d_{B,j}=\log_+(B_j/M)\quad(B_j=0:\ d_{B,j}=0),\quad
+ D_j=N_{0,j}+1+c_j^{-1/2}\sqrt{1+d_{B,j}},\quad
+ d_j=\frac{\log D_j}{\log2}+\frac12,
+\]
+and $K_j=A_j+1$, $C_j=a_jd_j^2+pd_j/\log2$. Then
+\begin{equation}
+ \Lag_j\ge-K_jE\exp\left[
+ C_j\{\log(2+\log_+(M/E))\}^2\right],
+ \label{upd:subpower-loss}
+\end{equation}
+with right side zero at $E=0$.  If the domain contains the requisite
+predecessor neighborhoods on both stationary sets, this estimate
+excludes every finite positive-time analytic collision.
+\end{proposition}
+\begin{proof}
+For $E>0$, only after the entire family
+\eqref{upd:subpower-premise} is proved, choose
+\[
+ N=\left\lceil\max\{N_{0,j},
+                 \sqrt{c_j^{-1}\log_+(B_j/E)}\}\right\rceil.
+\]
+Then $B_je^{-c_jN^2}\le E$ and
+$N\le D_j\sqrt{1+\log_+(M/E)}$.
+Writing $\eta_E=\log(2+\log_+(M/E))\ge\log2$, we obtain
+$\log N\le d_j\eta_E$, whence
+$N^p e^{a_j(\log N)^2}\le e^{C_j\eta_E^2}$.
+This proves \eqref{upd:subpower-loss}, including $E\ge M$; at
+$E=0$ let $N\to\infty$ in the original family.
+On a predecessor with $s=T-t\downarrow0$ the already proved local
+collision expansion has $E\sim k^2s^{2r}$ and
+$-\Lag_j/E=r/s+O(1)$, with finite $r\ge1$.
+Local boundedness bounds the right-side coefficient in
+\eqref{upd:subpower-loss} by
+$\exp\{O((\log\log(1/s))^2)\}=s^{-o(1)}$,
+contradicting the pole $r/s$.
+\end{proof}
+
+The same transfer applies to the full-amplitude observation
+$J_{j,N}=-h_jh_{j+2}^{(N)}$ if its original complete-source payment
+$|J_{j,N}-\Lag_j|\le Q_j\sqrt E e^{-c_{0,j}N^2}$ is retained.
+Young's inequality replaces
+\[
+ A_j\mapsto A_j+\tfrac12,\qquad
+ B_j\mapsto B_j+\tfrac12Q_j^2,\qquad
+ c_j\mapsto\min(c_j,2c_{0,j}).
+\]
+Use $N_{0,j}\ge8$ when importing the original staircase tail, and
+require $Q_j,c_{0,j}^{-1}$ locally bounded. All stationary conditions,
+source boundaries, and mixed-sector payments remain those of the full
+physical construction; a rectangular or smooth Poisson window is not
+a replacement for the original staircase theorem.
+
+\begin{lemma}[Analytic rigidity for every subpower gauge]
+\label{upd:subpower-rigidity}
+Let $S$ be semianalytic near a finite point, and let $E\ge0,L$ be
+real analytic on an ambient neighborhood. Suppose $G(e)>0$ obeys
+$G(e)=o(e^{-\epsilon})$ as $e\downarrow0$ for every $\epsilon>0$.
+If $L\ge-K E G(E)$ on $S$ near that point, with bounded $K\ge0$
+and right side zero at $E=0$, then $L\ge-CE$ on a smaller
+neighborhood in $S$, for some finite $C\ge0$.
+\end{lemma}
+\begin{proof}
+Failure gives $E>0,-L>0$ and $E/(-L)\to0$ near a limit point
+with $E=0$. Apply real analytic curve selection, as in
+Lemma~\ref{lem:analytic-log-rigidity}, to
+\[
+ \{(z,u):z\in S, E(z)>0, -L(z)>0, u>0, E(z)=u[-L(z)]\}.
+\]
+The resulting analytic arc has
+$u(\rho)=a\rho^k(1+o(1))$ and
+$E(z(\rho))=b\rho^m(1+o(1))$, with $a,b>0,k,m\ge1$.
+The inequality would give $u(\rho)^{-1}\le KG(E(z(\rho)))$.
+Taking $\epsilon=k/(2m)$ makes its right side
+$o(\rho^{-k/2})$, contradicting the order $\rho^{-k}$ on the left.
+At $E=0$ the assumed inequality already gives $L\ge0$.
+\end{proof}
+The gauge in \eqref{upd:subpower-loss} is subpower, so this lemma
+applies locally after bounding $C_j$. It is a qualitative consequence,
+not an effective construction of a source-prescribed linear coefficient.
+In particular, the absolute sector growth in
+\eqref{upd:box-sector-growth} lacks the required $E$ factor and supplies
+none of the hypothesis \eqref{upd:subpower-premise}.
+
+The supporting finite checks comprise 27 exact algebra or sensitivity
+assertions and 12 ball comparisons for the parity identity, 260 exact
+assertions for mode and cutoff algebra, 129 for convex dyadic arithmetic,
+and 50 for the explicit weighted budget. Their saved scripts and receipts
+are listed in research Notes 38--44 and internal Reviews 27--28.
+These checks support normalizations and arithmetic; the infinite-sum,
+integrability, and conditional collision conclusions use the proofs
+above. No finite sampling establishes the missing all-cutoff signed
+premise, and no RH conclusion follows from this continuation.
+
+
 \section{Conditional transfers and the remaining research program}
 \label{pg:research-program}
 
@@ -4637,9 +6698,13 @@ $\mathscr A_j+\kappa_j\mathscr E$, or for the hybrid kernel
 $\mathscr C_{j,N}^{a}$, and estimate its adverse transform with
 source-prescribed coefficients. A positive-definite component with a
 paid signed remainder could suffice; global positive definiteness is
-stronger than the stationary target. The first deliverable is the
-identity with its complete remainder, followed by an all-$N$ estimate
-on a declared domain. Pointwise positivity of a correlation density
+stronger than the stationary target. The complete identities, finite-character bridge, and integrable smooth
+localization are now available in Sections~\ref{sf:section}--\ref{pp:section}
+and~\ref{upd:section}. The next deliverable is a source-prescribed signed
+bound for their complete reconstruction, or an all-$N$ estimate on a
+declared predecessor-covering domain. The subpower transfer in
+Section~\ref{upd:section} permits a larger cutoff cost than
+\eqref{pg:J-target}, but still requires its full signed premise. Pointwise positivity of a correlation density
 is not that estimate.
 
 Poisson reflection alone exchanges the two correlation coordinates
@@ -5178,6 +7243,23 @@ the consolidated receipt are recorded in Review 26. These finite
 controls support the general proofs above; they add no theta sign
 certificate or interval-quadrature coverage.
 
+The present integration incorporates the subsequent Poisson and signed-form
+continuations (Notes 38--53 and Reviews 27--31). The fresh integration
+replay executes the standard-library drivers
+\path{numerics/check_convex_dyadic_weighted_remainder.py},
+\path{numerics/check_poisson_mode_cutoff_obstructions.py}, and
+\path{numerics/check_explicit_weighted_budget.py}, each with
+\texttt{--output}. Their 129, 260, and 50 exact assertions pass.
+These 439 assertions check finite algebra and rational budgets; the
+analytic proofs of the infinite-domain claims are given above.
+The six fixed-theta root certificates retain the complete-source
+quadrature provenance of Note 40 and Review 27; they were not re-evaluated
+in this manuscript integration. The newly integrated signed-form,
+primitive, and smooth-control results are analytic, with independent
+internal cross-review, and introduce no numerical sign coverage.
+Review 32 and the current \path{manuscript/BUILD_RECORD.json} record the
+source/export identity, compilation, reference checks, and layout review.
+
 The main remaining obligation is the one-sided inner-region bound
 \eqref{eq:final-target}, with losses locally bounded through candidate
 positive-time collisions. Equations~\eqref{eq:corr-stationary-target}
@@ -5194,7 +7276,10 @@ This manuscript was drafted for Edward Baker with substantial assistance
 from OpenAI language models. The present integration used Codex with the
 recorded model \texttt{gpt-6-astra} and reasoning effort \texttt{ultra};
 earlier research and numerical certificates also used
-\texttt{gpt-6.1-sol}. LLM assistance included derivations, exposition,
+\texttt{gpt-6.1-sol}. Edward Baker's unpublished quaternion-form working
+notes of January and February 2014 motivated the signed differential-form
+construction. Those notes were circulated with mistakes and incompleteness
+acknowledged; no general nonabelian boundary formula from them is assumed. LLM assistance included derivations, exposition,
 code, and internal checks. The accompanying reviews distinguish
 analytic arguments, validated interval calculations, exact algebra
 checks, and their remaining limitations. These internal checks are not

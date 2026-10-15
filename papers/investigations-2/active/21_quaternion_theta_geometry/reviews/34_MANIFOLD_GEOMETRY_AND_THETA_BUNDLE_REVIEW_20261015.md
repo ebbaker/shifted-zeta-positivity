@@ -1,0 +1,28 @@
+---
+research_program: COORD
+secondary_programs: [ALG, PR02, PR02-CORR]
+status: internally_reviewed_local_identities_and_conditional_criterion
+---
+
+# Review of manifold geometry and the theta-bundle bridge
+
+15 October 2026, America/New_York. Prepared for Edward Baker with substantial LLM assistance. Recorded coordinating model **gpt-6-astra**, reasoning effort **ultra**, verified from the current conversation metadata. Collaborators inherited the same configuration. This is an independent internal cross-check within the LLM-assisted investigation, not external refereeing or formal verification.
+
+## Scope and disposition
+
+Reviewed [Note 60](../notes/04_octonionic_reductions/60_HYPERKAHLER_LIFTS_AND_COLLISION_DEGENERACY_20261015.md), [Note 61](../notes/02_signed_cusp_control/61_JET_SURFACES_REAL_GAUSS_MAP_AND_ORIENTED_TURNING_20261015.md), and [Note 62](../notes/05_theta_correlation_kernels/62_THETA_JET_BUNDLE_AND_SEMIFLAT_HYPERKAHLER_GEOMETRY_20261015.md). The constructions and conditional criterion pass the checks below after one minor coefficient qualification and two wording clarifications. Their usefulness for the actual theta inequality remains conditional.
+
+1. **Hodge and holonomy.** Direct differentiation verifies `|∇α_f|²=2|f'|²`, so harmonic self-duality does not give parallelness. The coordinate change `F'=f` proves the explicit hyperkähler metric is locally flat away from zeros. Its real coefficient for `f=H+iH_z` is `E`; the metric degenerates at common real zeros. The compact exact-SD obstruction is Stokes' theorem, without an unmentioned integrability assumption. Conformal invariance does not preserve Ricci-flatness. The opening statement now restricts the exact collision/degeneracy correspondence to the physical real slice. The compact parallel-form discussion distinguishes metric-relative pairings from coordinate coefficients and proves the whole-family obstruction by proportionality at a real point.
+2. **Induced jet geometry.** The tangent vectors of `(P,H,w)` give precisely the stated energy metric. The Gram determinant and Gaussian curvature convention give `K=-2|HH_zz-H_z²|²/(|H|²+|H_z|²)³`. Its Ricci-flat case is locally exponential. Unitarily congruent polynomial examples have opposite physical Laguerre signs, confirming that the marked real slice matters.
+3. **Actual calibrations.** An independent collaborator checked Lotay, Proposition 6.5(b) and Proposition 7.3(a). For the specific holomorphic surface, the relevant ambient holomorphic volume form pulls back to zero and `ω²/2` pulls back to induced volume. Thus the coassociative and Cayley inclusions are actual calibrated immersions at regular points. This improves on an unconstructed analogy, but does not prohibit branch formation or give exceptional ambient holonomy equal to the full group.
+4. **Turning criterion.** Independent proof review checked the leading heat profile, the full stationary displacement, and uniform convergence on the short interval. Since `F_r≥1`, `h_j` has constant nonzero sign on that entire interval. This supplies the required `j=1` regularity and removes angle-lift ambiguity. The endpoint ratio tends to positive infinity, so the angle increment tends to `pi/2`. The uniform one-sided modulus criterion therefore excludes every covered finite collision. It has not been proved for theta. The statement that a stationary angular bound implies the physical-energy bound on branch 1 was corrected to require `κ≥0`.
+5. **Theta source.** Conjugating `y∂y` by `y^(1/4)` gives the source differential operator exactly. The Fourier-series heat equation supplies its fiber-jet expression. Multipliers create lower-jet terms under fiber translation, so ordinary derivatives cannot be treated as unchanged line-bundle sections. The physical positive-heat multiplier is a squared-log function of `y`; it is not the Jacobi heat connection.
+6. **Curved hyperkähler model.** Two independent derivations verify the closed normalized triple. The Kähler metric has constant Hermitian determinant in holomorphic `(τ,z)` coordinates and hence zero Ricci form. The base slices are totally geodesic and have curvature `1/(2q³)`, proving nonflatness. The model does not descend under the full modular action as written. No complete metric, compact K3 realization of the physical transform, or global regularity theorem is inferred.
+
+## Exact execution record
+
+The coordinating [checker](../numerics/check_theta_manifold_geometry.py) uses exact rational Laurent polynomials and no external numerical package. An independent collaborator inspected the full code and replayed it successfully. All **55 assertions** pass: three closed forms; nine wedge normalization entries; sixteen inverse-metric entries; sixteen Ricci components; a nonzero curvature component and its sectional normalization; eight totally-geodesic conditions; and the formal source differential identity.
+
+The curvature convention is `R^l_ijk=(R(∂j,∂k)∂i)^l`, the Ricci contraction is `sum_j R^j_ijk`, and the positive sectional numerator is `g(R(∂p,∂q)∂q,∂p)`. These agree with the analytic base-slice computation. The [receipt](../numerics/THETA_MANIFOLD_GEOMETRY_CHECKS_20261015.json) records the script hash `30ff64111f1183d217567e34cbbb636ae12f9472bf2f78e68b89bf76281b53a0` and its explicit scope limitations.
+
+No exact arithmetic check is being substituted for the analytic limiting proof, for global modular descent, or for the missing theta signed estimate. The manuscript and established sign coverage remain unchanged. [Note 63](../notes/00_research_coordination/63_MANIFOLD_GEOMETRY_AND_THETA_BUNDLE_CONTINUATION_20261015.md) records the continuation and next bounded task.

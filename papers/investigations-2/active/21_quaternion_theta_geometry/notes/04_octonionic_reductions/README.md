@@ -26,3 +26,13 @@ Future work with boundary operators, triality or exceptional lifts needs a decla
 ## Oriented signed-current estimates
 
 [Note 47](47_ORIENTED_CURRENT_AND_ACCRETIVE_SOURCE_CERTIFICATES_20261015.md) proves a sharp unconditional spatially averaged signed-energy bound, extracts arbitrary skew-angular heat motion, and specifies branch-specific accretive source certificates. The localization cost prevents a pointwise conclusion. [Note 46](../02_signed_cusp_control/46_OCTONIONIC_BOUNDARY_CURRENT_AND_SIGNED_CUTOFF_TARGET_20261015.md) supplies the complementary boundary target; [Note 48](../05_theta_correlation_kernels/48_E8_CHARACTER_PROJECTION_AND_SIGNED_HEAT_SECTORS_20261015.md) gives an exact E8-character bridge and its sign limits. Updated 15 October 2026 for Edward Baker with substantial LLM assistance, **gpt-6.1-sol**, effort **ultra**; no numerical work.
+
+## Quaternion forms and signed pairing
+
+[Note 50](50_QUATERNION_FORMS_HODGE_PAIRING_AND_SOURCE_TARGET_20261015.md) extracts a closed self-dual realization of the signed theta current from the author's 2014 quaternion-form ideas. [Review 30](../../reviews/30_QUATERNION_FORMS_DRAFT_COMPARISON_AND_RELEVANCE_20261015.md) compares the two drafts and checks the limits of their boundary claims, including a counterexample to the proposed general nonabelian extension. The pointwise theta estimate remains open. Added 15 October 2026 for Edward Baker with substantial LLM assistance, **gpt-6-astra**, effort **ultra**.
+
+[Note 51](51_POLARIZED_HODGE_DISK_AND_CENTERED_SOURCE_BOUNDS_20261015.md) proves a sharp disk Dirichlet completion and positive centered averages of both complete-theta branches, while quantifying the localization obstruction. [Note 54](../00_research_coordination/54_SIGNED_FORMS_AND_POSITIVE_THETA_PRIMITIVE_CONTINUATION_20261015.md) integrates the positive primitive and source-shape controls. Updated 15 October 2026 for Edward Baker with substantial LLM assistance, **gpt-6-astra**, effort **ultra**; pointwise target open.
+
+## Manifold and holonomy interpretation
+
+[Note 60](60_HYPERKAHLER_LIFTS_AND_COLLISION_DEGENERACY_20261015.md) distinguishes harmonic self-duality from parallelness, gives explicit flat hyperkähler lifts, and identifies their collision degeneration and compactification limits. [Note 63](../00_research_coordination/63_MANIFOLD_GEOMETRY_AND_THETA_BUNDLE_CONTINUATION_20261015.md) links the signed Gauss-map and arithmetic elliptic-family continuations. No new theta sign bound. Updated 15 October 2026 for Edward Baker with substantial LLM assistance, **gpt-6-astra**, effort **ultra**.
