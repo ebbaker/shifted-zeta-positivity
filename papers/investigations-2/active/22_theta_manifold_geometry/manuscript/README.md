@@ -2,13 +2,11 @@
 
 15 October 2026. Prepared for Edward Baker with substantial LLM assistance. Recorded model **gpt-6-astra**, reasoning effort **ultra**.
 
-[Theta manifold geometry and signed heat-flow collision control](theta_manifold_geometry.tex) is the stable editable draft, written for Edward Baker. Its [43-page reading copy](../../../../../output/pdf/theta_manifold_geometry.pdf) contains the full narrative, proofs, references and LLM acknowledgment.
+[Theta manifold geometry and signed heat-flow collision control](theta_manifold_geometry.tex) is the stable editable manuscript, drafted for Edward Baker. Its [56-page reading copy](../../../../../output/pdf/theta_manifold_geometry.pdf) includes the complete local backward stationary locus, scalar signed criterion, invariant joint trace, and the arithmetic continuation. Section 12, pages 45–50, gives the multiplicative theta identities, explicit uniform moment remainder, complete transformed lower intervals and primitive edges, and the nonlocal boundary obstructions. Earlier geometric and control results remain in place.
 
-The current integration adds exponential-average cutoff transfer, normalized coefficient recurrence, coupled-source and endpoint-strip identities, exact recurrence-defect stability, the sharp finite positive hierarchy, absorption-current approximation, and signed boundary geometry. New negative findings are summarized with references to detailed notes. The complete-theta signed trace estimate and event coverage remain open.
+The [current review](../reviews/15_ARITHMETIC_MANUSCRIPT_INTEGRATION_REVIEW_20261015.md), [integration manifest](../numerics/ARITHMETIC_MANUSCRIPT_INTEGRATION_CHECKS_20261015.json) and [build record](BUILD_RECORD.json) identify the final source/PDF and verification. Both compilers succeed without remaining warnings or overfull/underfull boxes. All 56 final pages were visually inspected, and the arithmetic checker passed 47 exact assertions. Infinite identities and analytic limits retain their separate proofs. The theta-specific all-event signed trace estimate remains open.
 
-The [integration review](../reviews/09_RECURRENCE_MANUSCRIPT_INTEGRATION_REVIEW_20261015.md) and [build record](BUILD_RECORD.json) state the current checks and limitations. All 43 rendered pages were individually inspected; changed pages were rechecked after a heading repair. The final export has no compiler warnings or overfull/underfull boxes. Existing computation manifests retain their historical identities; no new sign certificate is claimed.
-
-The source is standalone and uses standard LaTeX packages. Open it in the desktop LaTeX editor for an editable source and live preview. For a terminal rebuild, from the repository root:
+The source is standalone and uses standard LaTeX packages. Open it in the desktop LaTeX editor for source and live preview. For a terminal rebuild from the repository root:
 
 ```sh
 latexmk -pdf -interaction=nonstopmode -halt-on-error \
@@ -16,6 +14,6 @@ latexmk -pdf -interaction=nonstopmode -halt-on-error \
   papers/investigations-2/active/22_theta_manifold_geometry/manuscript/theta_manifold_geometry.tex
 ```
 
-Review the resulting PDF before replacing the reading copy, and update the build identity. Build intermediates belong outside the repository. Maintain [DRAFT_HISTORY.md](../DRAFT_HISTORY.md); future milestones should identify commits or tags without creating manuscript snapshot folders.
+Review the PDF before replacing the reading copy and update its build identity. Keep build intermediates outside the repository. [Draft history](../DRAFT_HISTORY.md) indexes milestones without new snapshot folders.
 
-Five relevant checkers passed 12,271 overlapping exact assertions in this integration. The [latest handoff](../notes/00_research_coordination/09_MANUSCRIPT_RECURRENCE_INTEGRATION_AND_NEXT_CHAT_20261015.md) records the next signed-boundary experiment and the current chat-history verification. Earlier manifests retain their historical source, PDF and research-note identities.
+The [latest handoff](../notes/00_research_coordination/13_ARITHMETIC_MANUSCRIPT_INTEGRATION_AND_HISTORY_20261015.md) records this integration and the chat-history audit. The compact-surface direction remains parked. The [separate positive-tail pilot](../notes/00_research_coordination/11_SCALAR_MANUSCRIPT_AND_POSITIVE_TAIL_CONTINUATION_20261015.md) remains incremental research. Earlier manifests retain their historical identities.

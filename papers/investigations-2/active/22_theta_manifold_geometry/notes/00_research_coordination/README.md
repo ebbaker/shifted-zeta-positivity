@@ -19,3 +19,11 @@ Strategy assessment: [research paths after the coupled-product experiment](07_RE
 [Recurrence experiment and geometric continuation](08_RECURRENCE_EXPERIMENT_AND_GEOMETRIC_CONTINUATION_20261015.md) records the completed bounded experiment, its exact boundary obstruction, sharp stability estimates, and the next signed-boundary question.
 
 [Manuscript recurrence integration and next-chat handoff](09_MANUSCRIPT_RECURRENCE_INTEGRATION_AND_NEXT_CHAT_20261015.md) identifies the updated 43-page manuscript, reviewed recurrence and boundary results, final build, history verification and next signed-trace experiment.
+
+[Joint source current and signed quotient continuation](10_JOINT_SOURCE_CURRENT_AND_SIGNED_QUOTIENT_CONTINUATION_20261015.md) completes the proposed joint experiment, records the extended polynomial obstruction and sharper signed criterion, and states the next decision and finite tail-cone alternative. The manuscript is unchanged.
+
+[Scalar integration and positive-tail continuation](11_SCALAR_MANUSCRIPT_AND_POSITIVE_TAIL_CONTINUATION_20261015.md) records the 49-page manuscript, complete-tail orientation theorem, validated finite box and the decision to return to an arithmetic signed-trace mechanism.
+
+[Arithmetic dilation and nonlocal continuation](12_ARITHMETIC_DILATION_AND_NONLOCAL_CONTINUATION_20261015.md) follows the user’s arithmetic clarification, records exact prime packets and their boundary obstruction, and closes three additional bounded multiplier tests. The compact-surface direction is parked; the scalar signed arithmetic estimate remains open.
+
+[Arithmetic manuscript integration and history checkpoint](13_ARITHMETIC_MANUSCRIPT_INTEGRATION_AND_HISTORY_20261015.md) records Section 12 of the 56-page manuscript, the final proof/build/visual review and verified formal replay identity 22. The scalar signed arithmetic estimate remains the next target.

@@ -1,0 +1,203 @@
+{
+  "analytic_remainder_conditions": "Re(t)<=T, T>=0, |Im(z)|<=Y, pi*m^2>=T/8, 4*pi*m^2-9-Y>0; real-source integration on u>=0.",
+  "analytic_remainder_formula": "2*pi^2*m^4*j!*exp(-pi*m^2)/((4*pi*m^2-9-Y)^(j+1)*(1-(1+1/m)^4*exp(-pi*(2*m+1))))",
+  "arithmetic": "Python standard-library Fraction and sparse rational polynomials",
+  "assertions_passed": 47,
+  "checker": "check_arithmetic_dilation.py",
+  "checker_sha256": "e1791ebde5757672926dc8218893eb1d9d96a6e65c662fa92bef7c1efc551710",
+  "checks": [
+    "source amplitude under q -> n^2 q equals mode k -> kn",
+    "source exponential rate under dilation equals mode kn",
+    "D_n prefactor cancels source e^u shift",
+    "primitive source derivative and beta boundary scale to mode kn",
+    "Mobius divisor identity for n=1..72",
+    "multiplicative dilation support semigroup, including repeated prime",
+    "truncated Mobius keeps only first mode below cutoff N=1",
+    "truncated Mobius keeps only first mode below cutoff N=4",
+    "truncated Mobius keeps only first mode below cutoff N=8",
+    "finite prime sieve mask (2,)",
+    "first unsieved integer is least omitted prime (2,)",
+    "unique smooth/free reconstruction (2,)",
+    "smooth endpoint includes every mode below remainder start (2,)",
+    "finite prime sieve mask (2, 3)",
+    "first unsieved integer is least omitted prime (2, 3)",
+    "unique smooth/free reconstruction (2, 3)",
+    "smooth endpoint includes every mode below remainder start (2, 3)",
+    "finite prime sieve mask (2, 3, 5)",
+    "first unsieved integer is least omitted prime (2, 3, 5)",
+    "unique smooth/free reconstruction (2, 3, 5)",
+    "smooth endpoint includes every mode below remainder start (2, 3, 5)",
+    "physical transform prefactors obey multiplicative semigroup",
+    "shifted full transform minus lower strip recovers original weight",
+    "complex frequency shifts compose at total source-strip length",
+    "cutoff-aware lower source trace, branch 0",
+    "prescribed beta-mass coefficient cancels lower trace, branch 0",
+    "simple complete-start coefficient leaves only beta-tail trace, branch 0",
+    "cutoff-aware lower source trace, branch 1",
+    "prescribed beta-mass coefficient cancels lower trace, branch 1",
+    "simple complete-start coefficient leaves only beta-tail trace, branch 1",
+    "complete-first-factor endpoint remainder identity",
+    "remainder vanishes at W=0",
+    "squared mixed error bound keeps physical energy",
+    "positive exponential partial sum proves e>8/3",
+    "physical heat range satisfies first-mode absorption condition",
+    "rational tail denominator and geometric ratio, m=3",
+    "positive rational physical jet remainder, m=3 j=0",
+    "positive rational physical jet remainder, m=3 j=1",
+    "rational tail denominator and geometric ratio, m=5",
+    "positive rational physical jet remainder, m=5 j=0",
+    "positive rational physical jet remainder, m=5 j=1",
+    "rational tail denominator and geometric ratio, m=7",
+    "positive rational physical jet remainder, m=7 j=0",
+    "positive rational physical jet remainder, m=7 j=1",
+    "rational tail denominator and geometric ratio, m=11",
+    "positive rational physical jet remainder, m=11 j=0",
+    "positive rational physical jet remainder, m=11 j=1"
+  ],
+  "created_utc": "2026-10-15T18:50:41.494871+00:00",
+  "date": "2026-10-15",
+  "llm_assistance": "Substantial LLM assistance; finite exact checks separated from analytic claims.",
+  "lower_trace": "(delta_(j0)*sum(endpoint_mask_n*beta_n)-A/2)/8; complete starting normalization retained.",
+  "massive_resolvent_checks": "Not included; the associated note gives an analytically reviewed derivation.",
+  "model": "gpt-6-astra",
+  "not_established": [
+    "Infinite convergence or universal divisor identities merely from enumeration; these require the separate analytic proofs.",
+    "A sign for a real oscillatory transform of the positive sifted source.",
+    "The scalar bound W B_boundary <= C W^2+epsilon |W| for the main trace.",
+    "Any RH implication beyond the existing conditional framework.",
+    "A computational gain over an ordinary cutoff with the same first omitted index."
+  ],
+  "physical_transform": "T_n F(t,z)=n^(-1/2)*exp(t*a_n^2-i*z*a_n)*(F(t,z+2*i*t*a_n)-integral_0^a_n exp(t*v^2+i*(z+2*i*t*a_n)*v)*Phi(v)dv)",
+  "prepared_for": "Edward Baker",
+  "prime_sieves": [
+    {
+      "divisor_coefficients": {
+        "1": 1,
+        "2": -1
+      },
+      "first_unsieved_integer_above_one": 3,
+      "mask_checked_through": 120,
+      "primes": [
+        2
+      ],
+      "smooth_free_unique_factorization_checked_through": 120,
+      "squarefree_product": 2
+    },
+    {
+      "divisor_coefficients": {
+        "1": 1,
+        "2": -1,
+        "3": -1,
+        "6": 1
+      },
+      "first_unsieved_integer_above_one": 5,
+      "mask_checked_through": 120,
+      "primes": [
+        2,
+        3
+      ],
+      "smooth_free_unique_factorization_checked_through": 120,
+      "squarefree_product": 6
+    },
+    {
+      "divisor_coefficients": {
+        "1": 1,
+        "10": 1,
+        "15": 1,
+        "2": -1,
+        "3": -1,
+        "30": -1,
+        "5": -1,
+        "6": 1
+      },
+      "first_unsieved_integer_above_one": 7,
+      "mask_checked_through": 120,
+      "primes": [
+        2,
+        3,
+        5
+      ],
+      "smooth_free_unique_factorization_checked_through": 120,
+      "squarefree_product": 30
+    }
+  ],
+  "python_version": "3.10.0",
+  "rational_majorant_conditions": "0<=t<=1/2, real spectral endpoint, j=0 or 1; declared elementary inputs 3<pi<4 and e>8/3.",
+  "rational_remainder_majorants": [
+    {
+      "denominator_lower_bound": "99",
+      "first_remaining_index": 3,
+      "jet_bounds": [
+        {
+          "decimal_display_not_used_for_checks": "8.25741349700544668E-11",
+          "j": 0,
+          "rational_upper_bound": "68630377364883/831136498005965495336960"
+        },
+        {
+          "decimal_display_not_used_for_checks": "8.34082171414691584E-13",
+          "j": 1,
+          "rational_upper_bound": "7625597484987/9142501478065620448706560"
+        }
+      ],
+      "ratio_upper_bound": "129140163/36028797018963968"
+    },
+    {
+      "denominator_lower_bound": "291",
+      "first_remaining_index": 5,
+      "jet_bounds": [
+        {
+          "decimal_display_not_used_for_checks": "7.75321962283610819E-31",
+          "j": 0,
+          "rational_upper_bound": "79201404650176785041625519872247566015625/102152922918498613259941930554678830668567629332075090730160659625934848"
+        },
+        {
+          "decimal_display_not_used_for_checks": "2.66433664014986536E-33",
+          "j": 1,
+          "rational_upper_bound": "26400468216725595013875173290749188671875/9908833523094365486214367263803846574851060045211283800825583983715680256"
+        }
+      ],
+      "ratio_upper_bound": "450283905890997363/24758800785707605497982484480000"
+    },
+    {
+      "denominator_lower_bound": "579",
+      "first_remaining_index": 7,
+      "jet_bounds": [
+        {
+          "decimal_display_not_used_for_checks": "3.20228462813999870E-61",
+          "j": 0,
+          "rational_upper_bound": "26332222080481296403003555498497818100034868093824387520651220677381772933129/82229486564334512644860825122141670294636429987291817144613158296013615925420326998611682715514171694378184404832064742238281099630346240"
+        },
+        {
+          "decimal_display_not_used_for_checks": "5.53071611077719983E-64",
+          "j": 1,
+          "rational_upper_bound": "8777407360160432134334518499499272700011622697941462506883740225793924311043/15870290906916560940458139248573342366864830987547320708910339551130627873606123110732054764094235137014989590132588495251988252228656824320"
+        }
+      ],
+      "ratio_upper_bound": "2954312706550833698643/25531811343036664086736326013864858615808"
+    },
+    {
+      "denominator_lower_bound": "1443",
+      "first_remaining_index": 11,
+      "jet_bounds": [
+        {
+          "decimal_display_not_used_for_checks": "7.67016264156274634E-153",
+          "j": 0,
+          "rational_upper_bound": "11195298812685298982837262770750333085451808361566782003686227553997512158079034766798545206813289667606618410758408111208233036781093865480680743969766409265535770023232024271086729/1459590798247314453654285703774948579651592670661889322709562023877507597495476416533489272160166655466917164192114916526170685651623073366278495347146259081896192739140017329044789774172802773260348127386021540396931110459423111181111567984287923909515157344374163282790643896795440281855618216084266485969928457129982394798251704320"
+        },
+        {
+          "decimal_display_not_used_for_checks": "5.31542802603100925E-156",
+          "j": 1,
+          "rational_upper_bound": "3731766270895099660945754256916777695150602787188927334562075851332504052693011588932848402271096555868872803586136037069411012260364621826893581323255469755178590007744008090362243/702063173956958252207711423515750266812416074588368764223299333485081154395324156352608339909040161279587155976407274849088099798430698289179956261977350618392068707526348335270543881377118133938227449272676360930923864130982516478114664200442491400476790682643972539022299714358606775572552361936532179751535587879521531897959069777920"
+        }
+      ],
+      "ratio_upper_bound": "67585198634817523235520443624317923/11763589952997938312104933496983480831763787015986934950823723008"
+    }
+  ],
+  "reasoning_effort": "ultra",
+  "scope": [
+    "Finite divisor and sieve masks through stated bounds.",
+    "Formal symbolic source scaling, transform prefactors and lower-trace identities.",
+    "Exact rational arithmetic for explicit coarse remainder bounds; no quadrature."
+  ],
+  "status": "PASS"
+}

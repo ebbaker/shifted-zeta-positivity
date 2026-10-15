@@ -1,0 +1,460 @@
+{
+  "date": "2026-10-15",
+  "prepared_for": "Edward Baker",
+  "llm_assistance": "Substantial LLM assistance; analytic tail estimates plus Arb/Acb validation.",
+  "model": "gpt-6-astra",
+  "reasoning_effort": "ultra",
+  "checker": "check_positive_tail_cone.py",
+  "checker_sha256": "6cc280db4d51ae9f49e474c826946ef76c34b3561677a7113216a81caf64eb4b",
+  "python_version": "3.10.0",
+  "python_flint_version": "0.9.0",
+  "precision_bits": 160,
+  "elapsed_seconds": 0.04869175000931136,
+  "exact_box": {
+    "t": [
+      "0.009",
+      "0.011"
+    ],
+    "x": [
+      "28.2",
+      "28.4"
+    ]
+  },
+  "fixed_head_modes": 1,
+  "optional_finite_tail_modes": [
+    2,
+    3,
+    4
+  ],
+  "separator_exact": [
+    "0",
+    "-1"
+  ],
+  "selection": "Frozen after center-mode exploration; no optimization is executed by this checker.",
+  "source_cutoff_exact": "1",
+  "source_tail_bound": "pi*n^2/(4*pi*n^2-1)*exp(pi*n^2-4-pi*n^2*exp(4)/2), valid for moments 0 through 5.",
+  "uniform_parameter_enclosure": "Second-order two-variable Taylor bound from midpoint jets; heat derivative is minus second spatial derivative, absolute moments bound the full Hessian.",
+  "analytic_infinite_tail_orientation": {
+    "range": "all integers n>=2",
+    "d": "4*pi*n^2-1",
+    "broader_rectangle_exact": {
+      "t": [
+        "0",
+        "1/2"
+      ],
+      "x": [
+        "0 exclusive",
+        "30"
+      ]
+    },
+    "broader_rectangle_bound": "-Hnx/beta > x/(40*d^2) for every n>=2",
+    "rational_threshold_f47": "125421739/1249198336",
+    "rational_margin_above_one_tenth": "2509527/6245991680",
+    "inequality": "-Hnx/beta >= x/4 * ((d-2)/(d*(d+1)^2) - (1+10*T+2*X^2)/d^4 - 48*T^2/d^6)",
+    "scaled_bracket_lower_test_at_n2": "[622.59807322002025307753838934386636 +/- 3.37e-33]",
+    "monotonic_extension": "d^4 L(d)=d(d-2)*(d/(d+1))^2 increases for d>2; opposing bound decreases."
+  },
+  "finite_tail_rectangles": {
+    "2": {
+      "Hn_over_beta": "[0.094207184265233959475394242913270463 +/- 1.74e-4]",
+      "Hnx_over_beta": "[-0.0017296491546767752204482678853076724 +/- 9.57e-7]"
+    },
+    "3": {
+      "Hn_over_beta": "[0.11768974726917281460008064698448150 +/- 4.91e-5]",
+      "Hnx_over_beta": "[-0.00048916616725645902015951679896525800 +/- 1.38e-6]"
+    },
+    "4": {
+      "Hn_over_beta": "[0.12258806049160297985018313970164553 +/- 1.68e-5]",
+      "Hnx_over_beta": "[-0.00016719257683180179654762791338056073 +/- 5.49e-7]"
+    }
+  },
+  "infinite_tail_rectangle_n_ge_5": {
+    "Hn_over_beta": "[0.12500000000000000000000000000000000 +/- 1.03e-3]",
+    "Hnx_over_beta": "[+/- 7.30e-5]",
+    "additional_sign": "Hnx_over_beta<0 for every finite n; zero included only in closure."
+  },
+  "required_limit_point_exact": [
+    "1/8",
+    "0"
+  ],
+  "limit_proof": "Displayed primitive envelopes shrink as n^-4 uniformly on the entire parameter box.",
+  "tail_mass_R1": "[0.00017180566258547875025022880812872696 +/- 1.26e-39]",
+  "tail_mass_after_4": "[2.4342009049056018040386813773948677e-32 +/- 2.79e-48]",
+  "head_Hx_on_box": "[-8.4427842068320541833090518397843227e-5 +/- 5.58e-6]",
+  "positive_cone_infimum_exact": "0",
+  "positive_tail_cone_margin": "[8.4427842068320541833090518397843227e-5 +/- 5.58e-6]",
+  "ordinary_directional_tail_error": "[6.6983313254506816792110539288121770e-7 +/- 2.66e-42]",
+  "ordinary_directional_margin": "[8.3758008935775473665169413004962010e-5 +/- 5.58e-6]",
+  "ordinary_radial_tail_error": "[2.8629567024816853469622124981399408e-5 +/- 3.64e-40]",
+  "ordinary_radial_margin": "[5.5798275043503688363468393416443820e-5 +/- 5.58e-6]",
+  "complete_theta_root_endpoints": {
+    "left": "[5.3602519879980415353534934762320341e-6 +/- 3.66e-6]",
+    "right": "[-1.1584749114861985380269237563690122e-5 +/- 3.66e-6]"
+  },
+  "cost": {
+    "core_head_integrals": 8,
+    "optional_diagnostic_integrals": 24,
+    "head_enclosure_seconds": 0.015660750010283664,
+    "ordinary_tail_envelopes_seconds": 0.0002735840098466724,
+    "cone_extra_tail_integrals": 0,
+    "ordinary_extra_tail_integrals": 0,
+    "assessment": "Both ordinary cutoff comparisons already pass with the same head enclosure; no computational advantage demonstrated."
+  },
+  "assertions_passed": 52,
+  "checks": [
+    "positive_time_box",
+    "source_upper_time_at_most_quarter",
+    "source_tail_envelope_for_moments_through_five",
+    "uniform_primitive_moment_condition",
+    "broad_rectangle_exact_rational_threshold",
+    "broad_rectangle_exact_rational_margin",
+    "broad_rectangle_margin_positive",
+    "all_n_ge_two_tail_derivatives_strictly_negative",
+    "tail_threshold_d_exceeds_two",
+    "finite_real_integral_0",
+    "finite_real_integral_1",
+    "finite_real_integral_2",
+    "finite_real_integral_3",
+    "finite_real_integral_4",
+    "finite_real_integral_5",
+    "finite_real_integral_6",
+    "finite_real_integral_7",
+    "head_derivative_negative_on_entire_parameter_box",
+    "positive_tail_cone_separator_strict",
+    "complete_tail_mass_positive",
+    "ordinary_directional_complete_start_cutoff_also_passes",
+    "ordinary_radial_complete_start_cutoff_also_passes",
+    "finite_real_integral_8",
+    "finite_real_integral_9",
+    "finite_real_integral_10",
+    "finite_real_integral_11",
+    "finite_real_integral_12",
+    "finite_real_integral_13",
+    "finite_real_integral_14",
+    "finite_real_integral_15",
+    "finite_tail_mode_negative_derivative_2",
+    "finite_real_integral_16",
+    "finite_real_integral_17",
+    "finite_real_integral_18",
+    "finite_real_integral_19",
+    "finite_real_integral_20",
+    "finite_real_integral_21",
+    "finite_real_integral_22",
+    "finite_real_integral_23",
+    "finite_tail_mode_negative_derivative_3",
+    "finite_real_integral_24",
+    "finite_real_integral_25",
+    "finite_real_integral_26",
+    "finite_real_integral_27",
+    "finite_real_integral_28",
+    "finite_real_integral_29",
+    "finite_real_integral_30",
+    "finite_real_integral_31",
+    "finite_tail_mode_negative_derivative_4",
+    "infinite_remaining_mode_mass_positive",
+    "complete_theta_positive_at_left_for_all_times_in_box",
+    "complete_theta_negative_at_right_for_all_times_in_box"
+  ],
+  "integrals": [
+    {
+      "label": "center_jet",
+      "n": 1,
+      "moment_or_jet_order": 0,
+      "spectral_parameter": "[28.300000000000000000000000000000000 +/- 3e-38]",
+      "time": "[0.010000000000000000000000000000000000 +/- 1e-41]",
+      "complete_source_integral": "[-3.8608421610615088037365640924317487e-5 +/- 6.83e-39]",
+      "absolute_source_tail": "[6.5303846178930927680287403610883831e-39 +/- 4.73e-74]"
+    },
+    {
+      "label": "center_jet",
+      "n": 1,
+      "moment_or_jet_order": 1,
+      "spectral_parameter": "[28.300000000000000000000000000000000 +/- 3e-38]",
+      "time": "[0.010000000000000000000000000000000000 +/- 1e-41]",
+      "complete_source_integral": "[-0.00016891372480546105057319734891385591 +/- 8.45e-39]",
+      "absolute_source_tail": "[6.5303846178930927680287403610883831e-39 +/- 4.73e-74]"
+    },
+    {
+      "label": "center_jet",
+      "n": 1,
+      "moment_or_jet_order": 2,
+      "spectral_parameter": "[28.300000000000000000000000000000000 +/- 3e-38]",
+      "time": "[0.010000000000000000000000000000000000 +/- 1e-41]",
+      "complete_source_integral": "[9.9087431275860778295693698169120260e-5 +/- 6.83e-39]",
+      "absolute_source_tail": "[6.5303846178930927680287403610883831e-39 +/- 4.73e-74]"
+    },
+    {
+      "label": "center_jet",
+      "n": 1,
+      "moment_or_jet_order": 3,
+      "spectral_parameter": "[28.300000000000000000000000000000000 +/- 3e-38]",
+      "time": "[0.010000000000000000000000000000000000 +/- 1e-41]",
+      "complete_source_integral": "[-3.4560875954222766895539336389536198e-5 +/- 7.04e-39]",
+      "absolute_source_tail": "[6.5303846178930927680287403610883831e-39 +/- 4.73e-74]"
+    },
+    {
+      "label": "absolute_moment",
+      "n": 1,
+      "moment_or_jet_order": 2,
+      "spectral_parameter": null,
+      "time": "[0.011000000000000000000000000000000000 +/- 3e-41]",
+      "complete_source_integral": "[0.0014367167234888458689992867999543719 +/- 3.09e-38]",
+      "absolute_source_tail": "[6.5303846178930927680287403610883831e-39 +/- 4.73e-74]"
+    },
+    {
+      "label": "absolute_moment",
+      "n": 1,
+      "moment_or_jet_order": 3,
+      "spectral_parameter": null,
+      "time": "[0.011000000000000000000000000000000000 +/- 3e-41]",
+      "complete_source_integral": "[0.00023967642382137369806466205838797601 +/- 8.74e-39]",
+      "absolute_source_tail": "[6.5303846178930927680287403610883831e-39 +/- 4.73e-74]"
+    },
+    {
+      "label": "absolute_moment",
+      "n": 1,
+      "moment_or_jet_order": 4,
+      "spectral_parameter": null,
+      "time": "[0.011000000000000000000000000000000000 +/- 3e-41]",
+      "complete_source_integral": "[4.6336073014439743490766500339978511e-5 +/- 6.81e-39]",
+      "absolute_source_tail": "[6.5303846178930927680287403610883831e-39 +/- 4.73e-74]"
+    },
+    {
+      "label": "absolute_moment",
+      "n": 1,
+      "moment_or_jet_order": 5,
+      "spectral_parameter": null,
+      "time": "[0.011000000000000000000000000000000000 +/- 3e-41]",
+      "complete_source_integral": "[9.9857755067721630052992896144055367e-6 +/- 6.58e-39]",
+      "absolute_source_tail": "[6.5303846178930927680287403610883831e-39 +/- 4.73e-74]"
+    },
+    {
+      "label": "center_jet",
+      "n": 2,
+      "moment_or_jet_order": 0,
+      "spectral_parameter": "[28.300000000000000000000000000000000 +/- 3e-38]",
+      "time": "[0.010000000000000000000000000000000000 +/- 1e-41]",
+      "complete_source_integral": "[0.094207184265233959475394242913270463 +/- 1.85e-37]",
+      "absolute_source_tail": "[1.3872185069564100138120124658995234e-146 +/- 4.29e-181]"
+    },
+    {
+      "label": "center_jet",
+      "n": 2,
+      "moment_or_jet_order": 1,
+      "spectral_parameter": "[28.300000000000000000000000000000000 +/- 3e-38]",
+      "time": "[0.010000000000000000000000000000000000 +/- 1e-41]",
+      "complete_source_integral": "[-0.0017296491546767752204482678853076724 +/- 2.79e-38]",
+      "absolute_source_tail": "[1.3872185069564100138120124658995234e-146 +/- 4.29e-181]"
+    },
+    {
+      "label": "center_jet",
+      "n": 2,
+      "moment_or_jet_order": 2,
+      "spectral_parameter": "[28.300000000000000000000000000000000 +/- 3e-38]",
+      "time": "[0.010000000000000000000000000000000000 +/- 1e-41]",
+      "complete_source_integral": "[-9.2777847336318205683597174304466614e-6 +/- 2.74e-41]",
+      "absolute_source_tail": "[1.3872185069564100138120124658995234e-146 +/- 4.29e-181]"
+    },
+    {
+      "label": "center_jet",
+      "n": 2,
+      "moment_or_jet_order": 3,
+      "spectral_parameter": "[28.300000000000000000000000000000000 +/- 3e-38]",
+      "time": "[0.010000000000000000000000000000000000 +/- 1e-41]",
+      "complete_source_integral": "[3.5446277194847629291854036040118153e-6 +/- 4.46e-41]",
+      "absolute_source_tail": "[1.3872185069564100138120124658995234e-146 +/- 4.29e-181]"
+    },
+    {
+      "label": "absolute_moment",
+      "n": 2,
+      "moment_or_jet_order": 2,
+      "spectral_parameter": null,
+      "time": "[0.011000000000000000000000000000000000 +/- 3e-41]",
+      "complete_source_integral": "[9.5601022132073999557862415782563558e-5 +/- 7.13e-40]",
+      "absolute_source_tail": "[1.3872185069564100138120124658995234e-146 +/- 4.29e-181]"
+    },
+    {
+      "label": "absolute_moment",
+      "n": 2,
+      "moment_or_jet_order": 3,
+      "spectral_parameter": null,
+      "time": "[0.011000000000000000000000000000000000 +/- 3e-41]",
+      "complete_source_integral": "[5.0629403800544385926377194385404243e-6 +/- 4.94e-40]",
+      "absolute_source_tail": "[1.3872185069564100138120124658995234e-146 +/- 4.29e-181]"
+    },
+    {
+      "label": "absolute_moment",
+      "n": 2,
+      "moment_or_jet_order": 4,
+      "spectral_parameter": null,
+      "time": "[0.011000000000000000000000000000000000 +/- 3e-41]",
+      "complete_source_integral": "[3.3721889075032481297866885613075220e-7 +/- 3.92e-40]",
+      "absolute_source_tail": "[1.3872185069564100138120124658995234e-146 +/- 4.29e-181]"
+    },
+    {
+      "label": "absolute_moment",
+      "n": 2,
+      "moment_or_jet_order": 5,
+      "spectral_parameter": null,
+      "time": "[0.011000000000000000000000000000000000 +/- 3e-41]",
+      "complete_source_integral": "[2.6629257704401278517133430647550771e-8 +/- 3.27e-40]",
+      "absolute_source_tail": "[1.3872185069564100138120124658995234e-146 +/- 4.29e-181]"
+    },
+    {
+      "label": "center_jet",
+      "n": 3,
+      "moment_or_jet_order": 0,
+      "spectral_parameter": "[28.300000000000000000000000000000000 +/- 3e-38]",
+      "time": "[0.010000000000000000000000000000000000 +/- 1e-41]",
+      "complete_source_integral": "[0.11768974726917281460008064698448150 +/- 4.66e-36]",
+      "absolute_source_tail": "[5.3468061627287000831675484375109909e-326 +/- 3.45e-361]"
+    },
+    {
+      "label": "center_jet",
+      "n": 3,
+      "moment_or_jet_order": 1,
+      "spectral_parameter": "[28.300000000000000000000000000000000 +/- 3e-38]",
+      "time": "[0.010000000000000000000000000000000000 +/- 1e-41]",
+      "complete_source_integral": "[-0.00048916616725645902015951679896525800 +/- 1.96e-39]",
+      "absolute_source_tail": "[5.3468061627287000831675484375109909e-326 +/- 3.45e-361]"
+    },
+    {
+      "label": "center_jet",
+      "n": 3,
+      "moment_or_jet_order": 2,
+      "spectral_parameter": "[28.300000000000000000000000000000000 +/- 3e-38]",
+      "time": "[0.010000000000000000000000000000000000 +/- 1e-41]",
+      "complete_source_integral": "[-1.3674694055938623938239066365111711e-5 +/- 1.31e-40]",
+      "absolute_source_tail": "[5.3468061627287000831675484375109909e-326 +/- 3.45e-361]"
+    },
+    {
+      "label": "center_jet",
+      "n": 3,
+      "moment_or_jet_order": 3,
+      "spectral_parameter": "[28.300000000000000000000000000000000 +/- 3e-38]",
+      "time": "[0.010000000000000000000000000000000000 +/- 1e-41]",
+      "complete_source_integral": "[3.4683022066087005428954734288489555e-7 +/- 4.91e-42]",
+      "absolute_source_tail": "[5.3468061627287000831675484375109909e-326 +/- 3.45e-361]"
+    },
+    {
+      "label": "absolute_moment",
+      "n": 3,
+      "moment_or_jet_order": 2,
+      "spectral_parameter": null,
+      "time": "[0.011000000000000000000000000000000000 +/- 3e-41]",
+      "complete_source_integral": "[1.9224723593863644288084433623695041e-5 +/- 6.36e-41]",
+      "absolute_source_tail": "[5.3468061627287000831675484375109909e-326 +/- 3.45e-361]"
+    },
+    {
+      "label": "absolute_moment",
+      "n": 3,
+      "moment_or_jet_order": 3,
+      "spectral_parameter": null,
+      "time": "[0.011000000000000000000000000000000000 +/- 3e-41]",
+      "complete_source_integral": "[4.8148047715377572840094164835963222e-7 +/- 1.72e-42]",
+      "absolute_source_tail": "[5.3468061627287000831675484375109909e-326 +/- 3.45e-361]"
+    },
+    {
+      "label": "absolute_moment",
+      "n": 3,
+      "moment_or_jet_order": 4,
+      "spectral_parameter": null,
+      "time": "[0.011000000000000000000000000000000000 +/- 3e-41]",
+      "complete_source_integral": "[1.5598745083111929479377293879748772e-8 +/- 4.76e-43]",
+      "absolute_source_tail": "[5.3468061627287000831675484375109909e-326 +/- 3.45e-361]"
+    },
+    {
+      "label": "absolute_moment",
+      "n": 3,
+      "moment_or_jet_order": 5,
+      "spectral_parameter": null,
+      "time": "[0.011000000000000000000000000000000000 +/- 3e-41]",
+      "complete_source_integral": "[6.1386221564976891347058318078223731e-10 +/- 4.14e-45]",
+      "absolute_source_tail": "[5.3468061627287000831675484375109909e-326 +/- 3.45e-361]"
+    },
+    {
+      "label": "center_jet",
+      "n": 4,
+      "moment_or_jet_order": 0,
+      "spectral_parameter": "[28.300000000000000000000000000000000 +/- 3e-38]",
+      "time": "[0.010000000000000000000000000000000000 +/- 1e-41]",
+      "complete_source_integral": "[0.12258806049160297985018313970164553 +/- 4.43e-36]",
+      "absolute_source_tail": "[3.5772573575738000030385324545423348e-577 +/- 4.89e-612]"
+    },
+    {
+      "label": "center_jet",
+      "n": 4,
+      "moment_or_jet_order": 1,
+      "spectral_parameter": "[28.300000000000000000000000000000000 +/- 3e-38]",
+      "time": "[0.010000000000000000000000000000000000 +/- 1e-41]",
+      "complete_source_integral": "[-0.00016719257683180179654762791338056073 +/- 2.00e-39]",
+      "absolute_source_tail": "[3.5772573575738000030385324545423348e-577 +/- 4.89e-612]"
+    },
+    {
+      "label": "center_jet",
+      "n": 4,
+      "moment_or_jet_order": 2,
+      "spectral_parameter": "[28.300000000000000000000000000000000 +/- 3e-38]",
+      "time": "[0.010000000000000000000000000000000000 +/- 1e-41]",
+      "complete_source_integral": "[-5.4839296108199045245646902044621922e-6 +/- 3.63e-40]",
+      "absolute_source_tail": "[3.5772573575738000030385324545423348e-577 +/- 4.89e-612]"
+    },
+    {
+      "label": "center_jet",
+      "n": 4,
+      "moment_or_jet_order": 3,
+      "spectral_parameter": "[28.300000000000000000000000000000000 +/- 3e-38]",
+      "time": "[0.010000000000000000000000000000000000 +/- 1e-41]",
+      "complete_source_integral": "[4.3434245611202354687393700575379967e-8 +/- 1.95e-40]",
+      "absolute_source_tail": "[3.5772573575738000030385324545423348e-577 +/- 4.89e-612]"
+    },
+    {
+      "label": "absolute_moment",
+      "n": 4,
+      "moment_or_jet_order": 2,
+      "spectral_parameter": null,
+      "time": "[0.011000000000000000000000000000000000 +/- 3e-41]",
+      "complete_source_integral": "[6.1252750093967049748016852912230839e-6 +/- 1.90e-41]",
+      "absolute_source_tail": "[3.5772573575738000030385324545423348e-577 +/- 4.89e-612]"
+    },
+    {
+      "label": "absolute_moment",
+      "n": 4,
+      "moment_or_jet_order": 3,
+      "spectral_parameter": null,
+      "time": "[0.011000000000000000000000000000000000 +/- 3e-41]",
+      "complete_source_integral": "[8.8397635439887141876441954687094546e-8 +/- 8.26e-43]",
+      "absolute_source_tail": "[3.5772573575738000030385324545423348e-577 +/- 4.89e-612]"
+    },
+    {
+      "label": "absolute_moment",
+      "n": 4,
+      "moment_or_jet_order": 4,
+      "spectral_parameter": null,
+      "time": "[0.011000000000000000000000000000000000 +/- 3e-41]",
+      "complete_source_integral": "[1.6703806143927996587549794024722608e-9 +/- 2.64e-43]",
+      "absolute_source_tail": "[3.5772573575738000030385324545423348e-577 +/- 4.89e-612]"
+    },
+    {
+      "label": "absolute_moment",
+      "n": 4,
+      "moment_or_jet_order": 5,
+      "spectral_parameter": null,
+      "time": "[0.011000000000000000000000000000000000 +/- 3e-41]",
+      "complete_source_integral": "[3.8769185695245983939542764947095036e-11 +/- 1.49e-43]",
+      "absolute_source_tail": "[3.5772573575738000030385324545423348e-577 +/- 4.89e-612]"
+    }
+  ],
+  "failed_candidates": [],
+  "establishes": [
+    "Every normalized positive-tail relaxation with a1=1 has Hx<0 throughout the exact box; hence no collision there.",
+    "In fact normalization is unnecessary for the sign conclusion: any nonnegative tail weights with a1=1 and convergent derivative transform have Hx bounded above by the strictly negative head.",
+    "The actual theta field has exactly one real zero in the declared x interval for every t in the declared time interval; this is a local bracket, without a proof that it is globally the first zero.",
+    "The entire normalized tail cone is enclosed, including all infinite mode/source tails and the limit (1/8,0)."
+  ],
+  "does_not_establish": [
+    "Any all-event signed arithmetic boundary estimate, global noncollision result, or RH conclusion.",
+    "Theta-specific arithmetic discrimination: recurrence and endpoint normalization are not needed for the successful separator sign.",
+    "A practical advantage over ordinary complete-start cutoff enclosures; both tested baselines pass."
+  ]
+}
