@@ -278,3 +278,17 @@ Recorded model: **gpt-6.1-sol (Codex)**; reasoning effort: **ultra**.
   no finite certificate extension, manuscript revision, snapshot, commit,
   or tag. Prepared for Edward Baker with substantial LLM assistance;
   recorded **gpt-6-astra**, effort **ultra**.
+
+
+- **15 October 2026 — Closed-strip manuscript and broader research program.**
+  Working-tree [stable manuscript](manuscript/quaternion_theta_geometry.tex),
+  continuing commit `b0959db9d7e86b341a6c6105b70f74f913013306`; final identities
+  in [BUILD_RECORD](manuscript/BUILD_RECORD.json). Integrates Notes 24–33,
+  including the closed 61/24 theorem, height-112 certificate, collision and
+  delay results, and explicitly conditional transfer lemmas. Establishes the
+  [broader overview](research-overview/RESEARCH_OVERVIEW_20261015.md) and tagged
+  workstreams under notes. [Review 24](reviews/24_MANUSCRIPT_PROGRAM_INTEGRATION_REVIEW_20261015.md)
+  and [continuation](notes/00_research_coordination/34_MANUSCRIPT_PROGRAMS_AND_CONTINUATION_20261015.md)
+  record 2,615 exact checks, the 59-page export, and chat verification.
+  No new snapshot, commit, or tag; substantial LLM assistance,
+  **gpt-6-astra**, effort **ultra**.

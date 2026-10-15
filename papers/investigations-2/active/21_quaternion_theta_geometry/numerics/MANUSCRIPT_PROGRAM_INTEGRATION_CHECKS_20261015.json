@@ -1,0 +1,79 @@
+{
+  "schema": "inv21-manuscript-program-integration-checks-v1",
+  "date": "2026-10-15",
+  "prepared_for": "Edward Baker",
+  "llm_assistance": "Substantial",
+  "model": "gpt-6-astra",
+  "reasoning_effort": "ultra",
+  "configuration_source": "Actual current rollout turn_context",
+  "status": "PASS",
+  "fresh_exact_checks": [
+    {
+      "script": "numerics/check_remaining_strip_lemma.py",
+      "script_sha256": "17cc99d63cfb9b203af82f21fe0af6789e3f730ebdd57072305c830c24e0425a",
+      "checks": 97,
+      "status": "PASS",
+      "replay_output_sha256": "82d8976630c27c865bb3acb7d11e76f300a7eaf0d5b07888b20dc8053065a141",
+      "replay_output_bytes": 16551
+    },
+    {
+      "script": "numerics/check_hybrid_cutoff_lemma.py",
+      "script_sha256": "582c5ff42deabec1c59aae3a36c54e46d046840d7974d991132fcfdeccd6a05f",
+      "checks": 84,
+      "status": "PASS",
+      "replay_output_sha256": "b3a8bbb8a86bef1b7118b490ce171b14c16d27a7091ea21207240ed73c0e5f1b",
+      "replay_output_bytes": 11970
+    },
+    {
+      "script": "numerics/check_phase_controlled_delay_identities.py",
+      "script_sha256": "178024f85906add4739c8a92fd2d66d5b7ff3e33bf32bcf2b4f2d74e24c561dc",
+      "checks": 21,
+      "status": "PASS",
+      "replay_output_sha256": "bbf9a0d9eb61c2747922e4539e4c9578636b4c24e6233cfe97a5efc4858c0de7",
+      "replay_output_bytes": 3657
+    },
+    {
+      "script": "numerics/check_proportional_delay_identities.py",
+      "script_sha256": "6ac2e3e92e7a1030f3bb74c530eb72958ebdf11283d1771e3b37c048060a9dc3",
+      "checks": 20,
+      "status": "PASS",
+      "replay_output_sha256": "bc9a1a07c79f3301a6ddb43941bdf4e86f833fa01969560e49b19f863bfb5d41",
+      "replay_output_bytes": 2033
+    },
+    {
+      "script": "numerics/check_collision_behavior.py",
+      "script_sha256": "d54cd227f2be4a184e123105dec6f20fa798f5f85a96359d2c1304fb4efc5cd0",
+      "checks": 1072,
+      "status": "PASS",
+      "replay_output_sha256": "357b4678b5af650c7567e4bbc32d24e04d82d1dfd8f16649f3c1936ecfa00dc4",
+      "replay_output_bytes": 263
+    },
+    {
+      "script": "numerics/audit_fixed_cusp_band_extension.py",
+      "script_sha256": "d6be075e931b47ff97b81bc9e9464c113f03e96da0494d6dff0fb04153e7ade5",
+      "checks": 1321,
+      "status": "PASS",
+      "replay_output_sha256": "aebdd50ea2960a3559e9ce68c7401ef4b2be339d74e19a91354c6a7b2d49430e",
+      "replay_output_bytes": 312818
+    }
+  ],
+  "total_executed_assertions": 2615,
+  "collision_generic_jet_cases": 60,
+  "fixed_cusp_cells": 64,
+  "fixed_cusp_stationary_observations": 128,
+  "fixed_cusp_all_earlier_time_branch_cases": 16,
+  "limitations": "Executed assertions across six scripts, not a count of distinct theorems. These algebraic and recorded-cell audits do not establish the imported analytic estimates or new theta inequalities. No new interval quadrature was performed; independent 192-bit quadrature replays are documented in Review 19.",
+  "replay_location": "Temporary outputs outside the repository; reproduce using the named scripts and the parameters in Review 24.",
+  "manuscript_structure": {
+    "bytes": 187652,
+    "sha256": "7316eded0017b8da9f2641c6cc9207f26883fb5b87f3f11f4a7b5b178c831376",
+    "labels": 243,
+    "duplicate_labels": [],
+    "missing_refs": [],
+    "bibitems": 11,
+    "missing_cites": [],
+    "balanced_environments": true
+  },
+  "pdf_text_check": "No unresolved-reference markers",
+  "final_export_log": "No warnings, overfull boxes, or underfull boxes"
+}

@@ -1,6 +1,6 @@
 # Quaternion theta geometry and RH criteria
 
-14 October 2026. Prepared for Edward Baker with substantial LLM assistance.
+15 October 2026. Prepared for Edward Baker with substantial LLM assistance.
 Latest research continuation: **gpt-6-astra**, reasoning effort **ultra**.
 The integrated manuscript used **gpt-6-astra (Codex)**, effort **ultra**;
 earlier investigation setup and certificates also used **gpt-6.1-sol**.
@@ -31,14 +31,24 @@ retain the proposal's provenance. New quaternion research belongs here.
 
 ## Start here
 
+The [broader research overview](research-overview/RESEARCH_OVERVIEW_20261015.md)
+describes the program we are implementing and how its workstreams fit together.
+Specific workstream definitions and incremental notes live under
+[weighted outer remainders](notes/01_weighted_outer_remainders/README.md),
+[signed cusp control](notes/02_signed_cusp_control/README.md), and
+[effective bridging](notes/03_effective_bridge/README.md).
+The [current continuation](notes/00_research_coordination/34_MANUSCRIPT_PROGRAMS_AND_CONTINUATION_20261015.md)
+records manuscript integration, verification, and the next focused task.
+
+
 The [latest closed-strip extension](notes/32_CLOSED_STRIP_EXTENSION_AND_MIDDLE_BLOCK_LEMMA_20261014.md)
 proves full positivity and both signed cutoff estimates for theta>=61/24.
 It resolves the previously excluded boundary theta=8/3. The requested
 lower strip 5/2<=theta<61/24, including theta=5/2, remains open; a precise
 conditional middle-block lemma identifies a sufficient missing arithmetic
 estimate. [Review 23](reviews/23_CLOSED_STRIP_AND_MIDDLE_BLOCK_REVIEW_20261014.md)
-audits the proof and 97 exact checks. The finite cover through 112 and
-the manuscript are unchanged.
+audits the proof and 97 exact checks. The finite cover remains through 112;
+the manuscript now incorporates this closed-strip theorem.
 
 The [resume handoff](notes/26_CONTINUATION_AND_CHAT_HISTORY_HANDOFF_20261014.md)
 records the current results, validation, next signed arithmetic-block
@@ -65,22 +75,23 @@ delay with both comparison times positive fails global exact retained
 positivity. The new height-dependent rule repairs that outer mechanism.
 
 The [integrated manuscript](manuscript/quaternion_theta_geometry.tex) and
-its [39-page PDF](../../../../output/pdf/quaternion_theta_geometry.pdf)
-incorporate Notes 19–22. The
-[manuscript integration handoff](notes/23_MANUSCRIPT_INTEGRATION_AND_CROSS_TIME_CONTINUATION_20261014.md),
-[integration review](reviews/17_MANUSCRIPT_CONTINUATION_INTEGRATION_REVIEW_20261014.md),
-and [build record](manuscript/BUILD_RECORD.json) record that version's
-proof audit, 100 fresh exact checks, compilation, and visual inspection.
-The newer research in Notes 24–32 is saved separately and has not yet
-been integrated into that manuscript.
+its [59-page PDF](../../../../output/pdf/quaternion_theta_geometry.pdf)
+now incorporate the mathematical results of Notes 24–33 alongside the earlier
+material. The main asymptotic theorem includes the closed threshold 61/24;
+the finite certificate reaches 112. Collision expansions, logarithmic-loss
+rigidity, delay obstructions and comparisons, and signed cutoff transfers
+are included. The weighted-remainder, full-amplitude-cutoff, and small-energy
+statements retain their precise conditional hypotheses; no missing theta
+inequality or RH proof is asserted.
 
-The manuscript's main analytic theorem uses oscillatory blocks to prove uniform outer
-positivity at t log(|x|/(4 pi)) >= 3 + epsilon. A separate fully explicit
-threshold-five theorem uses |x| >= 4 pi exp(10^9). Exact paired integrals
-preserve all arithmetic and integration cross terms. The manuscript also
-contains the auxiliary signed-curvature identity, the direct product
-absorption criterion, and complete proofs of the sharp-endpoint and finite
-rational-jet closure obstructions.
+[Integration Review 24](reviews/24_MANUSCRIPT_PROGRAM_INTEGRATION_REVIEW_20261015.md),
+the [build record](manuscript/BUILD_RECORD.json), and the
+[check receipt](numerics/MANUSCRIPT_PROGRAM_INTEGRATION_CHECKS_20261015.json)
+record 2,615 fresh exact checks, successful compilation, and visual inspection
+of all 59 pages. No new quadrature or finite height coverage was added in
+this integration. The previous 39-page version and its 100-check audit remain
+documented by [Review 17](reviews/17_MANUSCRIPT_CONTINUATION_INTEGRATION_REVIEW_20261014.md)
+and [Note 23](notes/23_MANUSCRIPT_INTEGRATION_AND_CROSS_TIME_CONTINUATION_20261014.md).
 
 **14 October 2026 preceding research update.**
 [Note 31](notes/31_SIGNED_CUTOFF_LEMMA_AND_THRESHOLD_EIGHT_THIRDS_20261014.md)
