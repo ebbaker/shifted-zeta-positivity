@@ -1,7 +1,7 @@
 # Quaternion theta geometry and RH criteria
 
 14 October 2026. Prepared for Edward Baker with substantial LLM assistance.
-Latest research continuation: **gpt-6.1-sol**, reasoning effort **ultra**.
+Latest research continuation: **gpt-6-astra**, reasoning effort **ultra**.
 The integrated manuscript used **gpt-6-astra (Codex)**, effort **ultra**;
 earlier investigation setup and certificates also used **gpt-6.1-sol**.
 
@@ -18,8 +18,8 @@ even where the previous uniform residual-cone enclosure is unresolved.
 The current continuation proves an outer comparison for a height-dependent
 delay and a full earlier-time comparison on both new finite branches.
 Oscillatory block cancellation now proves both Laguerre forms positive
-at sufficiently large heights whenever t log(|x|/(4 pi))>=3+epsilon,
-for each fixed epsilon>0. A separate fully explicit bound applies at
+at sufficiently large heights whenever t log(|x|/(4 pi))>=61/24,
+including that boundary, with an unevaluated height cutoff. A separate fully explicit bound applies at
 |x|>=4 pi exp(10^9) with t log(|x|/(4 pi))>=5. The finite transition
 strip and inner small-time region remain open.
 
@@ -30,6 +30,15 @@ and [original handoff](../20_constrained_operator_squares/brainstorm/03_QUATERNI
 retain the proposal's provenance. New quaternion research belongs here.
 
 ## Start here
+
+The [latest closed-strip extension](notes/32_CLOSED_STRIP_EXTENSION_AND_MIDDLE_BLOCK_LEMMA_20261014.md)
+proves full positivity and both signed cutoff estimates for theta>=61/24.
+It resolves the previously excluded boundary theta=8/3. The requested
+lower strip 5/2<=theta<61/24, including theta=5/2, remains open; a precise
+conditional middle-block lemma identifies a sufficient missing arithmetic
+estimate. [Review 23](reviews/23_CLOSED_STRIP_AND_MIDDLE_BLOCK_REVIEW_20261014.md)
+audits the proof and 97 exact checks. The finite cover through 112 and
+the manuscript are unchanged.
 
 The [resume handoff](notes/26_CONTINUATION_AND_CHAT_HISTORY_HANDOFF_20261014.md)
 records the current results, validation, next signed arithmetic-block
@@ -62,16 +71,29 @@ incorporate Notes 19–22. The
 [integration review](reviews/17_MANUSCRIPT_CONTINUATION_INTEGRATION_REVIEW_20261014.md),
 and [build record](manuscript/BUILD_RECORD.json) record that version's
 proof audit, 100 fresh exact checks, compilation, and visual inspection.
-The newer research in Notes 24–25 is saved separately and has not yet
+The newer research in Notes 24–32 is saved separately and has not yet
 been integrated into that manuscript.
 
-The main analytic theorem uses oscillatory blocks to prove uniform outer
+The manuscript's main analytic theorem uses oscillatory blocks to prove uniform outer
 positivity at t log(|x|/(4 pi)) >= 3 + epsilon. A separate fully explicit
 threshold-five theorem uses |x| >= 4 pi exp(10^9). Exact paired integrals
 preserve all arithmetic and integration cross terms. The manuscript also
 contains the auxiliary signed-curvature identity, the direct product
 absorption criterion, and complete proofs of the sharp-endpoint and finite
 rational-jet closure obstructions.
+
+**14 October 2026 preceding research update.**
+[Note 31](notes/31_SIGNED_CUTOFF_LEMMA_AND_THRESHOLD_EIGHT_THIRDS_20261014.md)
+lowers the sufficient asymptotic threshold to **8/3 + epsilon**, with an
+unevaluated height cutoff, using complete hybrid arithmetic block bounds.
+It proves the recommended signed cutoff lemma on that new subdomain,
+including an explicit Gaussian pair-tail allowance. Note 32 now extends
+this result to the closed threshold 61/24; the lower strip beginning at
+theta=5/2, the smaller cusp, and the finite bridge remain open.
+[Review 22](reviews/22_SIGNED_CUTOFF_AND_THRESHOLD_EIGHT_THIRDS_REVIEW_20261014.md)
+separates the analytic argument from 84 exact rational checks. No finite
+height extension or manuscript revision is included. Prepared for Edward
+Baker with substantial LLM assistance; recorded gpt-6-astra, effort ultra.
 
 [Note 22](notes/22_PROPER_SOURCE_FILTERS_AND_THETA_CORRELATIONS_20261014.md)
 certifies a proper two-index split absorbing an adverse complement on both

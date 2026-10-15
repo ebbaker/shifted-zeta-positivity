@@ -26,6 +26,18 @@ height 100, derives guarded stationary-branch continuation and arbitrary-height
 contour error payments, and specifies the remaining normalized signed target. Its actual thread id
 and original source timestamps are preserved by the shared recorder.
 
+The collision and logarithmic-loss continuation,
+[Continue collision and logarithmic loss…](0010_2026-10-15T03-03-19Z_continue-collision-and-logarithmic-loss.json),
+is newly registered here as number 10, thread
+`01a13d83-a46b-74f0-bb7c-121d159a60a0`. Its recorded configuration is
+**gpt-6-astra**, reasoning effort **ultra**, verified from its own source
+metadata on 14 October 2026. It continues Note 29 and develops
+[Note 30](../notes/30_THETA_SIGNED_CUTOFFS_AND_ANALYTIC_LOG_LOSS_20261014.md).
+The preceding conversation remains archive 11 in the formal replay folder;
+that reference history is not this chat's identity. This paragraph was
+prepared for Edward Baker with substantial LLM assistance using the
+new chat's recorded configuration.
+
 [index.json](index.json) gives current capture times, counts, sizes, hashes
 and recorded model configurations. The source capture contains completed
 public user and assistant text, including commentary. It excludes private

@@ -234,3 +234,47 @@ Recorded model: **gpt-6.1-sol (Codex)**; reasoning effort: **ultra**.
   records 21 identities, 1,321 exact checks, and two fresh quadrature replays.
   No manuscript revision, snapshot folder, commit, or tag. Substantial
   LLM assistance, **gpt-6.1-sol**, effort **ultra**.
+
+- **14 October 2026 — Investigation 21: collision scales and logarithmic energy losses.**
+  Working-tree [Note 28](notes/28_COLLISION_SCALES_AND_DELAYED_COMPARISONS_20261014.md), continuing commit `d48a69cc0f1761f52ff190e256cccc6ba9e403d7`.
+  Refines conditional collision asymptotics, identifies stronger canceling
+  delay poles, and proves a sufficient logarithmic-loss criterion without
+  a new theta estimate. [Review 20](reviews/20_COLLISION_BEHAVIOR_AND_LOGARITHMIC_LOSS_REVIEW_20261014.md) records independent
+  analytic review and 1,072 exact checks with byte-identical replay.
+  No manuscript revision, snapshot, commit or tag; substantial LLM
+  assistance, **gpt-6-astra**, effort **ultra**.
+
+- **14 October 2026 — Analytic logarithmic loss and theta cutoff targets.**
+  [Note 30](notes/30_THETA_SIGNED_CUTOFFS_AND_ANALYTIC_LOG_LOSS_20261014.md)
+  proves local qualitative equivalence of finite logarithmic and bounded
+  relative losses on analytic stationary germs, and a conditional
+  polynomial-cutoff-to-logarithmic-loss transfer. Compares actual paired
+  arithmetic, cumulative moments, and outer carrier improvements; the
+  signed theta cutoff bound remains open. [Review 21](reviews/21_THETA_SIGNED_CUTOFF_AND_LOG_LOSS_REVIEW_20261014.md)
+  records internal analytic checks. No new numerical coverage or manuscript
+  revision. Prepared for Edward Baker with substantial LLM assistance;
+  recorded **gpt-6-astra**, effort **ultra**.
+
+- **14 October 2026 — Signed cutoff lemma and outer threshold eight thirds.**
+  [Note 31](notes/31_SIGNED_CUTOFF_LEMMA_AND_THRESHOLD_EIGHT_THIRDS_20261014.md)
+  proves both full Laguerre signs for theta>=8/3+epsilon at sufficiently
+  large height and the requested cutoff estimate on that new subdomain.
+  Complete pair tails give a zero-energy-loss version with Gaussian
+  remainder; an independent carrier envelope supplies the exact locally
+  bounded coefficient. [Review 22](reviews/22_SIGNED_CUTOFF_AND_THRESHOLD_EIGHT_THIRDS_REVIEW_20261014.md)
+  audits the proof and 84 exact checks. Height cutoff unevaluated; lower
+  strip and inner cusp open. No new finite certificate, manuscript revision,
+  snapshot, commit, or tag. Prepared for Edward Baker with substantial LLM
+  assistance; recorded **gpt-6-astra**, effort **ultra**.
+
+- **14 October 2026 — Closed-strip extension and precise middle-block target.**
+  [Note 32](notes/32_CLOSED_STRIP_EXTENSION_AND_MIDDLE_BLOCK_LEMMA_20261014.md)
+  proves full signs and signed cutoff bounds for theta>=61/24, including
+  that endpoint and the former boundary 8/3. The interval
+  5/2<=theta<61/24 remains open. A conditional lemma reduces the full
+  requested closed strip to a specified middle-block saving, which is not
+  proved. [Review 23](reviews/23_CLOSED_STRIP_AND_MIDDLE_BLOCK_REVIEW_20261014.md)
+  audits the proof and 97 exact rational checks. Unevaluated height cutoff;
+  no finite certificate extension, manuscript revision, snapshot, commit,
+  or tag. Prepared for Edward Baker with substantial LLM assistance;
+  recorded **gpt-6-astra**, effort **ultra**.
