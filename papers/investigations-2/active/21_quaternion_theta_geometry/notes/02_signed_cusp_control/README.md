@@ -28,3 +28,11 @@ status: active
 - [Note 33](../33_RESEARCH_PRIORITIES_WEIGHTED_REMAINDERS_AND_SIGNED_CUSP_20261014.md)
 
 These links tag existing notes without moving or duplicating them. Place new incremental research for PR02 in this folder, using dated descriptive filenames and the research_program metadata field. Cross-program handoffs belong in [research coordination](../00_research_coordination/README.md). Computations and reviews retain their dedicated investigation folders.
+
+## Subpower cutoff transfer
+
+[Note 44](44_SUBPOWER_CUTOFF_TRANSFER_AND_ANALYTIC_RIGIDITY_20261015.md) extends the conditional signed all-cutoff transfer to costs N^p exp[a(log N)^2], with Gaussian tails and source-prescribed locally bounded coefficients. The transferred subpower gauge still contradicts every finite analytic predecessor pole and is locally rigid on semianalytic stationary germs. No source estimate satisfying the premise is proved. Updated 15 October 2026 for Edward Baker with substantial LLM assistance, **gpt-6.1-sol**, effort **ultra**.
+
+## Oriented boundary signed target
+
+[Note 46](46_OCTONIONIC_BOUNDARY_CURRENT_AND_SIGNED_CUTOFF_TARGET_20261015.md) proves a pointwise signed bound with an explicit boundary negative-mass defect, together with exact holomorphic staircase and Gaussian-circle payments. Its energy-relative signed theta premise remains open. The [analytic continuation](../00_research_coordination/49_OCTONIONIC_SIGNED_BOUND_ANALYTIC_CONTINUATION_20261015.md) prioritizes that premise, with no numerical pilot. Updated 15 October 2026 for Edward Baker with substantial LLM assistance, **gpt-6.1-sol**, effort **ultra**.

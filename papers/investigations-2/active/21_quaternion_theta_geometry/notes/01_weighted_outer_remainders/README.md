@@ -25,3 +25,7 @@ These links tag existing notes without moving or duplicating them. Place new inc
 ## Convex dyadic refinement
 
 [Note 39](39_CONVEX_DYADIC_WEIGHTED_REMAINDER_AUDIT_20261015.md) removes one log-height factor from the existing high-index remainder using convexity and an explicit geometric summation factor below 1435. The imported constants and effective starting height remain unevaluated; the sign domain is unchanged. It also audits the precise obstruction interval for the five existing majorants at theta five halves.
+
+## Explicit elementary constant package
+
+[Note 43](43_EXPLICIT_WEIGHTED_REMAINDER_CONSTANT_PACKAGE_20261015.md) gives conservative numerical disc thresholds, a fully explicit low-index term, surviving saving above 1/14000, complete Riemann–Siegel error budgets, and an analytic four-jet replacement allowance. The actual five maximal-interval constants remain unevaluated, as does the separate carrier-to-phase derivative budget. No full sign height or new theta domain follows. Updated 15 October 2026 for Edward Baker with substantial LLM assistance, **gpt-6.1-sol**, effort **ultra**.

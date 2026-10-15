@@ -91,3 +91,9 @@ task. Its [verification receipt](../../active/21_quaternion_theta_geometry/revie
 checks the point-in-time archive against completed public source text,
 including both preceding final replies. No relocation or re-registration
 was performed; the registry supplies current capture counts and hashes.
+
+## Poisson continuation, history 15
+
+Under the explicit local standing instruction, [Continue Poisson obstruction study](0015_2026-10-15T05-32-27Z_continue-poisson-obstruction-study.json), thread `01a13e0c-2b80-7b31-ade4-993b86d44259`, is registered here as number 15. It continues [investigation 21 Note 41](../../active/21_quaternion_theta_geometry/notes/00_research_coordination/41_POISSON_OBSTRUCTION_AND_REMAINDER_CONTINUATION_20261015.md) with [Notes 42–45](../../active/21_quaternion_theta_geometry/notes/00_research_coordination/45_LOCALIZED_POISSON_AND_CONSTANT_PACKAGE_CONTINUATION_20261015.md). Earlier histories 13 and 14 keep their identities. The live registry supplies current provenance, counts, capture times and hashes. Added 15 October 2026 for Edward Baker with substantial LLM assistance, **gpt-6.1-sol**, effort **ultra**.
+
+The same history-15 conversation next pursued the analytic octonionic signed-bound request, documented in [investigation 21 Note 49](../../active/21_quaternion_theta_geometry/notes/00_research_coordination/49_OCTONIONIC_SIGNED_BOUND_ANALYTIC_CONTINUATION_20261015.md). Its existing identity and first-capture provenance remain unchanged. Updated 15 October 2026 for Edward Baker with substantial LLM assistance, **gpt-6.1-sol**, effort **ultra**.

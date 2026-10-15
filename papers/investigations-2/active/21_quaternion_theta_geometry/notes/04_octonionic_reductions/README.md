@@ -22,3 +22,7 @@ This supporting lane records exact algebra that simplifies the physical signed o
 Accept a representation change only with explicit multiplication/operator conventions, proof of the physical trace and time identities, and an account of what changes off the physical slice. A simplification must not replace the oriented coefficient by an absolute value or the first-pair energy by the total four-jet norm.
 
 Future work with boundary operators, triality or exceptional lifts needs a declared improvement to a source estimate before expansion. New numerical work stays in `numerics/`; independent assessments stay in `reviews/`. Coordination belongs in [COORD](../00_research_coordination/README.md).
+
+## Oriented signed-current estimates
+
+[Note 47](47_ORIENTED_CURRENT_AND_ACCRETIVE_SOURCE_CERTIFICATES_20261015.md) proves a sharp unconditional spatially averaged signed-energy bound, extracts arbitrary skew-angular heat motion, and specifies branch-specific accretive source certificates. The localization cost prevents a pointwise conclusion. [Note 46](../02_signed_cusp_control/46_OCTONIONIC_BOUNDARY_CURRENT_AND_SIGNED_CUTOFF_TARGET_20261015.md) supplies the complementary boundary target; [Note 48](../05_theta_correlation_kernels/48_E8_CHARACTER_PROJECTION_AND_SIGNED_HEAT_SECTORS_20261015.md) gives an exact E8-character bridge and its sign limits. Updated 15 October 2026 for Edward Baker with substantial LLM assistance, **gpt-6.1-sol**, effort **ultra**; no numerical work.

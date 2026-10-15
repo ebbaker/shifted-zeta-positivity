@@ -319,3 +319,7 @@ asymptotic coverage, and the unbounded inner cusp remains open.
 - [Fixed-theta baseline driver](certify_theta_stationary_baseline.py) and [receipt](THETA_STATIONARY_BASELINE_20261015.json): six fresh unique full-stationary roots in their final brackets, all with positive signed products at theta 1/2, 3/4, and 1. Complete source and transport errors are paid. No new sign domain or Poisson-mechanism validation.
 
 Prepared for Edward Baker with substantial LLM assistance, **gpt-6-astra**, effort **ultra**. [Review 27](../reviews/27_POISSON_OBSTRUCTION_AND_WEIGHTED_REMAINDER_REVIEW_20261015.md) records the proof and computation boundaries.
+
+## Localized Poisson and explicit weighted budgets, 15 October 2026
+
+Prepared for Edward Baker with substantial LLM assistance; **gpt-6.1-sol**, effort **ultra**. `check_poisson_mode_cutoff_obstructions.py` records 260 exact assertions in `POISSON_MODE_CUTOFF_OBSTRUCTIONS_20261015.json`; `check_explicit_weighted_budget.py` records 50 exact assertions in `EXPLICIT_WEIGHTED_BUDGET_CHECKS_20261015.json`. Both use the Python standard library and accept `--output /tmp/replay.json`. Independent replay is byte-identical. These are finite algebraic audits, not stationary-root or sign certificates. `LOCALIZED_POISSON_CONTINUATION_VALIDATION_20261015.json` records final hashes, links, sizes, manuscript identity, and scope.

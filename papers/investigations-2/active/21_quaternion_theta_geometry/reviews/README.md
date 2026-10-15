@@ -185,3 +185,7 @@ for Edward Baker with substantial LLM assistance, **gpt-6.1-sol**, **ultra**.
     fixed-theta full stationary roots. Sign domains remain unchanged.
     Prepared 15 October 2026 for Edward Baker with substantial LLM assistance,
     **gpt-6-astra**, effort **ultra**.
+
+The [localized Poisson and effective-budget review](28_LOCALIZED_POISSON_AND_EFFECTIVE_BUDGET_REVIEW_20261015.md) audits Notes 42–44, independent replay of 260 and 50 exact assertions, and the separation of integrable identities, conditional transfers, and still unproved signed-energy control. Added 15 October 2026 for Edward Baker with substantial LLM assistance, **gpt-6.1-sol**, effort **ultra**.
+
+The [octonionic signed-bound analytic review](29_OCTONIONIC_SIGNED_BOUND_ANALYTIC_REVIEW_20261015.md) checks Notes 46–48, the sharp averaged theorem, exact boundary/current and original-cutoff payment, finite E8 projection, and the unresolved signed-energy premise. Added 15 October 2026 for Edward Baker with substantial LLM assistance, **gpt-6.1-sol**, effort **ultra**. No numerical pilot or checker is presented as proof.
