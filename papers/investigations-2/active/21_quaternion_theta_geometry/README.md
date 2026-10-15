@@ -32,3 +32,17 @@ Follow the repository [research instructions](../../../../AGENTS.md), [history w
 ## Subsequent research continuation
 
 [Notes 56–59](notes/00_research_coordination/59_PRIMITIVE_CONTROLS_AND_COMPLETED_PHASE_BUDGET_CONTINUATION_20261015.md) add a primitive-compatible collision control, quantify circle negative-mass overpayment, and complete the explicit carrier-to-phase budget at 409/L. [Review 33](reviews/33_PRIMITIVE_CIRCLE_AND_CARRIER_CONTINUATION_REVIEW_20261015.md) records the independent internal checks. The imported exponent-pair constants and theta stationary estimate remain open; these results are not yet incorporated into the stable manuscript. This continuation preserves formal-replay history **17** under the explicit local instruction. Updated 15 October 2026 for Edward Baker with substantial LLM assistance, **gpt-6-astra**, effort **ultra**.
+
+## Dedicated manifold continuation, 15 October 2026
+
+At the author's request, the manifold and connection direction now has its own
+[Investigation 22](../22_theta_manifold_geometry/README.md), with a systematic
+[manuscript](../22_theta_manifold_geometry/manuscript/theta_manifold_geometry.tex)
+and a high-level
+[research overview](../22_theta_manifold_geometry/research-overview/RESEARCH_OVERVIEW_20261015.md).
+Notes 60–63 remain the provenance for this branch. The present manuscript,
+source documents and established analytic results stay here. The new project
+adds the covariant theta-source formula and an explicit abelian ASD connection;
+the theta-specific signed estimate remains open.
+Prepared for Edward Baker with substantial LLM assistance, **gpt-6-astra**,
+reasoning effort **ultra**.

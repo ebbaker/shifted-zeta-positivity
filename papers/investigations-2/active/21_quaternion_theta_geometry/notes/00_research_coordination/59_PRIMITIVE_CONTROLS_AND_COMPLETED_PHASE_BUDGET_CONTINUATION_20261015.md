@@ -69,3 +69,14 @@ The established height-112 certificate, closed outer threshold \(61/24\) with un
 ## Research history
 
 This conversation is registered once in the explicitly authorized formal replay lane as history **17**, **Continue quaternion theta geometry**, thread `01a13f10-8044-7ec1-9c35-59e518f5243c`. Its source creation time and original archive identity are preserved. The live registry, rather than this handoff, supplies evolving message counts and hashes. The final reply is captured only after it is emitted, using the bounded exact-turn follow-up; native completion-hook activation has not been verified.
+
+### Later destination update, 15 October 2026
+
+The preceding paragraph records the original registration. At the author's
+subsequent explicit request, this same history 17 was relocated to
+[Investigation 22](../../../22_theta_manifold_geometry/chat-histories/README.md).
+Its original identity and all prior public messages were preserved; the
+[transfer receipt](../../../22_theta_manifold_geometry/CHAT_HISTORY_RELOCATION_20261015.json)
+records the checks. The formal replay folder now contains a historical pointer.
+Prepared for Edward Baker with substantial LLM assistance, **gpt-6-astra**,
+reasoning effort **ultra**.

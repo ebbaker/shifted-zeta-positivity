@@ -4,7 +4,7 @@
 Consolidation: `gpt-6-astra` (Codex), reasoning effort **ultra**.
 
 The [accepted closure review](../brainstorm/reviews/PORTFOLIO_CLOSURE_REVIEW_CODEX_20261013.md)
-has been implemented. These **12 program homes** include new investigations, completed
+has been implemented. These **13 program homes** include new investigations, completed
 bounded trials, paused programs, downstream targets, tools and reading.
 On 14 October 2026, the author requested the new
 [operator-square investigation 20](20_constrained_operator_squares/README.md),
@@ -18,6 +18,12 @@ The [14 October execution](../brainstorm/reviews/MATCHED_01_18_AND_19_RESULTS_CO
 completed the matched 01/18 pilot and 19's fixed outward witness. This
 status update was prepared for Edward Baker with LLM assistance by
 `gpt-6-astra`, reasoning effort **ultra**.
+On 15 October 2026, the author separated the manifold and connection direction into
+[investigation 22](22_theta_manifold_geometry/README.md), with a systematic
+manuscript and a [high-level research sequence](22_theta_manifold_geometry/research-overview/RESEARCH_OVERVIEW_20261015.md).
+The initial construction includes a covariant theta source and an abelian ASD
+connection; the theta-specific turning estimate remains open. Setup: prepared
+for Edward Baker with LLM assistance by `gpt-6-astra`, effort **ultra**.
 Nine former active folders are preserved in [inactive](../inactive/README.md).
 No completed result has been discarded, and dormant status is not a no-go
 theorem.
@@ -36,6 +42,7 @@ theorem.
 | [19 Euler-factor controls](19_euler_factor_controls/README.md) | Shared control screen; fixed witness complete; manuscript drafted | Certified `Lambda_(1/2,41)>0.2`; the [manuscript](19_euler_factor_controls/manuscript/euler_factor_controls.tex) extends this to every prime `p<=41` and adds an asymptotic lower bound. Next: independent review of the manuscript. Further control work must address a named hypothesis or domain; preserve local/global collision distinctions. |
 | [20 Constrained operator squares](20_constrained_operator_squares/README.md) | Active at the author's request; general operator method and quantum-energy application | Derive useful residual bounds for approximate quantum trajectories and a source-specific constrained square for the physical stationary Laguerre forms. The dedicated quaternion continuation is in 21. |
 | [21 Quaternion theta geometry](21_quaternion_theta_geometry/README.md) | Active at the author's request; quaternion branch promoted from 20 | Derive one theta-specific signed current or boundary identity controlling both stationary Laguerre forms or a locally bounded loss; keep whole-plane scalar curvature as a separately declared alternative. |
+| [22 Theta manifold geometry](22_theta_manifold_geometry/README.md) | Active at the author's request; manifold and connection direction separated from 21 | Derive a complete source-to-physical signed identity from the theta connection, then control positive turning uniformly near possible collisions. Local hyperkähler and ASD constructions are established; the theta estimate remains open. |
 
 ## Consolidated work and its principal homes
 

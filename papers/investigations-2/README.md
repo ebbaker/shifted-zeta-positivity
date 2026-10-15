@@ -4,7 +4,7 @@
 Consolidation: `gpt-6-astra` (Codex), reasoning effort **ultra**.
 
 The [accepted closure review](brainstorm/reviews/PORTFOLIO_CLOSURE_REVIEW_CODEX_20261013.md)
-is now implemented. The [active index](active/README.md) contains **12
+is now implemented. The [active index](active/README.md) contains **13
 program homes**, including paused programs, destinations and tools.
 The [inactive index](inactive/README.md) contains **14 folders**: five older
 investigations and nine newly consolidated, completed or dormant programs.
@@ -46,6 +46,17 @@ spectral-curvature alternative; its first task is a theta-specific
 signed identity or a scoped operator obstruction. Setup: prepared for
 Edward Baker with LLM assistance by `gpt-6.1-sol` (Codex), effort **ultra**.
 
+On 15 October 2026, the author opened
+[22 Theta manifold geometry](active/22_theta_manifold_geometry/README.md)
+for the manifold and connection direction. Its
+[initial manuscript](active/22_theta_manifold_geometry/manuscript/theta_manifold_geometry.tex)
+develops signed forms, physical jet surfaces, oriented turning and an
+explicit theta-bundle ASD connection. Its
+[research overview](active/22_theta_manifold_geometry/research-overview/RESEARCH_OVERVIEW_20261015.md)
+sets the remaining source-to-physical estimate as the central objective.
+Prepared for Edward Baker with substantial LLM assistance by `gpt-6-astra`,
+reasoning effort **ultra**. This adds no new theta sign region or RH conclusion.
+
 ## Completed results and retained obligations
 
 - The [angular continuation](active/02_angular_jacobi_gluing/reviews/CONTINUATION_AND_BRAINSTORM_BRIEF_20261013.md)
@@ -84,7 +95,7 @@ those records describe their original capture; they are not rewritten.
 
 ```text
 investigations-2/
-  active/                       12 program homes
+  active/                       13 program homes
   inactive/                     14 merged, completed or dormant folders
   brainstorm/                   shared planning, reviews and milestones
   formal_replay_crosswalk/       retained audit and this chat history

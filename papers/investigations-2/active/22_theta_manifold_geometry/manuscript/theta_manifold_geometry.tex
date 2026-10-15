@@ -1,0 +1,2400 @@
+\documentclass[11pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage[margin=1in]{geometry}
+\usepackage{booktabs,array,longtable,enumitem}
+\usepackage{microtype}
+\usepackage[colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue]{hyperref}
+\hypersetup{pdftitle={Theta manifold geometry and signed heat-flow collision control},pdfauthor={Drafted for Edward Baker},pdfsubject={Starting-energy chord exclusion, arithmetic rigidity, complete theta correlations and jet geometry}}
+\allowdisplaybreaks
+\setlength{\emergencystretch}{2em}
+\numberwithin{equation}{section}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{classicalinput}[theorem]{Classical input}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\newcommand{\R}{\mathbb R}
+\newcommand{\C}{\mathbb C}
+\newcommand{\Lag}{\mathcal L}
+\newcommand{\dd}{\,d}
+\newcommand{\Ephys}{E}
+\newcommand{\researchnote}[2]{\href{../../papers/investigations-2/active/22_theta_manifold_geometry/#1}{#2}}
+\title{Theta manifold geometry and\\signed heat-flow collision control}
+\author{Drafted for Edward Baker}
+\date{Research manuscript --- 15 October 2026}
+\begin{document}
+\maketitle
+\begin{abstract}
+We study the collision detector $E=H^2+H_x^2$ for the complete theta
+heat flow through signed jet geometry and arithmetic source identities.
+Every finite collision forces a negative two-point chord of order
+$\sqrt{E}$ at its stationary predecessor and a fixed nearby endpoint.
+Consequently a source-prescribed lower bound with error $o(\sqrt E)$,
+uniform on the required short intervals, excludes all finite collision
+multiplicities. The exponent $1/2$ is sharp for arbitrary power-law
+allowances. An all-cutoff estimate transfers to this criterion even with
+Gaussian cutoff growth when its rate is strictly below the tail rate.
+We give complete signed correlation formulas, including primitive
+endpoints and transverse theta-jet commutators, in an explicit curved
+elliptic-family geometry. A validated weighted-square collision shows
+that support positivity and the first source endpoint are insufficient;
+full modular reflection instead forces the theta coefficients, without
+by itself proving the needed sign. Holomorphic jet surfaces and their
+real Gauss maps explain the collision concentration. The remaining
+problem is a theta-specific chord estimate with full domain coverage.
+No new global theta sign bound or proof of RH is claimed.
+\end{abstract}
+\setcounter{tocdepth}{2}
+\tableofcontents
+
+\section{The geometric problem and the program}\label{intro:section}
+
+The theta heat flow presents a tension between positive source data and
+a signed spectral observation.  The complete source is positive and has
+very rapid decay, but its oscillatory transform can have small first
+jets.  The physical collision detector is
+\[
+ E(t,x)=H(t,x)^2+H_x(t,x)^2.
+\]
+The research objective is to exclude $E=0$ at finite positive heat time
+on the full real spectral line.  The established de Bruijn--Newman
+framework supplies the relation to RH, stated with its domain
+requirements below.  This paper develops the differential geometry of
+that objective; it does not prove the missing theta-specific estimate.
+
+There are two natural manifolds.  On the physical side, a primitive
+$P_z=H$ gives a holomorphic surface
+$X_t(z,w)=(P(t,z),H(t,z),w)$ whose induced metric contains the complex
+first-jet energy as a coefficient.  Its regular locus is a K\"ahler
+manifold; a common zero of $H$ and $H_z$ is a branch event for the
+parametrization.  The real projective tangent direction retains the
+signed Laguerre quantity through
+\[
+ \partial_x\arg(H+iH_x)=-\frac{H_x^2-HH_{xx}}{E}.
+\]
+The associated two-point observation is
+\[
+ \mathcal C_j(t;x,y)=h_j(t,x)\{h_j(t,y)-h_{j+1}(t,y)\},
+ \qquad h_j=\partial_x^jH,\quad j=0,1.
+\]
+At a full stationary start $h_{j+1}(t,x)=0$, on an interval with
+$h_j\ne0$, its nonnegativity is precisely a $\pi/4$ upper bound on
+the rightward projective turning. More usefully, every collision forces
+$\mathcal C_j/\sqrt{E(t,x)}$ to approach a strictly negative constant
+at a fixed nearby endpoint. A lower bound with error
+$o(\sqrt{E(t,x)})$ therefore suffices across all finite multiplicities.
+The energy is evaluated at the starting point on both parity branches.
+
+On the source side, the actual theta kernel is a covariant derivative
+expression in a degree-one line bundle over a curved elliptic family.
+The complete two-source transform retains its spectral phases, positive
+heat multiplier, transverse jet corrections and primitive endpoints.
+Its directly restricted connection is flat, so curvature alone adds no
+new tangential sign. The arithmetic question is sharper: which coupling
+of the theta coefficients can control this complete signed observation?
+A positive weighted-square source can collide while retaining the first
+source endpoint; full modular reflection excludes those free weights
+by forcing the theta coefficients. Turning this rigidity into an
+inequality remains open.
+
+\subsection{Results and their logical status}
+The principal results and the remaining candidate are as follows.
+\begin{enumerate}[leftmargin=*,itemsep=3pt]
+ \item An all-multiplicity fixed-endpoint chord theorem gives conditional
+ collision exclusion from an $o(\sqrt E)$ starting-energy error.
+ The threshold exponent is sharp. The inner and parabolic heat profiles
+ explain the same positive turning concentration at shrinking scales.
+ \item A uniform all-cutoff estimate with cost $\exp(aN^\beta)$ and
+ Gaussian tail transfers to exclusion for $\beta<2$. For the chord,
+ $\beta=2$ also works under a strict local gap between the growth and
+ tail rates, with the integer-rounding loss retained.
+ \item Exact complete-source formulas express the chord and stationary
+ Laguerre observations in both covariant theta jets and primitive
+ variables. The affine endpoint terms and the distinction between
+ flat path restriction and transverse differentiation are explicit.
+ \item A validated non-theta weighted-square collision rejects support
+ positivity and the first endpoint as sufficient hypotheses. An analytic
+ reflection-rigidity theorem identifies a stronger coefficient coupling
+ that any successful arithmetic mechanism may use.
+ \item Signed Hodge identities, holomorphic jet surfaces and calibrated
+ inclusions give the geometric setting. A nonflat semi-flat
+ hyperk\"ahler metric and an abelian ASD theta connection are constructed;
+ the latter's base metric freedom removes its displayed physical-path
+ growth without producing the missing sign estimate.
+\end{enumerate}
+The strongest prospective route is a complete signed chord bound using
+coefficient coupling, with a remainder paid by the cutoff-transfer
+theorem. No such theta bound is proved here. The analytic exclusion
+theorems are conditional; the weighted-square result concerns a control
+source; the finite checks validate specified calculations. These roles
+must not be conflated with a new theta sign domain or a proof of RH.
+We make no novelty claim for the standard geometric constructions.
+
+\subsection{Relation to the preceding investigation}
+This investigation separates the manifold and connection direction
+from the broader signed-theta program in \cite{BakerTheta}.
+The preceding manuscript develops complete-source correlations,
+cutoff accounting, outer-region estimates and finite certificates.
+Its self-dual construction and its later manifold notes are the starting
+point of the present narrative.  The outer estimates and certificates
+retain their original statements and verification records; they are not
+reproved or used as a replacement for the missing global geometric
+estimate here.
+
+The author's exploratory quaternion-form notes of January and February
+2014 \cite{BakerQuaternion} motivate preserving a signed, oriented
+pairing.  We build the required identities directly and state their
+boundary hypotheses.  The new line-bundle construction is abelian and
+has an explicit connection and curvature; it invokes no unproved
+general nonabelian boundary formula.
+
+Throughout, a regular jet interval means an interval on which the
+particular pair defining the angle is nowhere zero.  Source-prescribed
+constants or moduli must be derived from the complete theta data and
+remain uniform through neighborhoods of hypothetical collisions.  A
+constant chosen retrospectively from an observed positive energy floor
+does not provide such an estimate.
+
+\subsection{Conventions}
+All metrics are real Riemannian metrics.  We use
+$|dz|^2=dx^2+dy^2$ and the K\"ahler form
+$(i/2)\,dz\wedge d\overline z$.  The physical time $t$ is an external
+parameter for the four-dimensional exterior derivatives.  It is
+distinct from the elliptic modulus $\tau$, whose imaginary part is
+positive.  Hodge signs refer to the orientation stated in each
+construction.  For a Hermitian holomorphic line bundle in a holomorphic
+frame with squared norm $h$, we use the Chern connection
+$\nabla= d+\partial\log h$ and curvature
+$F_\nabla=\overline\partial\partial\log h$; a frame change transforms
+the local connection in the usual way.
+% Prepared for Edward Baker, 15 October 2026.
+% Substantial LLM assistance: coordinating gpt-6-astra, effort ultra,
+% verified and supplied by the parent session. Independently review before use.
+
+\section{The physical heat field and its collision obstruction}
+\label{phy:physical-field}
+
+The geometric constructions in this paper must retain a specified physical
+observation.  We first fix that observation and prove the local analytic
+facts used later.  The conclusions in this section about arbitrary analytic
+heat fields are local theorems.  Their implication for the Riemann hypothesis
+uses an explicitly identified earlier theorem for the complete theta source.
+
+For real $u\ge0$, define
+\begin{align}
+ \Phi(u)&=\sum_{n\ge1}
+  (2\pi^2n^4e^{9u}-3\pi n^2e^{5u})e^{-\pi n^2e^{4u}},
+ \label{phy:source}\\
+ H(t,z)&=\int_0^\infty e^{tu^2}\Phi(u)\cos(zu)\,du.
+ \label{phy:heat-field}
+\end{align}
+The variable $t$ is an external heat parameter.  In the geometry below it
+is fixed when spatial derivatives, metrics, and curvature are computed.
+On real $(t,x)$ put
+\begin{equation}
+ h_j=\partial_x^jH,\qquad E=h_0^2+h_1^2,\qquad
+ \mathcal L_j=h_{j+1}^2-h_jh_{j+2},\qquad
+ S_j=\{h_{j+1}=0\},\quad j=0,1.
+ \label{phy:observations}
+\end{equation}
+The same notation $h_j(t,z)$ denotes the holomorphic spectral derivatives.
+The four consecutive components $h_0,h_1,h_2,h_3$ have one scalar source;
+they are not independent fields to which arbitrary geometric constraints
+may be assigned.
+
+\begin{lemma}[Analyticity and the sign of heat time]
+\label{phy:entire}
+The integral \eqref{phy:heat-field} defines a jointly entire function of
+$(t,z)\in\mathbb C^2$.  It is even in $z$, obeys real reflection for real
+$t$, and satisfies
+\begin{equation}
+ H_t=-H_{zz}.
+ \label{phy:backward-heat}
+\end{equation}
+For every real $t$, $H(t,0)>0$.  Consequently no real-time slice is
+identically zero and every spatial zero has finite multiplicity.
+\end{lemma}
+\begin{proof}
+Every term of \eqref{phy:source} is positive for $u\ge0$, since
+$2\pi n^2e^{4u}-3>0$.  Dropping the negative term and comparing successive
+terms of $n^4e^{-\pi n^2e^{4u}}$ gives
+\[
+ 0<\Phi(u)<4\pi^2e^{9u-\pi e^{4u}}.
+\]
+Indeed the ratio of successive majorant terms is at most
+$16e^{-3\pi}<1/2$.  On each compact set of complex $(t,z)$, every fixed
+parameter derivative of the integrand is bounded by a constant times
+\[
+ (1+u)^M\exp\{C u^2+C u+9u-\pi e^{4u}\},
+\]
+which is integrable.  Uniform convergence and differentiation under the
+integral prove joint entirety and \eqref{phy:backward-heat}.  The symmetries
+follow from the cosine representation.  At real $t$ and $z=0$ the
+integrand is strictly positive.  Finally, zeros of a nonzero holomorphic
+function have finite order.
+\end{proof}
+
+Direct differentiation, with $x$ held fixed, gives
+\begin{equation}
+ \frac12E_t=-h_0h_2-h_1h_3
+ =\begin{cases}\mathcal L_0,&h_1=0,\\
+                 \mathcal L_1,&h_2=0.
+   \end{cases}
+ \label{phy:radial-energy}
+\end{equation}
+These are the stationary sets of the original field and its first
+derivative.  A normalization of the field depending on $x$ would change
+its stationary set and cannot be substituted in this identity.
+
+\begin{remark}[The imported theta-to-RH bridge]
+\label{phy:imported-bridge}
+For the normalization \eqref{phy:source}--\eqref{phy:heat-field}, the earlier
+investigation establishes
+\[
+ H(0,z)=\frac18\xi\!\left(\frac12+\frac{iz}{2}\right)
+\]
+and the finite-collision criterion
+\begin{equation}
+ \mathrm{RH}\quad\Longleftrightarrow\quad
+ E(t,x)>0\quad(0<t\le1/2,\ x\in\mathbb R).
+ \label{phy:imported-rh-criterion}
+\end{equation}
+We use this result as an imported theorem, with its normalization and
+range unchanged; see \cite[section on positive-time collisions]{BakerTheta}.
+Its global inputs are the de Bruijn--Newman real-zero threshold, including
+its endpoint and upper bound $1/2$, the strip bound for nonreal zeros, and
+a confinement estimate uniform for $t$ in compact positive-time intervals.
+The last input prevents a limiting first collision from escaping to
+infinite real height.  Joint analyticity and conjugation symmetry then
+force a finite multiple real zero if RH fails.  Conversely, local
+backward-heat splitting at a positive-time multiple zero produces nonreal
+zeros immediately before it.  Thus a geometric construction alone does
+not supply \eqref{phy:imported-rh-criterion}; its global theta hypotheses
+remain part of the imported theorem.  The local exclusion arguments below
+are proved independently of that import.
+\end{remark}
+
+\subsection{Full stationary predecessors at every finite multiplicity}
+\label{phy:predecessors}
+
+\begin{lemma}[Even-order stationary predecessor]
+\label{phy:even-predecessor}
+Let $W(t,x)$ be real analytic near $(T,a)$, satisfy $W_t=-W_{xx}$, and
+have an exact spatial zero of order $2r$ there, where $r\ge1$.
+Write $A=\partial_x^{2r}W(T,a)\ne0$ and
+$B=\partial_x^{2r+1}W(T,a)$.  For sufficiently small $s\ge0$ there is
+a real analytic curve $\chi(s)$ such that
+\begin{align}
+ W_x(T-s,\chi(s))&=0,&
+ \chi(s)&=a-\frac{B}{rA}s+O(s^2),\label{phy:predecessor-location}\\
+ W(T-s,\chi(s))&=\frac{A}{r!}s^r+O(s^{r+1}),&
+ W_{xx}(T-s,\chi(s))&=\frac{A}{(r-1)!}s^{r-1}+O(s^r).
+ \label{phy:predecessor-values}
+\end{align}
+In particular the central value of $W$ is nonzero for sufficiently small
+$s>0$.
+\end{lemma}
+\begin{proof}
+Analyticity and the heat equation give the convergent Taylor expansion
+\begin{equation}
+ W(T-s,a+y)=\sum_{p,q\ge0}
+   \frac{s^p y^q}{p!q!}\,\partial_x^{2p+q}W(T,a).
+ \label{phy:heat-taylor}
+\end{equation}
+Set $y=s\eta$ and differentiate once in $y$.  Every surviving term has
+$2p+q+1\ge2r$, hence $p+q\ge r$.  It follows that
+$s^{-r}W_x(T-s,a+s\eta)$ extends analytically across $s=0$.
+At $s=0$ its value is
+\[
+ \frac{A}{(r-1)!}\eta+\frac{B}{r!}.
+\]
+Its derivative in $\eta$ is nonzero.  The analytic implicit-function
+theorem supplies $\eta(s)$ with initial value $-B/(rA)$, proving
+\eqref{phy:predecessor-location}.  Substitution in
+\eqref{phy:heat-taylor} proves \eqref{phy:predecessor-values}:
+the leading terms are respectively $p=r,q=0$ and, after two spatial
+derivatives, $p=r-1,q=0$.
+\end{proof}
+
+\begin{proposition}[The physical stationary pole]
+\label{phy:stationary-pole}
+Suppose a nonzero analytic backward-heat field $H$ has exact spatial
+multiplicity $m=2r+j$ at $(T,a)$, with $r\ge1$ and $j\in\{0,1\}$.
+Apply Lemma~\ref{phy:even-predecessor} to $W=h_j$.  On its full stationary
+predecessor, as $s\downarrow0$,
+\begin{equation}
+ h_{j+1}=0,\qquad E>0,\qquad
+ \frac{\mathcal L_j}{E}=-\frac{r}{s}+O(1).
+ \label{phy:stationary-pole-formula}
+\end{equation}
+For $j=0$ one has $E=W^2$ exactly.  For $j=1$,
+\begin{equation}
+ H(T-s,\chi(s))=O(s^{r+1}),\qquad
+ E=W^2(1+O(s^2)).
+ \label{phy:odd-energy-comparison}
+\end{equation}
+\end{proposition}
+\begin{proof}
+On the constructed branch $\mathcal L_j=-W W_{xx}$.
+Equation~\eqref{phy:predecessor-values} gives
+$W_{xx}/W=r/s+O(1)$.  If $j=0$, stationarity is $H_x=0$, so
+$E=W^2$ and the claim follows.  If $j=1$, $H$ has order $2r+1$ at the
+event.  In its heat Taylor expansion evaluated at $x-a=O(s)$, each
+surviving term has $2p+q\ge2r+1$, which implies $p+q\ge r+1$.
+Thus $H=O(s^{r+1})$, whereas $W$ is a nonzero constant times $s^r$.
+This proves \eqref{phy:odd-energy-comparison} and then
+\eqref{phy:stationary-pole-formula}.  All divisions are taken on the
+proved nonzero predecessor, not at the event itself.
+\end{proof}
+
+\begin{theorem}[Signed stationary exclusion]
+\label{phy:stationary-exclusion}
+Let $H$ be a real analytic backward-heat field whose spatial slices are
+not identically zero.  Suppose nonnegative functions $K_0,K_1$ are locally
+bounded through every candidate event in a stated time-space domain and
+\begin{equation}
+ \mathcal L_j\ge-K_jE\quad\hbox{on the full set }S_j,\qquad j=0,1.
+ \label{phy:stationary-target}
+\end{equation}
+Assume the domain contains the sufficiently close predecessors of each
+candidate event.  Then it contains no multiple real zero covered in this
+way.  For the complete theta field, if the hypothesis covers
+$(0,1/2]\times\mathbb R$, it implies RH by
+Remark~\ref{phy:imported-bridge}.
+\end{theorem}
+\begin{proof}
+Every multiple zero has a finite order $m\ge2$, uniquely expressible as
+$2r+j$ with the stated ranges.  Proposition~\ref{phy:stationary-pole}
+then contradicts the locally bounded coefficient $K_j$ on its corresponding
+predecessor.  At the endpoint $t=1/2$, a left-hand time neighborhood
+suffices.  No boundedness as $t\downarrow0$ or as $|x|\to\infty$ is required.
+\end{proof}
+
+Both branches are essential for this argument.  The backward-heat polynomial
+$H(t,x)=x^3-6(t-T)x$ has
+$\mathcal L_0=3x^4+36(t-T)^2\ge0$ everywhere and nevertheless has a
+triple zero at $(T,0)$.  On the second stationary predecessor $x=0$,
+$\mathcal L_1/E=-1/(T-t)$.
+
+\section{Signed forms and the physical observation}\label{forms:section}
+
+The two Laguerre expressions are polarized quadratic forms in three
+consecutive derivatives.  A geometric representation must preserve that
+polarization.  Replacing it by the norm of the whole jet changes the
+question, because the higher derivatives need not vanish when $E$ does.
+The quaternion-form working notes of Edward B.~Baker~III
+\cite{BakerQuaternion} motivate the use of oriented two-form pairings.
+The construction below is derived directly; it uses none of the
+unfinished singular-kernel or nonabelian boundary formulas in those notes.
+
+\subsection{The Hodge pairing in four dimensions}
+Fix the Euclidean metric on $\mathbb R^4$ with coordinates $(x,y,a,b)$,
+orientation $dx\wedge dy\wedge da\wedge db$, and complex coordinates
+$z=x+iy$, $w=a+ib$.  This use of $a,b$ avoids confusing the auxiliary
+manifold coordinates with the source variable $u$.  The Hodge star gives
+\[
+ \Lambda^2=\Lambda^2_+\oplus\Lambda^2_-,\qquad
+ \alpha\wedge\alpha=(|\alpha_+|^2-|\alpha_-|^2)\,dV.
+\]
+The wedge pairing has signature $(3,3)$; the inner product
+$\alpha\wedge *\alpha$ is positive definite.  Both structures are useful,
+but they answer different questions.
+
+For orthonormal forms $\sigma^+_1,\sigma^+_2\in\Lambda^2_+$ and
+$\sigma^-_1\in\Lambda^2_-$, the form
+\[
+ \Omega=B\sigma^+_1+\tfrac12(A-C)\sigma^+_2
+                     +\tfrac12(A+C)\sigma^-_1
+\]
+has wedge square $(B^2-AC)dV$ and squared norm
+$B^2+(A^2+C^2)/2$.  This realizes a Laguerre expression algebraically,
+but its norm pays for the higher jet $C$, and a variable-coefficient
+version need not be closed.  We instead realize each input by a closed
+form and retain the signed polarization explicitly.
+
+\begin{proposition}[Closed self-dual inputs]\label{forms:closed}
+For a holomorphic function $f(z)$, define
+\[
+ \alpha_f=\frac1{\sqrt2}\operatorname{Re}(f(z)\,dz\wedge dw).
+\]
+Then
+\begin{equation}\label{forms:pairing}
+ d\alpha_f=0,\qquad *\alpha_f=\alpha_f,\qquad
+ \alpha_f\wedge\alpha_g=\operatorname{Re}(f\overline g)\,dV.
+\end{equation}
+The form is Hodge-harmonic, and in the fixed Euclidean metric
+\begin{equation}\label{forms:parallel}
+ |\alpha_f|^2=|f|^2,\qquad |\nabla\alpha_f|^2=2|f'|^2.
+\end{equation}
+In particular, it is parallel on a connected domain exactly when $f$
+is constant.
+\end{proposition}
+\begin{proof}
+Put $A=dx\wedge da-dy\wedge db$ and
+$B=dx\wedge db+dy\wedge da$.  Both are self-dual,
+$A^2=B^2=2dV$, and $A\wedge B=0$.  If $f=p+iq$, then
+$\alpha_f=(pA-qB)/\sqrt2$, which proves the pairing and norm.
+Holomorphicity gives $d(f\,dz\wedge dw)=0$.  Self-duality then implies
+$d^*\alpha_f=-*d*\alpha_f=0$.  The Cauchy--Riemann equations give
+$|\nabla p|^2+|\nabla q|^2=2|f'|^2$, proving the last identity.
+\end{proof}
+
+For $f=h_j(t,\cdot)$, heat time is held fixed in this exterior
+derivative.  Writing $\alpha_j=\alpha_{h_j}$, we obtain
+\begin{equation}\label{forms:laguerre}
+ \alpha_{j+1}\wedge\alpha_{j+1}-\alpha_j\wedge\alpha_{j+2}
+ =\bigl(|h_{j+1}|^2-\operatorname{Re}(h_j\overline{h_{j+2}})\bigr)dV.
+\end{equation}
+On $y=0$ the coefficient is $\mathcal L_j$.  This is evaluation of a
+four-form coefficient on the real slice, not pullback of a four-form
+onto a one-dimensional line.  The coefficient-space matrix has spectrum
+$\{1,1/2,-1/2\}$.  Its negative eigenvalue persists even though all
+three input forms are closed and self-dual.
+
+\subsection{Primitives and a signed boundary observation}
+If $P_f'=f$, then
+\[
+ \beta_f=\frac1{\sqrt2}\operatorname{Re}(P_f\,dw),\qquad
+ d\beta_f=\alpha_f.
+\]
+Stokes' theorem gives, for a smooth bounded four-domain with the forms
+defined on a neighborhood of its closure,
+\begin{equation}\label{forms:stokes}
+ \int_\Omega\alpha_f\wedge\alpha_g
+ =\int_{\partial\Omega}\beta_f\wedge\alpha_g.
+\end{equation}
+This retains a mixed signed pairing.  It does not replace the boundary
+term by a positive norm or remove it.
+
+The following elementary identity makes the same distinction on a
+spectral circle.  Write $\langle q\rangle=(2\pi)^{-1}
+\int_0^{2\pi}q(\theta)\,d\theta$.
+\begin{proposition}[Complete circle current]\label{forms:circle}
+Let $f$ be holomorphic near the closed disk $|z-x_0|\le R$, real on
+its real diameter, and $f'(x_0)=0$.  Set
+\[
+ \varphi(\theta)=f(x_0)\operatorname{Re} f(x_0+Re^{i\theta}).
+\]
+Then
+\begin{equation}\label{forms:circle-identity}
+ -f(x_0)f''(x_0)
+ =-\frac{4f(x_0)^2}{R^2}
+   +\frac4{R^2}\langle(1-\cos2\theta)\varphi(\theta)\rangle.
+\end{equation}
+For $f=h_j$ this is exactly $\mathcal L_j$ on its full stationary set.
+\end{proposition}
+\begin{proof}
+The Taylor coefficients are real.  The mean of $\operatorname{Re} f$
+is $f(x_0)$ and its second cosine coefficient has mean pairing
+$\langle\cos2\theta\operatorname{Re}f\rangle=R^2 f''(x_0)/4$.
+Substitution proves the formula.
+\end{proof}
+The current $\varphi$ is also the coefficient of
+$\alpha_{f(x_0)}\wedge\alpha_f$ evaluated on the circle.  A useful bound
+must control the complete weighted current relative to $E$, with all
+radius costs accounted for.  Separately estimating its negative mass can
+discard essential favorable cancellation.
+
+\subsection{An integrated positive identity and its scale}
+The following result, inherited from the signed-form development in
+\cite{BakerTheta}, explains what positivity of a completed integral can
+provide without supplying the central pointwise estimate.
+\begin{theorem}[Disk completion]\label{forms:disk}
+For $f$ holomorphic near $\overline{D_R(x_0)}$, define
+\[
+ \ell_f=|f'|^2-\operatorname{Re}(f\overline{f''}),\qquad
+ g_R(z)=\left(1-\frac{(z-x_0)^2}{R^2}\right)f(z).
+\]
+Then
+\begin{equation}\label{forms:disk-id}
+ \int_{D_R}\ell_f\,dA+\frac1{2R}\int_{\partial D_R}|f|^2\,ds
+ =\frac12\int_{D_R}|g_R'|^2\,dA\ge0.
+\end{equation}
+The boundary coefficient cannot be decreased, even for real-reflection
+polynomials stationary at the center.
+\end{theorem}
+\begin{proof}
+Write $f(x_0+R\zeta)=\sum_{n\ge0}b_n\zeta^n$ and set $b_n=0$ for
+$n<0$.  Angular orthogonality gives
+\begin{align*}
+ \pi^{-1}\int_{D_R}\ell_f\,dA
+ &=\sum_{n\ge0}n|b_n|^2-\operatorname{Re}
+       \sum_{n\ge0}(n+2)b_n\overline{b_{n+2}},\\
+ (2\pi R)^{-1}\int_{\partial D_R}|f|^2\,ds&=\sum_{n\ge0}|b_n|^2,\\
+ \pi^{-1}\int_{D_R}|g_R'|^2\,dA&=\sum_{n\ge1}n|b_n-b_{n-2}|^2.
+\end{align*}
+Expansion proves \eqref{forms:disk-id}.  For
+$f_N=\sum_{m=0}^N(1-m/(N+1))((z-x_0)/R)^{2m}$, direct summation gives
+\[
+ B_N:=\frac1{2R}\int_{\partial D_R}|f_N|^2\,ds
+ =\pi\frac{(N+2)(2N+3)}{6(N+1)},\qquad
+ \frac{\int_{D_R}\ell_{f_N}\,dA}{B_N}=-\frac{2N}{2N+3}\longrightarrow-1.
+\]
+These polynomials have $f_N(x_0)=1$ and $f_N'(x_0)=0$.
+\end{proof}
+Their boundary energy grows while their central first-jet energy stays
+equal to one.  Thus the integrated positive completion cannot be
+converted to a uniform central-energy payment for arbitrary holomorphic
+fields.  The actual theta source must supply the additional restriction.
+
+\section{Hyperk\"ahler lifts and their degenerations}\label{hk:section}
+
+A hyperk\"ahler metric in real dimension four has a parallel compatible
+triple of complex structures satisfying the quaternion relations; its
+holonomy is contained in $\operatorname{Sp}(1)=\operatorname{SU}(2)$.
+In particular it is Ricci-flat.  These are statements about the metric
+and its parallel tensors, not a consequence of closed self-duality of
+one form; see \cite{Joyce2001}.
+
+\subsection{A flat lift with an exact physical coefficient}
+\begin{proposition}[Pullback hyperk\"ahler metric]\label{hk:flat}
+Where a holomorphic $f(z)$ is nonzero, the metric
+\begin{equation}\label{hk:gf}
+ g_f=|f(z)|^2|dz|^2+|dw|^2
+\end{equation}
+is locally flat and hyperk\"ahler.  Its parallel triple is
+\begin{align*}
+ \omega_1&=\frac i2\bigl(|f|^2dz\wedge d\overline z+
+                                      dw\wedge d\overline w\bigr),\\
+ \omega_2&=\operatorname{Re}(f\,dz\wedge dw),\qquad
+ \omega_3=\operatorname{Im}(f\,dz\wedge dw).
+\end{align*}
+For $f=H+iH_z$, its real-slice coefficient is exactly $E$.
+\end{proposition}
+\begin{proof}
+A local primitive $F'=f$ supplies the nonsingular holomorphic coordinate
+$\zeta=F(z)$.  Then $g_f=|d\zeta|^2+|dw|^2$ and the displayed forms
+are the standard constant hyperk\"ahler triple in those coordinates.
+Equivalently they are closed and
+$\omega_i\wedge\omega_j=2\delta_{ij}|f|^2dV$.
+For real $x$, both $H$ and $H_x$ are real, so
+$|H+iH_x|^2=H^2+H_x^2$.
+\end{proof}
+
+This construction has trivial restricted holonomy, contained in
+$\operatorname{Sp}(1)$; it does not have holonomy equal to the full
+group.  It is a precise geometric realization of the physical scale.
+At a zero of $f$ of order $m$, however, $F-F(z_0)$ has order $m+1$ and
+\eqref{hk:gf} degenerates.  After a nonsingular holomorphic change of
+coordinate its curve factor is a constant times
+$|\zeta|^{2m}|d\zeta|^2$.  Its metric completion has cone angle
+$2\pi(m+1)$ and finite distance to the vertex.  Passing to the branched
+coordinate $F$ is not a nonsingular coordinate repair on the original
+domain.
+
+At a nondegenerate physical collision $H=H_z=0$, $H_{zz}\ne0$, the
+coefficient $f=H+iH_z$ has a simple zero since $f'=iH_{zz}$.  Thus the
+real physical collision produces an angle-$4\pi$ degeneration.
+Away from the real slice, $H+iH_z$ can vanish without both jets
+vanishing; the exact equivalence with the physical detector is a
+real-slice statement.  The fixed background metric remains smooth at
+every such event, but its theta-dependent forms are generally harmonic
+rather than parallel.
+
+\subsection{Conformal and compact obstructions}
+In dimension four the Hodge star on two-forms is unchanged by
+$g\mapsto e^{2\sigma}g$.  Thus closed self-dual forms remain harmonic
+under arbitrary conformal changes.  For example, $e^{2x}g_0$ has
+\[
+ \operatorname{Ric}=-2(dy^2+da^2+db^2),\qquad
+ \operatorname{Scal}=-6e^{-2x}.
+\]
+It is not hyperk\"ahler, despite preserving all the closed self-dual
+inputs.  The top-form pairing itself is unchanged; only its coefficient
+relative to the volume changes, by a positive factor $e^{-4\sigma}$.
+No sign improvement follows from this conformal replacement.
+
+Pointwise normalization also needs care.  Where $f\ne0$,
+\[
+ d(\alpha_f/|f|)=-d\log|f|\wedge(\alpha_f/|f|).
+\]
+A nonzero self-dual two-form is symplectic, so wedge multiplication by
+it is an isomorphism from one-forms to three-forms.  Consequently this
+normalized form is closed only if $|f|$ is constant, which for
+holomorphic $f$ forces $f$ constant.  Normalization can therefore lose
+the differential equation needed for a holonomy construction.
+
+\begin{proposition}[Compact exactness obstruction]\label{hk:compact}
+On a compact oriented four-manifold without boundary, a globally exact
+self-dual two-form vanishes.
+\end{proposition}
+\begin{proof}
+If $\alpha=d\beta$ and $*\alpha=\alpha$, then
+$\int |\alpha|^2dV=\int\alpha\wedge\alpha
+=\int d(\beta\wedge\alpha)=0$.
+\end{proof}
+Our forms are exact on $\mathbb C^2$.  A nontrivial compact realization
+must therefore change their global period, boundary or singularity
+data; a descended form may have a primitive that fails to descend.
+On the original noncompact space, the forms are independent of $w$
+and are not square integrable unless zero.  Compact integration by
+parts cannot be imported without controlling the missing boundaries.
+
+There is a further restriction on extending the entire input family to
+a compact hyperk\"ahler manifold.  With the orientation in which the
+parallel triple is self-dual, the Weitzenb\"ock formula for a harmonic
+self-dual form is
+\[
+ 0=\nabla^*\nabla\alpha+
+       (\operatorname{Scal}/3-2W^+)\alpha=\nabla^*\nabla\alpha.
+\]
+Here scalar curvature and $W^+$ vanish.  Integration implies
+parallelness.  This makes metric-relative pairings constant, although
+coordinate coefficients of a parallel form need not be constant.
+For the actual family a stronger local argument applies: at a real
+point with $H\ne0$, the forms $\alpha_H$ and $\alpha_{H_z}$ are
+proportional with a real ratio $c$.  If both were parallel for the same
+connection, their difference $\alpha_{H_z}-c\alpha_H$ would vanish
+throughout the connected patch.  This forces $H_z=cH$, incompatible
+with a nonzero even entire field decaying along the real axis.  This
+obstruction concerns preservation of the whole particular family, not
+every possible compact geometric representation.
+
+\section{A holomorphic surface with the physical metric coefficient}
+\label{phy:jet-surface}
+
+Fix real $t$, abbreviate $f(z)=H(t,z)$, and choose a holomorphic primitive
+$P'=f$.  For the entire theta field a global primitive exists.  Define
+\[
+ \mathcal E(z)=|f(z)|^2+|f'(z)|^2,\qquad
+ \Omega_t=\{z:\mathcal E(z)>0\}.
+\]
+On $\Omega_t\times\mathbb C$ consider
+\begin{equation}
+ X_t(z,w)=(P(z),f(z),w)\in\mathbb C^3.
+ \label{phy:immersion}
+\end{equation}
+The complex tangent vectors $(f,f',0)$ and $(0,0,1)$ are independent
+exactly where $\mathcal E>0$.  Thus \eqref{phy:immersion} is a holomorphic
+immersion with induced real metric and Kähler form
+\begin{align}
+ g_t&=\mathcal E(z)|dz|^2+|dw|^2,
+ \label{phy:metric}\\
+ \omega_t&=\frac{i}{2}
+    \{\mathcal E\,dz\wedge d\bar z+dw\wedge d\bar w\}.
+ \label{phy:kahler-form}
+\end{align}
+The parameter domain with this metric is a smooth Riemannian four-manifold.
+Its image is an immersed complex surface; global injectivity and absence
+of self-intersections are not asserted.  On the physical real slice,
+$\mathcal E(x)=E(t,x)$ exactly.  At a common zero of $H$ and $H_z$, the
+map loses one complex rank and \eqref{phy:metric} is not positive definite.
+
+\subsection{Curvature and induced holonomy}
+
+\begin{proposition}[Curvature of the jet surface]
+\label{phy:curvature}
+Set $D=ff''-(f')^2$.  With the real metric convention
+$|dz|^2=dx^2+dy^2$, the Gaussian curvature of the first factor of
+\eqref{phy:metric} is
+\begin{equation}
+ K_t=-\frac{2|D|^2}{\mathcal E^3}.
+ \label{phy:gaussian-curvature}
+\end{equation}
+The scalar curvature of the four-dimensional product is $2K_t$.  Its Ricci
+tensor equals $K_t$ times the curve metric in the first factor and zero in
+the flat factor; its Ricci form is
+\begin{equation}
+ \rho_t=-i\frac{|D|^2}{\mathcal E^2}\,dz\wedge d\bar z.
+ \label{phy:ricci-form}
+\end{equation}
+In particular, on the physical line,
+\begin{equation}
+ K_t(x)=-\frac{2\mathcal L_0(t,x)^2}{E(t,x)^3}.
+ \label{phy:curvature-squares-sign}
+\end{equation}
+\end{proposition}
+\begin{proof}
+The two-by-two Hermitian Gram determinant gives
+\begin{align*}
+ \partial_z\partial_{\bar z}\log\mathcal E
+ &=\frac{\mathcal E(|f'|^2+|f''|^2)
+        -|f'\bar f+f''\overline{f'}|^2}{\mathcal E^2}\\
+ &=\frac{|ff''-(f')^2|^2}{\mathcal E^2}.
+\end{align*}
+For $ds^2=\mathcal E(dx^2+dy^2)$ the Gaussian curvature is
+$-(2\mathcal E)^{-1}\Delta\log\mathcal E$, and
+$\Delta=4\partial_z\partial_{\bar z}$.  This proves
+\eqref{phy:gaussian-curvature}.  Product curvature proves the Ricci tensor
+and scalar statements.  Equivalently the Kähler Ricci form is
+$-i\partial\bar\partial\log\det(g_{a\bar b})$; the irrelevant constant
+in the Hermitian determinant disappears upon differentiation, giving
+\eqref{phy:ricci-form}.  On the real line $D=-\mathcal L_0$, proving the
+last identity.
+\end{proof}
+
+The metric has a parallel splitting into a curve and a flat complex line,
+so its holonomy is contained in $U(1)\times\{1\}\subset U(2)$.
+It is Ricci-flat on a connected patch precisely when $D\equiv0$ there.
+That condition forces
+\begin{equation}
+ f(z)=A e^{bz},\qquad A\ne0,
+ \label{phy:flat-exponential}
+\end{equation}
+on that patch.  Indeed on a subpatch where $f\ne0$ one has
+$(f'/f)'=D/f^2=0$, and holomorphic identity continuation proves
+\eqref{phy:flat-exponential}.  If this equality held on an open patch of a theta slice, the identity
+theorem would extend it to the whole spectral plane.  A nonzero even theta
+field cannot be such an exponential: evenness would force $b=0$, whereas
+$H_{zz}(t,0)=-\int_0^\infty u^2e^{tu^2}\Phi(u)\,du<0$.
+Thus this induced metric is not a hyperkähler metric for the theta field.
+This is a statement about \eqref{phy:metric}, not a prohibition on other
+auxiliary metrics or other geometric realizations.
+
+The squaring in \eqref{phy:curvature-squares-sign} is decisive.  A lower or
+upper curvature norm does not select the favorable sign of
+$\mathcal L_0$.  In addition, the factor $E^{-3}$ makes intrinsic curvature
+very sensitive to degeneration of the physical metric.
+
+\subsection{Genuine calibrated inclusions and their limits}
+
+Every locally embedded image patch of \eqref{phy:immersion} is calibrated
+by the ambient Kähler calibration $\omega_0^2/2$ and hence is minimal.
+The relevant algebraic and variational statements are the complex
+submanifold calibration and the fundamental theorem of calibrations;
+see \cite[Theorems 3.1 and 2.3]{Lotay2018}.  This conclusion uses a proved
+holomorphic immersion, rather than an analogy between quaternionic
+coefficients and tangent vectors.
+
+There are literal exceptional-calibration realizations as well.  On
+$\mathbb R_r\times\mathbb C^3$ use the standard $G_2$ form
+\[
+ \varphi_0=dr\wedge\omega_0+\operatorname{Re}\Omega_3,
+ \qquad *_0\varphi_0=\tfrac12\omega_0^2-dr\wedge\operatorname{Im}\Omega_3.
+\]
+The image of \eqref{phy:immersion} in $\{0\}\times\mathbb C^3$ is
+coassociative: the second term vanishes and the first restricts to its
+induced volume.  Alternatively, regard $(P,f,w,0)$ as a surface in
+$\mathbb C^4\cong\mathbb R^8$.  For the standard Cayley calibration
+\begin{equation}
+ \Psi_0=\tfrac12\omega_0^2+\operatorname{Re}\Omega_4,
+ \label{phy:cayley-calibration}
+\end{equation}
+the holomorphic four-form pulls back to zero, while the first term is the
+volume.  Hence this image is Cayley.  These standard inclusions are also
+recorded in \cite[Propositions 6.5 and 7.3]{Lotay2018}.
+The ambient metrics used here are flat, with trivial holonomy contained
+in the indicated groups.  We have not produced an ambient metric whose
+holonomy is exactly $G_2$ or $\operatorname{Spin}(7)$.
+
+Calibration does not remove a branch degeneration.  If at a fixed time
+\[
+ f(z)=c(z-a)^m+O((z-a)^{m+1}),\qquad c\ne0,\quad m\ge2,
+\]
+then
+\begin{equation}
+ \mathcal E(z)\sim m^2|c|^2|z-a|^{2m-2}.
+ \label{phy:cone-metric}
+\end{equation}
+The radial distance to $a$ is asymptotic to $|c||z-a|^m$, and the
+circumference of a small coordinate circle is asymptotic to
+$2\pi m|c||z-a|^m$.  Thus the completion has asymptotic cone angle
+$2\pi m$ in the curve factor.  It is at finite distance but is not a
+nondegenerate smooth point of the original metric.
+One can instead make the everywhere immersive graph
+$(z,P,H,w)\in\mathbb C^4$.  Its induced metric is
+$(1+\mathcal E)|dz|^2+|dw|^2$, and it remains a calibrated complex surface
+through a physical joint zero.  This repairs immersion by introducing a
+background metric term; it does not prove nonvanishing of $E$.
+
+\section{The marked real Gauss map retains the sign}
+\label{phy:real-gauss-map}
+
+The nonconstant tangent direction of \eqref{phy:immersion} is the
+projective Gauss map
+\begin{equation}
+ G_0(t,z)=[H(t,z):H_z(t,z)]\in\mathbb{CP}^1.
+ \label{phy:gauss-map-zero}
+\end{equation}
+The second tangent direction is fixed, so this projective line captures
+the varying part of the full tangent plane.  Normalize the Fubini--Study
+metric by
+$ds_{\rm FS}^2=|d\zeta|^2/(1+|\zeta|^2)^2$.  Differentiating in either
+projective chart gives the coordinate-independent identities
+\begin{equation}
+ G_0^*ds_{\rm FS}^2=\frac{|D|^2}{\mathcal E^2}|dz|^2,
+ \qquad \rho_t=-2G_0^*\omega_{\rm FS}.
+ \label{phy:fubini-study-pullback}
+\end{equation}
+Real reflection puts the physical image in $\mathbb{RP}^1$.  Its
+orientation along the marked real spectral line is extra information
+which the nonnegative metric in \eqref{phy:fubini-study-pullback} omits.
+
+For both branches put
+\begin{equation}
+ E_j^{\rm jet}=h_j^2+h_{j+1}^2,\qquad
+ G_j=[h_j:h_{j+1}],\qquad j=0,1.
+ \label{phy:branch-gauss-map}
+\end{equation}
+On a real interval on which this pair never vanishes, choose a continuous
+real lift $\alpha_j=\arg(h_j+i h_{j+1})$.  The lift is defined up to a
+constant multiple of $2\pi$; its projective value is defined modulo $\pi$.
+Its derivative and every continuously lifted increment are unambiguous.
+Differentiating the argument proves
+\begin{equation}
+ \boxed{\partial_x\alpha_j
+  =\frac{h_jh_{j+2}-h_{j+1}^2}{h_j^2+h_{j+1}^2}
+  =-\frac{\mathcal L_j}{E_j^{\rm jet}}.}
+ \label{phy:angle-derivative}
+\end{equation}
+For $j=0$, $E_0^{\rm jet}=E$.  For $j=1$ the denominator is different
+and can vanish even when $E>0$.  No global regularity of $G_1$ as a
+physical unit vector is being presumed.
+
+\begin{proposition}[An oriented angular certificate]
+\label{phy:angular-certificate}
+Suppose prescribed functions $\kappa_j\ge0$ are locally bounded through
+the covered candidate events and
+\[
+ \partial_x\alpha_j\le\kappa_j
+ \quad\hbox{on }S_j\cap\{h_j\ne0\},\qquad j=0,1.
+\]
+Then $\mathcal L_j\ge-\kappa_jE$ on the full stationary sets.
+Consequently the hypotheses of Theorem~\ref{phy:stationary-exclusion}
+are satisfied on the same covered domain.
+\end{proposition}
+\begin{proof}
+On $S_j$ with $h_j\ne0$, \eqref{phy:angle-derivative} gives
+$\mathcal L_j\ge-\kappa_jh_j^2\ge-\kappa_jE$.
+The second inequality uses both $h_j^2\le E$ for $j=0,1$ and
+$\kappa_j\ge0$.  At a remaining point of $S_j$ one has $h_j=0$,
+so $\mathcal L_j=0$ and the same inequality holds without defining an
+angle there.
+\end{proof}
+
+For $j=0$ this certificate is the original signed stationary bound.
+For $j=1$ it is in general a stronger sufficient bound, since it pays by
+$h_1^2$ on $S_1$ instead of $E$.  On an odd collision predecessor their
+ratio tends to one by \eqref{phy:odd-energy-comparison}.  These distinctions
+are necessary when comparing an auxiliary projective metric with the
+physical two-component energy.
+
+\subsection{A sign-reversing geometric control}
+
+Fix $\varepsilon>0$ and let
+\[
+ f_+(z)=\varepsilon+z^2,\quad f_-(z)=\varepsilon-z^2,
+ \qquad P_\pm(z)=\varepsilon z\pm z^3/3.
+\]
+At the real center,
+\begin{equation}
+ E_\pm=\varepsilon^2,\quad
+ \mathcal L_{0,+}=-2\varepsilon,\quad
+ \mathcal L_{0,-}=2\varepsilon,\quad
+ K_+=K_-=-8/\varepsilon^4.
+ \label{phy:opposite-sign-control}
+\end{equation}
+The corresponding complex surfaces are unitarily congruent after rotating
+the parameter:
+\begin{equation}
+ \operatorname{diag}(-i,1,1)\,X_+(iz,w)=X_-(z,w).
+ \label{phy:unitary-congruence}
+\end{equation}
+This follows by substituting $iz$ into each of the two polynomial
+components.  Their intrinsic and calibrated geometry therefore cannot
+distinguish the two signs without retaining the marked real slice and
+its orientation.  Each polynomial has an exact backward-heat extension
+$f_\pm(z)\mp2(t-t_0)$ from its displayed time slice.
+In particular, $H(t,z)=z^2-2(t-T)$ is calibrated at every regular point
+of its associated surface but develops a double real zero at $(T,0)$.
+Its predecessor at $x=0$ has $\alpha_0'=1/(T-t)$.
+
+% Prepared for Edward Baker with substantial LLM assistance.
+% Recorded model gpt-6-astra; reasoning effort ultra.
+
+\section{Conditional exclusion by signed chords and spatial turning}
+\label{phy:turning-criterion}
+
+The marked angle in \eqref{phy:angle-derivative} retains a sign that
+curvature magnitude discards.  Its most useful finite-interval observation
+is a signed chord paid by the physical energy at the stationary starting
+point.  We first prove a multiplicity-independent collision obstruction
+for that observation, then give the finer turning profiles and the
+supporting continuity criterion.  These are local heat-flow results;
+the complete-theta estimate required to apply them remains open.
+The detailed derivations and finite controls are recorded in
+\cite{ThetaTurning,ThetaChord}.
+
+\subsection{A fixed nearby endpoint and starting-point energy}
+
+Put $W=h_j$, $j\in\{0,1\}$.  When $W_x(t,x)=0$ and $W$ is nonzero
+on the whole interval $[x,y]$, $y>x$, a continuous angle lift satisfies
+\begin{equation}
+ \alpha_j(t,y)-\alpha_j(t,x)
+ =\arctan\frac{W_x(t,y)}{W(t,y)}.
+ \label{phy:chord-angle}
+\end{equation}
+Indeed, $W$ has one sign on the interval, so its lifted argument stays
+in one open half-plane, with no winding ambiguity.  In particular,
+\begin{equation}
+ \begin{aligned}
+ \mathcal C_j(t;x,y)&:=h_j(t,x)\{h_j(t,y)-h_{j+1}(t,y)\},\\
+ \mathcal C_j(t;x,y)\ge0
+ &\quad\Longleftrightarrow\quad
+ \alpha_j(t,y)-\alpha_j(t,x)\le\frac\pi4.
+ \end{aligned}
+ \label{phy:chord-observation}
+\end{equation}
+All chord losses below use $e=E(t,x)$ at the starting point.
+
+\begin{theorem}[The fixed-endpoint collision law]
+\label{phy:fixed-endpoint-chord}
+Suppose $H$ has exact spatial multiplicity $2r+j$ at $(T,a)$,
+$r\ge1$, and let $W=h_j$, $\chi(s)$ be its full stationary predecessor,
+and $k=\partial_x^{2r}W(T,a)/r!\ne0$.  For every sufficiently small
+fixed $\delta>0$, the entire interval $[\chi(s),a+\delta]$ is
+$W$-zero-free for sufficiently small $s>0$, and
+\begin{equation}
+ \begin{gathered}
+ \boxed{\frac{\mathcal C_j(T-s;\chi(s),a+\delta)}
+ {\sqrt{E(T-s,\chi(s))}}\longrightarrow-d_\delta<0,}\\
+ d_\delta:=-\operatorname{sgn}(k)
+       \{W(T,a+\delta)-W_x(T,a+\delta)\}>0.
+ \end{gathered}
+ \label{phy:fixed-endpoint-limit}
+\end{equation}
+\end{theorem}
+\begin{proof}
+Write $a_0=\partial_x^{2r}W(T,a)/(2r)!$.  The heat Taylor expansion
+\eqref{phy:heat-taylor}, applied to the analytic function
+$W(T-\eta^2,a+z)$, gives the ordinary two-variable remainder
+\begin{align}
+ W(T-\eta^2,a+z)
+ &=a_0P_{2r}(\eta^2,z)
+   +O\bigl((|\eta|+|z|)^{2r+1}\bigr),\label{phy:fixed-neighborhood-profile}\\
+ P_{2r}(\eta^2,z)
+ &=\sum_{p=0}^r\frac{(2r)!}{p!(2r-2p)!}
+       \eta^{2p}z^{2r-2p},\nonumber\\
+ P_{2r}(\eta^2,z)&\ge(\eta^2+z^2)^r
+ \ge2^{-r}(|\eta|+|z|)^{2r}.\label{phy:positive-heat-polynomial}
+\end{align}
+For the first inequality, the ratio of the coefficient indexed by $p$
+to the corresponding binomial coefficient is
+$\prod_{i=0}^{p-1}2(2r-2i-1)\ge1$, with empty product one.
+Thus the remainder divided by $P_{2r}$ is $O(|\eta|+|z|)$.
+In a sufficiently small fixed neighborhood, $W$ has the sign of $a_0$
+whenever $(\eta,z)\ne(0,0)$.  Since $\chi(s)-a=O(s)$, this proves
+zero-freeness on the whole asserted interval, not just at its endpoints.
+
+At time $T$,
+\[
+ W(T,a+\delta)-W_x(T,a+\delta)
+ =-2r a_0\delta^{2r-1}+O(\delta^{2r}),
+\]
+which has the opposite sign from $k$ for every sufficiently small
+positive $\delta$.  Finally,
+\eqref{phy:predecessor-values} and \eqref{phy:odd-energy-comparison} give
+\begin{equation}
+ W(T-s,\chi(s))=ks^r(1+O(s)),\qquad
+ E(T-s,\chi(s))=k^2s^{2r}(1+O(s)).
+ \label{phy:chord-start-energy}
+\end{equation}
+Consequently $W(T-s,\chi(s))/\sqrt{E(T-s,\chi(s))}\to\operatorname{sgn}(k)$;
+analyticity at the fixed endpoint proves \eqref{phy:fixed-endpoint-limit}.
+\end{proof}
+
+\begin{theorem}[Starting-energy chord exclusion]
+\label{phy:chord-exclusion}
+Let $H$ be a real analytic backward-heat field with no identically zero
+spatial slice.  Near each covered candidate event suppose there are a
+fixed length $\ell_0>0$, $e_0>0$, and prescribed nonnegative functions
+$\omega_j(e)=o(\sqrt e)$ as $e\downarrow0$, such that
+\begin{equation}
+ \mathcal C_j(t;x,y)\ge-\omega_j(E(t,x)),\qquad j=0,1,
+ \label{phy:chord-target}
+\end{equation}
+uniformly whenever $h_{j+1}(t,x)=0$, $0<y-x\le\ell_0$,
+$0<E(t,x)\le e_0$, and $h_j$ is nonzero on the whole segment, which
+must lie in the covered neighborhood.  Assume that neighborhood contains
+the sufficiently close predecessors and these short intervals.
+Then no covered finite multiple real zero occurs.  In particular, a
+bound $\mathcal C_j\ge-K_jE(t,x)^\gamma$ suffices for any fixed
+$\gamma>1/2$, with $K_j\ge0$ locally bounded uniformly in both endpoints.
+For the complete theta field, coverage of $0<T\le1/2$ implies RH by
+Remark~\ref{phy:imported-bridge}.
+\end{theorem}
+\begin{proof}
+At a putative event use its parity branch and choose $\delta>0$ in
+Theorem~\ref{phy:fixed-endpoint-chord}, smaller than $\ell_0/2$ and
+inside the covered neighborhood.  The lengths $a+\delta-\chi(s)$ are
+positive and smaller than $\ell_0$ for small $s>0$.  Divide
+\eqref{phy:chord-target} by the square root of the starting energy and
+use \eqref{phy:chord-start-energy}.  Its lower bound tends to zero,
+contradicting the strictly negative limit
+\eqref{phy:fixed-endpoint-limit}.  At a terminal time a left-hand time
+neighborhood suffices.
+\end{proof}
+
+The fixed positive allowable length and uniformity through the event
+are essential hypotheses.  A bound available only on one prescribed
+shrinking family need not cover the fixed nearby endpoint used here.
+Both branches are required because the event multiplicity can have
+either parity.
+
+\begin{remark}[Comparison with stationary and angular estimates]
+\label{phy:criterion-comparison}
+At multiplicity $2r+j$, the stationary law and the fixed-endpoint law are
+\[
+ \mathcal L_j\sim-\mathrm{const}\,E^{1-1/(2r)},\qquad
+ \mathcal C_j\sim-\mathrm{const}\,E^{1/2}.
+\]
+Thus any fixed exponent $\gamma>1/2$ works in the chord target at every
+finite multiplicity.  For a stationary loss $KE^\gamma$, any fixed
+$\gamma<1$ eventually becomes too weak as $r$ grows.  This comparison
+does not order the full hypotheses: chord estimates concern whole
+intervals, whereas Theorem~\ref{phy:stationary-exclusion} imposes a
+condition only on the stationary sets.
+\end{remark}
+
+\begin{proposition}[Sharpness of the energy scale and location]
+\label{phy:chord-sharpness}
+The exponent $1/2$ with an arbitrary bounded coefficient, or a bounded
+loss paid by endpoint energy, does not exclude collisions in general.
+\end{proposition}
+\begin{proof}
+The backward-heat field $H(T-s,x)=x^2+2s$ has a double collision,
+stationary predecessor $x=0$, and zero-free rightward intervals for
+every $s>0$.  With $y=\ell\ge0$,
+\[
+ e=E(T-s,0)=4s^2,\qquad
+ \mathcal C_0=2s(2s+\ell^2-2\ell)\ge-2s=-\sqrt e.
+\]
+For endpoint energy put $q=H_x(T-s,\ell)/H(T-s,\ell)\ge0$ and
+$b=H(T-s,0)/H(T-s,\ell)\in(0,1]$.  Then
+\[
+ \frac{\mathcal C_0}{E(T-s,\ell)}
+ =b\frac{1-q}{1+q^2}\ge-\frac14,
+ \qquad
+ 1-q+\frac{1+q^2}{4}=\frac{(q-2)^2+1}{4}>0.
+\]
+For $q\le1$ the quotient is nonnegative; for $q>1$, multiplication
+by $b\le1$ improves the lower bound.  The still weaker payment by the
+sum of starting and endpoint energies also permits this collision.
+\end{proof}
+
+\subsection{Transfer from a complete family of cutoff estimates}
+
+The chord criterion permits quantitative losses that need not be
+linear in $E$.  The cutoff must be chosen only after a single prescribed
+family of estimates has been proved for every integer cutoff.
+
+\begin{proposition}[All-cutoff transfer]
+\label{phy:cutoff-transfer}
+Let $Q$ be a stationary observation with $e=E(t,x)$, or a chord
+observation with $e=E(t,x)$ at its starting point.  Suppose
+\begin{equation}
+ Q\ge-Ae\exp(aN^\beta)-B\exp(-cN^2)
+ \quad\hbox{for every integer }N\ge N_0,
+ \label{phy:all-cutoff-family}
+\end{equation}
+where $A,a,B\ge0$, $c>0$, and $N_0\ge0$ is an integer.
+Assume fixed local upper bounds $A_*,a_*,B_*,N_*$, with $N_*\ge1$,
+and a positive lower bound $c_0$ for $c$.  For chords all these bounds
+are uniform over the admissible intervals of
+Theorem~\ref{phy:chord-exclusion}.  The coefficient rules are prescribed
+before selecting the cutoff and are not fitted to an observed energy
+floor.
+
+If $0<\beta<2$, set
+$M=\max(1,B_*)$, $L(e)=1+\max(0,\log(M/e))$, and
+$D=N_*+1+c_0^{-1/2}$.  For $e>0$,
+\begin{equation}
+ Q\ge-(A_*+1)e\exp\{a_*D^\beta L(e)^{\beta/2}\}.
+ \label{phy:subgaussian-transfer}
+\end{equation}
+This excludes finite collisions for the stationary target with its
+predecessor coverage, and for the chord target with its full interval
+coverage.
+
+If $\beta=2$ and $a_*<c_0$, put
+\[
+ \kappa=a_*+c_0,\qquad p=\frac{c_0}{\kappa}>\frac12,
+ \qquad D_2=N_*+1.
+\]
+For $0<e\le M$, with $L_2=\log(M/e)$, one has
+\begin{equation}
+ Q\ge-M^{1-p}e^p
+ \left[A_*\exp\left\{a_*D_2^2+
+        2a_*D_2\sqrt{L_2/\kappa}\right\}+1\right].
+ \label{phy:gaussian-gap-transfer}
+\end{equation}
+This loss is $o(\sqrt e)$ and therefore excludes collisions for the
+chord target.  Equivalently, every $1/2<\gamma<p$ yields a bound
+$Q\ge-K_\gamma e^\gamma$ for sufficiently small $e$.
+\end{proposition}
+\begin{proof}
+For the first claim choose
+\[
+ N=\left\lceil\max\left(N_*,
+       \sqrt{\max(0,\log(M/e))/c_0}\right)\right\rceil.
+\]
+Then $B\exp(-cN^2)\le e$ and $N\le D\sqrt{L(e)}$, proving
+\eqref{phy:subgaussian-transfer}.  Its relative loss is
+$\exp(o(\log(1/e)))$.  Along \eqref{phy:chord-start-energy} it is
+$s^{-o(1)}$, which cannot absorb the stationary pole $r/s$.
+Its absolute loss is also $o(\sqrt e)$, so
+Theorem~\ref{phy:chord-exclusion} applies.
+
+For the Gaussian claim choose
+$N=\lceil\max(N_*,\sqrt{L_2/\kappa})\rceil$.
+The inequalities
+$\sqrt{L_2/\kappa}\le N\le D_2+\sqrt{L_2/\kappa}$ give
+\eqref{phy:gaussian-gap-transfer} directly.  The factor
+$\exp(O(\sqrt{\log(1/e)}))$ pays integer rounding and the cutoff
+threshold.  It is dominated by $e^{-(p-\gamma)}$ for any fixed
+$\gamma<p$ as $e\downarrow0$.  At $e=0$, letting $N\to\infty$ in
+\eqref{phy:all-cutoff-family} gives $Q\ge0$.
+\end{proof}
+
+The strict local rate gap $a_*<c_0$ cannot be replaced here by a
+nonuniform pointwise gap that closes at the event.  Nor may the
+rounding factor in \eqref{phy:gaussian-gap-transfer} be dropped when
+claiming an exact $O(e^p)$ loss.  At equality of the rates the preceding
+double-collision control satisfies, for every real $N$,
+\[
+ e\exp(N^2)+\exp(-N^2)\ge2\sqrt e=4s,
+ \qquad \mathcal L_0=-4s,\qquad \mathcal C_0\ge-2s.
+\]
+Thus both observations obey \eqref{phy:all-cutoff-family} with
+$\beta=2$ and $A=B=a=c=1$ despite the collision.  These transfer
+statements are conditional analytic implications, not consequences of
+checking finitely many cutoffs.  A separately truncated observation
+requires its own complete error estimate; a proved error
+$Q_0\sqrt e\exp(-c_1N^2)$ can be paid by
+$e/2+(Q_0^2/2)\exp(-2c_1N^2)$.
+
+\subsection{The inner profile and quarter-turn concentration}
+
+\begin{lemma}[The real scaled heat profiles]
+\label{phy:scaled-profile}
+Use the notation of Theorem~\ref{phy:fixed-endpoint-chord}.  Uniformly
+on each fixed compact interval of $\xi$,
+\begin{align}
+ W(T-s,\chi(s)+s\xi)&=ks^r\{1+O(s)\},\nonumber\\
+ W_x(T-s,\chi(s)+s\xi)&=ks^r\{r\xi+O(s)\},\nonumber\\
+ W_{xx}(T-s,\chi(s)+s\xi)&=ks^{r-1}\{r+O(s)\}.
+ \label{phy:inner-jet-profile}
+\end{align}
+On each fixed interval $0\le y\le c$, $c>0$, one also has
+\begin{align}
+ W(T-s,\chi(s)+\sqrt{s}\,y)
+ &=ks^r\{F_r(y)+O(\sqrt{s})\},\label{phy:scaled-W}\\
+ W_x(T-s,\chi(s)+\sqrt{s}\,y)
+ &=ks^{r-1/2}\{F_r'(y)+O(\sqrt{s})\},\label{phy:scaled-Wx}\\
+ F_r(y)&=\sum_{\ell=0}^r
+       \frac{r!}{(r-\ell)!(2\ell)!}y^{2\ell}.
+ \label{phy:profile-polynomial}
+\end{align}
+In particular, $W$ has the sign of $k$ on each such whole interval
+for small $s>0$; $F_r\ge1$ and $F_r'(c)>0$.
+\end{lemma}
+\begin{proof}
+In \eqref{phy:heat-taylor} put
+$x-a=s(\eta(s)+\xi)$, where $\eta(s)=(\chi(s)-a)/s$ is analytic.
+The leading coefficients of $W,W_x,W_{xx}$ after removing respectively
+$s^r,s^r,s^{r-1}$ are $k,kr\xi,kr$; for $W_x$, the constant term
+cancels because
+$\eta(0)=-\partial_x^{2r+1}W(T,a)/(r\partial_x^{2r}W(T,a))$.
+The resulting analytic expansions and their fixed-order derivatives
+are uniform on compact $\xi$ intervals.  For the parabolic scale put
+$s=\eta^2$ instead.  The coefficient of $\eta^{2r}$ in
+$W(T-\eta^2,\chi(\eta^2)+\eta y)$ is $kF_r(y)$; the displacement
+$\chi(\eta^2)-a=O(\eta^2)$ does not affect it.  Uniform analytic
+remainders and their first $y$ derivatives prove the two expansions.
+Positivity of the displayed polynomial proves the sign assertions.
+\end{proof}
+
+Equations \eqref{phy:angle-derivative} and \eqref{phy:inner-jet-profile}
+give the finer angular core, uniformly on compact $\xi$ intervals:
+\begin{align}
+ \alpha_j(T-s,\chi(s)+s\xi)-\alpha_j(T-s,\chi(s))
+ &=\arctan(r\xi)+O(s),\nonumber\\
+ s\,\partial_x\alpha_j(T-s,\chi(s)+s\xi)
+ &=\frac{r}{1+r^2\xi^2}+O(s).
+ \label{phy:inner-cauchy-profile}
+\end{align}
+These compact-window limits assert no weak limit on a fixed spatial
+neighborhood and require no unproved uniform tail estimate.
+For an odd collision the same Taylor counting gives
+$H(T-s,\chi(s)+s\xi)=O(s^{r+1})$, so
+\begin{equation}
+ \frac{E_1^{\rm jet}}{E}(T-s,\chi(s)+s\xi)
+ \longrightarrow1+r^2\xi^2.
+ \label{phy:inner-odd-energy}
+\end{equation}
+Thus agreement of the two energies at the stationary center cannot be
+extended across a nonzero inner window without retaining this factor.
+
+\begin{theorem}[Positive quarter-turn concentration]
+\label{phy:quarter-turn}
+For each fixed $c>0$, the collision and predecessor above satisfy
+\begin{equation}
+ \alpha_j(T-s,\chi(s)+c\sqrt{s})
+ -\alpha_j(T-s,\chi(s))\longrightarrow\frac\pi2.
+ \label{phy:quarter-turn-limit}
+\end{equation}
+The defining pair is regular on the whole interval, including on branch
+$j=1$.  The chord limits at the two shrinking scales are
+\begin{align}
+ \frac{\mathcal C_j(T-s;\chi(s),\chi(s)+Cs/r)}
+ {E(T-s,\chi(s))}&\longrightarrow1-C\quad(C>0),\nonumber\\
+ \frac{\mathcal C_j(T-s;\chi(s),\chi(s)+c\sqrt{s})}
+ {E(T-s,\chi(s))}&=-\frac{F_r'(c)}{\sqrt{s}}+O(1).
+ \label{phy:shrinking-chord-limits}
+\end{align}
+\end{theorem}
+\begin{proof}
+Zero-freeness follows from Lemma~\ref{phy:scaled-profile}.
+At the parabolic endpoint,
+\[
+ W_x/W=s^{-1/2}(F_r'(c)/F_r(c))(1+O(\sqrt{s}))\to+\infty.
+\]
+Equation~\eqref{phy:chord-angle} proves the angle limit with either
+sign of $k$.  Substitution of the two jet expansions into
+\eqref{phy:chord-observation}, using \eqref{phy:chord-start-energy},
+proves both chord limits.
+\end{proof}
+
+The finite inner limit alone can be absorbed by a growing relative
+energy allowance.  A bound uniform on all short intervals must also
+hold on the parabolic windows and at the fixed nearby endpoint, where
+the stronger obstructions apply.  This interval quantifier explains
+why the cutoff conclusions above are stronger than a test on one
+fixed inner window; see \cite{ThetaChord}.
+
+\subsection{A supporting one-sided continuity criterion}
+
+\begin{definition}[One-sided modulus from stationary starting points]
+\label{phy:turning-modulus}
+A field has a local one-sided turning modulus on a declared domain if,
+near each covered candidate event, there are a fixed $\ell_0>0$ and a
+prescribed nonnegative function $\omega(\ell)\to0$ as $\ell\downarrow0$,
+uniform in time and starting point, such that for $j=0,1$
+\begin{equation}
+ \alpha_j(t,x+\ell)-\alpha_j(t,x)\le\omega(\ell)
+ \label{phy:modulus-condition}
+\end{equation}
+whenever $0<\ell\le\ell_0$, $h_{j+1}(t,x)=0$, $h_j(t,x)\ne0$,
+the segment lies in the covered neighborhood, and
+$(h_j,h_{j+1})\ne(0,0)$ throughout it.  The increment uses its
+continuous lift along the segment.
+\end{definition}
+
+\begin{theorem}[Oriented-continuity exclusion]
+\label{phy:turning-exclusion}
+Let $H$ be a real analytic backward-heat field with nonzero spatial
+slices.  If Definition~\ref{phy:turning-modulus} holds with coverage of
+the sufficiently close full predecessors and their short rightward
+intervals, then no covered finite multiple real zero occurs.
+For the complete theta field, coverage of $0<T\le1/2$ implies RH by
+Remark~\ref{phy:imported-bridge}.
+\end{theorem}
+\begin{proof}
+At a candidate event take $\ell=c\sqrt{s}$ on its parity branch.
+Lemma~\ref{phy:scaled-profile} supplies the required regularity on the
+whole interval.  The upper bound tends to zero, contradicting
+Theorem~\ref{phy:quarter-turn}.
+\end{proof}
+
+On every regular test interval the observed increment is exactly
+\begin{equation}
+ \int_x^{x+\ell}
+ \frac{h_jh_{j+2}-h_{j+1}^2}{h_j^2+h_{j+1}^2}(t,y)\,dy.
+ \label{phy:signed-turning-integral}
+\end{equation}
+A uniform upper bound on the angular derivative throughout these
+intervals implies a linear modulus.  More generally a uniform strict
+gap below $\pi/2$ on all sufficiently short regular intervals already
+contradicts \eqref{phy:quarter-turn-limit}.  Both formulations retain
+the orientation and allow negative turning; neither follows from a
+curvature-magnitude bound or from continuity on individual regular
+slices.  No global regularity of the second branch is assumed.
+
+The resulting hierarchy identifies concrete conditional source targets,
+with \eqref{phy:chord-target} the most tolerant energy-scale target
+proved here.  The exact polynomial controls in \cite{ThetaTurning,ThetaChord}
+test the local identities and their scope; they establish no sign bound
+for the theta source.  The remaining task is a complete-theta estimate
+with the required signs, starting-point energy, and uniform interval
+coverage.
+
+
+\section{The complete theta source on a curved elliptic family}
+\label{theta:section}
+
+The preceding geometric realizations retain the physical jets, but a local
+realization alone does not distinguish the theta source from a collision
+control.  We now place the complete source in a family carrying its actual
+integer lattice.  There are three separate structures: the holomorphic theta
+line bundle, the physical heat-weighted transform, and a nonflat
+hyperk\"ahler metric on the elliptic family.  Their relations below are exact.
+They do not yet give the signed estimate at the physical energy scale.
+Our source normalization is that of~\cite{BakerTheta}.
+
+\subsection{The complete primitive and its boundary contribution}
+\label{theta:primitive}
+
+For $u\geq0$ set
+\begin{equation}
+ \Phi(u)=\sum_{n\geq1}
+  \bigl(2\pi^2n^4e^{9u}-3\pi n^2e^{5u}\bigr)
+                  e^{-\pi n^2e^{4u}},
+ \qquad
+ H(t,x)=\int_0^\infty e^{tu^2}\Phi(u)\cos(xu)\,du.
+ \label{theta:physical-source}
+\end{equation}
+Every fixed source derivative decays faster than any Gaussian as
+$u\to+\infty$.  The sums and integrals below therefore converge locally
+uniformly with all stated derivatives.  In particular, $H$ is entire in
+$(t,x)\in\mathbb C^2$ and satisfies $H_t=-H_{xx}$.
+
+Write
+\begin{equation}
+ \vartheta(z,\tau)=\sum_{n\in\mathbb Z}
+                   e^{\pi i n^2\tau+2\pi i nz},\qquad \Im\tau>0,
+ \quad
+ P(u)=e^u\vartheta(0,ie^{4u}),\quad
+ \psi(u)=e^u\sum_{n\geq1}e^{-\pi n^2e^{4u}}.
+ \label{theta:primitive-definitions}
+\end{equation}
+Thus $P=e^u+2\psi$ on the half-line.  The Gaussian Poisson identity
+$\vartheta(0,i/y)=\sqrt y\,\vartheta(0,iy)$ implies $P(-u)=P(u)$.
+The function $P$ grows like $e^u$ at positive infinity; it is $\psi$, not
+$P$, that supplies a convergent positive-time primitive transform.
+
+\begin{proposition}[Complete differential reconstruction]
+\label{theta:reconstruction}
+The complete source and primitive satisfy
+\begin{equation}
+ \Phi=\frac{P''-P}{16}=\frac{\psi''-\psi}{8},
+ \qquad \psi^{(2k+1)}(0)=-\frac12\quad(k\geq0).
+ \label{theta:primitive-ode}
+\end{equation}
+For
+\begin{equation}
+ J(t,x)=\int_0^\infty e^{tu^2}\psi(u)\cos(xu)\,du
+ \label{theta:J-definition}
+\end{equation}
+one has the exact identity
+\begin{equation}
+ \boxed{\displaystyle
+ 8H=\frac12+(2t-x^2-1)J+4txJ_x-4t^2J_{xx}.}
+ \label{theta:reconstruction-identity}
+\end{equation}
+All the theta indices occur in these identities.
+\end{proposition}
+
+\begin{proof}
+Termwise differentiation of $P$ gives the first identity in
+\eqref{theta:primitive-ode}; $(e^u)''-e^u=0$ gives the second expression.
+Evenness of $P=e^u+2\psi$ gives every displayed endpoint derivative.
+For $F(u)=e^{tu^2}\cos(xu)$, two integrations by parts yield
+\[
+ \int_0^\infty\psi''F\,du
+ =-\psi'(0)F(0)+\psi(0)F'(0)+\int_0^\infty\psi F''\,du.
+\]
+The upper boundary terms vanish, $F(0)=1$, and $F'(0)=0$.  Directly,
+\[
+ F''-F=e^{tu^2}
+ \bigl[(2t+4t^2u^2-x^2-1)\cos(xu)-4txu\sin(xu)\bigr].
+\]
+Insert $\psi'(0)=-1/2$ and differentiate~\eqref{theta:J-definition}.
+This gives~\eqref{theta:reconstruction-identity}, including its boundary
+constant.
+\end{proof}
+
+\begin{proposition}[Positive primitive; signed reconstruction]
+\label{theta:primitive-positive}
+For $0\leq t\leq1/2$ and every real $x$, $J(t,x)>0$.  Uniformly on this
+heat interval,
+\begin{equation}
+ J(t,x)=\frac1{2x^2}-\frac{1+6t}{2x^4}+O(x^{-6})
+ \qquad(|x|\to\infty).
+ \label{theta:J-asymptotic}
+\end{equation}
+At time zero the exact reconstruction is
+\begin{equation}
+ J(0,x)=\frac1{2(1+x^2)}-\frac{8H(0,x)}{1+x^2}.
+ \label{theta:J-time-zero}
+\end{equation}
+\end{proposition}
+
+\begin{proof}
+Let $q_n=\pi n^2e^{4u}$ and
+$f_n(u)=\exp(tu^2+u-q_n)$, so that $f=e^{tu^2}\psi=\sum_{n\geq1}f_n$.
+For $u\geq0$ and $0\leq t\leq1/2$,
+$2tu+1\leq u+1\leq q_n$.  Hence
+\[
+ \frac{f_n''}{f_n}
+ =(2tu+1-4q_n)^2+2t-16q_n
+ \geq9q_n^2-16q_n>0.
+\]
+Thus $f''>0$.  Moreover $f'(0)=-1/2$ and $f'(\infty)=0$.
+For $x\ne0$, integration by parts gives
+\begin{equation}
+ J(t,x)=\frac1{x^2}\int_0^\infty f''(u)(1-\cos(xu))\,du>0.
+ \label{theta:convex-cosine}
+\end{equation}
+At $x=0$ the defining integral is positive.  Repeated integration by parts
+uses $f'(0)=-1/2$ and $f'''(0)=-(1+6t)/2$ to give
+\eqref{theta:J-asymptotic}.  The sixth derivative is uniformly integrable
+on the stated compact heat interval, which bounds its remainder.
+Finally~\eqref{theta:J-time-zero} is~\eqref{theta:reconstruction-identity}
+with $t=0$.
+\end{proof}
+
+\begin{remark}[What this positivity does not prove]
+\label{theta:primitive-limit}
+The physical field is reconstructed from a signed differential expression
+in a strictly positive channel.  At $t=0$ it is the difference between that
+channel and an explicit rational profile.  The primitive-compatible
+collision controls of~\cite{BakerControl}, have the same boundary
+constant, strict primitive positivity, and every algebraic asymptotic
+coefficient of $J$, while possessing a positive-time double zero.
+Their source is not the integer theta series.  Accordingly, the next
+construction retains the theta line bundle and its section, rather than
+using primitive positivity alone.
+\end{remark}
+
+\subsection{The theta line bundle, its connection, and the fourth jet}
+\label{theta:line-bundle}
+
+Use the marked elliptic family
+\[
+ \mathcal X=(\mathbb H\times\mathbb C)/\mathbb Z^2,
+ \qquad (m,n):(\tau,z)\longmapsto(\tau,z+m+n\tau),
+\]
+where $\mathbb H$ is the upper half-plane.  Write $\tau=p+iq$,
+$z=r+\tau s$, so that $q>0$ and $r,s$ are real fiber coordinates modulo
+one.  The factors
+\begin{equation}
+ j_{m,n}(\tau,z)=e^{-\pi i n^2\tau-2\pi i nz}
+ \label{theta:multipliers}
+\end{equation}
+define a holomorphic line bundle $L\to\mathcal X$, and reindexing the
+series gives
+\begin{equation}
+ \vartheta(z+m+n\tau,\tau)=j_{m,n}(\tau,z)\vartheta(z,\tau),
+ \qquad 4\pi i\,\partial_\tau\vartheta=\partial_z^2\vartheta.
+ \label{theta:automorphy-heat}
+\end{equation}
+The second equality follows term by term.  These standard theta-section
+and heat-connection structures are described in
+\cite[Section~6]{AndersenBlaavand2011}; the explicit normalizations needed
+here are derived below.
+
+Ordinary derivatives are jets, not separate copies of the same
+holomorphic section.  For every nonnegative integer $k$,
+\begin{equation}
+ (\partial_z^k\vartheta)(z+m+n\tau,\tau)
+ =j_{m,n}(\tau,z)
+   \sum_{a=0}^k\binom ka(-2\pi in)^{k-a}
+                          (\partial_z^a\vartheta)(z,\tau).
+ \label{theta:jet-automorphy}
+\end{equation}
+Thus a global description must keep the lower-jet terms or choose a
+connection.  The following choice also identifies the actual curvature
+of the theta line bundle.
+
+\begin{proposition}[Hermitian theta connection]
+\label{theta:chern}
+In the holomorphic frame on $\mathbb H\times\mathbb C$, the metric
+\begin{equation}
+ h(\tau,z)=\exp\!\left(-\frac{2\pi(\Im z)^2}{q}\right)
+ \label{theta:Hermitian-metric}
+\end{equation}
+descends to $L$.  Its Chern connection and curvature are
+\begin{align}
+ \nabla&=d+A, & A&=\partial\log h
+                  =2\pi i s\,dz-\pi i s^2\,d\tau,
+                  \label{theta:chern-connection}\\
+ F_\nabla&=\frac\pi q\eta\wedge\overline\eta
+                 =-2\pi i\,dr\wedge ds,
+ &\eta&=dz-s\,d\tau=dr+\tau ds.
+ \label{theta:chern-curvature}
+\end{align}
+In particular, $\int_{E_\tau}iF_\nabla/(2\pi)=1$.
+The vertical covariant operator in the chosen relative frame is
+\begin{equation}
+ \mathcal D=\nabla_{\partial_z}=\partial_z+2\pi i s.
+ \label{theta:vertical-operator}
+\end{equation}
+Each $\mathcal D^k\vartheta$ transforms by the multiplier
+\eqref{theta:multipliers}.
+\end{proposition}
+
+\begin{proof}
+Put $v=\Im z$.  Under a lattice translation $v$ becomes $v+nq$, while
+$|j_{m,n}|^2=e^{2\pi n^2q+4\pi nv}$.  Consequently
+$h(\tau,z+m+n\tau)|j_{m,n}(\tau,z)|^2=h(\tau,z)$.
+Using $\partial_z v=1/(2i)$ and $\partial_\tau q=1/(2i)$ gives
+\eqref{theta:chern-connection}.  Differentiation yields
+\[
+ dA=2\pi i\,ds\wedge(dz-s\,d\tau).
+\]
+Since
+$ds=(\eta-\overline\eta)/(2iq)$, this is
+$(\pi/q)\eta\wedge\overline\eta$.  Finally
+$\eta\wedge\overline\eta=-2iq\,dr\wedge ds$.
+The fiber integral is one, with orientation $dr\wedge ds$.
+Under translation $s$ becomes $s+n$ and
+$\partial_z j_{m,n}=-2\pi in j_{m,n}$.  The two extra terms cancel in
+$\mathcal D(j_{m,n}a)$ after using the translated $s$.  Iterating proves
+the covariant transformation statement.
+\end{proof}
+
+\begin{remark}
+The covariant derivatives here are smooth sections.  They need not be
+holomorphic: $[\partial_{\bar z},\mathcal D]=-\pi/q$.
+Also, $\mathcal D^k$ means repeated vertical differentiation in the
+translation-invariant frame $\partial_z$ of the relative tangent bundle.
+It is not an unspecified full covariant Hessian on the total space.
+The Chern connection is distinct from the theta heat connection in
+\eqref{theta:automorphy-heat}.
+\end{remark}
+
+\begin{theorem}[Exact covariant theta-source formula]
+\label{theta:covariant-source}
+Let $y=e^{4u}$ and evaluate the theta section at $(\tau,z)=(iy,0)$.
+Then
+\begin{align}
+ \Phi(u)
+ &=y^{1/4}\left(y^2\partial_y^2+\frac32y\partial_y\right)
+                      \vartheta(0,iy) \label{theta:y-source}\\
+ &=y^{1/4}\left(\frac{y^2}{16\pi^2}\partial_z^4
+                  +\frac{3y}{8\pi}\partial_z^2\right)
+                      \vartheta(z,iy)\big|_{z=0} \label{theta:ordinary-source}\\
+ &=\boxed{\displaystyle
+   \frac{y^{1/4}}{16\pi^2}
+      \bigl(y^2\mathcal D^4\vartheta-3\pi^2\vartheta\bigr)(0,iy).}
+                      \label{theta:covariant-source-formula}
+\end{align}
+The final expression is evaluated in the stated holomorphic frame along
+the zero section of the marked family.  It is a source identity, not a
+norm identity or a positivity statement.
+\end{theorem}
+
+\begin{proof}
+For $D_y=y\partial_y$, one has $\partial_u=4D_y$ and
+$y^{-1/4}D_y y^{1/4}=D_y+1/4$.  Thus
+\[
+ \frac1{16}y^{-1/4}(\partial_u^2-1)y^{1/4}
+       =D_y^2+\tfrac12D_y
+       =y^2\partial_y^2+\tfrac32y\partial_y,
+\]
+which proves~\eqref{theta:y-source}.  The theta heat equation gives
+$\partial_y\vartheta(z,iy)=(4\pi)^{-1}\partial_z^2\vartheta(z,iy)$,
+proving~\eqref{theta:ordinary-source}.
+At fixed $\tau$, let $a=2\pi is$, so $\mathcal D=\partial_z+a$.
+Then $\partial_z a=\pi/q$ and $\partial_z^2a=0$.  At $z=0$, $a=0$,
+and the operator product gives
+\begin{align*}
+ (\mathcal D^2\vartheta)|_0
+   &=(\partial_z^2\vartheta)|_0+\frac\pi q\vartheta|_0,\\
+ (\mathcal D^4\vartheta)|_0
+   &=(\partial_z^4\vartheta)|_0
+     +\frac{6\pi}{q}(\partial_z^2\vartheta)|_0
+     +\frac{3\pi^2}{q^2}\vartheta|_0.
+\end{align*}
+Set $q=y$ and substitute the last equality into
+\eqref{theta:ordinary-source}.  The second-derivative terms cancel,
+leaving~\eqref{theta:covariant-source-formula}.
+\end{proof}
+
+The physical reconstruction is now an exact integral along the real
+path $\tau=iy$, $y\geq1$, in this marked family:
+\begin{align}
+ H(t,x)
+ &=\frac14\int_1^\infty
+    e^{t(\log y)^2/16}y^{1/4}
+    \left(y^2\partial_y^2+\frac32y\partial_y\right)\vartheta(0,iy)
+       \cos\!\left(\frac x4\log y\right)\frac{dy}{y}
+       \label{theta:physical-Mellin}\\
+ &=\frac1{64\pi^2}\int_1^\infty
+    e^{t(\log y)^2/16}y^{1/4}
+    \bigl(y^2\mathcal D^4\vartheta-3\pi^2\vartheta\bigr)(0,iy)
+       \cos\!\left(\frac x4\log y\right)\frac{dy}{y}.
+       \label{theta:covariant-Mellin}
+\end{align}
+Both integrals retain all theta indices.  The physical heat multiplier
+$e^{t(\log y)^2/16}$ is not the parameter evolution in the Jacobi heat
+equation.  Inversion $y\mapsto1/y$ preserves this squared-log multiplier;
+that reflection symmetry must not be discarded.  Nevertheless, the
+oscillatory integral~\eqref{theta:covariant-Mellin} does not become a
+positive Hermitian norm merely because $L$ has positive fiber degree.
+
+\subsection{A nonflat hyperk\"ahler metric with the correct elliptic fibers}
+\label{theta:semiflat}
+
+The same marked family has an explicit metric which incorporates its
+varying elliptic modulus.  This is a local semi-flat construction in the
+sense of~\cite[Section~2]{GrossWilson2000}; we give a direct verification
+so that neither its curvature nor its global scope is implicit.
+
+\begin{proposition}[Semi-flat geometry on the marked cover]
+\label{theta:semiflat-proposition}
+On $\mathbb H\times(\mathbb R/\mathbb Z)^2$ the metric
+\begin{equation}
+ g=q(dp^2+dq^2)+q^{-1}(dr+p\,ds)^2+q\,ds^2
+   =q|d\tau|^2+q^{-1}|\eta|^2
+ \label{theta:semiflat-metric}
+\end{equation}
+is hyperk\"ahler and nonflat.  Its elliptic fibers have modulus $\tau$
+and area one.  A parallel hyperk\"ahler triple is
+\begin{equation}
+ \omega_I=q\,dp\wedge dq+dr\wedge ds,
+ \qquad \omega_J+i\omega_K=d\tau\wedge dz.
+ \label{theta:hyperkahler-triple}
+\end{equation}
+For the orientation $\omega_I^2/2>0$, the three forms are self-dual.
+The horizontal sectional curvature is $1/(2q^3)$.
+\end{proposition}
+
+\begin{proof}
+The fiber metric is $q^{-1}|dr+\tau ds|^2$, with area form
+$dr\wedge ds$.  Introduce the orthonormal coframe
+\[
+ e^1=\sqrt q\,dp,\quad e^2=\sqrt q\,dq,\quad
+ e^3=q^{-1/2}(dr+p\,ds),\quad e^4=\sqrt q\,ds.
+\]
+Writing $e^{ab}=e^a\wedge e^b$, direct expansion gives
+\begin{equation}
+ \omega_I=e^{12}+e^{34},\qquad
+ \omega_J=e^{13}-e^{24},\qquad
+ \omega_K=e^{14}+e^{23},\qquad
+ \omega_a\wedge\omega_b=2\delta_{ab}\operatorname{vol}_g.
+ \label{theta:triple-algebra}
+\end{equation}
+The first form is closed.  Moreover
+$d\tau\wedge dz=d\tau\wedge(dr+\tau ds)$, which is closed,
+so the other two forms are closed as well.
+
+For a direct K\"ahler verification, $(\tau,z)$ are holomorphic coordinates
+on a local lift, and
+\[
+ \omega_I=\frac i2\bigl(q\,d\tau\wedge d\bar\tau
+                              +q^{-1}\eta\wedge\bar\eta\bigr).
+\]
+The Hermitian coefficient matrix of the metric is
+\begin{equation}
+ G=\begin{pmatrix}q+s^2/q&-s/q\\-s/q&1/q\end{pmatrix},
+ \qquad \det G=1.
+ \label{theta:Hermitian-determinant}
+\end{equation}
+Thus the K\"ahler Ricci form $-i\partial\bar\partial\log\det G$
+vanishes.  The induced Chern connection on the canonical bundle has
+zero connection form in the frame $d\tau\wedge dz$; since the metric is
+K\"ahler, this frame is Levi-Civita parallel.  Its real and imaginary
+parts, together with the parallel K\"ahler form, give the parallel
+triple~\eqref{theta:hyperkahler-triple}.  The algebra
+\eqref{theta:triple-algebra} fixes its normalization and orientation.
+
+Finally, the surfaces with $r,s$ constant are totally geodesic: in these
+real coordinates the metric is block diagonal, and its base block is
+independent of $r,s$.  Their induced metric is $q(dp^2+dq^2)$.
+Its Gaussian curvature is
+\begin{equation}
+ K_{\mathrm{base}}=-\frac1{2q}(\partial_p^2+\partial_q^2)\log q
+                  =\frac1{2q^3}>0.
+ \label{theta:nonflat-curvature}
+\end{equation}
+Total geodesy identifies this with the ambient sectional curvature of
+the horizontal plane, proving nonflatness.
+\end{proof}
+
+\begin{remark}[The precise global scope]
+\label{theta:global-scope}
+The formulas descend under the fiber lattice and are defined over the
+whole marked upper half-plane.  They do not give a metric on the full
+modular quotient.  Under
+\[
+ \tau'=\frac{a\tau+b}{c\tau+d},\qquad z'=\frac z{c\tau+d},
+ \qquad ad-bc=1,
+\]
+one has
+\begin{equation}
+ d\tau'\wedge dz'=(c\tau+d)^{-3}d\tau\wedge dz,
+ \qquad q'|d\tau'|^2=|c\tau+d|^{-6}q|d\tau|^2.
+ \label{theta:modular-obstruction}
+\end{equation}
+The base metric therefore fails modular invariance as written.
+There is also incompleteness: a path with $p,r,s$ constant and
+$q\downarrow0$ has finite length $\int_0^{q_0}\sqrt q\,dq$.
+No complete K3 metric or extension through singular fibers is asserted.
+The global construction in~\cite{GrossWilson2000} introduces local
+models and corrections around singular elliptic fibers; that separate
+existence theorem does not identify the physical transform with a K3
+invariant.  Any modular descent here must supply the missing base-period
+and line-bundle data and then control the resulting boundary terms.
+\end{remark}
+
+\subsection{An actual abelian anti-self-dual theta connection}
+\label{theta:ASD}
+
+The connection in Proposition~\ref{theta:chern} carries the arithmetic
+section, but its curvature is not anti-self-dual for
+\eqref{theta:semiflat-metric}.  This distinction can be resolved explicitly
+on the marked noncompact family, without changing the vertical source
+formula.
+
+\begin{proposition}[A Chern connection with anti-self-dual curvature]
+\label{theta:ASD-connection}
+Let $\omega_b=q\,dp\wedge dq$ and $\omega_f=dr\wedge ds$.
+Equip the same holomorphic theta line bundle with the Hermitian metric
+\begin{equation}
+ \widehat h=\exp\!\left(\frac{2\pi}{3}q^3\right)h.
+ \label{theta:ASD-metric}
+\end{equation}
+Its Chern connection has connection form and curvature
+\begin{align}
+ \widehat A&=A-\pi i q^2\,d\tau,
+                       \label{theta:ASD-form}\\
+ F_{\widehat\nabla}
+    &=2\pi i(\omega_b-\omega_f),
+ & *F_{\widehat\nabla}&=-F_{\widehat\nabla}.
+                       \label{theta:ASD-curvature}
+\end{align}
+It is an abelian Yang--Mills connection, and its vertical covariant
+operator remains $\mathcal D$.  Thus
+\eqref{theta:covariant-source-formula} is unchanged.
+\end{proposition}
+
+\begin{proof}
+The extra factor in~\eqref{theta:ASD-metric} depends only on the base,
+so it preserves the lattice descent and the holomorphic bundle.
+Since $\partial_\tau q=1/(2i)$,
+\[
+ \partial\!\left(\frac{2\pi}{3}q^3\right)
+       =-\pi i q^2\,d\tau,
+ \qquad d(-\pi i q^2\,d\tau)=2\pi i q\,dp\wedge dq.
+\]
+Combine this with~\eqref{theta:chern-curvature}.
+In the orthonormal coframe, $\omega_b=e^{12}$ and
+$\omega_f=e^{34}$, so $*\omega_b=\omega_f$ and
+$*\omega_f=\omega_b$.  This proves anti-self-duality.
+The curvature is closed, and hence $d*F_{\widehat\nabla}=0$;
+for a line bundle this is the Yang--Mills equation.
+The extra connection form vanishes on $\partial_z$, proving the last
+assertion.
+\end{proof}
+
+\begin{remark}[Scope of the ASD construction]
+\label{theta:ASD-limits}
+This is a nonflat geometric setting with the actual theta section and
+an anti-self-dual line-bundle connection. The unmodified Chern curvature
+has self-dual part $F_\nabla^+=-\pi i\omega_I$. The base rescaling
+removes that part while preserving the vertical source expression.
+It provides neither compactness nor a finite-energy instanton: the
+real curvature $F_{\widehat\nabla}/i$ has squared norm $8\pi^2$, while
+$\operatorname{vol}_g=q\,dp\,dq\,dr\,ds$ has infinite integral on this
+cover. The displayed metric's rapid cusp growth is not an invariant
+obstruction; the classification below gives a representative normalized
+on the physical path. Neither positive degree nor the Yang--Mills
+equation supplies the required signed physical estimate.
+\end{remark}
+
+% Prepared for Edward Baker, 15 October 2026.
+% Substantial LLM assistance: gpt-6-astra, reasoning effort ultra.
+\subsection{Physical restriction and complete signed source identities}
+\label{theta:complete-source-bridge}
+
+The ASD construction does not determine the norm of the distinguished
+arithmetic section, and its physical restriction is flat.  The useful
+data that survive are the transverse jet identities and the complete
+signed transform, including its endpoints \cite{ThetaMetric,ThetaBridge}.
+
+\begin{proposition}[Metric freedom and transverse jets]
+\label{theta:metric-freedom}
+Among base-only changes $h_b=e^{b(p,q)}h$, the ASD metrics are exactly
+\begin{equation}
+ b=\frac{2\pi}{3}q^3+2\Re f(\tau),\qquad
+ f\text{ holomorphic on }\mathbb H.
+ \label{theta:ASD-classification}
+\end{equation}
+They have the same curvature and vertical operator $\mathcal D$.
+In particular, $f=-\pi i\tau^3/3$ gives
+\begin{equation}
+ \widetilde h=e^{2\pi p^2q}h,\qquad
+ \widetilde A=A-\pi i(q^2+\tau^2)d\tau,
+ \qquad\gamma^*\widetilde h=1,\quad\gamma^*\widetilde A=0,
+ \label{theta:path-normalized-ASD}
+\end{equation}
+where $\gamma(u)=(ie^{4u},0)$.  The natural external product connection
+on two physical paths is also flat.
+
+In a marked holomorphic chart set
+$X=4q\partial_q|_{p,z,\bar z}$ and
+$J_k(u)=(\mathcal D^k\vartheta)(0,iq)$, $q=e^{4u}$.  Compute the
+commutators before restriction to the zero section.  Then
+\begin{align}
+ [\nabla_X^{(b)},\mathcal D^k]
+ &=-4k\pi i s\mathcal D^{k-1}
+   -\frac{k(k-1)\pi}{q}\mathcal D^{k-2},
+ \label{theta:transverse-commutator}\\
+ J_k'&=\frac q\pi J_{k+2}-(2k+1)J_k
+       -\frac{k(k-1)\pi}{q}J_{k-2}.
+ \label{theta:covariant-jet-recurrence}
+\end{align}
+Terms with zero prefactor are omitted.  The extension $X$ is chart-local;
+it is not asserted to be a global horizontal field under the
+$\tau$-dependent lattice translations.
+\end{proposition}
+\begin{proof}
+Direct differentiation gives
+\[
+ F_b=-2\pi i\,dr\wedge ds
+       +\frac i2(b_{pp}+b_{qq})\,dp\wedge dq.
+\]
+Thus ASD is equivalent to $\Delta b=4\pi q$.  The difference from
+$2\pi q^3/3$ is harmonic, and the simply connected upper half-plane
+supplies its harmonic conjugate.  The stated choice of $f$ gives
+\eqref{theta:path-normalized-ASD}.  For comparison,
+$\gamma^*\widehat A=d(\pi e^{12u}/3)$; on the external product the
+connection is the sum of these two exact one-forms, with zero curvature.
+
+Write $a=2\pi i s$ and $c=\pi/q$.  One has
+$[\nabla_X^{(b)},\mathcal D]=-2a$,
+$[\mathcal D,a]=c$, and $[\mathcal D,c]=0$; the base-only connection
+term commutes with $\mathcal D$.  Iteration gives
+\eqref{theta:transverse-commutator}.  The recurrence follows by
+differentiating the generating identity
+\[
+ \sum_{k\ge0}J_k(u)\frac{w^k}{k!}
+   =e^{\pi w^2/(2q)}\vartheta(w,iq)
+\]
+and using the Jacobi heat equation.  The base scalar cancels upon
+returning to coefficients in the marked arithmetic frame.
+\end{proof}
+
+The rapid cusp growth of $\widehat h$ is therefore a property of that
+specified metric, not an obstruction determined by ASD curvature.
+Changing the metric while keeping $\vartheta$ fixed changes its norm;
+the equivalent holomorphic bundle isometry instead transforms both the
+section and its dual observation.  Flat physical restriction does not
+remove the second term of \eqref{theta:transverse-commutator}: for
+$k\ge2$ it survives at $s=0$.  It also does not make the oscillatory
+observation a Hermitian norm.
+
+\begin{proposition}[The complete signed bilocal observations]
+\label{theta:bilocal-complete}
+Put $c_j(x,u)=u^j\cos(xu+j\pi/2)$ and define the chord
+\[
+ \mathcal C_j(t;x,y)
+   =h_j(t,x)\{h_j(t,y)-h_{j+1}(t,y)\},\qquad j=0,1.
+\]
+For $x<y$, $h_{j+1}(t,x)=0$, and $h_j$ nonzero on the whole interval,
+its nonnegativity is equivalent to an angular increase of at most
+$\pi/4$.  Define the symmetric source kernels
+\begin{align}
+ K_j(x;u,v)
+ &=\frac{(uv)^j}{4}\left[(u+v)^2\cos(x(u-v))
+       +(-1)^j(u-v)^2\cos(x(u+v))\right],\label{theta:K-complete}\\
+ M(x;u,v)
+ &=\frac12\left[(1+uv)\cos(x(u-v))
+                       +(1-uv)\cos(x(u+v))\right],\label{theta:M-complete}\\
+ T_j(x,y;u,v)
+ &=\frac12\bigl[c_j(x,u)\{c_j(y,v)-c_{j+1}(y,v)\}
+ \notag\\[-2pt]
+ &\hspace{35mm}+c_j(x,v)\{c_j(y,u)-c_{j+1}(y,u)\}\bigr].
+ \label{theta:T-complete}
+\end{align}
+With $\mathcal B(u)=e^{8u}J_4(u)-3\pi^2J_0(u)$, all three
+observations have the same complete covariant insertion:
+\begin{equation}
+ \begin{pmatrix}\mathcal L_j(t,x)\\ \Ephys(t,x)\\
+                       \mathcal C_j(t;x,y)\end{pmatrix}
+ =\frac1{256\pi^4}\int_0^\infty\!\int_0^\infty
+ e^{t(u^2+v^2)+u+v}\mathcal B(u)\mathcal B(v)
+ \begin{pmatrix}K_j(x;u,v)\\M(x;u,v)\\T_j(x,y;u,v)\end{pmatrix}
+ \,du\,dv.
+ \label{theta:complete-bilocal-insertion}
+\end{equation}
+\end{proposition}
+\begin{proof}
+Write $h_j=\int_0^\infty e^{tu^2}\Phi(u)c_j(x,u)\,du$.
+Multiply the defining observations and symmetrize in $u,v$.
+The product-to-sum identities give $K_j$ and $M$; the directed chord
+gives $T_j$.  Insert \eqref{theta:covariant-source-formula} in both
+variables.  Complete-source decay justifies every product and
+differentiation locally uniformly in the parameters.  The angular
+statement follows from the continuous lift
+$\alpha_j(t,y)-\alpha_j(t,x)=\arctan(h_{j+1}(t,y)/h_j(t,y))$,
+because $h_j$ has one sign throughout the interval.
+\end{proof}
+
+The primitive in \eqref{theta:primitive-definitions} displays every
+lower-boundary contribution without splitting the cancelling theta
+terms.  Define
+\begin{equation}
+ I_j(t,x)=\int_0^\infty\psi(u)
+       (\partial_u^2-1)\{e^{tu^2}c_j(x,u)\}\,du.
+ \label{theta:primitive-I}
+\end{equation}
+Two integrations by parts, using $\psi'(0)=-1/2$, give
+\[
+ \int_0^\infty(\psi''-\psi)f\,du
+ =\tfrac12 f(0)+\psi(0)f'(0)
+      +\int_0^\infty\psi(f''-f)\,du.
+\]
+Here $f=e^{tu^2}c_j(x,u)$ is even, $f(0)=\delta_{j0}$, and the
+upper endpoints vanish by double exponential decay.  Consequently
+$8h_j=I_j+\delta_{j0}/2$, and the full signed reconstructions are
+\begin{align}
+ 64\mathcal L_0&=I_1^2-I_0I_2-\tfrac12 I_2,&
+ 64\mathcal L_1&=I_2^2-I_1I_3,\label{theta:Lag-affine}\\
+ 64\Ephys&=\tfrac14+I_0+I_0^2+I_1^2,&&\label{theta:E-affine}\\
+ 64\mathcal C_0(t;x,y)
+ &=I_0(t,x)\{I_0(t,y)-I_1(t,y)\}
+ \notag\\[-2pt]
+ &\quad+\tfrac12 I_0(t,x)
+       +\tfrac12\{I_0(t,y)-I_1(t,y)\}+\tfrac14,
+ &&\label{theta:C0-affine}\\
+ 64\mathcal C_1(t;x,y)
+ &=I_1(t,x)\{I_1(t,y)-I_2(t,y)\}.&&\label{theta:C1-affine}
+\end{align}
+Unspecified arguments in \eqref{theta:Lag-affine}--\eqref{theta:E-affine}
+are $(t,x)$.  The affine terms and constants record the lower edges and
+corner of the bilocal integration by parts; none are disposable.
+Every $I_j$ retains the physical heat multiplier inside its differential
+operator.  These identities specify complete quantities to estimate,
+but assert no sign.  In a chord estimate the comparison energy is
+$\Ephys(t,x)$ at the starting point, also on branch $j=1$; neither
+endpoint energy nor the auxiliary norm $h_1^2+h_2^2$ may replace it.
+
+% Prepared for Edward Baker, 15 October 2026.
+% Substantial LLM assistance; recorded model gpt-6-astra, effort ultra.
+\section{Arithmetic discrimination: support, endpoints and reflection}
+\label{arith:discrimination}
+
+The signed bridge requires information that distinguishes the actual theta
+section from positive weighted square sums.  The following control rejects
+support-only moment certificates, even with the first source endpoint and
+primitive normalization imposed.  Complete reflection, by contrast, forces
+the theta coefficients themselves.  Neither statement proves the remaining
+signed estimate.
+
+\subsection{A validated collision within the square-support relaxation}
+
+Put $\lambda_n=\pi n^2$, $q=e^{4u}$, and
+\[
+ \phi_n(u)=e^u(2\lambda_n^2q^2-3\lambda_nq)e^{-\lambda_nq},
+ \qquad H_n(t,x)=\int_0^\infty e^{tu^2}\phi_n(u)\cos(xu)\,du.
+\]
+For fixed nonnegative weights $a_n$, write
+$\Phi_a=\sum_{n\ge1}a_n\phi_n$,
+$\psi_a=e^u\sum_{n\ge1}a_ne^{-\lambda_nq}$, and $H_a=\sum a_nH_n$.
+For finite support these definitions give entire physical transforms,
+$H_{a,t}=-H_{a,xx}$, and $8\Phi_a=\psi_a''-\psi_a$.
+The source is positive on $u\ge0$ whenever some weight is positive.
+Moreover, for every real polynomial $V$ and every polynomial $Q$ nonnegative
+on the square nodes,
+\begin{equation}
+ \sum_{n\ge1}a_ne^{-\lambda_nq}Q(\lambda_n)V(\lambda_n)^2\ge0
+ \qquad(q>0).
+ \label{arith:localizers}
+\end{equation}
+This includes every finite moment matrix and adjacent-square localizing
+matrix, by taking $Q(\lambda)=(\lambda-\lambda_m)(\lambda-\lambda_{m+1})$.
+
+\begin{proposition}[Validated weighted-square control]
+\label{arith:weighted-control}
+There are fixed positive weights on $n=1,2,3$, zero otherwise, and a fixed
+positive normalization such that
+\[
+ \Phi_a'(0)=0,\qquad \psi_a'(0)=\psi_a'''(0)=-\tfrac12,
+ \qquad H_a(\tfrac14,x_*)=H_{a,x}(\tfrac14,x_*)=0,
+ \quad H_{a,xx}(\tfrac14,x_*)\ne0,
+\]
+where $44.1303<x_*<44.1304$.  The third source derivative is nonzero, so
+this source is not even in $u$.  The control satisfies
+\eqref{arith:localizers} at every degree and every $q>0$.
+\end{proposition}
+\begin{proof}
+The construction and validated record are given in
+\cite{ThetaSquareControl}.  Define
+\[
+ P_1(a)=-8a^3+30a^2-15a,\quad d_n=P_1(\lambda_n),\quad
+ G_n=e^{\lambda_n}H_n,\quad b_n=-d_1/d_n\quad(n=2,3).
+\]
+Here $d_1>0>d_2,d_3$, and
+$G_\theta=G_1+\theta b_2G_2+(1-\theta)b_3G_3$ has positive weights
+for $0<\theta<1$.  Its source derivative at zero is exactly
+$d_1+\theta b_2d_2+(1-\theta)b_3d_3=0$.
+At $T=1/4$, set $A=G_1+b_3G_3$, $B=b_2G_2-b_3G_3$, and
+$D=A'B-AB'$.  On $I=[44.1303,44.1304]$, the validated enclosures include
+\begin{align*}
+ A&<0<B,&
+ D(44.1303)&\in(5.0206,5.0208)10^{-14},\\
+ D'&\in(-1.178,-1.121)10^{-9},&
+ D(44.1304)&\in(-6.4752,-6.4750)10^{-14}.
+\end{align*}
+Thus $D$ has exactly one zero $x_*$ in $I$.  At that zero,
+$\theta_*=-A(x_*)/B(x_*)\in(0.87916,0.87919)$ gives a double zero, with
+\[
+ \partial_x^2G_{\theta_*}(T,x_*)\in(-5.95,-5.65)10^{-6}.
+\]
+The raw weights are
+$(a_1,a_2,a_3)=(1,\theta_*b_2e^{3\pi},(1-\theta_*)b_3e^{8\pi})$.
+They are fixed after this construction.  Multiplication by
+$c=-1/(2\psi_a'(0))>0$ imposes the stated primitive endpoint; then
+$\psi_a'''(0)=\psi_a'(0)+8\Phi_a'(0)=-1/2$.
+The raw third source derivative lies in $(-40.00,-39.98)$, so positive
+scaling does not restore source reflection.
+
+The enclosure calculation uses validated integration on $[0,1]$, together
+with the complete tail bound, for $k\le3$,
+\[
+ \int_1^\infty u^ke^{u^2/4}e^{\lambda_n}\phi_n(u)\,du
+ \le\lambda_n\exp\{\lambda_n-4-(\lambda_n/2)e^4\}.
+\]
+Indeed $k\log u+u^2/4+9u\le(\lambda_n/2)e^{4u}$ for $u\ge1$;
+its elementary endpoint constant is also enclosed.  Centered jets and
+absolute moments extend the bounds across all of $I$.  Fifty assertions
+at 160-bit precision and an independent replay support these finite
+claims; no sampled near-zero is substituted for root existence.
+\end{proof}
+
+The restriction to finite support is inessential.  Add a sufficiently
+small positive multiple of $\sum_{n\ge4}\phi_n$, and solve
+$\Phi_a'(0)=0$ for the third weight.  After this elimination, the Jacobian
+of $(H_a,H_{a,x})$ with respect to the remaining weight parameter and $x$
+is a nonzero multiple of $B(x_*)H_{a,xx}(T,x_*)$.  The implicit function
+theorem preserves the collision and endpoint, with every weight positive.
+Every finite ordinary and adjacent-square localizing matrix is then
+strictly positive definite.  This continuation is qualitative: no numerical
+perturbation radius is asserted.  All resulting weights and normalizations
+remain independent of physical heat time.
+
+On the control's full stationary predecessor,
+$\mathcal L_0/E=-1/(T-t)+O(1)$; its short admissible chords also become
+negative.  Thus the relaxed assumptions cannot supply the required uniform
+signed estimates.  The control retains periodicity in $z$ and period two in
+$\tau$, and obeys Jacobi heat, but fails the full elliptic multiplier.
+Its evenness in the spectral variable $x$ does not imply evenness of its
+source in $u$.
+
+\subsection{Complete reflection fixes the coefficients}
+
+\begin{theorem}[Weighted-comb reflection rigidity]
+\label{arith:reflection-rigidity}
+Let $(a_n)_{n\in\mathbb Z}$ be an even complex sequence with
+$|a_n|\le C(1+|n|)^M$ for some $C>0$ and finite $M\ge0$.  Define
+$F_a(q)=\sum_{n\in\mathbb Z}a_ne^{-\pi n^2q}$ for $q>0$.
+If
+\begin{equation}
+ F_a(q)=q^{-1/2}F_a(1/q)\qquad(q>0),
+ \label{arith:reflection}
+\end{equation}
+then $a_n=a_0$ for every integer $n$.  No coefficient positivity is needed.
+\end{theorem}
+\begin{proof}
+Use $\widehat f(\xi)=\int f(x)e^{-2\pi ix\xi}\,dx$ and the even tempered
+comb $\mu=\sum a_n\delta_n$.  For $g_q(x)=e^{-\pi qx^2}$,
+$\widehat g_q=q^{-1/2}g_{1/q}$, so \eqref{arith:reflection} gives
+$\langle\nu,g_q\rangle=0$, where $\nu=\mu-\widehat\mu$.
+Differentiation at $q=1$ in the Schwartz topology annihilates every even
+Gaussian moment of $\nu$; odd moments vanish by evenness.
+The function
+\[
+ \mathcal G(z)=\langle\nu,e^{-\pi x^2+zx}\rangle
+\]
+is entire, since the test functions and their parameter derivatives have
+uniform Schwartz seminorm bounds on compact $z$-sets.  Every derivative
+at zero vanishes, hence $\mathcal G=0$.  On the imaginary axis this
+represents the Fourier transform of $e^{-\pi x^2}\nu$; Fourier injectivity
+and local division by the nowhere-zero Gaussian give $\nu=0$.
+Thus $\mu=\widehat\mu$.  Integer support makes $\widehat\mu$ period one
+as a distribution.  Therefore $\mu$ is period one, and tests supported
+near successive integers give $a_{n+1}=a_n$.  This proves the theorem;
+\cite{ThetaReflection} records the full scope and defect identity.
+\end{proof}
+
+\begin{corollary}[Source reflection and the primitive endpoint]
+\label{arith:source-rigidity}
+In the class of Theorem~\ref{arith:reflection-rigidity}, take $a_0=1$ and
+set, on the entire real $u$ axis,
+\[
+ P_a(u)=e^uF_a(e^{4u})=e^u+2\psi_a(u),\qquad
+ \Phi_a=(P_a''-P_a)/16.
+\]
+If $\Phi_a(-u)=\Phi_a(u)$ and $\psi_a'(0)=-1/2$, then $a_n=1$ for all $n$.
+\end{corollary}
+\begin{proof}
+Local uniform convergence makes these functions real analytic.
+The difference $R(u)=P_a(u)-P_a(-u)$ satisfies
+$R''-R=0$, $R(0)=0$, and
+$R'(0)=2[1+2\psi_a'(0)]=0$.  Hence $P_a$ is even, which is exactly
+\eqref{arith:reflection}; apply the theorem.
+\end{proof}
+
+Together with the normalized primitive endpoint, the complete odd source
+endpoint hierarchy likewise gives reflection by real analyticity.  Proposition~\ref{arith:weighted-control} retains
+only its first condition.  Alternatively, imposing the full elliptic law
+on $\sum_n a_ne^{\pi in^2\tau+2\pi inz}$ directly forces
+$a_{n+1}=a_n$ by reindexing.  These relations supply coefficient coupling
+that support-only positivity omits.  They identify the theta input, but
+an additional argument must still transfer that coupling to a favorable
+sign of the physical chord or stationary observation.
+
+\section{The remaining arithmetic-to-physical estimate}\label{next:section}
+
+The strongest open target is now a specific two-point inequality, not
+an additional geometric realization. On a neighborhood of every
+candidate event, for both $j=0,1$, seek a source-prescribed estimate
+\begin{equation}
+ \mathcal C_j(t;x,y)\ge-K E(t,x)^\gamma,
+ \qquad \gamma>\tfrac12,
+ \label{next:chord-target}
+\end{equation}
+with locally bounded $K$, a fixed positive allowed interval length,
+full stationarity at $x$, and $h_j$ zero-free on $[x,y]$.
+The fixed-endpoint theorem proves the transfer to collision exclusion;
+the complete theta source has not been shown to satisfy this estimate.
+Its quantifiers include the fixed nearby endpoints used by the proof,
+not only a single shrinking window. The original one-sided turning
+modulus and stationary Laguerre bounds remain alternative sufficient
+targets, with their own domains.
+
+\subsection{Coefficient coupling with a complete remainder}
+The square-support control and reflection theorem distinguish two
+arithmetical inputs. Even all support-only localizers leave the weights
+free and permit a collision. Full modular reflection fixes the weights,
+but uniqueness alone says nothing about the signed physical transform.
+A useful next identity must use that coupling inside the complete
+bilocal chord, preserve full stationarity, and retain both source
+variables and their affine lower endpoints. The theta line-bundle
+translation law is another exact way to express the same coefficient
+coupling; scalar period two alone does not impose it.
+
+A concrete candidate is an all-integer-cutoff family
+\[
+ \mathcal C_j\ge-A E(t,x)e^{aN^2}-B e^{-cN^2},
+ \qquad a\le a_*<c_0\le c,
+\]
+with source-derived locally uniform constants and cutoff threshold.
+The strict rate gap would give an error $o(\sqrt{E(t,x)})$ after
+optimization. Sub-Gaussian cutoff growth is also sufficient. Neither
+the complete decomposition nor its rate gap is established. The cutoff
+$N$ is distinct from the unbounded spectral coordinate $x$; favorable
+cutoff scaling does not supply spectral coverage.
+
+The transverse jet recurrence provides exact differential relations
+available for such an identity. The path-restricted ASD curvature does
+not itself provide a positive term, and an auxiliary norm still needs
+a proved comparison to the physical observation before it can pay a
+remainder.
+
+\subsection{A tested contour route and its limitation}
+The period-two contour deformation in \cite{ThetaContour} gives an
+exact identity $h_j=V_j+B_j$ with the shifted ray and bottom edge kept
+together. The leading exponential terms of the two sectors cancel;
+the bilocal observation accordingly contains all four sector products.
+Separate absolute sector bounds have exponential cost in spectral
+height and cannot provide a polynomial-in-height payment against
+bounded physical energy. This rejects that particular estimate, not
+the complete contour identity or a coefficient allowed to be merely
+locally bounded at each finite height. Detailed asymptotics and
+validated samples remain in the note.
+
+Other proposals, including the natural fiber-norm lift, unchanged
+compact ASD completion, and global Pick-type positivity, are assessed
+in the numbered research overview and its linked strategy note
+\cite{ThetaOverview,ThetaStrategy}. They are not additional premises
+of the theorems here. Their next useful contribution would be a new
+cancellation-preserving identity reaching
+\eqref{next:chord-target}, with a complete remainder.
+
+\subsection{Validation and coverage}
+A proposed coefficient rule should first be tested against the
+asymmetric heat-polynomial controls and the validated weighted-square
+collision. This identifies which extra arithmetic hypothesis is doing
+work. A theta pilot must then evaluate the complete signed observation,
+full stationary root, interval regularity, endpoints and tails using
+coefficients fixed before the calculation. A finite success motivates
+an analytic extension; it does not prove an all-cutoff estimate or
+coverage of the unbounded spectral line and the small-time limit.
+Those requirements, and the imported global hypotheses in
+Remark~\ref{phy:imported-bridge}, remain indispensable for an RH
+conclusion.
+
+\section*{Acknowledgments and research status}
+This research manuscript was prepared for Edward Baker with
+substantial assistance from OpenAI language models.  The coordinating
+session used \texttt{gpt-6-astra} with reasoning effort \texttt{ultra};
+internal collaborators inherited that configuration.  LLM assistance
+was used for drafting, derivations, literature checks, exact-arithmetic
+programs and internal reviews.  The accompanying reviews distinguish analytic arguments, validated
+interval computations, and finite algebra checks.  These internal checks
+are not external mathematical refereeing or formal verification.
+Edward B.~Baker~III's 2014 quaternion-form notes are acknowledged as
+exploratory motivation.  The author and future reviewers retain
+responsibility for assessing the claims and their applicability.
+
+\appendix
+\section{Verification scope and provenance}\label{app:verification}
+The verification package distinguishes analytic arguments from finite
+calculations. Seven exact checkers cover the geometry, Chern/ASD
+identities, complete signed bridge and heat profiles, with 1,230
+overlapping assertions. Two further exact checkers add 5,667 assertions
+for the chord controls and reflection algebra. The weighted-square
+certificate and contour checker add 123 validated or mixed assertions
+using Arb/Acb with explicit complete tails. These totals are not counts
+of distinct theorems. The reflection-rigidity and arbitrary-multiplicity
+arguments are analytic proofs, not consequences of finite samples.
+
+The chord replay uses 24 asymmetric or sign-reversed heat germs,
+144 full stationary roots, and 1,152 zero-free intervals at three
+scales. Early intervals need not show the eventual negative sign;
+the asymptotic theorem is not replaced by universal finite-step
+negativity. The weighted-square calculation certifies a non-theta
+collision. The contour samples check complete identities and are not
+stationary theta sign certificates.
+
+The reproducible scripts, output receipts and source hashes are indexed
+in the \researchnote{numerics/CONNECTION_BRIDGE_AND_INNER_TURNING_CHECKS_20261015.json}
+{connection and profile manifest} and
+\researchnote{numerics/ARITHMETIC_CONTOUR_CHORD_CHECKS_20261015.json}
+{arithmetic, contour and chord manifest}. The
+\researchnote{reviews/04_MANUSCRIPT_INTEGRATION_REVIEW_20261015.md}
+{integration review} records the manuscript-specific proof and layout
+checks; the \researchnote{manuscript/BUILD_RECORD.json}{build record}
+identifies this source and its exported PDF. Older manifests describe
+their own research checkpoints, including the then-unchanged initial
+manuscript. They are not silently rewritten as current build records.
+
+The foundational material comes from Investigation 21
+\cite{BakerTheta} and its Notes 56--63. Principal geometric arguments
+are restated, while the global theta-to-RH bridge retains its imported
+status. The present integration adds the stronger chord criterion,
+complete source bridge, metric classification and arithmetic
+discrimination from the linked Investigation 22 notes. The period-two
+experiment is summarized; less developed proposals remain in
+\cite{ThetaOverview,ThetaStrategy}. Local research links are relative
+to the repository reading copy in \texttt{output/pdf}; the source
+remains the stable editable manuscript, with milestones indexed in
+\texttt{DRAFT\_HISTORY.md} and no new snapshot folders.
+
+\begin{thebibliography}{99}
+\bibitem{BakerTheta}
+E. Baker (research project),
+\emph{Theta correlations, Laguerre signs, and hypercomplex jets of the theta heat flow},
+Investigation 21, stable research manuscript, 15 October 2026;
+drafted for Edward Baker with substantial LLM assistance.
+The accompanying research continuation includes Notes 56--63.
+
+\bibitem{BakerQuaternion}
+E. B. Baker III,
+\emph{Quaternion-form working notes with applications to Yang--Mills theory},
+unpublished exploratory drafts, 21 January and 14 February 2014.
+The January version specifies $SU(2)$ in its title.
+Both versions are retained in Investigation 21's source documents.
+
+\bibitem{BakerControl}
+E. Baker (research project),
+\emph{Positive primitive reconstruction can coexist with a positive time collision},
+Investigation 21, Note 56, 15 October 2026;
+prepared for Edward Baker with substantial LLM assistance.
+
+\bibitem{Joyce2001}
+D. Joyce,
+\emph{Lectures on Calabi--Yau and special Lagrangian geometry},
+\href{https://arxiv.org/abs/math/0108088}{arXiv:math/0108088} (2001),
+revised 2002. An expanded version appears in
+M. Gross, D. Huybrechts and D. Joyce, \emph{Calabi--Yau Manifolds and
+Related Geometries}, Springer, 2003.
+
+\bibitem{Lotay2018}
+J. D. Lotay,
+\emph{Calibrated submanifolds},
+\href{https://arxiv.org/abs/1810.08709}{arXiv:1810.08709} (2018).
+
+% Entries checked against the original papers and their authors' institutional records.
+\bibitem{AndersenBlaavand2011}
+J. E. Andersen and J. L. Blaavand,
+\emph{Asymptotics of Toeplitz operators and applications in TQFT},
+Travaux Math\'ematiques \textbf{19} (2011), 167--201;
+\href{https://arxiv.org/abs/1106.1564}{arXiv:1106.1564}.
+% Author's institutional publication record:
+% https://pure.au.dk/portal/en/publications/asymptotics-of-toeplitz-operators-and-applications-in-tqft/
+% Original proceedings: https://math.uni.lu/geoquant/vol19.pdf
+
+\bibitem{GrossWilson2000}
+M. Gross and P. M. H. Wilson,
+\emph{Large complex structure limits of K3 surfaces},
+Journal of Differential Geometry \textbf{55} (2000), no.~3, 475--546;
+\href{https://doi.org/10.4310/jdg/1090341262}{doi:10.4310/jdg/1090341262};
+\href{https://arxiv.org/abs/math/0008018}{arXiv:math/0008018}.
+% Original published PDF: https://mate.unipv.it/stoppa/didattica/GrossWilson.pdf
+
+\bibitem{Joyce2004}
+D. Joyce,
+\emph{The exceptional holonomy groups and calibrated geometry},
+in S. Akbulut, T. \"Onder, and R. J. Stern (eds.),
+\emph{Proceedings of the G\"okova Geometry-Topology Conference 2005},
+International Press, Somerville, MA, 2006, 110--139;
+\href{https://arxiv.org/abs/math/0406011}{arXiv:math/0406011} (2004).
+% Journal/volume details transcribed from the author's arXiv record.
+% The citation key reflects the preprint year; it is distinct from Joyce2001.
+
+\bibitem{ThetaTurning}
+E. Baker (research project),
+\researchnote{notes/02_signed_turning_control/01_INNER_TURNING_PROFILE_20261015.md}{\emph{Inner turning profile and physical energy on both stationary branches}},
+Investigation 22, Signed turning Note 01, 15 October 2026;
+prepared for Edward Baker with substantial LLM assistance.
+
+\bibitem{ThetaChord}
+E. Baker (research project),
+\researchnote{notes/02_signed_turning_control/02_CENTRAL_ENERGY_CHORD_AND_CUTOFF_TRANSFER_20261015.md}{\emph{Central-energy chord and cutoff transfer}},
+Investigation 22, Signed turning Note 02, 15 October 2026;
+prepared for Edward Baker with substantial LLM assistance.
+
+\bibitem{ThetaMetric}
+E. Baker (research project),
+\researchnote{notes/03_theta_bundles_and_connections/02_ASD_METRIC_FREEDOM_AND_PHYSICAL_RESTRICTION_20261015.md}{\emph{ASD metric freedom and physical restriction}},
+Investigation 22, Theta connections Note 02, 15 October 2026;
+prepared for Edward Baker with substantial LLM assistance.
+
+\bibitem{ThetaBridge}
+E. Baker (research project),
+\researchnote{notes/03_theta_bundles_and_connections/03_COMPLETE_SIGNED_CORRELATION_BRIDGE_20261015.md}{\emph{Complete signed correlation bridge}},
+Investigation 22, Theta connections Note 03, 15 October 2026;
+prepared for Edward Baker with substantial LLM assistance.
+
+\bibitem{ThetaContour}
+E. Baker (research project),
+\researchnote{notes/03_theta_bundles_and_connections/04_PERIOD_TWO_CONTOUR_PACKET_AND_SECTOR_OBSTRUCTION_20261015.md}{\emph{Period-two contour packet and sector obstruction}},
+Investigation 22, Theta connections Note 04, 15 October 2026;
+prepared for Edward Baker with substantial LLM assistance.
+
+\bibitem{ThetaSquareControl}
+E. Baker (research project),
+\researchnote{notes/05_control_families/01_SQUARE_SUPPORT_ENDPOINT_COLLISION_OBSTRUCTION_20261015.md}{\emph{Square-support endpoint collision obstruction}},
+Investigation 22, Control families Note 01, 15 October 2026;
+prepared for Edward Baker with substantial LLM assistance.
+
+\bibitem{ThetaReflection}
+E. Baker (research project),
+\researchnote{notes/05_control_families/02_WEIGHTED_COMB_REFLECTION_RIGIDITY_20261015.md}{\emph{Weighted-comb reflection rigidity}},
+Investigation 22, Control families Note 02, 15 October 2026;
+prepared for Edward Baker with substantial LLM assistance.
+
+\bibitem{ThetaOverview}
+E. Baker (research project),
+\researchnote{research-overview/02_CHORD_CRITERION_AND_ARITHMETIC_BRIDGE_20261015.md}{\emph{Chord criterion, arithmetic bridge and next research steps}},
+Investigation 22, Research overview 02, 15 October 2026;
+prepared for Edward Baker with substantial LLM assistance.
+
+\bibitem{ThetaStrategy}
+E. Baker (research project),
+\researchnote{notes/00_research_coordination/03_PRIORITIZED_SIGNED_BOUND_RESEARCH_PATHS_20261015.md}{\emph{Prioritized signed-bound research paths}},
+Investigation 22, Research coordination Note 03, 15 October 2026;
+prepared for Edward Baker with substantial LLM assistance.
+
+\end{thebibliography}
+\end{document}

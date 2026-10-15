@@ -1,0 +1,11 @@
+# Draft history
+
+15 October 2026. Prepared for Edward Baker with substantial LLM assistance. Recorded model **gpt-6-astra**, reasoning effort **ultra**.
+
+Keep this index concise. Detailed arguments and checks belong in the linked notes and reviews. Future milestones should point to commits or tags; create no manuscript snapshot folders.
+
+| Date | Investigation | Source or version identity | Why this version matters | Supporting records |
+| --- | --- | --- | --- | --- |
+| 2026-10-15 | 22 Theta manifold geometry | Initial source `93009f3c3bd1…`; original source/PDF identities retained under `previous_milestones` in the [build record](manuscript/BUILD_RECORD.json). Working-tree milestone; no commit or tag created | Separates the geometric direction, develops the physical collision-to-manifold narrative, and adds the covariant theta-source formula and explicit abelian ASD connection | [Origin](notes/00_research_coordination/01_ORIGIN_AND_INITIAL_INTEGRATION_20261015.md), [derivation review](reviews/01_INITIAL_MANUSCRIPT_DERIVATION_REVIEW_20261015.md), [roadmap](research-overview/RESEARCH_OVERVIEW_20261015.md) |
+| 2026-10-15 | 22 Theta manifold geometry | Working-tree continuation; research-note and replay hashes in [manifest](numerics/CONNECTION_BRIDGE_AND_INNER_TURNING_CHECKS_20261015.json); no commit or tag created | Classifies base-only ASD metric freedom, completes the signed two-source bridge with endpoints, and resolves the finer inner turning profile and odd-branch energy factor | [Handoff](notes/00_research_coordination/02_CONNECTION_BRIDGE_AND_INNER_TURNING_CONTINUATION_20261015.md), [review](reviews/02_CONNECTION_BRIDGE_AND_INNER_TURNING_REVIEW_20261015.md) |
+| 2026-10-15 | 22 Theta manifold geometry | Integrated working-tree [source](manuscript/theta_manifold_geometry.tex); current source/PDF hashes in [build record](manuscript/BUILD_RECORD.json); no commit, tag or snapshot created | Promotes the sharp starting-energy chord criterion and cutoff transfer, complete source bridge, metric classification, weighted-square control and reflection rigidity; ranks exploratory routes separately | [Overview 02](research-overview/02_CHORD_CRITERION_AND_ARITHMETIC_BRIDGE_20261015.md), [integration review](reviews/04_MANUSCRIPT_INTEGRATION_REVIEW_20261015.md), [checks](numerics/MANUSCRIPT_INTEGRATION_CHECKS_20261015.json) |

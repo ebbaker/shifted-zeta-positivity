@@ -100,3 +100,14 @@ Updated 15 October 2026 for Edward Baker with substantial LLM assistance, **gpt-
 4. In parallel, evaluate the actual PR01 arithmetic constants or prove a new weighted saving across the identified middle interval.
 
 The [manuscript](../manuscript/quaternion_theta_geometry.tex), [build record](../manuscript/BUILD_RECORD.json), and [integration review](../reviews/32_SIGNED_FORMS_PRIMITIVE_MANUSCRIPT_INTEGRATION_20261015.md) identify the integrated version. [Note 55](../notes/00_research_coordination/55_SIGNED_FORMS_MANUSCRIPT_INTEGRATION_AND_HISTORY_20261015.md) records the handoff and archive verification. Earlier proofs, numerical receipts, and Reviews 27–31 retain their own provenance. No new sign region, manuscript snapshot folder, commit, or tag is introduced by this integration.
+
+## Manifold direction promoted, 15 October 2026
+
+The author has opened [Investigation 22](../../22_theta_manifold_geometry/README.md)
+for the geometric continuation developed in Notes 60–63. Its
+[initial overview](../../22_theta_manifold_geometry/research-overview/RESEARCH_OVERVIEW_20261015.md)
+and [manuscript](../../22_theta_manifold_geometry/manuscript/theta_manifold_geometry.tex)
+organize the physical jet geometry, signed turning target, theta bundle and
+ASD connection. Existing results and source provenance remain in Investigation 21.
+Prepared for Edward Baker with substantial LLM assistance, **gpt-6-astra**,
+reasoning effort **ultra**.
