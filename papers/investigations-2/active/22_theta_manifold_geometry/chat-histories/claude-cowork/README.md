@@ -65,3 +65,23 @@ refreshed at the end of every turn), or recover an earlier conversation with
      messages over 1 turn), and refreshed at the end of every later turn,
      before that turn's reply; [index.json](index.json) gives the current
      count.
+
+3. **Resolving the chat-record rebase conflict** — [0003_2026-10-16T14-51-58Z_resolving-the-chat-record-rebase-conflict.json](0003_2026-10-16T14-51-58Z_resolving-the-chat-record-rebase-conflict.json)
+   - *Work.* Resolved the conflicts that `git pull --rebase` left in [chat 2's
+     record](0002_2026-10-15T23-08-30Z_quaternion-theta-geometry-joint-review-response.json)
+     and [index.json](index.json) when it replayed the amended local commit
+     `c7df579` onto the pushed `233bb1b` (both titled "Additional review and
+     new avoid and result-summaries folders"). The amended record extends the
+     pushed one message for message (18 messages captured at 10:42 against 16
+     at 10:23), so both files were restored to the amended commit's versions,
+     which agree with each other.
+   - *Session.* A Claude Cowork cloud session in project RH4 with Claude Opus
+     5.5 (`claude-opus-5-5`, reasoning effort max per the transcript), started
+     16 October 2026 at 10:51 America/New_York.
+   - *Capture.* Captured by the session itself with
+     `record_Claude_cowork_chat.py capture`, first at 10:59 the same day (2
+     messages over 1 turn), and refreshed at the end of every later turn,
+     before that turn's reply; [index.json](index.json) gives the current
+     count.
+   - *Coverage.* As for the earlier Cowork captures, plus chat-visible items
+     that travel through tools, labelled in each message's metadata.

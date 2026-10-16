@@ -9,6 +9,33 @@ or state they were drafted for him and acknowledge LLM assistance. Maintain
 concise milestone entries in the investigation's `DRAFT_HISTORY.md`; create
 no new manuscript snapshot folders.
 
+## Read first: established results and patterns to avoid
+
+Before opening a new direction or continuing one, read
+[`result-summaries/README.md`](result-summaries/README.md) (short summaries
+of what the repository has established, in the sources' own status words,
+routing to the files that hold them) and
+[`avoid/README.md`](avoid/README.md) (recurring patterns that have cost this
+project retractions and wasted work, each with evidence). Cite both in
+research overviews and continuation notes, and point at the specific
+cluster or pattern file rather than restating it.
+
+Before writing up a proposed criterion, estimate or mechanism: classify it
+as in [`avoid/01`](avoid/01_restating_the_target.md) (an RH-equivalent
+reformulation is stated once and not supported by checks; a milestone is
+judged by its number); run the collision controls listed in
+[`result-summaries/12`](result-summaries/12_collision_controls_and_screening.md)
+and name the premise each control fails, as in
+[`avoid/02`](avoid/02_shape_only_arguments_and_the_controls.md); and state
+every negative result with the class it was proved for, as in
+[`avoid/07`](avoid/07_scoped_exclusions_read_as_universal.md).
+
+When an investigation closes or a manuscript reaches a milestone, add or
+amend the `result-summaries/` entry for what it established and an `avoid/`
+entry for what it learned, with a path and a quotation; keep the source's
+status words, never upgrade them, and mark superseded entries instead of
+deleting them. Keep both folders short; detail belongs in the sources.
+
 ## Automatic research chat history
 
 The user authorizes ongoing capture and refresh of research conversations
