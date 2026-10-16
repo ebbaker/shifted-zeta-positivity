@@ -37,4 +37,4 @@ compared R6 to a floor that was four orders of magnitude too low.
 Report the certified enclosure, not the target it beat; label fitted
 laws as fits with their sample size; and say "candidate" for anything
 sampled. The weil-depth and storage-depth records now carry two-sided
-enclosures for this reason ([result-summaries 02](../result-summaries/02_finite_horizon_certificates.md)), and the [LESSONS_LEARNED](../notes/LESSONS_LEARNED_manifest_positivity_design_guidance_20260911.md) note's rule to "freeze the depth work" was adopted because depth data were being read as laws.
+enclosures for this reason ([result-summaries 02](../result-summaries/02_finite_horizon_certificates.md)), and the [LESSONS_LEARNED](../papers/weil-positivity/shifted-zeta/storage-depth/LESSONS_LEARNED_manifest_positivity_design_guidance_20260911.md) note's rule to "freeze the depth work" was adopted because depth data were being read as laws.

@@ -1,11 +1,11 @@
 ---
 name: Formalization
-about: Claim, discuss, or report a Lean/Mathlib formalization of a statement in blueprint/
+about: Claim, discuss, or report a Lean/Mathlib formalization of a statement in a paper's blueprint/ folder
 title: "[formal] <statement id>: <statement name>"
 labels: formalization
 ---
 
-**Statement id** (from `blueprint/<paper>/statements.md`, e.g. `fs:S19`):
+**Statement id** (from `<paper folder>/blueprint/statements.md`, e.g. `fs:S19` in `papers/weil-positivity/shifted-zeta/first-slab-positivity/blueprint/statements.md`):
 
 **Intent**
 - [ ] I am claiming this statement to formalize it

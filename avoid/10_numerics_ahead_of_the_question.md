@@ -20,7 +20,7 @@ amplification tuned to a limit that a published result beat anyway.
 
 ## Evidence
 
-- [LESSONS_LEARNED](../notes/LESSONS_LEARNED_manifest_positivity_design_guidance_20260911.md) §5: "the one recurring process failure was letting the numerical work run ahead of the structural question it was meant to answer."
+- [LESSONS_LEARNED](../papers/weil-positivity/shifted-zeta/storage-depth/LESSONS_LEARNED_manifest_positivity_design_guidance_20260911.md) §5: "the one recurring process failure was letting the numerical work run ahead of the structural question it was meant to answer."
 - [Sonin option-1 outcome](../papers/investigations/sonin-critical-boundary/notes/OPTION1_AND_CONSTRAINED_SIGN_OUTCOME_20261003.md): trial dimension went 160→1280 and "None exceeds the inherited arithmetic upper endpoint 1.047808594."; the [arithmetic-storage assessment](../papers/investigations/program-meta-analysis/reviews/ARITHMETIC_STORAGE_PROGRAM_ASSESSMENT_20260929.md): the fixed trial space "provably misses most of the relevant trace".
 - [Matched 01/18 results](../papers/investigations-2/brainstorm/reviews/MATCHED_01_18_AND_19_RESULTS_CODEX_20261014.md): "Each cell reaches exactly one million counted primitive evaluations … The validated nested integration returns no usable finite integral before this cap."; the absolute fallback \(|\mathcal L_0|<4.70\cdot10^{-52}\) against a true value near \(10^{-64}\), while the [baseline](../papers/investigations-2/brainstorm/notes/MATCHED_STATIONARY_BASELINE_20261014.md) used 24,000 callbacks.
 - [Priority response review](../papers/investigations-2/brainstorm/reviews/PRIORITY_RESPONSE_REVIEW_CODEX_20261012.md): the amplification lane's best tuned limit lost to Liu by \(1.3\cdot10^{-7}\).

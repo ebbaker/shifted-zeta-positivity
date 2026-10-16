@@ -12,8 +12,8 @@ listed as `offaxis-detector/` in earlier planning documents; the slug is `rh-det
 **Provenance and review record.** Developed August 2026 with substantial language-model
 assistance under the author's direction, in the detector thread of the RH3 project
 (project notes `NOTE_offaxis_detector`, `NOTE_pencil_and_DBN`,
-`ROUND3_verification_and_detector`, `ROUND4_certificates_and_edge_law`; to be mirrored
-under `notes/` per the redaction checklist). This thread is **separate from Papers 1–3
+`ROUND3_verification_and_detector`, `ROUND4_certificates_and_edge_law`; imported unchanged
+with the RH3 project files on 13 October 2026, see the [research-log index](../../../early-chat-logs/initial-project-files/rh3/RESEARCH_LOG_INDEX.md), thread 1). This thread is **separate from Papers 1–3
 and the first-slab preprint**: it was written on 24–25 August 2026, *before* the Suzuki
 line of work began, and is unrelated to that program; the manuscript carries no companion
 cross-citations.
@@ -69,6 +69,6 @@ recorded residuals. Scripts re-run under the pinned environment on 9 September 2
 4. Explicit |S(u,χ)| constants and exact counting decomposition for the certified
    Dirichlet-L port of §6.
 5. Systematic bibliography re-verification (release checklist item 2).
-6. `blueprint/rh-detector/statements.md` + `statements/ledger.yaml` entries;
+6. `blueprint/statements.md` + `blueprint/ledger.yaml` in this folder;
    `VERIFICATION_STATUS.md`, `CITATION.cff`, `.zenodo.json` in this folder.
 7. Human specialist review.

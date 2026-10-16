@@ -217,8 +217,13 @@ Later Claude conversations about this work are recorded here with
      `claude/papers-reorganization-proposal-2026-10-16.md`); after approval,
      moved them into `papers/weil-positivity/` and `papers/quasi-rh/`, staged
      the move as pure renames, repaired links, paths, scripts and manifests,
-     and rewrote the papers index. See the
-     [relocation record](../../papers/REORGANIZATION_20261016.md).
+     and rewrote the papers index. Then, at the author's request, dissolved
+     the repository-root research folders: the first slab's blueprint,
+     verification records and certificate release gate into its paper
+     folder, the research-log index and redaction checklist beside the RH3
+     project files, the root chat registry into
+     [chatgpt-codex/](../chatgpt-codex/README.md), and `output/pdf/` out of
+     git. See the [relocation record](../../papers/REORGANIZATION_20261016.md).
    - *Session.* A Claude Cowork cloud session in project RH4 with Claude Opus
      5.5 (`claude-opus-5-5`, reasoning effort max per the transcript), started
      16 October 2026 at 12:44 America/New_York.

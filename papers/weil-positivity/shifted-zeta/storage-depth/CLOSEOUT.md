@@ -23,7 +23,8 @@ authoritative records of the claims and their review limits.
   `STORAGE_DEPTH_ARCHIVES` as the existing lookup variables. Historical
   snapshots retain their original paths; no loader or builder was changed.
 - The existing lessons-learned note was moved from `Claude outputs/` to
-  [notes/](../../../../notes/README.md), retaining the author's pending wording
+  `notes/` (since 16 October 2026
+  [in this folder](LESSONS_LEARNED_manifest_positivity_design_guidance_20260911.md)), retaining the author's pending wording
   change. The supersymmetric briefs belong to a separate project and commit.
 - The dependency appendix now distinguishes the failed 32-mode second-step
   tests from the successful 96-mode R18 tests already reported in the body.

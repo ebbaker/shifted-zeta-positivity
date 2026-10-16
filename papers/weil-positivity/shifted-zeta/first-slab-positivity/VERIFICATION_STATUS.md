@@ -52,7 +52,7 @@ Against automated readings of arXiv:1204.1827 (two independent extractions agree
 - Our layer formula (2.5) is his eq. (2.3) in logarithmic coordinates; his Prop. 2.1 is consistent with (2.1), (2.3), the Sect. 3.1 formula and the Dirichlet series `Σ c_ω(n) n^{−w} = ζ(w−ω)/ζ(w+ω)`, with matching domains.
 - `H_{ω,a} = P_a H_ω P_a` (his (2.5)–(2.6)) corresponds to our centered interval of length `L = 2 log a`; the first prime layer enters exactly when `L > log 2`.
 
-**This is the single most important outstanding human check (item C1 below).** A factor or shift here would move the `log 2` threshold. A step-by-step protocol for doing C1 and C2 by hand, designed so the checker is not anchored by the preprint, is `../../../verification/first-slab/PROTOCOL_C1_C2.md` (6 Sept 2026).
+**This is the single most important outstanding human check (item C1 below).** A factor or shift here would move the `log 2` threshold. A step-by-step protocol for doing C1 and C2 by hand, designed so the checker is not anchored by the preprint, is [`verification/PROTOCOL_C1_C2.md`](verification/PROTOCOL_C1_C2.md) (6 Sept 2026).
 
 ## 4. Not yet human-verified ⬜
 
@@ -80,7 +80,7 @@ Failure of B1–B4 would leave Theorem C unproved and Theorem A resting on the r
 - **D1** The inherited Investigation 7 central certificate: Binet bound `w₀(τ) ≥ β*` for `|τ| ≥ 30` and the spherical-Bessel Legendre-tail majorants (couplings `1.4084884e−9` / `2.2191643e−10`, deviations `9.78e−24` / `2.43e−25`). Both implementations take these as given.
 - **D2** The interval `LDLᵀ` and box-construction code (no reviewer has read it).
 - **D3** Full primary-vs-audit row diff, not just summary minima.
-- **D4** Version-pinned rerun of both implementations in clean environments with archived logs and manifests. Two clean reruns so far (5 Sept, 9 Sept 2026) reproduce all result tables byte-for-byte; see `../../../verification/first-slab/CERTIFICATE_RERUN_20260909.md`. Logs enter the repository with the code.
+- **D4** Version-pinned rerun of both implementations in clean environments with archived logs and manifests. Two clean reruns so far (5 Sept, 9 Sept 2026) reproduce all result tables byte-for-byte; see [`verification/CERTIFICATE_RERUN_20260909.md`](verification/CERTIFICATE_RERUN_20260909.md). Logs enter the repository with the code.
 - **D5** Fix items 0.1, 0.2, 0.5 in the Investigation write-ups before releasing them.
 
 ## 5. Optional strengthening (not verification)

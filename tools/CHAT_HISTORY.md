@@ -168,10 +168,14 @@ verified. Unexpected bytes or an unresolved rollback require stopping and
 reporting the condition; do not overwrite them or delete transaction state
 to make the refresh proceed.
 
-Two completed precedents record this procedure:
+Three completed precedents record this procedure:
 
 - [Portfolio relocation, 13 October 2026](../papers/investigations-2/CHAT_HISTORY_RELOCATION_20261013.json).
 - [Investigation 21 relocation, 14 October 2026](../papers/investigations-2/active/21_quaternion_theta_geometry/CHAT_HISTORY_RELOCATION_20261014.json).
+- [Repository-root registry to the early Codex logs, 16 October 2026](../early-chat-logs/chatgpt-codex/CHAT_HISTORY_RELOCATION_20261016.json).
+  The destination is outside `papers/`, which `find_registered` does not
+  scan, so unique registration was checked across every `index.json`; the
+  emptied root registry was then removed at the user's request.
 
 Their receipts describe past moves. Use the current helpers and current
 registry state for a future move; never replay old ids, paths, hashes,

@@ -12,8 +12,8 @@ no DOI covers them. Sources are committed as a working draft at the author's req
 **Provenance and review record.** Developed August 2026 with substantial language-model
 assistance under the author's direction; five adversarial referee-style passes
 (rounds 15–19), each with independent numerical recomputation. The full round-by-round
-record lives in the project notes (`ROUND15`–`ROUND19`; to be mirrored under `notes/` per the
-redaction checklist).
+record lives in the project notes (`ROUND15`–`ROUND19`; imported unchanged with the RH3 project
+files on 13 October 2026, see the [research-log index](../../../../early-chat-logs/initial-project-files/rh3/RESEARCH_LOG_INDEX.md), thread 3).
 
 **Verification status.**
 - Theorems 1.1, 1.2, 1.5, 1.6(i), 1.6(ii) and Remarks 6.1, 6.3: proved in-paper; key steps
@@ -32,7 +32,7 @@ redaction checklist).
 1. ORCID in the author block (author name and email filled as of 9 Sept 2026; no institutional affiliation by the author's decision); final acknowledgements wording (the source still carries the placeholder "[Complete as appropriate.]").
 2. One-pass renumbering of all `\cite{Margin}` references against the actually released
    companion (Paper 1) — citations carry statement names for exactly this purpose.
-3. `blueprint/` + `statements/ledger.yaml` entries; `VERIFICATION_STATUS.md` per the release
+3. `blueprint/` (`statements.md`, `ledger.yaml`) in this folder; `VERIFICATION_STATUS.md` per the release
    checklist in `papers/README.md`.
 4. Human specialist review (outreach in progress).
 

@@ -23,7 +23,7 @@ Exact source identities, sharp integrated positivity, and the positive theta pri
 | PR02-CORR — complete theta correlations and primitive | [05_theta_correlation_kernels](notes/05_theta_correlation_kernels/README.md) |
 | COORD — integration and continuation | [00_research_coordination](notes/00_research_coordination/README.md) |
 
-The [notes index](notes/README.md) preserves historical numbered notes. Current handoff is [Note 59](notes/00_research_coordination/59_PRIMITIVE_CONTROLS_AND_COMPLETED_PHASE_BUDGET_CONTINUATION_20261015.md); detailed assessments are in [reviews](reviews/README.md), and concise milestones in [DRAFT_HISTORY.md](DRAFT_HISTORY.md). The [compiled PDF](../../../../output/pdf/quaternion_theta_geometry.pdf) is built from the stable source. Historical backups remain unchanged; no new snapshot, commit, or tag was created.
+The [notes index](notes/README.md) preserves historical numbered notes. Current handoff is [Note 59](notes/00_research_coordination/59_PRIMITIVE_CONTROLS_AND_COMPLETED_PHASE_BUDGET_CONTINUATION_20261015.md); detailed assessments are in [reviews](reviews/README.md), and concise milestones in [DRAFT_HISTORY.md](DRAFT_HISTORY.md). The PDF is built from the [stable source](manuscript/quaternion_theta_geometry.tex) into the repository-root `output/pdf/` folder, which git ignores; it is not stored in the repository. Historical backups remain unchanged; no new snapshot, commit, or tag was created.
 
 The author's two unpublished 2014 working notes are in `source-documents/`; [Review 30](reviews/30_QUATERNION_FORMS_DRAFT_COMPARISON_AND_RELEVANCE_20261015.md) compares their approaches and records their acknowledged incompleteness. Source files are preserved.
 

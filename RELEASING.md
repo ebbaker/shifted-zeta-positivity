@@ -29,9 +29,13 @@ and which are drafts.
 
 1. **Gate.** Every paper folder *being released* in this tag has passed the
    release checklist in `papers/README.md`; every folder that stays a working
-   draft has a current `STATUS.md` saying so. Every note committed has a row in
-   `notes/REDACTION_CHECKLIST.md`. Code present has passed its gate in
-   `code/README.md`. `blueprint/` and `statements/ledger.yaml` are current.
+   draft has a current `STATUS.md` saying so. Every research-log note
+   committed has passed the
+   [redaction checklist](early-chat-logs/initial-project-files/rh3/REDACTION_CHECKLIST.md)
+   (the RH3 copies imported on 13 October 2026 have not yet been through it).
+   Code present has passed its gate (for the first-slab certificate,
+   [`CERTIFICATE_CODE.md`](papers/weil-positivity/shifted-zeta/first-slab-positivity/CERTIFICATE_CODE.md)).
+   Each released paper's `blueprint/` (`statements.md`, `ledger.yaml`) is current.
    The root `.zenodo.json` description and the READMEs describe the tree as it
    will be at the tag — in particular which code is and is not present.
 2. **Changelog.** Add the `vX.Y` section to `CHANGELOG.md`.

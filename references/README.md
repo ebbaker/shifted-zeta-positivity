@@ -13,7 +13,7 @@ retrieve the same sources.
 | M. Suzuki, *Weil's quadratic form via the screw function*, arXiv:2606.09096 | Thm. 1.4 (small-`a` positivity-improving argument; superseded the withdrawn Beurling–Deny note); screw-form formulation cited in the preprint. |
 | M. Suzuki, *Screw functions of Dirichlet series in the extended Selberg class*, arXiv:2209.12832 | Selberg-class conventions and the real-zero hypothesis (Paper 1 §Dirichlet). |
 | S. Kotani, *Riemann's Zeta function and Kreĭn's string*, unpublished (ResearchGate 348522988) | The zeta string and `m_ξ(x) ~ 4x/(log x)²` (Paper 2). |
-| Y. Kasahara, *Spectral theory of generalized second order differential operators…*, Japan. J. Math. 1 (1975) | Regular-variation theorem for Kreĭn's correspondence (Paper 2 Thms C, D, E(iii)); checked against the original in `notes/ROUND18_kasahara_verified_and_sync.md`. |
+| Y. Kasahara, *Spectral theory of generalized second order differential operators…*, Japan. J. Math. 1 (1975) | Regular-variation theorem for Kreĭn's correspondence (Paper 2 Thms C, D, E(iii)); checked against the original in [`ROUND18_kasahara_verified_and_sync.md`](../early-chat-logs/initial-project-files/rh3/claude/ROUND18_kasahara_verified_and_sync.md). |
 | J. C. Lagarias, *On a positivity property of the Riemann ξ-function*, Acta Arith. 89 (1999); correction 116 (2005) | Herglotz criterion; graded form. |
 | A. Connes, C. Consani, *Weil positivity and trace formula, the archimedean place*, arXiv:2006.13771 | Compact-window Weil positivity context; Sonin space. |
 | J.-F. Burnol, *Spacetime causality in the study of the Hankel transform*, arXiv:math/0509619; *An adelic causality problem…*, math/0001013; habilitation math/0112254 | Causal Klein–Gordon realization (preprint §10.3); vacuity remark; separability obstruction; the undeveloped Kreĭn string of `\|ζ(½+iτ)\|²`. |
@@ -30,13 +30,14 @@ retrieve the same sources.
 `Burnol.pdf` (math/0112254) · `Perlmutter.pdf` (arXiv:2509.21672, 101 pp.) ·
 `Dorigoni.pdf` (Dorigoni–Treilis arXiv:2307.07491) · `Dorey_et_al.pdf` (DHKM, hep-th/0206063) ·
 `Atiyah.pdf`, `Nakajima.pdf`, `Kronheimer.pdf`, `LeBrun.pdf`, `Witten.pdf` (×2), `Pool.pdf`
-(geometry/instanton sources for the closed routes of `notes/` thread 1).
+(geometry/instanton sources for the closed routes of thread 1 of the
+[research log](../early-chat-logs/initial-project-files/rh3/RESEARCH_LOG_INDEX.md)).
 
 ## Retrieval note
 
 Several long PDFs (Perlmutter, Burnol, the Connes survey bibliography) defeated
 automated retrieval and produced fabricated readings before the files were
-supplied directly (`notes/ROUND11_freeboson_and_positivity.md` §1.1). The
+supplied directly ([`ROUND11_freeboson_and_positivity.md`](../early-chat-logs/initial-project-files/rh3/claude/ROUND11_freeboson_and_positivity.md) §1.1). The
 project rule since then: read the printed PDF; never build on a paraphrase of a
 display equation. The Suzuki [1] statements quoted in the first-slab preprint
 were extracted by automated reading of the arXiv PDF and are flagged for human

@@ -9,8 +9,8 @@ reflection algebra, quadrature and mesh consistency, and four high-precision
 Laplace-transfer comparisons. Unexpected failures return a nonzero status.
 
 ```bash
-python3 -m pip install -r verification/first-slab/scripts/requirements_stable_checks.txt
-python3 verification/first-slab/scripts/verify_stable_volterra_20260909.py
+python3 -m pip install -r papers/weil-positivity/shifted-zeta/first-slab-positivity/verification/scripts/requirements_stable_checks.txt
+python3 papers/weil-positivity/shifted-zeta/first-slab-positivity/verification/scripts/verify_stable_volterra_20260909.py
 ```
 
 Run those commands from the repository root. This is ordinary numerical
@@ -43,4 +43,4 @@ Run time: a few minutes each. The discretised Volterra-identity check in the
 second script is unreliable because of the kernel singularity on the
 anti-diagonal; the identities were verified by hand instead (see A4 in `../CHECKLIST.md`).
 
-[Shifted-zeta program](../../../papers/weil-positivity/shifted-zeta/README.md) · [All manuscripts](../../../papers/README.md)
+[Shifted-zeta program](../../../README.md) · [All manuscripts](../../../../../README.md)

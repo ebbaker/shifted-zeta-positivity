@@ -55,14 +55,15 @@ exists yet. All five other manuscript folders remain working drafts.
 
 ## Verification, code, and archives
 
-- [Statement blueprint](../../../blueprint/README.md),
-  [machine-readable ledger](../../../statements/README.md), and
-  [verification records](../../../verification/README.md): currently centered
-  on the first-slab preprint; other papers carry their own status records.
-- [Certificate-code release gate](../../../code/README.md): the primary
+- In the first-slab folder: the [statement blueprint](first-slab-positivity/blueprint/README.md),
+  its [machine-readable ledger](first-slab-positivity/blueprint/ledger.yaml), and the
+  [verification records](first-slab-positivity/verification/README.md) (repository-root
+  folders until 16 October 2026). Other papers carry their own status records.
+- [Certificate-code release gate](first-slab-positivity/CERTIFICATE_CODE.md): the primary
   first-slab Arb certificate bundle is not yet in the public tree.
   Per-paper reproduction scripts remain with their manuscripts.
-- [Research notes](../../../notes/README.md) and
+- The [RH3 research log](../../../early-chat-logs/initial-project-files/rh3/RESEARCH_LOG_INDEX.md) (the round reports and
+  laboratory notes behind Papers 1–3, imported unchanged on 13 October 2026) and
   [references](../../../references/README.md): shared background and provenance.
 - [Weil-depth archives](weil-depth/ARCHIVES.md) and
   [storage-depth archives](storage-depth/ARCHIVES.md): locations and hashes
@@ -81,7 +82,7 @@ build is now `make -C papers/weil-positivity/shifted-zeta/storage-depth`. See th
 ## Cross-citation policy
 
 Papers 1–3 and the preprint cite each other as "companion manuscripts". Two
-rules adopted on 28 Aug 2026 (see `notes/ROUND19_endpoint_length_and_freeze.md` §1):
+rules adopted on 28 Aug 2026 (see [`ROUND19_endpoint_length_and_freeze.md`](../../../early-chat-logs/initial-project-files/rh3/claude/ROUND19_endpoint_length_and_freeze.md) §1):
 
 - Every cross-citation carries the *name* of the cited statement ("critical-shift
   dichotomy", "linear margin", "shift-energy identity"), not only a theorem

@@ -16,7 +16,10 @@ policy).
 
 The writing project is closed out at v0.3. See [CLOSEOUT.md](CLOSEOUT.md)
 for the packaging checks, current archive availability and deferred work,
-and [numerics/README.md](numerics/README.md) for the code index.
+and [numerics/README.md](numerics/README.md) for the code index. The
+[lessons-learned note](LESSONS_LEARNED_manifest_positivity_design_guidance_20260911.md)
+written at the close of v0.3 (exploratory design guidance, not a certified
+result) has been kept here since 16 October 2026.
 
 ## What changed from v0.2 to v0.3
 

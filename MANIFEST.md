@@ -3,7 +3,8 @@
 Provenance record for the repository: which files were written for it, which
 were carried over from the private project store, and which are still
 missing. Updated 11 September 2026; repository paths updated for the
-16 October 2026 relocation of five `papers/` folders (see the
+16 October 2026 relocation of five `papers/` folders and of the
+repository-root research folders (see the
 [relocation record](papers/REORGANIZATION_20261016.md)).
 
 ## Written for the repository
@@ -13,13 +14,10 @@ README.md  CITATION.cff  CHANGELOG.md  CONTRIBUTING.md  RELEASING.md  MANIFEST.m
 .gitignore  .zenodo.json   (LICENSE: the repository's licensing-by-material-type notice)
 .github/ISSUE_TEMPLATE/{verification-report,possible-error,formalization}.md
 .github/labels.yml  .github/workflows/{build-latex,check-first-slab,check-hygiene}.yml
-blueprint/README.md  blueprint/first-slab/statements.md
-statements/README.md  statements/ledger.yaml
-environment/{requirements,requirements_metadata}.txt
-tools/{check_citations,check_repository_hygiene}.py
+tools/{check_citations,check_repository_hygiene}.py  tools/requirements_metadata.txt   (the latter from the root environment/, 16 Oct 2026)
 tools/{record_Claude_cowork_chat,record_Claude_export_chat}.py   (Claude chat recorders; moved from the root, 13 Oct 2026)
 papers/README.md
-papers/{shifted-zeta,misc}/README.md              (project indexes)
+papers/{weil-positivity/shifted-zeta,misc}/README.md              (project indexes)
 papers/weil-positivity/shifted-zeta/*/{README,STATUS,VERIFICATION_STATUS}.md  (where applicable; six folders)
 papers/misc/rh-detector/{README,STATUS}.md
 papers/weil-positivity/susy-positivity/{README,PROGRAM_OVERVIEW}.md (shared program guide)
@@ -38,16 +36,17 @@ papers/weil-positivity/shifted-zeta/storage-depth/**  (drafted 10 Sept 2026 on t
                         v0.2, reviews, background), ARCHIVES.md, CLAIMS.json, BUILD_RECORD.json,
                         SHA256SUMS.txt; its ~1.6 GB of matrix archives are kept outside git —
                         LARGE_FILES.md, papers/weil-positivity/shifted-zeta/storage-depth/ARCHIVES.md)
-papers/weil-positivity/shifted-zeta/first-slab-positivity/{CITATION.cff,.zenodo.json,LICENSE.md,VERIFICATION_STATUS.md}
+papers/weil-positivity/shifted-zeta/first-slab-positivity/{CITATION.cff,.zenodo.json,LICENSE.md,VERIFICATION_STATUS.md,CERTIFICATE_CODE.md}
+papers/weil-positivity/shifted-zeta/first-slab-positivity/blueprint/{README.md,statements.md,ledger.yaml}
+papers/weil-positivity/shifted-zeta/first-slab-positivity/verification/{README.md,requirements.txt,CHECKLIST.md,PROTOCOL_C1_C2.md,CERTIFICATE_RERUN_20260909.md}
+papers/weil-positivity/shifted-zeta/first-slab-positivity/verification/reviews/{README.md,REVIEW_round2_verdict_20260903.md}
+papers/weil-positivity/shifted-zeta/first-slab-positivity/verification/scripts/{README.md,verify_referee_checks_20260831.py,verify_preprint_checks_20260905.py}
+papers/weil-positivity/shifted-zeta/first-slab-positivity/verification/scripts/{verify_stable_volterra_20260909.py,requirements_stable_checks.txt}   (from the 9 Sept external review)
+                        (the first-slab blueprint/, verification/ and CERTIFICATE_CODE.md were the root
+                        blueprint/, statements/, verification/, environment/ and code/ folders until 16 Oct 2026)
 papers/weil-positivity/shifted-zeta/psi-omega-margin/supplementary/DERIVATION_AND_VERIFICATION.md   (authored clean, 9 Sept)
-papers/{shifted-zeta,misc}/*/code/{README.md,requirements.txt}
-verification/README.md
-verification/first-slab/{CHECKLIST.md,PROTOCOL_C1_C2.md,CERTIFICATE_RERUN_20260909.md}
-verification/first-slab/reviews/{README.md,REVIEW_round2_verdict_20260903.md}
-verification/first-slab/scripts/{README.md,verify_referee_checks_20260831.py,verify_preprint_checks_20260905.py}
-verification/first-slab/scripts/{verify_stable_volterra_20260909.py,requirements_stable_checks.txt}   (from the 9 Sept external review)
-notes/README.md  notes/REDACTION_CHECKLIST.md
-code/README.md  code/certificates/first-slab/README.md
+papers/{weil-positivity/shifted-zeta,misc}/*/code/{README.md,requirements.txt}
+early-chat-logs/initial-project-files/rh3/{RESEARCH_LOG_INDEX,REDACTION_CHECKLIST}.md   (the root notes/ folder until 16 Oct 2026)
 references/README.md
 ```
 
@@ -65,11 +64,10 @@ references/README.md
 | `lab_ihara_core.py`, `lab_ihara_experiments.py` | `papers/weil-positivity/shifted-zeta/defect-depth/code/` | laboratory record through round 5 |
 | `PAPER_rh_detector.tex` | `papers/misc/rh-detector/` (+ PDF) | **working draft**, committed 9 Sept 2026; separate thread, predates the Suzuki program |
 | `h1`, `h3`, `h4`, `d1`, `d4`, `v1` + `zeros1001.json`, `beta_zeros.json` (regenerated 25 Aug) | `papers/misc/rh-detector/code/` | smoke-tested 9 Sept |
-| `REVIEW_ROUND2_verdict_20260903.md` | `verification/first-slab/reviews/` | |
-| `verify_referee_checks_20260831.py`, `verify_preprint_checks_20260905.py` | `verification/first-slab/scripts/` | |
-| `PROTOCOL_C1_C2_verification_20260906.md` | `verification/first-slab/PROTOCOL_C1_C2.md` | |
-
-| Storage-depth lessons-learned note | `notes/LESSONS_LEARNED_manifest_positivity_design_guidance_20260911.md` | Moved from `Claude outputs/`, preserving the author's pending wording change; exploratory design guidance, not a certified result. |
+| `REVIEW_ROUND2_verdict_20260903.md` | `papers/weil-positivity/shifted-zeta/first-slab-positivity/verification/reviews/` | |
+| `verify_referee_checks_20260831.py`, `verify_preprint_checks_20260905.py` | `papers/weil-positivity/shifted-zeta/first-slab-positivity/verification/scripts/` | |
+| `PROTOCOL_C1_C2_verification_20260906.md` | `papers/weil-positivity/shifted-zeta/first-slab-positivity/verification/PROTOCOL_C1_C2.md` | |
+| Storage-depth lessons-learned note | `papers/weil-positivity/shifted-zeta/storage-depth/LESSONS_LEARNED_manifest_positivity_design_guidance_20260911.md` | Moved from `Claude outputs/` to `notes/` (11 Sept) and into storage-depth (16 Oct 2026), preserving the author's pending wording change; exploratory design guidance, not a certified result. |
 
 Storage-depth closeout adds `papers/weil-positivity/shifted-zeta/storage-depth/CLOSEOUT.md` and
 `numerics/README.md`, updates the current navigation and external archive
@@ -79,12 +77,24 @@ under the shared program root `papers/weil-positivity/susy-positivity/`. Its pos
 manuscript and supporting notes are in `investigations/previous/positive-factorizations/`,
 with historical drafts and round-4 reports preserved inside that attempt.
 
-## Still to carry over (after the redaction checklist)
+## Planned carry-over, superseded by the 13 October import
 
-| Project document | Destination | Note |
+This list was the plan of 11 September: each document was to be redacted and
+then committed under `notes/` (or the destination shown). Instead, the RH3
+project documents not already reflected in the repository were imported
+unchanged on 13 October 2026 into
+[early-chat-logs/initial-project-files/](early-chat-logs/initial-project-files/README.md)
+(`rh3/claude/`, with `Lab_Tower_Check.py` and `BRIEF_instanton_size.md` kept as
+their identical RH2 copies), whose `manifest.json` records where each one is
+stored or why it was left out. The redaction checklist has not been applied
+to those copies. The root `notes/` folder was dissolved on 16 October 2026;
+its index and the checklist are now in `rh3/` beside the documents
+([index](early-chat-logs/initial-project-files/rh3/RESEARCH_LOG_INDEX.md)).
+
+| Project document | Planned destination (11 Sept) | Note |
 |---|---|---|
 | `REVIEW_first_slab_positivity_20260831.md` | `verification/first-slab/reviews/REVIEW_round1_20260831.md` | rename as shown |
-| `VERIFICATION_CHECKLIST_first_slab_20260904.md` | — | superseded by `verification/first-slab/CHECKLIST.md` (renumbered to v1.0); keep in the project only |
+| `VERIFICATION_CHECKLIST_first_slab_20260904.md` | — | superseded by `papers/weil-positivity/shifted-zeta/first-slab-positivity/verification/CHECKLIST.md` (renumbered to v1.0); keep in the project only |
 | `Lab_Tower_Check.py` (top level) | `code/labs/tower/` or drop | confirm purpose from header first |
 | `BRIEF_instanton_size.md` (top level), `ASSESSMENT_instanton_size.md` | `notes/` | |
 | `ROUND2_full_YM_and_results.md` … `ROUND12_execution_and_a_retraction.md` (physics series, 11 files incl. `ROUND6_unscreened_sweep.md`) | `notes/` | |
@@ -111,4 +121,4 @@ with historical drafts and round-4 reports preserved inside that attempt.
   **recovered 9 Sept 2026** and packaged as a review candidate outside the
   repository (generators, audit, diagnostics, result CSVs, `verify_*` scripts,
   pins, hash manifest, historical notes and manifests); still release-gated by
-  D1–D5 (`code/README.md`).
+  D1–D5 (`papers/weil-positivity/shifted-zeta/first-slab-positivity/CERTIFICATE_CODE.md`).

@@ -21,7 +21,7 @@ compared against numbers computed in another normalization.
 
 - [Frame-bound note](../papers/weil-positivity/susy-positivity/investigations/wilson-lines/notes/FRAME_BOUND_AND_THE_DENSITY_20260917.md) §1.3: "Both statements are wrong, and the cause is the factor of two."
 - [First-slab round-1 review](../early-chat-logs/initial-project-files/rh3/claude/REVIEW_first_slab_positivity_20260831.md): "§4.2's boxed representation is false at ω = 1/2, by a quantity three orders of magnitude larger than the certified margin"; the kernel bound was "exactly twice the sharp Schur value", which cost half the headline margin.
-- [First-slab checklist](../verification/first-slab/CHECKLIST.md): a display "overstated the form by ½|∫f|² ≈ 0.24 … against a certified margin of 6.1e−4".
+- [First-slab checklist](../papers/weil-positivity/shifted-zeta/first-slab-positivity/verification/CHECKLIST.md): a display "overstated the form by ½|∫f|² ≈ 0.24 … against a certified margin of 6.1e−4".
 - [ROUND10](../early-chat-logs/initial-project-files/rh3/claude/ROUND10_boundary_data.md): "the constant was wrong by five orders of magnitude"; [ROUND6](../early-chat-logs/initial-project-files/rh3/claude/ROUND6_closeout.md): "that is the entire log 2".
 - [Storage-depth v0.2 review](../papers/weil-positivity/shifted-zeta/storage-depth/archive/reviews/REVIEW_storage-depth_v0.2_claude_20260910.md): "floors are understated by four orders of magnitude".
 - [CCM README](../papers/investigations/ccm-operator-realizations/README.md): "The literal-k normalization Xi/4 is corrected in two earlier supporting notes."; the [fractional-dimension trap list](../papers/weil-positivity/susy-positivity/investigations/fractional-dimension/notes/NEW_SESSION_PROMPT.md): "xi MEANS TWO DIFFERENT THINGS".

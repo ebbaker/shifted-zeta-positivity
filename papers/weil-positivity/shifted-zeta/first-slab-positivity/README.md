@@ -34,13 +34,19 @@ hypothesis nor a new zero-free region; see Section 1.5 of the paper.
 | `first_slab_positivity.tex` | LaTeX source (single file, `pdflatex`; no external bibliography). |
 | `VERIFICATION_STATUS.md` | What has been independently checked, by what means, and what has not. Mirrors Section 13 of the paper. |
 | `CITATION.cff`, `.zenodo.json` | Citation and Zenodo deposit metadata. |
-| `LICENSE.md` | CC BY 4.0 notice for this folder; licensing by material type is in `../../../LICENSE`. |
+| `LICENSE.md` | CC BY 4.0 notice for this folder; licensing by material type is in `../../../../LICENSE`. |
+| [`blueprint/`](blueprint/README.md) | Statement inventory (`statements.md`, 30 statements) with dependencies, proof and human-check status and formalization feasibility; the same as machine-readable YAML (`ledger.yaml`). |
+| [`verification/`](verification/README.md) | Verification checklist, the C1/C2 protocol, the certificate rerun record, referee-round records, independent recomputation scripts and the 9 September repository review. |
+| [`CERTIFICATE_CODE.md`](CERTIFICATE_CODE.md) | What the unreleased certificate code consists of, and its release gate (D1–D5). |
 
 The certificate and audit scripts (Investigations 7, 12, 13, 14 in the paper's
 Appendix B) are **not** part of this deposit. They are available from the
 author on request, and a separate code release with pinned environments and
 archived logs is planned once the repository items listed in
-`VERIFICATION_STATUS.md` are complete.
+`VERIFICATION_STATUS.md` are complete; its release gate is in
+[`CERTIFICATE_CODE.md`](CERTIFICATE_CODE.md). The `blueprint/`,
+`verification/` and `CERTIFICATE_CODE.md` entries were repository-root folders
+until 16 October 2026.
 
 ## Disclosure
 
@@ -83,7 +89,7 @@ linked to the repository record). The DOIs will appear in this file and in
 version and the repository release version are separate identifiers.
 
 `CITATION.cff` in this folder carries the same data; the statement inventory
-with per-statement verification status is `../../../blueprint/first-slab/statements.md`.
+with per-statement verification status is [`blueprint/statements.md`](blueprint/statements.md).
 
 ## Contact
 

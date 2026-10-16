@@ -120,3 +120,102 @@ not mathematical validity.
 - The `claude-investigation` branch has unmerged commits touching three files
   in `quasi-rh-exponent-descent/`; git's rename detection should carry them to
   the new location on merge.
+
+## Root folders
+
+Later the same day, at the author's request, the research folders at the
+repository root were dissolved into the folders they serve. Base commit
+`0a1156e` (the commit of the move above); same preparation (Claude Opus 5.5,
+configured identifier `claude-opus-5-5`, Claude Cowork, reasoning effort max).
+The JSON record's `root_folders` entry lists every file with its hashes.
+
+| Earlier location | Current location |
+|---|---|
+| `blueprint/README.md`, `statements/README.md` | `papers/weil-positivity/shifted-zeta/first-slab-positivity/blueprint/README.md` (merged) |
+| `blueprint/first-slab/statements.md` | `papers/weil-positivity/shifted-zeta/first-slab-positivity/blueprint/statements.md` |
+| `statements/ledger.yaml` | `papers/weil-positivity/shifted-zeta/first-slab-positivity/blueprint/ledger.yaml` |
+| `verification/README.md`, `verification/first-slab/<path>` | `papers/weil-positivity/shifted-zeta/first-slab-positivity/verification/README.md`, `papers/weil-positivity/shifted-zeta/first-slab-positivity/verification/<path>` |
+| `environment/requirements.txt` | `papers/weil-positivity/shifted-zeta/first-slab-positivity/verification/requirements.txt` |
+| `environment/requirements_metadata.txt` | `tools/requirements_metadata.txt` |
+| `code/README.md`, `code/certificates/first-slab/README.md` | `papers/weil-positivity/shifted-zeta/first-slab-positivity/CERTIFICATE_CODE.md` (merged; the per-paper code table repeated the papers' READMEs, and the list of unrecovered scripts is in `MANIFEST.md`) |
+| `notes/README.md` | `early-chat-logs/initial-project-files/rh3/RESEARCH_LOG_INDEX.md` |
+| `notes/REDACTION_CHECKLIST.md` | `early-chat-logs/initial-project-files/rh3/REDACTION_CHECKLIST.md` |
+| `notes/LESSONS_LEARNED_manifest_positivity_design_guidance_20260911.md` | `papers/weil-positivity/shifted-zeta/storage-depth/` (same name) |
+| `notes/supersymmetric_positivity_research_brief.md`, `.docx` | `papers/weil-positivity/susy-positivity/archive/` (same names) |
+| `notes/repository-review/9:9:26/` (review and response) | `papers/weil-positivity/shifted-zeta/first-slab-positivity/verification/repository-review-20260909/` (same names) |
+| `Claude outputs/REVIEW_CLAUDE_MANUSCRIPT_VERIFICATION_20260925.md` | removed: an earlier copy, without the §7 errata, of `papers/weil-positivity/susy-positivity/investigations/wilson-loewner/YM/reviews/` (same name) |
+| `Claude outputs/STRUCTURAL_REQUIREMENTS_AND_NEXT_STEPS_20260925.md` | removed: the first version (conditions R1–R4) of the revised note (N1–N4) in `…/wilson-loewner/YM/notes/` (same name) |
+| `chat-histories/0001_2026-10-13T12-45-01Z_rename-draft-histor-md-files.json` | `early-chat-logs/chatgpt-codex/` (same number and name; [receipt](../early-chat-logs/chatgpt-codex/CHAT_HISTORY_RELOCATION_20261016.json)) |
+| `output/pdf/quaternion_theta_geometry.pdf`, `theta_manifold_geometry.pdf` | untracked and ignored; the local copies remain |
+
+Of the 23 moved files, 13 are byte-identical at their new paths and 10 were
+then edited for paths and links: the blueprint README, statements and ledger,
+the verification README, protocol, rerun record and the READMEs of `reviews/`
+and `scripts/`, and the research-log index and checklist. The three merged
+files were removed after their content was carried into the merged file or
+found in the papers' READMEs and `MANIFEST.md`; the two removed `Claude outputs/`
+files are earlier versions of the YM files. All of them are in the base commit.
+
+**Links and paths.** Seventy-one relative links in 21 Markdown files were
+recomputed from their earlier targets, as above. The other references were
+edited by hand: the first-slab CI workflow and the formalization issue
+template; the root, papers, shifted-zeta, first-slab and storage-depth READMEs;
+`MANIFEST.md`, `CONTRIBUTING.md`, `RELEASING.md` and `.zenodo.json`; the status
+files of psi-omega-margin, omega-string, defect-depth and the rh-detector;
+`references/README.md`, five `avoid/` entries, two `result-summaries/`, the
+chat-history guide, and the READMEs of the two `early-chat-logs/` destinations
+and of the SUSY archive. In storage-depth, only the manifest entries of the two
+files edited there (`CLOSEOUT.md`, `README.md`) were refreshed, followed by the
+`SHA256SUMS.txt` entry of `BUILD_RECORD.json`.
+
+**Research log.** The index and checklist now sit beside the documents they
+describe, with a link to each. Both state that the copies in `rh3/claude/` are
+the unchanged 13 October exports, to which the checklist has not been applied;
+`RELEASING.md` and `.zenodo.json` now say so too, replacing statements that the
+reports would be committed only after redaction.
+
+**Chat history.** The root registry's only chat moved by the procedure in
+`tools/CHAT_HISTORY.md`, with both registries locked and the destination
+verified before the source registration and archive were removed. It keeps
+number 1, which the destination's first chat also holds (the registry allows
+duplicate numbers, not duplicate ids or filenames). The emptied root index was
+then removed with its folder.
+
+**Reading copies.** `git rm --cached` removed `output/pdf/` from the index,
+leaving the files on disk, and `.gitignore` gained `/output/` (anchored, so
+the `numerics/output/` folders stay tracked). This index removal is the only
+staged change. The four READMEs of investigations 21 and 22 that linked the
+PDFs now point to the `.tex` sources. Thirteen links in dated notes and
+reviews of those investigations still name `output/pdf/`; they resolve in a
+local checkout but not on GitHub. The investigation 22 manuscript still calls
+`output/pdf` its repository reading copy, and the two build records keep the
+PDF paths and hashes.
+
+Not rewritten, as above: dated notes and reviews other than the paper status
+files, relocation and provenance records (including the `manifest.json` of the
+initial project files, whose `repository_counterpart` fields give the root
+paths of 13 October, and the 20 September SUSY record's link to the brief),
+numerical records, registered chat histories and earlier `CHANGELOG.md`
+entries. Dated records that hash the edited status files or `CONTRIBUTING.md`
+keep their original hashes; the JSON record gives both.
+
+### Validation of the root step
+
+Run on the base commit's state and after the edits:
+
+- `tools/check_repository_hygiene.py --working-tree`: the same two
+  pre-existing failures (investigation 19's uncommitted PDF).
+- `weil-positivity/susy-positivity/validation/check_structure.py`: the same 32
+  errors; three more links checked (the SUSY archive README).
+- Package validators: the same results as after the move above (all pass;
+  Wilson–Loewner's `check_package.py` lists the same 185 mismatches).
+- Link audit of every Markdown file against the base commit, with moved files
+  mapped back: 11,701 relative links in 1,757 files; the 188 that do not
+  resolve all failed at the base commit too, so none is newly broken. The
+  thirteen `output/pdf/` links above resolve only to the ignored local files.
+- `blueprint/ledger.yaml` parses and its `blueprint`, `checklist`, `pdf` and
+  `status_file` paths exist; the CI workflow's script, requirements and
+  metadata paths exist. The moved scripts read no repository paths and were
+  not rerun.
+- The chat relocation was rechecked after the root folder was removed: one
+  registration, unchanged archive bytes, unchanged neighbouring archives.

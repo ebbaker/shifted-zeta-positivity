@@ -11,7 +11,7 @@ diff) is not addressed here.
 
 **Where the code is.** Not in this repository. The recovered code, tables,
 verifiers, pins and hash manifest are packaged as a review candidate held by
-the author (`code/README.md`, "Not here yet, and why"). Source files run, by
+the author (then `code/README.md`, "Not here yet, and why"; now [CERTIFICATE_CODE.md](../CERTIFICATE_CODE.md)). Source files run, by
 SHA-256:
 
 | File | SHA-256 |

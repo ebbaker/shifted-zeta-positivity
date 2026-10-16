@@ -124,7 +124,7 @@ Later Claude conversations about this work are recorded here with
      The initial idea grew out of a series of papers, some published as …”
    - *Note.* Besides the README background, it drafts the hand protocol for
      checks C1 and C2
-     ([PROTOCOL_C1_C2.md](../../../../../verification/first-slab/PROTOCOL_C1_C2.md))
+     ([PROTOCOL_C1_C2.md](../../first-slab-positivity/verification/PROTOCOL_C1_C2.md))
      and answers the first verification questions; chat 13 continues that
      verification.
 

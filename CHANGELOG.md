@@ -1,5 +1,37 @@
 # Changelog
 
+## 2026-10-16 — dissolve the repository-root research folders
+
+- Moved the first slab's statement blueprint (root `blueprint/`, with
+  `statements/ledger.yaml`) and verification records (root `verification/`,
+  without its `first-slab/` level, with `environment/requirements.txt`) into
+  `papers/weil-positivity/shifted-zeta/first-slab-positivity/`, and
+  `environment/requirements_metadata.txt` into `tools/`. The root `code/`
+  READMEs became the folder's `CERTIFICATE_CODE.md` (release gate D1–D5) and
+  `statements/README.md` a section of the blueprint README. The CI workflow,
+  ledger, issue template and release checklist use the new paths.
+- Dissolved `notes/`: its research-log index (now `RESEARCH_LOG_INDEX.md`, with
+  a link to every document) and redaction checklist moved beside the RH3
+  documents imported on 13 October (`early-chat-logs/initial-project-files/rh3/`);
+  both now say that those exported copies have not been through the checklist.
+  The storage-depth lessons note moved to storage-depth, the SUSY research brief
+  to `susy-positivity/archive/`, and the 9 September repository review to the
+  first slab's `verification/`.
+- Removed `Claude outputs/`, earlier copies of two YM files whose reviewed
+  versions are in `wilson-loewner/YM/`. Moved the one chat of the root
+  `chat-histories/` registry to `early-chat-logs/chatgpt-codex/` by the
+  documented relocation procedure, keeping its number and filename. Untracked
+  the `output/pdf/` reading copies of investigations 21 and 22 (kept locally,
+  now ignored); their READMEs point to the `.tex` sources.
+- Updated links and paths in the root, papers, shifted-zeta, first-slab and
+  storage-depth READMEs, `MANIFEST.md`, `CONTRIBUTING.md`, `RELEASING.md`,
+  `.zenodo.json`, four paper status files, `references/`, `avoid/` and
+  `result-summaries/`; refreshed only the storage-depth manifest entries of the
+  two files edited there. See the
+  [relocation record](papers/REORGANIZATION_20261016.md#root-folders).
+- Prepared for Edward Baker with LLM assistance; Claude Opus 5.5
+  (`claude-opus-5-5`), Claude Cowork, reasoning effort **max**.
+
 ## 2026-10-16 — group the papers/ folders by research line
 
 - Moved `papers/shifted-zeta/` and `papers/susy-positivity/` into

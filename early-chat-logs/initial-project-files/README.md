@@ -33,6 +33,12 @@ out (34 documents). A document counts as reflected when at least half of its
 lines of 30 or more characters appear in tracked repository files; every RH3
 document kept here has 6% or fewer of its lines there.
 
+The RH3 folder also holds the [research-log index](rh3/RESEARCH_LOG_INDEX.md),
+which catalogues these RH3 documents by thread, and the
+[redaction checklist](rh3/REDACTION_CHECKLIST.md) written for them. Both were
+the repository-root `notes/` folder until 16 October 2026. They are repository
+files, not project documents, so `manifest.json` does not list them.
+
 [manifest.json](manifest.json) lists every document of the three projects with
 its creation time, size and SHA-256, and records where it is stored or why it
 was left out. Besides the 34 reflected RH3 documents:

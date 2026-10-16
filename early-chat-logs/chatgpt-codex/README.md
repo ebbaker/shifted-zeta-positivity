@@ -19,11 +19,18 @@ retain their original files and numbers.
 | [shifted-zeta](../../papers/weil-positivity/shifted-zeta/chat-histories/chatgpt-codex/README.md) | 6 |
 | [susy-positivity](../../papers/weil-positivity/susy-positivity/chat-histories/chatgpt-codex/README.md) | 34 |
 
-This folder holds the two repository-wide conversations whose subject is
-not confined to one paper project:
+This folder holds the repository-wide conversations whose subject is not
+confined to one paper project: the two imported on 12 October (the table
+above) and one moved here later.
 
 - [Evaluate Reddit collaboration plan](0001_2026-09-22T12-49-25Z_evaluate-reddit-collaboration-plan.json)
 - [Update project README overview](0002_2026-10-03T04-35-19Z_update-project-readme-overview.json)
+- [Rename DRAFT_HISTOR.md files](0001_2026-10-13T12-45-01Z_rename-draft-histor-md-files.json)
+  (13 October 2026), moved here on 16 October 2026 from the former
+  repository-root `chat-histories/` registry with its number and filename
+  unchanged; see the [relocation receipt](CHAT_HISTORY_RELOCATION_20261016.json).
+  It therefore shares number 1 with the first chat; ids and filenames stay
+  unique.
 
 Read the [requested title list](requested_titles_20261012.txt) and
 [complete import audit](import_audit_20261012.json) for each title’s

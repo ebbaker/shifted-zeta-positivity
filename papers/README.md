@@ -6,9 +6,12 @@ Cowork, reasoning effort max).
 
 The research folders are grouped by line of work. Each program or
 investigation keeps its own manuscripts, notes, numerics, reviews, chat
-histories and status records; the group folders only organize them. Shared
-`blueprint/`, `statements/`, `verification/`, `notes/` and `code/` remain at
-the repository root.
+histories and status records; the group folders only organize them. No
+shared research folders remain at the repository root: the first slab keeps
+its statement blueprint, verification records and certificate release gate in
+[its folder](weil-positivity/shifted-zeta/first-slab-positivity/README.md),
+and the RH3 research log is with the
+[early project files](../early-chat-logs/initial-project-files/README.md).
 
 | Folder | What it holds | Period | Start here |
 |---|---|---|---|
@@ -72,6 +75,8 @@ later move below, oldest first, or open the file at its original commit.
 | 13 Oct 2026 | nine folders in `papers/investigations-2/active/` | `papers/investigations-2/inactive/` | [consolidation record](investigations-2/PORTFOLIO_CONSOLIDATION_20261013.md) |
 | 16 Oct 2026 | `papers/shifted-zeta/`, `papers/susy-positivity/` | `papers/weil-positivity/shifted-zeta/`, `papers/weil-positivity/susy-positivity/` | [16 October record](REORGANIZATION_20261016.md) |
 | 16 Oct 2026 | `papers/prime-variance-exponents/`, `papers/quasi-rh-exponent-descent/`, `papers/quasi-rh-character-amplification/` | `papers/quasi-rh/<same name>/` | [16 October record](REORGANIZATION_20261016.md) |
+| 16 Oct 2026 | root `blueprint/first-slab/statements.md`, `blueprint/README.md`, `statements/ledger.yaml`, `verification/` (with its `first-slab/` level dropped), `environment/requirements.txt`, `code/` | the first slab's `blueprint/`, `verification/`, `verification/requirements.txt` and `CERTIFICATE_CODE.md`, in `papers/weil-positivity/shifted-zeta/first-slab-positivity/`; `environment/requirements_metadata.txt` to `tools/` | [16 October record](REORGANIZATION_20261016.md#root-folders) |
+| 16 Oct 2026 | root `notes/`, `Claude outputs/`, `chat-histories/` | `early-chat-logs/initial-project-files/rh3/` (index, redaction checklist), storage-depth (lessons note), SUSY `archive/` (research brief), the first slab's `verification/repository-review-20260909/`; the YM copies already in `wilson-loewner/YM/`; `early-chat-logs/chatgpt-codex/` | [16 October record](REORGANIZATION_20261016.md#root-folders) |
 
 Commit-pinned citations keep the paths of their commit and must not be
 rewritten.
@@ -133,7 +138,7 @@ The cross-citation policy for the shifted-zeta papers is in the
 1. Author block and ORCID filled in (the papers carry no institutional affiliation; see the repository README).
 2. Every bibliography entry verified against the source (no `%% VERIFY` markers left).
 3. Cross-citations renumbered against released versions.
-4. `blueprint/<slug>/statements.md` and the corresponding `statements/ledger.yaml` section written.
+4. `blueprint/statements.md` and `blueprint/ledger.yaml` written in the paper's folder, as in the first slab's [blueprint](weil-positivity/shifted-zeta/first-slab-positivity/blueprint/README.md).
 5. A `VERIFICATION_STATUS.md` in the folder saying what has and has not been human-checked.
 6. `CITATION.cff` (valid against the CFF 1.2.0 schema — `tools/check_citations.py`) and `.zenodo.json` present in the folder; license stated.
 7. PDF built from the committed `.tex` on a clean TeX Live (`latexmk -pdf`); the CI workflow passes.

@@ -28,7 +28,7 @@ Edward Baker — August–October 2026. **Overview updated 3 October 2026; layou
 > exploratory calculations have different evidential roles; the linked records
 > state their scope. Specialist mathematical review remains outstanding. The
 > primary first-slab Arb certificate bundle is still outside the public tree
-> pending its [release gate](code/README.md).
+> pending its [release gate](papers/weil-positivity/shifted-zeta/first-slab-positivity/CERTIFICATE_CODE.md).
 
 ## Background
 
@@ -50,10 +50,13 @@ which brought the work to inverse spectral problems and to Masatoshi Suzuki's
 screw functions [arXiv:1204.1827, 2206.03682]. Suzuki’s framework opened a new direction: investigating shifted-zeta positivity through inverse spectral theory and possible bulk–boundary realizations. This repository begins with that work and follows the broader mathematical and physical investigations that developed from it.
 
 The manuscripts, research notes, verification records and code here were
-produced in that collaboration, under the author's direction, in the
-referee-style rounds described in `verification/` and `notes/`. The author is
-responsible for the content; the per-statement record of what has and has not
-been independently checked is in `blueprint/` and `verification/`.
+produced in that collaboration, under the author's direction, in referee-style
+rounds recorded beside each paper (for the first slab, in its
+[`verification/`](papers/weil-positivity/shifted-zeta/first-slab-positivity/verification/README.md) folder and the
+[research log](early-chat-logs/initial-project-files/rh3/RESEARCH_LOG_INDEX.md)). The author is responsible for the content; the
+per-statement record of what has and has not been independently checked is in
+the first slab's [`blueprint/`](papers/weil-positivity/shifted-zeta/first-slab-positivity/blueprint/README.md) and `verification/`
+folders and in the other papers' status files.
 
 ## Project overview and goals
 
@@ -166,13 +169,18 @@ precede later dated notes and review corrections.
 | [`papers/quasi-rh/`](papers/quasi-rh/README.md) | The zero-strip line: prime-variance exponents, quasi-RH exponent descent with the Newman-collision projects, and character amplification. |
 | [`papers/investigations-2/`](papers/investigations-2/README.md) | The second investigation portfolio: active and inactive program homes, audits, shared planning and chat histories. |
 | [`papers/misc/`](papers/misc/README.md) | Separate work, currently the earlier RH-detector draft. |
-| [`blueprint/`](blueprint/README.md) and [`statements/`](statements/README.md) | First-slab statement inventory, dependencies, proof and human-verification status, and machine-readable ledger. |
-| [`verification/`](verification/README.md) | Referee-round records, independent recomputation scripts, and outstanding verification checklists. |
-| [`notes/`](notes/README.md) | Shared lessons and historical research-log migration; investigation-specific research stays with its investigation. |
 | [`result-summaries/`](result-summaries/README.md) | Short summaries of the established results, in the sources' own status words, routing to the manuscripts, certificates and reviews that hold them. |
 | [`avoid/`](avoid/README.md) | Recurring patterns to avoid in this project, each with anecdotal evidence and references to the repository. |
-| [`code/`](code/README.md) and `environment/` | First-slab certificate release gate and shared verification environment. Most reproduction code lives beside its investigation. |
 | [`references/`](references/README.md) | External-source bibliography; third-party PDFs are not redistributed. |
+| `early-chat-logs/` | Chat records without an investigation home — the early and repository-wide [Codex chats](early-chat-logs/chatgpt-codex/README.md) and [Claude chats](early-chat-logs/claude-cowork/README.md), which also hold the Claude repository-maintenance sessions — and the [claude.ai project files](early-chat-logs/initial-project-files/README.md) of the first three projects, with the RH3 [research-log index](early-chat-logs/initial-project-files/rh3/RESEARCH_LOG_INDEX.md) and its redaction checklist. |
+| [`tools/`](tools/CHAT_HISTORY.md) | Chat recorders and the chat-history guide, the repository hygiene and citation checkers, and the CI's pinned metadata requirements. |
+
+The first-slab preprint keeps its statement blueprint, verification records and
+certificate release gate in [its own folder](papers/weil-positivity/shifted-zeta/first-slab-positivity/README.md); these were
+repository-root folders until 16 October 2026 (see the
+[relocation record](papers/REORGANIZATION_20261016.md)). Reproduction code
+lives beside each paper or investigation. Draft PDFs built into the root
+`output/` folder are not tracked; rebuild them from the `.tex` sources.
 
 Within each investigation, incremental research belongs in `notes/`, numerical
 work in `numerics/`, and reviews in `reviews/`, with model and reasoning-effort
@@ -242,10 +250,10 @@ regenerable data). A draft is therefore
 archived *as a draft*: its status and review records identify it as work in
 progress, the release notes list which folders are released, and only those
 folders are to be cited. Tagging is done only when everything committed is fit
-to be archived permanently in that sense: released paper sources and PDFs, the
-`blueprint/`, `statements/` and `verification/` records, code that has passed
-its release gate, drafts whose status records are current, and notes that have
-been through the redaction checklist. `v1.0` releases the first-slab preprint
+to be archived permanently in that sense: released paper sources and PDFs with
+their `blueprint/` and `verification/` records, code that has passed its
+release gate, drafts whose status records are current, and research notes that
+have been through the redaction checklist. `v1.0` releases the first-slab preprint
 and the material around it.
 
 **Citing a paper in this repository.** Until a release exists, cite the
@@ -284,16 +292,16 @@ the paper record's DOI to the root `.zenodo.json` under `related_identifiers`
 
 ## For formalizers and other verifiers
 
-Start at `blueprint/first-slab/statements.md`: it lists every statement of the
-preprint with what depends on what, whether it is proved on paper, certified
+Start at the first slab's [`blueprint/statements.md`](papers/weil-positivity/shifted-zeta/first-slab-positivity/blueprint/statements.md):
+it lists every statement of the preprint with what depends on what, whether it is proved on paper, certified
 by computer, or only asserted, whether a human has checked it, and how
 feasible a Lean/Mathlib formalization looks. The later investigations do not
 yet have comparable statement blueprints. Use their dated status files,
 research notes, and `reviews/` records to identify the exact claims and
 remaining checks; a manuscript may lag its subsequent notes. The two premise
 checks the internal review cannot perform — the normalization chain against Suzuki's paper and
-the originality search — have a written protocol in
-`verification/first-slab/PROTOCOL_C1_C2.md`. Issues labelled
+the originality search — have a written protocol in the same folder,
+[`verification/PROTOCOL_C1_C2.md`](papers/weil-positivity/shifted-zeta/first-slab-positivity/verification/PROTOCOL_C1_C2.md). Issues labelled
 `good-first-check` are the elementary items. `CONTRIBUTING.md` has the house
 rules; the issue templates cover verification reports, possible errors and
 formalization work.

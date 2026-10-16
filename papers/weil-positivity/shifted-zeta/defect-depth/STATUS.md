@@ -14,8 +14,8 @@ assistance under the author's direction, out of the finite graph-zeta laboratory
 lab"): six investigation rounds (LAB_ihara rounds 1–5 plus the ROUND6 manuscript-gate
 close-out), each with independent numerical recomputation and standing QC (control rows,
 precision escalation, exact integer arithmetic where applicable). The round-by-round record
-lives in the project notes (`LAB_ihara_round1`–`round5`, `ROUND6_closeout`; to be mirrored
-under `notes/` per the redaction checklist).
+lives in the project notes (`LAB_ihara_round1`–`round5`, `ROUND6_closeout`; imported unchanged
+with the RH3 project files on 13 October 2026, see the [research-log index](../../../../early-chat-logs/initial-project-files/rh3/RESEARCH_LOG_INDEX.md), thread 4).
 
 **Verification status.**
 - Theorem 1 (resolvent compactification: Taylor-jet identity, string-length invariance,
@@ -51,7 +51,7 @@ under `notes/` per the redaction checklist).
 5. The round-6 inline verification scripts (amplitude certification, s₀ five-point scan,
    unscaled real-ζ suite, bracketing runs) are recorded in `ROUND6_closeout` but were not
    saved as standalone files; reconstruct them into `code/` before release.
-6. `blueprint/` + `statements/ledger.yaml` entries; `VERIFICATION_STATUS.md` per the release
+6. `blueprint/` (`statements.md`, `ledger.yaml`) in this folder; `VERIFICATION_STATUS.md` per the release
    checklist in `papers/README.md`.
 7. Human specialist review.
 

@@ -1,5 +1,12 @@
 # Redaction checklist for the research log
 
+> Moved here on 16 October 2026 from the repository-root `notes/` folder,
+> with its index, now [RESEARCH_LOG_INDEX.md](RESEARCH_LOG_INDEX.md). The
+> documents it applies to are the exported copies in [claude/](claude/),
+> imported unchanged on 13 October 2026, so none of the items below has been
+> applied to them. In the items below, read `notes/` as `claude/`; the search
+> aid runs from this folder.
+
 The notes were written as session reports inside a private project. Before
 any of them is committed to a public repository — and certainly before a
 release tag archives them permanently on Zenodo — each file goes through this
@@ -49,7 +56,7 @@ list. Tick the file off in the table at the bottom.
 
 ## What to add
 
-- **Preface** at the top of `notes/README.md` (already drafted there): the
+- **Preface** at the top of the index, now [RESEARCH_LOG_INDEX.md](RESEARCH_LOG_INDEX.md) (already drafted there): the
   notes are round reports written by a language model under the author's
   direction, exploratory, containing closed routes and corrected claims; not
   peer-reviewed; the papers and `verification/` are the reliable layer.
@@ -59,7 +66,7 @@ list. Tick the file off in the table at the bottom.
 ## Search aids
 
 ```bash
-grep -rn -i -E "dear |letter|shortlist|knows him|knows her|do not cite|fatally|the user|claude/|session workspace|agent-run|@" notes/
+grep -rn -i -E "dear |letter|shortlist|knows him|knows her|do not cite|fatally|the user|claude/|session workspace|agent-run|@" claude/
 ```
 
 Expect hits for "the user" in nearly every file; decide the convention in item 4 first.

@@ -1,0 +1,50 @@
+{
+  "schema_version": 1,
+  "date": "2026-10-16",
+  "prepared_for": "Edward Baker",
+  "model": "claude-opus-5-5",
+  "model_note": "Claude Opus 5.5 in Claude Cowork (configured identifier; the serving model can differ)",
+  "reasoning_effort": "max",
+  "llm_assistance": "LLM assistance; internal integrity check",
+  "reason": "The user asked for the repository-root chat-histories registry to be migrated during the 16 October 2026 root cleanup and chose early-chat-logs/chatgpt-codex as the destination",
+  "conversation_id": "01a1354b-7b06-7e00-b8eb-d07cef5e9b0d",
+  "title": "Rename DRAFT_HISTOR.md files",
+  "number": 1,
+  "filename": "0001_2026-10-13T12-45-01Z_rename-draft-histor-md-files.json",
+  "source_history_dir": "chat-histories",
+  "destination_history_dir": "early-chat-logs/chatgpt-codex",
+  "archive_sha256_at_move": "bf1c97db00737375c30eb9451fe981881caa17f6d19e6c991f0525e670e29956",
+  "conversation_content_sha256_at_move": "c52fda7e934023c7b34b0e2970627fc9adafd41726c6373148b64d7f93eaa3d7",
+  "message_count_at_move": 5,
+  "original_creation_time": "2026-10-13T12:45:01.611Z",
+  "first_captured_at_utc": "2026-10-13T12:48:02.220Z",
+  "model_configurations": [
+    {
+      "model": "gpt-6.1-sol",
+      "reasoning_effort": "ultra"
+    }
+  ],
+  "source_next_number": 2,
+  "destination_next_number": 3,
+  "destination_shared_number": "Number 1 is also held by 0001_2026-09-22T12-49-25Z_evaluate-reddit-collaboration-plan.json; validate_index allows duplicate numbers but not duplicate ids or filenames, and the procedure preserves the moved chat's number and filename",
+  "source_index_sha256": {
+    "before": "c936f7237b2c9c622f0e1ed96ca822d097ea62c20a01561b8af1095bd73abe51",
+    "after": "b3de01592f9b917d30a4241c2ead5e9340cd2fd133dbceea2cc46073f6b9d5c6"
+  },
+  "destination_index_sha256": {
+    "before": "33fa3da79ac3e4c95ef49937f0c7ab0bbc80d2153d63a878c7b21747a60dad49",
+    "after": "acf17bed9fd10057fbb71dbaf61aaa50274f63c1f7410972fd416d8cc02fdfd8"
+  },
+  "archive_bytes_unchanged": true,
+  "other_archive_bytes_unchanged": true,
+  "other_archive_sha256": {
+    "0001_2026-09-22T12-49-25Z_evaluate-reddit-collaboration-plan.json": "dd73f46210d6b620bbad59f1e1e1315f7d3e59050b64e74206b914de4e6eefc6",
+    "0002_2026-10-03T04-35-19Z_update-project-readme-overview.json": "a1b0f2f79b163ef83c1d8830e36f9de2de3ae7b9960ffba873aa4da151ce7105"
+  },
+  "unique_registration_verified": true,
+  "verified_at": "2026-10-16T20:50:01.498651+00:00",
+  "rechecked_at": "2026-10-16T21:03:30.032244+00:00",
+  "source_registry_after_move": "Left with an empty index (next_number 2), then removed with the rest of the repository-root chat-histories/ folder on 16 October 2026 at the user's request; its earlier state is in the repository history at commit 0a1156e",
+  "rollback_backup": "Session-local copies outside the repository (both original indexes, the archive bytes and the relocation journal) in the Cowork session's workspace on the linked computer; not retained after the session",
+  "method": "Both registries locked with registry_lock in sorted path order; recover_transaction found nothing pending in either; safe_directory, read_index and read_registered validated both folders; the archive and destination index were installed through _install_transaction and read back byte-identical before the source index was replaced atomically (write_sync, os.replace, fsync_dir) and the old archive removed after a hash recheck. find_registered scans only papers/, so unique registration was checked by searching every index.json in the repository for the conversation id."
+}

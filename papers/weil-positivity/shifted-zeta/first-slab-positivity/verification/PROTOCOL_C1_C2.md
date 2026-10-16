@@ -39,7 +39,7 @@ If you read the claim first, you will find it, because that is what reading
 works like. The whole value of this exercise is that it is the one check in
 the project performed by a mind that has not already been shown the answer.
 
-Keep a single file — `verification/first-slab/C1_human_check_<date>.md` —
+Keep a single file — `verification/C1_human_check_<date>.md` in the first-slab folder —
 with one entry per item: what you looked at, what you found, verdict
 (`confirms` / `contradicts` / `cannot tell`). "Cannot tell" is a real and
 useful verdict; record it rather than resolving it by inference.
@@ -376,4 +376,4 @@ itself is known.*
 - [ ] **C2-A** Search for the off-center kernel identity
 - [ ] **C2-B** Search for the energy identity, including the systems-theory literature
 - [ ] Post the MathOverflow question
-- [ ] Update §13 and `verification/first-slab/` with dated results
+- [ ] Update §13 and this `verification/` folder with dated results

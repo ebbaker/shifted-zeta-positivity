@@ -38,4 +38,4 @@ superseded information.
 ## Instead
 
 At branch opening, read the stop list and the closures of the last two
-weeks (this folder and [`result-summaries/`](../result-summaries/README.md) exist to make that cheap); at branch closure, write the closing note on the Loewner template and do the cross-investigation synthesis explicitly, since sibling results can close a branch even when never cited within it; when a correction is adopted, propagate it to every file that states the error, with a pointer header ([`notes/REDACTION_CHECKLIST.md`](../notes/REDACTION_CHECKLIST.md) item 9).
+weeks (this folder and [`result-summaries/`](../result-summaries/README.md) exist to make that cheap); at branch closure, write the closing note on the Loewner template and do the cross-investigation synthesis explicitly, since sibling results can close a branch even when never cited within it; when a correction is adopted, propagate it to every file that states the error, with a pointer header ([`REDACTION_CHECKLIST.md`](../early-chat-logs/initial-project-files/rh3/REDACTION_CHECKLIST.md) item 9).

@@ -38,3 +38,15 @@ The [new relocation record](REORGANIZATION_20260920.md) maps exactly five
 investigation folders into `investigations/previous/` and records preservation
 and current validation. Apply that prefix map after any earlier mapping above.
 Historical records retain their original paths and hashes.
+
+## Original research brief (11 September 2026)
+
+[supersymmetric_positivity_research_brief.md](supersymmetric_positivity_research_brief.md)
+and its [Word version](supersymmetric_positivity_research_brief.docx) are the
+pedagogical brief written as the program began: why supersymmetric, Dirac or
+Hodge constructions were proposed as a source of positivity, before any of the
+investigations were carried out. They were in the repository-root `notes/`
+folder until 16 October 2026 and are kept here unchanged as historical
+motivation. Current motivation and status are in the
+[program overview](../PROGRAM_OVERVIEW.md) and the investigations' own records;
+the 20 September record's link to the brief's root location predates this move.
