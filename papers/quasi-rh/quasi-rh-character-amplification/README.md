@@ -1,0 +1,156 @@
+# Quasi Riemann hypothesis character amplification
+
+The [upstream reflection, Poisson and sieve audit](reviews/UPSTREAM_REFLECTION_POISSON_SIEVE_AUDIT_20261009.md)
+checks the source reflection proof, its moving-prime kernel uniformity,
+local conductor orientation and external sieve interfaces. It distinguishes
+the reflection cusp denominator from the primitive Poisson conductor and
+finds no substantive defect in the inspected interfaces. Full automorphy,
+reciprocity, sieve proofs and the global family baseline remain imported;
+the candidate boundary is still conditional. See the
+[next-step continuation report](../quasi-rh-exponent-descent/reviews/HIGH_PRIORITY_NEXT_STEPS_20261009.md).
+
+The [highest-priority continuation](../quasi-rh-exponent-descent/reviews/HIGH_PRIORITY_CONTINUATION_20261009.md)
+now includes source-proof audits of
+[reflection and inverse recursion](reviews/REFLECTION_INVERSE_PROOF_AUDIT_20261009.md)
+and the [centered fourth induction](reviews/CENTERED_FOURTH_PROOF_AUDIT_20261009.md).
+No substantive defect was found in their reviewed local algebra, masks,
+exponents or choice of parameters. The upstream reflection, Poisson, sieve
+and global-family analytic inputs still require validation; the candidate
+remains conditional.
+
+The [conditional geometry theorem and dependency ledger](notes/GEOMETRY_CONDITIONAL_THEOREM_AND_DEPENDENCY_LEDGER_20261009.md)
+now consolidate the current candidate, prove the continuation and height
+selection directly, and explicitly pay the slot-count-dependent normalizer
+error. The substantive source reflection and moment proofs remain imported
+assumptions. The [comparative follow-up](../quasi-rh-exponent-descent/reviews/COMPARATIVE_PROGRAM_FOLLOWUP_20261009.md)
+reassesses all programs after additional work.
+
+Prepared for Edward Baker, 8 October 2026, with substantial LLM assistance.
+Model: GPT-6 (Codex), inherited configuration; exact serving variant and
+configured reasoning effort are not exposed and are not inferred.
+
+This investigation studies whether the character-family and cubic-theta
+methods in OpenAI's October 2026 quasi-RH release can improve the resulting
+prime-variance baseline or help bound our complete signed covariance.
+
+The [working manuscript](manuscript.tex), *Conductor localization of a mixed
+inverse–plain moment in a sextic character family*, is drafted for Edward
+Baker. It presents the conditional reduction and its proofs, keeps the
+remaining signed estimate explicit, and includes an LLM acknowledgement.
+The [manuscript review](reviews/MANUSCRIPT_REVIEW_20261008.md) records the
+scoped checks and successful native compilation. The concise
+[manuscript history](DRAFT_HISTORY.md) replaces draft snapshot folders.
+
+The current **conditional extension** supports the candidate boundary
+`7/8 - 1/24000 = 20999/24000`, with local variance consequence
+`O(X^(11/4 - 1/12000))`. This improves the first candidate's displacement
+by a factor of 25. Increasing the total prime-slot length while preserving
+the scale identity keeps the principal signal exponent unchanged. An
+exact polynomial certificate controls the complete continuous parameter
+range for the exceptional-row count.
+
+The applicability of the low estimate, moment estimates, and contour
+arguments has received separate source-scoped audits, including a
+separate same-model check of the exact certificate. The external
+reflection and moment proofs and the source's seven-eighths theorem
+remain assumptions. No Lean proof was replayed. These records do not
+establish an independently verified new zero-free theorem or priority.
+
+The next-stage reduction now isolates a nearly saturated residual class.
+Existing moments improve profiles outside that class after the detector
+cutoff is retuned. A NEW restricted mixed-moment saving of `1/5000` in
+its exponent would suffice for the next target `7/8 - 1/20000`; that
+estimate remains unproved, so it is not adopted as the current candidate.
+The common-signal and off-balance scouts also make their missing inputs
+and existing costs explicit.
+
+The first mixed-moment calculation now removes low primitive-row conductors,
+the entire plain-variable diagonal, and ratio-character conductor blocks
+through `U^(4/5)`. Their errors lie below the requested mixed exponent by
+explicit margins. The unresolved input is a precisely specified signed
+sum over distinct plain ideals on the remaining large-conductor rows;
+the existing transformed inverse proof does not cover its coefficient class.
+
+The continuation has now tested the complete-family enlargement. Its
+added principal rows require a profile-dependent masked inverse estimate
+that the available bounds do not supply near prime capacity. An elementary
+mean-zero plain-profile subcase controls that principal layer. Tracking the
+live plain divisor through the formal transform recovers a coefficient
+class after Cauchy, but leaves inadmissible widths and a large endpoint
+cost. The main route therefore retains the exceptional-row selector;
+the required mixed saving is still open.
+
+The next selector-preserving calculation strengthens that reduction:
+small conductors of the plain-variable ratio are controlled by the
+positive marked inverse weight, and the total-ratio cutoff can be
+increased adaptively. Under the source's physical-slot hypotheses,
+positive interpolation proves the requested mixed bound for
+`21/50 <= m <= 1/2`; a count-sensitive argument also controls
+`0.700 <= r <= 0.701`. Neither subcase covers the remaining application
+region. The new input needed for the proposed boundary can be localized,
+before its explicit loss buffers, to a triangle of side at most `1/900`
+near the simultaneous witness crossing. Its arithmetic saving is open.
+
+| Record | Contribution |
+| --- | --- |
+| [Reflection/inverse proof audit](reviews/REFLECTION_INVERSE_PROOF_AUDIT_20261009.md) | Reads the source proofs and checks actual annuli, frozen bases, masks, source-witness punctures, principal/tail payments, child normalization and length-one uniformity; upstream analytic inputs remain imported. |
+| [Centered-fourth proof audit](reviews/CENTERED_FOURTH_PROOF_AUDIT_20261009.md) | Checks full centered cross terms, exceptional/principal rows, common product powers, affine ledgers, strict induction and slot-count-independent mesh; 49,273 exact finite assertions. |
+| [Continuation plan](notes/CONTINUATION_20261008.md) | Orders the selector feasibility test, live-divisor analysis, uniform estimate, and validation; recommends a Codex-led workflow. |
+| [Selector feasibility](notes/SELECTOR_FEASIBILITY_20261008.md) | Exact principal-row norm and actual-profile budget; proves a mean-zero principal-layer subcase and identifies the missing enlargement estimate. |
+| [Live plain divisor](notes/LIVE_DIVISOR_TRANSFORM_20261008.md) | Exact transformed coefficient and label reindexing; records the unchanged width obstruction and endpoint Cauchy cost. |
+| [Selector review](reviews/SELECTOR_FEASIBILITY_REVIEW_20261008.md) | Same-model checks of masks, unit counts, profile-dependent budgets, partial theorem, and manuscript consolidation. |
+| [Continuation input review](reviews/CONTINUATION_INPUT_REVIEW_20261008.md) | Rechecks the ideal-pair proof and relevant source hypotheses, principal inverse estimate, and live-divisor identities. |
+| [Plain-ratio conductor reduction](notes/SELECTOR_PRESERVING_PLAIN_CONDUCTOR_20261008.md) | Preserves the selector while removing small plain-ratio conductors and increasing the removable total-conductor range; leaves an exact sum with both conductors large. |
+| [Selector-preserving mixed subcases](notes/SELECTOR_PRESERVING_SUBCASES_20261008.md) | Proves the upper plain-length band under source physical-slot inputs and records a sparse-cofactor partial estimate with its summation cost. |
+| [Energy and application localization](notes/SELECTOR_ENERGY_LOCALIZATION_20261008.md) | Proves a count-sensitive mixed strip and reduces the new application input to a narrow buffered triangle, with a tapered saving budget. |
+| [Selector-preserving review](reviews/SELECTOR_PRESERVING_REVIEW_20261008.md) | Same-model checks of the new two-conductor reduction, physical-slot hypotheses, mixed subcases, and continuous application localization. |
+| [Current geometry extension](notes/GEOMETRY_OPTIMIZATION_20261008.md) | Derives the candidate `7/8 - 1/24000`, all range margins, and the exact endpoint certificate. |
+| [Mixed-moment reduction](notes/MIXED_MOMENT_REDUCTION_20261008.md) | Combines three controlled contributions into one explicit remaining signed sum. |
+| [Column kernel and small conductors](notes/MIXED_KERNEL_CONDUCTOR_REDUCTION_20261008.md) | Derives the exact masks and proves the ideal-pair bound removing conductors through `U^(4/5)`. |
+| [Primitive row conductors](notes/SATURATED_MIXED_ARITHMETIC_20261008.md) | Uses the actual conductor in reflection to obtain the required mixed saving on smaller-conductor rows. |
+| [Mixed transfer audit](reviews/MARKED_MIXED_TRANSFER_AUDIT_20261008.md) | Identifies the enlarged dual range and forbidden transformed divisor coefficient in a direct source-proof transfer. |
+| [Mixed reduction review](reviews/MIXED_REDUCTION_REVIEW_20261008.md) | Checks the new pair count, masks, diagonal, conductor bounds, and noncircular use of the old row count. |
+| [Localized next target](notes/LOCALIZED_JOINT_WITNESS_TARGET_20261008.md) | Synthesizes the new reduction and certifies the conditional payoff of an explicitly unproved residual estimate. |
+| [Full amplitude profiles](notes/AMPLITUDE_PROFILE_REDUCTION_20261008.md) | Derives actual whole-slot selection, cutoff retuning, and the remaining nearly saturated class. |
+| [Joint inverse/plain witnesses](notes/JOINT_WITNESS_REDUCTION_20261008.md) | Identifies the smaller mixed moment, exact truncated convolution, and the two rebalances needed for its payoff. |
+| [Two common-signal probes](notes/COMMON_SIGNAL_PROBE_SCOUT_20261008.md) | Constructs admissible probes and their signed mixed kernel; separates one-mode cancellation from a uniform power gain. |
+| [Off-balance geometry](notes/OFF_BALANCE_GEOMETRY_SCOUT_20261008.md) | Derives the dual-length cost and shows positive imbalance worsens the current low envelope. |
+| [Localized reduction review](reviews/LOCALIZED_TARGET_PROFILE_REVIEW_20261008.md) | Independently checks the exact endpoint certificate, profile compatibility, and mixed-moment payoff. |
+| [Research directions from the repo](notes/RESEARCH_DIRECTIONS_20261008.md) | Ranks joint witness estimates, full amplitude profiles, common-signal probe combinations, and new geometry; separates usable identities from missing bounds. |
+| [Low estimate audit](reviews/LOW_STRUCTURAL_AUDIT_20261008.md) | Checks the actual-row, coefficient, and Gram requirements; derives the admissible geometry and required positive-part correction. |
+| [Moment and count audit](reviews/MOMENT_STRUCTURAL_AUDIT_20261008.md) | Checks fixed `kappa=3/4`, witness classes, capacities, prime supply, quantifiers, and independently verifies the new certificate. |
+| [Contour and normalization audit](reviews/CONTOUR_TRANSFER_AUDIT_20261008.md) | Checks the enlarged Euler domain, full correction, principal residues, outer rows, and order of choices. |
+| [Exact arithmetic records](numerics/README.md) | Reproducible rational identities, continuous positivity certificates, and retained margins. |
+| [Initial comparison](notes/OPENAI_QUASI_RH_COMPARISON_20261008.md) | Compares the two research programs and translates announced boundaries into variance exponents. |
+| [First parameter extension](notes/PARAMETER_EXTENSION_20261008.md) | Retains the initial `7/8 - 1/600000` derivation and Euler-domain repair. |
+| [First extension review](reviews/PARAMETER_EXTENSION_REVIEW_20261008.md) | Records the initial scoped checks and domain repair. |
+| [Character-family transfer targets](notes/CHARACTER_FAMILY_TRANSFER_20261008.md) | Identifies unproved short-family targets and the coefficient and field obstacles to a direct covariance transfer. |
+
+The current geometry has a specific limit: with `b=1/8` and the same
+row-count bound, the high estimate loses its strict saving near boundary
+`0.8749572006154`. This is a limit of that parameter family and estimate,
+not a mathematical barrier to stronger results. Repeating the present
+adjustment does not by itself approach RH.
+
+The next arithmetic task is to bound `T_joint` in equation (12) of the
+[plain-ratio reduction](notes/SELECTOR_PRESERVING_PLAIN_CONDUCTOR_20261008.md),
+retaining the row selector, actual Möbius divisor coefficients, and both
+large-conductor restrictions. For the proposed count application it
+suffices to establish the required saving on the buffered triangle in
+Section 4 of the [energy note](notes/SELECTOR_ENERGY_LOCALIZATION_20261008.md),
+uniformly in the original profiles and heights. The existing canonical
+moment still fails its required width hypotheses after the divisor
+coefficient is handled by Cauchy. The separate
+short-family program still seeks a sufficiently uniform sextic Mobius
+mean square with row range `H=D^h`, `h<9/10`.
+Independent specialist or formal validation of the imported machinery
+and the extension remains necessary before treating the candidate as
+an established theorem.
+
+Research belongs in `notes/`, checks in `reviews/`, and reproducible
+calculations in `numerics/`. Third-party PDFs and large derived files
+remain outside the repository under [LARGE_FILES.md](../../../LARGE_FILES.md).
+The [prime-variance investigation](../prime-variance-exponents/README.md)
+supplies the existing response, scalar, and equivalence results.
+The current manuscript is a single editable source. No manuscript snapshot
+or commit milestone was created; later milestones belong in the history index.

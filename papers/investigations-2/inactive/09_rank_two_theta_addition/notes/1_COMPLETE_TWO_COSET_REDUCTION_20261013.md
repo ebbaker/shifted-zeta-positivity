@@ -174,7 +174,7 @@ Then
        =\widehat J_{j,t}(2x).}                                \tag{11}
 \]
 The second identity has exactly the normalization of the
-[complete-kernel note](../../../../quasi-rh-exponent-descent/newman_collisions/17_enlarged_state_transport/notes/7_COMPLETE_LAGUERRE_KERNELS_AND_TRIPLE_ZERO_LIMIT_20261010.md).
+[complete-kernel note](../../../../quasi-rh/quasi-rh-exponent-descent/newman_collisions/17_enlarged_state_transport/notes/7_COMPLETE_LAGUERRE_KERNELS_AND_TRIPLE_ZERO_LIMIT_20261010.md).
 The Jacobian `du dv=2 ds dr` is present; the lattice bijection (4) has
 no continuous Jacobian. In particular the signed factor `r^2-s^2`
 in `J_1` has not been replaced by its absolute value.

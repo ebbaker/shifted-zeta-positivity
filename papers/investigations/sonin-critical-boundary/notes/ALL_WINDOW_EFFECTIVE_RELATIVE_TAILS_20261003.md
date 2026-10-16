@@ -57,7 +57,7 @@ The actual metric transport comparison
 \]
 
 is **already established**, as equation (27) of the
-[canonical comparison audit](../../../susy-positivity/investigations/wilson-loewner/arithmetic-storage/notes/SONIN_CANONICAL_COMPARISON_AUDIT_20260929.md).
+[canonical comparison audit](../../../weil-positivity/susy-positivity/investigations/wilson-loewner/arithmetic-storage/notes/SONIN_CANONICAL_COMPARISON_AUDIT_20260929.md).
 Here the empty prime set denotes the archimedean Sonin operator, not an
 infinite-place limit. For clarity, its proof uses
 `J_S=D Pi_0 M_S^(-1/2)`, `M_S=Pi_0 D*D Pi_0` on the archimedean Sonin
@@ -83,7 +83,7 @@ subtracting `k_{S,L}`. The comparison does not supply that archimedean
 gap numerically.
 
 The repository already has scalar infinite Legendre-tail and Schur
-reductions in the [Weil-depth manuscript, section 4](../../../shifted-zeta/weil-depth/manuscript/finite_horizon_weil.tex).
+reductions in the [Weil-depth manuscript, section 4](../../../weil-positivity/shifted-zeta/weil-depth/manuscript/finite_horizon_weil.tex).
 Neither scalar high-energy reduction nor the warning about discarded
 arithmetic cancellation is a new proof mechanism. The added results below
 apply them to the **actual positive Sonin source operator**, quantify

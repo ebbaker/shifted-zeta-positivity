@@ -171,10 +171,10 @@ def main():
     inputs = [
         'papers/investigations-2/brainstorm/reviews/ACTIVE_DIRECTIONS_REVIEW_CODEX_20261013.md',
         'papers/investigations-2/active/01_complete_cutoff_reflection/notes/INITIAL_RESEARCH_PROGRAM_20261013.md',
-        'papers/quasi-rh-exponent-descent/newman_collisions/notes/22_SIGNED_PAIR_TRANSFORMS_AND_STATIONARY_REFLECTION_20261010.md',
-        'papers/quasi-rh-exponent-descent/newman_collisions/notes/24_CURVATURE_CONES_SHARP_NULL_PAYMENTS_AND_LOCALIZED_POISSON_20261010.md',
-        'papers/quasi-rh-exponent-descent/newman_collisions/09_prime_phase_torus/notes/8_OSCILLATION_PRESERVING_PRODUCT_POISSON_TRANSFORM_20261010.md',
-        'papers/quasi-rh-exponent-descent/newman_collisions/17_enlarged_state_transport/notes/22_THETA_CUTOFF_MATCHING_AND_UNIFORM_PHYSICAL_JETS_20261011.md']
+        'papers/quasi-rh/quasi-rh-exponent-descent/newman_collisions/notes/22_SIGNED_PAIR_TRANSFORMS_AND_STATIONARY_REFLECTION_20261010.md',
+        'papers/quasi-rh/quasi-rh-exponent-descent/newman_collisions/notes/24_CURVATURE_CONES_SHARP_NULL_PAYMENTS_AND_LOCALIZED_POISSON_20261010.md',
+        'papers/quasi-rh/quasi-rh-exponent-descent/newman_collisions/09_prime_phase_torus/notes/8_OSCILLATION_PRESERVING_PRODUCT_POISSON_TRANSFORM_20261010.md',
+        'papers/quasi-rh/quasi-rh-exponent-descent/newman_collisions/17_enlarged_state_transport/notes/22_THETA_CUTOFF_MATCHING_AND_UNIFORM_PHYSICAL_JETS_20261011.md']
     cases = []
     for n in [8, 12, 16, 32]:
         data = physical(n, 0.05)

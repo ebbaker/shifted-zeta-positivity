@@ -52,8 +52,8 @@ accuracy. A fast unsuccessful bound is not a cost improvement.
 
 ## 2. Complete physical approximation and error payment
 
-Use the existing [holomorphic correction theorem, Note 20](../../../../quasi-rh-exponent-descent/newman_collisions/17_enlarged_state_transport/notes/20_EXPLICIT_THETA_CORRECTION_AND_CORRELATED_PHYSICAL_JETS_20261011.md)
-and [cutoff ledger, Note 22](../../../../quasi-rh-exponent-descent/newman_collisions/17_enlarged_state_transport/notes/22_THETA_CUTOFF_MATCHING_AND_UNIFORM_PHYSICAL_JETS_20261011.md).
+Use the existing [holomorphic correction theorem, Note 20](../../../../quasi-rh/quasi-rh-exponent-descent/newman_collisions/17_enlarged_state_transport/notes/20_EXPLICIT_THETA_CORRECTION_AND_CORRELATED_PHYSICAL_JETS_20261011.md)
+and [cutoff ledger, Note 22](../../../../quasi-rh/quasi-rh-exponent-descent/newman_collisions/17_enlarged_state_transport/notes/22_THETA_CUTOFF_MATCHING_AND_UNIFORM_PHYSICAL_JETS_20261011.md).
 Their analytic input is the [Polymath approximation, Corollary 6.4 and Proposition 6.6](https://arxiv.org/html/1904.12438v2#S6.SS3).
 The paper also supplies an exact contour remainder at general nonreal
 spectral arguments, but this pilot does not newly enclose that contour

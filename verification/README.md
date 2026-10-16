@@ -24,13 +24,13 @@ its review history until it is released and gets a `blueprint/` entry and a
 folder here.
 
 The authoritative current status of the first-slab preprint is
-`papers/shifted-zeta/first-slab-positivity/VERIFICATION_STATUS.md`; `CHECKLIST.md` here is
+`papers/weil-positivity/shifted-zeta/first-slab-positivity/VERIFICATION_STATUS.md`; `CHECKLIST.md` here is
 the how-to that goes with it.
 
-For the finite-horizon continuation, use the [Weil-depth status](../papers/shifted-zeta/weil-depth/STATUS.md)
-and [storage-depth status](../papers/shifted-zeta/storage-depth/STATUS.md),
-[claim records](../papers/shifted-zeta/storage-depth/CLAIMS.json) and
-[closeout record](../papers/shifted-zeta/storage-depth/CLOSEOUT.md). Their review packets
+For the finite-horizon continuation, use the [Weil-depth status](../papers/weil-positivity/shifted-zeta/weil-depth/STATUS.md)
+and [storage-depth status](../papers/weil-positivity/shifted-zeta/storage-depth/STATUS.md),
+[claim records](../papers/weil-positivity/shifted-zeta/storage-depth/CLAIMS.json) and
+[closeout record](../papers/weil-positivity/shifted-zeta/storage-depth/CLOSEOUT.md). Their review packets
 remain with the papers under `archive/reviews/`.
 
 ## Method used so far

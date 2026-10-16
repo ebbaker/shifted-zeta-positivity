@@ -39,4 +39,4 @@ enlargement was suspended.
 structural question it decides and what answer would stop it"
 (LESSONS_LEARNED §5); write the four things the meta-analysis §10 asks for
 before starting; attach a kill criterion with a number, as the
-[11 October brainstorm](../papers/quasi-rh-exponent-descent/brainstorm/NEW_PATHS_FORWARD_BRAINSTORM_CLAUDE_20261011.md) does for every proposal and [Review 19](../papers/investigations-2/active/22_theta_manifold_geometry/reviews/19_PATHS_FORWARD_AFTER_THE_SECOND_ROUND_CLAUDE_20261015.md) §1 does for the frontier lane. When a direct evaluation is cheaper than the method under test, the method's result is the cost comparison, and it is recorded as such.
+[11 October brainstorm](../papers/quasi-rh/quasi-rh-exponent-descent/brainstorm/NEW_PATHS_FORWARD_BRAINSTORM_CLAUDE_20261011.md) does for every proposal and [Review 19](../papers/investigations-2/active/22_theta_manifold_geometry/reviews/19_PATHS_FORWARD_AFTER_THE_SECOND_ROUND_CLAUDE_20261015.md) §1 does for the frontier lane. When a direct evaluation is cheaper than the method under test, the method's result is the cost comparison, and it is recorded as such.

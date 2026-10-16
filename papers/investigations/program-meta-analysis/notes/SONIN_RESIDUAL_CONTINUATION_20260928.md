@@ -26,8 +26,8 @@ Keep CCM closed during this continuation. Its obstruction is a guide to choosing
 The relevant materials are:
 
 1. The two meta-analysis references above: the common RH target, the scoped CCM failure, and the proposed Sonin sufficient conditions.
-2. [Arithmetic bridge sweep, Sections 2–4 and 13](../../../susy-positivity/investigations/wilson-loewner/notes/ARITHMETIC_BRIDGE_SWEEP_AFTER_YM_20260924.md): the source-class refinement to pole-neutral tests, with a comparison rather than a presumed norm identity.
-3. [Arithmetic-storage program and goals, Sections 5–6](../../../susy-positivity/investigations/wilson-loewner/arithmetic-storage/notes/ARITHMETIC_STORAGE_PROGRAM_AND_GOALS_20260924.md), the [post-closure continuation](../../../susy-positivity/investigations/wilson-loewner/arithmetic-storage/notes/RESEARCH_CONTINUATION_AFTER_FIRST_PRIME_CLOSURE_20260924.md), and the [first-prime closure and rigidity note, especially Table 2](../../../susy-positivity/investigations/wilson-loewner/arithmetic-storage/notes/FIRST_PRIME_JOIN_EQUIVALENCE_AND_PRIME_WEIGHT_RIGIDITY_20260924.md). The finite join is already closed internally; do not restart its certificate work.
+2. [Arithmetic bridge sweep, Sections 2–4 and 13](../../../weil-positivity/susy-positivity/investigations/wilson-loewner/notes/ARITHMETIC_BRIDGE_SWEEP_AFTER_YM_20260924.md): the source-class refinement to pole-neutral tests, with a comparison rather than a presumed norm identity.
+3. [Arithmetic-storage program and goals, Sections 5–6](../../../weil-positivity/susy-positivity/investigations/wilson-loewner/arithmetic-storage/notes/ARITHMETIC_STORAGE_PROGRAM_AND_GOALS_20260924.md), the [post-closure continuation](../../../weil-positivity/susy-positivity/investigations/wilson-loewner/arithmetic-storage/notes/RESEARCH_CONTINUATION_AFTER_FIRST_PRIME_CLOSURE_20260924.md), and the [first-prime closure and rigidity note, especially Table 2](../../../weil-positivity/susy-positivity/investigations/wilson-loewner/arithmetic-storage/notes/FIRST_PRIME_JOIN_EQUIVALENCE_AND_PRIME_WEIGHT_RIGIDITY_20260924.md). The finite join is already closed internally; do not restart its certificate work.
 4. The recovered 14 September **Canonical semilocal pairing and the localized Weil form**, described below. Read Sections 1–5 for the comparison and Sections 6–7 for the cutoff obstruction and validation limits.
 5. The primary papers below, with their normalization, support and domain hypotheses retained.
 
@@ -291,7 +291,7 @@ At the end of one bounded session, choose a concrete outcome: an audited identit
 
 ## 9. Next-session outputs and opening instruction
 
-Save incremental research in the existing [arithmetic-storage notes directory](../../../susy-positivity/investigations/wilson-loewner/arithmetic-storage/notes/), computations in its `numerics/`, and critical assessments in its `reviews/`. A folder migration, new manuscript, or new draft snapshot is unnecessary. Follow the root large-files policy; retain only small source/parameter/error records in Git. Include author/LLM provenance and the actual available model/effort metadata. Update the relevant overview when there is a result; no commit or push is requested by this handoff.
+Save incremental research in the existing [arithmetic-storage notes directory](../../../weil-positivity/susy-positivity/investigations/wilson-loewner/arithmetic-storage/notes/), computations in its `numerics/`, and critical assessments in its `reviews/`. A folder migration, new manuscript, or new draft snapshot is unnecessary. Follow the root large-files policy; retain only small source/parameter/error records in Git. Include author/LLM provenance and the actual available model/effort metadata. Update the relevant overview when there is a result; no commit or push is requested by this handoff.
 
 The first session should leave:
 

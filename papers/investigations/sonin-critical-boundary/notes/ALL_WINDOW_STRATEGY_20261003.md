@@ -118,7 +118,7 @@ Q[F]\ge B_j[F]-\epsilon_j[F],\qquad B_j[F]\ge0,
 \quad\epsilon_j[F]\longrightarrow0.
 \]
 
-The rates may depend on F. This would suffice without one uniform lower bound or comparison fraction over all sources. The existing [moving source-tail criteria](../../../susy-positivity/investigations/wilson-loewner/arithmetic-storage/notes/SONIN_DIRECT_PLACE_TAIL_CRITERIA_20260929.md) identify source-smoothed tails and signed place increments relevant to convergence.
+The rates may depend on F. This would suffice without one uniform lower bound or comparison fraction over all sources. The existing [moving source-tail criteria](../../../weil-positivity/susy-positivity/investigations/wilson-loewner/arithmetic-storage/notes/SONIN_DIRECT_PLACE_TAIL_CRITERIA_20260929.md) identify source-smoothed tails and signed place increments relevant to convergence.
 
 The unresolved tasks are quantitative tails along the growing family and identification of the limit with the complete arithmetic form. Fixed-place convergence does not imply convergence along a growing place set. The global zeta-phase endpoint route additionally retains its off-line-zero and exact-projection mass obligations. This is a separate conceptual route, not a consequence of the new local certificate. Keep it as a secondary option unless a concrete tail estimate emerges.
 

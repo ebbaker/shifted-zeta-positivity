@@ -174,7 +174,7 @@ The two values of `1/5000` are different objects:
   certificate. The rational extension spends part of it and keeps
   `E ≤ −19/320000`.
 - The lane's `1/5000` is `η_mix` in
-  [its equation (5)](../../../quasi-rh-character-amplification/notes/LOCALIZED_JOINT_WITNESS_TARGET_20261008.md).
+  [its equation (5)](../../../quasi-rh/quasi-rh-character-amplification/notes/LOCALIZED_JOINT_WITNESS_TARGET_20261008.md).
   It is a new restricted correlation saving, and its payoff `F·η_mix` must
   exceed the count-level shortfall of `1/10000`. The lane's geometry also
   uses the increment `ℓ = 1/6 + 1/5000`. Nothing identifies either quantity

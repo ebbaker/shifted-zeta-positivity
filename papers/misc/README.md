@@ -13,5 +13,5 @@ reproduction scripts, and cached zero data remain together in `rh-detector/`.
 It previously lived at `papers/rh-detector/`; older records may use that path.
 
 [All papers and projects](../README.md) ·
-[Shifted-zeta program](../shifted-zeta/README.md) ·
-[SUSY-positivity project](../susy-positivity/README.md)
+[Shifted-zeta program](../weil-positivity/shifted-zeta/README.md) ·
+[SUSY-positivity project](../weil-positivity/susy-positivity/README.md)

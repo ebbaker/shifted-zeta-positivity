@@ -35,7 +35,7 @@ established.
 
 ## 1. The physical preparation and one exact reciprocal center
 
-Use the actual finite-source data in [Heat Note 22](../../../../quasi-rh-exponent-descent/newman_collisions/notes/22_SIGNED_PAIR_TRANSFORMS_AND_STATIONARY_REFLECTION_20261010.md),
+Use the actual finite-source data in [Heat Note 22](../../../../quasi-rh/quasi-rh-exponent-descent/newman_collisions/notes/22_SIGNED_PAIR_TRANSFORMS_AND_STATIONARY_REFLECTION_20261010.md),
 not a freely adjusted carrier. At fixed `t`, put
 \[
 \begin{gathered}
@@ -188,7 +188,7 @@ These follow by pairing positive and negative tails; equivalently use the
 [cotangent partial fractions, DLMF 4.22.3](https://dlmf.nist.gov/4.22.E3).
 The finite Poisson identity uses the endpoint-average Fourier convergence
 in [DLMF 1.8(ii)](https://dlmf.nist.gov/1.8#ii), as proved directly by
-periodization in [project 09 Note 8](../../../../quasi-rh-exponent-descent/newman_collisions/09_prime_phase_torus/notes/8_OSCILLATION_PRESERVING_PRODUCT_POISSON_TRANSFORM_20261010.md).
+periodization in [project 09 Note 8](../../../../quasi-rh/quasi-rh-exponent-descent/newman_collisions/09_prime_phase_torus/notes/8_OSCILLATION_PRESERVING_PRODUCT_POISSON_TRANSFORM_20261010.md).
 
 Define the **entire excluded-mode endpoint contribution**
 \[
@@ -213,7 +213,7 @@ symmetrically summed; its paired series is absolutely convergent. Thus no
 unrecorded Fourier tail remains in (15).
 
 Since `M>=2P/a_0` on both intervals, the proof of
-[Heat Note 24, (16)](../../../../quasi-rh-exponent-descent/newman_collisions/notes/24_CURVATURE_CONES_SHARP_NULL_PAYMENTS_AND_LOCALIZED_POISSON_20261010.md)
+[Heat Note 24, (16)](../../../../quasi-rh/quasi-rh-exponent-descent/newman_collisions/notes/24_CURVATURE_CONES_SHARP_NULL_PAYMENTS_AND_LOCALIZED_POISSON_20261010.md)
 applies equally to integer endpoints and gives the explicit analytic bound
 \[
 |R|\le\mathcal B[a;a_0,b_0]
@@ -376,7 +376,7 @@ replace the inherited source-to-`H` theorem. To make this distinction
 explicit, write `F_N=2 Re sum_(n<=N) q(n)` and `G_N=A_t(x) F_N` with the
 same positive real normalizer as in the source approximation. At a center
 `X`, put `b=A_t'(X)/A_t(X)` and `c_N=C_N(t,X)/A_t(X)`. The paid
-[holomorphic cutoff interface, Note 22](../../../../quasi-rh-exponent-descent/newman_collisions/17_enlarged_state_transport/notes/22_THETA_CUTOFF_MATCHING_AND_UNIFORM_PHYSICAL_JETS_20261011.md)
+[holomorphic cutoff interface, Note 22](../../../../quasi-rh/quasi-rh-exponent-descent/newman_collisions/17_enlarged_state_transport/notes/22_THETA_CUTOFF_MATCHING_AND_UNIFORM_PHYSICAL_JETS_20261011.md)
 says for a frozen cutoff and its verified disk
 \[
 \frac{H_t(X)}{A_t(X)}=F_N-c_N+e_0,\qquad

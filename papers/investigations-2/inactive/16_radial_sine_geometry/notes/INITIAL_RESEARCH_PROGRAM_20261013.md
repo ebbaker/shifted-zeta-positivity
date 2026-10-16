@@ -6,7 +6,7 @@ Status: **initialized, awaiting Claude review**. No new dimension classification
 
 ## Source contract and established seed
 
-This program develops [search card 16](../../../brainstorm/LIFTED_THETA_SYMMETRY_SEARCH_CODEX_20261013.md#16-radial-geometry-and-reflected-sine-moments). Use the actual complete density `m_t(u)=e^{tu²}Φ_e(u)`. The [three-dimensional radial scout](../../../../quasi-rh-exponent-descent/newman_collisions/12_radial_bessel/notes/1_POSITIVE_THREE_DIMENSIONAL_THETA_LIFT_AND_NONLOCAL_GENERATOR_20261010.md) defines
+This program develops [search card 16](../../../brainstorm/LIFTED_THETA_SYMMETRY_SEARCH_CODEX_20261013.md#16-radial-geometry-and-reflected-sine-moments). Use the actual complete density `m_t(u)=e^{tu²}Φ_e(u)`. The [three-dimensional radial scout](../../../../quasi-rh/quasi-rh-exponent-descent/newman_collisions/12_radial_bessel/notes/1_POSITIVE_THREE_DIMENSIONAL_THETA_LIFT_AND_NONLOCAL_GENERATOR_20261010.md) defines
 
 \[
 R_{3,t}(r)=-m_t'(r)/(2\pi r),\qquad
@@ -32,7 +32,7 @@ The genuine theta trajectory has the recorded positivity property; this generato
 
 Seek a theta-specific relation among reflected radial or sine-moment channels that retains the nonlocal generator and supplies a useful candidate-conditioned signed estimate. Geometry may reveal cancellation without making general radial positivity sufficient.
 
-For `x>0`, define `S_t(x)=∫_0^∞ rR_{3,t}(r)sin(xr)dr=xH_t(x)/(2π)`. Thus `(H,H_x)=0` exactly when `(S,S_x)=0`. The [sine-jet continuation](../../../../quasi-rh-exponent-descent/newman_collisions/12_radial_bessel/notes/2_SINE_COLLISION_JETS_AND_HIGH_DIMENSION_THETA_OBSTRUCTIONS_20261010.md) converts the ordinary all-real threshold test into
+For `x>0`, define `S_t(x)=∫_0^∞ rR_{3,t}(r)sin(xr)dr=xH_t(x)/(2π)`. Thus `(H,H_x)=0` exactly when `(S,S_x)=0`. The [sine-jet continuation](../../../../quasi-rh/quasi-rh-exponent-descent/newman_collisions/12_radial_bessel/notes/2_SINE_COLLISION_JETS_AND_HIGH_DIMENSION_THETA_OBSTRUCTIONS_20261010.md) converts the ordinary all-real threshold test into
 
 \[
 2S_3^2-3S_2S_4-27S_2^2/x^2.

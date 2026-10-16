@@ -209,3 +209,21 @@ Later Claude conversations about this work are recorded here with
      accept all changes coming from the main branch”
    - *Note.* Repository maintenance: merging the claude-investigation branch
      with main. It is tied to no paper.
+
+19. **Papers folder reorganization** — [0019_2026-10-16T16-44-54Z_papers-folder-reorganization.json](0019_2026-10-16T16-44-54Z_papers-folder-reorganization.json)
+   - *Work.* Repository maintenance, tied to no paper: audited what moving
+     the five project folders at the `papers/` root into subfolders would
+     break and proposed a two-group layout (saved in the RH4 project as
+     `claude/papers-reorganization-proposal-2026-10-16.md`); after approval,
+     moved them into `papers/weil-positivity/` and `papers/quasi-rh/`, staged
+     the move as pure renames, repaired links, paths, scripts and manifests,
+     and rewrote the papers index. See the
+     [relocation record](../../papers/REORGANIZATION_20261016.md).
+   - *Session.* A Claude Cowork cloud session in project RH4 with Claude Opus
+     5.5 (`claude-opus-5-5`, reasoning effort max per the transcript), started
+     16 October 2026 at 12:44 America/New_York.
+   - *Capture.* Captured by the session itself with
+     `record_Claude_cowork_chat.py capture`, first at 12:59 the same day (1
+     messages over 1 turns), and refreshed at the end of every later turn,
+     before that turn's reply; [index.json](index.json) gives the current
+     count.

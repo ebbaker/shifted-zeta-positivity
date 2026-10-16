@@ -6,7 +6,7 @@ Status: **initialized, awaiting Claude review**. No new research calculations or
 
 ## Source contract and established seed
 
-This program develops [search card 1](../../../brainstorm/LIFTED_THETA_SYMMETRY_SEARCH_CODEX_20261013.md#1-complete-reflection-across-the-cutoff-boundary), retaining the genuine theta preparation, physical observation `(H,H_x)`, and backward-heat equation. Its starting point is [Heat Note 25, especially sections 2, 3 and 7](../../../../quasi-rh-exponent-descent/newman_collisions/notes/25_ENLARGED_STATE_TRANSPORT_CHORD_DYNAMICS_AND_THETA_GLUING_20261010.md). The earlier identities and conditional certificate lemma are internally reviewed seeds, not a uniform source-visibility theorem.
+This program develops [search card 1](../../../brainstorm/LIFTED_THETA_SYMMETRY_SEARCH_CODEX_20261013.md#1-complete-reflection-across-the-cutoff-boundary), retaining the genuine theta preparation, physical observation `(H,H_x)`, and backward-heat equation. Its starting point is [Heat Note 25, especially sections 2, 3 and 7](../../../../quasi-rh/quasi-rh-exponent-descent/newman_collisions/notes/25_ENLARGED_STATE_TRANSPORT_CHORD_DYNAMICS_AND_THETA_GLUING_20261010.md). The earlier identities and conditional certificate lemma are internally reviewed seeds, not a uniform source-visibility theorem.
 
 On `L²(R+,dv)`, the linear involution
 
@@ -26,7 +26,7 @@ Leading reflection alone preserves the existing threshold quadratic. The prospec
 
 ## First bounded task
 
-Choose one compact log block in a fixed-cutoff physical cell. Write its literal reflected exterior block and compute both endpoint contributions before estimating either. Then assemble one adjacent-cutoff crossing using the [paid holomorphic cutoff interface](../../../../quasi-rh-exponent-descent/newman_collisions/17_enlarged_state_transport/notes/22_THETA_CUTOFF_MATCHING_AND_UNIFORM_PHYSICAL_JETS_20261011.md).
+Choose one compact log block in a fixed-cutoff physical cell. Write its literal reflected exterior block and compute both endpoint contributions before estimating either. Then assemble one adjacent-cutoff crossing using the [paid holomorphic cutoff interface](../../../../quasi-rh/quasi-rh-exponent-descent/newman_collisions/17_enlarged_state_transport/notes/22_THETA_CUTOFF_MATCHING_AND_UNIFORM_PHYSICAL_JETS_20261011.md).
 
 The deliverable is a complete identity, domain statement and defect ledger separating generator, preparation, projection and boundary effects. If a numerical comparison is subsequently authorized, use the same physical point, source and precision on both sides, preserving all composite terms and both coherent phase channels. Compare final paid first-jet error with the existing separate value and slope screens.
 

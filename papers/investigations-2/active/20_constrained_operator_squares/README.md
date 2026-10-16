@@ -103,7 +103,7 @@ for complete paired-kernel signs; this project develops the constrained
 operator method. [02](../02_angular_jacobi_gluing/README.md) supplies the
 full-gluing hypothesis to investigate.
 [19](../19_euler_factor_controls/README.md) supplies collision controls.
-The earlier [SUSY scout](../../../quasi-rh-exponent-descent/newman_collisions/03_susy_dirac_hodge/notes/1_MOVING_THETA_GROUND_STATE_WARD_RESIDUAL_AND_GAP_LIMIT_20261010.md)
+The earlier [SUSY scout](../../../quasi-rh/quasi-rh-exponent-descent/newman_collisions/03_susy_dirac_hodge/notes/1_MOVING_THETA_GROUND_STATE_WARD_RESIDUAL_AND_GAP_LIMIT_20261010.md)
 already shows why a positive source Hamiltonian alone does not generate
 the physical Newman evolution.
 

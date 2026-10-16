@@ -30,7 +30,7 @@ moving state is not its Newman-time generator.
 ## Established seed and precise objective
 
 With \(W_t=-\log\rho_t\) and \(B_t=\partial_u+W_t'/2\), the
-[existing SUSY scout](../../../../quasi-rh-exponent-descent/newman_collisions/03_susy_dirac_hodge/notes/1_MOVING_THETA_GROUND_STATE_WARD_RESIDUAL_AND_GAP_LIMIT_20261010.md)
+[existing SUSY scout](../../../../quasi-rh/quasi-rh-exponent-descent/newman_collisions/03_susy_dirac_hodge/notes/1_MOVING_THETA_GROUND_STATE_WARD_RESIDUAL_AND_GAP_LIMIT_20261010.md)
 gives \(B_t\dot g_t=ug_t\). The classical
 [Stein identity, equations (5)–(6)](https://arxiv.org/html/1804.03926v3)
 supplies the complementary source-exact insertion
@@ -49,7 +49,7 @@ C_tT_t'\ge0\quad(T_t=0),\qquad
 T_t(2T_t'+xT_t'')\le0\quad(T_t+xT_t'=0).
 \]
 These are exactly the two physical stationary signs in the
-[all-multiplicity criterion](../../../../quasi-rh-exponent-descent/newman_collisions/17_enlarged_state_transport/notes/5_STATIONARY_SIGN_CRITERION_AND_THETA_TARGETS_20261010.md).
+[all-multiplicity criterion](../../../../quasi-rh/quasi-rh-exponent-descent/newman_collisions/17_enlarged_state_transport/notes/5_STATIONARY_SIGN_CRITERION_AND_THETA_TARGETS_20261010.md).
 They require complete predecessor neighborhoods, not a sign only at a
 hypothetical collision. At \(x=0\), \(H_t(0)>0\) excludes a collision
 directly.
@@ -72,7 +72,7 @@ Continue after a new signed relation or a quantified source comparison pays
 the conditional product. Stop this first task if it produces only positivity
 of \(\tau_t\), a spectral gap, or a smaller bulk Gaussian-score discrepancy.
 Those properties are shared by positive collision controls. The
-[regular cohomological-quartet obstruction](../../../../quasi-rh-exponent-descent/newman_collisions/04_cohomological_localization/notes/1_EXACT_THETA_SUPERSPACE_AND_REGULAR_COMPLETION_OBSTRUCTION_20261010.md)
+[regular cohomological-quartet obstruction](../../../../quasi-rh/quasi-rh-exponent-descent/newman_collisions/04_cohomological_localization/notes/1_EXACT_THETA_SUPERSPACE_AND_REGULAR_COMPLETION_OBSTRUCTION_20261010.md)
 also remains in force: this insertion is not automatically a protected
 localization observable. A different completion needs its own exact
 source, domain and reduction proof.

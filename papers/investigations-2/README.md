@@ -152,10 +152,10 @@ Hecke-family hypothesis, and a source audit must pin the version and
 statement it actually checks.
 
 The three October 11 discussions are the
-[original Claude brainstorm](../quasi-rh-exponent-descent/brainstorm/NEW_PATHS_FORWARD_BRAINSTORM_CLAUDE_20261011.md),
-[Codex assessment and corrections](../quasi-rh-exponent-descent/brainstorm/NEW_PATHS_FORWARD_BRAINSTORM_CODEX_20261011.md),
+[original Claude brainstorm](../quasi-rh/quasi-rh-exponent-descent/brainstorm/NEW_PATHS_FORWARD_BRAINSTORM_CLAUDE_20261011.md),
+[Codex assessment and corrections](../quasi-rh/quasi-rh-exponent-descent/brainstorm/NEW_PATHS_FORWARD_BRAINSTORM_CODEX_20261011.md),
 and
-[Claude cross-assessment](../quasi-rh-exponent-descent/brainstorm/NEW_PATHS_FORWARD_CROSS_ASSESSMENT_CLAUDE_20261011.md).
+[Claude cross-assessment](../quasi-rh/quasi-rh-exponent-descent/brainstorm/NEW_PATHS_FORWARD_CROSS_ASSESSMENT_CLAUDE_20261011.md).
 Their shared useful principle is that another reduction warrants further
 work only when it identifies information missing from the old argument.
 The original brainstorm contains overbroad claims; the corrected scopes
@@ -279,7 +279,7 @@ canonical Gauss coefficient energy, and auxiliary compensated responses
 distinct. A zero-free deduction also needs a suitable class of smooth
 profiles; one fixed-profile estimate gives its own sum bound. Start with
 the
-[short-family refinement](../quasi-rh-exponent-descent/short_families/notes/1_SHORT_FAMILY_DESCENT_REFINEMENT_20261008.md)
+[short-family refinement](../quasi-rh/quasi-rh-exponent-descent/short_families/notes/1_SHORT_FAMILY_DESCENT_REFINEMENT_20261008.md)
 and
 [audited return ledger](inactive/arithmetic_source_audit/notes/TWO_POISSON_RETURN_AND_TERMINATION_20261012.md).
 
@@ -292,9 +292,9 @@ form, and pay every comparison term. The quadratic checkpoint at
 absolute values still cost order \(X^2\). The sextic auxiliary-response
 ledger shows that scalar coherent-mean subtraction leaves local deletion
 modes and the full complement unpaid. Reuse the
-[quadratic checkpoint](../quasi-rh-exponent-descent/integer_quadratic_lift/notes/3_SEPARATED_PRIME_PAIR_CHECKPOINT_20261009.md)
+[quadratic checkpoint](../quasi-rh/quasi-rh-exponent-descent/integer_quadratic_lift/notes/3_SEPARATED_PRIME_PAIR_CHECKPOINT_20261009.md)
 and
-[sextic deletion-mode ledger](../quasi-rh-exponent-descent/short_families/notes/29_DELETION_MODE_COVARIANCE_AND_FULL_RESPONSE_LEDGER_20261009.md).
+[sextic deletion-mode ledger](../quasi-rh/quasi-rh-exponent-descent/short_families/notes/29_DELETION_MODE_COVARIANCE_AND_FULL_RESPONSE_LEDGER_20261009.md).
 
 **Function fields.** Translate the chosen integer family's coefficients,
 character orders, row and modulus degrees, zero extensions, and limit.
@@ -366,24 +366,24 @@ the conjunction nor its impossibility.
 
 The upstream work contains useful outputs even without exponent descent:
 the
-[fixed-probe variance framework](../prime-variance-exponents/README.md),
-[validated finite evaluator](../quasi-rh-exponent-descent/newman_collisions/13_microlocal_phase_space/README.md),
-[corrected heat interface and cutoff matching](../quasi-rh-exponent-descent/newman_collisions/17_enlarged_state_transport/notes/22_THETA_CUTOFF_MATCHING_AND_UNIFORM_PHYSICAL_JETS_20261011.md),
+[fixed-probe variance framework](../quasi-rh/prime-variance-exponents/README.md),
+[validated finite evaluator](../quasi-rh/quasi-rh-exponent-descent/newman_collisions/13_microlocal_phase_space/README.md),
+[corrected heat interface and cutoff matching](../quasi-rh/quasi-rh-exponent-descent/newman_collisions/17_enlarged_state_transport/notes/22_THETA_CUTOFF_MATCHING_AND_UNIFORM_PHYSICAL_JETS_20261011.md),
 and the
-[positive counterkernel](../quasi-rh-exponent-descent/newman_collisions/01_analytic_gaussian/notes/1_GAUSSIAN_REDUCTION_JOINT_KERNEL_AND_POSITIVITY_OBSTRUCTION_20261010.md).
+[positive counterkernel](../quasi-rh/quasi-rh-exponent-descent/newman_collisions/01_analytic_gaussian/notes/1_GAUSSIAN_REDUCTION_JOINT_KERNEL_AND_POSITIVITY_OBSTRUCTION_20261010.md).
 The existing
-[project 17 overview](../quasi-rh-exponent-descent/newman_collisions/17_enlarged_state_transport/README.md)
+[project 17 overview](../quasi-rh/quasi-rh-exponent-descent/newman_collisions/17_enlarged_state_transport/README.md)
 links the exact divisor-pair identities, stationary formulas, and
 remaining source-correlation targets. Reuse their stated scopes rather
 than rewrite the same identities as new mechanisms.
 
 Heat closure and historical corrections belong with that upstream
 investigation. A scoped closure should combine the
-[local heat ambiguity result](../quasi-rh-exponent-descent/newman_collisions/17_enlarged_state_transport/notes/18_CORRELATED_ERROR_JETS_AND_LOCAL_HEAT_AMBIGUITY_20261010.md)
+[local heat ambiguity result](../quasi-rh/quasi-rh-exponent-descent/newman_collisions/17_enlarged_state_transport/notes/18_CORRELATED_ERROR_JETS_AND_LOCAL_HEAT_AMBIGUITY_20261010.md)
 and counterkernel controls with their exact hypotheses. The historical
-[review 12](../quasi-rh-exponent-descent/newman_collisions/17_enlarged_state_transport/reviews/12_EXTERNAL_REVIEW_OF_MERGED_PROJECT_CLAUDE_20261011.md)
+[review 12](../quasi-rh/quasi-rh-exponent-descent/newman_collisions/17_enlarged_state_transport/reviews/12_EXTERNAL_REVIEW_OF_MERGED_PROJECT_CLAUDE_20261011.md)
 and
-[review 13](../quasi-rh-exponent-descent/newman_collisions/17_enlarged_state_transport/reviews/13_EXTERNAL_REVIEW_ADDENDUM_NOTES_9_TO_22_CLAUDE_20261011.md)
+[review 13](../quasi-rh/quasi-rh-exponent-descent/newman_collisions/17_enlarged_state_transport/reviews/13_EXTERNAL_REVIEW_ADDENDUM_NOTES_9_TO_22_CLAUDE_20261011.md)
 remain historical records; their fact (D) correction is in the linked
 cross-assessment. A dated clarification of affected inferences is a
 bounded maintenance task, not a new descent program. No universal theorem
@@ -403,11 +403,11 @@ has changed.
 
 - **12 October strategy:** [brainstorm after the audits](brainstorm/NEW_PATHS_FORWARD_AFTER_AUDITS_CODEX_20261012.md).
 - **Priority review of that strategy:** [Claude priority review](brainstorm/PRIORITY_REVIEW_AFTER_AUDITS_CLAUDE_20261012.md) (proposes a Lean replay of the formalized 7/8 theorem as priority 0, closes the character-amplification lane against arXiv:2610.12234, and reorders the Newman track).
-- **Original discussion:** [Claude proposal](../quasi-rh-exponent-descent/brainstorm/NEW_PATHS_FORWARD_BRAINSTORM_CLAUDE_20261011.md), [Codex corrections](../quasi-rh-exponent-descent/brainstorm/NEW_PATHS_FORWARD_BRAINSTORM_CODEX_20261011.md), and [Claude cross-assessment](../quasi-rh-exponent-descent/brainstorm/NEW_PATHS_FORWARD_CROSS_ASSESSMENT_CLAUDE_20261011.md).
-- **Arithmetic dependencies:** [upstream audit](../quasi-rh-character-amplification/reviews/UPSTREAM_REFLECTION_POISSON_SIEVE_AUDIT_20261009.md), [analytic dependency ledger](../quasi-rh-character-amplification/notes/GEOMETRY_CONDITIONAL_THEOREM_AND_DEPENDENCY_LEDGER_20261009.md), and [current final assembly review](inactive/arithmetic_source_audit/reviews/FINAL_ASSEMBLY_REVIEW_20261012.md).
-- **Moment obligations:** [quadratic strength and barrier](../quasi-rh-exponent-descent/integer_quadratic_lift/notes/2_QUADRATIC_MOMENT_STRENGTH_AND_BARRIER_20261008.md), [short sextic extraction](../quasi-rh-exponent-descent/short_families/notes/1_SHORT_FAMILY_DESCENT_REFINEMENT_20261008.md), and the covariance project's [starting references](inactive/arithmetic_covariance_targets/README.md#starting-references).
+- **Original discussion:** [Claude proposal](../quasi-rh/quasi-rh-exponent-descent/brainstorm/NEW_PATHS_FORWARD_BRAINSTORM_CLAUDE_20261011.md), [Codex corrections](../quasi-rh/quasi-rh-exponent-descent/brainstorm/NEW_PATHS_FORWARD_BRAINSTORM_CODEX_20261011.md), and [Claude cross-assessment](../quasi-rh/quasi-rh-exponent-descent/brainstorm/NEW_PATHS_FORWARD_CROSS_ASSESSMENT_CLAUDE_20261011.md).
+- **Arithmetic dependencies:** [upstream audit](../quasi-rh/quasi-rh-character-amplification/reviews/UPSTREAM_REFLECTION_POISSON_SIEVE_AUDIT_20261009.md), [analytic dependency ledger](../quasi-rh/quasi-rh-character-amplification/notes/GEOMETRY_CONDITIONAL_THEOREM_AND_DEPENDENCY_LEDGER_20261009.md), and [current final assembly review](inactive/arithmetic_source_audit/reviews/FINAL_ASSEMBLY_REVIEW_20261012.md).
+- **Moment obligations:** [quadratic strength and barrier](../quasi-rh/quasi-rh-exponent-descent/integer_quadratic_lift/notes/2_QUADRATIC_MOMENT_STRENGTH_AND_BARRIER_20261008.md), [short sextic extraction](../quasi-rh/quasi-rh-exponent-descent/short_families/notes/1_SHORT_FAMILY_DESCENT_REFINEMENT_20261008.md), and the covariance project's [starting references](inactive/arithmetic_covariance_targets/README.md#starting-references).
 - **Certificate evidence:** [Newman dependency ledger](newman_certificate_audit/notes/1_SOURCE_PIN_AND_DEPENDENCY_LEDGER_20261012.md), [benchmark](newman_certificate_audit/notes/2_FINITE_LANE_REPLAY_AND_CORRECTED_BUDGET_BENCHMARK_20261012.md), and [finite-lane audit](newman_certificate_audit/notes/3_CERTIFIED_ROW_REPLAY_AND_FINITE_LANE_REDUCTIONS_20261012.md).
-- **Finite Weil baseline:** [Weil-depth status](../shifted-zeta/weil-depth/STATUS.md).
+- **Finite Weil baseline:** [Weil-depth status](../weil-positivity/shifted-zeta/weil-depth/STATUS.md).
 
 Project READMEs contain narrower scopes and source lists. Read dated
 findings with their source version and review boundary; brainstorm

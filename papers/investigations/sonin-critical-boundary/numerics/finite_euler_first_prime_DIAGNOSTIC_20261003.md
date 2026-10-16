@@ -147,7 +147,7 @@ provides a convention control. With the full square and a uniform mesh:
 
 These approach the existing independently interval-enclosed values near
 -0.10999 and -0.14145 in the
-[scalar trace summary](../../../susy-positivity/investigations/wilson-loewner/arithmetic-storage/numerics/records/sonin_scalar_summary.json).
+[scalar trace summary](../../../weil-positivity/susy-positivity/investigations/wilson-loewner/arithmetic-storage/numerics/records/sonin_scalar_summary.json).
 This checks normalization and sign empirically. It does not transfer that
 older certificate to the first-prime calculation.
 

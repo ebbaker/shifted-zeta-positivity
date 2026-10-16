@@ -30,12 +30,12 @@ The 192-bit and 256-bit records retain rational endpoint bounds, positive LDL pi
 
 ## Inherited boundary gap
 
-The Q gap is independent of the prolate input. The correction norm bound and the retained-B conclusion also use the existing archimedean gap 57/1000000. Its generator is `papers/susy-positivity/investigations/wilson-loewner/arithmetic-storage/numerics/prolate_certificate.py` from the repository root. The fresh `inherited_gap_replay.json` records its hash, exact gap, rank32, precision256, and inverse-model hash. The finite-place transport gives g=(17-12 sqrt(2))*57/1000000, and the generator directly checks sqrt((1-g)/g)<772.
+The Q gap is independent of the prolate input. The correction norm bound and the retained-B conclusion also use the existing archimedean gap 57/1000000. Its generator is `papers/weil-positivity/susy-positivity/investigations/wilson-loewner/arithmetic-storage/numerics/prolate_certificate.py` from the repository root. The fresh `inherited_gap_replay.json` records its hash, exact gap, rank32, precision256, and inverse-model hash. The finite-place transport gives g=(17-12 sqrt(2))*57/1000000, and the generator directly checks sqrt((1-g)/g)<772.
 
 To replay the inherited certificate from the repository root:
 
 ```sh
-python3 -B papers/susy-positivity/investigations/wilson-loewner/arithmetic-storage/numerics/prolate_certificate.py --rank 32 --precision-bits 256 --output /tmp/prolate-gap-replay.json
+python3 -B papers/weil-positivity/susy-positivity/investigations/wilson-loewner/arithmetic-storage/numerics/prolate_certificate.py --rank 32 --precision-bits 256 --output /tmp/prolate-gap-replay.json
 ```
 
 The [internal review](../../reviews/REVISED_B_CERTIFICATE_REVIEW_20261003.md) checks the proof and implementation. It is a same-model audit, not independent specialist refereeing. The separate [source-space pilot](../revised_B_source_pilot_20261003/README.md) remains exploratory and is not an input to this certificate.

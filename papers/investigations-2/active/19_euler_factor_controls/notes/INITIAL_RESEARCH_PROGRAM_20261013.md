@@ -56,7 +56,7 @@ theta hypothesis that excludes the control.
 
 | Control | Definition | What it shares with theta | \(\Lambda\) | Screens out |
 | --- | --- | --- | --- | --- |
-| C1 shape | \(q_{T,b}(u)=e^{-Tu^2}[\phi(u)/2+\phi(u-2b)/4+\phi(u+2b)/4]\), \(\phi=e^{-\cosh u}\) ([11 Oct brainstorm](../../../../quasi-rh-exponent-descent/brainstorm/NEW_PATHS_FORWARD_BRAINSTORM_CLAUDE_20261011.md), R1) | positivity, evenness, superexponential decay, bounded zero strip | exactly \(T\) | arguments using shape, moment signs, pointwise stationary signs, radial positivity, transport certificates |
+| C1 shape | \(q_{T,b}(u)=e^{-Tu^2}[\phi(u)/2+\phi(u-2b)/4+\phi(u+2b)/4]\), \(\phi=e^{-\cosh u}\) ([11 Oct brainstorm](../../../../quasi-rh/quasi-rh-exponent-descent/brainstorm/NEW_PATHS_FORWARD_BRAINSTORM_CLAUDE_20261011.md), R1) | positivity, evenness, superexponential decay, bounded zero strip | exactly \(T\) | arguments using shape, moment signs, pointwise stationary signs, radial positivity, transport certificates |
 | C2 real-axis perturbation | \(\widetilde\Phi_X=s_X\Phi\{1+a_X\cos((X-d)u)+b_X\cos((X+d)u)\}\) ([angular seeds](../../02_angular_jacobi_gluing/notes/ANGULAR_GLUING_AND_RIGIDITY_REVIEW_SEEDS_20261013.md)) | positive, even, arbitrarily close to theta in relative supremum norm on \(\mathbb R\), scalar reflection | joint zero at a prescribed \((T,X)\) | arguments using real-line closeness to theta plus scalar reflection |
 | C3 Euler factor | \(\Phi_{c,p}\) above | the real zeros at \(t=0\), modularity for a congruence subgroup, Euler factors and Hecke relations at all \(q\ne p\) | \(\Lambda_{c,p}>0\); numerically \(T_0\approx4\log(1/c)/(\log p)^2\) | arguments using the Euler product at finitely many primes |
 

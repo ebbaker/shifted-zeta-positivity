@@ -68,10 +68,10 @@ over the integers.
 
 ## Starting references
 
-- [Corrected function-field proposal](../../../quasi-rh-exponent-descent/brainstorm/NEW_PATHS_FORWARD_BRAINSTORM_CODEX_20261011.md#4-d3-use-function-fields-to-test-exact-structure)
-- [Original proposal and motivation](../../../quasi-rh-exponent-descent/brainstorm/NEW_PATHS_FORWARD_BRAINSTORM_CLAUDE_20261011.md#d3-a-function-field-testbed-for-the-descent-structure)
-- [Sextic extraction and prime-mask identity](../../../quasi-rh-exponent-descent/short_families/notes/1_SHORT_FAMILY_DESCENT_REFINEMENT_20261008.md)
-- [Quadratic kernel and covariance](../../../quasi-rh-exponent-descent/integer_quadratic_lift/notes/2_QUADRATIC_MOMENT_STRENGTH_AND_BARRIER_20261008.md)
+- [Corrected function-field proposal](../../../quasi-rh/quasi-rh-exponent-descent/brainstorm/NEW_PATHS_FORWARD_BRAINSTORM_CODEX_20261011.md#4-d3-use-function-fields-to-test-exact-structure)
+- [Original proposal and motivation](../../../quasi-rh/quasi-rh-exponent-descent/brainstorm/NEW_PATHS_FORWARD_BRAINSTORM_CLAUDE_20261011.md#d3-a-function-field-testbed-for-the-descent-structure)
+- [Sextic extraction and prime-mask identity](../../../quasi-rh/quasi-rh-exponent-descent/short_families/notes/1_SHORT_FAMILY_DESCENT_REFINEMENT_20261008.md)
+- [Quadratic kernel and covariance](../../../quasi-rh/quasi-rh-exponent-descent/integer_quadratic_lift/notes/2_QUADRATIC_MOMENT_STRENGTH_AND_BARRIER_20261008.md)
 
 ## Working records
 

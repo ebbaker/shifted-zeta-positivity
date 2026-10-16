@@ -147,7 +147,7 @@ positive and admits every fixed Gaussian weight. Its heat transform is
 entire, nonzero at \(x=0\), and has a finite-multiplicity joint zero at
 \((T,X)\). Exact multiplicity two is not needed or claimed here.
 
-The upstream [Green-kernel construction](../../../../quasi-rh-exponent-descent/newman_collisions/06_theta_lattice/notes/2_GREEN_KERNEL_ENDPOINT_EQUIVALENCE_AND_CONDITIONAL_JETS_20261010.md)
+The upstream [Green-kernel construction](../../../../quasi-rh/quasi-rh-exponent-descent/newman_collisions/06_theta_lattice/notes/2_GREEN_KERNEL_ENDPOINT_EQUIVALENCE_AND_CONDITIONAL_JETS_20261010.md)
 applied to \(\widetilde\Phi_X\) supplies all odd endpoint jets and scalar
 reflection. These sources do **not** preserve the actual angular lattice
 preparation, an all-real threshold, or the complete zeta counting law.

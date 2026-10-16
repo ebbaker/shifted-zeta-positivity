@@ -15,7 +15,7 @@ dated 5 October 2026, SHA-256
 Physical source lines 3284–3478 are the main target, with definitions at
 1649–1881 and cusp coordinates at 3160–3176. All source line references
 below use this exact version. The September 30
-[upstream review](../../../../quasi-rh-character-amplification/reviews/UPSTREAM_REFLECTION_POISSON_SIEVE_AUDIT_20261009.md#3-continuation-constants-and-uniform-kernel-constants-have-different-roles)
+[upstream review](../../../../quasi-rh/quasi-rh-character-amplification/reviews/UPSTREAM_REFLECTION_POISSON_SIEVE_AUDIT_20261009.md#3-continuation-constants-and-uniform-kernel-constants-have-different-roles)
 was read as context; its conclusion is not a premise of this derivation.
 
 **Result:** the angular phases, Mellin powers, scalar `-i/81`, reflected

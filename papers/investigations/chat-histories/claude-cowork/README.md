@@ -12,7 +12,7 @@ in [chatgpt-codex/](../chatgpt-codex/README.md). Numbering is local to each regi
 The record was recovered on 13 October 2026: one Claude Cowork session from
 the RH4 project on [sonin-critical-boundary](../../sonin-critical-boundary/README.md).
 The session that opened character-channels is recorded with the
-[SUSY-positivity Claude chats](../../../susy-positivity/chat-histories/claude-cowork/README.md)
+[SUSY-positivity Claude chats](../../../weil-positivity/susy-positivity/chat-histories/claude-cowork/README.md)
 (chat 17).
 
 Later Claude conversations about this work are recorded here with

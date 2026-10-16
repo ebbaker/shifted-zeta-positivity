@@ -12,7 +12,7 @@ skipped.
 
 The chat registries are written by `record_chat.py`
 (papers/investigations-2/record_chat.py, and an older copy in
-papers/quasi-rh-exponent-descent/chat-histories/). That recorder captures
+papers/quasi-rh/quasi-rh-exponent-descent/chat-histories/). That recorder captures
 Codex sessions directly and imports ChatGPT-style JSON with --import-json.
 This script supplies the Cowork side:
 

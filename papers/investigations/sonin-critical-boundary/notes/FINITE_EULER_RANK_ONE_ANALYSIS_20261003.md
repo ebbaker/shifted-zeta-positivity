@@ -17,7 +17,7 @@ particular it identifies an essential distinction between compressing
 to complex columns and require no additive parity restriction.
 
 The general mean-functional Schur criterion is already in
-[the finite Mellin defect note, Sections 3--4](../../../susy-positivity/investigations/wilson-loewner/arithmetic-storage/notes/SONIN_FINITE_MELLIN_DEFECT_20260929.md).
+[the finite Mellin defect note, Sections 3--4](../../../weil-positivity/susy-positivity/investigations/wilson-loewner/arithmetic-storage/notes/SONIN_FINITE_MELLIN_DEFECT_20260929.md).
 It is reused, not counted as a new result. Negativity on the zero-mean
 subspace and bounded mixed terms remain separate obligations. The new
 work here concerns the actual cosine/Euler operator needed to test them.
@@ -38,7 +38,7 @@ These are scaled cosine transforms and
 \tag{1}
 \]
 This is the operator-norm expansion established in
-[the place-addition note, Section 9](../../../susy-positivity/investigations/wilson-loewner/arithmetic-storage/notes/SONIN_PLACE_ADDITION_AND_ERROR_CONTROL_20260929.md).
+[the place-addition note, Section 9](../../../weil-positivity/susy-positivity/investigations/wilson-loewner/arithmetic-storage/notes/SONIN_PLACE_ADDITION_AND_ERROR_CONTROL_20260929.md).
 For \(N\ge0\), truncate before \(n=N\), and denote the resulting
 operator by \(\mathcal F_{p,N}\). Then
 \[

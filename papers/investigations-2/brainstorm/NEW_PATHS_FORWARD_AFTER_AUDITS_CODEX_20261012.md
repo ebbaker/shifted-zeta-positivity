@@ -16,7 +16,7 @@ The other four investigations should remain bounded support projects until
 they identify a source of information that these two main routes lack.
 
 The starting point is the requested
-[11 October Codex brainstorm](../../quasi-rh-exponent-descent/brainstorm/NEW_PATHS_FORWARD_BRAINSTORM_CODEX_20261011.md),
+[11 October Codex brainstorm](../../quasi-rh/quasi-rh-exponent-descent/brainstorm/NEW_PATHS_FORWARD_BRAINSTORM_CODEX_20261011.md),
 read in full, together with the investigations, dated notes, reviews and
 small numerical records. Its distinction between a sufficient estimate and
 a circular proof remains essential. So do its exact diagonal tests,
@@ -119,7 +119,7 @@ For one fixed \(0<h<1\) and \(a\ge0\), the proposed new estimate is
 \]
 
 The existing
-[short-family extraction refinement](../../quasi-rh-exponent-descent/short_families/notes/1_SHORT_FAMILY_DESCENT_REFINEMENT_20261008.md)
+[short-family extraction refinement](../../quasi-rh/quasi-rh-exponent-descent/short_families/notes/1_SHORT_FAMILY_DESCENT_REFINEMENT_20261008.md)
 already shows that finite reuse of this single moment removes the
 prime-mask error. Its conditional consequence is
 
@@ -188,7 +188,7 @@ the canonical Gauss coefficient energy, and the auxiliary compensated
 responses in the old short-family program. Their normalizations and
 coefficients differ. A theorem for one does not automatically control the
 others. In particular, the
-[deletion-mode covariance ledger](../../quasi-rh-exponent-descent/short_families/notes/29_DELETION_MODE_COVARIANCE_AND_FULL_RESPONSE_LEDGER_20261009.md)
+[deletion-mode covariance ledger](../../quasi-rh/quasi-rh-exponent-descent/short_families/notes/29_DELETION_MODE_COVARIANCE_AND_FULL_RESPONSE_LEDGER_20261009.md)
 shows why subtracting a scalar coherent mean does not repair those
 auxiliary responses: local deletion modes and the full complement still
 need payment.
@@ -335,7 +335,7 @@ c_p\overline{c_q}J_Q(pq),
 \]
 
 The
-[separated-prime checkpoint](../../quasi-rh-exponent-descent/integer_quadratic_lift/notes/3_SEPARATED_PRIME_PAIR_CHECKPOINT_20261009.md)
+[separated-prime checkpoint](../../quasi-rh/quasi-rh-exponent-descent/integer_quadratic_lift/notes/3_SEPARATED_PRIME_PAIR_CHECKPOINT_20261009.md)
 gives
 
 \[
@@ -351,7 +351,7 @@ scalar/sieve combination has exponent \(15/8\), leaving a saving
 normalization improvement. The full target also controls the simultaneous
 odd quadratic family, including the principal row; it does not concern
 zeta alone. See the
-[quadratic strength and barrier note](../../quasi-rh-exponent-descent/integer_quadratic_lift/notes/2_QUADRATIC_MOMENT_STRENGTH_AND_BARRIER_20261008.md).
+[quadratic strength and barrier note](../../quasi-rh/quasi-rh-exponent-descent/integer_quadratic_lift/notes/2_QUADRATIC_MOMENT_STRENGTH_AND_BARRIER_20261008.md).
 
 **Bounded deliverable:** match one named dispersion, bilinear, or spectral
 input against this exact kernel, prepared profile, squarefree-removal

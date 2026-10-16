@@ -20,12 +20,12 @@ theorem; "X is new" before the search.
 
 ## Evidence
 
-- [Cross-assessment](../papers/quasi-rh-exponent-descent/brainstorm/NEW_PATHS_FORWARD_CROSS_ASSESSMENT_CLAUDE_20261011.md) §3.1: "Fact (D) is not what Polymath 15 proves" (the barrier only excludes zeros above \(y_0=0.2\)); the fact had been used in reviews 12, 13 and rule R5.
+- [Cross-assessment](../papers/quasi-rh/quasi-rh-exponent-descent/brainstorm/NEW_PATHS_FORWARD_CROSS_ASSESSMENT_CLAUDE_20261011.md) §3.1: "Fact (D) is not what Polymath 15 proves" (the barrier only excludes zeros above \(y_0=0.2\)); the fact had been used in reviews 12, 13 and rule R5.
 - [ROUND11](../early-chat-logs/initial-project-files/rh3/claude/ROUND11_freeboson_and_positivity.md) §1.1: "Three separate fetches fabricated §10.2 content, two of them mutually contradictory."; [`CONTRIBUTING.md`](../CONTRIBUTING.md) rule 3: "Automated readings of long PDFs have fabricated content in this project."
-- [Short-family small-cofactor review](../papers/quasi-rh-exponent-descent/reviews/SHORT_FAMILY_SMALL_COFACTOR_REVIEW_20261008.md): "the plain PDF extraction dropped overbars".
+- [Short-family small-cofactor review](../papers/quasi-rh/quasi-rh-exponent-descent/reviews/SHORT_FAMILY_SMALL_COFACTOR_REVIEW_20261008.md): "the plain PDF extraction dropped overbars".
 - [ROUND12](../early-chat-logs/initial-project-files/rh3/claude/ROUND12_execution_and_a_retraction.md) §4.5: "I published with the caveat attached rather than resolving it first, which cost a same-day retraction."
 - The Suzuki normalization (item C1 of the [first-slab protocol](../verification/first-slab/PROTOCOL_C1_C2.md)) is still "the single highest-risk unverified item", and [`references/README.md`](../references/README.md) flags the Suzuki quotations for human confirmation.
-- Done right: Paper 2's imports from Kasahara were "source-verified against the original paper" ([omega-string STATUS](../papers/shifted-zeta/omega-string/STATUS.md)); the Newman certificate audit read every analytic link of Gomila's hypotheses (ii) and (iii) ([audit README](../papers/investigations-2/newman_certificate_audit/README.md)).
+- Done right: Paper 2's imports from Kasahara were "source-verified against the original paper" ([omega-string STATUS](../papers/weil-positivity/shifted-zeta/omega-string/STATUS.md)); the Newman certificate audit read every analytic link of Gomila's hypotheses (ii) and (iii) ([audit README](../papers/investigations-2/newman_certificate_audit/README.md)).
 - In this round: Review 16's Corollary 2 cited two 2026 \(\Lambda\) claims it "could not verify" and said so; [Review 19](../papers/investigations-2/active/22_theta_manifold_geometry/reviews/19_PATHS_FORWARD_AFTER_THE_SECOND_ROUND_CLAUDE_20261015.md) §1 quotes the published \(\Lambda\) bounds "as I read the literature" for the same reason.
 
 ## What it cost

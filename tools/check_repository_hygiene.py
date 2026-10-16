@@ -15,11 +15,25 @@ import sys
 from urllib.parse import unquote, urlsplit
 
 ROOT = Path(__file__).resolve().parents[1]
+SHIFTED_ZETA = Path('papers/weil-positivity/shifted-zeta')
+SUSY_PROGRAM = Path('papers/weil-positivity/susy-positivity')
+# Top-level folders under papers/ that papers/README.md must index (16 October 2026 layout).
+TOP_LEVEL = ('weil-positivity', 'quasi-rh', 'investigations', 'investigations-2', 'misc')
+# Research-line groups and the program or investigation folders each group README must index.
+GROUP_MEMBERS = {
+    'weil-positivity': ('shifted-zeta', 'susy-positivity'),
+    'quasi-rh': ('prime-variance-exponents', 'quasi-rh-exponent-descent',
+                 'quasi-rh-character-amplification'),
+}
+# Paper collections, relative to papers/, whose README must index each paper folder.
 PAPER_GROUPS = {
-    'shifted-zeta': ('psi-omega-margin', 'omega-string', 'defect-depth',
-                     'first-slab-positivity', 'weil-depth', 'storage-depth'),
+    'weil-positivity/shifted-zeta': ('psi-omega-margin', 'omega-string', 'defect-depth',
+                                     'first-slab-positivity', 'weil-depth', 'storage-depth'),
     'misc': ('rh-detector',),
 }
+# Locations vacated on 16 October 2026; paper slugs vacated on 12 September are checked below.
+OBSOLETE_PROGRAMS = ('shifted-zeta', 'susy-positivity', 'prime-variance-exponents',
+                     'quasi-rh-exponent-descent', 'quasi-rh-character-amplification')
 
 
 def historical(path):
@@ -94,8 +108,13 @@ def main():
                     f'Index {index} omits {destination}')
 
     require_index_links(Path('papers/README.md'),
-                        [Path('papers') / name / 'README.md'
-                         for name in (*PAPER_GROUPS, 'susy-positivity')])
+                        [Path('papers') / name / 'README.md' for name in TOP_LEVEL])
+    for group, members in GROUP_MEMBERS.items():
+        base = Path('papers') / group
+        require_index_links(base / 'README.md', [base / name / 'README.md' for name in members])
+    for name in OBSOLETE_PROGRAMS:
+        require(not (ROOT / 'papers' / name).exists(),
+                f'Obsolete program location remains: papers/{name}')
     for group, slugs in PAPER_GROUPS.items():
         base = Path('papers') / group
         require_index_links(base / 'README.md',
@@ -104,7 +123,7 @@ def main():
             require(not (ROOT / 'papers' / slug).exists(),
                     f'Obsolete paper location remains: papers/{slug}')
 
-    program = Path('papers/susy-positivity')
+    program = SUSY_PROGRAM
     attempt = program / 'investigations/previous/positive-factorizations'
     require_index_links(program / 'README.md', [attempt / 'README.md'])
     for obsolete in ('manuscript.tex', 'manuscript.pdf', 'STATUS.md',
@@ -131,11 +150,11 @@ def main():
                     f'Attempt checksum mismatch: {rel}')
 
     for slug in ('storage-depth', 'weil-depth'):
-        base = ROOT / 'papers' / 'shifted-zeta' / slug
+        base = ROOT / SHIFTED_ZETA / slug
         for line in (base / 'SHA256SUMS.txt').read_text().splitlines():
             want, name = line.split(None, 1)
             name = name.lstrip('*')
-            rel = Path('papers') / 'shifted-zeta' / slug / name
+            rel = SHIFTED_ZETA / slug / name
             require(rel in tracked, f'Manifest names untracked file: {rel}')
             path = base / name
             require(path.is_file() and digest(path) == want,

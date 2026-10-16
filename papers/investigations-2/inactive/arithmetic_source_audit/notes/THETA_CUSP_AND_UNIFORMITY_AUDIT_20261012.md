@@ -369,9 +369,9 @@ splitting does not convert a growing frozen good prime into part of
 ## 7. Verification and remaining imports
 
 The previous
-[upstream review](../../../../quasi-rh-character-amplification/reviews/UPSTREAM_REFLECTION_POISSON_SIEVE_AUDIT_20261009.md)
+[upstream review](../../../../quasi-rh/quasi-rh-character-amplification/reviews/UPSTREAM_REFLECTION_POISSON_SIEVE_AUDIT_20261009.md)
 was read for scope and comparison. Its
-[exact checker](../../../../quasi-rh-character-amplification/numerics/check_upstream_reflection_interfaces.py)
+[exact checker](../../../../quasi-rh/quasi-rh-character-amplification/numerics/check_upstream_reflection_interfaces.py)
 was replayed without modifying it, writing the temporary result to
 `/private/tmp/arithmetic-source-audit-20261012/cusp-interface-replay.json`.
 It passed 69,881 assertions. Relevant coverage includes the actual

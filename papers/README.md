@@ -1,57 +1,80 @@
 # Papers and research projects
 
-The papers are organized by research program. Each manuscript keeps its own
-source, PDF, status record, and associated code or numerical supplement.
+16 October 2026. Index of `papers/`, prepared for Edward Baker with LLM
+assistance (Claude Opus 5.5, configured identifier `claude-opus-5-5`, Claude
+Cowork, reasoning effort max).
 
-| Folder | Role | Start here |
-|---|---|---|
-| [`shifted-zeta/`](shifted-zeta/README.md) | The six-paper program around Suzuki's shifted screw functions, inverse spectral systems, and finite-horizon positivity. | The project README explains the papers' relationships and reading order. |
-| [`susy-positivity/`](susy-positivity/README.md) | The program seeking a structural explanation of Weil positivity, with five retained investigations under `investigations/` and five earlier packages under `investigations/previous/` and a standalone note under `manuscripts/`. | [Background](susy-positivity/background.pdf); [program overview](susy-positivity/PROGRAM_OVERVIEW.md); [positive-factorizations attempt](susy-positivity/investigations/previous/positive-factorizations/README.md) and [status](susy-positivity/investigations/previous/positive-factorizations/STATUS.md). |
-| [`misc/`](misc/README.md) | Separate papers outside those two programs; currently the earlier `rh-detector` draft. | [Miscellaneous papers](misc/README.md). |
-| [`prime-variance-exponents/`](prime-variance-exponents/README.md) | Focused prepared-prime variance program: fixed exponent and zero-strip equivalence, with decreasing exponents toward RH. | [Manuscript continuation](prime-variance-exponents/notes/MANUSCRIPT_CONTINUATION_20261003.md); preliminary results and draft instructions, with the first global exponent improvement still open. |
-| [`quasi-rh-exponent-descent/`](quasi-rh-exponent-descent/README.md) | Investigates strict variance-exponent descent and exclusion of positive Newman thresholds, with analytic obstructions and a signed arithmetic target. | [Initial results and open estimate](quasi-rh-exponent-descent/README.md); [review](quasi-rh-exponent-descent/reviews/INITIAL_REVIEW_20261008.md). |
+The research folders are grouped by line of work. Each program or
+investigation keeps its own manuscripts, notes, numerics, reviews, chat
+histories and status records; the group folders only organize them. Shared
+`blueprint/`, `statements/`, `verification/`, `notes/` and `code/` remain at
+the repository root.
+
+| Folder | What it holds | Period | Start here |
+|---|---|---|---|
+| [`weil-positivity/`](weil-positivity/README.md) | The positivity line: the six shifted-zeta papers and the SUSY-positivity program, aimed at the complete central Weil form. | Aug–Sep 2026 | [Line guide](weil-positivity/README.md); [shifted-zeta guide](weil-positivity/shifted-zeta/README.md); [SUSY background](weil-positivity/susy-positivity/background.pdf). |
+| [`investigations/`](investigations/README.md) | Cross-program investigations: CCM operator realizations and fractal Laplacians, character channels, the Sonin critical-boundary manuscript, and the program meta-analysis. | 26 Sep – 3 Oct 2026 | [Index](investigations/README.md); [program meta-analysis](investigations/program-meta-analysis/README.md). |
+| [`quasi-rh/`](quasi-rh/README.md) | The zero-strip line: prime-variance exponents, quasi-RH exponent descent with the Newman-collision projects, and character amplification. | 3–11 Oct 2026 | [Line guide](quasi-rh/README.md). |
+| [`investigations-2/`](investigations-2/README.md) | The second investigation portfolio, grown from the exponent-descent brainstorms: active and inactive program homes, the Newman certificate audit and the formal-replay crosswalk. | 12 Oct 2026 onward | [Portfolio overview](investigations-2/README.md); [active programs](investigations-2/active/README.md). |
+| [`misc/`](misc/README.md) | Separate earlier work, currently the RH-detector draft. | Aug 2026 | [Miscellaneous papers](misc/README.md). |
+
+Short summaries of what has been established, in the sources' own status
+words, are in [result-summaries](../result-summaries/README.md): clusters
+01–06 cover `weil-positivity/`, 07–08 `investigations/` and `misc/`, 09–11
+`quasi-rh/`, and 10–14 `investigations-2/` (10 and 11 span both); 15 is
+repository-wide. Recurring patterns to avoid are in [avoid](../avoid/README.md).
+
+## How the work developed
+
+1. **Shifted zeta (August to early September).** Six papers on Suzuki's
+   shifted screw functions: time-domain criteria, the shifted-zeta string,
+   defect detection, and finite-window positivity certificates.
+2. **SUSY positivity (September).** The search for an independently positive
+   structure whose pairing is the complete Weil form: supersymmetric and
+   gauge-theoretic sources, Wilson lines, Loewner evolution and
+   Wilson–Loewner.
+3. **Cross-program investigations (26 September to 3 October).** CCM spectral
+   realizations, character channels and Sonin critical-boundary traces. The
+   Sonin subpower milestones led to the next line.
+4. **Prime variance exponents (3–4 October).** A fixed variance exponent for
+   one prepared prime response is equivalent to a closed zero strip, so
+   exponents tending to zero are equivalent to RH.
+5. **Quasi-RH descent and amplification (8–11 October).** Whether a fixed
+   zero strip can be improved to RH: arithmetic exponent descent, character
+   families, and exclusion of positive-time Newman collisions.
+6. **Second portfolio (12 October onward).** Audits of the quasi-RH sources
+   and of a Newman certificate, Euler-factor controls, and the theta geometry
+   near possible collisions.
 
 ## Status
 
-As of 20 September 2026, the SUSY program retains `critical-path`,
-`wilson-loewner`, `wilson-lines`, `loewner`, and `fractional-dimension` at the
-investigation root, with five complete earlier packages under
-[previous/](susy-positivity/investigations/previous/README.md). Critical path is
-only a placeholder. The grouping changes research focus, not scientific status.
-Only [first-slab-positivity](shifted-zeta/first-slab-positivity/README.md) is at
-release stage (preprint v1.0); no release tag or DOI exists yet. Other
-manuscripts remain working drafts with their own scope and review records.
+Only [first-slab-positivity](weil-positivity/shifted-zeta/first-slab-positivity/README.md)
+is at release stage (preprint v1.0); no release tag or DOI exists yet. The
+other manuscripts are working drafts with their own scope and review records,
+and no result in the repository has had independent specialist review. Each
+line's guide and each folder's README give the current state; the
+[investigations-2 overview](investigations-2/README.md) describes the active
+programs.
 
-The SUSY program background is at its root; proposals and continuation notes
-are under `brainstorm/`. Its [current index](susy-positivity/README.md) includes
-the latest research assessment and the deferred publication status of the
-finite-response note. Round-4
-reports accompany the positive-factorizations attempt in
-`susy-positivity/investigations/previous/positive-factorizations/archive/progress-reports/`;
-they have not been incorporated into manuscript v0.2.
+## Older paths
 
-## Layout and older paths
+Older manuscripts, notes, reviews, numerical records and chat histories keep
+the paths of their time. To read one in the current checkout, apply every
+later move below, oldest first, or open the file at its original commit.
 
-The six shifted-zeta folders moved from `papers/<slug>/` to
-`papers/shifted-zeta/<slug>/`; `papers/rh-detector/` moved to
-`papers/misc/rh-detector/`. `papers/susy-positivity/` is now a program root;
-its positive-factorizations package is now under `investigations/previous/positive-factorizations/`.
-The standalone `papers/finite-response-weil-positivity/` package moved to
-`susy-positivity/manuscripts/finite-response-weil-positivity/`.
-The [20 September relocation map](susy-positivity/archive/REORGANIZATION_20260920.md)
-covers the five packages moved into `previous/`. See the [current path guide](susy-positivity/archive/README.md) and its historical
-[move and validation record](susy-positivity/archive/REORGANIZATION_20260912.md). Older
-manuscripts, archived drafts, and review records retain their original path
-references: apply this mapping when reading them in the current checkout,
-or use their original commit for an exact historical view.
+| Date | From | To | Record |
+|---|---|---|---|
+| 12 Sep 2026 | top-level manuscript files and `archive/overview/` of `papers/susy-positivity/` | the program root and `attempts/positive-factorizations/`, now `investigations/previous/positive-factorizations/` | [12 September record](weil-positivity/susy-positivity/archive/REORGANIZATION_20260912.md); [SUSY path guide](weil-positivity/susy-positivity/archive/README.md) |
+| 14 Sep 2026 | `papers/<slug>/` for the six shifted-zeta papers | `papers/shifted-zeta/<slug>/` | commit `b3ac36e` |
+| 14 Sep 2026 | `papers/rh-detector/` | `papers/misc/rh-detector/` | commit `b3ac36e` |
+| 14 Sep 2026 | `papers/finite-response-weil-positivity/` | `papers/susy-positivity/manuscripts/finite-response-weil-positivity/` | [SUSY path guide](weil-positivity/susy-positivity/archive/README.md) |
+| 20 Sep 2026 | `papers/susy-positivity/investigations/<package>/` for five packages | `papers/susy-positivity/investigations/previous/<package>/` | [20 September map](weil-positivity/susy-positivity/archive/REORGANIZATION_20260920.md) |
+| 13 Oct 2026 | nine folders in `papers/investigations-2/active/` | `papers/investigations-2/inactive/` | [consolidation record](investigations-2/PORTFOLIO_CONSOLIDATION_20261013.md) |
+| 16 Oct 2026 | `papers/shifted-zeta/`, `papers/susy-positivity/` | `papers/weil-positivity/shifted-zeta/`, `papers/weil-positivity/susy-positivity/` | [16 October record](REORGANIZATION_20261016.md) |
+| 16 Oct 2026 | `papers/prime-variance-exponents/`, `papers/quasi-rh-exponent-descent/`, `papers/quasi-rh-character-amplification/` | `papers/quasi-rh/<same name>/` | [16 October record](REORGANIZATION_20261016.md) |
 
-Weil-depth and storage-depth use `manuscript/`, `numerics/`, and `archive/`
-subfolders, with current `BUILD_RECORD.json`, `SHA256SUMS.txt`, and
-`ARCHIVES.md` at the paper root. Their large derived data stay outside git;
-see the [large-file policy](../LARGE_FILES.md). Shared `blueprint/`,
-`statements/`, `verification/`, `notes/`, and `code/` remain at the repository
-root. The [shifted-zeta guide](shifted-zeta/README.md) links the relevant
-entry points.
+Commit-pinned citations keep the paths of their commit and must not be
+rewritten.
 
 ## How to cite a paper in this repository
 
@@ -82,7 +105,7 @@ folder's GitHub permalink):
 > systems: an off-center Weil generator and a radial energy identity*,
 > preprint v1.0, 2026, in: *shifted-zeta-positivity*,
 > <https://github.com/ebbaker/shifted-zeta-positivity>, folder
-> `papers/shifted-zeta/first-slab-positivity/`, commit ⟨hash⟩.
+> `papers/weil-positivity/shifted-zeta/first-slab-positivity/`, commit ⟨hash⟩.
 
 After the `v1.0` release the block becomes the repository form above with the
 real version DOI. BibTeX skeleton for that stage (`@misc` is what Zenodo
@@ -95,30 +118,15 @@ exports; adjust to your style; ⟨…⟩ are placeholders, not identifiers):
                   an off-center {W}eil generator and a radial energy identity},
   year         = {2026},
   howpublished = {Preprint v1.0, in: shifted-zeta-positivity, release v1.0, folder
-                  \texttt{papers/shifted-zeta/first-slab-positivity/}},
+                  \texttt{papers/weil-positivity/shifted-zeta/first-slab-positivity/}},
   publisher    = {Zenodo},
   doi          = {10.5281/zenodo.⟨version DOI⟩},
   note         = {Computer-assisted; verification status in the repository}
 }
 ```
 
-## Cross-citation policy
-
-Papers 1–3 and the preprint cite each other as "companion manuscripts". Two
-rules adopted on 28 Aug 2026 (see `notes/ROUND19_endpoint_length_and_freeze.md` §1):
-
-- Every cross-citation carries the *name* of the cited statement ("critical-shift
-  dichotomy", "linear margin", "shift-energy identity"), not only a theorem
-  number, because numbering in unreleased drafts moves.
-- A one-pass renumbering against the actually released version of each cited
-  paper is a standing pre-release checklist item for every paper.
-
-Current dependencies: Paper 2 cites the **concise** version of Paper 1
-(numbers as of the 28 Aug copy); Paper 3 cites Papers 1 and 2 with
-placeholder keys (`MarginPaper`, `StringPaper`); the preprint cites all three
-as *E. Baker, manuscript, August 2026* (bibliography items `Baker2026string`,
-`Baker2026margin`, `Baker2026depth`). When a companion is released, update
-the citing papers to the repository form above and issue a new release.
+The cross-citation policy for the shifted-zeta papers is in the
+[shifted-zeta guide](weil-positivity/shifted-zeta/README.md#cross-citation-policy).
 
 ## Release checklist (any manuscript)
 

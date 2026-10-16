@@ -54,7 +54,7 @@ The existing upstream checker was replayed unchanged, without overwriting
 its historical record:
 
 ```sh
-python3 papers/quasi-rh-character-amplification/numerics/check_upstream_reflection_interfaces.py --output /tmp/theta-interface-replay.json
+python3 papers/quasi-rh/quasi-rh-character-amplification/numerics/check_upstream_reflection_interfaces.py --output /tmp/theta-interface-replay.json
 ```
 
 All 69,881 assertions passed and the result agrees with the saved

@@ -76,6 +76,6 @@ the exact preventing term. A bounded gap is not global collision coverage.
 ## Starting records
 
 - [Brainstorm card 3](../../../brainstorm/LIFTED_THETA_SYMMETRY_SEARCH_CODEX_20261013.md#3-anchored-source-identities-and-schur-elimination).
-- [Source certificate, Heat Note 25 §§2–3](../../../../quasi-rh-exponent-descent/newman_collisions/notes/25_ENLARGED_STATE_TRANSPORT_CHORD_DYNAMICS_AND_THETA_GLUING_20261010.md).
-- [Sharp residual and restricted-prime scope](../../../../quasi-rh-exponent-descent/newman_collisions/17_enlarged_state_transport/notes/2_SHARP_ADJOINT_RESIDUALS_AND_RESTRICTED_PRIME_OBSTRUCTION_20261010.md).
+- [Source certificate, Heat Note 25 §§2–3](../../../../quasi-rh/quasi-rh-exponent-descent/newman_collisions/notes/25_ENLARGED_STATE_TRANSPORT_CHORD_DYNAMICS_AND_THETA_GLUING_20261010.md).
+- [Sharp residual and restricted-prime scope](../../../../quasi-rh/quasi-rh-exponent-descent/newman_collisions/17_enlarged_state_transport/notes/2_SHARP_ADJOINT_RESIDUALS_AND_RESTRICTED_PRIME_OBSTRUCTION_20261010.md).
 - [Schur/Feshbach precedent](https://arxiv.org/html/2105.02058v1#S1).

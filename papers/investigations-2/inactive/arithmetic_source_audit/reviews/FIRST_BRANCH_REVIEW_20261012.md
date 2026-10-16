@@ -108,7 +108,7 @@ require primitive quadratic Hecke characters of trivial infinite type, a
 finite-class reciprocity law, and the specified product conductor for
 coprime same-class indices. They permit arbitrary complex squarefree
 column coefficients. The source matches these requirements in
-`lem:quadratic`; the earlier [interface audit](../../../../quasi-rh-character-amplification/reviews/UPSTREAM_REFLECTION_POISSON_SIEVE_AUDIT_20261009.md)
+`lem:quadratic`; the earlier [interface audit](../../../../quasi-rh/quasi-rh-character-amplification/reviews/UPSTREAM_REFLECTION_POISSON_SIEVE_AUDIT_20261009.md)
 gives more detail. The theorem's full proof is still an import. The
 [Dunn–Radziwiłł theta reference](https://arxiv.org/html/2109.07463v3)
 likewise supplies deep inputs; its existence alone does not validate the

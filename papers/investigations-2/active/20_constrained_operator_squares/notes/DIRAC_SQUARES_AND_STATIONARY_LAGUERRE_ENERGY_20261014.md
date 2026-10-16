@@ -202,7 +202,7 @@ with the additional signed spectral factor retained.
 ## Connection to the existing program and a bounded next target
 
 The earlier
-[SUSY Dirac scout](../../../../quasi-rh-exponent-descent/newman_collisions/03_susy_dirac_hodge/notes/1_MOVING_THETA_GROUND_STATE_WARD_RESIDUAL_AND_GAP_LIMIT_20261010.md)
+[SUSY Dirac scout](../../../../quasi-rh/quasi-rh-exponent-descent/newman_collisions/03_susy_dirac_hodge/notes/1_MOVING_THETA_GROUND_STATE_WARD_RESIDUAL_AND_GAP_LIMIT_20261010.md)
 already constructs a positive Dirac square for the normalized theta
 density. Its instantaneous ground state \(g_t\) obeys \(B_tg_t=0\),
 but Newman evolution has \(B_t\dot g_t=ug_t\). Thus its annihilating

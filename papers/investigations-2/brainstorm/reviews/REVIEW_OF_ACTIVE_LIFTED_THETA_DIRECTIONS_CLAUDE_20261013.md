@@ -18,17 +18,17 @@ the [GPT-6-astra review](ACTIVE_DIRECTIONS_REVIEW_CODEX_20261013.md), its
 and the new [project 17](../../inactive/17_spacetime_collision_degree/notes/INITIAL_RESEARCH_PROGRAM_20261013.md);
 the [13 October planning conversation](../../chat-histories/0002_2026-10-13T12-54-02Z_review-newman-certificate-audit.json)
 and the [GPT-6-astra conversation](../../formal_replay_crosswalk/chat-histories/0003_2026-10-13T17-10-52Z_review-investigation-directions.json);
-upstream [Heat Note 14](../../../quasi-rh-exponent-descent/newman_collisions/notes/14_DIMENSIONAL_REDUCTION_AND_SUPERSYMMETRIC_HEAT_PROGRAM_20261010.md),
-[Heat Note 25](../../../quasi-rh-exponent-descent/newman_collisions/notes/25_ENLARGED_STATE_TRANSPORT_CHORD_DYNAMICS_AND_THETA_GLUING_20261010.md)
-and project-17 Notes [4](../../../quasi-rh-exponent-descent/newman_collisions/17_enlarged_state_transport/notes/4_COORDINATE_INVARIANCE_AND_IMPLICIT_HEAT_FOLDS_20261010.md),
-[5](../../../quasi-rh-exponent-descent/newman_collisions/17_enlarged_state_transport/notes/5_STATIONARY_SIGN_CRITERION_AND_THETA_TARGETS_20261010.md),
-[7](../../../quasi-rh-exponent-descent/newman_collisions/17_enlarged_state_transport/notes/7_COMPLETE_LAGUERRE_KERNELS_AND_TRIPLE_ZERO_LIMIT_20261010.md),
-[8](../../../quasi-rh-exponent-descent/newman_collisions/17_enlarged_state_transport/notes/8_RH_STRATEGY_WITH_QUASI_RH_AND_NEXT_ANALYTIC_TARGET_20261010.md)
-(appendix) and [21](../../../quasi-rh-exponent-descent/newman_collisions/17_enlarged_state_transport/notes/21_COMPLETE_THETA_GAUSSIAN_HERMITE_READOUT_20261011.md);
+upstream [Heat Note 14](../../../quasi-rh/quasi-rh-exponent-descent/newman_collisions/notes/14_DIMENSIONAL_REDUCTION_AND_SUPERSYMMETRIC_HEAT_PROGRAM_20261010.md),
+[Heat Note 25](../../../quasi-rh/quasi-rh-exponent-descent/newman_collisions/notes/25_ENLARGED_STATE_TRANSPORT_CHORD_DYNAMICS_AND_THETA_GLUING_20261010.md)
+and project-17 Notes [4](../../../quasi-rh/quasi-rh-exponent-descent/newman_collisions/17_enlarged_state_transport/notes/4_COORDINATE_INVARIANCE_AND_IMPLICIT_HEAT_FOLDS_20261010.md),
+[5](../../../quasi-rh/quasi-rh-exponent-descent/newman_collisions/17_enlarged_state_transport/notes/5_STATIONARY_SIGN_CRITERION_AND_THETA_TARGETS_20261010.md),
+[7](../../../quasi-rh/quasi-rh-exponent-descent/newman_collisions/17_enlarged_state_transport/notes/7_COMPLETE_LAGUERRE_KERNELS_AND_TRIPLE_ZERO_LIMIT_20261010.md),
+[8](../../../quasi-rh/quasi-rh-exponent-descent/newman_collisions/17_enlarged_state_transport/notes/8_RH_STRATEGY_WITH_QUASI_RH_AND_NEXT_ANALYTIC_TARGET_20261010.md)
+(appendix) and [21](../../../quasi-rh/quasi-rh-exponent-descent/newman_collisions/17_enlarged_state_transport/notes/21_COMPLETE_THETA_GAUSSIAN_HERMITE_READOUT_20261011.md);
 and the earlier Claude assessments of the heat lane: the
-[11 October brainstorm](../../../quasi-rh-exponent-descent/brainstorm/NEW_PATHS_FORWARD_BRAINSTORM_CLAUDE_20261011.md),
-its [cross-assessment](../../../quasi-rh-exponent-descent/brainstorm/NEW_PATHS_FORWARD_CROSS_ASSESSMENT_CLAUDE_20261011.md)
-and the [project-17 external review](../../../quasi-rh-exponent-descent/newman_collisions/17_enlarged_state_transport/reviews/12_EXTERNAL_REVIEW_OF_MERGED_PROJECT_CLAUDE_20261011.md).
+[11 October brainstorm](../../../quasi-rh/quasi-rh-exponent-descent/brainstorm/NEW_PATHS_FORWARD_BRAINSTORM_CLAUDE_20261011.md),
+its [cross-assessment](../../../quasi-rh/quasi-rh-exponent-descent/brainstorm/NEW_PATHS_FORWARD_CROSS_ASSESSMENT_CLAUDE_20261011.md)
+and the [project-17 external review](../../../quasi-rh/quasi-rh-exponent-descent/newman_collisions/17_enlarged_state_transport/reviews/12_EXTERNAL_REVIEW_OF_MERGED_PROJECT_CLAUDE_20261011.md).
 
 ## Verdict
 
@@ -62,7 +62,7 @@ and the [project-17 external review](../../../quasi-rh-exponent-descent/newman_c
 
 4. **Card 09's first deliverable already exists, and its meaning is
    automorphic (§3).** The complete two-coset formula is the divisor-pair
-   identity of project-17 [Note 8, eq. (10)](../../../quasi-rh-exponent-descent/newman_collisions/17_enlarged_state_transport/notes/8_RH_STRATEGY_WITH_QUASI_RH_AND_NEXT_ANALYTIC_TARGET_20261010.md).
+   identity of project-17 [Note 8, eq. (10)](../../../quasi-rh/quasi-rh-exponent-descent/newman_collisions/17_enlarged_state_transport/notes/8_RH_STRATEGY_WITH_QUASI_RH_AND_NEXT_ANALYTIC_TARGET_20261010.md).
    Read correctly, it is the Fourier–Whittaker expansion of the
    **non-holomorphic Eisenstein series on the imaginary-axis geodesic**. In
    this rank-two lift your intuition holds in a precise sense: the full

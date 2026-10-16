@@ -13,11 +13,11 @@ retain their original files and numbers.
 | [investigations](../../papers/investigations/chat-histories/chatgpt-codex/README.md) | 16 |
 | [investigations-2](../../papers/investigations-2/chat-histories/README.md) | 0 |
 | [misc](../../papers/misc/chat-histories/chatgpt-codex/README.md) | 0 |
-| [prime-variance-exponents](../../papers/prime-variance-exponents/chat-histories/chatgpt-codex/README.md) | 7 |
-| [quasi-rh-character-amplification](../../papers/quasi-rh-character-amplification/chat-histories/chatgpt-codex/README.md) | 2 |
-| [quasi-rh-exponent-descent](../../papers/quasi-rh-exponent-descent/chat-histories/chatgpt-codex/README.md) | 12 |
-| [shifted-zeta](../../papers/shifted-zeta/chat-histories/chatgpt-codex/README.md) | 6 |
-| [susy-positivity](../../papers/susy-positivity/chat-histories/chatgpt-codex/README.md) | 34 |
+| [prime-variance-exponents](../../papers/quasi-rh/prime-variance-exponents/chat-histories/chatgpt-codex/README.md) | 7 |
+| [quasi-rh-character-amplification](../../papers/quasi-rh/quasi-rh-character-amplification/chat-histories/chatgpt-codex/README.md) | 2 |
+| [quasi-rh-exponent-descent](../../papers/quasi-rh/quasi-rh-exponent-descent/chat-histories/chatgpt-codex/README.md) | 12 |
+| [shifted-zeta](../../papers/weil-positivity/shifted-zeta/chat-histories/chatgpt-codex/README.md) | 6 |
+| [susy-positivity](../../papers/weil-positivity/susy-positivity/chat-histories/chatgpt-codex/README.md) | 34 |
 
 This folder holds the two repository-wide conversations whose subject is
 not confined to one paper project:

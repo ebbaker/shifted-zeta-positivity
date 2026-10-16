@@ -2,7 +2,9 @@
 
 Provenance record for the repository: which files were written for it, which
 were carried over from the private project store, and which are still
-missing. Updated 11 September 2026.
+missing. Updated 11 September 2026; repository paths updated for the
+16 October 2026 relocation of five `papers/` folders (see the
+[relocation record](papers/REORGANIZATION_20261016.md)).
 
 ## Written for the repository
 
@@ -18,26 +20,26 @@ tools/{check_citations,check_repository_hygiene}.py
 tools/{record_Claude_cowork_chat,record_Claude_export_chat}.py   (Claude chat recorders; moved from the root, 13 Oct 2026)
 papers/README.md
 papers/{shifted-zeta,misc}/README.md              (project indexes)
-papers/shifted-zeta/*/{README,STATUS,VERIFICATION_STATUS}.md  (where applicable; six folders)
+papers/weil-positivity/shifted-zeta/*/{README,STATUS,VERIFICATION_STATUS}.md  (where applicable; six folders)
 papers/misc/rh-detector/{README,STATUS}.md
-papers/susy-positivity/{README,PROGRAM_OVERVIEW}.md (shared program guide)
-papers/susy-positivity/background{,_section}.tex + background.pdf
-papers/susy-positivity/brainstorm/continuation-notes/CONTINUATION_BULK_BOUNDARY_SUPERSPACE_20260912.md
-papers/susy-positivity/investigations/{critical-path,wilson-loewner,wilson-lines,loewner,fractional-dimension}/**
-papers/susy-positivity/investigations/previous/** (five complete earlier investigations)
-papers/susy-positivity/{archive/,validation/} (dated relocation maps and verification)
-papers/shifted-zeta/weil-depth/**   (drafted in the repository, Sept 2026, on the branch finite-horizon-weil:
+papers/weil-positivity/susy-positivity/{README,PROGRAM_OVERVIEW}.md (shared program guide)
+papers/weil-positivity/susy-positivity/background{,_section}.tex + background.pdf
+papers/weil-positivity/susy-positivity/brainstorm/continuation-notes/CONTINUATION_BULK_BOUNDARY_SUPERSPACE_20260912.md
+papers/weil-positivity/susy-positivity/investigations/{critical-path,wilson-loewner,wilson-lines,loewner,fractional-dimension}/**
+papers/weil-positivity/susy-positivity/investigations/previous/** (five complete earlier investigations)
+papers/weil-positivity/susy-positivity/{archive/,validation/} (dated relocation maps and verification)
+papers/weil-positivity/shifted-zeta/weil-depth/**   (drafted in the repository, Sept 2026, on the branch finite-horizon-weil:
                         manuscript/, numerics/, archive/, ARCHIVES.md, CONTINUATION.md,
                         BUILD_RECORD.json, SHA256SUMS.txt; its ~122 MB of ball-matrix archives
-                        are kept outside git — LARGE_FILES.md, papers/shifted-zeta/weil-depth/ARCHIVES.md)
-papers/shifted-zeta/storage-depth/**  (drafted 10 Sept 2026 on the branch critical_path by OpenAI models
+                        are kept outside git — LARGE_FILES.md, papers/weil-positivity/shifted-zeta/weil-depth/ARCHIVES.md)
+papers/weil-positivity/shifted-zeta/storage-depth/**  (drafted 10 Sept 2026 on the branch critical_path by OpenAI models
                         (v0.1, v0.2) and rewritten as v0.3 by Claude after review: manuscript/,
                         numerics/ (recursion/, fourier_side/, records/), archive/ (drafts v0.1 and
                         v0.2, reviews, background), ARCHIVES.md, CLAIMS.json, BUILD_RECORD.json,
                         SHA256SUMS.txt; its ~1.6 GB of matrix archives are kept outside git —
-                        LARGE_FILES.md, papers/shifted-zeta/storage-depth/ARCHIVES.md)
-papers/shifted-zeta/first-slab-positivity/{CITATION.cff,.zenodo.json,LICENSE.md,VERIFICATION_STATUS.md}
-papers/shifted-zeta/psi-omega-margin/supplementary/DERIVATION_AND_VERIFICATION.md   (authored clean, 9 Sept)
+                        LARGE_FILES.md, papers/weil-positivity/shifted-zeta/storage-depth/ARCHIVES.md)
+papers/weil-positivity/shifted-zeta/first-slab-positivity/{CITATION.cff,.zenodo.json,LICENSE.md,VERIFICATION_STATUS.md}
+papers/weil-positivity/shifted-zeta/psi-omega-margin/supplementary/DERIVATION_AND_VERIFICATION.md   (authored clean, 9 Sept)
 papers/{shifted-zeta,misc}/*/code/{README.md,requirements.txt}
 verification/README.md
 verification/first-slab/{CHECKLIST.md,PROTOCOL_C1_C2.md,CERTIFICATE_RERUN_20260909.md}
@@ -53,14 +55,14 @@ references/README.md
 
 | Project document | Repository location | Note |
 |---|---|---|
-| `PAPER_first_slab_positivity_preprint_v1.tex` | `papers/shifted-zeta/first-slab-positivity/first_slab_positivity.tex` (+ PDF) | released, v1.0 |
-| `PAPER_psi_omega_margin.tex`, `PAPER_psi_omega_concise.tex` | `papers/shifted-zeta/psi-omega-margin/` (+ PDFs) | **working drafts**, committed 9 Sept 2026; author block filled |
-| `c1_xi_values.py` … `c8_prime_side_chi.py` (recovered) | `papers/shifted-zeta/psi-omega-margin/code/` | 27 Aug recomputation set |
-| `PROGRESS_psi_omega_next_steps.md` | `papers/shifted-zeta/psi-omega-margin/supplementary/NEXT_STEPS.md` | redacted copy (checklist items 1, 4, 5 applied; sign-off pending) |
-| `PAPER_omega_string.tex` | `papers/shifted-zeta/omega-string/` (+ PDF, `fig_density.png` regenerated) | **working draft v5**, committed 8 Sept 2026; author block filled |
-| round-15 verification scripts (reconstructed) | `papers/shifted-zeta/omega-string/{fig_density,v1_identities,v2_thmE_kasahara}.py` | |
-| `PAPER_defect_depth.tex` | `papers/shifted-zeta/defect-depth/` (+ PDF) | **working draft v1**, committed 9 Sept 2026 |
-| `lab_ihara_core.py`, `lab_ihara_experiments.py` | `papers/shifted-zeta/defect-depth/code/` | laboratory record through round 5 |
+| `PAPER_first_slab_positivity_preprint_v1.tex` | `papers/weil-positivity/shifted-zeta/first-slab-positivity/first_slab_positivity.tex` (+ PDF) | released, v1.0 |
+| `PAPER_psi_omega_margin.tex`, `PAPER_psi_omega_concise.tex` | `papers/weil-positivity/shifted-zeta/psi-omega-margin/` (+ PDFs) | **working drafts**, committed 9 Sept 2026; author block filled |
+| `c1_xi_values.py` … `c8_prime_side_chi.py` (recovered) | `papers/weil-positivity/shifted-zeta/psi-omega-margin/code/` | 27 Aug recomputation set |
+| `PROGRESS_psi_omega_next_steps.md` | `papers/weil-positivity/shifted-zeta/psi-omega-margin/supplementary/NEXT_STEPS.md` | redacted copy (checklist items 1, 4, 5 applied; sign-off pending) |
+| `PAPER_omega_string.tex` | `papers/weil-positivity/shifted-zeta/omega-string/` (+ PDF, `fig_density.png` regenerated) | **working draft v5**, committed 8 Sept 2026; author block filled |
+| round-15 verification scripts (reconstructed) | `papers/weil-positivity/shifted-zeta/omega-string/{fig_density,v1_identities,v2_thmE_kasahara}.py` | |
+| `PAPER_defect_depth.tex` | `papers/weil-positivity/shifted-zeta/defect-depth/` (+ PDF) | **working draft v1**, committed 9 Sept 2026 |
+| `lab_ihara_core.py`, `lab_ihara_experiments.py` | `papers/weil-positivity/shifted-zeta/defect-depth/code/` | laboratory record through round 5 |
 | `PAPER_rh_detector.tex` | `papers/misc/rh-detector/` (+ PDF) | **working draft**, committed 9 Sept 2026; separate thread, predates the Suzuki program |
 | `h1`, `h3`, `h4`, `d1`, `d4`, `v1` + `zeros1001.json`, `beta_zeros.json` (regenerated 25 Aug) | `papers/misc/rh-detector/code/` | smoke-tested 9 Sept |
 | `REVIEW_ROUND2_verdict_20260903.md` | `verification/first-slab/reviews/` | |
@@ -69,11 +71,11 @@ references/README.md
 
 | Storage-depth lessons-learned note | `notes/LESSONS_LEARNED_manifest_positivity_design_guidance_20260911.md` | Moved from `Claude outputs/`, preserving the author's pending wording change; exploratory design guidance, not a certified result. |
 
-Storage-depth closeout adds `papers/shifted-zeta/storage-depth/CLOSEOUT.md` and
+Storage-depth closeout adds `papers/weil-positivity/shifted-zeta/storage-depth/CLOSEOUT.md` and
 `numerics/README.md`, updates the current navigation and external archive
 guides, and refreshes the current checksum records. Supersymmetric briefs
 were excluded from that closeout. The later `susy-positivity` work now lives
-under the shared program root `papers/susy-positivity/`. Its positive-factorizations
+under the shared program root `papers/weil-positivity/susy-positivity/`. Its positive-factorizations
 manuscript and supporting notes are in `investigations/previous/positive-factorizations/`,
 with historical drafts and round-4 reports preserved inside that attempt.
 
@@ -88,7 +90,7 @@ with historical drafts and round-4 reports preserved inside that attempt.
 | `ROUND2_full_YM_and_results.md` … `ROUND12_execution_and_a_retraction.md` (physics series, 11 files incl. `ROUND6_unscreened_sweep.md`) | `notes/` | |
 | `BRIEF_three_live_routes.md` | `notes/` | redaction item 3 (named-paper verdict) |
 | `NOTE_offaxis_detector.md`, `NOTE_pencil_and_DBN.md`, `NOTE_n4_sym_seam.md`, `NOTE_4d_anisotropic_cycles.md`, `NOTE_existence_loophole.md`, `NOTE_n4_reformulation.md`, `NOTE_freeboson_Lfunction.md`, `NOTE_riemann_maass_sum_rules.md`, `NOTE_connes_weil_dirichlet_form.md` | `notes/` | |
-| `NOTE_psi_omega_margin.md`, `ROUND13_psi_omega_recheck.md`, `NOTE_oneside_criterion.md`, `ROUND14_concise_draft_check.md` | `notes/` | the substance is summarised in `papers/shifted-zeta/psi-omega-margin/supplementary/DERIVATION_AND_VERIFICATION.md` |
+| `NOTE_psi_omega_margin.md`, `ROUND13_psi_omega_recheck.md`, `NOTE_oneside_criterion.md`, `ROUND14_concise_draft_check.md` | `notes/` | the substance is summarised in `papers/weil-positivity/shifted-zeta/psi-omega-margin/supplementary/DERIVATION_AND_VERIFICATION.md` |
 | `NOTE_omega_string.md`, `ROUND15_…` … `ROUND19_endpoint_length_and_freeze.md` | `notes/` | redaction item 2 (ROUND19 §5 shortlist) |
 | `NOTE_variation_axes.md`, `LAB_ihara_round1.md` … `LAB_ihara_round5.md`, `ROUND6_closeout.md` | `notes/` | redaction item 6 (memo filenames) |
 | `NOTE_preprint_v1_deposit_20260905.md`, `VERIFICATION_STATUS_preprint_v1_20260905.md`, `REPO_*`, `BLUEPRINT_*`, `STATEMENTS_*` | — | project-side copies of repository files |
@@ -97,7 +99,7 @@ with historical drafts and round-4 reports preserved inside that attempt.
 ## Not present anywhere (ran in session workspaces; recover or regenerate)
 
 - Paper 3, round-6 inline runs: amplitude certification, `s₀` five-point scan,
-  unscaled real-ζ suite, envelope bracketing (`papers/shifted-zeta/defect-depth/STATUS.md`, item 5);
+  unscaled real-ζ suite, envelope bracketing (`papers/weil-positivity/shifted-zeta/defect-depth/STATUS.md`, item 5);
   round-4 crossover scans.
 - Paper 2: the Herglotz-peeling reconstruction pipeline (numerics-polish pass).
 - Closed geometry/physics routes: `nb1.py` (Nyman–Beurling); `no_screen.py`,

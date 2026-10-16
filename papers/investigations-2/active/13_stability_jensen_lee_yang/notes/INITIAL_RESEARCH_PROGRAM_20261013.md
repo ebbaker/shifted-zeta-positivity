@@ -43,7 +43,7 @@ convergence to \(H_t\), or a narrower construction proving hyperbolicity of
 H+2H_xs+H_{xx}s^2,\qquad H_x+2H_{xx}s+H_{xxx}s^2.
 \]
 Their discriminants yield the two
-[physical stationary signs](../../../../quasi-rh-exponent-descent/newman_collisions/17_enlarged_state_transport/notes/5_STATIONARY_SIGN_CRITERION_AND_THETA_TARGETS_20261010.md).
+[physical stationary signs](../../../../quasi-rh/quasi-rh-exponent-descent/newman_collisions/17_enlarged_state_transport/notes/5_STATIONARY_SIGN_CRITERION_AND_THETA_TARGETS_20261010.md).
 Full time and predecessor-neighborhood coverage remains necessary.
 
 The spin alternative uses known elementary spins, positive amplitudes
@@ -75,7 +75,7 @@ Taylor sections can lose real-rootedness independently of the full function.
 Continue only after an admissible source operation or a concrete structural
 obstruction is identified. Stop if preservation assumes an already stable
 theta input, or evidence consists only of finite moment agreement. The
-[existing spin scout](../../../../quasi-rh-exponent-descent/newman_collisions/15_lee_yang/notes/1_THETA_MOMENT_ENCLOSURE_AND_FERROMAGNETIC_SPIN_SCREEN_20261010.md)
+[existing spin scout](../../../../quasi-rh/quasi-rh-exponent-descent/newman_collisions/15_lee_yang/notes/1_THETA_MOMENT_ENCLOSURE_AND_FERROMAGNETIC_SPIN_SCREEN_20261010.md)
 already excludes its equal-weight families. Unequal weights remain unproved
 possibilities. Real-zero location and simplicity are separate obligations;
 Lee–Yang alone does not exclude repeated boundary zeros.

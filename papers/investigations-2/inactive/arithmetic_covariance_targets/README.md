@@ -67,11 +67,11 @@ do not manufacture an expanding series of conditional reductions.
 
 ## Starting references
 
-- [Corrected moment-ledger proposal](../../../quasi-rh-exponent-descent/brainstorm/NEW_PATHS_FORWARD_BRAINSTORM_CODEX_20261011.md#3-d2-and-d5-replace-the-universal-target-with-an-exact-moment-ledger)
-- [Quadratic strength and barrier](../../../quasi-rh-exponent-descent/integer_quadratic_lift/notes/2_QUADRATIC_MOMENT_STRENGTH_AND_BARRIER_20261008.md)
-- [Separated-prime checkpoint](../../../quasi-rh-exponent-descent/integer_quadratic_lift/notes/3_SEPARATED_PRIME_PAIR_CHECKPOINT_20261009.md)
-- [Sextic extraction](../../../quasi-rh-exponent-descent/short_families/notes/1_SHORT_FAMILY_DESCENT_REFINEMENT_20261008.md)
-- [Full sextic response ledger](../../../quasi-rh-exponent-descent/short_families/notes/29_DELETION_MODE_COVARIANCE_AND_FULL_RESPONSE_LEDGER_20261009.md)
+- [Corrected moment-ledger proposal](../../../quasi-rh/quasi-rh-exponent-descent/brainstorm/NEW_PATHS_FORWARD_BRAINSTORM_CODEX_20261011.md#3-d2-and-d5-replace-the-universal-target-with-an-exact-moment-ledger)
+- [Quadratic strength and barrier](../../../quasi-rh/quasi-rh-exponent-descent/integer_quadratic_lift/notes/2_QUADRATIC_MOMENT_STRENGTH_AND_BARRIER_20261008.md)
+- [Separated-prime checkpoint](../../../quasi-rh/quasi-rh-exponent-descent/integer_quadratic_lift/notes/3_SEPARATED_PRIME_PAIR_CHECKPOINT_20261009.md)
+- [Sextic extraction](../../../quasi-rh/quasi-rh-exponent-descent/short_families/notes/1_SHORT_FAMILY_DESCENT_REFINEMENT_20261008.md)
+- [Full sextic response ledger](../../../quasi-rh/quasi-rh-exponent-descent/short_families/notes/29_DELETION_MODE_COVARIANCE_AND_FULL_RESPONSE_LEDGER_20261009.md)
 
 ## Working records
 

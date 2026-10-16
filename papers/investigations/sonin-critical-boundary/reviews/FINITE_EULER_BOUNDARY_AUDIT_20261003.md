@@ -9,7 +9,7 @@ specialist refereeing or a priority assessment.
 Reviewed: [finite Euler derivation](../notes/FINITE_EULER_BOUNDARY_IDENTITY_20261003.md),
 the [continuation assignment](../notes/FINITE_EULER_WEIL_COMPARISON_CONTINUATION_20261003.md),
 the manuscript's bounded-transport and boundary-resolvent proofs, and the
-[canonical comparison audit](../../../susy-positivity/investigations/wilson-loewner/arithmetic-storage/notes/SONIN_CANONICAL_COMPARISON_AUDIT_20260929.md).
+[canonical comparison audit](../../../weil-positivity/susy-positivity/investigations/wilson-loewner/arithmetic-storage/notes/SONIN_CANONICAL_COMPARISON_AUDIT_20260929.md).
 The present audit independently re-derived the operator algebra and the
 fixed-place scaling obstruction. No numerical test is used as proof.
 

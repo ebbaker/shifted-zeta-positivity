@@ -10,8 +10,8 @@ from flint import arb, acb, acb_series, ctx
 ROOT = Path.cwd()
 BASELINE_SHA256 = 'e98a91f7c3abe8e8e9302ca3cf4c372329ec84d8668a5777eaf68bf86e0a0e47'
 SOURCE_NOTES = [
-'papers/quasi-rh-exponent-descent/newman_collisions/17_enlarged_state_transport/notes/20_EXPLICIT_THETA_CORRECTION_AND_CORRELATED_PHYSICAL_JETS_20261011.md',
-'papers/quasi-rh-exponent-descent/newman_collisions/17_enlarged_state_transport/notes/22_THETA_CUTOFF_MATCHING_AND_UNIFORM_PHYSICAL_JETS_20261011.md',
+'papers/quasi-rh/quasi-rh-exponent-descent/newman_collisions/17_enlarged_state_transport/notes/20_EXPLICIT_THETA_CORRECTION_AND_CORRELATED_PHYSICAL_JETS_20261011.md',
+'papers/quasi-rh/quasi-rh-exponent-descent/newman_collisions/17_enlarged_state_transport/notes/22_THETA_CUTOFF_MATCHING_AND_UNIFORM_PHYSICAL_JETS_20261011.md',
 'papers/investigations-2/active/01_complete_cutoff_reflection/notes/COMPLETE_REFLECTED_BLOCK_AND_ENDPOINT_OBSTRUCTION_20261013.md',
 ]
 def pack(x):

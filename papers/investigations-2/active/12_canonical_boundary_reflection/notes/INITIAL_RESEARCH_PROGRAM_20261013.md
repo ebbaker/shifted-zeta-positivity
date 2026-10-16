@@ -60,7 +60,7 @@ Begin in the unconditional regime, for example one fixed \(\omega>1\).
 Write the exact kernel, coefficient source, Fredholm interval, determinant
 ratio, canonical pair, and endpoint conditions. Match their normalization
 to the repository's complete-xi
-[Gaussian-Hermite readout](../../../../quasi-rh-exponent-descent/newman_collisions/17_enlarged_state_transport/notes/21_COMPLETE_THETA_GAUSSIAN_HERMITE_READOUT_20261011.md).
+[Gaussian-Hermite readout](../../../../quasi-rh/quasi-rh-exponent-descent/newman_collisions/17_enlarged_state_transport/notes/21_COMPLETE_THETA_GAUSSIAN_HERMITE_READOUT_20261011.md).
 Identify what is actually controlled before selecting a compact comparison
 experiment.
 
@@ -77,7 +77,7 @@ obtained only by assuming unknown innerness, real-zero factorization, or
 nonvanishing of the target function. A safe-shift canonical system alone
 does not establish an RH implication.
 
-The [boundary scout](../../../../quasi-rh-exponent-descent/newman_collisions/11_boundary_extensions/reviews/1_SCOUT_INTERNAL_REVIEW_20261010.md)
+The [boundary scout](../../../../quasi-rh/quasi-rh-exponent-descent/newman_collisions/11_boundary_extensions/reviews/1_SCOUT_INTERNAL_REVIEW_20261010.md)
 already excludes the specified exact passive scalar-resolvent realization:
 an observed pole survives. Numerators and independently derived homogeneous
 boundary pairs remain different possibilities, but boundary uniqueness

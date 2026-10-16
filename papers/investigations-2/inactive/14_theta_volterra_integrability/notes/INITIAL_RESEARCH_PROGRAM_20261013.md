@@ -53,14 +53,14 @@ must enter a proposed Lax or observation intertwiner.
 [Clarkson–Jordaan–Loureiro](https://arxiv.org/html/2504.08522) provide
 orthogonal-polynomial and Volterra context for a polynomial Freud weight.
 Their particular source/string equations are not theta equations. The
-[existing finite matrix scout](../../../../quasi-rh-exponent-descent/newman_collisions/14_integrable_lax/notes/1_MATRIX_HEAT_LIFT_AND_COMPACT_THETA_REMAINDER_20261010.md)
+[existing finite matrix scout](../../../../quasi-rh/quasi-rh-exponent-descent/newman_collisions/14_integrable_lax/notes/1_MATRIX_HEAT_LIFT_AND_COMPACT_THETA_REMAINDER_20261010.md)
 also shows that a universal rank-one heat commutator survives a prescribed
 positive-time collision.
 
 Seek an independently defined Darboux, Christoffel, contiguous or Lax
 transformation preserving actual source preparation and forcing either a
 regular nonzero value-and-slope source identity or the two
-[stationary sign restrictions](../../../../quasi-rh-exponent-descent/newman_collisions/17_enlarged_state_transport/notes/5_STATIONARY_SIGN_CRITERION_AND_THETA_TARGETS_20261010.md).
+[stationary sign restrictions](../../../../quasi-rh/quasi-rh-exponent-descent/newman_collisions/17_enlarged_state_transport/notes/5_STATIONARY_SIGN_CRITERION_AND_THETA_TARGETS_20261010.md).
 A transform must specify its altered measure, spectral observation, endpoints
 and generator. This is the missing arithmetic constraint, not a consequence
 of \(a_n>0\).

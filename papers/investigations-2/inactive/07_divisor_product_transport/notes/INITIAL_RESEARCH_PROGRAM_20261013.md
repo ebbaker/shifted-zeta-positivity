@@ -75,6 +75,6 @@ record the exact mismatch or unchanged envelope.
 ## Starting records
 
 - [Brainstorm card 7](../../../brainstorm/LIFTED_THETA_SYMMETRY_SEARCH_CODEX_20261013.md#7-divisor-transport-and-exact-product-blocks).
-- [Divisor edges and continuum reflection](../../../../quasi-rh-exponent-descent/newman_collisions/notes/25_ENLARGED_STATE_TRANSPORT_CHORD_DYNAMICS_AND_THETA_GLUING_20261010.md).
-- [Actual prime-torus orbit and physical jets](../../../../quasi-rh-exponent-descent/newman_collisions/09_prime_phase_torus/notes/1_ACTUAL_ORBIT_JETS_AND_EXACT_FINITE_HEAT_RESIDUAL_20261010.md).
-- [Fixed-product saddle scope](../../../../quasi-rh-exponent-descent/newman_collisions/17_enlarged_state_transport/notes/14_FIXED_PRODUCT_SADDLES_AND_SIGN_OSCILLATION_20261010.md).
+- [Divisor edges and continuum reflection](../../../../quasi-rh/quasi-rh-exponent-descent/newman_collisions/notes/25_ENLARGED_STATE_TRANSPORT_CHORD_DYNAMICS_AND_THETA_GLUING_20261010.md).
+- [Actual prime-torus orbit and physical jets](../../../../quasi-rh/quasi-rh-exponent-descent/newman_collisions/09_prime_phase_torus/notes/1_ACTUAL_ORBIT_JETS_AND_EXACT_FINITE_HEAT_RESIDUAL_20261010.md).
+- [Fixed-product saddle scope](../../../../quasi-rh/quasi-rh-exponent-descent/newman_collisions/17_enlarged_state_transport/notes/14_FIXED_PRODUCT_SADDLES_AND_SIGN_OSCILLATION_20261010.md).

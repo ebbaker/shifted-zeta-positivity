@@ -180,9 +180,9 @@ inspection, not automatic rejection.
 
 ## Starting references
 
-- [Corrected source-audit proposal](../../../quasi-rh-exponent-descent/brainstorm/NEW_PATHS_FORWARD_BRAINSTORM_CODEX_20261011.md#2-d1-and-d6-audit-the-source-of-the-arithmetic-saving)
-- [Upstream audit and outstanding obligations](../../../quasi-rh-character-amplification/reviews/UPSTREAM_REFLECTION_POISSON_SIEVE_AUDIT_20261009.md)
-- [Conditional theorem and dependency ledger](../../../quasi-rh-character-amplification/notes/GEOMETRY_CONDITIONAL_THEOREM_AND_DEPENDENCY_LEDGER_20261009.md)
+- [Corrected source-audit proposal](../../../quasi-rh/quasi-rh-exponent-descent/brainstorm/NEW_PATHS_FORWARD_BRAINSTORM_CODEX_20261011.md#2-d1-and-d6-audit-the-source-of-the-arithmetic-saving)
+- [Upstream audit and outstanding obligations](../../../quasi-rh/quasi-rh-character-amplification/reviews/UPSTREAM_REFLECTION_POISSON_SIEVE_AUDIT_20261009.md)
+- [Conditional theorem and dependency ledger](../../../quasi-rh/quasi-rh-character-amplification/notes/GEOMETRY_CONDITIONAL_THEOREM_AND_DEPENDENCY_LEDGER_20261009.md)
 
 ## Working records
 

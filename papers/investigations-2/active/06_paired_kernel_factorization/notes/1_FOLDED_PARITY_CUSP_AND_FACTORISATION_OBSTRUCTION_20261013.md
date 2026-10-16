@@ -168,7 +168,7 @@ Jacobian two. Symmetrization of its multiplier gives, exactly,
 No smoothness across the folding point is required in this calculation:
 absolute polynomial moments justify Fubini and Fourier differentiation.
 The result follows from the same normalization as the
-[complete-kernel note](../../../../quasi-rh-exponent-descent/newman_collisions/17_enlarged_state_transport/notes/7_COMPLETE_LAGUERRE_KERNELS_AND_TRIPLE_ZERO_LIMIT_20261010.md).
+[complete-kernel note](../../../../quasi-rh/quasi-rh-exponent-descent/newman_collisions/17_enlarged_state_transport/notes/7_COMPLETE_LAGUERRE_KERNELS_AND_TRIPLE_ZERO_LIMIT_20261010.md).
 
 The same-parity and opposite-parity folded kernels are
 

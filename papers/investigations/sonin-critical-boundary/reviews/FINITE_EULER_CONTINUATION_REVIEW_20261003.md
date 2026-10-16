@@ -8,8 +8,8 @@ analytic audit, not independent specialist refereeing or a priority review.
 Reviewed the [residual certificate](../notes/FINITE_EULER_BOUNDARY_RESIDUAL_CERTIFICATE_20261003.md)
 and [first-prime analysis](../notes/FINITE_EULER_RANK_ONE_ANALYSIS_20261003.md),
 against the [finite Euler identity](../notes/FINITE_EULER_BOUNDARY_IDENTITY_20261003.md).
-The earlier [finite Mellin-defect lemma](../../../susy-positivity/investigations/wilson-loewner/arithmetic-storage/notes/SONIN_FINITE_MELLIN_DEFECT_20260929.md)
-and [prolate certificate](../../../susy-positivity/investigations/wilson-loewner/arithmetic-storage/notes/SONIN_PROLATE_RESOLVENT_CERTIFICATE_20260929.md)
+The earlier [finite Mellin-defect lemma](../../../weil-positivity/susy-positivity/investigations/wilson-loewner/arithmetic-storage/notes/SONIN_FINITE_MELLIN_DEFECT_20260929.md)
+and [prolate certificate](../../../weil-positivity/susy-positivity/investigations/wilson-loewner/arithmetic-storage/notes/SONIN_PROLATE_RESOLVENT_CERTIFICATE_20260929.md)
 were read as inherited inputs; their numerical generators were not rerun.
 
 Manuscript integration check by the parent agent: the finite-product

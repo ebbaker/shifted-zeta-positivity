@@ -11,7 +11,7 @@ a way to enclose that correction using approximate solutions and **full
 Hilbert-space residuals**, together with a quantitative trace-norm bound
 for truncating the source crossing operator. It is different from refining
 the already insufficient mass and first compressed moment in the
-[earlier calculation](../../../susy-positivity/investigations/wilson-loewner/arithmetic-storage/notes/SONIN_COMPACT_FIRST_MOMENT_20260929.md).
+[earlier calculation](../../../weil-positivity/susy-positivity/investigations/wilson-loewner/arithmetic-storage/notes/SONIN_COMPACT_FIRST_MOMENT_20260929.md).
 The general residual identity is elementary numerical functional analysis;
 the application, source nuclear-tail bound, and connection to the actual
 Sonin cutoff are the progress here, with no priority claim.
@@ -176,7 +176,7 @@ At prime \(2\), \(\sigma=1/2\), an admissible transport gap is
 g=(17-12\sqrt2)(1-\|C_\infty\|^2)>0.
 \]
 It can be made numerical with the already certified archimedean gap in
-the earlier [prolate certificate](../../../susy-positivity/investigations/wilson-loewner/arithmetic-storage/notes/SONIN_PROLATE_RESOLVENT_CERTIFICATE_20260929.md).
+the earlier [prolate certificate](../../../weil-positivity/susy-positivity/investigations/wilson-loewner/arithmetic-storage/notes/SONIN_PROLATE_RESOLVENT_CERTIFICATE_20260929.md).
 The bound is small; conditioning must be accounted for in (6), not hidden
 by a successful finite-matrix solve.
 
@@ -192,7 +192,7 @@ For a mean-zero prepared source, a rigorously positive lower endpoint for
 negative interval would settle only that source. A finite-family result
 cannot prove the all-source bound, and mean-zero negativity alone does
 not settle mixed terms with the mean direction. The latter obligation
-already appears in the [finite Mellin-defect lemma](../../../susy-positivity/investigations/wilson-loewner/arithmetic-storage/notes/SONIN_FINITE_MELLIN_DEFECT_20260929.md),
+already appears in the [finite Mellin-defect lemma](../../../weil-positivity/susy-positivity/investigations/wilson-loewner/arithmetic-storage/notes/SONIN_FINITE_MELLIN_DEFECT_20260929.md),
 which is reused here rather than rediscovered.
 
 Equations (6) and (10) are analytic estimates. No numerical values of the

@@ -55,6 +55,6 @@ Author field: **Drafted for Edward Baker**. An acknowledgement describes the sub
 
 The source is one standalone LaTeX file for the built-in editor and PDF preview. It also uses standard LaTeX packages and an embedded bibliography for conventional compilation. Compilation requires no external bibliography, figures, or data. Reproducing the computer-assisted statements requires the accompanying Python certificate package.
 
-The underlying research remains in [arithmetic-storage](../../susy-positivity/investigations/wilson-loewner/arithmetic-storage/PROJECT_SUMMARY.md). No research files were moved or duplicated into manuscript snapshot folders. Follow the repository [large-files policy](../../../LARGE_FILES.md).
+The underlying research remains in [arithmetic-storage](../../weil-positivity/susy-positivity/investigations/wilson-loewner/arithmetic-storage/PROJECT_SUMMARY.md). No research files were moved or duplicated into manuscript snapshot folders. Follow the repository [large-files policy](../../../LARGE_FILES.md).
 
 Prepared with GPT-6 (Codex). Exact serving variant and configured reasoning effort were not exposed.

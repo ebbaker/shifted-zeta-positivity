@@ -30,11 +30,11 @@ The object to preserve is the prepared state, its domain and evolution, and the 
 \qquad \mathcal O_{t,x}\Psi_t=(H_t(x),\partial_xH_t(x)).
 \]
 
-The physical equation is backward heat, \(\partial_tH=-\partial_x^2H\). For a moving projection its time derivative contributes to the intertwining equation. Spatial derivatives also differentiate the projection and basis. The [dimensional-reduction framework](../../quasi-rh-exponent-descent/newman_collisions/notes/14_DIMENSIONAL_REDUCTION_AND_SUPERSYMMETRIC_HEAT_PROGRAM_20261010.md) records these contracts.
+The physical equation is backward heat, \(\partial_tH=-\partial_x^2H\). For a moving projection its time derivative contributes to the intertwining equation. Spatial derivatives also differentiate the projection and basis. The [dimensional-reduction framework](../../quasi-rh/quasi-rh-exponent-descent/newman_collisions/notes/14_DIMENSIONAL_REDUCTION_AND_SUPERSYMMETRIC_HEAT_PROGRAM_20261010.md) records these contracts.
 
 A passive chart change can reveal a symmetry or remove a singular parametrization, while leaving the physical observation unchanged. An active symmetry or intertwiner can produce a new relation among genuine states. Restrictions from actual theta preparation can make that relation more informative than a symmetry of the bulk equations alone. These are distinct operations.
 
-The earlier coordinate work remains constructive. An ordinary double zero is a smooth fold in the time-height plane; its square-root singularity arises when the branches are parametrized by time. A regular chart improves analysis but retains the physical-time tangency. An atlas becomes a proof tool when the source imposes a restriction on that geometry or on the physical value-and-slope pair. See [coordinate invariance and heat folds](../../quasi-rh-exponent-descent/newman_collisions/17_enlarged_state_transport/notes/4_COORDINATE_INVARIANCE_AND_IMPLICIT_HEAT_FOLDS_20261010.md).
+The earlier coordinate work remains constructive. An ordinary double zero is a smooth fold in the time-height plane; its square-root singularity arises when the branches are parametrized by time. A regular chart improves analysis but retains the physical-time tangency. An atlas becomes a proof tool when the source imposes a restriction on that geometry or on the physical value-and-slope pair. See [coordinate invariance and heat folds](../../quasi-rh/quasi-rh-exponent-descent/newman_collisions/17_enlarged_state_transport/notes/4_COORDINATE_INVARIANCE_AND_IMPLICIT_HEAT_FOLDS_20261010.md).
 
 Three useful outcomes for a new identity are:
 
@@ -48,7 +48,7 @@ Three useful outcomes for a new identity are:
    HH_{xx}\le0\quad(H_x=0),\qquad
    H_xH_{xxx}\le0\quad(H_{xx}=0).
    \]
-   Both signs are needed for arbitrary finite multiplicity, on neighborhoods containing the preceding stationary branches. A compatible locally bounded-loss version is another stated target. See the [stationary criterion](../../quasi-rh-exponent-descent/newman_collisions/17_enlarged_state_transport/notes/5_STATIONARY_SIGN_CRITERION_AND_THETA_TARGETS_20261010.md).
+   Both signs are needed for arbitrary finite multiplicity, on neighborhoods containing the preceding stationary branches. A compatible locally bounded-loss version is another stated target. See the [stationary criterion](../../quasi-rh/quasi-rh-exponent-descent/newman_collisions/17_enlarged_state_transport/notes/5_STATIONARY_SIGN_CRITERION_AND_THETA_TARGETS_20261010.md).
 3. **A new arithmetic saving.** Preserve a signed coefficient or covariance relation long enough to improve the actual moment bound, including its unit sectors. An invertible duality can be useful, but its quantitative consequence must be derived.
 
 A bounded success establishes a mechanism on its declared domain. An RH implication additionally requires the necessary time and height coverage, cutoff transitions, tails, and the applicable threshold/no-escape reduction.
@@ -139,7 +139,7 @@ The following cards separate established seeds from the new statement sought. Th
 
 ## 1 Complete reflection across the cutoff boundary
 
-**Established seed.** In [Heat Note 25 section 7](../../quasi-rh-exponent-descent/newman_collisions/notes/25_ENLARGED_STATE_TRANSPORT_CHORD_DYNAMICS_AND_THETA_GLUING_20261010.md),
+**Established seed.** In [Heat Note 25 section 7](../../quasi-rh/quasi-rh-exponent-descent/newman_collisions/notes/25_ENLARGED_STATE_TRANSPORT_CHORD_DYNAMICS_AND_THETA_GLUING_20261010.md),
 \[
 (\mathcal I_Pf)(v)=\frac{\sqrt P}{v}f(P/v)
 \]
@@ -166,7 +166,7 @@ This is the classical [Jacobi transformation](https://dlmf.nist.gov/20.7.E32). T
 \pi^{-1}\mathcal T_{yy}(z-4i,y)
 =-k(0,y)+2it\mathcal T_z(z,y)-(1+iz)\mathcal T(z,y).
 \]
-The actual coefficients are all one, and the endpoint source is retained. See [Heat Note 25 section 6](../../quasi-rh-exponent-descent/newman_collisions/notes/25_ENLARGED_STATE_TRANSPORT_CHORD_DYNAMICS_AND_THETA_GLUING_20261010.md).
+The actual coefficients are all one, and the endpoint source is retained. See [Heat Note 25 section 6](../../quasi-rh/quasi-rh-exponent-descent/newman_collisions/notes/25_ENLARGED_STATE_TRANSPORT_CHORD_DYNAMICS_AND_THETA_GLUING_20261010.md).
 
 **Statement sought.** A relation using the complete modular partner and angular flux that restricts the physical collision readout. Classical modular heat in \(r,y\) and Newman multiplication by \(u^2\) are different evolutions; their intertwining defect must be calculated. The genuine \(H\) is obtained through the declared differential insertion and boundary terms, not by setting \(H=\mathcal T\).
 
@@ -181,7 +181,7 @@ The actual coefficients are all one, and the endpoint source is retained. See [H
 A_{\rm bulk}=B^*B+e_1e_1^*>0,
 \qquad q=A_{\rm bulk}^{-1}e_1e^{i\theta}.
 \]
-Hidden coordinate blocks can be eliminated without assuming that the physical readout is nonzero. This fits the exact block-elimination principle in [Dusson, Sigal and Stamm Theorem 1.2](https://arxiv.org/html/2105.02058v1#S1), while the specific arithmetic construction is in [Heat Note 25 section 3](../../quasi-rh-exponent-descent/newman_collisions/notes/25_ENLARGED_STATE_TRANSPORT_CHORD_DYNAMICS_AND_THETA_GLUING_20261010.md).
+Hidden coordinate blocks can be eliminated without assuming that the physical readout is nonzero. This fits the exact block-elimination principle in [Dusson, Sigal and Stamm Theorem 1.2](https://arxiv.org/html/2105.02058v1#S1), while the specific arithmetic construction is in [Heat Note 25 section 3](../../quasi-rh/quasi-rh-exponent-descent/newman_collisions/notes/25_ENLARGED_STATE_TRANSPORT_CHORD_DYNAMICS_AND_THETA_GLUING_20261010.md).
 
 **Statement sought.** A symmetry of the effective source response, or an adjoint identity, producing the source covector from the two physical observation covectors plus prescribed edge constraints and a controlled residual. Existing certificates have the form
 \[
@@ -203,7 +203,7 @@ For the existing realified finite normalization, the paid criterion is \(R+\eta\
 \[
 \mathcal A_t(k,\ell)=\int e^{iku}\psi_t(u+\ell/2)\psi_t(u-\ell/2)\,du
 \]
-has \(\mathcal A_t(k,0)=2H_t(k)\) and generator \(-\partial_k^2+\ell^2/4\). Its transverse curvature exposes the Fourier transform of the complete gradient density. The score insertion gives an exact relation among \(\mathcal A,\mathcal A_k,\mathcal A_{kk}\) and the correlated quantity \(D\); see [Heat Note 25 sections 4 and 6](../../quasi-rh-exponent-descent/newman_collisions/notes/25_ENLARGED_STATE_TRANSPORT_CHORD_DYNAMICS_AND_THETA_GLUING_20261010.md).
+has \(\mathcal A_t(k,0)=2H_t(k)\) and generator \(-\partial_k^2+\ell^2/4\). Its transverse curvature exposes the Fourier transform of the complete gradient density. The score insertion gives an exact relation among \(\mathcal A,\mathcal A_k,\mathcal A_{kk}\) and the correlated quantity \(D\); see [Heat Note 25 sections 4 and 6](../../quasi-rh/quasi-rh-exponent-descent/newman_collisions/notes/25_ENLARGED_STATE_TRANSPORT_CHORD_DYNAMICS_AND_THETA_GLUING_20261010.md).
 
 **Statement sought.** A theta-specific reflection, gluing, or nonlocal closure that constrains the signed gradient overlap jointly with the physical observation. The observed slice evolves autonomously, so transverse coordinates do not automatically feed a new inequality back into it.
 
@@ -215,7 +215,7 @@ has \(\mathcal A_t(k,0)=2H_t(k)\) and generator \(-\partial_k^2+\ell^2/4\). Its 
 
 ## 5 Metaplectic covariance and a regular coordinate atlas
 
-**Established seed.** Wigner, Husimi, Bargmann, and chord descriptions reorganize the same genuine state and its coherent interference. The [Husimi scout](../../quasi-rh-exponent-descent/newman_collisions/13_microlocal_phase_space/notes/1_HUSIMI_READOUT_DRIFT_AND_COHERENT_INTERFERENCE_20261010.md) derives the entire generator, including the negative momentum diffusion, drift, and contact term, and its exact reconstructed observations. [De Gosson's metaplectic/Radon analysis, section 3](https://arxiv.org/html/2204.07106v1#S3) supplies a primary covariance and reconstruction precedent.
+**Established seed.** Wigner, Husimi, Bargmann, and chord descriptions reorganize the same genuine state and its coherent interference. The [Husimi scout](../../quasi-rh/quasi-rh-exponent-descent/newman_collisions/13_microlocal_phase_space/notes/1_HUSIMI_READOUT_DRIFT_AND_COHERENT_INTERFERENCE_20261010.md) derives the entire generator, including the negative momentum diffusion, drift, and contact term, and its exact reconstructed observations. [De Gosson's metaplectic/Radon analysis, section 3](https://arxiv.org/html/2204.07106v1#S3) supplies a primary covariance and reconstruction precedent.
 
 For \(D_r\psi(u)=e^{r/2}\psi(e^ru)\), direct substitution gives
 \(\mathcal A_{D_r\psi}(k,\ell)=\mathcal A_\psi(e^{-r}k,e^r\ell)\).
@@ -244,7 +244,7 @@ The existing normalization gives
 (H_t^{(j+1)})^2-H_t^{(j)}H_t^{(j+2)}
 =\widehat J_{j,t}(2x).
 \]
-The stationary targets use \(j=0,1\). See [complete Laguerre kernels](../../quasi-rh-exponent-descent/newman_collisions/17_enlarged_state_transport/notes/7_COMPLETE_LAGUERRE_KERNELS_AND_TRIPLE_ZERO_LIMIT_20261010.md) and its primary comparison with [Csordas](https://arxiv.org/abs/1309.0055).
+The stationary targets use \(j=0,1\). See [complete Laguerre kernels](../../quasi-rh/quasi-rh-exponent-descent/newman_collisions/17_enlarged_state_transport/notes/7_COMPLETE_LAGUERRE_KERNELS_AND_TRIPLE_ZERO_LIMIT_20261010.md) and its primary comparison with [Csordas](https://arxiv.org/abs/1309.0055).
 
 **Statement sought.** Derive from theta arithmetic a convergent autocorrelation factorization of the relevant kernels, or a weaker factorization conditioned on the physical stationary sets. A global autocorrelation representation would make the Fourier transforms nonnegative. The signed \(J_1\) source must be allowed: pointwise positivity is the wrong condition and is already false for the genuine kernel at recorded points.
 
@@ -261,7 +261,7 @@ The stationary targets use \(j=0,1\). See [complete Laguerre kernels](../../quas
 [\mathsf H,\mathsf S_p]=\log p\,\mathsf S_p,
 \qquad B_pq=0,
 \]
-with \(\mathsf H e_n=(\log n)e_n\). The fixed edge weights and anchor select the actual state. Arbitrary multiplicative twists commute with the bulk diagonal evolution but fail those same edge equations. Complete pair sums retain both phase-difference and reflected phase-sum channels. See [Heat Note 25 section 2](../../quasi-rh-exponent-descent/newman_collisions/notes/25_ENLARGED_STATE_TRANSPORT_CHORD_DYNAMICS_AND_THETA_GLUING_20261010.md) and the [prime-torus program](../../quasi-rh-exponent-descent/newman_collisions/09_prime_phase_torus/README.md).
+with \(\mathsf H e_n=(\log n)e_n\). The fixed edge weights and anchor select the actual state. Arbitrary multiplicative twists commute with the bulk diagonal evolution but fail those same edge equations. Complete pair sums retain both phase-difference and reflected phase-sum channels. See [Heat Note 25 section 2](../../quasi-rh/quasi-rh-exponent-descent/newman_collisions/notes/25_ENLARGED_STATE_TRANSPORT_CHORD_DYNAMICS_AND_THETA_GLUING_20261010.md) and the [prime-torus program](../../quasi-rh/quasi-rh-exponent-descent/newman_collisions/09_prime_phase_torus/README.md).
 
 **Statement sought.** An arithmetic intertwiner relating divisor transport to reflection, or a relation coupling the product and ratio channels that survives the physical common-height orbit. Within an exact product block \(p=nm\), exchanging \(n,m\) is an exact reflection of the centered logarithmic divisor coordinate. That exchange symmetry is already built into the paired sum; useful new information must constrain an additional signed correlation.
 
@@ -302,7 +302,7 @@ This exact change of lattice exposes two parity cosets and a coupled positive qu
 
 ## 10 Gaussian-Hermite coefficients and source-selected correlations
 
-**Established seed.** The complete theta Gaussian lift in [project 17 Note 21](../../quasi-rh-exponent-descent/newman_collisions/17_enlarged_state_transport/notes/21_COMPLETE_THETA_GAUSSIAN_HERMITE_READOUT_20261011.md) takes \(f(Z)=H_0(x+i\sqrt{2t}Z)\), with \(Z\) standard normal. Four real Hermite coefficients give exactly
+**Established seed.** The complete theta Gaussian lift in [project 17 Note 21](../../quasi-rh/quasi-rh-exponent-descent/newman_collisions/17_enlarged_state_transport/notes/21_COMPLETE_THETA_GAUSSIAN_HERMITE_READOUT_20261011.md) takes \(f(Z)=H_0(x+i\sqrt{2t}Z)\), with \(Z\) standard normal. Four real Hermite coefficients give exactly
 \[
 H=m_0,\quad H_x=m_1/s,\quad H_{xx}=-m_2/s^2,
 \quad H_{xxx}=-m_3/s^3,\qquad s=\sqrt{2t}.
@@ -311,7 +311,7 @@ The entire completed source, its Gaussian majorant and all normalizers are fixed
 
 **Statement sought.** A modular, reflection or arithmetic relation among the first coefficients, or between them and a controlled high-order tail, stronger than the generic positive Parseval norm. In the zero-loss case the desired stationary signs become \(m_0m_2\ge0\) when \(m_1=0\), and \(m_1m_3\ge0\) when \(m_2=0\).
 
-**First test.** Transport one identity from cards 2 or 9 through the complete Gaussian transform. Print its coefficient relation and boundary/growth payment. Compare with the earlier [Fock observation kernel](../../quasi-rh-exponent-descent/newman_collisions/02_bargmann_fock/README.md): a generic positive norm leaves a large blind subspace, so the relation must restrict the actual coefficient sequence.
+**First test.** Transport one identity from cards 2 or 9 through the complete Gaussian transform. Print its coefficient relation and boundary/growth payment. Compare with the earlier [Fock observation kernel](../../quasi-rh/quasi-rh-exponent-descent/newman_collisions/02_bargmann_fock/README.md): a generic positive norm leaves a large blind subspace, so the relation must restrict the actual coefficient sequence.
 
 **Scope.** The displayed chart requires \(t>0\); the \(t=0\) limit needs the corresponding direct jets or justified rescaling. Moving \(s\), normalization, and source dependence must be differentiated when deriving time identities. A finite coefficient relation is useful only with its omitted tail paid.
 
@@ -319,7 +319,7 @@ The entire completed source, its Gaussian majorant and all normalizers are fixed
 
 ## 11 Supersymmetric identities and a theta Stein kernel
 
-**Established seed.** The [SUSY scout](../../quasi-rh-exponent-descent/newman_collisions/03_susy_dirac_hodge/README.md) prepares \(g_t=\sqrt{\rho_t}\), \(W_t=-\log\rho_t\), and \(B_t=\partial_u+W_t'/2\). Its actual moving ground state and Ward identities are exact, while linear Gaussian-score closure is excluded. The positive SUSY Hamiltonian is not the Newman time generator.
+**Established seed.** The [SUSY scout](../../quasi-rh/quasi-rh-exponent-descent/newman_collisions/03_susy_dirac_hodge/README.md) prepares \(g_t=\sqrt{\rho_t}\), \(W_t=-\log\rho_t\), and \(B_t=\partial_u+W_t'/2\). Its actual moving ground state and Ward identities are exact, while linear Gaussian-score closure is excluded. The positive SUSY Hamiltonian is not the Newman time generator.
 
 A useful additional dictionary follows from the classical [Stein integration-by-parts formula, Saumard section 2](https://arxiv.org/html/1804.03926v3#S2). For the even normalized theta density, define
 \[
@@ -345,7 +345,7 @@ This avoids the excluded assumption of a linear score, but leaves the substantiv
 
 **First test.** Derive the complete theta representation of \(\tau_t\rho_t\), then its modular or paired-source transformation. Compare the proposed signed relation with a smooth positive collision control. A small Gaussian-score discrepancy or positivity of \(\tau_t\) alone does not imply the displayed signs. Treat \(x=0\) directly; it has \(H_t(0)>0\).
 
-**Scope.** \(\tau_t\) changes with time and its time derivative must enter any evolution or intertwining argument. This is a weighted integral insertion, not finite polynomial closure. The [cohomological quartet obstruction](../../quasi-rh-exponent-descent/newman_collisions/04_cohomological_localization/README.md) applies to its specified regular closed completion; a different complex or insertion family needs a new source/reduction proof.
+**Scope.** \(\tau_t\) changes with time and its time derivative must enter any evolution or intertwining argument. This is a weighted integral insertion, not finite polynomial closure. The [cohomological quartet obstruction](../../quasi-rh/quasi-rh-exponent-descent/newman_collisions/04_cohomological_localization/README.md) applies to its specified regular closed completion; a different complex or insertion family needs a new source/reduction proof.
 
 **Readiness.** A concrete nonlocal operator seed for cards 4 and 6. Its dictionary is available now; its theta-specific sign is a separate research task.
 
@@ -361,7 +361,7 @@ Its unconditional construction is for \(\omega>1\). Inner-function criteria and 
 
 **First test.** Work in the unconditional \(\omega>1\) regime. Write the exact arithmetic kernel, truncation endpoints, canonical pair, and map to the repository's xi normalization. Determine which physical source or observation it controls, and calculate the Newman-heat compatibility defect. State precisely what new estimate would be needed before taking smaller \(\omega\).
 
-**Scope.** The [boundary scout](../../quasi-rh-exponent-descent/newman_collisions/11_boundary_extensions/README.md) rejects an exact identification of the entire heat function with a nonzero passive scalar resolvent because an observed pole survives. A numerator/source construction or homogeneous boundary pair is a distinct possibility. Constructing a positive canonical system from an already assumed real-zero product would assume the crucial input. Boundary uniqueness helps only after the actual observation has been proved to be its Cauchy data.
+**Scope.** The [boundary scout](../../quasi-rh/quasi-rh-exponent-descent/newman_collisions/11_boundary_extensions/README.md) rejects an exact identification of the entire heat function with a nonzero passive scalar resolvent because an observed pole survives. A numerator/source construction or homogeneous boundary pair is a distinct possibility. Constructing a positive canonical system from an already assumed real-zero product would assume the crucial input. Boundary uniqueness helps only after the actual observation has been proved to be its Cauchy data.
 
 **Readiness.** A serious arithmetic reflection lead, with a high-cost missing transfer theorem. Its unconditional range is suitable for a comparison experiment, not an RH conclusion.
 
@@ -382,13 +382,13 @@ For a spin test, keep unequal positive amplitudes \(a_i\) and fixed base ferroma
 
 **Scope and normalization.** Ordinary total nonnegativity of the translation kernel \(\rho(u-v)\), often called source-density PF\(_\infty\), is the wrong global target. [Schoenberg's reciprocal-transform theorem as stated in Belton–Guillot–Khare–Putinar, Theorem 8.2](https://math.iisc.ac.in/~khare/papers/TN-note.pdf) makes its bilateral Laplace transform zero-free on its defining strip, including the Fourier axis. This conflicts with the known real Fourier zeros of the genuine source. A properly normalized **coefficient sequence**, Jensen polynomial, or the paired kernels of card 6 is a different object. Ordinary positive Hankel moment matrices are shared by positive collision controls.
 
-The [Lee–Yang scout](../../quasi-rh-exponent-descent/newman_collisions/15_lee_yang/README.md) already excludes two equal-weight spin families by rigorous low moments. Unequal weights and other positive interactions remain possible architectures, but their realization of the genuine source is unproved.
+The [Lee–Yang scout](../../quasi-rh/quasi-rh-exponent-descent/newman_collisions/15_lee_yang/README.md) already excludes two equal-weight spin families by rigorous low moments. Unequal weights and other positive interactions remain possible architectures, but their realization of the genuine source is unproved.
 
 **Readiness.** A potentially global route with an RH-strength preparation theorem missing. The next useful result is an explicit admissible preparation or a precise obstruction, not a general appeal to stability or total positivity.
 
 ## 14 Orthogonal-polynomial Volterra flow and integrable transformations
 
-**Established seed.** The [integrable matrix scout](../../quasi-rh-exponent-descent/newman_collisions/14_integrable_lax/README.md) gives an exact finite heat matrix dictionary and a joint compact approximation payment for genuine theta moments. The rank-one Calogero–Moser commutator is shared by a polynomial with a prescribed positive-time collision.
+**Established seed.** The [integrable matrix scout](../../quasi-rh/quasi-rh-exponent-descent/newman_collisions/14_integrable_lax/README.md) gives an exact finite heat matrix dictionary and a joint compact approximation payment for genuine theta moments. The rank-one Calogero–Moser commutator is shared by a polynomial with a prescribed positive-time collision.
 
 Another exact lift uses the monic orthogonal polynomials for the actual even measure \(e^{tu^2}\Phi_e(u)\,du\). Write
 \[
@@ -414,19 +414,19 @@ Integration by parts on the polynomial core also gives the score/string relation
 
 ## 15 Adelic compatibility and the automorphic spectral channel
 
-**Established seed.** The [adelic scout](../../quasi-rh-exponent-descent/newman_collisions/08_adelic_local_models/README.md) reproduces all composite heat weights using one shared Gaussian coordinate. In its unramified class, triviality on diagonal positive rationals forces all local prime factors to share one archimedean exponent. [Tate's original thesis, sections 2.3 and 4.2–4.4](https://sites.math.rutgers.edu/~alexk/2023S572/Tate1950.pdf) supplies the local/global Fourier and Poisson framework. It does not give an observation inequality.
+**Established seed.** The [adelic scout](../../quasi-rh/quasi-rh-exponent-descent/newman_collisions/08_adelic_local_models/README.md) reproduces all composite heat weights using one shared Gaussian coordinate. In its unramified class, triviality on diagonal positive rationals forces all local prime factors to share one archimedean exponent. [Tate's original thesis, sections 2.3 and 4.2–4.4](https://sites.math.rutgers.edu/~alexk/2023S572/Tate1950.pdf) supplies the local/global Fourier and Poisson framework. It does not give an observation inequality.
 
 **Statement sought.** A global Fourier or source compatibility relation yielding a signed constraint on the actual common-height orbit, or a valid boundary pairing for the exact automorphic heat channel. Selecting one common exponent restricts the admissible family; it does not exclude collisions in that family.
 
 **First test.** Construct one finite-place/real-place coupled identity retaining every permitted composite, beginning with 6, and both reflected carriers. Compare its physical value and slope before and after the declared transformation. Identify an additional covariance that fails for independent local twists. In the automorphic version, calculate the completion and heat commutator first and specify the pairing on the selected spectral slice.
 
-**Scope.** The [automorphic scout](../../quasi-rh-exponent-descent/newman_collisions/07_automorphic_scattering/README.md) already obtains exact zero-time xi extraction, but ordinary modular Laplacian heat does not intertwine and the critical-line xi channel lies off the unitary modular spectral slice. A positive modular Laplacian therefore supplies no automatic positivity for the required response. At positive Newman time the Gaussian superposition is not one character, and a divergent Dirichlet series cannot be made into an Euler product by an unjustified interchange.
+**Scope.** The [automorphic scout](../../quasi-rh/quasi-rh-exponent-descent/newman_collisions/07_automorphic_scattering/README.md) already obtains exact zero-time xi extraction, but ordinary modular Laplacian heat does not intertwine and the critical-line xi channel lies off the unitary modular spectral slice. A positive modular Laplacian therefore supplies no automatic positivity for the required response. At positive Newman time the Gaussian superposition is not one character, and a divergent Dirichlet series cannot be made into an Euler product by an unjustified interchange.
 
 **Readiness.** A framework for genuine state selection and a possible companion to cards 3, 7 and 8. A new quantitative physical identity is still needed.
 
 ## 16 Radial geometry and reflected sine moments
 
-**Established seed.** The genuine theta density has a strictly positive three-dimensional radial inverse on the recorded time interval \(0\le t\le1/20\), with an exact multiplication-minus-Volterra generator. [The radial continuation](../../quasi-rh-exponent-descent/newman_collisions/12_radial_bessel/README.md) also gives explicit sine collision jets and source-dependent obstructions to positive Gaussian mixtures and unlimited positive radial dimension.
+**Established seed.** The genuine theta density has a strictly positive three-dimensional radial inverse on the recorded time interval \(0\le t\le1/20\), with an exact multiplication-minus-Volterra generator. [The radial continuation](../../quasi-rh/quasi-rh-exponent-descent/newman_collisions/12_radial_bessel/README.md) also gives explicit sine collision jets and source-dependent obstructions to positive Gaussian mixtures and unlimited positive radial dimension.
 
 **Statement sought.** A theta-specific relation among reflected radial or sine-moment channels that pays the nonlocal generator term and yields the required conditional sign. A geometry that makes the cancellation visible can be useful even though the general positive cone is not invariant.
 

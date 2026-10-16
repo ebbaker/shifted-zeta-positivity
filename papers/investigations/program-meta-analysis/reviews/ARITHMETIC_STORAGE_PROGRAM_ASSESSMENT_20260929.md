@@ -23,13 +23,13 @@ I would therefore increase confidence in this branch as a well-posed research pr
 | Test a proposed method and stop it if it fails | The specified degree-20/24 trial space provably misses most of the relevant trace | Eliminates an ineffective approximation choice while preserving useful tools. It is not a negative Weil direction. |
 | Develop a comparison beyond finite support | No signed all-source estimate or arithmetic fixed-test limit yet | This remains the decisive unmet requirement. |
 
-The [canonical audit](../../../susy-positivity/investigations/wilson-loewner/arithmetic-storage/notes/SONIN_CANONICAL_COMPARISON_AUDIT_20260929.md) is particularly important. Its positive form is independently constructed; it is not defined by taking the square root of the unknown Weil form. The compressed trace-class factorization also avoids an invalid inference from Hilbert–Schmidt regularity to a stronger trace-class statement. The stronger smooth statement is treated separately.
+The [canonical audit](../../../weil-positivity/susy-positivity/investigations/wilson-loewner/arithmetic-storage/notes/SONIN_CANONICAL_COMPARISON_AUDIT_20260929.md) is particularly important. Its positive form is independently constructed; it is not defined by taking the square root of the unknown Weil form. The compressed trace-class factorization also avoids an invalid inference from Hilbert–Schmidt regularity to a stronger trace-class statement. The stronger smooth statement is treated separately.
 
 There is a genuine mathematical foundation for investigating this comparison. Connes–Consani establish the archimedean Sonin trace identity and a short-support dominance theorem with additional transform vanishings. Their theorem does not establish dominance for the present length-1 family. CCM establish finite-place stability of Sonin spaces, while explicitly retaining dependence of the inner product on the places. Neither result supplies the missing general arithmetic inequality. See [Connes–Consani, Theorems 1 and 7 and Appendix C](https://arxiv.org/html/2006.13771v1), and [CCM, Theorem 4.6 and Section 4.8](https://arxiv.org/html/2310.18423v2#S4.SS7).
 
 ## What the latest numbers do and do not tell us
 
-The [project summary](../../../susy-positivity/investigations/wilson-loewner/arithmetic-storage/PROJECT_SUMMARY.md) is appropriately cautious. Its latest accomplishment is accurate scalar archimedean smoothing, including the transformed input needed by the Galerkin error identity:
+The [project summary](../../../weil-positivity/susy-positivity/investigations/wilson-loewner/arithmetic-storage/PROJECT_SUMMARY.md) is appropriately cautious. Its latest accomplishment is accurate scalar archimedean smoothing, including the transformed input needed by the Galerkin error identity:
 
 | Quantity | Even source | Odd source |
 |---|---:|---:|
@@ -40,7 +40,7 @@ The [project summary](../../../susy-positivity/investigations/wilson-loewner/ari
 
 The four scalar intervals have widths below `10^-5`. The complete finite-place trace remains very broadly enclosed because `h0` does not include the inverse compressed metric. No complete arithmetic residual has yet been evaluated. The negative epsilon scalars do not decide that residual's sign.
 
-The important lesson from the trace-capture failure is that accurate projection onto the correct space does not ensure that the chosen vectors capture the source response. Higher numerical precision cannot repair this fixed trial space. The full trace scale now makes a better trial choice assessable. See the [scalar calculation](../../../susy-positivity/investigations/wilson-loewner/arithmetic-storage/notes/SONIN_SCALAR_TRACE_CALCULATION_20260929.md), Section 5, and its [review](../../../susy-positivity/investigations/wilson-loewner/arithmetic-storage/reviews/SONIN_SCALAR_TRACE_REVIEW_20260929.md).
+The important lesson from the trace-capture failure is that accurate projection onto the correct space does not ensure that the chosen vectors capture the source response. Higher numerical precision cannot repair this fixed trial space. The full trace scale now makes a better trial choice assessable. See the [scalar calculation](../../../weil-positivity/susy-positivity/investigations/wilson-loewner/arithmetic-storage/notes/SONIN_SCALAR_TRACE_CALCULATION_20260929.md), Section 5, and its [review](../../../weil-positivity/susy-positivity/investigations/wilson-loewner/arithmetic-storage/reviews/SONIN_SCALAR_TRACE_REVIEW_20260929.md).
 
 These two sources are calibration probes, not established weak directions of the constrained Weil form. A successful comparison on them would remain finite-dimensional. For this real even/odd pair, symmetry can eliminate the mixed entry; for broader families, mixed entries or an exact symmetry argument must be controlled. None of this supplies an all-source theorem. The earlier unrestricted weak vectors also cannot simply be relabeled as pole-neutral sources.
 
@@ -48,7 +48,7 @@ These two sources are calibration probes, not established weak directions of the
 
 For the complete residual, adding a place at fixed support changes `B_S` and `R_(S,L)` by opposite amounts while leaving `Q_L` fixed. That identity is useful bookkeeping, but cannot create positivity. The partial residual law is more informative for a possible induction: it compares a signed, source-dependent translation covariance against the new prime's full prime-power contribution. Its sign remains unproved.
 
-The [place-addition note](../../../susy-positivity/investigations/wilson-loewner/arithmetic-storage/notes/SONIN_PLACE_ADDITION_AND_ERROR_CONTROL_20260929.md), equations (A5), (A9), (A10), and (A14), makes the distinction precise. Its two-dimensional control allows both signs under the generic operator hypotheses. A successful next inequality must therefore use something specific to Sonin geometry and the arithmetic source, beyond positive local factors, commuting convolutions, and a positive compressed metric.
+The [place-addition note](../../../weil-positivity/susy-positivity/investigations/wilson-loewner/arithmetic-storage/notes/SONIN_PLACE_ADDITION_AND_ERROR_CONTROL_20260929.md), equations (A5), (A9), (A10), and (A14), makes the distinction precise. Its two-dimensional control allows both signs under the generic operator hypotheses. A successful next inequality must therefore use something specific to Sonin geometry and the arithmetic source, beyond positive local factors, commuting convolutions, and a positive compressed metric.
 
 There are also two separate extension problems:
 

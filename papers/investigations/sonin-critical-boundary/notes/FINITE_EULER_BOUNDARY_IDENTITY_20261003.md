@@ -143,7 +143,7 @@ In physical positive-axis coordinates each fixed summand has smooth kernel
 \(a=\log(d/n)\), hence is compact. Compactness is not needed to deduce
 the transported gap. Nor does it imply \(C\) is Hilbert--Schmidt: the
 one-prime critical example in the
-[place-addition note, Section 9](../../../susy-positivity/investigations/wilson-loewner/arithmetic-storage/notes/SONIN_PLACE_ADDITION_AND_ERROR_CONTROL_20260929.md)
+[place-addition note, Section 9](../../../weil-positivity/susy-positivity/investigations/wilson-loewner/arithmetic-storage/notes/SONIN_PLACE_ADDITION_AND_ERROR_CONTROL_20260929.md)
 is not. No trace of unsmoothed \(C^2\) is taken below.
 
 ## 3. Trace ideals and the arithmetic bulk
@@ -292,7 +292,7 @@ No identification of the finite symbol with the constant global endpoint
 symbol is made; a finite Euler product has no such functional equation.
 
 To reconcile with the
-[canonical audit, Sections 4--6](../../../susy-positivity/investigations/wilson-loewner/arithmetic-storage/notes/SONIN_CANONICAL_COMPARISON_AUDIT_20260929.md),
+[canonical audit, Sections 4--6](../../../weil-positivity/susy-positivity/investigations/wilson-loewner/arithmetic-storage/notes/SONIN_CANONICAL_COMPARISON_AUDIT_20260929.md),
 put \(G_S=\mathscr D^*\mathscr D\), \(A_F=C_F^*C_F\), and
 \[
 \Delta_S[F]=\operatorname{Tr}_{\mathcal K_\infty}
@@ -367,7 +367,7 @@ negative complete Weil form.
 ## 7. One next inequality: domination by the mean functional
 
 The mean-only proposal and its mixed-term obligation already appear in
-the [finite Mellin-defect note, Sections 3--4](../../../susy-positivity/investigations/wilson-loewner/arithmetic-storage/notes/SONIN_FINITE_MELLIN_DEFECT_20260929.md).
+the [finite Mellin-defect note, Sections 3--4](../../../weil-positivity/susy-positivity/investigations/wilson-loewner/arithmetic-storage/notes/SONIN_FINITE_MELLIN_DEFECT_20260929.md).
 The formulation here connects that existing target to the newly audited
 finite Euler boundary representation; it is not a new comparison conjecture.
 
@@ -478,7 +478,7 @@ The diagnostic has no certified correction sign; the comparison remains open.
 The calculations above contain no sums over zeta zeros. Only after a valid
 all-support comparison is proved would the pole-neutral Weil criterion
 give the eventual RH implication. The earlier
-[moving-tail criteria](../../../susy-positivity/investigations/wilson-loewner/arithmetic-storage/notes/SONIN_DIRECT_PLACE_TAIL_CRITERIA_20260929.md)
+[moving-tail criteria](../../../weil-positivity/susy-positivity/investigations/wilson-loewner/arithmetic-storage/notes/SONIN_DIRECT_PLACE_TAIL_CRITERIA_20260929.md)
 still require estimates along the growing family; the older
-[direct-limit continuation](../../../susy-positivity/investigations/wilson-loewner/arithmetic-storage/notes/SONIN_DIRECT_LIMIT_CONTINUATION_20260929.md)
+[direct-limit continuation](../../../weil-positivity/susy-positivity/investigations/wilson-loewner/arithmetic-storage/notes/SONIN_DIRECT_LIMIT_CONTINUATION_20260929.md)
 is historical, including its then-open trace-finiteness question.

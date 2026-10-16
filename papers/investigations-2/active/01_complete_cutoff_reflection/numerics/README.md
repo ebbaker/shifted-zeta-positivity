@@ -51,3 +51,18 @@ reconstructed from the already certified baseline are identified as such;
 they do not constitute a cheaper independent remainder calculation.
 The checker requires `python-flint 0.9.0`, uses 256-bit outward balls, and
 hash-checks the shared baseline record. Replay instructions are in the note.
+
+## Path-only update, 16 October 2026
+
+Prepared for Edward Baker with LLM assistance; Claude Opus 5.5
+(`claude-opus-5-5`), Claude Cowork, reasoning effort max.
+
+The quasi-RH exponent-descent folder moved to
+`papers/quasi-rh/quasi-rh-exponent-descent/`, so the note paths that
+`check_complete_reflected_block.py` and `check_matched_remainder_01.py` read
+and hash were updated, and nothing else. The retained records keep the earlier
+paths and checker hashes; two of the hashed notes in this investigation also
+changed (link repairs only). Fresh replays before and after the change agree
+in every numerical field; only source hashes, the recorded input paths and
+runtimes differ (see the [relocation
+record](../../../../REORGANIZATION_20261016.md)).

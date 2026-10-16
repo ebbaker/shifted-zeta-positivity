@@ -11,16 +11,16 @@ Original research and review files remain in the Wilson–Loewner arithmetic-sto
 
 | Manuscript material | Principal research source |
 |---|---|
-| Phase conventions, bounded causal transport, and strong endpoint collapse | [Regularized positive family](../../../susy-positivity/investigations/wilson-loewner/arithmetic-storage/notes/SONIN_REGULARIZED_POSITIVE_FAMILY_20260929.md) |
-| Exact metric, block identities, boundary resolvent, and Abel approximation | [Phase boundary trace](../../../susy-positivity/investigations/wilson-loewner/arithmetic-storage/notes/SONIN_PHASE_BOUNDARY_TRACE_20260929.md) |
-| Uniform unit-window mass and full Schwartz source tails | [Frequency tails](../../../susy-positivity/investigations/wilson-loewner/arithmetic-storage/notes/SONIN_PHASE_FREQUENCY_TAILS_20260929.md) |
-| Critical localization, endpoint return measure, rational example, and Abel crossover | [Critical boundary model](../../../susy-positivity/investigations/wilson-loewner/arithmetic-storage/notes/SONIN_CRITICAL_BOUNDARY_MODEL_20260929.md) |
-| Pole and zero crossings; non-even complex sources | [Arithmetic crossings](../../../susy-positivity/investigations/wilson-loewner/arithmetic-storage/notes/SONIN_PHASE_ARITHMETIC_CROSSINGS_20260929.md) |
-| Combined scope and remaining exact-projection issue | [Critical-limit synthesis](../../../susy-positivity/investigations/wilson-loewner/arithmetic-storage/notes/SONIN_CRITICAL_LIMIT_STATUS_20260929.md) |
+| Phase conventions, bounded causal transport, and strong endpoint collapse | [Regularized positive family](../../../weil-positivity/susy-positivity/investigations/wilson-loewner/arithmetic-storage/notes/SONIN_REGULARIZED_POSITIVE_FAMILY_20260929.md) |
+| Exact metric, block identities, boundary resolvent, and Abel approximation | [Phase boundary trace](../../../weil-positivity/susy-positivity/investigations/wilson-loewner/arithmetic-storage/notes/SONIN_PHASE_BOUNDARY_TRACE_20260929.md) |
+| Uniform unit-window mass and full Schwartz source tails | [Frequency tails](../../../weil-positivity/susy-positivity/investigations/wilson-loewner/arithmetic-storage/notes/SONIN_PHASE_FREQUENCY_TAILS_20260929.md) |
+| Critical localization, endpoint return measure, rational example, and Abel crossover | [Critical boundary model](../../../weil-positivity/susy-positivity/investigations/wilson-loewner/arithmetic-storage/notes/SONIN_CRITICAL_BOUNDARY_MODEL_20260929.md) |
+| Pole and zero crossings; non-even complex sources | [Arithmetic crossings](../../../weil-positivity/susy-positivity/investigations/wilson-loewner/arithmetic-storage/notes/SONIN_PHASE_ARITHMETIC_CROSSINGS_20260929.md) |
+| Combined scope and remaining exact-projection issue | [Critical-limit synthesis](../../../weil-positivity/susy-positivity/investigations/wilson-loewner/arithmetic-storage/notes/SONIN_CRITICAL_LIMIT_STATUS_20260929.md) |
 
 Relevant prior internal checks:
-[phase-boundary review](../../../susy-positivity/investigations/wilson-loewner/arithmetic-storage/reviews/SONIN_PHASE_BOUNDARY_TRACE_REVIEW_20260929.md) and
-[critical-limit review](../../../susy-positivity/investigations/wilson-loewner/arithmetic-storage/reviews/SONIN_CRITICAL_LIMIT_REVIEW_20260929.md).
+[phase-boundary review](../../../weil-positivity/susy-positivity/investigations/wilson-loewner/arithmetic-storage/reviews/SONIN_PHASE_BOUNDARY_TRACE_REVIEW_20260929.md) and
+[critical-limit review](../../../weil-positivity/susy-positivity/investigations/wilson-loewner/arithmetic-storage/reviews/SONIN_CRITICAL_LIMIT_REVIEW_20260929.md).
 These are LLM-assisted internal checks, not independent specialist verification.
 
 ## Consolidation decisions

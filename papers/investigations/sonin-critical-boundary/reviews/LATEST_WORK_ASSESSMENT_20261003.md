@@ -57,7 +57,7 @@ f_1=\frac{(-\partial_x^2+1/4)(x\phi(x))}
 \quad \phi(x)=\exp[-1/(1-(x/b)^2)]\,1_{|x|<b}.
 \]
 
-Its zero mean follows exactly from parity. The [earlier arithmetic certificate](../../../susy-positivity/investigations/wilson-loewner/arithmetic-storage/notes/SONIN_FINITE_MELLIN_DEFECT_20260929.md) already gives
+Its zero mean follows exactly from parity. The [earlier arithmetic certificate](../../../weil-positivity/susy-positivity/investigations/wilson-loewner/arithmetic-storage/notes/SONIN_FINITE_MELLIN_DEFECT_20260929.md) already gives
 
 \[
 1.047808580\le Q[f_1]\le1.047808594.
@@ -78,7 +78,7 @@ If the columns are independent, the finite-subspace trace is
 B^{[d]}=\operatorname{tr}(G^{-1}H)\le B_{\{2\},1/2}[f_1].
 \]
 
-This is the inherited actual-Sonin Galerkin lower bound, also valid with nonorthogonal columns; see the [actual projection enclosure note, equations (4)–(7)](../../../susy-positivity/investigations/wilson-loewner/arithmetic-storage/notes/SONIN_ACTUAL_PROJECTION_ENCLOSURES_20260929.md). A rigorous lower enclosure strictly greater than 1.047808594 would immediately prove K[f_1] positive and refute the proposed mean-only bound at this support. No upper bound for the omitted positive trace is needed for this one-sided conclusion.
+This is the inherited actual-Sonin Galerkin lower bound, also valid with nonorthogonal columns; see the [actual projection enclosure note, equations (4)–(7)](../../../weil-positivity/susy-positivity/investigations/wilson-loewner/arithmetic-storage/notes/SONIN_ACTUAL_PROJECTION_ENCLOSURES_20260929.md). A rigorous lower enclosure strictly greater than 1.047808594 would immediately prove K[f_1] positive and refute the proposed mean-only bound at this support. No upper bound for the omitted positive trace is needed for this one-sided conclusion.
 
 This approach still requires certified actual kernel membership, a positive enclosed Gram matrix, full integrals for the retained source-smoothed vectors, and projection and arithmetic error bounds. A small cutoff residual does not establish actual membership. Exact columns can be defined by projecting seeds with the archimedean projection and enclosing that construction.
 

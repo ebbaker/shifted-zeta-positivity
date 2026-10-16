@@ -22,8 +22,8 @@ in the Claude chat registries: chats 1–17 of the
 [early Claude chat logs](../claude-cowork/README.md) (Riemann Hypothesis, RH2
 and the first RH3 sessions), and the later RH3 sessions in the `claude-cowork`
 registries of [misc](../../papers/misc/chat-histories/claude-cowork/README.md),
-[shifted-zeta](../../papers/shifted-zeta/chat-histories/claude-cowork/README.md)
-and [susy-positivity](../../papers/susy-positivity/chat-histories/claude-cowork/README.md).
+[shifted-zeta](../../papers/weil-positivity/shifted-zeta/chat-histories/claude-cowork/README.md)
+and [susy-positivity](../../papers/weil-positivity/susy-positivity/chat-histories/claude-cowork/README.md).
 
 For RH3, only the documents that are not reflected in the repository are kept:
 the working notes, briefs, round reports, lab reports, handoffs and early

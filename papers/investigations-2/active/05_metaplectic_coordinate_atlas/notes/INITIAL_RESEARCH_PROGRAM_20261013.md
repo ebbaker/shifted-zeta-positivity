@@ -8,7 +8,7 @@ Status: **initialized, awaiting Claude review**. No new chart benchmark, certifi
 
 This supporting program implements [search card 5](../../../brainstorm/LIFTED_THETA_SYMMETRY_SEARCH_CODEX_20261013.md#5-metaplectic-covariance-and-a-regular-coordinate-atlas). Its purpose is to make a genuine source identity or its error ledger simpler to analyze, while preserving the physical observation `(H,H_x)` and Newman backward heat. A coordinate atlas is potentially useful even when it adds no new inequality by itself.
 
-The [Wigner/Husimi scout](../../../../quasi-rh-exponent-descent/newman_collisions/13_microlocal_phase_space/notes/1_HUSIMI_READOUT_DRIFT_AND_COHERENT_INTERFERENCE_20261010.md) already supplies the genuine state, full phase-space generator and exact reconstruction, including negative momentum diffusion, drift and contact terms. [De Gosson's symplectic Radon analysis, section 3](https://arxiv.org/html/2204.07106v1#S3) supplies a primary covariance precedent, not invariance of theta preparation.
+The [Wigner/Husimi scout](../../../../quasi-rh/quasi-rh-exponent-descent/newman_collisions/13_microlocal_phase_space/notes/1_HUSIMI_READOUT_DRIFT_AND_COHERENT_INTERFERENCE_20261010.md) already supplies the genuine state, full phase-space generator and exact reconstruction, including negative momentum diffusion, drift and contact terms. [De Gosson's symplectic Radon analysis, section 3](https://arxiv.org/html/2204.07106v1#S3) supplies a primary covariance precedent, not invariance of theta preparation.
 
 For the real squeeze `D_rψ(u)=e^{r/2}ψ(e^ru)`, the chord substitution is
 
@@ -22,7 +22,7 @@ If `S_r` denotes this substitution and `𝒢=−∂_k²+ℓ²/4`, then `S_r𝒢S
 
 Find two or more regular charts that simplify a source-specific reflection, gradient or boundary identity and improve its final paid conditioning. Preserve the distinction between passive covariance of a representation and an active transform that changes the prepared state. The target is a controlled physical reconstruction or symmetry-defect bound, not positivity of an unrelated transformed marginal.
 
-Under a passive state change `Ψ̃=TΨ`, use `𝒫̃=𝒫T⁻¹` for the same observation and `𝒢̃=ṪT⁻¹+T𝒢T⁻¹` for evolution. Spatially dependent charts likewise differentiate the basis and projection. The [coordinate-invariance note](../../../../quasi-rh-exponent-descent/newman_collisions/17_enlarged_state_transport/notes/4_COORDINATE_INVARIANCE_AND_IMPLICIT_HEAT_FOLDS_20261010.md) explains why a smooth lifted chart can remove trajectory-coordinate singularities while retaining a physical-time fold.
+Under a passive state change `Ψ̃=TΨ`, use `𝒫̃=𝒫T⁻¹` for the same observation and `𝒢̃=ṪT⁻¹+T𝒢T⁻¹` for evolution. Spatially dependent charts likewise differentiate the basis and projection. The [coordinate-invariance note](../../../../quasi-rh/quasi-rh-exponent-descent/newman_collisions/17_enlarged_state_transport/notes/4_COORDINATE_INVARIANCE_AND_IMPLICIT_HEAT_FOLDS_20261010.md) explains why a smooth lifted chart can remove trajectory-coordinate singularities while retaining a physical-time fold.
 
 ## First bounded task
 

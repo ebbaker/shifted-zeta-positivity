@@ -11,7 +11,7 @@ A second result separates existence from cost: the signed finite-frequency schem
 
 The [CCM threshold obstruction update](../../program-meta-analysis/notes/CCM_THRESHOLD_OBSTRUCTION_UPDATE_20260928.md) already excludes a bounded two-sided endpoint comparison in its specified bare archimedean norm, even after its ground-state removal. Its divergent side is negative, so it does not exclude the one-sided upper inequality needed for Weil positivity. That physical space and normalization must not be silently replaced by the present fixed-support source space.
 
-The [Weil-depth program](../../../shifted-zeta/weil-depth/README.md) and the present investigation already supply finite-shift reductions and expose the enormous cost of absolute-amplitude high-frequency floors. Rewriting those reductions as another fixed-window compact sandwich supplies no all-window sign theorem.
+The [Weil-depth program](../../../weil-positivity/shifted-zeta/weil-depth/README.md) and the present investigation already supply finite-shift reductions and expose the enormous cost of absolute-amplitude high-frequency floors. Rewriting those reductions as another fixed-window compact sandwich supplies no all-window sign theorem.
 
 Here we use the exact identity from [the all-window strategy](../notes/ALL_WINDOW_STRATEGY_20261003.md), on the unchanged prepared mean-zero source class:
 

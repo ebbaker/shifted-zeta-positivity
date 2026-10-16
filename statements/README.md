@@ -17,4 +17,4 @@ Update both the YAML and the markdown blueprint at every release; a
 verification report that closes an item changes `human_check.state` here and
 the corresponding row there.
 
-[Shifted-zeta program](../papers/shifted-zeta/README.md) · [All manuscripts](../papers/README.md)
+[Shifted-zeta program](../papers/weil-positivity/shifted-zeta/README.md) · [All manuscripts](../papers/README.md)

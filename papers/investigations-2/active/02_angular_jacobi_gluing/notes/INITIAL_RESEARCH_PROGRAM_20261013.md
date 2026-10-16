@@ -75,6 +75,6 @@ existing small approximation disk does not cover a fixed shift by \(-4i\).
 ## Starting records
 
 - [Brainstorm card 2](../../../brainstorm/LIFTED_THETA_SYMMETRY_SEARCH_CODEX_20261013.md#2-angular-jacobi-gluing-and-heat-compatible-shifts).
-- [Exact angular field, Heat Note 25 §6](../../../../quasi-rh-exponent-descent/newman_collisions/notes/25_ENLARGED_STATE_TRANSPORT_CHORD_DYNAMICS_AND_THETA_GLUING_20261010.md).
-- [Rotor insertion and endpoint hierarchy](../../../../quasi-rh-exponent-descent/newman_collisions/06_theta_lattice/notes/1_ROTOR_ZERO_MODE_WARD_IDENTITY_AND_SECTOR_MISMATCH_20261010.md).
+- [Exact angular field, Heat Note 25 §6](../../../../quasi-rh/quasi-rh-exponent-descent/newman_collisions/notes/25_ENLARGED_STATE_TRANSPORT_CHORD_DYNAMICS_AND_THETA_GLUING_20261010.md).
+- [Rotor insertion and endpoint hierarchy](../../../../quasi-rh/quasi-rh-exponent-descent/newman_collisions/06_theta_lattice/notes/1_ROTOR_ZERO_MODE_WARD_IDENTITY_AND_SECTOR_MISMATCH_20261010.md).
 - [Jacobi transformation, DLMF 20.7.32](https://dlmf.nist.gov/20.7.E32).

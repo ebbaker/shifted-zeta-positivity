@@ -57,7 +57,7 @@ From the repository root, the following Python snippet rebuilds the midpoint inp
 import hashlib, json, sys
 from pathlib import Path
 
-numerics = Path("papers/susy-positivity/investigations/wilson-loewner/arithmetic-storage/numerics").resolve()
+numerics = Path("papers/weil-positivity/susy-positivity/investigations/wilson-loewner/arithmetic-storage/numerics").resolve()
 sys.path.insert(0, str(numerics))
 import prolate_certificate
 record, _, inverse = prolate_certificate.certify(rank=32, precision_bits=256)

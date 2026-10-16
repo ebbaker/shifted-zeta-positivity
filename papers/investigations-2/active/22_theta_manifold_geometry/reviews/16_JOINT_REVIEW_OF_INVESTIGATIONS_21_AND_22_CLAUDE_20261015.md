@@ -30,7 +30,7 @@ coordination [Note 63](../../21_quaternion_theta_geometry/notes/00_research_coor
 and the [manuscript](../../21_quaternion_theta_geometry/manuscript/quaternion_theta_geometry.tex)
 Sections 1, 2 (statement), 3 (collision criterion) and 14 (remaining program).
 Also used: the portfolio's earlier Claude reviews in
-[`papers/quasi-rh-exponent-descent/brainstorm/NEW_PATHS_FORWARD_BRAINSTORM_CLAUDE_20261011.md`](../../../../quasi-rh-exponent-descent/brainstorm/NEW_PATHS_FORWARD_BRAINSTORM_CLAUDE_20261011.md)
+[`papers/quasi-rh-exponent-descent/brainstorm/NEW_PATHS_FORWARD_BRAINSTORM_CLAUDE_20261011.md`](../../../../quasi-rh/quasi-rh-exponent-descent/brainstorm/NEW_PATHS_FORWARD_BRAINSTORM_CLAUDE_20261011.md)
 and [`papers/investigations-2/brainstorm/reviews/REVIEW_OF_ACTIVE_LIFTED_THETA_DIRECTIONS_CLAUDE_20261013.md`](../../../brainstorm/reviews/REVIEW_OF_ACTIVE_LIFTED_THETA_DIRECTIONS_CLAUDE_20261013.md),
 and the [Euler-factor controls](../../19_euler_factor_controls/README.md) of
 Investigation 19.

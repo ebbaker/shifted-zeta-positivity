@@ -22,7 +22,7 @@ iteration bookkeeping. It does **not** independently establish the two
 major analytic inputs, the completed mean square and the two-Poisson
 transfer. Their proofs in Sections 6–7 and Appendix A remain explicit
 obligations of the larger source audit. The earlier September 30
-[interface audit](../../../../quasi-rh-character-amplification/reviews/UPSTREAM_REFLECTION_POISSON_SIEVE_AUDIT_20261009.md)
+[interface audit](../../../../quasi-rh/quasi-rh-character-amplification/reviews/UPSTREAM_REFLECTION_POISSON_SIEVE_AUDIT_20261009.md)
 is useful context, but is not automatically a version-matched proof of
 these October 5 assertions.
 

@@ -1,5 +1,27 @@
 # Changelog
 
+## 2026-10-16 — group the papers/ folders by research line
+
+- Moved `papers/shifted-zeta/` and `papers/susy-positivity/` into
+  `papers/weil-positivity/`, and `papers/prime-variance-exponents/`,
+  `papers/quasi-rh-exponent-descent/` and `papers/quasi-rh-character-amplification/`
+  into `papers/quasi-rh/`; folder names inside each group are unchanged. All
+  3,167 files moved byte-identical; the move is staged as pure renames.
+- Repaired 730 relative links and 132 printed paths in current Markdown,
+  five TeX link targets, GitHub URLs in the citation metadata and archive
+  guides, the CI build matrix, the hygiene and citation checkers, the
+  statement ledger and `.zenodo.json`, and the path arithmetic of eleven check
+  scripts; refreshed only the manifest entries of files edited here.
+  Historical snapshots, numerical records and registered chat histories are
+  unchanged.
+- Rewrote `papers/README.md` as the index of all research folders, added
+  READMEs for the two groups, updated the root README tables and the
+  investigations index, and moved the shifted-zeta cross-citation policy into
+  that program's guide. See the
+  [relocation record](papers/REORGANIZATION_20261016.md).
+- Prepared for Edward Baker with LLM assistance; Claude Opus 5.5
+  (`claude-opus-5-5`), Claude Cowork, reasoning effort **max**.
+
 ## 2026-10-13 — correct draft-history filenames
 
 - Renamed all 11 `DRAFT_HISTOR.md` files to `DRAFT_HISTORY.md`; updated active instructions, links, and affected manifest paths and hashes.

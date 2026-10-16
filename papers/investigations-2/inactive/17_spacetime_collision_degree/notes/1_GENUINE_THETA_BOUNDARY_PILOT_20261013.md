@@ -14,7 +14,7 @@ one preparation for the interior box. This easy calibration establishes no
 cost advantage; do not expand it into a winding campaign on this evidence.
 
 The rectangle was fixed from the existing
-[full-theta low-height stationary certificate](../../../../quasi-rh-exponent-descent/newman_collisions/17_enlarged_state_transport/numerics/THETA_STATIONARY_LOW_HEIGHT_RECORD_20261010.json).
+[full-theta low-height stationary certificate](../../../../quasi-rh/quasi-rh-exponent-descent/newman_collisions/17_enlarged_state_transport/numerics/THETA_STATIONARY_LOW_HEIGHT_RECORD_20261010.json).
 That record already establishes \(H_x<0\). Its 80 spatial cells also
 certify stronger information about \(H_{xx},H_{xxx}\) and a stationary
 branch, so comparing its cell count directly with a four-edge collision

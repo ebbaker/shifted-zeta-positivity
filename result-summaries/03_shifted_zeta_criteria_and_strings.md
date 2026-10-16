@@ -52,8 +52,8 @@ would do to a finite certificate.
 
 ## Where
 
-- [Program guide](../papers/shifted-zeta/README.md).
-- Paper 1: [`psi_omega_concise.tex`](../papers/shifted-zeta/psi-omega-margin/psi_omega_concise.tex) (thm:asym, cor:margin, thm:threshold, thm:transition, cor:boundedCharacterization, thm:L1), [`psi_omega_margin.tex`](../papers/shifted-zeta/psi-omega-margin/psi_omega_margin.tex) (prop:siegel), [derivation and verification](../papers/shifted-zeta/psi-omega-margin/supplementary/DERIVATION_AND_VERIFICATION.md).
-- Paper 2: [`omega_string.tex`](../papers/shifted-zeta/omega-string/omega_string.tex) §1.2; [STATUS](../papers/shifted-zeta/omega-string/STATUS.md).
-- Paper 3: [`defect_depth.tex`](../papers/shifted-zeta/defect-depth/defect_depth.tex); [STATUS](../papers/shifted-zeta/defect-depth/STATUS.md).
+- [Program guide](../papers/weil-positivity/shifted-zeta/README.md).
+- Paper 1: [`psi_omega_concise.tex`](../papers/weil-positivity/shifted-zeta/psi-omega-margin/psi_omega_concise.tex) (thm:asym, cor:margin, thm:threshold, thm:transition, cor:boundedCharacterization, thm:L1), [`psi_omega_margin.tex`](../papers/weil-positivity/shifted-zeta/psi-omega-margin/psi_omega_margin.tex) (prop:siegel), [derivation and verification](../papers/weil-positivity/shifted-zeta/psi-omega-margin/supplementary/DERIVATION_AND_VERIFICATION.md).
+- Paper 2: [`omega_string.tex`](../papers/weil-positivity/shifted-zeta/omega-string/omega_string.tex) §1.2; [STATUS](../papers/weil-positivity/shifted-zeta/omega-string/STATUS.md).
+- Paper 3: [`defect_depth.tex`](../papers/weil-positivity/shifted-zeta/defect-depth/defect_depth.tex); [STATUS](../papers/weil-positivity/shifted-zeta/defect-depth/STATUS.md).
 - Cross-citation rule (cite statements by name, not number): [`papers/README.md`](../papers/README.md).

@@ -182,7 +182,7 @@ Liu's `1/5000` is an existing nonprincipal exponent margin. Their identical
 constants do not identify the estimates or prove the missing input.
 
 Preserve that open target from
-[the localized joint-witness note, equation 5](../../../quasi-rh-character-amplification/notes/LOCALIZED_JOINT_WITNESS_TARGET_20261008.md)
+[the localized joint-witness note, equation 5](../../../quasi-rh/quasi-rh-character-amplification/notes/LOCALIZED_JOINT_WITNESS_TARGET_20261008.md)
 when recording closure. Transfer its definitions and paid sectors to the
 covariance consolidation rather than treating the whole folder's stronger
 moment research as superseded.
