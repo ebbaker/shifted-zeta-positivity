@@ -149,6 +149,8 @@ precede later dated notes and review corrections.
 | [`blueprint/`](blueprint/README.md) and [`statements/`](statements/README.md) | First-slab statement inventory, dependencies, proof and human-verification status, and machine-readable ledger. |
 | [`verification/`](verification/README.md) | Referee-round records, independent recomputation scripts, and outstanding verification checklists. |
 | [`notes/`](notes/README.md) | Shared lessons and historical research-log migration; investigation-specific research stays with its investigation. |
+| [`result-summaries/`](result-summaries/README.md) | Short summaries of the established results, in the sources' own status words, routing to the manuscripts, certificates and reviews that hold them. |
+| [`avoid/`](avoid/README.md) | Recurring patterns to avoid in this project, each with anecdotal evidence and references to the repository. |
 | [`code/`](code/README.md) and `environment/` | First-slab certificate release gate and shared verification environment. Most reproduction code lives beside its investigation. |
 | [`references/`](references/README.md) | External-source bibliography; third-party PDFs are not redistributed. |
 

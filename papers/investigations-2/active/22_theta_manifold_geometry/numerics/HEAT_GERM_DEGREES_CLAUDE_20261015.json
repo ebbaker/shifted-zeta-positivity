@@ -1,0 +1,814 @@
+{
+ "title": "Heat-germ local degrees, real indices, deformed commutation and the two polynomial controls",
+ "prepared_for": "Edward Baker",
+ "model": "Claude Fable 5.1 (claude-fable-5-1), Claude Cowork, 15 October 2026",
+ "script_sha256": "1c969cbd44c9ed3c05ed120085ddc6b4d86d87685063760636f2891a9cd7a699",
+ "python": "3.13.16",
+ "arithmetic": "exact rational (fractions.Fraction) in parts A, B, D, E; floating point in part C",
+ "germ_table": [
+  {
+   "m": 2,
+   "complex_local_degree": 1,
+   "real_index": -1,
+   "He_sign_counts": {
+    "positive": 0,
+    "negative": 1
+   },
+   "difference": 0
+  },
+  {
+   "m": 3,
+   "complex_local_degree": 3,
+   "real_index": -1,
+   "He_sign_counts": {
+    "positive": 1,
+    "negative": 1
+   },
+   "difference": 2
+  },
+  {
+   "m": 4,
+   "complex_local_degree": 6,
+   "real_index": -2,
+   "He_sign_counts": {
+    "positive": 1,
+    "negative": 2
+   },
+   "difference": 4
+  },
+  {
+   "m": 5,
+   "complex_local_degree": 10,
+   "real_index": -2,
+   "He_sign_counts": {
+    "positive": 2,
+    "negative": 2
+   },
+   "difference": 8
+  },
+  {
+   "m": 6,
+   "complex_local_degree": 15,
+   "real_index": -3,
+   "He_sign_counts": {
+    "positive": 2,
+    "negative": 3
+   },
+   "difference": 12
+  },
+  {
+   "m": 7,
+   "complex_local_degree": 21,
+   "real_index": -3,
+   "He_sign_counts": {
+    "positive": 3,
+    "negative": 3
+   },
+   "difference": 18
+  },
+  {
+   "m": 8,
+   "complex_local_degree": 28,
+   "real_index": -4,
+   "He_sign_counts": {
+    "positive": 3,
+    "negative": 4
+   },
+   "difference": 24
+  },
+  {
+   "m": 9,
+   "complex_local_degree": 36,
+   "real_index": -4,
+   "He_sign_counts": {
+    "positive": 4,
+    "negative": 4
+   },
+   "difference": 32
+  }
+ ],
+ "formula": "complex local degree mu_m = m(m-1)/2 (weighted Bezout, weights 2 and 1); real index -floor(m/2)",
+ "part_C": [
+  {
+   "t": 0.2,
+   "d": 2,
+   "x": 3.5,
+   "relative_error": 9.66597777501895e-17
+  },
+  {
+   "t": 0.05,
+   "d": 3,
+   "x": 11.0,
+   "relative_error": 5.719625629392609e-16
+  },
+  {
+   "t": 0.45,
+   "d": 7,
+   "x": -2.25,
+   "relative_error": 4.472028781602535e-16
+  },
+  {
+   "t": 0.3,
+   "d": 5,
+   "x": 0.75,
+   "relative_error": 1.5349730031079966e-16
+  }
+ ],
+ "part_DE": {
+  "T": "3/10"
+ },
+ "assertions_total": 120,
+ "assertions_failed": 0,
+ "assertions": [
+  {
+   "name": "m=2: H_s = -H_zz",
+   "ok": true,
+   "detail": null
+  },
+  {
+   "name": "m=2: H_z = m H_(m-1)",
+   "ok": true,
+   "detail": null
+  },
+  {
+   "name": "m=2: gcd(H(s,1), H_z(s,1)) constant",
+   "ok": true,
+   "detail": {
+    "gcd_degree": 0
+   }
+  },
+  {
+   "name": "m=2: z=0 chart has no common zero off the origin",
+   "ok": true,
+   "detail": null
+  },
+  {
+   "name": "m=2: resultant squarefree at e=(3/7,5/11)",
+   "ok": true,
+   "detail": null
+  },
+  {
+   "name": "m=2: local degree mu = m(m-1)/2",
+   "ok": true,
+   "detail": {
+    "mu": 1
+   }
+  },
+  {
+   "name": "m=2: local degree stable at a second value",
+   "ok": true,
+   "detail": null
+  },
+  {
+   "name": "m=2: He_(m-1) has m-1 real roots",
+   "ok": true,
+   "detail": null
+  },
+  {
+   "name": "m=2: real index -floor(m/2) for e1>0",
+   "ok": true,
+   "detail": {
+    "index": -1
+   }
+  },
+  {
+   "name": "m=2: real index -floor(m/2) for e1<0",
+   "ok": true,
+   "detail": {
+    "index": -1
+   }
+  },
+  {
+   "name": "m=2: det_C(z,s order) equals L_1 = H_zz^2 - H_z H_zzz",
+   "ok": true,
+   "detail": null
+  },
+  {
+   "name": "m=2: mu - floor(m/2) even, zero only for m=2",
+   "ok": true,
+   "detail": null
+  },
+  {
+   "name": "m=3: H_s = -H_zz",
+   "ok": true,
+   "detail": null
+  },
+  {
+   "name": "m=3: H_z = m H_(m-1)",
+   "ok": true,
+   "detail": null
+  },
+  {
+   "name": "m=3: gcd(H(s,1), H_z(s,1)) constant",
+   "ok": true,
+   "detail": {
+    "gcd_degree": 0
+   }
+  },
+  {
+   "name": "m=3: z=0 chart has no common zero off the origin",
+   "ok": true,
+   "detail": null
+  },
+  {
+   "name": "m=3: resultant squarefree at e=(3/7,5/11)",
+   "ok": true,
+   "detail": null
+  },
+  {
+   "name": "m=3: local degree mu = m(m-1)/2",
+   "ok": true,
+   "detail": {
+    "mu": 3
+   }
+  },
+  {
+   "name": "m=3: local degree stable at a second value",
+   "ok": true,
+   "detail": null
+  },
+  {
+   "name": "m=3: He_(m-1) has m-1 real roots",
+   "ok": true,
+   "detail": null
+  },
+  {
+   "name": "m=3: real index -floor(m/2) for e1>0",
+   "ok": true,
+   "detail": {
+    "index": -1
+   }
+  },
+  {
+   "name": "m=3: real index -floor(m/2) for e1<0",
+   "ok": true,
+   "detail": {
+    "index": -1
+   }
+  },
+  {
+   "name": "m=3: det_C(z,s order) equals L_1 = H_zz^2 - H_z H_zzz",
+   "ok": true,
+   "detail": null
+  },
+  {
+   "name": "m=3: mu - floor(m/2) even, zero only for m=2",
+   "ok": true,
+   "detail": null
+  },
+  {
+   "name": "m=4: H_s = -H_zz",
+   "ok": true,
+   "detail": null
+  },
+  {
+   "name": "m=4: H_z = m H_(m-1)",
+   "ok": true,
+   "detail": null
+  },
+  {
+   "name": "m=4: gcd(H(s,1), H_z(s,1)) constant",
+   "ok": true,
+   "detail": {
+    "gcd_degree": 0
+   }
+  },
+  {
+   "name": "m=4: z=0 chart has no common zero off the origin",
+   "ok": true,
+   "detail": null
+  },
+  {
+   "name": "m=4: resultant squarefree at e=(3/7,5/11)",
+   "ok": true,
+   "detail": null
+  },
+  {
+   "name": "m=4: local degree mu = m(m-1)/2",
+   "ok": true,
+   "detail": {
+    "mu": 6
+   }
+  },
+  {
+   "name": "m=4: local degree stable at a second value",
+   "ok": true,
+   "detail": null
+  },
+  {
+   "name": "m=4: He_(m-1) has m-1 real roots",
+   "ok": true,
+   "detail": null
+  },
+  {
+   "name": "m=4: real index -floor(m/2) for e1>0",
+   "ok": true,
+   "detail": {
+    "index": -2
+   }
+  },
+  {
+   "name": "m=4: real index -floor(m/2) for e1<0",
+   "ok": true,
+   "detail": {
+    "index": -2
+   }
+  },
+  {
+   "name": "m=4: det_C(z,s order) equals L_1 = H_zz^2 - H_z H_zzz",
+   "ok": true,
+   "detail": null
+  },
+  {
+   "name": "m=4: mu - floor(m/2) even, zero only for m=2",
+   "ok": true,
+   "detail": null
+  },
+  {
+   "name": "m=5: H_s = -H_zz",
+   "ok": true,
+   "detail": null
+  },
+  {
+   "name": "m=5: H_z = m H_(m-1)",
+   "ok": true,
+   "detail": null
+  },
+  {
+   "name": "m=5: gcd(H(s,1), H_z(s,1)) constant",
+   "ok": true,
+   "detail": {
+    "gcd_degree": 0
+   }
+  },
+  {
+   "name": "m=5: z=0 chart has no common zero off the origin",
+   "ok": true,
+   "detail": null
+  },
+  {
+   "name": "m=5: resultant squarefree at e=(3/7,5/11)",
+   "ok": true,
+   "detail": null
+  },
+  {
+   "name": "m=5: local degree mu = m(m-1)/2",
+   "ok": true,
+   "detail": {
+    "mu": 10
+   }
+  },
+  {
+   "name": "m=5: local degree stable at a second value",
+   "ok": true,
+   "detail": null
+  },
+  {
+   "name": "m=5: He_(m-1) has m-1 real roots",
+   "ok": true,
+   "detail": null
+  },
+  {
+   "name": "m=5: real index -floor(m/2) for e1>0",
+   "ok": true,
+   "detail": {
+    "index": -2
+   }
+  },
+  {
+   "name": "m=5: real index -floor(m/2) for e1<0",
+   "ok": true,
+   "detail": {
+    "index": -2
+   }
+  },
+  {
+   "name": "m=5: det_C(z,s order) equals L_1 = H_zz^2 - H_z H_zzz",
+   "ok": true,
+   "detail": null
+  },
+  {
+   "name": "m=5: mu - floor(m/2) even, zero only for m=2",
+   "ok": true,
+   "detail": null
+  },
+  {
+   "name": "m=6: H_s = -H_zz",
+   "ok": true,
+   "detail": null
+  },
+  {
+   "name": "m=6: H_z = m H_(m-1)",
+   "ok": true,
+   "detail": null
+  },
+  {
+   "name": "m=6: gcd(H(s,1), H_z(s,1)) constant",
+   "ok": true,
+   "detail": {
+    "gcd_degree": 0
+   }
+  },
+  {
+   "name": "m=6: z=0 chart has no common zero off the origin",
+   "ok": true,
+   "detail": null
+  },
+  {
+   "name": "m=6: resultant squarefree at e=(3/7,5/11)",
+   "ok": true,
+   "detail": null
+  },
+  {
+   "name": "m=6: local degree mu = m(m-1)/2",
+   "ok": true,
+   "detail": {
+    "mu": 15
+   }
+  },
+  {
+   "name": "m=6: local degree stable at a second value",
+   "ok": true,
+   "detail": null
+  },
+  {
+   "name": "m=6: He_(m-1) has m-1 real roots",
+   "ok": true,
+   "detail": null
+  },
+  {
+   "name": "m=6: real index -floor(m/2) for e1>0",
+   "ok": true,
+   "detail": {
+    "index": -3
+   }
+  },
+  {
+   "name": "m=6: real index -floor(m/2) for e1<0",
+   "ok": true,
+   "detail": {
+    "index": -3
+   }
+  },
+  {
+   "name": "m=6: det_C(z,s order) equals L_1 = H_zz^2 - H_z H_zzz",
+   "ok": true,
+   "detail": null
+  },
+  {
+   "name": "m=6: mu - floor(m/2) even, zero only for m=2",
+   "ok": true,
+   "detail": null
+  },
+  {
+   "name": "m=7: H_s = -H_zz",
+   "ok": true,
+   "detail": null
+  },
+  {
+   "name": "m=7: H_z = m H_(m-1)",
+   "ok": true,
+   "detail": null
+  },
+  {
+   "name": "m=7: gcd(H(s,1), H_z(s,1)) constant",
+   "ok": true,
+   "detail": {
+    "gcd_degree": 0
+   }
+  },
+  {
+   "name": "m=7: z=0 chart has no common zero off the origin",
+   "ok": true,
+   "detail": null
+  },
+  {
+   "name": "m=7: resultant squarefree at e=(3/7,5/11)",
+   "ok": true,
+   "detail": null
+  },
+  {
+   "name": "m=7: local degree mu = m(m-1)/2",
+   "ok": true,
+   "detail": {
+    "mu": 21
+   }
+  },
+  {
+   "name": "m=7: local degree stable at a second value",
+   "ok": true,
+   "detail": null
+  },
+  {
+   "name": "m=7: He_(m-1) has m-1 real roots",
+   "ok": true,
+   "detail": null
+  },
+  {
+   "name": "m=7: real index -floor(m/2) for e1>0",
+   "ok": true,
+   "detail": {
+    "index": -3
+   }
+  },
+  {
+   "name": "m=7: real index -floor(m/2) for e1<0",
+   "ok": true,
+   "detail": {
+    "index": -3
+   }
+  },
+  {
+   "name": "m=7: det_C(z,s order) equals L_1 = H_zz^2 - H_z H_zzz",
+   "ok": true,
+   "detail": null
+  },
+  {
+   "name": "m=7: mu - floor(m/2) even, zero only for m=2",
+   "ok": true,
+   "detail": null
+  },
+  {
+   "name": "m=8: H_s = -H_zz",
+   "ok": true,
+   "detail": null
+  },
+  {
+   "name": "m=8: H_z = m H_(m-1)",
+   "ok": true,
+   "detail": null
+  },
+  {
+   "name": "m=8: gcd(H(s,1), H_z(s,1)) constant",
+   "ok": true,
+   "detail": {
+    "gcd_degree": 0
+   }
+  },
+  {
+   "name": "m=8: z=0 chart has no common zero off the origin",
+   "ok": true,
+   "detail": null
+  },
+  {
+   "name": "m=8: resultant squarefree at e=(3/7,5/11)",
+   "ok": true,
+   "detail": null
+  },
+  {
+   "name": "m=8: local degree mu = m(m-1)/2",
+   "ok": true,
+   "detail": {
+    "mu": 28
+   }
+  },
+  {
+   "name": "m=8: local degree stable at a second value",
+   "ok": true,
+   "detail": null
+  },
+  {
+   "name": "m=8: He_(m-1) has m-1 real roots",
+   "ok": true,
+   "detail": null
+  },
+  {
+   "name": "m=8: real index -floor(m/2) for e1>0",
+   "ok": true,
+   "detail": {
+    "index": -4
+   }
+  },
+  {
+   "name": "m=8: real index -floor(m/2) for e1<0",
+   "ok": true,
+   "detail": {
+    "index": -4
+   }
+  },
+  {
+   "name": "m=8: det_C(z,s order) equals L_1 = H_zz^2 - H_z H_zzz",
+   "ok": true,
+   "detail": null
+  },
+  {
+   "name": "m=8: mu - floor(m/2) even, zero only for m=2",
+   "ok": true,
+   "detail": null
+  },
+  {
+   "name": "m=9: H_s = -H_zz",
+   "ok": true,
+   "detail": null
+  },
+  {
+   "name": "m=9: H_z = m H_(m-1)",
+   "ok": true,
+   "detail": null
+  },
+  {
+   "name": "m=9: gcd(H(s,1), H_z(s,1)) constant",
+   "ok": true,
+   "detail": {
+    "gcd_degree": 0
+   }
+  },
+  {
+   "name": "m=9: z=0 chart has no common zero off the origin",
+   "ok": true,
+   "detail": null
+  },
+  {
+   "name": "m=9: resultant squarefree at e=(3/7,5/11)",
+   "ok": true,
+   "detail": null
+  },
+  {
+   "name": "m=9: local degree mu = m(m-1)/2",
+   "ok": true,
+   "detail": {
+    "mu": 36
+   }
+  },
+  {
+   "name": "m=9: local degree stable at a second value",
+   "ok": true,
+   "detail": null
+  },
+  {
+   "name": "m=9: He_(m-1) has m-1 real roots",
+   "ok": true,
+   "detail": null
+  },
+  {
+   "name": "m=9: real index -floor(m/2) for e1>0",
+   "ok": true,
+   "detail": {
+    "index": -4
+   }
+  },
+  {
+   "name": "m=9: real index -floor(m/2) for e1<0",
+   "ok": true,
+   "detail": {
+    "index": -4
+   }
+  },
+  {
+   "name": "m=9: det_C(z,s order) equals L_1 = H_zz^2 - H_z H_zzz",
+   "ok": true,
+   "detail": null
+  },
+  {
+   "name": "m=9: mu - floor(m/2) even, zero only for m=2",
+   "ok": true,
+   "detail": null
+  },
+  {
+   "name": "C: transform shift identity at t=0.2, d=2, x=3.5 (float)",
+   "ok": true,
+   "detail": {
+    "relative_error": 9.66597777501895e-17
+   }
+  },
+  {
+   "name": "C: multiplier identity at t=0.2, d=2 (float)",
+   "ok": true,
+   "detail": null
+  },
+  {
+   "name": "C: transform shift identity at t=0.05, d=3, x=11.0 (float)",
+   "ok": true,
+   "detail": {
+    "relative_error": 5.719625629392609e-16
+   }
+  },
+  {
+   "name": "C: multiplier identity at t=0.05, d=3 (float)",
+   "ok": true,
+   "detail": null
+  },
+  {
+   "name": "C: transform shift identity at t=0.45, d=7, x=-2.25 (float)",
+   "ok": true,
+   "detail": {
+    "relative_error": 4.472028781602535e-16
+   }
+  },
+  {
+   "name": "C: multiplier identity at t=0.45, d=7 (float)",
+   "ok": true,
+   "detail": null
+  },
+  {
+   "name": "C: transform shift identity at t=0.3, d=5, x=0.75 (float)",
+   "ok": true,
+   "detail": {
+    "relative_error": 1.5349730031079966e-16
+   }
+  },
+  {
+   "name": "C: multiplier identity at t=0.3, d=5 (float)",
+   "ok": true,
+   "detail": null
+  },
+  {
+   "name": "D: germ L_0(t,0) = -4(T-t) at t=1/10",
+   "ok": true,
+   "detail": {
+    "L0": "-4/5",
+    "E": "4/25"
+   }
+  },
+  {
+   "name": "E: sign fails before the collision at t=1/10",
+   "ok": true,
+   "detail": null
+  },
+  {
+   "name": "D: germ L_0(t,0) = -4(T-t) at t=1/5",
+   "ok": true,
+   "detail": {
+    "L0": "-2/5",
+    "E": "1/25"
+   }
+  },
+  {
+   "name": "E: sign fails before the collision at t=1/5",
+   "ok": true,
+   "detail": null
+  },
+  {
+   "name": "D: germ L_0(t,0) = -4(T-t) at t=3/10",
+   "ok": true,
+   "detail": {
+    "L0": "0",
+    "E": "0"
+   }
+  },
+  {
+   "name": "E: at the collision the strict sign fails and the weak sign holds",
+   "ok": true,
+   "detail": null
+  },
+  {
+   "name": "D: germ L_0(t,0) = -4(T-t) at t=2/5",
+   "ok": true,
+   "detail": {
+    "L0": "2/5",
+    "E": "1/25"
+   }
+  },
+  {
+   "name": "E: strict sign holds after the collision at t=2/5",
+   "ok": true,
+   "detail": null
+  },
+  {
+   "name": "D: Res_z(H, H_z) for z^2 - 2tau + 1 is a nonzero multiple of (tau - 1/2)",
+   "ok": true,
+   "detail": {
+    "resultant": [
+     "4",
+     "-8"
+    ]
+   }
+  },
+  {
+   "name": "D: E(t,0) = (1-2t)^2 at t=0",
+   "ok": true,
+   "detail": null
+  },
+  {
+   "name": "D: E(t,0) = (1-2t)^2 at t=1/4",
+   "ok": true,
+   "detail": null
+  },
+  {
+   "name": "D: E(t,0) = (1-2t)^2 at t=49/100",
+   "ok": true,
+   "detail": null
+  },
+  {
+   "name": "D: m=3 germ is z^3 - 6 s z",
+   "ok": true,
+   "detail": null
+  },
+  {
+   "name": "D: m=3, e=(1/5,0): three preimages",
+   "ok": true,
+   "detail": null
+  },
+  {
+   "name": "D: m=3, e=(1/5,0): the resultant in s has exactly one real root",
+   "ok": true,
+   "detail": null
+  },
+  {
+   "name": "D: m=3 complex Jacobian is 18 z^2 + 36 s",
+   "ok": true,
+   "detail": null
+  }
+ ],
+ "scope": "Polynomial heat germs and closed-form Gaussian transforms only. Nothing here evaluates the theta field, certifies a theta sign, or bears on RH."
+}

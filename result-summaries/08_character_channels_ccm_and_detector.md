@@ -1,0 +1,63 @@
+# Character channels, CCM realizations, and the RH detector
+
+15 October 2026. Claude Fable 5.1 (`claude-fable-5-1`), Claude Cowork.
+
+## Summary
+
+- **Character channels are the Dirichlet family.** The Bost–Connes
+  relations hold on \(L^2(\mathbb R\times\hat{\mathbb Z})\); character
+  packets have winding limits \(a^{-1/2}\bar\chi(a)\langle f,U_{\log a}g\rangle\);
+  the interacting YM state mixes same-parity sectors; and the
+  \(Q_\chi\) normalization reproduces the zeros of six real characters to
+  about \(2\cdot10^{-9}\). What is not gained: "any positivity mechanism".
+- **CCM finite realizations.** A positive mass–stiffness pair, a
+  point-mass string, and a unitary map to a graph Dirac operator; the
+  inverse-frequency trace equals the first mass moment; the odd tail is
+  \(\ge2/5\) above mode 4096 at \(L=\log13\) (rational certificate). The
+  determinant limit is conditional on a positive continuum odd gap.
+- **CCM weighted operator and the threshold-energy obstruction.** \(H\) has
+  a simple zero mode, essential edge \(1/4\) and only discrete spectrum in
+  \((0,1/4)\); RH \(\iff H-s\) has one negative direction. The threshold
+  profiles are dense in the bare energy completion, so
+  \(\inf\sigma(S_\delta)\to-\infty\) and every fixed prime tail is unbounded
+  relative to that energy. This paused CCM (28 September).
+- **RH detector.** The velocity residual \(V_j=\Xi''/\Xi'(\gamma_j)\) equals
+  the field of the full zero multiset; a quadrupole sign separates
+  off-axis from on-axis hidden pairs; at \(K=1000\) residuals are
+  \(\sim10^{-7}\) against bands \(\sim10^{-3}\); and
+  \(e^{-t\partial^2}p=\det(zI-X-tY)\) (Wilson's formula), so the Newman
+  constant of a polynomial is the reality threshold of a matrix pencil.
+
+## Status
+
+Character channels: "[proof]" and "[floating]" per statement; no reviews
+folder and no manuscript. CCM: "Exact finite realization"; the obstruction
+has "working proofs" and its review found "No material mathematical flaw".
+Detector: "proved in-paper", certificates "rigorous modulo floating point"
+(mpmath, not interval arithmetic), "Not released", seven blocking items, no
+external human review.
+
+## Caveats
+
+"Most realizations are algebraic transformations available for broad
+classes of positive finite pencils"; the literal-\(k\) normalization
+\(\Xi/4\) was corrected in two supporting notes; the fractal-coordinate
+realization fails within its stated scope (stiffness, mass, refinement,
+and a folded-odd Markov obstruction). The meta-analysis rule: "Do not build
+another geometry without a new arithmetic estimate it would yield."
+
+## Reusable for
+
+A verified Weil-form normalization for the Dirichlet family; the graph
+Dirac dictionary for finite positive pencils; the threshold-energy
+obstruction as a control on any energy-completion route; the velocity
+residual and the pencil interpretation of the de Bruijn–Newman constant
+for polynomial controls.
+
+## Where
+
+- Character channels: [the Dirichlet-family note](../papers/investigations/character-channels/notes/CHARACTER_CHANNELS_AND_THE_DIRICHLET_FAMILY_20260926.md).
+- CCM: [program overview](../papers/investigations/ccm-operator-realizations/PROGRAM_OVERVIEW.md), [README](../papers/investigations/ccm-operator-realizations/README.md), [strings, graph Dirac and cutoff obstructions](../papers/investigations/ccm-operator-realizations/notes/CCM_STRINGS_GRAPH_DIRAC_AND_CUTOFF_OBSTRUCTIONS_20260926.md), [weighted operator reduction](../papers/investigations/ccm-operator-realizations/notes/CCM_WEIGHTED_OPERATOR_SPECTRAL_REDUCTION_20260928.md), [threshold-energy obstruction](../papers/investigations/ccm-operator-realizations/notes/CCM_THRESHOLD_ENERGY_OBSTRUCTION_20260928.md) and its [review](../papers/investigations/ccm-operator-realizations/reviews/CCM_THRESHOLD_ENERGY_REVIEW_20260928.md), [string realization review](../papers/investigations/ccm-operator-realizations/reviews/STRING_REALIZATION_CRITICAL_REVIEW_20260926.md), [bounded audit](../papers/investigations/ccm-operator-realizations/notes/CCM_INFINITE_L_BOUNDED_AUDIT_20260926.md).
+- Fractal Laplacians: [obstructions](../papers/investigations/ccm-fractal-laplacians/notes/CCM_PRIME_JUMP_GEOMETRY_OBSTRUCTIONS_20260926.md), [critical review](../papers/investigations/ccm-fractal-laplacians/reviews/PRIME_JUMP_GEOMETRY_CRITICAL_REVIEW_20260926.md).
+- Detector: [manuscript](../papers/misc/rh-detector/rh_detector.tex), [STATUS](../papers/misc/rh-detector/STATUS.md), [README](../papers/misc/rh-detector/README.md).
+- Program-wide context: [program meta-analysis](../papers/investigations/program-meta-analysis/reviews/PROGRAM_META_ANALYSIS_20260926.md), [CCM threshold update](../papers/investigations/program-meta-analysis/notes/CCM_THRESHOLD_OBSTRUCTION_UPDATE_20260928.md).

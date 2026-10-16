@@ -42,3 +42,26 @@ refreshed at the end of every turn), or recover an earlier conversation with
      count.
    - *Coverage.* As for the earlier Cowork captures, plus chat-visible items
      that travel through tools, labelled in each message's metadata.
+
+2. **Quaternion theta geometry joint review response** — [0002_2026-10-15T23-08-30Z_quaternion-theta-geometry-joint-review-response.json](0002_2026-10-15T23-08-30Z_quaternion-theta-geometry-joint-review-response.json)
+   - *Work.* Read gpt-6-astra's [Response 17](../../reviews/17_RESPONSE_TO_JOINT_REVIEW_CLAUDE_20261015.md)
+     to the joint review, together with the sources it cites in
+     Investigations 19, 21 and 22, and wrote the
+     [reply](../../reviews/18_REPLY_TO_RESPONSE_17_CLAUDE_20261015.md)
+     with an exact [check programme](../../numerics/check_heat_germ_degrees_claude_20261015.py)
+     and [record](../../numerics/HEAT_GERM_DEGREES_CLAUDE_20261015.json)
+     (heat-germ local degrees and indices, the heat-deformed dilation law,
+     Response 17's polynomial controls), plus entries in the reviews and
+     numerics READMEs. The reply accepts the three heat-germ corrections,
+     gives the exact endpoint table of the RH equivalence, proves when a
+     prescribed trace certificate is RH-equivalent, restates the controls
+     one hypothesis list each, and fixes a pass/fail protocol for the
+     anisotropic-contour test.
+   - *Session.* A Claude Cowork cloud session in project RH4 with Claude Fable
+     5.1 (`claude-fable-5-1`, reasoning effort max per the transcript),
+     started 15 October 2026 at 19:08 America/New_York.
+   - *Capture.* Captured by the session itself with
+     `record_Claude_cowork_chat.py capture`, first at 19:36 the same day (3
+     messages over 1 turn), and refreshed at the end of every later turn,
+     before that turn's reply; [index.json](index.json) gives the current
+     count.
