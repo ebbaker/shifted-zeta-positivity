@@ -17,7 +17,7 @@ The principal new result is a starting-energy chord criterion: a uniform error o
 | [reviews](reviews/README.md) | Derivation assessments and verification limits |
 | [source-documents](source-documents/README.md) | Provenance and links to retained reference material |
 | [brainstorm](brainstorm/README.md) | Candidate mechanisms before development |
-| [chat-histories](chat-histories/README.md) | Canonical history of the investigation-creation chat; later research chats retain their existing formal-replay identities, most recently 22 |
+| [chat-histories](chat-histories/README.md) | Canonical history of the investigation-creation chat; later research chats retain their existing formal-replay identities, most recently 24 |
 
 [Origin and integration](notes/00_research_coordination/01_ORIGIN_AND_INITIAL_INTEGRATION_20261015.md) · [Draft history](DRAFT_HISTORY.md). Preserve the repository's large-file policy; create no manuscript snapshot folders.
 
@@ -38,3 +38,5 @@ The current manuscript includes the complete local stationary curve, scalar cone
 The subsequent [topological review](reviews/13_GEOMETRIC_SIMPLIFICATION_AND_TOPOLOGICAL_RH_REVIEW_20261015.md) gives two additional reductions: a compact real hyperelliptic surface criterion built from theta moments, and a spacetime winding test that detects all collision multiplicities. The [surface proof](notes/01_physical_jet_geometry/05_JENSEN_HYPERELLIPTIC_TOPOLOGY_20261015.md) and [spacetime proof](notes/01_physical_jet_geometry/04_SPACETIME_INDEX_AND_MARKED_TOPOLOGY_20261015.md) retain their classical inputs and novelty limitations. These topology results remain outside the manuscript.
 
 The [arithmetic derivation review](reviews/14_MULTIPLICATIVE_DILATION_AND_NONLOCAL_ARITHMETIC_REVIEW_20261015.md) derives exact prime-sieve identities with complete transformed lower intervals and explicit uniform remainders. It proves why separated positive-time Möbius and Poisson sectors fail, and why two convergent nonlocal rewritings still leave the main scalar trace unsigned. The compact-surface direction is parked. These arithmetic results are now integrated into Section 12; the [integration review](reviews/15_ARITHMETIC_MANUSCRIPT_INTEGRATION_REVIEW_20261015.md) records the independent checks and all-page PDF inspection.
+
+The subsequent [spacetime and geometric continuation](reviews/18_SPACETIME_BOUNDARY_AND_GEOMETRIC_CONTINUATION_REVIEW_20261015.md) completes the bounded theta winding pilot, retains a practical interior comparison, and connects real-projective jets and surface-component deficits to collision counts. It also distinguishes real from complex collision multiplicity at every order. These results remain research notes; the current manuscript is unchanged. Provenance is formal replay identity 24.
