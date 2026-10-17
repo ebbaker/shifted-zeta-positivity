@@ -5,7 +5,15 @@ Recorded model: **gpt-6-astra (Codex)**; reasoning effort: **ultra**.
 
 Separate assessments of claims, computations and scope.
 
-No formal round assessment has been written. Reviews cover the accumulated
+| Number | Review | Model | Kind |
+| --- | --- | --- | --- |
+| 01 | [Round-one cross-model review](01_ROUND_ONE_CROSS_MODEL_REVIEW_CLAUDE_20261017.md) | Claude Opus 5.5 (`claude-opus-5-5`), effort max | Cross-model LLM assessment of round one; one reconciliation pending |
+
+Row added 17 October 2026 for Edward Baker with LLM assistance (Claude Opus 5.5,
+Claude Cowork); its support computations are in
+[numerics/round-1/claude-review](../numerics/round-1/claude-review/README.md).
+
+Reviews cover the accumulated
 investigation round, which may contain many notes; do not require one review
 after each note. Write assessments separately from the research notes, with
 the round artifacts and their exact versions or hashes,
