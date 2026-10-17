@@ -19,6 +19,7 @@ and the RH3 research log is with the
 | [`investigations/`](investigations/README.md) | Cross-program investigations: CCM operator realizations and fractal Laplacians, character channels, the Sonin critical-boundary manuscript, and the program meta-analysis. | 26 Sep – 3 Oct 2026 | [Index](investigations/README.md); [program meta-analysis](investigations/program-meta-analysis/README.md). |
 | [`quasi-rh/`](quasi-rh/README.md) | The zero-strip line: prime-variance exponents, quasi-RH exponent descent with the Newman-collision projects, and character amplification. | 3–11 Oct 2026 | [Line guide](quasi-rh/README.md). |
 | [`investigations-2/`](investigations-2/README.md) | The second investigation portfolio, grown from the exponent-descent brainstorms: active and inactive program homes, the Newman certificate audit and the formal-replay crosswalk. | 12 Oct 2026 onward | [Portfolio overview](investigations-2/README.md); [active programs](investigations-2/active/README.md). |
+| [`investigations-3/`](investigations-3/README.md) | Seven phase-gated proposals: families, finite sums, outer errors, Sonin responses, constructive stability, explicit counts and source-measurement audit. | 16 Oct 2026 onward | [Overall research plan](investigations-3/research-overview/01_PORTFOLIO_RESEARCH_PLAN_20261016.md). |
 | [`brainstorm/`](brainstorm/README.md) | Reflection between major investigation series and discussion before choosing the next program. | 16 Oct 2026 onward | [Brainstorm index](brainstorm/README.md); [investigations 3 discussion](brainstorm/investigations-3/README.md). |
 | [`misc/`](misc/README.md) | Separate earlier work, currently the RH-detector draft. | Aug 2026 | [Miscellaneous papers](misc/README.md). |
 
@@ -30,6 +31,10 @@ repository-wide. Recurring patterns to avoid are in [avoid](../avoid/README.md).
 
 The inter-series brainstorm entry was added on 16 October 2026 for Edward
 Baker with substantial LLM assistance, **gpt-6-astra**, effort **ultra**.
+
+The investigations-3 setup was added on 16 October 2026 for Edward Baker
+with substantial LLM assistance, **gpt-6-astra**, effort **ultra**. It
+initializes research proposals and does not report new results.
 
 ## How the work developed
 
@@ -52,6 +57,10 @@ Baker with substantial LLM assistance, **gpt-6-astra**, effort **ultra**.
 6. **Second portfolio (12 October onward).** Audits of the quasi-RH sources
    and of a Newman certificate, Euler-factor controls, and the theta geometry
    near possible collisions.
+
+7. **Third portfolio (16 October onward).** Seven bounded proposals with
+   model assignments, dependencies and stopping criteria, following the
+   inter-series exchange; research execution remains phase-gated.
 
 ## Status
 

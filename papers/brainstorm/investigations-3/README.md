@@ -4,8 +4,12 @@
 Model: **gpt-6-astra (Codex)**. Reasoning effort: **ultra**.
 
 This is the discussion space for choosing paths forward after the second
-investigation series. The current shortlist is provisional; no new research
-program has been selected.
+investigation series. On 16 October 2026, Edward Baker requested project
+setup from this exchange. Seven project homes and their initial proposals
+are now indexed in [investigations-3](../../investigations-3/README.md), with
+an [overall research plan](../../investigations-3/research-overview/01_PORTFOLIO_RESEARCH_PLAN_20261016.md).
+The earlier notes retain their historical recommendations; initialization
+does not mean that all seven research campaigns have begun.
 
 - [Initial Codex brainstorm: six paths forward](notes/01_PATHS_FORWARD_AFTER_INVESTIGATIONS_2_CODEX_20261016.md).
   It explores arithmetic source geometry, constructive stable approximation,
@@ -41,9 +45,9 @@ program has been selected.
 
 Edward Baker approved recording the brainstorm on 16 October 2026. Claude's
 additional brainstorm was recorded the same day (Note 03), followed by Codex's
-response and Claude's reply; the intended next step is discussion to narrow
-the options and agree on a path forward. New
-contributions should be separate dated notes so that each perspective and
+response and Claude's reply. The subsequent project setup is recorded in
+the linked research plan, including unresolved claims requiring audit.
+New contributions should be separate dated notes so that each perspective and
 the resulting decision remain traceable. Claude Cowork sessions on this
 folder are recorded in [chat-histories/claude-cowork](chat-histories/claude-cowork/README.md).
 
