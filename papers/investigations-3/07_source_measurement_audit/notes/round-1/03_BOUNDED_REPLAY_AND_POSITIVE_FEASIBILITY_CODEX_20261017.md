@@ -29,7 +29,7 @@ extrapolation. No new height grid, support sweep or \(x=140\) test ran.
 
 ## 1 Evaluation and validation
 
-The implementation in [numerics/round1][numerics] imports no original
+The implementation in [numerics/round-1][numerics] imports no original
 solver. Floating production uses 80- and 120-decimal-digit tanh-sinh
 quadrature, thin QR and singular values. A separate 448-bit Arb calculation
 encloses the integrals and verifies inverse identities, rank, distances and
@@ -214,10 +214,10 @@ together; no formal review or cross-model reconciliation is claimed here.
 [proposal]: ../../research-overview/01_INITIAL_RESEARCH_PROPOSAL_20261016.md
 [opening]: 01_OPENING_ANALYTIC_AUDIT_AND_REPLAY_CONTRACT_CODEX_20261016.md
 [bounds]: 02_EXPLICIT_THETA_JET_AND_ENDPOINT_BOUNDS_CODEX_20261017.md
-[numerics]: ../../numerics/round1/README.md
-[summary]: ../../numerics/round1/REPLAY_SUMMARY.json
-[measurement]: ../../numerics/round1/CERTIFIED_MEASUREMENTS.json
-[feasibility]: ../../numerics/round1/CERTIFIED_FEASIBILITY.json
+[numerics]: ../../numerics/round-1/README.md
+[summary]: ../../numerics/round-1/REPLAY_SUMMARY.json
+[measurement]: ../../numerics/round-1/CERTIFIED_MEASUREMENTS.json
+[feasibility]: ../../numerics/round-1/CERTIFIED_FEASIBILITY.json
 [results]: ../../../../../result-summaries/README.md
 [controls]: ../../../../../result-summaries/12_collision_controls_and_screening.md
 [avoid]: ../../../../../avoid/README.md

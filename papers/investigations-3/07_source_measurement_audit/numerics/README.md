@@ -6,11 +6,11 @@ Initialization model: **gpt-6-astra (Codex)**; reasoning effort: **ultra**.
 Reproducible code, parameters and small execution records.
 
 **Round-one bounded replay completed 17 October 2026.** See
-[code and small records](round1/README.md) and
-[the numerical note](../notes/round1/03_BOUNDED_REPLAY_AND_POSITIVE_FEASIBILITY_CODEX_20261017.md).
+[code and small records](round-1/README.md) and
+[the numerical note](../notes/round-1/03_BOUNDED_REPLAY_AND_POSITIVE_FEASIBILITY_CODEX_20261017.md).
 The six observations, 24 conditioning combinations and 32 feasibility cases
 have independent floating production and interval verification. The
-[opening note, Section 5](../notes/round1/01_OPENING_ANALYTIC_AUDIT_AND_REPLAY_CONTRACT_CODEX_20261016.md)
+[opening note, Section 5](../notes/round-1/01_OPENING_ANALYTIC_AUDIT_AND_REPLAY_CONTRACT_CODEX_20261016.md)
 fixes the six conditioning cases, equality/positive-feasibility cases, absolute
 error units, precision comparison, resource limit and stopping answer for the
 independent replay. Contract recorded 16 October 2026 by **gpt-6.1-sol (Codex)**,
@@ -26,7 +26,7 @@ Follow [LARGE_FILES.md](../../../../LARGE_FILES.md). Keep regenerable large
 outputs external, with a tracked guide and small hash-bound records when
 first needed; no large archive is created by this setup.
 
-The [concrete onset calculation](round1/CONCRETE_ONSET_BUDGET.json) is a
-separate fixed analytic budget for [Note 05](../notes/round1/05_CONCRETE_NORMALIZED_ONSET_BUDGET_CODEX_20261017.md).
+The [concrete onset calculation](round-1/CONCRETE_ONSET_BUDGET.json) is a
+separate fixed analytic budget for [Note 05](../notes/round-1/05_CONCRETE_NORMALIZED_ONSET_BUDGET_CODEX_20261017.md).
 It supplies the conservative sufficient threshold 3915 without new
 physical-height evaluations. Recorded 17 October 2026, **gpt-6.1-sol**, effort **ultra**.

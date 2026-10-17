@@ -4,13 +4,13 @@
 Initialization model: **gpt-6-astra (Codex)**; reasoning effort: **ultra**.
 
 **Status: round one active; a working manuscript now synthesizes the analytic
-arguments and validated replay. Reviews occur at the round boundary.** The [opening note](notes/round1/01_OPENING_ANALYTIC_AUDIT_AND_REPLAY_CONTRACT_CODEX_20261016.md)
+arguments and validated replay. Reviews occur at the round boundary.** The [opening note](notes/round-1/01_OPENING_ANALYTIC_AUDIT_AND_REPLAY_CONTRACT_CODEX_20261016.md)
 records the claim ledger, endpoint remainders, a scoped nearby-double-jet
 construction preserving positive normalized coefficients, and the fixed replay
-contract. The continuation now supplies [explicit bounds](notes/round1/02_EXPLICIT_THETA_JET_AND_ENDPOINT_BOUNDS_CODEX_20261017.md),
-a [validated replay](notes/round1/03_BOUNDED_REPLAY_AND_POSITIVE_FEASIBILITY_CODEX_20261017.md),
-and a [nondegeneracy argument](notes/round1/04_NONDEGENERATE_FINITE_SOURCE_COLLISIONS_CODEX_20261017.md).
-The [concrete normalized budget](notes/round1/05_CONCRETE_NORMALIZED_ONSET_BUDGET_CODEX_20261017.md)
+contract. The continuation now supplies [explicit bounds](notes/round-1/02_EXPLICIT_THETA_JET_AND_ENDPOINT_BOUNDS_CODEX_20261017.md),
+a [validated replay](notes/round-1/03_BOUNDED_REPLAY_AND_POSITIVE_FEASIBILITY_CODEX_20261017.md),
+and a [nondegeneracy argument](notes/round-1/04_NONDEGENERATE_FINITE_SOURCE_COLLISIONS_CODEX_20261017.md).
+The [concrete normalized budget](notes/round-1/05_CONCRETE_NORMALIZED_ONSET_BUDGET_CODEX_20261017.md)
 now gives the conservative sufficient threshold 3915 for the unanchored
 three-coordinate theta-tail class.
 
@@ -28,7 +28,7 @@ Claude's cross-model assessment belongs at its boundary. The [working manuscript
 claim-by-claim disposition from the accumulated bounds and replay; the round
 assessment remains pending. The draft was requested before that assessment
 and does not mark the round reviewed or closed.
-All current notes are organized in [round one](notes/round1/README.md).
+All current notes are organized in [round one](notes/round-1/README.md).
 
 | Folder | Purpose |
 | --- | --- |

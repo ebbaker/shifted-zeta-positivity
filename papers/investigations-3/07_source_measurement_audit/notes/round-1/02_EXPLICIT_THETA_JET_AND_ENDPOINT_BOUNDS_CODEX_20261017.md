@@ -274,7 +274,7 @@ the six recorded observations.
 [opening]: 01_OPENING_ANALYTIC_AUDIT_AND_REPLAY_CONTRACT_CODEX_20261016.md
 [proposal]: ../../research-overview/01_INITIAL_RESEARCH_PROPOSAL_20261016.md
 [replay]: 03_BOUNDED_REPLAY_AND_POSITIVE_FEASIBILITY_CODEX_20261017.md
-[checks]: ../../numerics/round1/ANALYTIC_BOUND_CHECKS.json
+[checks]: ../../numerics/round-1/ANALYTIC_BOUND_CHECKS.json
 [results]: ../../../../../result-summaries/README.md
 [arithmetic]: ../../../../../result-summaries/14_theta_identities_and_arithmetic_bookkeeping.md
 [avoid]: ../../../../../avoid/README.md

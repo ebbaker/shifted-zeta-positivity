@@ -19,6 +19,9 @@ response or numerical gain is established.
 | [01 Exact mixed response and finite translate obstruction](01_EXACT_MIXED_RESPONSE_AND_FINITE_TRANSLATE_OBSTRUCTION_CODEX_20261017.md) | Exact trace identity, mixed boundary cancellation, prepared modulation test, generic sign control and next analytic input |
 | [02 Corrected signed Weil Gram and mixed source estimates](02_CORRECTED_SIGNED_WEIL_GRAM_AND_MIXED_SOURCE_ESTIMATES_CODEX_20261017.md) | Explicit arithmetic, boundary and metric corrections; signed metric asymptotic; compact transfer and full-complement enclosure |
 
+The [working manuscript](../../manuscript/sonin_mixed_prime_response.tex)
+synthesizes both notes; its drafting does not close the round.
+
 Formal review follows the coherent round output under the
 [portfolio review cadence](../../../research-overview/01_PORTFOLIO_RESEARCH_PLAN_20261016.md).
 Routine derivations may continue within this round. The opening scope is

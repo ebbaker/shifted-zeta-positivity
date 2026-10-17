@@ -3,7 +3,8 @@
 16 October 2026. Prepared for Edward Baker with substantial LLM assistance.
 Recorded model: **gpt-6-astra (Codex)**; reasoning effort: **ultra**.
 
-No manuscript milestone exists. The [initial proposal](research-overview/01_INITIAL_RESEARCH_PROPOSAL_20261016.md)
+A user-requested unreviewed working manuscript now summarizes round 1.
+The [initial proposal](research-overview/01_INITIAL_RESEARCH_PROPOSAL_20261016.md)
 records the 16 October 2026 setup, model assignments and phase gates.
 
 For future milestones, add only the date, investigation, commit/tag or
@@ -30,3 +31,13 @@ new manuscript snapshot folders.
   sign margin; internal same-model checks, cross-model review open.
   Prepared for Edward Baker with substantial LLM assistance,
   **gpt-6.1-sol**, effort **ultra**.
+
+
+- **17 October 2026 — first working manuscript.** Source:
+  [sonin_mixed_prime_response.tex](manuscript/sonin_mixed_prime_response.tex)
+  (working tree; repository baseline `4929ce19b77a29709fe6d76c1c615ebfa4491465`).
+  Consolidates [Notes 01–02](notes/round-1/README.md), with explicit inherited
+  inputs, proofs, signed correction scope and full-complement error budget.
+  Source compiles; no PDF retained. Unreviewed working draft, with no new
+  numerical sign margin. Prepared for Edward Baker with substantial LLM
+  assistance, **gpt-6.1-sol**, effort **ultra**.

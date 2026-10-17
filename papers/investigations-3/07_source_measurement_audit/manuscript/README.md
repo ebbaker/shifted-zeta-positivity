@@ -11,7 +11,7 @@ continues to occur at the round boundary.
 - [Editable standalone LaTeX source](source_measurement_audit.tex).
 
 *Finite measurements and positive heat collisions near the theta source*
-synthesizes [Notes 01–05](../notes/round1/README.md): endpoint separation,
+synthesizes [Notes 01–05](../notes/round-1/README.md): endpoint separation,
 small normalized positive perturbations, generic frozen-source heat collisions,
 the conservative sufficient threshold 3915 for the stated unanchored pair,
 and the validated finite measurement and positivity replay. It includes
@@ -29,5 +29,5 @@ formal round assessment or independent specialist review.
 Keep this single editable source and PDF. Record notable versions in
 [the concise draft history](../DRAFT_HISTORY.md), using commits or tags for
 future milestones, without creating snapshot folders. Detailed evidence
-remains in [round-one notes](../notes/round1/README.md) and
-[the numerical records](../numerics/round1/README.md).
+remains in [round-one notes](../notes/round-1/README.md) and
+[the numerical records](../numerics/round-1/README.md).

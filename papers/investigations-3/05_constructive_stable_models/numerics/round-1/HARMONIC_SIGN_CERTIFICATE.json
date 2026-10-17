@@ -1,0 +1,78 @@
+{
+  "schema": "constructive_stable_harmonic_signs_v1",
+  "date": "2026-10-17",
+  "prepared_for": "Edward Baker",
+  "model": "gpt-6.1-sol",
+  "reasoning_effort": "ultra",
+  "llm_assistance": "Substantial LLM assistance.",
+  "python_version": "3.10.0",
+  "python_flint_version": "0.9.0",
+  "underlying_flint_version": "3.6.0",
+  "budget": {
+    "precision_bits": 160,
+    "evaluations": 3,
+    "wall_clock_seconds": 30,
+    "precision_escalation": false,
+    "subdivision": false
+  },
+  "retained_replay_contract": {
+    "declared_after_initial_sign_scout": true,
+    "requested_output_radius_at_most": "1e-15",
+    "strict_signed_margin": "36/100000000000000",
+    "replay_reason": "Verify newly added quantitative approximation floor and finalize artifacts"
+  },
+  "formula": "s=(1+i*x)/2; H0=s(s-1)pi^(-s/2)Gamma(s/2)zeta(s)/16",
+  "rows": [
+    {
+      "label": "lower_endpoint",
+      "input": "28.26945",
+      "real": "[2.4497410351090046302965942130236321959775018411623574771136003975e-11 +/- 8.81e-51]",
+      "imag": "[1.6199907687615958755894720735379141166225962511950333362221065676e-55 +/- 8.12e-51]",
+      "strict_sign": 1,
+      "outer_bounds_check": true,
+      "rational_outer_interval": [
+        "2e-11",
+        "3e-11"
+      ]
+    },
+    {
+      "label": "upper_endpoint",
+      "input": "28.26946",
+      "real": "[-8.3969965782412140528184697696526123532618821206934074579662482525e-10 +/- 1.20e-50]",
+      "imag": "[7.342962827730009624354094728252367374159434955122241943533018876e-56 +/- 1.11e-50]",
+      "strict_sign": -1,
+      "outer_bounds_check": true,
+      "rational_outer_interval": [
+        "-9e-10",
+        "-8e-10"
+      ]
+    },
+    {
+      "label": "tripled_interval",
+      "input": "84.808365 +/- 0.000015",
+      "real": "[-3.6736706425277708111756182835852122748583591275629070891105340144e-13 +/- 6.50e-17]",
+      "imag": "[-2.70251419125240449978272830934464747633777013690247618951448902e-23 +/- 6.02e-17]",
+      "strict_sign": -1,
+      "outer_bounds_check": true,
+      "rational_outer_interval": [
+        "-3.68e-13",
+        "-3.67e-13"
+      ]
+    }
+  ],
+  "elapsed_seconds": 0.0007387079822365195,
+  "uniform_approximation_obstruction": {
+    "delta_exact": "36/100000000000000",
+    "delta_decimal": "3.6e-13",
+    "domain": "[28.26945,28.26946] union [84.80835,84.80838]",
+    "endpoint_and_triple_margins_strictly_exceed_delta": true,
+    "class": "Finite products of cos(a_j*x) times a continuous nonvanishing real multiplier",
+    "conclusion": "No member has uniform error strictly less than delta on this domain."
+  },
+  "script_sha256": "39e8c1dfba3e8e9bf3ba95d6e37127cce4d581ea164568189a77afa28d2449f2",
+  "references": [
+    "https://python-flint.readthedocs.io/en/latest/general.html#inexact-numbers-and-numerical-evaluation",
+    "https://python-flint.readthedocs.io/en/latest/acb.html#flint.acb.zeta"
+  ],
+  "scope": "Finite validated signs; continuity yields at least one zero in (28.26945,28.26946), and H0 has fixed nonzero sign on [84.80835,84.80838]."
+}

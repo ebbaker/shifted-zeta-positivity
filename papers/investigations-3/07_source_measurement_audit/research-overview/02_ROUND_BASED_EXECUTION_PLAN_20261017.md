@@ -22,7 +22,7 @@ together; the initial assignment of Claude for cross-model review remains
 available then, followed by at most one reconciliation round. No external
 chat has been commissioned by this update.
 
-Keep this round's notes in `notes/round1/`, with an index per round; future
+Keep this round's notes in `notes/round-1/`, with an index per round; future
 rounds use sibling folders. Keep code and small records in `numerics/`, and eventual
 round assessments in `reviews/`. Record actual model and effort. A round
 boundary is determined by its resolved questions and complete evidence,
@@ -36,11 +36,11 @@ differ from actual distances, and what positivity changes.
 
 | Work component | Current evidence |
 | --- | --- |
-| Claim ledger and class | [Note 01](../notes/round1/01_OPENING_ANALYTIC_AUDIT_AND_REPLAY_CONTRACT_CODEX_20261016.md): exact normalization, endpoint expansion, sufficient-radius distinction and fixed replay contract |
-| Quantitative analytic estimates | [Note 02](../notes/round1/02_EXPLICIT_THETA_JET_AND_ENDPOINT_BOUNDS_CODEX_20261017.md): explicit complete-theta upper envelope, endpoint/determinant remainders, exact carrier and derivative |
-| Bounded independent replay | [Note 03](../notes/round1/03_BOUNDED_REPLAY_AND_POSITIVE_FEASIBILITY_CODEX_20261017.md): all six observations and 32 coefficient cases, interval verification and strict separating witnesses |
-| Nondegeneracy of the constructed events | [Note 04](../notes/round1/04_NONDEGENERATE_FINITE_SOURCE_COLLISIONS_CODEX_20261017.md): outside a discrete set at each fixed positive time, the nearby double jets are actual local heat collisions |
-| Concrete onset budget | [Note 05](../notes/round1/05_CONCRETE_NORMALIZED_ONSET_BUDGET_CODEX_20261017.md): a fixed unanchored normalized three-coordinate pair gives a conservative sufficient threshold of 3915 |
+| Claim ledger and class | [Note 01](../notes/round-1/01_OPENING_ANALYTIC_AUDIT_AND_REPLAY_CONTRACT_CODEX_20261016.md): exact normalization, endpoint expansion, sufficient-radius distinction and fixed replay contract |
+| Quantitative analytic estimates | [Note 02](../notes/round-1/02_EXPLICIT_THETA_JET_AND_ENDPOINT_BOUNDS_CODEX_20261017.md): explicit complete-theta upper envelope, endpoint/determinant remainders, exact carrier and derivative |
+| Bounded independent replay | [Note 03](../notes/round-1/03_BOUNDED_REPLAY_AND_POSITIVE_FEASIBILITY_CODEX_20261017.md): all six observations and 32 coefficient cases, interval verification and strict separating witnesses |
+| Nondegeneracy of the constructed events | [Note 04](../notes/round-1/04_NONDEGENERATE_FINITE_SOURCE_COLLISIONS_CODEX_20261017.md): outside a discrete set at each fixed positive time, the nearby double jets are actual local heat collisions |
+| Concrete onset budget | [Note 05](../notes/round-1/05_CONCRETE_NORMALIZED_ONSET_BUDGET_CODEX_20261017.md): a fixed unanchored normalized three-coordinate pair gives a conservative sufficient threshold of 3915 |
 | User-requested working manuscript | [Manuscript](../manuscript/README.md): synthesizes Notes 01–05 and supplies provisional claim-by-claim disposition before round assessment |
 
 The research round remains in progress. The record distinguishes written

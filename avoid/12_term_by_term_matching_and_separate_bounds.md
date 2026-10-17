@@ -2,6 +2,9 @@
 
 15 October 2026. Claude Fable 5.1 (`claude-fable-5-1`), Claude Cowork.
 
+Sonin working-draft evidence added 17 October 2026 for Edward Baker with
+substantial LLM assistance, **gpt-6.1-sol (Codex)**, effort **ultra**.
+
 ## The pattern
 
 The target is a small difference of large quantities. An argument matches
@@ -27,6 +30,8 @@ separated complement floors; a Gram tail omitted from a lower bound.
 - [22 manuscript §12](../papers/investigations-2/active/22_theta_manifold_geometry/manuscript/theta_manifold_geometry.tex) and the [dilation note](../papers/investigations-2/active/22_theta_manifold_geometry/notes/03_theta_bundles_and_connections/11_MULTIPLICATIVE_DILATION_AND_COMPLETE_HEAT_PACKETS_20261015.md): at every positive heat time the separated Möbius series "fail even the term test" while their paired difference converges rapidly.
 - [Storage-depth barrier note](../papers/weil-positivity/shifted-zeta/storage-depth/archive/reviews/NOTE_barrier_theorem_and_ladder_conjecture_20260911.md): with separated complement floors "there is nothing left to gain from sharper arithmetic norm bounds".
 - [Finite-response assessment](../papers/weil-positivity/susy-positivity/manuscripts/finite-response-weil-positivity/reviews/assessment_claude_current_draft_20260914.md) §3.2: "Omitting a positive Gram tail destroys the lower-bound property."; [positive-factorizations round-4 review](../papers/weil-positivity/susy-positivity/investigations/previous/positive-factorizations/archive/progress-reports/REVIEW_round4_20260911.md): "Thus these small-looking terms cannot be discarded when designing an even completion."; [open directions](../papers/weil-positivity/susy-positivity/investigations/previous/source-selection-rules/notes/OPEN_DIRECTIONS_20260916.md) §E: a missing \(\psi'\) tail shifts every value by 0.0125.
+
+- [Sonin mixed-prime Note 02, §3](../papers/investigations-3/04_sonin_mixed_prime_response/notes/round-1/02_CORRECTED_SIGNED_WEIL_GRAM_AND_MIXED_SOURCE_ESTIMATES_CODEX_20261017.md): the gamma term “is a principal part of the correction”. The [working manuscript](../papers/investigations-3/04_sonin_mixed_prime_response/manuscript/sonin_mixed_prime_response.tex) records the same-model, unreviewed derivation: for the stated prepared class with support length greater than the prime-ratio shift, the isolated metric correction has both unbounded signs while the complete mixed source form is compact. Keep the complete cancellation before estimating sectors.
 
 ## What it cost
 

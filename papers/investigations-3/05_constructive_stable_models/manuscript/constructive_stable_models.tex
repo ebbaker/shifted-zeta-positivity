@@ -1,0 +1,775 @@
+\documentclass[11pt]{article}
+\usepackage[letterpaper,margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage{booktabs,tabularx,array,microtype,xurl}
+\usepackage[colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue]{hyperref}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\newcommand{\R}{\mathbb R}
+\newcommand{\C}{\mathbb C}
+\newcommand{\E}{\mathbb E}
+\newcommand{\dd}{\,\mathrm d}
+\newcommand{\Var}{\operatorname{Var}}
+\newcommand{\Cov}{\operatorname{Cov}}
+\newcommand{\LP}{\mathcal{LP}}
+\newcommand{\norm}[1]{\left\lVert#1\right\rVert}
+\numberwithin{equation}{section}
+\title{Compatibility obstructions for constructive stable theta models\\
+\large Independent seeds and ferromagnetic quartic networks}
+\author{Drafted for Edward Baker}
+\date{17 October 2026\\\small Unreviewed working draft}
+\begin{document}
+\maketitle
+\begin{abstract}
+We examine explicit real-zero constructions as possible approximants to the
+complete theta heat flow. A normalized ferromagnetic comparison shows that
+any quartic network approximating theta must lose every persistent diffuse
+quartic site at its readout scale, even when the number of sites and all
+other couplings vary without bounds. Independently scaled pure-quartic
+convolutions, with arbitrary finite counts and an additional Gaussian
+component, cannot approximate theta even weakly: field growth forces
+infinitesimal weights, after which the limit must be Gaussian. We also collect
+finite interval obstructions for independent Bernoulli products, single
+quartic laws, and a fixed Bessel base with nonnegative even multipliers.
+Classical Lee--Yang theory supplies explicit coupled-quartic seeds and
+their Ising realizations; a certified negative sixth potential coefficient
+shows why a local source exclusion does not extend to every such marginal.
+No theta approximation theorem or conclusion about the Riemann hypothesis
+is obtained. Infinitesimal interacting arrays and degenerating elementary
+measures remain outside the exclusions.
+\end{abstract}
+
+\noindent\textbf{Draft status.}
+This manuscript was requested before formal round review. It integrates
+round-one Notes 01--03 and their small replay records. Derivations,
+certificates and authoring checks used \texttt{gpt-6.1-sol} (Codex), reasoning
+effort \texttt{ultra}. The checks are internal and same-model; cross-model
+round review and specialist human review remain pending. No literature
+priority is claimed.
+
+\section{Target, conventions and scope}\label{sec:setup}
+
+Use the complete theta source and heat transform
+\begin{align}
+\Phi(u)&=\sum_{n\ge1}
+ (2\pi^2n^4e^{9u}-3\pi n^2e^{5u})e^{-\pi n^2e^{4u}},
+ \qquad u\ge0,\label{eq:phi}\\
+H_t(z)&=\int_0^\infty e^{tu^2}\Phi(u)\cos(zu)\dd u,
+ \qquad H_0(z)=\tfrac18\xi((1+iz)/2).\label{eq:heat}
+\end{align}
+The source extends evenly to the real line. The xi identity and the heat
+normalization are classical; see Polymath \cite{polymath}. In particular
+\(\partial_tH_t=-\partial_z^2H_t\). Set
+\[
+ I_{2k}=\int_0^\infty u^{2k}\Phi(u)\dd u,\qquad
+ m_{2k}=I_{2k}/I_0,\qquad
+ M_\theta(h)=H_0(-ih)/I_0=\frac{\xi((1+h)/2)}{\xi(1/2)}.
+\]
+Thus \(M_\theta\) is the normalized Laplace transform of the probability
+density \(\Phi(u)/(2I_0)\) on \(\R\). All finite complex-field and heat
+derivatives converge absolutely on compact sets.
+
+The inherited outward moment enclosure \cite{scout} gives
+\begin{equation}\label{eq:moments}
+ 0.01155234249<m_2<0.01155265063,\qquad
+ 2.79098616<\frac{m_4}{m_2^2}<2.79121956.
+\end{equation}
+The strict consequence
+\(\kappa_4(M_\theta)=m_4-3m_2^2<0\) supplies an optional check below;
+the new exclusion theorems have analytic proofs without this enclosure.
+These are source-moment enclosures, not zero certificates.
+
+The other growth input is elementary and unconditional.
+\begin{lemma}[Theta field growth]\label{lem:theta}
+As \(h\to+\infty\),
+\begin{equation}\label{eq:theta-growth}
+\log M_\theta(h)
+ =\frac h4\log h-\frac h4(1+\log(4\pi))
+  +\frac74\log h+O(1).
+\end{equation}
+In particular \(\log M_\theta(h)=o(h^{4/3})\).
+\end{lemma}
+\begin{proof}
+Insert \(s=(1+h)/2\) into
+\(\xi(s)=s(s-1)\pi^{-s/2}\Gamma(s/2)\zeta(s)/2\).
+Stirling's formula \cite[5.11.1]{dlmf}, with \(s/2=(h+1)/4\), and the
+Dirichlet-series estimate \(\zeta(s)=1+O(2^{-s})\) give the expansion.
+The \(\log h\) coefficient is \(2-1/4=7/4\).
+\end{proof}
+
+We use the term stable for the real-zero Fourier or imaginary-zero Laplace
+property of the specified entire transform. Simplicity is not included.
+A construction of stable approximants converging to \(H_0\) on every
+complex compact would imply RH by Hurwitz's theorem. Our results are
+scoped obstructions to particular constructions, rather than evidence
+from finite checks for that global objective.
+
+\section{Ferromagnetic comparison and persistent quartic sites}
+\label{sec:persistent}
+
+Consider a finite probability law
+\begin{equation}\label{eq:network}
+\dd\nu(\mathbf x)=Z^{-1}\exp\left\{
+ -\sum_{j=1}^d\alpha_jx_j^4-\sum_j\beta_jx_j^2+
+ \sum_{i<j}K_{ij}x_ix_j\right\}\dd\mathbf x,
+\quad \alpha_j>0,\quad K_{ij}\ge0,
+\end{equation}
+with arbitrary real \(\beta_j\), and readout \(S=\sum_jb_jx_j\), \(b_j>0\).
+Its normalized transform is \(M(h)=\E_\nu e^{hS}\). Quartic tails justify
+every finite derivative used in this section.
+
+Absorb the readout into the coordinates:
+\begin{equation}\label{eq:effective}
+ Y_j=b_jx_j,\qquad
+ a_j=\alpha_j/b_j^4,\quad c_j=\beta_j/b_j^2,\quad
+ L_{ij}=K_{ij}/(b_ib_j).
+\end{equation}
+Write
+\begin{equation}\label{eq:site}
+ m_{a,c}(h)=
+ \frac{\int_\R e^{-ay^4-cy^2+hy}\dd y}
+      {\int_\R e^{-ay^4-cy^2}\dd y},
+ \qquad a>0,\quad c\in\R.
+\end{equation}
+
+\begin{lemma}[Normalized ferromagnetic comparison]\label{lem:gks}
+For every real \(h\ge0\), a network \eqref{eq:network} satisfies
+\begin{equation}\label{eq:comparison}
+ M(h)\ge\prod_{j=1}^d m_{a_j,c_j}(h)\ge m_{a_k,c_k}(h)
+ \qquad(1\le k\le d).
+\end{equation}
+There is no bound on \(d\), the other parameters, or the coupling sizes.
+\end{lemma}
+\begin{proof}
+We give the classical GKS duplication argument in the precise continuous
+class used here. For any two spin monomials \(Y_A,Y_B\), including repeated
+indices, the covariance is nonnegative under nonnegative fields and pair
+couplings. Indeed, take two copies \(y,z\) and put
+\(u=(y+z)/2\), \(v=(y-z)/2\).
+Twice the covariance is the expectation of
+\((y_A-z_A)(y_B-z_B)\) under the product law.
+Each difference has nonnegative polynomial coefficients in \(u,v\):
+exactly the terms with an odd total number of \(v\)'s survive.
+The doubled interaction and field are
+\[
+ 2\sum_{i<j}L_{ij}(u_iu_j+v_iv_j)+2\sum_jh_ju_j.
+\]
+Their exponential has nonnegative coefficients. Keep the doubled
+single-site density unexpanded. It is invariant independently under
+each \(u_j\mapsto-u_j\) and \(v_j\mapsto-v_j\), by evenness and exchange
+of the two copies. Each integrated monomial is therefore zero or
+nonnegative. Quartic tails justify absolute integration of the expanded
+interaction and polynomial factors. This proves the covariance inequality.
+
+Let \(\langle\cdot\rangle_h\) denote the common-field Gibbs law. Then
+\[
+ \frac{\dd}{\dd h}\langle Y_iY_j\rangle_h
+  =\sum_k\Cov_h(Y_iY_j,Y_k)\ge0.
+\]
+For the normalized transform,
+\[
+ \partial_{L_{ij}}\log M(h)
+  =\langle Y_iY_j\rangle_h-\langle Y_iY_j\rangle_0\ge0.
+\]
+Increase the couplings from zero to \(L\). This yields the product
+comparison. Each even single-site transform is an expectation of a
+cosh and is at least one. The proof concerns normalized transforms;
+dropping couplings from an unnormalized partition function would not
+establish the assertion.
+\end{proof}
+
+\begin{lemma}[Single-site monotonicity and growth]\label{lem:site}
+For \(h\ge0\), \(m_{a,c}(h)\) is nonincreasing in \(a\) and \(c\).
+For fixed \(A>0,B\ge0\),
+\begin{equation}\label{eq:quartic-growth}
+ \log m_{A,B}(h)
+ =\frac{3}{4^{4/3}}A^{-1/3}h^{4/3}
+   +O(h^{2/3}+\log h).
+\end{equation}
+An explicit lower bound, valid for \(h\ge1\), is
+\begin{align}
+ \log m_{A,B}(h)&\ge F_{A,B}(h),\label{eq:field-lower}\\
+ F_{A,B}(h)&=hu-A(u+h^{-1})^4-B(u+h^{-1})^2-\log h
+  -\log\frac{\Gamma(1/4)}{2A^{1/4}},
+ \quad u=(h/(4A))^{1/3}.\notag
+\end{align}
+\end{lemma}
+\begin{proof}
+Differentiating the normalized expectation of \(\cosh(hY)\) gives
+\[
+ \partial_a m_{a,c}(h)=-\Cov(\cosh(hY),Y^4),\qquad
+ \partial_c m_{a,c}(h)=-\Cov(\cosh(hY),Y^2).
+\]
+Both covariances are nonnegative: each pair consists of increasing
+functions of \(Y^2\), as is seen from the independent-copy covariance
+identity. For \eqref{eq:field-lower}, integrate the numerator over
+\([u,u+h^{-1}]\), and bound the denominator by
+\(\int_\R e^{-Ay^4}\dd y=\Gamma(1/4)/(2A^{1/4})\).
+The leading term is the positive term in \eqref{eq:quartic-growth}.
+The matching upper asymptotic follows by scaling \(y=h^{1/3}v\) and
+maximizing \(v-Av^4\); the quadratic term contributes \(O(h^{2/3})\).
+\end{proof}
+
+\begin{theorem}[No persistent diffuse quartic site]\label{thm:persistent}
+Let \(M_n\) be normalized transforms of any sequence of networks
+\eqref{eq:network}, with dimensions and couplings allowed to vary without
+bounds. If \(M_n(h)\to M_\theta(h)\) for every real \(h\ge0\), then for
+every \(A>0,B\ge0\), eventually no site satisfies both
+\begin{equation}\label{eq:rectangle}
+ \alpha_{n,j}/b_{n,j}^4\le A,\qquad
+ \beta_{n,j}/b_{n,j}^2\le B.
+\end{equation}
+In particular a fixed nontrivial quartic site cannot be retained while
+other ferromagnetic sites are appended to approximate theta.
+\end{theorem}
+\begin{proof}
+If such a site persists along a subsequence, Lemmas \ref{lem:gks} and
+\ref{lem:site} give \(M_n(h)\ge m_{A,B}(h)\) along it, for every \(h\ge0\).
+Equations \eqref{eq:theta-growth} and \eqref{eq:field-lower} supply one
+fixed finite \(h_*\) with \(m_{A,B}(h_*)>M_\theta(h_*)\), contradicting
+convergence at that field.
+\end{proof}
+
+\begin{corollary}[Infinitesimal readouts on bounded site shapes]
+\label{cor:infinitesimal}
+Put
+\(\ell_{n,j}=b_{n,j}\alpha_{n,j}^{-1/4}\) and
+\(r_{n,j}=\beta_{n,j}\alpha_{n,j}^{-1/2}\).
+Under the hypotheses of Theorem \ref{thm:persistent}, for every fixed
+real \(R\),
+\begin{equation}\label{eq:small-site}
+ \max_{j:r_{n,j}\le R}\ell_{n,j}\longrightarrow0,
+\end{equation}
+with the empty maximum defined as zero.
+\end{corollary}
+\begin{proof}
+If \(r\le R\) and \(\ell\ge\varepsilon\), then
+\(a=\ell^{-4}\le\varepsilon^{-4}\) and
+\(c=r/\ell^2\le\max(R,0)/\varepsilon^2\), contradicting
+\eqref{eq:rectangle}.
+\end{proof}
+
+\begin{remark}[Finite-field witness and limitations]\label{rem:gap}
+Whenever a chosen \(h_*\ge1\) satisfies
+\(F_{A,B}(h_*)>\log M_\theta(h_*)\), every network retaining a site
+in \eqref{eq:rectangle} has
+\[
+ |M(h_*)-M_\theta(h_*)|
+ \ge e^{F_{A,B}(h_*)}-M_\theta(h_*)>0.
+\]
+No numerical \(h_*\) is claimed. The theorem needs convergence of
+exponential observables. Without an additional uniform-integrability
+argument, weak convergence does not permit this theorem to be applied.
+It does not exclude infinitesimal interacting arrays or discrete-site
+degenerations. Quartic field growth must not be ascribed to every Ising
+scaling limit; for example, critical planar limits have different tail
+exponents \cite{cgn}.
+\end{remark}
+
+\section{Independent pure-quartic convolutions}\label{sec:indquartic}
+
+Let \(X\) have normalized density proportional to \(e^{-x^4}\), and set
+\(m(h)=\E e^{hX}\). Consider all finite products
+\begin{equation}\label{eq:pure-products}
+ M_n(h)=e^{\sigma_n^2h^2/2}\prod_{j=1}^{d_n}m(b_{n,j}h),
+ \qquad \sigma_n^2\ge0,\quad b_{n,j}\ge0.
+\end{equation}
+The counts and coefficients are unrestricted; the maximum scale in an
+empty row is defined to be zero. These represent independent
+scaled pure-quartic blocks plus an independent centered Gaussian.
+Each construction is classically stable \cite{sg,fr}.
+
+\begin{theorem}\label{thm:pure}
+The transforms \eqref{eq:pure-products} cannot converge to \(M_\theta\)
+uniformly on every complex compact. This conclusion has an entirely
+analytic proof and does not require a numerical theta moment enclosure.
+\end{theorem}
+\begin{proof}
+If \(\max_jb_{n,j}\ge\varepsilon>0\) along a subsequence, evenness gives
+\(M_n(h)\ge m(\varepsilon h)\) for every real \(h\ge0\). Quartic growth
+\eqref{eq:quartic-growth} contradicts \eqref{eq:theta-growth} at one
+sufficiently large fixed field. Hence \(\max_jb_{n,j}\to0\).
+
+Derivative convergence at zero bounds the variances. With \(v=\E X^2>0\),
+\[
+ \sigma_n^2+v\sum_jb_{n,j}^2=\Var(S_n)\le C.
+\]
+For fixed real \(h\), the analytic expansion at zero is
+\(\log m(bh)=vb^2h^2/2+O_h(b^4)\), uniformly once the maximum scale is
+small. Since
+\(\sum_jb_{n,j}^4\le(\max_jb_{n,j}^2)\sum_jb_{n,j}^2\to0\), summation
+gives
+\[
+ \log M_n(h)=\tfrac12\Var(S_n)h^2+o(1)
+ \longrightarrow \tfrac12 v_\theta h^2,\qquad
+ v_\theta=M_\theta''(0)>0.
+\]
+Thus \(M_\theta(h)=e^{v_\theta h^2/2}\), contrary to
+\eqref{eq:theta-growth}. Alternatively, independence gives
+\[
+ \kappa_4(S_n)=\kappa_4(X)\sum_jb_{n,j}^4\longrightarrow0,
+\]
+contradicting the inherited strict fourth-cumulant sign in
+\eqref{eq:moments}.
+\end{proof}
+
+\begin{corollary}[Weak convergence is also excluded]\label{cor:weak-pure}
+The laws represented by \eqref{eq:pure-products} cannot converge weakly
+to the normalized theta source.
+\end{corollary}
+\begin{proof}
+Put \(v=\E X^2\). Integration by parts gives
+\(\E X^4=1/4\), \(\E X^6=3v/4\). Strict Cauchy--Schwarz gives
+\(1/16<3v^2/4\), so \(\kappa_4(X)=1/4-3v^2<0\).
+Independence therefore gives
+\(\E S_n^4\le3\Var(S_n)^2\). For positive variances,
+Paley--Zygmund applied to \(S_n^2\)
+shows
+\(\mathbb P\{S_n^2>\Var(S_n)/2\}\ge1/12\).
+Tightness forces bounded variances.
+
+The function \(\log m(h)/h^2\) extends continuously at zero, is bounded
+on finite intervals and tends to zero at infinity by
+\eqref{eq:quartic-growth}. Hence \(m(h)\le e^{Ch^2}\) for all real \(h\).
+The variance bound supplies a common sub-Gaussian bound for all \(M_n\).
+It gives uniform integrability of every fixed exponential observable.
+Weak convergence would thus give \(M_n(h)\to M_\theta(h)\) for real
+\(h\). On any complex disc,
+\(|M_n(z)|\le M_n(|z|)\), so normality and the identity theorem upgrade
+this to complex-compact convergence, contradicting Theorem \ref{thm:pure}.
+\end{proof}
+
+The potential cone in Section \ref{sec:finite} is not the reason for this
+exclusion. Indeed, for independent \(X,Y\) of the pure-quartic law,
+the source of \(X+Y/4\) has a positive fourth and a negative sixth
+potential coefficient. A finite exact calculation makes this explicit.
+For general \(\delta>0\), put \(r=\delta^4\), \(A=1+r\), and
+\(v=\Gamma(3/4)/\Gamma(1/4)\). Expanding
+\(\int e^{-(s-\delta y)^4-y^4}\dd y\) at \(s=0\) gives
+\begin{align*}
+ [s^4](-\log\rho_\delta)
+  &=\frac{1-(11/2)r+r^2+18rv^2}{A^3},\\
+ [s^6](-\log\rho_\delta)
+  &=\frac{8\delta^2v}{A^{9/2}}
+       \bigl(-(1-r)^2+9rv^2\bigr).
+\end{align*}
+Differentiation is justified by quartic decay. The finite expansion uses
+\(\E y^{4k}=(1/4)_k/A^k\) and
+\(\E y^{4k+2}=(v/\sqrt A)(3/4)_k/A^k\).
+For \(\delta=1/4\), strict Cauchy bounds \(1/12<v^2<1/4\) and exact
+rational arithmetic \cite{records} give
+\[
+ 0.97<[s^4](-\log\rho_{1/4})<0.99,\qquad
+ -0.25<[s^6](-\log\rho_{1/4})<-0.11.
+\]
+Thus leaving the local potential cone can occur even without
+inter-block interaction; Theorem \ref{thm:pure} supplies the stronger
+global approximation obstruction.
+
+The result concerns fixed pure-quartic elementary shapes. It does not
+exclude variable quadratic tilts, dependent blocks, or a sequence with
+changing elementary distributions outside this class. Its proof uses
+field growth and cumulants, not an assumed location of theta zeros.
+
+\section{Finite obstructions for other seed classes}\label{sec:finite}
+
+\subsection{Independent Bernoulli products}
+For real \(b_j\), every zero \(r\) of a finite product
+\(\prod_j\cos(b_jz)\) forces a zero at \(qr\), for every odd integer \(q\).
+The same holds after multiplication by a zero-free entire function.
+The property is closed under nonzero complex-compact limits: Rouch\'e's
+theorem gives approximant zeros \(r_n\to r\), and compact convergence at
+\(qr_n\) then forces a limiting zero at \(qr\).
+
+The complete-field Acb certificate \cite{records} gives, with
+\[
+ a=28.26945,\quad b=28.26946,\quad B=[3a,3b],
+\]
+\begin{center}
+\begin{tabular}{ll}
+\toprule
+Input & Outward rational interval for \(H_0\)\\
+\midrule
+\(a\) & \((2\cdot10^{-11},3\cdot10^{-11})\)\\
+\(b\) & \((-9\cdot10^{-10},-8\cdot10^{-10})\)\\
+Every real \(x\in B\) & \((-3.68\cdot10^{-13},-3.67\cdot10^{-13})\)\\
+\bottomrule
+\end{tabular}
+\end{center}
+Thus \(H_0\) has a zero \(r\in(a,b)\) and is nonzero at \(3r\), without
+any assumption about simplicity or the first zero.
+
+\begin{proposition}\label{prop:cosine}
+No independent Bernoulli cosine products, even with arbitrary counts and
+zero-free entire multipliers, converge complex-compactly to \(H_0\).
+Moreover, on \(K=[a,b]\cup B\), every real continuous function
+\(f(x)=g(x)\prod_j\cos(b_jx)\) with \(g\ne0\) on \(K\) satisfies
+\begin{equation}\label{eq:cosine-floor}
+ \norm{f-H_0}_{C(K)}\ge3.6\cdot10^{-13}.
+\end{equation}
+\end{proposition}
+\begin{proof}
+The qualitative assertion follows from odd dilation and the certificate.
+For the quantitative assertion, an error strictly below the stated
+constant would preserve the opposite signs at \(a,b\). The intermediate
+value theorem supplies a zero \(r_f\in(a,b)\). A cosine factor must vanish
+there, and hence at \(3r_f\), contradicting the certified margin on \(B\).
+\end{proof}
+
+\subsection{A source-potential inequality}
+For a positive source \(\rho\), write \(W(x)=-\log\rho(\sqrt x)\), and
+let \(\Delta_h\) denote a forward difference in \(x\).
+If
+\begin{equation}\label{eq:potential-cone}
+ -\log\rho(u)=c+\beta u^2+\alpha u^4+\sum_{k\ge3}v_ku^{2k},
+ \qquad v_k\ge0,
+\end{equation}
+with convergence at the tested nodes, then \(\Delta_h^3W(0)\ge0\).
+Terms of degree at most two in \(x\) cancel, and higher monomials have
+positive third differences. Normalization and the quadratic heat weight
+do not change the test. The complete-source certificate gives
+\begin{equation}\label{eq:delta3}
+ \Delta_{1/100}^3[-\log\Phi(\sqrt x)]_{x=0}
+ \in(-0.000434999,-0.000434997).
+\end{equation}
+Consequently sources in \eqref{eq:potential-cone} cannot converge to theta
+even at these four source nodes. We do not infer a general weak-limit
+exclusion for a growing-degree cone from this pointwise test alone.
+
+\begin{proposition}[Single quartic laws]\label{prop:single}
+Normalized laws proportional to
+\(e^{-\alpha_nu^4-\beta_nu^2}\), \(\alpha_n>0,\beta_n\in\R\), cannot
+converge weakly to the normalized theta source.
+\end{proposition}
+\begin{proof}
+If \(r_n=\norm{(\alpha_n,\beta_n)}\to\infty\), pass to a subsequence of
+normalized coefficient vectors with limit \((a,b)\) of norm one.
+The polynomial \(p(u)=au^4+bu^2\) is nonconstant. Choose bounded intervals
+\(A,B\) with \(\inf_Ap>\sup_Bp+2\eta\). Uniform convergence of the
+normalized potentials on these intervals gives
+\[
+ \mu_n(A)\le(|A|/|B|)e^{-r_n\eta}\mu_n(B)\longrightarrow0,
+\]
+contradicting positive theta mass on \(A\).
+Thus the parameters are bounded. Extract their limits. The normalizer
+is determined by the mass of any compact interval of positive limiting
+mass, so local density convergence identifies the limit as a quartic
+or Gaussian law. Its third difference is zero, contrary to
+\eqref{eq:delta3}. Integrability rules out a nonintegrable boundary
+potential. Normalized Fourier convergence would imply weak convergence
+by L\'evy's continuity theorem and is excluded as well.
+\end{proof}
+
+\subsection{Fixed Bessel base with positive even coefficients}
+Let
+\begin{equation}\label{eq:bessel}
+ B_0(u)=e^{-2\pi\cosh4u},\qquad
+ \int_0^\infty B_0(u)\cos(zu)\dd u=\tfrac14K_{iz/4}(2\pi).
+\end{equation}
+The Bessel seed has only real zeros; see \cite{gasper,dlmf}.
+Even universal multipliers \(U\), with \(U(iz)\in\LP\) and
+\(U\ge0\) on \(\R\), preserve this property \cite[Proposition 1]{cardon}.
+Their canonical products have the form
+\[
+ U(u)=Cu^{2m}e^{au^2}\prod_j(1+u^2/r_j^2),
+ \qquad C>0,\quad a\ge0.
+\]
+In particular all even Taylor coefficients are nonnegative.
+The following larger-class exclusion does not require universality.
+
+\begin{proposition}\label{prop:bessel}
+Suppose \(U_n(u)=\sum_{k\ge0}c_{n,k}u^{2k}\) are nonzero even entire
+functions with \(c_{n,k}\ge0\), and \(B_0U_n\) are integrable nonnegative
+sources. Their even
+source measures cannot converge weakly to the theta source, nor can their
+cosine transforms converge to \(H_0\) on every complex compact.
+\end{proposition}
+\begin{proof}
+Every \(U_n(\sqrt x)\) has nonnegative fourth forward differences.
+The complete-source certificate instead gives
+\begin{equation}\label{eq:delta4}
+ \Delta_{1/1000}^4
+ [\Phi(\sqrt x)e^{2\pi\cosh(4\sqrt x)}]_{x=0}
+ \in(-5.232\cdot10^{-7},-5.230\cdot10^{-7}).
+\end{equation}
+For the weak-limit assertion, bounded masses imply, for every \(R\ge0\),
+\[
+ U_n(R)\int_R^{R+1}B_0(u)\dd u
+ \le\int_0^\infty B_0(u)U_n(u)\dd u\le C.
+\]
+Since \(|U_n(z)|\le U_n(|z|)\), the multipliers form an entire normal
+family. A compactly convergent subsequence gives local uniform density
+convergence to \(B_0U\), which weak convergence identifies with \(\Phi\).
+This contradicts \eqref{eq:delta4}. Fourier convergence implies bounded
+masses and, after normalization, weak convergence by L\'evy's theorem.
+\end{proof}
+
+De Bruijn already discusses the universal-factor approximation obstruction
+for this fixed Bessel base \cite[p. 221]{debruijn}. Equation
+\eqref{eq:delta4} is a finite diagnostic of the stated coefficient class,
+not a priority claim for that classical obstruction. Varying or
+degenerating Bessel bases and multipliers outside the coefficient cone
+remain outside Proposition \ref{prop:bessel}.
+
+\section{Admissible coupled seeds and their precise limitations}
+\label{sec:construction}
+
+\subsection{Classical stability and exact heat evolution}
+For \eqref{eq:network}, the continuous-spin Lee--Yang theorem gives
+nonvanishing of the Laplace transform when all site fields have positive
+real part \cite[Theorems 1 and 3]{sg}; see also \cite[Theorem 1]{fr}.
+Every site is an even quartic law, the couplings are nonnegative, and
+positive readout weights put all site fields in the same half-plane.
+Spin-flip symmetry gives the negative half-plane as well.
+The transform \(M(iz)\) therefore has only real zeros.
+The same fixed law, weighted by \(e^{tS^2}\), has
+\begin{equation}\label{eq:continuous-heat}
+ \beta_j(t)=\beta_j-tb_j^2,\qquad
+ K_{ij}(t)=K_{ij}+2tb_ib_j,\qquad
+ \partial_t Z=\partial_h^2 Z,
+\end{equation}
+where \(Z(t,h)=\E_\nu e^{tS^2+hS}\) retains its initial normalizer.
+All finite complex derivatives converge on compact sets by quartic
+domination. The real-zero conclusion is asserted for real \(t\ge0\).
+
+\subsection{An explicit seed outside the potential cone}
+Take
+\begin{equation}\label{eq:two-seed}
+ \dd\nu(x,y)=C e^{-x^4-y^4+(7/2)(x^2+y^2)+xy}\dd x\dd y,
+ \qquad S=x+y.
+\end{equation}
+It is initially interacting. Its heat parameters are
+\(\beta(t)=-7/2-t\) and \(K(t)=1+2t\).
+For \(s=x+y\), \(v=(x-y)/2\), its marginal is proportional to
+\[
+ e^{-s^4/8+2s^2}
+ \int_\R e^{-2v^4+6v^2-3s^2v^2}\dd v.
+\]
+Let \(W=V^2\) under the normalized law
+\(V\propto e^{-2(V^2-3/2)^2}\). Then
+\begin{equation}\label{eq:sixth}
+ [s^6](-\log\rho_S(s))=\tfrac92\kappa_3(W).
+\end{equation}
+The outward integral certificate \cite{records} encloses this coefficient
+by
+\[
+ -0.02276664341391261483790292683089089842
+ \quad\text{with radius }7.60\cdot10^{-39}.
+\]
+Thus this marginal is outside \eqref{eq:potential-cone}. It invalidates
+an extension of that local cone exclusion to all ferromagnetic marginals.
+It is nevertheless not a theta source: Theorem \ref{thm:persistent}
+excludes this fixed seed, and also appending sites while retaining one
+of its fixed diffuse readout sites.
+
+\subsection{Elementary Ising realization, with a paid convergence domain}
+The construction is a specialization of the classical quartic Ising
+approximation \cite{sg}. For two even-size blocks of \(N\) unit spins,
+let \(M_1,M_2\) be their magnetizations and set
+\begin{equation}\label{eq:ising}
+ c_N=(12N^3)^{-1/4},\qquad
+ J_{\rm within}=1/N+7c_N^2,\qquad
+ J_{\rm between}=c_N^2,\qquad
+ S_N=c_N(M_1+M_2).
+\end{equation}
+Each \(J\) is the coefficient of an unordered spin pair.
+Every coupling is positive at time zero.
+
+We spell out the convergence payment for this exact normalization.
+For even \(N\) and \(M=2r\), the centered binomial ratio is
+\[
+ R_N(M)=\frac{\binom N{(N+M)/2}}{\binom N{N/2}}
+ =\prod_{j=1}^{|r|}
+ \frac{1-(2j-1)/(N+1)}{1+(2j-1)/(N+1)}.
+\]
+The inequality \(\log[(1-u)/(1+u)]\le-2u-2u^3/3\) gives
+\begin{equation}\label{eq:binomial}
+ \log R_N(M)\le-\frac{M^2}{2(N+1)}
+  -\frac{M^2(M^2-2)}{12(N+1)^3}.
+\end{equation}
+Writing \(x=c_NM\), the within-block weight therefore has the uniform
+central-ratio envelope
+\begin{equation}\label{eq:envelope}
+ R_N(M)e^{J_{\rm within}M^2/2}
+ \le e^{-x^4/8+(7/2+\sqrt{12})x^2}.
+\end{equation}
+On fixed \(x\)-compacts, expansion of the same exact ratio gives
+\[
+ \log R_N(M)=-\frac{M^2}{2N}-\frac{M^4}{12N^3}+o(1);
+\]
+the error is uniform there, since \(M=O(N^{3/4})\).
+Thus the central ratio tends to \(e^{-x^4+(7/2)x^2}\).
+The cross-block factor is \(e^{xy}\).
+
+Use associated piecewise-constant histograms of mesh \(2c_N\).
+Inequality \eqref{eq:envelope}, with slightly weaker constants inside
+each shrinking cell, gives an integrable quartic envelope.
+The cross term is absorbed by \(|xy|\le(x^2+y^2)/2\).
+The local limits and dominated convergence give convergence of
+normalizers and densities to \eqref{eq:two-seed}. The actual lattice
+readout differs from the histogram readout by at most the shrinking
+mesh. On each compact complex \((t,h)\) set the same quartic envelope
+absorbs \(e^{t(x+y)^2+h(x+y)}\) and each fixed derivative power.
+The normalized heat transforms and every fixed derivative consequently
+converge complex-compactly to the specified continuous seed.
+
+At finite \(N\), heat adds \(2tc_N^2\) to every pair and retains the
+diagonal scalar \(e^{2tNc_N^2}\), with the initial normalizer fixed.
+This gives \eqref{eq:continuous-heat} exactly before taking the limit.
+This argument is for a fixed two-block architecture and its explicit
+continuous limit; it gives no theta approximation or estimate uniform
+in an increasing number of blocks.
+
+\section{Certificates, controls and research disposition}\label{sec:records}
+
+The replay records contain small outward enclosures rather than large
+generated data. Their source hashes identify the implementations and do
+not replace the arithmetic or the analytic implications above.
+The dependencies used were Python 3.10.0, python-flint 0.9.0 and
+FLINT 3.6.0; the arithmetic contracts are documented in \cite{flint}.
+
+\begin{center}\small
+\begin{tabularx}{\textwidth}{@{}p{.29\textwidth}X@{}}
+\toprule
+Record / evaluator & Fixed retained run and scope\\
+\midrule
+Harmonic sign certificate &
+160 bits, three complete xi evaluations, a 30-second cap.
+One ball covers the entire tripled interval; no source cutoff.\\
+Source alternative screens &
+160 bits, nine source evaluations with eight theta terms and a proved
+complete tail; 30-second cap and required difference width below \(10^{-7}\).\\
+Two-quartic coefficient &
+160 bits, four Acb integrals on \([0,4]\); goals \(2^{-130}\), at most
+100,000 evaluations and depth 100 per integral.\\
+Unequal quartic convolution &
+Exact rational enumeration through degree six at \(\delta=1/4\);
+three coefficients, no quadrature or parameter grid.\\
+\bottomrule
+\end{tabularx}
+\end{center}
+
+For the source screens, positivity and geometric summation give
+\[
+ 0<T_N(u)\le
+ \frac{2\pi^2e^{9u}(N+1)^4e^{-\pi(N+1)^2}}
+ {1-16e^{-\pi(2N+3)}}\qquad(u\ge0).
+\]
+For the four integrals defining \(W\), the omitted tails satisfy, for
+\(u\ge4\), \(0\le k\le3\),
+\[
+ u^{2k}e^{-2(u^2-3/2)^2}\le e^{-u^4/2}\le e^{-32u},
+ \qquad \int_4^\infty e^{-32u}\dd u=e^{-128}/32.
+\]
+Both intervals and quadrature contracts are therefore paid independently
+of agreement between floating approximations. Scouts preceded the
+retained certificate contracts and are identified as such in the records.
+The new field-growth results in Sections \ref{sec:persistent} and
+\ref{sec:indquartic} require no additional numerical campaign.
+
+The repository's collision controls \cite{controls} screen any proposed
+general theta implication. A claim of stable complex-compact approximation
+to an Euler-factor control with \(0<c<1\) fails at time zero, where its
+explicit extra factor already has nonreal zeros. For the weighted-square,
+reflected, and smooth/positive-primitive positive-threshold controls,
+the corresponding convergence fails on a positive pre-collision slice
+with a nonreal zero. Hurwitz gives the contradiction on that slice.
+A double real zero at the collision time itself is compatible with
+Lee--Yang. We have not assigned an uncomputed coefficient or parameter
+representation to any control.
+
+The results narrow the constructive search in concrete ways. Independent
+Bernoulli products and independent scaled pure-quartic blocks cannot give
+the desired limit, even with changing counts. Single quartic laws and
+the specified fixed Bessel multiplier class are also excluded. Interactions
+do change zero geometry, and coupled quartic marginals can leave the
+simple source-potential cone. Nevertheless, any successful quartic network
+must satisfy the degeneration condition \eqref{eq:rectangle}; appending
+sites while retaining a fixed diffuse quartic seed cannot suffice.
+
+What remains is a construction in the infinitesimal or degenerating
+interacting regime, with an actual theta approximation error tending to
+zero and uniform heat/differentiation bounds. Neither the classical
+stability theorem, the explicit seed, nor the exclusion results supply
+that construction. The investigation remains open in that stated regime,
+pending formal review of the present round.
+
+\section*{Acknowledgement of LLM assistance}
+This working manuscript was drafted for Edward Baker with substantial
+assistance from OpenAI \texttt{gpt-6.1-sol} (Codex), reasoning effort
+\texttt{ultra}. Same-model agents assisted with literature checks,
+derivations, source arithmetic and authoring checks. These checks do not
+constitute independent cross-model or specialist human review. The
+manuscript is unreviewed and does not imply the intended author's
+endorsement of its mathematical claims.
+
+\begin{thebibliography}{99}
+\bibitem{polymath}
+D. H. J. Polymath,
+\emph{Effective approximation of heat flow evolution of the Riemann
+\(\xi\) function, and a new upper bound for the de Bruijn--Newman constant},
+Research in the Mathematical Sciences 6 (2019), article 31.
+\href{https://arxiv.org/abs/1904.12438}{arXiv:1904.12438}.
+\bibitem{sg}
+B. Simon and R. B. Griffiths,
+\emph{The \((\phi^4)_2\) field theory as a classical Ising model},
+Communications in Mathematical Physics 33 (1973), 145--164.
+\url{https://math.caltech.edu/SimonPapers/47.pdf}.
+\bibitem{fr}
+J. Fr\"ohlich and P.-F. Rodriguez,
+\emph{Some applications of the Lee--Yang theorem},
+Journal of Mathematical Physics 53 (2012), 095218.
+\href{https://arxiv.org/abs/1205.6643}{arXiv:1205.6643}.
+\bibitem{debruijn}
+N. G. de Bruijn,
+\emph{The roots of trigonometric integrals},
+Duke Mathematical Journal 17 (1950), 197--226.
+\url{https://repository.tudelft.nl/file/File_524a4d3c-0858-4c55-b425-8c8ce1fb89da}.
+\bibitem{cardon}
+D. A. Cardon,
+\emph{Fourier transforms having only real zeros}, Proposition 1.
+\url{https://mathdept.byu.edu/cardon/papers/FourierRealZeros.pdf}.
+\bibitem{gasper}
+G. Gasper,
+\emph{Using integrals of squares of certain real-valued special functions
+to prove that the P\'olya \(\Xi^*(z)\) function, the functions \(K_{iz}(a)\),
+\(a>0\), and some other entire functions have only real zeros}, 2008.
+\href{https://arxiv.org/abs/0801.2996}{arXiv:0801.2996}.
+\bibitem{dlmf}
+NIST Digital Library of Mathematical Functions,
+Sections 5.11, 10.25, 10.40 and 25.4, accessed 17 October 2026.
+\url{https://dlmf.nist.gov/}.
+\bibitem{cgn}
+F. Camia, C. Garban and C. M. Newman,
+\emph{Planar Ising magnetization field II. Properties of the critical and
+near-critical scaling limits},
+\href{https://arxiv.org/abs/1307.3926}{arXiv:1307.3926}.
+\bibitem{flint}
+The python-flint authors,
+\emph{Arb and Acb numerical evaluation and analytic integration documentation}.
+\url{https://python-flint.readthedocs.io/en/latest/}.
+\bibitem{scout}
+Shifted zeta positivity research repository,
+\emph{Theta moments exclude two spin families and screen a third},
+10 October 2026, internal research note and outward Decimal record.
+Repository path:
+\path{papers/quasi-rh/quasi-rh-exponent-descent/newman_collisions/15_lee_yang/}.
+\bibitem{records}
+Shifted zeta positivity research repository,
+\emph{Constructive stable models, round-one Notes 01--03 and certificates},
+17 October 2026, unreviewed internal research records.
+Repository paths:
+\path{papers/investigations-3/05_constructive_stable_models/notes/round-1/}
+and
+\path{papers/investigations-3/05_constructive_stable_models/numerics/round-1/}.
+\bibitem{controls}
+Shifted zeta positivity research repository,
+\emph{Collision controls and the screening they impose},
+\path{result-summaries/12_collision_controls_and_screening.md},
+with canonical source notes cited there.
+\end{thebibliography}
+\end{document}

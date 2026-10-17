@@ -23,5 +23,5 @@ Notes 01–04 were moved together into this folder at the user's request on
 relative links were adjusted for the new location.
 
 [Execution plan](../../research-overview/02_ROUND_BASED_EXECUTION_PLAN_20261017.md)
-· [Code and records](../../numerics/round1/README.md)
+· [Code and records](../../numerics/round-1/README.md)
 · [All rounds](../README.md)

@@ -223,8 +223,8 @@ Round review remains deferred until the accumulated investigation is ready.
 [bounds]: 02_EXPLICIT_THETA_JET_AND_ENDPOINT_BOUNDS_CODEX_20261017.md
 [nondegenerate]: 04_NONDEGENERATE_FINITE_SOURCE_COLLISIONS_CODEX_20261017.md
 [plan]: ../../research-overview/02_ROUND_BASED_EXECUTION_PLAN_20261017.md
-[code]: ../../numerics/round1/concrete_onset_budget.py
-[record]: ../../numerics/round1/CONCRETE_ONSET_BUDGET.json
+[code]: ../../numerics/round-1/concrete_onset_budget.py
+[record]: ../../numerics/round-1/CONCRETE_ONSET_BUDGET.json
 [results]: ../../../../../result-summaries/README.md
 [controls]: ../../../../../result-summaries/12_collision_controls_and_screening.md
 [avoid]: ../../../../../avoid/README.md

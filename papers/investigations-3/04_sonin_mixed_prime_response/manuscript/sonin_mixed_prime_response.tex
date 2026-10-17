@@ -1,0 +1,770 @@
+\documentclass[11pt]{article}
+\usepackage[letterpaper,margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools,mathrsfs}
+\usepackage{booktabs,tabularx,array,microtype,xurl}
+\usepackage[colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue]{hyperref}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\newcommand{\R}{\mathbb R}
+\newcommand{\C}{\mathbb C}
+\newcommand{\HH}{\mathcal H}
+\newcommand{\KK}{\mathcal K}
+\newcommand{\Aprep}{\mathcal A}
+\newcommand{\Mix}{\mathfrak M_{S;p,q}}
+\newcommand{\Gform}{\mathcal G}
+\newcommand{\Rmet}{\mathcal R_{\mathrm{met}}}
+\newcommand{\norm}[1]{\left\lVert#1\right\rVert}
+\newcommand{\ip}[2]{\left\langle#1,#2\right\rangle}
+\newcommand{\dd}{\,\mathrm d}
+\DeclareMathOperator{\Tr}{Tr}
+\DeclareMathOperator{\Ran}{Ran}
+\DeclareMathOperator{\supp}{supp}
+\DeclareMathOperator{\diag}{diag}
+\numberwithin{equation}{section}
+\title{Mixed prime response of finite Sonin projections\\
+\large Exact identities and signed metric corrections}
+\author{Drafted for Edward Baker}
+\date{17 October 2026\\\small Unreviewed working draft}
+\begin{document}
+\maketitle
+\begin{abstract}
+We study the mixed finite difference of the positive source trace associated
+with an actual finite-place Sonin projection. For a fixed compact smooth
+prepared source, we retain the complete compressed inverse metric and derive
+an exact mixed-response identity. The explicit prime-power bulk cancels,
+so the complete response is a mixed boundary correction. It extends to a
+compact selfadjoint operator on each fixed source interval, although its
+four individual traces need not extend to every square-integrable source.
+We isolate a finite signed Weil--Gram expression together with explicit
+arithmetic, boundary and metric corrections. Whenever the source interval
+is longer than \( |\log(p/q)| \), the metric correction alone is unbounded
+with both signs relative to the source \(L^2\) norm. Prepared modulation
+also excludes a literal identification with the full Weil form of a
+nonzero fixed finite translate combination. Finally, we give an operator
+approximation construction for signed bounds on the complete mixed
+response, including the infinite-dimensional source complement. No
+numerical sign margin or support-adapted Weil positivity estimate is obtained.
+\end{abstract}
+
+\noindent\textbf{Draft status.}
+This manuscript summarizes round-one Notes 01--02 of investigation 04
+\cite{note01,note02}. The round remains active. Proofs are given relative
+to the explicit inherited Sonin and finite Euler inputs in
+Section~\ref{sec:setup}. Internal derivations and checks used
+\texttt{gpt-6.1-sol}, reasoning effort \texttt{ultra}. Cross-model
+reconciliation and specialist human review remain pending.
+
+\section{Sources, projections and inherited inputs}\label{sec:setup}
+
+The finite-place Sonin framework transports the archimedean Sonin space
+by bounded invertible Euler-factor operators. The changing metric is
+essential: a Hilbertian isomorphism does not identify the ordinary
+orthogonal projections without an inverse compressed metric.
+Connes--Consani--Moscovici \cite[Theorem 4.6 and Section 4.8]{ccm}
+provide the semilocal stability framework. We use the normalization,
+smoothing and finite Euler comparison established in the repository
+audits \cite{canonical,euler}; these are explicit inherited inputs,
+rather than new results of the present calculation.
+
+Work on \(\HH=L^2(\R,\dd x)\), with inner products antilinear in the first
+slot, and use
+\[
+ \widehat F(t)=\int_\R F(x)e^{-itx}\dd x,\qquad
+ U_av(x)=v(x-a),\qquad D=-i\partial_x .
+\]
+The inverse Fourier measure is \(\dd t/(2\pi)\). Write \(C_F\) for
+ordinary convolution by \(F\), and
+\begin{equation}\label{eq:kappa}
+ \kappa_{F,G}(a)=\int_\R\overline{F(x)}G(x+a)\dd x,\qquad
+ \kappa_F=\kappa_{F,F}.
+\end{equation}
+Fix \(I_L=(-L/2,L/2)\) and the prepared class
+\begin{equation}\label{eq:prep}
+ F=\Aprep h,\qquad \Aprep=-\partial_x^2+\tfrac14,\qquad
+ h\in C_c^\infty(I_L;\C).
+\end{equation}
+It is exactly the compact smooth class satisfying
+\(\int F(x)e^{x/2}\dd x=\int F(x)e^{-x/2}\dd x=0\), without enlarging
+support \cite[Section 2]{canonical}. These conditions remove the two pole
+terms. They impose neither zero mean nor additive parity.
+
+For a finite prime set \(A\), define
+\begin{equation}\label{eq:transport}
+ \mathscr D_A=\prod_{j\in A}(I-j^{-1/2}U_{\log j}),\qquad
+ M_A=\left.\Pi_\infty\mathscr D_A^*\mathscr D_A
+                    \Pi_\infty\right|_{\KK_\infty},
+ \qquad \KK_\infty=\Ran\Pi_\infty ,
+\end{equation}
+where \(\Pi_\infty\) is the actual cutoff-one archimedean Sonin projection
+in logarithmic coordinates. The inherited orthogonal projection is
+\begin{equation}\label{eq:projection}
+ \Pi_A=\mathscr D_A\Pi_\infty M_A^{-1}\Pi_\infty\mathscr D_A^*,
+ \qquad
+ \ell_A^2I\le M_A\le u_A^2I,
+\end{equation}
+with \(\ell_A=\prod_{j\in A}(1-j^{-1/2})>0\) and
+\(u_A=\prod_{j\in A}(1+j^{-1/2})\). The inverse acts only on
+\(\KK_\infty\). All surrounding projections in \eqref{eq:projection}
+implement extension to \(\HH\). The source-smoothed operators
+\(C_F\Pi_A\) are Hilbert--Schmidt for compact smooth \(F\).
+Put
+\begin{equation}\label{eq:B}
+ B_A(F,G)=\ip{C_F\Pi_A}{C_G\Pi_A}_{\mathrm{HS}},
+ \qquad B_A[F]=B_A(F,F)\ge0.
+\end{equation}
+No trace of an unsmoothed projection is taken.
+
+For clarity, the actual boundary package used below can be specified
+without an infinite Euler product. Let \(R_+=1_{(0,\infty)}\),
+\(\chi=I-R_+\), and \(\mathscr Rf(x)=f(-x)\). With
+\[
+ \zeta_A(s)=\prod_{j\in A}(1-j^{-s})^{-1},\qquad
+ v_A(t)=\pi^{-it}
+ \frac{\Gamma(1/4+it/2)}{\Gamma(1/4-it/2)}
+ \frac{\zeta_A(1/2+it)}{\zeta_A(1/2-it)},
+\]
+the finite Euler involution is \(\mathcal F_A=\mathscr Rv_A(D)\).
+Set
+\begin{equation}\label{eq:boundary}
+ C_A=\chi\mathcal F_A\chi,\quad T_A=\chi\mathcal F_AR_+,\quad
+ Y_A=C_A(I_\chi-C_A^2)^{-1}T_A .
+\end{equation}
+The inherited finite-place assertions are
+\[
+ C_A=C_A^*\ \hbox{compact},\qquad
+ T_AT_A^*=I_\chi-C_A^2\ge g_AI_\chi,\qquad g_A>0 .
+\]
+The inverse in \eqref{eq:boundary} acts on \(\chi\HH\).
+In particular \(Y_A:R_+\HH\to\chi\HH\) is compact. Compactness of \(C_A\)
+does not assert that it is Hilbert--Schmidt.
+
+For \(a_{F,e}(t)=\tfrac12(|\widehat F(t)|^2+|\widehat F(-t)|^2)\), let
+\begin{equation}\label{eq:K}
+ X_{F,e}=R_+a_{F,e}(D)\chi,\qquad
+ K_A[F]=2\Re\Tr_{\chi\HH}(Y_AX_{F,e}).
+\end{equation}
+Here \(X_{F,e}\) is trace class. The finite Euler identity
+\cite[Sections 1--5]{euler}, valid for every compact smooth source,
+is
+\begin{equation}\label{eq:euler}
+ B_A[F]=\Gamma[F]-W_A[F]+K_A[F],
+\end{equation}
+where
+\begin{align}
+ \Gamma(F,G)&=\int_\R\gamma_\infty(t)
+       \overline{\widehat F(t)}\widehat G(t)\frac{\dd t}{2\pi},
+ &\gamma_\infty(t)&=\Re\psi(1/4+it/2)-\log\pi, \label{eq:gamma}\\
+ W_A(F,G)&=\sum_{j\in A}\sum_{m\ge1}
+    (\log j)j^{-m/2}
+    \{\kappa_{F,G}(m\log j)+\kappa_{F,G}(-m\log j)\}.
+ \label{eq:W}
+\end{align}
+Polarization defines the Hermitian boundary form \(K_A(F,G)\).
+The archimedean calibration underlying this package is related to
+Connes--Consani \cite{cc}; the finite Euler extension and the projection
+formula are imported specifically from \cite{canonical,euler}.
+
+If \(d_F=\operatorname{diam}(\supp F)\), then \(\kappa_F(a)=0\) for
+\(|a|\ge d_F\). Active powers satisfy \(m\log j<d_F\); endpoint
+correlations vanish. On prepared sources the complete Weil form is
+\begin{equation}\label{eq:Q}
+ Q=\Gamma-W_{\mathrm{full}}.
+\end{equation}
+The sum is finite on each compact difference support. The equality
+\(Q=B_A-K_A\) requires \(A\) to capture every active prime.
+The Sonin cutoff remains one when source support changes. All constants
+and limits in this manuscript concern fixed finite place sets and fixed
+source intervals.
+
+\section{The exact mixed inverse formula}\label{sec:mixed}
+
+Fix finite \(S\) and distinct primes \(p,q\notin S\). Use one and the same
+source in all four terms of
+\begin{equation}\label{eq:mix}
+ \Mix[F]=B_{S\cup\{p,q\}}[F]-B_{S\cup\{p\}}[F]
+          -B_{S\cup\{q\}}[F]+B_S[F].
+\end{equation}
+Rebase on \(P=\Pi_S\), \(\KK=\Ran P\), and \(V=C_F|_\KK\).
+Define
+\begin{equation}\label{eq:Ej}
+ r_j=j^{-1/2},\qquad \beta_j=\frac{2r_j}{1+r_j^2}<1,\qquad
+ E_j=-\frac{\beta_j}{2}(U_{\log j}+U_{\log j}^*),\quad j=p,q .
+\end{equation}
+The ambient \(E_p,E_q\) commute. On \(\KK\), put
+\[
+ a=PE_pP,\quad b=PE_qP,\quad c=PE_pE_qP,\quad
+ \mathsf M=I+a+b+c,
+\]
+\[
+ N_0=V^*V,\quad N_p=V^*E_pV,\quad
+ N_q=V^*E_qV,\quad N_{pq}=V^*E_pE_qV,
+\]
+and \(L_p=N_p-aN_0\), \(L_q=N_q-bN_0\),
+\(L_{pq}=N_{pq}-cN_0\).
+
+\begin{theorem}[Exact mixed response]\label{thm:mixed}
+All \(N\)'s and \(L\)'s above are trace class, all inverses below act on
+\(\KK\), and
+\begin{equation}\label{eq:exactmix}
+ \boxed{\Mix[F]=\Tr_\KK\mathsf M^{-1}
+  \left\{L_{pq}-(b+c)(I+a)^{-1}L_p
+               -(a+c)(I+b)^{-1}L_q\right\}.}
+\end{equation}
+Moreover,
+\begin{equation}\label{eq:mixK}
+ \Mix[F]=\Delta_p\Delta_qK_S[F].
+\end{equation}
+\end{theorem}
+\begin{proof}
+Hilbert--Schmidt factorization of \(V\) proves the trace-class assertions.
+The metric bounds are
+\[
+ I+a\ge(1-\beta_p)I,\qquad I+b\ge(1-\beta_q)I,\qquad
+ \mathsf M\ge(1-\beta_p)(1-\beta_q)I.
+\]
+The transported-space isometry, or \eqref{eq:projection} rebased on \(P\),
+gives
+\begin{align*}
+ B_S&=\Tr N_0,\\
+ B_{S\cup\{p\}}&=\Tr(I+a)^{-1}(N_0+N_p),\\
+ B_{S\cup\{q\}}&=\Tr(I+b)^{-1}(N_0+N_q),\\
+ B_{S\cup\{p,q\}}&=\Tr\mathsf M^{-1}(N_0+N_p+N_q+N_{pq}).
+\end{align*}
+For example, \(d_pd_qP(Pd_q^*d_p^*d_pd_qP)^{-1/2}\), where
+\(d_j=I-r_jU_{\log j}\), is an isometry onto \(d_pd_q\KK\).
+Convolution commutes with the transports. Their positive scalar
+normalizations cancel between metric and numerator.
+
+Subtract the four traces and use
+\[
+ \mathsf M^{-1}-(I+a)^{-1}
+   =-\mathsf M^{-1}(b+c)(I+a)^{-1},
+\]
+and its \(p,q\) counterpart. This proves \eqref{eq:exactmix} with the
+displayed factor order. Finally \(\Gamma\) is unchanged across the four
+corners and \(W_A\) is additive in its prime set, so
+\eqref{eq:euler} proves \eqref{eq:mixK}.
+\end{proof}
+
+If \(A_F=C_F^*C_F\), then
+\begin{equation}\label{eq:returns}
+ L_j=PE_j(I-P)A_FP,\quad
+ L_{pq}=PE_pE_q(I-P)A_FP,\quad
+ c-ab=PE_p(I-P)E_qP .
+\end{equation}
+Their trace-class justification is the factorization in the theorem,
+not a separate assumption on \(A_FP\). Commuting ambient translations
+do not make \(a,b\) commute, or remove the off-range return in
+\eqref{eq:returns}. There is no mixed composite-prime label in the
+arithmetic bulk, but the full response need not vanish.
+
+\section{A compact source operator for the combined response}\label{sec:compact}
+
+The next result extends the first-prime source regularity
+\cite{closed,compact} by using compact boundary operators directly.
+
+\begin{lemma}[Inherited crossing bound]\label{lem:cross}
+For \(F\in C_c^\infty(I_L)\),
+\begin{equation}\label{eq:crossbound}
+ \norm{X_{F,e}}_1\le\frac L2\norm F_2^2.
+\end{equation}
+\end{lemma}
+\begin{proof}
+For the noneven multiplier insert the source interval between the
+convolution factors:
+\[
+ R_+C_F^*C_F\chi=R_+C_F^*1_{I_L}C_F\chi.
+\]
+Indeed the kernel integrates
+\(\overline{F(z-x)}F(z-y)\) with \(x>0>y\), which forces
+\(-L/2<z<L/2\). The two factors are Hilbert--Schmidt with squared norms
+\[
+ \int_{I_L}(L/2-v)|F(v)|^2\dd v,\qquad
+ \int_{I_L}(L/2+v)|F(v)|^2\dd v.
+\]
+Their sum is \(L\norm F_2^2\). The product bound and arithmetic-geometric
+mean inequality give \eqref{eq:crossbound}. Conjugating the source reverses
+the frequency multiplier and interchanges the two norms, proving the
+same estimate for its even average. This is the argument of
+\cite[Section 2]{closed}.
+\end{proof}
+
+For a compact \(Y:R_+\HH\to\chi\HH\), define the real quadratic source form
+\[
+ q_Y[F]=2\Re\Tr(YX_{F,e})
+\]
+first for arbitrary \(F\in C_c^\infty(I_L)\), without preparation.
+
+\begin{theorem}[Compact boundary-to-source transfer]\label{thm:transfer}
+The form \(q_Y\) extends to a compact selfadjoint operator \(H_{Y,L}\)
+on \(L^2(I_L)\), with
+\begin{equation}\label{eq:transfer}
+ \norm{H_{Y,L}}\le L\norm Y,\qquad
+ \norm{H_{Y,L}-H_{Y_N,L}}\le L\norm{Y-Y_N}.
+\end{equation}
+In particular, for
+\begin{equation}\label{eq:Ymix}
+ Y_{\mathrm{mix}}=Y_{S\cup\{p,q\}}-Y_{S\cup\{p\}}
+                  -Y_{S\cup\{q\}}+Y_S ,
+\end{equation}
+the operator \(H_{\mathrm{mix},L}=H_{Y_{\mathrm{mix}},L}\) represents
+\(\Mix\) on the compact smooth core.
+\end{theorem}
+\begin{proof}
+Lemma~\ref{lem:cross} bounds \(|q_Y[F]|\) by
+\(L\norm Y\norm F_2^2\). The source form satisfies the parallelogram
+identity and \(q_Y[zF]=|z|^2q_Y[F]\); complex polarization and density
+give a bounded selfadjoint source operator and the norm inequalities.
+The map \(Y\mapsto H_{Y,L}\) is real-linear.
+
+Approximate the full compact \(Y\) in operator norm by finite-rank \(Y_N\).
+The crossing kernel is zero outside \(x,z>0,\ x+z<L\), so only the
+restriction from \((0,L)\) to \((-L,0)\) contributes. Reflect the negative
+output and write
+\[
+ \mathscr R1_{(-L,0)}Y_N1_{(0,L)}
+       =\sum_j|v_j\rangle\langle u_j|,\qquad u_j,v_j\in L^2(0,L).
+\]
+With zero extensions define
+\begin{equation}\label{eq:wkernel}
+ w_N(s)=\sum_j\int_0^s\overline{u_j(x)}v_j(s-x)\dd x,\qquad
+ k_N(s)=\Re w_N(|s|),\quad |s|\le L .
+\end{equation}
+Convolution of two \(L^2\) functions is continuous here. Thus \(k_N\)
+is real, even and continuous. Direct integration gives
+\begin{equation}\label{eq:sourcekernel}
+ q_{Y_N}[F]=\int_{-L}^L\kappa_F(s)k_N(s)\dd s
+  =\ip F{H_{Y_N,L}F},\qquad
+ (H_{Y_N,L}F)(x)=\int_{I_L}k_N(y-x)F(y)\dd y .
+\end{equation}
+There is no additional factor two in the even kernel. This operator is
+Hilbert--Schmidt, although generally not finite rank. The second bound
+in \eqref{eq:transfer} makes \(H_{Y,L}\) a norm limit of compact operators.
+For \eqref{eq:Ymix}, \eqref{eq:mixK} identifies the form with \(\Mix\).
+\end{proof}
+
+The compact extension concerns the combined source form. It does not
+make each of the four \(B_A[F]\) traces finite on every \(L^2\) source,
+or authorize subtraction of infinite traces. Nor does the proof assert
+that a general multiple-prime source operator is Hilbert--Schmidt. It
+uses no claim that the first-return kernel has finitely many resonances:
+ratios of integers supported on two primes can be dense.
+
+\section{A corrected signed Weil--Gram identity}\label{sec:gram}
+
+Let
+\[
+ J_j=\frac{I-r_jU_{\log j}}{\sqrt{1+r_j^2}},\qquad
+ J_A=\prod_{j\in A}J_j,\qquad A\subseteq\{p,q\},
+\]
+and, on the current space \(\KK\), set
+\[
+ \mathsf M_A=(PJ_A^*J_AP)|_\KK,\qquad
+ \mathsf N_A=V^*J_A^*J_AV,\qquad
+ Z_A[F]=\Tr\bigl((\mathsf M_A^{-1}-I)\mathsf N_A\bigr).
+\]
+The inverses are bounded by the fixed-place metric bounds. Put
+\begin{equation}\label{eq:Rmet}
+ \Rmet=Z_{\{p,q\}}-Z_{\{p\}}-Z_{\{q\}}.
+\end{equation}
+For \(a_+=\log(pq)\), \(a_-=|\log(p/q)|\), and any translation-invariant
+Hermitian source form \(T\), define
+\begin{align}
+ \Gform_T[F]
+ &=\frac{\beta_p\beta_q}{2}
+      \Re\{T(F,U_{a_+}F)+T(F,U_{a_-}F)\} \label{eq:G}\\
+ &=\frac{\beta_p\beta_q}{8}
+       \sum_{a\in\{a_+,a_-\}}\{T[F+U_aF]-T[F-U_aF]\}.
+ \nonumber
+\end{align}
+All forms used here are translation invariant. For \(B_S\), this follows
+from \(C_{U_aF}=U_aC_F\) and unitary invariance of the Hilbert--Schmidt
+inner product; it does not require \(\Pi_S\) to commute with translations.
+
+\begin{theorem}[Corrected signed Gram identity]\label{thm:gram}
+On the prepared smooth core,
+\begin{equation}\label{eq:corrected}
+ \boxed{\Mix=\Gform_Q+\Gform_{W_{\notin S}}
+                         +\Gform_{K_S}+\Rmet,}
+ \qquad W_{\notin S}=W_{\mathrm{full}}-W_S .
+\end{equation}
+Each correction has an independent arithmetic or operator definition.
+Moreover,
+\begin{equation}\label{eq:principal}
+ \boxed{\Rmet=-\Gform_\Gamma+\Gform_{W_S}
+                      +\bigl(\Delta_p\Delta_qK_S-\Gform_{K_S}\bigr).}
+\end{equation}
+On fixed \(L^2(I_L)\), the last parenthesis is compact and
+\(\Gform_{W_S}\) is bounded.
+\end{theorem}
+\begin{proof}
+The normalized transport formula gives
+\[
+ B_{S\cup A}[F]=\Tr(\mathsf M_A^{-1}\mathsf N_A)
+                    =B_S[J_AF]+Z_A[F].
+\]
+Since \(J_j^*J_j=I+E_j\), the mixed difference of the unweighted
+numerators is \(V^*E_pE_qV\). Expanding the four ambient shifts and
+grouping opposite pairs gives
+\(\Tr(V^*E_pE_qV)=\Gform_{B_S}[F]\), with exactly the coefficient in
+\eqref{eq:G}. Hence \(\Mix=\Gform_{B_S}+\Rmet\).
+Polarize \(B_S=Q+W_{\notin S}+K_S\) to obtain
+\eqref{eq:corrected}. Substitute \eqref{eq:mixK} and
+\(B_S=\Gamma-W_S+K_S\) to obtain \eqref{eq:principal}.
+
+Theorem~\ref{thm:transfer} applies to every fixed \(K_A\).
+The sources \(F\pm U_aF\) have a common support hull of length at most
+\(L+a_+\); pullback of the corresponding compact source forms proves
+compactness of \(\Gform_{K_S}\). The fixed-\(S\) prime series is a bounded
+translation form, proving the remaining assertion.
+\end{proof}
+
+The complete arithmetic in \eqref{eq:corrected} is evaluated on the
+enlarged translate support, so it can include primes inactive on the
+original interval. On the ordered three-source Gram matrix
+\(F,U_{a_+}F,U_{a_-}F\), the contraction in \eqref{eq:G} has coefficient
+matrix
+\[
+ \begin{pmatrix}0&w&w\\w&0&0\\w&0&0\end{pmatrix},
+ \qquad w=\frac{\beta_p\beta_q}{4},
+\]
+with eigenvalues \(0,\pm\beta_p\beta_q/(2\sqrt2)\). Positive semidefiniteness
+of a Weil Gram matrix alone therefore does not sign this contraction.
+
+\section{The metric correction has both unbounded signs}\label{sec:sign}
+
+\begin{theorem}[Necessary signed gamma cancellation]\label{thm:sign}
+Suppose \(L>a_-\). There is a prepared family \(F_\tau\) supported in
+\(I_L\), with \(\norm{F_\tau}_2\to\norm h_2>0\), such that
+\begin{equation}\label{eq:signasym}
+ \Rmet[F_\tau]=-c_h\cos(\tau a_-)\log\tau+O(1),\qquad
+ c_h=\frac{\beta_p\beta_q}{2}\kappa_h(a_-)>0 .
+\end{equation}
+Thus \(\Rmet[F_\tau]\to-\infty\) along \(\tau=2\pi n/a_-\), and
+\(\Rmet[F_\tau]\to+\infty\) along \(\tau=(2n+1)\pi/a_-\).
+The full response satisfies \(\Mix[F_\tau]\to0\).
+\end{theorem}
+\begin{proof}
+Choose a real nonnegative smooth bump \(h\), positive on the interior of
+one interval of diameter \(d\), where
+\(a_-<d<\min(L,a_+)\). Then \(\kappa_h(a_-)>0\) and
+\(\kappa_h(a_+)=0\). Define
+\begin{equation}\label{eq:Ftau}
+ F_\tau=\tau^{-2}\Aprep(e^{i\tau x}h)
+       =e^{i\tau x}g_\tau,\qquad
+ g_\tau=h-\frac{2i}{\tau}h'+\frac{\Aprep h}{\tau^2}.
+\end{equation}
+Preparation is exact, support is unchanged, and \(g_\tau\to h\) in
+\(C_c^\infty\). In particular \(F_\tau\rightharpoonup0\) and its norms
+tend to \(\norm h_2\).
+
+The digamma expansion \cite[Equation 5.11.2]{dlmf} yields
+\(\gamma_\infty(t)=\log|t|-\log(2\pi)+O(|t|^{-1})\).
+After centering the Fourier variable at \(\tau\), uniformly Schwartz
+envelopes give, for each fixed shift \(a\),
+\[
+ \Re\Gamma(F_\tau,U_aF_\tau)
+       =(\log\tau)\kappa_h(a)\cos(\tau a)+O(1).
+\]
+One may split the integral into \(|t-\tau|\le\tau/2\) and its
+complement. The expansion is uniform on the first region and the
+Schwartz tail controls the second. Replacing \(g_\tau\) by \(h\) costs
+\(O(\tau^{-1}\log\tau)\). Equation \eqref{eq:G} now gives the stated
+leading term for \(\Gform_\Gamma\).
+
+In \eqref{eq:principal}, the arithmetic contribution is bounded.
+The compact terms tend to zero on this bounded weakly null family,
+by Theorem~\ref{thm:transfer}. This proves \eqref{eq:signasym}.
+The same theorem gives \(\Mix[F_\tau]\to0\).
+\end{proof}
+
+The theorem concerns the source quadratic form \(\Rmet\), with the
+normalization \eqref{eq:Rmet}. It does not say that any compressed inverse
+is an unbounded operator. It excludes a bounded \(L^2\) remainder or a
+fixed sign for this metric correction, not collective arithmetic estimates
+for the complete response. For \(p=2,q=3,S=\varnothing,L=6/5\), both
+primes belong to the final corner, which contains every prime potentially
+active on \(I_L\), and \(c_h=(\sqrt6/6)\kappa_h(\log(3/2))\). The phenomenon already occurs
+for this first pair.
+
+\section{What a finite translate identification would require}\label{sec:translate}
+
+\begin{proposition}[Obstruction to a literal full Weil form]\label{prop:translate}
+A fixed finite linear combination \(\mathcal E[F]\) of mixed responses
+cannot equal
+\[
+ Q\left[\sum_{j=1}^n c_jU_{t_j}F\right]
+\]
+for every prepared \(F\in C_c^\infty(I_L)\), if the shifts are distinct
+and the fixed coefficient vector \(c\) is nonzero.
+\end{proposition}
+\begin{proof}
+Use \eqref{eq:Ftau} with any nonzero \(h\). Compactness of every fixed
+mixed source operator gives \(\mathcal E[F_\tau]\to0\).
+Set \(H_\tau=\sum_jc_jU_{t_j}F_\tau\). Its envelope is
+\(\sum_jc_je^{-i\tau t_j}U_{t_j}g_\tau\).
+Distinct translates of a nonzero compactly supported function are
+linearly independent: Fourier transformation would otherwise make a
+nonzero finite exponential polynomial vanish on an open set where
+\(\widehat h\ne0\). Their positive definite finite Gram matrix, and
+\(g_\tau\to h\), therefore give \(\norm{H_\tau}_2^2\ge\eta>0\) for
+large \(\tau\), uniformly in the phases. The envelopes have uniformly
+bounded Schwartz seminorms, so
+\[
+ \Gamma[H_\tau]=(\log\tau)\norm{H_\tau}_2^2+O(1).
+\]
+The complete prime sum on their fixed enlarged support stays bounded.
+Preparation is preserved by translation, so \(Q[H_\tau]\to+\infty\).
+\end{proof}
+
+The proposition excludes a literal equality of the stated kind.
+It does not exclude the corrected signed identity
+\eqref{eq:corrected}, signed combinations of Gram entries with their
+own cancellations, source-dependent coefficients, infinite
+constructions, or an equivalence stated only in terms of positivity.
+Likewise, any exact expression for \(\mathcal E[F]\) as a fixed linear
+combination of finitely many bare autocorrelation samples must be trivial
+on accessible shifts: \eqref{eq:Ftau} turns it into a finite exponential
+polynomial plus \(o(1)\), while \(\mathcal E[F_\tau]\to0\).
+Here a shift is accessible when \(|a|<L\); samples at \(|a|\ge L\)
+vanish identically on the source class. Choose one real positive bump
+whose support diameter exceeds the largest specified accessible shift
+magnitude. Its autocorrelations at all those shifts are positive.
+Averaging against each frequency therefore forces the grouped sample
+coefficients themselves to vanish. This argument is about fixed linear
+combinations, not arbitrary nonlinear functions of finitely many samples.
+
+\section{Signed approximation bounds on the complete response}\label{sec:enclosure}
+
+The compact source operator, rather than the unbounded metric sector
+alone, is the object that admits a full-norm signed approximation.
+The following construction supplies a verification contract. Its constants
+have not been evaluated for an actual prime pair.
+
+\begin{proposition}[Boundary resolvent approximation]\label{prop:resolvent}
+Suppose \(C=C^*\), \(TT^*=I-C^2\ge gI\), \(\norm C\le c<1\), and
+a selfadjoint finite-rank \(C_N\) obeys
+\(\norm{C-C_N}\le\varepsilon\), \(\norm{C_N}\le c_N<1\).
+For \(Y=C(I-C^2)^{-1}T\) and
+\(Y_N=C_N(I-C_N^2)^{-1}T\),
+\begin{equation}\label{eq:reserror}
+ \norm{Y-Y_N}\le
+ \frac{\varepsilon(1+cc_N)}{(1-c_N^2)\sqrt g}.
+\end{equation}
+\end{proposition}
+\begin{proof}
+Write \(A=I-C^2\), \(A_N=I-C_N^2\). Then
+\[
+ Y-Y_N=(C-C_N)A^{-1}T+
+              C_NA_N^{-1}(C^2-C_N^2)A^{-1}T .
+\]
+Use \(\norm{A^{-1}T}\le g^{-1/2}\) and
+\(\norm{C^2-C_N^2}\le(c+c_N)\varepsilon\), and simplify.
+No commutation of \(C,C_N\) is assumed.
+\end{proof}
+
+Apply this proposition at the four corners, combine the finite-rank
+approximants with their signs, and include any errors in the finitely
+many adjoint \(T_A\) columns in a full bound
+\begin{equation}\label{eq:Yerror}
+ \norm{Y_{\mathrm{mix}}-Y_N}\le\varepsilon_Y .
+\end{equation}
+The kernel \(k_N\) in \eqref{eq:wkernel} is continuous. Divide \(I_L\)
+into cells of width \(h=L/n\), with centers \(x_i\), and approximate its
+source kernel on cell \(i\) times cell \(j\) by \(k_N(x_j-x_i)\).
+The resulting selfadjoint \(J_{N,n}\) has rank at most \(n\). Define
+\[
+ \omega_N(h)=\sup\{|k_N(s)-k_N(t)|:
+            s,t\in[-L,L],\ |s-t|\le h\}.
+\]
+The Schur bound and \eqref{eq:transfer} imply
+\begin{equation}\label{eq:eta}
+ \norm{H_{\mathrm{mix},L}-J_{N,n}}\le\eta,\qquad
+ \eta=L\{\varepsilon_Y+\omega_N(h)\},
+\end{equation}
+with function evaluation and rounding errors also included.
+
+For the prepared class compress to the closed moment kernel
+\[
+ \HH_L^0=\left\{F\in L^2(I_L):
+       \int_{I_L}e^{x/2}F(x)\dd x
+       =\int_{I_L}e^{-x/2}F(x)\dd x=0\right\}.
+\]
+Compression is contractive. Let \(\lambda_-,\lambda_+\) be the extremal
+eigenvalues of the compressed finite-rank approximation on the span of
+the projected cell indicators, computed in an orthonormal basis or with
+their Gram matrix. Then
+\begin{equation}\label{eq:signed}
+ \boxed{
+ \begin{aligned}
+  \bigl(\min(0,\lambda_-)-\eta\bigr)\norm F_2^2
+       &\le\Mix[F]\\
+       &\le\bigl(\max(0,\lambda_+)+\eta\bigr)\norm F_2^2 .
+ \end{aligned}}
+\end{equation}
+If the finite span is zero, take both finite spectral endpoints as zero.
+The zero eigenvalue and the \(\eta I\) allowance account for the entire
+infinite-dimensional source complement. A favorable finite matrix
+alone cannot remove them. This is an approximation theorem, not an
+already evaluated numerical certificate.
+
+\section{Scope of the results and the remaining estimate}\label{sec:scope}
+
+The results separate three objects: the complete mixed response, its
+finite signed Weil--Gram component, and its inverse-metric correction.
+Only the first is asserted to be a compact source form on every fixed
+interval. The metric correction cancels an unbounded signed gamma
+component whenever \(L>|\log(p/q)|\). Taking absolute values or assigning
+signs before preserving that cancellation loses the relevant comparison.
+
+Generic projection positivity cannot sign the mixed response. For example,
+on \(\C^2\), let \(P_0\) project onto \((1,1)/\sqrt2\), use
+\(U_a^0=\diag(1,e^{-ita})\), \(t=\pi/\log2\), and source energies
+\(\diag(k_1,k_2)\), \(k_i\ge0\), obtained from
+\(C_F^0=\int F(a)U_a^0\dd a\). With the actual weights at \(2,3\), put
+\[
+ h_{j1}=(1-r_j)^2,\quad
+ h_{j2}=1+r_j^2-2r_j\cos(t\log j),\quad
+ z_j=\frac{h_{j2}-h_{j1}}{h_{j2}+h_{j1}}>0 .
+\]
+Direct rank-one compression gives
+\[
+ \mathfrak M_{\varnothing;2,3}
+ =-\frac{k_2-k_1}{2}
+        \frac{z_2z_3(z_2+z_3)}{1+z_2z_3},
+\]
+which has either sign. Compact prepared sources realize arbitrary two
+Fourier values at \(0,t\): the corresponding two functionals on
+\(C_c^\infty(I_L)\) are independent, and preparation multiplies their
+values by \(1/4,t^2+1/4\). The missing premise in this control is the
+actual Sonin projection, not source neutrality or prime weights.
+This is not an actual-Sonin counterexample.
+
+The repository control screen \cite{controls} keeps further exclusions
+scoped. Smooth-density controls change the discrete prime measure;
+two-channel exclusions concern a specified separated architecture.
+Euler-factor collision families change the arithmetic family,
+weighted-square controls lack full reflection, reflected controls lack
+the integer-square source, and smooth or positive-primitive controls
+lack the full theta arithmetic. No noncollision theorem based on their
+shared properties is claimed here.
+
+The main outputs and their status can be stated compactly:
+\begin{center}
+\small
+\begin{tabularx}{\textwidth}{@{}p{0.31\textwidth}X@{}}
+\toprule
+Output & Scope and status\\
+\midrule
+Mixed inverse identity & Exact on the compact smooth core, relative to
+the inherited finite Sonin package.\\
+Signed Weil--Gram identity & Exact with every displayed arithmetic,
+boundary and metric correction retained.\\
+Metric sign asymptotic & Both unbounded signs when \(L>|\log(p/q)|\);
+not a sign theorem for the complete response.\\
+Compact source transfer & Every fixed finite quartet and support;
+no growing-place uniformity or general Hilbert--Schmidt kernel claim.\\
+Signed enclosure construction & Full complement included; actual
+approximation constants and numerical endpoints remain unevaluated.\\
+\bottomrule
+\end{tabularx}
+\end{center}
+
+The support-adapted inequality \(K_A\le B_A\), after all active primes
+are captured, remains the original Weil positivity target. The present
+identities do not improve its margin. The next quantitative task would
+be a declared quartet and support, a useful residual budget, and certified
+bounds for \eqref{eq:Yerror}--\eqref{eq:eta}. The first missing numerical
+input is a full operator approximation, not a prime-pair sweep.
+
+\section*{Acknowledgement and research record}
+
+This working draft was prepared for Edward Baker with substantial
+assistance from OpenAI Codex, recorded model \texttt{gpt-6.1-sol},
+reasoning effort \texttt{ultra}. Parallel same-model agents checked the
+operator algebra, source domains, modulation argument, approximation
+constants and inherited source claims. These checks are internal LLM
+assistance and do not constitute independent cross-model or human
+refereeing. The detailed derivations are preserved in round-one Notes
+01--02 \cite{note01,note02}; this manuscript is their synthesis, with no
+additional numerical run. Draft history is maintained in the investigation's
+\texttt{DRAFT\_HISTORY.md}, without manuscript snapshot folders.
+
+\begin{thebibliography}{99}
+
+\bibitem{cc}
+A. Connes and C. Consani,
+\emph{Weil positivity and trace formula, the archimedean place},
+Selecta Math. (N.S.) \textbf{27} (2021), article 77.
+\href{https://doi.org/10.1007/s00029-021-00689-4}{doi:10.1007/s00029-021-00689-4}.
+
+\bibitem{ccm}
+A. Connes, C. Consani and H. Moscovici,
+\emph{Zeta zeros and prolate wave operators},
+Ann. Funct. Anal. \textbf{15} (2024), article 87.
+\href{https://arxiv.org/html/2310.18423v2}{arXiv:2310.18423v2};
+Theorem 4.6 and Sections 4.6--4.8.
+
+\bibitem{dlmf}
+NIST Digital Library of Mathematical Functions,
+Section 5.11, Equation 5.11.2.
+\url{https://dlmf.nist.gov/5.11.E2}.
+
+\bibitem{canonical}
+Research note drafted for E. Baker with LLM assistance,
+\emph{Sonin canonical comparison: normalization, source class, and trace audit},
+29 September 2026.
+Repository source:
+\path{papers/weil-positivity/susy-positivity/investigations/wilson-loewner/arithmetic-storage/notes/SONIN_CANONICAL_COMPARISON_AUDIT_20260929.md}.
+
+\bibitem{euler}
+Research note drafted for E. Baker with LLM assistance,
+\emph{Finite Euler boundary identity and a fixed-place sign obstruction},
+3 October 2026.
+Repository source:
+\path{papers/investigations/sonin-critical-boundary/notes/FINITE_EULER_BOUNDARY_IDENTITY_20261003.md}.
+
+\bibitem{closed}
+Research note drafted for E. Baker with LLM assistance,
+\emph{Closed source form, compact relative correction, and a finite comparison certificate},
+3 October 2026, especially Section 2.
+Repository source:
+\path{papers/investigations/sonin-critical-boundary/notes/CLOSED_SOURCE_RELATIVE_COMPARISON_20261003.md}.
+
+\bibitem{compact}
+Research note drafted for E. Baker with LLM assistance,
+\emph{Compact correction and a revised positive main term},
+3 October 2026.
+Repository source:
+\path{papers/investigations/sonin-critical-boundary/notes/COMPACT_CORRECTION_AND_REVISED_B_20261003.md}.
+
+\bibitem{note01}
+Research note drafted for E. Baker with LLM assistance,
+\emph{Exact mixed prime response and the finite translate obstruction},
+17 October 2026, investigation 04, round-one Note 01.
+Repository source:
+\path{papers/investigations-3/04_sonin_mixed_prime_response/notes/round-1/01_EXACT_MIXED_RESPONSE_AND_FINITE_TRANSLATE_OBSTRUCTION_CODEX_20261017.md}.
+
+\bibitem{note02}
+Research note drafted for E. Baker with LLM assistance,
+\emph{Corrected signed Weil Gram identity and mixed source estimates},
+17 October 2026, investigation 04, round-one Note 02.
+Repository source:
+\path{papers/investigations-3/04_sonin_mixed_prime_response/notes/round-1/02_CORRECTED_SIGNED_WEIL_GRAM_AND_MIXED_SOURCE_ESTIMATES_CODEX_20261017.md}.
+
+\bibitem{controls}
+Repository research guide,
+\emph{Collision controls and the screening they impose},
+\path{result-summaries/12_collision_controls_and_screening.md}.
+For inherited Sonin results and claim discipline see also
+\path{result-summaries/07_sonin_critical_boundary.md},
+\path{avoid/01_restating_the_target.md},
+\path{avoid/07_scoped_exclusions_read_as_universal.md},
+and \path{avoid/12_term_by_term_matching_and_separate_bounds.md}.
+
+\end{thebibliography}
+\end{document}

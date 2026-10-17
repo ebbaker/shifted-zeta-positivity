@@ -45,6 +45,14 @@ Since the 1 October rounds the manuscript grew from 1,782 to 3,874 lines
 with only same-model checks, and the draft history ends on a working-tree
 revision.
 
+17 October 2026: Investigation 04 now has an
+[unreviewed round-one working manuscript](../papers/investigations-3/04_sonin_mixed_prime_response/manuscript/sonin_mixed_prime_response.tex)
+on mixed response, signed metric corrections and a compact source
+enclosure construction. Its checks are same-model only; no evaluated mixed
+sign or positivity-margin gain is reported. This pointer does not upgrade
+its claims to the reviewed statuses above. Added for Edward Baker with
+substantial LLM assistance, **gpt-6.1-sol**, effort **ultra**.
+
 ## Caveats
 
 Critical-line mass in a majorant or Abel limit does not settle exact

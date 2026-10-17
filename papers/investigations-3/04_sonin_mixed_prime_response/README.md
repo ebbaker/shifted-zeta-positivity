@@ -15,6 +15,11 @@ is unbounded with both signs in the stated support class. No sign of the
 complete mixed response or numerical gain is established. Round opened 17 October 2026 for Edward Baker with substantial
 LLM assistance, **gpt-6.1-sol (Codex)**, reasoning effort **ultra**.
 
+The user-requested [working manuscript](manuscript/sonin_mixed_prime_response.tex)
+summarizes Notes 01–02 in one editable LaTeX source. It is an unreviewed
+working draft; source-only delivery and internal compilation checks do not
+change the round's review status.
+
 Start with the [initial research proposal](research-overview/01_INITIAL_RESEARCH_PROPOSAL_20261016.md)
 and the [portfolio plan](../research-overview/01_PORTFOLIO_RESEARCH_PLAN_20261016.md).
 Codex derives the full mixed response; Claude tests its reduction and candidate sign mechanism. These are future model-family responsibilities; record the actual
@@ -28,7 +33,7 @@ model and effort when work is performed.
 | [reviews](reviews/README.md) | Separate assessments of claims, computations and scope |
 | [source-documents](source-documents/README.md) | Reference provenance and links to canonical sources |
 | [brainstorm](brainstorm/README.md) | Undeveloped candidate mechanisms with a decision question |
-| [manuscript](manuscript/README.md) | A future stable manuscript after a reviewed milestone |
+| [manuscript](manuscript/README.md) | Unreviewed working manuscript summarizing round 1 |
 | [chat-histories](chat-histories/README.md) | Canonical records of new project-specific conversations |
 
 The proposal states the opening deliverable, controls, dependencies and

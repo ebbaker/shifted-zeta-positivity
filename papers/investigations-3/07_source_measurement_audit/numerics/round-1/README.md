@@ -4,8 +4,8 @@
 Recorded model **gpt-6.1-sol (Codex)**, reasoning effort **ultra**.
 
 This directory contains the code and small records for
-[Note 02](../../notes/round1/02_EXPLICIT_THETA_JET_AND_ENDPOINT_BOUNDS_CODEX_20261017.md)
-and [Note 03](../../notes/round1/03_BOUNDED_REPLAY_AND_POSITIVE_FEASIBILITY_CODEX_20261017.md).
+[Note 02](../../notes/round-1/02_EXPLICIT_THETA_JET_AND_ENDPOINT_BOUNDS_CODEX_20261017.md)
+and [Note 03](../../notes/round-1/03_BOUNDED_REPLAY_AND_POSITIVE_FEASIBILITY_CODEX_20261017.md).
 The fixed replay has six observations, 24 conditioning combinations and
 32 equality/nonnegative-feasibility combinations. No height threshold or
 support sweep is included. Formal review occurs at the investigation round
@@ -66,7 +66,7 @@ is small; regenerable full floating output stays outside the checkout.
 
 ## Concrete analytic onset budget
 
-[Note 05](../../notes/round1/05_CONCRETE_NORMALIZED_ONSET_BUDGET_CODEX_20261017.md)
+[Note 05](../../notes/round-1/05_CONCRETE_NORMALIZED_ONSET_BUDGET_CODEX_20261017.md)
 uses a separate fixed-pair calculation, not an expansion of the six-point
 replay. The [producer](concrete_onset_budget.py) and
 [interval record](CONCRETE_ONSET_BUDGET.json) evaluate derivative majorants,

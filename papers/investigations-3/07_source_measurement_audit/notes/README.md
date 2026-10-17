@@ -9,10 +9,10 @@ Routine derivations, calculations and verification continue within it.
 
 | Round | Focus | Status |
 | --- | --- | --- |
-| [Round 1](round1/README.md) | Finite source measurements, nearby collisions and the explicit onset budget | Active |
+| [Round 1](round-1/README.md) | Finite source measurements, nearby collisions and the explicit onset budget | Active |
 
 The [current execution plan](../research-overview/02_ROUND_BASED_EXECUTION_PLAN_20261017.md)
 sets the scope and next decision. Code and small records remain under
-`numerics/round1/`; eventual round assessments belong in `reviews/`.
+`numerics/round-1/`; eventual round assessments belong in `reviews/`.
 Future rounds should use sibling folders such as `round2/`, with their
 own concise indexes. The [draft history](../DRAFT_HISTORY.md) records milestones.
