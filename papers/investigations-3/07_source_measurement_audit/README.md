@@ -1,15 +1,34 @@
 # Source-measurement audit
 
 16 October 2026. Prepared for Edward Baker with substantial LLM assistance.
-Recorded model: **gpt-6-astra (Codex)**; reasoning effort: **ultra**.
+Initialization model: **gpt-6-astra (Codex)**; reasoning effort: **ultra**.
 
-**Status: initialized proposal.** Bounded audit and disposition proposed. No new result, certificate or
-research run is reported by this setup.
+**Status: round one active; a working manuscript now synthesizes the analytic
+arguments and validated replay. Reviews occur at the round boundary.** The [opening note](notes/round1/01_OPENING_ANALYTIC_AUDIT_AND_REPLAY_CONTRACT_CODEX_20261016.md)
+records the claim ledger, endpoint remainders, a scoped nearby-double-jet
+construction preserving positive normalized coefficients, and the fixed replay
+contract. The continuation now supplies [explicit bounds](notes/round1/02_EXPLICIT_THETA_JET_AND_ENDPOINT_BOUNDS_CODEX_20261017.md),
+a [validated replay](notes/round1/03_BOUNDED_REPLAY_AND_POSITIVE_FEASIBILITY_CODEX_20261017.md),
+and a [nondegeneracy argument](notes/round1/04_NONDEGENERATE_FINITE_SOURCE_COLLISIONS_CODEX_20261017.md).
+The [concrete normalized budget](notes/round1/05_CONCRETE_NORMALIZED_ONSET_BUDGET_CODEX_20261017.md)
+now gives the conservative sufficient threshold 3915 for the unanchored
+three-coordinate theta-tail class.
 
-Start with the [initial research proposal](research-overview/01_INITIAL_RESEARCH_PROPOSAL_20261016.md)
+Opening assessment: 16 October 2026, prepared for Edward Baker with substantial
+LLM assistance; **gpt-6.1-sol (Codex)**, reasoning effort **ultra**. Its internal
+checks used same-model collaborators. The designated Claude review has not occurred.
+
+Continue under the [round execution plan](research-overview/02_ROUND_BASED_EXECUTION_PLAN_20261017.md)
+and retain the [initial research proposal](research-overview/01_INITIAL_RESEARCH_PROPOSAL_20261016.md)
 and the [portfolio plan](../research-overview/01_PORTFOLIO_RESEARCH_PLAN_20261016.md).
-Codex audits the proof sketch and numerical record; Claude repairs the proposition and reviews the replay. These are future model-family responsibilities; record the actual
-model and effort when work is performed.
+The 17 October continuation used **gpt-6.1-sol (Codex)**, effort **ultra**.
+The independent six-point replay and all 32 coefficient cases are complete,
+with interval verification. Further notes continue within the same round;
+Claude's cross-model assessment belongs at its boundary. The [working manuscript](manuscript/README.md) now supplies a provisional
+claim-by-claim disposition from the accumulated bounds and replay; the round
+assessment remains pending. The draft was requested before that assessment
+and does not mark the round reviewed or closed.
+All current notes are organized in [round one](notes/round1/README.md).
 
 | Folder | Purpose |
 | --- | --- |
@@ -19,7 +38,7 @@ model and effort when work is performed.
 | [reviews](reviews/README.md) | Separate assessments of claims, computations and scope |
 | [source-documents](source-documents/README.md) | Reference provenance and links to canonical sources |
 | [brainstorm](brainstorm/README.md) | Undeveloped candidate mechanisms with a decision question |
-| [manuscript](manuscript/README.md) | A future stable manuscript after a reviewed milestone |
+| [manuscript](manuscript/README.md) | Working draft with proofs, validated finite tables and scoped claim disposition |
 | [chat-histories](chat-histories/README.md) | Canonical records of new project-specific conversations |
 
 The proposal states the opening deliverable, controls, dependencies and

@@ -1,13 +1,17 @@
 # Investigations 3
 
 16 October 2026. Prepared for Edward Baker with substantial LLM assistance.
-Recorded model: **gpt-6-astra (Codex)**; reasoning effort: **ultra**.
+Initialization model: **gpt-6-astra (Codex)**; reasoning effort: **ultra**.
 
 Seven project homes initialized from the [brainstorm exchange](../brainstorm/investigations-3/README.md).
 The [overall research plan](research-overview/01_PORTFOLIO_RESEARCH_PLAN_20261016.md) sets priorities,
 model assignments, dependencies and stopping or re-evaluation criteria.
-All seven are proposals; this setup reports no new theorem, certificate,
-manuscript or research run.
+The initial setup comprised seven proposals and reported no new theorem,
+certificate, manuscript or research run. Project 07 now has explicit analytic bounds, a validated bounded replay,
+a nondegeneracy argument and a concrete sufficient onset budget. Its current round remains active; formal review
+follows the round rather than each note.
+This status update was prepared for Edward Baker with substantial LLM assistance,
+**gpt-6.1-sol (Codex)**, reasoning effort **ultra**, on 17 October 2026.
 
 | Project | Opening status |
 | --- | --- |
@@ -17,7 +21,7 @@ manuscript or research run.
 | [Sonin mixed-prime response](04_sonin_mixed_prime_response/README.md) | One analytic calculation proposed |
 | [Constructive stable models](05_constructive_stable_models/README.md) | Gated on a qualifying explicit family |
 | [Explicit heat zero counts](06_explicit_heat_zero_counts/README.md) | Waiting for a precisely stated consumer |
-| [Source-measurement audit](07_source_measurement_audit/README.md) | Bounded audit and disposition proposed |
+| [Source-measurement audit](07_source_measurement_audit/README.md) | Round one active; working manuscript synthesizes analytic results and validated replay |
 
 Recommended opening work: the family contract and sharp finite-sum
 feasibility, with a bounded source-measurement audit. Other lanes enter

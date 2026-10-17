@@ -1,12 +1,18 @@
-# Source-measurement audit: notes
+# Source measurement audit notes by round
 
-16 October 2026. Prepared for Edward Baker with substantial LLM assistance.
-Recorded model: **gpt-6-astra (Codex)**; reasoning effort: **ultra**.
+17 October 2026. Prepared for Edward Baker with substantial LLM assistance.
+Recorded model **gpt-6.1-sol (Codex)**, reasoning effort **ultra**.
 
-Incremental derivations and one coordination note per phase.
+Each investigation round has its own folder and index. Notes retain their
+numbered dated filenames; formal review follows the accumulated round.
+Routine derivations, calculations and verification continue within it.
 
-Begin with the bounded task in the [initial proposal](../research-overview/01_INITIAL_RESEARCH_PROPOSAL_20261016.md).
-No research note has been added yet. Use dated numbered notes, one owner
-per file, and one coordination note per phase. Include the intended author,
-LLM assistance, actual model and effort, claim status, sources, and next
-decision. Keep computations in numerics and assessments in reviews.
+| Round | Focus | Status |
+| --- | --- | --- |
+| [Round 1](round1/README.md) | Finite source measurements, nearby collisions and the explicit onset budget | Active |
+
+The [current execution plan](../research-overview/02_ROUND_BASED_EXECUTION_PLAN_20261017.md)
+sets the scope and next decision. Code and small records remain under
+`numerics/round1/`; eventual round assessments belong in `reviews/`.
+Future rounds should use sibling folders such as `round2/`, with their
+own concise indexes. The [draft history](../DRAFT_HISTORY.md) records milestones.

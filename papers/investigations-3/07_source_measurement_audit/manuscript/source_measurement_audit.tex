@@ -1,0 +1,577 @@
+\documentclass[11pt]{article}
+\usepackage[letterpaper,margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools,booktabs,tabularx,array}
+\usepackage{microtype,xurl}
+\usepackage[colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue]{hyperref}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{remark}\newtheorem{remark}[theorem]{Remark}
+\newcommand{\R}{\mathbb R}
+\newcommand{\C}{\mathbb C}
+\newcommand{\norm}[1]{\left\lVert #1\right\rVert}
+\newcommand{\dd}{\,\mathrm d}
+\newcommand{\thetaH}{H_\theta}
+\newcommand{\jet}{\mathbf h}
+\newcommand{\e}{\mathrm e}
+\DeclareMathOperator{\rank}{rank}
+\DeclareMathOperator{\conv}{conv}
+\DeclareMathOperator{\diag}{diag}
+\title{Finite measurements and positive heat collisions near the theta source}
+\author{Drafted for Edward Baker}
+\date{17 October 2026}
+\begin{document}
+\maketitle
+\begin{abstract}
+We audit the information supplied by fixed finite arithmetic measurements of a positive theta source. In every fixed coefficient space of dimension at least two, finite perturbations have odd endpoint jets that force algebraic transform tails. Two directions with distinct leading orders can cancel the complete theta value and first derivative at sufficiently large height while preserving all imposed linear constraints. The coefficient changes tend to zero faster than every inverse power. At each fixed positive heat time the resulting frozen sources have nondegenerate heat collisions outside a discrete set of heights. For one normalized, unanchored three-coordinate construction, explicit interval bounds give the conservative sufficient threshold $x\ge3915$, with coefficient change less than $4\cdot10^{-307}$ on $0\le t\le1/4$. Separately, a validated bounded replay distinguishes a sufficient exclusion radius from the actual distance to the double-jet equations and classifies 32 finite positivity problems. These conclusions concern a relaxed finite perturbation class: nonzero finite perturbations lose exact theta reflection. They do not establish a collision of the theta heat flow or decide the Riemann Hypothesis.
+\end{abstract}
+
+\noindent\textbf{Working-draft status.} This manuscript synthesizes round-one Notes 01--05 of investigation 07. The round remains active. Formal round assessment and independent specialist review are pending. Drafting and internal checks used substantial LLM assistance, recorded as \texttt{gpt-6.1-sol}, reasoning effort \texttt{ultra}; see the acknowledgement and Appendix~\ref{sec:records}.
+
+\section{The source class and the question being audited}
+Put $\lambda_n=\pi n^2$, $q_n(u)=\lambda_n\e^{4u}$, and
+\begin{equation}\label{eq:source}
+ \phi_n(u)=\e^u(2q_n(u)^2-3q_n(u))\e^{-q_n(u)},\qquad
+ \Phi(u)=\sum_{n\ge1}\phi_n(u).
+\end{equation}
+The standard theta reflection identity gives $\Phi(-u)=\Phi(u)$ on $\R$. The sum is holomorphic in $|\Im u|<\pi/8$ and positive for $u\ge0$. Each individual mode is entire in $u$. With the physical frequency normalization of Polymath~\cite{polymath},
+\begin{equation}\label{eq:heat}
+ \thetaH(t,z)=\int_0^\infty\e^{tu^2}\Phi(u)\cos(zu)\dd u,
+ \qquad \thetaH(0,z)=\frac18\xi\left(\frac{1+iz}{2}\right),
+ \qquad \partial_t H=-\partial_z^2H.
+\end{equation}
+Positive-axis double-exponential decay makes these transforms entire jointly in $(t,z)\in\C^2$, also for any finite perturbation below. Reflection makes the complete heat-weighted theta source uniformly Schwartz for real $t$ in a compact interval. Consequently, for every $K$,
+\begin{equation}\label{eq:schwartz}
+ \sup_{0\le t\le T}\norm{\jet(t,x)}=O_{T,K}(x^{-K}),\qquad
+ \jet=(\thetaH,\partial_x\thetaH)^{\mathsf T}.
+\end{equation}
+Indeed, use the full-line Fourier integral and integrate its Schwartz integrand by parts, including the factor $u$ for the derivative.
+
+Fix $N<\infty$ and a real linear subspace $V\subset\R^N$. Extend $\delta\in V$ by zero for $n>N$, and set
+\begin{equation}\label{eq:perturb}
+ f_\delta=\sum_{n=1}^N\delta_n\phi_n,\quad
+ \Phi_a=\Phi+f_\delta,\quad a_n=1+\delta_n\ (n\le N),\quad a_n=1\ (n>N).
+\end{equation}
+Thus the later coefficients are fixed at their theta values. The normalization used throughout is
+\begin{equation}\label{eq:beta}
+ \beta_n=(4\pi n^2-1)\e^{-\pi n^2}>0,\qquad
+ \sum_{n\ge1}\beta_n=\frac12,\qquad V\subset\ker\beta^{\mathsf T}.
+\end{equation}
+It preserves $\sum\beta_n a_n=1/2$. Extra homogeneous constraints, for example the anchor $\delta_1=0$, may be included in $V$. Let
+\begin{equation}\label{eq:B}
+ H_\delta(t,x)=\int_0^\infty\e^{tu^2}f_\delta(u)\cos(xu)\dd u,
+ \qquad B_{t,x}\delta=(H_\delta,\partial_xH_\delta)^{\mathsf T}.
+\end{equation}
+The equations for a double zero of $H_a=\thetaH+H_\delta$ are exactly
+\begin{equation}\label{eq:double}
+ B_{t,x}\delta=-\jet(t,x).
+\end{equation}
+
+The audit asks what a fixed map $M:V\to\R^m$ can infer from a small \emph{absolute} measurement norm $\norm{M\delta}_2$. This is different from exact source identification, a relative error estimate, or a measurement design that grows with $x$. The following is the main qualitative result.
+
+\begin{theorem}[Small positive perturbations with local heat collisions]\label{thm:main}
+Let $V\subset\ker\beta^{\mathsf T}\subset\R^N$ be fixed with $\dim V\ge2$, and let $T>0$. There exist two fixed directions in $V$ and $X<\infty$ such that, for every $0\le t\le T$ and $x\ge X$, a perturbation $\delta(t,x)$ in their span solves \eqref{eq:double}. For every $K>0$,
+\[
+ \sup_{0\le t\le T}\norm{\delta(t,x)}=O_{T,K}(x^{-K}).
+\]
+In particular all coefficients are positive for sufficiently large $x$. At each fixed $t_*\in(0,T]$, outside a discrete set of heights, the coefficients selected at $(t_*,x)$ and then held fixed give a nondegenerate local heat collision. Every fixed finite measurement $M\delta(t,x)$ tends to zero uniformly in $t$.
+\end{theorem}
+
+The selected source may depend on both $t$ and $x$. The theorem does not select a single source that has collisions at all these points. The proof occupies Sections~\ref{sec:endpoints}--\ref{sec:nondegenerate}. Section~\ref{sec:quantitative} gives a sufficient numerical threshold for one specified normalized space.
+
+\section{Finite perturbations and their endpoint tails}\label{sec:endpoints}
+\begin{lemma}[Finite endpoint separation]\label{lem:finite}
+Every nonzero finite perturbation $f_\delta$ has a nonzero odd derivative at zero. In particular it is not even.
+\end{lemma}
+\begin{proof}
+Writing $w=\e^{-4u}$, direct expansion of the finitely many modes gives
+\begin{equation}\label{eq:reflectionseries}
+ f_\delta(-u)=\e^{-u}\sum_{k\ge1}
+ \frac{(-1)^k(2k+1)\pi^k}{(k-1)!}w^k
+ \sum_n\delta_n n^{2k}.
+\end{equation}
+If $f_\delta$ were even, the left side would equal its double-exponentially decaying positive-axis value. Hence the analytic power series on the right would vanish faster than every power of $w$ at $w=0$. All its coefficients vanish. On $s$ distinct supported nodes, the equations $\sum\delta_n n^{2k}=0$, $1\le k\le s$, form an invertible Vandermonde system after multiplying each column by its nonzero node square. Thus $\delta=0$. Finally, a finite $f_\delta$ is entire. If all its odd derivatives vanished at zero, its Taylor series, and hence the entire function, would be even.
+\end{proof}
+
+For $j\ge0$ define $\ell_j(\delta)=f_\delta^{(2j+1)}(0)$. For nonzero $V$, let
+\begin{equation}\label{eq:p}
+ q=\min\{j:\ell_j|_V\ne0\},\qquad p=2q+2,\qquad
+ a(\delta)=(-1)^{q+1}\ell_q(\delta).
+\end{equation}
+The minimum is over the \emph{whole space} $V$. All earlier odd functionals vanish identically on that space.
+
+\begin{lemma}[Uniform endpoint expansion]\label{lem:tails}
+Uniformly for $0\le t\le T$, $x\ge1$, and $\delta\in V$,
+\begin{align}\label{eq:endpointtails}
+ H_\delta(t,x)&=a(\delta)x^{-p}+O_T(\norm\delta x^{-p-2}),\notag\\
+ \partial_xH_\delta(t,x)&=-p\,a(\delta)x^{-p-1}+O_T(\norm\delta x^{-p-3}).
+\end{align}
+The leading coefficient is independent of $t$.
+\end{lemma}
+\begin{proof}
+Let $g=\e^{tu^2}f_\delta$. All its positive-axis derivatives are integrable, vanish at infinity, and have uniform bounds proportional to $\norm\delta$. Since the heat factor is even, its product preserves the first nonzero odd endpoint. Repeated integration by parts gives, exactly,
+\begin{equation}\label{eq:ibp}
+ \int_0^\infty g\cos(xu)\dd u
+ =\sum_{j=0}^{m-1}\frac{(-1)^{j+1}g^{(2j+1)}(0)}{x^{2j+2}}
+ +\frac{(-1)^m}{x^{2m}}\int_0^\infty g^{(2m)}\cos(xu)\dd u.
+\end{equation}
+Take $2m=p+2$. For the derivative, apply integration by parts directly to $-\int_0^\infty ug(u)\sin(xu)\dd u$. Its relevant even endpoints satisfy $(ug)^{(k)}(0)=k g^{(k-1)}(0)$. Expanding through order $p+2$ and bounding the remaining integral gives the second line. This argument does not differentiate an unspecified remainder.
+\end{proof}
+
+For use below one may choose explicit directional constants. If the first odd endpoint of a direction has order $p-1$, put
+\begin{align}\label{eq:EF}
+ E_p&=\sup_{0\le t\le T}\bigl(|g^{(p+1)}(0)|+\norm{g^{(p+2)}}_{L^1}\bigr),\notag\\
+ F_p&=\sup_{0\le t\le T}\bigl((p+2)|g^{(p+1)}(0)|+\norm{(ug)^{(p+3)}}_{L^1}\bigr).
+\end{align}
+Then the two error terms in \eqref{eq:endpointtails} are bounded respectively by $E_p x^{-p-2}$ and $F_p x^{-p-3}$ for that direction. The same integrations establish higher $x$-derivative expansions whenever needed.
+
+\section{Constructing exact small double jets}
+Choose $\delta^A\in V$ with $\ell_q(\delta^A)\ne0$. As $\dim V\ge2$, choose a nonzero $\delta^B\in V\cap\ker\ell_q$. By Lemma~\ref{lem:finite} this second direction has a later first odd endpoint. Write its even exponent as $r>p$ and its leading coefficient as $b\ne0$; write $a=a(\delta^A)\ne0$. Define
+\[
+ P=(\delta^A\ \delta^B),\qquad D_{t,x}=(B_{t,x}\delta^A\ B_{t,x}\delta^B).
+\]
+Lemma~\ref{lem:tails} yields
+\begin{equation}\label{eq:det}
+ \det D_{t,x}=(p-r)ab\,x^{-p-r-1}(1+O_T(x^{-2})),\qquad
+ \norm{D_{t,x}^{-1}}=O_T(x^{r+1}).
+\end{equation}
+For the inverse bound, its adjugate has norm $O_T(x^{-p})$ and the determinant has the displayed nonzero leading term. Therefore
+\begin{equation}\label{eq:solution}
+ \delta(t,x)=-P D_{t,x}^{-1}\jet(t,x)
+\end{equation}
+is defined for all sufficiently large $x$, uniformly on $[0,T]$, and solves \eqref{eq:double} exactly. Combining \eqref{eq:schwartz} and \eqref{eq:det} gives superalgebraic smallness. Eventually $\norm\delta_\infty<1/2$, so the changed coefficients exceed $1/2$ and the fixed later coefficients equal one. All constraints defining $V$ remain exact. This proves the double-jet and measurement assertions of Theorem~\ref{thm:main}.
+
+\section{Nondegeneracy and the frozen heat event}\label{sec:nondegenerate}
+Fix $t_*>0$ and write $F(x)=H_{\delta^A}(t_*,x)$, $G(x)=H_{\delta^B}(t_*,x)$, and $H(x)=\thetaH(t_*,x)$. On the large-height interval where $D$ is invertible, the curvature of the source selected at $x$ and then held fixed is
+\begin{equation}\label{eq:curvature}
+ \mathcal K(x)=H''(x)-(F''(x),G''(x))D_{t_*,x}^{-1}(H(x),H'(x))^{\mathsf T}.
+\end{equation}
+The coefficient functions in \eqref{eq:solution} are \emph{not} differentiated in this expression.
+
+\begin{proposition}\label{prop:nondegenerate}
+The real analytic function $\mathcal K$ is not identically zero. Its zero set on the large-height interval is discrete.
+\end{proposition}
+\begin{proof}
+If $\mathcal K\equiv0$, define analytic functions $A,B$ by
+$(A,B)=(F'',G'')D^{-1}$. Then $F,G,H$ solve the same equation
+$Y''=A(x)Y+B(x)Y'$. The nonzero Wronskian $\det D$ makes $F,G$ a fundamental pair; uniqueness for this linear equation gives $H=c_AF+c_BG$ with constants $c_A,c_B$ on the interval. Their distinct algebraic leading orders $x^{-p}$ and $x^{-r}$, while $H$ is superalgebraically small, force first $c_A=0$ and then $c_B=0$. Analytic continuation would give $H\equiv0$. This contradicts $\thetaH(t_*,0)>0$, since the defining integrand is positive. A nonzero real analytic function has discrete zeros.
+\end{proof}
+
+\begin{proposition}[The local heat collision]\label{prop:heat}
+Suppose the selected, fixed coefficients give $H_a(t_*,x_*)=H_{a,x}(t_*,x_*)=0$ and $k=H_{a,xx}(t_*,x_*)\ne0$. A nonreal conjugate pair at times just below $t_*$ becomes two real simple zeros at times just above $t_*$.
+\end{proposition}
+\begin{proof}
+Set $s=t-t_*$ and $y=x-x_*$. The heat equation and Taylor expansion give
+\[
+ H_a(t_*+s,x_*+y)=\frac{k}{2}(y^2-2s)
+ +O(|y|^3+|s||y|+s^2).
+\]
+The implicit function theorem gives a real analytic critical curve $y_c(s)$, with $y_c(0)=0$. Let $A(s)=H_a(t_*+s,x_*+y_c(s))=-ks+O(s^2)$. Analytic factorization around this critical curve gives
+\[
+ H_a-A(s)=(y-y_c(s))^2 U(s,y),\qquad U(0,0)=k/2.
+\]
+The local analytic coordinate $z=(y-y_c(s))\sqrt{2U(s,y)/k}$, chosen real on real arguments near the origin, reduces the zero equation to $z^2=2s+O(s^2)$. For small $s>0$ there are two real simple roots; for small $s<0$ the roots are nonreal conjugates. Taking $|s|<t_*$ keeps the earlier times positive.
+\end{proof}
+
+These propositions complete Theorem~\ref{thm:main}. If one also wants every selected source to be genuinely changed, exclude the theta double-jet set. It is discrete at fixed time because the nonzero entire function $H(t_*,\cdot)$ has discrete zeros. Outside the enlarged discrete set, $\delta\ne0$, and Lemma~\ref{lem:finite} proves failure of exact source reflection. No multiplicity conjecture for theta is used.
+
+\section{Measurement bounds and actual distance}\label{sec:measurement}
+For fixed $(t,x)$, consider the least constant in
+\begin{equation}\label{eq:C}
+ \norm{B_{t,x}\delta}_2\le C(t,x)\norm{M\delta}_2\qquad(\delta\in V).
+\end{equation}
+It is finite exactly when $\ker(M|_V)\subset\ker(B_{t,x}|_V)$. Necessity follows by applying the inequality to the kernel; sufficiency follows by factoring through the finite-dimensional image of $M$. If $M$ is injective on $V$, choose a full-rank basis matrix $Q$ for $V$ and a thin QR factorization $MQ=UR$, with $U^{\mathsf T}U=I$. Then
+\begin{equation}\label{eq:distances}
+ A=B_{t,x}QR^{-1},\qquad C=\sigma_{\max}(A),\qquad
+ \eta=\frac{\norm\jet_2}{C},\qquad
+ r_M=\min_{\substack{\delta\in V\\B\delta=-\jet}}\norm{M\delta}_2.
+\end{equation}
+When feasible, $r_M=\norm{A^\dagger\jet}_2$; otherwise it is infinity. The formula follows by writing $y=R c$ for $\delta=Qc$, so that $\norm{M\delta}=\norm y$ and $Ay=-\jet$. For $C>0$,
+\begin{equation}\label{eq:eta}
+ \eta\le r_M.
+\end{equation}
+Thus $\norm{M\delta}<\eta$ excludes a double jet at the selected point. It does not identify the distance to one. Degenerate cases $C=0$ are handled directly by $B|_V=0$: a nonzero $\jet$ cannot be cancelled, while $\jet=0$ already gives a zero perturbation solution.
+
+The leading functional in \eqref{eq:p} also gives, for injective $M$,
+\begin{equation}\label{eq:Casymptotic}
+ C(t,x)=A_Mx^{-p}(1+O_T(x^{-2})),\qquad
+ A_M=\sup_{\delta\ne0}\frac{|\ell_q(\delta)|}{\norm{M\delta}_2}>0.
+\end{equation}
+This follows from the uniform operator version of \eqref{eq:endpointtails}; the leading vector is $(1,-p/x)^{\mathsf T}$ times the same scalar functional. In particular an exponentially small sufficient radius need not imply an exponentially small actual distance. The latter depends on the target's orientation relative to both singular directions.
+
+Nonnegativity imposes $\delta_n\ge-1$ and can increase the minimum or eliminate feasibility. A negative unconstrained minimizer alone proves neither conclusion about the existence of another positive solution. Section~\ref{sec:replay} uses separate separating witnesses when asserting infeasibility.
+
+\begin{corollary}[Scope of fixed absolute tolerances]\label{cor:obstruction}
+In the class of Theorem~\ref{thm:main}, no fixed positive absolute tolerance on a fixed finite map $M$ can exclude all positive-time local heat collisions on an unbounded height domain.
+\end{corollary}
+\begin{proof}
+Fix $t_*>0$ in the heat interval and any tolerance $\epsilon>0$. The construction has $\norm{M\delta(t_*,x)}<\epsilon$ at all sufficiently large heights. Choose a height outside the discrete exceptional set of Proposition~\ref{prop:nondegenerate} and apply Proposition~\ref{prop:heat}.
+\end{proof}
+
+This obstruction leaves comparison-source methods available when a valid comparison margin is known. For example, if a comparison jet has norm at least $m(t,x)>0$, a bound $C\norm{M\delta}<m$ transfers its nonvanishing at that point. Proving an appropriate margin, domain, and membership is an additional input. The corollary does not exclude exact reflection, infinite-dimensional identification, relative estimates, or growing measurement designs.
+
+\section{A complete theta envelope and an explicit onset}\label{sec:quantitative}
+The asymptotic construction can be given a finite sufficient budget. We record both its analytic inputs and the finite interval calculation; interval arithmetic validates constants, rather than replacing the analytic arguments.
+
+\subsection{A uniform upper bound for the complete jet}
+\begin{proposition}\label{prop:envelope}
+For $0\le t\le1/4$ and $x\ge0$,
+\begin{equation}\label{eq:envelope}
+ \norm{\jet(t,x)}_2\le\frac65\e^{-\pi x/16}.
+\end{equation}
+\end{proposition}
+\begin{proof}
+Only here do we shift a contour, and only for the complete, reflected theta source. Set $y=\pi/16$, $c=\cos(4y)=1/\sqrt2$, $T=1/4$, and
+\[
+ \kappa_n=8c\lambda_n-T,\qquad L_{n,b}=4c\lambda_n-b,\qquad
+ J_j(\kappa,L)=\int_0^\infty v^j\e^{-\kappa v^2-Lv}\dd v.
+\]
+The full Fourier integral shifted to $\R+iy$ supplies the factor $\e^{-yx}$. The shift is valid in the source strip and its vertical sides vanish by uniform double-exponential bounds. Reflecting the negative half of the shifted line reduces the absolute bounds to $v\ge0$. On this line,
+\[
+ |\phi_n(v+iy)|\le(2\lambda_n^2\e^{9v}+3\lambda_n\e^{5v})
+ \e^{-c\lambda_n\e^{4v}},\qquad
+ |\e^{t(v+iy)^2}|\le\e^{Tv^2}.
+\]
+Use $\e^{4v}\ge1+4v+8v^2$ to obtain
+\begin{align}\label{eq:KH}
+ K_H&=\sum_{n\ge1}\e^{-c\lambda_n}
+   [2\lambda_n^2J_0(\kappa_n,L_{n,9})+3\lambda_nJ_0(\kappa_n,L_{n,5})],\notag\\
+ K_X&=\sum_{n\ge1}\e^{-c\lambda_n}
+   [2\lambda_n^2(J_1+yJ_0)(\kappa_n,L_{n,9})
+      +3\lambda_n(J_1+yJ_0)(\kappa_n,L_{n,5})].
+\end{align}
+The derivative uses $|v+iy|\le v+y$. Thus $|H|\le K_H\e^{-yx}$ and $|H_x|\le K_X\e^{-yx}$.
+
+Here are explicit bounds for the infinite sums. At $n=1$, put
+\[
+ U_{09}=\sqrt{\pi/\kappa_1}\exp(L_{1,9}^2/(4\kappa_1)).
+\]
+Completing the square gives $J_0(\kappa_1,L_{1,9})\le U_{09}$; integration of the derivative of the Gaussian gives
+$J_1\le(1-L_{1,9}U_{09})/(2\kappa_1)$ since $L_{1,9}<0$.
+For the $b=5$ terms, $L_{1,5}>0$, so $J_0\le\sqrt{\pi/\kappa_1}/2$ and $J_1\le1/(2\kappa_1)$.
+For $n\ge2$, $L_{n,9},L_{n,5}\ge2c\lambda_n$, and therefore $J_0\le(2c\lambda_n)^{-1}$ and $J_1\le(4c^2\lambda_n^2)^{-1}$. With $\lambda_2=4\pi$, geometric bounds give
+\[
+ S_a=\frac{\lambda_2\e^{-c\lambda_2}}{1-(9/4)\e^{-5c\pi}},\qquad
+ S_0=\frac{\e^{-c\lambda_2}}{1-\e^{-5c\pi}},
+\]
+\begin{align*}
+ K_{H,\ge2}&\le S_a/c+3S_0/(2c),\\
+ K_{X,\ge2}&\le[1/(2c^2)+3/(4c^2\lambda_2)]S_0+yK_{H,\ge2}.
+\end{align*}
+Outward interval evaluation of these explicit expressions gives
+\[
+ K_H<1.125808767,\quad K_X<0.314420277,\quad
+ (K_H^2+K_X^2)^{1/2}<1.168890710<6/5.
+\]
+The defining bounds and infinite geometric majorants prove \eqref{eq:envelope}.
+\end{proof}
+
+Finite perturbations are not shifted on the full real line in this proof. Their negative-axis heat integrals need not converge, and Lemma~\ref{lem:finite} rules out the reflection that justified the complete-theta shift.
+
+\subsection{Finite remainders and a determinant budget}
+For the remainder of this section take $T=1/4$; all bounds are uniform for $0\le t\le T$.
+For a mode and heat time, write
+\[
+ \frac{\mathrm d^k}{\mathrm du^k}(\e^{tu^2}\phi_n(u))
+ =\e^{tu^2+u-q_n(u)}P_k(u,q_n(u),t).
+\]
+The polynomials are obtained exactly from
+\begin{equation}\label{eq:recurrence}
+ P_0=2q^2-3q,\quad
+ P_{k+1}=\partial_uP_k+4q\partial_qP_k+(2tu+1-4q)P_k.
+\end{equation}
+Endpoint values are finite polynomial expressions. Absolute coefficient majorants for the integrals in \eqref{eq:EF} use, for $j,k\ge0$ and $c_n=1-T/(8\lambda_n)>0$,
+\begin{equation}\label{eq:monomial}
+ \int_0^\infty\e^{tu^2+u-q_n(u)}u^jq_n(u)^k\dd u
+ \le\frac{j!}{4\sqrt{\lambda_n}}c_n^{-k-1/2}
+       \Gamma(k+1/2,c_n\lambda_n).
+\end{equation}
+To verify this, use $tu^2\le Tq_n(u)/(8\lambda_n)$ and $u^j\le j!\e^u$, then substitute $q=\lambda_n\e^{4u}$. The product rule gives the analogous bounds for $ug$. These estimates bound the entire positive-axis integrals without numerical quadrature.
+
+Let $E_A,F_A,E_B,F_B$ denote directional constants from \eqref{eq:EF}, and let
+\begin{align}\label{eq:budget}
+ L&=(r-p)|ab|,\notag\\
+ K_2&=|a|F_B+r|b|E_A+|b|F_A+p|a|E_B,\notag\\
+ K_4&=E_AF_B+E_BF_A,\notag\\
+ K_D^2&=(|a|+E_A)^2+(p|a|+F_A)^2
+       +( |b|+E_B)^2+(r|b|+F_B)^2.
+\end{align}
+Expanding the two-by-two determinant gives
+\[
+ |\det D-(p-r)abx^{-p-r-1}|
+ \le K_2x^{-p-r-3}+K_4x^{-p-r-5}.
+\]
+Consequently, if
+\begin{equation}\label{eq:XD}
+ x\ge\max(1,X_D),\qquad
+ X_D^2=\frac{K_2+\sqrt{K_2^2+2LK_4}}{L},
+\end{equation}
+then $|\det D|\ge(L/2)x^{-p-r-1}$ and
+\begin{equation}\label{eq:inverseexplicit}
+ \norm{D^{-1}}_2\le\frac{2K_D}{L}x^{r+1},\qquad
+ \norm\delta_\infty\le\frac{12K_D\norm P_{2\to\infty}}{5L}
+ x^{r+1}\e^{-\pi x/16}.
+\end{equation}
+Here the Frobenius norm bounds the adjugate by $K_Dx^{-p}$, using $x\ge1$. Equation~\eqref{eq:envelope} supplies the last factor.
+
+\subsection{One normalized three-coordinate construction}
+Take $N=3$, $V=\ker(\beta_1,\beta_2,\beta_3)$, with no coefficient anchor. For $j=2,3$, define
+\begin{equation}\label{eq:pair}
+ v_j=e_j-\frac{\beta_j}{\beta_1}e_1,\qquad
+ \delta^A=v_2,\quad \rho=\frac{\ell_0(v_3)}{\ell_0(v_2)},\quad
+ \delta^B=v_3-\rho v_2.
+\end{equation}
+These exact defining formulas, rather than rounded input vectors, give $p=2$, $r=4$ and approximately
+\[
+ \delta^A=(-3.43729316632\cdot10^{-4},1,0),\qquad
+ \delta^B=(6.01196952451\cdot10^{-10},-2.09194443031\cdot10^{-6},1),
+\]
+\[
+ a=0.0395122594985\ldots,\qquad b=-0.000692611224986\ldots.
+\]
+The normalization and $\ell_0(\delta^B)=0$ follow identically from \eqref{eq:pair}; an interval containing zero is only a consistency check of this exact cancellation.
+
+The recorded 320-bit Arb calculation applies \eqref{eq:recurrence}--\eqref{eq:XD} once to this fixed pair. Useful outward bounds are
+\begin{center}
+\begin{tabular}{@{}lr@{\qquad}lr@{}}
+\toprule
+Quantity & Bound & Quantity & Bound\\\midrule
+$E_A$ & $<745.331444$ & $F_A$ & $<58615.351716$\\
+$E_B$ & $<68.219941$ & $F_B$ & $<9373.876742$\\
+$L$ & $>5.47332689\cdot10^{-5}$ & $K_2$ & $<418.436649$\\
+$K_4$ & $<10985380.865$ & $K_D$ & $<59364.960794$\\
+$\norm P_{2\to\infty}$ & $<1.000000000003$ & $X_D$ & $<3913.596554$\\\bottomrule
+\end{tabular}
+\end{center}
+Using the interval upper bound in $X=\max(1,\lceil\operatorname{upper}(X_D)\rceil)+1$ selects $X=3915$, without a height search. At this height the relative determinant error is less than $0.499640973$. The prefactor in \eqref{eq:inverseexplicit} is less than $2.603095134\cdot10^9$. Since $x^5\e^{-\pi x/16}$ decreases for $x\ge80/\pi$, the following holds on the entire unbounded domain.
+
+\begin{theorem}[A conservative explicit sufficient threshold]\label{thm:3915}
+For every $0\le t\le1/4$ and $x\ge3915$, the construction \eqref{eq:pair}, \eqref{eq:solution} gives
+\[
+ H_a(t,x)=H_{a,x}(t,x)=0,\qquad
+ \sum_{n\ge1}\beta_na_n=\frac12,\qquad
+ \norm{a-\mathbf1}_\infty<4\cdot10^{-307}.
+\]
+All coefficients are positive and $a_n=1$ for $n>3$. At each fixed $t\in(0,1/4]$ the selected frozen sources have nondegenerate local heat collisions at every height in $(3915,\infty)$ outside a discrete set.
+\end{theorem}
+
+The tighter coefficient bound from the outward constants is $3.414363787\cdot10^{-307}$. The number 3915 is sufficient; it is neither an optimized onset nor an observed earliest event. Nondegeneracy is not asserted at the particular height 3915. No such explicit threshold has been established here for an anchored space.
+
+For the two raw measurement designs of the next section, restrict the six-coordinate matrices to these first three perturbation coordinates. The recurrence norm is at most $\sqrt{35}\norm\delta_\infty$ and the reflection norm is less than $1.916\norm\delta_\infty$. Hence Theorem~\ref{thm:3915} gives respectively
+\[
+ \norm{M_{\rm rec}\delta}_2<2.4\cdot10^{-306},\qquad
+ \norm{M_{\rm ref}\delta}_2<7.7\cdot10^{-307}.
+\]
+
+\section{The bounded replay and positivity decisions}\label{sec:replay}
+The numerical work has two distinct purposes: measuring the difference between $\eta$ and $r_M$, and deciding positivity in a declared finite coefficient class. Neither requires a new height grid. All displayed decimal values in the replay tables are rounded summaries of interval-validated records, not interval endpoints.
+
+\subsection{Design, evaluation, and validation}
+For $N=6$, extend $\delta$ by zero outside $1\le n\le6$. The two maps use their original, unscaled Euclidean row norms:
+\begin{align}\label{eq:measurements}
+ (M_{\rm rec}\delta)_k&=\delta_{k-1}-2\delta_k+\delta_{k+1},&&1\le k\le7,\notag\\
+ (M_{\rm ref}\delta)_j&=\sum_{n=1}^6\delta_n[\phi_n(j/20)-\phi_n(-j/20)],&&1\le j\le12.
+\end{align}
+The recurrence map is injective with these zero boundary values. The reflection map's required finite ranks are interval-validated in the replay. The spaces are $\beta^{\mathsf T}\delta=0$, of dimension five, and its anchored intersection $\delta_1=0$, of dimension four. The six observation points are
+\[
+ (0,30),\ (0,44.1303),\ (1/4,44.1303),\ (0,60),\ (0,70),\ (0,85).
+\]
+Thus two maps and two spaces give 24 conditioning cases.
+
+An independent implementation used 80- and 120-decimal tanh--sinh quadrature and thin QR followed by SVD, without importing the original solver. Precision agreement is diagnostic. A separate 448-bit Arb evaluation used validated complex integration on $[0,9/5]$, ten retained source modes for the complete theta jet, and six free modes. The value and derivative tails were bounded analytically. For example, with $\kappa_n=4\lambda_n-9>0$ and $0\le t\le1/4$,
+\begin{equation}\label{eq:tailn}
+ |H_n|\le\frac{2\lambda_n^2\e^{-\lambda_n}}{\kappa_n},\qquad
+ |H_{n,x}|\le\frac{2\lambda_n^2\e^{-\lambda_n}}{\kappa_n^2}.
+\end{equation}
+These follow from $\phi_n(u)\le2\lambda_n^2\e^{9u-q_n(u)}$, and $q_n(u)\ge\lambda_n+4\lambda_nu+8\lambda_nu^2$. The omitted-mode majorants have a geometric ratio at most $((n+1)/n)^4\e^{-\pi(2n+1)}$. Their $n\ge11$ bounds are less than $1.557\cdot10^{-163}$ for the value and $1.030\cdot10^{-166}$ for the derivative. For a retained mode and $U=9/5$, set
+\[
+ q_U=\lambda_n\e^{4U},\quad \kappa_U=4q_U-9-2tU,\quad
+ A_U=2\lambda_n^2\exp(9U+tU^2-q_U).
+\]
+Concavity of $9u+tu^2-q_n(u)$ on $u\ge U$ bounds its tangent-line tail by $A_U/\kappa_U$ and $A_U(U/\kappa_U+1/\kappa_U^2)$, respectively. The first retained-mode integral tail is below $10^{-1822}$. All five time-zero jets also overlap independent enclosures from the $\xi$ formula in \eqref{eq:heat}, including its physical $x$ derivative.
+
+Interval matrix calculations validate ranks and distances through positive Gram determinants and verified inverse identities. The production solve avoids normal equations; the certificate uses exact finite-dimensional Gram identities with ball enclosures. The analytic derivations justifying infinite tails, contour shifts, and endpoint asymptotics remain written proof inputs.
+
+\subsection{Sufficient radius versus equality distance}
+Table~\ref{tab:distance} gives the unanchored cases; anchored cases are in the records. Across all 24 cases, $r_M/\eta$ ranges from approximately $1.64098\cdot10^5$ to $3.07096\cdot10^{11}$. These large gaps illustrate the distinction in \eqref{eq:eta} without contradicting the eventual small-distance theorem.
+\begin{table}[htbp]
+\centering\small
+\caption{Unanchored normalized $N=6$ space. $r_M$ is the equality distance, without positivity.}\label{tab:distance}
+\begin{tabular}{@{}rr rrrr@{}}
+\toprule
+$t$&$x$&$\eta_{\rm rec}$&$r_{\rm rec}$&$\eta_{\rm ref}$&$r_{\rm ref}$\\\midrule
+0&30&7.92121&$3.51006\cdot10^8$&2.14475&$2.27234\cdot10^7$\\
+0&44.1303&0.114025&534308&0.0308736&34590.1\\
+1/4&44.1303&0.121704&83529.6&0.0329528&5407.49\\
+0&60&$6.01494\cdot10^{-4}$&48523.0&$1.62861\cdot10^{-4}$&3141.27\\
+0&70&$5.05416\cdot10^{-5}$&1116.03&$1.36847\cdot10^{-5}$&72.2492\\
+0&85&$1.13632\cdot10^{-7}$&5.90781&$3.07672\cdot10^{-8}$&0.382459\\\bottomrule
+\end{tabular}
+\end{table}
+Only the unanchored recurrence minimizer at $(1/4,44.1303)$ is positive among the 24 measurement-minimum solutions. This statement is about those minimizers. It is not a proof of positive infeasibility for the remaining cases.
+
+The original conditioning norms agree relatively to about $1.593\cdot10^{-11}$ at worst. The original theta jet at $x=85$ differs relatively by about $1.144\cdot10^{-5}$. A finite-precision estimate of $\eta$ is therefore not, by itself, a certified exclusion threshold. The current interval records provide the finite checks used here.
+
+\subsection{Thirty-two finite coefficient problems}
+The positivity audit uses two points, supports $N=2,3,4,6$, two tails, and two anchor choices. A theta tail fixes $a_n=1$ for $n>N$; a zero tail fixes $a_n=0$ there. In both cases impose $\sum\beta_na_n=1/2$, the double-jet equations, and, when specified, $a_1=1$. These are affine problems in the first $N$ coefficients.
+
+After eliminating any anchor and the prescribed tail, write the remaining equations as $Ea=r$. Its first row is positive normalization mass $\sum\beta_na_n=m>0$ and the other rows are the two jet equations. Put $p_n=B_n/\beta_n$ and $q=r_{\rm jet}/m$. Then
+\begin{equation}\label{eq:convex}
+ \exists\ a_n\ge0:\ Ea=r\quad\Longleftrightarrow\quad
+ q\in\conv\{p_n\}.
+\end{equation}
+Indeed, the convex weights are $\beta_na_n/m$; conversely those weights reconstruct nonnegative coefficients. Exact equality infeasibility is checked by nonzero augmented minors. When equalities are feasible but positivity fails, a strict affine separator $y$ is validated with
+\[
+ y\cdot(p_n,1)>0\quad\hbox{for every free node},\qquad
+ y\cdot(q,1)<0.
+\]
+The resulting certificate excludes the entire stated nonnegative class.
+
+\begin{table}[htbp]
+\centering
+\caption{Finite positivity classification. Each entry holds for both prescribed tails. EI: equality infeasible; PF: positive feasible; PI: equality feasible but nonnegative infeasible.}\label{tab:positive}
+\begin{tabular}{@{}rrlcccc@{}}
+\toprule
+$t$&$x$&Anchor&$N=2$&$N=3$&$N=4$&$N=6$\\\midrule
+1/4&44.1303&off&EI&PF&PF&PF\\
+1/4&44.1303&on &EI&EI&PI&PI\\
+0&60&off&EI&PI&PI&PI\\
+0&60&on &EI&EI&PI&PI\\\bottomrule
+\end{tabular}
+\end{table}
+There are 12 equality-infeasible cases, 14 additional positive-infeasible cases, and six positive-feasible cases. All 26 nonnegative-infeasible cases have strict separating certificates. In the six feasible cases, the equality minimizer of $\norm{a_{1:N}-\mathbf1}_2$, computed by a verified Gram inverse, is strictly positive. It is therefore also the constrained Euclidean minimizer in those first $N$ coordinates. A representative theta-tail, unanchored $N=6$ solution at $(1/4,44.1303)$ is
+\[
+ a\approx(1.000034707892,\ 0.879260345485,\ 57641.757060421,\
+ 1.000039471614,\ 1,\ 1),
+\]
+with first-$N$ distance approximately $57640.75706055$. Its $\beta$-weighted $\ell^1$ change is approximately $4.14874985\cdot10^{-5}$. This weighted value is evaluated at the Euclidean optimizer; no weighted optimum is claimed. With a zero tail, the full raw $\ell^2$ distance to theta is infinite, although the first-$N$ coordinate distance is finite. A full $\beta$-weighted distance must add the prescribed omitted-tail contribution.
+
+The nearby positive replay source is not the canonical three-square control: its first odd source endpoint is about $6.25850\cdot10^{-6}$, rather than exactly zero. Moreover $44.1303$ is an endpoint of the control's certified root bracket, not the root itself. Table~\ref{tab:positive} makes no assertion at other heights or in larger supports, altered tails, or altered anchor classes. In particular it does not verify an extrapolation near $x=140$.
+
+\section{Disposition of the audited implications and control scope}\label{sec:scope}
+The audit repairs several implications that otherwise conflate different questions.
+\begin{center}\small
+\begin{tabularx}{\linewidth}{@{}p{0.29\linewidth}X@{}}
+\toprule
+Question or proposed inference&Disposition in the declared class\\\midrule
+Do finite perturbations retain theta's transform decay?&No. A nonzero finite perturbation has an odd endpoint and an algebraic leading tail (Lemmas~\ref{lem:finite}--\ref{lem:tails}).\\[3pt]
+Is $\norm\jet/C$ the distance to a double jet?&It is a sufficient exclusion radius, bounded above by the equality distance. The validated replay displays large gaps.\\[3pt]
+Does a negative unconstrained optimizer prove positive infeasibility?&No. Separate affine feasibility and strict separators are required; these are supplied only for the 32 stated cases.\\[3pt]
+Can small fixed absolute measurement tolerances exclude all high positive-time collisions?&Not in a fixed normalized finite perturbation space of dimension at least two. Theorem~\ref{thm:main} and Corollary~\ref{cor:obstruction} give the scoped obstruction.\\[3pt]
+Is there a finite sufficient onset in a concrete positive normalized class?&Yes: 3915 for the unanchored pair \eqref{eq:pair}; it is sufficient and not optimal.\\[3pt]
+Do these constructions decide theta's real-zero problem?&No. Nonzero finite perturbations fail exact reflection. Exact source identification and constructive comparison margins remain different inputs.\\\bottomrule
+\end{tabularx}
+\end{center}
+
+Known collision controls help identify which premises can support a claimed transfer. The canonical internal sources are listed in Appendix~\ref{sec:controls}; the present audit does not reproduce their full proofs or recertify their events.
+\begin{center}\small
+\begin{tabularx}{\linewidth}{@{}p{0.23\linewidth}X@{}}
+\toprule
+Control&Relevant retained premises and class qualification\\\midrule
+Three-square source&Positive normalized zero-tail square source, $\Phi_a'(0)=0$, with a nondegenerate event at $t=1/4$, $44.1303<x_*<44.1304$. Its third odd derivative is nonzero. Its tail differs from the fixed theta tail.\\[3pt]
+Four-square source&Positive normalized zero-tail square source, $\Phi_a'(0)=\Phi_a'''(0)=0$, with an event at $t=1/100$, $83.5323729<x_*<83.5323730$. Its fifth odd derivative is nonzero. This event lies outside the replay list.\\[3pt]
+Reflected super-Gaussian&Positive, even, entire source with a nondegenerate event at $t=1/4$, $x_*=\pi/4$. Its canonical decay argument excludes every nonzero polynomial-growth integer-square source expansion, hence excludes the finite class here.\\[3pt]
+Euler-factor source&Positive, reflected shifted arithmetic family $\Phi+\frac c2[\Phi(\cdot+a)+\Phi(\cdot-a)]$, $a=\frac12\log p$. Its certified events screen shared premises; membership in the present fixed finite square-perturbation class is not supplied or assumed.\\\bottomrule
+\end{tabularx}
+\end{center}
+For example, the super-Gaussian source has $\log\Phi_*(u)=-u^4+O(u^3)$, incompatible with the least nonzero square mode's $-\pi n_0^2\e^{4u}+9u+O(1)$ under polynomial-growth coefficients. Conversely, finite square support alone does not furnish full reflection. A control need only contradict a claimed bound on a domain that contains its event; a valid collision-free box can still pass the same control. These membership and domain qualifications prevent a scoped exclusion from becoming a universal impossibility claim.
+
+\appendix
+\section{The exact published carrier}\label{sec:carrier}
+For comparison with the original measurement discussion, retain the uncorrected Stirling carrier of Polymath~\cite[eqs.~(6), (9), (10)]{polymath}:
+\begin{align*}
+ M_0(s)&=\frac{s(s-1)}{16}\pi^{-s/2}\sqrt{2\pi}
+ \exp\left[(s/2-1/2)\operatorname{Log}(s/2)-s/2\right],\\
+ \alpha(s)&=\frac1{2s}+\frac1{s-1}+\frac12\operatorname{Log}\frac{s}{2\pi},\qquad
+ M_t(s)=\e^{t\alpha(s)^2/4}M_0(s).
+\end{align*}
+The logarithms use the principal branch on the indicated cut domain. At $s=(1+ix)/2$ with $x>0$, write $\alpha=A+iB$. Direct calculation gives
+\[
+ A=\tfrac14\log(1+x^2)-\tfrac12\log(4\pi)-\frac1{1+x^2},\qquad
+ B=\tfrac12\arctan x-\frac{3x}{1+x^2},
+\]
+and the exact modulus is
+\begin{equation}\label{eq:carrier}
+ \Gamma_t(x)=|M_t(s)|=
+ \frac{\pi^{1/4}}{32\e^{1/4}}(1+x^2)^{7/8}
+ \exp\left[-\frac{x\arctan x}{4}+\frac t4(A^2-B^2)\right].
+\end{equation}
+Uniformly for bounded real $t$, its asymptotic form is
+\[
+ \Gamma_t(x)=\frac{\pi^{1/4}}{32}\e^{-t\pi^2/64}x^{7/4}
+ \exp\left[-\frac{\pi x}{8}+\frac t{16}\log^2\frac{x}{4\pi}\right]
+ (1+O_T(x^{-1})).
+\]
+Together with \eqref{eq:Casymptotic}, this gives
+\[
+ \frac{C(t,x)}{\Gamma_t(x)}=
+ \frac{32A_M}{\pi^{1/4}}\e^{t\pi^2/64}x^{-p-7/4}
+ \exp\left[\frac{\pi x}{8}-\frac t{16}\log^2\frac{x}{4\pi}\right]
+ (1+O_T(x^{-1})).
+\]
+The derivative has the exact multiplier
+\[
+ \partial_xM_t((1+ix)/2)=\frac i2[\alpha+(t/2)\alpha\alpha']M_t,
+ \quad \alpha'=-\frac1{2s^2}-\frac1{(s-1)^2}+\frac1{2s}.
+\]
+Its logarithmic size must be retained in any comparison of complete jets. The carrier is not itself an upper bound for the complete theta jet, a nonvanishing margin, or an error term. Proposition~\ref{prop:envelope} is a separate direct bound. No effective Riemann--Siegel theorem is imported outside its stated hypotheses to justify the low-height replay.
+
+\section{Reproducibility and research provenance}\label{sec:records}
+This is one editable working manuscript, not a new snapshot series. Its source and PDF are stored in the investigation's \texttt{manuscript/} folder. Detailed derivations remain in round-one notes; subsequent assessment belongs in \texttt{reviews/}. The repository is
+\href{https://github.com/ebbaker/shifted-zeta-positivity}{\texttt{ebbaker/shifted-zeta-positivity}}.
+The investigation prefix for the following paths is \path{papers/investigations-3/07_source_measurement_audit/}.
+
+The original audit target is Sections 1--2 of \path{papers/brainstorm/investigations-3/reviews/03_REPLY_TO_CODEX_RESPONSE_CLAUDE_20261016.md}. Its solver and floating record are \path{check_codex_response_reply_claude_20261016.py} and \path{CHECK_CODEX_RESPONSE_REPLY_CLAUDE_20261016.json} under that brainstorm's \texttt{numerics/} folder. Note 01 records their inspected source identities. The present derivations and validated replay retain separate provenance.
+
+\begin{description}
+\item[Notes 01--02.] \path{notes/round1/01_OPENING_ANALYTIC_AUDIT_AND_REPLAY_CONTRACT_CODEX_20261016.md} records the opening class and replay contract. \path{notes/round1/02_EXPLICIT_THETA_JET_AND_ENDPOINT_BOUNDS_CODEX_20261017.md} supplies the complete-jet envelope, explicit endpoint budgets, and exact carrier.
+\item[Note 03.] \path{notes/round1/03_BOUNDED_REPLAY_AND_POSITIVE_FEASIBILITY_CODEX_20261017.md} describes the bounded replay and its interval certificates, including distance conventions and strict positivity decisions.
+\item[Notes 04--05.] \path{notes/round1/04_NONDEGENERATE_FINITE_SOURCE_COLLISIONS_CODEX_20261017.md} proves generic nondegeneracy. \path{notes/round1/05_CONCRETE_NORMALIZED_ONSET_BUDGET_CODEX_20261017.md} specializes the constants to the normalized unanchored pair.
+\end{description}
+
+All replay programs and small records lie in \path{numerics/round1/}. The floating production programs are \path{replay_measurements.py} and \path{replay_feasibility.py}; the interval checkers are \path{certify_evaluation.py}, \path{certify_measurements.py}, and \path{certify_feasibility.py}. The orchestration and analytic-constant checks are \path{run_replay.py} and \path{check_analytic_bounds.py}. Their principal retained records are
+\begin{center}\small
+\begin{tabularx}{\linewidth}{@{}lX@{}}
+\toprule
+Record&What it binds or validates\\\midrule
+\path{REPLAY_SUMMARY.json}&Declared bounded run, producer hashes and retained record hashes.\\
+\path{CERTIFIED_EVALUATION.json}&Six complete jets, six free modes, analytic tails and time-zero checks.\\
+\path{CERTIFIED_MEASUREMENTS.json}&All 24 rank, conditioning and equality-distance cases.\\
+\path{CERTIFIED_FEASIBILITY.json}&All 32 affine/positive classifications and witness checks.\\
+\path{FEASIBILITY_WITNESSES.json}&Candidate finite witnesses subsequently interval-validated.\\
+\path{ANALYTIC_BOUND_CHECKS.json}&Finite evaluations of the explicit analytic majorants.\\
+\path{CONCRETE_ONSET_BUDGET.json}&Separate fixed-pair 320-bit onset calculation and producer hash.\\\bottomrule
+\end{tabularx}
+\end{center}
+The last record is generated by \path{concrete_onset_budget.py}; it postdates the bounded replay and has its own code identity. It is not retroactively inserted into the original replay's hash contract. Code/record hash consistency was checked during drafting; hashes identify bytes, not mathematical validity. The fixed onset calculation was replayed without changing repository records and reproduced its strict inequalities.
+
+The recorded environment is Python 3.10.0, mpmath 1.4.1, and python-flint 0.9.0, using Arb ball arithmetic~\cite{johansson-arb}. The 80/120-decimal comparisons and separate 448-bit certificates have different evidential roles. The explicit onset uses 320 bits and finite expressions only: no physical integrals, support sweep, or height grid. Retained files are small; transient large numerical outputs are excluded under the repository's large-file policy. The round execution plan remains \path{research-overview/02_ROUND_BASED_EXECUTION_PLAN_20261017.md}. Nothing here marks that round reviewed or closed.
+
+\section{Canonical internal controls}\label{sec:controls}
+The control facts summarized in Section~\ref{sec:scope} retain their canonical homes. Under \path{papers/investigations-2/active/22_theta_manifold_geometry/notes/05_control_families/}, consult
+\begin{itemize}
+\item \path{01_SQUARE_SUPPORT_ENDPOINT_COLLISION_OBSTRUCTION_20261015.md};
+\item \path{02_WEIGHTED_COMB_REFLECTION_RIGIDITY_20261015.md};
+\item \path{03_TWO_ENDPOINT_SQUARE_COLLISION_20261015.md};
+\item \path{04_REFLECTION_POSITIVE_SOURCE_COLLISION_AND_MIXED_SECTORS_20261015.md}, especially Section 5, equation (14a), for the square-expansion exclusion.
+\end{itemize}
+For Euler-factor controls, consult \path{papers/investigations-2/active/19_euler_factor_controls/manuscript/euler_factor_controls.tex} and its \path{notes/2_CERTIFIED_EULER_FACTOR_WITNESS_20261014.md}. These are internal research artifacts rather than externally reviewed references. The relevant portfolio summaries are \path{result-summaries/12_collision_controls_and_screening.md} and \path{result-summaries/14_theta_identities_and_arithmetic_bookkeeping.md}.
+
+\section*{Acknowledgement and author responsibility}
+This working manuscript was drafted for Edward Baker with substantial assistance from OpenAI's Codex, recorded model \texttt{gpt-6.1-sol} at reasoning effort \texttt{ultra}. LLM assistance included mathematical synthesis, proof checking, numerical-record checking, exposition, and document preparation. Same-model collaborators supplied internal checks; these do not constitute independent cross-model or human review. The manuscript and its claims remain subject to author verification and the planned assessment of the investigation round. No independent review or publication acceptance is asserted.
+
+\begin{thebibliography}{9}
+\bibitem{polymath}
+D.~H.~J. Polymath,
+\emph{Effective approximation of heat flow evolution of the Riemann $\xi$ function, and a new upper bound for the de Bruijn--Newman constant},
+arXiv:1904.12438v2, 4 August 2019.
+\url{https://arxiv.org/abs/1904.12438v2}.
+
+\bibitem{johansson-arb}
+F.~Johansson,
+Arb: efficient arbitrary-precision midpoint-radius interval arithmetic,
+\emph{IEEE Transactions on Computers} \textbf{66} (2017), no.~8, 1281--1292.
+\href{https://doi.org/10.1109/TC.2017.2690633}{doi:10.1109/TC.2017.2690633}.
+\end{thebibliography}
+\end{document}

@@ -112,6 +112,13 @@ stability and character-channel programs are linked, not copied or moved.
 
 ## Decisions at each phase
 
+**Review cadence update, 17 October 2026:** at the user's explicit instruction,
+formal reviews follow an investigation round that may contain many notes.
+Routine derivation and numerical checking continue within the round; an
+individual note is not a review gate. The phase evidence below applies to
+coherent round outputs. Update prepared for Edward Baker with substantial
+LLM assistance, **gpt-6.1-sol (Codex)**, reasoning effort **ultra**.
+
 | Gate | Evidence required | Decision if it is missing |
 | --- | --- | --- |
 | Contract | Object, normalizations, domain, imported theorem hypotheses, target classification, eligible controls, one output and its error budget | Repair the contract before computation |

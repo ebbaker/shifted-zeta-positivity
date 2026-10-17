@@ -1,7 +1,7 @@
 # Source-measurement audit: chat histories
 
 16 October 2026. Prepared for Edward Baker with substantial LLM assistance.
-Recorded model: **gpt-6-astra (Codex)**; reasoning effort: **ultra**.
+Initialization model: **gpt-6-astra (Codex)**; reasoning effort: **ultra**.
 
 Canonical records of new project-specific conversations.
 
@@ -15,3 +15,9 @@ The portfolio-creation chat retains [formal replay identity 27](../../../investi
 No transcript or registry is copied here. Shared portfolio discussions
 use the [base history folder](../../chat-histories/README.md).
 See [Claude session guidance](claude-cowork/README.md) for future supported imports.
+
+The opening audit conversation, “Audit source measurement”, is registered as
+[formal replay identity 28](../../../investigations-2/formal_replay_crosswalk/chat-histories/0028_2026-10-17T03-47-38Z_audit-source-measurement.json)
+under this local chat's explicit standing instruction. Its number and provenance
+remain at that canonical home; no second registration is created here.
+Opening record: 16 October 2026, **gpt-6.1-sol (Codex)**, effort **ultra**.
