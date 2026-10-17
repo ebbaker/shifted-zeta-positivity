@@ -9,15 +9,23 @@ out item 6 of Section 9 of
 comparison with Hakimoglu-Brown's preprint, which became possible when
 Edward added the preprint to the project on 17 October 2026.
 
+**Revision (later on 17 October 2026, same model).** A literature check
+made after filing found that three unrefereed 2026 preprints already start
+a stepped comparison for the highest zero from the classical strip
+\(M(0)\le1\), with stronger unconditional claims. They are listed in
+Section 11. Summary items 3 and 6 and Sections 4.6, 9 and 10 were revised
+accordingly; the mathematics, the table and the records are unchanged. The
+note moved to `notes/round-1/` the same day.
+
 Claim status is marked as in note 01: **proved**, **proof sketch**,
 **conditional**, **numerical**, **planning** and **open**. A statement that
 is the preprint's own is called "the paper's" and keeps the paper's status.
 The two check programmes are
-[`hakimoglu_brown_comparison_claude_20261017.py`](../numerics/hakimoglu_brown_comparison_claude_20261017.py),
-whose [record](../numerics/HAKIMOGLU_BROWN_COMPARISON_CLAUDE_20261017.json)
+[`hakimoglu_brown_comparison_claude_20261017.py`](../../numerics/round-1/hakimoglu_brown_comparison_claude_20261017.py),
+whose [record](../../numerics/round-1/HAKIMOGLU_BROWN_COMPARISON_CLAUDE_20261017.json)
 has sections "record A" to "record E", and
-[`unconditional_strip_table_claude_20261017.py`](../numerics/unconditional_strip_table_claude_20261017.py),
-whose [record](../numerics/UNCONDITIONAL_STRIP_TABLE_CLAUDE_20261017.json)
+[`unconditional_strip_table_claude_20261017.py`](../../numerics/round-1/unconditional_strip_table_claude_20261017.py),
+whose [record](../../numerics/round-1/UNCONDITIONAL_STRIP_TABLE_CLAUDE_20261017.json)
 is called "the certificate" below.
 
 **Summary.**
@@ -60,8 +68,13 @@ is called "the certificate" below.
    - It is conditional on his unrefereed Lemma 2, Lemma 3, Proposition 11,
      Lemma 10 and Theorem 12, and on Polymath's published boundary
      computation.
-   - Gomila's unrefereed claim \(0.1787854\), which was not read, is
-     smaller. Gordon's preprint was not read either.
+   - It is neither a record nor a new idea. Gordon (\(0.1577\)), Raymond
+     (\(0.1494\)) and Planat (\(0.1486\), under stated premises) start
+     stepped comparisons from the same strip, and Gomila claims \(0.1788\)
+     by Polymath's criterion. All four are unrefereed (Section 11). What
+     this table adds is a short, fully checked instance whose numerical
+     inputs are all published; its analytic inputs are the preprint's
+     lemmas.
    - His warnings against extrapolating to \(\sigma=1\) (Remark 5, Section
      9) concern only his closed one-step formulas. Those formulas indeed do
      not reach \(q=1/25\) by \(t=1/5\) from \(q_0=1\), and neither does his
@@ -79,11 +92,13 @@ is called "the certificate" below.
    (even/odd), and at \(q=10^{12}\) from \(0.187/0.184\) to
    \(0.165/0.161\) (record E). These remain conditional on H12, the
    comparison theorem and certification.
-6. *Decisions (Section 9).* The table goes to the Codex audit ahead of
-   note 01's certification, and the paper's Lemma 3 and Proposition 11
-   become the statements to check. Note 01's certification becomes the
-   route to an independent proof of their output. Whether to tell
-   Hakimoglu-Brown is Edward's decision.
+6. *Decisions (Section 9).* The table is a cross-check, not a priority
+   result. A review of this round should start with note 01's Theorem 4.6
+   and this note's Corollary 2.1, which also serve Project 01's family,
+   where no comparable literature was found. The paper's Lemma 3 and
+   Proposition 11 are the statements the table rests on. Note 01's
+   certification, after that review, is the route to an independent proof
+   of their output.
 
 ## 0. Source and coverage
 
@@ -315,9 +330,9 @@ gives \(0.18982\). From \(q_0=1\) the Theorem 9 kernel does not reach
 **4.6 What this is not.**
 
 - It is not a refereed result and not independent review.
-- It is not a priority claim. Gomila (unrefereed, \(0.1787854\)) and
-  Gordon were not read. A later version of the paper was not checked for:
-  the proxy refused its arXiv page earlier today.
+- It is not a priority claim and not a record. Starting from the
+  classical strip is already the approach of Gordon, Raymond and Planat,
+  whose unrefereed claims are stronger (Section 11).
 - The analytic content, above all the Riemann–Siegel estimates of
   Lemma 3 and the proof of Proposition 11, was read but not re-derived.
 
@@ -386,9 +401,9 @@ input \(\partial_pS\le G\)) and on certification.
 The table is a statement about \(\zeta\) itself. It uses the Euler product
 of \(\zeta\) inside Proposition 11, and zeta-specific published
 computations, so the collision controls of
-[summary 12](../../../../result-summaries/12_collision_controls_and_screening.md)
+[summary 12](../../../../../result-summaries/12_collision_controls_and_screening.md)
 are not in question. Four of the patterns in
-[`avoid/`](../../../../avoid/README.md), re-read for this note, apply:
+[`avoid/`](../../../../../avoid/README.md), re-read for this note, apply:
 
 - 06 and 16 (status and imports): the result is labelled conditional on
   the paper, and each imported statement is named with its location.
@@ -401,24 +416,29 @@ are not in question. Four of the patterns in
 
 Recommendations to Edward, and to Codex as the auditor of this phase.
 
-1. **Audit the table first.** Codex should check Section 4.1 (that \(q_0\)
-   enters only at time zero), replay the certificate, and re-derive the
-   paper's Proposition 11 and Lemma 3 independently. The conditional
-   result is only as good as those two statements.
-2. **Retarget note 01's certification.** Certify \(E\) and Corollary 2.1
-   with outward rounding for zeta at \(x\ge X\), \(p\in[2.5,3.05]\), on
-   intervals \([t_i,t_i+\tfrac1{200}]\) with \(t_i\le0.17\). That would give
-   a proof of the table's inputs that does not use Riemann–Siegel, and the
-   planning value \(0.1867\). Stopping rule: wherever the certified floor
-   falls below the paper's \(C_i\), keep the paper's row.
+1. **Review order.** A review of round 1 should check note 01's
+   Lemmas 3.1–3.3, Proposition 4.5 and Theorem 4.6, and this note's
+   Corollary 2.1, before the table. Then it should check Section 4.1 (that
+   \(q_0\) enters only at time zero) and replay the certificate. The table
+   is only as good as the paper's Proposition 11 and Lemma 3, and its value
+   is as a cross-check of the published-input route (Section 11).
+2. **Note 01's certification, after that review.** Certify \(E\) and
+   Corollary 2.1 with outward rounding. For zeta this means \(x\ge X\),
+   \(p\in[2.5,3.05]\) and intervals \([t_i,t_i+\tfrac1{200}]\) with
+   \(t_i\le0.17\). That would give a proof of the table's inputs that does
+   not use Riemann–Siegel, and the planning value \(0.1867\). Stopping
+   rule: wherever the certified floor falls below the paper's \(C_i\), keep
+   the paper's row. The family certification for Project 01 matters more
+   and uses the same machinery.
 3. **Project 01.** Adopt Lemma 10 and Theorem 12 as the comparison for
    Target A, with exterior input the pair \((C_i,G_i)\) from note 01 and
    Corollary 2.1.
-4. **Literature before any statement outside the repository.** Read
-   Gordon's and Gomila's preprints, and check for a later version of the
-   paper (avoid/16).
+4. **Literature.** Done in Section 11. Planat's appendix on the paper's
+   derivative comparison and Gomila's full text remain unread.
 5. **Edward's decision:** whether to tell Hakimoglu-Brown about the table
-   from \(q_0=1\).
+   from \(q_0=1\). His paper cites Gordon, whose barrier already starts
+   from the classical strip, so the point is a cross-check rather than a
+   new idea.
 
 ## 10. Coverage, provenance and checks
 
@@ -430,7 +450,7 @@ read in this session for note 01.
 
 - The comparison programme's record and the certificate regenerate byte
   for byte with Python 3.13.16 on x86_64 Linux; the replay on Edward's
-  computer is reported in the [numerics README](../numerics/README.md).
+  computer is reported in the [round-1 numerics README](../../numerics/round-1/README.md).
 - Record A also reproduces:
   - the paper's one-step value (18), \(0.179727541426\);
   - its Table 2 gates (smallest \(1.2533\cdot10^{-7}\); the paper prints
@@ -473,6 +493,48 @@ review.
 
 - no re-derivation of the paper's Lemma 3 or Proposition 11;
 - no replay of Polymath's boundary computation;
-- no reading of Gordon's or Gomila's preprints;
+- no full reading of Gordon's, Raymond's, Planat's or Gomila's preprints
+  (Section 11 says what was read);
 - no certification of note 01's floors or of Corollary 2.1's evaluation;
-- nothing was committed to git.
+- nothing was committed to git by this session.
+
+## 11. Literature check (added later on 17 October 2026)
+
+A second Claude subagent of this session searched the web and read what
+it could fetch. Its quotations came through a summarizing fetch tool that
+caps each excerpt. They were not checked against the full texts, so the
+claims below are as the authors state them.
+
+| Source | Claim and status | Relation to Section 4 |
+| --- | --- | --- |
+| S. Gordon, "A computer-assisted upper bound for the de Bruijn–Newman constant" (September 2026), [repository](https://github.com/stefangordon/dbn-upper-bound), [PDF](https://stefangordon.github.io/dbn-upper-bound/dbn-upper-bound.pdf) | \(\Lambda\le0.157656619\), no half-plane or RH hypothesis; "has not undergone external peer review"; uses Platt–Trudgian's verification to \(3\cdot10^{12}\) | zero dynamics of the highest zero, \(h'=-1/h-2\sum K_h\); a reference barrier with \(q_{\rm ref}(0)=(1000001/1000000)^2\), "the global strip gives strict entry at zero"; cites Polymath's Theorem 1.5(i). The same start, with its own analytic inputs and a far larger \(X\) |
+| Raymond, "Correlated translated probes and the bound \(\Lambda<0.149396\)" (Zenodo, 21 September 2026), [record](https://zenodo.org/records/22867547) | \(\Lambda<0.149396\); "has not undergone external peer review" | "starts from the classical width-one zero strip at time zero"; 608 time cells |
+| Planat, arXiv:2610.18214v1 (13 October 2026), [HTML](https://arxiv.org/html/2610.18214) | \(\Lambda\le0.148611789321711\) "under explicitly stated complete model-to-function source, localisation and global contact premises" | "a directed comparison beginning with the classical zero strip", using Raymond's source data; its Appendix A.1, on the paper's derivative comparison under the 7/8 hypothesis, could not be read |
+| J. Gomila, [repository](https://github.com/judegomila/dbn-lambda-01787854-candidate-audit) and blog (August 2026) | \(\Lambda\le0.1787854\), "unconditional", "not yet been peer reviewed" | Polymath's Theorem 1.2 at \(X\approx6\cdot10^{12}\) with a barrier computation; no strip comparison; the PDF could not be parsed |
+| Raymond, conditional (Zenodo, 10 October 2026) | \(\Lambda<0.116398\) assuming no zeros with \(\operatorname{Re}s>7/8\) | beats the paper's \(0.13963\) under the same hypothesis |
+
+No later version of the paper was found, and nothing stating \(0.18891\)
+or restarting the paper's Theorem 12 from \(q_0=1\) turned up.
+
+**Imported inputs checked.**
+
+- Platt's verification: D. Platt, Math. Comp. 86 (2017), 2449–2467,
+  doi:10.1090/mcom/3198, isolates the zeros with imaginary part up to
+  \(30{,}610{,}046{,}000\). That exceeds \((X+1)/2=30{,}000{,}041{,}976.25\)
+  by about \(6\cdot10^8\).
+- Polymath's Section 1 says the barrier region was replaced "with the
+  larger and simpler region" \(X\le x\le X+1\), \(y_0\le y\le1\),
+  \(0\le t\le t_0\), with \(t_0=0.2\), \(X=6\times10^{10}+83952-0.5\) and
+  \(y_0=0.2\). This is the paper's (3). Polymath's Section 8.4 itself could
+  not be fetched in full.
+- Polymath's Theorem 1.5 holds for \(0<t\le\tfrac12\) with an absolute,
+  non-explicit constant \(C\), as the barrier argument of Theorem 12 needs.
+
+**Consequence.** Starting from the classical strip is not new. The
+distinctive feature of Section 4 is that its numerical inputs are
+published and independently verified computations (Polymath's barrier and
+Platt's verification), with the paper's analytic lemmas on top, checked by
+a 34-row certificate. The stronger claims rest on their authors' own
+unrefereed computations. For Project 03 the zeta number is a cross-check.
+The method of note 01 matters more for Project 01's Dirichlet family, for
+which Project 01's search found no upper bound below \(\tfrac12\).

@@ -3,11 +3,11 @@
 16 October 2026. Prepared for Edward Baker with substantial LLM assistance.
 Recorded model: **gpt-6-astra (Codex)**; reasoning effort: **ultra**.
 
-**Status: two notes filed; Codex audit pending.** On 17 October 2026
+**Status: round 1 ready for review; Codex audit pending.** On 17 October 2026
 Claude Opus 5.5 (`claude-opus-5-5`, Claude Cowork, reasoning effort max)
 added two notes and three [check programmes](numerics/README.md).
 
-[Note 01](notes/01_HEIGHT_P_TRANSPORT_AND_LEMMA_AP_CLAUDE_20261017.md) takes as consumer the exterior input of
+[Note 01](notes/round-1/01_HEIGHT_P_TRANSPORT_AND_LEMMA_AP_CLAUDE_20261017.md) takes as consumer the exterior input of
 Project 01's strip comparison, Lemma A_p: a floor for
 S(x,p,t) = −Im(H_t′/H_t)(x + ip) at a fixed height p ≥ √5. It stops the
 inherited four-jet budget, whose unavoidable costs exceed its margin 1/8
@@ -21,7 +21,7 @@ height for every primitive χ of conductor q ≥ 1.1·10⁵ (even) or 4.9·10⁴
 (odd) at p = √5, and for zeta beyond the X of Polymath's and
 Platt–Trudgian's certificates.
 
-[Note 02](notes/02_HAKIMOGLU_BROWN_COMPARISON_AND_UNCONDITIONAL_TABLE_CLAUDE_20261017.md) reads Hakimoglu-Brown's preprint
+[Note 02](notes/round-1/02_HAKIMOGLU_BROWN_COMPARISON_AND_UNCONDITIONAL_TABLE_CLAUDE_20261017.md) reads Hakimoglu-Brown's preprint
 (arXiv:2610.12803v1) against note 01. The preprint's floors have the same
 main term as note 01's, and at its height 61/20 note 01's remainder is 1.7
 to 4.4 times smaller (floating). Main finding, conditional on the
@@ -29,8 +29,21 @@ preprint's unrefereed analytic lemmas and on Polymath's published boundary
 computation: its derivative-kernel comparison (Theorem 12), started from
 the strip M(0) ≤ 1 that every zero of ξ satisfies, gives Λ ≤ 0.18891 with
 no zero-free half-plane as input. The 34-row table is checked in exact
-rational and directed-rounding arithmetic. Planning: the same kernel
-lowers Project 01's Target A values by 5–13%.
+rational and directed-rounding arithmetic. Stronger unrefereed claims
+start from the same strip: Gordon 0.1577, Raymond 0.1494, and Planat
+0.1486 under stated premises. The table is therefore a cross-check whose
+numerical inputs are all published, not a record (note 02, Section 11).
+Planning: the same kernel lowers Project 01's Target A values by 5–13%.
+
+The notes and code are in [notes/round-1](notes/round-1/README.md) and
+[numerics/round-1](numerics/round-1/README.md). The round README lists
+what a review should check, and the errata found while drafting the
+manuscript.
+
+At Edward's request, an unreviewed 22-page
+[working manuscript](manuscript/README.md) integrating round 1 was drafted
+the same day by Claude Opus 5.5 (Claude Cowork, effort max). It is not a
+reviewed milestone.
 
 Open: an independent check of the preprint's Lemma 3 and Proposition 11
 (the Codex audit), certification of note 01's evaluation, and H12 with the
@@ -50,7 +63,7 @@ model and effort when work is performed.
 | [reviews](reviews/README.md) | Separate assessments of claims, computations and scope |
 | [source-documents](source-documents/README.md) | Reference provenance and links to canonical sources |
 | [brainstorm](brainstorm/README.md) | Undeveloped candidate mechanisms with a decision question |
-| [manuscript](manuscript/README.md) | A future stable manuscript after a reviewed milestone |
+| [manuscript](manuscript/README.md) | Unreviewed working draft of 17 October 2026; a stable manuscript follows a reviewed milestone |
 | [chat-histories](chat-histories/README.md) | Canonical records of new project-specific conversations |
 
 The proposal states the opening deliverable, controls, dependencies and

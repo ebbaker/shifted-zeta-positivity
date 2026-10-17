@@ -17,7 +17,7 @@ than committing their PDFs, under [LARGE_FILES.md](../../../../LARGE_FILES.md).
 Recorded 17 October 2026 by Claude Opus 5.5 (`claude-opus-5-5`, Claude
 Cowork, reasoning effort max). How each source enters is stated in
 Sections 1, 2 and 10 of
-[note 01](../notes/01_HEIGHT_P_TRANSPORT_AND_LEMMA_AP_CLAUDE_20261017.md).
+[note 01](../notes/round-1/01_HEIGHT_P_TRANSPORT_AND_LEMMA_AP_CLAUDE_20261017.md).
 No PDF is committed.
 
 | Source | Version read | Used for |
@@ -28,14 +28,14 @@ No PDF is committed.
 | [21 Note 58](../../../investigations-2/active/21_quaternion_theta_geometry/notes/01_weighted_outer_remainders/58_EXPLICIT_CARRIER_PHASE_AND_CONDITIONAL_HEIGHT_20261015.md) and [22 outer Note 01](../../../investigations-2/active/22_theta_manifold_geometry/notes/06_effective_outer_bridge/01_LOW_INDEX_BUDGET_REFINEMENT_20261015.md) | read in full | Section 2.1, the inherited budget |
 
 Later on 17 October Edward added the preprint to the project, and
-[note 02](../notes/02_HAKIMOGLU_BROWN_COMPARISON_AND_UNCONDITIONAL_TABLE_CLAUDE_20261017.md) reads it in full.
+[note 02](../notes/round-1/02_HAKIMOGLU_BROWN_COMPARISON_AND_UNCONDITIONAL_TABLE_CLAUDE_20261017.md) reads it in full.
 
 ## Sources of note 02
 
 Recorded 17 October 2026 by Claude Opus 5.5 (`claude-opus-5-5`, Claude
 Cowork, reasoning effort max). How each source enters is stated in
 Sections 0, 4 and 10 of
-[note 02](../notes/02_HAKIMOGLU_BROWN_COMPARISON_AND_UNCONDITIONAL_TABLE_CLAUDE_20261017.md).
+[note 02](../notes/round-1/02_HAKIMOGLU_BROWN_COMPARISON_AND_UNCONDITIONAL_TABLE_CLAUDE_20261017.md).
 No PDF is committed.
 
 | Source | Version read | Used for |
@@ -44,3 +44,19 @@ No PDF is committed.
 | D.H.J. Polymath, [arXiv:1904.12438](https://arxiv.org/abs/1904.12438) | not re-read; through the preprint and Project 01's ledger (H4, H7) | Section 8.4(a) (the boundary input of the preprint's Lemma 2, not replayed), Propositions 3.1(ii) and 6.1–6.2, Theorem 1.5(i) |
 | D. Platt and T. Trudgian, Bull. London Math. Soc. 53 (2021) 792–797, [arXiv:2004.09765](https://arxiv.org/abs/2004.09765) | not read; Corollary 2 as quoted by the preprint | the published bound 0.2 |
 | J. Gomila (20 August 2026) and S. Gordon (2026), preprints cited by the preprint | not read | priority caution only |
+
+## Sources of note 02, Section 11 (literature check)
+
+Recorded later on 17 October 2026 by Claude Opus 5.5 (`claude-opus-5-5`,
+Claude Cowork, reasoning effort max). A Claude subagent read these through
+a summarizing web-fetch tool, whose quotations are capped excerpts. None
+was read in full, and no PDF is committed.
+
+| Source | What was read | Used for |
+| --- | --- | --- |
+| S. Gordon, [dbn-upper-bound](https://github.com/stefangordon/dbn-upper-bound) at commit 64c47f2 and its [PDF](https://stefangordon.github.io/dbn-upper-bound/dbn-upper-bound.pdf) (September 2026) | README, manuscript/main.md, PDF excerpts | Λ ≤ 0.157656619 claimed without half-plane; start from the classical strip |
+| Raymond, Zenodo [22867547](https://zenodo.org/records/22867547) (21 September 2026) and a conditional record of 10 October 2026 | record pages and repository excerpts | Λ < 0.149396 claimed; Λ < 0.116398 under the 7/8 hypothesis |
+| Planat, [arXiv:2610.18214v1](https://arxiv.org/html/2610.18214) (13 October 2026) | HTML up to Section 3; the abstract and PDF pages were refused (HTTP 429) | Λ ≤ 0.148611789321711 under stated premises; Appendix A.1 unread |
+| J. Gomila, [dbn-lambda-01787854-candidate-audit](https://github.com/judegomila/dbn-lambda-01787854-candidate-audit) at commit a74738d and blog post (August 2026) | README, PROOF_NOTE.md, blog; the PDF could not be parsed | Λ ≤ 0.1787854 claimed by Polymath's Theorem 1.2 |
+| D. Platt, Math. Comp. 86 (2017) 2449–2467, [doi:10.1090/mcom/3198](https://doi.org/10.1090/mcom/3198) | abstract and accepted version | RH verified to imaginary part 30,610,046,000 |
+| D.H.J. Polymath, [arXiv:1904.12438](https://arxiv.org/abs/1904.12438) | Section 1 and the statement of Theorem 1.5 (TeX source); Section 8.4 cut off by the fetcher | the barrier region of the preprint's (3); Theorem 1.5(i) for 0 < t ≤ 1/2 |

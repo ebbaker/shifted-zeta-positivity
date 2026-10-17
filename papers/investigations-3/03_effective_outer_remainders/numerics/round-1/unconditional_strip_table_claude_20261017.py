@@ -6,7 +6,7 @@ Prepared for Edward Baker with LLM assistance.  Model: Claude Opus 5.5 (configur
 identifier claude-opus-5-5), Claude Cowork, reasoning effort max, 17 October 2026.
 Standard library only (fractions, decimal); prints one deterministic JSON record.
 
-Companion of papers/investigations-3/03_effective_outer_remainders/notes/
+Companion of papers/investigations-3/03_effective_outer_remainders/notes/round-1/
 02_HAKIMOGLU_BROWN_COMPARISON_AND_UNCONDITIONAL_TABLE_CLAUDE_20261017.md.
 
 What is checked, for TABLE_Q0_1 (q0 = 1, p = 61/20) and, as a control, for the paper's

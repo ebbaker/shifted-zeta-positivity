@@ -4,15 +4,15 @@
 Claude Opus 5.5 (configured identifier `claude-opus-5-5`), Claude Cowork,
 reasoning effort max; the serving model may differ from the configured
 identifier. This is the coordination note for the first phase of the
-[initial proposal](../research-overview/01_INITIAL_RESEARCH_PROPOSAL_20261016.md)
+[initial proposal](../../research-overview/01_INITIAL_RESEARCH_PROPOSAL_20261016.md)
 (consumer and baseline) and the opening of its second (a new analytic
 estimate). The proposal assigns the remainder budget to Codex and the audit
 of imports and losses to Claude; Edward asked Claude to begin the project on
 17 October 2026, so this is a Claude draft and the Codex audit becomes this
 phase's cross-model check. The note answers change C5 of the
-[portfolio setup review](../../reviews/01_PORTFOLIO_SETUP_REVIEW_CLAUDE_20261016.md)
+[portfolio setup review](../../../reviews/01_PORTFOLIO_SETUP_REVIEW_CLAUDE_20261016.md)
 and the request of Project 01's
-[contract note](../../01_dirichlet_newman_families/notes/01_NORMALIZATION_AND_TRANSFER_CONTRACT_CLAUDE_20261017.md)
+[contract note](../../../01_dirichlet_newman_families/notes/01_NORMALIZATION_AND_TRANSFER_CONTRACT_CLAUDE_20261017.md)
 (its Section 6, items 3 and 7) for Lemma \(A_p\), with \(q=1\) as the zeta
 case.
 
@@ -20,8 +20,8 @@ Claim status is marked as in that note: **proved** (a complete proof here,
 or a classical fact with its source), **proof sketch**, **conditional**,
 **numerical** (floating point, with a record), **planning** (arithmetic under
 a stated hypothesis) and **open**. The one check programme is
-[`height_p_transport_claude_20261017.py`](../numerics/height_p_transport_claude_20261017.py),
-with its [record](../numerics/HEIGHT_P_TRANSPORT_CLAUDE_20261017.json);
+[`height_p_transport_claude_20261017.py`](../../numerics/round-1/height_p_transport_claude_20261017.py),
+with its [record](../../numerics/round-1/HEIGHT_P_TRANSPORT_CLAUDE_20261017.json);
 "record A" to "record H" below are its sections.
 
 **Summary.**
@@ -701,7 +701,7 @@ factor; the Euler product, only through Lemma 4.1 (coefficients of
 \(\log\mathcal L\) dominated by those of \(\log\zeta\)); bounded
 coefficients, through Lemma 4.4; and nothing about zeros except that
 \(H_t\) has none with \(\lvert\operatorname{Im}z\rvert\ge1\). The controls of
-[summary 12](../../../../result-summaries/12_collision_controls_and_screening.md)
+[summary 12](../../../../../result-summaries/12_collision_controls_and_screening.md)
 fail the second premise: the Euler-factor controls have \(-F'/F\)
 coefficient \((1+2\sqrt p/c)\log p>\Lambda(p)\) at their prime, and for
 \(c=\tfrac12\), \(p\le13\) vanish to the right of \(\operatorname{Re}s=1\)
@@ -760,10 +760,10 @@ Read in full for this note: the portfolio README, plan, draft history and
 setup review; Project 03's proposal and READMEs; Project 01's README,
 proposal, note 01 (SHA-256 `8e6ea157…7b4e`), source-document and numerics
 READMEs and Section H of its benchmark programme; the twenty files of
-[`avoid/`](../../../../avoid/README.md) and the result summaries
-[README](../../../../result-summaries/README.md), 08–16 in full and 01–07
+[`avoid/`](../../../../../avoid/README.md) and the result summaries
+[README](../../../../../result-summaries/README.md), 08–16 in full and 01–07
 in part; 21 Note 58, 22 outer Note 01 and
-[Review 20](../../../investigations-2/active/22_theta_manifold_geometry/reviews/20_ADDITIONAL_PATHS_FORWARD_ASSESSMENT_CODEX_20261016.md).
+[Review 20](../../../../investigations-2/active/22_theta_manifold_geometry/reviews/20_ADDITIONAL_PATHS_FORWARD_ASSESSMENT_CODEX_20261016.md).
 Hakimoglu-Brown's preprint was not available: the arXiv page was refused
 by the web proxy (rate limit), and the PDF read in Project 01's session is
 not in the repository, so every statement about it here is Project 01's

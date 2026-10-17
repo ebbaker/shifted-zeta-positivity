@@ -1,0 +1,1668 @@
+\documentclass[11pt]{article}
+\usepackage[letterpaper,margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage{booktabs,tabularx,array,microtype,xurl,longtable}
+\usepackage[colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue]{hyperref}
+\renewcommand{\labelitemi}{\ensuremath{\bullet}}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\newcommand{\R}{\mathbb R}
+\newcommand{\C}{\mathbb C}
+\newcommand{\E}{\mathbb E}
+\newcommand{\dd}{\,\mathrm d}
+\newcommand{\cG}{\mathcal G}
+\newcommand{\cL}{\mathcal L}
+\newcommand{\fa}{\mathfrak a}
+\newcommand{\Rem}[1]{[\![#1]\!]}
+\newcommand{\re}{\operatorname{Re}}
+\newcommand{\im}{\operatorname{Im}}
+\numberwithin{equation}{section}
+\title{Height-$p$ transport for heat-flowed $L$-functions\\[2pt]
+\large An explicit remainder for the exterior input of strip comparisons}
+\author{Drafted for Edward Baker}
+\date{17 October 2026\\\small Unreviewed working draft}
+\begin{document}
+\maketitle
+\begin{abstract}
+For the de Bruijn--Newman heat flow $H_t$ of the Riemann $\xi$-function and
+of the completed Dirichlet $L$-functions $\xi_\chi$, strip comparisons
+bound the squared height of the highest zero by a differential inequality
+whose coefficient is $S(x,p,t)=-\im(H_t'/H_t)(x+ip)$, read at a fixed
+height $p$ above the zeros. We show that $S$ is half the real part of the
+logarithmic derivative of a Gaussian average of the completed function,
+and that recentring this average at the saddle point of the Gamma factor
+gives an exact transport identity. We bound its remainder explicitly
+using only Euler-product majorants at real arguments, the digamma function
+and a partial-summation bound in the critical strip, with no
+Riemann--Siegel formula, truncated Dirichlet series or zero-free region.
+Cauchy's estimate then bounds $\partial_pS$. Evaluated in floating point
+on a grid of times, the bound keeps the exact time-zero floor of $S$ with
+no loss for every primitive character of conductor at least
+$1.1\cdot10^5$ (even) or $4.9\cdot10^4$ (odd) at $p=\sqrt5$, and for $\zeta$
+beyond the heights of the published computations of Polymath and of Platt
+and Trudgian. At Hakimoglu-Brown's height $p=61/20$ its remainder,
+evaluated in floating point, is $1.7$ to $4.4$ times smaller than that of
+his Riemann--Siegel-based estimate. As
+a cross-check we restart his derivative-kernel comparison from the
+classical strip. A 34-row table, verified in exact and directed-rounding
+arithmetic, gives $\Lambda\le0.18891$ conditionally on the analytic lemmas
+of his unrefereed preprint. This is not a record: unrefereed preprints
+already claim stronger bounds from the same starting point.
+\end{abstract}
+
+\noindent\textbf{Draft status.}
+This working manuscript was requested before the formal review of the
+project's first round. It integrates round-one Notes~01 and~02
+\cite{n01,n02} and their check programmes \cite{records}. The analytic
+statements of Sections~\ref{sec:setting}--\ref{sec:derivative} are proved
+here. Section~\ref{sec:numerics} reports floating-point evaluations of
+those bounds, not outward-rounded certificates. Proposition~\ref{prop:table}
+is conditional on a cited unrefereed preprint, and
+Section~\ref{sec:planning} is planning arithmetic. Derivations, programmes
+and authoring checks used Claude Opus 5.5 (Anthropic). Those checks were
+internal and same-model; cross-model and specialist human review are
+pending.
+
+\section{Introduction}\label{sec:intro}
+
+\subsection{The heat flow and the strip comparison}
+
+Let $\Phi$ be the Riemann kernel and
+$H_t(z)=\int_0^\infty e^{tu^2}\Phi(u)\cos(zu)\dd u$, so that
+$H_0(z)=\frac18\xi\bigl(\frac{1+iz}2\bigr)$ and $\partial_tH_t=-\partial_z^2H_t$
+\cite{polymath}. De Bruijn showed that $H_t$ has only real zeros for
+$t\ge\frac12$ \cite{debruijn}. Newman showed that there is a constant
+$\Lambda\le\frac12$ such that $H_t$ has only real zeros exactly when
+$t\ge\Lambda$ \cite{newman}, and the Riemann hypothesis is the statement
+$\Lambda\le0$. Rodgers and Tao proved $\Lambda\ge0$ \cite{rodgerstao}. The
+published upper bounds are $0.22$ \cite{polymath} and $0.2$
+\cite{platttrudgian}. Dobner extended the construction to the extended
+Selberg class, in particular to $\xi_\chi$ for primitive Dirichlet
+characters, and proved $\Lambda_\chi\ge0$ \cite{dobner}.
+
+A recent line of work follows the highest zero directly. If $x+ih$ is a
+highest simple zero of $H_t$ and $Q=h^2$, the zero dynamics give
+\begin{equation}\label{eq:qprime}
+Q'\le-2-\frac{4Q}{p}\,S(x,p,t)+\frac{8Q}{p^2-Q}\qquad(p^2\ge5Q),\qquad
+S(x,p,t)=-\im\frac{H_t'}{H_t}(x+ip)
+\end{equation}
+(\cite[Section~4]{hb}; Proposition~\ref{prop:paired} below). Hence a lower
+bound for $S$ at one height $p$ and every relevant $x$ drives $Q$ down.
+Hakimoglu-Brown \cite{hb} combines \eqref{eq:qprime} with three further
+inputs: Polymath's finite-region computation, an approximation of
+Riemann--Siegel type on the band $3\le\im z\le6$, and an upper bound for
+$\partial_pS$ (his Proposition~11), which enters through a strengthened
+kernel inequality (his Lemma~10 and Theorem~12). He obtains
+$\Lambda\le0.13963$ under the hypothesis that $\zeta$ has no zero with
+$\re s>\frac78$.
+
+Every comparison of this kind needs a floor for $S(x,p,t)$ along the flow,
+uniform over the real parts $x$ where the highest zero can lie. At $t=0$
+the floor is exact. There $S(x,p,0)$ is half the
+real part of $F'/F$ at $\re s=\frac{1+p}2>1$, which the Euler product
+bounds below (Lemma~\ref{lem:floor0}). This paper is about keeping that
+floor for $t>0$. In the language of the project it belongs to, it supplies
+the exterior input of a strip comparison: the statement called
+Lemma~$A_p$ in \cite{p01}. It does so without passing through a
+zero-free region near the critical line.
+
+\subsection{Results}
+
+Throughout, $F$ is $\xi$ or $\xi_\chi$ for a primitive character $\chi$ of
+conductor $q$ and parity $\fa$. Let $\Gamma_F$ be its Gamma factor and
+$\alpha=\Gamma_F'/\Gamma_F$. Fix $p>1$ and $0<t\le\frac12$, and put
+$\tau=\sqrt{t/2}$ and $w=\frac{1+p}2+\frac i2x$.
+
+\begin{itemize}
+\item \emph{Gaussian form and saddle (Section~\ref{sec:saddle}).} We have
+$S(x,p,t)=\frac12\re(\cG'/\cG)(w)$, where $\cG(s)=\E\,F(s+\tau N)$ for a
+standard normal variable $N$. The fixed point $s_*=w+\frac t2\alpha(s_*)$
+exists and is unique (for $\zeta$, in a box $D_x$ at heights $x\ge40$,
+for $p\le x$). Moving the line of integration to $s_*$ gives an
+exact formula for $(\cG'/\cG)(w)-(F'/F)(s_*)$
+(Lemmas~\ref{lem:gauss}--\ref{lem:shift}).
+\item \emph{Explicit remainder (Section~\ref{sec:remainder}).} We have
+$\bigl|(\cG'/\cG)(w)-(F'/F)(s_*)\bigr|\le E$, with $E$ given explicitly
+by majorants at real arguments (Proposition~\ref{prop:E}). Consequently
+\begin{equation}\label{eq:floorintro}
+S(x,p,t)\ \ge\ \tfrac14\ell_*-\tfrac12\kappa(\sigma_*)-\tfrac12E,\qquad
+\sigma_*=\tfrac{1+p}2+\tfrac t4\ell_*,\quad\ell_*=2\re\alpha(s_*),
+\end{equation}
+with $\kappa=-\zeta'/\zeta$ (Theorem~\ref{thm:transport}). The time-$t$
+floor is therefore the time-zero floor at a point moved to the right by
+$t\ell_*/4$; this is the \emph{height-$p$ transport}.
+\item \emph{Derivative bound (Section~\ref{sec:derivative}).} Cauchy's
+estimate applied to the remainder bounds $\partial_pS$
+(Corollary~\ref{cor:derivative}).
+\item \emph{Numerical evaluation (Section~\ref{sec:numerics}).} Floating
+evaluation of $E$ on a grid of 20 times $0.001\le t\le\frac12$ shows the
+floor of Lemma~\ref{lem:floor0} persisting with no loss. This holds for
+every primitive character of conductor $q\ge1.084\cdot10^5$ (even) or
+$q\ge4.892\cdot10^4$ (odd) at $p=\sqrt5$, at every height. For $\zeta$ the
+constant floor $\frac14\ell_X-\frac12\kappa(\sigma_0)$ persists at every
+$x\ge X$, for the heights $X$ used by Polymath \cite{polymath} and by Platt
+and Trudgian \cite{platttrudgian}. At $p=61/20$ the floating remainder is
+smaller than that of \cite[Proposition~11]{hb} by factors of $1.7$ to $4.4$.
+\item \emph{A check from the classical strip
+(Section~\ref{sec:strip}).} Conditionally on the analytic lemmas of
+\cite{hb}, Hakimoglu-Brown's Theorem~12 started from the classical strip
+$M(0)\le1$ gives $\Lambda\le18891/100000$ (Proposition~\ref{prop:table}).
+The 34-row table is verified in exact and directed-rounding arithmetic.
+\end{itemize}
+
+Table~\ref{tab:status} records the status of each statement.
+
+\begin{table}[ht]
+\centering\small
+\begin{tabularx}{\textwidth}{>{\raggedright\arraybackslash}p{0.42\textwidth}X}
+\toprule
+Statement & Status\\
+\midrule
+Lemmas~\ref{lem:floor0}--\ref{lem:partial}, Propositions~\ref{prop:paired} and~\ref{prop:E}, Theorem~\ref{thm:transport}, Corollary~\ref{cor:derivative} & proved here (Lemma~\ref{lem:floor0} and Proposition~\ref{prop:paired} after \cite{p01,hb})\\
+Section~\ref{sec:numerics}: thresholds, floors, comparison with \cite{hb} & numerical: floating point, monotonicity in $\ell_*$ sampled, grid times only\\
+Proposition~\ref{prop:table}: $\Lambda\le0.18891$ & conditional on \cite[Lemmas~2, 3, 6, 10, Proposition~11, Theorem~12]{hb} and the further inputs listed in Proposition~\ref{prop:table}\\
+Section~\ref{sec:planning} & planning: depends on unproved inputs named there\\
+\bottomrule
+\end{tabularx}
+\caption{Status of the statements.}\label{tab:status}
+\end{table}
+
+\subsection{Relation to other work}
+
+The exterior inputs of Polymath \cite{polymath} and Hakimoglu-Brown
+\cite{hb} come from approximate functional equations: a heat-weighted
+Dirichlet polynomial, its reflection and Riemann--Siegel remainders. The
+transport identity replaces these at heights $p>1$ by an exact Gaussian
+average with a saddle-point recentring. Its main term coincides with
+Hakimoglu-Brown's. His heat weight $e^{t\log^2n/4}$ equals
+$\E\,n^{-\tau N}$, and his point $w+\frac t2\alpha(w)$ is, up to complex
+conjugation, the first iterate of the saddle equation
+(Section~\ref{sec:compare}).
+
+Starting a stepped comparison from the classical strip is not new. Gordon
+\cite{gordon}, Raymond \cite{raymond} and Planat \cite{planat} start from
+it and claim $\Lambda\le0.157656619$, $\Lambda<0.149396$ and, under stated
+premises, $\Lambda\le0.148611789321711$. Gomila \cite{gomila} claims
+$\Lambda\le0.1787854$ by Polymath's criterion at a larger height. All four
+are unrefereed, and we did not read them in full
+(Section~\ref{sec:literature}). Proposition~\ref{prop:table} is a cross-check:
+it rests on published numerical inputs and on the analytic lemmas of
+\cite{hb}. For Dirichlet $L$-functions we know of no unconditional upper
+bound below $\frac12$ for $\Lambda_\chi$ \cite{p01}. There the transport identity
+is the main new input, and Section~\ref{sec:planning} records what it
+would give.
+
+\section{Setting, the time-zero floor and the comparison}\label{sec:setting}
+
+\subsection{Conventions}\label{sec:conventions}
+
+We write $s=\frac12(1+iz)$ with $z=x+iy$. A point $s=\beta+iT$ corresponds
+to $z=2T+i(1-2\beta)$, so the real part $x$ is twice the ordinate and the
+line $\re s=\sigma$ is the line $\im z=1-2\sigma$.
+
+\emph{The family.} Let $\chi$ be a primitive Dirichlet character modulo
+$q\ge3$ with $\chi(-1)=(-1)^{\fa}$, $\fa\in\{0,1\}$. Put $\cL=L(\cdot,\chi)$,
+$\Gamma_F(s)=\epsilon_\chi(q/\pi)^{s/2}\Gamma(\frac{s+\fa}2)$ and
+$F=\xi_\chi=\Gamma_F\cL$, where the constant $\epsilon_\chi$ of modulus one
+is chosen so that $F(s)=\overline{F(1-\bar s)}$ \cite{dobner}.
+
+\emph{The zeta case.} Here $\cL=\zeta$,
+$\Gamma_F(s)=\frac12s(s-1)\pi^{-s/2}\Gamma(\frac s2)$, $F=\xi=\Gamma_F\zeta$,
+and we put $q=1$ and $\fa=0$.
+
+In both cases $\alpha=\Gamma_F'/\Gamma_F$ is given by
+\begin{equation}\label{eq:alpha}
+\alpha(s)=\tfrac12\log\tfrac q\pi+\tfrac12\psi\bigl(\tfrac{s+\fa}2\bigr)\quad\text{(family)},\qquad
+\alpha(s)=\tfrac1s+\tfrac1{s-1}-\tfrac12\log\pi+\tfrac12\psi\bigl(\tfrac s2\bigr)\quad\text{(zeta)},
+\end{equation}
+with $\psi=\Gamma'/\Gamma$. Let
+$H_t(z)=\int_\R e^{tu^2}\Phi(u)e^{izu}\dd u$, where $\Phi=\Phi_\chi$ is
+Dobner's kernel \cite{dobner} for the family and Polymath's kernel
+\cite{polymath} for $\zeta$. Then $\partial_tH_t=-\partial_z^2H_t$, $H_t$
+is real on $\R$, and $H_0(z)=c_HF(\frac12(1+iz))$ with a real constant
+$c_H\ne0$. (Polymath's $H_t$, defined by $\int_0^\infty\cos(zu)\dd u$, is
+half of ours; constant factors do not change $S$.) The kernel decays like
+$\exp(-\frac\pi qe^{4\lvert u\rvert})$, so each $H_t$ is entire of order
+at most one.
+
+Let $M(t)=\sup\{(\im z)^2:H_t(z)=0\}$. Every zero of $F$ has
+$0<\re s<1$, so $M(0)\le1$. De Bruijn's strip theorem \cite{debruijn}
+(for the family see \cite{dobner}) gives $M(t)\le\max(M(t_0)-2(t-t_0),0)$
+for $t\ge t_0$, and in particular $\Lambda\le t_0+\frac12M(t_0)$. We call
+this the \emph{classical strip theorem}. It implies that every zero of $H_t$,
+$t\ge0$, satisfies $\lvert\im z\rvert\le1$.
+
+Fix $p>1$ and put
+\[
+\sigma_0=\tfrac12(1+p),\qquad w=\sigma_0+\tfrac i2x,\qquad\tau=\sqrt{t/2},
+\]
+so that $z=x+ip$ corresponds to $s=1-\bar w$. Let $\varphi_\tau$ be the
+density of the centred normal law of variance $\tau^2$, and let $N$ be a
+standard normal variable. For $\sigma>1$ let
+\[
+\kappa(\sigma)=-\frac{\zeta'}{\zeta}(\sigma)=\sum_{n\ge2}\Lambda_{\mathrm{vM}}(n)n^{-\sigma},\qquad
+K_2=-\kappa',\qquad K_3=\kappa'',
+\]
+with $\Lambda_{\mathrm{vM}}$ the von Mangoldt function. These are positive,
+$\kappa$ and $K_2$ decrease, and $\log\zeta$ and $\kappa$ are convex.
+
+\subsection{The time-zero floor}
+
+\begin{lemma}[time-zero floor; after {\cite[Lemma~3.4]{p01}}]\label{lem:floor0}
+Let $p>1$. For the family, at every real $x$,
+\begin{equation}\label{eq:Cq}
+S(x,p,0)\ \ge\ C_{q,\fa}(p):=\tfrac14\Bigl(\log\tfrac q\pi+\psi\bigl(\tfrac{\sigma_0+\fa}2\bigr)\Bigr)-\tfrac12\kappa(\sigma_0).
+\end{equation}
+For $\zeta$, at every $x>0$,
+$S(x,p,0)\ge\frac12\re\alpha(w)-\frac12\kappa(\sigma_0)$, and
+$\frac12\re\alpha(w)\ge\frac14\log\frac x{4\pi}-\frac14c(\frac w2)$ with
+$c$ as in Lemma~\ref{lem:stirling}.
+\end{lemma}
+
+\begin{proof}
+By Lemma~\ref{lem:gauss} at $t=0$, $S(x,p,0)=\frac12\re(F'/F)(w)$, and
+$F'/F=\alpha+\cL'/\cL$. Since
+$\cL'/\cL(s)=-\sum\chi(n)\Lambda_{\mathrm{vM}}(n)n^{-s}$,
+$\lvert(\cL'/\cL)(w)\rvert\le\kappa(\sigma_0)$. For $\re z>0$,
+$\psi(z)=-\gamma_E+\sum_{n\ge0}\bigl(\frac1{n+1}-\frac1{n+z}\bigr)$ and
+$\re\frac1{n+z}\le\frac1{n+\re z}$, so $\re\psi(z)\ge\psi(\re z)$. This
+gives the family bound. For $\zeta$, $\re(\frac1w+\frac1{w-1})>0$ and, by
+Lemma~\ref{lem:stirling} with $z=w/2$,
+$\re\psi(\frac w2)\ge\log\frac{\lvert w\rvert}2-c(\frac w2)$. Hence
+$\re\alpha(w)\ge\frac12\log\frac{\lvert w\rvert}{2\pi}-\frac12c(\frac w2)$,
+and $\lvert w\rvert\ge\frac x2$.
+\end{proof}
+
+\subsection{The paired-zero inequality}
+
+For $p,h>0$, $d\in\R$ and $0\le v$, let
+\[
+K_p(d,v)=\frac{p-v}{d^2+(p-v)^2}+\frac{p+v}{d^2+(p+v)^2}
+=\frac{2p\,(d^2+p^2-v^2)}{[d^2+(p-v)^2]\,[d^2+(p+v)^2]}.
+\]
+For a zero $z_k=x_k+iy_k$ with $y_k\ge0$ write $d_k=x-x_k$, $v_k=y_k$,
+and give it the weight $\varpi_k=1$ if $y_k>0$ and $\varpi_k=\frac12$ if
+$y_k=0$. Zeros are counted with multiplicity.
+
+\begin{proposition}[paired-zero inequality; after {\cite[Section~4]{hb}} and {\cite[Proposition~3.3]{p01}}]\label{prop:paired}
+Let $p>1$ and $t>0$.
+\begin{enumerate}
+\item[(i)] $S(x,p,t)=\sum_{y_k\ge0}\varpi_kK_p(d_k,v_k)$, summed over the
+zeros of $H_t$; the series converges absolutely.
+\item[(ii)] Let $z_j=x+ih$, $h>0$, be a simple zero of $H_t$. Its
+trajectory is differentiable in $t$, and
+$h'=-\frac1h-2\sum'\varpi_kK_h(d_k,v_k)$, where $\sum'$ omits $z_j$ and
+$\bar z_j$.
+\item[(iii)] If moreover no zero of $H_t$ has imaginary part larger than
+$h$, and $p^2\ge5h^2$, then $Q=h^2$ satisfies \eqref{eq:qprime}.
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+Since $H_t$ has order at most one and is real on $\R$, its zeros are
+closed under conjugation and
+$H_t(z)=z^me^{a+bz}\prod_k(1-z/z_k)e^{z/z_k}$ with $b$ real. Then
+$(H_t'/H_t)(z)=\frac mz+b+\sum_k\bigl(\frac1{z-z_k}+\frac1{z_k}\bigr)$,
+absolutely convergent. Group each nonreal $z_k$ with $\bar z_k$. The
+terms $\frac1{z_k}+\frac1{\bar z_k}$ are real, and
+$\im\bigl(\frac1{z-z_k}+\frac1{z-\bar z_k}\bigr)=-K_p(d_k,v_k)$ at
+$z=x+ip$. A real zero contributes $\im\frac1{z-x_k}=-\frac12K_p(d_k,0)$.
+This proves (i). For (ii), the implicit function theorem gives a
+differentiable trajectory with
+$z_j'=-\partial_tH_t/\partial_zH_t=\partial_z^2H_t/\partial_zH_t$ at $z_j$.
+Writing $H_t=(z-z_j)g$, this equals
+$2(g'/g)(z_j)=2\bigl[\frac m{z_j}+b+\frac1{z_j}+\sum_{k\ne j}\bigl(\frac1{z_j-z_k}+\frac1{z_k}\bigr)\bigr]$.
+In the imaginary part the terms $\frac1{z_j}$ and $\frac1{\bar z_j}$
+combine to a real number, the conjugate zero contributes
+$\im\frac2{z_j-\bar z_j}=-\frac1h$, each other pair contributes
+$-2K_h(d_k,v_k)$, and each real zero $-K_h(d_k,0)$, as in (i).
+
+For (iii) we use the kernel inequality $K_h(d,v)\ge\frac hpK_p(d,v)$
+for $0\le v\le h$, $(d,v)\ne(0,h)$ and $p^2\ge5h^2$. With $D=d^2$,
+$A=h^2$, $B=p^2$, $r=v^2\le A$, $w_A=D+A-r$ and $w_B=D+B-r$, the
+denominators of $K_h$ and $K_p$ are $w_A^2+4Dr$ and $w_B^2+4Dr$, and
+\[
+\frac{K_h}h-\frac{K_p}p=\frac{2(B-A)\bigl(w_Aw_B-4Dr\bigr)}{(w_A^2+4Dr)(w_B^2+4Dr)},\qquad
+w_Aw_B-4Dr=D^2+(A+B-6r)D+(A-r)(B-r),
+\]
+which is nonnegative because $A+B-6r\ge B-5A\ge0$. Every other zero has
+$v_k\le h$, so by (i) and (ii)
+\[
+Q'=2hh'=-2-4h{\sum}'\varpi_kK_h\le-2-\frac{4Q}p\Bigl(S(x,p,t)-K_p(0,h)\Bigr),
+\qquad K_p(0,h)=\frac{2p}{p^2-Q},
+\]
+which is \eqref{eq:qprime}.
+\end{proof}
+
+Hakimoglu-Brown notes that the kernel inequality also appears in Gordon's
+preprint \cite[Section~5]{gordon}. Lemma~\ref{lem:hb10} below strengthens
+it by a term in $\partial_pK_p$, which Theorem~\ref{thm:hb12} pays for with
+an upper bound for $\partial_pS$.
+
+\subsection{The exterior input}\label{sec:exterior}
+
+A comparison built on \eqref{eq:qprime} needs, at one fixed height $p$,
+\begin{equation}\label{eq:Ep}
+\textbf{(E$_p$)}\qquad S(x,p,t)\ \ge\ C(t)\qquad(0\le t\le t_*,\ x\text{ in the region where the highest zero can lie}).
+\end{equation}
+For the family at large conductor the region is the whole line. For $\zeta$
+and for small conductors it is $\lvert x\rvert\ge X$, and the rest is
+covered by a finite verification and a barrier, as in
+\cite[Lemma~2]{hb}. In \cite{p01}, \eqref{eq:Ep} is called Lemma~$A_p$. The
+comparison also needs uniform confinement of the nonreal zeros at positive
+times (\cite{p01}, item H12) and a first-contact argument; for $\zeta$,
+\cite{hb} supplies these through \cite[Theorem~1.5]{polymath} and its
+Lemma~2. The theorems of this paper concern \eqref{eq:Ep} only.
+Statement~\eqref{eq:Ep} lives at height $p>1$, where the Dirichlet series
+converges absolutely: it bounds a Poisson-smoothed density of zeros from
+below, and uses no zero-free region and no derivative of $H_t$ beyond the
+first.
+
+\section{The transport identity}\label{sec:saddle}
+
+\begin{lemma}[Gaussian form]\label{lem:gauss}
+For $t\ge0$ and $z\in\C$, $H_t(z)=\E\,H_0(z+i\sqrt{2t}\,N)$. With
+$\cG(s)=\E\,F(s+\tau N)$ one has $H_t(z)=c_H\,\cG(\frac12(1+iz))$,
+$\cG(s)=\overline{\cG(1-\bar s)}$, and, for $p>1$,
+\[
+S(x,p,t)=\tfrac12\re\frac{\cG'}{\cG}(w).
+\]
+\end{lemma}
+
+\begin{proof}
+By Fubini, which the decay of $\Phi$ permits,
+$\E\,H_0(z+i\beta N)=\int\Phi(u)e^{izu}\E\,e^{-\beta Nu}\dd u=\int e^{\beta^2u^2/2}\Phi(u)e^{izu}\dd u$,
+and $\beta=\sqrt{2t}$ gives $H_t$. Substituting $H_0(z)=c_HF(\frac12(1+iz))$
+and using $N\stackrel d=-N$ gives $H_t(z)=c_H\cG(\frac12(1+iz))$ with
+$\tau=\beta/2$, and the functional equation of $F$ passes to $\cG$. Then
+$H_t'(z)=\frac i2c_H\cG'(\frac12(1+iz))$. At $z=x+ip$,
+$\frac12(1+iz)=1-\bar w$, and differentiating
+$\cG(s)=\overline{\cG(1-\bar s)}$ gives
+$(\cG'/\cG)(1-\bar w)=-\overline{(\cG'/\cG)(w)}$. So
+$S=-\im\bigl(\frac i2(\cG'/\cG)(1-\bar w)\bigr)=\frac12\re(\cG'/\cG)(w)$.
+Here $\cG(w)\ne0$, because every zero of $H_t$ has $\lvert\im z\rvert\le1<p$.
+\end{proof}
+
+\begin{lemma}[the Gamma saddle]\label{lem:saddle}
+\emph{Family.} Let $p>1$, $0<t\le\frac12$ and
+$\ell_0=\log\frac q\pi+\psi(\frac{\sigma_0+\fa}2)>0$. The map
+$\mu\mapsto\tau^2\alpha(w+\mu)$ sends the closed half-plane
+$\{\re\mu\ge0\}$ into itself and is a contraction there, so it has a unique
+fixed point $\mu_*$. Put $s_*=w+\mu_*$, $\ell_*=2\re\alpha(s_*)$ and
+$\sigma_*=\re s_*$. Then
+\[
+\sigma_*=\sigma_0+\tfrac12\tau^2\ell_*=\sigma_0+\tfrac t4\ell_*,\qquad
+\ell_*\ge\ell_*^{(0)}\ge\ell_0,
+\]
+where $\ell_*^{(0)}=2\alpha(\sigma^{(0)})$ and $\sigma^{(0)}$ is the unique
+real solution of $\sigma=\sigma_0+\tau^2\alpha(\sigma)$, the saddle at $x=0$.
+
+\emph{Zeta.} For $x\ge40$ and $1<p\le x$ the same map has a unique fixed point
+in $D_x=\{\mu:0\le\re\mu\le R_x,\ \lvert\im\mu\rvert\le\frac12\}$,
+$R_x=\frac18\log x+1$. There $\im s_*\ge\frac x2-\frac12$ and
+$\ell_*\ge\log\bigl((\frac x2-\frac12)/2\pi\bigr)-2c(\frac12s_*)$, with $c$
+as in Lemma~\ref{lem:stirling}. ($S$ is even in $x$ for $\zeta$.)
+\end{lemma}
+
+\begin{proof}
+Family. For $\re\mu\ge0$, $\re(w+\mu)\ge\sigma_0$. As in the proof of
+Lemma~\ref{lem:floor0}, $\re\psi(z)\ge\psi(\re z)$, and termwise from
+$\psi'(z)=\sum_{n\ge0}(n+z)^{-2}$, $\lvert\psi'(z)\rvert\le\psi'(\re z)$.
+So $\re\tau^2\alpha(w+\mu)\ge\frac12\tau^2\ell_0>0$ and
+$\bigl\lvert\frac{\dd}{\dd\mu}\tau^2\alpha(w+\mu)\bigr\rvert\le\frac14\tau^2\psi'(\frac{\sigma_0+\fa}2)\le\frac1{16}\psi'(\frac12)=\frac{\pi^2}{32}<0.31$
+(below $0.15$ when $p\ge\sqrt5$). Banach's theorem gives $\mu_*$, and
+$\re\mu_*=\tau^2\re\alpha(s_*)=\frac12\tau^2\ell_*$. Next,
+$\ell_*\ge2\alpha(\sigma_*)$ and $\sigma_*\ge\sigma_0+\tau^2\alpha(\sigma_*)$.
+The function $f(\sigma)=\sigma-\sigma_0-\tau^2\alpha(\sigma)$ is strictly
+increasing ($\tau^2\alpha'<1$) with $f(\sigma^{(0)})=0\le f(\sigma_*)$, so
+$\sigma_*\ge\sigma^{(0)}\ge\sigma_0$, and $\alpha$ increases on the real
+axis.
+
+Zeta. For $\mu\in D_x$, $s=w+\mu$ has $\re s\in[\sigma_0,\sigma_0+R_x]$ and
+$\im s\ge\frac x2-\frac12\ge19.5$. There $\lvert\alpha'(s)\rvert\le2/\im s\le0.11$
+by Lemma~\ref{lem:gamma}, so the map is a contraction. With $z=s/2$,
+$\im\psi(z)=\sum_{n\ge0}\im z/\lvert z+n\rvert^2\in(0,\frac\pi2+\frac1{2\re z}]$
+and $\lvert\im(\frac1s+\frac1{s-1})\rvert\le2/\im s$, so
+$\lvert\im\tau^2\alpha(s)\rvert\le\frac14(\frac\pi4+\frac12+0.11)<\frac12$.
+Lemma~\ref{lem:stirling} and $\re(\frac1s+\frac1{s-1})>0$ give
+$\frac12\log\frac{\lvert s\rvert}{2\pi}-c(z)\le\re\alpha(s)\le\frac12\log\frac{\lvert s\rvert}{2\pi}+\frac1{12\re z\lvert z\rvert}+\frac2{\im s}$,
+the upper bound from $\re\psi(z)\le\log\lvert z\rvert+\lvert I(z)\rvert$ in
+the notation of that lemma. The lower bound is positive. Since $p\le x$,
+$\lvert s\rvert\le\re s+\im s\le x+2+\frac18\log x\le2x$ on $D_x$, so
+$\tau^2\re\alpha(s)\le\frac18\log\frac x\pi+0.03<R_x$. So $D_x$ is
+mapped into itself. The bound on $\ell_*$ is the lower bound at $s_*$.
+\end{proof}
+
+\begin{lemma}[the shifted representation]\label{lem:shift}
+Let $\Theta(v)=F(s_*+v)e^{-\alpha(s_*)v}/F(s_*)$, an entire function of $v$
+of order one with $\Theta(0)=1$, and $c_1=(\cL'/\cL)(s_*)$. (Since
+$\re s_*>1$, $F(s_*)\ne0$.) Then
+\[
+\frac{\cG'}{\cG}(w)-\frac{F'}{F}(s_*)=\frac{\int_\R(\Theta'-c_1\Theta)\varphi_\tau}{\int_\R\Theta\varphi_\tau},\qquad
+\int_\R(\Theta'-c_1\Theta)\varphi_\tau=\int_\R\Bigl(\frac v{\tau^2}-c_1\Bigr)\Theta\varphi_\tau .
+\]
+\end{lemma}
+
+\begin{proof}
+The function $h\mapsto F^{(k)}(w+h)\varphi_\tau(h)$ is entire, and on
+$\re h=\pm R$, between $0$ and $\im\mu_*$, it is
+$O(e^{R^{1+\epsilon}-R^2/2\tau^2})$. So the line of integration in
+$\cG^{(k)}(w)=\int F^{(k)}(w+h)\varphi_\tau(h)\dd h$ moves to
+$\mu_*+\R$. Since $\mu_*/\tau^2=\alpha(s_*)$,
+$\varphi_\tau(\mu_*+v)=c_0\varphi_\tau(v)e^{-\alpha(s_*)v}$ with
+$c_0=e^{-\mu_*^2/2\tau^2}$. Hence $\cG(w)=c_0F(s_*)\int\Theta\varphi_\tau$
+and $\cG'(w)=c_0F(s_*)\int(\Theta'+\alpha(s_*)\Theta)\varphi_\tau$, because
+$F'(s_*+v)e^{-\alpha(s_*)v}/F(s_*)=\Theta'(v)+\alpha(s_*)\Theta(v)$.
+Subtract $(F'/F)(s_*)=\alpha(s_*)+c_1$. The second identity is Gaussian
+integration by parts, $\varphi_\tau'=-(v/\tau^2)\varphi_\tau$, valid because
+$\Theta$ has order one.
+\end{proof}
+
+The question is therefore how far the complex weight $\Theta\varphi_\tau$
+is from the pure tilt $e^{c_1v}\varphi_\tau$, for which the right side
+vanishes. Where $\re(s_*+v)>1$ we have $\Theta=e^{c_1v+\omega(v)}$ with
+\[
+\omega(v)=\bigl[\log\cL(s_*+v)-\log\cL(s_*)-c_1v\bigr]+\bigl[\log\Gamma_F(s_*+v)-\log\Gamma_F(s_*)-\alpha(s_*)v\bigr],
+\]
+and $\Theta'-c_1\Theta=\Delta\Theta$ with
+$\Delta(v)=(F'/F)(s_*+v)-(F'/F)(s_*)$.
+
+\section{An explicit remainder}\label{sec:remainder}
+
+For a function $f$ of a real variable write
+$\Rem{f}_v=f(\sigma_*+v)-f(\sigma_*)-vf'(\sigma_*)$ for its Taylor
+remainder at $\sigma_*$.
+
+\begin{lemma}[Euler-product majorants]\label{lem:euler}
+For $\re s=\sigma>1$ and $j\ge0$,
+$\lvert(\cL'/\cL)^{(j)}(s)\rvert\le(-1)^j\kappa^{(j)}(\sigma)$,
+$\lvert\log\cL(s)\rvert\le\log\zeta(\sigma)$ and
+$\zeta(2\sigma)/\zeta(\sigma)\le\lvert\cL(s)\rvert\le\zeta(\sigma)$. Hence,
+for real $v$ with $\sigma_*+\min(v,0)>1$,
+\begin{align*}
+\lvert(\cL'/\cL)(s_*+v)-c_1\rvert&\le\lvert\kappa(\sigma_*+v)-\kappa(\sigma_*)\rvert,\\
+\lvert(\cL'/\cL)(s_*+v)-c_1-v(\cL'/\cL)'(s_*)\rvert&\le\Rem{\kappa}_v,\\
+\lvert\log\cL(s_*+v)-\log\cL(s_*)\rvert&\le\lvert\log\zeta(\sigma_*+v)-\log\zeta(\sigma_*)\rvert,\\
+\lvert\log\cL(s_*+v)-\log\cL(s_*)-c_1v\rvert&\le\Rem{\log\zeta}_v .
+\end{align*}
+\end{lemma}
+
+\begin{proof}
+$\cL'/\cL=-\sum\chi(n)\Lambda_{\mathrm{vM}}(n)n^{-s}$ and
+$\log\cL=\sum\chi(n)\Lambda_{\mathrm{vM}}(n)(\log n)^{-1}n^{-s}$ with
+$\lvert\chi(n)\rvert\le1$; the bounds on $\lvert\cL\rvert$ follow from the
+Euler product. Each difference is an integral along the horizontal segment
+from $s_*$ to $s_*+v$ of a derivative bounded by a majorant of fixed sign,
+whose integral is the corresponding difference or Taylor remainder of
+$\kappa$ or $\log\zeta$; both are convex.
+\end{proof}
+
+\begin{lemma}[Gamma majorants]\label{lem:gamma}
+\emph{Family.} For $\re z>0$, $\lvert\psi'(z)\rvert\le\psi'(\re z)$ and
+$\lvert\psi''(z)\rvert\le-\psi''(\re z)$. Put
+$\gamma_\Gamma(\sigma)=-\frac12\psi(\frac{\sigma+\fa}2)$ and
+$\lambda_\Gamma(\sigma)=\log\Gamma(\frac{\sigma+\fa}2)$. For real $v$ with
+$\sigma_*+\min(v,0)>-\fa$,
+\begin{gather*}
+\lvert\alpha(s_*+v)-\alpha(s_*)\rvert\le\lvert\gamma_\Gamma(\sigma_*+v)-\gamma_\Gamma(\sigma_*)\rvert,\qquad
+\lvert\alpha(s_*+v)-\alpha(s_*)-v\alpha'(s_*)\rvert\le\Rem{\gamma_\Gamma}_v,\\
+\lvert\log\Gamma_F(s_*+v)-\log\Gamma_F(s_*)-\alpha(s_*)v\rvert\le\Rem{\lambda_\Gamma}_v=:\vartheta(v).
+\end{gather*}
+\emph{Zeta.} If $\lvert\im s\rvert\ge T\ge10$, at any real part,
+$\lvert\alpha'(s)\rvert\le2/T$ and $\lvert\alpha''(s)\rvert\le3/T^2$. Put
+$\vartheta(v)=v^2/T$.
+\end{lemma}
+
+\begin{proof}
+The family bounds are integrals along the segment, as in
+Lemma~\ref{lem:euler}, since $\lvert\alpha'\rvert\le-\gamma_\Gamma'$,
+$\lvert\alpha''\rvert\le\gamma_\Gamma''$ and $\lambda_\Gamma''=-\gamma_\Gamma'$.
+For $\zeta$, with $z=s/2=a+ib$, the summands of
+$\sum_{n\ge0}\lvert z+n\rvert^{-2}$ and $\sum_{n\ge0}\lvert z+n\rvert^{-3}$ are
+unimodal in $n$, so each sum is at most the integral plus the largest term:
+$\sum_{n\ge0}\lvert z+n\rvert^{-2}\le b^{-2}+\pi/\lvert b\rvert$ and
+$\sum_{n\ge0}\lvert z+n\rvert^{-3}\le\lvert b\rvert^{-3}+2b^{-2}$, with
+$\lvert b\rvert\ge T/2$. Hence
+$\frac14\lvert\psi'(z)\rvert\le\frac\pi{2T}+\frac1{T^2}$ and
+$\frac18\lvert\psi''(z)\rvert\le\frac2{T^3}+\frac2{T^2}$. Adding
+$\lvert s\rvert^{-2}+\lvert s-1\rvert^{-2}\le2T^{-2}$ and
+$2\lvert s\rvert^{-3}+2\lvert s-1\rvert^{-3}\le4T^{-3}$ gives
+$\lvert\alpha'\rvert\le\frac\pi{2T}+\frac3{T^2}\le\frac2T$ and
+$\lvert\alpha''\rvert\le\frac2{T^2}+\frac6{T^3}\le\frac3{T^2}$ for $T\ge10$.
+\end{proof}
+
+\begin{lemma}[a Stirling inequality]\label{lem:stirling}
+For $\re z>0$,
+\[
+\log\lvert z\rvert\ \le\ \re\psi(z)+c(z),\qquad c(z)=\frac{\re z}{2\lvert z\rvert^2}+\frac1{12\re z\,\lvert z\rvert}.
+\]
+\end{lemma}
+
+\begin{proof}
+Binet's formula \cite[Section~5.9(ii)]{dlmf} gives
+$\psi(z)=\log z-\frac1{2z}-I(z)$ with $I(z)=\int_0^\infty\beta(u)e^{-zu}\dd u$
+and $\beta(u)=\frac1{e^u-1}-\frac1u+\frac12$. Since $\beta(0)=0$,
+$I(z)=z^{-1}\int_0^\infty\beta'(u)e^{-zu}\dd u$, and
+$\beta'(u)=\frac14f(u/2)$ with $f(v)=v^{-2}-\sinh^{-2}v$. Here $f>0$
+because $\sinh v>v$, and $f\le\frac13$: for $v\ge\sqrt3$ because
+$v^{-2}\le\frac13$, and for $v<\sqrt3$ because
+$\sinh^2v\,(3-v^2)=\sum_{n\ge1}(3a_n-a_{n-1})v^{2n}$ with
+$a_n=2^{2n-1}/(2n)!$ and $a_0=0$, whose coefficients are $3$, $0$ and then
+$a_{n-1}\bigl(\frac{12}{2n(2n-1)}-1\bigr)<0$, so that
+$\sinh^2v\,(3-v^2)\le3v^2$. Hence $0\le\beta'\le\frac1{12}$,
+$\lvert I(z)\rvert\le1/(12\re z\,\lvert z\rvert)$, and taking real parts
+gives the claim.
+\end{proof}
+
+For the family put $c_*=\frac1{2x_*}+\frac1{12x_*^2}$ with
+$x_*=\frac12(\sigma_*+\fa)$. It bounds $c(z_*)$, $z_*=\frac12(s_*+\fa)$, at
+every height. Since $\ell_*=\log\frac q\pi+\re\psi(z_*)$,
+Lemma~\ref{lem:stirling} gives $\log\lvert z_*\rvert\le\ell_*-\log\frac q\pi+c_*$,
+so for $0<u\le\sigma_*$
+\begin{equation}\label{eq:Qstar}
+q\,\lvert u+i\im s_*\rvert\ \le\ 2q\lvert z_*\rvert\ \le\ \mathcal Q_*:=2\pi e^{\ell_*+c_*}.
+\end{equation}
+For $\zeta$ the same $\mathcal Q_*$, with $c_*=c(\frac12s_*)$, bounds
+$\lvert u+i\im s_*\rvert$.
+
+\begin{lemma}[partial summation in the strip]\label{lem:partial}
+For $\sigma>0$, $s=\sigma+iT$ and every integer $Y\ge1$,
+\begin{align*}
+\lvert L(s,\chi)\rvert&\le1+\int_1^Yu^{-\sigma}\dd u+\frac{q\lvert s\rvert Y^{-\sigma}}{2\sigma}
+\qquad(\chi\text{ primitive modulo }q\ge3),\\
+\lvert\zeta(s)\rvert&\le1+\int_1^Yu^{-\sigma}\dd u+\frac{Y^{1-\sigma}}{\lvert s-1\rvert}+\frac12Y^{-\sigma}+\frac{\lvert s\rvert Y^{-\sigma}}{2\sigma}.
+\end{align*}
+\end{lemma}
+
+\begin{proof}
+$L(s,\chi)=\sum_{n\le Y}\chi(n)n^{-s}+s\int_Y^\infty(A(u)-A(Y))u^{-s-1}\dd u$
+with $A(u)=\sum_{n\le u}\chi(n)$. A sum of $\chi$ over consecutive integers
+equals a sum over $r<q$ of them, which is also minus the sum over the other
+$q-r$ of a period, so $\lvert A(u)-A(Y)\rvert\le q/2$. For $\zeta$,
+$\zeta(s)=\sum_{n\le Y}n^{-s}+\frac{Y^{1-s}}{s-1}-\frac12Y^{-s}-s\int_Y^\infty(\{u\}-\frac12)u^{-s-1}\dd u$.
+Both identities hold for $\sigma>1$ and extend to $\sigma>0$.
+\end{proof}
+
+In the evaluation we take $Y$ near $\mathcal Q_*/2$, and for $\zeta$ we use
+$\lvert s-1\rvert\ge\lvert\im s\rvert\ge T$. Lemma~\ref{lem:partial} is
+weaker than the convexity bound by about $(q\lvert s\rvert)^{(1-\sigma)/2}$.
+An explicit convexity bound would improve the small-conductor thresholds
+of Section~\ref{sec:numerics}; we do not use one, so no unread import
+enters.
+
+\begin{proposition}[the remainder]\label{prop:E}
+Assume the hypotheses of Lemma~\ref{lem:saddle}, and for $\zeta$ let
+$10\le T\le\im s_*$ (for instance $T=\frac x2-\frac12$). Let
+$t\in(0,\frac12]$ and $V\in(0,\sigma_*-1)$. Write
+\[
+k_*=K_2(\sigma_*)+A_1(\sigma_*),\quad A_1(\sigma)=\tfrac14\psi'\bigl(\tfrac{\sigma+\fa}2\bigr)\qquad(\text{zeta: }k_*=K_2(\sigma_*)+2/T),
+\]
+$\kappa_*=\kappa(\sigma_*)$, and $\mathfrak M=\kappa+\gamma_\Gamma$ (zeta:
+$\mathfrak M=\kappa$). For $v\ge-V$ define
+\begin{gather*}
+r(v)=\Rem{\mathfrak M}_v\quad\bigl(\text{zeta: }\Rem{\kappa}_v+\tfrac32v^2/T^2\bigr),\qquad
+\omega_m(v)=\Rem{\log\zeta}_v+\vartheta(v),\\
+g(v)=\exp\bigl(\lvert\log\zeta(\sigma_*+v)-\log\zeta(\sigma_*)\rvert+\vartheta(v)\bigr),
+\end{gather*}
+and for $v<-V$, with $\sigma=\sigma_*+v$ and
+$z_\zeta=\zeta(\sigma_*)/\zeta(2\sigma_*)$,
+\[
+g_L(v)=\begin{cases}z_\zeta\,\mathcal Z(\sigma)\,e^{\vartheta(v)},&\frac12\le\sigma<\sigma_*-V,\\
+z_\zeta\,\mathcal Z(1-\sigma)\exp\bigl(\frac12\ell_*(1-2\sigma)+\vartheta(1-\sigma-\sigma_*)\bigr),&\sigma<\frac12.\end{cases}
+\]
+Here $\mathcal Z(u)=\zeta(u)$ for $u\ge\sigma_*$; for $1<u<\sigma_*$ it is
+the smaller of $\zeta(u)$ and the bound of Lemma~\ref{lem:partial} at real
+part $u$, for a fixed integer $Y\ge1$, with $q\lvert s\rvert$ (zeta:
+$\lvert s\rvert$) replaced by $\mathcal Q_*$ and, for $\zeta$,
+$\lvert s-1\rvert$ by $T$; and for $u\le1$ it is that bound alone. Put
+\begin{gather*}
+M_\rho=\int_{-V}^\infty r\,g\,\varphi_\tau,\qquad B_V=g(-V)\varphi_\tau(V),\qquad
+P_1=\int_{-V}^\infty e^{\kappa_*\lvert v\rvert}\bigl(e^{\omega_m}-1\bigr)\varphi_\tau,\\
+D_L=\int_{-\infty}^{-V}g_L\varphi_\tau,\qquad
+N_L=\int_{-\infty}^{-V}g_L\Bigl(\frac{\lvert v\rvert}{\tau^2}+\kappa_*\Bigr)\varphi_\tau,\qquad
+P_2=\int_{-\infty}^{-V}\bigl(g_L+e^{\kappa_*\lvert v\rvert}\bigr)\varphi_\tau,
+\end{gather*}
+and $d_0=e^{-\tau^2\kappa_*^2/2}-P_1-P_2$. If $\tau^2k_*<1$ and $d_0>0$,
+then
+\begin{equation}\label{eq:E}
+\Bigl\lvert\frac{\cG'}{\cG}(w)-\frac{F'}{F}(s_*)\Bigr\rvert\ \le\ E:=
+\frac{\tau^2k_*\kappa_*}{1-\tau^2k_*}+\frac{M_\rho+B_V+\tau^2k_*\kappa_*D_L+(1+\tau^2k_*)N_L}{(1-\tau^2k_*)\,d_0}.
+\end{equation}
+\end{proposition}
+
+\begin{proof}
+Write $\mathcal N$ and $\mathcal D$ for the numerator and denominator of
+Lemma~\ref{lem:shift}. On $[-V,\infty)$, Lemmas~\ref{lem:euler}
+and~\ref{lem:gamma} give $\lvert\Theta\rvert\le g$ and
+$\lvert\omega\rvert\le\omega_m$. With $\Delta_1=\Delta'(0)=(F'/F)'(s_*)$
+they also give $\lvert\Delta_1\rvert\le k_*$ and $\lvert\rho\rvert\le r$ for
+$\rho(v)=\Delta(v)-\Delta_1v$.
+
+For $v<-V$ we have $\lvert\Theta(v)\rvert\le g_L(v)$. When
+$\sigma\ge\frac12$,
+$\lvert\Theta\rvert=\lvert\cL(\sigma+i\im s_*)/\cL(s_*)\rvert\exp\re\bigl[\log\Gamma_F(s_*+v)-\log\Gamma_F(s_*)-\alpha(s_*)v\bigr]$,
+and Lemmas~\ref{lem:euler}--\ref{lem:partial} and \eqref{eq:Qstar} apply,
+with $\lvert\cL(s_*)\rvert\ge\zeta(2\sigma_*)/\zeta(\sigma_*)$. When
+$\sigma<\frac12$, $\lvert F(\sigma+iT')\rvert=\lvert F(1-\sigma+iT')\rvert$
+at $T'=\im s_*$. The Gamma ratio from $s_*$ to $1-\sigma+i\im s_*$
+contributes $\exp\bigl(\frac12\ell_*(1-\sigma-\sigma_*)+\vartheta(1-\sigma-\sigma_*)\bigr)$,
+which with $\lvert e^{-\alpha(s_*)v}\rvert=e^{\ell_*(\sigma_*-\sigma)/2}$
+gives the stated exponent.
+
+Gaussian integration by parts on $[-V,\infty)$,
+$\int_{-V}^\infty v\varphi_\tau\Theta=\tau^2\varphi_\tau(V)\Theta(-V)+\tau^2\int_{-V}^\infty\varphi_\tau\Theta'$,
+turns Lemma~\ref{lem:shift} into
+$\mathcal N=\varphi_\tau(V)\Theta(-V)+\mathcal J+\mathcal N_L$ with
+$\mathcal J=\int_{-V}^\infty\Delta\Theta\varphi_\tau$ and
+$\mathcal N_L=\int_{-\infty}^{-V}(v/\tau^2-c_1)\Theta\varphi_\tau$. Applied
+once more to $\Delta_1\int_{-V}^\infty v\Theta\varphi_\tau$, it gives
+\[
+(1-\tau^2\Delta_1)\mathcal J=\tau^2\Delta_1\bigl(\varphi_\tau(V)\Theta(-V)+c_1\mathcal D_E\bigr)+\int_{-V}^\infty\rho\Theta\varphi_\tau,\qquad
+\mathcal D_E=\int_{-V}^\infty\Theta\varphi_\tau .
+\]
+Hence, with $\mathcal D_L=\int_{-\infty}^{-V}\Theta\varphi_\tau$ and
+$\mathcal D=\mathcal D_E+\mathcal D_L$,
+\[
+\mathcal N-\frac{\tau^2\Delta_1c_1}{1-\tau^2\Delta_1}\mathcal D=
+\frac{\varphi_\tau(V)\Theta(-V)+\int_{-V}^\infty\rho\Theta\varphi_\tau-\tau^2\Delta_1c_1\mathcal D_L+(1-\tau^2\Delta_1)\mathcal N_L}{1-\tau^2\Delta_1},
+\]
+whose modulus is at most $d_0$ times the second fraction of $E$, because
+$\lvert c_1\rvert\le\kappa_*$, $\lvert\mathcal D_L\rvert\le D_L$ and
+$\lvert\mathcal N_L\rvert\le N_L$. Finally
+\[
+\mathcal D=e^{\tau^2c_1^2/2}+\int_{-V}^\infty e^{c_1v}\bigl(e^{\omega}-1\bigr)\varphi_\tau+\int_{-\infty}^{-V}\bigl(\Theta-e^{c_1v}\bigr)\varphi_\tau
+\]
+and $\lvert e^{\tau^2c_1^2/2}\rvert\ge e^{-\tau^2\kappa_*^2/2}$, so
+$\lvert\mathcal D\rvert\ge d_0$. Divide.
+\end{proof}
+
+\begin{theorem}[transport law and floor]\label{thm:transport}
+Under the hypotheses of Proposition~\ref{prop:E},
+\[
+\Bigl\lvert S(x,p,t)-\tfrac12\re\tfrac{F'}F(s_*)\Bigr\rvert\le\tfrac12E,\qquad
+S(x,p,t)\ \ge\ \tfrac14\ell_*-\tfrac12\kappa(\sigma_*)-\tfrac12E .
+\]
+For the family every quantity in $E$ is a function of
+$(\ell_*,\tau,p,\fa,V)$, so the bound at $x$ is $\mathfrak F(\ell_*(x))$ with
+\[
+\mathfrak F(\ell)=\tfrac14\ell-\tfrac12\kappa\bigl(\sigma_0+\tfrac12\tau^2\ell\bigr)-\tfrac12E(\ell).
+\]
+For $\zeta$, $E$ depends on $\ell_*$ and, through $T$ and through $c_*$ in
+$\mathcal Q_*$, on the height; $c_*$ may be bounded by its value at
+$\re z=\frac12\sigma_*$, $\lvert z\rvert=\frac12(\sigma_*^2+T^2)^{1/2}$.
+\end{theorem}
+
+\begin{proof}
+Lemma~\ref{lem:gauss}, Proposition~\ref{prop:E}, and
+$\frac12\re(F'/F)(s_*)=\frac14\ell_*+\frac12\re c_1\ge\frac14\ell_*-\frac12\kappa_*$.
+In the family case $\mathcal Q_*$, $\mathcal Z$, $\vartheta$, $r$, $g$ and
+$\omega_m$ are functions of real arguments fixed by
+$\sigma_*=\sigma_0+\frac12\tau^2\ell_*$ and $\ell_*$.
+\end{proof}
+
+\begin{remark}[the transport reading]\label{rem:reading}
+To second order in $\tau$ the deviation is
+$\tau^2\bigl(\Delta_1c_1+\frac12\Delta''(0)\bigr)=\frac12\tau^2(\cL''/\cL)'(s_*)+\tau^2\bigl(\alpha'c_1+\frac12\alpha''\bigr)(s_*)$;
+the evaluation of Section~\ref{sec:validation} confirms this for $\zeta$.
+This deviation is $O(\tau^2)$ uniformly in the height, while the shift from
+$w$ to $s_*$ moves the main term by about $\frac14\tau^2K_2\ell_*$. So,
+apart from the deviation, the heat flow at height $p$ is evaluation of the
+time-zero quantity at $s_*=w+\frac t2\alpha(s_*)$: at height
+$p+\frac t2\ell_*$ instead of $p$, and at real part
+$x+t\im\alpha(s_*)\approx x+\frac{\pi t}4$. The second shift matches the
+drift of the zeros toward the origin at speed about $\pi/4$ that the zero
+dynamics $\dot z_j=2\sum_{k\ne j}(z_j-z_k)^{-1}$ give in the mean-field
+approximation: the Hilbert transform of the density
+$\frac1{4\pi}\log\frac{\lvert x\rvert}{4\pi}$ contributes $-\pi/8$ to the
+sum at $x>0$. This is a heuristic and is used in no proof.
+\end{remark}
+
+\begin{remark}[the four contributions]\label{rem:costs}
+Compared with the time-zero floor, the floor of Theorem~\ref{thm:transport}
+gains
+$\mathfrak g(t)=\frac12\bigl(\kappa(\sigma_0)-\kappa(\sigma_*)\bigr)$, plus
+$\frac14\bigl(\psi(\frac{\sigma_*+\fa}2)-\psi(\frac{\sigma_0+\fa}2)\bigr)$
+for the family at $x=0$, and loses $\frac12E$. The loss collects four
+contributions: the curvature of $\log\cL$, of order
+$\frac12\tau^2(K_2\kappa+\frac12K_3)(\sigma_*)$; the curvature of
+$\log\Gamma_F$, of order $\frac12\tau^2(A_1\kappa+\frac12A_2)(\sigma_*)$
+with $A_2(\sigma)=-\frac18\psi''(\frac{\sigma+\fa}2)$, which matters for
+the family at small height; the Gaussian mass left of $\re s=1$, of order
+$\exp(-(\sigma_*-1)^2/2\tau^2)$ times a power of $\mathcal Q_*$; and the
+reflected term, of order $e^{-p\ell_*/2}$. As $t\to0$, with
+$\ell=2\re\alpha(w)$ the limit of $\ell_*$,
+$\mathfrak g/\tau^2\to\frac14K_2(\sigma_0)\ell$ while the first two
+contributions divided by $\tau^2$ tend to
+$\frac12(k\kappa+\frac12k_2)(\sigma_0)$ with $k=K_2+A_1$ and
+$k_2=K_3+A_2$. So at small times the floor does not drop once
+$\ell>2(k\kappa+\frac12k_2)/K_2$ at $\sigma_0$. The strip term carries the
+Gaussian factor $\exp(-(\sigma_*-\frac12)^2/2\tau^2)$ against a growth of
+about $\mathcal Q_*^{1/2}$ at $\sigma=\frac12$. Since
+$(\sigma_*-\frac12)^2/2\tau^2=\frac{p^2}{8\tau^2}+\frac{p\ell_*}4+\frac{\tau^2\ell_*^2}8$,
+it is exponentially small in $\ell_*$ when $p>2$; for $1<p\le2$ its
+smallness comes from the first and last of these terms.
+\end{remark}
+
+\begin{remark}[premises]\label{rem:premises}
+Theorem~\ref{thm:transport} uses the Hermitian functional equation with a
+degree-one Gamma factor; the Euler product, only through
+Lemma~\ref{lem:euler} (the coefficients of $\log\cL$ are dominated by those
+of $\log\zeta$); bounded coefficients, through Lemma~\ref{lem:partial}; and
+about zeros only that $H_t$ has none with $\lvert\im z\rvert>1$.
+Linear combinations of $L$-functions of Davenport--Heilbronn type satisfy
+the first and third premises and fail the second. The statement
+\eqref{eq:Ep} is a smoothing statement at height $p>1$; it constrains
+zeros near the axis only through a comparison argument such as
+Proposition~\ref{prop:paired}, together with the confinement and
+first-contact inputs of Section~\ref{sec:exterior}.
+\end{remark}
+
+\section{A bound for \texorpdfstring{$\partial_pS$}{the vertical derivative}}\label{sec:derivative}
+
+The comparison of Section~\ref{sec:strip} also needs an upper bound for
+$\partial_pS$. Cauchy's estimate gives one from
+Proposition~\ref{prop:E}.
+
+\begin{corollary}[derivative bound]\label{cor:derivative}
+Let $r>0$. Suppose that at every point $w'$ of the closed disk
+$\lvert w'-w\rvert\le r$ the hypotheses of Lemma~\ref{lem:saddle} and
+Proposition~\ref{prop:E} hold, with $E(w')$ the bound \eqref{eq:E}. For the
+family this includes $\re w'>1$ and
+$\log\frac q\pi+\psi(\frac{\re w'+\fa}2)>0$; for $\zeta$ it includes
+$\re w'>1$, $\im w'\ge20$ and $2\re w'-1\le2\im w'$. Let
+$a_*\ge\lvert\alpha'(s_*)\rvert$ with $\tau^2a_*<1$, for instance
+$a_*=\frac14\psi'(\frac{\sigma_*+\fa}2)$ for the family and $a_*=2/T$ for
+$\zeta$ (Lemma~\ref{lem:gamma}). Then
+\[
+\partial_pS(x,p,t)\ \le\ \frac{K_2(\sigma_*)+a_*}{4(1-\tau^2a_*)}+\frac1{4r}\max_{\lvert w'-w\rvert=r}E(w').
+\]
+\end{corollary}
+
+\begin{proof}
+On the disk, $\mu\mapsto\tau^2\alpha(w'+\mu)$ maps a fixed domain into
+itself with a contraction constant uniform in $w'$. For the family the
+domain is the half-plane $\re\mu\ge0$. For $\zeta$ it is $D_{x_+}$ of
+Lemma~\ref{lem:saddle}, with $x_+$ the largest value of $2\im w'$ on the
+disk. The estimates in the proof of that lemma apply to $\mu\in D_{x_+}$,
+because there $\lvert s\rvert\le x'+2+\frac18\log x_+\le2x'$ with
+$x'=2\im w'$, so the images lie in $D_{x'}\subseteq D_{x_+}$. The iterates
+from $\mu=0$
+are holomorphic in $w'$ and converge uniformly, so $s_*(w')$ is
+holomorphic, and implicit differentiation gives
+$s_*'=1/(1-\tau^2\alpha'(s_*))$.
+
+The Gaussian average $\cG$ has no zero with $\re w'>1$
+(Lemma~\ref{lem:gauss}). Hence
+$\varepsilon(w')=(\cG'/\cG)(w')-(F'/F)(s_*(w'))$ is holomorphic on the
+disk, and $\lvert\varepsilon\rvert\le E$ there by
+Proposition~\ref{prop:E}. Cauchy's estimate gives
+$\lvert\varepsilon'(w)\rvert\le\max_{\lvert w'-w\rvert=r}\lvert\varepsilon(w')\rvert/r$.
+Since $S=\frac12\re(\cG'/\cG)(w)$ and $\partial w/\partial p=\frac12$,
+\[
+\partial_pS=\tfrac14\re\bigl[(F'/F)'(s_*)\,s_*'(w)+\varepsilon'(w)\bigr].
+\]
+Finally
+$\lvert(F'/F)'(s_*)\rvert\le\lvert(\cL'/\cL)'(s_*)\rvert+\lvert\alpha'(s_*)\rvert\le K_2(\sigma_*)+a_*$
+by Lemma~\ref{lem:euler} with $j=1$, and
+$\lvert s_*'\rvert=\lvert1-\tau^2\alpha'(s_*)\rvert^{-1}\le1/(1-\tau^2a_*)$.
+\end{proof}
+
+\begin{remark}\label{rem:branch}
+The disk condition matters for $\zeta$ at small heights. There the pole of
+$\alpha$ at $s=1$ gives $s_*$ branch points with $\re w$ slightly above
+$1$, about $1.055\pm0.625i$ at $t=0.2$ (found by a same-model check, see
+Appendix~\ref{app:repro}). Every use below is at $x\ge X$. In the
+evaluation, the maximum over the circle is taken at its leftmost point,
+height $p-2r$, and at the smallest $\ell_*$; this rests on the sampled
+monotonicity of Section~\ref{sec:numerics}, so the evaluated bound is
+numerical.
+\end{remark}
+
+\section{Numerical evaluation}\label{sec:numerics}
+
+This section evaluates the bound $E$ of Proposition~\ref{prop:E} in floating
+point. Three things separate it from a statement for every $t$. First, $E$
+is evaluated without outward rounding. Second, the decrease of $E$ in
+$\ell_*$, which turns an evaluation at the smallest $\ell_*$ into a bound at
+every height, is sampled rather than proved. Third, the times form the
+grid
+\begin{align*}
+\mathcal T=\{&0.001,0.002,0.005,0.01,0.02,0.03,0.05,0.075,0.1,0.125,\\
+&0.15,0.175,0.2,0.225,0.25,0.3,0.35,0.4,0.45,0.5\},
+\end{align*}
+and below $t=0.001$ only the leading order of Remark~\ref{rem:costs} is
+controlled. The programmes and records are listed in
+Appendix~\ref{app:repro}; R1 is the record of the first programme, with
+sections A--H.
+
+\subsection{Method}
+
+$\zeta$ and its derivatives are computed by Euler--Maclaurin summation at
+real and complex points, and $\psi,\psi',\psi''$ by recurrence and
+asymptotic series; both are checked in R1, section A. The real-variable
+majorants are tabulated on logarithmic grids with relative interpolation
+error below $4\cdot10^{-5}$, the integrals of Proposition~\ref{prop:E} use
+composite Simpson rules, $V=\sigma_*-1-\eta$ with the better of
+$\eta\in\{0.03,0.08\}$, and the integrals are cut at $16\tau$ to the right
+of $\sigma_*$, at $40\tau$ to the left, and in the reflected region at
+$1-\sigma=\sigma_*+\tau^2\ell_*+30\tau+2$. An
+independent implementation written by a same-model check (see
+Appendix~\ref{app:repro}) differs from the programme by up to
+$4\cdot10^{-5}$ relative, in both directions.
+
+\subsection{Thresholds in \texorpdfstring{$\ell_*$}{l*}}
+
+Let $\ell_1(p)$ be the smallest $\ell$ with $\mathfrak g(t)\ge\frac12E$ at
+every $t\in\mathcal T$, counting only the $\kappa$ part of the gain
+(Remark~\ref{rem:costs}), found by bisection to $0.03$ (R1, section H).
+Table~\ref{tab:thresholds} lists it with the small-time threshold
+$2(k\kappa+\frac12k_2)/K_2$ of Remark~\ref{rem:costs} at $p=\sqrt5$. For
+$\zeta$ the Gamma terms use $T=10^4$; they decrease in $T$, so the row is
+valid at every height $x\ge2\cdot10^4+1$, where $\im s_*\ge10^4$.
+
+\begin{table}[ht]
+\centering\small
+\begin{tabular}{@{}lccccc@{}}
+\toprule
+Case & $p=\sqrt5$ & $p=2.5$ & $p=3$ & $p=4$ & small-time threshold, $p=\sqrt5$\\
+\midrule
+family, even & 10.65 & 8.77 & 6.74 & 4.40 & 6.40\\
+family, odd & 10.12 & 8.22 & 6.19 & 3.92 & 5.99\\
+$\zeta$ ($T=10^4$) & 9.62 & 7.67 & 5.56 & 3.29 & 5.67\\
+\bottomrule
+\end{tabular}
+\caption{The threshold $\ell_1(p)$ (numerical, R1 section H).}\label{tab:thresholds}
+\end{table}
+
+Just above $\ell_1$ the binding time is near $t=0.2$: at $\ell=10$ and
+$p=\sqrt5$ the even family fails at $t=0.2$ by $0.09$ (R1, section E,
+which uses an 11-point grid from $t=0.002$).
+From $\ell=11$ on, the margin is smallest at the smallest time of the grid,
+where it is $\tau^2$ times the small-time coefficient. With the $\psi$
+part of the gain at $x=0$, the small-time thresholds at $p=\sqrt5$ fall to
+$5.22$ (even) and $5.38$ (odd). $E$ is nonincreasing in $\ell$, for $\ell$
+from 10 to 40, at all 12 sampled settings: the even family at $p=\sqrt5$,
+the odd family at $p=3$ and $\zeta$ at $p=\sqrt5$, each at
+$t\in\{0.002,0.05,0.2,0.5\}$ (R1, section H). This monotonicity is
+checked, not proved, and the other settings used below were not
+sampled. With the zeta row, \eqref{eq:Ep}
+holds at every grid time from $x\approx4\pi e^{9.62}\approx1.9\cdot10^5$ at
+$p=\sqrt5$, and from $x=2\cdot10^4+1$ at $p=3$.
+
+\subsection{The family at every height}\label{sec:family}
+
+At $x=0$ the saddle is real and $\ell_*=\ell_*^{(0)}$, and
+Lemma~\ref{lem:saddle} gives $\ell_*(x)\ge\ell_*^{(0)}$ at every $x$. With
+$\mathfrak F$ increasing (sampled), $S(x,p,t)\ge\mathfrak F(\ell_*^{(0)}(t))=:\mathfrak F_0(t)$
+for every real $x$. Table~\ref{tab:conductor} gives the smallest conductor
+for which $\mathfrak F_0(t)\ge C_{q,\fa}(p)$ at every $t\in\mathcal T$:
+the passing end of a bisection in $\log_{10}q$ to $0.006$ (R1, section H),
+rounded up. These thresholds
+lie below those of Table~\ref{tab:thresholds} because the $\psi$ part of
+the gain counts at $x=0$.
+
+\begin{table}[ht]
+\centering\small
+\begin{tabular}{@{}lcc@{}}
+\toprule
+Parity & $p=\sqrt5$ & $p=3$\\
+\midrule
+even & $q\ge1.084\cdot10^5$ ($\ell_0=9.50$) & $q\ge1.32\cdot10^3$ ($\ell_0=5.46$)\\
+odd & $q\ge4.892\cdot10^4$ ($\ell_0=9.49$) & $q\ge6.62\cdot10^2$ ($\ell_0=5.39$)\\
+\bottomrule
+\end{tabular}
+\caption{Conductors above which $\mathfrak F_0(t)\ge C_{q,\fa}(p)$ on the grid (numerical).}\label{tab:conductor}
+\end{table}
+
+At $q=10^6,10^8,10^{10},10^{12}$ the excess
+$\min_{t\in\mathcal T}(\mathfrak F_0(t)-C_{q,\fa}(p))$ is positive for both
+parities and $p\in\{\sqrt5,3\}$, from $0.0014$ to $0.0077$, attained at
+$t=0.001$; at $t=\frac12$ it is $0.37$ to $0.97$ (R1, section F). So on
+the grid \eqref{eq:Ep} holds with $C(t)=C_{q,\fa}(p)$ at every real $x$,
+and the floor rises with $t$.
+
+\subsection{\texorpdfstring{$\zeta$}{Zeta} beyond the verified height}\label{sec:zetaX}
+
+For $\zeta$ the region of \eqref{eq:Ep} is $x\ge X$. We take Polymath's
+height, rounded down to $X=6\cdot10^{10}$ \cite{polymath}, and
+$X=5\cdot10^{12}+194858$, the height of the row of Polymath's Table~1 that
+Platt and Trudgian use for $\Lambda\le0.2$ \cite{platttrudgian}, as
+recorded in \cite{n01}, with
+$T=X/2-1$ and $\ell_X=\log\bigl((X/2-1)/2\pi\bigr)-10^{-6}$, which is at most
+$\ell_*$ at every $x\ge X$ by Lemma~\ref{lem:saddle}. Table~\ref{tab:zetaX}
+gives the excess
+$\min_{t\in\mathcal T}\bigl(\mathfrak F(\ell)-(\frac14\ell_X-\frac12\kappa(\sigma_0))\bigr)$,
+with $\mathfrak F$ sampled at $\ell_X+\{0,1,3\}$ (R1, section F).
+
+\begin{table}[ht]
+\centering\small
+\begin{tabular}{@{}lccccc@{}}
+\toprule
+$X$ & $p=\sqrt5$ & $p=3$ & $p=4$ & $p=5$ & $p=6$\\
+\midrule
+$6\cdot10^{10}$ ($\ell_X=22.29$) & 0.0051 & 0.0021 & 0.00088 & 0.00044 & 0.00025\\
+$5\cdot10^{12}+194858$ ($\ell_X=26.71$) & 0.0064 & 0.0026 & 0.0011 & 0.00054 & 0.00030\\
+\bottomrule
+\end{tabular}
+\caption{Excess of the floor over $\frac14\ell_X-\frac12\kappa(\sigma_0)$ for $\zeta$ at $x\ge X$ (numerical).}\label{tab:zetaX}
+\end{table}
+
+All minima are attained at $t=0.001$. They are thin at large $p$ only
+because $\tau^2$ is small there, so the floor at those times is close to
+$\frac14\ell_X-\frac12\kappa(\sigma_0)$. On the grid, then, \eqref{eq:Ep}
+holds at every $x\ge X$ with the constant floor
+$\frac14\ell_X-\frac12\kappa(\sigma_0)$; the $x$-dependent floor
+$\frac14\log\frac x{4\pi}-\frac12\kappa(\sigma_0)$ is larger. The sampled
+heights include the band $3\le\im z\le6$ on which \cite{hb} works.
+
+\subsection{Validation}\label{sec:validation}
+
+\emph{The Gaussian representation} (R1, section B). For $\zeta$ at
+$(x,p,t)=(3,\sqrt5,0)$, $(10,\sqrt5,0.1)$, $(20,3,0.3)$ and $(25,\sqrt5,0.5)$,
+$S$ from Polymath's kernel integral and $S$ from the Gaussian average of
+$\xi$ agree to $9\cdot10^{-16}$. The two routes share no formula beyond the
+definition of $\xi$.
+
+\emph{The transport law} (R1, sections C and D). For $\zeta$ at $x=10^3$
+and $10^4$ ($\ell_*=4.38$ and $6.68$), $p\in\{\sqrt5,3\}$ and
+$t\in\{0.02,0.1,0.3,0.5\}$, we compare $S$ from the Gaussian average of
+$\xi$ with the main term $\frac12\re(F'/F)(s_*)$ and the second-order term
+of Remark~\ref{rem:reading}. For characters (real characters modulo 10007,
+odd; 10009, even; 100003 and 1000003, odd; 1000033, even; and a cubic
+character modulo 10009) at $x\in\{0,2,10\}$, $p\in\{\sqrt5,3\}$ and
+$t\in\{0.05,0.2,0.5\}$, $S$ is computed from the kernel integral with
+Gauss-sum root numbers, and the main term as the kernel's $S$ at time zero
+at $(2\im s_*,2\re s_*-1)$. The findings are as follows.
+\begin{itemize}
+\item The deviation $\lvert\varepsilon\rvert$ (for $\zeta$, of
+$\cG'/\cG$; for characters, of its real part) is at most $0.044$ for
+$\zeta$ and $0.117$ for the characters. The largest is at $x=0$ for the
+real character modulo 10009 at $t=\frac12$.
+\item For $\zeta$ the second-order term accounts for most of the
+deviation: at $x=10^3$, $p=\sqrt5$ and $t=0.02$ it is $0.0047$ against a
+measured $0.0048$.
+\item $E\ge\lvert\varepsilon\rvert$ at all 124 points. The ratio
+$E/\lvert\varepsilon\rvert$ runs from $1.6$ (even character modulo
+1000033, $x=0$, $p=3$, $t=\frac12$) to about 1300, with median 22. It is
+largest at $p=\sqrt5$ and moderate $\ell_*$.
+\item $S(x,p,t)$ exceeds the time-zero floor at the same $x$ at every
+point, including points below the thresholds of
+Table~\ref{tab:thresholds}.
+\end{itemize}
+These points test the identity and the size of $E$ at moderate heights.
+They do not test the regime of Section~\ref{sec:zetaX}, where the theorem,
+not a computation, is the evidence.
+
+\subsection{Comparison with Hakimoglu-Brown's floor}\label{sec:compare}
+
+Hakimoglu-Brown's Euler-product floors for $S$ at height $p$
+\cite[Propositions~8 and~11]{hb} have the same main term as
+Theorem~\ref{thm:transport},
+$\frac14L-\frac12\kappa(\frac{1+p}2+\frac t4L)$ with $L=\log\frac x{4\pi}$.
+Two identities explain this. His heat weight is the Gaussian average,
+\[
+e^{t\log^2n/4}=\E\,n^{-\tau N}\qquad(\tau^2=t/2),
+\]
+and his point $s_B=w_B+\frac t2\alpha_B(w_B)$, with $w_B=\frac12(1-iz)=\bar w$
+and $\alpha_B(s)=\frac1{2s}+\frac1{s-1}+\frac12\log\frac s{2\pi}$, is the
+complex conjugate of the first iterate of the saddle equation
+$s=w+\frac t2\alpha(s)$, with $\alpha$ in Stirling form;
+$\alpha-\alpha_B=-\frac1{6s^2}+O(s^{-4})$. He controls the remainder
+through Polymath's Riemann--Siegel coefficient bounds
+\cite[Propositions~6.1--6.2]{polymath} on the band $3\le\im z\le6$ and a
+truncated, heat-weighted Dirichlet polynomial. Here it is controlled by
+the exact Gaussian representation and Euler-product majorants, at any
+$p>1$.
+
+Table~\ref{tab:compare} compares the two at his height $p=61/20$ and his
+$X=60000083951.5$, on intervals $[t^-,t^-+\frac1{200}]$ (R2, section B).
+His bounds are his expressions (31)--(32) with his own upper-bound inputs,
+which reproduce his certified Table~3 (R2, section A). Ours take the gain
+at $t^-$ and $E$ at $t^+$, with $G$ from Corollary~\ref{cor:derivative}
+and the best radius $r\in\{0.05,\dots,0.35\}$.
+
+\begin{table}[ht]
+\centering\small
+\begin{tabular}{@{}ccccccc@{}}
+\toprule
+$t^-$ & main term & his $C^*$ & our $C$ & his $G^*$ & our $G$ & main term of $G$\\
+\midrule
+0 & 5.2974 & 5.2903 & 5.2958 & 0.2340 & 0.2174 & 0.2094\\
+0.05 & 5.3867 & 5.3603 & 5.3777 & 0.1738 & 0.1601 & 0.1217\\
+0.10 & 5.4408 & 5.4193 & 5.4316 & 0.1121 & 0.1111 & 0.0771\\
+0.15 & 5.4761 & 5.4607 & 5.4683 & 0.0735 & 0.0769 & 0.0517\\
+0.195 & 5.4982 & 5.4869 & 5.4917 & 0.0520 & 0.0562 & 0.0374\\
+\bottomrule
+\end{tabular}
+\caption{Floors for $S$ and bounds for $\partial_pS$ at $p=61/20$, $x\ge X$
+(floating; his values reproduce his certified ones).}\label{tab:compare}
+\end{table}
+
+The loss against the main term is $0.007$--$0.026$ for his floor and
+$0.0016$--$0.0095$ for ours, so our remainder is $1.7$ to $4.4$ times
+smaller. Our derivative bound is smaller for $t\le0.1$ and up to $8\%$
+larger after. At $p=301/100$, against his Table~2 (Proposition~8, steps of
+$\frac1{100}$), our floor is larger by $0.012$ to $0.025$. These
+comparisons set a floating evaluation against a certified one: the
+advantage counts only once our evaluation is certified.
+
+\section{A check from the classical strip}\label{sec:strip}
+
+This section restarts Hakimoglu-Brown's derivative-kernel comparison
+\cite[Theorem~12]{hb} from the classical strip $M(0)\le1$ instead of his
+hypothesis $M(0)\le\frac9{16}$. Its analytic inputs are those of \cite{hb},
+an unrefereed working draft. We use them as stated and do not re-derive
+them. Throughout, $X=60000083951.5$, $b=\frac1{25}$ and $p=\frac{61}{20}$,
+so $B=p^2=9.3025$; the squared heights that \cite{hb} calls $q_i$ are
+written $Q_i$.
+
+\subsection{Imported statements}\label{sec:imported}
+
+The four statements below are quoted from \cite{hb}, with its notation
+adapted to ours. They are not proved here.
+
+\begin{lemma}[{\cite[Lemma~2]{hb}}; imported]\label{lem:hb2}
+For $0\le t\le\frac15$, a zero of $H_t$ with $\lvert\re z\rvert\le X$
+satisfies $\lvert\im z\rvert<\frac15$.
+\end{lemma}
+
+Its proof uses Polymath's boundary computation
+\cite[Section~8.4, claim~(a)]{polymath}, that $H_t(x+iy)\ne0$ for
+$X\le x\le X+1$, $\frac15\le y\le1$ and $0\le t\le\frac15$; the verification
+of the Riemann hypothesis below height $\frac12(X+1)$; backward Hermite
+splitting \cite[Proposition~3.1(ii)]{polymath}; and the classical strip
+theorem.
+
+\begin{lemma}[{\cite[Lemma~10]{hb}}; imported]\label{lem:hb10}
+Let $p>0$, $B=p^2$, $0<A_2<B$ and $\lambda,\mu\ge0$. For $D\ge0$ and
+$0\le r\le A_2$ put $w=D+B-r$, $\Delta_{\rm K}=w^2+4Dr$ and
+\begin{equation}\label{eq:Pi}
+\Pi(D,r)=2\Delta_{\rm K}^2-(D+A_2+3r)\Bigl(2\lambda w\Delta_{\rm K}-\mu(2w+4B)\Delta_{\rm K}+8\mu Bw^2\Bigr).
+\end{equation}
+If $\Pi\ge0$ throughout that domain, then for $0<h^2\le A_2$, $0\le v\le h$
+and $(d,v)\ne(0,h)$,
+\[
+K_h(d,v)\ \ge\ h\Bigl(\frac\lambda pK_p(d,v)-\mu\,\partial_pK_p(d,v)\Bigr).
+\]
+\end{lemma}
+
+For $\lambda=1$ and $\mu=0$ this is the kernel inequality in the proof of
+Proposition~\ref{prop:paired}; the derivative term pays for $\lambda>1$.
+We rechecked the proof of Lemma~\ref{lem:hb10}; it holds for every
+$A_2<B$.
+
+\begin{proposition}[{\cite[Proposition~11]{hb}}; imported]\label{prop:hb11}
+Let $p=\frac{61}{20}$ and $0\le t^-\le t^+\le\frac15$. Put
+$\sigma_p=\frac{1+p}2=\frac{81}{40}$, $u=\sigma_p+5.57\,t^-$,
+$u_8=\sigma_p+2.78\,t^-$, $\bar e=\frac{p-1}2-2.78\,t^-$, $N_1=65536$,
+$N_*=69098$, $L_*=2\log N_*+3$, and for $j=0,1,2$
+\begin{gather*}
+\delta_j=\sum_{n=2}^{N_1}\bigl(e^{t^+\log^2n/4}-1\bigr)(\log n)^jn^{-u}+\int_{N_1}^\infty(\log y)^jy^{-u_8}\dd y,\\
+\varrho_0=1.01\,N_*^{-p}\Bigl(\frac{N_*^{\bar e+1}}{\bar e+1}+N_*^{\bar e}\Bigr),\qquad\varrho_1=L_*\varrho_0,\qquad\varrho_2=(L_*^2+10^{-9})\varrho_0,\\
+\eta_0=10^{-6},\quad\eta_1=4\cdot10^{-5},\quad\eta_2=1.6\cdot10^{-3},\quad\nu_1=\tfrac12+10^{-10},\quad\nu_2=\tfrac14+10^{-10},\\
+e_0=\delta_0+\varrho_0+\eta_0,\qquad e_1=\nu_1\delta_1+\varrho_1+\eta_1,\qquad e_2=\nu_2\delta_2+\varrho_2+\eta_2+10^{-9},\\
+\varepsilon_0=\zeta(u)e_0,\quad\varepsilon_1=\zeta(u)\bigl(e_1+\nu_1\kappa(u)e_0\bigr),\quad
+\varepsilon_2=\zeta(u)\bigl\{e_2+2\nu_1\kappa(u)e_1+\nu_2\bigl(K_2(u)+\kappa(u)^2\bigr)e_0\bigr\}.
+\end{gather*}
+If $\varepsilon_0<\frac12$, then for $x\ge X$ and $t^-\le t\le t^+$
+\begin{align*}
+S(x,p,t)&\ \ge\ C^*:=5.5716-10^{-6}-\nu_1\kappa(u)-\frac{\varepsilon_1}{1-\varepsilon_0},\\
+\partial_pS(x,p,t)&\ \le\ G^*:=\nu_2K_2(u)+\frac{\varepsilon_2}{1-\varepsilon_0}+\Bigl(\frac{\varepsilon_1}{1-\varepsilon_0}\Bigr)^2+2\cdot10^{-10}.
+\end{align*}
+\end{proposition}
+
+These are \cite[(28)--(32)]{hb}, where $\zeta(u)$, $\kappa(u)$, $K_2(u)$,
+$\nu_j$, $\varrho_j$ and $\bar e$ are written $Z$, $\psi$, $\psi_2$, $c_j$,
+$\rho_j$ and $e$. The proof uses \cite[Lemma~3]{hb}, an approximation of
+Riemann--Siegel type on $3\le\im z\le6$ derived from Polymath's
+decomposition \cite[(37)--(41)]{polymath} and coefficient bounds
+\cite[Propositions~6.1--6.2]{polymath}; its Lemma~6; the normalizer bounds
+of its Section~3; its fixed-cutoff argument around~(16); its
+estimate~(27); and the elementary inequalities of its Section~8.2, among
+them $\frac14\log\frac x{4\pi}>5.5716$ and
+$\lfloor\sqrt{x/4\pi}\rfloor\ge N_*$ for $x\ge X$.
+
+\begin{theorem}[{\cite[Theorem~12]{hb}}; imported]\label{thm:hb12}
+Assume $M(0)\le Q_0<B=p^2$. Choose $0=t_0<\dots<t_n\le\frac15$,
+$d_i=t_{i+1}-t_i$, and $Q_0>Q_1>\dots>Q_n\ge b$. For $0\le i<n$ suppose
+that $C_i,G_i,\lambda_i,\mu_i\ge0$ satisfy
+\[
+S(x,p,t)\ge C_i,\qquad\partial_pS(x,p,t)\le G_i\qquad(x\ge X,\ t_i\le t\le t_{i+1}),
+\]
+that \eqref{eq:Pi} with $(A_2,\lambda,\mu)=(Q_i,\lambda_i,\mu_i)$ is
+nonnegative for $D\ge0$ and $0\le r\le Q_i$, and that
+\[
+k_i=4\Bigl\{\frac{\lambda_iC_i}p-\mu_iG_i-\frac{2\lambda_i}{B-Q_i}-\frac{2\mu_i(B+Q_i)}{(B-Q_i)^2}\Bigr\}>0 .
+\]
+If $e^{k_id_i}(2+k_iQ_{i+1})\ge2+k_iQ_i$ for every $i$, then
+$M(t_n)\le Q_n$ and $\Lambda\le t_n+\frac12Q_n$.
+\end{theorem}
+
+Its proof uses Lemmas~\ref{lem:hb2} and~\ref{lem:hb10}, the zero dynamics
+of Proposition~\ref{prop:paired}, the classical strip theorem, backward
+Hermite splitting, and \cite[Theorem~1.5(i)]{polymath}, which places
+every nonreal zero at $\lvert x\rvert<\exp(C/t)$ with an absolute constant
+$C$, for compact attainment of a first contact.
+
+\subsection{Where the initial strip enters}\label{sec:q0}
+
+Hakimoglu-Brown states that his hypothesis ``fixes the initial value
+$q_0=9/16$ of the strip comparison in Theorem~12; the zero dynamics, the
+boundary input, the approximation on $3\le y\le6$, the kernel inequality,
+and all certificates are independent of it'' \cite[Section~1.1]{hb}, and
+he calls Theorem~12 ``a general conversion theorem''. We checked this
+against the proofs. Lemma~\ref{lem:hb2} uses the classical bound
+$\lvert\im z\rvert\le1$, not $Q_0$. The barrier argument of
+Theorem~\ref{thm:hb12} needs the barrier to start above $M(0)$, together
+with the inputs listed after it. Lemma~\ref{lem:hb10} needs only
+$A_2<B$. With $Q_0=1$ we have $M(0)\le1$, $Q_0<B$, and a final time below
+$\frac15$. His Section~1.1 lists other half-planes only for $\sigma<1$, and
+his Remark~5 and Section~9 warn against extrapolating his closed one-step
+formulas to $\sigma=1$. Those warnings concern only the closed formulas.
+Indeed, from $Q_0=1$ his closed formulas do not reach $\frac1{25}$ by
+$t=\frac15$ \cite[Remark~5]{hb}, and neither does the comparison of
+Proposition~\ref{prop:paired} with the floors of
+Proposition~\ref{prop:hb11} (R2, section C).
+
+\begin{proposition}[conditional on \cite{hb}]\label{prop:table}
+Assume Lemmas~\ref{lem:hb2} and~\ref{lem:hb10},
+Proposition~\ref{prop:hb11} and Theorem~\ref{thm:hb12}, together with the
+inputs their proofs use: from \cite{hb}, Lemmas~3 and~6, the normalizer
+bounds of Section~3, the fixed-cutoff argument around~(16), estimate~(27)
+and the elementary inequalities of Section~8.2; from \cite{polymath}, the
+boundary computation of Section~8.4, equations (37)--(41),
+Propositions~3.1(ii), 6.1 and~6.2 and Theorem~1.5(i); the verification of
+the Riemann hypothesis to height $\frac12(X+1)$ \cite{platt2017}; and the
+classical strip theorem. Then
+\[
+\Lambda\ \le\ \frac{18891}{100000}=0.18891 .
+\]
+\end{proposition}
+
+\begin{proof}
+Apply Theorem~\ref{thm:hb12} with $Q_0=1$, $n=34$, $t_i=i/200$ for
+$i\le33$, $d_i=\frac1{200}$ for $i<33$ and $d_{33}=\frac{391}{100000}$, so
+that $t_{34}=\frac{16891}{100000}$, with $Q_{34}=b$ and the rows
+$(Q_i,C_i,G_i,\lambda_i,\mu_i)$ of Table~\ref{tab:table} in
+Appendix~\ref{app:table}. The classical strip gives $M(0)\le1=Q_0<B$. The
+certificate R3 (Appendix~\ref{app:repro}) verifies the remaining
+hypotheses.
+\begin{itemize}
+\item In exact rational arithmetic: the chain ($t_{i+1}=t_i+d_i$,
+$Q_{i+1}<Q_i$, $Q_{i+1}\ge b$, $Q_{34}=b$, $t_{34}\le\frac15$; the last
+step $Q_{34}<Q_{33}$ is read off the table); the
+nonnegativity of \eqref{eq:Pi} on every row, through the positivity of all
+$34\cdot8\cdot25=6800$ Bernstein coefficients of the compactification
+\cite[(34)--(35)]{hb} on eight subintervals, the smallest being
+$1.4155\cdot10^{-3}$; $7.780<k_i<10.592$; every gate, with the
+exponential replaced by its Taylor sum $\mathrm T_{20}(y)=\sum_{j\le20}y^j/j!\le e^y$,
+smallest margin $1.079\cdot10^{-5}$; and the two inequalities of
+\cite[Section~8.2]{hb} displayed after Proposition~\ref{prop:hb11}. The
+other elementary inequalities of that section are taken from \cite{hb}.
+\item In directed-rounding decimal arithmetic at 32 digits, with $\exp$ and
+$\log$ moved one unit outward and the other operations rounded toward the
+bound: on every row, $C_i\le C^*$ and $G_i\ge G^*$ for
+Proposition~\ref{prop:hb11} on $[t_i,t_i+\frac1{200}]\supseteq[t_i,t_{i+1}]$,
+with margins at least $2.05\cdot10^{-6}$ and $2.02\cdot10^{-6}$, and
+$\varepsilon_0\le0.0191<\frac12$. Here $\zeta(u)$, $\kappa(u)$, $K_2(u)$ and
+the $\delta_j$ are replaced by the finite upper bounds of
+\cite[Section~8.2]{hb}; $C^*$ decreases and $G^*$ and $\varepsilon_0$
+increase in these inputs.
+\end{itemize}
+Theorem~\ref{thm:hb12} then gives $M(t_{34})\le\frac1{25}$ and
+$\Lambda\le t_{34}+\frac1{50}=\frac{18891}{100000}$.
+\end{proof}
+
+\subsection{Control, construction and sensitivity}
+
+\emph{Control.} The same programme, applied to \cite[Table~3]{hb}
+($Q_0=\frac9{16}$), returns its printed certificates: the least Bernstein
+coefficient
+$623287907570432169922330885087/479268282493202500000000000000000$ in row
+21, a gate margin above $2.78\cdot10^{-8}$, scalar margins
+$2.05\cdot10^{-6}$ and $1.10\cdot10^{-6}$, $8.63<k_i<10.32$ and the final
+time $\frac{11963}{100000}$.
+
+\emph{Construction} (R2, section C). The $C_i$ and $G_i$ are
+Proposition~\ref{prop:hb11} on $[t_i,t_i+\frac1{200}]$, rounded down and up
+to $10^{-4}$ with a margin of at least $2\cdot10^{-6}$; they do not depend
+on $Q$. Rows 0--23 coincide with
+\cite[Table~3]{hb}, except that $G_6$ is $10^{-4}$ larger here; his row 23
+covers $[0.115,0.11963]$ and ours $[0.115,0.12]$. The $\lambda_i,\mu_i$
+maximize $k_i$ over a sampled admissible region, are reduced by $0.005$,
+and were then rounded and lowered until the exact Bernstein test passed.
+$Q_{i+1}$ is the barrier value $(Q_i+2/k_i)e^{-k_id_i}-2/k_i$ rounded up
+to $10^{-6}$, plus $10^{-6}$.
+
+\emph{Sensitivity} (floating, R2 section C). A step of $\frac1{400}$ gives
+$0.18850$, a step of $\frac1{100}$ gives $0.18961$, and a polynomial margin
+of $0.02$ gives $0.18982$.
+
+\emph{Thin places.} The scalar margins of about $2\cdot10^{-6}$ are
+Hakimoglu-Brown's own; since rows 0--23 share his $C_i$ and, except
+$G_6$, his $G_i$, a correction to his constants would affect both tables
+alike. In row 0 the leading coefficient of \eqref{eq:Pi} in $D$,
+$2-2\lambda_0+2\mu_0=0.014$, is exact and positive. The smallest gate
+margin is $1.08\cdot10^{-5}$.
+
+\subsection{Literature}\label{sec:literature}
+
+A same-model literature search, made after the table was built, read what
+it could fetch through a summarizing tool. Its quotations were not checked
+against the full texts, so Table~\ref{tab:literature} reports the claims as
+their authors state them.
+
+\begin{table}[ht]
+\centering\small
+\begin{tabularx}{\textwidth}{@{}>{\raggedright\arraybackslash}p{0.2\textwidth}>{\raggedright\arraybackslash}p{0.3\textwidth}X@{}}
+\toprule
+Source & Claim and status & Relation to Proposition~\ref{prop:table}\\
+\midrule
+Gordon \cite{gordon} & $\Lambda\le0.157656619$, no half-plane hypothesis; ``has not undergone external peer review''; uses Platt and Trudgian's verification to $3\cdot10^{12}$ & dynamics of the highest zero with a reference barrier started at $(1000001/1000000)^2$, ``the global strip gives strict entry at zero''; own analytic inputs and a far larger $X$\\
+Raymond \cite{raymond} & $\Lambda<0.149396$; ``has not undergone external peer review'' & ``starts from the classical width-one zero strip at time zero''; 608 time cells\\
+Planat \cite{planat} & $\Lambda\le0.148611789321711$ under stated premises & ``a directed comparison beginning with the classical zero strip'', using Raymond's source data; its appendix on \cite{hb} was not read\\
+Gomila \cite{gomila} & $\Lambda\le0.1787854$, ``not yet been peer reviewed'' & Polymath's criterion at $X\approx6\cdot10^{12}$ with a barrier computation; no strip comparison\\
+Raymond, conditional \cite{raymondcond} & $\Lambda<0.116398$ assuming no zero with $\re s>\frac78$ & below \cite{hb}'s $0.13963$ under the same hypothesis\\
+\bottomrule
+\end{tabularx}
+\caption{Unrefereed 2026 claims found by the literature search.}\label{tab:literature}
+\end{table}
+
+No later version of \cite{hb} was found, and nothing stating $0.18891$ or
+restarting its Theorem~12 from $Q_0=1$ turned up. Three imported inputs
+were checked. Platt \cite{platt2017} isolates the zeros of $\zeta$ with
+imaginary part up to $30{,}610{,}046{,}000$, which exceeds
+$\frac12(X+1)=30{,}000{,}041{,}976.25$ by about $6\cdot10^8$. Polymath's
+Section~1 records the barrier region $X\le x\le X+1$, $y_0\le y\le1$,
+$0\le t\le t_0$ with $t_0=0.2$, $X=6\times10^{10}+83952-0.5$ and $y_0=0.2$
+\cite{polymath}; its Section~8.4 could not be fetched in full. Polymath's
+Theorem~1.5 holds for $0<t\le\frac12$ with an absolute, non-explicit
+constant, as the barrier argument of Theorem~\ref{thm:hb12} needs.
+
+Starting a stepped comparison from the classical strip is therefore not new,
+and Proposition~\ref{prop:table} is not a record. Its distinctive feature
+is that its numerical inputs are published, refereed computations,
+Polymath's barrier and Platt's verification, with the
+analytic lemmas of \cite{hb} on top, checked by a 34-row certificate. The
+stronger claims rest on their authors' own unrefereed computations. For
+this paper the zeta value is a cross-check: with published numerical inputs
+only, a stepped comparison started from the classical strip already goes
+below the published $0.2$, consistent with those claims.
+
+\section{Planning: what the floor would give}\label{sec:planning}
+
+The values in this section are planning arithmetic. They combine the
+floating evaluation of Section~\ref{sec:numerics} with comparison
+arguments, some of which are not yet written, and they bound nothing.
+
+\subsection{\texorpdfstring{$\zeta$}{Zeta} with the transport floor}
+
+Replace Proposition~\ref{prop:hb11} by Theorem~\ref{thm:transport} and
+Corollary~\ref{cor:derivative}, evaluated as in Section~\ref{sec:compare},
+and run Theorem~\ref{thm:hb12}, or the comparison of
+Proposition~\ref{prop:paired} (\cite[Theorem~9]{hb}), at
+$X=60000083951.5$ inside the window $t\le\frac15$ of Lemma~\ref{lem:hb2},
+with steps of $\frac1{200}$ (R2, section D). Table~\ref{tab:zetaplan}
+gives the resulting planning values for $\Lambda$; a dash means that
+$\frac1{25}$ is not reached by $t=\frac15$, or that $p^2<5Q_0$.
+
+\begin{table}[ht]
+\centering\small
+\begin{tabular}{@{}ccccc@{}}
+\toprule
+$p$ & Thm.~\ref{thm:hb12}, $Q_0=1$ & Thm.~\ref{thm:hb12}, $Q_0=\frac9{16}$ & Prop.~\ref{prop:paired}, $Q_0=1$ & Prop.~\ref{prop:paired}, $Q_0=\frac9{16}$\\
+\midrule
+2.0 & 0.1953 & 0.1441 & -- & 0.1491\\
+2.25 & 0.1885 & 0.1382 & 0.2085 & 0.1524\\
+2.5 & 0.1869 & \textbf{0.1370} & 0.2148 & 0.1561\\
+2.75 & \textbf{0.1867} & 0.1374 & -- & 0.1599\\
+3.05 & 0.1882 & 0.1391 & -- & 0.1643\\
+3.5 & 0.1934 & 0.1424 & -- & 0.1707\\
+\bottomrule
+\end{tabular}
+\caption{Planning values for $\zeta$ with the floor of Theorem~\ref{thm:transport} (R2, section D).}\label{tab:zetaplan}
+\end{table}
+
+So the transport floor would move $0.18891$ and Hakimoglu-Brown's
+conditional $0.13963$ by about $0.002$--$0.003$. Heights below $2.5$ do not
+help, for two reasons: the polynomial of Lemma~\ref{lem:hb10} leaves less
+room for $\lambda>1$ when $B=p^2$ is small, and $K_2$ grows as $\sigma$
+approaches $1$, which raises $G$. Once certified,
+Theorem~\ref{thm:transport} and Corollary~\ref{cor:derivative} would
+supply the inputs of such a table without the Riemann--Siegel
+approximation of \cite[Lemma~3]{hb}. The comparison itself would still
+rest on Lemmas~\ref{lem:hb2} and~\ref{lem:hb10} and
+Theorem~\ref{thm:hb12}.
+
+\subsection{The Dirichlet family}
+
+For Dirichlet $L$-functions the transport floor is the main new input. Take
+every primitive character of conductor $q$, start from $Q_0=1$, and let
+$b\to0$: by Section~\ref{sec:family}, \eqref{eq:Ep} then holds at every
+real $x$ and no finite region is needed. Table~\ref{tab:familyplan} gives
+the time at which the barrier reaches $0$, for the best $p$ on a small
+grid. The first column uses the constant floor $C_{q,\fa}(p)$ with
+Proposition~\ref{prop:paired} \cite[Section~4.6]{p01}; the second uses
+$\mathfrak F_0(t)$ with the same comparison (R1, section G); the third uses
+$\mathfrak F_0(t)$ and Corollary~\ref{cor:derivative} with the kernel of
+Lemma~\ref{lem:hb10} (R2, section E). R2's own run with the kernel of
+Proposition~\ref{prop:paired} agrees with the second column to about
+$0.001$.
+
+\begin{table}[ht]
+\centering\small
+\begin{tabular}{@{}cccccc@{}}
+\toprule
+$q$ & parity & constant floor & transport floor & transport floor, Lemma~\ref{lem:hb10} kernel & change\\
+\midrule
+$10^6$ & even & 0.3161 (2.85) & 0.3076 (2.70) & 0.2920 (4.0) & $-7.6\%$\\
+$10^6$ & odd & 0.3073 (2.69) & 0.2990 (2.54) & 0.2827 (3.5) & $-8.0\%$\\
+$10^8$ & even & 0.2618 (2.37) & 0.2519 (2.37) & 0.2344 (3.0) & $-10.5\%$\\
+$10^8$ & odd & 0.2541 (2.27) & 0.2447 (2.27) & 0.2268 (3.0) & $-10.7\%$\\
+$10^{12}$ & even & 0.1936 (2.24) & 0.1868 (2.24) & 0.1651 (2.5) & $-14.7\%$\\
+$10^{12}$ & odd & 0.1897 (2.24) & 0.1839 (2.24) & 0.1611 (2.5) & $-15.1\%$\\
+\bottomrule
+\end{tabular}
+\caption{Planning values for $\Lambda_\chi$, uniform over primitive characters of conductor $q$, with the best $p$ in parentheses. The last column compares the third column with the first, using the printed values.}\label{tab:familyplan}
+\end{table}
+
+The best $p$ for the even character at $q=10^6$ is at the edge of the grid.
+These values remain conditional on the uniform confinement of the nonreal
+zeros at positive times (\cite{p01}, item H12), on a written comparison
+theorem for the family, now with Lemma~\ref{lem:hb10}'s kernel and the
+second exterior input $\partial_pS\le G$, and on the certification of
+Section~\ref{sec:numerics}.
+
+For a single character, Platt's verification heights \cite{platt2016} give
+$\ell\approx16.6$ for every $q\le400{,}000$ \cite[Section~4.1]{p01}, above
+every $\ell_1$ of Table~\ref{tab:thresholds}. So on the grid
+\eqref{eq:Ep} holds with $C(t)=\frac14\ell-\frac12\kappa(\sigma_0)$ beyond
+the verified height of each such character. A bound for $\Lambda_\chi$
+would still need a barrier for that character and a finite-region argument.
+
+\subsection{What remains}
+
+\begin{enumerate}
+\item \emph{Review.} Sections~\ref{sec:setting}--\ref{sec:derivative}
+should be reviewed first, since everything else rests on
+Theorem~\ref{thm:transport} and Corollary~\ref{cor:derivative}.
+\item \emph{Certification.} Re-evaluate $E$ and the bound of
+Corollary~\ref{cor:derivative} with outward rounding, with monotone
+majorants on intervals of $\sigma$ and interval quadrature; cover every
+$t\in(0,\frac12]$ by monotonicity or Lipschitz bounds between grid times;
+prove the decrease of $E$ in $\ell_*$ term by term; and bound the
+$O(\tau^3)$ term below $t=0.001$. If outward rounding moves
+$\ell_1(\sqrt5)$ above 12, the conductor thresholds of
+Table~\ref{tab:conductor} must be recomputed.
+\item \emph{The family.} Confinement (H12) and the comparison theorem
+\cite{p01}.
+\item \emph{$\zeta$.} An independent re-derivation of \cite[Lemma~3 and
+Proposition~11]{hb}, on which Proposition~\ref{prop:table} rests.
+\item \emph{Literature.} Full readings of
+\cite{gordon,raymond,planat,gomila}.
+\end{enumerate}
+
+\clearpage
+\appendix
+
+\section{The table of Proposition~\ref{prop:table}}\label{app:table}
+
+Here $p=\frac{61}{20}$, $t_i=i/200$, $d_i=\frac1{200}$ for $i<33$,
+$d_{33}=\frac{391}{100000}$ and $Q_{34}=\frac1{25}$. Each next height is the
+following row's $Q_i$. The columns are $10^6Q_i$, $10^4C_i$, $10^4G_i$,
+$10^3\lambda_i$ and $10^3\mu_i$; all entries are exact.
+
+\begin{table}[h!]
+\centering\small
+\begin{tabular}{@{}rrrrrr@{\qquad}rrrrrr@{}}
+\toprule
+$i$ & $10^6Q_i$ & $10^4C_i$ & $10^4G_i$ & $10^3\lambda_i$ & $10^3\mu_i$ & $i$ & $10^6Q_i$ & $10^4C_i$ & $10^4G_i$ & $10^3\lambda_i$ & $10^3\mu_i$\\
+\midrule
+0 & 1000000 & 52902 & 2340 & 1474 & 481 & 17 & 356111 & 54036 & 1280 & 1804 & 1068\\
+1 & 952036 & 52964 & 2322 & 1524 & 540 & 18 & 329670 & 54090 & 1225 & 1815 & 1096\\
+2 & 904955 & 53031 & 2284 & 1574 & 609 & 19 & 304348 & 54143 & 1172 & 1824 & 1118\\
+3 & 858867 & 53100 & 2234 & 1621 & 691 & 20 & 280116 & 54193 & 1122 & 1834 & 1139\\
+4 & 813966 & 53172 & 2174 & 1644 & 738 & 21 & 256931 & 54242 & 1074 & 1844 & 1167\\
+5 & 770525 & 53245 & 2107 & 1658 & 764 & 22 & 234774 & 54288 & 1028 & 1853 & 1188\\
+6 & 728552 & 53318 & 2036 & 1671 & 788 & 23 & 213607 & 54334 & 985 & 1861 & 1208\\
+7 & 688021 & 53390 & 1962 & 1684 & 815 & 24 & 193403 & 54377 & 944 & 1869 & 1227\\
+8 & 648917 & 53462 & 1887 & 1698 & 841 & 25 & 174128 & 54419 & 905 & 1878 & 1255\\
+9 & 611181 & 53533 & 1813 & 1710 & 865 & 26 & 155754 & 54459 & 867 & 1885 & 1273\\
+10 & 574812 & 53602 & 1739 & 1723 & 892 & 27 & 138247 & 54498 & 832 & 1892 & 1291\\
+11 & 539777 & 53670 & 1667 & 1735 & 916 & 28 & 121575 & 54536 & 798 & 1899 & 1308\\
+12 & 506049 & 53736 & 1596 & 1748 & 944 & 29 & 105705 & 54572 & 766 & 1905 & 1325\\
+13 & 473600 & 53800 & 1528 & 1759 & 967 & 30 & 90610 & 54606 & 736 & 1912 & 1341\\
+14 & 442411 & 53862 & 1462 & 1771 & 995 & 31 & 76255 & 54640 & 707 & 1919 & 1367\\
+15 & 412455 & 53922 & 1399 & 1782 & 1018 & 32 & 62616 & 54672 & 679 & 1925 & 1383\\
+16 & 383698 & 53980 & 1338 & 1794 & 1046 & 33 & 49660 & 54703 & 653 & 1930 & 1397\\
+\bottomrule
+\end{tabular}
+\caption{The 34 rows from $Q_0=1$ (certificate R3).}\label{tab:table}
+\end{table}
+
+\section{Reproducibility and checks}\label{app:repro}
+
+\subsection{Programmes and records}
+
+The programmes and records are in
+\nolinkurl{papers/investigations-3/03_effective_outer_remainders/numerics/round-1/}
+of the repository \cite{records}. They are standard-library Python and
+each prints one deterministic JSON record. Run each from that folder as
+\begin{center}
+\texttt{python3 -I <programme>.py > <RECORD>.json}
+\end{center}
+\begin{itemize}
+\item[P1] \nolinkurl{height_p_transport_claude_20261017.py}, record R1
+\nolinkurl{HEIGHT_P_TRANSPORT_CLAUDE_20261017.json} (106\,kB). Sections A--D
+are floating diagnostics, E, F and H a floating evaluation of
+Proposition~\ref{prop:E}, and G planning. A few minutes.
+\item[P2] \nolinkurl{hakimoglu_brown_comparison_claude_20261017.py}, record
+R2 \nolinkurl{HAKIMOGLU_BROWN_COMPARISON_CLAUDE_20261017.json} (19\,kB). It
+imports P1. Section A reproduces printed values of \cite{hb}: its value
+(18), the gates of its Table~2, the margins of its Proposition~8, the
+margins of its Table~3 in floating point, and its Tables~6--7 at rows 0, 12
+and 23. Section B is the floating
+comparison of Section~\ref{sec:compare}; C builds the table of
+Appendix~\ref{app:table}, with exact Bernstein and gate checks and floating
+scalars; D and E are planning. A few minutes.
+\item[P3] \nolinkurl{unconditional_strip_table_claude_20261017.py}, record
+R3 \nolinkurl{UNCONDITIONAL_STRIP_TABLE_CLAUDE_20261017.json} (2\,kB): the
+certificate used in the proof of Proposition~\ref{prop:table}, with the
+control on \cite[Table~3]{hb}. A few minutes.
+\end{itemize}
+Their SHA-256 values are:
+{\footnotesize
+\begin{align*}
+&\text{P1}\quad\texttt{ab90cc7dee26ad872c0dff84e96a97bfea1d39838115fe6c277330f9a0b47690}\\
+&\text{R1}\quad\texttt{e1e2f2b2b19973006484b5f79aa3373a440d981ba46003e28762879fd290341a}\\
+&\text{P2}\quad\texttt{4f78eeab23aa25a676aa80eb61c24b4829d35789384497043c76c76f3139c3de}\\
+&\text{R2}\quad\texttt{460a3478b9f0f63af370e3ffb3e884e584f7e7d123cc1cd9e4ac3bf9a1ba660b}\\
+&\text{P3}\quad\texttt{94073d936706b5ca0ad6fa707a39e8566bee938c4cd4806a04af1122c5ef5935}\\
+&\text{R3}\quad\texttt{69997f80743411bb952c727f1e8c25b710fe28b14d8a2f995967fb08383eff67}
+\end{align*}}
+
+Each record regenerates byte for byte with Python 3.13.16 on x86\_64 Linux,
+where it was generated. With Python 3.10.12 on aarch64 Linux, R3 replays
+byte for byte; R1 agrees in sections A and E--H and differs in 24 floats of
+sections B--D (three identity differences below $10^{-15}$ in size and 21
+measured deviations, by at most $4\cdot10^{-11}$ relative); R2 differs in
+two floats of section A, at rounding level. A replay shows that the
+arithmetic is reproducible, not that the floating evaluation is
+outward-rounded.
+
+\subsection{Same-model checks}
+
+Two Claude subagents of the drafting session, with their own code, checked
+the notes this manuscript integrates \cite{n01,n02}.
+\begin{itemize}
+\item For Sections~\ref{sec:saddle}--\ref{sec:numerics} (mpmath): the
+identity of Lemma~\ref{lem:gauss} at four points to $10^{-30}$; the three
+forms of Lemma~\ref{lem:shift} to $4\cdot10^{-31}$;
+Lemmas~\ref{lem:euler}--\ref{lem:partial} in about 23\,000 randomized cases
+with no violation; the identity in the proof of Proposition~\ref{prop:E}
+to $4\cdot10^{-42}$ for random entire $\Theta$ and to $8\cdot10^{-28}$ for
+the $\Theta$ of $\zeta$; Binet's formula to $10^{-29}$; and P1's $E$ at five
+parameter points against its own implementation, with relative differences
+at most $4\cdot10^{-5}$, two of them with P1's value below its own.
+\item For Sections~\ref{sec:derivative} and~\ref{sec:strip} (mpmath at 34
+digits): that nothing in \cite[Lemmas~2, 3 and 10, Proposition~11 and
+Theorem~12]{hb} uses the half-plane except through $M(0)\le Q_0$; every
+$k_i$ and gate in exact rationals; the polynomial condition on all 34 rows
+with its own adaptive Bernstein scheme and a different compactification;
+$C^*$ and $G^*$ on all rows, with the same smallest margins; the
+comparison from $Q_0=1$, reaching $\frac1{25}$ at $t\approx0.16865$; the
+identities of Section~\ref{sec:compare}; and the formulas of
+Corollary~\ref{cor:derivative}, including the branch points of
+Remark~\ref{rem:branch}.
+\end{itemize}
+Both checks found errors, corrected in the notes before this draft: status
+words stronger than a grid evaluation supports; a misquoted contraction
+constant; a missing invariant domain for the zeta saddle; the crude strip
+bound allowed where $\mathcal Q_*$ is not justified (numerically harmless);
+numbers that disagreed with the record; the bound
+$\beta'\le\frac1{12}$ of Lemma~\ref{lem:stirling}, at first only sampled;
+the domain of Corollary~\ref{cor:derivative}; an incomplete dependency
+list; the word ``unconditional'' for the table's conclusion; and Decimal
+powers in P3, now repeated directed multiplications.
+
+Two further Claude subagents checked this manuscript against the notes,
+the records and \cite{hb}, with their own code. They found no error in the
+proofs of Sections~\ref{sec:setting}--\ref{sec:derivative}. Points they
+raised, corrected here, include: conductor thresholds of
+Table~\ref{tab:conductor} that the notes had rounded below the passing
+values of the record; two
+numbers of Section~\ref{sec:validation} that the notes had interchanged;
+the claim that \cite[Proposition~7]{hb} shares the main term of
+Theorem~\ref{thm:transport}; the hypotheses of
+Corollary~\ref{cor:derivative} on the disk; and the dependency list of
+Proposition~\ref{prop:table}. All these checks share the model family of
+the drafting model and are not independent review.
+
+\section*{Acknowledgement of LLM assistance}
+This working manuscript was drafted for Edward Baker with substantial
+assistance from Claude Opus 5.5 (Anthropic; configured identifier
+\texttt{claude-opus-5-5}, Claude Cowork, reasoning effort max). The model
+carried out the derivations, wrote the check programmes, ran the
+literature search and drafted the text; same-model subagents made the
+checks described in Appendix~\ref{app:repro}. These checks do not
+constitute independent cross-model or specialist human review. The
+preprint \cite{hb} on which Section~\ref{sec:strip} relies states that it
+was prepared with ChatGPT assistance and has not been independently
+refereed. This manuscript is unreviewed and does not imply the intended
+author's endorsement of its mathematical claims.
+
+\begin{thebibliography}{99}
+
+\bibitem{debruijn}
+N.~G. de Bruijn,
+\emph{The roots of trigonometric integrals},
+Duke Math. J. \textbf{17} (1950), 197--226.
+
+\bibitem{dlmf}
+NIST Digital Library of Mathematical Functions, \url{https://dlmf.nist.gov/},
+Section~5.9(ii).
+
+\bibitem{dobner}
+A.~Dobner,
+\emph{A proof of Newman's conjecture for the extended Selberg class},
+Acta Arith. \textbf{201} (2021), 29--62; arXiv:2005.05142.
+
+\bibitem{gomila}
+J.~Gomila,
+\emph{A computer-assisted proof of the bound $\Lambda\le0.1787854$ for the
+de Bruijn--Newman constant}, unrefereed preprint, 20 August 2026,
+repository \nolinkurl{judegomila/dbn-lambda-01787854-candidate-audit}
+(commit a74738d). Read in part.
+
+\bibitem{gordon}
+S.~Gordon,
+\emph{A computer-assisted upper bound for the de Bruijn--Newman constant},
+unrefereed preprint, September 2026, repository
+\nolinkurl{stefangordon/dbn-upper-bound} (commit 64c47f2). Read in part.
+
+\bibitem{hb}
+C.~Hakimoglu-Brown,
+\emph{A conditional bound $\Lambda\le0.13963$ for the de Bruijn--Newman
+constant}, arXiv:2610.12803v1, working draft of 7 October 2026,
+unrefereed.
+
+\bibitem{newman}
+C.~M. Newman,
+\emph{Fourier transforms with only real zeros},
+Proc. Amer. Math. Soc. \textbf{61} (1976), 245--251.
+
+\bibitem{p01}
+Project~01 (Dirichlet--Newman families), Note~01,
+\emph{Normalization and transfer contract}, 17 October 2026,
+\nolinkurl{papers/investigations-3/01_dirichlet_newman_families/notes/01_NORMALIZATION_AND_TRANSFER_CONTRACT_CLAUDE_20261017.md},
+in the repository of \cite{records}. Unreviewed.
+
+\bibitem{n01}
+Note~01, \emph{Height-$p$ transport and Lemma $A_p$}, 17 October 2026,
+\nolinkurl{papers/investigations-3/03_effective_outer_remainders/notes/round-1/01_HEIGHT_P_TRANSPORT_AND_LEMMA_AP_CLAUDE_20261017.md}
+(SHA-256 \texttt{f591b9e7\dots85a2}), in the repository of
+\cite{records}.
+
+\bibitem{n02}
+Note~02, \emph{Hakimoglu-Brown's strip comparison against the height-$p$
+floor, and a table from the unconditional strip}, 17 October 2026,
+\nolinkurl{papers/investigations-3/03_effective_outer_remainders/notes/round-1/02_HAKIMOGLU_BROWN_COMPARISON_AND_UNCONDITIONAL_TABLE_CLAUDE_20261017.md}
+(SHA-256 \texttt{3a95a8d3\dots77d5}), in the repository of
+\cite{records}.
+
+\bibitem{planat}
+Planat, arXiv:2610.18214v1, 13 October 2026, unrefereed. Read in part
+(HTML to Section~3).
+
+\bibitem{platt2016}
+D.~J. Platt,
+\emph{Numerical computations concerning the GRH},
+Math. Comp. \textbf{85} (2016), 3009--3027, doi:10.1090/mcom/3077;
+arXiv:1305.3087.
+
+\bibitem{platt2017}
+D.~J. Platt,
+\emph{Isolating some non-trivial zeros of zeta},
+Math. Comp. \textbf{86} (2017), 2449--2467, doi:10.1090/mcom/3198.
+
+\bibitem{platttrudgian}
+D.~Platt and T.~Trudgian,
+\emph{The Riemann hypothesis is true up to $3\cdot10^{12}$},
+Bull. Lond. Math. Soc. \textbf{53} (2021), 792--797; arXiv:2004.09765.
+
+\bibitem{polymath}
+D.~H.~J. Polymath,
+\emph{Effective approximation of heat flow evolution of the Riemann $\xi$
+function, and a new upper bound for the de Bruijn--Newman constant},
+Res. Math. Sci. \textbf{6} (2019), Paper No.~31; arXiv:1904.12438.
+
+\bibitem{raymond}
+Raymond,
+\emph{Correlated translated probes and the bound $\Lambda<0.149396$},
+Zenodo record 22867547, 21 September 2026, unrefereed. Read in part.
+
+\bibitem{raymondcond}
+Raymond, conditional bound $\Lambda<0.116398$ under the hypothesis that
+$\zeta$ has no zero with $\re s>\frac78$, Zenodo record of 10 October 2026,
+unrefereed. Read in part.
+
+\bibitem{records}
+Round-one code and records,
+\nolinkurl{papers/investigations-3/03_effective_outer_remainders/numerics/round-1/},
+repository \url{https://github.com/ebbaker/shifted-zeta-positivity}
+(Appendix~\ref{app:repro}).
+
+\bibitem{rodgerstao}
+B.~Rodgers and T.~Tao,
+\emph{The de Bruijn--Newman constant is non-negative},
+Forum Math. Pi \textbf{8} (2020), e6.
+
+\end{thebibliography}
+
+\end{document}

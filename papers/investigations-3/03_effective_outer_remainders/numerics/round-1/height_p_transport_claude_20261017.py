@@ -7,7 +7,7 @@ Prepared for Edward Baker with LLM assistance.  Model: Claude Opus 5.5
 17 October 2026.  Standard library only; prints one deterministic JSON record
 (floats rounded to 12 significant figures).
 
-Companion of papers/investigations-3/03_effective_outer_remainders/notes/
+Companion of papers/investigations-3/03_effective_outer_remainders/notes/round-1/
 01_HEIGHT_P_TRANSPORT_AND_LEMMA_AP_CLAUDE_20261017.md.  Every number below is
 a floating-point evaluation: either a direct numerical computation (sections B
 and C) or the evaluation of the explicit majorants of the note's Proposition
