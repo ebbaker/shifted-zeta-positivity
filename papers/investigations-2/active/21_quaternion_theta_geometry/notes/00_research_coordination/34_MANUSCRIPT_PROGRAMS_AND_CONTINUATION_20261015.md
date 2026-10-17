@@ -8,6 +8,8 @@ status: continuation
 
 # Manuscript integration, research programs, and continuation
 
+> **Chat-history routing update, 17 October 2026.** Current histories: [Chat 15 — Summarize closed-strip extension](../../chat-histories/0015_2026-10-15T03-43-11Z_summarize-closed-strip-extension.json). Use this investigation’s [local registry](../../chat-histories/index.json) and [relocation receipt](../../CHAT_HISTORY_RELOCATION_20261017.json) for current numbers and preserved provenance; this supersedes the routing and numbering below. All future investigation 21 chats belong in this investigation’s `chat-histories/` folder.
+
 15 October 2026 (America/New_York). Prepared for Edward Baker with substantial LLM assistance. Recorded model **gpt-6-astra**, reasoning effort **ultra**, verified from the current rollout metadata. This is an internal handoff, not external refereeing or formal proof verification.
 
 ## Current state
@@ -56,7 +58,7 @@ This conversation retains its existing formal replay registration:
 - Title: **Summarize closed-strip extension**.
 - Thread: `01a13da8-2366-7031-8699-3e8b6f0cefa2`.
 - History number: **12**.
-- Canonical file: `papers/investigations-2/formal_replay_crosswalk/chat-histories/0012_2026-10-15T03-43-11Z_summarize-closed-strip-extension.json`.
+- Canonical file: `papers/investigations-2/active/21_quaternion_theta_geometry/chat-histories/0015_2026-10-15T03-43-11Z_summarize-closed-strip-extension.json`.
 - Original creation: `2026-10-15T03:43:11.719Z`; first capture: `2026-10-15T03:46:06.178Z`.
 
 The [point-in-time verification receipt](../../reviews/CHAT_HISTORY_MANUSCRIPT_PROGRAM_VERIFICATION_20261015.json) confirms unique registration, stored-byte and canonical-content hashes, exact correspondence with all 22 completed public messages then available, and preservation of the previous 15-message prefix and original identity fields. Three previous completed turns and their final replies are represented. That snapshot contains 46,601 bytes, SHA-256 `0b68a4d537ceeda99a480641ee3489844ab9ea791575bf94d381f6cc2e8ddbca`.

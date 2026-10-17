@@ -1,5 +1,7 @@
 # Coefficient core, exponential averages and two-endpoint continuation
 
+> **17 October 2026 — history routing update.** Historical formal-replay routing below is superseded. Chats [18](../../chat-histories/0018_2026-10-15T11-51-01Z_continue-theta-manifold-research.json), [19](../../chat-histories/0019_2026-10-15T13-36-13Z_review-research-paths.json) now use this investigation's [local registry](../../chat-histories/index.json), as recorded in the [relocation receipt](../../CHAT_HISTORY_RELOCATION_20261017.json). Original identities, provenance and public messages are preserved. All future Investigation 22 chats belong in this local history folder.
+
 15 October 2026, America/New_York. Prepared for Edward Baker with substantial LLM assistance. Recorded model **gpt-6-astra**, reasoning effort **ultra**. This is the bounded research cycle following Review 05 and the user's instruction to update the overview and continue the recommended program. The current conversation retains formal-replay history **19**. It does not replace history 18 from the preceding integration.
 
 ## Outcome and reading order
@@ -55,4 +57,4 @@ The [manifest](../../numerics/COEFFICIENT_CORE_AND_TWO_ENDPOINT_CHECKS_20261015.
 
 The current manuscript source hash remains `114611f06f0928827045399561d2f83ca6ca9abc1d35a9d5cd7d406c845aa417`. Its existing build record and historical receipts remain unchanged. The new research is not a manuscript integration, an external referee report, a formal proof, or a theta sign certificate.
 
-Use the existing formal-replay [registry](../../../../formal_replay_crosswalk/chat-histories/index.json) and history 19 for this conversation. Refresh through the repository recorder, preserving the identity. The exact current-turn follow-up captures the real final reply only after it has been sent. Later legitimate chat refreshes need not match an earlier provenance checkpoint's file hash.
+Use the existing formal-replay [registry](../../chat-histories/index.json) and history 19 for this conversation. Refresh through the repository recorder, preserving the identity. The exact current-turn follow-up captures the real final reply only after it has been sent. Later legitimate chat refreshes need not match an earlier provenance checkpoint's file hash.

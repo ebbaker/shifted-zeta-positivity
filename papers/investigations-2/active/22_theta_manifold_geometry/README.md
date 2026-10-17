@@ -1,5 +1,7 @@
 # Theta manifold geometry and signed collision control
 
+> **17 October 2026 — history routing update.** Historical formal-replay routing below is superseded. Chats [20](chat-histories/0020_2026-10-15T15-16-42Z_brainstorm-theta-geometry-paths.json), [21](chat-histories/0021_2026-10-15T16-30-47Z_continue-theta-manifold-geometry.json), [22](chat-histories/0022_2026-10-15T18-10-39Z_review-theta-manifold-geometry.json), [24](chat-histories/0024_2026-10-15T23-30-42Z_explore-spacetime-and-geometry-ideas.json) now use this investigation's [local registry](chat-histories/index.json), as recorded in the [relocation receipt](CHAT_HISTORY_RELOCATION_20261017.json). Original identities, provenance and public messages are preserved. All future Investigation 22 chats belong in this local history folder.
+
 15 October 2026. Prepared for Edward Baker with substantial LLM assistance. Recorded model **gpt-6-astra**, reasoning effort **ultra**.
 
 Investigation 22 studies whether the geometry of the arithmetic theta source can control signed turning and prevent degeneration of the physical jet surface. It was opened at the author's request as a separate continuation of [Investigation 21](../21_quaternion_theta_geometry/README.md).

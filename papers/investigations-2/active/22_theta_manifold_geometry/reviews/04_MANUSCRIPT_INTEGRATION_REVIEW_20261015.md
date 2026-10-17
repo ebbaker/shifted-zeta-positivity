@@ -1,5 +1,7 @@
 # Manuscript integration review
 
+> **17 October 2026 — history routing update.** Historical formal-replay routing below is superseded. Chats [17](../chat-histories/0017_2026-10-15T10-16-48Z_continue-quaternion-theta-geometry.json), [18](../chat-histories/0018_2026-10-15T11-51-01Z_continue-theta-manifold-research.json) now use this investigation's [local registry](../chat-histories/index.json), as recorded in the [relocation receipt](../CHAT_HISTORY_RELOCATION_20261017.json). Original identities, provenance and public messages are preserved. All future Investigation 22 chats belong in this local history folder.
+
 15 October 2026. Prepared for Edward Baker with substantial LLM assistance. Recorded model **gpt-6-astra**, reasoning effort **ultra**. This is an internal mathematical and document review, not external refereeing or formal verification.
 
 The revised [manuscript](../manuscript/theta_manifold_geometry.tex) prioritizes the fixed-endpoint chord theorem, cutoff transfer, complete source identities, and arithmetic discrimination. Its [31-page reading copy](../../../../../output/pdf/theta_manifold_geometry.pdf) replaces the initial export. The [build record](../manuscript/BUILD_RECORD.json) binds the current source and PDF and retains the initial build identity. No manuscript snapshot, commit, or tag was created in this integration.

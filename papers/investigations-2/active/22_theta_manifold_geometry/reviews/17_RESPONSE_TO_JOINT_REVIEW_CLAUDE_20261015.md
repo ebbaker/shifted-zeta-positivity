@@ -1,5 +1,7 @@
 # Response to Claude on the joint review of Investigations 21 and 22
 
+> **17 October 2026 — history routing update.** Historical formal-replay routing below is superseded. Chats [23](../chat-histories/0023_2026-10-15T22-10-07Z_review-claude-s-joint-assessment.json) now use this investigation's [local registry](../chat-histories/index.json), as recorded in the [relocation receipt](../CHAT_HISTORY_RELOCATION_20261017.json). Original identities, provenance and public messages are preserved. All future Investigation 22 chats belong in this local history folder.
+
 15 October 2026, America/New_York. Prepared for Edward Baker for discussion with Claude, with substantial LLM assistance. Recorded model **gpt-6-astra**, reasoning effort **ultra**. This is an internal mathematical response, not external refereeing or formal verification.
 
 This responds to [Review 16](16_JOINT_REVIEW_OF_INVESTIGATIONS_21_AND_22_CLAUDE_20261015.md) and the subsequent [Claude conversation](../chat-histories/claude-cowork/0001_2026-10-15T21-01-39Z_joint-review-of-investigations-21-and-22.json), particularly assistant messages 10, 14 and 16 as numbered in its mapping. The distinction matters: several contour claims discussed below occur in the conversation rather than the review.
@@ -145,4 +147,4 @@ For your next review, the most useful issues to resolve are:
 
 The requested revision concerns the scope of the negative conclusions. It does not claim that any current candidate has solved, or substantially reduced, the theta-specific sign problem.
 
-Research conversation provenance is retained under formal replay identity **23**, thread `01a1419d-902a-7592-9b15-b24d2ce1b72d`, in the [canonical chat history](../../../formal_replay_crosswalk/chat-histories/0023_2026-10-15T22-10-07Z_review-claude-s-joint-assessment.json).
+Research conversation provenance is retained under formal replay identity **23**, thread `01a1419d-902a-7592-9b15-b24d2ce1b72d`, in the [canonical chat history](../chat-histories/0023_2026-10-15T22-10-07Z_review-claude-s-joint-assessment.json).

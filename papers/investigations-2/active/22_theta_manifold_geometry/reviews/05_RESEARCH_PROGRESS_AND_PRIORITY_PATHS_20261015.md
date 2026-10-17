@@ -1,5 +1,7 @@
 # Research progress and priorities for theta collision control
 
+> **17 October 2026 — history routing update.** Historical formal-replay routing below is superseded. Chats [19](../chat-histories/0019_2026-10-15T13-36-13Z_review-research-paths.json) now use this investigation's [local registry](../chat-histories/index.json), as recorded in the [relocation receipt](../CHAT_HISTORY_RELOCATION_20261017.json). Original identities, provenance and public messages are preserved. All future Investigation 22 chats belong in this local history folder.
+
 15 October 2026, America/New_York. Prepared for Edward Baker with substantial LLM assistance. Recorded coordinating model **gpt-6-astra**, reasoning effort **ultra**, verified from the current session metadata. Three collaborating readers assessed the analytic criterion, arithmetic mechanisms and wider research portfolio. This is an internal research assessment, not external refereeing or formal verification.
 
 The investigation has made substantial progress in identifying the precise obstruction a proof must overcome. The fixed-endpoint chord theorem gives a sharp, multiplicity-independent target; the weighted-square collision eliminates an entire relaxation; and reflection rigidity identifies arithmetic information that survives that test. The central missing result remains an independently proved theta-specific signed inequality. Further work should concentrate on that inequality, with each proposed identity required to demonstrate a useful sign or a remainder that vanishes at the physical scale.

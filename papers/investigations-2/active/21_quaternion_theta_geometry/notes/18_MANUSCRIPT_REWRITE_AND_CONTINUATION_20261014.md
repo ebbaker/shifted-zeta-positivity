@@ -1,5 +1,7 @@
 # Manuscript rewrite and continuation
 
+> **Chat-history routing update, 17 October 2026.** Current histories: [Chat 11 — Summarize quaternion theta results](../chat-histories/0011_2026-10-14T22-15-11Z_summarize-quaternion-theta-results.json). Use this investigation’s [local registry](../chat-histories/index.json) and [relocation receipt](../CHAT_HISTORY_RELOCATION_20261017.json) for current numbers and preserved provenance; this supersedes the routing and numbering below. All future investigation 21 chats belong in this investigation’s `chat-histories/` folder.
+
 14 October 2026. Prepared for Edward Baker with substantial LLM assistance.
 Recorded model: **gpt-6-astra (Codex)**; reasoning effort: **ultra**, verified
 from this reply's rollout configuration. Earlier research and certificates
@@ -197,7 +199,7 @@ numerics guides, and the earlier reviews for the longer interval runs.
 
 This chat retains thread id `01a13c7b-d95c-72d0-85a3-a8a118ae8cec` and its
 sole formal-replay registration, number **8**:
-[registered history](../../../formal_replay_crosswalk/chat-histories/0008_2026-10-14T22-15-11Z_summarize-quaternion-theta-results.json).
+[registered history](../chat-histories/0011_2026-10-14T22-15-11Z_summarize-quaternion-theta-results.json).
 The user requested that identity be preserved. Completed public text was
 refreshed at the beginning of this reply; the final workflow refreshes it
 again and arranges the bounded exact-turn capture for

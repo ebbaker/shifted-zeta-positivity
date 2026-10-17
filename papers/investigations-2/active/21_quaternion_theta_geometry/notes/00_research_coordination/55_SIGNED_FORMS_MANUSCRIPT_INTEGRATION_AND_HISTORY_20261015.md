@@ -6,6 +6,8 @@ status: manuscript_integrated_pointwise_theta_bound_open
 
 # Manuscript integration and research history verification
 
+> **Chat-history routing update, 17 October 2026.** Current histories: [Chat 19 — Review octonionic signed-bound ideas](../../chat-histories/0019_2026-10-15T06-24-10Z_review-octonionic-signed-bound-ideas.json). Use this investigation’s [local registry](../../chat-histories/index.json) and [relocation receipt](../../CHAT_HISTORY_RELOCATION_20261017.json) for current numbers and preserved provenance; this supersedes the routing and numbering below. All future investigation 21 chats belong in this investigation’s `chat-histories/` folder.
+
 15 October 2026, America/New_York. Prepared for Edward Baker with substantial LLM assistance. Recorded coordinating model **gpt-6-astra**, reasoning effort **ultra**, verified from current-session metadata.
 
 The stable [manuscript](../../manuscript/quaternion_theta_geometry.tex) now incorporates every substantive result in Notes 38–53. Its 96-page PDF, source hashes, and compilation checks are identified by the [build record](../../manuscript/BUILD_RECORD.json). The [new research overview](../../research-overview/RESEARCH_OVERVIEW_20261015_SIGNED_FORMS_AND_PRIMITIVE.md) supersedes the preceding overview without replacing its historical text.

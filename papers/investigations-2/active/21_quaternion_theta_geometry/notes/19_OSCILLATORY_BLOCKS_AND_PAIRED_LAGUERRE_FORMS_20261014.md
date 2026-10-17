@@ -1,5 +1,7 @@
 # Oscillatory blocks and paired Laguerre forms: threshold three
 
+> **Chat-history routing update, 17 October 2026.** Current histories: [Chat 12 — Continue quaternion theta rewrite](../chat-histories/0012_2026-10-14T23-49-23Z_continue-quaternion-theta-rewrite.json), [Chat 11 — Summarize quaternion theta results](../chat-histories/0011_2026-10-14T22-15-11Z_summarize-quaternion-theta-results.json). Use this investigation’s [local registry](../chat-histories/index.json) and [relocation receipt](../CHAT_HISTORY_RELOCATION_20261017.json) for current numbers and preserved provenance; this supersedes the routing and numbering below. All future investigation 21 chats belong in this investigation’s `chat-histories/` folder.
+
 14 October 2026. Prepared for Edward Baker with substantial LLM assistance.
 Recorded parent model: **gpt-6-astra (Codex)**; reasoning effort: **ultra**,
 verified from the active turn metadata. Parallel analytic derivation and
@@ -450,7 +452,7 @@ coverage must be connected only after an actual bound is established.
 
 This conversation is newly and uniquely registered in the formal replay
 lane as number **9**, thread `01a13cd2-1633-7f50-a8bb-d62373ca4e24`:
-[history](../../../formal_replay_crosswalk/chat-histories/0009_2026-10-14T23-49-23Z_continue-quaternion-theta-rewrite.json).
+[history](../chat-histories/0012_2026-10-14T23-49-23Z_continue-quaternion-theta-rewrite.json).
 It is distinct from Note 18's number-8 conversation, whose identity is
 preserved. The current turn uses the bounded exact-turn final-capture
 workflow; native completion-hook activation has not been verified.

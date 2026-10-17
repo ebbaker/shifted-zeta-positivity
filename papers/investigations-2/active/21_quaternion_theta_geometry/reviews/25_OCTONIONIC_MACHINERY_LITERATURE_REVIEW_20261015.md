@@ -6,6 +6,8 @@ status: internal_literature_review
 
 # Octonionic simplifications and the theta collision problem
 
+> **Chat-history routing update, 17 October 2026.** Current histories: [Chat 16 — Review octonionic simplifications](../chat-histories/0016_2026-10-15T04-25-26Z_review-octonionic-simplifications.json). Use this investigation’s [local registry](../chat-histories/index.json) and [relocation receipt](../CHAT_HISTORY_RELOCATION_20261017.json) for current numbers and preserved provenance; this supersedes the routing and numbering below. All future investigation 21 chats belong in this investigation’s `chat-histories/` folder.
+
 15 October 2026, America/New_York. Prepared for Edward Baker with substantial LLM assistance. Recorded model **gpt-6-astra**, reasoning effort **ultra**, verified from this turn's metadata. Three parallel LLM investigations supported the algebra, analysis, and arithmetic review. The deductions and checks below are internal research assessments, not external refereeing or proof-assistant verification.
 
 ## Assessment

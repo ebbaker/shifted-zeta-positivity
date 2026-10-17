@@ -1,5 +1,7 @@
 # Arithmetic dilation and nonlocal continuation
 
+> **17 October 2026 — history routing update.** Historical formal-replay routing below is superseded. Chats [22](../../chat-histories/0022_2026-10-15T18-10-39Z_review-theta-manifold-geometry.json) now use this investigation's [local registry](../../chat-histories/index.json), as recorded in the [relocation receipt](../../CHAT_HISTORY_RELOCATION_20261017.json). Original identities, provenance and public messages are preserved. All future Investigation 22 chats belong in this local history folder.
+
 15 October 2026, America/New_York. Prepared for Edward Baker with substantial LLM assistance. Recorded coordinating model **gpt-6-astra**, reasoning effort **ultra**, verified from current-turn metadata.
 
 The user clarified that the continuation concerns the arithmetic investigation. The compact-surface direction is parked. This continuation does not revise the manuscript or develop a winding pilot.
@@ -42,4 +44,4 @@ The current bounded candidates are closed at this level; no parameter optimizati
 
 The [review](../../reviews/14_MULTIPLICATIVE_DILATION_AND_NONLOCAL_ARITHMETIC_REVIEW_20261015.md) distinguishes analytic arguments from finite checks. The [checker](../../numerics/check_arithmetic_dilation.py) passes 47 exact assertions and has an independent fresh-process replay. The [manifest](../../numerics/ARITHMETIC_CONTINUATION_CHECKS_20261015.json) binds the new work and records preservation of the existing manuscript/PDF. There is no new theta sign region, noncollision theorem, RH claim, commit, or manuscript snapshot.
 
-This conversation retains formal replay identity **22**, thread `01a140c2-517a-7b73-8684-502f71e31500`, in its [canonical archive](../../../../formal_replay_crosswalk/chat-histories/0022_2026-10-15T18-10-39Z_review-theta-manifold-geometry.json). Continue the authorized start/end refresh procedure without re-registering it. Other chats use their relevant investigation unless their existing registration or explicit instructions say otherwise.
+This conversation retains formal replay identity **22**, thread `01a140c2-517a-7b73-8684-502f71e31500`, in its [canonical archive](../../chat-histories/0022_2026-10-15T18-10-39Z_review-theta-manifold-geometry.json). Continue the authorized start/end refresh procedure without re-registering it. Other chats use their relevant investigation unless their existing registration or explicit instructions say otherwise.

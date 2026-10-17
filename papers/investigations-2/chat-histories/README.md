@@ -278,3 +278,15 @@ The [history relocation record](../CHAT_HISTORY_RELOCATION_20261013.json)
 records the byte-preserving transfer. The [current layout update](../PORTFOLIO_LAYOUT_UPDATE_20261013.json)
 records reference maintenance. [index.json](index.json) gives the current
 capture time, count and hashes; standing refreshes continue in this archive.
+
+## Repository maintenance histories relocated on 17 October 2026
+
+17 October 2026. Prepared for Edward Baker with substantial LLM assistance.
+Recorded model: **gpt-6.1-sol (Codex)**; reasoning effort: **ultra**.
+
+- [Chat 5 — Fix rebase conflicts](0005_2026-10-16T16-48-48Z_fix-rebase-conflicts.json) (former formal replay 25).
+- [Chat 6 — Relocate misplaced chat histories](0006_2026-10-17T04-57-50Z_relocate-misplaced-chat-histories.json) (former formal replay 30).
+
+These shared maintenance chats have one registration here. The
+[relocation receipt](../CHAT_HISTORY_RELOCATION_20261017.json)
+records preserved public content, provenance, and the authorized destination numbering.

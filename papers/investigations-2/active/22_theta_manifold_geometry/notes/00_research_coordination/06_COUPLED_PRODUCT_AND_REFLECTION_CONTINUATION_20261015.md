@@ -1,5 +1,7 @@
 # Coupled theta products, preserved cancellations and the next signed target
 
+> **17 October 2026 — history routing update.** Historical formal-replay routing below is superseded. Chats [19](../../chat-histories/0019_2026-10-15T13-36-13Z_review-research-paths.json) now use this investigation's [local registry](../../chat-histories/index.json), as recorded in the [relocation receipt](../../CHAT_HISTORY_RELOCATION_20261017.json). Original identities, provenance and public messages are preserved. All future Investigation 22 chats belong in this local history folder.
+
 15 October 2026, America/New_York. Prepared for Edward Baker with substantial LLM assistance. Recorded model **gpt-6-astra**, reasoning effort **ultra**, verified from the current turn metadata. This is the additional continuation requested after the coefficient-core research cycle. The existing formal-replay conversation remains history **19**; its integrity and prior final capture have been verified. The manuscript remains unchanged.
 
 ## What the leading-priority experiment established

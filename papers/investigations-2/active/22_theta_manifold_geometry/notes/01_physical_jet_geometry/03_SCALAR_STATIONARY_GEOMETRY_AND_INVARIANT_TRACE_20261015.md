@@ -1,5 +1,7 @@
 # Scalar boundary geometry on the complete stationary locus
 
+> **17 October 2026 — history routing update.** Historical formal-replay routing below is superseded. Chats [21](../../chat-histories/0021_2026-10-15T16-30-47Z_continue-theta-manifold-geometry.json) now use this investigation's [local registry](../../chat-histories/index.json), as recorded in the [relocation receipt](../../CHAT_HISTORY_RELOCATION_20261017.json). Original identities, provenance and public messages are preserved. All future Investigation 22 chats belong in this local history folder.
+
 15 October 2026, America/New_York. Prepared for Edward Baker with substantial LLM assistance. Recorded coordinating model **gpt-6-astra**, reasoning effort **ultra**, verified by the coordinating session. Internal analytic review, not external refereeing or formal verification.
 
 This note reviews [arithmetic boundary geometry Note 01](01_ARITHMETIC_BOUNDARY_TRACE_AND_SIGNED_OBSERVATION_20261015.md) and the [signed quotient refinement](02_SIGNED_OBSERVATION_QUOTIENT_AND_COEFFICIENT_SINGULARITIES_20261015.md) before the next arithmetic investigation. It gives an additional geometric simplification. The simplification concerns the actual analytic heat field, rather than all vectors in a homogeneous coefficient relaxation. It supplies no arithmetic sign theorem.

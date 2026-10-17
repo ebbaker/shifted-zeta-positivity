@@ -6,6 +6,8 @@ status: continuation
 
 # Poisson splitting obstruction and weighted remainder continuation
 
+> **Chat-history routing update, 17 October 2026.** Current histories: [Chat 17 — Continue octonionic correlation work](../../chat-histories/0017_2026-10-15T05-14-09Z_continue-octonionic-correlation-work.json), [Chat 16 — Review octonionic simplifications](../../chat-histories/0016_2026-10-15T04-25-26Z_review-octonionic-simplifications.json). Use this investigation’s [local registry](../../chat-histories/index.json) and [relocation receipt](../../CHAT_HISTORY_RELOCATION_20261017.json) for current numbers and preserved provenance; this supersedes the routing and numbering below. All future investigation 21 chats belong in this investigation’s `chat-histories/` folder.
+
 15 October 2026, America/New_York. Prepared for Edward Baker with substantial LLM assistance. Recorded model **gpt-6-astra**, reasoning effort **ultra**, verified from the current session metadata. Internal research continuation, not external refereeing or formal proof verification.
 
 This continues [Note 37](37_OCTONIONIC_CORRELATION_INTEGRATION_AND_CONTINUATION_20261015.md). The established sign domains remain finite coverage through \(|x|=112\), eventual strict signs for \(\theta\ge61/24\), and the prior explicit outer bound for \(\theta\ge5\). No manuscript or PDF was revised during this continuation.

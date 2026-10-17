@@ -1,5 +1,7 @@
 # Manuscript integration and cross-time continuation
 
+> **Chat-history routing update, 17 October 2026.** Current histories: [Chat 12 — Continue quaternion theta rewrite](../chat-histories/0012_2026-10-14T23-49-23Z_continue-quaternion-theta-rewrite.json). Use this investigation’s [local registry](../chat-histories/index.json) and [relocation receipt](../CHAT_HISTORY_RELOCATION_20261017.json) for current numbers and preserved provenance; this supersedes the routing and numbering below. All future investigation 21 chats belong in this investigation’s `chat-histories/` folder.
+
 14 October 2026. Prepared for Edward Baker with substantial LLM assistance.
 Recorded model: **gpt-6-astra**, reasoning effort **ultra**. The manuscript
 retains the author field **Drafted for Edward Baker** and an explicit LLM
@@ -272,8 +274,8 @@ This conversation remains uniquely registered as **number 9** in the
 formal replay lane, following the author's explicit standing instruction:
 
 - Thread: `01a13cd2-1633-7f50-a8bb-d62373ca4e24`.
-- Archive: [0009_2026-10-14T23-49-23Z_continue-quaternion-theta-rewrite.json](../../../formal_replay_crosswalk/chat-histories/0009_2026-10-14T23-49-23Z_continue-quaternion-theta-rewrite.json).
-- Registry: [index.json](../../../formal_replay_crosswalk/chat-histories/index.json).
+- Archive: [0012_2026-10-14T23-49-23Z_continue-quaternion-theta-rewrite.json](../chat-histories/0012_2026-10-14T23-49-23Z_continue-quaternion-theta-rewrite.json).
+- Registry: [index.json](../chat-histories/index.json).
 - Current integration turn: `01a13cf8-422c-7f43-8ffe-9807f534ebf6`.
 - Point-in-time verification: [history verification receipt](../reviews/CHAT_HISTORY_INTEGRATION_VERIFICATION_20261014.json).
 

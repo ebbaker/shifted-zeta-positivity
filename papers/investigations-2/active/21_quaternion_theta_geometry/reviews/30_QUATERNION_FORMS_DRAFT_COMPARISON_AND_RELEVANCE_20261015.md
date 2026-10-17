@@ -1,5 +1,7 @@
 # Comparison and relevance of the quaternion forms drafts
 
+> **Chat-history routing update, 17 October 2026.** Current histories: [Chat 19 — Review octonionic signed-bound ideas](../chat-histories/0019_2026-10-15T06-24-10Z_review-octonionic-signed-bound-ideas.json). Use this investigation’s [local registry](../chat-histories/index.json) and [relocation receipt](../CHAT_HISTORY_RELOCATION_20261017.json) for current numbers and preserved provenance; this supersedes the routing and numbering below. All future investigation 21 chats belong in this investigation’s `chat-histories/` folder.
+
 15 October 2026, America/New_York. Prepared for Edward Baker with substantial LLM assistance. Recorded model **gpt-6-astra**, reasoning effort **ultra**, verified from current-session metadata. This is an internal LLM assessment, including three independently prompted checks of version differences, signed-structure relevance, and the nonabelian boundary claim. It is not external specialist review or formal verification.
 
 The older work is useful for preserving oriented bilinear pairings through a boundary representation. Neither draft establishes the theta-specific signed bound left open in [Note 49](../notes/00_research_coordination/49_OCTONIONIC_SIGNED_BOUND_ANALYTIC_CONTINUATION_20261015.md). [Note 50](../notes/04_octonionic_reductions/50_QUATERNION_FORMS_HODGE_PAIRING_AND_SOURCE_TARGET_20261015.md) extracts a directly proved closed self-dual lift, without relying on the drafts' unfinished kernel arguments.

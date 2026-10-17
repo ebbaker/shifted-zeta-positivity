@@ -1,5 +1,7 @@
 # Recurrence endpoint experiment and geometric continuation
 
+> **17 October 2026 — history routing update.** Historical formal-replay routing below is superseded. Chats [20](../../chat-histories/0020_2026-10-15T15-16-42Z_brainstorm-theta-geometry-paths.json) now use this investigation's [local registry](../../chat-histories/index.json), as recorded in the [relocation receipt](../../CHAT_HISTORY_RELOCATION_20261017.json). Original identities, provenance and public messages are preserved. All future Investigation 22 chats belong in this local history folder.
+
 15 October 2026, America/New_York. Prepared for Edward Baker with substantial LLM assistance. Recorded model **gpt-6-astra**, reasoning effort **ultra**. This is a research continuation note; no manuscript integration or theta signed-core theorem is claimed.
 
 ## Result of the requested experiment

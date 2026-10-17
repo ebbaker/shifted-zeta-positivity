@@ -1,5 +1,7 @@
 # Continuation after the height 112 certificate and phase controlled delay
 
+> **Chat-history routing update, 17 October 2026.** Current histories: [Chat 13 — Continue quaternion theta geometry](../chat-histories/0013_2026-10-15T00-47-29Z_continue-quaternion-theta-geometry.json). Use this investigation’s [local registry](../chat-histories/index.json) and [relocation receipt](../CHAT_HISTORY_RELOCATION_20261017.json) for current numbers and preserved provenance; this supersedes the routing and numbering below. All future investigation 21 chats belong in this investigation’s `chat-histories/` folder.
+
 14 October 2026. Prepared for Edward Baker with substantial LLM assistance.
 Recorded model **gpt-6.1-sol**, reasoning effort **ultra**, verified from
 this turn's session metadata. This handoff records existing results and
@@ -210,8 +212,8 @@ formal replay lane, with its existing identity:
 
 - Number **10**, title **Continue quaternion theta geometry**.
 - Thread `01a13d07-4714-7f83-a8f5-700a61bc5e0e`.
-- [Archive](../../../formal_replay_crosswalk/chat-histories/0010_2026-10-15T00-47-29Z_continue-quaternion-theta-geometry.json).
-- [Registry](../../../formal_replay_crosswalk/chat-histories/index.json).
+- [Archive](../chat-histories/0013_2026-10-15T00-47-29Z_continue-quaternion-theta-geometry.json).
+- [Registry](../chat-histories/index.json).
 - Original creation: 15 October 2026, 00:47:29.557 UTC, or 14 October,
   20:47:29.557 America/New_York.
 - First capture: 15 October 2026, 00:48:21.483 UTC, or 14 October,

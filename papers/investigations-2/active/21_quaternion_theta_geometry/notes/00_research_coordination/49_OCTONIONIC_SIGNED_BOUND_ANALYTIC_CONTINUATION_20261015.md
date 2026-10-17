@@ -6,6 +6,8 @@ status: analytic_continuation_pointwise_target_open
 
 # Octonionic signed-bound investigation and the remaining source estimate
 
+> **Chat-history routing update, 17 October 2026.** Current histories: [Chat 18 — Continue Poisson obstruction study](../../chat-histories/0018_2026-10-15T05-32-27Z_continue-poisson-obstruction-study.json). Use this investigation’s [local registry](../../chat-histories/index.json) and [relocation receipt](../../CHAT_HISTORY_RELOCATION_20261017.json) for current numbers and preserved provenance; this supersedes the routing and numbering below. All future investigation 21 chats belong in this investigation’s `chat-histories/` folder.
+
 15 October 2026, America/New_York. Prepared for Edward Baker with substantial LLM assistance. Recorded coordinating model **gpt-6.1-sol**, reasoning effort **ultra**, verified from current-session metadata. This continues [Note 45](45_LOCALIZED_POISSON_AND_CONSTANT_PACKAGE_CONTINUATION_20261015.md), following the author's direction to prioritize its second task and use octonionic machinery for analytic signed estimates.
 
 **The requested stronger pointwise theta bound remains open.** This continuation proves a pointwise bound with an explicit oriented boundary defect, a sharp averaged signed bound paid by physical energy, and an exact finite E8-character bridge. No numerical experiment, new numerical checker, or stationary pilot was run.
@@ -77,7 +79,7 @@ the completed public text extracted by the repository's approved parser.
 
 The [verification receipt](../../reviews/CHAT_HISTORY_AND_CONTINUATION_VERIFICATION_20261015.json)
 records the point-in-time counts, hashes, completed-turn checks and this
-note's updated identity. The [live registry](../../../../formal_replay_crosswalk/chat-histories/index.json)
+note's updated identity. The [live registry](../../chat-histories/index.json)
 remains authoritative after later captures; this reply's final text is
 captured only after it is actually sent. Native completion-hook activation
 has not been verified, so the bounded exact-turn follow-up is retained.

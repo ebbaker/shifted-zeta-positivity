@@ -1,32 +1,20 @@
 # Constrained operator squares chat histories
 
-14 October 2026. Prepared for Edward Baker with substantial LLM assistance.
-Model: gpt-6-astra (Codex), reasoning effort **ultra**.
+17 October 2026. Prepared for Edward Baker with substantial LLM assistance.
+Recorded model: **gpt-6.1-sol (Codex)**; reasoning effort: **ultra**.
 
-The originating conversation, Assess local theorem direction, retains its
-registered identity and number in
-[formal replay](../../../formal_replay_crosswalk/chat-histories/0005_2026-10-14T13-24-39Z_assess-local-theorem-direction.json).
-It is refreshed there; no duplicate history is created here.
+This is the canonical archive for conversations affiliated with this folder.
+Numbers are local and stay stable on routine refresh. The [17 October relocation receipt](../CHAT_HISTORY_RELOCATION_20261017.json) records former homes, numbers, hashes and preserved provenance.
 
-Future conversations specific to this investigation belong in this folder.
-Use the [refresh tool](../../../../../tools/refresh_chat_history.py)
-and [standing guide](../../../../../tools/CHAT_HISTORY.md); the registry
-will be created by that tool on first registration. Do not hand-edit
-registered history files.
+- [Chat 7 — Assess local theorem direction](0007_2026-10-14T13-24-39Z_assess-local-theorem-direction.json)
+- [Chat 8 — Continue investigation 20](0008_2026-10-14T14-51-35Z_continue-investigation-20.json)
 
-The continuation conversation, Continue investigation 20, retains its
-original history identity and number 6 in
-[formal replay](../../../formal_replay_crosswalk/chat-histories/0006_2026-10-14T14-51-35Z_continue-investigation-20.json).
-At Edward Baker's request, a
-[byte-identical reference copy](0006_2026-10-14T14-51-35Z_continue-investigation-20.json)
-is also saved here. Its [copy provenance](COPY_PROVENANCE.json) records the
-source registry entry, creation and capture dates, model configuration,
-message count, and verification hashes. It preserves the original public
-messages, identity, number, filename, and first-capture provenance.
+The [registry](index.json) gives current capture times, counts, recorded models and hashes.
+Use [the automatic history workflow](../../../../../tools/CHAT_HISTORY.md) with this folder as the destination.
+Preserve the existing conversation id and capture only completed public text.
 
-Automatic refresh continues at the original registration; this reference
-copy is a snapshot, with its capture time recorded in the provenance file.
-It is not a second registered conversation. The default for other
-investigation-specific conversations remains this investigation's history
-folder. Copy integration: gpt-6.1-sol (Codex), reasoning effort **ultra**,
-14 October 2026.
+The old unregistered number-6 reference copy was verified against
+[COPY_PROVENANCE.json](COPY_PROVENANCE.json) and consolidated into Chat 8.
+That unchanged provenance file describes the historical copy; its old routing is superseded.
+Number 6 remains reserved when selecting incoming numbers, so these registrations begin at 7.
+No second transcript copy remains.

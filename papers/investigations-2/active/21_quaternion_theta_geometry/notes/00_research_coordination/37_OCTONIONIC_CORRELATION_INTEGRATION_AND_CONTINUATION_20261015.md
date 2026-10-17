@@ -6,6 +6,8 @@ status: continuation
 
 # Octonionic and correlation integration: continuation
 
+> **Chat-history routing update, 17 October 2026.** Current histories: [Chat 16 — Review octonionic simplifications](../../chat-histories/0016_2026-10-15T04-25-26Z_review-octonionic-simplifications.json). Use this investigation’s [local registry](../../chat-histories/index.json) and [relocation receipt](../../CHAT_HISTORY_RELOCATION_20261017.json) for current numbers and preserved provenance; this supersedes the routing and numbering below. All future investigation 21 chats belong in this investigation’s `chat-histories/` folder.
+
 15 October 2026, America/New_York. Prepared for Edward Baker with substantial LLM assistance. Recorded model **gpt-6-astra**, reasoning effort **ultra**. This is an internal handoff, not external refereeing or formal proof verification.
 
 This note continues [Note 34](34_MANUSCRIPT_PROGRAMS_AND_CONTINUATION_20261015.md) and the author-authorized integration of [Review 25](../../reviews/25_OCTONIONIC_MACHINERY_LITERATURE_REVIEW_20261015.md). The [new overview](../../research-overview/RESEARCH_OVERVIEW_20261015_CORRELATION_KERNELS.md) supersedes the earlier overview as the program entry point. Historical files remain in place.

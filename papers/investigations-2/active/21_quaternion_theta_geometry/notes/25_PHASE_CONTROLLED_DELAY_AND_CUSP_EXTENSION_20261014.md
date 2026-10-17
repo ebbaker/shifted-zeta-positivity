@@ -1,5 +1,7 @@
 # Phase controlled Gaussian delay and a finite cusp extension
 
+> **Chat-history routing update, 17 October 2026.** Current histories: [Chat 13 — Continue quaternion theta geometry](../chat-histories/0013_2026-10-15T00-47-29Z_continue-quaternion-theta-geometry.json). Use this investigation’s [local registry](../chat-histories/index.json) and [relocation receipt](../CHAT_HISTORY_RELOCATION_20261017.json) for current numbers and preserved provenance; this supersedes the routing and numbering below. All future investigation 21 chats belong in this investigation’s `chat-histories/` folder.
+
 14 October 2026. Prepared for Edward Baker with substantial LLM assistance.
 Recorded parent model **gpt-6.1-sol**, reasoning effort **ultra**, verified
 from the current turn metadata. Parallel analytic and computational work,

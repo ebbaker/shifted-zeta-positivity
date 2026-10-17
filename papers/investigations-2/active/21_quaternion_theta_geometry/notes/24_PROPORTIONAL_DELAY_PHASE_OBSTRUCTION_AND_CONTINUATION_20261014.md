@@ -1,5 +1,7 @@
 # Proportional Gaussian delay and its stationary phase obstruction
 
+> **Chat-history routing update, 17 October 2026.** Current histories: [Chat 13 — Continue quaternion theta geometry](../chat-histories/0013_2026-10-15T00-47-29Z_continue-quaternion-theta-geometry.json), [Chat 12 — Continue quaternion theta rewrite](../chat-histories/0012_2026-10-14T23-49-23Z_continue-quaternion-theta-rewrite.json). Use this investigation’s [local registry](../chat-histories/index.json) and [relocation receipt](../CHAT_HISTORY_RELOCATION_20261017.json) for current numbers and preserved provenance; this supersedes the routing and numbering below. All future investigation 21 chats belong in this investigation’s `chat-histories/` folder.
+
 14 October 2026. Prepared for Edward Baker with substantial LLM assistance.
 Recorded parent model: **gpt-6.1-sol**, reasoning effort **ultra**, verified
 from the current session metadata. Parallel analytic derivations and an
@@ -523,7 +525,7 @@ All new permanent files remain below 1 MiB.
 
 This chat is newly registered as number **10** in the explicitly required
 formal replay lane, thread `01a13d07-4714-7f83-a8f5-700a61bc5e0e`, archive
-[0010_2026-10-15T00-47-29Z_continue-quaternion-theta-geometry.json](../../../formal_replay_crosswalk/chat-histories/0010_2026-10-15T00-47-29Z_continue-quaternion-theta-geometry.json).
+[0013_2026-10-15T00-47-29Z_continue-quaternion-theta-geometry.json](../chat-histories/0013_2026-10-15T00-47-29Z_continue-quaternion-theta-geometry.json).
 The preceding chat's number 9 and identity remain unchanged. The UTC
 archive date is 15 October; the author's local date is 14 October.
 The current turn is `01a13d07-7043-7671-8147-91397afab46e`.

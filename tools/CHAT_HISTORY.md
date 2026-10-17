@@ -62,8 +62,28 @@ entry metadata. Relocation time is separate from first-capture time.
 **The refresh CLI has no relocation command.** Passing a new
 `--history-dir` for an already registered conversation is rejected. The
 flag selects a refresh or initial registration destination; it does not
-move an archive. Do not re-register the conversation, renumber it, edit its
-public transcript, or use the flag to conceal duplicate registrations.
+move an archive. Do not re-register the conversation, edit its public
+transcript, or use the flag to conceal duplicate registrations. Preserve its
+number unless the user explicitly requests renumbering.
+
+### Explicitly requested renumbering
+
+17 October 2026. Prepared for Edward Baker with substantial LLM assistance;
+recorded model `gpt-6.1-sol`, reasoning effort **ultra**.
+
+The ordinary relocation procedure below preserves numbers and filenames.
+When the user explicitly requests renumbering, choose the destination's next
+unused number, respecting its counter and every reserved numbered file.
+Update the registry number and filename and only the archive's
+`archive_metadata.history_number`; preserve all other parsed archive fields.
+The canonical conversation-content hash must remain unchanged. Recompute the
+stored-byte hash and size, and verify embedded and registry numbers agree.
+Record old/new numbers, filenames and stored hashes, preserved creation and
+first-capture times, and the explicit authorization in the relocation receipt.
+Use the same locks, durable backups, transactions and rollback gates below.
+The [17 October affiliation correction](../papers/investigations-2/formal_replay_crosswalk/CHAT_HISTORY_RELOCATION_20261017.json)
+is a checked precedent, not a script to replay. Routine refreshes retain
+the resulting number and filename.
 
 ### Prepare and validate
 

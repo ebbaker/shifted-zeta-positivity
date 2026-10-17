@@ -1,5 +1,7 @@
 # Research coordination
 
+> **17 October 2026 — history routing update.** Historical formal-replay routing below is superseded. Chats [22](../../chat-histories/0022_2026-10-15T18-10-39Z_review-theta-manifold-geometry.json) now use this investigation's [local registry](../../chat-histories/index.json), as recorded in the [relocation receipt](../../CHAT_HISTORY_RELOCATION_20261017.json). Original identities, provenance and public messages are preserved. All future Investigation 22 chats belong in this local history folder.
+
 15 October 2026. Prepared for Edward Baker with substantial LLM assistance. Recorded model **gpt-6-astra**, reasoning effort **ultra**.
 
 Scope, provenance, manuscript integration and handoffs. See the [initial overview](../../research-overview/RESEARCH_OVERVIEW_20261015.md) and the [manuscript](../../manuscript/theta_manifold_geometry.tex).

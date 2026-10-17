@@ -1,5 +1,7 @@
 # Claude review of the active lifted-theta directions, with new directions
 
+**Chat routing update, 17 October 2026.** [Review investigation directions (current history 2)](../chat-histories/0002_2026-10-13T17-10-52Z_review-investigation-directions.json). These unique registrations were moved to their affiliated folders at Edward Baker's request. Use the destination registry for refreshes and new affiliated chats; this routing supersedes older formal-replay filing instructions below. Historical numbers in the narrative describe the earlier capture. [Relocation and renumbering receipt](../../formal_replay_crosswalk/CHAT_HISTORY_RELOCATION_20261017.json). Prepared for Edward Baker with substantial LLM assistance, `gpt-6.1-sol`, reasoning effort **ultra**.
+
 13 October 2026. Prepared for Edward Baker with LLM assistance.
 Model: Claude Opus 5.5 (configured identifier `claude-opus-5-5`; the serving
 model may differ), Claude Cowork, reasoning effort **max**.
@@ -17,7 +19,7 @@ the [GPT-6-astra review](ACTIVE_DIRECTIONS_REVIEW_CODEX_20261013.md), its
 [angular seeds](../../active/02_angular_jacobi_gluing/notes/ANGULAR_GLUING_AND_RIGIDITY_REVIEW_SEEDS_20261013.md)
 and the new [project 17](../../inactive/17_spacetime_collision_degree/notes/INITIAL_RESEARCH_PROGRAM_20261013.md);
 the [13 October planning conversation](../../chat-histories/0002_2026-10-13T12-54-02Z_review-newman-certificate-audit.json)
-and the [GPT-6-astra conversation](../../formal_replay_crosswalk/chat-histories/0003_2026-10-13T17-10-52Z_review-investigation-directions.json);
+and the [GPT-6-astra conversation](../chat-histories/0002_2026-10-13T17-10-52Z_review-investigation-directions.json);
 upstream [Heat Note 14](../../../quasi-rh/quasi-rh-exponent-descent/newman_collisions/notes/14_DIMENSIONAL_REDUCTION_AND_SUPERSYMMETRIC_HEAT_PROGRAM_20261010.md),
 [Heat Note 25](../../../quasi-rh/quasi-rh-exponent-descent/newman_collisions/notes/25_ENLARGED_STATE_TRANSPORT_CHORD_DYNAMICS_AND_THETA_GLUING_20261010.md)
 and project-17 Notes [4](../../../quasi-rh/quasi-rh-exponent-descent/newman_collisions/17_enlarged_state_transport/notes/4_COORDINATE_INVARIANCE_AND_IMPLICIT_HEAT_FOLDS_20261010.md),

@@ -6,6 +6,8 @@ status: internal_integration_review
 
 # Octonionic reductions and theta correlations: manuscript integration
 
+> **Chat-history routing update, 17 October 2026.** Current histories: [Chat 16 — Review octonionic simplifications](../chat-histories/0016_2026-10-15T04-25-26Z_review-octonionic-simplifications.json). Use this investigation’s [local registry](../chat-histories/index.json) and [relocation receipt](../CHAT_HISTORY_RELOCATION_20261017.json) for current numbers and preserved provenance; this supersedes the routing and numbering below. All future investigation 21 chats belong in this investigation’s `chat-histories/` folder.
+
 15 October 2026, America/New_York. Prepared for Edward Baker with substantial LLM assistance. Recorded model **gpt-6-astra**, reasoning effort **ultra**, verified from the current turn metadata. Three parallel LLM investigations supported the drafting and cross-review. This is an internal assessment, not external specialist refereeing or proof-assistant verification.
 
 **Assessment:** the revised manuscript integrates the exact simplifications and applicability findings from [Review 25](25_OCTONIONIC_MACHINERY_LITERATURE_REVIEW_20261015.md). Its general identities have explicit proofs, its imported literature is distinguished from the manuscript's deductions, and the missing theta-specific signed inequality remains open. The final 69-page PDF compiles without warnings and passes visual review.

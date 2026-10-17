@@ -1,5 +1,7 @@
 # Arithmetic manuscript integration review
 
+> **17 October 2026 — history routing update.** Historical formal-replay routing below is superseded. Chats [22](../chat-histories/0022_2026-10-15T18-10-39Z_review-theta-manifold-geometry.json) now use this investigation's [local registry](../chat-histories/index.json), as recorded in the [relocation receipt](../CHAT_HISTORY_RELOCATION_20261017.json). Original identities, provenance and public messages are preserved. All future Investigation 22 chats belong in this local history folder.
+
 15 October 2026, America/New_York. Prepared for Edward Baker with substantial LLM assistance. Recorded coordinating model **gpt-6-astra**, reasoning effort **ultra**, verified from current-turn metadata. Internal independent LLM review is not external refereeing or formal verification.
 
 The [stable manuscript](../manuscript/theta_manifold_geometry.tex) now incorporates the arithmetic continuation in Section 12, pages 45–50 of the [56-page reading copy](../../../../../output/pdf/theta_manifold_geometry.pdf). The [build record](../manuscript/BUILD_RECORD.json) identifies the final source and PDF. The compact-surface direction remains outside this integration.

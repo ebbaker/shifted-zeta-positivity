@@ -2,6 +2,8 @@
 
 # Research overview for quaternion theta geometry
 
+> **Chat-history routing update, 17 October 2026.** Current histories: [Chat 15 — Summarize closed-strip extension](../chat-histories/0015_2026-10-15T03-43-11Z_summarize-closed-strip-extension.json). Use this investigation’s [local registry](../chat-histories/index.json) and [relocation receipt](../CHAT_HISTORY_RELOCATION_20261017.json) for current numbers and preserved provenance; this supersedes the routing and numbering below. All future investigation 21 chats belong in this investigation’s `chat-histories/` folder.
+
 15 October 2026. Prepared for Edward Baker with substantial LLM assistance. Recorded model **gpt-6-astra**, reasoning effort **ultra**, verified from the current turn metadata.
 
 The research objective is to exclude every positive-time real collision of the theta heat flow. The exact endpoint is nonvanishing of the physical first jet, \(E=H^2+H_x^2>0\), for every positive time and real height. The quaternionic and octonionic constructions preserve the relevant observations; the remaining work is a theta-specific signed estimate.

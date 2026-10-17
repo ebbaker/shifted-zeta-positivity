@@ -1,5 +1,7 @@
 # Exact checks and execution records
 
+> **17 October 2026 — history routing update.** Historical formal-replay routing below is superseded. Chats [20](../chat-histories/0020_2026-10-15T15-16-42Z_brainstorm-theta-geometry-paths.json), [22](../chat-histories/0022_2026-10-15T18-10-39Z_review-theta-manifold-geometry.json) now use this investigation's [local registry](../chat-histories/index.json), as recorded in the [relocation receipt](../CHAT_HISTORY_RELOCATION_20261017.json). Original identities, provenance and public messages are preserved. All future Investigation 22 chats belong in this local history folder.
+
 15 October 2026. Prepared for Edward Baker with substantial LLM assistance. Recorded model **gpt-6-astra**, reasoning effort **ultra**.
 
 The [initial execution manifest](INITIAL_MANUSCRIPT_CHECKS_20261015.json) binds four scripts and their output records to their SHA-256 identities. All **344 exact assertions** passed using the Python standard library. The first two scripts are byte-identical copies from Investigation 21, retained here so this manuscript has a local replay package. Their original records remain unchanged.

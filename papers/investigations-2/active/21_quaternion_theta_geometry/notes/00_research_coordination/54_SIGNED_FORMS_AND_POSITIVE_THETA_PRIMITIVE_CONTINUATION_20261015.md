@@ -6,6 +6,8 @@ status: integrated_and_auxiliary_positivity_pointwise_theta_bound_open
 
 # Signed forms and a positive theta primitive
 
+> **Chat-history routing update, 17 October 2026.** Current histories: [Chat 19 — Review octonionic signed-bound ideas](../../chat-histories/0019_2026-10-15T06-24-10Z_review-octonionic-signed-bound-ideas.json). Use this investigation’s [local registry](../../chat-histories/index.json) and [relocation receipt](../../CHAT_HISTORY_RELOCATION_20261017.json) for current numbers and preserved provenance; this supersedes the routing and numbering below. All future investigation 21 chats belong in this investigation’s `chat-histories/` folder.
+
 15 October 2026, America/New_York. Prepared for Edward Baker with substantial LLM assistance. Recorded coordinating model **gpt-6-astra**, reasoning effort **ultra**, verified from current-session metadata. This continues [Note 50](../04_octonionic_reductions/50_QUATERNION_FORMS_HODGE_PAIRING_AND_SOURCE_TARGET_20261015.md) and preserves [Note 49's pointwise target](49_OCTONIONIC_SIGNED_BOUND_ANALYTIC_CONTINUATION_20261015.md).
 
 The author's 2014 documents were unpublished working notes, circulated to colleagues with mistakes and incompleteness acknowledged. Their role here is to suggest signed differential-form mechanisms. This continuation develops those ideas rather than treating the old documents as finalized claims.

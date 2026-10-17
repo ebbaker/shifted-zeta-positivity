@@ -1,5 +1,7 @@
 # Scalar manuscript integration and positive tail continuation
 
+> **17 October 2026 — history routing update.** Historical formal-replay routing below is superseded. Chats [21](../../chat-histories/0021_2026-10-15T16-30-47Z_continue-theta-manifold-geometry.json) now use this investigation's [local registry](../../chat-histories/index.json), as recorded in the [relocation receipt](../../CHAT_HISTORY_RELOCATION_20261017.json). Original identities, provenance and public messages are preserved. All future Investigation 22 chats belong in this local history folder.
+
 15 October 2026, America/New_York. Prepared for Edward Baker with substantial LLM assistance. Recorded coordinating model **gpt-6-astra**, reasoning effort **ultra**, verified from the current turn metadata.
 
 The [manuscript](../../manuscript/theta_manifold_geometry.tex) and [49-page reading copy](../../../../../../output/pdf/theta_manifold_geometry.pdf) now include the complete stationary-locus theorem, scalar first-jet factor, signed quotient, fixed-cone mixed-error criterion, joint-current experiment and invariant boundary trace. The [review](../../reviews/12_SCALAR_MANUSCRIPT_AND_TAIL_CONE_REVIEW_20261015.md) and [build record](../../manuscript/BUILD_RECORD.json) describe verification. Earlier notes and research manifests retain their historical contents and hashes.
@@ -33,4 +35,4 @@ As a bounded acceptance test, apply a proposed rule to the asymmetric heat germs
 
 The [combined manifest](../../numerics/SCALAR_MANUSCRIPT_AND_TAIL_CONE_CHECKS_20261015.json) binds the revised source/PDF, new research note, checker, independent replay, and unchanged earlier research inputs. The two integrated exact checkers replay 5,094 assertions; the new finite pilot adds 52 separately classified checks. The manuscript and PDF have stable filenames; no snapshot directory, commit or tag was created.
 
-This conversation retains formal replay identity **21**, thread 01a14066-e48e-7fa1-b488-deb17ea0448f, in its [canonical archive](../../../../formal_replay_crosswalk/chat-histories/0021_2026-10-15T16-30-47Z_continue-theta-manifold-geometry.json). Continue the authorized start/end refresh workflow without re-registering it. Other conversations use their relevant investigation unless their existing registration or explicit instructions say otherwise.
+This conversation retains formal replay identity **21**, thread 01a14066-e48e-7fa1-b488-deb17ea0448f, in its [canonical archive](../../chat-histories/0021_2026-10-15T16-30-47Z_continue-theta-manifold-geometry.json). Continue the authorized start/end refresh workflow without re-registering it. Other conversations use their relevant investigation unless their existing registration or explicit instructions say otherwise.

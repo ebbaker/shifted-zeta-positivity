@@ -1,5 +1,7 @@
 # Investigations 3: initial portfolio research plan
 
+**Chat routing update, 17 October 2026.** [Review Claude brainstorm note (current history 1)](../chat-histories/0001_2026-10-17T01-47-10Z_review-claude-brainstorm-note.json). These unique registrations were moved to their affiliated folders at Edward Baker's request. Use the destination registry for refreshes and new affiliated chats; this routing supersedes older formal-replay filing instructions below. Historical numbers in the narrative describe the earlier capture. [Relocation and renumbering receipt](../../investigations-2/formal_replay_crosswalk/CHAT_HISTORY_RELOCATION_20261017.json). Prepared for Edward Baker with substantial LLM assistance, `gpt-6.1-sol`, reasoning effort **ultra**.
+
 16 October 2026. Prepared for Edward Baker with substantial LLM assistance.
 Recorded model: **gpt-6-astra (Codex)**; reasoning effort: **ultra**.
 Status: **seven project homes initialized; research proposals, not new results**.
@@ -217,7 +219,7 @@ Keep one coordination note per phase, a separate review, and small
 reproducible numerical records. Follow [LARGE_FILES.md][large] before
 generating data; cite third-party papers rather than copying their PDFs.
 
-This creation chat retains its existing [formal replay identity 27][chat].
+This creation chat is now [portfolio history 1][chat], with its conversation identity and provenance preserved.
 New project-specific chats belong in that project's history folder;
 new shared-portfolio chats belong in the base history folder. Preserve
 registered identities and use the [history tool][history]; never insert
@@ -255,6 +257,6 @@ been completed by creating this structure.
 [a16]: ../../../avoid/16_unchecked_imports_and_novelty_claims.md
 [a20]: ../../../avoid/20_volume_without_a_gain.md
 [template]: ../../investigations-2/active/22_theta_manifold_geometry/README.md
-[chat]: ../../investigations-2/formal_replay_crosswalk/chat-histories/0027_2026-10-17T01-47-10Z_review-claude-brainstorm-note.json
+[chat]: ../chat-histories/0001_2026-10-17T01-47-10Z_review-claude-brainstorm-note.json
 [history]: ../../../tools/CHAT_HISTORY.md
 [large]: ../../../LARGE_FILES.md

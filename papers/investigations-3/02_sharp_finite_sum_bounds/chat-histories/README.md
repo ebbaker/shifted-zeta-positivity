@@ -11,7 +11,7 @@ existing registration rather than creating another identity. Capture only
 actual completed public text with the supported tool; never hand-edit
 registered JSON or substitute a planned final answer.
 
-The portfolio-creation chat retains [formal replay identity 27](../../../investigations-2/formal_replay_crosswalk/chat-histories/0027_2026-10-17T01-47-10Z_review-claude-brainstorm-note.json).
+The portfolio-creation chat is [portfolio history 1](../../chat-histories/0001_2026-10-17T01-47-10Z_review-claude-brainstorm-note.json).
 No transcript or registry is copied here. Shared portfolio discussions
 use the [base history folder](../../chat-histories/README.md).
 See [Claude session guidance](claude-cowork/README.md) for future supported imports.

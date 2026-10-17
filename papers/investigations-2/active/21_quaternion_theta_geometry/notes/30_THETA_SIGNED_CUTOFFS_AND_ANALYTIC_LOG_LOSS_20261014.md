@@ -1,5 +1,7 @@
 # Theta-specific signed cutoffs and analytic logarithmic loss
 
+> **Chat-history routing update, 17 October 2026.** Current histories: [Chat 14 — Review quaternion theta handoff](../chat-histories/0014_2026-10-15T02-29-33Z_review-quaternion-theta-handoff.json), [Chat 13 — Continue quaternion theta geometry](../chat-histories/0013_2026-10-15T00-47-29Z_continue-quaternion-theta-geometry.json). Use this investigation’s [local registry](../chat-histories/index.json) and [relocation receipt](../CHAT_HISTORY_RELOCATION_20261017.json) for current numbers and preserved provenance; this supersedes the routing and numbering below. All future investigation 21 chats belong in this investigation’s `chat-histories/` folder.
+
 14 October 2026 (America/New_York). Prepared for Edward Baker with substantial
 LLM assistance. Recorded parent model **gpt-6-astra**, reasoning effort
 **ultra**, verified from this chat's source turn metadata. Parallel internal

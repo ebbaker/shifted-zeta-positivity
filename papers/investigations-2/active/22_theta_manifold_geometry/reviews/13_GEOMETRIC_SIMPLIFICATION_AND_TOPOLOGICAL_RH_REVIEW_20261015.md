@@ -1,5 +1,7 @@
 # Geometric simplification and topological formulations of RH
 
+> **17 October 2026 — history routing update.** Historical formal-replay routing below is superseded. Chats [22](../chat-histories/0022_2026-10-15T18-10-39Z_review-theta-manifold-geometry.json) now use this investigation's [local registry](../chat-histories/index.json), as recorded in the [relocation receipt](../CHAT_HISTORY_RELOCATION_20261017.json). Original identities, provenance and public messages are preserved. All future Investigation 22 chats belong in this local history folder.
+
 15 October 2026, America/New_York. Prepared for Edward Baker with substantial LLM assistance. Recorded coordinating model **gpt-6-astra**, reasoning effort **ultra**, verified from the current turn metadata. Three independent LLM subtasks reviewed the geometric argument, Investigation 21, and topological/literature alternatives. This is internal review, not external refereeing or formal verification.
 
 ## Assessment of the current manuscript
@@ -82,4 +84,4 @@ A new nontrivial reformulation can be publishable without proving RH. Here there
 
 The exact [checker](../numerics/check_spacetime_topology.py) passes **1,573 assertions across 60 rectangles**, covering multiplicities 2 through 16, symmetric and asymmetric heat germs, and both overall signs. It uses rational polynomial arithmetic and Sturm root isolation to compute oriented ray crossings independently of the half-zero-count formula. It verifies that additional asymmetric roots lie outside the local box. A separate-process replay has identical mathematical content after removing only the capture timestamp. These checks concern polynomial controls, not a new theta sign domain, compact-curve numerical certification, or RH.
 
-The [verification manifest](../numerics/TOPOLOGICAL_REFORMULATION_REVIEW_20261015.json) records the reviewed inputs, notes, checker, receipt and replay comparison. Formal replay identity **22**, thread `01a140c2-517a-7b73-8684-502f71e31500`, is retained in the [canonical history](../../../formal_replay_crosswalk/chat-histories/0022_2026-10-15T18-10-39Z_review-theta-manifold-geometry.json). No manuscript snapshot, commit or tag was created.
+The [verification manifest](../numerics/TOPOLOGICAL_REFORMULATION_REVIEW_20261015.json) records the reviewed inputs, notes, checker, receipt and replay comparison. Formal replay identity **22**, thread `01a140c2-517a-7b73-8684-502f71e31500`, is retained in the [canonical history](../chat-histories/0022_2026-10-15T18-10-39Z_review-theta-manifold-geometry.json). No manuscript snapshot, commit or tag was created.

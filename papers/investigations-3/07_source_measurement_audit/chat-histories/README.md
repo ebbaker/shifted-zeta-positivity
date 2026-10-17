@@ -1,23 +1,18 @@
-# Source-measurement audit: chat histories
+# Source measurement audit: chat histories
 
-16 October 2026. Prepared for Edward Baker with substantial LLM assistance.
-Initialization model: **gpt-6-astra (Codex)**; reasoning effort: **ultra**.
+17 October 2026. Prepared for Edward Baker with substantial LLM assistance.
+Recorded model: **gpt-6.1-sol (Codex)**; reasoning effort: **ultra**.
 
-Canonical records of new project-specific conversations.
+This is the canonical archive for conversations affiliated with this folder.
+Numbers are local and stay stable on routine refresh. The [17 October relocation receipt](../CHAT_HISTORY_RELOCATION_20261017.json) records former homes, numbers, hashes and preserved provenance.
 
-Register new conversations about this project here using
-[tools/CHAT_HISTORY.md](../../../../tools/CHAT_HISTORY.md). Preserve an
-existing registration rather than creating another identity. Capture only
-actual completed public text with the supported tool; never hand-edit
-registered JSON or substitute a planned final answer.
+- [Chat 1 — Audit source measurement](0001_2026-10-17T03-47-38Z_audit-source-measurement.json)
 
-The portfolio-creation chat retains [formal replay identity 27](../../../investigations-2/formal_replay_crosswalk/chat-histories/0027_2026-10-17T01-47-10Z_review-claude-brainstorm-note.json).
-No transcript or registry is copied here. Shared portfolio discussions
-use the [base history folder](../../chat-histories/README.md).
-See [Claude session guidance](claude-cowork/README.md) for future supported imports.
+The [registry](index.json) gives current capture times, counts, recorded models and hashes.
+Use [the automatic history workflow](../../../../tools/CHAT_HISTORY.md) with this folder as the destination.
+Preserve the existing conversation id and capture only completed public text.
 
-The opening audit conversation, “Audit source measurement”, is registered as
-[formal replay identity 28](../../../investigations-2/formal_replay_crosswalk/chat-histories/0028_2026-10-17T03-47-38Z_audit-source-measurement.json)
-under this local chat's explicit standing instruction. Its number and provenance
-remain at that canonical home; no second registration is created here.
-Opening record: 16 October 2026, **gpt-6.1-sol (Codex)**, effort **ultra**.
+The portfolio-creation conversation is [portfolio Chat 1](../../chat-histories/0001_2026-10-17T01-47-10Z_review-claude-brainstorm-note.json).
+Keep project-specific conversations here and shared planning in the
+[portfolio archive](../../chat-histories/README.md).
+See [Claude session guidance](claude-cowork/README.md) for supported imports.

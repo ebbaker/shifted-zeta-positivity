@@ -1,5 +1,7 @@
 # Finite source measurements and nearby double jets
 
+**Chat routing update, 17 October 2026.** [Audit source measurement (current history 1)](../../chat-histories/0001_2026-10-17T03-47-38Z_audit-source-measurement.json). These unique registrations were moved to their affiliated folders at Edward Baker's request. Use the destination registry for refreshes and new affiliated chats; this routing supersedes older formal-replay filing instructions below. Historical numbers in the narrative describe the earlier capture. [Relocation and renumbering receipt](../../../../investigations-2/formal_replay_crosswalk/CHAT_HISTORY_RELOCATION_20261017.json). Prepared for Edward Baker with substantial LLM assistance, `gpt-6.1-sol`, reasoning effort **ultra**.
+
 16 October 2026, America/New_York. Prepared for Edward Baker with
 substantial LLM assistance. Recorded model: **gpt-6.1-sol (Codex)**;
 reasoning effort: **ultra**, verified from this conversation's session
@@ -355,9 +357,8 @@ b5d9d9c5c45ae329bc6f8094b2c9dec5af76945bc57b41b06adbad5dd1307e7a
 ```
 
 These identify the inspected source bytes, not mathematical validity.
-The public conversation retains [formal replay identity 28][chat] under
-the local standing instruction; it is not re-registered in this project's
-history folder.
+The public conversation is now [project history 1][chat] in this project's
+history folder, with its conversation identity and capture provenance preserved.
 
 [proposal]: ../../research-overview/01_INITIAL_RESEARCH_PROPOSAL_20261016.md
 [reply]: ../../../../brainstorm/investigations-3/reviews/03_REPLY_TO_CODEX_RESPONSE_CLAUDE_20261016.md
@@ -376,4 +377,4 @@ history folder.
 [a10]: ../../../../../avoid/10_numerics_ahead_of_the_question.md
 [large]: ../../../../../LARGE_FILES.md
 [polymath]: https://arxiv.org/html/1904.12438v2#S1
-[chat]: ../../../../investigations-2/formal_replay_crosswalk/chat-histories/0028_2026-10-17T03-47-38Z_audit-source-measurement.json
+[chat]: ../../chat-histories/0001_2026-10-17T03-47-38Z_audit-source-measurement.json

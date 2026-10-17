@@ -1,5 +1,7 @@
 # Collision analysis: continuation and chat-history handoff
 
+> **Chat-history routing update, 17 October 2026.** Current histories: [Chat 14 — Review quaternion theta handoff](../chat-histories/0014_2026-10-15T02-29-33Z_review-quaternion-theta-handoff.json). Use this investigation’s [local registry](../chat-histories/index.json) and [relocation receipt](../CHAT_HISTORY_RELOCATION_20261017.json) for current numbers and preserved provenance; this supersedes the routing and numbering below. All future investigation 21 chats belong in this investigation’s `chat-histories/` folder.
+
 14 October 2026 (America/New_York). Prepared for Edward Baker with substantial
 LLM assistance. Recorded model **gpt-6-astra**, reasoning effort **ultra**,
 verified from the source session metadata. This note records the completed
@@ -242,8 +244,8 @@ The current conversation is **Review quaternion theta handoff**, thread
 `01a13d64-ba41-7362-acfe-bf5978c84d11`, archive number **11**, uniquely
 registered in the formal replay lane:
 
-- [Archived public conversation](../../../formal_replay_crosswalk/chat-histories/0011_2026-10-15T02-29-33Z_review-quaternion-theta-handoff.json).
-- [Registry](../../../formal_replay_crosswalk/chat-histories/index.json).
+- [Archived public conversation](../chat-histories/0014_2026-10-15T02-29-33Z_review-quaternion-theta-handoff.json).
+- [Registry](../chat-histories/index.json).
 - [Verification receipt](../reviews/CHAT_HISTORY_COLLISION_HANDOFF_VERIFICATION_20261014.json).
 
 Creation was 2026-10-15T02:29:33.891Z (14 October, 22:29:33.891 EDT).

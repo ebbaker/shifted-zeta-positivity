@@ -1,5 +1,7 @@
 # Theta correlations, Laguerre signs, and hypercomplex jets
 
+> **Chat-history routing update, 17 October 2026.** Current histories: [Chat 19 — Review octonionic signed-bound ideas](chat-histories/0019_2026-10-15T06-24-10Z_review-octonionic-signed-bound-ideas.json). Use this investigation’s [local registry](chat-histories/index.json) and [relocation receipt](CHAT_HISTORY_RELOCATION_20261017.json) for current numbers and preserved provenance; this supersedes the routing and numbering below. All future investigation 21 chats belong in this investigation’s `chat-histories/` folder.
+
 Investigation 21 — 15 October 2026. Prepared for Edward Baker with substantial LLM assistance. Recorded model **gpt-6-astra**, reasoning effort **ultra**.
 
 Start with the [current research overview](research-overview/RESEARCH_OVERVIEW_20261015_SIGNED_FORMS_AND_PRIMITIVE.md) and [manuscript](manuscript/quaternion_theta_geometry.tex). The current 96-page revision integrates Notes 38–53, including the signed-form and positive-primitive continuation. [Review 32](reviews/32_SIGNED_FORMS_PRIMITIVE_MANUSCRIPT_INTEGRATION_20261015.md) and the [build record](manuscript/BUILD_RECORD.json) record the checks and scope.

@@ -1,5 +1,7 @@
 # Research priorities after the closed strip extension
 
+> **Chat-history routing update, 17 October 2026.** Current histories: [Chat 15 — Summarize closed-strip extension](../chat-histories/0015_2026-10-15T03-43-11Z_summarize-closed-strip-extension.json). Use this investigation’s [local registry](../chat-histories/index.json) and [relocation receipt](../CHAT_HISTORY_RELOCATION_20261017.json) for current numbers and preserved provenance; this supersedes the routing and numbering below. All future investigation 21 chats belong in this investigation’s `chat-histories/` folder.
+
 14 October 2026 (America/New_York). Prepared for Edward Baker with substantial LLM assistance. Recorded model **gpt-6-astra**, reasoning effort **ultra**, verified from this conversation's current turn metadata. Parallel internal LLM readings informed the prioritization. This is a research proposal with conditional deductions; it proves no new theta sign estimate or extension of the covered domain.
 
 The strongest program has two concurrent objectives: obtain the next strip theorem through a weaker weighted remainder estimate, and develop a signed stationary estimate that can reach the inner cusp. The second deserves the larger research investment. Completing the strip beginning at theta=5/2 would still leave the unbounded inner cusp and the finite transition above height 112.

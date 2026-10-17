@@ -1,5 +1,7 @@
 # Connection bridge and inner turning continuation
 
+> **17 October 2026 — history routing update.** Historical formal-replay routing below is superseded. Chats [17](../../chat-histories/0017_2026-10-15T10-16-48Z_continue-quaternion-theta-geometry.json), [18](../../chat-histories/0018_2026-10-15T11-51-01Z_continue-theta-manifold-research.json) now use this investigation's [local registry](../../chat-histories/index.json), as recorded in the [relocation receipt](../../CHAT_HISTORY_RELOCATION_20261017.json). Original identities, provenance and public messages are preserved. All future Investigation 22 chats belong in this local history folder.
+
 15 October 2026. Prepared for Edward Baker with substantial LLM assistance. Recorded session model **gpt-6-astra**, reasoning effort **ultra**, verified from this conversation's session metadata.
 
 The first continuation of Investigation 22 completes the proposed insertion of the theta connection into the signed two-source transform. It also sharpens the local collision profile. The resulting identities narrow the missing estimate: tangential ASD curvature supplies no new signed term, the original cusp norm growth can be removed by a base metric change, and the second angular branch requires a distinct energy comparison even on a shrinking interval.

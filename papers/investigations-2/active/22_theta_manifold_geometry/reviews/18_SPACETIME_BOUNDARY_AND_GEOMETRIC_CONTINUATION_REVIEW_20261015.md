@@ -1,5 +1,7 @@
 # Spacetime boundary and geometric continuation review
 
+> **17 October 2026 — history routing update.** Historical formal-replay routing below is superseded. Chats [24](../chat-histories/0024_2026-10-15T23-30-42Z_explore-spacetime-and-geometry-ideas.json) now use this investigation's [local registry](../chat-histories/index.json), as recorded in the [relocation receipt](../CHAT_HISTORY_RELOCATION_20261017.json). Original identities, provenance and public messages are preserved. All future Investigation 22 chats belong in this local history folder.
+
 15 October 2026, America/New_York. Prepared for Edward Baker with substantial LLM assistance. Recorded coordinating model **gpt-6-astra**, reasoning effort **ultra**, verified from the current turn metadata. Three delegated mathematical subtasks developed and cross-reviewed the boundary calculus, theta pilot and surface hierarchy; the coordinating agent independently reviewed and replayed the computations. This is internal LLM-assisted review, not external refereeing or formal verification.
 
 The continuation completes the bounded boundary experiment requested by [Review 13](13_GEOMETRIC_SIMPLIFICATION_AND_TOPOLOGICAL_RH_REVIEW_20261015.md) and clarifies two geometric comparisons raised in [Review 17](17_RESPONSE_TO_JOINT_REVIEW_CLAUDE_20261015.md). There is now a complete-theta, sign-changing boundary certificate and a fair interior baseline. There are also precise links between real-projective jets, normalized real surfaces, and collision multiplicities. None supplies the missing global theta estimate. The existing manuscript and the two requested source documents are preserved.
@@ -84,4 +86,4 @@ The **3,106 assertions** are overlapping computational checks, not 3,106 indepen
 
 The bounded pilot should now be treated as completed. A further numerical expansion should identify a shared-budget case giving a material advantage over the practical baseline, or a new theta-specific error estimate. Additional unmarked ambient geometry alone has supplied no such estimate. The project now has a clearer common vocabulary—real-root flux, marked real lines, real-component deficit and complex pairwise multiplicity—with their distinct logical strengths preserved.
 
-Research provenance retains formal replay identity **24**, thread `01a141e7-5787-7f10-9edc-977e32e7606e`, in the [canonical history](../../../formal_replay_crosswalk/chat-histories/0024_2026-10-15T23-30-42Z_explore-spacetime-and-geometry-ideas.json).
+Research provenance retains formal replay identity **24**, thread `01a141e7-5787-7f10-9edc-977e32e7606e`, in the [canonical history](../chat-histories/0024_2026-10-15T23-30-42Z_explore-spacetime-and-geometry-ideas.json).

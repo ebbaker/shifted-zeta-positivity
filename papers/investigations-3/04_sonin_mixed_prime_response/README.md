@@ -3,8 +3,17 @@
 16 October 2026. Prepared for Edward Baker with substantial LLM assistance.
 Recorded model: **gpt-6-astra (Codex)**; reasoning effort: **ultra**.
 
-**Status: initialized proposal.** One analytic calculation proposed. No new result, certificate or
-research run is reported by this setup.
+**Status: active round 1.** The [opening note](notes/round-1/01_EXACT_MIXED_RESPONSE_AND_FINITE_TRANSLATE_OBSTRUCTION_CODEX_20261017.md)
+derives the exact mixed response with the compressed inverse, identifies it
+with the mixed boundary correction, and proves a scoped obstruction to a
+literal full Weil form on a finite translate combination. These are internal
+same-model derivations; formal review follows the round, and the proposed
+Claude reconciliation remains open. The [continuation](notes/round-1/02_CORRECTED_SIGNED_WEIL_GRAM_AND_MIXED_SOURCE_ESTIMATES_CODEX_20261017.md)
+gives the corrected signed Weil–Gram identity and a construction for signed
+enclosures of the complete mixed source form; its metric correction alone
+is unbounded with both signs in the stated support class. No sign of the
+complete mixed response or numerical gain is established. Round opened 17 October 2026 for Edward Baker with substantial
+LLM assistance, **gpt-6.1-sol (Codex)**, reasoning effort **ultra**.
 
 Start with the [initial research proposal](research-overview/01_INITIAL_RESEARCH_PROPOSAL_20261016.md)
 and the [portfolio plan](../research-overview/01_PORTFOLIO_RESEARCH_PLAN_20261016.md).

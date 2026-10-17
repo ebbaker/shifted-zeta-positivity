@@ -1,5 +1,7 @@
 # Review of the joint source current and signed observation quotient
 
+> **17 October 2026 — history routing update.** Historical formal-replay routing below is superseded. Chats [20](../chat-histories/0020_2026-10-15T15-16-42Z_brainstorm-theta-geometry-paths.json), [21](../chat-histories/0021_2026-10-15T16-30-47Z_continue-theta-manifold-geometry.json) now use this investigation's [local registry](../chat-histories/index.json), as recorded in the [relocation receipt](../CHAT_HISTORY_RELOCATION_20261017.json). Original identities, provenance and public messages are preserved. All future Investigation 22 chats belong in this local history folder.
+
 15 October 2026, America/New_York. Prepared for Edward Baker with substantial LLM assistance. Recorded coordinating model **gpt-6-astra**, reasoning effort **ultra**. The coordinating agent and two internal collaborators independently checked the analytic formulas; a third collaborator supplied the exact checker, independently replayed by the coordinator. This is internal LLM review, not external refereeing or formal verification.
 
 ## Assessment

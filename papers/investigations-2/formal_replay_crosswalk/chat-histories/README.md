@@ -46,78 +46,47 @@ identities. Those hashes identify data and do not validate mathematical
 claims. Follow [LARGE_FILES.md](../../../../LARGE_FILES.md) for histories
 reaching the 1 MiB limit; automatic refresh must not truncate them.
 
-## Portfolio conversation moved to the shared archive
+## Affiliation correction, 17 October 2026
 
-The conversation titled [Review Newman certificate audit](../../chat-histories/0002_2026-10-13T12-54-02Z_review-newman-certificate-audit.json)
-started with the Newman review and expanded to the lifted brainstorm and
-portfolio organization. At Edward Baker's request it now lives in the
-[main investigations-2 archive](../../chat-histories/README.md).
-Its original identity, number 2, filename and first-capture provenance are
-preserved; it is no longer registered in this formal replay folder.
-Chat 1 remains here. The [relocation record](../../CHAT_HISTORY_RELOCATION_20261013.json)
-documents the transfer; no public transcript text was rewritten.
+17 October 2026. Prepared for Edward Baker with substantial LLM assistance.
+Recorded model: **gpt-6.1-sol (Codex)**; reasoning effort: **ultra**.
 
-## Quaternion conversation moved to investigation 21
+Only conversations about formal replay and its arithmetic crosswalk belong here.
+Chat 1 above and the [Claude formal replay review](claude-cowork/README.md) remain.
+Other research and brainstorm conversations now have one registration in their affiliated folder.
+The [migration receipt](../CHAT_HISTORY_RELOCATION_20261017.json) records verification, numbering and rollback backups.
 
-At Edward Baker's request on 14 October 2026,
-[Explain RH criteria in quaternionism](../../active/21_quaternion_theta_geometry/chat-histories/0007_2026-10-14T18-39-36Z_explain-rh-criteria-in-quaternionism.json)
-now lives in investigation 21. Its identity, historical number 7, filename,
-creation time and first-capture provenance were preserved. Its archive
-bytes were unchanged at relocation, and it is no longer registered here.
-The [relocation record](../../active/21_quaternion_theta_geometry/CHAT_HISTORY_RELOCATION_20261014.json)
-documents the move. Future refreshes follow the investigation 21 registry.
+| Previous formal replay number | Current canonical history |
+| --- | --- |
+| 3 | [Review investigation directions — 2](../../brainstorm/chat-histories/0002_2026-10-13T17-10-52Z_review-investigation-directions.json) |
+| 4 | [Review angular Jacobi closure plan — 3](../../brainstorm/chat-histories/0003_2026-10-14T02-51-11Z_review-angular-jacobi-closure-plan.json) |
+| 5 | [Assess local theorem direction — 7](../../active/20_constrained_operator_squares/chat-histories/0007_2026-10-14T13-24-39Z_assess-local-theorem-direction.json) |
+| 6 | [Continue investigation 20 — 8](../../active/20_constrained_operator_squares/chat-histories/0008_2026-10-14T14-51-35Z_continue-investigation-20.json) |
+| 8 | [Summarize quaternion theta results — 11](../../active/21_quaternion_theta_geometry/chat-histories/0011_2026-10-14T22-15-11Z_summarize-quaternion-theta-results.json) |
+| 9 | [Continue quaternion theta rewrite — 12](../../active/21_quaternion_theta_geometry/chat-histories/0012_2026-10-14T23-49-23Z_continue-quaternion-theta-rewrite.json) |
+| 10 | [Continue quaternion theta geometry — 13](../../active/21_quaternion_theta_geometry/chat-histories/0013_2026-10-15T00-47-29Z_continue-quaternion-theta-geometry.json) |
+| 11 | [Review quaternion theta handoff — 14](../../active/21_quaternion_theta_geometry/chat-histories/0014_2026-10-15T02-29-33Z_review-quaternion-theta-handoff.json) |
+| 12 | [Summarize closed-strip extension — 15](../../active/21_quaternion_theta_geometry/chat-histories/0015_2026-10-15T03-43-11Z_summarize-closed-strip-extension.json) |
+| 13 | [Review octonionic simplifications — 16](../../active/21_quaternion_theta_geometry/chat-histories/0016_2026-10-15T04-25-26Z_review-octonionic-simplifications.json) |
+| 14 | [Continue octonionic correlation work — 17](../../active/21_quaternion_theta_geometry/chat-histories/0017_2026-10-15T05-14-09Z_continue-octonionic-correlation-work.json) |
+| 15 | [Continue Poisson obstruction study — 18](../../active/21_quaternion_theta_geometry/chat-histories/0018_2026-10-15T05-32-27Z_continue-poisson-obstruction-study.json) |
+| 16 | [Review octonionic signed-bound ideas — 19](../../active/21_quaternion_theta_geometry/chat-histories/0019_2026-10-15T06-24-10Z_review-octonionic-signed-bound-ideas.json) |
+| 18 | [Continue theta manifold research — 18](../../active/22_theta_manifold_geometry/chat-histories/0018_2026-10-15T11-51-01Z_continue-theta-manifold-research.json) |
+| 19 | [Review research paths — 19](../../active/22_theta_manifold_geometry/chat-histories/0019_2026-10-15T13-36-13Z_review-research-paths.json) |
+| 20 | [Brainstorm theta geometry paths — 20](../../active/22_theta_manifold_geometry/chat-histories/0020_2026-10-15T15-16-42Z_brainstorm-theta-geometry-paths.json) |
+| 21 | [Continue theta manifold geometry — 21](../../active/22_theta_manifold_geometry/chat-histories/0021_2026-10-15T16-30-47Z_continue-theta-manifold-geometry.json) |
+| 22 | [Review theta manifold geometry — 22](../../active/22_theta_manifold_geometry/chat-histories/0022_2026-10-15T18-10-39Z_review-theta-manifold-geometry.json) |
+| 23 | [Review Claude’s joint assessment — 23](../../active/22_theta_manifold_geometry/chat-histories/0023_2026-10-15T22-10-07Z_review-claude-s-joint-assessment.json) |
+| 24 | [Explore spacetime and geometry ideas — 24](../../active/22_theta_manifold_geometry/chat-histories/0024_2026-10-15T23-30-42Z_explore-spacetime-and-geometry-ideas.json) |
+| 25 | [Fix rebase conflicts — 5](../../chat-histories/0005_2026-10-16T16-48-48Z_fix-rebase-conflicts.json) |
+| 27 | [Review Claude brainstorm note — 1](../../../investigations-3/chat-histories/0001_2026-10-17T01-47-10Z_review-claude-brainstorm-note.json) |
+| 28 | [Audit source measurement — 1](../../../investigations-3/07_source_measurement_audit/chat-histories/0001_2026-10-17T03-47-38Z_audit-source-measurement.json) |
+| 29 | [Begin Sonin mixed-prime response — 1](../../../investigations-3/04_sonin_mixed_prime_response/chat-histories/0001_2026-10-17T04-34-44Z_begin-sonin-mixed-prime-response.json) |
+| 30 | [Relocate misplaced chat histories — 6](../../chat-histories/0006_2026-10-17T04-57-50Z_relocate-misplaced-chat-histories.json) |
 
-## Quaternion continuation in the formal replay lane
+This is a historical crosswalk, with no duplicate registrations or transcript copies.
+The destination indexes supply current capture data. Original creation and first-capture
+provenance and every public message were preserved; only local numbering metadata changed.
+Investigation 20's verified reference copy was consolidated into its canonical archive.
 
-Under the explicit local standing instruction, the conversation
-[Continue quaternion theta geometry](0010_2026-10-15T00-47-29Z_continue-quaternion-theta-geometry.json)
-is registered here as number 10, thread
-`01a13d07-4714-7f83-a8f5-700a61bc5e0e`. It continues
-[investigation 21 Note 23](../../active/21_quaternion_theta_geometry/notes/23_MANUSCRIPT_INTEGRATION_AND_CROSS_TIME_CONTINUATION_20261014.md)
-with [Note 24](../../active/21_quaternion_theta_geometry/notes/24_PROPORTIONAL_DELAY_PHASE_OBSTRUCTION_AND_CONTINUATION_20261014.md).
-The preceding conversation's number 9 and identity remain unchanged.
-The archive filename uses its actual UTC creation date, 15 October 2026;
-the author's local date at creation was 14 October. Current counts,
-hashes, timestamps, and configurations are in the registry.
-The same number-10 conversation next continued with
-[Note 25](../../active/21_quaternion_theta_geometry/notes/25_PHASE_CONTROLLED_DELAY_AND_CUSP_EXTENSION_20261014.md):
-a phase-controlled outer comparison and the finite cusp extension through
-112. Its existing registration and history identity are preserved.
-
-
-The [continuation and archive handoff](../../active/21_quaternion_theta_geometry/notes/26_CONTINUATION_AND_CHAT_HISTORY_HANDOFF_20261014.md)
-consolidates this number-10 conversation's current research state and next
-task. Its [verification receipt](../../active/21_quaternion_theta_geometry/reviews/CHAT_HISTORY_CONTINUATION_VERIFICATION_20261014.json)
-checks the point-in-time archive against completed public source text,
-including both preceding final replies. No relocation or re-registration
-was performed; the registry supplies current capture counts and hashes.
-
-## Poisson continuation, history 15
-
-Under the explicit local standing instruction, [Continue Poisson obstruction study](0015_2026-10-15T05-32-27Z_continue-poisson-obstruction-study.json), thread `01a13e0c-2b80-7b31-ade4-993b86d44259`, is registered here as number 15. It continues [investigation 21 Note 41](../../active/21_quaternion_theta_geometry/notes/00_research_coordination/41_POISSON_OBSTRUCTION_AND_REMAINDER_CONTINUATION_20261015.md) with [Notes 42–45](../../active/21_quaternion_theta_geometry/notes/00_research_coordination/45_LOCALIZED_POISSON_AND_CONSTANT_PACKAGE_CONTINUATION_20261015.md). Earlier histories 13 and 14 keep their identities. The live registry supplies current provenance, counts, capture times and hashes. Added 15 October 2026 for Edward Baker with substantial LLM assistance, **gpt-6.1-sol**, effort **ultra**.
-
-The same history-15 conversation next pursued the analytic octonionic signed-bound request, documented in [investigation 21 Note 49](../../active/21_quaternion_theta_geometry/notes/00_research_coordination/49_OCTONIONIC_SIGNED_BOUND_ANALYTIC_CONTINUATION_20261015.md). Its existing identity and first-capture provenance remain unchanged. Updated 15 October 2026 for Edward Baker with substantial LLM assistance, **gpt-6.1-sol**, effort **ultra**.
-
-[Chat 16 — Review octonionic signed-bound ideas](0016_2026-10-15T06-24-10Z_review-octonionic-signed-bound-ideas.json) compares the author's two 2014 quaternion-form drafts with Investigation 21's signed-bound target. [Review 30](../../active/21_quaternion_theta_geometry/reviews/30_QUATERNION_FORMS_DRAFT_COMPARISON_AND_RELEVANCE_20261015.md) and [Note 50](../../active/21_quaternion_theta_geometry/notes/04_octonionic_reductions/50_QUATERNION_FORMS_HODGE_PAIRING_AND_SOURCE_TARGET_20261015.md) preserve the assessment and exact closed-form bridge. Registered in the authorized formal replay lane on 15 October 2026, with **gpt-6-astra**, effort **ultra**. Current capture details remain in the registry.
-
-[Continue quaternion theta geometry](../../active/22_theta_manifold_geometry/chat-histories/0017_2026-10-15T10-16-48Z_continue-quaternion-theta-geometry.json), history **17**, thread `01a13f10-8044-7ec1-9c35-59e518f5243c`, began here under the explicit local standing instruction and continued Investigation 21 through Notes 56–63. On 15 October 2026, the author explicitly requested its history in the new [Investigation 22](../../active/22_theta_manifold_geometry/README.md). Its sole registration and archive are now there, with its original number, filename, creation time, first-capture provenance and prior public messages preserved. The [relocation receipt](../../active/22_theta_manifold_geometry/CHAT_HISTORY_RELOCATION_20261015.json) records the checked transfer. This is a historical pointer, not another registration. Updated for Edward Baker with substantial LLM assistance, **gpt-6-astra**, effort **ultra**.
-
-[Continue theta manifold geometry](0021_2026-10-15T16-30-47Z_continue-theta-manifold-geometry.json), history **21**, thread `01a14066-e48e-7fa1-b488-deb17ea0448f`, is registered in this lane under the explicit local standing instruction. It continues Investigation 22 with the [joint source current and signed quotient experiment](../../active/22_theta_manifold_geometry/notes/00_research_coordination/10_JOINT_SOURCE_CURRENT_AND_SIGNED_QUOTIENT_CONTINUATION_20261015.md). Added 15 October 2026 for Edward Baker with substantial LLM assistance, **gpt-6-astra**, effort **ultra**. Current counts, hashes and capture times remain in the registry.
-
-- Formal replay 22: [Review theta manifold geometry](0022_2026-10-15T18-10-39Z_review-theta-manifold-geometry.json), thread `01a140c2-517a-7b73-8684-502f71e31500`. Canonical archive for the Investigation 22 topological review and compact Jensen-surface criterion; preserved in this lane under the conversation standing instructions.
-
-- Formal replay 24: [Explore spacetime and geometry ideas](0024_2026-10-15T23-30-42Z_explore-spacetime-and-geometry-ideas.json), thread `01a141e7-5787-7f10-9edc-977e32e7606e`. Canonical history for the [Investigation 22 spacetime and geometric continuation](../../active/22_theta_manifold_geometry/reviews/18_SPACETIME_BOUNDARY_AND_GEOMETRIC_CONTINUATION_REVIEW_20261015.md), retained in this lane under the standing instruction. Added 15 October 2026 for Edward Baker with substantial LLM assistance; **gpt-6-astra**, effort **ultra**. Current capture counts and hashes remain in the registry.
-
-
-## Paths-forward conversation moved to the investigations 3 brainstorm
-
-On 16 October 2026, Edward Baker requested that
-[chat 26](../../../brainstorm/investigations-3/chat-histories/0026_2026-10-16T23-21-25Z_note-a-folder-reorganization-in-the-last-commit-please-review-the-new-folders-av.json),
-thread `01a14705-3369-7c73-b37a-7977175c760b`, be recorded in the new
-[investigations 3 brainstorm](../../../brainstorm/investigations-3/README.md).
-Its sole registration now lives there, preserving its original number,
-filename, identity, creation times, first-capture provenance and prior public
-messages. The [relocation receipt](../../../brainstorm/investigations-3/CHAT_HISTORY_RELOCATION_20261016.json)
-records the transfer snapshot. This entry is a historical pointer.
-Prepared for Edward Baker with substantial LLM assistance;
-**gpt-6-astra**, reasoning effort **ultra**.
+Earlier transfers remain at their established destinations: [shared portfolio (former 2)](../../chat-histories/README.md), [Investigation 21 (former 7)](../../active/21_quaternion_theta_geometry/chat-histories/README.md), [Investigation 22 (former 17)](../../active/22_theta_manifold_geometry/chat-histories/README.md), and [Investigation 3 brainstorm (former 26)](../../../brainstorm/investigations-3/chat-histories/README.md).
