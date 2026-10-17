@@ -1,0 +1,186 @@
+{
+ "note": "03_MODIFICATIONS_AND_ALTERNATIVE_DIRECTIONS_CLAUDE_20261016.md",
+ "model": "Claude Fable 5.1 (claude-fable-5-1), Claude Cowork",
+ "date": "2026-10-16",
+ "status": "floating-point support computations; not certified; floats rounded to 12 significant figures for cross-platform byte identity",
+ "A_field_scale_vs_source_scale": {
+  "t=0": {
+   "x": 44.1303,
+   "H(t,x)": 9.69139791173e-07,
+   "H_x(t,x)": 1.72475168124e-08,
+   "second_term_transform_H_2(t,x)": 1.16131558768e-05,
+   "ratio_|H_2|/|H|": 11.9829522868
+  },
+  "t=0.25": {
+   "x": 44.1303,
+   "H(t,x)": 1.03403910196e-06,
+   "H_x(t,x)": -2.96868786535e-08,
+   "second_term_transform_H_2(t,x)": 1.16120211781e-05,
+   "ratio_|H_2|/|H|": 11.2297698956
+  },
+  "sup_u>=0 |phi_2|": 0.00096992835342,
+  "sup_u>=0 |phi_1|": 0.445726971318,
+  "phi_2(0)": 0.00096992835342,
+  "phi_3(0)": 7.95708263118e-10,
+  "exp(-pi*x/8)": 2.97651293367e-08,
+  "comment": "The second square term is of order 1e-3 in the source while the physical field at this height is of order 1e-6 to 1e-7; the term's own transform is of the same order as the whole field, so coefficient perturbations act at relative order one on the field although they are small in the source's sup norm."
+ },
+ "B_coefficient_space_collision_distance": {
+  "phi_n'(0)": {
+   "1": 0.0394987659691,
+   "2": -0.0394986833176,
+   "3": -8.26528086519e-08,
+   "4": -1.39172666252e-16,
+   "5": -2.869740478e-28,
+   "6": -8.53731733219e-43
+  },
+  "sum_{n<=6} phi_n'(0)": -1.27994092922e-12,
+  "tails": {
+   "x=30": {
+    "H(0,x)": -8.82122448527e-05,
+    "H_n(0,x)": {
+     "1": -0.000103890577182,
+     "2": 1.56783254464e-05,
+     "3": 6.88326202151e-12
+    },
+    "x^2 H_n(0,x) vs -phi_n'(0)": {
+     "1": [
+      -0.0935015194641,
+      -0.0394987659691
+     ],
+     "2": [
+      0.0141104929017,
+      0.0394986833176
+     ]
+    },
+    "|H|/|H_1|": 0.849088023622,
+    "tolerance_on_first_endpoint_|delta Phi'(0)| = |H| x^2": 0.0793910203674,
+    "same_as_relative_perturbation_of_a_1": 2.00996204361
+   },
+   "x=44.1303": {
+    "H(0,x)": 9.69139791173e-07,
+    "H_n(0,x)": {
+     "1": -1.06440224762e-05,
+     "2": 1.16131558768e-05,
+     "3": 6.39049375329e-12
+    },
+    "x^2 H_n(0,x) vs -phi_n'(0)": {
+     "1": [
+      -0.0207290568484,
+      -0.0394987659691
+     ],
+     "2": [
+      0.0226164280373,
+      0.0394986833176
+     ]
+    },
+    "|H|/|H_1|": 0.0910501451254,
+    "tolerance_on_first_endpoint_|delta Phi'(0)| = |H| x^2": 0.00188738363435,
+    "same_as_relative_perturbation_of_a_1": 0.0477833569745
+   },
+   "x=60": {
+    "H(0,x)": -1.87707781229e-09,
+    "H_n(0,x)": {
+     "1": -8.04569862774e-06,
+     "2": 8.04381581866e-06,
+     "3": 5.73127144948e-12
+    },
+    "x^2 H_n(0,x) vs -phi_n'(0)": {
+     "1": [
+      -0.0289645150599,
+      -0.0394987659691
+     ],
+     "2": [
+      0.0289577369472,
+      0.0394986833176
+     ]
+    },
+    "|H|/|H_1|": 0.000233302028716,
+    "tolerance_on_first_endpoint_|delta Phi'(0)| = |H| x^2": 6.75748012425e-06,
+    "same_as_relative_perturbation_of_a_1": 0.000171080790968
+   }
+  },
+  "three_square_control": {
+   "raw_weights_used": {
+    "a_1": 1.0,
+    "a_2": 0.879175,
+    "a_3": 57742.5
+   },
+   "source": "22 Note 05/01, Section 5 table (interval midpoints)",
+   "sup_norm_distance_of_half-line_sources": 7.12462046272e-05,
+   "theta_field_at_(1/4,44.1303)": {
+    "H": 1.03403910196e-06,
+    "H_x": -2.96868786535e-08,
+    "E": 1.07011817515e-12
+   },
+   "ratio_source_distance/|H|": 68.9008805297,
+   "comment": "the control's half-line source is within about 1e-4 of theta's in sup norm and collides where theta's own field is of order 1e-6; closeness of sources on the half-line is not the measure in which collisions are decided"
+  },
+  "comment": "For the even extension of a half-line comb, a defect delta in the first reflection endpoint produces a field tail -delta/x^2 that swamps the physical field once |delta| exceeds |H(x)| x^2, which decreases like x^2 exp(-pi x/8): the tolerance is exponentially small in the height."
+ },
+ "C_attraction_law": {
+  "inequality_check": {
+   "statement": "g(b-c)+g(b+c) >= 4b/(d^2+4b^2) for 0<=c<=b, g(y)=2y/(d^2+y^2)",
+   "min_ratio_lhs_over_rhs_on_grid": 1.0,
+   "grid": "d in [0,5] step 0.05, b in (0,2] step 0.05, c in [0,b] 41 points"
+  },
+  "at_T=3e12": {
+   "L=log(x/4pi)": 26.8917563382,
+   "S_max": 6.56241981395,
+   "pulls": [
+    {
+     "b": 1.0,
+     "pull_lower_bound": 1.12712600968,
+     "best_window_D": 7.6,
+     "universal_term_1/b": 1.0
+    },
+    {
+     "b": 0.5,
+     "pull_lower_bound": 0.593900197182,
+     "best_window_D": 7.2,
+     "universal_term_1/b": 2.0
+    },
+    {
+     "b": 0.25,
+     "pull_lower_bound": 0.301280055558,
+     "best_window_D": 7.1,
+     "universal_term_1/b": 4.0
+    }
+   ],
+   "collision_time_bound_from_b0=1": 0.331927987876,
+   "de_Bruijn_time_b0^2/2": 0.5,
+   "Polymath/Platt-Trudgian_published": 0.2
+  },
+  "heuristic_full_density": {
+   "pull_coefficient_L/2": 13.4458781691,
+   "collision_time_from_b0=1": 0.0596015892032,
+   "comment": "requires the local zero count at the scale of a few spacings, i.e. RH-verification-strength information at that height"
+  },
+  "growth_with_height": [
+   {
+    "T": 1000000000000000.0,
+    "L": 32.7008993285,
+    "collision_time_bound_from_b0=1": 0.301362780047,
+    "first_term_dominance_4.5/L": 0.137610894269
+   },
+   {
+    "T": 1e+20,
+    "L": 44.2138247935,
+    "collision_time_bound_from_b0=1": 0.254161422046,
+    "first_term_dominance_4.5/L": 0.101778120781
+   },
+   {
+    "T": 1e+30,
+    "L": 67.2396757234,
+    "collision_time_bound_from_b0=1": 0.193714169062,
+    "first_term_dominance_4.5/L": 0.0669247724887
+   },
+   {
+    "T": 1e+50,
+    "L": 113.291377583,
+    "collision_time_bound_from_b0=1": 0.132959253019,
+    "first_term_dominance_4.5/L": 0.0397205868266
+   }
+  ]
+ }
+}
