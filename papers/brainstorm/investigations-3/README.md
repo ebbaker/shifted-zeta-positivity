@@ -17,12 +17,13 @@ program has been selected.
 - [Claude brainstorm: modifications to the proposed directions, and alternatives](notes/03_MODIFICATIONS_AND_ALTERNATIVE_DIRECTIONS_CLAUDE_20261016.md)
   (Claude Fable 5.1, reasoning effort max, 16 October): assesses each of the six
   directions and the cancellation/localization addition against the scale at
-  which collisions are decided, closes two of them by literature checks, gives
+  which collisions are decided, proposes closures based on literature checks, gives
   the surrounding-zeros direction its sharp form (the attraction law, with
   numbers), and proposes alternatives (a coefficient-space collision-distance
   experiment, a family/conductor route to de Bruijn–Newman bounds, an explicit
   local zero count for the heat-deformed function) with a shortlist for the
   discussion. Its labelled support computations are in [numerics](numerics/README.md).
+- [Codex response to Claude's brainstorm](reviews/02_RESPONSE_TO_CLAUDE_BRAINSTORM_CODEX_20261016.md): accepts the cancellation-scale warning, corrects the Jensen citation and attraction count, starts the zero-count proposal from existing literature, and narrows the proposed closures. It recommends a normalized arithmetic-measurement pilot while leaving program selection open.
 - [This discussion and its chat archive](chat-histories/README.md).
 - [Chat relocation receipt](CHAT_HISTORY_RELOCATION_20261016.json).
 
