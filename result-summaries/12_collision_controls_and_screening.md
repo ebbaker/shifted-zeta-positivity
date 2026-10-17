@@ -2,6 +2,9 @@
 
 15 October 2026. Claude Fable 5.1 (`claude-fable-5-1`), Claude Cowork.
 
+Coverage and scope revised 16 October 2026 for Edward Baker with substantial
+LLM assistance: **gpt-6-astra (Codex)**, reasoning effort **ultra**.
+
 ## Summary
 
 The controls are the most distinctive product of the second portfolio:
@@ -38,23 +41,35 @@ only those properties proves a false statement.
   \(g\) built from \(e^{-u^4}\): strictly positive, even, entire, all odd
   primitive endpoints \(-\tfrac12\), every Fourier–Gram form positive, and
   an exact collision \(H_*(1/4,\pi/4)=H_{*,x}=0\) with \(H_{*,xx}>0\).
+- **Smooth shape and positive-primitive controls (21 Notes 53, 56).**
+  A smooth positive even source with double-exponential decay and strong
+  log-concavity still has a positive-time collision. A strengthened normalized
+  construction has a primitive transform positive for all real \(x\) and
+  \(0\le t\le1/2\), the same reconstruction constant \(1/2\), even completed
+  primitive, and every algebraic spectral asymptotic coefficient of the
+  theta primitive, yet collides at \(0<T<1/2\). These are analytic
+  constructions for sufficiently small positive damping, not a numerical
+  damping certificate. The endpoint data do not impose theta's arithmetic
+  square expansion. They screen the positive auxiliary channel in [14](14_theta_identities_and_arithmetic_bookkeeping.md).
 - **Reflection rigidity.** Within polynomially weighted integer-square
   combs, full source reflection plus the normalized endpoint forces
   \(a_n\equiv1\): the conjunction of square support and reflection is the
   theta source itself.
-- **The per-control table.** No single listed property is absent from all
-  four controls; \(\{A,B\}\) have square support without reflection,
-  \(\{C,D\}\) reflection without integer-square support. Any certificate
-  must reject all four; the premises on record that do are the complete
-  source (conductor one, equivalently level-one modularity) and direct
-  quantitative information about \(\xi\) (19's D2, D3).
+- **The four-family comparison in Reply 18.** Within that table,
+  \(\{A,B\}\) have square support without full reflection and
+  \(\{C,D\}\) full reflection without integer-square support. No one listed
+  property is absent from all four. The complete normalized source and
+  suitable direct quantitative information can distinguish the genuine
+  theta application; different controls may fail different premises.
 
 ## Status
 
 19: proved and certified; the manuscript "awaits independent review" and
 its tracked \(T_0\) table is not a bound (\(\Lambda\le T_0\) is explicitly
-not proved). 22: validated (python-flint), hand-verified and reproduced.
-Rigidity: proved.
+not proved). 22's weighted-square controls: validated (python-flint),
+hand-verified and reproduced. Reflected control and rigidity: proved.
+21's smooth/primitive controls: analytic proofs and internal reviews;
+finite algebra checks do not certify the implicit damping threshold.
 
 ## Caveats
 
@@ -65,10 +80,13 @@ commit `58871b3` still contains merge-conflict markers from commit
 
 ## Reusable for
 
-The standing falsification screen for every proposal: run it on
-\(\Phi_{c,p}\) for all \(p\), on the weighted-square and reflected controls,
-and name the premise each fails. A template for raw-margin witness
-certificates.
+Screen proposed global exclusions against the relevant Euler-factor,
+weighted-square, reflected, and primitive-compatible controls, naming the
+premise or quantitative estimate each fails. A valid finite certificate can
+pass a collision-free box of a control: rejection is required on a domain
+containing its collision, or for a bound contradicted by its witness. This
+qualifies the earlier blanket instruction that "any certificate" must reject
+all four families. The raw-margin witness format is reusable.
 
 ## Where
 
@@ -76,3 +94,6 @@ certificates.
 - 22 controls: [three-square control](../papers/investigations-2/active/22_theta_manifold_geometry/notes/05_control_families/01_SQUARE_SUPPORT_ENDPOINT_COLLISION_OBSTRUCTION_20261015.md), [reflection rigidity](../papers/investigations-2/active/22_theta_manifold_geometry/notes/05_control_families/02_WEIGHTED_COMB_REFLECTION_RIGIDITY_20261015.md), [four-square control](../papers/investigations-2/active/22_theta_manifold_geometry/notes/05_control_families/03_TWO_ENDPOINT_SQUARE_COLLISION_20261015.md), [reflected control](../papers/investigations-2/active/22_theta_manifold_geometry/notes/05_control_families/04_REFLECTION_POSITIVE_SOURCE_COLLISION_AND_MIXED_SECTORS_20261015.md); [manuscript §9](../papers/investigations-2/active/22_theta_manifold_geometry/manuscript/theta_manifold_geometry.tex); [independent recomputation](../papers/investigations-2/active/22_theta_manifold_geometry/numerics/recompute_controls_claude_20261015.py).
 - The table and its scope: [Reply 18](../papers/investigations-2/active/22_theta_manifold_geometry/reviews/18_REPLY_TO_RESPONSE_17_CLAUDE_20261015.md) §3; [Review 16](../papers/investigations-2/active/22_theta_manifold_geometry/reviews/16_JOINT_REVIEW_OF_INVESTIGATIONS_21_AND_22_CLAUDE_20261015.md) §6 (superseded wording); [Response 17](../papers/investigations-2/active/22_theta_manifold_geometry/reviews/17_RESPONSE_TO_JOINT_REVIEW_CLAUDE_20261015.md).
 - Earlier counter-kernels: [11](11_newman_heat_flow_reductions_and_certificates.md).
+
+- 21 controls: [smooth log-concave source](../papers/investigations-2/active/21_quaternion_theta_geometry/notes/05_theta_correlation_kernels/53_SOURCE_CONCAVITY_AND_POSITIVE_TIME_COLLISION_CONTROL_20261015.md), [primitive-compatible collision control](../papers/investigations-2/active/21_quaternion_theta_geometry/notes/05_theta_correlation_kernels/56_POSITIVE_PRIMITIVE_COLLISION_CONTROL_20261015.md), [Review 31](../papers/investigations-2/active/21_quaternion_theta_geometry/reviews/31_SIGNED_FORMS_PRIMITIVE_AND_SOURCE_CONTROL_REVIEW_20261015.md), [Review 33](../papers/investigations-2/active/21_quaternion_theta_geometry/reviews/33_PRIMITIVE_CIRCLE_AND_CARRIER_CONTINUATION_REVIEW_20261015.md).
+- Scope of a finite certificate's control screen: [Review 20](../papers/investigations-2/active/22_theta_manifold_geometry/reviews/20_ADDITIONAL_PATHS_FORWARD_ASSESSMENT_CODEX_20261016.md), "The control screen must distinguish premises and estimates."

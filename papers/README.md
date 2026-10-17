@@ -19,13 +19,17 @@ and the RH3 research log is with the
 | [`investigations/`](investigations/README.md) | Cross-program investigations: CCM operator realizations and fractal Laplacians, character channels, the Sonin critical-boundary manuscript, and the program meta-analysis. | 26 Sep – 3 Oct 2026 | [Index](investigations/README.md); [program meta-analysis](investigations/program-meta-analysis/README.md). |
 | [`quasi-rh/`](quasi-rh/README.md) | The zero-strip line: prime-variance exponents, quasi-RH exponent descent with the Newman-collision projects, and character amplification. | 3–11 Oct 2026 | [Line guide](quasi-rh/README.md). |
 | [`investigations-2/`](investigations-2/README.md) | The second investigation portfolio, grown from the exponent-descent brainstorms: active and inactive program homes, the Newman certificate audit and the formal-replay crosswalk. | 12 Oct 2026 onward | [Portfolio overview](investigations-2/README.md); [active programs](investigations-2/active/README.md). |
+| [`brainstorm/`](brainstorm/README.md) | Reflection between major investigation series and discussion before choosing the next program. | 16 Oct 2026 onward | [Brainstorm index](brainstorm/README.md); [investigations 3 discussion](brainstorm/investigations-3/README.md). |
 | [`misc/`](misc/README.md) | Separate earlier work, currently the RH-detector draft. | Aug 2026 | [Miscellaneous papers](misc/README.md). |
 
 Short summaries of what has been established, in the sources' own status
 words, are in [result-summaries](../result-summaries/README.md): clusters
 01–06 cover `weil-positivity/`, 07–08 `investigations/` and `misc/`, 09–11
-`quasi-rh/`, and 10–14 `investigations-2/` (10 and 11 span both); 15 is
+`quasi-rh/`, and 10–14 plus 16 `investigations-2/` (10 and 11 span both); 15 is
 repository-wide. Recurring patterns to avoid are in [avoid](../avoid/README.md).
+
+The inter-series brainstorm entry was added on 16 October 2026 for Edward
+Baker with substantial LLM assistance, **gpt-6-astra**, effort **ultra**.
 
 ## How the work developed
 

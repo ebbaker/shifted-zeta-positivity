@@ -3,6 +3,10 @@
 15 October 2026. Prepared for Edward Baker with LLM assistance. Model:
 Claude Fable 5.1 (`claude-fable-5-1`), Claude Cowork, reasoning effort max.
 
+Coverage audit and additions for Investigations 21–22, 16 October 2026:
+prepared for Edward Baker with substantial LLM assistance, **gpt-6-astra
+(Codex)**, reasoning effort **ultra**. See the [coverage review](../papers/brainstorm/investigations-3/reviews/01_RESULT_SUMMARY_COVERAGE_INVESTIGATIONS_21_22_CODEX_20261016.md).
+
 ## Purpose
 
 This folder is the short way into what the repository has actually
@@ -66,10 +70,13 @@ relative to this folder. Cluster files:
 | [09](09_prime_variance_exponents.md) | Fixed variance exponent \(\iff\) closed zero strip; finite quadratic bounds; descent obstructions | prime-variance-exponents |
 | [10](10_quasi_rh_audits_and_amplification.md) | What the quasi-RH preprints proved versus claimed; the internal audit and Lean replay; conditional extractions; amplification superseded | quasi-rh-*, investigations-2 |
 | [11](11_newman_heat_flow_reductions_and_certificates.md) | Heat-flow reductions, counter-kernels, finite Newman certificates, the corrected Riemann–Siegel interface, the Gomila audit | quasi-rh-exponent-descent, investigations-2 |
-| [12](12_collision_controls_and_screening.md) | The Euler-factor controls, the weighted-square and reflected controls, reflection rigidity, and the screening they impose | investigations-2 (19, 22) |
-| [13](13_local_heat_flow_geometry_and_rh_equivalent_criteria.md) | Local heat-flow geometry at a collision, spacetime index and winding, and the proof that the observation criteria are RH-equivalent | investigations-2 (21, 22) |
-| [14](14_theta_identities_and_arithmetic_bookkeeping.md) | Exact theta identities: covariant source formula, dilation and sieve algebra, two-coset reduction, Volterra recovery, path corrections | investigations-2 |
+| [12](12_collision_controls_and_screening.md) | Euler-factor, weighted-square, reflected and positive-primitive controls; reflection rigidity and scoped screening | investigations-2 (19, 21, 22) |
+| [13](13_local_heat_flow_geometry_and_rh_equivalent_criteria.md) | Local collision laws, real/complex multiplicities, marked surface topology and RH-equivalent criteria | investigations-2 (21, 22) |
+| [14](14_theta_identities_and_arithmetic_bookkeeping.md) | Positive theta primitive, finite E8 bridge, covariant source, coefficient stability, complete arithmetic identities and scoped obstructions | investigations-2 |
 | [15](15_verification_infrastructure.md) | The reusable machinery: blueprint and ledger, check-programme conventions, certificate formats, chat recorders, hygiene checks | repository-wide |
+| [16](16_hypercomplex_reductions_and_geometric_realizations.md) | Quaternion/octonion reductions, sharp signed averages, physical jet surfaces, hyperkähler metrics and theta connections | investigations-2 (21, 22) |
+
+For the octonionic and manifold continuation, start with [16](16_hypercomplex_reductions_and_geometric_realizations.md), then [13](13_local_heat_flow_geometry_and_rh_equivalent_criteria.md) for topology and [14](14_theta_identities_and_arithmetic_bookkeeping.md) for the positive primitive and arithmetic source bridges. [11](11_newman_heat_flow_reductions_and_certificates.md) records finite certificates and outer budgets; [12](12_collision_controls_and_screening.md) records the controls limiting their interpretation.
 
 ## Maintenance
 

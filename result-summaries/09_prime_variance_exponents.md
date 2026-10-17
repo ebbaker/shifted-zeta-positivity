@@ -2,6 +2,9 @@
 
 15 October 2026. Claude Fable 5.1 (`claude-fable-5-1`), Claude Cowork.
 
+Arithmetic correction, 16 October 2026, prepared for Edward Baker with
+substantial LLM assistance: **gpt-6-astra (Codex)**, effort **ultra**.
+
 ## Summary
 
 - **Fixed exponent and closed zero strip (thm:main, cor:rh).** For each
@@ -12,8 +15,10 @@
   unconditional; any sequence \(\delta_j\to0\) is equivalent to RH; the
   optimum \(\delta^*\) is attained as a bound, not as a zero (rule R4 of the
   11 October brainstorm). The bridge \(\Lambda_{\rm DN}\le\delta^{*2}/2\)
-  converts a strip into a Newman bound, but at \(\delta^*=7/8\) it gives
-  \(9/32\), worse than the published bounds.
+  converts a strip into a Newman bound. A half-plane bound
+  \(\operatorname{Re}\rho\le7/8\) gives \(\delta=3/4\) and \(9/32\),
+  worse than the published bounds. This corrects the earlier parameter
+  identification: \(\delta^*=7/8\) would instead give \(49/128\).
 - **Finite quadratic bounds (thm:finite, cor:height).** \(V_g(X)<38X^2\)
   for \(e\le X\le10^{99}\), \(<40X^2\) to \(10^{100}\), \(<72X^2\) to
   \(10^{102}\); the covered range grows like \(H^{10}/(\log H)^2\) in the

@@ -107,3 +107,17 @@ The same history-15 conversation next pursued the analytic octonionic signed-bou
 - Formal replay 22: [Review theta manifold geometry](0022_2026-10-15T18-10-39Z_review-theta-manifold-geometry.json), thread `01a140c2-517a-7b73-8684-502f71e31500`. Canonical archive for the Investigation 22 topological review and compact Jensen-surface criterion; preserved in this lane under the conversation standing instructions.
 
 - Formal replay 24: [Explore spacetime and geometry ideas](0024_2026-10-15T23-30-42Z_explore-spacetime-and-geometry-ideas.json), thread `01a141e7-5787-7f10-9edc-977e32e7606e`. Canonical history for the [Investigation 22 spacetime and geometric continuation](../../active/22_theta_manifold_geometry/reviews/18_SPACETIME_BOUNDARY_AND_GEOMETRIC_CONTINUATION_REVIEW_20261015.md), retained in this lane under the standing instruction. Added 15 October 2026 for Edward Baker with substantial LLM assistance; **gpt-6-astra**, effort **ultra**. Current capture counts and hashes remain in the registry.
+
+
+## Paths-forward conversation moved to the investigations 3 brainstorm
+
+On 16 October 2026, Edward Baker requested that
+[chat 26](../../../brainstorm/investigations-3/chat-histories/0026_2026-10-16T23-21-25Z_note-a-folder-reorganization-in-the-last-commit-please-review-the-new-folders-av.json),
+thread `01a14705-3369-7c73-b37a-7977175c760b`, be recorded in the new
+[investigations 3 brainstorm](../../../brainstorm/investigations-3/README.md).
+Its sole registration now lives there, preserving its original number,
+filename, identity, creation times, first-capture provenance and prior public
+messages. The [relocation receipt](../../../brainstorm/investigations-3/CHAT_HISTORY_RELOCATION_20261016.json)
+records the transfer snapshot. This entry is a historical pointer.
+Prepared for Edward Baker with substantial LLM assistance;
+**gpt-6-astra**, reasoning effort **ultra**.

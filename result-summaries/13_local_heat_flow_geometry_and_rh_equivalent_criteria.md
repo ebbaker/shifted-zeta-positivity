@@ -1,67 +1,115 @@
-# Local heat-flow geometry at a collision, and why the observation criteria are RH-equivalent
+# Local heat-flow geometry, marked topology, and RH-equivalent criteria
 
 15 October 2026. Claude Fable 5.1 (`claude-fable-5-1`), Claude Cowork.
 
+Coverage and scope revised 16 October 2026 for Edward Baker with substantial
+LLM assistance: **gpt-6-astra (Codex)**, reasoning effort **ultra**.
+
 ## Summary
 
-For a real analytic backward-heat field \(H_t=-H_{xx}\) with an exact
-spatial zero of order \(m=2r+j\) at \((T,a)\):
+Write \(h_j=\partial_x^jH\), \(E=h_0^2+h_1^2\), and
+\(\mathcal L_j=h_{j+1}^2-h_jh_{j+2}\) for a real analytic backward-heat
+field \(H_t=-H_{xx}\). The local results concern a spatial zero of exact
+finite order \(m=2r+j\), \(r\ge1\), \(j\in\{0,1\}\).
 
-- **Local structure (22 §2).** The even-order stationary predecessor
-  \(\chi(s)\) with \(W(T-s,\chi(s))=\tfrac A{r!}s^r+O(s^{r+1})\); the
-  physical stationary pole \(\mathcal L_j/E=-r/s+O(1)\); the complete
-  local backward stationary locus is one analytic curve; the scalar factor
-  \(E=W^2Q(s)\).
-- **Exclusion theorems and sharpness (22 §7).** Signed stationary
-  exclusion; the fixed-endpoint chord law \(\mathcal C_j/\sqrt E\to-d_\delta<0\);
-  starting-energy exclusion with \(o(\sqrt E)\) loss and sharpness of the
-  exponent \(1/2\); the exponential average with its endpoint-only cutoff
-  error \(\le B_j(T_*)e^{-\pi(N+1)^2/4}\sqrt E\); quarter-turn concentration
-  and the scaled profiles.
-- **Spacetime index and winding (22, Note 01/04).** The real index of
-  \((H,H_x)\) at an \(m\)-fold collision is \(-\lfloor m/2\rfloor\), so zero
-  boundary winding on a compact spacetime region excludes every interior
-  collision; the four-dimensional local degree of the holomorphic pair is
-  \(\binom m2\), so a tube certificate is never more permissive than the
-  rectangle one (Reply 18, Proposition 5.1, checked exactly for \(m\le9\)).
-- **The observation criteria are RH-equivalent (Review 16, Prop. 1;
-  Reply 18 §1).** Under RH every slice is Laguerre–Pólya with simple zeros,
-  so each criterion holds with zero loss; combined with the exclusion
-  theorems, every loss-type criterion on \((0,\tfrac12]\) is equivalent to
-  RH, and on \([t_0,\tfrac12]\) to \(\Lambda\le t_0\) (the strict pointwise
-  sign needs \(\Lambda<t_0\)). A prescribed trace certificate is
-  RH-equivalent when its scalar coefficient is locally bounded on both
-  sides (Reply 18, Prop. 2.1).
-- **The classification rule.** A proposal that implies RH and is implied
-  by it is a reformulation, to be stated once; one that does not imply RH is
-  a milestone, judged by its number (\(\Lambda\le t_0\), an effective
-  height, a certified box, a certification cost).
+- **Stationary collision geometry (22 §2).** For \(s=T-t\), the relevant
+  stationary predecessor is one analytic curve, the opposite-parity
+  stationary set is locally empty before the event, and the physical jet
+  has a scalar factor: \(E=W^2Q(s)\), with positive analytic \(Q\).
+  The signed ratio has the universal pole \(\mathcal L_j/E=-r/s+O(1)\).
+- **Chord and turning laws (22 §7).** The fixed-endpoint chord satisfies
+  \(\mathcal C_j/\sqrt E\to-d_\delta<0\); an independently established
+  starting-energy estimate with uniform \(o(\sqrt E)\) loss excludes the
+  covered event, and the exponent \(1/2\) is sharp. The exponential-average
+  version retains its endpoint-only cutoff error
+  \(\le B_j(T_*)e^{-\pi(N+1)^2/4}\sqrt E\). Quarter-turn concentration and
+  explicit scaled profiles describe the same local degeneration.
+- **Circle cancellation loss (21 Note 57).** On full holomorphic circles
+  and nearby time slices, taking the boundary density's negative part
+  separately creates a fixed-radius loss of order \(s^{-r}\) relative to
+  \(E\), versus the exact stationary pole of order \(s^{-1}\). The excess
+  is the discarded positive boundary mass. Radius \(R\asymp\sqrt s\)
+  removes the extra pole order, not the divergence; an event-dependent
+  radius is a diagnostic, not a prescribed certificate.
+- **Real index, walls and projective data (22 Notes 04, 06, 07).** Each
+  collision has real index \(-\lfloor m/2\rfloor\), so zero boundary
+  winding excludes every interior collision when the boundary jet is
+  nonzero. Moving-wall root counts retain signed wall fluxes, including
+  tangencies. The real projective jet \([H:H_x]\in\mathbb{RP}^1\) has
+  degree twice the jet winding; it retains the obstruction. Unrestricted
+  filling in \(\mathbb{CP}^1\) does not. The completed theta pilot is in
+  [11](11_newman_heat_flow_reductions_and_certificates.md). With regular
+  positive initial time, terminal time above \(1/2\), and the stated boundary
+  and uniform-confinement hypotheses, stabilized negative theta winding counts
+  nonreal zeros in the upper-right quadrant with multiplicity.
+- **Complex and embedded multiplicities (22 Notes 04, 08).** The holomorphic
+  pair \((H,H_z)\) has local intersection multiplicity \(m(m-1)/2\),
+  positive complex degree and negative degree in the declared quaternion
+  orientation. At fixed time, the primitive curve \((P,H)\), \(P_z=H\),
+  has embedded link \(T(m,m+1)\) and Milnor-fiber genus \(m(m-1)/2\);
+  its normalization is a disk. These are distinct germs. Real and complex
+  degree magnitudes agree only for a double collision; their parity always
+  agrees. Degree alone proves no general advantage or disadvantage for a
+  four-dimensional boundary estimator.
+- **Compact real surfaces (22 Note 05).** For
+  \(f(z)=\xi(1/2+\sqrt z)=\sum\gamma_k z^k/k!\), define
+  \(J_d(X)=\sum_{k=0}^d\binom dk\gamma_kX^k\), with positive complete-theta
+  moment coefficients. RH is equivalent to every smooth projective
+  normalization of \(y^2=J_{2g+1}(x)\) having exactly \(g+1\) real
+  components. The count uses the original degree, not the possibly smaller
+  normalization genus. RH gives strict Jensen hyperbolicity without
+  assuming simple zeta zeros. This is a proved reformulation using classical
+  ingredients, not a proof that the component condition holds.
+- **Surface deficit and polynomial heat (22 Note 07).** For an odd-degree
+  real polynomial \(Q\) of degree \(2g+1\),
+  \(g+1-b_0(C_Q(\mathbb R))=N_{\rm nonreal}(Q)/2+
+  \sum_{a\in\mathbb R}\lfloor\operatorname{mult}_aQ/2\rfloor\), counting
+  nonreal roots with multiplicity. This equals its remaining polynomial-heat
+  collision weight, including initial-slice events. The reciprocal
+  Hermite–Jensen deficits increase with degree and decrease with auxiliary
+  heat time. Every finite polynomial eventually regularizes; a uniform
+  finite threshold across all degrees is already RH-equivalent. Auxiliary
+  polynomial heat time is not physical theta heat time.
+- **Observation equivalences (Review 16 and Reply 18).** Under RH every
+  **positive-time** slice is Laguerre–Pólya with simple zeros and satisfies
+  the observation criteria with zero loss. The all-event loss criteria on
+  \((0,1/2]\) are RH-equivalent; on \([t_0,1/2]\), they characterize
+  \(\Lambda\le t_0\), while strict pointwise signs require
+  \(\Lambda<t_0\). The prescribed-trace equivalence retains its stated
+  two-sided locally bounded scalar coefficient and remainder control.
 
 ## Status
 
-All proved; exact replays pass on polynomial germs (22's checkers); the
-Laguerre–Pólya argument is classical. Hand-verified in the cross-model
-review and partly corrected in the second round (endpoint table).
+The local laws, indices, surface identities and equivalences have written
+analytic proofs with internal LLM reviews. Polynomial-germ replays check
+finite examples and conventions; they do not prove universal quantifiers.
+The later topology continuation has its own proofs and review outside the
+stable manuscript. The theta winding box is separately interval-certified.
+The rule to judge an RH-equivalent proposal as a reformulation and a
+quantitative milestone by its number is a research policy, not another theorem.
 
 ## Caveats
 
-These are statements about general backward-heat fields and carry no
-information about theta; every identity here is shared by the controls of
-[12](12_collision_controls_and_screening.md). The geometric apparatus
-(self-dual forms, jet surfaces, hyperkähler lifts, theta bundle with ASD
-connection; 21's Fueter and octonionic lifts) is correct and sign-blind by
-the manuscripts' own sections.
+The generic collision laws do not distinguish theta from the controls in
+[12](12_collision_controls_and_screening.md). The complete-theta surface
+family retains the source's “real involutions” (Note 05); its desired
+maximal topology remains unproved.
+The earlier blanket description of all geometry as “sign-blind” is too
+broad: oriented associators, forms and real Gauss maps retain the sign;
+norms and intrinsic curvature can lose it. See the actual constructions
+and integrated positive theorems in [16](16_hypercomplex_reductions_and_geometric_realizations.md).
+No literature priority or global theta sign theorem follows from these results.
 
 ## Reusable for
 
-The exact local model of a collision for any certificate; the winding
-certificate language (and its cost accounting against the published
-proofs, Review 19 §2); the classification rule as the first test on any
-new criterion.
+Local models, multiplicity-safe boundary accounting, marked real topology,
+and comparison of certificate geometries. The compact-surface equivalence
+is a precise answer to how manifold topology can encode RH, with all
+normalization and reality data retained.
 
 ## Where
 
-- 22 manuscript: [`theta_manifold_geometry.tex`](../papers/investigations-2/active/22_theta_manifold_geometry/manuscript/theta_manifold_geometry.tex) (§2 predecessor, pole, locus; §7 chord laws; §11 trace proposition and cone transfer); [spacetime index note](../papers/investigations-2/active/22_theta_manifold_geometry/notes/01_physical_jet_geometry/04_SPACETIME_INDEX_AND_MARKED_TOPOLOGY_20261015.md); [Jensen surfaces](../papers/investigations-2/active/22_theta_manifold_geometry/notes/01_physical_jet_geometry/05_JENSEN_HYPERELLIPTIC_TOPOLOGY_20261015.md).
-- 21: [criteria baseline](../papers/investigations-2/active/21_quaternion_theta_geometry/notes/1_RH_CRITERIA_AND_QUATERNION_SETUP_20261014.md); [Cauchy–Fueter boundary note](../papers/investigations-2/active/21_quaternion_theta_geometry/notes/4_CAUCHY_FUETER_BOUNDARY_AND_CURRENT_REFORMULATIONS_20261014.md) (eq. (15), the real Jacobian of the lift).
-- Reviews: [Review 16](../papers/investigations-2/active/22_theta_manifold_geometry/reviews/16_JOINT_REVIEW_OF_INVESTIGATIONS_21_AND_22_CLAUDE_20261015.md) §4; [Response 17](../papers/investigations-2/active/22_theta_manifold_geometry/reviews/17_RESPONSE_TO_JOINT_REVIEW_CLAUDE_20261015.md); [Reply 18](../papers/investigations-2/active/22_theta_manifold_geometry/reviews/18_REPLY_TO_RESPONSE_17_CLAUDE_20261015.md) §§1, 2, 5 with its [check programme](../papers/investigations-2/active/22_theta_manifold_geometry/numerics/check_heat_germ_degrees_claude_20261015.py); [Review 19](../papers/investigations-2/active/22_theta_manifold_geometry/reviews/19_PATHS_FORWARD_AFTER_THE_SECOND_ROUND_CLAUDE_20261015.md).
-- Earlier statement of the same facts: [external review of project 17](../papers/quasi-rh/quasi-rh-exponent-descent/newman_collisions/17_enlarged_state_transport/reviews/12_EXTERNAL_REVIEW_OF_MERGED_PROJECT_CLAUDE_20261011.md) (transport certificate \(\equiv\) first-jet test; S0/S1 are Laguerre's inequality); [17's index lemma](../papers/investigations-2/inactive/17_spacetime_collision_degree/notes/INITIAL_RESEARCH_PROGRAM_20261013.md).
+- [22 manuscript](../papers/investigations-2/active/22_theta_manifold_geometry/manuscript/theta_manifold_geometry.tex), §§2, 7, 11; [21 circle-loss note](../papers/investigations-2/active/21_quaternion_theta_geometry/notes/02_signed_cusp_control/57_CIRCLE_DEFECT_MULTIPLICITY_AND_RADIUS_20261015.md) and [Review 33](../papers/investigations-2/active/21_quaternion_theta_geometry/reviews/33_PRIMITIVE_CIRCLE_AND_CARRIER_CONTINUATION_REVIEW_20261015.md).
+- [Spacetime index and embedded primitive topology](../papers/investigations-2/active/22_theta_manifold_geometry/notes/01_physical_jet_geometry/04_SPACETIME_INDEX_AND_MARKED_TOPOLOGY_20261015.md); [compact Jensen surfaces](../papers/investigations-2/active/22_theta_manifold_geometry/notes/01_physical_jet_geometry/05_JENSEN_HYPERELLIPTIC_TOPOLOGY_20261015.md); [Review 13](../papers/investigations-2/active/22_theta_manifold_geometry/reviews/13_GEOMETRIC_SIMPLIFICATION_AND_TOPOLOGICAL_RH_REVIEW_20261015.md).
+- [Moving-wall flux and theta winding](../papers/investigations-2/active/22_theta_manifold_geometry/notes/01_physical_jet_geometry/06_WALL_FLUX_AND_CERTIFIED_THETA_WINDING_20261015.md); [real-projective jets and surface deficits](../papers/investigations-2/active/22_theta_manifold_geometry/notes/01_physical_jet_geometry/07_REAL_PROJECTIVE_JETS_AND_JENSEN_HEAT_SURFACES_20261015.md); [real/complex multiplicities](../papers/investigations-2/active/22_theta_manifold_geometry/notes/01_physical_jet_geometry/08_REAL_AND_COMPLEX_COLLISION_MULTIPLICITIES_20261015.md); [continuation review](../papers/investigations-2/active/22_theta_manifold_geometry/reviews/18_SPACETIME_BOUNDARY_AND_GEOMETRIC_CONTINUATION_REVIEW_20261015.md).
+- [Review 16](../papers/investigations-2/active/22_theta_manifold_geometry/reviews/16_JOINT_REVIEW_OF_INVESTIGATIONS_21_AND_22_CLAUDE_20261015.md), [Response 17](../papers/investigations-2/active/22_theta_manifold_geometry/reviews/17_RESPONSE_TO_JOINT_REVIEW_CLAUDE_20261015.md), and [Reply 18](../papers/investigations-2/active/22_theta_manifold_geometry/reviews/18_REPLY_TO_RESPONSE_17_CLAUDE_20261015.md), §§1–2, 5, for the corrected equivalence and degree scope.
