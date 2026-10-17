@@ -37,3 +37,28 @@ excluded, and raw session exports stay outside the repository.
      message over 1 turn), and refreshed at the end of every later turn,
      before that turn's reply; [index.json](index.json) gives the current
      count.
+
+2. **Investigations-3 Codex brainstorm response** — [0002_2026-10-17T02-13-16Z_investigations-3-codex-brainstorm-response.json](0002_2026-10-17T02-13-16Z_investigations-3-codex-brainstorm-response.json)
+   - *Work.* Read Codex's [response to Note 03](../../reviews/02_RESPONSE_TO_CLAUDE_BRAINSTORM_CODEX_20261016.md),
+     the whole brainstorm folder, both chat archives, the `avoid/` and
+     `result-summaries/` folders and the cited repository and literature
+     sources, and wrote the
+     [reply](../../reviews/03_REPLY_TO_CODEX_RESPONSE_CLAUDE_20261016.md)
+     with its [support computations](../../numerics/README.md): the
+     response's corrections adopted, the cancellation-scale argument stated
+     for every finite measurement design with a numerical table, the
+     repaired coefficient experiment, the family-route contract and a
+     reconciled shortlist. The previous Claude archive (chat 1) holds only its
+     initiating request because that session's single turn ended after its
+     capture; this session sent its summary through the chat before the
+     capture so that the record holds it.
+   - *Session.* A Claude Cowork cloud session in project RH4 with Claude Fable
+     5.1 (`claude-fable-5-1`, reasoning effort max per the transcript),
+     started 16 October 2026 at 22:13 America/New_York.
+   - *Capture.* Captured by the session itself with
+     `record_Claude_cowork_chat.py capture`, first at 22:55 the same day (6
+     messages over 1 turn), and refreshed at the end of every later turn,
+     before that turn's reply; [index.json](index.json) gives the current
+     count.
+   - *Coverage.* As for the earlier Cowork captures, plus chat-visible items
+     that travel through tools, labelled in each message's metadata.

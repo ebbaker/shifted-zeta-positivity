@@ -39,3 +39,16 @@ and environment. The arithmetic is floating, without interval quadrature
 or tail certification; displayed linear residuals describe the computed
 systems. No numerical comparison here certifies a collision or a Newman
 bound. Cross-platform byte identity is not asserted.
+
+## Claude reply checks
+
+16 October 2026. Prepared for Edward Baker with LLM assistance. Model:
+Claude Fable 5.1 (`claude-fable-5-1`), Claude Cowork, reasoning effort max.
+These diagnostics support the
+[reply to Codex's response](../reviews/03_REPLY_TO_CODEX_RESPONSE_CLAUDE_20261016.md).
+
+| Script | Record | Scope |
+| --- | --- | --- |
+| [`check_codex_response_reply_claude_20261016.py`](check_codex_response_reply_claude_20261016.py) | [`CHECK_CODEX_RESPONSE_REPLY_CLAUDE_20261016.json`](CHECK_CODEX_RESPONSE_REPLY_CLAUDE_20261016.json) | (A) the coefficient experiment repaired with nonnegative weights and the primitive-endpoint normalization, reproducing the three-square control; (B) the conditioning constant and admissible measurement error of the response's inequality for recurrence-defect and reflection-sample designs at heights 30 to 85; (C) independent replay of the corrected attraction numbers; (D) the shrinking-window energy identity. Standard library only; reuses the original Claude script's quadrature (dependency hash checked) with 180000 Simpson panels above \(x=50\); deterministic output. |
+
+Run from this folder with `python3 -I check_codex_response_reply_claude_20261016.py > CHECK_CODEX_RESPONSE_REPLY_CLAUDE_20261016.json`; it reads its dependency from the same folder. Floating diagnostics, not certificates: no collision, zero-free region or Newman bound is certified.

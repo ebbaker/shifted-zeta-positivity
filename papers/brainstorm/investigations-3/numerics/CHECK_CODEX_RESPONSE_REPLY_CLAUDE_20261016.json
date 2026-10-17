@@ -1,0 +1,725 @@
+{
+ "reply": "03_REPLY_TO_CODEX_RESPONSE_CLAUDE_20261016.md",
+ "model": "Claude Fable 5.1 (claude-fable-5-1), Claude Cowork, reasoning effort max",
+ "date": "2026-10-16",
+ "status": "floating-point diagnostics; not certified; floats rounded to 12 significant figures",
+ "dependency": {
+  "file": "check_brainstorm_modifications_claude_20261016.py",
+  "sha256": "b7249c105ba42bc6e13c9397b837fdf60dab8c130f7c762debbae60683c5cfbc",
+  "expected_sha256": "b7249c105ba42bc6e13c9397b837fdf60dab8c130f7c762debbae60683c5cfbc",
+  "matches": true
+ },
+ "quadrature": "dependency composite Simpson on [0,1.8]; 36000 panels for x <= 50, 180000 panels above",
+ "A_repaired_coefficient_distance": {
+  "definitions": {
+   "beta_n": "(4 pi n^2 - 1) e^{-pi n^2}; sum_{n>=1} beta_n = 1/2 is the theta identity theta'(1) = -theta(1)/4",
+   "class": "a_n >= 0, sum_n a_n beta_n = 1/2, a_n fixed for n > N (theta tail: 1; zero tail: 0), optionally a_1 = 1",
+   "problem": "minimum Euclidean norm of delta = a - a_theta with H_a(t,x) = d_x H_a(t,x) = 0 and the normalization; a linear system with 3 (or 4) rows in N unknowns",
+   "jet_truncation": "theta jet and tail computed from the first 6 square terms; terms beyond n=6 are below 1e-48 on the half-line"
+  },
+  "beta": {
+   "1": 0.499828194337,
+   "2": 0.000171805603673,
+   "3": 5.89125885144e-11,
+   "4": 2.95898519554e-20,
+   "5": 2.43420090491e-32,
+   "6": 3.44351962408e-47
+  },
+  "sum_beta_1_to_6": 0.5,
+  "points": [
+   {
+    "t": 0.25,
+    "x": 44.1303,
+    "theta_jet_h": [
+     1.03403910196e-06,
+     -2.96868786535e-08
+    ],
+    "columns": [
+     [
+      -1.05779884667e-05,
+      1.16120211781e-05,
+      6.3906076498e-12,
+      3.52968955378e-21,
+      2.98416035818e-33,
+      4.26397594176e-48
+     ],
+     [
+      2.34667657116e-07,
+      -2.6435449692e-07,
+      -3.88498851385e-14,
+      -7.33254562286e-24,
+      -2.60592141179e-36,
+      -1.81491301604e-51
+     ]
+    ],
+    "solves": [
+     {
+      "tail": "theta",
+      "anchor_a1": false,
+      "N": 2,
+      "result": "overdetermined (more constraints than weights); no exact solution in general"
+     },
+     {
+      "tail": "theta",
+      "anchor_a1": false,
+      "N": 3,
+      "weights_a": [
+       1.00003470789,
+       0.8792603455,
+       57641.7570292
+      ],
+      "raw_l2_distance": 57640.7570294,
+      "beta_weighted_distance": 4.148749846e-05,
+      "all_weights_nonnegative": true,
+      "max_abs_constraint_residual_below_1e-14": true
+     },
+     {
+      "tail": "theta",
+      "anchor_a1": false,
+      "N": 4,
+      "weights_a": [
+       1.00003470789,
+       0.8792603455,
+       57641.7570292,
+       1.00003947161
+      ],
+      "raw_l2_distance": 57640.7570294,
+      "beta_weighted_distance": 4.148749846e-05,
+      "all_weights_nonnegative": true,
+      "max_abs_constraint_residual_below_1e-14": true
+     },
+     {
+      "tail": "theta",
+      "anchor_a1": false,
+      "N": 6,
+      "weights_a": [
+       1.00003470789,
+       0.8792603455,
+       57641.7570292,
+       1.00003947161,
+       1.0,
+       1.0
+      ],
+      "raw_l2_distance": 57640.7570294,
+      "beta_weighted_distance": 4.148749846e-05,
+      "all_weights_nonnegative": true,
+      "max_abs_constraint_residual_below_1e-14": true
+     },
+     {
+      "tail": "theta",
+      "anchor_a1": true,
+      "N": 2,
+      "result": "overdetermined (more constraints than weights); no exact solution in general"
+     },
+     {
+      "tail": "theta",
+      "anchor_a1": true,
+      "N": 3,
+      "result": "overdetermined (more constraints than weights); no exact solution in general"
+     },
+     {
+      "tail": "theta",
+      "anchor_a1": true,
+      "N": 4,
+      "result": "singular"
+     },
+     {
+      "tail": "theta",
+      "anchor_a1": true,
+      "N": 6,
+      "result": "singular"
+     },
+     {
+      "tail": "zero",
+      "anchor_a1": false,
+      "N": 2,
+      "result": "overdetermined (more constraints than weights); no exact solution in general"
+     },
+     {
+      "tail": "zero",
+      "anchor_a1": false,
+      "N": 3,
+      "weights_a": [
+       1.00003470789,
+       0.8792603455,
+       57641.7570292
+      ],
+      "raw_l2_distance": 57640.7570294,
+      "beta_weighted_distance": 4.148749846e-05,
+      "all_weights_nonnegative": true,
+      "max_abs_constraint_residual_below_1e-14": true
+     },
+     {
+      "tail": "zero",
+      "anchor_a1": false,
+      "N": 4,
+      "weights_a": [
+       1.00003470789,
+       0.8792603455,
+       57641.7570292,
+       1.00003947161
+      ],
+      "raw_l2_distance": 57640.7570294,
+      "beta_weighted_distance": 4.148749846e-05,
+      "all_weights_nonnegative": true,
+      "max_abs_constraint_residual_below_1e-14": true
+     },
+     {
+      "tail": "zero",
+      "anchor_a1": false,
+      "N": 6,
+      "weights_a": [
+       1.00003470789,
+       0.8792603455,
+       57641.7570292,
+       1.00003947161,
+       1.0,
+       1.0
+      ],
+      "raw_l2_distance": 57640.7570294,
+      "beta_weighted_distance": 4.148749846e-05,
+      "all_weights_nonnegative": true,
+      "max_abs_constraint_residual_below_1e-14": true
+     },
+     {
+      "tail": "zero",
+      "anchor_a1": true,
+      "N": 2,
+      "result": "overdetermined (more constraints than weights); no exact solution in general"
+     },
+     {
+      "tail": "zero",
+      "anchor_a1": true,
+      "N": 3,
+      "result": "overdetermined (more constraints than weights); no exact solution in general"
+     },
+     {
+      "tail": "zero",
+      "anchor_a1": true,
+      "N": 4,
+      "result": "singular"
+     },
+     {
+      "tail": "zero",
+      "anchor_a1": true,
+      "N": 6,
+      "result": "singular"
+     }
+    ],
+    "strictly_anchored_two_direction_solve": {
+     "directions": "v_3 = e_3 - (beta_3/beta_2) e_2, v_4 = e_4 - (beta_4/beta_2) e_2 (delta_1 = 0 exactly, normalization exact)",
+     "jets": {
+      "B v_3": [
+       2.40881537493e-12,
+       5.179795967e-14
+      ],
+      "B v_4": [
+       1.52976649994e-21,
+       3.81968798463e-23
+      ]
+     },
+     "coefficients": {
+      "c_3": -6649027.49864,
+      "c_4": 9793808771230000.0
+     },
+     "weights": {
+      "a_2": 1.59319409407,
+      "a_3": -6649026.49864,
+      "a_4": 9793808771230000.0
+     },
+     "comment": "with the first weight pinned exactly, the second is pinned by the normalization and the collision must be carried by the third and fourth nodes; the fourth needs a weight far beyond any positive control, which is why the general solver reports the anchored systems as numerically singular"
+    }
+   },
+   {
+    "t": 0.0,
+    "x": 60.0,
+    "theta_jet_h": [
+     -1.87707784817e-09,
+     3.00336303536e-09
+    ],
+    "columns": [
+     [
+      -8.04569862779e-06,
+      8.04381581867e-06,
+      5.73127144949e-12,
+      3.39718973224e-21,
+      2.93610645593e-33,
+      4.23024543701e-48
+     ],
+     [
+      1.8792753896e-07,
+      -1.84924132571e-07,
+      -4.33533169955e-14,
+      -9.28107662414e-24,
+      -3.43488711757e-36,
+      -2.42994330053e-51
+     ]
+    ],
+    "solves": [
+     {
+      "tail": "theta",
+      "anchor_a1": false,
+      "N": 2,
+      "result": "overdetermined (more constraints than weights); no exact solution in general"
+     },
+     {
+      "tail": "theta",
+      "anchor_a1": false,
+      "N": 3,
+      "weights_a": [
+       0.999995667348,
+       1.02408658498,
+       -33482.9897797
+      ],
+      "raw_l2_distance": 33483.9897797,
+      "beta_weighted_distance": 8.276420546e-06,
+      "all_weights_nonnegative": false,
+      "max_abs_constraint_residual_below_1e-14": true
+     },
+     {
+      "tail": "theta",
+      "anchor_a1": false,
+      "N": 4,
+      "weights_a": [
+       0.999995667348,
+       1.02408658498,
+       -33482.9897797,
+       0.999973934761
+      ],
+      "raw_l2_distance": 33483.9897797,
+      "beta_weighted_distance": 8.276420546e-06,
+      "all_weights_nonnegative": false,
+      "max_abs_constraint_residual_below_1e-14": true
+     },
+     {
+      "tail": "theta",
+      "anchor_a1": false,
+      "N": 6,
+      "weights_a": [
+       0.999995667348,
+       1.02408658498,
+       -33482.9897797,
+       0.999973934761,
+       1.0,
+       1.0
+      ],
+      "raw_l2_distance": 33483.9897797,
+      "beta_weighted_distance": 8.276420546e-06,
+      "all_weights_nonnegative": false,
+      "max_abs_constraint_residual_below_1e-14": true
+     },
+     {
+      "tail": "theta",
+      "anchor_a1": true,
+      "N": 2,
+      "result": "overdetermined (more constraints than weights); no exact solution in general"
+     },
+     {
+      "tail": "theta",
+      "anchor_a1": true,
+      "N": 3,
+      "result": "overdetermined (more constraints than weights); no exact solution in general"
+     },
+     {
+      "tail": "theta",
+      "anchor_a1": true,
+      "N": 4,
+      "result": "singular"
+     },
+     {
+      "tail": "theta",
+      "anchor_a1": true,
+      "N": 6,
+      "result": "singular"
+     },
+     {
+      "tail": "zero",
+      "anchor_a1": false,
+      "N": 2,
+      "result": "overdetermined (more constraints than weights); no exact solution in general"
+     },
+     {
+      "tail": "zero",
+      "anchor_a1": false,
+      "N": 3,
+      "weights_a": [
+       0.999995667348,
+       1.02408658498,
+       -33482.9897797
+      ],
+      "raw_l2_distance": 33483.9897797,
+      "beta_weighted_distance": 8.276420546e-06,
+      "all_weights_nonnegative": false,
+      "max_abs_constraint_residual_below_1e-14": true
+     },
+     {
+      "tail": "zero",
+      "anchor_a1": false,
+      "N": 4,
+      "weights_a": [
+       0.999995667348,
+       1.02408658498,
+       -33482.9897797,
+       0.999973934761
+      ],
+      "raw_l2_distance": 33483.9897797,
+      "beta_weighted_distance": 8.276420546e-06,
+      "all_weights_nonnegative": false,
+      "max_abs_constraint_residual_below_1e-14": true
+     },
+     {
+      "tail": "zero",
+      "anchor_a1": false,
+      "N": 6,
+      "weights_a": [
+       0.999995667348,
+       1.02408658498,
+       -33482.9897797,
+       0.999973934761,
+       1.0,
+       1.0
+      ],
+      "raw_l2_distance": 33483.9897797,
+      "beta_weighted_distance": 8.276420546e-06,
+      "all_weights_nonnegative": false,
+      "max_abs_constraint_residual_below_1e-14": true
+     },
+     {
+      "tail": "zero",
+      "anchor_a1": true,
+      "N": 2,
+      "result": "overdetermined (more constraints than weights); no exact solution in general"
+     },
+     {
+      "tail": "zero",
+      "anchor_a1": true,
+      "N": 3,
+      "result": "overdetermined (more constraints than weights); no exact solution in general"
+     },
+     {
+      "tail": "zero",
+      "anchor_a1": true,
+      "N": 4,
+      "result": "singular"
+     },
+     {
+      "tail": "zero",
+      "anchor_a1": true,
+      "N": 6,
+      "result": "singular"
+     }
+    ],
+    "strictly_anchored_two_direction_solve": {
+     "directions": "v_3 = e_3 - (beta_3/beta_2) e_2, v_4 = e_4 - (beta_4/beta_2) e_2 (delta_1 = 0 exactly, normalization exact)",
+     "jets": {
+      "B v_3": [
+       2.97302607634e-12,
+       2.00576492108e-14
+      ],
+      "B v_4": [
+       2.0118139695e-21,
+       2.25681622179e-23
+      ]
+     },
+     "coefficients": {
+      "c_3": 227516.046611,
+      "c_4": -335286498523000.0
+     },
+     "weights": {
+      "a_2": 0.979730105968,
+      "a_3": 227517.046611,
+      "a_4": -335286498523000.0
+     },
+     "comment": "with the first weight pinned exactly, the second is pinned by the normalization and the collision must be carried by the third and fourth nodes; the fourth needs a weight far beyond any positive control, which is why the general solver reports the anchored systems as numerically singular"
+    }
+   }
+  ],
+  "three_weight_solution_across_the_control_bracket": [
+   {
+    "x": 44.1303,
+    "weights_a": [
+     1.00003470789,
+     0.8792603455,
+     57641.7570292
+    ]
+   },
+   {
+    "x": 44.13035,
+    "weights_a": [
+     1.00003471628,
+     0.87919561839,
+     57759.3829294
+    ]
+   },
+   {
+    "x": 44.1304,
+    "weights_a": [
+     1.00003472466,
+     0.879130893532,
+     57877.0046359
+    ]
+   }
+  ],
+  "three_square_control_reference": {
+   "normalized_control_weights_from_table_midpoints": [
+    1.00003471463,
+    0.879205520232,
+    57744.5045093
+   ],
+   "rescaling_factor": 1.00003471463,
+   "source": "22 Note 05/01 Section 4 table: raw a_1=1, a_2 in (0.87916,0.87919), a_3 in (57740,57745), zero tail, collision at T=1/4, x in (44.1303,44.1304)",
+   "comment": "the normalized three-weight solution at (1/4,44.1303) must reproduce these weights up to the positive rescaling that imposes the primitive endpoint, since three weights with two jet conditions and one normalization have a unique solution"
+  },
+  "comment": "With the normalization imposed, the trivial near-zero source found by the unnormalized solve disappears; the collision is carried by the third node at the scale e^{9 pi} beta_3^{-1}-type suppression, as Note 03 Section 1.2 predicted, and the solution is the existing control, not new structure."
+ },
+ "B_measurement_conditioning": {
+  "tangent_spaces": {
+   "anchored": "finite support n <= 6, delta_1 = 0, sum beta_n delta_n = 0 (dimension 4; first free node n = 3)",
+   "unanchored": "finite support n <= 6, sum beta_n delta_n = 0 (dimension 5; first free node n = 2)"
+  },
+  "measurements": {
+   "recurrence": "d_k = delta_{k-1} - 2 delta_k + delta_{k+1}, k = 1..7, delta_0 = delta_7 = 0",
+   "reflection": "phi_delta(u_j) - phi_delta(-u_j) at u_j = 0.05 j, j = 1..12 (defect of the full-line source reflection)"
+  },
+  "constant": "C(t,x) = sup_{delta in V} ||B delta|| / ||M delta||, B the jet map delta -> (H_delta, d_x H_delta)(t,x)",
+  "admissible_error": "eta(t,x) = |h(t,x)| / C(t,x): the measurement defect below which the physical jet at (t,x) cannot be driven to zero inside V",
+  "rows": [
+   {
+    "t": 0.0,
+    "x": 30.0,
+    "jet_h": [
+     -8.82122448527e-05,
+     -2.26621833912e-05
+    ],
+    "|h|": 9.10767516878e-05,
+    "carrier_|M_t|": 0.000122526809667,
+    "x^{7/4} e^{-pi x/8}": 0.00294137819679,
+    "x^2 |h|": 0.0819690765191,
+    "|phi_2'(0)|/x^2": 4.38877777778e-05,
+    "anchored": {
+     "||B|_V||": 1.50886012138e-12,
+     "C_recurrence": 1.04121192834e-12,
+     "eta_recurrence": 87471867.3581,
+     "C_reflection": 1.60834619757e-11,
+     "eta_reflection": 5662757.92026
+    },
+    "unanchored": {
+     "||B|_V||": 1.57167348973e-05,
+     "C_recurrence": 1.14978332786e-05,
+     "eta_recurrence": 7.92120997765,
+     "C_reflection": 4.2464934651e-05,
+     "eta_reflection": 2.14475195679
+    }
+   },
+   {
+    "t": 0.0,
+    "x": 44.1303,
+    "jet_h": [
+     9.69139791173e-07,
+     1.72475168124e-08
+    ],
+    "|h|": 9.69293253701e-07,
+    "carrier_|M_t|": 9.36236697914e-07,
+    "x^{7/4} e^{-pi x/8}": 2.24904069439e-05,
+    "x^2 |h|": 0.00188768250008,
+    "|phi_2'(0)|/x^2": 2.02820729791e-05,
+    "anchored": {
+     "||B|_V||": 2.40886917698e-12,
+     "C_recurrence": 1.66227689726e-12,
+     "eta_recurrence": 583111.787992,
+     "C_reflection": 2.5676969822e-11,
+     "eta_reflection": 37749.5187486
+    },
+    "unanchored": {
+     "||B|_V||": 1.16198225846e-05,
+     "C_recurrence": 8.50067164132e-06,
+     "eta_recurrence": 0.114025490526,
+     "C_reflection": 3.13955003075e-05,
+     "eta_reflection": 0.0308736361646
+    }
+   },
+   {
+    "t": 0.25,
+    "x": 44.1303,
+    "jet_h": [
+     1.03403910196e-06,
+     -2.96868786535e-08
+    ],
+    "|h|": 1.03446516382e-06,
+    "carrier_|M_t|": 9.30134029774e-07,
+    "x^{7/4} e^{-pi x/8}": 2.24904069439e-05,
+    "x^2 |h|": 0.00201460371174,
+    "|phi_2'(0)|/x^2": 2.02820729791e-05,
+    "anchored": {
+     "||B|_V||": 2.40937222926e-12,
+     "C_recurrence": 1.66262403615e-12,
+     "eta_recurrence": 622188.264647,
+     "C_reflection": 2.56823320302e-11,
+     "eta_reflection": 40279.2535584
+    },
+    "unanchored": {
+     "||B|_V||": 1.16186660536e-05,
+     "C_recurrence": 8.49982556283e-06,
+     "eta_recurrence": 0.121704281596,
+     "C_reflection": 3.1392375477e-05,
+     "eta_reflection": 0.0329527520009
+    }
+   },
+   {
+    "t": 0.0,
+    "x": 60.0,
+    "jet_h": [
+     -1.87707784817e-09,
+     3.00336303536e-09
+    ],
+    "|h|": 3.54169603019e-09,
+    "carrier_|M_t|": 3.14930871463e-09,
+    "x^{7/4} e^{-pi x/8}": 7.56731886652e-08,
+    "x^2 |h|": 1.27501057087e-05,
+    "|phi_2'(0)|/x^2": 1.09719444444e-05,
+    "anchored": {
+     "||B|_V||": 2.97309373547e-12,
+     "C_recurrence": 2.0516286552e-12,
+     "eta_recurrence": 1726.28512534,
+     "C_reflection": 3.16912345514e-11,
+     "eta_reflection": 111.75632885
+    },
+    "unanchored": {
+     "||B|_V||": 8.04870702521e-06,
+     "C_recurrence": 5.88816480217e-06,
+     "eta_recurrence": 0.000601494039175,
+     "C_reflection": 2.17467172611e-05,
+     "eta_reflection": 0.000162861179812
+    }
+   },
+   {
+    "t": 0.0,
+    "x": 70.0,
+    "jet_h": [
+     -2.29673751036e-10,
+     6.08566994899e-11
+    ],
+    "|h|": 2.37599599722e-10,
+    "carrier_|M_t|": 8.1257914304e-11,
+    "x^{7/4} e^{-pi x/8}": 1.95266829106e-09,
+    "x^2 |h|": 1.16423803864e-06,
+    "|phi_2'(0)|/x^2": 8.06102040816e-06,
+    "anchored": {
+     "||B|_V||": 3.09228743438e-12,
+     "C_recurrence": 2.13388008425e-12,
+     "eta_recurrence": 111.346275489,
+     "C_reflection": 3.29617614076e-11,
+     "eta_reflection": 7.20834050049
+    },
+    "unanchored": {
+     "||B|_V||": 6.42602667863e-06,
+     "C_recurrence": 4.70106684617e-06,
+     "eta_recurrence": 5.05416339516e-05,
+     "C_reflection": 1.73624053287e-05,
+     "eta_reflection": 1.36847167903e-05
+    }
+   },
+   {
+    "t": 0.0,
+    "x": 85.0,
+    "jet_h": [
+     -3.27237658201e-13,
+     2.1273727872e-13
+    ],
+    "|h|": 3.9030966514e-13,
+    "carrier_|M_t|": 3.15638137772e-13,
+    "x^{7/4} e^{-pi x/8}": 7.5855025805e-12,
+    "x^2 |h|": 2.81998733064e-09,
+    "|phi_2'(0)|/x^2": 5.46698961938e-06,
+    "anchored": {
+     "||B|_V||": 3.04145100371e-12,
+     "C_recurrence": 2.09879963044e-12,
+     "eta_recurrence": 0.185968045486,
+     "C_reflection": 3.24198782899e-11,
+     "eta_reflection": 0.0120392082182
+    },
+    "unanchored": {
+     "||B|_V||": 4.69525166887e-06,
+     "C_recurrence": 3.43489032377e-06,
+     "eta_recurrence": 1.13630895997e-07,
+     "C_reflection": 1.26860351671e-05,
+     "eta_reflection": 3.07668755446e-08
+    }
+   }
+  ],
+  "tangent_dimensions": {
+   "anchored": 4,
+   "unanchored": 5
+  },
+  "comment": "The constants C are nearly height-independent (algebraic in 1/x), because B is algebraic on every finite-support direction and M is fixed; the admissible error eta therefore decays with |h|, like x^A e^{-pi x/8}.  eta is a guarantee (no collision in V below that defect), saturated in direction only: the worst direction is the lowest free node, whose jet is algebraic in 1/x.  The prefactor depends on the class.  The unanchored row is the realistic one: the recurrence rows see delta_1 through d_1 = -2 delta_1 + delta_2 (a_0 = 1 fixed), and a change of 3e-5 in a_1 buys, under the normalization, the change of -0.12 in a_2 that the three-square control uses (its own recurrence defect, dominated by the third node, is about 1.4e5).  The strictly anchored class (delta_1 = 0 exactly) is an idealization in which the first free node is n = 3; even there eta crosses one near x = 82.  Measured relative to the carrier (divide B by |M_t|), the same numbers read as a conditioning constant growing like x^{-A} e^{pi x/8}."
+ },
+ "C_corrected_attraction": {
+  "T": 3000000000000.0,
+  "L": 26.8917563382,
+  "S_bound": 6.56241981395,
+  "pair_inequality": "g(b-c)+g(b+c) >= 4b/(d^2+4b^2), g(y)=2y/(d^2+y^2), 0<=c<=b; a conjugate pair is two counted zeros and a real zero is half a c=0 pair, so N individual zeros give at least 2bN/(d^2+4b^2)",
+  "note03_as_written_factor4": {
+   "pull_b1": [
+    1.12712600968,
+    7.6
+   ],
+   "time_from_b0_1": 0.331928026777
+  },
+  "corrected_factor2": {
+   "pull_b1": [
+    0.563563004838,
+    7.6
+   ],
+   "time_from_b0_1": 0.394513066121
+  },
+  "de_Bruijn": 0.5,
+  "published": 0.2,
+  "comment": "replays Codex's audit values 0.5636 and 0.3945 independently of its script; the conclusion of Note 03 Section 5 (the law loses to first-term dominance at every height) is unchanged and slightly strengthened",
+  "codex_difference_formula_max_abs_error": 3.5527136788e-15
+ },
+ "D_shrinking_window": {
+  "germ": "H = y^2 + 2s, E = H^2 + H_y^2, L_0 = 2y^2 - 4s",
+  "negative_mass_of_L_0": "(16 sqrt2 / 3) s^{3/2} on |y| < sqrt(2s)",
+  "window": "chi_s(y) = w(y/sqrt s), w(v) = e^{-v^2}",
+  "claimed": "int chi_s E = 4 s^{3/2} int w v^2 + s^{5/2} int w (v^2+2)^2",
+  "rows": [
+   {
+    "s": 1.0,
+    "direct_window_energy": 15.5089711954,
+    "formula": 15.5089711954,
+    "negative_mass_L0": 7.54247233266,
+    "closed_form_negative_mass": 7.54247233266,
+    "ratio_negative_mass_to_window_energy": 0.486329637061
+   },
+   {
+    "s": 0.1,
+    "direct_window_energy": 0.149933515039,
+    "formula": 0.149933515039,
+    "negative_mass_L0": 0.2385139176,
+    "closed_form_negative_mass": 0.2385139176,
+    "ratio_negative_mass_to_window_energy": 1.59079787824
+   },
+   {
+    "s": 0.01,
+    "direct_window_energy": 0.00366454833675,
+    "formula": 0.00366454833675,
+    "negative_mass_L0": 0.00754247233266,
+    "closed_form_negative_mass": 0.00754247233266,
+    "ratio_negative_mass_to_window_energy": 2.05822700086
+   },
+   {
+    "s": 0.001,
+    "direct_window_energy": 0.000112478161235,
+    "formula": 0.000112478161235,
+    "negative_mass_L0": 0.0002385139176,
+    "closed_form_negative_mass": 0.0002385139176,
+    "ratio_negative_mass_to_window_energy": 2.12053535532
+   }
+  ],
+  "fixed_window_comparison": {
+   "comment": "for a window of fixed width 1 (w(y) = e^{-y^2}, not rescaled) the energy tends to int w (y^4+4y^2) dy = O(1) as s -> 0 while the negative mass is O(s^{3/2})",
+   "fixed_window_energy_s_to_0": 4.87424808999
+  },
+  "comment": "Codex's identity holds; a window scaled with sqrt(s), the imaginary part of the approaching pair, keeps the collision at relative order one, a fixed window dilutes it by s^{3/2}; Note 03 Section 8 is correct for fixed windows and overstated as written for every window, which is what the reply records."
+ }
+}
