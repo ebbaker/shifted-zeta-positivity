@@ -1,0 +1,787 @@
+\documentclass[11pt]{article}
+\usepackage[letterpaper,margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage{booktabs,tabularx,array,microtype,xurl}
+\usepackage[colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue]{hyperref}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\newcommand{\R}{\mathbb R}
+\newcommand{\C}{\mathbb C}
+\newcommand{\E}{\mathbb E}
+\newcommand{\dd}{\,\mathrm d}
+\newcommand{\abs}[1]{\left\lvert#1\right\rvert}
+\numberwithin{equation}{section}
+\title{An explicit local zero-count bound\\for the Riemann heat deformation}
+\author{Drafted for Edward Baker}
+\date{17 October 2026\\\small Unreviewed working draft}
+\begin{document}
+\maketitle
+\begin{abstract}
+Polymath established local zero counts of order $\log X$ for the Riemann
+heat deformation, uniformly for positive heat times at most $1/2$.
+We extract one explicit bound on a restricted height domain. In the
+physical coordinate $H_0(z)=\xi((1+iz)/2)/8$, the number of zeros with
+$X<\operatorname{Re}z\le X+1$, counted with multiplicity, is at most
+$(6/5)\log(X+2)+22$ for $0<t\le1/2$ and $X\ge2\cdot10^6$.
+The proof makes an off-axis comparison uniform in time, extends a
+Riemann--Siegel remainder estimate to the two real-part ranges needed
+there, and applies a positive logarithmic-derivative sum. A separate
+fixed-index remainder is retained in the truncation estimate.
+All numerical constants and the cutoff are evaluated. The lower-height
+range, a cumulative error constant and an application-specific gain
+are not supplied. This draft has not undergone round review or
+specialist human review, and makes no claim about the Riemann hypothesis
+or an improved de Bruijn--Newman bound.
+\end{abstract}
+
+\noindent\textbf{Draft status.}
+This manuscript assembles the two research rounds of 17 October 2026 at
+the user's request, before the deferred review. The derivations and
+finite arithmetic checks used \texttt{gpt-6.1-sol} (Codex), reasoning
+effort \texttt{ultra}, with same-model development assistance. Compilation
+and authoring checks do not constitute independent mathematical review.
+No literature-priority claim is made. The author field identifies the
+intended recipient of the draft, rather than asserting his endorsement.
+
+\section{Main result and relation to existing estimates}\label{sec:main}
+
+Let
+\begin{align}
+ \Phi(u)&=\sum_{n\ge1}
+ (2\pi^2n^4e^{9u}-3\pi n^2e^{5u})e^{-\pi n^2e^{4u}},\label{eq:phi}\\
+ H_t(z)&=\int_0^\infty e^{tu^2}\Phi(u)\cos(zu)\dd u.
+ \label{eq:heat}
+\end{align}
+The normalization is
+\begin{equation}\label{eq:xi}
+ H_0(z)=\tfrac18\xi((1+iz)/2),\qquad
+ \xi(s)=\tfrac12s(s-1)\pi^{-s/2}\Gamma(s/2)\zeta(s),\qquad
+ \partial_tH_t=-\partial_z^2H_t.
+\end{equation}
+Thus a zeta ordinate of magnitude $T$ corresponds to physical coordinate
+$x=2T$. Every logarithm without a capital $\operatorname{Log}$ is natural.
+For $X\ge0$, define
+\begin{equation}\label{eq:counts}
+ N_t(X)=\sum_{0<\operatorname{Re}\rho\le X}\operatorname{mult}(\rho),
+ \qquad K_t(X)=N_t(X+1)-N_t(X),
+\end{equation}
+where the sum is over zeros of $H_t$. A zero on the right wall of a
+window is included, one on its left wall is excluded, and a real double
+zero contributes two.
+
+\begin{theorem}[Explicit unit-window bound]\label{thm:count}
+For $0<t\le1/2$ and $X\ge2\cdot10^6$,
+\begin{equation}\label{eq:main-count}
+ K_t(X)\le \frac{82123}{72000}\log(X+2)+\frac{574}{27}
+          \le \frac65\log(X+2)+22.
+\end{equation}
+The count includes complex and multiple zeros; no reality, simplicity
+or separation hypothesis is imposed.
+\end{theorem}
+
+Theorem~1.5(iv) of Polymath~\cite{polymath} already establishes a
+time-uniform estimate $K_t(X)=O(\log(2+X))$, together with a cumulative
+estimate. The purpose here is to evaluate constants for one local
+version on a declared domain, rather than to establish the first
+asymptotic. The cutoff is conservative and is not claimed optimal.
+The range $200\le X<2\cdot10^6$ remains outside the present bound.
+No consumer has yet supplied a numerical tolerance against which to
+measure an application gain.
+
+The analytic input to Theorem~\ref{thm:count} is the following comparison.
+The nonvanishing carrier $M_t$ is defined in Section~\ref{sec:inputs}.
+\begin{theorem}[Uniform off-axis comparison]\label{thm:comparison}
+If $0<t\le1/2$, $x\ge2\cdot10^6$ and $3\le y\le4$, then
+\begin{equation}\label{eq:comparison}
+ \abs{\frac{H_t(x+iy)}{M_t((1+y-ix)/2)}-1}
+ <\frac{96624791}{147000000}<\frac{33}{50}<\frac7{10}.
+\end{equation}
+\end{theorem}
+
+The proof of Theorem~\ref{thm:comparison} appears in
+Section~\ref{sec:budget}. Section~\ref{sec:count} then proves
+Theorem~\ref{thm:count} by Cauchy's estimate and a positive zero sum.
+The argument needs no compactness constant and no finite zero survey.
+
+\section{Carriers and imported analytic estimates}\label{sec:inputs}
+
+On $\C\setminus(-\infty,1]$, with principal logarithms, set
+\begin{align}
+ M_0(s)&=\frac{s(s-1)}{16}\pi^{-s/2}\sqrt{2\pi}
+   \exp\left\{\left(\frac s2-\frac12\right)
+                        \operatorname{Log}\frac s2-\frac s2\right\},
+   \label{eq:M0}\\
+ \alpha(s)&=\frac{M_0'(s)}{M_0(s)}
+   =\frac1{2s}+\frac1{s-1}+\frac12\operatorname{Log}\frac{s}{2\pi},
+   \label{eq:alpha}\\
+ M_t(s)&=e^{t\alpha(s)^2/4}M_0(s),\qquad
+ \frac{M_t'}{M_t}(s)=\alpha(s)+\frac t2\alpha(s)\alpha'(s).
+   \label{eq:Mt}
+\end{align}
+The functions have the expected conjugation symmetry and are nonzero
+on the domains used below. We use the conventions
+\begin{equation}\label{eq:parameters}
+ T=\frac x2,\quad T'=T+\frac{\pi t}{8},\quad
+ Q=\frac{x}{4\pi},\quad L=\log Q,\quad
+ a=\sqrt{\frac{T'}{2\pi}},\quad N=\lfloor a\rfloor,
+\end{equation}
+and
+\begin{equation}\label{eq:branches}
+ s_+=\frac{1+y-ix}{2},\qquad s_-=\frac{1-y+ix}{2},\qquad
+ b_n^t=e^{t\log^2 n/4},\qquad B_t(z)=M_t((1-iz)/2).
+\end{equation}
+For $3\le y\le4$, the real parts of $s_\pm$ belong to
+$[-3/2,5/2]$. Note that $a^2=Q+t/16$.
+
+We state the imported ingredients precisely. All equation and theorem
+numbers attributed to Polymath refer to arXiv version~2 of
+\cite{polymath}. First, $H_t$ is even and entire of order one,
+$H_t(iy)>0$ for real $y$, and its zeros lie in $|\operatorname{Im}z|\le1$
+for $0\le t\le1/2$; see its Section~3 and Theorem~3.2.
+
+To describe its expansion~(39), write
+\[
+ c(s)=\frac{s(s-1)}{16}\pi^{-s/2}\Gamma(s/2),\qquad
+ r_{0,n}(s)=c(s)n^{-s},
+\]
+and
+\[
+ R_{0,N}(s)=c(s)\int_{N\swarrow N+1}
+       \frac{w^{-s}e^{i\pi w^2}}{e^{\pi iw}-e^{-\pi iw}}\dd w.
+\]
+The contour has direction $e^{5\pi i/4}$ and crosses $(N,N+1)$.
+For nonreal $s$, define $r_{t,n}$ and $R_{t,N}$ by Gaussian convolution
+in $s$, for example
+\begin{equation}\label{eq:Rheat}
+ R_{t,N}(s)=\frac1{\sqrt\pi}\int_\R
+                  R_{0,N}(s+\sqrt t\,v)e^{-v^2}\dd v.
+\end{equation}
+For $F^*(s)=\overline{F(\overline s)}$, the exact formula is
+\begin{equation}\label{eq:exact-expansion}
+ \begin{split}
+ H_t(z)={}&\sum_{n=1}^N r_{t,n}(s_-)
+          +\sum_{n=1}^N r_{t,n}^*(s_+)\\
+          &+R_{t,N}(s_-)+R_{t,N}^*(s_+).
+ \end{split}
+\end{equation}
+This formula and its contour shifts are imported from
+\cite[(39)--(41)]{polymath}; sub-Gaussian growth on the shifted lines
+justifies the Gaussian integrals.
+
+Proposition~6.1 of \cite{polymath} applies for every real $\sigma$,
+$T>10$, $n\ge1$ and $0<t\le1/2$. It gives
+\begin{align}
+ r_{t,n}(s)&=M_t(s)b_n^t n^{-s-(t/2)\alpha(s)}(1+\theta_{t,n}(s)),
+ \quad s=\sigma+iT,\label{eq:r-approx}\\
+ \abs{\theta_{t,n}(s)}&\le
+ \exp\left(\frac{(t^2/8)|\alpha(s)-\log n|^2+t/4+1/6}{T-3.33}\right)-1.
+ \label{eq:r-error}
+\end{align}
+The $r$ functions have conjugation symmetry, so the same estimates hold
+at the reflected arguments. We also import the general-real-part
+coefficient and remainder bounds of Proposition~6.2, including
+$|C_0(p)|\le1/2$, and the explicit Stirling estimate of Lemma~5.1(v).
+We do not extend the final constants of its Proposition~6.3 beyond
+their stated real-part range. Section~\ref{sec:remainder} rebuilds the
+needed remainder estimate instead.
+
+\section{Bounds for the ordinary terms}\label{sec:ordinary}
+
+\begin{lemma}[Heat weights and termwise error]\label{lem:ordinary}
+For $x\ge2\cdot10^6$, $0<t\le1/2$, $-3/2\le\sigma\le5/2$ and
+$s=\sigma\pm iT$, uniformly for $1\le n\le N$,
+\begin{align}
+ \operatorname{Re}\alpha(s)&\ge L/2-13/x^2,\label{eq:alpha-real}\\
+ \abs{\alpha(s)-L/2\mp i\pi/4}
+    &\le\frac{11}{2x}+\frac{25}{4x^2}<\frac6x,\label{eq:alpha-small}\\
+ W_n(s):=b_n^t n^{-(t/2)\operatorname{Re}\alpha(s)}&\le1,
+ \qquad |\theta_{t,n}(s)|<\frac1{50000}.\label{eq:weights-error}
+\end{align}
+\end{lemma}
+\begin{proof}
+In \eqref{eq:alpha}, the real rational terms are bounded below by
+$-13/x^2$, and the log-modulus correction to $L/2$ is nonnegative.
+The inequalities $|\arctan(\sigma/T)|\le|\sigma|/T$ and
+$\log(1+\sigma^2/T^2)\le\sigma^2/T^2$, together with the rational
+terms, prove \eqref{eq:alpha-small}. Since $a^2=Q+t/16$,
+\[
+ \log N\le L/2+\frac{\pi}{16x},\qquad
+ \abs{\alpha(s)-\log n}\le L/2+1\le\log x.
+\]
+The exact identity
+\begin{equation}\label{eq:weight-identity}
+ W_n(s)=\exp\left\{\frac t4\log n
+                  (\log n-2\operatorname{Re}\alpha(s))\right\}
+\end{equation}
+and the bound
+$2\operatorname{Re}\alpha(s)-\log N
+ \ge L/2-\pi/(16x)-26/x^2>0$ prove $W_n\le1$.
+The heat coefficient in \eqref{eq:weight-identity} is $t/4$.
+
+Because $T-3.33\ge x/3$, the exponent in \eqref{eq:r-error} is at most
+\[
+ u(x)=\frac{3(\log x)^2/32+7/8}{x}.
+\]
+Both $(\log x)^2/x$ and $1/x$ decrease here. At the left endpoint,
+$\log(2\cdot10^6)<15$, and therefore
+\[
+ u(x)\le\frac{703}{32\cdot2\cdot10^6}<\frac18,\qquad
+ e^{u(x)}-1\le\frac87u(x)<\frac1{50000}.
+\]
+This proves the termwise error assertion.
+\end{proof}
+
+The dominant branch has real part $(1+y)/2\ge2$. Its leading
+normalized approximant is exactly $1$, and its other terms total at most
+\begin{equation}\label{eq:main-excess}
+ \sum_{n=2}^N n^{-(1+y)/2}W_n(s_+)
+ \le\zeta(2)-1\le\frac{95}{147}.
+\end{equation}
+Here and below $\zeta(2)\le(22/7)^2/6=242/147$ is used as a convenient
+rational upper bound.
+
+\section{A remainder estimate for both real-part ranges}\label{sec:remainder}
+
+
+\begin{lemma}[A remainder bound on an enlarged real-part interval]
+\label{lem:remainder}
+Let
+\[
+ T\ge 10^6,\qquad -\frac32\le\sigma\le\frac52,
+ \qquad 0<t\le\frac12,
+\]
+and set
+\[
+ T'=T+\frac{\pi t}{8},\qquad
+ a=\sqrt{\frac{T'}{2\pi}},\qquad N=\lfloor a\rfloor.
+\]
+For the remainder $R_{t,N}$ defined in \cite[equations (38)--(41)]{polymath},
+one has
+\begin{equation}
+ \label{eq:remainder-expanded-domain}
+ \bigl|R_{t,N}(\sigma+iT)\bigr|
+ \le \exp\!\left(\frac{t\pi^2}{64}\right)
+       \bigl|M_0(iT')\bigr|.
+\end{equation}
+\end{lemma}
+
+\begin{proof}
+We use the general-real-part estimates of
+\cite[Proposition 6.2]{polymath}, rather than extending the stated domain
+of its Proposition 6.3.  Write
+\[
+ D=T-3,\qquad p=1-2(a-N),\qquad
+ u=\sigma+\sqrt t\,v.
+\]
+Expectation below refers to the density
+\[
+ \frac{1}{\sqrt{\pi t}}
+ \exp\!\left(-\frac{(u-\sigma)^2}{t}\right)\,du.
+\]
+In particular, $a>300$ throughout the proof.
+
+\emph{The Gaussian envelope.}
+Use the shift $\beta=\pi i/4$ in
+\cite[equation (41)]{polymath}.  Its imaginary displacement is
+$\pi t/8$, so both the original and shifted contours remain in the
+upper half-plane.  Apply Proposition 6.2 to $u+iT'$.
+After extracting the common carrier and its unit-modulus phase, the
+integrand is
+\[
+ e^{\eta(u)}\left(
+ C_0(p)+\sum_{k=1}^{K_u}\frac{C_k(p,u)}{a^k}
+                    +RS_{K_u}(u+iT')\right),
+\]
+where $K_u$ will be chosen below.  The extracted carrier has modulus
+\[
+ \exp\!\left(\frac{t\pi^2}{64}\right)|M_0(iT')|.
+\]
+The explicit Stirling estimate in \cite[Lemma 5.1(v)]{polymath}, the
+formula for $\alpha$ in its equation (9), and the derivative bound in
+its equation (43) give
+\begin{align}
+ |\eta(u)|
+ &\le \frac{u^2}{4(T'-3)}
+       +\frac{3|u|}{2T'}+\frac{1}{6(T'-0.66)}\notag\\
+ &\le\frac{u^2+6|u|+2/3}{4D}
+ \le\frac{u^2+1}{D}.
+ \label{eq:remainder-gaussian-envelope}
+\end{align}
+Indeed, the horizontal Taylor segment from $iT'$ to $u+iT'$ has
+constant imaginary part $T'$, and
+$6|u|\le3u^2+3$.  Thus this estimate is valid for every real $u$;
+no boundedness assumption on $u$ enters the Taylor argument.
+
+For a real number $b$, put
+\[
+ J_b=\mathbb E\exp\!\left(\frac{u^2+1}{D}+bu\right),
+ \qquad h=1-\frac tD.
+\]
+Completing the square gives the exact formula
+\begin{equation}
+ \label{eq:remainder-gaussian-moment}
+ J_b=h^{-1/2}
+ \exp\!\left(\frac{\sigma^2+1}{D}+b\sigma
+       +\frac{t(\sigma/D+b/2)^2}{h}\right).
+\end{equation}
+The simpler inequality $u^2\le2\sigma^2+2tv^2$ also gives
+\begin{equation}
+ \label{eq:remainder-zero-moment}
+ J_0\le
+ \exp\!\left(\frac{2\sigma^2+t+1}{T-6}\right)
+ \le\exp\!\left(\frac{14}{T-6}\right)<\frac43.
+\end{equation}
+For $b=\log9$ or $b=-\log2$, the factor in
+\eqref{eq:remainder-gaussian-moment} remaining after removal of
+$e^{b\sigma}$ is less than $2$.  To see this, use
+\[
+ h\ge\frac{999}{1000},\qquad
+ \frac{\sigma^2+1}{D}<\frac1{1000},\qquad
+ \frac{|\sigma|}{D}<\frac1{1000},\qquad
+ -\frac12\log h<\frac1{1000}.
+\]
+Since $\log3<11/10$ and $\log\sqrt2<\log3$, its logarithm is less than
+\[
+ \frac2{1000}
+ +\frac12\left(\frac{1101}{1000}\right)^2\frac{1000}{999}
+ <\frac23<\log2.
+\]
+
+\emph{Coefficient summation and the fixed-index remainder.}
+Choose
+\[
+ m=\lfloor2a^2\rfloor,\qquad
+ K_u=\begin{cases}
+ 1,&u\ge0,\\
+ \max(\lfloor-u\rfloor+3,m),&u<0.
+ \end{cases}
+\]
+When $u<0$, this choice satisfies $K_u+u\ge2$, as required by
+\cite[equation (57)]{polymath}.  Define
+\[
+ S(u)=\sum_{k=1}^{K_u}\frac{|C_k(p,u)|}{a^k}
+                     +|RS_{K_u}(u+iT')|,
+ \qquad E_a=a^{-1}e^{-a^2/2}.
+\]
+The following pointwise bound includes every remainder term:
+\begin{align}
+ S(u)\le{}&
+ \frac{0.2\,9^u}{a-0.865}
+ +\frac{0.029\,2^{-u}}{a-0.353}\notag\\
+ &+\frac{2^{-u}}2
+       \sum_{2a^2\le k\le-u+4}
+          \frac{1.1^k\Gamma(k/2)}{a^k}
+ +E_a.
+ \label{eq:remainder-pointwise-majorant}
+\end{align}
+All sums over $k$ have integer indices; an empty sum is zero.
+
+Here are the details of the summation.  For $u\ge0$, the bounds in
+\cite[equations (54) and (56)]{polymath} give
+\[
+ S(u)\le\frac{0.200\,9^u}{a}
+          +\frac{0.173\,2^{3u/2}}{a^2}
+ \le\frac{0.2\,9^u}{a-0.865}.
+\]
+The value $u=0$ can be assigned by continuity and has no effect on
+the integrals.  For $u<0$, the coefficients with $k\le m$ satisfy
+\[
+ \sum_{k=1}^{m}\frac{|C_k(p,u)|}{a^k}
+ \le 0.036\,2^{-u}
+ \left(\frac{0.445\sqrt\pi}{a}
+       +\frac{0.247}{a^2}+\frac{0.098}{a^3}\right)
+ \le\frac{0.029\,2^{-u}}{a-0.353}.
+\]
+This follows from \cite[equation (55)]{polymath} by separating even
+and odd indices and using
+\[
+ \frac{\Gamma((k+2)/2)}{a^{k+2}}
+ =\frac{k}{2a^2}\frac{\Gamma(k/2)}{a^k}
+ \le\frac{\Gamma(k/2)}{a^k}
+ \qquad(k\le2a^2).
+\]
+The constants bound the corresponding geometric sums.
+
+If $K_u>m$, every coefficient beyond $m$ has index greater than
+$2a^2$.  Moreover the remainder index satisfies
+\[
+ K_u+1=\lfloor-u\rfloor+4>2a^2,
+ \qquad K_u+1\le-u+4.
+\]
+The bounds in equations (55) and (57) of \cite{polymath} therefore
+place these additional coefficients and the remainder inside the
+tail sum in \eqref{eq:remainder-pointwise-majorant}.
+
+If $K_u=m$, the remainder need not belong to that tail.  To bound it,
+put $\nu=(m+1)/2$, so that $a^2<\nu\le a^2+1/2$.
+Equation (57) and explicit real Stirling give
+\begin{align*}
+ |RS_m(u+iT')|
+ &\le\frac12\Gamma(\nu)(1.1/a)^{2\nu}\\
+ &\le\frac3{2a}
+     \exp\!\left(\nu\log(\nu/a^2)-\frac45\nu\right)\\
+ &<\frac5a e^{-4a^2/5}\le E_a.
+\end{align*}
+We used
+$\Gamma(\nu)\le3\nu^{\nu-1/2}e^{-\nu}$,
+$\log(1.21)<1/5$, $\log(\nu/a^2)\le1/(2a^2)$, and
+$3a^2/10>\log5$.  Thus the added $E_a$ accounts for the fixed-index
+remainder even when the displayed tail range is empty.  This proves
+\eqref{eq:remainder-pointwise-majorant} in every case.
+
+\emph{Integration of the four contributions.}
+Let $\delta_1,\ldots,\delta_4$ denote the expectations of the four
+terms in \eqref{eq:remainder-pointwise-majorant}, each multiplied by
+$\exp((u^2+1)/D)$.  The moment bounds above give
+\begin{align}
+ \delta_1+\delta_2
+ &<\frac{0.4\,9^\sigma+0.058\,2^{-\sigma}}{a-0.865}\notag\\
+ &\le\frac{97.374}{a-0.865}\le\frac{98}{a}.
+ \label{eq:remainder-first-two-deltas}
+\end{align}
+Here $9^\sigma\le243$ and $2^{-\sigma}<3$.
+
+In the third contribution, enlarge the integer summation to $k\ge14$.
+Its integration region has $u\le4-k\le-10$.  Since $|\sigma|\le5/2$,
+\[
+ (u-\sigma)^2\ge\frac9{16}u^2,
+ \qquad
+ \frac{u^2+1}{D}-\frac{(u-\sigma)^2}{t}
+ \le\frac1D-\frac{u^2}{2t}.
+\]
+Furthermore,
+\[
+ \int_{-\infty}^{4-k}e^{-u^2/(2t)-u\log2}\,du
+ \le\frac{2t}{k-6}
+       e^{-(k-4)^2+(k-4)\log2}.
+\]
+For
+\[
+ f(k)=1.1^k\Gamma(k/2)
+             e^{-(k-4)^2+(k-4)\log2},
+\]
+one has $f(14),f(15)<10^{-30}$ and
+\[
+ \frac{f(k+2)}{f(k)}=2.42k\,e^{-4k+12}<1
+ \qquad(k\ge14).
+\]
+The initial bounds follow, for example, from
+$\Gamma(7)=720$, $\Gamma(15/2)=135135\sqrt\pi/128$,
+$\sqrt\pi<2$, and $e>8/3$.  Summing the resulting geometric series
+in $1/a$ gives
+\begin{equation}
+ \label{eq:remainder-tail-delta}
+ \delta_3\le\frac{4\cdot10^{-30}}{a^{14}}<\frac1a.
+\end{equation}
+The fourth contribution satisfies
+\begin{equation}
+ \label{eq:remainder-fixed-index-delta}
+ \delta_4=E_aJ_0<\frac43 E_a<\frac1a.
+\end{equation}
+
+Finally, \cite[equation (58)]{polymath} gives $|C_0(p)|\le1/2$.
+Taking absolute values in the shifted integral and using
+\eqref{eq:remainder-gaussian-envelope} therefore yields
+\[
+ \frac{|R_{t,N}(\sigma+iT)|}
+ {e^{t\pi^2/64}|M_0(iT')|}
+ \le\frac12J_0+\sum_{j=1}^{4}\delta_j
+ <\frac12\cdot\frac43+\frac{100}{300}=1.
+\]
+This proves \eqref{eq:remainder-expanded-domain} with all constants
+uniform on the stated domain.
+\end{proof}
+
+\section{Ratios of the carriers}\label{sec:carriers}
+
+\begin{lemma}[Carrier comparisons]\label{lem:carriers}
+On the domain of Theorem~\ref{thm:comparison},
+\begin{align}
+ \abs{\frac{M_t(s_-)}{M_t(s_+)}}&<2Q^{-y/2},\label{eq:gamma}\\
+ e^{t\pi^2/64}\frac{|M_0(iT')|}{|M_t(s_+)|}
+   &\le Q^{-(1+y)/4}.\label{eq:remainder-carrier}
+\end{align}
+\end{lemma}
+\begin{proof}
+Put $A=(1+y)/2\in[2,5/2]$ and $C=1-A\in[-3/2,-1]$.
+For $-3/2\le\sigma\le5/2$, direct use of \eqref{eq:alpha} gives
+\begin{align*}
+ \abs{\operatorname{Re}\alpha(\sigma+iT)-L/2}&\le85/(16T^2),&
+ \abs{\operatorname{Im}\alpha(\sigma+iT)-\pi/4}&\le11/(4T),\\
+ |\alpha(\sigma+iT)|&\le L/2+1,&
+ |\alpha'(\sigma+iT)|&\le1/(2T)+3/(2T^2).
+\end{align*}
+Integrating the real part of the logarithmic derivative in
+\eqref{eq:Mt} from $C+iT$ to $A+iT$ gives
+\[
+ \log\abs{\frac{M_t(s_-)}{M_t(s_+)}}
+ \le-\frac y2L+\frac{85}{x^2}
+                 +(L/2+1)(1/x+6/x^2)
+ \le-\frac y2L+\frac{\log x}{x}.
+\]
+For example, the final inequality follows from $L\le\log x$,
+$85/x\le1/100$, $6/x\le1/100$ and $\log x\ge3$.
+Conjugation equates the denominator's modulus to that at $A+iT$.
+Since $\log x/x<1/2$ and $e^{\log x/x}<2$, this proves
+\eqref{eq:gamma}.
+
+For the second inequality, set
+$G(\sigma,\tau)=\operatorname{Re}\log M_0(\sigma+i\tau)$.
+An exact horizontal integration gives
+\begin{align*}
+ G(A,T)-G(0,T)-AL/2
+   ={}&\tfrac14\log(1+A^2/T^2)
+       +\tfrac12\log\frac{T^2+(A-1)^2}{T^2+1}\\
+      &+\tfrac14\int_0^A\log(1+\sigma^2/T^2)\dd\sigma\ge0.
+\end{align*}
+Every term is nonnegative because $A\ge2$. On the imaginary axis,
+\[
+ \partial_\tau G(0,\tau)
+ =-\frac\pi4+\frac1{2\tau}+\frac{\tau}{1+\tau^2}
+ \le-\frac\pi4+\frac3{2T}\qquad(\tau\ge T).
+\]
+At $A+iT$, the exact formula for $\alpha$ gives
+$\operatorname{Re}\alpha\ge L/2$ and
+$0\le\operatorname{Im}\alpha\le\pi/4$. Thus
+\[
+ \operatorname{Re}(\alpha(A+iT)^2)\ge L^2/4-\pi^2/16.
+\]
+Combining these estimates, including the displacement
+$T'-T=\pi t/8$, yields
+\begin{equation}\label{eq:carrier-cancellation}
+ e^{t\pi^2/64}\frac{|M_0(iT')|}{|M_t(s_+)|}
+ \le Q^{-A/2}\exp\left(-\frac{tL^2}{16}+\frac{3\pi t}{8x}\right).
+\end{equation}
+The exponent is nonpositive because $L>1>6\pi/x$ on the stated
+domain. This proves \eqref{eq:remainder-carrier}.
+\end{proof}
+
+\section{The complete off-axis budget}\label{sec:budget}
+
+\begin{proof}[Proof of Theorem~\ref{thm:comparison}]
+Apply \eqref{eq:exact-expansion} with the common cutoff
+$N=\lfloor\sqrt{Q+t/16}\rfloor$. Lemma~\ref{lem:ordinary} and
+\eqref{eq:main-excess} bound the dominant sum's excess by $95/147$.
+For the opposite sum, use
+\[
+ N^{(y+1)/2}\le(Q+t/16)^{(y+1)/4}
+ <2Q^{(y+1)/4},
+\]
+where $(1+t/(16Q))^{(y+1)/4}<(33/32)^2<2$. Together with
+Lemma~\ref{lem:carriers} this gives
+\begin{equation}\label{eq:opposite}
+ \abs{\frac{M_t(s_-)}{M_t(s_+)}}
+    \sum_{n=1}^N n^{(y-1)/2}W_n(s_-)
+ <4Q^{(1-y)/4}\le4Q^{-1/2}<\frac{11}{1000}.
+\end{equation}
+The last step uses $4\pi<13$ and
+$16\cdot13/(2\cdot10^6)<(11/1000)^2$.
+
+The two ordinary approximation errors, normalized by $|M_t(s_+)|$,
+total less than
+\[
+ \frac{\zeta(2)+11/1000}{50000}<\frac1{25000}.
+\]
+Lemma~\ref{lem:remainder} applies because $T=x/2\ge10^6$.
+By \eqref{eq:remainder-carrier}, the two normalized remainder terms
+total at most
+\[
+ 2Q^{-(1+y)/4}\le2/Q<26/x.
+\]
+The triangle inequality now yields
+\begin{align*}
+ \abs{\frac{H_t(x+iy)}{M_t(s_+)}-1}
+ &<\frac{95}{147}+\frac{11}{1000}+\frac1{25000}
+                      +\frac{26}{2\cdot10^6}\\
+ &=\frac{96624791}{147000000}<\frac{33}{50}.
+\end{align*}
+All constants are uniform in $t,x,y$ on the stated domain.
+\end{proof}
+
+\section{From the comparison to a local count}\label{sec:count}
+
+The following implication is useful independently of the particular
+cutoff obtained in Theorem~\ref{thm:comparison}.
+\begin{lemma}[Comparison-to-count extraction]\label{lem:extract}
+Fix $0<t\le1/2$ and $X\ge200$, and put
+\[
+ U=X+\tfrac12,\qquad w=U+\tfrac72i,\qquad F_t=H_t/B_t.
+\]
+If $\sup_{|z-w|\le1/2}|F_t(z)-1|\le7/10$, then
+\[
+ K_t(X)\le\frac{82123}{72000}\log(X+2)+\frac{574}{27}.
+\]
+\end{lemma}
+\begin{proof}
+The disk has imaginary parts in $[3,4]$, and its image under
+$s=(1-iz)/2$ has real part at least $2$. Therefore $B_t$ is nonzero
+and $F_t$ is holomorphic on a neighborhood of the closed disk.
+Cauchy's estimate gives
+\begin{equation}\label{eq:cauchy}
+ \abs{\frac{F_t'}{F_t}(w)}
+ \le\frac{7/10}{(1/2)(3/10)}=\frac{14}{3}.
+\end{equation}
+At $s=(1-iw)/2=9/4-iU/2$, with $L_U=\log(U/(4\pi))$, the exact
+formula \eqref{eq:alpha} gives
+\begin{align*}
+ |\alpha(s)|&\le\frac{L_U}{2}+\frac\pi4+\frac3U+
+                 \frac{81}{16U^2}
+              <\frac{L_U}{2}+1<\frac12\log(X+2),\\
+ |\alpha'(s)|&\le\frac1U+\frac6{U^2}
+                  \le\frac{103}{20000}<\frac3{500}.
+\end{align*}
+For the last logarithmic comparison, use $4\pi>e^2$ and $U<X+2$.
+Holding time fixed, the chain rule yields
+\begin{equation}\label{eq:Bprime}
+ \frac{B_t'}{B_t}(w)=-\frac i2\alpha(s)
+                       \left(1+\frac t2\alpha'(s)\right),\qquad
+ \abs{\frac{B_t'}{B_t}(w)}
+       \le\frac{2003}{8000}\log(X+2).
+\end{equation}
+
+Evenness, order one and $H_t(0)>0$ give the paired Hadamard identity
+\cite[(105)]{polymath}. Its imaginary part is the positive scalar sum
+\begin{equation}\label{eq:poisson}
+ D_t(U):=-\operatorname{Im}\frac{H_t'}{H_t}(w)
+  =\sum_\rho
+    \frac{7/2-\operatorname{Im}\rho}
+     {(U-\operatorname{Re}\rho)^2+(7/2-\operatorname{Im}\rho)^2}.
+\end{equation}
+Multiplicity is retained. The scalar sum converges absolutely by the
+strip bound and order-one zero growth, independently of the conclusion
+being proved.
+
+For a zero in the unit window set $h=U-\operatorname{Re}\rho$ and
+$v=7/2-\operatorname{Im}\rho$. Then $h^2\le1/4$ and
+$5/2\le v\le9/2$, so
+\[
+ \frac{v}{v^2+h^2}\ge\frac9{41}.
+\]
+For instance,
+$41v-9v^2-9/4=9(9/2-v)(v-1/18)\ge0$.
+Consequently $K_t(X)\le(41/9)D_t(U)$. Combining
+\eqref{eq:cauchy}--\eqref{eq:poisson} proves
+\[
+ K_t(X)\le\frac{41}{9}
+       \left(\frac{2003}{8000}\log(X+2)+\frac{14}{3}\right),
+\]
+as required. The horizontal distance bound includes both walls, so
+it also bounds the specified half-open window without a nonvanishing
+condition on either vertical boundary.
+\end{proof}
+
+\begin{proof}[Proof of Theorem~\ref{thm:count}]
+For $X\ge2\cdot10^6$, the entire disk in Lemma~\ref{lem:extract}
+lies in the domain of Theorem~\ref{thm:comparison}. Its comparison
+hypothesis follows from \eqref{eq:comparison}. The final rounding uses
+$82123/72000<6/5$, $574/27<22$ and $\log(X+2)>0$.
+\end{proof}
+
+\section{Scope and limitations}\label{sec:scope}
+
+This is an explicit upper count on a restricted high-height domain.
+An upper count alone supplies neither a lower population, an exact
+interior integer count, nor a lower bound on a derivative at a zero.
+The theorem is compatible with multiple zeros and collisions. The
+kernel argument applies to any function meeting its Hadamard and strip
+hypotheses; the complete theta expansion is the additional input used
+to obtain the particular numerical comparison. Positivity, evenness or
+reflection of a modified source does not supply that expansion.
+
+In particular, the Euler-factor, weighted-square, reflected and
+positive-primitive control families recorded in the research repository
+do not challenge a multiplicity-count upper bound merely by colliding.
+No untested control is claimed to fail \eqref{eq:comparison} on a
+particular box. No noncollision conclusion is drawn.
+
+The lower-height gap is stated rather than filled by compactness.
+The local argument does not provide an evaluated cumulative estimate
+for $N_t(X)$. If a later application uses Polymath's cumulative
+comparison function, the normalization to retain is
+\[
+ g(X,t)=\frac{X}{4\pi}\log\frac{X}{4\pi}-\frac{X}{4\pi}
+        +\frac{11}{8}+\frac{t}{16}\log\frac{X}{4\pi}.
+\]
+The heat drift and the constant $11/8$ should not be replaced by a
+time-zero or averaged convention. A conductor-dependent version for
+Dirichlet families also requires additional estimates.
+
+The natural next analytic task is to lower the cutoff or cover
+$200\le X<2\cdot10^6$. A separate application must specify its kernel,
+domain and numerical tolerance before a gain can be assessed. The present
+draft makes no assertion that the bound improves an existing certificate.
+
+\appendix
+\section{Source normalization and reproducibility}\label{sec:replay}
+
+The source statements actually used are identified in
+Section~\ref{sec:inputs}. In the proof following (99) of
+\cite{polymath}, the displayed logarithmic contribution to
+$\operatorname{Re}s_*$ uses $t/2$, while its definitions (9), (17)
+and its explicit estimate (21) give $t/4$. We avoid that display and
+use the exact identity \eqref{eq:weight-identity}. This observation
+does not dispute the source's time-uniform asymptotic theorem.
+
+In the remainder calculation, the envelope in
+Section~\ref{sec:remainder} is derived directly from the explicit
+Stirling and Taylor errors. It uses $u^2+1$, rather than copying the
+source's compressed constant immediately before (60). The term $E_a$
+keeps the fixed-index remainder when its index is selected by height.
+Both choices are conservative and enter the stated numerical budget.
+
+Two standard-library Python programs accompany the research records:
+\begin{center}
+\begin{tabular}{ll}
+\toprule
+Program in \path{../numerics/} & Scope\\
+\midrule
+\path{check_local_count_reduction.py} & Kernel and extraction constants\\
+\path{check_off_axis_comparison.py} & Off-axis finite constants and budget\\
+\bottomrule
+\end{tabular}
+\end{center}
+The second uses rational Taylor enclosures and checks the Gaussian
+moment allowances, the two initial tail coefficients, the decreasing
+tail recurrence, the fixed-index allowance and the final rational
+budget. Its run record is
+\path{../numerics/OFF_AXIS_COMPARISON_CHECKS_20261017.json}; the first
+record is \path{../numerics/LOCAL_COUNT_REDUCTION_CHECKS_20261017.json}.
+The source notes and their hashes remain identified in those records.
+
+The ordinary run of each program exits zero. The first program with
+\path{--kernel-floor 9/40} exits one because its requested floor exceeds
+the endpoint value $9/41$. The second with
+\path{--comparison-ceiling 13/20} exits one because that requested
+ceiling is smaller than the current sufficient budget. Neither injection
+is a numerical counterexample to $H_t$. The finite checks do not formally
+verify the imported theorems, contour shifts or infinite-domain analytic
+arguments. They constitute arithmetic authoring support, rather than
+independent mathematical review.
+
+\section*{Acknowledgment of LLM assistance}
+This draft was prepared for Edward Baker with substantial assistance
+from OpenAI's \texttt{gpt-6.1-sol} model in Codex, using reasoning effort
+\texttt{ultra}, on 17 October 2026. The assistance included derivation,
+source comparison, same-model development work, numerical bookkeeping,
+manuscript drafting and compilation checks. The research notes record
+these contributions and their limitations. Formal round review and
+specialist human review remain pending. Responsibility for checking,
+revising and endorsing any eventual submission remains with its human
+author.
+
+\begin{thebibliography}{9}
+\bibitem{polymath}
+D. H. J. Polymath,
+\emph{Effective approximation of heat flow evolution of the Riemann
+$\xi$ function, and a new upper bound for the de Bruijn--Newman constant},
+Research in the Mathematical Sciences \textbf{6}, article 31 (2019).
+\href{https://doi.org/10.1007/s40687-019-0193-1}{doi:10.1007/s40687-019-0193-1}.
+The source numbering used here follows
+\href{https://arxiv.org/abs/1904.12438v2}{arXiv:1904.12438v2},
+4 August 2019.
+\end{thebibliography}
+\end{document}

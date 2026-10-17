@@ -1,0 +1,113 @@
+{
+  "date_local": "2026-10-17",
+  "prepared_for": "Edward Baker",
+  "llm_assistance": "Substantial; gpt-6.1-sol (Codex), reasoning effort ultra.",
+  "recorded_at_utc": "2026-10-17T16:07:15.134721+00:00",
+  "question": "Are the downstream constants, kernel algebra and multiplicity conventions arithmetically consistent?",
+  "domain": "Conditional lemma: 0<t<=1/2, X>=200, radius 1/2 comparison disk with q=7/10.",
+  "baseline": "Paired Hadamard/Poisson argument in Polymath Theorem 1.5(iv).",
+  "accuracy": "Exact rational arithmetic with Python fractions; no interval zero evaluation.",
+  "resource_limit": "Two fixed standard-library runs, no parameter sweep or zero survey.",
+  "stopping_answer": "Normal exit 0; excessive kernel-floor injection exit 1 with the named endpoint failure.",
+  "environment": {
+    "python": "3.10.0",
+    "implementation": "CPython",
+    "platform": "Darwin"
+  },
+  "script": "check_local_count_reduction.py",
+  "script_sha256": "e6d6912113e9c4a045c29e9df2cfafd1e3d7567a3c2b2db7a14a7cb02dc6d6ed",
+  "note_sha256": "46266338f670fde0514ec51029ba85bc34b25a5075c149107abb146fa45e9196",
+  "normal_command": "python3 numerics/check_local_count_reduction.py",
+  "normal_exit_code": 0,
+  "normal_result": {
+    "status": "pass",
+    "kernel_floor": "9/41",
+    "checks": [
+      {
+        "name": "cauchy quotient",
+        "passed": true
+      },
+      {
+        "name": "kernel polynomial factorization",
+        "passed": true
+      },
+      {
+        "name": "lower factor nonnegative on interval",
+        "passed": true
+      },
+      {
+        "name": "sharp kernel endpoint",
+        "passed": true
+      },
+      {
+        "name": "requested kernel floor not excessive",
+        "passed": true
+      },
+      {
+        "name": "alpha remainder below one",
+        "passed": true
+      },
+      {
+        "name": "alpha derivative cutoff",
+        "passed": true
+      },
+      {
+        "name": "alpha derivative allowance",
+        "passed": true
+      },
+      {
+        "name": "carrier coefficient",
+        "passed": true
+      },
+      {
+        "name": "count coefficient",
+        "passed": true
+      },
+      {
+        "name": "count additive constant",
+        "passed": true
+      },
+      {
+        "name": "rounded coefficient",
+        "passed": true
+      },
+      {
+        "name": "rounded additive constant",
+        "passed": true
+      },
+      {
+        "name": "formal limiting comparison reserve",
+        "passed": true
+      },
+      {
+        "name": "heat logarithm coefficient from s_star",
+        "passed": true
+      },
+      {
+        "name": "double root counts as two",
+        "passed": true
+      },
+      {
+        "name": "collision Poisson accounting",
+        "passed": true
+      },
+      {
+        "name": "count bound permits collision",
+        "passed": true
+      },
+      {
+        "name": "half-open wall convention",
+        "passed": true
+      }
+    ],
+    "count_coefficient": "82123/72000",
+    "count_additive": "574/27",
+    "scope": "Exact arithmetic only; the off-axis comparison premise is unproved here."
+  },
+  "injection_command": "python3 numerics/check_local_count_reduction.py --kernel-floor 9/40",
+  "injection_exit_code": 1,
+  "injection_failed_checks": [
+    "requested kernel floor not excessive"
+  ],
+  "conclusion": "Arithmetic passed and endpoint guard failed as intended. Comparison premise (C) remains unproved; no unconditional count or consumer gain."
+}
