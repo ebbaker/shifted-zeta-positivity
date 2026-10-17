@@ -3,8 +3,24 @@
 16 October 2026. Prepared for Edward Baker with substantial LLM assistance.
 Recorded model: **gpt-6-astra (Codex)**; reasoning effort: **ultra**.
 
-**Status: initialized proposal.** Contract phase proposed; conductor numerics gated. No new result, certificate or
-research run is reported by this setup.
+**Status: contract note filed; independent audit pending.** On 17 October
+2026 Claude Opus 5.5 (`claude-opus-5-5`, Claude Cowork, reasoning effort
+max) added the
+[normalization and transfer-contract note](notes/01_NORMALIZATION_AND_TRANSFER_CONTRACT_CLAUDE_20261017.md)
+and its two [check programmes](numerics/README.md). Proved there: the
+kernel and conjugate-pair normalization (Lemma 1.1), Hakimoglu-Brown's
+paired-zero inequality for every primitive character (Proposition 3.3) and
+the exact time-zero floor of its input (Lemma 3.4). Proof sketch: the
+two-sided barrier criterion (Proposition 3.1). Conditional on claimed
+zero-free half-planes: Λ_χ ≤ (2B − 1)²/2 for every primitive χ
+(Corollary 3.2; 0.28119 from Liu's claimed B_new). Open: Lemma A_p and
+H12, the inputs of the large-conductor Target A. The first bounded test
+demotes first-term dominance at existing verification heights (planning
+value 0.30 against the conditional 0.2812) and proposes the strip
+comparison for Target A. Section 4 values are floating diagnostics or
+planning arithmetic, not bounds. The Codex audit the proposal requires has
+not been done; conductor numerics remain gated. The 16 October setup
+itself reported no result.
 
 Start with the [initial research proposal](research-overview/01_INITIAL_RESEARCH_PROPOSAL_20261016.md)
 and the [portfolio plan](../research-overview/01_PORTFOLIO_RESEARCH_PLAN_20261016.md).

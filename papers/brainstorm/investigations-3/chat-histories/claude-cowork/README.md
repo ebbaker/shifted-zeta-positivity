@@ -51,7 +51,11 @@ excluded, and raw session exports stay outside the repository.
      reconciled shortlist. The previous Claude archive (chat 1) holds only its
      initiating request because that session's single turn ended after its
      capture; this session sent its summary through the chat before the
-     capture so that the record holds it.
+     capture so that the record holds it. In a second turn, after Codex had
+     initialized [investigations-3](../../../../investigations-3/README.md)
+     from the exchange, reviewed that setup and wrote the
+     [portfolio review](../../../../investigations-3/reviews/01_PORTFOLIO_SETUP_REVIEW_CLAUDE_20261016.md)
+     with twelve proposed changes, opening the portfolio's `reviews/` folder.
    - *Session.* A Claude Cowork cloud session in project RH4 with Claude Fable
      5.1 (`claude-fable-5-1`, reasoning effort max per the transcript),
      started 16 October 2026 at 22:13 America/New_York.
