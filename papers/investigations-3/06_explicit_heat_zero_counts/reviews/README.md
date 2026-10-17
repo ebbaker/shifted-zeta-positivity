@@ -29,3 +29,14 @@ to apply solely to its hash-identified opening note.
 The [working manuscript](../manuscript/README.md) was subsequently requested
 while that review deferral remained in effect. Compilation and layout
 checks in its build record do not change the mathematical review status.
+
+## Cross-model review of rounds 1-2 and the manuscript
+
+17 October 2026. Row added for Edward Baker with LLM assistance (Claude Opus 5.5,
+`claude-opus-5-5`, Claude Cowork, effort max).
+
+| Number | Review | Model | Kind |
+| --- | --- | --- | --- |
+| 02 | [Cross-model review of Notes 01-02 and the working manuscript](02_CROSS_MODEL_REVIEW_NOTES_01_02_AND_MANUSCRIPT_CLAUDE_20261017.md) | Claude Opus 5.5 (`claude-opus-5-5`), effort max | Cross-model LLM review; the proposal's Claude analytic audit. Disposition: accept as proved from named imports, four small corrections, freeze until a consumer states a tolerance |
+
+Its support computations are in [numerics/claude-review](../numerics/claude-review/README.md).
