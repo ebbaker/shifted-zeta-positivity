@@ -7,7 +7,7 @@ Numbered research proposals and decisions about priorities.
 
 | Number | Overview | Status |
 | --- | --- | --- |
-| 01 | [Initial research proposal](01_INITIAL_RESEARCH_PROPOSAL_20261016.md) | Current opening plan; not executed |
+| 01 | [Initial research proposal](01_INITIAL_RESEARCH_PROPOSAL_20261016.md) | Opening plan; [round one in progress](../notes/round-1/02_BOUNDED_ACTIVE_BRANCH_TRANSFER_IMPLEMENTATION_20261017.md); strip transfer certified, finite floors open, 17 October 2026 |
 
 Use the next two-digit prefix for a materially revised overview. Keep
 proofs in notes and reviews separately. Link the current overview from

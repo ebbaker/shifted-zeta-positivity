@@ -1,0 +1,965 @@
+\documentclass[11pt]{article}
+\usepackage[letterpaper,margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools,booktabs,tabularx,array,microtype,xurl}
+\usepackage[T1]{fontenc}
+\usepackage[colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue]{hyperref}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{certtheorem}[theorem]{Computer-assisted theorem}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\newcommand{\R}{\mathbb R}
+\newcommand{\C}{\mathbb C}
+\newcommand{\eps}{\varepsilon}
+\newcommand{\tstar}{t_*}
+\newcommand{\Nzero}{N_0}
+\newcommand{\Nstar}{N_*}
+\newcommand{\Lsharp}{L_N^{\mathrm{sh}}}
+\newcommand{\pos}[1]{\left(#1\right)_+}
+\DeclareMathOperator{\Rea}{Re}
+\DeclareMathOperator{\Log}{Log}
+\DeclareMathOperator{\Capbd}{Cap}
+\hypersetup{pdftitle={Sharp finite-sum bounds for the Riemann heat flow},
+ pdfauthor={Drafted for Edward Baker},
+ pdfsubject={Unreviewed working draft, 17 October 2026}}
+\numberwithin{equation}{section}
+\title{Sharp finite-sum bounds for the Riemann heat flow\\
+\large Certified strip transfer, a finite window, and an infinite tail}
+\author{Drafted for Edward Baker}
+\date{17 October 2026\\\small Unreviewed working draft}
+\begin{document}
+\maketitle
+\begin{abstract}
+We study a normalized sharp lower bound for the paired finite sums in
+Polymath's effective approximation to the Riemann heat flow. At heat time
+$157/1000$, we certify monotonic transfer in the imaginary coordinate
+throughout $[\sqrt{87677/2500000},\sqrt{343/500}]$ for four Euler-mollified
+index ranges covering $690988\le N\le3840000$. The proof combines
+active-branch right-derivative inequalities, exact analytic cases and
+outward interval arithmetic over the actual integer parameters. A generic
+signed-sum example shows why the old plain-weight transfer cannot simply
+be inherited. One certified finite floor then gives a complete strip
+margin exceeding $0.0017752269101384707$ in its natural cutoff window.
+A separate eleven-term mollifier, with enlarged convolution head, gives
+an infinite-tail margin exceeding $0.02303064$ from $N=3840000$ onward.
+The remaining finite floors are not supplied, so the proposed bound
+$\Lambda\le0.1745354$ does not follow from these results.
+\end{abstract}
+
+\noindent\textbf{Draft status.}
+This draft assembles the results and execution records of round-one
+Notes 01--02 \cite{note01,note02}. Published approximation results and the
+historical initial-verification and barrier inputs remain explicit
+imports. The computational checks are internal, LLM-assisted checks by the
+same model; round-level cross-model review and specialist human review
+remain pending. The authoring configuration and assistance are recorded
+in the acknowledgements.
+
+\section{Purpose and normalization}\label{sec:setup}
+
+The Riemann heat flow in the normalization of Polymath \cite{polymath} is
+\begin{equation}\label{eq:H}
+ H_t(z)=\int_0^\infty e^{tu^2}\Phi(u)\cos(zu)\,du,
+\end{equation}
+where
+\[
+ \Phi(u)=\sum_{n\ge1}
+ (2\pi^2n^4e^{9u}-3\pi n^2e^{5u})e^{-\pi n^2e^{4u}}.
+\]
+The present calculation concerns a quantitative finite-sum estimate at a
+fixed positive time. Its main result is a strip-transfer theorem for a
+sharp coefficient mass, not a criterion equivalent to the Riemann
+hypothesis. The underlying sharp triangle inequality is inherited from
+the Polymath method and the preceding audit \cite[Section 8.5]{polymath}\cite{audit3,sharpreview};
+we give the native normalization and its proof because the application
+requires the paired coefficients and their changing absolute-value branches.
+
+Fix throughout
+\begin{equation}\label{eq:parameters}
+ \tstar=\frac{157}{1000},\quad
+ y_0=\sqrt{\frac{87677}{2500000}},\quad
+ y_1=\sqrt{\frac{343}{500}},\quad
+ \Nzero=690988,\quad \Nstar=3840000.
+\end{equation}
+In particular $y_1^2=1-2\tstar$. The finite Euler prime sets are
+specified by Table~\ref{tab:legs}. All statements over a leg quantify over
+\emph{every integer} in its indicated range.
+
+\begin{table}[htbp]
+\centering
+\begin{tabular}{lll}
+\toprule
+Leg & Integer indices $N$ & Euler prime set $P$\\
+\midrule
+0 & $690988\le N\le728999$ & $\{2,3,5,7,11\}$\\
+1 & $729000\le N\le818999$ & $\{2,3,5,7\}$\\
+2 & $819000\le N\le1027999$ & $\{2,3,5\}$\\
+3 & $1028000\le N\le3840000$ & $\{2,3\}$\\
+\bottomrule
+\end{tabular}
+\caption{The finite legs. The last natural index also lies in the tail.}
+\label{tab:legs}
+\end{table}
+
+\subsection{The imported effective approximation}
+
+For clarity we specify the functions used in the approximation. On
+$\C\setminus(-\infty,1]$ use the principal logarithm and put
+\begin{align}
+ \mathcal M_0(s)&=\frac{s(s-1)\sqrt{2\pi}}{16}\pi^{-s/2}
+ \exp\!\left[\left(\frac s2-\frac12\right)\Log\frac s2-\frac s2\right],\label{eq:M0}\\
+ \alpha(s)&=\frac1{2s}+\frac1{s-1}+\frac12\Log\frac{s}{2\pi},
+ &\mathcal M_t(s)&=e^{t\alpha(s)^2/4}\mathcal M_0(s).
+ \label{eq:alpha}
+\end{align}
+For $z=x+iy$, set
+\[
+ s_+=\frac{1+y-ix}{2},\qquad s_-=\frac{1-y+ix}{2},\qquad
+ B_t(z)=\mathcal M_t(s_+),
+\]
+\begin{align}
+ s_*&=s_++\frac t2\alpha(s_+),
+ &\gamma&=\frac{\mathcal M_t(s_-)}{\mathcal M_t(s_+)},\label{eq:sstar}\\
+ \kappa&=\frac t2\bigl[\alpha(s_-)-\alpha(\overline{s_+})\bigr],
+ &b_t(m)&=e^{(t/4)\log^2m}.\label{eq:kappa}
+\end{align}
+The natural cutoff and finite approximation are
+\begin{align}
+ N&=\left\lfloor\sqrt{\frac{x}{4\pi}+\frac t{16}}\right\rfloor,\label{eq:cutoff}\\
+ f_t(x+iy)&=\sum_{m=1}^N b_t(m)m^{-s_*}
+ +\gamma\sum_{m=1}^N m^y b_t(m)m^{-\overline{s_*}-\kappa}.
+ \label{eq:f}
+\end{align}
+Theorem 1.3 of \cite{polymath}, for $0<t\le1/2$, $0\le y\le1$ and
+$x\ge200$, supplies
+\begin{equation}\label{eq:approx}
+ \left|H_t/B_t-f_t\right|\le e_A+e_B+e_{C,0}.
+\end{equation}
+Its bounds for $|\gamma|$, $\Rea s_*$ and $|\kappa|$ are the inputs
+used below. The carrier $B_t$ is nonzero: $s_+$ is off the real cut,
+all factors in \eqref{eq:M0} are nonzero there, and the heat factor is an
+exponential. We retain the full $e_{C,0}$ allowance. The error supplier uses
+the conservative constant $10.50=3.58+6.92$ and denominator $x-12$,
+as derived from Proposition 6.6(vi) in \cite{polymath} and audited in
+\cite{audit4}. No residual from a different corrected center is inserted.
+
+\subsection{Frozen windows and coefficients}
+
+At $t=\tstar$ define
+\begin{equation}\label{eq:window}
+ q_N=N^2-\frac{\tstar}{16},\qquad x_N=4\pi q_N,
+ \qquad W_N=[x_N,x_{N+1}).
+\end{equation}
+For $D=\prod_{p\in P}p$ and $d\mid D$, let
+\begin{equation}\label{eq:coeff}
+ \lambda_d=(-1)^{\omega(d)}\prod_{p\mid d}b_{\tstar}(p),\qquad
+ \begin{aligned}
+ B_{N,n}&=\sum_{\substack{d\mid D,\ d\mid n\\ n/d\le N}}
+                  \lambda_db_{\tstar}(n/d),\\
+ A_{N,n}(y)&=\sum_{\substack{d\mid D,\ d\mid n\\ n/d\le N}}
+                  \lambda_db_{\tstar}(n/d)(n/d)^y .
+ \end{aligned}
+\end{equation}
+Both leading coefficients are one. The frozen scalar bounds are
+\begin{align}
+ g_N(y)&=\exp\!\left(\frac y{50}-\frac y2\log q_N\right),\label{eq:g}\\
+ \sigma_N(y)&=\frac{1+y}{2}+\frac{\tstar}{4}\log q_N
+ -\frac{\tstar}{2x_N^2}
+ \pos{1-3y+\frac{4y(1+y)}{x_N^2}},\label{eq:sigma}\\
+ k_N(y)&=\frac{\tstar y}{2(x_N-6)},\qquad
+ M_N(y)=\sum_{d\mid D}|\lambda_d|d^{-\sigma_N(y)},\label{eq:M}\\
+ C_N(y)&=\sum_{m=2}^N b_{\tstar}(m)(m^{k_N(y)}-1)m^{y-\sigma_N(y)},
+ \qquad K_N(y)=g_N(y)C_N(y).\label{eq:K}
+\end{align}
+The imported bounds imply throughout $W_N$
+\begin{equation}\label{eq:freeze}
+ |\gamma|\le g_N<1,\qquad \Rea s_*\ge\sigma_N,
+ \qquad |\kappa|\le k_N.
+\end{equation}
+Indeed the first and third majorants decrease with $x$. In the lower
+bound for $\Rea s_*$, the logarithm increases, and the product of
+$x^{-2}$ with the nonnegative decreasing positive part decreases. This
+also handles its kink. These directions require no monotonicity of the
+final lower bound in independent scalar arguments.
+
+\section{The sharp native binding}\label{sec:binding}
+
+For real $B,A$ and $0\le g<1$, define
+\begin{align}
+ U_g(B,A)&=\max\!\left(\frac{|B-gA|}{1-g},\frac{|B+gA|}{1+g}\right)
+ =\frac{|B-g^2A|+g|A-B|}{1-g^2},\label{eq:U}\\
+ W_g(B,A)&=(1-g)U_g(B,A).
+ \label{eq:weight}
+\end{align}
+The normalized coefficient mass and lower bound are
+\begin{align}
+ V_N(y)&=\sum_{n=2}^{DN}U_{g_N(y)}(B_{N,n},A_{N,n}(y))n^{-\sigma_N(y)},
+ \label{eq:V}\\
+ \Lsharp(y)&=\frac{(1-g_N(y))(1-V_N(y))}{M_N(y)}-K_N(y).
+ \label{eq:Lsharp}
+\end{align}
+
+\begin{lemma}[Paired real coefficients]\label{lem:paired}
+Let $r=|\Gamma|<1$. The real-linear map $T_\Gamma(w)=w+\Gamma\bar w$
+satisfies $|T_\Gamma(w)|\ge(1-r)|w|$, and
+\[
+ T_\Gamma^{-1}(Bz+\Gamma A\bar z)
+ =\frac{(B-r^2A)z+\Gamma(A-B)\bar z}{1-r^2}.
+\]
+In particular the modulus on the right is at most $U_r(B,A)|z|$.
+For fixed real $A,B$, $U_r(B,A)$ is nondecreasing in $r$.
+\end{lemma}
+\begin{proof}
+The inverse formula follows by substitution. The triangle inequality
+and \eqref{eq:U} give the modulus estimate. For monotonicity, simultaneous
+sign reversal reduces to $B\ge0$. For $0<r<1$ the three formulas for $U_r$
+are
+\[
+ \frac{B-rA}{1-r},\quad \frac{B+rA}{1+r},\quad\frac{rA-B}{1-r}
+\]
+on $A\le B$, $B\le A\le B/r^2$, and $A\ge B/r^2$, respectively.
+Their derivatives are $(B-A)/(1-r)^2$, $(A-B)/(1+r)^2$ and
+$(A-B)/(1-r)^2$, all nonnegative on the corresponding branches.
+The formulas agree at their boundaries and extend continuously to $r=0$.
+\end{proof}
+
+\begin{proposition}[Binding in the approximation's native units]\label{prop:binding}
+For an index and prime set in Table~\ref{tab:legs} and $y\in[y_0,y_1]$,
+if $\Lsharp(y)>0$, then
+\[
+ |f_{\tstar}(x+iy)|\ge\Lsharp(y)\qquad(x\in W_N).
+\]
+There is one division by $M_N$; the correction $K_N$ is not divided again.
+\end{proposition}
+\begin{proof}
+Write $f=F_B+\gamma F_{A,\kappa}$ for the two sums in \eqref{eq:f},
+and remove $m^{-\kappa}$ to define $F_{A,0}$. For
+$E(s_*)=\prod_{p\in P}(1-b_{\tstar}(p)p^{-s_*})$, exact convolution gives
+\[
+ EF_B=\sum_{n=1}^{DN}B_{N,n}n^{-s_*},\qquad
+ \overline E F_{A,0}=\sum_{n=1}^{DN}A_{N,n}n^{-\overline{s_*}}.
+\]
+Here $E\ne0$, since $\sigma_N>1.6>(\tstar/4)\log p$ makes each
+Euler-factor perturbation have modulus less than one. Put
+$\Gamma=\gamma E/\overline E$, so $|\Gamma|=|\gamma|=r$.
+Lemma~\ref{lem:paired}, applied termwise with leading term $T_\Gamma(1)$,
+yields
+\[
+ |E(F_B+\gamma F_{A,0})|
+ \ge(1-r)\left(1-\sum_{n=2}^{DN}U_r(B_{N,n},A_{N,n})n^{-\Rea s_*}\right).
+\]
+If $V_N<1$, \eqref{eq:freeze} and monotonicity of $U_r$ imply that
+this is at least $(1-g_N)(1-V_N)$. Also
+\[
+ |F_{A,\kappa}-F_{A,0}|
+ \le\sum_{m=2}^N b_{\tstar}(m)(m^{k_N}-1)m^{y-\sigma_N}=C_N.
+\]
+Use $|E|\le M_N$ and subtract $g_NC_N$ after division. Finally,
+$\Lsharp>0$ implies $V_N<1$, since $M_N>0$ and $K_N\ge0$.
+\end{proof}
+
+\begin{remark}
+The weight $W_g=\max(|B-gA|,(1-g)|B+gA|/(1+g))$ need not increase with
+$g$. The valid frozen-$g$ argument uses $U_g$ and positivity of $1-V_N$.
+The improvement retains the paired real coefficients; a separate absolute
+bound on the two sums would recover the plain triangle loss.
+\end{remark}
+
+\section{Right derivatives and the transfer obligation}\label{sec:dini}
+
+For real $z,w$ set
+\[
+ \mathcal D(z,w)=
+ \begin{cases}\operatorname{sgn}(z)w,&z\ne0,\\|w|,&z=0.\end{cases}
+\]
+It is the right derivative of the absolute value of a differentiable real
+function with value $z$ and derivative $w$. We write $D^+$ for the upper
+right Dini derivative. Fix $N,n$, abbreviate $L=\log n$, and set
+\begin{equation}\label{eq:ell}
+ \ell=\frac{g_N'}{g_N}=\frac1{50}-\frac12\log q_N<0,
+ \quad z_e=B_{N,n}+eg_N A_{N,n},\quad d_e=1+eg_N,\quad
+ v'=g_N(\ell A_{N,n}+A_{N,n}').
+\end{equation}
+The branch $u_e=|z_e|/d_e$ is active if it realizes the maximum in
+\eqref{eq:U}. Both branches are retained at a tie.
+
+\begin{lemma}[Active-branch gate]\label{lem:gate}
+On the stated strip, $\sigma'_{N,+}\ge1/2$, and
+\begin{equation}\label{eq:gate}
+ D^+(u_e n^{-\sigma_N})\le
+ \frac{n^{-\sigma_N}}{d_e}
+ \left[\mathcal D(z_e,ev')-
+ \left(\frac L2+\frac{eg_N'}{d_e}\right)|z_e|\right].
+\end{equation}
+Nonpositivity of the bracket for every active branch implies that the
+corresponding summand of $V_N$ is nonincreasing. This remains valid at
+numerator zeros, branch ties and the positive-part kink of $\sigma_N$.
+\end{lemma}
+\begin{proof}
+The argument of the positive part in \eqref{eq:sigma} has negative
+$y$-derivative $-3+4(1+2y)/x_N^2$. Hence its contribution to the
+right slope of $\sigma_N$ is nonnegative. Differentiate $|z_e|/d_e$
+using $z_e'=ev'$ and $d_e'=eg_N'$, then use $\sigma'_{N,+}\ge1/2$.
+The right derivative of a maximum of two locally Lipschitz branches is
+the maximum of their derivatives at the active branches. The resulting
+upper-right nonpositive derivative implies monotonicity; continuity
+includes the upper endpoint of the strip.
+\end{proof}
+
+\begin{proposition}[The plain gate does not imply the sharp gate]\label{prop:counter}
+In the generic real signed finite-exponential-sum class, a sufficient
+plain-weight Dini test does not imply the normalized sharp test.
+\end{proposition}
+\begin{proof}
+Take $n=16$, $\sigma=\sigma_0+y/2$, $g=4^{-y}$, $B=1$, and
+$A(y)=-1+3\cdot4^y-16^y$. Thus $A(0)=B$. At $y=1/2$, with $a=\log2$,
+\[
+ g=\tfrac12,\quad A=1,\quad A'=-4a,\quad g'=-a.
+\]
+The sufficient plain bracket is
+\[
+ g|A'|+g'|A|-\tfrac12\log n\,(|B|+g|A|)=-2a<0.
+\]
+Both normalized branches equal one, but their weighted right slopes,
+after division by $16^{-\sigma}a$, are $2$ and $-10/3$. The maximum is
+positive. The example refutes only generic automatic inheritance; it is
+not an example with the theta Euler coefficients of \eqref{eq:coeff}.
+\end{proof}
+
+\section{The uniform finite-leg transfer certificate}\label{sec:transfer}
+
+\begin{certtheorem}[Four-leg strip transfer]\label{thm:transfer}
+For every leg in Table~\ref{tab:legs}, every integer $N$ in that leg, and
+every $2\le n\le DN$, the function
+\[
+ y\longmapsto U_{g_N(y)}(B_{N,n},A_{N,n}(y))n^{-\sigma_N(y)}
+\]
+is nonincreasing on $[y_0,y_1]$. Consequently $V_N$ is nonincreasing.
+\end{certtheorem}
+
+\subsection{Divisor patterns and feasible integer coverage}
+
+Put $G=\gcd(n,D)$, and order its divisors as $1=d_0<\cdots<d_{r-1}=G$.
+The sector $n\le N$ has all divisors active. In sector
+$d_{j-1}N<n\le d_jN$, precisely $d_j,\ldots,G$ are active. Writing
+$n=Gk$ imposes $\gcd(k,D/G)=1$. If $n>GN$ there is no active divisor,
+and the summand is identically zero. The numbers of nonempty sector
+types are $3^{|P|}$, namely $243,81,27,9$ on the four legs.
+
+The certificate uses coordinates $h=\log N$, $v=\log(n/N)$, $L=h+v$.
+Define
+\begin{equation}\label{eq:coords}
+ \delta(h)=-\frac12\log\left(1-\frac{\tstar}{16}e^{-2h}\right),\quad
+ \ell=\frac1{50}-h+\delta(h),\quad
+ F=g_Ne^{yL}=e^{y(v+1/50+\delta(h))}.
+\end{equation}
+Thus the full $N$-dependence is retained. For the active divisors let
+\begin{align}
+ r_d(L)&=\exp\!\left[\frac{\tstar}{4}
+ \left(\sum_{p\mid d}\log^2p+\log^2d-2L\log d\right)\right],\label{eq:rd}\\
+ c&=\sum_{d\text{ active}}(-1)^{\omega(d)}r_d(L),
+ &C_y&=\sum_{d\text{ active}}(-1)^{\omega(d)}r_d(L)d^{-y}.\label{eq:cy}
+\end{align}
+Then $B_{N,n}=b_{\tstar}(n)c$ and
+$A_{N,n}=b_{\tstar}(n)e^{yL}C_y$. Remove the positive factor
+$b_{\tstar}(n)$ and put
+\begin{equation}\label{eq:QT}
+ Q=FC_y,\qquad T=F[(v+1/50+\delta)C_y+\partial_yC_y].
+\end{equation}
+The exact branch comparison is
+\begin{equation}\label{eq:activity}
+ u_-\ge u_+\quad\Longleftrightarrow\quad(gc-Q)(c-gQ)\ge0.
+\end{equation}
+With $g=g_N$, the implemented branch predicate is nonpositivity of
+\begin{equation}\label{eq:predicate}
+ (1+eg)\mathcal D(c+eQ,eT)
+ -\left[\frac L2(1+eg)+e\ell g\right]|c+eQ|
+\end{equation}
+for every possibly active branch. Multiplication by $1+eg>0$ preserves
+the sign in \eqref{eq:gate}.
+
+The interval cover embeds each actual integer pair in closed boxes for
+$(h,v,y)$; sector closures only enlarge the domain. Outward
+exponentiation bounds the possible integers $N,n$. The exact sector
+inequalities and gcd restriction provide necessary feasibility tests.
+If at most 33 possible multiples $n=Gk$ remain, the code checks all of
+them against the integer leg/sector constraints and outer ratio bounds.
+A cell is discarded only if these necessary conditions admit no pair.
+A unique possible $n$ tightens the interval for $L$ to its logarithm.
+Closed bisection children share their boundary. These operations cannot
+remove a feasible pair or leave a subdivision gap.
+
+\subsection{An equivalent predicate at absolute-value kinks}
+
+Put
+\[
+ R=c-gQ,\quad S=Q-gc,\quad R'=-g(\ell Q+T),\quad S'=T-\ell gc.
+\]
+The identity
+\[
+ \max(u_-,u_+)=\frac{|R|+|S|}{1-g^2}
+\]
+gives the equivalent derivative numerator
+\begin{equation}\label{eq:alternate}
+ \mathcal D(R,R')+\mathcal D(S,S')-
+ \left[\frac L2-\frac{2g^2\ell}{1-g^2}\right](|R|+|S|).
+\end{equation}
+A nonpositive enclosure of \eqref{eq:alternate} proves the gate even
+when separate branch enclosures overestimate a tie. In either form,
+a zero-containing numerator retains the upper bound on its absolute
+right derivative. In \eqref{eq:predicate} the coefficient of the plus
+absolute value can be negative; its complete signed interval product
+is retained. No midpoint sign is used to suppress a branch.
+
+\subsection{Analytic cases}
+
+\begin{lemma}[A single active divisor]\label{lem:single}
+Every feasible sector with exactly one active divisor satisfies the gate.
+\end{lemma}
+\begin{proof}
+For that divisor $d$, put $m=n/d$, $a=\log m$. Then $B\ne0$,
+$A=B e^{ay}$ and $0\le a\le\log N<-2\ell$. The final inequality is
+$q_N/N>e^{0.04}$, which holds at the smallest $N$ and persists because
+$N-\tstar/(16N)$ increases. If $a>0$ only plus is active and
+\[
+ \frac{d}{dy}\log u_+=\frac a2+\frac12
+ \left[(\ell+a)\tanh\frac{y(\ell+a)}2
+       -\ell\tanh\frac{y\ell}2\right]\le\frac a2.
+\]
+Indeed $x\tanh(yx/2)$ is even and increases with $|x|$, and
+$|\ell+a|\le|\ell|$. Subtracting $\sigma'_{N,+}\log n$ bounds the
+weighted rate by $-\tfrac12\log d\le0$. At $m=1$, both branches equal
+$|B|$ identically and their weighted rates are also nonpositive.
+\end{proof}
+
+\begin{lemma}[The isolated prime zeros]\label{lem:prime}
+If a full-active $G=p\in P$ cell has $n=p$ as its only possible integer,
+the gate holds on every actual pair in that cell.
+\end{lemma}
+\begin{proof}
+Here $B=0$, $A=b_{\tstar}(p)(p^y-1)>0$ and minus is uniquely active.
+The weighted logarithmic rate is at most
+\[
+ \frac{\ell}{1-g}+\frac{\log p}{1-p^{-y}}-\frac{\log p}{2}
+ \le\ell+\frac{\log p}{2}+\frac1y
+ <0.52-13+1.5+\frac{1000}{187}
+ =-\frac{52663}{9350}<0.
+\]
+Use $q_N>N^2/2$, $\log N>13$, $\log p<3$ and $y>0.187$; the
+inequality $1/(1-e^{-u})\le1+1/u$ gives the middle estimate.
+No other simultaneous coefficient zero is assigned this shortcut.
+\end{proof}
+
+\subsection{Execution and proof of the theorem}
+
+The engine uses 40-digit directed Decimal arithmetic. The nearest-mode
+correctly rounded exponential, logarithm and square root are padded
+outward by $10^{-38}$. A cell passes by \eqref{eq:predicate},
+\eqref{eq:alternate}, Lemma~\ref{lem:single} or Lemma~\ref{lem:prime};
+it may also be proved empty. Otherwise it is subdivided or reported
+unresolved. Table~\ref{tab:cover} gives the complete pattern partition.
+
+\begin{table}[htbp]
+\centering
+\begin{tabular}{llll}
+\toprule
+Leg & Pattern indices & Certificate & Remaining cells\\
+\midrule
+0 & $0,\ldots,171$ & First pass, complete prefix & None in prefix\\
+0 & $172,\ldots,242$ & Completion, full original roots & None\\
+1 & $0,\ldots,80$ & First pass & None\\
+2 & $0,\ldots,26$ & First pass & None\\
+3 & $0,\ldots,8$ & First pass & None\\
+\bottomrule
+\end{tabular}
+\caption{Composition of the finite-leg transfer certificate.}
+\label{tab:cover}
+\end{table}
+
+\begin{proof}[Proof of Theorem~\ref{thm:transfer}]
+The root boxes and necessary integer tests cover every nonempty actual
+term. The first run completed legs 1--3 and the indicated prefix of
+leg 0 before reaching its 30,000-box cap. Pattern 172 was only partly
+evaluated then, so that work is not used for composition. The second run
+restarted its full root and completed the entire suffix 172--242.
+Its wrapper checks the engine hash, the first record's completed prefix
+and the other complete legs, and records the first record's hash.
+The exact prefix/suffix union is all 243 patterns, with no unresolved
+leaf in the completed domains. Each run used at most 45 seconds and
+30,000 evaluations per leg, at depth at most 36; the measured combined
+interval time was 91.06 seconds and peak memory was below 22 MiB.
+The records in Appendix~\ref{app:records} summarize the interval
+decisions and contain accepted-leaf digests; the engine regenerates the
+leaf inequalities. No conclusion is drawn from a positive
+upper interval bound or a partial pattern. The sign predicates and the
+analytic cases therefore prove every active gate. Apply
+Lemma~\ref{lem:gate}, and add the finitely many nonincreasing summands.
+\end{proof}
+
+The first execution record alone has a false full-completion flag,
+correctly reflecting its budget stop. Both records are necessary for
+Theorem~\ref{thm:transfer}. A separate same-model check compares actual
+integer terms with 110-digit direct arithmetic, tests that feasible toy
+pairs survive pruning, and rejects the tied adverse example of
+Proposition~\ref{prop:counter}. These checks examine implementation;
+they do not replace the uniform interval cover or establish review
+independence. No global extremal slack is inferred from the accepted
+leaf thresholds or their count.
+
+\begin{corollary}[Transfer of a positive native floor]\label{cor:floor}
+If $V_N(y_0)<1$, then $\Lsharp(y)\ge\Lsharp(y_0)$ for
+$y_0\le y\le y_1$.
+\end{corollary}
+\begin{proof}
+Theorem~\ref{thm:transfer} makes $V_N$ nonincreasing. The factor $1-g_N$
+is positive and increasing, and $M_N$ is nonincreasing because
+$\sigma'_{N,+}\ge1/2$. Finally put $\rho_N=\tstar/[2(x_N-6)]$.
+Each positive summand of $K_N$ has logarithmic rate at most
+\[
+ \ell+\tfrac12\log N+\rho_N\log N+1/y_0.
+\]
+This follows from
+$\frac{d}{dy}\log(m^{\rho_Ny}-1)\le\rho_N\log m+1/y$.
+For $\tstar<0.162$, $N\ge690988$,
+\[
+ \ell<0.52-\log N,\qquad \rho_N<0.081/N^2,
+\]
+so the rate is less than
+$0.52-6.5+0.081/N+1000/187<-0.631$.
+Thus $K_N$ decreases, and every operation in \eqref{eq:Lsharp} has
+the required direction when $1-V_N(y_0)>0$.
+\end{proof}
+
+\section{A finite window and the complete approximation allowance}\label{sec:pilot}
+
+The approximation allowance is recomputed at the new exact time; the
+historical time box is not reused. A convenient statement is
+\begin{proposition}[Uniform approximation budget]\label{prop:error}
+For every natural cutoff $N\ge\Nzero$, $x\in W_N$ and
+$y_0\le y\le y_1$ at $t=\tstar$, the inherited effective approximation
+supplies
+\begin{align*}
+ e_A+e_B&<2.159\cdot10^{-12},&
+ e_{C,0}&<2.829422\cdot10^{-7},\\
+ e_A+e_B+e_{C,0}&<2.829444\cdot10^{-7}<3\cdot10^{-7}.
+\end{align*}
+\end{proposition}
+\begin{proof}
+We instantiate the audited general U1--U5 reduction \cite[Section 4]{audit4}
+at $t=\tstar$, not its old fixed-parameter conclusion. Here is the
+budget explicitly. Put $z_0=\tstar/(16\Nzero^2)$, $L_0=\log q_{\Nzero}$,
+$x_0=x_{\Nzero}$ and
+\[
+ \delta_0=\frac{\tstar}{4}\frac{z_0}{1-z_0}
+       +\frac{\tstar}{2x_0^2},\qquad
+ \sigma_0=\frac{1+y_0}{2}+\frac{\tstar}{2}\log\Nzero-\delta_0.
+\]
+Use the endpoint cap of Lemma~\ref{lem:cap} below, with $m_0=2000$, to form
+\begin{align*}
+ S_0&=1+\sum_{n=2}^{m_0}b_{\tstar}(n)n^{-\sigma_0}
+        +\Capbd_{\tstar}(m_0,\Nzero;\sigma_0),\\
+ P_0&=1+e^{1/50}(1-z_0)^{-1/2}
+        \exp\!\left[\frac{\tstar\log\Nzero}{2(x_0-6)}\right],\\
+ U_0&=\frac{(\tstar^2/16)L_0^2+0.626}{x_0-6.66}.
+\end{align*}
+The error supplier bounds $e_A+e_B$ by $P_0S_0(e^{U_0}-1)$. The
+$C$-term allowance is bounded by
+\begin{equation}\label{eq:eCbudget}
+ \exp\!\left[-\frac{1+y_0}{4}L_0-\frac{\tstar}{16}L_0^2
+ +\frac{1.24(3^{y_1}+3^{-y_1})}{\Nzero-1/8}
+ +\frac{3\sqrt{L_0^2+\pi^2/4}+10.50}{x_0-12}\right].
+\end{equation}
+The head/cap monotonicity and domain gates of U1--U5 are rechecked in
+\path{TAIL_T157_M600000_RECORD.json}; its two U3 sign gates are
+less than $-0.42558$ and $-0.47805$. Directed evaluation gives the
+respective upper bounds $2.158316897\cdot10^{-12}$ and
+$2.829421823\cdot10^{-7}$. The reduction is uniform for all $N\ge\Nzero$
+and the full new strip. The error formulas are imports from
+\cite{polymath,audit4}; the parameter substitution and enclosure are
+recorded in \cite{note01} and Appendix~\ref{app:records}.
+\end{proof}
+
+\begin{certtheorem}[First-window strip margin]\label{thm:pilot}
+At $t=\tstar$, throughout $x\in W_{690988}$ and $y_0\le y\le y_1$,
+\begin{equation}\label{eq:pilotmargin}
+ \left|\frac{H_{\tstar}(x+iy)}{B_{\tstar}(x+iy)}\right|
+ >0.0017752269101384707.
+\end{equation}
+\end{certtheorem}
+\begin{proof}
+The outward fixed-point pilot encloses
+\begin{align*}
+ 0.0017755269101384707588
+ &< L_{690988}^{\mathrm{sh}}(y_0)\\
+ &<0.0017755269101384708095.
+\end{align*}
+It uses the exact enumeration $n=Gk$, $\gcd(k,D/G)=1$, signed
+convolutions and the weight $W_g$. In the record, $S$ denotes the
+\emph{unnormalized} mass $(1-g)V_N$, and $Q=1-g-S$; this $S$ must not
+be mistaken for $V_N$. The 110-bit fixed-point sum allowance is below
+$4.54\cdot10^{-20}$, and the scalar/table supplier uses inherited
+45-digit directed arithmetic. Error propagation uses the 1-Lipschitz
+absolute-value and maximum maps, including the multiplier
+$(1-g)/(1+g)$ and directly enclosed $G^{-\sigma_N}$ scalars.
+The record's positive numerator implies $V_N(y_0)<1$.
+Corollary~\ref{cor:floor} and Proposition~\ref{prop:binding} transfer this
+floor through the entire strip and window. Subtract the full
+$3\cdot10^{-7}$ allowance of Proposition~\ref{prop:error} using
+\eqref{eq:approx}.
+\end{proof}
+
+\section{An infinite-tail estimate with a larger head}\label{sec:tail}
+
+This section re-instantiates the \emph{generic arguments} of the preceding
+tail audit \cite[Sections 3.1--3.8]{audit4}; its old stated time interval
+does not contain $\tstar$. The partition and reduction are given here,
+and every new application gate is reevaluated.
+
+\begin{lemma}[Endpoint cap]\label{lem:cap}
+For $t\ge0$, integers $1\le a<N$ and $\sigma>(t/2)\log N$,
+\[
+ \sum_{a<n\le N}b_t(n)n^{-\sigma}
+ \le\Capbd_t(a,N;\sigma)
+ :=\log(N/a)\max_{u\in\{a,N\}}e^{(1-\sigma)\log u+(t/4)\log^2u}.
+\]
+\end{lemma}
+\begin{proof}
+The summand decreases, so its sum is bounded by the integral from $a$
+to $N$. With $u=e^v$, the integrand is
+$\exp((1-\sigma)v+tv^2/4)$, a convex exponent whose maximum on the
+logarithmic interval is at an endpoint. This is the subrange version of
+Polymath's Lemma 8.2 \cite{polymath}.
+\end{proof}
+
+The tail uses a different rational mollifier. Put
+$\mathcal S=\{1,2,3,4,5,6,7,10,11,13,14\}$ and, in that order, set
+\begin{equation}\label{eq:tailnu}
+ (\nu_d)_{d\in\mathcal S}=
+ \left(1,-\frac{1021}{1000},-\frac{1054}{1000},-\frac9{200},
+ -\frac{1119}{1000},\frac{1001}{1000},-\frac{1043}{1000},
+ \frac{128}{125},-\frac{161}{200},-\frac{447}{500},
+ \frac{456373}{500000}\right).
+\end{equation}
+These coefficients are not the finite Euler coefficients $\lambda_d$.
+Let $\mathcal E_\nu(s)=\sum_{d\in\mathcal S}\nu_dd^{-s}$ and fix
+$M=600000<\Nstar$. With $c_m=\sum_{d\mid m,\,d\in\mathcal S}
+\nu_db_{\tstar}(m/d)$, the exact pair partition is
+\begin{align}\label{eq:partition}
+ \mathcal E_\nu(s)\sum_{k\le N}b_{\tstar}(k)k^{-s}
+ &=1+\sum_{m=2}^M c_mm^{-s}\\
+ &\quad+\sum_{d\in\mathcal S}\nu_dd^{-s}
+     \sum_{\lfloor M/d\rfloor<k\le N}b_{\tstar}(k)k^{-s}.\notag
+\end{align}
+All pairs with $dk\le M$ occur in the head, since $M<N$; the rest
+occur in exactly one routed sum. The historical nonnegative term
+\texttt{OV} bounds part of this routed remainder a second time and is
+not needed in this partition.
+
+Let $x_*=x_{\Nstar}$ in this section only, and put
+\begin{align}
+ z_*&=\frac{\tstar}{16\Nstar^2},&
+ \widehat\delta&=\frac{\tstar}{4}\frac{z_*}{1-z_*}
+                          +\frac{\tstar}{2x_*^2},&
+ \widehat k&=\frac{\tstar}{2(x_*-6)},\label{eq:tailfreeze}\\
+ \sigma_1(N,y)&=\frac{1+y}{2}+\frac{\tstar}{2}\log N-\widehat\delta,
+ &\sigma_2(N,y)&=\sigma_1(N,y)-y-\widehat k,\label{eq:sig12}\\
+ G(N,y)&=\exp\!\left(\frac y{50}-\frac y2\log(N^2-\tstar/16)\right).
+ &&\label{eq:tailG}
+\end{align}
+The imported approximation bounds imply $\Rea s_*\ge\sigma_1$,
+$|\kappa|\le\widehat k$ and $|\gamma|\le G$ for every $N\ge\Nstar$.
+Here $-\log(1-z)\le z/(1-z)$ and the positive part in
+\eqref{eq:sigma} is bounded by one. Define
+\begin{align}
+ P&=\sum_{m=2}^M|c_m|m^{-\sigma_1},\qquad
+ \mathfrak M=\sum_{d\in\mathcal S}|\nu_d|d^{-\sigma_1},\label{eq:Ptail}\\
+ T_R&=\sum_{d\in\mathcal S}|\nu_d|d^{-\sigma_1}
+       \Capbd_{\tstar}(\lfloor M/d\rfloor,N;\sigma_1),\label{eq:TR}\\
+ A_B&=G\left[\sum_{n=1}^M b_{\tstar}(n)n^{-\sigma_2}
+                  +\Capbd_{\tstar}(M,N;\sigma_2)\right],\label{eq:AB}\\
+ D'&=P+T_R+\mathfrak M A_B.\label{eq:Dprime}
+\end{align}
+The partition and ordinary triangle inequality give
+\begin{equation}\label{eq:tailbinding}
+ |\mathcal E_\nu(s_*)f_{\tstar}-1|\le D',\qquad
+ |f_{\tstar}|\ge\frac{1-D'}{\mathfrak M}\quad(D'<1).
+\end{equation}
+The second inequality follows because $|\mathcal E_\nu|\le\mathfrak M$;
+$D'<1$ itself ensures that the mollifier and the product are nonzero.
+
+\begin{proposition}[Order of the tail reductions]\label{prop:tailorder}
+The majorant $D'(N,y)$ is nonincreasing first in $y$, then in $N$ at the
+lower $y$ endpoint, provided the recorded cap gates below hold.
+The contraction's $A$-cap all-index gate is needed only near $y_0$;
+the error caps still require the full strip hull.
+\end{proposition}
+\begin{proof}
+For fixed $N$, all $B$-side terms decrease with $y$ through
+$\partial_y\sigma_1=1/2$. Every $G$-weighted $A$-side head term or cap
+endpoint $u\le N$ has logarithmic $y$-rate at most
+\[
+ Y_M(N)=\frac1{50}-\frac12\log(N^2-\tstar/16)+\frac12\log N<0.
+\]
+The logarithmic cap width is independent of $y$. Thus $D'$ decreases
+throughout the full strip, before any $N$ reduction.
+
+For a fixed cap left endpoint $a$, set $q=\log N$, $r=\log a$, and
+$\sigma(N)=\beta+(\tstar/2)q$. The two cap candidates have logarithmic
+$q$-derivatives
+\[
+ \frac1{q-r}-\frac{\tstar}{2}r,\qquad
+ \frac1{q-r}+1-\sigma(N).
+\]
+Both are negative if
+\begin{equation}\label{eq:Ngates}
+ \frac{\tstar}{2}r(q-r)>1,\qquad
+ (\sigma(N)-1)(q-r)>1.
+\end{equation}
+The left sides increase with $q$ once they hold. At the reduced lower
+$y$ value these gates therefore make all routed and $A$ caps decrease
+with $N$. The heads and mollifier majorant decrease as their exponents
+increase; $G$ also decreases. This proves the contraction reduction.
+The approximation-error supplier does not use this $y$ reduction, so
+its two error caps must retain the full-hull all-index gates.
+\end{proof}
+
+\begin{certtheorem}[Tail at the unchanged starting index]\label{thm:tail}
+For $t=\tstar$, every $N\ge\Nstar$, $x\in W_N$ and $y_0\le y\le y_1$,
+\begin{equation}\label{eq:tailmargin}
+ \left|H_{\tstar}(x+iy)/B_{\tstar}(x+iy)\right|>0.02303064.
+\end{equation}
+\end{certtheorem}
+\begin{proof}
+The contraction is enclosed at $N=\Nstar$ on
+\[
+ I_{\rm box}=[1872719/10^7,23409/125000],
+\]
+containing $y_0$. The interval's lower endpoint lies below $y_0$, so
+Proposition~\ref{prop:tailorder} reduces the required strip to that box.
+The error supplier retains
+\[
+ I_{\rm ext}=[1872719/10^7,8282512/10^7],
+\]
+which covers $y_1$; the historical top $0.8231039$ would not suffice.
+Directed evaluation at the exact new time gives Table~\ref{tab:tail}.
+The least routed cap gates exceed $1.93875$ and $1.45491$; the
+$A$-cap second gate on $I_{\rm box}$ exceeds $1.10728$. Its historical
+extended-hull test does not pass (its computed lower endpoint is about
+$0.51236$); that test is not needed after the stated reduction order.
+Both full-hull error caps pass, with least gate exceeding $1.97475$.
+The validity gates $\sigma_j>(\tstar/2)\log N$ and all remaining domain
+and monotonicity gates are retained in the record.
+
+The exact head is $M=600000$; the two error heads use 3000 terms. Their
+inherited error formulas, including the $10.50$ weld, give the complete
+tail allowance in Table~\ref{tab:tail}. Equations
+\eqref{eq:approx} and \eqref{eq:tailbinding}, and the all-index reductions,
+then prove the result. All numerical comparisons are reevaluations of
+the generic audited arguments at $\tstar$, not applications of the old
+fixed-time theorem outside its domain.
+\end{proof}
+
+\begin{table}[htbp]
+\centering
+\begin{tabular}{ll}
+\toprule
+Quantity at the declared hull & Safe outward bound\\
+\midrule
+$P$ & $<0.214842556622$\\
+$T_R$ & $<0.214622245029$\\
+$\mathfrak M$ & $<1.631076048739$\\
+$A_B$ & $<0.326760019216$\\
+$D'$ & $<0.962435242680$\\
+$e_A+e_B+e_{C,0}$ in the tail & $<1.4900275280\cdot10^{-8}$\\
+$(1-D')/\mathfrak M-(e_A+e_B+e_{C,0})$
+ & $>0.02303064473$\\
+\bottomrule
+\end{tabular}
+\caption{New-time tail budget with $M=600000$. The final row uses the
+full-precision enclosures, rather than recombination of rounded table entries.}
+\label{tab:tail}
+\end{table}
+
+At the unchanged head $153814$, the same new-time budget has an upper
+bound about $1.15923637$ for $D'$ and does not close. This is a failure of
+that head and majorant to certify contraction, not a theorem of
+nonvanishing failure or an obstruction to other heads. Similarly, retaining
+the redundant \texttt{OV} padding in the successful case would prevent
+this particular budget from closing. The raw historical checks and their
+replacement reasons are preserved; adverse required gates are not removed.
+
+\section{The remaining finite bridge and the conditional target}\label{sec:remaining}
+
+Polymath's Theorem 1.2 \cite{polymath} converts three inputs into
+$\Lambda\le t_0+y_0^2/2$: initial verification to height $X/2$,
+final-time nonvanishing for $x\ge X+\sqrt{1-y_0^2}$ and
+$y_0\le y\le\sqrt{1-2t_0}$, and an intermediate curved barrier.
+For
+\[
+ X=6000000185827,
+\]
+the Platt--Trudgian verified height \cite{platt} covers $X/2$.
+The new curved barrier at $t_0=\tstar$ is contained in the historical
+closed box
+\[
+ [X,X+1]\times[0.1809,1]\times[0,0.16125].
+\]
+Indeed its horizontal width is less than one, its lower ordinate is at
+least $y_0>0.1809$, and $\tstar<0.16125$. The historical barrier is
+inherited on the status recorded by its audit \cite{audit5}; it is not
+regenerated here. The first natural window still contains
+$X+\sqrt{1-y_0^2}$, and the half-open $W_N$ tile without gaps.
+
+\begin{corollary}[Explicit remaining obligation]\label{cor:conditional}
+Assume the imported initial-verification and historical barrier inputs
+just described. If a valid new floor certificate establishes
+\[
+ L_N^{\mathrm{sh}}(y_0)>3\cdot10^{-7}
+ \quad\text{for every integer }690989\le N<3840000
+\]
+with its leg's coefficients and all producer or amortization errors paid,
+then $\Lambda\le0.1745354$.
+\end{corollary}
+\begin{proof}
+The first floor is Theorem~\ref{thm:pilot}; the remaining finite floors
+transfer by Corollary~\ref{cor:floor} and pay
+Proposition~\ref{prop:error}. Theorem~\ref{thm:tail} supplies the infinite
+exterior. These cover the entire final-time region. Apply the imported
+criterion and compute
+$\tstar+y_0^2/2=872677/5000000=0.1745354$.
+\end{proof}
+
+The premise about the remaining floors is open. Neither the historical
+plain-weight rows at time $0.16125$, the favorable sampled sharp rows,
+nor the transfer theorem proves it. No monotonicity in $N$ is assumed.
+This draft therefore reports a completed transfer calculation, one
+finite-window margin and a revised infinite exterior, not a complete
+certificate of the conditional conclusion.
+
+The control-family screen is also quantitative. The generic paired
+algebra has no shape premise that excludes colliding sources. Euler-factor
+controls change the coefficients and conductor; weighted-square,
+reflected, positive-primitive and earlier positive-source controls do not
+provide the complete theta approximation with its stated error allowance
+\cite{note01}. Their own representations and errors would have to replace
+these inputs. A valid method may certify a collision-free box of a
+control, but cannot produce a positive complete margin on a region
+containing its collision. The present theorem makes no such claim.
+
+\appendix
+\section{Evidence and reproduction}\label{app:records}
+
+All current evidence below is under
+\path{papers/investigations-3/02_sharp_finite_sum_bounds/numerics/round-1/}
+in the research checkout. The source notes are cited as
+\cite{note01,note02}. Files and imported helper pins are bound by the
+build record accompanying this manuscript.
+
+\begin{table}[htbp]
+\small
+\begin{tabularx}{\textwidth}{@{}p{0.40\textwidth}X@{}}
+\toprule
+File & Role\\
+\midrule
+\path{certify_sharp_pilot.py} & Outward single-row implementation; one native floor.\\
+\path{SHARP_PILOT_RECORD_20261017.json} & First floor and fixed-point/scalar allowances.\\
+\path{check_sharp_y_transfer_gate.py} & Actual-integer domain cover and both derivative predicates.\\
+\path{SHARP_Y_TRANSFER_GATE_RECORD_20261017.json} & Three complete legs and the largest-leg prefix.\\
+\path{complete_sharp_y_transfer_gate.py} & Checks the complete prefix and starts the original suffix roots.\\
+\path{SHARP_Y_TRANSFER_COMPLETION_RECORD_20261017.json} & Completed suffix and exact union; required with the preceding record.\\
+\path{check_gate_arithmetic.py} & Separate same-model implementation checks; not uniform coverage.\\
+\path{check_t157_tail_budget.py} & Hash-pinned generic error/tail adapter with explicit substitutions.\\
+\path{TAIL_T157_M600000_RECORD.json} & Uniform error allowance and successful new-time tail.\\
+\path{TAIL_T157_M153814_RECORD.json} & Inherited-head budget diagnostic.\\
+\bottomrule
+\end{tabularx}
+\caption{The small evidence package. Floating scout values are diagnostics only.}
+\label{tab:evidence}
+\end{table}
+
+The transfer engine checks its interval primitives, exact rational
+one-sided derivative identities, and toy integer membership. The
+additional checker compares 1080 actual term points at 110 digits,
+tests 171 feasible toy pairs through 2223 containing child cells, and
+rejects the adverse tied control. These counts account for checks; the
+proof uses analytic arguments and the interval signs, not the number of
+checks. The tail supplier uses 50-digit directed arithmetic with
+$10^{-48}$ transcendental padding, and explicitly retains failed legacy
+comparisons whose historical target, floor or reduction has changed.
+
+From the numerical directory
+\path{papers/investigations-3/02_sharp_finite_sum_bounds/numerics/round-1/},
+a cheap implementation check is
+\begin{quote}\small\ttfamily
+python3 check\_gate\_arithmetic.py --output /tmp/sharp-gate-check.json
+\end{quote}
+The exact bounded-run commands and plans are in the numerical README.
+The completion wrapper uses the preserved first record beside the
+engine; it does not automatically consume an arbitrary freshly generated
+first pass. Resource stops remain incomplete and must be reported.
+Each source file and record is below 1 MiB; no large row corpus is
+created. Hashes establish input and execution identity, while arithmetic
+and the stated analytic reductions establish the inequalities.
+
+\section*{Acknowledgements and assistance}
+This manuscript was drafted for Edward Baker with substantial LLM
+assistance from OpenAI's \texttt{gpt-6.1-sol} in Codex, reasoning effort
+\texttt{ultra}, including same-model subagents. Assistance covered
+mathematical derivation, code authoring, numerical implementation checks
+and exposition. Compilation and layout inspection are authoring checks;
+they do not constitute the deferred round-level or specialist review.
+
+\begin{thebibliography}{9}
+\bibitem{polymath}
+D. H. J. Polymath,
+\emph{Effective approximation of heat flow evolution of the Riemann
+$\xi$ function, and a new upper bound for the de Bruijn--Newman constant},
+arXiv:1904.12438v2 (2019).
+\url{https://arxiv.org/abs/1904.12438v2}.
+
+\bibitem{platt}
+D. J. Platt and T. S. Trudgian,
+\emph{The Riemann hypothesis is true up to $3\cdot10^{12}$},
+arXiv:2004.09765 (2020).
+\url{https://arxiv.org/abs/2004.09765}.
+
+\bibitem{note01}
+Prepared for E. Baker with LLM assistance,
+\emph{Sharp finite sum contract and first feasibility budget},
+17 October 2026, \texttt{gpt-6.1-sol}, effort \texttt{ultra}.
+Investigation 02, round-one Note 01,
+\path{../../notes/round-1/01_SHARP_WEIGHT_CONTRACT_AND_FEASIBILITY_20261017.md}.
+
+\bibitem{note02}
+Prepared for E. Baker with LLM assistance,
+\emph{Bounded implementation of the sharp strip transfer gate},
+17 October 2026, \texttt{gpt-6.1-sol}, effort \texttt{ultra}.
+Investigation 02, round-one Note 02,
+\path{../../notes/round-1/02_BOUNDED_ACTIVE_BRANCH_TRANSFER_IMPLEMENTATION_20261017.md}.
+
+\bibitem{sharpreview}
+Internal LLM audit,
+\emph{Cross-model review of the first Newman certificate audit session},
+12 October 2026, Section 3.3.
+\path{papers/investigations-2/newman_certificate_audit/reviews/1_CROSS_MODEL_REVIEW_OF_NOTES_1_2_20261012.md}.
+
+\bibitem{audit3}
+Internal LLM audit,
+\emph{Certified row replay and audit of the finite-lane reductions},
+12 October 2026.
+\path{papers/investigations-2/newman_certificate_audit/notes/3_CERTIFIED_ROW_REPLAY_AND_FINITE_LANE_REDUCTIONS_20261012.md}.
+
+\bibitem{audit4}
+Internal LLM audit,
+\emph{Tail lemma and uniform error budget: audit of the remaining analytic
+suppliers of hypothesis (ii)}, 12 October 2026.
+\path{papers/investigations-2/newman_certificate_audit/notes/4_TAIL_LEMMA_AND_UNIFORM_ERROR_BUDGET_AUDIT_20261012.md}.
+
+\bibitem{audit5}
+Internal LLM audit,
+\emph{Barrier certificate audit}, 13 October 2026.
+\path{papers/investigations-2/newman_certificate_audit/notes/5_BARRIER_CERTIFICATE_AUDIT_20261013.md}.
+\end{thebibliography}
+\end{document}

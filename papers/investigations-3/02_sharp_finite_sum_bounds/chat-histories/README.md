@@ -15,3 +15,11 @@ The portfolio-creation chat is [portfolio history 1](../../chat-histories/0001_2
 No transcript or registry is copied here. Shared portfolio discussions
 use the [base history folder](../../chat-histories/README.md).
 See [Claude session guidance](claude-cowork/README.md) for future supported imports.
+
+## Investigation research chat
+
+17 October 2026. Prepared for Edward Baker with substantial LLM assistance,
+**gpt-6.1-sol (Codex)**, reasoning effort **ultra**.
+
+- [History 1 — Begin sharp finite-sum bounds](0001_2026-10-17T17-00-38Z_begin-sharp-finite-sum-bounds.json).
+  Refresh its existing unique registration with the repository history tool.
