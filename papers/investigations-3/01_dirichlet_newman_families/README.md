@@ -14,7 +14,14 @@ the exact time-zero floor of its input (Lemma 3.4). Proof sketch: the
 two-sided barrier criterion (Proposition 3.1). Conditional on claimed
 zero-free half-planes: Λ_χ ≤ (2B − 1)²/2 for every primitive χ
 (Corollary 3.2; 0.28119 from Liu's claimed B_new). Open: Lemma A_p and
-H12, the inputs of the large-conductor Target A. The first bounded test
+H12, the inputs of the large-conductor Target A (for Lemma A_p see
+Project 03's [note 01](../03_effective_outer_remainders/notes/01_HEIGHT_P_TRANSPORT_AND_LEMMA_AP_CLAUDE_20261017.md)
+of 17 October: proved with an explicit remainder, no loss shown by
+floating evaluation on a time grid above conductor about 10⁵,
+certification pending; Project 03's
+[note 02](../03_effective_outer_remainders/notes/02_HAKIMOGLU_BROWN_COMPARISON_AND_UNCONDITIONAL_TABLE_CLAUDE_20261017.md)
+adds the derivative kernel of Hakimoglu-Brown's Theorem 12, which lowers
+the Target A planning values by 5–13%). The first bounded test
 demotes first-term dominance at existing verification heights (planning
 value 0.30 against the conditional 0.2812) and proposes the strip
 comparison for Target A. Section 4 values are floating diagnostics or
