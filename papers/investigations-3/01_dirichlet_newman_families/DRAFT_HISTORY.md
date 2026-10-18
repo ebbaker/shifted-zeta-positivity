@@ -16,3 +16,14 @@ Recorded model: **gpt-6.1-sol (Codex), reasoning effort ultra**.
 The [initial proposal](research-overview/01_INITIAL_RESEARCH_PROPOSAL_20261016.md)
 records the 16 October setup. Future milestones should point to commits or
 tags; detailed research history stays in the linked notes and reviews.
+
+- **17 October 2026 — review response and proof portability, Dirichlet Newman families.**
+  Working-tree [source](manuscript/main.tex), SHA-256
+  `e07664a3d88b321b3442981b22871432e7012f2afadb23e6a1bac71c5042f6c3`;
+  [build identity](manuscript/BUILD_RECORD.json), retaining the preceding
+  source/PDF hashes. Adds complete analytic appendices and the sibling
+  0.215 benchmark; quantitative conclusions and numerical certificates unchanged.
+  [Review 03](reviews/03_CROSS_MODEL_MATHEMATICAL_REVIEW_CODEX_20261017.md) and
+  [response note](notes/round-4/04_REVIEW_RESPONSE_AND_SIBLING_BENCHMARK_CODEX_20261017.md).
+  Revision by gpt-6-astra, effort max, with LLM assistance for Edward Baker;
+  authoring checks only for the newly expanded text. No new snapshot folder.

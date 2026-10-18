@@ -22,5 +22,12 @@ The round-2 annotation points to its unconditional continuation.
 | Note | Date and model | Status |
 | --- | --- | --- |
 | [Round 1: normalization and transfer contract](round-1/01_NORMALIZATION_AND_TRANSFER_CONTRACT_CLAUDE_20261017.md) | 17 October 2026; Claude Opus 5.5 (`claude-opus-5-5`), Claude Cowork, effort max | Reviewed in [review 01](../reviews/01_NORMALIZATION_AND_TRANSFER_CONTRACT_REVIEW_CODEX_20261017.md); targeted corrections and proof repairs supplied in round 2. Original planning tables retain their stated open assumptions |
-| [Round 2: positive-time floor and conditional comparison](round-2/02_BURGERS_FLOOR_AND_CONDITIONAL_COMPARISON_CODEX_20261017.md) | 17 October 2026; gpt-6.1-sol (Codex), effort ultra | Proved in-note: explicit Burgers/Riccati floor and completed barrier repairs. Conditional only on H12: 0.27 at q >= 10^12 and O((log q)^(-4/7)); exact scalar certificate. Historical conditional result; round 3 bypasses H12. Cross-model review pending |
+| [Round 2: positive-time floor and conditional comparison](round-2/02_BURGERS_FLOOR_AND_CONDITIONAL_COMPARISON_CODEX_20261017.md) | 17 October 2026; gpt-6.1-sol (Codex), effort ultra | Proved in-note: explicit Burgers/Riccati floor and completed barrier repairs. Conditional only on H12: 0.27 at q >= 10^12 and O((log q)^(-4/7)); exact scalar certificate. Historical conditional result; round 3 bypasses H12. Reviewed with another GPT model in review 03 |
 | [Round 3: sine-tail limit and comparison without confinement](round-3/03_SINE_TAIL_LIMIT_AND_COMPARISON_CODEX_20261017.md) | 17 October 2026; gpt-6.1-sol (Codex), effort ultra | Proved in-note: approximation removes H12 from the comparison, yielding 0.27 at q >= 10^12 and O((log q)^(-4/7)); incorporated in the manuscript. [Internal same-model check](../reviews/02_SINE_TAIL_AND_MANUSCRIPT_CHECK_CODEX_20261017.md); specialist review pending |
+
+**17 October review continuation — gpt-6-astra, max.**
+[Round 4: review response and sibling benchmark](round-4/04_REVIEW_RESPONSE_AND_SIBLING_BENCHMARK_CODEX_20261017.md)
+records the status corrections, manuscript proof appendices and additional
+audit of Project 03's 0.215 argument. [Review 03](../reviews/03_CROSS_MODEL_MATHEMATICAL_REVIEW_CODEX_20261017.md)
+checked the round-2/3 mathematics with another GPT model. Specialist review
+remains outstanding.

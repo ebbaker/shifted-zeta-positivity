@@ -61,3 +61,16 @@ PDF is committed.
 The approximation, global floor, common sub-Gaussian majorant, and endpoint
 are derived in the note. The manuscript makes no priority claim. The
 standalone H12 assertion for the original character flow is still open.
+
+## Review continuation: public provenance
+
+17 October 2026; gpt-6-astra (Codex), reasoning effort max, with substantial
+LLM assistance for Edward Baker. Source checked during
+[review 03](../reviews/03_CROSS_MODEL_MATHEMATICAL_REVIEW_CODEX_20261017.md).
+
+[MathOverflow question 515667](https://mathoverflow.net/questions/515667/do-de-bruijn-newman-constants-of-dirichlet-l-functions-tend-to-0-as-the-cond),
+posted by khonsu on 1 October 2026 and edited 2 October, discusses the
+conductor limit and a heuristic log-log(q)/log(q) scale. It acknowledges
+unfinished uniform positive-time counting and finiteness steps. Record it
+as incomplete provenance; no theorem is imported and no priority conclusion
+follows. The displayed account name is not an identification of its author.

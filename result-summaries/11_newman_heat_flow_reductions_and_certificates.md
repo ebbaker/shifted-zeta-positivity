@@ -140,3 +140,11 @@ frontier arithmetic for judging proposals by their number.
 - Scope and frontier corrections: [Review 20](../papers/investigations-2/active/22_theta_manifold_geometry/reviews/20_ADDITIONAL_PATHS_FORWARD_ASSESSMENT_CODEX_20261016.md), including the full published certificate contract and the scope of the corrected-interface audit.
 
 - Further analytic scope: [convex-dyadic weighted remainder](../papers/investigations-2/active/21_quaternion_theta_geometry/notes/01_weighted_outer_remainders/39_CONVEX_DYADIC_WEIGHTED_REMAINDER_AUDIT_20261015.md), [Review 27](../papers/investigations-2/active/21_quaternion_theta_geometry/reviews/27_POISSON_OBSTRUCTION_AND_WEIGHTED_REMAINDER_REVIEW_20261015.md); [proportional-delay obstruction review](../papers/investigations-2/active/21_quaternion_theta_geometry/reviews/18_PROPORTIONAL_DELAY_PHASE_OBSTRUCTION_REVIEW_20261014.md).
+
+**17 October family audit update — gpt-6-astra, max, for Edward Baker with
+LLM assistance.** [Project 03 review 03](../papers/investigations-3/03_effective_outer_remainders/reviews/03_FAMILY_FLOOR_AND_RESTART_AUDIT_CODEX_20261017.md)
+checked the analytic domination and intermediate-strip restart and
+reproduced both scalar outputs byte for byte: “no blocking mathematical
+defect found in the designated round-two family proof chain.” This is
+additional same-model review. The 0.215 result retains its proved-in-note
+status; the near-threshold tables and zeta consumer are not upgraded.

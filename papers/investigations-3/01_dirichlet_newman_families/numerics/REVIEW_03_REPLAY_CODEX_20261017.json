@@ -1,0 +1,169 @@
+{
+  "assistance": "Substantial LLM assistance; internal cross-model review, not specialist human review",
+  "build_record_hashes_match": true,
+  "date": "2026-10-17",
+  "manifest_base": "papers/investigations-3/01_dirichlet_newman_families",
+  "prepared_for": "Edward Baker",
+  "programs": [
+    {
+      "byte_identical": false,
+      "different_leaves": 256,
+      "first_differences": [
+        {
+          "new": -3.5254315917e-16,
+          "path": "/characters/0/eps/1",
+          "stored": -3.84592537277e-16
+        },
+        {
+          "new": 3.5254315917e-16,
+          "path": "/characters/0/eps_minus_lmfdb_sign",
+          "stored": 3.84592537277e-16
+        },
+        {
+          "new": 2.65633790475e-14,
+          "path": "/characters/0/hermitian_fe_rel",
+          "stored": 2.65594079899e-14
+        },
+        {
+          "new": 2.42425454041e-15,
+          "path": "/characters/0/imag_part_rel_on_R",
+          "stored": 2.64464131681e-15
+        },
+        {
+          "new": 1.172395514e-13,
+          "path": "/characters/0/lmfdb_zero_abs_diffs/2",
+          "stored": 1.56319401867e-13
+        }
+      ],
+      "max_quoted_lmfdb_zero_absolute_discrepancy": 2.87769807983e-13,
+      "max_transform_vs_xi_relative_discrepancy": 3.6648607808e-09,
+      "non_runtime_differences": 256,
+      "program": "check_character_normalization_claude_20261017.py",
+      "record": "CHECK_CHARACTER_NORMALIZATION_CLAUDE_20261017.json",
+      "replay_sha256": "6be33b5e7947673715ddacbe14a2fb9e57620f20ab1f35109381f68810a7ed9a",
+      "stored_sha256": "d37d6cb71fad823733f5d8838641cdea4867ac637db8d1901b8bed6b10822857"
+    },
+    {
+      "byte_identical": true,
+      "different_leaves": 0,
+      "first_differences": [],
+      "non_runtime_differences": 0,
+      "program": "benchmark_family_contract_claude_20261017.py",
+      "record": "BENCHMARK_FAMILY_CONTRACT_CLAUDE_20261017.json",
+      "replay_sha256": "828f89b02f427a089ed186e60b97d5fab10b89cd62c8e65c3b8fdc12df8310bd",
+      "stored_sha256": "828f89b02f427a089ed186e60b97d5fab10b89cd62c8e65c3b8fdc12df8310bd"
+    },
+    {
+      "byte_identical": true,
+      "different_leaves": 0,
+      "first_differences": [],
+      "non_runtime_differences": 0,
+      "program": "check_comparison_loss_codex_20261017.py",
+      "record": "CHECK_COMPARISON_LOSS_CODEX_20261017.json",
+      "replay_sha256": "143c35012a9d0653a77bcbcc3abddee72af452de2a08e817dc45e4a7e5f58027",
+      "stored_sha256": "143c35012a9d0653a77bcbcc3abddee72af452de2a08e817dc45e4a7e5f58027"
+    },
+    {
+      "C_lower": "1221/200",
+      "J": [
+        "0.502464325582617834",
+        "0.502464325582617835"
+      ],
+      "byte_identical": true,
+      "different_leaves": 0,
+      "first_differences": [],
+      "non_runtime_differences": 0,
+      "program": "certify_dirichlet_scalar_conditional_20261017.py",
+      "record": "DIRICHLET_SCALAR_CONDITIONAL_CERTIFICATE_20261017.json",
+      "replay_sha256": "ff6e250a2340bdc88e00c6c2a9043257d50076c44231d7d0b7fd633de4030837",
+      "result": "PASS: J(T)>1/2; C_q,a(3)>6 for q>=10^12, a=0,1",
+      "stored_sha256": "ff6e250a2340bdc88e00c6c2a9043257d50076c44231d7d0b7fd633de4030837"
+    }
+  ],
+  "reasoning_effort": "max",
+  "replay_contract": {
+    "accuracy": "Original floating settings for three diagnostics; exact fractions.Fraction for the scalar certificate",
+    "all_exit_codes": 0,
+    "baseline": "Stored JSON outputs; analytical claims assessed separately in the review",
+    "command_template": "python3 -I -B <program.py> > <temporary output.json>",
+    "domain": "Original normalization characters, points, benchmark and loss grids, and scalar parameters; no parameter changes",
+    "question": "Do the four existing programs reproduce their stored arithmetic with the original parameters?",
+    "resource_scope": "Four existing finite workloads, each run once; no added conductor sweep or precision campaign",
+    "stopping_condition": "All four original workloads complete and outputs compared",
+    "working_directory": "papers/investigations-3/01_dirichlet_newman_families/numerics"
+  },
+  "repository_head": "238190ac9edd94f238aa2913af3c178e26909356",
+  "review": "reviews/03_CROSS_MODEL_MATHEMATICAL_REVIEW_CODEX_20261017.md",
+  "reviewed_files_unchanged": true,
+  "reviewed_manifest": {
+    "README.md": {
+      "sha256": "2763f76ea53cec10accf75c7b875bff13f020f0451d0adf4a26581e45816728f",
+      "size_bytes": 4952
+    },
+    "manuscript/BUILD_RECORD.json": {
+      "sha256": "1b640fc5eb2e326fe7e3b3571f1a9c3f7f430f1004ddaa020e34837e53d6db73",
+      "size_bytes": 2916
+    },
+    "manuscript/main.pdf": {
+      "sha256": "73739071597d6b53a041492fe8b97cd9c7d53de3c28f0375224c79c37d9fc2ba",
+      "size_bytes": 341691
+    },
+    "manuscript/main.tex": {
+      "sha256": "a820f8103f9720fedce6ade79cf447354fddfdd1143ee58c6f09a8500411dce2",
+      "size_bytes": 17861
+    },
+    "notes/round-1/01_NORMALIZATION_AND_TRANSFER_CONTRACT_CLAUDE_20261017.md": {
+      "sha256": "33a0652a114f87c316f2b6e61342e643bd735d08626e27f199aa7e4d6a29ce1a",
+      "size_bytes": 50027
+    },
+    "notes/round-2/02_BURGERS_FLOOR_AND_CONDITIONAL_COMPARISON_CODEX_20261017.md": {
+      "sha256": "fd4c176b48a5a6766e302190f7bebb14183a462ed67d2ca915b8dc972652302a",
+      "size_bytes": 20410
+    },
+    "notes/round-3/03_SINE_TAIL_LIMIT_AND_COMPARISON_CODEX_20261017.md": {
+      "sha256": "c1fdd827e3f1e344f1e4f8bcdd9435767602a24017982fe14a28a4953c245886",
+      "size_bytes": 15565
+    },
+    "numerics/BENCHMARK_FAMILY_CONTRACT_CLAUDE_20261017.json": {
+      "sha256": "828f89b02f427a089ed186e60b97d5fab10b89cd62c8e65c3b8fdc12df8310bd",
+      "size_bytes": 23040
+    },
+    "numerics/CHECK_CHARACTER_NORMALIZATION_CLAUDE_20261017.json": {
+      "sha256": "d37d6cb71fad823733f5d8838641cdea4867ac637db8d1901b8bed6b10822857",
+      "size_bytes": 46594
+    },
+    "numerics/CHECK_COMPARISON_LOSS_CODEX_20261017.json": {
+      "sha256": "143c35012a9d0653a77bcbcc3abddee72af452de2a08e817dc45e4a7e5f58027",
+      "size_bytes": 1813
+    },
+    "numerics/DIRICHLET_SCALAR_CONDITIONAL_CERTIFICATE_20261017.json": {
+      "sha256": "ff6e250a2340bdc88e00c6c2a9043257d50076c44231d7d0b7fd633de4030837",
+      "size_bytes": 1810
+    },
+    "numerics/benchmark_family_contract_claude_20261017.py": {
+      "sha256": "07ec4ac02e4ef73c90c4e621a688d8ac6296132501c9fa5ce8b353a7ed06fafc",
+      "size_bytes": 20094
+    },
+    "numerics/certify_dirichlet_scalar_conditional_20261017.py": {
+      "sha256": "0b7d513728d6c20ae380bb9b3ea9bc01a8c8963be1d9efd5aab970a4535b4cf9",
+      "size_bytes": 6158
+    },
+    "numerics/check_character_normalization_claude_20261017.py": {
+      "sha256": "b6a1b383aa73a6c453aec9d91e62056cdd91f928fd04ccedb99a1fc2a6ca6273",
+      "size_bytes": 16937
+    },
+    "numerics/check_comparison_loss_codex_20261017.py": {
+      "sha256": "9e38938d4aa4b06aab13136fd786c27f975e20fdf9c45118a779997c7e50ac97",
+      "size_bytes": 3620
+    }
+  },
+  "reviewer_model": "gpt-6-astra (Codex)",
+  "runtime": {
+    "machine": "arm64",
+    "platform": "macOS-27.0.1-arm64-arm-64bit",
+    "python": "3.10.0 (v3.10.0:b494f5935c, Oct  4 2021, 14:59:19) [Clang 12.0.5 (clang-1205.0.22.11)]"
+  },
+  "schema_version": 1,
+  "scope": "Replay establishes recorded arithmetic and artifact identity. The scalar certificate covers finite inequalities; the analytic implication is assessed in the review. Floating planning rows remain planning.",
+  "verified_at_utc": "2026-10-18T03:17:38.504997+00:00"
+}

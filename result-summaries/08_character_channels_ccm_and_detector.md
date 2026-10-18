@@ -77,3 +77,13 @@ and [focused same-model check](../papers/investigations-3/01_dirichlet_newman_fa
 record the theorem and dependencies; specialist review and a priority
 audit remain outstanding. Ki–Kim–Lee's earlier qualitative real-character
 result corrects the initial search. H12 for the original flow remains open.
+
+**17 October review continuation — gpt-6-astra, max, for Edward Baker with
+LLM assistance.** [Review 03](../papers/investigations-3/01_dirichlet_newman_families/reviews/03_CROSS_MODEL_MATHEMATICAL_REVIEW_CODEX_20261017.md)
+found no substantive defect using another GPT model and replayed the exact
+certificate. The [response](../papers/investigations-3/01_dirichlet_newman_families/notes/round-4/04_REVIEW_RESPONSE_AND_SIBLING_BENCHMARK_CODEX_20261017.md)
+adds analytic manuscript appendices and reconciles status. At the same
+q >= 10^12 threshold, Project 03's proved-in-note 0.215 is the stronger
+finite benchmark; 0.27 remains the simpler initial-floor application.
+The new appendix text has authoring checks only; specialist review remains
+outstanding. This updates, rather than replaces, the preceding milestone.

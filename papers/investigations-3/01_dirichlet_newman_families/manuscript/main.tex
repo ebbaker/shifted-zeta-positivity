@@ -20,8 +20,8 @@
 \date{17 October 2026}
 \begin{document}
 \maketitle
-\begin{center}\small Research draft. Proofs and scalar arithmetic have internal same-model LLM checks;\par
-independent specialist review and a priority audit remain outstanding.\end{center}
+\begin{center}\small Research draft. Internal LLM checks include a review using another GPT model.\par
+Independent specialist review and a priority audit remain outstanding.\end{center}
 \begin{abstract}
 We give an explicit lower bound for the off-zero logarithmic derivative of
 a primitive Dirichlet heat deformation. A scalar comparison then controls
@@ -32,9 +32,12 @@ function without a compact-confinement hypothesis. In the normalization
 $s=(1+iz)/2$, the argument gives $\Lambda_\chi\le27/100$ for every primitive
 character of conductor $q\ge10^{12}$, and
 $\Lambda_\chi=O((\log q)^{-4/7})$ uniformly as $q\to\infty$.
-The finite scalar inequalities use exact rational enclosures. Extended
-proofs and the certificate specification are retained in the accompanying
-research notes.
+The finite scalar inequalities use exact rational enclosures. The analytic
+proof details are included in the appendices; the exact scalar programme
+and its output form the computational supplement. A sibling investigation
+obtains the stronger finite bound $43/200$ using a uniform positive-time
+floor and a restarted comparison; the present draft retains the simpler
+initial-floor argument and its conductor-aspect rate.
 \end{abstract}
 
 \section{Normalization and statements}
@@ -90,7 +93,8 @@ $e^{-T\partial_z^2}F$ has only real zeros.
 
 The proof first treats flows with confined nonreal zeros, then removes
 that restriction by a sine-tail approximation. No evenness assumption is
-present. The extended approximation argument is in Note~3 \cite{note3}.
+present. Appendices~\ref{app:characteristics}--\ref{app:heat} supply the analytic
+details; Notes~2--3 \cite{note2,note3} retain their research history.
 
 \section{Canonical sums and a positive-time lower bound}
 For a real entire function with its zeros $\rho=a+iv$ in a bounded strip,
@@ -112,10 +116,11 @@ For the Dirichlet flow, the double-exponential kernel decay gives
  \label{eq:growth}
 \end{equation}
 The approximants in Section~\ref{sec:approx} have exponential-type growth.
-These bounds also justify the canonical differentiations and completeness
-of the real characteristics below. Details, including the zero-free
-anchor and uniform Jensen estimate, appear in Note~2, Section~2
-\cite{note2}.
+These bounds justify the canonical differentiations and completeness
+of the real characteristics below, as proved in
+Appendix~\ref{app:characteristics}. No finite-type assumption is imposed
+on the original $F$ of Theorem~\ref{thm:general}: this characteristic
+argument is applied to its fixed approximants.
 
 \begin{proposition}[Burgers lower bound]\label{prop:floor}
 For the Dirichlet flow or the exponential-type approximants below,
@@ -154,7 +159,8 @@ region. This hypothesis will be established for approximants only.
 At a highest simple zero $x+ih$, put $Q=h^2$. The conjugate-pair kernel
 \[ K_h(d,v)=\frac{h-v}{d^2+(h-v)^2}
                  +\frac{h+v}{d^2+(h+v)^2} \]
-obeys $K_h/h\ge K_p/p$ whenever $|v|\le h$ and $p^2\ge5h^2$.
+obeys $K_h/h\ge K_p/p$ whenever $|v|\le h$, $p^2\ge5h^2$,
+and $(d,v)\ne(0,\pm h)$.
 Clearing denominators reduces this to nonnegativity of
 \[ D^2+(A+B-6r)D+(A-r)(B-r),\quad
 D=d^2,\ A=h^2,\ B=p^2,\ 0\le r=v^2\le A. \]
@@ -187,7 +193,8 @@ $M(t)\le\overline Q(t)$ while the latter is positive. If it reaches zero
 at $T_0$, strip contraction makes $F_{t+\overline Q(t)/2}$ real-rooted for
 $t<T_0$. Heat continuity and Hurwitz then make $F_{T_0}$ real-rooted;
 strip contraction preserves that property afterwards.
-The extended contact proof is Note~2, Section~4 \cite{note2}.
+Lemma~\ref{lem:compact} below gives the compact-contact argument,
+including the multiple-zero case and the endpoint.
 
 \section{Removing confinement by a real sine tail}\label{sec:approx}
 Fix $0<C_1<C$, where $C$ is the input in
@@ -210,8 +217,8 @@ on every bounded time interval. Moreover, $(G_R)_t\to F_t$ locally
 uniformly, uniformly on bounded nonnegative time intervals.
 \end{lemma}
 \begin{proof}
-We give the estimates that carry the argument; their extended proofs
-are in Note~3, Sections~2--4 \cite{note3}.
+We give the estimates here and prove the approximation and heat-limit
+details in Appendix~\ref{app:heat}.
 For $|x|\le R/2$, the omitted true-zero Poisson tail is at most
 \[16(p+1)\sum_{|\rho|>R}|\rho|^{-2}=o(1).\]
 For $|x|\ge R/2$, the full real lattice has lower bound
@@ -244,7 +251,7 @@ These provide a common sub-Gaussian majorant in
                    F(z+2i\sqrt t\,v)\,\dd v. \]
 Dominated convergence proves the heat-limit assertion. The limit is
 nonzero: real Gaussian translation inverts imaginary Gaussian translation
-under this same majorant (Note~3, Section~4).
+under this same majorant, by Lemma~\ref{lem:heatlimit}.
 \end{proof}
 
 Apply the compact comparison to $G_R$. If $J_C(T)>1/2$, choose $C_1<C$
@@ -292,10 +299,14 @@ For $C=6$, $T=27/100$, the same certificate encloses
 Alternating exponential series and rational cube-root bisection make
 the lower endpoint rigorous. Theorem~\ref{thm:general} and
 \eqref{eq:c6} prove the explicit part of Theorem~\ref{thm:dirichlet}.
-The certificate programme, parameters, hashes, and extended scalar
-verification are referenced from Notes~2--3 rather than reproduced here.
-Its original record was conditional on an analytic contract; Section~
-\ref{sec:approx} supplies that contract without changing the arithmetic.
+The computational supplement consists of
+\texttt{certify\_dirichlet\_scalar\_conditional\_20261017.py} and its JSON
+output in the investigation's \texttt{numerics/} directory. It uses
+Python's rational arithmetic; the deciding bounds and input parameters
+are those just displayed. The build record pins their hashes. The
+historical word ``conditional'' in their filenames records the original
+analytic contract; Section~\ref{sec:approx} supplies it without changing
+the arithmetic.
 
 For $0\le t\le1/2$,
 \[J_C(t)\ge e^{-1/2}
@@ -336,16 +347,285 @@ for a complex character uses a real self-dual combination, rather than
 the individual non-even family in \eqref{eq:heat}. We make no priority
 claim for the quantitative results of this draft.
 
+\paragraph{Stronger sibling benchmark.}
+Project~03's round-two notes \cite{p03floor,p03restart} prove in-note
+$S_\chi(x,3,t)>6$ for all real $x$, $0\le t\le1/4$ and primitive
+$q\ge10^{12}$. An intermediate-strip comparison, restarted on the
+original flow, then gives $\Lambda_\chi\le43/200=0.215$.
+The scalar checks use Arb enclosures and exact rational inequalities;
+the analytic domination and restart are essential additional inputs.
+That result currently has internal same-model checks. The $0.27$ bound
+here is a simpler consequence of the initial floor, not the repository's
+strongest bound at this conductor threshold.
+
+\paragraph{Public provenance.}
+A MathOverflow question \cite{mo}, posted on 1 October 2026, asks about
+the conductor limit and outlines a stronger heuristic scale. Its missing
+uniform positive-time estimates are explicitly acknowledged there. It is
+relevant provenance, not an imported theorem or a completed priority audit.
+
 \paragraph{Acknowledgment and review status.}
 This manuscript was drafted for Edward Baker with substantial assistance
 from OpenAI's \texttt{gpt-6.1-sol} in Codex, recorded reasoning effort
 \texttt{ultra}. Same-model subagents assisted with derivation and
 adversarial proof checks. The exact scalar programme was also generated
-with LLM assistance. These checks do not constitute independent
-specialist review. Notes~1--3 preserve the mathematical dependencies,
-corrections, and calculation records.
+with LLM assistance. A subsequent mathematical review and this proof
+expansion used OpenAI's \texttt{gpt-6-astra}, recorded effort \texttt{max};
+the review used a different GPT model from the original derivation.
+Neither activity constitutes independent specialist review. Notes~1--3
+and the dated review-response note preserve the dependencies, corrections,
+source identities and calculation records. Model choices record actual
+usage and do not prescribe assignments for future work.
 
-\begin{thebibliography}{9}
+
+\appendix
+\section{Growth and complete characteristics}\label{app:characteristics}
+
+Here and below a bounded time interval means a compact interval of
+nonnegative times. The Hermitian theta kernel in \eqref{eq:phi} satisfies
+\[
+ |\Phi_\chi(u)|\le K_\chi e^{3|u|}
+                  \exp(-c_\chi e^{4|u|}),\qquad c_\chi>0.
+\]
+On the positive half-line this follows from its series, and on the
+negative half-line from $\Phi_\chi(-u)=\overline{\Phi_\chi(u)}$, the
+theta transformation in Dobner's normalization. Absorbing bounded
+complex-time weights and $e^{3|u|}$ into half of the double exponential
+bounds the integral on $|z|\le R$ by a constant times
+\[
+ 1+\int_0^\infty e^{Ru-ce^{4u}}\,\dd u
+ \le 1+\tfrac14c^{-R/4}\Gamma(R/4)\quad(R\ge1).
+\]
+Stirling's bound proves \eqref{eq:growth}. The same domination proves
+joint analyticity and differentiation under the integral. Fourier
+injectivity excludes the zero function. For each fixed approximant,
+$|G_R(z)|\le K_R e^{A_R|z|}$ after enlarging $A_R$ to absorb its
+polynomial factor. Gaussian translation gives this same form of bound
+uniformly in time. Its heat flow is nonzero by Lemma~\ref{lem:heatlimit}.
+
+\begin{lemma}[Complete characteristics]\label{lem:complete}
+Suppose a nonzero real-entire heat flow $F_t$ has all zeros in
+$|\Ima z|\le1$ and
+$\log\max_{|z|\le R}|F_t(z)|\le K(1+R)\log(2+R)$ uniformly on a
+bounded time interval. Then for $p>1$ its real characteristic equation
+$x'=2\Rea(F_t'/F_t)(x+ip)$ has unique complete trajectories, forwards
+and backwards on that interval. The map between any two times is onto
+$\mathbb R$.
+\end{lemma}
+\begin{proof}
+The zero-free point $ip$ is a uniform anchor:
+$\inf_t|F_t(ip)|>0$ by continuity. Jensen's formula on disks centred
+there, together with the growth bound, gives uniform zero counts
+$N_t(R)=O(R\log(2+R))$. The logarithmic derivative at the anchor is
+uniformly bounded. Retaining canonical summands until subtracting gives
+the absolutely convergent identity
+\[
+ U_t(x+ip)-U_t(ip)=\sum_\rho
+ \left(\frac1{x+ip-\rho}-\frac1{ip-\rho}\right),
+ \qquad U_t=F_t'/F_t.
+\]
+The possible origin zero is included. Put $d=p-1$ and choose
+$R\ge2(1+|x|+p)$. The terms $|\rho|\le2R$ contribute
+$O(N_t(2R)/d)$. The others contribute
+$O(R\sum_{|\rho|>2R}|\rho|^{-2})=O(\log(2+R))$, by the zero count
+and partial summation. Consequently
+\[
+ |\Rea U_t(x+ip)|\le K_p(1+|x|)\log(2+|x|).
+\]
+The vector field is smooth, so local uniqueness holds. Since
+$\int^\infty [(1+r)\log(2+r)]^{-1}\,\dd r=\infty$, this bound
+precludes escape to infinity in finite time in either direction.
+Solving backwards from every final point proves surjectivity.
+\end{proof}
+
+The canonical derivative sums converge locally uniformly off the strip.
+In particular $U_x=-\sum_\rho(z-\rho)^{-2}$ and
+$U_{xx}=2\sum_\rho(z-\rho)^{-3}$. At $z=x+ip$, each
+$y=p-\Ima\rho\ge d$ and $|z-\rho|\ge y$, so
+\[
+ |U_x|\le\sum_\rho |z-\rho|^{-2}\le S/d,
+ \qquad |\Ima U_{xx}|\le2\sum_\rho |z-\rho|^{-3}\le2S/d^2.
+\]
+These are the estimates used in Proposition~\ref{prop:floor}.
+The preceding proof applies to the Dirichlet flow and to each fixed
+approximant, with constants allowed to depend on that flow. It does not
+assert the displayed growth bound for every entire function of order one.
+
+\section{The compact-contact lemma}\label{app:compact}
+
+\begin{lemma}\label{lem:compact}
+Let $F_t$ be a jointly analytic, nonzero real-entire heat flow with
+the uniform growth bound of Lemma~\ref{lem:complete}, initial strip
+$|\Ima z|\le1$, classical strip contraction, and
+$S(x,3,t)\ge m_C(t)$ for all real $x$. Suppose the nonreal zeros are
+uniformly confined in the real direction on every $[\delta,T]$ with
+$\delta>0$. Then, while \eqref{eq:qbar} is positive,
+every zero satisfies $(\Ima z)^2\le\overline Q(t)$. If
+$J_C(T)\ge1/2$, all zeros at time $T$ are real.
+\end{lemma}
+\begin{proof}
+Set $a(t)=4m_C(t)/3-1$. For $\epsilon>0$, let
+\[
+ q_\epsilon'=-2-a(t)q_\epsilon+\epsilon,
+ \qquad q_\epsilon(0)=1+\epsilon.
+\]
+On any compact interval before the first zero of $\overline Q$,
+$q_\epsilon>\overline Q>0$ and $q_\epsilon\to\overline Q$
+uniformly. Initially $q_\epsilon>1$ on a time interval independent
+of position, whereas the actual squared heights never exceed one.
+If a zero first reaches $q_\epsilon$, that contact therefore has
+positive time. Confinement and the strip put the possible contacts in
+a compact set. Continuity of zeros, or the argument principle on small
+circles, then gives an attained first contact.
+
+For a simple contact at $z=x+ih$, $h>0$, the implicit function theorem
+and the heat equation give $z'=F_t''(z)/F_t'(z)$. In the canonical
+product, the conjugate zero contributes $-1/h$ to $h'$. Summing over
+the remaining zeros in the closed upper half-plane, with weight one
+for a nonreal zero and half for a real zero, gives
+\[
+ h'=-\frac1h-2\sum{}'\varpi_k K_h(x-\Rea\rho_k,\Ima\rho_k).
+\]
+The real exponential drift contributes no imaginary part. The kernel
+inequality of Section~3 gives \eqref{eq:highest}. At first contact the
+zero is highest, $h^2=q_\epsilon\le1$, and hence
+$(h^2)'\le-2-a(t)q_\epsilon<q_\epsilon'$, a contradiction.
+
+For a contact of multiplicity $m\ge2$ at $(t_0,z_0)$, write
+$F_{t_0}(z_0+w)=c w^m+O(w^{m+1})$, $c\ne0$. Joint analyticity and
+the heat equation imply, locally uniformly in $\zeta$,
+\[
+ v^{-m/2}F_{t_0-v}(z_0+\sqrt v\,\zeta)
+ \longrightarrow c\,e^{\partial_\zeta^2}\zeta^m
+ =c\sum_{j=0}^{\lfloor m/2\rfloor}
+       \frac{m!\,\zeta^{m-2j}}{j!(m-2j)!}.
+\]
+The last polynomial is a rescaled Hermite polynomial: its roots are
+simple and purely imaginary, and for $m\ge2$ one has positive
+imaginary part. Rouch\'e's theorem on a small circle about that root
+therefore gives an earlier zero with height
+$\Ima z_0+c_m\sqrt v+o(\sqrt v)$, $c_m>0$. The positive comparison
+height $\sqrt{q_\epsilon(t)}$ changes by $O(v)$ near $t_0$.
+This contradicts the absence of earlier contact. Thus no contact is
+possible, and letting $\epsilon\downarrow0$ proves the strip bound.
+
+Let $T_0$ be the first zero of $\overline Q$. For every $t<T_0$,
+strip contraction makes $F_{t+\overline Q(t)/2}$ real-rooted.
+Those times tend to $T_0$. Heat continuity and Hurwitz in each open
+half-plane make the nonzero $F_{T_0}$ real-rooted, and strip contraction
+preserves reality for all later times. Since $I_C>0$ and $J_C$ is
+strictly increasing, $J_C(T)\ge1/2$ implies $T_0\le T$.
+\end{proof}
+
+\section{Sine tails and passage through the heat operator}\label{app:heat}
+
+\subsection{The floor on the whole real line}
+For $R$ large enough, $|x|\le R/2$ and $|\rho|>R$, the initial strip
+gives $|x-\Rea\rho|\ge|\rho|/4$. Thus the omitted Poisson mass is
+at most $16(p+1)\sum_{|\rho|>R}|\rho|^{-2}=o(1)$, uniformly on that
+central region. All added zeros are real and contribute nonnegative
+mass. The strict gap $C-C_1$ gives the required central floor.
+
+The full lattice $h\mathbb Z$ has mass
+\[
+ \sum_{k\in\mathbb Z}\frac{p}{(x-kh)^2+p^2}
+ =\frac{\kappa\sinh(2\kappa p)}
+        {\cosh(2\kappa p)-\cos(2\kappa x)}
+ \ge\kappa\tanh(\kappa p).
+\]
+For $|x|\ge R/2$ and $|k|\le M$, $|x-kh|\ge R/4$.
+Removing these $2M+1\le R/(2h)+1$ terms costs at most
+$8p/(hR)+16p/R^2$. At $p=3$,
+$\kappa\tanh(3\kappa)>C_1$ because $\kappa=2(C_1+1)>2$ and
+$\tanh6>1/2$. The remaining true zeros again contribute nonnegative
+mass. This proves the global floor for large $R$.
+
+\subsection{Confinement for a fixed approximant}
+Euler's product for sine turns \eqref{eq:approx} into
+$G_R(z)=e^{b_Rz}r_R(z)\sin(\kappa z)$, where $b_R$ is real and
+$r_R$ is real rational with only real poles, canceled by sine zeros.
+Write $r_R(z)\sim c_Rz^{d_R}$, where $d_R$ is an integer, possibly
+negative. For $z=x+iy$, $|y|\le1$, $0\le t\le T$, and
+$w=z+2i\sqrt t\,v$, rational asymptotics give, for sufficiently large
+$|x|$,
+\[
+ \frac{r_R(w)}{c_Rz^{d_R}}
+ =1+O_{R,T}\left(\frac{(1+|v|)^{K_R}}{|x|}\right).
+\]
+Indeed $\Rea w=x$ avoids every pole, $|w|\ge|x|$, and powers of
+$w/z=1+2i\sqrt t\,v/z$ have this bound for positive or negative
+integer exponents. The sine factor grows at most like
+$e^{\kappa(1+2\sqrt T|v|)}$ along this line, while the extra
+$e^{2ib_R\sqrt t\,v}$ has modulus one. Integrating against $e^{-v^2}$
+therefore gives a uniform $O_{R,T}(|x|^{-1})$ error. Evaluating the
+two elementary exponential Gaussian integrals in the leading term
+proves \eqref{eq:sine}.
+
+Cardon's theorem, applied to the genus-one entire $G_R$ with initial
+strip one and operator $e^{-t\partial_z^2}$, confines all zeros to
+$|\Ima z|\le\sqrt{\max(1-2t,0)}$. Choose a fixed disk radius
+$0<r<\min(h/4,1/2)$ about each distant sine zero $kh+2b_Rt$.
+On each boundary the leading sine has a positive lower modulus
+independent of $k$ and $t$. Equation~\eqref{eq:sine} and Rouch\'e
+give exactly one zero in every sufficiently distant disk. Conjugation
+fixes each disk and the function is real entire, so that single zero
+is real. On the remaining part of $|\Ima z|\le1$ the sine is bounded
+away from zero, so the same estimate excludes other distant zeros.
+The required cutoff may depend on $R$ and $T$. This proves uniform
+confinement for each fixed approximant, even down to time zero.
+
+\subsection{A common majorant, nonvanishing and the limit}
+\begin{lemma}\label{lem:heatlimit}
+The approximants converge under Gaussian heat translation locally
+uniformly in $z$ and uniformly on bounded nonnegative time intervals.
+Every heat translate of the original $F$ and of an approximant is
+nonzero. The heat translations form a semigroup on these functions.
+\end{lemma}
+\begin{proof}
+Fix $1<\sigma<2$. An order-at-most-one zero set has
+$\sum_{\rho\ne0}|\rho|^{-\sigma}<\infty$. The elementary bound
+$|E_1(w)|\le\exp(C_\sigma|w|^\sigma)$ follows from its quadratic
+Taylor estimate for $|w|\le1$ and $|1-w|e^{|w|}$ for $|w|>1$.
+Consequently, including $ce^{az}z^m$,
+$|P_R(z)|\le\exp(A(1+|z|)^\sigma)$ with $A$ independent of $R$.
+For the tail,
+\[
+ \left|\prod_{k>M}\left(1-\frac{z^2}{k^2h^2}\right)\right|
+ \le\prod_{k\ge1}\left(1+\frac{|z|^2}{k^2h^2}\right)
+ =\frac{\sinh(\kappa|z|)}{\kappa|z|}\le e^{\kappa|z|}.
+\]
+The omitted lattice tail tends to one locally uniformly, because
+$\sum_{k>M}k^{-2}\to0$. Hence $G_R\to F$ locally uniformly and
+all have a common sub-Gaussian majorant. In
+\[
+ (G_R)_t(z)=\pi^{-1/2}\int_{\mathbb R} e^{-v^2}
+               G_R(z+2i\sqrt t\,v)\,\dd v
+\]
+this majorant is integrable uniformly for $z$ in a compact set and
+$0\le t\le T$. Splitting into bounded $v$ and the uniform tail proves
+the asserted convergence, including $t=0$.
+
+For any such input $F$, Gaussian translation also preserves a bound
+of order $\sigma<2$. Real translation inverts its imaginary heat
+translation: absolute convergence permits Fubini in
+\[
+ \pi^{-1}\int_{\mathbb R^2}e^{-u^2-v^2}
+       F(z+2\sqrt t\,u+2i\sqrt t\,v)\,\dd u\,\dd v=F(z).
+\]
+In polar coordinates the angular mean is $F(z)$ by the mean-value
+identity for an entire function, and the radial integral has mass one.
+Thus $F_t\equiv0$ would imply $F\equiv0$. Finally two imaginary
+Gaussian translations combine by an orthogonal change of the two real
+Gaussian variables, giving $(F_t)_s=F_{t+s}$. All exchanges are
+justified by the same sub-Gaussian domination.
+\end{proof}
+
+These lemmas close the analytic proof of Theorem~\ref{thm:general}.
+Its finite arithmetic remains reproducible from the identified
+computational supplement; the local Markdown notes are historical
+references rather than prerequisites for the analytic argument.
+
+\begin{thebibliography}{99}
 \bibitem{dobner} A. Dobner,
 \emph{A proof of Newman's conjecture for the extended Selberg class},
 Acta Arithmetica \textbf{201} (2021), 29--62;
@@ -373,5 +653,18 @@ J. Math. Anal. Appl. (2015),
 \emph{Removing confinement from the strip comparison by a real sine tail},
 17 October 2026,
 \href{../notes/round-3/03_SINE_TAIL_LIMIT_AND_COMPARISON_CODEX_20261017.md}{notes/round-3}.
+\bibitem{p03floor} Research Note 1, Project 03, round 2, prepared for
+E. Baker with GPT-6-astra, \emph{A uniform height three floor for large
+conductor characters}, 17 October 2026,
+\href{../../03_effective_outer_remainders/notes/round-2/01_UNIFORM_FAMILY_FLOOR_CODEX_20261017.md}{Project 03, uniform-floor note}.
+\bibitem{p03restart} Research Note 2, Project 03, round 2, prepared for
+E. Baker with GPT-6-astra, \emph{A restarted strip comparison consuming
+a global positive-time floor}, 17 October 2026,
+\href{../../03_effective_outer_remainders/notes/round-2/02_RESTARTED_STRIP_COMPARISON_CODEX_20261017.md}{Project 03, restarted-comparison note}.
+\bibitem{mo} MathOverflow user khonsu,
+\emph{Do de Bruijn--Newman constants of Dirichlet $L$-functions tend to
+0 as the conductor tends to infinity?}, question 515667,
+posted 1 October 2026, edited 2 October 2026;
+\href{https://mathoverflow.net/questions/515667/do-de-bruijn-newman-constants-of-dirichlet-l-functions-tend-to-0-as-the-cond}{MathOverflow question}.
 \end{thebibliography}
 \end{document}

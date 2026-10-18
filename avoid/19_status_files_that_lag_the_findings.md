@@ -39,3 +39,11 @@ retracted; two copies of one review disagree.
 One authoritative status file per paper, updated in the same commit as
 any audit finding, with the finding's path; corrections written into the
 file that made the claim with a pointer header ([`REDACTION_CHECKLIST.md`](../early-chat-logs/initial-project-files/rh3/REDACTION_CHECKLIST.md) item 9); no duplicate copies of reviews outside their `reviews/` folder; and the release gate's first step, "STATUS.md is current" ([`RELEASING.md`](../RELEASING.md)), applied at every milestone, not only at release.
+
+**17 October 2026 evidence — gpt-6-astra, max; LLM assistance for Edward
+Baker.** [Dirichlet review 03](../papers/investigations-3/01_dirichlet_newman_families/reviews/03_CROSS_MODEL_MATHEMATICAL_REVIEW_CODEX_20261017.md)
+found: “Lines 6–30 still describe a pending Codex audit,” although the
+next paragraph announced the completed comparison. The
+[response](../papers/investigations-3/01_dirichlet_newman_families/notes/round-4/04_REVIEW_RESPONSE_AND_SIBLING_BENCHMARK_CODEX_20261017.md)
+reconciles the README, manuscript, build record and stronger sibling
+benchmark while preserving the historical reviews and their source hashes.

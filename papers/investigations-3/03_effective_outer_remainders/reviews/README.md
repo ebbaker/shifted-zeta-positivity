@@ -16,3 +16,12 @@ Review 01 is cross-model internal LLM review of Claude-authored work, assisted b
 Future assessments should state their source identity, claims checked, method, unresolved issues and disposition, and distinguish self-review, same-model assistance, cross-model LLM review and independent specialist review.
 
 **Round 2:** [Review 02](02_UNIFORM_FLOOR_AND_RESTARTED_COMPARISON_REVIEW_CODEX_20261017.md) accepts the named uniform floor and 0.215 consumer at the proved-in-note level, with Arb/exact certificates and internal same-model checks. Specialist review remains outstanding. Round-one corrections are incorporated in the current manuscript.
+
+**Further family audit, 17 October 2026 — gpt-6-astra, max:**
+[Review 03](03_FAMILY_FLOOR_AND_RESTART_AUDIT_CODEX_20261017.md) checked the
+uniform analytic envelope and intermediate-strip restart, with no blocking
+mathematical defect found. Both scalar outputs reproduced byte for byte;
+the [record](../numerics/REVIEW_03_FAMILY_REPLAY_CODEX_20261017.json) pins the
+sources. This remains same-model review of the gpt-6-astra round-two work.
+It also flags introductory manuscript literature/scope statements that
+need reconciliation before circulation. Specialist review is outstanding.
