@@ -1,49 +1,46 @@
 # Source-measurement audit
 
-16 October 2026. Prepared for Edward Baker with substantial LLM assistance.
-Initialization model: **gpt-6-astra (Codex)**; reasoning effort: **ultra**.
+17 October 2026, America/New_York. Prepared for Edward Baker with substantial
+LLM assistance. Current continuation: **gpt-6.1-sol (Codex)**, reasoning
+effort **ultra**. Initialization: **gpt-6-astra**, effort **ultra**.
 
-**Status: round one active; a working manuscript now synthesizes the analytic
-arguments and validated replay. Reviews occur at the round boundary.** The [opening note](notes/round-1/01_OPENING_ANALYTIC_AUDIT_AND_REPLAY_CONTRACT_CODEX_20261016.md)
-records the claim ledger, endpoint remainders, a scoped nearby-double-jet
-construction preserving positive normalized coefficients, and the fixed replay
-contract. The continuation now supplies [explicit bounds](notes/round-1/02_EXPLICIT_THETA_JET_AND_ENDPOINT_BOUNDS_CODEX_20261017.md),
-a [validated replay](notes/round-1/03_BOUNDED_REPLAY_AND_POSITIVE_FEASIBILITY_CODEX_20261017.md),
-and a [nondegeneracy argument](notes/round-1/04_NONDEGENERATE_FINITE_SOURCE_COLLISIONS_CODEX_20261017.md).
-The [concrete normalized budget](notes/round-1/05_CONCRETE_NORMALIZED_ONSET_BUDGET_CODEX_20261017.md)
-now gives the conservative sufficient threshold 3915 for the unanchored
-three-coordinate theta-tail class.
+**Status: round one assessed by Claude; round-two research and bounded
+reconciliation complete, accumulated round assessment pending.** The user
+requested continuation in [round two](notes/round-2/README.md). Its current
+results supersede the earlier active/unreviewed status and qualify the
+interpretation of round one's prescribed-point tables.
 
-Opening assessment: 16 October 2026, prepared for Edward Baker with substantial
-LLM assistance; **gpt-6.1-sol (Codex)**, reasoning effort **ultra**. Its internal
-checks used same-model collaborators. The designated Claude review has not occurred.
+- [Note 01](notes/round-2/01_REVIEW_RECONCILIATION_AND_ENDPOINT_NONREALITY_CODEX_20261017.md) accepts the review's endpoint obstruction with a full proof, restores a missing hypothesis in its summarized gap lemma, and certifies one exact positive local alignment near \(44.1060084240846\) at \(t=1/4\).
+- [Note 02](notes/round-2/02_ONE_DIRECTION_GAP_COLLISIONS_AND_TAIL_BUDGET_CODEX_20261017.md) proves that one fixed direction already produces a unique nondegenerate ratio event in each sufficiently high theta-zero gap at every fixed \(t_*>0\), with a time-dependent cutoff and no assertion at time zero. It separately validates sufficient no-real-zero tail heights 264 and 269.
+- [Round-two records](numerics/round-2/README.md) include interval certificates and two unchanged fixed-case replays. Mathematical contents agree with the historical records; stored-file hashes and mathematical-content hashes now have separate roles, and peak-memory units are portable.
 
-Continue under the [round execution plan](research-overview/02_ROUND_BASED_EXECUTION_PLAN_20261017.md)
-and retain the [initial research proposal](research-overview/01_INITIAL_RESEARCH_PROPOSAL_20261016.md)
-and the [portfolio plan](../research-overview/01_PORTFOLIO_RESEARCH_PLAN_20261016.md).
-The 17 October continuation used **gpt-6.1-sol (Codex)**, effort **ultra**.
-The independent six-point replay and all 32 coefficient cases are complete,
-with interval verification. Further notes continue within the same round;
-Claude's cross-model assessment belongs at its boundary. The [working manuscript](manuscript/README.md) now supplies a provisional
-claim-by-claim disposition from the accumulated bounds and replay; the round
-assessment remains pending. The draft was requested before that assessment
-and does not mark the round reviewed or closed.
-All current notes are organized in [round one](notes/round-1/README.md).
+All nonzero finite changes in these results break full source reflection.
+Nothing establishes a theta collision, decides RH, or excludes reflected,
+infinite-dimensional or growing measurement designs. The new one-direction
+theorem has same-model checks only; the [Claude review](reviews/01_ROUND_ONE_CROSS_MODEL_REVIEW_CLAUDE_20261017.md)
+preceded it. There is no independent specialist review.
+
+[Round one](notes/round-1/README.md) retains the fixed-space endpoint
+construction, explicit complete-jet bounds, validated six-point/32-case
+replay, generic nondegeneracy and the conservative sufficient threshold
+3915 for the declared normalized unanchored three-coordinate pair.
+Those results remain valid with the prescribed-abscissa qualifier.
+The [dated round-one manuscript](manuscript/README.md) is retained as the
+artifact reviewed by Claude; it has not yet incorporated round two.
 
 | Folder | Purpose |
 | --- | --- |
-| [research-overview](research-overview/README.md) | Numbered research proposals and decisions about priorities |
-| [notes](notes/README.md) | Incremental derivations and one coordination note per phase |
-| [numerics](numerics/README.md) | Reproducible code, parameters and small execution records |
-| [reviews](reviews/README.md) | Separate assessments of claims, computations and scope |
-| [source-documents](source-documents/README.md) | Reference provenance and links to canonical sources |
-| [brainstorm](brainstorm/README.md) | Undeveloped candidate mechanisms with a decision question |
-| [manuscript](manuscript/README.md) | Working draft with proofs, validated finite tables and scoped claim disposition |
-| [chat-histories](chat-histories/README.md) | Canonical records of new project-specific conversations |
+| [research-overview](research-overview/README.md) | Current execution plan and original proposal |
+| [notes](notes/README.md) | Derivations organized by investigation round |
+| [numerics](numerics/README.md) | Reproducible code and small execution records |
+| [reviews](reviews/README.md) | Separate accumulated-round assessments |
+| [source-documents](source-documents/README.md) | Reference provenance |
+| [brainstorm](brainstorm/README.md) | Undeveloped candidate mechanisms |
+| [manuscript](manuscript/README.md) | Dated round-one source/PDF; continuation lives in round-two notes |
+| [chat-histories](chat-histories/README.md) | Canonical investigation conversations |
 
-The proposal states the opening deliverable, controls, dependencies and
-stopping criteria. Its linked earlier results retain their canonical homes;
-this project owns only the new work specified there.
-Keep this status current at each accepted gate. See [draft history](DRAFT_HISTORY.md),
-the [result summaries](../../../result-summaries/README.md) and
-[patterns to avoid](../../../avoid/README.md).
+Continue under the [execution plan](research-overview/02_ROUND_BASED_EXECUTION_PLAN_20261017.md).
+New numerical work requires a separately stated consumer. No external review
+or other portfolio closure is dispatched by this continuation.
+See [draft history](DRAFT_HISTORY.md), [result summaries](../../../result-summaries/README.md)
+and [patterns to avoid](../../../avoid/README.md).

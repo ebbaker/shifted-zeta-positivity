@@ -17,35 +17,40 @@
 \numberwithin{equation}{section}
 \title{An explicit local zero-count bound\\for the Riemann heat deformation}
 \author{Drafted for Edward Baker}
-\date{17 October 2026\\\small Unreviewed working draft}
+\date{17 October 2026\\\small Revised working draft; round-two extension awaiting cross-model review}
 \begin{document}
 \maketitle
 \begin{abstract}
 Polymath established local zero counts of order $\log X$ for the Riemann
 heat deformation, uniformly for positive heat times at most $1/2$.
-We extract one explicit bound on a restricted height domain. In the
-physical coordinate $H_0(z)=\xi((1+iz)/2)/8$, the number of zeros with
+We extract explicit constants in the physical coordinate
+$H_0(z)=\xi((1+iz)/2)/8$. The number of zeros with
 $X<\operatorname{Re}z\le X+1$, counted with multiplicity, is at most
-$(6/5)\log(X+2)+22$ for $0<t\le1/2$ and $X\ge2\cdot10^6$.
+$(9/10)\log(X+2)+6$ for $0<t\le1/2$ and $X\ge10^5$.
+For $X\ge2\cdot10^6$, the additive constant improves to $11/2$.
 The proof makes an off-axis comparison uniform in time, extends a
-Riemann--Siegel remainder estimate to the two real-part ranges needed
-there, and applies a positive logarithmic-derivative sum. A separate
-fixed-index remainder is retained in the truncation estimate.
-All numerical constants and the cutoff are evaluated. The lower-height
-range, a cumulative error constant and an application-specific gain
-are not supplied. This draft has not undergone round review or
-specialist human review, and makes no claim about the Riemann hypothesis
-or an improved de Bruijn--Newman bound.
+Riemann--Siegel remainder estimate to both required real-part ranges,
+and combines Schwarz--Pick with a conjugate-pair Poisson-kernel bound.
+A separate height-selected remainder is retained in the truncation
+estimate. All numerical constants and cutoffs are evaluated. The
+lower-height range, cumulative error constants and an application gain
+are not supplied. The new extension has same-model development checks
+only; no specialist human review has occurred. No claim about RH or an
+improved de Bruijn--Newman bound is made.
 \end{abstract}
 
 \noindent\textbf{Draft status.}
-This manuscript assembles the two research rounds of 17 October 2026 at
-the user's request, before the deferred review. The derivations and
-finite arithmetic checks used \texttt{gpt-6.1-sol} (Codex), reasoning
-effort \texttt{ultra}, with same-model development assistance. Compilation
-and authoring checks do not constitute independent mathematical review.
-No literature-priority claim is made. The author field identifies the
-intended recipient of the draft, rather than asserting his endorsement.
+This revision integrates the requested round-two continuation of
+17 October 2026. The earlier manuscript, at repository commit
+\texttt{146b3f9}, received one cross-model LLM review (Claude Review 02,
+recorded in commit \texttt{001aaeb}), accepting its results as proved from
+named imports. That review does not cover the changed cutoff, sharper
+extraction or this integrated revision. Those changes have same-model
+checks only. The derivations, arithmetic and manuscript preparation used
+\texttt{gpt-6.1-sol} (Codex), reasoning effort \texttt{ultra}, with
+substantial LLM assistance. Compilation and layout checks are not
+mathematical review. No literature-priority claim is made. The author
+field identifies the intended recipient rather than asserting endorsement.
 
 \section{Main result and relation to existing estimates}\label{sec:main}
 
@@ -74,38 +79,72 @@ window is included, one on its left wall is excluded, and a real double
 zero contributes two.
 
 \begin{theorem}[Explicit unit-window bound]\label{thm:count}
-For $0<t\le1/2$ and $X\ge2\cdot10^6$,
+For $0<t\le1/2$ and $X\ge10^5$,
 \begin{equation}\label{eq:main-count}
- K_t(X)\le \frac{82123}{72000}\log(X+2)+\frac{574}{27}
-          \le \frac65\log(X+2)+22.
+ K_t(X)\le\frac{2003}{2240}\log(X+2)+\frac{125}{21}
+          \le\frac9{10}\log(X+2)+6.
 \end{equation}
 The count includes complex and multiple zeros; no reality, simplicity
 or separation hypothesis is imposed.
 \end{theorem}
 
+\begin{corollary}[The original high-height domain]\label{cor:high-count}
+For $0<t\le1/2$ and $X\ge2\cdot10^6$,
+\begin{equation}\label{eq:high-count}
+ K_t(X)\le\frac{2003}{2240}\log(X+2)+\frac{75}{14}
+          \le\frac9{10}\log(X+2)+\frac{11}{2}.
+\end{equation}
+\end{corollary}
+
 Theorem~1.5(iv) of Polymath~\cite{polymath} already establishes a
 time-uniform estimate $K_t(X)=O(\log(2+X))$, together with a cumulative
 estimate. The purpose here is to evaluate constants for one local
-version on a declared domain, rather than to establish the first
-asymptotic. The cutoff is conservative and is not claimed optimal.
-The range $200\le X<2\cdot10^6$ remains outside the present bound.
-No consumer has yet supplied a numerical tolerance against which to
-measure an application gain.
+version on a declared domain. The cutoff is conservative and is not
+claimed optimal. The range $200\le X<10^5$ remains outside the bound.
+No consumer has supplied a numerical tolerance against which to measure
+an application gain.
 
-The analytic input to Theorem~\ref{thm:count} is the following comparison.
-The nonvanishing carrier $M_t$ is defined in Section~\ref{sec:inputs}.
+At $X=2\cdot10^6$, the previous exact allowance
+$(82123/72000)\log(X+2)+574/27$ was about $37.81$ (its rounded version
+$(6/5)\log(X+2)+22$ was $39.41$). The new rounded bounds are $19.06$
+and $18.56$, respectively. These are upper allowances, not observed
+counts. The leading mean density
+$\log(X/(4\pi))/(4\pi)$ is about $0.953$ there, so the result is still
+loose. Pairing conjugate zeros reduces the Poisson multiplier from
+$41/9$ to $25/7$. Together with Schwarz--Pick, this replaces the earlier
+additive allowance $574/27$ by $125/21$. These changes do not provide exact
+counts or a lower population.
+
+For a time-zero benchmark, Bellotti--Wong~\cite[Corollary 1.6]{bellotti-wong}
+give
+\[
+ N_\zeta(T+1)-N_\zeta(T)\le\frac{\log T}{2\pi}+4.8405
+ \qquad(3\le T+1\le30\,610\,046\,000).
+\]
+At $T=10^6$ the right side is less than $7.04$. A unit physical window
+corresponds to a half-unit $T$ window and is contained in this unit
+$T$ window. This is context at $t=0$, not an input to the proof or an
+estimate transferred to positive heat time.
+
+The analytic input is a two-regime comparison. The nonvanishing carrier
+$M_t$ is defined in Section~\ref{sec:inputs}.
 \begin{theorem}[Uniform off-axis comparison]\label{thm:comparison}
-If $0<t\le1/2$, $x\ge2\cdot10^6$ and $3\le y\le4$, then
+For $0<t\le1/2$, $x\ge10^5$ and $3\le y\le4$,
 \begin{equation}\label{eq:comparison}
  \abs{\frac{H_t(x+iy)}{M_t((1+y-ix)/2)}-1}
- <\frac{96624791}{147000000}<\frac{33}{50}<\frac7{10}.
+ <\frac{5094127}{7350000}<\frac{347}{500}<\frac7{10}.
+\end{equation}
+If in addition $x\ge2\cdot10^6$, then
+\begin{equation}\label{eq:comparison-high}
+ \abs{\frac{H_t(x+iy)}{M_t((1+y-ix)/2)}-1}
+ <q_0:=\frac{96624791}{147000000}<\frac{48}{73}<\frac{33}{50}.
 \end{equation}
 \end{theorem}
 
-The proof of Theorem~\ref{thm:comparison} appears in
-Section~\ref{sec:budget}. Section~\ref{sec:count} then proves
-Theorem~\ref{thm:count} by Cauchy's estimate and a positive zero sum.
-The argument needs no compactness constant and no finite zero survey.
+Section~\ref{sec:budget} proves both comparisons.
+Section~\ref{sec:count} then obtains the counts using Schwarz--Pick
+and a positive logarithmic-derivative sum with conjugate pairs.
+No compactness constant or finite zero survey enters the argument.
 
 \section{Carriers and imported analytic estimates}\label{sec:inputs}
 
@@ -139,7 +178,7 @@ $[-3/2,5/2]$. Note that $a^2=Q+t/16$.
 
 We state the imported ingredients precisely. All equation and theorem
 numbers attributed to Polymath refer to arXiv version~2 of
-\cite{polymath}. First, $H_t$ is even and entire of order one,
+\cite{polymath}. First, $H_t$ is even and real entire of order one,
 $H_t(iy)>0$ for real $y$, and its zeros lie in $|\operatorname{Im}z|\le1$
 for $0\le t\le1/2$; see its Section~3 and Theorem~3.2.
 
@@ -187,20 +226,24 @@ coefficient and remainder bounds of Proposition~6.2, including
 $|C_0(p)|\le1/2$, and the explicit Stirling estimate of Lemma~5.1(v).
 We do not extend the final constants of its Proposition~6.3 beyond
 their stated real-part range. Section~\ref{sec:remainder} rebuilds the
-needed remainder estimate instead.
+needed remainder estimate instead. The coefficient and remainder bounds,
+including the $C_0$ estimate, originate with Arias de Reyna, and the
+Stirling estimate with Boyd, as cited by Polymath. We import those bounds
+through Polymath; their original papers have not been checked here.
 
 \section{Bounds for the ordinary terms}\label{sec:ordinary}
 
 \begin{lemma}[Heat weights and termwise error]\label{lem:ordinary}
-For $x\ge2\cdot10^6$, $0<t\le1/2$, $-3/2\le\sigma\le5/2$ and
+For $x\ge10^5$, $0<t\le1/2$, $-3/2\le\sigma\le5/2$ and
 $s=\sigma\pm iT$, uniformly for $1\le n\le N$,
 \begin{align}
  \operatorname{Re}\alpha(s)&\ge L/2-13/x^2,\label{eq:alpha-real}\\
  \abs{\alpha(s)-L/2\mp i\pi/4}
     &\le\frac{11}{2x}+\frac{25}{4x^2}<\frac6x,\label{eq:alpha-small}\\
  W_n(s):=b_n^t n^{-(t/2)\operatorname{Re}\alpha(s)}&\le1,
- \qquad |\theta_{t,n}(s)|<\frac1{50000}.\label{eq:weights-error}
+ \qquad |\theta_{t,n}(s)|<\frac1{6000}.\label{eq:weights-error}
 \end{align}
+For $x\ge2\cdot10^6$, the termwise error improves to $1/50000$.
 \end{lemma}
 \begin{proof}
 In \eqref{eq:alpha}, the real rational terms are bounded below by
@@ -226,13 +269,14 @@ Because $T-3.33\ge x/3$, the exponent in \eqref{eq:r-error} is at most
 \[
  u(x)=\frac{3(\log x)^2/32+7/8}{x}.
 \]
-Both $(\log x)^2/x$ and $1/x$ decrease here. At the left endpoint,
-$\log(2\cdot10^6)<15$, and therefore
+Both $(\log x)^2/x$ and $1/x$ decrease here. Since $\log10^5<12$,
 \[
- u(x)\le\frac{703}{32\cdot2\cdot10^6}<\frac18,\qquad
- e^{u(x)}-1\le\frac87u(x)<\frac1{50000}.
+ u(x)\le\frac{23}{160000}<\frac18,\qquad
+ e^{u(x)}-1\le\frac87u(x)\le\frac{23}{140000}<\frac1{6000}.
 \]
-This proves the termwise error assertion.
+For $x\ge2\cdot10^6$, use $\log(2\cdot10^6)<15$ to obtain
+$u(x)\le703/(32\cdot2\cdot10^6)$ and
+$e^{u(x)}-1<1/50000$. This proves both assertions.
 \end{proof}
 
 The dominant branch has real part $(1+y)/2\ge2$. Its leading
@@ -251,7 +295,7 @@ rational upper bound.
 \label{lem:remainder}
 Let
 \[
- T\ge 10^6,\qquad -\frac32\le\sigma\le\frac52,
+ T\ge 50000,\qquad -\frac32\le\sigma\le\frac52,
  \qquad 0<t\le\frac12,
 \]
 and set
@@ -264,8 +308,11 @@ one has
 \begin{equation}
  \label{eq:remainder-expanded-domain}
  \bigl|R_{t,N}(\sigma+iT)\bigr|
- \le \exp\!\left(\frac{t\pi^2}{64}\right)
-       \bigl|M_0(iT')\bigr|.
+ <2\exp\!\left(\frac{t\pi^2}{64}\right)|M_0(iT')|.
+\end{equation}
+For $T\ge10^6$, the prefactor $2$ can be replaced by $1$:
+\begin{equation}\label{eq:remainder-high}
+ |R_{t,N}(\sigma+iT)|\le e^{t\pi^2/64}|M_0(iT')|.
 \end{equation}
 \end{lemma}
 
@@ -282,7 +329,9 @@ Expectation below refers to the density
  \frac{1}{\sqrt{\pi t}}
  \exp\!\left(-\frac{(u-\sigma)^2}{t}\right)\,du.
 \]
-In particular, $a>300$ throughout the proof.
+Throughout the proof, $D\ge49997$ and
+$a^2>87500/11>89^2$. The larger endpoint $a>300$ is used only for the
+final high-height subcase.
 
 \emph{The Gaussian envelope.}
 Use the shift $\beta=\pi i/4$ in
@@ -404,7 +453,13 @@ and odd indices and using
  \le\frac{\Gamma(k/2)}{a^k}
  \qquad(k\le2a^2).
 \]
-The constants bound the corresponding geometric sums.
+The constants bound the corresponding geometric sums. The final
+compression remains valid at the smaller endpoint, since
+\[
+ .036\left(.445\frac{71}{40}+
+              \frac{.247}{89}+\frac{.098}{89^2}\right)<.029,
+ \qquad \sqrt\pi<71/40.
+\]
 
 If $K_u>m$, every coefficient beyond $m$ has index greater than
 $2a^2$.  Moreover the remainder index satisfies
@@ -428,8 +483,10 @@ Equation (57) and explicit real Stirling give
 \end{align*}
 We used
 $\Gamma(\nu)\le3\nu^{\nu-1/2}e^{-\nu}$,
-$\log(1.21)<1/5$, $\log(\nu/a^2)\le1/(2a^2)$, and
-$3a^2/10>\log5$.  Thus the added $E_a$ accounts for the fixed-index
+$\log(1.21)<1/5$, $\log(\nu/a^2)\le1/(2a^2)$,
+$\nu\log(\nu/a^2)\le1/2+1/(4a^2)<1$, and
+$3a^2/10>2>\log5$. These bounds hold already for $a>89$.
+Thus the added $E_a$ accounts for the fixed-index
 remainder even when the displayed tail range is empty.  This proves
 \eqref{eq:remainder-pointwise-majorant} in every case.
 
@@ -440,12 +497,15 @@ $\exp((u^2+1)/D)$.  The moment bounds above give
 \begin{align}
  \delta_1+\delta_2
  &<\frac{0.4\,9^\sigma+0.058\,2^{-\sigma}}{a-0.865}\notag\\
- &\le\frac{97.374}{a-0.865}\le\frac{98}{a}.
+ &\le\frac{97.374}{a-0.865}.
  \label{eq:remainder-first-two-deltas}
 \end{align}
-Here $9^\sigma\le243$ and $2^{-\sigma}<3$.
+Here $9^\sigma\le243$ and $2^{-\sigma}<3$. Retain this denominator:
+the shortcut $97.374/(a-.865)\le98/a$ requires $a\ge42385/313$
+and is unavailable at $a=89$.
 
-In the third contribution, enlarge the integer summation to $k\ge14$.
+In the third contribution, $2a^2>15842$, so enlarge the integer
+summation to $k\ge14$.
 Its integration region has $u\le4-k\le-10$.  Since $|\sigma|\le5/2$,
 \[
  (u-\sigma)^2\ge\frac9{16}u^2,
@@ -490,10 +550,23 @@ Taking absolute values in the shifted integral and using
  \frac{|R_{t,N}(\sigma+iT)|}
  {e^{t\pi^2/64}|M_0(iT')|}
  \le\frac12J_0+\sum_{j=1}^{4}\delta_j
- <\frac12\cdot\frac43+\frac{100}{300}=1.
+ <\frac23+\frac{97.374}{a-.865}+\frac2a.
 \]
-This proves \eqref{eq:remainder-expanded-domain} with all constants
-uniform on the stated domain.
+The last expression decreases in $a$ and is less than
+\[
+ \frac23+\frac{97.374}{89-.865}+\frac2{89}
+ =\frac{42215698}{23532045}<\frac95<2.
+\]
+This proves \eqref{eq:remainder-expanded-domain}.
+For $T\ge10^6$, one has $a>300$, and now
+$97.374/(a-.865)\le98/a$ is permitted. The same strict chain yields
+\[
+ \frac{|R_{t,N}(\sigma+iT)|}{e^{t\pi^2/64}|M_0(iT')|}
+ <\frac12\cdot\frac43+\frac{100}{300}=1,
+\]
+proving \eqref{eq:remainder-high}. The endpoint on the right is an
+equality of rational allowances; strictness comes from the preceding
+analytic inequalities.
 \end{proof}
 
 \section{Ratios of the carriers}\label{sec:carriers}
@@ -563,122 +636,158 @@ domain. This proves \eqref{eq:remainder-carrier}.
 \section{The complete off-axis budget}\label{sec:budget}
 
 \begin{proof}[Proof of Theorem~\ref{thm:comparison}]
-Apply \eqref{eq:exact-expansion} with the common cutoff
-$N=\lfloor\sqrt{Q+t/16}\rfloor$. Lemma~\ref{lem:ordinary} and
-\eqref{eq:main-excess} bound the dominant sum's excess by $95/147$.
-For the opposite sum, use
+Use $N=\lfloor\sqrt{Q+t/16}\rfloor$ in the exact expansion.
+Lemma~\ref{lem:ordinary} bounds the dominant excess by $95/147$.
+For the opposite branch,
 \[
- N^{(y+1)/2}\le(Q+t/16)^{(y+1)/4}
- <2Q^{(y+1)/4},
+ N^{(y+1)/2}\le(Q+t/16)^{(y+1)/4}<2Q^{(y+1)/4},
 \]
-where $(1+t/(16Q))^{(y+1)/4}<(33/32)^2<2$. Together with
-Lemma~\ref{lem:carriers} this gives
+because $(1+t/(16Q))^{(y+1)/4}<(33/32)^2<2$. Hence
 \begin{equation}\label{eq:opposite}
  \abs{\frac{M_t(s_-)}{M_t(s_+)}}
-    \sum_{n=1}^N n^{(y-1)/2}W_n(s_-)
- <4Q^{(1-y)/4}\le4Q^{-1/2}<\frac{11}{1000}.
+ \sum_{n=1}^N n^{(y-1)/2}W_n(s_-)
+ <4Q^{(1-y)/4}\le4Q^{-1/2}<\frac{23}{500}.
 \end{equation}
-The last step uses $4\pi<13$ and
-$16\cdot13/(2\cdot10^6)<(11/1000)^2$.
-
-The two ordinary approximation errors, normalized by $|M_t(s_+)|$,
-total less than
+The last inequality follows from $4\pi<13$ and
+$16\cdot13/10^5<(23/500)^2$.
+The normalized ordinary approximation errors are less than
 \[
- \frac{\zeta(2)+11/1000}{50000}<\frac1{25000}.
+ \frac{242/147+23/500}{6000}<\frac3{10000}.
 \]
-Lemma~\ref{lem:remainder} applies because $T=x/2\ge10^6$.
-By \eqref{eq:remainder-carrier}, the two normalized remainder terms
-total at most
+Lemma~\ref{lem:remainder} applies because $T\ge50000$. Its prefactor
+$2$ and the carrier ratio bound both remainders by
 \[
- 2Q^{-(1+y)/4}\le2/Q<26/x.
+ 4Q^{-(1+y)/4}\le4/Q<52/x.
 \]
-The triangle inequality now yields
+Thus
 \begin{align*}
- \abs{\frac{H_t(x+iy)}{M_t(s_+)}-1}
- &<\frac{95}{147}+\frac{11}{1000}+\frac1{25000}
-                      +\frac{26}{2\cdot10^6}\\
- &=\frac{96624791}{147000000}<\frac{33}{50}.
+ \abs{H_t(x+iy)/M_t(s_+)-1}
+ &<\frac{95}{147}+\frac{23}{500}+\frac3{10000}+\frac{52}{100000}\\
+ &=\frac{5094127}{7350000}<\frac{347}{500}<\frac7{10}.
 \end{align*}
-All constants are uniform in $t,x,y$ on the stated domain.
+
+For $x\ge2\cdot10^6$, retain the sharper ordinary error $1/50000$
+and the remainder prefactor $1$ in \eqref{eq:remainder-high}.
+The opposite branch is then less than $11/1000$, since
+$16\cdot13/(2\cdot10^6)<(11/1000)^2$.
+The ordinary errors total less than $1/25000$, and the two remainders
+total at most $2/Q<26/x$. Therefore
+\begin{align*}
+ \abs{H_t(x+iy)/M_t(s_+)-1}
+ &<\frac{95}{147}+\frac{11}{1000}+\frac1{25000}+\frac{26}{2\cdot10^6}\\
+ &=\frac{96624791}{147000000}<\frac{48}{73}<\frac{33}{50}.
+\end{align*}
+All estimates are uniform on their respective stated domains.
 \end{proof}
 
 \section{From the comparison to a local count}\label{sec:count}
 
-The following implication is useful independently of the particular
-cutoff obtained in Theorem~\ref{thm:comparison}.
+\begin{lemma}[A disk logarithmic-derivative estimate]\label{lem:disk}
+Let $F$ be holomorphic near a closed disk $|z-w|\le r$ and satisfy
+$|F-1|\le q$, where $r>0$ and $0<q<1$. Then
+\begin{equation}\label{eq:disk}
+ \abs{\frac{F'(w)}{F(w)}}
+ \le\frac{2q}{r(1+\sqrt{1-q^2})}.
+\end{equation}
+\end{lemma}
+\begin{proof}
+Set $f(\zeta)=(F(w+r\zeta)-1)/q$ and $a=f(0)$.
+Schwarz--Pick gives $|f'(0)|\le1-|a|^2$; for a constant map with
+$|a|=1$, the same statement holds with derivative zero. With $s=|a|$,
+\[
+ \abs{F'(w)/F(w)}
+ \le\frac q r\frac{1-s^2}{1-qs}
+ \le\frac{2q}{r(1+\sqrt{1-q^2})}.
+\]
+The last maximum occurs at $s=q/(1+\sqrt{1-q^2})$, as follows by
+differentiation. All denominators are positive for $0\le s\le1$.
+\end{proof}
+
 \begin{lemma}[Comparison-to-count extraction]\label{lem:extract}
 Fix $0<t\le1/2$ and $X\ge200$, and put
 \[
  U=X+\tfrac12,\qquad w=U+\tfrac72i,\qquad F_t=H_t/B_t.
 \]
-If $\sup_{|z-w|\le1/2}|F_t(z)-1|\le7/10$, then
-\[
- K_t(X)\le\frac{82123}{72000}\log(X+2)+\frac{574}{27}.
-\]
+If $\sup_{|z-w|\le1/2}|F_t(z)-1|\le q$ for $0<q<1$, then
+\begin{equation}\label{eq:generic-count}
+ K_t(X)\le\frac{2003}{2240}\log(X+2)
+        +\frac{25}{7}\frac{4q}{1+\sqrt{1-q^2}}.
+\end{equation}
 \end{lemma}
 \begin{proof}
-The disk has imaginary parts in $[3,4]$, and its image under
-$s=(1-iz)/2$ has real part at least $2$. Therefore $B_t$ is nonzero
-and $F_t$ is holomorphic on a neighborhood of the closed disk.
-Cauchy's estimate gives
-\begin{equation}\label{eq:cauchy}
- \abs{\frac{F_t'}{F_t}(w)}
- \le\frac{7/10}{(1/2)(3/10)}=\frac{14}{3}.
-\end{equation}
-At $s=(1-iw)/2=9/4-iU/2$, with $L_U=\log(U/(4\pi))$, the exact
-formula \eqref{eq:alpha} gives
+The disk has imaginary parts in $[3,4]$ and maps under $s=(1-iz)/2$
+to real part at least $2$. Thus $B_t$ is nonzero and $F_t$ is
+holomorphic near the closed disk. Lemma~\ref{lem:disk} applies with
+$r=1/2$. At $s=(1-iw)/2=9/4-iU/2$, let $L_U=\log(U/(4\pi))$.
+The exact formula for $\alpha$ gives
 \begin{align*}
- |\alpha(s)|&\le\frac{L_U}{2}+\frac\pi4+\frac3U+
-                 \frac{81}{16U^2}
-              <\frac{L_U}{2}+1<\frac12\log(X+2),\\
- |\alpha'(s)|&\le\frac1U+\frac6{U^2}
-                  \le\frac{103}{20000}<\frac3{500}.
+ |\alpha(s)|&\le L_U/2+\pi/4+3/U+81/(16U^2)
+              <L_U/2+1<\tfrac12\log(X+2),\\
+ |\alpha'(s)|&\le1/U+6/U^2\le103/20000<3/500.
 \end{align*}
-For the last logarithmic comparison, use $4\pi>e^2$ and $U<X+2$.
-Holding time fixed, the chain rule yields
+Here $4\pi>e^2$ and $U<X+2$. Holding time fixed,
 \begin{equation}\label{eq:Bprime}
  \frac{B_t'}{B_t}(w)=-\frac i2\alpha(s)
-                       \left(1+\frac t2\alpha'(s)\right),\qquad
- \abs{\frac{B_t'}{B_t}(w)}
-       \le\frac{2003}{8000}\log(X+2).
+    \left(1+\frac t2\alpha'(s)\right),\qquad
+ \abs{B_t'/B_t}(w)\le\frac{2003}{8000}\log(X+2).
 \end{equation}
-
 Evenness, order one and $H_t(0)>0$ give the paired Hadamard identity
-\cite[(105)]{polymath}. Its imaginary part is the positive scalar sum
+\cite[(105)]{polymath}. Put $v=7/2$. Its imaginary part is
 \begin{equation}\label{eq:poisson}
  D_t(U):=-\operatorname{Im}\frac{H_t'}{H_t}(w)
-  =\sum_\rho
-    \frac{7/2-\operatorname{Im}\rho}
-     {(U-\operatorname{Re}\rho)^2+(7/2-\operatorname{Im}\rho)^2}.
+ =\sum_\rho\frac{v-\operatorname{Im}\rho}
+ {(U-\operatorname{Re}\rho)^2+(v-\operatorname{Im}\rho)^2}.
 \end{equation}
-Multiplicity is retained. The scalar sum converges absolutely by the
-strip bound and order-one zero growth, independently of the conclusion
-being proved.
+The scalar sum is positive and absolutely convergent by the strip
+bound and order-one growth, independently of the count being proved.
 
-For a zero in the unit window set $h=U-\operatorname{Re}\rho$ and
-$v=7/2-\operatorname{Im}\rho$. Then $h^2\le1/4$ and
-$5/2\le v\le9/2$, so
+For a zero in the unit window put $h=U-\operatorname{Re}\rho$;
+then $|h|\le1/2$. Set $p_h(a)=a/(a^2+h^2)$. On $[5/2,9/2]$,
 \[
- \frac{v}{v^2+h^2}\ge\frac9{41}.
+ p_h''(a)=\frac{2a(a^2-3h^2)}{(a^2+h^2)^3}>0.
 \]
-For instance,
-$41v-9v^2-9/4=9(9/2-v)(v-1/18)\ge0$.
-Consequently $K_t(X)\le(41/9)D_t(U)$. Combining
-\eqref{eq:cauchy}--\eqref{eq:poisson} proves
+The real source makes $H_t$ real entire, so conjugate nonreal zeros
+have equal multiplicity and the same window membership. If their
+imaginary parts are $\pm b$, the strip bound $|b|\le1$ and convexity give
 \[
- K_t(X)\le\frac{41}{9}
-       \left(\frac{2003}{8000}\log(X+2)+\frac{14}{3}\right),
+ \frac{p_h(v-b)+p_h(v+b)}2\ge p_h(v)
+ \ge\frac{7/2}{(7/2)^2+1/4}=\frac7{25}.
 \]
-as required. The horizontal distance bound includes both walls, so
-it also bounds the specified half-open window without a nonvanishing
-condition on either vertical boundary.
+Real zeros obey the same per-multiplicity inequality directly. Thus
+\begin{equation}\label{eq:paired-kernel-count}
+ K_t(X)\le\frac{25}{7}D_t(U).
+\end{equation}
+Combining the disk estimate, \eqref{eq:Bprime} and
+\eqref{eq:poisson} proves \eqref{eq:generic-count}.
+Pairing preserves membership because the window restricts only real
+parts. Both walls satisfy the distance bound, so the specified half-open
+convention and multiple roots require no further exception.
 \end{proof}
 
 \begin{proof}[Proof of Theorem~\ref{thm:count}]
-For $X\ge2\cdot10^6$, the entire disk in Lemma~\ref{lem:extract}
-lies in the domain of Theorem~\ref{thm:comparison}. Its comparison
-hypothesis follows from \eqref{eq:comparison}. The final rounding uses
-$82123/72000<6/5$, $574/27<22$ and $\log(X+2)>0$.
+For $X\ge10^5$, the whole extraction disk lies in
+Theorem~\ref{thm:comparison}'s domain. Use $q=7/10$.
+The derivative allowance in \eqref{eq:disk} is less than $5/3$:
+for $0\le s\le1$, clearing its positive denominator reduces
+\[
+ \frac75\frac{1-s^2}{1-(7/10)s}\le\frac53
+\]
+to $84s^2-70s+16=84(s-5/12)^2+17/12>0$.
+Lemma~\ref{lem:extract} consequently gives
+\[
+ K_t(X)\le\frac{2003}{2240}\log(X+2)+\frac{125}{21}.
+\]
+Since $2003/2240<9/10$ and $125/21<6$, the rounded assertion follows.
+\end{proof}
+
+\begin{proof}[Proof of Corollary~\ref{cor:high-count}]
+For $X\ge2\cdot10^6$, use $q_0<48/73$ from
+\eqref{eq:comparison-high}. The disk allowance is increasing in $q$,
+and at $q=48/73$ its square root is $55/73$ and
+\[
+ \frac{4q}{1+\sqrt{1-q^2}}=\frac32.
+\]
+The additive count allowance is therefore $75/14<11/2$.
 \end{proof}
 
 \section{Scope and limitations}\label{sec:scope}
@@ -687,8 +796,8 @@ This is an explicit upper count on a restricted high-height domain.
 An upper count alone supplies neither a lower population, an exact
 interior integer count, nor a lower bound on a derivative at a zero.
 The theorem is compatible with multiple zeros and collisions. The
-kernel argument applies to any function meeting its Hadamard and strip
-hypotheses; the complete theta expansion is the additional input used
+paired kernel argument applies to any real entire function meeting its
+Hadamard and strip hypotheses; the complete theta expansion is the additional input used
 to obtain the particular numerical comparison. Positivity, evenness or
 reflection of a modified source does not supply that expansion.
 
@@ -710,10 +819,14 @@ The heat drift and the constant $11/8$ should not be replaced by a
 time-zero or averaged convention. A conductor-dependent version for
 Dirichlet families also requires additional estimates.
 
-The natural next analytic task is to lower the cutoff or cover
-$200\le X<2\cdot10^6$. A separate application must specify its kernel,
-domain and numerical tolerance before a gain can be assessed. The present
-draft makes no assertion that the bound improves an existing certificate.
+The remaining height gap is $200\le X<10^5$. The bounded continuation
+stops at its present result, pending cross-model review of the changed
+cutoff and extraction. A separate application must specify its kernel,
+domain, baseline and numerical tolerance before further optimization or
+a gain assessment. In particular, a principal-value velocity tail needs
+symmetric cancellation and two-sided cumulative information; an upper
+local count alone does not provide these. The draft makes no assertion
+that the bound improves an existing certificate.
 
 \appendix
 \section{Source normalization and reproducibility}\label{sec:replay}
@@ -726,41 +839,58 @@ and its explicit estimate (21) give $t/4$. We avoid that display and
 use the exact identity \eqref{eq:weight-identity}. This observation
 does not dispute the source's time-uniform asymptotic theorem.
 
-In the remainder calculation, the envelope in
-Section~\ref{sec:remainder} is derived directly from the explicit
-Stirling and Taylor errors. It uses $u^2+1$, rather than copying the
-source's compressed constant immediately before (60). The term $E_a$
-keeps the fixed-index remainder when its index is selected by height.
-Both choices are conservative and enter the stated numerical budget.
+Immediately before (60) of \cite{polymath}, the printed inequality is
+\[
+ \frac1{6(T'-.66)}\le\frac{1/3}{4(T-3)}.
+\]
+It fails by a factor tending to two. Replacing the numerator $1/3$ by
+$2/3$ gives the valid bound used in
+\eqref{eq:remainder-gaussian-envelope}. Our envelope $(u^2+1)/D$ is
+conservative. Also, the displayed tail for (63) can omit the remainder
+when the height index wins: its upper index range may be empty although
+$RS_m$ is still present. The separate $E_a$ in
+\eqref{eq:remainder-pointwise-majorant} retains it. These small source
+slips do not defeat Polymath's conclusions.
 
-Two standard-library Python programs accompany the research records:
-\begin{center}
-\begin{tabular}{ll}
-\toprule
-Program in \path{../numerics/} & Scope\\
-\midrule
-\path{check_local_count_reduction.py} & Kernel and extraction constants\\
-\path{check_off_axis_comparison.py} & Off-axis finite constants and budget\\
-\bottomrule
-\end{tabular}
-\end{center}
-The second uses rational Taylor enclosures and checks the Gaussian
-moment allowances, the two initial tail coefficients, the decreasing
-tail recurrence, the fixed-index allowance and the final rational
-budget. Its run record is
-\path{../numerics/OFF_AXIS_COMPARISON_CHECKS_20261017.json}; the first
-record is \path{../numerics/LOCAL_COUNT_REDUCTION_CHECKS_20261017.json}.
-The source notes and their hashes remain identified in those records.
+The standard-library arithmetic programs in \path{../numerics/} are:
+\begin{itemize}
+\item \path{check_local_count_reduction.py}: the original kernel,
+      carrier chain rule and extraction constants.
+\item \path{check_off_axis_comparison.py}: the original high-height
+      comparison budget and Gaussian/remainder allowances.
+\item \path{round-2/check_lower_cutoff_and_paired_extraction.py}:
+      the reduced cutoff, retained full remainder denominator,
+      Schwarz--Pick constants and conjugate-pair kernel.
+\end{itemize}
+Their small JSON records identify the code and note hashes.
+The round-two record is
+\path{../numerics/round-2/LOWER_CUTOFF_AND_PAIRED_EXTRACTION_CHECKS_20261017.json}.
+The older remainder checker now labels its endpoint equality as an
+equality; analytic strictness is supplied upstream.
 
-The ordinary run of each program exits zero. The first program with
-\path{--kernel-floor 9/40} exits one because its requested floor exceeds
-the endpoint value $9/41$. The second with
-\path{--comparison-ceiling 13/20} exits one because that requested
-ceiling is smaller than the current sufficient budget. Neither injection
-is a numerical counterexample to $H_t$. The finite checks do not formally
-verify the imported theorems, contour shifts or infinite-domain analytic
-arguments. They constitute arithmetic authoring support, rather than
-independent mathematical review.
+Each normal run exits zero. The original failure injections remain
+\texttt{--kernel-floor 9/40} and \texttt{--comparison-ceiling 13/20}.
+The round-two injections are \texttt{--comparison-ceiling 69/100},
+\texttt{--kernel-floor 3/10}, and \texttt{--derivative-allowance 3/2};
+each exits one. The paired kernel floor is attained by a real zero at
+horizontal distance $1/2$, including a double root counted twice.
+For the disk estimate, with $r=1/2$,
+\[
+ F(w+r\zeta)=1+\frac7{10}\frac{\zeta-2/5}{1-(2/5)\zeta}
+ \quad\Longrightarrow\quad |F'(w)/F(w)|=49/30>3/2.
+\]
+This is an exact disk-automorphism test, not a sample of $H_t$.
+The comparison-ceiling injection fails a sufficient budget, not the
+actual heat comparison. The separate class extremizers are not claimed
+to be realized simultaneously by theta.
+
+Finite arithmetic and class tests do not formally verify the classical
+imports, contour shifts or infinite-domain analytic arguments. Their
+purpose is authoring support. The current build record also distinguishes
+Note 01's pre-existing single-link repair from its historical reviewed
+hash; reversing that repair recovers the reviewed bytes. The notes and
+reviews retain their source identities, and the earlier manuscript is
+recoverable from commit \texttt{146b3f9}, without a new snapshot folder.
 
 \section*{Acknowledgment of LLM assistance}
 This draft was prepared for Edward Baker with substantial assistance
@@ -768,8 +898,8 @@ from OpenAI's \texttt{gpt-6.1-sol} model in Codex, using reasoning effort
 \texttt{ultra}, on 17 October 2026. The assistance included derivation,
 source comparison, same-model development work, numerical bookkeeping,
 manuscript drafting and compilation checks. The research notes record
-these contributions and their limitations. Formal round review and
-specialist human review remain pending. Responsibility for checking,
+these contributions and their limitations. The baseline received Claude cross-model LLM review; cross-model review
+of the round-two extension and specialist human review remain pending. Responsibility for checking,
 revising and endorsing any eventual submission remains with its human
 author.
 
@@ -783,5 +913,11 @@ Research in the Mathematical Sciences \textbf{6}, article 31 (2019).
 The source numbering used here follows
 \href{https://arxiv.org/abs/1904.12438v2}{arXiv:1904.12438v2},
 4 August 2019.
+\bibitem{bellotti-wong}
+C. Bellotti and P.-J. Wong,
+\emph{Improved estimates for the argument and zero-counting function of
+the Riemann zeta-function},
+\href{https://arxiv.org/abs/2412.15470v2}{arXiv:2412.15470v2}, 7 July 2025,
+Corollary 1.6. Used here only for a time-zero benchmark.
 \end{thebibliography}
 \end{document}

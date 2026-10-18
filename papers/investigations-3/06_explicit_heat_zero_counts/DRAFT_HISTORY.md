@@ -3,7 +3,9 @@
 16 October 2026. Prepared for Edward Baker with substantial LLM assistance.
 Recorded model: **gpt-6-astra (Codex)**; reasoning effort: **ultra**.
 
-No reviewed manuscript milestone exists. The working draft below was requested before review. The [initial proposal](research-overview/01_INITIAL_RESEARCH_PROPOSAL_20261016.md)
+The baseline below was subsequently accepted by cross-model Review 02;
+its historical creation entries remain unchanged. The new round-2
+continuation has same-model checks only. The [initial proposal](research-overview/01_INITIAL_RESEARCH_PROPOSAL_20261016.md)
 records the 16 October 2026 setup, model assignments and phase gates.
 
 For future milestones, add only the date, investigation, commit/tag or
@@ -35,3 +37,28 @@ new manuscript snapshot folders.
   Review remains deferred; [Review 01](reviews/01_OPENING_LEDGER_REVIEW_CODEX_20261017.md)
   covers only its opening note. Drafted for Edward Baker with substantial
   LLM assistance, **gpt-6.1-sol, ultra**. No accepted manuscript milestone.
+
+- **17 October 2026 — baseline review accepted; bounded continuation.**
+  Baseline source commit `146b3f9`; cross-model review commit `001aaeb`,
+  [Review 02](reviews/02_CROSS_MODEL_REVIEW_NOTES_01_02_AND_MANUSCRIPT_CLAUDE_20261017.md).
+  Original theorem: proved from named imports, one cross-model LLM review,
+  X>=2000000. [Round-2 Note 01](notes/round-2/01_LOWER_CUTOFF_AND_PAIRED_EXTRACTION_CODEX_20261017.md)
+  lowers the cutoff to 100000 and gives 0.9 log(X+2)+6; source identity in
+  its [execution record](numerics/round-2/LOWER_CUTOFF_AND_PAIRED_EXTRACTION_CHECKS_20261017.json),
+  [same-model assessment](reviews/03_ROUND_TWO_CUTOFF_AND_EXTRACTION_REVIEW_CODEX_20261017.md).
+  The user requested this bounded continuation after review; the new proof
+  has no cross-model review and is not a new manuscript milestone.
+  Manuscript integration and consumer tolerance remain pending.
+  Prepared for Edward Baker with substantial LLM assistance,
+  **gpt-6.1-sol (Codex), ultra**.
+
+- **17 October 2026 — round-2 manuscript integration.**
+  [Current manuscript](manuscript/README.md), source/PDF identities in its
+  [build record](manuscript/BUILD_RECORD.json); earlier manuscript at
+  commit `146b3f9`. Includes the X>=100000 count, high-height corollary,
+  complete two-regime proof and Review 02's editorial corrections.
+  [Round-2 note](notes/round-2/01_LOWER_CUTOFF_AND_PAIRED_EXTRACTION_CODEX_20261017.md),
+  [same-model assessment](reviews/03_ROUND_TWO_CUTOFF_AND_EXTRACTION_REVIEW_CODEX_20261017.md).
+  This working revision has same-model checks only; cross-model review
+  of the extension remains pending. Drafted for Edward Baker with substantial
+  LLM assistance, **gpt-6.1-sol (Codex), ultra**. No snapshot folder.

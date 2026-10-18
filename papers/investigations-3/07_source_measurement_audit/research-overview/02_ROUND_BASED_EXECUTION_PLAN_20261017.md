@@ -43,30 +43,38 @@ differ from actual distances, and what positivity changes.
 | Concrete onset budget | [Note 05](../notes/round-1/05_CONCRETE_NORMALIZED_ONSET_BUDGET_CODEX_20261017.md): a fixed unanchored normalized three-coordinate pair gives a conservative sufficient threshold of 3915 |
 | User-requested working manuscript | [Manuscript](../manuscript/README.md): synthesizes Notes 01–05 and supplies provisional claim-by-claim disposition before round assessment |
 
-The research round remains in progress. The record distinguishes written
+Round one has received its Claude assessment; round two is the current
+continuation. The record distinguishes written
 analytic derivations, numerical candidates, validated finite computations
 and future formal review. It makes no theta sign claim. The evaluated
 onset is sufficient for the declared unanchored three-coordinate class,
 with no minimality or exact-abscissa nondegeneracy claim. The finite positive infeasibility cases and
 eventual high-height feasibility have different quantifiers.
 
-## Further work within this round
+## Round-two continuation after the Claude assessment
 
-Note 04 settles nondegeneracy and Note 05 resolves the concrete onset
-budget without a new height grid or support sweep. Retain 3915 as a
-conservative sufficient number for the stated class. At the user's request,
-the working manuscript now consolidates the repaired analytic statements,
-validated numerical record and quantified fixed-pair construction, including
-provisional claim-by-claim disposition in its scope section. This first
-draft does not mark a reviewed milestone or close the round. Its claims
-and supporting records remain subject to the combined round assessment.
+17 October 2026, prepared for Edward Baker with substantial LLM assistance,
+gpt-6.1-sol, effort ultra. The [Claude assessment](../reviews/01_ROUND_ONE_CROSS_MODEL_REVIEW_CLAUDE_20261017.md)
+is now received. At the user's explicit request, continue in
+[notes/round-2](../notes/round-2/README.md); this supersedes the review's
+recommendation to create no second round. Its two substantive findings are
+accepted with precise qualifications and a full endpoint/growth proof.
+The gap lemma retains its nonvertical top-vector hypothesis, omitted in
+the review's consolidated statement.
 
-Continue this work without waiting for a note-level review. The round
-review should examine the resulting analytic scope and proof obligations,
-not request another reproduction of established controls merely to add
-checks. Further numerical expansion still requires an independently
-stated estimate or comparison advantage. The extrapolation near
-\(x=140\) is outside the current conclusions and execution contract.
+The bounded work now also proves a separate one-direction nondegenerate
+gap-collision theorem at every fixed positive heat time, using Polymath's
+published eventual real/simple zeros and a logarithmic-concavity argument.
+The cutoff depends on time; none uniform as time tends to zero is supplied.
+It certifies one local \(N=6\) alignment, the
+fixed sufficient no-real-zero tail heights 264/269, and record-hygiene
+corrections. The old fixed-case replay was repeated twice only to verify
+stable content hashes. No height grid, support sweep or new fit ran.
+
+The accumulated round-two work is ready for assessment. No external review
+is commissioned by this update. Additional numerical work requires a
+separate consumer or estimate for a different source class. The dated
+round-one manuscript is retained; current research is in the new notes.
 
 ## Scope and stopping discipline
 

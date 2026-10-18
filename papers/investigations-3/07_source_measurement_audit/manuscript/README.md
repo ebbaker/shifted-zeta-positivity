@@ -3,9 +3,17 @@
 17 October 2026. Drafted for Edward Baker with substantial LLM assistance.
 Recorded model **gpt-6.1-sol (Codex)**, reasoning effort **ultra**.
 
-**Status: unreviewed working draft from round one.** The user requested this
-manuscript before the round assessment. Round one remains active; review
-continues to occur at the round boundary.
+**Status: dated round-one working draft, now assessed by [Claude](../reviews/01_ROUND_ONE_CROSS_MODEL_REVIEW_CLAUDE_20261017.md).**
+The source/PDF below remain the exact round-one version reviewed there;
+their internal active/unreviewed wording is historical. Current mathematical
+corrections and new results are in [round two](../notes/round-2/README.md):
+the prescribed-abscissa qualifier, the full gap-lemma hypothesis, all-time
+non-reality for nonzero finite changes, and a separate one-direction
+nondegenerate collision theorem at each fixed positive time. Incorporation into the manuscript
+is pending. No revised PDF or manuscript snapshot is created by this
+notes-focused continuation. No independent specialist review has occurred.
+Status updated 17 October 2026 for Edward Baker with substantial LLM
+assistance, gpt-6.1-sol, reasoning effort ultra.
 
 - [Compiled manuscript (PDF)](source_measurement_audit.pdf) — 14 pages.
 - [Editable standalone LaTeX source](source_measurement_audit.tex).

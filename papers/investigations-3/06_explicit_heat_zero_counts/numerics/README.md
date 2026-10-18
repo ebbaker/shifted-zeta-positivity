@@ -35,7 +35,8 @@ first needed; no large archive is created by this setup.
 The [comparison checker](check_off_axis_comparison.py) and
 [record](OFF_AXIS_COMPARISON_CHECKS_20261017.json) verify rational allowances and the
 comparison budget for [Note 02](../notes/02_EXPLICIT_OFF_AXIS_COMPARISON_AND_HIGH_HEIGHT_COUNT_20261017.md).
-The analytic derivation remains unreviewed. Run from the investigation root:
+The analytic derivation is now covered by cross-model Review 02; the
+finite arithmetic record remains authoring support, not analytic verification. Run from the investigation root:
 
 ```sh
 python3 numerics/check_off_axis_comparison.py
@@ -45,3 +46,13 @@ python3 numerics/check_off_axis_comparison.py --comparison-ceiling 13/20
 The second command intentionally exits 1 because the current sufficient
 budget exceeds that requested ceiling. This is a failure-handling check,
 not a counterexample to the actual comparison. No zero survey was run.
+
+## Post-review round-2 continuation
+
+17 October 2026. Prepared for Edward Baker with substantial LLM assistance:
+**gpt-6.1-sol (Codex), ultra**. The [new replay package](round-2/README.md)
+checks the cutoff x>=100000, the retained remainder prefactor, paired
+kernel, disk derivative and three exact failure injections. The old
+comparison checker label now describes its endpoint equality honestly;
+its script hash and old record have been refreshed. The previous record's
+capture time and script hash are retained as provenance.

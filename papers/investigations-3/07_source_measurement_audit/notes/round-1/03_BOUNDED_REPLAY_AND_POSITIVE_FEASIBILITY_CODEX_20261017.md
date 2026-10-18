@@ -7,13 +7,21 @@ the evaluation, constrained solves and analytic majorants. These are research
 and verification contributions within round one; formal review is deferred
 to the round boundary under the user's revised workflow.
 
-**The six-point conditioning table largely reproduces, but its sufficient
-radii are far smaller than the actual equality distances.** Across the 24
+**Review correction, 17 October 2026:** [round-two Note 01](../round-2/01_REVIEW_RECONCILIATION_AND_ENDPOINT_NONREALITY_CODEX_20261017.md)
+reconciles [Claude's review](../../reviews/01_ROUND_ONE_CROSS_MODEL_REVIEW_CLAUDE_20261017.md).
+The following tables are prescribed-abscissa results. Within a zero gap,
+the sufficient radius can be attained, and nearby positive double jets
+can exist. Historical numerical values are unchanged. Prepared for Edward
+Baker with substantial LLM assistance, gpt-6.1-sol, effort ultra.
+
+**At the prescribed abscissae, the six-point conditioning table largely
+reproduces, but its sufficient radii are far smaller than the actual
+equality distances.** Across the 24
 fixed combinations, \(r_M/\eta\) ranges from approximately
 \(1.64\times10^5\) to \(3.08\times10^{11}\). At \(x=85\), unanchored
 recurrence measurements give \(\eta\approx1.1363\times10^{-7}\) and
 \(r_M\approx5.90781\). Small sufficient radii therefore do not measure
-nearby feasibility in these cases.
+nearby feasibility at these prescribed abscissae.
 
 The separate coefficient problem has **6 nonnegative feasible cases and
 26 infeasible cases** among the 32 declared combinations. All infeasibility
@@ -194,7 +202,8 @@ the diagnostic record without turning it into a uniform height theorem.
 The bounded replay supports a precise finite-space conclusion and the
 [quantitative analytic note][bounds] supports the unbounded asymptotic
 construction. Their quantifiers differ: finite positive infeasibility
-at \(x=60\) does not contradict eventual high-height feasibility.
+at the prescribed \(x=60\) does not contradict feasibility at another
+abscissa in the same zero gap or eventual high-height feasibility.
 An error description such as sixteen digits still needs row units and
 an absolute or relative observation model. The \(x\approx140\) threshold
 is left as an extrapolation, outside the conclusions.

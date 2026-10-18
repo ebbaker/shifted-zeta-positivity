@@ -8,8 +8,8 @@ The [overall research plan](research-overview/01_PORTFOLIO_RESEARCH_PLAN_2026101
 model assignments, dependencies and stopping or re-evaluation criteria.
 The initial setup comprised seven proposals and reported no new theorem,
 certificate, manuscript or research run. Project 07 now has explicit analytic bounds, a validated bounded replay,
-a nondegeneracy argument and a concrete sufficient onset budget. Its current round remains active; formal review
-follows the round rather than each note.
+a nondegeneracy argument and a concrete sufficient onset budget. Its round one has received Claude assessment; round-two reconciliation
+and analytic continuation are ready for accumulated assessment.
 This status update was prepared for Edward Baker with substantial LLM assistance,
 **gpt-6.1-sol (Codex)**, reasoning effort **ultra**, on 17 October 2026.
 
@@ -20,8 +20,8 @@ This status update was prepared for Edward Baker with substantial LLM assistance
 | [Effective outer remainders](03_effective_outer_remainders/README.md) | Higher-risk proposal; new useful estimate required |
 | [Sonin mixed-prime response](04_sonin_mixed_prime_response/README.md) | One analytic calculation proposed |
 | [Constructive stable models](05_constructive_stable_models/README.md) | Gated on a qualifying explicit family |
-| [Explicit heat zero counts](06_explicit_heat_zero_counts/README.md) | Waiting for a precisely stated consumer |
-| [Source-measurement audit](07_source_measurement_audit/README.md) | Round one active; working manuscript synthesizes analytic results and validated replay |
+| [Explicit heat zero counts](06_explicit_heat_zero_counts/README.md) | Baseline count cross-model reviewed; requested round-2 count from X>=100000 has same-model checks; consumer tolerance open |
+| [Source-measurement audit](07_source_measurement_audit/README.md) | Round one assessed; round-two notes add one-direction gap events and certified tail bounds; round assessment pending |
 
 Recommended opening work: the family contract and sharp finite-sum
 feasibility, with a bounded source-measurement audit. Other lanes enter

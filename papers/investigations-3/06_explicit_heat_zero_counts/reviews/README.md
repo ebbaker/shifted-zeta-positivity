@@ -40,3 +40,22 @@ checks in its build record do not change the mathematical review status.
 | 02 | [Cross-model review of Notes 01-02 and the working manuscript](02_CROSS_MODEL_REVIEW_NOTES_01_02_AND_MANUSCRIPT_CLAUDE_20261017.md) | Claude Opus 5.5 (`claude-opus-5-5`), effort max | Cross-model LLM review; the proposal's Claude analytic audit. Disposition: accept as proved from named imports, four small corrections, freeze until a consumer states a tolerance |
 
 Its support computations are in [numerics/claude-review](../numerics/claude-review/README.md).
+
+## Requested post-review continuation
+
+17 October 2026. Prepared for Edward Baker with substantial LLM assistance:
+**gpt-6.1-sol (Codex), ultra**. Historical deferral statements above are
+superseded by Review 02 for the original note/manuscript versions.
+[Review 03](03_ROUND_TWO_CUTOFF_AND_EXTRACTION_REVIEW_CODEX_20261017.md)
+assesses the new [round-2 note](../notes/round-2/README.md): lower cutoff,
+Schwarz–Pick estimate and conjugate-pair kernel. It is a same-model
+assessment, with source hashes, not the cross-model review still required
+for that new mathematics. At the time of that assessment the manuscript
+was unchanged; the subsequent integration is recorded below.
+
+Manuscript integration, 17 October 2026: the [current revision](../manuscript/README.md)
+contains the new theorem/corollary and all requested editorial corrections.
+The [build record](../manuscript/BUILD_RECORD.json) distinguishes baseline
+Claude review, same-model source checks and visual QA. No cross-model
+review of the new proof is implied. Prepared for Edward Baker with substantial
+LLM assistance, **gpt-6.1-sol (Codex), ultra**.

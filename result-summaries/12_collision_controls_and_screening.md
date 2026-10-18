@@ -62,6 +62,25 @@ only those properties proves a false statement.
   suitable direct quantitative information can distinguish the genuine
   theta application; different controls may fail different premises.
 
+- **Finite-source measurement audit (Investigation 3/07, 17 October).**
+  Every nonzero finite theta-tail change whose resulting source is
+  nonnegative, and every nonzero nonnegative finite zero-tail source, has finitely many real and infinitely
+  many non-real zeros at every real heat time. This is an endpoint/growth
+  obstruction, not a statement about theta. The weighted-square controls
+  therefore have no all-real heat time either; their certified event times
+  are not finite upper thresholds. The prescribed-point distance tables
+  need their location qualifier. The gap-alignment lemma retains a
+  nonvertical top-vector hypothesis; one positive \(N=6\) alignment is now
+  interval-certified. The new one-direction theorem gives nondegenerate
+  events inside every sufficiently high gap at each fixed \(t_*>0\), using
+  Polymath's eventual real/simple zeros; its cutoff depends on time. Source status:
+  **proved in-note**; central endpoint/gap findings have cross-model LLM
+  review, the later one-direction proof has same-model checks only;
+  **no specialist review**. [Round-two sources and certificates](../papers/investigations-3/07_source_measurement_audit/notes/round-2/README.md),
+  [Claude assessment](../papers/investigations-3/07_source_measurement_audit/reviews/01_ROUND_ONE_CROSS_MODEL_REVIEW_CLAUDE_20261017.md).
+  Added for Edward Baker with substantial LLM assistance, **gpt-6.1-sol**,
+  effort **ultra**.
+
 ## Status
 
 19: proved and certified; the manuscript "awaits independent review" and

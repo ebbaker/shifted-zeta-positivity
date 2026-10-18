@@ -24,3 +24,12 @@ See [Claude session guidance](claude-cowork/README.md) for future supported impo
 - [History 1: Begin heat zero-count investigation](0001_2026-10-17T15-58-02Z_begin-heat-zero-count-investigation.json),
   registered under its actual conversation identity using the refresh tool.
   Current capture metadata is in [the registry](index.json).
+
+## Post-review continuation chat
+
+17 October 2026. Prepared for Edward Baker with substantial LLM assistance,
+**gpt-6.1-sol (Codex), ultra**.
+
+- [History 2: Continue round-2 investigation](0002_2026-10-18T00-42-30Z_continue-round-2-investigation.json),
+  registered at this investigation's canonical home using its actual id
+  and title. Current capture metadata is in [the registry](index.json).

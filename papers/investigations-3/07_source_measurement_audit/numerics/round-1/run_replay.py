@@ -17,6 +17,7 @@ import sys
 import time
 from pathlib import Path
 import mpmath as mp
+from replay_record_hygiene import CONTENT_HASH_POLICY, mathematical_content_digest, peak_rss_bytes
 
 def read(p):return json.loads(p.read_text())
 def digest(p):return hashlib.sha256(p.read_bytes()).hexdigest()
@@ -66,7 +67,8 @@ def main(out, original):
         'max_baseline_h_relative_precision_difference':mp.nstr(max(mp.mpf(v['h_relative_l2_80_vs_120']) for v in cmp['cases']),25),
         'certificate_totals':read(out/'CERTIFIED_FEASIBILITY.json')['totals'],
         'elapsed_seconds':time.monotonic()-started,
-        'largest_child_peak_rss_bytes':resource.getrusage(resource.RUSAGE_CHILDREN).ru_maxrss,
+        'platform_system':platform.system(),
+        'largest_child_peak_rss_bytes':peak_rss_bytes(resource.getrusage(resource.RUSAGE_CHILDREN).ru_maxrss,platform.system()),
         'replay_budget_seconds':1800,'memory_budget_bytes':1073741824,
         'no_threshold_or_support_sweep':True}
     if original:
@@ -75,7 +77,10 @@ def main(out, original):
         summary['original_x85_h_relative_difference']=next(v['h_relative_l2_original_vs_120'] for v in cmp['cases'] if v['case']=='t0_x85')
     names=['CERTIFIED_EVALUATION.json','CERTIFIED_MEASUREMENTS.json','CERTIFIED_FEASIBILITY.json','ANALYTIC_BOUND_CHECKS.json','FEASIBILITY_WITNESSES.json']
     summary['record_sha256']={n:digest(out/n) for n in names}
+    summary['content_hash_policy']=CONTENT_HASH_POLICY
+    summary['record_content_sha256']={n:mathematical_content_digest(read(out/n)) for n in names}
     summary['code_sha256']={p.name:digest(p) for p in sorted(here.glob('*.py'))}
+    summary['mathematical_content_sha256']=mathematical_content_digest(summary)
     (out/'REPLAY_SUMMARY.json').write_text(json.dumps(summary,indent=2)+'\n')
     assert summary['elapsed_seconds']<1800 and summary['largest_child_peak_rss_bytes']<1073741824
     print('ROUND_REPLAY_COMPLETE',json.dumps(summary),flush=True)

@@ -3,12 +3,15 @@
 17 October 2026. Prepared for Edward Baker with substantial LLM assistance.
 Recorded model **gpt-6.1-sol (Codex)**, reasoning effort **ultra**.
 
-**Status: active investigation round.** The opening scope and validated
-replay are recorded. The concrete normalized three-coordinate budget now
-gives a conservative sufficient threshold of 3915. The user-requested
-[working manuscript](../../manuscript/README.md) synthesizes these notes and
-provides provisional claim-by-claim disposition. Reviews follow the round
-and do not gate individual notes; the round remains active.
+**Status: round-one work assessed by the [Claude review](../../reviews/01_ROUND_ONE_CROSS_MODEL_REVIEW_CLAUDE_20261017.md);
+reconciliation and continuation are in [round two](../round-2/README.md).**
+The sufficient threshold 3915 and fixed numerical records remain correct.
+The large distance ratios and the 32 feasibility classifications apply at
+their prescribed abscissae. Round two supplies the companion gap statement,
+the stronger endpoint non-reality result and a one-direction local-event
+proof. The [manuscript](../../manuscript/README.md) is the dated round-one
+artifact reviewed by Claude. This status update is by gpt-6.1-sol, effort ultra,
+17 October 2026, with substantial LLM assistance for Edward Baker.
 
 | Note | Subject |
 | --- | --- |

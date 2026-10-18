@@ -1,42 +1,51 @@
-# Explicit heat zero counts: working manuscript
+# Explicit heat zero counts: revised manuscript
 
-17 October 2026. Drafted for Edward Baker with substantial LLM assistance.
-Recorded model: **gpt-6.1-sol (Codex)**; reasoning effort: **ultra**.
+17 October 2026, America/New_York. Drafted for Edward Baker with substantial
+LLM assistance: **gpt-6.1-sol (Codex)**, effort **ultra**.
 
-**Status: unreviewed working draft created at the user's explicit request
-while round review remains deferred.** No review gate or accepted manuscript
-milestone is asserted.
+**Status: round-2 result integrated; new proof and revision have same-model
+checks only.** The [earlier version](https://github.com/ebbaker/shifted-zeta-positivity/tree/146b3f9/papers/investigations-3/06_explicit_heat_zero_counts/manuscript)
+received [Claude Review 02](../reviews/02_CROSS_MODEL_REVIEW_NOTES_01_02_AND_MANUSCRIPT_CLAUDE_20261017.md).
+That review covers its original source identity, not the changed cutoff or
+paired extraction. The [round-2 assessment](../reviews/03_ROUND_TWO_CUTOFF_AND_EXTRACTION_REVIEW_CODEX_20261017.md)
+and manuscript transcription checks are same-model work. Specialist human
+review has not occurred; cross-model review of the extension remains pending.
 
-- [Compiled manuscript](explicit_heat_zero_counts.pdf): 11 pages.
-- [Editable LaTeX source](explicit_heat_zero_counts.tex): the sole current manuscript source.
-- [Build record](BUILD_RECORD.json): source/PDF hashes, input-note identities, compiler and layout checks.
-- [Opening ledger](../notes/01_CONSUMER_AUDIT_AND_CONSTANT_LEDGER_20261017.md) and
-  [explicit comparison derivation](../notes/02_EXPLICIT_OFF_AXIS_COMPARISON_AND_HIGH_HEIGHT_COUNT_20261017.md).
+- [Compiled manuscript](explicit_heat_zero_counts.pdf): 13 pages.
+- [Editable source](explicit_heat_zero_counts.tex): current manuscript.
+- [Build record](BUILD_RECORD.json): current source/PDF and input hashes,
+  earlier-version identities, review scopes, compiler and layout checks.
+- [Round-2 derivation](../notes/round-2/01_LOWER_CUTOFF_AND_PAIRED_EXTRACTION_CODEX_20261017.md)
+  and [arithmetic package](../numerics/round-2/README.md).
 
-The draft assembles the time-uniform local multiplicity-count bound
-`K_t(X) <= (6/5) log(X+2) + 22` for `0<t<=1/2`, `X>=2,000,000`.
-It includes the off-axis comparison, general-real-part remainder proof,
-fixed-index remainder term and the conditional count-extraction lemma.
-The lower-height gap, cumulative constants and consumer feasibility remain
-open. Classical analytic inputs are cited; finite checks do not formally
-verify those inputs or the universal analytic arguments.
+The main theorem is `K_t(X)<=0.9 log(X+2)+6` for `0<t<=1/2`,
+`X>=100000`, with additive `11/2` for `X>=2000000`. The unified proof
+retains both comparison budgets, ordinary error regimes and remainder
+prefactors. It includes the Schwarz–Pick and conjugate-pair extraction,
+full multiplicity and endpoint conventions, and the review's editorial
+corrections: explicit source slips, indirect Arias de Reyna/Boyd imports,
+mean-density/loss context and the primary-source-checked time-zero benchmark.
 
-The author field says "Drafted for Edward Baker," and the manuscript
-acknowledges LLM assistance with the recorded model and effort. The earlier
-same-model review applies to Note 01 only. No new review was commissioned.
+The author field names the intended recipient and the acknowledgment
+records LLM assistance. No new application gain or collision exclusion is
+claimed. Coverage below X=100000, cumulative constants and a consumer
+budget remain open.
 
-To rebuild from this directory with TeX Live, directing auxiliary files
-outside the repository:
+Rebuild from this directory, keeping auxiliary files outside the repository:
 
 ```sh
-latexmk -pdf -interaction=nonstopmode -halt-on-error -outdir=/tmp/explicit-heat-counts-build explicit_heat_zero_counts.tex
+latexmk -pdf -interaction=nonstopmode -halt-on-error -pdflatex='pdflatex -no-shell-escape %O %S' -outdir=/tmp/explicit-heat-counts-build explicit_heat_zero_counts.tex
 ```
 
-The saved build used pdfTeX from TeX Live 2023 and latexmk 4.79, with shell
-escape disabled. All 11 rendered pages were inspected, with full-page
-mathematical layout checks on pages 5, 6 and 9. There are no undefined
-references/citations or overfull boxes. Compilation and layout checks do
-not constitute mathematical review.
+The saved build uses TeX Live 2023 and latexmk 4.79, with shell escape disabled.
+All 13 rendered pages were visually inspected; there are no undefined
+references/citations, overfull/underfull boxes, duplicate labels or text
+outside page bounds. Compilation and visual QA are not mathematical review.
+All saved files remain below 1 MiB. No snapshot folder was created; the old
+version is recoverable from commit `146b3f9`. See [draft history](../DRAFT_HISTORY.md).
 
-Keep this source/PDF pair and record later versions with Git commits or
-tags in [DRAFT_HISTORY.md](../DRAFT_HISTORY.md), without snapshot folders.
+Baseline Note 01's current hash differs from its historical reviewed hash
+only because of a pre-existing hyperlink repair in commit `452eee4`. The
+[round-2 record](../numerics/round-2/LOWER_CUTOFF_AND_PAIRED_EXTRACTION_CHECKS_20261017.json)
+verifies that reversing that single repair recovers the reviewed bytes.
+The current build records both identities; the research notes are unchanged.

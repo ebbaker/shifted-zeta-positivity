@@ -83,3 +83,20 @@ The prescribed rounding rule gives x at least 3915, uniformly in heat time
 from zero through one quarter. The coefficient change bound is below
 4e-307; this is a sufficient construction, not an optimal distance or a
 measured first event. No new physical integrals, grid or support search run.
+
+
+## Round-two record-hygiene correction
+
+17 October 2026, prepared for Edward Baker with substantial LLM assistance,
+gpt-6.1-sol, effort ultra. The runner now reports stored-file and canonical
+mathematical-content hashes separately, using
+[replay_record_hygiene.py](replay_record_hygiene.py), and converts Linux KiB
+and macOS byte RSS values explicitly. The canonical projection retains
+serialized enclosures, witnesses, precision, scope and mathematical hash
+references. It removes only its documented execution/environment and
+stored-file/code provenance fields. This is identity in the tested
+environments, not arithmetic portability or mathematical validity.
+The [two-run verification](../round-2/REPLAY_HYGIENE_CHECKS_CODEX_20261017.json)
+confirms all five historical retained records' mathematical contents.
+Historical certificates and their original summary remain unchanged.
+See [round two](../round-2/README.md) for reproduction.

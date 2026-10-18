@@ -16,3 +16,8 @@ The portfolio-creation conversation is [portfolio Chat 1](../../chat-histories/0
 Keep project-specific conversations here and shared planning in the
 [portfolio archive](../../chat-histories/README.md).
 See [Claude session guidance](claude-cowork/README.md) for supported imports.
+
+
+- [Chat 2 — Continue source measurement audit](0002_2026-10-18T00-16-44Z_continue-source-measurement-audit.json)
+  is the user-requested round-two continuation. Its UTC creation date is
+  18 October; the research notes use the user's 17 October New York date.

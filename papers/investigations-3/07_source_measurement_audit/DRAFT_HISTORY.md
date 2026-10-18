@@ -3,7 +3,8 @@
 16 October 2026. Prepared for Edward Baker with substantial LLM assistance.
 Initialization model: **gpt-6-astra (Codex)**; reasoning effort: **ultra**.
 
-No reviewed manuscript milestone exists. The [initial proposal](research-overview/01_INITIAL_RESEARCH_PROPOSAL_20261016.md)
+The round-one manuscript has cross-model LLM assessment; the current
+round-two notes have same-model checks only. No specialist review exists. The [initial proposal](research-overview/01_INITIAL_RESEARCH_PROPOSAL_20261016.md)
 records the 16 October 2026 setup, model assignments and phase gates.
 
 For future milestones, add only the date, investigation, commit/tag or
@@ -45,3 +46,15 @@ new manuscript snapshot folders.
   theorem, sufficient threshold 3915, validated replay and provisional claim
   disposition. User-requested draft; round active and [round assessment](reviews/README.md)
   pending. **gpt-6.1-sol**, effort **ultra**, substantial LLM assistance for Edward Baker.
+
+
+- **17 October 2026 — Source-measurement audit, round-two continuation:**
+  [Notes 01–02](notes/round-2/README.md), based on
+  `452eee43f1b32fbc7ded1e46c78b2e041bb68e8d`, reconcile the
+  [Claude review](reviews/01_ROUND_ONE_CROSS_MODEL_REVIEW_CLAUDE_20261017.md),
+  restore the gap hypothesis, and add the one-direction nondegenerate gap
+  theorem at every fixed positive time. [Small records](numerics/round-2/README.md) certify one
+  local alignment and sufficient tail heights 264/269; two fixed replays
+  verify stable mathematical content. Round-two assessment pending; dated
+  round-one source/PDF retained. Edward Baker, substantial LLM assistance,
+  **gpt-6.1-sol**, effort **ultra**.

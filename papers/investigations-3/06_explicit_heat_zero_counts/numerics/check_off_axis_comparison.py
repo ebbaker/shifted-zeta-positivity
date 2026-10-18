@@ -109,7 +109,7 @@ def run(ceiling):
     require("tail ratio decreases", Q(15, 14)*Q(3, 8)**4 < 1)
     require("tail gaussian domination", 1/dmin < Q(1, 8))
     require("tail below one over a", Q(4, 10**30) < amin**13)
-    require("full remainder bracket strictly below one", Q(1, 2)*Q(4, 3)+100/amin == 1)
+    require("full remainder bracket endpoint equality", Q(1, 2)*Q(4, 3)+100/amin == 1)
 
     zeta2_upper = Q(22, 7)**2/6
     require("zeta2 comparison rational", zeta2_upper == Q(242, 147))

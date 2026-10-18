@@ -28,6 +28,16 @@ compared against numbers computed in another normalization.
 - [Short-family small-cofactor review](../papers/quasi-rh/quasi-rh-exponent-descent/reviews/SHORT_FAMILY_SMALL_COFACTOR_REVIEW_20261008.md): "the plain PDF extraction dropped overbars", so the "normalization was wrong".
 - [Weil-depth v0.3 review](../papers/weil-positivity/shifted-zeta/weil-depth/archive/reviews/2026-09-09_review-of-v0.3_chatgpt/FINITE_HORIZON_WEIL_V03_REVIEW_20260909.md) §4: Lemma 3.3, "This is false for `p-beta`." (one local step corrected in v0.4); the [20 note](../papers/investigations-2/active/20_constrained_operator_squares/notes/RESIDUAL_CORRECTED_HEAT_TRAJECTORY_IDENTITIES_20261014.md): the 2017–18 spin-trace construction gave \(\cosh\), not the heat semigroup, "Equation (33) misses the square root."
 
+- [Explicit heat-count cross-model review](../papers/investigations-3/06_explicit_heat_zero_counts/reviews/02_CROSS_MODEL_REVIEW_NOTES_01_02_AND_MANUSCRIPT_CLAUDE_20261017.md)
+  §4.2: "the printed inequality is false for every" stated source height,
+  with a factor tending to two. The proof retained a safe envelope and
+  the omitted height-index remainder; the [round-2 addendum](../papers/investigations-3/06_explicit_heat_zero_counts/notes/round-2/01_LOWER_CUTOFF_AND_PAIRED_EXTRACTION_CODEX_20261017.md)
+  §3 also exposes why the old 98/a shortcut fails at the lowered cutoff.
+  The revised manuscript includes this correction and keeps the two
+  cutoff regimes explicit. Domain changes require rechecking numerical
+  compressions, even when the source theorem survives. Entry added 17 October 2026 for Edward Baker
+  with substantial LLM assistance, **gpt-6.1-sol, ultra**.
+
 ## What it cost
 
 Half a headline margin; a withdrawn gap law and a withdrawn "250 orders"

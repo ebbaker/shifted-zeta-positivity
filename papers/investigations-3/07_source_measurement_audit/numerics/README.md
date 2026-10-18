@@ -30,3 +30,13 @@ The [concrete onset calculation](round-1/CONCRETE_ONSET_BUDGET.json) is a
 separate fixed analytic budget for [Note 05](../notes/round-1/05_CONCRETE_NORMALIZED_ONSET_BUDGET_CODEX_20261017.md).
 It supplies the conservative sufficient threshold 3915 without new
 physical-height evaluations. Recorded 17 October 2026, **gpt-6.1-sol**, effort **ultra**.
+
+
+## Round-two continuation
+
+See [round-two code and records](round-2/README.md): one certified local
+alignment bracket, the two sufficient tail heights 264/269, stable
+mathematical-content hashes and portable RSS units. Two unchanged
+fixed-case replays agree with the historical mathematical records;
+those records remain untouched. Prepared for Edward Baker with substantial
+LLM assistance, gpt-6.1-sol, effort ultra, 17 October 2026.

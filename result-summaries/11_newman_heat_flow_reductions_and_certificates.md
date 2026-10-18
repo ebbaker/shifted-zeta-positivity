@@ -67,6 +67,21 @@ LLM assistance: **gpt-6-astra (Codex)**, reasoning effort **ultra**.
   and barrier hypotheses. Review 20 records the correction; no new bound
   follows from the projections.
 
+- **Explicit local heat count (Investigation 3/06).** For
+  \(0<t\le1/2\), \(X\ge2000000\),
+  \(K_t(X)\le(6/5)\log(X+2)+22\), counting complex zeros with
+  multiplicity: **proved from named imports; one cross-model LLM review**.
+  [Note 02](../papers/investigations-3/06_explicit_heat_zero_counts/notes/02_EXPLICIT_OFF_AXIS_COMPARISON_AND_HIGH_HEIGHT_COUNT_20261017.md),
+  [Claude Review 02](../papers/investigations-3/06_explicit_heat_zero_counts/reviews/02_CROSS_MODEL_REVIEW_NOTES_01_02_AND_MANUSCRIPT_CLAUDE_20261017.md).
+  The requested [round-2 continuation](../papers/investigations-3/06_explicit_heat_zero_counts/notes/round-2/README.md)
+  gives \(0.9\log(X+2)+6\) for \(X\ge100000\), **proved in-note
+  from named imports, same-model checks only**; no new cross-model review.
+  Both regimes are now included in the [current manuscript](../papers/investigations-3/06_explicit_heat_zero_counts/manuscript/README.md),
+  with the new proof retaining its same-model status.
+  Neither count supplies a noncollision claim, exact integer count,
+  cumulative constant or demonstrated consumer gain. Added 17 October 2026
+  for Edward Baker with substantial LLM assistance, **gpt-6.1-sol, ultra**.
+
 ## Status
 
 Reductions: proved (Polymath imports named). Counter-kernels: proved.

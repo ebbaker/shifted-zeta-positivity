@@ -30,6 +30,15 @@ Wilson observables.
 - [Response 17](../papers/investigations-2/active/22_theta_manifold_geometry/reviews/17_RESPONSE_TO_JOINT_REVIEW_CLAUDE_20261015.md): "equivalence does not establish futility"; the controls "exclude arguments using the premises each control actually shares" and no more; [Reply 18](../papers/investigations-2/active/22_theta_manifold_geometry/reviews/18_REPLY_TO_RESPONSE_17_CLAUDE_20261015.md) §7 withdraws three theorem-level phrasings of Review 16.
 - [Program meta-analysis](../papers/investigations/program-meta-analysis/reviews/PROGRAM_META_ANALYSIS_20260926.md) §5, "Corrections to overly broad conclusions".
 
+- [Source-measurement review §3](../papers/investigations-3/07_source_measurement_audit/reviews/01_ROUND_ONE_CROSS_MODEL_REVIEW_CLAUDE_20261017.md):
+  the large distance ratios “are properties of the six prescribed abscissae”.
+  [Round-two Note 01](../papers/investigations-3/07_source_measurement_audit/notes/round-2/01_REVIEW_RECONCILIATION_AND_ENDPOINT_NONREALITY_CODEX_20261017.md)
+  adds the location qualifier and certifies an interior alignment where
+  the lower radius is attained. A negative result at a prescribed point
+  is not a negative result somewhere in its surrounding region.
+  Entry added 17 October 2026 for Edward Baker with substantial LLM
+  assistance, **gpt-6.1-sol**, effort **ultra**.
+
 ## What it cost
 
 Withdrawn remarks in two manuscript versions; a closure that had to be

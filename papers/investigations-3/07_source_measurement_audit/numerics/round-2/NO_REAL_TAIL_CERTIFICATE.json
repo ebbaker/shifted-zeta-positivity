@@ -1,0 +1,77 @@
+{
+  "schema": "source_measurement_no_real_tail_v1",
+  "date": "2026-10-17",
+  "prepared_for": "Edward Baker",
+  "recorded_model": "gpt-6.1-sol",
+  "recorded_reasoning_effort": "ultra",
+  "llm_assistance": "Substantial; routine same-model verification, no specialist review",
+  "status": "Arb certificate of uniform analytic tail domination; no physical integrals",
+  "contract": {
+    "fixed_heights": [
+      264,
+      269
+    ],
+    "height_grid": false,
+    "support_sweep": false,
+    "max_seconds": 180,
+    "memory_MiB": 512
+  },
+  "mathematical_content": {
+    "heat_interval": [
+      "0",
+      "1/4"
+    ],
+    "direction": [
+      "[-0.00034372931663176836214904858813420802242769769888228301722277268946118134449779157 +/- 4.59e-84]",
+      "1.0000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "0"
+    ],
+    "direction_formula": "A=e2-(beta2/beta1)e1; theta tail; no anchor",
+    "a_abs": "[0.039512259498547439722162288252494443238500828681829129231774341095799599078757675 +/- 2.85e-83]",
+    "E_A": "[745.33144356750696097017117724477577005657473705398425692024353393540621297094078 +/- 3.72e-78]",
+    "recurrence_norm_A": "[2.4500511066674241331446106843342655191449061751724443152320571574229399551132252 +/- 6.30e-81]",
+    "complete_theta_envelope": "(6/5)*exp(-pi*x/16)",
+    "tail_lower": "abs(epsilon)*(abs(a)/x^2-E_A/x^4)",
+    "monotonicity_proof": "d_x log(exp(k*x)*(a/x^2-E/x^4)) = k-2/x+2*E/(x^3*(a-E/x^2)) > k-2/X > 0",
+    "cases": [
+      {
+        "error_units": "coefficient multiplier",
+        "tolerance": "1e-16",
+        "X": 264,
+        "abs_epsilon": "[1.0000000000000000000000000000000000000000000000000000000000000000000000000000000e-16 +/- 1e-100]",
+        "directional_transform_abs_lower_at_X": "[4.1348463014420682311832701206642383956743090085737448098123015039030109982948061e-7 +/- 1.44e-87]",
+        "complete_theta_abs_upper_at_X": "[3.6895330724909740602610689385653205436826414625323705963701524474817476878362635e-23 +/- 2.43e-103]",
+        "dominance_ratio_at_X": "[1.1206963646081217148476616997211900446795221021772161343416289378917316309840821 +/- 1.79e-80]",
+        "ratio_log_derivative_lower_for_x_ge_X": "[0.18877378327360450164633945387921135450474732988518653805335827944348094963531230 +/- 4.84e-81]",
+        "both_signs_of_epsilon": true,
+        "for_all_x_ge_X_and_t_in_0_quarter": true,
+        "coefficient_positivity": "1 - abs(epsilon)*max(abs(A_n)) > 0"
+      },
+      {
+        "error_units": "raw recurrence Euclidean norm",
+        "tolerance": "1e-16",
+        "X": 269,
+        "abs_epsilon": "[4.0815475125341637218723158202231116601065838345480358318017235708090562123244256e-17 +/- 6.77e-98]",
+        "directional_transform_abs_lower_at_X": "[4.0369920067046685949644187743737664606360372229769224005836589947474307178463213e-7 +/- 4.37e-87]",
+        "complete_theta_abs_upper_at_X": "[1.3823047394869092697638992199313516882982758267240038633862433005992699928036344e-23 +/- 1.10e-103]",
+        "dominance_ratio_at_X": "[1.1920073926102446507738896259056844429270485981388968344305226855603850900461588 +/- 6.21e-81]",
+        "ratio_log_derivative_lower_for_x_ge_X": "[0.18891459661144386179053231182671614215823386813008909522357344222369949193563899 +/- 1.79e-81]",
+        "both_signs_of_epsilon": true,
+        "for_all_x_ge_X_and_t_in_0_quarter": true,
+        "coefficient_positivity": "1 - abs(epsilon)*max(abs(A_n)) > 0"
+      }
+    ]
+  },
+  "mathematical_content_sha256": "19c3ac6096a93763e49beada0d672c18b0f03990c019715e1173b046dbad8c92",
+  "provenance": {
+    "producer_sha256": "50cf6d703e3f7d07ede83d3f98de5b1770cf9551c06865ad70399c77d79107cc",
+    "fresh_budget_stored_sha256": "bc56cee8716272767ebd2425b50ee1fcc873b02639623abe442c4fc1f6da60d4",
+    "checker_sha256": "2b6193bb366821a28efd19a228371eea9f970cc493151a0469a4ea72cb942c2f",
+    "python": "3.10.0",
+    "python_flint": "0.9.0",
+    "arb_precision_bits": 320
+  },
+  "elapsed_seconds": 0.13139575000968762,
+  "peak_resident_bytes": 28966912,
+  "scope": "No real zeros at or above X for each specified fixed nonzero perturbation, both signs, 0<=t<=1/4. Sufficient bounds; no claim about first loss height or eta at x=140."
+}
