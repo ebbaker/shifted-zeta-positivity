@@ -34,7 +34,7 @@ opens the initial proposal with phase-specific assignments.
 | [02 Sharp finite-sum bounds][p02] | Uniform sharp-weight transfer and a complete feasibility budget for one proposed parameter improvement | Claude analytic binding/tail; Codex implementation and coverage | Ready for bounded feasibility work |
 | [03 Effective outer remainders][p03] | One complete remainder budget at a declared attainable overlap height | Codex analytic budget; Claude independent loss/import audit | Higher-risk; requires a different useful estimate |
 | [04 Sonin mixed-prime response][p04] | One exact mixed finite difference retaining preparation and the compressed inverse | Codex operator derivation; Claude tests translate-span reduction and sign mechanism | Ready for one analytic calculation |
-| [05 Constructive stable models][p05] | One explicit family, independent stability mechanism and first compatibility inequality | Claude construction; Codex coefficient, heat and convergence audit | Gated on a qualifying family |
+| [05 Constructive stable models][p05] | One explicit family, independent stability mechanism and first compatibility inequality | Claude construction; Codex coefficient, heat and convergence audit | Opening search reviewed and closed; round-two extensions await review; new construction gated |
 | [06 Explicit heat zero counts][p06] | Explicit constants and a budget for a named consumer | Codex extraction and budget; Claude analytic audit | Waiting for a precise consumer |
 | [07 Source-measurement audit][p07] | Scoped proof audit, independent replay and disposition of Reply 03 §§1–2 | Codex audit/replay; Claude proposition repair and review | Bounded closeout task |
 

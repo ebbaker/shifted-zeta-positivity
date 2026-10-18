@@ -1,5 +1,8 @@
 # Round 1 continuation: interacting ferromagnets and other stable seeds
 
+> Update, 17 October 2026: the [cross-model review](../../reviews/01_ROUND_ONE_CROSS_MODEL_REVIEW_CLAUDE_20261017.md) found no mathematical error in the scoped round-one claims. The [round-two reconciliation](../round-2/README.md) supersedes the weak-convergence limitation and the unbounded-base-time exception. The original derivation below is retained as the reviewed record; scope corrections and classical attributions are in round two. Recorded updater: gpt-6.1-sol (Codex), effort ultra, with substantial LLM assistance for Edward Baker.
+
+
 17 October 2026. Prepared for **Edward Baker** with substantial LLM assistance.
 Recorded model: **gpt-6.1-sol (Codex)**; reasoning effort: **ultra**.
 Same-model subagents checked the constructions, imports and finite arithmetic.

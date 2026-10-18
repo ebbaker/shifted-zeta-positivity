@@ -3,21 +3,38 @@
 16 October 2026. Prepared for Edward Baker with substantial LLM assistance.
 Recorded model: **gpt-6-astra (Codex)**; reasoning effort: **ultra**.
 
-**Status: further round-one results and a requested unreviewed working manuscript; formal review pending.**
-The [round-one notes](notes/round-1/README.md) now exclude independent
-pure-quartic arrays with a Gaussian component, even as weak source limits,
-and derive a no-persistent-diffuse-site condition for general interacting
-quartic networks. Earlier Bernoulli, single-quartic and fixed-Bessel screens
-remain scoped results. Infinitesimal interacting arrays and degenerating
-site laws remain open; no theta approximation theorem has been obtained.
-The [11-page manuscript](manuscript/constructive_stable_models.pdf) was
-explicitly requested before formal round review. It is a working draft,
-not an accepted or reviewed milestone. See its [editable source](manuscript/constructive_stable_models.tex)
-and [build record](manuscript/BUILD_RECORD.json). Small reproducible
-certificates are indexed in [numerics](numerics/round-1/README.md).
-Update: 17 October 2026, prepared for Edward Baker with substantial LLM
-assistance, **gpt-6.1-sol (Codex)**, reasoning effort **ultra**.
-The checks are same-model preparation checks, not cross-model review.
+**Status: opening search closed after cross-model review; further construction gated.**
+The [round-one review](reviews/01_ROUND_ONE_CROSS_MODEL_REVIEW_CLAUDE_20261017.md)
+found no mathematical error in the scoped results, but showed that the main
+obstructions also exclude a known stable Bessel control. They describe
+family expressiveness, not theta stability. The review is internal LLM
+review, not specialist human review.
+
+The [round-two continuation](notes/round-2/README.md), dated 17 October 2026,
+checks the review's extensions. Weak convergence suffices for the
+interacting-quartic persistent-site obstruction. Fixed heat rollback
+excludes the original independent-spin family at **all nonpositive
+preparation times**, including times tending to minus infinity, for each
+fixed nonnegative theta target time. A separate classical Newman-class
+argument also excludes theta and the stable Bessel control as weak limits
+of diverging heat tilts of general symmetric LP seeds. These round-two
+proofs have same-model authoring checks; cross-model review is pending.
+Prepared for Edward Baker with substantial LLM assistance,
+**gpt-6.1-sol (Codex), effort ultra**.
+
+No qualifying theta approximation has been obtained. The completed opening
+search is dormant pending a named new construction with a proved Bessel
+(or Pólya stable-control) approximation and a theta-specific estimate.
+General interacting infinitesimal arrays and fixed non-Gaussian Cardon
+multipliers remain unresolved; independent-spin mean-field heat with
+unbounded negative preparation times is no longer an open escape.
+
+The [round-one manuscript](manuscript/README.md) remains a working record,
+with no accepted manuscript milestone; it has not been revised to include
+round two. Its original source, PDF and build record are retained.
+Nomination, compatibility and diagnostics in round one preceded its first
+cross-model review at the user's explicit request. Round-two notes now
+supply the reconciliation; the original review remains unchanged.
 
 Start with the [initial research proposal](research-overview/01_INITIAL_RESEARCH_PROPOSAL_20261016.md)
 and the [portfolio plan](../research-overview/01_PORTFOLIO_RESEARCH_PLAN_20261016.md).
@@ -32,7 +49,7 @@ model and effort when work is performed.
 | [reviews](reviews/README.md) | Separate assessments of claims, computations and scope |
 | [source-documents](source-documents/README.md) | Reference provenance and links to canonical sources |
 | [brainstorm](brainstorm/README.md) | Undeveloped candidate mechanisms with a decision question |
-| [manuscript](manuscript/README.md) | Requested unreviewed working manuscript and its build record |
+| [manuscript](manuscript/README.md) | Reviewed round-one working record and original build record |
 | [chat-histories](chat-histories/README.md) | Canonical records of new project-specific conversations |
 
 The proposal states the opening deliverable, controls, dependencies and

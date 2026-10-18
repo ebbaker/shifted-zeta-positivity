@@ -19,7 +19,7 @@ This status update was prepared for Edward Baker with substantial LLM assistance
 | [Sharp finite-sum bounds](02_sharp_finite_sum_bounds/README.md) | Bounded feasibility phase proposed |
 | [Effective outer remainders](03_effective_outer_remainders/README.md) | Higher-risk proposal; new useful estimate required |
 | [Sonin mixed-prime response](04_sonin_mixed_prime_response/README.md) | One analytic calculation proposed |
-| [Constructive stable models](05_constructive_stable_models/README.md) | Gated on a qualifying explicit family |
+| [Constructive stable models](05_constructive_stable_models/README.md) | Opening search closed after review; round-two weak/base-time extensions await review; new construction gated |
 | [Explicit heat zero counts](06_explicit_heat_zero_counts/README.md) | Baseline count cross-model reviewed; requested round-2 count from X>=100000 has same-model checks; consumer tolerance open |
 | [Source-measurement audit](07_source_measurement_audit/README.md) | Round one assessed; round-two notes add one-direction gap events and certified tail bounds; round assessment pending |
 

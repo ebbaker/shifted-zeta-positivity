@@ -7,9 +7,10 @@ Separate assessments of claims, computations and scope.
 
 | Number | Review | Model | Kind |
 | --- | --- | --- | --- |
-| 01 | [Round-one cross-model review](01_ROUND_ONE_CROSS_MODEL_REVIEW_CLAUDE_20261017.md) | Claude Opus 5.5 (`claude-opus-5-5`), effort max | Cross-model LLM assessment of round one (Notes 01–03, replays, working manuscript); one reconciliation pending |
+| 01 | [Round-one cross-model review](01_ROUND_ONE_CROSS_MODEL_REVIEW_CLAUDE_20261017.md) | Claude Opus 5.5 (`claude-opus-5-5`), effort max | Cross-model LLM assessment of round one (Notes 01–03, replays, working manuscript); reconciled in round-two notes |
+| 02 | [Round-two author check](02_ROUND_TWO_AUTHOR_CHECK_CODEX_20261017.md) | gpt-6.1-sol (Codex), effort ultra | Same-model check of the final weak-closure, rollback and Newman-class proofs; round-two cross-model review pending |
 
-Row added 17 October 2026 for Edward Baker with LLM assistance (Claude Opus 5.5,
+Row 01 added 17 October 2026 for Edward Baker with LLM assistance (Claude Opus 5.5,
 Claude Cowork); its support computations are in
 [numerics/round-1/claude-review](../numerics/round-1/claude-review/README.md).
 

@@ -37,3 +37,7 @@ refreshed before reuse; a crosswalk whose labels were revised.
 
 Before certifying a region, check the published coverage and say in the
 record whether the cell is inside it ([21's README table](../papers/investigations-2/active/21_quaternion_theta_geometry/README.md) is asked to say so); write every checker so that an injected error fails it, and record the injection; use containment tests and outward rounding; and present machinery tests as machinery tests, which is how 22's notes present theirs.
+
+## Constructive-stability continuation, 17 October 2026
+
+Prepared for Edward Baker with substantial LLM assistance, **gpt-6.1-sol (Codex), effort ultra**. The [Project 05 cross-model review, Section 3](../papers/investigations-3/05_constructive_stable_models/reviews/01_ROUND_ONE_CROSS_MODEL_REVIEW_CLAUDE_20261017.md) observes that the forward collision-control tables “cannot fail”: Hurwitz already excludes a nonreal-zero function as a complex-compact limit of real-zero functions. The [round-two reconciliation](../papers/investigations-3/05_constructive_stable_models/notes/round-2/README.md) replaces that evidentiary reading with a stable Bessel reverse control. A family also excluded for Bessel has an expressiveness limitation; this is not information about theta stability.

@@ -7,7 +7,7 @@ Numbered research proposals and decisions about priorities.
 
 | Number | Overview | Status |
 | --- | --- | --- |
-| 01 | [Initial research proposal](01_INITIAL_RESEARCH_PROPOSAL_20261016.md) | Current opening plan; not executed |
+| 01 | [Initial research proposal](01_INITIAL_RESEARCH_PROPOSAL_20261016.md) | Opening search executed and reviewed; closed with scoped obstructions. Round-two reconciliation in [notes](../notes/round-2/README.md); new construction required |
 
 Use the next two-digit prefix for a materially revised overview. Keep
 proofs in notes and reviews separately. Link the current overview from

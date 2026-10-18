@@ -11,7 +11,7 @@ Recorded model: **gpt-6.1-sol (Codex)**; reasoning effort: **ultra**.
 
 The [replay index](../../numerics/round-1/README.md) contains the small
 certificates and fixed run contracts. Same-model preparation checks are
-complete; no formal round review has occurred.
+complete. The [cross-model review](../../reviews/01_ROUND_ONE_CROSS_MODEL_REVIEW_CLAUDE_20261017.md) found no mathematical error in the scoped results. The [round-two continuation](../round-2/README.md) supersedes the weak-convergence limitation and open base-time cases; round-two cross-model review is pending.
 
 The independent-spin branch has a scoped stopping result. Single quartic
 laws and the fixed natural Bessel multiplier class also fail their stated

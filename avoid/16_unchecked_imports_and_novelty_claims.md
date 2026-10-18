@@ -44,3 +44,7 @@ A full agent run; a wrong normalization; a same-day retraction; a rule
 ## Instead
 
 Ask for the file and read the printed PDF ([`CONTRIBUTING.md`](../CONTRIBUTING.md) rule 3, the standing rule of ROUND11); quote the theorem number and its hypotheses next to any imported fact; mark unverified imports as such in the text, not only in a footnote; and run the originality search before the word "new" (house rule 2; protocol item C2).
+
+## Constructive-stability continuation, 17 October 2026
+
+Prepared for Edward Baker with substantial LLM assistance, **gpt-6.1-sol (Codex), effort ultra**. The [Project 05 review, summary item 3 and Section 5](../papers/investigations-3/05_constructive_stable_models/reviews/01_ROUND_ONE_CROSS_MODEL_REVIEW_CLAUDE_20261017.md) finds Cardon’s Theorem 1 built on the same Rademacher laws while “the round cites that paper only for Pólya’s Proposition 1.” The [round-two reconciliation](../papers/investigations-3/05_constructive_stable_models/notes/round-2/README.md) checks that theorem, Newman–Wu’s already published weak closure, and Newman’s 1976 Gaussian-convolution classification before using them. Their application closes named construction cases without claiming a new real-zero mechanism.

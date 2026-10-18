@@ -1,5 +1,8 @@
 # Round 1 continuation: field growth and necessary degeneration of quartic networks
 
+> Update, 17 October 2026: the [cross-model review](../../reviews/01_ROUND_ONE_CROSS_MODEL_REVIEW_CLAUDE_20261017.md) found no mathematical error in the scoped round-one claims. The [round-two reconciliation](../round-2/README.md) supersedes the weak-convergence limitation and the unbounded-base-time exception. The original derivation below is retained as the reviewed record; scope corrections and classical attributions are in round two. Recorded updater: gpt-6.1-sol (Codex), effort ultra, with substantial LLM assistance for Edward Baker.
+
+
 17 October 2026. Prepared for **Edward Baker** with substantial LLM assistance. Recorded model: **gpt-6.1-sol (Codex)**; reasoning effort: **ultra**. Same-model authoring checks are not formal round review. The user has explicitly requested this continuation and an unreviewed draft manuscript before the round review.
 
 This continues [Notes 01–02](README.md) under the [result index](../../../../../result-summaries/README.md) and [avoid index](../../../../../avoid/README.md), especially [collision controls](../../../../../result-summaries/12_collision_controls_and_screening.md), [target classification](../../../../../avoid/01_restating_the_target.md) and [scoped exclusions](../../../../../avoid/07_scoped_exclusions_read_as_universal.md). It is a scoped negative result about actual source approximation, not an RH-equivalent target reformulation. It supplies a necessary constraint on growing quartic networks that is stronger than the observation that a fixed model has the wrong tail. It makes no assertion about all Ising scaling limits.

@@ -75,6 +75,7 @@ relative to this folder. Cluster files:
 | [14](14_theta_identities_and_arithmetic_bookkeeping.md) | Positive theta primitive, finite E8 bridge, covariant source, coefficient stability, complete arithmetic identities and scoped obstructions | investigations-2 |
 | [15](15_verification_infrastructure.md) | The reusable machinery: blueprint and ledger, check-programme conventions, certificate formats, chat recorders, hygiene checks | repository-wide |
 | [16](16_hypercomplex_reductions_and_geometric_realizations.md) | Quaternion/octonion reductions, sharp signed averages, physical jet surfaces, hyperkähler metrics and theta connections | investigations-2 (21, 22) |
+| [17](17_constructive_stable_model_obstructions.md) | Scoped spin/quartic exclusions, weak closure, all-base-time rollback and diverging-heat stable control | investigations-3 (05) |
 
 For the octonionic and manifold continuation, start with [16](16_hypercomplex_reductions_and_geometric_realizations.md), then [13](13_local_heat_flow_geometry_and_rh_equivalent_criteria.md) for topology and [14](14_theta_identities_and_arithmetic_bookkeeping.md) for the positive primitive and arithmetic source bridges. [11](11_newman_heat_flow_reductions_and_certificates.md) records finite certificates and outer budgets; [12](12_collision_controls_and_screening.md) records the controls limiting their interpretation.
 
