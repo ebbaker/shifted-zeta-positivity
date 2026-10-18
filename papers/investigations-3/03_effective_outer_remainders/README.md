@@ -1,74 +1,58 @@
 # Effective outer remainders
 
-16 October 2026. Prepared for Edward Baker with substantial LLM assistance.
+17 October 2026. Prepared for Edward Baker with substantial LLM assistance.
 Recorded model: **gpt-6-astra (Codex)**; reasoning effort: **ultra**.
 
-**Status: round 1 ready for review; Codex audit pending.** On 17 October 2026
-Claude Opus 5.5 (`claude-opus-5-5`, Claude Cowork, reasoning effort max)
-added two notes and three [check programmes](numerics/README.md).
+**Current status: round two proved in-note with scalar certificates;
+internal same-model checks only.** For every primitive character of
+conductor q ≥ 10¹², the transport budget gives Sχ(x,3,t) > 6 for every
+real x and 0 ≤ t ≤ 1/4. A finite restarted comparison then gives
+**Λχ ≤ 43/200 = 0.215**. Independent specialist review is outstanding;
+this is not a GRH conclusion or a literature-wide priority claim.
 
-[Note 01](notes/round-1/01_HEIGHT_P_TRANSPORT_AND_LEMMA_AP_CLAUDE_20261017.md) takes as consumer the exterior input of
-Project 01's strip comparison, Lemma A_p: a floor for
-S(x,p,t) = −Im(H_t′/H_t)(x + ip) at a fixed height p ≥ √5. It stops the
-inherited four-jet budget, whose unavoidable costs exceed its margin 1/8
-by a factor of about 10⁶ at L ≈ 27. Proved: an exact transport identity
-(at height p the flowed function is a Gaussian average of the completed
-L-function, which can be recentred at the saddle of its Gamma factor;
-Lemmas 3.1–3.3) and an explicit remainder for the resulting transport
-law (Proposition 4.5, Theorem 4.6). Numerical, by floating evaluation on a
-20-point time grid (not outward-rounded): Lemma A_p with no loss at every
-height for every primitive χ of conductor q ≥ 1.1·10⁵ (even) or 4.9·10⁴
-(odd) at p = √5, and for zeta beyond the X of Polymath's and
-Platt–Trudgian's certificates.
+[Round-two Note 01](notes/round-2/01_UNIFORM_FAMILY_FLOOR_CODEX_20261017.md)
+proves explicit Gaussian and reflected-tail envelopes, then certifies
+E < 1/5 and d₀ > 93/100 over every positive time in the regime and the
+unbounded height/conductor range. The maximum computed enclosure is
+E < 0.192767. [Note 02](notes/round-2/02_RESTARTED_STRIP_COMPARISON_CODEX_20261017.md)
+transfers an intermediate strip through real sine-tail approximants and
+restarts at original time slices. This consumes the positive-time floor
+without H12 for the original flow or a derivative-circle estimate.
+[Review 02](reviews/02_UNIFORM_FLOOR_AND_RESTARTED_COMPARISON_REVIEW_CODEX_20261017.md)
+records the same-model proof checks and certificate replays.
 
-[Note 02](notes/round-1/02_HAKIMOGLU_BROWN_COMPARISON_AND_UNCONDITIONAL_TABLE_CLAUDE_20261017.md) reads Hakimoglu-Brown's preprint
-(arXiv:2610.12803v1) against note 01. The preprint's floors have the same
-main term as note 01's, and at its height 61/20 note 01's remainder is 1.7
-to 4.4 times smaller (floating). Main finding, conditional on the
-preprint's unrefereed analytic lemmas and on Polymath's published boundary
-computation: its derivative-kernel comparison (Theorem 12), started from
-the strip M(0) ≤ 1 that every zero of ξ satisfies, gives Λ ≤ 0.18891 with
-no zero-free half-plane as input. The 34-row table is checked in exact
-rational and directed-rounding arithmetic. Stronger unrefereed claims
-start from the same strip: Gordon 0.1577, Raymond 0.1494, and Planat
-0.1486 under stated premises. The table is therefore a cross-check whose
-numerical inputs are all published, not a record (note 02, Section 11).
-Planning: the same kernel lowers Project 01's Target A values by 5–13%.
+The [round-one review](reviews/01_ROUND_ONE_CROSS_MODEL_REVIEW_CODEX_20261017.md)
+of Claude Opus 5.5's notes found no blocking error in the corrected
+transport identity and complete remainder formula. The current
+[24-page manuscript](manuscript/README.md) corrects the saddle uniqueness
+domain, numerical quantifiers, and Project 01 dependency links, and
+summarizes the new result. Historical notes and original numerical records
+remain available in [round 1](notes/round-1/README.md).
 
-The notes and code are in [notes/round-1](notes/round-1/README.md) and
-[numerics/round-1](numerics/round-1/README.md). The round README lists
-what a review should check, and the errata found while drafting the
-manuscript.
+The original thresholds near q = 1.1·10⁵ (even) and 4.9·10⁴ (odd), and
+the comparisons at zeta verification heights, remain floating evaluations
+with sampled monotonicity. They are not uniformly certified by round two.
+The exact/directed 34-row zeta table still gives Λ ≤ 0.18891 **conditional
+on the external analytic estimates** of Hakimoglu-Brown and the stated
+published boundary computation. Its arithmetic replay does not close
+that separate analytic audit.
 
-At Edward's request, an unreviewed 22-page
-[working manuscript](manuscript/README.md) integrating round 1 was drafted
-the same day by Claude Opus 5.5 (Claude Cowork, effort max). It is not a
-reviewed milestone.
-
-Open: an independent check of the preprint's Lemma 3 and Proposition 11
-(the Codex audit), certification of note 01's evaluation, and H12 with the
-comparison theorem (Project 01). The 16 October setup itself reported no
-result.
-
-Start with the [initial research proposal](research-overview/01_INITIAL_RESEARCH_PROPOSAL_20261016.md)
-and the [portfolio plan](../research-overview/01_PORTFOLIO_RESEARCH_PLAN_20261016.md).
-Codex leads the complete remainder budget; Claude audits imports, losses and consumer applicability. These are future model-family responsibilities; record the actual
-model and effort when work is performed.
+The next review should check the uniform envelope and the restarted
+transfer before extending the conductor range or the stronger kernel.
+The initial proposal and the portfolio plan remain the research context.
 
 | Folder | Purpose |
 | --- | --- |
-| [research-overview](research-overview/README.md) | Numbered research proposals and decisions about priorities |
-| [notes](notes/README.md) | Incremental derivations and one coordination note per phase |
-| [numerics](numerics/README.md) | Reproducible code, parameters and small execution records |
-| [reviews](reviews/README.md) | Separate assessments of claims, computations and scope |
-| [source-documents](source-documents/README.md) | Reference provenance and links to canonical sources |
-| [brainstorm](brainstorm/README.md) | Undeveloped candidate mechanisms with a decision question |
-| [manuscript](manuscript/README.md) | Unreviewed working draft of 17 October 2026; a stable manuscript follows a reviewed milestone |
-| [chat-histories](chat-histories/README.md) | Canonical records of new project-specific conversations |
+| [research-overview](research-overview/README.md) | Initial proposal and priorities |
+| [notes](notes/README.md) | Derivations grouped by round |
+| [numerics](numerics/README.md) | Programs and small execution records |
+| [reviews](reviews/README.md) | Assessments of proofs, arithmetic and scope |
+| [source-documents](source-documents/README.md) | Reference provenance |
+| [brainstorm](brainstorm/README.md) | Undeveloped candidates |
+| [manuscript](manuscript/README.md) | Current source and PDF; no specialist-reviewed milestone |
+| [chat-histories](chat-histories/README.md) | Canonical project conversations |
 
-The proposal states the opening deliverable, controls, dependencies and
-stopping criteria. Its linked earlier results retain their canonical homes;
-this project owns only the new work specified there.
-Keep this status current at each accepted gate. See [draft history](DRAFT_HISTORY.md),
-the [result summaries](../../../result-summaries/README.md) and
-[patterns to avoid](../../../avoid/README.md).
+See [draft history](DRAFT_HISTORY.md), the
+[result summaries](../../../result-summaries/README.md) and
+[patterns to avoid](../../../avoid/README.md). Detailed evidence belongs
+in the linked notes, records and reviews.

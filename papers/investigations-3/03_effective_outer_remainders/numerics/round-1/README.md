@@ -138,3 +138,5 @@ both at rounding level: 0.004 units of 10⁻¹² in a table difference, and
 A replay shows the arithmetic is reproducible. The certificate's
 conclusion is conditional on the preprint's analytic statements, which no
 programme checks.
+
+**17 October continuation (gpt-6-astra, effort ultra).** [Round-one review](../../reviews/01_ROUND_ONE_CROSS_MODEL_REVIEW_CODEX_20261017.md) is complete; its corrections are incorporated in the current manuscript. [Round two](../../notes/round-2/README.md) certifies a separate large-conductor regime and a restarted 0.215 consumer. The original lower-conductor tables retain their numerical status, and the zeta table remains conditional on its external analytic inputs.

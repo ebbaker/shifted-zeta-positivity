@@ -26,7 +26,7 @@
 \title{Height-$p$ transport for heat-flowed $L$-functions\\[2pt]
 \large An explicit remainder for the exterior input of strip comparisons}
 \author{Drafted for Edward Baker}
-\date{17 October 2026\\\small Unreviewed working draft}
+\date{17 October 2026\\\small Working draft; reviewed corrections and round-two result}
 \begin{document}
 \maketitle
 \begin{abstract}
@@ -42,11 +42,11 @@ using only Euler-product majorants at real arguments, the digamma function
 and a partial-summation bound in the critical strip, with no
 Riemann--Siegel formula, truncated Dirichlet series or zero-free region.
 Cauchy's estimate then bounds $\partial_pS$. Evaluated in floating point
-on a grid of times, the bound keeps the exact time-zero floor of $S$ with
-no loss for every primitive character of conductor at least
-$1.1\cdot10^5$ (even) or $4.9\cdot10^4$ (odd) at $p=\sqrt5$, and for $\zeta$
-beyond the heights of the published computations of Polymath and of Platt
-and Trudgian. At Hakimoglu-Brown's height $p=61/20$ its remainder,
+on a grid of times, the bound supports a conjectured zero-loss floor for
+primitive characters above conductor $1.1\cdot10^5$ (even) or
+$4.9\cdot10^4$ (odd) at $p=\sqrt5$, and for $\zeta$ beyond the published
+verification heights. These numerical thresholds also rely on sampled
+monotonicity in height and conductor; uniform coverage is not certified. At Hakimoglu-Brown's height $p=61/20$ its remainder,
 evaluated in floating point, is $1.7$ to $4.4$ times smaller than that of
 his Riemann--Siegel-based estimate. As
 a cross-check we restart his derivative-kernel comparison from the
@@ -54,6 +54,10 @@ classical strip. A 34-row table, verified in exact and directed-rounding
 arithmetic, gives $\Lambda\le0.18891$ conditionally on the analytic lemmas
 of his unrefereed preprint. This is not a record: unrefereed preprints
 already claim stronger bounds from the same starting point.
+A subsequent certified regime at $p=3$ gives $S_\chi>6$ for every real
+height and $0\le t\le1/4$ when $q\ge10^{12}$. A finite restarted
+sine-tail comparison then gives $\Lambda_\chi\le43/200=0.215$;
+the full derivations are in the accompanying round-two notes.
 \end{abstract}
 
 \noindent\textbf{Draft status.}
@@ -66,8 +70,14 @@ those bounds, not outward-rounded certificates. Proposition~\ref{prop:table}
 is conditional on a cited unrefereed preprint, and
 Section~\ref{sec:planning} is planning arithmetic. Derivations, programmes
 and authoring checks used Claude Opus 5.5 (Anthropic). Those checks were
-internal and same-model; cross-model and specialist human review are
-pending.
+internal and same-model. A subsequent cross-model LLM review by
+gpt-6-astra (Codex, effort ultra) found no blocking error in the corrected
+analytic core and reproduced the conditional table certificate. This
+revision addresses its saddle-domain, quantifier and dependency comments;
+specialist human review remains outstanding. Section~\ref{sec:roundtwo}
+summarizes a later uniform family certificate and its proved-in-note
+consumer, prepared by Codex with internal same-model checks only.
+The original near-threshold tables remain uncertified.
 
 \section{Introduction}\label{sec:intro}
 
@@ -141,19 +151,25 @@ $t\ell_*/4$; this is the \emph{height-$p$ transport}.
 estimate applied to the remainder bounds $\partial_pS$
 (Corollary~\ref{cor:derivative}).
 \item \emph{Numerical evaluation (Section~\ref{sec:numerics}).} Floating
-evaluation of $E$ on a grid of 20 times $0.001\le t\le\frac12$ shows the
-floor of Lemma~\ref{lem:floor0} persisting with no loss. This holds for
-every primitive character of conductor $q\ge1.084\cdot10^5$ (even) or
-$q\ge4.892\cdot10^4$ (odd) at $p=\sqrt5$, at every height. For $\zeta$ the
-constant floor $\frac14\ell_X-\frac12\kappa(\sigma_0)$ persists at every
-$x\ge X$, for the heights $X$ used by Polymath \cite{polymath} and by Platt
-and Trudgian \cite{platttrudgian}. At $p=61/20$ the floating remainder is
+evaluation of $E$ on a grid of 20 times $0.001\le t\le\frac12$ supports
+zero-loss thresholds $q\ge1.084\cdot10^5$ (even) and
+$q\ge4.892\cdot10^4$ (odd) at $p=\sqrt5$. For $\zeta$ it similarly
+supports the floor $\frac14\ell_X-\frac12\kappa(\sigma_0)$ beyond the
+verification heights of Polymath \cite{polymath} and Platt and Trudgian
+\cite{platttrudgian}. Extension to every larger conductor and height,
+even at grid times, assumes monotonicity that is sampled rather than
+proved; the evaluations are not outward-rounded certificates. At $p=61/20$ the floating remainder is
 smaller than that of \cite[Proposition~11]{hb} by factors of $1.7$ to $4.4$.
 \item \emph{A check from the classical strip
 (Section~\ref{sec:strip}).} Conditionally on the analytic lemmas of
 \cite{hb}, Hakimoglu-Brown's Theorem~12 started from the classical strip
 $M(0)\le1$ gives $\Lambda\le18891/100000$ (Proposition~\ref{prop:table}).
 The 34-row table is verified in exact and directed-rounding arithmetic.
+\item \emph{Certified family regime (Section~\ref{sec:roundtwo}).}
+Round-two notes \cite{r2floor,r2consumer} prove and certify
+$S_\chi(x,3,t)>6$ for $q\ge10^{12}$ and $0\le t\le1/4$, and derive
+$\Lambda_\chi\le43/200$ by a finite restarted comparison. Their
+review status is internal same-model only.
 \end{itemize}
 
 Table~\ref{tab:status} records the status of each statement.
@@ -168,6 +184,7 @@ Lemmas~\ref{lem:floor0}--\ref{lem:partial}, Propositions~\ref{prop:paired} and~\
 Section~\ref{sec:numerics}: thresholds, floors, comparison with \cite{hb} & numerical: floating point, monotonicity in $\ell_*$ sampled, grid times only\\
 Proposition~\ref{prop:table}: $\Lambda\le0.18891$ & conditional on \cite[Lemmas~2, 3, 6, 10, Proposition~11, Theorem~12]{hb} and the further inputs listed in Proposition~\ref{prop:table}\\
 Section~\ref{sec:planning} & planning: depends on unproved inputs named there\\
+Section~\ref{sec:roundtwo}: $\Lambda_\chi\le43/200$ for $q\ge10^{12}$ & proved in the accompanying notes from named imports; Arb and exact rational certificates; same-model checks only\\
 \bottomrule
 \end{tabularx}
 \caption{Status of the statements.}\label{tab:status}
@@ -355,8 +372,11 @@ For the family at large conductor the region is the whole line. For $\zeta$
 and for small conductors it is $\lvert x\rvert\ge X$, and the rest is
 covered by a finite verification and a barrier, as in
 \cite[Lemma~2]{hb}. In \cite{p01}, \eqref{eq:Ep} is called Lemma~$A_p$. The
-comparison also needs uniform confinement of the nonreal zeros at positive
-times (\cite{p01}, item H12) and a first-contact argument; for $\zeta$,
+original comparison route also needs uniform confinement of the nonreal
+zeros at positive times (\cite{p01}, item H12) and a first-contact argument;
+Project~01 subsequently bypasses H12 for its own height-three comparison
+by a sine-tail approximation \cite{p01r3}. Transferring the stronger
+positive-time inputs used here still needs an explicit argument. For $\zeta$,
 \cite{hb} supplies these through \cite[Theorem~1.5]{polymath} and its
 Lemma~2. The theorems of this paper concern \eqref{eq:Ep} only.
 Statement~\eqref{eq:Ep} lives at height $p>1$, where the Dirichlet series
@@ -401,7 +421,7 @@ $\sigma_*=\re s_*$. Then
 \ell_*\ge\ell_*^{(0)}\ge\ell_0,
 \]
 where $\ell_*^{(0)}=2\alpha(\sigma^{(0)})$ and $\sigma^{(0)}$ is the unique
-real solution of $\sigma=\sigma_0+\tau^2\alpha(\sigma)$, the saddle at $x=0$.
+solution in $[\sigma_0,\infty)$ of $\sigma=\sigma_0+\tau^2\alpha(\sigma)$, the saddle at $x=0$.
 
 \emph{Zeta.} For $x\ge40$ and $1<p\le x$ the same map has a unique fixed point
 in $D_x=\{\mu:0\le\re\mu\le R_x,\ \lvert\im\mu\rvert\le\frac12\}$,
@@ -891,16 +911,16 @@ from 10 to 40, at all 12 sampled settings: the even family at $p=\sqrt5$,
 the odd family at $p=3$ and $\zeta$ at $p=\sqrt5$, each at
 $t\in\{0.002,0.05,0.2,0.5\}$ (R1, section H). This monotonicity is
 checked, not proved, and the other settings used below were not
-sampled. With the zeta row, \eqref{eq:Ep}
-holds at every grid time from $x\approx4\pi e^{9.62}\approx1.9\cdot10^5$ at
+sampled. Assuming the unproved uniform monotonicity, the zeta row suggests
+\eqref{eq:Ep} at the grid times from $x\approx4\pi e^{9.62}\approx1.9\cdot10^5$ at
 $p=\sqrt5$, and from $x=2\cdot10^4+1$ at $p=3$.
 
 \subsection{The family at every height}\label{sec:family}
 
 At $x=0$ the saddle is real and $\ell_*=\ell_*^{(0)}$, and
-Lemma~\ref{lem:saddle} gives $\ell_*(x)\ge\ell_*^{(0)}$ at every $x$. With
-$\mathfrak F$ increasing (sampled), $S(x,p,t)\ge\mathfrak F(\ell_*^{(0)}(t))=:\mathfrak F_0(t)$
-for every real $x$. Table~\ref{tab:conductor} gives the smallest conductor
+Lemma~\ref{lem:saddle} gives $\ell_*(x)\ge\ell_*^{(0)}$ at every $x$. If $\mathfrak F$ is increasing on the full range (only sampled here),
+then $S(x,p,t)\ge\mathfrak F(\ell_*^{(0)}(t))=:\mathfrak F_0(t)$ for every
+real $x$. The computations below test this prospective uniform floor. Table~\ref{tab:conductor} gives the smallest conductor
 for which $\mathfrak F_0(t)\ge C_{q,\fa}(p)$ at every $t\in\mathcal T$:
 the passing end of a bisection in $\log_{10}q$ to $0.006$ (R1, section H),
 rounded up. These thresholds
@@ -923,9 +943,8 @@ odd & $q\ge4.892\cdot10^4$ ($\ell_0=9.49$) & $q\ge6.62\cdot10^2$ ($\ell_0=5.39$)
 At $q=10^6,10^8,10^{10},10^{12}$ the excess
 $\min_{t\in\mathcal T}(\mathfrak F_0(t)-C_{q,\fa}(p))$ is positive for both
 parities and $p\in\{\sqrt5,3\}$, from $0.0014$ to $0.0077$, attained at
-$t=0.001$; at $t=\frac12$ it is $0.37$ to $0.97$ (R1, section F). So on
-the grid \eqref{eq:Ep} holds with $C(t)=C_{q,\fa}(p)$ at every real $x$,
-and the floor rises with $t$.
+$t=0.001$; at $t=\frac12$ it is $0.37$ to $0.97$ (R1, section F). These sampled values support \eqref{eq:Ep} with $C(t)=C_{q,\fa}(p)$;
+they do not establish the extension to every real $x$ or between grid times.
 
 \subsection{\texorpdfstring{$\zeta$}{Zeta} beyond the verified height}\label{sec:zetaX}
 
@@ -955,8 +974,8 @@ $5\cdot10^{12}+194858$ ($\ell_X=26.71$) & 0.0064 & 0.0026 & 0.0011 & 0.00054 & 0
 
 All minima are attained at $t=0.001$. They are thin at large $p$ only
 because $\tau^2$ is small there, so the floor at those times is close to
-$\frac14\ell_X-\frac12\kappa(\sigma_0)$. On the grid, then, \eqref{eq:Ep}
-holds at every $x\ge X$ with the constant floor
+$\frac14\ell_X-\frac12\kappa(\sigma_0)$. With the uniform monotonicity and numerical enclosures still to be
+proved, these samples support \eqref{eq:Ep} for $x\ge X$ with the constant floor
 $\frac14\ell_X-\frac12\kappa(\sigma_0)$; the $x$-dependent floor
 $\frac14\log\frac x{4\pi}-\frac12\kappa(\sigma_0)$ is larger. The sampled
 heights include the band $3\le\im z\le6$ on which \cite{hb} works.
@@ -1373,26 +1392,64 @@ $10^{12}$ & odd & 0.1897 (2.24) & 0.1839 (2.24) & 0.1611 (2.5) & $-15.1\%$\\
 \end{table}
 
 The best $p$ for the even character at $q=10^6$ is at the edge of the grid.
-These values remain conditional on the uniform confinement of the nonreal
-zeros at positive times (\cite{p01}, item H12), on a written comparison
-theorem for the family, now with Lemma~\ref{lem:hb10}'s kernel and the
-second exterior input $\partial_pS\le G$, and on the certification of
-Section~\ref{sec:numerics}.
+These values require certification of Section~\ref{sec:numerics} and a
+written family comparison consuming Lemma~\ref{lem:hb10}'s kernel and
+$\partial_pS\le G$. The original route used H12. Project~01 now bypasses
+H12 for a different comparison \cite{p01r3}; its approximation preserves
+an initial floor, not automatically these stronger positive-time inputs.
 
 For a single character, Platt's verification heights \cite{platt2016} give
 $\ell\approx16.6$ for every $q\le400{,}000$ \cite[Section~4.1]{p01}, above
-every $\ell_1$ of Table~\ref{tab:thresholds}. So on the grid
-\eqref{eq:Ep} holds with $C(t)=\frac14\ell-\frac12\kappa(\sigma_0)$ beyond
-the verified height of each such character. A bound for $\Lambda_\chi$
+every $\ell_1$ of Table~\ref{tab:thresholds}. The numerical samples therefore support
+\eqref{eq:Ep} with $C(t)=\frac14\ell-\frac12\kappa(\sigma_0)$ beyond
+each verification height, subject to the same uncertified uniformity. A bound for $\Lambda_\chi$
 would still need a barrier for that character and a finite-region argument.
+
+\section{A certified height-three regime for the family}\label{sec:roundtwo}
+
+The subsequent notes \cite{r2floor,r2consumer} close one regime of the
+preceding program. For every primitive character with conductor
+$q\ge10^{12}$ they establish
+\[
+ S_\chi(x,3,t)>6\quad(x\in\mathbb R,\ 0\le t\le1/4),
+ \qquad \Lambda_\chi\le43/200=0.215.
+\]
+These statements are proved in the notes from the present transport
+lemmas, the elementary paired-kernel inequality and the general
+entire-function strip theorem used in \cite{p01r3}. They have internal
+same-model checks; independent specialist review is outstanding.
+
+For the floor, set $h=t/2$, $\ell=\ell_*\ge129/5$ and
+$\sigma=2+h\ell/2$, with moving cutoff $V=(\sigma-1)/2$.
+Gaussian moment bounds replace quadrature in the Euler region.
+Explicit critical and reflected tail estimates handle both $h\downarrow0$
+and $\ell\to\infty$. Monotone endpoints on 1,000 rational intervals
+cover every $0<h\le1/8$. Arb at 128 bits certifies
+$E<1/5$ and $d_0>93/100$; the computed envelope gives $E<0.192767$.
+The time-zero floor covers $t=0$. Both parities are dominated by the
+even Gamma majorants, and
+\[
+ S_\chi>\frac{129}{20}-\frac{57}{200}-\frac1{10}
+ =\frac{1213}{200}>6.
+\]
+
+The comparison transfers an intermediate zero strip through real
+sine-tail approximants, then restarts at each of 2,150 original time
+slices of length $1/10000$. Only the initial floor of each approximant
+is transferred; Burgers' weaker floor applies during each short step.
+The original floor six is available again at the next restart. Exact
+rational exponential gates with step floor $1499/250$ and
+$k=2623/375$ make the squared-strip recurrence reach zero by $43/200$.
+This does not require H12 for the original flow or a vertical derivative
+certificate. It does not certify the planning tables at lower conductors,
+and does not change the conditional status of the zeta value $0.18891$.
 
 \subsection{What remains}
 
 \begin{enumerate}
-\item \emph{Review.} Sections~\ref{sec:setting}--\ref{sec:derivative}
-should be reviewed first, since everything else rests on
-Theorem~\ref{thm:transport} and Corollary~\ref{cor:derivative}.
-\item \emph{Certification.} Re-evaluate $E$ and the bound of
+\item \emph{Review.} The cross-model LLM review supports the corrected
+analytic core. Independent specialist review remains outstanding.
+\item \emph{Certification beyond the regime above.} Re-evaluate $E$ and the bound of
 Corollary~\ref{cor:derivative} with outward rounding, with monotone
 majorants on intervals of $\sigma$ and interval quadrature; cover every
 $t\in(0,\frac12]$ by monotonicity or Lipschitz bounds between grid times;
@@ -1400,8 +1457,10 @@ prove the decrease of $E$ in $\ell_*$ term by term; and bound the
 $O(\tau^3)$ term below $t=0.001$. If outward rounding moves
 $\ell_1(\sqrt5)$ above 12, the conductor thresholds of
 Table~\ref{tab:conductor} must be recomputed.
-\item \emph{The family.} Confinement (H12) and the comparison theorem
-\cite{p01}.
+\item \emph{The family.} Independently review the uniform envelope and
+restarted transfer of \cite{r2floor,r2consumer} before extending their
+conductor range or importing the stronger derivative kernel. H12 itself
+remains open; it is bypassed for the new result.
 \item \emph{$\zeta$.} An independent re-derivation of \cite[Lemma~3 and
 Proposition~11]{hb}, on which Proposition~\ref{prop:table} rests.
 \item \emph{Literature.} Full readings of
@@ -1554,8 +1613,9 @@ checks described in Appendix~\ref{app:repro}. These checks do not
 constitute independent cross-model or specialist human review. The
 preprint \cite{hb} on which Section~\ref{sec:strip} relies states that it
 was prepared with ChatGPT assistance and has not been independently
-refereed. This manuscript is unreviewed and does not imply the intended
-author's endorsement of its mathematical claims.
+refereed. The review corrections and round-two research were prepared with
+gpt-6-astra (Codex, reasoning effort ultra). This is internal LLM review, not specialist human review,
+and does not imply the intended author's endorsement of the claims.
 
 \begin{thebibliography}{99}
 
@@ -1600,8 +1660,29 @@ Proc. Amer. Math. Soc. \textbf{61} (1976), 245--251.
 \bibitem{p01}
 Project~01 (Dirichlet--Newman families), Note~01,
 \emph{Normalization and transfer contract}, 17 October 2026,
-\nolinkurl{papers/investigations-3/01_dirichlet_newman_families/notes/01_NORMALIZATION_AND_TRANSFER_CONTRACT_CLAUDE_20261017.md},
-in the repository of \cite{records}. Unreviewed.
+\nolinkurl{papers/investigations-3/01_dirichlet_newman_families/notes/round-1/01_NORMALIZATION_AND_TRANSFER_CONTRACT_CLAUDE_20261017.md},
+in the repository of \cite{records}. Subsequently reviewed internally.
+
+\bibitem{p01r3}
+Project~01, Round-three Note~03,
+\emph{Removing confinement from the strip comparison by a real sine tail},
+17 October 2026,
+\nolinkurl{papers/investigations-3/01_dirichlet_newman_families/notes/round-3/03_SINE_TAIL_LIMIT_AND_COMPARISON_CODEX_20261017.md}.
+Proved in-note; internal same-model checks only.
+
+\bibitem{r2floor}
+Project~03, Round-two Note~01,
+\emph{A uniform height three floor for large conductor characters},
+17 October 2026,
+\nolinkurl{papers/investigations-3/03_effective_outer_remainders/notes/round-2/01_UNIFORM_FAMILY_FLOOR_CODEX_20261017.md}.
+Proved in-note with an Arb scalar certificate; same-model checks only.
+
+\bibitem{r2consumer}
+Project~03, Round-two Note~02,
+\emph{A restarted strip comparison consuming a global positive-time floor},
+17 October 2026,
+\nolinkurl{papers/investigations-3/03_effective_outer_remainders/notes/round-2/02_RESTARTED_STRIP_COMPARISON_CODEX_20261017.md}.
+Proved in-note from named imports; exact scalar gates, same-model checks only.
 
 \bibitem{n01}
 Note~01, \emph{Height-$p$ transport and Lemma $A_p$}, 17 October 2026,

@@ -18,3 +18,5 @@ first needed; no large archive is created by this setup.
 standard-library check programmes and their records for notes 01 and 02,
 with run commands, replay results and SHA-256 hashes, are in
 [round-1/README.md](round-1/README.md).
+
+**Round 2** (17 October 2026; gpt-6-astra, effort ultra): an Arb continuous-domain floor certificate and exact rational restart gates, with proofs and replay identities, are in [round-2/README.md](round-2/README.md).

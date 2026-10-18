@@ -107,3 +107,5 @@ filed; a review should treat this list as part of round 1.
 
 [Code and records](../../numerics/round-1/README.md) ·
 [All rounds](../README.md) · [Project README](../../README.md)
+
+**17 October continuation (gpt-6-astra, effort ultra).** [Round-one review](../../reviews/01_ROUND_ONE_CROSS_MODEL_REVIEW_CODEX_20261017.md) is complete; its corrections are incorporated in the current manuscript. [Round two](../../notes/round-2/README.md) certifies a separate large-conductor regime and a restarted 0.215 consumer. The original lower-conductor tables retain their numerical status, and the zeta table remains conditional on its external analytic inputs.

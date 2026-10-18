@@ -82,6 +82,22 @@ LLM assistance: **gpt-6-astra (Codex)**, reasoning effort **ultra**.
   cumulative constant or demonstrated consumer gain. Added 17 October 2026
   for Edward Baker with substantial LLM assistance, **gpt-6.1-sol, ultra**.
 
+
+- **Uniform family floor and restarted comparison (Investigation 3/03).**
+  For every primitive character with conductor \(q\ge10^{12}\),
+  \(S_\chi(x,3,t)>6\) for every real \(x\) and \(0\le t\le1/4\),
+  and \(\Lambda_\chi\le43/200=0.215\): **proved in-note from named
+  imports, with Arb/exact scalar certificates and internal same-model
+  checks only; specialist review outstanding**.
+  [Round-two proofs](../papers/investigations-3/03_effective_outer_remainders/notes/round-2/README.md)
+  close all time, height/conductor and reflected-tail ranges for this
+  regime. The finite restart consumes the original positive-time floor
+  without H12 for the original flow. [Review 02](../papers/investigations-3/03_effective_outer_remainders/reviews/02_UNIFORM_FLOOR_AND_RESTARTED_COMPARISON_REVIEW_CODEX_20261017.md).
+  This does not certify the earlier near-threshold tables or the derivative
+  circle, and the separate zeta 0.18891 result remains conditional on its
+  external analytic inputs. Added 17 October 2026 for Edward Baker with
+  substantial LLM assistance, **gpt-6-astra (Codex), ultra**.
+
 ## Status
 
 Reductions: proved (Polymath imports named). Counter-kernels: proved.

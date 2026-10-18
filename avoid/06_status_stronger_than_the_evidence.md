@@ -35,6 +35,9 @@ values labelled \(\Lambda_{c,p}\).
 A same-day retraction; a deferred arXiv submission; correction blocks and
 a legacy-key guide in 19; headlines that still outrun their reviews.
 
+
+- **Positive correction, 17 October 2026:** [Project 03 Review 02](../papers/investigations-3/03_effective_outer_remainders/reviews/02_UNIFORM_FLOOR_AND_RESTARTED_COMPARISON_REVIEW_CODEX_20261017.md) distinguishes a new complete-domain certificate from the old samples: “The original lower-conductor zero-loss thresholds, derivative-circle bounds, and zeta value \(0.18891\) do not acquire stronger status.” The new family bound is explicitly “proved in-note” with internal same-model checks; scalar replay is not an audit of every analytic import. Added for Edward Baker with substantial LLM assistance, **gpt-6-astra (Codex), ultra**.
+
 ## Instead
 
 Use the status vocabulary of [`result-summaries/README.md`](../result-summaries/README.md) and the source's own words; state the hypothesis that does the work in the headline; run the originality search before "new" (house rule 2 of [`CONTRIBUTING.md`](../CONTRIBUTING.md); item C2 of the [first-slab protocol](../papers/weil-positivity/shifted-zeta/first-slab-positivity/verification/PROTOCOL_C1_C2.md)); when a claim is withdrawn, write the withdrawal into the file that made it, not only into a review ([`REDACTION_CHECKLIST.md`](../early-chat-logs/initial-project-files/rh3/REDACTION_CHECKLIST.md) item 9: corrections get a pointer, never a silent fix).

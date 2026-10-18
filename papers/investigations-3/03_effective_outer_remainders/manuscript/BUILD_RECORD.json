@@ -1,54 +1,68 @@
 {
-  "schema": "effective_outer_remainders_working_draft_build_v1",
+  "schema": "effective_outer_remainders_working_draft_build_v2",
   "date": "2026-10-17",
   "prepared_for": "Edward Baker",
-  "model": "Claude Opus 5.5 (claude-opus-5-5), Claude Cowork",
-  "reasoning_effort": "max",
+  "model": "gpt-6-astra (Codex)",
+  "reasoning_effort": "ultra",
   "llm_assistance": "Substantial LLM assistance, acknowledged in manuscript.",
-  "status": "Unreviewed working draft requested before formal round review.",
+  "status": "Round-one cross-model LLM review corrections incorporated; round-two result proved in accompanying notes with internal same-model checks. Specialist review outstanding.",
   "source": "height_p_transport.tex",
   "pdf": "height_p_transport.pdf",
-  "source_sha256": "b9d3b09231d5d21e7337c75d1c84340e2af3946832d6977224657efc7b7f661a",
-  "pdf_sha256": "a9ef9251a9b7e418cf63d062e1d432630dd7982d4e1eedc6d70168e3c40c6439",
-  "source_bytes": 85895,
-  "pdf_bytes": 463909,
-  "pages": 22,
-  "compiler": "pdfTeX 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian), latexmk 4.83 (retained PDF, x86_64 Linux); the source also builds to 22 pages with latexmk 4.76 on aarch64 Linux",
+  "source_sha256": "192820e9ecf07169121e1886ed22b0ae05128e4a1481f30859883d00d8441e87",
+  "pdf_sha256": "5e60e492bb68453d308e2b594674f5a6f7587deffd2798f3d1f9fd0fd24c1b46",
+  "source_bytes": 91043,
+  "pdf_bytes": 472654,
+  "pages": 24,
+  "compiler": "pdfTeX 3.141592653-2.6-1.40.25 (TeX Live 2023); latexmk 4.79; macOS arm64",
   "validation": {
     "compilation_success": true,
     "undefined_references_or_citations": false,
     "overfull_boxes": false,
     "type3_bitmap_fonts": false,
+    "font_inspection": "All page font resources inspected using pypdf; all Type1.",
     "all_pages_rendered_and_layout_inspected": true,
-    "page_count": 22,
-    "full_page_mathematical_layout_spot_checks": [
-      8,
-      9,
-      14
-    ],
-    "mathematical_authoring_checks": "same-model only: two Claude subagents checked the proofs of Sections 2-5 and the numbers, imported statements, status words and references against the notes, the records and the preprint; not formal round review"
+    "page_count": 24,
+    "mathematical_authoring_checks": "Round-one cross-model LLM review; round-two proof and scalar checks within gpt-6-astra same-model agent team. No specialist review."
   },
   "sources": {
     "notes/round-1/01_HEIGHT_P_TRANSPORT_AND_LEMMA_AP_CLAUDE_20261017.md": "f591b9e7d03c9d32ac2167fcb90d72b5b2f99dc69faa746fbeb15cbba25185a2",
     "notes/round-1/02_HAKIMOGLU_BROWN_COMPARISON_AND_UNCONDITIONAL_TABLE_CLAUDE_20261017.md": "3a95a8d34d8210acb9fd3efdf9ea95fcfef9e652149c2962797b00d8762877d5",
     "numerics/round-1/HEIGHT_P_TRANSPORT_CLAUDE_20261017.json": "e1e2f2b2b19973006484b5f79aa3373a440d981ba46003e28762879fd290341a",
     "numerics/round-1/HAKIMOGLU_BROWN_COMPARISON_CLAUDE_20261017.json": "460a3478b9f0f63af370e3ffb3e884e584f7e7d123cc1cd9e4ac3bf9a1ba660b",
-    "numerics/round-1/UNCONDITIONAL_STRIP_TABLE_CLAUDE_20261017.json": "69997f80743411bb952c727f1e8c25b710fe28b14d8a2f995967fb08383eff67"
+    "numerics/round-1/UNCONDITIONAL_STRIP_TABLE_CLAUDE_20261017.json": "69997f80743411bb952c727f1e8c25b710fe28b14d8a2f995967fb08383eff67",
+    "notes/round-2/01_UNIFORM_FAMILY_FLOOR_CODEX_20261017.md": "a8b1bf8cb2b6cafc00eb51ee19b9a1bc6266a6191ef0f1604922e33a70d03374",
+    "notes/round-2/02_RESTARTED_STRIP_COMPARISON_CODEX_20261017.md": "4a0f968d770b10621c1d54bc0af030cb72731110e6f806d3a5b9ea78d3f23f02",
+    "notes/round-2/README.md": "8e632aa5d58e6c44e8817f6d1797a72823e45ac788fe95357139ceb405e07e3c",
+    "numerics/round-2/FAMILY_FLOOR_GATE_ARB_20261017.json": "d3b409e223ab8f002ee040932029f863bdf13c670bdf18be3966082a4dcd2b34",
+    "numerics/round-2/README.md": "a962e037258fbc90470e46e5a18a6283e2d26d61e972461843258a3f5923694d",
+    "numerics/round-2/RESTARTED_STRIP_CONSUMER_SCALAR_GATES_20261017.json": "7fe16236e4432e8c5148ad9fb54a2f3aad75315dadde98806880b45cb33cf416",
+    "numerics/round-2/certify_restarted_strip_consumer_20261017.py": "8c6b82f89f13a28ff61531e2046869b88fbd8e1b4e8700719351b0dac775f3b4",
+    "numerics/round-2/family_floor_gate_arb_20261017.py": "581a4df5aa0bd52df4f5ad6a7524a60d712eec481690bedc728749cf80c477e8"
   },
   "new_results": [
     "Exact height-p transport identity: S(x,p,t) is half the real part of the logarithmic derivative of a Gaussian average of the completed function, recentred at the Gamma saddle (Lemmas 3.1-3.3).",
     "Explicit remainder from Euler-product majorants, the digamma function and partial summation, with no Riemann-Siegel formula or zero-free region (Proposition 4.5, Theorem 4.6).",
     "Upper bound for the vertical derivative of S by Cauchy's estimate (Corollary 5.1).",
-    "Floating evaluation on a 20-point time grid: no loss of the time-zero floor for conductors at least 1.084e5 (even) and 4.892e4 (odd) at p = sqrt5, and for zeta at x >= X (numerical, not certified).",
-    "34-row table from the classical strip giving Lambda <= 0.18891 conditional on the analytic lemmas of arXiv:2610.12803v1 (a cross-check, not a record)."
+    "Original near-threshold no-loss floors remain floating and depend on sampled height/conductor monotonicity; no continuous-domain certification of those tables.",
+    "34-row zeta table gives Lambda <= 0.18891 conditional on the named external analytic inputs; not a record claim.",
+    "Round-two notes prove S_chi(x,3,t)>6 for every real x and 0<=t<=1/4, primitive q>=10^12. Arb certifies the scalar envelope E<1/5 and d0>93/100 over all ell>=129/5 and 0<h<=1/8.",
+    "The accompanying restarted intermediate-strip comparison and exact rational gates yield Lambda_chi<=43/200 for primitive q>=10^12; proved in-note from named imports, same-model checks only."
   ],
   "claims_not_made": [
-    "No unconditional bound on Lambda or Lambda_chi.",
-    "No outward-rounded certification of the remainder E or of Corollary 5.1.",
-    "No proof of the analytic lemmas of arXiv:2610.12803v1 on which Proposition 7.5 rests.",
-    "No priority or record claim: unrefereed preprints claim stronger bounds from the same start.",
-    "No RH conclusion and no accepted or formally reviewed manuscript milestone."
+    "No unconditional zeta bound from the 0.18891 table.",
+    "No certification of the original near-threshold zero-loss table or vertical-derivative Cauchy circle.",
+    "No proof of the external analytic lemmas of arXiv:2610.12803v1.",
+    "No literature-wide priority claim.",
+    "No RH or GRH conclusion, specialist validation, or accepted manuscript milestone."
   ],
-  "corrections_relative_to_round_1_notes": "Listed in notes/round-1/README.md under 'Errata found while drafting the manuscript'.",
-  "large_files_policy": "All deliverables below 1 MiB; build and rendered QA intermediates remain outside the repository."
+  "corrections_relative_to_round_1_notes": "Original manuscript errata remain listed in notes/round-1/README.md. Current revision also incorporates the saddle-domain, numerical-quantifier and consumer-dependency corrections from reviews/01_ROUND_ONE_CROSS_MODEL_REVIEW_CODEX_20261017.md.",
+  "large_files_policy": "All deliverables below 1 MiB; build and rendered QA intermediates remain outside the repository.",
+  "original_draft": {
+    "date": "2026-10-17",
+    "model": "Claude Opus 5.5 (claude-opus-5-5), Claude Cowork",
+    "reasoning_effort": "max",
+    "source_sha256": "b9d3b09231d5d21e7337c75d1c84340e2af3946832d6977224657efc7b7f661a",
+    "pdf_sha256": "a9ef9251a9b7e418cf63d062e1d432630dd7982d4e1eedc6d70168e3c40c6439",
+    "pages": 22
+  }
 }

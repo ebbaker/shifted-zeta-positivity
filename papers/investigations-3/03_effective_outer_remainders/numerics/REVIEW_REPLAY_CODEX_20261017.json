@@ -1,0 +1,226 @@
+{
+  "review_date_local": "2026-10-17",
+  "prepared_for": "Edward Baker",
+  "purpose": "Independent replay and arithmetic implementation audit of Project 03 round-1 programmes; this does not re-prove their analytic inputs.",
+  "reviewer": "gpt-6-astra (Codex), reasoning effort ultra; numerical-review subagent assisting the parent cross-model review",
+  "environment": {
+    "python": "3.10.0 (v3.10.0:b494f5935c, Oct  4 2021, 14:59:19) [Clang 12.0.5 (clang-1205.0.22.11)]",
+    "platform": "macOS-27.0.1-arm64-arm-64bit",
+    "machine": "arm64"
+  },
+  "working_directory": "/tmp/effective_outer_review_numerics",
+  "execution": "Copied the three .py sources into /tmp; ran the three jobs concurrently with python3 -I -B. All exited 0. No repository files were written by these runs.",
+  "runtime_note": "Approximate wall times below are final output-write timestamp minus output-file creation timestamp; no external timing wrapper was used. Jobs ran concurrently.",
+  "external_inputs": "No external datasets or network reads. Standard library only. The comparison programme imports the height programme from the same directory.",
+  "runs": [
+    {
+      "source": "height_p_transport_claude_20261017.py",
+      "record": "HEIGHT_P_TRANSPORT_CLAUDE_20261017.json",
+      "command": "python3 -I -B height_p_transport_claude_20261017.py > HEIGHT_P_TRANSPORT_CLAUDE_20261017.json",
+      "exit_code": 0,
+      "approximate_wall_seconds": 98.58,
+      "source_sha256": "ab90cc7dee26ad872c0dff84e96a97bfea1d39838115fe6c277330f9a0b47690",
+      "committed_record_sha256": "e1e2f2b2b19973006484b5f79aa3373a440d981ba46003e28762879fd290341a",
+      "replay_record_sha256": "4e149117ec01fb94d3dc9fd55e69cf0f2699d9b596d96001daa2e2e1743717d5",
+      "source_and_record_hashes_match_documented_readme": true,
+      "byte_equal": false,
+      "semantic_equal": false,
+      "changed_leaf_count": 45,
+      "section_comparisons": {
+        "A_self_checks": {
+          "equal": false,
+          "changed_leaf_count": 1,
+          "max_absolute_difference": {
+            "path": "/A_self_checks/|zeta(1/2+i gamma_1)|",
+            "value": 2.4842444969999993e-17
+          },
+          "max_relative_difference_to_committed": {
+            "path": "/A_self_checks/|zeta(1/2+i gamma_1)|",
+            "value": 0.019312011942340862
+          }
+        },
+        "B_identity": {
+          "equal": false,
+          "changed_leaf_count": 3,
+          "max_absolute_difference": {
+            "path": "/B_identity/rows/3/difference",
+            "value": 8.60422844085e-16
+          },
+          "max_relative_difference_to_committed": {
+            "path": "/B_identity/rows/3/difference",
+            "value": 1.8235294117645813
+          }
+        },
+        "C_transport_law": {
+          "equal": false,
+          "changed_leaf_count": 26,
+          "max_absolute_difference": {
+            "path": "/C_transport_law/zeta/10/eps/1",
+            "value": 2.7000103541841014e-13
+          },
+          "max_relative_difference_to_committed": {
+            "path": "/C_transport_law/zeta/11/eps/1",
+            "value": 3.9662061209310696e-11
+          }
+        },
+        "D_bound_vs_measured": {
+          "equal": false,
+          "changed_leaf_count": 15,
+          "max_absolute_difference": {
+            "path": "/D_bound_vs_measured/rows/0/measured_abs_eps",
+            "value": 1.2999930992796394e-13
+          },
+          "max_relative_difference_to_committed": {
+            "path": "/D_bound_vs_measured/rows/0/measured_abs_eps",
+            "value": 2.705027569639401e-11
+          }
+        },
+        "E_bound_vs_gain": {
+          "equal": true,
+          "changed_leaf_count": 0
+        },
+        "F_lemma_Ap_floors": {
+          "equal": true,
+          "changed_leaf_count": 0
+        },
+        "G_strip_comparison_heat_floor": {
+          "equal": true,
+          "changed_leaf_count": 0
+        },
+        "H_thresholds": {
+          "equal": true,
+          "changed_leaf_count": 0
+        }
+      },
+      "interpretation": "All E-H majorant-evaluation, threshold, floor and planning sections match exactly. All D booleans match. One A near-zero self-check, three B identity residuals, 26 C transport values and 15 D measured deviations vary at floating rounding level; C/D maximum relative difference is below 4e-11."
+    },
+    {
+      "source": "hakimoglu_brown_comparison_claude_20261017.py",
+      "record": "HAKIMOGLU_BROWN_COMPARISON_CLAUDE_20261017.json",
+      "command": "python3 -I -B hakimoglu_brown_comparison_claude_20261017.py > HAKIMOGLU_BROWN_COMPARISON_CLAUDE_20261017.json",
+      "exit_code": 0,
+      "approximate_wall_seconds": 158.31,
+      "source_sha256": "4f78eeab23aa25a676aa80eb61c24b4829d35789384497043c76c76f3139c3de",
+      "committed_record_sha256": "460a3478b9f0f63af370e3ffb3e884e584f7e7d123cc1cd9e4ac3bf9a1ba660b",
+      "replay_record_sha256": "1c548a489f86b681c6130d8ff342e2cd44ebb17cde936f3e80d33f9c6e3141d6",
+      "source_and_record_hashes_match_documented_readme": true,
+      "byte_equal": false,
+      "semantic_equal": false,
+      "changed_leaf_count": 2,
+      "section_comparisons": {
+        "A_reproduction": {
+          "equal": false,
+          "changed_leaf_count": 2,
+          "max_absolute_difference": {
+            "path": "/A_reproduction/tables6_7_(printed-recomputed)_in_1e-12_rows_0_12_23/0/0",
+            "value": 0.004029999999999999
+          },
+          "max_relative_difference_to_committed": {
+            "path": "/A_reproduction/tables6_7_(printed-recomputed)_in_1e-12_rows_0_12_23/0/0",
+            "value": 0.13872633390705677
+          }
+        },
+        "B_floors": {
+          "equal": true,
+          "changed_leaf_count": 0
+        },
+        "C_unconditional_table": {
+          "equal": true,
+          "changed_leaf_count": 0
+        },
+        "D_zeta_planning_note01_floors": {
+          "equal": true,
+          "changed_leaf_count": 0
+        },
+        "E_family_planning": {
+          "equal": true,
+          "changed_leaf_count": 0
+        }
+      },
+      "differences": [
+        {
+          "path": "/A_reproduction/tables6_7_(printed-recomputed)_in_1e-12_rows_0_12_23/0/0",
+          "committed": 0.02905,
+          "replay": 0.02502
+        },
+        {
+          "path": "/A_reproduction/table3_max(Gfloat-G_i)",
+          "committed": -1.1046061543e-06,
+          "replay": -1.10460615443e-06
+        }
+      ],
+      "interpretation": "Only two A diagnostic numbers differ: 0.00403 units of 1e-12 in a printed-minus-recomputed table difference, and about 1.18e-10 relative in the floating G margin. Sections B-E match exactly."
+    },
+    {
+      "source": "unconditional_strip_table_claude_20261017.py",
+      "record": "UNCONDITIONAL_STRIP_TABLE_CLAUDE_20261017.json",
+      "command": "python3 -I -B unconditional_strip_table_claude_20261017.py > UNCONDITIONAL_STRIP_TABLE_CLAUDE_20261017.json",
+      "exit_code": 0,
+      "approximate_wall_seconds": 120.29,
+      "source_sha256": "94073d936706b5ca0ad6fa707a39e8566bee938c4cd4806a04af1122c5ef5935",
+      "committed_record_sha256": "69997f80743411bb952c727f1e8c25b710fe28b14d8a2f995967fb08383eff67",
+      "replay_record_sha256": "69997f80743411bb952c727f1e8c25b710fe28b14d8a2f995967fb08383eff67",
+      "source_and_record_hashes_match_documented_readme": true,
+      "byte_equal": true,
+      "semantic_equal": true,
+      "changed_leaf_count": 0,
+      "section_comparisons": {
+        "q0_1_unconditional_strip": {
+          "equal": true,
+          "changed_leaf_count": 0
+        },
+        "control_paper_table3_q0_9_16": {
+          "equal": true,
+          "changed_leaf_count": 0
+        }
+      },
+      "certificate_q0_1": {
+        "q0": "1",
+        "rows": 34,
+        "chain_ok": true,
+        "min_bernstein": 0.00141545404061,
+        "all_bernstein_positive": true,
+        "k_range": [
+          7.78093,
+          10.5918
+        ],
+        "all_k_positive": true,
+        "min_gate": 1.07944528271e-05,
+        "all_gates_hold": true,
+        "min_C_cert_minus_C": 2.05110420075e-06,
+        "max_G_cert_minus_G": -2.02217660923e-06,
+        "max_eps0_cert": 0.019088169794,
+        "scalars_ok": true,
+        "t_n": "16891/100000",
+        "Lambda_bound": "18891/100000",
+        "Lambda_bound_decimal": 0.18891,
+        "all_checks_pass": true
+      },
+      "certificate_control": {
+        "q0": "9/16",
+        "rows": 24,
+        "chain_ok": true,
+        "min_bernstein": 0.00130049896965,
+        "all_bernstein_positive": true,
+        "k_range": [
+          8.63766,
+          10.3152
+        ],
+        "all_k_positive": true,
+        "min_gate": 2.78703643252e-08,
+        "all_gates_hold": true,
+        "min_C_cert_minus_C": 2.05110420075e-06,
+        "max_G_cert_minus_G": -1.10460615427e-06,
+        "max_eps0_cert": 0.019088169794,
+        "scalars_ok": true,
+        "t_n": "11963/100000",
+        "Lambda_bound": "13963/100000",
+        "Lambda_bound_decimal": 0.13963,
+        "all_checks_pass": true
+      },
+      "interpretation": "Byte-for-byte replay. Both certificate tables and two scalar baseline inequalities pass."
+    }
+  ],
+  "llm_assistance": "Prepared for Edward Baker with substantial LLM assistance. Cross-model LLM review of Claude-authored work; not specialist human review.",
+  "review": "../reviews/01_ROUND_ONE_CROSS_MODEL_REVIEW_CODEX_20261017.md"
+}

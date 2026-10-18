@@ -14,7 +14,8 @@ decision. Keep computations in numerics and assessments in reviews.
 
 | Round | Focus | Status |
 | --- | --- | --- |
-| [Round 1](round-1/README.md) | Height-p transport for Lemma A_p; comparison with Hakimoglu-Brown's strip comparison | Ready for review |
+| [Round 1](round-1/README.md) | Height-p transport for Lemma A_p; comparison with Hakimoglu-Brown's strip comparison | Cross-model LLM review complete; corrected manuscript |
+| [Round 2](round-2/README.md) | Uniform family floor and restarted strip comparison | Proved in-note with scalar certificates; same-model checks only |
 
 Each round has its own folder and index, and notes keep their numbered
 dated filenames. Code and small records for a round are under
