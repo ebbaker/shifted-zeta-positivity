@@ -1,0 +1,96 @@
+{
+  "date": "2026-10-18",
+  "prepared_for": "Edward Baker",
+  "llm_assistance": "Substantial LLM assistance; same-model internal contract review and replay.",
+  "execution_model": "gpt-6.1-sol",
+  "execution_effort": "max",
+  "actual_settings_source": "current authoring turn metadata",
+  "status": "Stage 0 gate passed for the stated auxiliary contracts; no theta margin inferred",
+  "source_sha256": {
+    "main.tex": "13cf56292b5e1c61a388a7685613d2bd85aba7afe8019a4dd142ecbf849b81d7",
+    "sections/01_theta.tex": "81f8bb1556f269fccc5ff2d2eb8683f198a0d7944b6e2417e49e5341f7812334",
+    "sections/02_packets.tex": "5bab1829a92f7032a15d80ad874b15fff252c598b6194c07fab7efcf7d70beac",
+    "sections/03_positivity.tex": "080089b5184d032403789bf139bb465c92fc9a379ac2fc6811049d50cc8dc948",
+    "sections/04_modular_collisions.tex": "be76c5c22056fce5c96c240e366d2c126ee202e766ea6ff1141305f51b1d664f",
+    "sections/05_controls.tex": "f89e2e6f784c95a9b3ad17639c6f94411197a0d27c50f759dbb4a53eac15f9f4",
+    "sections/06_certification.tex": "d994c18036b870a543f5ec542d50cff13c91af8e9c682582bb9d57df324ee0b2",
+    "sections/07_shifted_approximation.tex": "aa55a819c52a50168e99be52ad32f9e769a160487d99a6c87fba0859c8cabdd1"
+  },
+  "source_set_sha256": "f6cd484647ef328047e9ac51a577b8260e899aecbfdd5026e9e238079feb823f",
+  "reviewed_inputs_sha256": {
+    "notes/05_COMPLEX_STRIP_CARRIERS_AND_SHARP_LOG_DERIVATIVES_CODEX_20261018.md": "39209d71c1220011d2624f43f68a949de051e41292462a750ff8c4e97c2d6640",
+    "notes/06_CANCELLATION_PRESERVING_APPROXIMATION_AND_NEWMAN_ROADMAP_CODEX_20261018.md": "3cac8af3819b672f432cfc6420d242a1479e4b415ddaa065f681addf49492e96",
+    "reviews/04_MANUSCRIPT_AUDIT_AND_STRENGTHENING_REVIEW_CODEX_20261018.md": "b2cb2dd902778aac644dd79d606a4b6264ac876ed0599891a4539911d7ce4825",
+    "reviews/05_UPDATED_MANUSCRIPT_INTEGRATION_REVIEW_CODEX_20261018.md": "761f6f33c6cc970920a9d910da3ad7d0247ec14298c4ffe667a5282842d73569",
+    "research-overview/02_UPDATED_RESEARCH_OVERVIEW_AND_SOL_EXECUTION_PLAN_20261018.md": "cf231164fa087a61a264f5e233670b7bbba0f2c16b2ebccc490eee4c76af632e"
+  },
+  "scalar_replays": [
+    {
+      "script": "certify_manuscript_constants.py",
+      "seconds": 0.14618962502572685,
+      "same_parsed_record": true,
+      "different_keys": [],
+      "output_sha256": "119ef2bab05561ea0e18ff5ee58bbba5420aaf927c8af279bf3824849b28d27f",
+      "all_checks_passed": true
+    },
+    {
+      "script": "certify_strip_carriers.py",
+      "seconds": 0.12062233296455815,
+      "same_parsed_record": true,
+      "different_keys": [],
+      "output_sha256": "603c0ddb1fa849473e05669e5c846709aa1215e726fca7fd63ed576be2ef82e3",
+      "all_checks_passed": true
+    },
+    {
+      "script": "certify_updated_manuscript.py",
+      "seconds": 0.11622670799260959,
+      "same_parsed_record": true,
+      "different_keys": [],
+      "output_sha256": "8c099f44a8f0fb6b18c5ce432b4261531db8b11cc71b6dbd627c466c36bc3838",
+      "all_checks_passed": true
+    }
+  ],
+  "replay_provenance_note": "Byte-identical legacy outputs retain their original authoring model fields; the execution configuration of these fresh replays is recorded here separately.",
+  "compilation": {
+    "tool": "compile_latex_document",
+    "kind": "success",
+    "scope": "saved strengthened source set; no new mathematical validation"
+  },
+  "analytic_contracts_checked": [
+    "closed-strip convex-kernel boundary and nonnegative sum",
+    "disk map scale K=4m^2 and Schwarz second coefficient",
+    "combined slope/curvature deficits in remainder second derivative",
+    "unit-strip denominator lower bound and complex residual identity",
+    "complete reflection before the contour shift and truncation",
+    "both spectral derivative factors and fixed-parameter heat equation",
+    "shifted-tail admissibility and fixed-order majorant",
+    "near-boundary exponent and geometric-ratio asymptotic",
+    "curvature c and stationary predecessor event normalization",
+    "normalized coefficient rigidity and scoped control construction"
+  ],
+  "primary_imports": [
+    {
+      "url": "https://arxiv.org/html/1904.12438v2",
+      "locations": [
+        "equations 1-4",
+        "Theorem 1.5(i)-(iii), Section 9 multiplicity argument",
+        "Theorem 3.2"
+      ],
+      "status": "checked against primary text; imported published theorems, not independently reproved"
+    },
+    {
+      "url": "https://arxiv.org/pdf/2004.09765",
+      "locations": [
+        "Section 3.4, Corollary 2"
+      ],
+      "status": "published comparison baseline only; no current-best claim"
+    }
+  ],
+  "blocking_defects_found": [],
+  "gate_passed": true,
+  "limitations": [
+    "same-model internal review; no specialist review",
+    "scalar checks reuse the original interval engine",
+    "no complete theta sign, evaluator quadrature or new global bound follows from Stage 0"
+  ]
+}

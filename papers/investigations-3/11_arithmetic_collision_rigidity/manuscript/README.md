@@ -27,6 +27,11 @@ exclusion or new Newman bound follows from this revision.
 - [Revised scalar checker](../numerics/certify_updated_manuscript.py) and
   [retained enclosures](../numerics/UPDATED_MANUSCRIPT_CONSTANTS_20261018.json).
 - [Updated Sol research plan](../research-overview/02_UPDATED_RESEARCH_OVERVIEW_AND_SOL_EXECUTION_PLAN_20261018.md).
+- [Overview 02 bounded research continuation](../notes/02_updated_research_plan/README.md):
+  finite interval evaluator and signed certificate, assessed internally by
+  gpt-6.1-sol at actual effort max on 18 October 2026. These later notes
+  are outside the pinned manuscript source set; the global consumer remains
+  unclosed.
 - [Draft history](../DRAFT_HISTORY.md).
 
 Open the project directory in the built-in LaTeX editor for editable source
@@ -46,3 +51,25 @@ packet estimates do not use these inputs. Preserve this as the current
 manuscript, with milestones in the concise draft history and future Git
 commits or tags; create no new snapshot folders. Compilation and scalar
 certificates are separate from mathematical validation.
+
+## Later analytic supplement
+
+[Note 11](../notes/02_updated_research_plan/11_EFFECTIVE_NONSTATIONARY_ARITHMETIC_TAIL_20261018.md) improves the
+near-boundary arithmetic tail by nonstationary phase, supplies an explicit
+uniform onset, and records bounded retained-integral costs. This later
+supplement is outside the eight-file manuscript pin above. Its
+[Review 10](../reviews/10_EFFECTIVE_NONSTATIONARY_TAIL_AND_POINT_EVALUATOR_REVIEW_20261018.md) is same-model internal assessment,
+**gpt-6.1-sol, actual effort ultra**, 18 October 2026, for Edward Baker
+with substantial LLM assistance. A future manuscript integration should
+replace the historical unevaluated-onset discussion with this proved
+estimate while retaining the separate physical-margin obligation.
+
+## Finite consumer supplements
+
+[Note 12](../notes/02_updated_research_plan/12_HIGH_HEIGHT_SIGNED_CONSUMER_AND_MATCHED_COMPARISON_20261018.md) and
+[Note 13](../notes/02_updated_research_plan/13_VERTICAL_WALL_AND_FINITE_HEIGHT_NONCOLLISION_20261018.md) consume the new tail,
+certify a signed box and a complete complex wall, and prove finite-height
+noncollision through named imports. They are later supplements outside
+the current manuscript pin. [Review 11](../reviews/11_HIGH_HEIGHT_SIGNED_AND_VERTICAL_WALL_REVIEW_20261018.md), for Edward Baker
+with substantial LLM assistance, **gpt-6.1-sol, actual effort ultra**,
+18 October 2026, records the internal review and remaining exterior gap.

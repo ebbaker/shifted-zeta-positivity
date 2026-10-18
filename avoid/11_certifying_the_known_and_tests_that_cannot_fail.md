@@ -27,6 +27,15 @@ axioms that "returned success".
 - [19's verification review](../papers/investigations-2/active/19_euler_factor_controls/reviews/1_MANUSCRIPT_AND_CERTIFICATE_VERIFICATION_CLAUDE_20261014.md): interval negation "was not outward-rounded", so although the signs were never in doubt (raw margins at least \(5\cdot10^{-6}\)), "the certificates were not rigorous"; the Newman comparator "returns True" for \([-1,1]\) against \([0.5,2.5]\) (overlap, not containment).
 - [`CHANGELOG.md`](../CHANGELOG.md), 2026-09-18: "the experiment it unlocks cannot fail".
 
+- [Arithmetic contour finite consumer, Notes 12–13](../papers/investigations-3/11_arithmetic_collision_rigidity/notes/02_updated_research_plan/13_VERTICAL_WALL_AND_FINITE_HEIGHT_NONCOLLISION_20261018.md),
+  18 October 2026: “The lemma does not follow merely from a published
+  canopy”. A complete certified complex wall supplies the missing finite
+  boundary input; initial zero verification alone is not positive-time
+  coverage. [Review 11](../papers/investigations-3/11_arithmetic_collision_rigidity/reviews/11_HIGH_HEIGHT_SIGNED_AND_VERTICAL_WALL_REVIEW_20261018.md) also records the rejected
+  finite quadrature enclosures and recomputed margins. Added for Edward
+  Baker with substantial LLM assistance, **gpt-6.1-sol, actual effort ultra**;
+  same-model internal review, no global bound.
+
 ## What it cost
 
 Certified cells and manuscript propositions that add no collision
@@ -41,3 +50,17 @@ record whether the cell is inside it ([21's README table](../papers/investigatio
 ## Constructive-stability continuation, 17 October 2026
 
 Prepared for Edward Baker with substantial LLM assistance, **gpt-6.1-sol (Codex), effort ultra**. The [Project 05 cross-model review, Section 3](../papers/investigations-3/05_constructive_stable_models/reviews/01_ROUND_ONE_CROSS_MODEL_REVIEW_CLAUDE_20261017.md) observes that the forward collision-control tables “cannot fail”: Hurwitz already excludes a nonreal-zero function as a complex-compact limit of real-zero functions. The [round-two reconciliation](../papers/investigations-3/05_constructive_stable_models/notes/round-2/README.md) replaces that evidentiary reading with a stable Bessel reverse control. A family also excluded for Bessel has an expressiveness limitation; this is not information about theta stability.
+
+
+## Overview 02 bounded pilot on 18 October 2026
+
+Prepared for Edward Baker with substantial LLM assistance, **gpt-6.1-sol,
+actual effort max**. The [matched pilot note](../papers/investigations-3/11_arithmetic_collision_rigidity/notes/02_updated_research_plan/08_MATCHED_PILOT_AND_CONTROL_SCREEN_20261018.md)
+records: “validation passed; the performance gate did not pass.” A smaller
+propagated error and a local signed certificate on already covered territory
+are machinery gains, not new collision coverage. The round stops scan
+expansion and retains the global gap. Its control interface actually rejects
+five surrounding event boxes; [adversarial replay](../papers/investigations-3/11_arithmetic_collision_rigidity/reviews/09_SOL_GLOBAL_CERTIFICATE_AND_CLAIM_REVIEW_20261018.md)
+checks strict equality, invalid arithmetic, altered input bytes and broken
+covers. The comparison is scoped to its measured implementation, not an
+obstruction to all contour methods.

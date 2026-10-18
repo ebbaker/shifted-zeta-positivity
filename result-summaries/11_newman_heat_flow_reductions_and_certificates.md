@@ -148,3 +148,51 @@ reproduced both scalar outputs byte for byte: “no blocking mathematical
 defect found in the designated round-two family proof chain.” This is
 additional same-model review. The 0.215 result retains its proved-in-note
 status; the near-threshold tables and zeta consumer are not upgraded.
+
+
+## Overview 02 bounded evaluator round on 18 October 2026
+
+For Edward Baker with substantial LLM assistance, **gpt-6.1-sol, actual effort
+max**. Investigation 3/11 adds a complete shifted interval evaluator and an
+**interval-certified** local inequality L0>E/100 on [1/100,1/5] × [25,45].
+All 314 signed strips were re-evaluated on the real source at 256 bits.
+Five applicable control event boxes reject the strict interface; the Euler
+negative-Laguerre witness is separately classified. Added propagation error
+improves, but the measured performance gate fails. These regions were already
+covered; no new global sign mechanism, collision coverage or Newman bound
+is claimed. Review is same-assistant internal only. [Notes](../papers/investigations-3/11_arithmetic_collision_rigidity/notes/02_updated_research_plan/README.md),
+[claim closure](../papers/investigations-3/11_arithmetic_collision_rigidity/reviews/09_SOL_GLOBAL_CERTIFICATE_AND_CLAIM_REVIEW_20261018.md).
+
+## Arithmetic contours and finite wall consumer on 18 October 2026
+
+For Edward Baker with substantial LLM assistance, **gpt-6.1-sol, actual
+effort ultra**. Investigation 3/11 [Note 11](../papers/investigations-3/11_arithmetic_collision_rigidity/notes/02_updated_research_plan/11_EFFECTIVE_NONSTATIONARY_ARITHMETIC_TAIL_20261018.md)
+is **proved in-note**, with explicit onset: nonstationary phase improves
+omitted-mode error by log(x)/x; its stated rule gives j<=2 error below
+2e-9 G0 for x>=1000. [Notes 12–13](../papers/investigations-3/11_arithmetic_collision_rigidity/notes/02_updated_research_plan/13_VERTICAL_WALL_AND_FINITE_HEIGHT_NONCOLLISION_20261018.md)
+consume that tail in an **interval-certified** signed box and complete
+vertical wall. A finite propagation proof from named published initial
+verification and local heat splitting yields E>0 for 0<t<=1/5,
+|x|<=1000; its union with the signed box closes
+[1/100,1/5] × [-1001,1001]. Initial simplicity and a zero-velocity
+bound are unnecessary. Fresh 256-bit and independent real-source replays
+pass; review is internal same-model. The timing gate fails, and the
+bridge (1001,exp(6400)) remains open. No new Newman bound follows.
+[Review 11](../papers/investigations-3/11_arithmetic_collision_rigidity/reviews/11_HIGH_HEIGHT_SIGNED_AND_VERTICAL_WALL_REVIEW_20261018.md) and [ledger](../papers/investigations-3/11_arithmetic_collision_rigidity/numerics/high_height_consumer/HIGH_HEIGHT_CONSUMER_LEDGER_20261018.json).
+
+## Sharper arithmetic-contour exterior on 18 October 2026
+
+For Edward Baker with substantial LLM assistance, **gpt-6.1-sol, actual
+ultra**; internal same-model review. Investigation 3/11 [Note 14](../papers/investigations-3/11_arithmetic_collision_rigidity/notes/02_updated_research_plan/14_SHARPER_OUTER_EXCLUSION_AND_CONSTANT_DISTANCE_CONTOURS_20261018.md)
+is **proved in-note from named inputs**, with scalar replay: real
+first-jet exclusion begins at exp(20/epsilon) for epsilon<=t<=1/2,
+replacing the earlier exp(64/epsilon) inventory. Its d=pi/8-A/x contour
+has explicit O(x^(-1/4)) omitted-mode error; A=33 gives <7e-11 G0 for
+x>=1000 on the stated time/complex-strip domain, orders 0–2. Neither
+result is a physical lower margin. An exact remote polynomial limits
+finite-wall/strip/baseline inferences and fails the stronger D1 signed
+premise. The current slab bridge is (1001,exp(2000)); the complex canopy
+exterior remains open. No new Newman bound. [Review 12](../papers/investigations-3/11_arithmetic_collision_rigidity/reviews/12_OUTER_EXCLUSION_AND_CONSTANT_DISTANCE_REVIEW_20261018.md)
+and [entire-round summary](../papers/investigations-3/11_arithmetic_collision_rigidity/research-progress/03_OVERVIEW02_ROUND_SUMMARY_20261018.md).
+Earlier entries retain their original source scope; only their outer
+inventory is superseded here.

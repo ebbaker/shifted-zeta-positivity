@@ -64,3 +64,41 @@ belongs in those sources; create no new manuscript snapshot folders.
   Internal LLM checks only; no collision exclusion, new bound, snapshot or
   Git commit. For Edward Baker with LLM assistance, **gpt-6.1-sol, ultra**,
   coordinated and edited by **gpt-6-astra, ultra**.
+
+- **18 October 2026 — overview 02 bounded evaluator and signed certificate.**
+  [Research notes](notes/02_updated_research_plan/README.md),
+  [claim ledger](numerics/FINAL_CLAIM_LEDGER_20261018.json) and
+  [closure review](reviews/09_SOL_GLOBAL_CERTIFICATE_AND_CLAIM_REVIEW_20261018.md).
+  Complete interval evaluator and L0>E/100 on the known pilot rectangle;
+  performance gate failed and global finite bridge unclosed. Manuscript
+  sources unchanged; no new bound or snapshot. For Edward Baker with LLM
+  assistance, **gpt-6.1-sol, actual effort max**, same-assistant internal review.
+
+- **18 October 2026 — overview 02 effective nonstationary contour tail.**
+  [Note 11](notes/02_updated_research_plan/11_EFFECTIVE_NONSTATIONARY_ARITHMETIC_TAIL_20261018.md) improves the omitted-mode
+  error by log(x)/x, gives explicit uniform onset constants, and measures
+  retained point-quadrature costs at heights 1000 and 10000.
+  [Review 10](reviews/10_EFFECTIVE_NONSTATIONARY_TAIL_AND_POINT_EVALUATOR_REVIEW_20261018.md) and [reproducible records](numerics/README.md).
+  Manuscript pin unchanged; no new snapshot, commit or Newman bound.
+  For Edward Baker with substantial LLM assistance, **gpt-6.1-sol,
+  actual effort ultra**, with parallel same-model checks.
+
+- **18 October 2026 — overview 02 finite signed and vertical wall consumer.**
+  [Notes 12–13](notes/02_updated_research_plan/13_VERTICAL_WALL_AND_FINITE_HEIGHT_NONCOLLISION_20261018.md) and
+  [Review 11](reviews/11_HIGH_HEIGHT_SIGNED_AND_VERTICAL_WALL_REVIEW_20261018.md) close E>0 on [1/100,1/5] × [-1001,1001]
+  using a complete wall, named published initial verification and heat
+  splitting; the new arithmetic tail is consumed. [Code and ledger](numerics/high_height_consumer/README.md).
+  Timing gate fails; exterior bridge remains open. No manuscript snapshot,
+  Git commit or new Newman bound. For Edward Baker with substantial LLM
+  assistance, **gpt-6.1-sol, actual effort ultra**, internal same-model review.
+
+- **18 October 2026 — overview 02 sharper exterior and final round summary.**
+  [Note 14](notes/02_updated_research_plan/14_SHARPER_OUTER_EXCLUSION_AND_CONSTANT_DISTANCE_CONTOURS_20261018.md),
+  [replay source identities](numerics/analytic_continuation/ANALYTIC_CONTINUATION_REPLAY_20261018.json),
+  [Review 12](reviews/12_OUTER_EXCLUSION_AND_CONSTANT_DISTANCE_REVIEW_20261018.md)
+  and [separate whole-round summary](research-progress/03_OVERVIEW02_ROUND_SUMMARY_20261018.md).
+  Explicit real exterior exp(20/epsilon), A/x contour tail and scoped
+  remote control; slab gap reduced to (1001,exp(2000)), still open.
+  Manuscript pin unchanged; no new snapshot, commit or Newman bound.
+  For Edward Baker with substantial LLM assistance, **gpt-6.1-sol,
+  actual effort ultra**, with parallel same-model checks.

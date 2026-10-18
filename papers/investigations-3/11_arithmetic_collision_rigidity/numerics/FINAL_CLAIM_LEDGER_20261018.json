@@ -1,0 +1,131 @@
+{
+  "date": "2026-10-18",
+  "prepared_for": "Edward Baker",
+  "llm_assistance": "Substantial LLM assistance; same-model internal adversarial replay, not specialist review.",
+  "model": "gpt-6.1-sol",
+  "reasoning_effort": "max",
+  "python_flint": "0.9.0",
+  "replay_bits": 256,
+  "verifier_sha256": "1f25cf76e1666ac70842caa6bfb4163146ae60dca4bf57c9f84223a59c8fd074",
+  "evaluator_sha256": "45c2e9adc347f91076b1ff16b171b71f450b504e391044811bf9bc847fe3c4ff",
+  "pilot_driver_sha256": "3912bd128bff81bceb303126a67ae304f9631d439867d5c6ae3bbc106aa7e982",
+  "input_sha256": {
+    "SHIFTED_EVALUATOR_VALIDATION_20261018.json": "2c0251e18aa2e049bd71992ca42184731b049823aeb5a7bb92e9cc170c454688",
+    "SHIFTED_PILOT_COMPARISON_20261018.json": "db0db7a1f6cf3c6b82a93e336e8ba53027aeaa47dcca640eb23b74f5842869db",
+    "COMPLETE_MODULAR_SIGNED_ESTIMATE_20261018.json": "75968a69481501cfb1240af12474d53f01ecf757fabd81bfa1c50b3737f80536"
+  },
+  "signed_cells_recalculated": 314,
+  "direct_source_signed_excess_minimum_lower": "[4.6026033348571016670795008487963516e-16 +/- 1.74e-51]",
+  "weakest_replayed_cell": [
+    "2875/64",
+    "23005/512"
+  ],
+  "first_jet_cells_recalculated": 128,
+  "matched_256_bit_point_and_cell_tests": 12,
+  "root_diagnostics": [
+    {
+      "component_root": "H",
+      "t": "1/10",
+      "x_bracket": [
+        "3786484673/134217728",
+        "7572969347/268435456"
+      ],
+      "physical_jet": [
+        "[-1.0164556340237506771776780275784547e-13 +/- 1.65e-13]",
+        "[-8.7592116325311229103249652218388084e-5 +/- 9.63e-14]",
+        "[5.0732493146649496672991063379670401e-5 +/- 3.46e-14]"
+      ],
+      "other_component_lower": "[8.7592116229075547131392665836702145e-5 +/- 1.33e-40]",
+      "interpretation": "ordinary root certified by derivative sign"
+    },
+    {
+      "component_root": "Hx",
+      "t": "1/10",
+      "x_bracket": [
+        "8352222391/268435456",
+        "1044027799/33554432"
+      ],
+      "physical_jet": [
+        "[-0.00010160798503755568047046147414226295 +/- 4.80e-14]",
+        "[5.5442326190134001928443245358418635e-15 +/- 2.66e-14]",
+        "[1.4223446752964188443898081629086913e-5 +/- 1.53e-14]"
+      ],
+      "other_component_lower": "[0.00010160798498963226403911394403404837 +/- 1.12e-39]",
+      "interpretation": "stationary point with directly certified nonzero value; not assumed"
+    }
+  ],
+  "heat_diagnostics": [
+    {
+      "method": "real",
+      "independently_integrated_time_derivative": "[1.7639518857202343971884047455266434e-6 +/- 8.30e-37]",
+      "H_t_plus_Hxx": "[+/- 1.66e-36]"
+    },
+    {
+      "method": "shifted",
+      "independently_integrated_time_derivative": "[1.7639518857202343971878209404037930e-6 +/- 1.05e-39]",
+      "H_t_plus_Hxx": "[+/- 7.03e-36]"
+    }
+  ],
+  "failure_injection_results": [
+    "zero-centred square explicitly encloses 0 and 1",
+    "strict equality rejected by both margin gates",
+    "nonfinite jet",
+    "malformed jet dimension",
+    "cell outside frozen rectangle",
+    "unproved imaginary band",
+    "negative time domain",
+    "unsupported mode count",
+    "coverage gap",
+    "missing closed endpoint",
+    "invalid source contour",
+    "missing bound input",
+    "malformed JSON input",
+    "forged PASS with changed bytes",
+    "changed control witness bytes"
+  ],
+  "error_scale_summary": {
+    "real": {
+      "worst_coordinate_error": "[4.9228450793042295650587891508077404e-17 +/- 2.68e-52]",
+      "positive_G0_at_right_endpoint": "[1.6538834781906149916875231372602785e-5 +/- 2.20e-40]",
+      "error_over_G0_upper": "[2.9765368263367203325124508587917510e-12 +/- 4.79e-47]",
+      "jet_error_over_certified_jet_lower_upper": "[9.8467570292156162745521668335828157e-9 +/- 1.49e-44]",
+      "dominant_error": "finite-rectangle Taylor propagation; not omitted arithmetic modes"
+    },
+    "shifted": {
+      "worst_coordinate_error": "[2.7504875437388318010947553998277438e-18 +/- 3.22e-53]",
+      "positive_G0_at_right_endpoint": "[1.6538834781906149916875231372602785e-5 +/- 2.20e-40]",
+      "error_over_G0_upper": "[1.6630479595502857596773969134088487e-13 +/- 2.06e-48]",
+      "jet_error_over_certified_jet_lower_upper": "[5.5015711684569540470496876098904445e-10 +/- 3.42e-45]",
+      "dominant_error": "finite-rectangle Taylor propagation; not omitted arithmetic modes"
+    }
+  },
+  "claims": [
+    {
+      "claim": "complete first jet is nonzero on D0",
+      "evidence": "128 strict coordinate strips; real-source 256-bit replay"
+    },
+    {
+      "claim": "L0>E/100 on D0",
+      "evidence": "all signed cells re-evaluated on real source at 256 bits; raw excess >4e-16"
+    },
+    {
+      "claim": "shifted propagation error is smaller in this fixed pilot",
+      "evidence": "complete component budgets; no speed superiority inferred"
+    },
+    {
+      "claim": "applicable control event boxes fail the strict interface",
+      "evidence": "five source-specific surrounding event boxes; Euler witness separately classified"
+    }
+  ],
+  "global_bound_established": false,
+  "performance_gate_passed": false,
+  "closure": "auxiliary finite outcome only; global consumer unclosed",
+  "all_replay_checks_passed": true,
+  "limitations": [
+    "same model, shared source polynomial and Arb/Acb library",
+    "bounded tests cover previously known territory",
+    "no independently derived global arithmetic sign mechanism",
+    "no effective near-boundary asymptotic onset or global finite bridge"
+  ],
+  "total_seconds": 1.9018297499860637
+}

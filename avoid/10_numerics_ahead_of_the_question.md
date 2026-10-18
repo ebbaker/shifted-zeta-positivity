@@ -27,6 +27,15 @@ amplification tuned to a limit that a published result beat anyway.
 - [Program meta-analysis](../papers/investigations/program-meta-analysis/reviews/PROGRAM_META_ANALYSIS_20260926.md) §3, §10: "stop routine depth extension as an RH strategy"; "pause automatic growth of support windows, Fourier cutoffs, physical hierarchies and isospectral realizations."
 - [CCM bounded audit](../papers/investigations/ccm-operator-realizations/notes/CCM_INFINITE_L_BOUNDED_AUDIT_20260926.md): the 4096-mode Schur certificate would need a cutoff \(\ge L\exp(c\,e^{L/2})\); the scalar test had already failed.
 
+- [Effective arithmetic-tail continuation, Note 11](../papers/investigations-3/11_arithmetic_collision_rigidity/notes/02_updated_research_plan/11_EFFECTIVE_NONSTATIONARY_ARITHMETIC_TAIL_20261018.md),
+  18 October 2026: “These are measured finite costs, not a complexity law or
+  a matched speed comparison.” The omitted-mode estimate improves
+  analytically, while retained quadrature dominates the two bounded point
+  cases. [Review 10](../papers/investigations-3/11_arithmetic_collision_rigidity/reviews/10_EFFECTIVE_NONSTATIONARY_TAIL_AND_POINT_EVALUATOR_REVIEW_20261018.md) keeps that distinction;
+  reducing an already subdominant tail does not supply the global physical
+  margin. Added for Edward Baker with substantial LLM assistance,
+  **gpt-6.1-sol, actual effort ultra**, same-model internal review.
+
 ## What it cost
 
 Computation time, and a sequence of records that had to be re-read as
@@ -40,3 +49,14 @@ structural question it decides and what answer would stop it"
 (LESSONS_LEARNED §5); write the four things the meta-analysis §10 asks for
 before starting; attach a kill criterion with a number, as the
 [11 October brainstorm](../papers/quasi-rh/quasi-rh-exponent-descent/brainstorm/NEW_PATHS_FORWARD_BRAINSTORM_CLAUDE_20261011.md) does for every proposal and [Review 19](../papers/investigations-2/active/22_theta_manifold_geometry/reviews/19_PATHS_FORWARD_AFTER_THE_SECOND_ROUND_CLAUDE_20261015.md) §1 does for the frontier lane. When a direct evaluation is cheaper than the method under test, the method's result is the cost comparison, and it is recorded as such.
+
+## Explicit outer constants still need a feasible bridge
+
+18 October 2026, for Edward Baker with substantial LLM assistance,
+**gpt-6.1-sol, actual effort ultra**. [Investigation 3/11, Note 14](../papers/investigations-3/11_arithmetic_collision_rigidity/notes/02_updated_research_plan/14_SHARPER_OUTER_EXCLUSION_AND_CONSTANT_DISTANCE_CONTOURS_20261018.md)
+sharpens exp(64/epsilon) to exp(20/epsilon), but says: “The narrowed gap
+is not a reason to launch a height scan”. Its present explicit-mode rule
+still requires >10^433 retained modes at exp(2000). This is a scoped
+resource obstruction for that enumeration, not a lower bound for other
+assembly or oscillatory methods. [Review 12](../papers/investigations-3/11_arithmetic_collision_rigidity/reviews/12_OUTER_EXCLUSION_AND_CONSTANT_DISTANCE_REVIEW_20261018.md)
+retains the missing physical margin and global bridge.

@@ -70,3 +70,31 @@ Integration: **gpt-6.1-sol, ultra**; coordination/editing: **gpt-6-astra,
 ultra**, 18 October 2026, for Edward Baker with substantial LLM assistance.
 All future research stages are assigned to Sol; the complete signed margin
 remains open.
+
+## Overview 02 execution notes
+
+The user requested a separate [02_updated_research_plan](02_updated_research_plan/README.md)
+folder for this stage. Notes 07–10 there record the complete shifted
+interval evaluator, matched pilot and control screen, finite signed
+certificate and unclosed global consumer. Original Notes 01–06 retain their
+locations. Prepared for Edward Baker with substantial LLM assistance,
+**gpt-6.1-sol, actual effort max**, 18 October 2026. The
+[progress tracker](../research-progress/02_UPDATED_RESEARCH_PLAN_PROGRESS_20261018.md)
+records the passed finite gates and the stop decisions.
+
+## Effective continuation for overview 02
+
+[Note 11](02_updated_research_plan/11_EFFECTIVE_NONSTATIONARY_ARITHMETIC_TAIL_20261018.md), 18 October 2026, adds a
+nonstationary arithmetic-tail theorem, explicit uniform onset and bounded
+retained-integral cost measurements. Prepared for Edward Baker with
+substantial LLM assistance, **gpt-6.1-sol, actual effort ultra**;
+same-model internal checks. Global noncollision remains open.
+
+## Signed and wall consumers for overview 02
+
+[Note 12](02_updated_research_plan/12_HIGH_HEIGHT_SIGNED_CONSUMER_AND_MATCHED_COMPARISON_20261018.md) pays all whole-cell errors in a
+height-1000 signed certificate and records the matched comparison.
+[Note 13](02_updated_research_plan/13_VERTICAL_WALL_AND_FINITE_HEIGHT_NONCOLLISION_20261018.md) turns a complete certified
+vertical wall into contiguous finite noncollision coverage. Prepared for
+Edward Baker with substantial LLM assistance, **gpt-6.1-sol, actual effort
+ultra**, 18 October 2026; internal same-model checks.

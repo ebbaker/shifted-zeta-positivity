@@ -1,0 +1,100 @@
+{
+  "date": "2026-10-18",
+  "timezone": "America/New_York",
+  "prepared_for": "Edward Baker",
+  "llm_assistance": "substantial; same-model analytic derivation and scalar replay",
+  "actual_model": "gpt-6.1-sol",
+  "actual_effort": "ultra",
+  "configuration_provenance": "trusted inherited parent execution context",
+  "python": "3.12.14",
+  "python_flint": "0.9.0",
+  "precision_bits": 192,
+  "status": "PASS: scalar outward replay; all-X coverage comes from the analytic proof",
+  "theorem_domain": "0<epsilon<=1/2, epsilon<=t<=1/2, |x|>=exp(20/epsilon)",
+  "frozen_parameters": "at arbitrary real height X, L=log(X/(4pi)), R=(5/2)/L, a=0, N=1",
+  "primary_source": "https://arxiv.org/html/1904.12438v2#S1.Thmtheorem3",
+  "source_sha256": {
+    "papers/quasi-rh/quasi-rh-exponent-descent/newman_collisions/newman_collision_reductions.tex": "5e9ea35168b629923bc548f27b591f641a235feb262163177c0041b83a5244c5",
+    "papers/investigations-3/11_arithmetic_collision_rigidity/notes/02_updated_research_plan/11_EFFECTIVE_NONSTATIONARY_ARITHMETIC_TAIL_20261018.md": "a36b9c51ebd54c56a6470a7d8cbf485354a7647cb6afa39bccaa2b46b3990c40",
+    "papers/investigations-3/11_arithmetic_collision_rigidity/notes/02_updated_research_plan/12_HIGH_HEIGHT_SIGNED_CONSUMER_AND_MATCHED_COMPARISON_20261018.md": "23c4a06536a4f105e1684eab95fcef30cc55e4df78f09d5817527762332668cd",
+    "papers/investigations-3/11_arithmetic_collision_rigidity/notes/02_updated_research_plan/13_VERTICAL_WALL_AND_FINITE_HEIGHT_NONCOLLISION_20261018.md": "e28b714a52706120af26fce67070adb83529c4446a75cb1f9bb0c46abe756229"
+  },
+  "script_sha256": "07ec8a7e2f2a5c15db17bb7e78002d551bb6ae0d0147bf49ef97ac469b8b91ec",
+  "scalar_enclosures": {
+    "log_q_perturbation_upper": "[5.77776178719656103364775930468777490431620915e-19 +/- 3.67e-64]",
+    "log_S_perturbation_upper": "[2.88888089359828061975672012283332922732555935e-19 +/- 5.35e-65]",
+    "epsilon_log_q_lower": "[18.7344878765153541035110542028652940761008525 +/- 4.09e-44]",
+    "Astar_over_L_upper": "[0.500450381725379679147942753638766459696848880 +/- 3.79e-46]",
+    "Dstar_upper": "[4.24835425529158910484761699731845073670207461e-18 +/- 3.34e-63]",
+    "cutoff_log_ratio_upper": "[2.24610099350353022586201690545362143110194181e-18 +/- 2.99e-63]",
+    "kstar_log_m_upper": "[1.44444044679914029564818977908827418899882959e-18 +/- 1.61e-64]",
+    "power_p_lower": "[2.80200000000000000000000000000000000000000000 +/- 3e-49]",
+    "Kstar_upper": "[1.89204711965537331489598775019901819041530499 +/- 2.67e-45]",
+    "R_omega_lower": "[0.624806841216216199324324324324324324324324324 +/- 3.25e-46]",
+    "U_n_upper": "[1.08868326146102268632238655088845318020615178e-16 +/- 3.20e-58]",
+    "C_positive_exponent_upper": "[2.48692364585753865889396942158862069265340573e-8 +/- 1.21e-53]",
+    "E_C_upper": "[1.65759340056563066649742175220629495888688464e-19 +/- 1.24e-64]",
+    "arithmetic_sum_upper": "[0.266622448904557012982340006533937746797944077 +/- 4.98e-46]",
+    "eta_1_upper": "[1.01316530583743066833289202482896343783218749 +/- 7.08e-46]",
+    "strict_pair_criterion_upper": "[0.924227400050243745305481705188600127263292250 +/- 3.38e-46]"
+  },
+  "strict_checks": {
+    "log_4pi_below_2_54": true,
+    "L_above_37": true,
+    "R_below_0_068": true,
+    "R_at_most_one": true,
+    "lower_disk_height_above_200": true,
+    "log_q_delta_below_1e_15": true,
+    "log_S_delta_below_1e_15": true,
+    "epsilon_log_q_above_18_7": true,
+    "log_q_above_37": true,
+    "Astar_below_0_51_L": true,
+    "Dstar_below_0_001": true,
+    "alpha_error_below_0_001": true,
+    "cutoff_log_extra_below_0_01": true,
+    "m_minus_at_least_1e8": true,
+    "cutoff_span_under_one": true,
+    "m_power_k_below_two": true,
+    "power_p_above_14_over_5": true,
+    "AB_power_sums_dominate_n_minus_two": true,
+    "Kstar_below_1_9": true,
+    "R_omega_above_0_62": true,
+    "U_n_below_1e_14": true,
+    "C_positive_exponent_below_one": true,
+    "E_C_below_1e_17": true,
+    "C_second_numerator_relaxation": true,
+    "strict_pair_criterion_below_one": true
+  },
+  "invalid_parameter_rejections": [
+    {
+      "case": "zero_epsilon",
+      "rejected": true,
+      "reason": "outside the positive-time slab domain"
+    },
+    {
+      "case": "epsilon_above_half",
+      "rejected": true,
+      "reason": "outside the positive-time slab domain"
+    },
+    {
+      "case": "time_below_epsilon",
+      "rejected": true,
+      "reason": "outside the positive-time slab domain"
+    },
+    {
+      "case": "time_above_half",
+      "rejected": true,
+      "reason": "outside the positive-time slab domain"
+    },
+    {
+      "case": "height_below_threshold",
+      "rejected": true,
+      "reason": "height is below exp(20/epsilon)"
+    }
+  ],
+  "limitations": [
+    "does not close 1001<|x|<exp(2000) at epsilon=1/100",
+    "does not establish a new Newman bound",
+    "uses the imported explicit fixed-cutoff Riemann--Siegel error theorem"
+  ]
+}
