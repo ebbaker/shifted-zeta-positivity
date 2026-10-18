@@ -7,7 +7,8 @@ Separate assessments of claims, computations and scope.
 
 | Number | Review | Model | Kind |
 | --- | --- | --- | --- |
-| 01 | [Round-one cross-model review](01_ROUND_ONE_CROSS_MODEL_REVIEW_CLAUDE_20261017.md) | Claude Opus 5.5 (`claude-opus-5-5`), effort max | Cross-model LLM assessment of round one (Notes 01–02, working manuscript); Codex reconciliation pending |
+| 01 | [Round-one cross-model review](01_ROUND_ONE_CROSS_MODEL_REVIEW_CLAUDE_20261017.md) | Claude Opus 5.5 (`claude-opus-5-5`), effort max | Cross-model LLM assessment of round one (Notes 01–02, working manuscript); Accepted with corrections; [Codex reconciliation](02_CODEX_RECONCILIATION_OF_ROUND_ONE_REVIEW_20261017.md) |
+| 02 | [Codex reconciliation](02_CODEX_RECONCILIATION_OF_ROUND_ONE_REVIEW_20261017.md) | gpt-6.1-sol, effort ultra | Author response and same-model checks of review additions; round-two assessment pending |
 
 Row added 17 October 2026 for Edward Baker with LLM assistance (Claude Opus 5.5,
 Claude Cowork); its support computations are in

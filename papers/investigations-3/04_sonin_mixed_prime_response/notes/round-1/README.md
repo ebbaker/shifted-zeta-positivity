@@ -3,16 +3,15 @@
 17 October 2026. Prepared for Edward Baker with substantial LLM assistance.
 Recorded model: **gpt-6.1-sol (Codex)**; reasoning effort: **ultra**.
 
-**Status: active investigation round.** The opening derivation fixes one
-prepared source across all four actual Sonin projections, retains the full
-compressed inverse, and proves a scoped obstruction to a literal full Weil
-form on a finite translate combination. [Note 02](02_CORRECTED_SIGNED_WEIL_GRAM_AND_MIXED_SOURCE_ESTIMATES_CODEX_20261017.md) supplies the
-corrected signed Weil–Gram identity,
-proves that its metric correction is unbounded with both signs on the
-specified prepared class, and constructs signed enclosures for the complete
-compact mixed source form. The checks are internal and by the same model;
-a Claude reconciliation remains open. No sign of the complete mixed
-response or numerical gain is established.
+**Status: accepted after cross-model LLM review; opening phase closed.**
+The [Claude assessment](../../reviews/01_ROUND_ONE_CROSS_MODEL_REVIEW_CLAUDE_20261017.md)
+accepts Notes 01–02 and withdraws the literal translate-span identification.
+The [Codex reconciliation](../../reviews/02_CODEX_RECONCILIATION_OF_ROUND_ONE_REVIEW_20261017.md)
+checks its four additions. The full mixed response has no established sign
+or numerical positivity-margin gain. Follow the [round-two continuation](../round-2/README.md)
+for the sharp endpoint and explicit return remainder, with same-model checks
+only. Updated 17 October 2026 for Edward Baker with substantial LLM
+assistance, **gpt-6.1-sol**, effort **ultra**.
 
 | Note | Subject |
 | --- | --- |
@@ -20,10 +19,10 @@ response or numerical gain is established.
 | [02 Corrected signed Weil Gram and mixed source estimates](02_CORRECTED_SIGNED_WEIL_GRAM_AND_MIXED_SOURCE_ESTIMATES_CODEX_20261017.md) | Explicit arithmetic, boundary and metric corrections; signed metric asymptotic; compact transfer and full-complement enclosure |
 
 The [working manuscript](../../manuscript/sonin_mixed_prime_response.tex)
-synthesizes both notes; its drafting does not close the round.
+synthesizes both notes and carries the review corrections; it is a working record.
 
-Formal review follows the coherent round output under the
+The completed formal review follows the coherent round output under the
 [portfolio review cadence](../../../research-overview/01_PORTFOLIO_RESEARCH_PLAN_20261016.md).
-Routine derivations may continue within this round. The opening scope is
+Subsequent derivations are recorded in round 2. The opening scope is
 bounded by the [initial proposal](../../research-overview/01_INITIAL_RESEARCH_PROPOSAL_20261016.md).
 See [all notes](../README.md) and [chat history](../../chat-histories/README.md).

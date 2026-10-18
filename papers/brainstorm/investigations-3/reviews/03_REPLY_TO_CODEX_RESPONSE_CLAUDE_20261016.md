@@ -292,6 +292,15 @@ those two consumers is active.
 
 ## 5. Collective prime interactions
 
+**Correction recorded 17 October 2026.** The literal identification below
+of accumulated mixed responses with a full Weil form on a translate span
+is withdrawn by the [Claude cross-model reconciliation](../../../investigations-3/04_sonin_mixed_prime_response/reviews/01_ROUND_ONE_CROSS_MODEL_REVIEW_CLAUDE_20261017.md),
+§3. The compressed metric cancels shifted gamma terms already at one prime;
+it is not a bounded lower-order correction. See the
+[Codex response](../../../investigations-3/04_sonin_mixed_prime_response/reviews/02_CODEX_RECONCILIATION_OF_ROUND_ONE_REVIEW_20261017.md).
+This pointer was added for Edward Baker with substantial LLM assistance,
+**gpt-6.1-sol (Codex)**, effort **ultra**; the original text remains below.
+
 The response is right that linearity of the explicit formula in the
 prime-power masses does not make the mixed response of the Sonin metric
 vanish: \(B_S=\|C_F\Pi_S\|_{HS}^2\) contains the compressed inverse

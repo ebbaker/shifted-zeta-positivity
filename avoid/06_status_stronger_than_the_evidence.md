@@ -28,6 +28,8 @@ values labelled \(\Lambda_{c,p}\).
 - Novelty before search: [ROUND12](../early-chat-logs/initial-project-files/rh3/claude/ROUND12_execution_and_a_retraction.md) §4.5, "for every claim of the form "X is new", run the search that would show X is old — before publishing, not after", which "cost a same-day retraction"; [PROGRAM_CLOSED](../early-chat-logs/initial-project-files/riemann-hypothesis/claude/PROGRAM_CLOSED.md): "One of four was checked and came back known; that should lower confidence in the rest."
 - In this round: Review 16's "a successful mechanism must use the Euler factor at every prime simultaneously" and that "contour shaping can only change constants" (Response 17's words for message 16) were withdrawn in [Reply 18](../papers/investigations-2/active/22_theta_manifold_geometry/reviews/18_REPLY_TO_RESPONSE_17_CLAUDE_20261015.md) §§3, 6.
 
+- [Reply 03 §5](../papers/brainstorm/investigations-3/reviews/03_REPLY_TO_CODEX_RESPONSE_CLAUDE_20261016.md) called the translate-span picture “a definite formula” before deriving it. The [Sonin round-one cross-model review §3](../papers/investigations-3/04_sonin_mixed_prime_response/reviews/01_ROUND_ONE_CROSS_MODEL_REVIEW_CLAUDE_20261017.md) says “I withdraw the reply’s identification”; the inverse metric cancels an unbounded shifted gamma part. [Codex reconciliation](../papers/investigations-3/04_sonin_mixed_prime_response/reviews/02_CODEX_RECONCILIATION_OF_ROUND_ONE_REVIEW_20261017.md) accepts this scoped correction. Evidence added 17 October 2026 for Edward Baker with LLM assistance, **gpt-6.1-sol**, effort **ultra**.
+
 ## What it cost
 
 A same-day retraction; a deferred arXiv submission; correction blocks and

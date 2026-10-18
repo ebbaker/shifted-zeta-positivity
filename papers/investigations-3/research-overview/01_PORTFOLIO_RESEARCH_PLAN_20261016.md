@@ -33,7 +33,7 @@ opens the initial proposal with phase-specific assignments.
 | [01 Dirichlet Newman families][p01] | A phase-normalized family and a proved verification/barrier/exterior contract; then one conductor-dependent approximation | Claude analytic draft; Codex symmetry, quantifiers and finite-height audit | Ready for contract work; numerical family campaign gated |
 | [02 Sharp finite-sum bounds][p02] | Uniform sharp-weight transfer and a complete feasibility budget for one proposed parameter improvement | Claude analytic binding/tail; Codex implementation and coverage | Ready for bounded feasibility work |
 | [03 Effective outer remainders][p03] | One complete remainder budget at a declared attainable overlap height | Codex analytic budget; Claude independent loss/import audit | Higher-risk; requires a different useful estimate |
-| [04 Sonin mixed-prime response][p04] | One exact mixed finite difference retaining preparation and the compressed inverse | Codex operator derivation; Claude tests translate-span reduction and sign mechanism | Ready for one analytic calculation |
+| [04 Sonin mixed-prime response][p04] | One exact mixed finite difference retaining preparation and the compressed inverse | Codex operator derivation; Claude tests translate-span reduction and sign mechanism | Opening phase accepted and closed; round-two endpoint/return additions await review; estimate campaign dormant |
 | [05 Constructive stable models][p05] | One explicit family, independent stability mechanism and first compatibility inequality | Claude construction; Codex coefficient, heat and convergence audit | Opening search reviewed and closed; round-two extensions await review; new construction gated |
 | [06 Explicit heat zero counts][p06] | Explicit constants and a budget for a named consumer | Codex extraction and budget; Claude analytic audit | Waiting for a precise consumer |
 | [07 Source-measurement audit][p07] | Scoped proof audit, independent replay and disposition of Reply 03 §§1–2 | Codex audit/replay; Claude proposition repair and review | Bounded closeout task |
@@ -67,9 +67,13 @@ but they do not supply the missing signed estimate.
 
 For Sonin, the exact place-addition laws are established source material.
 The proposed identification of accumulated mixed responses with a
-translate-span Weil form remains a claim to check. Project 04 begins by
-retaining the inverse metric and determining the extra terms, if any;
-it does not assume either a useful sign or a universal obstruction.
+translate-span Weil form was withdrawn in Project 04's cross-model review:
+the inverse metric cancels shifted gamma terms, already at one prime.
+Its opening phase is accepted and closed. The round-two continuation gives
+the sharp metric threshold and a controlled return expansion, with
+same-model checks only. An estimate campaign requires a named residual
+budget and an improving actual-Sonin estimate; no useful sign or universal
+obstruction is inferred.
 
 Heat zero-count information already exists. Project 06 starts from
 Polymath's theorem and extracts useful explicit constants only for a

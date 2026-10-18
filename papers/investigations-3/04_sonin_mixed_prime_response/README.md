@@ -3,27 +3,32 @@
 16 October 2026. Prepared for Edward Baker with substantial LLM assistance.
 Recorded model: **gpt-6-astra (Codex)**; reasoning effort: **ultra**.
 
-**Status: active round 1.** The [opening note](notes/round-1/01_EXACT_MIXED_RESPONSE_AND_FINITE_TRANSLATE_OBSTRUCTION_CODEX_20261017.md)
-derives the exact mixed response with the compressed inverse, identifies it
-with the mixed boundary correction, and proves a scoped obstruction to a
-literal full Weil form on a finite translate combination. These are internal
-same-model derivations; formal review follows the round, and the proposed
-Claude reconciliation remains open. The [continuation](notes/round-1/02_CORRECTED_SIGNED_WEIL_GRAM_AND_MIXED_SOURCE_ESTIMATES_CODEX_20261017.md)
-gives the corrected signed Weil–Gram identity and a construction for signed
-enclosures of the complete mixed source form; its metric correction alone
-is unbounded with both signs in the stated support class. No sign of the
-complete mixed response or numerical gain is established. Round opened 17 October 2026 for Edward Baker with substantial
-LLM assistance, **gpt-6.1-sol (Codex)**, reasoning effort **ultra**.
+**Status: round 1 accepted after cross-model review; round 2 analytic continuation
+ready for assessment.** The [Claude review](reviews/01_ROUND_ONE_CROSS_MODEL_REVIEW_CLAUDE_20261017.md)
+accepts the exact mixed response, corrected signed Weil–Gram identity,
+compact source transfer and scoped translate obstruction, and withdraws
+the original literal translate-span claim. The [Codex reconciliation](reviews/02_CODEX_RECONCILIATION_OF_ROUND_ONE_REVIEW_20261017.md)
+checks its added claims and closes the opening phase.
+
+The [round-two continuation](notes/round-2/README.md) proves the sharp
+boundedness threshold, identifies a noncompact endpoint with exact essential
+norm after arithmetic subtraction, and gives a controlled leading-return
+expansion. These additions have same-model checks only. No complete mixed
+sign or positivity-margin improvement is established. The opening estimate
+campaign is dormant pending a named residual budget and an improving
+actual-Sonin estimate or return cancellation; collective prime estimates
+are not excluded.
 
 The user-requested [working manuscript](manuscript/sonin_mixed_prime_response.tex)
-summarizes Notes 01–02 in one editable LaTeX source. It is an unreviewed
-working draft; source-only delivery and internal compilation checks do not
-change the round's review status.
+is a corrected round-one record with cross-model LLM assessment, not a
+manuscript milestone. Updated 17 October 2026 for Edward Baker with
+substantial LLM assistance, **gpt-6.1-sol (Codex)**, effort **ultra**.
 
 Start with the [initial research proposal](research-overview/01_INITIAL_RESEARCH_PROPOSAL_20261016.md)
 and the [portfolio plan](../research-overview/01_PORTFOLIO_RESEARCH_PLAN_20261016.md).
-Codex derives the full mixed response; Claude tests its reduction and candidate sign mechanism. These are future model-family responsibilities; record the actual
-model and effort when work is performed.
+The initial assignments were executed through the exact derivation and
+Claude reconciliation. Phase 2 supplied no qualifying sign estimate; the
+round-two sources record the resulting scope and reopening input.
 
 | Folder | Purpose |
 | --- | --- |
@@ -33,7 +38,7 @@ model and effort when work is performed.
 | [reviews](reviews/README.md) | Separate assessments of claims, computations and scope |
 | [source-documents](source-documents/README.md) | Reference provenance and links to canonical sources |
 | [brainstorm](brainstorm/README.md) | Undeveloped candidate mechanisms with a decision question |
-| [manuscript](manuscript/README.md) | Unreviewed working manuscript summarizing round 1 |
+| [manuscript](manuscript/README.md) | Corrected working record summarizing round 1 |
 | [chat-histories](chat-histories/README.md) | Canonical records of new project-specific conversations |
 
 The proposal states the opening deliverable, controls, dependencies and

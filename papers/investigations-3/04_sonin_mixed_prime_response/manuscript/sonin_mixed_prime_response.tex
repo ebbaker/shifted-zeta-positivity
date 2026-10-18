@@ -28,7 +28,7 @@
 \title{Mixed prime response of finite Sonin projections\\
 \large Exact identities and signed metric corrections}
 \author{Drafted for Edward Baker}
-\date{17 October 2026\\\small Unreviewed working draft}
+\date{17 October 2026\\\small Working record with cross-model LLM assessment}
 \begin{document}
 \maketitle
 \begin{abstract}
@@ -52,11 +52,13 @@ numerical sign margin or support-adapted Weil positivity estimate is obtained.
 
 \noindent\textbf{Draft status.}
 This manuscript summarizes round-one Notes 01--02 of investigation 04
-\cite{note01,note02}. The round remains active. Proofs are given relative
-to the explicit inherited Sonin and finite Euler inputs in
-Section~\ref{sec:setup}. Internal derivations and checks used
-\texttt{gpt-6.1-sol}, reasoning effort \texttt{ultra}. Cross-model
-reconciliation and specialist human review remain pending.
+\cite{note01,note02}. The opening phase has passed cross-model LLM
+assessment and is closed; the review and Codex reconciliation are recorded
+in the investigation's \texttt{reviews/} folder. This is a working record,
+not a manuscript milestone. Proofs use the inherited inputs in
+Section~\ref{sec:setup}. Derivations and corrections used
+\texttt{gpt-6.1-sol}, effort \texttt{ultra}. Round-two additions are in
+\texttt{notes/round-2/}; their round assessment and specialist review remain open.
 
 \section{Sources, projections and inherited inputs}\label{sec:setup}
 
@@ -287,7 +289,7 @@ Indeed the kernel integrates
  \int_{I_L}(L/2+v)|F(v)|^2\dd v.
 \]
 Their sum is \(L\norm F_2^2\). The product bound and arithmetic-geometric
-mean inequality give \eqref{eq:crossbound}. Conjugating the source reverses
+mean inequality give \eqref{eq:crossbound}. Reflecting the source reverses
 the frequency multiplier and interchanges the two norms, proving the
 same estimate for its even average. This is the argument of
 \cite[Section 2]{closed}.
@@ -642,7 +644,12 @@ Fourier values at \(0,t\): the corresponding two functionals on
 \(C_c^\infty(I_L)\) are independent, and preparation multiplies their
 values by \(1/4,t^2+1/4\). The missing premise in this control is the
 actual Sonin projection, not source neutrality or prime weights.
-This is not an actual-Sonin counterexample.
+This is not an actual-Sonin counterexample. The balanced projection used
+here has zero second-order coefficient: since \(z_j\le\beta_j\), this
+example's mixed response is of third order in small weights. A tilted
+projection already gives either sign at second order, as verified in the
+round-one review and explained by the leading-return formula in the
+round-two continuation.
 
 The repository control screen \cite{controls} keeps further exclusions
 scoped. Smooth-density controls change the discrete prime measure;
@@ -665,7 +672,8 @@ the inherited finite Sonin package.\\
 Signed Weil--Gram identity & Exact with every displayed arithmetic,
 boundary and metric correction retained.\\
 Metric sign asymptotic & Both unbounded signs when \(L>|\log(p/q)|\);
-not a sign theorem for the complete response.\\
+bounded when \(L\le|\log(p/q)|\) by the round-two continuation.
+This does not sign the complete response.\\
 Compact source transfer & Every fixed finite quartet and support;
 no growing-place uniformity or general Hilbert--Schmidt kernel claim.\\
 Signed enclosure construction & Full complement included; actual
@@ -688,8 +696,10 @@ assistance from OpenAI Codex, recorded model \texttt{gpt-6.1-sol},
 reasoning effort \texttt{ultra}. Parallel same-model agents checked the
 operator algebra, source domains, modulation argument, approximation
 constants and inherited source claims. These checks are internal LLM
-assistance and do not constitute independent cross-model or human
-refereeing. The detailed derivations are preserved in round-one Notes
+assistance. A subsequent Claude Opus 5.5
+cross-model review accepted round one; its corrections and Codex
+reconciliation are recorded separately. No specialist human review is
+claimed. The detailed derivations are preserved in round-one Notes
 01--02 \cite{note01,note02}; this manuscript is their synthesis, with no
 additional numerical run. Draft history is maintained in the investigation's
 \texttt{DRAFT\_HISTORY.md}, without manuscript snapshot folders.
@@ -707,6 +717,7 @@ A. Connes, C. Consani and H. Moscovici,
 \emph{Zeta zeros and prolate wave operators},
 Ann. Funct. Anal. \textbf{15} (2024), article 87.
 \href{https://arxiv.org/html/2310.18423v2}{arXiv:2310.18423v2};
+The arXiv v2 text carries the subtitle \emph{Semilocal adelic operators};
 Theorem 4.6 and Sections 4.6--4.8.
 
 \bibitem{dlmf}

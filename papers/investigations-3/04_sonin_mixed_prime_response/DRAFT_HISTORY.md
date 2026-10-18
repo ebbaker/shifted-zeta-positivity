@@ -41,3 +41,15 @@ new manuscript snapshot folders.
   Source compiles; no PDF retained. Unreviewed working draft, with no new
   numerical sign margin. Prepared for Edward Baker with substantial LLM
   assistance, **gpt-6.1-sol**, effort **ultra**.
+
+
+- **17 October 2026 — review reconciliation and sharp endpoint.** Round-one
+  notes: commit `4929ce1`; manuscript: `74eb892`; Claude review: `7e56ba2`.
+  [Codex response](reviews/02_CODEX_RECONCILIATION_OF_ROUND_ONE_REVIEW_20261017.md) accepts phase 1 and closes the opening
+  estimate campaign pending a named improving budget. [Round-two Note 01](notes/round-2/01_REVIEW_RECONCILIATION_AND_SHARP_METRIC_THRESHOLD_CODEX_20261017.md)
+  proves the boundedness threshold with a noncompact endpoint and exact
+  arithmetic-subtracted essential norm, and a return expansion with cubic
+  error. The new results have same-model checks only; no positivity-margin
+  gain or manuscript milestone. Prepared for Edward Baker with substantial
+  LLM assistance, **gpt-6.1-sol**, effort **ultra**. Working tree at baseline
+  `e2e1e0e`; numerical support in [round 2](numerics/round-2/README.md).

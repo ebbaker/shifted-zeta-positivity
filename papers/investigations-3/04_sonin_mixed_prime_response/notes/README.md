@@ -8,8 +8,12 @@ Incremental derivations and one coordination note per phase.
 Begin with the bounded task in the [initial proposal](../research-overview/01_INITIAL_RESEARCH_PROPOSAL_20261016.md).
 The [round 1 folder](round-1/README.md) contains the opening exact mixed
 response, finite translate obstruction, and corrected signed Weil–Gram
-identity with compact mixed source estimates. Round 1 is active; formal review
-follows the coherent round output. Updated 17 October 2026 for Edward Baker
+identity with compact mixed source estimates. Round 1 has passed its
+[cross-model review](../reviews/01_ROUND_ONE_CROSS_MODEL_REVIEW_CLAUDE_20261017.md).
+The [round 2 folder](round-2/README.md) contains the reconciliation, sharp
+metric threshold and controlled return expansion; its additions await round
+assessment. The opening estimate campaign is dormant pending an improving
+actual-Sonin estimate for a named residual budget. Updated 17 October 2026 for Edward Baker
 with substantial LLM assistance, **gpt-6.1-sol (Codex)**, effort **ultra**.
 
 Use dated numbered notes, one owner

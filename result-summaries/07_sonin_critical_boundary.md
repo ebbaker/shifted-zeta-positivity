@@ -45,13 +45,21 @@ Since the 1 October rounds the manuscript grew from 1,782 to 3,874 lines
 with only same-model checks, and the draft history ends on a working-tree
 revision.
 
-17 October 2026: Investigation 04 now has an
-[unreviewed round-one working manuscript](../papers/investigations-3/04_sonin_mixed_prime_response/manuscript/sonin_mixed_prime_response.tex)
-on mixed response, signed metric corrections and a compact source
-enclosure construction. Its checks are same-model only; no evaluated mixed
-sign or positivity-margin gain is reported. This pointer does not upgrade
-its claims to the reviewed statuses above. Added for Edward Baker with
-substantial LLM assistance, **gpt-6.1-sol**, effort **ultra**.
+17 October 2026: Investigation 04's [round-one work](../papers/investigations-3/04_sonin_mixed_prime_response/notes/round-1/README.md)
+has cross-model LLM review: Claude found “no mathematical error”, with one
+expository correction, and withdrew the literal translate-span claim.
+The opening phase is accepted and closed; the estimate campaign is dormant
+pending an improving actual-Sonin bound for a named residual budget.
+The reusable compact transfer sends every fixed compact boundary operator
+to a compact source form, with norm error at most L times its operator
+approximation error. The [round-two continuation](../papers/investigations-3/04_sonin_mixed_prime_response/notes/round-2/README.md)
+has status **proved in-note, same-model checks only**: sharp boundedness
+threshold, noncompact endpoint with exact essential norm after arithmetic
+subtraction, and explicit leading-return remainder. No actual mixed sign,
+positivity-margin gain or specialist review. [Claude review](../papers/investigations-3/04_sonin_mixed_prime_response/reviews/01_ROUND_ONE_CROSS_MODEL_REVIEW_CLAUDE_20261017.md),
+[Codex reconciliation](../papers/investigations-3/04_sonin_mixed_prime_response/reviews/02_CODEX_RECONCILIATION_OF_ROUND_ONE_REVIEW_20261017.md).
+Updated for Edward Baker with substantial LLM assistance, **gpt-6.1-sol**,
+effort **ultra**.
 
 ## Caveats
 
@@ -67,7 +75,8 @@ for stated reasons.
 
 Uniform Toeplitz–Hankel trace control; the finite Euler identity as the
 exact form of the prepared-source target; the single-probe reformulation
-of RH as growth of one function; the signed place-addition laws as lemmas.
+of RH as growth of one function; the signed place-addition laws as lemmas; the fixed-place compact
+boundary-to-source transfer and the scoped source-versus-space obstruction.
 
 ## Where
 

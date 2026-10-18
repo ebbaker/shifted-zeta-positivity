@@ -18,7 +18,7 @@ This status update was prepared for Edward Baker with substantial LLM assistance
 | [Dirichlet Newman families](01_dirichlet_newman_families/README.md) | Contract phase proposed; conductor numerics gated |
 | [Sharp finite-sum bounds](02_sharp_finite_sum_bounds/README.md) | Bounded feasibility phase proposed |
 | [Effective outer remainders](03_effective_outer_remainders/README.md) | Higher-risk proposal; new useful estimate required |
-| [Sonin mixed-prime response](04_sonin_mixed_prime_response/README.md) | One analytic calculation proposed |
+| [Sonin mixed-prime response](04_sonin_mixed_prime_response/README.md) | Opening phase accepted and closed after cross-model review; round-two sharp endpoint and return expansion await assessment; estimate campaign dormant pending an improving budget |
 | [Constructive stable models](05_constructive_stable_models/README.md) | Opening search closed after review; round-two weak/base-time extensions await review; new construction gated |
 | [Explicit heat zero counts](06_explicit_heat_zero_counts/README.md) | Baseline count cross-model reviewed; requested round-2 count from X>=100000 has same-model checks; consumer tolerance open |
 | [Source-measurement audit](07_source_measurement_audit/README.md) | Round one assessed; round-two notes add one-direction gap events and certified tail bounds; round assessment pending |

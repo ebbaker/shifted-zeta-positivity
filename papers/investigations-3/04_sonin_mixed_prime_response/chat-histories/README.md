@@ -8,6 +8,8 @@ Numbers are local and stay stable on routine refresh. The [17 October relocation
 
 - [Chat 1 — Begin Sonin mixed-prime response](0001_2026-10-17T04-34-44Z_begin-sonin-mixed-prime-response.json)
 
+- [Chat 2 — Continue round-2 investigation](0002_2026-10-18T01-43-23Z_continue-round-2-investigation.json)
+
 The [registry](index.json) gives current capture times, counts, recorded models and hashes.
 Use [the automatic history workflow](../../../../tools/CHAT_HISTORY.md) with this folder as the destination.
 Preserve the existing conversation id and capture only completed public text.
