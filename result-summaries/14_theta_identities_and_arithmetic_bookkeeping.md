@@ -32,6 +32,21 @@ oscillatory estimate to be proved.
   with rational coefficients on an open pole-free interval. This excludes
   that exact-closure class, not stationary-set identities, residual bounds,
   transcendental coefficients, nonlocal relations or inequalities.
+- **Positive complete arithmetic packets (3/11 Note 04, 18 October).**
+  For 0<=t<=1/2, nonzero bounded nonnegative combinations of n>=2 physical modes
+  have positive cosine transforms. The {2,3} packet has uniform relative
+  error below 7.3e-25 against the positive arithmetic tail; its logarithmic
+  curvature is bounded by 117, giving a carrier payment below 117 E.
+  Full modular reflection cancels all algebraic tails with the first mode;
+  the signed physical residual remains open. **Proved in-note**, constants
+  Arb-certified, [same-assistant self-review only](../papers/investigations-3/11_arithmetic_collision_rigidity/reviews/02_POSITIVE_PACKET_AND_MODULAR_CANCELLATION_SELF_REVIEW_CODEX_20261018.md).
+  [Source and certificate links](../papers/investigations-3/11_arithmetic_collision_rigidity/notes/04_POSITIVE_ARITHMETIC_PACKETS_AND_MODULAR_CANCELLATION_CODEX_20261018.md). The
+  [self-contained working manuscript](../papers/investigations-3/11_arithmetic_collision_rigidity/manuscript/README.md)
+  now supplies the full derivation and rational constant enclosures;
+  [manuscript self-review](../papers/investigations-3/11_arithmetic_collision_rigidity/reviews/03_MANUSCRIPT_SELF_REVIEW_CODEX_20261018.md)
+  remains same-assistant. Its scope is explicit: “The identity alone does
+  not reduce the strength of the missing estimate.”
+  Added for Edward Baker with substantial LLM assistance, **gpt-6-astra, max**.
 - **Finite \(E_8\) source bridge (21 Note 48).** An eight-character selector
   projects onto \(2\mathbb Z^2\oplus D_6\) and exactly recovers the
   two-variable theta product; differentiation recovers the complete source
@@ -119,3 +134,34 @@ and cutoff accounting for future estimates.
 - [Joint polynomial-current scope](../papers/investigations-2/active/22_theta_manifold_geometry/notes/03_theta_bundles_and_connections/09_JOINT_SOURCE_CURRENT_AND_POLYNOMIAL_OBSTRUCTION_20261015.md), [signed quotient](../papers/investigations-2/active/22_theta_manifold_geometry/notes/01_physical_jet_geometry/02_SIGNED_OBSERVATION_QUOTIENT_AND_COEFFICIENT_SINGULARITIES_20261015.md), [Review 10](../papers/investigations-2/active/22_theta_manifold_geometry/reviews/10_JOINT_SOURCE_CURRENT_AND_SIGNED_QUOTIENT_REVIEW_20261015.md).
 - [Complete arithmetic dilations](../papers/investigations-2/active/22_theta_manifold_geometry/notes/03_theta_bundles_and_connections/11_MULTIPLICATIVE_DILATION_AND_COMPLETE_HEAT_PACKETS_20261015.md), [nonlocal audit](../papers/investigations-2/active/22_theta_manifold_geometry/notes/03_theta_bundles_and_connections/12_NONLOCAL_ARITHMETIC_MULTIPLIERS_AND_BOUNDARY_OBSTRUCTIONS_20261015.md), [Review 14](../papers/investigations-2/active/22_theta_manifold_geometry/reviews/14_MULTIPLICATIVE_DILATION_AND_NONLOCAL_ARITHMETIC_REVIEW_20261015.md).
 - Earlier programs: [09 two-coset reduction](../papers/investigations-2/inactive/09_rank_two_theta_addition/notes/1_COMPLETE_TWO_COSET_REDUCTION_20261013.md), [18 Hecke cusp formula](../papers/investigations-2/active/18_rank_two_automorphic_lift/notes/1_CUSP_FORMULA_HECKE_AND_CONTROLS_20261013.md), [06 parity obstruction](../papers/investigations-2/active/06_paired_kernel_factorization/notes/1_FOLDED_PARITY_CUSP_AND_FACTORISATION_OBSTRUCTION_20261013.md), [coset review](../papers/investigations-2/brainstorm/reviews/RANK_TWO_TO_PAIRED_KERNEL_REVIEW_CODEX_20261013.md); [02 Volterra note](../papers/investigations-2/active/02_angular_jacobi_gluing/notes/2_VOLTERRA_RECOVERY_POSITIVE_ANCHOR_AND_TRANSFER_GAP_20261013.md); [20 path identities](../papers/investigations-2/active/20_constrained_operator_squares/notes/RESIDUAL_CORRECTED_HEAT_TRAJECTORY_IDENTITIES_20261014.md), [path review](../papers/investigations-2/active/20_constrained_operator_squares/reviews/BOUNDED_PROGRAM_AND_DIRAC_CONTINUATION_REVIEW_20261014.md).
+
+
+**18 October 2026 continuation, investigation 3/11.**
+[Note 05](../papers/investigations-3/11_arithmetic_collision_rigidity/notes/05_COMPLEX_STRIP_CARRIERS_AND_SHARP_LOG_DERIVATIVES_CODEX_20261018.md)
+proves positive real part for bounded positive packets starting at m>=2 on
+|Im z|<=pi m^2, and the real logarithmic bound beta^2+|beta_x|<=1/(4m^4).
+For A this strengthens the manuscript's valid 117 E payment to E/64;
+"The signed first term in (4) remains uncontrolled."
+[Review 04](../papers/investigations-3/11_arithmetic_collision_rigidity/reviews/04_MANUSCRIPT_AUDIT_AND_STRENGTHENING_REVIEW_CODEX_20261018.md):
+**proved in-note; additional same-model internal checks**, with rational
+certificates for the new remainder constants, no specialist review.
+The finite-prime collision controls retain the new strip geometry.
+[Note 06](../papers/investigations-3/11_arithmetic_collision_rigidity/notes/06_CANCELLATION_PRESERVING_APPROXIMATION_AND_NEWMAN_ROADMAP_CODEX_20261018.md)
+adds an explicit shifted finite-mode derivative error, extending 07's
+existing contour method; the finite exclusion margin remains unproved.
+Prepared for Edward Baker with substantial LLM assistance, **gpt-6-astra,
+ultra**. That review preceded manuscript incorporation; the current milestone below
+supersedes that document-status sentence.
+
+
+**18 October 2026 manuscript integration, investigation 3/11.** The
+[current manuscript](../papers/investigations-3/11_arithmetic_collision_rigidity/manuscript/positive_arithmetic_packets/main.tex) now includes the E/64 carrier
+payment, complex-strip bounds, sharper remainder jets, complete shifted-source
+tail theorem and envelope-relative asymptotic. **Proved in-paper; internal
+LLM checks by contributing Sol and Astra assistants**, both effort ultra;
+[Review 05](../papers/investigations-3/11_arithmetic_collision_rigidity/reviews/05_UPDATED_MANUSCRIPT_INTEGRATION_REVIEW_CODEX_20261018.md) pins the revised source set and
+scalar certificate. Section 7 states: “Neither is a lower bound for the
+complete oscillatory field.” No new collision exclusion or Newman bound.
+The [updated overview](../papers/investigations-3/11_arithmetic_collision_rigidity/research-overview/02_UPDATED_RESEARCH_OVERVIEW_AND_SOL_EXECUTION_PLAN_20261018.md) assigns
+every future stage to GPT-6.1 Sol. Prepared for Edward Baker with substantial
+LLM assistance; no independent specialist review.

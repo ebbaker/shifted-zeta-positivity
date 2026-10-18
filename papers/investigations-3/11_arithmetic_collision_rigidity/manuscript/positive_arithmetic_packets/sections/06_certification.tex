@@ -1,0 +1,137 @@
+\section{Explicit constants and the remaining question}\label{sec:certification}
+
+The analytic estimates were stated in terms of $\pi$, exponentials and
+rational operations. Their validity does not depend on an oscillatory
+quadrature or a finite scan of the spectral axis. For completeness we
+describe an elementary enclosure procedure for every decimal inequality
+used in the text, and give outward bounds with ample rounding margin.
+
+\subsection{A rational enclosure procedure}
+
+Machin's identity gives
+\begin{equation}\label{eq:machin}
+ \pi=16\arctan(1/5)-4\arctan(1/239).
+\end{equation}
+For verification, if $\alpha=\arctan(1/5)$, the double-angle formula gives
+$\tan(2\alpha)=5/12$ and $\tan(4\alpha)=120/119$.
+With $\beta=\arctan(1/239)$ the subtraction formula then gives
+$\tan(4\alpha-\beta)=1$. The angle lies in $(0,\pi/2)$, so it is
+$\pi/4$, proving \eqref{eq:machin}. For either $q=5$ or $q=239$, put
+\[
+ U_q=\sum_{j=0}^{40}\frac{(-1)^j}{(2j+1)q^{2j+1}},\qquad
+ L_q=U_q-\frac1{83q^{83}}.
+\]
+The alternating-series estimate gives
+$L_q\le\arctan(1/q)\le U_q$.
+All four endpoints are rational. Substitution with the appropriate
+signs into \eqref{eq:machin} encloses $\pi$.
+
+For the exponential, first suppose $0\le z\le1/8$ and set
+$P_{32}(z)=\sum_{j=0}^{32}z^j/j!$. The omitted positive series has first
+term $z^{33}/33!$, and the ratio of each following term to its predecessor
+is at most $z/34$. Therefore
+\begin{equation}\label{eq:exp-enclosure}
+ P_{32}(z)\le e^z\le
+ P_{32}(z)+\frac{z^{33}}{33!(1-z/34)}.
+\end{equation}
+For a nonnegative rational interval $[a,b]$ enclosing an argument, choose
+$k$ so that $b/2^k\le1/8$. Evaluate the lower polynomial at $a/2^k$ and
+the upper expression at $b/2^k$, then square the positive interval $k$
+times. This encloses $e^{[a,b]}$ by monotonicity. Reciprocal endpoints,
+in reverse order, enclose $e^{-[a,b]}$.
+
+Ordinary interval arithmetic now encloses the constants in
+Section~\ref{sec:positivity} and the explicit tail constants of
+Section~\ref{sec:shifted}. Products use the minimum and maximum of the
+four endpoint products; division uses the reciprocal interval after
+checking that the denominator excludes zero. All denominators used below
+are strictly positive.
+
+One may perform the calculation with exact fractions throughout.
+For a bounded-size implementation, round each lower endpoint down and
+each upper endpoint up to a multiple of $2^{-256}$ after every interval
+operation. These outward roundings preserve containment by induction.
+No machine floating-point approximation to $\pi$ or to an exponential
+is needed. For the sample shift $d=\pi/16$, use
+$\cos(4d)=1/\sqrt2>7/10$; the last inequality follows by squaring
+positive quantities. Substitution of $7/10$ in the tail majorant is
+conservative and avoids a square-root enclosure.
+
+\subsection{Certified values}
+
+Let $d_5=29/200$ and let $\rho_{s,5}$ denote the strip-relative constant
+from Section~\ref{sec:positivity}. In the shifted-source bound set
+$m=5$, $d=\pi/16$, $T=1/2$, and $Y=1$. Write $\overline K_j$ for its
+conservative expression with $\cos(4d)$ replaced by $7/10$.
+Thus $K_j\le\overline K_j$; the intervals in the last three rows
+enclose the conservative expressions, not the exact-cosine constants.
+
+\begin{table}[htbp]
+\centering
+\caption{Outward rational enclosures for the current estimates.}
+\label{tab:constants}
+\begin{tabular}{@{}lrr@{}}
+\toprule
+Quantity & Lower bound & Upper bound\\
+\midrule
+$\kappa$ & $0.00084868730924288$ & $0.00084868730924289$\\
+$\rho_3$ & $0.00026291407856$ & $0.00026291407858$\\
+$\rho_5$ & $7.25125221685\,10^{-25}$ & $7.25125221687\,10^{-25}$\\
+$d_5\rho_5$ & $1.05143157144\,10^{-25}$ & $1.05143157145\,10^{-25}$\\
+$d_5^2\rho_5$ & $1.52457577859\,10^{-26}$ & $1.52457577860\,10^{-26}$\\
+$\rho_{s,5}$ & $8.47360190576\,10^{-25}$ & $8.47360190578\,10^{-25}$\\
+$\overline K_0$ & $7.95799323606\,10^{-23}$ & $7.95799323608\,10^{-23}$\\
+$\overline K_1$ & $1.60045950329\,10^{-23}$ & $1.60045950331\,10^{-23}$\\
+$\overline K_2$ & $3.22054543607\,10^{-24}$ & $3.22054543609\,10^{-24}$\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+These enclosures prove the strict rounded bounds
+\[
+ \rho_3<0.000263,\quad \rho_5<7.3\,10^{-25},\quad
+ d_5\rho_5<1.06\,10^{-25},\quad d_5^2\rho_5<1.54\,10^{-26},
+\]
+\[
+ \rho_{s,5}<8.5\,10^{-25},\qquad
+ (\overline K_0,\overline K_1,\overline K_2)
+ <(8\,10^{-23},1.61\,10^{-23},3.23\,10^{-24}),
+\]
+where the last inequality is componentwise.
+The carrier slope bound $1/8$ and curvature budget $1/64$ follow
+analytically from the disk-map argument, not from decimal certification.
+
+The accompanying standard-library program
+\texttt{certify\_updated\_manuscript.py} implements these interval rules,
+replays the original manuscript constants, and verifies every endpoint
+in Table~\ref{tab:constants}. Its record retains rational endpoints,
+arithmetic parameters and source identities. The earlier constant
+programs remain available as research provenance.
+These calculations verify explicit constants conditional on their
+analytic derivation. They certify neither oscillatory quadrature of the
+retained shifted modes nor a positive physical-scale margin.
+
+\subsection{The remaining mathematical question}
+
+The finite Euler calculation yields mixed heat weights, commuting complex
+shifts, and complete half-line packets with their boundary integrals.
+Positive-real-part geometry now gives a zero-free arithmetic carrier
+on a large strip and bounds its contribution to the normalized Laguerre
+identity by $E/64$. The derivative and complex-strip remainder bounds
+make precise analytic comparisons possible without an auxiliary pole.
+
+The first mode nevertheless cancels every algebraic endpoint contribution
+of the positive higher modes. At a hypothetical collision,
+$H=O(s)$ and $E=O(s^2)$ along the stationary predecessor.
+The scoped controls retain the stronger packet geometry, so that geometry
+alone cannot supply the missing signed estimate.
+
+Section~\ref{sec:shifted} uses complete reflection before truncation.
+It supplies an explicit derivative error and an asymptotic comparison
+with a nonzero envelope. Neither is a lower bound for the complete
+oscillatory field. A finite exclusion needs a strict jet or contour margin
+with every evaluation and whole-domain error included. A global Newman
+bound additionally needs complete finite coverage and an effective outer
+region, or every hypothesis of a published barrier theorem. Extracting
+such a margin from the complete modular and arithmetic data remains the
+substantive research problem.

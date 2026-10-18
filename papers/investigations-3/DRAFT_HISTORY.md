@@ -21,3 +21,12 @@ Create no new snapshot folders.
   derives O(log log q / log q) from existing source propositions, with
   same-model checks and inherited dependencies; no manuscript-status upgrade.
   Prepared for Edward Baker with LLM assistance, **gpt-6-astra, ultra**.
+
+- **18 October 2026 — exploratory fixed-function projects 08–12.**
+  Source identity: [exploratory portfolio plan](research-overview/02_EXPLORATORY_FIXED_FUNCTION_RESEARCH_PLAN_20261018.md),
+  linking five expanded proposals and their new project homes. Implements the
+  [fixed-character priorities](brainstorm/notes/02_FIXED_CHARACTER_GOALS_AND_ARITHMETIC_COLLISION_RESEARCH_CODEX_20261018.md)
+  and [candidate list](brainstorm/notes/03_NEW_FIXED_FUNCTION_PROJECTS_CODEX_20261018.md);
+  records 11 as the preferred next exploration. Proposal initialization only,
+  with no new research result, mathematical review or manuscript milestone.
+  Prepared for Edward Baker with LLM assistance, **gpt-6-astra (Codex), max**.

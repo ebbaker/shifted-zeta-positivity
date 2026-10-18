@@ -33,6 +33,29 @@ separated complement floors; a Gram tail omitted from a lower bound.
 
 - [Sonin mixed-prime Note 02, §3](../papers/investigations-3/04_sonin_mixed_prime_response/notes/round-1/02_CORRECTED_SIGNED_WEIL_GRAM_AND_MIXED_SOURCE_ESTIMATES_CODEX_20261017.md): the gamma term “is a principal part of the correction”. The [working manuscript](../papers/investigations-3/04_sonin_mixed_prime_response/manuscript/sonin_mixed_prime_response.tex) records the derivation, accepted in the [Claude cross-model review](../papers/investigations-3/04_sonin_mixed_prime_response/reviews/01_ROUND_ONE_CROSS_MODEL_REVIEW_CLAUDE_20261017.md): for the stated prepared class with support length greater than the prime-ratio shift, the isolated metric correction has both unbounded signs while the complete mixed source form is compact. Keep the complete cancellation before estimating sectors.
 
+- [Positive arithmetic packets, Note 04](../papers/investigations-3/11_arithmetic_collision_rigidity/notes/04_POSITIVE_ARITHMETIC_PACKETS_AND_MODULAR_CANCELLATION_CODEX_20261018.md):
+  "An accurate relative approximation to the positive arithmetic tail is not
+  a relative approximation to the vanishing physical field." Despite a
+  uniform relative {2,3} remainder below 7.3e-25, omitting that positive
+  remainder leaves an eventually negative inverse-square tail instead of
+  full modular cancellation. This concerns the stated fixed finite-prime
+  truncation. Added 18 October 2026 for Edward Baker with substantial LLM
+  assistance, **gpt-6-astra, max**;
+  [same-assistant review](../papers/investigations-3/11_arithmetic_collision_rigidity/reviews/02_POSITIVE_PACKET_AND_MODULAR_CANCELLATION_SELF_REVIEW_CODEX_20261018.md). The
+  [working manuscript, Section 4](../papers/investigations-3/11_arithmetic_collision_rigidity/manuscript/positive_arithmetic_packets/sections/04_modular_collisions.tex)
+  gives the complete proof and states: “The identity alone does not reduce
+  the strength of the missing estimate.” [Manuscript self-review](../papers/investigations-3/11_arithmetic_collision_rigidity/reviews/03_MANUSCRIPT_SELF_REVIEW_CODEX_20261018.md),
+  18 October 2026, **gpt-6-astra, max**.
+
+- [Revised arithmetic-packet manuscript, Section 7](../papers/investigations-3/11_arithmetic_collision_rigidity/manuscript/positive_arithmetic_packets/sections/06_certification.tex):
+  “Neither is a lower bound for the complete oscillatory field.” The shifted
+  approximation preserves complete reflection before truncation, but its
+  tail and envelope estimates still require a positive physical margin.
+  [Integration review](../papers/investigations-3/11_arithmetic_collision_rigidity/reviews/05_UPDATED_MANUSCRIPT_INTEGRATION_REVIEW_CODEX_20261018.md), 18 October 2026,
+  for Edward Baker with substantial LLM assistance, **gpt-6.1-sol, ultra**
+  and **gpt-6-astra, ultra**; internal LLM checks only. This limitation
+  concerns the estimates proved here, not all contour or modular methods.
+
 ## What it cost
 
 The channel-matching program (excluded by the two-channel theorem); the

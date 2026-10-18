@@ -1,0 +1,288 @@
+\section{A finite approximation after complete contour shifting}\label{sec:shifted}
+
+The cancellation in Section~\ref{sec:collisions} can be retained when
+forming a finite approximation: first shift the Fourier contour of the
+\emph{complete} reflected source, then truncate its square expansion on
+the two shifted positive half-lines. This gives an arithmetic tail with
+an explicit exponential factor in spectral height. Contour shifting is a
+classical method; the purpose here is to give a finite-mode estimate,
+including spectral derivatives, with all constants specified.
+
+\subsection{Reflection before truncation}
+
+\begin{lemma}[Complete shifted contour]\label{lem:shifted-contour}
+The source $\Ph$ extends holomorphically to $|\Im v|<\pi/8$ and satisfies
+$\Ph(-v)=\Ph(v)$ there. Set $w_t(v)=e^{tv^2}\Ph(v)$. For
+$0<d<\pi/8$, every complex $t,z$ satisfies
+\begin{equation}\label{eq:shifted-contour}
+ H(t,z)=\frac{e^{-dz}}2\int_0^\infty
+ \bigl[w_t(u+id)e^{izu}+w_t(u-id)e^{-izu}\bigr]\dd u.
+\end{equation}
+The integral and its derivatives converge locally uniformly in $(t,z)$.
+\end{lemma}
+\begin{proof}
+On every compact subset of the stated source strip, $\Re(e^{4v})$ has a
+strictly positive lower bound. The series in \eqref{eq:source}, and each
+fixed derivative, therefore converges normally there. Its real reflection
+identity \eqref{eq:reflection} extends throughout this strip by the
+identity theorem. The same reflection holds for $w_t$.
+
+Put $c_d=\cos(4d)>0$. For $u\ge0$ and $|\eta|\le d$, direct estimation
+of a mode gives
+\[
+ |\phi_n(u+i\eta)|
+ \le(2\lambda_n^2+3\lambda_n)e^{9u-c_d\lambda_ne^{4u}}.
+\]
+Summing this inequality gives a bound by
+$C_d e^{9u-c_d\pi e^{4u}}$: the remaining constant series is bounded by
+$\sum_{n\ge1}(2\lambda_n^2+3\lambda_n)e^{-c_d\pi(n^2-1)}$.
+Reflection gives the corresponding bound as $u\to-\infty$.
+Consequently, for $|t|\le T$,
+\[
+ |w_t(u+i\eta)|
+ \le C_{d,T}\exp\bigl(Tu^2+9|u|-c_d\pi e^{4|u|}\bigr),
+ \qquad |\eta|\le d.
+\]
+This dominates every additional polynomial source factor and every
+spectral factor arising on a compact $(t,z)$ set. It justifies the
+differentiations below and makes the remote vertical sides of a contour
+rectangle tend to zero.
+
+Shift the whole-line integral \eqref{eq:wholeline} from $\R$ to
+$\R+id$. This gives
+\[
+ H(t,z)=\frac{e^{-dz}}2\int_\R w_t(u+id)e^{izu}\dd u.
+\]
+On its negative half-line set $u=-v$ and use
+$w_t(-v+id)=w_t(v-id)$. The result is
+\eqref{eq:shifted-contour}.
+\end{proof}
+
+For real $t,x$, the two integrands in \eqref{eq:shifted-contour} are
+complex conjugates. Thus it also reads
+\[
+ H(t,x)=\Re\int_0^\infty w_t(u+id)e^{ix(u+id)}\dd u.
+\]
+There is a second way to see why no boundary term survives in this
+\emph{complete} formula. Evenness and real symmetry imply
+$w_t(iv)\in\R$ for real $v$. The segment
+$\int_0^{id}w_t(v)e^{ixv}\dd v$ is therefore purely imaginary. An individual
+source mode lacks that reflection, so its corresponding segment generally
+has a nonzero real part. This is why completion must precede truncation.
+
+For an integer $m\ge1$, let
+$\Ph_{<m}(v)=\sum_{1\le n<m}\phi_n(v)$ and define
+\begin{equation}\label{eq:shifted-finite}
+ \widetilde H_{m,d}(t,z)=\frac{e^{-dz}}2\int_0^\infty
+ \left[e^{t(u+id)^2}\Ph_{<m}(u+id)e^{izu}
+       +e^{t(u-id)^2}\Ph_{<m}(u-id)e^{-izu}\right]\dd u.
+\end{equation}
+This is generally different from $\sum_{n<m}H_n$, because the latter
+retains the finite-source vertical segments. The integrals in
+\eqref{eq:shifted-finite} define an entire function of $(t,z)$, real on
+the real spectral axis for real $t$. For fixed $m,d$, they satisfy
+\begin{equation}\label{eq:shifted-heat}
+ \partial_t\widetilde H_{m,d}=-\partial_z^2\widetilde H_{m,d}.
+\end{equation}
+Indeed, the two spectral exponentials are
+$e^{iz(u+id)}$ and $e^{-iz(u-id)}$; applying $-\partial_z^2$ multiplies
+them by $(u+id)^2$ and $(u-id)^2$, respectively, exactly as does
+$\partial_t$. Reality follows by conjugating the two terms.
+The finite source has no full reflection identity, and
+$\widetilde H_{m,d}$ need not be even in $z$. No global assertion about
+the reality of its zeros is being made.
+
+\subsection{An exponential tail in a complex spectral strip}
+
+\begin{theorem}[Shifted finite-mode tail]\label{thm:shifted-tail}
+Fix $T,Y\ge0$, $0<d<\pi/8$, and an integer $m\ge1$. Put
+$c_d=\cos(4d)$ and assume
+\begin{equation}\label{eq:shifted-admissible}
+ \begin{gathered}
+ b_{m,d,Y}=4c_d\pi m^2-9-Y>0,\qquad 8c_d\pi m^2\ge T,\\
+ r_{m,d}=\left(1+\frac1m\right)^4e^{-c_d\pi(2m+1)}<1.
+ \end{gathered}
+\end{equation}
+Define
+\begin{align}
+ S_{m,d}&=\frac{(2\pi^2m^4+3\pi m^2)e^{-c_d\pi m^2}}{1-r_{m,d}},
+ \notag\\
+ K_j(m,d,Y)&=S_{m,d}\sum_{k=0}^j\binom jk
+                  \frac{d^{j-k}k!}{b_{m,d,Y}^{k+1}}
+                  \qquad(j\ge0).\label{eq:shifted-K}
+\end{align}
+Then, for $0\le t\le T$, $\Re z=x\ge0$ and $|\Im z|\le Y$,
+\begin{equation}\label{eq:shifted-tail}
+ \boxed{\left|\partial_z^j
+       (H-\widetilde H_{m,d})(t,z)\right|
+       \le K_j(m,d,Y)e^{-dx}\qquad(j\ge0).}
+\end{equation}
+Every derivative here is taken with $m,d$ fixed.
+\end{theorem}
+\begin{proof}
+Subtract \eqref{eq:shifted-finite} from
+\eqref{eq:shifted-contour}. On either shifted positive half-line,
+\[
+ |e^{t(u\pm id)^2}\phi_n(u\pm id)|
+ \le(2\lambda_n^2+3\lambda_n)
+       e^{Tu^2+9u-c_d\lambda_ne^{4u}}.
+\]
+The modulus of the spectral factor, including $e^{-dz}$, is at most
+$e^{-dx+Yu}$. A $j$th spectral derivative contributes at most $(u+d)^j$.
+Since $e^{4u}\ge1+4u+8u^2$ and $8c_d\lambda_n\ge T$ for $n\ge m$,
+\[
+ Tu^2+(9+Y)u-c_d\lambda_ne^{4u}
+ \le-c_d\lambda_n-(4c_d\lambda_n-9-Y)u.
+\]
+Thus the contribution of either half-line, before its factor $1/2$, is
+bounded by
+\[
+ e^{-dx}\sum_{n\ge m}(2\lambda_n^2+3\lambda_n)e^{-c_d\lambda_n}
+ \sum_{k=0}^j\binom jk
+ \frac{d^{j-k}k!}{(4c_d\lambda_n-9-Y)^{k+1}}.
+\]
+Here we expanded $(u+d)^j$ and used
+$\int_0^\infty u^ke^{-bu}\dd u=k!/b^{k+1}$ for $b>0$.
+The denominators can be replaced by their values at $n=m$.
+The ratio of successive remaining numerators is at most
+\[
+ \left(\frac{n+1}{n}\right)^4e^{-c_d\pi(2n+1)}\le r_{m,d},
+\]
+because the polynomial $2\pi^2n^4+3\pi n^2$ grows by at most the fourth
+power of $(n+1)/n$. Their sum is therefore at most $S_{m,d}$.
+The two equal bounds and the factor $1/2$ give
+\eqref{eq:shifted-tail}. All exchanges of sums, integrals and derivatives
+are justified by these same integrable majorants.
+\end{proof}
+
+For example, choose $m=5$, $d=\pi/16$, $T=1/2$ and $Y=1$.
+Replacing $c_d=1/\sqrt2$ by the lower bound $c_0=7/10$ in
+\eqref{eq:shifted-admissible}--\eqref{eq:shifted-K} increases the resulting
+constants. Denote these conservative constants by $\overline K_j$.
+The rational interval calculation recorded with the manuscript gives
+\begin{equation}\label{eq:shifted-example}
+ \begin{split}
+ K_0&\le\overline K_0<8\times10^{-23},\\
+ K_1&\le\overline K_1<1.61\times10^{-23},\\
+ K_2&\le\overline K_2<3.23\times10^{-24}.
+ \end{split}
+\end{equation}
+Only the four modes $n=1,2,3,4$ are retained. The accompanying numerical
+record supplies exact rational enclosures; Section~\ref{sec:certification}
+describes their replay. These certify tail constants. They do not include
+quadrature or rounding errors for the retained integrals, or establish a
+nonzero field or jet margin.
+
+\subsection{A shift approaching the source-strip boundary}
+
+The preceding estimate permits an asymptotic comparison with an explicit
+exponentially decaying envelope. The following statement gives the error
+bound itself; it does not estimate the work or precision needed to
+evaluate the retained modes.
+
+\begin{proposition}[Near-boundary tail scale]\label{prop:shifted-asymptotic}
+Fix $a_*>0$, $b_*>1/(4\pi)$ and bounded $T,Y\ge0$. For sufficiently large
+$x$, select
+\begin{equation}\label{eq:shifted-near-boundary}
+ d(x)=\frac\pi8-a_*\frac{\log x}{x},\qquad
+ m(x)=\left\lceil\sqrt{b_*x}\right\rceil.
+\end{equation}
+These parameters satisfy \eqref{eq:shifted-admissible}. For every fixed
+integer $j\ge0$, the right side of \eqref{eq:shifted-tail}, evaluated
+at these parameters, satisfies
+\begin{equation}\label{eq:shifted-asymptotic}
+ E_j(x):=K_j(m(x),d(x),Y)e^{-d(x)x}
+ =O\!\left(e^{-\pi x/8}
+ \frac{x^{5/2+a_*(1-4\pi b_*)}}{(\log x)^2}\right).
+\end{equation}
+The implied constant and the onset are not evaluated here.
+\end{proposition}
+\begin{proof}
+Write $m=m(x)$ and $d=d(x)$. Since
+$m^2=b_*x+O(\sqrt x)$ and
+$c_d=\sin(4a_*\log x/x)$, one has
+\begin{align*}
+ c_d&\sim4a_*\frac{\log x}{x},&
+ b_{m,d,Y}&\sim16\pi a_*b_*\log x,\\
+ e^{-c_d\pi m^2}&=x^{-4\pi a_*b_*}(1+o(1)).
+\end{align*}
+Moreover,
+\[
+ \log r_{m,d}=4\log(1+1/m)-c_d\pi(2m+1)
+ \sim-8\pi a_*\sqrt{b_*}\frac{\log x}{\sqrt x},
+\]
+so
+$1-r_{m,d}\sim8\pi a_*\sqrt{b_*}\log x/\sqrt x$.
+In particular, $b_{m,d,Y}>0$, $r_{m,d}<1$, and
+$8c_d\pi m^2\ge T$ eventually.
+The polynomial factor $2\pi^2m^4+3\pi m^2$ is $O(x^2)$.
+It follows that
+\[
+ S_{m,d}=O\!\left(\frac{x^{5/2-4\pi a_*b_*}}{\log x}\right).
+\]
+For fixed $j$, the finite sum in \eqref{eq:shifted-K} is
+$O(1/\log x)$, because $d$ is bounded and $b_{m,d,Y}\asymp\log x$.
+Finally $e^{-d(x)x}=e^{-\pi x/8}x^{a_*}$, which proves
+\eqref{eq:shifted-asymptotic}.
+\end{proof}
+
+Define the positive comparison envelope
+\begin{equation}\label{eq:shifted-envelope}
+ \mathcal G_0(x)=x^{7/4}e^{-\pi x/8}\qquad(x\ge1).
+\end{equation}
+This is the time-zero gamma scale in the normalization
+\eqref{eq:xi}; compare \cite{Polymath}. Dividing
+\eqref{eq:shifted-asymptotic} by this explicit envelope gives
+\[
+ \frac{E_j(x)}{\mathcal G_0(x)}
+ =O\!\left(\frac{x^{3/4+a_*(1-4\pi b_*)}}{(\log x)^2}\right).
+\]
+In particular this ratio tends to zero if
+$a_*(4\pi b_*-1)>3/4$. For $a_*=4$ and $b_*=1/10$, its power of $x$
+is $19/4-8\pi/5<-0.2765$, while $m(x)=O(\sqrt x)$.
+The derivatives estimated by this result are still those of
+\eqref{eq:shifted-tail}, with the parameters frozen at the observation
+point or on a chosen cell. They are not derivatives of a formula in
+which $m$ and $d$ themselves vary with $x$. No effective onset, evaluation
+conditioning estimate or complete-field lower bound follows from this
+asymptotic tail comparison. In particular, $\mathcal G_0$ is not a lower
+bound for $|H|$, which vanishes at its zeros.
+
+\subsection{A finite-domain certificate that could consume the tail}
+
+\begin{proposition}[A sufficient numerical margin]\label{prop:shifted-certificate}
+Let $D=[\tau,T]\times[0,X]$, with $0\le\tau\le T$ and $X\ge0$.
+On each cell of a finite cover of $D$, choose parameters satisfying
+\eqref{eq:shifted-admissible} and keep them fixed on that cell. Suppose
+a computed real vector $\widehat v(t,x)$ encloses the finite-mode jet
+with the proved error
+\[
+ \left\|\widehat v(t,x)-
+ \bigl(\widetilde H_{m,d}(t,x),
+       \partial_x\widetilde H_{m,d}(t,x)\bigr)\right\|_2
+ \le\epsilon_{\rm eval}(t,x).
+\]
+If a strict whole-cell comparison proves, throughout $D$,
+\begin{equation}\label{eq:shifted-certificate}
+ \|\widehat v(t,x)\|_2>
+ e^{-dx}\sqrt{K_0^2+K_1^2}+\epsilon_{\rm eval}(t,x),
+\end{equation}
+then $H$ and $H_x$ have no common real zero on $D$.
+\end{proposition}
+\begin{proof}
+Theorem~\ref{thm:shifted-tail} bounds the Euclidean distance between
+the complete jet $(H,H_x)$ and the finite-mode jet by
+$e^{-dx}\sqrt{K_0^2+K_1^2}$. Apply the triangle inequality and then
+\eqref{eq:shifted-certificate}.
+\end{proof}
+
+The evaluation error must include the finite integration endpoints,
+quadrature, rounding and all errors in covering the entire cell.
+Proposition~\ref{prop:shifted-certificate} specifies a finite certificate;
+no positive margin in it has been established here. A small arithmetic
+tail, even relative to \eqref{eq:shifted-envelope}, does not supply that
+margin. Likewise, replacing the positive carrier in
+Section~\ref{sec:collisions} changes normalization but does not bound its
+unresolved signed term. A collision exclusion on a time slab with unbounded
+spectral height would additionally require an outer estimate with explicit
+coverage.

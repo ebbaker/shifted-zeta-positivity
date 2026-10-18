@@ -1,0 +1,214 @@
+\section{Finite Euler operations at finite heat time}\label{sec:packets}
+
+The phrase ``finite Euler product'' can refer to different objects. For a
+finite prime set $\mathcal P$, the product
+$\prod_{p\in\mathcal P}(1-p^{-s})^{-1}$ still contains infinitely many
+prime powers in its Dirichlet expansion. By contrast,
+$\prod_{p\in\mathcal P}(1-p^{-s})$ is a finite exponential sum. A third
+object is the operation of multiplying a complete transform by this last
+factor at time zero and then evolving the resulting source. We treat these
+objects separately, since only the last retains the complete theta field.
+
+\subsection{Finite exponential sums and mixed-prime terms}
+
+Let $s(z)=(1+iz)/2$, and define $U_t=e^{-t\partial_z^2}$ on finite
+exponential sums by its action on each exponential. Since
+$-\partial_z^2 e^{-iaz}=a^2e^{-iaz}$,
+\begin{equation}\label{eq:heat-weight}
+ U_t[n^{-s(z)}]=b_n(t)n^{-s(z)},\qquad
+ b_n(t)=\exp\left(\frac t4\log^2n\right).
+\end{equation}
+In particular, for fixed nonnegative integers $K_p$,
+\begin{equation}\label{eq:finite-product}
+ U_t\left[\prod_{p\in\mathcal P}\sum_{k=0}^{K_p}p^{-ks(z)}\right]
+ =\sum_{0\le k_p\le K_p}
+ e^{\frac t4(\sum_p k_p\log p)^2}\prod_p p^{-k_ps(z)}.
+\end{equation}
+For distinct primes $p,q$,
+\[
+ b_{pq}=b_pb_q e^{\frac t2\log p\log q},\qquad
+ b_{p^k}=b_p^{k^2}.
+\]
+Thus heat evolution does not distribute over scalar multiplication. For
+example, the coefficient of $(pq)^{-s}$ in the evolution of
+$(1-p^{-s})(1-q^{-s})$ is $b_{pq}$, not $b_pb_q$.
+
+There is an equivalent integral formula. If $N$ is a standard real Gaussian
+random variable, its moment-generating function gives
+\[
+ \mathbb E[e^{-ia(z+i\sqrt{2t}N)}]
+ =e^{-iaz}\mathbb E[e^{a\sqrt{2t}N}]
+ =e^{ta^2-iaz}.
+\]
+Linearity therefore proves
+\begin{equation}\label{eq:gaussian}
+ U_tf(z)=\mathbb E[f(z+i\sqrt{2t}N)]\quad(t\ge0)
+\end{equation}
+for every finite exponential sum $f$. A product inside this expectation
+uses the same Gaussian in every factor. Replacing it by independent
+Gaussians removes the mixed terms in \eqref{eq:finite-product}.
+
+This calculation does not justify termwise evolution of the infinite-power
+local factor. At $t>0$, the proposed series
+\[
+ \sum_{k\ge0}e^{tk^2\log^2p/4}p^{-ks}
+\]
+has terms of modulus
+$\exp(tk^2\log^2p/4-k\Re(s)\log p)$, which tend to infinity. It fails
+the term test for every finite $s$. This excludes that ordinary series
+interpretation, not other separately justified definitions.
+
+\subsection{Whole-line translation and the operator Euler algebra}
+
+For a source $K$ whose fixed real translates have sufficient decay, let
+$f_t(z)=\frac12\int_\R e^{tu^2}K(u)e^{izu}\dd u$. Translation of the
+source by $a\in\R$ gives, on setting $v=u+a$,
+\begin{align}
+ \frac12\int_\R e^{tu^2}K(u+a)e^{izu}\dd u
+ &=e^{ta^2-iaz}\frac12\int_\R e^{tv^2+i(z+2ita)v}K(v)\dd v\notag\\
+ &=e^{ta^2-iaz}f_t(z+2ita).\label{eq:whole-translation}
+\end{align}
+The theta source satisfies the decay assumption by Lemma~\ref{lem:regularity}.
+The left side is the heat evolution of $e^{-iaz}f_0(z)$; this definition
+does not require a convergent differential-operator series on an arbitrary
+entire function.
+
+For $d\ge1$ put $a_d=\frac12\log d$ and
+\begin{equation}\label{eq:T}
+ (\mathcal T_d^tf)(z)=d^{-1/2}e^{ta_d^2-iza_d}f(z+2ita_d).
+\end{equation}
+Substitution gives
+\[
+ \mathcal T_d^t\mathcal T_e^tf
+ =(de)^{-1/2}e^{t(a_d^2+a_e^2)+2ta_da_e-iz(a_d+a_e)}
+    f(z+2it(a_d+a_e))
+ =\mathcal T_{de}^tf.
+\]
+If $Q=\prod_{p\in\mathcal P}p$ and $\mu$ denotes the M\"obius function,
+the complete field with time-zero value
+$\prod_{p\in\mathcal P}(1-p^{-s(z)})H(0,z)$ is consequently
+\begin{equation}\label{eq:operator-euler}
+ \sum_{d\mid Q}\mu(d)\mathcal T_d^tH(t,z)
+ =\prod_{p\in\mathcal P}(I-\mathcal T_p^t)H(t,z).
+\end{equation}
+The Euler algebra survives as an algebra of commuting shift operators.
+The expression is generally neither even nor real on the real axis,
+because its time-zero multiplier has those same defects. It is not the
+physical cosine packet defined next.
+
+\subsection{Half-line arithmetic packets and their boundaries}
+
+Define the source dilation
+\begin{equation}\label{eq:D}
+ (D_df)(u)=d^{-1/2}f(u+a_d).
+\end{equation}
+Since $e^{a_d}=d^{1/2}$ and $e^{4a_d}=d^2$, direct substitution in
+\eqref{eq:source} proves
+\begin{equation}\label{eq:divisible}
+ D_d\phi_n=\phi_{dn},\qquad
+ D_d\Ph=\sum_{d\mid n}\phi_n,\qquad D_dD_e=D_{de}.
+\end{equation}
+These equalities hold on the entire real source line. Define
+\[
+ \mathcal P_d(t,z)=\int_0^\infty e^{tu^2+izu}D_d\Ph(u)\dd u,
+ \qquad
+ \ell_d(t,w)=\int_0^{a_d}e^{tv^2+iwv}\Ph(v)\dd v.
+\]
+The substitution $v=u+a_d$ now has lower endpoint $a_d$, rather than
+$-\infty$. It gives the complete formula
+\begin{equation}\label{eq:complete-packet}
+ \boxed{\mathcal P_d(t,z)=d^{-1/2}e^{ta_d^2-iza_d}
+ \bigl[F(t,z+2ita_d)-\ell_d(t,z+2ita_d)\bigr].}
+\end{equation}
+The lower interval is forced by the domain of integration. Differentiating
+the prefactor and shifted function together gives, for every $j\ge0$,
+\begin{equation}\label{eq:packet-jets}
+ \partial_z^j\mathcal P_d(t,z)
+ =d^{-1/2}e^{ta_d^2-iza_d}
+ \left[(\partial_w-ia_d)^j(F(t,w)-\ell_d(t,w))\right]_{w=z+2ita_d}.
+\end{equation}
+Define the real cosine packet by
+\begin{align}
+ G_d(t,z)&=\frac{\mathcal P_d(t,z)+\mathcal P_d(t,-z)}2
+       =\int_0^\infty e^{tu^2}D_d\Ph(u)\cos(zu)\dd u,\label{eq:G}\\
+ \partial_z^jG_d(t,z)&=\frac12\bigl[\mathcal P_d^{(j)}(t,z)
+                    +(-1)^j\mathcal P_d^{(j)}(t,-z)\bigr].\label{eq:G-jets}
+\end{align}
+In particular, the first reflected derivative has a minus sign. All these
+functions satisfy the heat equation. Generally $G_d\ne\mathcal T_d^tH$:
+the latter transforms the full translated source, while \eqref{eq:G}
+uses its positive half-line and then symmetrizes in the spectral variable.
+
+\subsection{A finite prime selector}
+
+Write
+\begin{equation}\label{eq:Hn}
+ H_n(t,z)=\int_0^\infty e^{tu^2}\phi_n(u)\cos(zu)\dd u.
+\end{equation}
+Absolute convergence justifies $H=\sum_nH_n$ and
+$G_d=\sum_{d\mid n}H_n$. Expanding the finite product in
+\eqref{eq:divisible}, the coefficient of $\phi_n$ in
+$\prod_{p\in\mathcal P}(I-D_p)\Ph$ is
+\[
+ \sum_{d\mid\gcd(n,Q)}\mu(d)
+ =\prod_{p\mid\gcd(n,Q)}(1-1).
+\]
+It equals one for $(n,Q)=1$ and zero otherwise. Thus define
+\begin{align}
+ B_{\mathcal P}&=\sum_{d\mid Q}\mu(d)G_d
+                =\sum_{(n,Q)=1}H_n,\label{eq:B}\\
+ A_{\mathcal P}&=H-B_{\mathcal P}
+                =\sum_{(n,Q)>1}H_n,\label{eq:A}\\
+ R_{\mathcal P}&=\sum_{\substack{n>1\\(n,Q)=1}}H_n,
+ \qquad C=\sum_{n\ge2}H_n=A_{\mathcal P}+R_{\mathcal P}.\label{eq:R}
+\end{align}
+The central decomposition is
+\begin{equation}\label{eq:decomposition}
+ H=H_1+A_{\mathcal P}+R_{\mathcal P}.
+\end{equation}
+For $\mathcal P=\{2\}$, $A_{\mathcal P}=G_2$ and the remainder starts
+at $n=3$. For $\mathcal P=\{2,3\}$,
+\begin{equation}\label{eq:two-prime}
+ A_{\mathcal P}=G_2+G_3-G_6,
+ \qquad R_{\mathcal P}=H_5+H_7+H_{11}+\cdots.
+\end{equation}
+The summation condition in \eqref{eq:R}, rather than the displayed initial
+terms, defines the remainder. In particular, all complete shifted packets
+and their lower boundaries remain in \eqref{eq:two-prime}.
+
+\subsection{An absolute tail bound in a complex strip}
+
+\begin{lemma}\label{lem:strip-tail}
+Let $T_+,Y\ge0$, $m\ge1$, and assume
+$\lambda_m\ge T_+/8$ and $4\lambda_m-9-Y>0$. For any subset
+$S\subseteq\{m,m+1,\ldots\}$ and integer $j\ge0$,
+\begin{equation}\label{eq:strip-tail}
+ \sup_{\substack{0\le t\le T_+\\|\Im z|\le Y}}
+ \left|\partial_z^j\sum_{n\in S}H_n(t,z)\right|
+ \le\frac{2\pi^2m^4 j!e^{-\pi m^2}}
+ {(4\pi m^2-9-Y)^{j+1}(1-r_{m,4})},
+ \quad r_{m,k}=\left(1+\frac1m\right)^k e^{-\pi(2m+1)}.
+\end{equation}
+For the stated admissible $m$, $r_{m,4}<1$.
+\end{lemma}
+\begin{proof}
+For real $u\ge0$, $|\partial_z^j\cos(zu)|\le u^je^{Yu}$ and
+\[
+ e^{tu^2+Yu}\phi_n(u)
+ \le2\lambda_n^2
+ e^{tu^2+(9+Y)u-\lambda_ne^{4u}}
+ \le2\lambda_n^2e^{-\lambda_n-(4\lambda_n-9-Y)u}.
+\]
+The last inequality follows from $e^{4u}\ge1+4u+8u^2$ and
+$8\lambda_n\ge T_+$. Integration of $u^je^{-bu}$ gives $j!/b^{j+1}$.
+Replace the denominator by its value at $n=m$. The ratio between successive
+numerators $n^4e^{-\pi n^2}$ decreases with $n$ and is at most $r_{m,4}$.
+Summing the resulting geometric majorant proves the bound. Finally,
+$(1+1/m)^4e^{-\pi(2m+1)}\le16e^{-3\pi}<1$ for $m\ge1$.
+\end{proof}
+
+The estimate is uniform in $\Re z$. It controls a complete tail integral;
+it does not estimate the two generally much larger terms in
+\eqref{eq:complete-packet} separately. The improvement from an absolute
+tail estimate to a relative one requires a positive lower bound for
+$A_{\mathcal P}$, which we prove next.

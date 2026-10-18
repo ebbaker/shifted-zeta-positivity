@@ -1,0 +1,181 @@
+\section{The theta source and its heat transform}\label{sec:theta}
+
+The question motivating this paper is whether finite Euler operations can
+be written explicitly at positive heat time and then reorganized into
+expressions whose signs or sizes can be controlled. There are two distinct
+issues. A finite algebraic identity must first survive the heat evolution
+with all mixed terms and boundaries retained. An estimate must then control
+the particular signed expression of interest. The estimates proved here
+address positive arithmetic portions of the theta transform. The complete
+transform contains a cancellation between those portions and its first
+source mode, and this cancellation remains essential at a zero.
+
+We develop the definitions and analytic justifications before introducing
+the arithmetic decomposition. The variable $u$ denotes a source coordinate,
+$t$ is heat time, $z$ is a complex spectral coordinate, and $x$ denotes a
+real spectral coordinate. All source sums start at $n=1$ unless an index set
+is stated. No prior investigation or internal notation is used.
+
+\subsection{Theta inversion from Gaussian Fourier analysis}
+
+For $y>0$, define
+\begin{equation}\label{eq:theta}
+ \Theta(y)=\sum_{n\in\Z}e^{-\pi n^2y}.
+\end{equation}
+The series, and its derivatives of any fixed order, converge uniformly
+on compact subsets of the right half-plane $\Re y>0$. Indeed, on a compact
+set with $\Re y\ge c>0$, each differentiated term is bounded by a constant
+times $n^{2k}e^{-\pi c n^2}$, a summable sequence.
+
+We use the Fourier convention
+$\widehat f(\xi)=\int_\R f(v)e^{-2\pi i v\xi}\dd v$.
+For $f(v)=e^{-\pi yv^2}$, differentiation under the integral and integration
+by parts show that
+$\widehat f'(\xi)=-(2\pi\xi/y)\widehat f(\xi)$.
+The Gaussian integral gives $\widehat f(0)=y^{-1/2}$, so
+\[
+ \widehat f(\xi)=y^{-1/2}e^{-\pi\xi^2/y}.
+\]
+The periodization $\sum_{n\in\Z}f(v+n)$ has Fourier coefficients
+$\widehat f(k)$. Both this series and its Fourier series converge
+absolutely and uniformly. Evaluating at $v=0$ therefore proves
+\begin{equation}\label{eq:inversion}
+ \Theta(y)=y^{-1/2}\Theta(1/y).
+\end{equation}
+This is the zero-elliptic-variable form of the classical theta
+transformation; see \cite{DLMF}. The preceding argument fixes its
+normalization without an appeal to conventions for theta functions.
+
+\subsection{The primitive and the physical source}
+
+Set $\lambda_n=\pi n^2$ and define, for real $u$,
+\begin{align}
+ p_n(u)&=e^u e^{-\lambda_n e^{4u}},&
+ \psi(u)&=\sum_{n\ge1}p_n(u),\label{eq:primitive}\\
+ \phi_n(u)&=e^u\bigl(2\lambda_n^2e^{8u}-3\lambda_ne^{4u}\bigr)
+                 e^{-\lambda_ne^{4u}},&
+ \Ph(u)&=\sum_{n\ge1}\phi_n(u).\label{eq:source}
+\end{align}
+These sums converge locally with every derivative on the whole real line.
+For example, differentiating a term introduces a polynomial in
+$\lambda_ne^{4u}$; on a compact $u$ interval the remaining exponential is
+bounded by $e^{-c n^2}$ for some $c>0$.
+
+Writing $a=\lambda_ne^{4u}$, direct differentiation gives
+\[
+ p_n'=e^{u-a}(1-4a),\qquad
+ p_n''=e^{u-a}(1-24a+16a^2).
+\]
+Consequently
+\begin{equation}\label{eq:source-operator}
+ 8\phi_n=p_n''-p_n,\qquad
+ 8\Ph=\psi''-\psi.
+\end{equation}
+The completed primitive
+\begin{equation}\label{eq:P}
+ P(u)=e^u\Theta(e^{4u})=e^u+2\psi(u)
+\end{equation}
+is even by \eqref{eq:inversion}: substituting $y=e^{4u}$ gives
+$P(u)=e^{-u}\Theta(e^{-4u})=P(-u)$. Thus
+\begin{equation}\label{eq:reflection}
+ \Ph=\frac{P''-P}{16},\qquad
+ \Ph(u)=\Ph(-u),\qquad \psi'(0)=-\frac12.
+\end{equation}
+The last equality follows from $0=P'(0)=1+2\psi'(0)$.
+The $e^u$ term in $P$ is annihilated by $\partial_u^2-1$; it must nevertheless
+be retained when determining this endpoint constant.
+
+For $u\ge0$, $a\ge\pi>3/2$, so
+$\phi_n(u)=e^{u-a}a(2a-3)>0$. Reflection then gives
+$\Ph(u)>0$ on the whole real line. Positivity of the source does not
+by itself imply positivity of its oscillatory transform.
+
+\begin{lemma}[Decay and differentiation]\label{lem:regularity}
+For each real $t$, $w_t(u)=e^{tu^2}\Ph(u)$ is an even Schwartz function on
+$\R$. On the positive half-line, the same rapid decay, with every derivative,
+holds for $e^{tu^2}\sum c_n\phi_n(u)$ whenever $(c_n)$ is bounded. All of
+these bounds are uniform when $t$ ranges over a compact interval. The
+unweighted source sums are real analytic on $\R$.
+\end{lemma}
+\begin{proof}
+Each fixed derivative of a source term is a finite sum of terms
+$C e^{bu}n^{2k}e^{-\pi n^2e^{4u}}$. For $u\ge0$,
+\[
+ \sum_{n\ge1}n^{2k}e^{-\pi n^2e^{4u}}
+ \le e^{-\pi e^{4u}}
+       \sum_{n\ge1}n^{2k}e^{-\pi(n^2-1)}.
+\]
+The constant series is finite. Differentiation of $e^{tu^2}$ introduces
+only polynomial factors in $u$ and $t$. Hence every weighted source
+derivative is bounded on $u\ge0$ by a finite sum of expressions
+$C(1+u)^j\exp(Tu^2+bu-\pi e^{4u})$, uniformly for $|t|\le T$.
+Such expressions decay faster than every power of $u$, and remain
+integrable after multiplication by $e^{Yu}$ for any fixed $Y$.
+For the complete source, evenness extends these bounds to $u<0$.
+For real analyticity, extend $u$ to a sufficiently small complex
+neighborhood of any fixed real point. There $\Re(e^{4u})$ has a positive
+lower bound, and the source series converges normally. It therefore defines
+a holomorphic function on that neighborhood.
+\end{proof}
+
+\subsection{The heat family and its normalization}
+
+Define
+\begin{align}
+ F(t,z)&=\int_0^\infty e^{tu^2+izu}\Ph(u)\dd u,\label{eq:F}\\
+ H(t,z)&=\int_0^\infty e^{tu^2}\Ph(u)\cos(zu)\dd u
+       =\frac{F(t,z)+F(t,-z)}2.\label{eq:H}
+\end{align}
+Lemma~\ref{lem:regularity} justifies differentiation under these integrals
+on every compact complex $(t,z)$ set. Thus they are entire in both variables,
+and
+\begin{equation}\label{eq:heat}
+ H_t=-H_{zz},\qquad F_t=-F_{zz}.
+\end{equation}
+For real $t$, $H(t,z)$ is even in $z$ and satisfies
+$H(t,\overline z)=\overline{H(t,z)}$. In particular it is real on the real
+axis. At complex $z$, the symmetrization in \eqref{eq:H} cannot be replaced
+by a real part. Since $w_t$ is even,
+\begin{equation}\label{eq:wholeline}
+ H(t,z)=\frac12\int_\R w_t(u)e^{izu}\dd u.
+\end{equation}
+For real $x$, $H(t,x)$ and all its $x$ derivatives are rapidly decreasing,
+uniformly on compact time intervals. This also follows directly by repeated
+integration by parts in \eqref{eq:wholeline}.
+
+To identify the time-zero normalization, start with
+$\zeta(s)=\sum_{n\ge1}n^{-s}$ for $\Re s>1$. Substitution in the defining
+gamma integral gives
+\[
+ \pi^{-s/2}\Gamma(s/2)\zeta(s)
+ =\frac12\int_0^\infty (\Theta(y)-1)y^{s/2-1}\dd y.
+\]
+Split the integral at $1$, apply \eqref{eq:inversion} below $1$, and set
+$y=1/v$ in the remaining theta term. The elementary part is
+$1/(s-1)-1/s=1/[s(s-1)]$. Therefore
+\begin{equation}\label{eq:mellin-split}
+ \pi^{-s/2}\Gamma(s/2)\zeta(s)
+ =\frac1{s(s-1)}+\frac12\int_1^\infty(\Theta(y)-1)
+ \bigl(y^{s/2-1}+y^{(1-s)/2-1}\bigr)\dd y.
+\end{equation}
+The integral on the right is entire in $s$. Multiplying by $s(s-1)/2$
+continues the completed function
+\[
+ \xi(s)=\frac{s(s-1)}2\pi^{-s/2}\Gamma(s/2)\zeta(s)
+\]
+to an entire function. With $y=e^{4u}$, the integral in
+\eqref{eq:mellin-split} becomes
+$16\int_0^\infty\psi(u)\cosh((2s-1)u)\dd u$. At
+$s=(1+iz)/2$ this gives
+\[
+ \xi\bigl((1+iz)/2\bigr)
+ =\frac12-(1+z^2)\int_0^\infty\psi(u)\cos(zu)\dd u.
+\]
+On the other hand, integrating \eqref{eq:source-operator} twice and using
+$\psi'(0)=-1/2$ gives exactly the same expression for $8H(0,z)$.
+We have proved
+\begin{equation}\label{eq:xi}
+ H(0,z)=\frac18\xi\bigl((1+iz)/2\bigr).
+\end{equation}
+The Riemann hypothesis is consequently the assertion that all zeros of
+$H(0,\cdot)$ are real. Nothing below assumes this assertion.

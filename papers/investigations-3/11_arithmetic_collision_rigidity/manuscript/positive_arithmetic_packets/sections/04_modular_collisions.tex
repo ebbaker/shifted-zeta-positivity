@@ -1,0 +1,290 @@
+\section{Modular cancellation and the scale of a collision}\label{sec:collisions}
+
+The positive quantity $C=\sum_{n\ge2}H_n$ is not the complete field.
+In $H=H_1+C$, modular reflection forces cancellations that are invisible
+in a separate bound for either term. We first make those cancellations
+explicit and then examine their effect at a hypothetical double zero.
+
+\subsection{The endpoint expansion of a cosine transform}
+
+\begin{lemma}\label{lem:endpoint}
+Suppose $g$ is smooth on $[0,\infty)$ and
+$\sup_{u\ge0}(1+u)^k|g^{(j)}(u)|<\infty$ for all integers $j,k\ge0$.
+Then every derivative is integrable, all the boundary terms below vanish
+at infinity, and,
+for each $M\ge1$ and $x\ne0$,
+\begin{equation}\label{eq:endpoint-exact}
+ \int_0^\infty g(u)\cos(xu)\dd u
+ =\sum_{k=1}^M\frac{(-1)^k g^{(2k-1)}(0)}{x^{2k}}
+   +\frac{(-1)^M}{x^{2M}}
+       \int_0^\infty g^{(2M)}(u)\cos(xu)\dd u.
+\end{equation}
+If the first nonzero odd endpoint derivative has order $p-1$, where
+$p=2r$, and $A=(-1)^r g^{(p-1)}(0)\ne0$, then its transform $V$ satisfies
+\begin{align}
+ V(x)&=Ax^{-p}+O(x^{-p-2}),\notag\\
+ V'(x)&=-pAx^{-p-1}+O(x^{-p-3}),\label{eq:endpoint-jets}\\
+ V''(x)&=p(p+1)Ax^{-p-2}+O(x^{-p-4}).\notag
+\end{align}
+\end{lemma}
+\begin{proof}
+One pair of integrations gives
+$\int g\cos=-g'(0)/x^2-x^{-2}\int g''\cos$.
+Iterating this equality proves \eqref{eq:endpoint-exact}. Taking one extra
+pair bounds the remainder after the $M$th coefficient by a constant times
+$x^{-2M-2}$.
+
+For the derivative assertions, start with the differentiated integrals
+rather than differentiating a big-$O$ term. An integration by parts gives
+\[
+ V'(x)=-\int_0^\infty ug(u)\sin(xu)\dd u
+       =-\frac1x\int_0^\infty (ug(u))'\cos(xu)\dd u.
+\]
+The $k$th endpoint derivative of $(ug)'$ is $(k+1)g^{(k)}(0)$.
+Thus the leading coefficient in this cosine transform is $pA$.
+Similarly, $V''=-\int u^2g\cos$, and
+$(u^2g)^{(k)}(0)=k(k-1)g^{(k-2)}(0)$ for $k\ge2$.
+Its first nonzero odd endpoint has order $p+1$ and coefficient
+$-p(p+1)A$ in the cosine expansion. Applying \eqref{eq:endpoint-exact}
+to these two functions proves all three estimates.
+\end{proof}
+
+\subsection{The full endpoint hierarchy}
+
+The evenness of $w_t=e^{tu^2}\Ph$ proved in Section~\ref{sec:theta} gives
+$w_t^{(2k-1)}(0)=0$ for every $k\ge1$. Write
+\[
+ w_t=g_{1,t}+g_{A,t}+g_{R,t},
+\]
+where the three terms are the weighted sources of $H_1$, $A_{\mathcal P}$
+and $R_{\mathcal P}$. The complete modular identity therefore gives
+\begin{equation}\label{eq:all-endpoints}
+ g_{1,t}^{(2k-1)}(0)+g_{A,t}^{(2k-1)}(0)
+                         +g_{R,t}^{(2k-1)}(0)=0
+ \qquad(k\ge1).
+\end{equation}
+For example, multiplication by the heat weight changes the third source
+derivative to $\phi'''(0)+6t\phi'(0)$, but the sum still vanishes.
+No finite list of endpoint checks is being substituted for
+\eqref{eq:inversion}.
+
+Let
+\begin{equation}\label{eq:exact-masses}
+ b=\phi_1'(0),\qquad q_A=-g_{A,t}'(0),\qquad
+ q_R=-g_{R,t}'(0).
+\end{equation}
+For a nonempty finite prime set, $q_A,q_R>0$ by
+Theorem~\ref{thm:positive}, and these quantities do not depend on $t$.
+The first equation in \eqref{eq:all-endpoints} says
+\begin{equation}\label{eq:mass-cancellation}
+ b=q_A+q_R=\sum_{n\ge2}-\phi_n'(0)>0.
+\end{equation}
+In particular, the first mode has the opposite endpoint sign from the
+higher modes. Lemma~\ref{lem:endpoint} gives, at every fixed $t$ in the
+time interval,
+\begin{equation}\label{eq:three-tails}
+ H_1=-\frac b{x^2}+O(x^{-4}),\qquad
+ A_{\mathcal P}=\frac{q_A}{x^2}+O(x^{-4}),\qquad
+ R_{\mathcal P}=\frac{q_R}{x^2}+O(x^{-4}).
+\end{equation}
+Every algebraic coefficient cancels in their complete sum by
+\eqref{eq:all-endpoints}. At the first level this is the exact identity
+\begin{equation}\label{eq:coupled-second}
+ H(t,x)=-\frac1{x^2}\int_0^\infty
+   \bigl(g_{1,t}''+g_{A,t}''+g_{R,t}''\bigr)\cos(xu)\dd u.
+\end{equation}
+The first summand in this differentiated source has not acquired a
+nonnegative sign. Thus \eqref{eq:coupled-second} preserves the cancellation
+but is not a positivity formula for $H$.
+
+\begin{proposition}[A fixed omitted tail changes the asymptotics]\label{prop:omission}
+For each fixed nonempty finite prime set and each fixed
+$0\le t\le1/2$,
+\[
+ H_1(t,x)+A_{\mathcal P}(t,x)
+   =-\frac{q_R}{x^2}+O(x^{-4})<0
+\]
+for all sufficiently large $|x|$. Moreover,
+\begin{equation}\label{eq:ratio-limits}
+ \frac{R_{\mathcal P}}{A_{\mathcal P}}\longrightarrow\frac{q_R}{q_A}>0,
+ \qquad
+ 1+\frac{H_1}{A_{\mathcal P}}\longrightarrow-\frac{q_R}{q_A}.
+\end{equation}
+\end{proposition}
+\begin{proof}
+Use $H_1+A_{\mathcal P}=H-R_{\mathcal P}$, the rapid decay of $H$,
+and \eqref{eq:three-tails}. Division by the positive leading term of
+$A_{\mathcal P}$ gives the two limits.
+\end{proof}
+
+An accurate relative approximation to the positive arithmetic tail is
+therefore not a relative approximation to the complete field near its
+zeros. Proposition~\ref{prop:omission} concerns omission of a fixed
+finite-prime remainder; it says nothing against an infinite assembly with
+its own convergence and error proof.
+
+\subsection{A regular normalization and the signed identity}
+
+Assume now that $2\in\mathcal P$, and suppress this subscript temporarily.
+The positive denominator in \eqref{eq:lower} defines, on the real axis,
+\begin{equation}\label{eq:normalized}
+ h=\frac HA,\qquad Z=1+\frac{H_1}A,\qquad r=\frac RA,
+ \qquad h=Z+r,\qquad \alpha=\frac{A_x}{A}.
+\end{equation}
+These functions are holomorphic wherever the carrier is nonzero.
+The strip positivity in Section~\ref{sec:positivity} supplies such a
+domain containing the classical strip $|\Im z|\le1$. On the real axis
+all these functions are real analytic.
+The carrier $A$ is specified by the source, independently of the value
+of $H$ or the position of a possible collision.
+Because both $H$ and $A$ satisfy the heat equation,
+\[
+ A_t h+A h_t=-(A_{xx}h+2A_xh_x+A h_{xx}),\qquad A_t=-A_{xx},
+\]
+so
+\begin{equation}\label{eq:drift}
+ h_t=-h_{xx}-2\alpha h_x.
+\end{equation}
+
+Define the physical energy and the first signed Laguerre expression by
+\begin{equation}\label{eq:energy}
+ E=H^2+H_x^2,\qquad \Lap_0=H_x^2-HH_{xx}.
+\end{equation}
+From $H_x=A(h_x+\alpha h)$ and
+$H_{xx}=A(h_{xx}+2\alpha h_x+(\alpha_x+\alpha^2)h)$, we obtain
+\begin{equation}\label{eq:laguerre-normalized}
+ \boxed{\Lap_0=A^2(h_x^2-hh_{xx})-\alpha_xH^2.}
+\end{equation}
+The cross terms cancel before estimation. Theorem~\ref{thm:jets} gives
+the definite bound
+\begin{equation}\label{eq:payment}
+ |\alpha_x H^2|\le H^2/64\le E/64.
+\end{equation}
+This is an energy-scale estimate for the carrier term. The remaining
+quantity $A^2(h_x^2-hh_{xx})$ has no sign established here.
+The identity alone does not reduce the strength of the missing estimate.
+
+\subsection{What changing the carrier can accomplish}
+
+Away from zeros of $H$, logarithmic differentiation of $h=H/A$ gives
+\begin{equation}\label{eq:carrier-invariance}
+ \left(\frac{h_x}{h}\right)^2-\frac{h_{xx}}h
+ =\frac{\Lap_0}{H^2}+(\log A)_{xx}.
+\end{equation}
+For two positive carriers $A,B$, the corresponding expressions differ
+by $(\log(A/B))_{xx}$. At a stationary point of $H$, the first term on the
+right is $-H_{xx}/H$. Thus a bounded change of carrier curvature changes
+only a bounded part of this quantity; it cannot remove the singular
+collision behavior calculated below.
+
+One may also use the full positive carrier $C=\sum_{n\ge2}H_n$.
+The strip and logarithmic-derivative estimates apply to $C$ with $m=2$,
+and $H/C=1+H_1/C$ contains no omitted arithmetic remainder. The cancellation
+with the first mode is still present. This limits what carrier optimization
+alone establishes; it does not exclude estimates using the complete modular
+relation quantitatively.
+
+\subsection{Local behavior at a hypothetical double event}
+
+We give the local calculation explicitly so that the scale in
+\eqref{eq:payment} can be assessed. Suppose a real point $(T,x_*)$ satisfies
+\begin{equation}\label{eq:double}
+ H(T,x_*)=H_x(T,x_*)=0,\qquad c=\tfrac12H_{xx}(T,x_*)\ne0.
+\end{equation}
+For the packet bounds we restrict $0<T\le1/2$, although the following
+local heat calculation is more general. Existence of such an event for
+the theta field is not asserted.
+
+Let $s=T-t>0$ and $x=x_*+\sqrt{s}\,y$. For a smooth heat solution $g$,
+write $g_*^{(j)}=\partial_x^jg(T,x_*)$, and suppose $|y|\le R$.
+Let $M_j(g)$ bound $|\partial_x^jg|$ on a rectangle containing the
+time and spatial segments in the Taylor expansions below.
+Taylor expansion in time gives
+\[
+ g(T-s,x)=g(T,x)+s g_{xx}(T,x)+\mathcal E_t,\qquad
+ |\mathcal E_t|\le\tfrac12s^2M_4(g).
+\]
+Expand the first term through its second spatial derivative and the
+second through its constant spatial term. Their two remainders are
+bounded respectively by $s^{3/2}R^3M_3/6$ and $s^{3/2}RM_3$.
+Hence
+\begin{align}
+ g(T-s,x_*+\sqrt{s}\,y)
+ &=g_*+\sqrt{s}\,y\,g_*'
+           +s(1+y^2/2)g_*''+\mathcal R_g,\label{eq:local}\\
+ |\mathcal R_g|
+ &\le s^{3/2}(R+R^3/6)M_3(g)+\tfrac12s^2M_4(g).\label{eq:local-error}
+\end{align}
+Applying the same argument to $g_x$ shifts each derivative index by one.
+For $H$, \eqref{eq:double} gives
+\begin{equation}\label{eq:collision-limit}
+ \left|\frac{H(T-s,x_*+\sqrt{s}\,y)}{cs}-(y^2+2)\right|
+ \le\frac{\sqrt{s}(R+R^3/6)M_3(H)+sM_4(H)/2}{|c|}.
+\end{equation}
+In particular $H/(cs)\to y^2+2$ and $H_x/(c\sqrt{s})\to2y$
+uniformly on bounded $y$ intervals. Compactness of $(T,x_*)$ alone
+does not remove the explicit factor $1/|c|$.
+
+The implicit function theorem, applied to $H_x(T-s,x)=0$, gives a
+real analytic stationary branch $x_{\rm stat}(s)=x_*+O(s)$.
+Its derivative at zero is $-H_{xxx}(T,x_*)/(2c)$.
+Substitution into the Taylor formula yields
+\begin{align}
+ H(T-s,x_{\rm stat}(s))&=2cs+O(s^2),&
+ H_{xx}(T-s,x_{\rm stat}(s))&=2c+O(s),\notag\\
+ E&=4c^2s^2+O(s^3),&
+ \Lap_0&=-4c^2s+O(s^2).\label{eq:stationary}
+\end{align}
+Thus
+\begin{equation}\label{eq:singular-ratio}
+ \frac{\Lap_0}{E}=-\frac1s+O(1).
+\end{equation}
+This calculation explains why a bound by a fixed multiple of $E$ is
+materially different from a small absolute error or a bound proportional
+to $|H|$.
+
+\subsection{Matching the complete exterior packet}
+
+At an event \eqref{eq:double}, decomposition \eqref{eq:decomposition}
+and its first two derivatives give
+\begin{equation}\label{eq:event-matching}
+ A_*=-H_{1,*}-R_*,\quad
+ A_{x,*}=-H_{1,x,*}-R_{x,*},\quad
+ A_{xx,*}=2c-H_{1,xx,*}-R_{xx,*}.
+\end{equation}
+For example, the exterior combination $W=H_1A_x-H_{1,x}A$ obeys
+\[
+ W_*=H_{1,x,*}R_*-H_{1,*}R_{x,*},\qquad
+ |W_*|\le |H_{1,x,*}|\epsilon_0(m)+|H_{1,*}|\epsilon_1(m).
+\]
+At an arbitrary stationary point $H_x=0$, the exact formula is
+$W=-H_{1,x}H+H_{1,x}R-H_1R_x$. These are necessary matching equations,
+not independently signed restrictions.
+
+The actual exterior arguments inside $A$ remain those of
+\eqref{eq:complete-packet}. At $t=T-s$ their displacement is
+$i(T-s)\log d$, so the rescaled coordinate is
+$y+i(T-s)\log d/\sqrt{s}$. For $d>1$, this escapes every bounded local
+coordinate domain. A Taylor polynomial valid for bounded $y$ cannot
+evaluate these exterior observations without a separate error argument.
+Equations \eqref{eq:local}--\eqref{eq:local-error} instead expand the
+\emph{whole packet in its base point}, retaining its exterior data.
+
+In the normalized notation \eqref{eq:normalized}, event matching is
+\begin{equation}\label{eq:normalized-matching}
+ Z_*=-r_*\in[-\rho_m,0),\qquad
+ Z_{x,*}=-r_{x,*},\qquad
+ Z_{xx,*}+r_{xx,*}=\frac{2c}{A_*}.
+\end{equation}
+Theorem~\ref{thm:jets} supplies uniform tolerances for the first two
+equalities. It gives no sign for the third. Moreover,
+\eqref{eq:ratio-limits} shows that the narrow value band is approached at
+large height even in the absence of a collision.
+
+Along the stationary predecessor of the event,
+$h=2cs/A_*+O(s^2)$, whereas $r$ tends to the strictly positive number
+$R_*/A_*$. Thus a fixed error bound for $r$, however small, is not an
+error of order $h^2$. The bounded term \eqref{eq:payment} has been
+controlled; the complete signed residual in \eqref{eq:laguerre-normalized}
+has not. Establishing a collision exclusion would require an additional
+estimate on that residual with the modular cancellation retained.

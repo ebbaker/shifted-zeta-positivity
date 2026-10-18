@@ -1,0 +1,521 @@
+\section{Positive packets and uniform relative estimates}\label{sec:positivity}
+
+Throughout this section,
+\begin{equation}\label{eq:time-range}
+ 0\le t\le\frac12,\qquad x\in\R.
+\end{equation}
+The restriction on time is used explicitly in the convexity proof.
+Complex spectral arguments will be written $z=x+iy$ with $x,y\in\R$.
+The exact arithmetic identities of Section~\ref{sec:packets} themselves
+hold for every real heat time.
+
+\subsection{Strict convexity of the higher source modes}
+
+\begin{theorem}[Positivity of the arithmetic modes]\label{thm:positive}
+For every $n\ge2$, $H_n(t,x)>0$ on \eqref{eq:time-range}.
+More generally, if $(c_n)_{n\ge2}$ is bounded, nonnegative and not identically
+zero, then
+\[
+ \int_0^\infty e^{tu^2}\Bigl(\sum_{n\ge2}c_n\phi_n(u)\Bigr)
+                  \cos(xu)\dd u>0.
+\]
+\end{theorem}
+\begin{proof}
+Put $g(u)=e^{tu^2}\phi_n(u)$ and $a=\pi n^2e^{4u}$. For $n\ge2$ and
+$u\ge0$, $a>12$ and $g>0$. Since
+$g=e^{tu^2+u-a}a(2a-3)$, logarithmic differentiation gives
+\begin{align}
+ \ell'(u)&=2tu+1-4a+4+\frac{8a}{2a-3}
+          =2tu+9-4a+\frac{12}{2a-3},\label{eq:log-first}\\
+ \ell''(u)&=2t-16a-\frac{96a}{(2a-3)^2},
+ \qquad \ell=\log g.\label{eq:log-second}
+\end{align}
+The elementary inequalities
+\[
+ 2tu\le u,\qquad \frac{12}{2a-3}<\frac47,\qquad
+ a\ge12(1+4u)>u+9+\frac47
+\]
+show that $\ell'\le-3a$. Also
+$96/(2a-3)^2<96/441<1$, so $\ell''\ge-17a$. Therefore
+\begin{equation}\label{eq:convexity}
+ g'<0,\qquad
+ \frac{g''}{g}=(\ell')^2+\ell''
+ \ge9a^2-17a\ge7a^2>0.
+\end{equation}
+The last inequality uses $2a\ge17$, which follows from $a>12$.
+
+All boundary terms at infinity vanish by Lemma~\ref{lem:regularity}.
+For $x\ne0$, two integrations by parts give
+\[
+ \int_0^\infty g(u)\cos(xu)\dd u
+ =-\frac{g'(0)}{x^2}
+  -\frac1{x^2}\int_0^\infty g''(u)\cos(xu)\dd u.
+\]
+Because $\int_0^\infty g''(u)\dd u=-g'(0)$, this is
+\begin{equation}\label{eq:positive-integral}
+ \boxed{\int_0^\infty g(u)\cos(xu)\dd u
+ =\frac1{x^2}\int_0^\infty g''(u)(1-\cos(xu))\dd u>0.}
+\end{equation}
+Strict positivity follows from $g''>0$ and from the fact that
+$1-\cos(xu)$ is positive on some interval. At $x=0$, positivity follows
+from the defining integral. For bounded nonnegative coefficients, absolute
+convergence permits summation of the integrals; at least one summand is
+strictly positive.
+\end{proof}
+
+Formula \eqref{eq:positive-integral} is the elementary convex-kernel
+principle underlying P\'olya's criterion; compare
+\cite[Theorem 3.4]{Csordas}. Its application here depends on the explicit
+source polynomial in \eqref{eq:source}. The calculation did not establish
+convexity for $n=1$ or for the complete source.
+
+\begin{corollary}\label{cor:positive-packets}
+If $\mathcal P$ is a nonempty finite prime set, then
+$A_{\mathcal P}$, $R_{\mathcal P}$ and $C$ are strictly positive on the
+real axis throughout \eqref{eq:time-range}. Also $G_d>0$ for every $d\ge2$.
+\end{corollary}
+\begin{proof}
+Each is a nonempty sum of terms $H_n$ with $n\ge2$. The remainder is
+nonempty because $Q+1>1$ is relatively prime to $Q$. The theorem applies
+to each indicator coefficient sequence.
+\end{proof}
+
+In particular, the minus sign in $G_2+G_3-G_6$ is harmless for positivity
+only because the complete expression is the coefficient selector in
+\eqref{eq:A}. This does not assign signs to its separated complex-shift
+pieces.
+
+\subsection{Positive real part in a complex strip}
+
+For an integer $m\ge2$ and a bounded nonnegative coefficient sequence
+$(c_n)_{n\ge m}$ which is not identically zero, write
+\begin{equation}\label{eq:positive-combination}
+ V(t,z)=\sum_{n\ge m}c_nH_n(t,z).
+\end{equation}
+Lemma~\ref{lem:regularity} shows that this is entire in $z$, with
+termwise differentiation valid on compact sets.
+
+\begin{theorem}[A positive-real-part strip]\label{thm:strip-positive}
+For every combination \eqref{eq:positive-combination} and every time in
+\eqref{eq:time-range},
+\begin{equation}\label{eq:positive-strip}
+ \Re V(t,x+iy)>0\qquad(x\in\R,\ |y|\le\pi m^2).
+\end{equation}
+In particular, $V$ has no zero in this closed strip.
+\end{theorem}
+\begin{proof}
+For each $n\ge m$, put $g=e^{tu^2}\phi_n$ and
+$a=\pi n^2e^{4u}$. Equations \eqref{eq:log-first} and
+\eqref{eq:convexity} give
+\[
+ -4a<\frac{g'}g\le-3a,\qquad \frac{g''}g\ge7a^2.
+\]
+For fixed real $y$ define $k_y(u)=g(u)\cosh(yu)$. Since
+$0\le y\tanh(yu)\le|y|$ for $u\ge0$,
+\begin{align}
+ \frac{k_y'}{k_y}&\le-3a+|y|<0,\notag\\
+ \frac{k_y''}{k_y}
+ &=\frac{g''}g+2\frac{g'}g\,y\tanh(yu)+y^2\notag\\
+ &\ge7a^2-8a|y|+y^2
+   =(a-|y|)(7a-|y|).\label{eq:strip-convexity}
+\end{align}
+Here $|y|\le\pi m^2\le\pi n^2\le a$. The last expression is
+strictly positive for $u>0$, including when $|y|=\pi m^2$.
+All required boundary terms at infinity vanish by
+Lemma~\ref{lem:regularity}. Because
+$\Re\cos((x+iy)u)=\cos(xu)\cosh(yu)$, the same two integrations by
+parts as in \eqref{eq:positive-integral} yield, for $x\ne0$,
+\[
+ \Re H_n(t,x+iy)
+ =\frac1{x^2}\int_0^\infty k_y''(u)(1-\cos(xu))\dd u>0.
+\]
+At $x=0$, the defining integral is positive. Bounded coefficients and
+the decay estimate justify summing the integrals, and at least one
+coefficient is positive. This proves \eqref{eq:positive-strip}.
+\end{proof}
+
+Thus $A_{\mathcal P}$ and $C$ have positive real part for $|y|\le4\pi$,
+and a remainder starting at $m$ has positive real part for
+$|y|\le\pi m^2$. This property uses the positive higher-mode
+coefficients. It imposes neither primality nor full source reflection.
+
+\subsection{A quantitative lower bound}
+
+Define the fixed positive constant
+\begin{equation}\label{eq:kappa}
+ \kappa=\frac78\phi_2(0)
+       =\frac78(32\pi^2-12\pi)e^{-4\pi}.
+\end{equation}
+
+\begin{lemma}[A sinc estimate]\label{lem:sinc}
+With the continuous value at $v=0$,
+\begin{equation}\label{eq:sinc}
+ 1-\frac{\sin v}{v}\ge\frac{v^2}{6(1+v^2)}
+ \qquad(v\in\R).
+\end{equation}
+\end{lemma}
+\begin{proof}
+Both sides are even. For $0\le v\le2$, the alternating Taylor estimate
+gives $1-\sin v/v\ge v^2/6-v^4/120$. This is at least the right side
+of \eqref{eq:sinc}, since
+$(20-v^2)(1+v^2)-20=v^2(19-v^2)\ge0$.
+For $v\ge2$, $1-\sin v/v\ge1-1/v\ge1/2$, whereas the right side is
+at most $1/6$.
+\end{proof}
+
+\begin{proposition}[A nonvanishing arithmetic carrier]\label{prop:lower}
+If $2\in\mathcal P$, then
+\begin{equation}\label{eq:lower}
+ A_{\mathcal P}(t,x)\ge H_2(t,x)
+       \ge\frac{\kappa}{4096+x^2}.
+\end{equation}
+\end{proposition}
+\begin{proof}
+Only the second inequality needs proof. Let $L=1/64$, $n=2$ and
+$g=e^{tu^2}\phi_2$. For $0\le u\le L$,
+\[
+ a=4\pi e^{4u}\le4\pi e^{1/16}
+ <\frac{88}{7}\frac{16}{15}<14.
+\]
+Here $e^{1/16}<16/15$ follows by comparing its power series with the
+geometric series, and $\pi<22/7$. Equation \eqref{eq:log-first} implies
+$\ell'>9-4a>-47$. Hence
+\[
+ g(u)\ge\phi_2(0)e^{-47/64}>\frac{\phi_2(0)}3,
+\]
+where we used $47/64<1$ and $e<3$. Equation \eqref{eq:convexity} now gives
+$g''(u)\ge7\cdot12^2\phi_2(0)/3=336\phi_2(0)$ on this interval.
+For $x\ne0$, retain only this interval in \eqref{eq:positive-integral}:
+\begin{align*}
+ H_2(t,x)
+ &\ge\frac{336\phi_2(0)}{x^2}
+       \left(L-\frac{\sin(xL)}x\right)\\
+ &\ge\frac{56\phi_2(0)L^3}{1+x^2L^2}
+  =\frac{(7/8)\phi_2(0)}{4096+x^2}.
+\end{align*}
+The same inequality holds at $x=0$ by continuity. Since $n=2$ belongs to
+the selector defining $A_{\mathcal P}$, all its other terms are positive.
+\end{proof}
+
+The denominator in \eqref{eq:lower} is deliberate: the packets have an
+inverse-square tail, unlike the rapidly decreasing complete transform.
+This estimate permits normalization without dividing by $H$ or $H_x$.
+
+The corresponding quantitative strip estimate uses the constant
+\begin{equation}\label{eq:kappa-strip}
+ \kappa_s=\frac34\phi_2(0)=\frac67\kappa.
+\end{equation}
+
+\begin{proposition}[A lower bound in the unit strip]\label{prop:strip-lower}
+If $2\in\mathcal P$, then, for $0\le t\le1/2$,
+\begin{equation}\label{eq:strip-lower}
+ \Re A_{\mathcal P}(t,x+iy)
+ \ge\Re H_2(t,x+iy)
+ \ge\frac{\kappa_s}{4096+x^2}
+ \qquad(x\in\R,\ |y|\le1).
+\end{equation}
+\end{proposition}
+\begin{proof}
+Use $g=e^{tu^2}\phi_2$, $k_y=g\cosh(yu)$ and $L=1/64$.
+For $|y|\le1$ and $a\ge12$, \eqref{eq:strip-convexity} gives
+\[
+ \frac{k_y''}{k_y}\ge7a^2-8a\ge6a^2.
+\]
+The local estimate in Proposition~\ref{prop:lower} is
+$g(u)\ge\phi_2(0)/3$ on $0\le u\le L$. Since $\cosh(yu)\ge1$,
+it follows that $k_y''(u)\ge288\phi_2(0)$ there. For $x\ne0$,
+the positive-integral formula and Lemma~\ref{lem:sinc} give
+\[
+ \Re H_2(t,x+iy)
+ \ge\frac{288\phi_2(0)}{x^2}
+       \left(L-\frac{\sin(xL)}x\right)
+ \ge\frac{48\phi_2(0)L^3}{1+x^2L^2}
+ =\frac{(3/4)\phi_2(0)}{4096+x^2}.
+\]
+Continuity gives the same estimate at $x=0$. Every other term in
+$A_{\mathcal P}$ has positive real part by
+Theorem~\ref{thm:strip-positive}, which proves the first inequality.
+\end{proof}
+
+\subsection{Endpoint masses and positive tail bounds}
+
+For an integer $m\ge2$, use $r_{m,k}$ from \eqref{eq:strip-tail} and set
+\begin{align}
+ S_m&=\frac{2\pi^2m^4e^{-\pi m^2}}{1-r_{m,4}},&
+ Q_m&=\frac{8\pi^3m^6e^{-\pi m^2}}{1-r_{m,6}},\label{eq:SQ}\\
+ \epsilon_j(m)&=\frac{S_m j!}{(4\pi m^2-9)^{j+1}}
+ \quad(j\ge0).\label{eq:epsilon}
+\end{align}
+The denominators are positive: for example,
+$r_{m,6}\le(3/2)^6e^{-5\pi}<1$ when $m\ge2$.
+Let $S$ be a nonempty subset of $\{m,m+1,\ldots\}$ and write
+\[
+ g_S(u)=e^{tu^2}\sum_{n\in S}\phi_n(u),\qquad
+ V(t,x)=\int_0^\infty g_S(u)\cos(xu)\dd u.
+ \]
+The use of $S$ as an index set is distinct from the scalar bound $S_m$.
+
+\begin{lemma}\label{lem:mass}
+With $q_S=-g_S'(0)$ and $s_S=g_S(0)$, one has
+\begin{align}
+ 0<s_S&\le S_m,&0<q_S&\le Q_m,&
+ \int_0^\infty u^j g_S(u)\dd u&\le\epsilon_j(m),\label{eq:mass-bounds}\\
+ \int_0^\infty g_S''\dd u&=q_S,&
+ \int_0^\infty u g_S''\dd u&=s_S,&
+ \int_0^\infty u^2g_S''\dd u&=2\int_0^\infty g_S\dd u.\label{eq:mass-identities}
+\end{align}
+Moreover
+\begin{equation}\label{eq:two-upper}
+ 0<V(t,x)\le\epsilon_0(m),\qquad
+ 0<V(t,x)\le\frac{2Q_m}{x^2}\quad(x\ne0).
+\end{equation}
+\end{lemma}
+\begin{proof}
+The moment bound is Lemma~\ref{lem:strip-tail} at $T_+=1/2$, $Y=0$,
+or directly its nonoscillatory majorant. At $u=0$,
+$\phi_n(0)\le2\lambda_n^2e^{-\lambda_n}$ and
+\[
+ -\phi_n'(0)
+ =(8\lambda_n^3-30\lambda_n^2+15\lambda_n)e^{-\lambda_n}
+ <8\lambda_n^3e^{-\lambda_n}.
+\]
+The derivative of $e^{tu^2}$ is zero at $0$, so it does not change this
+endpoint mass. Summing successive-ratio bounds gives $S_m$ and $Q_m$.
+Positivity follows from $g_S>0$ and $g_S'<0$. Integration by parts gives
+the three identities in \eqref{eq:mass-identities}; all upper endpoints
+vanish. For the last identity, first integrate $u^2g_S''$ to obtain
+$-2\int u g_S'$, and integrate once more. Finally,
+\eqref{eq:positive-integral}, applied to the summed source, and
+$0\le1-\cos(xu)\le2$ give the inverse-square upper bound.
+The absolute source integral gives the other one.
+\end{proof}
+
+\begin{theorem}[Uniform relative approximation]\label{thm:relative}
+Suppose $2\in\mathcal P$ and every index in $R_{\mathcal P}$ is at least
+$m\ge2$. Define
+\begin{equation}\label{eq:rho}
+ \rho_m=\frac{4096\epsilon_0(m)+2Q_m}{\kappa}.
+\end{equation}
+Then, throughout \eqref{eq:time-range},
+\begin{equation}\label{eq:relative}
+ 0<r_{\mathcal P}:=\frac{R_{\mathcal P}}{A_{\mathcal P}}\le\rho_m,
+ \qquad
+ 0<\frac{C-A_{\mathcal P}}{C}
+      \le\frac{\rho_m}{1+\rho_m}<\rho_m.
+\end{equation}
+In particular,
+\[
+ \rho_3<0.000263,\qquad \rho_5<7.3\times10^{-25},
+\]
+applicable respectively to $\mathcal P=\{2\}$ and $\mathcal P=\{2,3\}$.
+\end{theorem}
+\begin{proof}
+Equations \eqref{eq:lower} and \eqref{eq:two-upper} give
+\[
+ \kappa\frac{R_{\mathcal P}}{A_{\mathcal P}}
+ \le(4096+x^2)R_{\mathcal P}
+ \le4096\epsilon_0(m)+2Q_m.
+\]
+For $x=0$ the same bound follows from $R_{\mathcal P}\le\epsilon_0(m)$.
+Since $C=A_{\mathcal P}(1+r_{\mathcal P})$, the second bound follows by
+monotonicity of $r/(1+r)$ for $r\ge0$. The numerical inequalities are
+verified from the explicit constants in
+Section~\ref{sec:certification}, without a height cutoff.
+\end{proof}
+
+\subsection{Logarithmic derivatives and remainder jets}
+
+The positive-real-part strip controls two real logarithmic derivatives
+at once. Retaining the relation between these two derivatives gives a
+stronger quotient estimate than bounding them separately.
+
+\begin{lemma}[A Schwarz coefficient bound]\label{lem:strip-Schwarz}
+For $V$ as in \eqref{eq:positive-combination}, define
+$\beta(t,x)=V_x(t,x)/V(t,x)$. Then
+\begin{equation}\label{eq:strip-log-budget}
+ \beta(t,x)^2+|\beta_x(t,x)|\le\frac1{4m^4}
+ \qquad(0\le t\le1/2,\ x\in\R).
+\end{equation}
+In particular, $|\beta|\le1/(2m^2)$.
+\end{lemma}
+\begin{proof}
+Fix $t,x$ and put $L=\pi m^2$, $K=4L/\pi=4m^2$. The map
+$\zeta\mapsto x+K\operatorname{artanh}\zeta$ takes the unit disk
+into $|\Im z|<L$: indeed
+$\operatorname{artanh}\zeta=\frac12\log((1+\zeta)/(1-\zeta))$
+has imaginary part between $-\pi/4$ and $\pi/4$. Define
+\[
+ f(\zeta)=\frac{V(t,x+K\operatorname{artanh}\zeta)}{V(t,x)},\qquad
+ q(\zeta)=\frac{f(\zeta)-1}{f(\zeta)+1}.
+\]
+Theorem~\ref{thm:strip-positive} and $V(t,x)>0$ imply
+$\Re f>0$, $|q|<1$ and $q(0)=0$. Write
+$q(\zeta)=a_1\zeta+a_2\zeta^2+O(\zeta^3)$. The coefficients are
+real by conjugation symmetry. Schwarz's lemma makes
+$h(\zeta)=q(\zeta)/\zeta$, with its removable value at zero, a map
+into the closed unit disk. If $|a_1|<1$, apply Schwarz's lemma to
+$(h-a_1)/(1-a_1h)$ to obtain
+\[
+ |a_2|\le1-a_1^2.
+\]
+If $|a_1|=1$, the maximum-modulus principle makes $h$ constant, and
+the same inequality holds with $a_2=0$.
+
+Since $f=(1+q)/(1-q)$,
+$\log f=2a_1\zeta+2a_2\zeta^2+O(\zeta^3)$ near zero.
+The second derivative of $\operatorname{artanh}$ is zero at zero, so
+\[
+ K\beta=2a_1,\qquad K^2\beta_x=4a_2.
+\]
+It follows that
+$K^2(\beta^2+|\beta_x|)=4(a_1^2+|a_2|)\le4$, which proves
+\eqref{eq:strip-log-budget}.
+\end{proof}
+
+\begin{theorem}[Carrier curvature and relative remainder jets]\label{thm:jets}
+For every finite prime set containing $2$, put
+$\alpha=(\log A_{\mathcal P})_x$. Then
+\begin{align}
+ |(\log A_{\mathcal P})_x|&\le\frac18,\label{eq:log-bound1}\\
+ \alpha^2+|(\log A_{\mathcal P})_{xx}|&\le\frac1{64}.
+       \label{eq:log-bound2}
+\end{align}
+In particular, $|(\log A_{\mathcal P})_{xx}|\le1/64$.
+For a remainder starting at $m\ge2$, define
+\begin{equation}\label{eq:remainder-slope}
+ d_m=\frac18+\frac1{2m^2}.
+\end{equation}
+Its relative error $r_{\mathcal P}=R_{\mathcal P}/A_{\mathcal P}$
+satisfies
+\begin{align}
+ |r_{\mathcal P,x}|&\le d_mr_{\mathcal P}\le d_m\rho_m,
+       \label{eq:r1}\\
+ |r_{\mathcal P,xx}|&\le d_m^2r_{\mathcal P}\le d_m^2\rho_m.
+       \label{eq:r2}
+\end{align}
+For $\mathcal P=\{2,3\}$, one has $m=5$, $d_5=29/200$, and
+\begin{equation}\label{eq:three-numbers}
+ 0<r_{\mathcal P}<7.3\times10^{-25},\quad
+ |r_{\mathcal P,x}|<1.06\times10^{-25},\quad
+ |r_{\mathcal P,xx}|<1.54\times10^{-26}.
+\end{equation}
+\end{theorem}
+\begin{proof}
+Apply Lemma~\ref{lem:strip-Schwarz} to $A_{\mathcal P}$ with $m=2$
+to obtain \eqref{eq:log-bound1}--\eqref{eq:log-bound2}. Next put
+$p=(\log R_{\mathcal P})_x$ and $q=(\log A_{\mathcal P})_x$.
+The same lemma gives
+\[
+ p^2+|p_x|\le\frac1{4m^4},\qquad
+ q^2+|q_x|\le\frac1{64}.
+\]
+Since $r_{\mathcal P}>0$, ordinary differentiation yields
+\[
+ \frac{r_{\mathcal P,x}}{r_{\mathcal P}}=p-q,\qquad
+ \frac{r_{\mathcal P,xx}}{r_{\mathcal P}}
+ =p_x-q_x+(p-q)^2.
+\]
+Thus $|r_{\mathcal P,x}|/r_{\mathcal P}\le|p|+|q|\le d_m$.
+For the second derivative, keep the squared terms in both budgets:
+\begin{align*}
+ \frac{|r_{\mathcal P,xx}|}{r_{\mathcal P}}
+ &\le |p_x|+|q_x|+p^2+q^2-2pq\\
+ &\le\frac1{4m^4}+\frac1{64}-2pq
+ \le\frac1{4m^4}+\frac1{64}+\frac1{8m^2}=d_m^2.
+\end{align*}
+Theorem~\ref{thm:relative} supplies $r_{\mathcal P}\le\rho_m$.
+The displayed numerical inequalities follow from the scalar enclosure of
+$\rho_5$ in Section~\ref{sec:certification}; even its rounded upper bound
+$7.3\times10^{-25}$ gives
+$d_5\rho_5<1.0585\times10^{-25}$ and
+$d_5^2\rho_5<1.534825\times10^{-26}$.
+\end{proof}
+
+\subsection{A relative error throughout the unit strip}
+
+The unit-strip lower bound also gives an explicit error estimate for
+complex arguments. Define, using \eqref{eq:SQ} and \eqref{eq:kappa-strip},
+\begin{equation}\label{eq:strip-relative-constants}
+ I_m=\frac{S_m}{4\pi m^2-10},\qquad
+ \rho_{s,m}=\frac{4097I_m+2Q_m+S_m}{\kappa_s}
+ \qquad(m\ge2).
+\end{equation}
+The denominator defining $I_m$ is positive for $m\ge2$.
+
+\begin{theorem}[Uniform complex relative approximation]\label{thm:strip-relative}
+If $2\in\mathcal P$ and every index in $R_{\mathcal P}$ is at least
+$m\ge2$, then
+\begin{equation}\label{eq:strip-relative}
+ \left|\frac{R_{\mathcal P}(t,z)}{A_{\mathcal P}(t,z)}\right|
+ \le\rho_{s,m}
+ \qquad(0\le t\le1/2,\ |\Im z|\le1).
+\end{equation}
+For $\mathcal P=\{2,3\}$,
+\begin{equation}\label{eq:strip-number}
+ \rho_{s,5}<8.5\times10^{-25}.
+\end{equation}
+\end{theorem}
+\begin{proof}
+Let $g(u)=e^{tu^2}\sum_{\substack{n>1\\(n,Q)=1}}\phi_n(u)$ and write
+$R=R_{\mathcal P}$. The source majorant in
+Lemma~\ref{lem:strip-tail}, with $Y=1$, gives
+\begin{equation}\label{eq:strip-integral-mass}
+ \int_0^\infty g(u)e^u\dd u\le I_m,\qquad |R(t,z)|\le I_m
+ \quad(|\Im z|\le1).
+\end{equation}
+Set $q=-g'(0)$ and $s=g(0)$, so $q\le Q_m$, $s\le S_m$ and
+$g''>0$ by Lemma~\ref{lem:mass} and the convexity proof. Two integrations
+by parts give, for $z\ne0$,
+\[
+ z^2R(t,z)=q-\int_0^\infty g''(u)\cos(zu)\dd u.
+\]
+All boundary terms vanish at infinity, also after multiplication by
+$e^u$. A second integration-by-parts calculation gives
+\[
+ \int_0^\infty g''(u)e^u\dd u
+ =q+s+\int_0^\infty g(u)e^u\dd u.
+\]
+Since $|\cos(zu)|\le e^u$ for $|\Im z|\le1$, these identities imply
+\begin{equation}\label{eq:strip-inverse-square}
+ |z|^2|R(t,z)|\le2Q_m+S_m+I_m.
+\end{equation}
+The inequality is also true at $z=0$. Write $z=x+iy$ and use
+$x^2\le|z|^2$. Equations \eqref{eq:strip-integral-mass} and
+\eqref{eq:strip-inverse-square} yield
+\[
+ (4096+x^2)|R(t,z)|\le4097I_m+2Q_m+S_m.
+\]
+Finally $|A_{\mathcal P}|\ge\Re A_{\mathcal P}$, and
+Proposition~\ref{prop:strip-lower} proves \eqref{eq:strip-relative}.
+The strict numerical inequality \eqref{eq:strip-number} is certified
+from the explicit constants in Section~\ref{sec:certification}.
+\end{proof}
+
+Both $H/A_{\mathcal P}$ and $R_{\mathcal P}/A_{\mathcal P}$ are
+holomorphic on a neighborhood of the unit strip because the carrier has
+positive real part in the larger strip $|\Im z|\le4\pi$. The absolute
+lower bounds and displayed numerical tolerances in this section use the
+original theta coefficient selectors. By contrast,
+Theorem~\ref{thm:strip-positive} and Lemma~\ref{lem:strip-Schwarz}
+hold for every bounded nonnegative higher-mode coefficient sequence.
+They therefore give the same logarithmic-derivative budgets, and the
+same factors $d_m,d_m^2$ in the relative derivative estimates, for
+nonzero positive-coefficient carriers and remainders. These estimates
+control an auxiliary quotient; they do not supply a signed margin for
+the complete transform near a zero.
+
+\begin{remark}[A larger auxiliary time range]\label{rem:time24}
+All estimates in this section also hold for $0\le t\le24$. Indeed,
+$2tu\le48u$ and
+\[
+ a\ge12(1+4u)>48u+9+\frac47
+\]
+still give $g'/g\le-3a$ in the convexity proof. The bound
+$g''/g\ge7a^2$ uses only $t\ge0$ once this first-derivative estimate
+is available. The local lower-bound proof is unchanged, and the source
+majorant in Lemma~\ref{lem:strip-tail} remains valid because
+$24<8\lambda_2\le8\lambda_n$ for $n\ge2$. The strip and logarithmic
+derivative proofs therefore apply with the same constants. We retain
+$0\le t\le1/2$ as the main range; this larger auxiliary range gives
+no bound for the Newman constant.
+\end{remark}

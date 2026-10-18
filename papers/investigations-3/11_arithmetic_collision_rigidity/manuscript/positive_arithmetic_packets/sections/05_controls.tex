@@ -1,0 +1,355 @@
+\section{What finite arithmetic constraints do not determine}\label{sec:controls}
+
+The estimates above use the physical theta coefficients, all equal to one.
+It is useful to identify which of their premises would survive a small
+change of coefficients. We prove a collision construction within a precise
+class of positive arithmetic sources. The construction preserves any
+specified finite set of prime identities and linear measurements, but
+fails the full modular reflection. The distinction can be proved directly.
+
+\subsection{Rigidity of the complete reflection law}
+
+We first allow even real coefficients $(a_n)_{n\in\Z}$ of at most polynomial
+growth and set
+\[
+ \Theta_a(y)=\sum_{n\in\Z}a_ne^{-\pi n^2y},\quad
+ \psi_a(u)=\sum_{n\ge1}a_np_n(u),\quad
+ \Phi_a(u)=\sum_{n\ge1}a_n\phi_n(u).
+\]
+Polynomial growth leaves all the local convergence arguments of
+Section~\ref{sec:theta} valid. Define
+$P_a(u)=a_0e^u+2\psi_a(u)$. Then $P_a''-P_a=16\Phi_a$.
+
+\begin{theorem}[Coefficient rigidity]\label{thm:rigidity}
+If
+\begin{equation}\label{eq:weighted-reflection}
+ \Theta_a(y)=y^{-1/2}\Theta_a(1/y)\qquad(y>0),
+\end{equation}
+then $a_n=a_0$ for every $n\in\Z$.
+\end{theorem}
+\begin{proof}
+We give the distribution argument, including its uniqueness step.
+A tempered distribution is a continuous linear functional on the Schwartz
+space $\Sch(\R)$. Polynomial growth makes
+$\mu=\sum_{n\in\Z}a_n\delta_n$ such a distribution. Its Fourier transform is
+defined by $\langle\widehat\mu,f\rangle=\langle\mu,\widehat f\rangle$,
+with the convention of Section~\ref{sec:theta}. Put $\nu=\mu-\widehat\mu$.
+The Gaussian transform formula and \eqref{eq:weighted-reflection} give
+\[
+ \langle\nu,e^{-\pi yv^2}\rangle
+ =\Theta_a(y)-y^{-1/2}\Theta_a(1/y)=0 .
+\]
+Both $\mu$ and $\widehat\mu$ are even. Differentiating this identity at
+$y=1$ in the Schwartz topology shows that
+$\langle\nu,v^{2k}e^{-\pi v^2}\rangle=0$ for all $k\ge0$; the odd
+moments vanish by evenness.
+
+The function
+$J(z)=\langle\nu,e^{-\pi v^2+zv}\rangle$ is entire. To justify this,
+on every compact $z$ set each Schwartz seminorm of the integrand and
+its $z$ derivatives is bounded by a polynomial in $|v|$ times
+$e^{-\pi v^2+C|v|}$. Differentiation is therefore valid in that topology.
+All Taylor coefficients of $J$ at zero vanish, so $J=0$.
+For $z=-2\pi i\xi$, this says that the Fourier transform of the
+distribution $e^{-\pi v^2}\nu$ vanishes. More explicitly, integrate
+$J(-2\pi i\xi)$ against an arbitrary Schwartz test function and interchange
+the integral and distribution pairing; the same seminorm bounds justify
+the interchange. Fourier inversion on Schwartz functions, and hence
+injectivity on tempered distributions, imply $e^{-\pi v^2}\nu=0$.
+For a compactly supported smooth test function $f$, division by the
+nonvanishing Gaussian preserves smooth compact support. Consequently
+$\langle\nu,f\rangle=0$. Such tests determine a distribution, so $\nu=0$.
+
+We have proved $\mu=\widehat\mu$. On the other hand,
+$\widehat\mu=\sum_na_ne^{-2\pi inv}$ is a $1$-periodic distribution:
+translation by one fixes each term and the distributional sum. Thus
+$\mu$ is $1$-periodic. Testing in small neighborhoods of two consecutive
+integers gives $a_{n+1}=a_n$, which proves the assertion.
+\end{proof}
+
+The primitive endpoint supplies exactly the normalization lost by applying
+$\partial_u^2-1$. Indeed, put $D(u)=P_a(u)-P_a(-u)$. Then
+\[
+ D''-D=16(\Phi_a(u)-\Phi_a(-u)),\quad D(0)=0,\quad D'(0)=2P_a'(0).
+\]
+Solving this elementary initial value problem gives
+\begin{equation}\label{eq:defect}
+ D(u)=2P_a'(0)\sinh u+
+ 16\int_0^u\sinh(u-v)(\Phi_a(v)-\Phi_a(-v))\dd v .
+\end{equation}
+This formula follows either by differentiating the right side twice or
+by variation of constants. If $\Phi_a$ is even and
+$\psi_a'(0)=-a_0/2$, then $P_a'(0)=0$ and \eqref{eq:defect} gives $D=0$.
+The change of variable $y=e^{4u}$ then gives
+\eqref{eq:weighted-reflection}, so Theorem~\ref{thm:rigidity} applies.
+In particular, for a signed perturbation with $a_0=0$, source evenness
+and $\psi_a'(0)=0$ force every coefficient to vanish.
+
+\subsection{Prime orbits and finite measurements}
+
+Fix a finite prime set $\mathcal P$, an integer $N\ge1$, and finitely many
+real linear measurements of a source and its primitive. Each measurement
+is assumed to be defined on the span of the theta source and the orbit
+sources below. Examples are finitely
+many source derivatives at specified real points, transform derivatives
+at fixed time and spectral points, and convergent weighted integrals.
+A complex measurement means its real and imaginary parts separately.
+No continuity assumption is needed for the finite-dimensional construction;
+continuity matters only if one subsequently passes to a limit.
+
+Let
+\[
+ \mathcal S(\mathcal P)=\left\{\prod_{p\in\mathcal P}p^{k_p}:
+                              k_p\in\Z_{\ge0}\right\}.
+\]
+Every positive integer has a unique factorization $n=rm$ with
+$m\in\mathcal S(\mathcal P)$ and $(r,Q)=1$, where $Q=\prod_{p\in\mathcal P}p$.
+Call $r=\rho_{\mathcal P}(n)$ its rough part. Choose distinct rough integers
+$r_1,\ldots,r_L>N$ and real coefficients $v_{r_\ell}$. Extend them to
+all positive indices by
+\begin{equation}\label{eq:orbit-coeff}
+ v_n=
+ \begin{cases}
+ v_{r_\ell},&\rho_{\mathcal P}(n)=r_\ell\text{ for some }\ell,\\
+ 0,&\text{otherwise}.
+ \end{cases}
+\end{equation}
+Thus $v_n=0$ for $n\le N$ and $v_{pn}=v_n$ for every $p\in\mathcal P$.
+Write
+\begin{equation}\label{eq:orbit-source}
+ K(u)=\sum_{n\ge1}v_n\phi_n(u),\qquad
+ \psi_K(u)=\sum_{n\ge1}v_np_n(u),\qquad
+ V(t,z)=\int_0^\infty e^{tu^2}K(u)\cos(zu)\dd u .
+\end{equation}
+
+Impose the given homogeneous measurement conditions on $(K,\psi_K)$,
+and also impose $\psi_K'(0)=0$. These are finitely many homogeneous
+linear equations in the $L$ coefficients. Taking $L$ larger than the
+number of equations produces a nonzero solution. Normalize it so that
+$\max_\ell|v_{r_\ell}|=1$. Then
+\begin{equation}\label{eq:K-majorant}
+ |K(u)|\le\sum_{n>N}\phi_n(u)\le\Phi(u)\qquad(u\ge0).
+\end{equation}
+
+We verify two necessary nondegeneracy facts. First, $K$ is not identically
+zero. Otherwise $8K=\psi_K''-\psi_K=0$. The general solution is
+$Ae^u+Be^{-u}$, and the superexponential decay as $u\to+\infty$ forces
+$A=B=0$. If $n_0$ is the least index with $v_{n_0}\ne0$, divide
+$e^{-u}\psi_K(u)=0$ by $e^{-\pi n_0^2e^{4u}}$ and let $u\to+\infty$.
+The remaining terms tend to zero by dominated convergence, giving
+$v_{n_0}=0$, a contradiction.
+
+Second, some odd derivative of $K$ at zero is nonzero. If all vanished,
+real analyticity would make $K$ even near zero and then, by analytic
+continuation along the real line, on all of $\R$. Apply the consequence
+of \eqref{eq:defect} with coefficients $v_0=0$, $v_{-n}=v_n$ and
+$\psi_K'(0)=0$. Theorem~\ref{thm:rigidity} would force $v_n=0$, again a
+contradiction. There is therefore a first nonzero odd endpoint derivative,
+say $K^{(p-1)}(0)\ne0$ with $p$ even. Multiplication by the even function
+$e^{tu^2}$ leaves this first odd derivative unchanged. At every fixed
+time, Lemma~\ref{lem:endpoint} yields
+\begin{equation}\label{eq:control-tail}
+ V(t,x)=A_Kx^{-p}(1+O(x^{-2})),\quad
+ (\log|V(t,x)|)_{xx}=\frac p{x^2}+O(x^{-4})>0
+\end{equation}
+for sufficiently large $x$, where $A_K=(-1)^{p/2}K^{(p-1)}(0)\ne0$.
+The logarithmic derivative estimate follows by inserting all three
+estimates \eqref{eq:endpoint-jets} into $V''/V-(V'/V)^2$.
+
+\subsection{The additional input about high zeros}
+
+The collision construction uses the following published arithmetic input,
+which is separate from every packet estimate in this manuscript.
+
+\begin{quote}
+For each fixed $0<T\le1/2$, all sufficiently high zeros of
+$H(T,\cdot)$ are real and simple, there are infinitely many such zeros,
+and only finitely many zeros are nonreal.
+\end{quote}
+
+The high-zero assertions are consequences of
+\cite[Theorem 1.5(i)--(iii) and its multiplicity count in \S9]{Polymath}.
+Finiteness of the nonreal zeros also uses the global strip bound
+$|\Im z|\le\sqrt{1-2T}$, obtained from the time-zero strip
+$|\Im z|\le1$ by the de Bruijn theorem recorded in
+\cite[Theorem 3.2]{Polymath}. The time-zero strip follows from
+\eqref{eq:xi}, the Euler product in $\Re s>1$, and the reflection
+$\xi(s)=\xi(1-s)$ evident in \eqref{eq:mellin-split}.
+Thus the nonreal zeros lie in a compact rectangle and are finite by
+isolatedness of zeros of a nonzero entire function. We use this published
+input as a theorem; its arithmetic asymptotic proof is not reproduced.
+No input about zeros at $T=0$ is assumed.
+
+For clarity we derive the logarithmic-curvature consequence needed below.
+The source estimate in Lemma~\ref{lem:regularity} implies, for $|z|\le R$,
+\[
+ |H(T,z)|\le C_T\int_0^\infty
+      \exp\bigl((R+9)u-\tfrac{\pi}{2}e^{4u}\bigr)\dd u .
+\]
+Here $e^{Tu^2}$ was absorbed into half the superexponential factor,
+with a constant depending on $T$. Split the remaining exponential decay
+in half again. The integral of $\exp(-\pi e^{4u}/4)$ is finite, and the
+maximum of $(R+9)u-\pi e^{4u}/4$ on $u\ge0$ is $O(R\log(R+2))$.
+Consequently $\log\max_{|z|\le R}|H(T,z)|=O_T(R\log(R+2))$:
+the entire function has order at most one.
+
+We now apply the classical Hadamard factorization theorem in its standard
+order-at-most-one form. If an entire function of this order is nonzero
+at the origin, it is a product of its genus-one zero factors times
+$e^{a+bz}$, and $\sum_\rho|\rho|^{-2}<\infty$. Since $H(T,0)>0$,
+twice taking its logarithmic derivative gives, for real $x$ away from
+zeros,
+\begin{equation}\label{eq:logH-zeros}
+ (\log|H(T,x)|)_{xx}=-\sum_\rho\frac1{(x-\rho)^2}.
+\end{equation}
+Multiplicity is included; the differentiated series converges locally
+uniformly away from the zeros. The exponential factor has zero second
+logarithmic derivative. Each real zero contributes a negative term.
+A nonreal conjugate pair $\alpha\pm i\beta$ contributes
+\[
+ -\frac{2((x-\alpha)^2-\beta^2)}
+            {((x-\alpha)^2+\beta^2)^2},
+\]
+which is negative once $x>\alpha+|\beta|$. There are only finitely many
+such pairs. Hence
+\begin{equation}\label{eq:logH-negative}
+ (\log|H(T,x)|)_{xx}<0
+\end{equation}
+at every sufficiently large real $x$ that is not a zero.
+
+\subsection{A finite-prime-compatible collision theorem}
+
+\begin{theorem}[Scoped collision controls]\label{thm:controls}
+Fix $0<T\le1/2$, a finite prime set $\mathcal P$, an integer $N$, and
+finitely many real linear measurements as above. There exist bounded
+strictly positive coefficient sequences $a_n^{(j)}$ and real numbers
+$x_j\to+\infty$ such that:
+\begin{enumerate}
+\item $a_n^{(j)}=1$ for $n\le N$, and
+      $a_{pn}^{(j)}=a_n^{(j)}$ for $p\in\mathcal P$ and all $n$;
+\item the source and primitive have exactly the theta values for the
+      specified measurements, including $\psi_{a^{(j)}}'(0)=-1/2$;
+\item their heat transforms have a nondegenerate real double zero at
+      $(T,x_j)$;
+\item $\sup_n|a_n^{(j)}-1|\to0$, and their transforms and every fixed finite
+      collection of spectral derivatives converge to $H$ uniformly on
+      each set $0\le t\le T_+$, $|\Im z|\le Y$, with no restriction on
+      $\Re z$.
+\end{enumerate}
+Every one of these sources fails the full reflection law
+\eqref{eq:weighted-reflection} and fails evenness of its analytic source
+on the whole real line.
+\end{theorem}
+\begin{proof}
+Choose $K$ as in \eqref{eq:orbit-source}. For sufficiently large $x$,
+$V(T,x)$ is nonzero. Let $(\beta_j,\beta_{j+1})$ be consecutive sufficiently
+high real zeros of $H(T,\cdot)$, and define
+$q(x)=H(T,x)/V(T,x)$ on the closed interval. This function is smooth,
+vanishes at both endpoints, and has constant nonzero sign inside.
+Equations \eqref{eq:control-tail} and \eqref{eq:logH-negative} imply
+\[
+ (\log|q(x)|)_{xx}<0 .
+\]
+The simple endpoint zeros give
+$(\log|q|)_x\to+\infty$ at the left endpoint and
+$(\log|q|)_x\to-\infty$ at the right endpoint. It is strictly decreasing,
+so has a unique zero $x_j$ inside. At this point $q'(x_j)=0$ and
+$q''(x_j)/q(x_j)<0$.
+
+Set $\delta_j=-q(x_j)$, keep this scalar fixed as time varies, and put
+\[
+ a_n^{(j)}=1+\delta_jv_n,\qquad
+ \mathcal H_j(t,z)=H(t,z)+\delta_jV(t,z).
+\]
+At time $T$, $\mathcal H_j=V(q+\delta_j)$. Therefore
+\[
+ \mathcal H_j(T,x_j)=\partial_x\mathcal H_j(T,x_j)=0,\qquad
+ \partial_x^2\mathcal H_j(T,x_j)=V(T,x_j)q''(x_j)\ne0 .
+\]
+Both summands obey the heat equation, so this is a nondegenerate double
+event of that equation. If desired, its local splitting follows by the
+same Taylor calculation as in Section~\ref{sec:collisions}.
+
+The rapid real-axis decay of $H(T,x)$, together with the power tail
+\eqref{eq:control-tail}, gives $\delta_j\to0$ faster than any fixed
+inverse power of $x_j$. Discard finitely many indices so that
+$|\delta_j|<1$. Since $|v_n|\le1$, all $a_n^{(j)}$ are then positive.
+Their finite prime identities, initial coefficients and measurements
+follow directly from the construction of $v_n$ and its homogeneous
+constraints. The perturbation is nonzero because $q(x_j)\ne0$.
+
+For the convergence assertion, Lemma~\ref{lem:regularity} gives a finite
+constant
+\[
+ M_{k,T_+,Y}=\int_0^\infty u^k e^{T_+u^2+Yu}
+                         \sum_{n>N}\phi_n(u)\dd u .
+\]
+Differentiating the integral for $\mathcal H_j-H$ gives the uniform bound
+$|\partial_z^k(\mathcal H_j-H)|\le|\delta_j|M_{k,T_+,Y}$ on the stated
+set. Lemma~\ref{lem:strip-tail} makes this bound explicit whenever its
+starting index is admissible; a finite initial segment can otherwise be
+bounded directly. Mixed time derivatives follow as well, since each
+time derivative inserts $u^2$.
+
+Finally take $a_0^{(j)}=1$. If the full reflection law held,
+Theorem~\ref{thm:rigidity} would force $a_n^{(j)}=1$ for every $n$,
+contrary to the nonzero perturbation. If the analytic source were even,
+the imposed primitive endpoint and \eqref{eq:defect} would imply that
+same reflection law. Both assertions therefore fail.
+\end{proof}
+
+The meaning of the prime identities can also be checked at source level:
+if $a_{pn}=a_n$, then
+\[
+ D_p\Phi_a=\sum_{n\ge1}a_n\phi_{pn}
+          =\sum_{p\mid k}a_k\phi_k .
+\]
+Thus the finite selector algebra and the complete boundary formulas are
+retained for every prime specified in the theorem.
+The evenness of the cosine transform in $z$ is also retained. This is
+different from evenness of the analytic arithmetic source in $u$.
+Its even extension from $u\ge0$ has a nonmatching odd derivative at zero
+and is not a smooth theta source on the whole line.
+
+\subsection{Why the stronger packet bounds survive the controls}
+
+Assume $2\in\mathcal P$ and write $\eta=|\delta_j|<1$.
+Every positive coefficient of the controlled source lies between
+$1-\eta$ and $1+\eta$. The positive-real-part theorem in
+Section~\ref{sec:positivity} applies to these coefficients without a
+perturbative loss. In particular, with
+$\alpha^{(j)}=(\log A^{(j)})_x$ on the real axis,
+\begin{equation}\label{eq:control-sharp-curvature}
+ (\alpha^{(j)})^2+|\partial_x\alpha^{(j)}|\le\frac1{64}.
+\end{equation}
+If the remainder begins at $m$, its logarithmic bound is
+$1/(4m^4)$ in the same form. Hence for $r^{(j)}=R^{(j)}/A^{(j)}$,
+\[
+ |r_x^{(j)}|\le d_m r^{(j)},\qquad
+ |r_{xx}^{(j)}|\le d_m^2r^{(j)},\qquad
+ d_m=\frac18+\frac1{2m^2}.
+\]
+These exact logarithmic constants therefore coexist with collisions.
+
+Absolute relative-amplitude bounds require the coefficient comparison.
+The controlled carrier has real part at least $(1-\eta)\Re H_2$ in
+$|\Im z|\le1$, while the source, endpoint and moment upper bounds increase
+by at most $1+\eta$. Put $k_\eta=(1+\eta)/(1-\eta)$. The real and
+complex relative estimates of Section~\ref{sec:positivity} give
+\[
+ 0<r^{(j)}(t,x)\le k_\eta\rho_m,\qquad
+ |r^{(j)}(t,z)|\le k_\eta\rho_{s,m}\quad(|\Im z|\le1).
+\]
+Thus the absolute remainder-derivative tolerances acquire the same
+$k_\eta$ factor; their original numerical values must not be asserted
+for arbitrary positive coefficients. As $\eta\to0$ the amplitude
+bounds approach the theta bounds. The controls also preserve any fixed
+finite set of endpoint constraints included among the measurements.
+
+The conclusion is confined to this coefficient-perturbation class.
+The theorem prescribes the positive event time but neither a finite
+event height nor an effective height threshold. It is not uniform as
+$T\downarrow0$. It does not assign a Newman constant to the perturbed
+families. In particular, it is not a construction of collisions for the
+theta coefficients, and it does not exclude arguments that use the full
+modular identity quantitatively.

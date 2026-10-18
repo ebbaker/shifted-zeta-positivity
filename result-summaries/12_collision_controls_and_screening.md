@@ -81,6 +81,26 @@ only those properties proves a false statement.
   Added for Edward Baker with substantial LLM assistance, **gpt-6.1-sol**,
   effort **ultra**.
 
+- **Finite-prime orbit controls (Investigation 3/11, 18 October).** For any
+  fixed finite prime set, finite coefficient prefix and finite list of real
+  linear measurements, a bounded positive square-source perturbation can
+  preserve every selected-prime identity and the primitive normalization,
+  match those measurements, and have a nondegenerate double event in each
+  sufficiently high theta-zero gap at a fixed positive time (with a different
+  frozen multiplier for each event). Coefficient and heat-weighted source
+  distances tend to zero. Full source reflection fails; no fixed compact
+  event location, finite Newman threshold, or obstruction to infinite
+  assembly is claimed. Status: **proved in-note**, extending the existing
+  one-direction gap argument; one orbit endpoint construction is
+  **interval-certified**. [Proof](../papers/investigations-3/11_arithmetic_collision_rigidity/notes/03_FINITE_PRIME_COMPATIBLE_COLLISION_CONTROLS_CODEX_20261018.md),
+  [same-assistant assessment](../papers/investigations-3/11_arithmetic_collision_rigidity/reviews/01_OPENING_ROUND_SELF_REVIEW_CODEX_20261018.md).
+  Prepared for Edward Baker with substantial LLM assistance, **gpt-6-astra,
+  effort max**; no independent review or theta sign claim.
+  The [working manuscript, Section 5](../papers/investigations-3/11_arithmetic_collision_rigidity/manuscript/positive_arithmetic_packets/sections/05_controls.tex)
+  gives the self-contained proof for 0<T<=1/2 and shows that the positive
+  carrier bounds survive with arbitrarily close constants. Its published
+  high-zero input is stated explicitly; review remains same-assistant.
+
 ## Status
 
 19: proved and certified; the manuscript "awaits independent review" and

@@ -30,6 +30,15 @@ measure.
 - [Reply 18](../papers/investigations-2/active/22_theta_manifold_geometry/reviews/18_REPLY_TO_RESPONSE_17_CLAUDE_20261015.md) §3: no single listed property is absent from all four controls; square support and reflection are each satisfied by two of them, and their conjunction is theta itself.
 - [Close-and-merge recommendations](../papers/investigations-2/active/CLOSE_AND_MERGE_RECOMMENDATIONS_CLAUDE_20261013.md) on folders 14 and 16: "The Volterra flow holds for every even measure" and radial positivity "is Bochner positive-definiteness of \(H_t(|z|)\), which is generic".
 
+- [Finite-prime orbit controls, 18 October](../papers/investigations-3/11_arithmetic_collision_rigidity/notes/03_FINITE_PRIME_COMPATIBLE_COLLISION_CONTROLS_CODEX_20261018.md):
+  "No single perturbed source is claimed to pass every prime or every endpoint
+  condition." Each fixed finite prime list, even with exact infinite coefficient
+  compatibility at those primes and finite exact linear tests, still admits
+  colliding sources; complete reflection is the failed premise. This does not
+  exclude a controlled infinite assembly or finite formulas using full theta
+  data. Added for Edward Baker with substantial LLM assistance, **gpt-6-astra,
+  max**; [same-assistant assessment](../papers/investigations-3/11_arithmetic_collision_rigidity/reviews/01_OPENING_ROUND_SELF_REVIEW_CODEX_20261018.md).
+
 ## What it cost
 
 The 09-to-06 continuation, 02's continuation and 17's pilot ended at

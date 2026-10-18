@@ -5,6 +5,40 @@ LLM assistance. Recorded model: **gpt-6-astra (Codex)**; effort: **ultra**.
 Three same-model collaborators assisted with source review. This is an
 internal research assessment, not independent specialist review.
 
+## Priority clarification 18 October 2026
+
+Edward prioritizes a highly notable structural result for the fixed zeta
+function, or at least a fixed character, and accepts substantially greater
+research risk. The earlier recommendation to prioritize near-term publication
+through 01+03 is not the governing objective for future brainstorming.
+[Fixed character goals and arithmetic collision research](notes/02_FIXED_CHARACTER_GOALS_AND_ARITHMETIC_COLLISION_RESEARCH_CODEX_20261018.md)
+records the revised priorities, the scope corrections to the 21–22 critiques,
+and the missing arithmetic-to-collision estimate. Prepared for Edward Baker
+with substantial LLM assistance, **gpt-6-astra (Codex), xhigh**. This changes
+research priorities, not the mathematical status of the existing results.
+
+## Candidate projects 18 October 2026
+
+[New projects for fixed function arithmetic and heat collisions](notes/03_NEW_FIXED_FUNCTION_PROJECTS_CODEX_20261018.md)
+proposes five additions: modular oscillator estimates, coupled arithmetic
+dilations, modular auxiliary functions, arithmetic constraints at collision
+scale, and the fixed Dirichlet beta function with its eta kernel. Each has
+a first substantive research objective and an explicit control screen.
+The original note records the provisional proposal stage. At Edward's
+subsequent request, all five homes are now initialized and outlined in the
+[exploratory fixed-function research plan](../research-overview/02_EXPLORATORY_FIXED_FUNCTION_RESEARCH_PLAN_20261018.md),
+with an expanded proposal in each project. **11 is the preferred next
+exploration**; the current setup outlines all five before beginning its
+research round. No new mathematical result or review is claimed.
+Prepared for Edward Baker with substantial LLM assistance,
+**gpt-6-astra (Codex), effort max**, 18 October 2026.
+
+The new conversation is registered in this brainstorm's
+[chat histories](chat-histories/README.md). Existing portfolio chat
+registrations retain their identities and homes.
+
+## Earlier assessment and proposals
+
 - [Progress assessment](01_PROGRESS_ASSESSMENT_CODEX_20261017.md): all seven
   investigations, current evidence, remaining gaps, and recommended priorities.
 - [Research directions and decision gates](02_RESEARCH_DIRECTIONS_CODEX_20261017.md):
@@ -24,10 +58,11 @@ internal research assessment, not independent specialist review.
   survey baseline, excluding conversation archives and generated PDFs.
   Hashes identify sources; they do not validate their mathematics.
 
-The main recommendation is to develop **01 and 03 as one analytic program**
-and **finish 02's bounded activation certificate**. The other projects have
-useful results, but further development should be tied to a named application
-or a construction that escapes their precisely stated obstructions.
+The original assessment recommended developing **01 and 03 as one analytic
+program** and **finishing 02's bounded activation certificate**. Its ranking
+is qualified by Edward's priority clarification above. Its mathematical
+assessments and the need to respect precisely scoped obstructions remain
+part of the research record.
 
 The requested conversation is [portfolio chat 2](../chat-histories/0002_2026-10-18T03-45-08Z_review-investigations-3-progress.json).
 Its UTC filename corresponds to 17 October in the user's timezone. The

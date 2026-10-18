@@ -1,0 +1,116 @@
+\documentclass[11pt,letterpaper]{article}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage{booktabs,array}
+\usepackage{microtype}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\definecolor{linkblue}{RGB}{25,58,100}
+\hypersetup{colorlinks=true,linkcolor=linkblue,citecolor=linkblue,urlcolor=linkblue,
+  pdftitle={Positive Arithmetic Packets for the Theta Heat Flow},
+  pdfauthor={Drafted for Edward Baker},pdfsubject={Working mathematical draft}}
+\numberwithin{equation}{section}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\newcommand{\R}{\mathbb R}
+\newcommand{\C}{\mathbb C}
+\newcommand{\N}{\mathbb N}
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\dd}{\,\mathrm d}
+\newcommand{\Ph}{\Phi}
+\newcommand{\Lap}{\mathcal L}
+\newcommand{\Sch}{\mathcal S}
+\DeclareMathOperator{\supp}{supp}
+\allowdisplaybreaks[1]
+\emergencystretch=2em
+\clubpenalty=10000
+\widowpenalty=10000
+\title{\bfseries Positive Arithmetic Packets for the Theta Heat Flow\\[0.4em]
+  \large Finite Euler operations, modular cancellation, and local collisions}
+\author{Drafted for Edward Baker}
+\date{Working draft\enspace---\enspace18 October 2026}
+
+\begin{document}
+\maketitle
+\begin{abstract}
+Finite Euler operations under the backwards heat equation retain an exact
+arithmetic structure, but scalar factors become complex-shift operators,
+mixed-prime coefficients change, and half-line transforms acquire boundary
+corrections. Starting from the theta source, we prove that, for
+$0\le t\le1/2$, every nonzero bounded nonnegative packet of modes beginning
+at $m\ge2$ has positive real part throughout $|\Im z|\le\pi m^2$.
+A disk-map argument then bounds its logarithmic slope and curvature:
+$\beta^2+|\beta_x|\le1/(4m^4)$ on the real axis. For the arithmetic carrier
+containing the second mode, this bounds its contribution to a normalized
+Laguerre identity by $E/64$. The packet for primes $2,3$ approximates the
+full higher-mode contribution with relative real-axis error below
+$7.3\times10^{-25}$, with explicit derivative bounds and a complex-strip
+relative error below $8.5\times10^{-25}$.
+We derive the all-order endpoint cancellation forced by modular reflection,
+then use that reflection before truncation to obtain a finite shifted-source
+approximation with explicit errors for every fixed spectral derivative.
+A near-boundary contour choice gives an asymptotically vanishing error
+relative to the time-zero gamma envelope with $O(\sqrt{x})$ retained modes;
+no effective onset or quadrature cost is asserted.
+Finally, a scoped collision construction preserves any fixed finite list
+of prime identities and linear measurements, including the stronger
+positive-packet geometry, while failing complete source reflection.
+The complete signed theta residual and a positive physical-scale margin
+remain open. No theta collision exclusion or bound on the Newman constant
+is claimed.
+\end{abstract}
+
+\clearpage
+\tableofcontents
+\clearpage
+\input{sections/01_theta}
+\input{sections/02_packets}
+\input{sections/03_positivity}
+\input{sections/04_modular_collisions}
+\input{sections/05_controls}
+\input{sections/07_shifted_approximation}
+\input{sections/06_certification}
+
+\section*{Acknowledgements and draft status}
+\addcontentsline{toc}{section}{Acknowledgements and draft status}
+Drafted for Edward Baker with substantial LLM assistance through Codex.
+Original development used OpenAI's \texttt{gpt-6-astra} at effort
+\texttt{max}; the strip and contour continuation used effort \texttt{ultra}.
+Integration used \texttt{gpt-6.1-sol} at effort \texttt{ultra}, with
+\texttt{gpt-6-astra}, effort \texttt{ultra}, coordinating editing,
+numerical replay and document verification. Source records retain these
+configurations. This working draft has internal LLM checks, not independent
+specialist review; compilation and scalar certificates do not establish
+a positive physical-scale margin. Classical theta identities,
+convex-kernel principles, disk-map estimates and contour shifting
+are not claimed as new.
+
+\begin{thebibliography}{9}
+\bibitem{DLMF}
+F.~W.~J. Olver et al., eds.,
+\emph{NIST Digital Library of Mathematical Functions},
+Chapter 20, especially \S20.7(viii), equation 20.7.32.
+\url{https://dlmf.nist.gov/20.7.E32}.
+
+\bibitem{Csordas}
+G.~Csordas,
+\emph{Fourier transforms of positive definite kernels and the Riemann
+$\xi$-function}, arXiv:1309.0055v2 (2014), Theorem 3.4.
+\url{https://arxiv.org/abs/1309.0055v2}.
+
+\bibitem{Polymath}
+D.~H.~J. Polymath,
+\emph{Effective approximation of heat flow evolution of the Riemann
+$\xi$ function, and a new upper bound for the de Bruijn--Newman constant},
+arXiv:1904.12438v2, Theorems 1.5 and 3.2, and \S9.
+\url{https://arxiv.org/abs/1904.12438v2}.
+\end{thebibliography}
+\end{document}
