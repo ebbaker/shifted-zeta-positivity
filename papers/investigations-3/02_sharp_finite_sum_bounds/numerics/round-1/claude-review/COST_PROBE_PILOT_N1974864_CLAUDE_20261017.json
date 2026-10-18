@@ -1,0 +1,89 @@
+{
+  "date": "2026-10-17",
+  "prepared_for": "Edward Baker",
+  "executed_by": "Claude Opus 5.5 (configured identifier claude-opus-5-5), Claude Cowork, reasoning effort max; serving model may differ",
+  "purpose": "Cost probe for the activation mesh proposed in the round-one cross-model review (section 3.3): one run of the round's unchanged pilot program at the largest row of the exact-sum planning mesh.",
+  "command": "python3 papers/investigations-3/02_sharp_finite_sum_bounds/numerics/round-1/certify_sharp_pilot.py --repo . --N 1974864 --output <file>",
+  "environment": "cloud workspace, Python 3.13.16, Linux x86-64",
+  "attribution_note": "The embedded record's model and reasoning_effort fields are written by the program itself and name the program's author (gpt-6.1-sol, ultra), not the executor of this run.",
+  "scope": "One certified sharp floor at y0 for N=1974864, legs {2,3}; no strip transfer, coverage or Newman bound is asserted here. It becomes a mesh row only if the activation certificate selects this index.",
+  "embedded_record_sha256": "41eb02787874a712953a569add610f78963a1a9028ab4572c58bd4db51106755",
+  "pilot_record": {
+    "date": "2026-10-17",
+    "prepared_for": "Edward Baker",
+    "model": "gpt-6.1-sol",
+    "reasoning_effort": "ultra",
+    "status": "outward arithmetic pilot; no strip transfer or full bound",
+    "helper": "papers/investigations-2/newman_certificate_audit/numerics/check_finite_row_certified_replay.py",
+    "helper_sha256": "37d525ed2e8b424462523710d0b70e7a1e23b5dd6d755f36d6c3b1e77152fc35",
+    "script_sha256": "860f9c0fe5aeea6316b58ac28413c328f3df994917aa3a45320d773beeb69012",
+    "python": "3.13.16",
+    "fixed_point_bits": 110,
+    "row": {
+      "N": 1974864,
+      "primes": [
+        2,
+        3
+      ],
+      "t": "0.157",
+      "y_squared": "0.0350708",
+      "sigma": [
+        "1.73157278966661398108441319431915701608872024",
+        "1.73157278966661398108441319431915701608872052"
+      ],
+      "g": [
+        "0.0664735413127186069472746012878661620229135423",
+        "0.0664735413127186069472746012878661620229136302"
+      ],
+      "M": [
+        "1.51132667739110674024674389141462162384111147",
+        "1.51132667739110674024674389141462162384111261"
+      ],
+      "S": [
+        "0.686327171319393503629521616330101470843680937",
+        "0.686327171319393503641515825315292195016322469"
+      ],
+      "Q": [
+        "0.247199287367887889411209573396841642960763900",
+        "0.247199287367887889423203782382032367133405521"
+      ],
+      "kappa_correction": [
+        "8.59314596429629315579534749473436473651673550E-16",
+        "8.59314596429633052027292815668605263304281027E-16"
+      ],
+      "L": [
+        "0.163564430553564191107053625748516010838389903",
+        "0.163564430553564191114989837799998121560586433"
+      ],
+      "fixed_point_error": "5.99710449259536208632076579399242577043623227E-21",
+      "number_of_n": 4937159,
+      "incidences": 7899455,
+      "rho_needed": "1.21145316172575585568114599062510445321795306E-41",
+      "error_parts": {
+        "dBT": 2,
+        "dAA": 2,
+        "dKS": 2,
+        "dG0": 2,
+        "dL": 2,
+        "dG": 2,
+        "eB": 30563,
+        "eA": 461359,
+        "eW": 984864,
+        "eNS": 6,
+        "Ar": 246470,
+        "Wr": 262792,
+        "c": 4,
+        "dC": 2,
+        "eGA": 954301,
+        "eV": 984864,
+        "sharp_eW": 1510450
+      }
+    },
+    "seconds": 246.58228237799995,
+    "peak_resident_bytes": 354971648,
+    "resource_gates": {
+      "wall_below_600_seconds": true,
+      "peak_below_512MiB": true
+    }
+  }
+}

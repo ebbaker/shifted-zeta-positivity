@@ -20,3 +20,11 @@ model/effort; a replay or hash does not prove the mathematical implication.
 Follow [LARGE_FILES.md](../../../../LARGE_FILES.md). Keep regenerable large
 outputs external, with a tracked guide and small hash-bound records when
 first needed; no large archive is created by this setup.
+
+Update, 17 October 2026: the [Claude review checks](round-1/claude-review/README.md)
+support the [round-one cross-model review](../reviews/01_ROUND_ONE_CROSS_MODEL_REVIEW_CLAUDE_20261017.md):
+independent float64 rows, a definition-based check of the transfer-gate
+numerator, fault injection in the engine, and floating planning meshes for
+the proposed activation lemma (not a certificate). Added for Edward Baker
+with LLM assistance, Claude Opus 5.5 (`claude-opus-5-5`), Claude Cowork,
+effort max.
