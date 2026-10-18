@@ -30,3 +30,14 @@ The finite-height propagation proof and named published inputs are in
 The [consumer ledger](HIGH_HEIGHT_CONSUMER_LEDGER_20261018.json) records
 precise finite coverage and the unclosed global bridge. Hashes identify
 artifacts, not mathematical truth. There is no new Newman bound.
+
+## Current manuscript source version
+
+The later [manuscript integration](../../reviews/13_CURRENT_RESULTS_MANUSCRIPT_INTEGRATION_REVIEW_20261018.md)
+replaces the eight-file TeX pin with twelve files. Original records in this
+folder keep their original source identities. Reproduce the current draft
+by running the producer above into a fresh external directory before the
+comparison and replay; do not bypass a source mismatch in an old setup.
+The [fresh integration manifest](../MANUSCRIPT_INTEGRATION_REPLAY_20261018.json)
+records successful current-source runs, for Edward Baker with substantial
+LLM assistance, **gpt-6-astra, actual effort max**, 18 October 2026.

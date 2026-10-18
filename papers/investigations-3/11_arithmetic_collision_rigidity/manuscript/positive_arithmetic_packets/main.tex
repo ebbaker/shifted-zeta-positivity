@@ -29,43 +29,43 @@
 \newcommand{\Lap}{\mathcal L}
 \newcommand{\Sch}{\mathcal S}
 \DeclareMathOperator{\supp}{supp}
+\DeclareMathOperator{\Log}{Log}
 \allowdisplaybreaks[1]
 \emergencystretch=2em
 \clubpenalty=10000
 \widowpenalty=10000
 \title{\bfseries Positive Arithmetic Packets for the Theta Heat Flow\\[0.4em]
-  \large Finite Euler operations, modular cancellation, and local collisions}
+  \large Positive carriers, effective approximation, and finite collision exclusion}
 \author{Drafted for Edward Baker}
 \date{Working draft\enspace---\enspace18 October 2026}
 
 \begin{document}
 \maketitle
 \begin{abstract}
-Finite Euler operations under the backwards heat equation retain an exact
-arithmetic structure, but scalar factors become complex-shift operators,
-mixed-prime coefficients change, and half-line transforms acquire boundary
-corrections. Starting from the theta source, we prove that, for
-$0\le t\le1/2$, every nonzero bounded nonnegative packet of modes beginning
-at $m\ge2$ has positive real part throughout $|\Im z|\le\pi m^2$.
-A disk-map argument then bounds its logarithmic slope and curvature:
-$\beta^2+|\beta_x|\le1/(4m^4)$ on the real axis. For the arithmetic carrier
-containing the second mode, this bounds its contribution to a normalized
-Laguerre identity by $E/64$. The packet for primes $2,3$ approximates the
-full higher-mode contribution with relative real-axis error below
-$7.3\times10^{-25}$, with explicit derivative bounds and a complex-strip
-relative error below $8.5\times10^{-25}$.
-We derive the all-order endpoint cancellation forced by modular reflection,
-then use that reflection before truncation to obtain a finite shifted-source
-approximation with explicit errors for every fixed spectral derivative.
-A near-boundary contour choice gives an asymptotically vanishing error
-relative to the time-zero gamma envelope with $O(\sqrt{x})$ retained modes;
-no effective onset or quadrature cost is asserted.
-Finally, a scoped collision construction preserves any fixed finite list
-of prime identities and linear measurements, including the stronger
-positive-packet geometry, while failing complete source reflection.
-The complete signed theta residual and a positive physical-scale margin
-remain open. No theta collision exclusion or bound on the Newman constant
-is claimed.
+We develop finite Euler operations and complete arithmetic packets for
+the backwards heat evolution of the Riemann $\xi$ function.
+For $0\le t\le1/2$, every nonzero bounded nonnegative packet of source
+modes beginning at $m\ge2$ has positive real part in $|\Im z|\le\pi m^2$.
+Its logarithmic derivatives satisfy
+$\beta^2+|\beta_x|\le1/(4m^4)$; the carrier containing the second mode
+therefore contributes at most $E/64$ to the normalized Laguerre identity,
+where $E=H^2+H_x^2$. The packet selected by primes $2,3$ approximates
+the positive higher-mode contribution with relative error below
+$7.3\times10^{-25}$, but full modular reflection cancels all its
+algebraic tails with the first source mode.
+We preserve that cancellation by shifting the complete reflected source
+before truncation. Nonstationary phase gives effective omitted-mode
+derivative bounds; a contour at distance $A_c/x$ from the source-strip
+boundary has error $O(x^{-1/4})$ relative to a positive gamma envelope.
+Complete interval computations certify signed rectangles and a complex
+wall at $\Re z=1000$. With published initial zero verification and a
+finite heat-propagation lemma, these imply $E>0$ on
+$[1/100,1/5]\times[-1001,1001]$.
+Using the published effective Riemann--Siegel approximation, we also prove
+$E>0$ for $\varepsilon\le t\le1/2$ and $|x|\ge e^{20/\varepsilon}$.
+Finite-prime and remote polynomial controls delimit the premises of these
+arguments. The bridge $1001<|x|<e^{2000}$ remains open on the stated slab.
+No global collision exclusion or new Newman bound is obtained.
 \end{abstract}
 
 \clearpage
@@ -77,22 +77,36 @@ is claimed.
 \input{sections/04_modular_collisions}
 \input{sections/05_controls}
 \input{sections/07_shifted_approximation}
+\input{sections/08_effective_tails}
+\input{sections/09_finite_certificates}
+\input{sections/10_outer_exclusion}
 \input{sections/06_certification}
+\input{sections/11_global_scope}
 
 \section*{Acknowledgements and draft status}
 \addcontentsline{toc}{section}{Acknowledgements and draft status}
 Drafted for Edward Baker with substantial LLM assistance through Codex.
 Original development used OpenAI's \texttt{gpt-6-astra} at effort
-\texttt{max}; the strip and contour continuation used effort \texttt{ultra}.
-Integration used \texttt{gpt-6.1-sol} at effort \texttt{ultra}, with
-\texttt{gpt-6-astra}, effort \texttt{ultra}, coordinating editing,
-numerical replay and document verification. Source records retain these
-configurations. This working draft has internal LLM checks, not independent
-specialist review; compilation and scalar certificates do not establish
-a positive physical-scale margin. Classical theta identities,
-convex-kernel principles, disk-map estimates and contour shifting
-are not claimed as new.
+\texttt{max}; the initial strip and contour continuation used effort
+\texttt{ultra}. The earlier integration used \texttt{gpt-6.1-sol}
+and \texttt{gpt-6-astra}, both at effort \texttt{ultra}.
+The finite evaluator round used \texttt{gpt-6.1-sol}, effort \texttt{max};
+its effective-tail, finite-wall and exterior continuations used effort
+\texttt{ultra}. The present manuscript integration and replay used
+\texttt{gpt-6-astra}, recorded effort \texttt{max}.
+The corresponding research records preserve the actual configurations.
 
+This working draft has internal LLM mathematical checks and computational
+replays, not independent specialist review. Interval certification
+depends on the stated analytic error contracts and arithmetic implementation.
+Compilation and scalar checks do not close the global bridge.
+Classical theta identities, convex-kernel principles, disk-map estimates,
+contour shifting, local heat splitting and the published Riemann--Siegel
+approximation are not claimed as new. The named published inputs are
+distinguished from the bounds and finite certificates developed here.
+
+\begingroup
+\small
 \begin{thebibliography}{9}
 \bibitem{DLMF}
 F.~W.~J. Olver et al., eds.,
@@ -110,7 +124,22 @@ $\xi$-function}, arXiv:1309.0055v2 (2014), Theorem 3.4.
 D.~H.~J. Polymath,
 \emph{Effective approximation of heat flow evolution of the Riemann
 $\xi$ function, and a new upper bound for the de Bruijn--Newman constant},
-arXiv:1904.12438v2, Theorems 1.5 and 3.2, and \S9.
+arXiv:1904.12438v2, Theorems 1.2, 1.3, 1.5 and 3.2,
+Proposition 3.1, and \S9.
 \url{https://arxiv.org/abs/1904.12438v2}.
+\bibitem{PlattTrudgian}
+D.~J. Platt and T.~S. Trudgian,
+\emph{The Riemann hypothesis is true up to $3\cdot10^{12}$},
+arXiv:2004.09765v1 (2020), Theorem 1 and Corollary 2.
+\url{https://arxiv.org/abs/2004.09765}.
+
+\bibitem{Artifacts}
+E. Baker, \emph{Shifted zeta positivity: research source and numerical
+records}, Investigation 3/11, \emph{Arithmetic collision rigidity}.
+The accompanying \texttt{BUILD\_RECORD.json} identifies this manuscript's
+source set and replay evidence; the numerical README gives regeneration
+commands and dependencies.
+\url{https://github.com/ebbaker/shifted-zeta-positivity}.
 \end{thebibliography}
+\endgroup
 \end{document}

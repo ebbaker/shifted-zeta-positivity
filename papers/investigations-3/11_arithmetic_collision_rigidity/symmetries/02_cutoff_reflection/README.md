@@ -1,0 +1,118 @@
+# S02 Reflection within the Riemann Siegel cutoff interval
+
+18 October 2026, America/New_York. Prepared for Edward Baker with substantial
+LLM assistance. Authoring model **gpt-6-astra (Codex)**, actual effort **max**.
+Published leading profile and proposed signed comparison; no new jet bound.
+
+## Question and priority
+
+Can the even normalized cutoff correction be combined with nearby retained
+arithmetic terms to reduce the complete error? This is the first quantitative
+priority in the [program guide][guide] and [original continuation][context].
+The baseline currently pays for the correction in absolute value. The
+proposed change must improve the full value/derivative calculation after
+all costs are included.
+
+## Transformation and known formula
+
+For real spectral height x, use
+\[
+ a=\sqrt{x/(4\pi)+t/16},\quad N=\lfloor a\rfloor,
+ \quad p=1-2(a-N).
+\]
+On the open interval \(N<a<N+1\), the map
+\(a\mapsto2N+1-a\) sends p to minus p. The leading profile is
+\[
+ C_0(p)=\frac{\exp\{\pi i(p^2/2+3/8)\}
+                 -i\sqrt2\cos(\pi p/2)}{2\cos(\pi p)},
+ \qquad C_0(-p)=C_0(p),
+\]
+with removable singularities at \(p=\pm1/2\).
+
+[Polymath, Section 6.2, equation (53) and Proposition 6.3][polymath]
+give the explicit nonzero multiplier and normalized value error for
+\(0\le\sigma\le1\), \(T\ge100\), \(0<t\le1/2\), with real-axis
+\(T=x/2\). Use its full multiplier, including the cutoff sign, amplitude,
+phase, and heat factors. The source uses sigma+iT; the local symmetric
+representation uses s=(1-iz)/2, so the reflected/conjugate translation must
+be written explicitly. Evenness of C0 does not make the complete H even
+under this change of height.
+
+## Read in this order
+
+1. [Brainstorm formula and derivative warning][brainstorm].
+2. [Current exterior section][outer], especially `eq:rs-normalization`,
+   `eq:rs-eta`, and the fixed-cutoff disk proposition.
+3. [Published remainder estimate and signed assembly][polymath], including
+   Corollary 6.4. Do not transfer a value-only error into a derivative claim.
+4. [Earlier collision manuscript][earlier], especially `sc:vector`,
+   `sc:packet`, and its fixed-cutoff derivative and edge-cancellation work.
+5. [S03 rotation defect][rotation] for an optional consumer and
+   [S04 scaling][scaling] for the growing-cutoff regime.
+
+## Bounded first task
+
+Start with the guide's comparison box
+\([1/100,1/5]\times[999,1001]\). Construct a fixed-cutoff analytic
+approximation that retains the signed leading correction and a specified
+number of neighboring arithmetic terms. Record the complete symmetric
+normalization before numerical evaluation.
+
+Derive a holomorphic residual estimate on the disks used to pay for the
+jets. Include approximation errors from both reflected sums, the corrected
+remainder, retained-mode evaluation, source or contour tails where used,
+and arithmetic rounding. Use that bound or directly proved derivative
+bounds to pay for orders zero and one; order two is needed for Laguerre
+or rotation-defect use. State explicitly whether the published value
+estimate supplies the required complex neighborhood or needs extension.
+
+Add a small bounded neighborhood of a=9 as the transition test. Freeze an
+integer cutoff there and express its difference from the natural cutoff
+by exact added/removed terms. Do not differentiate N. Treat the removable
+points p=plus/minus one half with analytic continuation or a validated
+local expansion if encountered, rather than subtracting nearly zero
+floating numerator and denominator without an error bound.
+
+Compare baseline and candidate using the same complete normalized jet
+error or physical error. Report which part of the total budget changes.
+Measure the additional cost of retaining and evaluating the signed term.
+The reference box has known coverage; reproducing it is validation, not
+a new exclusion region.
+
+## Controls and decision rule
+
+The complete approximation is specific to the unchanged theta data. The
+[control replay][controls-record] does not authorize using its tail constants
+for altered sources. The proposed acceptance interface must reject a
+source-specific enclosure at each applicable control event; a control box
+without an event may pass a valid local test.
+
+The adjacent-packet result defeats a positive lower bound by separate
+diagonal energies for its specified two-term packets. It leaves combined
+signed sums open. Preserve those cross terms when combining the correction
+with the arithmetic block.
+
+Pass with a strict certified reduction of the complete paid error, matched
+cost savings meeting the chosen gate, or new certified coverage. Stop if
+the saving is confined to C0, disappears after derivative/transition costs,
+or requires dropping the published multiplier. Record the particular failed
+combination; do not infer an obstruction to all cutoff treatments.
+
+## Outputs and handoff
+
+Create `notes/`, `numerics/`, and `reviews/` here for the derivation, bounded
+comparison, and assessment. The record must include exact domains, cutoffs,
+disk radii, retained neighbors, normalizer, derivative errors, whole-cell
+coverage, source/code hashes, actual model/effort, costs, and controls.
+Hand the complete signed approximation and paid derivatives to S03.
+Follow the [program guide][guide] for history and storage.
+
+[guide]: ../../research-overview/03_SYMMETRY_RESEARCH_PROGRAM_AND_INVESTIGATION_GUIDE_20261018.md
+[context]: ../../brainstorm/02_SYMMETRY_PROGRAM_CONTINUATION_CONTEXT_20261018.md
+[brainstorm]: ../../brainstorm/01_SELF_DUALITY_AND_ADDITIONAL_SYMMETRY_QUESTIONS_20261018.md
+[outer]: ../../manuscript/positive_arithmetic_packets/sections/10_outer_exclusion.tex
+[polymath]: https://arxiv.org/html/1904.12438v2#S6.SS2
+[earlier]: ../../../../quasi-rh/quasi-rh-exponent-descent/newman_collisions/newman_collision_reductions.tex
+[rotation]: ../03_normalized_jet_rotation/README.md
+[scaling]: ../04_time_height_scaling/README.md
+[controls-record]: ../../numerics/SYMMETRY_BRAINSTORM_CONTROL_REPLAY_20261018.json

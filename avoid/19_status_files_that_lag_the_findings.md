@@ -47,3 +47,15 @@ next paragraph announced the completed comparison. The
 [response](../papers/investigations-3/01_dirichlet_newman_families/notes/round-4/04_REVIEW_RESPONSE_AND_SIBLING_BENCHMARK_CODEX_20261017.md)
 reconciles the README, manuscript, build record and stronger sibling
 benchmark while preserving the historical reviews and their source hashes.
+
+**18 October 2026 resolved manuscript lag — gpt-6-astra, actual effort max;
+LLM assistance for Edward Baker.** Investigation 3/11's earlier manuscript
+README described a 30-page draft “without an effective onset or cost claim”
+while later Notes 11–14 already provided effective tails, finite exclusion
+and a sharper exterior. [Integration Review 13](../papers/investigations-3/11_arithmetic_collision_rigidity/reviews/13_CURRENT_RESULTS_MANUSCRIPT_INTEGRATION_REVIEW_20261018.md)
+records the incorporation and fresh current-source replay. The
+[45-page manuscript and build record](../papers/investigations-3/11_arithmetic_collision_rigidity/manuscript/README.md),
+progress tracker and status indexes now agree: “The bridge
+1001<|x|<e^2000 remains open on the stated slab.” Historical certificates
+retain their original source pins; a new current-source setup is generated
+instead of treating an old hash as approval for revised bytes.

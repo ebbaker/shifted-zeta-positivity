@@ -154,7 +154,7 @@ ultra**. That review preceded manuscript incorporation; the current milestone be
 supersedes that document-status sentence.
 
 
-**18 October 2026 manuscript integration, investigation 3/11.** The
+**18 October 2026 earlier manuscript integration, investigation 3/11.** The
 [current manuscript](../papers/investigations-3/11_arithmetic_collision_rigidity/manuscript/positive_arithmetic_packets/main.tex) now includes the E/64 carrier
 payment, complex-strip bounds, sharper remainder jets, complete shifted-source
 tail theorem and envelope-relative asymptotic. **Proved in-paper; internal
@@ -165,3 +165,18 @@ complete oscillatory field.” No new collision exclusion or Newman bound.
 The [updated overview](../papers/investigations-3/11_arithmetic_collision_rigidity/research-overview/02_UPDATED_RESEARCH_OVERVIEW_AND_SOL_EXECUTION_PLAN_20261018.md) assigns
 every future stage to GPT-6.1 Sol. Prepared for Edward Baker with substantial
 LLM assistance; no independent specialist review.
+
+**18 October 2026 current-results integration, investigation 3/11.**
+The [current manuscript](../papers/investigations-3/11_arithmetic_collision_rigidity/manuscript/README.md)
+now incorporates Notes 07–14: effective nonstationary and constant-distance
+tails, interval-certified signed rectangles, the complete wall and
+finite-height propagation, and the exp(20/epsilon) real exterior.
+**Proved in-paper, with explicitly computer-assisted finite certificates;
+internal LLM integration checks** in [Review 13](../papers/investigations-3/11_arithmetic_collision_rigidity/reviews/13_CURRENT_RESULTS_MANUSCRIPT_INTEGRATION_REVIEW_20261018.md)
+and a [fresh replay manifest](../papers/investigations-3/11_arithmetic_collision_rigidity/numerics/MANUSCRIPT_INTEGRATION_REPLAY_20261018.json).
+E>0 holds on [1/100,1/5] × [-1001,1001]; the real exterior begins at
+exp(20/epsilon) for epsilon<=t<=1/2. The manuscript states: “The bridge
+1001<|x|<e^2000 remains open on the stated slab.” This supersedes the earlier
+absence of finite exclusion and unevaluated onset, not the global gap.
+No new Newman bound. Prepared for Edward Baker with substantial LLM
+assistance, **gpt-6-astra, actual effort max**; no specialist review.

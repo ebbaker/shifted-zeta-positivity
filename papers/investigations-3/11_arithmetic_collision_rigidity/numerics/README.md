@@ -109,8 +109,9 @@ python3 certify_updated_manuscript.py --output /tmp/inv11-updated-manuscript-rep
 ```
 
 This is the current manuscript table certificate. Earlier records retain
-their historical scopes. No retained-mode quadrature or positive physical
-jet margin is certified.
+their historical scopes. This scalar checker alone does not certify
+retained-mode quadrature or a positive physical jet margin; the separate
+finite certificates below do so on their stated domains.
 
 ## Overview 02 evaluator and bounded program
 
@@ -193,3 +194,64 @@ The new ledger supersedes the old outer threshold, with the finite
 certificates unchanged. For Edward Baker with substantial LLM assistance,
 **gpt-6.1-sol, actual effort ultra**, 18 October 2026; same-model checks.
 Global coverage remains open.
+
+## Current manuscript integration replay
+
+[Fresh replay manifest](MANUSCRIPT_INTEGRATION_REPLAY_20261018.json) and
+[regeneration guide](manuscript_integration_20261018/README.md), 18 October
+2026, for Edward Baker with substantial LLM assistance, **gpt-6-astra,
+actual effort max**. The manifest binds the current twelve-file manuscript
+to rational constants, effective-tail/exterior checks, 314 pilot strips,
+40 signed cells, seven wall cells and adversarial controls. Existing
+generators and historical certificates are unchanged. Fresh generated
+outputs stay external; the small record retains their hashes and outcomes.
+Historical source pins must not be checked against revised manuscript bytes
+as if the versions were identical: regenerate the high-height setup first.
+The global bridge remains (1001,exp(2000)); no new Newman bound follows.
+
+## Symmetry brainstorm control replay
+
+[The retained replay](SYMMETRY_BRAINSTORM_CONTROL_REPLAY_20261018.json) was
+executed during the 18 October symmetry discussion for Edward Baker with
+substantial LLM assistance, **gpt-6-astra, actual effort max**. It preserves
+the fresh external output byte for byte: five event boxes rejected the
+strict first-jet and signed-margin tests, and the separate Euler-factor
+negative-Laguerre witness was rejected. The analytic premise screen states
+which remaining control families have no numerical event box in this run.
+This is replay of the existing rejection interface, not validation of the
+[proposed symmetry estimates](../brainstorm/01_SELF_DUALITY_AND_ADDITIONAL_SYMMETRY_QUESTIONS_20261018.md).
+
+From the repository root, with Python and python-flint 0.9.0, write to a
+fresh external location. These arguments reproduce the recorded labels;
+future executions must substitute their actual model and effort.
+
+```sh
+python3 papers/investigations-3/11_arithmetic_collision_rigidity/numerics/replay_nonstationary_controls.py --repo . --receipts /tmp/inv11-symmetry-control-receipts --output /tmp/inv11-symmetry-control-replay.json --execution-model gpt-6-astra --execution-effort max
+```
+
+The wrapper regenerates the source-specific receipts and records their
+hashes. Raw regenerable receipts remain external. Numerical rejection is
+decided by fresh interval arithmetic; byte hashes and runtime may change.
+
+## Hodge and modular symmetry review checks
+
+The [small execution record](HODGE_MODULAR_ROTATION_REVIEW_CHECKS_20261018.json)
+records current source hashes, the existing ASD path and signed-bridge
+replays, five rejected control event boxes, and the separate Euler witness.
+The [exact checker](check_hodge_modular_rotation.py) checks the normalized
+mode ladder, complete source derivatives, zero-mode cancellation, and
+rotation-defect coefficients. Prepared for Edward Baker with substantial
+LLM assistance, **gpt-6-astra, actual effort max**, 18 October 2026. These
+checks support the [assessment](../reviews/14_HODGE_AND_MODULAR_SYMMETRY_ASSESSMENT_20261018.md);
+they do not certify a new arithmetic bound. The existing checkers retain
+their historical authoring metadata; the wrapper record labels this replay.
+
+Run from the repository root, with Python and python-flint for the control
+replay; use fresh external output paths:
+
+```sh
+python3 papers/investigations-3/11_arithmetic_collision_rigidity/numerics/check_hodge_modular_rotation.py --output /tmp/hodge-normalized-jets.json
+python3 papers/investigations-2/active/22_theta_manifold_geometry/numerics/check_asd_path_metric.py --output /tmp/hodge-asd-path.json
+python3 papers/investigations-2/active/22_theta_manifold_geometry/numerics/check_theta_signed_bridge.py --output /tmp/hodge-signed-bridge.json
+python3 papers/investigations-3/11_arithmetic_collision_rigidity/numerics/replay_nonstationary_controls.py --repo . --receipts /tmp/hodge-control-receipts --output /tmp/hodge-controls.json --execution-model ACTUAL_MODEL --execution-effort ACTUAL_EFFORT
+```

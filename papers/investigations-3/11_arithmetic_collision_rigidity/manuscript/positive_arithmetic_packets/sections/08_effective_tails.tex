@@ -1,0 +1,263 @@
+\section{Effective tails from nonstationary oscillation}\label{sec:effective}
+
+The absolute estimate in Section~\ref{sec:shifted} can be improved when
+the omitted modes have no stationary source phase. This improvement
+concerns the omitted modes only; the retained modes may have stationary
+points and still require a complete signed or nonvanishing estimate.
+Throughout this section, differentiation holds the contour and the
+integer cutoff fixed, even when their values are chosen as functions
+of the observation height.
+
+\subsection{A frozen-contour estimate}
+
+\begin{theorem}[Nonstationary arithmetic tail]\label{thm:nonstationary}
+Let $0<d<\pi/8$, $T,Y\ge0$, $x\ge0$ and $m\ge1$. Put
+\[
+ c=\cos(4d),\quad s_d=\sin(4d),\quad
+ B=4c\lambda_m-9-Y,\quad P=4s_d\lambda_m-x-2Td.
+\]
+Assume $B>0$, $8c\lambda_m\ge T$ and $P>0$. Define
+\[
+ Q_j=\sum_{k=0}^j\binom jk\frac{d^{j-k}k!}{B^k},\qquad
+ S=\sum_{n=m}^\infty(2\lambda_n^2+3\lambda_n)e^{-c\lambda_n}.
+\]
+Then, for $0\le t\le T$, $\Re z=x$, $|\Im z|\le Y$ and $j\ge0$,
+\begin{equation}\label{eq:nonstationary}
+ \left|\partial_z^j(H-\widetilde H_{m,d})(t,z)\right|
+ \le e^{-dx}\frac{2S}{P}Q_j.
+\end{equation}
+If the geometric majorant $S_{m,d}$ in \eqref{eq:shifted-K} is
+admissible, it may replace $S$. With that same majorant, the ratio
+of the new bound to the absolute bound is $2B/P$.
+\end{theorem}
+\begin{proof}
+For each mode on the upper contour, separate the two monomials of
+$\phi_n$ with coefficients $2\lambda_n^2$ and $-3\lambda_n$.
+Apart from these coefficients and $e^{-dx}$, their positive amplitudes are
+\[
+ g(u)=\exp\{t(u^2-d^2)+(r-y)u-c\lambda_ne^{4u}\},
+ \qquad r\in\{9,5\},\quad y=\Im z.
+\]
+Their phase derivative is $-p(u)$, where
+$p(u)=4s_d\lambda_ne^{4u}-x-2td\ge P>0$ and $p'>0$.
+Moreover $(\log g)''\le0$ and $(\log g)'(0)\le-B$.
+Thus $g$ decreases and $g(u)\le g(0)e^{-Bu}$.
+A $j$th spectral derivative contributes $(-d+iu)^j$, with
+modulus at most $(u+d)^j$ and derivative modulus at most
+$j(u+d)^{j-1}$. Integration by parts against the phase therefore bounds
+the integral by
+\[
+ \frac{g(0)d^j}{p(0)}
+ +\int_0^\infty\left\{
+ \frac{(-g')(u+d)^j+jg(u+d)^{j-1}}p+
+ \frac{g(u+d)^jp'}{p^2}\right\}\dd u.
+\]
+Writing $h=g(u+d)^j$, the integrand is
+$-(h/p)'+2jg(u+d)^{j-1}/p$; this identity does not require $h$
+to decrease. The remote boundary vanishes. The resulting upper bound is
+\[
+ \frac{2g(0)}{p(0)}
+ \left[d^j+j\int_0^\infty(u+d)^{j-1}e^{-Bu}\dd u\right]
+ =\frac{2g(0)}{p(0)}Q_j.
+\]
+For $j=0$ the terms containing $j$ are absent. The lower contour
+reverses the phase and replaces $y$ by $-y$, giving the same bound.
+Use $g(0)\le e^{-c\lambda_n}$, sum both monomials and both
+half-lines, and retain their factor $1/2$. The superexponential
+majorants from Section~\ref{sec:shifted} justify all exchanges and limits.
+\end{proof}
+
+A failed phase-gap condition $P>0$ prevents use of this theorem,
+but does not invalidate the absolute estimate in
+Theorem~\ref{thm:shifted-tail}.
+
+\begin{lemma}[Gaussian summation]\label{lem:gaussian-tail}
+Put $p=\pi c$ and $q=pm^2$. Suppose $q\ge1$ and
+\[
+ 4\pi s_d n^2-x-2Td\ge\eta n^2\quad(n\ge m)
+\]
+for some $\eta>0$. Under the other hypotheses of
+Theorem~\ref{thm:nonstationary},
+\begin{equation}\label{eq:gaussian-tail}
+ \left|\partial_z^j(H-\widetilde H_{m,d})\right|
+ \le\frac{e^{-dx-q}Q_j}{\eta}
+ \left[4\pi^2\left(m^2+\frac m{2p}+\frac1{4p^2m}\right)
+       +6\pi\left(1+\frac1{2pm}\right)\right].
+\end{equation}
+\end{lemma}
+\begin{proof}
+Keep $p(0)\ge\eta n^2$ in the preceding proof. The remaining sum
+is at most $\sum_{n\ge m}(4\pi^2n^2+6\pi)e^{-pn^2}$.
+Both Gaussian summands decrease from $m$ onwards. Bounding each
+sum by its first term plus its integral gives
+\[
+ \sum_{n\ge m}n^2e^{-pn^2}
+ \le e^{-q}\left(m^2+\frac m{2p}+\frac1{4p^2m}\right),\qquad
+ \sum_{n\ge m}e^{-pn^2}\le e^{-q}\left(1+\frac1{2pm}\right).
+\]
+For the first inequality integrate $u^2e^{-pu^2}$ once by parts
+and use $\int_m^\infty e^{-pu^2}\dd u\le e^{-q}/(2pm)$.
+This proves the infinite-tail estimate without a geometric-ratio condition.
+\end{proof}
+
+\subsection{An effective logarithmic contour rule}
+
+Choose
+\[
+ d(x)=\frac\pi8-a\frac{\log x}{x},\qquad
+ m(x)=\lceil\sqrt{b x}\rceil,\qquad a>0,\quad b>\frac1{4\pi}.
+\]
+The following explicit conditions make the onset effective. At $X\ge e^2$
+put $L=\log X$ and
+\[
+ v=\frac{4aL}{X},\quad \kappa_0=1-\frac{v^2}6,\quad
+ \sigma_0=1-\frac{v^2}2,\quad M=1+(bX)^{-1/2},\quad
+ \alpha_0=4\pi a\kappa_0b,
+\]
+\[
+ \eta=4\pi\sigma_0-\frac1b-\frac{T\pi}{4bX},\quad
+ q_*=4\pi a\kappa_0bL,\quad B_*=4q_*-9-Y.
+\]
+Require $v<\pi/2$, $\kappa_0,\eta,B_*>0$, $q_*\ge1$,
+$8q_*\ge T$, and
+\[
+ \frac\pi8+\frac1{B_*}<1,\qquad
+ \left(\frac\pi8\right)^2+\frac{\pi}{4B_*}+\frac2{B_*^2}<1.
+\]
+Define
+\begin{align}
+ C_X={}&\frac{4\pi^2M^2bL}{\eta\sqrt X}
+ +\frac{\pi M\sqrt b}{2\eta a\kappa_0}
+ +\frac1{16\eta a^2\kappa_0^2\sqrt b\,L}\notag\\
+ &+\frac{6\pi L}{\eta X^{3/2}}
+ +\frac3{4\eta a\kappa_0\sqrt b\,X}.\label{eq:log-tail-constant}
+\end{align}
+\begin{proposition}\label{prop:effective-log-tail}
+With these conditions, for $j=0,1,2$, $x\ge X$,
+$0\le t\le T$ and $|\Im z|\le Y$,
+\begin{equation}\label{eq:effective-log-tail}
+ \frac{|\partial_z^j(H-\widetilde H_{m,d})(t,z)|}{\mathcal G_0(x)}
+ \le C_X\frac{x^{a-1/4-\alpha_0}}{\log x}.
+\end{equation}
+\end{proposition}
+\begin{proof}
+The inequalities $\sin v\ge v-v^3/6$ and $\cos v\ge1-v^2/2$,
+and decrease of $\log x/x$, give
+\[
+ p\ge4\pi a\kappa_0\frac{\log x}{x},\quad
+ pm^2\ge\alpha_0\log x,\quad
+ \sqrt{bx}\le m\le M\sqrt{bx}.
+\]
+Since $x\le n^2/b$ and $n^2\ge bX$, the phase gap is at least
+$\eta n^2$. The two displayed conditions on $B_*$ give $Q_j\le1$
+for $j=0,1,2$. Substitute into \eqref{eq:gaussian-tail} and divide
+by $\mathcal G_0(x)=x^{7/4}e^{-\pi x/8}$.
+The remaining factors $\log x/\sqrt x$, $\log x/x^{3/2}$
+and $1/x$ decrease for $x\ge X$, yielding \eqref{eq:log-tail-constant}.
+\end{proof}
+
+For $a=4$, $b=1/8$, $T=1/2$, $Y=1$ and $X=1000$, outward scalar
+arithmetic verifies these conditions and gives
+\[
+ \eta>4.4864,\quad B_*>163.25,\quad C_X<0.320352,\quad
+ a-\tfrac14-\alpha_0<-2.52039.
+\]
+The exact outward expression at the onset is below
+$1.273826\,10^{-9}$ and decreases thereafter. Hence all three
+derivative errors are below $2\,10^{-9}\mathcal G_0(x)$ for every
+$x\ge1000$, on the stated time and complex strip.
+
+For every fixed $j$, keeping the actual varying constants in
+\eqref{eq:gaussian-tail} also gives
+\[
+ \frac{|\partial_z^j(H-\widetilde H_{m,d})|}{\mathcal G_0(x)}
+ =O\left(\frac{x^{-1/4+a(1-4\pi b)}}{\log x}\right).
+\]
+Indeed $pm^2=4\pi ab\log x+o(1)$, including the ceiling error
+$m^2=bx+O(\sqrt x)$, and the Gaussian bracket is
+$O(x^{3/2}/\log x)$. The exponent is negative for every
+$a>0$, $b>1/(4\pi)$. Compared with the absolute asymptotic in
+Section~\ref{sec:shifted}, the gain is $\log x/x$.
+
+\subsection{A constant-distance contour}
+
+The logarithm in the contour retreat can also be removed. Let
+$A_c,b,X>0$, $T,Y\ge0$, and choose
+\[
+ d(x)=\frac\pi8-\frac{A_c}{x},\qquad m(x)=\lceil\sqrt{bx}\rceil.
+\]
+At the single onset $X$, define
+\[
+ v=\frac{4A_c}{X},\quad \kappa_0=1-\frac{v^2}6,\quad
+ \sigma_0=1-\frac{v^2}2,\quad M=1+(bX)^{-1/2},
+\]
+\[
+ q_*=4\pi A_c\kappa_0b,\quad B_*=4q_*-9-Y,\quad
+ \eta=4\pi\sigma_0-\frac1b-\frac{T\pi}{4bX},\qquad
+ \overline Q_j=\sum_{k=0}^j\binom jk
+                 \frac{(\pi/8)^{j-k}k!}{B_*^k}.
+\]
+Require $0<v<\pi/2$, $\kappa_0>0$, $q_*\ge1$, $8q_*\ge T$,
+$B_*>0$, and $\eta>0$. Put
+\begin{align}
+ C_X^{\rm cd}=\frac{e^{A_c-q_*}}\eta\bigg[
+ &\frac{4\pi^2M^2b}{\sqrt X}
+ +\frac{\pi M\sqrt b}{2A_c\kappa_0}
+ +\frac1{16A_c^2\kappa_0^2\sqrt b}\notag\\
+ &+\frac{6\pi}{X^{3/2}}
+ +\frac3{4A_c\kappa_0\sqrt b\,X}\bigg].
+ \label{eq:cd-constant}
+\end{align}
+
+\begin{theorem}[Effective constant-distance tail]\label{thm:constant-distance}
+For every fixed $j\ge0$, $x\ge X$, $0\le t\le T$ and
+$\Re z=x$, $|\Im z|\le Y$,
+\begin{equation}\label{eq:constant-distance}
+ \frac{|\partial_z^j(H-\widetilde H_{m,d})(t,z)|}{\mathcal G_0(x)}
+ \le\overline Q_j C_X^{\rm cd}x^{-1/4}.
+\end{equation}
+\end{theorem}
+\begin{proof}
+Here $c=\sin(4A_c/x)$ and $s_d=\cos(4A_c/x)$. Taylor bounds give
+$p=\pi c\ge4\pi A_c\kappa_0/x$, $s_d\ge\sigma_0$,
+$pm^2\ge q_*$ and $\sqrt{bx}\le m\le M\sqrt{bx}$.
+The same phase estimate gives a lower bound $\eta n^2$ for $n\ge m$,
+and $Q_j\le\overline Q_j$. Thus \eqref{eq:gaussian-tail}, after division
+by $\mathcal G_0$, is at most
+\[
+ \frac{\overline Q_j e^{A_c-q_*}}\eta x^{-1/4}
+ \left[\frac{4\pi^2M^2b}{\sqrt x}
+ +\frac{\pi M\sqrt b}{2A_c\kappa_0}
+ +\frac1{16A_c^2\kappa_0^2\sqrt b}
+ +\frac{6\pi}{x^{3/2}}+\frac3{4A_c\kappa_0\sqrt b\,x}\right].
+\]
+Every variable term in brackets decreases for $x\ge X$.
+Replacing $x$ there by $X$ proves the assertion.
+\end{proof}
+
+For $b=1/8$, $X=1000$, $T=1/2$, $Y=1$, the two declared choices
+in Table~\ref{tab:effective-tails} satisfy every condition and
+$\overline Q_1,\overline Q_2<1$. The table gives common bounds for
+orders $0,1,2$. These are infinite-range approximation estimates;
+the scalar checks verify constants, not a sampled extrapolation.
+
+\begin{table}[htbp]
+\centering
+\caption{Constant-distance bounds, uniform for every $x\ge1000$.}
+\label{tab:effective-tails}
+\begin{tabular}{@{}rrrr@{}}
+\toprule
+$A_c$ & Lower bound for $\eta$ & Upper bound for $C_X^{\rm cd}$
+ & Error divided by $\mathcal G_0$\\
+\midrule
+28 & 4.48441 & $5.818140\,10^{-9}$ & $<1.1\,10^{-9}$\\
+33 & 4.45375 & $3.521252\,10^{-10}$ & $<7\,10^{-11}$\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+The envelope $\mathcal G_0$ is positive, but is not a lower bound for
+$|H|$ or for the first jet. None of these estimates determines the sign
+of the retained arithmetic sum. In particular, the modes with
+$n^2<x/(4\pi)$ can have a stationary phase and do not meet the
+positive-gap premise used to bound the omitted modes.

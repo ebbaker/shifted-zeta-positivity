@@ -102,3 +102,23 @@ belongs in those sources; create no new manuscript snapshot folders.
   Manuscript pin unchanged; no new snapshot, commit or Newman bound.
   For Edward Baker with substantial LLM assistance, **gpt-6.1-sol,
   actual effort ultra**, with parallel same-model checks.
+
+- **18 October 2026 — project 11 current-results manuscript integration.**
+  [Current source](manuscript/positive_arithmetic_packets/main.tex), source-set
+  `2690c3052927702a7f25d7e0519cc8ae10abfd202ac891bb8c06208eaa9a7b0c`: 45 pages incorporating the complete overview 02 round,
+  finite-height exclusion and exp(20/epsilon) exterior, with the open bridge
+  explicit. [Review 13](reviews/13_CURRENT_RESULTS_MANUSCRIPT_INTEGRATION_REVIEW_20261018.md),
+  [fresh replay](numerics/MANUSCRIPT_INTEGRATION_REPLAY_20261018.json) and
+  [round summary](research-progress/03_OVERVIEW02_ROUND_SUMMARY_20261018.md).
+  For Edward Baker with substantial LLM assistance, **gpt-6-astra, actual
+  effort max**; internal integration review. No new bound, snapshot or commit.
+
+- **18 October 2026 — project 11 symmetry program organization.**
+  [Overview 03](research-overview/03_SYMMETRY_RESEARCH_PROGRAM_AND_INVESTIGATION_GUIDE_20261018.md)
+  and [six direction guides](symmetries/README.md) consolidate the four
+  brainstorm directions and the covariant-jet/Hodge continuation from
+  [Note 07](notes/07_HODGE_MODULAR_DUALITY_AND_ROTATION_DEFECT_20261018.md) and
+  [Review 14](reviews/14_HODGE_AND_MODULAR_SYMMETRY_ASSESSMENT_20261018.md).
+  Bounded tasks and decision rules; program setup, no new estimate or
+  manuscript snapshot. For Edward Baker with substantial LLM assistance,
+  **gpt-6-astra, actual effort max**.

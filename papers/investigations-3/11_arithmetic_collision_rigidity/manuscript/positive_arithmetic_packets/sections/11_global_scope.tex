@@ -1,0 +1,215 @@
+\section{The remaining global gap and the scope of the methods}
+\label{sec:global}
+
+The finite and exterior theorems give the exact coverage in
+Table~\ref{tab:coverage}. The endpoints $1001$ and $e^{2000}$ are
+included in their respective proved regions.
+\begin{table}[htbp]
+\centering
+\caption{Real first-jet coverage for $1/100\le t\le1/5$.}
+\label{tab:coverage}
+\begin{tabular}{@{}ll@{}}
+\toprule
+Spectral region & Status\\
+\midrule
+$|x|\le1001$ & Theorem~\ref{thm:finite-height}\\
+$1001<|x|<e^{2000}$ & Open bridge\\
+$|x|\ge e^{2000}$ & Theorem~\ref{thm:outer20}\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+The published comparison baseline is $\Lambda\le1/5$
+\cite[Corollary 2]{PlattTrudgian}. No improved Newman bound follows
+from the two disconnected covered regions. In particular, approximation
+accuracy relative to $\mathcal G_0$ is not a lower bound on the
+complete field or its first jet.
+
+\subsection{Limits of the present explicit-mode implementation}
+
+For either contour rule in Section~\ref{sec:effective}, the retained
+list has
+\[
+ N(x)=\lceil\sqrt{bx}\rceil-1,\qquad
+ \sqrt{bx}-1\le N(x)<\sqrt{bx}.
+\]
+The phase-gap premise itself forces $m^2>x/(4\pi)$.
+At $b=1/8$ and $x=e^{2000}$, direct outward evaluation gives
+$\log_{10}N(x)>433.8429369097558$.
+The present implementation materializes every retained mode and
+visits each at every quadrature callback. One such callback thus
+already entails more than $10^{433}$ mode operations.
+This excludes that enumeration scheme as a feasible bridge to
+the present onset, not faster theta assembly or other representations.
+
+The retained source interval must also grow under the current
+absolute tangent payment. Its weakest $n=1$, $j=Y=0$ condition
+requires $4c_d\pi e^{4U}>9$. For the constant-distance rule,
+$c_d\le4A_c/x$, and therefore
+\begin{equation}\label{eq:source-growth}
+ U>\frac{\log x}{4}+
+       \frac14\log\frac9{16\pi A_c}.
+\end{equation}
+At $x=e^{2000}$, $A_c=33$, this requires $U>498.69584960$.
+For logarithmic distance with $a=4$ the corresponding necessary
+bound is $U>\log x/4+\log(9/(64\pi\log x))/4$, exceeding
+$497.32317728$ there. These are conditions on the current error
+payment, not lower bounds on the true oscillatory tail.
+At $U=2$, $T=1/5$, $Y=1$, the logarithmic-rule denominator obeys
+\[
+ D_{1,0}\le64\pi e^8\frac{\log x}{x}-10.8<0
+ \quad(x\ge10^6).
+\]
+For constant $A_c\le33$ it is at most
+$16\pi A_c e^8/x-10.8<0$ on the same range. Thus the fixed
+$U=2$ contract cannot simply be reused at larger height.
+
+There is a separate restriction on the fixed-degree majorant.
+Assume the constant-distance rule, $U\ge1/4$,
+$A_cb\ge1/(\pi e)$, $bx\ge4$, and $x\ge64\pi A_ce$.
+Let $R_0=\sqrt{x/(4\pi A_ce)}\ge4$.
+All integers $n\le\lfloor R_0\rfloor$ are retained because
+$R_0\le\sqrt{bx}/2\le m-1$.
+For $0\le u\le1/4$,
+$\pi c_dn^2e^{4u}\le1$ for these modes.
+Their upper half gives $\sum n^4\ge R_0^5/1024$.
+Consequently the normalized positive common moment of any order $J$
+satisfies
+\begin{equation}\label{eq:moment-growth}
+ M_J\ge
+ \frac{\pi^2e^{A_c-1}}{2048(4\pi A_ce)^{5/2}}x^{3/4}.
+\end{equation}
+This follows by retaining their $2\pi^2n^4$ source coefficients
+over that interval; the time/source factors and
+$1+(u+d)^J$ are at least one.
+At the wall endpoint $y=1$, the degree-24 Taylor payment about
+the real midpoint contains $M_{52}/25!$. It eventually exceeds
+any fixed $\mathcal G_0$-relative allowance such as $10^{-8}$.
+Subdividing cells without changing that midpoint or those degrees
+does not change this bound. Raising degrees, recentering, using a
+different majorant, or allowing a growing independently proved
+physical margin are separate possibilities not excluded here.
+
+\subsection{The alternative complex barrier contract}
+
+For precision, \cite[Theorem 1.2]{Polymath} uses $t_0,X>0$ and
+$0<y_0\le1$ with three hypotheses:
+\begin{enumerate}
+\item no initial zeta zeros with $(1+y_0)/2\le\Re s\le1$
+and $0\le\Im s\le X/2$;
+\item no zeros of $H(t_0,x+iy)$ with
+$x\ge X+\sqrt{1-y_0^2}$ and
+$y_0\le y\le\sqrt{1-2t_0}$;
+\item no zeros for $0\le t\le t_0$ with
+$X\le x\le X+\sqrt{1-y_0^2}$ and
+$\sqrt{y_0^2+2(t_0-t)}\le y\le\sqrt{1-2t}$.
+\end{enumerate}
+Its conclusion is $\Lambda\le t_0+y_0^2/2$.
+Only parameter choices with the indicated real boundary heights
+are used here.
+
+Choose $0<t_0\le1/5$ and $X=1000-\sqrt{1-y_0^2}$.
+Initial verification follows from \cite[Theorem 1]{PlattTrudgian},
+using a height below $500$. The complete moving barrier lies in
+$999<x\le1000$ and above the real axis, so
+Lemma~\ref{lem:finite-propagation} and its theta application supply
+the third hypothesis. Proposition~\ref{prop:wall} pays the
+final seam at $x=1000$. The outstanding hypothesis is the
+entire final-time complex exterior for $x>1000$.
+
+For example, $t_0=1/10$, $y_0=2/5$ would yield
+$\Lambda\le9/50=0.18$ if one additionally proved nonvanishing on
+\[
+ t=1/10,\qquad x>1000,\qquad 2/5\le y\le\sqrt{4/5}.
+\]
+This is a conditional contract, not an obtained bound.
+The real first-jet theorem \ref{thm:outer20} is not this complex
+nonvanishing assertion. Nor can a new finite wall silently extend
+the range of the initial zeta verification it would require.
+Reusing the known all-real time $t_0=1/5$ gives only
+$1/5+y_0^2/2>1/5$; making the exterior empty by taking
+$y_0>\sqrt{1-2t_0}$ gives a bound above $1/2$.
+
+\subsection{A remote polynomial control for the finite premises}
+
+The next example isolates a limitation of the finite-wall, strip and
+all-real-baseline premises. It does not have the theta square source,
+and is not a counterexample to any theta theorem.
+
+\begin{proposition}[A collision inside the uncovered bridge]
+\label{prop:remote-control}
+Let $L=2000$, $q=2/5$, and define
+\[
+ F_t(z)=z^4-2A(t)z^2+B(t),\qquad
+ A(t)=L^2-q+6t,\quad
+ B(t)=(L^2+q)^2+4t(L^2-q)+12t^2.
+\]
+Then $F_t$ satisfies the backward heat equation, evenness and
+real conjugation symmetry. It has no zeros on the complete wall
+$\Re z=1000$ or in $|\Re z|\le1001$ for $0\le t\le1/5$,
+is positive on the imaginary axis, satisfies the contracted unit
+zero strip, and has all zeros real at $t=1/5$.
+Nevertheless its all-real threshold $\lambda_L$ satisfies
+\[
+ 0.1999999875<\lambda_L<0.19999999375,
+\]
+with real double zeros at that time. It also has no real
+first-jet collision beyond the exterior in Theorem~\ref{thm:outer20}.
+\end{proposition}
+\begin{proof}
+Coefficient differentiation gives $F_t=-F_{zz}$, and
+$F_0(z)=((z-L)^2+q)((z+L)^2+q)$.
+Put $f(t)=6t^2+2(L^2-q)t-L^2q$. Then $A^2-B=4f(t)$.
+The function $f$ increases for $t\ge0$, with positive root
+\[
+ \lambda_L=
+ \frac{\sqrt{(L^2-q)^2+6L^2q}-(L^2-q)}6.
+\]
+Before this time the roots are two nonreal conjugate pairs;
+at it they are two real double roots; afterwards all four are real.
+Exact rational evaluations of $f$ at the displayed decimal endpoints
+give the strict bracket. More generally
+$1/5-1/L^2<\lambda_L<1/5$.
+
+For nonreal roots, their real parts squared equal
+$(\sqrt B+A)/2\ge A(0)/2>1400^2$.
+For real roots before $t=1/5$,
+$4f(t)\le4f(1/5)=8/25<1$, so their squared moduli are at
+least $A(0)-1>1400^2$. All roots therefore remain beyond
+$|\Re z|>1400$. In particular
+$|F_t(1000+iy)|>400^4$ and
+$|F_t(x)|>399^4$ for $|x|\le1001$.
+Also $F_t(iy)=y^4+2A(t)y^2+B(t)>0$.
+
+For a nonreal root its imaginary part squared is
+$(\sqrt B-A)/2$. Since
+$(L^2+q+2t)^2-B(t)=8t(q-t)\ge0$ up to the threshold,
+this is at most $q-2t\le1-2t$. After the threshold
+all roots are real. Initial nonreal roots lie outside the
+finite verified region, so the initial-reality hypothesis there
+is also satisfied.
+
+Finally every root stays in $|z|<3000$ through $0\le t\le1/2$.
+For nonreal roots use $|z|^4=B(t)\le B(1/2)<3000^4$;
+for real roots use
+$z^2\le A(1/2)+\sqrt{4f(1/2)}<A(1/2)+4000<3000^2$.
+The collisions therefore lie below
+$e^{20/\varepsilon}\ge e^{40}>3000$.
+\end{proof}
+
+For varying $L$, the finite-wall, strip and baseline premises admit
+thresholds tending to $1/5$. The new exterior is not imposed uniformly
+on that entire varying family. For the fixed $L=2000$ example,
+even adding the exterior conclusion leaves a collision in the bridge.
+The example fails the stronger inequality $\Lap_0>E/100$ at
+$(t,x)=(1/100,1000)$, as exact rational substitution verifies.
+Thus it supplies no obstruction to an argument that uses that
+additional signed information outside its presently certified rectangle.
+
+The next missing input is a quantitative estimate for the retained
+complete arithmetic sum, a feasible complete real bridge, or the
+specified final-time complex exterior. Full modular reflection
+identifies the theta source in the coefficient class of
+Theorem~\ref{thm:rigidity}; converting that rigidity into such an
+estimate remains open. All-height noncollision is not established
+by giving another name to that missing estimate.

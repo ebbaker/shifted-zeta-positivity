@@ -42,7 +42,7 @@ constant checks, and assessed Notes 05–06. It is internal LLM review, not
 cross-model or specialist review. At that review the manuscript source-set hash was unchanged; Review 05
 below covers the later incorporation.
 
-## Current manuscript integration, 18 October 2026
+## Earlier manuscript integration, 18 October 2026
 
 [Review 05](05_UPDATED_MANUSCRIPT_INTEGRATION_REVIEW_CODEX_20261018.md) covers the revised eight-file source set, new
 Section 6, nine-row scalar table and 30-page build. Sol ultra integrated
@@ -94,3 +94,26 @@ exact remote control and partial canopy contract. Auxiliary claims pass;
 the global bridge is (1001,exp(2000)). For Edward Baker with substantial
 LLM assistance, **gpt-6.1-sol, actual effort ultra**, 18 October 2026;
 internal same-model review, no new Newman bound.
+
+## Current-results manuscript integration
+
+[13 Current-results manuscript integration](13_CURRENT_RESULTS_MANUSCRIPT_INTEGRATION_REVIEW_20261018.md)
+assesses the current twelve-file, 45-page draft incorporating Notes 07–14.
+Fresh scalar, 314-strip pilot, 40-cell signed, seven-cell wall and control
+replays pass. The complete exterior argument and exact global scope are now
+in the manuscript. Prepared for Edward Baker with substantial LLM assistance,
+**gpt-6-astra, actual effort max**, 18 October 2026; internal review by the
+contributing assistant. Earlier reviews retain their source-version scope.
+The bridge (1001,exp(2000)) and failed performance gate remain open issues;
+no new Newman bound or independent specialist review is claimed.
+
+## Hodge and modular symmetry assessment
+
+[Review 14](14_HODGE_AND_MODULAR_SYMMETRY_ASSESSMENT_20261018.md) assesses the
+two symmetry brainstorm notes against Investigation 22. It identifies the
+normalized covariant jets as a useful algebraic simplification, explains
+the restricted scope of Hodge and ASD arguments, and specifies the missing
+rotation-defect estimate. Prepared for Edward Baker with substantial LLM
+assistance, **gpt-6-astra, actual effort max**, 18 October 2026; internal
+review and self-check of the companion derivation, without a new theta
+sign estimate or independent specialist review.

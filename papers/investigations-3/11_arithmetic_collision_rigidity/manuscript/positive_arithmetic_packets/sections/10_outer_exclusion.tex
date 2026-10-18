@@ -1,0 +1,290 @@
+\section{An explicit real exterior beginning at \texorpdfstring{$e^{20/\varepsilon}$}{exp(20/epsilon)}}
+\label{sec:outer}
+
+The following exterior result uses the effective Riemann--Siegel
+approximation of \cite[Theorem 1.3]{Polymath}. We state the complete
+fixed-cutoff disk estimate needed for its application and derive the
+smaller threshold. This is exclusion of a common real zero of $H,H_x$;
+it is not nonvanishing throughout a complex exterior strip.
+
+\subsection{A holomorphic fixed-cutoff representation}
+
+Write $s=(1-iz)/2$, using the opposite but equivalent sign to
+\eqref{eq:xi}, and use principal logarithms. Define
+\begin{align}
+ \mathfrak m_0(s)={}&\Log s+\Log(s-1)-\frac s2\log\pi
+ +\log\frac{\sqrt{2\pi}}{16}
+ +\left(\frac s2-\frac12\right)\Log\frac s2-\frac s2,\notag\\
+ \mathfrak a(s)={}&\frac1{2s}+\frac1{s-1}
+                  +\frac12\Log\frac{s}{2\pi},\qquad
+ \mathfrak m_t(s)=\mathfrak m_0(s)+\frac t4\mathfrak a(s)^2,\notag\\
+ \mathfrak M_t(s)={}&e^{\mathfrak m_t(s)},\qquad
+ w_{t,n}(s)=
+ \exp\left\{\frac t4\log^2n-
+       \left(s+\frac t2\mathfrak a(s)\right)\log n\right\}.
+ \label{eq:rs-definitions}
+\end{align}
+For fixed $N\ge1$, set $P_{t,N}(s)=\sum_{n\le N}w_{t,n}(s)$ and
+\[
+ G_{t,N}(z)=\mathfrak M_t(s)P_{t,N}(s)
+           +\mathfrak M_t(1-s)P_{t,N}(1-s).
+\]
+Both $s$ and $1-s$ avoid the logarithmic cuts when $\Re z>0$.
+The reflected sum in the published formula is exactly the second
+holomorphic term above: $\overline s-y=1-s$, and its correction
+$\tfrac t2(\mathfrak a(1-s)-\mathfrak a(\overline s))$
+converts its exponent to $-(1-s)-t\mathfrak a(1-s)/2$.
+Define
+\begin{align}
+ \mathcal A_t(z)&=\exp\{(\mathfrak m_t(s)+\mathfrak m_t(1-s))/2\},
+ &\vartheta_t(z)&=\frac{\mathfrak m_t(s)-\mathfrak m_t(1-s)}{2i},
+ \notag\\
+ \mathcal Q_t(z)&=H(t,z)/\mathcal A_t(z),
+ &\mathcal F_{t,N}(z)&=G_{t,N}(z)/\mathcal A_t(z).
+ \label{eq:rs-normalization}
+\end{align}
+This $\mathcal A_t$ is distinct from the arithmetic carrier
+$A_{\mathcal P}$. It never vanishes and is positive on the real axis;
+$\mathcal Q_t,\mathcal F_{t,N},\vartheta_t$ are real there.
+Thus a real collision is equivalent to
+$\mathcal Q_t=\partial_x\mathcal Q_t=0$.
+
+\subsection{The complete disk error}
+
+Fix $0<\varepsilon\le\tau\le1/2$, $0<R\le1$ and $X-R\ge200$.
+Put
+\[
+ x_\pm=X\pm R,\quad q_\pm=\frac{x_\pm}{4\pi},\quad
+ V=\frac{x_-}2,\quad S_0=\frac12\sqrt{x_+^2+(1+R)^2},
+\]
+\begin{align}
+ \alpha_-&=\frac12\log q_- -V^{-2},&
+ A_*&=\frac3{2V}+\frac12
+           \sqrt{\log^2(S_0/(2\pi))+\pi^2/4},\notag\\
+ D_*&=\frac3{2V^2}+\frac1{2V},&
+ L_*&=A_*(1+\tau D_*/2),\quad K_*=\exp(RL_*/2).
+ \label{eq:rs-disk-constants}
+\end{align}
+On the upper enclosing rectangle, both $s$ and $1-s$ have real parts
+in $[0,1]$, imaginary modulus at least $V$ and modulus at most $S_0$.
+Directly from \eqref{eq:rs-definitions},
+\[
+ \Re\mathfrak a\ge\alpha_->0,\qquad
+ |\mathfrak a|\le A_*,\qquad |\mathfrak a'|\le D_*,
+ \qquad |\mathfrak m_t'|\le L_*.
+\]
+For the lower bound use $\Re(1/(2s))\ge0$,
+$\Re(1/(s-1))\ge-V^{-2}$ and $|s|\ge V$.
+The upper bounds use $|\arg s|\le\pi/2$.
+Integration vertically from the real axis gives
+\begin{equation}\label{eq:rs-normalizer-cost}
+ |\mathfrak M_t(s)/\mathcal A_t|,
+ \ |\mathfrak M_t(1-s)/\mathcal A_t|\le K_*.
+\end{equation}
+
+The natural cutoff is $\lfloor\sqrt{x/(4\pi)+t/16}\rfloor$.
+Its possible values lie between
+\[
+ m_-=\left\lfloor\sqrt{q_-+\varepsilon/16}\right\rfloor,\qquad
+ m_+=\left\lfloor\sqrt{q_++\tau/16}\right\rfloor.
+\]
+They satisfy $m_-\ge3$, $m_+-m_-\le1$.
+For $n\ge1$ define the positive majorants
+\begin{align}
+ d_n&=\tfrac14\log^2n-\tfrac12\alpha_-\log n,&
+ V_n&=n^{-1/2}e^{\max\{\varepsilon d_n,\tau d_n\}},&
+ P_n&=n^{R/2}V_n,\notag\\
+ \ell_n&=\max\{|\log(q_-/n^2)|,|\log(q_+/n^2)|\},&
+ k_*&=\frac{\tau R}{2(x_--6)},&
+ U_n&=\exp\frac{\tau^2\ell_n^2/16+0.626}{x_--6.66}-1 .
+ \label{eq:rs-majorants}
+\end{align}
+For each permitted natural cutoff $m$, set
+\begin{align}
+ E_m^{AB}&=\sum_{n\le m}(1+m^{k_*}n^R)V_nU_n,\notag\\
+ E_m^C&=q_-^{-1/4}\exp\left\{-\frac{\varepsilon}{16}\log^2q_-
+ +\frac{1.24(3^R+3^{-R})}{m-0.125}
+ +\frac{3\sqrt{\log^2q_++\pi^2/4}+10.44}{x_--12}\right\},
+ \notag\\
+ \eta_N&=K_*\max_{m_-\le m\le m_+}
+ \left(E_m^{AB}+E_m^C+
+       2\sum_{n=\min(m,N)+1}^{\max(m,N)}P_n\right).
+ \label{eq:rs-eta}
+\end{align}
+Empty sums are zero. The decimal constants are the explicit constants
+in the published inequalities, not empirical fit parameters.
+
+\begin{proposition}[Fixed-cutoff disk contract]\label{prop:rs-disk}
+For $\varepsilon\le t\le\tau$ and $|z-X|\le R$,
+\[
+ |\mathcal Q_t(z)-\mathcal F_{t,N}(z)|\le\eta_N.
+\]
+At a real $|x-X|\le a<R$,
+\[
+ |\partial_x\mathcal Q_t(x)-\partial_x\mathcal F_{t,N}(x)|
+ \le\eta_N/(R-a).
+\]
+\end{proposition}
+\begin{proof}
+Apply \cite[Theorem 1.3, equations (23)--(24)]{Polymath}
+on the upper rectangle with its actual natural cutoff $m$.
+In the published $\mathfrak M_t(s)$ normalization the error is
+bounded by $E_m^{AB}+E_m^C$. Specifically its reflected multiplier
+obeys $|\gamma|\le e^{0.02y}(x/(4\pi))^{-y/2}\le1$;
+its exponent correction obeys $m^{|\kappa|}\le m^{k_*}$;
+and $n^y\le n^R$, $|w_{t,n}(s)|\le V_n$.
+The remaining factors are bounded by the endpoint expressions in
+\eqref{eq:rs-majorants}--\eqref{eq:rs-eta}.
+Changing to the symmetric normalizer costs $K_*$ by
+\eqref{eq:rs-normalizer-cost}.
+
+Changing $m$ to fixed $N$ adds or removes exactly the terms in
+\eqref{eq:rs-eta}. Each of the two reflected normalized terms
+is bounded by $K_*P_n$, since both real parts are at least $(1-R)/2$.
+The remainder with this fixed $N$ is holomorphic and has real symmetry,
+so its bound on the upper rectangle reflects to the full disk.
+Cauchy's estimate on the radius-$R-a$ circle about an inner real
+point gives the derivative bound. No jumping cutoff is differentiated.
+\end{proof}
+
+For $N=1$ the finite sum is the leading pair,
+\[
+ \mathcal F_{t,1}(x)=2\cos\vartheta_t(x),\qquad
+ \partial_x\mathcal F_{t,1}(x)
+       =-2\vartheta_t'(x)\sin\vartheta_t(x).
+\]
+Since $\mathfrak m_t'=\mathfrak a(1+t\mathfrak a'/2)$,
+\[
+ |\vartheta_t'(x)|\ge
+ \omega_*:=\frac{\alpha_- -\tau A_*D_*/2}{2}
+\]
+whenever the right side is positive. A common zero of the physical
+first jet at the disk center would consequently imply
+\begin{equation}\label{eq:rs-pair}
+ 1=\cos^2\vartheta+\sin^2\vartheta
+ \le(\eta_1/2)^2+(\eta_1/(2R\omega_*))^2.
+\end{equation}
+
+\subsection{A uniform smaller onset}
+
+\begin{theorem}[Explicit eventual real noncollision]\label{thm:outer20}
+For $0<\varepsilon\le1/2$,
+\begin{equation}\label{eq:outer20}
+ \varepsilon\le t\le1/2,\qquad |x|\ge e^{20/\varepsilon}
+ \quad\Longrightarrow\quad E(t,x)>0.
+\end{equation}
+\end{theorem}
+\begin{proof}
+By evenness take an arbitrary $X\ge e^{20/\varepsilon}$.
+Freeze $Z=\log X$, $L=\log(X/(4\pi))$, $R=5/(2L)$,
+$N=1$ and $\tau=1/2$. Since $Z\ge40$ and $\log(4\pi)<2.54$,
+\[
+ L>37,\quad R<0.068,\quad X-R>200,\quad V>10^{17}.
+\]
+Put $\delta=10^{-15}$ and $X_0=e^{40}$. The inequalities
+$|\log(1\pm u)|\le2u$ and $\log\sqrt{1+u}\le u/2$ give
+\[
+ |\log q_\pm-L|\le2R/X<\delta,\qquad
+ 0\le\log(S_0/(2\pi))-L<\delta.
+\]
+Explicit majorants are $0.136/X_0$ and
+$0.068/X_0+1.068^2/(2X_0^2)$.
+In particular
+$\varepsilon\log q_->20-(2.54+\delta)/2>18.7$ and $\log q_->37$.
+
+Let $V_0=(X_0-0.068)/2$. Dividing the formula for $A_*$ by $L$
+and using
+\[
+ \frac3{2V_0\cdot37}+
+ \frac12\sqrt{(1+\delta/37)^2+\pi^2/(4\cdot37^2)}<0.51
+\]
+gives $A_*<0.51L$. Also $D_*<0.001$ and $V^{-2}<0.001$.
+It follows that
+\[
+ K_*<\exp\{(5/4)(0.51)(1.00025)\}<1.9,
+\]
+\[
+ R\omega_*>
+ \frac54\left[\frac12(1-\delta/37)-0.001/37-0.0001275\right]>0.62.
+\]
+The natural cutoffs obey $m_-\ge10^8$ and
+\[
+ \log m_+\le\tfrac12\log q_-+0.01<\tfrac12 Z.
+\]
+For the first assertion use $q_->(10^8+1)^2$; for the second use
+\[
+ \log\frac{q_++\tau/16}{q_-}
+ \le\frac{2R+\pi/8}{X-R}<0.02.
+\]
+
+For $n\le m_+$, $\log n<2\alpha_-$, so $d_n\le0$ and the maximum
+in $V_n$ is $\varepsilon d_n$. Consequently
+\[
+ P_n\le n^{-p_*},\qquad
+ p_*=\frac{1-R}{2}+\frac{\varepsilon\alpha_-}{2}
+                  -\frac{\varepsilon\log m_+}{4}
+ >0.466+\frac{18.7}{8}-0.0015=2.802>\frac{14}5 .
+\]
+Retaining terms $2,3$ and then using an integral comparison gives
+\begin{equation}\label{eq:outer-sum}
+ \sum_{n=2}^{m_+}P_n\le
+ S_*:=2^{-14/5}+3^{-14/5}
+       +\frac{3^{1-14/5}}{14/5-1}<0.266623.
+\end{equation}
+
+The remaining analytic errors are uniformly small. First,
+\[
+ k_*\log m_+\le0.0085\,\frac{Z}{e^Z-6.068}<10^{-16},
+ \qquad m_+^{k_*}<2.
+\]
+The rational function decreases for $Z\ge40$. For $n\le m_+$,
+$\ell_n\le Z$: its positive endpoint is less than $\log q_+<Z$,
+and any negative endpoint has modulus less than $0.02$.
+Thus
+\[
+ U_n\le\exp\left\{\frac{Z^2/64+0.626}{e^Z-6.728}\right\}-1
+ \le\exp\left\{\frac{25+0.626}{e^{40}-6.728}\right\}-1<10^{-14}.
+\]
+The derivative numerator of the fraction is
+$e^Z[(2Z-Z^2)/64-0.626]-6.728Z/32<0$.
+Since $p_*-R/2>2$, comparison with $\sum n^{-2}<2$ gives
+$E_m^{AB}<6\,10^{-14}$.
+
+For $E_m^C$, drop $q_-^{-1/4}\le1$. Its negative exponent
+is at most $-18.7\cdot37/16$. Its positive exponent is less than
+\[
+ \frac{1.24(3^{0.068}+3^{-0.068})}{10^8-0.125}
+ +\frac{4Z}{e^Z-12.068}
+ \le
+ \frac{1.24(3^{0.068}+3^{-0.068})}{10^8-0.125}
+ +\frac{160}{e^{40}-12.068}<1.
+\]
+Here $Z/(e^Z-12.068)$ decreases, and
+$3\sqrt{\log^2q_++\pi^2/4}+10.44
+ \le3Z+3\pi/2+10.44<4Z$.
+Hence $E_m^C<10^{-17}$, including at every natural-cutoff jump.
+All terms of changing that cutoff to $N=1$ are paid by
+\eqref{eq:outer-sum}. Therefore
+\[
+ \eta_1<1.9(6\,10^{-14}+10^{-17}+2S_*)<1.013165306
+\]
+and
+\[
+ (\eta_1/2)^2+(\eta_1/(2R\omega_*))^2
+ <(1.013165306/2)^2+(1.013165306/1.24)^2
+ <0.924228<1.
+\]
+This contradicts \eqref{eq:rs-pair} at a real collision.
+The argument holds at every $X$ in the closed range; it is
+not a numerical height scan. Evenness supplies the negative side.
+\end{proof}
+
+Outward 192-bit and 256-bit scalar replays check all explicit
+constant comparisons in this proof; the final pair expression
+is enclosed below $0.924227400051$. The analytic monotonicity
+arguments establish the unbounded range. The exact normalized
+theta Riemann--Siegel approximation is a substantive premise;
+the collision controls in Section~\ref{sec:controls} do not
+supply that approximation and its error constants.
+The result improves the earlier explicit onset $e^{64/\varepsilon}$,
+but the coverage consequences remain those stated next.

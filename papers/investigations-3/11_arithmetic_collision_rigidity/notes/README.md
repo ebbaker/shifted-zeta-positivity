@@ -98,3 +98,12 @@ height-1000 signed certificate and records the matched comparison.
 vertical wall into contiguous finite noncollision coverage. Prepared for
 Edward Baker with substantial LLM assistance, **gpt-6.1-sol, actual effort
 ultra**, 18 October 2026; internal same-model checks.
+
+## Hodge and modular symmetry continuation
+
+[Note 07](07_HODGE_MODULAR_DUALITY_AND_ROTATION_DEFECT_20261018.md) derives a
+normalized covariant-jet ladder, its modular reflection signs, and the
+exact defect of spectral first-jet rotation. It distinguishes these
+identities from a new arithmetic bound. Prepared for Edward Baker with
+substantial LLM assistance, **gpt-6-astra, actual effort max**, 18 October
+2026; internal self-check only. See [Review 14](../reviews/14_HODGE_AND_MODULAR_SYMMETRY_ASSESSMENT_20261018.md).

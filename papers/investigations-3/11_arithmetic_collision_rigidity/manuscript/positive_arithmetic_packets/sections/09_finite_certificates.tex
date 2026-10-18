@@ -1,0 +1,260 @@
+\section{Finite signed certificates and a complete vertical wall}
+\label{sec:finite}
+
+The approximation theorems become exclusion results only after a strict
+margin for the complete field has been verified. We describe the finite
+error contract, state the interval-certified margins, and prove the
+finite-height consequence from the wall and named published inputs.
+The computations use outward Arb/Acb arithmetic through
+\texttt{python-flint}; the accompanying source and records specify the
+library versions, exact cells and frozen parameters. Their status is
+computer-assisted interval certification, subject to the written error
+bounds and the arithmetic implementation.
+
+\subsection{Retained-source and whole-cell errors}
+
+Let $P_{m,d,U}$ be the paired integral in
+\eqref{eq:shifted-finite} with upper endpoint $U$ in place of infinity.
+For fixed $m,d,U$ it satisfies $P_t=-P_{zz}$. For each retained
+$n<m$ and derivative order $j$, put
+\[
+ D_{n,j}=4c_d\lambda_ne^{4U}-9-Y-2TU-\frac j{U+d}.
+\]
+If $D_{n,j}>0$ and $16c_d\lambda_ne^{4U}>2T$, a concave-tangent
+bound gives the following retained-source error:
+\begin{equation}\label{eq:finite-source-tail}
+ e^{-dx}\sum_{n<m}
+ \frac{(2\lambda_n^2+3\lambda_n)(U+d)^j
+ e^{TU^2+(9+Y)U-c_d\lambda_ne^{4U}}}{D_{n,j}}.
+\end{equation}
+To see this, take the logarithm of the positive integrand majorant
+$(u+d)^j\exp(Tu^2+(9+Y)u-c_d\lambda_ne^{4u})$.
+Its derivative at $U$ is $-D_{n,j}$ and its second derivative
+is negative on $[U,\infty)$ under the stated condition.
+Its tangent therefore integrates to the expression in
+\eqref{eq:finite-source-tail}. Sum both contours with their factor $1/2$.
+
+For propagation about $(t_c,x_c)$, expand first in space to degree $L$
+and then each coefficient in time to degree $K$. Suppose a common bound
+$M$ covers the derivatives of $P_{m,d,U}$ through the needed orders,
+divided by a fixed positive normalization $G_*$. For a requested
+derivative $j$, those orders include
+$j+L+1$ and $j+L+2(K+1)$. If
+$|z-x_c|\le R$ and $|t-t_c|\le\Delta$, the normalized remainder is at most
+\begin{equation}\label{eq:cell-taylor}
+ M\left(\frac{R^{L+1}}{(L+1)!}
+       +e^R\frac{\Delta^{K+1}}{(K+1)!}\right).
+\end{equation}
+Indeed spatial Taylor's theorem gives the first term. The heat equation
+replaces each time derivative by a signed even spatial derivative; the
+sum of the absolute spatial Taylor weights is at most $e^R$.
+The polynomial coefficients are midpoint derivatives enclosed by rigorous
+quadrature. Their radii are propagated with the same absolute weights.
+Outward evaluation encloses the polynomial on the whole cell.
+
+Finally add the physical omitted-mode and retained-source errors at
+the requested orders. Propagation applies to the finite integral itself;
+it does not replace its high derivatives by unproved relative errors
+for the physical field. The full budget therefore contains mode omission,
+source cutoff, quadrature, subsequent rounding and whole-cell variation.
+
+\subsection{Two signed rectangles}
+
+Recall $E=H^2+H_x^2$ and $\Lap_0=H_x^2-HH_{xx}$.
+\begin{proposition}[Interval-certified signed margins]\label{prop:finite-signed}
+The strict inequality
+\begin{equation}\label{eq:finite-signed}
+ \Lap_0(t,x)>\frac1{100}E(t,x)
+\end{equation}
+holds throughout each of the closed rectangles
+\[
+ D_0=[1/100,1/5]\times[25,45],\qquad
+ D_1=[1/100,1/5]\times[999,1001].
+\]
+\end{proposition}
+\begin{proof}[Certificate and error contract]
+On $D_0$, the complete-source evaluator certifies the inequality on
+314 contiguous full-time spatial strips. The replayed lower excess
+$\Lap_0-E/100$ exceeds $4\,10^{-16}$ throughout every strip.
+This is a quantitative signed certificate on a previously covered
+domain, not a new global sign law.
+
+For $D_1$ freeze
+\[
+ t_c=21/200,\quad x_c=1000,\quad d=\pi/8-4\log(1000)/1000,
+ \quad m=12,\quad U=2,
+\]
+\[
+ G_*=\mathcal G_0(1000)=1000^{7/4}e^{-125\pi},\quad L=24,\quad K=12.
+\]
+The three physical derivatives require midpoint orders $0$ through $50$
+and a common remainder bound through order $52$. One valid normalized
+majorant for all these finite-integral derivatives on $D_1$ is
+\begin{equation}\label{eq:finite-majorant}
+ M=1000^{9/4}e^d\int_0^2
+ \sum_{n=1}^{11}(2\lambda_n^2+3\lambda_n)
+ e^{u^2/5+9u-c_d\lambda_ne^{4u}}[1+(u+d)^{52}]\dd u.
+\end{equation}
+The factor $e^d$ pays the left edge $x=999$, and
+$(u+d)^j\le1+(u+d)^{52}$ pays every intermediate order.
+Outward integration gives $M<9.632889\,10^{10}$.
+Formula~\eqref{eq:cell-taylor} pays the entire Taylor remainder.
+The mode error uses Theorem~\ref{thm:nonstationary} with the spectral
+factor at $x=999$ and the phase gap at $x=1001$; interval checks give
+$B>190.59$ and $P>797.37$. Every condition in
+\eqref{eq:finite-source-tail} is also checked with intervals.
+
+The closed time slabs have endpoints
+\[
+ 1/100,\quad23/400,\quad21/200,\quad61/400,\quad1/5.
+\]
+Ten spatial cells in each slab give 40 accepted cells in all.
+Exact rational endpoint comparisons verify their full closed coverage.
+On each cell, outward evaluation of
+$H_x^2-HH_{xx}-(H^2+H_x^2)/100$ has lower bound exceeding
+$8.26087\,10^{-5}G_*^2$. The largest added component error is
+below $4.621\,10^{-12}G_*$; quadrature radii and polynomial-image
+rounding are retained in the enclosures. Square ranges include zero
+when their input interval does. These strict comparisons prove
+\eqref{eq:finite-signed}.
+
+The numerical supplement retains every cell, the failed coarse choices,
+exact dyadic midpoint data, analytic parameters and source identities.
+Fresh 256-bit shifted integration and a separately evaluated 768-bit
+real-source representation reproduce the high-height conclusions.
+These are internal computational checks, not independent specialist review.
+\end{proof}
+
+\subsection{A wall covering the complete initial-to-final time interval}
+
+\begin{proposition}[Interval-certified vertical wall]\label{prop:wall}
+For $0\le t\le1/5$ and $|y|\le1$,
+\begin{equation}\label{eq:wall}
+ |H(t,1000+iy)|>0.00425\,G_*.
+\end{equation}
+\end{proposition}
+\begin{proof}[Certificate and error contract]
+Reuse the frozen midpoint jets of $D_1$. For the complex segment,
+replace the majorant in \eqref{eq:finite-majorant} by
+\[
+ M_{\rm wall}=1000^{9/4}\int_0^2
+ \sum_{n=1}^{11}(2\lambda_n^2+3\lambda_n)
+ e^{u^2/5+10u-c_d\lambda_ne^{4u}}[1+(u+d)^{52}]\dd u.
+\]
+The additional $e^u$ pays $|\Im z|\le1$; the factor $e^d$
+is unnecessary because $\Re z=1000$. The largest time distance
+from $t_c$ is $21/200$, including $t=0$. Use
+\eqref{eq:cell-taylor}, the mode bound with $Y=1$, and
+\eqref{eq:finite-source-tail} with $Y=1$.
+
+Seven closed cells cover $[0,1/5]\times[0,1]$ in $(t,y)$,
+with time endpoints $0,1/20,1/10,3/20,1/5$.
+On each cell, a selected real or imaginary coordinate of $H/G_*$
+has absolute lower bound greater than $0.00425150082920$.
+Every added coordinate error is below $1.533\,10^{-11}G_*$.
+The modulus is at least the modulus of that coordinate. Exact coverage
+checks include all seams and endpoints; conjugation supplies $-1\le y\le0$.
+Fresh shifted and real-source replays recompute every margin.
+\end{proof}
+
+\subsection{Finite propagation without an initial simplicity assumption}
+
+\begin{lemma}[Finite-height propagation]\label{lem:finite-propagation}
+Let $F(t,z)$ be analytic in a neighborhood of the relevant time and
+spectral domains, satisfy $F_t=-F_{zz}$, and have real conjugation
+symmetry for real $t$. Fix $X,T>0$. Suppose, for $0\le t\le T$:
+all zeros lie in $|\Im z|\le1$; $F(t,iy)\ne0$ for $|y|\le2$;
+and $F(t,X+iy)\ne0$ for $|y|\le1$. Suppose also that all zeros at
+$t=0$ with $0\le\Re z\le X$ are real.
+Then all zeros in that vertical region remain real for $0\le t\le T$,
+and its real zeros are simple for $0<t\le T$.
+\end{lemma}
+\begin{proof}
+The rectangle $\Omega=\{0<\Re z<X,\ |\Im z|<2\}$ has no
+boundary zeros: the strip hypothesis pays the horizontal edges and
+the upper and lower parts of the right edge; the remaining boundary
+conditions pay the rest. The argument principle keeps its finite
+zero count, with multiplicity, constant throughout the time interval.
+Simple real roots persist real by the implicit function theorem
+and conjugation uniqueness.
+
+At a real root of multiplicity $r\ge2$ at $(t_*,x_*)$, the heat
+equation and analytic Taylor expansion give the leading weighted term
+\[
+ a_r(2h)^{r/2}\operatorname{He}_r
+       \left(\frac{z-x_*}{\sqrt{2h}}\right),\qquad
+ a_r=\frac{\partial_z^rF(t_*,x_*)}{r!},\quad h=t-t_*,
+\]
+where $\operatorname{He}_r$ is the monic probabilists' Hermite polynomial.
+Its roots $\lambda_1<\cdots<\lambda_r$ are real and simple.
+The local roots consequently have the expansions
+\[
+ z_k(t_*+h)=x_*+\sqrt{2h}\lambda_k+O(h).
+\]
+For $h>0$, small disjoint disks about the real leading roots
+each contain exactly one root by Rouch\'e's theorem, and conjugation
+makes that root real. For $h<0$, at least one nonzero Hermite
+root gives a nonreal predecessor. This is also the local splitting
+statement in \cite[Proposition 3.1(ii)]{Polymath}.
+
+The finitely many initial root clusters therefore become real
+simple roots for a short positive interval, even if initial roots
+are multiple. Compactness, the fixed boundary-free count and
+Rouch\'e's theorem make reality closed in time. At a first exit,
+a repeated real root would have nonreal predecessors, while a
+simple real root would persist real. Neither allows an exit.
+A repeated root at any positive time, including $T$, likewise
+contradicts reality immediately beforehand. The boundary has no roots.
+\end{proof}
+
+\begin{theorem}[Certified finite-height noncollision]\label{thm:finite-height}
+In the normalization \eqref{eq:xi},
+\begin{align}
+ E(t,x)&>0&& (0<t\le1/5,\ |x|\le1000),\label{eq:finite1000}\\
+ E(t,x)&>0&& (1/100\le t\le1/5,\ |x|\le1001).\label{eq:finite1001}
+\end{align}
+\end{theorem}
+\begin{proof}
+The initial zeta zero strip and de Bruijn's strip-preservation theorem
+\cite[Theorem 3.2]{Polymath} keep all zeros of $H(t,\cdot)$
+in $|\Im z|\le1$. Positivity of $\Phi$ gives $H(t,iy)>0$
+from its hyperbolic-cosine integral. Proposition~\ref{prop:wall}
+gives the remaining wall condition.
+Platt--Trudgian \cite[Theorem 1]{PlattTrudgian} verify initial
+zero reality through zeta height $3\,000\,175\,332\,800$.
+Only height $500$ is used here, since \eqref{eq:xi} sends
+$\Re z=1000$ to zeta height $500$.
+Apply Lemma~\ref{lem:finite-propagation} with $X=1000$, $T=1/5$,
+then use evenness. This proves \eqref{eq:finite1000}.
+The strict signed inequality on $D_1$ excludes a common zero
+of $H,H_x$ there. Its overlap $[999,1000]$ and evenness prove
+\eqref{eq:finite1001}. No initial simplicity or zero-velocity
+estimate is assumed.
+\end{proof}
+
+\subsection{Measured costs and adversarial checks}
+
+The original matched high-height experiment charged all precomputation,
+failed attempts and repairs. It took approximately $7.590$ seconds
+for the shifted 160-bit calculation and $11.236$ seconds for the
+768-bit real-source calculation, a ratio of $1.480$.
+Both certified the same 40 signed cells with the same useful
+physical derivative majorant. The declared factor-two performance
+gate failed. These are recorded bounded timings, not a complexity
+theorem or an asserted general advantage of contour shifting.
+Separate certified point evaluations at $t=1/10$, $x=1000,10000$
+used 15 and 49 retained modes, respectively, and included all
+integration errors; point accuracy alone supplies no interval coverage.
+
+The source-specific test interface rejects all five applicable
+collision-event boxes in the control catalogue and separately rejects
+the Euler-factor negative-Laguerre witness. Finite-prime and
+weighted-square sources lack complete normalized analytic reflection;
+reflected, primitive and counter-kernel sources lack the unchanged
+theta square expansion; Euler-factor controls change the coefficients
+and level. They are not assigned theta's truncation constants.
+Malformed-cache, missing-cell, changed-source and strict-equality
+tests also reject. An exact polynomial heat event tests the same
+cell interface with its own zero-truncation contract.
+These checks test failure detection and arithmetic implementation;
+they do not extend any finite result to unbounded height.

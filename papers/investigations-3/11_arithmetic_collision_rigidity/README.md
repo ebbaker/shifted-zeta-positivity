@@ -4,15 +4,29 @@
 LLM assistance. Recorded model: **gpt-6-astra (Codex)**; reasoning effort:
 **max**, verified from the authoring turn metadata.
 
-**Status: strengthened manuscript and completed bounded overview 02 round.**
-The [manuscript](manuscript/README.md) incorporates Notes 05–06: broad-strip
-positive carriers, the E/64 curvature payment, sharper real and complex
-relative bounds, and cancellation-preserving finite-mode approximation.
-Written proofs and rational scalar certificates are accompanied by
-[internal LLM integration checks](reviews/05_UPDATED_MANUSCRIPT_INTEGRATION_REVIEW_CODEX_20261018.md). The global signed
-theta margin is open; no new global collision exclusion or Newman bound is claimed.
+**Status: current results incorporated in the manuscript.**
+The [45-page manuscript](manuscript/README.md) now includes the complete
+overview 02 round through Notes 07–14: effective contour tails, finite
+signed rectangles, a complete complex wall and finite-height propagation,
+the exp(20/epsilon) exterior theorem, and the scoped global obstacles.
+[Integration review 13](reviews/13_CURRENT_RESULTS_MANUSCRIPT_INTEGRATION_REVIEW_20261018.md)
+and a [fresh numerical manifest](numerics/MANUSCRIPT_INTEGRATION_REPLAY_20261018.json)
+bind the current twelve-file source set. On [1/100,1/5], the finite cover
+through |x|=1001 and exterior beginning at |x|=exp(2000) leave the bridge
+between them open. No new Newman bound is claimed.
 
-Start with the [updated research overview and execution plan](research-overview/02_UPDATED_RESEARCH_OVERVIEW_AND_SOL_EXECUTION_PLAN_20261018.md).
+For the symmetry continuation, start with the [symmetry research program
+and investigation guide](research-overview/03_SYMMETRY_RESEARCH_PROGRAM_AND_INVESTIGATION_GUIDE_20261018.md)
+and its [six direction folders](symmetries/README.md). They retain the four
+questions from the [symmetry brainstorm](brainstorm/01_SELF_DUALITY_AND_ADDITIONAL_SYMMETRY_QUESTIONS_20261018.md)
+and [continuation context](brainstorm/02_SYMMETRY_PROGRAM_CONTINUATION_CONTEXT_20261018.md),
+add covariant theta jets and Hodge/transverse geometry, and incorporate the
+rotation-defect calculation. Each direction has sources, a bounded first
+task, controls, and decision rules. No new quantitative result is asserted
+by the program setup. Prepared for Edward Baker with substantial LLM
+assistance, **gpt-6-astra, actual effort max**, 18 October 2026.
+
+The earlier bounded round is governed by the [overview 02 execution plan](research-overview/02_UPDATED_RESEARCH_OVERVIEW_AND_SOL_EXECUTION_PLAN_20261018.md).
 The plan assigns research to **GPT-6.1 Sol, planned effort ultra**; actual
 execution of the [bounded round](notes/02_updated_research_plan/README.md)
 used **gpt-6.1-sol, max**. Stages 0 and 1 passed, as did the finite signed
@@ -31,10 +45,11 @@ geometry, so a small arithmetic tail alone does not settle that question.
 The [initial proposal](research-overview/01_EXPLORATORY_RESEARCH_PROPOSAL_20261018.md)
 and [notes](notes/README.md) retain the research sequence.
 
-Current integration and plan: **gpt-6.1-sol, ultra**, coordinated and edited
-by **gpt-6-astra, ultra**, for Edward Baker with substantial LLM assistance.
-This records actual current contributions separately from the future Sol
-execution assumption. No independent specialist review is claimed.
+Current manuscript integration and replay: **gpt-6-astra, actual effort
+max**, for Edward Baker with substantial LLM assistance. Earlier manuscript
+integration used Sol and Astra ultra; the bounded Sol round used max and
+its later analytic continuations used ultra. The historical records preserve
+those configurations. No independent specialist review is claimed.
 
 | Folder | Purpose |
 | --- | --- |
@@ -45,6 +60,7 @@ execution assumption. No independent specialist review is claimed.
 | [reviews](reviews/README.md) | Separate assessments with precise version and claim coverage |
 | [source-documents](source-documents/README.md) | Canonical sources and provenance, without copied papers |
 | [brainstorm](brainstorm/README.md) | Candidate mechanisms tied to a concrete research question |
+| [symmetries](symmetries/README.md) | Six symmetry investigations with local context and bounded research tasks |
 | [manuscript](manuscript/README.md) | Current LaTeX manuscript, reading-copy PDF and build record |
 | [chat-histories](chat-histories/README.md) | Canonical records of new project-specific conversations |
 
@@ -80,8 +96,9 @@ added propagation error, and record that the measured performance gate did
 not pass. This is machinery validation on already covered territory.
 [Reviews 06–09](reviews/README.md), [final claim ledger](numerics/FINAL_CLAIM_LEDGER_20261018.json)
 and [global gap](notes/02_updated_research_plan/10_GLOBAL_CONSUMER_AND_COVERAGE_LEDGER_20261018.md)
-retain the exact scope. The manuscript sources remain at their pinned
-strengthened version; no new Newman bound is established.
+retain the exact scope. At that milestone the manuscript retained its
+strengthened pin; the current integration incorporates the results and
+supersedes that document-status sentence. No new Newman bound is established.
 
 ## Effective contour continuation on 18 October 2026
 

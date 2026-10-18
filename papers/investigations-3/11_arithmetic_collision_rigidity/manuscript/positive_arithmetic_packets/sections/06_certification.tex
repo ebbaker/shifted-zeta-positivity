@@ -1,4 +1,4 @@
-\section{Explicit constants and the remaining question}\label{sec:certification}
+\section{Scalar certification and numerical provenance}\label{sec:certification}
 
 The analytic estimates were stated in terms of $\pi$, exponentials and
 rational operations. Their validity does not depend on an oscillatory
@@ -111,27 +111,54 @@ These calculations verify explicit constants conditional on their
 analytic derivation. They certify neither oscillatory quadrature of the
 retained shifted modes nor a positive physical-scale margin.
 
-\subsection{The remaining mathematical question}
+\subsection{Effective and finite certificate records}
 
-The finite Euler calculation yields mixed heat weights, commuting complex
-shifts, and complete half-line packets with their boundary integrals.
-Positive-real-part geometry now gives a zero-free arithmetic carrier
-on a large strip and bounds its contribution to the normalized Laguerre
-identity by $E/64$. The derivative and complex-strip remainder bounds
-make precise analytic comparisons possible without an auxiliary pole.
+The newer computations are distinct from the rational scalar table above.
+The effective-tail and exterior checkers use outward Arb arithmetic
+at 192 bits, with 256-bit replay. They certify the sufficient inequalities
+of Section~\ref{sec:effective}, the two constant-distance parameter sets,
+and the strict exterior comparison in Section~\ref{sec:outer}.
+Their validity over unbounded height comes from the written monotonicity
+arguments, not from sampled values.
 
-The first mode nevertheless cancels every algebraic endpoint contribution
-of the positive higher modes. At a hypothetical collision,
-$H=O(s)$ and $E=O(s^2)$ along the stationary predecessor.
-The scoped controls retain the stronger packet geometry, so that geometry
-alone cannot supply the missing signed estimate.
+The finite records contain exact rational domains, frozen contour and
+mode parameters, source and implementation hashes, exact dyadic midpoint
+coefficients and radii, all accepted cells, failed coarse choices,
+and complete error payments. The high-height setup uses 51 midpoint
+derivatives through order 50, a common majorant through order 52,
+40 signed cells and seven wall cells. A replay reintegrates at 256 bits,
+checks each whole-cell comparison, verifies closed coverage exactly,
+and compares separately evaluated real-source enclosures.
+The low-height signed record contains all 314 strips.
 
-Section~\ref{sec:shifted} uses complete reflection before truncation.
-It supplies an explicit derivative error and an asymptotic comparison
-with a nonzero envelope. Neither is a lower bound for the complete
-oscillatory field. A finite exclusion needs a strict jet or contour margin
-with every evaluation and whole-domain error included. A global Newman
-bound additionally needs complete finite coverage and an effective outer
-region, or every hypothesis of a published barrier theorem. Extracting
-such a margin from the complete modular and arithmetic data remains the
-substantive research problem.
+The numerical supplement \cite{Artifacts} includes the following
+entry points, with commands and dependencies in its README:
+\begin{itemize}
+\item \path{certify_updated_manuscript.py}: the original nine-row
+rational table and eight strict headline bounds;
+\item \path{certify_nonstationary_mode_tail.py}: effective logarithmic
+contours and rejection of inadmissible parameters;
+\item \path{high_height_consumer.py}: the complete signed and wall
+certificate producer;
+\item \path{compare_high_height_real.py}: the matched real-source
+comparison with its own integral errors;
+\item \path{replay_high_height_consumer.py}: fresh integration,
+whole-cell comparisons, exact coverage and failure controls;
+\item \path{replay_analytic_continuation.py}: the exterior and
+constant-distance scalar replays and exact remote polynomial control;
+\item \path{replay_nonstationary_controls.py}: source-specific event
+rejection and the separate Euler-factor signed witness.
+\end{itemize}
+The source-set and evidence manifests bind this revision separately
+from the earlier eight-file manuscript. Earlier records retain their
+historical identities. Regeneration creates fresh records against the
+current sources; a changed source is not silently substituted under an
+old hash. Hashes identify artifacts and do not certify a mathematical
+claim. The interval comparisons, analytic derivations and explicitly
+imported theorems have separate roles.
+
+The published initial verification used in
+Theorem~\ref{thm:finite-height} is an imported result, not a rerun of
+its large producer computation. The current finite and scalar checks
+do not close the global bridge, certify a uniform signed inequality,
+or prove the complex exterior in Section~\ref{sec:global}.

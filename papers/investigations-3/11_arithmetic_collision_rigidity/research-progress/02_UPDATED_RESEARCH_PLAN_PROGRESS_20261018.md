@@ -49,6 +49,17 @@ complete; the global research objective remains open. Next input: a
 physical signed estimate or complete final-time complex exterior. No scan
 expansion is justified.
 
+
+**Current manuscript integration, 18 October 2026:** the [45-page draft](../manuscript/README.md)
+now incorporates Notes 07–14 in a twelve-file source set, with fresh scalar,
+314-strip pilot, 40-cell signed and seven-cell wall replays. [Review 13](../reviews/13_CURRENT_RESULTS_MANUSCRIPT_INTEGRATION_REVIEW_20261018.md)
+and the [integration manifest](../numerics/MANUSCRIPT_INTEGRATION_REPLAY_20261018.json)
+bind the current bytes. Prepared for Edward Baker with substantial LLM
+assistance, **gpt-6-astra, actual effort max**, internal review by the
+contributing assistant. This supersedes earlier statements that the later
+research remains outside the manuscript pin. The global and performance
+gates remain unpassed.
+
 ## Existing starting evidence
 
 This is the inherited baseline at tracker initialization. Fresh execution
@@ -63,7 +74,7 @@ and new evidence are recorded in the stage decisions below.
 | Bounded pilot | Overview 02 identifies an existing Investigation 22 complete-source certificate on the pilot domain; its replay and matched comparison were pending at initialization and are now recorded below | [Physical jet Note 06][baseline-note], [Review 18][baseline-review], [baseline script][baseline-script] |
 | Complete theta margin and global conclusion | The global signed estimate was open at initialization and remains open; the finite D0 signed margin is now certified below, without new global coverage or a Newman bound | Integration review and overview 02 |
 
-The build record's existing manuscript source-set SHA-256 is
+The historical starting manuscript source-set SHA-256 was
 `f6cd484647ef328047e9ac51a577b8260e899aecbfdd5026e9e238079feb823f`.
 Stage 0 verified this source-set identity against every consumed source
 file; [Review 06](../reviews/06_SOL_STRENGTHENED_MANUSCRIPT_CONTRACT_REVIEW_20261018.md) records the result. Review 04 identifies an earlier manuscript revision and must
@@ -324,8 +335,9 @@ entries retain their historical exp(6400) inventories.
   a separately written Sol verifier remains same-model internal review.
 - [x] Update applicable status and index links and add a concise
   `DRAFT_HISTORY.md` milestone; update the relevant result summary and avoid
-  entry. The manuscript sources stay at their reviewed pin; this auxiliary
-  round is documented in the new notes and certificates.
+  entry. At that milestone the manuscript sources stayed at their reviewed
+  pin; the current integration above now incorporates the auxiliary round.
+  Historical notes and certificates retain their recorded identities.
 - [x] Close with the exact supported outcome and remaining gap: a fully
   replayed global conclusion, or an analytic constant, validated evaluator,
   measured bounded gain or scoped obstruction.
