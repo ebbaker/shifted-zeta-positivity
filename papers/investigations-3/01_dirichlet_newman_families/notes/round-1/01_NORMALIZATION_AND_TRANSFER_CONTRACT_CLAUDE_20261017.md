@@ -4,9 +4,9 @@
 Claude Opus 5.5 (configured identifier `claude-opus-5-5`), Claude Cowork,
 reasoning effort max; the serving model may differ from the configured
 identifier. This is the coordination note for the contract phase of the
-[initial proposal](../research-overview/01_INITIAL_RESEARCH_PROPOSAL_20261016.md),
-written after the [portfolio plan](../../research-overview/01_PORTFOLIO_RESEARCH_PLAN_20261016.md)
-and the [portfolio setup review](../../reviews/01_PORTFOLIO_SETUP_REVIEW_CLAUDE_20261016.md),
+[initial proposal](../../research-overview/01_INITIAL_RESEARCH_PROPOSAL_20261016.md),
+written after the [portfolio plan](../../../research-overview/01_PORTFOLIO_RESEARCH_PLAN_20261016.md)
+and the [portfolio setup review](../../../reviews/01_PORTFOLIO_SETUP_REVIEW_CLAUDE_20261016.md),
 whose changes C4–C6, C8 and C12 bear on this project and are answered in
 Section 6. Edward supplied Hakimoglu-Brown's preprint arXiv:2610.12803v1
 during the session; Sections 3.5 and 4.6 are built on it. This note is not
@@ -90,7 +90,8 @@ except conditionally on a preprint claim (Corollary 3.2).
    dominance near the real axis (Lemma A, Section 3.4) is kept as the
    alternative route. A search found no prior upper bound below \(1/2\)
    for any Dirichlet \(L\)-function and no conductor-uniform statement;
-   that is a search result, not a priority claim.
+   that is a historical search result, corrected after the source ledger below,
+   not a priority claim.
 
 ## 0. Conventions
 
@@ -175,8 +176,8 @@ and \(\overline{\int e^{tu^2}\Phi(u)e^{-i\bar zu}du}=\int e^{tu^2}\overline{\Phi
 | Gamma factor near height zero | \(\Gamma(s/2)\), pole at \(s=0\) | \(\Gamma((s+1)/2)\), pole at \(s=-1\) | as even | as odd |
 
 **Numerical check** (numerical;
-[record](../numerics/CHECK_CHARACTER_NORMALIZATION_CLAUDE_20261017.json),
-[script](../numerics/check_character_normalization_claude_20261017.py)).
+[record](../../numerics/CHECK_CHARACTER_NORMALIZATION_CLAUDE_20261017.json),
+[script](../../numerics/check_character_normalization_claude_20261017.py)).
 Sixteen characters: 3.2, 4.3, 5.2, 5.3, 5.4, 7.2–7.6, both real characters
 modulo 8, 11.2, 11.6, 13.4 and 13.10 (Conrey labels where they apply).
 \(H_{0,\chi}\) by full-line trapezoid quadrature of the kernel agrees with
@@ -212,8 +213,8 @@ Each imported statement is quoted from the source text read on 17 October
 | H5 | GRH for primitive characters of modulus \(q\le400{,}000\) to height \(t_0(q)=\max(10^8/q,\,7.5\cdot10^7/q+200)\) (even \(q\)), \(\max(10^8/q,\,3.75\cdot10^7/q+200)\) (odd \(q\)) | Platt, arXiv:1305.3087 (abstract); Math. Comp., doi:10.1090/mcom/3077 | rigorous interval computation | published | Target B, Section 4.1 |
 | H6 | Effective approximation \(H_t/B_t=f_t+O_\le(e_A+e_B+e_{C,0})\) for \(0<t\le\tfrac12\), \(0\le y\le1\), \(x\ge200\), with \(f_t=\sum_{n\le N}b_n^t n^{-s_*}+\gamma\sum_{n\le N}n^yb_n^tn^{-\bar s_*-\kappa}\), \(b_n^t=e^{(t/4)\log^2n}\), \(s_*=\tfrac{1+y-ix}2+\tfrac t2\alpha(\tfrac{1+y-ix}2)\), \(N=\lfloor\sqrt{x/4\pi+t/16}\rfloor\) | Polymath, Theorem 1.3 and Corollary 1.4 | zeta only | published; HTML rendering | template for Lemmas A and \(A_p\) |
 | H7 | For \(x\ge e^{C/t}\) every zero of \(H_t\) is real; for all \(X\ge0\), \(N_t(X)=g(X,t)+O(\log(2+X))\) | Polymath, Theorem 1.5(i), (iv) | zeta, constants not evaluated | published | template for H12 |
-| H8 | Every Dirichlet \(L\)-function is zero-free in \(\operatorname{Re}s>11/12\) | OpenAI preprint of 5 October 2026, pinned in the [arithmetic-source audit](../../../investigations-2/inactive/arithmetic_source_audit/README.md); Dirichlet norm-lift in that audit's base-change note | classical imports | **claimed**; complete scoped internal LLM audit of the main chain; not refereed | Corollary 3.2 |
-| H9 | The same in \(\operatorname{Re}s>7/8\); in \(\operatorname{Re}s>34999/40000\); and in \(\operatorname{Re}s>B_{\rm new}=(1507-2\sqrt{921})/1653\) | OpenAI preprint of 30 September 2026, Theorem 1.1, as restated in Liu, arXiv:2610.12234v1, Theorem 1.1 and Corollary 14.1; Liu, Theorems 15.1 and 21.1 | as stated there | **claimed**; not refereed; Liu read in full from the project copy; Lean scope as recorded in [result summary 10](../../../../result-summaries/10_quasi_rh_audits_and_amplification.md) | Corollary 3.2, conditional rows of Section 4.6 |
+| H8 | Every Dirichlet \(L\)-function is zero-free in \(\operatorname{Re}s>11/12\) | OpenAI preprint of 5 October 2026, pinned in the [arithmetic-source audit](../../../../investigations-2/inactive/arithmetic_source_audit/README.md); Dirichlet norm-lift in that audit's base-change note | classical imports | **claimed**; complete scoped internal LLM audit of the main chain; not refereed | Corollary 3.2 |
+| H9 | The same in \(\operatorname{Re}s>7/8\); in \(\operatorname{Re}s>34999/40000\); and in \(\operatorname{Re}s>B_{\rm new}=(1507-2\sqrt{921})/1653\) | OpenAI preprint of 30 September 2026, Theorem 1.1, as restated in Liu, arXiv:2610.12234v1, Theorem 1.1 and Corollary 14.1; Liu, Theorems 15.1 and 21.1 | as stated there | **claimed**; not refereed; Liu read in full from the project copy; Lean scope as recorded in [result summary 10](../../../../../result-summaries/10_quasi_rh_audits_and_amplification.md) | Corollary 3.2, conditional rows of Section 4.6 |
 | H10 | No upper bound on \(\Lambda_D\) for Dirichlet \(L\)-functions; \(\Lambda_{D_{p_n}}\to0\) only for reductions of cubic curves over function fields | Andrade–Chang–Miller, arXiv:1310.3477 (abstract) | — | published | precedent search |
 | H11 | At a highest simple zero \(x+ih\), \(q=h^2\): \(q'\le-2-\frac{4q}pS(x,p,t)+\frac{8q}{p^2-q}\) for \(p^2\ge5q\) (from \(K_h\ge(h/p)K_p\) for \(v\le h\)); stepped comparison Theorems 9 and 12; under \(\operatorname{Re}\rho\le7/8\) for zeta, \(\Lambda\le0.13963\) (Theorem 1), one-step \(0.1797275414\ldots\) (equation (18)) | Hakimoglu-Brown, arXiv:2610.12803v1 (working draft 7 October 2026), Sections 4, 6–7 and Remark 5; uses Polymath's boundary computation (its Lemma 2) | zeta; finite region from Polymath's Section 8.4; approximation band \(3\le\operatorname{Im}z\le6\), \(t\le1/5\) | unrefereed working note, conditional for its zeta bound; read in full (26 pages, PDF supplied by Edward, SHA-256 `960a06dc…d3a`); the comparison inequality re-derived here (Proposition 3.3) | Section 3.5, 4.6 |
 | H12 | For a fixed primitive \(\chi\) and every \(t'>0\) there is \(X(t')\) such that, for all \(t\in[t',t_*]\), every nonreal zero of \(H_{t,\chi}\) has \(\lvert x\rvert\le X(t')\) (uniform confinement, which gives the upper semicontinuity of \(M(t)\) that the first-contact argument needs) | the analogue of Polymath, Theorem 1.5(i), which Hakimoglu-Brown uses "uniformly on \(t\in[t_0,1/5]\)" | — | **open** for characters (expected from the large-height part of Lemma A at fixed \(q\)) | Target A |
@@ -225,7 +226,19 @@ the survey), Basak–Thorner–Zaharescu (arXiv:2404.16003), Hakimoglu-Brown
 (zeta only: "Only the zeta case is used"), and four web searches. It found
 no upper bound below \(1/2\) for the de Bruijn–Newman constant of any
 Dirichlet \(L\)-function and no statement uniform in the conductor. This
-is a search, not a priority audit.
+is a historical search, not a priority audit.
+
+**Literature correction, 17 October 2026.** Added for Edward Baker with
+LLM assistance by gpt-6.1-sol (Codex), reasoning effort ultra. Ki–Kim–Lee,
+*On the de Bruijn–Newman constant* (2009), Section 6, Example 1,
+pp. 303–304, also treat real primitive characters and prove the strict
+qualitative bound below 1/2. Thus the search statement above and the
+"zeta only" description are superseded. H10 describes what the cited
+Andrade–Chang–Miller abstract discusses, not the whole literature.
+[Round 3, Section 6](../round-3/03_SINE_TAIL_LIMIT_AND_COMPARISON_CODEX_20261017.md#6-controls-and-a-literature-correction)
+records the source check, the distinct complex-character family, and the
+absence of a priority claim. The original mathematical contract and
+planning status are retained; rounds 2–3 supply the later proofs.
 
 ## 3. The transfer contract
 
@@ -278,7 +291,7 @@ depends on \((t_0,y_0)\) only through \(\lambda=t_0+y_0^2/2\), since
 this shape needs \(L(s,\chi)\ne0\) for \(\operatorname{Re}s\ge\tfrac12+\tfrac12\sqrt{2\lambda}\)
 below its barrier: \(0.875\) for \(\lambda=9/32\), \(0.854\) for
 \(\lambda=1/4\), \(0.832\) for \(\lambda=0.22\)
-([benchmark record](../numerics/BENCHMARK_FAMILY_CONTRACT_CLAUDE_20261017.json), section D).
+([benchmark record](../../numerics/BENCHMARK_FAMILY_CONTRACT_CLAUDE_20261017.json), section D).
 
 ### 3.2 The conditional uniform bound
 
@@ -301,7 +314,7 @@ claimed half-planes give:
 | \(B_{\rm new}=(1507-2\sqrt{921})/1653\) | claimed (Liu, Theorem 21.1) | \((1867057-10888\sqrt{921})/5464818=0.2811856084\ldots\) |
 
 The zeta case of this deduction is the
-[prime-variance bridge note](../../../quasi-rh/prime-variance-exponents/notes/QUASI_RH_NEWMAN_BRIDGE_20261008.md);
+[prime-variance bridge note](../../../../quasi-rh/prime-variance-exponents/notes/QUASI_RH_NEWMAN_BRIDGE_20261008.md);
 for zeta it is weaker than the published \(0.2\), for the Dirichlet family
 it is the best bound below \(\tfrac12\) known to this search, and it is
 uniform in \(q\). Every unconditional result below is read against
@@ -463,8 +476,8 @@ computation: if the consistent transfer of a published zeta row gives a
 planning value above the conditional baseline \(0.2812\) at every modulus
 Platt covers, the per-character route at existing verification heights is
 not a route to a better number and is demoted. All numbers are in the
-[benchmark record](../numerics/BENCHMARK_FAMILY_CONTRACT_CLAUDE_20261017.json)
-([script](../numerics/benchmark_family_contract_claude_20261017.py)); except
+[benchmark record](../../numerics/BENCHMARK_FAMILY_CONTRACT_CLAUDE_20261017.json)
+([script](../../numerics/benchmark_family_contract_claude_20261017.py)); except
 for Section 4.1 they are planning arithmetic.
 
 ### 4.1 Platt's budget in the analytic conductor (numerical)
@@ -615,7 +628,7 @@ the Euler product, only through \(|L'/L(s,\chi)|\le-\zeta'/\zeta(\sigma)\) at
 \(A_p\)); a large conductor; and nothing about zeros except
 \(|\operatorname{Im}z|<1\). First-term dominance (Lemma A) uses \(|a_n|\le1\)
 in place of the Euler product. The controls of
-[summary 12](../../../../result-summaries/12_collision_controls_and_screening.md)
+[summary 12](../../../../../result-summaries/12_collision_controls_and_screening.md)
 fail these premises. The Euler-factor controls \(\Phi_{c,p}\) have
 Dirichlet series \(\zeta(s)(1+(2\sqrt p/c)p^{-s}+p^{1-2s})\): the
 coefficient of \(p^{-s}\) in their \(-F'/F\) is \((1+2\sqrt p/c)\log p\),
@@ -692,10 +705,10 @@ proposal and the plan are not edited here.
 
 Read in full for this note: the portfolio README and plan, the portfolio
 setup review, this project's proposal and READMEs, the twenty files of
-[`avoid/`](../../../../avoid/README.md) and the sixteen of
-[`result-summaries/`](../../../../result-summaries/README.md), the
+[`avoid/`](../../../../../avoid/README.md) and the sixteen of
+[`result-summaries/`](../../../../../result-summaries/README.md), the
 brainstorm reply's Section 8, the
-[quasi-RH Newman bridge note](../../../quasi-rh/prime-variance-exponents/notes/QUASI_RH_NEWMAN_BRIDGE_20261008.md),
+[quasi-RH Newman bridge note](../../../../quasi-rh/prime-variance-exponents/notes/QUASI_RH_NEWMAN_BRIDGE_20261008.md),
 the arithmetic-source audit's README and its base-change note (Sections
 4–6), Liu's preprint (project copy), and Hakimoglu-Brown's preprint (26
 pages, supplied by Edward during the session). Dobner's arXiv v2 was read

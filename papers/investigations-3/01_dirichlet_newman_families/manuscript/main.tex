@@ -1,0 +1,377 @@
+\documentclass[11pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage{microtype}
+\usepackage[hidelinks]{hyperref}
+\usepackage{enumitem}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{remark}\newtheorem{remark}[theorem]{Remark}
+\newcommand{\Rea}{\operatorname{Re}}
+\newcommand{\Ima}{\operatorname{Im}}
+\newcommand{\dd}{\mathrm{d}}
+\newcommand{\calH}{\mathcal H}
+\title{A logarithmic-derivative comparison for Dirichlet Newman families}
+\author{Drafted for Edward Baker}
+\date{17 October 2026}
+\begin{document}
+\maketitle
+\begin{center}\small Research draft. Proofs and scalar arithmetic have internal same-model LLM checks;\par
+independent specialist review and a priority audit remain outstanding.\end{center}
+\begin{abstract}
+We give an explicit lower bound for the off-zero logarithmic derivative of
+a primitive Dirichlet heat deformation. A scalar comparison then controls
+the time at which all its zeros become real. A real sine tail added to
+canonical-product truncations preserves the required initial lower bound
+on the whole real line and allows the comparison to pass to the original
+function without a compact-confinement hypothesis. In the normalization
+$s=(1+iz)/2$, the argument gives $\Lambda_\chi\le27/100$ for every primitive
+character of conductor $q\ge10^{12}$, and
+$\Lambda_\chi=O((\log q)^{-4/7})$ uniformly as $q\to\infty$.
+The finite scalar inequalities use exact rational enclosures. Extended
+proofs and the certificate specification are retained in the accompanying
+research notes.
+\end{abstract}
+
+\section{Normalization and statements}
+Let $\chi$ be primitive of conductor $q>1$, with
+$\chi(-1)=(-1)^{\mathfrak a}$, $\mathfrak a\in\{0,1\}$.
+Choose a unit phase $\alpha_\chi$ with
+$\alpha_\chi^2\varepsilon(\chi)=1$, where
+$\varepsilon(\chi)=\tau(\chi)/(i^{\mathfrak a}\sqrt q)$, and set
+\begin{align}
+ \xi_\chi(s)&=\alpha_\chi(q/\pi)^{s/2}
+ \Gamma\bigl((s+\mathfrak a)/2\bigr)L(s,\chi),\label{eq:xi}\\
+ \Phi_\chi(u)&=4\alpha_\chi(\pi/q)^{\mathfrak a/2}
+ e^{(1+2\mathfrak a)u}\sum_{n\ge1}\chi(n)n^{\mathfrak a}
+ e^{-\pi n^2e^{4u}/q},\label{eq:phi}\\
+ H_{t,\chi}(z)&=\int_{\mathbb R}e^{tu^2}\Phi_\chi(u)e^{izu}\,\dd u.
+ \label{eq:heat}
+\end{align}
+Then $H_{0,\chi}(z)=\xi_\chi((1+iz)/2)$ and
+$\partial_tH_{t,\chi}=-\partial_z^2H_{t,\chi}$.
+The Hermitian functional equation makes $H_{t,\chi}$ real entire, although
+it need not be even. With compatible phases,
+$H_{t,\bar\chi}(z)=\overline{H_{t,\chi}(-\bar z)}$.
+The normalization is detailed in Note~1 \cite{note1} and agrees with
+Dobner's framework \cite{dobner}. Its associated constant $\Lambda_\chi$
+is characterized by reality of all zeros exactly for $t\ge\Lambda_\chi$.
+
+\begin{theorem}[Dirichlet consequence]\label{thm:dirichlet}
+Every primitive Dirichlet character of conductor $q\ge10^{12}$ satisfies
+\[\Lambda_\chi\le\frac{27}{100}.\]
+Moreover, uniformly over primitive characters as $q\to\infty$,
+\[0\le\Lambda_\chi=O\bigl((\log q)^{-4/7}\bigr),\qquad
+\Lambda_\chi\longrightarrow0.\]
+These statements use neither GRH, a quasi-RH half-plane, nor an assumed
+confinement theorem for the character flow.
+\end{theorem}
+
+The lower bound is Dobner's published theorem \cite{dobner}. The upper
+bound will follow from a general comparison. For $C>0$ define
+\begin{align}
+ D_C(t)&=1+2C(1-e^{-t/2}),&
+ m_C(t)&=\frac{Ce^{-t/2}}{D_C(t)},\label{eq:dm}\\
+ I_C(t)&=e^{-t}D_C(t)^{4/3},&
+ J_C(t)&=\int_0^t I_C(s)\,\dd s.\label{eq:ij}
+\end{align}
+
+\begin{theorem}[Comparison without confinement]\label{thm:general}
+Let $F$ be a nonzero real entire function of order at most one, with all
+zeros in $|\Ima z|\le1$. Suppose
+\[ -\Ima\frac{F'}F(x+3i)\ge C>0\qquad(x\in\mathbb R). \]
+If $0<T\le1/2$ and $J_C(T)\ge1/2$, then
+$e^{-T\partial_z^2}F$ has only real zeros.
+\end{theorem}
+
+The proof first treats flows with confined nonreal zeros, then removes
+that restriction by a sine-tail approximation. No evenness assumption is
+present. The extended approximation argument is in Note~3 \cite{note3}.
+
+\section{Canonical sums and a positive-time lower bound}
+For a real entire function with its zeros $\rho=a+iv$ in a bounded strip,
+the genus-one product gives, at $p$ above that strip,
+\begin{equation}
+ S(x,p,t):=-\Ima\frac{F_t'}{F_t}(x+ip)
+ =\sum_\rho\frac{p-v}{(x-a)^2+(p-v)^2}.\label{eq:poisson}
+\end{equation}
+Zeros are counted with multiplicity, including a possible zero at the
+origin. The imaginary compensators cancel under conjugation. Their
+absolute summability follows from bounded imaginary parts and
+$\sum_{\rho\ne0}|\rho|^{-2}<\infty$. A separate, possibly divergent,
+real sum of reciprocal zeros is never used.
+
+For the Dirichlet flow, the double-exponential kernel decay gives
+\begin{equation}
+ \log\max_{|z|\le R}|H_{t,\chi}(z)|
+ =O_{\chi,T}((1+R)\log(2+R))\quad(0\le t\le T).
+ \label{eq:growth}
+\end{equation}
+The approximants in Section~\ref{sec:approx} have exponential-type growth.
+These bounds also justify the canonical differentiations and completeness
+of the real characteristics below. Details, including the zero-free
+anchor and uniform Jensen estimate, appear in Note~2, Section~2
+\cite{note2}.
+
+\begin{proposition}[Burgers lower bound]\label{prop:floor}
+For the Dirichlet flow or the exponential-type approximants below,
+suppose the zeros remain in $|\Ima z|\le1$ and $S(x,p,0)\ge C>0$.
+Put $d=p-1>0$. Then
+\begin{equation}
+ S(x,p,t)\ge
+ \frac{Ce^{-2t/d^2}}{1+dC(1-e^{-2t/d^2})}
+ \qquad(x\in\mathbb R,\ 0\le t\le1/2).\label{eq:riccati}
+\end{equation}
+\end{proposition}
+\begin{proof}
+Write $U=F_t'/F_t=u-iS$ on the line of height $p$.
+Equation~\eqref{eq:poisson} and its differentiated sums give
+\[ |u_x|\le S/d,\qquad |S_{xx}|\le2S/d^2. \]
+The heat equation implies $U_t=-U_{xx}-2UU_x$, hence
+\[ S_t+2uS_x=-S_{xx}-2Su_x. \]
+Along $x'=2u$, this yields $S'\ge-2S/d^2-2S^2/d$.
+The Riccati solution with initial value $C$ is the right side of
+\eqref{eq:riccati}. The characteristics are complete in both time
+directions: growth and a uniformly zero-free anchor $ip$ imply
+$|u(x,p,t)|=O((1+|x|)\log(2+|x|))$ on bounded time intervals, which
+prevents finite-time escape. Their flow is onto $\mathbb R$, proving
+uniformity in $x$.
+\end{proof}
+
+At $p=3$, the right side is $m_C(t)$ in \eqref{eq:dm}. This is a
+quantified loss, rather than an assertion that the time-zero lower bound
+persists unchanged.
+
+\section{The comparison when contacts are compact}
+We briefly retain the confinement hypothesis used in Note~2: on each
+$[\delta,T]$, $\delta>0$, the nonreal zeros lie in a bounded horizontal
+region. This hypothesis will be established for approximants only.
+
+At a highest simple zero $x+ih$, put $Q=h^2$. The conjugate-pair kernel
+\[ K_h(d,v)=\frac{h-v}{d^2+(h-v)^2}
+                 +\frac{h+v}{d^2+(h+v)^2} \]
+obeys $K_h/h\ge K_p/p$ whenever $|v|\le h$ and $p^2\ge5h^2$.
+Clearing denominators reduces this to nonnegativity of
+\[ D^2+(A+B-6r)D+(A-r)(B-r),\quad
+D=d^2,\ A=h^2,\ B=p^2,\ 0\le r=v^2\le A. \]
+The zero-motion identity, with the zero's own conjugate pair removed,
+therefore gives
+\begin{equation}
+ Q'\le-2-\frac{4Q}{p}S(x,p,t)+\frac{8Q}{p^2-Q}.
+ \label{eq:highest}
+\end{equation}
+This form of the comparison appears in Hakimoglu-Brown \cite{hb}; the
+algebra and its non-even extension are recorded in Notes~1--2.
+
+Classical strip contraction gives $Q\le1$. At $p=3$,
+$8/(9-Q)\le1$, so Proposition~\ref{prop:floor} gives
+\[ Q'\le-2-\left(\frac43m_C(t)-1\right)Q. \]
+The corresponding solution from one is
+\begin{equation}
+ \overline Q(t)=\frac{1-2J_C(t)}{I_C(t)}.\label{eq:qbar}
+\end{equation}
+Until it reaches zero it decreases, with descent rate at least
+$2-\overline Q\ge1$.
+
+For completeness, use a strictly higher comparison curve, with initial
+value $1+\varepsilon$ and a positive $\varepsilon$ added to its
+differential equation. This supplies an initial time gap uniformly in
+space. Confinement makes a later first contact compact. A simple contact
+contradicts \eqref{eq:highest}; a multiple contact has a backward Hermite
+split above the smooth curve. Letting $\varepsilon\downarrow0$ yields
+$M(t)\le\overline Q(t)$ while the latter is positive. If it reaches zero
+at $T_0$, strip contraction makes $F_{t+\overline Q(t)/2}$ real-rooted for
+$t<T_0$. Heat continuity and Hurwitz then make $F_{T_0}$ real-rooted;
+strip contraction preserves that property afterwards.
+The extended contact proof is Note~2, Section~4 \cite{note2}.
+
+\section{Removing confinement by a real sine tail}\label{sec:approx}
+Fix $0<C_1<C$, where $C$ is the input in
+Theorem~\ref{thm:general}, and write
+\[F(z)=c e^{az}z^m\prod_{\rho\ne0}E_1(z/\rho),\qquad
+ E_1(w)=(1-w)e^w,\quad c,a\in\mathbb R.\]
+Let $P_R$ truncate this product at $|\rho|\le R$, retaining conjugate
+pairs and multiplicities. Set
+\begin{equation}
+ \kappa=2(C_1+1),\quad h=\pi/\kappa,\quad M=\lfloor R/(4h)\rfloor,
+ \qquad G_R(z)=P_R(z)\prod_{k>M}\left(1-\frac{z^2}{k^2h^2}\right).
+ \label{eq:approx}
+\end{equation}
+The new zeros are real, and $G_R\to F$ locally uniformly.
+
+\begin{lemma}\label{lem:approx}
+For all sufficiently large $R$, $S_{G_R}(x,3,0)\ge C_1$ for every real
+$x$. Each fixed approximant flow has uniformly confined nonreal zeros
+on every bounded time interval. Moreover, $(G_R)_t\to F_t$ locally
+uniformly, uniformly on bounded nonnegative time intervals.
+\end{lemma}
+\begin{proof}
+We give the estimates that carry the argument; their extended proofs
+are in Note~3, Sections~2--4 \cite{note3}.
+For $|x|\le R/2$, the omitted true-zero Poisson tail is at most
+\[16(p+1)\sum_{|\rho|>R}|\rho|^{-2}=o(1).\]
+For $|x|\ge R/2$, the full real lattice has lower bound
+$\kappa\tanh(\kappa p)$, and removing its central zeros costs at most
+$8p/(hR)+16p/R^2$. At $p=3$ this leaves a bound exceeding $C_1$;
+the strict input gap $C-C_1$ handles the central region.
+
+For fixed $R$, the sine product rewrites $G_R$ as
+$e^{b_Rz}r_R(z)\sin(\kappa z)$ with $b_R$ real and $r_R$ real rational,
+its poles canceled by sine zeros. If $r_R(z)\sim c_Rz^{d_R}$ at infinity,
+Gaussian imaginary translation gives, uniformly for $|\Ima z|\le1$
+and bounded $t$,
+\begin{equation}
+ \frac{(G_R)_t(z)}{c_Rz^{d_R}e^{b_Rz+(\kappa^2-b_R^2)t}}
+ =\sin\bigl(\kappa(z-2b_Rt)\bigr)+O_{R,T}(|\Rea z|^{-1}).
+ \label{eq:sine}
+\end{equation}
+Along the Gaussian line the real part remains $\Rea z$, so no rational
+pole is crossed. Rouch\'e disks about the distant real sine zeros contain
+exactly one zero each; reality forces it to be real. The complement in
+the strip is zero-free. The strip itself follows from the genus-one
+operator theorem of Cardon \cite[Theorem~1.5]{cardon}, with quadratic
+parameter $2t$ and no quadratic exponential in $G_R$.
+
+Finally, for any fixed $1<\sigma<2$, canonical-product bounds give
+$|P_R(z)|\le e^{A(1+|z|)^\sigma}$ uniformly in $R$. The added tail is
+bounded by $\sinh(\kappa|z|)/(\kappa|z|)\le e^{\kappa|z|}$.
+These provide a common sub-Gaussian majorant in
+\[ F_t(z)=\frac1{\sqrt\pi}\int_{\mathbb R}e^{-v^2}
+                   F(z+2i\sqrt t\,v)\,\dd v. \]
+Dominated convergence proves the heat-limit assertion. The limit is
+nonzero: real Gaussian translation inverts imaginary Gaussian translation
+under this same majorant (Note~3, Section~4).
+\end{proof}
+
+Apply the compact comparison to $G_R$. If $J_C(T)>1/2$, choose $C_1<C$
+close enough that $J_{C_1}(T)>1/2$. The lemma makes $(G_R)_T$ real-rooted.
+Hurwitz's theorem in each open half-plane passes this to the nonzero
+limit $F_T$. For equality, first use $T+\eta<1/2$ and then let
+$\eta\downarrow0$; the case $T=1/2$ is classical strip contraction.
+This proves Theorem~\ref{thm:general}. No bound uniform in $R$ on the
+approximants' confinement regions is required.
+
+\section{Arithmetic input and exact scalar arithmetic}
+The initial Dirichlet logarithmic derivative obeys
+\begin{align}
+ S_\chi(x,p,0)&=\frac12\Rea\frac{\xi_\chi'}{\xi_\chi}
+                    \left(\frac{1+p+ix}{2}\right),\label{eq:initialidentity}\\
+ S_\chi(x,p,0)&\ge C_{q,\mathfrak a}(p):=
+ \frac14\left[\log\frac q\pi+
+ \psi\left(\frac{1+p+2\mathfrak a}{4}\right)\right]
+ -\frac12\left(-\frac{\zeta'}\zeta\right)\left(\frac{1+p}{2}\right).
+ \label{eq:c}
+\end{align}
+Indeed, the Hermitian functional equation gives
+\eqref{eq:initialidentity}; the gamma logarithmic derivative is bounded
+below by its value on the real axis, and the Euler product gives
+$|L'/L(s,\chi)|\le-\zeta'/\zeta(\Rea s)$ for $\Rea s>1$.
+At $p=3$ the even case is the smaller of the two parities.
+
+The finite certificate in Note~2, Section~5 \cite{note2}, proves
+\begin{equation}
+ C_{q,\mathfrak a}(3)>\frac{1221}{200}=6.105>6
+ \qquad(q\ge10^{12},\ \mathfrak a=0,1).\label{eq:c6}
+\end{equation}
+It uses $\log10>23/10$, $\log4<7/5$, $\pi<4$,
+$\gamma<H_{1000}-\log1000<29/50$, and a prime-power sum through 1000
+with the positive tail $(\log1000+1)/1000$ to prove
+$(-\zeta'/\zeta)(2)<3/5$. All decisions use exact rational enclosures.
+
+The integral in \eqref{eq:ij} has the elementary form
+\begin{equation}
+ J_C(t)=\frac{3(1+2C)}{14C^2}(D_C(t)^{7/3}-1)
+       -\frac3{20C^2}(D_C(t)^{10/3}-1).\label{eq:exactj}
+\end{equation}
+For $C=6$, $T=27/100$, the same certificate encloses
+\[0.502464325582617834\le J_6(T)\le0.502464325582617835.\]
+Alternating exponential series and rational cube-root bisection make
+the lower endpoint rigorous. Theorem~\ref{thm:general} and
+\eqref{eq:c6} prove the explicit part of Theorem~\ref{thm:dirichlet}.
+The certificate programme, parameters, hashes, and extended scalar
+verification are referenced from Notes~2--3 rather than reproduced here.
+Its original record was conditional on an analytic contract; Section~
+\ref{sec:approx} supplies that contract without changing the arithmetic.
+
+For $0\le t\le1/2$,
+\[J_C(t)\ge e^{-1/2}
+\frac{(1+Ce^{-1/4}t)^{7/3}-1}{(7/3)Ce^{-1/4}}.\]
+Consequently
+\begin{equation}
+ B(C):=\frac{e^{1/4}}C
+ \left[\left(1+\frac76e^{1/4}C\right)^{3/7}-1\right]
+ \label{eq:bc}
+\end{equation}
+is a sufficient reality time whenever $B(C)\le1/2$ and
+$C\le C_{q,\mathfrak a}(3)$. Since
+$C_{q,\mathfrak a}(3)=\frac14\log q+O(1)$ uniformly in parity,
+$B(C)=O((\log q)^{-4/7})$ for the natural input. This proves the
+remaining assertions of Theorem~\ref{thm:dirichlet}.
+
+\section{Scope, controls, and provenance}
+The sine-tail limit bypasses confinement for the original Dirichlet
+flow; it does not prove that separate assertion. A periodic real-entire
+heat flow may have a positive initial logarithmic-derivative floor and
+unboundedly many nonreal zeros at positive times. The example and its
+scope are in Note~2, Section~7. This does not contradict the present
+quantitative comparison.
+
+The arithmetic gain enters through \eqref{eq:c}. Euler-factor collision
+controls can violate its precise Euler-product allowance. Weighted-square,
+reflected, and primitive-compatible controls need not have the character
+completion or that allowance. The general comparison remains valid when
+their actual input floor meets its assumptions; no character-specific
+lower bound is assigned to them by analogy. This is smoothing at
+positive time, not a proof of GRH at time zero.
+
+A literature correction is necessary. Ki--Kim--Lee
+\cite[Section~6, Example~1]{kkl} already extend their qualitative
+strict bound below $1/2$ to real primitive Dirichlet characters. The
+initial investigation's search missed that precedent. Their example
+for a complex character uses a real self-dual combination, rather than
+the individual non-even family in \eqref{eq:heat}. We make no priority
+claim for the quantitative results of this draft.
+
+\paragraph{Acknowledgment and review status.}
+This manuscript was drafted for Edward Baker with substantial assistance
+from OpenAI's \texttt{gpt-6.1-sol} in Codex, recorded reasoning effort
+\texttt{ultra}. Same-model subagents assisted with derivation and
+adversarial proof checks. The exact scalar programme was also generated
+with LLM assistance. These checks do not constitute independent
+specialist review. Notes~1--3 preserve the mathematical dependencies,
+corrections, and calculation records.
+
+\begin{thebibliography}{9}
+\bibitem{dobner} A. Dobner,
+\emph{A proof of Newman's conjecture for the extended Selberg class},
+Acta Arithmetica \textbf{201} (2021), 29--62;
+\href{https://arxiv.org/abs/2005.05142v2}{arXiv:2005.05142v2}.
+\bibitem{cardon} D. A. Cardon,
+\emph{Complex zero strip decreasing operators},
+\href{https://arxiv.org/abs/1401.0237v2}{arXiv:1401.0237v2}, Theorem~1.5;
+J. Math. Anal. Appl. (2015),
+\href{https://doi.org/10.1016/j.jmaa.2015.01.026}{doi:10.1016/j.jmaa.2015.01.026}.
+\bibitem{kkl} H. Ki, Y.-O. Kim, and J. Lee,
+\emph{On the de Bruijn--Newman constant}, Advances in Mathematics
+\textbf{222} (2009), 281--306,
+\href{https://doi.org/10.1016/j.aim.2009.04.003}{doi:10.1016/j.aim.2009.04.003}.
+\bibitem{hb} C. Hakimoglu-Brown,
+\emph{A conditional bound $\Lambda\le0.13963$ for the de Bruijn--Newman constant},
+\href{https://arxiv.org/abs/2610.12803v1}{arXiv:2610.12803v1} (2026), Section~4.
+\bibitem{note1} Research Note 1, prepared for E. Baker with Claude Opus 5.5,
+\emph{Normalization and transfer contract}, 17 October 2026,
+\href{../notes/round-1/01_NORMALIZATION_AND_TRANSFER_CONTRACT_CLAUDE_20261017.md}{notes/round-1}.
+\bibitem{note2} Research Note 2, prepared for E. Baker with GPT-6.1-sol,
+\emph{An explicit positive-time floor and a comparison conditional on confinement},
+17 October 2026,
+\href{../notes/round-2/02_BURGERS_FLOOR_AND_CONDITIONAL_COMPARISON_CODEX_20261017.md}{notes/round-2}.
+\bibitem{note3} Research Note 3, prepared for E. Baker with GPT-6.1-sol,
+\emph{Removing confinement from the strip comparison by a real sine tail},
+17 October 2026,
+\href{../notes/round-3/03_SINE_TAIL_LIMIT_AND_COMPARISON_CODEX_20261017.md}{notes/round-3}.
+\end{thebibliography}
+\end{document}

@@ -18,7 +18,7 @@ first needed; no large archive is created by this setup.
 
 17 October 2026. Added by Claude Opus 5.5 (`claude-opus-5-5`, Claude
 Cowork, reasoning effort max) for
-[note 01](../notes/01_NORMALIZATION_AND_TRANSFER_CONTRACT_CLAUDE_20261017.md).
+[note 01](../notes/round-1/01_NORMALIZATION_AND_TRANSFER_CONTRACT_CLAUDE_20261017.md).
 Both programmes are standard-library Python and print one deterministic
 JSON record, floats rounded to 12 significant figures. They are floating
 diagnostics and planning arithmetic, not outward-rounded certificates; no
@@ -48,12 +48,16 @@ number in either record bounds a de Bruijn–Newman constant.
   terms (the Platt–Trudgian row needs 630,783); Section H by Simpson's
   rule, calibrated against Hakimoglu-Brown's equation (18),
   0.1797275414. Stopping answer, fixed before the run (note Section 4):
-  a transferred value above 0.2812 at every modulus Platt covers demotes
-  first-term dominance at existing verification heights. It did (0.30).
+  the transferred values exceeded 0.2812 (about 0.30). Review 01 restricts
+  the resulting demotion to these two leading-order row-transfer models;
+  other first-term-dominance parameters and mollifiers were not tested.
 
-Run from this folder; each command regenerates its record byte for byte.
-Both records were generated with Python 3.13.16 on x86_64 Linux and
-replayed byte-identically with Python 3.10.12 on aarch64 Linux.
+Run from this folder. Both records were generated with Python 3.13.16 on
+x86_64 Linux and replayed byte-identically with Python 3.10.12 on aarch64
+Linux. Review 01 found byte identity for the benchmark on local macOS,
+while the normalization output agreed numerically with differing roundoff
+residuals. Byte identity is claimed only for the tested environments;
+compare temporary output before replacing a stored record.
 
 ```sh
 python3 -I check_character_normalization_claude_20261017.py > CHECK_CHARACTER_NORMALIZATION_CLAUDE_20261017.json
@@ -69,3 +73,67 @@ python3 -I benchmark_family_contract_claude_20261017.py > BENCHMARK_FAMILY_CONTR
 
 A replay or hash shows the arithmetic is reproducible, not that the
 planning hypothesis behind Sections B and E–H holds.
+
+## Codex review loss diagnostic
+
+17 October 2026. Prepared for Edward Baker with substantial LLM assistance;
+**gpt-6.1-sol (Codex), reasoning effort ultra**. The
+[contract review](../reviews/01_NORMALIZATION_AND_TRANSFER_CONTRACT_REVIEW_CODEX_20261017.md)
+adds a bounded sensitivity check of the permitted loss `delta = C/4` at
+conductors `1e8` and `1e12`, both parities, with `a=1` and `b=0`. The
+[programme](check_comparison_loss_codex_20261017.py) hash-checks the reviewed
+benchmark source, independently integrates its rational ODE in closed form,
+and cross-checks the selected minima against Simpson quadrature. It retains
+the original height grid. The [record](CHECK_COMPARISON_LOSS_CODEX_20261017.json)
+contains the actual local runtime and four planning values. These assume
+positive-time persistence and H12; they are not certified bounds.
+
+```sh
+python3 -I check_comparison_loss_codex_20261017.py > CHECK_COMPARISON_LOSS_CODEX_20261017.json
+```
+
+The review also reports that the original benchmark record replays byte for
+byte on local macOS/Python 3.10.0, while the original normalization record
+agrees numerically but differs in roundoff residuals. The general
+byte-identity wording above has been narrowed accordingly.
+
+| File | SHA-256 |
+| --- | --- |
+| check_comparison_loss_codex_20261017.py | `9e38938d4aa4b06aab13136fd786c27f975e20fdf9c45118a779997c7e50ac97` |
+| CHECK_COMPARISON_LOSS_CODEX_20261017.json | `143c35012a9d0653a77bcbcc3abddee72af452de2a08e817dc45e4a7e5f58027` |
+
+## Round-2 exact scalar certificate
+
+17 October 2026. Prepared for Edward Baker with substantial LLM assistance;
+**gpt-6.1-sol (Codex), reasoning effort ultra**. For the
+[round-2 analytic note](../notes/round-2/02_BURGERS_FLOOR_AND_CONDITIONAL_COMPARISON_CODEX_20261017.md),
+the [programme](certify_dirichlet_scalar_conditional_20261017.py) proves,
+using rational arithmetic, that the time-zero floor exceeds 6 for both
+parities at q >= 10^12 and that J_6(27/100) > 1/2. The
+[record](DIRICHLET_SCALAR_CONDITIONAL_CERTIFICATE_20261017.json) gives
+outward decimal displays of the rational enclosures and actual runtime.
+Question and domain: one fixed scalar comparison, p=3, C=6, T=27/100,
+with a von Mangoldt cutoff of 1000. Baseline: J >= 1/2. Stopping answer:
+accept the finite scalar implication only if every exact inequality passes.
+At capture, the implication to Lambda <= 0.27 was conditional on H12.
+The [round-3 proof](../notes/round-3/03_SINE_TAIL_LIMIT_AND_COMPARISON_CODEX_20261017.md)
+now supplies the analytic implication without H12. The numerical record
+retains its original conditional-contract wording and certifies only the
+same finite scalar inequalities; the theorem is in the note and manuscript.
+
+```sh
+python3 -I certify_dirichlet_scalar_conditional_20261017.py
+```
+
+All decisions use `fractions.Fraction`; no floating-point decision or
+large derived data is involved. Runtime metadata may differ on replay.
+The original Claude programmes are byte-preserved references: their
+opening docstrings retain the capture-time note path, now superseded by
+the working round-1 link above. The legacy benchmark key
+`distinct_Lambda_classes` counts conjugacy classes requiring checks,
+not proven distinct constants.
+
+| File | SHA-256 |
+| --- | --- |
+| certify_dirichlet_scalar_conditional_20261017.py | `0b7d513728d6c20ae380bb9b3ea9bc01a8c8963be1d9efd5aab970a4535b4cf9` |
+| DIRICHLET_SCALAR_CONDITIONAL_CERTIFICATE_20261017.json | `ff6e250a2340bdc88e00c6c2a9043257d50076c44231d7d0b7fd633de4030837` |

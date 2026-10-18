@@ -61,3 +61,19 @@ for polynomial controls.
 - Fractal Laplacians: [obstructions](../papers/investigations/ccm-fractal-laplacians/notes/CCM_PRIME_JUMP_GEOMETRY_OBSTRUCTIONS_20260926.md), [critical review](../papers/investigations/ccm-fractal-laplacians/reviews/PRIME_JUMP_GEOMETRY_CRITICAL_REVIEW_20260926.md).
 - Detector: [manuscript](../papers/misc/rh-detector/rh_detector.tex), [STATUS](../papers/misc/rh-detector/STATUS.md), [README](../papers/misc/rh-detector/README.md).
 - Program-wide context: [program meta-analysis](../papers/investigations/program-meta-analysis/reviews/PROGRAM_META_ANALYSIS_20260926.md), [CCM threshold update](../papers/investigations/program-meta-analysis/notes/CCM_THRESHOLD_OBSTRUCTION_UPDATE_20260928.md).
+
+## Dirichlet Newman continuation on 17 October 2026
+
+Prepared for Edward Baker with substantial LLM assistance; recorded model
+**gpt-6.1-sol (Codex), reasoning effort ultra**. Status in the source:
+"proved in-note; internal same-model checks only." The
+[round-3 sine-tail proof](../papers/investigations-3/01_dirichlet_newman_families/notes/round-3/03_SINE_TAIL_LIMIT_AND_COMPARISON_CODEX_20261017.md)
+bypasses the confinement premise in the positive-time comparison, yielding
+Lambda_chi <= 0.27 for every primitive q >= 10^12 and
+O((log q)^(-4/7)) -> 0 in the conductor aspect. The zero lower bound is
+imported from Dobner. This is positive-time smoothing, with no GRH claim.
+The [manuscript](../papers/investigations-3/01_dirichlet_newman_families/manuscript/main.tex)
+and [focused same-model check](../papers/investigations-3/01_dirichlet_newman_families/reviews/02_SINE_TAIL_AND_MANUSCRIPT_CHECK_CODEX_20261017.md)
+record the theorem and dependencies; specialist review and a priority
+audit remain outstanding. Ki–Kim–Lee's earlier qualitative real-character
+result corrects the initial search. H12 for the original flow remains open.

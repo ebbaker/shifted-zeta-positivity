@@ -24,7 +24,7 @@ Return to [project histories](../README.md).
      this project's proposal, the `avoid/` and `result-summaries/` folders
      and the cited sources (with Hakimoglu-Brown's preprint, supplied during
      the session), and wrote
-     [note 01](../../notes/01_NORMALIZATION_AND_TRANSFER_CONTRACT_CLAUDE_20261017.md)
+     [note 01](../../notes/round-1/01_NORMALIZATION_AND_TRANSFER_CONTRACT_CLAUDE_20261017.md)
      with its [check programmes](../../numerics/README.md): the
      normalization table, hypothesis ledger, transfer contract, first
      bounded test and proposed staging of the contract phase.

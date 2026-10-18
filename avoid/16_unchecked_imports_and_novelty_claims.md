@@ -28,6 +28,14 @@ theorem; "X is new" before the search.
 - Done right: Paper 2's imports from Kasahara were "source-verified against the original paper" ([omega-string STATUS](../papers/weil-positivity/shifted-zeta/omega-string/STATUS.md)); the Newman certificate audit read every analytic link of Gomila's hypotheses (ii) and (iii) ([audit README](../papers/investigations-2/newman_certificate_audit/README.md)).
 - In this round: Review 16's Corollary 2 cited two 2026 \(\Lambda\) claims it "could not verify" and said so; [Review 19](../papers/investigations-2/active/22_theta_manifold_geometry/reviews/19_PATHS_FORWARD_AFTER_THE_SECOND_ROUND_CLAUDE_20261015.md) §1 quotes the published \(\Lambda\) bounds "as I read the literature" for the same reason.
 
+- 17 October 2026 continuation (gpt-6.1-sol, effort ultra):
+  [Dirichlet round 3, Section 6](../papers/investigations-3/01_dirichlet_newman_families/notes/round-3/03_SINE_TAIL_LIMIT_AND_COMPARISON_CODEX_20261017.md#6-controls-and-a-literature-correction)
+  corrects the initial abstract-led search after reading Ki–Kim–Lee's
+  Section 6: "The earlier search missed this real-character precedent."
+  The manuscript records the correction without a priority claim. The same
+  note checks Cardon's general operator theorem because the Fourier-only
+  strip theorem does not cover its sine-tail approximants.
+
 ## What it cost
 
 A full agent run; a wrong normalization; a same-day retraction; a rule

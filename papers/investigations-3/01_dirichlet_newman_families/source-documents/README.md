@@ -17,7 +17,7 @@ than committing their PDFs, under [LARGE_FILES.md](../../../../LARGE_FILES.md).
 Recorded 17 October 2026 by Claude Opus 5.5 (`claude-opus-5-5`, Claude
 Cowork, reasoning effort max). Theorem locations, hypotheses and how each
 source was read are in the hypothesis ledger, Section 2 of
-[note 01](../notes/01_NORMALIZATION_AND_TRANSFER_CONTRACT_CLAUDE_20261017.md).
+[note 01](../notes/round-1/01_NORMALIZATION_AND_TRANSFER_CONTRACT_CLAUDE_20261017.md).
 No PDF is committed.
 
 | Source | Version read | Used for |
@@ -33,3 +33,31 @@ No PDF is committed.
 
 The OpenAI preprints behind H8 and H9 are pinned in the
 [arithmetic-source audit](../../../investigations-2/inactive/arithmetic_source_audit/README.md).
+
+## Round-2 continuation
+
+17 October 2026; gpt-6.1-sol (Codex), reasoning effort ultra. The
+[continuation](../notes/round-2/02_BURGERS_FLOOR_AND_CONDITIONAL_COMPARISON_CODEX_20261017.md)
+uses Dobner's strip-contraction theorem and the already reviewed time-zero
+floor and paired-zero algebra. Its Burgers floor, completeness argument,
+conditional comparison, and confinement control are derived in the note;
+the exact scalar arithmetic is linked from numerics. The H12 hypothesis is
+still open for characters. No additional published character-confinement
+theorem is imported, and no novelty claim is made.
+
+## Round 3 and the manuscript
+
+17 October 2026; gpt-6.1-sol (Codex), reasoning effort ultra.
+[Round 3](../notes/round-3/03_SINE_TAIL_LIMIT_AND_COMPARISON_CODEX_20261017.md)
+uses Cardon's general strip-operator theorem for the sine-tail approximants;
+Dobner's Fourier-kernel theorem alone would not cover them. No third-party
+PDF is committed.
+
+| Source | Version and location checked | Import or correction |
+| --- | --- | --- |
+| D. A. Cardon, *Complex zero strip decreasing operators*, [arXiv:1401.0237v2](https://arxiv.org/abs/1401.0237v2), [journal DOI](https://doi.org/10.1016/j.jmaa.2015.01.026) | v2; Theorem 1.5, printed p. 3, checked against HTML and rendered PDF | Genus-one strip class; phi(z)=exp(-t z^2), alpha^2=2t, input quadratic factor gamma_2=0. Gives strip sqrt(max(1-2t,0)) for each approximant |
+| H. Ki, Y.-O. Kim, J. Lee, *On the de Bruijn–Newman constant*, Adv. Math. 222 (2009), 281–306, [DOI](https://doi.org/10.1016/j.aim.2009.04.003) | Section 6, Example 1, pp. 303–304; original article inspected through its [full transcription](https://paperzz.com/doc/6928362/on-the-de-bruijn%E2%80%93newman-constant), bibliographic identity checked against DOI | Earlier qualitative strict bound below 1/2 for real primitive characters. Corrects round 1's search statement. Their complex-character example is a real self-dual combination, distinct from the individual non-even family here |
+
+The approximation, global floor, common sub-Gaussian majorant, and endpoint
+are derived in the note. The manuscript makes no priority claim. The
+standalone H12 assertion for the original character flow is still open.
