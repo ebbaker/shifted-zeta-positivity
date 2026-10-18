@@ -27,6 +27,22 @@ new manuscript snapshot folders.
   assistance. Internal authoring checks only; formal reviews remain pending.
   No snapshot or accepted manuscript milestone.
 
+- **18 October 2026 — investigation 02, Section 7 (activation along a leg):**
+  the same [source](manuscript/sharp_finite_sum_bounds/main.tex),
+  [compiled draft](manuscript/sharp_finite_sum_bounds/sharp_finite_sum_bounds.pdf)
+  and [build identity](manuscript/sharp_finite_sum_bounds/BUILD_RECORD.json),
+  edited on top of commit `72a149d`; the commit that records this change is
+  still to be added here. Adds the activation lemma, the bound for the
+  activation sums, the mesh criterion and a floating planning table of twenty
+  rows, which reduce the open finite floors to a finite certificate that has
+  not been produced; updates the abstract, draft status, Section 8,
+  Appendix A, acknowledgements and bibliography. Sources: §3 of the
+  [round-one cross-model review](reviews/01_ROUND_ONE_CROSS_MODEL_REVIEW_CLAUDE_20261017.md)
+  and the [planning record](numerics/round-1/claude-review/ACTIVATION_PLAN_CLAUDE_20261018.json).
+  Drafted for Edward Baker with LLM assistance, **Claude Opus 5.5**
+  (`claude-opus-5-5`), Claude Cowork, effort **max**; same-model checks only.
+  No accepted manuscript milestone or new Newman bound.
+
 ## Research execution record
 
 - **17 October 2026 — sharp finite-sum bounds, round one:**

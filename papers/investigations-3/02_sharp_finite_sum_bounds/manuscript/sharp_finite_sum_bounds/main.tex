@@ -23,12 +23,13 @@
 \DeclareMathOperator{\Capbd}{Cap}
 \hypersetup{pdftitle={Sharp finite-sum bounds for the Riemann heat flow},
  pdfauthor={Drafted for Edward Baker},
- pdfsubject={Unreviewed working draft, 17 October 2026}}
+ pdfsubject={Unreviewed working draft, 17 October 2026, revised 18 October 2026}}
 \numberwithin{equation}{section}
 \title{Sharp finite-sum bounds for the Riemann heat flow\\
 \large Certified strip transfer, a finite window, and an infinite tail}
 \author{Drafted for Edward Baker}
-\date{17 October 2026\\\small Unreviewed working draft}
+\date{17 October 2026; Section~\ref{sec:activation} added 18 October 2026\\
+\small Unreviewed working draft}
 \begin{document}
 \maketitle
 \begin{abstract}
@@ -44,18 +45,27 @@ be inherited. One certified finite floor then gives a complete strip
 margin exceeding $0.0017752269101384707$ in its natural cutoff window.
 A separate eleven-term mollifier, with enlarged convolution head, gives
 an infinite-tail margin exceeding $0.02303064$ from $N=3840000$ onward.
-The remaining finite floors are not supplied, so the proposed bound
-$\Lambda\le0.1745354$ does not follow from these results.
+An activation lemma bounds the loss of the sharp floor from one index of a
+leg to a larger one by a one-dimensional sum in which the Euler majorant
+cancels. It reduces the remaining finite floors to certified rows and
+outward activation bounds on a finite mesh, which a floating plan puts at
+twenty rows. Only the first row is certified and no activation bound has
+been evaluated outwardly, so the proposed bound $\Lambda\le0.1745354$
+does not follow from these results.
 \end{abstract}
 
 \noindent\textbf{Draft status.}
 This draft assembles the results and execution records of round-one
 Notes 01--02 \cite{note01,note02}. Published approximation results and the
 historical initial-verification and barrier inputs remain explicit
-imports. The computational checks are internal, LLM-assisted checks by the
-same model; round-level cross-model review and specialist human review
-remain pending. The authoring configuration and assistance are recorded
-in the acknowledgements.
+imports. The computational checks of the other sections are internal,
+LLM-assisted checks by the drafting model. A cross-model LLM review of
+round one \cite{claudereview} has been written; its reconciliation and
+specialist human review remain pending. Section~\ref{sec:activation} was
+added after that review by the reviewing model: its proofs have had
+same-model checks only and await cross-model review, and its table is
+floating planning. The authoring
+configuration and assistance are recorded in the acknowledgements.
 
 \section{Purpose and normalization}\label{sec:setup}
 
@@ -790,6 +800,266 @@ the redundant \texttt{OV} padding in the successful case would prevent
 this particular budget from closing. The raw historical checks and their
 replacement reasons are preserved; adverse required gates are not removed.
 
+\section{Activation along a leg}\label{sec:activation}
+
+Corollary~\ref{cor:floor} transfers the floor of one index through the
+strip, but no result above relates the floors of different indices. This
+section bounds the change from one side. Passing from an index $N_a$ to a
+larger index $N$ of the same leg moves the frozen scalars in the favorable
+direction and activates the divisor pairs $(d,m)$ with $N_a<m\le N$. The
+first effect is discarded; the second costs a one-dimensional sum in which
+the Euler majorant cancels.
+
+Fix a leg of Table~\ref{tab:legs}, with prime set $P$ and
+$D=\prod_{p\in P}p$, a point $y\in[y_0,y_1]$, and integers $N_a\le N$ of
+the leg. Write $g_a$, $\sigma_a$, $k_a$ and $M_a$ for the quantities
+\eqref{eq:g}--\eqref{eq:M} at the index $N_a$ and the point $y$, and put
+\begin{equation}\label{eq:Delta}
+ \Delta_y(N_a,N)=\sum_{N_a<m\le N}b_{\tstar}(m)\,m^{-\sigma_a}
+ \Bigl[W_{g_a}\bigl(1,m^y\bigr)+g_a\bigl(m^{k_a}-1\bigr)m^{y}\Bigr],
+\end{equation}
+with $W_g=(1-g)U_g$ as in \eqref{eq:weight}. The summands are
+nonnegative, so $\Delta_y(N_a,N)$ is nondecreasing in $N$ and vanishes at
+$N=N_a$.
+
+\begin{lemma}[Activation bound]\label{lem:activation}
+If $L^{\mathrm{sh}}_{N_a}(y)-\Delta_y(N_a,N)>0$, then
+\[
+ L^{\mathrm{sh}}_N(y)\ge L^{\mathrm{sh}}_{N_a}(y)-\Delta_y(N_a,N).
+\]
+\end{lemma}
+\begin{proof}
+\emph{Directions in $N$.} As $N$ increases, $q_N$ and $x_N$ increase.
+Since $y>0$, this gives $g_N\le g_a$ and $k_N\le k_a$. In
+\eqref{eq:sigma} the logarithm increases, and the subtracted product of
+$x_N^{-2}$ with the nonnegative, nonincreasing positive part decreases.
+Hence $\sigma_N\ge\sigma_a$, and $M_N\le M_a$ because every $d\mid D$
+satisfies $d\ge1$. These are the directions behind \eqref{eq:freeze},
+read in $N$ rather than in $x$.
+
+\emph{Frozen scalars.} Let
+\[
+ V_{\rm hyb}=\sum_{n=2}^{DN}U_{g_a}(B_{N,n},A_{N,n}(y))\,n^{-\sigma_a},
+ \qquad
+ C_{\rm hyb}=\sum_{m=2}^{N}b_{\tstar}(m)(m^{k_a}-1)m^{y-\sigma_a}
+\]
+be $V_N$ and $C_N$ formed with the coefficients of $N$ and the scalars of
+$N_a$, and put
+\[
+ L_{\rm hyb}=\frac{(1-g_a)(1-V_{\rm hyb})}{M_a}-g_aC_{\rm hyb}.
+\]
+The monotonicity in Lemma~\ref{lem:paired} and the directions above give
+$V_N\le V_{\rm hyb}$ and $0\le g_NC_N\le g_aC_{\rm hyb}$. If
+$V_{\rm hyb}\le1$, then also $0\le1-V_{\rm hyb}\le1-V_N$,
+$0<1-g_a\le1-g_N$ and $0<M_N\le M_a$, so that
+$L^{\mathrm{sh}}_N(y)\ge L_{\rm hyb}$.
+
+\emph{Activated pairs.} A pair $(n,d)$ with $d\mid D$ and $d\mid n$
+contributes to the coefficients \eqref{eq:coeff} of $N$ but not to those
+of $N_a$ exactly when $m=n/d$ satisfies $N_a<m\le N$. Hence
+\[
+ \bigl(B_{N,n},A_{N,n}\bigr)=\bigl(B_{N_a,n},A_{N_a,n}\bigr)
+ +\sum_{\substack{d\mid D,\ d\mid n\\ N_a<n/d\le N}}
+ \lambda_d\,b_{\tstar}(n/d)\bigl(1,(n/d)^y\bigr),
+\]
+where $B_{N_a,n}=A_{N_a,n}=0$ for $n>DN_a$. As the larger of two
+weighted absolute values of linear forms, $U_g$ is a seminorm on $\R^2$.
+Therefore
+\[
+ U_{g_a}(B_{N,n},A_{N,n})\le U_{g_a}(B_{N_a,n},A_{N_a,n})
+ +\sum_{\substack{d\mid D,\ d\mid n\\ N_a<n/d\le N}}
+ |\lambda_d|\,b_{\tstar}(n/d)\,U_{g_a}\bigl(1,(n/d)^y\bigr).
+\]
+
+\emph{Summation.} Multiply by $n^{-\sigma_a}$ and sum over
+$2\le n\le DN$. The first terms give $V_{N_a}$. The pairs $(n,d)$ in the
+second correspond, through $n=dm$, to the pairs $(d,m)$ with $d\mid D$
+and $N_a<m\le N$, and $n^{-\sigma_a}=d^{-\sigma_a}m^{-\sigma_a}$. Since
+$\sum_{d\mid D}|\lambda_d|d^{-\sigma_a}=M_a$,
+\[
+ V_{\rm hyb}\le V_{N_a}+M_a\sum_{N_a<m\le N}b_{\tstar}(m)\,
+ U_{g_a}(1,m^y)\,m^{-\sigma_a}.
+\]
+Also $C_{\rm hyb}=C_{N_a}+\sum_{N_a<m\le N}b_{\tstar}(m)(m^{k_a}-1)
+m^{y-\sigma_a}$. Inserting both relations in $L_{\rm hyb}$, the factor
+$M_a$ cancels and
+$L_{\rm hyb}\ge L^{\mathrm{sh}}_{N_a}(y)-\Delta_y(N_a,N)$.
+
+\emph{Conclusion.} If the right side is positive, so is $L_{\rm hyb}$.
+As $g_aC_{\rm hyb}\ge0$, this forces $V_{\rm hyb}<1$, and the second step
+gives the claim.
+\end{proof}
+
+The proof uses only Lemma~\ref{lem:paired}, the directions of
+\eqref{eq:freeze} in $N$ and the seminorm property of $U_g$. The same
+argument applies to the plain weight $|B|+g|A|$, also a seminorm, with
+$W_g(1,u)$ replaced by $1+gu$. Frozen quantities over runs of indices
+also occur in the historical producer \cite[Section 3]{audit3}; the
+lemma is an explicit bound of that kind for the sharp weight. Only
+$y=y_0$ is needed below, because Corollary~\ref{cor:floor} transfers the
+floor of every index through the strip.
+
+\begin{lemma}[Activation sums at $y_0$]\label{lem:actsum}
+Let $N_a\le N$ lie in one leg, take $g_a,\sigma_a,k_a$ at $y=y_0$, and
+put
+\[
+ \theta_a=\frac{1-g_a}{1+g_a},\qquad
+ \eta=k_a\log N\,N^{k_a},\qquad
+ S(s)=\sum_{N_a<m\le N}b_{\tstar}(m)\,m^{-s}.
+\]
+Then
+\begin{equation}\label{eq:Deltabound}
+ \Delta_{y_0}(N_a,N)\le\theta_a\,S(\sigma_a)
+ +g_a(\theta_a+\eta)\,S(\sigma_a-y_0).
+\end{equation}
+For all integers $N_a=N^{(0)}<N^{(1)}<\cdots<N^{(J)}=N$ and
+$s\in\{\sigma_a,\sigma_a-y_0\}$,
+\begin{equation}\label{eq:capsplit}
+ S(s)\le\sum_{j=1}^{J}\Capbd_{\tstar}\bigl(N^{(j-1)},N^{(j)};s\bigr).
+\end{equation}
+\end{lemma}
+\begin{proof}
+For $N_a<m\le N$, $g_a^2m^{y_0}=e^{y_0/25}(m/q_{N_a})^{y_0}$. Within
+each leg $m/q_{N_a}<3.7\cdot10^{-6}$, the extreme case being the two ends
+of leg~3, and $0.187<y_0<0.1873$. Hence
+\[
+ g_a^2m^{y_0}<e^{0.0075}(3.7\cdot10^{-6})^{0.187}<0.1.
+\]
+For $u\ge1$ and $g^2u\le1$, \eqref{eq:U} gives
+$U_g(1,u)=(1-g^2u+g(u-1))/(1-g^2)=(1+gu)/(1+g)$, so
+$W_{g_a}(1,m^{y_0})=\theta_a(1+g_am^{y_0})$. Moreover
+$m^{k_a}-1\le N^{k_a}-1\le\eta$, since $e^v-1\le ve^v$ for $v\ge0$.
+Inserting these in \eqref{eq:Delta} gives \eqref{eq:Deltabound}.
+
+For \eqref{eq:capsplit}, apply Lemma~\ref{lem:cap} on each subrange
+$(N^{(j-1)},N^{(j)}]$. Its hypothesis $s>(\tstar/2)\log N^{(j)}$ holds
+for both values of $s$, because $N^{(j)}\le N$, $s\ge\sigma_a-y_0$, and
+$\sigma_a-y_0>(\tstar/2)\log N$. For the last inequality, the positive
+part in \eqref{eq:sigma} and the difference
+$(\tstar/4)\log q_{N_a}-(\tstar/2)\log N_a$ change $\sigma_a$ by less
+than $10^{-13}$. As $N/N_a<3.74$ within a leg,
+\[
+ \sigma_a-y_0-\frac{\tstar}{2}\log N
+ >\frac{1-y_0}{2}-\frac{\tstar}{2}\log\frac{N}{N_a}-10^{-13}
+ >0.406-0.104-10^{-13}>0.\qedhere
+\]
+\end{proof}
+
+\begin{corollary}[Mesh criterion]\label{cor:mesh}
+Let a leg have first index $N_{\rm first}$ and last index $N_{\rm last}$
+in Table~\ref{tab:legs}, and let
+$N_{\rm first}=N_1<N_2<\cdots<N_r\le N_{\rm last}$. Put $E_i=N_{i+1}-1$
+for $i<r$ and $E_r=N_{\rm last}$. Suppose that for each $i$ there are
+numbers $\ell_i\le L^{\mathrm{sh}}_{N_i}(y_0)$ and
+$\delta_i\ge\Delta_{y_0}(N_i,E_i)$ with $\ell_i-\delta_i>3\cdot10^{-7}$.
+Then $L^{\mathrm{sh}}_N(y_0)>3\cdot10^{-7}$ for every integer $N$ of the
+leg.
+\end{corollary}
+\begin{proof}
+Every $N$ of the leg lies in exactly one interval $[N_i,E_i]$. There
+$\Delta_{y_0}(N_i,N)\le\Delta_{y_0}(N_i,E_i)\le\delta_i$, so
+$L^{\mathrm{sh}}_{N_i}(y_0)-\Delta_{y_0}(N_i,N)\ge\ell_i-\delta_i
+>3\cdot10^{-7}$, and Lemma~\ref{lem:activation} applies.
+\end{proof}
+
+Once its hypotheses are certified on all four legs,
+Corollary~\ref{cor:mesh} supplies the premise of
+Corollary~\ref{cor:conditional}. A certificate consists of certified
+lower ends $\ell_i$, from the pilot of Theorem~\ref{thm:pilot} run at each
+mesh index, and upper bounds $\delta_i$ from \eqref{eq:Deltabound} and
+\eqref{eq:capsplit} in directed arithmetic, which needs only the frozen
+scalars of each mesh index. The enclosure of Theorem~\ref{thm:pilot} is
+the first row of leg~0.
+
+\begin{remark}[A planning mesh, in floating point only]\label{rem:plan}
+Table~\ref{tab:plan} lists a mesh found in float64 by a greedy rule: from
+the first index $N_i$ of a leg, take the largest $E$ for which the bound
+$\delta$ of \eqref{eq:Deltabound} on $(N_i,E]$, with a single cap $J=1$ in
+\eqref{eq:capsplit}, satisfies $L^{\mathrm{sh}}_{N_i}(y_0)-\delta>3\cdot10^{-7}$,
+and restart at $E+1$.
+Bounded by a single cap, the last span of leg~3 would need a seventh row,
+at $N=3550349$; a partition into $16$ geometric pieces closes it instead
+(eight pieces suffice, four do not). The floating direct sum over that
+span is $0.148783$. Twenty rows result, the largest at $N=1880119$. With
+floating direct sums in place of every cap bound, the counts per leg are
+again 4, 5, 5 and 6. Within a leg the floors grow by factors between
+1.77 and 2.05 from one row to the next, and the first span of leg~0 has
+3683 indices.
+
+These are planning values, not a certificate. Only the first row of
+Table~\ref{tab:plan} is certified, and no bound $\delta_i$ has been
+evaluated outwardly. On
+interior spans the greedy rule leaves small margins in the last column,
+down to $1.1\cdot10^{-10}$. They still exceed the difference between
+floating and certified floors, which is below $10^{-16}$ at $N=690988$
+and $N=1974864$; a certificate may nevertheless prefer spans with slack.
+Two floating checks of the chain in the proof of
+Lemma~\ref{lem:activation} give
+\[
+ \begin{array}{lccc}
+ (N_a,N) & L^{\mathrm{sh}}_N(y_0) & L_{\rm hyb} &
+ L^{\mathrm{sh}}_{N_a}(y_0)-\Delta_{y_0}(N_a,N)\\[2pt]
+ (690988,691988) & 0.002152 & 0.001539 & 0.001294\\
+ (1028000,1030000) & 0.005306 & 0.004498 & 0.004273
+ \end{array}
+\]
+In both cases $\Delta_{y_0}$ is about twice the loss
+$L^{\mathrm{sh}}_{N_a}(y_0)-L_{\rm hyb}$ at frozen scalars, and the
+movement of the scalars, which the lemma discards, more than offsets that
+loss. As a cost measurement, the unchanged pilot certified
+\[
+ 0.163564430553564191107<L^{\mathrm{sh}}_{1974864}(y_0)
+ <0.163564430553564191115
+\]
+at the largest row of the plan with direct sums, in 247 seconds with a
+peak of 339 MiB, inside its 600-second and 512 MiB guards. Every row of
+Table~\ref{tab:plan} lies below that index, and the pilot's work and
+memory grow with $N$. The files behind these values are listed in
+Appendix~\ref{app:records}.
+\end{remark}
+
+\begin{table}[!t]
+\centering
+\small
+\begin{tabular}{rrrlll}
+\toprule
+Leg & $N_i$ & $E_i$ & $L^{\mathrm{sh}}_{N_i}(y_0)$ & $\delta_i$ &
+ $L^{\mathrm{sh}}_{N_i}(y_0)-\delta_i-3\cdot10^{-7}$\\
+\midrule
+0 & 690988 & 694670 & 0.00177553 & 0.00177494 & $2.9\cdot10^{-7}$\\
+ & 694671 & 701277 & 0.00315769 & 0.00315719 & $2.0\cdot10^{-7}$\\
+ & 701278 & 713204 & 0.00561378 & 0.00561307 & $4.1\cdot10^{-7}$\\
+ & 713205 & 728999 & 0.00997173 & 0.00723317 & $2.7\cdot10^{-3}$\\
+\addlinespace
+1 & 729000 & 734947 & 0.00262914 & 0.00262846 & $3.8\cdot10^{-7}$\\
+ & 734948 & 745859 & 0.00475959 & 0.00475925 & $3.6\cdot10^{-8}$\\
+ & 745860 & 766077 & 0.00861023 & 0.00860983 & $1.0\cdot10^{-7}$\\
+ & 766078 & 804221 & 0.0155531 & 0.0155527 & $5.7\cdot10^{-8}$\\
+ & 804222 & 818999 & 0.0280188 & 0.00556659 & $2.2\cdot10^{-2}$\\
+\addlinespace
+2 & 819000 & 828799 & 0.00358388 & 0.00358325 & $3.3\cdot10^{-7}$\\
+ & 828800 & 847621 & 0.00675051 & 0.00674996 & $2.5\cdot10^{-7}$\\
+ & 847622 & 884344 & 0.0126958 & 0.0126953 & $2.2\cdot10^{-7}$\\
+ & 884345 & 958159 & 0.0238072 & 0.0238067 & $2.7\cdot10^{-7}$\\
+ & 958160 & 1027999 & 0.0443923 & 0.0197452 & $2.5\cdot10^{-2}$\\
+\addlinespace
+3 & 1028000 & 1046970 & 0.00477606 & 0.00477567 & $8.3\cdot10^{-8}$\\
+ & 1046971 & 1086871 & 0.00974623 & 0.00974578 & $1.4\cdot10^{-7}$\\
+ & 1086872 & 1173175 & 0.0198154 & 0.0198149 & $2.1\cdot10^{-7}$\\
+ & 1173176 & 1370858 & 0.0399830 & 0.0399826 & $1.0\cdot10^{-7}$\\
+ & 1370859 & 1880118 & 0.0794341 & 0.0794338 & $1.1\cdot10^{-10}$\\
+ & 1880119 & 3840000 & 0.152894 & 0.150563$^{\dagger}$ & $2.3\cdot10^{-3}$\\
+\bottomrule
+\end{tabular}
+\caption{Floating planning mesh for Corollary~\ref{cor:mesh}; not a
+certificate (Remark~\ref{rem:plan}). The floors and the bounds $\delta_i$
+are float64 values, and the last column is computed before rounding. Each
+$\delta_i$ is the bound \eqref{eq:Deltabound} with a single cap in
+\eqref{eq:capsplit}, except $^{\dagger}$, with 16 geometric pieces. Leg~0
+begins at the certified row of Theorem~\ref{thm:pilot}.}
+\label{tab:plan}
+\end{table}
+
 \section{The remaining finite bridge and the conditional target}\label{sec:remaining}
 
 Polymath's Theorem 1.2 \cite{polymath} converts three inputs into
@@ -831,12 +1101,18 @@ criterion and compute
 $\tstar+y_0^2/2=872677/5000000=0.1745354$.
 \end{proof}
 
-The premise about the remaining floors is open. Neither the historical
-plain-weight rows at time $0.16125$, the favorable sampled sharp rows,
-nor the transfer theorem proves it. No monotonicity in $N$ is assumed.
-This draft therefore reports a completed transfer calculation, one
-finite-window margin and a revised infinite exterior, not a complete
-certificate of the conditional conclusion.
+The premise about the remaining floors is still open.
+Corollary~\ref{cor:mesh} reduces it to certified rows and outward
+activation bounds on a finite mesh of each leg, and the floating plan of
+Table~\ref{tab:plan} uses twenty rows; only the first of them is
+certified. Neither the historical plain-weight rows at time $0.16125$, the
+favorable sampled sharp rows, the planning values of
+Table~\ref{tab:plan}, nor the transfer theorem proves the premise. No
+monotonicity in $N$ is assumed; Lemma~\ref{lem:activation} bounds the
+change in $N$ from one side. This draft therefore reports a completed
+transfer calculation, one finite-window margin, a revised infinite
+exterior and a reduction of the finite bridge to a finite certificate,
+not a complete certificate of the conditional conclusion.
 
 The control-family screen is also quantitative. The generic paired
 algebra has no shape premise that excludes colliding sources. Euler-factor
@@ -879,6 +1155,22 @@ File & Role\\
 \label{tab:evidence}
 \end{table}
 
+The computations behind Section~\ref{sec:activation} are in the
+subfolder \path{claude-review/}:
+\begin{itemize}
+\item \path{review_checks_claude_20261017.py} and its record
+ \path{REVIEW_CHECKS_CLAUDE_20261017.json}, whose section F gives the
+ floating rows, meshes and hybrid-row checks of Remark~\ref{rem:plan};
+ \path{REPLAY_ON_EDWARDS_MACHINE_20261017.json} compares a replay on a
+ second host, identical in every compared field;
+\item \path{activation_plan_claude_20261018.py} and its record
+ \path{ACTIVATION_PLAN_CLAUDE_20261018.json}: the side conditions of
+ Lemma~\ref{lem:actsum} and the bounds $\delta_i$ of Table~\ref{tab:plan};
+\item \path{COST_PROBE_PILOT_N1974864_CLAUDE_20261017.json}: the cost
+ measurement of Remark~\ref{rem:plan}.
+\end{itemize}
+These are planning and measurement files, not certificates.
+
 The transfer engine checks its interval primitives, exact rational
 one-sided derivative identities, and toy integer membership. The
 additional checker compares 1080 actual term points at 110 digits,
@@ -893,7 +1185,12 @@ From the numerical directory
 \path{papers/investigations-3/02_sharp_finite_sum_bounds/numerics/round-1/},
 a cheap implementation check is
 \begin{quote}\small\ttfamily
-python3 check\_gate\_arithmetic.py --output /tmp/sharp-gate-check.json
+python3 check\_gate\_arithmetic.py -{}-output /tmp/sharp-gate-check.json
+\end{quote}
+From its subfolder \path{claude-review/}, the planning of
+Section~\ref{sec:activation} is reproduced by
+\begin{quote}\small\ttfamily
+python3 activation\_plan\_claude\_20261018.py -{}-output /tmp/activation-plan.json
 \end{quote}
 The exact bounded-run commands and plans are in the numerical README.
 The completion wrapper uses the preserved first record beside the
@@ -910,6 +1207,18 @@ assistance from OpenAI's \texttt{gpt-6.1-sol} in Codex, reasoning effort
 mathematical derivation, code authoring, numerical implementation checks
 and exposition. Compilation and layout inspection are authoring checks;
 they do not constitute the deferred round-level or specialist review.
+
+Section~\ref{sec:activation}, its table and the corresponding changes to
+the abstract, the draft status, Section~\ref{sec:remaining},
+Appendix~\ref{app:records} and the bibliography were drafted for Edward
+Baker with LLM assistance from Anthropic's Claude Opus~5.5 (configured
+identifier \texttt{claude-opus-5-5}) in Claude Cowork, reasoning effort
+\texttt{max}, following the round-one cross-model review
+\cite{claudereview}. A same-model subagent checked the proof of
+Lemma~\ref{lem:activation} for that review, and another checked
+Section~\ref{sec:activation} as drafted, its proofs and
+Table~\ref{tab:plan} against the records. Neither check is independent
+review, and the section awaits cross-model review.
 
 \begin{thebibliography}{9}
 \bibitem{polymath}
@@ -938,6 +1247,14 @@ Prepared for E. Baker with LLM assistance,
 17 October 2026, \texttt{gpt-6.1-sol}, effort \texttt{ultra}.
 Investigation 02, round-one Note 02,
 \path{../../notes/round-1/02_BOUNDED_ACTIVE_BRANCH_TRANSFER_IMPLEMENTATION_20261017.md}.
+
+\bibitem{claudereview}
+Prepared for E. Baker with LLM assistance,
+\emph{Round-one cross-model review of the sharp finite-sum bounds},
+17 October 2026, Claude Opus 5.5 (\texttt{claude-opus-5-5}), effort
+\texttt{max}. Investigation 02, review 01; it cites this manuscript at
+commit \texttt{efba736}, before Section~\ref{sec:activation} was added,
+\path{../../reviews/01_ROUND_ONE_CROSS_MODEL_REVIEW_CLAUDE_20261017.md}.
 
 \bibitem{sharpreview}
 Internal LLM audit,

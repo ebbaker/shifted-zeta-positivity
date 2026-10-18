@@ -28,3 +28,9 @@ numerator, fault injection in the engine, and floating planning meshes for
 the proposed activation lemma (not a certificate). Added for Edward Baker
 with LLM assistance, Claude Opus 5.5 (`claude-opus-5-5`), Claude Cowork,
 effort max.
+
+Update, 18 October 2026: the same folder holds the
+[planning program](round-1/claude-review/activation_plan_claude_20261018.py)
+behind Section 7 of the [working manuscript](../manuscript/sharp_finite_sum_bounds/main.tex)
+(floating planning, not a certificate). Added for Edward Baker with LLM
+assistance, Claude Opus 5.5 (`claude-opus-5-5`), Claude Cowork, effort max.

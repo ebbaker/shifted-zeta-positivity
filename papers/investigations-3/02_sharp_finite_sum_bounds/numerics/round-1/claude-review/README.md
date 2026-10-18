@@ -6,7 +6,9 @@ reasoning effort max; the serving model may differ from the configured
 identifier.
 
 These are the support computations for the
-[round-one cross-model review](../../../reviews/01_ROUND_ONE_CROSS_MODEL_REVIEW_CLAUDE_20261017.md).
+[round-one cross-model review](../../../reviews/01_ROUND_ONE_CROSS_MODEL_REVIEW_CLAUDE_20261017.md)
+and, since 18 October 2026 (same model and effort), for Section 7 of the
+[working manuscript](../../../manuscript/sharp_finite_sum_bounds/main.tex).
 Nothing here alters the round's programs or records.
 
 | File | Content |
@@ -16,6 +18,8 @@ Nothing here alters the round's programs or records.
 | [`replay_completion_suffix_relaxed_wall.py`](replay_completion_suffix_relaxed_wall.py) | The wrapper used for the completion replay of the review's §4: the round's completion call on the same hash-checked engine, box cap and depth, with only the wall budget raised; exits nonzero unless the recorded digest is reproduced |
 | [`COST_PROBE_PILOT_N1974864_CLAUDE_20261017.json`](COST_PROBE_PILOT_N1974864_CLAUDE_20261017.json) | One run of the round's unchanged pilot at \(N=1974864\), wrapped with the executor's attribution (the program writes its author's model into its own record); a cost measurement for the review's §3.3, not a coverage claim |
 | [`REPLAY_ON_EDWARDS_MACHINE_20261017.json`](REPLAY_ON_EDWARDS_MACHINE_20261017.json) | Field-by-field comparison of a replay of the check program on Edward's machine with the committed record |
+| [`activation_plan_claude_20261018.py`](activation_plan_claude_20261018.py) | Planning program for Section 7 of the working manuscript: the side conditions of its Lemma 7.2 in 50-digit `Decimal`, and the bounds of its Table 4 from the hash-pinned record above; floating planning, not a certificate |
+| [`ACTIVATION_PLAN_CLAUDE_20261018.json`](ACTIVATION_PLAN_CLAUDE_20261018.json) | Its record; a replay on Edward's machine gave identical side conditions and planning output |
 
 The program has seven sections:
 
@@ -62,6 +66,12 @@ To reproduce from this folder:
 
 ```sh
 python3 -I review_checks_claude_20261017.py --slack --output /tmp/REVIEW_CHECKS.json
+```
+
+The planning program for the manuscript runs in under a second:
+
+```sh
+python3 -I activation_plan_claude_20261018.py --output /tmp/ACTIVATION_PLAN.json
 ```
 
 The repository root is found from the script's location; `--repo-root`

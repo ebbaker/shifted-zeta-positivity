@@ -23,6 +23,9 @@ Return to [project histories](../README.md).
      that reduces the open finite floors to about twenty certified rows,
      and filed [the review](../../reviews/01_ROUND_ONE_CROSS_MODEL_REVIEW_CLAUDE_20261017.md)
      with its [support computations](../../numerics/round-1/claude-review/README.md).
+     A second turn wrote that lemma into the
+     [working manuscript](../../manuscript/sharp_finite_sum_bounds/main.tex) as Section 7,
+     with a floating planning table, and rebuilt the PDF and build record.
    - *Session.* A Claude Cowork cloud session in project RH4 with Claude Opus
      5.5 (`claude-opus-5-5`, reasoning effort max per the transcript), started
      17 October 2026 at 21:34 America/New_York. Its context was compacted

@@ -1,35 +1,51 @@
 {
   "schema": "sharp-finite-sum-manuscript-build-v1",
-  "created_at_utc": "2026-10-17T17:58:31.522637+00:00",
+  "created_at_utc": "2026-10-18T04:12:03.215280+00:00",
   "prepared_for": "Edward Baker",
-  "model": "gpt-6.1-sol",
-  "reasoning_effort": "ultra",
-  "status": "User-requested unreviewed working draft; no accepted manuscript milestone or new Newman bound.",
-  "assistance": "Substantial LLM assistance, including same-model subagents; deferred round-level and specialist review remain pending.",
+  "model": "Claude Opus 5.5 (configured identifier claude-opus-5-5), Claude Cowork; the serving model may differ",
+  "reasoning_effort": "max",
+  "drafting": [
+    {
+      "date": "2026-10-17",
+      "model": "gpt-6.1-sol (Codex)",
+      "reasoning_effort": "ultra",
+      "scope": "Original draft: Sections 1-6, the conditional section (now Section 8), Appendix A, acknowledgements and bibliography; first build (see previous_build)."
+    },
+    {
+      "date": "2026-10-18",
+      "model": "Claude Opus 5.5 (configured identifier claude-opus-5-5), Claude Cowork",
+      "reasoning_effort": "max",
+      "scope": "Section 7 and Table 4; edits to the title-page date, PDF subject, abstract, draft status, the paragraph after Corollary 8.1, Appendix A (file list for Section 7, a second reproduction command, --output printed with two hyphens, table placement), acknowledgements and bibliography; this rebuild."
+    }
+  ],
+  "status": "User-requested unreviewed working draft; no accepted manuscript milestone or new Newman bound. Section 7 reduces the open finite floors to a finite certificate that has not been produced.",
+  "assistance": "Substantial LLM assistance: gpt-6.1-sol (Codex) for the original draft, with same-model subagents; Claude Opus 5.5 for Section 7 and this rebuild, with two same-model subagent checks. Cross-model review of Section 7 and specialist review remain pending.",
   "artifacts": [
     {
       "path": "papers/investigations-3/02_sharp_finite_sum_bounds/manuscript/sharp_finite_sum_bounds/main.tex",
-      "bytes": 41659,
-      "sha256": "277d6ffbd1be22c1780f5557784180e6809581e888295b18effec872a5448560"
+      "bytes": 56833,
+      "sha256": "81d3ccb9814e36107d23fee86a14c90c96c28255772188b0c0183c5b88853053"
     },
     {
       "path": "papers/investigations-3/02_sharp_finite_sum_bounds/manuscript/sharp_finite_sum_bounds/sharp_finite_sum_bounds.pdf",
-      "bytes": 487386,
-      "sha256": "1825d4c6d9cb0c8cb9cfbce25cce6a6dcc26e73227ea7b81861de816a9e99aa5"
+      "bytes": 556350,
+      "sha256": "17eb400d6ea061c2c0ad52ac800422e9bfdcef2ad49dfaf53f8f3eabbd075e7c"
     }
   ],
   "compilation": {
-    "native_editor_compile": "success on final source",
-    "export_compiler": "pdfTeX 3.141592653-2.6-1.40.25 (TeX Live 2023)",
-    "build_driver": "latexmk 4.79",
-    "working_directory": "papers/investigations-3/02_sharp_finite_sum_bounds/manuscript/sharp_finite_sum_bounds",
-    "command": "latexmk -pdf -interaction=nonstopmode -halt-on-error -pdflatex='pdflatex -no-shell-escape %O %S' -outdir=/private/tmp/sharp_manuscript_20261017/build main.tex",
+    "native_editor_compile": "not used for this rebuild",
+    "export_compiler": "pdfTeX 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) with cm-super Type 1 fonts",
+    "build_driver": "latexmk 4.83",
+    "working_directory": "a cloud-workspace copy of papers/investigations-3/02_sharp_finite_sum_bounds/manuscript/sharp_finite_sum_bounds holding main.tex only",
+    "command": "latexmk -pdf -interaction=nonstopmode -halt-on-error -pdflatex='pdflatex -no-shell-escape %O %S' -outdir=<scratch>/build_new main.tex",
     "final_log_warning_count": 0,
-    "final_log_sha256": "476d358e88f151400e37da018cb577344027827c27290ea9d6b64f5775aa18c2",
-    "auxiliary_files": "Outside the repository, in the temporary output directory."
+    "final_log_overfull_or_underfull_boxes": 0,
+    "final_log_sha256": "026d3d0b32ae074f12249ba0b939e47f35a0565a43e78b371ef4af247f4f6f53",
+    "auxiliary_files": "Outside the repository, in the scratch output directory; main.pdf was copied to sharp_finite_sum_bounds.pdf.",
+    "control_build": "The pre-edit source (sha256 277d6ffb...) rebuilt in the same environment gave 14 pages whose extracted text is identical to that of the previous committed PDF."
   },
   "pdf_checks": {
-    "page_count": 14,
+    "page_count": 18,
     "rendered_pages": [
       1,
       2,
@@ -44,23 +60,52 @@
       11,
       12,
       13,
-      14
+      14,
+      15,
+      16,
+      17,
+      18
     ],
     "render_tool": "pdftoppm",
     "render_dpi": 120,
-    "visual_inspection": "All rendered pages inspected; no clipping, overlap, broken equations or tables found.",
-    "text_checks": "All pages nonempty; no replacement glyphs; text within page bounds. Microtype protrusion within 3 points of the 1-inch text margins.",
+    "visual_inspection": "Pages 1 and 12-18 (title page, Section 7, Table 4, Section 8, Appendix A, acknowledgements, references) inspected at full size and pages 2-11 at reduced size; no clipping, overlap, broken equations or tables found.",
+    "text_checks": "No LaTeX warnings or overfull/underfull boxes in the final log; both reproduction commands extract with '--output'.",
     "author_metadata": "Drafted for Edward Baker"
   },
   "mathematical_scope": {
     "transfer": "All four finite Euler legs, every integer 690988 <= N <= 3840000, full stated y strip.",
     "pilot": "One finite floor, N=690988; complete strip/window margin > 0.0017752269101384707.",
     "tail": "Every natural floor N >= 3840000; complete strip/window margin > 0.02303064.",
+    "activation": "Lemma 7.1 (activation bound), Lemma 7.2 (activation sums at y0) and Corollary 7.3 (mesh criterion) reduce the open finite floors to certified rows and outward activation bounds on a finite mesh. Proofs are written out; same-model checks only.",
+    "planning": "Table 4 is a float64 planning mesh of 20 rows (4, 5, 5 and 6 per leg; largest row 1880119), not a certificate. Only N=690988 is certified; no activation bound has been evaluated outwardly.",
     "open_bridge": "The finite floors 690989 <= N < 3840000 remain unproved.",
     "conditional_target": "Lambda <= 0.1745354 is conditional on the remaining floors and stated imported inputs.",
-    "review": "This authoring check is not independent cross-model or specialist review.",
-    "replay_this_turn": "No numerical certificates regenerated for manuscript authoring; saved records and hash pins were checked."
+    "review": "The manuscript as of commit efba736 (now Sections 1-6 and 8) had the cross-model LLM review papers/investigations-3/02_sharp_finite_sum_bounds/reviews/01_ROUND_ONE_CROSS_MODEL_REVIEW_CLAUDE_20261017.md, whose reconciliation is pending. Section 7 has same-model checks only. No specialist review.",
+    "replay_this_turn": "No numerical certificate regenerated. The planning program activation_plan_claude_20261018.py was run in the cloud workspace and replayed on Edward's machine with identical side conditions and planning output; the other quoted values are read from the hash-pinned records below."
   },
+  "previous_build": {
+    "created_at_utc": "2026-10-17T17:58:31.522637+00:00",
+    "model": "gpt-6.1-sol",
+    "reasoning_effort": "ultra",
+    "artifacts": [
+      {
+        "path": "papers/investigations-3/02_sharp_finite_sum_bounds/manuscript/sharp_finite_sum_bounds/main.tex",
+        "bytes": 41659,
+        "sha256": "277d6ffbd1be22c1780f5557784180e6809581e888295b18effec872a5448560"
+      },
+      {
+        "path": "papers/investigations-3/02_sharp_finite_sum_bounds/manuscript/sharp_finite_sum_bounds/sharp_finite_sum_bounds.pdf",
+        "bytes": 487386,
+        "sha256": "1825d4c6d9cb0c8cb9cfbce25cce6a6dcc26e73227ea7b81861de816a9e99aa5"
+      }
+    ],
+    "export_compiler": "pdfTeX 3.141592653-2.6-1.40.25 (TeX Live 2023)",
+    "build_driver": "latexmk 4.79",
+    "page_count": 14,
+    "build_record_sha256": "96c0f301ea8ba2136e9b9eba6208223245c6c7fd12754abded9dca99b245a4fd",
+    "note": "The previous record, source and PDF are in git history (commit 72a149d and earlier)."
+  },
+  "input_identities_unchanged_since_previous_build": true,
   "input_identities": [
     {
       "path": "papers/investigations-3/02_sharp_finite_sum_bounds/notes/round-1/01_SHARP_WEIGHT_CONTRACT_AND_FEASIBILITY_20261017.md",
@@ -196,6 +241,41 @@
       "path": "papers/investigations-2/newman_certificate_audit/reviews/1_CROSS_MODEL_REVIEW_OF_NOTES_1_2_20261012.md",
       "bytes": 10562,
       "sha256": "6887e1567a3ad1ce5526c80790359adc989747f9c0445f01097152a5d31a34dc"
+    },
+    {
+      "path": "papers/investigations-3/02_sharp_finite_sum_bounds/reviews/01_ROUND_ONE_CROSS_MODEL_REVIEW_CLAUDE_20261017.md",
+      "bytes": 37810,
+      "sha256": "9f056e53e186657de5d9fde6acf85361b8933584369893936a32f089855644b8"
+    },
+    {
+      "path": "papers/investigations-3/02_sharp_finite_sum_bounds/numerics/round-1/claude-review/review_checks_claude_20261017.py",
+      "bytes": 32337,
+      "sha256": "5f5f78d77fb940df673b700bc7fd16a233f95eb8c3a8bff65995299332e67ada"
+    },
+    {
+      "path": "papers/investigations-3/02_sharp_finite_sum_bounds/numerics/round-1/claude-review/REVIEW_CHECKS_CLAUDE_20261017.json",
+      "bytes": 25208,
+      "sha256": "a89771dcb61ddbcf494de6ec3f157b3cf4f90aa6ac7b8439a97db53969f009a7"
+    },
+    {
+      "path": "papers/investigations-3/02_sharp_finite_sum_bounds/numerics/round-1/claude-review/REPLAY_ON_EDWARDS_MACHINE_20261017.json",
+      "bytes": 1575,
+      "sha256": "e1b0cae213feb3f11d831d0c5ab2596aec9e54a21fd302a98ed27d82ebfa3c45"
+    },
+    {
+      "path": "papers/investigations-3/02_sharp_finite_sum_bounds/numerics/round-1/claude-review/activation_plan_claude_20261018.py",
+      "bytes": 10694,
+      "sha256": "800a8a280e54e0846ae4d9cf2fed0853579d4489d772ca562fbb988d2a0fb24a"
+    },
+    {
+      "path": "papers/investigations-3/02_sharp_finite_sum_bounds/numerics/round-1/claude-review/ACTIVATION_PLAN_CLAUDE_20261018.json",
+      "bytes": 8970,
+      "sha256": "5f05b9472dac1606ff4ef56ed81ae55028ab5f604e45dc7311eeacea0dad0919"
+    },
+    {
+      "path": "papers/investigations-3/02_sharp_finite_sum_bounds/numerics/round-1/claude-review/COST_PROBE_PILOT_N1974864_CLAUDE_20261017.json",
+      "bytes": 3592,
+      "sha256": "e56ba84e671699cd4dbf60f193fe2b5e5c4db4404bcd83afdc0ebe71471f2e1e"
     }
   ],
   "hash_scope": "Stored-byte identities only; hashes do not prove the mathematical inequalities. The build record excludes its own hash."
