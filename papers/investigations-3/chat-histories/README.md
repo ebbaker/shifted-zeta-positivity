@@ -24,3 +24,9 @@ Routing entry added 17 October 2026 for Edward Baker with LLM assistance,
 **gpt-6-astra (Codex), effort ultra**. Its UTC creation filename corresponds
 to 17 October in America/New_York. The registry remains authoritative for
 capture counts, identities and model metadata.
+
+Portfolio-wide Claude Cowork sessions are registered in
+[claude-cowork/](claude-cowork/README.md), opened 18 October 2026 at the
+first such capture (chat 1 there reviews the brainstorm folder and the
+research direction). Routing note added for Edward Baker with LLM
+assistance, Claude Fable 5.1 (`claude-fable-5-1`), Claude Cowork.

@@ -37,3 +37,24 @@ This folder is distinct from the earlier
 [planning brainstorm](../../brainstorm/investigations-3/README.md).
 Read the repository [result summaries](../../../result-summaries/README.md)
 and [patterns to avoid](../../../avoid/README.md) with this assessment.
+
+## Claude review, 18 October 2026
+
+Prepared for Edward Baker with LLM assistance. Model: Claude Fable 5.1
+(`claude-fable-5-1`), Claude Cowork, reasoning effort max; the session is
+configured as `claude-opus-5-5` and the serving model may differ.
+
+- [Review of the assessment and the direction](04_REVIEW_OF_ASSESSMENT_AND_DIRECTION_CLAUDE_20261018.md):
+  cross-model review of the three Codex documents and the conductor-rate
+  deduction. Accepts the 01+03 priority and the merger; verifies the
+  deduction's constants and checks the restart lemma in outline; answers
+  the merger note's six questions; prices the proposed pilots (the
+  transport remainder moves \(T(q)\) by under one percent, the comparison
+  height \(p=\sqrt5\) by about eight percent, an \(O(1/\log q)\) rate
+  would overtake \(T(q)\) only beyond \(q\approx10^{22}\)); proposes a
+  three-week plan whose first gate is a line-by-line cross-model review of
+  the transport envelope, lists its checkpoints, and names the
+  general-class extension and a character-conductor control test as the
+  next bounded tasks. Nothing in it is a new result.
+- [Numerics](numerics/README.md): the review's planning script and record
+  (standard-library floating point; not a certificate).

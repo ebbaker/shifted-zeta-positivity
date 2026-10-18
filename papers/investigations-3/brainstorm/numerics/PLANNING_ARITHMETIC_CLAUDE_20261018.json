@@ -1,0 +1,341 @@
+{
+ "title": "Planning arithmetic for the investigations-3 direction review",
+ "model": "Claude Fable 5.1 (claude-fable-5-1), Claude Cowork, effort max; session configured as claude-opus-5-5",
+ "date": "2026-10-18",
+ "status": "floating-point planning arithmetic; not a certificate",
+ "environment": "standard-library Python 3; the record carries no version string so that identical arithmetic gives an identical file on any machine",
+ "conventions": {
+  "L(q)": "log(q/pi) - gamma  (the conductor-rate note's main term, even parity)",
+  "C(q)": "L(q)/4 - 77/200, i.e. kappa(2)/2 < 57/200 and E/2 < 1/10 subtracted",
+  "k": "4C/p - 8/(p^2 - 1), Hakimoglu-Brown's constant at worst strip Q = 1 (p = 3 gives 4C/3 - 1)",
+  "T": "log(1 + k Q_0/2)/k, the restart time from squared strip Q_0",
+  "kappa": "-zeta'/zeta(sigma): finite sum to 200000 plus integral tail bound (upper value used)"
+ },
+ "A_conductor_ladder": [
+  {
+   "q": "1e12",
+   "L": 25.9091,
+   "C": 6.0923,
+   "k": 7.123,
+   "T": 0.213063,
+   "asymptotic_3loglog_over_log": 0.165811
+  },
+  {
+   "q": "1e13",
+   "L": 28.2117,
+   "C": 6.6679,
+   "k": 7.8906,
+   "T": 0.202576,
+   "asymptotic_3loglog_over_log": 0.161079
+  },
+  {
+   "q": "1e14",
+   "L": 30.5142,
+   "C": 7.2436,
+   "k": 8.6581,
+   "T": 0.19325,
+   "asymptotic_3loglog_over_log": 0.15647
+  },
+  {
+   "q": "1e15",
+   "L": 32.8168,
+   "C": 7.8192,
+   "k": 9.4256,
+   "T": 0.184891,
+   "asymptotic_3loglog_over_log": 0.152031
+  },
+  {
+   "q": "1e18",
+   "L": 39.7246,
+   "C": 9.5461,
+   "k": 11.7282,
+   "T": 0.164246,
+   "asymptotic_3loglog_over_log": 0.139889
+  },
+  {
+   "q": "1e20",
+   "L": 44.3298,
+   "C": 10.6974,
+   "k": 13.2633,
+   "T": 0.153228,
+   "asymptotic_3loglog_over_log": 0.132764
+  },
+  {
+   "q": "1e25",
+   "L": 55.8427,
+   "C": 13.5757,
+   "k": 17.1009,
+   "T": 0.131957,
+   "asymptotic_3loglog_over_log": 0.117841
+  },
+  {
+   "q": "1e30",
+   "L": 67.3556,
+   "C": 16.4539,
+   "k": 20.9385,
+   "T": 0.116516,
+   "asymptotic_3loglog_over_log": 0.106119
+  },
+  {
+   "q": "1e40",
+   "L": 90.3815,
+   "C": 22.2104,
+   "k": 28.6138,
+   "T": 0.095349,
+   "asymptotic_3loglog_over_log": 0.088959
+  },
+  {
+   "q": "1e50",
+   "L": 113.4073,
+   "C": 27.9668,
+   "k": 36.2891,
+   "T": 0.081347,
+   "asymptotic_3loglog_over_log": 0.076982
+  },
+  {
+   "q": "1e75",
+   "L": 170.9719,
+   "C": 42.358,
+   "k": 55.4773,
+   "T": 0.060534,
+   "asymptotic_3loglog_over_log": 0.058365
+  },
+  {
+   "q": "1e100",
+   "L": 228.5366,
+   "C": 56.7491,
+   "k": 74.6655,
+   "T": 0.048835,
+   "asymptotic_3loglog_over_log": 0.047522
+  },
+  {
+   "q": "1e200",
+   "L": 458.7951,
+   "C": 114.3138,
+   "k": 151.4184,
+   "T": 0.028662,
+   "asymptotic_3loglog_over_log": 0.028276
+  },
+  {
+   "q": "1e500",
+   "L": 1149.5706,
+   "C": 287.0077,
+   "k": 381.6769,
+   "T": 0.013773,
+   "asymptotic_3loglog_over_log": 0.013698
+  }
+ ],
+ "B_sensitivity_to_E_at_1e12": {
+  "rows": [
+   {
+    "E": 0.2,
+    "C": 6.09227,
+    "k": 7.12303,
+    "T": 0.213063
+   },
+   {
+    "E": 0.15,
+    "C": 6.11727,
+    "k": 7.15636,
+    "T": 0.21258
+   },
+   {
+    "E": 0.1,
+    "C": 6.14227,
+    "k": 7.18969,
+    "T": 0.2121
+   },
+   {
+    "E": 0.05,
+    "C": 6.16727,
+    "k": 7.22303,
+    "T": 0.211623
+   },
+   {
+    "E": 0.0,
+    "C": 6.19227,
+    "k": 7.25636,
+    "T": 0.211148
+   }
+  ],
+  "relative_gain_if_E_were_zero": 0.009,
+  "note": "the repository's certified E < 1/5 enters T only through 77/200; removing it entirely changes T by about one percent"
+ },
+ "C_height_p_dependence_at_1e12": {
+  "rows": [
+   {
+    "p": 2.2361,
+    "sigma0": 1.618,
+    "kappa_sigma0_upper": 1.1509,
+    "T_if_E=0.2": 0.196524,
+    "k_if_E=0.2": 8.37861,
+    "T_if_E=0.4": 0.198691,
+    "k_if_E=0.4": 8.19972
+   },
+   {
+    "p": 2.4,
+    "sigma0": 1.7,
+    "kappa_sigma0_upper": 0.965,
+    "T_if_E=0.2": 0.199379,
+    "k_if_E=0.2": 8.14395,
+    "T_if_E=0.4": 0.201468,
+    "k_if_E=0.4": 7.97728
+   },
+   {
+    "p": 2.6,
+    "sigma0": 1.8,
+    "kappa_sigma0_upper": 0.79671,
+    "T_if_E=0.2": 0.203625,
+    "k_if_E=0.2": 7.80944,
+    "T_if_E=0.4": 0.205652,
+    "k_if_E=0.4": 7.65559
+   },
+   {
+    "p": 2.8,
+    "sigma0": 1.9,
+    "kappa_sigma0_upper": 0.6695,
+    "T_if_E=0.2": 0.208265,
+    "k_if_E=0.2": 7.46258,
+    "T_if_E=0.4": 0.210252,
+    "k_if_E=0.4": 7.31972
+   },
+   {
+    "p": 3.0,
+    "sigma0": 2.0,
+    "kappa_sigma0_upper": 0.57002,
+    "T_if_E=0.2": 0.213063,
+    "k_if_E=0.2": 7.12301,
+    "T_if_E=0.4": 0.215021,
+    "k_if_E=0.4": 6.98968
+   },
+   {
+    "p": 3.5,
+    "sigma0": 2.25,
+    "kappa_sigma0_upper": 0.39736,
+    "T_if_E=0.2": 0.225055,
+    "k_if_E=0.2": 6.35013,
+    "T_if_E=0.4": 0.22697,
+    "k_if_E=0.4": 6.23585
+   },
+   {
+    "p": 4.0,
+    "sigma0": 2.5,
+    "kappa_sigma0_upper": 0.28874,
+    "T_if_E=0.2": 0.236512,
+    "k_if_E=0.2": 5.69957,
+    "T_if_E=0.4": 0.238401,
+    "k_if_E=0.4": 5.59957
+   }
+  ],
+  "note": "p^2 >= 5 Q_0 requires p >= sqrt 5 for Q_0 = 1; E_p is certified only at p = 3 (E < 0.192767); the two E columns bracket what a lower height might cost"
+ },
+ "D_initial_strip_dependence_at_1e12": [
+  {
+   "Q0": 1.0,
+   "assumption": "unconditional strip |Im z| <= 1",
+   "T_at_1e12": 0.213063,
+   "de_Bruijn_alone": 0.5
+  },
+  {
+   "Q0": 0.5625,
+   "assumption": "if Re s > 7/8 were zero-free for the character",
+   "T_at_1e12": 0.154391,
+   "de_Bruijn_alone": 0.2812
+  },
+  {
+   "Q0": 0.25,
+   "assumption": "if Re s > 3/4 were zero-free for the character",
+   "T_at_1e12": 0.089397,
+   "de_Bruijn_alone": 0.125
+  }
+ ],
+ "E_crossover_with_c_over_log_q": {
+  "rows": [
+   {
+    "c": 5.0,
+    "crossover_L": 26.0,
+    "crossover_q_log10": 12.0
+   },
+   {
+    "c": 7.0,
+    "crossover_L": 48.5,
+    "crossover_q_log10": 21.8
+   },
+   {
+    "c": 9.0,
+    "crossover_L": 104.5,
+    "crossover_q_log10": 46.1
+   },
+   {
+    "c": 12.0,
+    "crossover_L": 307.5,
+    "crossover_q_log10": 134.3
+   }
+  ],
+  "note": "T(q) wins below the crossover; an O(1/log q) bound with constant c only matters for conductors above 10^(crossover_q_log10)"
+ },
+ "F_small_conductor_feasibility": {
+  "L_for_C_above_3_over_4": 4.54,
+  "q_for_C_above_3_over_4": 524.2,
+  "ladder_below_1e12": [
+   {
+    "q": "1e3",
+    "L": 5.1858,
+    "C": 0.9115,
+    "k": 0.2153,
+    "T_if_E_lt_1_over_5_held": 0.474879
+   },
+   {
+    "q": "1e4",
+    "L": 7.4884,
+    "C": 1.4871,
+    "k": 0.9828,
+    "T_if_E_lt_1_over_5_held": 0.406711
+   },
+   {
+    "q": "1e5",
+    "L": 9.791,
+    "C": 2.0627,
+    "k": 1.7503,
+    "T_if_E_lt_1_over_5_held": 0.359188
+   },
+   {
+    "q": "1e6",
+    "L": 12.0936,
+    "C": 2.6384,
+    "k": 2.5179,
+    "T_if_E_lt_1_over_5_held": 0.323645
+   },
+   {
+    "q": "1e8",
+    "L": 16.6987,
+    "C": 3.7897,
+    "k": 4.0529,
+    "T_if_E_lt_1_over_5_held": 0.273234
+   },
+   {
+    "q": "1e10",
+    "L": 21.3039,
+    "C": 4.941,
+    "k": 5.588,
+    "T_if_E_lt_1_over_5_held": 0.238623
+   }
+  ],
+  "note": "E < 1/5 is certified only for ell >= 129/5 (q >= 10^12); these rows show what the same restart would give if the envelope were extended, and where the conclusion becomes numerically testable on actual characters"
+ },
+ "G_checks_against_the_conductor_rate_note": {
+  "L(1e12)": 25.909075565,
+  "note_states_L_gt": 25.909075565,
+  "C(1e12)": 6.092269,
+  "k(1e12)": 7.123025,
+  "T(1e12)": 0.2130631631,
+  "note_states_T_approx": 0.2130631631,
+  "log(9/2)/7": 0.2148682,
+  "43/200": 0.215,
+  "restart_note_k_2623_over_375": 6.994667,
+  "restart_note_terminal_gate_exp(kT)_vs_1+k/2": [
+   4.498992,
+   4.497333
+  ]
+ }
+}
