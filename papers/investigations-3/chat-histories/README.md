@@ -7,6 +7,7 @@ This is the canonical archive for conversations affiliated with this folder.
 Numbers are local and stay stable on routine refresh. The [17 October relocation receipt](../CHAT_HISTORY_RELOCATION_20261017.json) records former homes, numbers, hashes and preserved provenance.
 
 - [Chat 1 — Review Claude brainstorm note](0001_2026-10-17T01-47-10Z_review-claude-brainstorm-note.json)
+- [Chat 2 — Review investigations-3 progress](0002_2026-10-18T03-45-08Z_review-investigations-3-progress.json)
 
 The [registry](index.json) gives current capture times, counts, recorded models and hashes.
 Use [the automatic history workflow](../../../tools/CHAT_HISTORY.md) with this folder as the destination.
@@ -16,3 +17,10 @@ Chat 1 records the brainstorm assessment, creation of all seven projects and sha
 New shared portfolio chats belong here; project-specific chats belong in that project's
 `chat-histories/` folder. The earlier paths-forward discussion remains in the
 [Investigations 3 brainstorm](../../brainstorm/investigations-3/chat-histories/README.md).
+
+Chat 2 reviews the seven investigations and records the
+[portfolio assessment and directions](../brainstorm/README.md).
+Routing entry added 17 October 2026 for Edward Baker with LLM assistance,
+**gpt-6-astra (Codex), effort ultra**. Its UTC creation filename corresponds
+to 17 October in America/New_York. The registry remains authoritative for
+capture counts, identities and model metadata.

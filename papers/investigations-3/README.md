@@ -3,6 +3,18 @@
 16 October 2026. Prepared for Edward Baker with substantial LLM assistance.
 Initialization model: **gpt-6-astra (Codex)**; reasoning effort: **ultra**.
 
+**Current portfolio assessment, 17 October 2026:** the
+[new brainstorm](brainstorm/README.md) reviews all seven lanes through the
+latest notes and reviews. It recommends developing 01+03 together and
+completing 02's bounded activation certificate. It also records a new
+source-dependent conductor-rate deduction, with its own explicit review
+limitations. Prepared for Edward Baker with LLM assistance,
+**gpt-6-astra (Codex), effort ultra**.
+
+The following setup narrative and checkpoint table retain their earlier
+planning context; use the linked assessment and each lane's README for
+current evidence and decisions.
+
 Seven project homes initialized from the [brainstorm exchange](../brainstorm/investigations-3/README.md).
 The [overall research plan](research-overview/01_PORTFOLIO_RESEARCH_PLAN_20261016.md) sets priorities,
 model assignments, dependencies and stopping or re-evaluation criteria.
@@ -13,7 +25,7 @@ and analytic continuation are ready for accumulated assessment.
 This status update was prepared for Edward Baker with substantial LLM assistance,
 **gpt-6.1-sol (Codex)**, reasoning effort **ultra**, on 17 October 2026.
 
-| Project | Opening status |
+| Project | Earlier planning checkpoint |
 | --- | --- |
 | [Dirichlet Newman families](01_dirichlet_newman_families/README.md) | Contract phase proposed; conductor numerics gated |
 | [Sharp finite-sum bounds](02_sharp_finite_sum_bounds/README.md) | Bounded feasibility phase proposed |
@@ -23,7 +35,7 @@ This status update was prepared for Edward Baker with substantial LLM assistance
 | [Explicit heat zero counts](06_explicit_heat_zero_counts/README.md) | Baseline count cross-model reviewed; requested round-2 count from X>=100000 has same-model checks; consumer tolerance open |
 | [Source-measurement audit](07_source_measurement_audit/README.md) | Round one assessed; round-two notes add one-direction gap events and certified tail bounds; round assessment pending |
 
-Recommended opening work: the family contract and sharp finite-sum
+The original opening recommendation was the family contract and sharp finite-sum
 feasibility, with a bounded source-measurement audit. Other lanes enter
 only through the gates in the overall plan. Canonical-system and
 modular/transverse directions remain dormant pointers; cancellation and
