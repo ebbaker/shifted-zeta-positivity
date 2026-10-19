@@ -78,6 +78,28 @@ finite order \(m=2r+j\), \(r\ge1\), \(j\in\{0,1\}\).
   \(\Lambda<t_0\). The prescribed-trace equivalence retains its stated
   two-sided locally bounded scalar coefficient and remainder control.
 
+- **Normalized jet rotation comparison (3/11 S03, 18 October).**
+  The complete signed oscillator-defect integral has an exact first-jet
+  endpoint primitive. The scoped comparison is **proved in-note**: scalar
+  transport with independent endpoint residual envelopes is dominated by
+  the ideal direct radius test for the same phase, approximant and norm.
+  Correlated residual estimates and computational cost comparisons are
+  outside that limitation. The fixed height-1000 cover validates direct
+  exclusion, gives a certified failure witness for the declared standard
+  Cauchy payments, and leaves sharper joint-disk transport inconclusive.
+  No new region or global theta estimate. [Proof](../papers/investigations-3/11_arithmetic_collision_rigidity/symmetries/03_normalized_jet_rotation/notes/01_SIGNED_TRANSPORT_AND_DIRECT_JET_COMPARISON_20261018.md),
+  [same-model internal review](../papers/investigations-3/11_arithmetic_collision_rigidity/symmetries/03_normalized_jet_rotation/reviews/01_SIGNED_TRANSPORT_INTERNAL_REVIEW_20261018.md).
+  Prepared for Edward Baker with substantial LLM assistance, **gpt-6.1-sol, ultra**.
+  The [correlated continuation](../papers/investigations-3/11_arithmetic_collision_rigidity/symmetries/03_normalized_jet_rotation/notes/02_CORRELATED_ARITHMETIC_RESIDUAL_AND_PAID_TRANSPORT_20261018.md)
+  supplies an **interval-certified** finite residual increment below
+  `0.000266448` versus `0.002011747` for independent endpoints from the
+  same source data. Paid transport exceeds `1.124460`; direct exclusion
+  remains stronger. Its oscillator calibration has complete real
+  phase-scaled first-jet error below `0.000266449`. Earlier finite
+  transport uncertainty is resolved with added source information,
+  without new coverage or a global bound; [same-model internal review](../papers/investigations-3/11_arithmetic_collision_rigidity/symmetries/03_normalized_jet_rotation/reviews/02_CORRELATED_RESIDUAL_INTERNAL_REVIEW_20261018.md).
+  Prepared for Edward Baker, **gpt-6.1-sol, actual effort ultra**, 18 October.
+
 ## Status
 
 The local laws, indices, surface identities and equivalences have written

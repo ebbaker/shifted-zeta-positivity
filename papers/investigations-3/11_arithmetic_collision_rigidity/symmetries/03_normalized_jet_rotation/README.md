@@ -2,7 +2,34 @@
 
 18 October 2026, America/New_York. Prepared for Edward Baker with substantial
 LLM assistance. Authoring model **gpt-6-astra (Codex)**, actual effort **max**.
-Exact comparison identity available; the arithmetic estimate is open.
+Exact comparison identity and a bounded correlated residual estimate are
+available; the uniform arithmetic estimate remains open.
+
+**Opening execution, 18 October 2026:** the [signed transport comparison](notes/01_SIGNED_TRANSPORT_AND_DIRECT_JET_COMPARISON_20261018.md)
+evaluates the complete defect integral by a first-jet endpoint primitive.
+A proved comparison shows that scalar transport with independent endpoint
+residual envelopes cannot improve on the ideal direct radius test. On the
+prescribed height-1000 pilot, direct exclusion passes; the standard Cauchy
+payment fails a certified point witness, while sharper joint-disk transport
+remains inconclusive on the fixed cover. [192/256-bit checks](numerics/README.md),
+[internal review](reviews/01_SIGNED_TRANSPORT_INTERNAL_REVIEW_20261018.md).
+Prepared for Edward Baker with substantial LLM assistance, **gpt-6.1-sol,
+actual reasoning effort ultra**. No new region or arithmetic correlation
+estimate is claimed; further work needs such a bound or a measured cost gain.
+
+**Correlated continuation, 18 October 2026:** [Note 02](notes/02_CORRELATED_ARITHMETIC_RESIDUAL_AND_PAID_TRANSPORT_20261018.md)
+certifies the complete residual increment below `0.000266448`, versus
+`0.002011747` for independent endpoints from the same source data. Paid
+transport now has radius greater than `1.124460`; the matched independent
+transport gives `1.122848`, while direct exclusion remains stronger at
+`1.336516`. A nominal oscillator calibration has complete normalized
+first-jet error below `0.000266449`, with exact anchor coefficients exported
+in the [192/256-bit records](numerics/README.md). This supersedes the opening
+round's finite transport uncertainty using additional source information;
+its independent-endpoint comparison theorem remains unchanged.
+Prepared for Edward Baker with substantial LLM assistance, **gpt-6.1-sol,
+actual effort ultra**; [internal review](reviews/02_CORRELATED_RESIDUAL_INTERNAL_REVIEW_20261018.md).
+No new height range, uniform arithmetic theorem or performance gain.
 
 ## Question and connection to the manifold work
 
@@ -70,7 +97,10 @@ integral, retaining the signed correction and correlations between modes.
 Do not replace it immediately by the sum of absolute mode defects.
 
 Compare direct first-jet exclusion with this transport calculation on the
-same interval. The latter uses a second derivative. A holomorphic residual
+same interval. Directly bounding the pointwise defect uses a second derivative;
+the [opening endpoint primitive](notes/01_SIGNED_TRANSPORT_AND_DIRECT_JET_COMPARISON_20261018.md)
+avoids that residual derivative payment and exposes the independent-endpoint
+comparison limitation. A holomorphic residual
 r bounded by eta on a radius-d disk obeys
 \[
  |(D_\theta^2+1)r|

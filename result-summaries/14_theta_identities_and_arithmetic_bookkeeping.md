@@ -180,3 +180,29 @@ exp(20/epsilon) for epsilon<=t<=1/2. The manuscript states: “The bridge
 absence of finite exclusion and unevaluated onset, not the global gap.
 No new Newman bound. Prepared for Edward Baker with substantial LLM
 assistance, **gpt-6-astra, actual effort max**; no specialist review.
+
+**18 October 2026 S01 bounded endpoint-pairing continuation, investigation 3/11.**
+The [opening note](../papers/investigations-3/11_arithmetic_collision_rigidity/symmetries/01_modular_self_duality/notes/01_PAIRED_ENDPOINT_REMAINDER_AND_BOUNDED_COMPARISON_20261018.md)
+proves a signed paired-endpoint refinement of the existing nonstationary
+arithmetic tail, including complex-neighborhood spectral jets. Fresh
+192/256-bit complete comparisons on [1/100,1/5] × [999,1001] keep the same
+retained polynomial and common costs; the primary added-error reductions
+are about 14.8%, 7.2% and 3.0% at orders 0–2. **Proved in-note; outward
+scalar and complete-evaluator checks; internal same-model review** in the
+[assessment](../papers/investigations-3/11_arithmetic_collision_rigidity/symmetries/01_modular_self_duality/reviews/01_PAIRED_ENDPOINT_INTERNAL_REVIEW_20261018.md).
+The note states: “It does not give a sign or a lower bound for the retained
+field”. No new coverage or Newman bound. Prepared for Edward Baker with
+substantial LLM assistance, **gpt-6.1-sol, actual effort ultra**.
+
+**18 October 2026 S04 phase-retaining scaling continuation, investigation 3/11.**
+[Note 01](../papers/investigations-3/11_arithmetic_collision_rigidity/symmetries/04_time_height_scaling/notes/01_PHASE_RETAINING_FULL_CUTOFF_SCALING_20261018.md)
+quantifies the earlier first-jet coordinate asymptotics for a full-cutoff
+signed scalar and its actual fixed-time derivative. On kappa in [1,2],
+0<t<=1/20, the Euclidean replacement error in (F/2,2Fx/L) is below
+exp(-kappa*(kappa+12)/(16*t)); the existing complete RS remainder is paid
+separately. **Proved in-note; outward finite point/transition checks;
+same-model internal review** in the [assessment](../papers/investigations-3/11_arithmetic_collision_rigidity/symmetries/04_time_height_scaling/reviews/01_FULL_CUTOFF_SCALING_INTERNAL_REVIEW_20261018.md).
+The note states: “This is an explicit quantitative completion of known
+coordinate asymptotics.” It is not a new cancellation estimate, smaller
+total error, or uniform signed lower bound. For Edward Baker with substantial
+LLM assistance, **gpt-6.1-sol, actual effort ultra**; no specialist review.

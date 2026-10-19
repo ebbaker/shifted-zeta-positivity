@@ -122,3 +122,55 @@ belongs in those sources; create no new manuscript snapshot folders.
   Bounded tasks and decision rules; program setup, no new estimate or
   manuscript snapshot. For Edward Baker with substantial LLM assistance,
   **gpt-6-astra, actual effort max**.
+
+- **18 October 2026 — S01 first bounded modular-pairing result.**
+  [Paired-endpoint derivation](symmetries/01_modular_self_duality/notes/01_PAIRED_ENDPOINT_REMAINDER_AND_BOUNDED_COMPARISON_20261018.md)
+  improves the inherited omitted-mode bound and complete added errors on
+  the height-1000 pilot, with [192/256-bit evidence](symmetries/01_modular_self_duality/numerics/README.md)
+  and [internal review](symmetries/01_modular_self_duality/reviews/01_PAIRED_ENDPOINT_INTERNAL_REVIEW_20261018.md).
+  Manuscript unchanged; no new signed region, snapshot, commit or Newman
+  bound. For Edward Baker with substantial LLM assistance, **gpt-6.1-sol,
+  actual reasoning effort ultra**.
+
+- **18 October 2026 — S02 bounded signed-correction implementation.**
+  [Analytic correction and error comparison](symmetries/02_cutoff_reflection/notes/01_ANALYTIC_CUTOFF_CORRECTION_AND_COMPLETE_JET_ERRORS_20261018.md),
+  [192/256-bit records](symmetries/02_cutoff_reflection/numerics/README.md),
+  [internal review](symmetries/02_cutoff_reflection/reviews/01_CUTOFF_REFLECTION_INTERNAL_REVIEW_20261018.md).
+  Complete disk-error budgets decrease on the height-1000 pilot and
+  cutoff-9 crossing, with derivatives through order two. Earlier transport
+  Notes 20–22 credited; comparison to their best method remains open.
+  Manuscript unchanged; no new coverage, snapshot, commit or Newman bound.
+  For Edward Baker with substantial LLM assistance, **gpt-6.1-sol, ultra**.
+
+- **18 October 2026 — S03 signed transport opening comparison.**
+  [Derivation](symmetries/03_normalized_jet_rotation/notes/01_SIGNED_TRANSPORT_AND_DIRECT_JET_COMPARISON_20261018.md),
+  [192/256-bit checks](symmetries/03_normalized_jet_rotation/numerics/README.md),
+  [internal review](symmetries/03_normalized_jet_rotation/reviews/01_SIGNED_TRANSPORT_INTERNAL_REVIEW_20261018.md).
+  First-jet endpoint primitive removes residual quadrature/second-derivative
+  payment; independent endpoint scalar transport is dominated by the ideal
+  direct radius test. Standard Cauchy rule fails a point witness; joint-disk
+  transport remains inconclusive on the fixed cover. Existing coverage only;
+  manuscript unchanged, no snapshot or commit. For Edward Baker with
+  substantial LLM assistance, **gpt-6.1-sol, actual effort ultra**.
+
+- **18 October 2026 — S03 correlated arithmetic residual and paid transport.**
+  [Note 02](symmetries/03_normalized_jet_rotation/notes/02_CORRELATED_ARITHMETIC_RESIDUAL_AND_PAID_TRANSPORT_20261018.md),
+  [192/256-bit records](symmetries/03_normalized_jet_rotation/numerics/README.md),
+  [internal review](symmetries/03_normalized_jet_rotation/reviews/02_CORRELATED_RESIDUAL_INTERNAL_REVIEW_20261018.md).
+  Signed residual increment <0.000266448 vs matched independent endpoints
+  <0.002011747; paid transport >1.124460, direct >1.336516. Exact nominal
+  anchor coefficients export a calibrated complete first-jet error
+  <0.000266449 on existing pilot. No new region, manuscript snapshot,
+  commit or global estimate. For Edward Baker with substantial LLM
+  assistance, **gpt-6.1-sol, actual reasoning effort ultra**.
+
+- **18 October 2026 — S04 full-cutoff phase-retaining scaling model.**
+  [Note 01](symmetries/04_time_height_scaling/notes/01_PHASE_RETAINING_FULL_CUTOFF_SCALING_20261018.md),
+  [192/256-bit point and transition checks](symmetries/04_time_height_scaling/numerics/README.md),
+  [internal review](symmetries/04_time_height_scaling/reviews/01_FULL_CUTOFF_SCALING_INTERNAL_REVIEW_20261018.md).
+  Quantifies the existing coordinate asymptotics for an actual signed scalar
+  and its fixed-time derivative through the growing cutoff; normalized
+  vector replacement error <exp(-kappa*(kappa+12)/(16*t)) on kappa [1,2],
+  0<t<=1/20. Adds a small paid model defect; no new total-error decrease,
+  uniform exclusion, effective onset, manuscript snapshot or commit.
+  For Edward Baker with substantial LLM assistance, **gpt-6.1-sol, ultra**.

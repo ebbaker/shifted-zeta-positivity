@@ -1,0 +1,378 @@
+{
+  "date": "2026-10-18",
+  "timezone": "America/New_York",
+  "prepared_for": "Edward Baker",
+  "actual_model": "gpt-6.1-sol",
+  "actual_effort": "ultra",
+  "llm_assistance": "substantial; same-model parallel derivation and numerical internal check",
+  "python": "3.10.0",
+  "python_flint": "0.9.0",
+  "precision_bits": 256,
+  "domain": {
+    "t": [
+      "1/100",
+      "1/5"
+    ],
+    "x": [
+      "999",
+      "1001"
+    ],
+    "anchor_x": "999"
+  },
+  "fixed_cutoff": 8,
+  "retained_terms": "all n=1,...,8 and the entire signed S02 correction",
+  "closed_cover": {
+    "t_cells": 32,
+    "x_cells": 128,
+    "total_cells": 4096,
+    "method": "whole-cell interval derivatives plus midpoint propagation on identical cells; Z_x=-i exp(-i theta) omega R_f; W_x=i omega(W-R_f)"
+  },
+  "phase": {
+    "orientation": "decreasing in x on every certified closed cell",
+    "range_enclosure": [
+      "[-848.20585951443003654699863883096423813 +/- 1.19e-36]",
+      "[-845.83814469042934668843580036897693027 +/- 3.25e-36]"
+    ],
+    "absolute_omega_lower": "[1.0939342474342282121777365235668466468 +/- 4.59e-38]",
+    "absolute_omega_upper": "[1.0944720823928556599632440713418021407 +/- 2.51e-38]",
+    "absolute_omega_x_upper": "[0.00025024899521413109201601200466209502937 +/- 1.13e-42]",
+    "absolute_logA_x_upper": "[0.39094538663660813536014404403093656117 +/- 1.13e-39]"
+  },
+  "inherited_S02_contract": {
+    "record": "papers/investigations-3/11_arithmetic_collision_rigidity/symmetries/02_cutoff_reflection/numerics/S02_CUTOFF_REFLECTION_192_20261018.json",
+    "record_sha256": "3569d63dc41770c822fe7f8588f9608ad109b606f1d4ab71e7d9c7ccccb9696e",
+    "disk_radius": "1/2",
+    "eta_upper": "[0.22629924588386634944893235072732158976 +/- 3.11e-39]",
+    "script_sha256": "d8dda6d4f746b35b7fd6a545ff87940c88a0c896fe9a1f684c002dcc2ea0cc9b",
+    "source_pins_validated": true,
+    "status": "imported complete holomorphic fixed-cutoff error, not re-proved"
+  },
+  "naive_whole_cell_enclosure": {
+    "direct_approximant_radius_lower": "1.3230338040739297866821289062500000000",
+    "signed_integral_modulus_upper": "2.2709045782685279846191406250000000000",
+    "endpoint_budget_lower": "[-0.34346330832524459300511521791794311402 +/- 1.30e-39]",
+    "joint_disk_endpoint_budget_lower": "[-0.16992721352515395039862656483103757156 +/- 2.43e-39]"
+  },
+  "direct": {
+    "approximant_first_jet_radius_lower": "[1.3810251807785496244416559359368719152 +/- 2.04e-38]",
+    "uniform_residual_first_jet_norm_upper": "[0.47158000467910819827872330180598103801 +/- 2.91e-39]",
+    "joint_disk_residual_first_jet_norm_upper": "[0.41373463974574465074322708411034585719 +/- 4.15e-39]",
+    "joint_disk_normalized_first_jet_radius_lower": "[0.96729054103280497369842885182652605799 +/- 3.82e-39]",
+    "normalized_first_jet_radius_lower": "[0.90944517609944142616293263413089087717 +/- 2.58e-39]",
+    "coordinate_matrix_smallest_singular_value_lower": "[0.71349663369054520052539796091603622341 +/- 3.91e-39]",
+    "physical_sqrt_energy_divided_by_A_lower": "[0.64888607167305653224441518446375107753 +/- 1.10e-41]",
+    "passes": true
+  },
+  "transport": {
+    "integral_definition": "I_f(x)=integral from theta(999) to theta(x) of exp(-is) (D_theta^2+1)f ds",
+    "exact_integral_evaluation": "I_f=i(Z_f(x)-Z_f(999)); evaluate Z_f-2 before subtraction so the n=1 constant cancels exactly",
+    "quadrature_error": "0; exact endpoint antiderivative identity",
+    "signed_complete_integral_modulus_upper": "[2.2165224884312664370499257061904036062 +/- 3.80e-38]",
+    "approximant_anchor_radius_lower": "3.1137579120695590972900390625000000000",
+    "physical_anchor_radius_lower": "[2.6421779073904508990113157606940189620 +/- 7.10e-39]",
+    "anchor_minus_signed_integral_lower": "[1.1256587955493415494002696063095963938 +/- 3.80e-38]",
+    "complete_approximant_defect_abs_upper_diagnostic": "[1.6121516106969914959698211044661623743 +/- 3.72e-38]",
+    "cauchy_residual_defect_abs_upper": "[1.7392176036614692086964774870827534803 +/- 1.61e-39]",
+    "cauchy_integrated_residual_upper": "[3.8054228240626369684933184192232403990 +/- 1.23e-38]",
+    "endpoint_primitive_residual_integral_upper": "[0.94316000935821639655744660361196207601 +/- 4.20e-39]",
+    "joint_disk_endpoint_primitive_residual_integral_upper": "[0.82746927949148930148645416822069171437 +/- 1.72e-39]",
+    "standard_budget_lower_bound": "[-3.1513440331924036173717721147196250432 +/- 4.31e-38]",
+    "endpoint_budget_lower_bound": "[-0.28908121848798304543590029910834672018 +/- 3.34e-39]",
+    "joint_disk_endpoint_budget_lower_bound": "[-0.11554512368789240282941164602144117772 +/- 3.88e-40]",
+    "passes_standard_budget": false,
+    "passes_endpoint_budget": false,
+    "passes_joint_disk_endpoint_budget": false,
+    "joint_disk_status": "fixed-cover interval lower bound remains negative; point witness is positive; no scoped impossibility for this sharper rule",
+    "joint_disk_provenance": "analytic Schwarz-Pick refinement discovered in the opening internal review, after the separate Cauchy comparison",
+    "witness": {
+      "t": "1/100",
+      "x": "1001",
+      "anchor_radius": "[3.4263610788613289899209518495327292183 +/- 3.47e-39]",
+      "complete_signed_integral_modulus": "[2.0623843624769302902352268745308085072 +/- 3.40e-39]",
+      "endpoint_budget_slack": "[-0.050763297652925895150444930416022402921 +/- 3.70e-40]",
+      "joint_disk_endpoint_budget_slack": "[0.12277279714716474745604372267088313954 +/- 2.36e-39]",
+      "standard_budget_slack": "[-2.9130261123573464670863167460273007259 +/- 5.04e-39]"
+    }
+  },
+  "elementary_controls": {
+    "constant_Q": {
+      "theta": "x",
+      "anchor_theta": "0",
+      "anchor_radius": "1",
+      "integral_modulus_at_pi_over_3": "[1.0000000000000000000000000000000000000 +/- 3e-43]",
+      "integral_modulus_at_pi": "[2.0000000000000000000000000000000000000 +/- 3e-42]",
+      "failed_premise": "strict signed-integral smaller-than-anchor bound; even a nonzero constant does not satisfy it on long intervals"
+    },
+    "heat_polynomial_event": {
+      "H": "x^2-2(t-t_c)",
+      "time": "t_c",
+      "anchor_x": "1",
+      "event_x": "0",
+      "anchor_radius": "[2.2360679774997896964091736687312762354 +/- 4.07e-38]",
+      "integral_modulus_at_event": "[2.2360679774997896964091736687312762354 +/- 4.07e-38]",
+      "failed_premise": "strict propagation bound fails by equality at the event"
+    },
+    "oscillatory_residual": {
+      "r": "c cos(theta)",
+      "defect": "0 exactly",
+      "failed_premise": "independent endpoint envelope does not use exact residual correlation"
+    }
+  },
+  "slabs": [
+    {
+      "t_index": 0,
+      "approximant_anchor_radius_lower": "3.3421812839806079864501953125000000000",
+      "complete_signed_integral_modulus_upper": "[2.2165224884312664370499257061904036062 +/- 3.80e-38]",
+      "direct_approximant_radius_lower": "[1.4369426094625810125289294447186518644 +/- 3.90e-38]",
+      "anchor_minus_signed_integral_lower": "[1.1256587955493415494002696063095963938 +/- 3.80e-38]"
+    },
+    {
+      "t_index": 1,
+      "approximant_anchor_radius_lower": "3.3346557430922985076904296875000000000",
+      "complete_signed_integral_modulus_upper": "[2.2059862525616252034629509327096075150 +/- 2.68e-38]",
+      "direct_approximant_radius_lower": "[1.4334706211396399599488549578043066916 +/- 3.06e-38]",
+      "anchor_minus_signed_integral_lower": "[1.1286694905306733042274787547903924850 +/- 2.68e-38]"
+    },
+    {
+      "t_index": 2,
+      "approximant_anchor_radius_lower": "3.3271398134529590606689453125000000000",
+      "complete_signed_integral_modulus_upper": "[2.1954617777582031779147512515156087299 +/- 4.15e-38]",
+      "direct_approximant_radius_lower": "[1.4301209647988809405893278628753108894 +/- 1.20e-38]",
+      "anchor_minus_signed_integral_lower": "[1.1316780356947558827541940609843912701 +/- 4.15e-38]"
+    },
+    {
+      "t_index": 3,
+      "approximant_anchor_radius_lower": "3.3196336477994918823242187500000000000",
+      "complete_signed_integral_modulus_upper": "[2.1849494608649429141383301301673036162 +/- 2.47e-38]",
+      "direct_approximant_radius_lower": "[1.4268926134476218247980135704098685680 +/- 2.95e-38]",
+      "anchor_minus_signed_integral_lower": "[1.1346841869345489681858886198326963838 +/- 2.47e-38]"
+    },
+    {
+      "t_index": 4,
+      "approximant_anchor_radius_lower": "3.3121372126042842864990234375000000000",
+      "complete_signed_integral_modulus_upper": "[2.1744497367091151821237843963542219576 +/- 3.47e-38]",
+      "direct_approximant_radius_lower": "[1.4237845595970465945654593305843371542 +/- 3.60e-38]",
+      "anchor_minus_signed_integral_lower": "[1.1376874758951691043752390411457780424 +/- 3.47e-38]"
+    },
+    {
+      "t_index": 5,
+      "approximant_anchor_radius_lower": "3.3046506531536579132080078125000000000",
+      "complete_signed_integral_modulus_upper": "[2.1639992083107830244956183421194027564 +/- 3.55e-38]",
+      "direct_approximant_radius_lower": "[1.4207957724176472156857076992679227715 +/- 1.68e-38]",
+      "anchor_minus_signed_integral_lower": "[1.1406514448428748887123894703805972436 +/- 3.55e-38]"
+    },
+    {
+      "t_index": 6,
+      "approximant_anchor_radius_lower": "3.2971740216016769409179687500000000000",
+      "complete_signed_integral_modulus_upper": "[2.1538148928873912514126891047338216600 +/- 4.98e-38]",
+      "direct_approximant_radius_lower": "[1.4179251688501810474210013922495199542 +/- 3.07e-38]",
+      "anchor_minus_signed_integral_lower": "[1.1433591287142856895052796452661783400 +/- 4.98e-38]"
+    },
+    {
+      "t_index": 7,
+      "approximant_anchor_radius_lower": "3.2897074110805988311767578125000000000",
+      "complete_signed_integral_modulus_upper": "[2.1436415171239990377715038152512524482 +/- 5.00e-38]",
+      "direct_approximant_radius_lower": "[1.4151716567405961676488266990885235431 +/- 1.14e-38]",
+      "anchor_minus_signed_integral_lower": "[1.1460658939565997934052539972487475518 +/- 5.00e-38]"
+    },
+    {
+      "t_index": 8,
+      "approximant_anchor_radius_lower": "3.2822509258985519409179687500000000000",
+      "complete_signed_integral_modulus_upper": "[2.1334793625197902177168050458587276402 +/- 9.78e-39]",
+      "direct_approximant_radius_lower": "[1.4125341310763200183887414774184654395 +/- 1.57e-38]",
+      "anchor_minus_signed_integral_lower": "[1.1487715633787617232011637041412723598 +/- 9.78e-39]"
+    },
+    {
+      "t_index": 9,
+      "approximant_anchor_radius_lower": "3.2748046517372131347656250000000000000",
+      "complete_signed_integral_modulus_upper": "[2.1233288221556687594023715591932314904 +/- 4.69e-38]",
+      "direct_approximant_radius_lower": "[1.4100114332439695288516094930084262087 +/- 3.56e-38]",
+      "anchor_minus_signed_integral_lower": "[1.1514758295815443753632534408067685096 +/- 4.69e-38]"
+    },
+    {
+      "t_index": 10,
+      "approximant_anchor_radius_lower": "3.2673686780035495758056640625000000000",
+      "complete_signed_integral_modulus_upper": "[2.1131901985410043225816552234016355663 +/- 3.50e-38]",
+      "direct_approximant_radius_lower": "[1.4076024055877025778642362451666458312 +/- 2.15e-40]",
+      "anchor_minus_signed_integral_lower": "[1.1541784794625452532240088390983644337 +/- 3.50e-38]"
+    },
+    {
+      "t_index": 11,
+      "approximant_anchor_radius_lower": "3.2599430717527866363525390625000000000",
+      "complete_signed_integral_modulus_upper": "[2.1030638474082852604216089168894388317 +/- 3.68e-38]",
+      "direct_approximant_radius_lower": "[1.4053058750388979370313326516532951298 +/- 2.08e-38]",
+      "anchor_minus_signed_integral_lower": "[1.1568792243445013759309301456105611683 +/- 3.68e-38]"
+    },
+    {
+      "t_index": 12,
+      "approximant_anchor_radius_lower": "3.2525279186666011810302734375000000000",
+      "complete_signed_integral_modulus_upper": "[2.0929500855306410984082634673005226471 +/- 2.59e-38]",
+      "direct_approximant_radius_lower": "[1.4031206254522927721063955812723094959 +/- 2.23e-38]",
+      "anchor_minus_signed_integral_lower": "[1.1595778331359600826220099701994773529 +/- 2.59e-38]"
+    },
+    {
+      "t_index": 13,
+      "approximant_anchor_radius_lower": "3.2451233193278312683105468750000000000",
+      "complete_signed_integral_modulus_upper": "[2.0828492521228042776972645095668906766 +/- 4.24e-38]",
+      "direct_approximant_radius_lower": "[1.4010454481070662530106042678115756528 +/- 4.41e-38]",
+      "anchor_minus_signed_integral_lower": "[1.1622740672050269906132823654331093234 +/- 4.24e-38]"
+    },
+    {
+      "t_index": 14,
+      "approximant_anchor_radius_lower": "3.2377293966710567474365234375000000000",
+      "complete_signed_integral_modulus_upper": "[2.0727616287589885378115478088421914498 +/- 1.63e-38]",
+      "direct_approximant_radius_lower": "[1.3990791026911570773394788376586822115 +/- 5.42e-39]",
+      "anchor_minus_signed_integral_lower": "[1.1649677679120682096249756286578085502 +/- 1.63e-38]"
+    },
+    {
+      "t_index": 15,
+      "approximant_anchor_radius_lower": "3.2303462065756320953369140625000000000",
+      "complete_signed_integral_modulus_upper": "[2.0626875208758345068812007667727150457 +/- 5.63e-39]",
+      "direct_approximant_radius_lower": "[1.3972203475729537563417797284299904964 +/- 1.94e-38]",
+      "anchor_minus_signed_integral_lower": "[1.1676586856997975884557132957272849543 +/- 5.62e-39]"
+    },
+    {
+      "t_index": 16,
+      "approximant_anchor_radius_lower": "3.2229738533496856689453125000000000000",
+      "complete_signed_integral_modulus_upper": "[2.0526273347516030305005588438338810409 +/- 1.60e-38]",
+      "direct_approximant_radius_lower": "[1.3954678589056951840683738370760929977 +/- 1.77e-38]",
+      "anchor_minus_signed_integral_lower": "[1.1703465185980826384447536561661189591 +/- 1.60e-38]"
+    },
+    {
+      "t_index": 17,
+      "approximant_anchor_radius_lower": "3.2156124711036682128906250000000000000",
+      "complete_signed_integral_modulus_upper": "[2.0425813106210587330801281560143558082 +/- 1.59e-39]",
+      "direct_approximant_radius_lower": "[1.3938203616669027574888466669944474439 +/- 3.13e-38]",
+      "anchor_minus_signed_integral_lower": "[1.1730311604826094798104968439856441918 +/- 1.59e-39]"
+    },
+    {
+      "t_index": 18,
+      "approximant_anchor_radius_lower": "3.2082620933651924133300781250000000000",
+      "complete_signed_integral_modulus_upper": "[2.0325497838040758814392458746760173022 +/- 3.99e-38]",
+      "direct_approximant_radius_lower": "[1.3922765679761441846673555412295280217 +/- 4.80e-38]",
+      "anchor_minus_signed_integral_lower": "[1.1757123095611165318908322503239826978 +/- 3.99e-38]"
+    },
+    {
+      "t_index": 19,
+      "approximant_anchor_radius_lower": "3.2009228840470314025878906250000000000",
+      "complete_signed_integral_modulus_upper": "[2.0225330322058860811223007465252335975 +/- 1.28e-38]",
+      "direct_approximant_radius_lower": "[1.3908351391431143244978384681680669098 +/- 2.93e-38]",
+      "anchor_minus_signed_integral_lower": "[1.1783898518411453214655898784747664025 +/- 1.28e-38]"
+    },
+    {
+      "t_index": 20,
+      "approximant_anchor_radius_lower": "3.1935948953032493591308593750000000000",
+      "complete_signed_integral_modulus_upper": "[2.0125313946275201976241188838173442771 +/- 2.15e-38]",
+      "direct_approximant_radius_lower": "[1.3894947450570261775514975993236169520 +/- 1.24e-38]",
+      "anchor_minus_signed_integral_lower": "[1.1810635006757291615067404911826557229 +/- 2.15e-38]"
+    },
+    {
+      "t_index": 21,
+      "approximant_anchor_radius_lower": "3.1862782351672649383544921875000000000",
+      "complete_signed_integral_modulus_upper": "[2.0025451409655687976603572239112181977 +/- 2.46e-38]",
+      "direct_approximant_radius_lower": "[1.3882540347064261483914194465025486538 +/- 7.60e-39]",
+      "anchor_minus_signed_integral_lower": "[1.1837330942016961406941349635887818023 +/- 2.46e-38]"
+    },
+    {
+      "t_index": 22,
+      "approximant_anchor_radius_lower": "3.1789730153977870941162109375000000000",
+      "complete_signed_integral_modulus_upper": "[1.9925746086179101724473110109606276543 +/- 1.93e-38]",
+      "direct_approximant_radius_lower": "[1.3871116329927863157462430848284102423 +/- 2.66e-38]",
+      "anchor_minus_signed_integral_lower": "[1.1863984067798769216688999265393723457 +/- 1.93e-38]"
+    },
+    {
+      "t_index": 23,
+      "approximant_anchor_radius_lower": "3.1716793328523635864257812500000000000",
+      "complete_signed_integral_modulus_upper": "[1.9826200451947397590767544705687457079 +/- 2.64e-39]",
+      "direct_approximant_radius_lower": "[1.3860661929468769321481690290992385666 +/- 2.30e-38]",
+      "anchor_minus_signed_integral_lower": "[1.1890592876576238273490267794312542921 +/- 2.64e-39]"
+    },
+    {
+      "t_index": 24,
+      "approximant_anchor_radius_lower": "3.1643972992897033691406250000000000000",
+      "complete_signed_integral_modulus_upper": "[1.9726817560677198833719477543733384416 +/- 3.19e-38]",
+      "direct_approximant_radius_lower": "[1.3851163286555931950205645041408485755 +/- 2.34e-38]",
+      "anchor_minus_signed_integral_lower": "[1.1917155432219834857686772456266615584 +/- 3.19e-38]"
+    },
+    {
+      "t_index": 25,
+      "approximant_anchor_radius_lower": "3.1571270041167736053466796875000000000",
+      "complete_signed_integral_modulus_upper": "[1.9627600298564837094289840796596710877 +/- 3.64e-38]",
+      "direct_approximant_radius_lower": "[1.3842606394681081243543198757355737894 +/- 5.93e-39]",
+      "anchor_minus_signed_integral_lower": "[1.1943669742602898959176956078403289123 +/- 3.64e-38]"
+    },
+    {
+      "t_index": 26,
+      "approximant_anchor_radius_lower": "3.1498685888946056365966796875000000000",
+      "complete_signed_integral_modulus_upper": "[1.9528551849153411759511118533224020624 +/- 4.65e-38]",
+      "direct_approximant_radius_lower": "[1.3834976912895777258819975296569166689 +/- 8.85e-39]",
+      "anchor_minus_signed_integral_lower": "[1.1970134039792644606455678341775979376 +/- 4.65e-38]"
+    },
+    {
+      "t_index": 27,
+      "approximant_anchor_radius_lower": "3.1426221095025539398193359375000000000",
+      "complete_signed_integral_modulus_upper": "[1.9429674578042733004831406443646983981 +/- 3.62e-38]",
+      "direct_approximant_radius_lower": "[1.3828261319150708552540614799163355894 +/- 2.55e-38]",
+      "anchor_minus_signed_integral_lower": "[1.1996546516982806393361952931353016019 +/- 3.62e-38]"
+    },
+    {
+      "t_index": 28,
+      "approximant_anchor_radius_lower": "3.1353876963257789611816406250000000000",
+      "complete_signed_integral_modulus_upper": "[1.9330971518325941279694535498734883581 +/- 2.25e-38]",
+      "direct_approximant_radius_lower": "[1.3822445220605171082491494671642613402 +/- 2.14e-38]",
+      "anchor_minus_signed_integral_lower": "[1.2022905444931848332121870751265116419 +/- 2.25e-38]"
+    },
+    {
+      "t_index": 29,
+      "approximant_anchor_radius_lower": "3.1281654387712478637695312500000000000",
+      "complete_signed_integral_modulus_upper": "[1.9232445351549983632499516185286870568 +/- 1.23e-39]",
+      "direct_approximant_radius_lower": "[1.3817514427749627427987830449935302489 +/- 3.35e-38]",
+      "anchor_minus_signed_integral_lower": "[1.2049209036162495005195796314713129432 +/- 1.23e-39]"
+    },
+    {
+      "t_index": 30,
+      "approximant_anchor_radius_lower": "3.1209554821252822875976562500000000000",
+      "complete_signed_integral_modulus_upper": "[1.9134098589900450888435212389150308358 +/- 5.7e-41]",
+      "direct_approximant_radius_lower": "[1.3813454809155244365900967152039591983 +/- 3.95e-38]",
+      "anchor_minus_signed_integral_lower": "[1.2075456231352371987541350110849691642 +/- 5.6e-41]"
+    },
+    {
+      "t_index": 31,
+      "approximant_anchor_radius_lower": "3.1137579120695590972900390625000000000",
+      "complete_signed_integral_modulus_upper": "[1.9035934229120697527008629676509333689 +/- 2.40e-38]",
+      "direct_approximant_radius_lower": "[1.3810251807785496244416559359368719152 +/- 2.04e-38]",
+      "anchor_minus_signed_integral_lower": "[1.2101644891574893445891760948490666311 +/- 2.40e-38]"
+    }
+  ],
+  "algebra_check": {
+    "differential_identity_contains_zero": true,
+    "residual": "[+/- 2.78e-72] + [+/- 2.18e-72]j",
+    "stable_complete_jet_vs_S02": [
+      {
+        "order": 0,
+        "difference": "[6.7016667987532890292998090455331100672e-75 +/- 9.49e-73]",
+        "contains_zero": true
+      },
+      {
+        "order": 1,
+        "difference": "[-4.4908076486491112052009029686562077770e-76 +/- 1.22e-72]",
+        "contains_zero": true
+      },
+      {
+        "order": 2,
+        "difference": "[-3.1781100282747556221421774855105470422e-75 +/- 2.06e-72]",
+        "contains_zero": true
+      }
+    ]
+  },
+  "comparison_gate": "PASS scoped no-advantage comparison: standard Cauchy rule fails a certified point witness; direct exclusion passes on the full box; sharper joint-disk propagation remains inconclusive on the fixed cover",
+  "limitations": [
+    "Finite real box only; no improved global arithmetic estimate or exterior.",
+    "Error-budget failure does not imply the actual complete defect integral is large.",
+    "The direct exclusion reuses established S02 complete error and claims no newly covered region.",
+    "The endpoint primitive payment is valid but reduces to direct first-jet information.",
+    "No quadrature or operation-cost advantage is claimed."
+  ],
+  "script_sha256": "3d801098444b3f0a86c533042cb17d9ba44d100f6897838eae027fc91306b271",
+  "seconds": 2.894481541006826
+}

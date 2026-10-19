@@ -4,6 +4,24 @@
 LLM assistance. Authoring model **gpt-6-astra (Codex)**, actual effort **max**.
 Published leading profile and proposed signed comparison; no new jet bound.
 
+## Opening execution: complete-error comparison
+
+18 October 2026. For Edward Baker with substantial LLM assistance,
+**gpt-6.1-sol, actual effort ultra**. The [opening note](notes/01_ANALYTIC_CUTOFF_CORRECTION_AND_COMPLETE_JET_ERRORS_20261018.md)
+implements a holomorphic signed correction with paid continuation and
+cutoff costs. The complete disk-error budget falls from approximately
+0.887748 to 0.226299 on the height-1000 box, and from 2.897965 to 0.431777
+on the separate `[1017,1019]` crossing test, with Cauchy bounds through
+order two. [192/256-bit evidence and reproduction](numerics/README.md),
+[internal review](reviews/01_CUTOFF_REFLECTION_INTERNAL_REVIEW_20261018.md).
+
+The earlier transport Notes 20 and 22 already derive the multiplier,
+nonholomorphy repair, exact jump and analytic matching. This round credits
+those results and tests the full analytic continuation on the new bounded
+domains. It has not compared against their best correlated-error method.
+No signed lower bound, new exclusion region or speed gain is claimed.
+The next bounded task is that comparison or a paid S03 consumer.
+
 ## Question and priority
 
 Can the even normalized cutoff correction be combined with nearby retained
@@ -47,7 +65,9 @@ under this change of height.
    Corollary 6.4. Do not transfer a value-only error into a derivative claim.
 4. [Earlier collision manuscript][earlier], especially `sc:vector`,
    `sc:packet`, and its fixed-cutoff derivative and edge-cancellation work.
-5. [S03 rotation defect][rotation] for an optional consumer and
+5. [Transport Note 20][transport20] and [Note 22][transport22], which already
+   construct a paid holomorphic correction and match its cutoff jump.
+6. [S03 rotation defect][rotation] for an optional consumer and
    [S04 scaling][scaling] for the growing-cutoff regime.
 
 ## Bounded first task
@@ -116,3 +136,6 @@ Follow the [program guide][guide] for history and storage.
 [rotation]: ../03_normalized_jet_rotation/README.md
 [scaling]: ../04_time_height_scaling/README.md
 [controls-record]: ../../numerics/SYMMETRY_BRAINSTORM_CONTROL_REPLAY_20261018.json
+
+[transport20]: ../../../../quasi-rh/quasi-rh-exponent-descent/newman_collisions/17_enlarged_state_transport/notes/20_EXPLICIT_THETA_CORRECTION_AND_CORRELATED_PHYSICAL_JETS_20261011.md
+[transport22]: ../../../../quasi-rh/quasi-rh-exponent-descent/newman_collisions/17_enlarged_state_transport/notes/22_THETA_CUTOFF_MATCHING_AND_UNIFORM_PHYSICAL_JETS_20261011.md

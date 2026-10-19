@@ -2,7 +2,7 @@
 
 18 October 2026, America/New_York. Prepared for Edward Baker with substantial
 LLM assistance. Authoring model **gpt-6-astra (Codex)**, actual effort **max**.
-Known identities and proposed quantitative research; no new estimate here.
+Initial contextual guide; the bounded execution is recorded below.
 
 ## Question and role
 
@@ -88,6 +88,23 @@ the known endpoint cancellation, or a restatement of nonvanishing. That
 decision concerns this proposed use of the symmetry, not all consequences
 of modularity.
 
+## First bounded execution, 18 October 2026
+
+Prepared for Edward Baker with substantial LLM assistance, **gpt-6.1-sol,
+actual reasoning effort ultra**. The [opening derivation][opening] pairs
+the signed nonstationary endpoints before taking their absolute value.
+It reduces the arithmetic remainder bound by about 37–38% on the inherited
+height-1000 complex neighborhood. With the same retained polynomial and
+all common costs paid, complete added errors fall by about 14.8%, 7.2%
+and 3.0% for orders 0, 1 and 2 on the closed real rectangle.
+
+The [numerical guide][opening-numerics] links fresh 192/256-bit comparisons
+and controls; the [internal review][opening-review] records scope and
+source identities. This is an approximation-error milestone. The signed
+retained-sum estimate and the global bridge remain open. Recompute the
+endpoint allowance before transferring the bound to another domain.
+The opening chat is registered in [this direction’s history][opening-chat].
+
 ## Outputs and continuation
 
 Add `notes/`, `numerics/`, and `reviews/` here when the first new output is
@@ -108,3 +125,8 @@ stay at their linked paths. Apply the [program storage and history rules][guide]
 [controls]: ../../../../../result-summaries/12_collision_controls_and_screening.md
 [cutoff]: ../02_cutoff_reflection/README.md
 [jets]: ../05_covariant_theta_jets/README.md
+
+[opening]: notes/01_PAIRED_ENDPOINT_REMAINDER_AND_BOUNDED_COMPARISON_20261018.md
+[opening-numerics]: numerics/README.md
+[opening-review]: reviews/01_PAIRED_ENDPOINT_INTERNAL_REVIEW_20261018.md
+[opening-chat]: chat-histories/0001_2026-10-18T23-47-36Z_begin-modular-self-duality-work.json

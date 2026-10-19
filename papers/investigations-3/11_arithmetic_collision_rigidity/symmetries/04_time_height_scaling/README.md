@@ -105,3 +105,36 @@ source pins, file sizes, and chat history.
 [earlier]: ../../../../quasi-rh/quasi-rh-exponent-descent/newman_collisions/newman_collision_reductions.tex
 [cutoff]: ../02_cutoff_reflection/README.md
 [rotation]: ../03_normalized_jet_rotation/README.md
+
+## Opening full-cutoff scaling result
+
+18 October 2026. Prepared for Edward Baker with substantial LLM assistance,
+**gpt-6.1-sol, actual reasoning effort ultra**. Same-model derivation and
+internal review; no independent specialist review.
+
+[Note 01](notes/01_PHASE_RETAINING_FULL_CUTOFF_SCALING_20261018.md) gives an
+explicit phase-retaining scalar model and its actual fixed-time spatial
+derivative on kappa in [1,2], 0<t<=1/20. The Euclidean replacement error in
+(F/2,2Fx/L) is below exp(-kappa*(kappa+12)/(16*t)), uniformly through the
+entire growing cutoff. The model retains the Gaussian amplitude drift,
+the heat-dependent arithmetic phase shift, and the amplitude-derivative
+term. It quantitatively completes the prior coordinate asymptotics; the
+existing uniform RS payment and signed-edge cancellation are credited.
+
+The added payment is at most exp(-10)/5 times the prior uniform RS upper
+bound. This is an error-controlled replacement, not a smaller total error,
+a signed lower bound, or a fixed-kappa-only limiting function. The complete
+signed intermediate core remains open, as does the full signed limit.
+
+[192/256-bit checks and fresh controls](numerics/README.md) cover three
+finite point jets and a fixed-cutoff disk crossing at natural index 22027;
+all finite-expression model differences are below 4.75e-11. They include
+the complete source residual and return to the physical first jet.
+These are point checks, without a new time-height region or cost claim.
+See the [internal assessment](reviews/01_FULL_CUTOFF_SCALING_INTERNAL_REVIEW_20261018.md)
+and [file identities](reviews/S04_OPENING_FILE_IDENTITIES_20261018.json).
+
+The next bounded task is to estimate a retained signed arithmetic quantity
+with a strict improvement over its current payment. A rotation-defect
+consumer first needs a paid second derivative. This chat has its unique
+[direction archive](chat-histories/README.md).

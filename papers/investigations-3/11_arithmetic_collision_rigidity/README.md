@@ -26,6 +26,19 @@ task, controls, and decision rules. No new quantitative result is asserted
 by the program setup. Prepared for Edward Baker with substantial LLM
 assistance, **gpt-6-astra, actual effort max**, 18 October 2026.
 
+S01 has since begun: its [paired-endpoint remainder estimate](symmetries/01_modular_self_duality/notes/01_PAIRED_ENDPOINT_REMAINDER_AND_BOUNDED_COMPARISON_20261018.md)
+strictly reduces the complete added approximation errors on the inherited
+height-1000 pilot, with [fresh comparisons and internal review](symmetries/01_modular_self_duality/README.md).
+The retained signed estimate remains open. Prepared for Edward Baker with
+substantial LLM assistance, **gpt-6.1-sol, actual effort ultra**, 18 October 2026.
+
+S03's [correlated residual continuation](symmetries/03_normalized_jet_rotation/notes/02_CORRELATED_ARITHMETIC_RESIDUAL_AND_PAID_TRANSPORT_20261018.md)
+now bounds the complete pilot residual increment below `0.000266448`,
+against `0.002011747` for independent endpoints using the same source data.
+Paid transport passes; direct exclusion remains stronger. No new region
+or global estimate. Prepared for Edward Baker with substantial LLM
+assistance, **gpt-6.1-sol, actual effort ultra**, 18 October 2026.
+
 The earlier bounded round is governed by the [overview 02 execution plan](research-overview/02_UPDATED_RESEARCH_OVERVIEW_AND_SOL_EXECUTION_PLAN_20261018.md).
 The plan assigns research to **GPT-6.1 Sol, planned effort ultra**; actual
 execution of the [bounded round](notes/02_updated_research_plan/README.md)

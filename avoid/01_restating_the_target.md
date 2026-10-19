@@ -34,6 +34,15 @@ conclusion.
 - [Ground-state geometry STATUS](../papers/weil-positivity/susy-positivity/investigations/previous/arithmetic-ground-state-geometry/STATUS.md): notes 11–20 ended at \(S_N\ge0\), which is RH-equivalent; [note 20](../papers/weil-positivity/susy-positivity/investigations/previous/arithmetic-ground-state-geometry/notes/20_ARITHMETIC_SIGN_AND_BOUNDARY_RESPONSE.md) records that physical contraction is "exactly equivalent" to the sign.
 - The [Claude brainstorm](../papers/quasi-rh/quasi-rh-exponent-descent/brainstorm/NEW_PATHS_FORWARD_BRAINSTORM_CLAUDE_20261011.md): "Thirty-two mixed notes and twenty-nine short-family notes produced reductions of this problem to itself".
 
+- [S03 signed transport comparison](../papers/investigations-3/11_arithmetic_collision_rigidity/symmetries/03_normalized_jet_rotation/notes/01_SIGNED_TRANSPORT_AND_DIRECT_JET_COMPARISON_20261018.md),
+  18 October: “the endpoint-envelope transport bound is dominated by the
+  direct first-jet radius bound”, for the same phase, approximant, norm
+  and independent endpoint residual payment. The useful conclusion is
+  that precise comparison; the primitive alone is no new arithmetic
+  estimate. Residual correlations and measured evaluation gains remain
+  outside it. [Internal review](../papers/investigations-3/11_arithmetic_collision_rigidity/symmetries/03_normalized_jet_rotation/reviews/01_SIGNED_TRANSPORT_INTERNAL_REVIEW_20261018.md).
+  Added for Edward Baker with substantial LLM assistance, **gpt-6.1-sol, ultra**.
+
 ## What it cost
 
 Two manuscripts of 56 and 96 pages, about a hundred notes and fifty

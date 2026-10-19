@@ -38,6 +38,13 @@ compared against numbers computed in another normalization.
   compressions, even when the source theorem survives. Entry added 17 October 2026 for Edward Baker
   with substantial LLM assistance, **gpt-6.1-sol, ultra**.
 
+- [S02 opening internal review](../papers/investigations-3/11_arithmetic_collision_rigidity/symmetries/02_cutoff_reflection/reviews/01_CUTOFF_REFLECTION_INTERNAL_REVIEW_20261018.md):
+  "An opening calculation omitted the factor pi^(1/4)." The same-model
+  audit repaired the symmetric correction ratio before retained runs;
+  direct-versus-simplified normalization checks now pin the constant.
+  Added 18 October 2026 for Edward Baker with substantial LLM assistance,
+  **gpt-6.1-sol, actual effort ultra**.
+
 ## What it cost
 
 Half a headline margin; a withdrawn gap law and a withdrawn "250 orders"

@@ -196,3 +196,16 @@ exterior remains open. No new Newman bound. [Review 12](../papers/investigations
 and [entire-round summary](../papers/investigations-3/11_arithmetic_collision_rigidity/research-progress/03_OVERVIEW02_ROUND_SUMMARY_20261018.md).
 Earlier entries retain their original source scope; only their outer
 inventory is superseded here.
+
+
+**18 October 2026 — bounded S02 implementation (Investigation 3/11).**
+The [opening note](../papers/investigations-3/11_arithmetic_collision_rigidity/symmetries/02_cutoff_reflection/notes/01_ANALYTIC_CUTOFF_CORRECTION_AND_COMPLETE_JET_ERRORS_20261018.md)
+records a complete normalized disk-error decrease from 0.887748 to
+0.226300 on `[1/100,1/5] x [999,1001]`, with paid derivatives and a
+separate cutoff-crossing test. Status: **proved from the imported
+approximation; outward 192/256-bit checks; internal same-model review**
+([review](../papers/investigations-3/11_arithmetic_collision_rigidity/symmetries/02_cutoff_reflection/reviews/01_CUTOFF_REFLECTION_INTERNAL_REVIEW_20261018.md)).
+Earlier transport Notes 20–22 already establish the correction and jump
+machinery; no superiority to their best correlated-error method, signed
+lower bound or new coverage is claimed. For Edward Baker with substantial
+LLM assistance, **gpt-6.1-sol, actual effort ultra**.

@@ -56,6 +56,29 @@ separated complement floors; a Gram tail omitted from a lower bound.
   and **gpt-6-astra, ultra**; internal LLM checks only. This limitation
   concerns the estimates proved here, not all contour or modular methods.
 
+- [S03 correlated residual Note 02](../papers/investigations-3/11_arithmetic_collision_rigidity/symmetries/03_normalized_jet_rotation/notes/02_CORRELATED_ARITHMETIC_RESIDUAL_AND_PAID_TRANSPORT_20261018.md):
+  “Subtract the complete approximation at the coefficient level, before
+  interval evaluation.” A shared physical residual polynomial retains
+  cancellation with its second derivative; signed integration then
+  lowers the increment allowance to 0.000266448 against 0.002011747
+  for independent endpoints from the same source data. Comparing only
+  with the old 0.827470 disk payment would conflate new source accuracy
+  with correlation. [Internal review](../papers/investigations-3/11_arithmetic_collision_rigidity/symmetries/03_normalized_jet_rotation/reviews/02_CORRELATED_RESIDUAL_INTERNAL_REVIEW_20261018.md).
+  Added 18 October 2026 for Edward Baker with substantial LLM assistance,
+  **gpt-6.1-sol, actual effort ultra**; finite pilot only.
+
+- [S04 full-cutoff scaling Note 01](../papers/investigations-3/11_arithmetic_collision_rigidity/symmetries/04_time_height_scaling/notes/01_PHASE_RETAINING_FULL_CUTOFF_SCALING_20261018.md):
+  “Neither can be discarded uniformly.” At n comparable to the growing
+  cutoff, the logarithm of the Gaussian amplitude drift is
+  kappa^2/(16*t)+o(1), and the heat phase shift tends to pi*kappa/16.
+  The fixed-mode power limit therefore fails as a uniform coefficientwise
+  replacement, even though the complete phase-retaining scalar has a paid
+  exponentially small replacement error. This scopes the failure to that
+  coefficientwise approximation; it says nothing about the size or sign of
+  the full signed sum. [Internal review](../papers/investigations-3/11_arithmetic_collision_rigidity/symmetries/04_time_height_scaling/reviews/01_FULL_CUTOFF_SCALING_INTERNAL_REVIEW_20261018.md).
+  Added 18 October 2026 for Edward Baker with substantial LLM assistance,
+  **gpt-6.1-sol, actual effort ultra**; no specialist review.
+
 ## What it cost
 
 The channel-matching program (excluded by the two-channel theorem); the
