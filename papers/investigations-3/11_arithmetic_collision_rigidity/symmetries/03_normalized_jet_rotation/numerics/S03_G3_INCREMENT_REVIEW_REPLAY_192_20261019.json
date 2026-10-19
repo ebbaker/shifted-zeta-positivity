@@ -1,0 +1,305 @@
+{
+  "date": "2026-10-19",
+  "prepared_for": "Edward Baker",
+  "actual_model": "gpt-6.1-sol",
+  "actual_effort": "ultra",
+  "llm_assistance": "substantial; separate same-model arithmetic and proof review; no specialist review",
+  "python": "3.10.0",
+  "python_flint": "0.9.0",
+  "script_sha256": "053cef99f718a0932067e74a5e903b02de457b02e5be64938e3a338e90e570db",
+  "source_sha256": {
+    "papers/investigations-3/11_arithmetic_collision_rigidity/symmetries/02_cutoff_reflection/numerics/check_cutoff_reflection.py": "d8dda6d4f746b35b7fd6a545ff87940c88a0c896fe9a1f684c002dcc2ea0cc9b",
+    "papers/investigations-3/11_arithmetic_collision_rigidity/symmetries/03_normalized_jet_rotation/numerics/check_rs_edge_hierarchy.py": "c9d3eea35256d8a9e01278268345e74dd6c24c72b1e45ded1f2aa8fbb7fba711",
+    "papers/investigations-3/11_arithmetic_collision_rigidity/symmetries/03_normalized_jet_rotation/numerics/check_heat_stirling_remainder.py": "05ed855f1b9ad3e2115db0560cc2670f8faaafb3606f28dc90b813847326cca7",
+    "papers/investigations-3/11_arithmetic_collision_rigidity/symmetries/03_normalized_jet_rotation/numerics/bound_complete_rs_edge.py": "c6744179b93cae0a0b9c4924831b5af445d42f6bd5092845036944be34c2dbac",
+    "papers/investigations-3/11_arithmetic_collision_rigidity/symmetries/03_normalized_jet_rotation/notes/06_ARITHMETIC_GAMMA_AND_EDGE_CORRECTIONS_20261019.md": "ae3df82361fc2cd11f7485cea457677a24b1108bf8de455aa12c7767108c2b73"
+  },
+  "complete_edge_record_sha256": "e243dacd2756ca5be71e468a4851859c078cc22ea17c93e67de9a6065e8d3e8a",
+  "source_theta_taylor_data_used": false,
+  "source_quadrature_used": false,
+  "runs": [
+    {
+      "requested_bits": 192,
+      "working_bits": 704,
+      "domain": {
+        "t": [
+          "1/100",
+          "1/5"
+        ],
+        "x": [
+          "999",
+          "1001"
+        ]
+      },
+      "fixed_cutoff": 8,
+      "edge_RS_order": 8,
+      "gaussian_Taylor_degree": 12,
+      "log_series_degree": 24,
+      "profile_Taylor_degree": 120,
+      "cover": {
+        "time_slabs": 8,
+        "spatial_cells": 32,
+        "closed_cells": 256,
+        "anchor_x": 999
+      },
+      "complete_edge_value_error_input": "6e-8",
+      "complete_edge_x_error_input": "6e-8",
+      "complete_edge_xx_error_input": "1.2e-7",
+      "finite_remainder_ledger": {
+        "domain": {
+          "t": [
+            "1/100",
+            "1/5"
+          ],
+          "x": [
+            "999",
+            "1001"
+          ]
+        },
+        "cover": "one outward interval image of the full real box; eight arithmetic modes; two conjugate channels",
+        "relative_mode_error_inputs": {
+          "value": "6e-7",
+          "x": "6e-8",
+          "xx": "1.2e-8",
+          "status": "Inputs from companion written bounded heat-Stirling proof; scalar checks support its constants."
+        },
+        "normalizer": {
+          "omega": "[-1.0942031837292389997538539368475278257 +/- 2.69e-4]",
+          "omega_x": "[-0.00024997960451713409714331543293664688142 +/- 2.71e-7]",
+          "mu": "[0.00022845819637495878851041197776794433594 +/- 3.04e-7]",
+          "b": "[-0.39089178184230744052109443131627848443 +/- 5.40e-5]",
+          "b_x": "[-1.7940285538406955125400690109872946197e-6 +/- 6.80e-8]"
+        },
+        "formula": "2/|omega|^2 sum_n |p_n| (|sigma_n|e0+|2i omega+2lambda_n-mu|e1+e2)",
+        "totals": {
+          "normalized_value": "[5.2062597155570983886718750000000000000e-6 +/- 1e-48]",
+          "normalized_x": "[3.4046506657194922158451953768892148862e-6 +/- 1.69e-44]",
+          "normalized_xx": "[2.9612624175120301084095828307130992702e-6 +/- 2.58e-44]",
+          "physical_x_over_A": "[4.2400692084490950363971639713867034516e-6 +/- 2.85e-44]",
+          "physical_xx_over_A": "[3.9236317623041535783984939955715276483e-6 +/- 1.94e-44]",
+          "normalized_filtered": "[3.8748711607493303440222490953639578045e-6 +/- 4.55e-44]"
+        },
+        "modes": [
+          {
+            "n": 1,
+            "mode_amplitude_over_A_upper": "1.0000000000000000000000000000000000000",
+            "sigma_modulus_upper": "0",
+            "filtered_derivative_coefficient_modulus_upper": "2.1889443434774875640869140625000000000",
+            "errors": {
+              "normalized_value": "[1.2000000000000000000000000000000000000e-6 +/- 1e-48]",
+              "normalized_x": "[1.4333665981213021994318500278669357346e-6 +/- 4.25e-44]",
+              "normalized_xx": "[1.7241165365143571043150809430733871469e-6 +/- 2.85e-44]",
+              "physical_x_over_A": "[1.5146395263075828552246093750000000000e-6 +/- 1e-48]",
+              "physical_xx_over_A": "[1.9236677049994468688964843750000000000e-6 +/- 1e-48]",
+              "normalized_filtered": "[2.3955479927419245339217405640452776171e-7 +/- 1.85e-45]"
+            }
+          },
+          {
+            "n": 2,
+            "mode_amplitude_over_A_upper": "0.70263193268328905105590820312500000000",
+            "sigma_modulus_upper": "0.63851761817932128906250000000000000000",
+            "filtered_derivative_coefficient_modulus_upper": "1.4957971591502428054809570312500000000",
+            "errors": {
+              "normalized_value": "[8.4315831921994686126708984375000000000e-7 +/- 1e-49]",
+              "normalized_x": "[7.1491272944475407744024941791849414585e-7 +/- 1.59e-45]",
+              "normalized_xx": "[6.1460510446752065202846715408213640330e-7 +/- 3.60e-45]",
+              "physical_x_over_A": "[7.9588250408963855823951671908389471355e-7 +/- 1.06e-45]",
+              "physical_xx_over_A": "[7.5957011132191714947170524396824475843e-7 +/- 4.60e-45]",
+              "normalized_filtered": "[5.6936452130078915426680144970413547930e-7 +/- 2.51e-45]"
+            }
+          },
+          {
+            "n": 3,
+            "mode_amplitude_over_A_upper": "0.57220688927918672561645507812500000000",
+            "sigma_modulus_upper": "0.90066424291580915451049804687500000000",
+            "filtered_derivative_coefficient_modulus_upper": "1.0903320591896772384643554687500000000",
+            "errors": {
+              "normalized_value": "[6.8664826713502407073974609375000000000e-7 +/- 1e-49]",
+              "normalized_x": "[4.4300211960891276156970786104238868575e-7 +/- 3.89e-45]",
+              "normalized_xx": "[2.9267645833649560084543939098011833266e-7 +/- 3.56e-45]",
+              "physical_x_over_A": "[5.2932730179002253835529590020314572030e-7 +/- 2.53e-45]",
+              "physical_xx_over_A": "[4.1478293418912036564366596635977657570e-7 +/- 3.81e-46]",
+              "normalized_filtered": "[5.9082867255742535230459836493684326934e-7 +/- 2.85e-45]"
+            }
+          },
+          {
+            "n": 4,
+            "mode_amplitude_over_A_upper": "0.49487903574481606483459472656250000000",
+            "sigma_modulus_upper": "1.0368087291717529296875000000000000000",
+            "filtered_derivative_coefficient_modulus_upper": "0.80265000835061073303222656250000000000",
+            "errors": {
+              "normalized_value": "[5.9385484289377927780151367187500000000e-7 +/- 1e-49]",
+              "normalized_x": "[2.9771426002350278087332791088215344644e-7 +/- 3.15e-45]",
+              "normalized_xx": "[1.5519024960323134926069854611085929719e-7 +/- 3.17e-45]",
+              "physical_x_over_A": "[3.9213215207156514187369911184077864164e-7 +/- 4.45e-45]",
+              "physical_xx_over_A": "[2.6472378802771622567993614616455033683e-7 +/- 4.51e-45]",
+              "normalized_filtered": "[5.6426943543901372672204148953176975565e-7 +/- 3.16e-46]"
+            }
+          },
+          {
+            "n": 5,
+            "mode_amplitude_over_A_upper": "0.44229732686653733253479003906250000000",
+            "sigma_modulus_upper": "1.1139137391000986099243164062500000000",
+            "filtered_derivative_coefficient_modulus_upper": "0.57950649596750736236572265625000000000",
+            "errors": {
+              "normalized_value": "[5.3075679223984479904174804687500000000e-7 +/- 1e-49]",
+              "normalized_x": "[2.0686415474802960013864239208203343878e-7 +/- 2.68e-45]",
+              "normalized_xx": "[8.5933723259575731817996868677766997280e-8 +/- 1.69e-46]",
+              "physical_x_over_A": "[3.1138498067091928245275767039856873453e-7 +/- 3.37e-45]",
+              "physical_xx_over_A": "[1.8791254398174721077820203962716050228e-7 +/- 2.46e-45]",
+              "normalized_filtered": "[5.2861563298317767920660944768462144465e-7 +/- 1.56e-45]"
+            }
+          },
+          {
+            "n": 6,
+            "mode_amplitude_over_A_upper": "0.40358455898240208625793457031250000000",
+            "sigma_modulus_upper": "1.1584318634122610092163085937500000000",
+            "filtered_derivative_coefficient_modulus_upper": "0.39718501083552837371826171875000000000",
+            "errors": {
+              "normalized_value": "[4.8430147077888250350952148437500000000e-7 +/- 1e-49]",
+              "normalized_x": "[1.4460874860541362943965049137062806039e-7 +/- 4.67e-45]",
+              "normalized_xx": "[4.8022466118535321500434415176172819884e-8 +/- 4.96e-46]",
+              "physical_x_over_A": "[2.6083246460578155444948178498520974244e-7 +/- 4.57e-45]",
+              "physical_xx_over_A": "[1.4528383379129514983013615747609037498e-7 +/- 4.78e-45]",
+              "normalized_filtered": "[4.9298565870265871190908293150323764986e-7 +/- 3.89e-45]"
+            }
+          },
+          {
+            "n": 7,
+            "mode_amplitude_over_A_upper": "0.37355756573379039764404296875000000000",
+            "sigma_modulus_upper": "1.1831045467406511306762695312500000000",
+            "filtered_derivative_coefficient_modulus_upper": "0.24303448502905666828155517578125000000",
+            "errors": {
+              "normalized_value": "[4.4826907888054847717285156250000000000e-7 +/- 1e-49]",
+              "normalized_x": "[9.9299265078595723918453153089558327338e-8 +/- 2.74e-46]",
+              "normalized_xx": "[2.6480113431783709714538443957820845753e-8 +/- 3.04e-46]",
+              "physical_x_over_A": "[2.2838811827728750215860120675870348350e-7 +/- 1.45e-45]",
+              "physical_xx_over_A": "[1.2082825141966892951855827575968760357e-7 +/- 2.28e-45]",
+              "normalized_filtered": "[4.5977497423373158720912366459529593490e-7 +/- 2.55e-46]"
+            }
+          },
+          {
+            "n": 8,
+            "mode_amplitude_over_A_upper": "0.34939245367422699928283691406250000000",
+            "sigma_modulus_upper": "1.1948733516037464141845703125000000000",
+            "filtered_derivative_coefficient_modulus_upper": "0.10950359038542956113815307617187500000",
+            "errors": {
+              "normalized_value": "[4.1927094440907239913940429687500000000e-7 +/- 1e-49]",
+              "normalized_x": "[6.4882790088981443033314122637023046991e-8 +/- 8.95e-47]",
+              "normalized_xx": "[1.4237765780530638926927068654837427175e-8 +/- 1.53e-46]",
+              "physical_x_over_A": "[2.0748216063629760364320220311640241562e-7 +/- 3.10e-45]",
+              "physical_xx_over_A": "[1.0686259457324167857980579121601749648e-7 +/- 1.08e-45]",
+              "normalized_filtered": "[4.2947746625834167901181769100352650913e-7 +/- 2.73e-45]"
+            }
+          }
+        ],
+        "scope": "Certified finite-mode remainder payments conditional only on the companion proved mode-error bounds; no RS-edge or complete-H residual bound."
+      },
+      "complete_normalized_residual_errors": [
+        "[5.2662597155570983886718750000000000000e-6 +/- 2e-48]",
+        "[3.4646506657194922158451953768892148862e-6 +/- 1.70e-44]",
+        "[3.0812624175120301084095828307130992702e-6 +/- 2.59e-44]"
+      ],
+      "omega_abs_lower": "[1.0939341837282128568996104199255307554 +/- 1.26e-38]",
+      "endpoint_jet_error": "[6.1452675478049108297043432569925166027e-6 +/- 4.73e-45]",
+      "two_endpoint_error_payment": "[1.2290535095609821659408686513985033205e-5 +/- 4.10e-43]",
+      "nominal_prefix_upper": "0.00084099378091195831075310707092285156250",
+      "complete_arithmetic_increment_upper": "[0.00085328431600756813241251575743683659571 +/- 4.60e-42]",
+      "reported_ceiling": "0.000854",
+      "old_analytic_only_allowance": "0.812260",
+      "source_informed_comparator": "0.000266448",
+      "old_analytic_allowance_over_new": "[951.92186796598254743599916605830646461 +/- 2.48e-36]",
+      "source_comparator_beaten": false,
+      "worst_model_cell": {
+        "t": [
+          "1/100",
+          "27/800"
+        ],
+        "x": [
+          "16003/16",
+          "4001/4"
+        ],
+        "nominal": "[0.00015865058099401763882136496494237638019 +/- 4.42e-4] + [-7.3618089875882802480140411833897334896e-5 +/- 5.16e-4]j",
+        "upper": "0.00084099378091195831075310707092285156250"
+      },
+      "slabs": [
+        {
+          "t": [
+            "1/100",
+            "27/800"
+          ],
+          "nominal_prefix_upper": "0.00084099378091195831075310707092285156250"
+        },
+        {
+          "t": [
+            "27/800",
+            "23/400"
+          ],
+          "nominal_prefix_upper": "0.00082638697494985535740852355957031250000"
+        },
+        {
+          "t": [
+            "23/400",
+            "13/160"
+          ],
+          "nominal_prefix_upper": "0.00081261068135063396766781806945800781250"
+        },
+        {
+          "t": [
+            "13/160",
+            "21/200"
+          ],
+          "nominal_prefix_upper": "0.00079889097833074629306793212890625000000"
+        },
+        {
+          "t": [
+            "21/200",
+            "103/800"
+          ],
+          "nominal_prefix_upper": "0.00078491097247024299576878547668457031250"
+        },
+        {
+          "t": [
+            "103/800",
+            "61/400"
+          ],
+          "nominal_prefix_upper": "0.00077035196136421291157603263854980468750"
+        },
+        {
+          "t": [
+            "61/400",
+            "141/800"
+          ],
+          "nominal_prefix_upper": "0.00075615009973262203857302665710449218750"
+        },
+        {
+          "t": [
+            "141/800",
+            "1/5"
+          ],
+          "nominal_prefix_upper": "0.00074172375389025546610355377197265625000"
+        }
+      ],
+      "cells_math_sha256": "d84f5c3ceb80a3c44d06e823c705e9ba2cc9f837097a980f7b61159328e314b1",
+      "center_formula_check": {
+        "t": "21/200",
+        "x": 1000,
+        "edge_model_jets": [
+          "[-0.00013735612430976683203405391077153119080 +/- 3.80e-43]",
+          "[3.5133921526848251083650149700560814265e-5 +/- 3.37e-43]",
+          "[1.5985572171613145961153062377883161332e-6 +/- 9.24e-45]"
+        ],
+        "finite_kappa_jets": [
+          "[-0.00066495467896358300309771934451578210052 +/- 2.91e-42]",
+          "[-0.00017860118019866100240318388454647565767 +/- 4.46e-42]",
+          "[0.00095584700261719557441355324217795254124 +/- 1.74e-42]"
+        ],
+        "model_rotation_defect": "[-2.6001011406580253040340856758064770216e-6 +/- 1.64e-44]",
+        "rotating_model": "[-0.00040720180978205895061132252466421937911 +/- 1.14e-42] + [0.00070361967291583359220981258457986451212 +/- 6.75e-43]j",
+        "direct_rotating_formula": "[-0.00040720180978205895061132252466421937911 +/- 1.14e-42] + [0.00070361967291583359220981258457986451212 +/- 6.75e-43]j"
+      },
+      "observed_seconds": 2.1505875830189325,
+      "scope": "Uniform complete arithmetic residual increment on B, independent of source Taylor data. No new consumer comparison, source-informed improvement, coverage, or height-uniform theorem."
+    }
+  ]
+}

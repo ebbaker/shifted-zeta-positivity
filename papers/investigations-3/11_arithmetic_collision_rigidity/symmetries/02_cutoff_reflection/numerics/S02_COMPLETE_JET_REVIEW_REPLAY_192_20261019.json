@@ -1,0 +1,4403 @@
+{
+  "schema": "s02-complete-frozen-jets-v1",
+  "date": "2026-10-19",
+  "timezone": "America/New_York",
+  "prepared_for": "Edward Baker",
+  "actual_model": "gpt-6.1-sol",
+  "actual_effort": "ultra",
+  "llm_assistance": "substantial; internal research and separate same-model audits",
+  "python": "3.10.0",
+  "python_flint": "0.9.0",
+  "script_sha256": "461ee502434f519a082ff212a0c2b5a0512c3426ef081f2ee2d82b4f5d4ce1b9",
+  "source_sha256": {
+    "papers/investigations-3/11_arithmetic_collision_rigidity/symmetries/02_cutoff_reflection/numerics/check_cutoff_reflection.py": "d8dda6d4f746b35b7fd6a545ff87940c88a0c896fe9a1f684c002dcc2ea0cc9b",
+    "papers/investigations-3/11_arithmetic_collision_rigidity/symmetries/02_cutoff_reflection/numerics/compare_correction_representations.py": "dd92df737bd7023fb6f7c6bb40d69e7a85b46b8fccb96962db4a532227b9c63b",
+    "papers/investigations-3/11_arithmetic_collision_rigidity/symmetries/02_cutoff_reflection/numerics/S02_MATCHED_CORRECTION_20261019.json": "7646611c3dae320e18364f9548b036ed08b1729d53a2fdafa837a1e5f838b688",
+    "papers/investigations-3/11_arithmetic_collision_rigidity/symmetries/02_cutoff_reflection/notes/02_MATCHED_FROZEN_AND_ANALYTIC_CORRECTIONS_20261019.md": "1915d8c59dd2ebbcaebf3116414a41a4223d6abb6fb2e21765148ee8f1073534",
+    "papers/investigations-3/11_arithmetic_collision_rigidity/numerics/high_height_consumer/high_height_consumer.py": "e96feb2b4c3e84de3025713b486fb8cf99fdd810f61366b79a0da188eb12535f",
+    "papers/investigations-3/11_arithmetic_collision_rigidity/symmetries/notes/03_S02_COMPLETE_JET_EVALUATION_CONTRACT_20261019.md": "3d9cba940284ec18a5c248e3a6e6cc34ed17eb26ab2176ef739051a61aad5268",
+    "papers/investigations-3/11_arithmetic_collision_rigidity/symmetries/03_normalized_jet_rotation/numerics/check_normalized_rotation.py": "3d801098444b3f0a86c533042cb17d9ba44d100f6897838eae027fc91306b271",
+    "papers/investigations-3/11_arithmetic_collision_rigidity/symmetries/03_normalized_jet_rotation/numerics/S03_ROTATION_192_20261018.json": "321a9b2d428b8c12356de8875cc492f44f74b8def12c0a4f56918215edb25a11",
+    "papers/investigations-3/11_arithmetic_collision_rigidity/symmetries/03_normalized_jet_rotation/numerics/S03_CORRELATED_RESIDUAL_192_20261018.json": "e4e2ce5f9f9f708a21564a70678746d09477e6f2ce32c92ba4da8436dad0af03"
+  },
+  "domain": {
+    "t": [
+      "1/100",
+      "1/5"
+    ],
+    "x": [
+      999,
+      1001
+    ]
+  },
+  "closed_cover": [
+    32,
+    128
+  ],
+  "Schur_parameter_cover": [
+    8,
+    8,
+    "gamma in [-1,1]"
+  ],
+  "normalization": "J=(Q,-Qx/omega); Laguerre/excess divided by A\u00b2; reference excess explicitly Gc\u00b2.",
+  "primary_metric": "complete paid phase-first-jet radius and residual allowance; no matched-cost objective",
+  "runs": [
+    {
+      "bits": 192,
+      "eta": {
+        "frozen": "[0.22629833016646684790300389803278923659 +/- 5.33e-40]",
+        "full": "[0.22629924588386634944893235072732158976 +/- 4.61e-39]"
+      },
+      "methods": {
+        "frozen": {
+          "minima": {
+            "paid_phase_radius_lower": "[0.96866259387922031265554992222536636050 +/- 2.57e-39]",
+            "naive_phase_radius_lower": "[0.93799801781881803103547033024758725468 +/- 2.32e-39]",
+            "physical_radius_lower": "[0.55464703640036964280443368879923255043 +/- 8.17e-40]",
+            "joint_Schur_first_margin": "[0.16116186714582367598557434367256687981 +/- 1.19e-39]",
+            "schur_laguerre_lower": "[0.29082392582302028220313971447055017016 +/- 7.75e-40]",
+            "schur_excess_lower": "[0.27470310863300125805201138389876013316 +/- 2.86e-39]"
+          },
+          "maxima": {
+            "phase_jet_error": "[0.41373296557309369056274760590621840850 +/- 4.07e-40]",
+            "midpoint_Lipschitz_upper": "[5.5099318224269205142242456068940752590 +/- 1.37e-38]",
+            "diagonal_correction_payment": "[0.0033139257078816964957282994615893670461 +/- 2.63e-41]"
+          },
+          "counts": {
+            "cells": 4096,
+            "firstjet_pass_cells": 4096,
+            "physical_firstjet_pass_cells": 4096,
+            "joint_firstjet_pass_cells": 4096,
+            "box_L0_pass_cells": 2169,
+            "box_excess_pass_cells": 1770,
+            "Schur_L0_pass_cells": 4096,
+            "Schur_excess_pass_cells": 4096
+          }
+        },
+        "full": {
+          "minima": {
+            "paid_phase_radius_lower": "[0.97027391840013457805403772646278706240 +/- 1.50e-39]",
+            "naive_phase_radius_lower": "[0.93968057217221695640401411090294706901 +/- 2.88e-39]",
+            "physical_radius_lower": "[0.55621220369149639343956825166316283411 +/- 3.01e-39]",
+            "joint_Schur_first_margin": "[0.16153166761689534527020310197134244222 +/- 3.05e-39]",
+            "schur_laguerre_lower": "[0.29425624359023987761342060824630871913 +/- 6.92e-40]",
+            "schur_excess_lower": "[0.27809961326602555000573839936514955488 +/- 6.72e-40]"
+          },
+          "maxima": {
+            "phase_jet_error": "[0.41373463974574465074322708411034585719 +/- 1.40e-39]",
+            "midpoint_Lipschitz_upper": "[5.5077492817852615481780071385673167806 +/- 2.17e-38]",
+            "diagonal_correction_payment": "0"
+          },
+          "counts": {
+            "cells": 4096,
+            "firstjet_pass_cells": 4096,
+            "physical_firstjet_pass_cells": 4096,
+            "joint_firstjet_pass_cells": 4096,
+            "box_L0_pass_cells": 2197,
+            "box_excess_pass_cells": 1789,
+            "Schur_L0_pass_cells": 4096,
+            "Schur_excess_pass_cells": 4096
+          }
+        }
+      },
+      "source_reference": {
+        "minimum_phase_radius": "[1.3473946960529517606929264453165154171 +/- 5.64e-39]",
+        "minimum_signed_excess_Gc2": "[0.0025718423085079644305302878987269318741 +/- 2.48e-41]",
+        "maximum_phase_error": "[2.3481211915125993306017300489010902201e-10 +/- 1.53e-48]",
+        "minimum_signed_excess_A2": "[3.0153583623304376629557517374279793946 +/- 3.90e-38]",
+        "setup_seconds": 7.1510997919831425,
+        "setup_callbacks": 173696,
+        "consumer_cell_calls": 4096,
+        "all_closed_cells_covered": true
+      },
+      "slabs": [
+        {
+          "t_index": 0,
+          "methods": {
+            "frozen": {
+              "cells": 128,
+              "firstjet_pass_cells": 128,
+              "physical_firstjet_pass_cells": 128,
+              "joint_firstjet_pass_cells": 128,
+              "box_L0_pass_cells": 60,
+              "box_excess_pass_cells": 49,
+              "Schur_L0_pass_cells": 128,
+              "Schur_excess_pass_cells": 128,
+              "minima": {
+                "paid_phase_radius_lower": {
+                  "bound": "[1.0254658446882117094575342005778906406 +/- 1.21e-38]",
+                  "x": [
+                    "64063/64",
+                    "1001"
+                  ]
+                },
+                "naive_phase_radius_lower": {
+                  "bound": "[0.97870975156839734715044069972507191992 +/- 1.36e-39]",
+                  "x": [
+                    "64063/64",
+                    "1001"
+                  ]
+                },
+                "physical_radius_lower": {
+                  "bound": "[0.63490922041407175700578965389139221899 +/- 3.13e-39]",
+                  "x": [
+                    "64063/64",
+                    "1001"
+                  ]
+                },
+                "joint_Schur_first_margin": {
+                  "bound": "[0.16116186714582367598557434367256687981 +/- 1.19e-39]",
+                  "x": [
+                    "32021/32",
+                    "64043/64"
+                  ]
+                },
+                "schur_laguerre_lower": {
+                  "bound": "[0.59710461137338027818714901035084391243 +/- 4.23e-39]",
+                  "x": [
+                    "64063/64",
+                    "1001"
+                  ]
+                },
+                "schur_excess_lower": {
+                  "bound": "[0.57754402904216412093504581059632802671 +/- 6.06e-40]",
+                  "x": [
+                    "64063/64",
+                    "1001"
+                  ]
+                }
+              },
+              "maxima": {
+                "phase_jet_error": "[0.41373296557309369056274760590621840850 +/- 4.07e-40]",
+                "midpoint_Lipschitz_upper": "[5.5099318224269205142242456068940752590 +/- 1.37e-38]",
+                "diagonal_correction_payment": "[0.0033139257078816964957282994615893670461 +/- 2.63e-41]"
+              }
+            },
+            "full": {
+              "cells": 128,
+              "firstjet_pass_cells": 128,
+              "physical_firstjet_pass_cells": 128,
+              "joint_firstjet_pass_cells": 128,
+              "box_L0_pass_cells": 61,
+              "box_excess_pass_cells": 50,
+              "Schur_L0_pass_cells": 128,
+              "Schur_excess_pass_cells": 128,
+              "minima": {
+                "paid_phase_radius_lower": {
+                  "bound": "[1.0281256508821952606320660347250243288 +/- 2.16e-38]",
+                  "x": [
+                    "64063/64",
+                    "1001"
+                  ]
+                },
+                "naive_phase_radius_lower": {
+                  "bound": "[0.98136830585253956910921961770266678898 +/- 2.60e-39]",
+                  "x": [
+                    "64063/64",
+                    "1001"
+                  ]
+                },
+                "physical_radius_lower": {
+                  "bound": "[0.63769952059032221523507420456813879148 +/- 2.36e-39]",
+                  "x": [
+                    "64063/64",
+                    "1001"
+                  ]
+                },
+                "joint_Schur_first_margin": {
+                  "bound": "[0.16153166761689534527020310197134244222 +/- 3.05e-39]",
+                  "x": [
+                    "32021/32",
+                    "64043/64"
+                  ]
+                },
+                "schur_laguerre_lower": {
+                  "bound": "[0.60317722355565445734078373848937223868 +/- 1.25e-39]",
+                  "x": [
+                    "64063/64",
+                    "1001"
+                  ]
+                },
+                "schur_excess_lower": {
+                  "bound": "[0.58353804962732346097754086949023595400 +/- 1.24e-39]",
+                  "x": [
+                    "64063/64",
+                    "1001"
+                  ]
+                }
+              },
+              "maxima": {
+                "phase_jet_error": "[0.41373463974574465074322708411034585719 +/- 1.40e-39]",
+                "midpoint_Lipschitz_upper": "[5.5077492817852615481780071385673167806 +/- 2.17e-38]",
+                "diagonal_correction_payment": "0"
+              }
+            }
+          },
+          "source_minimum_radius": "[1.4187285936407988468009081496979094269 +/- 4.68e-38]",
+          "source_minimum_signed_excess_Gc2": "[0.0025718423085079644305302878987269318741 +/- 2.48e-41]",
+          "source_maximum_phase_error": "[2.3481211915125993306017300489010902201e-10 +/- 1.53e-48]",
+          "source_minimum_signed_excess_A2": "[3.0911462192301106271936393907145092684 +/- 2.60e-38]",
+          "t": [
+            "1/100",
+            "51/3200"
+          ]
+        },
+        {
+          "t_index": 1,
+          "methods": {
+            "frozen": {
+              "cells": 128,
+              "firstjet_pass_cells": 128,
+              "physical_firstjet_pass_cells": 128,
+              "joint_firstjet_pass_cells": 128,
+              "box_L0_pass_cells": 61,
+              "box_excess_pass_cells": 50,
+              "Schur_L0_pass_cells": 128,
+              "Schur_excess_pass_cells": 128,
+              "minima": {
+                "paid_phase_radius_lower": {
+                  "bound": "[1.0219586599586120118457220302372003800 +/- 2.09e-38]",
+                  "x": [
+                    "64063/64",
+                    "1001"
+                  ]
+                },
+                "naive_phase_radius_lower": {
+                  "bound": "[0.97564887072288746610324578263040484934 +/- 2.05e-39]",
+                  "x": [
+                    "64063/64",
+                    "1001"
+                  ]
+                },
+                "physical_radius_lower": {
+                  "bound": "[0.62822244692565676068979993660115458957 +/- 1.96e-39]",
+                  "x": [
+                    "64063/64",
+                    "1001"
+                  ]
+                },
+                "joint_Schur_first_margin": {
+                  "bound": "[0.16169504335761250891122749460444939494 +/- 1.37e-39]",
+                  "x": [
+                    "32021/32",
+                    "64043/64"
+                  ]
+                },
+                "schur_laguerre_lower": {
+                  "bound": "[0.58435432794427364513178782299206990418 +/- 2.28e-39]",
+                  "x": [
+                    "64063/64",
+                    "1001"
+                  ]
+                },
+                "schur_excess_lower": {
+                  "bound": "[0.56507064904583035035953737648092739860 +/- 1.86e-39]",
+                  "x": [
+                    "64063/64",
+                    "1001"
+                  ]
+                }
+              },
+              "maxima": {
+                "phase_jet_error": "[0.41373251756913638766253415102885895815 +/- 2.95e-39]",
+                "midpoint_Lipschitz_upper": "[5.4951692781118124132860582779721812199 +/- 5.39e-39]",
+                "diagonal_correction_payment": "[0.0032906300619202426177381570868833218113 +/- 4.06e-41]"
+              }
+            },
+            "full": {
+              "cells": 128,
+              "firstjet_pass_cells": 128,
+              "physical_firstjet_pass_cells": 128,
+              "joint_firstjet_pass_cells": 128,
+              "box_L0_pass_cells": 61,
+              "box_excess_pass_cells": 50,
+              "Schur_L0_pass_cells": 128,
+              "Schur_excess_pass_cells": 128,
+              "minima": {
+                "paid_phase_radius_lower": {
+                  "bound": "[1.0245834351644181276887362088738122247 +/- 8.61e-39]",
+                  "x": [
+                    "64063/64",
+                    "1001"
+                  ]
+                },
+                "naive_phase_radius_lower": {
+                  "bound": "[0.97827163057900487817702258523180977070 +/- 2.29e-39]",
+                  "x": [
+                    "64063/64",
+                    "1001"
+                  ]
+                },
+                "physical_radius_lower": {
+                  "bound": "[0.63096409022207433336769297769548070322 +/- 3.10e-39]",
+                  "x": [
+                    "64063/64",
+                    "1001"
+                  ]
+                },
+                "joint_Schur_first_margin": {
+                  "bound": "[0.16206224422502317743873785055048994580 +/- 3.49e-39]",
+                  "x": [
+                    "32021/32",
+                    "64043/64"
+                  ]
+                },
+                "schur_laguerre_lower": {
+                  "bound": "[0.59030726424518608088030600857052436098 +/- 3.29e-39]",
+                  "x": [
+                    "64063/64",
+                    "1001"
+                  ]
+                },
+                "schur_excess_lower": {
+                  "bound": "[0.57094684240259628574222979773031525865 +/- 9.60e-40]",
+                  "x": [
+                    "64063/64",
+                    "1001"
+                  ]
+                }
+              },
+              "maxima": {
+                "phase_jet_error": "[0.41373419173997449744130702403070490286 +/- 7.70e-40]",
+                "midpoint_Lipschitz_upper": "[5.4930160965891355506353415456415497977 +/- 2.47e-39]",
+                "diagonal_correction_payment": "0"
+              }
+            }
+          },
+          "source_minimum_radius": "[1.4147988245188081944178779244726405814 +/- 3.66e-38]",
+          "source_minimum_signed_excess_Gc2": "[0.0026009835423352488827260484650436768090 +/- 4.01e-41]",
+          "source_maximum_phase_error": "[1.6434526923559765156215269861915466103e-10 +/- 2.22e-48]",
+          "source_minimum_signed_excess_A2": "[3.0877219438305906011083584703113142556 +/- 4.02e-38]",
+          "t": [
+            "51/3200",
+            "7/320"
+          ]
+        },
+        {
+          "t_index": 2,
+          "methods": {
+            "frozen": {
+              "cells": 128,
+              "firstjet_pass_cells": 128,
+              "physical_firstjet_pass_cells": 128,
+              "joint_firstjet_pass_cells": 128,
+              "box_L0_pass_cells": 61,
+              "box_excess_pass_cells": 49,
+              "Schur_L0_pass_cells": 128,
+              "Schur_excess_pass_cells": 128,
+              "minima": {
+                "paid_phase_radius_lower": {
+                  "bound": "[1.0185742196226637608350626755067291940 +/- 1.48e-38]",
+                  "x": [
+                    "64063/64",
+                    "1001"
+                  ]
+                },
+                "naive_phase_radius_lower": {
+                  "bound": "[0.97271938485213542841169817004334797140 +/- 3.51e-40]",
+                  "x": [
+                    "64063/64",
+                    "1001"
+                  ]
+                },
+                "physical_radius_lower": {
+                  "bound": "[0.62182665546004377011573280336152858660 +/- 2.12e-39]",
+                  "x": [
+                    "64063/64",
+                    "1001"
+                  ]
+                },
+                "joint_Schur_first_margin": {
+                  "bound": "[0.16179153765598830670805468925903222627 +/- 3.70e-39]",
+                  "x": [
+                    "64041/64",
+                    "32021/32"
+                  ]
+                },
+                "schur_laguerre_lower": {
+                  "bound": "[0.57200658767545230114240376506036322228 +/- 4.80e-39]",
+                  "x": [
+                    "64063/64",
+                    "1001"
+                  ]
+                },
+                "schur_excess_lower": {
+                  "bound": "[0.55299018694572516170897756771691312698 +/- 4.74e-39]",
+                  "x": [
+                    "64063/64",
+                    "1001"
+                  ]
+                }
+              },
+              "maxima": {
+                "phase_jet_error": "[0.41373206956615199849582780605084415584 +/- 9.94e-40]",
+                "midpoint_Lipschitz_upper": "[5.4804476178610978380047823324516876882 +/- 1.58e-38]",
+                "diagonal_correction_payment": "[0.0032674992429872211724905282669007286132 +/- 1.97e-41]"
+              }
+            },
+            "full": {
+              "cells": 128,
+              "firstjet_pass_cells": 128,
+              "physical_firstjet_pass_cells": 128,
+              "joint_firstjet_pass_cells": 128,
+              "box_L0_pass_cells": 62,
+              "box_excess_pass_cells": 49,
+              "Schur_L0_pass_cells": 128,
+              "Schur_excess_pass_cells": 128,
+              "minima": {
+                "paid_phase_radius_lower": {
+                  "bound": "[1.0211639646403050006497786698082239964 +/- 4.52e-38]",
+                  "x": [
+                    "64063/64",
+                    "1001"
+                  ]
+                },
+                "naive_phase_radius_lower": {
+                  "bound": "[0.97530632975327789955885968933625366154 +/- 3.58e-40]",
+                  "x": [
+                    "64063/64",
+                    "1001"
+                  ]
+                },
+                "physical_radius_lower": {
+                  "bound": "[0.62451923532774312520729250937868443163 +/- 2.04e-39]",
+                  "x": [
+                    "64063/64",
+                    "1001"
+                  ]
+                },
+                "joint_Schur_first_margin": {
+                  "bound": "[0.16215609572837755377604192499561661309 +/- 4.37e-40]",
+                  "x": [
+                    "64041/64",
+                    "32021/32"
+                  ]
+                },
+                "schur_laguerre_lower": {
+                  "bound": "[0.57784099886431163123687797185695406378 +/- 7.05e-40]",
+                  "x": [
+                    "64063/64",
+                    "1001"
+                  ]
+                },
+                "schur_excess_lower": {
+                  "bound": "[0.55874967957410669464811749078845861642 +/- 1.29e-39]",
+                  "x": [
+                    "64063/64",
+                    "1001"
+                  ]
+                }
+              },
+              "maxima": {
+                "phase_jet_error": "[0.41373374373517726180979468346209822690 +/- 4.12e-39]",
+                "midpoint_Lipschitz_upper": "[5.4782901681288595564718116353536048770 +/- 3.22e-38]",
+                "diagonal_correction_payment": "0"
+              }
+            }
+          },
+          "source_minimum_radius": "[1.4109999366942127158775208294573107738 +/- 2.24e-38]",
+          "source_minimum_signed_excess_Gc2": "[0.0026305793472179996073275423991289369824 +/- 1.46e-41]",
+          "source_maximum_phase_error": "[1.3246890299628995322688797315494246884e-10 +/- 9.15e-49]",
+          "source_minimum_signed_excess_A2": "[3.0844477877946330583927732637182498877 +/- 2.43e-38]",
+          "t": [
+            "7/320",
+            "89/3200"
+          ]
+        },
+        {
+          "t_index": 3,
+          "methods": {
+            "frozen": {
+              "cells": 128,
+              "firstjet_pass_cells": 128,
+              "physical_firstjet_pass_cells": 128,
+              "joint_firstjet_pass_cells": 128,
+              "box_L0_pass_cells": 61,
+              "box_excess_pass_cells": 50,
+              "Schur_L0_pass_cells": 128,
+              "Schur_excess_pass_cells": 128,
+              "minima": {
+                "paid_phase_radius_lower": {
+                  "bound": "[1.0153115071580937857590547318976423197 +/- 4.67e-38]",
+                  "x": [
+                    "64063/64",
+                    "1001"
+                  ]
+                },
+                "naive_phase_radius_lower": {
+                  "bound": "[0.96992002811809470148086919606966272278 +/- 1.43e-39]",
+                  "x": [
+                    "64063/64",
+                    "1001"
+                  ]
+                },
+                "physical_radius_lower": {
+                  "bound": "[0.61572289544697992458464665622954859227 +/- 1.34e-39]",
+                  "x": [
+                    "64063/64",
+                    "1001"
+                  ]
+                },
+                "joint_Schur_first_margin": {
+                  "bound": "[0.16232461241431681678127482854967978601 +/- 2.12e-39]",
+                  "x": [
+                    "8005/8",
+                    "64041/64"
+                  ]
+                },
+                "schur_laguerre_lower": {
+                  "bound": "[0.56005737693272664891938211001223449992 +/- 1.53e-39]",
+                  "x": [
+                    "64063/64",
+                    "1001"
+                  ]
+                },
+                "schur_excess_lower": {
+                  "bound": "[0.54129871547152290110262452712604369086 +/- 6.06e-40]",
+                  "x": [
+                    "64063/64",
+                    "1001"
+                  ]
+                }
+              },
+              "maxima": {
+                "phase_jet_error": "[0.41373162156413917624296974074367861500 +/- 2.97e-39]",
+                "midpoint_Lipschitz_upper": "[5.4658991507880177856319620593922354025 +/- 4.48e-38]",
+                "diagonal_correction_payment": "[0.0032445289970832600901714009394912853905 +/- 2.30e-41]"
+              }
+            },
+            "full": {
+              "cells": 128,
+              "firstjet_pass_cells": 128,
+              "physical_firstjet_pass_cells": 128,
+              "joint_firstjet_pass_cells": 128,
+              "box_L0_pass_cells": 63,
+              "box_excess_pass_cells": 50,
+              "Schur_L0_pass_cells": 128,
+              "Schur_excess_pass_cells": 128,
+              "minima": {
+                "paid_phase_radius_lower": {
+                  "bound": "[1.0178662289922316062992450044833390377 +/- 3.14e-38]",
+                  "x": [
+                    "64063/64",
+                    "1001"
+                  ]
+                },
+                "naive_phase_radius_lower": {
+                  "bound": "[0.97247115058384850802153669437749301849 +/- 1.17e-39]",
+                  "x": [
+                    "64063/64",
+                    "1001"
+                  ]
+                },
+                "physical_radius_lower": {
+                  "bound": "[0.61836602724087714944370116250950730675 +/- 8.48e-40]",
+                  "x": [
+                    "64063/64",
+                    "1001"
+                  ]
+                },
+                "joint_Schur_first_margin": {
+                  "bound": "[0.16268654665260050381551534321256601133 +/- 3.87e-39]",
+                  "x": [
+                    "8005/8",
+                    "64041/64"
+                  ]
+                },
+                "schur_laguerre_lower": {
+                  "bound": "[0.56577442316509213953053581984335148056 +/- 4.54e-39]",
+                  "x": [
+                    "64063/64",
+                    "1001"
+                  ]
+                },
+                "schur_excess_lower": {
+                  "bound": "[0.54694264532502275008223694801607148483 +/- 1.09e-39]",
+                  "x": [
+                    "64063/64",
+                    "1001"
+                  ]
+                }
+              },
+              "maxima": {
+                "phase_jet_error": "[0.41373329573135159702358131924616327886 +/- 4.61e-39]",
+                "midpoint_Lipschitz_upper": "[5.4637707122872193123448840969363263494 +/- 5.95e-39]",
+                "diagonal_correction_payment": "0"
+              }
+            }
+          },
+          "source_minimum_radius": "[1.4073310559480863280841321904810285572 +/- 6.42e-39]",
+          "source_minimum_signed_excess_Gc2": "[0.0026606363601523148459560227244943179079 +/- 5.36e-42]",
+          "source_maximum_phase_error": "[1.1853272336705094270899209301960703485e-10 +/- 2.86e-48]",
+          "source_minimum_signed_excess_A2": "[3.0813216762900898519857966941341508940 +/- 4.49e-38]",
+          "t": [
+            "89/3200",
+            "27/800"
+          ]
+        },
+        {
+          "t_index": 4,
+          "methods": {
+            "frozen": {
+              "cells": 128,
+              "firstjet_pass_cells": 128,
+              "physical_firstjet_pass_cells": 128,
+              "joint_firstjet_pass_cells": 128,
+              "box_L0_pass_cells": 61,
+              "box_excess_pass_cells": 49,
+              "Schur_L0_pass_cells": 128,
+              "Schur_excess_pass_cells": 128,
+              "minima": {
+                "paid_phase_radius_lower": {
+                  "bound": "[1.0121695157321283984145832120510279938 +/- 1.03e-38]",
+                  "x": [
+                    "64063/64",
+                    "1001"
+                  ]
+                },
+                "naive_phase_radius_lower": {
+                  "bound": "[0.96724947371080969736565546941335939998 +/- 2.98e-39]",
+                  "x": [
+                    "64063/64",
+                    "1001"
+                  ]
+                },
+                "physical_radius_lower": {
+                  "bound": "[0.60991195426123876543728180921971064128 +/- 8.40e-40]",
+                  "x": [
+                    "64063/64",
+                    "1001"
+                  ]
+                },
+                "joint_Schur_first_margin": {
+                  "bound": "[0.16243095004960505047385975252939017568 +/- 4.91e-39]",
+                  "x": [
+                    "8005/8",
+                    "64041/64"
+                  ]
+                },
+                "schur_laguerre_lower": {
+                  "bound": "[0.54850248481155350819038460658573580799 +/- 1.71e-39]",
+                  "x": [
+                    "64063/64",
+                    "1001"
+                  ]
+                },
+                "schur_excess_lower": {
+                  "bound": "[0.52999211528028041172621573778946159182 +/- 4.88e-39]",
+                  "x": [
+                    "64063/64",
+                    "1001"
+                  ]
+                }
+              },
+              "maxima": {
+                "phase_jet_error": "[0.41373117356309523044843939426627955235 +/- 9.23e-40]",
+                "midpoint_Lipschitz_upper": "[5.4513300547629725634890739504993440950 +/- 1.72e-38]",
+                "diagonal_correction_payment": "[0.0032217211489793173568953341196423604737 +/- 1.44e-41]"
+              }
+            },
+            "full": {
+              "cells": 128,
+              "firstjet_pass_cells": 128,
+              "physical_firstjet_pass_cells": 128,
+              "joint_firstjet_pass_cells": 128,
+              "box_L0_pass_cells": 63,
+              "box_excess_pass_cells": 50,
+              "Schur_L0_pass_cells": 128,
+              "Schur_excess_pass_cells": 128,
+              "minima": {
+                "paid_phase_radius_lower": {
+                  "bound": "[1.0146892325324537164690934813582487579 +/- 3.71e-38]",
+                  "x": [
+                    "64063/64",
+                    "1001"
+                  ]
+                },
+                "naive_phase_radius_lower": {
+                  "bound": "[0.96976478093730602133378665086653921551 +/- 3.78e-39]",
+                  "x": [
+                    "64063/64",
+                    "1001"
+                  ]
+                },
+                "physical_radius_lower": {
+                  "bound": "[0.61250527303592938070191182664017889660 +/- 3.11e-39]",
+                  "x": [
+                    "64063/64",
+                    "1001"
+                  ]
+                },
+                "joint_Schur_first_margin": {
+                  "bound": "[0.16279034024684952803870063648921562336 +/- 3.20e-39]",
+                  "x": [
+                    "8005/8",
+                    "64041/64"
+                  ]
+                },
+                "schur_laguerre_lower": {
+                  "bound": "[0.55410330792926081514985604867651435914 +/- 3.20e-39]",
+                  "x": [
+                    "64063/64",
+                    "1001"
+                  ]
+                },
+                "schur_excess_lower": {
+                  "bound": "[0.53552160030928982271583127640903414702 +/- 4.34e-39]",
+                  "x": [
+                    "64063/64",
+                    "1001"
+                  ]
+                }
+              },
+              "maxima": {
+                "phase_jet_error": "[0.41373284772849481261625942793402058330 +/- 2.90e-39]",
+                "midpoint_Lipschitz_upper": "[5.4492303118677202896834132169362664176 +/- 3.39e-38]",
+                "diagonal_correction_payment": "0"
+              }
+            }
+          },
+          "source_minimum_radius": "[1.4037912888855425379887074965762220856 +/- 2.33e-38]",
+          "source_minimum_signed_excess_Gc2": "[0.0026911613054237949851314484358229880537 +/- 6.42e-42]",
+          "source_maximum_phase_error": "[1.1249454496926931946609288766587374978e-10 +/- 4.82e-49]",
+          "source_minimum_signed_excess_A2": "[3.0783415330543295795485520455520552191 +/- 3.34e-38]",
+          "t": [
+            "27/800",
+            "127/3200"
+          ]
+        },
+        {
+          "t_index": 5,
+          "methods": {
+            "frozen": {
+              "cells": 128,
+              "firstjet_pass_cells": 128,
+              "physical_firstjet_pass_cells": 128,
+              "joint_firstjet_pass_cells": 128,
+              "box_L0_pass_cells": 62,
+              "box_excess_pass_cells": 49,
+              "Schur_L0_pass_cells": 128,
+              "Schur_excess_pass_cells": 128,
+              "minima": {
+                "paid_phase_radius_lower": {
+                  "bound": "[1.0091472133002750828386830819820028764 +/- 1.69e-38]",
+                  "x": [
+                    "64063/64",
+                    "1001"
+                  ]
+                },
+                "naive_phase_radius_lower": {
+                  "bound": "[0.96470640437172167389668647559610784040 +/- 3.52e-39]",
+                  "x": [
+                    "64063/64",
+                    "1001"
+                  ]
+                },
+                "physical_radius_lower": {
+                  "bound": "[0.60439448697669880143132642251005013870 +/- 1.10e-39]",
+                  "x": [
+                    "64063/64",
+                    "1001"
+                  ]
+                },
+                "joint_Schur_first_margin": {
+                  "bound": "[0.16288735469671431631042268777527158188 +/- 2.79e-39]",
+                  "x": [
+                    "64039/64",
+                    "8005/8"
+                  ]
+                },
+                "schur_laguerre_lower": {
+                  "bound": "[0.53733788770603780629956417144451141271 +/- 1.29e-40]",
+                  "x": [
+                    "64063/64",
+                    "1001"
+                  ]
+                },
+                "schur_excess_lower": {
+                  "bound": "[0.51906645056973767238839922308407288376 +/- 4.15e-39]",
+                  "x": [
+                    "64063/64",
+                    "1001"
+                  ]
+                }
+              },
+              "maxima": {
+                "phase_jet_error": "[0.41373072556302284525842962981578105104 +/- 2.13e-39]",
+                "midpoint_Lipschitz_upper": "[5.4368324194260993177879687112055593878 +/- 3.33e-38]",
+                "diagonal_correction_payment": "[0.0031990736093701616585254201931013226327 +/- 2.62e-41]"
+              }
+            },
+            "full": {
+              "cells": 128,
+              "firstjet_pass_cells": 128,
+              "physical_firstjet_pass_cells": 128,
+              "joint_firstjet_pass_cells": 128,
+              "box_L0_pass_cells": 63,
+              "box_excess_pass_cells": 50,
+              "Schur_L0_pass_cells": 128,
+              "Schur_excess_pass_cells": 128,
+              "minima": {
+                "paid_phase_radius_lower": {
+                  "bound": "[1.0116319511066507099675729061804645667 +/- 2.10e-38]",
+                  "x": [
+                    "64063/64",
+                    "1001"
+                  ]
+                },
+                "naive_phase_radius_lower": {
+                  "bound": "[0.96718590683195268683795656063787393950 +/- 3.25e-39]",
+                  "x": [
+                    "64063/64",
+                    "1001"
+                  ]
+                },
+                "physical_radius_lower": {
+                  "bound": "[0.60693765178950350298872354542557033858 +/- 3.70e-39]",
+                  "x": [
+                    "64063/64",
+                    "1001"
+                  ]
+                },
+                "joint_Schur_first_margin": {
+                  "bound": "[0.16324415854680734555851358355818016109 +/- 1.79e-39]",
+                  "x": [
+                    "64039/64",
+                    "8005/8"
+                  ]
+                },
+                "schur_laguerre_lower": {
+                  "bound": "[0.54282361938846260467347773723760284380 +/- 2.14e-39]",
+                  "x": [
+                    "64063/64",
+                    "1001"
+                  ]
+                },
+                "schur_excess_lower": {
+                  "bound": "[0.52448259873981435985654868503119321582 +/- 2.73e-39]",
+                  "x": [
+                    "64063/64",
+                    "1001"
+                  ]
+                }
+              },
+              "maxima": {
+                "phase_jet_error": "[0.41373239972660959274488328460243496056 +/- 4.04e-39]",
+                "midpoint_Lipschitz_upper": "[5.4347283545387668222634723408533781349 +/- 3.86e-38]",
+                "diagonal_correction_payment": "0"
+              }
+            }
+          },
+          "source_minimum_radius": "[1.4003797194713961266245850823290942480 +/- 1.06e-38]",
+          "source_minimum_signed_excess_Gc2": "[0.0027221609971992767365810619573618469214 +/- 2.34e-41]",
+          "source_maximum_phase_error": "[1.0972959749774343766218109949072860503e-10 +/- 7.47e-49]",
+          "source_minimum_signed_excess_A2": "[3.0755053706759060421773874774450087416 +/- 2.44e-38]",
+          "t": [
+            "127/3200",
+            "73/1600"
+          ]
+        },
+        {
+          "t_index": 6,
+          "methods": {
+            "frozen": {
+              "cells": 128,
+              "firstjet_pass_cells": 128,
+              "physical_firstjet_pass_cells": 128,
+              "joint_firstjet_pass_cells": 128,
+              "box_L0_pass_cells": 62,
+              "box_excess_pass_cells": 50,
+              "Schur_L0_pass_cells": 128,
+              "Schur_excess_pass_cells": 128,
+              "minima": {
+                "paid_phase_radius_lower": {
+                  "bound": "[1.0062435324332859492741460916579363281 +/- 4.29e-38]",
+                  "x": [
+                    "64063/64",
+                    "1001"
+                  ]
+                },
+                "naive_phase_radius_lower": {
+                  "bound": "[0.96228944774306192876313521343981645432 +/- 3.52e-39]",
+                  "x": [
+                    "64063/64",
+                    "1001"
+                  ]
+                },
+                "physical_radius_lower": {
+                  "bound": "[0.59917093054640250304258049530182241243 +/- 3.04e-39]",
+                  "x": [
+                    "64063/64",
+                    "1001"
+                  ]
+                },
+                "joint_Schur_first_margin": {
+                  "bound": "[0.16307823852168858490979639426635872657 +/- 1.63e-39]",
+                  "x": [
+                    "64039/64",
+                    "8005/8"
+                  ]
+                },
+                "schur_laguerre_lower": {
+                  "bound": "[0.52655954146027121239802135986093973195 +/- 1.64e-39]",
+                  "x": [
+                    "64063/64",
+                    "1001"
+                  ]
+                },
+                "schur_excess_lower": {
+                  "bound": "[0.50851776497705009198712231204740367758 +/- 4.15e-39]",
+                  "x": [
+                    "64063/64",
+                    "1001"
+                  ]
+                }
+              },
+              "maxima": {
+                "phase_jet_error": "[0.41373027756391395566230553953679797356 +/- 3.86e-39]",
+                "midpoint_Lipschitz_upper": "[5.4224746749007164389140598941672872938 +/- 2.26e-38]",
+                "diagonal_correction_payment": "[0.0031765852646614076563491778141611106860 +/- 3.64e-41]"
+              }
+            },
+            "full": {
+              "cells": 128,
+              "firstjet_pass_cells": 128,
+              "physical_firstjet_pass_cells": 128,
+              "joint_firstjet_pass_cells": 128,
+              "box_L0_pass_cells": 64,
+              "box_excess_pass_cells": 51,
+              "Schur_L0_pass_cells": 128,
+              "Schur_excess_pass_cells": 128,
+              "minima": {
+                "paid_phase_radius_lower": {
+                  "bound": "[1.0086933251770501855056011371223470238 +/- 9.22e-39]",
+                  "x": [
+                    "64063/64",
+                    "1001"
+                  ]
+                },
+                "naive_phase_radius_lower": {
+                  "bound": "[0.96473316731451609205615716414711007218 +/- 4.67e-39]",
+                  "x": [
+                    "64063/64",
+                    "1001"
+                  ]
+                },
+                "physical_radius_lower": {
+                  "bound": "[0.60166362460454101096547714841350654521 +/- 1.31e-39]",
+                  "x": [
+                    "64063/64",
+                    "1001"
+                  ]
+                },
+                "joint_Schur_first_margin": {
+                  "bound": "[0.16343253422016683729462046898527181373 +/- 2.50e-39]",
+                  "x": [
+                    "64039/64",
+                    "8005/8"
+                  ]
+                },
+                "schur_laguerre_lower": {
+                  "bound": "[0.53193132052516893717660149521059089724 +/- 4.63e-39]",
+                  "x": [
+                    "64063/64",
+                    "1001"
+                  ]
+                },
+                "schur_excess_lower": {
+                  "bound": "[0.51382169343498487247081120759453074208 +/- 4.44e-39]",
+                  "x": [
+                    "64063/64",
+                    "1001"
+                  ]
+                }
+              },
+              "maxima": {
+                "phase_jet_error": "[0.41373195172568787236618287286421076644 +/- 2.05e-39]",
+                "midpoint_Lipschitz_upper": "[5.4203989674693969646324820773274592640 +/- 3.72e-38]",
+                "diagonal_correction_payment": "0"
+              }
+            }
+          },
+          "source_minimum_radius": "[1.3970953925310533055831179683729549791 +/- 1.58e-38]",
+          "source_minimum_signed_excess_Gc2": "[0.0027534178671723516225893383617033089216 +/- 3.40e-41]",
+          "source_maximum_phase_error": "[1.0822967592416469795998676234053612864e-10 +/- 3.97e-48]",
+          "source_minimum_signed_excess_A2": "[3.0725535230080526203035195746016543160 +/- 2.53e-38]",
+          "t": [
+            "73/1600",
+            "33/640"
+          ]
+        },
+        {
+          "t_index": 7,
+          "methods": {
+            "frozen": {
+              "cells": 128,
+              "firstjet_pass_cells": 128,
+              "physical_firstjet_pass_cells": 128,
+              "joint_firstjet_pass_cells": 128,
+              "box_L0_pass_cells": 63,
+              "box_excess_pass_cells": 50,
+              "Schur_L0_pass_cells": 128,
+              "Schur_excess_pass_cells": 128,
+              "minima": {
+                "paid_phase_radius_lower": {
+                  "bound": "[1.0034573732752856921212102235082960268 +/- 3.15e-38]",
+                  "x": [
+                    "64063/64",
+                    "1001"
+                  ]
+                },
+                "naive_phase_radius_lower": {
+                  "bound": "[0.95999722345850391191530391724251424017 +/- 5.50e-40]",
+                  "x": [
+                    "64063/64",
+                    "1001"
+                  ]
+                },
+                "physical_radius_lower": {
+                  "bound": "[0.59424152925498273879310125378230574586 +/- 1.26e-39]",
+                  "x": [
+                    "64063/64",
+                    "1001"
+                  ]
+                },
+                "joint_Schur_first_margin": {
+                  "bound": "[0.16346051378883899721954996073745939485 +/- 3.25e-39]",
+                  "x": [
+                    "32019/32",
+                    "64039/64"
+                  ]
+                },
+                "schur_laguerre_lower": {
+                  "bound": "[0.51616345949156334293899445310040058701 +/- 2.13e-39]",
+                  "x": [
+                    "64063/64",
+                    "1001"
+                  ]
+                },
+                "schur_excess_lower": {
+                  "bound": "[0.49834216144732907913862418414591833870 +/- 1.25e-39]",
+                  "x": [
+                    "64063/64",
+                    "1001"
+                  ]
+                }
+              },
+              "maxima": {
+                "phase_jet_error": "[0.41372982956578199493984962113800509825 +/- 7.09e-40]",
+                "midpoint_Lipschitz_upper": "[5.4080966745222708867052947932906886124 +/- 3.52e-38]",
+                "diagonal_correction_payment": "[0.0031542549925971078642697986944527253245 +/- 2.01e-41]"
+              }
+            },
+            "full": {
+              "cells": 128,
+              "firstjet_pass_cells": 128,
+              "physical_firstjet_pass_cells": 128,
+              "joint_firstjet_pass_cells": 128,
+              "box_L0_pass_cells": 63,
+              "box_excess_pass_cells": 50,
+              "Schur_L0_pass_cells": 128,
+              "Schur_excess_pass_cells": 128,
+              "minima": {
+                "paid_phase_radius_lower": {
+                  "bound": "[1.0058722658647801697724938981535168518 +/- 2.56e-38]",
+                  "x": [
+                    "64063/64",
+                    "1001"
+                  ]
+                },
+                "naive_phase_radius_lower": {
+                  "bound": "[0.96240519650525956035442976055207827933 +/- 2.06e-39]",
+                  "x": [
+                    "64063/64",
+                    "1001"
+                  ]
+                },
+                "physical_radius_lower": {
+                  "bound": "[0.59668346267017185472799832190780865831 +/- 1.40e-39]",
+                  "x": [
+                    "64063/64",
+                    "1001"
+                  ]
+                },
+                "joint_Schur_first_margin": {
+                  "bound": "[0.16381226011708741453132676950113827516 +/- 2.67e-39]",
+                  "x": [
+                    "32019/32",
+                    "64039/64"
+                  ]
+                },
+                "schur_laguerre_lower": {
+                  "bound": "[0.52142241624404206036675047231930978245 +/- 3.15e-39]",
+                  "x": [
+                    "64063/64",
+                    "1001"
+                  ]
+                },
+                "schur_excess_lower": {
+                  "bound": "[0.50353497901392548688953132402397302972 +/- 1.96e-39]",
+                  "x": [
+                    "64063/64",
+                    "1001"
+                  ]
+                }
+              },
+              "maxima": {
+                "phase_jet_error": "[0.41373150372574308481429852868585135583 +/- 1.10e-39]",
+                "midpoint_Lipschitz_upper": "[5.4060490206865233086600919634955599442 +/- 3.14e-38]",
+                "diagonal_correction_payment": "0"
+              }
+            }
+          },
+          "source_minimum_radius": "[1.3939373198627672735702873578873681851 +/- 2.59e-38]",
+          "source_minimum_signed_excess_Gc2": "[0.0027850691256787756821965453699885267562 +/- 1.60e-42]",
+          "source_maximum_phase_error": "[1.0718123103442509258004641425406781406e-10 +/- 1.90e-48]",
+          "source_minimum_signed_excess_A2": "[3.0696411394380932179212161242915586231 +/- 7.16e-39]",
+          "t": [
+            "33/640",
+            "23/400"
+          ]
+        },
+        {
+          "t_index": 8,
+          "methods": {
+            "frozen": {
+              "cells": 128,
+              "firstjet_pass_cells": 128,
+              "physical_firstjet_pass_cells": 128,
+              "joint_firstjet_pass_cells": 128,
+              "box_L0_pass_cells": 64,
+              "box_excess_pass_cells": 51,
+              "Schur_L0_pass_cells": 128,
+              "Schur_excess_pass_cells": 128,
+              "minima": {
+                "paid_phase_radius_lower": {
+                  "bound": "[1.0007876384056043844541069100203287946 +/- 1.36e-38]",
+                  "x": [
+                    "64063/64",
+                    "1001"
+                  ]
+                },
+                "naive_phase_radius_lower": {
+                  "bound": "[0.95782831871215820330843475674385266347 +/- 1.27e-39]",
+                  "x": [
+                    "64063/64",
+                    "1001"
+                  ]
+                },
+                "physical_radius_lower": {
+                  "bound": "[0.58960631905523685724980406308668864486 +/- 5.56e-41]",
+                  "x": [
+                    "64063/64",
+                    "1001"
+                  ]
+                },
+                "joint_Schur_first_margin": {
+                  "bound": "[0.16373161615072629354813992796294435568 +/- 2.19e-39]",
+                  "x": [
+                    "32019/32",
+                    "64039/64"
+                  ]
+                },
+                "schur_laguerre_lower": {
+                  "bound": "[0.50614570576670805882431806116617822875 +/- 4.30e-39]",
+                  "x": [
+                    "64063/64",
+                    "1001"
+                  ]
+                },
+                "schur_excess_lower": {
+                  "bound": "[0.48853579339738453511477588041911911602 +/- 3.68e-39]",
+                  "x": [
+                    "64063/64",
+                    "1001"
+                  ]
+                }
+              },
+              "maxima": {
+                "phase_jet_error": "[0.41372938156861889808045426898844776753 +/- 3.06e-39]",
+                "midpoint_Lipschitz_upper": "[5.3938196445536517219252235475218267526 +/- 3.86e-38]",
+                "diagonal_correction_payment": "[0.0031320816758502512509195724430063450622 +/- 3.76e-42]"
+              }
+            },
+            "full": {
+              "cells": 128,
+              "firstjet_pass_cells": 128,
+              "physical_firstjet_pass_cells": 128,
+              "joint_firstjet_pass_cells": 128,
+              "box_L0_pass_cells": 65,
+              "box_excess_pass_cells": 51,
+              "Schur_L0_pass_cells": 128,
+              "Schur_excess_pass_cells": 128,
+              "minima": {
+                "paid_phase_radius_lower": {
+                  "bound": "[1.0031676821189018239121831566812900868 +/- 1.20e-38]",
+                  "x": [
+                    "64063/64",
+                    "1001"
+                  ]
+                },
+                "naive_phase_radius_lower": {
+                  "bound": "[0.96020059120979582616841765529754201661 +/- 1.19e-39]",
+                  "x": [
+                    "64063/64",
+                    "1001"
+                  ]
+                },
+                "physical_radius_lower": {
+                  "bound": "[0.59199722892132530842678102987400596142 +/- 1.45e-39]",
+                  "x": [
+                    "64063/64",
+                    "1001"
+                  ]
+                },
+                "joint_Schur_first_margin": {
+                  "bound": "[0.16408089003467241731897925239414108498 +/- 2.22e-39]",
+                  "x": [
+                    "32019/32",
+                    "64039/64"
+                  ]
+                },
+                "schur_laguerre_lower": {
+                  "bound": "[0.51129295522611209888492743431126268628 +/- 4.38e-39]",
+                  "x": [
+                    "64063/64",
+                    "1001"
+                  ]
+                },
+                "schur_excess_lower": {
+                  "bound": "[0.49361859191364239490874853992435056032 +/- 3.16e-39]",
+                  "x": [
+                    "64063/64",
+                    "1001"
+                  ]
+                }
+              },
+              "maxima": {
+                "phase_jet_error": "[0.41373105572676716504598753801507016119 +/- 1.38e-39]",
+                "midpoint_Lipschitz_upper": "[5.3917676196921067953016645246144836667 +/- 3.96e-39]",
+                "diagonal_correction_payment": "0"
+              }
+            }
+          },
+          "source_minimum_radius": "[1.3909044945508875343521663028619589803 +/- 6.15e-39]",
+          "source_minimum_signed_excess_Gc2": "[0.0028172004062159153016889153643875541303 +/- 2.43e-41]",
+          "source_maximum_phase_error": "[1.0628132179965228060698466758229625653e-10 +/- 1.25e-48]",
+          "source_minimum_signed_excess_A2": "[3.0668580833421103204765306839021087660 +/- 3.96e-38]",
+          "t": [
+            "23/400",
+            "203/3200"
+          ]
+        },
+        {
+          "t_index": 9,
+          "methods": {
+            "frozen": {
+              "cells": 128,
+              "firstjet_pass_cells": 128,
+              "physical_firstjet_pass_cells": 128,
+              "joint_firstjet_pass_cells": 128,
+              "box_L0_pass_cells": 63,
+              "box_excess_pass_cells": 51,
+              "Schur_L0_pass_cells": 128,
+              "Schur_excess_pass_cells": 128,
+              "minima": {
+                "paid_phase_radius_lower": {
+                  "bound": "[0.99823317627939735471388910491058605035 +/- 5.56e-40]",
+                  "x": [
+                    "64063/64",
+                    "1001"
+                  ]
+                },
+                "naive_phase_radius_lower": {
+                  "bound": "[0.95578131356000991552170739433870000225 +/- 3.45e-39]",
+                  "x": [
+                    "64063/64",
+                    "1001"
+                  ]
+                },
+                "physical_radius_lower": {
+                  "bound": "[0.58526514825351595798339542187874089314 +/- 7.22e-41]",
+                  "x": [
+                    "64063/64",
+                    "1001"
+                  ]
+                },
+                "joint_Schur_first_margin": {
+                  "bound": "[0.16404234242041632227080967251121025017 +/- 1.91e-39]",
+                  "x": [
+                    "64037/64",
+                    "32019/32"
+                  ]
+                },
+                "schur_laguerre_lower": {
+                  "bound": "[0.49650240673811788669879913704058232370 +/- 3.44e-39]",
+                  "x": [
+                    "64063/64",
+                    "1001"
+                  ]
+                },
+                "schur_excess_lower": {
+                  "bound": "[0.47909487653472795798420857880678444965 +/- 1.18e-39]",
+                  "x": [
+                    "64063/64",
+                    "1001"
+                  ]
+                }
+              },
+              "maxima": {
+                "phase_jet_error": "[0.41372893357242734920708799293516727855 +/- 2.91e-39]",
+                "midpoint_Lipschitz_upper": "[5.3796503769657415952701039316117290795 +/- 4.50e-38]",
+                "diagonal_correction_payment": "[0.0031100633480754298903542503554094424149 +/- 2.93e-41]"
+              }
+            },
+            "full": {
+              "cells": 128,
+              "firstjet_pass_cells": 128,
+              "physical_firstjet_pass_cells": 128,
+              "joint_firstjet_pass_cells": 128,
+              "box_L0_pass_cells": 66,
+              "box_excess_pass_cells": 52,
+              "Schur_L0_pass_cells": 128,
+              "Schur_excess_pass_cells": 128,
+              "minima": {
+                "paid_phase_radius_lower": {
+                  "bound": "[1.0005784301545346916665015635625457481 +/- 1.74e-38]",
+                  "x": [
+                    "64063/64",
+                    "1001"
+                  ]
+                },
+                "naive_phase_radius_lower": {
+                  "bound": "[0.95811793792059398581415155898875417203 +/- 2.83e-39]",
+                  "x": [
+                    "64063/64",
+                    "1001"
+                  ]
+                },
+                "physical_radius_lower": {
+                  "bound": "[0.58760480165009902706187836516002651263 +/- 7.46e-41]",
+                  "x": [
+                    "64063/64",
+                    "1001"
+                  ]
+                },
+                "joint_Schur_first_margin": {
+                  "bound": "[0.16438910312555831134890141816948502659 +/- 2.01e-39]",
+                  "x": [
+                    "64037/64",
+                    "32019/32"
+                  ]
+                },
+                "schur_laguerre_lower": {
+                  "bound": "[0.50153907216636827083358799482246550018 +/- 1.54e-39]",
+                  "x": [
+                    "64063/64",
+                    "1001"
+                  ]
+                },
+                "schur_excess_lower": {
+                  "bound": "[0.48406875627210407680296991713651758173 +/- 2.35e-39]",
+                  "x": [
+                    "64063/64",
+                    "1001"
+                  ]
+                }
+              },
+              "maxima": {
+                "phase_jet_error": "[0.41373060772876279719507972860106956779 +/- 1.36e-39]",
+                "midpoint_Lipschitz_upper": "[5.3776260679395506552352765972156412585 +/- 3.36e-38]",
+                "diagonal_correction_payment": "0"
+              }
+            }
+          },
+          "source_minimum_radius": "[1.3879958732668721025305815245739100667 +/- 2.91e-38]",
+          "source_minimum_signed_excess_Gc2": "[0.0028498185901477369008160935418183943764 +/- 1.40e-41]",
+          "source_maximum_phase_error": "[1.0542815997406440792022099938899194493e-10 +/- 7.02e-49]",
+          "source_minimum_signed_excess_A2": "[3.0642025774544751134640725108897731405 +/- 4.42e-38]",
+          "t": [
+            "203/3200",
+            "111/1600"
+          ]
+        },
+        {
+          "t_index": 10,
+          "methods": {
+            "frozen": {
+              "cells": 128,
+              "firstjet_pass_cells": 128,
+              "physical_firstjet_pass_cells": 128,
+              "joint_firstjet_pass_cells": 128,
+              "box_L0_pass_cells": 65,
+              "box_excess_pass_cells": 52,
+              "Schur_L0_pass_cells": 128,
+              "Schur_excess_pass_cells": 128,
+              "minima": {
+                "paid_phase_radius_lower": {
+                  "bound": "[0.99579282910844268951708327217585255926 +/- 3.49e-39]",
+                  "x": [
+                    "64063/64",
+                    "1001"
+                  ]
+                },
+                "naive_phase_radius_lower": {
+                  "bound": "[0.95385471497765096702613421531130656514 +/- 2.98e-39]",
+                  "x": [
+                    "64063/64",
+                    "1001"
+                  ]
+                },
+                "physical_radius_lower": {
+                  "bound": "[0.58121757624563652053569080254069503632 +/- 5.11e-40]",
+                  "x": [
+                    "64063/64",
+                    "1001"
+                  ]
+                },
+                "joint_Schur_first_margin": {
+                  "bound": "[0.16438936857118351520754429480204792855 +/- 3.52e-39]",
+                  "x": [
+                    "64037/64",
+                    "32019/32"
+                  ]
+                },
+                "schur_laguerre_lower": {
+                  "bound": "[0.48722952491453001128898855323855801462 +/- 2.83e-39]",
+                  "x": [
+                    "64063/64",
+                    "1001"
+                  ]
+                },
+                "schur_excess_lower": {
+                  "bound": "[0.47001545871245489581144176107673120434 +/- 9.68e-40]",
+                  "x": [
+                    "64063/64",
+                    "1001"
+                  ]
+                }
+              },
+              "maxima": {
+                "phase_jet_error": "[0.41372848557720197063911874182535124956 +/- 4.35e-39]",
+                "midpoint_Lipschitz_upper": "[5.3654612080593356389315760808355113445 +/- 4.78e-38]",
+                "diagonal_correction_payment": "[0.0030882016740787292714860800598049033955 +/- 8.12e-42]"
+              }
+            },
+            "full": {
+              "cells": 128,
+              "firstjet_pass_cells": 128,
+              "physical_firstjet_pass_cells": 128,
+              "joint_firstjet_pass_cells": 128,
+              "box_L0_pass_cells": 66,
+              "box_excess_pass_cells": 52,
+              "Schur_L0_pass_cells": 128,
+              "Schur_excess_pass_cells": 128,
+              "minima": {
+                "paid_phase_radius_lower": {
+                  "bound": "[0.99810335993008113465888381048324015554 +/- 2.07e-39]",
+                  "x": [
+                    "64063/64",
+                    "1001"
+                  ]
+                },
+                "naive_phase_radius_lower": {
+                  "bound": "[0.95615575783975866249060055413582524486 +/- 3.84e-39]",
+                  "x": [
+                    "64063/64",
+                    "1001"
+                  ]
+                },
+                "physical_radius_lower": {
+                  "bound": "[0.58350576799530398111158409784022605151 +/- 2.20e-39]",
+                  "x": [
+                    "64063/64",
+                    "1001"
+                  ]
+                },
+                "joint_Schur_first_margin": {
+                  "bound": "[0.16473369193475688705957666764988622289 +/- 3.94e-39]",
+                  "x": [
+                    "64037/64",
+                    "32019/32"
+                  ]
+                },
+                "schur_laguerre_lower": {
+                  "bound": "[0.49215670576426138781728464847431304151 +/- 1.48e-39]",
+                  "x": [
+                    "64063/64",
+                    "1001"
+                  ]
+                },
+                "schur_excess_lower": {
+                  "bound": "[0.47488149816142991712238573629068162318 +/- 1.43e-40]",
+                  "x": [
+                    "64063/64",
+                    "1001"
+                  ]
+                }
+              },
+              "maxima": {
+                "phase_jet_error": "[0.41373015973172460355918223594297025273 +/- 4.31e-39]",
+                "midpoint_Lipschitz_upper": "[5.3634643102739388812131369072866263801 +/- 1.05e-38]",
+                "diagonal_correction_payment": "0"
+              }
+            }
+          },
+          "source_minimum_radius": "[1.3852103882531038398001723615762749416 +/- 1.85e-38]",
+          "source_minimum_signed_excess_Gc2": "[0.0028829306505441526502284682226487621260 +/- 1.52e-41]",
+          "source_maximum_phase_error": "[1.0459160055443015755396850282518925507e-10 +/- 4.64e-48]",
+          "source_minimum_signed_excess_A2": "[3.0616728218422793914201114461854559558 +/- 1.74e-38]",
+          "t": [
+            "111/1600",
+            "241/3200"
+          ]
+        },
+        {
+          "t_index": 11,
+          "methods": {
+            "frozen": {
+              "cells": 128,
+              "firstjet_pass_cells": 128,
+              "physical_firstjet_pass_cells": 128,
+              "joint_firstjet_pass_cells": 128,
+              "box_L0_pass_cells": 67,
+              "box_excess_pass_cells": 52,
+              "Schur_L0_pass_cells": 128,
+              "Schur_excess_pass_cells": 128,
+              "minima": {
+                "paid_phase_radius_lower": {
+                  "bound": "[0.99346542221834001289314881836431065064 +/- 4.11e-39]",
+                  "x": [
+                    "64063/64",
+                    "1001"
+                  ]
+                },
+                "naive_phase_radius_lower": {
+                  "bound": "[0.95204706918807754615062874534886922032 +/- 1.25e-39]",
+                  "x": [
+                    "64063/64",
+                    "1001"
+                  ]
+                },
+                "physical_radius_lower": {
+                  "bound": "[0.57746303842680815095801593145294152741 +/- 2.63e-39]",
+                  "x": [
+                    "64063/64",
+                    "1001"
+                  ]
+                },
+                "joint_Schur_first_margin": {
+                  "bound": "[0.16463117572275219140591816852257165830 +/- 7.72e-40]",
+                  "x": [
+                    "16009/16",
+                    "64037/64"
+                  ]
+                },
+                "schur_laguerre_lower": {
+                  "bound": "[0.47663162547132076140504138445362749676 +/- 1.72e-39]",
+                  "x": [
+                    "64063/64",
+                    "1001"
+                  ]
+                },
+                "schur_excess_lower": {
+                  "bound": "[0.45788520540190574393718545258401765179 +/- 4.05e-41]",
+                  "x": [
+                    "64063/64",
+                    "1001"
+                  ]
+                }
+              },
+              "maxima": {
+                "phase_jet_error": "[0.41372803758295082101394627339270693810 +/- 3.18e-39]",
+                "midpoint_Lipschitz_upper": "[5.3514012785236164588872362539936455691 +/- 3.02e-38]",
+                "diagonal_correction_payment": "[0.0030664926541880888330698166230303511466 +/- 1.72e-42]"
+              }
+            },
+            "full": {
+              "cells": 128,
+              "firstjet_pass_cells": 128,
+              "physical_firstjet_pass_cells": 128,
+              "joint_firstjet_pass_cells": 128,
+              "box_L0_pass_cells": 72,
+              "box_excess_pass_cells": 53,
+              "Schur_L0_pass_cells": 128,
+              "Schur_excess_pass_cells": 128,
+              "minima": {
+                "paid_phase_radius_lower": {
+                  "bound": "[0.99574131228007208844954455784472907003 +/- 3.26e-39]",
+                  "x": [
+                    "64063/64",
+                    "1001"
+                  ]
+                },
+                "naive_phase_radius_lower": {
+                  "bound": "[0.95431260347783520900000017842081069082 +/- 1.55e-39]",
+                  "x": [
+                    "64063/64",
+                    "1001"
+                  ]
+                },
+                "physical_radius_lower": {
+                  "bound": "[0.57969959662410912981141151172714627754 +/- 2.78e-39]",
+                  "x": [
+                    "64063/64",
+                    "1001"
+                  ]
+                },
+                "joint_Schur_first_margin": {
+                  "bound": "[0.16497302172668922531290439252995099781 +/- 7.34e-40]",
+                  "x": [
+                    "16009/16",
+                    "64037/64"
+                  ]
+                },
+                "schur_laguerre_lower": {
+                  "bound": "[0.48209356924135264914288066098539858867 +/- 3.03e-39]",
+                  "x": [
+                    "64063/64",
+                    "1001"
+                  ]
+                },
+                "schur_excess_lower": {
+                  "bound": "[0.46328242069340952425833753336034177084 +/- 6.03e-40]",
+                  "x": [
+                    "64063/64",
+                    "1001"
+                  ]
+                }
+              },
+              "maxima": {
+                "phase_jet_error": "[0.41372971173566064280830413697627685904 +/- 2.61e-39]",
+                "midpoint_Lipschitz_upper": "[5.3493999654107092575859214253202782553 +/- 4.15e-38]",
+                "diagonal_correction_payment": "0"
+              }
+            }
+          },
+          "source_minimum_radius": "[1.3825469336190732959360425547343715746 +/- 2.17e-38]",
+          "source_minimum_signed_excess_Gc2": "[0.0029165436549288657040178659067485630880 +/- 1.93e-41]",
+          "source_maximum_phase_error": "[1.0376399820253948697277618247663177220e-10 +/- 1.04e-48]",
+          "source_minimum_signed_excess_A2": "[3.0592670540019194861994227162509178528 +/- 2.96e-39]",
+          "t": [
+            "241/3200",
+            "13/160"
+          ]
+        },
+        {
+          "t_index": 12,
+          "methods": {
+            "frozen": {
+              "cells": 128,
+              "firstjet_pass_cells": 128,
+              "physical_firstjet_pass_cells": 128,
+              "joint_firstjet_pass_cells": 128,
+              "box_L0_pass_cells": 70,
+              "box_excess_pass_cells": 52,
+              "Schur_L0_pass_cells": 128,
+              "Schur_excess_pass_cells": 128,
+              "minima": {
+                "paid_phase_radius_lower": {
+                  "bound": "[0.99124975198384214610721652569641628862 +/- 4.60e-39]",
+                  "x": [
+                    "64063/64",
+                    "1001"
+                  ]
+                },
+                "naive_phase_radius_lower": {
+                  "bound": "[0.95035686578980305186005801414384701540 +/- 3.95e-40]",
+                  "x": [
+                    "64063/64",
+                    "1001"
+                  ]
+                },
+                "physical_radius_lower": {
+                  "bound": "[0.57400070699296061581846047027640953298 +/- 2.88e-39]",
+                  "x": [
+                    "64063/64",
+                    "1001"
+                  ]
+                },
+                "joint_Schur_first_margin": {
+                  "bound": "[0.16504986675098103241063514633708112177 +/- 1.62e-40]",
+                  "x": [
+                    "16009/16",
+                    "64037/64"
+                  ]
+                },
+                "schur_laguerre_lower": {
+                  "bound": "[0.46404468933566415561022753345454840727 +/- 3.11e-40]",
+                  "x": [
+                    "64063/64",
+                    "1001"
+                  ]
+                },
+                "schur_excess_lower": {
+                  "bound": "[0.44550712643673059055870241974368870689 +/- 6.23e-41]",
+                  "x": [
+                    "64063/64",
+                    "1001"
+                  ]
+                }
+              },
+              "maxima": {
+                "phase_jet_error": "[0.41372758958966852265678550187657440094 +/- 2.33e-39]",
+                "midpoint_Lipschitz_upper": "[5.3374181967652478960742872097754760439 +/- 4.43e-38]",
+                "diagonal_correction_payment": "[0.0030449362317701216187673906316073958147 +/- 3.64e-41]"
+              }
+            },
+            "full": {
+              "cells": 128,
+              "firstjet_pass_cells": 128,
+              "physical_firstjet_pass_cells": 128,
+              "joint_firstjet_pass_cells": 128,
+              "box_L0_pass_cells": 72,
+              "box_excess_pass_cells": 53,
+              "Schur_L0_pass_cells": 128,
+              "Schur_excess_pass_cells": 128,
+              "minima": {
+                "paid_phase_radius_lower": {
+                  "bound": "[0.99349108196665555821256960134176877426 +/- 2.66e-39]",
+                  "x": [
+                    "64063/64",
+                    "1001"
+                  ]
+                },
+                "naive_phase_radius_lower": {
+                  "bound": "[0.95258698135641817195728182461059511167 +/- 2.38e-39]",
+                  "x": [
+                    "64063/64",
+                    "1001"
+                  ]
+                },
+                "physical_radius_lower": {
+                  "bound": "[0.57618549133913365813188227027355774754 +/- 3.46e-39]",
+                  "x": [
+                    "64063/64",
+                    "1001"
+                  ]
+                },
+                "joint_Schur_first_margin": {
+                  "bound": "[0.16538931010125203451918391060955665377 +/- 2.65e-39]",
+                  "x": [
+                    "16009/16",
+                    "64037/64"
+                  ]
+                },
+                "schur_laguerre_lower": {
+                  "bound": "[0.46939482402586105375023484772783345893 +/- 2.41e-39]",
+                  "x": [
+                    "64063/64",
+                    "1001"
+                  ]
+                },
+                "schur_excess_lower": {
+                  "bound": "[0.45079416914466797245112605861929936908 +/- 2.22e-39]",
+                  "x": [
+                    "64063/64",
+                    "1001"
+                  ]
+                }
+              },
+              "maxima": {
+                "phase_jet_error": "[0.41372926374056553724589955625203913413 +/- 4.65e-39]",
+                "midpoint_Lipschitz_upper": "[5.3354439816436681576663203402237471184 +/- 2.98e-38]",
+                "diagonal_correction_payment": "0"
+              }
+            }
+          },
+          "source_minimum_radius": "[1.3800043948931644144424373184151692641 +/- 9.96e-39]",
+          "source_minimum_signed_excess_Gc2": "[0.0029506647576723472985939602798551167902 +/- 4.21e-41]",
+          "source_maximum_phase_error": "[1.0294373511085870091975032235369863829e-10 +/- 4.01e-48]",
+          "source_minimum_signed_excess_A2": "[3.0569835750896588126297902614903607747 +/- 3.69e-38]",
+          "t": [
+            "13/160",
+            "279/3200"
+          ]
+        },
+        {
+          "t_index": 13,
+          "methods": {
+            "frozen": {
+              "cells": 128,
+              "firstjet_pass_cells": 128,
+              "physical_firstjet_pass_cells": 128,
+              "joint_firstjet_pass_cells": 128,
+              "box_L0_pass_cells": 71,
+              "box_excess_pass_cells": 53,
+              "Schur_L0_pass_cells": 128,
+              "Schur_excess_pass_cells": 128,
+              "minima": {
+                "paid_phase_radius_lower": {
+                  "bound": "[0.98914460295518885393142997050790922031 +/- 8.03e-40]",
+                  "x": [
+                    "64063/64",
+                    "1001"
+                  ]
+                },
+                "naive_phase_radius_lower": {
+                  "bound": "[0.94878258672690767517817672675984659301 +/- 4.60e-39]",
+                  "x": [
+                    "64063/64",
+                    "1001"
+                  ]
+                },
+                "physical_radius_lower": {
+                  "bound": "[0.57082953496350724088125218472271244405 +/- 1.03e-39]",
+                  "x": [
+                    "64063/64",
+                    "1001"
+                  ]
+                },
+                "joint_Schur_first_margin": {
+                  "bound": "[0.16522542265867579244735806905395631718 +/- 3.61e-39]",
+                  "x": [
+                    "64035/64",
+                    "16009/16"
+                  ]
+                },
+                "schur_laguerre_lower": {
+                  "bound": "[0.45182595206591854583254710288501808083 +/- 2.96e-39]",
+                  "x": [
+                    "64063/64",
+                    "1001"
+                  ]
+                },
+                "schur_excess_lower": {
+                  "bound": "[0.43348855385147339777905849760278127351 +/- 3.55e-40]",
+                  "x": [
+                    "64063/64",
+                    "1001"
+                  ]
+                }
+              },
+              "maxima": {
+                "phase_jet_error": "[0.41372714159735507242472792972770127766 +/- 1.86e-39]",
+                "midpoint_Lipschitz_upper": "[5.3234156545262927631262972659122262803 +/- 1.32e-39]",
+                "diagonal_correction_payment": "[0.0030235313255410062837998251284613341015 +/- 1.78e-41]"
+              }
+            },
+            "full": {
+              "cells": 128,
+              "firstjet_pass_cells": 128,
+              "physical_firstjet_pass_cells": 128,
+              "joint_firstjet_pass_cells": 128,
+              "box_L0_pass_cells": 71,
+              "box_excess_pass_cells": 54,
+              "Schur_L0_pass_cells": 128,
+              "Schur_excess_pass_cells": 128,
+              "minima": {
+                "paid_phase_radius_lower": {
+                  "bound": "[0.99135146720335246878044016624917259437 +/- 1.87e-39]",
+                  "x": [
+                    "64063/64",
+                    "1001"
+                  ]
+                },
+                "naive_phase_radius_lower": {
+                  "bound": "[0.95097737648863358212511107682196588451 +/- 2.06e-39]",
+                  "x": [
+                    "64063/64",
+                    "1001"
+                  ]
+                },
+                "physical_radius_lower": {
+                  "bound": "[0.57296243864504429781796094552446371228 +/- 3.55e-39]",
+                  "x": [
+                    "64063/64",
+                    "1001"
+                  ]
+                },
+                "joint_Schur_first_margin": {
+                  "bound": "[0.16556242370600629955505000775096996061 +/- 2.88e-39]",
+                  "x": [
+                    "64035/64",
+                    "16009/16"
+                  ]
+                },
+                "schur_laguerre_lower": {
+                  "bound": "[0.45706538959801168556218669270866874995 +/- 8.52e-40]",
+                  "x": [
+                    "64063/64",
+                    "1001"
+                  ]
+                },
+                "schur_excess_lower": {
+                  "bound": "[0.43866651703963757650703219376546907111 +/- 1.95e-39]",
+                  "x": [
+                    "64063/64",
+                    "1001"
+                  ]
+                }
+              },
+              "maxima": {
+                "phase_jet_error": "[0.41372881574643928372904727842501333742 +/- 1.37e-39]",
+                "midpoint_Lipschitz_upper": "[5.3214682369727480248701451135835672473 +/- 7.72e-39]",
+                "diagonal_correction_payment": "0"
+              }
+            }
+          },
+          "source_minimum_radius": "[1.3775816169277842486102034102345743361 +/- 4.59e-38]",
+          "source_minimum_signed_excess_Gc2": "[0.0029853012099174028874804328820525723280 +/- 2.92e-41]",
+          "source_maximum_phase_error": "[1.0213050433411863369156127713204634942e-10 +/- 4.12e-48]",
+          "source_minimum_signed_excess_A2": "[3.0548206369897489605555557241441882550 +/- 3.08e-38]",
+          "t": [
+            "279/3200",
+            "149/1600"
+          ]
+        },
+        {
+          "t_index": 14,
+          "methods": {
+            "frozen": {
+              "cells": 128,
+              "firstjet_pass_cells": 128,
+              "physical_firstjet_pass_cells": 128,
+              "joint_firstjet_pass_cells": 128,
+              "box_L0_pass_cells": 71,
+              "box_excess_pass_cells": 53,
+              "Schur_L0_pass_cells": 128,
+              "Schur_excess_pass_cells": 128,
+              "minima": {
+                "paid_phase_radius_lower": {
+                  "bound": "[0.98714873602025591696177279770729454079 +/- 2.14e-39]",
+                  "x": [
+                    "64063/64",
+                    "1001"
+                  ]
+                },
+                "naive_phase_radius_lower": {
+                  "bound": "[0.94732269101937279589937992355518207395 +/- 3.24e-39]",
+                  "x": [
+                    "64063/64",
+                    "1001"
+                  ]
+                },
+                "physical_radius_lower": {
+                  "bound": "[0.56794825364666612619768719098520837814 +/- 4.48e-39]",
+                  "x": [
+                    "64063/64",
+                    "1001"
+                  ]
+                },
+                "joint_Schur_first_margin": {
+                  "bound": "[0.16571155336083547576498545404830180922 +/- 3.52e-39]",
+                  "x": [
+                    "64035/64",
+                    "16009/16"
+                  ]
+                },
+                "schur_laguerre_lower": {
+                  "bound": "[0.43997170544005140817377953703788827023 +/- 2.72e-39]",
+                  "x": [
+                    "64063/64",
+                    "1001"
+                  ]
+                },
+                "schur_excess_lower": {
+                  "bound": "[0.42182586338961573758370270256118769660 +/- 3.65e-39]",
+                  "x": [
+                    "64063/64",
+                    "1001"
+                  ]
+                }
+              },
+              "maxima": {
+                "phase_jet_error": "[0.41372669360601315441171202048603108108 +/- 2.42e-40]",
+                "midpoint_Lipschitz_upper": "[5.3095694025856735067896018525110094435 +/- 4.25e-38]",
+                "diagonal_correction_payment": "[0.0030022768807028538101859767450502700910 +/- 3.20e-41]"
+              }
+            },
+            "full": {
+              "cells": 128,
+              "firstjet_pass_cells": 128,
+              "physical_firstjet_pass_cells": 128,
+              "joint_firstjet_pass_cells": 128,
+              "box_L0_pass_cells": 72,
+              "box_excess_pass_cells": 55,
+              "Schur_L0_pass_cells": 128,
+              "Schur_excess_pass_cells": 128,
+              "minima": {
+                "paid_phase_radius_lower": {
+                  "bound": "[0.98932123938773527981760237280366816637 +/- 4.76e-39]",
+                  "x": [
+                    "64063/64",
+                    "1001"
+                  ]
+                },
+                "naive_phase_radius_lower": {
+                  "bound": "[0.94948225848501077846339126887960133877 +/- 1.84e-39]",
+                  "x": [
+                    "64063/64",
+                    "1001"
+                  ]
+                },
+                "physical_radius_lower": {
+                  "bound": "[0.57002920331172104875809768235891638048 +/- 2.45e-39]",
+                  "x": [
+                    "64063/64",
+                    "1001"
+                  ]
+                },
+                "joint_Schur_first_margin": {
+                  "bound": "[0.16604618584154537818412044296909970185 +/- 4.04e-39]",
+                  "x": [
+                    "64035/64",
+                    "16009/16"
+                  ]
+                },
+                "schur_laguerre_lower": {
+                  "bound": "[0.44510157946718804366585192144536471039 +/- 6.85e-40]",
+                  "x": [
+                    "64063/64",
+                    "1001"
+                  ]
+                },
+                "schur_excess_lower": {
+                  "bound": "[0.42689585829842736920628695618290884414 +/- 1.85e-39]",
+                  "x": [
+                    "64063/64",
+                    "1001"
+                  ]
+                }
+              },
+              "maxima": {
+                "phase_jet_error": "[0.41372836775328456636254696746706691789 +/- 3.37e-39]",
+                "midpoint_Lipschitz_upper": "[5.3076175347119994039621503320142366279 +/- 4.88e-38]",
+                "diagonal_correction_payment": "0"
+              }
+            }
+          },
+          "source_minimum_radius": "[1.3752774393145500795266247390298252472 +/- 3.31e-38]",
+          "source_minimum_signed_excess_Gc2": "[0.0030204603532851675168700835512597432148 +/- 1.39e-42]",
+          "source_maximum_phase_error": "[1.0132421527331985334010186498925268193e-10 +/- 1.35e-48]",
+          "source_minimum_signed_excess_A2": "[3.0527765957280773739940744436800289594 +/- 3.63e-38]",
+          "t": [
+            "149/1600",
+            "317/3200"
+          ]
+        },
+        {
+          "t_index": 15,
+          "methods": {
+            "frozen": {
+              "cells": 128,
+              "firstjet_pass_cells": 128,
+              "physical_firstjet_pass_cells": 128,
+              "joint_firstjet_pass_cells": 128,
+              "box_L0_pass_cells": 71,
+              "box_excess_pass_cells": 54,
+              "Schur_L0_pass_cells": 128,
+              "Schur_excess_pass_cells": 128,
+              "minima": {
+                "paid_phase_radius_lower": {
+                  "bound": "[0.98526091256431666197635335968135913381 +/- 5.22e-40]",
+                  "x": [
+                    "64063/64",
+                    "1001"
+                  ]
+                },
+                "naive_phase_radius_lower": {
+                  "bound": "[0.94597562385547615654884359385446671753 +/- 1.09e-39]",
+                  "x": [
+                    "64063/64",
+                    "1001"
+                  ]
+                },
+                "physical_radius_lower": {
+                  "bound": "[0.56535538765066818717364890528286344895 +/- 2.08e-39]",
+                  "x": [
+                    "64063/64",
+                    "1001"
+                  ]
+                },
+                "joint_Schur_first_margin": {
+                  "bound": "[0.16582357877916193779034066241059467143 +/- 4.70e-39]",
+                  "x": [
+                    "32017/32",
+                    "64035/64"
+                  ]
+                },
+                "schur_laguerre_lower": {
+                  "bound": "[0.42847834937190362220871254973422227871 +/- 1.08e-39]",
+                  "x": [
+                    "64063/64",
+                    "1001"
+                  ]
+                },
+                "schur_excess_lower": {
+                  "bound": "[0.41051555007339718489807097244272830396 +/- 9.83e-40]",
+                  "x": [
+                    "64063/64",
+                    "1001"
+                  ]
+                }
+              },
+              "maxima": {
+                "phase_jet_error": "[0.41372624561564142184189085753748464813 +/- 4.96e-39]",
+                "midpoint_Lipschitz_upper": "[5.2957703204053460306211576315534260482 +/- 2.63e-38]",
+                "diagonal_correction_payment": "[0.0029811718306968715770869657978710493911 +/- 3.35e-41]"
+              }
+            },
+            "full": {
+              "cells": 128,
+              "firstjet_pass_cells": 128,
+              "physical_firstjet_pass_cells": 128,
+              "joint_firstjet_pass_cells": 128,
+              "box_L0_pass_cells": 71,
+              "box_excess_pass_cells": 54,
+              "Schur_L0_pass_cells": 128,
+              "Schur_excess_pass_cells": 128,
+              "minima": {
+                "paid_phase_radius_lower": {
+                  "bound": "[0.98739916275350429442484958680375635337 +/- 4.66e-39]",
+                  "x": [
+                    "64063/64",
+                    "1001"
+                  ]
+                },
+                "naive_phase_radius_lower": {
+                  "bound": "[0.94810008587831053459122605756080365720 +/- 2.37e-39]",
+                  "x": [
+                    "64063/64",
+                    "1001"
+                  ]
+                },
+                "physical_radius_lower": {
+                  "bound": "[0.56738434490224418216075225526586118750 +/- 2.80e-39]",
+                  "x": [
+                    "64063/64",
+                    "1001"
+                  ]
+                },
+                "joint_Schur_first_margin": {
+                  "bound": "[0.16615580388459542266779860818721545686 +/- 5.04e-40]",
+                  "x": [
+                    "32017/32",
+                    "64035/64"
+                  ]
+                },
+                "schur_laguerre_lower": {
+                  "bound": "[0.43349975512029975417753430868641395999 +/- 4.58e-39]",
+                  "x": [
+                    "64063/64",
+                    "1001"
+                  ]
+                },
+                "schur_excess_lower": {
+                  "bound": "[0.41547864969416219938961647557069342539 +/- 7.76e-40]",
+                  "x": [
+                    "64063/64",
+                    "1001"
+                  ]
+                }
+              },
+              "maxima": {
+                "phase_jet_error": "[0.41372791976110003836510197111939556740 +/- 2.68e-39]",
+                "midpoint_Lipschitz_upper": "[5.2938449356326310707053843393483265188 +/- 3.02e-38]",
+                "diagonal_correction_payment": "0"
+              }
+            }
+          },
+          "source_minimum_radius": "[1.3730906448892813985721420962244669619 +/- 5.67e-39]",
+          "source_minimum_signed_excess_Gc2": "[0.0030561496255236296326086765725183201832 +/- 2.35e-41]",
+          "source_maximum_phase_error": "[1.0052480099902375668226615691310926397e-10 +/- 3.65e-48]",
+          "source_minimum_signed_excess_A2": "[3.0508496982734182127989580304846743003 +/- 1.12e-38]",
+          "t": [
+            "317/3200",
+            "21/200"
+          ]
+        },
+        {
+          "t_index": 16,
+          "methods": {
+            "frozen": {
+              "cells": 128,
+              "firstjet_pass_cells": 128,
+              "physical_firstjet_pass_cells": 128,
+              "joint_firstjet_pass_cells": 128,
+              "box_L0_pass_cells": 71,
+              "box_excess_pass_cells": 55,
+              "Schur_L0_pass_cells": 128,
+              "Schur_excess_pass_cells": 128,
+              "minima": {
+                "paid_phase_radius_lower": {
+                  "bound": "[0.98347981483924006676300021566248260142 +/- 3.44e-39]",
+                  "x": [
+                    "64063/64",
+                    "1001"
+                  ]
+                },
+                "naive_phase_radius_lower": {
+                  "bound": "[0.94473980702456105218064883207701620402 +/- 3.22e-39]",
+                  "x": [
+                    "64063/64",
+                    "1001"
+                  ]
+                },
+                "physical_radius_lower": {
+                  "bound": "[0.56304922832103929074125228608550284676 +/- 5.85e-40]",
+                  "x": [
+                    "64063/64",
+                    "1001"
+                  ]
+                },
+                "joint_Schur_first_margin": {
+                  "bound": "[0.16637295987311063398314989847605328051 +/- 2.81e-39]",
+                  "x": [
+                    "32017/32",
+                    "64035/64"
+                  ]
+                },
+                "schur_laguerre_lower": {
+                  "bound": "[0.41734225791571026864481720316081621220 +/- 4.56e-39]",
+                  "x": [
+                    "64063/64",
+                    "1001"
+                  ]
+                },
+                "schur_excess_lower": {
+                  "bound": "[0.39955406798847398133901779548434319438 +/- 9.70e-40]",
+                  "x": [
+                    "64063/64",
+                    "1001"
+                  ]
+                }
+              },
+              "maxima": {
+                "phase_jet_error": "[0.41372579762624121517626457973297715368 +/- 2.97e-39]",
+                "midpoint_Lipschitz_upper": "[5.2819521496700408205440046418772007695 +/- 4.06e-38]",
+                "diagonal_correction_payment": "[0.0029602151436361452224755952946835505202 +/- 4.26e-41]"
+              }
+            },
+            "full": {
+              "cells": 128,
+              "firstjet_pass_cells": 128,
+              "physical_firstjet_pass_cells": 128,
+              "joint_firstjet_pass_cells": 128,
+              "box_L0_pass_cells": 71,
+              "box_excess_pass_cells": 55,
+              "Schur_L0_pass_cells": 128,
+              "Schur_excess_pass_cells": 128,
+              "minima": {
+                "paid_phase_radius_lower": {
+                  "bound": "[0.98558393137762128705383125472924644754 +/- 4.16e-39]",
+                  "x": [
+                    "64063/64",
+                    "1001"
+                  ]
+                },
+                "naive_phase_radius_lower": {
+                  "bound": "[0.94682928768544576273770581467511027492 +/- 1.41e-39]",
+                  "x": [
+                    "64063/64",
+                    "1001"
+                  ]
+                },
+                "physical_radius_lower": {
+                  "bound": "[0.56502618978592008632602529858998131064 +/- 4.67e-39]",
+                  "x": [
+                    "64063/64",
+                    "1001"
+                  ]
+                },
+                "joint_Schur_first_margin": {
+                  "bound": "[0.16670285002490000368632974274030016102 +/- 2.42e-39]",
+                  "x": [
+                    "32017/32",
+                    "64035/64"
+                  ]
+                },
+                "schur_laguerre_lower": {
+                  "bound": "[0.42225631957969283662740109986324467700 +/- 3.64e-39]",
+                  "x": [
+                    "64063/64",
+                    "1001"
+                  ]
+                },
+                "schur_excess_lower": {
+                  "bound": "[0.40441137817198700829023188567910131085 +/- 3.29e-39]",
+                  "x": [
+                    "64063/64",
+                    "1001"
+                  ]
+                }
+              },
+              "maxima": {
+                "phase_jet_error": "[0.41372747176988704020313661081648652417 +/- 2.44e-39]",
+                "midpoint_Lipschitz_upper": "[5.2800529621412921228780823223021782675 +/- 2.97e-38]",
+                "diagonal_correction_payment": "0"
+              }
+            }
+          },
+          "source_minimum_radius": "[1.3708252438837469136083987403656725128 +/- 4.33e-38]",
+          "source_minimum_signed_excess_Gc2": "[0.0030916721407608636396192104319166480760 +/- 4.01e-41]",
+          "source_maximum_phase_error": "[9.9902857924623399193885652843556933289e-11 +/- 1.23e-49]",
+          "source_minimum_signed_excess_A2": "[3.0483236179123700945461218041711222935 +/- 3.40e-38]",
+          "t": [
+            "21/200",
+            "71/640"
+          ]
+        },
+        {
+          "t_index": 17,
+          "methods": {
+            "frozen": {
+              "cells": 128,
+              "firstjet_pass_cells": 128,
+              "physical_firstjet_pass_cells": 128,
+              "joint_firstjet_pass_cells": 128,
+              "box_L0_pass_cells": 70,
+              "box_excess_pass_cells": 55,
+              "Schur_L0_pass_cells": 128,
+              "Schur_excess_pass_cells": 128,
+              "minima": {
+                "paid_phase_radius_lower": {
+                  "bound": "[0.98180416496251510120141383625088013801 +/- 2.56e-39]",
+                  "x": [
+                    "64063/64",
+                    "1001"
+                  ]
+                },
+                "naive_phase_radius_lower": {
+                  "bound": "[0.94361365337319092949062206713591343671 +/- 3.18e-39]",
+                  "x": [
+                    "64063/64",
+                    "1001"
+                  ]
+                },
+                "physical_radius_lower": {
+                  "bound": "[0.56102785406153443158877880663860132259 +/- 3.87e-39]",
+                  "x": [
+                    "64063/64",
+                    "1001"
+                  ]
+                },
+                "joint_Schur_first_margin": {
+                  "bound": "[0.16642421717274034189115423079916235243 +/- 2.46e-39]",
+                  "x": [
+                    "64033/64",
+                    "32017/32"
+                  ]
+                },
+                "schur_laguerre_lower": {
+                  "bound": "[0.40655985975562155708160441581782749388 +/- 3.75e-39]",
+                  "x": [
+                    "64063/64",
+                    "1001"
+                  ]
+                },
+                "schur_excess_lower": {
+                  "bound": "[0.38893794047418245739456198001793650406 +/- 4.02e-39]",
+                  "x": [
+                    "64063/64",
+                    "1001"
+                  ]
+                }
+              },
+              "maxima": {
+                "phase_jet_error": "[0.41372534963780446959639640708204984087 +/- 3.74e-39]",
+                "midpoint_Lipschitz_upper": "[5.2681156638301340298155604289753269633 +/- 4.89e-38]",
+                "diagonal_correction_payment": "[0.0029394057466435359987155363870312698142 +/- 2.65e-41]"
+              }
+            },
+            "full": {
+              "cells": 128,
+              "firstjet_pass_cells": 128,
+              "physical_firstjet_pass_cells": 128,
+              "joint_firstjet_pass_cells": 128,
+              "box_L0_pass_cells": 70,
+              "box_excess_pass_cells": 55,
+              "Schur_L0_pass_cells": 128,
+              "Schur_excess_pass_cells": 128,
+              "minima": {
+                "paid_phase_radius_lower": {
+                  "bound": "[0.98387427304392802909245202490700378767 +/- 4.80e-39]",
+                  "x": [
+                    "64063/64",
+                    "1001"
+                  ]
+                },
+                "naive_phase_radius_lower": {
+                  "bound": "[0.94566828675812530818986710266865573823 +/- 3.26e-39]",
+                  "x": [
+                    "64063/64",
+                    "1001"
+                  ]
+                },
+                "physical_radius_lower": {
+                  "bound": "[0.56295285207950607460191247056871443211 +/- 3.68e-40]",
+                  "x": [
+                    "64063/64",
+                    "1001"
+                  ]
+                },
+                "joint_Schur_first_margin": {
+                  "bound": "[0.16675173435783620353482124244495918114 +/- 3.37e-39]",
+                  "x": [
+                    "64033/64",
+                    "32017/32"
+                  ]
+                },
+                "schur_laguerre_lower": {
+                  "bound": "[0.41136766693835195006007405827334803823 +/- 3.64e-39]",
+                  "x": [
+                    "64063/64",
+                    "1001"
+                  ]
+                },
+                "schur_excess_lower": {
+                  "bound": "[0.39369052893270958841935874454645715651 +/- 4.15e-39]",
+                  "x": [
+                    "64063/64",
+                    "1001"
+                  ]
+                }
+              },
+              "maxima": {
+                "phase_jet_error": "[0.41372702377963750702557977576681961184 +/- 2.42e-39]",
+                "midpoint_Lipschitz_upper": "[5.2662423794794171407886259363522319326 +/- 2.82e-38]",
+                "diagonal_correction_payment": "0"
+              }
+            }
+          },
+          "source_minimum_radius": "[1.3684823135940515433196653676133698111 +/- 2.78e-38]",
+          "source_minimum_signed_excess_Gc2": "[0.0031270281907351741813840284271888371303 +/- 1.60e-42]",
+          "source_maximum_phase_error": "[9.9455159799381086171323895808387108682e-11 +/- 3.23e-49]",
+          "source_minimum_signed_excess_A2": "[3.0452157776794887809870774161983975903 +/- 2.09e-38]",
+          "t": [
+            "71/640",
+            "187/1600"
+          ]
+        },
+        {
+          "t_index": 18,
+          "methods": {
+            "frozen": {
+              "cells": 128,
+              "firstjet_pass_cells": 128,
+              "physical_firstjet_pass_cells": 128,
+              "joint_firstjet_pass_cells": 128,
+              "box_L0_pass_cells": 71,
+              "box_excess_pass_cells": 56,
+              "Schur_L0_pass_cells": 128,
+              "Schur_excess_pass_cells": 128,
+              "minima": {
+                "paid_phase_radius_lower": {
+                  "bound": "[0.98023267577967094162642754211823277922 +/- 3.63e-39]",
+                  "x": [
+                    "64063/64",
+                    "1001"
+                  ]
+                },
+                "naive_phase_radius_lower": {
+                  "bound": "[0.94259557951781665264940887150081680756 +/- 7.58e-40]",
+                  "x": [
+                    "64063/64",
+                    "1001"
+                  ]
+                },
+                "physical_radius_lower": {
+                  "bound": "[0.55928915287627147456601644158550155912 +/- 2.69e-40]",
+                  "x": [
+                    "64063/64",
+                    "1001"
+                  ]
+                },
+                "joint_Schur_first_margin": {
+                  "bound": "[0.16694594265475790691719692806777015506 +/- 4.10e-39]",
+                  "x": [
+                    "2001/2",
+                    "64033/64"
+                  ]
+                },
+                "schur_laguerre_lower": {
+                  "bound": "[0.39612767052177390855158931452077352928 +/- 6.13e-40]",
+                  "x": [
+                    "64063/64",
+                    "1001"
+                  ]
+                },
+                "schur_excess_lower": {
+                  "bound": "[0.37866376661129808606160645095035381529 +/- 2.04e-39]",
+                  "x": [
+                    "64063/64",
+                    "1001"
+                  ]
+                }
+              },
+              "maxima": {
+                "phase_jet_error": "[0.41372490165034461806213904547343606895 +/- 2.02e-39]",
+                "midpoint_Lipschitz_upper": "[5.2542617381280110242042847027749711264 +/- 3.00e-38]",
+                "diagonal_correction_payment": "[0.0029187418001757814780837604503035580827 +/- 4.93e-41]"
+              }
+            },
+            "full": {
+              "cells": 128,
+              "firstjet_pass_cells": 128,
+              "physical_firstjet_pass_cells": 128,
+              "joint_firstjet_pass_cells": 128,
+              "box_L0_pass_cells": 71,
+              "box_excess_pass_cells": 56,
+              "Schur_L0_pass_cells": 128,
+              "Schur_excess_pass_cells": 128,
+              "minima": {
+                "paid_phase_radius_lower": {
+                  "bound": "[0.98226890770859156680906120050833054996 +/- 1.91e-39]",
+                  "x": [
+                    "64063/64",
+                    "1001"
+                  ]
+                },
+                "naive_phase_radius_lower": {
+                  "bound": "[0.94461550522024267528479697315045532825 +/- 6.94e-40]",
+                  "x": [
+                    "64063/64",
+                    "1001"
+                  ]
+                },
+                "physical_radius_lower": {
+                  "bound": "[0.56116225612232204128602530763799790392 +/- 1.28e-40]",
+                  "x": [
+                    "64063/64",
+                    "1001"
+                  ]
+                },
+                "joint_Schur_first_margin": {
+                  "bound": "[0.16727110402691654761981965725993522722 +/- 4.79e-39]",
+                  "x": [
+                    "2001/2",
+                    "64033/64"
+                  ]
+                },
+                "schur_laguerre_lower": {
+                  "bound": "[0.40083033035728478830265375900724344455 +/- 3.25e-39]",
+                  "x": [
+                    "64063/64",
+                    "1001"
+                  ]
+                },
+                "schur_excess_lower": {
+                  "bound": "[0.38331272247997573109035756424552981207 +/- 4.27e-39]",
+                  "x": [
+                    "64063/64",
+                    "1001"
+                  ]
+                }
+              },
+              "maxima": {
+                "phase_jet_error": "[0.41372657579036487184664071551934849873 +/- 2.82e-41]",
+                "midpoint_Lipschitz_upper": "[5.2524140873405724401555878299371953644 +/- 6.24e-39]",
+                "diagonal_correction_payment": "0"
+              }
+            }
+          },
+          "source_minimum_radius": "[1.3662562381176068691394980496495809736 +/- 2.38e-38]",
+          "source_minimum_signed_excess_Gc2": "[0.0031629276151119218975840437711241415005 +/- 3.22e-41]",
+          "source_maximum_phase_error": "[9.9009970222405680087538322861599015088e-11 +/- 1.91e-49]",
+          "source_minimum_signed_excess_A2": "[3.0422454556089396493304532768719285502 +/- 1.24e-38]",
+          "t": [
+            "187/1600",
+            "393/3200"
+          ]
+        },
+        {
+          "t_index": 19,
+          "methods": {
+            "frozen": {
+              "cells": 128,
+              "firstjet_pass_cells": 128,
+              "physical_firstjet_pass_cells": 128,
+              "joint_firstjet_pass_cells": 128,
+              "box_L0_pass_cells": 70,
+              "box_excess_pass_cells": 57,
+              "Schur_L0_pass_cells": 128,
+              "Schur_excess_pass_cells": 128,
+              "minima": {
+                "paid_phase_radius_lower": {
+                  "bound": "[0.97876400571388825583755466210825506259 +/- 4.13e-39]",
+                  "x": [
+                    "64063/64",
+                    "1001"
+                  ]
+                },
+                "naive_phase_radius_lower": {
+                  "bound": "[0.94168393131202737019625897170097586783 +/- 1.18e-39]",
+                  "x": [
+                    "64063/64",
+                    "1001"
+                  ]
+                },
+                "physical_radius_lower": {
+                  "bound": "[0.55783072984954935011030987106940654587 +/- 2.93e-39]",
+                  "x": [
+                    "64063/64",
+                    "1001"
+                  ]
+                },
+                "joint_Schur_first_margin": {
+                  "bound": "[0.16702598443387221717110171886726002631 +/- 4.83e-39]",
+                  "x": [
+                    "2001/2",
+                    "64033/64"
+                  ]
+                },
+                "schur_laguerre_lower": {
+                  "bound": "[0.38604204912525026580812962731382377525 +/- 1.42e-39]",
+                  "x": [
+                    "64063/64",
+                    "1001"
+                  ]
+                },
+                "schur_excess_lower": {
+                  "bound": "[0.36872799965015533376322992146072494577 +/- 4.02e-39]",
+                  "x": [
+                    "64063/64",
+                    "1001"
+                  ]
+                }
+              },
+              "maxima": {
+                "phase_jet_error": "[0.41372445366385359575508301551516770964 +/- 1.56e-39]",
+                "midpoint_Lipschitz_upper": "[5.2403911655979335085174776987938982861 +/- 4.13e-38]",
+                "diagonal_correction_payment": "[0.0028982248825648462624995786394260267505 +/- 4.05e-41]"
+              }
+            },
+            "full": {
+              "cells": 128,
+              "firstjet_pass_cells": 128,
+              "physical_firstjet_pass_cells": 128,
+              "joint_firstjet_pass_cells": 128,
+              "box_L0_pass_cells": 71,
+              "box_excess_pass_cells": 57,
+              "Schur_L0_pass_cells": 128,
+              "Schur_excess_pass_cells": 128,
+              "minima": {
+                "paid_phase_radius_lower": {
+                  "bound": "[0.98076650641580901824849143630623078170 +/- 4.63e-39]",
+                  "x": [
+                    "64063/64",
+                    "1001"
+                  ]
+                },
+                "naive_phase_radius_lower": {
+                  "bound": "[0.94366930150002693607268352660050917083 +/- 2.86e-39]",
+                  "x": [
+                    "64063/64",
+                    "1001"
+                  ]
+                },
+                "physical_radius_lower": {
+                  "bound": "[0.55965204129700462985158185959623498495 +/- 1.87e-39]",
+                  "x": [
+                    "64063/64",
+                    "1001"
+                  ]
+                },
+                "joint_Schur_first_margin": {
+                  "bound": "[0.16734886043245132747259393092660555700 +/- 2.37e-39]",
+                  "x": [
+                    "2001/2",
+                    "64033/64"
+                  ]
+                },
+                "schur_laguerre_lower": {
+                  "bound": "[0.39064062776003937252498878400870770279 +/- 9.13e-40]",
+                  "x": [
+                    "64063/64",
+                    "1001"
+                  ]
+                },
+                "schur_excess_lower": {
+                  "bound": "[0.37327436378272400736446619123814356951 +/- 3.54e-39]",
+                  "x": [
+                    "64063/64",
+                    "1001"
+                  ]
+                }
+              },
+              "maxima": {
+                "phase_jet_error": "[0.41372612780206106981527561999151565438 +/- 5.00e-39]",
+                "midpoint_Lipschitz_upper": "[5.2385688705863574047545365960714493731 +/- 1.11e-38]",
+                "diagonal_correction_payment": "0"
+              }
+            }
+          },
+          "source_minimum_radius": "[1.3641458715467523000039461928679198715 +/- 6.80e-39]",
+          "source_minimum_signed_excess_Gc2": "[0.0031993784165153554340737225249050781768 +/- 1.52e-41]",
+          "source_maximum_phase_error": "[9.8567276673797010650881196165480102187e-11 +/- 4.59e-49]",
+          "source_minimum_signed_excess_A2": "[3.0394109396505211713769617685713281320 +/- 2.45e-38]",
+          "t": [
+            "393/3200",
+            "103/800"
+          ]
+        },
+        {
+          "t_index": 20,
+          "methods": {
+            "frozen": {
+              "cells": 128,
+              "firstjet_pass_cells": 128,
+              "physical_firstjet_pass_cells": 128,
+              "joint_firstjet_pass_cells": 128,
+              "box_L0_pass_cells": 70,
+              "box_excess_pass_cells": 57,
+              "Schur_L0_pass_cells": 128,
+              "Schur_excess_pass_cells": 128,
+              "minima": {
+                "paid_phase_radius_lower": {
+                  "bound": "[0.97739682757325496348141299958700251030 +/- 1.74e-39]",
+                  "x": [
+                    "64063/64",
+                    "1001"
+                  ]
+                },
+                "naive_phase_radius_lower": {
+                  "bound": "[0.94087710538275213208825899164712437114 +/- 2.84e-39]",
+                  "x": [
+                    "64063/64",
+                    "1001"
+                  ]
+                },
+                "physical_radius_lower": {
+                  "bound": "[0.55665006912192684634344422948839740211 +/- 1.02e-39]",
+                  "x": [
+                    "64063/64",
+                    "1001"
+                  ]
+                },
+                "joint_Schur_first_margin": {
+                  "bound": "[0.16749347808741584523132210594252669516 +/- 2.74e-39]",
+                  "x": [
+                    "64031/64",
+                    "2001/2"
+                  ]
+                },
+                "schur_laguerre_lower": {
+                  "bound": "[0.37629964717298764437787031400707859792 +/- 1.05e-39]",
+                  "x": [
+                    "64063/64",
+                    "1001"
+                  ]
+                },
+                "schur_excess_lower": {
+                  "bound": "[0.35912737080030130230515362840214513766 +/- 4.06e-40]",
+                  "x": [
+                    "64063/64",
+                    "1001"
+                  ]
+                }
+              },
+              "maxima": {
+                "phase_jet_error": "[0.41372400567833139953241517384741727224 +/- 3.40e-39]",
+                "midpoint_Lipschitz_upper": "[5.2265047637163522994426160847440339481 +/- 1.72e-38]",
+                "diagonal_correction_payment": "[0.0028778510947908801801660986157367780417 +/- 3.18e-41]"
+              }
+            },
+            "full": {
+              "cells": 128,
+              "firstjet_pass_cells": 128,
+              "physical_firstjet_pass_cells": 128,
+              "joint_firstjet_pass_cells": 128,
+              "box_L0_pass_cells": 70,
+              "box_excess_pass_cells": 57,
+              "Schur_L0_pass_cells": 128,
+              "Schur_excess_pass_cells": 128,
+              "minima": {
+                "paid_phase_radius_lower": {
+                  "bound": "[0.97936574588314005789840122617081097370 +/- 8.20e-40]",
+                  "x": [
+                    "64063/64",
+                    "1001"
+                  ]
+                },
+                "naive_phase_radius_lower": {
+                  "bound": "[0.94282807879180786486830596351567886950 +/- 4.58e-39]",
+                  "x": [
+                    "64063/64",
+                    "1001"
+                  ]
+                },
+                "physical_radius_lower": {
+                  "bound": "[0.55841972939783246324711791957217044743 +/- 6.23e-41]",
+                  "x": [
+                    "64063/64",
+                    "1001"
+                  ]
+                },
+                "joint_Schur_first_margin": {
+                  "bound": "[0.16781403190797951608874603477557982361 +/- 4.62e-39]",
+                  "x": [
+                    "64031/64",
+                    "2001/2"
+                  ]
+                },
+                "schur_laguerre_lower": {
+                  "bound": "[0.38079525284813393663522174914831463177 +/- 3.18e-39]",
+                  "x": [
+                    "64063/64",
+                    "1001"
+                  ]
+                },
+                "schur_excess_lower": {
+                  "bound": "[0.36357223378845899473419250619947850540 +/- 4.63e-39]",
+                  "x": [
+                    "64063/64",
+                    "1001"
+                  ]
+                }
+              },
+              "maxima": {
+                "phase_jet_error": "[0.41372567981472609778865862841335344382 +/- 3.71e-39]",
+                "midpoint_Lipschitz_upper": "[5.2247075457755462048596832192592554243 +/- 1.71e-38]",
+                "diagonal_correction_payment": "0"
+              }
+            }
+          },
+          "source_minimum_radius": "[1.3621500193224936138225100116683296270 +/- 3.02e-38]",
+          "source_minimum_signed_excess_Gc2": "[0.0032363886991114380246891309037811346179 +/- 1.02e-41]",
+          "source_maximum_phase_error": "[9.8127088446305986919237199279358486761e-11 +/- 3.26e-49]",
+          "source_minimum_signed_excess_A2": "[3.0367104389140261857584312990862028215 +/- 1.21e-38]",
+          "t": [
+            "103/800",
+            "431/3200"
+          ]
+        },
+        {
+          "t_index": 21,
+          "methods": {
+            "frozen": {
+              "cells": 128,
+              "firstjet_pass_cells": 128,
+              "physical_firstjet_pass_cells": 128,
+              "joint_firstjet_pass_cells": 128,
+              "box_L0_pass_cells": 70,
+              "box_excess_pass_cells": 58,
+              "Schur_L0_pass_cells": 128,
+              "Schur_excess_pass_cells": 128,
+              "minima": {
+                "paid_phase_radius_lower": {
+                  "bound": "[0.97612979362748698871042605814239429957 +/- 2.81e-39]",
+                  "x": [
+                    "64063/64",
+                    "1001"
+                  ]
+                },
+                "naive_phase_radius_lower": {
+                  "bound": "[0.94017347657477012171330376373111341150 +/- 1.29e-39]",
+                  "x": [
+                    "64063/64",
+                    "1001"
+                  ]
+                },
+                "physical_radius_lower": {
+                  "bound": "[0.55574442065587565537672667828178191053 +/- 1.98e-39]",
+                  "x": [
+                    "64063/64",
+                    "1001"
+                  ]
+                },
+                "joint_Schur_first_margin": {
+                  "bound": "[0.16762761958884891193386270481738721989 +/- 4.86e-39]",
+                  "x": [
+                    "64031/64",
+                    "2001/2"
+                  ]
+                },
+                "schur_laguerre_lower": {
+                  "bound": "[0.36689700764028551930978184864934529192 +/- 3.79e-40]",
+                  "x": [
+                    "64063/64",
+                    "1001"
+                  ]
+                },
+                "schur_excess_lower": {
+                  "bound": "[0.34985851667171759699094458711870912693 +/- 2.92e-39]",
+                  "x": [
+                    "64063/64",
+                    "1001"
+                  ]
+                }
+              },
+              "maxima": {
+                "phase_jet_error": "[0.41372355769378071344743274973472720413 +/- 2.13e-39]",
+                "midpoint_Lipschitz_upper": "[5.2126033289736216354451597567151889794 +/- 2.91e-38]",
+                "diagonal_correction_payment": "[0.0028576207759433226210027721569962402212 +/- 3.74e-41]"
+              }
+            },
+            "full": {
+              "cells": 128,
+              "firstjet_pass_cells": 128,
+              "physical_firstjet_pass_cells": 128,
+              "joint_firstjet_pass_cells": 128,
+              "box_L0_pass_cells": 71,
+              "box_excess_pass_cells": 58,
+              "Schur_L0_pass_cells": 128,
+              "Schur_excess_pass_cells": 128,
+              "minima": {
+                "paid_phase_radius_lower": {
+                  "bound": "[0.97806528506944367994942092406028880623 +/- 4.02e-39]",
+                  "x": [
+                    "64063/64",
+                    "1001"
+                  ]
+                },
+                "naive_phase_radius_lower": {
+                  "bound": "[0.94209022531599091382140833467314380093 +/- 8.51e-40]",
+                  "x": [
+                    "64063/64",
+                    "1001"
+                  ]
+                },
+                "physical_radius_lower": {
+                  "bound": "[0.55746260554333526995878345685383050727 +/- 4.95e-39]",
+                  "x": [
+                    "64063/64",
+                    "1001"
+                  ]
+                },
+                "joint_Schur_first_margin": {
+                  "bound": "[0.16794592051699315940726484367896639961 +/- 2.80e-39]",
+                  "x": [
+                    "64031/64",
+                    "2001/2"
+                  ]
+                },
+                "schur_laguerre_lower": {
+                  "bound": "[0.37129069320081786698052871237982997207 +/- 9.07e-40]",
+                  "x": [
+                    "64063/64",
+                    "1001"
+                  ]
+                },
+                "schur_excess_lower": {
+                  "bound": "[0.35420291385638776288983450897387100106 +/- 2.41e-39]",
+                  "x": [
+                    "64063/64",
+                    "1001"
+                  ]
+                }
+              },
+              "maxima": {
+                "phase_jet_error": "[0.41372523182836263983094800602635708123 +/- 3.68e-39]",
+                "midpoint_Lipschitz_upper": "[5.2108309249540494141892713963774808888 +/- 2.48e-38]",
+                "diagonal_correction_payment": "0"
+              }
+            }
+          },
+          "source_minimum_radius": "[1.3602674964567394042900550527123054311 +/- 1.28e-38]",
+          "source_minimum_signed_excess_Gc2": "[0.0032739666760535018434264183870427023394 +/- 7.24e-42]",
+          "source_maximum_phase_error": "[9.7689615649216125084926780578463779880e-11 +/- 5.81e-50]",
+          "source_minimum_signed_excess_A2": "[3.0341422797294827504752937207836174151 +/- 4.62e-38]",
+          "t": [
+            "431/3200",
+            "9/64"
+          ]
+        },
+        {
+          "t_index": 22,
+          "methods": {
+            "frozen": {
+              "cells": 128,
+              "firstjet_pass_cells": 128,
+              "physical_firstjet_pass_cells": 128,
+              "joint_firstjet_pass_cells": 128,
+              "box_L0_pass_cells": 70,
+              "box_excess_pass_cells": 58,
+              "Schur_L0_pass_cells": 128,
+              "Schur_excess_pass_cells": 128,
+              "minima": {
+                "paid_phase_radius_lower": {
+                  "bound": "[0.97496152539626899138302302908760625752 +/- 2.25e-39]",
+                  "x": [
+                    "64063/64",
+                    "1001"
+                  ]
+                },
+                "naive_phase_radius_lower": {
+                  "bound": "[0.93957137650530926585638681714320432353 +/- 2.41e-39]",
+                  "x": [
+                    "64063/64",
+                    "1001"
+                  ]
+                },
+                "physical_radius_lower": {
+                  "bound": "[0.55511081973186797073385973589552866606 +/- 1.48e-39]",
+                  "x": [
+                    "64063/64",
+                    "1001"
+                  ]
+                },
+                "joint_Schur_first_margin": {
+                  "bound": "[0.16804380521575392067074405610310587947 +/- 5.13e-41]",
+                  "x": [
+                    "32015/32",
+                    "64031/64"
+                  ]
+                },
+                "schur_laguerre_lower": {
+                  "bound": "[0.35783070458410428904461044584808128986 +/- 3.66e-39]",
+                  "x": [
+                    "64063/64",
+                    "1001"
+                  ]
+                },
+                "schur_excess_lower": {
+                  "bound": "[0.34091809437342155131814533126082790483 +/- 2.85e-39]",
+                  "x": [
+                    "64063/64",
+                    "1001"
+                  ]
+                }
+              },
+              "maxima": {
+                "phase_jet_error": "[0.41372310971020153433989147567577530079 +/- 1.87e-39]",
+                "midpoint_Lipschitz_upper": "[5.1986877103622347740499587585680336162 +/- 1.78e-38]",
+                "diagonal_correction_payment": "[0.0028375325355996634415425360197515127598 +/- 4.13e-41]"
+              }
+            },
+            "full": {
+              "cells": 128,
+              "firstjet_pass_cells": 128,
+              "physical_firstjet_pass_cells": 128,
+              "joint_firstjet_pass_cells": 128,
+              "box_L0_pass_cells": 71,
+              "box_excess_pass_cells": 59,
+              "Schur_L0_pass_cells": 128,
+              "Schur_excess_pass_cells": 128,
+              "minima": {
+                "paid_phase_radius_lower": {
+                  "bound": "[0.97686375201028028412480155257623271201 +/- 3.89e-39]",
+                  "x": [
+                    "64063/64",
+                    "1001"
+                  ]
+                },
+                "naive_phase_radius_lower": {
+                  "bound": "[0.94145407677416042813393144615120320075 +/- 3.09e-39]",
+                  "x": [
+                    "64063/64",
+                    "1001"
+                  ]
+                },
+                "physical_radius_lower": {
+                  "bound": "[0.55677774076805102761660956928231226486 +/- 1.37e-39]",
+                  "x": [
+                    "64063/64",
+                    "1001"
+                  ]
+                },
+                "joint_Schur_first_margin": {
+                  "bound": "[0.16835981691331307687696784629452711405 +/- 6.04e-41]",
+                  "x": [
+                    "32015/32",
+                    "64031/64"
+                  ]
+                },
+                "schur_laguerre_lower": {
+                  "bound": "[0.36212354719339617200676678213049649115 +/- 2.29e-39]",
+                  "x": [
+                    "64063/64",
+                    "1001"
+                  ]
+                },
+                "schur_excess_lower": {
+                  "bound": "[0.34516308186540571918840326955651288138 +/- 3.45e-39]",
+                  "x": [
+                    "64063/64",
+                    "1001"
+                  ]
+                }
+              },
+              "maxima": {
+                "phase_jet_error": "[0.41372478384297069278188669738392744726 +/- 3.52e-39]",
+                "midpoint_Lipschitz_upper": "[5.1969398398772519501878046561071306926 +/- 1.11e-38]",
+                "diagonal_correction_payment": "0"
+              }
+            }
+          },
+          "source_minimum_radius": "[1.3584970613351220599697391910758205216 +/- 1.47e-38]",
+          "source_minimum_signed_excess_Gc2": "[0.0033121206717454853276264851047272204313 +/- 1.67e-41]",
+          "source_maximum_phase_error": "[9.7256267489609618387648904753144193878e-11 +/- 1.90e-49]",
+          "source_minimum_signed_excess_A2": "[3.0317046857774813474685561816484043966 +/- 4.12e-38]",
+          "t": [
+            "9/64",
+            "469/3200"
+          ]
+        },
+        {
+          "t_index": 23,
+          "methods": {
+            "frozen": {
+              "cells": 128,
+              "firstjet_pass_cells": 128,
+              "physical_firstjet_pass_cells": 128,
+              "joint_firstjet_pass_cells": 128,
+              "box_L0_pass_cells": 71,
+              "box_excess_pass_cells": 59,
+              "Schur_L0_pass_cells": 128,
+              "Schur_excess_pass_cells": 128,
+              "minima": {
+                "paid_phase_radius_lower": {
+                  "bound": "[0.97389067132632981343508602760726243331 +/- 6.87e-40]",
+                  "x": [
+                    "64063/64",
+                    "1001"
+                  ]
+                },
+                "naive_phase_radius_lower": {
+                  "bound": "[0.93906916015565185992466964722052975013 +/- 4.39e-39]",
+                  "x": [
+                    "64063/64",
+                    "1001"
+                  ]
+                },
+                "physical_radius_lower": {
+                  "bound": "[0.55474613274866673090842914059505601262 +/- 2.96e-39]",
+                  "x": [
+                    "64063/64",
+                    "1001"
+                  ]
+                },
+                "joint_Schur_first_margin": {
+                  "bound": "[0.16822793659027317251361579019977537091 +/- 4.85e-39]",
+                  "x": [
+                    "32015/32",
+                    "64031/64"
+                  ]
+                },
+                "schur_laguerre_lower": {
+                  "bound": "[0.34909737097635356889506533253293551406 +/- 4.54e-39]",
+                  "x": [
+                    "64063/64",
+                    "1001"
+                  ]
+                },
+                "schur_excess_lower": {
+                  "bound": "[0.33230283039977236942997380520813416209 +/- 3.09e-39]",
+                  "x": [
+                    "64063/64",
+                    "1001"
+                  ]
+                }
+              },
+              "maxima": {
+                "phase_jet_error": "[0.41372266172759117186510286654866347814 +/- 3.56e-39]",
+                "midpoint_Lipschitz_upper": "[5.1847586693329550571104059490504229704 +/- 1.83e-38]",
+                "diagonal_correction_payment": "[0.0028175854978884313555212056451540759997 +/- 3.09e-41]"
+              }
+            },
+            "full": {
+              "cells": 128,
+              "firstjet_pass_cells": 128,
+              "physical_firstjet_pass_cells": 128,
+              "joint_firstjet_pass_cells": 128,
+              "box_L0_pass_cells": 71,
+              "box_excess_pass_cells": 59,
+              "Schur_L0_pass_cells": 128,
+              "Schur_excess_pass_cells": 128,
+              "minima": {
+                "paid_phase_radius_lower": {
+                  "bound": "[0.97575980434301175026998438625520687223 +/- 8.04e-40]",
+                  "x": [
+                    "64063/64",
+                    "1001"
+                  ]
+                },
+                "naive_phase_radius_lower": {
+                  "bound": "[0.94091799486627010644361272868337555821 +/- 2.32e-39]",
+                  "x": [
+                    "64063/64",
+                    "1001"
+                  ]
+                },
+                "physical_radius_lower": {
+                  "bound": "[0.55636203649423463757605067671937793069 +/- 9.86e-40]",
+                  "x": [
+                    "64063/64",
+                    "1001"
+                  ]
+                },
+                "joint_Schur_first_margin": {
+                  "bound": "[0.16854172757144956559285043267113808135 +/- 2.77e-39]",
+                  "x": [
+                    "32015/32",
+                    "64031/64"
+                  ]
+                },
+                "schur_laguerre_lower": {
+                  "bound": "[0.35329043586809006291998551907789723652 +/- 3.20e-39]",
+                  "x": [
+                    "64063/64",
+                    "1001"
+                  ]
+                },
+                "schur_excess_lower": {
+                  "bound": "[0.33644945254101553979457226586097887511 +/- 4.51e-39]",
+                  "x": [
+                    "64063/64",
+                    "1001"
+                  ]
+                }
+              },
+              "maxima": {
+                "phase_jet_error": "[0.41372433585854756628589972323895505155 +/- 1.40e-39]",
+                "midpoint_Lipschitz_upper": "[5.1830350743546671129386734176225915242 +/- 4.02e-38]",
+                "diagonal_correction_payment": "0"
+              }
+            }
+          },
+          "source_minimum_radius": "[1.3568374815843146778245131469805992448 +/- 4.18e-38]",
+          "source_minimum_signed_excess_Gc2": "[0.0033508591205181789285391949151954231815 +/- 3.38e-41]",
+          "source_maximum_phase_error": "[9.6833871457515420811887912433410183014e-11 +/- 3.49e-49]",
+          "source_minimum_signed_excess_A2": "[3.0293960259645434267617779593668282667 +/- 4.04e-38]",
+          "t": [
+            "469/3200",
+            "61/400"
+          ]
+        },
+        {
+          "t_index": 24,
+          "methods": {
+            "frozen": {
+              "cells": 128,
+              "firstjet_pass_cells": 128,
+              "physical_firstjet_pass_cells": 128,
+              "joint_firstjet_pass_cells": 128,
+              "box_L0_pass_cells": 71,
+              "box_excess_pass_cells": 60,
+              "Schur_L0_pass_cells": 128,
+              "Schur_excess_pass_cells": 128,
+              "minima": {
+                "paid_phase_radius_lower": {
+                  "bound": "[0.97291584864990066362402236231464496101 +/- 2.51e-39]",
+                  "x": [
+                    "64063/64",
+                    "1001"
+                  ]
+                },
+                "naive_phase_radius_lower": {
+                  "bound": "[0.93866516610701159368868125350998982427 +/- 3.03e-39]",
+                  "x": [
+                    "64063/64",
+                    "1001"
+                  ]
+                },
+                "physical_radius_lower": {
+                  "bound": "[0.55464703640036964280443368879923255043 +/- 8.17e-40]",
+                  "x": [
+                    "64063/64",
+                    "1001"
+                  ]
+                },
+                "joint_Schur_first_margin": {
+                  "bound": "[0.16859578652475806694112068930030817260 +/- 4.42e-39]",
+                  "x": [
+                    "64029/64",
+                    "32015/32"
+                  ]
+                },
+                "schur_laguerre_lower": {
+                  "bound": "[0.34069366319696221103538374107597985244 +/- 3.93e-39]",
+                  "x": [
+                    "64063/64",
+                    "1001"
+                  ]
+                },
+                "schur_excess_lower": {
+                  "bound": "[0.32400946349590408696995088247685265501 +/- 2.54e-39]",
+                  "x": [
+                    "64063/64",
+                    "1001"
+                  ]
+                }
+              },
+              "maxima": {
+                "phase_jet_error": "[0.41372221374594962288030826547856970428 +/- 2.76e-39]",
+                "midpoint_Lipschitz_upper": "[5.1708170082205546655190323381925256571 +/- 8.69e-39]",
+                "diagonal_correction_payment": "[0.0027977786741835815493932581341012742509 +/- 3.93e-41]"
+              }
+            },
+            "full": {
+              "cells": 128,
+              "firstjet_pass_cells": 128,
+              "physical_firstjet_pass_cells": 128,
+              "joint_firstjet_pass_cells": 128,
+              "box_L0_pass_cells": 71,
+              "box_excess_pass_cells": 61,
+              "Schur_L0_pass_cells": 128,
+              "Schur_excess_pass_cells": 128,
+              "minima": {
+                "paid_phase_radius_lower": {
+                  "bound": "[0.97475206539593121210933315720250918923 +/- 1.78e-39]",
+                  "x": [
+                    "64063/64",
+                    "1001"
+                  ]
+                },
+                "naive_phase_radius_lower": {
+                  "bound": "[0.94048033009015823348830906885581359308 +/- 1.98e-39]",
+                  "x": [
+                    "64063/64",
+                    "1001"
+                  ]
+                },
+                "physical_radius_lower": {
+                  "bound": "[0.55621220369149639343956825166316283411 +/- 3.01e-39]",
+                  "x": [
+                    "64063/64",
+                    "1001"
+                  ]
+                },
+                "joint_Schur_first_margin": {
+                  "bound": "[0.16890732081791340939531308914124632456 +/- 2.45e-39]",
+                  "x": [
+                    "64029/64",
+                    "32015/32"
+                  ]
+                },
+                "schur_laguerre_lower": {
+                  "bound": "[0.34478799971583940051958349625919714476 +/- 4.56e-39]",
+                  "x": [
+                    "64063/64",
+                    "1001"
+                  ]
+                },
+                "schur_excess_lower": {
+                  "bound": "[0.32805875262851367561524663109036464840 +/- 3.71e-39]",
+                  "x": [
+                    "64063/64",
+                    "1001"
+                  ]
+                }
+              },
+              "maxima": {
+                "phase_jet_error": "[0.41372388787509325720021570952695757000 +/- 2.42e-39]",
+                "midpoint_Lipschitz_upper": "[5.1691174189087425941309860337793005961 +/- 2.10e-38]",
+                "diagonal_correction_payment": "0"
+              }
+            }
+          },
+          "source_minimum_radius": "[1.3552874836750054474506511383152600438 +/- 5.51e-39]",
+          "source_minimum_signed_excess_Gc2": "[0.0033901905670114159500267504609716815661 +/- 3.42e-41]",
+          "source_maximum_phase_error": "[9.6449163340113806720862175850252256209e-11 +/- 3.75e-49]",
+          "source_minimum_signed_excess_A2": "[3.0272145531621685844212610618558710834 +/- 3.60e-38]",
+          "t": [
+            "61/400",
+            "507/3200"
+          ]
+        },
+        {
+          "t_index": 25,
+          "methods": {
+            "frozen": {
+              "cells": 128,
+              "firstjet_pass_cells": 128,
+              "physical_firstjet_pass_cells": 128,
+              "joint_firstjet_pass_cells": 128,
+              "box_L0_pass_cells": 71,
+              "box_excess_pass_cells": 60,
+              "Schur_L0_pass_cells": 128,
+              "Schur_excess_pass_cells": 128,
+              "minima": {
+                "paid_phase_radius_lower": {
+                  "bound": "[0.97203565396774818252998392650294602295 +/- 3.24e-39]",
+                  "x": [
+                    "64063/64",
+                    "1001"
+                  ]
+                },
+                "naive_phase_radius_lower": {
+                  "bound": "[0.93835773135540986558539436048114165995 +/- 4.33e-39]",
+                  "x": [
+                    "64063/64",
+                    "1001"
+                  ]
+                },
+                "physical_radius_lower": {
+                  "bound": "[0.55481004345134644601296474872586253014 +/- 1.44e-39]",
+                  "x": [
+                    "64063/64",
+                    "1001"
+                  ]
+                },
+                "joint_Schur_first_margin": {
+                  "bound": "[0.16882582713593193379306719748746744131 +/- 6.72e-40]",
+                  "x": [
+                    "64029/64",
+                    "32015/32"
+                  ]
+                },
+                "schur_laguerre_lower": {
+                  "bound": "[0.33261629235013889846241915136685022854 +/- 4.38e-39]",
+                  "x": [
+                    "64063/64",
+                    "1001"
+                  ]
+                },
+                "schur_excess_lower": {
+                  "bound": "[0.31603479421888826315493159675860107244 +/- 1.73e-40]",
+                  "x": [
+                    "64063/64",
+                    "1001"
+                  ]
+                }
+              },
+              "maxima": {
+                "phase_jet_error": "[0.41372176576527957141558175358491516310 +/- 4.38e-39]",
+                "midpoint_Lipschitz_upper": "[5.1568635131731334192517197851411289844 +/- 1.33e-38]",
+                "diagonal_correction_payment": "[0.0027781110551183294543193905650418985444 +/- 6.02e-42]"
+              }
+            },
+            "full": {
+              "cells": 128,
+              "firstjet_pass_cells": 128,
+              "physical_firstjet_pass_cells": 128,
+              "joint_firstjet_pass_cells": 128,
+              "box_L0_pass_cells": 71,
+              "box_excess_pass_cells": 61,
+              "Schur_L0_pass_cells": 128,
+              "Schur_excess_pass_cells": 128,
+              "minima": {
+                "paid_phase_radius_lower": {
+                  "bound": "[0.97383914048356008858157190565978260002 +/- 7.16e-40]",
+                  "x": [
+                    "64063/64",
+                    "1001"
+                  ]
+                },
+                "naive_phase_radius_lower": {
+                  "bound": "[0.94013942298332966959593855758630533025 +/- 3.13e-39]",
+                  "x": [
+                    "64063/64",
+                    "1001"
+                  ]
+                },
+                "physical_radius_lower": {
+                  "bound": "[0.55632478926657894055557858952311947399 +/- 1.79e-39]",
+                  "x": [
+                    "64063/64",
+                    "1001"
+                  ]
+                },
+                "joint_Schur_first_margin": {
+                  "bound": "[0.16913517219530437331446096194366159200 +/- 1.24e-39]",
+                  "x": [
+                    "64029/64",
+                    "32015/32"
+                  ]
+                },
+                "schur_laguerre_lower": {
+                  "bound": "[0.33661295271646919583870261140915400391 +/- 1.38e-39]",
+                  "x": [
+                    "64063/64",
+                    "1001"
+                  ]
+                },
+                "schur_excess_lower": {
+                  "bound": "[0.31998778199787654133659728626508114716 +/- 2.76e-39]",
+                  "x": [
+                    "64063/64",
+                    "1001"
+                  ]
+                }
+              },
+              "maxima": {
+                "phase_jet_error": "[0.41372343989261044956576967937171617258 +/- 8.66e-40]",
+                "midpoint_Lipschitz_upper": "[5.1551876688037799434627519186255237088 +/- 3.43e-38]",
+                "diagonal_correction_payment": "0"
+              }
+            }
+          },
+          "source_minimum_radius": "[1.3538457833581791774815523398333205975 +/- 3.61e-39]",
+          "source_minimum_signed_excess_Gc2": "[0.0034301236670568409310766439368736427030 +/- 4.28e-41]",
+          "source_maximum_phase_error": "[9.6191224503604391932080704992621582968e-11 +/- 3.88e-49]",
+          "source_minimum_signed_excess_A2": "[3.0251586374686240049730411898604931474 +/- 3.75e-38]",
+          "t": [
+            "507/3200",
+            "263/1600"
+          ]
+        },
+        {
+          "t_index": 26,
+          "methods": {
+            "frozen": {
+              "cells": 128,
+              "firstjet_pass_cells": 128,
+              "physical_firstjet_pass_cells": 128,
+              "joint_firstjet_pass_cells": 128,
+              "box_L0_pass_cells": 71,
+              "box_excess_pass_cells": 61,
+              "Schur_L0_pass_cells": 128,
+              "Schur_excess_pass_cells": 128,
+              "minima": {
+                "paid_phase_radius_lower": {
+                  "bound": "[0.97124865562659324284771432279339546238 +/- 2.23e-39]",
+                  "x": [
+                    "64063/64",
+                    "1001"
+                  ]
+                },
+                "naive_phase_radius_lower": {
+                  "bound": "[0.93814517767537170012663369012240406196 +/- 1.30e-39]",
+                  "x": [
+                    "64063/64",
+                    "1001"
+                  ]
+                },
+                "physical_radius_lower": {
+                  "bound": "[0.55523148581503836195163019987329496425 +/- 4.32e-39]",
+                  "x": [
+                    "64063/64",
+                    "1001"
+                  ]
+                },
+                "joint_Schur_first_margin": {
+                  "bound": "[0.16914836040172446229356893285702659138 +/- 2.69e-39]",
+                  "x": [
+                    "16007/16",
+                    "64029/64"
+                  ]
+                },
+                "schur_laguerre_lower": {
+                  "bound": "[0.32486198036917377216690418399032101394 +/- 4.57e-39]",
+                  "x": [
+                    "64063/64",
+                    "1001"
+                  ]
+                },
+                "schur_excess_lower": {
+                  "bound": "[0.30837563396605960436249824212124815817 +/- 4.65e-39]",
+                  "x": [
+                    "64063/64",
+                    "1001"
+                  ]
+                }
+              },
+              "maxima": {
+                "phase_jet_error": "[0.41372131778558101431073377610848335021 +/- 1.84e-39]",
+                "midpoint_Lipschitz_upper": "[5.1428989775098495453620682232307614013 +/- 4.63e-38]",
+                "diagonal_correction_payment": "[0.0027585817006579528149781826184298794945 +/- 4.03e-41]"
+              }
+            },
+            "full": {
+              "cells": 128,
+              "firstjet_pass_cells": 128,
+              "physical_firstjet_pass_cells": 128,
+              "joint_firstjet_pass_cells": 128,
+              "box_L0_pass_cells": 72,
+              "box_excess_pass_cells": 62,
+              "Schur_L0_pass_cells": 128,
+              "Schur_excess_pass_cells": 128,
+              "minima": {
+                "paid_phase_radius_lower": {
+                  "bound": "[0.97301960188067651794076214935038354647 +/- 1.26e-39]",
+                  "x": [
+                    "64063/64",
+                    "1001"
+                  ]
+                },
+                "naive_phase_radius_lower": {
+                  "bound": "[0.93989360404802260798871002982702326123 +/- 2.83e-39]",
+                  "x": [
+                    "64063/64",
+                    "1001"
+                  ]
+                },
+                "physical_radius_lower": {
+                  "bound": "[0.55669615833416724679009696765409443946 +/- 2.79e-39]",
+                  "x": [
+                    "64063/64",
+                    "1001"
+                  ]
+                },
+                "joint_Schur_first_margin": {
+                  "bound": "[0.16945548102015533450716534973386569549 +/- 3.18e-39]",
+                  "x": [
+                    "16007/16",
+                    "64029/64"
+                  ]
+                },
+                "schur_laguerre_lower": {
+                  "bound": "[0.32876201195152017192494828656602328705 +/- 4.05e-39]",
+                  "x": [
+                    "64063/64",
+                    "1001"
+                  ]
+                },
+                "schur_excess_lower": {
+                  "bound": "[0.31223335108352433161219418615873806148 +/- 1.53e-39]",
+                  "x": [
+                    "64063/64",
+                    "1001"
+                  ]
+                }
+              },
+              "maxima": {
+                "phase_jet_error": "[0.41372299191109914022235929029013284271 +/- 2.30e-39]",
+                "midpoint_Lipschitz_upper": "[5.1412466138206495105983909590530405563 +/- 3.61e-38]",
+                "diagonal_correction_payment": "0"
+              }
+            }
+          },
+          "source_minimum_radius": "[1.3525110778403186025577408070280433202 +/- 4.48e-38]",
+          "source_minimum_signed_excess_Gc2": "[0.0034706671981150202516740693189414633175 +/- 5.47e-42]",
+          "source_maximum_phase_error": "[9.6321278862086133896822188371261731712e-11 +/- 2.90e-50]",
+          "source_minimum_signed_excess_A2": "[3.0232266148055514470569003888450541542 +/- 7.59e-39]",
+          "t": [
+            "263/1600",
+            "109/640"
+          ]
+        },
+        {
+          "t_index": 27,
+          "methods": {
+            "frozen": {
+              "cells": 128,
+              "firstjet_pass_cells": 128,
+              "physical_firstjet_pass_cells": 128,
+              "joint_firstjet_pass_cells": 128,
+              "box_L0_pass_cells": 72,
+              "box_excess_pass_cells": 62,
+              "Schur_L0_pass_cells": 128,
+              "Schur_excess_pass_cells": 128,
+              "minima": {
+                "paid_phase_radius_lower": {
+                  "bound": "[0.97055349344755887960934193796306193250 +/- 3.92e-39]",
+                  "x": [
+                    "64063/64",
+                    "1001"
+                  ]
+                },
+                "naive_phase_radius_lower": {
+                  "bound": "[0.93802583057579466114917082643995114933 +/- 2.93e-39]",
+                  "x": [
+                    "64063/64",
+                    "1001"
+                  ]
+                },
+                "physical_radius_lower": {
+                  "bound": "[0.55590754197819419485559572649188485594 +/- 3.32e-39]",
+                  "x": [
+                    "64063/64",
+                    "1001"
+                  ]
+                },
+                "joint_Schur_first_margin": {
+                  "bound": "[0.16942026829199205223216791477244748465 +/- 9.91e-40]",
+                  "x": [
+                    "16007/16",
+                    "64029/64"
+                  ]
+                },
+                "schur_laguerre_lower": {
+                  "bound": "[0.31742747733723002293499104635714580024 +/- 3.40e-41]",
+                  "x": [
+                    "64063/64",
+                    "1001"
+                  ]
+                },
+                "schur_excess_lower": {
+                  "bound": "[0.30102881821298970267508463154326680252 +/- 4.73e-39]",
+                  "x": [
+                    "64063/64",
+                    "1001"
+                  ]
+                }
+              },
+              "maxima": {
+                "phase_jet_error": "[0.41372086980684857408322760231833624071 +/- 4.12e-39]",
+                "midpoint_Lipschitz_upper": "[5.1289241563579946681123921375011650395 +/- 1.03e-38]",
+                "diagonal_correction_payment": "[0.0027391896154561462419187802541832616180 +/- 2.80e-41]"
+              }
+            },
+            "full": {
+              "cells": 128,
+              "firstjet_pass_cells": 128,
+              "physical_firstjet_pass_cells": 128,
+              "joint_firstjet_pass_cells": 128,
+              "box_L0_pass_cells": 72,
+              "box_excess_pass_cells": 63,
+              "Schur_L0_pass_cells": 128,
+              "Schur_excess_pass_cells": 128,
+              "minima": {
+                "paid_phase_radius_lower": {
+                  "bound": "[0.97229209570501196818163674655377772731 +/- 3.36e-39]",
+                  "x": [
+                    "64063/64",
+                    "1001"
+                  ]
+                },
+                "naive_phase_radius_lower": {
+                  "bound": "[0.93974121238444494753063912294001369233 +/- 2.86e-39]",
+                  "x": [
+                    "64063/64",
+                    "1001"
+                  ]
+                },
+                "physical_radius_lower": {
+                  "bound": "[0.55732252116610930088197880681298779578 +/- 3.96e-39]",
+                  "x": [
+                    "64063/64",
+                    "1001"
+                  ]
+                },
+                "joint_Schur_first_margin": {
+                  "bound": "[0.16972523057743120707435514651136121236 +/- 3.11e-39]",
+                  "x": [
+                    "16007/16",
+                    "64029/64"
+                  ]
+                },
+                "schur_laguerre_lower": {
+                  "bound": "[0.32123191192716997172717950685566245317 +/- 4.91e-39]",
+                  "x": [
+                    "64063/64",
+                    "1001"
+                  ]
+                },
+                "schur_excess_lower": {
+                  "bound": "[0.30479227621928964436654405096801886931 +/- 4.74e-39]",
+                  "x": [
+                    "64063/64",
+                    "1001"
+                  ]
+                }
+              },
+              "maxima": {
+                "phase_jet_error": "[0.41372254393055395166568779979697282337 +/- 1.86e-39]",
+                "midpoint_Lipschitz_upper": "[5.1272950242534407128811594413107836261 +/- 2.76e-38]",
+                "diagonal_correction_payment": "0"
+              }
+            }
+          },
+          "source_minimum_radius": "[1.3512820600471719596087876296706284594 +/- 1.09e-38]",
+          "source_minimum_signed_excess_Gc2": "[0.0035118300466677953884073594242018192487 +/- 2.26e-41]",
+          "source_maximum_phase_error": "[9.7530227292678723647574011642463356514e-11 +/- 2.32e-49]",
+          "source_minimum_signed_excess_A2": "[3.0214168911251402964034083801676446736 +/- 3.77e-38]",
+          "t": [
+            "109/640",
+            "141/800"
+          ]
+        },
+        {
+          "t_index": 28,
+          "methods": {
+            "frozen": {
+              "cells": 128,
+              "firstjet_pass_cells": 128,
+              "physical_firstjet_pass_cells": 128,
+              "joint_firstjet_pass_cells": 128,
+              "box_L0_pass_cells": 72,
+              "box_excess_pass_cells": 63,
+              "Schur_L0_pass_cells": 128,
+              "Schur_excess_pass_cells": 128,
+              "minima": {
+                "paid_phase_radius_lower": {
+                  "bound": "[0.96994872877408421798152444629642855468 +/- 8.69e-41]",
+                  "x": [
+                    "64063/64",
+                    "1001"
+                  ]
+                },
+                "naive_phase_radius_lower": {
+                  "bound": "[0.93799801781881803103547033024758725468 +/- 2.32e-39]",
+                  "x": [
+                    "64063/64",
+                    "1001"
+                  ]
+                },
+                "physical_radius_lower": {
+                  "bound": "[0.55683424908416846853637487315353811533 +/- 1.91e-40]",
+                  "x": [
+                    "64063/64",
+                    "1001"
+                  ]
+                },
+                "joint_Schur_first_margin": {
+                  "bound": "[0.16970054686194078976212694520998390948 +/- 3.95e-39]",
+                  "x": [
+                    "64027/64",
+                    "16007/16"
+                  ]
+                },
+                "schur_laguerre_lower": {
+                  "bound": "[0.31030958163140461536255520004122825518 +/- 4.89e-39]",
+                  "x": [
+                    "64063/64",
+                    "1001"
+                  ]
+                },
+                "schur_excess_lower": {
+                  "bound": "[0.29399123044948945166669518501562967788 +/- 2.89e-39]",
+                  "x": [
+                    "64063/64",
+                    "1001"
+                  ]
+                }
+              },
+              "maxima": {
+                "phase_jet_error": "[0.41372042182908896549621982530585687754 +/- 1.94e-40]",
+                "midpoint_Lipschitz_upper": "[5.1149398831924785153343887250133642930 +/- 2.41e-38]",
+                "diagonal_correction_payment": "[0.0027199338471244461654872245230720067971 +/- 6.33e-42]"
+              }
+            },
+            "full": {
+              "cells": 128,
+              "firstjet_pass_cells": 128,
+              "physical_firstjet_pass_cells": 128,
+              "joint_firstjet_pass_cells": 128,
+              "box_L0_pass_cells": 72,
+              "box_excess_pass_cells": 64,
+              "Schur_L0_pass_cells": 128,
+              "Schur_excess_pass_cells": 128,
+              "minima": {
+                "paid_phase_radius_lower": {
+                  "bound": "[0.97165519398516335953194341055393013980 +/- 4.63e-41]",
+                  "x": [
+                    "64063/64",
+                    "1001"
+                  ]
+                },
+                "naive_phase_radius_lower": {
+                  "bound": "[0.93968057217221695640401411090294706901 +/- 2.88e-39]",
+                  "x": [
+                    "64063/64",
+                    "1001"
+                  ]
+                },
+                "physical_radius_lower": {
+                  "bound": "[0.55819994642861750444777034576310608413 +/- 2.13e-39]",
+                  "x": [
+                    "64063/64",
+                    "1001"
+                  ]
+                },
+                "joint_Schur_first_margin": {
+                  "bound": "[0.17000331647918654117720269246745572877 +/- 2.76e-40]",
+                  "x": [
+                    "64027/64",
+                    "16007/16"
+                  ]
+                },
+                "schur_laguerre_lower": {
+                  "bound": "[0.31401945729172125282897397477131005126 +/- 2.87e-40]",
+                  "x": [
+                    "64063/64",
+                    "1001"
+                  ]
+                },
+                "schur_excess_lower": {
+                  "bound": "[0.29766144732472553143514269706723950875 +/- 2.87e-39]",
+                  "x": [
+                    "64063/64",
+                    "1001"
+                  ]
+                }
+              },
+              "maxima": {
+                "phase_jet_error": "[0.41372209595098159868608312589574331082 +/- 3.04e-39]",
+                "midpoint_Lipschitz_upper": "[5.1133337181860475631104348816268076564 +/- 3.32e-38]",
+                "diagonal_correction_payment": "0"
+              }
+            }
+          },
+          "source_minimum_radius": "[1.3501573677705755753017006694986794754 +/- 4.84e-38]",
+          "source_minimum_signed_excess_Gc2": "[0.0035536212195832691876413645547879345206 +/- 3.44e-41]",
+          "source_maximum_phase_error": "[1.0149747970650373564695008671476304484e-10 +/- 1.15e-48]",
+          "source_minimum_signed_excess_A2": "[3.0197277370437264430050296992929377878 +/- 3.19e-38]",
+          "t": [
+            "141/800",
+            "583/3200"
+          ]
+        },
+        {
+          "t_index": 29,
+          "methods": {
+            "frozen": {
+              "cells": 128,
+              "firstjet_pass_cells": 128,
+              "physical_firstjet_pass_cells": 128,
+              "joint_firstjet_pass_cells": 128,
+              "box_L0_pass_cells": 72,
+              "box_excess_pass_cells": 64,
+              "Schur_L0_pass_cells": 128,
+              "Schur_excess_pass_cells": 128,
+              "minima": {
+                "paid_phase_radius_lower": {
+                  "bound": "[0.96943294265102495265983070820647883152 +/- 3.28e-39]",
+                  "x": [
+                    "64063/64",
+                    "1001"
+                  ]
+                },
+                "naive_phase_radius_lower": {
+                  "bound": "[0.93806005371557905546827422864206595223 +/- 3.20e-39]",
+                  "x": [
+                    "64063/64",
+                    "1001"
+                  ]
+                },
+                "physical_radius_lower": {
+                  "bound": "[0.55800749196238666304954608317439702416 +/- 8.47e-40]",
+                  "x": [
+                    "64063/64",
+                    "1001"
+                  ]
+                },
+                "joint_Schur_first_margin": {
+                  "bound": "[0.17001031739304601372205088278160005063 +/- 3.81e-39]",
+                  "x": [
+                    "64027/64",
+                    "16007/16"
+                  ]
+                },
+                "schur_laguerre_lower": {
+                  "bound": "[0.30350510604158626844727642162279059192 +/- 1.16e-39]",
+                  "x": [
+                    "64063/64",
+                    "1001"
+                  ]
+                },
+                "schur_excess_lower": {
+                  "bound": "[0.28725977223344872156916853200179334378 +/- 3.03e-39]",
+                  "x": [
+                    "64063/64",
+                    "1001"
+                  ]
+                }
+              },
+              "maxima": {
+                "phase_jet_error": "[0.41371997385229815465652021928541067918 +/- 2.91e-39]",
+                "midpoint_Lipschitz_upper": "[5.1009468526453453717749614382835281664 +/- 3.99e-38]",
+                "diagonal_correction_payment": "[0.0027008134186568717136619363938763549570 +/- 3.31e-41]"
+              }
+            },
+            "full": {
+              "cells": 128,
+              "firstjet_pass_cells": 128,
+              "physical_firstjet_pass_cells": 128,
+              "joint_firstjet_pass_cells": 128,
+              "box_L0_pass_cells": 72,
+              "box_excess_pass_cells": 65,
+              "Schur_L0_pass_cells": 128,
+              "Schur_excess_pass_cells": 128,
+              "minima": {
+                "paid_phase_radius_lower": {
+                  "bound": "[0.97110747662412838166882128431668462298 +/- 3.18e-39]",
+                  "x": [
+                    "64063/64",
+                    "1001"
+                  ]
+                },
+                "naive_phase_radius_lower": {
+                  "bound": "[0.93971000953037735183873029734363418868 +/- 2.12e-39]",
+                  "x": [
+                    "64063/64",
+                    "1001"
+                  ]
+                },
+                "physical_radius_lower": {
+                  "bound": "[0.55932434886113723628721939296856835609 +/- 3.87e-39]",
+                  "x": [
+                    "64063/64",
+                    "1001"
+                  ]
+                },
+                "joint_Schur_first_margin": {
+                  "bound": "[0.17031095926608835781714636926199092776 +/- 3.57e-39]",
+                  "x": [
+                    "64027/64",
+                    "16007/16"
+                  ]
+                },
+                "schur_laguerre_lower": {
+                  "bound": "[0.30712144134305649726897585247669537071 +/- 1.79e-39]",
+                  "x": [
+                    "64063/64",
+                    "1001"
+                  ]
+                },
+                "schur_excess_lower": {
+                  "bound": "[0.29083775034711005791543707471250931368 +/- 1.60e-39]",
+                  "x": [
+                    "64063/64",
+                    "1001"
+                  ]
+                }
+              },
+              "maxima": {
+                "phase_jet_error": "[0.41372164797237804737403187250033386658 +/- 3.01e-39]",
+                "midpoint_Lipschitz_upper": "[5.0993634095243700478450661697940041438 +/- 1.14e-38]",
+                "diagonal_correction_payment": "0"
+              }
+            }
+          },
+          "source_minimum_radius": "[1.3491356569207006740220580885473382508 +/- 4.09e-38]",
+          "source_minimum_signed_excess_Gc2": "[0.0035960498427960791516370735321931383534 +/- 4.03e-41]",
+          "source_maximum_phase_error": "[1.1203145375484952117894391651443677305e-10 +/- 1.74e-48]",
+          "source_minimum_signed_excess_A2": "[3.0181575966724249380835635015596808768 +/- 7.34e-39]",
+          "t": [
+            "583/3200",
+            "301/1600"
+          ]
+        },
+        {
+          "t_index": 30,
+          "methods": {
+            "frozen": {
+              "cells": 128,
+              "firstjet_pass_cells": 128,
+              "physical_firstjet_pass_cells": 128,
+              "joint_firstjet_pass_cells": 128,
+              "box_L0_pass_cells": 72,
+              "box_excess_pass_cells": 65,
+              "Schur_L0_pass_cells": 128,
+              "Schur_excess_pass_cells": 128,
+              "minima": {
+                "paid_phase_radius_lower": {
+                  "bound": "[0.96900471837903945919699509775986734130 +/- 2.38e-39]",
+                  "x": [
+                    "64063/64",
+                    "1001"
+                  ]
+                },
+                "naive_phase_radius_lower": {
+                  "bound": "[0.93821026456722190770028669403396973194 +/- 4.31e-39]",
+                  "x": [
+                    "64063/64",
+                    "1001"
+                  ]
+                },
+                "physical_radius_lower": {
+                  "bound": "[0.55942303570025466044893181284530633809 +/- 3.24e-39]",
+                  "x": [
+                    "64063/64",
+                    "1001"
+                  ]
+                },
+                "joint_Schur_first_margin": {
+                  "bound": "[0.17025145179269012961148272000156783309 +/- 2.49e-39]",
+                  "x": [
+                    "32013/32",
+                    "64027/64"
+                  ]
+                },
+                "schur_laguerre_lower": {
+                  "bound": "[0.29701090783136306520223694272019744928 +/- 5.45e-40]",
+                  "x": [
+                    "64063/64",
+                    "1001"
+                  ]
+                },
+                "schur_excess_lower": {
+                  "bound": "[0.28083138931090470474002659491077446327 +/- 1.70e-39]",
+                  "x": [
+                    "64063/64",
+                    "1001"
+                  ]
+                }
+              },
+              "maxima": {
+                "phase_jet_error": "[0.41371952587647882556517435383372287173 +/- 9.28e-40]",
+                "midpoint_Lipschitz_upper": "[5.0869458715357166274409936683721254997 +/- 2.72e-38]",
+                "diagonal_correction_payment": "[0.0026818273931057370411050729084871536548 +/- 4.28e-41]"
+              }
+            },
+            "full": {
+              "cells": 128,
+              "firstjet_pass_cells": 128,
+              "physical_firstjet_pass_cells": 128,
+              "joint_firstjet_pass_cells": 128,
+              "box_L0_pass_cells": 73,
+              "box_excess_pass_cells": 67,
+              "Schur_L0_pass_cells": 128,
+              "Schur_excess_pass_cells": 128,
+              "minima": {
+                "paid_phase_radius_lower": {
+                  "bound": "[0.97064753457554965204339390201531267192 +/- 3.40e-39]",
+                  "x": [
+                    "64063/64",
+                    "1001"
+                  ]
+                },
+                "naive_phase_radius_lower": {
+                  "bound": "[0.93982785708034351138790291018367848060 +/- 7.07e-40]",
+                  "x": [
+                    "64063/64",
+                    "1001"
+                  ]
+                },
+                "physical_radius_lower": {
+                  "bound": "[0.56069152228880450027093242816375751366 +/- 1.46e-39]",
+                  "x": [
+                    "64063/64",
+                    "1001"
+                  ]
+                },
+                "joint_Schur_first_margin": {
+                  "bound": "[0.17054993214496661475700063661942516697 +/- 2.28e-39]",
+                  "x": [
+                    "32013/32",
+                    "64027/64"
+                  ]
+                },
+                "schur_laguerre_lower": {
+                  "bound": "[0.30053473169006089993040213459152666536 +/- 9.11e-40]",
+                  "x": [
+                    "64063/64",
+                    "1001"
+                  ]
+                },
+                "schur_excess_lower": {
+                  "bound": "[0.28431813781093929088633899972381951346 +/- 3.43e-39]",
+                  "x": [
+                    "64063/64",
+                    "1001"
+                  ]
+                }
+              },
+              "maxima": {
+                "phase_jet_error": "[0.41372119999474598174144043372780298319 +/- 2.82e-39]",
+                "midpoint_Lipschitz_upper": "[5.0853849055130538393996695071831490358 +/- 2.67e-38]",
+                "diagonal_correction_payment": "0"
+              }
+            }
+          },
+          "source_minimum_radius": "[1.3482155274176029231070286408090236238 +/- 3.90e-38]",
+          "source_minimum_signed_excess_Gc2": "[0.0036391248073544766000686769284814887172 +/- 7.26e-42]",
+          "source_maximum_phase_error": "[1.3727518804632917121578305072255884705e-10 +/- 2.98e-48]",
+          "source_minimum_signed_excess_A2": "[3.0167045540280771512924157395702517800 +/- 2.94e-38]",
+          "t": [
+            "301/1600",
+            "621/3200"
+          ]
+        },
+        {
+          "t_index": 31,
+          "methods": {
+            "frozen": {
+              "cells": 128,
+              "firstjet_pass_cells": 128,
+              "physical_firstjet_pass_cells": 128,
+              "joint_firstjet_pass_cells": 128,
+              "box_L0_pass_cells": 72,
+              "box_excess_pass_cells": 66,
+              "Schur_L0_pass_cells": 128,
+              "Schur_excess_pass_cells": 128,
+              "minima": {
+                "paid_phase_radius_lower": {
+                  "bound": "[0.96866259387922031265554992222536636050 +/- 2.57e-39]",
+                  "x": [
+                    "64063/64",
+                    "1001"
+                  ]
+                },
+                "naive_phase_radius_lower": {
+                  "bound": "[0.93844697893992575014288434857788286175 +/- 1.21e-39]",
+                  "x": [
+                    "64063/64",
+                    "1001"
+                  ]
+                },
+                "physical_radius_lower": {
+                  "bound": "[0.56107653894454744665477989287318613570 +/- 1.18e-39]",
+                  "x": [
+                    "64063/64",
+                    "1001"
+                  ]
+                },
+                "joint_Schur_first_margin": {
+                  "bound": "[0.17059511567436887378582462933429951810 +/- 2.27e-40]",
+                  "x": [
+                    "32013/32",
+                    "64027/64"
+                  ]
+                },
+                "schur_laguerre_lower": {
+                  "bound": "[0.29082392582302028220313971447055017016 +/- 7.75e-40]",
+                  "x": [
+                    "64063/64",
+                    "1001"
+                  ]
+                },
+                "schur_excess_lower": {
+                  "bound": "[0.27470310863300125805201138389876013316 +/- 2.86e-39]",
+                  "x": [
+                    "64063/64",
+                    "1001"
+                  ]
+                }
+              },
+              "maxima": {
+                "phase_jet_error": "[0.41371907790162828792415780297692298051 +/- 2.52e-39]",
+                "midpoint_Lipschitz_upper": "[5.0729376342796202441550834771576492203 +/- 1.80e-38]",
+                "diagonal_correction_payment": "[0.0026629740707558316336317649917372195140 +/- 3.34e-41]"
+              }
+            },
+            "full": {
+              "cells": 128,
+              "firstjet_pass_cells": 128,
+              "physical_firstjet_pass_cells": 128,
+              "joint_firstjet_pass_cells": 128,
+              "box_L0_pass_cells": 73,
+              "box_excess_pass_cells": 66,
+              "Schur_L0_pass_cells": 128,
+              "Schur_excess_pass_cells": 128,
+              "minima": {
+                "paid_phase_radius_lower": {
+                  "bound": "[0.97027391840013457805403772646278706240 +/- 1.50e-39]",
+                  "x": [
+                    "64063/64",
+                    "1001"
+                  ]
+                },
+                "naive_phase_radius_lower": {
+                  "bound": "[0.94003245372438861761140862656986883967 +/- 1.57e-39]",
+                  "x": [
+                    "64063/64",
+                    "1001"
+                  ]
+                },
+                "physical_radius_lower": {
+                  "bound": "[0.56229715350380578483662204815550692434 +/- 1.41e-39]",
+                  "x": [
+                    "64063/64",
+                    "1001"
+                  ]
+                },
+                "joint_Schur_first_margin": {
+                  "bound": "[0.17089149869664540278006849483313437201 +/- 8.97e-40]",
+                  "x": [
+                    "32013/32",
+                    "64027/64"
+                  ]
+                },
+                "schur_laguerre_lower": {
+                  "bound": "[0.29425624359023987761342060824630871913 +/- 6.92e-40]",
+                  "x": [
+                    "64063/64",
+                    "1001"
+                  ]
+                },
+                "schur_excess_lower": {
+                  "bound": "[0.27809961326602555000573839936514955488 +/- 6.72e-40]",
+                  "x": [
+                    "64063/64",
+                    "1001"
+                  ]
+                }
+              },
+              "maxima": {
+                "phase_jet_error": "[0.41372075201808271147939807830543290613 +/- 1.66e-41]",
+                "midpoint_Lipschitz_upper": "[5.0713988893219983284024806716873221188 +/- 1.50e-39]",
+                "diagonal_correction_payment": "0"
+              }
+            }
+          },
+          "source_minimum_radius": "[1.3473946960529517606929264453165154171 +/- 5.64e-39]",
+          "source_minimum_signed_excess_Gc2": "[0.0036828451808256478404878615650337838352 +/- 2.14e-41]",
+          "source_maximum_phase_error": "[1.9371535703686874361182951141683526559e-10 +/- 2.63e-48]",
+          "source_minimum_signed_excess_A2": "[3.0153583623304376629557517374279793946 +/- 3.90e-38]",
+          "t": [
+            "621/3200",
+            "1/5"
+          ]
+        }
+      ],
+      "archive": {
+        "relative_path": "output/S02_T2_B_192_20261019.jsonl.gz",
+        "bits": 192,
+        "stored_bytes": 6843771,
+        "stored_sha256": "294a86d65d3946f80902f57ac5857c39ab1600981ad5634f91e2914be5cb7126",
+        "canonical_jsonl_content_sha256": "9e73d866c3a25ac79d9d6fd18f17e24c787aa2fa862bd155feffc99685829842",
+        "cells": 4096,
+        "canonical_content_scope": "Sorted-key canonical cell rows in fixed time/space order; header timings excluded; every evaluated jet/error/consumer included.",
+        "regeneration": "same script, frozen inputs and bits; timings may change stored hash while cell-content identity is independent of those observations"
+      },
+      "checks": {
+        "series_checks": [
+          {
+            "x": "999.00000000000000000000000000000000000",
+            "frozen_full_exact_series": true,
+            "diagonal_derivative_defects_checked": true,
+            "frozen_point_arithmetic_and_input_rounding_radii": [
+              "[6.1251135666302360252369661266858446540e-54 +/- 4.39e-92]",
+              "[7.7984032161480703622338832947700359624e-54 +/- 4.81e-92]",
+              "[1.1667154579780625581226173791004298888e-53 +/- 2.86e-91]"
+            ],
+            "full_point_arithmetic_and_input_rounding_radii": [
+              "[6.1223486420484368333443463493763498087e-54 +/- 1.81e-92]",
+              "[7.7988545792249427281683295876659367020e-54 +/- 1.18e-92]",
+              "[1.1667195943385300614502458464205056358e-53 +/- 4.90e-92]"
+            ]
+          },
+          {
+            "x": "1000.0000000000000000000000000000000000",
+            "frozen_full_exact_series": true,
+            "diagonal_derivative_defects_checked": true,
+            "frozen_point_arithmetic_and_input_rounding_radii": [
+              "[4.4617571427162305009231619007072976002e-54 +/- 5.85e-93]",
+              "[6.1241274715186906973852656452609226892e-54 +/- 3.08e-92]",
+              "[1.1711363113677624051706539239944754908e-53 +/- 3.55e-91]"
+            ],
+            "full_point_arithmetic_and_input_rounding_radii": [
+              "[4.4645176722934897033844510075215544633e-54 +/- 1.90e-92]",
+              "[6.1248932718893997408205332268183408376e-54 +/- 4.58e-92]",
+              "[1.1711426860690376641776901796950905818e-53 +/- 2.07e-91]"
+            ]
+          },
+          {
+            "x": "1001.0000000000000000000000000000000000",
+            "frozen_full_exact_series": true,
+            "diagonal_derivative_defects_checked": true,
+            "frozen_point_arithmetic_and_input_rounding_radii": [
+              "[3.1978095475871989649276572857557946729e-54 +/- 2.69e-92]",
+              "[5.1997818383007970336785345276979050046e-54 +/- 3.58e-92]",
+              "[7.8325362702013726629949240552656183472e-54 +/- 1.42e-92]"
+            ],
+            "full_point_arithmetic_and_input_rounding_radii": [
+              "[3.1951874557912187437242673408352342075e-54 +/- 5.13e-94]",
+              "[5.2001997380853588384892540451306165500e-54 +/- 1.44e-92]",
+              "[7.8325735888461170865290990848247408599e-54 +/- 3.30e-93]"
+            ]
+          }
+        ],
+        "analytic_event_fixtures": [
+          {
+            "case": "constant",
+            "Schur_excess_lower": "[-0.13312073707341937728155418042467756851 +/- 3.85e-39]",
+            "firstjet_margin": "-0.25000000000000000000000000000000000000",
+            "rejected": true
+          },
+          {
+            "case": "linear",
+            "Schur_excess_lower": "[-0.59990250148422163029767378675801836973 +/- 4.91e-40]",
+            "firstjet_margin": "0",
+            "rejected": true
+          },
+          {
+            "case": "quadratic",
+            "Schur_excess_lower": "[-0.28762512760129538940743100414505168315 +/- 7.22e-40]",
+            "firstjet_margin": "-0.50000000000000000000000000000000000000",
+            "rejected": true
+          },
+          {
+            "case": "Schur_extremal",
+            "Schur_excess_lower": "[-0.37434394293166253168192812820909383477 +/- 1.10e-39]",
+            "firstjet_margin": "[-0.35566243270259355887271280487451063609 +/- 1.91e-39]",
+            "rejected": true
+          }
+        ],
+        "outside_B_rejected": true
+      },
+      "seconds_including_reference_acquisition": 18.33926562499255
+    }
+  ],
+  "status": "complete evaluation; classify gate from paid comparisons, not old-box pass count",
+  "C_activated": false,
+  "new_coverage": false,
+  "new_Newman_bound": false,
+  "performance_claim": false,
+  "remaining_interface": "Full analytic family for S03; frozen local disk jets carry diagonal derivative defects.",
+  "seconds": 18.341715332993772
+}

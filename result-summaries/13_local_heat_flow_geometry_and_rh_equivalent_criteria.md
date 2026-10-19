@@ -100,6 +100,21 @@ finite order \(m=2r+j\), \(r\ge1\), \(j\in\{0,1\}\).
   without new coverage or a global bound; [same-model internal review](../papers/investigations-3/11_arithmetic_collision_rigidity/symmetries/03_normalized_jet_rotation/reviews/02_CORRELATED_RESIDUAL_INTERNAL_REVIEW_20261018.md).
   Prepared for Edward Baker, **gpt-6.1-sol, actual effort ultra**, 18 October.
 
+- **GEO-T1 matched winding comparison (3/11, 19 October).**
+  **Interval-certified bounded validation** on already-covered
+  B=[1/100,1/5]x[999,1001]: whole-boundary winding0 uses7segments/10complete
+  calls and no source vertex calls. Optimized direct first-jet certification
+  covers3full-time strips in7calls. Both use identical complete source/errors
+  at192/256bits. Common setup dominates; direct/winding cold ratios
+  0.999385/0.999442 fail the declared factor-two gate. Stop this fixed-box
+  comparison; no coverage, global sign estimate or S07-T3 input. Thirty-six
+  actual-helper/direct controls pass, and fresh192 replay matches mathematical
+  content. [Result](../papers/investigations-3/11_arithmetic_collision_rigidity/symmetries/notes/06_GEO_T1_WINDING_AND_DIRECT_COMPARISON_20261019.md),
+  [same-model internal review](../papers/investigations-3/11_arithmetic_collision_rigidity/symmetries/reviews/01_GEO_T1_WINDING_DIRECT_INTERNAL_REVIEW_20261019.md).
+  Prepared for Edward Baker with substantial LLM assistance, **gpt-6.1-sol,
+  ultra**; no specialist human review. These timing observations do not
+  exclude winding advantages on other domains or acquisition models.
+
 ## Status
 
 The local laws, indices, surface identities and equivalences have written

@@ -10,3 +10,4 @@ and recorded configurations. Archives preserve public conversation text;
 they do not validate mathematical claims.
 
 - [0001 — Begin normalized jet rotation](0001_2026-10-19T00-14-51Z_begin-normalized-jet-rotation.json).
+- [0002 — Continue next bounded task](0002_2026-10-19T14-27-06Z_continue-next-bounded-task.json).

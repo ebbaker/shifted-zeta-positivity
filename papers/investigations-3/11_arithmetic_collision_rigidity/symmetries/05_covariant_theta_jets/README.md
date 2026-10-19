@@ -138,3 +138,42 @@ spectral jet error, runtime gain, new exclusion region, or global bound is
 claimed. The [internal review](reviews/01_COMPLETE_SOURCE_ENCLOSURE_INTERNAL_REVIEW_20261018.md)
 is by the same model. Next choose a named local-source consumer or pay a
 cancellation-preserving spectral transfer; do not expand the source scan.
+
+
+## S05-T1 consumer selection, 19 October 2026
+
+Prepared for Edward Baker with substantial LLM assistance,
+**gpt-6.1-sol, actual effort ultra**. [Note 02](notes/02_SOURCE_CONSUMER_FIT_AND_SHIFTED_ACQUISITION_SELECTION_20261019.md)
+rejects direct real parity-Taylor transfers to the inspected S01/S06 calls,
+then selects finite polynomial factoring inside S01's actual shifted
+coefficient acquisition. One coefficient's paid radius decreases about
+0.07361% at192/256 bits, with unchanged callback counts. Its possible
+complete-value budget scale is about0.004704% only if other data are held
+common. Exponential regrouping gives narrower source-cell ranges but a
+worse quadrature result. No full setup/consumer advantage is claimed.
+
+**T1 is Complete; T2 is Ready under the documented acquisition-route
+update.** Original real parity-Taylor handoffs are parked for these callers;
+that component stays reusable. [Separate same-model review](reviews/02_SOURCE_CONSUMER_FIT_INTERNAL_REVIEW_20261019.md)
+and [probe/budget records](numerics/README.md) include fresh replays and
+guards. This continuation preserves its unique existing
+[S04 chat registration](../04_time_height_scaling/chat-histories/0002_2026-10-19T16-59-21Z_continue-s04-t03-analysis.json);
+no second registration was created for the same conversation.
+
+
+## S05-T2 complete comparison, 19 October 2026
+
+For Edward Baker with substantial LLM assistance, **gpt-6.1-sol, actual
+effort ultra**. [Note 03](notes/03_COMPLETE_SHIFTED_ACQUISITION_AND_CONSUMER_COMPARISON_20261019.md) executes the selected shifted
+route with all51 coefficients at192/256 bits. A hybrid retains grouped
+order2 and factored other50. Against the stronger old expanded/grouped
+hybrid, complete added errors fall >0.0092005%,0.0077659%,0.0082207% at
+physicalorders0–2. All moment/Taylor/mode/source/rounding payments remain.
+
+**T1/T2 are Complete at their stated gates; stop this fixed B comparison.**
+The same40 closed cells and116adaptive calls pass. Adaptive minima match
+betweenhybrids; rawfixedmargins varybothways. Three acquisitions are charged
+to the candidate. No paid-margin, matched-cost, strongest-physical or
+coverage advantage is obtained. Original real parity handoff stays parked.
+[Internal review](reviews/03_COMPLETE_SHIFTED_CONSUMER_INTERNAL_REVIEW_20261019.md), [fullrecords and verification](numerics/README.md)
+and the [frozen contract](notes/04_S05_T2_COMPARISON_CONTRACT_20261019.md) retain the comparison.

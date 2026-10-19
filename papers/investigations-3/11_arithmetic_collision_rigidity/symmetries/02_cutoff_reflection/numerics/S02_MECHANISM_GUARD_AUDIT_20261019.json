@@ -1,0 +1,110 @@
+{
+  "schema": "s02-correction-mechanism-guards-v1",
+  "date": "2026-10-19",
+  "timezone": "America/New_York",
+  "prepared_for": "Edward Baker",
+  "llm_assistance": "substantial; same-model internal audit",
+  "actual_model": "gpt-6.1-sol",
+  "actual_effort": "ultra",
+  "python": "3.10.0",
+  "python_flint": "0.9.0",
+  "precision_bits": 256,
+  "status": "pass",
+  "scope": "Actual new comparison import/algebra/guard fixtures and independent analytic normalizer-chain-rule checks; no new physical acceptance interface.",
+  "comparison_script_sha256": "dd92df737bd7023fb6f7c6bb40d69e7a85b46b8fccb96962db4a532227b9c63b",
+  "opening_script_sha256": "d8dda6d4f746b35b7fd6a545ff87940c88a0c896fe9a1f684c002dcc2ea0cc9b",
+  "audit_script_sha256": "80571961f1187b715f1ebd3eb1a8de31bcb36f29d02ef988e46620c1d8a8ff66",
+  "main_algebra_checks": {
+    "opening_algebra": {
+      "shift_checks": [
+        {
+          "p": "[-0.8000000000000000000000000000000000000000000000000000000000000000000000000000 +/- 1.56e-77] + [0.01000000000000000000000000000000000000000000000000000000000000000000000000000 +/- 1.41e-79]j",
+          "shift_defect": "[+/- 3.64e-76] + [+/- 3.45e-76]j"
+        },
+        {
+          "p": "[0.2000000000000000000000000000000000000000000000000000000000000000000000000000 +/- 3.89e-78] + [-0.01000000000000000000000000000000000000000000000000000000000000000000000000000 +/- 1.41e-79]j",
+          "shift_defect": "[+/- 7.53e-76] + [+/- 9.57e-76]j"
+        }
+      ],
+      "removable_C0_plus_half": "[0.2500000000000000000000000000000000000000000000000000000000000000000000000000 +/- 1.27e-77] + [-0.2500000000000000000000000000000000000000000000000000000000000000000000000000 +/- 3.30e-77]j",
+      "removable_C0prime_plus_half": "[0.2500000000000000000000000000000000000000000000000000000000000000000000000000 +/- 3.26e-77] + [+/- 3.21e-77]j",
+      "minus_half": "same value and opposite first derivative by evenness; exact analytic proof in note",
+      "normalization_direct_vs_simplified": true,
+      "full_multiplier_identity": true,
+      "signed_transition_identity": true,
+      "profile_derivative_identity": true
+    },
+    "frozen_and_jump_checks": [
+      {
+        "center": "1000.00000000000000000000000000000000000000000",
+        "same_center_value": true,
+        "different_center_derivative": true,
+        "normalized_frozen_vector_verified": true,
+        "printed_analytic_jump_difference": "[4.3230667801643548552158710523042775468755104799772760327651284397167e-173 +/- 6.02e-241] + [3.217457676279804191560754543569339322612054997065408576522170929720288e-172 +/- 3.17e-242]j",
+        "dropping_jump_continuation_difference_rejected": true
+      },
+      {
+        "center": "1018.00000000000000000000000000000000000000000",
+        "same_center_value": true,
+        "different_center_derivative": true,
+        "normalized_frozen_vector_verified": true,
+        "printed_analytic_jump_difference": "[-2.39419068293293692596607199300303531418194363174597809767154532877016e-175 +/- 5.11e-244] + [-3.3327359840819277707747838597715598593821630791758868009152924765263219e-174 +/- 3.24e-245]j",
+        "dropping_jump_continuation_difference_rejected": true
+      }
+    ]
+  },
+  "independent_normalizer_checks": [
+    {
+      "center": "1000.000000000000000000000000000000000000000000000000000000000000000000000000",
+      "b": "[-0.3908917822080130584363944617567041021850058516846063890109352690540513871790 +/- 2.01e-77]",
+      "bp": "[-1.794028560469852077911944181757680348061632314630777193324359180983893219647e-6 +/- 1.67e-82]",
+      "abs_b_plus_k": "[0.0018072994907110963714359611532337583396403232372818386109328049844256636068 +/- 4.75e-77]",
+      "normalizer_log_derivatives_verified": true,
+      "omitted_normalizer_first_rejected": true,
+      "omitted_normalizer_second_rejected": true,
+      "physical_and_demodulated_chain_rule_verified": true
+    },
+    {
+      "center": "1018.000000000000000000000000000000000000000000000000000000000000000000000000",
+      "b": "[-0.3909235058444302097385906001929225679918937074713050904335756433592358640069 +/- 3.54e-77]",
+      "bp": "[-1.731377348287555832444244124341947368341477639846846829965922529389766449600e-6 +/- 4.06e-82]",
+      "abs_b_plus_k": "[0.0017755758542939450692398227170152925327524674505831371882924306792411867789 +/- 6.28e-77]",
+      "normalizer_log_derivatives_verified": true,
+      "omitted_normalizer_first_rejected": true,
+      "omitted_normalizer_second_rejected": true,
+      "physical_and_demodulated_chain_rule_verified": true
+    }
+  ],
+  "guard_mutations": [
+    {
+      "case": "changed_domain",
+      "rejected": true,
+      "reason": "comparison outside declared domains or fixed covers"
+    },
+    {
+      "case": "changed_grid",
+      "rejected": true,
+      "reason": "comparison outside declared domains or fixed covers"
+    },
+    {
+      "case": "changed_crossing_flag",
+      "rejected": true,
+      "reason": "comparison outside declared domains or fixed covers"
+    },
+    {
+      "case": "changed_radius",
+      "rejected": true,
+      "reason": "matched contract requires radius one half"
+    },
+    {
+      "case": "non_crossing_edge_domain",
+      "rejected": true,
+      "reason": "edge formula restricted to declared crossing C"
+    }
+  ],
+  "limitations": [
+    "No new collision coverage or global sign claim.",
+    "No duplicate full-grid comparison; decisive envelope replays are separate.",
+    "The fixed-domain early guards are challenged before profile evaluation; phase and denominator bounds are exercised by the full comparison records."
+  ]
+}

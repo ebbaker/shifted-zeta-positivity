@@ -1,0 +1,1951 @@
+{
+  "schema": "s03-t3-calibrated-consumers-v1",
+  "date": "2026-10-19",
+  "prepared_for": "Edward Baker",
+  "actual_model": "gpt-6.1-sol",
+  "actual_effort": "ultra",
+  "llm_assistance": "substantial; same-model research and separate internal review",
+  "python": "3.10.0",
+  "python_flint": "0.9.0",
+  "script_sha256": "5df0d372c4a06e628a406d84d6c32ff8fc1e888dee7f5963da5e9024adcdcc2e",
+  "anchor_export_sha256": "3d2ed5f61daceb133347ee4fa9b7c062cec10e171c1a313a165590955f28ec4e",
+  "source_setup_stored_sha256": "abd7889c7880e6acd941e95f0a103ab19601e68edec8267a8eb5c377376938d9",
+  "source_setup_mathematical_sha256": "5ad137f492efd3060642d5faad8a092633c6732083883788a6dc3ec34c568224",
+  "source_sha256": {
+    "papers/investigations-3/11_arithmetic_collision_rigidity/symmetries/03_normalized_jet_rotation/numerics/check_correlated_residual.py": "01a624d77cf10bec9c065dd22e5547d81183a3e539858c5d48e927c39ccefc85",
+    "papers/investigations-3/11_arithmetic_collision_rigidity/symmetries/03_normalized_jet_rotation/numerics/S03_CORRELATED_RESIDUAL_192_20261018.json": "e4e2ce5f9f9f708a21564a70678746d09477e6f2ce32c92ba4da8436dad0af03",
+    "papers/investigations-3/11_arithmetic_collision_rigidity/symmetries/03_normalized_jet_rotation/numerics/check_phase_residual_allowance.py": "d047296627029f8b25f68a12dd7bc1601bb424a56cede391ed186c3a809cd144",
+    "papers/investigations-3/11_arithmetic_collision_rigidity/symmetries/03_normalized_jet_rotation/numerics/S03_PHASE_ANALYTIC_ALLOWANCE_20261019.json": "063bc2c32a62ce6a716c6801d2cf439ef95869e22ca37c7a4972cef59cc520e5",
+    "papers/investigations-3/11_arithmetic_collision_rigidity/symmetries/02_cutoff_reflection/numerics/evaluate_complete_frozen_jets.py": "461ee502434f519a082ff212a0c2b5a0512c3426ef081f2ee2d82b4f5d4ce1b9",
+    "papers/investigations-3/11_arithmetic_collision_rigidity/symmetries/02_cutoff_reflection/numerics/check_cutoff_reflection.py": "d8dda6d4f746b35b7fd6a545ff87940c88a0c896fe9a1f684c002dcc2ea0cc9b",
+    "papers/investigations-3/11_arithmetic_collision_rigidity/symmetries/02_cutoff_reflection/numerics/S02_MATCHED_CORRECTION_20261019.json": "7646611c3dae320e18364f9548b036ed08b1729d53a2fdafa837a1e5f838b688",
+    "papers/investigations-3/11_arithmetic_collision_rigidity/numerics/high_height_consumer/high_height_consumer.py": "e96feb2b4c3e84de3025713b486fb8cf99fdd810f61366b79a0da188eb12535f",
+    "papers/investigations-3/11_arithmetic_collision_rigidity/symmetries/02_cutoff_reflection/numerics/S02_CUTOFF_REFLECTION_192_20261018.json": "3569d63dc41770c822fe7f8588f9608ad109b606f1d4ab71e7d9c7ccccb9696e",
+    "papers/investigations-3/11_arithmetic_collision_rigidity/symmetries/03_normalized_jet_rotation/numerics/check_normalized_rotation.py": "3d801098444b3f0a86c533042cb17d9ba44d100f6897838eae027fc91306b271",
+    "papers/investigations-3/11_arithmetic_collision_rigidity/symmetries/03_normalized_jet_rotation/numerics/S03_ROTATION_192_20261018.json": "321a9b2d428b8c12356de8875cc492f44f74b8def12c0a4f56918215edb25a11"
+  },
+  "domain": {
+    "t": [
+      "1/100",
+      "1/5"
+    ],
+    "x": [
+      999,
+      1001
+    ],
+    "anchor": 999,
+    "cover": [
+      32,
+      128
+    ]
+  },
+  "primary_metric": "Complete paid phase-scaled first-jet radius, matched closed cover and source data",
+  "source_acquisition": {
+    "original_stored_sha256": "abd7889c7880e6acd941e95f0a103ab19601e68edec8267a8eb5c377376938d9",
+    "mathematical_setup_sha256": "5ad137f492efd3060642d5faad8a092633c6732083883788a6dc3ec34c568224",
+    "precision_bits": 192,
+    "observational_fields_excluded": "setup and jet seconds/callback counts; all mathematical fields retained",
+    "original_acquisition_seconds": 9.096025125007145,
+    "original_acquisition_callbacks": 173696,
+    "regeneration": "Run high_height_consumer.py at192 bits externally; the source and mathematical setup hashes must match. Timings may differ."
+  },
+  "historical_residual_preparation": {
+    "observed_consumer_seconds": 1.2454485420021228,
+    "source_setup_is_additional": true,
+    "shared_model": {
+      "physical_center": [
+        "21/200",
+        "1000"
+      ],
+      "normalization": "G*=1000^(7/4) exp(-125 pi), fixed before differentiation",
+      "spatial_degree": 26,
+      "time_degree": 12,
+      "retained_source_midpoint_orders": [
+        0,
+        50
+      ],
+      "moment_order": 52,
+      "residual_coefficients": "delta_lk=(-1)^k midpoint_H^(l+2k)/(l! k!)-corrected_arithmetic_physical_mixed_coefficient",
+      "quadrature_handling": "nominal signed coefficients are combined before bounds; midpoint-radius uncertainty is enclosed conservatively in coefficient balls; repeated Arb objects do not retain exact covariance; independent displayed quadrature envelope is diagnostic and not added twice",
+      "correction_time_identity": "C_t=(pi/4) C_x+(pi^2/64)C",
+      "complete_residual_defect": "C*[d0 delta+d1 delta_x+d2 delta_xx], combined at coefficient level before interval evaluation"
+    },
+    "arithmetic_polydisk": {
+      "Rx": "8",
+      "Rt": "2",
+      "center": [
+        "1000",
+        "21/200"
+      ],
+      "closed_rectangular_cells": 256,
+      "Hhat_over_Gstar_majorant_upper": "3719519.1953125000000000000000000000000",
+      "both_holomorphic_channels_retained": true,
+      "correction_denominator_excludes_zero_on_cover": true
+    },
+    "prefix_cover": {
+      "time_cells": 32,
+      "space_cells": 128,
+      "total_real_cells": 4096,
+      "quadrature": "signed complex interval range integral, including all prefixes and partial last cells"
+    },
+    "scope": "Historical descriptive observation, not a matched benchmark. Calibration needs the source setup PLUS recombined mixed coefficients, polydisk majorant, residual prefix and anchor export."
+  },
+  "cost_scope": "Descriptive work/times only; source setup acquired once for all source-informed routes; historical residual majorant/coefficient/prefix setup and anchor construction required for calibration. No matched-cost claim.",
+  "scope": "Real-only first jets on B. No calibrated second-jet or complex-disk residual bound, new coverage or Newman bound.",
+  "runs": [
+    {
+      "bits": 192,
+      "same_source_setup_precision_bits": 192,
+      "direct_complete_phase_radius_lower": {
+        "analytic_direct": "[0.97252956036164026319942496352684900851 +/- 3.75e-39]",
+        "calibrated_direct": "[1.3859351576388134631875769585460408107 +/- 2.11e-38]",
+        "source_direct_raw": "[1.3473946960529517606929264453165154171 +/- 5.65e-39]",
+        "source_direct_propagated": "[1.3898732635004290262435975667302802643 +/- 4.84e-38]",
+        "source_direct_best": "[1.3898732635004290262435975667302802643 +/- 4.84e-38]",
+        "uncalibrated_source_direct": "[1.3850484689926277362993718944999080752 +/- 2.94e-38]"
+      },
+      "scalar_complete_phase_radius_lower": {
+        "analytic_only": "[-0.096724564977037980684486764523003339177 +/- 5.00e-40]",
+        "source_uncalibrated": "[1.1280710164129955490626198661273194716 +/- 3.99e-39]",
+        "source_calibrated": "[1.1288659652848752666327930670805358915 +/- 9.98e-40]"
+      },
+      "maximum_calibrated_phase_jet_error_upper": "[0.00026644795363037368875002432786057206640 +/- 5.11e-43]",
+      "maximum_source_phase_error_diagnostic_upper": "[2.3481211915125993306017300489010902201e-10 +/- 1.54e-48]",
+      "work": {
+        "full_jet_evaluations": 8224,
+        "source_cell_evaluations": 4096,
+        "source_midpoint_evaluations": 4096,
+        "stable_primitive_evaluations": 8224,
+        "complete_source_quadratures_this_consumer": 0,
+        "cells": 4096
+      },
+      "slabs": [
+        {
+          "t_index": 0,
+          "t": [
+            "1/100",
+            "51/3200"
+          ],
+          "direct_radii": {
+            "analytic_direct": "[1.0325273774950608719218344540371288950 +/- 2.61e-38]",
+            "calibrated_direct": "[1.4459787260721002179415891437036923019 +/- 3.85e-38]",
+            "source_direct_raw": "[1.4187285936407988468009081496979094269 +/- 4.68e-38]",
+            "source_direct_propagated": "[1.4662247287986678171132007069760341654 +/- 5.82e-39]",
+            "source_direct_best": "[1.4662247287986678171132007069760341654 +/- 5.82e-39]",
+            "uncalibrated_source_direct": "[1.4451281381373092424331964356832884862 +/- 4.04e-38]"
+          },
+          "minimum_locations": {
+            "analytic_direct": [
+              "64063/64",
+              "1001"
+            ],
+            "calibrated_direct": [
+              "64063/64",
+              "1001"
+            ],
+            "source_direct_raw": [
+              "64063/64",
+              "1001"
+            ],
+            "source_direct_propagated": [
+              "64063/64",
+              "1001"
+            ],
+            "source_direct_best": [
+              "64063/64",
+              "1001"
+            ],
+            "uncalibrated_source_direct": [
+              "64063/64",
+              "1001"
+            ]
+          },
+          "scalar_radii": {
+            "analytic_only": "[-0.096724564977037980684486764523003339176 +/- 5.01e-40]",
+            "source_uncalibrated": "[1.1280710164129955490626198661273194716 +/- 3.98e-39]",
+            "source_calibrated": "[1.1288659652848752666327930670805358915 +/- 9.95e-40]"
+          },
+          "calibrated_anchor_nominal_radius_lower": "[3.3454658526489404207477290805645327940 +/- 3.58e-38]",
+          "full_approximation_anchor_nominal_radius_lower": "[3.3456028819740642719448299428447388491 +/- 2.86e-38]",
+          "complete_approximation_increment_upper": "[2.2163334394104347804261859891561363305 +/- 3.17e-38]",
+          "calibration_error_ledger": {
+            "anchor_uncertainty_upper": "[6.0250724013090139199219773026951550982e-10 +/- 5.60e-49]",
+            "correlated_increment_upper": "[0.00026644735112313355784863233566284179689 +/- 5.01e-42]",
+            "complete_phase_jet_error_upper": "[0.00026644795363037368875002432786057206640 +/- 5.10e-43]",
+            "physical_firstjet_error_divided_by_A_upper": "[0.00040851148399014056275207076162859162885 +/- 4.11e-42]"
+          },
+          "source_complete_phase_error_diagnostic_upper": "[2.3481211915125993306017300489010902201e-10 +/- 1.53e-48]",
+          "analytic_anchor_error_upper": "[0.41373463793097543702689510700873068512 +/- 4.36e-39]"
+        },
+        {
+          "t_index": 1,
+          "t": [
+            "51/3200",
+            "7/320"
+          ],
+          "direct_radii": {
+            "analytic_direct": "[1.0288987061366826455964951608996547850 +/- 6.40e-39]",
+            "calibrated_direct": "[1.4423474092378790664076449392327012357 +/- 4.66e-38]",
+            "source_direct_raw": "[1.4147988245188081944178779244726405814 +/- 3.66e-38]",
+            "source_direct_propagated": "[1.4622960411613748634097543336574414280 +/- 9.27e-39]",
+            "source_direct_best": "[1.4622960411613748634097543336574414280 +/- 9.27e-39]",
+            "uncalibrated_source_direct": "[1.4414979385510944458151114755037113246 +/- 1.88e-38]"
+          },
+          "minimum_locations": {
+            "analytic_direct": [
+              "64063/64",
+              "1001"
+            ],
+            "calibrated_direct": [
+              "64063/64",
+              "1001"
+            ],
+            "source_direct_raw": [
+              "64063/64",
+              "1001"
+            ],
+            "source_direct_propagated": [
+              "64063/64",
+              "1001"
+            ],
+            "source_direct_best": [
+              "64063/64",
+              "1001"
+            ],
+            "uncalibrated_source_direct": [
+              "64063/64",
+              "1001"
+            ]
+          },
+          "scalar_radii": {
+            "analytic_only": "[-0.093754134406557557917241902430075303465 +/- 3.39e-41]",
+            "source_uncalibrated": "[1.1310413351727766577463721673492773671 +/- 2.05e-38]",
+            "source_calibrated": "[1.1318392957965642904542153672986644833 +/- 3.65e-38]"
+          },
+          "calibrated_anchor_nominal_radius_lower": "[3.3379032135119757919457517696916930020 +/- 2.23e-38]",
+          "full_approximation_anchor_nominal_radius_lower": "[3.3380382226418801751835572440438722657 +/- 2.28e-38]",
+          "complete_approximation_increment_upper": "[2.2057987975206763348264771704066790673 +/- 9.26e-40]",
+          "calibration_error_ledger": {
+            "anchor_uncertainty_upper": "[5.9878362044867565559322201000707159396e-10 +/- 2.41e-49]",
+            "correlated_increment_upper": "0.00026511959595154621638357639312744140625",
+            "complete_phase_jet_error_upper": "[0.00026512019473516666505923198634945141332 +/- 1.60e-42]",
+            "physical_firstjet_error_divided_by_A_upper": "[0.00040647580097939018215622618990730592186 +/- 2.25e-42]"
+          },
+          "source_complete_phase_error_diagnostic_upper": "[1.6434526923559765156215269861915466103e-10 +/- 2.22e-48]",
+          "analytic_anchor_error_upper": "[0.41373418991806936309808636486439332912 +/- 1.30e-39]"
+        },
+        {
+          "t_index": 2,
+          "t": [
+            "7/320",
+            "89/3200"
+          ],
+          "direct_radii": {
+            "analytic_direct": "[1.0253939967959980209569323512797110992 +/- 2.97e-38]",
+            "calibrated_direct": "[1.4388401928744375384129770322585448622 +/- 4.76e-38]",
+            "source_direct_raw": "[1.4109999366942127158775208294573107738 +/- 2.24e-38]",
+            "source_direct_propagated": "[1.4584868423113912498078176542024190139 +/- 3.66e-38]",
+            "source_direct_best": "[1.4584868423113912498078176542024190139 +/- 3.66e-38]",
+            "uncalibrated_source_direct": "[1.4379916524310465571388707775518902119 +/- 8.73e-39]"
+          },
+          "minimum_locations": {
+            "analytic_direct": [
+              "64063/64",
+              "1001"
+            ],
+            "calibrated_direct": [
+              "64063/64",
+              "1001"
+            ],
+            "source_direct_raw": [
+              "64063/64",
+              "1001"
+            ],
+            "source_direct_propagated": [
+              "64063/64",
+              "1001"
+            ],
+            "source_direct_best": [
+              "64063/64",
+              "1001"
+            ],
+            "uncalibrated_source_direct": [
+              "64063/64",
+              "1001"
+            ]
+          },
+          "scalar_radii": {
+            "analytic_only": "[-0.090785635462763718804781849973060226870 +/- 1.48e-40]",
+            "source_uncalibrated": "[1.1340096719721990126134843602207535203 +/- 2.79e-38]",
+            "source_calibrated": "[1.1348108361021305786040551842436853097 +/- 2.85e-38]"
+          },
+          "calibrated_anchor_nominal_radius_lower": "[3.3303505570209051414782564648286714538 +/- 4.55e-39]",
+          "full_approximation_anchor_nominal_radius_lower": "[3.3304834020162183846615917107464461136 +/- 2.41e-38]",
+          "complete_approximation_increment_upper": "[2.1952759259631565178554861266738215661 +/- 4.99e-38]",
+          "calibration_error_ledger": {
+            "anchor_uncertainty_upper": "[5.9508301488189895031695681435410487729e-10 +/- 2.43e-48]",
+            "correlated_increment_upper": "[0.00026379436053503013681620359420776367189 +/- 5.01e-42]",
+            "complete_phase_jet_error_upper": "[0.00026379495561804501871515391116457802599 +/- 1.23e-43]",
+            "physical_firstjet_error_divided_by_A_upper": "[0.00040444398167767948190175594828564556021 +/- 2.83e-43]"
+          },
+          "source_complete_phase_error_diagnostic_upper": "[1.3246890299628995322688797315494246884e-10 +/- 9.15e-49]",
+          "analytic_anchor_error_upper": "[0.41373374190613355043465182284280960168 +/- 4.46e-39]"
+        },
+        {
+          "t_index": 3,
+          "t": [
+            "89/3200",
+            "27/800"
+          ],
+          "direct_radii": {
+            "analytic_direct": "[1.0220122324520494353092680063968370636 +/- 1.16e-38]",
+            "calibrated_direct": "[1.4354560571286752202298019349670058704 +/- 3.76e-38]",
+            "source_direct_raw": "[1.4073310559480863280841321904810285572 +/- 6.42e-39]",
+            "source_direct_propagated": "[1.4547962788761657195615569990994597992 +/- 2.16e-38]",
+            "source_direct_best": "[1.4547962788761657195615569990994597992 +/- 2.16e-38]",
+            "uncalibrated_source_direct": "[1.4346082613792385388691935902023358246 +/- 2.10e-39]"
+          },
+          "minimum_locations": {
+            "analytic_direct": [
+              "64063/64",
+              "1001"
+            ],
+            "calibrated_direct": [
+              "64063/64",
+              "1001"
+            ],
+            "source_direct_raw": [
+              "64063/64",
+              "1001"
+            ],
+            "source_direct_propagated": [
+              "64063/64",
+              "1001"
+            ],
+            "source_direct_best": [
+              "64063/64",
+              "1001"
+            ],
+            "uncalibrated_source_direct": [
+              "64063/64",
+              "1001"
+            ]
+          },
+          "scalar_radii": {
+            "analytic_only": "[-0.087819307156534354417751075956679212260 +/- 2.87e-40]",
+            "source_uncalibrated": "[1.1369757832517744824500058594986274496 +/- 6.18e-39]",
+            "source_calibrated": "[1.1377803432306148910091173186753394035 +/- 3.03e-38]"
+          },
+          "calibrated_anchor_nominal_radius_lower": "[3.3228080348179133133684932836897355892 +/- 4.22e-38]",
+          "full_approximation_anchor_nominal_radius_lower": "[3.3229385726359397050774887738385600090 +/- 3.47e-38]",
+          "complete_approximation_increment_upper": "[2.1847652162876140284343506513609206087 +/- 3.91e-38]",
+          "calibration_error_ledger": {
+            "anchor_uncertainty_upper": "[5.9140527935921326235724144602913766722e-10 +/- 4.83e-48]",
+            "correlated_increment_upper": "[0.00026247470827911456581205129623413085939 +/- 5.01e-42]",
+            "complete_phase_jet_error_upper": "[0.00026247529968439392502531365347557688852 +/- 2.67e-42]",
+            "physical_firstjet_error_divided_by_A_upper": "[0.00040242072232720862217540076570790965491 +/- 4.73e-42]"
+          },
+          "source_complete_phase_error_diagnostic_upper": "[1.1853272336705094270899209301960703485e-10 +/- 2.86e-48]",
+          "analytic_anchor_error_upper": "[0.41373329389516799588465358723144343984 +/- 4.29e-39]"
+        },
+        {
+          "t_index": 4,
+          "t": [
+            "27/800",
+            "127/3200"
+          ],
+          "direct_radii": {
+            "analytic_direct": "[1.0187524117727217582503663956822615105 +/- 2.90e-38]",
+            "calibrated_direct": "[1.4321939960792083534749148135232761235 +/- 5.10e-39]",
+            "source_direct_raw": "[1.4037912888855425379887074965762220856 +/- 2.33e-38]",
+            "source_direct_propagated": "[1.4512234942517649724146279055646045279 +/- 2.55e-38]",
+            "source_direct_best": "[1.4512234942517649724146279055646045279 +/- 2.55e-38]",
+            "uncalibrated_source_direct": "[1.4313467626465599707441367167733659046 +/- 3.93e-38]"
+          },
+          "minimum_locations": {
+            "analytic_direct": [
+              "64063/64",
+              "1001"
+            ],
+            "calibrated_direct": [
+              "64063/64",
+              "1001"
+            ],
+            "source_direct_raw": [
+              "64063/64",
+              "1001"
+            ],
+            "source_direct_propagated": [
+              "64063/64",
+              "1001"
+            ],
+            "source_direct_best": [
+              "64063/64",
+              "1001"
+            ],
+            "uncalibrated_source_direct": [
+              "64063/64",
+              "1001"
+            ]
+          },
+          "scalar_radii": {
+            "analytic_only": "[-0.084855609556220784210534486435278428042 +/- 1.28e-40]",
+            "source_uncalibrated": "[1.1399392024095693177787210387635562697 +/- 1.32e-38]",
+            "source_calibrated": "[1.1407473511174381922063219050838632151 +/- 2.88e-38]"
+          },
+          "calibrated_anchor_nominal_radius_lower": "[3.3152756246453593027755520241611815896 +/- 1.18e-38]",
+          "full_approximation_anchor_nominal_radius_lower": "[3.3154037132594653719364439765952094511 +/- 4.72e-38]",
+          "complete_approximation_increment_upper": "[2.1742671073208214246745754352396423383 +/- 2.37e-38]",
+          "calibration_error_ledger": {
+            "anchor_uncertainty_upper": "[5.8775027315817176557519434681102800712e-10 +/- 2.64e-48]",
+            "correlated_increment_upper": "[0.00026116561934941273648291826248168945314 +/- 5.01e-42]",
+            "complete_phase_jet_error_upper": "[0.00026116620709968589465468383767603626416 +/- 3.01e-42]",
+            "physical_firstjet_error_divided_by_A_upper": "[0.00040041365839651655802302179444400802678 +/- 4.47e-42]"
+          },
+          "source_complete_phase_error_diagnostic_upper": "[1.1249454496926931946609288766587374978e-10 +/- 4.82e-49]",
+          "analytic_anchor_error_upper": "[0.41373284588517269629616741658797036819 +/- 2.87e-39]"
+        },
+        {
+          "t_index": 5,
+          "t": [
+            "127/3200",
+            "73/1600"
+          ],
+          "direct_radii": {
+            "analytic_direct": "[1.0156135040111372310043835177603697683 +/- 4.90e-38]",
+            "calibrated_direct": "[1.4290529798441506161095015995574906005 +/- 4.86e-38]",
+            "source_direct_raw": "[1.4003797194713961266245850823290942480 +/- 1.06e-38]",
+            "source_direct_propagated": "[1.4477675938229948316774767488004229248 +/- 1.06e-38]",
+            "source_direct_best": "[1.4477675938229948316774767488004229248 +/- 1.06e-38]",
+            "uncalibrated_source_direct": "[1.4282061240082056777378834155323709453 +/- 3.59e-38]"
+          },
+          "minimum_locations": {
+            "analytic_direct": [
+              "64063/64",
+              "1001"
+            ],
+            "calibrated_direct": [
+              "64063/64",
+              "1001"
+            ],
+            "source_direct_raw": [
+              "64063/64",
+              "1001"
+            ],
+            "source_direct_propagated": [
+              "64063/64",
+              "1001"
+            ],
+            "source_direct_best": [
+              "64063/64",
+              "1001"
+            ],
+            "uncalibrated_source_direct": [
+              "64063/64",
+              "1001"
+            ]
+          },
+          "scalar_radii": {
+            "analytic_only": "[-0.081930999180851972055856125626476384312 +/- 2.03e-40]",
+            "source_uncalibrated": "[1.1428634721102831931801199385880415896 +/- 4.36e-38]",
+            "source_calibrated": "[1.1436754030402931059769076673517372658 +/- 2.53e-38]"
+          },
+          "calibrated_anchor_nominal_radius_lower": "[3.3077534653721059559269390275347099736 +/- 2.30e-38]",
+          "full_approximation_anchor_nominal_radius_lower": "[3.3078789637361000034886362127908993884 +/- 4.54e-38]",
+          "complete_approximation_increment_upper": "[2.1638181954311122918509740055481396432 +/- 1.10e-38]",
+          "calibration_error_ledger": {
+            "anchor_uncertainty_upper": "[5.8411785611519572944028350399399284697e-10 +/- 1.51e-49]",
+            "correlated_increment_upper": "[0.00025986631658270198386162519454956054689 +/- 5.01e-42]",
+            "complete_phase_jet_error_upper": "[0.00025986690070055809905735463483306454088 +/- 2.16e-42]",
+            "physical_firstjet_error_divided_by_A_upper": "[0.00039842159835826765549063291536584052149 +/- 2.76e-42]"
+          },
+          "source_complete_phase_error_diagnostic_upper": "[1.0972959749774343766218109949072860503e-10 +/- 7.47e-49]",
+          "analytic_anchor_error_upper": "[0.41373239787614764851728272166636095674 +/- 4.20e-39]"
+        },
+        {
+          "t_index": 6,
+          "t": [
+            "73/1600",
+            "33/640"
+          ],
+          "direct_radii": {
+            "analytic_direct": "[1.0125944431601687582286024918035783911 +/- 1.37e-38]",
+            "calibrated_direct": "[1.4260319395496624885980389278056422183 +/- 3.35e-38]",
+            "source_direct_raw": "[1.3970953925310533055831179683729549791 +/- 1.58e-38]",
+            "source_direct_propagated": "[1.4444260272060871007277493315098188178 +/- 3.50e-39]",
+            "source_direct_best": "[1.4444260272060871007277493315098188178 +/- 3.50e-39]",
+            "uncalibrated_source_direct": "[1.4251852779354680917645792651139303982 +/- 1.36e-38]"
+          },
+          "minimum_locations": {
+            "analytic_direct": [
+              "64063/64",
+              "1001"
+            ],
+            "calibrated_direct": [
+              "64063/64",
+              "1001"
+            ],
+            "source_direct_raw": [
+              "64063/64",
+              "1001"
+            ],
+            "source_direct_propagated": [
+              "64063/64",
+              "1001"
+            ],
+            "source_direct_best": [
+              "64063/64",
+              "1001"
+            ],
+            "uncalibrated_source_direct": [
+              "64063/64",
+              "1001"
+            ]
+          },
+          "scalar_radii": {
+            "analytic_only": "[-0.079262438757675304161362127995854644886 +/- 8.11e-41]",
+            "source_uncalibrated": "[1.1455316245928430556456597007490418835 +/- 4.40e-38]",
+            "source_calibrated": "[1.1463475320497001129741104985765847717 +/- 4.37e-38]"
+          },
+          "calibrated_anchor_nominal_radius_lower": "[3.3002416173832790571339899728690823348 +/- 2.67e-38]",
+          "full_approximation_anchor_nominal_radius_lower": "[3.3003643852910182325352654858826806161 +/- 4.63e-38]",
+          "complete_approximation_increment_upper": "[2.1536355045709086521242894373326953293 +/- 3.64e-38]",
+          "calibration_error_ledger": {
+            "anchor_uncertainty_upper": "[5.8050788750956498012081297609422244072e-10 +/- 3.26e-48]",
+            "correlated_increment_upper": "0.00025858018216240452602505683898925781250",
+            "complete_phase_jet_error_upper": "[0.00025858076267029203559003695980223390672 +/- 2.45e-42]",
+            "physical_firstjet_error_divided_by_A_upper": "[0.00039644972769404421796579461057964340990 +/- 1.97e-42]"
+          },
+          "source_complete_phase_error_diagnostic_upper": "[1.0822967592416469795998676234053612864e-10 +/- 3.97e-48]",
+          "analytic_anchor_error_upper": "[0.41373194986809284939610256534296475896 +/- 3.88e-39]"
+        },
+        {
+          "t_index": 7,
+          "t": [
+            "33/640",
+            "23/400"
+          ],
+          "direct_radii": {
+            "analytic_direct": "[1.0096941336804279381418959759539348760 +/- 1.55e-39]",
+            "calibrated_direct": "[1.4231297758451224620371859470443623397 +/- 4.70e-38]",
+            "source_direct_raw": "[1.3939373198627672735702873578873681851 +/- 2.59e-38]",
+            "source_direct_propagated": "[1.4411988830269522176369073672241356775 +/- 1.29e-38]",
+            "source_direct_best": "[1.4411988830269522176369073672241356775 +/- 1.29e-38]",
+            "uncalibrated_source_direct": "[1.4222831273200725226997664933305535237 +/- 2.34e-38]"
+          },
+          "minimum_locations": {
+            "analytic_direct": [
+              "64063/64",
+              "1001"
+            ],
+            "calibrated_direct": [
+              "64063/64",
+              "1001"
+            ],
+            "source_direct_raw": [
+              "64063/64",
+              "1001"
+            ],
+            "source_direct_propagated": [
+              "64063/64",
+              "1001"
+            ],
+            "source_direct_best": [
+              "64063/64",
+              "1001"
+            ],
+            "uncalibrated_source_direct": [
+              "64063/64",
+              "1001"
+            ]
+          },
+          "scalar_radii": {
+            "analytic_only": "[-0.076594559238199265229321157215235820472 +/- 4.14e-40]",
+            "source_uncalibrated": "[1.1481990234944744497195455683572572573 +/- 2.37e-38]",
+            "source_calibrated": "[1.1490191025503932895345443015914792097 +/- 2.34e-38]"
+          },
+          "calibrated_anchor_nominal_radius_lower": "[3.2927401700028357296796881670480229501 +/- 1.16e-38]",
+          "full_approximation_anchor_nominal_radius_lower": "[3.2928600681732382942243356795026753011 +/- 2.19e-38]",
+          "complete_approximation_increment_upper": "[2.1434637559407372284966775629724412186 +/- 3.94e-38]",
+          "calibration_error_ledger": {
+            "anchor_uncertainty_upper": "[5.7692022941143275651318577370202983033e-10 +/- 3.57e-48]",
+            "correlated_increment_upper": "[0.00025731093478498223703354597091674804689 +/- 5.01e-42]",
+            "complete_phase_jet_error_upper": "[0.00025731151170521164846630248410252174891 +/- 4.84e-42]",
+            "physical_firstjet_error_divided_by_A_upper": "[0.00039450374781928784684072232293924552417 +/- 5.93e-44]"
+          },
+          "source_complete_phase_error_diagnostic_upper": "[1.0718123103442509258004641425406781406e-10 +/- 1.90e-48]",
+          "analytic_anchor_error_upper": "[0.41373150186100829578074366254259473019 +/- 3.51e-40]"
+        },
+        {
+          "t_index": 8,
+          "t": [
+            "23/400",
+            "203/3200"
+          ],
+          "direct_radii": {
+            "analytic_direct": "[1.0069114776957456541283316592285755251 +/- 2.41e-38]",
+            "calibrated_direct": "[1.4203453894496684251025917415418514369 +/- 1.55e-38]",
+            "source_direct_raw": "[1.3909044945508875343521663028619589803 +/- 6.15e-39]",
+            "source_direct_propagated": "[1.4380858144224313624645392598019941993 +/- 4.39e-38]",
+            "source_direct_best": "[1.4380858144224313624645392598019941993 +/- 4.39e-38]",
+            "uncalibrated_source_direct": "[1.4194985726796904028267692212690486026 +/- 2.59e-38]"
+          },
+          "minimum_locations": {
+            "analytic_direct": [
+              "64063/64",
+              "1001"
+            ],
+            "calibrated_direct": [
+              "64063/64",
+              "1001"
+            ],
+            "source_direct_raw": [
+              "64063/64",
+              "1001"
+            ],
+            "source_direct_propagated": [
+              "64063/64",
+              "1001"
+            ],
+            "source_direct_best": [
+              "64063/64",
+              "1001"
+            ],
+            "uncalibrated_source_direct": [
+              "64063/64",
+              "1001"
+            ]
+          },
+          "scalar_radii": {
+            "analytic_only": "[-0.073927544330093147362439607872309902677 +/- 1.61e-41]",
+            "source_uncalibrated": "[1.1508654818808483862033215392354228723 +/- 2.06e-38]",
+            "source_calibrated": "[1.1516899283166726872262170976302101782 +/- 1.53e-38]"
+          },
+          "calibrated_anchor_nominal_radius_lower": "[3.2852492239395044943963258012472204210 +/- 8.57e-39]",
+          "full_approximation_anchor_nominal_radius_lower": "[3.2853661141209040473677139561972132739 +/- 3.01e-38]",
+          "complete_approximation_increment_upper": "[2.1333032349864111750345815727020358776 +/- 3.09e-38]",
+          "calibration_error_ledger": {
+            "anchor_uncertainty_upper": "[5.7335474389179974491720214834844925975e-10 +/- 3.10e-48]",
+            "correlated_increment_upper": "[0.00025606006306588824372738599777221679689 +/- 5.01e-42]",
+            "complete_phase_jet_error_upper": "[0.00025606063642063213552713091497436514533 +/- 4.26e-42]",
+            "physical_firstjet_error_divided_by_A_upper": "[0.00039258594104374426064753399682390542587 +/- 4.77e-42]"
+          },
+          "source_complete_phase_error_diagnostic_upper": "[1.0628132179965228060698466758229625653e-10 +/- 1.25e-48]",
+          "analytic_anchor_error_upper": "[0.41373105385489398451933638016461212620 +/- 4.02e-39]"
+        },
+        {
+          "t_index": 9,
+          "t": [
+            "203/3200",
+            "111/1600"
+          ],
+          "direct_radii": {
+            "analytic_direct": "[1.0042453242048347537813770691962974836 +/- 2.01e-38]",
+            "calibrated_direct": "[1.4176776267740565409467477042068064207 +/- 5.43e-39]",
+            "source_direct_raw": "[1.3879958732668721025305815245739100667 +/- 2.91e-38]",
+            "source_direct_propagated": "[1.4350858402169282281978375248030001823 +/- 7.99e-39]",
+            "source_direct_best": "[1.4350858402169282281978375248030001823 +/- 7.99e-39]",
+            "uncalibrated_source_direct": "[1.4168304613677507391960567153994639326 +/- 4.82e-39]"
+          },
+          "minimum_locations": {
+            "analytic_direct": [
+              "64063/64",
+              "1001"
+            ],
+            "calibrated_direct": [
+              "64063/64",
+              "1001"
+            ],
+            "source_direct_raw": [
+              "64063/64",
+              "1001"
+            ],
+            "source_direct_propagated": [
+              "64063/64",
+              "1001"
+            ],
+            "source_direct_best": [
+              "64063/64",
+              "1001"
+            ],
+            "uncalibrated_source_direct": [
+              "64063/64",
+              "1001"
+            ]
+          },
+          "scalar_radii": {
+            "analytic_only": "[-0.071261689020856295902407210552496789621 +/- 4.58e-40]",
+            "source_uncalibrated": "[1.1535307000746562206383443613837837209 +/- 3.81e-38]",
+            "source_calibrated": "[1.1543597106365046705812947175647197995 +/- 9.19e-39]"
+          },
+          "calibrated_anchor_nominal_radius_lower": "[3.2777688752801135657564165065973770591 +/- 2.69e-38]",
+          "full_approximation_anchor_nominal_radius_lower": "[3.2778826200336308430563244794004412411 +/- 2.88e-38]",
+          "complete_approximation_increment_upper": "[2.1231543335950451913224713417410509760 +/- 1.53e-38]",
+          "calibration_error_ledger": {
+            "anchor_uncertainty_upper": "[5.6981129358051411668705306091090703496e-10 +/- 4.69e-48]",
+            "correlated_increment_upper": "0.00025483047875241027213633060455322265625",
+            "complete_phase_jet_error_upper": "[0.00025483104856370385265044729160628356716 +/- 2.97e-42]",
+            "physical_firstjet_error_divided_by_A_upper": "[0.00039070077111375964778840165384133989231 +/- 1.46e-42]"
+          },
+          "source_complete_phase_error_diagnostic_upper": "[1.0542815997406440792022099938899194493e-10 +/- 7.02e-49]",
+          "analytic_anchor_error_upper": "[0.41373060584974991246002473700901188196 +/- 2.60e-39]"
+        },
+        {
+          "t_index": 10,
+          "t": [
+            "111/1600",
+            "241/3200"
+          ],
+          "direct_radii": {
+            "analytic_direct": "[1.0016945168712105698423062671697834276 +/- 3.44e-38]",
+            "calibrated_direct": "[1.4151253292382321767112448205836421077 +/- 2.29e-38]",
+            "source_direct_raw": "[1.3852103882531038398001723615762749416 +/- 1.85e-38]",
+            "source_direct_propagated": "[1.4321979692307165320671042218236714820 +/- 3.30e-38]",
+            "source_direct_best": "[1.4321979692307165320671042218236714820 +/- 3.30e-38]",
+            "uncalibrated_source_direct": "[1.4142776353597508548508808819005278739 +/- 1.97e-38]"
+          },
+          "minimum_locations": {
+            "analytic_direct": [
+              "64063/64",
+              "1001"
+            ],
+            "calibrated_direct": [
+              "64063/64",
+              "1001"
+            ],
+            "source_direct_raw": [
+              "64063/64",
+              "1001"
+            ],
+            "source_direct_propagated": [
+              "64063/64",
+              "1001"
+            ],
+            "source_direct_best": [
+              "64063/64",
+              "1001"
+            ],
+            "uncalibrated_source_direct": [
+              "64063/64",
+              "1001"
+            ]
+          },
+          "scalar_radii": {
+            "analytic_only": "[-0.068597209867732348334810808353005442474 +/- 2.61e-40]",
+            "source_uncalibrated": "[1.1561944577676709206967620144789427080 +/- 4.33e-38]",
+            "source_calibrated": "[1.1570282300300084461598631069514040877 +/- 1.57e-38]"
+          },
+          "calibrated_anchor_nominal_radius_lower": "[3.2702992083032096666047495860404510246 +/- 8.85e-39]",
+          "full_approximation_anchor_nominal_radius_lower": "[3.2704096711851560459004735133500283958 +/- 3.06e-38]",
+          "complete_approximation_increment_upper": "[2.1130173535976202826080823067976501949 +/- 3.41e-38]",
+          "calibration_error_ledger": {
+            "anchor_uncertainty_upper": "[5.6628974278226562429869044318135932680e-10 +/- 5.94e-49]",
+            "correlated_increment_upper": "[0.00025362410929119505453854799270629882814 +/- 5.01e-42]",
+            "complete_phase_jet_error_upper": "[0.00025362467558093783680417229139674200949 +/- 4.33e-42]",
+            "physical_firstjet_error_divided_by_A_upper": "[0.00038885119409628234527076612904379899721 +/- 1.76e-42]"
+          },
+          "source_complete_phase_error_diagnostic_upper": "[1.0459160055443015755396850282518925507e-10 +/- 4.64e-48]",
+          "analytic_anchor_error_upper": "[0.41373015784557607645096640370250847072 +/- 1.80e-39]"
+        },
+        {
+          "t_index": 11,
+          "t": [
+            "241/3200",
+            "13/160"
+          ],
+          "direct_radii": {
+            "analytic_direct": "[0.99925788868569250441278440386323868887 +/- 2.71e-39]",
+            "calibrated_direct": "[1.4126873255077572833638697270682005863 +/- 2.71e-39]",
+            "source_direct_raw": "[1.3825469336190732959360425547343715746 +/- 2.17e-38]",
+            "source_direct_propagated": "[1.4294211771695179545176476477365771059 +/- 2.28e-38]",
+            "source_direct_best": "[1.4294211771695179545176476477365771059 +/- 2.28e-38]",
+            "uncalibrated_source_direct": "[1.4118389259284761310847293111124814582 +/- 1.90e-38]"
+          },
+          "minimum_locations": {
+            "analytic_direct": [
+              "64063/64",
+              "1001"
+            ],
+            "calibrated_direct": [
+              "64063/64",
+              "1001"
+            ],
+            "source_direct_raw": [
+              "64063/64",
+              "1001"
+            ],
+            "source_direct_propagated": [
+              "64063/64",
+              "1001"
+            ],
+            "source_direct_best": [
+              "64063/64",
+              "1001"
+            ],
+            "uncalibrated_source_direct": [
+              "64063/64",
+              "1001"
+            ]
+          },
+          "scalar_radii": {
+            "analytic_only": "[-0.065934387686496218334614076649866107990 +/- 3.84e-40]",
+            "source_uncalibrated": "[1.1588564677158091495165041538399322881 +/- 3.62e-38]",
+            "source_calibrated": "[1.1596952002053877404184752798108499850 +/- 4.10e-39]"
+          },
+          "calibrated_anchor_nominal_radius_lower": "[3.2628402936217979667001111292863651366 +/- 8.37e-39]",
+          "full_approximation_anchor_nominal_radius_lower": "[3.2629473390888384734504763602761817970 +/- 4.60e-38]",
+          "complete_approximation_increment_upper": "[2.1028926473232701832685221230985504890 +/- 1.20e-38]",
+          "calibration_error_ledger": {
+            "anchor_uncertainty_upper": "[5.6278995580257772326417169387441924091e-10 +/- 4.92e-48]",
+            "correlated_increment_upper": "0.00025244553035008721053600311279296875000",
+            "complete_phase_jet_error_upper": "[0.00025244609314004301311372637696466262442 +/- 7.60e-43]",
+            "physical_firstjet_error_divided_by_A_upper": "[0.00038704422481836985179175640286365542805 +/- 1.32e-42]"
+          },
+          "source_complete_phase_error_diagnostic_upper": "[1.0376399820253948697277618247663177220e-10 +/- 1.04e-48]",
+          "analytic_anchor_error_upper": "[0.41372970984237247334033270262462224324 +/- 3.71e-39]"
+        },
+        {
+          "t_index": 12,
+          "t": [
+            "13/160",
+            "279/3200"
+          ],
+          "direct_radii": {
+            "analytic_direct": "[0.99693422721790528111104903665232195839 +/- 3.22e-39]",
+            "calibrated_direct": "[1.4103624020370703600622365841590787376 +/- 2.54e-38]",
+            "source_direct_raw": "[1.3800043948931644144424373184151692641 +/- 9.96e-39]",
+            "source_direct_propagated": "[1.4267544289191783897608356082577071358 +/- 4.99e-38]",
+            "source_direct_best": "[1.4267544289191783897608356082577071358 +/- 4.99e-38]",
+            "uncalibrated_source_direct": "[1.4095131188973189131366255398045673324 +/- 2.01e-38]"
+          },
+          "minimum_locations": {
+            "analytic_direct": [
+              "64063/64",
+              "1001"
+            ],
+            "calibrated_direct": [
+              "64063/64",
+              "1001"
+            ],
+            "source_direct_raw": [
+              "64063/64",
+              "1001"
+            ],
+            "source_direct_propagated": [
+              "64063/64",
+              "1001"
+            ],
+            "source_direct_best": [
+              "64063/64",
+              "1001"
+            ],
+            "uncalibrated_source_direct": [
+              "64063/64",
+              "1001"
+            ]
+          },
+          "scalar_radii": {
+            "analytic_only": "[-0.063273459099173913921910993378120303790 +/- 4.47e-40]",
+            "source_uncalibrated": "[1.1615164906363182763543233023406838355 +/- 5.7e-41]",
+            "source_calibrated": "[1.1623603828371102601549469436864569709 +/- 1.72e-38]"
+          },
+          "calibrated_anchor_nominal_radius_lower": "[3.2553922202097380867428327272620567517 +/- 6.94e-40]",
+          "full_approximation_anchor_nominal_radius_lower": "[3.2554957136521568974058065515886326593 +/- 1.59e-38]",
+          "complete_approximation_increment_upper": "[2.0927805413014996761751733259301115431 +/- 2.81e-38]",
+          "calibration_error_ledger": {
+            "anchor_uncertainty_upper": "[5.5931179862180000828559443882731819991e-10 +/- 2.76e-48]",
+            "correlated_increment_upper": "[0.00025129551181635179091244935989379882814 +/- 5.01e-42]",
+            "complete_phase_jet_error_upper": "[0.00025129607112815041271245764548823765545 +/- 3.21e-42]",
+            "physical_firstjet_error_divided_by_A_upper": "[0.00038528104365385869327696473111697381691 +/- 4.05e-42]"
+          },
+          "source_complete_phase_error_diagnostic_upper": "[1.0294373511085870091975032235369863829e-10 +/- 4.01e-48]",
+          "analytic_anchor_error_upper": "[0.41372926184013909997630860783376624726 +/- 1.92e-39]"
+        },
+        {
+          "t_index": 13,
+          "t": [
+            "279/3200",
+            "149/1600"
+          ],
+          "direct_radii": {
+            "analytic_direct": "[0.99472232318091722413068203549298320592 +/- 1.71e-39]",
+            "calibrated_direct": "[1.4081493476259161583569921466611237257 +/- 3.46e-38]",
+            "source_direct_raw": "[1.3775816169277842486102034102345743361 +/- 4.59e-38]",
+            "source_direct_propagated": "[1.4241966683761985548573526342479634985 +/- 9.65e-39]",
+            "source_direct_best": "[1.4241966683761985548573526342479634985 +/- 9.65e-39]",
+            "uncalibrated_source_direct": "[1.4072990031885566065510358247108508531 +/- 3.54e-38]"
+          },
+          "minimum_locations": {
+            "analytic_direct": [
+              "64063/64",
+              "1001"
+            ],
+            "calibrated_direct": [
+              "64063/64",
+              "1001"
+            ],
+            "source_direct_raw": [
+              "64063/64",
+              "1001"
+            ],
+            "source_direct_propagated": [
+              "64063/64",
+              "1001"
+            ],
+            "source_direct_best": [
+              "64063/64",
+              "1001"
+            ],
+            "uncalibrated_source_direct": [
+              "64063/64",
+              "1001"
+            ]
+          },
+          "scalar_radii": {
+            "analytic_only": "[-0.060614660943533702779463319969580138953 +/- 3.77e-40]",
+            "source_uncalibrated": "[1.1641742858817842293320836762803292688 +/- 3.50e-38]",
+            "source_calibrated": "[1.1650235382216169659886628031037651859 +/- 4.01e-38]"
+          },
+          "calibrated_anchor_nominal_radius_lower": "[3.2479550794786683498107283640029457796 +/- 4.26e-38]",
+          "full_approximation_anchor_nominal_radius_lower": "[3.2480548872628379273584522182513952612 +/- 4.32e-38]",
+          "complete_approximation_increment_upper": "[2.0826813647578036417545871820247667002 +/- 1.81e-38]",
+          "calibration_error_ledger": {
+            "anchor_uncertainty_upper": "[5.5585513666310884581243269242880523993e-10 +/- 4.75e-48]",
+            "correlated_increment_upper": "[0.00025017594339260540436953306198120117189 +/- 5.01e-42]",
+            "complete_phase_jet_error_upper": "[0.00025017649924774206747837887441389360069 +/- 2.41e-43]",
+            "physical_firstjet_error_divided_by_A_upper": "[0.00038356454738442013046533397622575276628 +/- 8.54e-43]"
+          },
+          "source_complete_phase_error_diagnostic_upper": "[1.0213050433411863369156127713204634942e-10 +/- 4.12e-48]",
+          "analytic_anchor_error_upper": "[0.41372881383887595320709274499333352721 +/- 1.86e-39]"
+        },
+        {
+          "t_index": 14,
+          "t": [
+            "149/1600",
+            "317/3200"
+          ],
+          "direct_radii": {
+            "analytic_direct": "[0.99262094047310140080789602426627880092 +/- 9.55e-40]",
+            "calibrated_direct": "[1.4060469194027843774195458163206572120 +/- 2.17e-38]",
+            "source_direct_raw": "[1.3752774393145500795266247390298252472 +/- 3.31e-38]",
+            "source_direct_propagated": "[1.4217468244509305598545558737024439227 +/- 1.18e-38]",
+            "source_direct_best": "[1.4217468244509305598545558737024439227 +/- 1.18e-38]",
+            "uncalibrated_source_direct": "[1.4051953408997588714281474427713553002 +/- 2.39e-38]"
+          },
+          "minimum_locations": {
+            "analytic_direct": [
+              "64063/64",
+              "1001"
+            ],
+            "calibrated_direct": [
+              "64063/64",
+              "1001"
+            ],
+            "source_direct_raw": [
+              "64063/64",
+              "1001"
+            ],
+            "source_direct_propagated": [
+              "64063/64",
+              "1001"
+            ],
+            "source_direct_best": [
+              "64063/64",
+              "1001"
+            ],
+            "uncalibrated_source_direct": [
+              "64063/64",
+              "1001"
+            ]
+          },
+          "scalar_radii": {
+            "analytic_only": "[-0.057958145099089492156355094990590720815 +/- 3.22e-40]",
+            "source_uncalibrated": "[1.1668296930775579649730492187869919426 +/- 2.19e-38]",
+            "source_calibrated": "[1.1676845071365398111861552878754579414 +/- 3.15e-38]"
+          },
+          "calibrated_anchor_nominal_radius_lower": "[3.2405290045603656109588057754060075597 +/- 2.61e-38]",
+          "full_approximation_anchor_nominal_radius_lower": "[3.2406249938466960869240608675555690477 +/- 2.68e-38]",
+          "complete_approximation_increment_upper": "[2.0725954034975105140232829600454996917 +/- 3.13e-38]",
+          "calibration_error_ledger": {
+            "anchor_uncertainty_upper": "[5.5241983758249049615875598126155137801e-10 +/- 3.99e-48]",
+            "correlated_increment_upper": "0.00024909337389544816687703132629394531250",
+            "complete_phase_jet_error_upper": "[0.00024909392631528574936752748504992657405 +/- 1.38e-42]",
+            "physical_firstjet_error_divided_by_A_upper": "[0.00038190477743263044036131271005174268236 +/- 1.93e-43]"
+          },
+          "source_complete_phase_error_diagnostic_upper": "[1.0132421527331985334010186498925268193e-10 +/- 1.35e-48]",
+          "analytic_anchor_error_upper": "[0.41372836583858302988089739129778490409 +/- 6.56e-40]"
+        },
+        {
+          "t_index": 15,
+          "t": [
+            "317/3200",
+            "21/200"
+          ],
+          "direct_radii": {
+            "analytic_direct": "[0.99062883552603427800378070551354687210 +/- 3.83e-39]",
+            "calibrated_direct": "[1.4040538745290607479998154427892729532 +/- 4.71e-38]",
+            "source_direct_raw": "[1.3730906448892813985721420962244669619 +/- 5.67e-39]",
+            "source_direct_propagated": "[1.4194038098293532019387187660436238549 +/- 3.06e-38]",
+            "source_direct_best": "[1.4194038098293532019387187660436238549 +/- 3.06e-38]",
+            "uncalibrated_source_direct": "[1.4032008866271419921669084319043997914 +/- 3.52e-38]"
+          },
+          "minimum_locations": {
+            "analytic_direct": [
+              "64063/64",
+              "1001"
+            ],
+            "calibrated_direct": [
+              "64063/64",
+              "1001"
+            ],
+            "source_direct_raw": [
+              "64063/64",
+              "1001"
+            ],
+            "source_direct_propagated": [
+              "64063/64",
+              "1001"
+            ],
+            "source_direct_best": [
+              "64063/64",
+              "1001"
+            ],
+            "uncalibrated_source_direct": [
+              "64063/64",
+              "1001"
+            ]
+          },
+          "scalar_radii": {
+            "analytic_only": "[-0.055304157343224774008630014743817156381 +/- 4.34e-40]",
+            "source_uncalibrated": "[1.1694824654453571971584850519990372307 +/- 3.04e-38]",
+            "source_calibrated": "[1.1703430437274913833796942459274132402 +/- 6.80e-40]"
+          },
+          "calibrated_anchor_nominal_radius_lower": "[3.2331140534793182491111789805541109465 +/- 2.18e-38]",
+          "full_approximation_anchor_nominal_radius_lower": "[3.2332060924824758611268760240702485900 +/- 2.78e-38]",
+          "complete_approximation_increment_upper": "[2.0625229623767482731133219522124533380 +/- 3.37e-38]",
+          "calibration_error_ledger": {
+            "anchor_uncertainty_upper": "[5.4900576959473922990112180969365008366e-10 +/- 2.05e-48]",
+            "correlated_increment_upper": "0.00024804682607282302342355251312255859375",
+            "complete_phase_jet_error_upper": "[0.00024804737507859261816278241424436828740 +/- 8.38e-44]",
+            "physical_firstjet_error_divided_by_A_upper": "[0.00038030023549509040837405916527967742984 +/- 4.75e-42]"
+          },
+          "source_complete_phase_error_diagnostic_upper": "[1.0052480099902375668226615691310926397e-10 +/- 3.65e-48]",
+          "analytic_anchor_error_upper": "[0.41372791783926032684594847539873723560 +/- 9.06e-40]"
+        },
+        {
+          "t_index": 16,
+          "t": [
+            "21/200",
+            "71/640"
+          ],
+          "direct_radii": {
+            "analytic_direct": "[0.98874469454652268685705076072421146014 +/- 2.20e-39]",
+            "calibrated_direct": "[1.4021683353826136484899558628011378566 +/- 4.76e-38]",
+            "source_direct_raw": "[1.3708252438837469136083987403656725128 +/- 4.33e-38]",
+            "source_direct_propagated": "[1.4169717189178785275085349589665463586 +/- 1.66e-38]",
+            "source_direct_best": "[1.4169717189178785275085349589665463586 +/- 1.66e-38]",
+            "uncalibrated_source_direct": "[1.4013141833830317823118105258778774087 +/- 4.91e-38]"
+          },
+          "minimum_locations": {
+            "analytic_direct": [
+              "64063/64",
+              "1001"
+            ],
+            "calibrated_direct": [
+              "64063/64",
+              "1001"
+            ],
+            "source_direct_raw": [
+              "64063/64",
+              "1001"
+            ],
+            "source_direct_propagated": [
+              "64063/64",
+              "1001"
+            ],
+            "source_direct_best": [
+              "64063/64",
+              "1001"
+            ],
+            "uncalibrated_source_direct": [
+              "64063/64",
+              "1001"
+            ]
+          },
+          "scalar_radii": {
+            "analytic_only": "[-0.052653007090795726108597181802169117800 +/- 4.57e-40]",
+            "source_uncalibrated": "[1.1721317109407439593585220492515009342 +/- 3.83e-38]",
+            "source_calibrated": "[1.1729983143758623686019617608250152697 +/- 1.82e-38]"
+          },
+          "calibrated_anchor_nominal_radius_lower": "[3.2257102372644309469789598487384111912 +/- 4.62e-38]",
+          "full_approximation_anchor_nominal_radius_lower": "[3.2257982774443334840629060229550688570 +/- 4.12e-38]",
+          "complete_approximation_increment_upper": "[2.0524644450845293340447820162233106457 +/- 9.85e-39]",
+          "calibration_error_ledger": {
+            "anchor_uncertainty_upper": "[5.4561280147345303257799421132870262584e-10 +/- 1.34e-48]",
+            "correlated_increment_upper": "[0.00024747725842644285876303911209106445314 +/- 5.01e-42]",
+            "complete_phase_jet_error_upper": "[0.00024747780403924433221607169008527578184 +/- 2.38e-42]",
+            "physical_firstjet_error_divided_by_A_upper": "[0.00037942698710348776880481103517883538973 +/- 1.66e-42]"
+          },
+          "source_complete_phase_error_diagnostic_upper": "[9.9902857924623399193885652843556933289e-11 +/- 1.23e-49]",
+          "analytic_anchor_error_upper": "[0.41372746984090784095048557733105215643 +/- 4.30e-40]"
+        },
+        {
+          "t_index": 17,
+          "t": [
+            "71/640",
+            "187/1600"
+          ],
+          "direct_radii": {
+            "analytic_direct": "[0.98696723732200172013105722527719563448 +/- 1.84e-39]",
+            "calibrated_direct": "[1.4003890247218458643376309395572835617 +/- 4.18e-38]",
+            "source_direct_raw": "[1.3684823135940515433196653676133698111 +/- 2.78e-38]",
+            "source_direct_propagated": "[1.4144517538349388749931152770830815190 +/- 9.50e-39]",
+            "source_direct_best": "[1.4144517538349388749931152770830815190 +/- 9.50e-39]",
+            "uncalibrated_source_direct": "[1.3995339479990056822769081043199779560 +/- 3.87e-38]"
+          },
+          "minimum_locations": {
+            "analytic_direct": [
+              "64063/64",
+              "1001"
+            ],
+            "calibrated_direct": [
+              "64063/64",
+              "1001"
+            ],
+            "source_direct_raw": [
+              "64063/64",
+              "1001"
+            ],
+            "source_direct_propagated": [
+              "64063/64",
+              "1001"
+            ],
+            "source_direct_best": [
+              "64063/64",
+              "1001"
+            ],
+            "uncalibrated_source_direct": [
+              "64063/64",
+              "1001"
+            ]
+          },
+          "scalar_radii": {
+            "analytic_only": "[-0.050004793651203073307544356266320341019 +/- 2.38e-40]",
+            "source_uncalibrated": "[1.1747773304805544583815832652743634942 +/- 1.46e-38]",
+            "source_calibrated": "[1.1756502220935808973421978437790073493 +/- 4.93e-38]"
+          },
+          "calibrated_anchor_nominal_radius_lower": "[3.2183176976095534744148563295961760928 +/- 6.29e-39]",
+          "full_approximation_anchor_nominal_radius_lower": "[3.2184016915251721980107199416370891394 +/- 4.71e-38]",
+          "complete_approximation_increment_upper": "[2.0424200937231576670992667582616090089 +/- 4.82e-38]",
+          "calibration_error_ledger": {
+            "anchor_uncertainty_upper": "[5.4224080199303610717134342601143172519e-10 +/- 3.73e-48]",
+            "correlated_increment_upper": "0.00024738125057410798035562038421630859375",
+            "complete_phase_jet_error_upper": "[0.00024738179281490997339172755555973460518 +/- 1.73e-42]",
+            "physical_firstjet_error_divided_by_A_upper": "[0.00037927978962297281668878143111123364843 +/- 1.89e-42]"
+          },
+          "source_complete_phase_error_diagnostic_upper": "[9.9455159799381086171323895808387108682e-11 +/- 3.23e-49]",
+          "analytic_anchor_error_upper": "[0.41372702184352556904276192843892529880 +/- 2.27e-40]"
+        },
+        {
+          "t_index": 18,
+          "t": [
+            "187/1600",
+            "393/3200"
+          ],
+          "direct_radii": {
+            "analytic_direct": "[0.98529517550520023547829697330517027252 +/- 1.95e-39]",
+            "calibrated_direct": "[1.3987152137385774924636625978500173543 +/- 1.62e-38]",
+            "source_direct_raw": "[1.3662562381176068691394980496495809736 +/- 2.38e-38]",
+            "source_direct_propagated": "[1.4120384222788485060029300911285490552 +/- 1.22e-38]",
+            "source_direct_best": "[1.4120384222788485060029300911285490552 +/- 1.22e-38]",
+            "uncalibrated_source_direct": "[1.3978590312422792382082085910086546872 +/- 4.62e-38]"
+          },
+          "minimum_locations": {
+            "analytic_direct": [
+              "64063/64",
+              "1001"
+            ],
+            "calibrated_direct": [
+              "64063/64",
+              "1001"
+            ],
+            "source_direct_raw": [
+              "64063/64",
+              "1001"
+            ],
+            "source_direct_propagated": [
+              "64063/64",
+              "1001"
+            ],
+            "source_direct_best": [
+              "64063/64",
+              "1001"
+            ],
+            "uncalibrated_source_direct": [
+              "64063/64",
+              "1001"
+            ]
+          },
+          "scalar_radii": {
+            "analytic_only": "[-0.047359817213482761020748855821108721735 +/- 3.04e-40]",
+            "source_uncalibrated": "[1.1774195984526686945438290784885749408 +/- 6.94e-39]",
+            "source_calibrated": "[1.1782989856030555722731644220120701343 +/- 3.43e-38]"
+          },
+          "calibrated_anchor_nominal_radius_lower": "[3.2109365540503560496175831970698839734 +/- 2.18e-38]",
+          "full_approximation_anchor_nominal_radius_lower": "[3.2110163726406368737003953421081688413 +/- 4.98e-38]",
+          "complete_approximation_increment_upper": "[2.0323902463973140915738641754244263971 +/- 1.05e-38]",
+          "calibration_error_ledger": {
+            "anchor_uncertainty_upper": "[5.3888964271866059052007567439892888961e-10 +/- 3.61e-48]",
+            "correlated_increment_upper": "[0.00024732151109674305189400911331176757814 +/- 5.01e-42]",
+            "complete_phase_jet_error_upper": "[0.00024732204998638577055459963338744197706 +/- 3.89e-42]",
+            "physical_firstjet_error_divided_by_A_upper": "[0.00037918819796800639322794960364658125908 +/- 4.57e-42]"
+          },
+          "source_complete_phase_error_diagnostic_upper": "[9.9009970222405680087538322861599015088e-11 +/- 1.91e-49]",
+          "analytic_anchor_error_upper": "[0.41372657384711350797104441130197599316 +/- 4.98e-39]"
+        },
+        {
+          "t_index": 19,
+          "t": [
+            "393/3200",
+            "103/800"
+          ],
+          "direct_radii": {
+            "analytic_direct": "[0.98372717249897073104592769520146104537 +/- 1.56e-39]",
+            "calibrated_direct": "[1.3971455643012856822535564510166399507 +/- 1.88e-38]",
+            "source_direct_raw": "[1.3641458715467523000039461928679198715 +/- 6.80e-39]",
+            "source_direct_propagated": "[1.4097306907850108318599435415146357155 +/- 4.63e-38]",
+            "source_direct_best": "[1.4097306907850108318599435415146357155 +/- 4.63e-38]",
+            "uncalibrated_source_direct": "[1.3962880946594304142872722020877368071 +/- 8.39e-39]"
+          },
+          "minimum_locations": {
+            "analytic_direct": [
+              "64063/64",
+              "1001"
+            ],
+            "calibrated_direct": [
+              "64063/64",
+              "1001"
+            ],
+            "source_direct_raw": [
+              "64063/64",
+              "1001"
+            ],
+            "source_direct_propagated": [
+              "64063/64",
+              "1001"
+            ],
+            "source_direct_best": [
+              "64063/64",
+              "1001"
+            ],
+            "uncalibrated_source_direct": [
+              "64063/64",
+              "1001"
+            ]
+          },
+          "scalar_radii": {
+            "analytic_only": "[-0.044718194981225709796407535696249458153 +/- 3.59e-40]",
+            "source_uncalibrated": "[1.1800583943702199968593826743640770151 +/- 1.90e-38]",
+            "source_calibrated": "[1.1809444854252722464294347782596607110 +/- 5.55e-39]"
+          },
+          "calibrated_anchor_nominal_radius_lower": "[3.2035669617651160701087578880617324043 +/- 4.63e-38]",
+          "full_approximation_anchor_nominal_radius_lower": "[3.2036424769674977001798905888514509434 +/- 2.22e-38]",
+          "complete_approximation_increment_upper": "[2.0223751764873597202164489536834877798 +/- 2.29e-38]",
+          "calibration_error_ledger": {
+            "anchor_uncertainty_upper": "[5.3555919410030470478649162840735587228e-10 +/- 4.50e-48]",
+            "correlated_increment_upper": "0.00024729931692490936256945133209228515625",
+            "complete_phase_jet_error_upper": "[0.00024729985248410346287415611858391356361 +/- 4.13e-42]",
+            "physical_firstjet_error_divided_by_A_upper": "[0.00037915416989955840454611815425373357372 +/- 4.77e-43]"
+          },
+          "source_complete_phase_error_diagnostic_upper": "[9.8567276673797010650881196165480102187e-11 +/- 4.59e-49]",
+          "analytic_anchor_error_upper": "[0.41372612585167165458361355966133744908 +/- 1.67e-39]"
+        },
+        {
+          "t_index": 20,
+          "t": [
+            "103/800",
+            "431/3200"
+          ],
+          "direct_radii": {
+            "analytic_direct": "[0.98226189609680451750798454610813038440 +/- 3.28e-39]",
+            "calibrated_direct": "[1.3956787415470653577653599966360561567 +/- 3.71e-38]",
+            "source_direct_raw": "[1.3621500193224936138225100116683296270 +/- 3.02e-38]",
+            "source_direct_propagated": "[1.4075274950179965331549451109396089036 +/- 1.42e-38]",
+            "source_direct_best": "[1.4075274950179965331549451109396089036 +/- 1.42e-38]",
+            "uncalibrated_source_direct": "[1.3948198041722105408562787811707156770 +/- 8.65e-39]"
+          },
+          "minimum_locations": {
+            "analytic_direct": [
+              "64063/64",
+              "1001"
+            ],
+            "calibrated_direct": [
+              "64063/64",
+              "1001"
+            ],
+            "source_direct_raw": [
+              "64063/64",
+              "1001"
+            ],
+            "source_direct_propagated": [
+              "64063/64",
+              "1001"
+            ],
+            "source_direct_best": [
+              "64063/64",
+              "1001"
+            ],
+            "uncalibrated_source_direct": [
+              "64063/64",
+              "1001"
+            ]
+          },
+          "scalar_radii": {
+            "analytic_only": "[-0.042080208018538335029424508412998625542 +/- 1.52e-40]",
+            "source_uncalibrated": "[1.1826934328917484888275031752357501262 +/- 3.19e-38]",
+            "source_calibrated": "[1.1835864374447670697851176734537489016 +/- 2.66e-38]"
+          },
+          "calibrated_anchor_nominal_radius_lower": "[3.1962089798980236284660384942696079973 +/- 4.74e-38]",
+          "full_approximation_anchor_nominal_radius_lower": "[3.1962800644321130484579431071754330737 +/- 4.66e-38]",
+          "complete_approximation_increment_upper": "[2.0123752249837593425823684460398091102 +/- 1.84e-38]",
+          "calibration_error_ledger": {
+            "anchor_uncertainty_upper": "[5.3224932826271447413746966323194639856e-10 +/- 2.92e-48]",
+            "correlated_increment_upper": "[0.00024731693724788783583790063858032226564 +/- 5.01e-42]",
+            "complete_phase_jet_error_upper": "[0.00024731746949721609855237477604998549758 +/- 1.40e-42]",
+            "physical_firstjet_error_divided_by_A_upper": "[0.00037918118448585439356958266269823323945 +/- 4.79e-42]"
+          },
+          "source_complete_phase_error_diagnostic_upper": "[9.8127088446305986919237199279358486761e-11 +/- 3.26e-49]",
+          "analytic_anchor_error_upper": "[0.41372567785720000572876355834574741639 +/- 3.39e-39]"
+        },
+        {
+          "t_index": 21,
+          "t": [
+            "431/3200",
+            "9/64"
+          ],
+          "direct_radii": {
+            "analytic_direct": "[0.98089799682929328321205533489268345122 +/- 2.15e-39]",
+            "calibrated_direct": "[1.3943133904105817462489633723263214531 +/- 2.87e-38]",
+            "source_direct_raw": "[1.3602674964567394042900550527123054311 +/- 1.28e-38]",
+            "source_direct_propagated": "[1.4054277649033409482574382167829818272 +/- 4.35e-38]",
+            "source_direct_best": "[1.4054277649033409482574382167829818272 +/- 4.35e-38]",
+            "uncalibrated_source_direct": "[1.3934528084512920842320294242220382136 +/- 1.36e-38]"
+          },
+          "minimum_locations": {
+            "analytic_direct": [
+              "64063/64",
+              "1001"
+            ],
+            "calibrated_direct": [
+              "64063/64",
+              "1001"
+            ],
+            "source_direct_raw": [
+              "64063/64",
+              "1001"
+            ],
+            "source_direct_propagated": [
+              "64063/64",
+              "1001"
+            ],
+            "source_direct_best": [
+              "64063/64",
+              "1001"
+            ],
+            "uncalibrated_source_direct": [
+              "64063/64",
+              "1001"
+            ]
+          },
+          "scalar_radii": {
+            "analytic_only": "[-0.039446020603302320496176333178777697416 +/- 3.93e-40]",
+            "source_uncalibrated": "[1.1853245426009760669198516179834628832 +/- 2.63e-38]",
+            "source_calibrated": "[1.1862246712002334602169796175981192960 +/- 1.56e-38]"
+          },
+          "calibrated_anchor_nominal_radius_lower": "[3.1888627160725047798916108994957956536 +/- 3.36e-38]",
+          "full_approximation_anchor_nominal_radius_lower": "[3.1889292437147397360298288880922521896 +/- 3.88e-38]",
+          "complete_approximation_increment_upper": "[2.0023906648446514630949673668705153878 +/- 4.51e-38]",
+          "calibration_error_ledger": {
+            "anchor_uncertainty_upper": "[5.2895991788941131292678865528377779623e-10 +/- 4.12e-48]",
+            "correlated_increment_upper": "[0.00024737949865993869025260210037231445314 +/- 5.01e-42]",
+            "complete_phase_jet_error_upper": "[0.00024738002761985657966391502716096973691 +/- 2.80e-42]",
+            "physical_firstjet_error_divided_by_A_upper": "[0.00037927710169980082158674385190847516298 +/- 3.30e-42]"
+          },
+          "source_complete_phase_error_diagnostic_upper": "[9.7689615649216125084926780578463779880e-11 +/- 5.81e-50]",
+          "analytic_anchor_error_upper": "[0.41372522986369855825480224319763932641 +/- 1.62e-39]"
+        },
+        {
+          "t_index": 22,
+          "t": [
+            "9/64",
+            "469/3200"
+          ],
+          "direct_radii": {
+            "analytic_direct": "[0.97963409426108501115499632454202547600 +/- 1.27e-39]",
+            "calibrated_direct": "[1.3930481312145712299101523794368406179 +/- 3.10e-38]",
+            "source_direct_raw": "[1.3584970613351220599697391910758205216 +/- 1.47e-38]",
+            "source_direct_propagated": "[1.4034304116563958609164265460964021455 +/- 1.35e-38]",
+            "source_direct_best": "[1.4034304116563958609164265460964021455 +/- 1.35e-38]",
+            "uncalibrated_source_direct": "[1.3921857251904952292790634495476196761 +/- 4.10e-39]"
+          },
+          "minimum_locations": {
+            "analytic_direct": [
+              "64063/64",
+              "1001"
+            ],
+            "calibrated_direct": [
+              "64063/64",
+              "1001"
+            ],
+            "source_direct_raw": [
+              "64063/64",
+              "1001"
+            ],
+            "source_direct_propagated": [
+              "64063/64",
+              "1001"
+            ],
+            "source_direct_best": [
+              "64063/64",
+              "1001"
+            ],
+            "uncalibrated_source_direct": [
+              "64063/64",
+              "1001"
+            ]
+          },
+          "scalar_radii": {
+            "analytic_only": "[-0.036815848387929978978425623796422075897 +/- 3.67e-40]",
+            "source_uncalibrated": "[1.1879515070703736784698650417776273002 +/- 2.70e-38]",
+            "source_calibrated": "[1.1888589713909223542355885791892623458 +/- 2.48e-38]"
+          },
+          "calibrated_anchor_nominal_radius_lower": "[3.1815282838139832603040976317106006742 +/- 3.36e-38]",
+          "full_approximation_anchor_nominal_radius_lower": "[3.1815901292249142986038461762017361486 +/- 1.93e-38]",
+          "complete_approximation_increment_upper": "[1.9924218261319849333959850877960491383 +/- 7.40e-39]",
+          "calibration_error_ledger": {
+            "anchor_uncertainty_upper": "[5.2569083678067665227488025455170305913e-10 +/- 8.45e-49]",
+            "correlated_increment_upper": "[0.00024748576538513589184731245040893554689 +/- 5.01e-42]",
+            "complete_phase_jet_error_upper": "[0.00024748629107597267252396472528919009859 +/- 1.95e-42]",
+            "physical_firstjet_error_divided_by_A_upper": "[0.00037944002688179883400810556267561777452 +/- 3.64e-42]"
+          },
+          "source_complete_phase_error_diagnostic_upper": "[9.7256267489609618387648904753144193878e-11 +/- 1.90e-49]",
+          "analytic_anchor_error_upper": "[0.41372478187116730901005110099923391347 +/- 4.61e-39]"
+        },
+        {
+          "t_index": 23,
+          "t": [
+            "469/3200",
+            "61/400"
+          ],
+          "direct_radii": {
+            "analytic_direct": "[0.97846883730314723422843834025716412522 +/- 6.52e-40]",
+            "calibrated_direct": "[1.3918816088477142360779014226031568569 +/- 1.02e-38]",
+            "source_direct_raw": "[1.3568374815843146778245131469805992448 +/- 4.18e-38]",
+            "source_direct_propagated": "[1.4015343342315250983885682421560994302 +/- 2.06e-39]",
+            "source_direct_best": "[1.4015343342315250983885682421560994302 +/- 2.06e-39]",
+            "uncalibrated_source_direct": "[1.3910172014326787992643391182747025251 +/- 5.73e-39]"
+          },
+          "minimum_locations": {
+            "analytic_direct": [
+              "64063/64",
+              "1001"
+            ],
+            "calibrated_direct": [
+              "64063/64",
+              "1001"
+            ],
+            "source_direct_raw": [
+              "64063/64",
+              "1001"
+            ],
+            "source_direct_propagated": [
+              "64063/64",
+              "1001"
+            ],
+            "source_direct_best": [
+              "64063/64",
+              "1001"
+            ],
+            "uncalibrated_source_direct": [
+              "64063/64",
+              "1001"
+            ]
+          },
+          "scalar_radii": {
+            "analytic_only": "[-0.034189851627070548641520363901751629574 +/- 2.21e-40]",
+            "source_uncalibrated": "[1.1905741605712709660008481741339473853 +/- 2.43e-38]",
+            "source_calibrated": "[1.1914891734905558487656442904891018519 +/- 2.97e-38]"
+          },
+          "calibrated_anchor_nominal_radius_lower": "[3.1742057734224377527057756242453635481 +/- 1.35e-39]",
+          "full_approximation_anchor_nominal_radius_lower": "[3.1742628120783917112878781871477056464 +/- 3.54e-38]",
+          "complete_approximation_increment_upper": "[1.9824689602161639699103176704479507867 +/- 3.44e-38]",
+          "calibration_error_ledger": {
+            "anchor_uncertainty_upper": "[5.2244196152750755960195104621277318651e-10 +/- 1.43e-48]",
+            "correlated_increment_upper": "0.00024763919327597250230610370635986328125",
+            "complete_phase_jet_error_upper": "[0.00024763971571793402981366330831090949402 +/- 3.19e-42]",
+            "physical_firstjet_error_divided_by_A_upper": "[0.00037967525846405931307040200420348563933 +/- 2.16e-42]"
+          },
+          "source_complete_phase_error_diagnostic_upper": "[9.6833871457515420811887912433410183014e-11 +/- 3.49e-49]",
+          "analytic_anchor_error_upper": "[0.41372433387960625484284526939863131648 +/- 4.44e-39]"
+        },
+        {
+          "t_index": 24,
+          "t": [
+            "61/400",
+            "507/3200"
+          ],
+          "direct_radii": {
+            "analytic_direct": "[0.97740084038479956610679479056935382460 +/- 3.39e-39]",
+            "calibrated_direct": "[1.3908124340194058119951669454221989261 +/- 1.29e-38]",
+            "source_direct_raw": "[1.3552874836750054474506511383152600438 +/- 5.51e-39]",
+            "source_direct_propagated": "[1.3997384060337631228620994928430170866 +/- 1.83e-38]",
+            "source_direct_best": "[1.3997384060337631228620994928430170866 +/- 1.83e-38]",
+            "uncalibrated_source_direct": "[1.3899458497436199629106463581989201909 +/- 1.15e-38]"
+          },
+          "minimum_locations": {
+            "analytic_direct": [
+              "64063/64",
+              "1001"
+            ],
+            "calibrated_direct": [
+              "64063/64",
+              "1001"
+            ],
+            "source_direct_raw": [
+              "64063/64",
+              "1001"
+            ],
+            "source_direct_propagated": [
+              "64063/64",
+              "1001"
+            ],
+            "source_direct_best": [
+              "64063/64",
+              "1001"
+            ],
+            "uncalibrated_source_direct": [
+              "64063/64",
+              "1001"
+            ]
+          },
+          "scalar_radii": {
+            "analytic_only": "[-0.031568219251479586199723873996121167248 +/- 1.92e-40]",
+            "source_uncalibrated": "[1.1931923089776513850118431417114311462 +/- 7.08e-39]",
+            "source_calibrated": "[1.1941150843344964887445235337396286103 +/- 4.70e-38]"
+          },
+          "calibrated_anchor_nominal_radius_lower": "[3.1668953001592793994616429922951256573 +/- 3.81e-38]",
+          "full_approximation_anchor_nominal_radius_lower": "[3.1669474085669974273120520828860086532 +/- 4.75e-38]",
+          "complete_approximation_increment_upper": "[1.9725323723197695857340068088433509869 +/- 2.65e-38]",
+          "calibration_error_ledger": {
+            "anchor_uncertainty_upper": "[5.1921316314178718784767462453560045636e-10 +/- 1.67e-48]",
+            "correlated_increment_upper": "[0.00024784298580016184132546186447143554689 +/- 5.01e-42]",
+            "complete_phase_jet_error_upper": "[0.00024784350501332498311264971214606008249 +/- 4.55e-42]",
+            "physical_firstjet_error_divided_by_A_upper": "[0.00037998770792876082085045057164991300993 +/- 2.71e-42]"
+          },
+          "source_complete_phase_error_diagnostic_upper": "[9.6449163340113806720862175850252256209e-11 +/- 3.75e-49]",
+          "analytic_anchor_error_upper": "[0.41372388588901539260153353683590366085 +/- 8.71e-40]"
+        },
+        {
+          "t_index": 25,
+          "t": [
+            "507/3200",
+            "263/1600"
+          ],
+          "direct_radii": {
+            "analytic_direct": "[0.97642869993345962983237051402143172960 +/- 4.81e-39]",
+            "calibrated_direct": "[1.3898392007023856850589232040922917484 +/- 2.52e-38]",
+            "source_direct_raw": "[1.3538457833581791774815523398333205975 +/- 3.61e-39]",
+            "source_direct_propagated": "[1.3980414972783430541265865007149992345 +/- 4.60e-38]",
+            "source_direct_best": "[1.3980414972783430541265865007149992345 +/- 4.60e-38]",
+            "uncalibrated_source_direct": "[1.3889702647044514815210346840610739815 +/- 4.92e-38]"
+          },
+          "minimum_locations": {
+            "analytic_direct": [
+              "64063/64",
+              "1001"
+            ],
+            "calibrated_direct": [
+              "64063/64",
+              "1001"
+            ],
+            "source_direct_raw": [
+              "64063/64",
+              "1001"
+            ],
+            "source_direct_propagated": [
+              "64063/64",
+              "1001"
+            ],
+            "source_direct_best": [
+              "64063/64",
+              "1001"
+            ],
+            "uncalibrated_source_direct": [
+              "64063/64",
+              "1001"
+            ]
+          },
+          "scalar_radii": {
+            "analytic_only": "[-0.028951145945263455242346251985504314711 +/- 2.94e-40]",
+            "source_uncalibrated": "[1.1958057537966722504605853882752563973 +/- 1.28e-39]",
+            "source_calibrated": "[1.1967365066161253057585029359340866471 +/- 3.71e-38]"
+          },
+          "calibrated_anchor_nominal_radius_lower": "[3.1595969557049602167639005179881937026 +/- 1.05e-38]",
+          "full_approximation_anchor_nominal_radius_lower": "[3.1596440111831196092783756772739687118 +/- 7.33e-39]",
+          "complete_approximation_increment_upper": "[1.9626123496192963102100079755874097334 +/- 8.72e-39]",
+          "calibration_error_ledger": {
+            "anchor_uncertainty_upper": "[5.1600431933202732991258965610230582022e-10 +/- 1.27e-48]",
+            "correlated_increment_upper": "[0.00024809895353428146336227655410766601564 +/- 5.01e-42]",
+            "complete_phase_jet_error_upper": "[0.00024809946953860079538960646669732211794 +/- 8.21e-43]",
+            "physical_firstjet_error_divided_by_A_upper": "[0.00038038015121107706123251461026137205709 +/- 2.74e-42]"
+          },
+          "source_complete_phase_error_diagnostic_upper": "[9.6191224503604391932080704992621582968e-11 +/- 3.88e-49]",
+          "analytic_anchor_error_upper": "[0.41372343789939471913447834246918812038 +/- 4.85e-39]"
+        },
+        {
+          "t_index": 26,
+          "t": [
+            "263/1600",
+            "109/640"
+          ],
+          "direct_radii": {
+            "analytic_direct": "[0.97555097910385583366520370631477090504 +/- 3.35e-40]",
+            "calibrated_direct": "[1.3889604716671165123339197895911012508 +/- 1.35e-38]",
+            "source_direct_raw": "[1.3525110778403186025577408070280433202 +/- 4.48e-38]",
+            "source_direct_propagated": "[1.3964424565943105877679750268024240011 +/- 2.81e-38]",
+            "source_direct_best": "[1.3964424565943105877679750268024240011 +/- 2.81e-38]",
+            "uncalibrated_source_direct": "[1.3880890076190855323097836176374745841 +/- 4.22e-38]"
+          },
+          "minimum_locations": {
+            "analytic_direct": [
+              "64063/64",
+              "1001"
+            ],
+            "calibrated_direct": [
+              "64063/64",
+              "1001"
+            ],
+            "source_direct_raw": [
+              "64063/64",
+              "1001"
+            ],
+            "source_direct_propagated": [
+              "64063/64",
+              "1001"
+            ],
+            "source_direct_best": [
+              "64063/64",
+              "1001"
+            ],
+            "uncalibrated_source_direct": [
+              "64063/64",
+              "1001"
+            ]
+          },
+          "scalar_radii": {
+            "analytic_only": "[-0.026338813041227047628517392033068155833 +/- 2.23e-41]",
+            "source_uncalibrated": "[1.1984143118972303883897323964681577469 +/- 3.88e-38]",
+            "source_calibrated": "[1.1993532582644291194309331870428703668 +/- 2.70e-38]"
+          },
+          "calibrated_anchor_nominal_radius_lower": "[3.1523108805431325303974387439677761525 +/- 2.13e-38]",
+          "full_approximation_anchor_nominal_radius_lower": "[3.1523527613421139895465334035047176663 +/- 1.16e-38]",
+          "complete_approximation_increment_upper": "[1.9527092148629047707087594082341301900 +/- 4.85e-38]",
+          "calibration_error_ledger": {
+            "anchor_uncertainty_upper": "[5.1281530669152008353193160161355891332e-10 +/- 2.18e-48]",
+            "correlated_increment_upper": "[0.00024840690298333356622606515884399414064 +/- 5.01e-42]",
+            "complete_phase_jet_error_upper": "[0.00024840741579864025774614869077559575419 +/- 3.92e-42]",
+            "physical_firstjet_error_divided_by_A_upper": "[0.00038085229165184485020598882497305789895 +/- 4.05e-42]"
+          },
+          "source_complete_phase_error_diagnostic_upper": "[9.6321278862086133896822188371261731712e-11 +/- 2.90e-50]",
+          "analytic_anchor_error_upper": "[0.41372298991074423129005577610078045947 +/- 2.88e-39]"
+        },
+        {
+          "t_index": 27,
+          "t": [
+            "109/640",
+            "141/800"
+          ],
+          "direct_radii": {
+            "analytic_direct": "[0.97476631488215270699148374253125489047 +/- 3.01e-39]",
+            "calibrated_direct": "[1.3881748782089262999544459266444775307 +/- 5.27e-39]",
+            "source_direct_raw": "[1.3512820600471719596087876296706284594 +/- 1.09e-38]",
+            "source_direct_propagated": "[1.3949401248797502123964942868330304995 +/- 1.17e-38]",
+            "source_direct_best": "[1.3949401248797502123964942868330304995 +/- 1.17e-38]",
+            "uncalibrated_source_direct": "[1.3873007136419617442945569789673661033 +/- 3.91e-38]"
+          },
+          "minimum_locations": {
+            "analytic_direct": [
+              "64063/64",
+              "1001"
+            ],
+            "calibrated_direct": [
+              "64063/64",
+              "1001"
+            ],
+            "source_direct_raw": [
+              "64063/64",
+              "1001"
+            ],
+            "source_direct_propagated": [
+              "64063/64",
+              "1001"
+            ],
+            "source_direct_best": [
+              "64063/64",
+              "1001"
+            ],
+            "uncalibrated_source_direct": [
+              "64063/64",
+              "1001"
+            ]
+          },
+          "scalar_radii": {
+            "analytic_only": "[-0.023731398281474579809230812139972545951 +/- 1.03e-40]",
+            "source_uncalibrated": "[1.2010177986339295386547263964280870564 +/- 2.85e-38]",
+            "source_calibrated": "[1.2019651556864838604424921192928439621 +/- 4.02e-38]"
+          },
+          "calibrated_anchor_nominal_radius_lower": "[3.1450371247769841228612135100322002077 +/- 3.90e-38]",
+          "full_approximation_anchor_nominal_radius_lower": "[3.1450737100546572453688564142269086207 +/- 2.92e-38]",
+          "complete_approximation_increment_upper": "[1.9428231968033758640851960370607769385 +/- 1.13e-38]",
+          "calibration_error_ledger": {
+            "anchor_uncertainty_upper": "[5.0964600237230032087218282273749566762e-10 +/- 3.84e-49]",
+            "correlated_increment_upper": "0.00024877177747839596122503280639648437500",
+            "complete_phase_jet_error_upper": "[0.00024877228712439833352535367857930711250 +/- 4.34e-42]",
+            "physical_firstjet_error_divided_by_A_upper": "[0.00038141170825051137171939697478651229067 +/- 2.32e-42]"
+          },
+          "source_complete_phase_error_diagnostic_upper": "[9.7530227292678723647574011642463356514e-11 +/- 2.32e-49]",
+          "analytic_anchor_error_upper": "[0.41372254192306392591665557810322905547 +/- 1.34e-39]"
+        },
+        {
+          "t_index": 28,
+          "t": [
+            "141/800",
+            "583/3200"
+          ],
+          "direct_radii": {
+            "analytic_direct": "[0.97407327002544257825506661625814121855 +/- 2.70e-39]",
+            "calibrated_direct": "[1.3874809815949344511453152266195726414 +/- 8.51e-39]",
+            "source_direct_raw": "[1.3501573677705755753017006694986794754 +/- 4.84e-38]",
+            "source_direct_propagated": "[1.3935333357221151171644059924652532334 +/- 1.87e-38]",
+            "source_direct_best": "[1.3935333357221151171644059924652532334 +/- 1.87e-38]",
+            "uncalibrated_source_direct": "[1.3866039437075492065912965085352608004 +/- 3.16e-38]"
+          },
+          "minimum_locations": {
+            "analytic_direct": [
+              "64063/64",
+              "1001"
+            ],
+            "calibrated_direct": [
+              "64063/64",
+              "1001"
+            ],
+            "source_direct_raw": [
+              "64063/64",
+              "1001"
+            ],
+            "source_direct_propagated": [
+              "64063/64",
+              "1001"
+            ],
+            "source_direct_best": [
+              "64063/64",
+              "1001"
+            ],
+            "uncalibrated_source_direct": [
+              "64063/64",
+              "1001"
+            ]
+          },
+          "scalar_radii": {
+            "analytic_only": "[-0.021129070534216193449389337907698598235 +/- 4.03e-40]",
+            "source_uncalibrated": "[1.2036160423921130481767887423968610217 +/- 3.96e-38]",
+            "source_calibrated": "[1.2045720283730831529253040023158391048 +/- 2.22e-38]"
+          },
+          "calibrated_anchor_nominal_radius_lower": "[3.1377758287380569553703246824483422379 +/- 1.46e-38]",
+          "full_approximation_anchor_nominal_radius_lower": "[3.1378069985113496197778211138160490291 +/- 4.88e-38]",
+          "complete_approximation_increment_upper": "[1.9329546054995199781882937011754430536 +/- 3.99e-38]",
+          "calibration_error_ledger": {
+            "anchor_uncertainty_upper": "[5.0649628575909274691284010882916100142e-10 +/- 4.55e-48]",
+            "correlated_increment_upper": "[0.00024919435895753849763423204421997070314 +/- 5.01e-42]",
+            "complete_phase_jet_error_upper": "[0.00024919486545382425672697895706007953230 +/- 4.00e-42]",
+            "physical_firstjet_error_divided_by_A_upper": "[0.00038205959985879504934791697666099229257 +/- 4.53e-42]"
+          },
+          "source_complete_phase_error_diagnostic_upper": "[1.0149747970650373564695008671476304484e-10 +/- 1.15e-48]",
+          "analytic_anchor_error_upper": "[0.41372209393635379986268113934542940110 +/- 3.11e-39]"
+        },
+        {
+          "t_index": 29,
+          "t": [
+            "583/3200",
+            "301/1600"
+          ],
+          "direct_radii": {
+            "analytic_direct": "[0.97347041512750665210377145035241746243 +/- 2.62e-40]",
+            "calibrated_direct": "[1.3868773501752771386017252313889734993 +/- 4.48e-38]",
+            "source_direct_raw": "[1.3491356569207006740220580885473382508 +/- 4.09e-38]",
+            "source_direct_propagated": "[1.3922208938048871062981108772963149498 +/- 4.50e-38]",
+            "source_direct_best": "[1.3922208938048871062981108772963149498 +/- 4.50e-38]",
+            "uncalibrated_source_direct": "[1.3859972666161043482066157098854179871 +/- 2.20e-38]"
+          },
+          "minimum_locations": {
+            "analytic_direct": [
+              "64063/64",
+              "1001"
+            ],
+            "calibrated_direct": [
+              "64063/64",
+              "1001"
+            ],
+            "source_direct_raw": [
+              "64063/64",
+              "1001"
+            ],
+            "source_direct_propagated": [
+              "64063/64",
+              "1001"
+            ],
+            "source_direct_best": [
+              "64063/64",
+              "1001"
+            ],
+            "uncalibrated_source_direct": [
+              "64063/64",
+              "1001"
+            ]
+          },
+          "scalar_radii": {
+            "analytic_only": "[-0.018532018387551112702277217727587078710 +/- 6.42e-41]",
+            "source_uncalibrated": "[1.2062088511992246497239312253250242260 +/- 4.50e-38]",
+            "source_calibrated": "[1.2071736852973793761806569669400795551 +/- 1.45e-38]"
+          },
+          "calibrated_anchor_nominal_radius_lower": "[3.1305270693508065290831733644196830648 +/- 2.01e-38]",
+          "full_approximation_anchor_nominal_radius_lower": "[3.1305527046236142119091196620579569159 +/- 4.94e-40]",
+          "complete_approximation_increment_upper": "[1.9231037074508594394586117674639497347 +/- 4.31e-38]",
+          "calibration_error_ledger": {
+            "anchor_uncertainty_upper": "[5.0336603456341426737145821835081618058e-10 +/- 2.48e-48]",
+            "correlated_increment_upper": "[0.00024967609920167888049036264419555664064 +/- 5.01e-42]",
+            "complete_phase_jet_error_upper": "[0.00024967660256771344390463001565377499145 +/- 1.19e-42]",
+            "physical_firstjet_error_divided_by_A_upper": "[0.00038279819231549504642278742796731786762 +/- 4.47e-42]"
+          },
+          "source_complete_phase_error_diagnostic_upper": "[1.1203145375484952117894391651443677305e-10 +/- 1.74e-48]",
+          "analytic_anchor_error_upper": "[0.41372164595061384997654950111871908715 +/- 3.71e-39]"
+        },
+        {
+          "t_index": 30,
+          "t": [
+            "301/1600",
+            "621/3200"
+          ],
+          "direct_radii": {
+            "analytic_direct": "[0.97295633166282683254049625661116187074 +/- 3.47e-39]",
+            "calibrated_direct": "[1.3863625642009641154860966463669187818 +/- 1.48e-38]",
+            "source_direct_raw": "[1.3482155274176029231070286408090236238 +/- 3.90e-38]",
+            "source_direct_propagated": "[1.3910015754658371075201149368901728462 +/- 3.65e-38]",
+            "source_direct_best": "[1.3910015754658371075201149368901728462 +/- 3.65e-38]",
+            "uncalibrated_source_direct": "[1.3854792620531250537914215917071065234 +/- 3.79e-38]"
+          },
+          "minimum_locations": {
+            "analytic_direct": [
+              "64063/64",
+              "1001"
+            ],
+            "calibrated_direct": [
+              "64063/64",
+              "1001"
+            ],
+            "source_direct_raw": [
+              "64063/64",
+              "1001"
+            ],
+            "source_direct_propagated": [
+              "64063/64",
+              "1001"
+            ],
+            "source_direct_best": [
+              "64063/64",
+              "1001"
+            ],
+            "uncalibrated_source_direct": [
+              "64063/64",
+              "1001"
+            ]
+          },
+          "scalar_radii": {
+            "analytic_only": "[-0.015940335450982954671017715458367448006 +/- 3.69e-40]",
+            "source_uncalibrated": "[1.2087961290190016013645585485966041727 +/- 1.29e-38]",
+            "source_calibrated": "[1.2097700315005530819133831891568509089 +/- 3.43e-38]"
+          },
+          "calibrated_anchor_nominal_radius_lower": "[3.1232910007932246526941786709277698513 +/- 1.26e-38]",
+          "full_approximation_anchor_nominal_radius_lower": "[3.1233109834101238660289577982740974977 +/- 4.06e-38]",
+          "complete_approximation_increment_upper": "[1.9132707512855707124170485474666165077 +/- 2.47e-38]",
+          "calibration_error_ledger": {
+            "anchor_uncertainty_upper": "[5.0025512928744339264399359673787779505e-10 +/- 2.54e-48]",
+            "correlated_increment_upper": "[0.00025021750684572907630354166030883789064 +/- 5.01e-42]",
+            "complete_phase_jet_error_upper": "[0.00025021800710085836374693430430243462851 +/- 2.80e-42]",
+            "physical_firstjet_error_divided_by_A_upper": "[0.00038362826545061881439002219685750707833 +/- 2.95e-42]"
+          },
+          "source_complete_phase_error_diagnostic_upper": "[1.3727518804632917121578305072255884705e-10 +/- 2.98e-48]",
+          "analytic_anchor_error_upper": "[0.41372119796584407310669135506297326522 +/- 2.59e-40]"
+        },
+        {
+          "t_index": 31,
+          "t": [
+            "621/3200",
+            "1/5"
+          ],
+          "direct_radii": {
+            "analytic_direct": "[0.97252956036164026319942496352684900851 +/- 3.74e-39]",
+            "calibrated_direct": "[1.3859351576388134631875769585460408107 +/- 2.10e-38]",
+            "source_direct_raw": "[1.3473946960529517606929264453165154171 +/- 5.64e-39]",
+            "source_direct_propagated": "[1.3898732635004290262435975667302802643 +/- 4.83e-38]",
+            "source_direct_best": "[1.3898732635004290262435975667302802643 +/- 4.83e-38]",
+            "uncalibrated_source_direct": "[1.3850484689926277362993718944999080752 +/- 2.93e-38]"
+          },
+          "minimum_locations": {
+            "analytic_direct": [
+              "64063/64",
+              "1001"
+            ],
+            "calibrated_direct": [
+              "64063/64",
+              "1001"
+            ],
+            "source_direct_raw": [
+              "64063/64",
+              "1001"
+            ],
+            "source_direct_propagated": [
+              "64063/64",
+              "1001"
+            ],
+            "source_direct_best": [
+              "64063/64",
+              "1001"
+            ],
+            "uncalibrated_source_direct": [
+              "64063/64",
+              "1001"
+            ]
+          },
+          "scalar_radii": {
+            "analytic_only": "[-0.013354243421733499853150838346821194587 +/- 1.10e-41]",
+            "source_uncalibrated": "[1.2113776463971419248994712588929932249 +/- 2.95e-38]",
+            "source_calibrated": "[1.2123608384867485278552036705424770001 +/- 3.71e-38]"
+          },
+          "calibrated_anchor_nominal_radius_lower": "[3.1160677042789401185780192751421058412 +/- 3.92e-38]",
+          "full_approximation_anchor_nominal_radius_lower": "[3.1160819170132626479437872768715514438 +/- 2.57e-38]",
+          "complete_approximation_increment_upper": "[1.9034560408432596465191514609227968749 +/- 1.01e-38]",
+          "calibration_error_ledger": {
+            "anchor_uncertainty_upper": "[4.9716344987611152708061004235970784819e-10 +/- 4.48e-48]",
+            "correlated_increment_upper": "[0.00025082445176849432755261659622192382814 +/- 5.01e-42]",
+            "complete_phase_jet_error_upper": "[0.00025082494893194420366414367683196618784 +/- 2.85e-42]",
+            "physical_firstjet_error_divided_by_A_upper": "[0.00038455881882525359748093849207648232128 +/- 1.82e-42]"
+          },
+          "source_complete_phase_error_diagnostic_upper": "[1.9371535703686874361182951141683526559e-10 +/- 2.63e-48]",
+          "analytic_anchor_error_upper": "[0.41372074998204446610155104309270059073 +/- 1.18e-39]"
+        }
+      ],
+      "consumer_seconds": 7.426945083017927
+    }
+  ]
+}

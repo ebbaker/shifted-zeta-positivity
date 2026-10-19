@@ -1,0 +1,66 @@
+{
+  "date": "2026-10-18",
+  "timezone": "America/New_York",
+  "prepared_for": "Edward Baker",
+  "reviewing_model": "gpt-6-astra",
+  "actual_effort": "ultra",
+  "scope": "Fresh inherited control-interface and moving-wall polynomial checks. No new constrained trace, kernel, adjoint, or form-degree estimator is validated. Proposed estimates must be tested on their own changed acceptance interfaces before use.",
+  "replays": {
+    "COMMON_SOURCE_CONTROLS.json": {
+      "sha256": "ff3f5090462068fc73ff3a0dee33fecaece17d7e26e5e6c2a3039843c0a6c568",
+      "status": "fresh source-specific controls replayed; no theta tail constants substituted",
+      "event_boxes_rejected": 5,
+      "euler_signed_witness_rejected": true
+    },
+    "MOVING_WALL_CONTROLS.json": {
+      "sha256": "8b914df7a0fa79b2039eed376d1b87e062137493f71463c21d7ce87fba0dfd80",
+      "status": "PASS",
+      "assertions": 2122,
+      "cases": 88,
+      "historical_metadata_preserved": true
+    }
+  },
+  "source_sha256": {
+    "papers/investigations-3/11_arithmetic_collision_rigidity/numerics/replay_nonstationary_controls.py": "c8f95dbac1f84632091c314da57a2382c077d0a0c1a6738d92494f4f95681da6",
+    "papers/investigations-2/active/22_theta_manifold_geometry/numerics/check_spacetime_wall_flux.py": "952d2abc2d75be5a69dc29b3432aedfb1bc88c7d18298f29bc14b40d0ff325fd",
+    "papers/investigations-2/active/22_theta_manifold_geometry/numerics/check_spacetime_topology.py": "365a80726ee9dbdff99ab16cd00a59fe3a62cfe779700463840bbfcfac933424",
+    "papers/investigations-3/11_arithmetic_collision_rigidity/numerics/run_plan02_pilot.py": "3912bd128bff81bceb303126a67ae304f9631d439867d5c6ae3bbc106aa7e982"
+  },
+  "llm_assistance": "Substantial; internal LLM planning and delegated review.",
+  "external_output_directory": "/private/tmp/symmetry-plan-20261018",
+  "environment": {
+    "python": "3.10.0",
+    "python_flint": "0.9.0",
+    "dependency_path_used": "/private/tmp/szp-inv11-plan02-deps",
+    "note": "Use an environment with python-flint 0.9.0 to regenerate; the temporary dependency path is not a required portable location."
+  },
+  "regeneration": [
+    {
+      "cwd": "repository root",
+      "argv": [
+        "python3",
+        "papers/investigations-3/11_arithmetic_collision_rigidity/numerics/replay_nonstationary_controls.py",
+        "--repo",
+        "<repository>",
+        "--receipts",
+        "<external-output>/common-control-receipts",
+        "--output",
+        "<external-output>/COMMON_SOURCE_CONTROLS.json",
+        "--execution-model",
+        "<actual-model>",
+        "--execution-effort",
+        "<actual-effort>"
+      ]
+    },
+    {
+      "cwd": "repository root",
+      "argv": [
+        "python3",
+        "papers/investigations-2/active/22_theta_manifold_geometry/numerics/check_spacetime_wall_flux.py",
+        "--output",
+        "<external-output>/MOVING_WALL_CONTROLS.json"
+      ]
+    }
+  ],
+  "identity_note": "Stored hashes identify these exact run records, which include timing/metadata; reruns need not reproduce byte hashes. Mathematical checks are decided by the replayed arithmetic, not by hash equality."
+}

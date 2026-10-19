@@ -22,6 +22,45 @@ domains. It has not compared against their best correlated-error method.
 No signed lower bound, new exclusion region or speed gain is claimed.
 The next bounded task is that comparison or a paid S03 consumer.
 
+## Matched continuation comparison, 19 October 2026
+
+Prepared for Edward Baker with substantial LLM assistance, **gpt-6.1-sol,
+actual reasoning effort ultra**. [Matched Note 02](notes/02_MATCHED_FROZEN_AND_ANALYTIC_CORRECTIONS_20261019.md)
+completes S02-T1 against the strongest applicable frozen exponential using
+the same published residual and earlier analytic ninth-mode matching.
+The frozen allowances are <0.226298331 on B and <0.229588317 on C;
+full analytic allowances with the same edge payment are <0.226299246 and
+<0.229588635. The C improvement over the opening 0.431777199 restores old
+matching work and is shared by both methods. Full analytic continuation
+does not beat frozen under this first-derivative continuation ledger.
+
+[Separate internal review](reviews/02_MATCHED_CORRECTION_INTERNAL_REVIEW_20261019.md),
+192/256-bit comparisons and fresh source-specific controls pass. Select
+frozen per-disk physical jets for S02-T2, holding the center fixed during
+spatial differentiation. Keep the full analytic expression for a named
+consumer requiring a single analytic residual across the box. No evaluated
+whole-cell field, margin, cost gain or new coverage is claimed. Stop this
+bounded comparison; [tracker](../research-progress/01_RESEARCH_TASK_TRACKER_20261018.md).
+This continuation preserves the chat's [existing registration](../01_modular_self_duality/chat-histories/0002_2026-10-19T04-00-03Z_begin-first-research-track.json).
+
+## Complete evaluated jets, 19 October 2026
+
+Prepared for Edward Baker with substantial LLM assistance, **gpt-6.1-sol,
+actual reasoning effort ultra**. [Note 03](notes/03_COMPLETE_FROZEN_JETS_AND_PAID_CONSUMERS_20261019.md)
+completes S02-T2 on B at 192/256 bits. Both formulas pass the firstjet and
+Schur-coupled L0>E/100 tests on all 4096 closed cells; independent frozen
+Cauchy boxes pass only 1770 signed cells. The evaluated full formula gives
+the stronger paid firstjet radius (>0.9702739184 versus frozen
+>0.9686625938), despite frozen's smaller eta. Fresh complete-source data
+remain stronger (>1.3473946960). No new coverage or cost advantage.
+
+Keep the coherent full formula for S03. Frozen local jets export and pay
+their diagonal derivative defects; they are not a global analytic jet.
+[Small records and reproduction](numerics/README.md), [external tables](ARCHIVES.md),
+[separate internal review](reviews/03_COMPLETE_JET_INTERNAL_REVIEW_20261019.md).
+S02-T2 is complete as a known-box certificate and evaluated interface;
+C is unactivated and the next analytic task is S03-T1.
+
 ## Question and priority
 
 Can the even normalized cutoff correction be combined with nearby retained

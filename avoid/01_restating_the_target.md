@@ -43,6 +43,26 @@ conclusion.
   outside it. [Internal review](../papers/investigations-3/11_arithmetic_collision_rigidity/symmetries/03_normalized_jet_rotation/reviews/01_SIGNED_TRANSPORT_INTERNAL_REVIEW_20261018.md).
   Added for Edward Baker with substantial LLM assistance, **gpt-6.1-sol, ultra**.
 
+- [S03 calibrated comparison Note 05](../papers/investigations-3/11_arithmetic_collision_rigidity/symmetries/03_normalized_jet_rotation/notes/05_CALIBRATED_FIRST_JET_AND_MATCHED_DIRECT_COMPARISON_20261019.md):
+  “calibration does not remove I_f from scalar transport.” For the same
+  nominal anchor ball and residual increment disk, scalar triangle
+  propagation cannot exceed exact calibrated vector exclusion. The finite
+  calibrated certificate>1.3859351576 still loses to same-source direct
+  >1.3898732635 after equal cell propagation; stop this fixed-box comparison,
+  not all transport or possible cost regimes.
+  [Separate same-model review](../papers/investigations-3/11_arithmetic_collision_rigidity/symmetries/03_normalized_jet_rotation/reviews/05_CALIBRATED_CONSUMER_COMPARISON_INTERNAL_REVIEW_20261019.md). Added 19 October 2026 for Edward Baker with substantial LLM assistance,
+  **gpt-6.1-sol, actual effort ultra**.
+
+- [S06-T2 Note 05](../papers/investigations-3/11_arithmetic_collision_rigidity/symmetries/06_hodge_and_transverse_geometry/notes/05_BOUNDED_COMPLETED_CURRENT_AND_DIRECT_COMPARISON_20261019.md), 19 October 2026:
+  “Stop this fixed-pilot same-ball current comparison.” Fresh source
+  four-jet data estimate an event-vanishing completed residual, but it
+  signs60/64 cells while direct signs64/64; successful extracted radii
+  are <0.552 of direct. The same-Cartesian-information Cauchy comparison
+  cannot beat the exact direct norm. A different coupled information
+  source remains outside this scoped stop. [Separate same-model review](../papers/investigations-3/11_arithmetic_collision_rigidity/symmetries/06_hodge_and_transverse_geometry/reviews/05_BOUNDED_COMPLETED_CURRENT_INTERNAL_REVIEW_20261019.md).
+  Added for Edward Baker with substantial LLM assistance,
+  **gpt-6.1-sol, actual effort ultra**.
+
 ## What it cost
 
 Two manuscripts of 56 and 96 pages, about a hundred notes and fifty

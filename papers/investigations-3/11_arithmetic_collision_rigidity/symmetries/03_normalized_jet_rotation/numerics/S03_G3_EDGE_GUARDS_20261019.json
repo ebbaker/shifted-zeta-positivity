@@ -1,0 +1,117 @@
+{
+  "date": "2026-10-19",
+  "prepared_for": "Edward Baker",
+  "actual_model": "gpt-6.1-sol",
+  "actual_effort": "ultra",
+  "llm_assistance": "substantial; internal same-model bounded input validation",
+  "python": "3.10.0",
+  "python_flint": "0.9.0",
+  "child_python_matches_parent": true,
+  "script_sha256": "83fae26e6089990147be7eb152cd230dd29db5acdfcfaf173c501a24fb6e1327",
+  "source_sha256": {
+    "papers/investigations-3/11_arithmetic_collision_rigidity/symmetries/03_normalized_jet_rotation/numerics/estimate_arithmetic_residual_increment.py": "053cef99f718a0932067e74a5e903b02de457b02e5be64938e3a338e90e570db",
+    "papers/investigations-3/11_arithmetic_collision_rigidity/symmetries/03_normalized_jet_rotation/numerics/bound_complete_rs_edge.py": "c6744179b93cae0a0b9c4924831b5af445d42f6bd5092845036944be34c2dbac"
+  },
+  "complete_edge_record_sha256": "e0735073e50c3d6433302da7346c88d8e15bf5406765d3b8ea1ad63772ef446a",
+  "complete_edge_dependency_pins": {
+    "papers/investigations-3/11_arithmetic_collision_rigidity/symmetries/02_cutoff_reflection/numerics/check_cutoff_reflection.py": "d8dda6d4f746b35b7fd6a545ff87940c88a0c896fe9a1f684c002dcc2ea0cc9b",
+    "papers/investigations-3/11_arithmetic_collision_rigidity/symmetries/03_normalized_jet_rotation/numerics/check_rs_edge_hierarchy.py": "c9d3eea35256d8a9e01278268345e74dd6c24c72b1e45ded1f2aa8fbb7fba711"
+  },
+  "source_H_values_used": false,
+  "source_quadrature_used": false,
+  "valid_numerical_consumer_rerun": false,
+  "requested_consumer_bits": [
+    192,
+    256
+  ],
+  "case_isolation": "A fresh TemporaryDirectory, altered input, and nonexistent output per case; removed after validation.",
+  "all_passed": true,
+  "case_count": 7,
+  "cases": [
+    {
+      "case": "altered_edge_producer_hash",
+      "altered_field": "script_sha256",
+      "input_sha256": "7ce217bf26fa43434c9912099f16fd1d90ce676cdd41363cd209c0ff760858e5",
+      "expected_guard": "complete edge producer pin",
+      "returncode": 1,
+      "output_created": false,
+      "stdout_empty": true,
+      "captured_error": "ArithmeticError: complete edge producer pin",
+      "observed_seconds": 0.08855300000868738,
+      "passed": true
+    },
+    {
+      "case": "altered_model_hash",
+      "altered_field": "retained_model.sha256",
+      "input_sha256": "10b98f5ef3e90fcd7ae405c3dfcdce4f05409b1c0643597e8ccd65a98f06f85f",
+      "expected_guard": "edge polynomial model pin",
+      "returncode": 1,
+      "output_created": false,
+      "stdout_empty": true,
+      "captured_error": "ArithmeticError: edge polynomial model pin",
+      "observed_seconds": 0.08741154102608562,
+      "passed": true
+    },
+    {
+      "case": "altered_source_hash",
+      "altered_field": "source_sha256.papers/investigations-3/11_arithmetic_collision_rigidity/symmetries/02_cutoff_reflection/numerics/check_cutoff_reflection.py",
+      "input_sha256": "3468f4376e29a71bf7b9e6360997ae919c26f496aa3330ea76bb5aa6c9ab1b0b",
+      "expected_guard": "complete edge source pin: papers/investigations-3/11_arithmetic_collision_rigidity/symmetries/02_cutoff_reflection/numerics/check_cutoff_reflection.py",
+      "returncode": 1,
+      "output_created": false,
+      "stdout_empty": true,
+      "captured_error": "ArithmeticError: complete edge source pin: papers/investigations-3/11_arithmetic_collision_rigidity/symmetries/02_cutoff_reflection/numerics/check_cutoff_reflection.py",
+      "observed_seconds": 0.08763541601365432,
+      "passed": true
+    },
+    {
+      "case": "missing_precision",
+      "altered_field": "runs: remove requested_bits=256",
+      "input_sha256": "e240a6cfea1a5cf065ff34e710918566d0bb4fdd1b5d4d45301bb51dd59fea0b",
+      "expected_guard": "edge precision coverage",
+      "returncode": 1,
+      "output_created": false,
+      "stdout_empty": true,
+      "captured_error": "ArithmeticError: edge precision coverage",
+      "observed_seconds": 0.08884312497684732,
+      "passed": true
+    },
+    {
+      "case": "empty_runs",
+      "altered_field": "runs",
+      "input_sha256": "7efb21b4b41777cf235434be4744038ebd70e39a9b677178dd91ff5a08dec081",
+      "expected_guard": "complete edge cap",
+      "returncode": 1,
+      "output_created": false,
+      "stdout_empty": true,
+      "captured_error": "ArithmeticError: complete edge cap",
+      "observed_seconds": 0.08840087498538196,
+      "passed": true
+    },
+    {
+      "case": "changed_value_cap",
+      "altered_field": "runs[0].normalized_value_cap",
+      "input_sha256": "b894693bfff88cfbc3b01f8600610bad64a30c9ac4100d686d16d1ddf9638a1f",
+      "expected_guard": "complete edge cap",
+      "returncode": 1,
+      "output_created": false,
+      "stdout_empty": true,
+      "captured_error": "ArithmeticError: complete edge cap",
+      "observed_seconds": 0.08778066601371393,
+      "passed": true
+    },
+    {
+      "case": "changed_radius",
+      "altered_field": "runs[0].physical_disk_radius",
+      "input_sha256": "c582b96f589b67dfa49e03ee02702a0afeb784394df8c9810f5d6b67fc6df00d",
+      "expected_guard": "complete edge cap",
+      "returncode": 1,
+      "output_created": false,
+      "stdout_empty": true,
+      "captured_error": "ArithmeticError: complete edge cap",
+      "observed_seconds": 0.08633966604247689,
+      "passed": true
+    }
+  ],
+  "scope": "Fail-closed input guard validation only; no new estimate, acceptance consumer, collision exclusion, or independent mathematical review."
+}

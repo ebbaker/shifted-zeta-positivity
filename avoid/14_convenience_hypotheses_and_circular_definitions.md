@@ -25,6 +25,14 @@ a target divided by the unknown jet.
 - [02's continuation brief](../papers/investigations-2/active/02_angular_jacobi_gluing/reviews/CONTINUATION_AND_BRAINSTORM_BRIEF_20261013.md): "Defining `epsilon_R` as the unproved positive minimum of its left side would be circular."; [20's note](../papers/investigations-2/active/20_constrained_operator_squares/notes/RESIDUAL_CORRECTED_HEAT_TRAJECTORY_IDENTITIES_20261014.md): "dividing by a physical function at its unknown zeros would be circular."
 - [22 manuscript](../papers/investigations-2/active/22_theta_manifold_geometry/manuscript/theta_manifold_geometry.tex), scalar cones: "Using the unknown quotient \(V/W\) to prescribe coefficients would remain circular."; [coordination Note 11](../papers/investigations-2/active/22_theta_manifold_geometry/notes/00_research_coordination/11_SCALAR_MANUSCRIPT_AND_POSITIVE_TAIL_CONTINUATION_20261015.md) adopted the rule rejecting proposals that only rewrite the trace or divide by the unknown jet.
 
+- [S07-T1 Note 03](../papers/investigations-3/11_arithmetic_collision_rigidity/symmetries/07_geometric_duality_and_quaternionic_symmetry/notes/03_CONSTRAINED_THETA_JET_SPACE_AND_RESIDUAL_CONTRACT_20261019.md),
+  19 October: “This rigid parent class cannot accommodate a nontrivial cutoff error.”
+  The complete fourth source is not holomorphic; its profile-cutoff residual
+  leaves the finite jet space and needs its actual complement. Restricting
+  a reproducing-kernel estimate to the parent theta line would omit the
+  object being estimated. [Separate same-model review](../papers/investigations-3/11_arithmetic_collision_rigidity/symmetries/07_geometric_duality_and_quaternionic_symmetry/reviews/03_CONSTRAINED_THETA_SPACE_INTERNAL_REVIEW_20261019.md).
+  Added for Edward Baker with substantial LLM assistance, **gpt-6.1-sol, ultra**.
+
 ## What it cost
 
 A retracted manuscript section; a retired deformation; a planned

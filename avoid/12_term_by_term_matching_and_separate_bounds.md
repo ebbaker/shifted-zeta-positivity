@@ -90,6 +90,76 @@ separated complement floors; a Gram tail omitted from a lower bound.
   Added 18 October 2026 for Edward Baker with substantial LLM assistance,
   **gpt-6.1-sol, actual effort ultra**.
 
+- [S02 complete-jet Note 03](../papers/investigations-3/11_arithmetic_collision_rigidity/symmetries/02_cutoff_reflection/notes/03_COMPLETE_FROZEN_JETS_AND_PAID_CONSUMERS_20261019.md):
+  “the same analytic disk residual supplies all three errors.” Independent
+  frozen Cauchy boxes certify 1770/4096 signed cells on B; retaining the
+  proved real-Schur coefficient class certifies all 4096 without new source
+  data. This is an already covered-box result, not global sign control.
+  The coherent full consumer and fresh source reference remain stronger
+  than frozen. [Separate internal review](../papers/investigations-3/11_arithmetic_collision_rigidity/symmetries/02_cutoff_reflection/reviews/03_COMPLETE_JET_INTERNAL_REVIEW_20261019.md).
+  Added 19 October 2026 for Edward Baker with substantial LLM assistance,
+  **gpt-6.1-sol, ultra**; no specialist review.
+
+- [S03 filtered residual Note 03](../papers/investigations-3/11_arithmetic_collision_rigidity/symmetries/03_normalized_jet_rotation/notes/03_FILTERED_COMPLETE_RESIDUAL_AND_SPLIT_PREFIX_OBSTRUCTION_20261019.md):
+  “They must be subtracted before norms.” Separate source/approximation
+  prefix triangle payments exceed 1.912087 on B, while the retained signed
+  source-informed residual allowance is below 0.000266448. This excludes
+  that payment rule, not the signed combined estimator or all transport.
+  [Internal review](../papers/investigations-3/11_arithmetic_collision_rigidity/symmetries/03_normalized_jet_rotation/reviews/03_FILTERED_RESIDUAL_INTERNAL_REVIEW_20261019.md). Added 19 October 2026 for
+  Edward Baker with substantial LLM assistance, **gpt-6.1-sol, ultra**.
+
+- [S03 analytic allowance and kernel-variation Note 04](../papers/investigations-3/11_arithmetic_collision_rigidity/symmetries/03_normalized_jet_rotation/notes/04_PHASE_AWARE_ANALYTIC_ALLOWANCE_AND_KERNEL_VARIATION_OBSTRUCTION_20261019.md):
+  “Signed midpoint values cannot cancel that disk.” Even after signed
+  source/arithmetic midpoint subtraction, absolute shifted-channel kernel
+  derivative payments assign one fixed cell >4037.45136. This excludes that
+  variation budget, not signed integration or correlated Taylor models.
+  The separate analytic-only phase refinement gives <0.812260;
+  source-informed <0.000266448 remains stronger.
+  [Separate same-model review](../papers/investigations-3/11_arithmetic_collision_rigidity/symmetries/03_normalized_jet_rotation/reviews/04_PHASE_ALLOWANCE_AND_KERNEL_OBSTRUCTION_INTERNAL_REVIEW_20261019.md). Added 19 October 2026 for Edward Baker with substantial LLM assistance,
+  **gpt-6.1-sol, actual effort ultra**; no specialist review.
+
+- [G3 arithmetic Note 06](../papers/investigations-3/11_arithmetic_collision_rigidity/symmetries/03_normalized_jet_rotation/notes/06_ARITHMETIC_GAMMA_AND_EDGE_CORRECTIONS_20261019.md),
+  19 October 2026: “C1 alone has the wrong sign” The actual gamma-prefactor correction and
+  C1 have opposite signs at the center; finite-mode/edge cancellation varies
+  with phase. The finite-mode remainder is proved, while complete independent
+  edge jets and the signed prefix remain open. [Separate same-model review](../papers/investigations-3/11_arithmetic_collision_rigidity/symmetries/03_normalized_jet_rotation/reviews/06_ARITHMETIC_GAMMA_AND_EDGE_INTERNAL_REVIEW_20261019.md).
+  Added for Edward Baker with substantial LLM assistance, **gpt-6.1-sol, ultra**.
+
+- [G3 complete arithmetic Note 07](../papers/investigations-3/11_arithmetic_collision_rigidity/symmetries/03_normalized_jet_rotation/notes/07_COMPLETE_ARITHMETIC_EDGE_AND_RESIDUAL_INCREMENT_20261019.md),
+  19 October 2026: “Add the edge contribution to Z before subtracting the
+  anchor and bounding its modulus.” Retaining both signed corrections and
+  paying the full coherent remainder gives independent increment<0.000854;
+  separate-prefix triangle payments remain excluded in their stated class.
+  [Separate same-model review](../papers/investigations-3/11_arithmetic_collision_rigidity/symmetries/03_normalized_jet_rotation/reviews/07_COMPLETE_ARITHMETIC_EDGE_AND_INCREMENT_INTERNAL_REVIEW_20261019.md). Added for Edward Baker with substantial LLM assistance,
+  **gpt-6.1-sol, ultra**.
+
+- [S04-T3 Note 03](../papers/investigations-3/11_arithmetic_collision_rigidity/symmetries/04_time_height_scaling/notes/03_UNIFORM_LOCAL_RESIDUAL_TRANSFER_AND_CUTOFF_PAYMENT_OBSTRUCTION_20261019.md),
+  19 October 2026: “Actual jumps may cancel.” Uniform local residual charts
+  do not preserve a small long-range budget when each natural-cutoff mode
+  receives an independent coefficientwise error disk: across the declared
+  sector that assigned payment is>.99exp(1/(4t)). This excludes that rule,
+  not signed jumps or coherent RS matching. [Same-model review](../papers/investigations-3/11_arithmetic_collision_rigidity/symmetries/04_time_height_scaling/reviews/03_UNIFORM_RESIDUAL_TRANSFER_INTERNAL_REVIEW_20261019.md).
+  Added for Edward Baker with substantial LLM assistance,
+  **gpt-6.1-sol, actual effort ultra**.
+
+- [S07-T2 Note 04](../papers/investigations-3/11_arithmetic_collision_rigidity/symmetries/07_geometric_duality_and_quaternionic_symmetry/notes/04_PAID_PROFILE_TRACE_AND_DIRECT_TAIL_COMPARISON_20261019.md),
+  19 October: “The bulk profile norm pays that mass.” The selected N=2
+  automorphic cutoff norm pays an annulus between physical integer
+  samples; even its exact assigned allowances exceed direct complete-tail
+  bounds by >1618 and >34152 before common costs. This is a scoped loss
+  of that norm/Cauchy rule, not an actual-error floor or exclusion of
+  signed/kernel methods. [Separate same-model review](../papers/investigations-3/11_arithmetic_collision_rigidity/symmetries/07_geometric_duality_and_quaternionic_symmetry/reviews/04_PAID_PROFILE_TRACE_INTERNAL_REVIEW_20261019.md).
+  Added for Edward Baker with substantial LLM assistance, **gpt-6.1-sol, ultra**.
+
+- [S07 options Note 05](../papers/investigations-3/11_arithmetic_collision_rigidity/symmetries/07_geometric_duality_and_quaternionic_symmetry/notes/05_OBSERVATION_OPTIONS_AND_BOUNDED_FEASIBILITY_SCREENS_20261019.md):
+  “A cutoff-width sweep under this unchanged rule is not warranted.”
+  The omitted physical n=3 sample forces an unchanged-X floor for every
+  admissible N=2 cutoff; a V4 split with the same complement norm also
+  retains the loss. A changed norm or signed estimate remains outside
+  these exclusions. [Internal review](../papers/investigations-3/11_arithmetic_collision_rigidity/symmetries/07_geometric_duality_and_quaternionic_symmetry/reviews/05_OBSERVATION_OPTIONS_INTERNAL_REVIEW_20261019.md).
+  Added 19 October for Edward Baker with substantial LLM assistance,
+  **gpt-6.1-sol, actual effort ultra**.
+
 ## What it cost
 
 The channel-matching program (excluded by the two-channel theorem); the

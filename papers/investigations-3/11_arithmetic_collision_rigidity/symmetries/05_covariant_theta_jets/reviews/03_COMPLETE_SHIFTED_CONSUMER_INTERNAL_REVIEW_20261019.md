@@ -1,0 +1,43 @@
+# S05-T2 separate internal complete-consumer review
+
+19 October 2026, America/New_York. Prepared for Edward Baker with substantial LLM assistance. Actual model gpt-6.1-sol (Codex), reasoning effort ultra. Separate same-model agent source review and fresh replays; no independent model or specialist human review. Root assistant manages repository writes and chat-history capture.
+
+**Disposition:** accept the bounded complete added-error comparison and close S05-T2 for its predeclared metric. The selected three-formula hybrid strictly reduces all three whole-B added approximation-error allowances against the stronger two-formula baseline. This is an interval-evaluation optimization under the inherited complete reflected-source and tail theorem. It establishes no new arithmetic identity, signed-core estimate, consistent physical-margin gain, matched-cost advantage, new coverage, or global bound. Retain the stronger alternatives and stop this fixed B comparison.
+
+## Source, algebra and frozen contract
+
+Read the repository AGENTS instructions, tools/CHAT_HISTORY.md, result-summary and avoidance indexes, S05 Note 02, current S05 task scope and the frozen comparison contract. No source or research-history files were edited by this reviewer. The contract explicitly parks the real parity-Taylor handoff and fixes B=[1/100,1/5] x [999,1001], Gc, d, U=2, modes1..11, degrees24/12, coefficients0..50 and the order-52 majorant.
+
+For w=lambda*exp(4v), the selected identity is exactly 2*lambda^2*exp(8v)-3*lambda*exp(4v)=w*(2*w-3). Keeping the original common exponential or grouping exp(v-w) inside each summand leaves the finite integrand unchanged. These expressions are entire in the integration variable. Every physical x derivative retains its factor (i*v)^j; the time expansion uses v^(2k)=(-1)^k*(i*v)^(2k), explaining the shared coefficient index j+ell+2k. All contour/cutoff/normalizer parameters remain frozen. No finite-mode reflection, vanishing odd endpoint or S05 real Taylor tail is imported.
+
+The expanded acquisition invokes the actual original WholeCellEvaluator constructor. Its return-only Acb trace records results without changing integrands, arguments or arithmetic. Candidate constructors use the factored/grouped finite integrands and inherit the original moment, tail, propagation and acceptance methods. All original moment/Taylor, order-52 and retained-source data agree exactly; the same S01 paired order0..2 mode payment is installed in every method.
+
+## Strongest comparison and attribution
+
+All three pure acquisitions run all 51 coefficients at 192 and 256 bits, with original tolerances, evaluation/depth caps and per-setup limits. Equivalent real coefficient balls and imaginary integral balls overlap at every order; both precision replays also overlap. These consistency checks support the implementation; the finite identity establishes equivalence.
+
+Factoring is narrower than expansion at all 51 coefficient orders. Grouping is narrower only at order2. Full propagation nevertheless makes grouping the strongest pure method, so comparison against expansion alone would overstate factoring's contribution. The old-alternatives hybrid chooses expansion at 50 orders and grouping at order2. The selected hybrid chooses factoring at those 50 orders and grouping at order2. Both choose complete midpoint/radius tuples with a predeclared exact-radius/tie rule. The review helper independently verifies every selected tuple and all charged acquisition callback counts.
+
+The strict marginal whole-B allowance decreases against the old hybrid exceed 0.0092005%, 0.0077659%, 0.0082207% at physical orders0..2 in both runs. The selected allowances are below (3.894132500,3.151213409,2.896873971)*1e-12 Gc. All displayed ceilings and conservative percentages in staged Note03 were checked against the exact dyadic/interval records, including the stronger pure grouped comparison. The unchanged value floor exceeds3.26126e-12 Gc, so the different real-source reference below2.165e-12 Gc remains stronger. No strongest physical-accuracy claim is justified.
+
+## Complete error and rounding
+
+Exact acquired dyadic midpoints define a mathematical finite polynomial p. The scalar epsilon=Q+T+M+S uniformly bounds physical jet minus p. Q propagates valid coefficient radii with nonnegative Taylor weights; its outward sum pays bound-arithmetic rounding. The image of p includes outward coefficient/factorial/time/space arithmetic separately. The returned physical interval is this image enlarged by [-epsilon,epsilon]. Nothing permits dropping that image rounding or reading epsilon as the returned interval's entire radius.
+
+The review helper recomputes Q on whole B using exact Python rational arithmetic from all selected dyadic radii, checks each reported Q dominates that exact sum, verifies every complete sum pays Q+T+M+S, checks unchanged T/M/S payments, and verifies exact serialized output endpoints contain the full outward polynomial image plus/minus epsilon. It checks all five methods at all three output orders at both precisions. This independently confirms there is no omitted polynomial-rounding or missing-component cost in the recorded comparison.
+
+The physical consumer passes the same40 closed cells and the same116 adaptive calls for every representation. The adaptive serialized minimum is identical between the old and new hybrids at each precision. The raw fixed-cover minimum worsens slightly at192 bits, from about8.91296564757e-5 to8.91296528377e-5, and improves slightly at256 bits. There is no consistent paid-margin advantage. The raw fixed lower endpoint and the historical adaptive printed/reparsed summary use different serialization conventions; their difference is not an acquisition gain. Equality of displayed jet strings must not be upgraded to equality of exact internal jet balls.
+
+The old selector charges both prior complete setups; the new selector charges all three complete setups and all paired-tail work. The respective callbacks are347420 versus521116 at192 bits and347624 versus521422 at256 bits. One-run times are diagnostic. No factor-two matched-accuracy cost claim is made.
+
+## Fresh replay, guards and controls
+
+The final producer SHA256 is bc85c718fc27c53a1ca7bed994f80b76924a94c08f69767c66652ea2b3d7bdac. Both full192/256 runs were freshly repeated by this reviewer in /tmp/s05-t2-audit20261019/review-replay. All numerical report fields match the authoring reports exactly after excluding elapsed times and the execution-location path; both raw stored hashes and canonical numerical-content hashes are recorded separately. All current source pins and the frozen comparison-contract hash pass.
+
+The reproducible helper review_complete_shifted_source_comparison.py and its S05_T2_INDEPENDENT_REVIEW_20261019.json receipt are staged with the producer. Helper SHA256:42edbc6b9c0a75e123dc59fae3804f1df4e42a89662879f8d3c3a0a3e10f7681. It rejects invalid precision and metadata, empty/partial/stale source-pin mappings, missing/changed contracts, changed domain/contour/cutoff/modes/degrees/normalizer, missing/misordered coefficients, negative/nonfinite radii, mismatched midpoint/radius receipts, altered/missing common payments and incomplete/gapped closed covers. These are importable validation/common-equality gates used by the producer, with no extra quadrature in the helper. The 35 rejected fixtures are engineering checks, not mathematical progress measured by assertion count.
+
+Fresh inherited source-specific controls independently reject all five event boxes and the Euler negative-Laguerre witness through the unchanged actual signed_cell. Five invalid paired-tail cases reject and the non-even vertical-boundary fixture passes at orders0..2. The small record is S05_T2_CONTROLS_20261019.json; underlying source receipts remain under /tmp/s05-t2-audit20261019/controls. These controls challenge the inherited acceptance interface and its existing premise limitations; they do not independently prove a new theta estimate or the imported analytic theorem. Finite polynomial factoring itself also applies to weighted modes and is not a collision discriminator.
+
+## Final note assessment
+
+Read staged Note03 and its unchanged contract. Its complete-error ceilings, marginal attribution, 50+1 selection, callback charges, epsilon/image distinction, raw versus serialized margin language, stronger real-source caveat, and bounded stopping decision agree with the reviewed records. Accept its claimed added-error result and its explicit absence of a cost, margin, coverage or global gain. EXT-01 remains unactivated by this implementation result.

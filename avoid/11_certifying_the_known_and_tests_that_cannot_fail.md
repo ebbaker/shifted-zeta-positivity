@@ -64,3 +64,16 @@ five surrounding event boxes; [adversarial replay](../papers/investigations-3/11
 checks strict equality, invalid arithmetic, altered input bytes and broken
 covers. The comparison is scoped to its measured implementation, not an
 obstruction to all contour methods.
+
+## GEO-T1 matched cost on already-covered B, 19 October 2026
+
+Prepared for Edward Baker with substantial LLM assistance, **gpt-6.1-sol,
+ultra**. The [GEO-T1 result](../papers/investigations-3/11_arithmetic_collision_rigidity/symmetries/notes/06_GEO_T1_WINDING_AND_DIRECT_COMPARISON_20261019.md)
+states: “The bounded validation passes; the declared performance gate fails.”
+Boundary winding and optimized direct certification both cover known B;
+shared setup dominates and the factor-two cold-cost gate fails. Keep the
+optimized direct first-jet baseline distinct from an earlier stronger signed
+test's difficulty, charge setup to both methods, and use actual collision
+and uncertainty controls on the new helpers. The stop is this fixed-box
+comparison, not a universal exclusion of boundary methods. [Same-model
+internal review](../papers/investigations-3/11_arithmetic_collision_rigidity/symmetries/reviews/01_GEO_T1_WINDING_DIRECT_INTERNAL_REVIEW_20261019.md).

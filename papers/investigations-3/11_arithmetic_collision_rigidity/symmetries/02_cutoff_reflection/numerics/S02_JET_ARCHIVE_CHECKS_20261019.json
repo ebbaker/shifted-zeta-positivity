@@ -1,0 +1,55 @@
+{
+  "date": "2026-10-19",
+  "timezone": "America/New_York",
+  "prepared_for": "Edward Baker",
+  "actual_model": "gpt-6.1-sol",
+  "actual_effort": "ultra",
+  "llm_assistance": "substantial; internal archive replay",
+  "status": "pass",
+  "producer_sha256": "461ee502434f519a082ff212a0c2b5a0512c3426ef081f2ee2d82b4f5d4ce1b9",
+  "summary_sha256": "8a46b1c3106a4823cd177b871eaa052347fb2da4f6c20931a14c76ce4f3438f0",
+  "checker_sha256": "418a754aa24ad590d52e4c714f7fe6ce8227614db226d75c1ffdcc3ea703f04c",
+  "archives": [
+    {
+      "bits": 192,
+      "all_rows_loaded": 4096,
+      "positive_serialized_Schur_excess": {
+        "frozen": "[0.27470310863300125805201138389876013316 +/- 2.87e-39]",
+        "full": "[0.27809961326602555000573839936514955488 +/- 6.73e-40]"
+      },
+      "stored_and_canonical_identities_checked": true
+    },
+    {
+      "bits": 256,
+      "all_rows_loaded": 4096,
+      "positive_serialized_Schur_excess": {
+        "frozen": "[0.27470311244286460727107577872262388378 +/- 6.40e-40]",
+        "full": "[0.27809961326602555000573839936514955488 +/- 6.73e-40]"
+      },
+      "stored_and_canonical_identities_checked": true
+    }
+  ],
+  "fail_closed_guards": [
+    {
+      "case": "wrong stored hash",
+      "rejected_before_any_row": true,
+      "error": "stored archive hash mismatch"
+    },
+    {
+      "case": "wrong canonical mathematical hash",
+      "rejected_before_any_row": true,
+      "error": "canonical archive hash mismatch"
+    },
+    {
+      "case": "missing archive",
+      "rejected_before_any_row": true,
+      "error": "Missing S02 jet archive output/S02_T2_B_192_20261019.jsonl.gz. Regenerate with evaluate_complete_frozen_jets.py; see S02 ARCHIVES.md or set S02_JET_ARCHIVES."
+    },
+    {
+      "case": "stale producer with valid cell content",
+      "rejected_before_any_row": true,
+      "error": "archive evaluator pin"
+    }
+  ],
+  "scope": "Hash identity, schema/producer/source/order loading, positive stored bounds and missing/corrupted input guards. Mathematical claims depend on the complete evaluator and proof."
+}

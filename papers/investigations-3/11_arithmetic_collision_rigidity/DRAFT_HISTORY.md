@@ -243,3 +243,209 @@ belongs in those sources; create no new manuscript snapshot folders.
   channel is not positive-time integrable. Theta/PDE-restricted estimates
   remain open. No new region, bound, manuscript or snapshot. For Edward
   Baker with substantial LLM assistance, **gpt-6.1-sol, actual effort ultra**.
+
+
+- **18 October 2026 — Seven-program symmetry review and priorities.**
+  [Assessment](symmetries/01_SEVEN_PROGRAM_REVIEW_AND_RESEARCH_PRIORITIES_20261018.md)
+  and [replay record](symmetries/numerics/SEVEN_PROGRAM_REVIEW_REPLAY_20261018.json),
+  reviewing baseline commit `a36d80e4d2c50f747fe5b8bad7e6aab708277dca`.
+  Distinguishes reusable S01/S02 error gains, S03's prospective arithmetic
+  mechanism, and scoped S06/S07 obstructions; sets bounded continuation
+  gates. No new coverage or manuscript snapshot. For Edward Baker with
+  substantial LLM assistance, **gpt-6-astra, actual effort ultra**.
+
+
+- **18 October 2026 — Symmetry continuation plan and task tracking.**
+  [Overview](symmetries/research-overview/01_RESEARCH_OVERVIEW_GOALS_AND_TASKS_20261018.md),
+  [tracker](symmetries/research-progress/01_RESEARCH_TASK_TRACKER_20261018.md) and
+  [S07 alternatives](symmetries/research-overview/02_S07_MISSING_ESTIMATES_AND_ALTERNATIVE_APPROACHES_20261018.md).
+  Defines 24 task contracts, separates analytic/source-informed comparisons,
+  and ranks constrained theta evaluation and physical winding above further
+  ambient construction. [Inherited controls replayed](symmetries/numerics/RESEARCH_PLAN_CONTROL_SCREEN_20261018.json).
+  Planning milestone only; no new coverage or manuscript snapshot. For
+  Edward Baker with substantial LLM assistance, **gpt-6-astra, actual effort ultra**.
+
+
+- **19 October 2026 — S01 paired-tail complete-consumer integration.**
+  [Continuation Note 02](symmetries/01_modular_self_duality/notes/02_COMPLETE_PAIRED_TAIL_CONSUMER_AND_STOPPING_DECISION_20261019.md),
+  [192/256-bit record](symmetries/01_modular_self_duality/numerics/S01_COMPLETE_CONSUMER_20261019.json)
+  and [separate internal review](symmetries/01_modular_self_duality/reviews/02_COMPLETE_CONSUMER_INTEGRATION_INTERNAL_REVIEW_20261019.md).
+  Reusable integration preserves inherited complete-error savings; all 40
+  signed intervals and 116 calls unchanged. S01-T1 complete as regression
+  validation; stop omitted-tail tuning on B. No additional margin, coverage
+  or manuscript snapshot. See the [tracker](symmetries/research-progress/01_RESEARCH_TASK_TRACKER_20261018.md).
+  For Edward Baker with substantial LLM assistance, **gpt-6.1-sol, ultra**.
+
+
+- **19 October 2026 — S02 matched correction selection.**
+  [Note 02](symmetries/02_cutoff_reflection/notes/02_MATCHED_FROZEN_AND_ANALYTIC_CORRECTIONS_20261019.md),
+  [192/256-bit ledger](symmetries/02_cutoff_reflection/numerics/S02_MATCHED_CORRECTION_20261019.json)
+  and [separate internal review](symmetries/02_cutoff_reflection/reviews/02_MATCHED_CORRECTION_INTERNAL_REVIEW_20261019.md).
+  Frozen eta <0.226298331/<0.229588317 beats the full one-slope ledger;
+  restoring earlier edge matching cuts full C from 0.431777199 to
+  <0.229588635. S02-T1 complete; S02-T2 Ready. No new physical margin,
+  coverage or manuscript snapshot. For Edward Baker with substantial LLM
+  assistance, **gpt-6.1-sol, ultra**.
+
+
+- **19 October 2026 — S02 complete jets and Schur-coupled physical test.**
+  [Note 03](symmetries/02_cutoff_reflection/notes/03_COMPLETE_FROZEN_JETS_AND_PAID_CONSUMERS_20261019.md),
+  [small 192/256 record](symmetries/02_cutoff_reflection/numerics/S02_COMPLETE_JETS_20261019.json),
+  [Review 03](symmetries/02_cutoff_reflection/reviews/03_COMPLETE_JET_INTERNAL_REVIEW_20261019.md),
+  [external tables](symmetries/02_cutoff_reflection/ARCHIVES.md).
+  Both analytic formulas validate4096 old B cells with joint residual
+  coefficients. Paid firstjet frozen>0.9686625938, full>0.9702739184,
+  fresh source>1.3473946960; preserve full S03 interface. S02-T2 Complete,
+  C unactivated; no new region/cost advantage or snapshot. Prepared for
+  Edward Baker with substantial LLM assistance, **gpt-6.1-sol, ultra**.
+
+
+- **19 October 2026 — S03 complete filtered residual and scoped payment obstruction.**
+  [Note 03](symmetries/03_normalized_jet_rotation/notes/03_FILTERED_COMPLETE_RESIDUAL_AND_SPLIT_PREFIX_OBSTRUCTION_20261019.md),
+  [192/256-bit record](symmetries/03_normalized_jet_rotation/numerics/S03_FILTERED_MECHANISM_20261019.json)
+  and [separate internal review](symmetries/03_normalized_jet_rotation/reviews/03_FILTERED_RESIDUAL_INTERNAL_REVIEW_20261019.md).
+  Exact signed source/arithmetic/correction discrepancy and tail/heat-forcing
+  ledger derived. Any separate source/approximation prefix triangle payment
+  exceeds 1.912087 on B; no new recombined allowance or coverage. T1 Complete,
+  T2 Ready. No manuscript snapshot. For Edward Baker with substantial LLM
+  assistance, **gpt-6.1-sol, actual effort ultra**.
+
+- **19 October 2026 — S03-T2 analytic-only allowance and kernel-variation screen.**
+  [Note 04](symmetries/03_normalized_jet_rotation/notes/04_PHASE_AWARE_ANALYTIC_ALLOWANCE_AND_KERNEL_VARIATION_OBSTRUCTION_20261019.md),
+  [192/256-bit record](symmetries/03_normalized_jet_rotation/numerics/S03_PHASE_ANALYTIC_ALLOWANCE_20261019.json)
+  and [separate internal review](symmetries/03_normalized_jet_rotation/reviews/04_PHASE_ALLOWANCE_AND_KERNEL_OBSTRUCTION_INTERNAL_REVIEW_20261019.md).
+  Complete analytic-only increment <0.812260 vs <0.827470 (>1.8381% decrease);
+  source-informed <0.000266448 remains stronger. Separate absolute source-kernel
+  variation assigns one cell >4037.45136. T2 bounded branch Complete, T3 Ready;
+  arithmetic cancellation/height-uniform input open. No coverage or snapshot.
+  For Edward Baker with substantial LLM assistance, **gpt-6.1-sol, ultra**.
+
+- **19 October 2026 — S03-T3 calibrated/direct comparison and stopping decision.**
+  [Note 05](symmetries/03_normalized_jet_rotation/notes/05_CALIBRATED_FIRST_JET_AND_MATCHED_DIRECT_COMPARISON_20261019.md),
+  [complete 192/256 ledger](symmetries/03_normalized_jet_rotation/numerics/S03_CALIBRATED_CONSUMERS_20261019.json)
+  and [separate internal review](symmetries/03_normalized_jet_rotation/reviews/05_CALIBRATED_CONSUMER_COMPARISON_INTERNAL_REVIEW_20261019.md).
+  Exact anchors exported; calibrated J radius>1.3859351576, scalar>1.1288659652,
+  matched source direct>1.3898732635. T3 Complete as bounded comparison;
+  strongest direct wins. Retain interface and stop fixed-box tuning.
+  No new residual theorem, coverage, matched-cost claim or snapshot.
+  For Edward Baker with substantial LLM assistance, **gpt-6.1-sol, ultra**.
+
+- **19 October 2026 — G3 arithmetic finite-mode theorem and edge diagnosis.**
+  [Note 06](symmetries/03_normalized_jet_rotation/notes/06_ARITHMETIC_GAMMA_AND_EDGE_CORRECTIONS_20261019.md),
+  [192/256 records](symmetries/03_normalized_jet_rotation/numerics/README.md),
+  [separate same-model review](symmetries/03_normalized_jet_rotation/reviews/06_ARITHMETIC_GAMMA_AND_EDGE_INTERNAL_REVIEW_20261019.md).
+  Uniform filtered finite remainder <3.874872e-6; local finite/edge cancellation
+  identified, essential gamma prefactor retained. Complete edge jet/prefix
+  still open; G3 partial. No new consumer allowance, coverage or snapshot.
+  For Edward Baker with substantial LLM assistance, **gpt-6.1-sol, ultra**.
+
+- **19 October 2026 — Consolidated symmetry progress summary.**
+  [Summary](symmetries/summary/01_SYMMETRY_RESEARCH_PROGRESS_SUMMARY_20261019.md)
+  indexes S01–S07 opening and continuation findings, complete comparisons,
+  partial G3 explanation, scoped obstructions and open handoffs. Sources and
+  task statuses checked by separate same-model readers; no new mathematical
+  result, task completion, coverage or manuscript snapshot.
+  For Edward Baker with substantial LLM assistance, **gpt-6.1-sol, ultra**.
+
+- **19 October 2026 — Complete independent G3 arithmetic edge and increment.**
+  [Note 07](symmetries/03_normalized_jet_rotation/notes/07_COMPLETE_ARITHMETIC_EDGE_AND_RESIDUAL_INCREMENT_20261019.md),
+  [192/256 ledgers](symmetries/03_normalized_jet_rotation/numerics/README.md),
+  [separate same-model review](symmetries/03_normalized_jet_rotation/reviews/07_COMPLETE_ARITHMETIC_EDGE_AND_INCREMENT_INTERNAL_REVIEW_20261019.md).
+  Complete edge error<6e-8 and signed increment<0.000854 on B,N=8 without
+  source quadrature/Taylor data; >950-fold independent-allowance improvement.
+  Source-informed0.000266448 remains stronger. Fixed-pilot task complete;
+  height/consumer/cost/coverage gains open. No snapshot. For Edward Baker
+  with substantial LLM assistance, **gpt-6.1-sol, ultra**.
+
+
+- **19 October 2026 — S04-T2 signed Gaussian core and complete average.**
+  [Note 02](symmetries/04_time_height_scaling/notes/02_GAUSSIAN_SIGNED_CORE_AND_COMPLETE_AVERAGED_VALUE_20261019.md),
+  [192/256 records](symmetries/04_time_height_scaling/numerics/README.md),
+  [separate same-model review](symmetries/04_time_height_scaling/reviews/02_GAUSSIAN_SIGNED_CORE_INTERNAL_REVIEW_20261019.md).
+  Uniform signed core average<1.5e-6; complete physical average within0.11
+  of its leading coefficient, weighted Q/2 energy>0.198. Source, cutoff,
+  movement and tails paid. Bounded averaged-functional gate complete;
+  pointwise core/height residual open. No collision exclusion or snapshot.
+  For Edward Baker with substantial LLM assistance, **gpt-6.1-sol, ultra**.
+
+
+- **19 October 2026 — S04-T3 uniform local endpoint transfer and scoped cutoff loss.**
+  [Note 03](symmetries/04_time_height_scaling/notes/03_UNIFORM_LOCAL_RESIDUAL_TRANSFER_AND_CUTOFF_PAYMENT_OBSTRUCTION_20261019.md),
+  [192/256 ledgers](symmetries/04_time_height_scaling/numerics/README.md),
+  [separate same-model review](symmetries/04_time_height_scaling/reviews/03_UNIFORM_RESIDUAL_TRANSFER_INTERNAL_REVIEW_20261019.md).
+  Local complete increment<46.679exp(-b*/t); independent transition disks
+  across the sector cost>.99exp(1/(4t)). Intermediate theorem/failed-transfer
+  gate Complete; actual signed jumps, coherent matching and positive anchor
+  margin open. No new coverage or snapshot. For Edward Baker with substantial
+  LLM assistance, **gpt-6.1-sol, actual effort ultra**.
+
+
+- **19 October 2026 — S05-T1 bounded consumer selection.**
+  [Note 02](symmetries/05_covariant_theta_jets/notes/02_SOURCE_CONSUMER_FIT_AND_SHIFTED_ACQUISITION_SELECTION_20261019.md),
+  [192/256 probe/budget records](symmetries/05_covariant_theta_jets/numerics/README.md),
+  [separate same-model review](symmetries/05_covariant_theta_jets/reviews/02_SOURCE_CONSUMER_FIT_INTERNAL_REVIEW_20261019.md).
+  Real parity handoffs rejected for inspected S01/S06 calls; shifted
+  polynomial-factoring candidate selected, j0 radius decrease about0.07361%.
+  T1 Complete, T2 Ready via explicit route update; complete physical gain,
+  cost and coverage untested. No snapshot. For Edward Baker with substantial
+  LLM assistance, **gpt-6.1-sol, actual effort ultra**.
+
+
+- **19 October 2026 — S05-T2 complete shifted consumer comparison.**
+  [Note 03](symmetries/05_covariant_theta_jets/notes/03_COMPLETE_SHIFTED_ACQUISITION_AND_CONSUMER_COMPARISON_20261019.md),
+  [192/256 certificates](symmetries/05_covariant_theta_jets/numerics/README.md),
+  [separate same-model review](symmetries/05_covariant_theta_jets/reviews/03_COMPLETE_SHIFTED_CONSUMER_INTERNAL_REVIEW_20261019.md).
+  Full51coefficients; groupedj2/factoredother50 reduces complete addederror
+  >0.0092005%,0.0077659%,0.0082207% versus strongold2hybrid. T2 Complete;
+  adaptive minimum unchanged, rawfixedmargins varybothways, no cost/coverage
+  gain. StopfixedBcomparison; no snapshot. For Edward Baker with substantial
+  LLM assistance, **gpt-6.1-sol, actual effort ultra**.
+
+- **19 October 2026 — S06-T1 second-completion feasibility.**
+  [Note 03](symmetries/06_hodge_and_transverse_geometry/notes/03_SECOND_TRANSVERSE_COMPLETION_AND_CURRENT_FEASIBILITY_20261019.md)
+  uniquely completes C2 and retains its full current and boundaries.
+  A convergent reflected control has positive centered current at an event
+  with E=0, closing this current-sign/generic magnitude-payment attempt;
+  T2 feasibility gate fails. [Separate same-model review](symmetries/06_hodge_and_transverse_geometry/reviews/04_SECOND_TRANSVERSE_COMPLETION_INTERNAL_REVIEW_20261019.md)
+  and [exact/fresh controls](symmetries/06_hodge_and_transverse_geometry/numerics/S06_T1_COMPLETION_CHECKS_20261019.json).
+  No new snapshot, commit, theta margin or coverage. For Edward Baker with
+  substantial LLM assistance, **gpt-6.1-sol, actual effort ultra**.
+
+- **19 October 2026 — S06-T2 bounded completed-current comparison.**
+  [Note 05](symmetries/06_hodge_and_transverse_geometry/notes/05_BOUNDED_COMPLETED_CURRENT_AND_DIRECT_COMPARISON_20261019.md)
+  reselects an event-vanishing residual and pays fresh complete four-jet
+  inputs at192/256. Residual60/64 versus direct64/64; successful current
+  radii <0.552 of direct, with scoped same-information dominance theorem.
+  Bounded attempt complete, benefit gate failed; stop fixed-pilot branch.
+  [Separate same-model review](symmetries/06_hodge_and_transverse_geometry/reviews/05_BOUNDED_COMPLETED_CURRENT_INTERNAL_REVIEW_20261019.md)
+  and [records](symmetries/06_hodge_and_transverse_geometry/numerics/README.md).
+  No snapshot, commit, new physical margin, coverage or Newman result.
+  For Edward Baker with substantial LLM assistance, **gpt-6.1-sol, ultra**.
+
+- **19 October 2026 — S07-T1 admissible theta jets and residual contract.**
+  [Note 03](symmetries/07_geometric_duality_and_quaternionic_symmetry/notes/03_CONSTRAINED_THETA_JET_SPACE_AND_RESIDUAL_CONTRACT_20261019.md)
+  establishes the five-jet space, Gram/kernel and global residual/complement
+  contract; T2 Ready, physical advantage unpaid.
+  [Internal review](symmetries/07_geometric_duality_and_quaternionic_symmetry/reviews/03_CONSTRAINED_THETA_SPACE_INTERNAL_REVIEW_20261019.md);
+  [summary](symmetries/summary/01_SYMMETRY_RESEARCH_PROGRESS_SUMMARY_20261019.md).
+
+- **19 October 2026 — S07-T2 paid profile trace comparison.**
+  [Note 04](symmetries/07_geometric_duality_and_quaternionic_symmetry/notes/04_PAID_PROFILE_TRACE_AND_DIRECT_TAIL_COMPARISON_20261019.md)
+  closes selected N=2 whole-profile rule: assigned payments lose to direct
+  by >1618 and >34152 before common acquisition errors; no physical gain.
+  [Internal review](symmetries/07_geometric_duality_and_quaternionic_symmetry/reviews/04_PAID_PROFILE_TRACE_INTERNAL_REVIEW_20261019.md);
+  [summary](symmetries/summary/01_SYMMETRY_RESEARCH_PROGRESS_SUMMARY_20261019.md).
+
+- **19 October 2026 — S07 post-T2 options assessment.**
+  [Note 05](symmetries/07_geometric_duality_and_quaternionic_symmetry/notes/05_OBSERVATION_OPTIONS_AND_BOUNDED_FEASIBILITY_SCREENS_20261019.md)
+  screens unchanged-norm cutoff retuning and a separate old-norm projected
+  complement; distinguishes prior proposals and recommends a bounded next
+  representation audit. [Internal review](symmetries/07_geometric_duality_and_quaternionic_symmetry/reviews/05_OBSERVATION_OPTIONS_INTERNAL_REVIEW_20261019.md).
+
+- **19 October 2026 — GEO-T1 matched physical winding comparison.**
+  [Note 06](symmetries/notes/06_GEO_T1_WINDING_AND_DIRECT_COMPARISON_20261019.md)
+  validates degree-zero winding on B, while optimized direct certification
+  uses fewer calls. Setup dominates; the factor-two cold-cost gate fails.
+  No coverage extension; stop the fixed box. [Internal review](symmetries/reviews/01_GEO_T1_WINDING_DIRECT_INTERNAL_REVIEW_20261019.md)
+  and [summary](symmetries/summary/01_SYMMETRY_RESEARCH_PROGRESS_SUMMARY_20261019.md).
+  Prepared for Edward Baker with LLM assistance, **gpt-6.1-sol, ultra**.

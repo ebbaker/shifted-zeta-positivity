@@ -135,6 +135,43 @@ See the [internal assessment](reviews/01_FULL_CUTOFF_SCALING_INTERNAL_REVIEW_202
 and [file identities](reviews/S04_OPENING_FILE_IDENTITIES_20261018.json).
 
 The next bounded task is to estimate a retained signed arithmetic quantity
-with a strict improvement over its current payment. A rotation-defect
-consumer first needs a paid second derivative. This chat has its unique
+with a strict improvement over its current payment. A pointwise rotation-defect
+consumer needs a paid second derivative; endpoint transport uses first jets. This chat has its unique
 [direction archive](chat-histories/README.md).
+
+
+## S04-T2: signed Gaussian average
+
+19 October 2026. Prepared for Edward Baker with substantial LLM assistance,
+**gpt-6.1-sol, actual effort ultra**. [Note 02](notes/02_GAUSSIAN_SIGNED_CORE_AND_COMPLETE_AVERAGED_VALUE_20261019.md)
+proves a phase-matched finite Gaussian intermediate-core average <1.5e-6
+on the same entire kappa/time sector. Full physical average B satisfies
+abs(B-1)<0.11 after all low/terminal/reflected, source, movement, tail
+and cutoff-transition costs. Weighted Q/2 energy is >0.198.
+
+S04-T2 is **Complete for this averaged functional**. Pointwise signed-core
+control remains open. This energy bound permits isolated collisions and
+provided no pointwise residual/anchor input for T3 at that stage.
+S04-T1 stays Conditional. [Separate same-model review](reviews/02_GAUSSIAN_SIGNED_CORE_INTERNAL_REVIEW_20261019.md)
+and [192/256-bit records](numerics/README.md) include complete finite
+frozen-transform diagnostics at three prescribed points and fresh controls.
+
+
+## S04-T3: local transfer and the cost of independent cutoff disks
+
+19 October 2026. For Edward Baker with substantial LLM assistance,
+**gpt-6.1-sol, actual effort ultra**. [Note 03](notes/03_UNIFORM_LOCAL_RESIDUAL_TRANSFER_AND_CUTOFF_PAYMENT_OBSTRUCTION_20261019.md)
+transfers the endpoint method to fixed-natural-center half-disk charts
+uniformly in kappa[1,2],0<t<=1/20. Complete local residual increment
+<46.679exp(-b*/t), opening<0.090111; physical return and anchor uncertainty
+paid. This is an inherited-theorem corollary for Q-F_N, not a transfer of
+the S03 corrected fixed-pilot0.000854 allowance.
+
+Independent coefficientwise transition disks across the full sector assign
+>.99exp(1/(4t)), already>148.413 at t=1/20. Actual signed jumps are not
+lower bounded. Coherent RS matching and a positive physical anchor margin
+remain open; same-envelope direct endpoint control is stronger than
+approximate-anchor transport. T3 is **Complete for the intermediate theorem
+and scoped failed-transfer branch**; global noncollision remains open.
+T1 stays Conditional. [Separate same-model review](reviews/03_UNIFORM_RESIDUAL_TRANSFER_INTERNAL_REVIEW_20261019.md)
+and [192/256/fresh192 records and controls](numerics/README.md).

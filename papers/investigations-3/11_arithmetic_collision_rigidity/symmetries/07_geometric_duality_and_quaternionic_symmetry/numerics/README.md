@@ -67,3 +67,81 @@ The [internal review](../reviews/02_GREEN_IDENTITY_AND_TRACE_OBSTRUCTION_INTERNA
 proof, finite algebra, control replay and remaining theta-specific gap.
 The original setup manifest remains a historical pin, not a hash of later
 edited guides. No new physical sign, region or complete-error gain is claimed.
+
+## S07-T1 constrained section space — 19 October 2026
+
+For Edward Baker with substantial LLM assistance, **gpt-6.1-sol, ultra**.
+[Exact checker](check_theta_section_space.py) and
+[record](S07_T1_SECTION_SPACE_20261019.json) verify Hermite Gram/ladder,
+source, automorphy/connection/Jacobi algebra and false seam/closure fixtures.
+The analytic norm and admissibility proofs are in
+[Note 03](../notes/03_CONSTRAINED_THETA_JET_SPACE_AND_RESIDUAL_CONTRACT_20261019.md); finite checks do not establish a useful physical error.
+
+```sh
+python3 papers/investigations-3/11_arithmetic_collision_rigidity/symmetries/07_geometric_duality_and_quaternionic_symmetry/numerics/check_theta_section_space.py --repo . --output /tmp/s07_t1_section_space.json
+```
+
+[Fresh source controls](S07_T1_SOURCE_CONTROLS_20261019.json) reject the five
+inherited event boxes and separate signed Euler witness at unchanged
+physical interfaces. Reproduce with the inherited replay command above;
+its producer retains a hardcoded 18 October date, so this record separately
+preserves that source-script date and records the actual 19 October replay.
+No new strict acceptance test, interval kernel maximum, evaluated residual
+norm, paid physical advantage or expanded domain is certified here.
+
+The [separate reviewer replay](S07_T1_MATHEMATICAL_REVIEW_REPLAY_20261019.json)
+matches the final primary record, including all final source/checker hashes.
+
+## S07-T2 paid profile comparison — 19 October 2026
+
+For Edward Baker with substantial LLM assistance, **gpt-6.1-sol, ultra**.
+[Interval checker](certify_profile_trace_comparison.py),
+[192-bit record](S07_T2_PROFILE_TRACE_192_20261019.json),
+[256-bit record](S07_T2_PROFILE_TRACE_256_20261019.json) and
+[fresh review replay](S07_T2_REVIEW_REPLAY_192_20261019.json) evaluate the
+closed analytic bounds of [Note 04](../notes/04_PAID_PROFILE_TRACE_AND_DIRECT_TAIL_COMPARISON_20261019.md). No sampled
+extremum or numerical quadrature is used. Exact finite algebra supports
+the continuous proofs; it does not prove them by counting checks.
+
+With python-flint available, run from the repository root:
+
+```sh
+python3 papers/investigations-3/11_arithmetic_collision_rigidity/symmetries/07_geometric_duality_and_quaternionic_symmetry/numerics/certify_profile_trace_comparison.py --repo . --precision 192 --output /tmp/s07_t2_profile192.json
+```
+
+Repeat with precision256 for the second record. The fixed contract has no
+N/tube/observation tuning options. Low/high precision and missing/wrong
+repository guards fail before output; runtime data, contract and source
+hashes are recorded. [Input guard record](S07_T2_GUARDS_20261019.json).
+[Fresh inherited source controls](S07_T2_SOURCE_CONTROLS_20261019.json)
+reject five event boxes and the separate signed Euler witness, using their
+own sources and errors at unchanged physical interfaces. The inherited
+producer hardcodes18October; this record preserves that script date and
+records actual19October execution.
+
+The records certify evaluation of an analytic allowance comparison,
+not a signed physical test or actual-error lower bound. No retained-source
+numerical acquisition or cost benchmark was performed. Identical future
+acquisition errors are charged symbolically and cannot reverse the loss.
+
+## Post-T2 option screens — 19 October 2026
+
+For Edward Baker with substantial LLM assistance, **gpt-6.1-sol, ultra**.
+[Checker](screen_observation_options.py),
+[192 record](S07_OPTIONS_192_20261019.json),
+[256 record](S07_OPTIONS_256_20261019.json) and
+[reviewer replay](S07_OPTIONS_REVIEW_REPLAY_192_20261019.json) evaluate the
+closed constants for two scoped payment-floor proofs in
+[Note 05](../notes/05_OBSERVATION_OPTIONS_AND_BOUNDED_FEASIBILITY_SCREENS_20261019.md). No cutoff-width or kernel-parameter
+sweep was run. All floors concern assigned allowances, not actual errors.
+
+```sh
+python3 papers/investigations-3/11_arithmetic_collision_rigidity/symmetries/07_geometric_duality_and_quaternionic_symmetry/numerics/screen_observation_options.py --repo . --precision 192 --output /tmp/s07_options192.json
+```
+
+Python-flint is required. Repeat at256bits. The low/high precision and
+required-source guards are explicit. [Fresh source-specific controls](S07_OPTIONS_SOURCE_CONTROLS_20261019.json)
+retain five event-box rejections and the separate Euler signed-witness
+rejection at unchanged physical interfaces, using their own source errors.
+The inherited producer date18October is preserved separately from actual
+19October execution. No new strict acceptance interface or physical gain.

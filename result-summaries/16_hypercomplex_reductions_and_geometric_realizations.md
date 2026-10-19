@@ -100,6 +100,73 @@ signed integral bounds. Write \(h_j=\partial_x^jH\),
   excluded. For Edward Baker with substantial LLM assistance,
   **gpt-6.1-sol, actual effort ultra**.
 
+- **Second transverse completion (S06-T1, 19 October).**
+  [Note 03](../papers/investigations-3/11_arithmetic_collision_rigidity/symmetries/06_hodge_and_transverse_geometry/notes/03_SECOND_TRANSVERSE_COMPLETION_AND_CURRENT_FEASIBILITY_20261019.md) gives the unique completion
+  C2=(D²-22D+165)Phi/16 in its one-parameter primitive-correction class,
+  its full current, and the primitive lower edges/corner. At a
+  nondegenerate event E=0 but W=-t²Hxx/4 and
+  J2c=11t³Hxx²/16>0. An actual convergent reflected source supplies the
+  control. Source status: **scoped closure** of this current-positivity
+  test and generic finite local magnitude payment by E; **analytic
+  derivation and scoped counterexamples** with exact checks and a
+  [separate same-model internal review](../papers/investigations-3/11_arithmetic_collision_rigidity/symmetries/06_hodge_and_transverse_geometry/reviews/04_SECOND_TRANSVERSE_COMPLETION_INTERNAL_REVIEW_20261019.md). T2's feasibility
+  gate is not passed. No theta sign/margin/coverage gain, and no exclusion
+  of theta-specific higher-jet or nonlocal estimates. Prepared for Edward
+  Baker with substantial LLM assistance, **gpt-6.1-sol, actual effort ultra**.
+
+- **Bounded completed-current comparison (S06-T2, 19 October).**
+  [Note 05](../papers/investigations-3/11_arithmetic_collision_rigidity/symmetries/06_hodge_and_transverse_geometry/notes/05_BOUNDED_COMPLETED_CURRENT_AND_DIRECT_COMPARISON_20261019.md) selects the event-vanishing residual
+  L0-beta L0_x, beta=2tx/(165+4t+x²). Fresh complete four-jet inputs at
+  192/256 bits sign60/64 fixed B cells, versus direct64/64 and physical
+  radius >0.0190407974544. Every successful current radius is <0.552 of
+  direct. Source status: **bounded comparison complete; benefit gate
+  failed**, with a **scoped same-information dominance theorem** for
+  Cauchy extraction from the same Cartesian jet balls. Four intervals
+  straddle zero; no physical negativity is claimed. [Separate same-model
+  review](../papers/investigations-3/11_arithmetic_collision_rigidity/symmetries/06_hodge_and_transverse_geometry/reviews/05_BOUNDED_COMPLETED_CURRENT_INTERNAL_REVIEW_20261019.md) and fresh replays pass. No new geometric sign,
+  error/cost/coverage or Newman gain; different source correlations remain
+  open. For Edward Baker with substantial LLM assistance,
+  **gpt-6.1-sol, actual effort ultra**.
+
+- **Constrained theta section space (S07-T1, 19 October).**
+  [Note 03](../papers/investigations-3/11_arithmetic_collision_rigidity/symmetries/07_geometric_duality_and_quaternionic_symmetry/notes/03_CONSTRAINED_THETA_JET_SPACE_AND_RESIDUAL_CONTRACT_20261019.md)
+  proves dim V4=5, its diagonal Gram/evaluation kernel and source
+  inclusion without holomorphy. A global moving-profile cutoff gives
+  a genuine residual with low and high components; a specified
+  profile/base norm pays its observation. Source status: **admissible-space
+  and observation contract complete**, not a useful paid physical error.
+  [Separate same-model review](../papers/investigations-3/11_arithmetic_collision_rigidity/symmetries/07_geometric_duality_and_quaternionic_symmetry/reviews/03_CONSTRAINED_THETA_SPACE_INTERNAL_REVIEW_20261019.md).
+  T2 became Ready at this stage; its selected comparison is closed below.
+  No new sign/error/cost/coverage gain. For Edward Baker with substantial
+  LLM assistance, **gpt-6.1-sol, actual effort ultra**.
+
+- **Paid profile trace (S07-T2, 19 October).**
+  [Note 04](../papers/investigations-3/11_arithmetic_collision_rigidity/symmetries/07_geometric_duality_and_quaternionic_symmetry/notes/04_PAID_PROFILE_TRACE_AND_DIRECT_TAIL_COMPARISON_20261019.md)
+  completes a **bounded analytic failed-estimate comparison**: the fixed
+  N=2 whole-profile sqrt(20)X rule has assigned-payment floors >1618 and
+  >34152 times available direct complete-tail allowances before common
+  acquisitions. Annular mass between physical lattice samples causes
+  the loss. Actual errors are not lower bounded. Shared global retained
+  modes/tails and symbolic future acquisition errors are accounted for;
+  no numerical consumer or cost benchmark was acquired.
+  [Separate same-model review](../papers/investigations-3/11_arithmetic_collision_rigidity/symmetries/07_geometric_duality_and_quaternionic_symmetry/reviews/04_PAID_PROFILE_TRACE_INTERNAL_REVIEW_20261019.md)
+  and192/256/fresh192 interval replays pass. Stop this selected rule;
+  other observation norms/kernel/adjoint routes remain open. T3 Waiting;
+  no physical sign/error/cost/coverage gain. For Edward Baker with
+  substantial LLM assistance, **gpt-6.1-sol, actual effort ultra**.
+
+- **Post-T2 option screens (19 October).**
+  [Note 05](../papers/investigations-3/11_arithmetic_collision_rigidity/symmetries/07_geometric_duality_and_quaternionic_symmetry/notes/05_OBSERVATION_OPTIONS_AND_BOUNDED_FEASIBILITY_SCREENS_20261019.md)
+  proves a cutoff-independent payment floor for the unchanged N=2
+  sqrt(20)X/Cauchy rule (loss ratios >10.23/>215.9), and a floor for the
+  originalchi2 V4 split with the oldX complement (>1617/>34118). These
+  are **scoped assigned-allowance exclusions**, not actual-error lower
+  bounds; changed sampling/complement/signed/adjoint estimates stay open.
+  [Separate same-model review](../papers/investigations-3/11_arithmetic_collision_rigidity/symmetries/07_geometric_duality_and_quaternionic_symmetry/reviews/05_OBSERVATION_OPTIONS_INTERNAL_REVIEW_20261019.md)
+  and192/256/fresh192 screens pass. T3 Waiting; no useful physical input
+  or coverage. For Edward Baker with substantial LLM assistance,
+  **gpt-6.1-sol, actual effort ultra**.
+
 ## Status
 
 The cited notes give analytic proofs and exact algebraic checks, with

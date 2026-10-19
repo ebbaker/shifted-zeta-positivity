@@ -39,6 +39,23 @@ measure.
   data. Added for Edward Baker with substantial LLM assistance, **gpt-6-astra,
   max**; [same-assistant assessment](../papers/investigations-3/11_arithmetic_collision_rigidity/reviews/01_OPENING_ROUND_SELF_REVIEW_CODEX_20261018.md).
 
+- [S04-T2 Note 02](../papers/investigations-3/11_arithmetic_collision_rigidity/symmetries/04_time_height_scaling/notes/02_GAUSSIAN_SIGNED_CORE_AND_COMPLETE_AVERAGED_VALUE_20261019.md) explicitly limits its new
+  phase-matched energy floor: “an averaged energy bound may hold at a
+  source's isolated collision.” The source-specific RS premises justify
+  the average, while energy-to-pointwise exclusion still needs an
+  additional argument. Entry added 19 October 2026 for Edward Baker with
+  substantial LLM assistance, **gpt-6.1-sol, actual effort ultra**.
+
+- [S06-T1 Note 03](../papers/investigations-3/11_arithmetic_collision_rigidity/symmetries/06_hodge_and_transverse_geometry/notes/03_SECOND_TRANSVERSE_COMPLETION_AND_CURRENT_FEASIBILITY_20261019.md), 19 October 2026:
+  “At a nondegenerate physical collision the observation is nonzero and
+  the centered current is strictly positive.” Completion and a favorable
+  auxiliary current do not by themselves make a collision test. The
+  reflected source has convergent differential completion and E=0;
+  canonical theta arithmetic is its failed premise. This screens the
+  stated current-sign/generic energy-payment attempt, not theta-specific
+  estimates. [Separate same-model review](../papers/investigations-3/11_arithmetic_collision_rigidity/symmetries/06_hodge_and_transverse_geometry/reviews/04_SECOND_TRANSVERSE_COMPLETION_INTERNAL_REVIEW_20261019.md). Added for Edward
+  Baker with substantial LLM assistance, **gpt-6.1-sol, ultra**.
+
 ## What it cost
 
 The 09-to-06 continuation, 02's continuation and 17's pilot ended at

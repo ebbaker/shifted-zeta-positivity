@@ -1,0 +1,183 @@
+{
+  "schema": "s05-t1-shifted-source-fit-probe-v1",
+  "date": "2026-10-19",
+  "timezone": "America/New_York",
+  "prepared_for": "Edward Baker",
+  "actual_model": "gpt-6.1-sol",
+  "actual_effort": "ultra",
+  "llm_assistance": "substantial; internal same-model research",
+  "python": "3.10.0",
+  "python_flint": "0.9.0",
+  "precision_bits": 192,
+  "script_sha256": "0ff2faaefc05dc2d211b9e16abd85ec216335b7baa693c70d2d596807515c61b",
+  "source_sha256": {
+    "papers/investigations-3/11_arithmetic_collision_rigidity/numerics/high_height_consumer/high_height_consumer.py": "e96feb2b4c3e84de3025713b486fb8cf99fdd810f61366b79a0da188eb12535f",
+    "papers/investigations-3/11_arithmetic_collision_rigidity/symmetries/01_modular_self_duality/numerics/S01_COMPLETE_CONSUMER_20261019.json": "4e5b8336843da26294d721c2338e8b2bac5f8af67260aea7843205d1fb97806a",
+    "papers/investigations-3/11_arithmetic_collision_rigidity/symmetries/01_modular_self_duality/numerics/integrate_paired_tail_consumer.py": "f6b89d07cbf1f6fb7fbdbe0a491545a86c5ecabf9320bccf6285db53c7c1158f",
+    "papers/investigations-3/11_arithmetic_collision_rigidity/symmetries/05_covariant_theta_jets/numerics/check_covariant_source_enclosures.py": "bc78419b4bd60b979c63728d37faced2c373e2240d1c0879586361ac5b0c91e6",
+    "papers/investigations-3/11_arithmetic_collision_rigidity/symmetries/05_covariant_theta_jets/notes/01_COMPLETE_SOURCE_JETS_AND_FIXED_POINT_ENCLOSURES_20261018.md": "693817db663ba4170554b83cfbe756e0f771a9ff85c04fcf09a4fedb1c3eab4a"
+  },
+  "historical_S01_ledger_verification": {
+    "producer_sha256_matches": true,
+    "source_pin_checks": {
+      "papers/investigations-3/11_arithmetic_collision_rigidity/numerics/high_height_consumer/high_height_consumer.py": true,
+      "papers/investigations-3/11_arithmetic_collision_rigidity/symmetries/01_modular_self_duality/numerics/check_paired_modular_tail.py": true,
+      "papers/investigations-3/11_arithmetic_collision_rigidity/symmetries/01_modular_self_duality/notes/01_PAIRED_ENDPOINT_REMAINDER_AND_BOUNDED_COMPARISON_20261018.md": true,
+      "papers/investigations-3/11_arithmetic_collision_rigidity/symmetries/notes/01_S01_COMPLETE_CONSUMER_COMPARISON_CONTRACT_20261019.md": true,
+      "papers/investigations-3/11_arithmetic_collision_rigidity/numerics/high_height_consumer/REAL_COMPARISON.json": true,
+      "papers/investigations-3/11_arithmetic_collision_rigidity/numerics/high_height_consumer/SIGNED_CONSUMER.json": true,
+      "papers/investigations-3/11_arithmetic_collision_rigidity/manuscript/positive_arithmetic_packets/sections/08_effective_tails.tex": true,
+      "papers/investigations-3/11_arithmetic_collision_rigidity/manuscript/positive_arithmetic_packets/sections/01_theta.tex": true,
+      "papers/investigations-3/11_arithmetic_collision_rigidity/manuscript/positive_arithmetic_packets/sections/07_shifted_approximation.tex": true
+    },
+    "status_pass": true
+  },
+  "selected_caller": "WholeCellEvaluator midpoint acquisition, S01 complete signed consumer on B",
+  "scope": {
+    "B_t": [
+      "1/100",
+      "1/5"
+    ],
+    "B_x": [
+      "999",
+      "1001"
+    ],
+    "midpoint": [
+      "21/200",
+      "1000"
+    ],
+    "j": 0,
+    "retained_modes": [
+      1,
+      11
+    ],
+    "U": "2",
+    "d": "pi/8-4*log(1000)/1000",
+    "d_enclosure": "[0.365068060582795606599614525453725490033432957 +/- 5.84e-47]",
+    "midpoint_integral_normalization": "1000^(9/4)",
+    "physical_output_units": "H/Gc, Gc=1000^(7/4)*exp(-125*pi)",
+    "quadrature_abs_tol": "1e-13",
+    "quadrature_rel_tol": "1e-30",
+    "eval_limit": 200000,
+    "depth_limit": 30,
+    "range_cells": 128,
+    "range_cell_width": "1/64",
+    "range_domain": [
+      "0",
+      "2"
+    ],
+    "source_images": "finite retained source only; no full-source tail added"
+  },
+  "formulas": {
+    "expanded": "exp(v)*sum((2*lam^2*q^2-3*lam*q)*exp(-lam*q))",
+    "polynomial_factored": "exp(v)*sum(w*(2*w-3)*exp(-w)), w=lam*q",
+    "exponential_grouped": "sum(exp(v-w)*w*(2*w-3)), w=lam*q"
+  },
+  "j0_quadratures": [
+    {
+      "method": "expanded",
+      "callbacks": 3289,
+      "seconds_diagnostic_only": 0.13659150002058595,
+      "real_value": "[-0.0519623666241640157176597949174116847778596933 +/- 2.52e-13]",
+      "imaginary_value": "[-62481.3138690790767578764387956520220929303998 +/- 2.52e-13]",
+      "real_midpoint_dyadic": {
+        "mantissa": "-77765717914423676396092567701338074041492234376793",
+        "exponent": -170
+      },
+      "real_quadrature_radius_upper": "[2.51442361431984760106184140227014722768217325e-13 +/- 2.11e-58]",
+      "real_quadrature_radius_upper_dyadic": {
+        "mantissa": "296850745",
+        "exponent": -70
+      },
+      "imaginary_quadrature_radius_upper": "[2.51442360584951812851883801158692222088575363e-13 +/- 1.60e-58]",
+      "finite": true
+    },
+    {
+      "method": "polynomial_factored",
+      "callbacks": 3289,
+      "seconds_diagnostic_only": 0.09496208303608,
+      "real_value": "[-0.0519623666241640157176597949174116847778596933 +/- 2.52e-13]",
+      "imaginary_value": "[-62481.3138690790767578764387956520220929303998 +/- 2.52e-13]",
+      "real_midpoint_dyadic": {
+        "mantissa": "-311062871657694705584370270805352296165968937507153",
+        "exponent": -172
+      },
+      "real_quadrature_radius_upper": "[2.51257275415647275684793982009068713523447514e-13 +/- 4.20e-58]",
+      "real_quadrature_radius_upper_dyadic": {
+        "mantissa": "148316117",
+        "exponent": -69
+      },
+      "imaginary_quadrature_radius_upper": "[2.51257277533229643820544829679874965222552419e-13 +/- 2.92e-58]",
+      "finite": true
+    },
+    {
+      "method": "exponential_grouped",
+      "callbacks": 3289,
+      "seconds_diagnostic_only": 0.09742245898814872,
+      "real_value": "[-0.0519623666241640157176597949174116847778596933 +/- 2.56e-13]",
+      "imaginary_value": "[-62481.3138690790767578764387956520220929303998 +/- 2.56e-13]",
+      "real_midpoint_dyadic": {
+        "mantissa": "-311062871657694705584370270805352296165968937510833",
+        "exponent": -172
+      },
+      "real_quadrature_radius_upper": "[2.55265945659405345605219572746591438772156835e-13 +/- 3.98e-58]",
+      "real_quadrature_radius_upper_dyadic": {
+        "mantissa": "602729673",
+        "exponent": -71
+      },
+      "imaginary_quadrature_radius_upper": "[2.55265943118306503842318555541623936733230948e-13 +/- 4.49e-58]",
+      "finite": true
+    }
+  ],
+  "actual_shifted_retained_source_range_diagnostics": {
+    "counts": {
+      "polynomial_factored": {
+        "narrower": 128,
+        "wider": 0,
+        "equal": 0
+      },
+      "exponential_grouped": {
+        "narrower": 128,
+        "wider": 0,
+        "equal": 0
+      }
+    },
+    "direct_over_candidate_radius_bounds": {
+      "polynomial_factored": {
+        "minimum_lower_bound": "[1.00000895648067594890176503828983147325396848 +/- 4.96e-45]",
+        "maximum_upper_bound": "[1.01127510024214893422945692543772535726640016 +/- 2.42e-45]"
+      },
+      "exponential_grouped": {
+        "minimum_lower_bound": "[1.12663073077320831669773218297905617620814214 +/- 3.31e-46]",
+        "maximum_upper_bound": "[1.33939439546385978801607077783515515086621116 +/- 2.02e-45]"
+      }
+    },
+    "cell_receipts": "Regenerated in memory by this script; only aggregate counts and extrema retained under LARGE_FILES.md."
+  },
+  "hypothetical_complete_budget_if_only_r0_changes": {
+    "interpretation": "Conditional feasibility scale, not a complete consumer replay. The other 50 coefficients/radii and other errors are held common; C0 midpoint and its radius may both change. The delta is measured against a fresh expanded integral and divided by the historical complete allowance for scale.",
+    "delta_r0_equals_delta_Q0": "[1.85086016337484421390158217946009244769811630e-16 +/- 2.50e-61]",
+    "old_j0_radius": "[2.51442361431984760106184140227014722768217325e-13 +/- 2.11e-58]",
+    "factored_j0_radius": "[2.51257275415647275684793982009068713523447514e-13 +/- 4.20e-58]",
+    "delta_over_j0_radius": "[0.000736097192547049191336878740189787969034741685 +/- 2.53e-49]",
+    "historical_paired_epsilon0": "[3.93453437365910557581878239919150254293307113e-12 +/- 2.20e-57]",
+    "historical_Q0_over_epsilon0": "[0.171118183990085561476566475977369390720467184 +/- 3.84e-46]",
+    "delta_over_historical_epsilon0": "[4.70414028090838515351696275810756708941951331e-5 +/- 3.53e-50]",
+    "Q0_weight_of_r0": "1",
+    "Q1_Q2_use_r0": false,
+    "historical_complete_budget_source": "hash-pinned S01 record; not freshly reacquired"
+  },
+  "decision": "Select polynomial-factoring-only retained-mode acquisition as possible S05-T2 budget fit; park real fixed-point parity transfer for this caller.",
+  "limitations": [
+    "Only j=0 acquired; no other 50 midpoint coefficients reacquired.",
+    "No full physical consumer, complete new error, paid margin, coverage or speedup certified.",
+    "Finite n=1..11 algebra applies without source parity. No full-source parity or tail is transferred.",
+    "Real fixed-point parity Taylor is incompatible with this shifted contour.",
+    "Narrower source cell ranges alone do not guarantee quadrature improvement: exponential grouping is a counterexample here.",
+    "Acb quadrature may inspect complex neighborhoods; the 128 actual-line cell widths are diagnostic, not quadrature error proofs.",
+    "Reported seconds are one-run diagnostics and not matched performance measurements.",
+    "A future T2 must pay all coefficient acquisitions, unchanged mode/source tails, moment/Taylor work and whole-cell propagation."
+  ],
+  "seconds_total_diagnostic": 0.3407264589914121,
+  "status": "pass"
+}

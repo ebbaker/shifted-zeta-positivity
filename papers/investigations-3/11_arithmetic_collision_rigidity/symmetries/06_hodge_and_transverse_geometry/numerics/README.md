@@ -105,3 +105,75 @@ opening checker was additionally rerun through its 163 exact algebra
 assertions in memory by a delegated reader. The inherited event controls
 and full signed 192/256-bit certificate were inspected, not freshly
 rerun in this coverage review. No independent physical sign estimate is claimed.
+
+## S06-T1 second-completion feasibility checks
+
+19 October 2026. Prepared for Edward Baker with substantial LLM assistance,
+**gpt-6.1-sol (Codex), actual effort ultra**. The
+[checker](check_second_transverse_completion.py) and
+[small record](S06_T1_COMPLETION_CHECKS_20261019.json) verify the exact
+completion, full observation/current, product terms and primitive
+boundaries in [Note 03](../notes/03_SECOND_TRANSVERSE_COMPLETION_AND_CURRENT_FEASIBILITY_20261019.md). They include the exact
+reflected-source event false-positive for the proposed current sign.
+The inherited source-specific control pipeline is replayed afresh with
+192-bit interface arithmetic; its source certificates retain their own
+160-bit (three/four-square and reflected) and 128-bit (Euler) precisions.
+It screens the existing physical acceptance interface, rather
+than asserting rejection by the new current sign. No theta constants
+are assigned to a control. Finite algebra checks support the written
+proof; they do not prove the universal analytic convergence lemma.
+
+Reproduce from the repository root with Python and python-flint 0.9.0:
+
+```sh
+python3 papers/investigations-3/11_arithmetic_collision_rigidity/symmetries/06_hodge_and_transverse_geometry/numerics/check_second_transverse_completion.py --repo . --output /tmp/S06_T1_COMPLETION_CHECKS.json --replay-dir /tmp/s06-t1-replay --execution-model ACTUAL_MODEL --execution-effort ACTUAL_EFFORT
+```
+
+Bulk inherited replay receipts remain outside the repository. Source
+hashes identify inputs; arithmetic and the proof decide the claims.
+[Separate same-model review](../reviews/04_SECOND_TRANSVERSE_COMPLETION_INTERNAL_REVIEW_20261019.md) and its
+[compact receipt](S06_T1_INTERNAL_REVIEW_20261019.json) record the fresh
+replay and scope audit. T1 closes only the selected current-sign/magnitude
+attempt; T2 is Waiting. No new numerical theta certificate or coverage.
+
+## S06-T2 bounded completed-current comparison
+
+19 October 2026. Prepared for Edward Baker with substantial LLM assistance,
+**gpt-6.1-sol (Codex), actual effort ultra**. The
+[producer](check_bounded_completed_current.py) implements the
+[frozen contract](../notes/04_S06_T2_BOUNDED_CURRENT_COMPARISON_CONTRACT_20261019.md) and [Note 05](../notes/05_BOUNDED_COMPLETED_CURRENT_AND_DIRECT_COMPARISON_20261019.md).
+[192-bit](S06_T2_BOUNDED_CURRENT_192_20261019.json) and
+[256-bit](S06_T2_BOUNDED_CURRENT_256_20261019.json) compact records preserve
+all64 cells, exact source dyadics, bound endpoints, four derivative error
+ledgers and physical current/direct comparisons. Compact whitespace
+changes stored bytes but preserves the complete parsed record; original
+pretty-printed runs and duplicate replays remain regenerable outside
+the repository. The [review receipt](S06_T2_INTERNAL_REVIEW_20261019.json)
+identifies both stored records and canonical data. Hashes identify data;
+arithmetic decides equality and signs.
+
+Both runs acquire52 midpoint derivatives and a common order53 majorant
+afresh. Residual60/64 versus direct64/64; every successful current radius
+<0.552 of direct. Four failed enclosures straddle zero; no refinement.
+These are a bounded comparison and source payments, not new coverage.
+
+Reproduce with Python and python-flint0.9.0 from the repository root:
+
+```sh
+python3 papers/investigations-3/11_arithmetic_collision_rigidity/symmetries/06_hodge_and_transverse_geometry/numerics/check_bounded_completed_current.py --repo . --contract papers/investigations-3/11_arithmetic_collision_rigidity/symmetries/06_hodge_and_transverse_geometry/notes/04_S06_T2_BOUNDED_CURRENT_COMPARISON_CONTRACT_20261019.md --bits 192 --output /tmp/S06_T2_BOUNDED_CURRENT_192.json --execution-model ACTUAL_MODEL --execution-effort ACTUAL_EFFORT
+```
+
+Repeat with bits256 and a distinct output. The producer pins base source
+and contract and rejects invalid precision, domain and nonfinite inputs.
+The [review helper](review_bounded_completed_current.py) checks exact
+dyadic ledgers, cover and current/direct arithmetic against fresh replays;
+its argument documentation is available with `--help`. It also checks
+the stored controls-receipt identity. The
+[control helper](check_bounded_current_review_controls.py) takes a fresh
+output of the investigation's `replay_nonstationary_controls.py` and
+checks the actual producer API; [its saved record](S06_T2_CONTROLS_20261019.json)
+distinguishes synthetic helper events from analytic specializations of
+the actual source events. Source
+certificate precisions retain their own provenance. [Separate same-model
+review](../reviews/05_BOUNDED_COMPLETED_CURRENT_INTERNAL_REVIEW_20261019.md) explains the independent execution and
+remaining limits. T2's bounded attempt is complete; benefit gate failed.

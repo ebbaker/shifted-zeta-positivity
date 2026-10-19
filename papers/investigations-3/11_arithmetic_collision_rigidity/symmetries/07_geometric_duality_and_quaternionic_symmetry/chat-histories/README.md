@@ -17,3 +17,7 @@ relocate, renumber or duplicate that conversation.
 For registered conversations, registry data are authoritative for current
 counts, hashes, timestamps and recorded configurations. Public chat capture
 preserves provenance, not mathematical validation.
+
+- [0001 — Continue S07/T01 research](0001_2026-10-19T19-43-01Z_continue-s07-t01-research.json)
+  is uniquely registered here for the 19 October T1 continuation. Its
+  current capture metadata are in [index.json](index.json).

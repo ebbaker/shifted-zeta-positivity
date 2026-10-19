@@ -1,0 +1,39 @@
+{
+  "date": "2026-10-19",
+  "prepared_for": "Edward Baker",
+  "actual_model": "gpt-6.1-sol",
+  "actual_effort": "ultra",
+  "llm_assistance": "substantial; separate same-model reviewer",
+  "reviewed_script_sha256": "9be7b362db541d251763fe92ce1aa10e2e879612cdcc9b6de1bf1985213c075f",
+  "scope": "input guard tests only; do not validate scientific claims",
+  "checks": [
+    {
+      "guard": "missing_source",
+      "exit_code": 1,
+      "expected_message": "missing analytic source",
+      "no_output_created": true,
+      "passed": true
+    },
+    {
+      "guard": "stale_source",
+      "exit_code": 1,
+      "expected_message": "stale analytic source",
+      "no_output_created": true,
+      "passed": true
+    },
+    {
+      "guard": "low_precision",
+      "exit_code": 1,
+      "expected_message": "precision must be at least 128 bits",
+      "no_output_created": true,
+      "passed": true
+    },
+    {
+      "guard": "blank_metadata",
+      "exit_code": 1,
+      "expected_message": "actual runtime metadata required",
+      "no_output_created": true,
+      "passed": true
+    }
+  ]
+}

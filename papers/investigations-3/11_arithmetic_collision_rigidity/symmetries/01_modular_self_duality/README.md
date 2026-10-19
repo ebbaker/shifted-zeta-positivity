@@ -105,6 +105,20 @@ retained-sum estimate and the global bridge remain open. Recompute the
 endpoint allowance before transferring the bound to another domain.
 The opening chat is registered in [this direction’s history][opening-chat].
 
+## Complete-consumer integration, 19 October 2026
+
+For Edward Baker with substantial LLM assistance, **gpt-6.1-sol, actual
+reasoning effort ultra**. [Continuation Note 02](notes/02_COMPLETE_PAIRED_TAIL_CONSUMER_AND_STOPPING_DECISION_20261019.md)
+integrates the paired order-0–2 tail through a guarded reusable interface
+into the unchanged real signed consumer on B. Fresh 192/256-bit runs retain
+40 accepted cells and 116 calls; all 40 reported signed intervals and the
+minimum margin are identical within each precision. The inherited complete
+added-error decrease is reproduced, but no additional paid-margin, cost or
+coverage gain is resolved. [Separate internal review](reviews/02_COMPLETE_CONSUMER_INTEGRATION_INTERNAL_REVIEW_20261019.md)
+and fresh source-specific controls pass. S01-T1 is complete as integration
+and regression validation; stop further omitted-tail tuning on this pilot.
+The retained-core signed estimate remains open. See the [task tracker](../research-progress/01_RESEARCH_TASK_TRACKER_20261018.md).
+
 ## Outputs and continuation
 
 Add `notes/`, `numerics/`, and `reviews/` here when the first new output is

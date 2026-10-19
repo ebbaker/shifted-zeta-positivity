@@ -31,6 +31,18 @@ Prepared for Edward Baker with substantial LLM assistance, **gpt-6.1-sol,
 actual effort ultra**; [internal review](reviews/02_CORRELATED_RESIDUAL_INTERNAL_REVIEW_20261018.md).
 No new height range, uniform arithmetic theorem or performance gain.
 
+
+**S03-T1, 19 October 2026:** [Note 03](notes/03_FILTERED_COMPLETE_RESIDUAL_AND_SPLIT_PREFIX_OBSTRUCTION_20261019.md) derives a single complete
+source-filtered residual with explicit logarithmic mode symbols, full
+correction derivatives, tail accounting and normalized heat forcing.
+A certified witness excludes separate source/approximation prefix triangle
+payments: they must exceed `1.912087` on B. This is a scoped obstruction,
+not a new recombined residual allowance. [Separate same-model review](reviews/03_FILTERED_RESIDUAL_INTERNAL_REVIEW_20261019.md)
+and [192/256-bit checks](numerics/S03_FILTERED_MECHANISM_20261019.json).
+S03-T1 Complete; S03-T2 Ready to estimate the signed combined functional.
+Prepared for Edward Baker with substantial LLM assistance, **gpt-6.1-sol,
+actual effort ultra**; no new coverage or specialist review.
+
 ## Question and connection to the manifold work
 
 Can the actual arithmetic amplitudes and phases be controlled so that the
@@ -149,3 +161,36 @@ and chat registration.
 [manifold]: ../../../../investigations-2/active/22_theta_manifold_geometry/manuscript/theta_manifold_geometry.tex
 [cutoff]: ../02_cutoff_reflection/README.md
 [scaling]: ../04_time_height_scaling/README.md
+
+**S03-T2, 19 October 2026:** [Note 04](notes/04_PHASE_AWARE_ANALYTIC_ALLOWANCE_AND_KERNEL_VARIATION_OBSTRUCTION_20261019.md) proves a complete analytic-only increment allowance **<0.812260**, versus <0.827470 for same-input independent endpoints (>1.8381% decrease). Known phase and real-Schur jet geometry suffice; no source polynomial is reused. The retained source-informed <0.000266448 allowance remains stronger. A separately defined absolute shifted-channel kernel-variation rule pays >4037.45136 in one old cell; this is a method-payment obstruction, not a residual lower bound. [192/256-bit checks](numerics/S03_PHASE_ANALYTIC_ALLOWANCE_20261019.json), [kernel check](numerics/S03_KERNEL_VARIATION_OBSTRUCTION_20261019.json), [separate same-model review](reviews/04_PHASE_ALLOWANCE_AND_KERNEL_OBSTRUCTION_INTERNAL_REVIEW_20261019.md). T2 Complete in its bounded analytic-only branch; T3 Ready. Arithmetic cancellation and growing-height control remain open; no new coverage. Prepared for Edward Baker with substantial LLM assistance, **gpt-6.1-sol, actual effort ultra**.
+
+**S03-T3, 19 October 2026:** [Note 05](notes/05_CALIBRATED_FIRST_JET_AND_MATCHED_DIRECT_COMPARISON_20261019.md) implements the exact anchor calibration and compares complete real first jets on the same B cover/data. Paid radius calibrated pointwise **>1.3859351576**, calibrated scalar **>1.1288659652**, strongest source direct **>1.3898732635**. Giving the source test the same propagation is essential; raw source >1.3473946960 is a weaker implementation. [Anchor export](numerics/S03_T3_ANCHOR_EXPORT_20261019.json), [192/256-bit ledger](numerics/S03_CALIBRATED_CONSUMERS_20261019.json), [controls](numerics/S03_T3_CONTROLS_20261019.json), [separate same-model review](reviews/05_CALIBRATED_CONSUMER_COMPARISON_INTERNAL_REVIEW_20261019.md). T3 Complete; stop this fixed-box comparison and retain reusable calibration/direct interfaces. No new residual theorem, coverage, second-jet error or matched-cost advantage. For Edward Baker with substantial LLM assistance, **gpt-6.1-sol, actual effort ultra**.
+
+**G3 arithmetic continuation, 19 October 2026:** [Note 06](notes/06_ARITHMETIC_GAMMA_AND_EDGE_CORRECTIONS_20261019.md)
+derives the prescribed first gamma/heat correction, with uniform relative
+mode errors <6e-7, <6e-8 and <1.2e-8 through spatial order 2. Its complete
+finite eight-mode filtered error on B is <3.874872e-6. Certified center
+finite/edge defects +0.000133439545 and -0.000136027672 explain the small
+-0.000002588127 difference locally; a no-fit RS hierarchy retains the
+essential gamma prefactor. A finite Cauchy–Riemann telescope identifies two
+endpoint terms for the remaining coherent edge payment. [192/256 records](numerics/README.md),
+[separate same-model review](reviews/06_ARITHMETIC_GAMMA_AND_EDGE_INTERNAL_REVIEW_20261019.md). **G3 remains partially explained**:
+the independent complete edge jet and uniform signed prefix bounds are open.
+No new consumer allowance, height range or coverage. Next bounded work is
+that edge payment on the same B,N=8, before further consumer comparisons.
+For Edward Baker with substantial LLM assistance, **gpt-6.1-sol, ultra**.
+
+**G3 complete arithmetic edge and increment, 19 October 2026:**
+[Note 07](notes/07_COMPLETE_ARITHMETIC_EDGE_AND_RESIDUAL_INCREMENT_20261019.md) closes the fixed-pilot edge/prefix obligation left by
+Note 06. RS8, finite CR coherence, true gamma prefactor, exact Gaussian
+tails and a paid moment/profile polynomial give complete normalized edge
+errors <6e-8,<6e-8,<1.2e-7 through spatial order 2. Combining the retained
+signed finite and edge corrections before endpoint payment proves
+**|I_r|<0.000854 on all B**, without source quadrature or H Taylor data.
+The independent analytic-only <0.812260 allowance is improved by >950-fold;
+source-informed <0.000266448 remains stronger. [Nominal 192/256 records](numerics/README.md)
+use 512 guardbits for high profile derivatives; [fresh same-model review](reviews/07_COMPLETE_ARITHMETIC_EDGE_AND_INCREMENT_INTERNAL_REVIEW_20261019.md)
+and192 replay pass. No new consumer, cost or coverage claim. The fixed-pilot
+arithmetic task is complete; height-uniform input remains open. Stop this
+comparison unless a new concrete objective earns refinement. For Edward
+Baker with substantial LLM assistance, **gpt-6.1-sol, actual effort ultra**.

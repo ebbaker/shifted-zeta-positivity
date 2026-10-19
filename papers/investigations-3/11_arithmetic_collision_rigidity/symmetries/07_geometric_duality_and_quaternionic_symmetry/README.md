@@ -222,3 +222,45 @@ this folder does not relocate or duplicate its history.
 [pilot]: ../../../../investigations-2/active/22_theta_manifold_geometry/reviews/18_SPACETIME_BOUNDARY_AND_GEOMETRIC_CONTINUATION_REVIEW_20261015.md
 [large]: ../../../../../LARGE_FILES.md
 [history]: ../../DRAFT_HISTORY.md
+
+## S07-T1 admissibility continuation — 19 October 2026
+
+For Edward Baker with substantial LLM assistance, **gpt-6.1-sol, ultra**.
+[Note 03](notes/03_CONSTRAINED_THETA_JET_SPACE_AND_RESIDUAL_CONTRACT_20261019.md) proves the five-dimensional covariant fiber space,
+its Gram/kernel and source inclusion/nonholomorphy. A global N=2 profile
+cutoff supplies a genuine residual with low and high components; its
+whole complement and base trace have an explicit norm contract.
+[Separate same-model review](reviews/03_CONSTRAINED_THETA_SPACE_INTERNAL_REVIEW_20261019.md) and
+[exact/fresh control records](numerics/README.md) support the result.
+**T1 Complete; T2 Ready** to evaluate useful complete physical errors against
+the direct source payment. T3 Waiting,T4 Deferred. Membership and the
+upper admissibility estimate give no signed physical gain or new coverage.
+This was the next task at T1 completion; the later T2 outcome below
+now determines the selected branch's stopping decision.
+
+## S07-T2 paid comparison — 19 October 2026
+
+For Edward Baker with substantial LLM assistance, **gpt-6.1-sol, ultra**.
+[Note 04](notes/04_PAID_PROFILE_TRACE_AND_DIRECT_TAIL_COMPARISON_20261019.md) completes the bounded N=2 whole-profile comparison.
+The actual cutoff and profile/base costs have a finite uniform bound,
+but an annular norm floor forces assigned allowances >1618 and >34152
+times the direct complete-tail allowances before common acquisitions.
+These floors are not actual-error lower bounds. Both methods retain
+n<=2 beyond the tube and pay the same n>=3 remainder; numerical retained
+acquisition is symbolic/unperformed. [Internal review](reviews/04_PAID_PROFILE_TRACE_INTERNAL_REVIEW_20261019.md)
+and [192/256/fresh replay records](numerics/README.md) pass.
+**T2 Complete as a scoped loss; stop this selected whole-profile rule.**
+T3 Waiting,T4 Deferred; other kernel/signed/adjoint estimates remain open.
+No physical sign, error/cost/coverage gain or extension is claimed.
+
+## Options assessment after T2 — 19 October 2026
+
+[Note 05](notes/05_OBSERVATION_OPTIONS_AND_BOUNDED_FEASIBILITY_SCREENS_20261019.md)
+records what earlier tasks actually tested and proves two extra screens:
+cutoff retuning cannot rescue the same whole-profile rule, and the original
+V4 split still loses with that same complement payment. A changed signed
+observation/adjoint representation or GEO-T1 comparison remains a proposal.
+[Internal review](reviews/05_OBSERVATION_OPTIONS_INTERNAL_REVIEW_20261019.md);
+[192/256 interval screens](numerics/README.md). T3 Waiting; no useful
+physical estimate or coverage gain. For Edward Baker with substantial
+LLM assistance, **gpt-6.1-sol, actual effort ultra**.

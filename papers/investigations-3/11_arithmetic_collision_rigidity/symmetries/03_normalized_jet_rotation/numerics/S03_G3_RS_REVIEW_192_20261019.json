@@ -1,0 +1,193 @@
+{
+  "date": "2026-10-19",
+  "prepared_for": "Edward Baker",
+  "actual_model": "gpt-6.1-sol",
+  "actual_effort": "ultra",
+  "llm_assistance": "substantial; same-model delegated derivation and internal checks",
+  "python": "3.10.0",
+  "python_flint": "0.9.0",
+  "script_sha256": "c9d3eea35256d8a9e01278268345e74dd6c24c72b1e45ded1f2aa8fbb7fba711",
+  "source_sha256": {
+    "papers/investigations-3/11_arithmetic_collision_rigidity/symmetries/02_cutoff_reflection/numerics/evaluate_complete_frozen_jets.py": "461ee502434f519a082ff212a0c2b5a0512c3426ef081f2ee2d82b4f5d4ce1b9",
+    "papers/investigations-3/11_arithmetic_collision_rigidity/symmetries/02_cutoff_reflection/numerics/check_cutoff_reflection.py": "d8dda6d4f746b35b7fd6a545ff87940c88a0c896fe9a1f684c002dcc2ea0cc9b",
+    "papers/investigations-3/11_arithmetic_collision_rigidity/symmetries/02_cutoff_reflection/numerics/S02_MATCHED_CORRECTION_20261019.json": "7646611c3dae320e18364f9548b036ed08b1729d53a2fdafa837a1e5f838b688"
+  },
+  "primary_sources": [
+    {
+      "url": "https://arxiv.org/html/1904.12438v2",
+      "locations": "Section 4 equations (35)-(41), Section 6.2 equations (48)-(57)"
+    },
+    {
+      "url": "https://arxiv.org/html/2407.06681v1",
+      "locations": "Section 5 equations (20)-(24), especially C1 in (22)"
+    },
+    {
+      "url": "https://arxiv.org/html/2201.00342",
+      "locations": "Section 3.6 equation (29), Section 3.17 equations (86)-(89); exact recurrence only, no implementation inequalities imported"
+    }
+  ],
+  "status": "Exact finite polynomial identities and explanatory finite Gaussian hierarchy; not a complete new arithmetic residual bound.",
+  "unpaid": [
+    "Gaussian integral outside [-10,10]",
+    "Riemann-Siegel RS_K remainder",
+    "coherent complex-disk remainder constants and derivative allowances",
+    "whole B-box parameter coverage and signed spatial prefix allowance"
+  ],
+  "source_theta_taylor_data_used": false,
+  "exact_CR_identities": {
+    "arithmetic": "exact fractions over Q[sigma]",
+    "identity": "partial_sigma d[n,k] = -d[n-1,k-1] + 2(n-2+sigma)d[n-2,k-3]",
+    "orders": [
+      {
+        "order": 1,
+        "identities": 2
+      },
+      {
+        "order": 2,
+        "identities": 4
+      },
+      {
+        "order": 3,
+        "identities": 5
+      },
+      {
+        "order": 4,
+        "identities": 7
+      },
+      {
+        "order": 5,
+        "identities": 8
+      },
+      {
+        "order": 6,
+        "identities": 10
+      },
+      {
+        "order": 7,
+        "identities": 11
+      },
+      {
+        "order": 8,
+        "identities": 13
+      },
+      {
+        "order": 9,
+        "identities": 14
+      },
+      {
+        "order": 10,
+        "identities": 16
+      },
+      {
+        "order": 11,
+        "identities": 17
+      },
+      {
+        "order": 12,
+        "identities": 19
+      }
+    ],
+    "count": 126,
+    "all_passed": true,
+    "scope": "Finite coefficients through order 12 only; no asserted general induction or remainder inequality."
+  },
+  "runs": [
+    {
+      "bits": 192,
+      "t": "21/200",
+      "x": 1000,
+      "cutoff": 8,
+      "p": "[-0.841976801458706961653478350701935721310567778 +/- 1.60e-47]",
+      "gaussian_interval": [
+        "-10",
+        "10"
+      ],
+      "relative_and_absolute_quadrature_tolerance": "2^-110",
+      "explicit_first_terms": {
+        "C1_over_a": {
+          "normalized_value_x_xx": [
+            "[0.000134861948032855813548112739426611388979939448 +/- 1.02e-49]",
+            "[3.34617340866231464438560563752985272122011767e-5 +/- 3.49e-50]",
+            "[1.50916045913906292572853380623970689633814130e-6 +/- 6.73e-52]"
+          ],
+          "normalized_rotation_defect": "[0.000136116052959803955715149998883012551803897530 +/- 4.50e-49]"
+        },
+        "eta_bar_times_C0": {
+          "normalized_value_x_xx": [
+            "[-0.000268423112765175136107987356028285736900162567 +/- 1.47e-49]",
+            "[2.02031540825488316229763011338500645290721543e-6 +/- 3.75e-51]",
+            "[7.54880638072217747109843454926902257152676195e-8 +/- 6.16e-54]"
+          ],
+          "normalized_rotation_defect": "[-0.000268360448684070470283279479058014393175466312 +/- 3.77e-49]"
+        },
+        "mean_C2_over_a_squared": {
+          "normalized_value_x_xx": [
+            "[8.68404396574952009047603166654256418172653776e-7 +/- 4.88e-52]",
+            "[-2.70575070758277031734554811075473729012134173e-7 +/- 2.62e-52]",
+            "[1.40777480866214318752905717184690596641707938e-8 +/- 1.19e-54]"
+          ],
+          "normalized_rotation_defect": "[8.80214125891987505042058196255629917776028456e-7 +/- 5.89e-53]"
+        },
+        "scope": "Explicit formal terms with complete normalizer and profile derivatives; no asymptotic truncation allowance or exact-residual claim."
+      },
+      "finite_gaussian_hierarchy": [
+        {
+          "K": 0,
+          "normalized_value_x_xx": [
+            "[-0.000268841915292975996163828010955334722795874879 +/- 1.03e-39]",
+            "[2.01639069018714220488943044732269921313173119e-6 +/- 1.86e-41]",
+            "[7.54434054460908916179978369502253069676890466e-8 +/- 4.70e-43]"
+          ],
+          "normalized_rotation_defect": "[-0.000268779287762799448874661233147137237294902914 +/- 1.03e-39]",
+          "quadrature_callbacks": 861,
+          "observed_seconds": 0.0513725409982726
+        },
+        {
+          "K": 1,
+          "normalized_value_x_xx": [
+            "[-0.000138391194489131550603991983284668199256652250 +/- 1.09e-39]",
+            "[3.54044457833659661267600523854733140787287236e-5 +/- 2.05e-41]",
+            "[1.58479381329265103393879035891320989638036214e-6 +/- 5.29e-43]"
+          ],
+          "normalized_rotation_defect": "[-0.000137074289322935112285238622798825606201990414 +/- 1.10e-39]",
+          "quadrature_callbacks": 861,
+          "observed_seconds": 0.06284199998481199
+        },
+        {
+          "K": 2,
+          "normalized_value_x_xx": [
+            "[-0.000137495303478460228994014886116085558653988710 +/- 1.12e-39]",
+            "[3.51328523154462579822785558813896084239262445e-5 +/- 2.09e-41]",
+            "[1.59881179113624007205809626194075337659526993e-6 +/- 5.45e-43]"
+          ],
+          "normalized_rotation_defect": "[-0.000136166638310277050581900631849788837016806066 +/- 1.12e-39]",
+          "quadrature_callbacks": 861,
+          "observed_seconds": 0.08402495796326548
+        },
+        {
+          "K": 3,
+          "normalized_value_x_xx": [
+            "[-0.000137357120722340539191452338556953145126188428 +/- 1.12e-39]",
+            "[3.51339805547611014528515139321287489885906492e-5 +/- 2.10e-41]",
+            "[1.59855284225408692384129331563354455070656805e-6 +/- 5.48e-43]"
+          ],
+          "normalized_rotation_defect": "[-0.000136028672050253727453989574344000556306688862 +/- 1.12e-39]",
+          "quadrature_callbacks": 861,
+          "observed_seconds": 0.10921895899809897
+        },
+        {
+          "K": 4,
+          "normalized_value_x_xx": [
+            "[-0.000137356428392607502675052309488358276183326875 +/- 1.12e-39]",
+            "[3.51339237429312735390423538621685673015998856e-5 +/- 2.10e-41]",
+            "[1.59855717462896050568169547586684615936167866e-6 +/- 5.49e-43]"
+          ],
+          "normalized_rotation_defect": "[-0.000136027976091168501755542538035792748075559375 +/- 1.12e-39]",
+          "quadrature_callbacks": 861,
+          "observed_seconds": 0.14617795799858868
+        }
+      ],
+      "scope": "Outward finite Gaussian integral enclosures for prescribed C0..CK expression and coherent x derivatives. Gaussian tails and RS_K omitted; not an enclosure for exact edge residual, no independent complete allowance."
+    }
+  ]
+}

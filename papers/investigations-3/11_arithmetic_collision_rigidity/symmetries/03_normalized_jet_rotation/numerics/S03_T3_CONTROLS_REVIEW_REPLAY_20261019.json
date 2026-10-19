@@ -1,0 +1,414 @@
+{
+  "schema": "s03-t3-calibrated-controls-v1",
+  "date": "2026-10-19",
+  "timezone": "America/New_York",
+  "prepared_for": "Edward Baker",
+  "actual_model": "gpt-6.1-sol",
+  "actual_effort": "ultra",
+  "llm_assistance": "substantial; separate delegated same-model internal controls",
+  "python": "3.10.0",
+  "python_flint": "0.9.0",
+  "precision_bits": 192,
+  "status": "pass",
+  "scope": "Actual-helper and source-ledger controls; no primary-box performance claim, no new coverage, no independent human review",
+  "script_sha256": "1ffdd297f5a28f4c2ed1dc12a7104d6641688eaf7af63af0003863c925d5a372",
+  "consumer_script_sha256": "5df0d372c4a06e628a406d84d6c32ff8fc1e888dee7f5963da5e9024adcdcc2e",
+  "anchor_export_sha256": "3d2ed5f61daceb133347ee4fa9b7c062cec10e171c1a313a165590955f28ec4e",
+  "source_setup_stored_sha256": "abd7889c7880e6acd941e95f0a103ab19601e68edec8267a8eb5c377376938d9",
+  "source_sha256": {
+    "papers/investigations-3/11_arithmetic_collision_rigidity/numerics/replay_nonstationary_controls.py": "c8f95dbac1f84632091c314da57a2382c077d0a0c1a6738d92494f4f95681da6",
+    "papers/investigations-3/11_arithmetic_collision_rigidity/numerics/run_plan02_pilot.py": "3912bd128bff81bceb303126a67ae304f9631d439867d5c6ae3bbc106aa7e982",
+    "papers/investigations-3/11_arithmetic_collision_rigidity/numerics/high_height_consumer/high_height_consumer.py": "e96feb2b4c3e84de3025713b486fb8cf99fdd810f61366b79a0da188eb12535f",
+    "papers/investigations-3/11_arithmetic_collision_rigidity/symmetries/02_cutoff_reflection/numerics/evaluate_complete_frozen_jets.py": "461ee502434f519a082ff212a0c2b5a0512c3426ef081f2ee2d82b4f5d4ce1b9",
+    "papers/investigations-3/11_arithmetic_collision_rigidity/symmetries/02_cutoff_reflection/numerics/check_cutoff_reflection.py": "d8dda6d4f746b35b7fd6a545ff87940c88a0c896fe9a1f684c002dcc2ea0cc9b",
+    "papers/investigations-3/11_arithmetic_collision_rigidity/numerics/certify_shifted_theta_jet.py": "45c2e9adc347f91076b1ff16b171b71f450b504e391044811bf9bc847fe3c4ff",
+    "papers/investigations-2/active/22_theta_manifold_geometry/numerics/certify_square_support_endpoint_collision.py": "d32e1e5368ea9ab8c0343bbaff5f97ad20a614f8be81d2b59b4c44d7028a53e7",
+    "papers/investigations-2/active/22_theta_manifold_geometry/numerics/check_theta_two_endpoint_control.py": "576936dd13c5b53c93f7f9a34a20d26f27227cc2b1db26702d49e7a5bfa6207e",
+    "papers/investigations-2/active/22_theta_manifold_geometry/numerics/check_theta_center_separation.py": "5c37d3006db33c2d6af69943143389f27fba1a0b2b1f4347d2ee2ef28dfcd1ce",
+    "papers/investigations-2/active/19_euler_factor_controls/numerics/certify_euler_factor_witness.py": "e40452de5e51a2aa41af1c2264d6a7b9bb130a313963ee0460326d36f7cf6bc3"
+  },
+  "mechanism_controls": {
+    "polynomial": "H=x^2-2(t-1/4); exact event (1/4,0); own errors",
+    "polynomial_paid_margins": {
+      "direct": "0",
+      "calibrated": "[-1.9117102933589427324346564773212541667e-57 +/- 9.33e-96]",
+      "scalar": "[-0.0011085906413497476831454054789384409878 +/- 4.12e-42]",
+      "source_direct": "0"
+    },
+    "polynomial_complete_residual_increment_upper": "[1.2783254909327334435457432037790719003 +/- 3.52e-38]",
+    "endpoint_propagation_margin": "0",
+    "anchor_uncertainty": {
+      "own_error": "0.12500000000000000000000000000000000000",
+      "direct": "0",
+      "scalar": "0",
+      "omitting_error_would_strictly_pass": true
+    },
+    "oscillator_Rg_zero": true,
+    "Wg_prime_equals_positive_i_omega_Wg": true,
+    "Wprime_independent_series": true,
+    "mutations_detected": [
+      "omit direct residual error",
+      "omit calibrated residual error",
+      "omit derivative propagation cost",
+      "omit nonzero anchor uncertainty",
+      "reverse Wg derivative sign",
+      "reverse omega_x derivative sign"
+    ],
+    "invalid_inputs_rejected": [
+      "negative_paid_error",
+      "negative_scalar_increment",
+      "negative_anchor_error",
+      "negative_residual_increment",
+      "negative_halfwidth"
+    ]
+  },
+  "source_payment_control": {
+    "scope": "Actual run() source branch on an exact constant first-jet fixture; fixture source errors already inside balls",
+    "source_ball": "[2.0000000000000000000000000000000000000 +/- 0.251]",
+    "source_error_diagnostic_upper": "0.25000000046566128730773925781250000000",
+    "expected_once_paid_radius": "1.7499999995343387126922607421875000000",
+    "radius_rounding": "Arb radius enclosure retained; each actual radius differs from complete source ball lower endpoint by less than 2^-20",
+    "actual_source_direct_radii": {
+      "source_direct_raw": "1.7499999981373548507690429687500000000",
+      "source_direct_propagated": "1.7499999981373548507690429687500000000",
+      "source_direct_best": "1.7499999981373548507690429687500000000"
+    },
+    "double_source_payment_mutation_would_fail_once_paid_bound": true,
+    "actual_cell_evaluations": 4096
+  },
+  "dyadic_normalizer_controls": {
+    "exact_dyadics_checked": 26,
+    "largest_mantissa_bits": 272,
+    "dyadics_distinguished_from_binary64_conversion": 26,
+    "offcenter_derivative_checks": [
+      {
+        "x": "31979/32",
+        "t": "37/500",
+        "b": "[-0.39090753010269033091109622200238851525 +/- 3.06e-39]",
+        "b_x": "[-1.7833619342657373490633787844227381953e-6 +/- 1.91e-44]",
+        "normalizer_log_time_derivative": "[1.0440356795075022842137815895947387182 +/- 8.92e-39]",
+        "spatial_full_jets_verified": 3,
+        "spatial_physical_conversion_jets_verified": 3,
+        "normalizer_and_Q_time_derivatives_verified": true,
+        "exact_anchor_polynomials_verified": 2
+      },
+      {
+        "x": "16007/16",
+        "t": "31/200",
+        "b": "[-0.39086528969802399517802141141607583973 +/- 2.50e-39]",
+        "b_x": "[-1.8134183775996050040771138959841731798e-6 +/- 3.54e-44]",
+        "normalizer_log_time_derivative": "[1.0446326159070358614468296026543722251 +/- 1.52e-38]",
+        "spatial_full_jets_verified": 3,
+        "spatial_physical_conversion_jets_verified": 3,
+        "normalizer_and_Q_time_derivatives_verified": true,
+        "exact_anchor_polynomials_verified": 2
+      }
+    ],
+    "mutations_detected": [
+      "decode retained coefficients through binary64",
+      "omit normalizer b",
+      "omit normalizer bx",
+      "omit normalizer time derivative"
+    ]
+  },
+  "implementation_mutation_controls": {
+    "mutation_method": "Temporary in-memory replacement of actual helpers and one compiled source-branch payment; retained consumer file unchanged",
+    "all_mutants_detected": true,
+    "outcomes": [
+      {
+        "implementation_mutation": "paid_radius omits complete residual error",
+        "detected_by_control": "exact polynomial event passed direct"
+      },
+      {
+        "implementation_mutation": "scalar_radius omits anchor uncertainty",
+        "detected_by_control": "uncertain anchor generated a false strict exclusion"
+      },
+      {
+        "implementation_mutation": "propagate_radius omits derivative payment",
+        "detected_by_control": "propagation paid incorrectly on endpoint event"
+      },
+      {
+        "implementation_mutation": "Wprime reverses omega_x sign",
+        "detected_by_control": "calibration derivative sign"
+      },
+      {
+        "implementation_mutation": "dyadic decoder uses binary64",
+        "detected_by_control": "dyadic import differs from exact rational"
+      },
+      {
+        "implementation_mutation": "Q_from_physical omits normalizer derivatives",
+        "detected_by_control": "physical conversion offcenter derivative 1"
+      },
+      {
+        "implementation_mutation": "run source branch subtracts complete source error twice",
+        "detected_by_control": "source error charged again or interval rounding excessive: source_direct_best"
+      }
+    ]
+  },
+  "input_contract_guards": {
+    "observation_only_cache_changes_preserve_mathematical_identity": true,
+    "mathematical_cache_change_alters_identity": true,
+    "mutations": [
+      {
+        "mutation": "changed fixed domain",
+        "rejection": "fixed B/anchor/cover contract",
+        "rejected_before_consumer_loop": true
+      },
+      {
+        "mutation": "changed retained dyadic anchor",
+        "rejection": "exported nominal anchors altered",
+        "rejected_before_consumer_loop": true
+      },
+      {
+        "mutation": "erased retained anchor uncertainty",
+        "rejection": "retained slab allowance altered",
+        "rejected_before_consumer_loop": true
+      },
+      {
+        "mutation": "changed complete analytic allowance",
+        "rejection": "retained analytic-only increment altered",
+        "rejected_before_consumer_loop": true
+      },
+      {
+        "mutation": "changed inherited complete error ledger",
+        "rejection": "inherited complete error ledger altered",
+        "rejected_before_consumer_loop": true
+      },
+      {
+        "mutation": "changed source identity pin",
+        "rejection": "anchor dependency pin papers/investigations-3/11_arithmetic_collision_rigidity/symmetries/03_normalized_jet_rotation/numerics/check_correlated_residual.py",
+        "rejected_before_consumer_loop": true
+      },
+      {
+        "mutation": "changed source mathematical cache",
+        "rejection": "source mathematical setup mismatch; rebuild exact declared source data or re-prove changed calibration",
+        "rejected_before_consumer_loop": true
+      }
+    ]
+  },
+  "fresh_source_controls": {
+    "fresh_replay_stored_sha256": "3af906d0bd40fbca1c19e18cc4b998c06299daa336ec98552dddb884c0075bf5",
+    "external_receipts": "/private/tmp/s03-t3/review-controls-work/receipts",
+    "fresh_receipt_identities": {
+      "three_square": {
+        "file": "THREE_SQUARE_REPLAY.json",
+        "sha256": "6986b4f5926073a8c6d0e9cd744cc0770c49513d6c36922ebfa2a6ee93e9b787",
+        "source_sha256": "d32e1e5368ea9ab8c0343bbaff5f97ad20a614f8be81d2b59b4c44d7028a53e7"
+      },
+      "four_square": {
+        "file": "FOUR_SQUARE_REPLAY.json",
+        "sha256": "0d2aa2e4ee45b66ca31a7566ac3c873edbc88bb75698bf600cc3f3e19a37a98e",
+        "source_sha256": "576936dd13c5b53c93f7f9a34a20d26f27227cc2b1db26702d49e7a5bfa6207e"
+      },
+      "reflected": {
+        "file": "REFLECTED_CONTROL_REPLAY.json",
+        "sha256": "7eaa6a9a50c1bf4bc818d511d2187bae749a7bf3264940cef613bb3528608043",
+        "source_sha256": "5c37d3006db33c2d6af69943143389f27fba1a0b2b1f4347d2ee2ef28dfcd1ce"
+      },
+      "euler": {
+        "file": "EULER_FACTOR_REPLAY.json",
+        "sha256": "0f4e1eb8e3488b2b54015fa1d658e90aa1b2e077e3cf18129ca6665f071cc528",
+        "source_sha256": "e40452de5e51a2aa41af1c2264d6a7b9bb130a313963ee0460326d36f7cf6bc3"
+      }
+    },
+    "outcomes": [
+      {
+        "control": "three-square fixed-coefficient event",
+        "domain": {
+          "t": [
+            "0.24999999",
+            "0.25000001"
+          ],
+          "x": [
+            "44.1303",
+            "44.1304"
+          ]
+        },
+        "source_jet_balls": [
+          "[7.28430757153884964105650585015008999e-15 +/- 2.00e-8]",
+          "[-3.6726592629980474880567045303336008000e-11 +/- 1.90e-8]",
+          "[-5.8048175039480345740184131161349753000e-6 +/- 1.60e-7]"
+        ],
+        "actual_paid_direct_firstjet_margin": "0",
+        "strict_firstjet_acceptance": false,
+        "old_signed_excess": "[4.36194302750257538718634423397569165e-20 +/- 1.20e-13]",
+        "strict_signed_acceptance": false,
+        "enclosed_event": true,
+        "theta_error_constants_used": false,
+        "expectation": "firstjet must reject"
+      },
+      {
+        "control": "four-square fixed-coefficient event",
+        "domain": {
+          "t": [
+            "0.00999999",
+            "0.01000001"
+          ],
+          "x": [
+            "83.5323729",
+            "83.5323730"
+          ]
+        },
+        "source_jet_balls": [
+          "[2.299275385935614353000e-29 +/- 1.48e-8]",
+          "[-7.035274206742880211815018570999e-20 +/- 1.48e-8]",
+          "[6.1408338331244969632953598614674645000e-12 +/- 1.48e-8]"
+        ],
+        "actual_paid_direct_firstjet_margin": "0",
+        "strict_firstjet_acceptance": false,
+        "old_signed_excess": "[4.7588185524258665218e-39 +/- 4.37e-16]",
+        "strict_signed_acceptance": false,
+        "enclosed_event": true,
+        "theta_error_constants_used": false,
+        "expectation": "firstjet must reject"
+      },
+      {
+        "control": "reflected super-Gaussian event",
+        "domain": {
+          "t": [
+            "0.24999999",
+            "0.25000001"
+          ],
+          "x": "pi/4 +/- 1e-8"
+        },
+        "source_jet_balls": [
+          "[1.551722344972212915408215854062999e-17 +/- 8.04e-9]",
+          "[-4.23342964784251209657220003809000e-18 +/- 4.16e-8]",
+          "[0.55906689396794617837401268199802545000 +/- 1.74e-7]"
+        ],
+        "actual_paid_direct_firstjet_margin": "0",
+        "strict_firstjet_acceptance": false,
+        "old_signed_excess": "[-8.675165917042729581316713996839260e-18 +/- 4.49e-9]",
+        "strict_signed_acceptance": false,
+        "enclosed_event": true,
+        "theta_error_constants_used": false,
+        "expectation": "firstjet must reject"
+      },
+      {
+        "control": "qTa exact-threshold family event",
+        "domain": {
+          "t": [
+            "0.24999999",
+            "0.25000001"
+          ],
+          "x": [
+            "0.99999999",
+            "1.00000001"
+          ],
+          "a": "pi/2"
+        },
+        "source_jet_balls": [
+          "[7.141350793115158072967331761215999e-17 +/- 4.79e-8]",
+          "[-8.32647126577837553804453853783999e-17 +/- 1.94e-7]",
+          "[2.8565402280303851345170027615990192000 +/- 6.82e-7]"
+        ],
+        "actual_paid_direct_firstjet_margin": "0",
+        "strict_firstjet_acceptance": false,
+        "old_signed_excess": "[-2.039955582301014469522371503348828e-16 +/- 1.37e-7]",
+        "strict_signed_acceptance": false,
+        "enclosed_event": true,
+        "theta_error_constants_used": false,
+        "expectation": "firstjet must reject"
+      },
+      {
+        "control": "polynomial backward-heat event",
+        "domain": {
+          "t": [
+            "0.24999999",
+            "0.25000001"
+          ],
+          "x": [
+            "-1e-8",
+            "1e-8"
+          ],
+          "field": "x^2-2(t-1/4)"
+        },
+        "source_jet_balls": [
+          "[+/- 3.02e-8]",
+          "[+/- 2.02e-8]",
+          "2.0000000000000000000000000000000000000"
+        ],
+        "actual_paid_direct_firstjet_margin": "0",
+        "strict_firstjet_acceptance": false,
+        "old_signed_excess": "[+/- 6.03e-8]",
+        "strict_signed_acceptance": false,
+        "enclosed_event": true,
+        "theta_error_constants_used": false,
+        "expectation": "firstjet must reject"
+      },
+      {
+        "control": "Euler-factor p=41 negative-Laguerre witness",
+        "domain": {
+          "U": "1",
+          "a": "log(41)/2",
+          "c": "1/2",
+          "normalization": "H=integral_0^infinity Phi_control(u)*exp(t*u^2)*cos(x*u) du",
+          "p": 41,
+          "precision_bits": 128,
+          "quadrature_depth_limit": 30,
+          "quadrature_eval_limit": 100000,
+          "quadrature_tolerance_bits": 90,
+          "retained_theta_terms": 4,
+          "t": "1/5",
+          "x": "168413/100000"
+        },
+        "source_jet_balls": [
+          "[2.4869490795960836827310757236886959000e-5 +/- 2.99e-29]",
+          "[-1.2855250161606757416165707245992851000e-6 +/- 7.43e-29]",
+          "[0.21311237249015439787630545398441803000 +/- 2.07e-28]"
+        ],
+        "actual_paid_direct_firstjet_margin": "[2.4902693569522869646284379209070760848e-5 +/- 4.44e-43]",
+        "strict_firstjet_acceptance": true,
+        "old_signed_excess": "[-5.3000007350161752426088568099431768443e-6 +/- 6.36e-30]",
+        "strict_signed_acceptance": false,
+        "enclosed_event": false,
+        "theta_error_constants_used": false,
+        "expectation": "old sign must reject; firstjet is allowed to pass"
+      }
+    ],
+    "analytic_premise_screen": [
+      {
+        "control": "finite-prime orbit",
+        "outcome": "theta premise fails",
+        "missing_premise": "complete normalized analytic reflection",
+        "numerical_event_test": "not attempted: theorem gives no effective event height"
+      },
+      {
+        "control": "three/four square",
+        "outcome": "theta premise fails and enclosed event rejected",
+        "missing_premise": "complete reflection and unchanged complete coefficients"
+      },
+      {
+        "control": "reflected super-Gaussian",
+        "outcome": "theta premise fails and enclosed event rejected",
+        "missing_premise": "exact normalized theta integer-square source expansion"
+      },
+      {
+        "control": "smooth shape and positive primitive",
+        "outcome": "theta premise fails; analytic witness retained",
+        "missing_premise": "theta square-mode data",
+        "numerical_event_test": "not attempted: no certified damping/event box supplied"
+      },
+      {
+        "control": "Euler factors",
+        "outcome": "genuine negative-Laguerre witness rejected",
+        "missing_premise": "unchanged normalized theta coefficients and level",
+        "numerical_event_test": "witness is not a double-event enclosure"
+      },
+      {
+        "control": "q and qTa",
+        "outcome": "theta premise fails; applicable qTa event enclosed and rejected",
+        "missing_premise": "exact theta square-source expansion",
+        "q_only_status": "proved positive threshold; no event location inferred"
+      },
+      {
+        "control": "smooth-density and two-channel",
+        "outcome": "no extension of the theta signed certificate to these classes",
+        "missing_premise": "the evaluated complete theta source; generic auxiliary positivity does not supply the signed estimate"
+      }
+    ],
+    "transport": "Fresh source receipt display balls conservatively re-enclosed at192 bits; no exact dyadic identity asserted",
+    "scope": "Five source-specific event boxes through actual new direct helpers; Euler witnesses the signed estimate only. No theta constants, damping/event threshold, or new source theorem."
+  },
+  "seconds": 1.2970712499809451
+}

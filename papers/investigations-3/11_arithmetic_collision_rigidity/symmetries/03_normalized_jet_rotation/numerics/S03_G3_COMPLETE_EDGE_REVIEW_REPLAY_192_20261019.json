@@ -1,0 +1,168 @@
+{
+  "date": "2026-10-19",
+  "prepared_for": "Edward Baker",
+  "llm_assistance": "substantial; internal same-model derivation and review",
+  "actual_model": "gpt-6.1-sol",
+  "actual_effort": "ultra",
+  "python": "3.10.0",
+  "python_flint": "0.9.0",
+  "script_sha256": "c6744179b93cae0a0b9c4924831b5af445d42f6bd5092845036944be34c2dbac",
+  "source_sha256": {
+    "papers/investigations-3/11_arithmetic_collision_rigidity/symmetries/02_cutoff_reflection/numerics/check_cutoff_reflection.py": "d8dda6d4f746b35b7fd6a545ff87940c88a0c896fe9a1f684c002dcc2ea0cc9b",
+    "papers/investigations-3/11_arithmetic_collision_rigidity/symmetries/03_normalized_jet_rotation/numerics/check_rs_edge_hierarchy.py": "c9d3eea35256d8a9e01278268345e74dd6c24c72b1e45ded1f2aa8fbb7fba711"
+  },
+  "retained_model": {
+    "repository_relative_path": "papers/investigations-3/11_arithmetic_collision_rigidity/symmetries/03_normalized_jet_rotation/numerics/estimate_arithmetic_residual_increment.py",
+    "sha256": "053cef99f718a0932067e74a5e903b02de457b02e5be64938e3a338e90e570db",
+    "staging_override_used": false
+  },
+  "primary_sources": [
+    "https://arxiv.org/html/1904.12438v2#S6.SS2",
+    "https://arxiv.org/html/2201.00342",
+    "https://dlmf.nist.gov/5.11#ii"
+  ],
+  "source_theta_taylor_data_used": false,
+  "source_H_values_used": false,
+  "runs": [
+    {
+      "requested_bits": 192,
+      "working_bits": 704,
+      "physical_disk_radius": "1",
+      "pilot": {
+        "t": [
+          ".01",
+          ".2"
+        ],
+        "x": [
+          "999",
+          "1001"
+        ],
+        "N": 8
+      },
+      "central_real_component": {
+        "K": 8,
+        "gaussian_interval": [
+          "-10",
+          "10"
+        ],
+        "printed_sigma_range": [
+          "0",
+          "1"
+        ],
+        "tau_safe_range": [
+          "499",
+          "502"
+        ],
+        "negative_u_order_margin": "[1.52786404500042060718165266253744752911876328 +/- 7.78e-46]",
+        "exact_prefactor_formula": "abs(M(u+i*tau)*a^(-u))/abs(M0(i*tau)) <= exp((u^2+1)/(tau-3))",
+        "coefficient_base": "[7.73633685476688403827666998878606124795493286e-8 +/- 3.01e-53]",
+        "full_gaussian_mean_bound": "[0.930622737554181960757719940823273361887433531 +/- 4.22e-46]",
+        "one_channel_before_external_heat_shift_M0_units": "[7.19961098242446744791957123141759576126763502e-8 +/- 8.65e-54]",
+        "primary_input": "Polymath 2019 Proposition 6.2 (56)-(57); gamma prefactor independently derived from Lemma 5.1(v)"
+      },
+      "CR_component": {
+        "requested_bits": 192,
+        "working_bits": 704,
+        "K": 8,
+        "physical_disk_radius": "1",
+        "gaussian_interval": [
+          "-10",
+          "10"
+        ],
+        "tube": {
+          "real_z": [
+            "998",
+            "1002"
+          ],
+          "imag_z": [
+            "-1",
+            "1"
+          ],
+          "t": [
+            ".01",
+            ".2"
+          ]
+        },
+        "tau_real": "[500.041233403578366036254822194405543475355088 +/- 1.04]",
+        "a_enclosure": "[8.92098415774156264381444360115876375398514568 +/- 9.26e-3] + [+/- 4.47e-3]j",
+        "profile_p": "[-0.841968315483125287628887202317527507970291359 +/- 0.0186] + [+/- 8.93e-3]j",
+        "profile_taylor": {
+          "center": "-21/25",
+          "Cauchy_radius": "1/4",
+          "Cauchy_maximum_bound": "[6.95110245829123878187696306406571566992865248 +/- 2.23e-45]",
+          "used_maximum": "10",
+          "terms_per_derivative": 96,
+          "highest_derivative": 25,
+          "q": "[0.0893516868746114493665996820208450378801914756 +/- 3.81e-47]",
+          "largest_derivative_tail": "[2.09385246143431359092666024113347798573276904e-34 +/- 6.55e-80]"
+        },
+        "exact_coefficient_recurrence": "Fractions over Q[u], evaluated by Horner; degree d[n,k]<=n checked",
+        "endpoint_bracket": "[1.60512456774541295697138999863959237087614890e-8 +/- 3.38e-53]",
+        "eta_absolute_bound": "[0.0318753904687258078927341642571500325869915019 +/- 4.67e-47]",
+        "eta_exp_bound": "[1.03238885179864299255929827609222284894571461 +/- 4.04e-45]",
+        "normalizer_vertical_cost": "[1.00052105218977837982259359079396805346119589 +/- 2.52e-45]",
+        "both_channel_physical_prefactor": "[0.667288045797292166916369144976497347454486076 +/- 3.81e-46]",
+        "both_channel_normalized_CR_value_payment": "[5.52885750790211886567864109593130403133228914e-9 +/- 2.92e-54]",
+        "approximate_tail_polynomial_majorant": {
+          "formula": "|sum_(k=0)^8 Ck(p,u)/a^k| <= C*(1+|u|)^8",
+          "C": "[0.472114664790421152303783761352696778879968699 +/- 1.63e-46]",
+          "domain": "tau.real in pilot tube; |tau.imag|<=1/2; u real arbitrary"
+        },
+        "scope": "Only central finite CR mismatch, uniform on complex physical radius1 tube. Add real RS8 and exact Gaussian tails. Cauchy may be applied only to the combined holomorphic exact-minus-coherent error."
+      },
+      "exact_tail_component": {
+        "contour_crossing": "17/2",
+        "gaussian_cutoff": "10",
+        "phase_constant": "[2.54188430096285348655078655216629300353592900 +/- 2.28e-45]",
+        "log_radius_ratio_constant": "[0.0502953631449210852052764474126472973033225231 +/- 8.73e-48]",
+        "combined_linear_sigma": "[0.0533013751689691813976612169517254536159477736 +/- 9.73e-48]",
+        "combined_quadratic_sigma": "[0.00490970542323808943751346950735389683944033845 +/- 3.34e-48]",
+        "combined_base": "[17.9715928259714704339613039392760111314876888 +/- 1.09e-44]",
+        "per_channel_M0_units": "[1.16960420050241020787515485916433355755473713e-43 +/- 4.33e-89]",
+        "M0_over_A_at_same_real_X": "[3.36933095549296435706394455661891206695067835 +/- 4.77e-45]",
+        "actual_complex_A_vertical_cost": "[1.00052105218977837982259359079396805346119589 +/- 2.52e-45]",
+        "both_channel_actual_A_payment": "[9.73617736276436975296631500662768339892967754e-43 +/- 2.92e-89]",
+        "proof": "Exact contour denominator >=2; quadratic phase and logarithmic radius bounds, followed by a Mills bound. No RS expansion or source H data on the tails."
+      },
+      "both_channel_normalized_real_RS_payment": "[4.80421434296274568462048294732688650197239017e-8 +/- 2.22e-53]",
+      "both_channel_normalized_CR_payment": "[5.52885750790211886567864109593130403133228914e-9 +/- 2.92e-54]",
+      "both_channel_normalized_exact_tail_payment": "[9.73617736276436975296631500662768339892967754e-43 +/- 2.92e-89]",
+      "model_conversion_component": {
+        "precision_bits": 704,
+        "eta_domain": "|u-.5|<=16; real tau in[499,502]; |Imtau|<=.5",
+        "eta_bound": "[0.1918843413744373963398671729972035322601193001833794436050388131072752678770742265764864741884538639602337537785959600122119150105898375456167284184228925585097648389751502452299599915235626443968135742676130558 +/- 3.70e-212]",
+        "J24_log_tail": "[1.043048452674221675904503070129188502675248120364016359733126401142039788432545123754588998879316018190324801457186824644045566877703493952819684313874972713819898102024162677625619254360236465498550808237014997e-36 +/- 8.85e-247]",
+        "S3_loggamma_tail": "[2.31105688770220128101974948173052831485796597660122991405197272152157491591874024573034790069197423139210124861395245237320950124037064497818806216780838478107114176858107888962828928763194578853139812078849022e-19 +/- 2.40e-229]",
+        "eta_approximant_error": "[2.311056887702201291450234008472745073902996677893114940804453925161738513250004257150745785017425468937991237407112634276457515812238891418643730944843324309267984907330806027827270307873572564787590664390854875e-19 +/- 7.01e-231]",
+        "Cauchy_exp_maximum": "1.3",
+        "gaussian_absolute_13th_moment": "[0.01162659466146889750232286499906107162590506009983264477425938837610121828982577478832611875392267956781458337791402258312643641364562012972623462882427973610390747641156350426149536767982992916232467001868109927 +/- 1.26e-213]",
+        "central_g_Taylor12_mean_error": "[4.65808325371938421438149587330600790919176729957195418442485674211301642355713291432013363350114991580945418870820447501984100117888713412310582023280297326330448318151383299901058376352013139109537536081076444e-18 +/- 2.19e-228]",
+        "central_S8_majorant": "[765417.922907949572984003436295925887218423283784150625978664930412691650108904890547445836791818540188071133819881734226409693692333269815339013031372348295334424217850560897786253301391847843860772723034782122 +/- 2.61e-205]",
+        "central_weighted_error_before_prefactor": "[3.78143731835291538707136686751915397965485428117197733430179721440249116112452898260181420891222572585794236869692660060527649992109910697658742217993943478059778218590393850736303464904146924235649678743330296e-12 +/- 3.13e-222]",
+        "profile_degree120_max_derivative_error_0_to26": "[1.79237180700286285609350331582614235596475873481396348157243857196261935945362280557695142364987442704999765058948561633419518480840431203312115143147520000000000000000000000000000000000000000000000000000000000e-30 +/- 2.80e-240]",
+        "profile_recurrence_coefficient_majorant": "[1.02882269991554535725316101247281489214700432881521365640096391430353832167905555782045830131136457076823784902286666450664869387081110487753719238066483380831116091630228535358878712879847019723572204230041090 +/- 6.28e-210]",
+        "profile_fullGaussian_and_Chat_error": "[3.1860856346651624859408696041362961971525193235008769890355701104017903556958277388910322759407674639888986418336616568940197231326267534273001252031141258579195544012152496728376997504756127700243614124817679e-28 +/- 3.36e-237]",
+        "subtracted_Chat_profile_error": "[3.19375979802054791952055203611211617937597334815867216430495309296670209134518095031045970354694809951615586907200098901098901098901098901098901098901098901098901098901098901098901098901098901098901098901098901e-126 +/- 7.26e-336]",
+        "full_polynomial_Gaussian_tail_outside10": "[5.502457445275691312203871339755502159474169353788512820130420327863748243505077137251747291997943341653224407675343390068856581651392143867575385362307407695491721602710302063341156664362861649726497847302214554e-37 +/- 2.31e-248]",
+        "bothchannel_actual_complex_normalizer_prefactor": "[0.6672890000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 +/- 5.86e-213]",
+        "combined_Q_value_error": "[2.523311526726398768327455399841082368086679788800373137010586696694993830089573283462215483829419964093765927247401355161674382253921816037874288869490923627858867068182978486042703082874048518177882618787407209e-12 +/- 3.13e-223]",
+        "safe_Q_value_error": "1e-11",
+        "Q_Cauchy_derivative_errors": [
+          "1e-11",
+          "1e-11",
+          "2e-11"
+        ],
+        "scope": "Approximation payment only: central coherent gamma replaced by J24/S3/P12, profile degree120, entire polynomial Gaussian tails. Add central real RS8, CR mismatch and exact edge Gaussian tails before Cauchy."
+      },
+      "both_channel_normalized_retained_model_conversion_payment": "[2.52331152672639876832745539984108236808667979e-12 +/- 1.20e-57]",
+      "both_channel_normalized_retained_model_conversion_cap": "1e-11",
+      "model_conversion_cap_basis": "Computed analytic J24/S3/P12 Gaussian and degree120 profile conversion, including the retained full-polynomial Gaussian tails; see the complete-edge note and its same-model audit.",
+      "both_channel_normalized_complete_edge_model_error": "[5.35735242490563021106517980246000111070420138e-8 +/- 1.55e-53]",
+      "normalized_value_cap": "6e-8",
+      "normalized_first_x_cap": "6e-8",
+      "normalized_second_x_cap": "1.2e-7",
+      "derivative_payment": "Cauchy on the holomorphic exact-minus-polynomial normalized error, radius1 in physical x. First factor1, second factor2.",
+      "scope": "Actual complete reflected RS heat edge minus the declared retained Gaussian/profile polynomial approximation, divided by actual A(z,t). This is not the full H residual: the retained signed finite-mode and edge corrections remain to be evaluated."
+    }
+  ]
+}

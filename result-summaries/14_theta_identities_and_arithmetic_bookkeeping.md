@@ -206,3 +206,116 @@ The note states: “This is an explicit quantitative completion of known
 coordinate asymptotics.” It is not a new cancellation estimate, smaller
 total error, or uniform signed lower bound. For Edward Baker with substantial
 LLM assistance, **gpt-6.1-sol, actual effort ultra**; no specialist review.
+
+
+**19 October 2026 S02 complete evaluated jets, investigation 3/11.**
+[Note 03](../papers/investigations-3/11_arithmetic_collision_rigidity/symmetries/02_cutoff_reflection/notes/03_COMPLETE_FROZEN_JETS_AND_PAID_CONSUMERS_20261019.md)
+proves the real-Schur second-jet enclosure and gives an **interval-checked
+certificate on the already covered B box**, using both frozen and full
+corrections. Coupled residuals certify L0>E/100 on 4096/4096 cells versus
+1770 for independent frozen boxes. Full paid firstjet>0.9702739184 exceeds
+frozen>0.9686625938; fresh additional-source>1.3473946960 remains stronger.
+[Separate same-model review and replay](../papers/investigations-3/11_arithmetic_collision_rigidity/symmetries/02_cutoff_reflection/reviews/03_COMPLETE_JET_INTERNAL_REVIEW_20261019.md).
+No new coverage, matched-cost gain or Newman bound. For Edward Baker with
+substantial LLM assistance, **gpt-6.1-sol, ultra**; no specialist review.
+
+
+**19 October 2026 S03 filtered residual, investigation 3/11.**
+[Note 03](../papers/investigations-3/11_arithmetic_collision_rigidity/symmetries/03_normalized_jet_rotation/notes/03_FILTERED_COMPLETE_RESIDUAL_AND_SPLIT_PREFIX_OBSTRUCTION_20261019.md) derives the complete signed source-filtered
+discrepancy and tail/heat-forcing ledger. A **proved scoped obstruction**,
+with an outward 192/256-bit witness, shows that separately bounding the
+physical-source and full-approximation prefixes pays >1.912087 on B.
+[Separate same-model review](../papers/investigations-3/11_arithmetic_collision_rigidity/symmetries/03_normalized_jet_rotation/reviews/03_FILTERED_RESIDUAL_INTERNAL_REVIEW_20261019.md). This is not a
+new recombined residual allowance or coverage gain; the signed arithmetic
+estimate remains open. Prepared for Edward Baker with substantial LLM
+assistance, **gpt-6.1-sol, ultra**; no specialist review.
+
+**19 October 2026 S03 analytic-only allowance, investigation 3/11.**
+[Note 04](../papers/investigations-3/11_arithmetic_collision_rigidity/symmetries/03_normalized_jet_rotation/notes/04_PHASE_AWARE_ANALYTIC_ALLOWANCE_AND_KERNEL_VARIATION_OBSTRUCTION_20261019.md) gives a **proved analytic-only bound with outward-evaluated constants**:
+complete residual increment <0.812260 on B versus same-input independent
+endpoints <0.827470 (>1.8381% allowance decrease). Known endpoint phase and
+real-Schur geometry suffice. The note states: “It does not explain the much
+stronger observed arithmetic cancellation”. The retained source-informed
+<0.000266448 bound stays stronger. A **proved scoped payment obstruction**
+gives >4037.45136 for one cell under absolute shifted-channel kernel
+variation payments; this is not actual residual or quadrature error.
+[Separate same-model review](../papers/investigations-3/11_arithmetic_collision_rigidity/symmetries/03_normalized_jet_rotation/reviews/04_PHASE_ALLOWANCE_AND_KERNEL_OBSTRUCTION_INTERNAL_REVIEW_20261019.md). No new coverage or height-uniform result. Prepared for Edward Baker
+with substantial LLM assistance, **gpt-6.1-sol, ultra**; no specialist review.
+
+**19 October 2026 S03 calibrated consumer, investigation 3/11.**
+[Note 05](../papers/investigations-3/11_arithmetic_collision_rigidity/symmetries/03_normalized_jet_rotation/notes/05_CALIBRATED_FIRST_JET_AND_MATCHED_DIRECT_COMPARISON_20261019.md) is a **complete known-box interval consumer comparison**, with a
+**proved scoped scalar/vector inequality** for the same nominal anchor ball
+and residual increment disk. Exact dyadic anchors and their uncertainty
+are retained. Paid calibrated J radius>1.3859351576 versus scalar>1.1288659652;
+matched source direct>1.3898732635 remains stronger. The note states:
+“The source direct test also receives the same midpoint propagation as the
+calibrated test.” Raw-source>1.3473946960 alone is an inadequate strongest
+comparator. [Separate same-model review](../papers/investigations-3/11_arithmetic_collision_rigidity/symmetries/03_normalized_jet_rotation/reviews/05_CALIBRATED_CONSUMER_COMPARISON_INTERNAL_REVIEW_20261019.md). No new residual allowance, coverage or matched-cost result; stop this
+fixed-box comparison. Prepared for Edward Baker with substantial LLM
+assistance, **gpt-6.1-sol, ultra**; no specialist review.
+
+**19 October 2026 G3 arithmetic continuation, investigation 3/11.**
+[Note 06](../papers/investigations-3/11_arithmetic_collision_rigidity/symmetries/03_normalized_jet_rotation/notes/06_ARITHMETIC_GAMMA_AND_EDGE_CORRECTIONS_20261019.md) gives a **proved bounded finite-mode remainder theorem**:
+relative gamma/heat errors <6e-7,<6e-8,<1.2e-8 through spatial order 2,
+with uniform finite filtered payment <3.874872e-6 on B,N=8.
+Certified center finite and inferred edge defects have opposite signs;
+the prescribed RS hierarchy requires its gamma prefactor. That hierarchy
+has unpaid tails/RS remainder, so full G3 remains **partially explained**.
+A finite CR identity identifies two coherent-extension endpoint payments;
+complete edge jets and signed prefix remain open. [Separate same-model review](../papers/investigations-3/11_arithmetic_collision_rigidity/symmetries/03_normalized_jet_rotation/reviews/06_ARITHMETIC_GAMMA_AND_EDGE_INTERNAL_REVIEW_20261019.md).
+No complete-H allowance, new consumer, coverage or height-uniform result.
+Prepared for Edward Baker with substantial LLM assistance, **gpt-6.1-sol,
+actual effort ultra**; no independent specialist review.
+
+**19 October 2026 G3 complete arithmetic allowance, investigation 3/11.**
+[Note 07](../papers/investigations-3/11_arithmetic_collision_rigidity/symmetries/03_normalized_jet_rotation/notes/07_COMPLETE_ARITHMETIC_EDGE_AND_RESIDUAL_INCREMENT_20261019.md) is a **proved bounded arithmetic estimate with outward constants**.
+RS8, exact gamma, CR coherence, both Gaussian tails and a paid polynomial
+model give complete edge Q-jet errors<6e-8,<6e-8,<1.2e-7 on B,N=8.
+Recombined signed endpoint payment proves **abs(I_r)<0.000854** without H
+Taylor/source-quadrature data, >950-fold smaller than prior independent
+analytic-only0.812260. Source-informed0.000266448 remains stronger.
+This completes the earlier fixed-pilot edge/prefix obligation, not global
+G3/height control. [Separate same-model review](../papers/investigations-3/11_arithmetic_collision_rigidity/symmetries/03_normalized_jet_rotation/reviews/07_COMPLETE_ARITHMETIC_EDGE_AND_INCREMENT_INTERNAL_REVIEW_20261019.md) and fresh 192 replay agree;
+nominal 192/256 arithmetic uses 512 guardbits for profile derivatives.
+No consumer rerun, new coverage or matched-cost result. For Edward Baker
+with substantial LLM assistance, **gpt-6.1-sol, actual effort ultra**.
+
+
+**19 October 2026 S04-T2 signed Gaussian average, investigation 3/11.**
+[Note 02](../papers/investigations-3/11_arithmetic_collision_rigidity/symmetries/04_time_height_scaling/notes/02_GAUSSIAN_SIGNED_CORE_AND_COMPLETE_AVERAGED_VALUE_20261019.md) is **proved in-note** using the imported
+complete RS source contract. On kappa[1,2],0<t<=1/20, a phase-matched finite
+Gaussian intermediate average is <1.5e-6; all-channel physical average
+satisfies abs(B-1)<0.11, including source/cutoff/window payments. Weighted
+Q/2 value energy>0.198. This completes the named averaged-functional gate,
+not pointwise core control or noncollision. S04-T3 was Waiting at that stage.
+[Separate same-model review](../papers/investigations-3/11_arithmetic_collision_rigidity/symmetries/04_time_height_scaling/reviews/02_GAUSSIAN_SIGNED_CORE_INTERNAL_REVIEW_20261019.md),192/256 and fresh192
+checks support the proof. Different norm from the earlier hard-window
+derivative mean square; no same-norm superiority claimed. For Edward Baker
+with substantial LLM assistance, **gpt-6.1-sol, actual effort ultra**.
+
+
+**19 October 2026 S04-T3 local transfer and scoped cutoff payment, investigation 3/11.**
+[Note 03](../papers/investigations-3/11_arithmetic_collision_rigidity/symmetries/04_time_height_scaling/notes/03_UNIFORM_LOCAL_RESIDUAL_TRANSFER_AND_CUTOFF_PAYMENT_OBSTRUCTION_20261019.md) is **proved in-note**
+from the inherited complete disk theorem. Uniform fixed-cutoff half-disk
+charts give complete endpoint increment<46.679exp(-b*/t), including anchor
+uncertainty. The stipulated independent coefficientwise transition disks
+across kappa[1,2] cost>.99exp(1/(4t)). “Actual jumps may cancel.” This is a
+local analytic corollary and scoped payment obstruction, not a transferred
+S03 fixed-pilot constant or a global signed lower bound. Coherent cutoff
+matching and positive physical anchor margins remain open.
+[Separate same-model review](../papers/investigations-3/11_arithmetic_collision_rigidity/symmetries/04_time_height_scaling/reviews/03_UNIFORM_RESIDUAL_TRANSFER_INTERNAL_REVIEW_20261019.md) and192/256/fresh192 checks;
+no new coverage. For Edward Baker with substantial LLM assistance,
+**gpt-6.1-sol, actual effort ultra**; no specialist review.
+
+
+**19 October 2026 S05-T2 complete acquisition comparison, investigation 3/11.**
+[Note 03](../papers/investigations-3/11_arithmetic_collision_rigidity/symmetries/05_covariant_theta_jets/notes/03_COMPLETE_SHIFTED_ACQUISITION_AND_CONSUMER_COMPARISON_20261019.md) is an **interval-checked bounded consumer comparison**
+under the inherited reflected-source contract. All51coefficients at192/256
+give a hybrid using groupedorder2 and factoredother50. Complete addederror
+allowances decrease >0.0092005%,0.0077659%,0.0082207% versus the stronger
+old expanded/grouped hybrid. “The reported adaptive paid margin is unchanged.”
+Same40closedcells/116adaptive calls; rawfixedmargin shiftsbothways. This
+completes the selected error gate, with no cost, coverage, strongestphysical
+or new arithmetic estimate. [Separate same-model review](../papers/investigations-3/11_arithmetic_collision_rigidity/symmetries/05_covariant_theta_jets/reviews/03_COMPLETE_SHIFTED_CONSUMER_INTERNAL_REVIEW_20261019.md),
+freshfullreplays and exactledger checks support the result. For Edward Baker
+with substantial LLM assistance, **gpt-6.1-sol, actual effort ultra**.

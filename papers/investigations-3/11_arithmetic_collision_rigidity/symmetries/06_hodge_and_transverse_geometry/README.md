@@ -212,3 +212,42 @@ existing registration, following the [guide][guide].
 [bridge]: ../../../../investigations-2/active/22_theta_manifold_geometry/notes/03_theta_bundles_and_connections/03_COMPLETE_SIGNED_CORRELATION_BRIDGE_20261015.md
 [coupled]: ../../../../investigations-2/active/22_theta_manifold_geometry/notes/03_theta_bundles_and_connections/06_COUPLED_THETA_PRODUCT_AND_PARITY_SECTORS_20261015.md
 [parity]: ../../../../investigations-2/active/22_theta_manifold_geometry/notes/03_theta_bundles_and_connections/07_PARITY_STRIP_CUTOFF_AND_FULL_STARTING_FACTOR_20261015.md
+
+## S06-T1 second transverse completion
+
+19 October 2026. Prepared for Edward Baker with substantial LLM assistance,
+**gpt-6.1-sol (Codex), actual effort ultra**. [Note 03](notes/03_SECOND_TRANSVERSE_COMPLETION_AND_CURRENT_FEASIBILITY_20261019.md)
+uniquely completes the second weighted base-p insertion as
+C2=(D²-22D+165)Phi/16. Its full observation and current preserve four
+product terms, primitive lower edges and corner. At a nondegenerate
+event W=-t²Hxx/4 and J2c=11t³Hxx²/16>0 with E=0. The actual reflected
+convergent source therefore refutes a generic collision-exclusion claim
+from this current's positivity, and a finite local magnitude payment by E.
+The finite polynomial completion lemma has no parity hypothesis.
+
+T1 is **Complete as a scoped closure**; its feasibility gate for T2 is
+not passed. T2 stays **Waiting** for a different independently estimable
+arithmetic term. This does not exclude theta-specific higher-jet,
+variable-coefficient or nonlocal estimates. [Exact checks and fresh
+inherited controls](numerics/README.md); [separate same-model internal
+review](reviews/04_SECOND_TRANSVERSE_COMPLETION_INTERNAL_REVIEW_20261019.md). No physical error, cost, margin or coverage gain.
+
+## S06-T2 bounded residual comparison
+
+19 October 2026. Prepared for Edward Baker with substantial LLM assistance,
+**gpt-6.1-sol (Codex), actual effort ultra**. After T1's failed original
+gate, the [frozen contract](notes/04_S06_T2_BOUNDED_CURRENT_COMPARISON_CONTRACT_20261019.md) selects the different
+event-vanishing residual r=L0-beta L0_x. [Note 05](notes/05_BOUNDED_COMPLETED_CURRENT_AND_DIRECT_COMPARISON_20261019.md)
+estimates it from fresh complete source h0..h3 without the old L0 sign.
+At both192/256 bits it signs60/64 unchanged B cells; all four last-spatial
+cell intervals straddle zero. The same-data direct first-jet test covers
+all64, physical radius >0.0190407974544; every successful current radius
+is <0.552 of direct. All higher-order source errors and primitive edges
+are paid. The current gives no positive uniform certificate on this cover.
+
+T2 is **Complete as a bounded comparison; the benefit gate failed**.
+A scoped same-Cartesian-data theorem explains the direct dominance.
+Stop this fixed-pilot comparison; a new arithmetic/correlation input or
+specific lower-cost acquisition is needed. [Records](numerics/README.md)
+and [separate same-model internal review](reviews/05_BOUNDED_COMPLETED_CURRENT_INTERNAL_REVIEW_20261019.md). No new
+coverage, physical error/margin, cost or Newman advantage.

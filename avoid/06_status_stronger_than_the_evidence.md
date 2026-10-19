@@ -30,6 +30,15 @@ values labelled \(\Lambda_{c,p}\).
 
 - [Reply 03 §5](../papers/brainstorm/investigations-3/reviews/03_REPLY_TO_CODEX_RESPONSE_CLAUDE_20261016.md) called the translate-span picture “a definite formula” before deriving it. The [Sonin round-one cross-model review §3](../papers/investigations-3/04_sonin_mixed_prime_response/reviews/01_ROUND_ONE_CROSS_MODEL_REVIEW_CLAUDE_20261017.md) says “I withdraw the reply’s identification”; the inverse metric cancels an unbounded shifted gamma part. [Codex reconciliation](../papers/investigations-3/04_sonin_mixed_prime_response/reviews/02_CODEX_RECONCILIATION_OF_ROUND_ONE_REVIEW_20261017.md) accepts this scoped correction. Evidence added 17 October 2026 for Edward Baker with LLM assistance, **gpt-6.1-sol**, effort **ultra**.
 
+- [S05-T2 Note 03](../papers/investigations-3/11_arithmetic_collision_rigidity/symmetries/05_covariant_theta_jets/notes/03_COMPLETE_SHIFTED_ACQUISITION_AND_CONSUMER_COMPARISON_20261019.md),
+  19 October 2026: “The reported adaptive paid margin is unchanged.” A
+  complete added approximation-error allowance decreases while the final
+  physical-margin result does not improve consistently. Compare the stronger
+  old-alternatives hybrid and distinguish mathematical error, interval image,
+  raw lower endpoint and printed/reparsed margin. [Same-model review](../papers/investigations-3/11_arithmetic_collision_rigidity/symmetries/05_covariant_theta_jets/reviews/03_COMPLETE_SHIFTED_CONSUMER_INTERNAL_REVIEW_20261019.md).
+  Added for Edward Baker with substantial LLM assistance,
+  **gpt-6.1-sol, actual effort ultra**.
+
 ## What it cost
 
 A same-day retraction; a deferred arXiv submission; correction blocks and
