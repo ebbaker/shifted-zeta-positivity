@@ -2,8 +2,8 @@
 
 18 October 2026, America/New_York. Prepared for Edward Baker with substantial
 LLM assistance. Authoring model **gpt-6-astra (Codex)**, actual effort **max**.
-Exact normalized identities available; quantitative implementation or
-estimating benefit remains to be demonstrated.
+Exact normalized identities available. The opening execution below records
+a bounded source-enclosure improvement; spectral usefulness remains unpaid.
 
 ## Question and origin
 
@@ -118,3 +118,23 @@ RH experiment. Follow the [program guide][guide] for histories and storage.
 [modular]: ../01_modular_self_duality/README.md
 [cutoff]: ../02_cutoff_reflection/README.md
 [geometry]: ../06_hodge_and_transverse_geometry/README.md
+
+
+## Opening execution, 18 October 2026
+
+Prepared for Edward Baker with substantial LLM assistance, **gpt-6.1-sol
+(Codex), actual reasoning effort ultra**. The [complete-source note](notes/01_COMPLETE_SOURCE_JETS_AND_FIXED_POINT_ENCLOSURES_20261018.md)
+and [192/256-bit records](numerics/README.md) implement cancellation-safe
+source jets with complete tails and a modular fixed-point Taylor enclosure.
+On each of [0,1/64], [0,1/256], [0,1/1024], the source and its first two
+source derivatives have strictly narrower enclosures than the existing
+expanded evaluator. At the smallest cell the radius factors exceed
+894.47, 7.29, 2394.90; the gain persists against fused Horner evaluation.
+
+The normalized basis organizes existing algebra. The principal gain is
+complete-source Taylor evaluation with known parity. Fused Horner alone
+widens the second derivative on 34 of 64 shifted-line cells. No physical
+spectral jet error, runtime gain, new exclusion region, or global bound is
+claimed. The [internal review](reviews/01_COMPLETE_SOURCE_ENCLOSURE_INTERNAL_REVIEW_20261018.md)
+is by the same model. Next choose a named local-source consumer or pay a
+cancellation-preserving spectral transfer; do not expand the source scan.

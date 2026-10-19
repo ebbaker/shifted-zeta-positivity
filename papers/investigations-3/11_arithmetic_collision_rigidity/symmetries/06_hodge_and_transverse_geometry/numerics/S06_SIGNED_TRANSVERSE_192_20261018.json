@@ -1,0 +1,998 @@
+{
+  "date": "2026-10-18",
+  "timezone": "America/New_York",
+  "prepared_for": "Edward Baker",
+  "actual_model": "gpt-6.1-sol",
+  "actual_effort": "ultra",
+  "llm_assistance": "substantial; same-model internal review",
+  "python": "3.12.14",
+  "python_flint": "0.9.0",
+  "precision_bits": 192,
+  "rounding": "outward Arb; integer polynomial recurrences exact",
+  "status": "pass",
+  "script_sha256": "2eb377fa03c916c50a55e3c3fa4c55f360ffc25184ce180151beff234dcd0a0f",
+  "mathematical_source_sha256": {
+    "papers/investigations-3/11_arithmetic_collision_rigidity/symmetries/06_hodge_and_transverse_geometry/notes/01_TRANSVERSE_OBSERVATION_AND_FINITE_JET_OBSTRUCTIONS_20261018.md": "5e41f41282a5aa268eace5d42d20428adc5d31322f4ce66673cd4ce93b7e2ac0",
+    "papers/investigations-3/11_arithmetic_collision_rigidity/notes/04_POSITIVE_ARITHMETIC_PACKETS_AND_MODULAR_CANCELLATION_CODEX_20261018.md": "350ee6391f9b44699a5d01361af3d1dc98da8cd24247056411998f772e565500",
+    "papers/investigations-3/11_arithmetic_collision_rigidity/research-overview/03_SYMMETRY_RESEARCH_PROGRAM_AND_INVESTIGATION_GUIDE_20261018.md": "eb29bc0181a420d265fab316cfca64b3e3c1e3f8952c5723f7bc1291208e35af"
+  },
+  "domain": {
+    "t": [
+      "1/100",
+      "1/5"
+    ],
+    "x": [
+      "999",
+      "1001"
+    ]
+  },
+  "source_estimate": {
+    "retained_modes": [
+      1,
+      8
+    ],
+    "first_omitted_mode": 9,
+    "g_endpoint_derivatives": [
+      "[1.412481080256018254661459046439429301147 +/- 2.82e-40]",
+      "[-0.3722683906801757552384255582658158807742 +/- 2.31e-41]",
+      "[-91.82120918781181076324384830748816149229 +/- 2.15e-39]",
+      "[-397.3226482014122266720441890139583394449 +/- 2.93e-38]",
+      "[29326.95659207931960408050336281686891167 +/- 2.28e-36]",
+      "[-98072.14167694601577793974630987260728167 +/- 1.01e-36]",
+      "[-7441256.182038822039225358938707587091962 +/- 2.64e-34]"
+    ],
+    "endpoint_tail_allowances": [
+      "[1.013917217121281880451016000041418308679e-103 +/- 2.58e-143]",
+      "[1.041143509724473976570701476531076015081e-100 +/- 6.16e-141]",
+      "[1.073229161106727075539414351363359743063e-97 +/- 3.20e-138]",
+      "[1.110542878882757985312861522278149647821e-94 +/- 3.73e-134]",
+      "[1.153524023719502634744728260848904610625e-91 +/- 8.61e-132]",
+      "[1.202690993654227600643657987311800627316e-88 +/- 2.49e-128]",
+      "[1.258651335155695906839418333658020069892e-85 +/- 1.92e-125]"
+    ],
+    "f3_uniform": "[-397.5571772875407373978443971156658034498 +/- 0.213]",
+    "f5_uniform": "[-98906.76549370941639021312932530871263171 +/- 7.56e+2]",
+    "L1_derivative_majorants": {
+      "4": "[577876.3168916689994570546569260497647576 +/- 2.55e-35]",
+      "6": "[1783728353.469056139610256363111541627965 +/- 4.70e-32]"
+    },
+    "L1_mode_tail_allowances": {
+      "4": "[1.161510512851418715524678023630289662870e-94 +/- 4.91e-134]",
+      "6": "[1.277401586773658521370016100174359556531e-88 +/- 3.64e-128]"
+    },
+    "first_attempt": {
+      "order": 4,
+      "signed_gate": "failed",
+      "scaled_enclosure": "[0.3722683906801757552384255582658158807742 +/- 0.580]"
+    },
+    "one_repair": {
+      "order": 6,
+      "signed_gate": "passed",
+      "scaled_enclosure": "[0.3722683906801757552384255582658158807742 +/- 2.19e-3]",
+      "scaled_error_allowance": "[0.002189547305792174071833043649416751011431 +/- 1.01e-44]"
+    },
+    "certified_signed_rounding": "37/100 < x^2*(-i*G1) < 3/8",
+    "raw_observation_lower": "[3.692611085218477825870433263040655648048e-7 +/- 2.56e-47]"
+  },
+  "physical_comparison": {
+    "normalization": "fixed G0=1000^(7/4)*exp(-125*pi); E scales by G0^2",
+    "G0": "[5.046099035217572441793125308172197683141e-166 +/- 2.01e-206]",
+    "whole_box_E_upper_norm2": "[0.2021041946934888119332391834643584292006 +/- 1.88e-41]",
+    "whole_box_E_upper_physical": "[5.146202447103193280691225426101769484028e-332 +/- 1.50e-372]",
+    "raw_magnitude_squared_over_E_lower": "[2.649599732391748952004522320105848094391e+318 +/- 3.31e+278]",
+    "certified_mismatch": "|-i*G1|^2 > 10^310 E throughout the pilot",
+    "reference_code_sha256": "e96feb2b4c3e84de3025713b486fb8cf99fdd810f61366b79a0da188eb12535f",
+    "reference_source_pins": {
+      "note11": {
+        "path": "papers/investigations-3/11_arithmetic_collision_rigidity/notes/02_updated_research_plan/11_EFFECTIVE_NONSTATIONARY_ARITHMETIC_TAIL_20261018.md",
+        "sha256": "a36b9c51ebd54c56a6470a7d8cbf485354a7647cb6afa39bccaa2b46b3990c40"
+      },
+      "manuscript_main": {
+        "path": "papers/investigations-3/11_arithmetic_collision_rigidity/manuscript/positive_arithmetic_packets/main.tex",
+        "sha256": "0ebb2a0a4fb6a6b5edb0b398445339f04a54042480d9cc60855b21c80c64ee5e"
+      },
+      "manuscript_tex_manifest": [
+        {
+          "path": "papers/investigations-3/11_arithmetic_collision_rigidity/manuscript/positive_arithmetic_packets/main.tex",
+          "sha256": "0ebb2a0a4fb6a6b5edb0b398445339f04a54042480d9cc60855b21c80c64ee5e"
+        },
+        {
+          "path": "papers/investigations-3/11_arithmetic_collision_rigidity/manuscript/positive_arithmetic_packets/sections/01_theta.tex",
+          "sha256": "1314d437144ce23c02c0c858409fc047d2fd0d5c56d5462d614ed70b8120dfa3"
+        },
+        {
+          "path": "papers/investigations-3/11_arithmetic_collision_rigidity/manuscript/positive_arithmetic_packets/sections/02_packets.tex",
+          "sha256": "5bab1829a92f7032a15d80ad874b15fff252c598b6194c07fab7efcf7d70beac"
+        },
+        {
+          "path": "papers/investigations-3/11_arithmetic_collision_rigidity/manuscript/positive_arithmetic_packets/sections/03_positivity.tex",
+          "sha256": "080089b5184d032403789bf139bb465c92fc9a379ac2fc6811049d50cc8dc948"
+        },
+        {
+          "path": "papers/investigations-3/11_arithmetic_collision_rigidity/manuscript/positive_arithmetic_packets/sections/04_modular_collisions.tex",
+          "sha256": "be76c5c22056fce5c96c240e366d2c126ee202e766ea6ff1141305f51b1d664f"
+        },
+        {
+          "path": "papers/investigations-3/11_arithmetic_collision_rigidity/manuscript/positive_arithmetic_packets/sections/05_controls.tex",
+          "sha256": "f89e2e6f784c95a9b3ad17639c6f94411197a0d27c50f759dbb4a53eac15f9f4"
+        },
+        {
+          "path": "papers/investigations-3/11_arithmetic_collision_rigidity/manuscript/positive_arithmetic_packets/sections/06_certification.tex",
+          "sha256": "767af8460d3beaeb34375ac80b0ed9e402dfdc67a8b7978c43bbf70897eabf16"
+        },
+        {
+          "path": "papers/investigations-3/11_arithmetic_collision_rigidity/manuscript/positive_arithmetic_packets/sections/07_shifted_approximation.tex",
+          "sha256": "38a819cb4afa4008dc376b8a8892d020722fe9b9eb9a6afd44a46e538f9074c7"
+        },
+        {
+          "path": "papers/investigations-3/11_arithmetic_collision_rigidity/manuscript/positive_arithmetic_packets/sections/08_effective_tails.tex",
+          "sha256": "74e0324f9daa0e0b006da055822fcbb2caee1af3ab1f507f855a88e960f9cab4"
+        },
+        {
+          "path": "papers/investigations-3/11_arithmetic_collision_rigidity/manuscript/positive_arithmetic_packets/sections/09_finite_certificates.tex",
+          "sha256": "04a4902b4d05bb923aefe9aa472e6bf6c86246765a1258f7188ab102762359f6"
+        },
+        {
+          "path": "papers/investigations-3/11_arithmetic_collision_rigidity/manuscript/positive_arithmetic_packets/sections/10_outer_exclusion.tex",
+          "sha256": "620f98be47635b8ebb0ecb6d321238c8caa02d66d8496859c994489981c7b050"
+        },
+        {
+          "path": "papers/investigations-3/11_arithmetic_collision_rigidity/manuscript/positive_arithmetic_packets/sections/11_global_scope.tex",
+          "sha256": "a3f4d4fa0e5a79763ff1826382fbe9285bb1acfc5cf9d613866d0bea4a2d068e"
+        }
+      ],
+      "manuscript_tex_manifest_sha256": "d1c265eacad9a967865914e4ffa3c4c04d7ffcbd035838dfdb8752217cc6f087"
+    },
+    "fresh_setup_seconds": 7.985105625004508,
+    "whole_box_added_errors_norm": [
+      "[4.620514716366618470562204512657572249927e-12 +/- 3.15e-52]",
+      "[3.469200840270035033636890738990187957974e-12 +/- 1.46e-52]",
+      "[3.055845735543981516982440299200090963221e-12 +/- 8.04e-53]"
+    ]
+  },
+  "completed_signed_current": {
+    "source": "C=q*g+3/4*(D-1)*psi=(9-D)*Phi/4",
+    "observation_convention": "one half of full-line integral exp(t*u^2)*C(u)*exp(i*x*u); combine C before integration",
+    "transform": "Z=(9*H+i*(x*H-2*t*Hx))/4",
+    "centered_current": "Im(conj(Z)*Zx)-9*H^2/16=9*t*L0/8",
+    "inherited_physical_premise": "L0 > E/100, rechecked fresh on fixed 4-by-16 cover",
+    "norm_comparison_lower": "81/40083286400",
+    "norm_comparison_upper": "12526027/200",
+    "current_E_lower": "9/80000",
+    "argument_speed_lower": "9/5010410800",
+    "minimum_centered_excess_lower_norm2": "[1.002708321575653414473219392890099336760e-6 +/- 2.04e-46]",
+    "fixed_cover": [
+      {
+        "t": [
+          "1/100",
+          "23/400"
+        ],
+        "x": [
+          "999",
+          "7993/8"
+        ],
+        "physical_excess_lower_norm2": "[0.02365767593360942459208661607132125842719 +/- 3.42e-42]",
+        "centered_current_excess_lower_norm2": "[0.0002661488534072759540121511695413778291809 +/- 2.59e-44]"
+      },
+      {
+        "t": [
+          "1/100",
+          "23/400"
+        ],
+        "x": [
+          "7993/8",
+          "3997/4"
+        ],
+        "physical_excess_lower_norm2": "[0.02102320036244587424266288769074022725500 +/- 1.43e-42]",
+        "centered_current_excess_lower_norm2": "[0.0002365110034817970555686894906864769706813 +/- 3.40e-44]"
+      },
+      {
+        "t": [
+          "1/100",
+          "23/400"
+        ],
+        "x": [
+          "3997/4",
+          "7995/8"
+        ],
+        "physical_excess_lower_norm2": "[0.01873563792822043299548833509274884274714 +/- 3.00e-42]",
+        "centered_current_excess_lower_norm2": "[0.0002107759262331850468039150096463297543428 +/- 8.66e-45]"
+      },
+      {
+        "t": [
+          "1/100",
+          "23/400"
+        ],
+        "x": [
+          "7995/8",
+          "1999/2"
+        ],
+        "physical_excess_lower_norm2": "[0.01641758274686412548461032020079894090317 +/- 4.53e-42]",
+        "centered_current_excess_lower_norm2": "[0.0001846978054747589018685898304389197257857 +/- 1.34e-44]"
+      },
+      {
+        "t": [
+          "1/100",
+          "23/400"
+        ],
+        "x": [
+          "1999/2",
+          "7997/8"
+        ],
+        "physical_excess_lower_norm2": "[0.01399435583416768329896589399438921141063 +/- 7.72e-43]",
+        "centered_current_excess_lower_norm2": "[0.0001574365027251138213155486003751110502446 +/- 3.83e-45]"
+      },
+      {
+        "t": [
+          "1/100",
+          "23/400"
+        ],
+        "x": [
+          "7997/8",
+          "3999/4"
+        ],
+        "physical_excess_lower_norm2": "[0.01193253018942538488478670556037324775343 +/- 1.01e-42]",
+        "centered_current_excess_lower_norm2": "[0.0001342409641944781231028448833549802872261 +/- 2.39e-44]"
+      },
+      {
+        "t": [
+          "1/100",
+          "23/400"
+        ],
+        "x": [
+          "3999/4",
+          "7999/8"
+        ],
+        "physical_excess_lower_norm2": "[0.01017367955152521877701708921633284656224 +/- 3.25e-42]",
+        "centered_current_excess_lower_norm2": "[0.0001144538946658941434285375381457196214814 +/- 1.35e-44]"
+      },
+      {
+        "t": [
+          "1/100",
+          "23/400"
+        ],
+        "x": [
+          "7999/8",
+          "1000"
+        ],
+        "physical_excess_lower_norm2": "[0.008671217535482072965932601364552019643371 +/- 1.57e-43]",
+        "centered_current_excess_lower_norm2": "[9.755119696267138550951384386530934208168e-5 +/- 4.49e-45]"
+      },
+      {
+        "t": [
+          "1/100",
+          "23/400"
+        ],
+        "x": [
+          "1000",
+          "8001/8"
+        ],
+        "physical_excess_lower_norm2": "[0.007036340345454326633498341036709174083374 +/- 2.15e-43]",
+        "centered_current_excess_lower_norm2": "[7.915882862260771111270714766761688031296e-5 +/- 8.7e-47]"
+      },
+      {
+        "t": [
+          "1/100",
+          "23/400"
+        ],
+        "x": [
+          "8001/8",
+          "4001/4"
+        ],
+        "physical_excess_lower_norm2": "[0.005358417908213110677897520332245683698441 +/- 9.99e-44]",
+        "centered_current_excess_lower_norm2": "[6.028220121728645213879183831112819941996e-5 +/- 1.28e-46]"
+      },
+      {
+        "t": [
+          "1/100",
+          "23/400"
+        ],
+        "x": [
+          "4001/4",
+          "8003/8"
+        ],
+        "physical_excess_lower_norm2": "[0.003995201948676717797663928301479874235887 +/- 3.57e-43]",
+        "centered_current_excess_lower_norm2": "[4.494602169069192627162249272331362421623e-5 +/- 2.77e-45]"
+      },
+      {
+        "t": [
+          "1/100",
+          "23/400"
+        ],
+        "x": [
+          "8003/8",
+          "2001/2"
+        ],
+        "physical_excess_lower_norm2": "[0.002913324149571655740489098469292639416474 +/- 1.72e-43]",
+        "centered_current_excess_lower_norm2": "[3.277489645303371488283797770599483015408e-5 +/- 4.43e-45]"
+      },
+      {
+        "t": [
+          "1/100",
+          "23/400"
+        ],
+        "x": [
+          "2001/2",
+          "8005/8"
+        ],
+        "physical_excess_lower_norm2": "[0.002081316663175818628673725703907700581587 +/- 2.54e-43]",
+        "centered_current_excess_lower_norm2": "[2.341481221061691658502414874232588935535e-5 +/- 9.01e-46]"
+      },
+      {
+        "t": [
+          "1/100",
+          "23/400"
+        ],
+        "x": [
+          "8005/8",
+          "4003/4"
+        ],
+        "physical_excess_lower_norm2": "[0.001241207957039666323832991836674940802576 +/- 4.87e-43]",
+        "centered_current_excess_lower_norm2": "[1.396358928704883394545677808904572074774e-5 +/- 4.53e-45]"
+      },
+      {
+        "t": [
+          "1/100",
+          "23/400"
+        ],
+        "x": [
+          "4003/4",
+          "8007/8"
+        ],
+        "physical_excess_lower_norm2": "[0.0005793482330970967827563797869928007500039 +/- 1.38e-44]",
+        "centered_current_excess_lower_norm2": "[6.517667360862612046292404203095277968794e-6 +/- 3.00e-47]"
+      },
+      {
+        "t": [
+          "1/100",
+          "23/400"
+        ],
+        "x": [
+          "8007/8",
+          "1001"
+        ],
+        "physical_excess_lower_norm2": "[8.912964919971576591732622766444980215646e-5 +/- 2.50e-45]",
+        "centered_current_excess_lower_norm2": "[1.002708321575653414473219392890099336760e-6 +/- 2.04e-46]"
+      },
+      {
+        "t": [
+          "23/400",
+          "21/200"
+        ],
+        "x": [
+          "999",
+          "7993/8"
+        ],
+        "physical_excess_lower_norm2": "[0.02536751716572004973400140864295427687974 +/- 1.30e-42]",
+        "centered_current_excess_lower_norm2": "[0.001640961262164611890409950626290811816908 +/- 9.78e-44]"
+      },
+      {
+        "t": [
+          "23/400",
+          "21/200"
+        ],
+        "x": [
+          "7993/8",
+          "3997/4"
+        ],
+        "physical_excess_lower_norm2": "[0.02260756516698767528119819840716203485212 +/- 4.31e-42]",
+        "centered_current_excess_lower_norm2": "[0.001462426868406217162754726467504675965434 +/- 2.67e-43]"
+      },
+      {
+        "t": [
+          "23/400",
+          "21/200"
+        ],
+        "x": [
+          "3997/4",
+          "7995/8"
+        ],
+        "physical_excess_lower_norm2": "[0.02019512210083410971189302028852093856496 +/- 4.84e-42]",
+        "centered_current_excess_lower_norm2": "[0.001306371957432531658233223163457399385296 +/- 1.63e-43]"
+      },
+      {
+        "t": [
+          "23/400",
+          "21/200"
+        ],
+        "x": [
+          "7995/8",
+          "1999/2"
+        ],
+        "physical_excess_lower_norm2": "[0.01742253884225772850965972294493801324938 +/- 1.54e-42]",
+        "centered_current_excess_lower_norm2": "[0.001127020478514102133173780263921393064101 +/- 3.83e-43]"
+      },
+      {
+        "t": [
+          "23/400",
+          "21/200"
+        ],
+        "x": [
+          "1999/2",
+          "7997/8"
+        ],
+        "physical_excess_lower_norm2": "[0.01487707151458765442999146297433075038522 +/- 6.67e-44]",
+        "centered_current_excess_lower_norm2": "[0.0009623605615489783434421195846536073296064 +/- 1.45e-44]"
+      },
+      {
+        "t": [
+          "23/400",
+          "21/200"
+        ],
+        "x": [
+          "7997/8",
+          "3999/4"
+        ],
+        "physical_excess_lower_norm2": "[0.01270789358238143387176814183225463460840 +/- 1.72e-42]",
+        "centered_current_excess_lower_norm2": "[0.0008220418642185500238923109399106904262308 +/- 3.60e-44]"
+      },
+      {
+        "t": [
+          "23/400",
+          "21/200"
+        ],
+        "x": [
+          "3999/4",
+          "7999/8"
+        ],
+        "physical_excess_lower_norm2": "[0.01085496040222992655878402760247978308621 +/- 3.13e-42]",
+        "centered_current_excess_lower_norm2": "[0.0007021802487637015138744797555061140933894 +/- 1.17e-44]"
+      },
+      {
+        "t": [
+          "23/400",
+          "21/200"
+        ],
+        "x": [
+          "7999/8",
+          "1000"
+        ],
+        "physical_excess_lower_norm2": "[0.009270480417512044074030422990921982504485 +/- 3.18e-43]",
+        "centered_current_excess_lower_norm2": "[0.0005996841997431685436242516748168184776339 +/- 4.71e-44]"
+      },
+      {
+        "t": [
+          "23/400",
+          "21/200"
+        ],
+        "x": [
+          "1000",
+          "8001/8"
+        ],
+        "physical_excess_lower_norm2": "[0.007558383466217454421443170686875795055559 +/- 1.43e-43]",
+        "centered_current_excess_lower_norm2": "[0.0004889329282290371430168369973467067035940 +/- 3.65e-44]"
+      },
+      {
+        "t": [
+          "23/400",
+          "21/200"
+        ],
+        "x": [
+          "8001/8",
+          "4001/4"
+        ],
+        "physical_excess_lower_norm2": "[0.005816584294786584387959731525901233095841 +/- 2.86e-43]",
+        "centered_current_excess_lower_norm2": "[0.0003762602944089572608854405680335182424497 +/- 3.80e-45]"
+      },
+      {
+        "t": [
+          "23/400",
+          "21/200"
+        ],
+        "x": [
+          "4001/4",
+          "8003/8"
+        ],
+        "physical_excess_lower_norm2": "[0.004408859773166249301775841232361865509412 +/- 3.47e-43]",
+        "centered_current_excess_lower_norm2": "[0.0002851981147372387173728773685352416712338 +/- 1.64e-44]"
+      },
+      {
+        "t": [
+          "23/400",
+          "21/200"
+        ],
+        "x": [
+          "8003/8",
+          "2001/2"
+        ],
+        "physical_excess_lower_norm2": "[0.003298272295575339310560185736519201143200 +/- 1.28e-43]",
+        "centered_current_excess_lower_norm2": "[0.0002133569873317358042908418670306402673101 +/- 1.68e-44]"
+      },
+      {
+        "t": [
+          "23/400",
+          "21/200"
+        ],
+        "x": [
+          "2001/2",
+          "8005/8"
+        ],
+        "physical_excess_lower_norm2": "[0.002337100821099351749678644001611727269348 +/- 1.56e-43]",
+        "centered_current_excess_lower_norm2": "[0.0001511812083791994332609263060138350237516 +/- 1.63e-44]"
+      },
+      {
+        "t": [
+          "23/400",
+          "21/200"
+        ],
+        "x": [
+          "8005/8",
+          "4003/4"
+        ],
+        "physical_excess_lower_norm2": "[0.001468448032529030248660094360674529546070 +/- 2.63e-43]",
+        "centered_current_excess_lower_norm2": "[9.499023125498096642972811180296590540205e-5 +/- 4.89e-45]"
+      },
+      {
+        "t": [
+          "23/400",
+          "21/200"
+        ],
+        "x": [
+          "4003/4",
+          "8007/8"
+        ],
+        "physical_excess_lower_norm2": "[0.0008035322535548599697158290032158693027940 +/- 6.63e-45]",
+        "centered_current_excess_lower_norm2": "[5.197849161386917589263833712498821544636e-5 +/- 2.31e-45]"
+      },
+      {
+        "t": [
+          "23/400",
+          "21/200"
+        ],
+        "x": [
+          "8007/8",
+          "1001"
+        ],
+        "physical_excess_lower_norm2": "[0.0003072138633332006481406351048791765371722 +/- 3.67e-44]",
+        "centered_current_excess_lower_norm2": "[1.987289572480508936113593617585122443582e-5 +/- 4.32e-45]"
+      },
+      {
+        "t": [
+          "21/200",
+          "61/400"
+        ],
+        "x": [
+          "999",
+          "7993/8"
+        ],
+        "physical_excess_lower_norm2": "[0.02709262944620878270471016982570238491447 +/- 3.20e-42]",
+        "centered_current_excess_lower_norm2": "[0.003200316846566771875803302720573203593021 +/- 3.92e-43]"
+      },
+      {
+        "t": [
+          "21/200",
+          "61/400"
+        ],
+        "x": [
+          "7993/8",
+          "3997/4"
+        ],
+        "physical_excess_lower_norm2": "[0.02422669071761508422834929527905248270132 +/- 1.40e-42]",
+        "centered_current_excess_lower_norm2": "[0.002861777834760958276276014227982605769094 +/- 4.11e-43]"
+      },
+      {
+        "t": [
+          "21/200",
+          "61/400"
+        ],
+        "x": [
+          "3997/4",
+          "7995/8"
+        ],
+        "physical_excess_lower_norm2": "[0.02156370334533406428213479945449061061749 +/- 2.58e-42]",
+        "centered_current_excess_lower_norm2": "[0.002547212451801345516891786051009701426066 +/- 2.98e-43]"
+      },
+      {
+        "t": [
+          "21/200",
+          "61/400"
+        ],
+        "x": [
+          "7995/8",
+          "1999/2"
+        ],
+        "physical_excess_lower_norm2": "[0.01843331648645732692977536757794257517602 +/- 1.54e-42]",
+        "centered_current_excess_lower_norm2": "[0.002177435504160195546268433137246517473918 +/- 4.57e-43]"
+      },
+      {
+        "t": [
+          "21/200",
+          "61/400"
+        ],
+        "x": [
+          "1999/2",
+          "7997/8"
+        ],
+        "physical_excess_lower_norm2": "[0.01577193316782721685531667122568875058399 +/- 3.63e-42]",
+        "centered_current_excess_lower_norm2": "[0.001863059601943487915699643431372008076797 +/- 2.54e-43]"
+      },
+      {
+        "t": [
+          "21/200",
+          "61/400"
+        ],
+        "x": [
+          "7997/8",
+          "3999/4"
+        ],
+        "physical_excess_lower_norm2": "[0.01350116563086033419242769921784153471431 +/- 3.61e-42]",
+        "centered_current_excess_lower_norm2": "[0.001594825186584705219039507918670153358440 +/- 5.68e-44]"
+      },
+      {
+        "t": [
+          "21/200",
+          "61/400"
+        ],
+        "x": [
+          "3999/4",
+          "7999/8"
+        ],
+        "physical_excess_lower_norm2": "[0.01155906691009933540115062099524423805504 +/- 4.10e-42]",
+        "centered_current_excess_lower_norm2": "[0.001365414774971986034885535635336663120251 +/- 1.17e-43]"
+      },
+      {
+        "t": [
+          "21/200",
+          "61/400"
+        ],
+        "x": [
+          "7999/8",
+          "1000"
+        ],
+        "physical_excess_lower_norm2": "[0.009896504598382092494052276831079687628762 +/- 1.07e-43]",
+        "centered_current_excess_lower_norm2": "[0.001169024602109570497892317225665184585522 +/- 4.99e-43]"
+      },
+      {
+        "t": [
+          "21/200",
+          "61/400"
+        ],
+        "x": [
+          "1000",
+          "8001/8"
+        ],
+        "physical_excess_lower_norm2": "[0.008105943832806388612783967425384236896872 +/- 1.68e-43]",
+        "centered_current_excess_lower_norm2": "[0.0009575146121670676158748794255915305615680 +/- 2.48e-44]"
+      },
+      {
+        "t": [
+          "21/200",
+          "61/400"
+        ],
+        "x": [
+          "8001/8",
+          "4001/4"
+        ],
+        "physical_excess_lower_norm2": "[0.006295796555466624121950190932632551847114 +/- 5.64e-44]",
+        "centered_current_excess_lower_norm2": "[0.0007436909650858776175015152716601401088153 +/- 3.46e-44]"
+      },
+      {
+        "t": [
+          "21/200",
+          "61/400"
+        ],
+        "x": [
+          "4001/4",
+          "8003/8"
+        ],
+        "physical_excess_lower_norm2": "[0.004840493571996467304282893460723272744926 +/- 1.87e-43]",
+        "centered_current_excess_lower_norm2": "[0.0005717833016232043397601155796444942101819 +/- 5.80e-45]"
+      },
+      {
+        "t": [
+          "21/200",
+          "61/400"
+        ],
+        "x": [
+          "8003/8",
+          "2001/2"
+        ],
+        "physical_excess_lower_norm2": "[0.003699366826535815115366363408392434160847 +/- 4.70e-43]",
+        "centered_current_excess_lower_norm2": "[0.0004369877046155759655543062548716053086875 +/- 3.61e-45]"
+      },
+      {
+        "t": [
+          "21/200",
+          "61/400"
+        ],
+        "x": [
+          "2001/2",
+          "8005/8"
+        ],
+        "physical_excess_lower_norm2": "[0.002583313108420426542381020040848175489206 +/- 9.12e-44]",
+        "centered_current_excess_lower_norm2": "[0.0003051538587675654950991887860873977609124 +/- 4.80e-44]"
+      },
+      {
+        "t": [
+          "21/200",
+          "61/400"
+        ],
+        "x": [
+          "8005/8",
+          "4003/4"
+        ],
+        "physical_excess_lower_norm2": "[0.001700634809572505303203125313826522649015 +/- 2.62e-43]",
+        "centered_current_excess_lower_norm2": "[0.0002008874850754052059216066254344054488524 +/- 3.40e-44]"
+      },
+      {
+        "t": [
+          "21/200",
+          "61/400"
+        ],
+        "x": [
+          "4003/4",
+          "8007/8"
+        ],
+        "physical_excess_lower_norm2": "[0.001027011868983840599331332518088234747191 +/- 2.18e-44]",
+        "centered_current_excess_lower_norm2": "[0.0001213157751547045586526461247837674560744 +/- 3.95e-44]"
+      },
+      {
+        "t": [
+          "21/200",
+          "61/400"
+        ],
+        "x": [
+          "8007/8",
+          "1001"
+        ],
+        "physical_excess_lower_norm2": "[0.0004951402587396028486719310271298814664465 +/- 2.28e-44]",
+        "centered_current_excess_lower_norm2": "[5.848844131965949584978195637762984588025e-5 +/- 4.51e-45]"
+      },
+      {
+        "t": [
+          "61/400",
+          "1/5"
+        ],
+        "x": [
+          "999",
+          "7993/8"
+        ],
+        "physical_excess_lower_norm2": "[0.02883244819777659033787903986855017018627 +/- 2.21e-42]",
+        "centered_current_excess_lower_norm2": "[0.004946566876295944012465294244275531150707 +/- 3.25e-43]"
+      },
+      {
+        "t": [
+          "61/400",
+          "1/5"
+        ],
+        "x": [
+          "7993/8",
+          "3997/4"
+        ],
+        "physical_excess_lower_norm2": "[0.02588504609719525627130488449432624509862 +/- 2.21e-42]",
+        "centered_current_excess_lower_norm2": "[0.004440903208053381865710599726251938221607 +/- 3.72e-43]"
+      },
+      {
+        "t": [
+          "61/400",
+          "1/5"
+        ],
+        "x": [
+          "3997/4",
+          "7995/8"
+        ],
+        "physical_excess_lower_norm2": "[0.02269731173076885492719206548144196194958 +/- 2.80e-42]",
+        "centered_current_excess_lower_norm2": "[0.003894007535629126830998899234114110229787 +/- 1.61e-43]"
+      },
+      {
+        "t": [
+          "61/400",
+          "1/5"
+        ],
+        "x": [
+          "7995/8",
+          "1999/2"
+        ],
+        "physical_excess_lower_norm2": "[0.01944423669225865162050519124014009278305 +/- 1.57e-42]",
+        "centered_current_excess_lower_norm2": "[0.003335901850476135926920457310674132324342 +/- 2.84e-43]"
+      },
+      {
+        "t": [
+          "61/400",
+          "1/5"
+        ],
+        "x": [
+          "1999/2",
+          "7997/8"
+        ],
+        "physical_excess_lower_norm2": "[0.01667636448114026910649932747841567536265 +/- 1.82e-42]",
+        "centered_current_excess_lower_norm2": "[0.002861038774433489893707047315446719577842 +/- 1.72e-43]"
+      },
+      {
+        "t": [
+          "61/400",
+          "1/5"
+        ],
+        "x": [
+          "7997/8",
+          "3999/4"
+        ],
+        "physical_excess_lower_norm2": "[0.01431216217677912282072180638520578364573 +/- 9.32e-43]",
+        "centered_current_excess_lower_norm2": "[0.002455430316834820566777599656535170479377 +/- 3.57e-43]"
+      },
+      {
+        "t": [
+          "61/400",
+          "1/5"
+        ],
+        "x": [
+          "3999/4",
+          "7999/8"
+        ],
+        "physical_excess_lower_norm2": "[0.01228758961738196060440909381451039792249 +/- 2.58e-42]",
+        "centered_current_excess_lower_norm2": "[0.002108089586615296574820771695866759479514 +/- 2.50e-43]"
+      },
+      {
+        "t": [
+          "61/400",
+          "1/5"
+        ],
+        "x": [
+          "7999/8",
+          "1000"
+        ],
+        "physical_excess_lower_norm2": "[0.01055213176948691276730193460873851469827 +/- 1.49e-42]",
+        "centered_current_excess_lower_norm2": "[0.001810350102405236005763152232163141857609 +/- 1.93e-43]"
+      },
+      {
+        "t": [
+          "61/400",
+          "1/5"
+        ],
+        "x": [
+          "1000",
+          "8001/8"
+        ],
+        "physical_excess_lower_norm2": "[0.008682512343531055472097764641640837880131 +/- 2.80e-44]",
+        "centered_current_excess_lower_norm2": "[0.001489593520581011254889667548425012108185 +/- 2.06e-44]"
+      },
+      {
+        "t": [
+          "61/400",
+          "1/5"
+        ],
+        "x": [
+          "8001/8",
+          "4001/4"
+        ],
+        "physical_excess_lower_norm2": "[0.006800035231422577395753086520140205874167 +/- 3.26e-43]",
+        "centered_current_excess_lower_norm2": "[0.001166631039945780579543702143301800652318 +/- 8.18e-44]"
+      },
+      {
+        "t": [
+          "61/400",
+          "1/5"
+        ],
+        "x": [
+          "4001/4",
+          "8003/8"
+        ],
+        "physical_excess_lower_norm2": "[0.005294722664860171083692859346122436970138 +/- 2.22e-43]",
+        "centered_current_excess_lower_norm2": "[0.0009083758538886073341103266779375387958143 +/- 3.74e-44]"
+      },
+      {
+        "t": [
+          "61/400",
+          "1/5"
+        ],
+        "x": [
+          "8003/8",
+          "2001/2"
+        ],
+        "physical_excess_lower_norm2": "[0.003993986277188689188985351416477411068038 +/- 2.64e-43]",
+        "centered_current_excess_lower_norm2": "[0.0006852182671877248341772549187956558363602 +/- 2.42e-44]"
+      },
+      {
+        "t": [
+          "61/400",
+          "1/5"
+        ],
+        "x": [
+          "2001/2",
+          "8005/8"
+        ],
+        "physical_excess_lower_norm2": "[0.002838554069076356907394714264392488944886 +/- 1.89e-43]",
+        "centered_current_excess_lower_norm2": "[0.0004869894293836304958969496570737035721070 +/- 2.81e-44]"
+      },
+      {
+        "t": [
+          "61/400",
+          "1/5"
+        ],
+        "x": [
+          "8005/8",
+          "4003/4"
+        ],
+        "physical_excess_lower_norm2": "[0.001938674231522095182050311326863075631232 +/- 2.87e-43]",
+        "centered_current_excess_lower_norm2": "[0.0003326037944326305862675933242387623309520 +/- 3.92e-44]"
+      },
+      {
+        "t": [
+          "61/400",
+          "1/5"
+        ],
+        "x": [
+          "4003/4",
+          "8007/8"
+        ],
+        "physical_excess_lower_norm2": "[0.001216131308121275200837255557714243139882 +/- 3.70e-43]",
+        "centered_current_excess_lower_norm2": "[0.0002086425236410027957744825541804694675923 +/- 1.90e-44]"
+      },
+      {
+        "t": [
+          "61/400",
+          "1/5"
+        ],
+        "x": [
+          "8007/8",
+          "1001"
+        ],
+        "physical_excess_lower_norm2": "[0.0006737130675223407342618620813017297385886 +/- 7.36e-45]",
+        "centered_current_excess_lower_norm2": "[0.0001155838936857300700255877063500614067141 +/- 5.43e-45]"
+      }
+    ],
+    "independent_new_physical_sign_bound": false
+  },
+  "controls": {
+    "source_sha256": "c8f95dbac1f84632091c314da57a2382c077d0a0c1a6738d92494f4f95681da6",
+    "receipt_sha256": "ba6a73d9f7813df437db5b7927b45948ae1a3be4631c1db3cac2d004b264ca46",
+    "event_rejections": 5,
+    "euler_signed_witness_rejected": true,
+    "interface": "centered current strict test is exactly positive 9t/8 times inherited signed test; raw-current positivity alone is not this test",
+    "negative_current_polynomial_witness": {
+      "field": "x^2-2*(t-1/2)",
+      "t": "1/4",
+      "x": "0",
+      "J": "-9/64"
+    },
+    "analytic_premise_screen": [
+      {
+        "control": "finite-prime orbit",
+        "outcome": "theta premise fails",
+        "missing_premise": "complete normalized analytic reflection",
+        "numerical_event_test": "not attempted: theorem gives no effective event height"
+      },
+      {
+        "control": "three/four square",
+        "outcome": "theta premise fails and enclosed event rejected",
+        "missing_premise": "complete reflection and unchanged complete coefficients"
+      },
+      {
+        "control": "reflected super-Gaussian",
+        "outcome": "theta premise fails and enclosed event rejected",
+        "missing_premise": "exact normalized theta integer-square source expansion"
+      },
+      {
+        "control": "smooth shape and positive primitive",
+        "outcome": "theta premise fails; analytic witness retained",
+        "missing_premise": "theta square-mode data",
+        "numerical_event_test": "not attempted: no certified damping/event box supplied"
+      },
+      {
+        "control": "Euler factors",
+        "outcome": "genuine negative-Laguerre witness rejected",
+        "missing_premise": "unchanged normalized theta coefficients and level",
+        "numerical_event_test": "witness is not a double-event enclosure"
+      },
+      {
+        "control": "q and qTa",
+        "outcome": "theta premise fails; applicable qTa event enclosed and rejected",
+        "missing_premise": "exact theta square-source expansion",
+        "q_only_status": "proved positive threshold; no event location inferred"
+      },
+      {
+        "control": "smooth-density and two-channel",
+        "outcome": "no extension of the theta signed certificate to these classes",
+        "missing_premise": "the evaluated complete theta source; generic auxiliary positivity does not supply the signed estimate"
+      }
+    ]
+  },
+  "not_established": [
+    "a smaller complete physical approximation error",
+    "new noncollision coverage",
+    "independent theta current positivity",
+    "global signed estimate",
+    "all-order compensation obstruction"
+  ],
+  "seconds": 8.617501665954478
+}

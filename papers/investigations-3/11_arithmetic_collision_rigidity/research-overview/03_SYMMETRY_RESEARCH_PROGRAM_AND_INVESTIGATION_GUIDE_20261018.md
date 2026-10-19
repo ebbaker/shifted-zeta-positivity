@@ -15,8 +15,11 @@ derivatives, tails, and transition costs have been included. The four
 directions in the [symmetry continuation context][continuation] are retained,
 and the [manifold assessment][hodge-review] adds two supporting directions.
 The rotation-defect calculation belongs to the existing first-jet direction.
+At Edward Baker's subsequent request, S07 adds the broader geometric-duality
+and quaternionic-operator continuation from the coverage review. The
+original six directions and their historical findings retain their identities.
 
-The [symmetries directory][directory] is the entry point for these six
+The [symmetries directory][directory] is the entry point for these seven
 investigations. Each linked folder contains its own mathematical context,
 reading order, bounded first task, controls, deliverables, and stop rule.
 
@@ -27,17 +30,20 @@ reading order, bounded first task, controls, deliverables, and stop rule.
 | [S03 Normalized jet rotation][s03] | Can arithmetic correlations control the complete rotation defect and keep the first jet away from zero? | Exact defect identity known; required arithmetic bound open |
 | [S04 Time height scaling][s04] | Which complete signed quantities have a uniform description at fixed kappa? | Low-mode amplitude limit known; growing-cutoff signed limit open |
 | [S05 Covariant theta jets][s05] | Does the normalized modular basis simplify complete-source differentiation or certified evaluation quantitatively? | Constant-coefficient ladder and reflection signs derived; practical gain unmeasured |
-| [S06 Hodge and transverse geometry][s06] | Can transverse theta identities or coupled signed two-source observations supply an estimate that survives physical restriction? | Hodge identities and scoped obstructions known; new transfer estimate open |
+| [S06 Hodge and transverse geometry][s06] | Can transverse, hyperkähler or coupled geometry supply an independent estimate that survives physical restriction? | Exact maps, scoped obstructions and inherited signed transfer known; independent estimate open |
+| [S07 Geometric duality and quaternionic symmetry][s07] | Can supported/relative duality or quaternionic and hyperholomorphic operator identities yield an independently useful physical estimate? | Zero-form Green identity, canonical self-flux and scoped first-order path-trace obstruction proved in-note; independent physical estimate open |
 
 S01–S04 correspond to every direction in the original handoff. S05 carries
 the normalized covariant-jet basis from this conversation. S06 carries the
 Hodge/ASD question, transverse derivatives, and the coupled two-source
-possibility. These are different tasks, but they share the same physical
-field; success in one can supply an input to another.
+possibility. S07 carries broader supported/relative duality and quaternionic
+or hyperholomorphic operator identities; S06 keeps its developed scalar
+source-transfer work. These tasks share the same physical field; success
+in one can supply an input to another.
 
 The [overview 02 execution plan][old-plan] remains the contract and history
 for its numbered stages, including its recorded model assignments. The
-S01–S06 identifiers do not rename those stages. Record the actual model and
+S01–S07 identifiers do not rename those stages. Record the actual model and
 effort for every future execution; this note's authoring configuration is
 not a claim about future runs.
 
@@ -142,7 +148,23 @@ holonomy construction is needed merely to restate the existing pairing.
 S06 can continue without a successful S02 result if it specifies such a
 mechanism and a bounded estimating objective.
 
-The IDs are stable names, not a requirement to execute six projects in
+**S07** starts from its [initial geometric findings][s07-note] and the
+existing marked metric, not a new ambient construction. Its bounded first
+task is one polarized J-Dolbeault/Weitzenböck Green identity on
+p∈[−1/4,1/4], q∈[1,4], with full torus fibers. The operator/form degree,
+dual-test extension, all boundary fluxes, curvature action, physical trace
+cost and omitted source tail must be specified. The diagonal J/K insertion
+audit is inherited background. The [opening execution](../symmetries/07_geometric_duality_and_quaternionic_symmetry/notes/02_ZERO_FORM_GREEN_IDENTITY_AND_PHYSICAL_TRACE_OBSTRUCTION_20261018.md)
+now derives that zero-form identity and proves the generic first-order
+path-trace comparison fails. The complete theta self-flux vanishes, while
+the raw rough-Laplacian insertion restores a divergent zero mode. Any
+continuation must add a specified theta/PDE constraint, higher-regularity
+payment, other form degree or independently estimated mixed current.
+An independent physical estimate remains open. For Edward Baker with
+substantial LLM assistance, **gpt-6.1-sol, actual effort ultra**,
+18 October 2026; same-model internal review.
+
+The IDs are stable names, not a requirement to execute seven projects in
 numerical order. Saving this program does not launch the experiments.
 
 ## A bounded first experiment
@@ -279,6 +301,32 @@ including this conversation in `brainstorm/chat-histories/`; a new folder
 does not authorize re-registration or relocation. Follow the repository
 [history workflow][chat-workflow] at the beginning and end of each reply.
 
+## Geometric symmetry coverage
+
+The seven directions organize selected research mechanisms; they are not an
+exhaustive classification of geometric symmetries. The [broader geometric
+review](../symmetries/06_hodge_and_transverse_geometry/reviews/03_GEOMETRIC_SYMMETRY_COVERAGE_POINCARE_AND_HYPERKAHLER_20261018.md)
+distinguishes Poincaré/relative/compact-support duality, quaternionic J/K,
+twistor and hyperholomorphic structures, Lefschetz and Hodge–Riemann
+identities, actual isometries, periods/monodromy, and bundle transforms.
+It crosslinks the already developed relative Euler/winding route.
+The separate [S07 investigation][s07] now consolidates this material in its
+[initial note][s07-note], preserving the original S06 review and checks.
+Prepared for Edward Baker with substantial LLM assistance, **gpt-6.1-sol,
+actual effort ultra**, 18 October 2026; organizational initialization only.
+
+For the existing semi-flat source, its exact J/K check finds that the raw
+second J insertion restores a divergent zero mode; the second K insertion
+returns the weighted base-p channel and its existing primitive compensation.
+These statements concern the declared source and directional iterations,
+not every rotated or coupled estimate. A bare-star or finite-jet obstruction
+must retain its original scope. Future geometric continuations should name
+their extra input and complete physical observation, then pay its boundary,
+commutator and scale costs. This audit supplies coverage and exact identities,
+not an independent signed bound or a change to the quantitative priorities.
+Prepared for Edward Baker with substantial LLM assistance, **gpt-6.1-sol,
+actual effort ultra**, 18 October 2026; same-model internal review.
+
 ## Starting a continuation
 
 Open the chosen direction's README, this guide, and its first cited
@@ -296,6 +344,8 @@ global gap still stated unless it has actually been closed.
 [s04]: ../symmetries/04_time_height_scaling/README.md
 [s05]: ../symmetries/05_covariant_theta_jets/README.md
 [s06]: ../symmetries/06_hodge_and_transverse_geometry/README.md
+[s07]: ../symmetries/07_geometric_duality_and_quaternionic_symmetry/README.md
+[s07-note]: ../symmetries/07_geometric_duality_and_quaternionic_symmetry/notes/01_POINCARE_DUALITY_AND_QUATERNIONIC_SYMMETRY_INITIAL_FINDINGS_20261018.md
 [continuation]: ../brainstorm/02_SYMMETRY_PROGRAM_CONTINUATION_CONTEXT_20261018.md
 [hodge-review]: ../reviews/14_HODGE_AND_MODULAR_SYMMETRY_ASSESSMENT_20261018.md
 [old-plan]: 02_UPDATED_RESEARCH_OVERVIEW_AND_SOL_EXECUTION_PLAN_20261018.md

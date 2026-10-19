@@ -69,6 +69,37 @@ signed integral bounds. Write \(h_j=\partial_x^jH\),
   constructions; completeness, full modular descent and a compact K3
   realization are not established.
 
+- **Scoped transverse reductions (S06, 18 October 2026).** The chosen
+  complete-source base-p derivative has an exact convergent one-sided
+  primitive transform with its lower endpoint. Raw vertical insertions of
+  positive even order retain a nonzero zero mode and fail positive-time
+  heat integrability. Finite constant-coefficient normalized jets of
+  definite parity with convergent ordinary transforms satisfy
+  Q(D)T0=16R(D)Phi. The mixed addition generator is not positivity
+  preserving on same-parity trigonometric polynomials. **Proved in-note**,
+  [source and scope](../papers/investigations-3/11_arithmetic_collision_rigidity/symmetries/06_hodge_and_transverse_geometry/notes/01_TRANSVERSE_OBSERVATION_AND_FINITE_JET_OBSTRUCTIONS_20261018.md),
+  [same-model internal review](../papers/investigations-3/11_arithmetic_collision_rigidity/symmetries/06_hodge_and_transverse_geometry/reviews/01_TRANSVERSE_OBSERVATION_INTERNAL_REVIEW_20261018.md).
+  [S06 signed continuation](../papers/investigations-3/11_arithmetic_collision_rigidity/symmetries/06_hodge_and_transverse_geometry/notes/02_SIGNED_TRANSVERSE_ESTIMATE_AND_EXACT_SOURCE_COMPENSATION_20261018.md)
+  proves 0.37<x²(−iG1)<0.375 on the pilot but |G1|²>10^310 E. Exact
+  source completion transfers the existing physical sign to a centered
+  current; its sign is inherited, not independent. Fixed finite endpoint
+  subtractions fail the stated unbounded polynomial-energy magnitude
+  payment. [Internal review](../papers/investigations-3/11_arithmetic_collision_rigidity/symmetries/06_hodge_and_transverse_geometry/reviews/02_SIGNED_TRANSVERSE_ESTIMATE_INTERNAL_REVIEW_20261018.md).
+  Other transverse estimates remain open.
+  Added for Edward Baker with substantial LLM assistance,
+  **gpt-6.1-sol, actual effort ultra**.
+
+- **Scoped zero-form Green/trace result (S07, 18 October 2026).**
+  [Note 02](../papers/investigations-3/11_arithmetic_collision_rigidity/symmetries/07_geometric_duality_and_quaternionic_symmetry/notes/02_ZERO_FORM_GREEN_IDENTITY_AND_PHYSICAL_TRACE_OBSTRUCTION_20261018.md)
+  derives the complete polarized J-flux and zero canonical theta self-flux.
+  For unrestricted smooth sections, first-order bulk energy cannot bound
+  the physical path trace even with zero boundary currents. The declared
+  raw rough-Laplacian source has growing zero mode 3πe^u. **Proved in-note**,
+  [same-model internal review](../papers/investigations-3/11_arithmetic_collision_rigidity/symmetries/07_geometric_duality_and_quaternionic_symmetry/reviews/02_GREEN_IDENTITY_AND_TRACE_OBSTRUCTION_INTERNAL_REVIEW_20261018.md).
+  Canonical theta/PDE-restricted and higher-regularity estimates are not
+  excluded. For Edward Baker with substantial LLM assistance,
+  **gpt-6.1-sol, actual effort ultra**.
+
 ## Status
 
 The cited notes give analytic proofs and exact algebraic checks, with

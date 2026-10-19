@@ -27,6 +27,27 @@ positive finite pencil as a string, a graph and an operator.
 - [Fractal review](../papers/investigations/ccm-fractal-laplacians/reviews/PRIME_JUMP_GEOMETRY_CRITICAL_REVIEW_20260926.md) and the meta-analysis: "Do not build another geometry without a new arithmetic estimate it would yield."
 - 21's own [reflected-lift note](../papers/investigations-2/active/21_quaternion_theta_geometry/notes/04_octonionic_reductions/35_REFLECTED_LIFT_AND_PHYSICAL_REDUCTIONS_20261015.md) and [Review 25](../papers/investigations-2/active/21_quaternion_theta_geometry/reviews/25_OCTONIONIC_MACHINERY_LITERATURE_REVIEW_20261015.md): "finite algebraic reductions" with "no new sign estimate".
 
+- [S06 transverse note](../papers/investigations-3/11_arithmetic_collision_rigidity/symmetries/06_hodge_and_transverse_geometry/notes/01_TRANSVERSE_OBSERVATION_AND_FINITE_JET_OBSTRUCTIONS_20261018.md)
+  (18 October 2026), section on finite normalized jets:
+  “The statement covers finite constant-coefficient normalized jets of
+  definite parity.” After convergence forces cancellation, this class
+  reduces to physical derivatives. Its raw vertical source insertions
+  instead restore a zero mode and fail positive-time integrability.
+  [Internal review](../papers/investigations-3/11_arithmetic_collision_rigidity/symmetries/06_hodge_and_transverse_geometry/reviews/01_TRANSVERSE_OBSERVATION_INTERNAL_REVIEW_20261018.md);
+  variable-coefficient, nonlocal and coupled estimates remain outside the
+  exclusion. Added for Edward Baker with substantial LLM assistance,
+  **gpt-6.1-sol, actual effort ultra**.
+
+- [S07 Green/trace note](../papers/investigations-3/11_arithmetic_collision_rigidity/symmetries/07_geometric_duality_and_quaternionic_symmetry/notes/02_ZERO_FORM_GREEN_IDENTITY_AND_PHYSICAL_TRACE_OBSTRUCTION_20261018.md)
+  (18 October 2026): “The proposition concerns unrestricted smooth sections
+  measured only by first derivatives.” A concentrating section keeps its
+  physical trace while its bulk energy and all boundary currents vanish
+  in the limit. Ambient positivity requires a separately justified trace
+  estimate; the argument does not exclude canonical theta/PDE classes.
+  [Internal review](../papers/investigations-3/11_arithmetic_collision_rigidity/symmetries/07_geometric_duality_and_quaternionic_symmetry/reviews/02_GREEN_IDENTITY_AND_TRACE_OBSTRUCTION_INTERNAL_REVIEW_20261018.md).
+  Added for Edward Baker with substantial LLM assistance,
+  **gpt-6.1-sol, actual effort ultra**.
+
 ## What it cost
 
 Sixteen lifts plus twenty-two notes rated "promise 1/5"; CCM rounds 1–4

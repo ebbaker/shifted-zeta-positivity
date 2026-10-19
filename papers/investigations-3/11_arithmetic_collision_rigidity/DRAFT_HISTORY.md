@@ -174,3 +174,72 @@ belongs in those sources; create no new manuscript snapshot folders.
   0<t<=1/20. Adds a small paid model defect; no new total-error decrease,
   uniform exclusion, effective onset, manuscript snapshot or commit.
   For Edward Baker with substantial LLM assistance, **gpt-6.1-sol, ultra**.
+
+
+- **18 October 2026 — S05 complete-source fixed-point enclosure component.**
+  [Derivation](symmetries/05_covariant_theta_jets/notes/01_COMPLETE_SOURCE_JETS_AND_FIXED_POINT_ENCLOSURES_20261018.md),
+  [192/256-bit records](symmetries/05_covariant_theta_jets/numerics/README.md),
+  [internal assessment](symmetries/05_covariant_theta_jets/reviews/01_COMPLETE_SOURCE_ENCLOSURE_INTERNAL_REVIEW_20261018.md).
+  Complete source jets through order two have narrower real fixed-point
+  enclosures, including all tails and Taylor remainders. Covariant algebra
+  is known; shifted second-derivative Horner gain is not uniform. Spectral
+  transfer and cost gain unpaid; no manuscript change, snapshot or commit.
+  For Edward Baker with substantial LLM assistance, **gpt-6.1-sol,
+  actual reasoning effort ultra**, with same-model internal agent checks.
+
+- **18 October 2026 — S06 transverse observation and scoped obstructions.**
+  [Exact map and proofs](symmetries/06_hodge_and_transverse_geometry/notes/01_TRANSVERSE_OBSERVATION_AND_FINITE_JET_OBSTRUCTIONS_20261018.md),
+  [166 exact checks and fresh controls](symmetries/06_hodge_and_transverse_geometry/numerics/README.md),
+  [internal review](symmetries/06_hodge_and_transverse_geometry/reviews/01_TRANSVERSE_OBSERVATION_INTERNAL_REVIEW_20261018.md).
+  Base-p transfer retains its endpoint; raw vertical insertions diverge at
+  positive heat time, while the specified convergent finite parity class
+  reduces to physical derivatives. Mixed generator is not positivity
+  preserving on same-parity trigonometric polynomials. Signed estimate
+  remains open; no manuscript change, snapshot or commit. For Edward Baker
+  with substantial LLM assistance, **gpt-6.1-sol, actual effort ultra**,
+  with same-model internal agent review.
+
+- **18 October 2026 — S06 signed transverse continuation.**
+  [Note 02](symmetries/06_hodge_and_transverse_geometry/notes/02_SIGNED_TRANSVERSE_ESTIMATE_AND_EXACT_SOURCE_COMPENSATION_20261018.md),
+  [192/256-bit records](symmetries/06_hodge_and_transverse_geometry/numerics/README.md),
+  [internal review](symmetries/06_hodge_and_transverse_geometry/reviews/02_SIGNED_TRANSVERSE_ESTIMATE_INTERNAL_REVIEW_20261018.md).
+  Proves 0.37<x²(−iG1)<0.375 and |G1|²>10^310 E on the pilot; complete
+  source compensation gives Jc>9tE/800 using the existing physical margin.
+  Fixed finite endpoint subtraction excluded in its stated unbounded
+  magnitude-payment class. Independent physical sign remains open; no
+  manuscript, snapshot, commit or new coverage. For Edward Baker with
+  substantial LLM assistance, **gpt-6.1-sol, actual effort ultra**.
+
+
+- **18 October 2026 — S06 broader geometric symmetry coverage.**
+  [Review 03](symmetries/06_hodge_and_transverse_geometry/reviews/03_GEOMETRIC_SYMMETRY_COVERAGE_POINCARE_AND_HYPERKAHLER_20261018.md)
+  audits Poincaré/relative duality, J/K, twistor/hyperholomorphic and other
+  geometric structures; crosslinks existing winding work. Literal second
+  J insertion fails convergence and K returns the existing completed
+  transverse channel; [exact checks](symmetries/06_hodge_and_transverse_geometry/numerics/GEOMETRIC_SYMMETRY_COVERAGE_CHECKS_20261018.json).
+  Guide coverage expanded; no independent sign bound or new manuscript
+  snapshot. For Edward Baker with substantial LLM assistance,
+  **gpt-6.1-sol, actual effort ultra**, internal same-model review.
+
+
+- **18 October 2026 — S07 geometric duality and quaternionic symmetry opened.**
+  [Investigation guide](symmetries/07_geometric_duality_and_quaternionic_symmetry/README.md),
+  [initial findings](symmetries/07_geometric_duality_and_quaternionic_symmetry/notes/01_POINCARE_DUALITY_AND_QUATERNIONIC_SYMMETRY_INITIAL_FINDINGS_20261018.md)
+  and [setup assessment](symmetries/07_geometric_duality_and_quaternionic_symmetry/reviews/01_INITIAL_NOTE_AND_INVESTIGATION_SETUP_REVIEW_20261018.md).
+  Consolidates the prior Poincaré/J/K/Hessian audit, preserves S06 sources
+  and chat identity, and defines a bounded hyperholomorphic Green-identity
+  task. [Fresh inherited algebra replay](symmetries/07_geometric_duality_and_quaternionic_symmetry/numerics/GEOMETRIC_SYMMETRY_INITIAL_REPLAY_20261018.json).
+  Organizational opening, not a new sign estimate or manuscript snapshot.
+  For Edward Baker with substantial LLM assistance, **gpt-6.1-sol,
+  actual effort ultra**, same-model internal review.
+
+
+- **18 October 2026 — S07 zero-form Green identity and scoped trace obstruction.**
+  [Note 02](symmetries/07_geometric_duality_and_quaternionic_symmetry/notes/02_ZERO_FORM_GREEN_IDENTITY_AND_PHYSICAL_TRACE_OBSTRUCTION_20261018.md),
+  [internal review](symmetries/07_geometric_duality_and_quaternionic_symmetry/reviews/02_GREEN_IDENTITY_AND_TRACE_OBSTRUCTION_INTERNAL_REVIEW_20261018.md)
+  and [exact/control records](symmetries/07_geometric_duality_and_quaternionic_symmetry/numerics/README.md).
+  Complete polarized flux and canonical self-current evaluated; generic
+  first-order energy-to-path transfer fails, and the raw rough-Laplacian
+  channel is not positive-time integrable. Theta/PDE-restricted estimates
+  remain open. No new region, bound, manuscript or snapshot. For Edward
+  Baker with substantial LLM assistance, **gpt-6.1-sol, actual effort ultra**.

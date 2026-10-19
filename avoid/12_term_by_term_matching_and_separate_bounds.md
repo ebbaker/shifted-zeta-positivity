@@ -79,6 +79,17 @@ separated complement floors; a Gram tail omitted from a lower bound.
   Added 18 October 2026 for Edward Baker with substantial LLM assistance,
   **gpt-6.1-sol, actual effort ultra**; no specialist review.
 
+- [S06 signed transverse Note 02](../papers/investigations-3/11_arithmetic_collision_rigidity/symmetries/06_hodge_and_transverse_geometry/notes/02_SIGNED_TRANSVERSE_ESTIMATE_AND_EXACT_SOURCE_COMPENSATION_20261018.md):
+  “The dominant mismatch is the actual lower-endpoint term, not a failed
+  tail bound.” The raw positive channel has squared magnitude greater
+  than 10^310 E on the pilot. Full source compensation restores a physical
+  observation, but the resulting signed current inherits the old physical
+  sign. The finite endpoint-subtraction exclusion concerns unbounded
+  polynomial-energy magnitude payments, not all compensations.
+  [Internal review](../papers/investigations-3/11_arithmetic_collision_rigidity/symmetries/06_hodge_and_transverse_geometry/reviews/02_SIGNED_TRANSVERSE_ESTIMATE_INTERNAL_REVIEW_20261018.md).
+  Added 18 October 2026 for Edward Baker with substantial LLM assistance,
+  **gpt-6.1-sol, actual effort ultra**.
+
 ## What it cost
 
 The channel-matching program (excluded by the two-channel theorem); the

@@ -17,7 +17,7 @@ between them open. No new Newman bound is claimed.
 
 For the symmetry continuation, start with the [symmetry research program
 and investigation guide](research-overview/03_SYMMETRY_RESEARCH_PROGRAM_AND_INVESTIGATION_GUIDE_20261018.md)
-and its [six direction folders](symmetries/README.md). They retain the four
+and its [seven direction folders](symmetries/README.md). They retain the four
 questions from the [symmetry brainstorm](brainstorm/01_SELF_DUALITY_AND_ADDITIONAL_SYMMETRY_QUESTIONS_20261018.md)
 and [continuation context](brainstorm/02_SYMMETRY_PROGRAM_CONTINUATION_CONTEXT_20261018.md),
 add covariant theta jets and Hodge/transverse geometry, and incorporate the
@@ -25,6 +25,12 @@ rotation-defect calculation. Each direction has sources, a bounded first
 task, controls, and decision rules. No new quantitative result is asserted
 by the program setup. Prepared for Edward Baker with substantial LLM
 assistance, **gpt-6-astra, actual effort max**, 18 October 2026.
+
+The separate [S07 geometric-duality investigation](symmetries/07_geometric_duality_and_quaternionic_symmetry/README.md)
+now records Poincaré, quaternionic J/K, Hessian and bundle findings in its
+initial note, with a fixed-tube Green-identity continuation. This seventh
+direction was opened at Edward Baker's request, **gpt-6.1-sol, actual
+effort ultra**, 18 October 2026; no new physical estimate is claimed.
 
 S01 has since begun: its [paired-endpoint remainder estimate](symmetries/01_modular_self_duality/notes/01_PAIRED_ENDPOINT_REMAINDER_AND_BOUNDED_COMPARISON_20261018.md)
 strictly reduces the complete added approximation errors on the inherited
@@ -73,7 +79,7 @@ those configurations. No independent specialist review is claimed.
 | [reviews](reviews/README.md) | Separate assessments with precise version and claim coverage |
 | [source-documents](source-documents/README.md) | Canonical sources and provenance, without copied papers |
 | [brainstorm](brainstorm/README.md) | Candidate mechanisms tied to a concrete research question |
-| [symmetries](symmetries/README.md) | Six symmetry investigations with local context and bounded research tasks |
+| [symmetries](symmetries/README.md) | Seven symmetry investigations with local context and bounded research tasks |
 | [manuscript](manuscript/README.md) | Current LaTeX manuscript, reading-copy PDF and build record |
 | [chat-histories](chat-histories/README.md) | Canonical records of new project-specific conversations |
 

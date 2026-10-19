@@ -2,8 +2,73 @@
 
 18 October 2026, America/New_York. Prepared for Edward Baker with substantial
 LLM assistance. Authoring model **gpt-6-astra (Codex)**, actual effort **max**.
-Exploratory direction using established identities and scoped obstructions;
-no new geometric sign estimate.
+Exploratory direction with an exact base-p observation map and scoped
+finite-jet/mixed-operator obstructions; no new geometric sign estimate.
+Opening execution: **gpt-6.1-sol (Codex), actual effort ultra**,
+18 October 2026, with same-model internal review.
+
+## Opening round
+
+The [transverse observation note](notes/01_TRANSVERSE_OBSERVATION_AND_FINITE_JET_OBSTRUCTIONS_20261018.md)
+derives the complete base-p transform with its lower endpoint. For the
+chosen ambient source, raw vertical insertions fail positive-time
+integrability. Finite constant-coefficient normalized jets with definite
+parity and convergent transforms reduce to physical derivatives. An
+explicit same-parity trigonometric polynomial also rules out positivity
+preservation by the coupled mixed generator.
+
+The [166 exact checks and inherited controls](numerics/README.md) pass;
+[internal assessment](reviews/01_TRANSVERSE_OBSERVATION_INTERNAL_REVIEW_20261018.md).
+The scoped-obstruction gate is met. A new signed comparison of the
+boundary-plus-integral observation to physical energy remains open; these
+identities alone do not justify expanding a scan. No error, cost or
+coverage improvement is claimed. This chat is registered in
+[the direction history](chat-histories/index.json).
+
+## Signed estimate continuation
+
+[Note 02](notes/02_SIGNED_TRANSVERSE_ESTIMATE_AND_EXACT_SOURCE_COMPENSATION_20261018.md)
+proves 0.37<x²(−iG1)<0.375 on the height-1000 pilot and pays its comparison
+to physical energy: |G1|²>10^310 E. A full primitive source correction
+restores a convergent observation Z and gives the signed centered current
+Jc>9tE/800, using the existing physical L0>E/100 certificate. The sign input
+is inherited; no new physical region is claimed.
+
+The [192/256-bit records](numerics/README.md) include all source tails,
+the failed fourth-derivative payment and its sixth-derivative repair,
+fresh physical comparison and control screening.
+[Internal review](reviews/02_SIGNED_TRANSVERSE_ESTIMATE_INTERNAL_REVIEW_20261018.md).
+Finite endpoint subtraction cannot pay a polynomial energy magnitude bound
+on an unbounded fixed-time half-line. Complete source compensation remains
+available, but its independent signed arithmetic estimate is still open.
+Prepared for Edward Baker with substantial LLM assistance,
+**gpt-6.1-sol, actual effort ultra**, 18 October 2026.
+
+## Broader geometric coverage review
+
+The [Poincaré and hyperkähler coverage review](reviews/03_GEOMETRIC_SYMMETRY_COVERAGE_POINCARE_AND_HYPERKAHLER_20261018.md)
+extends the inventory beyond bare Hodge star. It separates the actual
+ambient systems and audits global/relative/compact-support duality,
+quaternionic J/K, twistor rotation, hyperholomorphic connections, Lefschetz
+identities, isometries, periods and bundle transforms. Investigation 22's
+relative Euler/winding method is already developed and is crosslinked.
+
+On the existing marked source, the first J/K fiber insertions vanish by
+parity. The second J insertion has zero mode −3πe^u and fails ordinary
+positive-time integrability; the second K insertion is exactly the weighted
+base-p channel, with the existing complete primitive compensation. These
+are iterated line-covariant derivatives in specified directions, not a
+universal exclusion of hyperkähler estimates. [Exact checks](numerics/README.md)
+and physical-map qualifications are retained in the review. An independent
+signed estimate remains open. Prepared for Edward Baker with substantial
+LLM assistance, **gpt-6.1-sol, actual effort ultra**, 18 October 2026;
+three same-model delegated readers, no specialist human review.
+
+The broader continuation now has its own [S07 investigation](../07_geometric_duality_and_quaternionic_symmetry/README.md)
+and [initial findings note](../07_geometric_duality_and_quaternionic_symmetry/notes/01_POINCARE_DUALITY_AND_QUATERNIONIC_SYMMETRY_INITIAL_FINDINGS_20261018.md).
+S06 retains its source-transfer notes, review, checker and historical
+records; S07 studies the supported/relative and quaternionic operator
+frameworks. The originating conversation keeps its existing registration.
 
 ## Question and additional ingredient
 
@@ -56,6 +121,10 @@ Hermitian metric while fixing the arithmetic section changes its norm;
 transport the observation covector too when using a bundle isometry.
 
 ## Read in this order
+
+For the broader geometric question, first read the
+[coverage review](reviews/03_GEOMETRIC_SYMMETRY_COVERAGE_POINCARE_AND_HYPERKAHLER_20261018.md),
+then use the original mechanism-specific sources below.
 
 1. [Note 07][note] and [Review 14][review] for the distinction between
    Hodge, modular, and first-jet dualities.

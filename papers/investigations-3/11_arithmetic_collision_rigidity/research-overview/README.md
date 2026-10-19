@@ -13,11 +13,11 @@ open. [Integration review 13](../reviews/13_CURRENT_RESULTS_MANUSCRIPT_INTEGRATI
 records the source and verification scope. No new Newman bound is claimed.
 
 For the new symmetry investigation, begin with **overview 03** and the
-[six direction folders](../symmetries/README.md).
+[seven direction folders](../symmetries/README.md).
 
 | Number | Overview | Status |
 | --- | --- | --- |
-| 03 | [Symmetry research program and investigation guide](03_SYMMETRY_RESEARCH_PROGRAM_AND_INVESTIGATION_GUIDE_20261018.md) | Current symmetry plan: four original directions plus covariant theta jets and Hodge/transverse geometry; initial context, bounded tasks, controls, and quantitative gates |
+| 03 | [Symmetry research program and investigation guide](03_SYMMETRY_RESEARCH_PROGRAM_AND_INVESTIGATION_GUIDE_20261018.md) | Current symmetry plan: four original directions plus covariant theta jets, Hodge/transverse geometry and geometric duality/quaternionic symmetry; initial context, bounded tasks, controls, and quantitative gates |
 | 02 | [Updated research overview and Sol execution plan](02_UPDATED_RESEARCH_OVERVIEW_AND_SOL_EXECUTION_PLAN_20261018.md) | Governing contract for its earlier stages 0–5 and their explicit follow-ups; progress and failed gates remain recorded |
 | 01 | [Expanded exploratory proposal](01_EXPLORATORY_RESEARCH_PROPOSAL_20261018.md) | Historical initialization; superseded as the execution plan |
 
@@ -45,3 +45,9 @@ integration review](../reviews/05_UPDATED_MANUSCRIPT_INTEGRATION_REVIEW_CODEX_20
 retains its earlier source scope; the current manuscript review is linked
 above. The [shared investigation plan](../../research-overview/02_EXPLORATORY_FIXED_FUNCTION_RESEARCH_PLAN_20261018.md)
 provides the portfolio context.
+
+
+S07 initialization, 18 October 2026: [geometric duality and quaternionic symmetry](../symmetries/07_geometric_duality_and_quaternionic_symmetry/README.md),
+with an initial findings note and bounded Green-identity task. For Edward
+Baker with substantial LLM assistance, **gpt-6.1-sol, actual effort ultra**.
+The original six-direction setup remains historical context.

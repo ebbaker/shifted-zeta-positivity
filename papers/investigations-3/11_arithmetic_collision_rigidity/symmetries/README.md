@@ -5,8 +5,10 @@ LLM assistance. Authoring model **gpt-6-astra (Codex)**, actual reasoning
 effort **max** at initialization. Execution updates are attributed below.
 
 Start with the [detailed research program and investigation guide][guide].
-These six folders cover the four directions in the [original continuation
+The original six folders cover the four directions in the [continuation
 context][context] and the additional [manifold and Hodge assessment][review].
+S07 adds geometric duality and quaternionic symmetry following the broader
+coverage review and Edward Baker's request for a separate investigation.
 Every folder has enough context to begin a focused continuation: equations,
 known results, missing estimate, first experiment, controls, and deliverables.
 
@@ -16,13 +18,15 @@ known results, missing estimate, first experiment, controls, and deliverables.
 | [S02 Cutoff reflection](02_cutoff_reflection/README.md) | Complete disk-error decrease checked on pilot and cutoff crossing | Compare with earlier correlated correction or feed paid jets to S03 |
 | [S03 Normalized jet rotation](03_normalized_jet_rotation/README.md) | Correlated residual increment <0.000266448 and paid transport checked on pilot; direct bound remains stronger | Derive a uniform bound from the residual's arithmetic structure at growing height |
 | [S04 Time height scaling](04_time_height_scaling/README.md) | Uniform full-cutoff scalar/first-jet replacement paid on kappa [1,2]; complete signed limit open | Estimate the retained signed core; a rotation consumer needs a second-derivative payment |
-| [S05 Covariant theta jets](05_covariant_theta_jets/README.md) | Normalized ladder and inversion signs available | Test a cancellation-preserving algebra/evaluation improvement |
-| [S06 Hodge and transverse geometry](06_hodge_and_transverse_geometry/README.md) | Generic Hodge and tangential ASD limitations established | Identify a transverse or coupled signed mechanism with an exact physical map |
+| [S05 Covariant theta jets](05_covariant_theta_jets/README.md) | Complete-source fixed-point Taylor enclosures improve on three real cells at 192/256 bits; spectral transfer unpaid | Choose a named source-boundary consumer or pay a signed spectral transfer |
+| [S06 Hodge and transverse geometry](06_hodge_and_transverse_geometry/README.md) | Exact completed current transfers the existing physical sign; source-transfer estimates retained | Prove an independent signed estimate for the recombined arithmetic remainder |
+| [S07 Geometric duality and quaternionic symmetry](07_geometric_duality_and_quaternionic_symmetry/README.md) | Complete zero-form Green flux and scoped first-order path-trace obstruction proved in-note | Add theta/PDE-dependent trace control, paid higher regularity or a complete mixed-current estimate |
 
 The first quantitative priority is S02, followed by S03. S01 supplies the
 arithmetic symmetry, S04 organizes regimes, and S05 supplies a convenient
-source basis. S06 is an exploratory direction with its own requirement for
-a new estimating mechanism. The numbering is a stable directory map, not
+source basis. S06 retains transverse and coupled source-transfer work;
+S07 explores geometric duality and quaternionic operator identities. Both
+require an independently justified estimating mechanism. The numbering is a stable directory map, not
 an execution order. At the user’s request, S01 has now completed its first
 bounded comparison: the [paired-endpoint derivation](01_modular_self_duality/notes/01_PAIRED_ENDPOINT_REMAINDER_AND_BOUNDED_COMPARISON_20261018.md)
 reduces the complete added errors at orders 0–2 on the existing pilot.
@@ -51,3 +55,19 @@ The detailed guide gives the shared storage and history rules.
 [avoid]: ../../../../avoid/README.md
 [controls]: ../../../../result-summaries/12_collision_controls_and_screening.md
 [chat]: ../brainstorm/chat-histories/0001_2026-10-18T23-12-26Z_assess-hodge-symmetry-ideas.json
+
+
+S05's [opening source-enclosure result](05_covariant_theta_jets/notes/01_COMPLETE_SOURCE_JETS_AND_FIXED_POINT_ENCLOSURES_20261018.md)
+reduces interval overestimation near the real source reflection point;
+[internal assessment](05_covariant_theta_jets/reviews/01_COMPLETE_SOURCE_ENCLOSURE_INTERNAL_REVIEW_20261018.md).
+This is not a physical spectral error or coverage improvement. Prepared for
+Edward Baker with substantial LLM assistance, **gpt-6.1-sol, actual effort
+ultra**, 18 October 2026.
+
+
+S07's [initial note](07_geometric_duality_and_quaternionic_symmetry/notes/01_POINCARE_DUALITY_AND_QUATERNIONIC_SYMMETRY_INITIAL_FINDINGS_20261018.md)
+consolidates the geometric coverage review and gives a bounded next contract;
+[setup assessment](07_geometric_duality_and_quaternionic_symmetry/reviews/01_INITIAL_NOTE_AND_INVESTIGATION_SETUP_REVIEW_20261018.md).
+This opens the seventh direction without a new physical sign estimate.
+For Edward Baker with substantial LLM assistance, **gpt-6.1-sol,
+actual effort ultra**, 18 October 2026.
