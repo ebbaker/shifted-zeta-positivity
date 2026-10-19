@@ -3,7 +3,9 @@
 18 October 2026, America/New_York. Prepared for Edward Baker with substantial
 LLM assistance. Authoring model **gpt-6-astra (Codex)**, actual effort **max**.
 Exact comparison identity and a bounded correlated residual estimate are
-available; the uniform arithmetic estimate remains open.
+available; the complete uniform arithmetic residual estimate remains open.
+The [UAR-02 continuation](notes/08_UNIFORM_FINITE_GAMMA_HEAT_REMAINDER_20261019.md)
+now proves its uniform finite gamma/heat remainder component.
 
 **Opening execution, 18 October 2026:** the [signed transport comparison](notes/01_SIGNED_TRANSPORT_AND_DIRECT_JET_COMPARISON_20261018.md)
 evaluates the complete defect integral by a first-jet endpoint primitive.
@@ -194,3 +196,18 @@ and192 replay pass. No new consumer, cost or coverage claim. The fixed-pilot
 arithmetic task is complete; height-uniform input remains open. Stop this
 comparison unless a new concrete objective earns refinement. For Edward
 Baker with substantial LLM assistance, **gpt-6.1-sol, actual effort ultra**.
+
+
+**UAR-02, 19 October 2026:** [Note 08](notes/08_UNIFORM_FINITE_GAMMA_HEAT_REMAINDER_20261019.md) proves the finite remainder after the prescribed gamma/heat correction uniformly through either growing-cutoff choice. Relative error <2/c^2, complete Gaussian tails and one spatial derivative are paid; summed rotating finite error <1.9e-16 across the declared sector. [Separate same-model review](reviews/08_UAR02_UNIFORM_FINITE_GAMMA_HEAT_INTERNAL_REVIEW_20261019.md) and [192/256-bit record](numerics/UAR02_UNIFORM_FINITE_GAMMA_HEAT_20261019.json). This supplies only the finite-component input; UAR-03 edge and UAR-04 combined signed increment remain open. Prepared for Edward Baker with substantial LLM assistance, **gpt-6.1-sol, actual effort ultra**.
+
+
+**UAR-03, 19 October 2026:** [Note 09](notes/09_UNIFORM_COHERENT_EDGE_AND_CUTOFF_MATCHING_20261019.md) proves a common bounded-contour edge model with complete value error <4.3e-35 and rotating error <3.9e-34 across the sector, for either frozen cutoff. Corrected-transition prefixes have allowance <2.639e-7, tending to zero as t decreases. [Separate same-model review](reviews/09_UAR03_UNIFORM_COHERENT_EDGE_INTERNAL_REVIEW_20261019.md) and [192/256-bit record](numerics/UAR03_UNIFORM_COHERENT_EDGE_20261019.json). UAR-04 is Ready; retained integral acquisition/evaluation, combined signed increment and physical anchor remain open. Prepared for Edward Baker with substantial LLM assistance, **gpt-6.1-sol, actual effort ultra**.
+
+
+**UAR-04, 19 October 2026:** [Note 10](notes/10_UNIFORM_SIGNED_RESIDUAL_INCREMENT_20261019.md) proves the complete ordinary piecewise residual increment <3.246 exp(-13/(16t))<2.846e-7 for every prefix of J_t, including both cutoffs, transitions and endpoint remainders. Signed saddle/heat and finite-frequency estimates enclose the retained model analytically, with no H calibration or quadrature. [Internal review](reviews/10_UAR04_UNIFORM_SIGNED_INCREMENT_INTERNAL_REVIEW_20261019.md), [192/256-bit record](numerics/UAR04_UNIFORM_SIGNED_INCREMENT_20261019.json). UAR-05 is Ready; paid anchor, physical separation, total-cost advantage and coverage remain open. For Edward Baker with substantial LLM assistance, **gpt-6.1-sol, actual effort ultra**.
+
+
+**UAR-05, 19 October 2026:** [Note 11](notes/11_PAID_ANCHOR_AND_BOUNDED_PHYSICAL_SEPARATION_20261019.md) certifies a paid anchor and bounded physical separation on T=[1/20-1e-14,1/20], x=4pi exp(20)+1+[-.01,.01]. All 22,026 modes, full signed variation, actual anchor error and rebased2B give |J_Q|>.539 and (H^2+H_x^2)/A^2>.27. [Internal review](reviews/11_UAR05_PAID_ANCHOR_INTERNAL_REVIEW_20261019.md), [192/256-bit receipt](numerics/UAR05_PAID_ANCHOR_20261019.json). Matched direct endpoint error is smaller; UAR-06 Ready on this exact box only. Uniform J_t separation and global bridge/exterior remain open. For Edward Baker with substantial LLM assistance, **gpt-6.1-sol, actual effort ultra**.
+
+
+**UAR-06, 19 October 2026:** [Note 12](notes/12_MATCHED_COMPLETE_CONSUMER_AND_COST_COMPARISON_20261019.md) completes the matched consumer comparison as a scoped loss. On exactly the UAR-05 box, direct energy/A^2>.27778656 exceeds refined local transport >.27778628 and global transport >.27778597. Every consumer acquires the same 44,052 modes per precision; the first-order anchor optimization is available to all and direct pays fewer errors. [Internal review](reviews/12_UAR06_MATCHED_CONSUMER_INTERNAL_REVIEW_20261019.md), [192/256-bit complete margins/cold-cost ledger](numerics/UAR06_MATCHED_COMPLETE_CONSUMER_20261019.json). Stop this configuration; UAR-E1/G1 remain conditional, all-sector separation and global coverage remain open. For Edward Baker with substantial LLM assistance, **gpt-6.1-sol, actual effort ultra**; no specialist review.

@@ -90,3 +90,16 @@ checked from the exact accepted t,x intervals. A fresh source replay checks
 more than the saved polygon's combinatorics. Read the result's scope before
 reusing any record: no new signed estimate, S07-T3 input, region extension
 or universal boundary-method cost limitation is established.
+
+
+## UAR-01 contract checks
+
+[Contract](../notes/07_UAR01_CORRECTED_RESIDUAL_AND_TRANSITION_CONTRACT_20261019.md), [review](../reviews/02_UAR01_CONTRACT_INTERNAL_REVIEW_20261019.md), and [source-pinned receipt](UAR01_CONTRACT_CHECK_20261019.json). Prepared for Edward Baker with substantial LLM assistance, **gpt-6.1-sol, actual effort ultra**, 19 October 2026. The standard-library [checker](check_uar01_contract.py) uses exact rational fixtures for profile/jump algebra, signed prefixes, forcing and guards. These checks do not prove imported analytic theorems or a theta residual estimate. No unchanged acceptance replay is presented as a new consumer validation.
+
+From the repository root:
+
+```sh
+python3 papers/investigations-3/11_arithmetic_collision_rigidity/symmetries/numerics/check_uar01_contract.py --repo . --verify papers/investigations-3/11_arithmetic_collision_rigidity/symmetries/numerics/UAR01_CONTRACT_CHECK_20261019.json
+```
+
+Verification fails closed on changed/missing pinned sources. A changed source needs assessment before producing a new receipt with `--write-record`, `--model` and `--effort`; a new hash does not validate changed mathematics.

@@ -1,0 +1,33 @@
+# UAR-06: internal review of the matched complete consumer
+
+19 October 2026, America/New_York. Prepared for **Edward Baker** with substantial LLM assistance. Separate delegated same-session acceptance, proof/code and cost review. The delegated review context did not expose an exact model identifier or effort setting; neither is inferred. This is internal LLM review, with same-producer replay, not specialist human review or full implementation-independent numerical validation.
+
+**Status: passed as a scoped losing consumer comparison.** The final Note 12 and checker support completing UAR-06 and its consumer-validation instance on exactly the UAR-05 closed box. The transported consumers have smaller paid physical margins, share the dominant acquisition graph and earn neither a factor-two cost improvement nor new coverage. Stop this exact configuration while retaining UAR-02–05. No universal obstruction to residual transport follows.
+
+## Acceptance and mathematics
+
+The earlier acceptance audit freshly replayed UAR-05 at 192/256 bits and rehashed its twelve source pins. It found no substantive defect in the exact time/height box, sector endpoints, extremal cutoff 22026, analytic correction denominator, full heat weights, derivative formulas, phase orientation, normalizer derivative, anchor uncertainty, signed propagation, factor-two rebase or physical return. The complete first-jet norm is distinct from the physical Euclidean norm; the latter uses the explicitly paid matrix with entries 1, b and −omega.
+
+Note 12 correctly compares the same anchor lower radius a, full signed variation v and physical return factor. Direct pays E_box; global transport pays E_anchor+2B; local transport pays E_anchor+2E_box. The stored outward results give, at 192 bits, physical norm/A bounds above .5270546111, .5270540548 and .5270543489 respectively. Their positive squares exceed the claimed .27778656, .27778597 and .27778628 thresholds. The 256-bit results enclose the same comparison. No source-H calibration, uncharged time interpolation, average-derived anchor or interior crossing is inserted.
+
+The common nominal vector is exactly Z_f(x). The direct error disk lies inside each independently paid transport disk; the common physical linear map preserves inclusion. Common geometric refinement therefore cannot reverse this comparison. Keeping exact residual-anchor/increment correlation restores the endpoint residual, for which the currently available envelope ties direct. This is a statement about these estimates and information, not all possible correlated estimates.
+
+## Optimized acquisition and cost
+
+An independently run comparison of the specialized first-jet anchor against the inherited evaluator passes at both precisions: all **thirteen** named common fields overlap and the derived lower anchor radius is identical as a printed outward ball. The raw whole-cell W enclosure has absolute lower bound zero at both precisions, so it cannot replace the stronger propagated direct comparator. The diagnostic source and outputs are bound in the replay receipt.
+
+Dropping the unused anchor P_xx, C_xx and rotating derivative is legitimate. The anchor retains two finite moments and the whole-cell derivative retains three, giving exactly 44,052 finite-mode evaluations and 110,130 moment accumulations per method per production precision. Both analytic profile series, full-cutoff weights, physical return and relevant endpoint errors remain paid. Direct uses the identical dominant graph and omits global B or the local extra endpoint payment. This supports the scoped failed-benefit disposition without a general algorithmic lower bound.
+
+Fresh process wall time includes imports, source/guard checks and acquisition. Fresh UAR-05/control validation is separately timed and added equally to each cold total. Neither mathematical development/review labor nor OS-cache flushing has a measured cost; the note says so. The observations are roughly two seconds cold for each method and do not show a factor-two transport saving. Small ordering differences are timing noise rather than a mathematical advantage. Replaying both precision rows is distinguished from the cost of one production precision.
+
+## Final replay, guards and provenance
+
+All **seventeen** primary source pins match installed files. A fresh invocation of the final checker against the final primary receipt returns `verified`, precisions `[192,256]`, and `fresh_source_controls=true`. The producer exercises inherited and direct polynomial-event, exact-oscillator, negative/nonfinite-input, omitted-payment and exact debit-order fixtures. Unsupported 128-bit acquisition also rejects.
+
+The new receipt-normalization rule is appropriate: only timestamp-sensitive child stored-byte hashes are removed for comparison. Receipt filenames, source hashes, all mathematical screen fields, producer/checker identities, precision and rounding must still agree. Fresh child byte hashes are recorded separately. Thus timestamp changes do not disable source or mathematical validation. The five event rejections and separate Euler negative-Laguerre witness retain their own-source scope.
+
+Two review findings were corrected before final approval: the anchor has thirteen named shared fields, and verification now checks the deterministic cost ledger and exact `[192,256]` row set. Fresh mutations of a finite-mode count and omission of the 256-bit row both fail with the intended errors. No inherited receipt or research source was altered by this reviewer.
+
+Read the [established results](../../../../../../result-summaries/README.md) and [patterns to avoid](../../../../../../avoid/README.md), especially [collision controls](../../../../../../result-summaries/12_collision_controls_and_screening.md), [scoped exclusions](../../../../../../avoid/07_scoped_exclusions_read_as_universal.md), [normalization](../../../../../../avoid/08_normalization_and_constant_slips.md), [signed recombination](../../../../../../avoid/12_term_by_term_matching_and_separate_bounds.md) and [status strength](../../../../../../avoid/06_status_stronger_than_the_evidence.md). No all-J_t anchor/separation theorem, bridge exhaustion, complex exterior or Newman-bound improvement is supplied.
+
+The [final replay/source receipt](../numerics/UAR06_REVIEW_REPLAY_20261019.json) records the precise reviewed bytes and diagnostic scope. The [formal note](../notes/12_MATCHED_COMPLETE_CONSUMER_AND_COST_COMPARISON_20261019.md) and its [primary receipt](../numerics/UAR06_MATCHED_COMPLETE_CONSUMER_20261019.json) remain the mathematical and numerical sources.

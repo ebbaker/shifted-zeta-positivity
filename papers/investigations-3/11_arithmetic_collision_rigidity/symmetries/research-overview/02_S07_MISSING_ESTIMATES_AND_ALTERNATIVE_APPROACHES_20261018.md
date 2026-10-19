@@ -1,5 +1,7 @@
 # What S07 is missing, and which geometric alternatives deserve work
 
+**Continuation update, 19 October 2026.** The proposals below retain their historical scope. S07-T1/T2 and GEO-T1 have since completed their bounded comparisons; see the [findings summary](../summary/01_SYMMETRY_RESEARCH_PROGRESS_SUMMARY_20261019.md). The [new program](03_UNIFORM_ARITHMETIC_RESIDUAL_RESEARCH_PROGRAM_20261019.md) keeps a different useful geometric observation estimate conditional under UAR-G1. Update for Edward Baker with LLM assistance, **gpt-6-astra, max**.
+
 18 October 2026, America/New_York. Prepared for **Edward Baker** with substantial LLM assistance. Authoring and coordinating model **gpt-6-astra (Codex)**, actual reasoning effort **ultra**, verified from session metadata. Internal LLM assessment with delegated review; no specialist human review. Recommendations below are proposed research tasks, not established new theta estimates.
 
 ## Assessment

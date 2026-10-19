@@ -6,11 +6,24 @@ effort **max** at initialization. Execution updates are attributed below.
 
 A [progress summary through 19 October 2026](summary/01_SYMMETRY_RESEARCH_PROGRESS_SUMMARY_20261019.md)
 consolidates all seven programs, quantitative comparisons, scoped obstructions,
-the partial G3 arithmetic explanation and remaining work, with links to the
+the complete fixed-pilot G3 arithmetic estimate and remaining work, with links to the
 source notes and reviews. Summary prepared for Edward Baker with substantial
 LLM assistance, **gpt-6.1-sol, actual effort ultra**.
 
-The current continuation plan is in [research-overview/01_RESEARCH_OVERVIEW_GOALS_AND_TASKS_20261018.md](research-overview/01_RESEARCH_OVERVIEW_GOALS_AND_TASKS_20261018.md), with the matching [task tracker](research-progress/01_RESEARCH_TASK_TRACKER_20261018.md) and a [detailed S07 assessment](research-overview/02_S07_MISSING_ESTIMATES_AND_ALTERNATIVE_APPROACHES_20261018.md). These documents define 24 bounded tasks and distinguish the completed opening results from proposed work. Planning update: **gpt-6-astra, actual effort ultra**, 18 October 2026, prepared for Edward Baker with substantial LLM assistance.
+The current continuation is the [uniform arithmetic residual research program](research-overview/03_UNIFORM_ARITHMETIC_RESIDUAL_RESEARCH_PROGRAM_20261019.md),
+with its [progress register](research-progress/02_UNIFORM_ARITHMETIC_RESIDUAL_PROGRESS_20261019.md). It prioritizes
+S03's arithmetic estimate with S04's uniform analysis, coherent cutoff
+matching and a paid physical anchor. UAR-01 is complete as a reviewed shared
+contract; UAR-02/03 supply the uniform finite remainder and coherent edge-model/transition inputs. UAR-04 proves the complete uniform increment <3.246 exp(-13/(16t))<2.846e-7. UAR-05 now certifies a paid bounded first-jet margin >.539 near the opening height; UAR-06 is Complete as a scoped losing comparison on that exact box: matched direct has the stronger physical margin with the same dominant acquisition. Stop this consumer configuration; UAR-E1/G1 remain conditional. Uniform sector separation remains open. The
+[new-round summary](summary/02_UNIFORM_ARITHMETIC_RESIDUAL_ROUND_SUMMARY_20261019.md)
+tracks this continuation. Execution update: **gpt-6.1-sol, actual effort ultra**,
+19 October 2026, with separate same-model internal LLM review. The [original plan](research-overview/01_RESEARCH_OVERVIEW_GOALS_AND_TASKS_20261018.md),
+[original task tracker](research-progress/01_RESEARCH_TASK_TRACKER_20261018.md)
+and [S07 alternatives](research-overview/02_S07_MISSING_ESTIMATES_AND_ALTERNATIVE_APPROACHES_20261018.md)
+retain the earlier contracts and outcomes. Update prepared for Edward Baker
+with substantial LLM assistance, **gpt-6-astra, actual effort max**, 19 October 2026.
+The [manuscript summary](../manuscript/positive_arithmetic_packets/sections/12_symmetry_findings.tex)
+now incorporates the main current findings with links to the detailed notes.
 
 Start with the [detailed research program and investigation guide][guide].
 The original six folders cover the four directions in the [continuation
@@ -24,13 +37,13 @@ known results, missing estimate, first experiment, controls, and deliverables.
 | --- | --- | --- |
 | [S01 Modular self duality](01_modular_self_duality/README.md) | Paired tail integrated in complete consumer at 192/256 bits; inherited error decrease retained, all 40 signed margins and 116 calls unchanged | S01-T1 complete as regression validation; stop tail tuning on B; retained signed estimate open |
 | [S02 Cutoff reflection](02_cutoff_reflection/README.md) | T1 envelopes and T2 complete B jets reviewed; Schur-coupled firstjet/Laguerre certificate, full paid consumer stronger than frozen; source reference strongest | S02-T2 Complete; retain full analytic interface for the S03/G3 residual work; C unactivated; no new region or cost advantage |
-| [S03 Normalized jet rotation](03_normalized_jet_rotation/README.md) | T1–T3 complete; [G3 complete arithmetic edge and increment](03_normalized_jet_rotation/notes/07_COMPLETE_ARITHMETIC_EDGE_AND_RESIDUAL_INCREMENT_20261019.md) prove abs(I_r)<0.000854 independently on B,N=8, >950-fold improvement on the prior analytic-only allowance | Fixed-pilot arithmetic task complete; source-informed <0.000266448 remains stronger; growing-height input and consumer/cost advantage open |
+| [S03 Normalized jet rotation](03_normalized_jet_rotation/README.md) | T1–T3 complete; [G3 complete arithmetic edge and increment](03_normalized_jet_rotation/notes/07_COMPLETE_ARITHMETIC_EDGE_AND_RESIDUAL_INCREMENT_20261019.md) prove abs(I_r)<0.000854 independently on B,N=8, >950-fold improvement on the prior analytic-only allowance | Fixed-pilot arithmetic task complete; source-informed <0.000266448 remains stronger on B. UAR-04 now bounds the complete uniform-sector increment; uniform sector separation and consumer/cost advantage remain open |
 | [S04 Time height scaling](04_time_height_scaling/README.md) | Uniform full-cutoff model, signed Gaussian average and local residual charts; independent cutoff-transition disk payments diverge across sector | T2/T3 Complete at stated averaged/local/scoped-failure gates; coherent global transfer, positive anchor margin and pointwise signed core open; T1 Conditional |
 | [S05 Covariant theta jets](05_covariant_theta_jets/README.md) | Source ranges retained; complete shifted hybrid lowers added errors >0.0092005%,0.0077659%,0.0082207% versus stronger old2 hybrid; same physical cover | T1/T2 Complete at stated gates; stop fixed B acquisition comparison; no consistent margin, matched-cost, coverage or strongest-physical advantage; real parity handoff parked |
 | [S06 Hodge and transverse geometry](06_hodge_and_transverse_geometry/README.md) | T1 completed-current sign obstruction; T2 four-jet residual certifies60/64 and loses to direct | Fixed same-ball comparison stopped; new arithmetic/correlation input needed |
-| [S07 Geometric duality and quaternionic symmetry](07_geometric_duality_and_quaternionic_symmetry/README.md) | Complete zero-form Green flux and scoped first-order path-trace obstruction proved in-note | Add theta/PDE-dependent trace control, paid higher regularity or a complete mixed-current estimate |
+| [S07 Geometric duality and quaternionic symmetry](07_geometric_duality_and_quaternionic_symmetry/README.md) | Five-jet space and complete residual contract; tested profile-trace rule and follow-up screens lose to direct tails | T1/T2 Complete; T3 Waiting, T4 Deferred. UAR-G1 requires a different useful observation estimate or acquisition mechanism |
 
-The opening quantitative priority was S02, followed by S03. The
+Historical opening priorities (18 October) were S02, followed by S03. The
 [seven-program review and updated priorities](01_SEVEN_PROGRAM_REVIEW_AND_RESEARCH_PRIORITIES_20261018.md)
 now recommends consolidating S01/S02's complete-error gains and giving S03
 one bounded analytic continuation, with S04 as regime support.  S01 supplies the

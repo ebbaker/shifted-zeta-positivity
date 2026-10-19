@@ -4,27 +4,31 @@
 LLM assistance. Recorded model: **gpt-6-astra (Codex)**; reasoning effort:
 **max**, verified from the authoring turn metadata.
 
-**Status: current results incorporated in the manuscript.**
-The [45-page manuscript](manuscript/README.md) now includes the complete
-overview 02 round through Notes 07–14: effective contour tails, finite
-signed rectangles, a complete complex wall and finite-height propagation,
-the exp(20/epsilon) exterior theorem, and the scoped global obstacles.
-[Integration review 13](reviews/13_CURRENT_RESULTS_MANUSCRIPT_INTEGRATION_REVIEW_20261018.md)
-and a [fresh numerical manifest](numerics/MANUSCRIPT_INTEGRATION_REPLAY_20261018.json)
-bind the current twelve-file source set. On [1/100,1/5], the finite cover
-through |x|=1001 and exterior beginning at |x|=exp(2000) leave the bridge
-between them open. No new Newman bound is claimed.
+**Status updated 19 October 2026: symmetry findings summarized in the manuscript.**
+The [canonical manuscript](manuscript/README.md) retains its complete
+overview 02 proofs and adds a high-level account of the current S01–S07
+and GEO-T1 findings, with links to the detailed notes. [Integration review 16](reviews/16_SYMMETRY_PROGRAM_AND_MANUSCRIPT_INTEGRATION_REVIEW_20261019.md)
+and the build record identify this version. Earlier [review 13](reviews/13_CURRENT_RESULTS_MANUSCRIPT_INTEGRATION_REVIEW_20261018.md)
+and its numerical replay retain their twelve-file version scope.
+On [1/100,1/5], coverage through |x|=1001 and from |x|=exp(2000) leaves
+the intervening bridge open; the complex exterior remains open.
 
-For the symmetry continuation, start with the [symmetry research program
-and investigation guide](research-overview/03_SYMMETRY_RESEARCH_PROGRAM_AND_INVESTIGATION_GUIDE_20261018.md)
-and its [seven direction folders](symmetries/README.md). They retain the four
-questions from the [symmetry brainstorm](brainstorm/01_SELF_DUALITY_AND_ADDITIONAL_SYMMETRY_QUESTIONS_20261018.md)
-and [continuation context](brainstorm/02_SYMMETRY_PROGRAM_CONTINUATION_CONTEXT_20261018.md),
-add covariant theta jets and Hodge/transverse geometry, and incorporate the
-rotation-defect calculation. Each direction has sources, a bounded first
-task, controls, and decision rules. No new quantitative result is asserted
-by the program setup. Prepared for Edward Baker with substantial LLM
-assistance, **gpt-6-astra, actual effort max**, 18 October 2026.
+For new work, start with the [uniform arithmetic residual program](symmetries/research-overview/03_UNIFORM_ARITHMETIC_RESIDUAL_RESEARCH_PROGRAM_20261019.md)
+and [progress register](symmetries/research-progress/02_UNIFORM_ARITHMETIC_RESIDUAL_PROGRESS_20261019.md). They prioritize
+S03's complete arithmetic residual with S04's uniform analysis, coherent
+cutoff matching and a paid physical anchor. UAR-01 is complete as a reviewed
+contract; UAR-02/03 supply the uniform finite remainder and coherent
+edge-model/transition inputs. UAR-04 supplies the complete uniform increment <2.846e-7; UAR-05 now supplies one paid bounded anchor/separation certificate, |J_Q|>.539. UAR-06 is Ready on that exact box; uniform sector separation remains open. The
+[new-round summary](symmetries/summary/02_UNIFORM_ARITHMETIC_RESIDUAL_ROUND_SUMMARY_20261019.md)
+records the finite remainder bound and remaining work, with no new coverage. Execution update:
+**gpt-6.1-sol, actual effort ultra**, 19 October 2026. The [original symmetry guide](research-overview/03_SYMMETRY_RESEARCH_PROGRAM_AND_INVESTIGATION_GUIDE_20261018.md)
+and [seven direction folders](symmetries/README.md) preserve the earlier
+contracts and completed comparisons. No new coverage or Newman bound is
+claimed by this documentation integration. Prepared for Edward Baker with
+substantial LLM assistance, **gpt-6-astra, actual effort max**.
+
+The following paragraphs retain the opening 18 October chronology;
+the current findings and priorities are linked above.
 
 The separate [S07 geometric-duality investigation](symmetries/07_geometric_duality_and_quaternionic_symmetry/README.md)
 now records Poincaré, quaternionic J/K, Hessian and bundle findings in its

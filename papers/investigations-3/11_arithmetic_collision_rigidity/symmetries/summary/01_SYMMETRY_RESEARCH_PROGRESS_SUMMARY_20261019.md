@@ -84,8 +84,8 @@ The isolated large-height checks in S04 do not cover that bridge. See the
 | S01 Modular self duality | Smaller complete added errors; paired tail integrated in the actual signed consumer | Estimate the retained signed core; further tail tuning on B is stopped |
 | S02 Cutoff reflection | Matched correction envelopes and evaluated complete B jets; representation and consumer choices separated | A new complete error or cost advantage before extending coverage |
 | S03 Normalized jet rotation | Correlated and independent arithmetic allowances, complete edge jets, calibrated/direct comparison | Height-uniform arithmetic control or a demonstrated consumer/cost advantage |
-| S04 Time height scaling | Uniform model plus signed Gaussian core average <1.5e-6; full average within0.11 of one | Pointwise signed core and height-uniform residual/anchor estimate |
-| S05 Covariant theta jets | Tighter complete-source ranges near the reflection point | Transfer to a named complete spectral or source-boundary consumer |
+| S04 Time height scaling | Uniform model, signed Gaussian core average <1.5e-6, full average within0.11 of one, and uniform local residual charts | Coherent global corrected-residual transfer and positive anchor margin; pointwise signed core remains open |
+| S05 Covariant theta jets | Tighter source ranges and completed shifted acquisition comparison; small complete added-error gains | Fixed B comparison stopped; no physical-margin or cost advantage. Real parity transfer needs a new compatible caller |
 | S06 Hodge and transverse geometry | Exact completions; T1 sign obstruction; T2 paid four-jet residual comparison signs60/64 cells and loses to direct | New arithmetic/correlation information; fixed same-ball current comparison stopped |
 | S07 Geometric duality and quaternionic symmetry | Green/trace obstruction, five-jet admissibility and paid N=2 profile comparison | T2 Complete as scoped loss to direct tails; stop selected whole-profile rule, seek a different useful estimate before T3 |
 
@@ -771,3 +771,14 @@ concise milestone record; the linked notes hold the detailed research.
 [geo-result]: ../notes/06_GEO_T1_WINDING_AND_DIRECT_COMPARISON_20261019.md
 [geo-review]: ../reviews/01_GEO_T1_WINDING_DIRECT_INTERNAL_REVIEW_20261019.md
 [geo-num]: ../numerics/README.md
+
+
+## Continuation program after this summary
+
+19 October 2026, for Edward Baker with substantial LLM assistance,
+**gpt-6-astra, actual effort max**. The [new research program](../research-overview/03_UNIFORM_ARITHMETIC_RESIDUAL_RESEARCH_PROGRAM_20261019.md)
+and [progress register](../research-progress/02_UNIFORM_ARITHMETIC_RESIDUAL_PROGRESS_20261019.md) carry the next
+UAR tasks. The compact S04/S05 rows above have been synchronized with
+their completed local-transfer and acquisition results; the detailed
+findings and historical task IDs are preserved. The manuscript now includes
+a [high-level symmetry summary](../../manuscript/positive_arithmetic_packets/sections/12_symmetry_findings.tex).

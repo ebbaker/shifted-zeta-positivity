@@ -319,3 +319,38 @@ completes the selected error gate, with no cost, coverage, strongestphysical
 or new arithmetic estimate. [Separate same-model review](../papers/investigations-3/11_arithmetic_collision_rigidity/symmetries/05_covariant_theta_jets/reviews/03_COMPLETE_SHIFTED_CONSUMER_INTERNAL_REVIEW_20261019.md),
 freshfullreplays and exactledger checks support the result. For Edward Baker
 with substantial LLM assistance, **gpt-6.1-sol, actual effort ultra**.
+
+
+**19 October 2026 manuscript synthesis, investigation 3/11.**
+The [new Section 12](../papers/investigations-3/11_arithmetic_collision_rigidity/manuscript/positive_arithmetic_packets/sections/12_symmetry_findings.tex)
+summarizes the already proved/certified symmetry results and their scoped
+comparisons: “The real bridge and required complex exterior remain open.”
+The [new research program](../papers/investigations-3/11_arithmetic_collision_rigidity/symmetries/research-overview/03_UNIFORM_ARITHMETIC_RESIDUAL_RESEARCH_PROGRAM_20261019.md)
+targets uniform arithmetic residual control; its new mathematical tasks
+are unexecuted. [Integration review](../papers/investigations-3/11_arithmetic_collision_rigidity/reviews/16_SYMMETRY_PROGRAM_AND_MANUSCRIPT_INTEGRATION_REVIEW_20261019.md).
+This is a documentation milestone, with no upgraded result status. For
+Edward Baker with substantial LLM assistance, **gpt-6-astra, max**.
+
+
+**19 October 2026, UAR-02 uniform finite component (investigation 3/11).**
+[S03 Note 08](../papers/investigations-3/11_arithmetic_collision_rigidity/symmetries/03_normalized_jet_rotation/notes/08_UNIFORM_FINITE_GAMMA_HEAT_REMAINDER_20261019.md)
+is **proved in-note, with outward checks of the constants**: after retaining the prescribed gamma/heat correction, relative finite-mode error is <2/c^2 on enlarged disks throughout 0<t<=1/20,1<=kappa<=2, with both Gaussian tails and one spatial derivative paid. The summed rotating finite remainder is <1.9e-16. "It is not an estimate of the complete corrected residual": the retained correction, RS edge, transitions and physical anchor remain open. [Separate same-model review](../papers/investigations-3/11_arithmetic_collision_rigidity/symmetries/03_normalized_jet_rotation/reviews/08_UAR02_UNIFORM_FINITE_GAMMA_HEAT_INTERNAL_REVIEW_20261019.md) and [192/256-bit record](../papers/investigations-3/11_arithmetic_collision_rigidity/symmetries/03_normalized_jet_rotation/numerics/UAR02_UNIFORM_FINITE_GAMMA_HEAT_20261019.json). Prepared for Edward Baker with substantial LLM assistance, **gpt-6.1-sol, actual effort ultra**; no specialist human review, physical coverage or Newman-bound gain.
+
+
+**19 October 2026, UAR-03 coherent edge/transition input (investigation 3/11).**
+[S03 Note 09](../papers/investigations-3/11_arithmetic_collision_rigidity/symmetries/03_normalized_jet_rotation/notes/09_UNIFORM_COHERENT_EDGE_AND_CUTOFF_MATCHING_20261019.md)
+is **proved in-note, with outward checks of constants**: a common bounded double-contour edge model has complete rotating error <3.9e-34 throughout the UAR sector, for either frozen cutoff. Corrected-transition prefixes have allowance <3.01exp(-13/(16t))<2.639e-7, replacing the divergent raw-mode payment in the corrected combination. "The retained signed increment has not been evaluated or bounded." [Separate same-model review](../papers/investigations-3/11_arithmetic_collision_rigidity/symmetries/03_normalized_jet_rotation/reviews/09_UAR03_UNIFORM_COHERENT_EDGE_INTERNAL_REVIEW_20261019.md) and [192/256-bit record](../papers/investigations-3/11_arithmetic_collision_rigidity/symmetries/03_normalized_jet_rotation/numerics/UAR03_UNIFORM_COHERENT_EDGE_20261019.json). Retained integral quadrature/cost and physical anchor remain open; no physical coverage or Newman gain. Prepared for Edward Baker with substantial LLM assistance, **gpt-6.1-sol, actual effort ultra**; no specialist human review.
+
+
+**19 October 2026, UAR-04 complete uniform increment (investigation 3/11).**
+[S03 Note 10](../papers/investigations-3/11_arithmetic_collision_rigidity/symmetries/03_normalized_jet_rotation/notes/10_UNIFORM_SIGNED_RESIDUAL_INCREMENT_20261019.md)
+is **proved in-note, with outward checks of constants**: the complete ordinary piecewise corrected residual increment is <3.246 exp(-13/(16t))<2.846e-7 for every prefix of [4pi exp(1/t),4pi exp(2/t)], 0<t<=1/20, including both cutoffs and all endpoint/transition errors. Signed saddle/heat and finite-frequency estimates analytically enclose the retained model; no H calibration or quadrature. This supersedes UAR-03's then-open signed-increment obligation. “Equation (1) supplies neither that anchor nor collision exclusion”. [Separate same-model review](../papers/investigations-3/11_arithmetic_collision_rigidity/symmetries/03_normalized_jet_rotation/reviews/10_UAR04_UNIFORM_SIGNED_INCREMENT_INTERNAL_REVIEW_20261019.md) and [192/256-bit record](../papers/investigations-3/11_arithmetic_collision_rigidity/symmetries/03_normalized_jet_rotation/numerics/UAR04_UNIFORM_SIGNED_INCREMENT_20261019.json). UAR-05 Ready; no optimal physical-consumer, cost, coverage or Newman gain. Prepared for Edward Baker with substantial LLM assistance, **gpt-6.1-sol, actual effort ultra**; no specialist human review.
+
+
+**19 October 2026, UAR-05 paid bounded physical anchor (investigation 3/11).**
+[S03 Note 11](../papers/investigations-3/11_arithmetic_collision_rigidity/symmetries/03_normalized_jet_rotation/notes/11_PAID_ANCHOR_AND_BOUNDED_PHYSICAL_SEPARATION_20261019.md)
+is **interval-certified for the declared bounded anchor/separation contract**: on T=[1/20-1e-14,1/20], x=4pi exp(20)+1+[-.01,.01], complete J_Q norm >.539 and (H^2+H_x^2)/A^2>.27. Two full 22,026-mode interval images per precision pay actual anchor uncertainty, full signed approximant variation, correctly rebased2B and normalizer derivatives. “The matched direct endpoint error is smaller”. [Same-model review](../papers/investigations-3/11_arithmetic_collision_rigidity/symmetries/03_normalized_jet_rotation/reviews/11_UAR05_PAID_ANCHOR_INTERNAL_REVIEW_20261019.md) and [192/256-bit acquisition](../papers/investigations-3/11_arithmetic_collision_rigidity/symmetries/03_normalized_jet_rotation/numerics/UAR05_PAID_ANCHOR_20261019.json). UAR-06 Ready on this exact box only; no uniform J_t separation, global bridge/exterior, cost advantage or Newman bound. Prepared for Edward Baker with substantial LLM assistance, **gpt-6.1-sol, actual effort ultra**; no specialist human review.
+
+
+**19 October 2026, UAR-06 matched consumer decision (investigation 3/11).**
+[Note 12](../papers/investigations-3/11_arithmetic_collision_rigidity/symmetries/03_normalized_jet_rotation/notes/12_MATCHED_COMPLETE_CONSUMER_AND_COST_COMPARISON_20261019.md) is **Complete as a scoped losing comparison** on the exact UAR-05 box: direct energy/A^2>.27778656 exceeds local transported >.27778628, with the same 44,052 acquired modes per precision and fewer error payments. “Stop this bounded transport configuration.” This supersedes UAR-05's then-Ready UAR-06 status; its certificate remains valid. [Delegated internal review](../papers/investigations-3/11_arithmetic_collision_rigidity/symmetries/03_normalized_jet_rotation/reviews/12_UAR06_MATCHED_CONSUMER_INTERNAL_REVIEW_20261019.md) and [source-pinned margins/cost ledger](../papers/investigations-3/11_arithmetic_collision_rigidity/symmetries/03_normalized_jet_rotation/numerics/UAR06_MATCHED_COMPLETE_CONSUMER_20261019.json). No factor-two transport gain or new coverage; UAR-E1/G1 remain conditional. Prepared for Edward Baker with substantial LLM assistance, **gpt-6.1-sol, actual effort ultra**; no specialist review.

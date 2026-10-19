@@ -1,5 +1,7 @@
 # Symmetry research task tracker
 
+**Continuation update, 19 October 2026.** This register retains the original tasks and their outcomes. New UAR tasks are recorded separately in the [uniform arithmetic residual progress document](02_UNIFORM_ARITHMETIC_RESIDUAL_PROGRESS_20261019.md); they do not renumber or reopen completed tasks here. Update for Edward Baker with substantial LLM assistance, **gpt-6-astra, actual effort max**.
+
 18 October 2026, America/New_York. Prepared for **Edward Baker** with substantial LLM assistance. Authoring and coordinating model **gpt-6-astra (Codex)**, actual reasoning effort **ultra**, verified from session metadata. Internal LLM research planning with delegated review; no specialist human review.
 
 This is the execution ledger for the [research overview](../research-overview/01_RESEARCH_OVERVIEW_GOALS_AND_TASKS_20261018.md). It retains the same 24 task IDs, priorities and dependencies. The [geometric assessment](../research-overview/02_S07_MISSING_ESTIMATES_AND_ALTERNATIVE_APPROACHES_20261018.md) gives the S07 rationale. Initial state: the planning task is complete; mathematical continuation has not been launched by creating this tracker.

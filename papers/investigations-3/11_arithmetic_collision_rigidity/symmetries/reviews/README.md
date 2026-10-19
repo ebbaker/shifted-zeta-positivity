@@ -10,3 +10,6 @@ controls and a fresh192-bit mathematical replay. Disposition: pass as
 bounded validation; factor-two cold-cost gate fails, no coverage gain.
 [File identities](GEO_T1_FILE_IDENTITIES_20261019.json) identify installed
 sources and records without certifying their mathematical claims.
+
+
+[UAR-01 contract review](02_UAR01_CONTRACT_INTERNAL_REVIEW_20261019.md) accepts the corrected residual, frozen disks, complete ledger and signed transition metric as a contract milestone only. Separate same-model LLM review and exact algebra/source guards; no uniform residual estimate, physical margin or coverage gain. **gpt-6.1-sol, actual effort ultra**, 19 October 2026.

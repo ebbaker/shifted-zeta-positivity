@@ -1,0 +1,166 @@
+\section{Current findings from the symmetry program}
+\label{sec:symmetry-findings}
+
+The seven symmetry investigations extend the arithmetic and geometric
+analysis beyond the proofs developed above. This section summarizes their
+results through 19 October 2026; the linked research notes contain the
+proofs, full error contracts, numerical records and internal reviews.\footnote{The
+document links refer to the accompanying repository. They resolve from
+the generated reading copy in \texttt{output/pdf/}; the corresponding
+source notes are in this investigation's \texttt{symmetries/} folder.}
+The \symdoc{summary/01_SYMMETRY_RESEARCH_PROGRESS_SUMMARY_20261019.md}
+{symmetry progress summary} gives the detailed account of all seven
+programs. Their results leave the coverage in Table~\ref{tab:coverage}
+unchanged. The real bridge and required complex exterior remain open.
+
+\subsection{Complete arithmetic control of the rotating residual}
+
+Use the symmetric normalizer $\mathcal A_t$ and phase $\theta$ of the
+Riemann--Siegel approximation, rather than the positive carrier
+$A_{\mathcal P}$. Write $Q=H/\mathcal A_t$ and $\omega=\theta_x$.
+On the pilot
+\[
+ B=[1/100,1/5]\times[999,1001],
+\]
+S03 takes the coherent corrected approximation
+$f=(G_8-\widehat C_8)/\mathcal A_t$ and its complete residual $r=Q-f$.
+The rotating first-jet coordinate and its increment are
+\[
+ Z_r=e^{-i\theta}(r-i r_x/\omega),\qquad
+ I_r(a,x)=i\{Z_r(x)-Z_r(a)\}.
+\]
+Differentiating gives the exact filtered-residual identity
+\[
+ I_r(a,x)=\int_a^x e^{-i\theta}\omega
+ \left(r+\frac{r_{xx}}{\omega^2}
+             -\frac{\omega_x r_x}{\omega^3}\right)\dd y.
+\]
+The research gain is a complete bound for this increment, beyond the
+identity itself.
+
+The prescribed finite gamma and heat corrections in
+\symdoc{03_normalized_jet_rotation/notes/06_ARITHMETIC_GAMMA_AND_EDGE_CORRECTIONS_20261019.md}
+{S03 Note 06} identify omitted Stirling and Gaussian-curvature terms.
+\symdoc{03_normalized_jet_rotation/notes/07_COMPLETE_ARITHMETIC_EDGE_AND_RESIDUAL_INCREMENT_20261019.md}
+{S03 Note 07} adds the complete Riemann--Siegel edge, gamma prefactor,
+Gaussian tails and analytic-continuation payment. It recombines the signed
+finite and edge corrections before estimating the increment. With fixed
+cutoff $N=8$, the resulting bound is
+\[
+ |I_r(999,x)|<0.000854\qquad ((t,x)\in B).
+\]
+This bound is independent of physical $H$ values, source quadrature and
+source Taylor coefficients. It reduces the earlier independent
+analytic-only allowance $0.812260$ by more than a factor of $950$.
+The source-informed allowance $0.000266448$ remains smaller; these are
+bounds with different input information, not measurements of the actual
+error or computational speed.
+
+The complete-consumer comparison is separate.
+\symdoc{03_normalized_jet_rotation/notes/05_CALIBRATED_FIRST_JET_AND_MATCHED_DIRECT_COMPARISON_20261019.md}
+{S03 Note 05} obtains a calibrated first-jet radius greater than
+$1.3859351576$, while the direct method with the same source information
+and matched propagation gives a radius greater than $1.3898732635$.
+Thus the independent arithmetic estimate is a useful local estimating
+result; a stronger or cheaper complete physical test is still needed.
+
+\subsection{Uniform scaling, signed averages and local transfer}
+
+S04 retains the full arithmetic phases and heat weights in the sector
+\[
+ 0<t\le1/20,\qquad 1\le\kappa\le2,\qquad
+ L=\kappa/t,\qquad x=4\pi e^L.
+\]
+The \symdoc{04_time_height_scaling/notes/01_PHASE_RETAINING_FULL_CUTOFF_SCALING_20261018.md}
+{full-cutoff scaling theorem} pays a uniform model and first-jet error
+through the growing cutoff. In
+\symdoc{04_time_height_scaling/notes/02_GAUSSIAN_SIGNED_CORE_AND_COMPLETE_AVERAGED_VALUE_20261019.md}
+{S04 Note 02}, set $Y=8\sqrt L$ and
+$\mu(y)=e^{-y^2/64}/(8\sqrt\pi)$. The complete phase-matched average
+\[
+ \mathcal B(t,x)=\int_{-Y}^{Y}\mu(y)e^{-i\theta(t,x+y)}
+                  Q(t,x+y)\dd y
+\]
+satisfies $|\mathcal B-1|<0.11$ throughout the sector. The signed
+intermediate-core contribution is below $1.5\,10^{-6}$ after its stated
+window and model payments. Consequently the weighted $(Q/2)^2$ energy
+exceeds $0.198$. This is a uniform averaged theorem; an isolated common
+zero of $Q,Q_x$ is compatible with it.
+
+\symdoc{04_time_height_scaling/notes/03_UNIFORM_LOCAL_RESIDUAL_TRANSFER_AND_CUTOFF_PAYMENT_OBSTRUCTION_20261019.md}
+{S04 Note 03} establishes complete local residual charts of real radius
+$1/(2L)$, with increment below $46.679e^{-b_*/t}$, where
+$b_*=\kappa(\kappa+4)/16$. The chart residual is
+$Q-F_{t,N}$, with its fixed cutoff and analytic disk, and differs from
+the corrected residual used in S03. Across natural cutoff changes, the
+specified independent coefficientwise disk rule incurs an assigned budget
+greater than $.99e^{1/(4t)}$. This is an obstruction to that payment rule,
+not a lower bound for actual signed jumps. Coherent global matching and
+a positive physical anchor margin remain open. The sector begins near
+$x=6.097\,10^9$ and does not cover the full bridge of Section~\ref{sec:global}.
+
+\subsection{Complete numerical comparisons and geometric limitations}
+
+\paragraph{Modular pairing, cutoff reflection and source jets.}
+\symdoc{01_modular_self_duality/notes/02_COMPLETE_PAIRED_TAIL_CONSUMER_AND_STOPPING_DECISION_20261019.md}
+{S01's complete consumer comparison} reduces added errors at orders
+$0,1,2$ by about $14.85\%$, $7.22\%$ and $2.99\%$, while all $40$
+reported signed intervals and $116$ evaluator calls remain unchanged.
+\symdoc{02_cutoff_reflection/notes/03_COMPLETE_FROZEN_JETS_AND_PAID_CONSUMERS_20261019.md}
+{S02's complete-jet comparison} shows that a smaller disk-error envelope
+need not yield the stronger physical consumer. The coherent full
+approximation has a larger paid radius than the frozen alternative;
+retaining the analytic correlation among residual derivatives certifies
+all $4096$ pilot cells, against $1770$ for independent frozen boxes.
+The source-informed direct reference remains stronger.
+\symdoc{05_covariant_theta_jets/notes/03_COMPLETE_SHIFTED_ACQUISITION_AND_CONSUMER_COMPARISON_20261019.md}
+{S05's compatible acquisition comparison} turns source factoring into
+complete added-error decreases of approximately $0.008$--$0.009\%$
+against the stronger prior hybrid, with unchanged adaptive minimum and
+no demonstrated total cost advantage. These are reusable estimation
+methods with explicit limits on their present physical benefit.
+
+\paragraph{Completed currents and constrained observation.}
+S06 derives exact transverse completions. Its first completed current
+inherits the Laguerre sign, and the second centered current can be
+positive at a collision. The subsequently selected event-vanishing
+residual uses fresh complete four-jet data but certifies only $60$ of
+$64$ cells; direct certification from the same balls succeeds on all
+$64$. Successful current radii are less than $0.552$ of their direct
+comparators. See the
+\symdoc{06_hodge_and_transverse_geometry/notes/05_BOUNDED_COMPLETED_CURRENT_AND_DIRECT_COMPARISON_20261019.md}
+{S06 completed-current comparison}.
+
+S07 constructs an explicit five-dimensional theta-jet space and a global
+residual class with its necessary complement; see
+\symdoc{07_geometric_duality_and_quaternionic_symmetry/notes/03_CONSTRAINED_THETA_JET_SPACE_AND_RESIDUAL_CONTRACT_20261019.md}
+{S07 Note 03}. The
+\symdoc{07_geometric_duality_and_quaternionic_symmetry/notes/04_PAID_PROFILE_TRACE_AND_DIRECT_TAIL_COMPARISON_20261019.md}
+{paid profile-trace comparison} then shows that its selected $N=2$
+whole-profile rule assigns value and derivative payments more than
+$1618$ and $34152$ times the direct complete-tail allowances before
+common acquisition errors. The
+\symdoc{07_geometric_duality_and_quaternionic_symmetry/notes/05_OBSERVATION_OPTIONS_AND_BOUNDED_FEASIBILITY_SCREENS_20261019.md}
+{follow-up feasibility screens} retain a loss under the specified cutoff
+retuning and old-norm complement rules. These are limitations of those
+estimates, not actual-error floors or universal geometric obstructions.
+
+\paragraph{Physical winding.}
+The \symdoc{notes/06_GEO_T1_WINDING_AND_DIRECT_COMPARISON_20261019.md}
+{GEO-T1 comparison} certifies winding zero on B using seven boundary
+segments and ten calls. Optimized direct certification uses three strips
+and seven calls. Once common source setup is charged, the factor-two
+cold-cost target fails. This validates an alternative certificate on an
+already covered box.
+
+\subsection{The next estimating problem}
+
+The \symdoc{research-overview/03_UNIFORM_ARITHMETIC_RESIDUAL_RESEARCH_PROGRAM_20261019.md}
+{new research program} and its
+\symdoc{research-progress/02_UNIFORM_ARITHMETIC_RESIDUAL_PROGRESS_20261019.md}
+{progress register} prioritize a uniform corrected arithmetic residual,
+coherent cutoff matching, and a paid nonzero anchor before a complete
+physical comparison. They preserve the completed stopping decisions for
+the existing pilot. A geometric continuation must supply a different
+useful observation estimate or acquisition advantage. These are future
+tasks, not additional claims of exclusion or an improved Newman bound.

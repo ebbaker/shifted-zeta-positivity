@@ -338,3 +338,85 @@ runs, value caps and disk radius, and must fail before writing a result.
 The old K<=4 finite-integral hierarchy remains a diagnostic; Note 07 does
 not retroactively supply an unpaid tail to those older rows. No large
 archive is added.
+
+
+## UAR-02 uniform finite gamma/heat remainder
+
+[Note 08](../notes/08_UNIFORM_FINITE_GAMMA_HEAT_REMAINDER_20261019.md) proves the uniform finite-component theorem; [review](../reviews/08_UAR02_UNIFORM_FINITE_GAMMA_HEAT_INTERNAL_REVIEW_20261019.md). Prepared for Edward Baker with substantial LLM assistance, **gpt-6.1-sol, actual effort ultra**, 19 October 2026.
+
+- [Primary192/256 record](UAR02_UNIFORM_FINITE_GAMMA_HEAT_20261019.json):44outward scalar reserves per precision, exact correction moments, invalid-input/source guards and source pins. This evaluates constants in the written proof; it is not a numerical proof over an unbounded domain.
+- [Fresh reviewer192 scalar replay](UAR02_REVIEW_SCALARS_192_20261019.json): separate same-model assistant, same checker; script/note hashes and complete scalar outputs. This is not implementation-independent validation.
+- [Fresh own-source controls](UAR02_SOURCE_CONTROLS_20261019.json): five event boxes rejected and the separate Euler negative-Laguerre witness retained, with historical producer date preserved. No theta constants substituted.
+
+From the repository root with Python and python-flint0.9.0:
+
+```sh
+python3 papers/investigations-3/11_arithmetic_collision_rigidity/symmetries/03_normalized_jet_rotation/numerics/check_uniform_finite_gamma_heat.py --repo . --verify papers/investigations-3/11_arithmetic_collision_rigidity/symmetries/03_normalized_jet_rotation/numerics/UAR02_UNIFORM_FINITE_GAMMA_HEAT_20261019.json
+```
+
+For a separately assessed fresh receipt use `--output NEW_PATH --bits 192 256 --execution-model ACTUAL_MODEL --execution-effort ACTUAL_EFFORT`. Changed or missing pinned sources reject verification. The retained signed finite correction, complete edge, cutoff sum and physical anchor remain outside these error allowances.
+
+
+## UAR-03 uniform coherent edge and cutoff matching
+
+[Note 09](../notes/09_UNIFORM_COHERENT_EDGE_AND_CUTOFF_MATCHING_20261019.md), [internal review](../reviews/09_UAR03_UNIFORM_COHERENT_EDGE_INTERNAL_REVIEW_20261019.md). Prepared for Edward Baker with substantial LLM assistance, **gpt-6.1-sol, actual effort ultra**, 19 October 2026.
+
+- [Primary192/256 record](UAR03_UNIFORM_COHERENT_EDGE_20261019.json):46outward scalar reserves per precision, exact descending-residue/compensation and complement-partition fixtures, six invalid-sector inputs and source guards. These check constants in the written uniform proof; no retained double-contour quadrature is evaluated.
+- [Fresh reviewer192 replay](UAR03_REVIEW_SCALARS_192_20261019.json): separate same-model assistant, same checker, complete scalar outputs and script/note hashes; not implementation-independent validation.
+- [Fresh own-source controls](UAR03_SOURCE_CONTROLS_20261019.json): five event rejections and separate Euler negative-Laguerre witness, preserving the producer's historical date. Theta constants are not substituted.
+
+With Python and python-flint0.9.0, from the repository root:
+
+```sh
+python3 papers/investigations-3/11_arithmetic_collision_rigidity/symmetries/03_normalized_jet_rotation/numerics/check_uniform_coherent_edge.py --repo . --verify papers/investigations-3/11_arithmetic_collision_rigidity/symmetries/03_normalized_jet_rotation/numerics/UAR03_UNIFORM_COHERENT_EDGE_20261019.json
+```
+
+A separately assessed fresh receipt uses `--output NEW_PATH --bits 192 256 --execution-model ACTUAL_MODEL --execution-effort ACTUAL_EFFORT`. Missing/changed pinned sources reject verification. The proof retains exact finite integrals; numerical acquisition, quadrature/rounding, signed endpoints and physical margin remain outside this record.
+
+
+## UAR-04 complete uniform signed increment
+
+[Note 10](../notes/10_UNIFORM_SIGNED_RESIDUAL_INCREMENT_20261019.md) and [same-model review](../reviews/10_UAR04_UNIFORM_SIGNED_INCREMENT_INTERNAL_REVIEW_20261019.md), 19 October 2026. Prepared for Edward Baker with substantial LLM assistance, **gpt-6.1-sol, actual effort ultra**.
+
+- [Primary192/256 record](UAR04_UNIFORM_SIGNED_INCREMENT_20261019.json): outward analytic reserves, exact frequency/moment/sign fixtures and source guards; no H acquisition, contour quadrature or height grid.
+- [Fresh reviewer192 replay](UAR04_REVIEW_SCALARS_192_20261019.json): separate same-model assistant, shared implementation, source hashes and complete scalar outputs; not implementation independent.
+- [Fresh own-source controls](UAR04_SOURCE_CONTROLS_20261019.json): five own-source event rejections and separate Euler witness, preserving the producer's historical date.
+
+From the repository root with Python and python-flint0.9.0:
+
+```sh
+python3 papers/investigations-3/11_arithmetic_collision_rigidity/symmetries/03_normalized_jet_rotation/numerics/check_uniform_signed_increment.py --repo . --verify papers/investigations-3/11_arithmetic_collision_rigidity/symmetries/03_normalized_jet_rotation/numerics/UAR04_UNIFORM_SIGNED_INCREMENT_20261019.json
+```
+
+The written proof supplies complete allowance <3.246 exp(-13/(16t))<2.846e-7 over all ordinary prefixes. Scalar checks support that proof; hashes identify bytes. Neither establishes a physical nonzero margin or cost advantage.
+
+
+## UAR-05 paid bounded anchor and physical separation
+
+[Note 11](../notes/11_PAID_ANCHOR_AND_BOUNDED_PHYSICAL_SEPARATION_20261019.md), [same-model adversarial review](../reviews/11_UAR05_PAID_ANCHOR_INTERNAL_REVIEW_20261019.md), 19 October 2026. Prepared for Edward Baker with substantial LLM assistance, **gpt-6.1-sol, actual effort ultra**.
+
+- [Primary192/256 acquisition](UAR05_PAID_ANCHOR_20261019.json): two full 22,026-mode interval images per precision, exact closed sector box/cutoff guards, all anchor/increment/variation errors, physical normalizer return and matched direct comparator.
+- [Fresh review192 replay](UAR05_REVIEW_REPLAY_192_20261019.json): shared final producer/source hashes, with separately reconstructed analytic-series derivative crosscheck; same-model internal review, not implementation-independent validation of the whole box.
+- [Fresh source-own controls](UAR05_SOURCE_CONTROLS_20261019.json): five event-box rejections and separate Euler witness; the new producer separately rejects own polynomial events and omitted anchor/variation/increment mutations.
+
+From the repository root with Python and python-flint0.9.0:
+
+```sh
+python3 papers/investigations-3/11_arithmetic_collision_rigidity/symmetries/03_normalized_jet_rotation/numerics/check_paid_uniform_anchor.py --repo . --verify papers/investigations-3/11_arithmetic_collision_rigidity/symmetries/03_normalized_jet_rotation/numerics/UAR05_PAID_ANCHOR_20261019.json
+```
+
+The physical first-jet radius is >.539 and energy/A^2>.27 only on the frozen closed Note11box. Direct endpoint error is smaller than transport error. Acquisition times are observations; no complete cold-cost benchmark or uniform J_t separation follows.
+
+
+## UAR-06 matched complete consumer and cost ledger
+
+19 October 2026. Prepared for Edward Baker with substantial LLM assistance, **gpt-6.1-sol, actual effort ultra**. [Note 12](../notes/12_MATCHED_COMPLETE_CONSUMER_AND_COST_COMPARISON_20261019.md) closes this exact comparison as a scoped loss: stronger paid direct margin, identical dominant acquisition, no factor-two transport gain or new coverage. [Review](../reviews/12_UAR06_MATCHED_CONSUMER_INTERNAL_REVIEW_20261019.md).
+
+With Python 3 and python-flint 0.9.0, run from the repository root:
+
+```sh
+python3 papers/investigations-3/11_arithmetic_collision_rigidity/symmetries/03_normalized_jet_rotation/numerics/check_matched_uniform_consumer.py --repo . --output /tmp/UAR06_MATCHED.json --execution-model ACTUAL_MODEL --execution-effort ACTUAL_EFFORT
+python3 papers/investigations-3/11_arithmetic_collision_rigidity/symmetries/03_normalized_jet_rotation/numerics/check_matched_uniform_consumer.py --repo . --verify papers/investigations-3/11_arithmetic_collision_rigidity/symmetries/03_normalized_jet_rotation/numerics/UAR06_MATCHED_COMPLETE_CONSUMER_20261019.json
+```
+
+Each independent direct/global/local consumer acquires one first-order anchor and one full closed-cell signed derivative image, 44,052 modes/precision. The receipt records outward margins, physical energy, exact counts, fresh-process observations, and separately reusable validation preparation charged in each cold total. Both precisions and ledger are checked on replay; timestamped child-control byte hashes are recorded separately from exact mathematical/source identity. Historical analytic proof-development cost is listed but unmeasured. Same-producer replay is not specialist or full implementation-independent validation.

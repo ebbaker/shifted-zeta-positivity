@@ -5,19 +5,23 @@ Symmetry program and this index update: **gpt-6-astra (Codex), actual effort
 max**. Overview 02 was drafted by **gpt-6.1-sol, ultra**, with **gpt-6-astra,
 ultra** coordination; the original proposal used **gpt-6-astra, max**.
 
-The current [45-page manuscript](../manuscript/README.md) incorporates the
+The [manuscript integration of 18 October](../reviews/13_CURRENT_RESULTS_MANUSCRIPT_INTEGRATION_REVIEW_20261018.md) incorporates the
 complete overview 02 round: effective tails, finite signed certificates,
 wall propagation, and the exp(20/epsilon) real exterior. On [1/100,1/5],
 coverage through |x|=1001 and beyond exp(2000) leaves the intervening bridge
 open. [Integration review 13](../reviews/13_CURRENT_RESULTS_MANUSCRIPT_INTEGRATION_REVIEW_20261018.md)
 records the source and verification scope. No new Newman bound is claimed.
 
-For the new symmetry investigation, begin with **overview 03** and the
-[seven direction folders](../symmetries/README.md).
+For new symmetry work, begin with the [19 October uniform arithmetic residual program](../symmetries/research-overview/03_UNIFORM_ARITHMETIC_RESIDUAL_RESEARCH_PROGRAM_20261019.md)
+and its [progress register](../symmetries/research-progress/02_UNIFORM_ARITHMETIC_RESIDUAL_PROGRESS_20261019.md).
+The [current manuscript](../manuscript/README.md) adds a linked high-level
+summary of completed symmetry findings. Update for Edward Baker with
+substantial LLM assistance, **gpt-6-astra, actual effort max**.
+The numbered overviews below retain the earlier stages and contracts.
 
 | Number | Overview | Status |
 | --- | --- | --- |
-| 03 | [Symmetry research program and investigation guide](03_SYMMETRY_RESEARCH_PROGRAM_AND_INVESTIGATION_GUIDE_20261018.md) | Current symmetry plan: four original directions plus covariant theta jets, Hodge/transverse geometry and geometric duality/quaternionic symmetry; initial context, bounded tasks, controls, and quantitative gates |
+| 03 | [Symmetry research program and investigation guide](03_SYMMETRY_RESEARCH_PROGRAM_AND_INVESTIGATION_GUIDE_20261018.md) | Original symmetry guide: four original directions plus covariant theta jets, Hodge/transverse geometry and geometric duality/quaternionic symmetry; initial context, bounded tasks, controls, and quantitative gates |
 | 02 | [Updated research overview and Sol execution plan](02_UPDATED_RESEARCH_OVERVIEW_AND_SOL_EXECUTION_PLAN_20261018.md) | Governing contract for its earlier stages 0–5 and their explicit follow-ups; progress and failed gates remain recorded |
 | 01 | [Expanded exploratory proposal](01_EXPLORATORY_RESEARCH_PROPOSAL_20261018.md) | Historical initialization; superseded as the execution plan |
 

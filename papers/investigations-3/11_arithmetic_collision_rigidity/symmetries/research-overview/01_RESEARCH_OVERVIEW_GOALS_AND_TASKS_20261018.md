@@ -1,5 +1,7 @@
 # Symmetry research overview with goals and tasks
 
+**Continuation update, 19 October 2026.** The [new uniform arithmetic residual program](03_UNIFORM_ARITHMETIC_RESIDUAL_RESEARCH_PROGRAM_20261019.md) and its [progress register](../research-progress/02_UNIFORM_ARITHMETIC_RESIDUAL_PROGRESS_20261019.md) now govern new continuation work. This document preserves the original task contracts and dated execution updates. Prepared for Edward Baker with substantial LLM assistance, **gpt-6-astra, actual effort max**.
+
 18 October 2026, America/New_York. Prepared for **Edward Baker** with substantial LLM assistance. Authoring and coordinating model **gpt-6-astra (Codex)**, actual reasoning effort **ultra**, verified from session metadata. Internal LLM research planning with delegated review; no specialist human review.
 
 ## Purpose and scientific objective
@@ -30,7 +32,7 @@ The current real certificate covers $[1/100,1/5]\times[-1001,1001]$. Its real ex
 | G7 Repair geometric observation control | Green/trace obstruction; T1 admissible five-jet space and global residual contract; [T2 Note 04](../07_geometric_duality_and_quaternionic_symmetry/notes/04_PAID_PROFILE_TRACE_AND_DIRECT_TAIL_COMPARISON_20261019.md) prices the selected whole-profile rule. | T2 Complete as scoped loss: assigned payments exceed direct by >1618 and >34152 before common costs. Stop this N=2 rule; a different useful physical estimate remains open and T3 Waiting. |
 | G8 Preserve reliable progress | Source controls, interval evaluators and internal reviews are available. | Require explicit costs, scope, evidence and review before a stronger status or larger domain. |
 
-The main research priority is **S03-T1/T2**, alongside practical **S01-T1 and S02-T1/T2** work. S03 can start from the current S02 approximation; it does not wait for a new S02 benchmark. S04-T2 is a separate signed-core analytic branch. The most useful geometric feasibility task is **S07-T1**, while **GEO-T1** is the nearest geometric alternative with an established physical consumer. S05 and S06 continue through their explicit fit/independence gates. Additional form-degree constructions and global exhaustion stay deferred until a concrete estimate motivates them.
+The initial 18 October sequencing gave priority to **S03-T1/T2**, alongside practical **S01-T1 and S02-T1/T2** work. S03 can start from the current S02 approximation; it does not wait for a new S02 benchmark. S04-T2 is a separate signed-core analytic branch. The most useful geometric feasibility task is **S07-T1**, while **GEO-T1** is the nearest geometric alternative with an established physical consumer. S05 and S06 continue through their explicit fit/independence gates. Additional form-degree constructions and global exhaustion stay deferred until a concrete estimate motivates them.
 
 Priorities are sequencing advice: P0 is immediate core work or validation, P1 is bounded support/exploration, P2 is contingent integration or extension, and P3 is deferred research. A Ready task has sufficient inputs to begin, not an assurance that its desired theorem is true. None of the unfinished tasks is automatically running or scheduled.
 

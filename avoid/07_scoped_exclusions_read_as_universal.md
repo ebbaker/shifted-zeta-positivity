@@ -39,6 +39,8 @@ Wilson observables.
   Entry added 17 October 2026 for Edward Baker with substantial LLM
   assistance, **gpt-6.1-sol**, effort **ultra**.
 
+- [UAR-06 Note 12](../papers/investigations-3/11_arithmetic_collision_rigidity/symmetries/03_normalized_jet_rotation/notes/12_MATCHED_COMPLETE_CONSUMER_AND_COST_COMPARISON_20261019.md), 19 October 2026: “This is a quantitative decision about the declared implementation and information class, not a universal obstruction to signed residual methods.” The matched direct comparison closes the existing bounded consumer; another residual estimate or acquisition mechanism is outside that loss. [Internal review](../papers/investigations-3/11_arithmetic_collision_rigidity/symmetries/03_normalized_jet_rotation/reviews/12_UAR06_MATCHED_CONSUMER_INTERNAL_REVIEW_20261019.md). Added for Edward Baker with substantial LLM assistance, **gpt-6.1-sol, actual effort ultra**.
+
 ## What it cost
 
 Withdrawn remarks in two manuscript versions; a closure that had to be

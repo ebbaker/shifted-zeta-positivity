@@ -1,5 +1,7 @@
 # Symmetry research program and investigation guide
 
+**Continuation update, 19 October 2026.** This guide retains the original seven-program context and contracts. Begin new work with the [uniform arithmetic residual program](../symmetries/research-overview/03_UNIFORM_ARITHMETIC_RESIDUAL_RESEARCH_PROGRAM_20261019.md) and its [progress register](../symmetries/research-progress/02_UNIFORM_ARITHMETIC_RESIDUAL_PROGRESS_20261019.md), based on the completed findings and Review 15. Update for Edward Baker with substantial LLM assistance, **gpt-6-astra, actual effort max**.
+
 18 October 2026, America/New_York. Prepared for Edward Baker with substantial
 LLM assistance. Authoring model **gpt-6-astra (Codex)**, actual reasoning
 effort **max**, verified from this turn's metadata. Research plan and

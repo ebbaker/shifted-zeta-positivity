@@ -117,3 +117,25 @@ rotation-defect estimate. Prepared for Edward Baker with substantial LLM
 assistance, **gpt-6-astra, actual effort max**, 18 October 2026; internal
 review and self-check of the companion derivation, without a new theta
 sign estimate or independent specialist review.
+
+
+## Manuscript and completed symmetry program assessment
+
+[Review 15](15_MANUSCRIPT_AND_SYMMETRY_ACCOMPLISHMENTS_REVIEW_ASTRA_20261019.md),
+19 October 2026, summarizes the pinned manuscript and symmetry continuations,
+ranks S03 with S04 as the leading analytic prospects, and retains the scoped
+stopping decisions and global gaps. Selective fresh scalar, arithmetic-edge,
+residual, averaging and control replays pass; the linked receipt pins sources.
+Prepared for Edward Baker with substantial LLM assistance, **gpt-6-astra,
+actual effort max**. Internal cross-model/same-model assessment as specified
+in the review; no independent implementation, specialist review or new coverage.
+
+
+## New program and symmetry manuscript summary
+
+[Review 16](16_SYMMETRY_PROGRAM_AND_MANUSCRIPT_INTEGRATION_REVIEW_20261019.md), 19 October 2026, records the new UAR research
+program and progress register, the linked manuscript Section 12 and the
+48-page build. Original analytic sections are unchanged; source, link,
+task-register, terminal/desktop and visual checks pass. Numerical evidence
+retains its original scope. For Edward Baker with substantial LLM assistance,
+**gpt-6-astra, actual effort max**; same-assistant integration review.
