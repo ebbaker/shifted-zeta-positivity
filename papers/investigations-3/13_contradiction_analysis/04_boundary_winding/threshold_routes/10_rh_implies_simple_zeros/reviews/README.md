@@ -40,3 +40,9 @@ checks the matched linear consequence, full-zero arithmetic and diagonal
 bandwidth, signed-form scope, complete coefficient errors and Hermite
 coalescence rates. Finite strictness does not imply limiting simplicity;
 the event-conditioned finite-sum assessment supplies no signed-prime gain.
+
+[08 — Reciprocal precision and kernel costs](08_RECIPROCAL_PRECISION_AND_KERNEL_REVIEW_20261020.md)
+checks uniform microscopic approximation, the complete reciprocal-energy
+saddle, Poisson and prime-shell constants, and the explicitly budgeted
+kernel class. A primary-source canonical-system assessment retains its
+missing simplicity premise and scoped endpoint limitations.

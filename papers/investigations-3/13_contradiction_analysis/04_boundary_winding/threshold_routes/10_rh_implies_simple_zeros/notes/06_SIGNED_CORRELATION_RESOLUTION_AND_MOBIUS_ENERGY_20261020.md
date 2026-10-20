@@ -318,6 +318,13 @@ in (21) into the signed off-diagonal sum. Coefficient positivity of
 the diagonal does not bound that sum. Applying absolute values with
 the basic RH pointwise bound only pays it for `alpha>1/2`.
 
+**Continuation:** [Note 08](08_RECIPROCAL_PRECISION_AND_BANDLIMITED_ARITHMETIC_COSTS_20261020.md) strengthens the
+recorded energy upper envelope to
+`log(2+E(alpha)) <<_epsilon alpha^-1 (log(1/alpha))^(2+epsilon)`
+by using the underlying uniform reciprocal estimate directly. The
+following `5+2eta` bound remains valid for the stated Mertens-envelope
+argument; neither bound contradicts the cubic double-zero cost.
+
 The verified [Balazard–de Roton RH bound][bdr] gives
 `M(x)<<_eta sqrt(x) exp(sqrt(log x)(log log x)^(5/2+eta))`.
 It implies, with any fixed `eta>0`,

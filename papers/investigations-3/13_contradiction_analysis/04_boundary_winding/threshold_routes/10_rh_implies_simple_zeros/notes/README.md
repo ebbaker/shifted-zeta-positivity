@@ -16,4 +16,6 @@
 
 - [07 — Local correlation and Jensen margins](07_LOCAL_CORRELATION_AND_JENSEN_MARGIN_COMPARISONS_20261020.md). Exact quadratic-to-linear comparison with complete exterior terms; finite Jensen roots and margins coalesce at explicit rates. No theta exclusion.
 
+- [08 — Reciprocal precision and bandlimited arithmetic costs](08_RECIPROCAL_PRECISION_AND_BANDLIMITED_ARITHMETIC_COSTS_20261020.md). Controlled finite logarithmic-derivative approximation under RH; stronger energy envelope; leading absolute-payment cost for kernels with arbitrary Fourier signs and `I Delta<2` with a fixed margin. No theta exclusion.
+
 [Progress](../research-progress/01_RH_TO_SIMPLICITY_PROGRESS_20261020.md) · [Reviews](../reviews/README.md).

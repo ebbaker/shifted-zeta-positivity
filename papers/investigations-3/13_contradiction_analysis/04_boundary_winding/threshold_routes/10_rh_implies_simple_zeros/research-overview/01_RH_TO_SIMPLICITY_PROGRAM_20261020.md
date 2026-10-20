@@ -294,3 +294,24 @@ checks both comparisons and the separate finite-zeta conditioning attempt,
 which yielded no signed-prime gain. These are precise costs and scoped
 comparisons; RHS-02's positive estimate, strict surplus and all-zero
 coverage remain open.
+
+## 10. Reciprocal precision and broader kernel costs, 20 October 2026
+
+Prepared for Edward Baker with substantial LLM assistance, **gpt-6-astra,
+effort ultra**. [Note 08](../notes/08_RECIPROCAL_PRECISION_AND_BANDLIMITED_ARITHMETIC_COSTS_20261020.md)
+uses a checked RH reciprocal estimate to make a fixed finite zeta sum
+accurate to `o(1)` for `delta zeta'/zeta` at `delta=c/log gamma`, with
+cutoff `gamma^(1+epsilon)`. It also improves the recorded reciprocal-energy
+upper envelope to logarithmic power `2+epsilon`. These fill a declared
+precision gap and sharpen a bound; neither supplies the opposing sign,
+endpoint coefficient lower bound, or subcubic energy needed for exclusion.
+
+A separate discrete Poisson argument forces a first-prime-harmonic cost
+`(I^2/pi^2+o(I^2)) exp(pi/I)` for nonnegative kernels with arbitrary Fourier
+signs and `I Delta<=eta<2`, for fixed `eta`. Under complete gamma and pole
+budgets, Fejér attains the class's sharp leading `1/2` envelope coefficient.
+The unrestricted kernel class is not closed by this result.
+[Review 08](../reviews/08_RECIPROCAL_PRECISION_AND_KERNEL_REVIEW_20261020.md)
+checks source ranges, the complete energy saddle and kernel constants,
+and records the canonical-system route's missing simplicity premise.
+The original strict-surplus and all-zero gates remain open.

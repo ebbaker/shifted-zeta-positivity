@@ -6,7 +6,8 @@ verified from recorded turn metadata. Separate same-model internal review;
 no specialist review.
 
 **State: structural transfer, arithmetic screens, source controls and
-correlation/energy costs and finite Jensen margins assessed as bounded attempts. These give partial
+correlation costs, reciprocal precision and finite Jensen margins assessed
+as bounded attempts. These give partial
 structural results, explicit certification and resolution costs, scoped
 estimating failures and an approximation control.
 RH ⇒ simplicity remains unproved. No multiple theta zero or new height
@@ -18,10 +19,10 @@ The original scope was selected in [chat 0003][origin]; this round is
 | --- | --- | --- |
 | RHS-00 | Complete: scope and literature | [Opening analysis][opening] §§1–2, 9; primary inputs rechecked in [review 02][review]. No methodological priority or relative-difficulty theorem claimed. |
 | RHS-01 | Complete: inherited transfer and control screen; strengthened through Note 05 | Opening §§3–6. [Note 01][n1] proves finite root-label continuation under RH, exact endpoint/middle complement, and retained multiplicity phase atom. [Note 05][n5] adds an RH-conditional, uniformly close positive-source control with an exact double event, unchanged leading tail and pole residue one. |
-| RHS-02 | Declared estimators and correlation costs assessed; positive theta-estimate gate remains unmet | Notes 01–03 treat fixed-width, finite-prime and signed-error envelopes, and finite Euler-control rejection. [Note 04][n4] proves exact subtraction costs, a sharp actual-tail asymptotic and the fully optimized rational-power absolute-payment barrier. Note 05 screens one finite horizontal-shift consumer exactly and identifies the normalized source control's failed Dirichlet-series premise. [Note 06][n6] proves a sharp full-window correlation resolution cost, the additive-one limit of universal phase positivity, and a local Möbius-energy cost. [Note 07][n7] proves localized quadratic-to-linear dominance and exact theta Jensen coalescence rates. None supplies an opposing estimate at an original multiple zero. |
+| RHS-02 | Declared estimators and correlation costs assessed; positive theta-estimate gate remains unmet | Notes 01–03 treat fixed-width, finite-prime and signed-error envelopes, and finite Euler-control rejection. [Note 04][n4] proves exact subtraction costs, a sharp actual-tail asymptotic and the fully optimized rational-power absolute-payment barrier. Note 05 screens one finite horizontal-shift consumer exactly and identifies the normalized source control's failed Dirichlet-series premise. [Note 06][n6] proves a sharp full-window correlation resolution cost, the additive-one limit of universal phase positivity, and a local Möbius-energy cost. [Note 07][n7] proves localized quadratic-to-linear dominance and exact theta Jensen coalescence rates. [Note 08][n8] obtains vanishing finite-sum relative error, a stronger energy envelope and a broader signed-Fourier kernel cost. None supplies an opposing estimate at an original multiple zero. |
 | RHS-03 | Finite-wall subtask proved under RH; strict surplus still gated | Note 01 §2 covers every finite cap and multiplicity. Cap mass remains `(m-1)pi`; the Gaussian sign is event-compatible. Note 04 identifies the exterior inverse-square sum needed for effective deflation, but wall continuation gives no quantitative upper bound for it. |
 | RHS-04 | Coverage audited; no new exclusion | Structural statements cover all finite heights/multiplicities under RH. Arithmetic failure ranges are stated explicitly; no all-height signed estimate or new theta exclusion class exists. |
-| RHS-05 | Reviews of bounded attempts completed; full-argument review remains gated | [Reviews 02–07](../reviews/README.md) check the stated proofs, imports and controls. Review 04 checks uniform optimization and certified subtraction; [review 05][review5] checks source positivity, the whole-tail relative bound, exact residue normalization and the distinct curvature control. [Review 06][review6] checks correlation normalization, clustered configurations, phase minima and local pole/energy constants. [Review 07][review7] checks local dominance, complete coefficient errors and Hermite coalescence. Same-model internal validation; no simplicity theorem. |
+| RHS-05 | Reviews of bounded attempts completed; full-argument review remains gated | [Reviews 02–08](../reviews/README.md) check the stated proofs, imports and controls. Review 04 checks uniform optimization and certified subtraction; [review 05][review5] checks source positivity, the whole-tail relative bound, exact residue normalization and the distinct curvature control. [Review 06][review6] checks correlation normalization, clustered configurations, phase minima and local pole/energy constants. [Review 07][review7] checks local dominance, complete coefficient errors and Hermite coalescence. [Review 08][review8] checks the reciprocal estimates, complete energy saddle, kernel budgets and canonical-system premise. Same-model internal validation; no simplicity theorem. |
 
 ## Quantitative outcomes
 
@@ -124,10 +125,29 @@ The original scope was selected in [chat 0003][origin]; this round is
   already proved under RH in Investigation 22 and permits repeated
   limiting zeros; it cannot be passed to strictness of the limit.
 
+- Under RH, at `delta=c/log gamma`, the fixed finite Euler sum with
+  `N=ceil(gamma^(1+epsilon))` approximates `delta zeta'/zeta` with error
+  `gamma^(-epsilon/2+o(1))`. Cauchy's inequality pays the derivative
+  remainder while the cutoff stays fixed. This supplies finite-distance
+  relative precision; it gives neither the required sign nor an endpoint
+  lower bound for `zeta''(rho)`.
+- Direct use of a checked RH reciprocal estimate improves the recorded
+  energy bound to `log(2+E(alpha)) <<_epsilon alpha^-1 log^(2+epsilon)(1/alpha)`.
+  Both height regimes and all compact-height poles are retained. This
+  is stronger than Note 06's Mertens-envelope bound, but still permits
+  every fixed polynomial divergence, including a double zero's cubic cost.
+- For any admissible nonnegative bandlimited kernel with `h(0)=1`,
+  mass `I` and `I Delta<=eta<2` for fixed `eta`, Poisson summation forces
+  positive first Fourier samples on a prime shell and exact absolute
+  payment at least `(I^2/pi^2+o(I^2)) exp(pi/I)`. With explicit gamma
+  localization and pole budgets, the sharp leading envelope remains
+  `(1/2+o(1)) log gamma/log log gamma`, even allowing arbitrary Fourier
+  signs. The class `I Delta>=2` and unbudgeted kernels are not covered.
+
 The frozen [exact algebra contract][contract] and [replay][replay] passed
 265 rational fixtures. They check finite constants and the control sum,
 not theta zeros or the infinite analytical estimates. It was unchanged
-and not rerun for Notes 04–07, which received analytical cross-checks. No
+and not rerun for Notes 04–08, which received analytical cross-checks. No
 numerical sign scan or manuscript was started. The original BW09, HFCE and PSC registers
 retain their existing states; the earlier manuscript was reviewed but
 not changed.
@@ -167,8 +187,8 @@ positivity in the selected Fejér envelope and quantifies the specific
 full-window second-moment cost. A useful localized correlation estimate
 must pay the exterior zeros and fit the absolute remaining slack;
 an average with error o(N) is insufficient to exclude one double.
-The Möbius calculation still lacks an upper bound on its signed
-off-diagonal sum. Shifted negative moments may not be continued to
+The Möbius calculation still lacks a subcubic upper bound for its
+signed off-diagonal sum or total energy. Shifted negative moments may not be continued to
 zero shift at fixed height outside their hypotheses.
 Note 07 additionally shows that this nonnegative localized quadratic
 consumer cannot avoid a matched one-point test at the same bandwidth.
@@ -178,11 +198,21 @@ and fixed-degree/increasing-shift hyperbolicity do not supply a margin in
 the unshifted infinite-degree limit. Do not start a coefficient-shift
 scan to address that different limit.
 
-A finite zeta approximation conditioned on the two event jets was also
-assessed. Conditioning cancels the corresponding absolute-error jets,
-but relative division still needs a lower bound for the deflated function
-`zeta(rho+w)/w^2`. No such bound or signed-prime gain was obtained; the
-[review][review7] records this limited assessment without adding a criterion.
+The finite-zeta precision gap in [review 07][review7] is now filled at
+`w=c/log gamma`: Note 08 uses RH to control reciprocal error for the
+longer fixed sum. This does not fill the endpoint coefficient gap or
+give the sign needed by the existing multiplicity consumer. The stronger
+energy upper bound likewise remains far above the exact cubic event cost.
+Do not treat either numerical exponent improvement as a simplicity margin.
+The kernel comparison extends earlier fixed-family screens only to
+`I Delta<=eta<2` with the complete stated gamma/pole budgets; unrestricted
+kernels and signed arithmetic estimates remain outside it.
+
+The canonical-system assessment in [review 08][review8] checks the primary
+source's separate no-common-real-zero premise. Strict half-plane positivity
+alone permits common real factors. A finite-integrable system with constant
+initial data cannot directly realize unmodified xi's infinite exponential
+type; singular or infinite endpoint constructions are not ruled out.
 
 Actual-height/event-conditioned signed arithmetic, correlated
 full-source estimates and other kernel classes remain outside these
@@ -217,3 +247,6 @@ unproved arithmetic and all-zero tasks complete.
 
 [n7]: ../notes/07_LOCAL_CORRELATION_AND_JENSEN_MARGIN_COMPARISONS_20261020.md
 [review7]: ../reviews/07_LOCAL_CORRELATION_AND_JENSEN_MARGIN_REVIEW_20261020.md
+
+[n8]: ../notes/08_RECIPROCAL_PRECISION_AND_BANDLIMITED_ARITHMETIC_COSTS_20261020.md
+[review8]: ../reviews/08_RECIPROCAL_PRECISION_AND_KERNEL_REVIEW_20261020.md

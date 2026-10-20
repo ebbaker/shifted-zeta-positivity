@@ -116,6 +116,13 @@ needs a lower bound for `|zeta(rho+w)/w^2|`, which the assessment did not
 obtain. No differentiated pointwise remainder or zero-free denominator
 was assumed.
 
+**Continuation:** [Note 08](../notes/08_RECIPROCAL_PRECISION_AND_BANDLIMITED_ARITHMETIC_COSTS_20261020.md) supplies
+uniform reciprocal precision at `w=c/log gamma` using RH and a fixed
+cutoff `N=ceil(gamma^(1+epsilon))`. It fills this finite-distance precision
+gap; it does not lower-bound the endpoint coefficient `zeta''(rho)/2`
+or obtain the opposing signed estimate. The original assessment above
+records what had been established in its own round.
+
 ## 4. Verification scope
 
 The checks cover arbitrary integer multiplicity, complete exterior-zero
