@@ -3,12 +3,36 @@
 16 October 2026. Prepared for Edward Baker with substantial LLM assistance.
 Initialization model: **gpt-6-astra (Codex)**; reasoning effort: **ultra**.
 
-**Current exploratory expansion, 18 October 2026:** five new fixed-function
+**Contradiction analysis setup, 19 October 2026:**
+[13 Contradiction analysis](13_contradiction_analysis/README.md) now provides
+five standard research homes and initial notes for retained first-jet
+separation, threshold higher-jet signs, complete source reflection,
+boundary winding, and collision divergence. The opening notes identify
+precise incompatible statements, inherited inputs, missing estimates,
+controls, and questions for deeper exploration. A full research program
+and progress file are deferred at Edward's request. Prepared for Edward
+Baker with substantial LLM assistance, **gpt-6-astra (Codex), xhigh**.
+This initialization adds no mathematical result or research run.
+
+**Current fixed-function continuation, 19 October 2026:** the
+[new arithmetic research program](research-overview/03_FIXED_FUNCTION_ARITHMETIC_RESEARCH_PROGRAM_20261019.md)
+prioritizes an estimate for the genuine height-dependent arithmetic sum,
+with threshold-specific constraints and quantitative modular rigidity as
+further options. It follows the
+[research assessment](11_arithmetic_collision_rigidity/reviews/19_FIXED_FUNCTION_PROGRAM_AND_AMBITIOUS_NEXT_STEPS_REVIEW_ASTRA_20261019.md)
+of Project 11. The
+[shared progress register](research-progress/03_FIXED_FUNCTION_ARITHMETIC_RESEARCH_PROGRESS_20261019.md)
+records documentation complete, FFA-01 Ready and new estimating work
+unstarted. Prepared for Edward Baker with substantial LLM assistance,
+**gpt-6-astra (Codex), actual effort xhigh**. The setup establishes no new
+mathematical result or coverage.
+
+**Initial exploratory expansion, 18 October 2026:** five new fixed-function
 projects, 08–12, are initialized in the
 [exploratory research plan](research-overview/02_EXPLORATORY_FIXED_FUNCTION_RESEARCH_PLAN_20261018.md).
 Each has an expanded proposal, opening tasks, control screen and standard
 research folders. **11 is Edward Baker's preferred next exploration**;
-the current work outlines all five before beginning that research round.
+the initialization outlined all five before beginning that research round.
 Prepared for Edward Baker with substantial LLM assistance,
 **gpt-6-astra (Codex), effort max**. No new result or mathematical review is
 claimed by this initialization.
@@ -20,6 +44,7 @@ claimed by this initialization.
 | [10 Modular auxiliary functions](10_modular_auxiliary_functions/README.md) | Can an admissible modular kernel bound the existing signed collision form? |
 | [11 Arithmetic constraints at collision scale](11_arithmetic_collision_rigidity/README.md) | Can global arithmetic restrict the exterior data of a local collision? Preferred next exploration |
 | [12 Fixed beta eta kernel](12_fixed_beta_eta_kernel/README.md) | Can the exact eta product yield a new estimate for the single character chi_-4? |
+| [13 Contradiction analysis](13_contradiction_analysis/README.md) | Which precise arithmetic estimates could contradict an RH-forced event? Five opening notes; full program deferred |
 
 **Earlier portfolio assessment, 17 October 2026:** the
 [new brainstorm](brainstorm/README.md) reviews all seven lanes through the
@@ -66,5 +91,6 @@ Read the [result summaries](../../result-summaries/README.md) and
 [patterns to avoid](../../avoid/README.md) before beginning work.
 
 [Research-overview index](research-overview/README.md) ·
+[Shared research progress](research-progress/README.md) ·
 [Chat-history routing](chat-histories/README.md) ·
 [Draft history](DRAFT_HISTORY.md).

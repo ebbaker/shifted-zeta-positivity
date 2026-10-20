@@ -19,3 +19,14 @@ the [portfolio history folder](../../chat-histories/README.md).
 
 [chat]: ../../brainstorm/chat-histories/0001_2026-10-18T16-35-26Z_brainstorm-investigations-3-projects.json
 [chatguide]: ../../../../tools/CHAT_HISTORY.md
+
+## Conversation moved to the brainstorm
+
+On 19 October 2026, at Edward Baker's request, chat 11,
+[Explain arithmetic rigidity obstacle](../../brainstorm/chat-histories/0011_2026-10-20T01-37-24Z_explain-arithmetic-rigidity-obstacle.json),
+moved to the investigations-3 brainstorm archive. Its number, filename,
+identity, original capture provenance, and public history were preserved.
+Only the linked destination is registered; no transcript copy remains here.
+The [relocation receipt](../../brainstorm/CHAT_HISTORY_RELOCATION_20261019.json)
+records the checks and backup location. Prepared for Edward Baker with
+substantial LLM assistance, **gpt-6-astra (Codex), xhigh**.

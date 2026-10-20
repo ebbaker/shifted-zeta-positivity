@@ -37,6 +37,20 @@ The new conversation is registered in this brainstorm's
 [chat histories](chat-histories/README.md). Existing portfolio chat
 registrations retain their identities and homes.
 
+## Small jet obstruction and contradiction targets 19 October 2026
+
+[Small jet obstruction and precise contradiction targets for RH](notes/04_SMALL_JET_OBSTRUCTION_AND_RH_CONTRADICTION_TARGETS_ASTRA_20261019.md)
+is a living note for the current explanatory brainstorm. It catalogues the
+small-disk implication, conditional arithmetic cancellation, and possible
+correlated residual estimates; makes the RH-failure-to-threshold-event
+reduction explicit; and compares five precise contradiction targets with
+their missing estimates and control screens. Prepared for Edward Baker
+with substantial LLM assistance, **gpt-6-astra (Codex), xhigh**.
+No new arithmetic theorem or program-status change is claimed. The
+conversation now has its sole [brainstorm archive](chat-histories/0011_2026-10-20T01-37-24Z_explain-arithmetic-rigidity-obstacle.json)
+registration, preserving number 11 and its identity after Edward's requested
+19 October relocation.
+
 ## Earlier assessment and proposals
 
 - [Progress assessment](01_PROGRESS_ASSESSMENT_CODEX_20261017.md): all seven
