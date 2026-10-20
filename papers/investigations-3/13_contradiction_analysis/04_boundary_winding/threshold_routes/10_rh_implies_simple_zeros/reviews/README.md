@@ -58,3 +58,9 @@ checks the primary short-log-zeta lemma, complete higher-prime-power tail,
 phase-separation constant, refined return scale and full-envelope costs.
 Separate same-model checks; only the stated uniform-alignment family is
 closed as an improvement, and the simplicity conclusion remains open.
+
+[11 — General kernel envelope](11_GENERAL_KERNEL_ENVELOPE_REVIEW_20261020.md)
+checks the continuous Gram identity, complete zero and prime-power
+payments, bandwidth-independent tail bound, stable Poisson inequality,
+logarithmic moment budget and sharp leading one-half cost for the full
+declared class. Separate same-model checks; no original-zero exclusion.

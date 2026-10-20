@@ -469,7 +469,15 @@ not imply a useful unrestricted near-zero payment bound. No improved
 complete height envelope follows without paying the quantitative
 simultaneous phase-return height.
 
-The full unrestricted kernel problem remains open in this calculation. In particular, (K16) does not cover sequences with \(I\Delta\ge2\), or \(I\Delta\uparrow2\) without a sufficient quantitative margin, or kernels failing the complete archimedean budgets. The bandwidth is the actual declared support bound; artificially inflating it does not strengthen the theorem. Prime-sample notches cannot be handled by replacing the discrete sum with an unproved continuous weighted norm of \(|\widehat h|\). A signed estimate for the actual \(Q_\gamma\), rather than payment by (K1), is also outside this result.
+**Subsequent closure under the same complete budgets:** [Note 11][n11]
+proves the leading one-half full-envelope floor for every admissible
+nonnegative bandlimited kernel in §5, including arbitrary I Delta and
+Fourier signs. It pays a continuous Gram comparison through an explicit
+logarithmic pair moment, then bounds that moment by (K4). This supersedes
+the then-open full-envelope question below, but not Note 09's valid
+counterexamples to an unrestricted lower bound on C(h) alone.
+
+At the time of this calculation the full unrestricted kernel problem remained open. In particular, (K16) does not cover sequences with \(I\Delta\ge2\), or \(I\Delta\uparrow2\) without a sufficient quantitative margin, or kernels failing the complete archimedean budgets. The bandwidth is the actual declared support bound; artificially inflating it does not strengthen the theorem. Prime-sample notches cannot be handled by replacing the discrete sum with an unproved continuous weighted norm of \(|\widehat h|\). A signed estimate for the actual \(Q_\gamma\), rather than payment by (K1), is also outside this result.
 
 The event condition itself grants neither (K12) nor the missing signed prime cancellation. No simplicity assumption enters (K6)–(K18). For the required control screen, the endpoint Euler controls change the logarithmic prime coefficients and completion data, while Note 05's normalized positive-source controls fail the ordinary Dirichlet-series arithmetic. They therefore do not satisfy the unchanged-zeta explicit formula (K2) with its exact positive von Mangoldt weights; shape, all-real endpoint zeros, and source positivity alone are not being used to exclude them. No original theta zero is excluded by this note.
 
@@ -487,3 +495,5 @@ The event condition itself grants neither (K12) nor the missing signed prime can
 [a07]: ../../../../../../../avoid/07_scoped_exclusions_read_as_universal.md
 [a12]: ../../../../../../../avoid/12_term_by_term_matching_and_separate_bounds.md
 [a20]: ../../../../../../../avoid/20_volume_without_a_gain.md
+
+[n11]: 11_FULL_ABSOLUTE_PRIME_ENVELOPE_AND_LOGARITHMIC_SPREAD_20261020.md

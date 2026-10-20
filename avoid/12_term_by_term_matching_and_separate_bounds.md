@@ -236,3 +236,17 @@ instead places the ordinary π near an interior extremum. Neither localization
 nor a nonvanishing approximation to that one-lobe cap supplies extra winding.
 This stops that deduction, not all event-conditioned theta estimates;
 [Review 06](../papers/investigations-3/13_contradiction_analysis/04_boundary_winding/threshold_routes/09_expanding_contour_later_collision/reviews/06_PHASE_CONCENTRATION_MANUSCRIPT_REVIEW_20261020.md).
+
+
+**20 October 2026 — complete absolute-prime optimization (BW-10).**
+[Note 11](../papers/investigations-3/13_contradiction_analysis/04_boundary_winding/threshold_routes/10_rh_implies_simple_zeros/notes/11_FULL_ABSOLUTE_PRIME_ENVELOPE_AND_LOGARITHMIC_SPREAD_20261020.md) proves under RH the sharp leading one-half
+cost for every admissible nonnegative bandlimited kernel with its complete
+gamma/pole budgets. It records: “Do not repeat kernel optimization while
+retaining this absolute prime payment and the same complete budgets.”
+The proof prices near-zero prime payment through logarithmic spread, so
+the earlier translated counterexamples do not invalidate the full-cost
+comparison. Retained signed arithmetic and other justified consumers
+remain open; omitting a required payment is not a gain.
+[Separate same-model review](../papers/investigations-3/13_contradiction_analysis/04_boundary_winding/threshold_routes/10_rh_implies_simple_zeros/reviews/11_GENERAL_KERNEL_ENVELOPE_REVIEW_20261020.md).
+Prepared for Edward Baker with substantial LLM assistance,
+**gpt-6-astra, effort ultra**; no original-zero exclusion or specialist review.

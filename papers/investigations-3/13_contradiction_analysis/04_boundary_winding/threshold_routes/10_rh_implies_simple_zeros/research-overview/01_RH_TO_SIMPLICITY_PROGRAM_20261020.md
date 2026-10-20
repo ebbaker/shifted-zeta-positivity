@@ -360,3 +360,29 @@ scalar squares. Their small discrete prime payments remain valid.
 Other phase configurations and kernels remain outside the result; no
 opposing signed estimate, strict cap surplus or original-zero exclusion
 has been obtained. The [progress register][progress] retains those gates.
+
+
+## 13. Complete absolute-prime envelope: the full admissible class
+
+20 October 2026. Prepared for Edward Baker with substantial LLM assistance,
+**gpt-6-astra, effort ultra**. [Note 11](../notes/11_FULL_ABSOLUTE_PRIME_ENVELOPE_AND_LOGARITHMIC_SPREAD_20261020.md)
+removes the mass-bandwidth and translated-family restrictions from the
+leading-cost comparison. Under RH, every admissible nonnegative
+bandlimited kernel with the displayed gamma and pole budgets has
+complete absolute-prime envelope at least
+`(1/2-o(1)) L/log L`. The centered Fejér sequence attains that leading
+constant. No bound on bandwidth or Fourier signs is added.
+
+The proof keeps every prime power and every zero in a smoothed explicit
+formula. A continuous Gram identity pays the entire upper Fourier tail
+through the kernel's logarithmic pair moment M; averaged Poisson recovers
+the normalization factor two. The standalone inequality
+`C+I M >= c I^3 exp(pi/I)` prices small prime payment and spread jointly.
+The gamma budget itself gives `M<=(1+o(1))L`.
+[Review 11](../reviews/11_GENERAL_KERNEL_ENVELOPE_REVIEW_20261020.md) checks all exchanges, constants and scope.
+
+This closes this complete absolute-payment optimization as a route to an
+all-height simplicity bound. The near-zero prime-payment examples remain
+valid, and Note 10 retains its stronger family-specific return result.
+A signed arithmetic estimate or another justified consumer is still
+needed; RH-to-simplicity, strict surplus and all-zero coverage remain open.

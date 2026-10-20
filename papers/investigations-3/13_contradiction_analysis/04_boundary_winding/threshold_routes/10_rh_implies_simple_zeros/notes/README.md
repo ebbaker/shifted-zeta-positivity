@@ -22,4 +22,6 @@
 
 - [10 — Uniform prime-phase return height](10_UNIFORM_PRIME_PHASE_RETURN_HEIGHT_COST_20261020.md). Under RH, the fully aligned two-/three-copy constructions have complete-envelope leading costs at least one/three-halves; their near-zero prime-payment examples remain valid. No theta exclusion.
 
+- [11 — Full absolute-prime envelope and logarithmic spread](11_FULL_ABSOLUTE_PRIME_ENVELOPE_AND_LOGARITHMIC_SPREAD_20261020.md). Under RH, the sharp leading one-half cost holds for every admissible nonnegative bandlimited kernel with the complete gamma/pole budgets. A joint exponential bound prices prime payment and logarithmic spread. Signed arithmetic remains open.
+
 [Progress](../research-progress/01_RH_TO_SIMPLICITY_PROGRESS_20261020.md) · [Reviews](../reviews/README.md).

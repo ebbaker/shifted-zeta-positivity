@@ -366,3 +366,18 @@ certified collision exclusion.” [Manuscript Section 13](../papers/investigatio
 integrates UAR-03/04 and these extensions; [review 18](../papers/investigations-3/11_arithmetic_collision_rigidity/reviews/18_UAR_ANALYTIC_MANUSCRIPT_AND_GENERALIZATION_REVIEW_20261019.md)
 records internal self-review and scalar replays. Prepared for Edward Baker
 with substantial LLM assistance, **gpt-6-astra, actual effort max**.
+
+
+**20 October 2026 — RH-conditional absolute-prime envelope (BW-10).**
+[Note 11](../papers/investigations-3/13_contradiction_analysis/04_boundary_winding/threshold_routes/10_rh_implies_simple_zeros/notes/11_FULL_ABSOLUTE_PRIME_ENVELOPE_AND_LOGARITHMIC_SPREAD_20261020.md) is **proved under RH within the stated
+complete-budget class**: every admissible nonnegative bandlimited kernel
+has leading complete absolute-prime cost at least one-half times
+L/log L, with equality at leading order for the centered Fejér sequence.
+A joint inequality C+I M>=c I^3 exp(pi/I) pays the kernel's logarithmic
+pair moment; the gamma budget bounds M by (1+o(1))L. This removes the
+earlier mass-bandwidth and translation restrictions, while retaining the
+gamma and negative-pole budgets. “The signed arithmetic term remains
+outside this theorem.” Small-C examples remain valid; no original zero
+is excluded. [Separate same-model review](../papers/investigations-3/13_contradiction_analysis/04_boundary_winding/threshold_routes/10_rh_implies_simple_zeros/reviews/11_GENERAL_KERNEL_ENVELOPE_REVIEW_20261020.md).
+Prepared for Edward Baker with substantial LLM assistance,
+**gpt-6-astra, effort ultra**; no specialist review or novelty claim.

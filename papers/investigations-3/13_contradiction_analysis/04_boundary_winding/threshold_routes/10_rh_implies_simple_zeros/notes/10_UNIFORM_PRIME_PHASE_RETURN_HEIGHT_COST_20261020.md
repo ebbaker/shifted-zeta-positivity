@@ -182,6 +182,15 @@ nonuniform phase alignment, other translation patterns and other kernels
 remain outside this conclusion. RHS-02's opposing arithmetic estimate,
 the strict cap surplus and all-zero coverage remain open.
 
+**Subsequent broader result:** [Note 11][n11] proves the sharp leading
+one-half floor for the complete absolute-prime envelope of every
+admissible nonnegative bandlimited kernel, with the same explicit gamma
+and pole budgets. It uses a different full-tail argument and does not
+erase this note's stronger d/2 comparison for the aligned-copy family.
+Signed arithmetic and kernels without those complete budgets remain
+outside that theorem.
+
+[n11]: 11_FULL_ABSOLUTE_PRIME_ENVELOPE_AND_LOGARITHMIC_SPREAD_20261020.md
 
 [review]: ../reviews/10_PRIME_PHASE_RETURN_HEIGHT_REVIEW_20261020.md
 [n9]: 09_ARITHMETIC_CONTROLS_TRANSLATED_KERNELS_AND_STABLE_EXTRACTION_20261020.md

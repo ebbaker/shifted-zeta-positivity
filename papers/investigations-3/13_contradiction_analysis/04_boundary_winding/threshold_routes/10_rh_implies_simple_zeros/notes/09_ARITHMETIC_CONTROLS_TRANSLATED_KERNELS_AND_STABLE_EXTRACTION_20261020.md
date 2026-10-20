@@ -432,6 +432,12 @@ Finally, `|sum_j s_j|^2<=d sum_j|s_j|^2` on the real line pays (K12) for the squ
 
 **Disposition.** Small mass plus nonnegative bandlimitation does permit arbitrarily small absolute prime payment for `I Delta->3`, even with the explicit archimedean budgets. An unrestricted extension of Note 08(K15), or a uniform near-zero-payment consequence of its exact-zero statement, is therefore false. [Note 10][n10] now pays the uniform phase-return lower height and proves the full-envelope comparison for this particular family. Arbitrary kernels and other phase patterns remain outside the result; no original theta zero or multiplicity event is excluded.
 
+**Subsequent general comparison:** [Note 11][n11] extends the leading
+one-half full-envelope floor to every admissible nonnegative kernel under
+the complete gamma/pole budgets. Its joint prime-payment/logarithmic-spread
+bound explains why the small C(h) examples here do not improve that full
+envelope. Note 10 retains the stronger d/2 cost for these aligned copies.
+
 ## 9. Exact filter and its uniform stability
 
 Assume RH. Let \(\gamma>0\) be an actual zero ordinate of exact multiplicity \(m\), and assume a separately justified number \(0<d\le1/2\) satisfies
@@ -632,3 +638,5 @@ Direct first-jet exclusion at a known zero requires a certified positive lower b
 [a20]: ../../../../../../../avoid/20_volume_without_a_gain.md
 
 [n10]: 10_UNIFORM_PRIME_PHASE_RETURN_HEIGHT_COST_20261020.md
+
+[n11]: 11_FULL_ABSOLUTE_PRIME_ENVELOPE_AND_LOGARITHMIC_SPREAD_20261020.md
