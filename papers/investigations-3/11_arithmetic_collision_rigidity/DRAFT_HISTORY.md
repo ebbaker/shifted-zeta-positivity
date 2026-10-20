@@ -523,3 +523,14 @@ belongs in those sources; create no new manuscript snapshot folders.
   Research source milestone; manuscript unchanged, no new snapshot or commit,
   coverage or Newman bound. Prepared for Edward Baker with substantial LLM
   assistance, **gpt-6.1-sol, actual effort ultra**.
+
+- **19 October 2026 — project 11 UAR analytic manuscript milestone.**
+  Local Git tag `inv11-uar-analytic-20261019`; canonical source
+  [manuscript](manuscript/positive_arithmetic_packets/main.tex), 52 pages.
+  Integrates UAR-03/04, the bounded UAR-05/06 comparison, and the explicit
+  arbitrary-endpoint and qualitative compact-band extensions in
+  [S03 Note 13](symmetries/03_normalized_jet_rotation/notes/13_REBASED_RESIDUAL_AND_COMPACT_SECTOR_EDGE_EXTENSIONS_20261019.md).
+  [Review 18](reviews/18_UAR_ANALYTIC_MANUSCRIPT_AND_GENERALIZATION_REVIEW_20261019.md)
+  and its receipt record verification. No new physical coverage or snapshot
+  folder. Drafted for Edward Baker with substantial LLM assistance,
+  **gpt-6-astra, actual effort max**; internal self-review.

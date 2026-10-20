@@ -1,12 +1,12 @@
 {
-  "date_utc": "2026-10-19T21:18:33.988422+00:00",
+  "date_utc": "2026-10-20T00:31:42.360361+00:00",
   "prepared_for": "Edward Baker",
   "model": "gpt-6-astra",
   "reasoning_effort": "max",
-  "llm_assistance": "Substantial; current documentation integration by the contributing assistant. Earlier configurations remain in the acknowledgements and preceding record.",
-  "status": "Working draft. Original analytic proofs and certificates retained; Section 12 summarizes existing symmetry results by linked notes. Global gaps unchanged; no new Newman bound.",
+  "llm_assistance": "Substantial; UAR integration and new analytic extensions by gpt-6-astra at max. Earlier configurations remain in acknowledgements and preceding records.",
+  "status": "52-page working draft. UAR-03/04 integrated with an explicit arbitrary-endpoint corollary and qualitative compact-band edge/transition extension. No new physical coverage or Newman bound.",
   "source_sha256": {
-    "main.tex": "b1c805bed1cd33046938883e33048287e735921084282c57bab37f31755d210b",
+    "main.tex": "ffa4b4d553b6be2dd57fbc65f7201c53ec9a717ce0e8109866f411d217bf335f",
     "sections/01_theta.tex": "1314d437144ce23c02c0c858409fc047d2fd0d5c56d5462d614ed70b8120dfa3",
     "sections/02_packets.tex": "5bab1829a92f7032a15d80ad874b15fff252c598b6194c07fab7efcf7d70beac",
     "sections/03_positivity.tex": "080089b5184d032403789bf139bb465c92fc9a379ac2fc6811049d50cc8dc948",
@@ -17,10 +17,11 @@
     "sections/08_effective_tails.tex": "74e0324f9daa0e0b006da055822fcbb2caee1af3ab1f507f855a88e960f9cab4",
     "sections/09_finite_certificates.tex": "04a4902b4d05bb923aefe9aa472e6bf6c86246765a1258f7188ab102762359f6",
     "sections/10_outer_exclusion.tex": "620f98be47635b8ebb0ecb6d321238c8caa02d66d8496859c994489981c7b050",
-    "sections/11_global_scope.tex": "a3f4d4fa0e5a79763ff1826382fbe9285bb1acfc5cf9d613866d0bea4a2d068e",
-    "sections/12_symmetry_findings.tex": "ec263702ab13746a9506e35783f6664935ab9005c27613012d3344bd3b78cfb2"
+    "sections/11_global_scope.tex": "afbb9cbe616410fb74150ac66163edf7c9b140bad8c69db02e6b8aca0c125b78",
+    "sections/12_symmetry_findings.tex": "e7b4496f7fb8fc89bb241a6e58161895c081e3324d5fda7b7794d71ccdb17d91",
+    "sections/13_uniform_coherent_edge.tex": "a6ae2931ffa599edce341fb31c913aa2492ac35bf7ee7547a3a276172d27842c"
   },
-  "source_set_sha256": "4ad46c6a95ff04c0ab7acd3b4c2433d24ad08e5915dde3dd0c73342c226dfa70",
+  "source_set_sha256": "90dbe4dc121246529958bc20d1ee7ccc789285f269e1fad398453e4f6fb37cb2",
   "source_set_hash_recipe": "SHA256 of UTF-8 JSON source_sha256 object, sorted keys, separators comma and colon, no trailing newline.",
   "numeric_files_relative_to_investigation_numerics": {
     "certify_manuscript_constants.py": "8ca6ee691326f2fd4365651d6a7157156aa206ba39d0177d25083f52415dad99",
@@ -72,47 +73,95 @@
     "07_geometric_duality_and_quaternionic_symmetry/notes/05_OBSERVATION_OPTIONS_AND_BOUNDED_FEASIBILITY_SCREENS_20261019.md": "468ec41c05ee80bb2654ca634f75fb9cdabe57fc0288d1cfd97791d06bd4b9d4",
     "notes/06_GEO_T1_WINDING_AND_DIRECT_COMPARISON_20261019.md": "bd73f23017ca694bbc71cc4c7c6f6a2576556ce38764c80a179f96db3ca3a181",
     "research-overview/03_UNIFORM_ARITHMETIC_RESIDUAL_RESEARCH_PROGRAM_20261019.md": "471b958468a5b06a91a9c15dd3cd7298c47e7324ac053f36ae6928d127c583f7",
-    "research-progress/02_UNIFORM_ARITHMETIC_RESIDUAL_PROGRESS_20261019.md": "59bf7c16eb07397154192aab068897e92dd7d09c55c434e0944e99a3048e2530"
+    "research-progress/02_UNIFORM_ARITHMETIC_RESIDUAL_PROGRESS_20261019.md": "59bf7c16eb07397154192aab068897e92dd7d09c55c434e0944e99a3048e2530",
+    "03_normalized_jet_rotation/README.md": "a3b31574a428a96a3ae064ef1115c194a0467c4f63e0b41e584827ef035e9d66",
+    "03_normalized_jet_rotation/numerics/README.md": "ce6ec910c6586d957764e2d93c91add8f4ce557ff2dd201d962814e7f2dd6284",
+    "summary/02_UNIFORM_ARITHMETIC_RESIDUAL_ROUND_SUMMARY_20261019.md": "60675027da0a7ad906b1fc17b31c18be3b113410dd557ff139f8ff3345142428",
+    "03_normalized_jet_rotation/notes/13_REBASED_RESIDUAL_AND_COMPACT_SECTOR_EDGE_EXTENSIONS_20261019.md": "9d13655b5b297e4481d9beda1b19a6989ad060218809a26ea969e106541b802e",
+    "03_normalized_jet_rotation/numerics/check_rebased_residual_envelope.py": "6d3d257b89029f0ca2be658993f99d60a117756721b41e8abd99d06d2c60588e",
+    "03_normalized_jet_rotation/numerics/REBASED_RESIDUAL_ENVELOPE_20261019.json": "13b1adf0c37e33b63cdc5d878aeabbbc0d62911054aed4d1b44ee01dda9185f8",
+    "03_normalized_jet_rotation/notes/09_UNIFORM_COHERENT_EDGE_AND_CUTOFF_MATCHING_20261019.md": "722ec65b69ae8bfadd4417ede358f7fec7482131958d3a281591fd8f36d82f4d",
+    "03_normalized_jet_rotation/notes/08_UNIFORM_FINITE_GAMMA_HEAT_REMAINDER_20261019.md": "9ac2236777586b73fa9ce065094e1462f57f8153517ad8ccaa7661b5377420e4",
+    "03_normalized_jet_rotation/notes/11_PAID_ANCHOR_AND_BOUNDED_PHYSICAL_SEPARATION_20261019.md": "c897f954f3207f31a3dfdf702124d1c746026786ca6e84f51eb5ef8502755dd0",
+    "03_normalized_jet_rotation/notes/12_MATCHED_COMPLETE_CONSUMER_AND_COST_COMPARISON_20261019.md": "3ffc426724f4737a7ff71478c9251efaf463b959945b2df52a579ff7f188ddf9",
+    "03_normalized_jet_rotation/notes/10_UNIFORM_SIGNED_RESIDUAL_INCREMENT_20261019.md": "7d5a710d204710528bf4ded3b842381ee817f8f3b49190883f73f46432db46f5",
+    "03_normalized_jet_rotation/numerics/UAR04_UNIFORM_SIGNED_INCREMENT_20261019.json": "083435d2339a0e9e89cb13b4ef69e6d7d902b98d988167a353f5f897b6ab9fa6",
+    "03_normalized_jet_rotation/numerics/UAR06_ACCEPTANCE_INPUT_REVIEW_20261019.json": "d5911027c339833d9519ede25a05b423a5719ac4263288f52adc64d454dd9dfe",
+    "03_normalized_jet_rotation/numerics/UAR06_SOURCE_CONTROLS_20261019.json": "6f1f188c27dd4fc8f890205756774a1a65ce4ee5c558a5d827cdc88379f6efb3",
+    "03_normalized_jet_rotation/numerics/UAR02_REVIEW_SCALARS_192_20261019.json": "227699bb1bed8b266c4c2b865745974e95da11eaedabd3a04aae06351f574562",
+    "03_normalized_jet_rotation/numerics/UAR05_REVIEW_REPLAY_192_20261019.json": "2eb8fd2f266639755fe1296672c9cfc838dffd3509747950dc7a4136961d8777",
+    "03_normalized_jet_rotation/numerics/UAR02_UNIFORM_FINITE_GAMMA_HEAT_20261019.json": "8b7a29a4f787b8d0a3877121706da37cb716538166e77aa200ddf018d3dd81ba",
+    "03_normalized_jet_rotation/numerics/UAR03_UNIFORM_COHERENT_EDGE_20261019.json": "24dbac401825ac0a53e33b05c300fb6c31d759b8836c0345b4c1a17498f6ddbe",
+    "03_normalized_jet_rotation/numerics/UAR04_REVIEW_SCALARS_192_20261019.json": "40f093c0a152a3a44507d5b5090f88167eed30c33ce5ec02e1a903fac9d6c543",
+    "03_normalized_jet_rotation/numerics/UAR06_MATCHED_COMPLETE_CONSUMER_20261019.json": "a7480a92bf1d59460b484ef8d31d731ce9dfeaf4b3eb48d8b4249bf08875eb15",
+    "03_normalized_jet_rotation/numerics/UAR05_PAID_ANCHOR_20261019.json": "06c39dcb1c6e0a42fee530ec6990dee35ebadb3e83b2a8f2707b2b3ab997c061",
+    "03_normalized_jet_rotation/numerics/UAR03_SOURCE_CONTROLS_20261019.json": "102ab90ed5c2bd843181e90d76e96d7053e5d6643295d85fd09a3ad2a16020c9",
+    "03_normalized_jet_rotation/numerics/UAR06_REVIEW_REPLAY_20261019.json": "96e0c678d360e0c5da6db217351e3912178a2b28d62f7233bcbc931645900f37",
+    "03_normalized_jet_rotation/numerics/UAR04_SOURCE_CONTROLS_20261019.json": "3c794ab910e8eaf1e5463585c569d730795f8e20bdb800f7170670bfc8da36a4",
+    "03_normalized_jet_rotation/numerics/UAR02_SOURCE_CONTROLS_20261019.json": "ac842dcd1ea67fdbd99187971aefa3e57bb7376f721f9e071ca19291db92644f",
+    "03_normalized_jet_rotation/numerics/UAR05_SOURCE_CONTROLS_20261019.json": "c1b7e1c2aeed7cb93e54747c2dc932852957c9a84c4c63625ba507aabf439f85",
+    "03_normalized_jet_rotation/numerics/UAR03_REVIEW_SCALARS_192_20261019.json": "f0b3ba6f34a385a4cdfb87d3ea345a3ca9b1ab59aa6d75e7d134f052ef0a8307",
+    "03_normalized_jet_rotation/numerics/check_uniform_coherent_edge.py": "b7c75f9242e2d6e0b47a6adfe84c434d6604554cbe60542fe5d8d4e7f59f87d0",
+    "03_normalized_jet_rotation/numerics/check_uniform_signed_increment.py": "c9373ca15f0f83065b584dbbd1a4118ffae4d45f5f45d0003bb5b571f99fd090",
+    "03_normalized_jet_rotation/numerics/check_matched_uniform_consumer.py": "69f009e4ce8ef483275ccb569bb2c4db155d2bbc2e305d65d78606e8718af103",
+    "notes/07_UAR01_CORRECTED_RESIDUAL_AND_TRANSITION_CONTRACT_20261019.md": "b885f58dc942704a9c0320a96e6fecd15186280ac1a4cb7043e67a81592e4a75"
   },
   "compilation": {
     "terminal_passes": 3,
     "all_exit_codes": 0,
     "terminal_command": "pdflatex -interaction=nonstopmode -halt-on-error -file-line-error -output-directory=EXTERNAL_BUILD_DIRECTORY main.tex",
-    "final_log_sha256": "d4d5491bd3214d2f10d1fbf16bd927353ec40c53fb7d31583964f16a3abdb106",
+    "final_log_sha256": "c677efb48bd3c181aa162ec3908b2c0e9e72a5ad20e6e1e21f04be4597bfceed",
     "final_log_warnings": false,
     "overfull_or_underfull_boxes": false,
-    "desktop_compiler": "success"
+    "desktop_compiler": "success",
+    "development_repair": "Undefined mathscr in first development compile replaced by mathcal before the three successful final passes."
   },
   "local_reading_copy_validation": {
     "path_relative_to_repository": "output/pdf/positive_arithmetic_packets.pdf",
-    "sha256": "8313ca82e8f17f8e94371175d0ba07b30a5ef106e76d16a6a3dc724304f8d1ea",
-    "bytes": 639998,
-    "pages": 48,
+    "sha256": "09084368529ecf1bdc86eb4531d6118b0f3ae1f51ea66e04a3878f981d99eefb",
+    "bytes": 677787,
+    "pages": 52,
     "empty_pages": [],
     "out_of_bounds_chars": [],
     "unresolved_reference_markers": false,
-    "note_link_annotations": 20,
-    "unique_note_link_targets": 17,
+    "note_link_annotations": 31,
+    "unique_note_link_targets": 25,
     "all_links_resolve_from_reading_copy": true,
-    "render_dpi": 80,
+    "render_dpi": 65,
+    "detail_render_dpi": 110,
     "all_pages_rendered": true,
-    "visual_review": "All 48 pages inspected in six contact sheets; changed pages 45-48 also inspected at page scale. No clipping, overlaps or illegible layout found.",
+    "visual_review": "All 52 pages inspected in seven contact sheets; pages 47-52 also inspected at page scale. No clipping, overlap or illegible layout found.",
     "local_link_base": "output/pdf/; run links remain within the accompanying repository",
     "new_output_ignored_by_git": true
   },
   "source_reference_validation": {
-    "unique_labels": 180,
+    "unique_labels": 192,
     "all_internal_references_resolve": true,
-    "unique_manuscript_document_links": 17,
-    "all_local_targets_exist": true
+    "unique_manuscript_document_links": 25,
+    "all_local_targets_exist": true,
+    "changed_markdown_unique_targets": 261,
+    "changed_markdown_missing_targets": [],
+    "original_analytic_sections_01_through_10_unchanged": [
+      "papers/investigations-3/11_arithmetic_collision_rigidity/manuscript/positive_arithmetic_packets/sections/09_finite_certificates.tex",
+      "papers/investigations-3/11_arithmetic_collision_rigidity/manuscript/positive_arithmetic_packets/sections/02_packets.tex",
+      "papers/investigations-3/11_arithmetic_collision_rigidity/manuscript/positive_arithmetic_packets/sections/10_outer_exclusion.tex",
+      "papers/investigations-3/11_arithmetic_collision_rigidity/manuscript/positive_arithmetic_packets/sections/08_effective_tails.tex",
+      "papers/investigations-3/11_arithmetic_collision_rigidity/manuscript/positive_arithmetic_packets/sections/01_theta.tex",
+      "papers/investigations-3/11_arithmetic_collision_rigidity/manuscript/positive_arithmetic_packets/sections/05_controls.tex",
+      "papers/investigations-3/11_arithmetic_collision_rigidity/manuscript/positive_arithmetic_packets/sections/04_modular_collisions.tex",
+      "papers/investigations-3/11_arithmetic_collision_rigidity/manuscript/positive_arithmetic_packets/sections/07_shifted_approximation.tex",
+      "papers/investigations-3/11_arithmetic_collision_rigidity/manuscript/positive_arithmetic_packets/sections/03_positivity.tex",
+      "papers/investigations-3/11_arithmetic_collision_rigidity/manuscript/positive_arithmetic_packets/sections/06_certification.tex"
+    ]
   },
   "numeric_validation": {
-    "status": "Inherited results retained; no new numerical rerun for this summary-only integration.",
-    "existing_analytic_sections_unchanged": true,
-    "relevant_prior_replay_inputs_unchanged": 36,
-    "selective_19_october_replay": "../../numerics/MANUSCRIPT_SYMMETRY_REVIEW_REPLAY_20261019.json",
-    "original_manuscript_replay": "../../numerics/MANUSCRIPT_INTEGRATION_REPLAY_20261018.json",
-    "integration_checks": "../../numerics/SYMMETRY_PROGRAM_MANUSCRIPT_INTEGRATION_20261019.json"
+    "status": "Fresh UAR03/UAR04/UAR06 replays and new rebased-envelope constant/fixture checker, at 192 and 256 bits.",
+    "existing_analytic_sections_01_through_10_unchanged": true,
+    "fresh_source_event_rejections": 5,
+    "separate_euler_witness": true,
+    "integration_checks": "../../numerics/UAR_ANALYTIC_MANUSCRIPT_INTEGRATION_20261019.json",
+    "integration_checks_sha256": "f6bf9f4d900dd42de011dd2059ebc9079ba13c81b94360d5de9f33d0c92c6ce5",
+    "original_manuscript_replay": "../../numerics/MANUSCRIPT_INTEGRATION_REPLAY_20261018.json"
   },
   "external_inputs": [
     {
@@ -124,25 +173,37 @@
       "citation": "D. J. Platt and T. S. Trudgian, arXiv:2004.09765v1, Theorem 1 and Corollary 2",
       "url": "https://arxiv.org/abs/2004.09765",
       "scope": "Published initial verification; only zeta height 500 used for the finite wall. Published Lambda<=1/5 comparison baseline."
+    },
+    {
+      "citation": "D. H. J. Polymath, arXiv:1904.12438v2, section 4 and Propositions 6.1-6.3",
+      "url": "https://arxiv.org/html/1904.12438v2#S4",
+      "scope": "Exact fixed-contour heat-edge representation and published approximation estimates, inherited by UAR notes."
+    },
+    {
+      "citation": "NIST DLMF Chapter 5, sections 5.5 and 5.11",
+      "url": "https://dlmf.nist.gov/5.11#ii",
+      "scope": "Gamma reflection and logarithmic Stirling remainder used in the unbounded heat-line estimate."
     }
   ],
-  "review": "../../reviews/16_SYMMETRY_PROGRAM_AND_MANUSCRIPT_INTEGRATION_REVIEW_20261019.md",
+  "review": "../../reviews/18_UAR_ANALYTIC_MANUSCRIPT_AND_GENERALIZATION_REVIEW_20261019.md",
   "limitations": [
-    "Internal LLM review, not independent specialist review.",
-    "Symmetry section summarizes linked notes; their detailed proofs are not reproduced here.",
-    "No new physical coverage, effective onset or Newman bound.",
-    "Real bridge and required complex exterior remain open.",
-    "Local PDF note links resolve from the repository reading copy in output/pdf."
+    "Scalar replays support constants and fixtures; the written analytic arguments supply uniformity.",
+    "No independent specialist review or implementation-independent validation of the full claims.",
+    "No numerical onset or explicit constants for a new compact band; no full UAR04 bound outside the original band.",
+    "Higher component error derivatives are not a complete higher-jet certificate.",
+    "No extension to all heights at fixed time, fixed-width strips, or other arithmetic sources.",
+    "UAR06 remains a scoped consumer loss; no new physical margin, bridge closure, exterior control, or Newman bound.",
+    "Historical review receipts retain their original source-version scope."
   ],
   "previous_manuscript_revision": {
-    "date_utc": "2026-10-18T22:50:05.136900+00:00",
+    "date_utc": "2026-10-19T21:18:33.988422+00:00",
     "prepared_for": "Edward Baker",
     "model": "gpt-6-astra",
     "reasoning_effort": "max",
-    "llm_assistance": "Substantial; present integration by the contributing assistant.",
-    "status": "Working draft; written analytic proofs, finite interval certificates and internal LLM checks. Global bridge remains open; no new Newman bound.",
+    "llm_assistance": "Substantial; current documentation integration by the contributing assistant. Earlier configurations remain in the acknowledgements and preceding record.",
+    "status": "Working draft. Original analytic proofs and certificates retained; Section 12 summarizes existing symmetry results by linked notes. Global gaps unchanged; no new Newman bound.",
     "source_sha256": {
-      "main.tex": "0ebb2a0a4fb6a6b5edb0b398445339f04a54042480d9cc60855b21c80c64ee5e",
+      "main.tex": "b1c805bed1cd33046938883e33048287e735921084282c57bab37f31755d210b",
       "sections/01_theta.tex": "1314d437144ce23c02c0c858409fc047d2fd0d5c56d5462d614ed70b8120dfa3",
       "sections/02_packets.tex": "5bab1829a92f7032a15d80ad874b15fff252c598b6194c07fab7efcf7d70beac",
       "sections/03_positivity.tex": "080089b5184d032403789bf139bb465c92fc9a379ac2fc6811049d50cc8dc948",
@@ -153,10 +214,11 @@
       "sections/08_effective_tails.tex": "74e0324f9daa0e0b006da055822fcbb2caee1af3ab1f507f855a88e960f9cab4",
       "sections/09_finite_certificates.tex": "04a4902b4d05bb923aefe9aa472e6bf6c86246765a1258f7188ab102762359f6",
       "sections/10_outer_exclusion.tex": "620f98be47635b8ebb0ecb6d321238c8caa02d66d8496859c994489981c7b050",
-      "sections/11_global_scope.tex": "a3f4d4fa0e5a79763ff1826382fbe9285bb1acfc5cf9d613866d0bea4a2d068e"
+      "sections/11_global_scope.tex": "a3f4d4fa0e5a79763ff1826382fbe9285bb1acfc5cf9d613866d0bea4a2d068e",
+      "sections/12_symmetry_findings.tex": "ec263702ab13746a9506e35783f6664935ab9005c27613012d3344bd3b78cfb2"
     },
-    "source_set_sha256": "2690c3052927702a7f25d7e0519cc8ae10abfd202ac891bb8c06208eaa9a7b0c",
-    "source_set_hash_recipe": "SHA256 of UTF-8 JSON source object, sorted keys, separators comma and colon, no trailing newline.",
+    "source_set_sha256": "4ad46c6a95ff04c0ab7acd3b4c2433d24ad08e5915dde3dd0c73342c226dfa70",
+    "source_set_hash_recipe": "SHA256 of UTF-8 JSON source_sha256 object, sorted keys, separators comma and colon, no trailing newline.",
     "numeric_files_relative_to_investigation_numerics": {
       "certify_manuscript_constants.py": "8ca6ee691326f2fd4365651d6a7157156aa206ba39d0177d25083f52415dad99",
       "certify_updated_manuscript.py": "5f10e1ea3a0f22e3e189679db1f002f7fdbf55330925b101851b2b54ad14b257",
@@ -190,37 +252,64 @@
       "02_updated_research_plan/13_VERTICAL_WALL_AND_FINITE_HEIGHT_NONCOLLISION_20261018.md": "e28b714a52706120af26fce67070adb83529c4446a75cb1f9bb0c46abe756229",
       "02_updated_research_plan/14_SHARPER_OUTER_EXCLUSION_AND_CONSTANT_DISTANCE_CONTOURS_20261018.md": "a9d792fbc2de95745a0c56238e56ab146c083912befba64e3aeaa49ec0e78765"
     },
+    "symmetry_provenance_relative_to_symmetries": {
+      "summary/01_SYMMETRY_RESEARCH_PROGRESS_SUMMARY_20261019.md": "358830f153e2ca6f2a3ab4f90d841433105e9714ad0ce355863640434b8eb402",
+      "03_normalized_jet_rotation/notes/06_ARITHMETIC_GAMMA_AND_EDGE_CORRECTIONS_20261019.md": "ae3df82361fc2cd11f7485cea457677a24b1108bf8de455aa12c7767108c2b73",
+      "03_normalized_jet_rotation/notes/07_COMPLETE_ARITHMETIC_EDGE_AND_RESIDUAL_INCREMENT_20261019.md": "1ee0b6f2ba1a358aa8f188cf6a1137250a2edc1bd8bb56a7621bdee7518598dc",
+      "03_normalized_jet_rotation/notes/05_CALIBRATED_FIRST_JET_AND_MATCHED_DIRECT_COMPARISON_20261019.md": "d97fa78499c6c8cb8054b5c194fd1e239e012403b22bebef9205a8ef31940c25",
+      "04_time_height_scaling/notes/01_PHASE_RETAINING_FULL_CUTOFF_SCALING_20261018.md": "7a0de0010327f4469836038e54df471aa227eaacdc83a6ab3dffe5fd218175b1",
+      "04_time_height_scaling/notes/02_GAUSSIAN_SIGNED_CORE_AND_COMPLETE_AVERAGED_VALUE_20261019.md": "fac173bf5dc839a8669e192b40d19be8788c0b41b8bee411858512acb08bba70",
+      "04_time_height_scaling/notes/03_UNIFORM_LOCAL_RESIDUAL_TRANSFER_AND_CUTOFF_PAYMENT_OBSTRUCTION_20261019.md": "3abe964111d47bdd02e87946d5e9cee221113cfa9271e470b2c122bb2124fccc",
+      "01_modular_self_duality/notes/02_COMPLETE_PAIRED_TAIL_CONSUMER_AND_STOPPING_DECISION_20261019.md": "28780ee95e6a897fc77e350a0b43576854f99b0e0aea2ce092260f77ff62363e",
+      "02_cutoff_reflection/notes/03_COMPLETE_FROZEN_JETS_AND_PAID_CONSUMERS_20261019.md": "b2ce09a21bc5f08eb94b53d2deb4ea1d142d981aac516234ef9337c672ead3df",
+      "05_covariant_theta_jets/notes/03_COMPLETE_SHIFTED_ACQUISITION_AND_CONSUMER_COMPARISON_20261019.md": "74b8a116b6f9f63c50436d48ffc7e1b88f478a4057cbf58083f379c70d9c9dbd",
+      "06_hodge_and_transverse_geometry/notes/05_BOUNDED_COMPLETED_CURRENT_AND_DIRECT_COMPARISON_20261019.md": "b0b264244d8e78c72f0cbf3a9b75982e3a4c5070b236c4fd1a726e588b58a9e2",
+      "07_geometric_duality_and_quaternionic_symmetry/notes/03_CONSTRAINED_THETA_JET_SPACE_AND_RESIDUAL_CONTRACT_20261019.md": "20bbf47f9d7af3bd732b1d9ce90be9612035cde8396f8ded0b627dd9a8cb4b30",
+      "07_geometric_duality_and_quaternionic_symmetry/notes/04_PAID_PROFILE_TRACE_AND_DIRECT_TAIL_COMPARISON_20261019.md": "1cea2d70e09eb2a07fee7ce7007e852c65bb347a228f933e59f772d9eff0d6d7",
+      "07_geometric_duality_and_quaternionic_symmetry/notes/05_OBSERVATION_OPTIONS_AND_BOUNDED_FEASIBILITY_SCREENS_20261019.md": "468ec41c05ee80bb2654ca634f75fb9cdabe57fc0288d1cfd97791d06bd4b9d4",
+      "notes/06_GEO_T1_WINDING_AND_DIRECT_COMPARISON_20261019.md": "bd73f23017ca694bbc71cc4c7c6f6a2576556ce38764c80a179f96db3ca3a181",
+      "research-overview/03_UNIFORM_ARITHMETIC_RESIDUAL_RESEARCH_PROGRAM_20261019.md": "471b958468a5b06a91a9c15dd3cd7298c47e7324ac053f36ae6928d127c583f7",
+      "research-progress/02_UNIFORM_ARITHMETIC_RESIDUAL_PROGRESS_20261019.md": "59bf7c16eb07397154192aab068897e92dd7d09c55c434e0944e99a3048e2530"
+    },
     "compilation": {
-      "terminal": "pdfTeX 3.141592653-2.6-1.40.25 (TeX Live 2023), LaTeX2e 2022-11-01 patch level 1",
-      "command": "pdflatex -interaction=nonstopmode -halt-on-error -file-line-error -output-directory=EXTERNAL_BUILD_DIRECTORY main.tex",
-      "final_pass_exit_code": 0,
-      "unresolved_references": false,
-      "latex_warnings": false,
+      "terminal_passes": 3,
+      "all_exit_codes": 0,
+      "terminal_command": "pdflatex -interaction=nonstopmode -halt-on-error -file-line-error -output-directory=EXTERNAL_BUILD_DIRECTORY main.tex",
+      "final_log_sha256": "d4d5491bd3214d2f10d1fbf16bd927353ec40c53fb7d31583964f16a3abdb106",
+      "final_log_warnings": false,
       "overfull_or_underfull_boxes": false,
-      "desktop_compiler": "success: final saved source set compiled through compile_latex_document"
+      "desktop_compiler": "success"
     },
     "local_reading_copy_validation": {
-      "repository_relative_path": "output/pdf/positive_arithmetic_packets.pdf",
-      "storage_status": "Generated local reading copy, excluded by root /output/ ignore rule. Not part of the TeX source manifest.",
-      "sha256": "0eb880a36e98067e3def63609e91f7334d803a05b08dd5c98073ba6b49bd9c69",
-      "bytes": 576450,
-      "pages": 45,
+      "path_relative_to_repository": "output/pdf/positive_arithmetic_packets.pdf",
+      "sha256": "8313ca82e8f17f8e94371175d0ba07b30a5ef106e76d16a6a3dc724304f8d1ea",
+      "bytes": 639998,
+      "pages": 48,
+      "empty_pages": [],
+      "out_of_bounds_chars": [],
+      "unresolved_reference_markers": false,
+      "note_link_annotations": 20,
+      "unique_note_link_targets": 17,
+      "all_links_resolve_from_reading_copy": true,
       "render_dpi": 80,
       "all_pages_rendered": true,
-      "layout_review": "All pages inspected in contact sheets; readable views of the new finite and exterior arguments. Final bibliography layout rendered and inspected at 110 dpi after reducing the draft from 46 to 45 pages.",
-      "text_check": "45 nonempty pages; no unresolved-reference markers; all glyphs inside a relaxed page interior."
+      "visual_review": "All 48 pages inspected in six contact sheets; changed pages 45-48 also inspected at page scale. No clipping, overlaps or illegible layout found.",
+      "local_link_base": "output/pdf/; run links remain within the accompanying repository",
+      "new_output_ignored_by_git": true
     },
     "source_reference_validation": {
-      "labels_unique": true,
+      "unique_labels": 180,
       "all_internal_references_resolve": true,
-      "label_count": 179
+      "unique_manuscript_document_links": 17,
+      "all_local_targets_exist": true
     },
     "numeric_validation": {
-      "status": "pass",
-      "record": "../../numerics/MANUSCRIPT_INTEGRATION_REPLAY_20261018.json",
-      "scope": "Rational scalar table; effective-tail and exterior constants; 314 pilot signed strips; 40 high-height signed cells; 7 wall cells; exact and interval controls.",
-      "current_manuscript_pins_recomputed": true,
-      "implementation_status": "Uses the existing interval engines. The real-source comparison is a separate representation, not an independent implementation or specialist review."
+      "status": "Inherited results retained; no new numerical rerun for this summary-only integration.",
+      "existing_analytic_sections_unchanged": true,
+      "relevant_prior_replay_inputs_unchanged": 36,
+      "selective_19_october_replay": "../../numerics/MANUSCRIPT_SYMMETRY_REVIEW_REPLAY_20261019.json",
+      "original_manuscript_replay": "../../numerics/MANUSCRIPT_INTEGRATION_REPLAY_20261018.json",
+      "integration_checks": "../../numerics/SYMMETRY_PROGRAM_MANUSCRIPT_INTEGRATION_20261019.json"
     },
     "external_inputs": [
       {
@@ -234,39 +323,53 @@
         "scope": "Published initial verification; only zeta height 500 used for the finite wall. Published Lambda<=1/5 comparison baseline."
       }
     ],
-    "review": "../../reviews/13_CURRENT_RESULTS_MANUSCRIPT_INTEGRATION_REVIEW_20261018.md",
+    "review": "../../reviews/16_SYMMETRY_PROGRAM_AND_MANUSCRIPT_INTEGRATION_REVIEW_20261019.md",
     "limitations": [
-      "Internal LLM integration review only.",
-      "Numerical certification depends on the stated analytic bounds and arithmetic implementation.",
-      "No complete real bridge or final-time complex exterior.",
-      "No new Newman bound.",
-      "Factor-two speed gate remains failed."
+      "Internal LLM review, not independent specialist review.",
+      "Symmetry section summarizes linked notes; their detailed proofs are not reproduced here.",
+      "No new physical coverage, effective onset or Newman bound.",
+      "Real bridge and required complex exterior remain open.",
+      "Local PDF note links resolve from the repository reading copy in output/pdf."
     ],
     "previous_manuscript_revision": {
-      "date_utc": "2026-10-18T20:28:15.336152+00:00",
+      "date_utc": "2026-10-18T22:50:05.136900+00:00",
       "prepared_for": "Edward Baker",
       "model": "gpt-6-astra",
-      "reasoning_effort": "ultra",
-      "status": "Working draft; written proofs and internal LLM checks; signed theta margin remains open.",
+      "reasoning_effort": "max",
+      "llm_assistance": "Substantial; present integration by the contributing assistant.",
+      "status": "Working draft; written analytic proofs, finite interval certificates and internal LLM checks. Global bridge remains open; no new Newman bound.",
       "source_sha256": {
-        "main.tex": "13cf56292b5e1c61a388a7685613d2bd85aba7afe8019a4dd142ecbf849b81d7",
-        "sections/01_theta.tex": "81f8bb1556f269fccc5ff2d2eb8683f198a0d7944b6e2417e49e5341f7812334",
+        "main.tex": "0ebb2a0a4fb6a6b5edb0b398445339f04a54042480d9cc60855b21c80c64ee5e",
+        "sections/01_theta.tex": "1314d437144ce23c02c0c858409fc047d2fd0d5c56d5462d614ed70b8120dfa3",
         "sections/02_packets.tex": "5bab1829a92f7032a15d80ad874b15fff252c598b6194c07fab7efcf7d70beac",
         "sections/03_positivity.tex": "080089b5184d032403789bf139bb465c92fc9a379ac2fc6811049d50cc8dc948",
         "sections/04_modular_collisions.tex": "be76c5c22056fce5c96c240e366d2c126ee202e766ea6ff1141305f51b1d664f",
         "sections/05_controls.tex": "f89e2e6f784c95a9b3ad17639c6f94411197a0d27c50f759dbb4a53eac15f9f4",
-        "sections/06_certification.tex": "d994c18036b870a543f5ec542d50cff13c91af8e9c682582bb9d57df324ee0b2",
-        "sections/07_shifted_approximation.tex": "aa55a819c52a50168e99be52ad32f9e769a160487d99a6c87fba0859c8cabdd1"
+        "sections/06_certification.tex": "767af8460d3beaeb34375ac80b0ed9e402dfdc67a8b7978c43bbf70897eabf16",
+        "sections/07_shifted_approximation.tex": "38a819cb4afa4008dc376b8a8892d020722fe9b9eb9a6afd44a46e538f9074c7",
+        "sections/08_effective_tails.tex": "74e0324f9daa0e0b006da055822fcbb2caee1af3ab1f507f855a88e960f9cab4",
+        "sections/09_finite_certificates.tex": "04a4902b4d05bb923aefe9aa472e6bf6c86246765a1258f7188ab102762359f6",
+        "sections/10_outer_exclusion.tex": "620f98be47635b8ebb0ecb6d321238c8caa02d66d8496859c994489981c7b050",
+        "sections/11_global_scope.tex": "a3f4d4fa0e5a79763ff1826382fbe9285bb1acfc5cf9d613866d0bea4a2d068e"
       },
-      "source_set_sha256": "f6cd484647ef328047e9ac51a577b8260e899aecbfdd5026e9e238079feb823f",
-      "source_set_hash_recipe": "SHA256 of UTF-8 JSON source_sha256 object, sorted keys, separators comma and colon, no trailing newline.",
+      "source_set_sha256": "2690c3052927702a7f25d7e0519cc8ae10abfd202ac891bb8c06208eaa9a7b0c",
+      "source_set_hash_recipe": "SHA256 of UTF-8 JSON source object, sorted keys, separators comma and colon, no trailing newline.",
       "numeric_files_relative_to_investigation_numerics": {
         "certify_manuscript_constants.py": "8ca6ee691326f2fd4365651d6a7157156aa206ba39d0177d25083f52415dad99",
-        "MANUSCRIPT_CONSTANTS_20261018.json": "119ef2bab05561ea0e18ff5ee58bbba5420aaf927c8af279bf3824849b28d27f",
-        "certify_strip_carriers.py": "2904ccf16ab6995eee2194fb5be6a70b6e03e2b1047c940f99d48bc365e9ffa9",
-        "STRIP_CARRIER_CHECKS_20261018.json": "603c0ddb1fa849473e05669e5c846709aa1215e726fca7fd63ed576be2ef82e3",
         "certify_updated_manuscript.py": "5f10e1ea3a0f22e3e189679db1f002f7fdbf55330925b101851b2b54ad14b257",
-        "UPDATED_MANUSCRIPT_CONSTANTS_20261018.json": "8c099f44a8f0fb6b18c5ce432b4261531db8b11cc71b6dbd627c466c36bc3838"
+        "certify_shifted_theta_jet.py": "45c2e9adc347f91076b1ff16b171b71f450b504e391044811bf9bc847fe3c4ff",
+        "run_plan02_pilot.py": "3912bd128bff81bceb303126a67ae304f9631d439867d5c6ae3bbc106aa7e982",
+        "replay_plan02_certificates.py": "1f25cf76e1666ac70842caa6bfb4163146ae60dca4bf57c9f84223a59c8fd074",
+        "certify_nonstationary_mode_tail.py": "88bc7436b74a372136920f932d33ccc64ef103fddc1f6c76e6992350f2aff4f8",
+        "replay_nonstationary_controls.py": "c8f95dbac1f84632091c314da57a2382c077d0a0c1a6738d92494f4f95681da6",
+        "high_height_consumer/high_height_consumer.py": "e96feb2b4c3e84de3025713b486fb8cf99fdd810f61366b79a0da188eb12535f",
+        "high_height_consumer/compare_high_height_real.py": "87710157f9f85af62b5030237938fd7233d122fe77f764238bbcb7a46234ffa5",
+        "high_height_consumer/replay_high_height_consumer.py": "a4e8bea8207f163875d88684ff4618d702af637cf3116882b18a03e996563fc7",
+        "analytic_continuation/certify_outer20_exclusion.py": "07ec8a7e2f2a5c15db17bb7e78002d551bb6ae0d0147bf49ef97ac469b8b91ec",
+        "analytic_continuation/certify_constant_distance_tail.py": "327588860f0e3d5bea65f00ab26152880234ff0a0a3bb08a6c9033d07b9fd5a8",
+        "analytic_continuation/check_remote_polynomial_control.py": "13fa41d0dce4e24419840e43275d871b1281a837d07f18736241a7adab78b59f",
+        "analytic_continuation/replay_analytic_continuation.py": "4ab65ce82c893e5f9aa7bdedbdd600fb0f45b3586a1d342dbb672d88b53e4d1d",
+        "MANUSCRIPT_INTEGRATION_REPLAY_20261018.json": "c4eabc59441c12cbd5860e18673140c3941019df654020e1dc95317ff21e509c"
       },
       "research_provenance_relative_to_investigation_notes": {
         "01_FINITE_EULER_FACTORS_AND_HEAT_FLOW_CODEX_20261018.md": "077324302e817ff3551478c7d9b344b793dd4ff0634d6c60a1f01bf44e6feb14",
@@ -274,7 +377,15 @@
         "03_FINITE_PRIME_COMPATIBLE_COLLISION_CONTROLS_CODEX_20261018.md": "95d4487a1836e1902755bba5ee743ecfb6ac84cd4dc3f4cfb519805281636ce3",
         "04_POSITIVE_ARITHMETIC_PACKETS_AND_MODULAR_CANCELLATION_CODEX_20261018.md": "350ee6391f9b44699a5d01361af3d1dc98da8cd24247056411998f772e565500",
         "05_COMPLEX_STRIP_CARRIERS_AND_SHARP_LOG_DERIVATIVES_CODEX_20261018.md": "39209d71c1220011d2624f43f68a949de051e41292462a750ff8c4e97c2d6640",
-        "06_CANCELLATION_PRESERVING_APPROXIMATION_AND_NEWMAN_ROADMAP_CODEX_20261018.md": "3cac8af3819b672f432cfc6420d242a1479e4b415ddaa065f681addf49492e96"
+        "06_CANCELLATION_PRESERVING_APPROXIMATION_AND_NEWMAN_ROADMAP_CODEX_20261018.md": "3cac8af3819b672f432cfc6420d242a1479e4b415ddaa065f681addf49492e96",
+        "02_updated_research_plan/07_SHIFTED_EVALUATOR_AND_COMPLETE_ERROR_BUDGET_20261018.md": "933d9ae00689232017b7ee1d641acf04b4f245230366a1d18842bf03213cd23a",
+        "02_updated_research_plan/08_MATCHED_PILOT_AND_CONTROL_SCREEN_20261018.md": "44c75277099a1963870569e953d50bb85c474a7092c1be9627c878108f6be23b",
+        "02_updated_research_plan/09_COMPLETE_MODULAR_SIGNED_ESTIMATE_20261018.md": "ed17ead67a71c6b8645194bc24e2b45ed4a7daac6e229097d924c9725be92cab",
+        "02_updated_research_plan/10_GLOBAL_CONSUMER_AND_COVERAGE_LEDGER_20261018.md": "074dbfe376914a3ac747dfc30314760268cac4f66c5a75e07b66ecab46bb291f",
+        "02_updated_research_plan/11_EFFECTIVE_NONSTATIONARY_ARITHMETIC_TAIL_20261018.md": "a36b9c51ebd54c56a6470a7d8cbf485354a7647cb6afa39bccaa2b46b3990c40",
+        "02_updated_research_plan/12_HIGH_HEIGHT_SIGNED_CONSUMER_AND_MATCHED_COMPARISON_20261018.md": "23c4a06536a4f105e1684eab95fcef30cc55e4df78f09d5817527762332668cd",
+        "02_updated_research_plan/13_VERTICAL_WALL_AND_FINITE_HEIGHT_NONCOLLISION_20261018.md": "e28b714a52706120af26fce67070adb83529c4446a75cb1f9bb0c46abe756229",
+        "02_updated_research_plan/14_SHARPER_OUTER_EXCLUSION_AND_CONSTANT_DISTANCE_CONTOURS_20261018.md": "a9d792fbc2de95745a0c56238e56ab146c083912befba64e3aeaa49ec0e78765"
       },
       "compilation": {
         "terminal": "pdfTeX 3.141592653-2.6-1.40.25 (TeX Live 2023), LaTeX2e 2022-11-01 patch level 1",
@@ -283,74 +394,164 @@
         "unresolved_references": false,
         "latex_warnings": false,
         "overfull_or_underfull_boxes": false,
-        "desktop_compiler": "success: current saved revised source set compiled through compile_latex_document"
+        "desktop_compiler": "success: final saved source set compiled through compile_latex_document"
       },
       "local_reading_copy_validation": {
         "repository_relative_path": "output/pdf/positive_arithmetic_packets.pdf",
-        "storage_status": "Generated local reading copy; excluded by root /output/ ignore rule. Not part of the source manifest.",
-        "sha256": "c1b465387f8674e3be3fadb2a398b5ff2c9c7d61f7b48debc829e85af21fa3e1",
-        "bytes": 472205,
-        "pages": 30,
-        "render_dpi": 85,
+        "storage_status": "Generated local reading copy, excluded by root /output/ ignore rule. Not part of the TeX source manifest.",
+        "sha256": "0eb880a36e98067e3def63609e91f7334d803a05b08dd5c98073ba6b49bd9c69",
+        "bytes": 576450,
+        "pages": 45,
+        "render_dpi": 80,
         "all_pages_rendered": true,
-        "layout_review": "All-page contact-sheet inspection, with readable views of strip proof, Schwarz bound, residual jets, carrier invariance, controls, shifted-tail theorem, asymptotic and scalar table. Final page rerendered at 110 dpi after bibliography layout repair.",
-        "text_check": "30 nonempty pages; no unresolved-reference markers; all text glyphs inside relaxed interior rectangle."
+        "layout_review": "All pages inspected in contact sheets; readable views of the new finite and exterior arguments. Final bibliography layout rendered and inspected at 110 dpi after reducing the draft from 46 to 45 pages.",
+        "text_check": "45 nonempty pages; no unresolved-reference markers; all glyphs inside a relaxed page interior."
       },
-      "numeric_validation": {
-        "all_strict_headline_bounds_passed": true,
-        "all_printed_table_enclosures_passed": true,
-        "method": "Exact fractions, 256-bit outward dyadic grid; alternating arctangent bounds; degree-32 positive exponential remainder and repeated squaring.",
-        "scope": "Scalar constants only; no numerical theta sign, collision height, or proof validation.",
-        "table_rows_checked": 9,
-        "headline_bounds_checked": 8,
-        "original_checks_replayed": true,
-        "implementation_status": "Reuses the original exact-rational interval engine; not an independent implementation.",
-        "shifted_constants": "Last three table rows enclose conservative Kbar expressions with cos(pi/4) replaced by 7/10.",
-        "installed_replay_matches_retained_record": true
-      },
-      "external_input": {
-        "citation": "D. H. J. Polymath, arXiv:1904.12438v2, Theorems 1.5 and 3.2 and section 9",
-        "url": "https://arxiv.org/html/1904.12438v2",
-        "scope": "At each fixed 0<T<=1/2, eventual real/simple theta zeros and finitely many nonreal zeros, used only in the control theorem."
-      },
-      "review": "../../reviews/05_UPDATED_MANUSCRIPT_INTEGRATION_REVIEW_CODEX_20261018.md",
-      "limitations": [
-        "No independent mathematical review.",
-        "No theta collision exclusion.",
-        "No new bound on the Newman constant.",
-        "No uniform event-height onset as T tends to zero.",
-        "No certified retained-mode quadrature or first-jet margin.",
-        "Near-boundary asymptotic has no evaluated constant, onset or quadrature-cost claim.",
-        "Future Sol execution plan has not been run."
-      ],
-      "contributors": [
-        {
-          "model": "gpt-6.1-sol",
-          "reasoning_effort": "ultra",
-          "scope": "Section 3 and new Section 6 integration; research overview; internal integration check"
-        },
-        {
-          "model": "gpt-6-astra",
-          "reasoning_effort": "ultra",
-          "scope": "Coordination, mathematical/editorial integration, revised scalar checker, build and document verification"
-        }
-      ],
-      "prior_development": {
-        "model": "gpt-6-astra",
-        "reasoning_effort": "max",
-        "source_set_sha256": "9def46d014fb1006ff3a16378f66bcd1b7991ea526739b65e8bbfccaf791962e"
-      },
-      "research_overview": "../../research-overview/02_UPDATED_RESEARCH_OVERVIEW_AND_SOL_EXECUTION_PLAN_20261018.md",
       "source_reference_validation": {
         "labels_unique": true,
         "all_internal_references_resolve": true,
-        "label_count": 138
-      }
+        "label_count": 179
+      },
+      "numeric_validation": {
+        "status": "pass",
+        "record": "../../numerics/MANUSCRIPT_INTEGRATION_REPLAY_20261018.json",
+        "scope": "Rational scalar table; effective-tail and exterior constants; 314 pilot signed strips; 40 high-height signed cells; 7 wall cells; exact and interval controls.",
+        "current_manuscript_pins_recomputed": true,
+        "implementation_status": "Uses the existing interval engines. The real-source comparison is a separate representation, not an independent implementation or specialist review."
+      },
+      "external_inputs": [
+        {
+          "citation": "D. H. J. Polymath, arXiv:1904.12438v2, Theorems 1.2, 1.3, 1.5 and 3.2, Proposition 3.1 and section 9",
+          "url": "https://arxiv.org/abs/1904.12438v2",
+          "scope": "Canopy contract, effective Riemann-Siegel approximation, high-zero controls, strip preservation and local heat splitting."
+        },
+        {
+          "citation": "D. J. Platt and T. S. Trudgian, arXiv:2004.09765v1, Theorem 1 and Corollary 2",
+          "url": "https://arxiv.org/abs/2004.09765",
+          "scope": "Published initial verification; only zeta height 500 used for the finite wall. Published Lambda<=1/5 comparison baseline."
+        }
+      ],
+      "review": "../../reviews/13_CURRENT_RESULTS_MANUSCRIPT_INTEGRATION_REVIEW_20261018.md",
+      "limitations": [
+        "Internal LLM integration review only.",
+        "Numerical certification depends on the stated analytic bounds and arithmetic implementation.",
+        "No complete real bridge or final-time complex exterior.",
+        "No new Newman bound.",
+        "Factor-two speed gate remains failed."
+      ],
+      "previous_manuscript_revision": {
+        "date_utc": "2026-10-18T20:28:15.336152+00:00",
+        "prepared_for": "Edward Baker",
+        "model": "gpt-6-astra",
+        "reasoning_effort": "ultra",
+        "status": "Working draft; written proofs and internal LLM checks; signed theta margin remains open.",
+        "source_sha256": {
+          "main.tex": "13cf56292b5e1c61a388a7685613d2bd85aba7afe8019a4dd142ecbf849b81d7",
+          "sections/01_theta.tex": "81f8bb1556f269fccc5ff2d2eb8683f198a0d7944b6e2417e49e5341f7812334",
+          "sections/02_packets.tex": "5bab1829a92f7032a15d80ad874b15fff252c598b6194c07fab7efcf7d70beac",
+          "sections/03_positivity.tex": "080089b5184d032403789bf139bb465c92fc9a379ac2fc6811049d50cc8dc948",
+          "sections/04_modular_collisions.tex": "be76c5c22056fce5c96c240e366d2c126ee202e766ea6ff1141305f51b1d664f",
+          "sections/05_controls.tex": "f89e2e6f784c95a9b3ad17639c6f94411197a0d27c50f759dbb4a53eac15f9f4",
+          "sections/06_certification.tex": "d994c18036b870a543f5ec542d50cff13c91af8e9c682582bb9d57df324ee0b2",
+          "sections/07_shifted_approximation.tex": "aa55a819c52a50168e99be52ad32f9e769a160487d99a6c87fba0859c8cabdd1"
+        },
+        "source_set_sha256": "f6cd484647ef328047e9ac51a577b8260e899aecbfdd5026e9e238079feb823f",
+        "source_set_hash_recipe": "SHA256 of UTF-8 JSON source_sha256 object, sorted keys, separators comma and colon, no trailing newline.",
+        "numeric_files_relative_to_investigation_numerics": {
+          "certify_manuscript_constants.py": "8ca6ee691326f2fd4365651d6a7157156aa206ba39d0177d25083f52415dad99",
+          "MANUSCRIPT_CONSTANTS_20261018.json": "119ef2bab05561ea0e18ff5ee58bbba5420aaf927c8af279bf3824849b28d27f",
+          "certify_strip_carriers.py": "2904ccf16ab6995eee2194fb5be6a70b6e03e2b1047c940f99d48bc365e9ffa9",
+          "STRIP_CARRIER_CHECKS_20261018.json": "603c0ddb1fa849473e05669e5c846709aa1215e726fca7fd63ed576be2ef82e3",
+          "certify_updated_manuscript.py": "5f10e1ea3a0f22e3e189679db1f002f7fdbf55330925b101851b2b54ad14b257",
+          "UPDATED_MANUSCRIPT_CONSTANTS_20261018.json": "8c099f44a8f0fb6b18c5ce432b4261531db8b11cc71b6dbd627c466c36bc3838"
+        },
+        "research_provenance_relative_to_investigation_notes": {
+          "01_FINITE_EULER_FACTORS_AND_HEAT_FLOW_CODEX_20261018.md": "077324302e817ff3551478c7d9b344b793dd4ff0634d6c60a1f01bf44e6feb14",
+          "02_COMPLETE_PACKET_MATCHING_CODEX_20261018.md": "ec903feaf280bc264896cfc26a677c8d0e3be651ba6e7fe86edb4214742eb46d",
+          "03_FINITE_PRIME_COMPATIBLE_COLLISION_CONTROLS_CODEX_20261018.md": "95d4487a1836e1902755bba5ee743ecfb6ac84cd4dc3f4cfb519805281636ce3",
+          "04_POSITIVE_ARITHMETIC_PACKETS_AND_MODULAR_CANCELLATION_CODEX_20261018.md": "350ee6391f9b44699a5d01361af3d1dc98da8cd24247056411998f772e565500",
+          "05_COMPLEX_STRIP_CARRIERS_AND_SHARP_LOG_DERIVATIVES_CODEX_20261018.md": "39209d71c1220011d2624f43f68a949de051e41292462a750ff8c4e97c2d6640",
+          "06_CANCELLATION_PRESERVING_APPROXIMATION_AND_NEWMAN_ROADMAP_CODEX_20261018.md": "3cac8af3819b672f432cfc6420d242a1479e4b415ddaa065f681addf49492e96"
+        },
+        "compilation": {
+          "terminal": "pdfTeX 3.141592653-2.6-1.40.25 (TeX Live 2023), LaTeX2e 2022-11-01 patch level 1",
+          "command": "pdflatex -interaction=nonstopmode -halt-on-error -file-line-error -output-directory=EXTERNAL_BUILD_DIRECTORY main.tex",
+          "final_pass_exit_code": 0,
+          "unresolved_references": false,
+          "latex_warnings": false,
+          "overfull_or_underfull_boxes": false,
+          "desktop_compiler": "success: current saved revised source set compiled through compile_latex_document"
+        },
+        "local_reading_copy_validation": {
+          "repository_relative_path": "output/pdf/positive_arithmetic_packets.pdf",
+          "storage_status": "Generated local reading copy; excluded by root /output/ ignore rule. Not part of the source manifest.",
+          "sha256": "c1b465387f8674e3be3fadb2a398b5ff2c9c7d61f7b48debc829e85af21fa3e1",
+          "bytes": 472205,
+          "pages": 30,
+          "render_dpi": 85,
+          "all_pages_rendered": true,
+          "layout_review": "All-page contact-sheet inspection, with readable views of strip proof, Schwarz bound, residual jets, carrier invariance, controls, shifted-tail theorem, asymptotic and scalar table. Final page rerendered at 110 dpi after bibliography layout repair.",
+          "text_check": "30 nonempty pages; no unresolved-reference markers; all text glyphs inside relaxed interior rectangle."
+        },
+        "numeric_validation": {
+          "all_strict_headline_bounds_passed": true,
+          "all_printed_table_enclosures_passed": true,
+          "method": "Exact fractions, 256-bit outward dyadic grid; alternating arctangent bounds; degree-32 positive exponential remainder and repeated squaring.",
+          "scope": "Scalar constants only; no numerical theta sign, collision height, or proof validation.",
+          "table_rows_checked": 9,
+          "headline_bounds_checked": 8,
+          "original_checks_replayed": true,
+          "implementation_status": "Reuses the original exact-rational interval engine; not an independent implementation.",
+          "shifted_constants": "Last three table rows enclose conservative Kbar expressions with cos(pi/4) replaced by 7/10.",
+          "installed_replay_matches_retained_record": true
+        },
+        "external_input": {
+          "citation": "D. H. J. Polymath, arXiv:1904.12438v2, Theorems 1.5 and 3.2 and section 9",
+          "url": "https://arxiv.org/html/1904.12438v2",
+          "scope": "At each fixed 0<T<=1/2, eventual real/simple theta zeros and finitely many nonreal zeros, used only in the control theorem."
+        },
+        "review": "../../reviews/05_UPDATED_MANUSCRIPT_INTEGRATION_REVIEW_CODEX_20261018.md",
+        "limitations": [
+          "No independent mathematical review.",
+          "No theta collision exclusion.",
+          "No new bound on the Newman constant.",
+          "No uniform event-height onset as T tends to zero.",
+          "No certified retained-mode quadrature or first-jet margin.",
+          "Near-boundary asymptotic has no evaluated constant, onset or quadrature-cost claim.",
+          "Future Sol execution plan has not been run."
+        ],
+        "contributors": [
+          {
+            "model": "gpt-6.1-sol",
+            "reasoning_effort": "ultra",
+            "scope": "Section 3 and new Section 6 integration; research overview; internal integration check"
+          },
+          {
+            "model": "gpt-6-astra",
+            "reasoning_effort": "ultra",
+            "scope": "Coordination, mathematical/editorial integration, revised scalar checker, build and document verification"
+          }
+        ],
+        "prior_development": {
+          "model": "gpt-6-astra",
+          "reasoning_effort": "max",
+          "source_set_sha256": "9def46d014fb1006ff3a16378f66bcd1b7991ea526739b65e8bbfccaf791962e"
+        },
+        "research_overview": "../../research-overview/02_UPDATED_RESEARCH_OVERVIEW_AND_SOL_EXECUTION_PLAN_20261018.md",
+        "source_reference_validation": {
+          "labels_unique": true,
+          "all_internal_references_resolve": true,
+          "label_count": 138
+        }
+      },
+      "research_overview": "../../research-overview/02_UPDATED_RESEARCH_OVERVIEW_AND_SOL_EXECUTION_PLAN_20261018.md",
+      "round_summary": "../../research-progress/03_OVERVIEW02_ROUND_SUMMARY_20261018.md"
     },
-    "research_overview": "../../research-overview/02_UPDATED_RESEARCH_OVERVIEW_AND_SOL_EXECUTION_PLAN_20261018.md",
-    "round_summary": "../../research-progress/03_OVERVIEW02_ROUND_SUMMARY_20261018.md"
+    "research_overview": "../../symmetries/research-overview/03_UNIFORM_ARITHMETIC_RESIDUAL_RESEARCH_PROGRAM_20261019.md",
+    "research_progress": "../../symmetries/research-progress/02_UNIFORM_ARITHMETIC_RESIDUAL_PROGRESS_20261019.md",
+    "round_summary": "../../symmetries/summary/01_SYMMETRY_RESEARCH_PROGRESS_SUMMARY_20261019.md"
   },
   "research_overview": "../../symmetries/research-overview/03_UNIFORM_ARITHMETIC_RESIDUAL_RESEARCH_PROGRAM_20261019.md",
   "research_progress": "../../symmetries/research-progress/02_UNIFORM_ARITHMETIC_RESIDUAL_PROGRESS_20261019.md",
-  "round_summary": "../../symmetries/summary/01_SYMMETRY_RESEARCH_PROGRESS_SUMMARY_20261019.md"
+  "round_summary": "../../symmetries/summary/02_UNIFORM_ARITHMETIC_RESIDUAL_ROUND_SUMMARY_20261019.md"
 }

@@ -1,0 +1,323 @@
+\section{Uniform coherent edge estimates and analytic extensions}
+\label{sec:uniform-edge}
+
+The arithmetic cutoff changes as height increases. Its entering finite
+mode is large compared with the desired approximation error, but the
+corresponding change of the Riemann--Siegel edge cancels it. The central
+analytic advance of UAR-03 is to preserve this cancellation in a single
+holomorphic model, with a uniform error through every cutoff change.
+UAR-04 then bounds the complete signed residual. This section states
+these results and two extensions; the linked notes contain the longer
+contour derivations and reproducible numerical records.
+
+\subsection{A common edge model through cutoff changes}
+
+Use the complete theta source and the symmetric normalizer
+$\mathcal A_t$, phase $\theta$ and $\omega=\theta_x$ of
+Section~\ref{sec:symmetry-findings}. The precise analytic definitions,
+branches and removable correction profiles are fixed in the
+\symdoc{notes/07_UAR01_CORRECTED_RESIDUAL_AND_TRANSITION_CONTRACT_20261019.md}
+{UAR-01 contract}. In particular,
+\[
+ f_N=\frac{G_N-\widehat C_N^{\rm an}}{\mathcal A_t},
+ \qquad r_N=\frac{H}{\mathcal A_t}-f_N,\qquad
+ Z_v=e^{-i\theta}(v-i v_x/\omega).
+\]
+The prescribed finite gamma/heat correction is retained in the model
+for $r_N$, rather than silently added to $f_N$.
+
+Initially fix
+\begin{equation}\label{eq:uar-sector}
+ 0<t\le1/20,\qquad
+ J_t=[4\pi e^{1/t},4\pi e^{2/t}],\qquad
+ L_c=\log(c/(4\pi)),\quad c\in J_t.
+\end{equation}
+At each center use the disk $D_c=\{|z-c|\le1/L_c\}$ and real
+half-window $W_c=[c-1/(2L_c),c+1/(2L_c)]$.
+Freeze either extremal value of
+$N(x)=\lfloor\sqrt{x/(4\pi)+t/16}\rfloor$ on the disk's real
+projection. Differentiation keeps $t,N$ fixed.
+
+The exact edge uses
+$M(s)=s(s-1)\pi^{-s/2}\Gamma(s/2)/16$ and the descending
+Riemann--Siegel contour; see \cite[\S4]{Polymath}.
+For $q=N+1/2$, put $w_q(r)=q+(1+i)r$ and define its finite contour
+\[
+ J_N^S(s)=(1+i)\int_S^{-S}
+ \frac{w_q(r)^{-s}e^{i\pi w_q(r)^2}}
+ {e^{i\pi w_q(r)}-e^{-i\pi w_q(r)}}\dd r .
+\]
+The principal logarithm along this contour is continuous. With
+$V_t=S_t=2\sqrt{2/t}$ and
+$h(v,z)=1/2+\sqrt t\,v+i(z/2+\pi t/8)$, retain
+\begin{equation}\label{eq:compact-edge-model}
+ B_N^\Box(t,z)=\frac{e^{t\pi^2/64}}{\sqrt\pi}
+ \int_{-V_t}^{V_t}e^{-v^2-i\pi\sqrt t\,v/4}
+ M(h(v,z))J_N^{S_t}(h(v,z))\dd v .
+\end{equation}
+For $B^\sharp(z)=\overline{B(\overline z)}$, set
+\[
+ \widehat e_{{\rm edge},N}
+ =\frac{B_N^\Box+(B_N^\Box)^\sharp+\widehat C_N^{\rm an}}
+ {\mathcal A_t}.
+\]
+This retains the true gamma factor, heat phase and reflected channel.
+The limits are the same at every center for fixed $t$; models with the
+same integer therefore agree exactly on overlaps. The finite integral
+is an exact analytic definition. Numerical evaluation of it would
+require a separate quadrature and rounding budget.
+
+\begin{theorem}[Coherent edge error and summable transitions]
+\label{thm:coherent-edge}
+In \eqref{eq:uar-sector}, put
+\[
+ \mathcal Z_c=e^{-L_c/4-tL_c^2/16},\qquad
+ \epsilon_c=1000\mathcal Z_c e^{-3.99L_c}.
+\]
+If $e_{{\rm edge},N}$ is the complete exact normalized edge discrepancy,
+then for either frozen cutoff,
+\[
+ \sup_{D_c}|e_{{\rm edge},N}-\widehat e_{{\rm edge},N}|
+ <\epsilon_c .
+\]
+Writing the difference as $d_N$, throughout $W_c$ one has
+\[
+ |(d_N)_x|<2L_c\epsilon_c,\qquad |Z_{d_N}|<9\epsilon_c.
+\]
+The sector ceilings are $\epsilon_c<4.3\,10^{-35}$ and
+$9\epsilon_c<3.9\,10^{-34}$.
+
+At a crossing $\xi_n=4\pi(n^2-t/16)$, let $h_n=f_n-f_{n-1}$.
+On its common disk and at its center respectively,
+\[
+ |h_n|<8\mathcal Z_{\xi_n}/\xi_n,\qquad
+ |Z_{h_n}(\xi_n)|<3\mathcal Z_{\xi_n}/n^2.
+\]
+Consequently every physical prefix satisfies
+\begin{equation}\label{eq:uar-transition-prefix}
+ \sum_{4\pi e^{1/t}<\xi_n\le x}|Z_{h_n}(\xi_n)|
+ <3.01e^{-13/(16t)}<2.639\,10^{-7}.
+\end{equation}
+The same result includes the specified left and right endpoint descriptions.
+\end{theorem}
+
+\begin{proof}[Proof outline]
+The full argument is
+\symdoc{03_normalized_jet_rotation/notes/09_UNIFORM_COHERENT_EDGE_AND_CUTOFF_MATCHING_20261019.md}
+{S03 Note 09, UAR-03}. A global contour majorant and a gamma
+reflection estimate control the infinite heat tails. The complement
+of the retained rectangle is split into those tails with the entire
+contour, and the contour tails with the central heat interval.
+Both reflected channels are divided by the actual complex normalizer.
+Cauchy's estimate is then applied to the combined holomorphic error.
+
+The exact residue identity
+$\mathcal E_n-\mathcal E_{n-1}=-m_n^{\rm heat}$ cancels the entering
+exact heat mode before taking a norm. At the model level its complete
+error is at most $2\epsilon_c$. For the original leading approximation,
+the analytic correction jump is a single explicit wave. Matching that
+wave, including the printed-to-analytic conversion, gives the stated
+$O(\mathcal Z_c/c)$ bound. Coupled real Schwarz--Pick estimates pay
+its first jet. Finally $n>e^{1/(2t)}$ and
+$\sum_{n>u}n^{-2}\le1/(u-1)$ prove
+\eqref{eq:uar-transition-prefix}.
+\end{proof}
+
+The model-error estimate and the corrected-transition estimate have
+different roles. The exceptionally small former does not bound the
+value of the retained model. The latter is summable without assuming
+cancellation between different crossings. This overcomes the raw-mode
+payment discussed in Section~\ref{sec:symmetry-findings} within its
+specified class.
+
+\subsection{The complete residual and its starting height}
+
+Define $\mathcal I_t(x)$ as the ordinary piecewise integral of the
+filtered residual from $a_t=4\pi e^{1/t}$ to $x$, using the natural
+frozen integer on each subinterval. Since $r_n-r_{n-1}=-h_n$,
+\begin{equation}\label{eq:uar-telescoping}
+ \mathcal I_t(x)=i\left\{
+ Z_{r_{N(x)}}(x)-Z_{r_{N(a_t)}}(a_t)
+ +\sum_{a_t<\xi_n\le x}Z_{h_n}(\xi_n)\right\}.
+\end{equation}
+The positive switch sum is part of this ordinary integral.
+
+\begin{theorem}[Complete uniform arithmetic residual]
+\label{thm:uar-complete}
+On \eqref{eq:uar-sector},
+\[
+ \sup_{x\in J_t}|\mathcal I_t(x)|
+ <3.246e^{-13/(16t)}<2.846\,10^{-7}.
+\]
+\end{theorem}
+
+The proof is
+\symdoc{03_normalized_jet_rotation/notes/10_UNIFORM_SIGNED_RESIDUAL_INCREMENT_20261019.md}
+{S03 Note 10, UAR-04}. Its signed saddle estimate cancels the leading
+correction and retains the signed Gaussian first moment. The two
+finite-mode rotating weights are nonnegative and sum to two.
+In the scale
+\[
+ \mathcal S_x=e^{-3L_x/4-tL_x^2/16},
+ \qquad L_x=\log(x/(4\pi)),
+\]
+the retained edge and finite correction cost less than
+$0.97\mathcal S_x$ and $0.558\mathcal S_x$.
+The finite remainder from
+\symdoc{03_normalized_jet_rotation/notes/08_UNIFORM_FINITE_GAMMA_HEAT_REMAINDER_20261019.md}
+{UAR-02}, the edge remainder and every transition are included.
+The estimate uses no physical $H$ calibration or retained contour
+quadrature. Outward scalar checks support its explicit constants;
+the written argument supplies its uniformity.
+
+\begin{corollary}[Residual bound between arbitrary endpoints]
+\label{cor:uar-rebased}
+For $u,v\in J_t$, let $a=\min(u,v)$ and let $I_t(u,v)$ be the
+ordinary piecewise residual integral between them. Then
+\begin{equation}\label{eq:uar-rebased}
+ |I_t(u,v)|<3.246\mathcal S_a
+ =3.246\exp\left\{-\frac{\kappa_a^2+12\kappa_a}{16t}\right\},
+ \qquad \kappa_a=t\log(a/(4\pi)).
+\end{equation}
+\end{corollary}
+\begin{proof}
+For $a\le b$, set $U_x=\sqrt{x/(4\pi)+t/16}$.
+The decreasing-envelope argument of UAR-04, now begun at $a$, gives
+\[
+ \sum_{a<\xi_n\le b}|Z_{h_n}(\xi_n)|
+ \le\frac3{U_a}\mathcal S_a+
+ \frac{12}{\kappa_a+6}(\mathcal S_a-\mathcal S_b).
+\]
+The retained residual endpoints cost less than
+$1.53(\mathcal S_a+\mathcal S_b)$. Since
+$12/(\kappa_a+6)\le12/7$ and $3/U_a<.000137$,
+their total is below $3.245\mathcal S_a$.
+Both remaining endpoint errors fit below
+$(4.2\,10^{-9}+1.8\,10^{-26})\mathcal S_a$.
+Reversing the endpoints changes the integral's sign.
+The complete derivation, including crossing ownership, is
+\symdoc{03_normalized_jet_rotation/notes/13_REBASED_RESIDUAL_AND_COMPACT_SECTOR_EDGE_EXTENSIONS_20261019.md}
+{S03 Note 13, Proposition 1}.
+\end{proof}
+
+Thus a generic $2\sup|\mathcal I_t|$ rebasing payment can be replaced
+by an estimate at the actual starting height. At $t=.05$, a subinterval
+beginning at $4\pi e^{30}$ has the bound $3.3\,10^{-11}$.
+This improves residual control within the existing sector; a physical
+anchor and complete signed approximant variation are still needed.
+
+\subsection{Extension to other compact scaling bands}
+
+The common contour construction extends beyond the particular
+$1\le tL\le2$ band. The next statement is qualitative in its new onset
+and constants.
+
+\begin{proposition}[Compact-band edge extension]
+\label{prop:compact-band-edge}
+Fix $0<\kappa_-\le\kappa_+<\infty$, $p>0$ and $0<\eta<p$.
+There are $t_0,C>0$, depending on these fixed parameters, such that
+for $0<t\le t_0$ and $\kappa_-\le tL_c\le\kappa_+$, the model
+\eqref{eq:compact-edge-model} with
+\[
+ V_t=S_t=\sqrt{p\kappa_+/t}
+\]
+satisfies, for either extremal frozen cutoff,
+\begin{equation}\label{eq:compact-band-error}
+ \sup_{D_c}|e_{{\rm edge},N}
+                 -\widehat e_{{\rm edge},N}^{\,p}|
+ \le C\mathcal Z_c e^{-(p-\eta)L_c}.
+\end{equation}
+Same-cutoff models agree on overlaps, and the adjacent exact-mode
+compensation costs at most twice this allowance.
+The original corrected transitions obey
+\[
+ |Z_{h_n}(\xi_n)|\le C_h\,\mathcal Z_{\xi_n}/n^2
+\]
+for a band-dependent constant. Their every-prefix sum is therefore
+\[
+ O_{\kappa_-,\kappa_+}\left(
+ e^{-(\kappa_-^2+12\kappa_-)/(16t)}\right).
+\]
+\end{proposition}
+\begin{proof}[Proof outline]
+See
+\symdoc{03_normalized_jet_rotation/notes/13_REBASED_RESIDUAL_AND_COMPACT_SECTOR_EDGE_EXTENSIONS_20261019.md}
+{S03 Note 13, Proposition 2}. Uniformly on a fixed positive band,
+$L_c\to\infty$, the saddle distance is at most $1/2+o(1)$,
+and the gamma-normalizer ratio is $O(\mathcal Z_c)$.
+The heat integrand has a majorant
+$C_0e^{-(1-o(1))v^2+o(1)|v|}$.
+Since $V_t^2\ge pL_c$, its tails have the order in
+\eqref{eq:compact-band-error}.
+On the retained heat interval the real gamma argument is bounded
+by a constant depending on $p,\kappa_+$; the contour tails have
+the smaller order $O(e^{-3pL_c})$.
+The exact single-wave matching formula retains
+$O(\mathcal Z_c/c)$ corrected jumps. The inverse-square sum then
+gives the stated prefix order.
+\end{proof}
+
+For any fixed derivative order $j$, Cauchy's estimate also gives on
+$W_c$ the component-error bound
+\[
+ |\partial_x^j(e_{{\rm edge},N}
+                   -\widehat e_{{\rm edge},N}^{\,p})|
+ \le j!(2L_c)^j C\mathcal Z_c e^{-(p-\eta)L_c}.
+\]
+This extends an edge-error budget; it is not yet a complete higher-jet
+physical certificate. Increasing $p$ shrinks omitted tails by enlarging
+the retained model, whose value and acquisition cost remain separate.
+
+Proposition~\ref{prop:compact-band-edge} permits $\kappa_-<1$ or
+$\kappa_+>2$ after a possible reduction of $t_0$.
+The explicit constants $1000$, $3.246$ and the onset $1/20$ have
+not been transferred to such a new band. Extending the complete
+residual theorem also requires the finite correction and retained
+saddle estimates there. A fixed compact band does not cover all heights
+at a fixed time; nor does it supply a fixed-width complex strip.
+
+\subsection{The bounded physical certificate and the remaining task}
+
+The analytic estimates have one fully paid physical application.
+\symdoc{03_normalized_jet_rotation/notes/11_PAID_ANCHOR_AND_BOUNDED_PHYSICAL_SEPARATION_20261019.md}
+{UAR-05} certifies the closed box
+\begin{equation}\label{eq:uar-physical-box}
+ D=[1/20-10^{-14},1/20]\times[u-.01,u+.01],
+ \qquad u=4\pi e^{20}+1.
+\end{equation}
+The approximant anchor has rotating norm greater than $1.5441778256$;
+its complete signed variation costs less than $1.0051$.
+After residual and physical-normalizer payments,
+\[
+ |J_Q|>.539,\qquad E/\mathcal A_t^2>.27
+ \quad\hbox{throughout }D.
+\]
+The acquisition uses all $22026$ modes at the anchor and on the
+closed cell. Its interval records and control tests are linked in the note.
+
+The matched comparison in
+\symdoc{03_normalized_jet_rotation/notes/12_MATCHED_COMPLETE_CONSUMER_AND_COST_COMPARISON_20261019.md}
+{UAR-06} gives direct rotating margin $>.53908399$ and physical
+energy ratio $>.27778656$, exceeding the refined local transported
+bounds $>.53908372$ and $>.27778628$.
+All methods acquire the same $44052$ finite-mode evaluations per
+production precision; direct pays fewer errors. That transport
+configuration is stopped. Corollary~\ref{cor:uar-rebased} does not
+reverse this comparison: this box has no interior transitions and
+the existing local two-endpoint payment is stronger.
+
+The direct residual allowance is below $1.341\,10^{-7}$, whereas
+the paid approximant variation is about $1.0051$. Improving the
+already tiny omitted remainders therefore has little effect on this
+particular margin. The next useful estimate concerns separation of
+the retained oscillatory first jet, or a cheaper complete acquisition.
+The box \eqref{eq:uar-physical-box} is a small additional island of
+real noncollision; uniform separation across $J_t$, the bridge and the
+required complex exterior remain open.
+
+The compact-band extension concerns the same completed theta source.
+Changing an arithmetic level or coefficient family requires the
+corresponding contour, functional equation, normalizer and residue
+matching to be proved anew. Source-specific collision controls do not
+inherit these theta estimates merely because generic rotation
+identities apply to them.

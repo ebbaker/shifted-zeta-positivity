@@ -175,3 +175,15 @@ Keep the pairing that cancels and estimate the pair ([Response 17](../papers/inv
 
 
 **19 October 2026, paid anchor propagation.** For Edward Baker with substantial LLM assistance, **gpt-6.1-sol (Codex), ultra**. [UAR-05 Note 11](../papers/investigations-3/11_arithmetic_collision_rigidity/symmetries/03_normalized_jet_rotation/notes/11_PAID_ANCHOR_AND_BOUNDED_PHYSICAL_SEPARATION_20261019.md) pays the actual first-jet anchor, full signed approximant variation and correctly rebased complete increment. Its own polynomial event rejects after variation; omission would falsely accept. “Direct therefore retains the larger lower margin.” The bounded positive result is not upgraded to a calibrated advantage or all-sector separation. [Separate same-model review](../papers/investigations-3/11_arithmetic_collision_rigidity/symmetries/03_normalized_jet_rotation/reviews/11_UAR05_PAID_ANCHOR_INTERNAL_REVIEW_20261019.md).
+
+**19 October 2026, endpoint and parameter extensions (investigation 3/11).**
+[S03 Note 13](../papers/investigations-3/11_arithmetic_collision_rigidity/symmetries/03_normalized_jet_rotation/notes/13_REBASED_RESIDUAL_AND_COMPACT_SECTOR_EDGE_EXTENSIONS_20261019.md)
+keeps the complete signed endpoint identity and decreasing crossing
+envelope when starting at a new height. “The earlier \(2\mathcal B(t)\)
+payment was valid when only the original prefix theorem was used.” The
+sharper corollary is a new proof, not a correction of that deduction.
+Increasing a retained contour also does not bound its signed value or
+acquisition cost. The existing UAR-06 loss remains scoped to its matched
+consumer. [Internal self-review 18](../papers/investigations-3/11_arithmetic_collision_rigidity/reviews/18_UAR_ANALYTIC_MANUSCRIPT_AND_GENERALIZATION_REVIEW_20261019.md).
+Prepared for Edward Baker with substantial LLM assistance,
+**gpt-6-astra, actual effort max**.

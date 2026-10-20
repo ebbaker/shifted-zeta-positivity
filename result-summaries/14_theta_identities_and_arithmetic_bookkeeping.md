@@ -354,3 +354,15 @@ is **interval-certified for the declared bounded anchor/separation contract**: o
 
 **19 October 2026, UAR-06 matched consumer decision (investigation 3/11).**
 [Note 12](../papers/investigations-3/11_arithmetic_collision_rigidity/symmetries/03_normalized_jet_rotation/notes/12_MATCHED_COMPLETE_CONSUMER_AND_COST_COMPARISON_20261019.md) is **Complete as a scoped losing comparison** on the exact UAR-05 box: direct energy/A^2>.27778656 exceeds local transported >.27778628, with the same 44,052 acquired modes per precision and fewer error payments. “Stop this bounded transport configuration.” This supersedes UAR-05's then-Ready UAR-06 status; its certificate remains valid. [Delegated internal review](../papers/investigations-3/11_arithmetic_collision_rigidity/symmetries/03_normalized_jet_rotation/reviews/12_UAR06_MATCHED_CONSUMER_INTERNAL_REVIEW_20261019.md) and [source-pinned margins/cost ledger](../papers/investigations-3/11_arithmetic_collision_rigidity/symmetries/03_normalized_jet_rotation/numerics/UAR06_MATCHED_COMPLETE_CONSUMER_20261019.json). No factor-two transport gain or new coverage; UAR-E1/G1 remain conditional. Prepared for Edward Baker with substantial LLM assistance, **gpt-6.1-sol, actual effort ultra**; no specialist review.
+
+**19 October 2026, UAR analytic manuscript milestone (investigation 3/11).**
+[S03 Note 13](../papers/investigations-3/11_arithmetic_collision_rigidity/symmetries/03_normalized_jet_rotation/notes/13_REBASED_RESIDUAL_AND_COMPACT_SECTOR_EDGE_EXTENSIONS_20261019.md)
+is **proved in-note from the stated inherited analytic estimates**: the
+complete residual bound begins at any lower endpoint in the original
+sector, while coherent edge and corrected-transition estimates extend
+qualitatively to every fixed compact positive scaling band at sufficiently
+small time. “Neither result proves a physical lower margin or extends
+certified collision exclusion.” [Manuscript Section 13](../papers/investigations-3/11_arithmetic_collision_rigidity/manuscript/positive_arithmetic_packets/sections/13_uniform_coherent_edge.tex)
+integrates UAR-03/04 and these extensions; [review 18](../papers/investigations-3/11_arithmetic_collision_rigidity/reviews/18_UAR_ANALYTIC_MANUSCRIPT_AND_GENERALIZATION_REVIEW_20261019.md)
+records internal self-review and scalar replays. Prepared for Edward Baker
+with substantial LLM assistance, **gpt-6-astra, actual effort max**.

@@ -2,10 +2,21 @@
 
 18 October 2026, America/New_York. Prepared for Edward Baker with substantial
 LLM assistance. Authoring model **gpt-6-astra (Codex)**, actual effort **max**.
-Exact comparison identity and a bounded correlated residual estimate are
-available; the complete uniform arithmetic residual estimate remains open.
-The [UAR-02 continuation](notes/08_UNIFORM_FINITE_GAMMA_HEAT_REMAINDER_20261019.md)
-now proves its uniform finite gamma/heat remainder component.
+**Current status, 19 October:** UAR-03 proves the coherent edge/error and
+summable-transition estimates; UAR-04 bounds the complete uniform residual.
+UAR-05 certifies one bounded physical box, and UAR-06 is a completed scoped
+loss to direct certification on that box. The earlier chronological entries
+below retain their then-current status.
+
+[Note 13](notes/13_REBASED_RESIDUAL_AND_COMPACT_SECTOR_EDGE_EXTENSIONS_20261019.md)
+adds an explicit residual bound between arbitrary endpoints of the original
+sector and a qualitative compact-band extension of the edge and transition
+estimates. Both are **proved in-note from the stated inherited analytic
+estimates**. Wider-band constants/onset and physical separation remain open.
+They appear in [manuscript Section 13](../../manuscript/positive_arithmetic_packets/sections/13_uniform_coherent_edge.tex),
+with [internal self-review 18](../../reviews/18_UAR_ANALYTIC_MANUSCRIPT_AND_GENERALIZATION_REVIEW_20261019.md).
+New derivations: **gpt-6-astra, actual effort max**, for Edward Baker with
+substantial LLM assistance.
 
 **Opening execution, 18 October 2026:** the [signed transport comparison](notes/01_SIGNED_TRANSPORT_AND_DIRECT_JET_COMPARISON_20261018.md)
 evaluates the complete defect integral by a first-jet endpoint primitive.

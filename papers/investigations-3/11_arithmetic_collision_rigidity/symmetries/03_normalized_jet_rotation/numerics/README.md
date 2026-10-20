@@ -420,3 +420,22 @@ python3 papers/investigations-3/11_arithmetic_collision_rigidity/symmetries/03_n
 ```
 
 Each independent direct/global/local consumer acquires one first-order anchor and one full closed-cell signed derivative image, 44,052 modes/precision. The receipt records outward margins, physical energy, exact counts, fresh-process observations, and separately reusable validation preparation charged in each cold total. Both precisions and ledger are checked on replay; timestamped child-control byte hashes are recorded separately from exact mathematical/source identity. Historical analytic proof-development cost is listed but unmeasured. Same-producer replay is not specialist or full implementation-independent validation.
+
+## Arbitrary-endpoint residual extension
+
+19 October 2026. Prepared for Edward Baker with substantial LLM assistance,
+**gpt-6-astra, actual effort max**; internal self-review.
+[Note 13](../notes/13_REBASED_RESIDUAL_AND_COMPACT_SECTOR_EDGE_EXTENSIONS_20261019.md)
+has a [192/256-bit record](REBASED_RESIDUAL_ENVELOPE_20261019.json) checking
+the 3.246 coefficient reserve and later-start example. Exact rational
+fixtures check the switch sign, endpoint ownership, reversal and the
+zero-residual polynomial-event limitation. With Python 3 and python-flint
+0.9.0, run from the repository root:
+
+```sh
+python3 papers/investigations-3/11_arithmetic_collision_rigidity/symmetries/03_normalized_jet_rotation/numerics/check_rebased_residual_envelope.py --repo . --verify papers/investigations-3/11_arithmetic_collision_rigidity/symmetries/03_normalized_jet_rotation/numerics/REBASED_RESIDUAL_ENVELOPE_20261019.json
+```
+
+The written decreasing-envelope proof supplies uniformity. The separate
+compact-band proof has no numerical onset assigned by this checker.
+No physical acquisition, new exclusion or reversal of UAR-06 is claimed.

@@ -4,28 +4,37 @@
 LLM assistance. Recorded model: **gpt-6-astra (Codex)**; reasoning effort:
 **max**, verified from the authoring turn metadata.
 
-**Status updated 19 October 2026: symmetry findings summarized in the manuscript.**
-The [canonical manuscript](manuscript/README.md) retains its complete
-overview 02 proofs and adds a high-level account of the current S01–S07
-and GEO-T1 findings, with links to the detailed notes. [Integration review 16](reviews/16_SYMMETRY_PROGRAM_AND_MANUSCRIPT_INTEGRATION_REVIEW_20261019.md)
-and the build record identify this version. Earlier [review 13](reviews/13_CURRENT_RESULTS_MANUSCRIPT_INTEGRATION_REVIEW_20261018.md)
-and its numerical replay retain their twelve-file version scope.
-On [1/100,1/5], coverage through |x|=1001 and from |x|=exp(2000) leaves
-the intervening bridge open; the complex exterior remains open.
+**Status updated 19 October 2026: UAR analytic results and extensions integrated.**
+The [canonical manuscript](manuscript/README.md) now has thirteen sections
+and 52 pages. Section 13 emphasizes the coherent UAR-03 edge construction,
+summable corrected cutoff transitions and complete UAR-04 residual bound.
+It adds an explicit arbitrary-endpoint residual corollary and a qualitative
+extension to any fixed compact positive scaling band at sufficiently small
+time. [S03 Note 13](symmetries/03_normalized_jet_rotation/notes/13_REBASED_RESIDUAL_AND_COMPACT_SECTOR_EDGE_EXTENSIONS_20261019.md)
+contains the longer proofs; [review 18](reviews/18_UAR_ANALYTIC_MANUSCRIPT_AND_GENERALIZATION_REVIEW_20261019.md)
+and the build record identify this version. New wider-band constants and
+onset remain to be made explicit.
 
-For new work, start with the [uniform arithmetic residual program](symmetries/research-overview/03_UNIFORM_ARITHMETIC_RESIDUAL_RESEARCH_PROGRAM_20261019.md)
-and [progress register](symmetries/research-progress/02_UNIFORM_ARITHMETIC_RESIDUAL_PROGRESS_20261019.md). They prioritize
-S03's complete arithmetic residual with S04's uniform analysis, coherent
-cutoff matching and a paid physical anchor. UAR-01 is complete as a reviewed
-contract; UAR-02/03 supply the uniform finite remainder and coherent
-edge-model/transition inputs. UAR-04 supplies the complete uniform increment <2.846e-7; UAR-05 now supplies one paid bounded anchor/separation certificate, |J_Q|>.539. UAR-06 is Ready on that exact box; uniform sector separation remains open. The
-[new-round summary](symmetries/summary/02_UNIFORM_ARITHMETIC_RESIDUAL_ROUND_SUMMARY_20261019.md)
-records the finite remainder bound and remaining work, with no new coverage. Execution update:
-**gpt-6.1-sol, actual effort ultra**, 19 October 2026. The [original symmetry guide](research-overview/03_SYMMETRY_RESEARCH_PROGRAM_AND_INVESTIGATION_GUIDE_20261018.md)
-and [seven direction folders](symmetries/README.md) preserve the earlier
-contracts and completed comparisons. No new coverage or Newman bound is
-claimed by this documentation integration. Prepared for Edward Baker with
-substantial LLM assistance, **gpt-6-astra, actual effort max**.
+The [uniform arithmetic residual program](symmetries/research-overview/03_UNIFORM_ARITHMETIC_RESIDUAL_RESEARCH_PROGRAM_20261019.md),
+[progress register](symmetries/research-progress/02_UNIFORM_ARITHMETIC_RESIDUAL_PROGRESS_20261019.md)
+and [round summary](symmetries/summary/02_UNIFORM_ARITHMETIC_RESIDUAL_ROUND_SUMMARY_20261019.md)
+record UAR-01–06 as complete at their stated gates. UAR-04 gives the complete
+uniform increment <2.846e-7. UAR-05 gives one small closed physical box,
+with |J_Q|>.539. UAR-06 is a completed scoped loss: direct certification has
+a stronger margin with the same dominant acquisition. Its bounded transport
+configuration is stopped; uniform separation across the sector remains open.
+
+On [1/100,1/5], uniform coverage through |x|=1001 and from |x|=exp(2000)
+still leaves a bridge; the UAR-05 box is a small additional island within
+that gap. The complex exterior remains open. The new analytic extensions
+do not add physical coverage or a Newman bound. The next useful estimate
+controls separation of the retained arithmetic first jet, or reduces its
+complete acquisition cost. [Review 17](reviews/17_ACCOMPLISHMENTS_AND_POST_UAR_RESEARCH_PRIORITIES_REVIEW_ASTRA_20261019.md)
+explains these priorities. The [original symmetry guide](research-overview/03_SYMMETRY_RESEARCH_PROGRAM_AND_INVESTIGATION_GUIDE_20261018.md)
+and [seven direction folders](symmetries/README.md) retain the earlier
+contracts. Current integration and new derivations: prepared for Edward
+Baker with substantial LLM assistance, **gpt-6-astra, actual effort max**;
+internal self-review. The UAR-01–06 sources retain their Sol-ultra provenance.
 
 The following paragraphs retain the opening 18 October chronology;
 the current findings and priorities are linked above.

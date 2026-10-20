@@ -153,3 +153,20 @@ The existing real bridge 1001<|x|<exp(2000) on t in [.01,.2], and the required g
 [uar06]: ../03_normalized_jet_rotation/notes/12_MATCHED_COMPLETE_CONSUMER_AND_COST_COMPARISON_20261019.md
 [uar06-review]: ../03_normalized_jet_rotation/reviews/12_UAR06_MATCHED_CONSUMER_INTERNAL_REVIEW_20261019.md
 [uar06-record]: ../03_normalized_jet_rotation/numerics/UAR06_MATCHED_COMPLETE_CONSUMER_20261019.json
+
+## Subsequent manuscript integration and analytic extensions
+
+19 October 2026. Prepared for Edward Baker with substantial LLM assistance,
+**gpt-6-astra, actual effort max**; internal self-review.
+[Manuscript Section 13](../../manuscript/positive_arithmetic_packets/sections/13_uniform_coherent_edge.tex)
+now states the UAR-03/04 results at a high level and records the bounded
+UAR-05 application and UAR-06 loss. New [S03 Note 13](../03_normalized_jet_rotation/notes/13_REBASED_RESIDUAL_AND_COMPACT_SECTOR_EDGE_EXTENSIONS_20261019.md)
+is **proved in-note from the stated inherited analytic estimates**: it
+starts the 3.246 residual envelope at any lower endpoint in the original
+sector and extends coherent edge/transition control to fixed compact
+positive scaling bands at sufficiently small time. New-band constants
+and onset are qualitative, and the complete UAR-04 bound has not been
+transferred outside its original band. [Review 18](../../reviews/18_UAR_ANALYTIC_MANUSCRIPT_AND_GENERALIZATION_REVIEW_20261019.md)
+and its receipt record proof checks and fresh numerical replays. These
+extensions add no physical coverage and leave UAR-E1/G1 conditional;
+the stopped matched consumer remains stopped.

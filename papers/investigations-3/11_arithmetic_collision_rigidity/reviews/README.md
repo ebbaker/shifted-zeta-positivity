@@ -139,3 +139,30 @@ program and progress register, the linked manuscript Section 12 and the
 task-register, terminal/desktop and visual checks pass. Numerical evidence
 retains its original scope. For Edward Baker with substantial LLM assistance,
 **gpt-6-astra, actual effort max**; same-assistant integration review.
+
+
+## Accomplishments and priorities after the uniform residual round
+
+[Review 17](17_ACCOMPLISHMENTS_AND_POST_UAR_RESEARCH_PRIORITIES_REVIEW_ASTRA_20261019.md),
+19 October 2026, assesses the current thirteen-file manuscript and the
+completed UAR-01–06 round. It ranks uniform corrected residual control as
+the leading analytic advance, retains the paid bounded anchor, and records
+the matched transport loss. The next priorities are retained-approximant
+separation and cheaper complete acquisition. Selective fresh scalar,
+192/256-bit residual and physical-consumer replays pass; source identities
+and scope are in the linked receipt. Prepared for Edward Baker with
+substantial LLM assistance, **gpt-6-astra, actual effort max**. Internal
+cross-model/same-model assessment using existing numerical implementations;
+no independent specialist review or new exclusion result.
+
+## UAR analytic manuscript integration and generalization
+
+[Review 18](18_UAR_ANALYTIC_MANUSCRIPT_AND_GENERALIZATION_REVIEW_20261019.md),
+19 October 2026, assesses the fourteen-file, 52-page manuscript. It checks
+the high-level UAR-03/04 exposition, the new explicit arbitrary-endpoint
+corollary and qualitative compact-band edge/transition extension, and the
+scope of the UAR-05/06 physical comparison. Fresh 192/256-bit replays,
+new constant/sign fixtures, source/link checks and full-page visual review
+are recorded. Prepared for Edward Baker with substantial LLM assistance,
+**gpt-6-astra, actual effort max**; new proofs have internal self-review,
+not independent specialist validation. No new physical coverage is claimed.
