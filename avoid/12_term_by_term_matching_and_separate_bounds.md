@@ -275,3 +275,12 @@ fully paid absolute-envelope conclusion. [Internal review](../papers/investigati
 For Edward Baker with substantial LLM assistance, **gpt-6-astra, ultra**.
 
 **Remote signed poles, 20 October 2026 (BW-10).** [Note 13 §7](../papers/investigations-3/13_contradiction_analysis/04_boundary_winding/threshold_routes/10_rh_implies_simple_zeros/notes/13_CERTIFIED_GAP_SIGNED_POLYNOMIAL_KERNELS_20261020.md) proves a complete non-improvement comparison for every bandwidth of each fixed centered sinc power: “Only a positive `P(k)` can lower the new envelope.” Its full gamma or outer prime-shell increase pays that possible pole decrease. The separate-payment lemma for a target-vanishing remote component does not extend to coherent mixed moduli. [Review](../papers/investigations-3/13_contradiction_analysis/04_boundary_winding/threshold_routes/10_rh_implies_simple_zeros/reviews/14_REMOTE_GAP_COMPLETE_PAYMENT_AND_EVENT_ATTEMPTS_REVIEW_20261020.md). Prepared for Edward Baker with substantial LLM assistance, **gpt-6-astra, ultra**.
+
+**Coherent qualification, 20 October 2026 (BW-10).** [Note 13 §9](../papers/investigations-3/13_contradiction_analysis/04_boundary_winding/threshold_routes/10_rh_implies_simple_zeros/notes/13_CERTIFIED_GAP_SIGNED_POLYNOMIAL_KERNELS_20261020.md)
+does recover the base's signed value by taking the modulus after combining
+the prime terms, with error O(delta^(1/2−q)). Thus separate-payment failure
+must not be extended to the coherent class. Conversely, “It cannot improve
+on the exact signed consumer”: recovering that value by an exponentially
+large pole/prime cancellation does not estimate it below two.
+[Separate same-model review](../papers/investigations-3/13_contradiction_analysis/04_boundary_winding/threshold_routes/10_rh_implies_simple_zeros/reviews/15_COHERENT_REMOTE_GAP_SATURATION_REVIEW_20261020.md). Prepared for Edward
+Baker with substantial LLM assistance, **gpt-6-astra, ultra**.

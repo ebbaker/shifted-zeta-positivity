@@ -76,3 +76,5 @@ scalar mollifier and density theorem supply no one-event gain. Separate
 same-model checks; the signed arithmetic gate remains open.
 
 [14 — Remote-gap complete payment and bounded event attempts](14_REMOTE_GAP_COMPLETE_PAYMENT_AND_EVENT_ATTEMPTS_REVIEW_20261020.md) checks the uniform two-range comparison, elementary independent gap, normalized remote-component payment, localized reciprocal-energy scaling and signed derivative in the coherent theta tail. Separate same-model checks; no positive signed estimate or simplicity theorem.
+
+[15 — Coherent remote-gap saturation](15_COHERENT_REMOTE_GAP_SATURATION_REVIEW_20261020.md) checks the uniform Fourier sign, exact target normalization, all-zero leakage, coherent residual, explicit quartic constants and exponential pole/prime cancellation. The quantitative envelope conversion supplies no original-zero exclusion. Separate same-model internal review.

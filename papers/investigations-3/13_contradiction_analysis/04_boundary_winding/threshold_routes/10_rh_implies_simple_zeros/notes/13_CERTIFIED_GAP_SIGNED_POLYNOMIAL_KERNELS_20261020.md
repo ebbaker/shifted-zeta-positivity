@@ -10,7 +10,7 @@ The [result index](../../../../../../../result-summaries/README.md), [collision 
 
 **Later scope extension (20 October 2026).** Section 6 removes the polynomial-factor assumption for the exact zero-side comparison: all negative intervals must lie in an independently certified central gap. The construction handles non-even kernels and asymmetric gaps, preserves the original Fourier bandwidth when present, and has a strip-analytic version. It still does not transfer prime, gamma or pole budgets. [Separate same-model review](../reviews/13_STRIP_KERNEL_GAP_REPLACEMENT_AND_THETA_GRAM_REVIEW_20261020.md).
 
-**Remote-gap continuation (20 October 2026).** Sections 7–8 treat a different, noncentral empty interval. For every fixed even sinc power, the fully paid remote-gap multiplier cannot improve its centered carrier at any bandwidth once the height is sufficiently large. The gamma and exact signed pole terms are retained. A separate-payment lemma for added remote components has narrower normalization hypotheses; coherent mixed prime cancellation remains open. [Review](../reviews/14_REMOTE_GAP_COMPLETE_PAYMENT_AND_EVENT_ATTEMPTS_REVIEW_20261020.md).
+**Remote-gap continuation (20 October 2026).** Sections 7–8 treat a different, noncentral empty interval. For every fixed even sinc power, the fully paid remote-gap multiplier cannot improve its centered carrier at any bandwidth once the height is sufficiently large. The gamma and exact signed pole terms are retained. A separate-payment lemma for added remote components has narrower normalization hypotheses; the coherent construction in §9 now recovers the exact signed base value with a quantitative error. This supplies no opposing bound at a multiple zero. [Earlier review](../reviews/14_REMOTE_GAP_COMPLETE_PAYMENT_AND_EVENT_ATTEMPTS_REVIEW_20261020.md).
 
 ## 1. The gap is an input, and all other zeros remain
 
@@ -575,3 +575,345 @@ because |Q_gamma(q_gamma)|<=C(q_gamma). This argument is independent of a hypoth
 These statements use the genuine zeta completion and weights. A changed-source or Euler control must use its own gap and complete formula; none is assigned the unchanged arithmetic. The normalized source control in Note 05 fails the ordinary Dirichlet-series premise, while Note 09's ordinary-Dirichlet control fails completed reflection and entireness. The general separate-payment statement applies to a control only when its own formula has the same required positivity and payment properties. No control event or original multiple zero is excluded.
 
 [Separate same-model review](../reviews/14_REMOTE_GAP_COMPLETE_PAYMENT_AND_EVENT_ATTEMPTS_REVIEW_20261020.md). The [result index](../../../../../../../result-summaries/README.md) and [avoid index](../../../../../../../avoid/README.md) retain their stated scope and status rules.
+
+
+### 9.9. Coherent remote-gap saturation of a fixed signed consumer
+
+20 October 2026. Prepared for Edward Baker with substantial LLM assistance.
+Actual model: **gpt-6-astra**; reasoning effort: **ultra**. Proved in-note under the stated RH and fixed-test hypotheses, with
+separate same-model internal derivations and review; no specialist review
+or novelty claim.
+
+**Status and changed quantity.** Under RH and the independently known
+central ordinate gap, a coherent remote component reduces the complete
+absolute-prime overpayment of any fixed admissible bandlimited base to
+`O(delta^(1/2-q))`. Its limit is exactly the base's signed zero sum. This
+is a proved saturation construction, not an estimate making that sum
+less than two. It extends Note 13 §8 beyond separate prime payment and
+does not contradict the globally nonnegative class of Note 11.
+
+The [result index](../../../../../../../result-summaries/README.md),
+[avoid index](../../../../../../../avoid/README.md), and specifically
+[scoped exclusions](../../../../../../../avoid/07_scoped_exclusions_read_as_universal.md)
+and [quantitative-gain rule](../../../../../../../avoid/20_volume_without_a_gain.md)
+govern this statement.
+
+### 9.1. Fixed data and complete normalization
+
+Assume RH. Count distinct nontrivial ordinates `lambda` with their actual
+multiplicities `m_lambda`. Fix `g>0` for which `|lambda|>g`; the elementary
+choice `g=1/8` is proved in Note 13 §8. Fix `gamma>g` and put
+`D=gamma^2-g^2`. The center need not be a zero.
+
+Let `f` be real on the real axis, analytic in a strip wider than
+`|Im x|<=1/2`, decaying there as `O((1+|x|)^(-1-epsilon))`, with
+`f(0)=1`, finite Fourier support `[-Delta_f,Delta_f]`, and
+`f(lambda-gamma)>=0` at every zero. Use
+
+\[
+\widehat f(v)=\int_{\mathbb R}f(x)e^{-2\pi ixv}\,dx,
+\quad v_n=\frac{\log n}{2\pi},
+\quad w_n=\frac{\Lambda(n)}{\pi\sqrt n}.
+\tag{CS1}
+\]
+
+Write
+
+\[
+\begin{split}
+S_\gamma(f)&=\sum_\lambda m_\lambda f(\lambda-\gamma),\\
+G_\gamma(f)&=\frac1{2\pi}\int_{\mathbb R}f(x)
+ \left\{\Re\psi\left(\frac14+\frac{i(\gamma+x)}2\right)-\log\pi\right\}dx,\\
+P_\gamma(f)&=f(-\gamma+i/2)+f(-\gamma-i/2),\\
+Q_\gamma(f)&=\sum_{n\ge2}w_n\Re\{n^{-i\gamma}\widehat f(v_n)\},
+\qquad C(f)=\sum_{n\ge2}w_n|\widehat f(v_n)|,\\
+U_\gamma(f)&=G_\gamma(f)+P_\gamma(f)+C(f).
+\end{split}
+\tag{CS2}
+\]
+
+The complete explicit formula is
+
+\[
+S_\gamma(f)=G_\gamma(f)+P_\gamma(f)-Q_\gamma(f),
+\qquad U_\gamma(f)-S_\gamma(f)=C(f)+Q_\gamma(f)\ge0.
+\tag{CS3}
+\]
+
+All prime powers and both poles are retained. The imported formula is
+[Goldston–Gonek, Lemma 1](https://arxiv.org/pdf/math/0511092), applied to
+`x -> f(x-gamma)`; their Fourier convention is (CS1). The decay hypotheses
+above imply absolute convergence on the zero and gamma sides. No
+asymptotic replacement of `G` or absolute replacement of `P` is made.
+
+### 9.2. A remote component with exactly negative prime phases
+
+Fix an integer `q>=2`. For `delta>0` with `delta gamma` a positive integer,
+define
+
+\[
+\ell_\delta(u)=\left(\frac{\sin\pi\delta u}{\pi\delta u}\right)^{2q},
+\qquad
+r_\delta(x)=\frac{(x+\gamma)^2-g^2}{D}\ell_\delta(x+\gamma).
+\tag{CS4}
+\]
+
+These entire functions have the required strip decay: `r_delta` is
+`O(|x|^(2-2q))` on each fixed horizontal strip, with constants allowed
+to depend on `delta,gamma`. Its Fourier support is `[-q delta,q delta]`.
+The lattice condition gives `r_delta(0)=0`, while
+`r_delta(lambda-gamma)>=0` at every zero. Thus `f+a r_delta` has the
+original normalization and zero-side positivity for every `a>=0`.
+
+Let `F_q` be the `2q`-fold convolution of the indicator of `[-1/2,1/2]`.
+Elementary Fourier multiplication gives
+
+\[
+\widehat\ell_\delta(v)=\delta^{-1}F_q(v/\delta),
+\qquad
+\widehat r_\delta(v)=-b_\delta(v)e^{2\pi i\gamma v},
+\quad
+b_\delta(v)=\frac{g^2\delta^{-1}F_q(v/\delta)
+             +(4\pi^2)^{-1}\delta^{-3}F_q''(v/\delta)}D.
+\tag{CS5}
+\]
+
+Here `F_q` is positive on `(-q,q)`, is `C^(2q-2)` on the real line,
+and vanishes off `[-q,q]`. On either outer unit interval its exact
+simplex-convolution formula is
+
+\[
+F_q(t)=\frac{(q-|t|)^{2q-1}}{(2q-1)!}
+\quad(q-1\le |t|\le q).
+\tag{CS6}
+\]
+
+Consequently `F_q''/F_q` is continuous in the interior and is positive
+near both endpoints. It therefore has a finite lower bound. Define
+
+\[
+K_q=\max\left(0,-\inf_{|t|<q}\frac{F_q''(t)}{F_q(t)}\right)<\infty.
+\tag{CS7}
+\]
+
+For `delta^2>=K_q/(4 pi^2 g^2)`, (CS5) gives `b_delta>=0`
+everywhere, including the endpoints by continuity. This proof uses only
+elementary convolution and compactness; it does not import a
+log-concavity assertion. For `q=2` one can take the exact value `K_2=3`:
+on `0<=t<=1`, `F_2=2/3-t^2+t^3/2` and
+`F_2''+3F_2=(3/2)t((t-1)^2+1)>=0`; on `1<=t<=2`, `F_2''>=0`.
+Thus `delta>=sqrt(3)/(2 pi g)` suffices in the quartic case.
+
+On the fixed base support, (CS5) also gives uniformly
+
+\[
+D\delta b_\delta(v)\longrightarrow g^2F_q(0)>0
+\quad(|v|\le\Delta_f).
+\tag{CS8}
+\]
+
+Hence there are `c_0>0` and `delta_0`, depending only on `g,q,Delta_f`,
+such that `b_delta(v)>=c_0/(D delta)` there for `delta>=delta_0`.
+
+The factor `exp(2 pi i gamma v_n)=n^(i gamma)` in (CS5) cancels the
+actual-height phase at every prime power. Therefore
+
+\[
+Q_\gamma(r_\delta)=-C(r_\delta),
+\qquad U_\gamma(r_\delta)=S_\gamma(r_\delta).
+\tag{CS9}
+\]
+
+This is exact at each finite `delta`, not an asymptotic assertion about
+prime distribution.
+
+### 9.3. The zero-side leakage is small
+
+The independently known gap and `|sin|<=1` give
+
+\[
+0\le S_\gamma(r_\delta)
+\le\frac{\delta^{-2q}}{D\pi^{2q}}
+          \sum_\lambda m_\lambda\frac{\lambda^2-g^2}{|\lambda|^{2q}}
+=\frac{A_q}{D}\delta^{-2q},
+\qquad A_q<\infty.
+\tag{CS10}
+\]
+
+The summand is bounded above by `m_lambda |lambda|^(2-2q)`.
+Convergence follows from `N_abs(T)=O(T log(2+T))` and `q>=2`;
+dyadic shells are `O(T^(3-2q) log(2+T))`. For an explicit source of the
+zero-count bound, see [Simonič, equation (1)](https://arxiv.org/pdf/1910.08274).
+The finite low-ordinate part is separated from zero by `g`; all
+multiplicities remain in `A_q`. Neither a local spacing assertion nor
+simplicity is used.
+
+### 9.4. Coherent modulus: finite residual and quantitative saturation
+
+Put `h=f+a r_delta`, and at each prime power write
+`z_n=n^(-i gamma) fhat(v_n)` and `t_n=a b_delta(v_n)>=0`. Linearity
+of the exact completion and (CS9) give
+
+\[
+U_\gamma(h)-S_\gamma(f)
+=aS_\gamma(r_\delta)
+  +\sum_{n\ge2}w_n\{ |z_n-t_n|-t_n+\Re z_n\}.
+\tag{CS11}
+\]
+
+The summand is nonnegative. If `z_n=0` it is exactly zero, so only the
+fixed finite set `v_n<=Delta_f` contributes, even though the remote
+component has bandwidth `q delta`. For `t>0` with `t>=2|z|`,
+rationalization yields
+
+\[
+0\le |z-t|-t+\Re z
+=\frac{(\Im z)^2}{|z-t|+t-\Re z}
+\le\frac{|z|^2}{t}.
+\tag{CS12}
+\]
+
+The degenerate case `t=z=0` has zero residual and is handled directly.
+
+Choose, for definiteness,
+
+\[
+a=D\delta^{q+1/2}.
+\tag{CS13}
+\]
+
+By (CS8), `t_n>=c_0 delta^(q-1/2)` on the fixed prime set. This
+eventually exceeds `2 sup |fhat|`. Combining (CS10)–(CS13) proves
+
+\[
+\boxed{\quad
+0\le U_\gamma(f+D\delta^{q+1/2}r_\delta)-S_\gamma(f)
+\le
+\left(A_q+c_0^{-1}\sum_{v_n\le\Delta_f}w_n|\widehat f(v_n)|^2\right)
+\delta^{1/2-q}\longrightarrow0 .\quad}
+\tag{CS14}
+\]
+
+The limit is along the unbounded lattice `delta gamma in N`. The
+displayed constants and onset depend on the fixed base and on `g,q`;
+there is no hidden zero separation or multiplicity premise. In
+particular this proves the requested fixed-height result, with quartic
+rate `O(delta^(-3/2))`. The same algebra holds for every `gamma>g`
+with the stated data, but no uniform bound for a varying family `f_gamma`
+or numerical evaluation cost is asserted.
+
+This can be an actual reduction from the base envelope: if
+`C(f)+Q_gamma(f)>0`, then (CS3) and (CS14) imply `U_gamma(h)<U_gamma(f)`
+for all sufficiently large admissible `delta`. It cannot improve on the
+exact signed consumer `G_gamma(f)+P_gamma(f)-Q_gamma(f)=S_gamma(f)`.
+
+### Effective quartic constants and a strict comparison
+
+For `q=2` and `g=1/8`, the existing paired-xi-product identity in Note 01
+§3 yields
+
+\[
+Z:=\sum_\lambda\frac{m_\lambda}{\lambda^2+1/4}
+=2\frac{\xi'(1)}{\xi(1)}
+=2+\gamma_{\!E}-\log(4\pi).
+\tag{CS14a}
+\]
+
+The first equality is the product logarithmic derivative at `s=1`;
+the second follows from `xi(s)=s(s-1)pi^(-s/2)Gamma(s/2)zeta(s)/2`,
+`(s-1)zeta(s)=1+gamma_E(s-1)+O((s-1)^2)`, and
+`psi(1/2)=-gamma_E-2log 2`. All zeros and multiplicities are retained.
+For `t>=g^2`, direct maximization gives
+`(t-g^2)(t+1/4)/t^2 <=(g^2+1/4)^2/g^2=289/64`. Therefore
+
+\[
+A_2\le\frac{289}{64\pi^4}\{2+\gamma_{\!E}-\log(4\pi)\}.
+\tag{CS14b}
+\]
+
+If `delta>=2Delta_f` and `delta^2>=3/(2 pi^2 g^2)`, the cubic formula
+gives `F_2(v/delta)>=23/48` on the base support and (CS5) gives
+`b_delta>=23g^2/(96D delta)`. Hence, writing `M=sup |fhat|` and
+`R_f=sum_(v_n<=Delta_f) w_n |fhat(v_n)|^2`, (CS14) becomes the effective bound
+
+\[
+U_\gamma(f+D\delta^{5/2}r_\delta)-S_\gamma(f)
+\le\left[\frac{289Z}{64\pi^4}+\frac{96R_f}{23g^2}\right]\delta^{-3/2},
+\tag{CS14c}
+\]
+
+provided also `delta^(3/2)>=192M/(23g^2)` and `delta gamma in N`.
+This is an explicit analytic allowance; no numerical scan is required.
+
+For a concrete strict margin, suppose `fhat` is real and nonnegative
+and is positive at `v_p,v_(p^2)` for one prime `p`. Put
+`c_1=w_p fhat(v_p)>0` and `c_2=w_(p^2) fhat(v_(p^2))>0`. Since every
+other term of `C+Q` is nonnegative, writing `x=cos(gamma log p)` gives
+
+\[
+C(f)+Q_\gamma(f)\ge c_1(1+x)+2c_2x^2\ge\kappa,
+\quad
+\kappa=
+\begin{cases}
+c_1-c_1^2/(8c_2),&c_1\le4c_2,\\
+2c_2,&c_1>4c_2,
+\end{cases}
+\qquad\kappa>0.
+\tag{CS14d}
+\]
+
+Choosing the right side of (CS14) or (CS14c) below `kappa/2` proves
+`U_gamma(h)<=U_gamma(f)-kappa/2`. The elementary `p,p^2` relation itself
+already belongs to Note 06's universal multiplicative-phase information
+class; it is not a new prime cancellation estimate. Its role here is to
+exhibit a strict full-envelope reduction using the different coherent
+remote construction. No leading-height or simplicity improvement follows.
+
+### 9.5. Exact completion cost and interpretation
+
+The pole term retained above is explicitly
+
+\[
+aP_\gamma(r_\delta)
+=-2(g^2+1/4)\delta^{q+1/2}
+   \left\{\frac{\sinh(\pi\delta/2)}{\pi\delta/2}\right\}^{2q}
+\sim-\frac{2(g^2+1/4)}{\pi^{2q}}
+       e^{q\pi\delta}\delta^{1/2-q}.
+\tag{CS15}
+\]
+
+In the unshifted gamma integral, scaling `u -> u/delta` and the
+standard bound `|Re psi(1/4+iu/2)-log pi|=O(log(2+|u|))` give
+`aG_gamma(r_delta)=O_(g,q)(delta^(q-1/2))` for `delta>=1`; the
+required integrals converge already at `q=2`. Thus (CS9)–(CS10)
+also show `aC(r_delta)~ -aP_gamma(r_delta)`, with the exponential size
+in (CS15). No polynomial-size precision claim is hidden in (CS14).
+The growth bound follows, for example, from the
+[digamma asymptotic, DLMF 5.11.2](https://dlmf.nist.gov/5.11.E2)
+and boundedness on compact real ordinates.
+
+Moreover `h(-gamma)=f(-gamma)-g^2 delta^(q+1/2)` is negative for
+large `delta`. The construction is outside the globally nonnegative
+kernel class and its stated gamma/pole budgets. It also lies outside
+the separately paid addition in Note 13 §8: (CS11) takes the coherent
+modulus before summing and retains the signed poles exactly.
+
+At an actual zero of multiplicity `m_gamma`, the base assumptions give
+`S_gamma(f)>=m_gamma`. Hence a putative double zero forces the limit in
+(CS14) to remain at least two. The construction supplies no opposing
+signed arithmetic bound, no event exclusion, and no RH-to-simplicity
+theorem. It shows quantitatively why a universal barrier for coherent
+remote-gap carriers cannot be inferred from separate payment.
+
+The unchanged zeta arithmetic is essential to the exact completion
+used here. A collision control must retain its own zero set, gap and
+explicit formula; it is not assigned these prime weights or pole terms.
+The source control in Note 05 fails ordinary Dirichlet-series arithmetic,
+and the arithmetic control in Note 09 fails the completed reflection
+and entire-function premise. No control zero or original multiple zero
+is ruled out by (CS14).
+
+
+**Scope of unrestricted optimization.** At a fixed actual ordinate of multiplicity `m`, the infimum of these envelopes over unbounded auxiliary bandwidth and pole magnitude is `m`. Indeed the bases `f_T(x)=sinc²(pi T x)` have `S_gamma(f_T)->m`, by dominated convergence with the complete all-zero majorant `min(1,1/(pi²x²))` for `T>=1`. For each fixed `T`, (CS14) approximates that sum arbitrarily closely; conversely every admissible member has `U>=S>=m`. This limit estimates neither `m` nor a sufficient bandwidth, and is recorded only to delimit extension of Note11 to this signed class, not as a simplicity criterion.
+
+[Separate same-model review](../reviews/15_COHERENT_REMOTE_GAP_SATURATION_REVIEW_20261020.md) checks the complete formula, explicit constants, controls and limiting interpretation.

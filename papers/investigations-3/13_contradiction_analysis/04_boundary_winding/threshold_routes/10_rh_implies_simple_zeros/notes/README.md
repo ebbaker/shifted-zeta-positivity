@@ -35,3 +35,5 @@ Notes [11 §7](11_FULL_ABSOLUTE_PRIME_ENVELOPE_AND_LOGARITHMIC_SPREAD_20261020.m
 [Progress](../research-progress/01_RH_TO_SIMPLICITY_PROGRESS_20261020.md) · [Reviews](../reviews/README.md).
 
 **Remote-gap continuation:** [Note 13 §§7–8](13_CERTIFIED_GAP_SIGNED_POLYNOMIAL_KERNELS_20261020.md) compares the full envelope for centered sinc powers at every bandwidth and records the exact limitation on separately paid remote additions. Short assessed attempts were added to [Note 06](06_SIGNED_CORRELATION_RESOLUTION_AND_MOBIUS_ENERGY_20261020.md) and [Note 14 §6](14_EXACT_THETA_MODE_GRAM_CANCELLATION_20261020.md); they supply no event exclusion.
+
+**Coherent continuation:** [Note 13 §9](13_CERTIFIED_GAP_SIGNED_POLYNOMIAL_KERNELS_20261020.md) proves fixed-base saturation with error O(delta^(1/2−q)), including an explicit quartic bound. It can lower the separate absolute envelope, but recovers exactly the existing signed zero sum and proves no bound below two.

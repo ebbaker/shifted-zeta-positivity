@@ -414,4 +414,15 @@ Arithmetic and completion budgets are not transferred by replacement.
 For Edward Baker with substantial LLM assistance, **gpt-6-astra, ultra**;
 no original-zero exclusion, specialist review or novelty claim.
 
-**Remote-gap completion, 20 October 2026:** [Note 13 §§7–8](../papers/investigations-3/13_contradiction_analysis/04_boundary_winding/threshold_routes/10_rh_implies_simple_zeros/notes/13_CERTIFIED_GAP_SIGNED_POLYNOMIAL_KERNELS_20261020.md) is **proved for each fixed sinc^(2q) power (q>=2) at all sufficiently large heights, uniformly over every bandwidth**: the remote known-gap multiplier has no smaller full envelope, with signed poles retained. A distinct normalized remote addition cannot help under separate prime payment. Coherent mixtures and arbitrary carriers remain outside scope. [Separate same-model review](../papers/investigations-3/13_contradiction_analysis/04_boundary_winding/threshold_routes/10_rh_implies_simple_zeros/reviews/14_REMOTE_GAP_COMPLETE_PAYMENT_AND_EVENT_ATTEMPTS_REVIEW_20261020.md). Prepared for Edward Baker with substantial LLM assistance, **gpt-6-astra, ultra**; no original-zero exclusion or novelty claim.
+**Remote-gap completion, 20 October 2026:** [Note 13 §§7–8](../papers/investigations-3/13_contradiction_analysis/04_boundary_winding/threshold_routes/10_rh_implies_simple_zeros/notes/13_CERTIFIED_GAP_SIGNED_POLYNOMIAL_KERNELS_20261020.md) is **proved for each fixed sinc^(2q) power (q>=2) at all sufficiently large heights, uniformly over every bandwidth**: the remote known-gap multiplier has no smaller full envelope, with signed poles retained. A distinct normalized remote addition cannot help under separate prime payment. That comparison does not cover coherent mixtures or arbitrary carriers. [Separate same-model review](../papers/investigations-3/13_contradiction_analysis/04_boundary_winding/threshold_routes/10_rh_implies_simple_zeros/reviews/14_REMOTE_GAP_COMPLETE_PAYMENT_AND_EVENT_ATTEMPTS_REVIEW_20261020.md). Prepared for Edward Baker with substantial LLM assistance, **gpt-6-astra, ultra**; no original-zero exclusion or novelty claim.
+
+The same note's **§9, proved under RH for each fixed admissible base**,
+constructs a coherent remote addition with complete-envelope excess
+O(delta^(1/2−q)) above the base's exact signed zero sum, including an
+explicit q=2 bound. It can strictly reduce the original absolute envelope;
+the negative pole and positive prime terms cancel on an exponential
+scale. “It cannot improve on the exact signed consumer”. The unrestricted
+family's infimum equals the unknown multiplicity, so no simplicity bound
+or computational advantage follows. [Separate same-model review](../papers/investigations-3/13_contradiction_analysis/04_boundary_winding/threshold_routes/10_rh_implies_simple_zeros/reviews/15_COHERENT_REMOTE_GAP_SATURATION_REVIEW_20261020.md).
+Prepared for Edward Baker with substantial LLM assistance,
+**gpt-6-astra, ultra**; no novelty claim.

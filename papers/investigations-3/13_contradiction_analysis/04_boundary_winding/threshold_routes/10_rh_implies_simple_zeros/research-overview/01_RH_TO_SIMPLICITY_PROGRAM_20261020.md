@@ -447,10 +447,32 @@ remote signed multiplier cannot improve the complete envelope of any
 fixed even sinc power at any bandwidth once the event height is sufficiently
 large. Exact signed poles, the full gamma term and all prime powers are
 included. A separate lemma covers target-vanishing remote additions paid
-individually; coherent mixed prime cancellation remains open.
+individually; §9 now treats a coherent addition with a different conclusion.
 
 The localized reciprocal-energy and coherent theta-tail attempts did
 not supply an event-conditioned lower bound, and the original primitive
 identity gives exactly the existing contact condition. [Review 14](../reviews/14_REMOTE_GAP_COMPLETE_PAYMENT_AND_EVENT_ATTEMPTS_REVIEW_20261020.md)
 checks these statements without counting another criterion as a result.
 The signed-estimate and strict-surplus gates remain unmet.
+
+
+The coherent continuation in [Note 13 §9](../notes/13_CERTIFIED_GAP_SIGNED_POLYNOMIAL_KERNELS_20261020.md) proves
+0<=U(f+a r_delta)−S_gamma(f)<=K_f,q,g delta^(1/2−q), with
+a=(gamma²−g²)delta^(q+1/2) and delta gamma integral. It preserves the
+target value and zero-side positivity by using the independently empty
+remote interval. Its Fourier phase cancels the height phase at every
+prime power. An explicit quartic specialization pays all-zero leakage
+from the paired xi product; only the base's finite prime set remains in
+the coherent residual.
+
+This is a quantitative reduction of overpayment, not a new signed bound:
+the limit is precisely the existing signed base sum. At a multiple zero
+that sum still includes its full multiplicity. The large negative poles
+are canceled exactly by positive prime payments, so these signed kernels
+lie outside Note 11's hypotheses. [Review 15](../reviews/15_COHERENT_REMOTE_GAP_SATURATION_REVIEW_20261020.md) checks the
+construction and explicit constants. The RHS-02 opposing arithmetic
+estimate, strict surplus and all-zero exclusion remain open. This
+continuation follows the [result index](../../../../../../../result-summaries/README.md)
+and [quantitative-gain rule](../../../../../../../avoid/20_volume_without_a_gain.md).
+Prepared for Edward Baker with substantial LLM assistance,
+**gpt-6-astra, actual effort ultra**, 20 October 2026.
