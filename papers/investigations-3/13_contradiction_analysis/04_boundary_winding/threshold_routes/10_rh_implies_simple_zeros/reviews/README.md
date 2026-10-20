@@ -46,3 +46,9 @@ checks uniform microscopic approximation, the complete reciprocal-energy
 saddle, Poisson and prime-shell constants, and the explicitly budgeted
 kernel class. A primary-source canonical-system assessment retains its
 missing simplicity premise and scoped endpoint limitations.
+
+[09 — Controls, kernels, and extraction](09_CONTROLS_KERNELS_AND_EXTRACTION_REVIEW_20261020.md)
+checks exact residue and coefficient positivity, the failed reflection
+premise, discrete translated-kernel costs and complete archimedean budgets,
+and stable multiplicity extraction with an independently certified gap.
+The full signed estimate and all-zero conclusion remain unproved.

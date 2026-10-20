@@ -6,8 +6,8 @@ verified from recorded turn metadata. Separate same-model internal review;
 no specialist review.
 
 **State: structural transfer, arithmetic screens, source controls and
-correlation costs, reciprocal precision and finite Jensen margins assessed
-as bounded attempts. These give partial
+correlation costs, reciprocal precision, finite Jensen margins and stable
+multiplicity extraction assessed as bounded attempts. These give partial
 structural results, explicit certification and resolution costs, scoped
 estimating failures and an approximation control.
 RH ⇒ simplicity remains unproved. No multiple theta zero or new height
@@ -18,11 +18,11 @@ The original scope was selected in [chat 0003][origin]; this round is
 | Task | Current status | Evidence / unresolved requirement |
 | --- | --- | --- |
 | RHS-00 | Complete: scope and literature | [Opening analysis][opening] §§1–2, 9; primary inputs rechecked in [review 02][review]. No methodological priority or relative-difficulty theorem claimed. |
-| RHS-01 | Complete: inherited transfer and control screen; strengthened through Note 05 | Opening §§3–6. [Note 01][n1] proves finite root-label continuation under RH, exact endpoint/middle complement, and retained multiplicity phase atom. [Note 05][n5] adds an RH-conditional, uniformly close positive-source control with an exact double event, unchanged leading tail and pole residue one. |
-| RHS-02 | Declared estimators and correlation costs assessed; positive theta-estimate gate remains unmet | Notes 01–03 treat fixed-width, finite-prime and signed-error envelopes, and finite Euler-control rejection. [Note 04][n4] proves exact subtraction costs, a sharp actual-tail asymptotic and the fully optimized rational-power absolute-payment barrier. Note 05 screens one finite horizontal-shift consumer exactly and identifies the normalized source control's failed Dirichlet-series premise. [Note 06][n6] proves a sharp full-window correlation resolution cost, the additive-one limit of universal phase positivity, and a local Möbius-energy cost. [Note 07][n7] proves localized quadratic-to-linear dominance and exact theta Jensen coalescence rates. [Note 08][n8] obtains vanishing finite-sum relative error, a stronger energy envelope and a broader signed-Fourier kernel cost. None supplies an opposing estimate at an original multiple zero. |
+| RHS-01 | Complete: inherited transfer and control screen; strengthened through Note 09 | Opening §§3–6. [Note 01][n1] proves finite root-label continuation under RH, exact endpoint/middle complement, and retained multiplicity phase atom. [Note 05][n5] adds an RH-conditional, uniformly close positive-source control with an exact double event, unchanged leading tail and pole residue one. [Note 09][n9] adds a distinct ordinary-Dirichlet control with exact finite data, positive coefficients, residue one and RH-sized prime-counting error, but failed reflection/entireness. |
+| RHS-02 | Declared estimators and correlation costs assessed; positive theta-estimate gate remains unmet | Notes 01–03 treat fixed-width, finite-prime and signed-error envelopes, and finite Euler-control rejection. [Note 04][n4] proves exact subtraction costs, a sharp actual-tail asymptotic and the fully optimized rational-power absolute-payment barrier. Note 05 screens one finite horizontal-shift consumer exactly and identifies the normalized source control's failed Dirichlet-series premise. [Note 06][n6] proves a sharp full-window correlation resolution cost, the additive-one limit of universal phase positivity, and a local Möbius-energy cost. [Note 07][n7] proves localized quadratic-to-linear dominance and exact theta Jensen coalescence rates. [Note 08][n8] obtains vanishing finite-sum relative error, a stronger energy envelope and a broader signed-Fourier kernel cost. [Note 09][n9] constructs near-zero prime-payment kernels outside the fixed class and improves sufficient multiplicity-extraction cost under a separately certified gap. None supplies an opposing estimate at an original multiple zero. |
 | RHS-03 | Finite-wall subtask proved under RH; strict surplus still gated | Note 01 §2 covers every finite cap and multiplicity. Cap mass remains `(m-1)pi`; the Gaussian sign is event-compatible. Note 04 identifies the exterior inverse-square sum needed for effective deflation, but wall continuation gives no quantitative upper bound for it. |
 | RHS-04 | Coverage audited; no new exclusion | Structural statements cover all finite heights/multiplicities under RH. Arithmetic failure ranges are stated explicitly; no all-height signed estimate or new theta exclusion class exists. |
-| RHS-05 | Reviews of bounded attempts completed; full-argument review remains gated | [Reviews 02–08](../reviews/README.md) check the stated proofs, imports and controls. Review 04 checks uniform optimization and certified subtraction; [review 05][review5] checks source positivity, the whole-tail relative bound, exact residue normalization and the distinct curvature control. [Review 06][review6] checks correlation normalization, clustered configurations, phase minima and local pole/energy constants. [Review 07][review7] checks local dominance, complete coefficient errors and Hermite coalescence. [Review 08][review8] checks the reciprocal estimates, complete energy saddle, kernel budgets and canonical-system premise. Same-model internal validation; no simplicity theorem. |
+| RHS-05 | Reviews of bounded attempts completed; full-argument review remains gated | [Reviews 02–09](../reviews/README.md) check the stated proofs, imports and controls. Review 04 checks uniform optimization and certified subtraction; [review 05][review5] checks source positivity, the whole-tail relative bound, exact residue normalization and the distinct curvature control. [Review 06][review6] checks correlation normalization, clustered configurations, phase minima and local pole/energy constants. [Review 07][review7] checks local dominance, complete coefficient errors and Hermite coalescence. [Review 08][review8] checks the reciprocal estimates, complete energy saddle, kernel budgets and canonical-system premise. [Review 09][review9] checks the normalized arithmetic control, translated kernels and stable extraction with their distinct premises. Same-model internal validation; no simplicity theorem. |
 
 ## Quantitative outcomes
 
@@ -144,10 +144,34 @@ The original scope was selected in [chat 0003][origin]; this round is
   `(1/2+o(1)) log gamma/log log gamma`, even allowing arbitrary Fourier
   signs. The class `I Delta>=2` and unbudgeted kernels are not covered.
 
+- Under RH, Note 09's normalized reciprocal-tail control inserts zeros
+  of any prescribed order m>=2 while retaining residue one, positive
+  ordinary/logarithmic coefficients and exact agreement on all integers
+  supported on primes at most P. Its logarithmic-weight changes are
+  O_m(log P/sqrt P) uniformly; its ratio to zeta is
+  1+O_(m,epsilon)(P^-epsilon) on each fixed Re s>=1/2+epsilon.
+  It retains the global RH prime-counting error class. Exact reflection,
+  entire completion and Note 08's unchanged-zeta tail remainder fail.
+- Two translated nonnegative kernels give I Delta tending to two from
+  below and absolute prime cost C tending to one; three give I Delta
+  tending to three, I tending to zero and C asymptotic to
+  [-zeta'(3/2)/zeta(3/2)] I/pi. Complete gamma/pole budgets can be paid,
+  and explicit scalar-square versions exist. This refutes unrestricted
+  extensions of Note 08's prime-payment lower bound, but gives no improved
+  full height envelope
+  without a useful phase-return height bound.
+- With a separately certified noncentral gap d, geometric widths
+  a_j=d 2^(j-r) give a nonnegative product kernel with leakage at most
+  C log gamma 2^(-r(r+1)) and arithmetic error amplification below two.
+  For d of order 1/log gamma, the stated sufficient fixed-sum cutoff
+  improves from gamma^(3/2+o(1)) for the matched single-width payment to
+  gamma^(1+o(1)). This recovers any actual multiplicity; it does not force
+  one, supply the gap, or establish optimal computational complexity.
+
 The frozen [exact algebra contract][contract] and [replay][replay] passed
 265 rational fixtures. They check finite constants and the control sum,
 not theta zeros or the infinite analytical estimates. It was unchanged
-and not rerun for Notes 04–08, which received analytical cross-checks. No
+and not rerun for Notes 04–09, which received analytical cross-checks. No
 numerical sign scan or manuscript was started. The original BW09, HFCE and PSC registers
 retain their existing states; the earlier manuscript was reviewed but
 not changed.
@@ -214,6 +238,17 @@ alone permits common real factors. A finite-integrable system with constant
 initial data cannot directly realize unmodified xi's infinite exponential
 type; singular or infinite endpoint constructions are not ruled out.
 
+Note 09 now supplies explicit kernels in part of the class left outside
+Note 08: near-zero absolute prime payment is possible with mass tending
+to zero and I Delta tending to three. Do not extend the fixed margin
+below two in the prime-cost bound to that class. The remaining issue
+for these kernels is quantitative return height and the complete height
+envelope. The extraction result requires an independent noncentral gap
+and returns two at a double zero; its sharper finite precision is not
+a signed exclusion. The new arithmetic control fails exact reflection
+and the full zeta tail, so it must not inherit Note 05's different
+completion-preservation list.
+
 Actual-height/event-conditioned signed arithmetic, correlated
 full-source estimates and other kernel classes remain outside these
 scoped conclusions. No successful all-height estimate has been obtained. Weak Mertens and all-zero negative
@@ -250,3 +285,6 @@ unproved arithmetic and all-zero tasks complete.
 
 [n8]: ../notes/08_RECIPROCAL_PRECISION_AND_BANDLIMITED_ARITHMETIC_COSTS_20261020.md
 [review8]: ../reviews/08_RECIPROCAL_PRECISION_AND_KERNEL_REVIEW_20261020.md
+
+[n9]: ../notes/09_ARITHMETIC_CONTROLS_TRANSLATED_KERNELS_AND_STABLE_EXTRACTION_20261020.md
+[review9]: ../reviews/09_CONTROLS_KERNELS_AND_EXTRACTION_REVIEW_20261020.md

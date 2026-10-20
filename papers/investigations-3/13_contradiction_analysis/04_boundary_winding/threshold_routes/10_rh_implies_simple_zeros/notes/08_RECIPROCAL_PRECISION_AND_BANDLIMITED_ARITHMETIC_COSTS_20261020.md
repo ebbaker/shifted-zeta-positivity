@@ -459,6 +459,16 @@ One narrow conclusion holds without (K12). If \(C(h)=0\), all samples
 \]
 This is sharp: the Fejér kernel of bandwidth \(\log2/(2\pi)\) has precisely this mass, while every prime-power Fourier sample lies at or beyond its zero endpoint. Under the gamma budget, its non-prime cost is of order \(L\). An exact zero-prime-payment notch cannot be both nonnegative and of small mass. This does **not** prove a useful uniform near-zero-payment bound when the bandwidth is unrestricted; the factors \(p^{-K_p/2}\) in (K9) may become very small.
 
+**Continuation:** [Note 09](09_ARITHMETIC_CONTROLS_TRANSLATED_KERNELS_AND_STABLE_EXTRACTION_20261020.md)
+constructs translated nonnegative kernels with I Delta tending to two
+from below and C(h) tending to one, and with I Delta tending to three,
+I tending to zero and C(h) tending to zero. Their complete gamma/pole
+budgets can be paid at sufficiently large selected heights. Thus the
+fixed margin below two in (K15) is essential, and exact zero payment does
+not imply a useful unrestricted near-zero payment bound. No improved
+complete height envelope follows without paying the quantitative
+simultaneous phase-return height.
+
 The full unrestricted kernel problem remains open in this calculation. In particular, (K16) does not cover sequences with \(I\Delta\ge2\), or \(I\Delta\uparrow2\) without a sufficient quantitative margin, or kernels failing the complete archimedean budgets. The bandwidth is the actual declared support bound; artificially inflating it does not strengthen the theorem. Prime-sample notches cannot be handled by replacing the discrete sum with an unproved continuous weighted norm of \(|\widehat h|\). A signed estimate for the actual \(Q_\gamma\), rather than payment by (K1), is also outside this result.
 
 The event condition itself grants neither (K12) nor the missing signed prime cancellation. No simplicity assumption enters (K6)–(K18). For the required control screen, the endpoint Euler controls change the logarithmic prime coefficients and completion data, while Note 05's normalized positive-source controls fail the ordinary Dirichlet-series arithmetic. They therefore do not satisfy the unchanged-zeta explicit formula (K2) with its exact positive von Mangoldt weights; shape, all-real endpoint zeros, and source positivity alone are not being used to exclude them. No original theta zero is excluded by this note.

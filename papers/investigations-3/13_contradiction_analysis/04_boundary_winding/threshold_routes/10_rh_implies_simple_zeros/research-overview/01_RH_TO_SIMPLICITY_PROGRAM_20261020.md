@@ -315,3 +315,29 @@ The unrestricted kernel class is not closed by this result.
 checks source ranges, the complete energy saddle and kernel constants,
 and records the canonical-system route's missing simplicity premise.
 The original strict-surplus and all-zero gates remain open.
+
+## 11. Arithmetic controls, translated kernels and stable extraction
+
+20 October 2026. Prepared for Edward Baker with substantial LLM assistance,
+**gpt-6-astra, effort ultra**. [Note 09](../notes/09_ARITHMETIC_CONTROLS_TRANSLATED_KERNELS_AND_STABLE_EXTRACTION_20261020.md)
+adds a normalized positive ordinary-Dirichlet control with every prescribed
+finite coefficient block unchanged, residue one, uniformly small changes
+to logarithmic weights, and RH-sized prime-counting error. Under RH it
+has inserted multiple critical-line zeros. It fails the exact functional
+equation and entire completion; it is not a theta-flow counterexample.
+
+The same note constructs nonnegative translated kernels with
+I Delta tending to three, I tending to zero, and absolute prime payment
+tending to zero. The two-copy boundary case makes the fixed gap below
+I Delta=2 in Note 08 essential. Complete archimedean budgets are paid, but
+the quantitative return height still prevents any demonstrated
+improvement of the full height envelope.
+
+A separate positive product kernel uses signed combinations at geometric
+widths with error amplification below two. Under a certified noncentral
+gap of order 1/log gamma, its sufficient finite-sum cutoff is
+gamma^(1+o(1)), improving the matched single-width scheme's
+gamma^(3/2+o(1)). It extracts the actual integer multiplicity; no estimate
+forces that integer to be one. [Review 09](../reviews/09_CONTROLS_KERNELS_AND_EXTRACTION_REVIEW_20261020.md)
+checks the three distinct premise lists and quantitative bounds.
+The signed arithmetic, strict-surplus and all-zero gates remain open.
