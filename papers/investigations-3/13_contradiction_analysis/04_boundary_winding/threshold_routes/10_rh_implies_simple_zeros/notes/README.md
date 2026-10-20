@@ -24,4 +24,8 @@
 
 - [11 — Full absolute-prime envelope and logarithmic spread](11_FULL_ABSOLUTE_PRIME_ENVELOPE_AND_LOGARITHMIC_SPREAD_20261020.md). Under RH, the sharp leading one-half cost holds for every admissible nonnegative bandlimited kernel with the complete gamma/pole budgets. A joint exponential bound prices prime payment and logarithmic spread. Signed arithmetic remains open.
 
+- [12 — Finite evaluation and endpoint inverse costs](12_FINITE_EVALUATION_AND_ENDPOINT_INVERSE_COSTS_20261020.md). Classical Riemann–Siegel plus discrete Cauchy gives the same leading square-root summand count for both matched extraction schemes; exact Möbius residues and endpoint heat energy remain unpaid exclusion costs. No theta exclusion.
+
+- [13 — Certified-gap signed polynomial kernels](13_CERTIFIED_GAP_SIGNED_POLYNOMIAL_KERNELS_20261020.md). Same-bandwidth nonnegative companions dominate the complete zero sum; the quartic family has a fully paid larger leading absolute prime cost. Scope excludes unrestricted signed kernels and full gamma/pole-envelope dominance.
+
 [Progress](../research-progress/01_RH_TO_SIMPLICITY_PROGRESS_20261020.md) · [Reviews](../reviews/README.md).

@@ -586,6 +586,8 @@ The interval has length less than one. This recovers whichever multiplicity is p
 
 ## 12. The explicit cost comparison
 
+**Later matched algorithm check (20 October 2026).** [Note 12](12_FINITE_EVALUATION_AND_ENDPOINT_INVERSE_COSTS_20261020.md) proves that a corrected Riemann–Siegel value approximation and discrete Cauchy derivative give total summand count gamma^(1/2+o(1)) for **both** schemes compared here. The exponents below remain valid sufficient payments for this section's elementary Euler-sum algorithm; they are not an algorithm-independent advantage. No simplicity conclusion is added.
+
 Fix a positive tolerance \(\tau\), and suppose the independently available gap has \(d=c/L\), with \(c\) in a fixed positive compact set. Using the last bound in (E8), one may choose
 \[
  r=\sqrt{\ell/\log2}+O_\tau(1),\qquad

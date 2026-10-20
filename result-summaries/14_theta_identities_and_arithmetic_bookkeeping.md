@@ -381,3 +381,19 @@ outside this theorem.” Small-C examples remain valid; no original zero
 is excluded. [Separate same-model review](../papers/investigations-3/13_contradiction_analysis/04_boundary_winding/threshold_routes/10_rh_implies_simple_zeros/reviews/11_GENERAL_KERNEL_ENVELOPE_REVIEW_20261020.md).
 Prepared for Edward Baker with substantial LLM assistance,
 **gpt-6-astra, effort ultra**; no specialist review or novelty claim.
+
+
+**20 October 2026 — matched evaluation and signed gap kernels (BW-10).**
+[Note 12](../papers/investigations-3/13_contradiction_analysis/04_boundary_winding/threshold_routes/10_rh_implies_simple_zeros/notes/12_FINITE_EVALUATION_AND_ENDPOINT_INVERSE_COSTS_20261020.md) is **proved from the stated classical inputs under RH**:
+corrected Riemann–Siegel values plus discrete Cauchy jets give both matched
+multiplicity extractors sufficient summand exponent one-half. The earlier
+Euler-sum advantage is method-specific; this is not an executed certificate.
+Its exact Riesz contour retains multiple-zero residues. [Note 13](../papers/investigations-3/13_contradiction_analysis/04_boundary_winding/threshold_routes/10_rh_implies_simple_zeros/notes/13_CERTIFIED_GAP_SIGNED_POLYNOMIAL_KERNELS_20261020.md)
+proves a same-bandwidth nonnegative companion with a no-larger complete
+zero sum for the stated certified-gap polynomial class, and uniform
+absolute-prime-cost dominance for the quartic family. “This is exact
+zero-consumer dominance.” Full gamma/pole-envelope dominance and general
+signed kernels remain outside the result. No original zero is excluded.
+[Separate same-model review](../papers/investigations-3/13_contradiction_analysis/04_boundary_winding/threshold_routes/10_rh_implies_simple_zeros/reviews/12_FINITE_PRECISION_SIGNED_KERNEL_AND_ENERGY_REVIEW_20261020.md).
+For Edward Baker with substantial LLM assistance, **gpt-6-astra, ultra**;
+no specialist review or novelty claim.

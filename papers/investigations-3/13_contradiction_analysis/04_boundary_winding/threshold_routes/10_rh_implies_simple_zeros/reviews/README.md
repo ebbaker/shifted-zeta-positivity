@@ -64,3 +64,6 @@ checks the continuous Gram identity, complete zero and prime-power
 payments, bandwidth-independent tail bound, stable Poisson inequality,
 logarithmic moment budget and sharp leading one-half cost for the full
 declared class. Separate same-model checks; no original-zero exclusion.
+
+[12 — Finite precision, signed kernels and endpoint energy](12_FINITE_PRECISION_SIGNED_KERNEL_AND_ENERGY_REVIEW_20261020.md)
+checks the primary Riemann–Siegel remainder, discrete derivative alias and division errors, matched algorithm comparison, complete Riesz contour, crossed reciprocal residue, polynomial replacement, uniform prime cost and exterior heat-energy finite parts. Separate same-model internal review; no simplicity theorem or new exclusion.

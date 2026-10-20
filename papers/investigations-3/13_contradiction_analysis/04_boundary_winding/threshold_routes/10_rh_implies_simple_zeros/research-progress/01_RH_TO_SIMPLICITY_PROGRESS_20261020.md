@@ -11,7 +11,7 @@ multiplicity extraction assessed as bounded attempts. The uniform
 phase-return height comparison is now resolved for the construction
 in Note 09. Note 11 closes the leading complete absolute-prime envelope
 comparison for the full admissible nonnegative-kernel class under its
-stated gamma and pole budgets. These give partial
+stated gamma and pole budgets. Notes 12–13 add the matched Riemann–Siegel evaluation comparison, a scoped inverse-mollifier cost, and the certified-gap signed-polynomial screen. These give partial
 structural results, explicit certification and resolution costs, scoped
 estimating failures and an approximation control.
 RH ⇒ simplicity remains unproved. No multiple theta zero or new height
@@ -23,12 +23,41 @@ The original scope was selected in [chat 0003][origin]; this round is
 | --- | --- | --- |
 | RHS-00 | Complete: scope and literature | [Opening analysis][opening] §§1–2, 9; primary inputs rechecked in [review 02][review]. No methodological priority or relative-difficulty theorem claimed. |
 | RHS-01 | Complete: inherited transfer and control screen; strengthened through Note 09 | Opening §§3–6. [Note 01][n1] proves finite root-label continuation under RH, exact endpoint/middle complement, and retained multiplicity phase atom. [Note 05][n5] adds an RH-conditional, uniformly close positive-source control with an exact double event, unchanged leading tail and pole residue one. [Note 09][n9] adds a distinct ordinary-Dirichlet control with exact finite data, positive coefficients, residue one and RH-sized prime-counting error, but failed reflection/entireness. |
-| RHS-02 | Declared estimators and correlation costs assessed; positive theta-estimate gate remains unmet | Notes 01–03 treat fixed-width, finite-prime and signed-error envelopes, and finite Euler-control rejection. [Note 04][n4] proves exact subtraction costs, a sharp actual-tail asymptotic and the fully optimized rational-power absolute-payment barrier. Note 05 screens one finite horizontal-shift consumer exactly and identifies the normalized source control's failed Dirichlet-series premise. [Note 06][n6] proves a sharp full-window correlation resolution cost, the additive-one limit of universal phase positivity, and a local Möbius-energy cost. [Note 07][n7] proves localized quadratic-to-linear dominance and exact theta Jensen coalescence rates. [Note 08][n8] obtains vanishing finite-sum relative error, a stronger energy envelope and a broader signed-Fourier kernel cost. [Note 09][n9] constructs near-zero prime-payment kernels outside the fixed class and improves sufficient multiplicity-extraction cost under a separately certified gap. [Note 10][n10] closes the full-height improvement for those uniform phase-return constructions, with leading costs at least one/three-halves. [Note 11][n11] proves the sharp leading one-half absolute-envelope floor for the full admissible nonnegative-kernel class under complete gamma/pole budgets, with a joint prime-cost/logarithmic-spread bound. None supplies an opposing estimate at an original multiple zero. |
+| RHS-02 | Declared estimators and correlation costs assessed; positive theta-estimate gate remains unmet | Notes 01–03 treat fixed-width, finite-prime and signed-error envelopes, and finite Euler-control rejection. [Note 04][n4] proves exact subtraction costs, a sharp actual-tail asymptotic and the fully optimized rational-power absolute-payment barrier. Note 05 screens one finite horizontal-shift consumer exactly and identifies the normalized source control's failed Dirichlet-series premise. [Note 06][n6] proves a sharp full-window correlation resolution cost, the additive-one limit of universal phase positivity, and a local Möbius-energy cost. [Note 07][n7] proves localized quadratic-to-linear dominance and exact theta Jensen coalescence rates. [Note 08][n8] obtains vanishing finite-sum relative error, a stronger energy envelope and a broader signed-Fourier kernel cost. [Note 09][n9] constructs near-zero prime-payment kernels outside the fixed class and improves sufficient multiplicity-extraction cost under a separately certified gap. [Note 10][n10] closes the full-height improvement for those uniform phase-return constructions, with leading costs at least one/three-halves. [Note 11][n11] proves the sharp leading one-half absolute-envelope floor for the full admissible nonnegative-kernel class under complete gamma/pole budgets, with a joint prime-cost/logarithmic-spread bound. [Note 12][n12] gives both matched extractors leading square-root summand count, while retaining inverse-mollifier residues and endpoint energy. [Note 13][n13] supplies a nonnegative companion for certified-gap polynomial kernels and a complete quartic prime-cost comparison. None supplies an opposing estimate at an original multiple zero. |
 | RHS-03 | Finite-wall subtask proved under RH; strict surplus still gated | Note 01 §2 covers every finite cap and multiplicity. Cap mass remains `(m-1)pi`; the Gaussian sign is event-compatible. Note 04 identifies the exterior inverse-square sum needed for effective deflation, but wall continuation gives no quantitative upper bound for it. |
 | RHS-04 | Coverage audited; no new exclusion | Structural statements cover all finite heights/multiplicities under RH. Arithmetic failure ranges are stated explicitly; no all-height signed estimate or new theta exclusion class exists. |
-| RHS-05 | Reviews of bounded attempts completed; full-argument review remains gated | [Reviews 02–11](../reviews/README.md) check the stated proofs, imports and controls. Review 04 checks uniform optimization and certified subtraction; [review 05][review5] checks source positivity, the whole-tail relative bound, exact residue normalization and the distinct curvature control. [Review 06][review6] checks correlation normalization, clustered configurations, phase minima and local pole/energy constants. [Review 07][review7] checks local dominance, complete coefficient errors and Hermite coalescence. [Review 08][review8] checks the reciprocal estimates, complete energy saddle, kernel budgets and canonical-system premise. [Review 09][review9] checks the normalized arithmetic control, translated kernels and stable extraction with their distinct premises. [Review 10][review10] checks the primary approximation, return-height bound and scoped complete-envelope comparison. [Review 11][review11] checks continuous Gram/Fubini, all-zero and all-prime-power payments, stable Poisson and the full-class scope. Same-model internal validation; no simplicity theorem. |
+| RHS-05 | Reviews of bounded attempts completed; full-argument review remains gated | [Reviews 02–12](../reviews/README.md) check the stated proofs, imports and controls. Review 04 checks uniform optimization and certified subtraction; [review 05][review5] checks source positivity, the whole-tail relative bound, exact residue normalization and the distinct curvature control. [Review 06][review6] checks correlation normalization, clustered configurations, phase minima and local pole/energy constants. [Review 07][review7] checks local dominance, complete coefficient errors and Hermite coalescence. [Review 08][review8] checks the reciprocal estimates, complete energy saddle, kernel budgets and canonical-system premise. [Review 09][review9] checks the normalized arithmetic control, translated kernels and stable extraction with their distinct premises. [Review 10][review10] checks the primary approximation, return-height bound and scoped complete-envelope comparison. [Review 11][review11] checks continuous Gram/Fubini, all-zero and all-prime-power payments, stable Poisson and the full-class scope. [Review 12][review12] checks the new evaluation, mollifier, signed-kernel and energy comparisons. Same-model internal validation; no simplicity theorem. |
 
 ## Quantitative outcomes
+
+- Note 12 uses a classical Riemann–Siegel expansion with value error
+  O(gamma^(-5/4)) and a discrete Cauchy formula whose alias error is
+  explicitly paid. RH supplies normalized logarithmic-derivative error
+  gamma^(-3/4+o(1)) for the geometric widths, at total summand count
+  gamma^(1/2+o(1)). The matched one-width test also reaches exponent
+  one-half, with error gamma^(-1/2+o(1)). Thus the earlier exponents one
+  versus three-halves are specific to the declared Euler-sum payment.
+  This is an asymptotic exact-arithmetic count, not an executed certificate,
+  optimal complexity or a simplicity margin.
+- The Riesz Möbius mollifier at a=c/log gamma has paid absolute error
+  gamma^(1/2+o(1)) Y^(-a+a/log log gamma). A sufficient vanishing-error
+  choice has log Y=K(log gamma)^2, K>1/(2c); this is not a necessary
+  length bound. A functional-equation shift must retain every crossed
+  reciprocal-zeta residue, including the displayed double-zero term.
+- With an independently certified noncentral gap, every admissible even
+  polynomial times a nonnegative carrier has a same-bandwidth globally
+  nonnegative companion with a no-larger complete zero sum. For the
+  quartic-times-sixth-sinc family, the signed member also has the larger
+  leading complete absolute prime payment, uniformly in the gap parameters.
+  No full gamma/pole-envelope dominance or general signed-kernel barrier
+  is inferred. The exact signed arithmetic remains open.
+- For an order-m endpoint cluster, M=m(m-1)/2 and the complete exterior
+  inverse-square sum S give inverse-gap energy M/(8t)+MS/4+O(t).
+  The exterior forcing is essential to the log-energy finite part.
+  Fixed-reference subtraction leaves logarithmic divergence; canonical
+  heat subtraction leaves a compatible positive finite part. RH supplies
+  no pre-zero all-real interval or opposing energy estimate.
+
 
 - At the endpoint Euler control's added zeros, the exact Poisson increment
   is `delta log(p) coth(delta log(p)/2)>2`, tending to two. Its changed
@@ -281,6 +310,16 @@ hypotheses remain outside these scoped conclusions. Omitting a required
 gamma or pole payment is not a valid change of consumer. No successful all-height signed exclusion estimate has been obtained. Weak Mertens and all-zero negative
 moments of zeta's derivative cannot be imported as consequences of RH.
 
+Notes 12–13 refine these stop rules. Use the same corrected value algorithm
+when comparing extraction methods; do not present the earlier Euler-sum
+exponents as a general complexity separation. Do not move an inverse-zeta
+contour across the critical line without every reciprocal-zero residue.
+The polynomial gap replacement is an exact zero-side comparison, not a
+transfer of arithmetic error or gamma/pole budgets. Ordinary theta moment
+bounds do not control inverse-gap energy; the pre-zero interval used in
+Rodgers–Tao is unavailable from RH alone. These are scoped assessments,
+not prohibitions against a new signed estimate using unchanged arithmetic.
+
 The unconditional alternatives in the opening remain separate. The
 parallel investigation remains open; this register does not mark the
 unproved arithmetic and all-zero tasks complete.
@@ -321,3 +360,7 @@ unproved arithmetic and all-zero tasks complete.
 
 [n11]: ../notes/11_FULL_ABSOLUTE_PRIME_ENVELOPE_AND_LOGARITHMIC_SPREAD_20261020.md
 [review11]: ../reviews/11_GENERAL_KERNEL_ENVELOPE_REVIEW_20261020.md
+
+[n12]: ../notes/12_FINITE_EVALUATION_AND_ENDPOINT_INVERSE_COSTS_20261020.md
+[n13]: ../notes/13_CERTIFIED_GAP_SIGNED_POLYNOMIAL_KERNELS_20261020.md
+[review12]: ../reviews/12_FINITE_PRECISION_SIGNED_KERNEL_AND_ENERGY_REVIEW_20261020.md

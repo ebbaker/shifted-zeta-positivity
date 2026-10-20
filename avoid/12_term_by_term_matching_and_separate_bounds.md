@@ -250,3 +250,14 @@ remain open; omitting a required payment is not a gain.
 [Separate same-model review](../papers/investigations-3/13_contradiction_analysis/04_boundary_winding/threshold_routes/10_rh_implies_simple_zeros/reviews/11_GENERAL_KERNEL_ENVELOPE_REVIEW_20261020.md).
 Prepared for Edward Baker with substantial LLM assistance,
 **gpt-6-astra, effort ultra**; no original-zero exclusion or specialist review.
+
+
+**20 October 2026 — matched algorithms and crossed reciprocal poles (BW-10).**
+[Note 12](../papers/investigations-3/13_contradiction_analysis/04_boundary_winding/threshold_routes/10_rh_implies_simple_zeros/notes/12_FINITE_EVALUATION_AND_ENDPOINT_INVERSE_COSTS_20261020.md) records: “both the geometrically spaced extraction and its matched coarse one-width comparator have sufficient leading summand exponent 1/2 with this value algorithm.”
+The earlier Euler-sum comparison remains valid only for its declared
+method. The same note retains every reciprocal-zero residue in a
+functional-equation contour shift; an exact functional equation does not
+remove the event's pole. [Note 13](../papers/investigations-3/13_contradiction_analysis/04_boundary_winding/threshold_routes/10_rh_implies_simple_zeros/notes/13_CERTIFIED_GAP_SIGNED_POLYNOMIAL_KERNELS_20261020.md)
+keeps zero-side kernel dominance separate from complete arithmetic-budget
+dominance. [Internal review](../papers/investigations-3/13_contradiction_analysis/04_boundary_winding/threshold_routes/10_rh_implies_simple_zeros/reviews/12_FINITE_PRECISION_SIGNED_KERNEL_AND_ENERGY_REVIEW_20261020.md).
+For Edward Baker with substantial LLM assistance, **gpt-6-astra, ultra**.

@@ -337,7 +337,8 @@ A separate positive product kernel uses signed combinations at geometric
 widths with error amplification below two. Under a certified noncentral
 gap of order 1/log gamma, its sufficient finite-sum cutoff is
 gamma^(1+o(1)), improving the matched single-width scheme's
-gamma^(3/2+o(1)). It extracts the actual integer multiplicity; no estimate
+gamma^(3/2+o(1)) for the declared elementary Euler-sum algorithm.
+Section 14 updates the matched comparison using Riemann–Siegel. It extracts the actual integer multiplicity; no estimate
 forces that integer to be one. [Review 09](../reviews/09_CONTROLS_KERNELS_AND_EXTRACTION_REVIEW_20261020.md)
 checks the three distinct premise lists and quantitative bounds.
 The signed arithmetic, strict-surplus and all-zero gates remain open.
@@ -386,3 +387,29 @@ all-height simplicity bound. The near-zero prime-payment examples remain
 valid, and Note 10 retains its stronger family-specific return result.
 A signed arithmetic estimate or another justified consumer is still
 needed; RH-to-simplicity, strict surplus and all-zero coverage remain open.
+
+
+## 14. Matched finite evaluation, reciprocal costs and signed gap kernels
+
+20 October 2026. Prepared for Edward Baker with substantial LLM assistance,
+**gpt-6-astra, effort ultra**. [Note 12](../notes/12_FINITE_EVALUATION_AND_ENDPOINT_INVERSE_COSTS_20261020.md)
+imports a classical Riemann–Siegel value formula and pays derivative alias,
+small-denominator and combination errors. Both existing gap-certified
+extraction schemes now have sufficient leading summand exponent one-half.
+The earlier exponent comparison remains specific to its Euler algorithm;
+no matched direct first-jet advantage or simplicity margin is established.
+
+The same note gives an exact Riesz Möbius remainder and the double-zero
+residue that survives a functional-equation contour shift. Its sufficient
+logarithmic length is of order (log gamma)^2 under the stated bound; that
+is not a necessary lower bound. The endpoint-energy assessment retains
+all exterior forces and identifies the missing inverse-jet estimate.
+No pre-zero real-root interval follows from RH.
+
+[Note 13](../notes/13_CERTIFIED_GAP_SIGNED_POLYNOMIAL_KERNELS_20261020.md)
+proves exact nonnegative-companion dominance for a certified-gap polynomial
+kernel class and a uniform full-prime-payment comparison for its quartic
+family. It does not transfer signed gamma/pole budgets or rule out general
+sign-changing kernels. [Review 12](../reviews/12_FINITE_PRECISION_SIGNED_KERNEL_AND_ENERGY_REVIEW_20261020.md)
+checks these bounded conclusions. The original RHS-02 signed-arithmetic,
+strict-surplus and all-zero gates remain open.
