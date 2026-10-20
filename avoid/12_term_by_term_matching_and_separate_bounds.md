@@ -189,3 +189,16 @@ acquisition cost. The existing UAR-06 loss remains scoped to its matched
 consumer. [Internal self-review 18](../papers/investigations-3/11_arithmetic_collision_rigidity/reviews/18_UAR_ANALYTIC_MANUSCRIPT_AND_GENERALIZATION_REVIEW_20261019.md).
 Prepared for Edward Baker with substantial LLM assistance,
 **gpt-6-astra, actual effort max**.
+
+
+**20 October 2026, exact theta Gram payment.** Prepared for Edward Baker
+with substantial LLM assistance, **gpt-6-astra, ultra**.
+[The reviewed estimator audit](../papers/investigations-3/13_contradiction_analysis/02_threshold_jet_sign/notes/02_EVENT_CONDITIONED_THETA_GRAM_OBSTRUCTION_20261020.md)
+retains all selected mixed correlations and improves its matched box
+allowance, but the optimal allowance remains positive. The
+[positive-source extension](../papers/investigations-3/13_contradiction_analysis/02_threshold_jet_sign/notes/03_POSITIVE_MULTIPLIER_GRAM_EXTENSION_20261020.md) proves:
+“A more elaborate realization of the same ball does not supply the missing theta sign.”
+The changed controls fail the physical mass anchor by a quantified
+amount. This stops that specified norm relaxation and its positivity
+repair, not coefficient-sensitive signed estimates;
+[separate same-model review](../papers/investigations-3/13_contradiction_analysis/02_threshold_jet_sign/reviews/02_POSITIVE_MULTIPLIER_GRAM_REVIEW_20261020.md).

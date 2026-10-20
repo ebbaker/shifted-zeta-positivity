@@ -2,7 +2,9 @@
 
 19 October 2026, America/New_York. Prepared for **Edward Baker** with substantial LLM assistance. Authoring model **gpt-6-astra (Codex)**; actual reasoning effort **xhigh**, verified from recorded turn metadata.
 
-**Status: Restricted analytic result, proved in-note and reviewed: a necessary bound stronger than the mirror term now covers every a>0 and finite multiplicity m>=2. The physical double-event pair is paid; higher m has a differentiated-field consumer, not a physical winding exclusion.**
+**Status: the inherited all-height/multiplicity necessary bound remains available. The new finite-profile and finite-error-profile attempts are closed with separately reviewed scoped obstructions; no opposing theta sign is obtained.**
+
+Read [Note 05](notes/05_FINITE_PROFILE_CONDITIONING_OBSTRUCTIONS_20261020.md) and its [review](reviews/03_FINITE_PROFILE_CONDITIONING_REVIEW_20261020.md). Exact profile data at constructed vectors can coexist with arbitrarily large normalized event jets, including positive-source threshold controls. The whole-axis error bound and conditional upper consumer state their precise domains. Prepared for Edward Baker with substantial LLM assistance, gpt-6-astra, actual effort ultra.
 
 Execution update, 20 October 2026: prepared for Edward Baker with substantial LLM assistance, **gpt-6-astra (Codex), actual effort ultra**, verified from the parent turn metadata. Reviews in this round are internal and same-model; no specialist review.
 
@@ -39,7 +41,7 @@ Read the [result summaries][results] and [patterns to avoid][avoid].
 Use [DRAFT_HISTORY.md](DRAFT_HISTORY.md) for later milestones; create no new manuscript snapshots.
 
 [program]: ../../research-overview/01_THRESHOLD_BOUNDARY_WINDING_RESEARCH_PROGRAM_20261019.md
-[progress]: ../../research-progress/01_THRESHOLD_BOUNDARY_WINDING_PROGRESS_20261019.md
+[progress]: ../../research-progress/02_THRESHOLD_SIGNED_ARITHMETIC_PROGRESS_20261020.md
 [routes]: ../README.md
 [results]: ../../../../../../result-summaries/README.md
 [avoid]: ../../../../../../avoid/README.md

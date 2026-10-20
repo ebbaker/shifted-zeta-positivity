@@ -2,8 +2,14 @@
 
 19 October 2026, America/New_York. Prepared for **Edward Baker** with substantial LLM assistance. Authoring model **gpt-6-astra (Codex)**; actual reasoning effort **xhigh**, verified from recorded turn metadata.
 
-This is the single execution register for the [research program][program]
-and its eight [sub-investigations][routes]. **Current state: BW-08 now supplies an all-height, all-finite-multiplicity necessary jet bound; BW-07 preserves the hypothetical threshold under differentiation to a double event. BW-01 has a new fixed-event positive-source obstruction, and BW-02 through BW-05 have a quantitative local forward exclusion. These bounded tasks are complete with exact controls and separate same-model reviews. BW-06 now extends the physical remainder payment and its scoped obstruction to all finite multiplicities. No incompatible theta estimate, acquired theta event, new covered region, or improved Newman bound has been obtained.**
+**Historical register after the 20 October 2026 handoff.** New execution
+belongs in the [signed arithmetic progress register][next-progress],
+guided by the [next-round program][next-program]. The tables and log
+below preserve the first-round state and evidence. Handoff prepared for
+Edward Baker with LLM assistance, **gpt-6-astra (Codex), actual effort max**.
+
+This is the first-round execution record for the [research program][program]
+and its eight [sub-investigations][routes]. **State at handoff: BW-08 now supplies an all-height, all-finite-multiplicity necessary jet bound; BW-07 preserves the hypothetical threshold under differentiation to a double event. BW-01 has a new fixed-event positive-source obstruction, and BW-02 through BW-05 have a quantitative local forward exclusion. These bounded tasks are complete with exact controls and separate same-model reviews. BW-06 now extends the physical remainder payment and its scoped obstruction to all finite multiplicities. No incompatible theta estimate, acquired theta event, new covered region, or improved Newman bound has been obtained.**
 
 Execution update, 19 October 2026: prepared for Edward Baker with substantial LLM assistance, **gpt-6-astra (Codex), actual effort max**.
 
@@ -85,14 +91,17 @@ exclusion remain global obligations.
 
 Opening execution: [contract][bw01contract], [result][bw01result], [receipt][bw01controls], [self-review][bw01review]. The unit scaled quadratic boundary margin and the quartic bound eta^2=10917/16384 are control/transfer quantities, not theta exclusion margins.
 
-Append later entries with the actual model and effort, source version,
-exact domain, complete numerical margin if applicable, result class,
-linked note/record/review and remaining obligation. Keep earlier failed
-attempts and inherited sources visible. Update this register and the
-relevant README when execution changes; do not create duplicate route
-trackers. Follow the [result summaries][results] and [patterns to avoid][avoid].
+Preserve this first-round log, including failed attempts and inherited
+sources. Append new execution entries only to the [active register][next-progress],
+with the actual model and effort, source version, exact domain, complete
+margin if applicable, result class, linked evidence and remaining
+obligation. Historical corrections should be labeled and linked without
+erasing the earlier claim. Follow the [result summaries][results] and
+[patterns to avoid][avoid].
 
 [program]: ../research-overview/01_THRESHOLD_BOUNDARY_WINDING_RESEARCH_PROGRAM_20261019.md
+[next-program]: ../research-overview/02_THRESHOLD_SIGNED_ARITHMETIC_RESEARCH_PROGRAM_20261020.md
+[next-progress]: 02_THRESHOLD_SIGNED_ARITHMETIC_PROGRESS_20261020.md
 [routes]: ../threshold_routes/README.md
 [predecessor]: ../../../../quasi-rh/quasi-rh-exponent-descent/newman_collisions/newman_collision_reductions.tex
 [index]: ../../../../investigations-2/active/22_theta_manifold_geometry/notes/01_physical_jet_geometry/04_SPACETIME_INDEX_AND_MARKED_TOPOLOGY_20261015.md

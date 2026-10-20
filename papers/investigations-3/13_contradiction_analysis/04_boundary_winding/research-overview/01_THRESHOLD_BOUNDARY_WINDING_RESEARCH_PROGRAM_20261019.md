@@ -2,6 +2,14 @@
 
 19 October 2026, America/New_York. Prepared for **Edward Baker** with substantial LLM assistance. Authoring model **gpt-6-astra (Codex)**; actual reasoning effort **xhigh**, verified from recorded turn metadata.
 
+**Continuation handoff, 20 October 2026:** the
+[signed arithmetic program](02_THRESHOLD_SIGNED_ARITHMETIC_RESEARCH_PROGRAM_20261020.md)
+directs the next round. This original program retains the eight-route
+framework and shared acceptance rules. Use the [active register][progress]
+for new execution; the [first-round record](../research-progress/01_THRESHOLD_BOUNDARY_WINDING_PROGRESS_20261019.md)
+preserves earlier results. Handoff prepared for Edward Baker with LLM
+assistance, **gpt-6-astra (Codex), actual effort max**.
+
 This program investigates contradictions at a hypothetical **positive
 threshold T=Lambda of the unchanged theta flow**, beginning with exact
 multiplicity two. It organizes a local zero-winding route, four ways to
@@ -185,7 +193,7 @@ route-specific chats use their actual affiliations under the [history
 workflow][history]. Follow [LARGE_FILES.md][large]. This program schedules
 no automated work and records no unperformed mathematical task as complete.
 
-[progress]: ../research-progress/01_THRESHOLD_BOUNDARY_WINDING_PROGRESS_20261019.md
+[progress]: ../research-progress/02_THRESHOLD_SIGNED_ARITHMETIC_PROGRESS_20261020.md
 [predecessor]: ../../../../quasi-rh/quasi-rh-exponent-descent/newman_collisions/newman_collision_reductions.tex
 [polymath]: https://arxiv.org/html/1904.12438v2#S3
 [index]: ../../../../investigations-2/active/22_theta_manifold_geometry/notes/01_physical_jet_geometry/04_SPACETIME_INDEX_AND_MARKED_TOPOLOGY_20261015.md

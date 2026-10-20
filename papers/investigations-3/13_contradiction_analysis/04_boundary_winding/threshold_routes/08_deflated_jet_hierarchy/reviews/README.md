@@ -16,3 +16,5 @@ The first result has a [same-assistant self-review](01_IMAGINARY_AXIS_SELF_REVIE
 [controls]: ../../../../../../../result-summaries/12_collision_controls_and_screening.md
 
 20 October 2026, gpt-6-astra, ultra: [internal same-model review](02_ALL_HEIGHT_MULTIPLICITY_REVIEW_20261020.md). No specialist review.
+
+20 October 2026 — Prepared for Edward Baker with substantial LLM assistance, **gpt-6-astra, actual effort ultra**. [03: finite-profile review](03_FINITE_PROFILE_CONDITIONING_REVIEW_20261020.md) accepts the analytic proofs and rerun exact controls, without a theta sign or coverage claim. Reviews are internal and same-model; no specialist review.

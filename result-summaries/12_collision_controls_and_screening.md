@@ -115,6 +115,23 @@ only those properties proves a false statement.
   Prepared for Edward Baker with substantial LLM assistance, gpt-6-astra,
   ultra. No theta exclusion or specialist review.
 
+
+- **Exact finite-profile threshold controls (3/13, 20 October).**
+  **Proved in-note; separate same-model internal review:** for any
+  prescribed finite observation heights, a constructed profile vector
+  stays exact along a positive finite-atom threshold family with fixed
+  event height, normalization and common complete moments, while the
+  normalized deflated jet diverges. A fixed triangular convolution
+  extends this to continuous compact sources. “None of these statements
+  says that the actual theta profile at a specified time admits a collision”
+  is the source's explicit qualification.
+  The controls fail unchanged theta coefficients, full profile growth
+  and eventual simplicity at the threshold. [Profile proof](../papers/investigations-3/13_contradiction_analysis/04_boundary_winding/threshold_routes/08_deflated_jet_hierarchy/notes/05_FINITE_PROFILE_CONDITIONING_OBSTRUCTIONS_20261020.md),
+  [review](../papers/investigations-3/13_contradiction_analysis/04_boundary_winding/threshold_routes/08_deflated_jet_hierarchy/reviews/03_FINITE_PROFILE_CONDITIONING_REVIEW_20261020.md), and
+  [continuous-source extension](../papers/investigations-3/13_contradiction_analysis/02_threshold_jet_sign/notes/03_POSITIVE_MULTIPLIER_GRAM_EXTENSION_20261020.md).
+  Prepared for Edward Baker with substantial LLM assistance,
+  gpt-6-astra, ultra; no theta exclusion or specialist review.
+
 ## Status
 
 19: proved and certified; the manuscript "awaits independent review" and

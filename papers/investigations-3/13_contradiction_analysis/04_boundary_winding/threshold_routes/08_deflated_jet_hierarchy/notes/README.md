@@ -12,7 +12,7 @@ Execution update, 19 October 2026: prepared for Edward Baker with substantial LL
 [Research home](../README.md).
 
 [program]: ../../../research-overview/01_THRESHOLD_BOUNDARY_WINDING_RESEARCH_PROGRAM_20261019.md
-[progress]: ../../../research-progress/01_THRESHOLD_BOUNDARY_WINDING_PROGRESS_20261019.md
+[progress]: ../../../research-progress/02_THRESHOLD_SIGNED_ARITHMETIC_PROGRESS_20261020.md
 [large]: ../../../../../../../LARGE_FILES.md
 [history]: ../../../../../../../tools/CHAT_HISTORY.md
 [predecessor]: ../../../../../../quasi-rh/quasi-rh-exponent-descent/newman_collisions/newman_collision_reductions.tex
@@ -21,3 +21,5 @@ Execution update, 19 October 2026: prepared for Edward Baker with substantial LL
 [controls]: ../../../../../../../result-summaries/12_collision_controls_and_screening.md
 
 20 October continuation, gpt-6-astra, ultra: [04_ALL_HEIGHT_MULTIPLICITY_JET_BOUND_20261020.md](04_ALL_HEIGHT_MULTIPLICITY_JET_BOUND_20261020.md). Restricted analytic result, proved in-note and reviewed: a necessary bound stronger than the mirror term now covers every a>0 and finite multiplicity m>=2. The physical double-event pair is paid; higher m has a differentiated-field consumer, not a physical winding exclusion.
+
+20 October 2026 — Prepared for Edward Baker with substantial LLM assistance, **gpt-6-astra, actual effort ultra**. [05: finite-profile conditioning](05_FINITE_PROFILE_CONDITIONING_OBSTRUCTIONS_20261020.md) proves scoped obstructions with exact sample preservation and an explicit full-profile error; its positive-source control and conditional upper consumer retain all scope limits. Reviews are internal and same-model; no specialist review.

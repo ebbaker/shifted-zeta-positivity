@@ -10,13 +10,20 @@ Execution update, 19 October 2026: prepared for Edward Baker with substantial LL
 
 Execution update, 20 October 2026: prepared for Edward Baker with substantial LLM assistance, **gpt-6-astra (Codex), actual effort ultra**, verified from the parent turn metadata. Reviews in this round are internal and same-model; no specialist review.
 
-See the [all-height/multiplicity bound](threshold_routes/08_deflated_jet_hierarchy/notes/04_ALL_HEIGHT_MULTIPLICITY_JET_BOUND_20261020.md), [differentiation closure](threshold_routes/07_multiplicity_reduction/notes/02_DIFFERENTIATED_THRESHOLD_TRANSFER_20261020.md), and the [current register](research-progress/01_THRESHOLD_BOUNDARY_WINDING_PROGRESS_20261019.md) for the new results and remaining tasks.
+Next-round planning update, 20 October 2026: prepared for Edward Baker
+with substantial LLM assistance, **gpt-6-astra (Codex), actual effort
+max**, verified from recorded turn metadata. The
+[signed arithmetic program](research-overview/02_THRESHOLD_SIGNED_ARITHMETIC_RESEARCH_PROGRAM_20261020.md)
+now directs continuation. Its [active register](research-progress/02_THRESHOLD_SIGNED_ARITHMETIC_PROGRESS_20261020.md)
+now records the completed selected estimator and profile attempts and the still-deferred physical tasks. The [round review](reviews/01_THRESHOLD_SIGNED_ARITHMETIC_ROUND_REVIEW_20261020.md) accepts scoped obstructions, with no opposing theta sign or new exclusion. Execution: gpt-6-astra, actual effort ultra, 20 October 2026.
+
+See the [all-height/multiplicity bound](threshold_routes/08_deflated_jet_hierarchy/notes/04_ALL_HEIGHT_MULTIPLICITY_JET_BOUND_20261020.md), [differentiation closure](threshold_routes/07_multiplicity_reduction/notes/02_DIFFERENTIATED_THRESHOLD_TRANSFER_20261020.md), and the [first-round record](research-progress/01_THRESHOLD_BOUNDARY_WINDING_PROGRESS_20261019.md) for the inherited results and their limitations.
 
 The [first BW-01 execution note](threshold_routes/01_local_double_winding/notes/03_PAIRED_FACE_REMAINDER_OBSTRUCTION_20261019.md) explains the scoped absolute-remainder obstruction. The [BW-08 continuation](threshold_routes/08_deflated_jet_hierarchy/notes/03_IMAGINARY_AXIS_JET_BOUND_20261019.md) strengthens the deflated lower bound for a>=20 and pays a signed time-face restriction; its controls show why that restriction alone cannot exclude a collision.
 
 Can the arithmetic of a hypothetical positive theta threshold force incompatible boundary winding, either around its event or in a later region?
 
-Start with the [research program](research-overview/01_THRESHOLD_BOUNDARY_WINDING_RESEARCH_PROGRAM_20261019.md), the [progress register](research-progress/01_THRESHOLD_BOUNDARY_WINDING_PROGRESS_20261019.md), and the [eight threshold routes](threshold_routes/README.md).
+Start with the [next-round program](research-overview/02_THRESHOLD_SIGNED_ARITHMETIC_RESEARCH_PROGRAM_20261020.md), the [active progress register](research-progress/02_THRESHOLD_SIGNED_ARITHMETIC_PROGRESS_20261020.md), and the [eight threshold routes](threshold_routes/README.md). The [first program](research-overview/01_THRESHOLD_BOUNDARY_WINDING_RESEARCH_PROGRAM_20261019.md) retains the general framework.
 
 The [initial research note](notes/01_INITIAL_RESEARCH_NOTE_20261019.md) states the hypothetical witness, the exact incompatible statements, inherited results, possible approaches, control screens, and useful first outcomes. It is not a full research program or progress register.
 

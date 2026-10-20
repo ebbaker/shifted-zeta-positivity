@@ -159,6 +159,23 @@ finite order \(m=2r+j\), \(r\ge1\), \(j\in\{0,1\}\).
   Prepared for Edward Baker with substantial LLM assistance, gpt-6-astra,
   ultra; no numerical theta acquisition, uniform radius or specialist review.
 
+
+- **Theta-reference Gram estimating obstruction (3/13, 20 October).**
+  **Proved in-note; separate same-model review:** the optimal
+  event-conditioned finite-Gram norm allowance strictly improves
+  coordinate boxes but remains positive, with an explicit determinant
+  lower bound. Nonnegative continuous-source controls with a true
+  positive threshold also lie in that reference norm ball and have
+  positive target quadratic. Their mass anchor fails by a fixed
+  positive deficit; they are changed sources, not theta.
+  “A more elaborate realization of the same ball does not supply the missing theta sign.” is the
+  stated limitation, with mathematics in
+  [Note 02](../papers/investigations-3/13_contradiction_analysis/02_threshold_jet_sign/notes/02_EVENT_CONDITIONED_THETA_GRAM_OBSTRUCTION_20261020.md),
+  [Note 03](../papers/investigations-3/13_contradiction_analysis/02_threshold_jet_sign/notes/03_POSITIVE_MULTIPLIER_GRAM_EXTENSION_20261020.md) and its
+  [review](../papers/investigations-3/13_contradiction_analysis/02_threshold_jet_sign/reviews/02_POSITIVE_MULTIPLIER_GRAM_REVIEW_20261020.md).
+  Prepared for Edward Baker with substantial LLM assistance,
+  gpt-6-astra, ultra; no physical exclusion or specialist review.
+
 ## Status
 
 The local laws, indices, surface identities and equivalences have written

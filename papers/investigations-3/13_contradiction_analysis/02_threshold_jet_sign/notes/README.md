@@ -16,3 +16,7 @@ Related necessary-condition input, 19 October 2026 (prepared for Edward Baker wi
 
 [results]: ../../../../../result-summaries/README.md
 [avoid]: ../../../../../avoid/README.md
+
+20 October 2026 — [02: complete-theta Gram estimator obstruction](02_EVENT_CONDITIONED_THETA_GRAM_OBSTRUCTION_20261020.md), proved in-note and separately reviewed. The best bound in the declared reduced information set remains positive; this is no physical theta sign. Prepared for Edward Baker with substantial LLM assistance, gpt-6-astra, actual effort ultra.
+
+20 October 2026 — Prepared for Edward Baker with substantial LLM assistance, **gpt-6-astra, actual effort ultra**. [03: positive continuous threshold controls](03_POSITIVE_MULTIPLIER_GRAM_EXTENSION_20261020.md) extends the reference-Gram obstruction to nonnegative multipliers and transfers the finite-profile construction through a fixed convolution. The exact theta mass anchor still fails quantitatively. Reviews are internal and same-model; no specialist review.

@@ -39,7 +39,17 @@ Read the [result summaries][results] and [patterns to avoid][avoid].
 Use [DRAFT_HISTORY.md](DRAFT_HISTORY.md) for later milestones; create no new manuscript snapshots.
 
 [program]: ../../research-overview/01_THRESHOLD_BOUNDARY_WINDING_RESEARCH_PROGRAM_20261019.md
-[progress]: ../../research-progress/01_THRESHOLD_BOUNDARY_WINDING_PROGRESS_20261019.md
+[progress]: ../../research-progress/02_THRESHOLD_SIGNED_ARITHMETIC_PROGRESS_20261020.md
 [routes]: ../README.md
 [results]: ../../../../../../result-summaries/README.md
 [avoid]: ../../../../../../avoid/README.md
+
+20 October 2026, signed-arithmetic round: the
+[canonical higher-jet note](../../../02_threshold_jet_sign/notes/02_EVENT_CONDITIONED_THETA_GRAM_OBSTRUCTION_20261020.md)
+closes the norm-plus-exact-Gram estimator with a positive optimal
+allowance. Its [review](../../../02_threshold_jet_sign/reviews/01_EVENT_CONDITIONED_THETA_GRAM_REVIEW_20261020.md)
+does not activate physical transfer. The [active BW2 register](../../research-progress/02_THRESHOLD_SIGNED_ARITHMETIC_PROGRESS_20261020.md)
+retains the open signed estimate. Prepared for Edward Baker with substantial
+LLM assistance, gpt-6-astra, actual effort ultra.
+
+The [positive continuous-source continuation](../../../02_threshold_jet_sign/notes/03_POSITIVE_MULTIPLIER_GRAM_EXTENSION_20261020.md) also closes the positivity/threshold repair of that estimator, with a quantitative mass-anchor deficit. This remains a source-estimation obstruction, not a physical winding exclusion.

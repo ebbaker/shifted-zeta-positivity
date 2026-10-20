@@ -5,7 +5,7 @@
 These eight sub-investigations organize the possibilities from the
 [threshold discussion][discussion]. The first five study ordinary double
 events at a hypothetical positive threshold; the final three address
-multiplicity extensions and supporting jet inputs. The [progress register][progress] now records the fixed-event BW-01 control, a quantitative local obstruction for BW-02–05, threshold-preserving differentiation in BW-07, and an all-height, all-finite-multiplicity necessary jet bound in BW-08. BW-06 extends the actual physical remainder payment and its symmetric-information obstruction to every finite multiplicity. Each global contradiction target remains open; bounded task completion does not mean route completion.
+multiplicity extensions and supporting jet inputs. The [first-round record][first-progress] contains the fixed-event BW-01 control, a quantitative local obstruction for BW-02–05, threshold-preserving differentiation in BW-07, and an all-height, all-finite-multiplicity necessary jet bound in BW-08. BW-06 extends the actual physical remainder payment and its symmetric-information obstruction to every finite multiplicity. Each global contradiction target remains open; bounded task completion does not mean route completion.
 
 Execution update, 19 October 2026: prepared for Edward Baker with substantial LLM assistance, **gpt-6-astra (Codex), actual effort max**.
 
@@ -28,13 +28,18 @@ a later real event; that event has nonreal predecessors above T. A negative
 later Laguerre expression also implies nonreal zeros. BW-06 through BW-08
 are alternative or supporting extensions, not an assumed recursion.
 
-The [overall program][program] gives priorities, shared error and control
-requirements, and coverage obligations. The [progress register][progress]
-is the only execution register. Homotopy, paired boundary estimates and
+Next-round planning update, 20 October 2026: prepared for Edward Baker
+with substantial LLM assistance, **gpt-6-astra (Codex), actual effort max**.
+The [signed arithmetic program][next-program] supplies the current
+priorities and activation conditions. Its [progress register][progress]
+is the sole active execution register. The [20 October execution review](../reviews/01_THRESHOLD_SIGNED_ARITHMETIC_ROUND_REVIEW_20261020.md) closes selected Gram, positive-source and profile attempts with scoped obstructions. No useful opposing theta estimate was obtained; physical transfer, multiplicity extension and later-witness tasks remain deferred. Execution model gpt-6-astra, actual effort ultra. The [overall program][program] retains the shared error,
+control and coverage framework. Homotopy, paired boundary estimates and
 wall-aware root counts are methods within BW-01 and BW-04.
 
 [Boundary-winding home](../README.md).
 
 [discussion]: ../notes/02_THRESHOLD_DOUBLE_EVENTS_AND_LATER_WITNESSES_ASTRA_20261019.md
 [program]: ../research-overview/01_THRESHOLD_BOUNDARY_WINDING_RESEARCH_PROGRAM_20261019.md
-[progress]: ../research-progress/01_THRESHOLD_BOUNDARY_WINDING_PROGRESS_20261019.md
+[progress]: ../research-progress/02_THRESHOLD_SIGNED_ARITHMETIC_PROGRESS_20261020.md
+[first-progress]: ../research-progress/01_THRESHOLD_BOUNDARY_WINDING_PROGRESS_20261019.md
+[next-program]: ../research-overview/02_THRESHOLD_SIGNED_ARITHMETIC_RESEARCH_PROGRAM_20261020.md
