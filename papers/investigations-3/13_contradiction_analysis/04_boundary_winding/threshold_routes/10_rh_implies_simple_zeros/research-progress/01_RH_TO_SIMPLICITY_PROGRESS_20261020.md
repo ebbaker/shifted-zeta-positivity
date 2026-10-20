@@ -5,11 +5,11 @@ substantial LLM assistance. **gpt-6-astra (Codex), reasoning effort ultra**,
 verified from recorded turn metadata. Separate same-model internal review;
 no specialist review.
 
-**State: first analytical round, finite-prime analysis, and signed-prime /
-coefficient continuation completed with partial structural results and
-scoped estimating failures. RH ⇒
-simplicity remains unproved. No multiple theta zero or new height interval
-has been excluded.** The [program][program] retains its acceptance gates.
+**State: structural transfer, arithmetic screens and the zero-deflation /
+rational-resolution analysis completed as bounded attempts. These give
+partial structural results, explicit certification costs and scoped
+estimating failures. RH ⇒ simplicity remains unproved. No multiple theta
+zero or new height interval has been excluded.** The [program][program] retains its acceptance gates.
 The original scope was selected in [chat 0003][origin]; this round is
 [chat 0004][current].
 
@@ -17,10 +17,10 @@ The original scope was selected in [chat 0003][origin]; this round is
 | --- | --- | --- |
 | RHS-00 | Complete: scope and literature | [Opening analysis][opening] §§1–2, 9; primary inputs rechecked in [review 02][review]. No methodological priority or relative-difficulty theorem claimed. |
 | RHS-01 | Complete: inherited transfer and control screen; strengthened this round | Opening §§3–6. [Note 01][n1] proves finite root-label continuation under RH, exact endpoint/middle complement, and retained multiplicity phase atom. |
-| RHS-02 | Three declared estimating classes assessed; positive theta-estimate gate remains unmet | Notes 01–02 treat fixed-width and finite-prime absolute envelopes. [Note 03][n3] retains signed prime error, cancels the main/pole terms exactly, and quantifies failure of the global RH error envelope. Its coefficient proposition rejects every nonconstant finite Euler-polynomial control, but does not transfer to an original multiple zero. |
-| RHS-03 | Finite-wall subtask proved under RH; strict surplus still gated | Note 01 §2 covers every finite cap and multiplicity. Cap mass remains `(m-1)pi`. Gaussian comparison §5 supplies the event-compatible positive sign; it does not justify switching consumers. |
+| RHS-02 | Declared estimators assessed and justified deflation quantified; positive theta-estimate gate remains unmet | Notes 01–03 treat fixed-width, finite-prime and signed-error envelopes, and finite Euler-control rejection. [Note 04][n4] proves exact subtraction costs, a sharp actual-tail asymptotic and the fully optimized rational-power absolute-payment barrier. None supplies an opposing estimate at an original multiple zero. |
+| RHS-03 | Finite-wall subtask proved under RH; strict surplus still gated | Note 01 §2 covers every finite cap and multiplicity. Cap mass remains `(m-1)pi`; the Gaussian sign is event-compatible. Note 04 identifies the exterior inverse-square sum needed for effective deflation, but wall continuation gives no quantitative upper bound for it. |
 | RHS-04 | Coverage audited; no new exclusion | Structural statements cover all finite heights/multiplicities under RH. Arithmetic failure ranges are stated explicitly; no all-height signed estimate or new theta exclusion class exists. |
-| RHS-05 | Reviews of bounded attempts completed; full-argument review remains gated | [Review 02][review] and [review 03][review3] check proofs, constants, imported inputs and controls. The latter strengthens the control bound and fixes the identical-envelope scope. Verdict: conditional structure, effective control rejection and scoped failures; no simplicity theorem. |
+| RHS-05 | Reviews of bounded attempts completed; full-argument review remains gated | [Review 02][review], [review 03][review3] and [review 04][review4] check the stated proofs, imports and controls. Review 04 checks the uniform two-parameter optimization and sharp tail, and resolves count, interval and location precision requirements. Same-model internal validation; no simplicity theorem. |
 
 ## Quantitative outcomes
 
@@ -52,11 +52,25 @@ The original scope was selected in [chat 0003][origin]; this round is
 - At a hypothetical ordinary double event, RH's deflated product gives
   `D_s>=6s^4 h2^2/a^4` for `0<s<=a^2/4`. The sign is compatible with
   the event and is shared by the control; it provides no contradiction.
+- For fixed Poisson width `delta`, deleting every noncentral zero within
+  `H=c log(gamma/(2pi))` leaves actual tail tending to
+  `delta^2/(pi c)` and involves asymptotically
+  `(c/pi) log^2(gamma/(2pi))` zeros counted with multiplicity. Note 04
+  supplies complete tail, location and membership budgets. A narrow
+  certified multiplicity interval can recover two; it does not force one.
+- For `K(v)=[delta^2/(delta^2+v^2)]^n`, every arithmetic derivative stays
+  at `Re s=1/2+delta>1`. Nevertheless its full absolute-prime envelope,
+  optimized over **both** `delta>1/2` and integer `n>=1`, has infimum
+  `(1/(4sqrt(pi))+o(1)) log(gamma)/sqrt(log log(gamma))`.
+  The declared nonnegative trigonometric-combination class likewise
+  retains infimum `(1/4+o(1)) log(gamma)`. Signed estimates and exact
+  certified subtraction are not covered by these estimator limitations.
 
 The frozen [exact algebra contract][contract] and [replay][replay] passed
 265 rational fixtures. They check finite constants and the control sum,
-not theta zeros or the infinite analytical estimates. No numerical sign
-scan or manuscript was started. The original BW09, HFCE and PSC registers
+not theta zeros or the infinite analytical estimates. It was unchanged
+and not rerun for Note 04, which received analytical cross-checks. No
+numerical sign scan or manuscript was started. The original BW09, HFCE and PSC registers
 retain their existing states; the earlier manuscript was reviewed but
 not changed.
 
@@ -77,10 +91,15 @@ continue the Euler Dirichlet series termwise into the critical strip,
 or optimize the already-failed absolute-value envelopes again. Do not
 switch to a Gaussian numerical campaign using separately paid Hermite
 remainders. Do not reapply only a global RH Chebyshev-error bound to Note 03's
-single partial-summation transport. Signed frequency correlations using
-unchanged prime support, correlated full-source estimates, other kernels
-and justified zero deflation remain outside these scoped conclusions;
-none has been established here. Weak Mertens and all-zero negative
+single partial-summation transport. Note 04 now quantifies justified
+zero deflation and closes its specified rational-power absolute-payment
+test; do not repeat that optimization or its nonnegative-combination
+appendix without an additional input. A successful deflated estimate
+would need certified noncentral membership and enough count, location,
+tail and signed arithmetic precision to put the upper endpoint below two.
+Signed frequency correlations using unchanged prime support, correlated
+full-source estimates and other kernel classes remain outside these
+scoped conclusions. No successful all-height estimate has been obtained. Weak Mertens and all-zero negative
 moments of zeta's derivative cannot be imported as consequences of RH.
 
 The unconditional alternatives in the opening remain separate. The
@@ -99,3 +118,6 @@ unproved arithmetic and all-zero tasks complete.
 
 [n3]: ../notes/03_SIGNED_PRIME_TRANSPORT_AND_EULER_RIGIDITY_20261020.md
 [review3]: ../reviews/03_SIGNED_TRANSPORT_AND_COEFFICIENT_REVIEW_20261020.md
+
+[n4]: ../notes/04_ZERO_DEFLATION_AND_RATIONAL_RESOLUTION_20261020.md
+[review4]: ../reviews/04_DEFLATION_AND_RESOLUTION_REVIEW_20261020.md

@@ -8,4 +8,6 @@
 
 - [03 — Signed prime transport and effective Euler-control rejection](03_SIGNED_PRIME_TRANSPORT_AND_EULER_RIGIDITY_20261020.md). Exact cancellation, a globally screened RH error envelope, and a finite coefficient witness; no event exclusion.
 
+- [04 — Zero deflation and rational resolution](04_ZERO_DEFLATION_AND_RATIONAL_RESOLUTION_20261020.md). Certified subtraction costs, sharp actual tails and a uniform two-parameter estimator barrier; no original multiple-zero exclusion.
+
 [Progress](../research-progress/01_RH_TO_SIMPLICITY_PROGRESS_20261020.md) · [Reviews](../reviews/README.md).

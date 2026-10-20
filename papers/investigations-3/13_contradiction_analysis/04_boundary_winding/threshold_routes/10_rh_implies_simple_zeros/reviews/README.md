@@ -17,3 +17,8 @@ multiple zero is excluded.
 checks exact cancellation, envelope constants, the control's identical
 input bound, and effective finite Euler-polynomial rejection. No original
 theta event is excluded; the positive arithmetic gate remains open.
+
+[04 — Deflation and resolution](04_DEFLATION_AND_RESOLUTION_REVIEW_20261020.md)
+checks exact subtraction, the sharp actual tail, uniform optimization,
+positive-coefficient combinations and all stated precision requirements.
+Explicit error costs and scoped estimating failures; no theta exclusion.

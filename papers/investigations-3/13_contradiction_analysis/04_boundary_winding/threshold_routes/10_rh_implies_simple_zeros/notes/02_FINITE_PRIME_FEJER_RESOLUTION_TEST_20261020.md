@@ -82,12 +82,12 @@ Integrating the tail, including the subtraction of the main constant, costs \(O(
 \[
  \sum_{n\le X}\frac{\Lambda(n)}{\sqrt n}
  \left(1-\frac{\log n}{\log X}\right)
- \sim\frac{4\\sqrt X}{\log X}\qquad(X\to\infty).
+ \sim\frac{4\sqrt X}{\log X}\qquad(X\to\infty).
 \]
 Indeed replacing the Chebyshev measure by \(du\) produces exactly
 \[
  \int_1^X u^{-1/2}\left(1-\frac{\log u}{\log X}\right)du
- =\frac{4\\sqrt X}{\log X}-2-\frac4{\log X}.
+ =\frac{4\sqrt X}{\log X}-2-\frac4{\log X}.
 \]
 The weight is nonnegative and decreasing. Partial summation and the PNT make the error \(o(\sqrt X/\log X)\); split first at a fixed large lower cutoff to make the relative PNT error uniformly small. Hence
 \[

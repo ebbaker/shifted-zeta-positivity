@@ -192,3 +192,28 @@ The positive RHS-02 gate and the strict surplus therefore remain open.
 [Review 03](../reviews/03_SIGNED_TRANSPORT_AND_COEFFICIENT_REVIEW_20261020.md)
 records the exact scope and a strengthening of the control calculation.
 The original task contract is unchanged.
+
+## 6. Zero deflation and rational resolution, 20 October 2026
+
+Prepared for Edward Baker with substantial LLM assistance, **gpt-6-astra,
+effort ultra**. [Note 04](../notes/04_ZERO_DEFLATION_AND_RATIONAL_RESOLUTION_20261020.md)
+gives explicit location, membership and complete-tail costs for subtracting
+certified neighboring zeros. For a fixed-width Poisson sample, a complete
+radius `H=c log(gamma/(2pi))` deletion leaves actual tail tending to
+`delta^2/(pi c)` and involves asymptotically `(c/pi) log^2(gamma/(2pi))`
+zeros counted with multiplicity. This is a sharp cost for that residual,
+not a prohibition against using additional zero or tail information.
+
+Higher logarithmic derivatives sharpen a nonnegative rational kernel
+while staying in the convergent Euler half-plane. The complete absolute
+prime envelope nevertheless has fully optimized infimum
+`(1/(4sqrt(pi))+o(1)) log(gamma)/sqrt(log log(gamma))`, over both its width
+and derivative order. A short positive-coefficient combination audit
+retains the fixed-width logarithmic scale. [Review 04](../reviews/04_DEFLATION_AND_RESOLUTION_REVIEW_20261020.md)
+checks uniformity, endpoints, controls and certification precision.
+
+These are bounded quantitative outcomes. Finite walls identify an
+exterior inverse-square sum but give no effective upper bound for the
+deflation budget. Neither the strict RHS-02 estimate nor a cap surplus
+has been obtained. Signed arithmetic and successful all-height certified
+deflation remain unresolved; the original task gates are unchanged.
