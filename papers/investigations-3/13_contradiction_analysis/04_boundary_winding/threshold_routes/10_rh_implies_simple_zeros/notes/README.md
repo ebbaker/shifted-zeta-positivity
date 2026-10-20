@@ -20,4 +20,6 @@
 
 - [09 — Arithmetic controls, translated kernels, and stable extraction](09_ARITHMETIC_CONTROLS_TRANSLATED_KERNELS_AND_STABLE_EXTRACTION_20261020.md). Exact finite-data arithmetic controls with a failed completion premise; near-zero discrete prime payment outside the narrow class; lower sufficient extraction cost under a certified gap. No theta exclusion.
 
+- [10 — Uniform prime-phase return height](10_UNIFORM_PRIME_PHASE_RETURN_HEIGHT_COST_20261020.md). Under RH, the fully aligned two-/three-copy constructions have complete-envelope leading costs at least one/three-halves; their near-zero prime-payment examples remain valid. No theta exclusion.
+
 [Progress](../research-progress/01_RH_TO_SIMPLICITY_PROGRESS_20261020.md) · [Reviews](../reviews/README.md).

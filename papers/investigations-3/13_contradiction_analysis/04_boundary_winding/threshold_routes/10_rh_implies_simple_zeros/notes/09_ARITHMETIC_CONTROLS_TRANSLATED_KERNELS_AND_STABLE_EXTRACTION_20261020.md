@@ -12,7 +12,8 @@ the global RH prime-counting error class, while inserting multiple zeros;
 it fails the exact functional equation and entire completion. Translated
 nonnegative kernels have arbitrarily small discrete absolute prime cost
 outside Note 08's fixed mass-bandwidth class, but their required return
-height has not yielded a better complete envelope. Finally, a stable
+height is now shown in [Note 10][n10] to prevent a better complete envelope
+for these uniformly aligned constructions. Finally, a stable
 combination of logarithmic derivatives reduces the sufficient finite-sum
 cutoff for multiplicity extraction under a separately certified gap.
 None supplies an opposing signed estimate or excludes an original theta zero.
@@ -386,7 +387,16 @@ U(\gamma)=\left(\frac d{2\pi}+o(1)\right)\frac L\Delta
           +C(h).                                           \tag{K14}
 \]
 
-We have no useful upper bound on the phase-return height `R` as a function of `Delta` and `epsilon_Delta`. Thus (K14) is no demonstrated improvement over Note 08's leading height optimization. If a deliberately uncompetitive fully paid sequence is desired, impose the additional threshold `R>=exp(exp(Delta^2))`; recurrence still supplies it, and then `U/(L/log L)->infinity`. The counterexample concerns the unrestricted prime-payment bound, not the complete optimized height envelope.
+**Continuation, 20 October 2026:** [Note 10][n10], proved under RH from
+a checked short-log-zeta approximation, forces
+`log X<=(2+o(1))log log R` for these uniformly aligned returns.
+Thus (K14), including the scalar-square variant below, has full-envelope
+leading coefficient at least `d/2`: one for two copies and three-halves
+for three. Both exceed Fejér's one-half. The small prime-payment examples
+are unchanged, but the complete-height comparison for this construction
+is now resolved against an improvement.
+
+The original recurrence argument gives no useful upper bound on the phase-return height `R` as a function of `Delta` and `epsilon_Delta`. Note 10 supplies a lower bound instead, sufficient for the stated comparison with Note 08. If a deliberately uncompetitive fully paid sequence is desired, impose the additional threshold `R>=exp(exp(Delta^2))`; recurrence still supplies it, and then `U/(L/log L)->infinity`. The counterexample concerns the unrestricted prime-payment bound, not the complete optimized height envelope.
 
 ## 8. The same effect occurs for an explicit scalar square
 
@@ -420,7 +430,7 @@ where the last majorant follows even from `Lambda(n)<=log n`. Thus `I_tilde Delt
 
 Finally, `|sum_j s_j|^2<=d sum_j|s_j|^2` on the real line pays (K12) for the square family, whose mass is `d/Delta+O_d(1/(R Delta^2))`. The same inequality at complex arguments pays (K13), with a constant depending only on fixed `d`. Its positivity, strip decay, and bandlimitation are preserved. No hidden continuous replacement of the discrete prime sum occurs in (K17).
 
-**Disposition.** Small mass plus nonnegative bandlimitation does permit arbitrarily small absolute prime payment for `I Delta->3`, even with the explicit archimedean budgets. An unrestricted extension of Note 08(K15), or a uniform near-zero-payment consequence of its exact-zero statement, is therefore false. Quantitative simultaneous phase-return control and the resulting full height cost remain unpaid; no original theta zero or multiplicity event is excluded.
+**Disposition.** Small mass plus nonnegative bandlimitation does permit arbitrarily small absolute prime payment for `I Delta->3`, even with the explicit archimedean budgets. An unrestricted extension of Note 08(K15), or a uniform near-zero-payment consequence of its exact-zero statement, is therefore false. [Note 10][n10] now pays the uniform phase-return lower height and proves the full-envelope comparison for this particular family. Arbitrary kernels and other phase patterns remain outside the result; no original theta zero or multiplicity event is excluded.
 
 ## 9. Exact filter and its uniform stability
 
@@ -620,3 +630,5 @@ Direct first-jet exclusion at a known zero requires a certified positive lower b
 [a07]: ../../../../../../../avoid/07_scoped_exclusions_read_as_universal.md
 [a12]: ../../../../../../../avoid/12_term_by_term_matching_and_separate_bounds.md
 [a20]: ../../../../../../../avoid/20_volume_without_a_gain.md
+
+[n10]: 10_UNIFORM_PRIME_PHASE_RETURN_HEIGHT_COST_20261020.md

@@ -329,9 +329,9 @@ equation and entire completion; it is not a theta-flow counterexample.
 The same note constructs nonnegative translated kernels with
 I Delta tending to three, I tending to zero, and absolute prime payment
 tending to zero. The two-copy boundary case makes the fixed gap below
-I Delta=2 in Note 08 essential. Complete archimedean budgets are paid, but
-the quantitative return height still prevents any demonstrated
-improvement of the full height envelope.
+I Delta=2 in Note 08 essential. Complete archimedean budgets are paid.
+The subsequent return-height proof in §12 excludes a full-envelope
+improvement for this uniform-alignment construction.
 
 A separate positive product kernel uses signed combinations at geometric
 widths with error amplification below two. Under a certified noncentral
@@ -341,3 +341,22 @@ gamma^(3/2+o(1)). It extracts the actual integer multiplicity; no estimate
 forces that integer to be one. [Review 09](../reviews/09_CONTROLS_KERNELS_AND_EXTRACTION_REVIEW_20261020.md)
 checks the three distinct premise lists and quantitative bounds.
 The signed arithmetic, strict-surplus and all-zero gates remain open.
+
+
+## 12. Uniform prime-phase returns and complete height cost
+
+20 October 2026. Prepared for Edward Baker with substantial LLM assistance,
+**gpt-6-astra, effort ultra**. [Note 10](../notes/10_UNIFORM_PRIME_PHASE_RETURN_HEIGHT_COST_20261020.md)
+uses Granville–Soundararajan's zero-free-rectangle approximation under RH
+at two cutoffs. It proves that Note 09's uniform root-of-unity returns
+satisfy `log X<=(2+o(1)) log log R`, with a second-order refinement.
+All higher prime powers are paid. The two-/three-copy complete envelopes
+therefore have leading coefficients at least one/three-halves against
+`log gamma/log log gamma`, exceeding the Fejér coefficient one-half.
+
+This resolves the unpaid return-height comparison for the stated sums and
+scalar squares. Their small discrete prime payments remain valid.
+[Review 10](../reviews/10_PRIME_PHASE_RETURN_HEIGHT_REVIEW_20261020.md) records the separate same-model checks.
+Other phase configurations and kernels remain outside the result; no
+opposing signed estimate, strict cap surplus or original-zero exclusion
+has been obtained. The [progress register][progress] retains those gates.

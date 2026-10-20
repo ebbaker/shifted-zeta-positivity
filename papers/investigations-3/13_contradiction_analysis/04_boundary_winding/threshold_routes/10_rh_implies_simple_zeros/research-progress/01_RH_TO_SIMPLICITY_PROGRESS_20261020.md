@@ -7,7 +7,9 @@ no specialist review.
 
 **State: structural transfer, arithmetic screens, source controls and
 correlation costs, reciprocal precision, finite Jensen margins and stable
-multiplicity extraction assessed as bounded attempts. These give partial
+multiplicity extraction assessed as bounded attempts. The uniform
+phase-return height comparison is now resolved for the construction
+in Note 09. These give partial
 structural results, explicit certification and resolution costs, scoped
 estimating failures and an approximation control.
 RH ⇒ simplicity remains unproved. No multiple theta zero or new height
@@ -19,10 +21,10 @@ The original scope was selected in [chat 0003][origin]; this round is
 | --- | --- | --- |
 | RHS-00 | Complete: scope and literature | [Opening analysis][opening] §§1–2, 9; primary inputs rechecked in [review 02][review]. No methodological priority or relative-difficulty theorem claimed. |
 | RHS-01 | Complete: inherited transfer and control screen; strengthened through Note 09 | Opening §§3–6. [Note 01][n1] proves finite root-label continuation under RH, exact endpoint/middle complement, and retained multiplicity phase atom. [Note 05][n5] adds an RH-conditional, uniformly close positive-source control with an exact double event, unchanged leading tail and pole residue one. [Note 09][n9] adds a distinct ordinary-Dirichlet control with exact finite data, positive coefficients, residue one and RH-sized prime-counting error, but failed reflection/entireness. |
-| RHS-02 | Declared estimators and correlation costs assessed; positive theta-estimate gate remains unmet | Notes 01–03 treat fixed-width, finite-prime and signed-error envelopes, and finite Euler-control rejection. [Note 04][n4] proves exact subtraction costs, a sharp actual-tail asymptotic and the fully optimized rational-power absolute-payment barrier. Note 05 screens one finite horizontal-shift consumer exactly and identifies the normalized source control's failed Dirichlet-series premise. [Note 06][n6] proves a sharp full-window correlation resolution cost, the additive-one limit of universal phase positivity, and a local Möbius-energy cost. [Note 07][n7] proves localized quadratic-to-linear dominance and exact theta Jensen coalescence rates. [Note 08][n8] obtains vanishing finite-sum relative error, a stronger energy envelope and a broader signed-Fourier kernel cost. [Note 09][n9] constructs near-zero prime-payment kernels outside the fixed class and improves sufficient multiplicity-extraction cost under a separately certified gap. None supplies an opposing estimate at an original multiple zero. |
+| RHS-02 | Declared estimators and correlation costs assessed; positive theta-estimate gate remains unmet | Notes 01–03 treat fixed-width, finite-prime and signed-error envelopes, and finite Euler-control rejection. [Note 04][n4] proves exact subtraction costs, a sharp actual-tail asymptotic and the fully optimized rational-power absolute-payment barrier. Note 05 screens one finite horizontal-shift consumer exactly and identifies the normalized source control's failed Dirichlet-series premise. [Note 06][n6] proves a sharp full-window correlation resolution cost, the additive-one limit of universal phase positivity, and a local Möbius-energy cost. [Note 07][n7] proves localized quadratic-to-linear dominance and exact theta Jensen coalescence rates. [Note 08][n8] obtains vanishing finite-sum relative error, a stronger energy envelope and a broader signed-Fourier kernel cost. [Note 09][n9] constructs near-zero prime-payment kernels outside the fixed class and improves sufficient multiplicity-extraction cost under a separately certified gap. [Note 10][n10] closes the full-height improvement for those uniform phase-return constructions, with leading costs at least one/three-halves. None supplies an opposing estimate at an original multiple zero. |
 | RHS-03 | Finite-wall subtask proved under RH; strict surplus still gated | Note 01 §2 covers every finite cap and multiplicity. Cap mass remains `(m-1)pi`; the Gaussian sign is event-compatible. Note 04 identifies the exterior inverse-square sum needed for effective deflation, but wall continuation gives no quantitative upper bound for it. |
 | RHS-04 | Coverage audited; no new exclusion | Structural statements cover all finite heights/multiplicities under RH. Arithmetic failure ranges are stated explicitly; no all-height signed estimate or new theta exclusion class exists. |
-| RHS-05 | Reviews of bounded attempts completed; full-argument review remains gated | [Reviews 02–09](../reviews/README.md) check the stated proofs, imports and controls. Review 04 checks uniform optimization and certified subtraction; [review 05][review5] checks source positivity, the whole-tail relative bound, exact residue normalization and the distinct curvature control. [Review 06][review6] checks correlation normalization, clustered configurations, phase minima and local pole/energy constants. [Review 07][review7] checks local dominance, complete coefficient errors and Hermite coalescence. [Review 08][review8] checks the reciprocal estimates, complete energy saddle, kernel budgets and canonical-system premise. [Review 09][review9] checks the normalized arithmetic control, translated kernels and stable extraction with their distinct premises. Same-model internal validation; no simplicity theorem. |
+| RHS-05 | Reviews of bounded attempts completed; full-argument review remains gated | [Reviews 02–10](../reviews/README.md) check the stated proofs, imports and controls. Review 04 checks uniform optimization and certified subtraction; [review 05][review5] checks source positivity, the whole-tail relative bound, exact residue normalization and the distinct curvature control. [Review 06][review6] checks correlation normalization, clustered configurations, phase minima and local pole/energy constants. [Review 07][review7] checks local dominance, complete coefficient errors and Hermite coalescence. [Review 08][review8] checks the reciprocal estimates, complete energy saddle, kernel budgets and canonical-system premise. [Review 09][review9] checks the normalized arithmetic control, translated kernels and stable extraction with their distinct premises. [Review 10][review10] checks the primary approximation, return-height bound and scoped complete-envelope comparison. Same-model internal validation; no simplicity theorem. |
 
 ## Quantitative outcomes
 
@@ -157,9 +159,13 @@ The original scope was selected in [chat 0003][origin]; this round is
   tending to three, I tending to zero and C asymptotic to
   [-zeta'(3/2)/zeta(3/2)] I/pi. Complete gamma/pole budgets can be paid,
   and explicit scalar-square versions exist. This refutes unrestricted
-  extensions of Note 08's prime-payment lower bound, but gives no improved
-  full height envelope
-  without a useful phase-return height bound.
+  extensions of Note 08's prime-payment lower bound. Note 10 now resolves
+  the full-height comparison for this uniform-alignment construction:
+  RH forces log X <= (2+o(1)) log log R, and the complete envelopes have
+  leading costs at least one and three-halves, respectively, against
+  L/log L. Both exceed Fejér's one-half. A refinement gives
+  log X <= 2 ell + 6 log ell + O(1), ell=log log(dR).
+  The prime-payment counterexamples themselves remain valid.
 - With a separately certified noncentral gap d, geometric widths
   a_j=d 2^(j-r) give a nonnegative product kernel with leakage at most
   C log gamma 2^(-r(r+1)) and arithmetic error amplification below two.
@@ -171,7 +177,7 @@ The original scope was selected in [chat 0003][origin]; this round is
 The frozen [exact algebra contract][contract] and [replay][replay] passed
 265 rational fixtures. They check finite constants and the control sum,
 not theta zeros or the infinite analytical estimates. It was unchanged
-and not rerun for Notes 04–09, which received analytical cross-checks. No
+and not rerun for Notes 04–10, which received analytical cross-checks. No
 numerical sign scan or manuscript was started. The original BW09, HFCE and PSC registers
 retain their existing states; the earlier manuscript was reviewed but
 not changed.
@@ -241,9 +247,12 @@ type; singular or infinite endpoint constructions are not ruled out.
 Note 09 now supplies explicit kernels in part of the class left outside
 Note 08: near-zero absolute prime payment is possible with mass tending
 to zero and I Delta tending to three. Do not extend the fixed margin
-below two in the prime-cost bound to that class. The remaining issue
-for these kernels is quantitative return height and the complete height
-envelope. The extraction result requires an independent noncentral gap
+below two in the prime-cost bound to that class. [Note 10][n10] now proves
+that the uniform root-of-unity return height forces full-envelope leading
+cost at least d/2 for the stated d=2,3 constructions. Do not repeat that
+alignment construction as a proposed improvement. Partial/nonuniform
+alignment, other translation patterns and unrestricted kernels are not
+excluded by this result. The extraction result requires an independent noncentral gap
 and returns two at a double zero; its sharper finite precision is not
 a signed exclusion. The new arithmetic control fails exact reflection
 and the full zeta tail, so it must not inherit Note 05's different
@@ -288,3 +297,6 @@ unproved arithmetic and all-zero tasks complete.
 
 [n9]: ../notes/09_ARITHMETIC_CONTROLS_TRANSLATED_KERNELS_AND_STABLE_EXTRACTION_20261020.md
 [review9]: ../reviews/09_CONTROLS_KERNELS_AND_EXTRACTION_REVIEW_20261020.md
+
+[n10]: ../notes/10_UNIFORM_PRIME_PHASE_RETURN_HEIGHT_COST_20261020.md
+[review10]: ../reviews/10_PRIME_PHASE_RETURN_HEIGHT_REVIEW_20261020.md

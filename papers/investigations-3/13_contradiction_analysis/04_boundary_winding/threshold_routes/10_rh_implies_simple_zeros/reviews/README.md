@@ -52,3 +52,9 @@ checks exact residue and coefficient positivity, the failed reflection
 premise, discrete translated-kernel costs and complete archimedean budgets,
 and stable multiplicity extraction with an independently certified gap.
 The full signed estimate and all-zero conclusion remain unproved.
+
+[10 — Prime-phase return height](10_PRIME_PHASE_RETURN_HEIGHT_REVIEW_20261020.md)
+checks the primary short-log-zeta lemma, complete higher-prime-power tail,
+phase-separation constant, refined return scale and full-envelope costs.
+Separate same-model checks; only the stated uniform-alignment family is
+closed as an improvement, and the simplicity conclusion remains open.
