@@ -13,7 +13,12 @@ were preserved; no second registration was created.
 The [relocation receipt](../CHAT_HISTORY_RELOCATION_20261020.json) records
 the transfer snapshot. Later captures legitimately change message counts
 and hashes; consult `index.json` for the current state. Number 0003 is
-intentional, and the next number is at least 0004.
+intentional.
+
+[History 0004](0004_2026-10-20T18-46-56Z_investigate-rh-implies-simplicity.json),
+“Investigate RH-implies-simplicity”, records the first analytical round and
+finite-prime continuation. It is a distinct conversation, registered once
+here; consult the registry for the current counter and capture status.
 
 Use the [repository history tool](../../../../../../../tools/CHAT_HISTORY.md)
 for captures. [Track home](../README.md).

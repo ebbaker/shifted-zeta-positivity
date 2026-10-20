@@ -53,6 +53,10 @@ formulation of simplicity.
 
 ## 2. Bounded analytical tasks
 
+The initial table below preserves the opening gates. The current state is
+in the [progress register][progress]; the first analytical round is
+summarized in §4. “Unexecuted” below describes the opening state only.
+
 | ID | Deliverable and completion gate | Initial status |
 | --- | --- | --- |
 | RHS-00 | Fix the conditional target, primary literature, normalization and relation to the original programs. | Completed by the opening note and this program. |
@@ -127,6 +131,31 @@ A single positive-time collision is contradictory **here because RH is
 assumed**. Any later claim of an unconditional theorem must remove that
 use and supply a direct exclusion or a stronger propagation argument.
 
+## 4. First analytical round, 20 October 2026
+
+Prepared for Edward Baker with substantial LLM assistance, **gpt-6-astra,
+effort ultra**, verified from the continuation session. The [first
+notes](../notes/README.md) and [round review](../reviews/02_FIRST_ANALYTICAL_ROUND_REVIEW_20261020.md)
+record two bounded analytical attempts. Finite root-wall continuation now
+follows under RH for every fixed root label and finite positive cap.
+The product phase remains exactly the baseline. Exact Poisson and
+finite-prime formulas quantify the endpoint Euler control's added double
+mass, including its changed coefficient and conductor terms.
+
+The absolute-prime Poisson envelope and optimized squared-sinc
+absolute-payment envelope fail at high height; the latter has infimum
+`(1/2+o(1)) log(gamma)/log log(gamma)`. The Gaussian product estimate
+strengthens the event-compatible positive sign. These are scoped
+estimating results. They do not meet RHS-02's opposing-estimate gate,
+produce a cap surplus, or exclude any new theta multiple-zero class.
+
+A next attempt must retain signed arithmetic or supply another justified
+source of information beyond those declared envelopes. The precise
+finite-prime target is in Note 02; its unquantified successful-scale
+existence is a simplicity reformulation. These outcomes do not justify repeating the failed envelope
+optimizations or starting a numerical sign scan.
+The finite-wall subtask is complete; the overall target remains open.
+
 [note]: ../brainstorm/01_RH_IMPLIES_SIMPLICITY_20261020.md
 [psc]: ../../09_expanding_contour_later_collision/research-overview/03_ANALYTICAL_PHASE_SURPLUS_PROGRAM_20261020.md
 [progress]: ../research-progress/01_RH_TO_SIMPLICITY_PROGRESS_20261020.md
@@ -139,3 +168,27 @@ use and supply a direct exclusion or a stronger propagation argument.
 [a02]: ../../../../../../../avoid/02_shape_only_arguments_and_the_controls.md
 [a07]: ../../../../../../../avoid/07_scoped_exclusions_read_as_universal.md
 [a20]: ../../../../../../../avoid/20_volume_without_a_gain.md
+
+
+## 5. Signed-prime and coefficient continuation, 20 October 2026
+
+Prepared for Edward Baker with substantial LLM assistance, **gpt-6-astra,
+effort ultra**. [Note 03](../notes/03_SIGNED_PRIME_TRANSPORT_AND_EULER_RIGIDITY_20261020.md)
+retains the signed Chebyshev error, cancels its exponential main term
+against the explicit-formula poles exactly, and then applies a checked
+RH error envelope. At microscopic bandwidth the resulting payment is
+of order \(\gamma\log^2\gamma\); the exact endpoint control satisfies
+the identical input envelope for \(p\ge101\).
+
+There is also an effective arithmetic distinction: nonnegative
+logarithmic coefficients reject every nonconstant finite Euler-polynomial
+critical-line modification in the declared class, with a negative
+prime-power coefficient by exponent \(12^d\) for a degree-\(d\) factor.
+An original multiple zero has not been shown to force such a factor.
+An isolated polynomial-multiplier control also retains the displayed
+gamma factor, conductor one and simple-pole order; it fails the
+ordinary Dirichlet-series and logarithmic-positivity premises explicitly.
+The positive RHS-02 gate and the strict surplus therefore remain open.
+[Review 03](../reviews/03_SIGNED_TRANSPORT_AND_COEFFICIENT_REVIEW_20261020.md)
+records the exact scope and a strengthening of the control calculation.
+The original task contract is unchanged.
