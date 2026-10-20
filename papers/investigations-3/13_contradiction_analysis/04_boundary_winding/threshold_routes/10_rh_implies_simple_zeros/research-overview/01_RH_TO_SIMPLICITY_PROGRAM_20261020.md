@@ -272,3 +272,25 @@ fixed height. [Review 06](../reviews/06_CORRELATION_AND_MOBIUS_ENERGY_REVIEW_202
 checks all constants, limits, imports and scopes. These are costs for
 declared attempts, not a new event exclusion or completion of RHS-02.
 The original strict-surplus and all-zero gates remain open.
+
+## 9. Local consumers and finite Jensen margins, 20 October 2026
+
+Prepared for Edward Baker with substantial LLM assistance, **gpt-6-astra,
+effort ultra**. [Note 07](../notes/07_LOCAL_CORRELATION_AND_JENSEN_MARGIN_COMPARISONS_20261020.md)
+proves that every tested nonnegative localized quadratic certificate
+implies a matched linear certificate at the same bandwidth, with at least
+half its strict margin and with all exterior zeros retained. Its direct
+quadratic diagonal can cost twice the linear bandwidth. The finite
+whole-line projection is also dominated by its original Fejér test;
+this does not permit omitting the full formula's exterior zeros.
+
+For the actual theta coefficients, a hypothetical multiplicity-m zero
+produces a finite Jensen Hermite cluster with spacing `d^-1/2` and positive
+Laguerre margin `d^(1-m)`. Complete coefficient errors establish these
+rates. The existing strict finite Jensen theorem under RH allows repeated
+limiting zeros, so continuity supplies no strict endpoint margin.
+[Review 07](../reviews/07_LOCAL_CORRELATION_AND_JENSEN_MARGIN_REVIEW_20261020.md)
+checks both comparisons and the separate finite-zeta conditioning attempt,
+which yielded no signed-prime gain. These are precise costs and scoped
+comparisons; RHS-02's positive estimate, strict surplus and all-zero
+coverage remain open.

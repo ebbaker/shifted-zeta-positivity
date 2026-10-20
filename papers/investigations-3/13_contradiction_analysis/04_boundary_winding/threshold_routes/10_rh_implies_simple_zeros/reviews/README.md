@@ -34,3 +34,9 @@ checks the sharp full-window resolution constant, clustered configurations,
 exterior-zero payment, exact phase minimum, optimized additive comparison,
 and local pole/energy constants. Primary imports retain their shift and
 simplicity assumptions; no original theta multiple zero is excluded.
+
+[07 — Local correlation and Jensen margins](07_LOCAL_CORRELATION_AND_JENSEN_MARGIN_REVIEW_20261020.md)
+checks the matched linear consequence, full-zero arithmetic and diagonal
+bandwidth, signed-form scope, complete coefficient errors and Hermite
+coalescence rates. Finite strictness does not imply limiting simplicity;
+the event-conditioned finite-sum assessment supplies no signed-prime gain.

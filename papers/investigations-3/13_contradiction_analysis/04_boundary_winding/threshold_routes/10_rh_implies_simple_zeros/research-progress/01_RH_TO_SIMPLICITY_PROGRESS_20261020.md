@@ -6,7 +6,7 @@ verified from recorded turn metadata. Separate same-model internal review;
 no specialist review.
 
 **State: structural transfer, arithmetic screens, source controls and
-correlation/energy costs assessed as bounded attempts. These give partial
+correlation/energy costs and finite Jensen margins assessed as bounded attempts. These give partial
 structural results, explicit certification and resolution costs, scoped
 estimating failures and an approximation control.
 RH ⇒ simplicity remains unproved. No multiple theta zero or new height
@@ -18,10 +18,10 @@ The original scope was selected in [chat 0003][origin]; this round is
 | --- | --- | --- |
 | RHS-00 | Complete: scope and literature | [Opening analysis][opening] §§1–2, 9; primary inputs rechecked in [review 02][review]. No methodological priority or relative-difficulty theorem claimed. |
 | RHS-01 | Complete: inherited transfer and control screen; strengthened through Note 05 | Opening §§3–6. [Note 01][n1] proves finite root-label continuation under RH, exact endpoint/middle complement, and retained multiplicity phase atom. [Note 05][n5] adds an RH-conditional, uniformly close positive-source control with an exact double event, unchanged leading tail and pole residue one. |
-| RHS-02 | Declared estimators and correlation costs assessed; positive theta-estimate gate remains unmet | Notes 01–03 treat fixed-width, finite-prime and signed-error envelopes, and finite Euler-control rejection. [Note 04][n4] proves exact subtraction costs, a sharp actual-tail asymptotic and the fully optimized rational-power absolute-payment barrier. Note 05 screens one finite horizontal-shift consumer exactly and identifies the normalized source control's failed Dirichlet-series premise. [Note 06][n6] proves a sharp full-window correlation resolution cost, the additive-one limit of universal phase positivity, and a local Möbius-energy cost. None supplies an opposing estimate at an original multiple zero. |
+| RHS-02 | Declared estimators and correlation costs assessed; positive theta-estimate gate remains unmet | Notes 01–03 treat fixed-width, finite-prime and signed-error envelopes, and finite Euler-control rejection. [Note 04][n4] proves exact subtraction costs, a sharp actual-tail asymptotic and the fully optimized rational-power absolute-payment barrier. Note 05 screens one finite horizontal-shift consumer exactly and identifies the normalized source control's failed Dirichlet-series premise. [Note 06][n6] proves a sharp full-window correlation resolution cost, the additive-one limit of universal phase positivity, and a local Möbius-energy cost. [Note 07][n7] proves localized quadratic-to-linear dominance and exact theta Jensen coalescence rates. None supplies an opposing estimate at an original multiple zero. |
 | RHS-03 | Finite-wall subtask proved under RH; strict surplus still gated | Note 01 §2 covers every finite cap and multiplicity. Cap mass remains `(m-1)pi`; the Gaussian sign is event-compatible. Note 04 identifies the exterior inverse-square sum needed for effective deflation, but wall continuation gives no quantitative upper bound for it. |
 | RHS-04 | Coverage audited; no new exclusion | Structural statements cover all finite heights/multiplicities under RH. Arithmetic failure ranges are stated explicitly; no all-height signed estimate or new theta exclusion class exists. |
-| RHS-05 | Reviews of bounded attempts completed; full-argument review remains gated | [Reviews 02–06](../reviews/README.md) check the stated proofs, imports and controls. Review 04 checks uniform optimization and certified subtraction; [review 05][review5] checks source positivity, the whole-tail relative bound, exact residue normalization and the distinct curvature control. [Review 06][review6] checks correlation normalization, clustered configurations, phase minima and local pole/energy constants. Same-model internal validation; no simplicity theorem. |
+| RHS-05 | Reviews of bounded attempts completed; full-argument review remains gated | [Reviews 02–07](../reviews/README.md) check the stated proofs, imports and controls. Review 04 checks uniform optimization and certified subtraction; [review 05][review5] checks source positivity, the whole-tail relative bound, exact residue normalization and the distinct curvature control. [Review 06][review6] checks correlation normalization, clustered configurations, phase minima and local pole/energy constants. [Review 07][review7] checks local dominance, complete coefficient errors and Hermite coalescence. Same-model internal validation; no simplicity theorem. |
 
 ## Quantitative outcomes
 
@@ -107,10 +107,27 @@ The original scope was selected in [chat 0003][origin]; this round is
   consequence is a limsup, not a lower-liminf theorem. No derivative
   moment assuming simplicity was used.
 
+- For every nonnegative compact observation measure, the full-zero
+  quadratic excess obeys `E>=2(L_gamma-1)`, where `L_gamma` is its matched
+  nonnegative linear zero mass. An excess margin `eta` transfers a linear
+  margin at least `eta/2`. The linear kernel has bandwidth `Delta`; direct
+  exact payment of the quadratic diagonal can reach bandwidth `2Delta`.
+  Exterior zeros and all errors remain. For the untruncated finite
+  projection, the matched kernel also dominates the original Fejér kernel.
+  Signed observation forms require their own cross-term estimate.
+- For the unchanged theta Jensen family, an exact multiplicity-m zero
+  produces an m-root Hermite cluster with spacing of order `d^-1/2` and
+  positive Laguerre margin of order `d^(1-m)`. For a double at
+  `r=-gamma^2`, the separation is `2|r|/sqrt(d)+O(d^-1)` and the margin
+  is `r^2 f''(r)^2/(2d)+O(d^-2)`. Complete positive-moment remainder
+  bounds pay the approximation. Strict finite Jensen hyperbolicity was
+  already proved under RH in Investigation 22 and permits repeated
+  limiting zeros; it cannot be passed to strictness of the limit.
+
 The frozen [exact algebra contract][contract] and [replay][replay] passed
 265 rational fixtures. They check finite constants and the control sum,
 not theta zeros or the infinite analytical estimates. It was unchanged
-and not rerun for Notes 04–06, which received analytical cross-checks. No
+and not rerun for Notes 04–07, which received analytical cross-checks. No
 numerical sign scan or manuscript was started. The original BW09, HFCE and PSC registers
 retain their existing states; the earlier manuscript was reviewed but
 not changed.
@@ -153,6 +170,20 @@ an average with error o(N) is insufficient to exclude one double.
 The Möbius calculation still lacks an upper bound on its signed
 off-diagonal sum. Shifted negative moments may not be continued to
 zero shift at fixed height outside their hypotheses.
+Note 07 additionally shows that this nonnegative localized quadratic
+consumer cannot avoid a matched one-point test at the same bandwidth.
+Its conclusion is not a prohibition against a better linear kernel or
+separately controlled signed correlations. Strict finite Jensen signs
+and fixed-degree/increasing-shift hyperbolicity do not supply a margin in
+the unshifted infinite-degree limit. Do not start a coefficient-shift
+scan to address that different limit.
+
+A finite zeta approximation conditioned on the two event jets was also
+assessed. Conditioning cancels the corresponding absolute-error jets,
+but relative division still needs a lower bound for the deflated function
+`zeta(rho+w)/w^2`. No such bound or signed-prime gain was obtained; the
+[review][review7] records this limited assessment without adding a criterion.
+
 Actual-height/event-conditioned signed arithmetic, correlated
 full-source estimates and other kernel classes remain outside these
 scoped conclusions. No successful all-height estimate has been obtained. Weak Mertens and all-zero negative
@@ -183,3 +214,6 @@ unproved arithmetic and all-zero tasks complete.
 
 [n6]: ../notes/06_SIGNED_CORRELATION_RESOLUTION_AND_MOBIUS_ENERGY_20261020.md
 [review6]: ../reviews/06_CORRELATION_AND_MOBIUS_ENERGY_REVIEW_20261020.md
+
+[n7]: ../notes/07_LOCAL_CORRELATION_AND_JENSEN_MARGIN_COMPARISONS_20261020.md
+[review7]: ../reviews/07_LOCAL_CORRELATION_AND_JENSEN_MARGIN_REVIEW_20261020.md
