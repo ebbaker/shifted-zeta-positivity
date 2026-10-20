@@ -56,6 +56,19 @@ measure.
   estimates. [Separate same-model review](../papers/investigations-3/11_arithmetic_collision_rigidity/symmetries/06_hodge_and_transverse_geometry/reviews/04_SECOND_TRANSVERSE_COMPLETION_INTERNAL_REVIEW_20261019.md). Added for Edward
   Baker with substantial LLM assistance, **gpt-6.1-sol, ultra**.
 
+- [BW-08 Note 03](../papers/investigations-3/13_contradiction_analysis/04_boundary_winding/threshold_routes/08_deflated_jet_hierarchy/notes/03_IMAGINARY_AXIS_JET_BOUND_20261019.md), 19 October 2026: “The imaginary-axis floor also holds for the Euler-factor controls; it does not distinguish theta from every positively colliding family.” Their exact time-zero logarithmic derivative gains a positive term, so positivity propagates the same lower bound. Failing the literal theta identity does not mean failing its derived inequality. The stronger necessary jet bound and finite face-pair transfer are retained; no exclusion follows. [Self-review](../papers/investigations-3/13_contradiction_analysis/04_boundary_winding/threshold_routes/08_deflated_jet_hierarchy/reviews/01_IMAGINARY_AXIS_SELF_REVIEW_20261019.md). Prepared for Edward Baker with substantial LLM assistance, **gpt-6-astra, actual effort max**.
+
+- [BW-01 fixed-event control](../papers/investigations-3/13_contradiction_analysis/04_boundary_winding/threshold_routes/01_local_double_winding/notes/04_EVENT_CONDITIONED_POSITIVE_SOURCE_OBSTRUCTION_20261020.md),
+  20 October: “Its normalized curvature is unbounded below while the
+  event time, height, source support and moment upper budgets stay fixed.”
+  Exact event cancellations, a genuine all-real threshold and the two
+  selected imaginary-axis floors do not fix the opposing sign. The
+  atomic control fails full theta arithmetic, eventual simplicity at
+  the threshold, and the entire imaginary-axis profile; the obstruction
+  is limited to the retained information class. [Internal review](../papers/investigations-3/13_contradiction_analysis/04_boundary_winding/threshold_routes/01_local_double_winding/reviews/02_EVENT_CONDITIONED_SOURCE_REVIEW_20261020.md).
+  Added for Edward Baker with substantial LLM assistance, gpt-6-astra,
+  actual effort ultra; no specialist review.
+
 ## What it cost
 
 The 09-to-06 continuation, 02's continuation and 17's pilot ended at

@@ -4,10 +4,7 @@
 substantial LLM assistance. Authoring model: **gpt-6-astra (Codex)**;
 actual reasoning effort: **xhigh**, verified from the recorded turn metadata.
 
-**Status: research home and five initial route notes prepared.** No new
-arithmetic estimate, numerical run, manuscript, or mathematical review is
-claimed. A full research program and progress file are deliberately deferred
-until the individual contradictions have been explored more deeply.
+**Status: five contradiction routes have opening notes. Boundary winding now has its own research program, progress register and eight threshold sub-investigations.** No new arithmetic estimate, manuscript or mathematical review is claimed by that planning setup. The earlier bounded polynomial replay is recorded within boundary winding. A consolidated program for all five contradiction routes remains deferred.
 
 This investigation asks which independently provable arithmetic statements
 could contradict a necessary consequence of an RH counterexample. The
@@ -49,9 +46,7 @@ now has its sole registration in the [brainstorm archive](../brainstorm/chat-his
 following Edward's requested relocation on 19 October 2026.
 
 Each route has the standard folders below and an initial note in notes/.
-The shared folders here are available for later cross-route work. The
-research-overview folders contain placeholders only; there is no new
-research-progress folder, progress file, or consolidated program.
+The shared folders here are available for later cross-route work. [Boundary winding now has a scoped program](04_boundary_winding/research-overview/01_THRESHOLD_BOUNDARY_WINDING_RESEARCH_PROGRAM_20261019.md) and [progress register](04_boundary_winding/research-progress/01_THRESHOLD_BOUNDARY_WINDING_PROGRESS_20261019.md). The other route overviews and this investigation-wide overview remain reserved for later synthesis; no consolidated five-route program is created.
 
 ## Folder guide
 

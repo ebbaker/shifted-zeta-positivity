@@ -115,6 +115,50 @@ finite order \(m=2r+j\), \(r\ge1\), \(j\in\{0,1\}\).
   ultra**; no specialist human review. These timing observations do not
   exclude winding advantages on other domains or acquisition models.
 
+- **BW-01 paired-face payment (3/13, 19 October).** **Proved in-note, same-assistant assessment:** on an event-relative parabolic rectangle, complete third/fourth-derivative bounds give an explicit homotopy threshold recovering the inherited degree -1. Odd time pairing has a sixth-moment remainder, but a consumer retaining only symmetric bounds about the quadratic model still admits that model. “Stop the centered quadratic model plus symmetric absolute-remainder payment as a source of zero winding.” This closes that payment, not BW-01 or signed theta methods. Eight exact polynomial controls; no theta integration, region or bound. [Note](../papers/investigations-3/13_contradiction_analysis/04_boundary_winding/threshold_routes/01_local_double_winding/notes/03_PAIRED_FACE_REMAINDER_OBSTRUCTION_20261019.md), [self-review](../papers/investigations-3/13_contradiction_analysis/04_boundary_winding/threshold_routes/01_local_double_winding/reviews/01_PAIRED_FACE_SELF_REVIEW_20261019.md). Prepared for Edward Baker with substantial LLM assistance, **gpt-6-astra, actual effort max**; no independent review.
+
+- **BW-08 imaginary-axis jet bound (3/13, 19 October).** **Restricted analytic result, proved in-note; same-assistant self-review only:** at an all-real theta double event with T>0,a>=20, S_a=h3^2/(9h2^2)-h4/(6h2)>log((a+1)/(4pi))/(4a)-3/(2a^2)>1/(2a^2). Positive-source time monotonicity and the time-zero xi identity give the new coefficient; complete derivatives through order six transfer it to a finite critical-value pair on the BW-01 time faces. “This is a stronger necessary condition, not a collision exclusion or a contradictory winding.” Polynomial and Euler-factor controls can satisfy the floor. Four exact polynomial cases and four outward coefficient enclosures; no acquired theta jets, region, bound on Lambda or speed gain. [Note](../papers/investigations-3/13_contradiction_analysis/04_boundary_winding/threshold_routes/08_deflated_jet_hierarchy/notes/03_IMAGINARY_AXIS_JET_BOUND_20261019.md), [self-review](../papers/investigations-3/13_contradiction_analysis/04_boundary_winding/threshold_routes/08_deflated_jet_hierarchy/reviews/01_IMAGINARY_AXIS_SELF_REVIEW_20261019.md). Prepared for Edward Baker with substantial LLM assistance, **gpt-6-astra, actual effort max**.
+
+- **BW-07/BW-08 continuation (3/13, 20 October).** **Restricted analytic
+  results, proved in-note, separate same-model internal review:** with
+  b=max(a,20m), the unchanged theta slice's deflated invariant satisfies
+  S_m>L_m(a)>m/(4a²)+1/(40b) for every a>0 and finite m>=2 at an all-real
+  T>=0. The m=2 physical face-pair transfer is paid; higher m uses a
+  differentiated-field consumer. Conditional on a surviving exact m-fold
+  threshold event, differentiation m−2 times preserves the actual
+  threshold and the positive-source lower bound in both parities.
+  “This is not a reduction of a proved exclusion theorem: no such BW-01
+  theorem is available.” Errors extend through m+4; physical degree is
+  not transported. [Bound](../papers/investigations-3/13_contradiction_analysis/04_boundary_winding/threshold_routes/08_deflated_jet_hierarchy/notes/04_ALL_HEIGHT_MULTIPLICITY_JET_BOUND_20261020.md),
+  [review](../papers/investigations-3/13_contradiction_analysis/04_boundary_winding/threshold_routes/08_deflated_jet_hierarchy/reviews/02_ALL_HEIGHT_MULTIPLICITY_REVIEW_20261020.md),
+  [closure](../papers/investigations-3/13_contradiction_analysis/04_boundary_winding/threshold_routes/07_multiplicity_reduction/notes/02_DIFFERENTIATED_THRESHOLD_TRANSFER_20261020.md),
+  [review](../papers/investigations-3/13_contradiction_analysis/04_boundary_winding/threshold_routes/07_multiplicity_reduction/reviews/01_DIFFERENTIATED_THRESHOLD_REVIEW_20261020.md).
+  No theta event, exclusion or Newman-bound improvement. Prepared for
+  Edward Baker with substantial LLM assistance, gpt-6-astra, ultra. The
+  earlier 19 October bound is retained as the predecessor, not withdrawn.
+
+- **BW-02–05 local forward obstruction (3/13, 20 October).** **Proved
+  in-note; separate same-model review:** an exact double event has an
+  explicit forward rectangle with L>=(657/1024)h₂²(s+y²/2), and a complete
+  complex disk containing exactly two real simple roots. Its later
+  interior jet is nonzero, so every enclosed Jordan region has winding
+  zero. This strengthens the same-point local sign only; no nonlocal
+  theta witness is forced. [Proof](../papers/investigations-3/13_contradiction_analysis/04_boundary_winding/threshold_routes/05_later_laguerre_violation/notes/02_QUANTITATIVE_FORWARD_NEIGHBORHOOD_EXCLUSION_20261020.md),
+  [review](../papers/investigations-3/13_contradiction_analysis/04_boundary_winding/threshold_routes/05_later_laguerre_violation/reviews/01_FORWARD_NEIGHBORHOOD_REVIEW_20261020.md).
+  Prepared for Edward Baker with substantial LLM assistance, gpt-6-astra,
+  ultra. No specialist review or numerical theta region.
+
+- **BW-06 all-multiplicity remainder audit (3/13, 20 October).**
+  **Proved in-note; separate same-model review:** the unchanged physical
+  jet has explicit parity-sensitive normalized O(r) remainders using
+  derivatives through m+2 and a positive full-boundary margin for every
+  finite m. It recovers the inherited degree −floor(m/2). “Its symmetric
+  absolute-error information cannot force degree zero.” This extends the
+  specific BW-01 payment and its obstruction, not a theta exclusion.
+  [Proof](../papers/investigations-3/13_contradiction_analysis/04_boundary_winding/threshold_routes/06_direct_all_multiplicity/notes/02_ALL_MULTIPLICITY_REMAINDER_AUDIT_20261020.md), [review](../papers/investigations-3/13_contradiction_analysis/04_boundary_winding/threshold_routes/06_direct_all_multiplicity/reviews/01_ALL_MULTIPLICITY_REMAINDER_REVIEW_20261020.md).
+  Prepared for Edward Baker with substantial LLM assistance, gpt-6-astra,
+  ultra; no numerical theta acquisition, uniform radius or specialist review.
+
 ## Status
 
 The local laws, indices, surface identities and equivalences have written

@@ -6,9 +6,14 @@ actual reasoning effort: **xhigh**, verified from the recorded turn metadata.
 
 Canonical archives of new conversations affiliated with this home.
 
-No conversation is newly registered here. The setup conversation has its sole registration in the [brainstorm archive][chat], following Edward's requested relocation on 19 October 2026. Its number 11 and original identity are preserved; no transcript or registry is duplicated here. Register future conversations here only when this is their actual affiliation, following the [history workflow][history]. Preserve existing identities, numbers, and first-capture provenance. Never hand-edit registered JSON histories.
+The current boundary-winding conversation is [chat 1](0001_2026-10-20T02-33-56Z_explain-boundary-winding-direction.json) in this folder and retains that unique registration as the sub-investigations are created. The earlier portfolio setup conversation remains chat 11 in the [brainstorm archive][chat], following Edward's requested relocation. Register new route-specific chats in their actual affiliated route; do not duplicate or relocate these existing conversations as part of the program setup. Follow the [history workflow][history], preserve all identities and provenance, and never hand-edit registered JSON histories.
 
 [Parent index](../README.md).
 
 [history]: ../../../../../tools/CHAT_HISTORY.md
 [chat]: ../../../brainstorm/chat-histories/0011_2026-10-20T01-37-24Z_explain-arithmetic-rigidity-obstacle.json
+
+
+History note, 19 October 2026 (gpt-6-astra, max): this continuing chat, [Investigate threshold winding routes](0001_2026-10-20T03-20-58Z_investigate-threshold-winding-routes.json), is now registered here. The earlier route copy is a retained snapshot; this parent archive receives future refreshes. Its original number and identity are preserved.
+
+20 October 2026 — [Continue boundary winding research](0002_2026-10-20T04-03-37Z_continue-boundary-winding-research.json), canonical thread `01a1577a-a1f8-7c21-9a4f-9d87da5694f2`, registered as history 2 through the repository refresh tool. Model gpt-6-astra, actual effort ultra. Current captures and hashes belong to index.json; no duplicate route registration.

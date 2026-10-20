@@ -101,6 +101,20 @@ only those properties proves a false statement.
   carrier bounds survive with arbitrarily close constants. Its published
   high-zero input is stated explicitly; review remains same-assistant.
 
+- **BW-01 fixed-event positive-source control (3/13, 20 October).**
+  **Proved in-note; separate same-model internal review:** a normalized
+  three-atom source has actual all-real threshold T, an exact double event
+  at fixed a=20, uniform complete moment bounds, and passes the selected
+  imaginary-axis floors at b=20 and b=40. Its exact critical-value pair
+  remains negative and normalized curvature diverges negatively along
+  the family. “This is not an obstruction to estimates using the unchanged
+  complete theta source.” It is atomic, has infinitely many simultaneous
+  threshold events, and fails theta's eventual simplicity there and the
+  full imaginary-axis profile. [Proof](../papers/investigations-3/13_contradiction_analysis/04_boundary_winding/threshold_routes/01_local_double_winding/notes/04_EVENT_CONDITIONED_POSITIVE_SOURCE_OBSTRUCTION_20261020.md),
+  [review](../papers/investigations-3/13_contradiction_analysis/04_boundary_winding/threshold_routes/01_local_double_winding/reviews/02_EVENT_CONDITIONED_SOURCE_REVIEW_20261020.md).
+  Prepared for Edward Baker with substantial LLM assistance, gpt-6-astra,
+  ultra. No theta exclusion or specialist review.
+
 ## Status
 
 19: proved and certified; the manuscript "awaits independent review" and

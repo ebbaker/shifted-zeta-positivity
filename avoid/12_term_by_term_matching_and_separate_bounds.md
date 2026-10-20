@@ -160,6 +160,8 @@ separated complement floors; a Gram tail omitted from a lower bound.
   Added 19 October for Edward Baker with substantial LLM assistance,
   **gpt-6.1-sol, actual effort ultra**.
 
+- [BW-01 paired-face Note 03](../papers/investigations-3/13_contradiction_analysis/04_boundary_winding/threshold_routes/01_local_double_winding/notes/03_PAIRED_FACE_REMAINDER_OBSTRUCTION_20261019.md), 19 October 2026: keeping the odd time pair cancels its even time terms, but replacing the remaining signed theta data by symmetric bounds about the centered quadratic model still admits the collision. “Stop the centered quadratic model plus symmetric absolute-remainder payment as a source of zero winding.” The resulting negative-degree accuracy is not an arithmetic exclusion. This is a scoped stopping lesson; other signed observations and boundary acquisition methods remain open. [Same-assistant assessment](../papers/investigations-3/13_contradiction_analysis/04_boundary_winding/threshold_routes/01_local_double_winding/reviews/01_PAIRED_FACE_SELF_REVIEW_20261019.md). Added for Edward Baker with substantial LLM assistance, **gpt-6-astra, actual effort max**.
+
 ## What it cost
 
 The channel-matching program (excluded by the two-channel theorem); the

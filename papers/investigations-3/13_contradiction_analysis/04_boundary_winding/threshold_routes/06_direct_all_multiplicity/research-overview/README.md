@@ -1,0 +1,16 @@
+# Direct boundary estimates for every multiplicity research overview
+
+19 October 2026, America/New_York. Prepared for **Edward Baker** with substantial LLM assistance. Authoring model **gpt-6-astra (Codex)**; actual reasoning effort **xhigh**, verified from recorded turn metadata.
+
+The [overall program][program] is authoritative for task BW-06. The [shared progress register][progress] records its execution. The initial note in the parent route supplies the local question and first acceptance condition; do not maintain a competing program or duplicate status table here.
+
+[Research home](../README.md).
+
+[program]: ../../../research-overview/01_THRESHOLD_BOUNDARY_WINDING_RESEARCH_PROGRAM_20261019.md
+[progress]: ../../../research-progress/01_THRESHOLD_BOUNDARY_WINDING_PROGRESS_20261019.md
+[large]: ../../../../../../../LARGE_FILES.md
+[history]: ../../../../../../../tools/CHAT_HISTORY.md
+[predecessor]: ../../../../../../quasi-rh/quasi-rh-exponent-descent/newman_collisions/newman_collision_reductions.tex
+[index]: ../../../../../../investigations-2/active/22_theta_manifold_geometry/notes/01_physical_jet_geometry/04_SPACETIME_INDEX_AND_MARKED_TOPOLOGY_20261015.md
+[walls]: ../../../../../../investigations-2/active/22_theta_manifold_geometry/notes/01_physical_jet_geometry/06_WALL_FLUX_AND_CERTIFIED_THETA_WINDING_20261015.md
+[controls]: ../../../../../../../result-summaries/12_collision_controls_and_screening.md
