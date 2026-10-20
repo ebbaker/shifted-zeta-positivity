@@ -20,3 +20,32 @@ The second script requires python-flint and the pinned existing repository sourc
 The [quadratic heat flow illustration](plot_heat_flow_lens.py) generates [PNG](../notes/figures/HEAT_FLOW_LENS_20261020.png) and [SVG](../notes/figures/HEAT_FLOW_LENS_20261020.svg) versions of [Note 06](../notes/06_HEAT_FLOW_CONTOURS_AND_GAUSSIAN_CAP_ENERGY_20261020.md)'s exact rounded contour. It requires NumPy and Matplotlib; this rendering used NumPy 2.5.4 and Matplotlib 3.11.2. Pass `--output-dir` to choose a folder, such as `/tmp/heat-flow-figure`. It illustrates analytic identities and supplies no theta acquisition or interval certificate.
 
 [Notes](../notes/README.md) · [Progress](../research-progress/01_EXPANDING_CONTOUR_PROGRESS_20261020.md).
+
+## Frozen HFCE execution, 20 October 2026
+
+Prepared for Edward Baker with substantial LLM assistance, **gpt-6-astra,
+actual effort ultra**. The three original contracts were saved before
+evaluation; their bytes are retained.
+
+| Consumer | Frozen contract | Exact receipt |
+| --- | --- | --- |
+| [Direct first-jet baseline](check_hfce_baseline.py) | [Baseline](HFCE_BASELINE_CONTRACT_20261020.md) | [Direct exclusion](HFCE_BASELINE_20261020.json) |
+| [Gaussian whole-cap comparison](check_hfce_cap_comparison.py) | [Cap](HFCE_CAP_CONTRACT_20261020.md) | [Bounded estimator failure](HFCE_CAP_COMPARISON_20261020.json) |
+| [Localized comparator](check_hfce_localized_comparison.py) | [Localized](HFCE_LOCALIZED_CONTRACT_20261020.md) | [Positive actual average](HFCE_LOCALIZED_COMPARISON_20261020.json) |
+
+Use Python with python-flint 0.9.0. Each script takes `--repo`, `--contract`
+and `--output`. The cap script additionally takes `--baseline` pointing
+to the direct receipt; its default baseline-wrapper path is the sibling
+`check_hfce_baseline.py`. Run the baseline before the cap. The cap's
+exit status 1 with `bounded_failure_no_adaptation` is its expected
+strict-sign failure, not a source-validation exception.
+The localized pointwise-positive gate stops weighted integration.
+All scripts use the unchanged exact source cache, zero new quadratures,
+192/256-bit arithmetic and one predeclared closed box. No scan or
+adaptive retry is performed.
+
+The [review record](HFCE_REVIEW_RECORD_20261020.json) pins final sources,
+contracts, notes and receipts and records replay equivalence. The
+[research note](../notes/07_FIXED_GAUSSIAN_COMPARISON_20261020.md) proves
+the global Gaussian tail premise; code alone does not prove that
+analytic input. The manuscript and old cache remain unchanged.

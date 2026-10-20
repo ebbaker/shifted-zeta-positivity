@@ -27,39 +27,59 @@
 \newcommand{\erfc}{\operatorname{erfc}}
 \newcommand{\sgn}{\operatorname{sgn}}
 \DeclareMathOperator{\Arg}{Arg}
-\title{Heat Flow Contours, Collision Indices, and Gaussian Cap Energy\\
-\large Initial research manuscript: results and open estimates}
+\title{Root-Following Heat Contours, Phase Concentration,\\
+and the Cap at Infinity\\
+\large Analytical reductions and a signed surplus research program}
 \author{Drafted for Edward Baker\\
 \small With substantial LLM assistance from gpt-6-astra (Codex), effort ultra}
 \date{20 October 2026}
 \begin{document}
 \maketitle
 \begin{abstract}
-We study finite space--time contours around a hypothetical multiple real
-zero of the theta heat family. With the orientation \(dt\wedge dx\), the
-physical jet \(J=H+\ii H_x\) has local index
-\(-\lfloor m/2\rfloor\) at a zero of spatial multiplicity \(m\). An ordinary
-initial collision can be removed by an explicit quotient with a paid
-apex patch; negative quotient winding would then force a later collision.
-We prove the local index formula, a coupled complete-source remainder,
-an obstruction for unsigned disks centered at the normalized initial
-jet, and exact root-wall and nonzero-level contour formulas. Polynomial
-and positive-source controls show why heat-flow geometry and local jets
-alone do not force an additional collision.
+Following simple zeros of a backward heat flow removes the side phase
+integrals of its physical jet exactly. The remaining cap is a precise
+collision counter: between two roots born at an ordinary event, its
+phase decrease is \((N+1)\pi\), where \(N\) counts interior cap zeros.
+A strictly proved surplus over \(\pi\) would therefore force a later
+event, subject to finite continuation and boundary hypotheses.
 
-We also derive localized Laguerre identities, energy balances, exact
-Gaussian cap moments, and a sharp Gaussian deficit inequality. A negative
-fixed-scale deficit would exclude the initial event directly; no such
-theta deficit has yet been certified. One existing bounded interval
-calculation proves positivity of \(H\) on
-\([0.099999,0.100001]\times[1001,1002]\); we describe its complete error
-analysis and distinguish it from a signed winding estimate.
-The later-collision estimate, broad parameter coverage, and the desired
-upper bound on the de Bruijn--Newman constant remain open.
+We develop this signed surplus as an analytical estimating problem.
+For the quadratic model we compute exact endpoint-layer masses and
+finite tail bounds; sending the cap to infinity retains its half-turn.
+For the complete theta source we derive a large-positive-time saddle
+limit \(H(t,z/L_t)/H(t,0)\to\cos z\), where \(L_t\sim\frac14\log t\).
+Fixed-index real roots approach zero, while their physical jet phase
+concentrates near an interior extremum. Explicit source-moment error
+bounds distinguish this theta layer from the quadratic endpoint layers.
+Positive rescaling of the derivative channel changes concentration but
+preserves winding.
+
+These calculations quantify the phase accounting; they do not supply
+the missing theta surplus. In particular, an adjacent fixed-index
+cosine cap has the ordinary decrease \(\pi\), and a nonvanishing homotopy
+to it cannot produce extra winding. We formulate the remaining
+event-conditioned analytical tasks and separate them from earlier
+bounded numerical exclusions and failed energy comparisons.
+No later theta collision or improvement of the global threshold is claimed.
 \end{abstract}
 \tableofcontents
 
-\section{Problem, normalization, and status}
+\section{The question and its precise scope}
+\label{sec:scope}
+The proposed contradiction starts from a hypothetical multiple real zero
+at the all-real threshold of the theta heat family. It seeks a second
+event at a strictly later time. The useful simplification is to follow
+the two simple roots born at the first event, making the side phase
+integrals vanish. The difficulty is then to prove that the closing cap
+has accumulated more phase than the original pair requires.
+
+The present revision organizes the argument around that missing
+\emph{signed surplus}. Exact contour identities, concentration
+estimates and the large-time source asymptotic are established below.
+The arithmetic inequality that would make the surplus strictly positive
+remains open. This distinction determines both the narrative and the
+new analytical research program.
+
 \subsection{The complete theta source}
 For \(u\ge0\), set
 \begin{align}
@@ -108,67 +128,785 @@ analytic continuation. Twice integrating \(\psi''\) by parts proves
  \xi(s)=\tfrac12s(s-1)\pi^{-s/2}\Gamma(s/2)\zeta(s).   \label{eq:xi}
 \end{equation}
 
-\subsection{The threshold question}
-The classical de Bruijn--Newman theory supplies a finite real constant
-\(\Lambda\) such that all zeros of \(H(t,\cdot)\) are real exactly when
-\(t\ge\Lambda\) \cite{debruijn,newman}. By \eqref{eq:xi}, the Riemann
-hypothesis is equivalent to \(\Lambda\le0\). Rodgers and Tao proved
-\(\Lambda\ge0\) \cite{rodgerstao}. We use these established facts as
-background; we do not reprove the threshold theorem.
 
-The contemplated contradiction begins with an actual multiple real zero
-\((T,a)\) at a hypothetical positive threshold \(T=\Lambda\).
-For the finite execution round the parameter envelope was
+
+\subsection{Threshold, event and continuation assumptions}
+Classical de Bruijn--Newman theory gives a finite real \(\Lambda\) such
+that all zeros of \(H(t,\cdot)\) are real exactly for \(t\ge\Lambda\)
+\cite{debruijn,newman}. In the normalization above RH is equivalent to
+\(\Lambda\le0\), while Rodgers and Tao proved \(\Lambda\ge0\)
+\cite{rodgerstao}. These are background inputs, not results of this work.
+
+The contour question is conditional on an \emph{attained ordinary event}
 \[
- 0<T\le\tfrac15,\qquad a\in[1001,1002],\qquad
- H(T,a)=H_x(T,a)=0,\qquad H_{xx}(T,a)\ne0.
+ T=\Lambda>0,\qquad H(T,a)=H_x(T,a)=0,\qquad
+ h_2:=H_{xx}(T,a)\ne0.
 \]
-This is a conditional class, not an observed event or a coverage theorem.
-No uniform lower bound on \(|H_{xx}(T,a)|\) is assumed.
-An event at a threshold is an additional premise of the proposed route;
-this manuscript does not prove that every hypothetical positive
-threshold has an attained finite-height ordinary collision.
+An actual positive threshold is not known, and no theorem here says that
+every hypothetical positive threshold is attained at finite height or
+has an ordinary collision. The earlier numerical envelope
+\(0<T\le1/5,\ a\in[1001,1002]\) is only one conditional class; it is
+not a coverage statement for all possible events. No uniform lower
+bound on \(|h_2|\) is assumed.
 
-At any strictly later time \(t>\Lambda\), a multiple zero is impossible:
-the local heat-polynomial analysis below gives nonreal zeros just before
-such an event, still at times greater than \(\Lambda\).
-Therefore a rigorous later-collision certificate would contradict the
-threshold premise. It is the certificate, not this implication, that is
-missing.
+At a multiple zero the local heat polynomial has nonreal roots just
+before the event. Thus a strictly later multiple zero would contradict
+all-realness above \(T=\Lambda\); Appendix~\ref{app:index} supplies the
+local proof, including higher multiplicities. The finite contour still
+requires actual simple root graphs, finite continuation, a zero-free jet
+on its boundary and a regular terminal cap. An unproved continuation,
+escape from a chosen chart, or failure of a tracker is not a collision.
 
-\subsection{What has and has not been obtained}
-The analytical results below are derivations and internally reviewed
-research results. The rational polynomial contour tests and the small
-theta box are recorded computations with stated source and error
-contracts. The reviews used separate agents of the same model; they are
-not specialist review or independent numerical implementations.
-
-The main positive estimating improvement is the removal of a mixed
-absolute-error term from a complete coupled source remainder. The main
-negative results concern precisely specified information classes:
-unsigned disks, local prescribed jets, generic positive sources, and
-unpaid or purely geometric contour changes. They do not exclude all
-possible theta-specific signed estimates.
-No negative theta quotient winding, negative Gaussian deficit at a
-selected fixed scale, negative localized Laguerre average, or later theta
-collision has been proved. The finite positive-value certificate excludes
-one small box only.
-
-\section{Physical degree and local collision index}
+\section{Root-following walls reduce winding to the cap}
+\label{sec:rootwalls}
 Write
 \[
- J=H+\ii H_x,\qquad E=H^2+H_x^2.
+ J=H+\ii H_x,\qquad E=H^2+H_x^2,\qquad
+ Q=H_x^2-HH_{xx}.
 \]
-For a positively oriented boundary in the \((t,x)\) plane, with
-orientation \(dt\wedge dx\), define
+On a boundary where \(J\ne0\),
 \begin{equation}
- W_J(\Omega)=\frac1{2\pi}\oint_{\partial\Omega}
- \frac{(H_xH_{xx}-HH_{xxx})\dd t+(HH_{xx}-H_x^2)\dd x}{E}.
-                                                        \label{eq:winding}
+ d\arg J=
+ \frac{(H_xH_{xx}-HH_{xxx})\,dt+
+             (HH_{xx}-H_x^2)\,dx}{E}
+ =\frac{Q_x\,dt-Q\,dx}{E}.                       \label{eq:winding}
 \end{equation}
-This is the integer winding of \(J\), provided \(J\ne0\) everywhere on
-the boundary. A collision on a boundary, including an apex, makes this
-physical winding undefined until the contour is changed or regularized.
+We orient space--time by \(dt\wedge dx\): the upper time cap runs
+from left to right. Its \emph{phase decrease} is the signed quantity
+\[
+ M_{\rm cap}:=-\Delta_{\rm cap}\arg J=\int_{\rm cap}Q/E\,dx.
+\]
+It is a positive measure only when \(Q\ge0\); estimates below state
+explicitly when they concern net phase rather than total variation.
+
+If \(x=w(t)\) is a simple root graph, implicit differentiation gives
+\[
+ w'=\frac{H_{xx}}{H_x}.
+\]
+Pulling \eqref{eq:winding} back to the wall gives
+\[
+ \frac{d}{dt}\arg J(t,w(t))
+ =\frac{H_{xx}}{H_x}-w'=0.
+\]
+Equivalently \(J=\ii H_x\) has constant phase there. It is the full
+tangential expression that cancels; its time and moving-space terms
+need not vanish separately.
+
+\begin{lemma}[Exact phase between simple roots]\label{lem:cap}
+Let \(f\) be real \(C^2\) on \([u,v]\), with simple endpoint roots and
+exactly \(N\) interior roots, all simple. Then
+\[
+ \Delta_{u\to v}\arg(f+\ii f')=-(N+1)\pi.
+\]
+\end{lemma}
+\begin{proof}
+Between consecutive roots \(f\) has one strict sign. If \(f>0\), its
+jet stays in the right half-plane, starts on the positive imaginary
+axis and ends on the negative imaginary axis, with increment \(-\pi\).
+For a negative lobe multiply the jet by \(-1\). Sum over the \(N+1\)
+lobes. No pointwise phase monotonicity is needed.
+\end{proof}
+
+\begin{proposition}[Finite root strip]\label{prop:strip}
+Suppose the two roots born at \((T,a)\) continue as compact simple graphs
+\(w_-(t)<w_+(t)\) for \(T+\eta\le t\le T+R\). Choose \(\eta>0\)
+in the local splitting neighborhood, so the bottom roots are adjacent.
+Assume the upper cap has only simple zeros, with \(N\) in its interior.
+Then
+\begin{equation}
+ M_{\rm cap}=(N+1)\pi,\qquad N\ \hbox{even},\qquad
+ W_{\rm strip}=-N/2.                              \label{eq:strip}
+\end{equation}
+If an enclosing lower piece adds only the original ordinary event,
+the full physical winding is \(-1-N/2\).
+\end{proposition}
+\begin{proof}
+The upper cap contributes \(-(N+1)\pi\), the reversed lower cap
+contributes \(+\pi\), and both walls contribute zero. Division by
+\(2\pi\) proves the winding formula and its integrality gives the parity.
+At the original ordinary event, the Jacobian of \((H,H_x)\) is
+\[
+ \begin{pmatrix}-h_2&0\\-h_3&h_2\end{pmatrix},
+ \qquad h_3=H_{xxx}(T,a),
+\]
+with determinant \(-h_2^2\), hence index \(-1\).
+Index additivity gives the final assertion. The general event count
+is proved in Appendix~\ref{app:index}.
+\end{proof}
+
+Consequently a complete signed estimate \(M_{\rm cap}>\pi\) would force
+\(N\ge2\) and at least one later event. Assuming continued adjacency
+would instead impose \(N=0\) from the start. For the contradiction route,
+simple continuation is a legitimate wall premise; a global cap count
+cannot also be assumed as an estimating input.
+
+\subsection{The initial event cannot be dropped with the apex}
+A contour through the event has \(J=0\) on its boundary, so its physical
+winding is undefined. One may truncate above the event and use
+Proposition~\ref{prop:strip}, enclose it by a lower connector, or use
+the ordinary-event quotient
+\[
+ \mathcal L(\tau,y)=-h_2\tau+\ii(h_2y-h_3\tau),\qquad Z=J/\mathcal L.
+\]
+The real linear map \(\mathcal L\) is invertible, has index \(-1\),
+and \(J-\mathcal L=O(\tau^2+y^2)\). Thus \(Z\to1\) locally and has
+a nonzero continuous apex extension. Its neighborhood is event
+dependent; no uniform curvature floor is hidden in this argument.
+Longer remainder and apex estimates are in
+\href{../notes/01_FINITE_CONTOUR_AND_SOURCE_CONTRACT_20261020.md}{Note 01}.
+
+For the exact quadratic \(H=y^2-2\tau\), the root cap has phase
+\(-\pi\). The lower connector \(\tau=y^2-\eta\), traversed from
+\(\sqrt{2\eta}\) to \(-\sqrt{2\eta}\), has
+\(J=2\eta-y^2+2\ii y\) and contributes another \(-\pi\) through the
+right half-plane. Its contribution does not tend to zero as
+\(\eta\downarrow0\). The full winding is exactly the original \(-1\).
+
+\section{The strict signed surplus and its error budget}
+\label{sec:surplus}
+Partition a regular root cap into two disjoint endpoint intervals and
+their complementary middle. Let \(M_{\rm ends}\) and \(M_{\rm mid}\)
+be their signed phase decreases. Proposition~\ref{prop:strip} gives
+\begin{equation}
+ \Delta:=M_{\rm ends}+M_{\rm mid}-\pi=N\pi
+                 \in 2\pi\mathbb Z_{\ge0}.       \label{eq:surplus}
+\end{equation}
+\begin{corollary}[A sufficient strict budget]\label{cor:budget}
+Under the finite root-strip hypotheses, complete independent bounds
+\[
+ M_{\rm ends}\ge\pi-\eta_R,\qquad M_{\rm mid}>\eta_R
+\]
+force a later event. More generally any complete lower bound
+\(M_{\rm ends}+M_{\rm mid}>\pi\) suffices.
+\end{corollary}
+Indeed the next allowed value after \(\pi\) is \(3\pi\).
+The estimates must include signed endpoint deficits, all source
+remainders and the actual wall/cut locations. Concentration alone
+does not provide either strict inequality.
+
+Equation~\eqref{eq:surplus} is an exact reformulation of the extra-root
+target under the stated hypotheses, not a new estimate or a weaker
+intermediate theorem. Its practical use is to specify where a source
+calculation must gain a strict margin. One may use exact endpoint
+arguments rather than integrate the endpoint pieces.
+
+\subsection{A scalar description and the local sign}
+The born walls inherit slope signs
+\(-\sgn h_2\) on the left and \(+\sgn h_2\) on the right.
+Hence \(h_2H<0\) immediately inside both cap endpoints. A point \(b\)
+strictly between the walls with
+\begin{equation}
+                  h_2H(T+R,b)>0                  \label{eq:sign-target}
+\end{equation}
+would force an interior root on each side. Conversely extra simple
+interior roots produce such a sign interval. This is equivalent cap
+information; it does not supply an arithmetic sign by itself.
+Writing \(h_j=\partial_x^jH(T,a)\), the heat equation gives
+\[
+ h_2H(T+R,a)=-h_2^2R+\tfrac12h_2h_4R^2+O(R^3)<0
+\]
+for sufficiently small \(R>0\). The center is inside the born pair
+at these small times. Better local quadratic approximation therefore
+confirms the original lobe, rather than generating another one.
+
+\subsection{What a phase homotopy can and cannot prove}
+For complex cap approximants \(P,M\) with
+\(|P-M|\le e<|M|\), the quotient \(P/M\) lies in a disk centered
+at 1 that avoids zero. A continuous argument difference satisfies
+\[
+ |\arg(P/M)|\le\arcsin(e/|M|).
+\]
+Its two endpoint errors bound the difference of the net phase increments.
+This retains phase correlation across the interval.
+On a complete nonzero closed contour, a nonvanishing homotopy to an
+ordinary one-event model certifies that same degree. It cannot
+simultaneously force an extra event. A useful strict-surplus estimate
+must use source information that goes beyond such a one-lobe enclosure.
+
+\section{Quantitative endpoint concentration in the quadratic}
+\label{sec:quadratic}
+Take \(f_R(y)=y^2-r^2\), \(r=\sqrt{2R}\), on \([-r,r]\).
+Here
+\[
+ Q=2(y^2+r^2),\qquad E=(y^2-r^2)^2+4y^2,\qquad
+ d\mu_R=-d\arg(f_R+\ii f_R')=\frac{Q}{E}\,dy.
+\]
+This is a positive measure of total mass \(\pi\).
+With \(z=y/r,\ \epsilon=2/r\),
+\begin{equation}
+ J/r^2=z^2-1+\ii\epsilon z,\qquad
+ \frac{d\arg J}{dz}
+ =-\frac{\epsilon(1+z^2)}{(1-z^2)^2+\epsilon^2z^2}. \label{eq:quad-density}
+\end{equation}
+A continuous lift is
+\[
+ \varphi_R(z)=-\pi-\arctan\frac{\epsilon z}{1-z^2},
+ \quad -1<z<1,
+\]
+with endpoint values \(-\pi/2,-3\pi/2\).
+
+\begin{proposition}[Finite endpoint-layer bounds]\label{prop:layers}
+For \(0<\delta<1\), the middle interval
+\([-1+\delta,1-\delta]\) has phase mass
+\begin{equation}
+ M_{\rm mid}
+ =2\arctan\frac{\epsilon(1-\delta)}{\delta(2-\delta)}
+ \le\frac{2}{r\delta}.                            \label{eq:middle-bound}
+\end{equation}
+Each endpoint interval has mass \(\pi/2-M_{\rm mid}/2\).
+For physical endpoint windows of width \(0<V<r\), each has mass
+\begin{equation}
+ M_{\rm end}
+ =\arctan\left(V+\frac{V^2}{2(r-V)}\right),\qquad
+ 0\le M_{\rm outside}\le\frac2V.                  \label{eq:physical-window}
+\end{equation}
+Moreover
+\[
+ 0\le M_{\rm end}-\arctan V
+ \le\frac{V^2}{2(r-V)(1+V^2)}.
+\]
+\end{proposition}
+\begin{proof}
+Evaluate the lift at the middle endpoints to get
+\eqref{eq:middle-bound}; use \(\arctan x\le x\) and
+\(2(1-\delta)\le2-\delta\).
+Set \(\delta=V/r\). The complementary half-mass equals
+\[
+ \frac\pi2-\arctan\frac{2(r-V)}{V(2r-V)}
+ =\arctan\left(V+\frac{V^2}{2(r-V)}\right).
+\]
+The outside mass is twice the arctangent of the reciprocal of this
+last argument, at most \(2/V\). Finally
+\(\arctan(V+B)-\arctan V
+=\arctan[B/(1+V(V+B))]\le B/(1+V^2)\), with
+\(B=V^2/[2(r-V)]\).
+\end{proof}
+
+Thus \(V\ge2/\eta\) and \(R>V^2/2\) put all but \(\eta\) radians
+in the two physical endpoint windows. Their widths remain \(O(1)\);
+their relative widths vanish because the cap grows like \(\sqrt R\).
+Equivalently, in the \(z\) coordinate,
+\[
+ d\mu_R\rightharpoonup
+       \tfrac\pi2\delta_{-1}+\tfrac\pi2\delta_1.
+\]
+This follows from symmetry, total mass \(\pi\), and
+\eqref{eq:middle-bound}. Pointwise interior vanishing is not convergence
+of the total phase to zero. The limiting normalized jet \(z^2-1\)
+vanishes at the endpoints.
+
+The strict budget is exactly saturated:
+\[
+                  M_{\rm mid}=\pi-M_{\rm ends}.
+\]
+Keeping the small middle phase while replacing the endpoints by their
+limiting mass \(\pi\) would introduce a false surplus.
+
+\subsection{A reusable root-window estimate}
+\begin{lemma}[Relative curvature controls endpoint phase]\label{lem:curvature}
+At a simple left root \(u\), put \(s=f'(u)\ne0\). Suppose
+\[
+ |f''(u+d)|\le K|s|\quad(0\le d\le V),\qquad \rho=KV<1.
+\]
+Then the window contains no further root, and its net phase decrease
+obeys
+\[
+ \arctan\frac{V(1-\rho/2)}{1+\rho}
+ \le M_{\rm end}\le
+ \arctan\frac{V(1+\rho/2)}{1-\rho}.
+\]
+The inward right-endpoint formula is identical.
+\end{lemma}
+\begin{proof}
+Taylor's integral remainder gives
+\(f(u+d)/s=d+e_0,\ f'(u+d)/s=1+e_1\),
+with \(|e_0|\le Kd^2/2,\ |e_1|\le Kd\).
+These normalized components are positive inside the window.
+The phase decrease is exactly
+\(\arctan[f(u+V)/f'(u+V)]\); bound that positive ratio.
+\end{proof}
+Capturing nearly \(\pi/2\) needs both large \(V\) in the jet's unit
+derivative scale and small \(KV\). Simplicity alone supplies neither.
+The quadratic has \(K=1/r\). A theta application needs its own relative
+curvature estimate and enough separation for the two windows.
+
+\section{What changes when the cap is sent to infinity?}
+\label{sec:infinity}
+Start with the complete finite contours of Proposition~\ref{prop:strip}.
+The endpoint unit phases remain opposite imaginary directions.
+A continuous cap joining them cannot have constant phase, even at a
+limiting boundary. If they stay adjacent for every finite \(R\),
+\(M_{\rm cap}(R)=\pi\) identically.
+
+When the finite interior events are isolated, the root-strip count
+increases by twice their collision charges. A finite limiting count
+is eventually constant. A limiting strict excess would therefore
+already occur at a finite regular cap. An unbounded count gives
+unbounded phase, not a finite winding at infinity. A genuine limiting
+argument must control the full phase and identify the same walls;
+an amplitude limit or pointwise phase-density limit is insufficient.
+
+\subsection{A continuous limiting cap can retain its half-turn}
+The positive cosine-source family
+\[
+ H(t,x)=1+e^{t-T_0}\cos x
+\]
+has actual all-real threshold \(T_0\). Indeed \(\cos x=-e^{T_0-t}\)
+has only real solutions for \(t\ge T_0\), while for \(t<T_0\) it has
+nonreal conjugate solutions at each odd multiple of \(\pi\).
+Centering at \(y=x-\pi,\ \tau=t-T_0\), its born walls are
+\(\pm\alpha_\tau\), \(\alpha_\tau=\arccos(e^{-\tau})\).
+Between them \(H=1-e^\tau\cos y<0\), with no later collision.
+On the cap \(y=\alpha_R z\),
+\[
+ J/e^R=e^{-R}-\cos(\alpha_R z)+\ii\sin(\alpha_R z)
+       \longrightarrow-e^{-\ii\pi z/2},\qquad -1\le z\le1.
+\]
+The convergence is uniform to a nonzero curve, whose phase change is
+still \(-\pi\). The quadratic loses a nonvanishing endpoint limit;
+this atomic control has a good limit and still retains the cap.
+Neither supports dropping it.
+
+\subsection{The detector does see a genuine later event}
+For
+\[
+ F(s,y)=y^4-12sy^2+12s^2-3
+\]
+the two ordinary events are \((-1/2,0)\) and \((1/2,0)\).
+The outer roots born at the first event are
+\[
+ w_\pm(s)=\pm\sqrt{6s+\sqrt{24s^2+3}}.
+\]
+They remain simple. For \(s>1/2\) there are two interior simple roots,
+giving cap decrease \(3\pi\) and full physical winding \(-2\).
+The first event is not the all-real threshold: all four roots are real
+exactly for \(s\ge1/2\). The example verifies the signed detector
+without contradicting future simplicity above a true threshold.
+
+% Prepared for Edward Baker, 20 October 2026, with substantial LLM assistance.
+% Model gpt-6-astra; reasoning effort ultra, verified by parent metadata.
+% Separate same-model analytical draft; no specialist review.
+\section{The complete theta profile and its interior phase layer}
+\label{asym:section}
+This section concerns $t\to+\infty$, with fixed spatial indices and
+fixed rescaled compact sets.  It gives a complete-source asymptotic,
+not a continuation theorem for previously selected walls or a collision
+criterion.  The heat convention remains $H_t=-H_{xx}$.
+
+\subsection{A positive spectral law and its large stationary point}
+Use the complete normalization
+\begin{equation}\label{asym:source}
+ H(t,x)=\int_0^\infty e^{tu^2}\Phi(u)\cos(xu)\dd u,\qquad
+ \Phi(u)=\sum_{n\ge1}(2\pi^2n^4e^{9u}-3\pi n^2e^{5u})
+                         e^{-\pi n^2e^{4u}}.
+\end{equation}
+Every summand is positive for $u\ge0$.  Write
+\begin{equation}\label{asym:factor}
+ e^{tu^2}\Phi(u)=2\pi^2e^{q_t(u)}b(u),\qquad
+ q_t(u)=tu^2+9u-\pi e^{4u}.
+\end{equation}
+Retaining the first summand for a lower bound and dropping the negative
+terms for an upper bound gives
+\begin{equation}\label{asym:b-bounds}
+ 0<c_b:=1-\frac3{2\pi}\le b(u)\le
+ C_b:=\sum_{n\ge1}n^4e^{-\pi(n^2-1)}<\infty,
+ \qquad b(u)\longrightarrow1.
+\end{equation}
+Indeed the exact series for $b$ has terms
+$[n^4-3n^2e^{-4u}/(2\pi)]e^{-\pi(n^2-1)e^{4u}}$.
+The displayed summable majorant also justifies the limit.
+
+For sufficiently large $t$, let $L=L_t$ be the large solution of
+\begin{equation}\label{asym:saddle}
+ 4\pi e^{4L}=2tL+9,
+ \qquad \kappa=\kappa_t:=16\pi e^{4L}-2t=8tL-2t+36.
+\end{equation}
+This choice is unambiguous: $q_t''=2t-16\pi e^{4u}$ strictly decreases,
+$q_t'(0)=9-4\pi<0$, and its maximum is positive for large $t$.
+Thus $q_t'$ has a small zero giving a local minimum and one large zero
+giving the selected maximum.  The large zero tends to infinity.
+Taking logarithms in \eqref{asym:saddle} first gives
+$\log t=4L-\log L+\log(2\pi)+o(1)$ and hence
+\begin{equation}\label{asym:L-expansion}
+ L=\frac{\log t+\log\log t-\log(8\pi)+o(1)}4,
+ \qquad \kappa\sim8tL.
+\end{equation}
+
+\begin{proposition}[Normalization and spectral concentration]
+\label{asym:concentration}
+Let $U$ have the probability law
+\[
+ d\mu_t(u)=\frac{e^{tu^2}\Phi(u)\dd u}{H(t,0)},\qquad u\ge0.
+\]
+Then
+\begin{equation}\label{asym:normalization}
+ H(t,0)\sim2\pi^2e^{q_t(L)}\sqrt{\frac{2\pi}{\kappa}}.
+\end{equation}
+The variable $\sqrt\kappa(U-L)$ converges to a standard normal variable,
+with convergence of every fixed absolute moment.  In particular, setting
+$m_1=\mathbb E|U-L|$ and $m_2=\mathbb E(U-L)^2$, one has
+\begin{equation}\label{asym:moments}
+ m_1\sim\sqrt{\frac2\pi}\,\kappa^{-1/2},\qquad
+ m_2\sim\kappa^{-1}.
+\end{equation}
+\end{proposition}
+\begin{proof}
+Set $A_t=\pi e^{4L}$.  Cancellation of the linear term gives exactly
+\begin{equation}\label{asym:exponent-difference}
+ q_t(L+v)-q_t(L)=tv^2-A_t(e^{4v}-1-4v).
+\end{equation}
+For $v\ge0$, the right side is at most $-\kappa v^2/2$.
+Fix $\delta>0$.  On $-\delta\le v\le0$, Taylor's integral remainder
+bounds $e^{4v}-1-4v$ below by $8e^{-4\delta}v^2$.
+Since $t/\kappa\to0$, for all sufficiently large $t$ this gives
+\begin{equation}\label{asym:local-tail}
+ q_t(L+v)-q_t(L)\le-c_\delta\kappa v^2,
+ \qquad c_\delta=e^{-4\delta}/4.
+\end{equation}
+On $[0,L-\delta]$, the maximum of $q_t$ is at an endpoint, by its
+one-minimum/one-maximum shape.  Eventually
+$q_t(L-\delta)>q_t(0)$, since the former is asymptotic to $tL^2$.
+Consequently its unnormalized mass is at most
+\begin{equation}\label{asym:far-left}
+ 2\pi^2 C_b L\exp\{q_t(L)-c_\delta\kappa\delta^2\}.
+\end{equation}
+For $v=w/\sqrt\kappa$, \eqref{asym:exponent-difference} equals
+$-w^2/2+O(|w|^3/\sqrt\kappa)$ on each fixed bounded $w$-interval;
+here $A_t/\kappa\to1/16$.  Also $b(L+w/\sqrt\kappa)\to1$.
+The Gaussian bounds on the remaining two regions and
+\eqref{asym:far-left} prove \eqref{asym:normalization} by dominated
+convergence.  After normalization the far-left probability is
+$O(L\sqrt\kappa e^{-c_\delta\kappa\delta^2})$.
+For an absolute moment of order $p$, its contribution is at most a
+constant times $(L\sqrt\kappa)^{p+1}e^{-c_\delta\kappa\delta^2}$,
+which tends to zero.  Polynomially weighted Gaussian domination handles
+the other regions and proves all the stated moment limits.
+\end{proof}
+
+\subsection{Cosine profile, fixed-index roots, and the physical jet}
+Define the entire rescaled profile
+\begin{equation}\label{asym:F}
+ F_t(z)=\frac{H(t,z/L)}{H(t,0)}=\mathbb E\cos(zU/L).
+\end{equation}
+Proposition~\ref{asym:concentration} implies
+\begin{equation}\label{asym:cosine-limit}
+ F_t(z)\longrightarrow\cos z
+\end{equation}
+locally uniformly on $\C$, with every fixed derivative.  To check
+complex arguments, on $|z|\le Z$ use the factor $e^{ZU/L}$.
+On the far-left region it is at most $e^Z$; on the right, after the
+change to $w$, its extra factor is $e^{Zw/(L\sqrt\kappa)}$,
+absorbed by the Gaussian bound.  Fixed derivative powers of $U/L$
+are handled the same way.  Thus no oscillatory tail is discarded.
+
+For completeness the real estimates needed below are explicit:
+\begin{align}
+ |F_t(z)-\cos z|&\le\varepsilon_0:=Zm_1/L,\nonumber\\
+ |F_t'(z)+\sin z|&\le\varepsilon_1:=(1+Z)m_1/L,\label{asym:C2-errors}\\
+ |F_t''(z)+\cos z|&\le\varepsilon_2:=(2+Z)m_1/L+m_2/L^2,
+ \qquad |z|\le Z.\nonumber
+\end{align}
+These follow from real sine/cosine Lipschitz bounds and
+$|(U/L)^2-1|\le2|U/L-1|+(U/L-1)^2$.
+They are finite inequalities involving complete-source moments;
+\eqref{asym:moments} does not supply a certified numerical onset time.
+
+\begin{corollary}[Fixed positive indices]\label{asym:fixed-roots}
+For each fixed $k\ge1$, the $k$th positive real zero exists and is simple
+for all sufficiently large $t$, and
+\begin{equation}\label{asym:root-limit}
+ L_t x_k(t)\longrightarrow(k-\tfrac12)\pi.
+\end{equation}
+\end{corollary}
+\begin{proof}
+Choose disjoint small real neighborhoods of the first finitely many
+positive cosine zeros.  Uniform convergence gives opposite signs at
+each pair of endpoints; uniform derivative convergence gives a fixed
+nonzero derivative sign inside each neighborhood.  There is exactly
+one simple zero in each.  On the compact intervening intervals,
+including a neighborhood of zero, uniform convergence excludes further
+zeros.  These are therefore the first positive zeros in their stated
+order.  No assumption about all the other complex zeros is used.
+\end{proof}
+
+For globally continued adjacent walls identified with fixed indices
+$k,k+1$, this yields separation $\pi/L_t+o(L_t^{-1})$.
+Their identification is an additional continuation premise.
+Equation~\eqref{asym:root-limit} proves convergence of locations to zero,
+not eventual monotonic root motion or a finite collision.
+The distinction between two jet scales is essential:
+\begin{align}
+ F_t+\ii F_t'&\longrightarrow e^{-\ii z},\label{asym:rescaled-jet}\\
+ P_t(z):=\frac{H(t,z/L)+\ii H_x(t,z/L)}{H(t,0)}
+ &=F_t(z)+\ii L F_t'(z).\label{asym:physical-jet}
+\end{align}
+The second is the physical jet divided by a positive scalar.
+For $M_L(z)=\cos z-\ii L\sin z$, \eqref{asym:C2-errors} gives
+\begin{equation}\label{asym:jet-error}
+ |P_t-M_L|\le\mathcal E:=
+ \sqrt{\varepsilon_0^2+L^2\varepsilon_1^2}
+ =O(\kappa^{-1/2})
+\end{equation}
+on a fixed real compact set.  In particular, uniformly for bounded $w$,
+\begin{equation}\label{asym:interior-profile}
+ P_t(k\pi+w/L)\longrightarrow(-1)^k(1-\ii w).
+\end{equation}
+The $C^2$ estimates also give convergence of its $w$ derivative.
+The limiting phase density is $-1/(1+w^2)$: the physical phase layer
+has width $O(L^{-1})$ in $z$, or $O(L^{-2})$ in the original $x$.
+
+\subsection{Finite phase budgets for the interior and endpoint strips}
+All phase changes in the next proposition are signed net changes.
+They are not automatically bounds for total variation.
+\begin{proposition}[A paid interior half-turn]\label{asym:phase-budget}
+Fix an integer $k$ and $0<\beta<\pi/4$, and suppose
+\[
+ [k\pi-\pi/2-\beta,k\pi+\pi/2+\beta]\subset[-Z,Z],
+ \quad L\ge1,\quad\mathcal E<1,
+ \quad\varepsilon_0<\sin\beta,\quad\varepsilon_1<\cos\beta.
+\]
+There are adjacent simple roots $a_-,a_+$ within $\beta$ of
+$k\pi-\pi/2,k\pi+\pi/2$, respectively.  For
+$0<A/L<\pi/2-\beta$, let $C$ be the net phase decrease of $P_t$
+between $k\pi-A/L$ and $k\pi+A/L$.  Put
+\[
+ r_A=\sqrt{\cos^2(A/L)+L^2\sin^2(A/L)}.
+\]
+Then
+\begin{align}
+ C_0&:=2\arctan[L\tan(A/L)],&
+ |C-C_0|&\le2\arcsin(\mathcal E/r_A),\label{asym:central-bound}\\
+ |\pi-C|&\le2/A+2\arcsin(\mathcal E/r_A).\label{asym:outside-bound}
+\end{align}
+For the two endpoint pieces ending at the cuts
+$k\pi\pm(\pi/2-\beta)$, their combined net phase decrease $S$ obeys
+\begin{equation}\label{asym:endpoint-bound}
+ |S|\le\frac{2\tan\beta}{L}
+       +2\arcsin(\mathcal E/r_\beta),\qquad
+ r_\beta=\sqrt{\sin^2\beta+L^2\cos^2\beta}\ge1.
+\end{equation}
+The denominator $r_\beta$ may be replaced by $L\cos\beta$ only when
+$\mathcal E<L\cos\beta$, so that the resulting arcsine is defined.
+\end{proposition}
+\begin{proof}
+At the ends of each root neighborhood the cosine values have opposite
+signs of magnitude $\sin\beta$.  Inside, its derivative has a fixed
+sign and magnitude at least $\cos\beta$.  The hypotheses and
+\eqref{asym:C2-errors} therefore give one simple actual root in each
+neighborhood.  In between, $|\cos z|\ge\sin\beta$ excludes any
+additional root.  The two roots are adjacent and the selected cuts
+are strictly inside their lobe.  The real component $F_t$ has constant
+nonzero sign there; its endpoint derivatives have opposite signs.
+A continuous half-plane argument therefore gives total cap decrease
+exactly $\pi$.
+
+Since $|M_L|\ge1$, the quotient $P_t/M_L$ stays in the disk centered
+at $1$ with radius $\mathcal E/|M_L|<1$.  Its principal argument defines
+one continuous error function $e(z)$ on the entire interval, with
+$|e(z)|\le\arcsin(\mathcal E/|M_L(z)|)$.  Subtracting its values at
+the two central cuts proves \eqref{asym:central-bound}.  Moreover
+\[
+ \pi-C_0=2\arctan\frac1{L\tan(A/L)}\le2/A,
+\]
+which proves \eqref{asym:outside-bound} using the exact full decrease.
+For the endpoint pieces the model decrease is
+$2\arctan(\tan\beta/L)\le2\tan\beta/L$.
+Each actual root has the same imaginary-axis phase as its corresponding
+model root, by the derivative signs already proved.  Only the two cut
+arguments need perturbation, each with model modulus $r_\beta$.
+This proves \eqref{asym:endpoint-bound}.
+\end{proof}
+
+A sufficient condition to turn these net bounds into positive phase
+mass bounds is
+\begin{equation}\label{asym:monotone-phase}
+ 2\varepsilon_1+\varepsilon_0+\varepsilon_2+
+       \varepsilon_0\varepsilon_2<1.
+\end{equation}
+Indeed direct expansion bounds $F_t'^2-F_tF_t''$ below by one minus
+the left side, and
+\[
+ -\frac{d\arg P_t}{dz}
+ =\frac{L(F_t'^2-F_tF_t'')}{F_t^2+L^2F_t'^2}>0.
+\]
+For fixed $Z$, the moment asymptotics imply this eventually, without
+an effective onset claimed here.  Thus theta's fixed-index large-time
+phase is concentrated at the interior extremum; its fixed-width scaled
+endpoint strips carry vanishing phase.  These statements preserve the
+ordinary half-turn and give no surplus winding.
+
+None of the estimates is asserted uniformly for growing index $k$ or
+growing compact radius $Z$.  Such a regime requires new uniform source
+bounds and wall identification.  A sign at a fixed physical location
+cannot silently be treated as a sign inside the moving fixed-index cap,
+and spatial coalescence as $t\to\infty$ is not a boundary collision at
+any finite time.
+
+
+\section{Concentration, energy and invariant information}
+\label{sec:information}
+\subsection{Changing the derivative scale redistributes phase}
+For a positive constant \(\beta\) on a cap, define
+\[
+ J_\beta=f+\ii\beta f',\qquad
+ -d\arg J_\beta=\frac{\beta[(f')^2-ff'']}
+                     {f^2+\beta^2(f')^2}\,dx.
+\]
+Positive scaling of the imaginary component is a homotopy through
+nonzero jets, preserving winding and the root-endpoint phase increment.
+The simple-root linear model has density
+\(\beta/(d^2+\beta^2)\) and window mass \(\arctan(V/\beta)\).
+For the quadratic, choosing \(\beta=r/2\) removes endpoint concentration
+in the \(z\) coordinate. For the theta saddle cap, \(\beta=1/L_t\)
+gives \(F_t+\ii F_t'\to e^{-\ii z}\), spreading phase across the lobe.
+Time-dependent positive scaling preserves finite contour degree;
+an \(x\)-dependent scaling adds a derivative term to the displayed density.
+Thus concentration describes a representation of the phase. The
+invariant target is the fully accounted surplus \eqref{eq:surplus}.
+
+\subsection{Removing the denominator forgets the cap count}
+For a root-to-root cap, integration by parts gives
+\[
+ \int_u^v Q\,dx=2\int_u^v(f')^2\,dx>0,\qquad
+ \int_u^v\frac{Q}{f^2+(f')^2}\,dx=(N+1)\pi.
+\]
+Positivity of the first integral is compatible with every cap count.
+For odd \(n\), the cap functions \(f_n(x)=-\sin(nx)/n\) on \([0,\pi]\)
+have identical endpoint slopes \((-1,+1)\), identical \(Q\equiv1\)
+and \(\int Q=\pi\), but \(N=n-1\) and \(\int Q/E=n\pi\).
+These isolate lost cap information; they are not ordinary-birth
+heat-flow controls.
+
+\subsection{Other exact simplifications have different targets}
+A nonzero level arc \(H/h_2=e>0\) makes the curved-side phase depend
+only on its endpoints. If that arc and a cap enclose the initial
+event, and the cap has \(N_{\rm level}\) simple interior roots,
+the endpoint terms cancel and the physical winding is
+\(-N_{\rm level}/2\). The original event already requires
+\(N_{\rm level}=2\); an additional event requires \(N_{\rm level}\ge4\).
+This count differs from \(N\) in the root-endpoint cap. Arc continuation,
+its two intended intersections and jet nonvanishing are additional
+premises. See
+\href{../notes/06_HEAT_FLOW_CONTOURS_AND_GAUSSIAN_CAP_ENERGY_20261020.md}{Note 06}
+and \href{../notes/08_LOCALIZED_COMPARATOR_AND_LEVEL_CONTROL_20261020.md}{Note 08}.
+
+For \(G_s(y)=(4\pi s)^{-1/2}e^{-y^2/(4s)}\) and
+\(f(y)=H(T+s,a+y)\), Gaussian convolution gives
+\(\int G_s f^{(j)}=h_j\). The Hermite expansion yields
+\[
+ D_s:=s\int G_s(f')^2-\int G_s f^2
+ =-h_0^2-sh_1^2+
+ \sum_{n\ge3}\frac{n-2}{2}\frac{(2s)^n}{n!}h_n^2.
+\]
+At a multiple zero \(D_s\ge0\); a complete negative estimate would
+exclude that initial event directly. It is a distinct target from an
+extra cap winding. The full derivation and source kernel are in Note 06
+and the preserved earlier draft.
+
+The completed bounded HFCE comparison already excluded one additional
+small box by a direct first-jet bound. Its whole-cap independent-range
+Gaussian estimate failed to obtain a strict negative upper bound.
+A separately fixed localized Laguerre average was proved positive on
+its selected window. These are scoped results, not contrary evidence
+against the exact root-wall identity or a proof of the physical
+Gaussian deficit's sign on the failed-estimator window.
+The authoritative results and receipts are in
+\href{../notes/07_FIXED_GAUSSIAN_COMPARISON_20261020.md}{Note 07},
+Note 08 and the HFCE progress register. Detailed numerical inputs
+remain there and in the archived first manuscript.
+
+\section{An analytical continuation program}
+\label{sec:program}
+The new research question is whether event-conditioned complete theta
+information can force a signed surplus incompatible with an adjacent
+root strip. The fixed-index large-time cosine regime itself gives the
+ordinary half-turn. Its successful nonvanishing approximation cannot
+also be used as a surplus certificate.
+
+The next useful work has four connected parts.
+First, make the source moment and phase-layer estimates effective in a
+declared finite regime, retaining their dependence on time, scaled
+position and root index. Second, establish the actual wall continuation
+and cut placement needed in that regime, without assuming the desired
+cap count or a uniform \(|h_2|\) floor. Third, isolate a complete-source
+signed term that could exceed its endpoint deficits and all remainders.
+An intermediate event-conditioned regime or a justified growing-index
+regime is a possible setting; neither has been established here.
+Fourth, compare any proposed strict margin with the ordinary quadratic,
+atomic and cosine-profile controls before treating it as theta evidence.
+
+Numerics may check a symbolic formula, refine an analytically derived
+constant, or validate a predeclared finite inequality with complete
+errors. They should not select a sign by a broad scan, replace a
+continuation proof, or turn pointwise asymptotics into a uniform estimate.
+A failed estimate is recorded with its information class and remaining
+deficit. No execution of the new program is asserted by writing it.
+
+The task contracts and statuses are separate files:
+\begin{itemize}
+\item
+\href{../research-overview/03_ANALYTICAL_PHASE_SURPLUS_PROGRAM_20261020.md}
+{Analytical phase-surplus program} and its
+\href{../research-progress/03_ANALYTICAL_PHASE_SURPLUS_PROGRESS_20261020.md}
+{matching progress register};
+\item the original BW09 register for the overall later-collision route;
+\item the HFCE register for the completed bounded energy comparisons.
+\end{itemize}
+The user-requested discussion record is
+\href{../brainstorm/01_CAP_AT_INFINITY_20261020.md}{Brainstorm 01}.
+It includes longer bookkeeping details and the precise finite error
+interfaces used here.
+
+\subsection{Control premises and limits of the conclusion}
+The quadratic and positive atomic controls satisfy the generic heat
+and root-wall identities without a later event. The two-event quartic
+has the required extra winding but fails the initial-threshold premise.
+Higher-multiplicity controls require their own initial index.
+The atomic family lacks the unchanged theta source. Euler-factor controls do not have the
+unchanged normalized theta source; their threshold lower bounds are
+not supplied event locations. Weighted-square and finite-prime controls
+fail full reflection, and their local collisions do not supply a finite
+all-real threshold. Reflected and positive-primitive controls lack the
+unchanged normalized theta square expansion. No unsupplied global
+root system is assigned to any of them.
+
+The source-tail comparison behind the large-time cosine limit is itself
+shared by many sources. It is useful asymptotic information, not a
+distinguishing RH sign. The repository's
+\href{../../../../../../../result-summaries/12_collision_controls_and_screening.md}
+{control catalogue}, the
+\href{../../../../../../../result-summaries/README.md}{result index}
+and \href{../../../../../../../avoid/README.md}{patterns to avoid}
+govern this interpretation.
+No strict theta phase surplus, later theta collision, finite-height
+attainment theorem, uniform all-index estimate or global upper-threshold
+improvement is established.
+
+\section*{Acknowledgments and version provenance}
+Edward Baker proposed the expanding heat contour, the cap at infinity,
+and the quantitative phase-concentration questions developed here.
+This revision was drafted for him with substantial assistance from
+OpenAI's gpt-6-astra through Codex at recorded effort ultra on
+20 October 2026. Separate agents of the same model assisted derivation,
+proof checking and internal review; no specialist or cross-model review
+is claimed.
+
+The manuscript is a coherent revision of the earlier consolidation,
+with numerical details routed to their notes and unchanged source records.
+At the user's explicit request, the exact previous TeX source is retained
+as \href{../drafts/20261020_before_phase_concentration.tex}{the earlier draft}.
+This is a specifically requested preservation, not a new series of
+automatic snapshot folders. The concise
+\href{../DRAFT_HISTORY.md}{draft history} identifies the versions and
+their reviews. The repository is
+\url{https://github.com/ebbaker/shifted-zeta-positivity}.
+
+\appendix
+\section{Local collision index and complete finite event count}
+\label{app:index}
+This appendix retains the earlier manuscript's local proof so that
+the collision-counting implication used in the main text remains
+self-contained.
 
 \begin{theorem}[Local collision index]\label{thm:index}
 Let \(H\) be a nontrivial real-analytic solution of \eqref{eq:heat}
@@ -294,1193 +1032,6 @@ A complete upper bound \(W_J<-q_0\) would force a later event.
 An interval excluding every integer instead contradicts a proposed
 winding enclosure itself; adding events does not repair such an interval.
 
-\section{Ordinary-event regularization and the coupled source remainder}
-Assume now \(h_2\ne0\), set \(\tau=t-T,\ y=x-a\), and define
-\begin{equation}
- L(\tau,y)=-h_2\tau+\ii(h_2y-h_3\tau),\qquad Z=J/L.       \label{eq:L}
-\end{equation}
-The real matrix of \(L\) has determinant \(-h_2^2\), so \(L\) vanishes
-only at the origin and has index \(-1\).
-
-\begin{proposition}[Complete coupled Taylor bound]\label{prop:coupled}
-Suppose \(H(T,a)=H_x(T,a)=0\) and \(h_2\ne0\).
-For \(0\le\tau\le R\), define the complete finite moments
-\[
- M_k(T,R)=\int_0^\infty e^{(T+R)u^2}\Phi(u)u^k\max(1,u)\dd u.
-\]
-Then
-\begin{equation}
- |J(T+\tau,a+y)-L(\tau,y)|
- \le \tfrac12(M_4\tau^2+M_2y^2).                      \label{eq:coupled}
-\end{equation}
-Let \(C=\max(M_2,M_4)/2\),
-\(c_L=h_2^2/\sqrt{2h_2^2+h_3^2}\), and
-\(\rho=\sqrt{\tau^2+y^2}\). The quotient extends continuously by
-\(Z(0,0)=1\), and
-\[
- |Z-1|\le C\rho/c_L,\qquad
- \rho\le c_L/(2C)\ \Longrightarrow\ \Rea Z\ge\tfrac12.
-\]
-\end{proposition}
-\begin{proof}
-Use the single complex source kernel
-\[
- K(\tau,y;u)=e^{\tau u^2}
-       \{\cos((a+y)u)-\ii u\sin((a+y)u)\}.
-\]
-The event equations and heat equation imply that \(J-L\) is the integral
-against \(e^{Tu^2}\Phi(u)\) of
-\[
- K(\tau,y)-K(0,0)-\tau K_\tau(0,0)-yK_y(0,0).
-\]
-The cancellation is inside this complete integral.
-Put \(A=\tau u^2,\ B=yu\). The two real coordinates of
-\(\frac{d^2}{ds^2}K(s\tau,sy;u)\), before multiplying the second by
-\(-u\), are \(e^{sA}\) times a rotation of
-\((A^2-B^2,2AB)\). Their norm is
-\(e^{sA}(A^2+B^2)\).
-The factor \(\max(1,u)\) bounds the remaining diagonal map.
-Taylor's integral remainder, integrated against \(1-s\) on \([0,1]\),
-therefore proves \eqref{eq:coupled}.
-The smallest singular value of \(L\)'s matrix is at least its determinant
-magnitude divided by its Frobenius norm, namely \(c_L\).
-Consequently \(|L|\ge c_L\rho\), and the claims follow.
-\end{proof}
-
-For \(T\le1/5,\ R=1\), the moments with weight \(e^{6u^2/5}\)
-are uniform majorants. They are finite definitions, not numerically
-acquired constants in the current record. Separate bounds on the three
-second derivatives would give
-\[
- e_{\mathrm{old}}=\tfrac12(M_4\tau^2+2M_3|\tau y|+M_2y^2).
-\]
-The exact improvement with the same moments is
-\(e_{\mathrm{old}}-e_{\mathrm{new}}=M_3|\tau y|\).
-This is an unsigned remainder improvement. It supplies no phase sign.
-For a positive-source truncation, apply the same vanishing bracket to
-the disjoint omitted-mode and omitted-spatial source regions.
-Its tail payment is
-\(\tfrac12(M_{4,\mathrm{tail}}\tau^2+
-M_{2,\mathrm{tail}}y^2)\); a constant separate tail payment would lose
-the needed apex vanishing.
-
-The quotient need not be differentiable at the apex and need not solve
-the heat equation. Continuity and the nonzero homotopy suffice.
-The patch radius is event-dependent and cannot be made uniform without
-additional curvature information.
-
-\subsection{Two legitimate finite domains}
-One physical domain, with \(e>0\), is
-\[
- \Omega=\{(\tau,y):y^2/k-e<\tau<R\}.
-\]
-The initial event lies in its interior. Its upper cap runs left to right;
-its parabolic boundary runs back from the right endpoint to the left.
-Every cap, wall, endpoint and event must be counted.
-Alternatively use the forward domain
-\[
- D=\{(\tau,y):0<\tau<R,\ y^2<k\tau\}
-\]
-and the continuous quotient \(Z\). Remove a sufficiently small apex
-neighborhood, prove the right-half-plane patch above, and glue it back.
-Assume \(H\) is analytic near the closure and \(J\ne0\) on every
-nonapex part of the boundary. Since the reference \(L\) has no zero away
-from the apex, the complete regularized degree is
-\[
-                         W_Z(D)=-K_{\mathrm{later}}.   \label{eq:regularcount}
-\]
-Thus a negative quotient degree is precisely the additional-event target,
-not a second count of the original collision.
-
-\section{What local data and unsigned bounds cannot force}
-\begin{proposition}[Unsigned-disk obstruction]\label{prop:disk}
-If \(Z\ne0\) on a closed loop and \(|Z-1|\le1\) everywhere, then its
-winding is zero. More generally, constraints consisting only of
-pointwise disks centered at \(1\), together with continuity and
-nonvanishing, cannot force negative winding.
-\end{proposition}
-\begin{proof}
-The closed unit disk centered at \(1\) meets the imaginary axis only at
-zero. Nonvanishing therefore puts the loop in the open right half-plane,
-where an argument is single-valued. For disks of arbitrary nonnegative
-radii, the constant loop \(Z=1\) satisfies every constraint and has
-winding zero.
-\end{proof}
-The last statement is about that information class. It does not assert
-that the constant loop is an admissible theta solution. Nor does it rule
-out signed information correlated with those bounds.
-
-There is also a heat-compatible control matching any prescribed
-\(h_2\ne0,h_3\):
-\begin{equation}
- H_c(\tau,y)=h_2(y^2/2-\tau)+h_3(y^3/6-\tau y).          \label{eq:cubic}
-\end{equation}
-If \(h_3=0\), this is quadratic, with threshold \(0\) and no later event.
-If \(h_3\ne0\), set \(r=h_2/h_3,\ v=y+r\). Then
-\[
- 6H_c/h_3=v^3-3(r^2+2\tau)v+2r^3,
-\]
-whose discriminant is \(108((r^2+2\tau)^3-r^6)\).
-Its sole real vanishing time is \(\tau=0\); it is positive for
-\(\tau>0\). Thus the cubic has actual all-real threshold \(0\), the
-specified ordinary collision, and no later collision.
-Its exact remainder is
-\[
- J_c-L=h_2y^2/2+h_3(y^3/6-\tau y)+\ii h_3y^2/2.
-\]
-Consequently the heat equation and these initial jets cannot force the
-desired sign. This control lacks the complete theta source.
-
-For the quadratic \(H=y^2-2\tau\), the maximum of the exact relative
-remainder on the forward parabola and cap is
-\[
- \max_{\partial D}|Z-1|
-     =\frac{k\sqrt R}{2\sqrt{R+k}}.
-\]
-For example it exceeds \(1\) when
-\(k>2,\ R>4k/(k^2-4)\), yet \(W_Z=0\).
-Leaving the safe unit disk is not itself a winding mechanism.
-Multiplying any of these fields by \(-1\) leaves winding unchanged.
-
-\subsection{What a successful signed estimate must prove}
-Let \(P=L+Q_{N,U}\) be a coupled finite-source proxy. A sufficient
-certificate is
-\[
- W(P/L)=-1,\qquad |J-P|\le B_{\mathrm{total}}<|P|
-\]
-on the entire nonapex boundary, with a separately paid compatible apex
-homotopy. The winding and the strict separation both need certification.
-Division does not create a separation advantage:
-\[
- |Z-P/L|<|P/L|\quad\Longleftrightarrow\quad |J-P|<|P|.
-\]
-The comparison must use the same physical data and complete errors.
-
-Explicit signed coordinates are
-\[
- Z=(A+\ii B)/|L|^2,\quad
- A=-h_2\tau H+(h_2y-h_3\tau)H_x,\quad
- B=(h_3\tau-h_2y)H-h_2\tau H_x.
-\]
-At a simple negative-real-ray crossing \(B=0,A<0\), the contribution to
-winding is \(-\sgn(dB/ds)\), for an oriented boundary parameter \(s\).
-Every crossing, vertex and apex contribution must be controlled.
-For the quadratic \(B=-2y^3\); its only nonapex candidates have
-\(A=4\tau^2>0\), so no negative-ray crossing occurs.
-
-\section{Finite contour controls and complete phase accounting}
-\subsection{An exact rational consumer}
-For a polynomially parametrized boundary cell, write each component of
-the jet in its Bernstein basis on that cell. If all coefficients of one
-component have a common strict sign, the whole cell image and its chord
-lie in the same open half-plane. Replacing that image by its chord is a
-nonzero homotopy. Subdivision yields a rational polygon with the same
-winding.
-
-Choose an integer shear \((X,Y)\mapsto(X,Y-qX)\) avoiding the real axis
-at all polygon vertices. Such a \(q\) exists because only finitely many
-values are forbidden, and the shear preserves orientation.
-For an edge with endpoints of opposite \(Y\)-sign, the real-axis crossing
-coordinate is
-\[
- X_*=\frac{X_0Y_1-X_1Y_0}{Y_1-Y_0}.
-\]
-If \(X_*>0\), count \(\sgn(Y_1-Y_0)\); otherwise count zero.
-The sum is the integer winding. Strict half-plane separation excludes an
-edge through the origin. All operations in these polynomial tests are
-rational. For nonpolynomial fields, an independently proved whole-cell
-error bound is still required.
-
-For a forward contour remove \(\tau<\eta\), with
-\(\eta=b^2/k,\ b=1/32\). For the quadratic, \(|Z-1|\le\rho/2\),
-so this removal has a nonzero quotient filling.
-For the translated two-event quartic below, the local jet is
-\(L=-12\tau+12\ii y\) and \(|J-L|\le59\rho^2\) for \(\rho\le1\).
-At \(k=2,\ \eta=1/2048\), the removed patch has
-\(\rho\le65/2048\), giving
-\[
- |Z-1|\le3835/24576<1.
-\]
-Thus these quotient tests pay their removed apex rather than sampling
-arbitrarily close to a physical boundary zero.
-
-\subsection{Exact control fields}
-Besides the quadratic, use
-\[
- F_0(\tau,y)=y^4-12\tau y^2+12\tau^2.
-\]
-Its jet equations give either \(y=0\) or \(y^2=6\tau\); both force
-\(\tau=0\). Its sole event is order four and has index \(-2\).
-It cannot be passed to the ordinary quotient requiring \(h_2\ne0\).
-
-The two-event control is
-\[
- F_{-3}(s,y)=y^4-12sy^2+12s^2-3.
-\]
-It has exactly two ordinary events, at \((s,y)=(-1/2,0),(1/2,0)\).
-The other critical branch \(y^2=6s\) gives
-\(F_{-3}=-24s^2-3<0\).
-Its squared roots are \(6s\pm\sqrt{24s^2+3}\); all roots are real
-exactly for \(s\ge1/2\). Its first event is therefore not its threshold.
-For the table translate the first event to \(\tau=0\), obtaining
-\[
- H=y^4+6y^2-12\tau y^2+12\tau^2-12\tau .
-\]
-This is a detector control for an actual later event, not a counterexample
-to threshold simplicity.
-
-\begin{center}\small
-\begin{tabular}{llllrr}
-\toprule
-Field & Boundary & \(k,R\) & Separation & Cells & Degree\\
-\midrule
-Quadratic & Physical & \(1,15/4\) & \(1/4\) & 7 & \(-1\)\\
-Quadratic & Physical & \(2,7/4\) & \(1/2\) & 5 & \(-1\)\\
-Quadratic & Physical & \(4,3/4\) & \(1/2\) & 6 & \(-1\)\\
-Quadratic & Forward quotient & \(1,4\) & \(1/1024\) & 4 & \(0\)\\
-Quadratic & Forward quotient & \(2,2\) & \(3/4096\) & 10 & \(0\)\\
-Quadratic & Forward quotient & \(4,1\) & \(1/4096\) & 10 & \(0\)\\
-Order four & Physical & \(4,3/4\) & \(3/4\) & 12 & \(-2\)\\
-Two events & Physical & \(2,7/4\) & \(145/128\) & 12 & \(-2\)\\
-Two events & Forward quotient & \(2,2\) & \(1/524288\) & 7 & \(-1\)\\
-\bottomrule
-\end{tabular}
-\end{center}
-For the physical contours \(e=1/4\) and the cap half-width is \(2\);
-for the forward contours \(e=0\) and the same half-width is \(2\).
-The stated separation is a certified physical-component half-plane
-margin on the truncated cells, not a uniform lower bound on the
-untruncated physical jet at its apex.
-Each row was checked for both signs of the field, giving eighteen
-successful cases. Three deliberate refusals were also checked:
-a physical apex collision, a cap through the later event, and an
-order-four event submitted to the ordinary quotient.
-These tests validate the finite consumer on its controls; their number
-does not provide evidence for the missing theta sign.
-
-\subsection{Why parabolic wall phase cannot be dropped}
-For \(H=y^2-2\tau\) on a physical contour, let
-\[
- B^2=k(R+e),\quad A=B^2-2R,\quad
- \theta=\Arg(A+2\ii B)\in(0,\pi).
-\]
-The parabola and cap contribute respectively
-\[
- I_{\mathrm{parabola}}=-2\theta,\qquad
- I_{\mathrm{cap}}=-2\pi+2\theta.
-\]
-Their sum is always \(-2\pi\). At fixed \(e>0\) and \(R\to\infty\),
-the ordered pair tends to \((-2\pi,0)\) for \(k<2\),
-\((-\pi,-\pi)\) for \(k=2\), and \((0,-2\pi)\) for \(k>2\).
-For \(k<2\), the parabolic wall meets a simple root at
-\(\tau=ke/(2-k)\). The jet remains nonzero there, but its wall phase
-does not disappear. An infinite-cap argument needs a uniform bound on
-every remaining boundary term and has not been supplied.
-
-\section{Heat flow contours and collision-patch splitting}
-\subsection{Diffusive scale without a causal cone}
-An ordinary collision has born real roots
-\begin{equation}
- x_\pm(T+\tau)=a\pm\sqrt{2\tau}
-       +\frac{2h_3}{3h_2}\tau+O(\tau^{3/2}),\qquad \tau>0.
-                                                        \label{eq:roots}
-\end{equation}
-Substitution into the Taylor expansion proves this formula; analytic
-implicit continuation in \(\sqrt{\tau}\) justifies the expansions.
-Before the event the leading pair is complex conjugate.
-The square-root scale is diffusive, so ``heat flow contour'' is useful
-terminology. Zero trajectories are not material paths of heat.
-The Gaussian fundamental solution has nonzero tails at every distance:
-there is no finite propagation cone \cite{nolen}.
-
-For two subdomains separated by a nonzero internal cut, boundary
-integrals add and the cut contributions cancel. A small rounded
-neighborhood of one ordinary collision has winding \(-1\); a
-collision-free remainder has total oriented boundary integral zero.
-Such a remainder may be an annulus. Its outer loop can still have
-winding \(-1\), balanced by the oppositely oriented inner loop.
-Thus ``no collision in the remainder'' does not imply that every loop in
-the remainder has zero phase circulation.
-
-This distinction is visible in the exact quadratic. Take root walls
-\(y=\pm\sqrt{2\tau}\), \(\eta\le\tau\le R\), a cap at \(R\), and a
-lower connector
-\[
- \tau=y^2-\eta,\qquad y:\sqrt{2\eta}\longrightarrow-\sqrt{2\eta}.
-\]
-The connector surrounds the apex and has
-\(H=2\eta-y^2>0\) in its interior.
-The walls have constant phase; the cap contributes \(-\pi\), and the
-connector contributes \(-\pi\). The rounded lens has physical winding
-\(-1\), exactly the original event. The remainder can be collision-free.
-This realizes the proposed triangular split with no contradiction.
-
-\subsection{Root-following walls}
-\begin{lemma}[Cap phase between simple roots]\label{lem:rootcap}
-Let \(f\) have simple endpoint roots and \(N\) simple interior roots on
-\([u,v]\). Then
-\[
-                    \Delta_{u\to v}\arg(f+\ii f')=-(N+1)\pi.
-\]
-\end{lemma}
-\begin{proof}
-On each interval between consecutive roots \(f\) has constant strict
-sign. If positive, the jet stays in the right half-plane, beginning
-at positive imaginary axis and ending at negative imaginary axis.
-Its argument change is \(-\pi\). If negative, multiply by \(-1\);
-the increment is unchanged. Sum over all \(N+1\) intervals.
-No pointwise monotonicity of the phase is needed.
-\end{proof}
-Along a simple root wall \(x=w(t)\),
-\[
-              w'=H_{xx}/H_x,\qquad J=\ii H_x.
-\]
-The phase is constant while simplicity persists.
-Suppose the two born roots continue as compact simple walls to a finite
-cap, and are adjacent at a sufficiently early lower cut.
-If the upper cap has \(N\) interior simple roots, its phase is
-\(-(N+1)\pi\), while the reversed lower cap contributes \(+\pi\).
-Therefore
-\[
- W_J(\hbox{truncated strip})=W_Z(\hbox{paid forward strip})=-N/2.
-\]
-The cap count \(N\) is even; adjoining the original event changes the
-physical degree to \(-1-N/2\). To force a later event one needs \(N\ge2\).
-This is additional information, not a consequence of following the roots.
-Assuming continued adjacency would already set \(N=0\).
-A failed tracker, escape from a chosen chart, or an unproved continuation
-is not a certified collision.
-
-For the two-event quartic, the outer walls are
-\(\pm\sqrt{6s+\sqrt{24s^2+3}}\).
-At \(s=1\) the inner roots are
-\(\pm\sqrt{6-3\sqrt3}\), giving \(N=2\) and quotient degree \(-1\).
-
-\subsection{Nonzero-level contours}
-Let \(F=H/h_2\) near an ordinary event.
-For \(e>0\) small, \(F=e\) has a local connected arc
-\(\tau=y^2/2-e+\text{higher terms}\), since \(F_\tau(0,0)=-1\).
-Suppose an actual such arc and an upper cap form a Jordan contour
-enclosing the event, with exactly the intended two endpoints and
-nonzero boundary jet. Along the arc
-\[
-                 J/h_2=e+\ii F_x,\qquad |J|\ge |h_2|e .
-\]
-Its argument change depends only on its endpoints.
-If the left and right endpoint arguments in the right half-plane are
-\(\theta_-,\theta_+\), and the cap has \(N\) simple interior zeros,
-\eqref{eq:phasezeros} gives
-\[
- I_{\mathrm{cap}}=\theta_+-\theta_- -N\pi,\qquad
- I_{\mathrm{arc}}=\theta_- -\theta_+.
-\]
-Hence the physical degree is \(-N/2\).
-For one initial ordinary event and no other earlier event,
-\[
-                         N=2+2K_{\mathrm{later}}.
-\]
-The ordinary outcome is \(N=2\); the target requires \(N\ge4\).
-Existence, continuation, cap endpoints and the event-dependent separation
-\(|h_2|e\) all remain part of a usable numerical contract.
-A graph \(\tau=\tau(y)\) can fail when \(H_{xx}=0\), without \(H=H_x=0\).
-Failure of that chart is not an event.
-
-More generally, writing \(Q=H_x^2-HH_{xx}\), the phase identities below
-give constant-phase graphs \(x'=Q_x/Q\) where \(Q\ne0\).
-Critical walls \(H_x=0,\ H\ne0\) also have constant phase.
-Neither construction alone supplies a cap surplus.
-
-\section{Other invariants, Laguerre expressions, and energy balances}
-\subsection{Topological information already present in the jet}
-The target of a nonzero jet is \(\C^*\), which retracts to the circle.
-Its loop homotopy class is completely described by winding.
-Passing to the unoriented real line of the jet gives the map
-\(J^2/|J|^2\), of degree \(2W_J\), not new information.
-Zero-crossing counts and root flux are equivalent descriptions under
-their respective continuation hypotheses.
-Embedding into a complex projective target can lose this invariant,
-since \(\pi_1(\mathbb{CP}^1)=0\).
-Spectral flow or an argument-principle contour for complex \(x\) may be
-useful if supplied with a new operator or new complex-plane estimates;
-they are not automatic refinements of this same boundary loop.
-
-\subsection{Signed Laguerre form and localized averaging}
-Direct differentiation gives, for any local argument \(\varphi=\arg J\),
-\begin{equation}
- \varphi_x=-Q/E,\qquad
- \varphi_t=Q_x/E,\qquad Q_x=H_xH_{xx}-HH_{xxx}.          \label{eq:Qphase}
-\end{equation}
-For an even real entire function of order at most one with only real
-zeros and nonzero value at zero, its paired canonical product is a
-locally uniform limit of real-rooted polynomials.
-For each such polynomial,
-\(-(\log|H|)''\ge0\) away from zeros; by limits
-\(Q\ge0\) everywhere.
-The theta family has this growth bound: optimizing
-\(r u+C u^2-c e^{4u}\) in its defining integral gives
-\(\log M_H(r)=O(r\log(2+r)+\log^2(2+r))\).
-Hadamard factorization, evenness and \(\sum r_j^{-2}<\infty\) then
-give the paired product just described.
-Thus a certified later point with \(Q<0\) contradicts later
-all-realness directly. It does not by itself locate a later real
-collision in a prescribed space--time domain.
-
-Near an ordinary event the leading expression is
-\[
- Q=h_2^2(\tau+y^2/2)+o(\tau+y^2),\qquad \tau\ge0.
-\]
-The analytic heat expansion makes the error uniform on a sufficiently
-small forward parabolic neighborhood. Thus \(Q>0\) there away from the
-event. A negative test must reach beyond this local region.
-Moreover,
-\[
-                  Q_t+Q_{xx}=2(H_{xx}^2-H_xH_{xxx}),
-\]
-which introduces the next derivative form rather than a scalar
-maximum-principle closure.
-
-For a nonnegative compactly supported \(C^2\) weight \(\psi\),
-integration by parts yields
-\begin{equation}
- A_\psi:=\int\psi Q
-       =2\int\psi H_x^2-\tfrac12\int\psi''H^2.          \label{eq:localized}
-\end{equation}
-On a finite interval the missing endpoint term is
-\([-\psi HH_x+\frac12\psi'H^2]\).
-When the integrals converge and \(HH_x\) vanishes at both infinite endpoints,
-\(\int Q=2\int H_x^2\ge0\).
-With \(w(u)=e^{tu^2}\Phi(u)\), symmetrization of products gives
-\begin{equation}
- Q(t,x)=\frac14\iint w(u)w(v)
- \big[(u+v)^2\cos(x(u-v))+(u-v)^2\cos(x(u+v))\big]\dd u\dd v.
-                                                        \label{eq:Qkernel}
-\end{equation}
-If the cosine transform of \(\psi\) is nonnegative at every frequency,
-then \(A_\psi\ge0\) for every positive cosine source.
-A centered Gaussian is such a weight. Translating the weight introduces
-an oscillatory factor; it cannot be suppressed.
-A fixed negative average would be a useful sufficient certificate.
-Allowing an unspecified arbitrarily localized weight merely restates
-the existence of a negative point.
-
-\subsection{Energy identities and their limits}
-Put \(A=H_x^2+H_{xx}^2\). The heat equation gives
-\[
-                    E_t+E_{xx}=2A.
-\]
-For moving endpoints \(a(t),b(t)\),
-\[
- \frac{d}{dt}\int_a^bE
-    =-[E_x]_a^b+2\int_a^bA+b'E(b)-a'E(a).
-\]
-The flux and moving-boundary terms are indispensable.
-Along a simple critical branch \(H_x(t,b(t))=0,\ H_{xx}\ne0\),
-\[
- b'=H_{xxx}/H_{xx},\quad
- V(t)=H(t,b(t)),\quad V'=-H_{xx},\quad
- (V^2/2)'=Q(t,b(t)).
-\]
-A fixed curvature sign controls the direction of \(V\) until the branch
-degenerates; global continuation is an extra premise.
-
-For an argument lift on a closed loop of length \(\ell\), Cauchy--Schwarz
-gives
-\[
- 4\pi^2W^2\le\ell\int_0^\ell|\varphi'(s)|^2\dd s.
-\]
-This is an upper bound on \(|W|\), not a lower bound or a sign rule.
-The zero-winding loop \(e^{\ii B\sin(2\pi s/\ell)}\) has arbitrarily
-large angular energy. Conversely sufficiently small physical angular
-energy could exclude an enclosed ordinary event; on a regularized loop
-it only excludes additional charge.
-
-A bulk form of the same degree is obtained from
-\[
- \alpha_\varepsilon=
-  \frac{H\dd H_x-H_x\dd H}{E+\varepsilon^2},\qquad
- d\alpha_\varepsilon=
- -\frac{2\varepsilon^2(H_{xx}^2-H_xH_{xxx})}
-       {(E+\varepsilon^2)^2}\dd t\wedge\dd x .
-\]
-On a nonzero boundary Stokes' theorem and uniform boundary convergence
-give
-\[
- W_J=-\lim_{\varepsilon\downarrow0}\frac1\pi
- \int_\Omega
- \frac{\varepsilon^2(H_{xx}^2-H_xH_{xxx})}
-      {(E+\varepsilon^2)^2}\dd t\dd x .
-\]
-This moves the same integer into a bulk integral. It neither justifies
-a pointwise limit exchange in the interior nor repairs an unpaid apex.
-
-\subsection{Finite zero-interaction energy}
-For a polynomial heat solution with all roots real and simple,
-differentiating \(H(t,x_i(t))=0\) and factoring the polynomial give
-\[
- x_i'=H_{xx}(x_i)/H_x(x_i)
-      =2\sum_{j\ne i}\frac1{x_i-x_j}.
-\]
-For the complete root system define
-\[
- U=-\sum_{i<j}\log|x_i-x_j|.
-\]
-Then \(x'=-2\nabla U\) and
-\[
-                         U'=-2|\nabla U|^2\le0.
-\]
-In a bounded configuration a finite-time collision would make
-\(U\to+\infty\), contradicting its decrease.
-This explains forward repulsion after all roots are real.
-For the infinite theta system one must specify renormalization,
-exterior interactions and moving-cutoff terms. Applying the finite
-formula only to a selected pair discards forces.
-The utility of related energy methods in the lower-bound direction
-\(\Lambda\ge0\) \cite{rodgerstao} does not provide the sought upper bound.
-
-\section{Gaussian cap moments and a sharp energy test}
-\subsection{Adjoint conservation and what heat transports}
-If \(\psi_t=\psi_{xx}\), direct differentiation proves
-\[
- \partial_t(\psi H)+\partial_x(\psi H_x-\psi_xH)=0.
-\]
-For simple moving root boundaries \(a(t),b(t)\), the signed lobe mass
-\(M(t)=\int_a^bH(t,x)\dd x\) satisfies
-\[
-                  M'=H_x(a)-H_x(b).
-\]
-Its magnitude grows in increasing physical \(t\) for a single sign
-lobe, consistently with the reversed heat direction.
-For the local quadratic
-\(H=h_2(y^2/2-\tau)\), it is
-\(-4\sqrt2\,h_2\tau^{3/2}/3\).
-
-For \(s>0\), set
-\[
- G_s(y)=(4\pi s)^{-1/2}e^{-y^2/(4s)},\qquad
- f(y)=H(T+s,a+y),\qquad h_n=\partial_x^nH(T,a).
-\]
-Gaussian convolution multiplies \(\cos(uy)\) by \(e^{-su^2}\).
-The superexponential source justifies Fubini and differentiation, so
-\begin{equation}
- \int_\R G_sf=h_0,\qquad
- \int_\R G_sf'=h_1
-     =\int_\R G_s\frac{y}{2s}f,\qquad
- \int_\R G_sf^{(n)}=h_n.                              \label{eq:capmoments}
-\end{equation}
-Thus a collision gives two exact vanishing moments of the later cap.
-For a continuous nonzero \(f\), those two moments force at least two
-sign changes: no sign change contradicts the mean-zero condition;
-exactly one at \(b\) makes \((y-b)f(y)\) have a constant sign, contradicting
-both moments. This is the initial pair's count, not an extra pair.
-
-The quadratic root wedge \(|y|<\sqrt{2s}\) contains only
-\(\erf(1/\sqrt2)\), about \(68.27\%\), of the Gaussian mass.
-The omitted \(31.73\%\) does not shrink as \(s\downarrow0\).
-For this quadratic the inner signed integral is
-\(-2h_2s\,\phi(1)\), with \(\phi\) the standard normal density, and the
-outer integral is its opposite. Truncating to the root triangle loses
-exactly relevant heat data.
-Level sets of the heat kernel instead give heat-ball sides
-\(y^2=2s\log(A/s)\), \(0<s<A\), in the adjoint parameter \(s=t-T\).
-They are natural mean-value geometries \cite{mccuan}, but are not
-constant-phase walls and do not imply finite propagation.
-
-\subsection{Hermite expansion and the deficit identity}
-\begin{theorem}[Gaussian deficit]\label{thm:deficit}
-For the complete theta family and any \(s>0\), define
-\[
- D_s(T,a)=s\int_\R G_s f'^2-\int_\R G_s f^2 .
-\]
-Then the convergent identity
-\begin{equation}
- D_s=-h_0^2-sh_1^2+
-   \sum_{n\ge3}\frac{n-2}{2}\frac{(2s)^n}{n!}h_n^2       \label{eq:deficit}
-\end{equation}
-holds. At a common zero \(h_0=h_1=0\),
-\begin{equation}
- \int G_sf^2\le s\int G_sf'^2\le2s^2\int G_sf''^2.       \label{eq:poincare}
-\end{equation}
-Equality in the first inequality at a nonzero event is possible only
-for \(f(y)=c(y^2-2s)\).
-\end{theorem}
-\begin{proof}
-Let \(z=y/\sqrt{2s}\), let \(\gamma\) be standard Gaussian measure,
-and let \(\mathrm{He}_n\) be the monic Hermite polynomials defined by
-\(e^{vz-v^2/2}=\sum \mathrm{He}_n(z)v^n/n!\).
-Gaussian integration gives
-\(\int\mathrm{He}_m\mathrm{He}_n\dd\gamma=n!\,\mathbf1_{m=n}\);
-Rodrigues' formula gives the same identity by integration by parts.
-These polynomials are complete in \(L^2(\gamma)\):
-if \(g\) is orthogonal to all of them, then
-\(\int g(z)e^{vz-v^2/2}\dd\gamma(z)\) is entire by
-Cauchy--Schwarz, with all Taylor coefficients zero. Its values at
-imaginary \(v\) show that the Fourier transform of \(g\gamma\) vanishes,
-hence \(g=0\).
-
-Expand \(f(\sqrt{2s}\,z)=\sum c_n\mathrm{He}_n(z)\).
-Integration by parts and \eqref{eq:capmoments} give
-\[
-                    c_n=\frac{(2s)^{n/2}}{n!}h_n.
-\]
-The cap and all its derivatives are bounded, so belong to the needed
-Gaussian Sobolev spaces. Parseval applied also to the derivatives gives
-\[
- \int G_sf^2=\sum n!c_n^2,\quad
- s\int G_sf'^2=\tfrac12\sum n\,n!c_n^2,\quad
- 2s^2\int G_sf''^2=\tfrac12\sum n(n-1)n!c_n^2 .
-\]
-The differences are convergent; subtraction proves
-\eqref{eq:deficit}. At an event \(c_0=c_1=0\), and termwise comparison
-proves \eqref{eq:poincare}. Equality in its first step eliminates every
-coefficient except \(c_2\), giving the stated quadratic.
-\end{proof}
-The same proof applies to polynomial and finite positive atomic controls,
-whose derivatives have adequate Gaussian integrability.
-If \(h_0,\ldots,h_{m-1}\) vanish, it also gives
-\[
-               \int G_sf^2\le(2s/m)\int G_sf'^2.
-\]
-For the nonzero bounded theta cap, the quadratic equality case is
-impossible; thus an event would have \(D_s>0\), without a uniform
-positive margin being supplied.
-
-A complete fixed-scale bound \(D_s\le-\delta<0\) would instead imply
-\[
-                         h_0^2+sh_1^2\ge\delta .
-\]
-It directly excludes the initial event, regardless of its multiplicity.
-It is not a later-collision or negative-winding certificate.
-If \(h_0\ne0\), \(D_s\to-h_0^2\) as \(s\downarrow0\).
-If \(h_0=0,h_1\ne0\), the identity or a Taylor expansion gives
-\(D_s=-sh_1^2+O(s^3)\).
-Thus allowing an unspecified sufficiently small \(s\) merely
-reformulates first-jet nonvanishing. A useful estimate must fix the scale
-and parameter window before acquisition and be compared with a direct
-consumer of the same data.
-
-\subsection{Complete source kernel and exact controls}
-Using
-\(\int G_s\cos(y\omega)\dd y=e^{-s\omega^2}\) and product-to-sum
-identities gives
-\begin{align}
- D_s=\frac12\iint w(u)w(v)\big[&
- (suv-1)e^{-s(u-v)^2}\cos(a(u-v))\nonumber\\
- &-(suv+1)e^{-s(u+v)^2}\cos(a(u+v))\big]\dd u\dd v,
-                                                        \label{eq:Dkernel}\\
- &w(u)=e^{(T+s)u^2}\Phi(u).\nonumber
-\end{align}
-Both terms, including their signs and correlated source data, must be
-retained in a useful estimate.
-For the quadratic control \(D_s=0\).
-For \eqref{eq:cubic}, the only surviving term in \eqref{eq:deficit}
-is \(n=3\), giving \(D_s=2h_3^2s^3/3\).
-
-A bounded positive-source control is
-\[
- H(t,x)=1+e^{t-T_0}\cos x,\qquad T_0>0.
-\]
-It has actual all-real threshold \(T_0\), with ordinary events at
-\((T_0,(2k+1)\pi)\), and simple real zeros at all later times.
-Indeed for \(\cos z=-e^{T_0-t}\), a nonzero imaginary part requires
-\(\sin(\Rea z)=0\) and hence \(|\cos z|\ge1\);
-this is impossible for \(t>T_0\). For \(t<T_0\) there are nonreal
-solutions. At the event centered at \(\pi\), \(f=1-e^s\cos y\) and
-\[
- D_s=1+s\sinh(2s)-\cosh(2s)>0\qquad(s>0).
-\]
-The expression and its first derivative vanish at zero; its second
-derivative is \(4s\sinh(2s)>0\). This is a bounded positive cosine
-source with no forced later event. Its simultaneous periodic events can
-be isolated individually for local contours; it lacks theta's complete
-arithmetic source. Positivity and boundedness alone therefore do not
-supply the contrary deficit sign.
-
-\subsection{Gaussian Bochner identity}
-For \(F(s)=\int G_s(y)E(T+s,a+y)\dd y\), integration by parts and
-\(E_t+E_{xx}=2A\) yield
-\[
- F'(s)=2\int G_sA(T+s,a+y)\dd y,
-\]
-and hence
-\[
- F(s)=E(T,a)+2\int_0^s\int G_rA(T+r,a+y)\dd y\dd r.
-\]
-At a quadratic event both sides after the initial term equal
-\(2h_2^2(s+s^2)\). Subtracting the bulk term merely recovers the
-initial nonnegative first-jet energy. It is an exact accounting identity,
-not an independent sign contradiction.
-
-\section{The bounded theta value certificate}\label{sec:numerical}
-This section reports the completed bounded computation, rather than a
-new acquisition. Its analytic formulas are included to specify exactly
-what the recorded interval output proves.
-
-\begin{proposition}[Recorded computational exclusion]\label{prop:box}
-For the complete \(H\) in \eqref{eq:H}, the recorded outward interval
-calculation gives
-\[
- H(t,x)>4.1345\,10^{-4}G_*
- \quad\hbox{on}\quad
- \mathcal B=[99999/10^6,100001/10^6]\times[1001,1002],
- \qquad G_*=1000^{7/4}e^{-125\pi}>0 .
-\]
-In particular this closed box contains no zero of \(H\), and therefore no
-multiple real zero of any multiplicity.
-\end{proposition}
-The computational premise is the validity of the outward source
-quadratures and interval arithmetic described below. This is not a
-symbolic derivation of the displayed decimal outputs.
-
-\subsection{Complete contour shift before truncation}
-Fix
-\[
- d=\pi/8-4\log(1000)/1000,\quad m=12,\quad U=2,\quad
- t_c=21/200,\quad x_c=1000 .
-\]
-The mode series and reflection identity \eqref{eq:reflection} extend
-normally to \(|\Ima u|<\pi/8\).
-First write the complete even integral on \(\R\), shift it to
-\(\R+\ii d\), and only then split and reflect the negative half.
-Superexponential decay on the shifted strips makes the remote vertical
-sides vanish. This gives
-\begin{equation}
- H(t,z)=\frac{e^{-dz}}2\int_0^\infty
- \left[e^{t(u+\ii d)^2}\Phi(u+\ii d)e^{\ii zu}
-       +e^{t(u-\ii d)^2}\Phi(u-\ii d)e^{-\ii zu}\right]\dd u .
-                                                        \label{eq:shift}
-\end{equation}
-Individual theta modes are not even; their omitted vertical segments
-cannot be discarded by asserting a finite-mode reflection.
-Let \(F(t,z)\) denote \eqref{eq:shift} with \(1\le n<12\) and
-\(0\le u\le2\). It is real on the real axis and satisfies the heat
-equation. With \(v=u+\ii d\), its normalized midpoint derivatives are
-\begin{equation}
- I_j=\frac{\partial_x^jF(t_c,x_c)}{G_*}
- =1000^{9/4}\Rea\int_0^2 e^{t_cv^2+v+\ii x_cu}
- \sum_{n=1}^{11}(2\lambda_n^2e^{8v}-3\lambda_ne^{4v})
- e^{-\lambda_ne^{4v}}(\ii v)^j\dd u .                   \label{eq:Ij}
-\end{equation}
-The inherited acquisition provides dyadic enclosures
-\(I_j\in[a_j-\rho_j,a_j+\rho_j]\), \(0\le j\le50\).
-These input enclosures are recorded in Appendix~\ref{app:cache}.
-
-Let \(c=\cos(4d)\) and \(N_*=1000^{9/4}e^d\). A common normalized
-majorant for derivatives through order \(52\) is
-\begin{equation}
- \mathcal M=N_*\int_0^2\sum_{n=1}^{11}(2\lambda_n^2+3\lambda_n)
- e^{u^2/5+9u-c\lambda_ne^{4u}}[1+(u+d)^{52}]\dd u
- <9.632888121\,10^{10}.                               \label{eq:maj}
-\end{equation}
-This outward bound applies for \(0\le t\le1/5,\ x\ge999\):
-\(N_*=e^{-999d}/G_*\), and the remaining spectral modulus
-\(e^{-dx}\) decreases with \(x\). Thus the extension from an older
-height edge at \(1001\) is analytically justified, not assumed.
-
-\subsection{Taylor and source errors}
-For \(j=0,1\), use
-\[
- P_j(t,x)=\sum_{\ell=0}^{24}\sum_{k=0}^{12}
- \frac{(-1)^k a_{j+\ell+2k}}{\ell!k!}
-          (x-x_c)^\ell(t-t_c)^k.
-\]
-These are component approximants; no identity
-\(P_1=\partial_xP_0\) is assumed.
-On a complete parameter cell put
-\(R_x=\max|x-x_c|,\ \Delta=\max|t-t_c|\).
-Spatial Taylor expansion followed by time expansion using the heat
-equation gives
-\begin{align}
- E_{\mathrm{quad},j}
-  &=\sum_{\ell=0}^{24}\sum_{k=0}^{12}
-       \frac{R_x^\ell\Delta^k}{\ell!k!}\rho_{j+\ell+2k},\\
- E_{\mathrm{Tay}}
-  &=\mathcal M\left(\frac{R_x^{25}}{25!}
-                  +e^{R_x}\frac{\Delta^{13}}{13!}\right).
-                                                        \label{eq:Taylorerr}
-\end{align}
-Here \(R_x\le2,\ \Delta=5001/10^6\).
-The midpoint order is at most \(49\) and the remainder order at most
-\(51\); the supplied \(50\)- and \(52\)-order bounds cover them.
-All Taylor segments have \(x\in[1000,1002]\) and
-\(t\in[99999/10^6,21/200]\).
-
-For explicit complete tails put \(\sigma=\sin(4d)\),
-\(T_{\max}=1/5\), and
-\[
- B=4c\pi m^2-9,\quad
- P_{\mathrm{gap}}=4\sigma\pi m^2-1002-2T_{\max}d,\quad
- r=((m+1)/m)^4e^{-c\pi(2m+1)}.
-\]
-Outward checks give \(B>190.5927,\ P_{\mathrm{gap}}>796.3701\),
-\(r<0.000239\), and \(8c\pi m^2-T_{\max}>398.98\).
-Define
-\[
- S=\frac{(2\pi^2m^4+3\pi m^2)e^{-c\pi m^2}}{1-r},
- \quad Q_j=\sum_{k=0}^j{j\choose k}d^{j-k}k!/B^k .
-\]
-A normalized omitted-mode allowance is
-\begin{equation}
-                  E_{\mathrm{mode},j}=N_*\,2S Q_j/P_{\mathrm{gap}}.
-                                                        \label{eq:modetail}
-\end{equation}
-To verify it, separate a shifted mode into its two monomials.
-Their positive amplitudes have the form
-\(g(u)=\exp(t(u^2-d^2)+bu-c\lambda_ne^{4u})\), \(b=9,5\).
-For \(n\ge m\), the logarithm is concave,
-\(g(u)\le g(0)e^{-Bu}\), and \(g'\le0\).
-The negative phase derivative has magnitude
-\(p(u)=4\sigma\lambda_ne^{4u}-x-2td\ge P_{\mathrm{gap}}>0\)
-and \(p'>0\).
-One integration by parts, including the derivative of
-\((-\!d+\ii u)^j\), bounds the integral by
-\[
- \frac{g(0)d^j}{p(0)}
- +\int_0^\infty
- \left\{\frac{(-g')(u+d)^j+jg(u+d)^{j-1}}p
-                +\frac{g(u+d)^jp'}{p^2}\right\}\dd u .
-\]
-The integrand equals
-\(-[g(u)(u+d)^j/p(u)]'+2jg(u)(u+d)^{j-1}/p(u)\).
-Integrating it and using \(g\le g(0)e^{-Bu}\) gives
-\(2g(0)Q_j/p(0)\).
-The geometric mode sum, the two monomials, and the conjugate halves
-with their factor \(1/2\) give \eqref{eq:modetail}.
-
-For \(n<m\), the retained-source tail beyond \(U\) is bounded using
-\[
- q_{n,j}(u)=(2\lambda_n^2+3\lambda_n)(u+d)^j
-       e^{T_{\max}u^2+9u-c\lambda_ne^{4u}},\quad
- D_{n,j}=4c\lambda_ne^{4U}-9-2T_{\max}U-\frac j{U+d}.
-\]
-For \(j=0,1\), \(D_{n,j}>4121.56\), and the logarithm of \(q_{n,j}\)
-is concave beyond \(U\). Its tangent gives
-\begin{equation}
- E_{\mathrm{source},j}
-      =N_*\sum_{n=1}^{11}\frac{q_{n,j}(U)}{D_{n,j}}.     \label{eq:spatialtail}
-\end{equation}
-The mode tail covers \(n\ge12\) on the whole shifted half-lines;
-the retained-source tail covers \(n<12,u>2\). They are disjoint and
-complete. The full normalized component allowance is
-\[
- E_j=E_{\mathrm{quad},j}+E_{\mathrm{Tay}}+
-                       E_{\mathrm{mode},j}+E_{\mathrm{source},j}.
-\]
-Parameter variation and arithmetic rounding are additionally contained
-in the outward polynomial cell image itself.
-
-\subsection{Recorded whole-cell output and interpretation}
-\begin{center}\small
-\begin{tabular}{lr}
-\toprule
-Complete normalized payment & Uniform upper bound\\
-\midrule
-Taylor remainder & \(2.083822530\,10^{-7}\)\\
-Propagated quadrature radius & \(1.624269\,10^{-12}\)\\
-Omitted-mode tail & \(1.784646\,10^{-12}\)\\
-Retained-source tail & \(4.939296\,10^{-436}\)\\
-Sum, rounded upward from displayed bounds & \(2.083856620\,10^{-7}\)\\
-\bottomrule
-\end{tabular}
-\par\medskip
-\begin{tabular}{lr}
-\toprule
-Closed \(x\)-cell & Lower bound \(H/G_*\)\\
-\midrule
-\([1001,1001.25]\) & \(0.01086203\)\\
-\([1001.25,1001.5]\) & \(0.01153159\)\\
-\([1001.5,1001.75]\) & \(0.00770777\)\\
-\([1001.75,1002]\) & \(0.0004134538\)\\
-\bottomrule
-\end{tabular}
-\end{center}
-Each cell uses the entire closed time interval of \(\mathcal B\).
-The lower bounds already pay every component error, parameter variation,
-and arithmetic rounding. All seams and endpoints are included.
-The separately recorded unrounded maximum added error is
-less than \(2.083856619\,10^{-7}\); summing the outward-rounded rows
-above justifies the slightly looser displayed total.
-Every successful separating coordinate was \(H>0\); this result does
-not need a nonzero derivative.
-
-The 51 midpoint integrals were acquired with 160-bit Arb/Acb, normalized
-absolute tolerance \(10^{-13}\), relative tolerance \(10^{-30}\),
-evaluation limit \(200000\) and depth limit \(30\) per integral.
-The positive-majorant integral used absolute tolerance \(10^{-22}\)
-and relative tolerance \(10^{-25}\) before multiplication by \(N_*\),
-with the same evaluation and depth limits.
-The later wrapper consumed the same dyadic source cache at 192 and
-256 bits, with four predeclared quarter-width cells, added-error cap
-\(10^{-6}\), coordinate floor \(10^{-6}\), and a 300-second run cap.
-There was no new midpoint quadrature, adaptive subdivision or scan.
-Replaying two precisions is not independent source acquisition.
-The own-data control
-\[
- H_c=(x-1001.5)^2-2(t-1/10)
-\]
-has an event on the shared endpoints of two control cells.
-The same strict first-jet consumer correctly refused event exclusion
-on both. Theta error allowances were not assigned to this control.
-
-Proposition~\ref{prop:box} is a direct value exclusion.
-It removes a tiny time slice from the hypothetical event class; it
-supplies no signed theta contour margin, no all-time strip, and no new
-global bound on \(\Lambda\).
-
-\section{A bounded continuation program}
-The next numerical question should be fixed before any acquisition.
-Choose one rational closed parameter rectangle remaining unresolved by
-the existing coverage ledger; the box in Proposition~\ref{prop:box}
-is already excluded. Fix a scale \(s_0>0\), normalization \(A_*>0\),
-complete source domain, precision, cutoffs, allowed subdivisions, and
-work budget. The primary candidate is a complete upper bound for
-\(D_{s_0}/A_*^2\), compared with the strongest applicable direct
-first-jet bound using the same data.
-
-For finite cap integration with approximants \(P_0,P_1\) and complete
-errors \(\varepsilon_0,\varepsilon_1\) on \(|y|\le L\), the product
-payment includes
-\[
- \int_{-L}^L G_s
- [s(2|P_1|\varepsilon_1+\varepsilon_1^2)
-        +2|P_0|\varepsilon_0+\varepsilon_0^2]\dd y .
-\]
-If \(M_j\) bound the complete physical derivatives uniformly, a valid
-Gaussian spatial tail is
-\[
-                  (sM_1^2+M_0^2)\erfc(L/(2\sqrt s)).
-\]
-At high height this crude allowance may dwarf the signal. Its size must
-be assessed before acquiring a cap grid.
-Alternatively use the signed source kernel \eqref{eq:Dkernel}.
-Let \(K_D\) denote one-half of the bracket in \eqref{eq:Dkernel}.
-If \(m_j\) and \(r_j\) are retained and omitted positive source moments,
-\(|K_D|\le1+suv\) gives the complete pair-tail allowance
-\[
-                  2m_0r_0+r_0^2+s(2m_1r_1+r_1^2).
-\]
-Quadrature, rounding and parameter errors still require separate payment.
-Source cutoffs in either variable must cover the entire omitted pair
-region, including the overlap exactly once.
-
-If \(U_D\) is the certified normalized deficit upper bound and
-\(L_{\mathrm{direct}}\) is the strongest same-data lower bound for
-\((h_0^2+s_0h_1^2)/A_*^2\), record
-\[
- L_D=\max(0,-U_D),\qquad
- G_E=L_D-L_{\mathrm{direct}},\qquad \delta_D=-U_D.
-\]
-Only \(\delta_D>0\) certifies exclusion. Record acquisition cost,
-incremental consumer cost, all error terms, and coverage as well as
-the margin. The exact cap moments \eqref{eq:capmoments} belong in the
-direct comparator; they must not be suppressed to manufacture a gain.
-No such fixed window or completed deficit has yet been selected or
-acquired.
-
-Two secondary comparisons remain concrete:
-a fixed nonnegative localized weight in \eqref{eq:localized} outside
-the local positive region, and a proved nonzero-level arc with a complete
-cap count and continuation contract. The former would contradict later
-all-realness if negative; the latter would force a later event only
-with at least four simple cap zeros under its full initial-event
-accounting. Neither conclusion can be substituted for the other.
-
-The new task sequence is: freeze a surviving window and source contract;
-implement one finite consumer with own-data controls; execute one complete
-theta comparison; review its margin or remaining error deficit; decide
-whether another bounded attempt is justified. A failed complete estimate
-is a legitimate scoped outcome. A changed scale, window or statistic
-requires a new recorded contract. Root-interaction energy is deferred
-until a complete or renormalized root system, exterior payments and
-an independently estimable arithmetic statistic are specified.
-Infinite-cap and higher-multiplicity contour work remain conditional
-extensions, not consequences of the present finite tests.
-
-\section*{Acknowledgments and research provenance}
-Edward Baker proposed the expanding-contour, root-triangle splitting,
-and heat flow terminology questions developed here.
-This initial manuscript was drafted for him with substantial assistance
-from OpenAI's gpt-6-astra through Codex, at recorded effort ultra, on
-20 October 2026. Separate agents of the same model assisted derivation,
-source checking and internal review. These statements disclose the
-method of preparation; they do not constitute independent mathematical
-verification.
-
-This single source file consolidates route BW-09 Notes 01--06 and their
-three internal reviews. The repository is
-\url{https://github.com/ebbaker/shifted-zeta-positivity}.
-The route is
-\path{papers/investigations-3/13_contradiction_analysis/04_boundary_winding/threshold_routes/09_expanding_contour_later_collision/}.
-The original research-progress register remains authoritative for
-BW09-00--06. The separate heat-flow-contour and energy program/register
-govern HFCE-00--07; their preparation creates no new quantitative result.
-
-The exact polynomial implementation and receipt are
-\path{numerics/check_expanding_contour_controls.py} and
-\path{numerics/EXPANDING_CONTOUR_CONTROLS_20261020.json} within that route.
-The bounded theta wrapper and receipt are
-\path{numerics/check_bounded_first_jet_extension.py} and
-\path{numerics/BOUNDED_THETA_EVENT_GATE_20261020.json}.
-The inherited source cache and evaluator are in
-\path{papers/investigations-3/11_arithmetic_collision_rigidity/numerics/high_height_consumer/}.
-Source and review hashes are recorded in the route's
-\path{numerics/BW09_SOURCE_VERSIONS_20261020.json} and
-\path{numerics/BW09_REVIEW_RECORD_20261020.json}.
-The numerical source acquisition's original manuscript manifest was
-checked against commit
-\path{ad4783b067548a10b8bfa65de8b4a0a47b1aa924};
-later manuscript edits are not attributed to that acquisition.
-These are provenance pointers, not dependencies needed to read the proofs.
-
-\appendix
-\section{Recorded dyadic source inputs}\label{app:cache}
-% Exact dyadic input appendix for the BW09 manuscript.
-% Prepared for Edward Baker, 20 October 2026, with substantial LLM assistance.
-% Model: gpt-6-astra; reasoning effort: ultra.
-% Requires the standard longtable package. Paste into the single TeX source;
-% this file does not load external data or perform quadrature.
-
-This appendix supplies all numerical inputs to the cached-moment
-calculation. No decimal conversion or rounding of these inputs is used.
-Set
-\[
- d=\frac\pi8-\frac{4\log1000}{1000},\qquad
- t_c=\frac{21}{200},\qquad x_c=1000,\qquad
- \lambda_n=\pi n^2,\qquad v=u+id.
-\]
-The exact normalized finite-source midpoint derivatives are
-\[
- I_j=1000^{9/4}\Re\int_0^2
- e^{t_cv^2+v+ix_cu}
- \sum_{n=1}^{11}
- (2\lambda_n^2e^{8v}-3\lambda_ne^{4v})
- e^{-\lambda_ne^{4v}}(iv)^j\,du.
-\]
-For each row of Table~\ref{tab:exact-source-input}, define
-\[
- a_j=M_j2^{e_j},\qquad \rho_j=R_j2^{f_j}.
-\]
-The recorded outward quadrature assertion is
-\[
-                  I_j\in[a_j-\rho_j,a_j+\rho_j].
-\]
-The integers in the table are exact, including their signs. These are
-160-bit source-acquisition enclosures; the subsequent 192-bit and
-256-bit calculations reuse them without a new source acquisition.
-The full list is given even though the bounded first-jet calculation
-uses midpoint orders only through 49.
-
-\begingroup
-\scriptsize
-\setlength{\tabcolsep}{3pt}
-\begin{longtable}{r r r r r}
-\caption{Exact dyadic midpoint and outward radius inputs.}
-\label{tab:exact-source-input}\\
-\hline
-$j$ & $M_j$ & $e_j$ & $R_j$ & $f_j$\\
-\hline
-\endfirsthead
-\multicolumn{5}{c}{\tablename\ \thetable\ (continued)}\\
-\hline
-$j$ & $M_j$ & $e_j$ & $R_j$ & $f_j$\\
-\hline
-\endhead
-\hline
-\multicolumn{5}{r}{Continued on next page}\\
-\endfoot
-\hline
-\endlastfoot
-0 & $-2263280269527565583007310275609432546331$ & $-135$ & $74212685$ & $-68$\\
-1 & $187832141538870642634947848533804698138243$ & $-140$ & $110912977$ & $-69$\\
-2 & $-68893550982494433405310433485739956939145$ & $-139$ & $613023105$ & $-71$\\
-3 & $-398277603527930391830317925732144363527695$ & $-142$ & $251761319$ & $-70$\\
-4 & $564082041797174262840121240162579156049131$ & $-141$ & $867249587$ & $-72$\\
-5 & $-269447328700839526742101136483289565612025$ & $-141$ & $105910549$ & $-69$\\
-6 & $-15396173261250504484832457636419584354098975$ & $-146$ & $551271437$ & $-72$\\
-7 & $5895057015331406362244984468400152551040243$ & $-144$ & $95734937$ & $-69$\\
-8 & $2109052848845200373147347007182981674093111$ & $-147$ & $934521689$ & $-72$\\
-9 & $-63017518909490100866342084320844772236912371$ & $-147$ & $149189715$ & $-70$\\
-10 & $11555774258321812674765839836042531484814991$ & $-145$ & $343063759$ & $-71$\\
-11 & $11863258265468410131672668277813090377372269$ & $-145$ & $909851617$ & $-72$\\
-12 & $-6124381681882501584912557284779999482074785$ & $-143$ & $693768569$ & $-72$\\
-13 & $6175802700037614377584035864269358637720361$ & $-146$ & $514890109$ & $-71$\\
-14 & $121448774021615353919706697833653958781231793$ & $-147$ & $127910091$ & $-70$\\
-15 & $-110289578018384014547092804763233154419387595$ & $-147$ & $409912679$ & $-71$\\
-16 & $-38862017812304035508391827356220322515980089$ & $-146$ & $927491085$ & $-72$\\
-17 & $208118134565350579078023333997706081953035023$ & $-147$ & $504963671$ & $-72$\\
-18 & $-56442462153430579955744620158491913724207569$ & $-147$ & $538391651$ & $-72$\\
-19 & $-236010837405680444817311510368118666359425003$ & $-147$ & $131705037$ & $-70$\\
-20 & $516565362574343969836451209057775785294912259$ & $-148$ & $578260685$ & $-72$\\
-21 & $58760748504147526860067006723590484443002087$ & $-146$ & $39704377$ & $-68$\\
-22 & $-28023062719467418591630986900448942452015062499$ & $-153$ & $692402693$ & $-72$\\
-23 & $11543574767945077371673209606637445354166134167$ & $-153$ & $691564629$ & $-71$\\
-24 & $28726620703596258282889747207215395599576049051$ & $-153$ & $510789769$ & $-71$\\
-25 & $-18838482150507745117572142517625799607543454437$ & $-152$ & $907691401$ & $-72$\\
-26 & $-9498833458096821636835979843025455116664856693$ & $-153$ & $536872561$ & $-72$\\
-27 & $57900498313234543362401614019035041822054776505$ & $-153$ & $139491039$ & $-70$\\
-28 & $-15941746186568209379734775010149494007433523521$ & $-152$ & $414118523$ & $-71$\\
-29 & $-106242768322891097897297904820793144773794077481$ & $-154$ & $248465829$ & $-71$\\
-30 & $41836570674964100729207930770647179613059614307$ & $-152$ & $156473249$ & $-70$\\
-31 & $3421780527464540463252449497146518674286034297$ & $-152$ & $414325601$ & $-71$\\
-32 & $-117450469900320997820779876468190710238103336031$ & $-153$ & $814687953$ & $-73$\\
-33 & $20280380232682174927557859457428423396678891641$ & $-151$ & $571514109$ & $-72$\\
-34 & $5941863038151970310378250792377969692120136563$ & $-149$ & $792149687$ & $-72$\\
-35 & $-5678131967318140589304799714236950560101595787$ & $-148$ & $1053547513$ & $-73$\\
-36 & $6056040011163460981476539139403998462927052635$ & $-152$ & $518106823$ & $-72$\\
-37 & $117024517764362505680923289950802168881975707927$ & $-152$ & $329246989$ & $-71$\\
-38 & $-48915829037666160527578506370698914573710499765$ & $-151$ & $634139765$ & $-72$\\
-39 & $-163373710127647955370684856774196803625477365171$ & $-153$ & $185287249$ & $-70$\\
-40 & $193492841869406967467357274736393108863731624355$ & $-152$ & $178607443$ & $-70$\\
-41 & $-4850929722613871538595456957093956175949863165$ & $-149$ & $382481281$ & $-72$\\
-42 & $-458309421882426708105541672934292862166982855949$ & $-153$ & $783305959$ & $-72$\\
-43 & $28389340874355542127743407112124532591283914261$ & $-149$ & $185945327$ & $-72$\\
-44 & $33214113921837982514899153774335369092695146723$ & $-150$ & $98831371$ & $-71$\\
-45 & $-101272028942888213736150211654648027787665944961$ & $-150$ & $958122709$ & $-73$\\
-46 & $65824704990555898454586870951875742050719048943$ & $-151$ & $738271163$ & $-72$\\
-47 & $881727227277302018364380524409840958455155380585$ & $-153$ & $536951715$ & $-72$\\
-48 & $-256016810219695535914779348969100370426413338365$ & $-151$ & $65699813$ & $-68$\\
-49 & $-49659983180536780087676357917081185661747734835$ & $-150$ & $360719697$ & $-71$\\
-50 & $208761838356981971367983994154359466972610209763$ & $-150$ & $173383791$ & $-70$\\
-\end{longtable}
-\endgroup
-
-The positive normalized common derivative majorant is
-\[
- \mathcal M=1000^{9/4}e^d\int_0^2
- \sum_{n=1}^{11}(2\lambda_n^2+3\lambda_n)
- e^{u^2/5+9u-c\lambda_ne^{4u}}
- [1+(u+d)^{52}]\,du,\qquad c=\cos(4d).
-\]
-Its recorded exact outward upper endpoint is
-\[
- \mathcal M\le
- 1024344365611329142069049401581335946080705817735\,2^{-123}
- <96328881210.
-\]
-Only an upper enclosure of this positive integral is required by the
-Taylor remainder argument. This is the same exact dyadic majorant used
-in both arithmetic replays; no display-rounding allowance is added or
-removed.
-
-The entries above were transcribed exactly from the pinned acquisition
-cache. Its SHA-256 is
-\begin{center}
-\footnotesize\ttfamily
-c5598f9dfcc9ba0601b85989703a1e945db54beaf91396258e9758a8a9f3604f
-\end{center}
-The source file is
-\texttt{high\_height\_consumer/SETUP.json} in the accompanying numerical
-artifacts. The transcribed row count, order, signed midpoint mantissas,
-midpoint exponents, radius mantissas and radius exponents were all
-checked for exact agreement with that cache. The cache's source and
-historical manuscript pins are described in the provenance discussion.
-
-This appendix removes the external cache as a source of missing
-numerical inputs for the finite polynomial calculation. It does not,
-by itself, prove the quadrature enclosure assertions: those assertions
-are the results of the stated outward interval acquisition. Independent
-verification can reacquire the explicitly defined integrals with
-rigorous quadrature, then run the stated finite-error and cell algorithm.
-A hash establishes data identity, not an integral inequality.
 
 
 \begin{thebibliography}{9}
@@ -1497,13 +1048,6 @@ Proceedings of the American Mathematical Society \textbf{61} (1976),
 B.~Rodgers and T.~Tao, \emph{The de Bruijn--Newman constant is non-negative},
 Forum of Mathematics, Pi \textbf{8} (2020), e6.
 \url{https://doi.org/10.1017/fmp.2020.6}.
-\bibitem{nolen}
-J.~Nolen, \emph{Partial Differential Equations and Diffusion Processes},
-Stanford lecture notes, section on instantaneous heat propagation.
-\url{https://math.stanford.edu/~ryzhik/STANFORD/STANF227-11/notes227-09.pdf}.
-\bibitem{mccuan}
-J.~McCuan, \emph{The Heat Equation: The Fundamental Solution and
-Mean Value Property}, 19 April 2021.
-\url{https://mccuan.math.gatech.edu/courses/6702/heateqn.pdf}.
 \end{thebibliography}
 \end{document}
+

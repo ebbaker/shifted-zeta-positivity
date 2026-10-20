@@ -7,7 +7,9 @@ verified from recorded parent-turn metadata. No specialist review.
 
 **Current state: the first finite execution round is reviewed.** A complete
 contour consumer, coupled source remainder, precise unsigned-estimator
-obstruction and root-wall cap identity are recorded. One small theta event box is newly excluded by a complete direct value bound.
+obstruction and root-wall cap identity are recorded. Two small theta event boxes are now excluded by complete direct value
+bounds: the original near t=.1 and the HFCE continuation near t=.11.
+The latter uses existing source data; neither is a signed winding gain.
 The requested signed theta estimate forcing a later collision remains
 **open**. Bounded completion does not close BW09 or the global threshold
 problem.
@@ -27,7 +29,7 @@ govern interpretation.
 | BW09-02 | Complete contour consumer and controls | Restricted result | [Note 02][n2] and [receipt][control-record]: full-boundary Bernstein/chord homotopy, 18 exact polynomial cases and three refusals; applicable nonpolynomial controls screened analytically with their own premises. |
 | BW09-03 | One bounded complete theta estimate and matched comparison | Restricted event exclusion; signed goal open | Unsigned-centered-disk attempt is closed by [Note 01][n1]. [Note 04][n4] certifies H>0 on T=[.099999,.100001], a=[1001,1002], using four fixed cells. The signed full-contour theta estimate is unfulfilled; no theta winding gain assigned. |
 | BW09-04 | Assessment and continuation decision | Completed for this bounded round | [Separate same-model review][review] and [review record][review-record]; root-wall alternative assessed in [Note 03][n3]. Stop the failed unsigned information class; retain coefficient-sensitive signed estimation as the open next task. |
-| BW09-05 | Infinite-cap extension | Deferred | No uniform asymptotic source estimate or useful signed finite-contour estimate has activated it. |
+| BW09-05 | Infinite-cap extension | Deferred — analytical asymptotic assessed | [Brainstorm 01](../brainstorm/01_CAP_AT_INFINITY_20261020.md) derives the fixed-index large-time cosine profile and quantitative phase-layer bounds. No global selected-wall continuation, uniform growing-index estimate, or signed excess activates the extension. |
 | BW09-06 | Multiplicity extension and broader coverage | Deferred | No signed estimate exists to extend; finite physical multiplicities are accounted for in controls only. The independent first-jet subcase excludes all multiplicities in its tiny box without extending any signed multiplicity theorem. |
 
 ## Execution results
@@ -86,6 +88,36 @@ source information or error control.
 
 **BW09-04 heat-flow-contour follow-up, 20 October.** [Note 06][n6], with [separate same-model mathematical review][heat-review], adopts the requested terminology and resolves the collision-patch split. The exact quadratic has cap phase -pi, rounded connector -pi, zero root-wall phase and a degree-zero complement, with no later event. A nonzero H/h2 level arc makes the curved-side phase endpoint-determined, while the full degree is still -Ncap/2. Literal Gaussian heat propagation yields a sharp necessary one-cap energy bound: a double event requires D_s=s integral(G_s Hx^2)-integral(G_s H^2)>=0. A strict negative bound would exclude the initial event directly. The quadratic has D_s=0, the cubic has D_s=2h3^2 s^3/3, and a positive atomic actual-threshold control has D_s>0. Whole-line Gaussian tails and comparison with the same-data direct first-jet consumer remain required. No fixed-s theta margin or additional event exclusion is obtained; BW09 task statuses remain unchanged. The plot is an exact-model illustration only.
 
+**HFCE bounded follow-up, 20 October.** [Note 07](../notes/07_FIXED_GAUSSIAN_COMPARISON_20261020.md)
+records the newly tested direct box [.109999,.110001]×[1001.25,1001.5],
+with H/Gstar>.03375764728 and normalized first-jet energy>.00113957880974.
+Its separately frozen Gaussian cap estimator fails (complete upper
+deficit≈2.227983e-9), with no additional coverage. [Note 08](../notes/08_LOCALIZED_COMPARATOR_AND_LEVEL_CONTROL_20261020.md)
+proves Q/Gstar²>.00168232756063 on the fixed later cap, so its chosen
+nonnegative localized average cannot be negative. Actual level-arc
+controls sharpen the theta continuation gate without satisfying it.
+[Review 05](../reviews/05_HFCE_BOUNDED_ROUND_REVIEW_20261020.md) accepts the
+bounded claims; [the HFCE register](02_HEAT_FLOW_CONTOUR_AND_ENERGY_PROGRESS_20261020.md)
+holds exact task status and receipts. The signed target, infinite-cap
+extension and global threshold remain open. Prepared for Edward Baker
+with substantial LLM assistance, gpt-6-astra, actual effort ultra.
+
+**BW09-05 analytical brainstorm, 20 October.** At the user's request,
+further discussion notes are saved in [brainstorm/](../brainstorm/README.md).
+[Brainstorm 01](../brainstorm/01_CAP_AT_INFINITY_20261020.md) quantifies the
+quadratic cap's endpoint phase: two physical windows of width V leave at
+most 2/V radians outside. A direct complete-source saddle calculation gives
+H(t,z/Lt)/H(t,0) -> cos(z), with Lt ~ log(t)/4, for fixed scaled compact
+sets. Fixed-index roots consequently approach zero; adjacent walls retain
+the ordinary cap phase -pi. The physical theta jet concentrates phase near
+the interior extremum instead, with explicit moment-error interfaces.
+The strict end-plus-middle surplus budget is recorded as an unproved
+theta estimating task, not a new exclusion. Separate agents of the same
+model checked the calculations; model gpt-6-astra, effort ultra, with
+substantial LLM assistance for Edward Baker. No new numerics, quantitative
+threshold bound, or task completion is claimed. Route chat 0002 retains
+its existing registration.
+
 ## Measurements and coverage
 
 | Field | Recorded outcome |
@@ -98,9 +130,9 @@ source information or error control.
 | Full theta boundary separation / phase error | Unavailable on the selected R=1 contour. |
 | Theta U_base, U_new, G, d, delta | Unavailable; an empty event subcase is not assigned a phase advantage. |
 | Analytic same-data disk / cap comparison | Where it applies, U_base=U_new=0, G=d=delta=0 for the regularized target; equality does not contradict the threshold. |
-| New finite exclusion | H/Gstar>0.0004134538 throughout [.099999,.100001]×[1001,1002]; all spatial multiplicities excluded there. This is not an all-time strip. |
+| New finite exclusion | H/Gstar>0.0004134538 throughout [.099999,.100001]×[1001,1002]; additionally H/Gstar>.03375764728 on [.109999,.110001]×[1001.25,1001.5] from HFCE Note 07. All multiplicities excluded in these boxes only; no all-time strip. |
 | Global threshold improvement or later theta collision | None. |
-| Cap at infinity / extended signed multiplicity estimate | Not activated. |
+| Cap at infinity / extended signed multiplicity estimate | Fixed-index asymptotic and phase concentration assessed analytically; signed extension and higher-multiplicity estimate not activated. |
 | Review independence | Separate same-model internal mathematical review and same-code replay; no cross-model, independent implementation, or specialist review. |
 
 ## Next quantitative task
@@ -125,7 +157,7 @@ conditional on the overview's quantitative gates.
 [heat flow contour and Gaussian energy program](../research-overview/02_HEAT_FLOW_CONTOUR_AND_ENERGY_PROGRAM_20261020.md)
 and [matching HFCE progress register](02_HEAT_FLOW_CONTOUR_AND_ENERGY_PROGRESS_20261020.md); HFCE-00 is complete as documentation,
 while new numerical tasks remain unstarted. The
-[initial self-contained manuscript](../manuscript/main.tex) consolidates
+[initial self-contained manuscript](../drafts/20261020_before_phase_concentration.tex) consolidates
 Notes 01–06, supplies standalone proofs and all 51 exact dyadic numerical
 inputs, and retains the limits of the existing tiny-box computation.
 The manuscript has a [separate same-model internal review](../reviews/04_INITIAL_MANUSCRIPT_REVIEW_20261020.md).
@@ -171,3 +203,18 @@ was relocated or duplicated. All files follow [LARGE_FILES][large-files].
 [history]: ../../../chat-histories/0007_2026-10-20T13-09-18Z_summarize-boundary-winding-research.json
 [new-history]: ../chat-histories/0001_2026-10-20T15-02-11Z_continue-expanding-contour-research.json
 [large-files]: ../../../../../../../LARGE_FILES.md
+
+**20 October — phase-concentration manuscript revision.** The
+[current manuscript](../manuscript/main.tex) now organizes the root-wall
+calculation, cap at infinity, quadratic endpoint bounds and theta interior
+phase layer around the missing strict signed surplus. The exact previous
+source is [preserved in drafts](../drafts/20261020_before_phase_concentration.tex)
+at the user's explicit request. [Program 03](../research-overview/03_ANALYTICAL_PHASE_SURPLUS_PROGRAM_20261020.md)
+and its [PSC register](03_ANALYTICAL_PHASE_SURPLUS_PROGRESS_20261020.md)
+prioritize analytical estimates; new PSC estimates remain unexecuted.
+[Review 06](../reviews/06_PHASE_CONCENTRATION_MANUSCRIPT_REVIEW_20261020.md)
+records the separate same-model assessment and finite endpoint-error
+correction. No strict theta surplus, later collision or new numerical
+coverage is asserted. Prepared for Edward Baker with substantial LLM
+assistance, gpt-6-astra, actual effort ultra. Current conversation: route
+chat 0002; earlier chat 0001 retains its identity.

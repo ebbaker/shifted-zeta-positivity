@@ -4,7 +4,15 @@
 substantial LLM assistance. Model **gpt-6-astra (Codex)**, actual reasoning
 effort **ultra**, verified from the parent turn metadata.
 
-**Status: prepared; quantitative execution has not started.** This program
+**Original handoff status: prepared; quantitative execution had not started.**
+**Execution update, 20 October 2026:** one bounded round is now complete;
+[Note 07](../notes/07_FIXED_GAUSSIAN_COMPARISON_20261020.md) records direct
+exclusion and the failed matched Gaussian estimator, and
+[Note 08](../notes/08_LOCALIZED_COMPARATOR_AND_LEVEL_CONTROL_20261020.md)
+records the positive localized comparator and exact level-arc controls.
+The matching progress register holds current measurements and task status.
+The remainder of this overview preserves the original estimating contracts
+and their at-handoff availability statements. This program
 turns the alternatives in [Notes 05][n5] and [06][n6] into bounded estimate
 requests. Its first priority is one fixed-scale Gaussian cap deficit,
 compared with the strongest same-data direct first-jet consumer. The

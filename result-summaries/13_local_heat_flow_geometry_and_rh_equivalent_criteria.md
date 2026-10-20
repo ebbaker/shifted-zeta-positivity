@@ -230,7 +230,7 @@ normalization and reality data retained.
   No later theta event, global threshold improvement or specialist review.
 
 - **BW09 heat flow and energy consolidation (20 October).** The
-  [single-source manuscript](../papers/investigations-3/13_contradiction_analysis/04_boundary_winding/threshold_routes/09_expanding_contour_later_collision/manuscript/main.tex) consolidates
+  [preserved first manuscript](../papers/investigations-3/13_contradiction_analysis/04_boundary_winding/threshold_routes/09_expanding_contour_later_collision/drafts/20261020_before_phase_concentration.tex) consolidates
   the in-note proofs of collision-patch accounting, nonzero-level
   phase cancellation, localized Laguerre identities and the sharp
   Gaussian deficit. Its scope is explicit: “No negative theta quotient
@@ -242,3 +242,34 @@ normalization and reality data retained.
   [internal review](../papers/investigations-3/13_contradiction_analysis/04_boundary_winding/threshold_routes/09_expanding_contour_later_collision/reviews/04_INITIAL_MANUSCRIPT_REVIEW_20261020.md).
   Prepared for Edward Baker with substantial LLM assistance,
   gpt-6-astra, actual effort ultra; no specialist review.
+
+- **HFCE bounded follow-up (20 October).** Prepared for Edward Baker with
+  substantial LLM assistance, **gpt-6-astra, ultra**.
+  **Interval-certified; separate same-model review and same-code replay:**
+  existing source data exclude [.109999,.110001]×[1001.25,1001.5], with
+  normalized first-jet energy >.00113957880974. The fixed Gaussian
+  estimator has complete upper deficit≈2.227983e-9 and gives no exclusion
+  gain. Its source states: “the frozen whole-cap interval rule cannot
+  certify a negative deficit from these ranges.” A separate fixed later
+  cap has Q/Gstar²>.00168232756063, so its nonnegative localized average
+  is positive. These are scoped outcomes, not a global theorem or theta
+  level-contour certificate. [Note 07](../papers/investigations-3/13_contradiction_analysis/04_boundary_winding/threshold_routes/09_expanding_contour_later_collision/notes/07_FIXED_GAUSSIAN_COMPARISON_20261020.md),
+  [Note 08](../papers/investigations-3/13_contradiction_analysis/04_boundary_winding/threshold_routes/09_expanding_contour_later_collision/notes/08_LOCALIZED_COMPARATOR_AND_LEVEL_CONTROL_20261020.md),
+  [review](../papers/investigations-3/13_contradiction_analysis/04_boundary_winding/threshold_routes/09_expanding_contour_later_collision/reviews/05_HFCE_BOUNDED_ROUND_REVIEW_20261020.md).
+  The preceding manuscript-consolidation entry describes the earlier state.
+
+- **BW09 quantitative phase concentration and manuscript revision (20 October).**
+  Prepared for Edward Baker with substantial LLM assistance, **gpt-6-astra,
+  ultra**. **Proved in-note/manuscript; separate same-model review:** exact
+  quadratic endpoint-window masses and tails retain total phase π;
+  the complete theta saddle gives a fixed-index cosine profile and a
+  physical interior phase layer of width O(L_t⁻²). Finite phase-error
+  bounds explicitly pay source moments and root/cut placement. The scope
+  is: “These calculations quantify the phase accounting; they do not supply
+  the missing theta surplus.” The strict surplus is a conditional target,
+  not an achieved sign. No new numerical execution or global wall theorem.
+  [Revised manuscript](../papers/investigations-3/13_contradiction_analysis/04_boundary_winding/threshold_routes/09_expanding_contour_later_collision/manuscript/main.tex),
+  [brainstorm](../papers/investigations-3/13_contradiction_analysis/04_boundary_winding/threshold_routes/09_expanding_contour_later_collision/brainstorm/01_CAP_AT_INFINITY_20261020.md),
+  [Review 06](../papers/investigations-3/13_contradiction_analysis/04_boundary_winding/threshold_routes/09_expanding_contour_later_collision/reviews/06_PHASE_CONCENTRATION_MANUSCRIPT_REVIEW_20261020.md).
+  [Program 03](../papers/investigations-3/13_contradiction_analysis/04_boundary_winding/threshold_routes/09_expanding_contour_later_collision/research-overview/03_ANALYTICAL_PHASE_SURPLUS_PROGRAM_20261020.md)
+  is prepared; its new finite analytical estimates remain unexecuted.

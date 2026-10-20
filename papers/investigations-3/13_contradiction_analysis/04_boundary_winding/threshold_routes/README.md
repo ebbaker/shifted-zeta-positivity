@@ -22,6 +22,7 @@ Execution update, 20 October 2026: prepared for Edward Baker with substantial LL
 | BW-07 | [Reductions from higher multiplicity to double events](07_multiplicity_reduction/README.md) | Is there a reduction of a higher-order theta threshold event that preserves every premise of a usable double-event theorem? |
 | BW-08 | [Deflated threshold jets as inputs to winding contradictions](08_deflated_jet_hierarchy/README.md) | Can all-real threshold constraints on higher jets provide the arithmetic input needed by a local or later winding contradiction? |
 | BW-09 | [Expanding contours and later collisions](09_expanding_contour_later_collision/README.md) | Can a complete expanding-contour estimate force winding below the initial event's contribution, hence a strictly later collision? |
+| BW-10 | [RH implies simple zeros](10_rh_implies_simple_zeros/README.md) | Assuming RH, can exact time-zero arithmetic exclude every multiple zeta zero, directly or by forcing a later collision? |
 
 New route, 20 October 2026: prepared for Edward Baker with substantial
 LLM assistance, **gpt-6-astra (Codex), actual effort max**. BW-09 has a
@@ -61,3 +62,6 @@ estimates and wall-aware root counts are methods within BW-01 and BW-04.
 [first-progress]: ../research-progress/01_THRESHOLD_BOUNDARY_WINDING_PROGRESS_20261019.md
 [next-program]: ../research-overview/03_FOURTH_ORDER_ARITHMETIC_AND_ACTUAL_PROFILE_PROGRAM_20261020.md
 [prior-program]: ../research-overview/02_THRESHOLD_SIGNED_ARITHMETIC_RESEARCH_PROGRAM_20261020.md
+
+New distinct track, 20 October 2026: prepared for Edward Baker with substantial LLM assistance, **gpt-6-astra, actual effort ultra**.
+[BW-10](10_rh_implies_simple_zeros/README.md) investigates the conditional implication RH ⇒ simplicity of every nontrivial zero. Its [opening analysis](10_rh_implies_simple_zeros/brainstorm/01_RH_IMPLIES_SIMPLICITY_20261020.md), [program](10_rh_implies_simple_zeros/research-overview/01_RH_TO_SIMPLICITY_PROGRAM_20261020.md) and [register](10_rh_implies_simple_zeros/research-progress/01_RH_TO_SIMPLICITY_PROGRESS_20261020.md) retain all-multiplicity accounting and exact time-zero controls. No new theta exclusion is proved; the first arithmetic estimate is unexecuted. BW-09 keeps its separate positive-threshold scope.

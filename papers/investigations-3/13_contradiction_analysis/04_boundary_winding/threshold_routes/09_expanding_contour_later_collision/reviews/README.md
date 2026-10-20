@@ -15,3 +15,16 @@ Model **gpt-6-astra (Codex)**, actual effort **ultra**, verified from recorded t
 consolidation, standalone proofs, exact input appendix and honest numerical
 scope. Separate same-model internal review and exact-data audit; no new
 quadrature, independent implementation or specialist review.
+
+[05 — Bounded HFCE round](05_HFCE_BOUNDED_ROUND_REVIEW_20261020.md) reviews
+the direct Bernstein exclusion, complete failed Gaussian estimate, localized
+positive result and exact level controls. Separate same-model mathematical
+review and same-code replay; [version record](../numerics/HFCE_REVIEW_RECORD_20261020.json).
+
+[06 — Phase-concentration manuscript revision](06_PHASE_CONCENTRATION_MANUSCRIPT_REVIEW_20261020.md)
+assesses the root-wall phase budget, complete-source saddle proof, finite
+endpoint/interior estimates, controls and the new analytical program.
+Separate same-model analytical review; the strict theta surplus remains open.
+The [delivery and history verification record](PHASE_REVISION_VERIFICATION_20261020.json)
+identifies the delivered sources, compilation result and verified archive
+snapshot; hashes establish identity, not proof validity.

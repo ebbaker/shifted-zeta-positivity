@@ -15,3 +15,8 @@ The first finite round has separate same-model internal review; no specialist re
 - [06 — Heat flow contours and Gaussian cap energy](06_HEAT_FLOW_CONTOURS_AND_GAUSSIAN_CAP_ENERGY_20261020.md): time direction, exact collision-patch splitting, nonzero level contours and a sharp necessary Gaussian energy bound on one later slice. [Separate same-model review](../reviews/03_HEAT_FLOW_CONTOUR_AND_GAUSSIAN_ENERGY_REVIEW_20261020.md); no theta margin.
 
 [Progress](../research-progress/01_EXPANDING_CONTOUR_PROGRESS_20261020.md) · [Review](../reviews/01_FINITE_CONTOUR_ROUND_REVIEW_20261020.md) · [Route home](../README.md).
+
+- [07 — Fixed Gaussian comparison](07_FIXED_GAUSSIAN_COMPARISON_20261020.md): complete direct exclusion on the frozen t≈.11 box; failed matched whole-cap estimate, complete tails and a scoped estimator stop.
+- [08 — Localized comparator and level controls](08_LOCALIZED_COMPARATOR_AND_LEVEL_CONTROL_20261020.md): positive actual theta Q on one later cap rules out the selected negative average; explicit atomic/quartic level arcs distinguish local continuation from extra cap zeros.
+
+The bounded HFCE continuation has [separate same-model review](../reviews/05_HFCE_BOUNDED_ROUND_REVIEW_20261020.md) and a [current register](../research-progress/02_HEAT_FLOW_CONTOUR_AND_ENERGY_PROGRESS_20261020.md). No new source quadrature or global threshold result.

@@ -214,3 +214,25 @@ most 1 instead forces degree zero. This stops that information class,
 not a nonconstant signed proxy or retained full-source correlations.
 The [separate same-model review](../papers/investigations-3/13_contradiction_analysis/04_boundary_winding/threshold_routes/09_expanding_contour_later_collision/reviews/01_FINITE_CONTOUR_ROUND_REVIEW_20261020.md)
 also keeps the new tiny direct event exclusion separate from any phase gain.
+
+**20 October 2026 — frozen Gaussian cap comparison.** Prepared for Edward
+Baker with substantial LLM assistance, **gpt-6-astra, actual effort ultra**.
+[HFCE Note 07](../papers/investigations-3/13_contradiction_analysis/04_boundary_winding/threshold_routes/09_expanding_contour_later_collision/notes/07_FIXED_GAUSSIAN_COMPARISON_20261020.md)
+records: “Increasing source precision or tightening the already negligible
+exterior tail does not repair this loss of parameter and spatial correlation.”
+Its independent whole-cap value range contains zero, while a correlated
+direct polynomial bound from the same cache already excludes the box.
+Stop that specified range rule; correlated cap integration and other
+acquisition costs remain outside the exclusion.
+[Separate same-model review](../papers/investigations-3/13_contradiction_analysis/04_boundary_winding/threshold_routes/09_expanding_contour_later_collision/reviews/05_HFCE_BOUNDED_ROUND_REVIEW_20261020.md).
+
+**20 October 2026 — endpoint deficits and phase concentration.** Prepared for
+Edward Baker with substantial LLM assistance, **gpt-6-astra, ultra**.
+[BW09 Brainstorm 01](../papers/investigations-3/13_contradiction_analysis/04_boundary_winding/threshold_routes/09_expanding_contour_later_collision/brainstorm/01_CAP_AT_INFINITY_20261020.md)
+records: “Counting its small positive middle phase while dropping the equally
+large endpoint deficits would manufacture a false surplus.” The quadratic
+saturates the signed budget exactly. Theta's fixed-index large-time layer
+instead places the ordinary π near an interior extremum. Neither localization
+nor a nonvanishing approximation to that one-lobe cap supplies extra winding.
+This stops that deduction, not all event-conditioned theta estimates;
+[Review 06](../papers/investigations-3/13_contradiction_analysis/04_boundary_winding/threshold_routes/09_expanding_contour_later_collision/reviews/06_PHASE_CONCENTRATION_MANUSCRIPT_REVIEW_20261020.md).

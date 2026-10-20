@@ -139,6 +139,106 @@ alternative only with a new complete-source estimate of the terminal
 root count and paid continuation of the chosen walls. The parabolic
 signed-proxy estimate in [Note 01][contract] remains a separate option.
 
+## Analytical diagnosis: what the cancellation did not determine
+
+20 October follow-up, prepared for Edward Baker with substantial LLM
+assistance, **gpt-6-astra (Codex), effort ultra**. A separate agent of the
+same model checked the cap and sign calculations. The earlier round review
+predates this appendix; this is an analytical clarification, not a new
+theta bound, milestone, or numerical execution. The [reformulation
+rule][a01], [control screen][screen], and [volume rule][a20] apply.
+
+The cancellation in (2) is genuine. With \(E=H^2+H_x^2\),
+\[
+ d\arg J=
+ \frac{(H_xH_{xx}-HH_{xxx})\,dt+(HH_{xx}-H_x^2)\,dx}{E}.
+\]
+At \(H=0\), the time component by itself is \(H_{xx}/H_x\);
+the moving-wall component is \(-w'\). They cancel because
+\(w'=H_{xx}/H_x\). It is the full tangential phase that vanishes,
+not each component separately. This removes the need to estimate two
+wall integrals, conditional on continuation and simplicity.
+
+The cap still contributes one half-turn for every lobe. For the exact
+quadratic \(H=y^2-2\tau\), its root-to-root cap contributes \(-\pi\)
+at every \(R>0\). A reversed early horizontal cut contributes \(+\pi\),
+so the truncated strip has degree zero. Alternatively the enclosing
+connector \(\tau=y^2-\eta\), traversed from \(+\sqrt{2\eta}\) to
+\(-\sqrt{2\eta}\), has
+\[
+ J=2\eta-y^2+2iy
+\]
+and contributes \(-\pi\) through the right half-plane. The full degree
+is then \(-1\), entirely the original event. Shrinking this connector
+does not shrink its phase contribution. See also [Note 06][n6].
+
+There is a distinct loss when replacing phase by unsigned cap energy.
+For any cap \(f\) in (1), integration by parts and its root endpoints give
+\[
+ \int_u^v Q\,dx=2\int_u^v(f')^2\,dx>0,\qquad
+ \int_u^v\frac{Q}{f^2+(f')^2}\,dx=(N+1)\pi,
+ \qquad Q=(f')^2-ff''.
+\]
+Thus a negative *unweighted* root-to-root Laguerre average is impossible,
+even for a cap containing extra zeros. Positivity of that average gives
+no root surplus. In fact the cap functions
+\[
+ f_n(x)=-\frac{\sin(nx)}n,\quad 0\le x\le\pi,\quad n\ \text{odd},
+\]
+have identical endpoint slopes \((-1,+1)\), identical \(Q\equiv1\)
+and \(\int Q=\pi\), but \(N=n-1\) and \(\int Q/E=n\pi\).
+These are examples of lost cap information, not ordinary-birth controls:
+their elementary heat extensions have fixed simple zeros. Their purpose
+is to isolate precisely what removing the denominator forgets.
+
+An equivalent scalar form of the missing cap information is useful for
+stating the estimating task. Let \(h_2=H_{xx}(T,a)\ne0\). The simple born
+walls inherit slope signs \(-\operatorname{sgn}h_2\) on the left and
+\(+\operatorname{sgn}h_2\) on the right. Hence \(h_2f<0\) immediately
+inside both cap endpoints. An interior point \(b\) satisfying
+\[
+                 h_2 H(T+R,b)>0
+\]
+forces a zero on each side of \(b\), so \(N\ge2\). Conversely any
+positive even number of simple interior roots produces such a subinterval.
+This is equivalent cap-count information under the stated hypotheses,
+not an additional criterion counted as progress. The wall locations
+and continuation remain obligations.
+
+Writing \(h_4=\partial_x^4H(T,a)\), the local calculation points the other way:
+\[
+ h_2H(T+R,a)=-h_2^2R+\tfrac12h_2h_4R^2+O(R^3)<0
+\]
+for sufficiently small \(R>0\). The fixed center lies between the born
+walls for those small times. A sufficiently accurate local quadratic
+approximation therefore confirms the original lobe instead of forcing
+another one.
+
+This is not merely an artifact of an unbounded polynomial. The positive
+atomic cosine family \(H(t,x)=1+e^{t-T_0}\cos x\), centered by
+\(\tau=t-T_0,\ y=x-\pi\), becomes \(1-e^\tau\cos y\). Its actual
+all-real threshold is \(T_0\). The selected walls are
+\[
+ y_\pm(\tau)=\pm\arccos(e^{-\tau}),\qquad \tau>0.
+\]
+They are simple at every positive time and enclose a strictly negative
+lobe with no interior zero; \(h_2=1\) and the scalar cap target fails
+everywhere between them. Other simultaneous threshold events lie outside
+this selected local contour. This control lacks the complete theta
+source and does not share theta's eventual simplicity at the threshold.
+It screens only the generic heat/positive-source/threshold argument.
+The other catalogue controls retain the qualifications already listed
+above; no unsupplied threshold or wall continuation is inferred.
+
+**Diagnosis.** Root following solved a boundary-integration problem.
+It did not solve the signed arithmetic cap estimate. A substantive
+continuation would have to estimate the scalar product above, or the
+full normalized cap integral, from the unchanged theta source with a
+remainder smaller than the proposed strict margin. The recent Gaussian
+deficit comparison is a different direct-exclusion problem; its failed
+whole-cap range estimator is not a failure of identity (2). No such
+theta cap estimate is supplied by this follow-up.
+
 [review]: ../reviews/01_FINITE_CONTOUR_ROUND_REVIEW_20261020.md
 [contract]: 01_FINITE_CONTOUR_AND_SOURCE_CONTRACT_20261020.md
 [controls-note]: 02_EXACT_CONTOUR_CONTROLS_20261020.md
@@ -149,3 +249,6 @@ signed-proxy estimate in [Note 01][contract] remains a separate option.
 [avoid]: ../../../../../../../avoid/README.md
 [a01]: ../../../../../../../avoid/01_restating_the_target.md
 [a07]: ../../../../../../../avoid/07_scoped_exclusions_read_as_universal.md
+
+[n6]: 06_HEAT_FLOW_CONTOURS_AND_GAUSSIAN_CAP_ENERGY_20261020.md
+[a20]: ../../../../../../../avoid/20_volume_without_a_gain.md
