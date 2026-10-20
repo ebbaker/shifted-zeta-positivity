@@ -436,3 +436,21 @@ signed arithmetic. [Review 13](../reviews/13_STRIP_KERNEL_GAP_REPLACEMENT_AND_TH
 checks these extensions and records why the attempted scalar mollifier
 and the checked density estimate add no one-event consequence. The
 RHS-02 signed estimate and all subsequent global gates remain open.
+
+
+## 16. Remote-gap completion and bounded event-conditioned attempts
+
+20 October 2026. Prepared for Edward Baker with substantial LLM assistance,
+**gpt-6-astra, ultra**. [Note 13 §§7–8](../notes/13_CERTIFIED_GAP_SIGNED_POLYNOMIAL_KERNELS_20261020.md)
+uses an independently proved empty interval near ordinate zero. Its
+remote signed multiplier cannot improve the complete envelope of any
+fixed even sinc power at any bandwidth once the event height is sufficiently
+large. Exact signed poles, the full gamma term and all prime powers are
+included. A separate lemma covers target-vanishing remote additions paid
+individually; coherent mixed prime cancellation remains open.
+
+The localized reciprocal-energy and coherent theta-tail attempts did
+not supply an event-conditioned lower bound, and the original primitive
+identity gives exactly the existing contact condition. [Review 14](../reviews/14_REMOTE_GAP_COMPLETE_PAYMENT_AND_EVENT_ATTEMPTS_REVIEW_20261020.md)
+checks these statements without counting another criterion as a result.
+The signed-estimate and strict-surplus gates remain unmet.

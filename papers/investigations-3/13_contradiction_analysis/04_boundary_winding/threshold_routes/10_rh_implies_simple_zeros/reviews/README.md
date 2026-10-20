@@ -74,3 +74,5 @@ Poisson summation, finite zero moves and Fourier support, and the all-mode
 integration-by-parts and completed-zeta exponential bounds. The exact
 scalar mollifier and density theorem supply no one-event gain. Separate
 same-model checks; the signed arithmetic gate remains open.
+
+[14 — Remote-gap complete payment and bounded event attempts](14_REMOTE_GAP_COMPLETE_PAYMENT_AND_EVENT_ATTEMPTS_REVIEW_20261020.md) checks the uniform two-range comparison, elementary independent gap, normalized remote-component payment, localized reciprocal-energy scaling and signed derivative in the coherent theta tail. Separate same-model checks; no positive signed estimate or simplicity theorem.

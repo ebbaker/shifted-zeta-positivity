@@ -353,6 +353,67 @@ in (20) is multiplied by `exp(-2tau gamma^2)>0`. Norm contraction
 supplies no bound for the original unknown energy. This reciprocal-zeta
 energy is not the theta Gaussian deficit of Note 01.
 
+### Localized reciprocal energy: the same pointwise payment remains insufficient
+
+20 October 2026. For Edward Baker with LLM assistance, **gpt-6-astra, ultra**;
+same-model internal cross-check. This is a scoped assessment, not a new criterion.
+
+Assume RH and keep (19)'s `B(z)=1/((z+1/2) zeta(z+1/2))`. Fix a sufficiently large
+ordinate `gamma` with an exact double zero `rho=1/2+i gamma`. Let
+`w>=0` be continuous, compactly supported in a neighborhood containing
+no other zero ordinate, with `w(gamma)>0`. The same Laurent expansion and
+dominated-convergence argument as (20) give
+
+\[
+\lim_{\alpha\downarrow0}\frac{\alpha^3}{2\pi}
+ \int w(t)|B(\alpha/2+it)|^2dt
+ =\frac{8w(\gamma)}{|\rho\zeta''(\rho)|^2}.
+\tag{LE1}
+\]
+
+This is one ordinate; the conjugate pair gives (21)'s factor sixteen.
+
+For a fixed neighborhood `|t-gamma|<=d`, put `V_* = sup V(t)`, with
+`V(t)` defined in [Note 08](08_RECIPROCAL_PRECISION_AND_BANDLIMITED_ARITHMETIC_COSTS_20261020.md)(R1).
+For sufficiently small `alpha`, its (R2), at `h=alpha/2`, is uniformly
+
+\[
+ \log|\zeta(1/2+\alpha/2+it)|^{-1}
+ \le V_*\log(1/\alpha)+O_\gamma(1).
+\tag{LE2}
+\]
+
+Indeed, the remaining terms in that displayed bound are bounded on this
+fixed compact height neighborhood. Thus `|B|<<_gamma alpha^(-V_*)`, and
+`V_*~log(gamma)/(2 log log(gamma))` as gamma increases with fixed d.
+Here gamma is fixed **before** taking `alpha->0`; this is not Note 08's
+coupled microscopic-height limit.
+
+Shrinking the window does not repair the large-height exponent. For
+nonnegative continuous compactly supported `W`, with `W(0)>0`, set
+
+\[
+ E_W(\alpha)=\frac1{2\pi}\int
+ W((t-\gamma)/\alpha)|B(\alpha/2+it)|^2dt.
+\]
+
+Writing `a_2=2/(rho zeta''(rho))`,
+
+\[
+ \alpha^3E_W(\alpha)\longrightarrow
+ \frac{|a_2|^2}{2\pi}\int\frac{W(v)}{(1/4+v^2)^2}dv>0,
+ \qquad E_W(\alpha)\ll_{\gamma,W}\alpha^{1-2V_*}.
+\tag{LE3}
+\]
+
+The paid upper exponent no longer opposes the event when `V_*>=2`.
+Windows narrower than alpha remove the same width factor from the local
+pole contribution and this pointwise allowance. No signed Möbius
+correlation bound or endpoint-coefficient lower bound follows. This
+assesses only (LE2)'s pointwise payment, not all localized-energy methods.
+
+[Continuation review](../reviews/14_REMOTE_GAP_COMPLETE_PAYMENT_AND_EVENT_ATTEMPTS_REVIEW_20261020.md).
+
 ## 4. Disposition for the contour program
 
 The correlation atom `m(m-1)` reweights the same multiplicity whose

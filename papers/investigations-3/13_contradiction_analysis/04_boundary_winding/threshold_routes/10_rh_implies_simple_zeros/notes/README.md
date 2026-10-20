@@ -33,3 +33,5 @@
 Notes [11 §7](11_FULL_ABSOLUTE_PRIME_ENVELOPE_AND_LOGARITHMIC_SPREAD_20261020.md) and [13 §6](13_CERTIFIED_GAP_SIGNED_POLYNOMIAL_KERNELS_20261020.md) now cover strip-analytic noncompact Fourier support and general central-gap sign changes, respectively, with their original completion/arithmetic limits retained.
 
 [Progress](../research-progress/01_RH_TO_SIMPLICITY_PROGRESS_20261020.md) · [Reviews](../reviews/README.md).
+
+**Remote-gap continuation:** [Note 13 §§7–8](13_CERTIFIED_GAP_SIGNED_POLYNOMIAL_KERNELS_20261020.md) compares the full envelope for centered sinc powers at every bandwidth and records the exact limitation on separately paid remote additions. Short assessed attempts were added to [Note 06](06_SIGNED_CORRELATION_RESOLUTION_AND_MOBIUS_ENERGY_20261020.md) and [Note 14 §6](14_EXACT_THETA_MODE_GRAM_CANCELLATION_20261020.md); they supply no event exclusion.

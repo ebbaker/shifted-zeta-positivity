@@ -10,6 +10,8 @@ The [result index](../../../../../../../result-summaries/README.md), [collision 
 
 **Later scope extension (20 October 2026).** Section 6 removes the polynomial-factor assumption for the exact zero-side comparison: all negative intervals must lie in an independently certified central gap. The construction handles non-even kernels and asymmetric gaps, preserves the original Fourier bandwidth when present, and has a strip-analytic version. It still does not transfer prime, gamma or pole budgets. [Separate same-model review](../reviews/13_STRIP_KERNEL_GAP_REPLACEMENT_AND_THETA_GRAM_REVIEW_20261020.md).
 
+**Remote-gap continuation (20 October 2026).** Sections 7–8 treat a different, noncentral empty interval. For every fixed even sinc power, the fully paid remote-gap multiplier cannot improve its centered carrier at any bandwidth once the height is sufficiently large. The gamma and exact signed pole terms are retained. A separate-payment lemma for added remote components has narrower normalization hypotheses; coherent mixed prime cancellation remains open. [Review](../reviews/14_REMOTE_GAP_COMPLETE_PAYMENT_AND_EVENT_ATTEMPTS_REVIEW_20261020.md).
+
 ## 1. The gap is an input, and all other zeros remain
 
 Assume RH, fix a zero ordinate `gamma` of arbitrary multiplicity `m`, and suppose an independent certificate establishes
@@ -284,3 +286,292 @@ The endpoint convention includes noncentral zeros on the gap boundary. Consequen
 This is **zero-sum dominance only**. The mass, prime payment, gamma term and pole terms can change; Note11's budgets are not automatically inherited. Formula (S20) may require Fourier information beyond the original prime samples, so equal arithmetic acquisition cost is not asserted. The finite-zero construction is an analytic existence procedure, not an implemented or complexity-bounded factorization algorithm. Nonnegativity merely at the actual zeros is insufficient for (S17); negative regions in other gaps or infinitely many negative intervals are outside scope. Moving roots in a noncentral gap can increase values between that gap and the origin.
 
 At a control double zero, the central mass in (S21) remains two. These are transformations of test kernels, not changes to the theta source or its arithmetic coefficients. Any use for a changed field requires that field's complete explicit formula; no source receives preservation properties it lacks. No original multiple zero is excluded.
+
+
+## 7. A remote known gap does not improve centered sinc-power carriers
+
+20 October 2026. Prepared for Edward Baker with substantial LLM assistance,
+**gpt-6-astra, reasoning effort ultra**. Continuation of this note;
+same-model internal derivation, no specialist or novelty claim.
+
+**Result.** Fix an integer `q>=2` and a number `g>0`. For all sufficiently
+large `gamma` (depending on `q,g`), uniformly for **every** `delta>0`, let
+
+\[
+ k(x)=\left(\frac{\sin(\pi\delta x)}{\pi\delta x}\right)^{2q},
+ \quad D=\gamma^2-g^2,
+ \quad h(x)=\frac{(x+\gamma)^2-g^2}{D}k(x).
+ \tag{RG1}
+\]
+
+With the same bandwidth `q delta`, the exact gamma term, both signed pole
+terms, and the complete absolute prime payment, the two envelopes satisfy
+
+\[
+                         U(h)\ge U(k).
+ \tag{RG2}
+\]
+
+Thus this remote-gap multiplier provides no complete-envelope gain for
+centered sinc-fourth or sinc-sixth powers, or any other fixed even power
+in this class. This is not an application of the central-gap companion
+theorem: the negative interval here is centered at `-gamma`.
+
+If RH holds and the original zero ordinates have an independently known
+gap `|lambda|<g`, then `h(lambda-gamma)>=0` and `h(0)=1`. It is therefore a
+valid multiplicity majorant at a zero of ordinate `gamma>g`. The comparison
+of its displayed arithmetic envelopes is itself unconditional; RH and the
+known gap enter only this zero-side interpretation. Neither comparison
+excludes a multiple zero.
+
+### Exact terms and arithmetic comparison
+
+Use Fourier convention `phi(v)=integral k(x) exp(-2 pi i x v) dx`. Define
+
+\[
+\begin{split}
+ w(y)&=\Re\psi(1/4+iy/2)-\log\pi,\\
+ G(f)&=\frac1{2\pi}\int_{\mathbb R}f(x)w(\gamma+x)dx,\\
+ P(f)&=f(-\gamma+i/2)+f(-\gamma-i/2),\\
+ C(f)&=\frac1\pi\sum_{n\ge2}\frac{\Lambda(n)}{\sqrt n}
+                 |\widehat f(\log n/(2\pi))|,
+ \qquad U(f)=G(f)+P(f)+C(f).
+\end{split}
+\tag{RG3}
+\]
+
+Both kernels are entire with quadratic or faster decay in each fixed
+horizontal strip: multiplication by the quadratic in (RG1) leaves
+`O(|x|^(2-2q))`. The complete explicit formula therefore applies.
+All prime powers are retained. No pole term is replaced by its modulus
+in the definition of `U`.
+
+The transform `phi` is the convolution of `2q` uniform densities on
+`[-delta/2,delta/2]`. It is nonnegative, even, supported in
+`[-q delta,q delta]`, and `C^2` for `q>=2`. It is log-concave by
+[Prékopa, Theorem 7, pp. 342–343](https://rutcor.rutgers.edu/Prekopa/pdf/SCIENT2.pdf),
+which states that convolution preserves log-concavity; the primary theorem
+and its marginalization proof were inspected. Hence
+`phi phi'' <= (phi')^2` wherever `phi>0`, with continuity at all knots.
+
+The transform of the signed kernel is exactly
+
+\[
+ \widehat h=\phi+i\alpha\phi'-\beta\phi'',
+ \qquad \alpha=\frac{\gamma}{\pi D},\quad
+ \beta=\frac1{4\pi^2D}.
+ \tag{RG4}
+\]
+
+Consequently
+
+\[
+\begin{split}
+ |\widehat h|^2-\phi^2
+ &=\alpha^2(\phi')^2-2\beta\phi\phi''+\beta^2(\phi'')^2\\
+ &\ge(\alpha^2-2\beta)(\phi')^2+\beta^2(\phi'')^2\ge0,
+ \qquad
+ \alpha^2-2\beta=\frac{\gamma^2+g^2}{2\pi^2D^2}>0.
+\end{split}
+\tag{RG5}
+\]
+
+At the support endpoints `phi=phi'=phi''=0`, so this also covers those
+points. Thus `C(h)>=C(k)` exactly. The same transform comparison holds
+for other sufficiently regular, nonnegative log-concave Fourier
+densities, but (RG2)'s fully paid conclusion below is proved for the
+specified sinc-power carriers.
+
+### The complete gamma term increases
+
+The [digamma series, DLMF 5.7.6](https://dlmf.nist.gov/5.7.E6) shows that
+`w` is even and increasing in `|y|`: for `y>0` its derivative is the
+convergent positive series
+
+\[
+ w'(y)=\sum_{j\ge0}
+ \frac{(j+1/4)y/2}{((j+1/4)^2+y^2/4)^2}>0.
+\]
+
+Also `w(gamma)=log(gamma/(2 pi))+o(1)` by the
+[digamma asymptotic, DLMF 5.11.2](https://dlmf.nist.gov/5.11.E2). Pairing
+`x` and `-x` in the exact difference gives
+
+\[
+\begin{split}
+G(h)-G(k)=\frac1{2\pi D}\int_0^\infty k(x)
+\{x^2[w(\gamma+x)+w(\gamma-x)]
+ +2\gamma x[w(\gamma+x)-w(\gamma-x)]\}dx.
+\end{split}
+\tag{RG6}
+\]
+
+The second bracket is nonnegative, since
+`gamma+x>=|gamma-x|`. The first bracket is at least
+`w(gamma)+w(0)`. Writing
+
+\[
+ M_2(k)=\int_{\mathbb R}x^2k(x)dx=m_{2,q}\delta^{-3},
+ \qquad 0<m_{2,q}<\infty,
+\]
+
+we obtain, uniformly in `delta>0`,
+
+\[
+ G(h)-G(k)\ge\frac{M_2(k)}{4\pi D}[w(\gamma)+w(0)]
+ \gg_q\frac{\log\gamma}{\gamma^2\delta^3}>0
+ \tag{RG7}
+\]
+
+for all sufficiently large `gamma` depending on `g`. This is a bound
+on the complete signed gamma integral, including the remote interval;
+no central Taylor expansion or omitted gamma tail is used.
+
+### Exact poles and the two uniform width ranges
+
+At either pole evaluation the multiplier in (RG1) equals
+`-(g^2+1/4)/D`. Therefore
+
+\[
+ P(h)-P(k)=-\frac{\gamma^2+1/4}{D}P(k).
+ \tag{RG8}
+\]
+
+Only a positive `P(k)` can lower the new envelope. For `gamma>=max(2g,1)`
+the coefficient in (RG8) is bounded by an absolute constant. The bounds
+`|sin z|<=exp(|Im z|)` and
+`|sin z/z|<=exp(|Im z|)` give
+
+\[
+ |P(k)|\ll_q e^{q\pi\delta}
+                \min\{1,(\delta\gamma)^{-2q}\}.
+ \tag{RG9}
+\]
+
+For all `0<delta<=delta_0`, where `delta_0` is any fixed number, set
+`v=delta gamma`. Equation (RG7) is at least a constant times
+`gamma log(gamma)/v^3`. If `v<=1`, this exceeds the bounded pole allowance
+in (RG9). If `v>=1`, its ratio to that allowance is at least a constant
+times `gamma log(gamma) v^(2q-3)`, which tends to infinity uniformly.
+Thus the complete gamma increase alone pays any pole decrease in this
+entire bounded-width range, including widths tending to zero arbitrarily
+quickly. Together with (RG5), this proves (RG2) there.
+
+For the remaining large widths, write `B=2 pi q delta`, `r=2q-1` and
+`z=B-u`, where `u=log n`. On the fixed outer shell `1<=z<=2`, once
+`delta` is sufficiently large, the exact outer spline is
+
+\[
+ \phi(u/(2\pi))=c_q\delta^{-2q}z^r,
+ \qquad c_q=\frac1{r!(2\pi)^r}.
+\]
+
+Equations (RG4)–(RG5) give the exact squared modulus ratio
+
+\[
+\frac{|\widehat h(u/(2\pi))|^2}{\phi(u/(2\pi))^2}-1
+ =\frac{2r((r+1)\gamma^2+(r-1)g^2)}{D^2z^2}
+  +\frac{r^2(r-1)^2}{D^2z^4}.
+ \tag{RG10}
+\]
+
+For `1<=z<=2` and sufficiently large `gamma`, this lies between positive
+constant multiples (depending on `q`) of `gamma^-2`. Taking square roots
+therefore yields
+`|hhat|-phi >>_q delta^(-2q) gamma^-2` on that shell. No subtraction of
+two separately approximated prime sums is involved. The prime number
+theorem in its von Mangoldt form ([Tao, Notes 4, Theorem 6](https://terrytao.wordpress.com/2021/02/12/246b-notes-4-the-riemann-zeta-function-and-the-prime-number-theorem/)),
+followed by partial summation, gives
+
+\[
+\sum_{e^{B-2}\le n\le e^{B-1}}\frac{\Lambda(n)}{\sqrt n}
+ \sim2(e^{-1/2}-e^{-1})e^{B/2}.
+\]
+
+Thus there is a fixed `delta_0(q)` beyond which, uniformly in `gamma`,
+
+\[
+ C(h)-C(k)\gg_q
+      \gamma^{-2}\delta^{-2q}e^{q\pi\delta}.
+ \tag{RG11}
+\]
+
+By (RG9), the possible pole loss is at most
+`O_q(gamma^(-2q) delta^(-2q) exp(q pi delta))`. Its ratio to (RG11)
+tends to zero as `gamma` grows, uniformly for `delta>=delta_0` because
+`q>=2`. The gamma difference is already nonnegative by (RG7).
+This proves (RG2) for all remaining widths. Combining the two ranges
+gives one height threshold depending only on fixed `q,g`.
+
+The threshold is not numerically instantiated; this is a proved uniform
+large-height comparison, not an executed finite-height certificate.
+The prime-number-theorem input is the standard unchanged-von-Mangoldt
+asymptotic, not an assumed event-conditioned prime cancellation.
+
+### Scope
+
+This comparison retains an actual signed kernel outside Notes 11's
+globally nonnegative class and Note 13's central-gap companion class.
+It shows precisely why its favorable signed pole factor cannot improve
+these centered carriers after the same arithmetic and completion data
+are paid. The proof does not cover `q` growing with height, a gap `g`
+growing with height, non-even carriers, arbitrary non-log-concave Fourier
+densities, or carriers concentrated near the remote gap. The separate
+remote-carrier calculation must retain its own full completion and
+prime terms. No bound for a retained signed prime sum has been obtained.
+
+The result/avoid indexes and their scoped-exclusion and complete-payment
+rules remain applicable; this is one complete comparison, not a new
+simplicity criterion or an absolute-envelope optimization over all signed
+kernels.
+
+
+## 8. An independent small gap and separately paid remote components
+
+The remote negative interval need not be inferred from the desired simplicity statement. For example, an elementary zero-free segment has g=1/8 in zeta-ordinate units. Euler summation gives
+\[
+\zeta(s)=\frac{s}{s-1}-s\int_1^\infty\{x\}x^{-s-1}\,dx
+\quad(\Re s>0,\ s\ne1).
+\]
+Splitting the remainder at two bounds its absolute integral at Re s=1/2 by
+\[
+\int_1^2(x-1)x^{-3/2}dx+\int_2^\infty x^{-3/2}dx=4\sqrt2-4.
+\]
+Thus for s=1/2+it and |t|<=1/8,
+\[
+\Re\zeta(s)\le-\frac{15}{17}+\frac{\sqrt{17}}8(4\sqrt2-4)<0.
+\tag{RG12}
+\]
+Under RH every nontrivial zero ordinate therefore satisfies |lambda|>g. This small gap is used only to make the negative test interval legitimate; it is not a new high-height exclusion.
+
+For a different carrier let ell>=0 be real and bandlimited, with quartic decay on fixed horizontal strips, and put
+\[
+q_\gamma(x)=D^{-1}[(x+\gamma)^2-g^2]\ell(x+\gamma),
+\qquad
+\mathcal B(v)=-\widehat\ell''(v)/(4\pi^2)-g^2\widehat\ell(v).
+\]
+Then hat q_gamma(v)=D^(-1) exp(2 pi i gamma v) B(v). Its shift cancels the actual-height phase in the signed prime sum. The complete explicit formula, with every multiplicity and prime power retained, is
+\[
+\begin{split}
+D S_\gamma(q_\gamma)
+={}&\sum_\lambda m_\lambda(\lambda^2-g^2)\ell(\lambda)\\
+={}&-(g^2+1/4)[\ell(i/2)+\ell(-i/2)]
+ +\frac1{2\pi}\int_{\mathbb R}(u^2-g^2)\ell(u)w(u)\,du\\
+&-\frac1\pi\Re\sum_{n\ge2}\frac{\Lambda(n)}{\sqrt n}
+          \mathcal B(\log n/(2\pi)).
+\end{split}
+\tag{RG13}
+\]
+Here S_gamma(f)=sum m_lambda f(lambda-gamma), and w is from (RG3). This is a test at ordinate zero, apart from the factor D. Its left side is nonnegative by the known gap, so a negative pole term must be considered together with the rest of this same formula.
+
+There is an exact non-improvement statement for a separately paid addition. Require ell(gamma)=0, so q_gamma(0)=0; such carriers exist, for example a sixth sinc power with delta gamma a nonzero integer. For any a>=0, adding a q_gamma preserves the base kernel's normalization and its nonnegativity at all zero offsets. If its prime contribution receives a separate absolute payment, the added envelope is
+\[
+a\{G(q_\gamma)+P(q_\gamma)+C(q_\gamma)\}
+=a\{S_\gamma(q_\gamma)+Q_\gamma(q_\gamma)+C(q_\gamma)\}\ge0,
+\tag{RG14}
+\]
+because |Q_gamma(q_gamma)|<=C(q_gamma). This argument is independent of a hypothetical multiple zero. It does not apply after taking the coherent modulus C(f+a q_gamma), nor after changing the normalization by using ell(gamma)>0. No general dominance theorem for remote carriers is claimed.
+
+These statements use the genuine zeta completion and weights. A changed-source or Euler control must use its own gap and complete formula; none is assigned the unchanged arithmetic. The normalized source control in Note 05 fails the ordinary Dirichlet-series premise, while Note 09's ordinary-Dirichlet control fails completed reflection and entireness. The general separate-payment statement applies to a control only when its own formula has the same required positivity and payment properties. No control event or original multiple zero is excluded.
+
+[Separate same-model review](../reviews/14_REMOTE_GAP_COMPLETE_PAYMENT_AND_EVENT_ATTEMPTS_REVIEW_20261020.md). The [result index](../../../../../../../result-summaries/README.md) and [avoid index](../../../../../../../avoid/README.md) retain their stated scope and status rules.

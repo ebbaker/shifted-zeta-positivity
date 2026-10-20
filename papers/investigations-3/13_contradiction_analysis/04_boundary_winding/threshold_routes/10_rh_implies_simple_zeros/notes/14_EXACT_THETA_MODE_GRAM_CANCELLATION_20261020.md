@@ -164,3 +164,31 @@ The normalized positive-source control in [Note 05](05_CLOSE_POSITIVE_SOURCES_AN
 The changed-source and Jensen controls in local [Note 05](05_CLOSE_POSITIVE_SOURCES_AND_NORMALIZED_DOUBLE_ZEROS_20261020.md) and [Note 07](07_LOCAL_CORRELATION_AND_JENSEN_MARGIN_COMPARISONS_20261020.md) remain distinct. The direct Riemann–Siegel acquisition analysis in [Note 12](12_FINITE_EVALUATION_AND_ENDPOINT_INVERSE_COSTS_20261020.md) does not split the physical energy into this positive diagonal and independently paid cross terms, and is not restricted by (T14). A useful next signed theorem must retain and control the cancellation itself; merely invoking theta modularity or the positive discrete source again supplies no further estimate.
 
 [Separate same-model review](../reviews/13_STRIP_KERNEL_GAP_REPLACEMENT_AND_THETA_GRAM_REVIEW_20261020.md) · [Progress](../research-progress/01_RH_TO_SIMPLICITY_PROGRESS_20261020.md).
+
+
+## 6. Coherent positive tail: the derivative step remains signed
+
+20 October 2026 continuation, for Edward Baker with substantial LLM assistance, **gpt-6-astra, ultra**. This is a bounded assessment of a coherent comparison, not a new exclusion criterion. Keep T(a)=sum_(n>=2) f_n(a), so F=f_1+T. In fact T(a)>0 for every real a: for n>=2 and s=pi n² exp(4u)>12,
+\[
+\Phi_n''(u)=e^ue^{-s}(32s^4-224s^3+330s^2-75s)>0,
+\]
+and the summable bounds already proved above justify
+\[
+f_n(a)=a^{-2}\int_0^\infty\Phi_n''(u)(1-\cos(au))\,du>0
+\quad(a\ne0).
+\tag{T15}
+\]
+At a=0 the original positive integral applies. At a zero of F, one has f_1=-T<0, and hence exactly
+\[
+\bigl(\log(-f_1)\bigr)'(a)-(\log T)'(a)=-F'(a)/T(a).
+\tag{T16}
+\]
+This identity alone only restates the derivative event. The attempted strict slope ordering does not follow from (T15), since differentiation introduces the factor
+\[
+v\sin v-2(1-\cos v)=-v^4/12+O(v^6),
+\]
+which is negative near zero but positive at v=5pi/2. The complete differentiated integral therefore remains signed. This does not rule out a further estimate using its exact theta weights; none was obtained in this comparison.
+
+RH's product retains the possible residue m in F'/F, and modularity retains the cancellations already quantified in §§1–4. Neither supplies an independent slope separation here. Positive weighted-square source controls screen the general convexity inference but do not acquire the unchanged theta coefficients or an all-real endpoint. Note 05's normalized all-real source control instead fails the ordinary Dirichlet-series premise. These distinct controls are not combined into a counterexample to RH plus unchanged arithmetic.
+
+[Separate same-model continuation review](../reviews/14_REMOTE_GAP_COMPLETE_PAYMENT_AND_EVENT_ATTEMPTS_REVIEW_20261020.md).
