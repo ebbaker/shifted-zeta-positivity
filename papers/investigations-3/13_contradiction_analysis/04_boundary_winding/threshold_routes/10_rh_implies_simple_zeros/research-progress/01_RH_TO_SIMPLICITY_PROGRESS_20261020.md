@@ -5,10 +5,10 @@ substantial LLM assistance. **gpt-6-astra (Codex), reasoning effort ultra**,
 verified from recorded turn metadata. Separate same-model internal review;
 no specialist review.
 
-**State: structural transfer, arithmetic screens, zero-deflation costs
-and a normalized positive-source control completed as bounded attempts.
-These give partial structural results, explicit certification costs,
-scoped estimating failures and a sharper approximation control.
+**State: structural transfer, arithmetic screens, source controls and
+correlation/energy costs assessed as bounded attempts. These give partial
+structural results, explicit certification and resolution costs, scoped
+estimating failures and an approximation control.
 RH ⇒ simplicity remains unproved. No multiple theta zero or new height
 interval has been excluded.** The [program][program] retains its acceptance gates.
 The original scope was selected in [chat 0003][origin]; this round is
@@ -17,11 +17,11 @@ The original scope was selected in [chat 0003][origin]; this round is
 | Task | Current status | Evidence / unresolved requirement |
 | --- | --- | --- |
 | RHS-00 | Complete: scope and literature | [Opening analysis][opening] §§1–2, 9; primary inputs rechecked in [review 02][review]. No methodological priority or relative-difficulty theorem claimed. |
-| RHS-01 | Complete: inherited transfer and control screen; strengthened this round | Opening §§3–6. [Note 01][n1] proves finite root-label continuation under RH, exact endpoint/middle complement, and retained multiplicity phase atom. [Note 05][n5] adds an RH-conditional, uniformly close positive-source control with an exact double event, unchanged leading tail and pole residue one. |
-| RHS-02 | Declared estimators assessed and justified deflation quantified; positive theta-estimate gate remains unmet | Notes 01–03 treat fixed-width, finite-prime and signed-error envelopes, and finite Euler-control rejection. [Note 04][n4] proves exact subtraction costs, a sharp actual-tail asymptotic and the fully optimized rational-power absolute-payment barrier. Note 05 screens one finite horizontal-shift consumer exactly and identifies the normalized source control's failed Dirichlet-series premise. None supplies an opposing estimate at an original multiple zero. |
+| RHS-01 | Complete: inherited transfer and control screen; strengthened through Note 05 | Opening §§3–6. [Note 01][n1] proves finite root-label continuation under RH, exact endpoint/middle complement, and retained multiplicity phase atom. [Note 05][n5] adds an RH-conditional, uniformly close positive-source control with an exact double event, unchanged leading tail and pole residue one. |
+| RHS-02 | Declared estimators and correlation costs assessed; positive theta-estimate gate remains unmet | Notes 01–03 treat fixed-width, finite-prime and signed-error envelopes, and finite Euler-control rejection. [Note 04][n4] proves exact subtraction costs, a sharp actual-tail asymptotic and the fully optimized rational-power absolute-payment barrier. Note 05 screens one finite horizontal-shift consumer exactly and identifies the normalized source control's failed Dirichlet-series premise. [Note 06][n6] proves a sharp full-window correlation resolution cost, the additive-one limit of universal phase positivity, and a local Möbius-energy cost. None supplies an opposing estimate at an original multiple zero. |
 | RHS-03 | Finite-wall subtask proved under RH; strict surplus still gated | Note 01 §2 covers every finite cap and multiplicity. Cap mass remains `(m-1)pi`; the Gaussian sign is event-compatible. Note 04 identifies the exterior inverse-square sum needed for effective deflation, but wall continuation gives no quantitative upper bound for it. |
 | RHS-04 | Coverage audited; no new exclusion | Structural statements cover all finite heights/multiplicities under RH. Arithmetic failure ranges are stated explicitly; no all-height signed estimate or new theta exclusion class exists. |
-| RHS-05 | Reviews of bounded attempts completed; full-argument review remains gated | [Reviews 02–05](../reviews/README.md) check the stated proofs, imports and controls. Review 04 checks uniform optimization and certified subtraction; [review 05][review5] checks source positivity, the whole-tail relative bound, exact residue normalization and the distinct curvature control. Same-model internal validation; no simplicity theorem. |
+| RHS-05 | Reviews of bounded attempts completed; full-argument review remains gated | [Reviews 02–06](../reviews/README.md) check the stated proofs, imports and controls. Review 04 checks uniform optimization and certified subtraction; [review 05][review5] checks source positivity, the whole-tail relative bound, exact residue normalization and the distinct curvature control. [Review 06][review6] checks correlation normalization, clustered configurations, phase minima and local pole/energy constants. Same-model internal validation; no simplicity theorem. |
 
 ## Quantitative outcomes
 
@@ -85,10 +85,32 @@ The original scope was selected in [chat 0003][origin]; this round is
   positive Euler-quotient estimate gives the opposite direction from
   the needed upper bound. No event exclusion follows from either screen.
 
+- For the declared squared-sinc **full-window second moment**, an
+  all-zero certificate requires correlation excess below two. Note 06
+  proves the sharp geometric floor
+  `liminf Delta W/N^(3/2)>=1/2`, where `W` is the window width and
+  `N` counts multiplicities. It also pays projection to an enlarged
+  interval by `N^2/(pi^4 Delta^3 R^3)` without dropping exterior zeros.
+  The floor holds before any arithmetic error and includes clusters;
+  it is not a bound against every localized correlation method.
+- Retaining all inequalities valid for arbitrary unimodular
+  multiplicative prime phases gives exact minimum
+  `mu(V)=-C_V+1+o(1)`. The optimized complete envelope gains only
+  one additive unit over Note 02, retaining leading constant `1/2`.
+  This universal phase class does not include actual-height or
+  multiple-zero conditioning; no bad actual-zero phase is asserted.
+- A zero `rho` of exact multiplicity `m` forces a sharp local weighted
+  Möbius energy of order `alpha^(1-2m)`. For a double,
+  `liminf alpha^3 E(alpha)>=16/|rho zeta''(rho)|^2>0`.
+  The exact ordered Möbius correlation must carry that cost; the
+  checked RH upper bound still permits it. The finite-interval
+  consequence is a limsup, not a lower-liminf theorem. No derivative
+  moment assuming simplicity was used.
+
 The frozen [exact algebra contract][contract] and [replay][replay] passed
 265 rational fixtures. They check finite constants and the control sum,
 not theta zeros or the infinite analytical estimates. It was unchanged
-and not rerun for Notes 04–05, which received analytical cross-checks. No
+and not rerun for Notes 04–06, which received analytical cross-checks. No
 numerical sign scan or manuscript was started. The original BW09, HFCE and PSC registers
 retain their existing states; the earlier manuscript was reviewed but
 not changed.
@@ -122,7 +144,16 @@ normalizations alone. Its normalized control fails the ordinary
 Dirichlet series; the separate strong-curvature control must not be
 given that control's preservation list. An exact theta or discrete
 arithmetic argument must still produce an opposing inequality.
-Signed frequency correlations using unchanged prime support, correlated
+Note 06 closes neither signed correlations nor the Möbius route in
+general. It rules out a leading improvement from universal phase
+positivity in the selected Fejér envelope and quantifies the specific
+full-window second-moment cost. A useful localized correlation estimate
+must pay the exterior zeros and fit the absolute remaining slack;
+an average with error o(N) is insufficient to exclude one double.
+The Möbius calculation still lacks an upper bound on its signed
+off-diagonal sum. Shifted negative moments may not be continued to
+zero shift at fixed height outside their hypotheses.
+Actual-height/event-conditioned signed arithmetic, correlated
 full-source estimates and other kernel classes remain outside these
 scoped conclusions. No successful all-height estimate has been obtained. Weak Mertens and all-zero negative
 moments of zeta's derivative cannot be imported as consequences of RH.
@@ -149,3 +180,6 @@ unproved arithmetic and all-zero tasks complete.
 
 [n5]: ../notes/05_CLOSE_POSITIVE_SOURCES_AND_NORMALIZED_DOUBLE_ZEROS_20261020.md
 [review5]: ../reviews/05_SOURCE_CONTROL_AND_SHIFT_AUDIT_20261020.md
+
+[n6]: ../notes/06_SIGNED_CORRELATION_RESOLUTION_AND_MOBIUS_ENERGY_20261020.md
+[review6]: ../reviews/06_CORRELATION_AND_MOBIUS_ENERGY_REVIEW_20261020.md

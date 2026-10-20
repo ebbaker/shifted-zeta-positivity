@@ -28,3 +28,9 @@ checks the positive source divisions, uniform relative bound, leading
 tail, residue-one normalization, failed arithmetic premise and heat
 evolution. The separate curvature control and finite-shift comparison
 remain scoped; no original theta multiple zero is excluded.
+
+[06 — Correlation and Möbius energy](06_CORRELATION_AND_MOBIUS_ENERGY_REVIEW_20261020.md)
+checks the sharp full-window resolution constant, clustered configurations,
+exterior-zero payment, exact phase minimum, optimized additive comparison,
+and local pole/energy constants. Primary imports retain their shift and
+simplicity assumptions; no original theta multiple zero is excluded.

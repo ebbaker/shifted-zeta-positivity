@@ -245,3 +245,30 @@ lower bound instead of the needed small upper bound. [Review 05](../reviews/05_S
 checks the source divisions, tail, normalization, heat statements and
 these scoped comparisons. RHS-02's positive estimate, the strict cap
 surplus and exclusion of any original multiple zero remain open.
+
+## 8. Signed correlations and one-event precision, 20 October 2026
+
+Prepared for Edward Baker with substantial LLM assistance, **gpt-6-astra,
+effort ultra**. [Note 06](../notes/06_SIGNED_CORRELATION_RESOLUTION_AND_MOBIUS_ENERGY_20261020.md)
+assesses three quantitative alternatives to independently paying primes.
+For the chosen full-window squared-sinc second moment, excluding every
+multiple zero requires excess below two and the sharp bandwidth floor
+`liminf Delta W/N^(3/2)>=1/2`. This includes clustered configurations
+and precedes arithmetic error. The exact prime quadratic form and a
+separate exterior-zero payment prevent confusing a full explicit formula
+with its finite-window projection.
+
+For the Fejér prime sum, the exact minimum over universal multiplicative
+phases is `-C_V+1+o(1)`: such positivity saves only one additive unit,
+leaving the optimized leading logarithmic cost unchanged. Actual-height
+and event-conditioned information are outside that relaxation.
+
+The reciprocal-zeta calculation gives the sharp local energy forced by
+a multiplicity-m zero. A double requires cubic divergence with coefficient
+at least `16/|rho zeta''(rho)|^2`; the unchanged Möbius correlation must
+carry it. Verified RH bounds still permit this cost, and shifted
+negative-moment theorems do not allow an arbitrary zero-shift limit at
+fixed height. [Review 06](../reviews/06_CORRELATION_AND_MOBIUS_ENERGY_REVIEW_20261020.md)
+checks all constants, limits, imports and scopes. These are costs for
+declared attempts, not a new event exclusion or completion of RHS-02.
+The original strict-surplus and all-zero gates remain open.

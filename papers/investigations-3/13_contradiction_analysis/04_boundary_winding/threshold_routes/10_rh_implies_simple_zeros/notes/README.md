@@ -12,4 +12,6 @@
 
 - [05 — Close positive sources with normalized double zeros](05_CLOSE_POSITIVE_SOURCES_AND_NORMALIZED_DOUBLE_ZEROS_20261020.md). Under RH, uniformly close positive-source controls preserve the leading tail and residue one but fail ordinary Dirichlet-series arithmetic; separate curvature and finite-shift screens. No original theta event is excluded.
 
+- [06 — Signed correlation resolution and Möbius energy](06_SIGNED_CORRELATION_RESOLUTION_AND_MOBIUS_ENERGY_20261020.md). Sharp full-window bandwidth cost, additive-one universal phase comparison, and local multiplicity energy with exact signed coefficient bookkeeping; no theta exclusion.
+
 [Progress](../research-progress/01_RH_TO_SIMPLICITY_PROGRESS_20261020.md) · [Reviews](../reviews/README.md).
