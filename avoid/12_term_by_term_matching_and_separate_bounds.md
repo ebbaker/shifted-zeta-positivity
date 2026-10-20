@@ -261,3 +261,15 @@ remove the event's pole. [Note 13](../papers/investigations-3/13_contradiction_a
 keeps zero-side kernel dominance separate from complete arithmetic-budget
 dominance. [Internal review](../papers/investigations-3/13_contradiction_analysis/04_boundary_winding/threshold_routes/10_rh_implies_simple_zeros/reviews/12_FINITE_PRECISION_SIGNED_KERNEL_AND_ENERGY_REVIEW_20261020.md).
 For Edward Baker with substantial LLM assistance, **gpt-6-astra, ultra**.
+
+
+**20 October 2026 — unchanged theta modes already require near-complete cancellation (BW-10).**
+[Note 14](../papers/investigations-3/13_contradiction_analysis/04_boundary_winding/threshold_routes/10_rh_implies_simple_zeros/notes/14_EXACT_THETA_MODE_GRAM_CANCELLATION_20261020.md) proves that its positive raw-mode diagonal is polynomial in height while
+the complete first-jet energy is exponentially smaller. A fixed or
+algebraic relative diagonal surplus is therefore false for the original
+source at all large heights, not merely for a modified control. Retain
+the coherent signed cross term. Separately, [Note 11 §7](../papers/investigations-3/13_contradiction_analysis/04_boundary_winding/threshold_routes/10_rh_implies_simple_zeros/notes/11_FULL_ABSOLUTE_PRIME_ENVELOPE_AND_LOGARITHMIC_SPREAD_20261020.md)
+records: “No support cutoff, derivative of phi, or strip-dependent Fourier constant enters that bound.”
+Changing to an infinite-support strip-analytic test does not escape its
+fully paid absolute-envelope conclusion. [Internal review](../papers/investigations-3/13_contradiction_analysis/04_boundary_winding/threshold_routes/10_rh_implies_simple_zeros/reviews/13_STRIP_KERNEL_GAP_REPLACEMENT_AND_THETA_GRAM_REVIEW_20261020.md).
+For Edward Baker with substantial LLM assistance, **gpt-6-astra, ultra**.

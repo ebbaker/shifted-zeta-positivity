@@ -28,4 +28,8 @@
 
 - [13 — Certified-gap signed polynomial kernels](13_CERTIFIED_GAP_SIGNED_POLYNOMIAL_KERNELS_20261020.md). Same-bandwidth nonnegative companions dominate the complete zero sum; the quartic family has a fully paid larger leading absolute prime cost. Scope excludes unrestricted signed kernels and full gamma/pole-envelope dominance.
 
+- [14 — Exact theta-mode Gram cancellation](14_EXACT_THETA_MODE_GRAM_CANCELLATION_20261020.md). The actual positive half-line modes have polynomial diagonal energy but exponentially small complete first-jet energy, forcing nearly complete signed cross-term cancellation. This screens a specific relative diagonal estimate; no theta zero is excluded.
+
+Notes [11 §7](11_FULL_ABSOLUTE_PRIME_ENVELOPE_AND_LOGARITHMIC_SPREAD_20261020.md) and [13 §6](13_CERTIFIED_GAP_SIGNED_POLYNOMIAL_KERNELS_20261020.md) now cover strip-analytic noncompact Fourier support and general central-gap sign changes, respectively, with their original completion/arithmetic limits retained.
+
 [Progress](../research-progress/01_RH_TO_SIMPLICITY_PROGRESS_20261020.md) · [Reviews](../reviews/README.md).

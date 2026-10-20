@@ -413,3 +413,26 @@ family. It does not transfer signed gamma/pole budgets or rule out general
 sign-changing kernels. [Review 12](../reviews/12_FINITE_PRECISION_SIGNED_KERNEL_AND_ENERGY_REVIEW_20261020.md)
 checks these bounded conclusions. The original RHS-02 signed-arithmetic,
 strict-surplus and all-zero gates remain open.
+
+
+## 15. Original theta-mode cancellation and completed kernel scopes
+
+20 October 2026. Prepared for Edward Baker with substantial LLM assistance,
+**gpt-6-astra, ultra**. [Note 14](../notes/14_EXACT_THETA_MODE_GRAM_CANCELLATION_20261020.md)
+keeps the exact positive theta modes and their entire signed Gram sum.
+The diagonal is asymptotic to c_theta a^(-4), while the complete first-jet
+energy is O(a^5 exp(-pi a/4)). The cross term therefore cancels the diagonal
+to exponentially small relative accuracy at every large height. This
+screens the stated diagonal-coercivity approach on the original source;
+it supplies no lower bound or multiple-zero exclusion.
+
+[Note 11 §7](../notes/11_FULL_ABSOLUTE_PRIME_ENVELOPE_AND_LOGARITHMIC_SPREAD_20261020.md)
+extends the full absolute-payment theorem to the stated strip-analytic
+class with infinite Fourier support. [Note 13 §6](../notes/13_CERTIFIED_GAP_SIGNED_POLYNOMIAL_KERNELS_20261020.md)
+extends exact gap replacement to general sign changes confined to a
+certified central gap, including asymmetric gaps and non-even kernels.
+Neither transfers an unverified gamma/pole budget or bounds retained
+signed arithmetic. [Review 13](../reviews/13_STRIP_KERNEL_GAP_REPLACEMENT_AND_THETA_GRAM_REVIEW_20261020.md)
+checks these extensions and records why the attempted scalar mollifier
+and the checked density estimate add no one-event consequence. The
+RHS-02 signed estimate and all subsequent global gates remain open.

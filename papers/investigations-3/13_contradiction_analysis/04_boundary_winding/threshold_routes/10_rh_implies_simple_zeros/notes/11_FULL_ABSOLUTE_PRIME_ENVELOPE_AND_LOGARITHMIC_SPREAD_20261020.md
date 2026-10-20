@@ -11,6 +11,8 @@ The [result index](../../../../../../../result-summaries/README.md), [avoid inde
 The [collision catalogue][controls] and [complete-payment warning][a12]
 also apply. This proof removes a declared class restriction in the existing cost comparison; it does not supply a new simplicity margin.
 
+**Later scope extension (20 October 2026).** Section 7 proves the same sharp leading floor and joint mass–moment bound for nonnegative kernels holomorphic in a strip wider than one-half with quadratic strip decay, even with infinite Fourier support. Its complete gamma and pole budgets remain essential. [Separate same-model review](../reviews/13_STRIP_KERNEL_GAP_REPLACEMENT_AND_THETA_GRAM_REVIEW_20261020.md).
+
 ## 1. Class, exact payment, and logarithmic moment
 
 Let `h` be an admissible kernel from [Note 08][n8]: entire, real and nonnegative on the real axis, `h(0)=1`, with
@@ -280,6 +282,43 @@ logarithmic spread, and (G12) places it in the full height budget.
 Note 10's stronger family-specific return bound remains useful.
 No original theta multiple zero has been excluded, and the original
 signed-estimate, strict-cap-surplus and all-zero gates remain open.
+
+
+## 7. Extension to strip-analytic kernels without finite Fourier support
+
+20 October 2026 continuation, for Edward Baker with substantial LLM assistance,
+**gpt-6-astra, ultra**. This removes the compact-Fourier-support restriction from the preceding estimating theorem; it does not optimize another kernel or supply a signed estimate.
+
+Let h be holomorphic on |Im z|<a_h for some a_h>1/2, real and nonnegative on the real axis, h(0)=1. For every 0<b<a_h assume
+
+\[
+ \sup_{|y|\le b}|h(x+iy)|\le C_{h,b}(1+x^2)^{-1}.       \tag{X1}
+\]
+
+The strip width and constants may depend on h; no uniform lower margin above 1/2 is required across a sequence. Retain exactly (G1)'s definitions of I and C, (G2)'s pair moment, and (G10)'s gamma budget, together with the same exact-negative-pole or pole-modulus payment. Then (G7), (G9), (G14), and the sharp leading floor (G13) remain valid under RH. Their stated universal constants do not depend on strip width or Fourier bandwidth.
+
+**Proof.** Choose a fixed b with 1/2<b<a_h for the individual kernel. Shifting its Fourier integral to y=−b for v>0 and y=b for v<0 is justified by (X1), with vertical edges vanishing. Hence
+
+\[
+ |\phi(v)|\le C'_{h,b}e^{-2\pi b|v|}.                 \tag{X2}
+\]
+
+In particular phi is integrable and C is finite: its summands are bounded by a kernel-dependent constant times Lambda(n)n^(−1/2−b). The pair moment is finite by real quadratic decay. These facts justify the complete explicit formula for the declared strip, including the evaluations at −gamma±i/2; see [Goldston–Gonek, Lemma 1](https://arxiv.org/pdf/math/0511092). This is the usual strip-analytic test-function domain, not an analytic continuation of the prime series at the zero itself.
+
+In §2 take an arbitrary finite upper cutoff T>=A, independent of the Fourier transform, and use F_T(u)=e^(u/4)chi(u−A+1)chi(T+1−u). The same uniform derivative bounds (G3), full zero estimate (G4), and probability-pair Fubini proof apply. The arithmetic sum is finite for each T and is bounded by the full C in (G6), since |S|<=1. Thus uniformly in T,
+
+\[
+ \int_A^T e^{u/4}|\phi(u/(2\pi))|^2du
+ \ll e^{-A/4}(IC+I^2\mathcal M).                      \tag{X3}
+\]
+
+Monotone convergence as T tends to infinity gives the corresponding weighted L2 bound on the complete half-line. Weighted Cauchy–Schwarz, using int_A^infinity e^(−u/4)du=4e^(−A/4), gives exactly (G7). No support cutoff, derivative of phi, or strip-dependent Fourier constant enters that bound.
+
+The spatial periodization in (G8) still converges uniformly by (X1), and (X2) makes its Fourier series absolutely convergent. Computing its coefficients by Fubini therefore proves the pointwise Poisson identity. Positivity gives (G8), and the harmonic-overlap argument proves (G9) unchanged, using Tonelli for the nonnegative absolute samples. Section 5's integration on [1/I−1,1/I−1/2] now uses (G8) directly; its auxiliary assertion I Delta>=1 is unnecessary. This proves (G14). Finally (G10) gives (G12), and the existing proof with A=2log L proves (G13); there is no separate B<A case. The centered Fejér sequence belongs to (X1) and still attains the leading one-half constant.
+
+**Scope and examples.** The conclusion now covers every nonnegative kernel in (X1) with the same complete budgets, whether its Fourier support is finite or infinite. It includes fixed-width Gaussian kernels and the rational-power kernels of Note 04 when their poles lie beyond the required strip. Those kernels may have stronger family-specific costs, and a sequence still must verify its gamma and pole budgets. The result says nothing about a separately controlled signed-prime term, a kernel with negative real values, a merely boundary-analytic test, or an unbudgeted pole contribution. The signed-gap comparison in Note 13 does not automatically transfer those budgets to its nonnegative companion.
+
+The exact unchanged zeta prime weights remain essential to the argument. The control distinctions in §6 are unchanged. This extension closes the apparent finite-versus-infinite Fourier-support escape within the declared strip-analytic absolute-payment class; it supplies no new multiplicity bound or original-zero exclusion.
 
 
 [review]: ../reviews/11_GENERAL_KERNEL_ENVELOPE_REVIEW_20261020.md

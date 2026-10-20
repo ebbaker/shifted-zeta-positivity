@@ -8,6 +8,8 @@ The [result index](../../../../../../../result-summaries/README.md), [collision 
 
 [Internal review](../reviews/12_FINITE_PRECISION_SIGNED_KERNEL_AND_ENERGY_REVIEW_20261020.md) · [Finite evaluation comparison](12_FINITE_EVALUATION_AND_ENDPOINT_INVERSE_COSTS_20261020.md).
 
+**Later scope extension (20 October 2026).** Section 6 removes the polynomial-factor assumption for the exact zero-side comparison: all negative intervals must lie in an independently certified central gap. The construction handles non-even kernels and asymmetric gaps, preserves the original Fourier bandwidth when present, and has a strip-analytic version. It still does not transfer prime, gamma or pole budgets. [Separate same-model review](../reviews/13_STRIP_KERNEL_GAP_REPLACEMENT_AND_THETA_GRAM_REVIEW_20261020.md).
+
 ## 1. The gap is an input, and all other zeros remain
 
 Assume RH, fix a zero ordinate `gamma` of arbitrary multiplicity `m`, and suppose an independent certificate establishes
@@ -211,3 +213,74 @@ The nonnegative companion has the smaller exact zero sum (S5) and the smaller le
 The gap remains externally certified and every noncentral zero remains in the consumer. An exact signed-prime calculation might exploit information absent from absolute payment; that possibility is outside this comparison. No original multiple zero is excluded.
 
 **Control and false-premise screen.** The replacement argument applies to any real zero configuration with the certified gap, including the all-real endpoint controls. At a control double zero, both central contributions in (S5) remain two; the comparison supplies no upper bound below two. The algebraic and Fourier identities concern test kernels, not a modification of the theta source. Computing (S11) with genuine zeta weights is legitimate for every displayed test kernel, but identifying that calculation with a changed field's zero sum requires that field's own complete explicit formula. The normalized positive-source control fails unchanged ordinary Dirichlet-series arithmetic; the finite-data arithmetic control fails unchanged reflection and the full tail. Neither control is rejected by silently assigning it both preservation lists. The certified gap and any claimed gamma/pole budget must be acquired independently, exactly as in Notes04 and09.
+
+
+## 6. General central-gap replacement at unchanged bandwidth
+
+20 October 2026 continuation, prepared for Edward Baker with LLM assistance by **gpt-6-astra, ultra**. This is an addendum to Note13, not a new estimating theorem or an original-zero exclusion.
+
+**Theorem.** Let `h` be real entire, `h(0)=1`, with Fourier support in `[-Delta,Delta]` and the quadratic decay on fixed horizontal strips used above. For finite `g_-,g_+>0`, suppose
+
+\[
+h(x)\ge0\qquad x\notin(-g_-,g_+).
+\tag{S17}
+\]
+
+Then there is a real entire `h_+`, with the same normalization, minimal symmetric Fourier bandwidth, and quadratic strip decay, such that
+
+\[
+h_+(x)\ge0\quad(x\in\mathbb R),\qquad
+0\le h_+(x)\le h(x)\quad(x\notin(-g_-,g_+)).
+\tag{S18}
+\]
+
+Neither evenness nor symmetry of the certified gap is required.
+
+**Finite real-zero construction.** Since `h(0)=1`, the zeros in the compact closed gap are finite. All exterior real zeros have even multiplicity. Boundary zeros may have odd multiplicity. The sign is positive near zero and in the exterior away from isolated zeros; therefore the odd real zeros on each side can be paired consecutively. Each positive-side pair has `0<a<b<=g_+`, and each negative-side pair has `-g_-<=a<b<0`. The sign between its odd endpoints is negative, apart from possible even zeros. Pairing odd zeros is essential: even zeros can split the open set `{h<0}` without changing sign.
+
+For each such pair use the normalized rational factor
+
+\[
+R_{a,b}(z)=
+\begin{cases}
+(1-z/b)/(1-z/a),&0<a<b,\\
+(1-z/a)/(1-z/b),&a<b<0,
+\end{cases}
+\qquad
+h_+(z)=h(z)\prod_{(a,b)}R_{a,b}(z).
+\tag{S19}
+\]
+
+Every denominator cancels one copy of the inner endpoint zero, and the numerator adds one copy of the outer endpoint zero. Both odd endpoint multiplicities become even. Each factor equals one at zero, is negative only between its endpoints, and is positive elsewhere on the real line. The finite product therefore gives an entire globally nonnegative function. Complex zeros and untouched real zeros keep their multiplicities; no infinite canonical factorization is used.
+
+For a positive pair, `0<=R_{a,b}(x)<=1` when `x<=0` or `x>=b`; for a negative pair this holds when `x<=a` or `x>=0`. Every exterior point lies in these regions for every pair, proving (S18). Denominator zeros are strictly inside the central gap. An outer endpoint may be a gap boundary; both functions then vanish there. A negative sign interval cannot cross the origin because `h(0)=1`.
+
+**Fourier support and strip decay.** Division by a removed real zero preserves the support directly. Set `q(x)=h(x)/(x-a)`, with its removable value at the zero, and write `phi=hat h`, `psi=hat q` using the Fourier factor `exp(-2pi ixv)`. Both `q` and `xq=h+aq` are integrable, so
+
+\[
+\psi'(v)+2\pi ia\psi(v)=-2\pi i\phi(v),\qquad
+\psi(v)=-2\pi i e^{-2\pi iav}
+ \int_{-\infty}^{v}e^{2\pi iaw}\phi(w)\,dw.
+\tag{S20}
+\]
+
+The second formula follows from the Riemann--Lebesgue limit at negative infinity. It vanishes below `-Delta`; above `Delta` the integral equals the Fourier inversion value `h(a)=0`. Multiplication by the new linear factor is a linear combination of `q` and `h`, so it also preserves support. This proves the assertion after finitely many moves. Each inverse move is legal as well, hence the minimal symmetric bandwidth is unchanged; internal Fourier-support gaps need not be preserved.
+
+The multiplier in (S19) tends a finite positive constant at infinity and is bounded outside a fixed disk. After cancellation the resulting entire function is bounded on each remaining compact rectangle. Thus every fixed-strip quadratic bound persists. This proof uses only the stated hypotheses and elementary Fourier inversion; it imports no factorization theorem.
+
+The same finite root moves also apply when `h` is only holomorphic in a strip containing the real axis and satisfies the corresponding quadratic bounds on smaller closed strips. They preserve that strip, its decay contract, normalization, and the real-axis order (S18). In particular they preserve Note11's contract (X1). The Fourier-support assertion above is made only when the original kernel is bandlimited; no such assertion is needed for this strip version. Neither version transfers the separate gamma or pole budgets.
+
+**Exact all-zero consequence.** Under RH let an ordinate `gamma` have arbitrary multiplicity `m`, and independently certify that every other distinct ordinate satisfies `lambda-gamma` outside `(-g_-,g_+)`. Complete quadratic-decay zero sums converge absolutely, with all multiplicities retained, and (S18) gives
+
+\[
+\boxed{
+m\le m+\sum_{\lambda\ne\gamma}m_\lambda h_+(\lambda-\gamma)
+\le m+\sum_{\lambda\ne\gamma}m_\lambda h(\lambda-\gamma).}
+\tag{S21}
+\]
+
+The endpoint convention includes noncentral zeros on the gap boundary. Consequently a negative region confined to this one independently certified central gap cannot improve the exact zero-sum majorant over every globally nonnegative kernel of the same bandwidth.
+
+This is **zero-sum dominance only**. The mass, prime payment, gamma term and pole terms can change; Note11's budgets are not automatically inherited. Formula (S20) may require Fourier information beyond the original prime samples, so equal arithmetic acquisition cost is not asserted. The finite-zero construction is an analytic existence procedure, not an implemented or complexity-bounded factorization algorithm. Nonnegativity merely at the actual zeros is insufficient for (S17); negative regions in other gaps or infinitely many negative intervals are outside scope. Moving roots in a noncentral gap can increase values between that gap and the origin.
+
+At a control double zero, the central mass in (S21) remains two. These are transformations of test kernels, not changes to the theta source or its arithmetic coefficients. Any use for a changed field requires that field's complete explicit formula; no source receives preservation properties it lacks. No original multiple zero is excluded.

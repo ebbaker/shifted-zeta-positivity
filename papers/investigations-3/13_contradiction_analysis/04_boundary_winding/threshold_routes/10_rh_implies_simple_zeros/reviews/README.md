@@ -67,3 +67,10 @@ declared class. Separate same-model checks; no original-zero exclusion.
 
 [12 — Finite precision, signed kernels and endpoint energy](12_FINITE_PRECISION_SIGNED_KERNEL_AND_ENERGY_REVIEW_20261020.md)
 checks the primary Riemann–Siegel remainder, discrete derivative alias and division errors, matched algorithm comparison, complete Riesz contour, crossed reciprocal residue, polynomial replacement, uniform prime cost and exterior heat-energy finite parts. Separate same-model internal review; no simplicity theorem or new exclusion.
+
+[13 — Strip kernels, gap replacement and theta-mode cancellation](13_STRIP_KERNEL_GAP_REPLACEMENT_AND_THETA_GRAM_REVIEW_20261020.md)
+checks the complete Fourier-tail limit, strip explicit formula, absolute
+Poisson summation, finite zero moves and Fourier support, and the all-mode
+integration-by-parts and completed-zeta exponential bounds. The exact
+scalar mollifier and density theorem supply no one-event gain. Separate
+same-model checks; the signed arithmetic gate remains open.

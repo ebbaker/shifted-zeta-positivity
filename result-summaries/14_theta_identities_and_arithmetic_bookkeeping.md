@@ -397,3 +397,19 @@ signed kernels remain outside the result. No original zero is excluded.
 [Separate same-model review](../papers/investigations-3/13_contradiction_analysis/04_boundary_winding/threshold_routes/10_rh_implies_simple_zeros/reviews/12_FINITE_PRECISION_SIGNED_KERNEL_AND_ENERGY_REVIEW_20261020.md).
 For Edward Baker with substantial LLM assistance, **gpt-6-astra, ultra**;
 no specialist review or novelty claim.
+
+
+**20 October 2026 — original theta-mode cancellation and kernel extensions (BW-10).**
+[Note 14](../papers/investigations-3/13_contradiction_analysis/04_boundary_winding/threshold_routes/10_rh_implies_simple_zeros/notes/14_EXACT_THETA_MODE_GRAM_CANCELLATION_20261020.md) is **proved for the unchanged source without RH**:
+its raw mode Gram diagonal is c_theta a^(-4)+O(a^(-6)), but the complete
+first-jet energy is O(a^5 exp(-pi a/4)); hence the signed cross term
+cancels the diagonal to exponential relative accuracy. This is a scoped
+failure of fixed/algebraic relative diagonal coercivity, not a lower bound.
+[Note 11 §7](../papers/investigations-3/13_contradiction_analysis/04_boundary_winding/threshold_routes/10_rh_implies_simple_zeros/notes/11_FULL_ABSOLUTE_PRIME_ENVELOPE_AND_LOGARITHMIC_SPREAD_20261020.md)
+removes finite Fourier support under its stated strip and complete-budget
+hypotheses; [Note 13 §6](../papers/investigations-3/13_contradiction_analysis/04_boundary_winding/threshold_routes/10_rh_implies_simple_zeros/notes/13_CERTIFIED_GAP_SIGNED_POLYNOMIAL_KERNELS_20261020.md)
+removes polynomial factorization for exact central-gap replacement.
+Arithmetic and completion budgets are not transferred by replacement.
+[Separate same-model review](../papers/investigations-3/13_contradiction_analysis/04_boundary_winding/threshold_routes/10_rh_implies_simple_zeros/reviews/13_STRIP_KERNEL_GAP_REPLACEMENT_AND_THETA_GRAM_REVIEW_20261020.md).
+For Edward Baker with substantial LLM assistance, **gpt-6-astra, ultra**;
+no original-zero exclusion, specialist review or novelty claim.
