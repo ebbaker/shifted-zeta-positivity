@@ -497,3 +497,34 @@ at positive time; completion supplies essential mixed derivatives.
 These additions follow the existing result/avoid indexes and do not
 supply the RHS-02 opposing signed estimate, a new exclusion, or a reason
 to activate the deferred BW09 numerical energy campaign.
+
+
+## 18. Exact ratio energy and the prescribed Möbius approximant
+
+20 October 2026. Prepared for Edward Baker with substantial LLM assistance,
+**gpt-6-astra, actual effort ultra**. [Note 15](../notes/15_COMPLETED_RATIO_ENERGY_AND_MULTIPLICITY_20261020.md) computes
+the exact first-order weighted energy of both the completed and direct
+zeta ratios under RH. Each distinct zero of multiplicity m contributes
+c_m=m(1−binom(2m,m)/4^m), divided by its weight denominator. Exact
+positive Poisson mass controls the complete tail, without a uniform gap
+or inverse-derivative assumption. At the standard weight, one double
+conjugate pair adds 1/[2(gamma²+1/4)] above the simple-count baseline Z/2.
+The available Schur upper is Z, so this remains an event-compatible
+identity. A polynomial control confirms that product geometry alone
+cannot supply the missing half-linear upper.
+
+[Note 12 §5](../notes/12_FINITE_EVALUATION_AND_ENDPOINT_INVERSE_COSTS_20261020.md) quantifies a different obstruction: an exact
+double zero forces positive limsup error for the prescribed linear-log
+Möbius polynomial, at least 4/(|rho|^4 |zeta''(rho)|²). Higher multiplicity
+forces unbounded limsup. This is an extraction from Wei–Wu's proof,
+with its complete norm retained. Their existing convergence result
+already implies simplicity; BCF's sharp upper assumes simplicity, and
+RH's constructive damped approximation uses different coefficients.
+The grouped-pole calculation records its unpaid remainder separately.
+
+[Review 12 §6](../reviews/12_FINITE_PRECISION_SIGNED_KERNEL_AND_ENERGY_REVIEW_20261020.md) records the separate same-model checks.
+The [result index](../../../../../../../result-summaries/README.md) and
+[avoid index](../../../../../../../avoid/README.md), particularly the
+checked-import and quantitative-gain rules, retain the distinction
+between these precise costs and the still-missing opposing estimate.
+No original multiple zero is excluded, and RHS-02 remains open.

@@ -39,3 +39,7 @@ Notes [11 §7](11_FULL_ABSOLUTE_PRIME_ENVELOPE_AND_LOGARITHMIC_SPREAD_20261020.m
 **Coherent continuation:** [Note 13 §9](13_CERTIFIED_GAP_SIGNED_POLYNOMIAL_KERNELS_20261020.md) proves fixed-base saturation with error O(delta^(1/2−q)), including an explicit quartic bound. It can lower the separate absolute envelope, but recovers exactly the existing signed zero sum and proves no bound below two.
 
 **Endpoint continuation:** [Note 12 §4](12_FINITE_EVALUATION_AND_ENDPOINT_INVERSE_COSTS_20261020.md) quantifies the physical phase-energy divergence and the integrable energy after a positive derivative rescaling, with identical cap phase. [Note 01](01_FINITE_WALLS_ARITHMETIC_RESOLUTION_AND_GAUSSIAN_SCREEN_20261020.md) checks that Hopf/Julia returns the existing bound; [Note 14 §7](14_EXACT_THETA_MODE_GRAM_CANCELLATION_20261020.md) records the failed bare Euler-heat continuation. These are scoped comparisons, not event exclusions.
+
+- [15 — Completed-ratio energy and multiplicity](15_COMPLETED_RATIO_ENERGY_AND_MULTIPLICITY_20261020.md). Under RH, the first-order weighted ratio energy has exact coefficient sum c_m/(sigma²+lambda²), with c_m=m(1−binom(2m,m)/4^m). The proof retains all zeros and transfers to the direct zeta ratio. No opposing upper bound or zero exclusion follows.
+
+[Note 12 §5](12_FINITE_EVALUATION_AND_ENDPOINT_INVERSE_COSTS_20261020.md) additionally quantifies the nonconvergence cost of the prescribed linear Möbius taper at a double zero, with the primary simplicity-dependent hypotheses audited.

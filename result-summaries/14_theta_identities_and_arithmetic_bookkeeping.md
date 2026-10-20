@@ -426,3 +426,18 @@ family's infimum equals the unknown multiplicity, so no simplicity bound
 or computational advantage follows. [Separate same-model review](../papers/investigations-3/13_contradiction_analysis/04_boundary_winding/threshold_routes/10_rh_implies_simple_zeros/reviews/15_COHERENT_REMOTE_GAP_SATURATION_REVIEW_20261020.md).
 Prepared for Edward Baker with substantial LLM assistance,
 **gpt-6-astra, ultra**; no novelty claim.
+
+
+**Ratio-energy continuation, 20 October 2026:** [BW10 Note 15](../papers/investigations-3/13_contradiction_analysis/04_boundary_winding/threshold_routes/10_rh_implies_simple_zeros/notes/15_COMPLETED_RATIO_ENERGY_AND_MULTIPLICITY_20261020.md)
+is **proved under RH in-note**, with separate same-model review: the
+weighted ratio-error energy divided by epsilon tends to the sum of
+c_m/(sigma²+lambda²), c_m=m(1−binom(2m,m)/4^m), over distinct signed zeros.
+The proof retains all-zero tightness and transfers from xi to zeta.
+“It is not an upper bound by the simple-zero constant.”
+[Note 12 §5](../papers/investigations-3/13_contradiction_analysis/04_boundary_winding/threshold_routes/10_rh_implies_simple_zeros/notes/12_FINITE_EVALUATION_AND_ENDPOINT_INVERSE_COSTS_20261020.md) also proves the prescribed linear
+Möbius taper has limsup error at least 4/(|rho|^4 |zeta''(rho)|²) at an
+exact double; multiplicity at least three forces infinite limsup.
+This extraction credits Wei–Wu and supplies no RH-only upper bound.
+[Review 12 §6](../papers/investigations-3/13_contradiction_analysis/04_boundary_winding/threshold_routes/10_rh_implies_simple_zeros/reviews/12_FINITE_PRECISION_SIGNED_KERNEL_AND_ENERGY_REVIEW_20261020.md). Prepared for Edward Baker with
+substantial LLM assistance, **gpt-6-astra, ultra**; no specialist review,
+novelty claim or simplicity conclusion.

@@ -448,3 +448,212 @@ source. No exact-theta opposing bound was obtained. Keep the energy
 campaign deferred and retain this calculation only as the quantitative
 scale clarification of the existing endpoint assessment.
 [Separate same-model continuation review](../reviews/12_FINITE_PRECISION_SIGNED_KERNEL_AND_ENERGY_REVIEW_20261020.md).
+
+
+## 5. Prescribed logarithmic Möbius taper: a quantitative obstruction
+
+20 October 2026. Prepared for Edward Baker with substantial LLM assistance,
+**gpt-6-astra, actual effort ultra**. This section uses the original Möbius
+coefficients and the complete norm. Its obstruction concerns one prescribed
+approximant, and gives no RH-only upper bound. The logarithmic taper here
+differs from the physical Riesz taper in §2.
+
+### 5.1 The lower constant counts distinct zeros with squared multiplicity
+
+Put
+\[
+ \mathcal E(A)=\frac1{2\pi}\int_{\mathbb R}
+ \frac{|1-\zeta(\tfrac12+it)A(\tfrac12+it)|^2}{\tfrac14+t^2}\,dt,
+ \qquad d_N^2=\inf_{A(s)=\sum_{n\le N}a_nn^{-s}}\mathcal E(A).
+ \tag{NB1}
+\]
+[Burnol, Theorem1.3](https://arxiv.org/pdf/math/0103058) proves the corresponding lower bound for the continuous-dilation distance \(D(\lambda)\). Since the discrete span is contained in that continuous span, \(d_N\ge D(1/N)\). Therefore, under RH,
+\[
+ \liminf_{N\to\infty}d_N^2\log N
+ \ge \sum_{\rho\ {\rm distinct}}\frac{m_\rho^2}{|\rho|^2}
+ =Z+\sum_{\rho\ {\rm distinct}}\frac{m_\rho(m_\rho-1)}{|\rho|^2},
+ \quad Z=2+\gamma_E-\log(4\pi).
+ \tag{NB2}
+\]
+Both signs of the ordinate occur. An exact double conjugate pair contributes an excess \(4/(\gamma^2+1/4)\). This is an asymptotic liminf, not a uniform finite-\(N\) inequality. A positive error allowance in the leading constant would not exclude arbitrarily high exceptional pairs.
+
+### 5.2 The sharp constructive theorem assumes simplicity
+
+Let
+\[
+ V_N(s)=\sum_{n\le N}\mu(n)\left(1-\frac{\log n}{\log N}\right)n^{-s},
+ \qquad E_N=\mathcal E(V_N).
+ \tag{NB3}
+\]
+[Bettin–Conrey–Farmer, Theorem1](https://arxiv.org/pdf/1211.5191) obtains \(E_N\sim Z/\log N\) under RH and
+\[
+ \sum_{|\Im\rho|\le T}|\zeta'(\rho)|^{-2}\ll T^{3/2-\delta}
+ \quad(\delta>0).
+ \tag{NB4}
+\]
+They expressly state that this hypothesis assumes all zeros simple. It is unavailable for the present investigation. Their unconditional Lemma2 retains
+\[
+ R_N(\rho,s)=\operatorname*{Res}_{z=\rho}
+ \frac{N^{z-s}}{\zeta(z)(z-s)^2}
+ \tag{NB5}
+\]
+with the complete higher-order residue; Lemma3's bound for the residue sum assumes simplicity and (NB4). Replacing (NB5) by a simple-zero residue before proving simplicity loses precisely the event under investigation.
+
+### 5.3 What RH alone constructively supplies
+
+[Balazard–de Roton, Propositions1–3](https://arxiv.org/pdf/0812.1689) instead use
+\[
+ A_N(s)=\sum_{n\le N}\mu(n)n^{-\varepsilon_N-s},\qquad
+ \varepsilon_N=26\frac{(\log\log N)^{5/2+\eta}}{\sqrt{\log N}}
+ \quad(\eta>0).
+ \tag{NB6}
+\]
+Their RH-only estimates give, for sufficiently large \(N\),
+\[
+ d_N^2\le\mathcal E(A_N)
+ \ll_\eta\varepsilon_N+N^{-\varepsilon_N/2}
+ \ll_\eta\frac{(\log\log N)^{5/2+\eta}}{\sqrt{\log N}}.
+ \tag{NB7}
+\]
+This upper allowance divided by \(1/\log N\) grows without bound. These coefficients differ from (NB3), so (NB7) supplies neither its convergence nor its sharp constant. The distinction is about these checked theorems; no current-best literature claim is made.
+
+### 5.4 Even convergence for this fixed polynomial already forces simplicity
+
+[Wei–Wu, Proposition1.9 and its proof](https://bimsa.net/doc/publication/1424.pdf) establish that \(E_N\to0\) implies RH and simplicity. Their Theorem1.10 proves RH-equivalence only after moving the norm to every fixed line \(\Re s>1/2\).
+
+Here is a quantitative extraction from that proof. Let M(x)=sum_{n<=x} mu(n), take N>=2, and fix a critical-line zero rho=1/2+i gamma. With
+\[
+ F(x)=\int_1^x\frac{M(u)}u\,du,\quad
+ c_N=F(N)/\log N,\quad
+ A=\limsup_{x\to\infty}\frac{|F(x)|}{\sqrt x\log x},
+ \tag{NB8}
+\]
+Mellin Plancherel and the unitary multiplier
+\(s\zeta(1-s)/((1-s)\zeta(s))\) give
+\[
+ \sqrt{E_N}\ge |c_N|/\sqrt N-o(1),\qquad
+ \limsup_N\sqrt{E_N}\ge A.
+ \tag{NB9}
+\]
+Indeed it maps \(\{1/(nt)\}\) to \(\{nt\}/(nt)\); on \((0,1/N)\) the transformed sum equals \(c_N\). The transformed indicator has vanishing norm there. Integer and real limsups agree since \(|F(x)-F(\lfloor x\rfloor)|\le1\).
+
+If \(A<\infty\), integration by parts yields
+\[
+ \frac1{\zeta(s)}=s^2\int_1^\infty F(x)x^{-s-1}\,dx,
+ \qquad
+ \limsup_{\alpha\downarrow0}\alpha^2|\zeta(\rho+\alpha)^{-1}|
+ \le |\rho|^2A.
+ \tag{NB10}
+\]
+Consequently an exact double zero forces
+\[
+ \boxed{\limsup_NE_N\ge\frac4{|\rho|^4|\zeta''(\rho)|^2}>0},
+ \tag{NB11}
+\]
+whereas multiplicity at least three forces \(\limsup_NE_N=\infty\). This is a coefficient-sensitive obstruction for (NB3), not an upper bound or a new simplicity criterion.
+
+#### Verification details for the quantitative extraction
+
+The multiplier in (NB9) has modulus one almost everywhere on the critical line; its values at the discrete zero set do not matter. Mellin transformation gives exactly
+\(E_N=\|\sum_{n\le N}\mu(n)(1-\log n/\log N)\{1/(nt)\}+\mathbf1_{(0,1]}\|_{L^2(dt)}^2\).
+Thus no limiting residue sum is assumed. For (NB10), first prove the integral identity in \(\Re s>1\), then continue using the bound defining finite \(A\). For every \(\epsilon>0\), the compact initial interval contributes \(o(1)\) after multiplication by \(\alpha^2\), while the tail contributes at most \(|\rho+\alpha|^2(A+\epsilon)\), since \(\int_1^\infty x^{-1-\alpha}\log x\,dx=\alpha^{-2}\). Taking \(\epsilon\downarrow0\) proves (NB10). If \(A=\infty\), (NB9) already gives unbounded limsup. These facts retain the original Möbius coefficients and allow arbitrary other multiplicities.
+
+
+### 5.5 The local residue profile and its retained remainder
+
+The complete-norm result (NB11) is separate from the following local calculation.
+
+Let \(L=\log N\), and for an integer \(k\ge1\) set
+\[
+V_{N,k}(s)=\sum_{n\le N}\mu(n)n^{-s}
+                 (1-\log n/L)^k.
+\]
+For \(0<\Re s<1\), the exact Perron representation is
+\[
+V_{N,k}(s)=\frac{k!}{L^k}\frac1{2\pi i}
+       \int_{\Re w=2}\frac{N^w}{\zeta(s+w)w^{k+1}}\,dw .
+\tag{ME1}
+\]
+Absolute convergence on this line justifies interchanging the Dirichlet series and the integral. For \(k=1\), [Bettin–Conrey–Farmer, Lemma2, PDF p.6](https://arxiv.org/pdf/1211.5191) records the corresponding full residue formula, retaining all distinct zero locations with their actual pole orders. Its later residue bound assumes simple zeros and a negative derivative moment.
+
+Assume RH and fix an exact order-\(m\) zero \(\rho=1/2+i\gamma\). Write
+\(\zeta(\rho+u)=c u^m g(u)\), \(c\ne0\), \(g(0)=1\), with \(g\) analytic and nonzero near zero. The coefficients are fixed as \(N\to\infty\); no uniformity in moving \(\rho\) is asserted.
+
+One can shift a **finite** rectangular contour from \(\Re w=2\) to \(\Re w=-b\), with fixed \(0<b<1/2\), and horizontal sides avoiding poles. Retain the tails of the original line, both horizontal sides, the new vertical side, and every crossed reciprocal-zeta residue. Denote by \(G_{N,k}(s)\) only the sum of the kernel-pole contribution at \(w=0\) and the target-zero contribution at \(w=\rho-s\), including the factor \(k!/L^k\). The exact identity is then
+\[
+V_{N,k}(s)=G_{N,k}(s)+\mathcal R_{N,k}(s).
+\tag{ME2}
+\]
+Here \(\mathcal R\) contains all the remaining terms just listed. It is not discarded or assumed small. A finite contour avoids assuming convergence of an infinite sum over inverse derivatives. At \(s=\rho\), the two selected poles merge and are interpreted by their combined contour.
+
+Set \(s=\rho+z/L\). For a fixed compact \(K\subset\mathbb C\), enclose \(v=0,-z\) by \(|v|=R>\sup_K|z|\). Scaling \(w=v/L\) gives exactly
+\[
+\begin{split}
+\zeta(\rho+z/L)G_{N,k}(\rho+z/L)
+ &=\frac{k!}{2\pi i}\int_{|v|=R}
+ \frac{e^v z^m}{v^{k+1}(v+z)^m}
+ \frac{g(z/L)}{g((z+v)/L)}\,dv\\
+ &=\frac{z^m}{(m-1)!}\int_0^1
+       u^{m-1}(1-u)^k e^{-zu}\,du
+       +O_{K,\rho,k}(|z|^m/L).
+\end{split}
+\tag{ME3}
+\]
+The second equality follows either by residues or convolution of the inverse Laplace transforms of \(v^{-k-1}\) and \((v+z)^{-m}\). The regular-factor ratio is \(1+O(1/L)\) uniformly on the contour. In particular the unknown leading coefficient \(c\) cancels. The remainder has its displayed factor \(z^m\), including at \(z=0\).
+
+Define the entire model error
+\[
+E_{m,k}(z)=1-\frac{z^m}{(m-1)!}
+                 \int_0^1u^{m-1}(1-u)^k e^{-zu}\,du.
+\]
+Then the **actual** error is
+\[
+1-\zeta(\rho+z/L)V_{N,k}(\rho+z/L)
+ =E_{m,k}(z)-\zeta(\rho+z/L)\mathcal R_{N,k}(\rho+z/L)
+       +O_{K,\rho,k}(|z|^m/L).
+\tag{ME4}
+\]
+This is the transfer condition that must be paid. Squaring the error retains the signed cross term with \(\mathcal R\); the selected local residues are not a separately nonnegative contribution to the full norm.
+
+For the requested linear taper,
+\[
+E_{1,1}(z)=\frac{1-e^{-z}}z,\qquad
+E_{2,1}(z)=\frac{2(1-e^{-z})}z-e^{-z}.
+\tag{ME5}
+\]
+Both have value one at zero; the double profile has derivative zero there, as required by \(1-\zeta V=1+O((s-\rho)^2)\). In particular a surviving endpoint term cannot be omitted. With \(\operatorname{Si}(Y)=\int_0^Y\sin y/y\,dy\),
+\[
+\begin{split}
+\int_{-Y}^Y|E_{1,1}(iy)|^2dy
+ &=4\operatorname{Si}(Y)-4(1-\cos Y)/Y \longrightarrow2\pi,\\
+\int_{-Y}^Y|E_{2,1}(iy)|^2dy
+ &=2Y+8\operatorname{Si}(Y)-16(1-\cos Y)/Y\\
+ &=2Y+4\pi+O(Y^{-1}).
+\end{split}
+\tag{ME6}
+\]
+Thus the simple profile is square integrable; the double profile is not. In Fourier language \(E_{2,1}\) is the transform of \(2\mathbf1_{[0,1]}-\delta_1\).
+
+For a fixed \(Y\), the model contribution on \(|t-\gamma|\le Y/L\), with the Nyman–Beurling weight \(dt/(2\pi(1/4+t^2))\), is
+\[
+\frac1{2\pi|\rho|^2L}
+       \int_{-Y}^Y|E_{m,k}(iy)|^2dy+O_{\rho,Y,k}(L^{-2}).
+\tag{ME7}
+\]
+Equation(ME7) becomes the leading **actual** local norm only if the scaled remainder term in(ME4) is \(o(1)\) in this fixed-window \(L^2(dy)\) norm. No such estimate is obtained here. In particular(ME6) alone does not prove actual nonconvergence.
+
+The taper comparison has a complete model answer. For integers \(k\ge m\), put \(w=u^{m-1}(1-u)^k/(m-1)!\). Integration by parts \(m\) times yields
+\[
+E_{m,k}(z)=\int_0^1p_{m,k}(u)e^{-zu}\,du,\qquad p_{m,k}=-w^{(m)}.
+\tag{ME8}
+\]
+The endpoint data give \(\int_0^1u^jp_{m,k}(u)\,du=\delta_{j0}\) for \(j<m\). Among all \(L^2(0,1)\) functions with those moments the minimum squared norm is \(m^2\): the minimizer is the endpoint reproducing kernel for polynomials of degree below \(m\). For \(k=m\), \(p_{m,m}\) has degree \(m-1\) and is exactly that kernel. Thus
+\[
+\frac1{2\pi}\int_{\mathbb R}|E_{m,m}(iy)|^2dy=m^2;
+\qquad p_{2,2}(u)=4-6u.
+\tag{ME9}
+\]
+This explains the classical multiplicity-squared constant; it is not a new arithmetic lower-bound theorem. [Burnol, Theorem1.3](https://arxiv.org/pdf/math/0103058) supplies the legitimate global Nyman–Beurling lower bound. The internal continuation review checks its one-sided support and weighted-jet normalization. Support length alone is insufficient: on the centered interval [-1/2,1/2], the constant one satisfies the two double-zero model moments with squared norm one. The full \(\zeta V\) is not bandlimited merely because \(V\) is finite.
+
+
+[Separate same-model continuation review, §6](../reviews/12_FINITE_PRECISION_SIGNED_KERNEL_AND_ENERGY_REVIEW_20261020.md).

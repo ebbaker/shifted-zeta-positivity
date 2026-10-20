@@ -48,3 +48,14 @@ Ask for the file and read the printed PDF ([`CONTRIBUTING.md`](../CONTRIBUTING.m
 ## Constructive-stability continuation, 17 October 2026
 
 Prepared for Edward Baker with substantial LLM assistance, **gpt-6.1-sol (Codex), effort ultra**. The [Project 05 review, summary item 3 and Section 5](../papers/investigations-3/05_constructive_stable_models/reviews/01_ROUND_ONE_CROSS_MODEL_REVIEW_CLAUDE_20261017.md) finds Cardon’s Theorem 1 built on the same Rademacher laws while “the round cites that paper only for Pólya’s Proposition 1.” The [round-two reconciliation](../papers/investigations-3/05_constructive_stable_models/notes/round-2/README.md) checks that theorem, Newman–Wu’s already published weak closure, and Newman’s 1976 Gaussian-convolution classification before using them. Their application closes named construction cases without claiming a new real-zero mechanism.
+
+
+**BW10 prescribed-mollifier audit, 20 October 2026.**
+[Note 12 §5](../papers/investigations-3/13_contradiction_analysis/04_boundary_winding/threshold_routes/10_rh_implies_simple_zeros/notes/12_FINITE_EVALUATION_AND_ENDPOINT_INVERSE_COSTS_20261020.md) checks that BCF's sharp upper already
+assumes simplicity, while Wei–Wu's convergence conclusion explicitly
+implies it. RH's damped polynomial has different coefficients:
+“These coefficients differ from (NB3), so (NB7) supplies neither its
+convergence nor its sharp constant.” Retain the exact approximant and
+hypotheses when importing a mean-square theorem.
+[Internal review §6](../papers/investigations-3/13_contradiction_analysis/04_boundary_winding/threshold_routes/10_rh_implies_simple_zeros/reviews/12_FINITE_PRECISION_SIGNED_KERNEL_AND_ENERGY_REVIEW_20261020.md). Prepared for Edward Baker
+with substantial LLM assistance, **gpt-6-astra, ultra**.

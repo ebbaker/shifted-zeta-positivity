@@ -135,3 +135,64 @@ finite-jet upper bounds alone supply no reciprocal phase-energy bound.
 The pre-zero all-real interval in Rodgers–Tao remains unavailable from RH
 alone. No numerical fixtures, sign scans, finite exclusion certificates,
 manuscripts or BW09 task statuses were changed by this continuation.
+
+
+## 6. Ratio-energy coefficient and prescribed Möbius taper
+
+20 October 2026. Prepared for Edward Baker with substantial LLM assistance,
+**gpt-6-astra, actual effort ultra**. Separate same-model work streams and
+the integrating agent checked the proofs below; no specialist review or
+novelty claim is made.
+
+**Verdict:** [Note 15](../notes/15_COMPLETED_RATIO_ENERGY_AND_MULTIPLICITY_20261020.md) proves its RH-conditional exact
+ratio-energy coefficient, including all-zero tightness and the completion
+transfer. [Note 12 §5](../notes/12_FINITE_EVALUATION_AND_ENDPOINT_INVERSE_COSTS_20261020.md) proves the quantitative limsup
+obstruction for the prescribed linear-logarithmic Möbius polynomial.
+Both conclusions permit the putative multiple zero. RHS-02 remains open.
+
+- The even order-one xi product has no extra logarithmic-derivative
+  polynomial. Its shifted ratio is contractive on the right half-plane.
+  The exact positive Poisson mass, rather than local convergence alone,
+  controls the complement of every finite set of scaled zero windows.
+  The displayed finite-window upper inequality and exhaustion retain
+  all zeros, including arbitrary multiplicities and arbitrarily small
+  spacings. No uniform inverse-jet estimate is used.
+- The local beta integral gives c_m=m(1−binom(2m,m)/4^m), with
+  c_1=1/2 and c_2=5/4. The harmonic profile integrates to m. The Gaussian
+  entire-factor example checks the otherwise possible escape of mass
+  to infinity. The original order-one product excludes that example.
+- Completion changes the weighted residual norm by O(epsilon), while
+  the residual itself is O(sqrt(epsilon)). Its squared-energy effect is
+  therefore O(epsilon^(3/2)). The precise Stirling exponent epsilon/2
+  makes the integrability claim uniform for epsilon<=1/4. No pole of
+  the completion lies in the closed strip used in this calculation.
+- The polynomial control with a double pair violates the proposed
+  half-linear bound while satisfying the product/Schur premises. It
+  fails unchanged xi/theta and ordinary-Dirichlet arithmetic. The distinct
+  existing source and arithmetic controls retain their own failed
+  premises; this calculation does not conflate them.
+- The primary statements of Burnol, Bettin–Conrey–Farmer,
+  Balazard–de Roton and Wei–Wu were inspected in the arithmetic work
+  stream, with the critical Wei–Wu and ratio statements rechecked in
+  integration. Burnol's constant sums squared multiplicities over distinct
+  zeros. BCF's sharp upper assumption already requires simplicity.
+  Wei–Wu Proposition 1.9 expressly makes convergence of this particular
+  critical-line linear taper imply simplicity. RH's damped approximant
+  is a different sequence. None can be silently substituted for another.
+- For the quantitative extraction, the Mellin multiplier has modulus
+  one almost everywhere. Its exact small-t transform is constant
+  F(N)/log N on (0,1/N); reverse triangle retains the transformed target.
+  The real/integer limsups agree, and the Mellin integral gives the exact
+  coefficient 4/(|rho|^4 |zeta''(rho)|^2) at a double zero. Multiplicity
+  at least three forces infinite limsup. The same-model second derivation
+  independently checked each step; no residue truncation is involved.
+- The grouped-pole local calculation keeps the full contour/other-zero
+  remainder. Its double profile has a surviving endpoint atom. The
+  one-sided interpolation norm m^2 is classical; moving the support to
+  a centered interval changes it. A finite Dirichlet polynomial does
+  not make its zeta-multiplied error bandlimited.
+
+These checks change an exact energy coefficient and a scoped quantitative
+lower bound. They do not improve the positive all-height arithmetic gate,
+exclude a zero, supply an effective convergence rate, or license a
+numerical sign campaign. The original rational fixtures were not rerun.
