@@ -528,3 +528,27 @@ The [result index](../../../../../../../result-summaries/README.md) and
 checked-import and quantitative-gain rules, retain the distinction
 between these precise costs and the still-missing opposing estimate.
 No original multiple zero is excluded, and RHS-02 remains open.
+
+
+## 19. Heat crossover and the retained arithmetic payment
+
+20 October 2026. Prepared for Edward Baker with substantial LLM assistance,
+**gpt-6-astra, actual effort ultra**. [Note 15 §5](../notes/15_COMPLETED_RATIO_ENERGY_AND_MULTIPLICITY_20261020.md) resolves
+the ratio-energy transition on heat intervals t=v epsilon². Its exact
+Hermite profile decreases from the multiple-zero coefficient c_m to m/2;
+the double profile is 1+1/[4(1+r²)]. Positive Poisson mass justifies the
+global joint limit. The coefficient of 1/v in the large-v excess is one-quarter of the
+weighted multiplicity excess K_sigma−M_sigma, linking this heat comparison with
+Burnol's arithmetic lower constant. This measures an event-compatible
+heat loss, without a contrary uniform time estimate. The original source
+controls its smooth linear harmonic mass, which is a different quantity.
+
+Section 6 retains the original arithmetic: its Möbius Gram diagonal
+has order 1/epsilon, the complete norm tends to one, and the absolute
+double correlation sum diverges. The required first-order coefficient
+therefore depends on signed cancellation at absolute scale epsilon.
+[Note 12 §6](../notes/12_FINITE_EVALUATION_AND_ENDPOINT_INVERSE_COSTS_20261020.md) also pays the finite-cutoff comparison:
+damping 2/log N would need an additional truncation bound not supplied
+by the checked RH theorems. Neither comparison produces that bound.
+[Review 12 §7](../reviews/12_FINITE_PRECISION_SIGNED_KERNEL_AND_ENERGY_REVIEW_20261020.md) records the separate same-model checks.
+The existing result/avoid indexes and RHS-02 acceptance gate remain in force.

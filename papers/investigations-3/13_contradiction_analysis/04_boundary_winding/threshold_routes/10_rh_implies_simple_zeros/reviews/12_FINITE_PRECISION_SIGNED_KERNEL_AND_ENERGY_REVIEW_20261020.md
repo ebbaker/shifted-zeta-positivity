@@ -196,3 +196,66 @@ These checks change an exact energy coefficient and a scoped quantitative
 lower bound. They do not improve the positive all-height arithmetic gate,
 exclude a zero, supply an effective convergence rate, or license a
 numerical sign campaign. The original rational fixtures were not rerun.
+
+
+## 7. Heat crossover, arithmetic correlation and damping transfer
+
+20 October 2026. Prepared for Edward Baker with substantial LLM assistance,
+**gpt-6-astra, actual effort ultra**. Separate same-model analytic work
+streams and the integrating agent checked the formulas and scope.
+This remains internal LLM review, without specialist or novelty claims.
+
+**Verdict:** [Note 15 §§5–6](../notes/15_COMPLETED_RATIO_ENERGY_AND_MULTIPLICITY_20261020.md) and
+[Note 12 §6](../notes/12_FINITE_EVALUATION_AND_ENDPOINT_INVERSE_COSTS_20261020.md) pass the stated quantitative comparisons.
+The heat crossover and required signed/truncation payments remain
+compatible with a multiple endpoint. No opposing upper bound was proved.
+
+- With F_t(z)=8H(t,−2iz), the heat equation is partial_t F_t=(1/4) partial_z² F_t. At
+  t=v epsilon², its local Hermite offsets in the scaled zeta ordinate are
+  sqrt(v/2) times the probabilists' Hermite roots. The source growth
+  excludes a quadratic exponential factor. Each finite zero group
+  recovers full harmonic mass before the initial zero set is exhausted;
+  exact total Poisson mass controls the complement. Compact-v uniformity
+  is value convergence and is not differentiated in time.
+- The probabilistic interval representation is an exact integral
+  identity. For ordered dilating centers, each component's extreme
+  active indices have the correct order, so its length is nondecreasing.
+  A positive-probability open set of radii proves strict increase for
+  distinct centers, hence strict decrease of C_m(r) for m>=2.
+- Pair overlaps give the exact bounds 1/(4+gap²) and their sum. The
+  Hermite reciprocal-gap sum is m(m−1)/8. Triple overlaps are O(r^−4),
+  which gives the stated large-r coefficient. The unit-window zero count
+  makes the weighted squared-multiplicity sum finite, justifying dominated
+  passage to the global large-v tail. At the standard weight its
+  coefficient is one-quarter of Burnol's multiplicity excess K−Z.
+- The double profile is C_2=1+1/[4(1+r²)]. Its one-location heat loss is
+  v/[4(v+2)(sigma²+gamma²)]. Only the explicit local model is differentiated:
+  its derivative at zero is −1/(8 epsilon) in the zeta-shift convention.
+  The actual global conclusion uses finite differences. It does not
+  assert monotonicity of the full finite-parameter energy.
+- The original source gives exactly M_sigma'=(2/sigma)Cov(u²,
+  u tanh(2 sigma u))>0. Finite smooth harmonic mass is consistent with
+  the nonlinear energy's O(epsilon) redistribution over O(epsilon²)
+  heat intervals. The normalized positive-source collision controls
+  share this local behavior and still fail unchanged Dirichlet arithmetic.
+- Burnol's classical real-variable representation and the fixed-shift
+  convergence used for it are credited. Mellin signs, the pole
+  subtraction on both sides of x=1, and the square cutoff order in the
+  double Gram sum were checked. The telescoping integral gives
+  kappa=log(2pi)−EulerGamma. Its diagonal is
+  kappa zeta(1+2epsilon)/zeta(2+4epsilon), of order 1/epsilon, while the
+  complete squared norm tends to one. Comparable squarefree dyadic
+  blocks prove divergence of the absolute double payment for epsilon<=1/2.
+  The signed first-order remainder is retained; no rearrangement of a
+  conditionally convergent off-diagonal sum is used.
+- The damping bound uses a necessary triangle inequality with the full
+  residual. It gives liminf L I_(N,a/L)>=(sqrt K−sqrt(aC))_+². At a=2,
+  a double pair contributes 3/(gamma²+1/4) to K−2C. Replacing 2C by
+  its upper 2Z in the displayed square-root difference has the correct
+  inequality direction. For a<2 a positive truncation payment occurs
+  even in the all-simple case. The named RH estimates do not apply at
+  a/log N; fixed-shift convergence supplies no coupled rate.
+
+No fixture rerun, sign scan, manuscript change, or event exclusion was
+claimed. These additions quantify the missing uniformity and cancellation;
+they leave the positive gate RHS-02 open.

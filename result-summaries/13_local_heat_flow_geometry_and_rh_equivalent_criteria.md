@@ -287,3 +287,17 @@ normalization and reality data retained.
   estimate or simplicity conclusion. [Review 12 §5](../papers/investigations-3/13_contradiction_analysis/04_boundary_winding/threshold_routes/10_rh_implies_simple_zeros/reviews/12_FINITE_PRECISION_SIGNED_KERNEL_AND_ENERGY_REVIEW_20261020.md).
   Prepared for Edward Baker with substantial LLM assistance,
   **gpt-6-astra, actual effort ultra**; no specialist review.
+
+
+- **BW10 ratio-energy heat crossover (20 October 2026).**
+  [Note 15 §5](../papers/investigations-3/13_contradiction_analysis/04_boundary_winding/threshold_routes/10_rh_implies_simple_zeros/notes/15_COMPLETED_RATIO_ENERGY_AND_MULTIPLICITY_20261020.md) is **proved under RH in-note**,
+  with separate same-model review. At t=v epsilon² its all-zero energy
+  coefficient is sum C_m(sqrt(v/2))/(sigma²+gamma²); C_m decreases from
+  c_m to m/2, with exact C_2=1+1/[4(1+r²)]. The global large-v excess
+  has coefficient (K_sigma−M_sigma)/4. “This behavior is compatible with
+  the smooth positive theta source; it is not an opposing upper bound.”
+  A multiple endpoint requires order-1/epsilon heat-time difference
+  quotients, despite finite source-moment derivatives. No differentiation
+  of a limit or finite-parameter monotonicity is claimed.
+  [Review 12 §7](../papers/investigations-3/13_contradiction_analysis/04_boundary_winding/threshold_routes/10_rh_implies_simple_zeros/reviews/12_FINITE_PRECISION_SIGNED_KERNEL_AND_ENERGY_REVIEW_20261020.md). Prepared for Edward Baker with
+  substantial LLM assistance, **gpt-6-astra, ultra**; no specialist review.

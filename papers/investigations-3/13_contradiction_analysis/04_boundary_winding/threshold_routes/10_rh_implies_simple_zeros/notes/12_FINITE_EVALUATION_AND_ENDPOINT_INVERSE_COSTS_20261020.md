@@ -657,3 +657,153 @@ This explains the classical multiplicity-squared constant; it is not a new arith
 
 
 [Separate same-model continuation review, §6](../reviews/12_FINITE_PRECISION_SIGNED_KERNEL_AND_ENERGY_REVIEW_20261020.md).
+
+
+## 6. Damping at scale 1/log N: necessary truncation payment
+
+20 October 2026. Prepared for Edward Baker with substantial LLM assistance,
+**gpt-6-astra, actual effort ultra**. Separate same-model checks. This
+quantitative comparison supplies no new simplicity criterion or exclusion.
+
+**Outcome.** The exact ratio coefficient forces a nonzero truncation
+payment at damping `epsilon=2/log N` if any multiple zero exists.
+The checked RH truncation theorems do not control this regime. Changing
+the damping parameter alone gives no contradiction.
+
+### 6.1 The complete norm and reverse triangle inequality
+
+Assume RH. On `s=1/2+it` use the Hilbert norm
+`||f||^2=(1/(2pi)) integral_R |f(s)|^2 dt/|s|^2`, and set
+
+\[
+ A_{N,\epsilon}(s)=\sum_{n\le N}\mu(n)n^{-s-\epsilon},\quad
+ J_\epsilon=\left\|1-\frac{\zeta(s)}{\zeta(s+\epsilon)}\right\|^2,
+ \quad
+ I_{N,\epsilon}=
+ \left\|\zeta(s)\left(A_{N,\epsilon}(s)
+                    -\frac1{\zeta(s+\epsilon)}\right)\right\|^2.
+ \tag{DT1}
+\]
+
+These are exactly the quantities in
+[Balazard–de Roton, Proposition 1](https://arxiv.org/pdf/0812.1689).
+They are finite for every fixed `N>=2` and `epsilon>0` under RH.
+Write `d_N` for the infimum of `||1-zeta A||` over all length-`N`
+Dirichlet polynomials. The exact residual decomposition and triangle
+inequality imply
+
+\[
+ d_N\le\|1-\zeta A_{N,\epsilon}\|
+       \le\sqrt{J_\epsilon}+\sqrt{I_{N,\epsilon}},
+ \qquad
+ \sqrt{I_{N,\epsilon}}\ge(d_N-\sqrt{J_\epsilon})_+.
+ \tag{DT2}
+\]
+
+No cross term is discarded in deriving this necessary bound.
+
+Let the sums below run over distinct nontrivial zeros of both signs,
+and retain their actual multiplicities:
+
+\[
+ K=\sum_\rho\frac{m_\rho^2}{|\rho|^2},\qquad
+ C=\sum_\rho\frac{c_{m_\rho}}{|\rho|^2},\qquad
+ c_m=m\left(1-\binom{2m}{m}/4^m\right),\qquad
+ Z=\sum_\rho\frac{m_\rho}{|\rho|^2}
+   =2+\gamma_E-\log(4\pi).
+ \tag{DT3}
+\]
+
+All three are finite. For `K`, the usual unit-window zero-count bound
+gives `m_rho=O(log(2+|Im rho|))`; combining it with
+`N(T)=O(T log T)` makes the weighted squared-multiplicity sum converge.
+In particular `Z/2<=C<=Z`.
+
+[Burnol's lower bound](https://arxiv.org/pdf/math/0103058) gives
+`liminf (log N)d_N^2>=K`. Note 15 gives `J_epsilon=C epsilon+o(epsilon)`.
+For **fixed** `a>0`, set `L=log N` and `epsilon=a/L` in (DT2). Then
+
+\[
+ \boxed{\liminf_{N\to\infty}L I_{N,a/L}
+       \ge\big(\sqrt K-\sqrt{aC}\big)_+^2.}
+ \tag{DT4}
+\]
+
+This follows directly by multiplying (DT2) by `sqrt L`, using the
+liminf lower bound for `sqrt L d_N` and the actual limit
+`LJ_(a/L)->aC`. No uniform fixed-`epsilon` truncation estimate has been
+substituted along this sequence. The same argument holds for
+`a_N->a>0`; it provides no effective finite-`N` threshold.
+
+### 6.2 The exact distinction at a=2
+
+Writing `b_m=binom(2m,m)/4^m`,
+
+\[
+ K-2C=\sum_\rho\frac{m_\rho(m_\rho-2+2b_{m_\rho})}{|\rho|^2}.
+ \tag{DT5}
+\]
+
+Each simple-zero term is zero and every multiple-zero term is positive.
+An exact double conjugate pair at `rho=1/2±i gamma` contributes
+`3/(gamma^2+1/4)` to (DT5). Thus at `a=2` the right side of (DT4)
+is positive for any hypothetical multiple zero.
+
+An explicit consequence for that double pair uses only `C<=Z`. Put
+`w=(gamma^2+1/4)^(-1)`. Since `K>=2C+3w`,
+
+\[
+ \liminf_N L I_{N,2/L}
+ \ge\left(\sqrt{2Z+3w}-\sqrt{2Z}\right)^2>0.
+ \tag{DT6}
+\]
+
+The function `(sqrt(x+d)-sqrt x)^2` decreases in `x` for `d>0`, which
+justifies the replacement `2C<=2Z`. The bound is of order `gamma^(-4)`
+for large fixed event height. It is a necessary payment, not an upper
+bound or a claimed optimal asymptotic for this approximant.
+
+For `0<a<2`, even the all-simple case has the positive lower allowance
+`Z(1-sqrt(a/2))^2`; in general
+`(sqrt K-sqrt(aC))^2>0`. Hence `I_(N,a/L)=o(1/L)` is impossible there
+under RH, regardless of simplicity. For `a>2`, (DT4) can vanish whenever
+`a>=K/C`. The contribution of a double pair to `K-2C` tends to zero with its
+height; these constants supply no positive height-uniform separation
+of `K/C` from two. A fixed larger `a` therefore provides no universal
+event exclusion from this comparison.
+
+### 6.3 What the checked RH estimates actually pay
+
+[Balazard–de Roton, Proposition 3](https://arxiv.org/pdf/0812.1689)
+proves `I_(N,epsilon)<<N^(-epsilon/2)` only when, for fixed `delta>0`,
+
+\[
+ \epsilon>25\frac{(\log\log N)^{5/2+\delta}}{\sqrt{\log N}},
+ \qquad N>N_0(\delta).
+ \tag{DT7}
+\]
+
+For fixed `a`, `a/log N` is below this admissible range. Even a formally
+invalid substitution into the displayed bound would give only
+`exp(-a/2)`, not `o(1/log N)`.
+The earlier [fixed-shift estimate recorded by Burnol, Theorem 1.4](https://arxiv.org/pdf/math/0202166)
+has an implied constant depending on the positive shift; it cannot be
+used uniformly as `epsilon=a/log N` tends to zero. Its displayed power
+of `N` would likewise supply only constant damping after that substitution.
+
+Within the valid regime (DT7), write `epsilon=a_N/L`. Then necessarily
+`a_N>>sqrt L (log L)^(5/2+delta)`, so the ratio cost satisfies
+`LJ_epsilon~C a_N->infinity` whenever `epsilon->0`. Its size no longer
+competes with the finite constant `K`. Even a hypothetical uniform
+bound `I<<exp(-a_N/2)` would require `a_N-2 log L->infinity` to supply
+`o(1/L)` from that bound; this again enlarges the ratio cost.
+
+Therefore none of these checked primary estimates pays the needed
+`o(1/L)` at `a=2`. This is a statement about the named theorems, not an
+exhaustive current-best literature claim. A valid RH-only payment at
+that scale would be additional arithmetic progress, not an automatic
+consequence of Note 15 or of parameter optimization. Ordered convergence
+with `epsilon` fixed and `N->infinity` supplies no such coupled rate.
+
+
+[Separate same-model continuation review, §7](../reviews/12_FINITE_PRECISION_SIGNED_KERNEL_AND_ENERGY_REVIEW_20261020.md).

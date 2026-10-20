@@ -293,3 +293,15 @@ the derivative-scale term in the complete spacetime phase form; neither
 energy representation supplies an extra winding. [Internal review](../papers/investigations-3/13_contradiction_analysis/04_boundary_winding/threshold_routes/10_rh_implies_simple_zeros/reviews/12_FINITE_PRECISION_SIGNED_KERNEL_AND_ENERGY_REVIEW_20261020.md).
 Prepared for Edward Baker with substantial LLM assistance,
 **gpt-6-astra, actual effort ultra**.
+
+
+**Original Möbius Gram payment, 20 October 2026 (BW10).**
+[Note 15 §6](../papers/investigations-3/13_contradiction_analysis/04_boundary_winding/threshold_routes/10_rh_implies_simple_zeros/notes/15_COMPLETED_RATIO_ENERGY_AND_MULTIPLICITY_20261020.md) retains a diagonal of order
+1/epsilon and a signed complete norm of bounded size. “Paying those
+correlations absolutely is not merely too large: that double payment
+diverges.” The sum with absolute coefficients diverges for epsilon<=1/2,
+so keep its stated square cutoff order and the complete signed remainder.
+Fixed-window differentiation also misses the first-order arithmetic mass
+escaping to infinity. [Internal review §7](../papers/investigations-3/13_contradiction_analysis/04_boundary_winding/threshold_routes/10_rh_implies_simple_zeros/reviews/12_FINITE_PRECISION_SIGNED_KERNEL_AND_ENERGY_REVIEW_20261020.md).
+Prepared for Edward Baker with substantial LLM assistance,
+**gpt-6-astra, ultra**.

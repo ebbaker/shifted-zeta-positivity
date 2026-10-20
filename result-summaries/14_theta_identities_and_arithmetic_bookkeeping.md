@@ -441,3 +441,18 @@ This extraction credits Wei–Wu and supplies no RH-only upper bound.
 [Review 12 §6](../papers/investigations-3/13_contradiction_analysis/04_boundary_winding/threshold_routes/10_rh_implies_simple_zeros/reviews/12_FINITE_PRECISION_SIGNED_KERNEL_AND_ENERGY_REVIEW_20261020.md). Prepared for Edward Baker with
 substantial LLM assistance, **gpt-6-astra, ultra**; no specialist review,
 novelty claim or simplicity conclusion.
+
+
+**Ratio correlation and damping payment, 20 October 2026:**
+[BW10 Note 15 §6](../papers/investigations-3/13_contradiction_analysis/04_boundary_winding/threshold_routes/10_rh_implies_simple_zeros/notes/15_COMPLETED_RATIO_ENERGY_AND_MULTIPLICITY_20261020.md) is **proved under RH in-note**:
+the unchanged Möbius Gram diagonal is asymptotic to
+(log(2pi)−EulerGamma)/(2 zeta(2) epsilon), while the full norm tends to
+one. “Paying those correlations absolutely is not merely too large:
+that double payment diverges.” Its signed first-order remainder is
+not estimated sharply by this comparison. [Note 12 §6](../papers/investigations-3/13_contradiction_analysis/04_boundary_winding/threshold_routes/10_rh_implies_simple_zeros/notes/12_FINITE_EVALUATION_AND_ENDPOINT_INVERSE_COSTS_20261020.md) proves
+the necessary coupled-damping payment
+liminf (log N) I_(N,a/log N)>=(sqrt K−sqrt(aC))_+², with an explicit
+positive double-pair bound at a=2. Neither result supplies the opposing
+arithmetic estimate. [Separate same-model review §7](../papers/investigations-3/13_contradiction_analysis/04_boundary_winding/threshold_routes/10_rh_implies_simple_zeros/reviews/12_FINITE_PRECISION_SIGNED_KERNEL_AND_ENERGY_REVIEW_20261020.md).
+Prepared for Edward Baker with substantial LLM assistance,
+**gpt-6-astra, ultra**; no novelty claim or original-zero exclusion.

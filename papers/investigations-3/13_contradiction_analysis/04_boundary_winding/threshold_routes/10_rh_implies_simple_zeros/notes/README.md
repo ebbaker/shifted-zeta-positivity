@@ -43,3 +43,5 @@ Notes [11 §7](11_FULL_ABSOLUTE_PRIME_ENVELOPE_AND_LOGARITHMIC_SPREAD_20261020.m
 - [15 — Completed-ratio energy and multiplicity](15_COMPLETED_RATIO_ENERGY_AND_MULTIPLICITY_20261020.md). Under RH, the first-order weighted ratio energy has exact coefficient sum c_m/(sigma²+lambda²), with c_m=m(1−binom(2m,m)/4^m). The proof retains all zeros and transfers to the direct zeta ratio. No opposing upper bound or zero exclusion follows.
 
 [Note 12 §5](12_FINITE_EVALUATION_AND_ENDPOINT_INVERSE_COSTS_20261020.md) additionally quantifies the nonconvergence cost of the prescribed linear Möbius taper at a double zero, with the primary simplicity-dependent hypotheses audited.
+
+**Ratio continuation:** [Note 15 §§5–6](15_COMPLETED_RATIO_ENERGY_AND_MULTIPLICITY_20261020.md) proves the exact heat-scale crossover and its global large-scale coefficient, then quantifies cancellation in the unchanged Möbius Gram sum. [Note 12 §6](12_FINITE_EVALUATION_AND_ENDPOINT_INVERSE_COSTS_20261020.md) gives a necessary truncation payment at damping 2/log N. None supplies an opposing arithmetic upper bound.
