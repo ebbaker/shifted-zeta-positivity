@@ -476,3 +476,24 @@ continuation follows the [result index](../../../../../../../result-summaries/RE
 and [quantitative-gain rule](../../../../../../../avoid/20_volume_without_a_gain.md).
 Prepared for Edward Baker with substantial LLM assistance,
 **gpt-6-astra, actual effort ultra**, 20 October 2026.
+
+
+## 17. Endpoint phase energy and arithmetic rechecks
+
+20 October 2026. Prepared for Edward Baker with substantial LLM assistance,
+**gpt-6-astra, actual effort ultra**. [Note 12 §4](../notes/12_FINITE_EVALUATION_AND_ENDPOINT_INVERSE_COSTS_20261020.md) proves
+the physical phase-energy coefficient pi m(m−1)/(4t) at an isolated
+order-m event. A positive derivative scaling beta=sqrt(2t) changes the
+outer-cap cost to C_m/sqrt(2t), with C_2=pi+2, while preserving its
+(m−1)pi phase. The full spacetime form retains the d beta term. Thus
+phase-energy integrability depends on the representation and cannot
+be substituted for the invariant winding surplus.
+
+The bounded [Hopf/Julia check](../notes/01_FINITE_WALLS_ARITHMETIC_RESOLUTION_AND_GAUSSIAN_SCREEN_20261020.md) returns exactly the existing
+Poisson multiplicity bound. The [bare Euler-heat check](../notes/14_EXACT_THETA_MODE_GRAM_CANCELLATION_20261020.md)
+retains formal logarithmic positivity but has no convergent half-plane
+at positive time; completion supplies essential mixed derivatives.
+[Review 12 §5](../reviews/12_FINITE_PRECISION_SIGNED_KERNEL_AND_ENERGY_REVIEW_20261020.md) records the independent internal checks.
+These additions follow the existing result/avoid indexes and do not
+supply the RHS-02 opposing signed estimate, a new exclusion, or a reason
+to activate the deferred BW09 numerical energy campaign.

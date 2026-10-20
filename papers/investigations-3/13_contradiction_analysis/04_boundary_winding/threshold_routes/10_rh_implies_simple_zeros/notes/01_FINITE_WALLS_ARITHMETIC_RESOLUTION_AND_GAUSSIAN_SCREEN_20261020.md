@@ -171,6 +171,96 @@ by isolation and dominated convergence of the other-zero terms.
 Unquantified successful-scale existence at every zero is therefore
 **equivalent to simplicity**, not a weaker milestone.
 
+### Boundary maximum principle: no stronger one-point bound
+
+20 October 2026 continuation, for Edward Baker with substantial LLM assistance, **gpt-6-astra, actual effort ultra**.
+
+**Outcome.** This particular boundary maximum-principle attempt provides
+no new event exclusion: its full one-point Julia inequality is exactly
+Note 01's completed Poisson consumer. Positivity alone allows every
+positive integer multiplicity.
+
+Assume RH, fix an actual zero `rho=1/2+i gamma` of multiplicity `m`,
+and, for `Re z>0`, define
+\[
+ P(z)=\frac{\xi'}{\xi}(\rho+z),\qquad
+ H(z)=\frac1{P(z)}=\frac{\xi(\rho+z)}{\xi'(\rho+z)}.
+ \tag{EP1}
+\]
+The paired product gives `Re P>0`; hence `P` has no zero and `H` is
+holomorphic with `Re H>0`. Locally `xi(rho+z)=z^m a(z)`, `a(0)!=0`, so
+\[
+ H(z)=\frac zm+O(z^2),\qquad
+ H(0)=0,\qquad \partial_x\Re H(0)=\frac1m>0.
+ \tag{EP2}
+\]
+Thus Hopf's strictly positive inward derivative is compatible with a
+double zero: the quotient has canceled the common factor of orders
+`m` and `m-1`. It has a simple removable zero even when `xi` does not.
+Applying Hopf directly to `log|xi|` would instead fail its finite boundary
+value hypothesis, since that function is `m log|z|+O(1)`.
+
+The stronger boundary comparison is equally explicit. Half-plane
+Schwarz–Pick, applied to `H` at `z` and positive real `x`, says
+\[
+ \left|\frac{H(z)-H(x)}{H(z)+\overline{H(x)}}\right|^2
+ \le\left|\frac{z-x}{z+x}\right|^2.
+\]
+Insert (EP2), expand both sides to first order in `x`, and let `x` decrease
+to zero. This proves
+\[
+ \Re\frac1{H(z)}\ge m\Re\frac1z,
+ \qquad
+ m\le\delta\Re\frac{\xi'}{\xi}(\rho+\delta)
+       =B_\delta(\gamma)\quad(\delta>0).
+ \tag{EP3}
+\]
+This is exactly the already recorded bound, without an improved constant.
+The left-side version `-xi(rho-z)/xi'(rho-z)` is its conjugate-reflection
+and gives the same bound. The elementary maps `H(z)=z/m` attain the
+general boundary inequality for arbitrary `m>0`; they are sharpness
+examples for this complex-analytic comparison, not arithmetic models.
+
+The original zeta and completed derivatives must remain distinct:
+\[
+ \frac{\xi'}{\xi}(s)=\frac{\zeta'}{\zeta}(s)
+ +\frac1s+\frac1{s-1}-\frac12\log\pi+\frac12\psi(s/2).
+ \tag{EP4}
+\]
+At a critical-line point where zeta is nonzero, reflection makes the left side
+purely imaginary, so
+\[
+ \Re\frac{\zeta'}{\zeta}(1/2+it)
+ =-\frac12\Re\psi(1/4+it/2)+\frac12\log\pi
+ =-\frac12\log\frac{|t|}{2\pi}+O(t^{-2}).
+ \tag{EP5}
+\]
+This excludes `zeta'=0` there at sufficiently large height, but the
+quotient is undefined at a common zero. The actual order-`m` boundary
+zero remains an order-`m-1` zero of `zeta'`.
+
+The primary [Levinson–Montgomery paper, Theorem 1 and its corollary,
+pp. 49 and 52](https://archive.ymsc.tsinghua.edu.cn/pacm_download/117/6174-11511_2006_Article_BF02392141.pdf)
+excludes derivative zeros in the **open** strip `0<Re s<1/2` under RH.
+Its proof indents the critical-line zeros; it does not exclude common
+zeros on that boundary. The completion in (EP4) and the
+[digamma asymptotic](https://dlmf.nist.gov/5.11.E2) give (EP5) directly.
+
+Finally, the positive coefficients of `-zeta'(s)` in `Re s>1` give
+`|zeta'(sigma+it)|<=-zeta'(sigma)`, an upper bound, with no endpoint
+nonvanishing consequence. Note 09 already supplies multiple-boundary-zero
+controls with positive ordinary and logarithmic coefficients; their
+failure of exact completion must be retained. Note 05's different
+completed-source controls likewise retain their failed Dirichlet-series
+premise. Neither control is being assigned unchanged zeta arithmetic.
+
+**Scope:** the Hopf/Julia comparison and the named open-strip theorem
+supply no additional opposing sign beyond `B_delta`. This assessment
+does not rule out an independent signed arithmetic estimate for that
+consumer or every use of derivative-zero geometry.
+
+[Separate same-model continuation check](../reviews/12_FINITE_PRECISION_SIGNED_KERNEL_AND_ENERGY_REVIEW_20261020.md).
+
 ### 3.2 The changed Euler factor contributes a mass greater than two
 
 For the opening control let \(L=\log p\). Its completion is

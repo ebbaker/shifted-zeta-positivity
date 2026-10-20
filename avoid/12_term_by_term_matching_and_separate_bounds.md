@@ -284,3 +284,12 @@ on the exact signed consumer”: recovering that value by an exponentially
 large pole/prime cancellation does not estimate it below two.
 [Separate same-model review](../papers/investigations-3/13_contradiction_analysis/04_boundary_winding/threshold_routes/10_rh_implies_simple_zeros/reviews/15_COHERENT_REMOTE_GAP_SATURATION_REVIEW_20261020.md). Prepared for Edward
 Baker with substantial LLM assistance, **gpt-6-astra, ultra**.
+
+**Endpoint phase-energy scale, 20 October 2026 (BW10).** [Note 12 §4](../papers/investigations-3/13_contradiction_analysis/04_boundary_winding/threshold_routes/10_rh_implies_simple_zeros/notes/12_FINITE_EVALUATION_AND_ENDPOINT_INVERSE_COSTS_20261020.md)
+quantifies logarithmically divergent physical phase energy and integrable
+scaled energy at the same multiple event, with unchanged cap phase.
+“The scaled finite energy therefore does not exclude this event.” Retain
+the derivative-scale term in the complete spacetime phase form; neither
+energy representation supplies an extra winding. [Internal review](../papers/investigations-3/13_contradiction_analysis/04_boundary_winding/threshold_routes/10_rh_implies_simple_zeros/reviews/12_FINITE_PRECISION_SIGNED_KERNEL_AND_ENERGY_REVIEW_20261020.md).
+Prepared for Edward Baker with substantial LLM assistance,
+**gpt-6-astra, actual effort ultra**.

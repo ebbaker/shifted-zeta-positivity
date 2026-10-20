@@ -260,3 +260,191 @@ The exact theta source supplies finite moment upper bounds for each `|h_j|`, but
 [Rodgers–Tao, §§6–8](https://arxiv.org/html/1801.05914v2) obtain their integrated-energy and final time-zero estimates under the contradiction assumption `Lambda<0`, using an all-real evolution interval strictly before zero. Their finite-cluster identities retain exterior terms (Lemma 4.2). RH alone supplies the forward interval beginning at zero, so their pre-zero regularizing interval is unavailable here. Replacing it with an asserted finite integral down to the endpoint would assume the missing input.
 
 **Decision.** Retain BW09 HFCE-07 as deferred. The next needed result is an independently proved exact-theta bound that contradicts the displayed endpoint energy cost; none follows from the checked source moments, complete exterior bookkeeping, or compatible positive finite parts. No new numerical campaign, exclusion class, or standalone research milestone is justified by this calculation.
+
+
+## 4. Endpoint phase energy and derivative-scale comparison
+
+20 October 2026. Prepared for **Edward Baker** with substantial LLM assistance.
+Actual model **gpt-6-astra**, reasoning effort **ultra**; derivation against
+HEAD `fa80fa9`. Separate same-model internal checks by the phase and Gaussian
+agents; no specialist review or novelty claim. This is an addition to the existing endpoint assessment.
+
+The [result index](../../../../../../../result-summaries/README.md),
+[collision controls](../../../../../../../result-summaries/12_collision_controls_and_screening.md),
+[avoid index](../../../../../../../avoid/README.md), and
+[gain-before-expansion rule](../../../../../../../avoid/20_volume_without_a_gain.md)
+apply. This is an exact comparison of two energies for the **same event**.
+It supplies no opposing estimate from unchanged theta arithmetic.
+
+Keep §3's order-`m>=2` event, `g`, `L=g'(a)/g(a)`, and
+`tau=sqrt(2t)`. Write `P_m=He_m` and let `nu_1<...<nu_(m-1)` be the
+roots of `He_(m-1)`. For the physical jet define
+
+\[
+ J=H+iH_x,\qquad
+ \rho_t(x)=-\operatorname{Im}\frac{J_x}{J}
+ =\frac{H_x^2-HH_{xx}}{H^2+H_x^2}.
+ \tag{H8}
+\]
+
+Under RH the positive-time zeros are simple and real, and this phase
+density is positive. The following local asymptotics retain the complete
+analytic contribution of the exterior zeros and source.
+
+### Actual peak centers and the retained exterior term
+
+Put `F(tau,z)=H(t,a+tau z)/(g(a)tau^m)`. The heat expansion in §3 gives
+`F=P_m+L tau P_(m+1)+O(tau^2)`, with derivatives uniformly on compact
+complex sets. The actual real critical points `c_j(t)`, where `H_x=0`,
+and the nearby complex zeros `z_j(t)=alpha_j(t)-i beta_j(t)` of `J` obey
+
+\[
+\begin{aligned}
+ c_j(t)&=a+\tau\nu_j+\frac{m+1}{m}L\tau^2+O(\tau^3),\\
+ z_j(t)&=a+\tau\nu_j+
+       \left(\frac{m+1}{m}L-\frac{i}{m}\right)\tau^2+O(\tau^3).
+\end{aligned}
+\tag{H9}
+\]
+
+Indeed, the scaled physical jet is `tau F+i F_z`. At `nu_j`,
+`P_m'=0`, `P_m''=-m P_m`, and `P_(m+1)'=(m+1)P_m`; the simple-root
+implicit function theorem gives (H9). In particular
+`beta_j=2t/m+O(t^(3/2))>0`, `alpha_j-c_j=O(t^(3/2))`, and distinct
+centers are separated by a nonzero constant times `sqrt(t)`.
+
+At time zero `J` has exact order `m-1` at `a`. Choose a fixed complex
+disk containing no other zero of `J(0,.)`. Weierstrass preparation gives
+`J(t,z)=A(t,z) product_j(z-z_j(t))`, with `A` nonvanishing and
+`A_x/A` uniformly bounded on a smaller fixed interval `I` about `a`.
+Consequently the following is an exact identity on `I`:
+
+\[
+ \rho_t(x)=R_t(x)+\sum_{j=1}^{m-1}
+ \frac{\beta_j(t)}{(x-\alpha_j(t))^2+\beta_j(t)^2},
+ \qquad R_t=-\operatorname{Im}(A_x/A),\quad |R_t|\le C.
+ \tag{H10}
+\]
+
+The bounded term `R_t` is retained, not assigned a favorable sign or
+deleted. Formula (H10) proves the uniform local limit, for bounded real `y`,
+
+\[
+ \frac{2t}{m}\rho_t\!\left(c_j(t)+\frac{2t}{m}y\right)
+ \longrightarrow\frac1{1+y^2}.
+ \tag{H11}
+\]
+
+Each peak has asymptotic phase area `pi`; the peak width is `2t/m`,
+smaller than the `sqrt(t)` root-separation scale.
+
+### Full physical energy and the scale comparison
+
+For a Lorentzian `L_j(x)=beta_j/((x-alpha_j)^2+beta_j^2)`,
+
+\[
+ \int_{\mathbb R}L_j^2\,dx=\frac{\pi}{2\beta_j},\qquad
+ \int_{\mathbb R}L_iL_j\,dx=
+ \frac{\pi(\beta_i+\beta_j)}
+      {(\alpha_i-\alpha_j)^2+(\beta_i+\beta_j)^2}=O(1)
+ \quad(i\ne j).
+\]
+
+The bounded unit contributes `O(1)` to the cross and squared integrals.
+Restricting a squared peak to `I` loses `O(t^2)`. The same leading
+answer holds on the actual outer-root cap
+`[x_1(t),x_m(t)]`: each peak is a distance comparable to `tau` from
+its endpoints, so its omitted squared tails are `O(tau)`.
+Thus, for either of these two integration intervals `I_t`,
+
+\[
+ \int_{I_t}\rho_t(x)^2\,dx
+ =\frac{\pi m(m-1)}{4t}+O(t^{-1/2}),\qquad
+ \int_\epsilon^{t_0}\int_{I_t}\rho_t^2\,dx\,dt
+ =\frac{\pi m(m-1)}4\log\frac{t_0}{\epsilon}+O(1).
+ \tag{H12}
+\]
+
+Constants may depend on the fixed event and interval. The coefficient
+is exactly `4 pi` times §3's leading unordered inverse-gap coefficient.
+This is compatible with every finite multiplicity.
+
+Now apply precisely the derivative rescaling discussed in
+[BW09, “Concentration, energy and invariant information”](../../09_expanding_contour_later_collision/manuscript/main.tex).
+For each positive-time cap set `beta(t)=tau` and
+
+\[
+ J_\beta=H+i\beta H_x,\qquad
+ \rho_{\beta,t}=\frac{\beta(H_x^2-HH_{xx})}{H^2+\beta^2H_x^2}.
+ \tag{H13}
+\]
+
+Exactly under `x=a+tau z`,
+`rho_(beta,t)=tau^(-1)(F_z^2-F F_zz)/(F^2+F_z^2)`.
+The polynomials `P_m` and `P_m'` have no common real zero, so their
+squared denominator stays positive on a fixed compact interval
+containing the actual cap. Uniformly there,
+
+\[
+ \rho_{\beta,t}(a+\tau z)=\tau^{-1}{\cal R}_m(z)+O(1),
+ \qquad {\cal R}_m=
+ \frac{(P_m')^2-P_mP_m''}{P_m^2+(P_m')^2}.
+ \tag{H14}
+\]
+
+The scaled cap endpoints are `lambda_1+O(tau)` and
+`lambda_m+O(tau)`. Their displacement therefore contributes only `O(1)`
+to the following energy, including all endpoint pieces:
+
+\[
+ \int_{x_1(t)}^{x_m(t)}\rho_{\beta,t}^2\,dx
+ =\frac{C_m}{\sqrt{2t}}+O(1),\qquad
+ C_m=\int_{\lambda_1}^{\lambda_m}{\cal R}_m(z)^2\,dz>0.
+ \tag{H15}
+\]
+
+In particular `P_2=z^2-1`, `R_2=2/(1+z^2)`, and `C_2=pi+2`.
+The time integral from zero is finite, with value
+`C_m sqrt(2t_0)+O(t_0)` as `t_0` decreases to zero.
+Nevertheless, for every sufficiently small positive `t`, **both jets
+have exactly the same cap phase decrease `(m-1)pi`**, one `pi` for each
+adjacent root interval. The total cap count has not decreased.
+
+This is a cap-energy comparison, not permission to discard a term from
+a spacetime contour. With time-dependent `beta` the complete one-form is
+
+\[
+ d\arg J_\beta=
+ \frac{\beta Q_x+\beta' HH_x}{H^2+\beta^2H_x^2}\,dt
+ -\frac{\beta Q}{H^2+\beta^2H_x^2}\,dx,
+ \qquad Q=H_x^2-HH_{xx}.
+ \tag{H16}
+\]
+
+Positive scaling preserves degree on each nonzero finite contour;
+`beta(0)=0` supplies no nonzero extension through the event.
+
+### What this bounded attempt establishes
+
+The physical phase energy diverges, but its divergence is not invariant
+under the derivative-scale change already allowed by BW09. Conversely,
+finite energy for the rescaled cap is compatible with the same endpoint
+event and the same cap phase. Neither statement supplies a strict winding
+surplus. The scaled finite energy therefore does not exclude this event.
+
+Complete theta moment bounds control finite jets, not the reciprocal
+denominator in (H8). Global counting retains multiplicities and does not
+bound inverse gaps at a fixed event. The primary
+[Rodgers–Tao argument, introduction and §§6–8](https://arxiv.org/html/1801.05914v2)
+obtains its integrated and time-zero energy estimates under `Lambda<0`,
+with an all-real interval strictly before zero. RH supplies no such
+interval; the cited theorem cannot replace the missing endpoint bound.
+
+Note 05's normalized positive-source doubles satisfy these same local
+heat laws and approximate theta in the stated finite heat-jet norms.
+Their failed premise is unchanged ordinary-Dirichlet arithmetic, so this
+comparison is not a counterexample to an estimate using the full original
+source. No exact-theta opposing bound was obtained. Keep the energy
+campaign deferred and retain this calculation only as the quantitative
+scale clarification of the existing endpoint assessment.
+[Separate same-model continuation review](../reviews/12_FINITE_PRECISION_SIGNED_KERNEL_AND_ENERGY_REVIEW_20261020.md).

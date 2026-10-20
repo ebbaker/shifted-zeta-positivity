@@ -192,3 +192,54 @@ which is negative near zero but positive at v=5pi/2. The complete differentiated
 RH's product retains the possible residue m in F'/F, and modularity retains the cancellations already quantified in §§1–4. Neither supplies an independent slope separation here. Positive weighted-square source controls screen the general convexity inference but do not acquire the unchanged theta coefficients or an all-real endpoint. Note 05's normalized all-real source control instead fails the ordinary Dirichlet-series premise. These distinct controls are not combined into a counterexample to RH plus unchanged arithmetic.
 
 [Separate same-model continuation review](../reviews/14_REMOTE_GAP_COMPLETE_PAYMENT_AND_EVENT_ATTEMPTS_REVIEW_20261020.md).
+
+
+## 7. Bare Euler heat positivity does not transfer to completed heat
+
+20 October 2026. Concise assessed attempt for Edward Baker with substantial LLM assistance; **gpt-6-astra, ultra**. This is an existing-note assessment, not a separate milestone. No RH-to-simplicity implication is obtained.
+
+Put
+\[
+C(t,s)=8H(t,-2i(s-\tfrac12)),\qquad
+A(s)=\tfrac12s(s-1)\pi^{-s/2}\Gamma(s/2).
+\]
+The BW09 source gives \(C_t=C_{ss}/4\), \(C(0,s)=\xi(s)=A(s)\zeta(s)\), and joint entireness in \(t,s\). Consider instead the **formal Dirichlet series**
+\[
+Z(t,s)=\sum_{n\ge1}e^{t(\log n)^2/4}n^{-s},\qquad
+\log Z=\sum_{n\ge2}b_n(t)n^{-s}.
+\tag{SE1}
+\]
+Every individual coefficient and logarithmic coefficient is well defined: the coefficient of \(n^{-s}\) in a product or formal logarithm uses finitely many divisor factorizations. Formal differentiation gives
+\[
+b_n'(t)=\frac14\left((\log n)^2b_n(t)+
+\sum_{\substack{ab=n\\a,b\ge2}}\log a\log b\,b_a(t)b_b(t)\right),
+\quad b_n(0)=\frac{\Lambda(n)}{\log n}.
+\tag{SE2}
+\]
+Induction on \(n\), or the positive integrating-factor formula, proves \(b_n(t)\ge0\) for \(t\ge0\). In particular \(b_p(t)=e^{t(\log p)^2/4}\). For distinct primes, however,
+\[
+b_{pq}(t)=e^{t(\log p+\log q)^2/4}
+ -e^{t((\log p)^2+(\log q)^2)/4}>0\quad(t>0);
+\]
+the original prime-power support is already lost. More decisively, the prime terms of both series in (SE1) fail to tend to zero for every fixed \(s\) and \(t>0\). Formal nonnegative logarithmic coefficients therefore provide no convergent right-half-plane expansion to continue to an event.
+
+The failure also appears in heat time at each fixed real \(\sigma>1\). Since \(\zeta(s)-1/(s-1)\) is entire, Cauchy's estimate on any fixed radius \(R>\sigma-1\) yields
+\[
+\frac{\zeta^{(2k)}(\sigma)}{4^k k!}
+\sim\frac{(2k)!}{4^k k!(\sigma-1)^{2k+1}}
+\sim\frac{k!}{\sqrt{\pi k}(\sigma-1)^{2k+1}}.
+\tag{SE3}
+\]
+Thus the bare heat Taylor series has radius zero. In contrast, the complete theta heat Taylor series has infinite radius. The elementary analytic-continuation input is the [sole simple pole of zeta, DLMF §25.2](https://dlmf.nist.gov/25.2); the [completion is DLMF 25.4.4](https://dlmf.nist.gov/25.4.E4). No asymptotic interchange of a divergent series is used.
+
+Keeping completion gives the exact sensitivity
+\[
+C_t(0,s)=\tfrac14(A\zeta''+2A'\zeta'+A''\zeta).
+\tag{SE4}
+\]
+At a hypothetical multiple nontrivial zero \(\rho\), this reduces to \(C_t(0,\rho)=A(\rho)\zeta''(\rho)/4\). It supplies no separate sign or lower bound for the surviving derivative. A double zero gives the already known local unfolding; higher multiplicity may annihilate this derivative too. Neither RH nor (SE2) supplies a missing event-conditioned estimate in this calculation.
+
+The existing [Investigation 22 heat-packet note](../../../../../../investigations-2/active/22_theta_manifold_geometry/notes/03_theta_bundles_and_connections/11_MULTIPLICATIVE_DILATION_AND_COMPLETE_HEAT_PACKETS_20261015.md)
+already proves the positive-time divergence of separated heat–Möbius packets (§§3–5), while their paired boundary-complete differences remain convergent. The present remark only identifies the formal logarithmic sign and the heat-time Taylor cost of trying to bypass that obstruction. Local Note14's coherent theta cancellation remains intact. Note05's normalized collision control fails ordinary Dirichlet normalization, so it is not claimed to satisfy (SE1); the generic endpoint heat identity in (SE4) is shared by such analytic collision flows. This scoped assessment follows result-summaries/14 and avoid/12, /15 and /20; it makes no claim against other complete, signed arithmetic estimates.
+
+[Separate same-model continuation check](../reviews/12_FINITE_PRECISION_SIGNED_KERNEL_AND_ENERGY_REVIEW_20261020.md); the [result index](../../../../../../../result-summaries/README.md) and [avoid index](../../../../../../../avoid/README.md) retain the stated scope.

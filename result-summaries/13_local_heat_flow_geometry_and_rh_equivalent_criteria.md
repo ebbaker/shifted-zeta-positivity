@@ -273,3 +273,17 @@ normalization and reality data retained.
   [Review 06](../papers/investigations-3/13_contradiction_analysis/04_boundary_winding/threshold_routes/09_expanding_contour_later_collision/reviews/06_PHASE_CONCENTRATION_MANUSCRIPT_REVIEW_20261020.md).
   [Program 03](../papers/investigations-3/13_contradiction_analysis/04_boundary_winding/threshold_routes/09_expanding_contour_later_collision/research-overview/03_ANALYTICAL_PHASE_SURPLUS_PROGRAM_20261020.md)
   is prepared; its new finite analytical estimates remain unexecuted.
+
+
+- **BW10 endpoint phase-energy comparison (20 October 2026).**
+  [Note 12 §4](../papers/investigations-3/13_contradiction_analysis/04_boundary_winding/threshold_routes/10_rh_implies_simple_zeros/notes/12_FINITE_EVALUATION_AND_ENDPOINT_INVERSE_COSTS_20261020.md) is **proved in-note for an isolated
+  analytic backward-heat event**, with separate same-model review.
+  At multiplicity m, the physical squared phase-density integral is
+  pi m(m−1)/(4t)+O(t^(−1/2)). Positive derivative scale sqrt(2t) instead
+  gives outer-cap cost C_m/sqrt(2t)+O(1), C_2=pi+2, with the same
+  (m−1)pi cap phase. The spacetime d beta term is retained.
+  “The scaled finite energy therefore does not exclude this event.”
+  This is a quantitative scale comparison, not an opposing arithmetic
+  estimate or simplicity conclusion. [Review 12 §5](../papers/investigations-3/13_contradiction_analysis/04_boundary_winding/threshold_routes/10_rh_implies_simple_zeros/reviews/12_FINITE_PRECISION_SIGNED_KERNEL_AND_ENERGY_REVIEW_20261020.md).
+  Prepared for Edward Baker with substantial LLM assistance,
+  **gpt-6-astra, actual effort ultra**; no specialist review.

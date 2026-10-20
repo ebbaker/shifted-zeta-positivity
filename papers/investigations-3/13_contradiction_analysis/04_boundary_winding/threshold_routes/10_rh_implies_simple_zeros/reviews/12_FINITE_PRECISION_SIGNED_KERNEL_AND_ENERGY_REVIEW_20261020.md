@@ -76,3 +76,62 @@ The main numerical improvement is a classical algorithm applied with its complet
 The endpoint-energy assessment does not activate BW09 HFCE-07. Rodgers–Tao's pre-zero all-real interval is a premise of that contradiction argument, not a consequence of RH alone. The original BW09 manuscript and its task registers remain unchanged.
 
 The notes, their indexes, the current overview and progress register, and concise repository pointers are updated together. Note 09 now explicitly records the later matched-algorithm comparison without deleting its correct earlier Euler-sum calculation. No numerical source or fixture changed; the existing 265 exact-rational checks are not evidence for these new analytic estimates and were not rerun. No sign scan or new numerical campaign was performed. No manuscript snapshot was created.
+
+
+## 5. Endpoint continuation: phase cost, boundary comparison and bare Euler heat
+
+20 October 2026, for Edward Baker with substantial LLM assistance,
+**gpt-6-astra, actual effort ultra**. Separate same-model analytic work
+streams and the integrating agent checked the new formulas; this is
+internal LLM review, not specialist review or a novelty claim.
+
+**Verdict:** [Note 12 §4](../notes/12_FINITE_EVALUATION_AND_ENDPOINT_INVERSE_COSTS_20261020.md) proves the physical phase-energy
+coefficient and its derivative-scale comparison. The bounded attempts in
+[Note 01 §3.1](../notes/01_FINITE_WALLS_ARITHMETIC_RESOLUTION_AND_GAUSSIAN_SCREEN_20261020.md) and [Note 14 §7](../notes/14_EXACT_THETA_MODE_GRAM_CANCELLATION_20261020.md) supply no
+opposing arithmetic estimate. No original multiple zero is excluded.
+
+- Factoring H+iH_x near an order-m event gives exactly m−1 nearby lower
+  half-plane zeros. The Hermite equation at each critical point fixes
+  their imaginary depths at 2t/m+O(t^(3/2)). The analytic unit retains
+  the entire exterior field. Its phase derivative is bounded on the
+  fixed window; it is not discarded in the squared-energy estimate.
+- Each Lorentzian contributes pi/(2 beta_j) to the full-line squared
+  integral. Pairwise cross integrals are
+  pi(beta_j+beta_k)/((alpha_j−alpha_k)^2+(beta_j+beta_k)^2)=O(1),
+  since their centers separate by order sqrt(t). Fixed-window tails do
+  not affect the leading coefficient pi m(m−1)/(4t). The error
+  O(t^(−1/2)) is time integrable and gives the stated logarithmic cost.
+- For derivative scale beta(t)=tau=sqrt(2t), the normalized real-cap jet
+  is He_m+i He_m'+O(tau). Its denominator is uniformly positive on the
+  limiting cap because He_m and He_m' have no common real zero.
+  Moving endpoints contribute O(1) to the squared-density integral.
+  Consequently its leading cost is C_m/sqrt(2t), and direct integration
+  gives C_2=pi+2. The same (m−1)pi cap phase is retained. The extra
+  term HH_x d beta/(H^2+beta^2 H_x^2) remains in the spacetime phase
+  one-form; it cannot be omitted on a general contour. Positive scaling
+  preserves finite contours only with their complete phase accounting.
+- The Hopf derivative of xi/xi' at a zero is 1/m. Expanding half-plane
+  Schwarz–Pick to first order gives exactly the existing Poisson bound,
+  with no improved constant. The original and completed derivatives
+  differ by every term displayed in EP4; none is dropped at the boundary.
+  [Levinson–Montgomery, Theorem 1 and corollary](https://archive.ymsc.tsinghua.edu.cn/pacm_download/117/6174-11511_2006_Article_BF02392141.pdf)
+  concerns the open left half-strip. That theorem was checked directly
+  in the arithmetic work stream; the independent check covered the
+  formulas and scope, without claiming another literature reread.
+- The bare heat coefficient ODE has the factor one-quarter throughout.
+  Its divisor terms are triangular, so coefficientwise positivity is
+  valid formally. Prime terms grow as exp(t(log p)^2/4), preventing
+  convergence in every fixed half-plane. Subtracting zeta's sole pole
+  and applying Cauchy's estimate proves the factorial heat-Taylor
+  coefficient asymptotic; no divergent sum is interchanged. The mixed
+  completion derivatives in SE4 are essential. The existing
+  Investigation 22 divergence result is cited, not counted again as new.
+
+The phase statement is local to an isolated analytic backward-heat
+event and is also satisfied by the collision controls. The source
+controls still fail unchanged ordinary-Dirichlet arithmetic; the separate
+arithmetic controls still fail reflected entire completion. Source or
+finite-jet upper bounds alone supply no reciprocal phase-energy bound.
+The pre-zero all-real interval in Rodgers–Tao remains unavailable from RH
+alone. No numerical fixtures, sign scans, finite exclusion certificates,
+manuscripts or BW09 task statuses were changed by this continuation.
