@@ -10,4 +10,6 @@
 
 - [04 — Zero deflation and rational resolution](04_ZERO_DEFLATION_AND_RATIONAL_RESOLUTION_20261020.md). Certified subtraction costs, sharp actual tails and a uniform two-parameter estimator barrier; no original multiple-zero exclusion.
 
+- [05 — Close positive sources with normalized double zeros](05_CLOSE_POSITIVE_SOURCES_AND_NORMALIZED_DOUBLE_ZEROS_20261020.md). Under RH, uniformly close positive-source controls preserve the leading tail and residue one but fail ordinary Dirichlet-series arithmetic; separate curvature and finite-shift screens. No original theta event is excluded.
+
 [Progress](../research-progress/01_RH_TO_SIMPLICITY_PROGRESS_20261020.md) · [Reviews](../reviews/README.md).

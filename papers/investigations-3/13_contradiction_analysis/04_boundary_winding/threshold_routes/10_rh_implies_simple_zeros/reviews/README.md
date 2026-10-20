@@ -22,3 +22,9 @@ theta event is excluded; the positive arithmetic gate remains open.
 checks exact subtraction, the sharp actual tail, uniform optimization,
 positive-coefficient combinations and all stated precision requirements.
 Explicit error costs and scoped estimating failures; no theta exclusion.
+
+[05 — Normalized source control and shift audit](05_SOURCE_CONTROL_AND_SHIFT_AUDIT_20261020.md)
+checks the positive source divisions, uniform relative bound, leading
+tail, residue-one normalization, failed arithmetic premise and heat
+evolution. The separate curvature control and finite-shift comparison
+remain scoped; no original theta multiple zero is excluded.

@@ -69,6 +69,18 @@ measure.
   Added for Edward Baker with substantial LLM assistance, gpt-6-astra,
   actual effort ultra; no specialist review.
 
+
+- [BW-10 normalized endpoint control](../papers/investigations-3/13_contradiction_analysis/04_boundary_winding/threshold_routes/10_rh_implies_simple_zeros/notes/05_CLOSE_POSITIVE_SOURCES_AND_NORMALIZED_DOUBLE_ZEROS_20261020.md), 20 October 2026:
+  “This establishes a precise limitation on a **fixed positive tolerance**
+  or these broad source/completion premises alone.” Under RH it is
+  uniformly close to theta, with the same leading tail and pole residue
+  one, but has a double zero escaping to infinity. Ordinary Dirichlet-series
+  arithmetic fails; exact theta data and height-dependent certified
+  margins are outside this conclusion. The separate strong-curvature
+  control has a different preservation list. [Same-model internal
+  review](../papers/investigations-3/13_contradiction_analysis/04_boundary_winding/threshold_routes/10_rh_implies_simple_zeros/reviews/05_SOURCE_CONTROL_AND_SHIFT_AUDIT_20261020.md). Added for Edward Baker with substantial LLM assistance,
+  **gpt-6-astra, effort ultra**; no specialist review.
+
 ## What it cost
 
 The 09-to-06 continuation, 02's continuation and 17's pilot ended at

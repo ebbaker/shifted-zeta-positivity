@@ -5,22 +5,23 @@ substantial LLM assistance. **gpt-6-astra (Codex), reasoning effort ultra**,
 verified from recorded turn metadata. Separate same-model internal review;
 no specialist review.
 
-**State: structural transfer, arithmetic screens and the zero-deflation /
-rational-resolution analysis completed as bounded attempts. These give
-partial structural results, explicit certification costs and scoped
-estimating failures. RH ⇒ simplicity remains unproved. No multiple theta
-zero or new height interval has been excluded.** The [program][program] retains its acceptance gates.
+**State: structural transfer, arithmetic screens, zero-deflation costs
+and a normalized positive-source control completed as bounded attempts.
+These give partial structural results, explicit certification costs,
+scoped estimating failures and a sharper approximation control.
+RH ⇒ simplicity remains unproved. No multiple theta zero or new height
+interval has been excluded.** The [program][program] retains its acceptance gates.
 The original scope was selected in [chat 0003][origin]; this round is
 [chat 0004][current].
 
 | Task | Current status | Evidence / unresolved requirement |
 | --- | --- | --- |
 | RHS-00 | Complete: scope and literature | [Opening analysis][opening] §§1–2, 9; primary inputs rechecked in [review 02][review]. No methodological priority or relative-difficulty theorem claimed. |
-| RHS-01 | Complete: inherited transfer and control screen; strengthened this round | Opening §§3–6. [Note 01][n1] proves finite root-label continuation under RH, exact endpoint/middle complement, and retained multiplicity phase atom. |
-| RHS-02 | Declared estimators assessed and justified deflation quantified; positive theta-estimate gate remains unmet | Notes 01–03 treat fixed-width, finite-prime and signed-error envelopes, and finite Euler-control rejection. [Note 04][n4] proves exact subtraction costs, a sharp actual-tail asymptotic and the fully optimized rational-power absolute-payment barrier. None supplies an opposing estimate at an original multiple zero. |
+| RHS-01 | Complete: inherited transfer and control screen; strengthened this round | Opening §§3–6. [Note 01][n1] proves finite root-label continuation under RH, exact endpoint/middle complement, and retained multiplicity phase atom. [Note 05][n5] adds an RH-conditional, uniformly close positive-source control with an exact double event, unchanged leading tail and pole residue one. |
+| RHS-02 | Declared estimators assessed and justified deflation quantified; positive theta-estimate gate remains unmet | Notes 01–03 treat fixed-width, finite-prime and signed-error envelopes, and finite Euler-control rejection. [Note 04][n4] proves exact subtraction costs, a sharp actual-tail asymptotic and the fully optimized rational-power absolute-payment barrier. Note 05 screens one finite horizontal-shift consumer exactly and identifies the normalized source control's failed Dirichlet-series premise. None supplies an opposing estimate at an original multiple zero. |
 | RHS-03 | Finite-wall subtask proved under RH; strict surplus still gated | Note 01 §2 covers every finite cap and multiplicity. Cap mass remains `(m-1)pi`; the Gaussian sign is event-compatible. Note 04 identifies the exterior inverse-square sum needed for effective deflation, but wall continuation gives no quantitative upper bound for it. |
 | RHS-04 | Coverage audited; no new exclusion | Structural statements cover all finite heights/multiplicities under RH. Arithmetic failure ranges are stated explicitly; no all-height signed estimate or new theta exclusion class exists. |
-| RHS-05 | Reviews of bounded attempts completed; full-argument review remains gated | [Review 02][review], [review 03][review3] and [review 04][review4] check the stated proofs, imports and controls. Review 04 checks the uniform two-parameter optimization and sharp tail, and resolves count, interval and location precision requirements. Same-model internal validation; no simplicity theorem. |
+| RHS-05 | Reviews of bounded attempts completed; full-argument review remains gated | [Reviews 02–05](../reviews/README.md) check the stated proofs, imports and controls. Review 04 checks uniform optimization and certified subtraction; [review 05][review5] checks source positivity, the whole-tail relative bound, exact residue normalization and the distinct curvature control. Same-model internal validation; no simplicity theorem. |
 
 ## Quantitative outcomes
 
@@ -66,10 +67,28 @@ The original scope was selected in [chat 0003][origin]; this round is
   retains infimum `(1/4+o(1)) log(gamma)`. Signed estimates and exact
   certified subtraction are not covered by these estimator limitations.
 
+- Under RH, Note 05 merges consecutive distinct high zeros `b<c` into an
+  exact double pair `+/-a` through an explicit positive-source change.
+  Its uniform relative error is at most
+  `epsilon=4e/b^2+4(d+e)^2/(b^2c^2)->0`, with `d,e` defined there.
+  It preserves the leading theta tail, functional equation, displayed
+  completion, pole residue one and normalization at positive real
+  infinity. It fails ordinary Dirichlet-series arithmetic, with an
+  algebraic large-real correction. The added event escapes to infinity;
+  this screens fixed positive tolerance and the named structural
+  premises, not height-dependent certified margins or exact theta data.
+- A **separate** polynomial control retains any fixed strict slack below
+  theta's global log-concavity floor and still has an endpoint double
+  zero under RH. This curvature claim is not asserted for the normalized
+  merger. The finite horizontal-shift consumer is an exact average of
+  Poisson consumers, no smaller than its starting-width value; the
+  positive Euler-quotient estimate gives the opposite direction from
+  the needed upper bound. No event exclusion follows from either screen.
+
 The frozen [exact algebra contract][contract] and [replay][replay] passed
 265 rational fixtures. They check finite constants and the control sum,
 not theta zeros or the infinite analytical estimates. It was unchanged
-and not rerun for Note 04, which received analytical cross-checks. No
+and not rerun for Notes 04–05, which received analytical cross-checks. No
 numerical sign scan or manuscript was started. The original BW09, HFCE and PSC registers
 retain their existing states; the earlier manuscript was reviewed but
 not changed.
@@ -97,6 +116,12 @@ test; do not repeat that optimization or its nonnegative-combination
 appendix without an additional input. A successful deflated estimate
 would need certified noncentral membership and enough count, location,
 tail and signed arithmetic precision to put the upper endpoint below two.
+Note 05 also prevents replacing the missing arithmetic estimate by
+fixed relative source accuracy, the leading tail and the named completion
+normalizations alone. Its normalized control fails the ordinary
+Dirichlet series; the separate strong-curvature control must not be
+given that control's preservation list. An exact theta or discrete
+arithmetic argument must still produce an opposing inequality.
 Signed frequency correlations using unchanged prime support, correlated
 full-source estimates and other kernel classes remain outside these
 scoped conclusions. No successful all-height estimate has been obtained. Weak Mertens and all-zero negative
@@ -121,3 +146,6 @@ unproved arithmetic and all-zero tasks complete.
 
 [n4]: ../notes/04_ZERO_DEFLATION_AND_RATIONAL_RESOLUTION_20261020.md
 [review4]: ../reviews/04_DEFLATION_AND_RESOLUTION_REVIEW_20261020.md
+
+[n5]: ../notes/05_CLOSE_POSITIVE_SOURCES_AND_NORMALIZED_DOUBLE_ZEROS_20261020.md
+[review5]: ../reviews/05_SOURCE_CONTROL_AND_SHIFT_AUDIT_20261020.md

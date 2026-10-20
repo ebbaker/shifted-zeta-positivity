@@ -217,3 +217,31 @@ exterior inverse-square sum but give no effective upper bound for the
 deflation budget. Neither the strict RHS-02 estimate nor a cap surplus
 has been obtained. Signed arithmetic and successful all-height certified
 deflation remain unresolved; the original task gates are unchanged.
+
+## 7. Close positive sources and exact normalization, 20 October 2026
+
+Prepared for Edward Baker with substantial LLM assistance, **gpt-6-astra,
+effort ultra**. [Note 05](../notes/05_CLOSE_POSITIVE_SOURCES_AND_NORMALIZED_DOUBLE_ZEROS_20261020.md)
+constructs, under RH, positive sources arbitrarily close to theta in the
+uniform relative norm, yet with exact double zeros at time zero. It
+merges consecutive distinct high zeros and preserves the leading theta
+tail, functional equation, displayed completion, pole residue one and
+normalization at positive real infinity. A complete source bound also
+pays every stated finite heat-jet error. The added doubles tend to
+infinity; every fixed bounded set of original zeros is eventually kept.
+
+The arithmetic failure is explicit: the de-completed function has an
+algebraic large-real correction, excluding an ordinary Dirichlet series
+absolutely convergent in any right half-plane. This control screens the
+named structural premises and fixed positive approximation tolerance;
+it does not screen exact theta arithmetic or errors paid against a
+proved height-dependent nonzero margin. A separate polynomial control
+retains any fixed slack below theta's strong log-concavity floor. No
+claim combines the two controls' preservation lists.
+
+The finite horizontal-shift consumer is exactly an average of the
+earlier Poisson consumers, and its positive Euler quotient supplies a
+lower bound instead of the needed small upper bound. [Review 05](../reviews/05_SOURCE_CONTROL_AND_SHIFT_AUDIT_20261020.md)
+checks the source divisions, tail, normalization, heat statements and
+these scoped comparisons. RHS-02's positive estimate, the strict cap
+surplus and exclusion of any original multiple zero remain open.

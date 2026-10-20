@@ -132,6 +132,20 @@ only those properties proves a false statement.
   Prepared for Edward Baker with substantial LLM assistance,
   gpt-6-astra, ultra; no theta exclusion or specialist review.
 
+
+- **RH-conditional normalized endpoint control (BW-10, 20 October).**
+  Under RH, [Note 05](../papers/investigations-3/13_contradiction_analysis/04_boundary_winding/threshold_routes/10_rh_implies_simple_zeros/notes/05_CLOSE_POSITIVE_SOURCES_AND_NORMALIZED_DOUBLE_ZEROS_20261020.md) proves that positive even sources can be
+  arbitrarily close to theta in uniform relative norm, preserve its
+  leading tail, functional equation, displayed completion and pole residue
+  one, yet have exact double zeros at time zero and simple all-real zeros
+  for positive time. The added doubles escape to infinity. “The perturbed
+  functions fail ordinary Dirichlet series arithmetic.” A separate
+  polynomial control retains fixed slack below theta's strong
+  log-concavity floor; do not combine the preservation lists. [Separate
+  same-model internal review](../papers/investigations-3/13_contradiction_analysis/04_boundary_winding/threshold_routes/10_rh_implies_simple_zeros/reviews/05_SOURCE_CONTROL_AND_SHIFT_AUDIT_20261020.md); no original theta zero is excluded.
+  Added for Edward Baker with substantial LLM assistance, **gpt-6-astra,
+  effort ultra**; no specialist review or priority claim.
+
 ## Status
 
 19: proved and certified; the manuscript "awaits independent review" and
