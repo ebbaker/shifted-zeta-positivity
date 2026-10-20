@@ -211,3 +211,34 @@ normalization and reality data retained.
 - [Spacetime index and embedded primitive topology](../papers/investigations-2/active/22_theta_manifold_geometry/notes/01_physical_jet_geometry/04_SPACETIME_INDEX_AND_MARKED_TOPOLOGY_20261015.md); [compact Jensen surfaces](../papers/investigations-2/active/22_theta_manifold_geometry/notes/01_physical_jet_geometry/05_JENSEN_HYPERELLIPTIC_TOPOLOGY_20261015.md); [Review 13](../papers/investigations-2/active/22_theta_manifold_geometry/reviews/13_GEOMETRIC_SIMPLIFICATION_AND_TOPOLOGICAL_RH_REVIEW_20261015.md).
 - [Moving-wall flux and theta winding](../papers/investigations-2/active/22_theta_manifold_geometry/notes/01_physical_jet_geometry/06_WALL_FLUX_AND_CERTIFIED_THETA_WINDING_20261015.md); [real-projective jets and surface deficits](../papers/investigations-2/active/22_theta_manifold_geometry/notes/01_physical_jet_geometry/07_REAL_PROJECTIVE_JETS_AND_JENSEN_HEAT_SURFACES_20261015.md); [real/complex multiplicities](../papers/investigations-2/active/22_theta_manifold_geometry/notes/01_physical_jet_geometry/08_REAL_AND_COMPLEX_COLLISION_MULTIPLICITIES_20261015.md); [continuation review](../papers/investigations-2/active/22_theta_manifold_geometry/reviews/18_SPACETIME_BOUNDARY_AND_GEOMETRIC_CONTINUATION_REVIEW_20261015.md).
 - [Review 16](../papers/investigations-2/active/22_theta_manifold_geometry/reviews/16_JOINT_REVIEW_OF_INVESTIGATIONS_21_AND_22_CLAUDE_20261015.md), [Response 17](../papers/investigations-2/active/22_theta_manifold_geometry/reviews/17_RESPONSE_TO_JOINT_REVIEW_CLAUDE_20261015.md), and [Reply 18](../papers/investigations-2/active/22_theta_manifold_geometry/reviews/18_REPLY_TO_RESPONSE_17_CLAUDE_20261015.md), §§1–2, 5, for the corrected equivalence and degree scope.
+
+
+- **BW09 finite contour round (3/13, 20 October).** Prepared for Edward Baker
+  with substantial LLM assistance, **gpt-6-astra, actual effort ultra**.
+  **Proved in-note and exact rational replay; separate same-model review:**
+  the complete contour consumer retains apex, walls and multiplicities.
+  The scoped source audit proves: “If a continuous, nonzero boundary field
+  Z satisfies |Z-1|<=1 everywhere on the closed boundary, then W_Z=0”
+  (notation rendered in plain text here). Root-following walls give exact
+  regularized degree -N/2 from N internal cap roots; they supply no new
+  root-count sign. A separate **interval-certified** complete-source gate
+  proves H/Gstar>0.0004134538 on [.099999,.100001]×[1001,1002], using
+  a pinned 160-bit acquisition and 192/256-bit consumer replay. It excludes
+  all event multiplicities only in that tiny box; the signed full-contour
+  estimate remains open. [Notes](../papers/investigations-3/13_contradiction_analysis/04_boundary_winding/threshold_routes/09_expanding_contour_later_collision/notes/README.md),
+  [review](../papers/investigations-3/13_contradiction_analysis/04_boundary_winding/threshold_routes/09_expanding_contour_later_collision/reviews/01_FINITE_CONTOUR_ROUND_REVIEW_20261020.md).
+  No later theta event, global threshold improvement or specialist review.
+
+- **BW09 heat flow and energy consolidation (20 October).** The
+  [single-source manuscript](../papers/investigations-3/13_contradiction_analysis/04_boundary_winding/threshold_routes/09_expanding_contour_later_collision/manuscript/main.tex) consolidates
+  the in-note proofs of collision-patch accounting, nonzero-level
+  phase cancellation, localized Laguerre identities and the sharp
+  Gaussian deficit. Its scope is explicit: “No negative theta quotient
+  winding, negative Gaussian deficit at a selected fixed scale, negative
+  localized Laguerre average, or later theta collision has been proved.”
+  All 51 exact source-input enclosures accompany the already recorded
+  tiny-box computation; no new quadrature or coverage is claimed.
+  [New bounded program](../papers/investigations-3/13_contradiction_analysis/04_boundary_winding/threshold_routes/09_expanding_contour_later_collision/research-overview/02_HEAT_FLOW_CONTOUR_AND_ENERGY_PROGRAM_20261020.md) and
+  [internal review](../papers/investigations-3/13_contradiction_analysis/04_boundary_winding/threshold_routes/09_expanding_contour_later_collision/reviews/04_INITIAL_MANUSCRIPT_REVIEW_20261020.md).
+  Prepared for Edward Baker with substantial LLM assistance,
+  gpt-6-astra, actual effort ultra; no specialist review.

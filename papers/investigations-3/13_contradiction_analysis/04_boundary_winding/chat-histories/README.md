@@ -17,3 +17,12 @@ The current boundary-winding conversation is [chat 1](0001_2026-10-20T02-33-56Z_
 History note, 19 October 2026 (gpt-6-astra, max): this continuing chat, [Investigate threshold winding routes](0001_2026-10-20T03-20-58Z_investigate-threshold-winding-routes.json), is now registered here. The earlier route copy is a retained snapshot; this parent archive receives future refreshes. Its original number and identity are preserved.
 
 20 October 2026 — [Continue boundary winding research](0002_2026-10-20T04-03-37Z_continue-boundary-winding-research.json), canonical thread `01a1577a-a1f8-7c21-9a4f-9d87da5694f2`, registered as history 2 through the repository refresh tool. Model gpt-6-astra, actual effort ultra. Current captures and hashes belong to index.json; no duplicate route registration.
+
+20 October 2026 — [Summarize signed arithmetic research](0005_2026-10-20T05-48-11Z_summarize-signed-arithmetic-research.json),
+canonical thread `01a157da-5ef8-7ba2-9379-1af88b057ad8`, is registered
+as history 5 through the repository refresh tool. Its synthesis is in
+[the boundary-winding brainstorm](../brainstorm/01_SIGNED_ARITHMETIC_RESULTS_AND_NEXT_QUESTIONS_20261020.md).
+Model gpt-6-astra, actual effort max. Current capture metadata belongs
+to index.json.
+
+20 October 2026 — Prepared for Edward Baker with substantial LLM assistance, **gpt-6-astra, actual effort ultra**. [Continue signed arithmetic research](0006_2026-10-20T06-41-53Z_continue-signed-arithmetic-research.json), canonical thread `01a1580b-88b0-7d40-9adc-e70195d220d3`, is registered here as history 6 through the repository refresh tool. It covers overview 03 execution. Current counts, times and hashes belong to index.json; no duplicated route registration.

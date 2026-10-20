@@ -15,3 +15,5 @@ No numerical run is initialized. Before running a diagnostic, specify the mathem
 20 October 2026 — [Exact-Gram input receipt](THETA_GRAM_INPUTS_20261020.json) records source versions for the analytic proof. No numerical theta acquisition was performed. Prepared for Edward Baker with substantial LLM assistance, gpt-6-astra, actual effort ultra.
 
 20 October 2026 — Prepared for Edward Baker with substantial LLM assistance, **gpt-6-astra, actual effort ultra**. [Positive-multiplier input receipt](POSITIVE_MULTIPLIER_INPUTS_20261020.json) binds the analytic source versions; it contains no acquired theta data. Reviews are internal and same-model; no specialist review.
+
+20 October 2026 — Prepared for Edward Baker with substantial LLM assistance, **gpt-6-astra, actual effort ultra**. [Exact conditioned-Schur checker](check_event_conditioned_schur.py) and [record](EVENT_CONDITIONED_SCHUR_CHECKS_20261020.json) verify coefficient identities, boundary cases, endpoint/vertex elimination and the synthetic comparator. These are algebra fixtures, not theta sign data.

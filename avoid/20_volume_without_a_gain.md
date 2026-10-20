@@ -38,3 +38,16 @@ Before a new note, name the number it will change (a bound, a height, a
 cost, a certified cell) or the control it will reject; if neither, it is a
 remark in an existing note. Freeze a manuscript when its open estimate has
 not moved for a cycle and write the short consolidation instead ([Review 19](../papers/investigations-2/active/22_theta_manifold_geometry/reviews/19_PATHS_FORWARD_AFTER_THE_SECOND_ROUND_CLAUDE_20261015.md) §3). Keep one coordination note per phase rather than one per session; the second portfolio's "13 program homes" were consolidated from 27 folders for this reason ([consolidation record](../papers/investigations-2/PORTFOLIO_CONSOLIDATION_20261013.md)).
+
+## Applied consolidation, 20 October 2026
+
+The user-requested [BW09 heat flow and energy program](../papers/investigations-3/13_contradiction_analysis/04_boundary_winding/threshold_routes/09_expanding_contour_later_collision/research-overview/02_HEAT_FLOW_CONTOUR_AND_ENERGY_PROGRAM_20261020.md)
+states: “Preparing this program is not a new theta result.”
+Its [single-file manuscript](../papers/investigations-3/13_contradiction_analysis/04_boundary_winding/threshold_routes/09_expanding_contour_later_collision/manuscript/main.tex) consolidates
+existing proofs and the existing small numerical exclusion; the
+[progress register](../papers/investigations-3/13_contradiction_analysis/04_boundary_winding/threshold_routes/09_expanding_contour_later_collision/research-progress/02_HEAT_FLOW_CONTOUR_AND_ENERGY_PROGRESS_20261020.md) leaves
+quantitative execution unstarted. A future energy attempt must report a
+fixed-window strict margin, measured same-data advantage, or a scoped
+failure before expansion. This documentation milestone does not relax
+that gate. Prepared for Edward Baker with substantial LLM assistance,
+gpt-6-astra, actual effort ultra.

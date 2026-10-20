@@ -26,3 +26,5 @@ The generation timestamp changes on replay. Compare the mathematical fields and 
 20 October 2026, gpt-6-astra, ultra: [exact checker](check_all_height_multiplicity.py), [small execution record](ALL_HEIGHT_MULTIPLICITY_CONTROLS_20261020.json). These are own-source controls and analytic coefficient enclosures; no theta event or new region is measured.
 
 20 October 2026 — Prepared for Edward Baker with substantial LLM assistance, **gpt-6-astra, actual effort ultra**. [Finite-profile checker](check_finite_profile_conditioning.py) and [exact record](FINITE_PROFILE_CONDITIONING_CONTROLS_20261020.json) check polynomial and positive six-atom controls, not actual theta data. Reviews are internal and same-model; no specialist review.
+
+20 October 2026 — Prepared for Edward Baker with substantial LLM assistance, **gpt-6-astra, actual effort ultra**. [Actual-profile checker](certify_actual_profile_relaxation.py) and [small record](ACTUAL_PROFILE_RELAXATION_20261020.json) acquire complete theta observations at 192/256 bits and verify positive exact-data slack weights throughout the declared domain. Fractional slack masses are not integer zero multiplicities.

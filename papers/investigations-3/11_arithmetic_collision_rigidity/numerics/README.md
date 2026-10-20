@@ -255,3 +255,5 @@ python3 papers/investigations-2/active/22_theta_manifold_geometry/numerics/check
 python3 papers/investigations-2/active/22_theta_manifold_geometry/numerics/check_theta_signed_bridge.py --output /tmp/hodge-signed-bridge.json
 python3 papers/investigations-3/11_arithmetic_collision_rigidity/numerics/replay_nonstationary_controls.py --repo . --receipts /tmp/hodge-control-receipts --output /tmp/hodge-controls.json --execution-model ACTUAL_MODEL --execution-effort ACTUAL_EFFORT
 ```
+
+20 October 2026 — Prepared for Edward Baker with substantial LLM assistance, **gpt-6-astra, actual effort ultra**. [Fourth-order validation wrapper](validate_fourth_order_theta_interface.py) and [record](FOURTH_ORDER_THETA_INTERFACE_20261020.json) pin the unchanged evaluator, return h0–h6, retain exact midpoint data, and validate one coherent polynomial plus a shared disk residual. The fixed already-covered cases pass at 192/256 bits.

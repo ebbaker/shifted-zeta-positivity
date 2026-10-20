@@ -45,3 +45,5 @@ Use [DRAFT_HISTORY.md](DRAFT_HISTORY.md) for later milestones; create no new man
 [routes]: ../README.md
 [results]: ../../../../../../result-summaries/README.md
 [avoid]: ../../../../../../avoid/README.md
+
+20 October 2026 — Prepared for Edward Baker with substantial LLM assistance, **gpt-6-astra, actual effort ultra**. [Actual-profile continuation](notes/06_ACTUAL_PROFILE_OBSERVATIONS_AND_RELAXED_DUAL_FAILURE_20261020.md): the selected three-observation positive-measure relaxation fails at the actual theta vector, even with exact observations. P1 closes with this scoped obstruction; P2/P3 remain inactive. [Round review](../../reviews/03_FOURTH_ORDER_AND_ACTUAL_PROFILE_ROUND_REVIEW_20261020.md).

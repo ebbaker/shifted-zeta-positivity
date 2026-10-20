@@ -18,3 +18,5 @@ The first result has a [same-assistant self-review](01_IMAGINARY_AXIS_SELF_REVIE
 20 October 2026, gpt-6-astra, ultra: [internal same-model review](02_ALL_HEIGHT_MULTIPLICITY_REVIEW_20261020.md). No specialist review.
 
 20 October 2026 — Prepared for Edward Baker with substantial LLM assistance, **gpt-6-astra, actual effort ultra**. [03: finite-profile review](03_FINITE_PROFILE_CONDITIONING_REVIEW_20261020.md) accepts the analytic proofs and rerun exact controls, without a theta sign or coverage claim. Reviews are internal and same-model; no specialist review.
+
+20 October 2026 — Prepared for Edward Baker with substantial LLM assistance, **gpt-6-astra, actual effort ultra**. The [boundary-winding round review](../../../reviews/03_FOURTH_ORDER_AND_ACTUAL_PROFILE_ROUND_REVIEW_20261020.md) separately checks the actual-profile acquisition, zero-error dual obstruction and fractional-mass scope. Same-model internal review; no specialist review.

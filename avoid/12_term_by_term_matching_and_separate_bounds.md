@@ -202,3 +202,15 @@ The changed controls fail the physical mass anchor by a quantified
 amount. This stops that specified norm relaxation and its positivity
 repair, not coefficient-sensitive signed estimates;
 [separate same-model review](../papers/investigations-3/13_contradiction_analysis/02_threshold_jet_sign/reviews/02_POSITIVE_MULTIPLIER_GRAM_REVIEW_20261020.md).
+
+20 October 2026 — Prepared for Edward Baker with substantial LLM assistance, **gpt-6-astra, actual effort ultra**. [Complete fourth-order source Note 15](../papers/investigations-3/11_arithmetic_collision_rigidity/notes/02_updated_research_plan/15_COMPLETE_FOURTH_ORDER_INTERFACE_20261020.md) makes the necessary coherence distinction: “The coherent approximant jet is \(p_j=\partial_z^jP\). Its spatial sum runs through **50−j**.” Independently retaining degree50 in every component does not give derivatives of one degree50 polynomial. The omitted high-degree terms are tiny on this pilot but must be kept distinct before a shared Schur residual is asserted. [Separate same-model round review](../papers/investigations-3/13_contradiction_analysis/04_boundary_winding/reviews/03_FOURTH_ORDER_AND_ACTUAL_PROFILE_ROUND_REVIEW_20261020.md) accepts the repaired interface; no physical sign gain follows.
+
+
+20 October 2026 — Prepared for Edward Baker with substantial LLM assistance,
+**gpt-6-astra, actual effort ultra**. The [BW09 coupled-remainder audit](../papers/investigations-3/13_contradiction_analysis/04_boundary_winding/threshold_routes/09_expanding_contour_later_collision/notes/01_FINITE_CONTOUR_AND_SOURCE_CONTRACT_20261020.md)
+removes the mixed triangle term exactly, but “it is still unsigned.”
+A boundary disk centered at 1 cannot force negative degree; a radius at
+most 1 instead forces degree zero. This stops that information class,
+not a nonconstant signed proxy or retained full-source correlations.
+The [separate same-model review](../papers/investigations-3/13_contradiction_analysis/04_boundary_winding/threshold_routes/09_expanding_contour_later_collision/reviews/01_FINITE_CONTOUR_ROUND_REVIEW_20261020.md)
+also keeps the new tiny direct event exclusion separate from any phase gain.
