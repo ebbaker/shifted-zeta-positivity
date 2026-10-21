@@ -357,11 +357,45 @@ adaptive cluster and complete height-tail estimates prove the actual
 rate E_(N,w)≪(loglog N)^B/log N, B>1+2sigma:
 “The proof bounds the actual norm at all heights.” The earlier growing
 absolute-transfer allowance remains a failure of that payment alone.
-Conversely, “The extra logarithmic factor leaves room for multiple zeros.”
-Do not turn this upper rate or its direct d_N² infimum corollary into a
-sharp simple-zero constant, or apply its fixed-taper constants to the
+At that checkpoint, “The extra logarithmic factor leaves room for
+multiple zeros.” The next continuation removes that logarithmic loss;
+the preceding rate alone did not supply a sharp constant. Do not apply
+fixed-taper constants unchanged to the
 moving family whose actual lower rates are paid in
 [Note 12 §13](../papers/investigations-3/13_contradiction_analysis/04_boundary_winding/threshold_routes/10_rh_implies_simple_zeros/notes/12_FINITE_EVALUATION_AND_ENDPOINT_INVERSE_COSTS_20261020.md).
 [Same-model review 16](../papers/investigations-3/13_contradiction_analysis/04_boundary_winding/threshold_routes/10_rh_implies_simple_zeros/reviews/16_GEVREY_GLOBAL_APPROXIMATION_REVIEW_20261020.md). Prepared for Edward
 Baker with substantial LLM assistance, **gpt-6-astra, ultra**; no novelty,
 optimality or simplicity claim.
+
+
+**Scaled-tail continuation, 20 October 2026 (BW10).**
+[Note 16 §11](../papers/investigations-3/13_contradiction_analysis/04_boundary_winding/threshold_routes/10_rh_implies_simple_zeros/notes/16_GEVREY_GLOBAL_APPROXIMATION_AND_RATE_20261020.md) now pays the actual norm after scaling
+by log N: coherent complete-ratio subtraction and nearest-zero cells
+prove a uniform decaying height tail and the exact global profile sum
+for each fixed compact Gevrey order 1<sigma<2. The earlier logarithmic
+loss and missing first-order passage are superseded. Do not retain them
+as current obstructions. Conversely, the limiting sum still contains
+the true multiplicity-dependent C_m; recovering it is not an opposing
+bound. The RH-only infimum has order 1/log N. Its exact constant Z
+requires simplicity as an additional assumption and uses fixed-taper
+limits in order, without an inverse-derivative moment; it is not a
+convergence theorem for the original linear Möbius polynomial or a
+uniform upper for changing tapers. [Same-model review 16](../papers/investigations-3/13_contradiction_analysis/04_boundary_winding/threshold_routes/10_rh_implies_simple_zeros/reviews/16_GEVREY_GLOBAL_APPROXIMATION_REVIEW_20261020.md).
+Prepared for Edward Baker with substantial LLM assistance,
+**gpt-6-astra, ultra**; no priority, best-known-bound or simplicity claim.
+
+
+**Separate moving-family payment, 20 October 2026 (BW10).**
+[Note 16 §12](../papers/investigations-3/13_contradiction_analysis/04_boundary_winding/threshold_routes/10_rh_implies_simple_zeros/notes/16_GEVREY_GLOBAL_APPROXIMATION_AND_RATE_20261020.md) now pays the actual upper for its
+declared almost-linear family: with L=log N, L^(-theta_0)≤eta<1/4,
+fixed 0<theta_0<1, 1<sigma<2 and a>1/(2−sigma),
+E≤C exp(C eta^(-a))/L. Slow eta=(log L)^(-kappa), kappa<2−sigma,
+therefore converges with E≤L^(-1+o(1)). The proof tracks the changing
+kernel and complete height tails; do not attribute it to unproved
+uniformity of the fixed-taper theorem. Its exponential allowance exceeds
+every fixed-multiplicity JL cost and supplies no opposing multiplicity-free
+constant. A sufficient schedule is not a necessary threshold; arbitrary
+moving tapers and a moving first-order asymptotic remain outside this
+claim. [Same-model review 16](../papers/investigations-3/13_contradiction_analysis/04_boundary_winding/threshold_routes/10_rh_implies_simple_zeros/reviews/16_GEVREY_GLOBAL_APPROXIMATION_REVIEW_20261020.md). For Edward Baker
+with substantial LLM assistance, **gpt-6-astra, ultra**; no priority or
+simplicity claim.

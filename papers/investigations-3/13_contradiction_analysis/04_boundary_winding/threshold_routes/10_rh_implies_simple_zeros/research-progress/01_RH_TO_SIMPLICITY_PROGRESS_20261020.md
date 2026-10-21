@@ -7,15 +7,21 @@ no specialist review.
 
 **State: RH ⇒ simplicity remains unproved.** The structural transfer
 and the bounded arithmetic, source-control and energy investigations
-are recorded below. The latest concrete gain is [Note 16][n16]: under
-RH, each fixed compact Gevrey taper of order 1<sigma<2 has actual complete
-error E_(N,w)≪(loglog N)^B/log N for every fixed B>1+2sigma. The direct
-infimum corollary gives d_N²≪_B(loglog N)^B/log N for every fixed B>3,
-by choosing one sufficiently large fixed p in w_p. This supersedes the
-previous no-global-upper/no-convergence status for that fixed class.
-No sharp first-order constant, multiple-zero exclusion or new excluded
-height interval has been obtained. The [program][program] retains its
-event-exclusion gates; no novelty or optimality claim is made.
+are recorded below. The latest concrete gain is [Note 16 §11][n16]:
+under RH, each fixed compact Gevrey taper of order 1<sigma<2 has the
+actual complete limit (log N)E_(N,w)→Σ C_m(w)/|rho|². A uniform scaled
+height-tail bound pays every zero and removes the previous logarithmic
+loss. Thus d_N² is of order 1/log N under RH alone; with simplicity
+additionally assumed, (log N)d_N²→Z=2+EulerGamma−log(4pi), without an
+inverse-derivative moment. The latter concerns the polynomial infimum,
+not the original linear Möbius polynomial. The fixed-taper coefficient
+retains its true multiplicities and supplies no opposing estimate.
+A separate uniform proof in Note 16 §12 also gives convergence for
+the stated slowly moving almost-linear tapers; its paid exponential
+allowance remains compatible with every fixed multiplicity.
+No multiple-zero exclusion or new excluded height interval has been
+obtained. The [program][program] retains its event-exclusion gates;
+no novelty or best-known-bound claim is made.
 The original scope was selected in [chat 0003][origin]; this round is
 [chat 0004][current].
 
@@ -23,41 +29,55 @@ The original scope was selected in [chat 0003][origin]; this round is
 | --- | --- | --- |
 | RHS-00 | Complete: scope and literature | [Opening analysis][opening] §§1–2, 9; primary inputs rechecked in [review 02][review]. No methodological priority or relative-difficulty theorem claimed. |
 | RHS-01 | Complete: inherited transfer and control screen; strengthened through Note 09 | Opening §§3–6. [Note 01][n1] proves finite root-label continuation under RH, exact endpoint/middle complement, and retained multiplicity phase atom. [Note 05][n5] adds an RH-conditional, uniformly close positive-source control with an exact double event, unchanged leading tail and pole residue one. [Note 09][n9] adds a distinct ordinary-Dirichlet control with exact finite data, positive coefficients, residue one and RH-sized prime-counting error, but failed reflection/entireness. |
-| RHS-02 | Actual full-norm Gevrey upper rate proved; event-excluding signed gate remains unmet | Notes 01–03 treat fixed-width, finite-prime and signed-error envelopes, and finite Euler-control rejection. [Note 04][n4] proves exact subtraction costs, a sharp actual-tail asymptotic and the fully optimized rational-power absolute-payment barrier. Note 05 screens one finite horizontal-shift consumer exactly and identifies the normalized source control's failed Dirichlet-series premise. [Note 06][n6] proves a sharp full-window correlation resolution cost, the additive-one limit of universal phase positivity, and a local Möbius-energy cost. [Note 07][n7] proves localized quadratic-to-linear dominance and exact theta Jensen coalescence rates. [Note 08][n8] obtains vanishing finite-sum relative error, a stronger energy envelope and a broader signed-Fourier kernel cost. [Note 09][n9] constructs near-zero prime-payment kernels outside the fixed class and improves sufficient multiplicity-extraction cost under a separately certified gap. [Note 10][n10] closes the full-height improvement for those uniform phase-return constructions, with leading costs at least one/three-halves. [Note 11][n11] proves the sharp leading one-half absolute-envelope floor for the full admissible nonnegative-kernel class under complete gamma/pole budgets, with a joint prime-cost/logarithmic-spread bound. [Note 12][n12] gives both matched extractors leading square-root summand count, while retaining inverse-mollifier residues and endpoint energy. [Note 13][n13] supplies a nonnegative companion for certified-gap polynomial kernels and a complete quartic prime-cost comparison. The strip and general-gap extensions remove the specified support/factorization restrictions; [Note 14][n14] proves nearly complete off-diagonal cancellation for the original theta modes at all large heights. Note 13 §§7–8 proves the complete remote-gap comparison and a normalized separate-payment lemma; §9 proves quantitative coherent saturation of the exact signed base sum. The endpoint continuation identifies the physical/scaled phase-energy costs, while Hopf/Julia reproduces the Poisson consumer and formal bare Euler heat diverges. [Note 15][n15] computes the exact multiplicity-dependent ratio energy, its heat crossover and signed arithmetic cancellation cost; Note 12 §§5–7 quantifies the linear Möbius taper and closes fixed-a/log N untapered convergence even in the simple case; Note 15 §§7–9 retains the prime-error remainder, Jensen variance and full heat drift. Note 12 §§8–9 extends the full-norm obstruction to logarithmically growing damping and finite-order smooth tapers; Note 15 §9.1 shows the tested fixed-time averages remain endpoint-compatible. Note 12 §§10–12 pays the actual Gevrey local transfer and proves stronger prescribed-approximant lower constants, while its tested absolute transfer allowance fails. [Note 16][n16] now proves actual full-norm convergence and the rate (loglog N)^B/log N for each fixed compact Gevrey order 1<sigma<2, together with the direct d_N² infimum corollary. Note 12 §13 gives actual joint-scale lower rates for the declared moving almost-linear tapers. These gains supply no opposing estimate at an original multiple zero. |
+| RHS-02 | Actual complete Gevrey asymptotic proved; event-excluding signed gate remains unmet | Notes 01–03 treat fixed-width, finite-prime and signed-error envelopes, and finite Euler-control rejection. [Note 04][n4] proves exact subtraction costs, a sharp actual-tail asymptotic and the fully optimized rational-power absolute-payment barrier. Note 05 screens one finite horizontal-shift consumer exactly and identifies the normalized source control's failed Dirichlet-series premise. [Note 06][n6] proves a sharp full-window correlation resolution cost, the additive-one limit of universal phase positivity, and a local Möbius-energy cost. [Note 07][n7] proves localized quadratic-to-linear dominance and exact theta Jensen coalescence rates. [Note 08][n8] obtains vanishing finite-sum relative error, a stronger energy envelope and a broader signed-Fourier kernel cost. [Note 09][n9] constructs near-zero prime-payment kernels outside the fixed class and improves sufficient multiplicity-extraction cost under a separately certified gap. [Note 10][n10] closes the full-height improvement for those uniform phase-return constructions, with leading costs at least one/three-halves. [Note 11][n11] proves the sharp leading one-half absolute-envelope floor for the full admissible nonnegative-kernel class under complete gamma/pole budgets, with a joint prime-cost/logarithmic-spread bound. [Note 12][n12] gives both matched extractors leading square-root summand count, while retaining inverse-mollifier residues and endpoint energy. [Note 13][n13] supplies a nonnegative companion for certified-gap polynomial kernels and a complete quartic prime-cost comparison. The strip and general-gap extensions remove the specified support/factorization restrictions; [Note 14][n14] proves nearly complete off-diagonal cancellation for the original theta modes at all large heights. Note 13 §§7–8 proves the complete remote-gap comparison and a normalized separate-payment lemma; §9 proves quantitative coherent saturation of the exact signed base sum. The endpoint continuation identifies the physical/scaled phase-energy costs, while Hopf/Julia reproduces the Poisson consumer and formal bare Euler heat diverges. [Note 15][n15] computes the exact multiplicity-dependent ratio energy, its heat crossover and signed arithmetic cancellation cost; Note 12 §§5–7 quantifies the linear Möbius taper and closes fixed-a/log N untapered convergence even in the simple case; Note 15 §§7–9 retains the prime-error remainder, Jensen variance and full heat drift. Note 12 §§8–9 extends the full-norm obstruction to logarithmically growing damping and finite-order smooth tapers; Note 15 §9.1 shows the tested fixed-time averages remain endpoint-compatible. Note 12 §§10–12 pays the actual Gevrey local transfer and proves stronger prescribed-approximant lower constants, while its tested absolute transfer allowance fails. [Note 16 §11][n16] now proves the actual complete first-order profile sum and a uniform scaled height tail for each fixed compact Gevrey order 1<sigma<2, superseding its earlier logarithmic loss. It gives d_N² of order 1/log N under RH and the exact infimum constant Z under RH plus simplicity, with no inverse-derivative moment. Note 12 §13 gives actual joint-scale lower rates for the declared moving almost-linear tapers. Note 16 §12 separately proves a uniform complete upper and convergence for its slow schedules, compatible with those fixed-multiplicity lower rates. These gains supply no opposing estimate at an original multiple zero. |
 | RHS-03 | Finite-wall subtask proved under RH; strict surplus still gated | Note 01 §2 covers every finite cap and multiplicity. Cap mass remains `(m-1)pi`; the Gaussian sign is event-compatible. Note 04 identifies the exterior inverse-square sum needed for effective deflation, but wall continuation gives no quantitative upper bound for it. |
-| RHS-04 | Full-height approximation bound proved for a fixed class; no new exclusion | Note 16 bounds the actual norm at all heights for each fixed compact Gevrey order 1<sigma<2. Structural statements cover all finite heights/multiplicities under RH. Neither the logarithmic upper allowance nor the stated arithmetic failure ranges give an all-zero signed exclusion or a new theta exclusion class. |
-| RHS-05 | Reviews of bounded attempts completed; full-argument review remains gated | [Reviews 02–16](../reviews/README.md) check the stated proofs, imports and controls. Review 04 checks uniform optimization and certified subtraction; [review 05][review5] checks source positivity, the whole-tail relative bound, exact residue normalization and the distinct curvature control. [Review 06][review6] checks correlation normalization, clustered configurations, phase minima and local pole/energy constants. [Review 07][review7] checks local dominance, complete coefficient errors and Hermite coalescence. [Review 08][review8] checks the reciprocal estimates, complete energy saddle, kernel budgets and canonical-system premise. [Review 09][review9] checks the normalized arithmetic control, translated kernels and stable extraction with their distinct premises. [Review 10][review10] checks the primary approximation, return-height bound and scoped complete-envelope comparison. [Review 11][review11] checks continuous Gram/Fubini, all-zero and all-prime-power payments, stable Poisson and the full-class scope. [Review 12][review12] checks the evaluation, mollifier, signed-kernel and energy comparisons, including its §§5–10 endpoint, ratio-energy, heat crossover, damping/taper closures, actual Gevrey transfer and arithmetic-remainder continuations. The bounded Lean check verifies only the abstract projection inequality. [Review 13][review13] checks the two kernel extensions and full theta-mode cancellation. [Review 14][review14] checks the complete remote-gap comparison and bounded event attempts; [review 15][review15] checks coherent saturation and its explicit constants. [Review 16][review16] checks the complete moving-line convolution, both height regimes, quantitative global rate, direct infimum corollary, compact-height asymptotic and moving-taper lower rates. Same-model internal validation; no simplicity theorem. |
+| RHS-04 | Complete scaled-height tail and profile sum proved for a fixed class; no new exclusion | Note 16 §11 bounds (log N) times the actual tail uniformly in N for each fixed compact Gevrey order 1<sigma<2. Its complete first-order constant retains every true multiplicity. Structural statements cover all finite heights/multiplicities under RH; no opposing signed exclusion or new theta exclusion class follows. |
+| RHS-05 | Reviews of bounded attempts completed; full-argument review remains gated | [Reviews 02–16](../reviews/README.md) check the stated proofs, imports and controls. Review 04 checks uniform optimization and certified subtraction; [review 05][review5] checks source positivity, the whole-tail relative bound, exact residue normalization and the distinct curvature control. [Review 06][review6] checks correlation normalization, clustered configurations, phase minima and local pole/energy constants. [Review 07][review7] checks local dominance, complete coefficient errors and Hermite coalescence. [Review 08][review8] checks the reciprocal estimates, complete energy saddle, kernel budgets and canonical-system premise. [Review 09][review9] checks the normalized arithmetic control, translated kernels and stable extraction with their distinct premises. [Review 10][review10] checks the primary approximation, return-height bound and scoped complete-envelope comparison. [Review 11][review11] checks continuous Gram/Fubini, all-zero and all-prime-power payments, stable Poisson and the full-class scope. [Review 12][review12] checks the evaluation, mollifier, signed-kernel and energy comparisons, including its §§5–10 endpoint, ratio-energy, heat crossover, damping/taper closures, actual Gevrey transfer and arithmetic-remainder continuations. The bounded Lean check verifies only the abstract projection inequality. [Review 13][review13] checks the two kernel extensions and full theta-mode cancellation. [Review 14][review14] checks the complete remote-gap comparison and bounded event attempts; [review 15][review15] checks coherent saturation and its explicit constants. [Review 16][review16] checks the complete moving-line convolution, both height regimes, earlier quantitative rate, coherent nearest-zero localization, uniform scaled tail, exact complete profile sum and ordered-limit infimum corollaries, as well as the moving-taper lower rates and the separately paid uniform upper, parameter dependence and complete tails in Note 16 §12. Same-model internal validation; no simplicity theorem. |
 
 ## Quantitative outcomes
 
-- Under RH, [Note 16][n16] proves E_(N,w)≪(loglog N)^B/log N for
-  each fixed compact Gevrey taper of order 1<sigma<2 and every fixed
-  B>1+2sigma. Its uniform full-height domination pays the remaining
-  norm, so E_(N,w)→0. Since d_N² is an infimum over all length-N
-  Dirichlet polynomials, d_N²≤E_(N,w); choosing one fixed
-  w_p(u)=exp(1−(1−u)^(-p)) with B>3+2/p gives the direct corollary
-  d_N²≪_B(loglog N)^B/log N for every fixed B>3. No changing taper,
-  novelty, best-known-bound, optimality or simplicity claim is made.
-- Note 16 also proves the complete fixed-height asymptotic with error
-  O_(T,w)(loglog N/(log N)²), and convergence of the complete local
-  profile-mass sum for 1<sigma<2. These do not remove the extra global
-  logarithmic allowance or establish a sharp first-order constant.
+- Under RH, [Note 16 §11][n16] proves, for each fixed compact Gevrey
+  taper of order 1<sigma<2, sup_N (log N)E_(N,w)^(|t|>T)
+  ≪_(w,eta)T^(sigma−2+eta), 0<eta<2−sigma. Coherent subtraction
+  retains the complete cluster and completion; actual nearest-zero
+  cells integrate its decay without a gap or inverse-jet assumption.
+  Consequently (log N)E_(N,w)→Σ C_m(w)/|rho|²<infinity over distinct
+  zeros of both signs, with their true multiplicities. This supersedes
+  the preceding (loglog N)^B loss and missing global first-order limit.
+- The direct infimum comparison and Burnol's lower bound now give
+  d_N² of order 1/log N under RH alone. If all zeros are additionally
+  assumed simple, fixed almost-linear flat tapers give
+  (log N)d_N²→Z=2+EulerGamma−log(4pi), by taking N→infinity for each
+  fixed taper before its parameter tends to zero. No inverse-derivative
+  moment, changing-taper uniformity, convergence of the original linear
+  Möbius polynomial, novelty or best-known-bound claim is made. The
+  actual fixed-taper constants remain compatible with multiple zeros.
 - [Note 12 §13][n12] proves an actual joint-scale lower rate for the
   declared almost-linear flat tapers w_eta: at an exact order-m zero,
   m≥2, liminf eta_N^(2m−3)(log N)E≥A_m/|rho|² under its stated
   uniform transfer condition. For eta_N=(log N)^(-theta), 0<theta<1,
   a double costs (log N)E≳(log N)^theta; a triple with
   1/3<theta<1/2 forces the full norm to diverge despite vanishing
-  extracted coefficient. The fixed-taper upper theorem is not uniform
-  in this moving family.
+  extracted coefficient. The fixed-taper upper theorem itself is not
+  uniform in this moving family; the following estimate has a separate
+  complete proof.
+- [Note 16 §12][n16] proves, with L=log N, fixed 1<sigma<2 and
+  0<theta_0<1, the actual upper E_(N,eta)≤C exp(C eta^(-a))/L for
+  L^(-theta_0)≤eta<1/4 and every fixed a>1/(2−sigma). Thus the slow
+  schedule eta_N=(log L)^(-kappa), 0<kappa<2−sigma, has actual error
+  at most L^(-1+o(1)). Every fixed order-m JL lower cost in L E is
+  only a power (log L)^(kappa(2m−3)) and remains compatible with this
+  upper allowance. No moving-taper asymptotic, necessary threshold or
+  opposing multiplicity-free constant is asserted.
 
 - Under RH, Note 12 §12 proves the actual local profile of every fixed
   normalized Gevrey-flat logarithmic taper admitting the compact
   extension specified in §12, at a zero of any exact multiplicity. The full reciprocal tail is exponentially small in a
   positive power of log N; the finite Laurent remainder is paid.
   Hence liminf (log N)E_(N,w)≥Σ C_m(w)/|rho|², over distinct zeros.
-  No simplicity or inverse-derivative moment is assumed. This is a
-  full-norm lower bound, not a matching upper or global asymptotic.
+  No simplicity or inverse-derivative moment is assumed. That local
+  argument alone gives a full-norm lower bound; Note 16 §11 now pays
+  the matching complete limit for the fixed subclass 1<sigma<2.
 - Note 12 §11 proves C_m(w)>m² for every fixed flat taper, with infimum
   m², and the sharp joint inequality C2≥(9δ²+10δ+1)/(4δ), δ=C1−1>0.
   If A and B are the reciprocal-square masses of exact simple and
@@ -569,13 +589,22 @@ Infinitely flat tapers remain outside that finite-endpoint obstruction.
 Section 10 proves coefficient suppression for the explicit w_p, p>1.
 Section 12 gives actual local transfer and full-norm lower constants
 for its general fixed compact-extension Gevrey class.
-The prior no-global-upper/no-convergence status is superseded by
-Note 16 for each fixed compact Gevrey order 1<sigma<2. Its actual rate
-has an extra power of loglog N, so it supplies no opposing simple-zero
-constant. Do not extend it uniformly to changing tapers or all Gevrey
-orders. Note 12 §13 separately pays the declared moving almost-linear
-family's local transfer and lower rate; it supplies no upper estimate.
-The stronger lower constants do not themselves imply simplicity.
+The prior no-global-upper/no-convergence status, then the logarithmic
+loss and missing first-order limit, are superseded by Note 16 §11 for
+each fixed compact Gevrey order 1<sigma<2. Its actual complete constant
+is Σ C_m(w)/|rho|² with the true multiplicities, so it supplies no
+opposing simple-zero estimate. The sharp infimum constant Z additionally
+assumes simplicity and concerns the infimum, not the original linear
+Möbius polynomial. Do not extend fixed-taper constants uniformly to
+changing tapers or all Gevrey orders. Note 12 §13 separately pays the declared moving almost-linear
+family's local transfer and lower rate; that local argument alone
+supplies no upper estimate. Note 16 §12 now pays an actual uniform
+upper for its stated eta range and slow schedules, with explicit
+exp(C eta^(-a)) cost. It does not justify arbitrary moving tapers,
+necessary convergence thresholds or a moving first-order asymptotic.
+The upper allowance exceeds every fixed-multiplicity JL cost; the
+opposing multiplicity-free constant is still missing. The stronger
+lower constants do not themselves imply simplicity.
 Note 15 §§7–8 also prohibits dropping the explicit prime-error
 linearization remainder or using the independent-prime Jensen allowance
 as an O(epsilon) estimate. The complete finite-window heat identity in

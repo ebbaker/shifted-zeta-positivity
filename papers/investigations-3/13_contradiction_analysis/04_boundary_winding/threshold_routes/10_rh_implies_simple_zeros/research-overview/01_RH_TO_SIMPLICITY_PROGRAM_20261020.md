@@ -10,12 +10,15 @@ no specialist review.
 transfers the local machinery, and screens the generic arguments.
 **No such implication or new theta exclusion has been proved here.**
 
-**Current quantitative advance:** [Note 16](../notes/16_GEVREY_GLOBAL_APPROXIMATION_AND_RATE_20261020.md) proves under RH
-the actual full-norm rate E_(N,w)≪(loglog N)^B/log N for each fixed compact
-Gevrey order 1<sigma<2 and B>1+2sigma. The direct infimum corollary is
-d_N²≪_B(loglog N)^B/log N for every fixed B>3, using one fixed w_p.
-This supersedes the earlier missing-global-upper status for that class;
-the remaining logarithmic factor is compatible with multiple zeros.
+**Current quantitative advance:** [Note 16 §11](../notes/16_GEVREY_GLOBAL_APPROXIMATION_AND_RATE_20261020.md) proves under RH
+the complete limit (log N)E_(N,w)→Σ C_m(w)/|rho|² for each fixed compact
+Gevrey order 1<sigma<2, with a uniform scaled height tail. It removes the
+preceding logarithmic loss and gives d_N² of order 1/log N. Under the
+additional simplicity assumption the infimum has exact constant
+Z=2+EulerGamma−log(4pi), without an inverse-derivative moment. The true
+multiplicities remain in the fixed-taper constant; no exclusion follows.
+Section 25 records the separate uniform proof for slowly moving
+almost-linear tapers, whose actual upper remains multiplicity-compatible.
 
 This is a separate conditional simplicity program. [Program 03][psc]
 continues to govern the original hypothetical positive-threshold surplus;
@@ -661,14 +664,14 @@ allowance. At this stage no matching global upper bound or convergence
 theorem had been established. **That missing-upper status is superseded
 for fixed compact Gevrey order 1<sigma<2 by §23 and Note 16.** The local
 proof and the failed absolute-transfer allowance retain their stated
-scopes. Changing tapers need a separate uniform argument; a sharp global
-constant or another opposing quantity is still required to exclude an
-original multiple zero. See the [review §10](../reviews/12_FINITE_PRECISION_SIGNED_KERNEL_AND_ENERGY_REVIEW_20261020.md),
+scopes. Changing tapers need a separate uniform argument. Section 24
+now supplies the fixed-class global constant; an opposing arithmetic
+estimate is still required to exclude an original multiple zero. See the [review §10](../reviews/12_FINITE_PRECISION_SIGNED_KERNEL_AND_ENERGY_REVIEW_20261020.md),
 [result index](../../../../../../../result-summaries/README.md) and
 [scope/payment rule](../../../../../../../avoid/12_term_by_term_matching_and_separate_bounds.md).
 
 
-## 23. Complete Gevrey approximation, its rate and the moving-taper boundary
+## 23. Complete Gevrey approximation: the preceding rate checkpoint
 
 20 October 2026. Prepared for Edward Baker with substantial LLM assistance,
 **gpt-6-astra, actual effort ultra**. Separate same-model internal checks;
@@ -691,7 +694,8 @@ large fixed p>1 with B>3+2/p in w_p; then
 d_N²≪_B(loglog N)^B/log N. No N-dependent choice of p is needed or
 licensed. The same note pays the whole fixed-height norm with its
 first-order profile sum and proves that sum converges for sigma<2;
-neither statement permits an unproved global first-order limit.
+neither statement alone permitted a global first-order limit. Section 24
+now proves that limit by an additional actual scaled-tail estimate.
 
 [Note 12 §13](../notes/12_FINITE_EVALUATION_AND_ENDPOINT_INVERSE_COSTS_20261020.md) separately proves an actual lower rate for
 the prescribed moving almost-linear flat family. At an exact order-m
@@ -703,10 +707,68 @@ diverge while the extracted coefficient tends to zero. The fixed-taper
 upper theorem does not apply uniformly to this moving family.
 
 [Review 16](../reviews/16_GEVREY_GLOBAL_APPROXIMATION_REVIEW_20261020.md) checks the primary inputs, complete tails,
-normalizations and scope. “The extra logarithmic factor leaves room for
-multiple zeros.” No sharp simple-zero upper constant, original-zero
-exclusion or RH-to-simplicity theorem follows. The original RHS-02–05
+normalizations and scope. The checkpoint's wording was “The extra
+logarithmic factor leaves room for multiple zeros.” That logarithmic loss
+is superseded by §24; its original-zero exclusion and RH-to-simplicity
+limitations remain. The original RHS-02–05
 exclusion gates remain open; a stronger arithmetic comparison must
 remove an actual remaining allowance, not restate those gates. See the
 [result index](../../../../../../../result-summaries/README.md) and
 [complete-payment rule](../../../../../../../avoid/12_term_by_term_matching_and_separate_bounds.md).
+
+
+## 24. Complete fixed-taper asymptotic and the infimum distance
+
+20 October 2026. Prepared for Edward Baker with substantial LLM assistance,
+**gpt-6-astra, actual effort ultra**. Separate same-model internal audits;
+no specialist review, priority or best-known-bound claim.
+
+[Note 16 §11](../notes/16_GEVREY_GLOBAL_APPROXIMATION_AND_RATE_20261020.md) retains the complete ratio before subtracting
+its constant. Telescoping every nearby zero factor produces actual decay
+away from the nearest zero; one additional Gevrey moment has the same
+leading exponent as the earlier cluster bound. Its full remote
+convolution tail is small even after multiplication by log N. Integrating
+the actual nearest-zero cells, with no separation assumption, proves
+sup_N (log N)E^(|t|>T)≪T^(sigma−2+eta), 0<eta<2−sigma.
+Together with the fixed-height theorem, this yields the complete limit
+(log N)E_(N,w)→Σ C_m(w)/|rho|² for every fixed compact order 1<sigma<2.
+This supersedes both the previous logarithmic loss and its unpaid
+global first-order passage. All zeros and completion terms remain.
+
+The direct infimum upper and Burnol lower give d_N² of order 1/log N
+under RH. With simplicity additionally assumed, each fixed almost-linear
+flat taper has coefficient (1+d eta)Z. Taking N→infinity first for each
+fixed eta, then eta↓0, gives (log N)d_N²→Z without an inverse-derivative
+moment. This concerns the infimum over polynomials, not convergence of
+the original linear Möbius polynomial or a prescribed changing taper.
+
+[Review 16](../reviews/16_GEVREY_GLOBAL_APPROXIMATION_REVIEW_20261020.md) records independent same-model checks.
+The fixed-taper constant still contains the actual C_m, and Burnol's
+lower constant contains m². They remain compatible at a multiple zero;
+an opposing arithmetic bound is still missing. RH ⇒ simplicity is not
+proved. The result and complete-payment guards remain in force.
+
+
+## 25. A separately paid upper for slowly moving almost-linear tapers
+
+20 October 2026. Prepared for Edward Baker with substantial LLM assistance,
+**gpt-6-astra, actual effort ultra**. Separate same-model internal audits;
+no specialist review, priority or necessary-threshold claim.
+
+[Note 16 §12](../notes/16_GEVREY_GLOBAL_APPROXIMATION_AND_RATE_20261020.md) fixes one Gevrey cutoff of order 1<sigma<2
+and proves the actual full-norm bound E_(N,eta)≤C exp(C eta^(-a))/L,
+where L=log N, L^(-theta_0)≤eta<1/4, 0<theta_0<1 is fixed, and
+a>1/(2−sigma) is fixed. The kernel, cluster moments, two height regimes
+and complete exterior integrals have explicit uniform parameter payment;
+this is not an application of the fixed-taper theorem with changing
+constants. For eta_N=(log L)^(-kappa), 0<kappa<2−sigma, choose a with
+kappa a<1. The actual error is then at most L^(-1+o(1)) and tends to zero.
+
+The already proved order-m JL lower rate requires L E to be at least
+a positive multiple of (log L)^(kappa(2m−3)) at a fixed m≥2 event.
+It is compatible with this exponential-in-eta allowance. The preceding
+fixed-taper tail gap is closed, and this declared moving class now has
+a full upper, but no opposing multiplicity-free constant or moving
+first-order asymptotic follows. Larger kappa and arbitrary taper schedules
+are not ruled out. [Review 16](../reviews/16_GEVREY_GLOBAL_APPROXIMATION_REVIEW_20261020.md) checks these uniformities
+and scope; RH ⇒ simplicity remains unproved.

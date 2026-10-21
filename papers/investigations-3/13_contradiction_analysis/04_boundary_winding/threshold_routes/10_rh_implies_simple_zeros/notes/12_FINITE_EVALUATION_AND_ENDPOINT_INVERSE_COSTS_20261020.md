@@ -4,7 +4,7 @@
 **gpt-6-astra (Codex), reasoning effort ultra**, verified turn metadata.
 Separate same-model internal checks; no specialist review or novelty claim.
 
-**Outcome.** A classical Riemann–Siegel formula plus a discrete Cauchy derivative lowers the sufficient leading summand exponent for both existing gap-certified extraction schemes to one-half. The earlier geometric-versus-single-width exponent advantage belongs to the specified Euler-sum method. A separate exact Möbius mollifier still has a large paid remainder and retains the multiple-zero residue when its contour crosses the line. Endpoint heat energy retains its compatible divergence. Sections 10–12 prove an actual local transfer for fixed Gevrey-flat logarithmic tapers and a stronger prescribed-approximant lower bound, including a sharp simple/double local tradeoff. [Note 16](16_GEVREY_GLOBAL_APPROXIMATION_AND_RATE_20261020.md) now supplies the complete RH upper bound \(E_{N,w}\ll(\log\log N)^B/\log N\) for each fixed compact Gevrey taper of order \(1<\sigma<2\) and each fixed \(B>1+2\sigma\). Section 13 proves a distinct actual lower rate for almost-linear tapers whose endpoint layer shrinks with \(N\). The fixed-taper upper bound does not assert uniform constants for that moving family, and its growing \(\log\log N\) allowance leaves the sharp opposing estimate for simplicity open. No original multiple zero is excluded.
+**Outcome.** A classical Riemann–Siegel formula plus a discrete Cauchy derivative lowers the sufficient leading summand exponent for both existing gap-certified extraction schemes to one-half. The earlier geometric-versus-single-width exponent advantage belongs to the specified Euler-sum method. A separate exact Möbius mollifier still has a large paid remainder and retains the multiple-zero residue when its contour crosses the line. Endpoint heat energy retains its compatible divergence. Sections 10–12 prove an actual local transfer for fixed Gevrey-flat logarithmic tapers and a stronger prescribed-approximant lower bound, including a sharp simple/double local tradeoff. [Note 16 §11](16_GEVREY_GLOBAL_APPROXIMATION_AND_RATE_20261020.md) now proves a uniform scaled height-tail bound and the exact complete limit \((\log N)E_{N,w}\to\sum_{\rho\ {\rm distinct}}C_{m_\rho}(w)/|\rho|^2<\infty\) for every fixed compact Gevrey taper of order \(1<\sigma<2\), superseding its earlier logarithmically weakened upper rate. Section 13 proves a distinct actual lower rate for almost-linear tapers whose endpoint layer shrinks with \(N\). Note 16 §12 separately proves a uniform upper bound for that declared moving family and convergence for sufficiently slow shrinking layers. The complete fixed-taper constant and the moving-family allowance retain compatibility with the actual multiplicity costs. No original multiple zero is excluded.
 
 This continuation follows the [result index](../../../../../../../result-summaries/README.md), [collision controls](../../../../../../../result-summaries/12_collision_controls_and_screening.md), and [avoid index](../../../../../../../avoid/README.md), particularly [scoped conclusions](../../../../../../../avoid/07_scoped_exclusions_read_as_universal.md), [complete payments](../../../../../../../avoid/12_term_by_term_matching_and_separate_bounds.md), and [gain before expansion](../../../../../../../avoid/20_volume_without_a_gain.md). These are bounded quantitative comparisons, not additional equivalent simplicity criteria.
 
@@ -1455,14 +1455,24 @@ returns only e^(−au/4). The needed signed correlations are not supplied.
 vanishes for this class, but the absolute transfer allowance in (FA7)–(FA8)
 does not close the full norm. That scoped failure remains valid.
 Section 12's separate local-transfer and lower-bound argument did not
-itself give convergence or an upper estimate. [Note 16](16_GEVREY_GLOBAL_APPROXIMATION_AND_RATE_20261020.md)
-now pays the complete norm by a different argument, proving
-\(E_{N,w}\ll(\log\log N)^B/\log N\) for each fixed compact Gevrey taper
-of order \(1<\sigma<2\), with any fixed \(B>1+2\sigma\).
-For \(w_p\), this means \(B>3+2/p\). The growing logarithmic allowance
-does not supply the sharp opposing bound needed for simplicity.
-Infinite flatness alone still does not authorize dropping a norm
-portion or applying fixed-taper constants to a moving family.
+itself give convergence or an upper estimate. [Note 16 §11](16_GEVREY_GLOBAL_APPROXIMATION_AND_RATE_20261020.md)
+now pays the complete norm by coherent cluster subtraction. For each
+fixed compact Gevrey taper of order \(1<\sigma<2\), it proves both
+\[
+ \sup_{N\ge2}(\log N)E_{N,w}^{>T}
+       \ll_{W,\varepsilon}T^{\sigma-2+\varepsilon}
+       \quad(T\ge2,\ 0<\varepsilon<2-\sigma),\qquad
+ \lim_{N\to\infty}(\log N)E_{N,w}
+       =\sum_{\rho\ {\rm distinct}}\frac{C_{m_\rho}(w)}{|\rho|^2}<\infty.
+\]
+Here \(E^{>T}\) is the actual norm restricted to \(|t|>T\), and both
+ordinate signs occur. This supersedes the earlier QR logarithmic loss;
+it does not rehabilitate the failed absolute payment (FA7)–(FA8).
+The exact constant retains the true multiplicities and supplies no
+opposing simplicity bound. Note 16 §12 separately pays the almost-linear
+moving family of Section 13. Infinite flatness alone still does not
+authorize dropping a norm portion or transferring fixed-taper constants
+to an arbitrary moving family.
 The global continuation and Section 13 are checked in
 [Review 16](../reviews/16_GEVREY_GLOBAL_APPROXIMATION_REVIEW_20261020.md).
 
@@ -1690,17 +1700,19 @@ no actual zeta transfer. Section 12 proves that transfer for each fixed
 Gevrey taper, retaining the other poles and full height tail, and obtains
 a lower bound by finite-window exhaustion. That lower-bound argument
 alone does not obtain global tightness or an upper estimate.
-[Note 16](16_GEVREY_GLOBAL_APPROXIMATION_AND_RATE_20261020.md) supplies
-complete convergence and the stated rate separately for each fixed
-compact Gevrey taper of order \(1<\sigma<2\), with a growing
-\(\log\log N\) allowance. It does not establish a sharp first-order
-constant or uniformity over varying tapers. The cutoff approximations
-in (FT14) can be chosen in any fixed Gevrey class of order greater than one.
-For each fixed smoothing parameter they are affine near zero and flat
-at one, and admit a compact Gevrey extension. Thus the model infima
-remain approachable in the subclass covered by Section 12. Each taper
-is fixed before N tends to infinity; no uniformity for N-dependent
-tapers is asserted.
+[Note 16 §11](16_GEVREY_GLOBAL_APPROXIMATION_AND_RATE_20261020.md) separately
+proves the uniform scaled height tail and exact complete first-order
+constant for each fixed compact Gevrey taper of order \(1<\sigma<2\).
+That constant is the sum of its actual multiplicity-dependent local
+costs. The cutoff approximations in (FT14) can be chosen in any fixed
+Gevrey class of order greater than one. For each fixed smoothing
+parameter they are affine near zero and flat at one, and admit a compact
+Gevrey extension. Thus the model infima remain approachable in the
+subclass covered by Section 12. Each taper in this use of the fixed-taper
+theorem is fixed before N tends to infinity. Note 16 §12's separate
+uniform theorem concerns Section 13's specified almost-linear family;
+it asserts no uniform bound for all the cost-optimizing approximations
+in (FT14).
 
 The precise gain beyond the fixed-m kernel observation is the sharp
 same-taper tradeoff (FT11)/(FT15), not a new event criterion.
@@ -1915,10 +1927,13 @@ global tightness. It upgrades the fixed-Gevrey local model to a legitimate
 lower bound for the prescribed original-coefficient approximant.
 This lower-bound argument alone proves no full-norm convergence,
 matching asymptotic, or opposing upper constant. The separate
-[Note 16](16_GEVREY_GLOBAL_APPROXIMATION_AND_RATE_20261020.md) now proves
-complete convergence and a quantitative upper rate for each fixed
-compact Gevrey taper with \(1<\sigma<2\). Its growing logarithmic
-allowance is compatible with the lower constants here.
+[Note 16 §11](16_GEVREY_GLOBAL_APPROXIMATION_AND_RATE_20261020.md) now proves
+a uniform scaled height tail and upgrades (GF13) to an equality with a
+finite complete limit for every fixed compact Gevrey taper with
+\(1<\sigma<2\). The local theorem here still applies for every fixed
+\(\sigma>1\); no such global equality is asserted for \(\sigma\ge2\).
+The actual limiting constant retains the true multiplicities, so this
+matching upper result does not oppose the lower costs.
 
 
 ### 12.5 An actual simultaneous lower bound
@@ -1950,15 +1965,18 @@ all-simple case (GF13) gives liminf (log N)E_(N,w)≥C_1(w)K>K.
 
 Only the weighted model optimization A C_1+B C_2 is sharp here. The
 higher-order costs have been bounded below, not optimized. The separate
-complete upper rate in [Note 16](16_GEVREY_GLOBAL_APPROXIMATION_AND_RATE_20261020.md)
-applies to each fixed compact Gevrey taper of order \(1<\sigma<2\);
-it bounds \((\log N)E_{N,w}\) by a growing power of \(\log\log N\),
-not by a sharp multiplicity-free constant. Choosing Gevrey approximations
-approaching (FT15) therefore does not justify interchanging their
+complete identity in [Note 16 §11](16_GEVREY_GLOBAL_APPROXIMATION_AND_RATE_20261020.md)
+applies to each fixed compact Gevrey taper of order \(1<\sigma<2\):
+\((\log N)E_{N,w}\) tends to the weighted sum of its actual costs \(C_{m_\rho}(w)/|\rho|^2\).
+Consequently (GF15) also bounds that complete limit. It is not a
+multiplicity-free upper constant. Choosing Gevrey approximations
+approaching (FT15) does not by itself justify interchanging their
 parameter limit with N→∞ or using uniform upper constants. Section 13
-pays a particular joint limit and exhibits its multiplicity-dependent
-actual cost. The gains in this section remain the actual transfer
-(GF2) and lower bounds (GF13)/(GF15), not a simplicity conclusion.
+pays a particular joint lower limit and exhibits its multiplicity-dependent
+actual cost; Note 16 §12 supplies a separate upper estimate for its
+declared moving family, with a compatible allowance. The gains in this
+section remain the actual transfer (GF2) and lower bounds (GF13)/(GF15),
+not a simplicity conclusion.
 
 [Separate same-model continuation review, §10](../reviews/12_FINITE_PRECISION_SIGNED_KERNEL_AND_ENERGY_REVIEW_20261020.md).
 
@@ -1992,10 +2010,24 @@ as \((\log N)^\theta\). An exact triple and \(1/3<\theta<1/2\) give
 an actual full norm tending to infinity, even though the previously
 extracted coefficient divided by \(\sqrt N\) tends to zero.
 This is a conditional cost for a specified moving approximant, not
-an opposing upper bound or a zero exclusion. [Note 16](16_GEVREY_GLOBAL_APPROXIMATION_AND_RATE_20261020.md)
-proves a complete upper rate for each fixed compact Gevrey taper of
-order \(1<\sigma<2\). Its constants are not asserted to remain uniform
-as the layer width in this section tends to zero with \(N\).
+an opposing upper bound or a zero exclusion. [Note 16 §11](16_GEVREY_GLOBAL_APPROXIMATION_AND_RATE_20261020.md)
+proves the exact complete limit for each fixed compact Gevrey taper of
+order \(1<\sigma<2\); its constants are not transferred to this moving
+family. Instead, Note 16 §12 gives a separate uniform theorem for the
+present construction when the fixed cutoff has \(1<\sigma<2\). For
+fixed \(0<\theta_0<1\), every \(a>1/(2-\sigma)\), and
+\(L=\log N\), it proves
+\[
+ E_{N,w_\eta}\le C_1\exp(C_2\eta^{-a})/L,
+       \qquad L^{-\theta_0}\le\eta<1/4,
+\]
+for sufficiently large L, with constants depending only on the fixed
+cutoffs and parameters. Thus \(\eta_N=(\log L)^{-\kappa}\), with
+\(0<\kappa<2-\sigma\), gives actual convergence
+\(E_{N,w_{\eta_N}}\le L^{-1+o(1)}\). This is a slower shrinking layer
+than the power schedules just described. The upper allowance remains
+compatible with (JL1), including the power-schedule divergence; it is
+not an opposing multiplicity bound.
 
 ### 13.1 Fixed cutoff, exact local cost, and the moving family
 
@@ -2260,7 +2292,14 @@ full error by an explicit actual lower rate. It also quantifies the
 double-event cost \(L E\gg L^\theta\), rather than simply invoking
 the infinite \(L^2\) cost of the limiting linear model. The proof
 requires (JL8); no claim is made at layer width \(\eta\asymp1/L\)
-or under an unproved interchange of limits. There is no opposing
-upper estimate for these moving tapers and no simplicity conclusion.
+or under an unproved interchange of limits. This isolated lower proof
+does not supply a full upper estimate. The separate upper theorem in
+[Note 16 §12](16_GEVREY_GLOBAL_APPROXIMATION_AND_RATE_20261020.md) is stated
+with its uniform range above. For its slow schedule
+\(\eta_N=(\log L)^{-\kappa}\), (JL1) requires a fixed-multiplicity cost
+\(L E\gg(\log L)^{\kappa(2m-3)}\), while that upper theorem permits
+\(L E\le C\exp(C(\log L)^{\kappa a})\), with \(\kappa a<1\).
+These actual estimates are compatible. No opposing upper constant or
+simplicity conclusion follows.
 
 [Separate same-model continuation review](../reviews/16_GEVREY_GLOBAL_APPROXIMATION_REVIEW_20261020.md).

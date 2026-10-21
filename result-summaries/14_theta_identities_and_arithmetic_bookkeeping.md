@@ -506,7 +506,7 @@ Hilbert-space implication. Prepared for Edward Baker with substantial
 LLM assistance, **gpt-6-astra, ultra**; no specialist review or novelty claim.
 
 
-**Complete Gevrey upper rate, 20 October 2026:**
+**Complete Gevrey upper rate, preceding checkpoint on 20 October 2026:**
 [BW10 Note 16](../papers/investigations-3/13_contradiction_analysis/04_boundary_winding/threshold_routes/10_rh_implies_simple_zeros/notes/16_GEVREY_GLOBAL_APPROXIMATION_AND_RATE_20261020.md) is **proved in-note under RH** for
 each fixed compact Gevrey taper of order 1<sigma<2:
 E_(N,w)≪(loglog N)^B/log N for B>1+2sigma.
@@ -515,11 +515,43 @@ preceding no-global-upper/no-convergence status for that class, while
 preserving the local proof's scope and its failed separate allowance.
 Since d_N²≤E_(N,w), one sufficiently large fixed p in w_p gives
 d_N²≪_B(loglog N)^B/log N for every fixed B>3. The complete fixed-height
-asymptotic and convergent profile mass do not remove the growing factor:
-“The extra logarithmic factor leaves room for multiple zeros.”
+asymptotic and convergent profile mass alone did not remove the growing
+factor. The checkpoint recorded: “The extra logarithmic factor leaves
+room for multiple zeros.” The continuation below supersedes that loss.
 [Note 12 §13](../papers/investigations-3/13_contradiction_analysis/04_boundary_winding/threshold_routes/10_rh_implies_simple_zeros/notes/12_FINITE_EVALUATION_AND_ENDPOINT_INVERSE_COSTS_20261020.md) separately proves actual lower rates
 for its specified moving almost-linear family; the fixed-taper upper
 is not uniform there. [Same-model review 16](../papers/investigations-3/13_contradiction_analysis/04_boundary_winding/threshold_routes/10_rh_implies_simple_zeros/reviews/16_GEVREY_GLOBAL_APPROXIMATION_REVIEW_20261020.md).
 Prepared for Edward Baker with substantial LLM assistance,
 **gpt-6-astra, ultra**; no specialist review, novelty, optimality or
 simplicity claim.
+
+
+**Complete first-order continuation, 20 October 2026:**
+[BW10 Note 16 §11](../papers/investigations-3/13_contradiction_analysis/04_boundary_winding/threshold_routes/10_rh_implies_simple_zeros/notes/16_GEVREY_GLOBAL_APPROXIMATION_AND_RATE_20261020.md) is **proved in-note under RH** for
+each fixed compact Gevrey order 1<sigma<2: the uniform actual scaled tail
+is sup_N (log N)E^(|t|>T)≪T^(sigma−2+eta), and
+(log N)E_(N,w)→Σ C_m(w)/|rho|²<infinity. This removes the previous
+logarithmic loss and pays the complete first-order passage. Burnol's
+lower bound then gives d_N² of order 1/log N under RH. With simplicity
+additionally assumed, fixed almost-linear tapers give the infimum limit
+(log N)d_N²→Z, without an inverse-derivative moment. This is neither
+convergence of the original linear Möbius polynomial nor a changing-taper
+uniformity claim. The actual C_m and m² costs retain the missing
+opposition to a multiple zero. [Same-model review 16](../papers/investigations-3/13_contradiction_analysis/04_boundary_winding/threshold_routes/10_rh_implies_simple_zeros/reviews/16_GEVREY_GLOBAL_APPROXIMATION_REVIEW_20261020.md).
+For Edward Baker with substantial LLM assistance, **gpt-6-astra, ultra**;
+no specialist review, priority, best-known-bound or simplicity claim.
+
+
+**Declared moving-family upper, 20 October 2026:**
+[BW10 Note 16 §12](../papers/investigations-3/13_contradiction_analysis/04_boundary_winding/threshold_routes/10_rh_implies_simple_zeros/notes/16_GEVREY_GLOBAL_APPROXIMATION_AND_RATE_20261020.md) is **proved in-note under RH**:
+for its fixed Gevrey cutoff of order 1<sigma<2, L=log N,
+L^(-theta_0)≤eta<1/4, fixed 0<theta_0<1 and a>1/(2−sigma), the actual
+complete error satisfies E≤C exp(C eta^(-a))/L. Thus
+eta_N=(log L)^(-kappa), 0<kappa<2−sigma, gives E≤L^(-1+o(1)).
+This is a separate uniform proof, not an extension of fixed-taper
+constants. The fixed-multiplicity JL cost in L E is a power of log L
+and remains compatible with the paid allowance. No moving first-order
+constant, necessary threshold or simplicity conclusion follows.
+[Same-model review 16](../papers/investigations-3/13_contradiction_analysis/04_boundary_winding/threshold_routes/10_rh_implies_simple_zeros/reviews/16_GEVREY_GLOBAL_APPROXIMATION_REVIEW_20261020.md); for Edward Baker with
+substantial LLM assistance, **gpt-6-astra, ultra**, no specialist review
+or priority claim.

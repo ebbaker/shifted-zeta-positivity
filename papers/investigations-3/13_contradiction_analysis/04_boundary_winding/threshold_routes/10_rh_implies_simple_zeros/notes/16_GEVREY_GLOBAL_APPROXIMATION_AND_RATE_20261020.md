@@ -4,22 +4,28 @@
 **gpt-6-astra, actual effort ultra**. Separate same-model internal checks;
 no specialist review or novelty claim.
 
-**Outcome, proved in-note under RH.** For each fixed normalized compact
+**Outcome, proved in-note under RH.** For every fixed normalized compact
 Gevrey extension of order \(1<\sigma<2\), the original tapered Möbius
-polynomial has complete squared error
+polynomial has the complete first-order squared-error limit
 \[
- E_{N,w}\ll_{W,B}\frac{(\log\log N)^B}{\log N},
- \qquad B>1+2\sigma.
+ \lim_{N\to\infty}(\log N)E_{N,w}
+   =S_w:=\sum_{\rho\ {\rm distinct}}
+                  \frac{C_{m_\rho}(w)}{|\rho|^2}<\infty.
 \]
-The proof bounds the actual norm at all heights. It assumes neither
-simplicity nor inverse derivative moments. The extra logarithmic factor
-leaves room for multiple zeros. RH ⇒ simplicity remains unproved.
+Section 11 pays the actual scaled height tail uniformly in N. It removes
+the logarithmic loss of §7 and proves \(E_{N,w}=O_W(1/\log N)\),
+without simplicity or inverse-derivative moments. It also gives
+\(d_N^2\asymp1/\log N\) for the Dirichlet-polynomial infimum under RH.
+If simplicity is **additionally assumed**, ordered fixed-taper limits give
+\((\log N)d_N^2\to2+\gamma_E-\log(4\pi)\).
 
-The separate fixed-height asymptotic and summability of its limiting
-profile masses are proved in §§8–9. Neither supplies a sharp global
-first-order constant by itself. All tapers in the upper theorem are fixed
-before N tends to infinity; the changing-taper lower bound in Note 12 §13
-has different uniformity and is not contradicted by this theorem.
+Section 12 separately tracks a moving almost-linear taper, proving
+\(E_{N,\eta}\le C\exp(C\eta^{-a})/\log N\), where
+\(a>1/(2-\sigma)\) and \((\log N)^{-\theta_0}\le\eta<1/4\),
+for each fixed \(0<\theta_0<1\). The specified slow schedules converge.
+This is a uniform-family proof, not an application of fixed-taper constants.
+Both estimates remain compatible with the costs of multiple zeros.
+**RH ⇒ simplicity remains unproved.**
 
 This continues [Note 12 §§10–12](12_FINITE_EVALUATION_AND_ENDPOINT_INVERSE_COSTS_20261020.md) at repository HEAD
 `663e006d39bfb16fd5393a5eb029f3a8de5c06cd`, following the
@@ -29,8 +35,10 @@ This continues [Note 12 §§10–12](12_FINITE_EVALUATION_AND_ENDPOINT_INVERSE_C
 and [gain before expansion](../../../../../../../avoid/20_volume_without_a_gain.md).
 The changed quantity is the actual complete upper error. This is a
 quantitative estimate, not another equivalent simplicity criterion.
-[Review 16](../reviews/16_GEVREY_GLOBAL_APPROXIMATION_REVIEW_20261020.md) records the checks and the sole anchor
-correction. No analytic part of this note has been formalized in Lean.
+[Review 16](../reviews/16_GEVREY_GLOBAL_APPROXIMATION_REVIEW_20261020.md) records the checks, the original anchor
+correction, and the separate same-model audits of §§11–12. The latter
+extensions start from checkpoint `341152badb4340eed052f4e9e1e48ebe52b000aa`.
+No analytic part of this note has been formalized in Lean.
 
 ## 1. Statement
 
@@ -86,9 +94,10 @@ and
 In particular this applies to each fixed
 \(w_p(u)=\exp(1-(1-u)^{-p})\), \(0\le u<1\), \(w_p(1)=0\),
 with \(p>1\), using its compact Gevrey extension of order
-\(\sigma=1+1/p\) from Note 12 §12. This theorem is not uniform over changing
-tapers. It does not assert an \(O(1/L)\) rate, a sharp asymptotic constant,
-or simplicity.
+\(\sigma=1+1/p\) from Note 12 §12. The theorem in §§1–6 alone is not uniform over changing
+tapers and does not assert an \(O(1/L)\) rate or a first-order constant.
+Section 11 supplies both for fixed tapers; §12 proves a separate bound for
+a specified moving family. None of these results proves simplicity.
 
 ## 2. Inputs and the exact moving-line convolution
 
@@ -439,10 +448,10 @@ convergence proves (GC5).
 
 This is a full-height upper result for fixed original Möbius coefficients
 with the declared taper. It is compatible with multiple zeros: their
-already proved local costs are finite for this Gevrey class. The uniform
-tail bound is not \(O(1/L)\), and it does not justify multiplying it by
-\(L\) and exchanging limits. A sharp first-order global norm and an
-opposing simplicity estimate remain unproved.
+already proved local costs are finite for this Gevrey class. The bound (GC4) alone does not justify multiplying the tail by
+\(L\) and exchanging limits. Section 11 subsequently pays that scaled
+actual tail and proves the complete first-order norm. An opposing
+simplicity estimate remains unproved.
 
 
 ## 7. A quantitative complete-norm rate
@@ -454,8 +463,9 @@ For every fixed exponent B>1+2σ, the actual upper bound is
              \frac{(\log\log N)^B}{\log N}\qquad(N\to\infty).}
  \tag{QR1}
 \]
-It has a growing logarithmic allowance and is not a sharp O(1/log N)
-constant. In particular it does not contradict the multiplicity costs.
+This earlier bound has a growing logarithmic allowance. Section 11
+supersedes it with the exact fixed-taper first-order limit. Both bounds
+remain compatible with the multiplicity costs.
 
 Put L=log N, β=1/σ, and choose once and for all q with
 (σ−1)/2<q<1/2. By (GC3),
@@ -601,10 +611,11 @@ best-known-bound claim is made; comparison with the wider literature
 requires separate specialist review. The current mathematical claim is
 only the displayed conditional upper bound with its written proof.
 
-The remaining logarithmic allowance is decisive for the investigation:
-L E is bounded above here by O((log L)^B), not by the simple-zero constant.
-The fixed local lower constants, including those of multiple zeros,
-are compatible with (QR1). RH-to-simplicity remains unproved.
+This proof gives only the allowance O((log L)^B) for L E. Section 11
+removes that loss, but its exact coefficient still retains each true
+multiplicity. Thus the old logarithmic loss is no longer the open gap;
+the missing opposing multiplicity-free estimate is. RH-to-simplicity
+remains unproved.
 
 
 As a direct consequence, the Nyman–Beurling infimum \(d_N^2\) defined
@@ -623,7 +634,8 @@ are not zero ordinates. This includes the whole interval, not only
 shrinking neighborhoods selected for a lower bound. Its error is
 \(O_{T,w}((\log\log N)/(\log N)^2)\). This compact proof alone is not a global upper estimate: its constants
 may depend on the fixed height. Sections 1–7 separately supply the
-complete upper theorem for the narrower order range 1<σ<2.
+earlier complete upper theorem for 1<σ<2; §11 pays the scaled tail and
+uses this compact theorem to obtain the exact complete limit.
 
 Put \(L=\log N\), \(e_N(s)=1-\zeta(s)V_{N,w}(s)\), and
 \[
@@ -884,10 +896,11 @@ the displayed decay exponent is −1+1/p+ε.
 This improves the extended-sum scope of (GF13) for the stated subclass.
 It bounds the tail of the limiting zero-profile masses. Neither (PM6)
 nor a fixed-height asymptotic justifies replacing the actual approximation
-error outside |t|≤T by this limiting tail. The actual uniform tail bound and global domination are supplied
-separately by (GC3)–(GC4); neither contains the factor 1/log N required
-for a global first-order exchange of limits. No conclusion is
-made for σ≥2, for a taper varying with N, or for RH-to-simplicity.
+error outside |t|≤T by this limiting tail. The unscaled tail bound and global domination (GC3)–(GC4) also
+do not supply that factor by themselves. Section 11 separately proves
+the required uniform scaled actual tail. This profile-mass calculation
+makes no conclusion for σ≥2 or a taper varying with N; §12 treats one
+moving family by its own uniform proof. RH-to-simplicity remains open.
 
 
 ## 10. Scope and the remaining simplicity gap
@@ -902,18 +915,809 @@ and original zeta tail. Their structural preservation lists cannot be
 combined into one control. No exclusion of those generic controls is
 asserted by this theorem.
 
-The actual bounds now have a concrete separation: (GF13) of
-[Note 12](12_FINITE_EVALUATION_AND_ENDPOINT_INVERSE_COSTS_20261020.md) supplies a positive first-order lower constant depending
-on the true multiplicities, whereas (QR1) permits a growing power of
-loglog N in the corresponding upper allowance. This does not oppose even
-one fixed multiple zero. The fixed-height identity (CH1) and finite
-profile sum (PM6) do not remove that allowance without a further uniform
-first-order estimate. Choosing a different fixed taper can change the
-constants but does not authorize a taper that varies with N.
+The actual fixed-taper limit in §11 now equals the complete
+multiplicity-dependent profile sum from (GF13) of
+[Note 12](12_FINITE_EVALUATION_AND_ENDPOINT_INVERSE_COSTS_20261020.md).
+The logarithmic allowance in (QR1), and the earlier gap between compact
+asymptotics and the full first-order norm, are superseded. The exact
+coefficient is still \(S_w=\sum C_{m_\rho}(w)/|\rho|^2\); the proof
+does not replace it by a multiplicity-free constant. Fixed multiple-zero
+costs remain compatible with this complete estimate.
 
-Note 12 §13 makes the latter restriction quantitative: an almost-linear
-moving taper has actual multiplicity-dependent lower rates, and a triple
-zero can force divergence even while its extracted coefficient vanishes.
-The next useful gain must estimate an actual remaining error or obtain
-an opposing constant with its full uniformity. No all-zero simplicity
-claim, sharp global asymptotic, or literature-priority claim is made here.
+Note 12 §13 gives actual lower rates for an almost-linear moving taper.
+A triple zero can force divergence on certain faster schedules even while
+its extracted coefficient vanishes. Section 12 separately proves a
+uniform upper estimate and convergence for specified slower schedules.
+Its exponential allowance exceeds every fixed-multiplicity power cost
+and therefore supplies no contradiction. The next useful gain must
+estimate an actual remaining error or obtain an opposing constant with
+its full uniformity. No simplicity proof, sharp moving-family asymptotic,
+or literature-priority claim is made here.
+
+
+## 11. Uniform scaled tail and the exact complete fixed-taper limit
+
+20 October 2026 extension. Prepared for Edward Baker with substantial LLM
+assistance, **gpt-6-astra, actual effort ultra**. Separate same-model
+derivations and audits are recorded in Review 16 §7. The gain is a uniform
+bound for the actual tail after multiplication by log N, followed by the
+exact full limit. No simplicity, separation, inverse-derivative moment,
+specialist review or priority claim is supplied.
+
+### 11.1. Statement and retained inputs
+
+Assume RH. Let the fixed real function \(W\in C_c^\infty([-1,1])\) satisfy
+\(W(0)=1\) and \(\|W^{(j)}\|_1\le A^{j+1}(j!)^\sigma\), where
+\(1<\sigma<2\). Set \(w=W|_{[0,1]}\), \(L=\log N\),
+
+\[
+ V_{N,w}(s)=\sum_{n\le N}\mu(n)n^{-s}w(\log n/L),\qquad
+ e_N(t)=1-\zeta(\tfrac12+it)V_{N,w}(\tfrac12+it),
+\]
+\[
+ E_{N,w}^{>T}=\frac1{2\pi}\int_{|t|>T}
+       \frac{|e_N(t)|^2}{1/4+t^2}\,dt.
+ \tag{ST1}
+\]
+
+For every \(0<\eta<2-\sigma\),
+
+\[
+ \boxed{\quad \sup_{N\ge2} L E_{N,w}^{>T}
+       \ll_{W,\eta} T^{\sigma-2+\eta},\qquad T\ge2.\quad}
+ \tag{ST2}
+\]
+
+In particular the scaled actual norm is tight in height. If \(m_\rho\)
+is the order of each distinct nontrivial zero, define
+
+\[
+ p_{m,w}(u)=-\frac1{(m-1)!}
+                 \frac{d^m}{du^m}\bigl(u^{m-1}w(u)\bigr),\qquad
+ C_m(w)=\int_0^1|p_{m,w}(u)|^2\,du.
+ \tag{ST3}
+\]
+
+Then the complete first-order limit is
+
+\[
+ \boxed{\quad
+ \lim_{N\to\infty} L E_{N,w}
+       =\sum_{\rho\ {\rm distinct}}\frac{C_{m_\rho}(w)}{|\rho|^2}
+       <\infty .\quad}
+ \tag{ST4}
+\]
+
+Both signs of every ordinate occur in this sum. This implies the actual
+upper bound \(E_{N,w}=O_W(1/\log N)\) and, for the usual Nyman--Beurling
+infimum, \(d_N^2\le E_{N,w}=O_W(1/\log N)\).
+
+We use the inputs already proved and reviewed in this note: the exact
+moving-line convolution, its uniform Gevrey kernel, the full cluster
+factorization with completion, and the global domination
+
+\[
+ |e_N(t)|\ll_{W,q}(3+|t|)^q
+ \quad\text{for any fixed }q>(\sigma-1)/2.
+ \tag{ST5}
+\]
+
+The primary height inputs remain Carneiro--Chandee--Milinovich,
+[arXiv:1309.1526](https://arxiv.org/pdf/1309.1526), Theorem 2 and its
+Riemann--von Mangoldt convention, and Chandee--Soundararajan,
+[arXiv:0908.2008](https://arxiv.org/pdf/0908.2008), Theorem 1.1.
+There is no additional unquoted analytic input. The fixed-height exact
+norm limit is this note’s compact-height calculation (CH1).
+
+### 11.2. The pointwise improvement keeps the numerator and all cluster zeros
+
+Put \(\beta=1/\sigma\). Choose a fixed \(q\) with
+\((\sigma-1)/2<q<1/2\), and then choose \(b<\beta\), sufficiently
+close to \(\beta\), as in this note. Consider large positive \(t\), with
+
+\[
+ U=\log t,\quad \ell=\log U,\quad U\le L^b,\quad r=d/\ell,
+ \tag{ST6}
+\]
+
+where \(d>0\) is a sufficiently small fixed constant. Let \(M\) be
+the number, with multiplicity, of zeros in \(|\lambda-t|\le r\).
+The same one-sided counting estimate as this note gives
+
+\[
+ M\le(\tfrac12+d/\pi+\epsilon)U/\ell.
+ \tag{ST7}
+\]
+
+Take \(H=M+1\), and let \(\omega=(H+iv)/L\). For sufficiently
+large \(L,t\), uniformly in (ST6), \(H/L\le r/4\). On
+\(|v|\le rL/4\), the displacement lies in the disk \(|\omega|<r/2\).
+Write
+
+\[
+ F(z)=\xi(\tfrac12+z)=P_t(z)G_t(z),\qquad
+ P_t(z)=\prod_{|\lambda-t|\le r}(z-i\lambda)^{m_\lambda}.
+\]
+
+The exact completed ratio is
+
+\[
+ \frac{\zeta(\frac12+it)}{\zeta(\frac12+it+\omega)}
+       =Q_t(\omega)Z_t(\omega),\qquad
+ Q_t(\omega)=\prod_{j=1}^M
+                    \frac{i(t-\lambda_j)}{i(t-\lambda_j)+\omega},
+ \tag{ST8}
+\]
+
+where repeated \(\lambda_j\)'s retain their multiplicities, and
+
+\[
+ Z_t(\omega)=\frac{G_t(it)}{G_t(it+\omega)}
+   \frac{\mathcal A(\frac12+it+\omega)}
+        {\mathcal A(\frac12+it)},\qquad
+ \mathcal A(s)=\tfrac12s(s-1)\pi^{-s/2}\Gamma(s/2).
+\]
+
+this note’s paired-product anchoring at \(2+it\), with the complete
+gamma and rational factors included, proves on this disk
+
+\[
+ |(\log Z_t)'|\le B_t\ll_d U\log\ell.
+\]
+
+Consequently, because \(Z_t(0)=1\),
+
+\[
+ |Z_t(\omega)|\le e^{B_t|\omega|}=t^{o(1)},\qquad
+ |1-Z_t(\omega)|\le B_t|\omega|e^{B_t|\omega|}.
+ \tag{ST9}
+\]
+
+The \(o(1)\) is uniform in the entire low-height range and central
+disk. Its bound is \(O_d(\log\ell/\ell)\).
+
+For \(t\) not a zero ordinate, put
+\(D(t)=\min(1/4,\operatorname{dist}(t,\{\lambda\}))>0\) and
+\(R_v=(1+v^2/H^2)^{1/2}\ge1\). For every factor \(r_j\) in
+(ST8), the already proved geometric bound and the exact difference give
+
+\[
+ |r_j|\le R_v,\qquad
+ |1-r_j|=\frac{|\omega|}{|i(t-\lambda_j)+\omega|}
+     =\frac{|\omega|\,|r_j|}{|t-\lambda_j|}
+     \le\frac{|\omega|R_v}{D(t)}.
+\]
+
+Telescoping the full product therefore yields
+
+\[
+ |1-Q_t|\le\frac{M|\omega|R_v^M}{D(t)},\qquad
+ |1-Q_tZ_t|\le
+ t^{o(1)}|\omega|
+        \left(\frac{M R_v^M}{D(t)}+B_t\right).
+ \tag{ST10}
+\]
+
+For \(M=0\), the first term is zero. No individual gap is bounded
+below: \(D(t)\) remains in the estimate until its actual integral is paid.
+
+### 11.3. Coherent subtraction, the extra kernel moment, and the full tail
+
+The exact kernel and its normalization are
+
+\[
+ K_H(v)=\frac1{2\pi}\int_{-1}^1 W(u)e^{(H+iv)u}\,du,
+ \quad |K_H(v)|\le C e^H e^{-c|v|^\beta},
+ \quad \int_{\mathbb R}K_H(v)\,dv=1.
+\]
+
+Thus the complete error, before taking absolute values, is exactly
+
+\[
+ e_N(t)=\int_{\mathbb R}K_H(v)
+       \left(1-\frac{\zeta(\frac12+it)}
+                        {\zeta(\frac12+it+(H+iv)/L)}\right)dv.
+ \tag{ST11}
+\]
+
+This subtracts the original constant coherently; replacing the quotient
+by a standalone upper bound would lose the improvement.
+
+The one additional moment required by (ST10) satisfies
+
+\[
+ e^H\int_{\mathbb R} e^{-c|v|^\beta}
+       (H+|v|)(1+|v|/H)^M\,dv
+ \le \exp\{(\sigma-1)M\log(M+2)+O_W(M+1)\}.
+ \tag{ST12}
+\]
+
+To verify it, use \((1+x)^M\le2^M(1+x^M)\), and integrate
+the moments of degrees \(0,1,M,M+1\). The largest gamma factor is
+\(\Gamma((M+2)/\beta)\), divided by \(H^M=(M+1)^M\).
+Stirling gives the displayed leading term; the added factor contributes
+only \(O_W(M+\log(M+2))\), covered by the stated remainder.
+
+Equations (ST7), (ST9)--(ST12), and the polynomial factors \(M+B_t\)
+show that the central portion of (ST11) is
+
+\[
+ \ll \frac{t^{(\sigma-1)(1/2+d/\pi+\epsilon)+o(1)}}{L D(t)}
+ \ll_{W,q}\frac{t^q}{L D(t)}.
+ \tag{ST13}
+\]
+
+Here \(d,\epsilon\) were fixed sufficiently small, and the uniform
+\(o(1)\), including the logarithm of \(M+B_t\), is absorbed in the
+strict margin in \(q>(\sigma-1)/2\).
+
+The entire complementary \(v\)-integral is also paid. Set \(R=rL/4\).
+For \(|v|\ge R\), this note’s coarse all-height reciprocal estimate
+and critical-line upper bound bound the absolute integrand of (ST11) by
+
+\[
+ C\exp\{H+o(U)-c|v|^\beta
+       +C\log(2+L)\log(3+t+|v|/L)\}
+       +C e^{H-c|v|^\beta}.
+ \tag{ST14}
+\]
+
+The second term explicitly pays the subtracted constant. Uniformly under
+(ST6), \(R\gg_d L/\log L\), \(U\le L^b\), and \(b<\beta\).
+The positive exponent is therefore \(o(|v|^\beta)\) on this whole
+tail, including \(|v|\) arbitrarily large. Its integral is
+\(O(\exp[-c'(L/\log L)^\beta])\). More precisely, for every fixed
+\(J>0\), that bound is
+
+\[
+                         O_{W,q,J}(L^{-J}t^{-J}),
+ \tag{ST15}
+\]
+
+since \((L/\log L)^\beta\gg U+\log L\). Thus no tail is lost
+after multiplication of the actual norm by \(L\).
+
+Combining (ST13)--(ST15) with the independent full-height bound (ST5)
+gives, throughout the low-height range and for all large \(t,L\),
+
+\[
+ |e_N(t)|\ll_{W,q}t^q
+            \min\left(1,\frac1{L D(t)}\right)
+           +O_{W,q,J}(L^{-J}t^{-J}).
+ \tag{ST16}
+\]
+
+At a zero ordinate, use the first branch of the minimum; those points
+also have measure zero. Conjugation gives the negative-height version.
+
+### 11.4. Integrating the real distance, without zero separation
+
+For the part of a nearest-zero cell with \(D(t)<1/4\), let its
+nearest zero be \(\lambda\). Then \(|t-\lambda|<1/4\), the weight
+\((3+|t|)^{2q}/(1/4+t^2)\) is comparable to
+\((3+|\lambda|)^{2q-2}\) for large \(|t|\), and
+
+\[
+ L\int_{\mathbb R}
+       \min\left(1,\frac1{L^2|t-\lambda|^2}\right)dt=4.
+ \tag{ST17}
+\]
+
+Each actual cell is only a subset of this integral. Ties have measure
+zero; distinct zeros may be arbitrarily close. Repeated zeros do not
+create additional cells, although allowing their multiplicities in the
+upper sum is harmless. On \(D(t)=1/4\), the scaled contribution is
+\(O(L^{-1}\int t^{2q-2}dt)\). The term (ST15), say with \(J=2\),
+has a still faster summable tail. Thus the low-height contribution to
+the scaled norm over \(|t|>T\) is bounded, uniformly in \(N\), by
+
+\[
+ C_{W,q}\left[
+  \sum_{|\lambda|>T-1/4}(3+|\lambda|)^{2q-2}
+                  +T^{2q-1}+T^{-5}\right]
+ \ll_{W,q} T^{2q-1}\log(3+T).
+ \tag{ST18}
+\]
+
+The last inequality is the usual unit-window zero count, including
+multiplicity. Bounded ranges omitted in the preceding large-parameter
+proof can be covered by its fixed-height analogue, or absorbed in a fixed
+constant; they do not affect the asserted large-height tail.
+
+For the high-height range \(U>L^b\), use (ST5) directly, now retaining
+the useful restriction \(L<U^{1/b}\). It gives the uniform scaled bound
+
+\[
+ L\int_{\substack{|t|>T\\ \log|t|>L^b}}
+      \frac{|e_N(t)|^2}{1/4+t^2}\,dt
+ \ll_{W,q}\int_T^\infty t^{2q-2}(\log t)^{1/b}\,dt
+ \ll_{W,q}T^{2q-1}(\log T)^{1/b}.
+ \tag{ST19}
+\]
+
+The finitely many \(N\) below a fixed proof threshold satisfy the
+same tail after enlarging the constant, using their fixed Dirichlet
+polynomials and the RH critical-line bound. Choose \(q\) sufficiently
+close to \((\sigma-1)/2\), and absorb the fixed powers of \(\log T\)
+in the remaining exponent margin. Equations (ST18)--(ST19) prove (ST2).
+Initially this establishes the bound for all sufficiently large \(T\).
+For \(2\le T\le T_0\), fix a sufficiently large \(T_0\) whose
+endpoints are not zeros. The fixed-height theorem (ST20) implies
+\(\sup_{N\ge2}L E_{N,w}^{\le T_0}<\infty\): it bounds all large
+\(N\), and each of the finitely many remaining norms is finite. Add
+the already proved scaled tail at \(T_0\). This explicitly supplies
+the uniform-in-\(N\) constant needed for every \(T\ge2\).
+
+### 11.5. From fixed-height exact norm to the complete limit
+
+For every fixed \(T\) not itself a zero ordinate, this note’s compact-height
+calculation gives
+
+\[
+ L E_{N,w}^{\le T}\longrightarrow
+          \sum_{|\Im\rho|<T}\frac{C_{m_\rho}(w)}{|\rho|^2}.
+ \tag{ST20}
+\]
+
+Its proof keeps every Laurent coefficient near each fixed zero and the
+entire convolution tail; it does not require any inverse-derivative
+estimate uniform in height. Apply (ST2) to the actual complement and then
+let \(T\to\infty\). This proves both convergence and finiteness of the
+series in (ST4). Equivalently, its finiteness also follows from this note’s
+separate Gevrey profile-mass estimate. The scaled tail, rather than that
+separate local-mass estimate alone, is what justifies this interchange.
+
+This improves this note’s logarithmically weakened upper bound for fixed
+tapers. Multiple zeros remain compatible: their actual costs are the
+finite quantities \(C_m(w)\), which are not replaced by the simple-zero
+cost. It does not prove RH implies simplicity.
+
+### 11.6. Consequences for the Dirichlet-polynomial infimum
+
+Assume RH. The complete norm theorem just proved gives, for every
+fixed taper in the stated class,
+\[
+ \lim_{N\to\infty}(\log N)E_{N,w}
+ =S_w:=\sum_{\rho\ {\rm distinct}}\frac{C_{m_\rho}(w)}{|\rho|^2}<\infty.
+ \tag{IC1}
+\]
+All sums retain both ordinate signs. The admissible-polynomial infimum
+of Note 12 (NB1) satisfies \(d_N^2\le E_{N,w}\). Together with Burnol's
+lower bound (NB2), this proves
+\[
+ 0<K:=\sum_{\rho\ {\rm distinct}}\frac{m_\rho^2}{|\rho|^2}
+ \le\liminf_N(\log N)d_N^2
+ \le\limsup_N(\log N)d_N^2\le S_w<\infty.
+ \tag{IC2}
+\]
+In particular, under RH,
+\[
+                       d_N^2\asymp\frac1{\log N}.
+ \tag{IC3}
+\]
+The constants here need not be the sharp constant \(K\). The upper
+constant is supplied by any one fixed admissible Gevrey taper. This
+changes the logarithmic order of the upper estimate; it does not replace
+the multiplicity-squared lower constant by a multiplicity-free one.
+
+There is a stronger constant statement under the **additional assumption
+that all nontrivial zeros are simple**. Let
+\[
+ Z=\sum_\rho\frac1{|\rho|^2}=2+\gamma_E-\log(4\pi).
+\]
+For each fixed \(0<\eta<1/4\), use Note 12 §13's almost-linear taper
+\(w_\eta\), with a fixed cutoff of Gevrey order between one and two.
+Its simple-zero cost is exactly \(C_1(w_\eta)=1+d\eta\), where
+\(d=\int_0^1|Q'(r)|^2dr-1>0\) depends only on the cutoff. Equation
+(IC1) therefore implies, for **each fixed** \(\eta\),
+\[
+ \limsup_N(\log N)d_N^2\le(1+d\eta)Z.
+\]
+Taking the infimum of these bounds over positive fixed \(\eta\), and
+then using (NB2), gives
+\[
+ \boxed{\lim_{N\to\infty}(\log N)d_N^2=Z
+          \quad\text{under RH and simplicity}.}
+ \tag{IC4}
+\]
+This order of argument does not choose \(\eta_N\), exchange two limits,
+or assert uniform constants in \(\eta\). The limsup on the left is
+bounded by every member of a family of fixed real numbers on the right.
+It also assumes no moment of inverse zeta derivatives.
+
+The scope differs from the constructive statement of
+[Bettin–Conrey–Farmer, Theorem 1](https://arxiv.org/pdf/1211.5191),
+which concerns their specified linear Möbius polynomial under RH and an
+inverse-derivative moment hypothesis that entails simplicity. Equation
+(IC4) concerns the infimum over all length-N Dirichlet polynomials. It
+proves neither the corresponding asymptotic for that linear polynomial
+nor simplicity from RH. No comparison of priority or best-known bounds
+is made here.
+
+If a multiple zero exists, the coefficient in (IC1) contains its actual
+\(C_m\), and the lower bound in (IC2) contains \(m^2\). These remain
+compatible. In particular, optimizing an upper estimate whose constant
+is the exact multiplicity-dependent profile sum cannot erase that same
+multiplicity cost. The event-excluding arithmetic estimate remains open.
+
+## 12. A uniform upper bound for slowly moving almost-linear tapers
+
+20 October 2026 extension. Prepared for Edward Baker with substantial LLM
+assistance, **gpt-6-astra, actual effort ultra**. The derivation and separate
+same-model checks are recorded in Review 16 §8. This section explicitly
+tracks the changing cutoff and estimates the actual norm. It does not
+infer uniformity from §11 or claim a necessary convergence threshold.
+
+### 12.1. Quantitative statement
+
+Assume RH. Fix one cutoff chi and its fixed left extension as in Note 12
+(JL2), now of Gevrey order 1<sigma<2, and write beta=1/sigma. Set
+\[
+ w_\eta(u)=(1-u)\chi((1-u)/\eta),\quad
+ V_{N,\eta}(s)=\sum_{n\le N}\mu(n)n^{-s}
+                w_\eta(\log n/\log N),\qquad L=\log N.
+\]
+The complete error E_{N,eta} has the same weight
+dt/[2pi(1/4+t^2)] as Notes 12 and 16. Fix 0<theta_0<1. Uniformly for
+\[
+                 L^{-\theta_0}\le\eta<1/4
+                 \quad\hbox{and sufficiently large }L,
+ \tag{MU1}
+\]
+the following holds. For every
+\[
+             a>\frac1{2-\sigma},
+\]
+there are constants C_1,C_2 depending only on the fixed cutoffs,
+sigma,theta_0,a, such that
+\[
+ \boxed{E_{N,\eta}\le
+ C_1\exp(C_2\eta^{-a})/L.}
+ \tag{MU2}
+\]
+The exponential is an allowance in this upper proof, not a lower bound
+for the actual error.
+
+In particular, for a fixed
+\[
+       0<\kappa<2-\sigma,\qquad
+       \eta_N=(\log L)^{-\kappa},
+ \tag{MU3}
+\]
+choose a>1/(2-sigma) with kappa a<1. Then
+\[
+       E_{N,\eta_N}
+       \le \exp\{-\log L+O((\log L)^{\kappa a})\}
+       =L^{-1+o(1)}\longrightarrow0.
+ \tag{MU4}
+\]
+For every prescribed kappa<1 one may first choose a fixed
+1<sigma<2-kappa and a cutoff of that order. This proves (MU4) for that
+fixed choice. Neither sigma nor the cutoff is subsequently varied with N.
+
+No sharp leading constant or necessary threshold is asserted. In
+particular, the sufficient boundary kappa<2-sigma is a boundary of this
+payment, not a nonconvergence theorem for larger kappa.
+
+### 12.2. The moving-H Fourier bound, with its uniform prefactor
+
+Use exactly the compact W_eta of (JL6). Its fixed left transition is
+independent of eta; its right transition has amplitude eta, width eta,
+and the fixed Gevrey cutoff. For each integer n>=0,
+\[
+ \|W_\eta^{(n+2)}\|_1
+       \le C^{n+1}\eta^{-n}(n!)^\sigma,\qquad
+ \|W_\eta\|_1\le C.
+\]
+Define
+\[
+ K_{H,\eta}(v)=\frac1{2\pi}\int
+                  W_\eta(u)e^{(H+iv)u}\,du,\qquad H\ge0.
+\]
+Integrating the full complex exponential n+2 times transfers all
+derivatives to W_eta. If R=|H+iv|>=1 this gives
+\[
+ |K_{H,\eta}(v)|
+ \le C e^H R^{-2}\frac{C^n(n!)^\sigma}{(\eta R)^n}.
+\]
+Optimize the integer n; use the zeroth derivative when R<=1. Thus,
+with constants independent of H,eta,v,
+\[
+ \boxed{|K_{H,\eta}(v)|
+   \le \frac{Ce^H}{1+H^2+v^2}
+          \exp\{-c(\eta\sqrt{H^2+v^2})^\beta\}.}
+ \tag{MU5}
+\]
+In particular
+\[
+ \int_{\mathbb R}|K_{H,\eta}(v)|\,dv\le Ce^H,\qquad
+ \int_{\mathbb R}(1+|v|)|K_{1,\eta}(v)|\,dv
+                \le C(1+\log(1/\eta)).
+ \tag{MU6}
+\]
+For the second bound, split at |v|=1 and 1/eta. The intermediate
+integrand is O(1/|v|); the final interval is bounded after the
+substitution x=eta|v|. The first absolute moment is not uniform, but
+its logarithmic growth is explicitly paid.
+
+The exact identity
+\[
+ V_{N,\eta}(s)=\int_{\mathbb R}
+ \frac{K_{H,\eta}(v)}{\zeta(s+(H+iv)/L)}\,dv,
+ \qquad \Re s+H/L>1/2,
+ \tag{MU7}
+\]
+holds for each N,eta,H. The proof is the unchanged absolutely
+convergent Möbius-series inversion and zero-free contour shift. Formula
+(MU5) and the full RH reciprocal bound pay every exterior contour
+piece. The negative-u extension changes no integer coefficient.
+Also, exactly, integral K_{H,eta}=W_eta(0)=1.
+
+### 12.3. A global majorant with an explicit eta cost
+
+The needed strengthened form of Note 16 (GC3) is the following:
+for every a>1/(2-sigma), there is a fixed q<1/2 and constants C,c such
+that, throughout (MU1),
+\[
+ \boxed{|1-\zeta(\tfrac12+it)V_{N,\eta}(\tfrac12+it)|
+       \le C\exp(c\eta^{-a})(3+|t|)^q.}
+ \tag{MU8}
+\]
+All full-height tails are included in this bound.
+
+Put X=eta L, lambda=log(1/eta), U=log t, ell=log U for large positive t.
+By (MU1),
+\[
+ X\ge L^{1-\theta_0},\qquad
+ \log L\le(1-\theta_0)^{-1}\log X.
+\]
+Fix b<beta, sufficiently close to beta. The original low/high split is
+replaced by U<=X^b and U>=X^b.
+
+In the low range remove the complete zero cluster of radius
+r=d/ell, with d>0 fixed and small. The regular-factor argument and
+exact completion ratio in (GC16)--(GC18) are independent of eta.
+They remain t^{o(1)}. The complete count, including multiplicities, gives
+\[
+                   M\le c_0 U/\ell,
+\]
+where c_0 can be chosen arbitrarily close to 1/2 from above by taking
+the original fixed small parameters sufficiently small.
+
+Choose H=M+1. The complete cluster quotient is bounded by
+(1+|v|/H)^M. Using (MU5), its central integral is at most
+\[
+ C t^{o(1)}e^H
+ \int_{\mathbb R}\frac{(1+|v|/H)^M}{1+H^2+v^2}
+                              e^{-c(\eta|v|)^\beta}\,dv
+ \le C t^{o(1)}
+ \exp\{(\sigma-1)M\log(M+2)+M\lambda+C(M+1)\}.
+ \tag{MU9}
+\]
+Here is a uniform moment payment. For M>=2, the M-th moment with
+the quadratic denominator is at most a fixed exponential in M times
+\[
+       \eta^{1-M}\Gamma((M-1)/\beta).
+\]
+Division by H^M, Stirling's formula, and e^H give (MU9). For M=1
+the remaining integral is O(1+lambda), covered by the displayed
+exp(lambda) allowance; M=0 is uniformly bounded. Thus the coefficient
+of lambda is M, not an unspecified taper-dependent constant.
+
+The full low-range tail starts at |v|>=R=rL/4. Its exponent is at most
+\[
+ H+O(U)-c(\eta|v|)^\beta
+       +C\log L\log(3+t+|v|/L).
+\]
+Writing z=eta|v|, its lower endpoint satisfies
+z>=cX/log X. The positive terms are bounded by
+\[
+                  C\log X\{X^b+\log(3+z)\}.
+\]
+Since b<beta, this is o(z^beta), uniformly on the whole unbounded
+tail. The retained quadratic denominator makes its integral bounded
+by an exponentially small function of (X/log X)^beta. This includes
+every reciprocal-zeta height; it is not an omitted-contour claim.
+The horizontal displacement H/L is within r/4 uniformly in this
+range, since b<1 and X<=L.
+
+In the high range take H=kU, with k>0 fixed and small. The sharp
+reciprocal bound (GC13) remains unchanged. On |v|<=tL/2 it costs
+\[
+ c_1\frac U\ell\log^+(C_kL/U)+O(1)
+ \le c_1(b^{-1}-1)U+c_1\lambda U/\ell+O_k(U/\ell),
+ \tag{MU10}
+\]
+where c_1 can be taken arbitrarily close to 1/2 from above.
+Indeed log L=log X+lambda<=ell/b+lambda. The kernel integral
+contributes at most Ce^H, uniformly by (MU6). Larger real shifts are
+covered by the reciprocal Euler series.
+
+The full high-range tail starts at eta|v|>=tX/2. Also U>=X^b and
+X>=L^{1-theta_0} imply log L=O(log U). Therefore its positive
+coarse-reciprocal exponent is bounded by a constant times
+\[
+ U+\log U\{U+\log(3+\eta|v|)\},
+\]
+which is o((eta|v|)^beta) uniformly there. Formula (MU5) again pays
+its integral completely.
+
+Combining the two central estimates, for suitably chosen fixed small
+parameters, gives
+\[
+ \log(1+|\zeta V_{N,\eta}|)
+       \le C+q_0U+c_*\,\lambda U/\log U,
+ \tag{MU11}
+\]
+where q_0 may be as close to (sigma-1)/2 from above as desired, and
+c_* as close to 1/2 from above as desired.
+
+To prove (MU8), first choose q<1/2 such that
+\[
+              a>\frac1{\,2q-\sigma+1\,}.
+\]
+Choose the small parameters so that c_*/(q-q_0)<a, and fix
+a_0 strictly between these two numbers. For log U>=a_0 lambda,
+the last term of (MU11) is at most (c_*/a_0)U<(q-q_0)U.
+For log U<a_0 lambda, it is at most
+C(1+lambda)exp(a_0 lambda)<=C_a exp(a lambda).
+This proves the explicit exponential allowance.
+
+For bounded t, a finite fixed cluster cover and (MU5) give at most
+a fixed power of eta^{-1}; the exterior range |v|>>L is paid because
+X>=L^{1-theta_0}. A fixed power is absorbed in exp(c eta^{-a}).
+Negative heights follow by conjugation. Enlarging constants handles
+the bounded remaining L range. This completes (MU8) with every
+multiplicity retained.
+
+The sharp zero-count and critical-line inputs are exactly those
+already checked in Note 16:
+[Carneiro--Chandee--Milinovich, Theorem 2](https://arxiv.org/pdf/1309.1526)
+and [Chandee--Soundararajan, Theorem 1.1](https://arxiv.org/pdf/0908.2008).
+No new external hypothesis has entered the moving-family proof.
+
+### 12.4. Coherent subtraction recovers the full factor 1/L
+
+The sharper estimate uses the same cluster and the exact normalization
+in (MU7), rather than separately bounding one and the zeta quotient.
+In the low-height range U<=X^b, let D(t) be the distance to a nearest
+zero ordinate, capped at 1/4. For D>0 and |v|<=rL/4, write
+z=(H+iv)/L and the exact completed-product decomposition as
+\[
+ \frac{\zeta(1/2+it)}{\zeta(1/2+it+z)}
+       =B_t(z)\prod_{j=1}^M r_j(z),\qquad
+ r_j(z)=\frac{i(t-\lambda_j)}{i(t-\lambda_j)+z}.
+\]
+All repeated ordinates appear as repeated factors. The regular factor,
+including the exact gamma and rational completion, has an analytic
+logarithm normalized to zero at z=0, with derivative O_d(U log ell).
+Thus |B_t|<=t^{o(1)} and
+|1-B_t|<=|z|O_d(U log ell)t^{o(1)}. With
+A(v)=sqrt(1+v^2/H^2), the complete local factors satisfy
+\[
+ |r_j|\le A(v),\qquad
+ |1-r_j|\le |z|A(v)/D(t).
+\]
+Telescoping the product, including the empty product when M=0, yields
+\[
+ \left|1-\frac{\zeta(1/2+it)}{\zeta(1/2+it+z)}\right|
+ \le \frac{Ct^{o(1)}(U\log\ell+M)(H+|v|)}{L D(t)}
+                                  (1+|v|/H)^M.
+\]
+The one-extra-moment payment now is
+\[
+ \begin{split}
+ &e^H\int_{\mathbb R}
+ \frac{(H+|v|)(1+|v|/H)^M}{1+H^2+v^2}
+                           e^{-c(\eta|v|)^\beta}\,dv\\
+ &\quad\le C(1+\lambda)
+ \exp\{(\sigma-1)M\log(M+2)+M\lambda+C(M+1)\}.
+ \end{split}
+ \tag{MU12}
+\]
+For M>=1 the largest needed moment is bounded by a fixed exponential
+in M times eta^{-M} Gamma(M/beta), divided by H^M. The remaining
+first moment is O(1+lambda); M=0 is exactly this first-moment case.
+Stirling gives the same leading coefficient sigma-1 and the same
+M lambda penalty as (MU9). The factor 1+lambda is absorbed into
+exp(C eta^{-a}); the factor U log ell+M fits inside an arbitrarily
+small t-power already reserved in choosing q_0<q.
+
+Consequently the central integral in the exact identity
+\[
+ e_{N,\eta}(t)=\int_{\mathbb R}K_{H,\eta}(v)
+ \left(1-\frac{\zeta(1/2+it)}
+              {\zeta(1/2+it+(H+iv)/L)}\right)dv
+ \tag{MU13}
+\]
+is at most C exp(C eta^{-a})t^q/[LD(t)]. The 1 term is kept in
+this identity. Its exterior tail is smaller than the already paid
+ratio tail. The low-range calculation in §12.3 strengthens to
+O_J(L^{-J}t^{-J}) for every fixed J: its negative exponent is at
+least c(X/log X)^beta, and this divided by U+log L tends to infinity
+uniformly, because b<beta and X>=L^{1-theta_0}. The constants in this
+remainder are independent of eta,N,t throughout the declared range.
+
+Combining this coherent estimate with (MU8), using the latter when
+LD<=1, gives
+\[
+ \boxed{|e_{N,\eta}(t)|
+ \le C e^{C\eta^{-a}}(3+|t|)^q
+       \min\{1,(L D(t))^{-1}\}
+                  +O_J(L^{-J}(3+|t|)^{-J})}
+ \tag{MU14}
+\]
+in the low range. At a zero the minimum is interpreted as one. The
+bounded-height proof is the same finite cluster cover used for (MU8),
+now with coherent subtraction and one extra moment. It costs only a
+fixed power of eta^{-1} times 1+lambda and has the same full tail,
+so is absorbed by the displayed exponential. Thus (MU14) covers all
+bounded heights too. No inverse derivative or separation hypothesis
+is introduced.
+
+Where D=1/4, the squared minimum has integral O(L^{-2}) against the
+convergent weighted majorant. On each nearest-zero cell with D<1/4,
+the weight is comparable to (3+|gamma|)^{-2+2q}, and
+\[
+       \int_{\mathbb R}\min\{1,(L|x|)^{-2}\}\,dx=4/L.
+\]
+The sum of the complete zero weights converges by the unit-window count,
+including arbitrary multiplicities. Restricting a cell to U<=X^b only
+reduces its integral. Squaring and integrating the remainder in (MU14)
+costs O(L^{-2J}), which is harmless after multiplication by L if J>=1.
+Therefore the complete low-range contribution satisfies
+\[
+                      L E_{N,\eta}^{\rm low}
+                           \le C\exp(C\eta^{-a}).
+\]
+
+For the complementary high range, U>=X^b implies
+\[
+              L=X/\eta\le\eta^{-1}(\log|t|)^{1/b}.
+\]
+Using (MU8) alone consequently gives
+\[
+ L E_{N,\eta}^{\rm high}
+ \le C\eta^{-1}e^{C\eta^{-a}}
+       \int_{t_0}^{\infty}t^{-2+2q}(\log t)^{1/b}\,dt
+ \le C'e^{C'\eta^{-a}},
+ \tag{MU15}
+\]
+since q<1/2. The fixed lower height t_0 can be taken large; the bounded
+part is already covered above. Conjugation pays the negative half-axis.
+This proves (MU2), including the full factor 1/L. The previous QR
+logarithmic allowance is unnecessary for this coherent estimate.
+
+### 12.5. Comparison with the actual multiplicity lower rates
+
+The slow schedules (MU3) satisfy the independent joint hypothesis
+(JL8). For any fixed exact multiplicity m>=2, the already paid actual
+lower rate becomes
+\[
+ \liminf_N
+ \frac{L E_{N,\eta_N}}{(\log L)^{\kappa(2m-3)}}
+       \ge\frac{A_m}{|\rho|^2}>0.
+ \tag{MU16}
+\]
+This is compatible with (MU2)--(MU4). The new upper statement allows
+a subpower-in-L cost in LE, whereas (MU16) requires only a fixed
+power of log L for a fixed event. These convergence and lower-rate
+estimates supply no contradiction to a putative multiple zero.
+
+More generally, dividing the right-hand allowance in (MU2) by the
+order-m lower scale 1/(L eta^{2m-3}) gives, up to fixed constants,
+\[
+            e^{C\eta^{-a}}\eta^{2m-3}.
+\]
+For eta tending to zero this allowance exceeds every fixed-m
+eta-power cost. Consequently this particular fully paid upper proof
+cannot oppose JL for any fixed multiplicity. This is a quantitative
+limitation of the displayed payment, not a lower bound for the error
+and not a barrier to every different signed or coherent estimate.
+
+The construction changes no original Möbius coefficient identity,
+completed zeta factor, or RH premise. It permits all noncentral
+multiplicities. Generic source or arithmetic controls from earlier
+notes do not satisfy those premises in combination. No source-control
+exclusion, sharp norm asymptotic for a moving taper, necessary
+convergence threshold, or RH-to-simplicity conclusion is claimed.
