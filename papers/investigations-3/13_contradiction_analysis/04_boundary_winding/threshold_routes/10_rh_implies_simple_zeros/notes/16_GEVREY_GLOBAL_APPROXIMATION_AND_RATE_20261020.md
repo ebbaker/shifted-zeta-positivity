@@ -36,6 +36,11 @@ by one, and prices the alternative of a larger boundary supremum.
 The heat-scale consequence concerns root isolation only; it does not
 transfer the fixed-zeta theorem to a heat-deformed function.
 
+Section 15 gives the exact actual local norm at a heat-split double
+zero on the scale t=v/(log N)^2. Its sharp fixed-taper infimum is a
+nonmonotone finite-separation coefficient, distinct from Note 15's
+monotone ratio energy. No complete heat-family norm is asserted.
+
 Section 12 separately tracks a moving almost-linear taper, proving
 \(E_{N,\eta}\le C\exp(C\eta^{-a})/\log N\), where
 \(a>1/(2-\sigma)\) and \((\log N)^{-\theta_0}\le\eta<1/4\),
@@ -53,7 +58,7 @@ and [gain before expansion](../../../../../../../avoid/20_volume_without_a_gain.
 The changed quantity is the actual complete upper error. This is a
 quantitative estimate, not another equivalent simplicity criterion.
 [Review 16](../reviews/16_GEVREY_GLOBAL_APPROXIMATION_REVIEW_20261020.md) records the checks, the original anchor
-correction, and the separate same-model audits of §§11–14. Sections 11–12
+correction, and the separate same-model audits of §§11–15. Sections 11–12
 start from checkpoint `341152badb4340eed052f4e9e1e48ebe52b000aa`.
 No analytic part of this note has been formalized in Lean.
 
@@ -2369,3 +2374,197 @@ them. Allowing a growing selector supremum instead invokes (FR10)
 and requires a separate complete-norm payment. The boundary phase and
 mixed heat-energy identities retain their compatible multiplicity cost;
 no original multiple zero has been excluded.
+
+## 15. A split double zero at finite Dirichlet resolution
+
+20 October 2026, from checkpoint `ab3afa0`. Prepared for Edward Baker
+with substantial LLM assistance, **gpt-6-astra, actual effort ultra**.
+Separate same-model internal derivation and review; no specialist
+validation or novelty claim.
+
+**Gain and class.** For an original double zero under RH, the actual
+Möbius approximant against the heat-deformed completion has an exact
+norm limit on a fixed isolated neighborhood at heat time
+\(t=v/(\log N)^2\). The sharp local coefficient, optimized over fixed
+real normalized flat Gevrey tapers, is an explicit nonmonotone function
+of \(a=\sqrt{v/2}\). This is a local approximation result. It does not
+transfer ST to a heat-deformed function or estimate the complete
+heat-deformed norm. In particular, Note 15's monotone ratio-energy
+transition cannot be assigned to this different approximation cost.
+The [gain-before-expansion rule](../../../../../../../avoid/20_volume_without_a_gain.md)
+and [complete-payment rule](../../../../../../../avoid/12_term_by_term_matching_and_separate_bounds.md)
+apply; the changed quantity is the exact finite-separation coefficient.
+
+### 15.1. The actual compact-neighborhood transfer
+
+Assume RH and an exact double zero \(\rho=1/2+i\gamma\) of the
+original zeta function. Choose a fixed sufficiently small \(r>0\)
+so the disk \(|s-\rho|\le4r\) has no other zero and the completion
+factor \(\mathcal A\) is analytic and nonzero there. Use Note 15's
+normalization
+\[
+ \mathcal F_t(z)=8H(t,-2iz),\qquad
+ \partial_t\mathcal F_t=\tfrac14\partial_z^2\mathcal F_t,\qquad
+ Z_t(s)=\frac{\mathcal F_t(s-1/2)}{\mathcal A(s)},\quad Z_0=\zeta.
+ \tag{HD1}
+\]
+The symbol \(Z_t\) denotes a local analytic quotient here; it is not
+assigned a Dirichlet series or Euler product. Fix an admissible real
+taper \(w\) from ST, set \(L=\log N\), and keep \(v\ge0\) fixed.
+Define
+\[
+ f_w(u)=u w(u),\quad a=\sqrt{v/2},\quad
+ p_{a,w}(u)=-f_w''(u)-a^2f_w(u),\quad
+ C_a(w)=\int_0^1 |p_{a,w}(u)|^2\,du.
+ \tag{HD2}
+\]
+Then the actual local norm satisfies
+\[
+ \boxed{\frac1{2\pi}\int_{-r}^{r}
+ \frac{|1-Z_{v/L^2}(\rho+iy)V_{N,w}(\rho+iy)|^2}
+      {1/4+(\gamma+y)^2}\,dy
+ =\frac{C_a(w)}{L|\rho|^2}
+       +O_{\rho,w,v}\!\left(\frac{\log L}{L^2}\right).}
+ \tag{HD3}
+\]
+For \(v>0\), both newly split roots lie inside this fixed neighborhood for large N.
+One original ordinate is treated in (HD3); its conjugate neighborhood
+has the same coefficient and is counted separately when both are used.
+
+Here is the transfer proof, including the fixed annulus. Write
+\(1/\zeta(\rho+q)=b_2q^{-2}+b_1q^{-1}+G(q)\), with
+\(b_2=2/\zeta''(\rho)\). The exact original convolution and its
+paid remote tail in CH2--CH6 give, uniformly for \(q=iy\), \(|y|\le r\),
+\[
+ V_{N,w}(\rho+q)=b_2 L^2 A_2(Lq)+b_1 L A_1(Lq)+G(q)+O(L^{-1}),
+ \quad A_j(z)=\frac1{(j-1)!}\int_0^1u^{j-1}w(u)e^{-zu}\,du.
+ \tag{HD4}
+\]
+Integration by parts retains the endpoint at zero and gives
+\(|A_1(ix)|\ll_w(1+|x|)^{-1}\) and
+\(|A_2(ix)|\ll_w(1+x^2)^{-1}\). In particular \(V_{N,w}\ll_{\rho,w}L^2\)
+throughout this fixed neighborhood.
+
+Joint analyticity of the unchanged theta source gives the uniform
+compact Taylor expansion
+\[
+ Z_t(\rho+q)-\zeta(\rho+q)=\frac t4 B(q)+O_\rho(t^2),\qquad
+ B(q)=\frac{(\mathcal A\zeta)''(\rho+q)}{\mathcal A(\rho+q)}
+       =\frac2{b_2}+O_\rho(q).
+\]
+Substitute \(t=v/L^2\) into this expansion and (HD4). The leading
+product is \(a^2 A_2(Lq)\). All remaining products are \(O_{\rho,w,v}(L^{-1})\):
+\(|q A_2(iLy)|\ll L^{-1}\), the \(b_1 L A_1\) term pays one
+extra power of L, and \(t^2 V_{N,w}=O(L^{-2})\). Together with CH9,
+\[
+ 1-Z_{v/L^2}(\rho+iy)V_{N,w}(\rho+iy)
+   =\int_0^1 p_{a,w}(u)e^{-iLyu}\,du+O_{\rho,w,v}(L^{-1}).
+ \tag{HD5}
+\]
+The profile decays as \(O_{w,v}((1+|Ly|)^{-1})\). The cross term,
+weight variation and omitted Fourier tail are therefore paid exactly
+as in CH11--CH13, giving (HD3). This proves the whole fixed-neighborhood
+statement, not just convergence on bounded rescaled intervals.
+
+### 15.2. The sharp coefficient and its flat-taper realization
+
+For \(a>0\), integration by parts using
+\(f_w(0)=0\), \(f_w'(0)=1\), and \(f_w(1)=f_w'(1)=0\) yields
+\[
+ \int_0^1p_{a,w}(u)e^{iau}\,du
+ =\int_0^1p_{a,w}(u)e^{-iau}\,du=1.
+ \tag{HD6}
+\]
+Among real \(p\in L^2(0,1)\) satisfying these two conditions, the
+minimum norm is obtained in the span of \(\cos(au)\), \(\sin(au)\).
+Their Gram matrix has entries
+\[
+ A=\tfrac12+\frac{\sin(2a)}{4a},\qquad
+ B=\frac{\sin^2a}{2a},\qquad
+ D=\tfrac12-\frac{\sin(2a)}{4a},\qquad
+ AD-B^2=\frac14\left(1-\frac{\sin^2a}{a^2}\right)>0.
+\]
+Thus the minimizing density is
+\(p_*=(D\cos(au)-B\sin(au))/(AD-B^2)\), and
+\[
+ \boxed{\quad
+ \inf_w C_a(w)=Q(a)
+ :=\frac{2\left(1-\frac{\sin(2a)}{2a}\right)}
+          {1-\left(\frac{\sin a}{a}\right)^2},\qquad a>0.
+ \quad}
+ \tag{HD7}
+\]
+The infimum is over the declared real flat Gevrey tapers, with no
+positivity or monotonicity requirement on w. To prove sharpness in
+that class, solve
+\(f_*''+a^2 f_*=-p_*\), \(f_*(0)=0\), \(f_*'(0)=1\).
+The two moments imply \(f_*(1)=f_*'(1)=0\), directly from the sine
+propagator formula. The solution is analytic, and \(f_*(u)/u\)
+has a removable singularity at zero with value one.
+
+Multiply \(f_*\) by a fixed-order Gevrey cutoff equal to one before
+\(1-\eta\) and flatly zero near one. Set \(w_\eta=f_\eta/u\).
+The resulting density still satisfies (HD6) exactly. Since
+\(f_*(u)=O_a((1-u)^2)\) and \(f_*'(u)=O_a(1-u)\),
+\(p_{a,w_\eta}-p_*\) is bounded by \(O_a(1)\) and supported
+in an interval of length \(\eta\). It is orthogonal to the two
+Gram vectors, so
+\[
+ C_a(w_\eta)=Q(a)+\|p_{a,w_\eta}-p_*\|_2^2
+            =Q(a)+O_a(\eta).
+\]
+An independent negative-side Gevrey cutoff extends \(w_\eta\)
+to the compact normalized class in ST, with any fixed order between
+one and two. Fix a, the cutoff and \(\eta\) before the N limit;
+only then let \(\eta\) tend to zero. No moving-taper uniformity is
+being inferred from (HD3).
+
+### 15.3. The exact failure of monotonicity and its scope
+
+For each fixed admissible taper, integration by parts gives the exact
+identity
+\[
+ C_{\sqrt{v/2}}(w)
+   =C_0(w)-v\|f_w'\|_2^2+\frac{v^2}{4}\|f_w\|_2^2.
+ \tag{HD8}
+\]
+Both norms are positive. Thus this fixed-taper coefficient decreases
+initially, has its unique minimum at
+\(v=2\|f_w'\|_2^2/\|f_w\|_2^2\), and then increases. This is
+an identity for the coefficient after the fixed-v limit in (HD3),
+not a differentiation of its remainder or a joint limit with v growing.
+
+The confluent and separated limits are
+\[
+ Q(a)=4-\tfrac4{15}a^2+O(a^4)\quad(a\downarrow0),\qquad
+ Q(a)=2-\frac{\sin(2a)}a+O(a^{-2})\quad(a\to\infty).
+\]
+At a=0, the original double-zero problem retains both
+\(\int p=1\) and \(\int up=0\), whose minimizer is \(4-6u\)
+and cost is four. Literally substituting a=0 into the two identical
+conditions in (HD6) would lose the derivative condition and have cost
+one; that is not the confluent limit.
+
+Exact values show that Q is not monotone:
+\[
+ Q(\pi)=2,\qquad
+ Q(5\pi/4)=2-\frac{4(5\pi-4)}{25\pi^2-8}<2,\qquad
+ Q(3\pi/2)=\frac2{1-4/(9\pi^2)}>2.
+ \tag{HD9}
+\]
+At \(v=25\pi^2/8\), a fixed admissible taper can therefore have
+the actual local coefficient in (HD3) strictly below two. The
+reduction comes from finite-resolution cross terms, retained in
+the Gram matrix. It violates no original-zeta lower bound: the
+target function varies with N, only a fixed neighborhood is measured,
+and no complete heat-family Dirichlet infimum has been identified.
+
+This rejects a monotone interpolation claim for this precise optimized
+local approximation class. It does not contradict Note 15's distinct
+monotone completed-ratio coefficient, exclude a multiple zero, or
+supply BW09's strict phase surplus. The elementary Gram calculation
+and Hermite separation are reusable in BW09; (HD3) uses the original
+Möbius convolution under RH and cannot simply be transplanted to
+an unknown positive threshold. The canonical six-page manuscript
+remains a consolidation checkpoint; this scoped continuation belongs
+in the notes.

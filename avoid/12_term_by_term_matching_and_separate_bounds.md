@@ -436,3 +436,18 @@ Dirichlet identity nor a uniform moving-filter theorem is supplied.
 [Same-model review 16 §10](../papers/investigations-3/13_contradiction_analysis/04_boundary_winding/threshold_routes/10_rh_implies_simple_zeros/reviews/16_GEVREY_GLOBAL_APPROXIMATION_REVIEW_20261020.md). For Edward Baker
 with substantial LLM assistance, **gpt-6-astra, ultra**; no simplicity
 or priority claim.
+
+## Monotonicity belongs to its specified energy
+
+20 October 2026. Prepared for Edward Baker with substantial LLM assistance,
+**gpt-6-astra, actual effort ultra**; same-model internal review.
+
+[BW10 Note 16 §15](../papers/investigations-3/13_contradiction_analysis/04_boundary_winding/threshold_routes/10_rh_implies_simple_zeros/notes/16_GEVREY_GLOBAL_APPROXIMATION_AND_RATE_20261020.md)
+proves a nonmonotone optimized local approximation coefficient for an
+actual heat-split double zero: Q(pi)=2, Q(5pi/4)<2, Q(3pi/2)>2.
+It states: “The reduction comes from finite-resolution cross terms,
+retained in the Gram matrix.” The completed-ratio energy in Note 15
+has a different monotone transition. Preserve the named norm, cross
+terms and order of limits; shared zeros and heat scales do not transfer
+monotonicity. The compact norm is not a global heat-family upper bound
+and cannot contradict the original endpoint lower bound.

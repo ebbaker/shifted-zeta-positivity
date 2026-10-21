@@ -47,6 +47,17 @@ the present results are internally reviewed and need specialist scrutiny.
 
 ## Quantitative outcomes
 
+- [Note 16 §15][n16] proves an actual fixed-neighborhood norm limit
+  at a double zero for t=v/(log N)^2, retaining the original Möbius
+  polynomial and deforming only the completed numerator. With
+  a=sqrt(v/2), the sharp local coefficient over fixed real flat Gevrey
+  tapers is Q(a)=2[1−sin(2a)/(2a)]/[1−(sin(a)/a)^2]. It tends to four
+  at coalescence, is below two at a=5pi/4, and exceeds two again at
+  a=3pi/2. The fixed-taper coefficient is an exact convex quadratic
+  in v. Thus Note 15's ratio-energy monotonicity cannot be transferred
+  to this cost. The new estimate is local; no global heat-family
+  infimum, original endpoint exclusion or BW09 surplus is obtained.
+  The six-page consolidation manuscript remains unchanged.
 - [Note 16 §14][n16] now replaces finite-height attenuation by exact
   finite Dirichlet filters, with the complete remaining profile tail
   bounded independently of the filters' degrees. For two nearby nodes

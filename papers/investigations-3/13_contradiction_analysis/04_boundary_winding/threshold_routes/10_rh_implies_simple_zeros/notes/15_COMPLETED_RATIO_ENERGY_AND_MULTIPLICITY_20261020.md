@@ -1128,3 +1128,17 @@ opposing estimate for Note15's endpoint crossover or a simplicity
 exclusion.
 
 [Separate same-model continuation review, §9](../reviews/12_FINITE_PRECISION_SIGNED_KERNEL_AND_ENERGY_REVIEW_20261020.md).
+
+## 10. Distinguish the finite-resolution approximation cost
+
+20 October 2026. Prepared for Edward Baker with substantial LLM assistance,
+**gpt-6-astra, actual effort ultra**; same-model internal review.
+
+The monotonicity in §5 belongs to the completed-ratio energy defined
+there. [Note 16 §15](16_GEVREY_GLOBAL_APPROXIMATION_AND_RATE_20261020.md)
+derives a different actual compact-neighborhood norm, using the original
+Möbius polynomial against a heat-deformed numerator at t=v/(log N)^2.
+Its optimized coefficient is not monotone: Q(pi)=2, Q(5pi/4)<2 and
+Q(3pi/2)>2. This does not alter the ratio-energy theorem; it rules out
+transferring that theorem's monotonicity to this approximation cost.
+No complete heat-family norm estimate is supplied by the compact result.

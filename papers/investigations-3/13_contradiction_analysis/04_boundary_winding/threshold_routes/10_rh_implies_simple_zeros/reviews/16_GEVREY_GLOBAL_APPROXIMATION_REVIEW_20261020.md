@@ -532,3 +532,37 @@ A further adversarial audit rederived the primary count and reciprocal bounds, s
 The BW09 comparison was checked against that route’s current manuscript and phase-surplus register: shared heat/contour identities and all-real-base ratio estimates are distinguished from original-zeta RH arithmetic. The positive-threshold event-coverage and strict-cap-surplus gates remain open. This consolidation claims no new simplicity or RH proof. Compilation and rendering are document checks, not mathematical validation.
 
 The six-page PDF compiled without unresolved references or layout warnings. All six rendered pages were inspected for readable equations, clipping and page flow; all local manuscript links resolved. These checks concern the saved document only.
+
+## 12. Actual local heat approximation and its nonmonotone coefficient
+
+20 October 2026, from checkpoint `ab3afa0`. Prepared for Edward Baker
+with substantial LLM assistance, **gpt-6-astra, actual effort ultra**.
+Separate same-model internal derivation and checks; no specialist
+validation, analytic formalization or novelty claim.
+
+**Verdict: pass for the scoped HD1–HD9 statements in [Note 16 §15](../notes/16_GEVREY_GLOBAL_APPROXIMATION_AND_RATE_20261020.md).**
+The arithmetic path independently derived the actual fixed-neighborhood
+norm. The phase path then checked the merged proof. The complete original
+convolution retains both Laurent coefficients and the analytic remainder;
+the heat Taylor coefficient is 2/b_2 because the completion cross terms
+vanish at a double zero. The O(1/log N) profile error holds throughout
+the fixed annulus, giving the stated O(loglog N/(log N)^2) unscaled norm
+error. This uses compact analyticity and CH, not an unproved heat-family ST.
+
+The real cosine/sine Gram determinant and its inverse give exactly Q(a).
+The ODE terminal conditions follow from the two moments, and the flat
+Gevrey cutoff preserves them while adding O(eta) to the optimal cost.
+The taper, separation and cutoff are fixed before N tends to infinity.
+The coalescent derivative constraint is retained: dropping it at a=0
+would incorrectly replace four by one. All three exact values in HD9
+and the fixed-taper quartic identity in HD8 were independently checked.
+Their derivatives concern limiting coefficients, not derivatives of
+the actual norm or its remainder. The v=0 wording was corrected to
+reserve the two split roots for v>0.
+
+The nonmonotonicity applies to this optimized local approximation cost
+and does not contradict Note 15's different ratio energy. There is no
+complete heat-tail estimate, original-zeta upper below its endpoint
+cost, multiple-zero exclusion, or BW09 cap surplus. Only the elementary
+Gram and heat-geometry parts transfer without original-zeta RH arithmetic.
+The canonical manuscript was left at its requested consolidation checkpoint.

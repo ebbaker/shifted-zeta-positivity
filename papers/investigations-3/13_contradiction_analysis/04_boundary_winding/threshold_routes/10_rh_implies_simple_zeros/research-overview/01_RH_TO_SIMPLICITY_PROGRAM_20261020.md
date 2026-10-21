@@ -837,3 +837,26 @@ The exact K result in §26 and all previous taper scopes remain unchanged;
 no zeros are excluded. [Review 16 §10](../reviews/16_GEVREY_GLOBAL_APPROXIMATION_REVIEW_20261020.md) checks the
 constants and limits under the existing
 [complete-payment rule](../../../../../../../avoid/12_term_by_term_matching_and_separate_bounds.md).
+
+## 28. Finite heat separation does not give monotone approximation cost
+
+20 October 2026. Prepared for Edward Baker with substantial LLM assistance,
+**gpt-6-astra, actual effort ultra**. Same-model internal checks only.
+
+[Note 16 §15](../notes/16_GEVREY_GLOBAL_APPROXIMATION_AND_RATE_20261020.md)
+now pays the actual compact-neighborhood Möbius-approximation norm at
+an original double zero under RH and t=v/(log N)^2. Its optimized
+coefficient is Q(a)=2[1−sin(2a)/(2a)]/[1−(sin(a)/a)^2], a=sqrt(v/2).
+The exact values Q(pi)=2, Q(5pi/4)<2 and Q(3pi/2)>2 rule out
+monotonicity for this local class. A flat Gevrey taper approaches the
+minimum with O(eta) excess while preserving both moments. For a single
+fixed taper the coefficient is a convex quadratic in v.
+
+This is different from Note 15's monotone completed-ratio energy.
+No full heat-family tail, endpoint contradiction or phase surplus has
+been proved. The Gram calculation and Hermite separation can inform
+BW09; the actual Möbius transfer requires RH at the original zeta
+endpoint. [Review 16 §12](../reviews/16_GEVREY_GLOBAL_APPROXIMATION_REVIEW_20261020.md)
+checks the transfer and scope. The
+[complete-payment rule](../../../../../../../avoid/12_term_by_term_matching_and_separate_bounds.md)
+prevents using this compact result as a complete-norm bound.

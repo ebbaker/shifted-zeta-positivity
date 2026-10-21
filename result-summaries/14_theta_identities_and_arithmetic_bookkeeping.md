@@ -586,3 +586,19 @@ infimum coefficient K is unchanged, and no original zero is excluded.
 [Same-model review 16 §10](../papers/investigations-3/13_contradiction_analysis/04_boundary_winding/threshold_routes/10_rh_implies_simple_zeros/reviews/16_GEVREY_GLOBAL_APPROXIMATION_REVIEW_20261020.md). For Edward Baker
 with substantial LLM assistance, **gpt-6-astra, ultra**; no specialist
 validation, analytic formalization or priority claim.
+
+## Finite heat resolution: a nonmonotone local approximation cost
+
+20 October 2026. Prepared for Edward Baker with substantial LLM assistance,
+**gpt-6-astra, actual effort ultra**; same-model internal review only.
+
+**Proved in-note under RH and an original double zero:**
+[Note 16 §15](../papers/investigations-3/13_contradiction_analysis/04_boundary_winding/threshold_routes/10_rh_implies_simple_zeros/notes/16_GEVREY_GLOBAL_APPROXIMATION_AND_RATE_20261020.md)
+gives the actual fixed-neighborhood heat norm and sharp flat-taper
+coefficient Q(a)=2[1−sin(2a)/(2a)]/[1−(sin(a)/a)^2]. The source states:
+“Exact values show that Q is not monotone”. It dips below two and later
+exceeds two; its confluent value is four. This distinguishes local
+Möbius approximation from the monotone ratio energy. It is reusable
+for finite-resolution comparisons, with no global heat-tail theorem,
+multiple-zero exclusion or BW09 surplus. See
+[Review 16 §12](../papers/investigations-3/13_contradiction_analysis/04_boundary_winding/threshold_routes/10_rh_implies_simple_zeros/reviews/16_GEVREY_GLOBAL_APPROXIMATION_REVIEW_20261020.md).
