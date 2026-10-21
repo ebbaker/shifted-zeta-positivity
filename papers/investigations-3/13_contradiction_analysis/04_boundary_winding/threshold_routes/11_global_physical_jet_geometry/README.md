@@ -53,7 +53,7 @@ independent review is claimed. Inherited claims retain their review status. [HMC
 
 Save new derivations in notes/, computations and small receipts in
 numerics/, and assessments in reviews/ as work begins. Keep the overview
-and progress register current. Maintain DRAFT_HISTORY.md for substantive
+and progress register current. Maintain [DRAFT_HISTORY.md](DRAFT_HISTORY.md) for substantive
 milestones using commits or tags; create no manuscript snapshot folders.
 Follow [the large-file policy][large].
 
