@@ -968,6 +968,366 @@ sequence. A fixed `a/log N` truncation payment cannot serve as the
 proposed opposing estimate. The proof does not exclude convergence with
 `a=a_N->infinity`, fixed positive shift followed by the cutoff limit,
 different taper coefficients, or optimally chosen Dirichlet polynomials.
+Sections 8–9 below extend the analysis to specified growing schedules
+and fixed finite-order tapers; they do not close the remaining classes.
 It gives no RH-to-simplicity conclusion.
 
 [Separate same-model review, §8](../reviews/12_FINITE_PRECISION_SIGNED_KERNEL_AND_ENERGY_REVIEW_20261020.md).
+
+
+## 8. Growing logarithmic damping has a multiplicity threshold
+
+20 October 2026. Prepared for Edward Baker with substantial LLM assistance,
+**gpt-6-astra, actual effort ultra**. Separate same-model internal checks;
+no specialist review or novelty claim.
+
+**Result.** Fix a critical-line zero `rho` of exact order `m`, and put
+`k=m-1`. At damping `epsilon_N=c loglog N/log N`, with fixed `0<c<=k`,
+the complete squared error divided by `(log N)^(2(k-c))` has a positive
+lower limsup with an explicit original-zero coefficient. Under RH the
+truncation remainder has the same normalized limsup. Thus `c<k` forces
+unbounded error, while `c=k` already prevents convergence. The conclusion
+is necessary only; no sufficient damping threshold is obtained.
+
+### 8.1 The pole fixes a weighted Mertens limsup
+
+Let
+\[
+ B_k=\limsup_{x\to\infty}
+       \frac{|M(x)|}{\sqrt x(\log x)^k}\in[0,\infty],\qquad
+ M(x)=\sum_{n\le x}\mu(n).
+ \tag{GD1}
+\]
+If `B_k` is finite, the partial-summation identity continues from
+`Re s>1` to `Re s>1/2` and gives
+\[
+ \frac1{\zeta(s)}=s\int_1^\infty M(x)x^{-s-1}\,dx,
+ \qquad
+ \limsup_{\alpha\downarrow0}
+ \alpha^{k+1}|\zeta(\rho+\alpha)^{-1}|
+       \le |\rho|k!B_k.
+ \tag{GD2}
+\]
+Indeed, bound the tail by `(B_k+eta)sqrt x(log x)^k` and use
+`integral_1^infinity x^(-1-alpha)(log x)^k dx=k!/alpha^(k+1)`.
+The fixed initial interval vanishes after multiplication by
+`alpha^(k+1)`. Analytic continuation follows by multiplying the
+holomorphic integral by zeta. Since `rho` has exact order `m=k+1`,
+\[
+ \boxed{B_k\ge\frac{m}{|\rho\zeta^{(m)}(\rho)|}>0.}
+ \tag{GD3}
+\]
+The factorials cancel as `m!/(m-1)!=m`. If any critical-line zero has
+order greater than `k+1`, the same argument instead forces `B_k=infinity`.
+These statements do not assume RH; if `B_k` is infinite the inequalities
+are understood in the extended sense.
+
+### 8.2 The exact weighted Volterra transfer
+
+For sufficiently large `v=log x`, choose a positive parameter `a(v)`
+with `a(v)/v->0`, and put
+\[
+ c(x)=\sum_{n\le x}\mu(n)n^{-a(v)/v},\quad
+ f(v)=e^{-v/2}M(e^v),\quad g(v)=e^{-v/2}c(e^v).
+\]
+The exponent is held fixed during partial summation. Thus, without any
+derivative of `a`,
+\[
+ e^{a(v)}g(v)=f(v)+\frac{a(v)}v
+       \int_0^v e^{-(1/2-a(v)/v)(v-u)}f(u)\,du.
+ \tag{GD4}
+\]
+For `v>=V>0`, normalize by `v^k`, putting `F(v)=f(v)/v^k` and
+`H(v)=e^{a(v)}g(v)/v^k`. The part with `u>=V` is the operator
+\[
+ \mathcal T_vF=\frac{a(v)}v\int_V^v
+       e^{-(1/2-a(v)/v)(v-u)}(u/v)^kF(u)\,du.
+ \tag{GD5}
+\]
+For all sufficiently large `V`, its tail sup-norm bound is at most
+`4 sup_(v>=V)a(v)/v`, which tends to zero. The initial `u<=V` part,
+divided by `v^k`, is bounded and tends to zero, using local boundedness
+of `f` and the exponential factor. Therefore bounded `F` implies
+`H-F->0`. Conversely bounded `H` implies bounded `F`: on every finite
+interval `[V,W]`, absorb the operator norm, chosen less than `1/2`, and
+then let `W` increase. This proves
+\[
+ \limsup_{v\to\infty}|H(v)|
+       =\limsup_{v\to\infty}|F(v)|=B_k
+ \tag{GD6}
+\]
+including infinite limsup. In that case bounded `H` would force bounded
+`F`, contradicting `B_k=infinity`.
+
+For `a(v)=c log v`, (GD6) becomes
+\[
+ \boxed{\limsup_{x\to\infty}
+       \frac{|c(x)|}{\sqrt x(\log x)^{k-c}}=B_k.}
+ \tag{GD7}
+\]
+This identity is about the actual moving coefficients, not a fixed-shift
+limit interchanged with `x->infinity`.
+
+#### Integer interpolation is paid
+
+With `a(v)=c log v`, for `N<=x<N+1` the exponent changes by
+`O_c(loglog N/[N(log N)^2])`. Bounding the sum of absolute coefficient
+derivatives by `N log N` gives
+`|c(x)-c(N)|=O_c(loglog N/log N)`. Changing the factor
+`x^(-1/2)(log x)^(c-k)` across that interval contributes
+`O_{c,k}(N^(-1/2) max(1,(log N)^(c-k)))`, using `|c(N)|<=N`.
+Both vanish. Consequently the limsup in (GD7) is unchanged when
+restricted to integers.
+
+### 8.3 The complete approximation norm
+
+Set `a_N=c loglog N`, `epsilon_N=a_N/log N`, and
+\[
+ A_N(s)=\sum_{n\le N}\mu(n)n^{-s-\epsilon_N},\qquad
+ E_N=\frac1{2\pi}\int_{\mathbb R}
+       \frac{|1-\zeta(1/2+it)A_N(1/2+it)|^2}{1/4+t^2}\,dt.
+ \tag{GD8}
+\]
+The complete Mellin/unitary argument in Note12 §7 applies to every
+finite coefficient vector, with exactly the same fixed transformed
+target. It gives
+\[
+ \sqrt{E_N}\ge\frac{|c(N)|}{\sqrt N}-\eta_N,
+ \qquad \eta_N\longrightarrow0.
+ \tag{GD9}
+\]
+For reference, the unitary multiplier is
+`s zeta(1-s)/[(1-s)zeta(s)]`, and its transformed finite sum is the
+constant `c(N)` on `(0,1/N)`. The target's `L^2` norm on that interval
+is `eta_N`. This retains the entire norm, all zeros, and the original
+coefficients; it is the same classical Mellin mechanism used in
+[Burnol](https://arxiv.org/pdf/math/0202166) and
+[Wei–Wu, proof of Proposition1.9](https://bimsa.net/doc/publication/1424.pdf),
+with the moving coefficient sum handled explicitly above.
+
+If `0<c<=k`, divide (GD9) by `(log N)^(k-c)>=1`. Equations (GD3) and
+(GD7) imply
+\[
+ \boxed{\limsup_{N\to\infty}
+       \frac{E_N}{(\log N)^{2(k-c)}}
+       \ge B_k^2
+       \ge\frac{m^2}{|\rho\zeta^{(m)}(\rho)|^2}>0.}
+ \tag{GD10}
+\]
+Under RH, Note15 gives `J_(epsilon_N)->0` since `epsilon_N->0`, and
+\[
+ |\sqrt{I_{N,\epsilon_N}}-\sqrt{E_N}|
+       \le\sqrt{J_{\epsilon_N}}.
+ \tag{GD11}
+\]
+Dividing again by `(log N)^(k-c)>=1` proves equality of the two
+normalized limsups. Hence (GD10) holds also for `I_(N,epsilon_N)`.
+For `c<k` both unnormalized limsups are infinite; for `c=k` both have
+limsup at least `B_k^2`. At a double zero, `k=1`, the boundary value
+`c=1` gives the explicit amount `4/|rho zeta''(rho)|^2`.
+
+### 8.4 A general eventual damping envelope
+
+Let `a_N>0` be arbitrary, with the **eventual** upper bound
+\[
+ a_N-k\log\log N\le C.
+ \tag{GD12}
+\]
+Then `a_N=O(loglog N)` and `epsilon_N=a_N/log N->0`. Define
+`a(v)=a_(floor(e^v))`; this piecewise constant extension satisfies the
+conditions of (GD4)–(GD6), which never differentiate `a`. On each
+`N<=x<N+1`, changing the exponent `a_N/log x` to `a_N/log N` costs
+`O(a_N/log N)` in the unnormalized coefficient sum. Moreover
+`e^(a_N)/(log N)^k<=e^C`. After division by `sqrt N`, the same interpolation
+argument gives
+\[
+ \limsup_N\frac{e^{a_N}|c(N)|}{\sqrt N(\log N)^k}=B_k.
+ \tag{GD13}
+\]
+Since `e^(-a_N)(log N)^k>=e^(-C)`, the complete norm now yields
+\[
+ \boxed{\limsup_NE_N\ge e^{-2C}B_k^2.}
+ \tag{GD14}
+\]
+Under RH, (GD11) again transfers the same lower bound to the truncation
+remainder. If `a_N-k loglog N->-infinity`, every fixed `C` is eventually
+available, forcing infinite limsup because `B_k>0`.
+
+**Scope.** For the regular family `a_N=c loglog N`, convergence would
+require `c>m-1` at an order-`m` critical zero. This is not a sufficient
+condition. For arbitrary oscillating or adaptive schedules, (GD14) is
+asserted only under the eventual envelope (GD12). An upper bound holding
+on merely an infinite subsequence need not coincide with the large-Mertens
+subsequence. In particular this proof does **not** show that
+`a_N-k loglog N->+infinity` is necessary for arbitrary schedules.
+No conclusion is drawn about tapers, optimized coefficients, or the
+still missing opposing estimate for the unchanged theta source.
+
+
+## 9. Fixed smooth tapers: endpoint order and complete-norm cost
+
+20 October 2026. Prepared for Edward Baker with substantial LLM assistance,
+**gpt-6-astra, actual effort ultra**. Separate same-model internal checks;
+no specialist review or novelty claim.
+
+**Quantitative result.** For a fixed smooth logarithmic taper whose first
+nonzero endpoint derivative has order k, the complete Nyman–Beurling norm
+has a positive explicit limsup at a zero of multiplicity k+1, and an
+infinite limsup at higher multiplicity. The proof uses the original Möbius
+coefficients and the full norm; no local residue remainder is dropped.
+This extends the installed linear-taper and fixed-damping obstructions.
+It supplies no RH-only upper estimate or simplicity proof.
+
+Let k≥0 be an integer, and fix a real w∈C^(k+1)[0,1] with w(0)=1 and
+
+\[
+ w^{(j)}(1)=0\quad(0\le j<k),\qquad w^{(k)}(1)\ne0.
+ \tag{LT1}
+\]
+
+The condition for k=0 means w(1)≠0. Put
+
+\[
+ V_{N,w}(s)=\sum_{n\le N}\mu(n)w(\log n/\log N)n^{-s},\qquad
+ E_{N,w}=\frac1{2\pi}\int_{\mathbb R}
+ \frac{|1-\zeta(1/2+it)V_{N,w}(1/2+it)|^2}{1/4+t^2}\,dt.
+ \tag{LT2}
+\]
+
+Assume a fixed critical-line zero ρ has exact multiplicity m. The
+conclusions below do not otherwise require RH:
+
+\[
+ \boxed{m=k+1\ \Longrightarrow\quad
+ \limsup_{N\to\infty}E_{N,w}\ge
+ \frac{(k+1)^2|w^{(k)}(1)|^2}
+ {|\rho|^{2k+2}|\zeta^{(k+1)}(\rho)|^2}>0;}
+ \tag{LT3}
+\]
+\[
+ \boxed{m\ge k+2\ \Longrightarrow\quad
+ \limsup_{N\to\infty}E_{N,w}=\infty.}
+ \tag{LT4}
+\]
+
+These are limsup assertions, not lower bounds at every N.
+
+### 9.1 Exact coefficient extraction and endpoint reduction
+
+Write M(x)=Σ_(n≤x)μ(n), F_0=M, and, for k≥1,
+
+\[
+ F_k(x)=\frac1{(k-1)!}\int_1^x
+          M(u)(\log(x/u))^{k-1}\,\frac{du}{u},\qquad
+ \mathcal B_k=\limsup_{x\to\infty}
+          \frac{|F_k(x)|}{\sqrt{x}(\log x)^k}\in[0,\infty].
+ \tag{LT5}
+\]
+
+Set c_w(x)=Σ_(n≤x)μ(n)w(log n/log x), x>1. The complete Mellin
+Plancherel identity and the unitary multiplier
+sζ(1−s)/((1−s)ζ(s)) on Re s=1/2 give
+
+\[
+ \sqrt{E_{N,w}}\ge |c_w(N)|/\sqrt N-o(1).
+ \tag{LT6}
+\]
+
+Indeed, before applying the multiplier, the full L²(0,∞;dt) function is
+χ_(0,1]+Σ_(n≤N)μ(n)w(log n/log N){1/(nt)}. The multiplier maps
+{1/(nt)} to {nt}/(nt), so the finite sum becomes the constant c_w(N)
+on 0<t<1/N. The transformed indicator has vanishing L² norm on this
+shrinking interval. This is the classical Mellin mechanism used in
+[Wei–Wu, proof of Proposition 1.9](https://bimsa.net/doc/publication/1424.pdf);
+the full-space Mellin identity is also given in
+[Burnol, §1](https://arxiv.org/pdf/math/0202166). Values of the multiplier
+at the discrete critical zero set do not affect unitarity.
+
+Repeated Stieltjes integration by parts, retaining the atom n=1, gives
+exactly, with v=log x,
+
+\[
+ c_w(e^v)=\frac{(-1)^k w^{(k)}(1)}{v^k}F_k(e^v)
+ +\frac{(-1)^{k+1}}{v^{k+1}}
+       \int_0^v F_k(e^u)w^{(k+1)}(u/v)\,du.
+ \tag{LT7}
+\]
+
+For k=0 this is ordinary partial summation. For k≥1 the lower boundary
+terms vanish because F_j(1)=0 for j≥1; the n=1 contribution is already
+in M and hence in these integrals. Define
+f(v)=e^(−v/2)v^(−k)F_k(e^v), which is bounded on compact intervals
+(its limit at zero is 1/k! when k≥1), and g(v)=e^(−v/2)c_w(e^v).
+Then (LT7) is
+
+\[
+ g(v)=A f(v)+\frac{(-1)^{k+1}}v
+ \int_0^v e^{-(v-u)/2}(u/v)^k
+          w^{(k+1)}(u/v)f(u)\,du,
+ \quad A=(-1)^k w^{(k)}(1)\ne0.
+ \tag{LT8}
+\]
+
+The integral operator has supremum norm at most
+2||w^(k+1)||∞/v. If f is bounded, its remainder is o(1).
+Conversely, if g is eventually bounded, choose a fixed large V with
+2||w^(k+1)||∞/V<|A|/2. Separate 0≤u≤V, whose contribution is bounded
+and decays as v grows, and absorb the remaining supremum on every
+[V,W] into |A|sup_[V,W]|f|. This proves f bounded. Consequently,
+including the case of infinite limsup,
+
+\[
+ \limsup_{x\to\infty}|c_w(x)|/\sqrt x
+       =|w^{(k)}(1)|\mathcal B_k.
+ \tag{LT9}
+\]
+
+For N≤x<N+1, the mean-value theorem gives
+|c_w(x)−c_w(N)|≪_w 1/log N; changing √x to √N costs o(1), using
+|c_w(N)|≪_w N. Thus the integer limsup in (LT6) equals (LT9).
+
+### 9.2 The exact reciprocal pole payment
+
+For Re s>1, absolute convergence and k integrations give
+
+\[
+ \frac1{\zeta(s)}=s^{k+1}\int_1^\infty F_k(x)x^{-s-1}\,dx.
+ \tag{LT10}
+\]
+
+If \(\mathcal B_k<\infty\), the integral continues holomorphically to Re s>1/2 and
+equals the reciprocal there by analytic continuation. For α↓0,
+the compact initial interval contributes o(1) after multiplication
+by α^(k+1). The tail bound defining \(\mathcal B_k\) and
+∫_1^∞x^(−1−α)(log x)^k dx=k!α^(−k−1) therefore give
+
+\[
+ \limsup_{\alpha\downarrow0}
+       \alpha^{k+1}|\zeta(\rho+\alpha)^{-1}|
+       \le |\rho|^{k+1}k!\mathcal B_k.
+ \tag{LT11}
+\]
+
+An exact order-(k+1) zero has left side
+(k+1)!/|ζ^(k+1)(ρ)|, proving (LT3) via (LT6)–(LT9).
+A higher-order zero contradicts finite \(\mathcal B_k\) and gives (LT4).
+If \(\mathcal B_k\) was infinite to begin with, (LT6) and (LT9) already give
+infinite norm limsup. No estimate for an infinite residue sum,
+inverse derivative moment, or separation of other zeros is used.
+
+For w(u)=e^(−au)(1−u)^k with fixed a≥0,
+|w^(k)(1)|=k!e^(−a), so (LT3)'s constant is
+[(k+1)!e^(−a)/(|ρ|^(k+1)|ζ^(k+1)(ρ)|)]². In particular k=0 recovers
+the fixed-a obstruction even at a simple zero; k=1 recovers the double
+constant 4e^(−2a)/(|ρ|⁴|ζ″(ρ)|²); k=2 detects an exact triple with
+constant 36e^(−2a)/(|ρ|⁶|ζ‴(ρ)|²).
+
+**Scope.** For k≥2, this particular coefficient-sum extraction supplies
+no positive obstruction at a double zero. It does not prove convergence
+or a sharp upper constant for those smoother tapers. Fixed tapers flat
+to every order at 1 and N-dependent taper families are outside (LT1).
+No behavior of w near 0 beyond its stated normalization and smoothness
+was needed. The quantitative content is the explicit endpoint-order
+threshold and constant, not a new equivalent simplicity criterion.
+
+[Separate same-model continuation review, §9](../reviews/12_FINITE_PRECISION_SIGNED_KERNEL_AND_ENERGY_REVIEW_20261020.md).

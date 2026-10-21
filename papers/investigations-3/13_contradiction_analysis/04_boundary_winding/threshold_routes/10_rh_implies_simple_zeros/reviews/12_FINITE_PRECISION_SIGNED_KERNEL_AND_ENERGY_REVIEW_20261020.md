@@ -319,3 +319,62 @@ satisfy the complete arithmetic premises of the new identities.
 These are quantitative scoped obstructions and error coefficients, not
 zero exclusions. No fixture rerun, numerical sign scan or manuscript
 snapshot was needed. RHS-02's opposing signed estimate remains unmet.
+
+
+## 9. Growing damping, finite endpoint order and heat averaging
+
+20 October 2026. Prepared for Edward Baker with substantial LLM assistance,
+**gpt-6-astra, actual effort ultra**. Separate same-model internal checks;
+no specialist review or novelty claim.
+
+**Verdict:** [Note 12 §§8–9](../notes/12_FINITE_EVALUATION_AND_ENDPOINT_INVERSE_COSTS_20261020.md) proves the stated
+quantitative obstructions for its two prescribed coefficient classes.
+The full norm remains in the proofs. [Note 15 §§8.3 and 9.1](../notes/15_COMPLETED_RATIO_ENERGY_AND_MULTIPLICITY_20261020.md)
+clarifies the exact binary-sieve class and assesses fixed-time energy
+consumers. No opposing estimate or original-zero exclusion is obtained.
+
+- A critical zero of order m gives B_k>=m/|rho zeta^(m)(rho)| for
+  k=m−1, by the exact reciprocal Mellin integral and its factorial.
+  The weighted Volterra operator has tail norm tending to zero even
+  when a(v) is not differentiated. Its absorption proves the extended
+  limsup, including infinity. Integer interpolation is explicitly paid.
+  At a_N=c loglog N, 0<c<=k, the normalized complete error has limsup
+  at least B_k². Its exponent is 2(k−c); RH transfers the same limsup
+  to the truncation remainder because the normalized ratio error vanishes.
+- The general damping statement assumes an eventual upper envelope
+  a_N−k loglog N<=C. It does not substitute an arbitrary infinite
+  subsequence or infer eventual dominance for adaptive schedules.
+  The c=k endpoint has a positive constant, not an asserted convergence
+  theorem above the threshold.
+- For a fixed C^(k+1) taper, repeated integration retains the n=1 atom
+  and its first nonzero endpoint derivative w^(k)(1). The normalized
+  remainder has operator norm O(1/log x), so it cannot cancel a bounded
+  or unbounded leading limsup. The k-fold integrated Mertens limsup
+  is denoted mathcal B_k, distinct from the preceding Mertens B_k.
+  Its reciprocal identity has s^(k+1); an exact order-(k+1) zero gives
+  constant [(k+1)|w^(k)(1)|/(|rho|^(k+1)|zeta^(k+1)(rho)|)]².
+  Higher multiplicity gives infinite limsup. Infinitely flat or
+  N-dependent tapers are outside this finite-order theorem.
+- The binary prime-product coefficient identities determine all
+  finite-dimensional moments, hence all cylinder probabilities by
+  inclusion-exclusion. Independence is forced if every original integer
+  coefficient is to remain exact; it is not a removable modeling choice.
+  Nonbinary, finite-prefix or non-product representations are not covered.
+- For the unchanged theta source, strict growth of M_sigma between two
+  fixed positive times gives strict growth of J for sufficiently small
+  epsilon. This refutes global dissipation of this unrenormalized energy.
+  Fixed integrable time averages have the simple-zero first-order mass
+  regardless of multiplicity at t=0: the exact harmonic bound supplies
+  uniform domination, and the single endpoint has measure zero.
+  No shrinking-time uniformity or rate is inferred.
+- The positive atomic-source control F(z)=cosh(az) has exact order one
+  and simple imaginary zeros. Its pointwise Re R=cosh(a epsilon)|R|²
+  gives a strictly negative renormalized energy J−H/2. This rules out
+  that positivity inference from positive source and the Laguerre–Pólya
+  structure alone. It fails the original theta tail, completion and
+  ordinary Dirichlet arithmetic; no theta-specific negative claim follows.
+
+The existing collision controls retain their previously recorded failed
+premises. The exact source is used where explicitly stated, and generic
+controls are not substituted for it. These are checked scoped costs and
+consumer assessments, not a new criterion or simplicity theorem.

@@ -856,6 +856,47 @@ universal obstruction to retaining the signed covariances in (RS3), and
 no simplicity exclusion.
 
 
+### 8.3 Exact binary prime indicators leave no correlation freedom
+
+20 October 2026. Prepared for Edward Baker with substantial LLM assistance,
+**gpt-6-astra, actual effort ultra**. This is a scope clarification of
+the existing variance obstruction, not another estimate or criterion.
+
+Fix epsilon>0. Suppose random variables Y_p take values in {0,1}, and
+the sieve variable is X_n=product_(p|n)Y_p. To reproduce the unchanged
+Euler coefficients exactly, require
+
+\[
+ \mathbb E X_n=\prod_{p\mid n}(1-p^{-\epsilon})
+ \quad\hbox{for every integer }n\ge1.
+ \tag{RS9}
+\]
+
+Put r_p=1-p^(-epsilon). Every finite set S of primes occurs as the
+support of a squarefree integer, so (RS9) determines all its mixed
+moments. For disjoint finite sets A,B, inclusion-exclusion gives
+
+\[
+ \Pr(Y_p=1\ (p\in A),\ Y_p=0\ (p\in B))
+ =\sum_{T\subseteq B}(-1)^{|T|}\prod_{p\in A\cup T}r_p
+ =\prod_{p\in A}r_p\prod_{p\in B}(1-r_p).
+ \tag{RS10}
+\]
+
+Thus the full finite-dimensional laws are forced to be independent.
+Writing B_p=1-Y_p recovers exactly the law in (RS1), including its
+random density and variance cost (RS8). Introducing correlations between
+binary prime indicators while preserving (RS9) is therefore unavailable;
+the nonvanishing Jensen loss applies to the whole class of exact binary
+prime-product representations, not merely a voluntarily independent
+choice. No independence was assumed in this argument.
+
+The scope requires all integer coefficients at a fixed epsilon. Matching
+only finitely many coefficients, permitting nonbinary weights or using
+variables not of prime-product form leaves this class. The argument
+does not analyze those representations or give an opposing signed bound.
+
+
 ## 9. Assessment of the complete heat-energy identity
 
 20 October 2026. Prepared for Edward Baker with substantial LLM assistance,
@@ -981,3 +1022,109 @@ arithmetic task remains a bound on the complete signed drift with the
 unchanged source; the identity alone is not such a bound.
 
 [Separate same-model continuation review, §8](../reviews/12_FINITE_PRECISION_SIGNED_KERNEL_AND_ENERGY_REVIEW_20261020.md).
+
+
+### 9.1 Fixed-time dissipation and renormalized averaging
+
+20 October 2026. Prepared for Edward Baker with substantial LLM assistance,
+**gpt-6-astra, actual effort ultra**. Separate same-model internal checks;
+no specialist review or novelty claim.
+
+Retain Note15's notation
+\[
+J_t(\epsilon)=\frac1{2\pi}\int_{\mathbb R}
+\frac{|1-\mathcal F_t(iy)/\mathcal F_t(\epsilon+iy)|^2}
+{\sigma^2+y^2}\,dy,\qquad
+M_\sigma(t)=\frac{\mathcal F_t'(\sigma)}
+{\sigma\mathcal F_t(\sigma)} .
+\]
+Assume RH. The complete positive theta source gives
+\(M_\sigma'(t)>0\), as already proved in (HR15).
+Every fixed positive-time zero is simple, so (HR12) gives, for any fixed
+\(0<t_1<t_2\),
+\[
+J_{t_2}(\epsilon)-J_{t_1}(\epsilon)
+=\frac{\epsilon}{2}\{M_\sigma(t_2)-M_\sigma(t_1)\}
++o(\epsilon)>0
+\quad\hbox{for all sufficiently small }\epsilon.
+\tag{HI1}
+\]
+Thus the unrenormalized ratio energy is not globally dissipative even
+for the unchanged theta source. This conclusion does not require a
+multiple endpoint or real zeros at negative heat times.
+
+There is a complete time-integrated statement. Fix \(T>0\) and any
+fixed \(k\in L^1[0,T]\). The exact positive harmonic mass of (HR6) gives
+\[
+0\le\frac{J_t(\epsilon)}{\epsilon}
+\le\frac{1-\mathcal F_t(\sigma)/\mathcal F_t(\sigma+\epsilon)}
+{\sigma\epsilon}\le C_{\sigma,T}
+\quad(0\le t\le T,\ 0<\epsilon\le\epsilon_0).
+\tag{HI2}
+\]
+The last bound follows from positivity and joint analyticity at the
+real points \(\sigma\le x\le\sigma+\epsilon_0\). The bound is for the
+full spectral integral, so there is no unassigned height boundary.
+For every \(t>0\) its limiting energy is \(M_\sigma(t)/2\).
+Dominated convergence therefore proves
+\[
+\boxed{\lim_{\epsilon\downarrow0}\frac1\epsilon
+\int_0^T k(t)J_t(\epsilon)\,dt
+=\frac12\int_0^T k(t)M_\sigma(t)\,dt.}
+\tag{HI3}
+\]
+Endpoint multiplicity does not appear in this limit. In particular
+the fixed-time integrated excess
+\(\int_0^T k(t)[J_t(\epsilon)-\epsilon M_\sigma(t)/2]dt\)
+is \(o(\epsilon)\) even if the endpoint has a multiple zero.
+Such an integrated bound cannot serve as its opposing estimate.
+Weights concentrating on an \(\epsilon^2\) interval are outside this
+fixed-\(L^1\)-weight assertion; their known nontrivial limit is (HR7).
+
+A second candidate is to subtract half the exact harmonic mass:
+\[
+R_\epsilon(z)=\frac{F(z)}{F(z+\epsilon)},\qquad
+H_\epsilon=\frac{1-R_\epsilon(\sigma)}{\sigma},\qquad
+D_\epsilon=J_\epsilon-\frac12H_\epsilon.
+\tag{HI4}
+\]
+For an even real entire function of order at most one with purely
+imaginary zeros, its contractive ratio gives the exact Poisson identity
+\[
+D_\epsilon=\frac1{2\sigma}
+\left\{\frac{\sigma}{\pi}\int_{\mathbb R}
+\frac{|R_\epsilon(iy)|^2}{\sigma^2+y^2}\,dy
+-R_\epsilon(\sigma)\right\}.
+\tag{HI5}
+\]
+It is not always nonnegative. Take \(F(z)=\cosh(az)\), \(a>0\).
+This has exact order one, all simple imaginary zeros, and a positive
+even atomic Laplace source. Its full heat continuation is
+\(\mathcal F_t(z)=e^{a^2t/4}\cosh(az)\), so the ratio is independent
+of time and its zeros stay simple and imaginary for all real times.
+Directly on the imaginary axis,
+\[
+\operatorname{Re}R_\epsilon(iy)
+=\cosh(a\epsilon)|R_\epsilon(iy)|^2.
+\]
+Poisson integration therefore yields the explicit strict sign
+\[
+\boxed{D_\epsilon
+=\frac{\cosh(a\sigma)}
+{2\sigma\cosh(a(\sigma+\epsilon))}
+\{\operatorname{sech}(a\epsilon)-1\}<0.}
+\tag{HI6}
+\]
+This is an exact positive-source counterexample to the proposed
+class-wide sign. It lacks theta's source tail, its completion and its
+ordinary Dirichlet arithmetic; it does not refute a new estimate using
+those unchanged data.
+
+The conclusions are limited and quantitative: (HI1) rules out global
+dissipation of the actual unnormalized energy, (HI3) shows the endpoint
+is invisible to its first-order fixed-time averages, and (HI6) rules out
+the proposed generic nonnegative renormalization. None supplies an
+opposing estimate for Note15's endpoint crossover or a simplicity
+exclusion.
+
+[Separate same-model continuation review, §9](../reviews/12_FINITE_PRECISION_SIGNED_KERNEL_AND_ENERGY_REVIEW_20261020.md).

@@ -586,3 +586,38 @@ all zeros and cross terms retained. The [result index](../../../../../../../resu
 [avoid index](../../../../../../../avoid/README.md), and
 [review 12 §8](../reviews/12_FINITE_PRECISION_SIGNED_KERNEL_AND_ENERGY_REVIEW_20261020.md) govern continuation; another reformulation
 or reoptimization of these closed payments does not satisfy that gate.
+
+
+## 21. The cost of increasing damping or endpoint flatness
+
+20 October 2026. Prepared for Edward Baker with substantial LLM assistance,
+**gpt-6-astra, actual effort ultra**. Separate same-model internal checks;
+no specialist review or novelty claim.
+
+[Note 12 §§8–9](../notes/12_FINITE_EVALUATION_AND_ENDPOINT_INVERSE_COSTS_20261020.md) gives two further quantitative
+scope boundaries. For an order-m critical zero, damping
+c loglog N/log N cannot converge when c<=m−1, with the explicit
+normalized lower coefficient m²/|rho zeta^(m)(rho)|². A fixed smooth
+taper whose first nonzero endpoint derivative has order k likewise
+has a positive full-error limsup at multiplicity k+1 and an infinite
+limsup at higher multiplicity. These results retain the original
+coefficients and complete norm. They neither prove convergence above
+those thresholds nor cover infinitely flat or N-dependent tapers.
+
+[Note 15 §9.1](../notes/15_COMPLETED_RATIO_ENERGY_AND_MULTIPLICITY_20261020.md) checks the heat consumers separately:
+the actual ratio energy increases between fixed positive times at small
+epsilon, while fixed integrable time averages have the simple first-order
+mass even if the initial endpoint is multiple. Such averages cannot
+exclude that endpoint. The positive-source cosh control also disproves
+universal positivity of the renormalized difference J−H/2. It lacks
+the unchanged theta tail and ordinary Dirichlet arithmetic, so this is
+a structural scope limit rather than a theta-specific impossibility.
+Section 8.3 shows exact binary prime-product coefficient matching forces
+independence and hence the already proved Jensen variance cost.
+
+The [result index](../../../../../../../result-summaries/README.md),
+[avoid index](../../../../../../../avoid/README.md), and
+[review 12 §9](../reviews/12_FINITE_PRECISION_SIGNED_KERNEL_AND_ENERGY_REVIEW_20261020.md) retain the acceptance gate: an actual
+opposing estimate using the unchanged source. Merely choosing a parameter
+outside a proved obstruction is not such an estimate. RH implies
+simplicity remains open in this investigation.

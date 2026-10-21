@@ -321,3 +321,17 @@ representation loses the cancellation needed for O(epsilon). These
 failures concern the stated approximations, not all signed arithmetic.
 [Internal review §8](../papers/investigations-3/13_contradiction_analysis/04_boundary_winding/threshold_routes/10_rh_implies_simple_zeros/reviews/12_FINITE_PRECISION_SIGNED_KERNEL_AND_ENERGY_REVIEW_20261020.md). Prepared for Edward Baker
 with substantial LLM assistance, **gpt-6-astra, ultra**.
+
+
+**Damping/taper and averaging scope, 20 October 2026 (BW10).**
+[Note 12 §§8–9](../papers/investigations-3/13_contradiction_analysis/04_boundary_winding/threshold_routes/10_rh_implies_simple_zeros/notes/12_FINITE_EVALUATION_AND_ENDPOINT_INVERSE_COSTS_20261020.md) quantifies which prescribed
+growing-damping and finite-order taper choices still cannot converge at
+a multiple zero. Choosing a parameter outside the proved failure range
+does not supply an upper bound. The complete Volterra and Mellin argument
+is needed; endpoint residues alone would not pay the norm.
+[Note 15 §9.1](../papers/investigations-3/13_contradiction_analysis/04_boundary_winding/threshold_routes/10_rh_implies_simple_zeros/notes/15_COMPLETED_RATIO_ENERGY_AND_MULTIPLICITY_20261020.md) shows fixed integrable heat-time
+averages lose the endpoint excess to first order under RH, including a
+multiple initial zero. Do not interpret their o(epsilon) renormalized
+excess as an exclusion. Section 8.3 also leaves no correlation freedom
+for exact binary prime-product coefficient matching. [Internal review §9](../papers/investigations-3/13_contradiction_analysis/04_boundary_winding/threshold_routes/10_rh_implies_simple_zeros/reviews/12_FINITE_PRECISION_SIGNED_KERNEL_AND_ENERGY_REVIEW_20261020.md).
+For Edward Baker with substantial LLM assistance, **gpt-6-astra, ultra**.

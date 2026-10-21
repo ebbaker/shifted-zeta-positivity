@@ -473,3 +473,18 @@ with d_1=0, d_2=1/4, and a Jensen variance loss with liminf at least one.
 Neither supplies an opposing bound. [Same-model review §8](../papers/investigations-3/13_contradiction_analysis/04_boundary_winding/threshold_routes/10_rh_implies_simple_zeros/reviews/12_FINITE_PRECISION_SIGNED_KERNEL_AND_ENERGY_REVIEW_20261020.md).
 Prepared for Edward Baker with substantial LLM assistance,
 **gpt-6-astra, ultra**; no specialist review or novelty claim.
+
+
+**Growing-damping and taper thresholds, 20 October 2026:**
+[BW10 Note 12 §§8–9](../papers/investigations-3/13_contradiction_analysis/04_boundary_winding/threshold_routes/10_rh_implies_simple_zeros/notes/12_FINITE_EVALUATION_AND_ENDPOINT_INVERSE_COSTS_20261020.md) is **proved in-note** for
+its prescribed coefficient classes. At an order-m critical zero,
+c loglog N/log N damping with c<=m−1 has an explicit nonvanishing
+normalized full-error limsup; a fixed smooth taper of endpoint order k
+has positive limsup at multiplicity k+1 and infinite limsup above it.
+“It supplies no RH-only upper estimate or simplicity proof.” The general
+damping envelope is eventual, not a subsequence claim; infinitely flat
+and N-dependent tapers are outside the theorem. [Note 15 §§8.3 and 9.1](../papers/investigations-3/13_contradiction_analysis/04_boundary_winding/threshold_routes/10_rh_implies_simple_zeros/notes/15_COMPLETED_RATIO_ENERGY_AND_MULTIPLICITY_20261020.md)
+records forced independence of exact binary prime indicators and the
+endpoint-compatible fixed-time heat averages. [Same-model review §9](../papers/investigations-3/13_contradiction_analysis/04_boundary_winding/threshold_routes/10_rh_implies_simple_zeros/reviews/12_FINITE_PRECISION_SIGNED_KERNEL_AND_ENERGY_REVIEW_20261020.md).
+For Edward Baker with substantial LLM assistance, **gpt-6-astra, ultra**;
+no specialist review or novelty claim.

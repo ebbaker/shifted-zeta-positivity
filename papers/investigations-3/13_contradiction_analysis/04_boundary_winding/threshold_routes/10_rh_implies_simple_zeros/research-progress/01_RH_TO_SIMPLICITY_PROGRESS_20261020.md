@@ -14,7 +14,7 @@ comparison for the full admissible nonnegative-kernel class under its
 stated gamma and pole budgets; its new §7 also covers strip-analytic kernels with infinite Fourier support. Note 13 §6 extends the exact gap comparison beyond polynomial kernels, and Note 14 quantifies cancellation in the original theta-mode Gram. Notes 12–13 add the matched Riemann–Siegel evaluation comparison, a scoped inverse-mollifier cost, and the certified-gap signed-polynomial screen. These give partial
 structural results, explicit certification and resolution costs, scoped
 estimating failures and an approximation control.
-Note 13 §§7–8 pays a remote-gap signed multiplier completely for every bandwidth of each fixed sinc power. Its §9 now gives a different coherent construction with O(delta^(1/2−q)) excess over the exact signed base sum, including an explicit quartic bound. Endpoint checks in Note 12 §4 additionally quantify the dependence of phase energy on derivative scale; the Hopf and bare Euler-heat attempts provide no opposing bound. Note 15 proves the exact ratio-energy coefficient and now its heat-scale crossover, with the original Möbius correlation payment retained. Note 12 §7 now closes the untapered fixed-a/log N cutoff: it cannot converge even with simple zeros. Note 15 §§7–8 retains an exact multiplicity-dependent prime-error remainder and a nonvanishing Jensen variance cost. RH ⇒ simplicity remains unproved. No multiple theta zero or new height
+Note 13 §§7–8 pays a remote-gap signed multiplier completely for every bandwidth of each fixed sinc power. Its §9 now gives a different coherent construction with O(delta^(1/2−q)) excess over the exact signed base sum, including an explicit quartic bound. Endpoint checks in Note 12 §4 additionally quantify the dependence of phase energy on derivative scale; the Hopf and bare Euler-heat attempts provide no opposing bound. Note 15 proves the exact ratio-energy coefficient and now its heat-scale crossover, with the original Möbius correlation payment retained. Note 12 §7 now closes the untapered fixed-a/log N cutoff: it cannot converge even with simple zeros. Note 15 §§7–8 retains an exact multiplicity-dependent prime-error remainder and a nonvanishing Jensen variance cost. Note 12 §§8–9 now quantifies growing-damping and finite-order taper thresholds; Note 15 §9.1 assesses fixed-time heat averaging. RH ⇒ simplicity remains unproved. No multiple theta zero or new height
 interval has been excluded.** The [program][program] retains its acceptance gates.
 The original scope was selected in [chat 0003][origin]; this round is
 [chat 0004][current].
@@ -23,12 +23,34 @@ The original scope was selected in [chat 0003][origin]; this round is
 | --- | --- | --- |
 | RHS-00 | Complete: scope and literature | [Opening analysis][opening] §§1–2, 9; primary inputs rechecked in [review 02][review]. No methodological priority or relative-difficulty theorem claimed. |
 | RHS-01 | Complete: inherited transfer and control screen; strengthened through Note 09 | Opening §§3–6. [Note 01][n1] proves finite root-label continuation under RH, exact endpoint/middle complement, and retained multiplicity phase atom. [Note 05][n5] adds an RH-conditional, uniformly close positive-source control with an exact double event, unchanged leading tail and pole residue one. [Note 09][n9] adds a distinct ordinary-Dirichlet control with exact finite data, positive coefficients, residue one and RH-sized prime-counting error, but failed reflection/entireness. |
-| RHS-02 | Declared estimators and correlation costs assessed; positive theta-estimate gate remains unmet | Notes 01–03 treat fixed-width, finite-prime and signed-error envelopes, and finite Euler-control rejection. [Note 04][n4] proves exact subtraction costs, a sharp actual-tail asymptotic and the fully optimized rational-power absolute-payment barrier. Note 05 screens one finite horizontal-shift consumer exactly and identifies the normalized source control's failed Dirichlet-series premise. [Note 06][n6] proves a sharp full-window correlation resolution cost, the additive-one limit of universal phase positivity, and a local Möbius-energy cost. [Note 07][n7] proves localized quadratic-to-linear dominance and exact theta Jensen coalescence rates. [Note 08][n8] obtains vanishing finite-sum relative error, a stronger energy envelope and a broader signed-Fourier kernel cost. [Note 09][n9] constructs near-zero prime-payment kernels outside the fixed class and improves sufficient multiplicity-extraction cost under a separately certified gap. [Note 10][n10] closes the full-height improvement for those uniform phase-return constructions, with leading costs at least one/three-halves. [Note 11][n11] proves the sharp leading one-half absolute-envelope floor for the full admissible nonnegative-kernel class under complete gamma/pole budgets, with a joint prime-cost/logarithmic-spread bound. [Note 12][n12] gives both matched extractors leading square-root summand count, while retaining inverse-mollifier residues and endpoint energy. [Note 13][n13] supplies a nonnegative companion for certified-gap polynomial kernels and a complete quartic prime-cost comparison. The strip and general-gap extensions remove the specified support/factorization restrictions; [Note 14][n14] proves nearly complete off-diagonal cancellation for the original theta modes at all large heights. Note 13 §§7–8 proves the complete remote-gap comparison and a normalized separate-payment lemma; §9 proves quantitative coherent saturation of the exact signed base sum. The endpoint continuation identifies the physical/scaled phase-energy costs, while Hopf/Julia reproduces the Poisson consumer and formal bare Euler heat diverges. [Note 15][n15] computes the exact multiplicity-dependent ratio energy, its heat crossover and signed arithmetic cancellation cost; Note 12 §§5–7 quantifies the linear Möbius taper and closes fixed-a/log N untapered convergence even in the simple case; Note 15 §§7–9 retains the prime-error remainder, Jensen variance and full heat drift. None supplies an opposing estimate at an original multiple zero. |
+| RHS-02 | Declared estimators and correlation costs assessed; positive theta-estimate gate remains unmet | Notes 01–03 treat fixed-width, finite-prime and signed-error envelopes, and finite Euler-control rejection. [Note 04][n4] proves exact subtraction costs, a sharp actual-tail asymptotic and the fully optimized rational-power absolute-payment barrier. Note 05 screens one finite horizontal-shift consumer exactly and identifies the normalized source control's failed Dirichlet-series premise. [Note 06][n6] proves a sharp full-window correlation resolution cost, the additive-one limit of universal phase positivity, and a local Möbius-energy cost. [Note 07][n7] proves localized quadratic-to-linear dominance and exact theta Jensen coalescence rates. [Note 08][n8] obtains vanishing finite-sum relative error, a stronger energy envelope and a broader signed-Fourier kernel cost. [Note 09][n9] constructs near-zero prime-payment kernels outside the fixed class and improves sufficient multiplicity-extraction cost under a separately certified gap. [Note 10][n10] closes the full-height improvement for those uniform phase-return constructions, with leading costs at least one/three-halves. [Note 11][n11] proves the sharp leading one-half absolute-envelope floor for the full admissible nonnegative-kernel class under complete gamma/pole budgets, with a joint prime-cost/logarithmic-spread bound. [Note 12][n12] gives both matched extractors leading square-root summand count, while retaining inverse-mollifier residues and endpoint energy. [Note 13][n13] supplies a nonnegative companion for certified-gap polynomial kernels and a complete quartic prime-cost comparison. The strip and general-gap extensions remove the specified support/factorization restrictions; [Note 14][n14] proves nearly complete off-diagonal cancellation for the original theta modes at all large heights. Note 13 §§7–8 proves the complete remote-gap comparison and a normalized separate-payment lemma; §9 proves quantitative coherent saturation of the exact signed base sum. The endpoint continuation identifies the physical/scaled phase-energy costs, while Hopf/Julia reproduces the Poisson consumer and formal bare Euler heat diverges. [Note 15][n15] computes the exact multiplicity-dependent ratio energy, its heat crossover and signed arithmetic cancellation cost; Note 12 §§5–7 quantifies the linear Möbius taper and closes fixed-a/log N untapered convergence even in the simple case; Note 15 §§7–9 retains the prime-error remainder, Jensen variance and full heat drift. Note 12 §§8–9 extends the full-norm obstruction to logarithmically growing damping and finite-order smooth tapers; Note 15 §9.1 shows the tested fixed-time averages remain endpoint-compatible. None supplies an opposing estimate at an original multiple zero. |
 | RHS-03 | Finite-wall subtask proved under RH; strict surplus still gated | Note 01 §2 covers every finite cap and multiplicity. Cap mass remains `(m-1)pi`; the Gaussian sign is event-compatible. Note 04 identifies the exterior inverse-square sum needed for effective deflation, but wall continuation gives no quantitative upper bound for it. |
 | RHS-04 | Coverage audited; no new exclusion | Structural statements cover all finite heights/multiplicities under RH. Arithmetic failure ranges are stated explicitly; no all-height signed estimate or new theta exclusion class exists. |
-| RHS-05 | Reviews of bounded attempts completed; full-argument review remains gated | [Reviews 02–15](../reviews/README.md) check the stated proofs, imports and controls. Review 04 checks uniform optimization and certified subtraction; [review 05][review5] checks source positivity, the whole-tail relative bound, exact residue normalization and the distinct curvature control. [Review 06][review6] checks correlation normalization, clustered configurations, phase minima and local pole/energy constants. [Review 07][review7] checks local dominance, complete coefficient errors and Hermite coalescence. [Review 08][review8] checks the reciprocal estimates, complete energy saddle, kernel budgets and canonical-system premise. [Review 09][review9] checks the normalized arithmetic control, translated kernels and stable extraction with their distinct premises. [Review 10][review10] checks the primary approximation, return-height bound and scoped complete-envelope comparison. [Review 11][review11] checks continuous Gram/Fubini, all-zero and all-prime-power payments, stable Poisson and the full-class scope. [Review 12][review12] checks the evaluation, mollifier, signed-kernel and energy comparisons, including its §§5–8 endpoint, ratio-energy, heat crossover, fixed-damping closure and arithmetic-remainder continuations. [Review 13][review13] checks the two kernel extensions and full theta-mode cancellation. [Review 14][review14] checks the complete remote-gap comparison and bounded event attempts; [review 15][review15] checks coherent saturation and its explicit constants. Same-model internal validation; no simplicity theorem. |
+| RHS-05 | Reviews of bounded attempts completed; full-argument review remains gated | [Reviews 02–15](../reviews/README.md) check the stated proofs, imports and controls. Review 04 checks uniform optimization and certified subtraction; [review 05][review5] checks source positivity, the whole-tail relative bound, exact residue normalization and the distinct curvature control. [Review 06][review6] checks correlation normalization, clustered configurations, phase minima and local pole/energy constants. [Review 07][review7] checks local dominance, complete coefficient errors and Hermite coalescence. [Review 08][review8] checks the reciprocal estimates, complete energy saddle, kernel budgets and canonical-system premise. [Review 09][review9] checks the normalized arithmetic control, translated kernels and stable extraction with their distinct premises. [Review 10][review10] checks the primary approximation, return-height bound and scoped complete-envelope comparison. [Review 11][review11] checks continuous Gram/Fubini, all-zero and all-prime-power payments, stable Poisson and the full-class scope. [Review 12][review12] checks the evaluation, mollifier, signed-kernel and energy comparisons, including its §§5–9 endpoint, ratio-energy, heat crossover, damping/taper closures and arithmetic-remainder continuations. [Review 13][review13] checks the two kernel extensions and full theta-mode cancellation. [Review 14][review14] checks the complete remote-gap comparison and bounded event attempts; [review 15][review15] checks coherent saturation and its explicit constants. Same-model internal validation; no simplicity theorem. |
 
 ## Quantitative outcomes
+
+- At an exact order-m critical zero, k=m−1, Note 12 §8 proves that
+  damping c loglog N/log N with 0<c<=k has normalized complete squared
+  error limsup at least m²/|rho zeta^(m)(rho)|², after division by
+  (log N)^(2(k−c)). Under RH the truncation remainder has the same
+  normalized limsup. Thus c<k forces unbounded error and c=k prevents
+  convergence. No sufficient threshold or conclusion for arbitrary
+  oscillating damping subsequences is asserted.
+- For every fixed C^(k+1) taper with first nonzero endpoint derivative
+  w^(k)(1), Note 12 §9 gives an explicit positive full-error limsup
+  at multiplicity k+1 and infinite limsup at larger multiplicity.
+  The positive constant is [(k+1)|w^(k)(1)|/(|rho|^(k+1)
+  |zeta^(k+1)(rho)|)]². Infinitely flat and N-dependent tapers remain
+  outside this result; a higher endpoint order supplies no upper bound.
+- Note 15 §9.1 proves that the actual ratio energy increases between
+  any two fixed positive heat times for sufficiently small epsilon.
+  Fixed integrable time averages retain the simple-zero first-order
+  mass regardless of endpoint multiplicity. Their o(epsilon)
+  renormalized excess therefore cannot exclude a multiple endpoint.
+  The positive-source cosh control also refutes structural positivity
+  of J−H/2; it does not share the original theta arithmetic.
+
 
 - Note 12 §7 proves, for every fixed a>0, that the untapered damped
   Möbius polynomial has limsup complete squared error at least
@@ -37,8 +59,8 @@ The original scope was selected in [chat 0003][origin]; this round is
   B=infinity. Under RH the truncation remainder I has the same limsup.
   Thus the previously proposed o(1/log N) payment at a=2 is impossible
   even in the all-simple case. The §6 liminf comparison stays valid;
-  its proposed research target is superseded. Growing a_N and different
-  tapers are outside this closure.
+  its proposed research target is superseded. Sections 8–9 extend the
+  closure to the explicitly stated growing-damping and taper classes.
 - Note 15 §7 computes the exact squared error of the exponentially
   smoothed prime-error approximation: epsilon times sum d_m/|rho|²,
   up to o(epsilon), where d_1=0, d_2=1/4 and d_m>0 for m>=2.
@@ -486,14 +508,25 @@ nonlinear energy redistribution intact. The arithmetic Gram formula must
 keep its square cutoff order and signed off-diagonal terms, since their
 absolute double sum diverges. For the exact untapered coefficients, fixed damping a/log N is now
 closed by Note 12 §7: no vanishing truncation bound can hold even in the
-all-simple case. Do not repeat that proposed target. Growing a_N or
-different tapers require their own estimates and are outside the closure.
+all-simple case. Do not repeat that proposed target. Sections 8–9 now
+close convergence for c loglog N damping at c<=m−1 under an order-m
+zero, and for fixed tapers whose endpoint order k is less than m.
+No convergence is proved outside those ranges. The general damping
+envelope must hold eventually; a subsequence cannot be substituted.
+Infinitely flat or N-dependent taper families remain outside the proof.
 Note 15 §§7–8 also prohibits dropping the explicit prime-error
 linearization remainder or using the independent-prime Jensen allowance
 as an O(epsilon) estimate. The complete finite-window heat identity in
 §9 retains its imaginary drift term and agrees with the existing double
-profile; it supplies no opposing bound. No positive gate has been closed
-by these quantitative comparisons.
+profile; it supplies no opposing bound. Its §9.1 further rules out
+global dissipation of the actual unrenormalized energy and shows that
+fixed integrable time averaging loses the endpoint excess to first
+order. Shrinking-time averages require their own complete estimate.
+The cosh control disproves structural J−H/2 positivity but fails the
+unchanged theta/arithmetic premises. Section 8.3 also shows independence
+is forced for an exact binary prime-product representation; changing
+correlations without changing coefficients cannot rescue that Jensen
+bound. No positive gate has been closed by these comparisons.
 
 The unconditional alternatives in the opening remain separate. The
 parallel investigation remains open; this register does not mark the
