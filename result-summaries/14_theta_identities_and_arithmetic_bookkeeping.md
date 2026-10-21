@@ -572,3 +572,17 @@ is not a gap for the full infimum. K−Z=Σm(m−1)/|rho|², including
 exclusion follows. [Same-model review 16](../papers/investigations-3/13_contradiction_analysis/04_boundary_winding/threshold_routes/10_rh_implies_simple_zeros/reviews/16_GEVREY_GLOBAL_APPROXIMATION_REVIEW_20261020.md).
 For Edward Baker with substantial LLM assistance, **gpt-6-astra, ultra**;
 no specialist review, analytic Lean verification or priority claim.
+
+
+**Exact finite filters and length cost, 20 October 2026:**
+[BW10 Note 16 §14](../papers/investigations-3/13_contradiction_analysis/04_boundary_winding/threshold_routes/10_rh_implies_simple_zeros/notes/16_GEVREY_GLOBAL_APPROXIMATION_AND_RATE_20261020.md) is **proved in-note**: exact
+unit-bounded Dirichlet isolation of two nodes at a small gap Delta has
+log length between pi/|Delta| and pi/|Delta|+log 2. Finite products
+remove attenuation on a fixed node set, and “The complete profile tail
+remains paid.” The latter uses the RH fixed-taper theorem; the selector
+inequality itself needs no RH. The sharp larger-supremum tradeoff and
+heat root-isolation consequence retain their separate scopes. The
+infimum coefficient K is unchanged, and no original zero is excluded.
+[Same-model review 16 §10](../papers/investigations-3/13_contradiction_analysis/04_boundary_winding/threshold_routes/10_rh_implies_simple_zeros/reviews/16_GEVREY_GLOBAL_APPROXIMATION_REVIEW_20261020.md). For Edward Baker
+with substantial LLM assistance, **gpt-6-astra, ultra**; no specialist
+validation, analytic formalization or priority claim.

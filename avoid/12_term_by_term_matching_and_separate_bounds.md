@@ -421,3 +421,18 @@ tradeoff and separately paid moving-family scope.
 [Same-model review 16](../papers/investigations-3/13_contradiction_analysis/04_boundary_winding/threshold_routes/10_rh_implies_simple_zeros/reviews/16_GEVREY_GLOBAL_APPROXIMATION_REVIEW_20261020.md). For Edward Baker
 with substantial LLM assistance, **gpt-6-astra, ultra**; no analytic
 formalization, priority or simplicity claim.
+
+
+**Root isolation is a separate task, 20 October 2026 (BW10).**
+[Note 16 §14](../papers/investigations-3/13_contradiction_analysis/04_boundary_winding/threshold_routes/10_rh_implies_simple_zeros/notes/16_GEVREY_GLOBAL_APPROXIMATION_AND_RATE_20261020.md) prices exact bounded Dirichlet
+isolation with sharp two-point log length pi/|Delta|+O(1), and retains
+the complete tail after finite-set interpolation. Its heat threshold
+is not a necessary condition for every approximant: “Assigning the same
+taper to both emerging simple roots need not isolate them.” A growing
+selector supremum has a precise tradeoff, but its A² separate-payment
+allowance is not a lower bound on actual integrated error. Keep the
+fixed node set and filters before the N limit; neither a heat-deformed
+Dirichlet identity nor a uniform moving-filter theorem is supplied.
+[Same-model review 16 §10](../papers/investigations-3/13_contradiction_analysis/04_boundary_winding/threshold_routes/10_rh_implies_simple_zeros/reviews/16_GEVREY_GLOBAL_APPROXIMATION_REVIEW_20261020.md). For Edward Baker
+with substantial LLM assistance, **gpt-6-astra, ultra**; no simplicity
+or priority claim.

@@ -13,6 +13,11 @@ neither that implication nor priority for a new method.
 Start with the [opening brainstorm](brainstorm/01_RH_IMPLIES_SIMPLICITY_20261020.md),
 the [research program](research-overview/01_RH_TO_SIMPLICITY_PROGRAM_20261020.md)
 and [progress register](research-progress/01_RH_TO_SIMPLICITY_PROGRESS_20261020.md).
+The six-page [analytic consolidation draft](manuscript/main.tex)
+([PDF](manuscript/main.pdf)) presents the principal estimates, the missing
+arithmetic bound and their relation to BW09. The complete upper estimates
+retain multiplicity costs; RH implies simplicity remains unproved.
+
 The [opening review](reviews/01_RH_TO_SIMPLICITY_OPENING_REVIEW_20261020.md)
 checks the conditional logic, all-multiplicity cap baseline and controls.
 
@@ -35,7 +40,7 @@ changes the other's task statuses. The unconditional simplicity alternative
 is retained in the brainstorm but is not the selected primary goal.
 
 Further analysis belongs in `brainstorm/` or `notes/`, computations in
-`numerics/`, and assessments in `reviews/`. No manuscript or numerical sign campaign has been started. A frozen
+`numerics/`, and assessments in `reviews/`. The canonical manuscript is saved in `manuscript/`; no new numerical sign campaign was started. A frozen
 [exact algebra replay](numerics/README.md) checks finite constants only.
 
 [Chat history](chat-histories/README.md) preserves conversation 0003 at its

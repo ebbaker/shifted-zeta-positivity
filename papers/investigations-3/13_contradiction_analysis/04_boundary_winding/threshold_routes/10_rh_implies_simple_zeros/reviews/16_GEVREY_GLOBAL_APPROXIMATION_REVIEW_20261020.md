@@ -5,7 +5,7 @@ Actual model **gpt-6-astra (Codex), reasoning effort ultra**.
 Initial same-model derivations and checks at HEAD **663e006**; complete first-order and moving-taper continuations checked at HEAD **341152b**.
 This is an internal research review, not specialist or cross-model review.
 
-**Verdict.** The current claims in [Note 16 §§11–13](../notes/16_GEVREY_GLOBAL_APPROXIMATION_AND_RATE_20261020.md) pass the recorded internal checks. For every fixed declared Gevrey taper under RH, the actual complete norm has the exact first-order constant given by the full multiplicity-dependent profile sum. The proof now pays the actual scaled height tail. Section 13 now gives \((\log N)d_N^2\to K=\sum_{\rho\ {\rm distinct}}m_\rho^2/|\rho|^2\) under RH, with real coefficients and the complete tail retained. The constant \(Z\) is its all-simple special case. A separate estimate tracks the exponentially growing constant for the specified moving almost-linear family and proves convergence on stated slow schedules. The earlier estimates below remain valid historical steps. The [Note 12 §13](../notes/12_FINITE_EVALUATION_AND_ENDPOINT_INVERSE_COSTS_20261020.md) moving-taper lower rates are compatible with these upper results. No RH-to-simplicity conclusion, sharp moving-taper asymptotic, specialist validation, or literature-priority claim is made.
+**Verdict.** The current claims in [Note 16 §§11–14](../notes/16_GEVREY_GLOBAL_APPROXIMATION_AND_RATE_20261020.md) pass the recorded internal checks. For every fixed declared Gevrey taper under RH, the actual complete norm has the exact first-order constant given by the full multiplicity-dependent profile sum. The proof now pays the actual scaled height tail. Section 13 now gives \((\log N)d_N^2\to K=\sum_{\rho\ {\rm distinct}}m_\rho^2/|\rho|^2\) under RH, with real coefficients and the complete tail retained. The constant \(Z\) is its all-simple special case. A separate estimate tracks the exponentially growing constant for the specified moving almost-linear family and proves convergence on stated slow schedules. The earlier estimates below remain valid historical steps. The [Note 12 §13](../notes/12_FINITE_EVALUATION_AND_ENDPOINT_INVERSE_COSTS_20261020.md) moving-taper lower rates are compatible with these upper results. No RH-to-simplicity conclusion, sharp moving-taper asymptotic, specialist validation, or literature-priority claim is made.
 
 The [result index](../../../../../../../result-summaries/README.md), [control register](../../../../../../../result-summaries/12_collision_controls_and_screening.md), and [avoid index](../../../../../../../avoid/README.md) apply. In particular this review retains [scoped conclusions](../../../../../../../avoid/07_scoped_exclusions_read_as_universal.md), [complete payments](../../../../../../../avoid/12_term_by_term_matching_and_separate_bounds.md), and [gain before expansion](../../../../../../../avoid/20_volume_without_a_gain.md). The gains are actual complete-norm estimates for the declared tapered Möbius polynomials and, in §9, the sharp constant for the full polynomial infimum using finite mixtures. These are quantitative conclusions, not another event-equivalent criterion.
 
@@ -481,3 +481,54 @@ provides no RH-to-simplicity conclusion. It concerns an infimum over
 all admissible finite Dirichlet polynomials, not a universal prescribed
 Möbius taper, a finite zero-certification algorithm, or a new simplicity
 criterion.
+
+
+## 10. Exact finite filters and the cost of root isolation
+
+20 October 2026, from checkpoint `5f7d894`. Prepared for Edward Baker
+with substantial LLM assistance, **gpt-6-astra, actual effort ultra**.
+Separate same-model internal derivations and checks; no specialist
+validation, analytic formalization or priority claim.
+
+**Verdict: pass for FR1–FR13 in [Note 16 §14](../notes/16_GEVREY_GLOBAL_APPROXIMATION_AND_RATE_20261020.md).**
+The arithmetic path and coordinator derived the positive three-term
+annihilator; the phase path independently checked its signs, endpoint
+case, exact zeros and length. Finite products are still bounded by one
+and give exact prescribed profiles on every node of the fixed finite
+set. The mixed-profile theorem from §13 then retains all cross terms;
+outside that set, the summable profile majorant depends on the fixed
+number of target tapers, not the number or degrees of annihilating
+factors. Thus FR7 genuinely removes the earlier finite-height
+attenuation term, while paying the complete remaining tail. The finite
+set and filters are fixed before the N limit. This does not assert a
+uniform moving-set theorem or alter the infimum constant K.
+
+The phase path derived the general complex-coefficient lower bound
+and reopened [Redheffer's primary Theorem 11](https://msp.org/pjm/1953/3-4/pjm-v3-n4-p11-s.pdf).
+Frequency centering gives type at most log M/2; applying the sharpened
+Bernstein inequality to the real part and integrating arccos proves
+|Delta|log M≥2 arccos(epsilon). The exact-zero lower pi/|Delta|
+and the explicit upper pi/|Delta|+log2 agree to leading order for small
+gaps. This is sharp two-point resolution, not a claim of optimal total
+length for many targets. The same calculation with boundary supremum A
+checks FR10 and the sine quotient in FR11; A² prices the stated
+supremum-based tail allowance, not the actual integrated error.
+
+Finally, the retained coordinate x=2 gamma gives the Hermite ordinate
+gap sqrt(t/2)(lambda_k−lambda_j)+O(t). FR13 and the double-cluster
+threshold v≥pi²/2 at t=v/(log N)² follow for exact unit-bounded isolation
+using length at most N. They apply only when the construction actually
+isolates the roots. A shared taper at both simple heat roots needs no
+such isolation. No fixed-zeta ST theorem is transferred to a heat-deformed
+function, and no new signed phase surplus, multiple-zero exclusion,
+or multiplicity-free upper constant is claimed.
+
+A further adversarial audit rederived the primary count and reciprocal bounds, shifted Gevrey kernel, worst-case coalesced-cluster factor, compact normalization and both remote-tail ranges. No concrete defect was found in that bounded check. The full cluster power is necessary in the coalesced test and remains paid; closed-window counts use outer one-sided limits. The Gaussian path also read the final FR1–FR13 integration and checked all constants. These are same-model internal audits, not specialist validation.
+
+## 11. Consolidation manuscript review
+
+20 October 2026. Prepared for Edward Baker with substantial LLM assistance, **gpt-6-astra, actual effort ultra**. The user-requested [canonical draft](../manuscript/main.tex) consolidates the analytic estimates and their remaining bottleneck; detailed proofs stay in the notes. Separate arithmetic and analytic reads checked the displayed constants, hypotheses, ordered limits and primary citations. The final source specifies the convolution domain, uses the local profiles together with ST for mixed cross terms, sends the outer tolerance to zero, and preserves the zero-dependent local remainder constant. The Gram discussion distinguishes cancellation to bounded size from the subsequent O(epsilon) energy precision. The bounded Lean check is not identified with the general-m projection theorem.
+
+The BW09 comparison was checked against that route’s current manuscript and phase-surplus register: shared heat/contour identities and all-real-base ratio estimates are distinguished from original-zeta RH arithmetic. The positive-threshold event-coverage and strict-cap-surplus gates remain open. This consolidation claims no new simplicity or RH proof. Compilation and rendering are document checks, not mathematical validation.
+
+The six-page PDF compiled without unresolved references or layout warnings. All six rendered pages were inspected for readable equations, clipping and page flow; all local manuscript links resolved. These checks concern the saved document only.

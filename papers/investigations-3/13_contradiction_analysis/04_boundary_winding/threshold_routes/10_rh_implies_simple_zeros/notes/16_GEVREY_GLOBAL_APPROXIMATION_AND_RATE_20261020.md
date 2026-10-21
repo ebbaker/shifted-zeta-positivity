@@ -28,6 +28,14 @@ controlled. The filters and tapers are fixed before the N limit, and real
 coefficients suffice. The previous additional-simplicity constant
 \(2+\gamma_E-\log(4\pi)\) is the all-simple special case of this result.
 
+Section 14 replaces attenuation on a finite set by exact bounded
+Dirichlet filters, retaining the complete profile tail. For two nearby
+ordinates separated by \(\Delta\), it gives the sharp leading
+isolation cost \(\log M\sim\pi/|\Delta|\) in the class bounded
+by one, and prices the alternative of a larger boundary supremum.
+The heat-scale consequence concerns root isolation only; it does not
+transfer the fixed-zeta theorem to a heat-deformed function.
+
 Section 12 separately tracks a moving almost-linear taper, proving
 \(E_{N,\eta}\le C\exp(C\eta^{-a})/\log N\), where
 \(a>1/(2-\sigma)\) and \((\log N)^{-\theta_0}\le\eta<1/4\),
@@ -45,7 +53,7 @@ and [gain before expansion](../../../../../../../avoid/20_volume_without_a_gain.
 The changed quantity is the actual complete upper error. This is a
 quantitative estimate, not another equivalent simplicity criterion.
 [Review 16](../reviews/16_GEVREY_GLOBAL_APPROXIMATION_REVIEW_20261020.md) records the checks, the original anchor
-correction, and the separate same-model audits of §§11–13. Sections 11–12
+correction, and the separate same-model audits of §§11–14. Sections 11–12
 start from checkpoint `341152badb4340eed052f4e9e1e48ebe52b000aa`.
 No analytic part of this note has been formalized in Lean.
 
@@ -2107,3 +2115,257 @@ This argument does not combine their different preservation lists or
 claim that the present finite mixtures preserve the coefficients of a
 single original Möbius taper. They are explicit admissible polynomials
 for the full infimum, which is exactly the class stated in (AD1).
+
+
+## 14. Exact finite filters and the sharp cost of resolving a small gap
+
+20 October 2026 continuation, from checkpoint `5f7d894`. Prepared for Edward
+Baker with substantial LLM assistance, **gpt-6-astra, actual effort ultra**.
+Separate same-model checks are in Review 16 §10. The new quantity is
+filter length: exact cancellation at a neighboring ordinate of gap
+\(\Delta\) is achievable with
+\(\log M\le\pi/|\Delta|+\log2\) for small gaps, and every selector
+bounded by one requires \(\log M\ge\pi/|\Delta|\).
+This replaces the preceding binomial construction's quadratic inverse-gap
+cost. The complete profile tail remains paid. It does not improve the
+multiplicity-squared constant or supply a simplicity margin.
+
+### 14.1. A three-term polynomial with an exact prescribed boundary zero
+
+For \(0<\theta<\pi\), put \(k=\lfloor\pi/\theta\rfloor\) and define
+\[
+ B_\theta(z)=
+ \frac{\sin\theta-\sin((k+1)\theta)z^k+\sin(k\theta)z^{k+1}}
+      {\sin\theta-\sin((k+1)\theta)+\sin(k\theta)}.
+ \tag{FR1}
+\]
+Its coefficients are nonnegative and sum to one: \(k\theta\le\pi<
+(k+1)\theta\le\pi+\theta<2\pi\), and the constant coefficient is
+positive. The identity
+\[
+ -\sin((k+1)\theta)e^{ik\theta}
+       +\sin(k\theta)e^{i(k+1)\theta}=-\sin\theta
+\]
+proves
+\[
+ B_\theta(1)=1,\quad B_\theta(e^{\pm i\theta})=0,\quad
+ |B_\theta(z)|\le1\ (|z|\le1),\quad
+ \deg B_\theta\le\pi/\theta+1.
+ \tag{FR2}
+\]
+If \(k\theta=\pi\), this reduces to \((1+z^k)/2\). At
+\(\theta=\pi\), use \((1+z)/2\).
+
+Let \(F\subset G\) be finite sets of distinct critical-line points,
+with \(F\ne\varnothing\). For \(\rho=1/2+i\gamma\ne\nu=1/2+i\lambda\),
+choose \(p_{\rho\nu}\in\{2,3\}\) maximizing
+\(|1-p^{i(\gamma-\lambda)}|\), with a fixed tie rule. Let
+\(\theta_{\rho\nu}=|\operatorname{Arg}p_{\rho\nu}^{i(\gamma-\lambda)}|\).
+At least one phase is nonzero by the irrationality of \(\log2/\log3\);
+hence \(0<\theta_{\rho\nu}\le\pi\). Put
+\[
+ P_{\rho,G}(s)=\prod_{\nu\in G\setminus\{\rho\}}
+ B_{\theta_{\rho\nu}}\bigl(p_{\rho\nu}^{\rho-s}\bigr).
+ \tag{FR3}
+\]
+These finite ordinary Dirichlet polynomials are bounded by one for
+\(\Re s\ge1/2\), equal one at their target, and vanish at every other
+point of \(G\). If \(d_{\rho\nu}=\deg B_{\theta_{\rho\nu}}\), their
+common length can be bounded by the integer
+\[
+ M_G=\max_{\rho\in F}\prod_{\nu\in G\setminus\{\rho\}}
+                    p_{\rho\nu}^{d_{\rho\nu}},\qquad
+ \log M_G\le\max_{\rho\in F}\sum_{\nu\in G\setminus\{\rho\}}
+                     (\pi/\theta_{\rho\nu}+1)\log p_{\rho\nu}.
+ \tag{FR4}
+\]
+Empty products are one. This pays every finite node; simultaneous
+near-returns of the two phases at distant ordinates can make the sum
+large. No bound in terms of the nearest ordinary zero gap alone is
+asserted.
+
+The coefficients are nonnegative in the shifted variable used in
+(FR1), not necessarily in the ordinary Dirichlet expansion. For
+conjugation-invariant \(F,G\), the stated phase and prime choices give
+\(P_{\bar\rho,G}(s)=\overline{P_{\rho,G}(\bar s)}\). Pairing conjugate
+targets with the same real taper therefore produces real coefficients
+in the final mixture, as in §13.
+
+### 14.2. Exact finite-height profiles with the complete remaining tail
+
+Now assume RH, take \(F,G\) from the actual distinct zeros, and fix
+the baseline \(w_0\) and finitely many tapers \(w_\rho\) in §13.
+With \(n=\lfloor N/M_G\rfloor\), use
+\[
+ D_{N,G}=V_{n,w_0}+\sum_{\rho\in F}P_{\rho,G}
+                         (V_{n,w_\rho}-V_{n,w_0}).
+ \tag{FR5}
+\]
+Its length is at most \(N\). For each fixed \(G\), the actual mixed
+limit (AD5) gives
+\[
+ S_G=\lim_{N\to\infty}(\log N)E(D_{N,G})
+    =\sum_{\nu\ {\rm distinct}}\frac{\|q_{\nu,G}\|_2^2}{|\nu|^2},
+ \quad
+ q_{\nu,G}=p_{m_\nu,0}+\sum_{\rho\in F}P_{\rho,G}(\nu)
+                              (p_{m_\nu,\rho}-p_{m_\nu,0}).
+ \tag{FR6}
+\]
+On \(G\), this is exactly the chosen profile at targets and the baseline
+at other nodes. Write \(S_F\) for the comparison sum in (AD12), and
+\(J=|F|\). The same global domination as (AD11) proves
+\[
+ |S_G-S_F|\le4(J+1)^2
+       \sum_{j\in\{0\}\cup F}\sum_{\nu\notin G}
+                           \frac{C_{m_\nu}(w_j)}{|\nu|^2}.
+ \tag{FR7}
+\]
+There is no finite-height attenuation term. On \(G\) the difference
+is zero; outside \(G\), the mixed cost is bounded by
+\(2(J+1)^2\sum_j C_{m_\nu}(w_j)\), and adding the baseline cost is
+covered by (FR7). Its constant is independent of the number or degrees
+of the factors in (FR3). Every series is summable by ST.
+
+For \(G=\{\nu:|\Im\nu|\le H\}\supset F\), (ST2) and the compact
+limits bound the right side by
+\(O_{F,\{w_j\},\epsilon}(H^{\sigma-2+\epsilon})\), for
+\(0<\epsilon<2-\sigma\) and a common fixed \(1<\sigma<2\).
+Keep \(F\) and its tapers fixed while exhausting \(G\).
+For every chosen finite \(G\), take the \(N\) limit first.
+This gives another fully paid construction of the same infimum constant
+\(K\). The length estimate does not supply uniformity for \(G_N\),
+an effective \(N\) threshold, or a smaller local cost.
+
+### 14.3. A sharp lower bound for all selectors bounded by one
+
+No RH assumption is needed here. Let
+\[
+ P(s)=\sum_{n\le M}a_n n^{-s},\quad
+ \sup_{y\in\mathbb R}|P(1/2+iy)|\le1,\quad
+ P(\rho)=1,\quad |P(\rho+i\Delta)|\le\varepsilon,\quad0\le\varepsilon<1.
+\]
+Then
+\[
+ \boxed{|\Delta|\log M\ge2\arccos\varepsilon.}
+ \tag{FR8}
+\]
+The coefficients may be arbitrary complex numbers. If the nonzero
+indices range from \(n_{\min}\) to \(n_{\max}\), the same bound holds
+with \(\log(n_{\max}/n_{\min})\) in place of \(\log M\).
+
+For the proof, assume \(\Delta>0\), put \(B=\log M\), and center the
+frequencies:
+\[
+ g(z)=e^{iBz/2}P(\rho+iz),\qquad
+ r(z)=\tfrac12\bigl(g(z)+\overline{g(\bar z)}\bigr).
+\]
+The function \(r\) is real entire of exponential type at most \(B/2\),
+is bounded by one on the real axis, and has \(r(0)=1\) and
+\(r(\Delta)\le\varepsilon\). The sharpened Bernstein inequality
+\[
+ |r'(x)|\le(B/2)\sqrt{1-r(x)^2}
+\]
+is proved in [Redheffer, §5, Theorem 11, pp. 832–833](https://msp.org/pjm/1953/3-4/pjm-v3-n4-p11-s.pdf).
+The primary source's strict growth/boundary formulations are handled by
+enlarging the type slightly and dividing \(r\) by \(1+\eta\), then
+taking limits. Applying the inequality to \(r/(1+\eta)\) makes
+\(\arccos(r/(1+\eta))\) Lipschitz with constant \(B/2\). Integrate
+from zero to \(\Delta\), let \(\eta\downarrow0\), and use monotonicity
+of arccos. This proves (FR8) without assuming monotonicity of \(r\).
+
+For \(0<|\Delta|<\pi/\log2\), choose \(p=2\) in the single-neighbor
+construction. Its principal phase is \(\theta=|\Delta|\log2\).
+Equations (FR1)–(FR2) and (FR8) give the matching exact-zero bounds
+\[
+ \boxed{\frac{\pi}{|\Delta|}\le
+       \inf_{\substack{P(\rho)=1,\ P(\rho+i\Delta)=0\\
+                         \sup_{\Re s=1/2}|P(s)|\le1}}
+                         \log(\operatorname{length}P)
+       \le\frac{\pi}{|\Delta|}+\log2.}
+ \tag{FR9}
+\]
+This is a two-point result, not an optimality statement for the full
+finite family in (FR4). For comparison, the original binomial peak has
+\[
+ -\log|P_{\rho,1}(\rho+i\Delta)|
+     =\tfrac18\bigl((\log2)^2+(\log3)^2\bigr)\Delta^2
+         +O(\Delta^4).
+\]
+For any fixed \(0<\varepsilon<1\), its log-length is therefore of
+order \(|\Delta|^{-2}\) to reach modulus \(\varepsilon\).
+The exact construction improves that power and needs no attenuation
+tolerance for the specified neighboring node.
+
+### 14.4. The cost of allowing a larger supremum
+
+If instead \(\sup_{\Re s=1/2}|P|\le A\), \(A\ge1\), the same
+centered-real-part proof, divided by \(A\), gives
+\[
+ |\Delta|\log M\ge
+ 2\left[\arccos(\varepsilon/A)-\arccos(1/A)\right].
+ \quad\text{For }\varepsilon=0:\quad
+ |\Delta|\log M\ge2\arcsin(1/A).
+ \tag{FR10}
+\]
+In particular, exact cancellation with \(0<|\Delta|\log M\le\pi\)
+requires \(A\ge\csc(|\Delta|\log M/2)\). This is sharp even for a
+length-\(p\) Dirichlet polynomial. For a prime \(p\), \(B=\log p\),
+and \(0<\Delta B\le\pi\), set
+\[
+ Q(s)=\frac{p^{\rho-s}-e^{-i\Delta B}}{1-e^{-i\Delta B}}.
+ \qquad
+ e^{iBx/2}Q(\rho+ix)
+       =\frac{\sin((\Delta-x)B/2)}{\sin(\Delta B/2)}.
+ \tag{FR11}
+\]
+It has target value one, neighboring value zero, and boundary supremum
+\(A=\csc(\Delta B/2)\). Thus a growing supremum can avoid the unit-bound
+length threshold, but must be at least asymptotic to
+\(2/(|\Delta|\log M)\) when that product tends to zero.
+The separate estimate \(|Qe|^2\le A^2|e|^2\) then carries an
+\(A^2\) allowance. This is a cost of that supremum-based payment,
+not a lower bound on the actual integrated error.
+
+### 14.5. Consequence at a heat collision, with the original coordinates
+
+Note 15 (HR3) uses
+\(\mathcal F_t(z)=8H(t,-2iz)\) and
+\(\partial_t\mathcal F_t=\tfrac14\partial_z^2\mathcal F_t\).
+Under RH, at an order-\(m\) initial zero \(i\gamma\), the actual emerging
+ordinates satisfy
+\[
+ \gamma_j(t)=\gamma+\sqrt{t/2}\,\lambda_j+O(t),\qquad
+ \mathrm{He}_m(\lambda_j)=0,\quad
+ \lambda_1<\cdots<\lambda_m.
+ \tag{FR12}
+\]
+This follows from the joint analytic expansion there and simplicity
+of the Hermite roots. The factor \(1/\sqrt2\) retains the physical
+coordinate \(x=2\gamma\).
+
+Suppose a selector bounded by one isolates branches \(j<k\) with
+fixed attenuation \(0\le\varepsilon<1\), using length \(M_N\le N^\vartheta\),
+where \(\vartheta>0\) is fixed, at times \(t_N\downarrow0\).
+Writing \(L=\log N\) and \(\delta_{jk}=\lambda_k-\lambda_j\), (FR8)
+implies
+\[
+ \liminf_N\sqrt{t_N}\,L\ge
+       \frac{2\sqrt2\,\arccos\varepsilon}
+            {\vartheta\delta_{jk}}.
+ \tag{FR13}
+\]
+In particular \(t_NL^2\to0\) is impossible for this isolation task,
+even when the entire length budget \(M_N\le N\) is used.
+For a double cluster, \(\delta_{12}=2\). At
+\(t_N=v/L^2\), length at most \(N\) consequently requires
+\(v\ge2(\arccos\varepsilon)^2\); exact cancellation requires
+\(v\ge\pi^2/2\).
+
+These bounds concern filters placed at actual heat-root ordinates.
+They do not transfer ST from the original zeta function to a
+heat-deformed function, or prove a bound for its polynomial infimum.
+Assigning the same taper to both emerging simple roots need not isolate
+them. Allowing a growing selector supremum instead invokes (FR10)
+and requires a separate complete-norm payment. The boundary phase and
+mixed heat-energy identities retain their compatible multiplicity cost;
+no original multiple zero has been excluded.

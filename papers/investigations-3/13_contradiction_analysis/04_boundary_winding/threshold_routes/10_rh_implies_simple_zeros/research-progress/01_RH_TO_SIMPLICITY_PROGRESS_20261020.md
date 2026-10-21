@@ -7,7 +7,7 @@ no specialist review.
 
 **State: RH ⇒ simplicity remains unproved.** The structural transfer
 and the bounded arithmetic, source-control and energy investigations
-are recorded below. The latest concrete gain is [Note 16 §13][n16]:
+are recorded below. The current infimum result is [Note 16 §13][n16]:
 under RH alone, the complete Dirichlet-polynomial infimum satisfies
 (log N)d_N²→K=Σ m_rho²/|rho|², over distinct zeros of both signs.
 Finite two-prime Dirichlet multipliers select different fixed local
@@ -26,6 +26,16 @@ no novelty or best-known-bound claim is made.
 The original scope was selected in [chat 0003][origin]; this round is
 [chat 0004][current].
 
+**Consolidation for discussion:** the six-page [canonical manuscript](../manuscript/main.tex)
+and [PDF](../manuscript/main.pdf) collect the analytic estimates, with
+computational checks cited briefly. Its central bottleneck is the missing
+complete arithmetic estimate that excludes the excess K−Z. Section 5
+compares BW09: heat, source and contour calculations overlap, but the
+RH-based original-zeta approximation theorem cannot prove RH there
+without circularity. BW09 also retains threshold-event coverage and
+strict cap-surplus gates. Neither project has a nearly complete proof;
+the present results are internally reviewed and need specialist scrutiny.
+
 | Task | Current status | Evidence / unresolved requirement |
 | --- | --- | --- |
 | RHS-00 | Complete: scope and literature | [Opening analysis][opening] §§1–2, 9; primary inputs rechecked in [review 02][review]. No methodological priority or relative-difficulty theorem claimed. |
@@ -37,6 +47,18 @@ The original scope was selected in [chat 0003][origin]; this round is
 
 ## Quantitative outcomes
 
+- [Note 16 §14][n16] now replaces finite-height attenuation by exact
+  finite Dirichlet filters, with the complete remaining profile tail
+  bounded independently of the filters' degrees. For two nearby nodes
+  at gap Delta, exact isolation with critical-line supremum at most one
+  has log length between pi/|Delta| and pi/|Delta|+log 2. Arbitrary
+  complex coefficients obey the sharper attenuation bound
+  |Delta|log M≥2 arccos(epsilon). A larger supremum A has its own
+  exact tradeoff; A² is a separate-payment allowance, not actual error.
+  The heat consequence concerns root isolation only: at a double event,
+  t=v/(log N)² requires v≥pi²/2 for exact unit-bounded isolation using
+  length at most N. No heat-deformed infimum theorem, improved K,
+  moving-filter uniformity or original-zero exclusion follows.
 - Under RH, [Note 16 §11][n16] proves, for each fixed compact Gevrey
   taper of order 1<sigma<2, sup_N (log N)E_(N,w)^(|t|>T)
   ≪_(w,eta)T^(sigma−2+eta), 0<eta<2−sigma. Coherent subtraction

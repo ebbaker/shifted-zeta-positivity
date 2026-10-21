@@ -1,0 +1,428 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,microtype,amsmath,amssymb,amsthm}
+\usepackage[colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue]{hyperref}
+\usepackage{enumitem}
+\setlist{nosep,leftmargin=*}
+\newtheorem{theorem}{Theorem}
+\newtheorem{proposition}[theorem]{Proposition}
+\newcommand{\RH}{\mathrm{RH}}
+\newcommand{\E}{\mathcal E}
+\newcommand{\dd}{\,\mathrm d}
+\newcommand{\Nref}{\href{../notes/16_GEVREY_GLOBAL_APPROXIMATION_AND_RATE_20261020.md}{Note 16}}
+\newcommand{\Href}{\href{../notes/15_COMPLETED_RATIO_ENERGY_AND_MULTIPLICITY_20261020.md}{Note 15}}
+\title{RH-Conditional Approximation Estimates\\and the Remaining Simplicity Problem}
+\author{Drafted for Edward Baker}
+\date{20 October 2026\\\small Research consolidation draft}
+\begin{document}
+\maketitle
+\begin{abstract}
+We consolidate analytic estimates obtained while investigating whether the
+Riemann hypothesis implies simplicity of the nontrivial zeros of the zeta
+function. The principal approximation argument establishes, within the
+research notes, a complete first-order limit for fixed Gevrey-tapered
+M\"obius polynomials and an RH-conditional infimum constant equal to the
+sum of squared multiplicities. A completed-ratio energy has an explicit
+heat-scale transition governed by the same multiplicity excess. Exact
+finite Dirichlet filters give a sharp local resolution cost. These
+estimates do not exclude a multiple zero: the missing ingredient is an
+arithmetic upper estimate that contradicts its additional cost. This
+brief presents precise statements and proof mechanisms, with the full
+analytic payments referenced to the research notes.
+\end{abstract}
+
+\section{Scope and the unresolved quantity}
+Throughout, RH is an assumption, not a conclusion. Write
+\(\rho=\frac12+i\gamma\) for a distinct nontrivial zero, \(m_\rho\) for
+its multiplicity, and sum over both ordinate signs. The two masses are
+\begin{equation}\label{eq:KZ}
+ K=\sum_{\rho\ {\rm distinct}}\frac{m_\rho^2}{|\rho|^2},
+ \qquad
+ Z=\sum_{\rho\ {\rm distinct}}\frac{m_\rho}{|\rho|^2}
+   =2+\gamma_E-\log(4\pi).
+\end{equation}
+They are finite; the usual unit-window zero count also bounds the sum
+of squared multiplicities with this weight. Their difference is
+\begin{equation}\label{eq:gap}
+ K-Z=\sum_{\rho\ {\rm distinct}}
+            \frac{m_\rho(m_\rho-1)}{|\rho|^2}.
+\end{equation}
+A double conjugate pair contributes \(4/(\gamma^2+1/4)\).
+The approximation and heat estimates below retain this excess.
+Identifying it is a bookkeeping conclusion, not a new simplicity
+criterion or a proof that the excess vanishes.
+
+The results inherited from boundary winding justify the local
+multiplicity calculation and finite-height continuation under RH.
+They do not furnish a strict surplus with the opposing sign.
+The present judgment is therefore that the investigation has produced
+analytic estimates, but does not have a nearly complete simplicity
+proof.
+
+\paragraph{Status.}
+The new analytic results are proved in the linked research notes and
+have undergone separate same-model internal derivations and adversarial
+checks. They have not received specialist external review or analytic
+formalization. In particular, the complete scaled-tail theorem below is
+a substantial internal premise, not a previously published theorem
+being cited under a new name. No novelty or priority claim is made.
+
+\section{Fixed Gevrey approximation and the complete tail}
+For a Dirichlet polynomial \(D\), define
+\[
+ E(D)=\frac1{2\pi}\int_{\mathbb R}
+  \frac{|1-\zeta(\frac12+it)D(\frac12+it)|^2}{1/4+t^2}\dd t,
+ \qquad
+ d_N^2=\inf_{D(s)=\sum_{n\le N}a_n n^{-s}}E(D).
+\]
+Let \(W\) be real, smooth, supported in \([-1,1]\), with \(W(0)=1\)
+and
+\[
+ \|W^{(j)}\|_1\le A^{j+1}(j!)^\sigma,\qquad 1<\sigma<2.
+\]
+Set \(w=W|_{[0,1]}\), \(L=\log N\), and
+\[
+ V_{N,w}(s)=\sum_{n\le N}\mu(n)n^{-s}w(\log n/L),\qquad
+ p_{m,w}(u)=-\frac{(u^{m-1}w(u))^{(m)}}{(m-1)!},\qquad
+ C_m(w)=\|p_{m,w}\|_{L^2(0,1)}^2.
+\]
+\begin{theorem}[Complete fixed-taper estimate]\label{thm:ST}
+Assume RH and fix \(W\) as above. If \(E_{N,w}^{>T}\) denotes the
+part of \(E(V_{N,w})\) at \(|t|>T\), then for every
+\(0<\eta<2-\sigma\),
+\begin{align}
+ \sup_{N\ge2}(\log N)E_{N,w}^{>T}
+      &\ll_{W,\eta}T^{\sigma-2+\eta},\qquad T\ge2,
+       \label{eq:tail}\\
+ \lim_{N\to\infty}(\log N)E(V_{N,w})
+      &=\sum_{\rho\ {\rm distinct}}
+                \frac{C_{m_\rho}(w)}{|\rho|^2}<\infty.
+       \label{eq:fixed}
+\end{align}
+No simplicity, zero-gap lower bound, or inverse-derivative moment is
+assumed.
+\end{theorem}
+
+\paragraph{Proof mechanism and dependencies.}
+The full proof is \Nref, Sections 2--6, 8 and 11.
+For \(s=\frac12+it\) and \(H>0\), its exact starting identity is
+\[
+ V_{N,w}(s)=\int_{\mathbb R}
+ \frac{K_H(v)}{\zeta(s+(H+iv)/L)}\dd v,\quad
+ K_H(v)=\frac1{2\pi}\int_{\mathbb R}W(u)e^{(H+iv)u}\dd u .
+\]
+Fourier inversion on an absolutely convergent M\"obius line, followed
+by a shift within the RH zero-free half-plane, preserves every
+coefficient. Integration by parts against the whole complex
+exponential gives
+\[
+ |K_H(v)|\le C_W e^H e^{-c_W|v|^{1/\sigma}},
+ \qquad \int_{\mathbb R}K_H(v)\dd v=1 ,
+\]
+with constants independent of \(H>0\). The factor \(e^H\) is retained.
+
+The primary height inputs are the RH argument bound of
+Carneiro--Chandee--Milinovich~\cite{CCM} and the subpower zeta bound of
+Chandee--Soundararajan~\cite{CS}. In the low-height range, the proof
+keeps the whole nearby zero cluster, including repetitions. Its
+kernel moment has logarithm
+\((\sigma-1)M\log(M+2)+O_W(M+1)\) for a cluster of size \(M\).
+This is paid using the half-coefficient local counting allowance;
+no individual reciprocal derivative is estimated. A separate moving
+line handles the high-height range and its complete remote convolution.
+
+Subtracting the constant term coherently gives decay in the actual
+distance to the nearest zero. Squaring and integrating that decay over
+nearest-zero cells costs \(O(1/L)\) independently of the gaps.
+This proves \eqref{eq:tail}. On a fixed isolated zero neighborhood,
+the complete error has profile
+\(\int_0^1p_{m,w}(u)e^{-iLyu}\dd u+O_{W,\rho}(L^{-1})\),
+with constants allowed to depend on that neighborhood. Its unscaled
+norm is \(C_m(w)/(L|\rho|^2)+O(\log L/L^2)\).
+The separately established tail bound then permits height exhaustion.
+Thus local asymptotics alone are not being used as a global upper bound.
+
+\paragraph{A controlled moving family.}
+For the almost-linear taper
+\(w_\eta(u)=(1-u)\chi((1-u)/\eta)\), with a fixed Gevrey cutoff
+\(\chi=0\) on \((-\infty,\frac12]\) and \(\chi=1\) on \([1,\infty)\),
+a separate proof gives
+\begin{equation}\label{eq:moving}
+ E(V_{N,w_\eta})\le \frac{C\exp(C\eta^{-a})}{L},
+ \quad L^{-\theta_0}\le\eta<\tfrac14,\quad
+ a>\frac1{2-\sigma},\quad 0<\theta_0<1.
+\end{equation}
+Here the parameters \(\sigma,\theta_0,a\) are fixed
+(\Nref, Section 12). Consequently
+\(\eta_N=(\log L)^{-\kappa}\), \(0<\kappa<2-\sigma\),
+gives \(E(V_{N,w_{\eta_N}})\le L^{-1+o(1)}\).
+The exponential allowance is compatible with the multiple-zero lower
+costs. It supplies neither a moving first-order asymptotic nor a
+multiplicity-free upper constant.
+
+\section{The infimum constant and finite Dirichlet filters}
+Integration by parts gives
+\(\int_0^1u^jp_{m,w}(u)\dd u=\delta_{j0}\) for \(0\le j<m\).
+Projection onto polynomials of degree below \(m\) therefore yields
+\begin{equation}\label{eq:localfloor}
+ C_m(w)=m^2+\|p_{m,w}-\mathcal K_m(\,\cdot\,,0)\|_2^2\ge m^2,
+\end{equation}
+where \(\mathcal K_m\) is their endpoint reproducing kernel on \([0,1]\).
+Flat Gevrey approximations to \((1-u)^m\) approach this lower cost.
+One common taper need not optimize different multiplicities at once.
+
+\begin{theorem}[Infimum consequence of Theorem~\ref{thm:ST}]
+Assuming RH and the complete fixed-taper estimate,
+\begin{equation}\label{eq:inf}
+             \lim_{N\to\infty}(\log N)d_N^2=K.
+\end{equation}
+Real coefficients suffice.
+\end{theorem}
+\begin{proof}[Proof outline]
+Burnol's lower bound~\cite{Burnol} gives the lower limit \(K\).
+For the upper bound, fix a baseline taper and a finite set \(F\) of
+zeros carrying all but a small part of its profile mass. Choose a
+fixed near-optimal taper separately at each target.
+Bounded finite Dirichlet multipliers \(P_\rho\) select these profiles:
+\[
+ D_N=V_{n,w_0}+\sum_{\rho\in F}P_\rho
+                  (V_{n,w_\rho}-V_{n,w_0}),\qquad n=\lfloor N/M\rfloor,
+\]
+where all multipliers have length at most \(M\).
+The multiplier coefficients of the error sum identically to one,
+so every cross term and moment constraint is retained.
+For fixed multipliers, the local profile expansion together with
+Theorem~\ref{thm:ST}'s scaled-tail bound gives the complete mixed limit. Its profile tail is bounded by a fixed multiple of the sum
+of the finitely many original profile tails.
+
+One may interpolate exactly on any larger finite zero set \(G\).
+For \(0<\theta<\pi\), \(k=\lfloor\pi/\theta\rfloor\), the polynomial
+\[
+ B_\theta(z)=
+ \frac{\sin\theta-\sin((k+1)\theta)z^k+\sin(k\theta)z^{k+1}}
+      {\sin\theta-\sin((k+1)\theta)+\sin(k\theta)}
+\]
+has nonnegative coefficients summing to one, equals one at \(1\),
+and vanishes at \(e^{\pm i\theta}\). At \(\theta=\pi\), use
+\((1+z)/2\). Substitute \(z=p^{\rho-s}\), choosing \(p=2\) or \(3\)
+with nonzero relative phase, and multiply over the other nodes of
+\(G\). Irrationality of \(\log2/\log3\) guarantees such a choice.
+The products remain bounded by one on the critical line.
+Their complete exterior profile allowance is independent of their
+degrees and tends to zero as \(G\) exhausts the zeros.
+
+Keep \(F\), tapers and finite \(G\) fixed before taking \(N\to\infty\).
+Then exhaust \(G\), optimize the finite profile costs, and let the
+initial baseline-tail tolerance tend to zero. Conjugate
+pairing makes the final coefficients real. This proves the upper
+limit \(K\); see \Nref, Sections 13--14.
+\end{proof}
+
+This conclusion concerns the unrestricted polynomial infimum, not
+the original linear M\"obius polynomial. It removes a common-taper
+restriction but leaves the squared multiplicities in \eqref{eq:KZ}.
+It provides no effective threshold in \(N\).
+
+\begin{proposition}[Sharp two-point isolation cost]\label{prop:filter}
+Let \(P\) have Dirichlet length at most \(M\), be bounded by one on
+\(\Re s=\frac12\), and satisfy \(P(\rho)=1\) and
+\(|P(\rho+i\Delta)|\le\varepsilon\), \(0\le\varepsilon<1\).
+Then
+\[
+ |\Delta|\log M\ge2\arccos\varepsilon.
+\]
+For exact cancellation at a small nonzero gap, the least log-length
+lies between \(\pi/|\Delta|\) and \(\pi/|\Delta|+\log2\).
+\end{proposition}
+\begin{proof}
+Centering the frequency interval gives an entire function of type
+at most \((\log M)/2\). Its real part starts at one, is bounded by one,
+and ends at most \(\varepsilon\).
+The sharpened Bernstein inequality~\cite{Redheffer}, integrated after
+arccos, gives the lower bound. The polynomial \(B_\theta\) with
+\(p=2\) and \(\theta=|\Delta|\log2\) gives the upper bound.
+\end{proof}
+This prices root isolation only. Assigning the same taper to two
+roots need not isolate them, and the proposition is not a lower
+bound for every approximation scheme.
+
+\section{Completed-ratio energy and heat separation}
+Use the original theta source
+\[
+ H(t,x)=\int_0^\infty e^{tu^2}\Phi(u)\cos(xu)\dd u,\qquad
+ \Phi(u)=\sum_{n\ge1}(2\pi^2n^4e^{9u}-3\pi n^2e^{5u})
+                                      e^{-\pi n^2e^{4u}},
+\]
+with \(\xi(s)=\tfrac12s(s-1)\pi^{-s/2}\Gamma(s/2)\zeta(s)\).
+The completion and heat normalization are
+\[
+ \mathcal F_t(z)=8H(t,-2iz),\quad \mathcal F_0(z)=\xi(\tfrac12+z),\quad
+ \partial_t\mathcal F_t=\tfrac14\partial_z^2\mathcal F_t.
+\]
+For \(\alpha>0\), define
+\[
+ J_t(\epsilon)=\frac1{2\pi}\int_{\mathbb R}
+ \frac{|1-\mathcal F_t(iy)/\mathcal F_t(\epsilon+iy)|^2}
+      {\alpha^2+y^2}\dd y,\qquad
+ M_\alpha=\sum_\gamma\frac{m_\gamma}{\alpha^2+\gamma^2},\quad
+ K_\alpha=\sum_\gamma\frac{m_\gamma^2}{\alpha^2+\gamma^2}.
+\]
+Under RH, for \(t\ge0\), the paired order-one product makes the ratio contractive.
+Its positive harmonic majorant has a known complete mass.
+Local profiles followed by exhaustion of that mass give
+\begin{equation}\label{eq:ratio}
+ \lim_{\epsilon\downarrow0}\frac{J_0(\epsilon)}{\epsilon}
+    =\sum_\gamma\frac{c_{m_\gamma}}{\alpha^2+\gamma^2},
+ \qquad c_m=m\left(1-\frac{\binom{2m}{m}}{4^m}\right).
+\end{equation}
+In particular \(c_1=\frac12\), \(c_2=\frac54\); no mass at infinity
+is discarded. The proof is \Href, Sections 1--3.
+
+For \(t=v\epsilon^2\), the local heat expansion at an order-\(m\)
+zero gives Hermite centers \(r\lambda_j\), where
+\(r=\sqrt{v/2}\) and \(\mathrm{He}_m(\lambda_j)=0\).
+Define
+\[
+ P_{m,r}(y)=\prod_{j=1}^m(y-r\lambda_j),\qquad
+ \mathcal C_m(r)=\frac1{2\pi}\int_{\mathbb R}
+ \left|1-\frac{P_{m,r}(y)}{P_{m,r}(y-i)}\right|^2\dd y.
+\]
+The same complete-mass argument proves, at each fixed \(v\ge0\),
+\[
+ \lim_{\epsilon\downarrow0}\frac{J_{v\epsilon^2}(\epsilon)}{\epsilon}
+   =\mathcal A_\alpha(v)
+   :=\sum_\gamma
+      \frac{\mathcal C_{m_\gamma}(\sqrt{v/2})}{\alpha^2+\gamma^2}.
+\]
+The analytic transition is quantified by
+\begin{align}
+ \mathcal C_2(r)&=1+\frac1{4(1+r^2)},\label{eq:double}\\
+ 0\le \mathcal A_\alpha(v)-\frac{M_\alpha}{2}
+     &\le\frac{K_\alpha-M_\alpha}{4v},\qquad v>0,\label{eq:heatbound}\\
+ \lim_{v\to\infty}v\left(\mathcal A_\alpha(v)-\frac{M_\alpha}{2}\right)
+     &=\frac{K_\alpha-M_\alpha}{4}.\label{eq:heatlimit}
+\end{align}
+The estimate follows from pairwise overlap integrals of the local
+contractive factors and
+\(\sum_{i<j}(\lambda_i-\lambda_j)^{-2}=m(m-1)/8\).
+The weighted multiplicity-square sum dominates the passage to all
+zeros. At \(\alpha=\frac12\), the last coefficient is \((K-Z)/4\).
+
+These are ordered limits: first \(\epsilon\to0\) at fixed \(v\), then
+\(v\to\infty\). They do not assert convergence of time derivatives
+or a joint limit with unbounded \(v(\epsilon)\).
+The heat-deformed completion has not been assigned an Euler product
+or the original zeta Dirichlet convolution.
+
+\section{Relation to the expanding-contour RH investigation}
+The originating BW09 route seeks to rule out a hypothetical positive
+all-real threshold by forcing a later collision. Its current manuscript
+assumes an attained finite-height ordinary event at that threshold;
+coverage of every hypothetical positive threshold remains a separate
+unproved step. BW10 assumes RH and starts from a multiple zero at the
+specified time zero, allowing arbitrary finite multiplicity. It removes
+that unknown-time and attainment issue from its conditional problem.
+This is a structural distinction, not a proved ordering of difficulty.
+
+The unchanged theta source, local Hermite splitting, root-wall
+cancellation and complete boundary-phase identities are shared.
+The ratio-energy analysis also applies relative to a known all-real
+base time \(T\), with source \(e^{Tu^2}\Phi(u)\), provided the
+all-real forward continuation and order-one product hypotheses are
+retained. The finite-selector estimates are unconditional filter lemmas.
+These tools sharpen the accounting of an existing event; they do not
+supply additional winding.
+
+The strongest approximation estimates have a narrower scope.
+Theorem~\ref{thm:ST} uses RH for the original zeta function and its
+unchanged M\"obius convolution. Importing that assumption into BW09's
+positive-threshold contradiction would assume the desired conclusion.
+All-realness of a positive-time heat deformation supplies neither this
+original Dirichlet arithmetic nor a substitute theorem.
+
+BW09 still needs a complete theta estimate forcing an ordinary born
+pair's cap-phase decrease strictly beyond \(\pi\), with wall
+continuation, a regular terminal cap, endpoint deficits and source
+remainders all controlled. Its fixed-index large-time cosine model
+produces the ordinary \(\pi\), not a surplus. BW10 has not supplied
+that strict estimate or the threshold-event coverage step. See the
+\href{../../09_expanding_contour_later_collision/manuscript/main.tex}{BW09 manuscript},
+Sections on scope, root walls, surplus and information limits, and its
+\href{../../09_expanding_contour_later_collision/research-progress/03_ANALYTICAL_PHASE_SURPLUS_PROGRESS_20261020.md}{phase-surplus progress register}.
+
+\section{What is missing, and what to brainstorm next}
+The common bottleneck is now explicit. The complete approximation
+upper bound has coefficient \(K\), and the heat transition has
+excess coefficient \((K-Z)/4\). Both are compatible with a multiple
+endpoint. A simplicity proof needs an additional estimate using the
+unchanged arithmetic of zeta that rules out this excess, or a different
+mechanism that excludes an original multiple zero.
+
+The tested absolute prime and M\"obius-correlation payments do not
+supply that estimate. In the exact ratio-energy representation, signed
+off-diagonal terms cancel a diagonal of size \(1/\epsilon\) to bounded
+size, with the residual energy determined at absolute precision
+\(O(\epsilon)\); taking absolute values gives a divergent
+double payment (\Href, Section 6). The prime-error linearization
+also has a first-order remainder at multiple zeros (Section 7).
+Neither remainder can be omitted at the scale where simplicity is
+being tested. Generic positive-source collision controls demonstrate
+the insufficiency of source positivity alone, while failing the
+ordinary Dirichlet-series premise; they are not counterexamples
+satisfying all of zeta's arithmetic properties.
+
+The next discussion should focus on two questions:
+\begin{enumerate}
+\item Is there a specific signed arithmetic identity whose \emph{complete}
+remainder can be bounded more sharply than these multiplicity-compatible
+estimates? A proposed bound must retain all zero and prime tails.
+\item Is there a theta-specific sign or rigidity principle, absent from
+the screened collision controls, that excludes the multiple endpoint
+without merely rewriting the desired conclusion?
+\end{enumerate}
+Before further expansion, the complete scaled-tail theorem deserves
+external scrutiny because several later conclusions depend on it.
+The present estimates warrant consolidation and a change of viewpoint,
+not a claim of proximity to a proof.
+
+\paragraph{Supporting checks.}
+The repository's
+\href{../numerics/EXACT_ALGEBRA_REPLAY_20261020.json}{exact-algebra replay}
+and \href{../numerics/lean/README.md}{bounded Lean check}
+support selected algebraic identities and a bounded inner-product
+tradeoff. Numerical investigations in the originating
+\href{../../09_expanding_contour_later_collision/manuscript/main.tex}{boundary-winding manuscript}
+provide context. None verifies the analytic tail theorem or simplicity;
+no numerical evidence is used as a proof premise here.
+
+\paragraph{Acknowledgement and draft record.}
+This manuscript was drafted for Edward Baker with substantial assistance
+from OpenAI's \texttt{gpt-6-astra}, recorded reasoning effort
+\texttt{ultra}. The derivations and reviews are internal LLM work.
+Detailed proofs, corrections and scope checks remain in
+\href{../notes/12_FINITE_EVALUATION_AND_ENDPOINT_INVERSE_COSTS_20261020.md}{Note 12},
+\Href, \Nref, and
+\href{../reviews/16_GEVREY_GLOBAL_APPROXIMATION_REVIEW_20261020.md}{Review 16}.
+Milestones are recorded in \texttt{../DRAFT\_HISTORY.md}; this is the
+canonical draft, with no new snapshot directory.
+
+\begin{thebibliography}{9}\small
+\bibitem{Burnol}
+J.-F. Burnol, \emph{A lower bound in an approximation problem involving
+the zeros of the Riemann zeta function}, Theorem 1.3.
+\href{https://arxiv.org/abs/math/0103058}{arXiv:math/0103058}.
+\bibitem{CCM}
+E. Carneiro, V. Chandee and M. B. Milinovich,
+\emph{Bounding \(S(t)\) and \(S_1(t)\) on the Riemann hypothesis},
+Theorem 2. \href{https://arxiv.org/abs/1309.1526}{arXiv:1309.1526}.
+\bibitem{CS}
+V. Chandee and K. Soundararajan,
+\emph{Bounding \(|\zeta(1/2+it)|\) on the Riemann hypothesis},
+Theorem 1.1. \href{https://arxiv.org/abs/0908.2008}{arXiv:0908.2008}.
+\bibitem{Redheffer}
+R. M. Redheffer, \emph{On a theorem of Plancherel and P\'olya},
+Pacific J. Math. \textbf{3} (1953), 823--835, Section 5, Theorem 11.
+\href{https://msp.org/pjm/1953/3-4/pjm-v3-n4-p11-s.pdf}{Primary text}.
+\end{thebibliography}
+\end{document}

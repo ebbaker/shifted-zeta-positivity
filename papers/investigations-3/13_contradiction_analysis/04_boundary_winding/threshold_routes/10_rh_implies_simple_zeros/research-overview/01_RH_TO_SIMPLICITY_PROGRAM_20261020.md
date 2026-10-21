@@ -10,6 +10,15 @@ no specialist review.
 transfers the local machinery, and screens the generic arguments.
 **No such implication or new theta exclusion has been proved here.**
 
+**Read first for the current discussion:** the six-page [analytic manuscript](../manuscript/main.tex)
+([PDF](../manuscript/main.pdf)) consolidates the complete-tail, infimum,
+finite-filter and heat-energy estimates. It states the missing opposing
+arithmetic estimate and compares the reusable machinery with BW09 in
+Section 5. RH simplifies the conditional problem's event setup; it does
+not establish a relative-difficulty theorem or supply the missing
+multiple-zero exclusion. Numerical and bounded formal checks are cited
+as support only. External review of the scaled-tail theorem is a priority.
+
 **Current quantitative advance:** [Note 16 §13](../notes/16_GEVREY_GLOBAL_APPROXIMATION_AND_RATE_20261020.md) proves under RH alone
 (log N)d_N²→K=Σ m_rho²/|rho|² for the complete length-N
 Dirichlet-polynomial infimum. Bounded finite two-prime multipliers and
@@ -803,3 +812,28 @@ adversarial analytic-input recheck and separate same-model mixture
 checks. The [result index](../../../../../../../result-summaries/README.md)
 and [complete-payment rule](../../../../../../../avoid/12_term_by_term_matching_and_separate_bounds.md)
 continue to require an actual opposing estimate for an original event.
+
+## 27. Exact finite filters and a paid root-isolation scale
+
+20 October 2026. Prepared for Edward Baker with substantial LLM assistance,
+**gpt-6-astra, actual effort ultra**. Separate same-model internal checks;
+no specialist validation, formalization or priority claim.
+
+[Note 16 §14](../notes/16_GEVREY_GLOBAL_APPROXIMATION_AND_RATE_20261020.md) gives bounded finite Dirichlet filters
+whose profiles are exact at every node of a fixed finite set. The whole
+remaining profile tail is paid with a constant independent of filter
+degrees. For two nodes at a small gap Delta, the least logarithmic
+length for exact unit-bounded isolation lies between pi/|Delta| and
+pi/|Delta|+log 2, improving the preceding binomial inverse-square gap
+cost. Bernstein's inequality supplies the lower bound for arbitrary
+complex coefficients; a sharp larger-supremum tradeoff is also retained.
+
+In the original heat coordinates, a double cluster at t=v/(log N)²
+requires v≥pi²/2 for exact unit-bounded isolation of its two roots with
+length at most N. This is an isolation cost, not a heat-family infimum
+bound: using the same taper at both roots does not require isolation.
+The fixed-zeta convolution is not transferred to the heat family.
+The exact K result in §26 and all previous taper scopes remain unchanged;
+no zeros are excluded. [Review 16 §10](../reviews/16_GEVREY_GLOBAL_APPROXIMATION_REVIEW_20261020.md) checks the
+constants and limits under the existing
+[complete-payment rule](../../../../../../../avoid/12_term_by_term_matching_and_separate_bounds.md).
