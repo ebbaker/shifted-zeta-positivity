@@ -89,3 +89,5 @@ same-model checks; the signed arithmetic gate remains open.
 [Review 16 §13](16_GEVREY_GLOBAL_APPROXIMATION_REVIEW_20261020.md) checks the primary positive-heat normalization, complete finite-frequency divergence proof and sharp weight threshold, including equality. Same-model internal review; no simplicity exclusion.
 
 - [17 — Normalized heat and arithmetic review](17_NORMALIZED_HEAT_LIMIT_AND_ARITHMETIC_REVIEW_20261020.md). Checks the Gaussian completion cancellation, both complete tails, all-multiplicity profiles, right-axis curvature correction, essential singularity and local transfer cost. Corrects disk-wide approximation wording to a critical-line segment. Same-model internal review only.
+
+- [18 — Arithmetic heat repair and exact completion review](18_ARITHMETIC_HEAT_TRANSFER_AND_COMPLETION_REVIEW_20261021.md). Checks the affine moment projection, Gevrey closure, ordered full-tail sharpness, exact pi example, complete Gaussian decomposition and ordinary-series contradiction. Includes a bounded reread of the GC/ST premises and keeps their internal status explicit.

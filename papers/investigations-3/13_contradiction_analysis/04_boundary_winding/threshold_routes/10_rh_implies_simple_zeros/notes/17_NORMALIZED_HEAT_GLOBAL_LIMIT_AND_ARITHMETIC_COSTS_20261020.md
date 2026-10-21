@@ -17,6 +17,11 @@ The norm theorem in §§1–5 assumes RH. Sections 6–7 give unconditional
 limitations of this specific normalization; §8 quantifies transfer at a
 hypothetical original double zero under RH. No original zero is excluded.
 
+The 21 October continuation in [Note 18](18_ARITHMETIC_HEAT_TRANSFER_AND_EXACT_COMPLETION_20261021.md)
+optimizes the arithmetic repair over fixed finite filtered-Gevrey families
+and proves a separate obstruction for exact first-mode completion factors.
+The bounds below are retained; the continuation excludes no original zero.
+
 ## 1. Statement
 
 Assume RH. Fix a real normalized compact Gevrey extension W of order

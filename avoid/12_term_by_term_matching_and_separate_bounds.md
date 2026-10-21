@@ -474,3 +474,15 @@ has positive order-1/log N coefficient. The source states: “Any
 triangle-inequality transfer of a sharp \(1/L\) coefficient must pay the
 nonzero coefficient in (NT3).” Retain that cost and the changed analytic
 hypotheses; do not assign the original lower bound to the new target.
+
+**Even the optimal heat repair has a paid cost, 21 October 2026.**
+Prepared for Edward Baker with substantial LLM assistance,
+**gpt-6-astra, ultra**; same-model internal review.
+[BW10 Note 18](../papers/investigations-3/13_contradiction_analysis/04_boundary_winding/threshold_routes/10_rh_implies_simple_zeros/notes/18_ARITHMETIC_HEAT_TRANSFER_AND_EXACT_COMPLETION_20261021.md)
+identifies the full moment-deficit cost of the best fixed-family repair.
+Its explicit double example has heat cost two and closest repaired cost
+6−192/pi⁴>4: “This is the sharp least-distance repair, which need not
+minimize the repaired profile's own norm.” Exact first-mode completion
+also retains a second-mode arithmetic defect. Neither optimizing the
+taper nor removing the approximate carrier's leading error authorizes
+a free transfer to the original zeta norm.

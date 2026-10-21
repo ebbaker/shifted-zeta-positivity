@@ -918,3 +918,34 @@ problem. BW09 may reuse the Gaussian identities and normalization
 warnings; the full approximation theorem assumes the original RH and
 cannot supply BW09's contradiction. [Review 17](../reviews/17_NORMALIZED_HEAT_LIMIT_AND_ARITHMETIC_REVIEW_20261020.md)
 checks the new proof and its scope. No multiple-zero exclusion is obtained.
+
+## 31. Optimized arithmetic repair and exact first-mode normalization
+
+21 October 2026. Prepared for Edward Baker with substantial LLM assistance,
+**gpt-6-astra, actual effort ultra**. Same-model internal review only.
+
+[Note 18](../notes/18_ARITHMETIC_HEAT_TRANSFER_AND_EXACT_COMPLETION_20261021.md)
+keeps the original zeta target while optimizing the repair of a given
+normalized heat profile. Under RH, the exact complete transfer constant
+over fixed finite filtered-Gevrey families is the sum of its polynomial
+moment deficits squared, with the original reciprocal-square weights.
+The explicit a=pi double profile has heat cost two but closest repaired
+cost 6−192/pi⁴>4. Finite coefficient heat is an invertible taper change
+and does not by itself evade the moment constraints.
+
+An unconditional companion calculation replaces the approximate carrier
+by an exact n=1 heat contribution and specified contour regularizations.
+The n=2 term still has a nonconstant power of sigma, which rules out an
+ordinary Dirichlet series at each fixed positive time. Complete left-source
+and higher-mode tails are retained. This is not a norm theorem for these
+new quotients, and it does not exclude every possible completion.
+
+The [result index](../../../../../../../result-summaries/README.md),
+[avoid index](../../../../../../../avoid/README.md) and
+[complete-payment rule](../../../../../../../avoid/12_term_by_term_matching_and_separate_bounds.md)
+continue to require an opposing estimate in the original arithmetic
+problem. BW09 can reuse the unconditional normalization calculation;
+the complete CT theorem assumes RH. Neither simplicity nor its strict
+cap-surplus step follows. [Review 18](../reviews/18_ARITHMETIC_HEAT_TRANSFER_AND_COMPLETION_REVIEW_20261021.md)
+records the precise scopes and the bounded reread of the imported
+GC/ST argument. The existing manuscript remains a concise consolidation.

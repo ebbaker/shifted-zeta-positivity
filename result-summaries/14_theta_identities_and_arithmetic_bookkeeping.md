@@ -628,3 +628,15 @@ an Euler product or a Nyman--Beurling lower bound for the changed target.”
 A double-zero transfer costs v²||uw||²/(4L|rho|²), so no original
 multiplicity exclusion follows. [Review 17](../papers/investigations-3/13_contradiction_analysis/04_boundary_winding/threshold_routes/10_rh_implies_simple_zeros/reviews/17_NORMALIZED_HEAT_LIMIT_AND_ARITHMETIC_REVIEW_20261020.md)
 is same-model internal review only.
+
+**Sharp heat transfer and exact completion, 21 October 2026.** Prepared
+for Edward Baker with substantial LLM assistance, **gpt-6-astra, ultra**.
+[BW10 Note 18](../papers/investigations-3/13_contradiction_analysis/04_boundary_winding/threshold_routes/10_rh_implies_simple_zeros/notes/18_ARITHMETIC_HEAT_TRANSFER_AND_EXACT_COMPLETION_20261021.md)
+proves the RH-conditional sharp complete repair cost over fixed finite
+filtered-Gevrey families. Its scope is: “it is not asserted for every
+arbitrary coefficient sequence depending on N.” It also proves
+unconditionally that exact first-mode and specified contour normalizations
+leave a second mode proportional to 2^(−sigma) sigma^(−t log 2/4),
+precluding ordinary Dirichlet series at fixed t>0. No zero is excluded.
+[Review 18](../papers/investigations-3/13_contradiction_analysis/04_boundary_winding/threshold_routes/10_rh_implies_simple_zeros/reviews/18_ARITHMETIC_HEAT_TRANSFER_AND_COMPLETION_REVIEW_20261021.md)
+is same-model internal review only.
