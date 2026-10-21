@@ -583,3 +583,401 @@ Thus its signed terms cancel a diagonal of size \(1/\varepsilon\), first to boun
 This computation preserves the original Euler and Möbius coefficients and the full pole term. Nonnegative coefficients in (AR4) do not remove the signed cancellation in (AR8). Paying those correlations absolutely is not merely too large: that double payment diverges. No signed upper estimate for their first-order remainder has been proved here. This closes only that proposed separate-payment argument, not the arithmetic ratio route.
 
 [Separate same-model continuation review, §7](../reviews/12_FINITE_PRECISION_SIGNED_KERNEL_AND_ENERGY_REVIEW_20261020.md).
+
+
+## 7. Prime-error smoothing retains a multiplicity remainder
+
+20 October 2026. Prepared for Edward Baker with substantial LLM assistance,
+**gpt-6-astra, actual effort ultra**. Separate same-model internal checks;
+no specialist review or novelty claim.
+
+**Outcome.** The natural exponentially damped prime-error approximation has an explicit first-order squared remainder. It is zero at simple zeros and strictly positive at multiple zeros. Thus the original positive Euler coefficients and the checked RH prime-error mean square do not justify discarding this remainder. No opposing arithmetic bound is obtained.
+
+### 7.1 The checked primary mean square retains squared multiplicity
+
+Assume RH. Let \(\rho=1/2+i\gamma\) run over distinct nontrivial zeros of both signs, with multiplicity \(m_\rho\), and put
+\[
+ K=\sum_\rho\frac{m_\rho^2}{|\rho|^2},\qquad
+ Z=\sum_\rho\frac{m_\rho}{|\rho|^2},\qquad
+ C=\sum_\rho\frac{c_{m_\rho}}{|\rho|^2},\quad
+ c_m=m\left(1-\binom{2m}{m}/4^m\right).
+ \tag{PR1}
+\]
+All sums converge, as checked in Notes12 and15. Define
+\(E(u)=e^{-u/2}(\psi(e^u)-e^u)\) for \(u\ge0\).
+[Akbary–Ng–Shahabi, Corollary1.15(i)](https://arxiv.org/pdf/1306.1657) gives
+\[
+ \frac1U\int_0^U E(u)^2\,du\longrightarrow K.
+ \tag{PR2}
+\]
+The source explicitly includes squared multiplicity. Its Theorem1.14 explains the Besicovitch Parseval step. For zeta the central-zero term in that corollary is absent. No simplicity, linear independence, or negative derivative-moment assumption is required for this prime-error statement; the source's separate Möbius statements have additional hypotheses. In particular (PR2) does not have constant \(Z\).
+
+### 7.2 A justified exponential smoothing
+
+Use \(\mathcal H=L^2((0,\infty),dx/x^2)\), and retain Note15's exact arithmetic residual
+\[
+ T_\varepsilon(x)=A_\varepsilon(x)-r_\varepsilon x-\mathbf1_{[1,\infty)}(x),
+ \quad r_\varepsilon=\zeta(1+\varepsilon)^{-1},\quad
+ A_\varepsilon(x)=\sum_{n\le x}\prod_{p\mid n}(1-p^{-\varepsilon}).
+\]
+Its norm is \(\|T_\varepsilon\|_{\mathcal H}^2=J_\varepsilon=C\varepsilon+o(\varepsilon)\).
+The proposed first-order approximation is
+\[
+ P_\varepsilon(x)=\varepsilon x^{-\varepsilon}
+                    (\psi(x)-x)\mathbf1_{[1,\infty)}(x).
+ \tag{PR3}
+\]
+It agrees to first order on every fixed interval \(1\le x\le X\), including the correct original derivative \(a'_0(n)=\Lambda(n)\). Below one the exact residual is \(-r_\varepsilon x\), whose squared norm is \(O(\varepsilon^2)\). No full-norm approximation is assumed.
+
+Let \(Q(U)=\int_0^U E(u)^2du=KU+o(U)\). Integration by parts gives
+\[
+ \|P_\varepsilon\|_{\mathcal H}^2
+ =\varepsilon^2\int_0^\infty e^{-2\varepsilon u}E(u)^2du
+ =2\varepsilon^3\int_0^\infty e^{-2\varepsilon u}Q(u)du
+ =\frac K2\varepsilon+o(\varepsilon).
+ \tag{PR4}
+\]
+This Abelian passage needs no rate in (PR2): split the error at a fixed \(U_0\), bound its tail by \(\eta U\), then let \(\eta\downarrow0\). The smoothing explores logarithmic distances \(u\) of order \(1/\varepsilon\), beyond the fixed intervals of Note15(AR7).
+
+### 7.3 The complete Mellin identity and its local comparison
+
+With Mellin transform \(\widehat f(s)=\int_0^\infty f(x)x^{-s-1}dx\), on \(\Re s=1/2\) we have exactly
+\[
+ \widehat T_\varepsilon(s)=\frac{\zeta(s)/\zeta(s+\varepsilon)-1}{s},
+ \qquad
+ \widehat P_\varepsilon(s)=\varepsilon\left[
+   -\frac{\zeta'(s+\varepsilon)}{(s+\varepsilon)\zeta(s+\varepsilon)}
+   -\frac1{s+\varepsilon-1}\right].
+ \tag{PR5}
+\]
+The second formula first follows in \(\Re(s+\varepsilon)>1\); RH's bound for \(\psi(x)-x\) gives absolute convergence of its combined integral throughout \(\Re(s+\varepsilon)>1/2\), establishing continuation to the stated line. The apparent pole at \(s+\varepsilon=1\) cancels between the displayed terms. The first formula is Note15's paid fixed-shift norm identity. Thus the original coefficients, pole subtraction, and remaining zeta terms are retained.
+
+At a fixed zero \(\rho\) of order \(m\), set \(s=\rho+i\varepsilon y\). Uniformly for bounded real \(y\),
+\[
+ \widehat T_\varepsilon(s)\longrightarrow
+ -\frac{e_m(y)}\rho,\qquad
+ \widehat P_\varepsilon(s)\longrightarrow
+ -\frac{m}{\rho(1+iy)},\qquad
+ e_m(y)=1-\left(\frac{iy}{1+iy}\right)^m.
+ \tag{PR6}
+\]
+Every fixed multiple zero remains included. The regular analytic factors affect these compact local limits by \(o(1)\).
+
+Put \(w(y)=(1+iy)^{-1}\). The elementary identities
+\[
+ \frac1{2\pi}\int|w|^2dy=\frac12,\qquad
+ \frac1{2\pi}\int w(y)^k\overline{w(y)}\,dy=2^{-k}
+\]
+follow, for example, by Fourier Plancherel applied to
+\(w(y)^k=\int_0^\infty e^{-t}t^{k-1}e^{-iyt}dt/(k-1)!\).
+Expanding \(e_m=1-(1-w)^m\) therefore gives
+\[
+ \frac1{2\pi}\int e_m\overline w\,dy=1-2^{-m},\qquad
+ d_m:=\frac1{2\pi}\int|e_m-mw|^2dy
+ =c_m+\frac{m^2}2-2m(1-2^{-m}).
+ \tag{PR7}
+\]
+In particular \(d_1=0\), \(d_2=1/4\), and \(d_3=21/16\). For every \(m\ge2\), the nonzero rational function \(e_m-mw\) has strictly positive squared norm, so \(d_m>0\).
+
+### 7.4 All-zero exhaustion gives the exact remainder
+
+For a finite set of distinct zeros, use the disjoint intervals
+\(\gamma+\varepsilon[-Y,Y]\). Mellin Plancherel and (PR6) give the local norm limits. After \(Y\to\infty\), the local \(T\)-mass is \(c_m/|\rho|^2\) and the local \(P\)-mass is \(m^2/(2|\rho|^2)\). Their complete totals are respectively \(C\) and \(K/2\), by Note15 and (PR4). Thus both complementary norm masses tend to zero as the finite zero set is exhausted. On the complement,
+\(|\widehat T-\widehat P|^2\le2|\widehat T|^2+2|\widehat P|^2\).
+This pays every remaining zero and the region at infinity, and proves
+\[
+ \boxed{\lim_{\varepsilon\downarrow0}
+ \frac{\|T_\varepsilon-P_\varepsilon\|_{\mathcal H}^2}{\varepsilon}
+ =\sum_\rho\frac{d_{m_\rho}}{|\rho|^2}.}
+ \tag{PR8}
+\]
+The sum is finite because \(d_m\le2c_m+m^2\). No uniform zero spacing or inverse-derivative bound is used. The order of limits is fixed finite set, \(\varepsilon\downarrow0\), \(Y\to\infty\), then all-zero exhaustion.
+
+One exact double conjugate pair forces the right side of (PR8) to be at least
+\[
+ \frac1{2(\gamma^2+1/4)}.
+ \tag{PR9}
+\]
+This is an actual error coefficient for the proposed arithmetic linearization, not just a triangle-inequality allowance. Its squared error is of order \(\varepsilon\), precisely the scale of \(J_\varepsilon\). The mean-square approximation has coefficient \(K/2\), not \(Z/2\); treating the full remainder as \(o(\sqrt\varepsilon)\) in norm would discard the multiple-zero contribution. The checked inputs give no signed bound that removes it. This assessment concerns (PR3) and its complete norm; it does not exclude other prime-error estimates or smoothing schemes.
+
+
+## 8. The independent-prime Jensen bound loses a fixed variance
+
+20 October 2026. Prepared for Edward Baker with substantial LLM assistance,
+**gpt-6-astra, actual effort ultra**. Separate same-model internal checks;
+no specialist review or novelty claim.
+
+**Outcome.** The probabilistic representation of the original positive
+coefficients is legitimate. Its Jensen upper allowance cannot be
+`O(epsilon)`: the variance which it adds has liminf at least one as
+`epsilon` tends to zero. This holds whether its full expected norm is
+finite or infinite, and uses no random Euler product on the critical line.
+
+### 8.1 Finite-prime construction and its legitimate limit
+
+Fix `epsilon>0`. For each prime independently let `B_p` be Bernoulli
+with mean `q_p=p^(-epsilon)`; `B_p=1` means that multiples of `p` are
+excluded. Put
+\[
+ X_n=\prod_{p\mid n}(1-B_p),\quad
+ A_\omega(x)=\sum_{n\le x}X_n,\quad
+ D_\omega=\prod_p(1-B_p/p),\quad
+ Y_x=A_\omega(x)-xD_\omega.
+ \tag{RS1}
+\]
+For a finite prime set all products are finite, `A_omega-xD_omega` is
+bounded and periodic, and its squared `dx/x^2` discrepancy norm is finite.
+For the infinite model,
+`E sum_p B_p/p=sum_p p^(-1-epsilon)<infinity`; hence that sum is finite
+almost surely and `D_omega>0` exists. Finite-prime densities converge
+boundedly. They also give the actual density: the upper density of
+integers removed by the omitted primes is at most their convergent
+reciprocal-prime tail. Explicitly, for the cutoff model retaining primes
+at most `P`, uniformly in `x`,
+\[
+ 0\le A_{\omega,P}(x)-A_\omega(x)
+ \le\sum_{\substack{p>P,\ B_p=1\\p\le x}}\lfloor x/p\rfloor
+ \le x\sum_{p>P,\ B_p=1}\frac1p.
+\]
+Primes exceeding `x` remove no integer in the count. Taking first
+`x->infinity` and then `P->infinity` proves the asserted density without
+using countable subadditivity of upper density.
+
+Consequently
+\[
+ EX_n=a_\epsilon(n)=\prod_{p\mid n}(1-p^{-\epsilon}),\qquad
+ ED_\omega=r_\epsilon=\prod_p(1-p^{-1-\epsilon})
+                  =\zeta(1+\epsilon)^{-1},
+ \quad EY_x=B_\epsilon(x).
+ \tag{RS2}
+\]
+Here `B_epsilon=A_epsilon-r_epsilon x` is exactly Note15 §6's original
+arithmetic function, and `chi=1_[1,infinity)`. Finite-prime variables
+converge in mean square at each fixed `x` and in the joint weighted norm
+on each bounded interval. No convergence of their full unbounded-interval
+norms is inferred.
+
+Pointwise covariance is fully explicit, for example
+\[
+ E(X_nX_m)=a_\epsilon(\operatorname{lcm}(n,m)),\quad
+ E(X_nD_\omega)=r_\epsilon a_\epsilon(n)
+      \prod_{p\mid n}(1-q_p/p)^{-1},\quad
+ ED_\omega^2=\prod_p[1-q_p(2/p-1/p^2)].
+ \tag{RS3}
+\]
+These retain the cross terms with the random density. Tonelli and the
+pointwise variance decomposition yield the extended nonnegative identity
+\[
+ \mathbb E\int_0^\infty|Y_x-\chi(x)|^2\frac{dx}{x^2}
+ =J_\epsilon+V_\epsilon,\qquad
+ V_\epsilon=\int_0^\infty\operatorname{Var}(Y_x)\frac{dx}{x^2}.
+ \tag{RS4}
+\]
+Under RH, `J_epsilon` is the actual finite direct-ratio norm of Note15.
+
+### 8.2 A positive variance cost that Jensen cannot remove
+
+For a finite nonempty set of primes `S`, put `d_S=product_(p in S)p` and
+let `B_(epsilon,S)(u)` be the expectation of `A_omega(u)-uD_omega` when
+primes in `S` are forced to be **unexcluded**. Its density is
+`r_(epsilon,S)=r_epsilon product_(p in S)(1-q_p/p)^(-1)`.
+The products of normalized centered Bernoulli variables
+`Z_S=product_(p in S)(B_p-q_p)/sqrt(q_p(1-q_p))` are orthonormal.
+Finite inclusion-exclusion gives exactly
+\[
+ E[Y_x Z_S]=(-1)^{|S|}
+       \prod_{p\in S}\sqrt{q_p(1-q_p)}\,
+       B_{\epsilon,S}(x/d_S).
+ \tag{RS5}
+\]
+Indeed the coefficient involving every `B_p`, `p in S`, is the signed
+count of surviving multiples of `d_S`, together with its corresponding
+density subtraction. Averaging the other primes proves (RS5).
+
+Apply Bessel's inequality to any finite family of these variables at each
+`x`, then integrate and increase the family. This is legitimate even if
+`V_epsilon` is infinite and gives
+\[
+ V_\epsilon\ge\sum_{\substack{\varnothing\ne S\\ S\text{ finite}}}
+       \left(\prod_{p\in S}w_p\right)
+       \int_0^\infty|B_{\epsilon,S}(u)|^2\frac{du}{u^2},
+ \qquad w_p=\frac{p^{-\epsilon}-p^{-2\epsilon}}p.
+ \tag{RS6}
+\]
+No critical-line random product or interchange of a signed infinite
+correlation sum enters this bound.
+
+Fix `X>2` and an integer `k>=1`, and restrict (RS6) to sets of `k` primes
+all exceeding `X`. For `1<=u<=X` the coefficient count is unchanged by
+forcing those primes to be unexcluded; it tends uniformly to one as
+`epsilon` tends to zero. Also
+`r_(epsilon,S)<=r_epsilon(1-1/X)^(-k)->0`, uniformly over these sets.
+Therefore their norm factors are at least
+`1-1/X-o_(X,k)(1)`.
+
+The exact Euler logarithm and its absolutely convergent higher-power
+tail show
+\[
+ W_\epsilon:=\sum_p w_p\longrightarrow\log2,
+ \qquad \max_p w_p\longrightarrow0.
+ \tag{RS7}
+\]
+For the first assertion compare
+`log zeta(1+epsilon)-log zeta(1+2epsilon)`; the higher-prime-power
+difference tends to zero by dominated convergence. For the second use
+pointwise convergence at each prime and `w_p<=1/p`. Removing finitely
+many primes does not change either limit. The elementary symmetric sum
+of degree `k` in these weights consequently tends to `(log2)^k/k!`:
+repeated-index tuples contribute at most
+`binom(k,2)(max w_p) W_epsilon^(k-1)`.
+
+For any fixed integer `K`, (RS6) thus gives
+\[
+ \liminf_{\epsilon\downarrow0}V_\epsilon
+ \ge(1-1/X)\sum_{k=1}^K\frac{(\log2)^k}{k!}.
+\]
+First let `K` and then `X` tend to infinity. The conclusion is
+\[
+ \boxed{\liminf_{\epsilon\downarrow0}V_\epsilon\ge1.}
+ \tag{RS8}
+\]
+Already the degree-one projection gives the lower constant `log2`.
+Under RH the actual `J_epsilon=C_*epsilon+o(epsilon)` tends to zero,
+while the Jensen allowance in (RS4) has liminf at least one. Thus this
+particular positive averaging loses at least a reciprocal-shift factor
+relative to the target scale.
+
+**Scope.** Finiteness of the infinite expected discrepancy norm has not
+been assumed or established here; (RS8) rules out its proposed sharp
+`O(epsilon)` payment in either case. Finite-prime global norms cannot be
+silently passed to the limit. The failure concerns replacing the exact
+mean's squared norm by the expected random squared norm. It gives no
+universal obstruction to retaining the signed covariances in (RS3), and
+no simplicity exclusion.
+
+
+## 9. Assessment of the complete heat-energy identity
+
+20 October 2026. Prepared for Edward Baker with substantial LLM assistance,
+**gpt-6-astra, actual effort ultra**. Separate same-model internal checks;
+no specialist review or novelty claim.
+
+Put \(\mathcal F_t(z)=8H(t,-2iz)\). Its complete original theta integral
+gives \(\partial_t\mathcal F_t=\mathcal F_t''/4\). Under RH, retain all
+zeros of its all-real heat continuation. For fixed \(\epsilon,\sigma>0\),
+write, along \(z=iy\),
+\[
+ R=\frac{\mathcal F_t(iy)}{\mathcal F_t(\epsilon+iy)},\quad
+ e=1-R,\quad
+ b=\frac{\mathcal F_t'}{\mathcal F_t}(\epsilon+iy)=u+iv,\quad
+ w(y)=\frac1{\sigma^2+y^2}.
+ \tag{HE1}
+\]
+The ratio is unchanged by any nonzero scalar normalization of
+\(\mathcal F_t\), including a time-dependent one. Such a normalization
+adds the same scalar term to both heat equations, which cancels below.
+Direct quotient differentiation gives the exact equations
+\[
+ R_t=\frac14R_{zz}+\frac12bR_z,\qquad
+ e_t=-\frac14e_{yy}+\frac12v e_y-\frac i2u e_y .
+ \tag{HE2}
+\]
+In particular the boundary-coordinate second derivative has the
+anti-diffusive sign. With
+\(J_A(t)=(2\pi)^{-1}\int_{-A}^A w|e|^2dy\), integration by parts gives
+\[
+\begin{split}
+ J_A'(t)={}&
+ \frac1{4\pi}\int_{-A}^A w|e_y|^2dy
+ -\frac1{8\pi}\int_{-A}^A w''|e|^2dy
+ -\frac1{4\pi}\int_{-A}^A(wv)'|e|^2dy\\
+ &+\frac1{2\pi}\int_{-A}^A wu\,\operatorname{Im}(\bar e e_y)dy
+ +\left[
+ -\frac{w\operatorname{Re}(\bar e e_y)}{4\pi}
+ +\frac{w'|e|^2}{8\pi}
+ +\frac{wv|e|^2}{4\pi}
+ \right]_{-A}^{A}.
+\end{split}
+\tag{HE3}
+\]
+Equivalently its interior is
+\[
+ \frac1{4\pi}\int_{-A}^A
+ \left\{w|e_y+iue|^2-
+ [wu^2+(wv)'+\tfrac12w'']|e|^2\right\}dy .
+ \tag{HE4}
+\]
+Every drift, weight and boundary term is retained. No differentiation of
+an improper integral or uniform positive-time local-zero count is used.
+
+There is also a simple complete exterior payment. The paired product
+gives \(|R|\le1\) on the imaginary axis, so for the full weighted energy
+\(J(t)\),
+\[
+ 0\le J(t)-J_A(t)\le\frac4{\pi A}.
+ \tag{HE5}
+\]
+Consequently integrating (HE3) from \(0\) to \(t\), with
+\(A=\epsilon^{-2}\), computes \(J(t)-J(0)\) up to
+\(O(\epsilon^2)\), uniformly in the time interval on which the real-zero
+continuation is used. The finite-window boundary expression in (HE3)
+must still be included; it has not been asserted to vanish.
+
+The RH sign of the full product drift is compatible with loss. Indeed,
+with symmetric pairing in the imaginary part and all multiplicities
+retained,
+\[
+ u=\sum_\lambda\frac{m_\lambda\epsilon}
+                    {\epsilon^2+(y-\lambda)^2}>0,\qquad
+ v_y=\sum_\lambda
+ \frac{m_\lambda((y-\lambda)^2-\epsilon^2)}
+      {(\epsilon^2+(y-\lambda)^2)^2}.
+ \tag{HE6}
+\]
+Thus \(u^2+v_y\ge0\): each diagonal contribution is
+\([m_\lambda(y-\lambda)^2+(m_\lambda^2-m_\lambda)\epsilon^2]/
+[\epsilon^2+(y-\lambda)^2]^2\), and the cross terms of \(u^2\)
+are nonnegative. This positive quantity appears with a minus sign in
+(HE4). Positivity of the complete theta source gives finite compact
+parameter moments and the mass covariance in Note15 (HR15). Neither
+those bounds nor the displayed drift sign yields an \(o(\epsilon)\)
+estimate over the crossover interval in this calculation.
+
+For an exact normalization check take the local heat solution
+\(\mathcal F_t(z)=z^2+t/2\) and the unweighted integral
+\((2\pi)^{-1}\int_{\mathbb R}|e|^2dy\). At \(t=0\), after scaling
+\(y=\epsilon Y\),
+\[
+ e=\frac{1+2iY}{(1+iY)^2},\quad
+ b=\frac{2}{\epsilon(1+iY)} .
+\]
+The three nonzero interior terms in (HE3), in their displayed order
+(derivative square, \(v_y\), imaginary cross term), are exactly
+\[
+ \frac1{8\epsilon},\qquad
+ \frac1{8\epsilon},\qquad
+ -\frac3{8\epsilon}.
+ \tag{HE7}
+\]
+Their sum is \(-1/(8\epsilon)\), agreeing with
+\[
+ \frac d{dt}\left\{\epsilon
+ \left[1+\frac1{4(1+t/(2\epsilon^2))}\right]\right\}
+ =-\frac{\epsilon^3}{2(t+2\epsilon^2)^2}.
+ \tag{HE8}
+\]
+The model's boundary terms vanish by its explicit rational decay. This
+is a test of the heat and real-zero premises, not a replacement for the
+original theta source. Note15 (HR7), (HR13) already pays the original
+source's full exterior contribution and proves the corresponding
+order-\(\epsilon\) loss at a hypothetical multiple endpoint.
+
+**Assessment.** The exact PDE identity neither contradicts that loss nor
+supplies its required opposing \(o(\epsilon)\) bound. An argument using
+only the nonnegative derivative square, or discarding the imaginary
+cross term in (HE3), fails by the explicit constants (HE7). No full
+finite-parameter monotonicity of \(J(t)\) is claimed. The unresolved
+arithmetic task remains a bound on the complete signed drift with the
+unchanged source; the identity alone is not such a bound.
+
+[Separate same-model continuation review, §8](../reviews/12_FINITE_PRECISION_SIGNED_KERNEL_AND_ENERGY_REVIEW_20261020.md).

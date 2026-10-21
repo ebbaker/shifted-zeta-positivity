@@ -670,6 +670,11 @@ payment at damping `epsilon=2/log N` if any multiple zero exists.
 The checked RH truncation theorems do not control this regime. Changing
 the damping parameter alone gives no contradiction.
 
+**Superseding scope correction:** section 7 proves that this exact
+untapered cutoff cannot converge for any fixed positive a, even if all
+critical zeros are simple. The bounds (DT4)–(DT6) remain valid; the
+proposed o(1/log N) payment is no longer a live research target.
+
 ### 6.1 The complete norm and reverse triangle inequality
 
 Assume RH. On `s=1/2+it` use the Hilbert norm
@@ -800,10 +805,169 @@ bound `I<<exp(-a_N/2)` would require `a_N-2 log L->infinity` to supply
 
 Therefore none of these checked primary estimates pays the needed
 `o(1/L)` at `a=2`. This is a statement about the named theorems, not an
-exhaustive current-best literature claim. A valid RH-only payment at
-that scale would be additional arithmetic progress, not an automatic
-consequence of Note 15 or of parameter optimization. Ordered convergence
+exhaustive current-best literature claim. **Superseded candidate:** the preceding version suggested seeking a valid
+RH-only payment at that scale. Section 7 now proves that such a payment
+is impossible for this exact untapered sequence, even in the all-simple
+case. This closes that candidate, not the arithmetic lane as a whole. Ordered convergence
 with `epsilon` fixed and `N->infinity` supplies no such coupled rate.
 
 
 [Separate same-model continuation review, §7](../reviews/12_FINITE_PRECISION_SIGNED_KERNEL_AND_ENERGY_REVIEW_20261020.md).
+
+
+## 7. Fixed logarithmic damping cannot converge
+
+20 October 2026. Prepared for Edward Baker with substantial LLM assistance,
+**gpt-6-astra, actual effort ultra**. Separate same-model internal checks;
+no specialist review or novelty claim.
+
+**Result.** Under RH, for every fixed `a>0`, the prescribed untapered coefficients
+`mu(n)n^(-a/log N)` cannot converge in the critical-line approximation
+norm. Under RH their truncation remainder `I_(N,a/log N)` has a positive
+limsup even if all zeros are simple; a multiple critical-line zero makes
+that limsup infinite. Consequently the proposed `o(1/log N)` payment at
+`a=2` is impossible for this sequence, rather than merely absent from the
+checked RH estimates. Note12's liminf bound remains correct.
+
+### 7.1 Exact transfer of the coefficient-sum limsup
+
+For real `x>1` put
+\[
+ M(x)=\sum_{n\le x}\mu(n),\qquad
+ c_a(x)=\sum_{n\le x}\mu(n)n^{-a/\log x},\qquad
+ B=\limsup_{x\to\infty}\frac{|M(x)|}{\sqrt x}\in[0,\infty].
+ \tag{DN1}
+\]
+Partial summation, with the exponent held fixed while summing, gives
+\[
+ c_a(x)=e^{-a}M(x)+\frac a{\log x}
+       \int_1^x M(u)u^{-a/\log x-1}\,du.
+ \tag{DN2}
+\]
+Write `v=log x`, `f(v)=e^(-v/2)M(e^v)` and
+`g(v)=e^(-v/2)c_a(e^v)`. Then exactly
+\[
+ e^a g(v)=f(v)+T_vf,\qquad
+ T_vf=\frac av\int_0^v
+        e^{-(1/2-a/v)(v-u)}f(u)\,du.
+ \tag{DN3}
+\]
+If `f` is bounded, `T_vf=O_a(1/v)`, hence
+`g(v)-e^(-a)f(v)->0`. Conversely suppose `g` is bounded for large `v`.
+Choose a fixed `V>8a`, split the integral at `V`, and apply (DN3) on
+`V<=v<=W`. Since `1/2-a/v>=1/4`, the part involving `u>=V` has sup-norm
+operator bound at most `4a/V<1/2`. The initial part is bounded independently
+of `W`, because `f` is bounded on the fixed interval `[0,V]`. Thus
+\[
+ \sup_{V\le v\le W}|f(v)|
+ \le e^a\sup_{v\ge V}|g(v)|+C_V+\frac12
+                           \sup_{V\le v\le W}|f(v)|.
+ \tag{DN4}
+\]
+Each finite-interval supremum exists; absorption and `W->infinity` show
+that `f` is bounded. This proves the extended-real identity
+\[
+ \boxed{\limsup_{x\to\infty}\frac{|c_a(x)|}{\sqrt x}=e^{-a}B.}
+ \tag{DN5}
+\]
+For finite `B` it follows from the vanishing difference above. If `B` is
+infinite, boundedness of the left side would contradict (DN4).
+
+The same limsup is obtained along integers. On `N<=x<N+1`, the summands
+are identical except for the exponent, and the mean-value theorem gives
+`|c_a(x)-c_a(N)|=O_a(1/log N)`. Changing `sqrt x` to `sqrt N` adds
+`O(N^(-1/2))`, using the elementary bound `|c_a(N)|<=N`. The corresponding
+integer/real assertion for `M` is immediate.
+
+### 7.2 A critical zero forces a nonzero coefficient-sum limsup
+
+Fix a critical-line zero `rho=1/2+i gamma`. If `B<infinity`, the usual
+partial-summation integral, first valid for `Re s>1`, continues to
+`Re s>1/2` and gives
+\[
+ \frac1{\zeta(s)}=s\int_1^\infty M(x)x^{-s-1}\,dx,
+ \qquad
+ \limsup_{\alpha\downarrow0}
+       \alpha|\zeta(\rho+\alpha)^{-1}|\le |\rho|B.
+ \tag{DN6}
+\]
+To obtain the inequality, bound the tail by `(B+eta)sqrt x`; the compact
+initial interval vanishes after multiplication by `alpha`, while
+`alpha integral_1^infinity x^(-1-alpha)dx=1`. Then let `eta` decrease
+to zero. Analytic continuation is legitimate: the convergent integral
+defines a holomorphic function in the half-plane and its product with
+zeta is identically one there.
+
+If the fixed zero is simple this implies
+\[
+ B\ge\frac1{|\rho\zeta'(\rho)|}>0.
+ \tag{DN7}
+\]
+If its multiplicity is at least two, the left side of (DN6) diverges,
+so `B=infinity`. Neither assertion assumes RH. If `B=infinity` already,
+the simple-zero inequality is understood in the extended sense.
+
+### 7.3 The complete norm retains this cost
+
+Let
+\[
+ A_N(s)=\sum_{n\le N}\mu(n)n^{-s-a/\log N},\qquad
+ E_N=\frac1{2\pi}\int_{\mathbb R}
+       \frac{|1-\zeta(1/2+it)A_N(1/2+it)|^2}{1/4+t^2}\,dt.
+ \tag{DN8}
+\]
+The Mellin/continuous-unitary argument of Note12 §5.4 applies to every
+finite coefficient vector. In detail, put `rho_n(t)={1/(nt)}` and
+`chi=1_(0,1]`. Mellin Plancherel gives
+`E_N=||chi+sum_(n<=N)mu(n)n^(-a/log N)rho_n||^2`.
+The multiplier
+\[
+ \frac{s\zeta(1-s)}{(1-s)\zeta(s)}
+ \tag{DN9}
+\]
+has modulus one almost everywhere on the critical line and defines a
+unitary `U` with `U rho_n(t)={nt}/(nt)`. Its values at the discrete zero
+set are immaterial. On `0<t<1/N`, the transformed finite sum is exactly
+the constant `c_a(N)`. Hence
+\[
+ \sqrt{E_N}\ge\frac{|c_a(N)|}{\sqrt N}
+              -\|U\chi\|_{L^2(0,1/N)},\qquad
+ \boxed{\limsup_N E_N\ge e^{-2a}B^2.}
+ \tag{DN10}
+\]
+The subtracted norm tends to zero because `U chi` belongs to `L^2`.
+This uses the entire approximation norm, with no omitted zero residues
+or prime tails. The Mellin identity and unitary mechanism are classical;
+see [Burnol's Mellin setup](https://arxiv.org/pdf/math/0202166) and
+[Wei–Wu, proof of Proposition1.9](https://bimsa.net/doc/publication/1424.pdf).
+The latter analyzes the distinct linear taper; the present moving
+untapered coefficient sum is handled explicitly in (DN2)–(DN5).
+
+Under RH, set `epsilon_N=a/log N` and retain the definitions `I_(N,epsilon)`
+and `J_epsilon` of Note12 §6. The reverse triangle inequality gives
+\[
+ |\sqrt{I_{N,\epsilon_N}}-\sqrt{E_N}|
+       \le\sqrt{J_{\epsilon_N}}\longrightarrow0.
+ \tag{DN11}
+\]
+Here only the genuine RH limit `J_epsilon->0` is needed; it is contained
+in [Balazard–de Roton, Proposition2](https://arxiv.org/pdf/0812.1689)
+and sharpened by Note15. Thus
+\[
+ \limsup_N I_{N,a/\log N}=\limsup_NE_N\ge e^{-2a}B^2.
+ \tag{DN12}
+\]
+In particular a simple critical zero gives the explicit lower bound
+`e^(-2a)/|rho zeta'(rho)|^2>0`; a multiple critical zero gives infinite
+limsup. This refutes convergence, and therefore `o(1/log N)`, for every
+fixed positive `a`, including `a=2`, even in the all-simple case.
+
+**Scope correction.** Note12's necessary *liminf* comparison remains
+valid but is weaker than this *limsup* obstruction for the same fixed
+sequence. A fixed `a/log N` truncation payment cannot serve as the
+proposed opposing estimate. The proof does not exclude convergence with
+`a=a_N->infinity`, fixed positive shift followed by the cutoff limit,
+different taper coefficients, or optimally chosen Dirichlet polynomials.
+It gives no RH-to-simplicity conclusion.
+
+[Separate same-model review, §8](../reviews/12_FINITE_PRECISION_SIGNED_KERNEL_AND_ENERGY_REVIEW_20261020.md).

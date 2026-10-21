@@ -259,3 +259,63 @@ compatible with a multiple endpoint. No opposing upper bound was proved.
 No fixture rerun, sign scan, manuscript change, or event exclusion was
 claimed. These additions quantify the missing uniformity and cancellation;
 they leave the positive gate RHS-02 open.
+
+
+## 8. Fixed-damping closure and retained arithmetic remainders
+
+20 October 2026. Prepared for Edward Baker with substantial LLM assistance,
+**gpt-6-astra, actual effort ultra**. Separate same-model internal checks;
+no specialist review or novelty claim.
+
+**Verdict:** [Note 12 §7](../notes/12_FINITE_EVALUATION_AND_ENDPOINT_INVERSE_COSTS_20261020.md) proves nonconvergence
+for its exact untapered fixed-a/log N sequence. It supersedes the live
+candidate discussed in §6; the older liminf lower bound stays valid.
+[Note 15 §§7–8](../notes/15_COMPLETED_RATIO_ENERGY_AND_MULTIPLICITY_20261020.md) quantify the actual prime-error
+linearization remainder and a fixed loss in the proposed Jensen bound.
+Its §9 records the heat-identity assessment without claiming a new
+opposing estimate. RH implies simplicity is still unproved.
+
+- The moving exponent is held fixed in partial summation. The Volterra
+  absorption proves boundedness in the converse direction and therefore
+  handles infinite limsup, rather than assuming bounded M(x)/sqrt(x).
+  Variation between consecutive integers is paid. The full unitary norm
+  leaves the constant coefficient sum on (0,1/N), and its fixed target
+  has vanishing norm there. At a simple critical zero the resulting
+  limsup is at least exp(-2a)/|rho zeta'(rho)|²; a multiple critical zero
+  forces infinite limsup. RH is used for the ratio-error transfer to I.
+  This does not cover growing a_N, other tapers, or optimized polynomials.
+- The primary Akbary–Ng–Shahabi Corollary 1.15(i) was reopened and checked:
+  its RH prime-error mean square contains squared multiplicity. The
+  additional assumptions on the paper's Möbius statements were not
+  imported. Abel smoothing gives K/2; the complete Mellin identity keeps
+  the pole cancellation. Local-window constants are d_1=0, d_2=1/4,
+  d_3=21/16. The exact total norms saturate all local zero masses, so
+  their complementary masses vanish in the stated exhaustion order.
+  Thus the remainder coefficient is exact, with no hidden spacing or
+  negative derivative-moment assumption.
+- The random-sieve argument starts with finite prime sets. Its
+  infinite density exists almost surely because the selected reciprocal
+  primes have finite sum. The complete covariance keeps the random
+  density subtraction. Orthogonal centered Bernoulli products give
+  nonnegative Bessel lower bounds; the elementary symmetric sums tend
+  to (log 2)^k/k!, proving liminf variance at least one. Full-norm
+  finiteness for the random model is not assumed. Thus this Jensen
+  allowance cannot estimate the original O(epsilon) error sharply.
+- The finite-window heat identity retains the weight, drift and boundary
+  terms. Schur contraction pays the exterior by 4/(pi A), without
+  differentiating an improper integral. For the double local model the
+  three interior contributions are +1/(8 epsilon), +1/(8 epsilon),
+  and -3/(8 epsilon), totaling the previously known -1/(8 epsilon).
+  Removing the imaginary cross term would reverse this diagnostic.
+  No finite-parameter monotonicity or new simplicity criterion is claimed.
+
+The structural collision controls remain as in Notes 05 and 09: the
+positive-source control fails unchanged ordinary Dirichlet arithmetic;
+the arithmetic control fails exact reflection and entire completion.
+The finite double polynomial checks only the heat/real-zero formulas,
+not the unchanged theta source. None of these controls is asserted to
+satisfy the complete arithmetic premises of the new identities.
+
+These are quantitative scoped obstructions and error coefficients, not
+zero exclusions. No fixture rerun, numerical sign scan or manuscript
+snapshot was needed. RHS-02's opposing signed estimate remains unmet.

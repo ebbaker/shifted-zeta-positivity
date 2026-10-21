@@ -456,3 +456,20 @@ positive double-pair bound at a=2. Neither result supplies the opposing
 arithmetic estimate. [Separate same-model review §7](../papers/investigations-3/13_contradiction_analysis/04_boundary_winding/threshold_routes/10_rh_implies_simple_zeros/reviews/12_FINITE_PRECISION_SIGNED_KERNEL_AND_ENERGY_REVIEW_20261020.md).
 Prepared for Edward Baker with substantial LLM assistance,
 **gpt-6-astra, ultra**; no novelty claim or original-zero exclusion.
+
+
+**Fixed-damping scope correction, 20 October 2026:**
+[BW10 Note 12 §7](../papers/investigations-3/13_contradiction_analysis/04_boundary_winding/threshold_routes/10_rh_implies_simple_zeros/notes/12_FINITE_EVALUATION_AND_ENDPOINT_INVERSE_COSTS_20261020.md) is **proved in-note**:
+the untapered coefficients mu(n)n^(-a/log N), fixed a>0, have complete
+error limsup at least exp(-2a) B², B=limsup |M(x)|/sqrt(x). A simple
+critical zero forces B>0 and a multiple one forces B=infinity. Under RH
+the truncation remainder has the same limsup. “A fixed a/log N
+truncation payment cannot serve as the proposed opposing estimate.”
+The older §6 liminf bound survives; its vanishing-payment candidate is
+superseded. Growing a_N and different coefficients are not covered.
+[Note 15 §§7–8](../papers/investigations-3/13_contradiction_analysis/04_boundary_winding/threshold_routes/10_rh_implies_simple_zeros/notes/15_COMPLETED_RATIO_ENERGY_AND_MULTIPLICITY_20261020.md), **proved under RH in-note**,
+computes the prime-error linearization coefficient sum d_m/|rho|²,
+with d_1=0, d_2=1/4, and a Jensen variance loss with liminf at least one.
+Neither supplies an opposing bound. [Same-model review §8](../papers/investigations-3/13_contradiction_analysis/04_boundary_winding/threshold_routes/10_rh_implies_simple_zeros/reviews/12_FINITE_PRECISION_SIGNED_KERNEL_AND_ENERGY_REVIEW_20261020.md).
+Prepared for Edward Baker with substantial LLM assistance,
+**gpt-6-astra, ultra**; no specialist review or novelty claim.

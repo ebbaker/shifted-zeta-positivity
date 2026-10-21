@@ -548,7 +548,41 @@ has order 1/epsilon, the complete norm tends to one, and the absolute
 double correlation sum diverges. The required first-order coefficient
 therefore depends on signed cancellation at absolute scale epsilon.
 [Note 12 §6](../notes/12_FINITE_EVALUATION_AND_ENDPOINT_INVERSE_COSTS_20261020.md) also pays the finite-cutoff comparison:
-damping 2/log N would need an additional truncation bound not supplied
-by the checked RH theorems. Neither comparison produces that bound.
+**Superseded candidate:** the proposed vanishing truncation bound at
+damping 2/log N is now ruled out for this exact untapered sequence by
+Note 12 §7, even if all critical zeros are simple. The necessary
+comparison in §6 remains valid; see the scope correction below.
 [Review 12 §7](../reviews/12_FINITE_PRECISION_SIGNED_KERNEL_AND_ENERGY_REVIEW_20261020.md) records the separate same-model checks.
 The existing result/avoid indexes and RHS-02 acceptance gate remain in force.
+
+
+## 20. Fixed-damping closure and complete arithmetic remainders
+
+20 October 2026. Prepared for Edward Baker with substantial LLM assistance,
+**gpt-6-astra, actual effort ultra**. Separate same-model internal checks;
+no specialist review or novelty claim.
+
+[Note 12 §7](../notes/12_FINITE_EVALUATION_AND_ENDPOINT_INVERSE_COSTS_20261020.md) proves that the untapered polynomial
+with damping a/log N cannot converge for any fixed a>0. The complete
+squared norm has limsup at least exp(-2a) times the squared limsup of M(x)/sqrt(x).
+It is positive at a simple critical zero and infinite at a multiple one;
+under RH the same holds for the truncation remainder. This closes the
+specific candidate in §19, including the all-simple case. Other tapers,
+growing damping parameters and optimized polynomials are not excluded.
+
+[Note 15 §7](../notes/15_COMPLETED_RATIO_ENERGY_AND_MULTIPLICITY_20261020.md) also computes the exact error of the
+natural exponentially smoothed prime-error linearization. Its squared
+norm is epsilon times sum d_m/|rho|²+o(epsilon), with d_1=0 and d_2=1/4.
+The primary RH mean square has squared multiplicity, so the linearization
+does not provide the missing simple-zero upper constant. Section 8 proves
+that independent-prime randomization and Jensen add variance with liminf
+at least one, while the actual ratio error tends to zero. Section 9's
+complete heat identity retains the known event-compatible loss.
+
+These scoped failures narrow the estimates to pursue; they do not prove
+simplicity or rule out every use of signed arithmetic. The acceptance
+gate remains an actual opposing bound for the unchanged source, with
+all zeros and cross terms retained. The [result index](../../../../../../../result-summaries/README.md),
+[avoid index](../../../../../../../avoid/README.md), and
+[review 12 §8](../reviews/12_FINITE_PRECISION_SIGNED_KERNEL_AND_ENERGY_REVIEW_20261020.md) govern continuation; another reformulation
+or reoptimization of these closed payments does not satisfy that gate.

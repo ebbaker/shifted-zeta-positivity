@@ -305,3 +305,19 @@ Fixed-window differentiation also misses the first-order arithmetic mass
 escaping to infinity. [Internal review §7](../papers/investigations-3/13_contradiction_analysis/04_boundary_winding/threshold_routes/10_rh_implies_simple_zeros/reviews/12_FINITE_PRECISION_SIGNED_KERNEL_AND_ENERGY_REVIEW_20261020.md).
 Prepared for Edward Baker with substantial LLM assistance,
 **gpt-6-astra, ultra**.
+
+
+**Complete arithmetic approximations, 20 October 2026 (BW10).**
+[Note 12 §7](../papers/investigations-3/13_contradiction_analysis/04_boundary_winding/threshold_routes/10_rh_implies_simple_zeros/notes/12_FINITE_EVALUATION_AND_ENDPOINT_INVERSE_COSTS_20261020.md) supersedes its earlier fixed-a/log N
+candidate: the untapered cutoff cannot converge even with all zeros
+simple. Do not keep seeking its proposed vanishing truncation payment.
+[Note 15 §7](../papers/investigations-3/13_contradiction_analysis/04_boundary_winding/threshold_routes/10_rh_implies_simple_zeros/notes/15_COMPLETED_RATIO_ENERGY_AND_MULTIPLICITY_20261020.md) computes the error omitted by a
+natural prime-error linearization at a hypothetical multiple zero:
+“Its squared error is of order
+epsilon, precisely the scale of J_epsilon.” The checked RH mean square
+contains squared multiplicity. Section 8 also gives liminf variance at
+least one for the independent-prime Jensen allowance; its positive
+representation loses the cancellation needed for O(epsilon). These
+failures concern the stated approximations, not all signed arithmetic.
+[Internal review §8](../papers/investigations-3/13_contradiction_analysis/04_boundary_winding/threshold_routes/10_rh_implies_simple_zeros/reviews/12_FINITE_PRECISION_SIGNED_KERNEL_AND_ENERGY_REVIEW_20261020.md). Prepared for Edward Baker
+with substantial LLM assistance, **gpt-6-astra, ultra**.
