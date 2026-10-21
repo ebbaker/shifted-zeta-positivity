@@ -378,3 +378,80 @@ The existing collision controls retain their previously recorded failed
 premises. The exact source is used where explicitly stated, and generic
 controls are not substituted for it. These are checked scoped costs and
 consumer assessments, not a new criterion or simplicity theorem.
+
+
+## 10. Infinitely flat tapers, actual local transfer and bounded Lean check
+
+20 October 2026. Prepared for Edward Baker with substantial LLM assistance,
+**gpt-6-astra, actual effort ultra**. Separate same-model internal checks;
+no specialist review or novelty claim.
+
+**Verdict:** [Note 12 §§10–12](../notes/12_FINITE_EVALUATION_AND_ENDPOINT_INVERSE_COSTS_20261020.md) passes the stated
+internal checks. The quantitative gain is an actual local zeta profile
+for each fixed Gevrey-flat taper and the resulting prescribed-polynomial
+lower bound (GF13), with the simultaneous simple/double consequence
+(GF15). The global upper estimate required for simplicity remains open.
+
+Two separate same-model agents checked the full transfer; the parent
+also checked the product bound, all endpoint terms and exhaustion order.
+This is internal LLM review, not independent specialist validation.
+
+- For (FA1)–(FA5), the RH Mertens theorem on p.1 of
+  [Balazard–de Roton](https://arxiv.org/pdf/0810.3587) gives the stated
+  coefficient decay: the phase minimum grows as L^(p/(p+1)), faster
+  than sqrt(L)(log L)^(5/2+eta). The n=1 atom and complete transformed
+  small interval are retained. This proves only that piece tends to zero.
+- For (FA6)–(FA8), [Propositions 2–3](https://arxiv.org/pdf/0812.1689)
+  have threshold 25 and squared-norm exponent −epsilon/2. The choice
+  40>25sqrt(2) covers the entire larger-cutoff interval. The resulting
+  absolute allowance grows at least as a exp(9a/16); that is a failure
+  of this payment, not a lower bound on the actual signed remainder.
+- In (FT3)–(FT8), integration by parts keeps every endpoint term and
+  the normalization 1/(m−1)!. The Legendre endpoint kernel yields
+  the exact m² minimum and a positive residual for every flat taper.
+  The fixed-m calculation is classical; no novelty claim is made.
+- In (FT9)–(FT15), the three inner products and C2 identity give the
+  exact residual formula. The limiting fractional-power profile is
+  approximated at both endpoints in the weighted derivative norm,
+  and the intermediate value theorem restores the prescribed C1
+  exactly. Thus the sharp simple/double cost and weighted infimum
+  are valid, including nonattainment in the flat class. Gevrey cutoffs
+  suffice, with each approximation fixed before taking N→infinity.
+- The compact extension and optimized derivative bound in (GF3)–(GF4)
+  give genuine Gevrey Fourier decay. Formula (GF5) reproduces every
+  original coefficient exactly. The initial exposition's fixed starting
+  line was replaced by H0>H with Re(s)+H0/L>1; polynomial reciprocal
+  growth on the traversed strip and uniform Fourier decay pay the
+  horizontal sides. No reciprocal-zero residue is crossed.
+- The full xi product in (GF7) retains all multiplicities and both
+  ordinate signs. Unit-window counts pay the near/far sums, with the
+  gamma and polynomial completion factors retained. At a comparable
+  to 1/L, the cost is exp(O(log L log(3+|v|/L))); the Gevrey decay
+  dominates it uniformly for |v|≥rL. Thus (GF8) pays every external
+  height, without an inverse-derivative moment or simple-zero premise.
+- The finite Laurent principal part and bounded analytic remainder
+  give (GF11). The leading coefficient cancels against the exact local
+  zeta factor, while all lower principal coefficients and regular terms
+  are O(|z|^m/L) after multiplication. The formula includes z=0.
+- Disjoint fixed finite windows, then N→infinity, then window expansion
+  and finite-zero exhaustion prove (GF13). Positivity of the unused
+  norm suffices; no global tightness is assumed. Its sum may be infinite.
+  K in (GF14) is finite because the unit-window squared-multiplicity
+  count is O(log²T). This proves (GF15), with a positive uniform
+  two-order gap only when A,B>0. Sharpness is limited to A C1+B C2;
+  neither the higher costs nor the actual global norm are optimized.
+- [FlatTaperTradeoff.lean](../numerics/lean/FlatTaperTradeoff.lean)
+  was checked with Lean 4.34.1 and the recorded mathlib pin. Its four
+  declarations have only propext, Classical.choice and Quot.sound in
+  the axiom report. The recorded source hash matches the saved source.
+  A separate agent inspected the proof and successful log. The formal
+  theorem assumes abstract inner-product data; the analytic moments,
+  Gevrey estimates, zeta transfer and simplicity are not formalized.
+
+The unchanged zeta and its complete RH product are used in the transfer.
+Generic collision controls do not satisfy its original Möbius/zeta
+identity; the positive-source control fails the ordinary Dirichlet premise,
+and the arithmetic control fails the exact completed entire reflection
+premise. No generic-control exclusion is claimed. The result is a lower
+bound, compatible with multiple zeros, and leaves RHS-02's opposing
+upper-estimate gate unmet.

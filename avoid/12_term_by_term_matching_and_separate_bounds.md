@@ -335,3 +335,16 @@ multiple initial zero. Do not interpret their o(epsilon) renormalized
 excess as an exclusion. Section 8.3 also leaves no correlation freedom
 for exact binary prime-product coefficient matching. [Internal review §9](../papers/investigations-3/13_contradiction_analysis/04_boundary_winding/threshold_routes/10_rh_implies_simple_zeros/reviews/12_FINITE_PRECISION_SIGNED_KERNEL_AND_ENERGY_REVIEW_20261020.md).
 For Edward Baker with substantial LLM assistance, **gpt-6-astra, ultra**.
+
+
+**Local transfer versus global upper payment, 20 October 2026 (BW10).**
+[Note 12 §§10–12](../papers/investigations-3/13_contradiction_analysis/04_boundary_winding/threshold_routes/10_rh_implies_simple_zeros/notes/12_FINITE_EVALUATION_AND_ENDPOINT_INVERSE_COSTS_20261020.md) pays an actual Gevrey local
+zeta transfer and obtains a full-norm lower bound by positivity and
+finite-window exhaustion. This does not require global tightness and
+does not supply a matching upper bound. For the separate damped-transfer
+attempt, “This is a lower bound on the explicitly chosen absolute
+allowance,” not on the actual error or its signed remainder. Keep these
+two statements distinct. The sharp simple/double tradeoff concerns local
+costs; the bounded Lean proof assumes their analytic inner-product data.
+[Internal review §10](../papers/investigations-3/13_contradiction_analysis/04_boundary_winding/threshold_routes/10_rh_implies_simple_zeros/reviews/12_FINITE_PRECISION_SIGNED_KERNEL_AND_ENERGY_REVIEW_20261020.md). Prepared for Edward Baker
+with substantial LLM assistance, **gpt-6-astra, ultra**.

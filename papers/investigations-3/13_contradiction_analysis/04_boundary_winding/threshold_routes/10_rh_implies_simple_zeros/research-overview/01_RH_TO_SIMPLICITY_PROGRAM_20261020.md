@@ -621,3 +621,39 @@ The [result index](../../../../../../../result-summaries/README.md),
 opposing estimate using the unchanged source. Merely choosing a parameter
 outside a proved obstruction is not such an estimate. RH implies
 simplicity remains open in this investigation.
+
+
+## 22. Actual Gevrey local transfer and its remaining global upper error
+
+20 October 2026. Prepared for Edward Baker with substantial LLM assistance,
+**gpt-6-astra, actual effort ultra**. Separate same-model internal checks;
+no specialist review or novelty claim.
+
+[Note 12 §§10–12](../notes/12_FINITE_EVALUATION_AND_ENDPOINT_INVERSE_COSTS_20261020.md) supplies a concrete transfer result:
+under RH, fixed Gevrey-flat logarithmic tapers admitting the specified
+compact extension have the actual local
+profile (GF2) at every fixed zero, with its true multiplicity. A complete
+xi-product reciprocal bound and rapid Fourier decay pay all external
+heights. Finite-window exhaustion then proves the prescribed-polynomial
+lower bound (GF13), without simplicity, inverse-jet moments or global
+tightness. It strengthens the isolated-model calculation to an actual
+lower estimate for the unchanged Möbius coefficients.
+
+The exact local costs also satisfy a sharp simultaneous simple/double
+tradeoff. With K=Σm²/|rho|² and A,B the exact simple/double masses,
+the actual liminf is at least K+[sqrt(B(4A+9B))−3B]/2. This exceeds
+K when A,B>0; only the two-order model optimization is sharp. Every
+fixed flat taper costs more than m² at each order separately. The
+[Lean check](../numerics/lean/README.md) verifies the abstract
+projection identity from supplied Hilbert-space hypotheses, not the
+analytic transfer or a zeta theorem.
+
+For the explicit flat profile, the old coefficient obstruction vanishes,
+but the tested absolute transfer from damped approximants has a growing
+allowance. No matching global upper bound or convergence theorem has
+been established. N-dependent taper choices need a separate uniform
+estimate. The next acceptable arithmetic gain must control that actual
+remaining norm or another opposing quantity; another local reformulation
+will not close RHS-02. See the [review §10](../reviews/12_FINITE_PRECISION_SIGNED_KERNEL_AND_ENERGY_REVIEW_20261020.md),
+[result index](../../../../../../../result-summaries/README.md) and
+[scope/payment rule](../../../../../../../avoid/12_term_by_term_matching_and_separate_bounds.md).

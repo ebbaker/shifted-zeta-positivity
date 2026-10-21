@@ -4,7 +4,7 @@
 **gpt-6-astra (Codex), reasoning effort ultra**, verified turn metadata.
 Separate same-model internal checks; no specialist review or novelty claim.
 
-**Outcome.** A classical Riemann–Siegel formula plus a discrete Cauchy derivative lowers the sufficient leading summand exponent for both existing gap-certified extraction schemes to one-half. The earlier geometric-versus-single-width exponent advantage belongs to the specified Euler-sum method. A separate exact Möbius mollifier still has a large paid remainder and retains the multiple-zero residue when its contour crosses the line. Endpoint heat energy retains its compatible divergence. No original multiple zero is excluded.
+**Outcome.** A classical Riemann–Siegel formula plus a discrete Cauchy derivative lowers the sufficient leading summand exponent for both existing gap-certified extraction schemes to one-half. The earlier geometric-versus-single-width exponent advantage belongs to the specified Euler-sum method. A separate exact Möbius mollifier still has a large paid remainder and retains the multiple-zero residue when its contour crosses the line. Endpoint heat energy retains its compatible divergence. Sections 10–12 now prove an actual local transfer for fixed Gevrey-flat logarithmic tapers and a stronger prescribed-approximant lower bound, including a sharp simple/double local tradeoff. The upper estimate needed for simplicity remains open. No original multiple zero is excluded.
 
 This continuation follows the [result index](../../../../../../../result-summaries/README.md), [collision controls](../../../../../../../result-summaries/12_collision_controls_and_screening.md), and [avoid index](../../../../../../../avoid/README.md), particularly [scoped conclusions](../../../../../../../avoid/07_scoped_exclusions_read_as_universal.md), [complete payments](../../../../../../../avoid/12_term_by_term_matching_and_separate_bounds.md), and [gain before expansion](../../../../../../../avoid/20_volume_without_a_gain.md). These are bounded quantitative comparisons, not additional equivalent simplicity criteria.
 
@@ -1331,3 +1331,610 @@ was needed. The quantitative content is the explicit endpoint-order
 threshold and constant, not a new equivalent simplicity criterion.
 
 [Separate same-model continuation review, §9](../reviews/12_FINITE_PRECISION_SIGNED_KERNEL_AND_ENERGY_REVIEW_20261020.md).
+
+
+## 10. An infinitely flat taper removes the coefficient obstruction
+
+20 October 2026. Prepared for Edward Baker with substantial LLM assistance,
+**gpt-6-astra, actual effort ultra**. Separate same-model internal checks;
+no specialist review or novelty claim.
+
+Fix p>1 and define
+\[
+ w_p(u)=\exp\{1-(1-u)^{-p}\}\ (0\le u<1),\qquad w_p(1)=0,
+ \quad L=\log N.
+ \tag{FA1}
+\]
+This fixed profile has w_p(0)=1 and every derivative at 1 equal to zero.
+Let V_(N,w), E_(N,w), and c_w(N)=Σ_(n≤N)μ(n)w(log n/L) have the complete
+norm definitions of Note 12 §9.
+
+### 10.1 The extracted coefficient really tends to zero under RH
+
+The RH theorem stated on p.1 of
+[Balazard–de Roton, notes on Soundararajan](https://arxiv.org/pdf/0810.3587)
+gives, for any fixed η>0, an upper bound
+\(|M(x)|\ll_\eta\sqrt{x}\exp\{C_\eta\sqrt{\log x}
+(\log\log x)^{5/2+\eta}\}\) for large x. Enlarge constants to cover
+small x and put q=5/2+η. Exact partial summation gives
+\[
+ c_w(N)=-\int_0^1w_p'(u)M(N^u)\,du.
+ \tag{FA2}
+\]
+The n=1 atom is retained. Since −w_p′≥0, substitution
+y=(1−u)^(−p) proves
+\[
+ \frac{|c_w(N)|}{\sqrt N}
+ \ll_\eta e^{C_\eta\sqrt L(\log L)^q+1}
+ \int_1^\infty\exp\{-y-(L/2)y^{-1/p}\}\,dy.
+ \tag{FA3}
+\]
+For sufficiently large L the minimum of y+(L/2)y^(−1/p) on y≥1 is
+\[
+ \Phi_L=(p+1)(L/(2p))^{p/(p+1)}.
+\]
+Splitting the integral at 2Φ_L bounds it by
+(2Φ_L+1)e^(−Φ_L). Consequently
+\[
+ \boxed{\frac{|c_w(N)|}{\sqrt N}
+ \ll_{p,\eta}\exp\{-\Phi_L+C_\eta\sqrt L(\log L)^q+O_p(\log L)\}
+ \longrightarrow0.}
+ \tag{FA4}
+\]
+The power p/(p+1)>1/2 is decisive. This is an estimate for the original
+coefficients, not an isolated-zero model.
+
+It pays an actual piece of the full norm. Let U be the fixed unitary
+Mellin multiplier in Note 12 and χ=1_(0,1]. On 0<t<1/N the transformed
+finite sum is exactly c_w(N); hence
+\[
+ \int_0^{1/N}|U\chi(t)+c_w(N)|^2dt
+ \le 2|c_w(N)|^2/N+2\|U\chi\|_{L^2(0,1/N)}^2\longrightarrow0.
+ \tag{FA5}
+\]
+The complementary interval is not paid by this argument.
+
+### 10.2 Exact transfer from damped approximants retains a growing allowance
+
+Use the Hilbert norm in E_(N,w), set ε=a/L>0, and define
+\[
+ A_{Y,\varepsilon}(s)=\sum_{n\le Y}\mu(n)n^{-s-\varepsilon},\quad
+ T_{Y,\varepsilon}(s)=\zeta(s)
+       (A_{Y,\varepsilon}(s)-1/\zeta(s+\varepsilon)),\quad
+ k_a(u)=-\frac{d}{du}(e^{au}w_p(u)).
+\]
+The finite coefficient identity and its complete error are exactly
+\[
+ V_{N,w}(s)=\int_0^1 k_a(u)A_{N^u,\varepsilon}(s)\,du,
+ \quad\int_0^1k_a(u)du=1,
+\]
+\[
+ 1-\zeta(s)V_{N,w}(s)
+ =1-\frac{\zeta(s)}{\zeta(s+\varepsilon)}
+       -\int_0^1k_a(u)T_{N^u,\varepsilon}(s)du.
+ \tag{FA6}
+\]
+Finite sums and an ordinary integral suffice; all cross terms remain
+in this identity. Let
+\(R_< =\|\int_0^{1/2}k_a(u)T_{N^u,\varepsilon}\,du\|\).
+For
+\[
+ \varepsilon=40(\log L)^q/\sqrt L,\qquad
+ a=40\sqrt L(\log L)^q,
+\]
+[Balazard–de Roton, Propositions 2–3](https://arxiv.org/pdf/0812.1689)
+give J_ε≪ε and I_(Y,ε)≪Y^(−ε/2), uniformly for Y=N^u, 1/2≤u≤1,
+once N is large. Indeed their threshold is
+ε>25(loglog Y)^q/sqrt(log Y), and 40>25 sqrt2. Taking the floor of Y
+does not affect this uniform strict margin. Thus Minkowski gives the
+fully retained but ineffective payment
+\[
+ \sqrt{E_{N,w}}\le\sqrt{J_\varepsilon}+R_<
+       +C_\eta\underbrace{\int_{1/2}^1
+           |k_a(u)|e^{-au/4}\,du}_{\mathcal A_p(a)}.
+ \tag{FA7}
+\]
+No claim that R_< is small is made.
+
+The last *allowance* already grows exponentially. On the fixed interval
+[3/4,4/5], w_p is bounded below by a positive p-dependent constant and
+|w_p′| is bounded. For sufficiently large a,
+|a w_p+w_p′|≥a w_p/2 there. Therefore
+\[
+ \boxed{\mathcal A_p(a)\gg_p a\exp(9a/16)\longrightarrow\infty.}
+ \tag{FA8}
+\]
+This is a lower bound on the explicitly chosen absolute allowance,
+**not** on E_(N,w), R_<, or the actual signed integral in (FA6).
+It shows precisely why this direct use of the checked RH truncation
+theorem does not prove convergence of the fixed flat profile: undoing
+the damping costs e^(au), whereas its available square-root norm bound
+returns only e^(−au/4). The needed signed correlations are not supplied.
+
+**Assessment.** The former coefficient-sum obstruction vanishes for this
+class, but the checked full-norm transfer does not close. No general
+literature nonexistence claim, sufficient convergence theorem, or new
+simplicity criterion is asserted. Infinite flatness alone does not authorize dropping the remaining norm.
+Section 12 separately pays the actual local transfer for this Gevrey
+profile; it still supplies no full-norm upper estimate.
+
+
+## 11. Flat tapers have a sharp simple/double local tradeoff
+
+20 October 2026. Prepared for Edward Baker with substantial LLM assistance,
+**gpt-6-astra, actual effort ultra**. Separate same-model internal checks;
+no specialist review or novelty claim.
+
+**Result.** In the isolated order-\(m\) reciprocal-pole model, every fixed
+smooth taper flat at its cutoff has local squared cost strictly greater
+than \(m^2\), with infimum \(m^2\). More quantitatively, the same taper's
+simple and double costs obey a sharp tradeoff:
+\[
+ C_2\ge \frac{9\delta^2+10\delta+1}{4\delta},
+ \qquad \delta=C_1-1>0.
+ \tag{FT1}
+\]
+The bound is the exact infimum at every fixed \(0<\delta<1\), although
+no infinitely flat taper attains equality. Thus \(C_1\downarrow1\)
+forces \(C_2\ge(1+o(1))/(4(C_1-1))\). This section is a local model comparison. Section 12 proves the actual
+local transfer and resulting norm lower bound for the Gevrey subclass.
+
+### 11.1 The model and all endpoint terms
+
+Let \(w\in C^\infty[0,1]\) be real, \(w(0)=1\), and
+\(w^{(j)}(1)=0\) for every \(j\ge0\). Define
+\[
+ f_m(u)=\frac{u^{m-1}w(u)}{(m-1)!},\qquad
+ E_{m,w}(z)=1-z^m\int_0^1f_m(u)e^{-zu}\,du.
+ \tag{FT2}
+\]
+This is exactly the isolated pole model: the inverse Laplace density
+of \((s-\rho)^{-m}\) is
+\(v^{m-1}e^{\rho v}/(m-1)!\) on \(v\ge0\). Multiplication by
+\(w(v/L)\), truncation at \(L\), and \(s=\rho+z/L\) give (FT2)
+after multiplication by the model factor \((s-\rho)^m\).
+For \(w(u)=(1-u)^k\), this agrees with Note12 (ME3)–(ME4).
+For a general smooth taper, this explanation does not assert that a
+finite set of actual zeta contour residues equals the model.
+
+The endpoint data are
+\[
+ f_m^{(j)}(0)=0\ (j<m-1),\quad f_m^{(m-1)}(0)=1,\quad
+ f_m^{(j)}(1)=0\ (j\ge0).
+ \tag{FT3}
+\]
+Integrating by parts \(m\) times therefore gives, with no endpoint
+distribution left over,
+\[
+ E_{m,w}(z)=\int_0^1p_m(u)e^{-zu}\,du,\qquad
+ p_m=-f_m^{(m)},\qquad
+ C_m(w):=\frac1{2\pi}\int_{\mathbb R}|E_{m,w}(iy)|^2\,dy
+       =\int_0^1|p_m(u)|^2\,du.
+ \tag{FT4}
+\]
+The last equality is Plancherel. In particular every fixed \(m\) has
+finite cost for a fixed smooth flat taper. The normalization is important:
+it is the squared derivative of \(u^{m-1}w/(m-1)!\), not of \(w\) alone.
+
+The more general integration-by-parts identity is
+\[
+ z^m\int_0^1 f_m e^{-zu}\,du
+ =\int_0^1f_m^{(m)}e^{-zu}\,du
+  -\sum_{j=0}^{m-1}z^{m-1-j}
+    [f_m^{(j)}(u)e^{-zu}]_0^1.
+ \tag{FT5}
+\]
+Thus finite endpoint flatness below order \(m\) can leave a polynomial
+times \(e^{-z}\), which is not an \(L^2\) boundary transform. For example
+the simple-optimal taper \(1-u\) has double profile
+\(2(1-e^{-z})/z-e^{-z}\), precisely the retained endpoint atom in
+Note12 (ME5)–(ME6).
+
+### 11.2 Exact fixed-m variational minimum and nonattainment
+
+Equation (FT2) gives \(E_{m,w}(z)=1+O(z^m)\). Consequently
+\[
+ \int_0^1u^j p_m(u)\,du=\delta_{j0}\qquad(0\le j<m).
+ \tag{FT6}
+\]
+Let \(P_\ell\) be the standard Legendre polynomial. On \([0,1]\) the
+polynomials \(\sqrt{2\ell+1}\,P_\ell(2u-1)\) form an orthonormal basis,
+with value \((-1)^\ell\sqrt{2\ell+1}\) at zero. The usual
+orthogonality/normalization is recorded in
+[NIST DLMF §18.3](https://dlmf.nist.gov/18.3).
+The reproducing kernel for polynomials of degree below \(m\), evaluated
+at that endpoint, is
+\[
+ K_m(u,0)=\sum_{\ell=0}^{m-1}
+      (2\ell+1)(-1)^\ell P_\ell(2u-1),\qquad
+ \|K_m(\cdot,0)\|_2^2=\sum_{\ell=0}^{m-1}(2\ell+1)=m^2.
+ \tag{FT7}
+\]
+The moment conditions say \(p_m-K_m(\cdot,0)\) is orthogonal to that
+polynomial space. Hence the exact Pythagorean identity is
+\[
+ C_m(w)=m^2+\|p_m-K_m(\cdot,0)\|_2^2.
+ \tag{FT8}
+\]
+In the larger class with the endpoint data needed for (FT4), equality
+has the unique taper \(w(u)=(1-u)^m\). Indeed its \(p_m\) has degree
+\(m-1\) and the required moments, and the \(m\) initial conditions at
+zero in (FT3) determine \(f_m\) uniquely from \(f_m^{(m)}\).
+This is the endpoint-kernel calculation already underlying Note12
+(ME8)–(ME9), consistent with the classical multiplicity-squared
+Nyman–Beurling lower bound in
+[Burnol](https://arxiv.org/abs/math/0103058); it is not a new global
+arithmetic bound.
+
+No infinitely flat taper can attain equality: its \(p_m(1)=0\), whereas
+\(K_m(1,0)=(-1)^{m-1}m\ne0\). The infimum nevertheless equals \(m^2\).
+To see this, multiply \((1-u)^m\) by a smooth cutoff that is zero for
+\(1-u\le\eta/2\) and one for \(1-u\ge\eta\). The result is smooth,
+flat at one, normalized at zero, and the change of \(f_m^{(m)}\)
+is uniformly bounded and supported on an interval of length \(\eta\).
+Thus the squared error in (FT8) is \(O_m(\eta)\).
+
+### 11.3 A sharp same-taper simple/double tradeoff
+
+Put \(p=-w'\). Then
+\[
+ \int_0^1p=1,\qquad p(1)=p'(1)=0,\qquad
+ p_1=p,\quad p_2=2p+up',\quad
+ \delta=C_1-1=\|p-1\|_2^2>0.
+ \tag{FT9}
+\]
+Strict positivity of \(\delta\) follows because equality would require
+\(p\equiv1\), contradicting \(p(1)=0\).
+Write \(q=p-1\), \(v=up'\). Integration by parts, retaining \(p(1)=0\),
+gives
+\[
+ C_2=2C_1+\|v\|_2^2,\qquad
+ \langle v,1\rangle=-1,\qquad
+ \langle v,q\rangle=\frac{1-\delta}{2},\qquad
+ \langle q,1\rangle=0.
+ \tag{FT10}
+\]
+Projection onto the orthogonal vectors \(1,q\) now proves
+\[
+ \begin{split}
+ C_2
+ &=\frac{9\delta^2+10\delta+1}{4\delta}
+   +\left\|v+1-\frac{1-\delta}{2\delta}q\right\|_2^2.
+ \end{split}
+ \tag{FT11}
+\]
+This identity holds for every smooth normalized taper flat at one,
+without a sign assumption on \(w\) or \(p\). In particular (FT1)
+is valid for every \(\delta>0\), and its minimum over \(\delta>0\)
+is \(4\), reached at \(\delta=1/3\).
+
+Equality would require the Euler equation
+\[
+ up'=-1+\beta(p-1),\qquad
+ \beta=\frac{1-\delta}{2\delta}.
+ \tag{FT12}
+\]
+For \(0<\delta<1\), so \(\beta>0\), its solution with \(p(1)=0\) is
+\[
+ p_\beta(u)=\frac{\beta+1}{\beta}(1-u^\beta),\qquad
+ w_\beta(u)=1-\frac{\beta+1}{\beta}u
+                        +\frac{u^{\beta+1}}{\beta}.
+ \tag{FT13}
+\]
+Direct integration gives \(\int p_\beta=1\),
+\(\|p_\beta\|_2^2=1+1/(2\beta+1)\), and equality in (FT11).
+For nonintegral \(\beta\), this limiting profile need not be smooth at
+zero. Even when it is smooth there, \(p_\beta'(1)=-(\beta+1)\ne0\),
+so it is never infinitely flat at one. More generally no flat taper
+attains (FT11): the differential equation at \(u=1\) would give
+\(p'(1)=-(1+\delta)/(2\delta)\ne0\).
+
+Here is a complete sharpness argument within the stated flat class.
+Fix a compact interval of positive \(\beta\)'s. Smooth \(u^\beta\)
+on \(0\le u\le2\eta\), for example replacing it by
+\(\theta(u/\eta)u^\beta\), where \(\theta\) is zero near zero and
+one for \(u\ge2\eta\). Multiply the resulting \(p_\beta\) by a smooth
+cutoff that is zero near one and one for \(u\le1-2\eta\).
+Normalize its integral to one, and call it \(p_{\beta,\eta}\).
+The functions are nonnegative and smooth, flat at one, and depend
+continuously on \(\beta\). Uniformly on that compact parameter interval,
+\[
+ p_{\beta,\eta}\to p_\beta\quad\hbox{in }L^2,\qquad
+ up_{\beta,\eta}'\to up_\beta'\quad\hbox{in }L^2.
+ \tag{FT14}
+\]
+At zero, the squared errors are \(O(\eta^{2\beta+1})\); at one, the
+derivative squared error is \(O(\eta)\), since \(p_\beta=O(1-u)\).
+Normalization tends uniformly to one and preserves these convergences.
+
+Given \(0<\delta_0<1\), let
+\(\beta_0=(1-\delta_0)/(2\delta_0)>0\).
+The limiting map \(\|p_\beta\|_2^2-1=1/(2\beta+1)\) is strictly
+decreasing. Uniform convergence and the intermediate value theorem
+allow \(\beta_\eta\to\beta_0\) with
+\(\|p_{\beta_\eta,\eta}\|_2^2=1+\delta_0\) exactly.
+Then \(w_\eta(u)=\int_u^1p_{\beta_\eta,\eta}(v)\,dv\) belongs to the
+required normalized infinitely flat class, has the exact prescribed
+simple cost, and its double cost tends to the right side of (FT1).
+This proves sharpness for every \(0<\delta_0<1\), even among
+nonnegative decreasing tapers. No claim of endpoint regularity of
+the limiting fractional-power profile is needed.
+
+### 11.4 One simultaneous weighted consequence and the transfer boundary
+
+For \(A,B>0\), the exact same-taper infimum is
+\[
+ \boxed{\inf_{\substack{w\in C^\infty,\ w(0)=1\\
+                    w\ {\rm flat\ at}\ 1}}
+       [A C_1(w)+B C_2(w)]
+   = A+\frac52B+\frac12\sqrt{B(4A+9B)}.}
+ \tag{FT15}
+\]
+Indeed (FT11) reduces the infimum to that of
+\(A+5B/2+(A+9B/4)\delta+B/(4\delta)\), whose minimizer is
+\(\delta_*=\sqrt{B/(4A+9B)}\in(0,1/3)\). Sharpness follows from
+the exact-cost approximation above. The value strictly exceeds
+the independent minima \(A+4B\). One fixed flat taper cannot
+simultaneously realize the best simple and double local profiles.
+
+For arbitrary smooth flat tapers, the model calculation alone supplies
+no actual zeta transfer. Section 12 proves that transfer for each fixed
+Gevrey taper, retaining the other poles and full height tail, and obtains
+a lower bound by finite-window exhaustion. It does not obtain global
+tightness or an upper estimate. The cutoff approximations in (FT14)
+can be chosen in any fixed Gevrey class of order greater than one.
+For each fixed smoothing parameter they are affine near zero and flat
+at one, and admit a compact Gevrey extension. Thus the model infima
+remain approachable in the subclass covered by Section 12. Each taper
+is fixed before N tends to infinity; no uniformity for N-dependent
+tapers is asserted.
+
+The precise gain beyond the fixed-m kernel observation is the sharp
+same-taper tradeoff (FT11)/(FT15), not a new event criterion.
+
+### 11.5 Bounded formal verification
+
+The [Lean source](../numerics/lean/FlatTaperTradeoff.lean) verifies the
+abstract real-inner-product identity behind (FT11) and its inequality
+consequences. The [scope and successful check](../numerics/lean/README.md)
+record Lean 4.34.1, the exact mathlib pin and source hash, and the
+standard-axiom report. The user's existing Multipass VM was used.
+Integration by parts, the analytic hypotheses (FT9)–(FT10), sharpness,
+Gevrey transfer and RH-to-simplicity are not formalized by that file.
+
+
+## 12. Gevrey-flat tapers: actual zeta transfer with every height retained
+
+20 October 2026. Prepared for Edward Baker with substantial LLM assistance,
+**gpt-6-astra, actual effort ultra**. Separate same-model internal checks;
+no specialist review or novelty claim.
+
+Assume RH and put L=log N. Fix a real normalized smooth taper w, flat
+at 1, that admits a compact Gevrey extension W supported in [−1,1]
+and equal to w on [0,1], of some fixed order σ>1. The profile w_p
+of (FA1), with p>1, is one example; its construction below has
+σ=1+1/p. The restriction p>1 is needed for (FA4), not for the
+general local-transfer proof.
+Fix a critical zero ρ=1/2+iγ of exact order m. Define
+\[
+ \mathcal E_{m,w}(z)=1-\frac{z^m}{(m-1)!}
+       \int_0^1u^{m-1}w(u)e^{-zu}\,du.
+ \tag{GF1}
+\]
+
+For every fixed compact set K⊂C, the **actual** finite polynomial satisfies
+\[
+ \boxed{1-\zeta(\rho+z/L)V_{N,w}(\rho+z/L)
+       =\mathcal E_{m,w}(z)+O_{\rho,K,w}(|z|^m/L)
+       \quad(z\in K).}
+ \tag{GF2}
+\]
+No simplicity, inverse-derivative moment, or uniform zero separation is
+assumed. Constants may depend on the fixed event and its isolated disk.
+
+### 12.1 Compact extension and exact convolution
+
+For the example w=w_p, there is W∈C_c^∞(R), supported in [−1,1],
+equal to w on [0,1], with
+\[
+ \|W^{(n)}\|_\infty\le C^{n+1}(n!)^{\sigma},
+ \qquad\sigma=1+1/p,\quad\beta=1/\sigma=p/(p+1).
+ \tag{GF3}
+\]
+Here is an elementary construction/payment. Extend exp(1−(1−u)^(−p))
+analytically across u=0, and multiply on the left by a smooth cutoff
+equal to one for u≥−1/2 and zero for u≤−1. Obtain that cutoff by
+integrating a rescaled normalized bump exp(−x^(−p)−(1−x)^(−p)) on
+0<x<1. For f(x)=exp(−x^(−p)), Cauchy's estimate on |z−x|≤θ_p x,
+where Re(z^(−p))≥c_p x^(−p), gives
+|f^(n)(x)|≤n!(θ_p x)^(−n)exp(−c_p x^(−p)). Maximizing in x gives
+C^(n+1)(n!)^(1+1/p). Products and the stated integral preserve this
+bound after changing C. This proves (GF3), including both flat ends. For the general class
+in the theorem, the same derivative bound with its given σ is an
+explicit hypothesis, and β=1/σ in the argument below.
+
+For a fixed H>0 let
+\[
+ K_H(v)=\frac1{2\pi}\int_{\mathbb R}W(u)e^{Hu+ivu}\,du.
+\]
+Integration by parts n times and optimization in n prove
+\[
+ |K_H(v)|\le C_H e^{-c_H|v|^\beta}.
+ \tag{GF4}
+\]
+The constants are uniform for H in a fixed compact set. This follows
+directly by applying (GF3) to W(u)e^(Hu), then choosing
+n proportional to |v|^(1/σ); no asymptotic remainder is differentiated.
+
+The exact identity is
+\[
+ \boxed{V_{N,w}(s)=\int_{\mathbb R}
+       \frac{K_H(v)}{\zeta(s+(H+iv)/L)}\,dv,\qquad
+       \Re s+H/L>1/2.}
+ \tag{GF5}
+\]
+Initially take Re s+H/L>1 and interchange the absolutely convergent
+Möbius series with the integral. Fourier inversion gives
+∫K_H(v)e^(−iv log n/L)dv=e^(H log n/L)W(log n/L), exactly the desired
+coefficient, including n=1. To reach the remaining domain, start with
+H_0>H large enough that Re s+H_0/L>1, and shift the vertical contour
+to H; RH makes 1/ζ holomorphic throughout the
+traversed right half-plane. For each fixed L the Fourier estimate (GF4)
+holds uniformly on this finite horizontal range, with L-dependent
+constants, and dominates the polynomial height growth established below.
+That reciprocal bound extends over the intervening strip by the same
+anchored product argument up to Re s=2 and the Euler bound farther right.
+The horizontal sides vanish. No reciprocal-zero residue is crossed.
+This proves (GF5) throughout its displayed domain. The extension for
+u<0 has no effect on any integer coefficient.
+
+### 12.2 A uniform RH bound pays the full nonlocal height tail
+
+For 0<a≤1/4, the complete xi product and the classical local zero count
+give
+\[
+ |\zeta(1/2+a+it)|^{-1}
+       \le C(3+|t|)^{C\log(2/a)}.
+ \tag{GF6}
+\]
+For completeness, anchor at 2+it and integrate Note 01's exact Poisson
+logarithmic derivative. Counting distinct ordinates λ with their actual
+multiplicities m_λ gives
+\[
+ \log\frac{|\xi(2+it)|}{|\xi(1/2+a+it)|}
+ =\frac12\sum_\lambda m_\lambda
+       \log\frac{(3/2)^2+(t-\lambda)^2}{a^2+(t-\lambda)^2}.
+ \tag{GF7}
+\]
+The terms with |t−λ|≤1 are O(log(3+|t|)log(2/a)), since each such
+signed-ordinate window contains O(log(3+|t|)) zeros counted with
+multiplicity. The remaining terms are bounded by
+CΣ_(|t−λ|>1)m_λ/(t−λ)²≪log(3+|t|), using unit shells.
+The exact completion ξ(s)=s(s−1)π^(−s/2)Γ(s/2)ζ(s)/2 contributes only
+O(log(3+|t|)) when compared with the anchor, by Stirling and compactness
+at bounded heights. Finally |1/ζ(2+it)|≤ζ(2). Thus (GF6) retains
+every completion term and is uniform in t and a. Both elementary
+zero-count uses are the classical Riemann–von Mangoldt bounds already
+used in Notes 01 and 04. For a checked primary reference, the counting
+formula and RH bound for S(t) in
+[Carneiro–Chandee–Milinovich, introduction and Theorem 1](https://home.olemiss.edu/~mbmilino/new_S%28t%29.pdf)
+imply this coarser local count. Their zero sums retain multiplicity;
+no simplicity enters this use.
+
+Choose H>max(0,−min_(z∈K)Re z)+1. At s=ρ+z/L the denominator in
+(GF5) then has horizontal shift a=(H+Re z)/L bounded above and below
+by positive fixed multiples of 1/L. For any fixed r>0, (GF4) and (GF6)
+give, uniformly in z∈K,
+\[
+ \int_{|v|\ge rL}\left|
+       \frac{K_H(v)}{\zeta(\rho+(z+H+iv)/L)}\right|dv
+       \ll_{\rho,K,w,r}\exp(-c_r L^\beta).
+ \tag{GF8}
+\]
+Indeed the competing logarithm is at most
+C log L·log(C_(ρ,K)+|v|/L), which is o(|v|^β) uniformly for |v|≥rL.
+After absorbing it, integration of exp(−c|v|^β) pays the whole tail.
+No assertion about uniform inverse derivatives at other zeros is used.
+
+### 12.3 Laurent extraction with its actual remainder bounded
+
+Choose a fixed disk about ρ containing no other zero and no pole of
+ζ. Its reciprocal is
+\[
+ \frac1{\zeta(\rho+q)}=\sum_{j=1}^m b_jq^{-j}+G(q),
+ \quad b_m=\frac{m!}{\zeta^{(m)}(\rho)},
+ \tag{GF9}
+\]
+with G analytic and bounded on a smaller disk. For a sufficiently small
+fixed r, the part |v|≤rL of (GF5) stays in that smaller disk when N is
+large. Its G contribution is O(1) by ||K_H||_1<∞. Equation (GF8)
+pays the remaining actual reciprocal contribution; the corresponding
+tail of each finite principal part is also exponentially small.
+
+For every j≥1, Laplace inversion and Re(z+H)>0 give exactly
+\[
+ \int_{\mathbb R}\frac{K_H(v)}{(z+H+iv)^j}\,dv
+ =\frac1{(j-1)!}\int_0^1u^{j-1}w(u)e^{-zu}\,du.
+ \tag{GF10}
+\]
+Therefore the complete finite sum satisfies, uniformly on K,
+\[
+ V_{N,w}(\rho+z/L)
+ =\sum_{j=1}^m\frac{b_jL^j}{(j-1)!}
+       \int_0^1u^{j-1}w(u)e^{-zu}\,du+O_{\rho,K,w}(1).
+ \tag{GF11}
+\]
+Multiplying by the local Taylor expansion of ζ proves (GF2). At z=0
+both sides of that formula equal one exactly. This is an actual local
+transfer for the fixed Gevrey profile, unlike the uncontrolled grouped-pole
+remainder for the finite-order polynomial taper in Note 12 §5.5.
+
+### 12.4 A prescribed-approximant lower constant, with no global upper claim
+
+Flatness at 1 and m integrations by parts imply
+\[
+ \mathcal E_{m,w}(z)=\int_0^1p_{m,w}(u)e^{-zu}\,du,
+ \quad p_{m,w}(u)=-\frac1{(m-1)!}
+       \frac{d^m}{du^m}\{u^{m-1}w(u)\},
+ \quad C_m(w)=\int_0^1|p_{m,w}(u)|^2du<\infty.
+ \tag{GF12}
+\]
+The lower-end terms use w(0)=1; no derivatives at zero are assumed to
+vanish. Plancherel gives ∫_R|E_(m,w)(iy)|²dy=2π C_m(w).
+The usual moment constraints imply C_m(w)≥m², as in Note 12 (ME8)–(ME9).
+
+For a fixed finite set of distinct zeros and fixed Y, their windows
+|t−γ|≤Y/L are disjoint once N is large. Equation (GF2) proves their
+actual local norms equal
+(2π|ρ|²L)^(−1)∫_(−Y)^Y|E_(m,w)(iy)|²dy+O_(ρ,Y,w)(L^(−2)).
+Nonnegativity of the complementary full squared norm, followed in order
+by N→∞, Y→∞, and finite-zero exhaustion, gives
+\[
+ \boxed{\liminf_{N\to\infty}L E_{N,w}
+       \ge\sum_{\rho\ {\rm distinct}}
+               \frac{C_{m_\rho}(w)}{|\rho|^2}.}
+ \tag{GF13}
+\]
+Both signs of the ordinate occur. The right side is interpreted as an
+extended nonnegative sum; no convergence of that sum is needed for this
+lower-bound argument. This does not discard a signed remainder or assume
+global tightness. It upgrades the fixed-Gevrey local model to a legitimate
+lower bound for the prescribed original-coefficient approximant. No
+full-norm convergence, matching asymptotic, or opposing bound follows.
+
+
+### 12.5 An actual simultaneous lower bound
+
+Define convergent sums over distinct zeros, with both signs retained,
+\[
+ K=\sum_\rho\frac{m_\rho^2}{|\rho|^2},\qquad
+ A=\sum_{m_\rho=1}\frac1{|\rho|^2},\qquad
+ B=\sum_{m_\rho=2}\frac1{|\rho|^2}.
+ \tag{GF14}
+\]
+Convergence of K follows from the unit-window count: the sum of squared
+multiplicities in a unit interval is at most the square of its total
+multiplicity, O(log²(3+|t|)). The weight is O(t^(−2)) at infinity.
+The bounds for A and B follow at once.
+
+For A,B>0, (GF13), (FT8) and (FT15) give, for every fixed taper in
+this Gevrey class,
+\[
+ \boxed{\liminf_{N\to\infty}(\log N)E_{N,w}
+ \ge K+\frac{\sqrt{B(4A+9B)}-3B}{2}>K.}
+ \tag{GF15}
+\]
+Indeed the lower sum is at least K−A−4B+A C_1(w)+B C_2(w).
+If either A or B is zero, the displayed non-strict lower bound remains
+valid and reduces to K; it then gives no positive uniform two-order gap.
+Every fixed flat taper has C_m(w)>m² separately. In particular, in the
+all-simple case (GF13) gives liminf (log N)E_(N,w)≥C_1(w)K>K.
+
+Only the weighted model optimization A C_1+B C_2 is sharp here. The
+higher-order costs have been bounded below, not optimized, and no upper
+bound for the actual global norm has been proved. Choosing Gevrey
+approximations approaching (FT15) does not justify interchanging their
+parameter limit with N→∞. The concrete advance is the actual transfer
+(GF2) and lower bounds (GF13)/(GF15), not a simplicity conclusion.
+
+[Separate same-model continuation review, §10](../reviews/12_FINITE_PRECISION_SIGNED_KERNEL_AND_ENERGY_REVIEW_20261020.md).
