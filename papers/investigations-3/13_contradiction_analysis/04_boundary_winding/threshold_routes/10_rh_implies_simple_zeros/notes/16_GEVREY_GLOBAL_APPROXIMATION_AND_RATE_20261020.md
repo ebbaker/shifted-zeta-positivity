@@ -44,6 +44,14 @@ full norm is infinite for every nonzero finite Dirichlet polynomial at
 each fixed 0<t<=1/2. Logarithmic Gaussian damping has sharp threshold
 t/8 for restoring finiteness; it changes the approximation space.
 
+[Note 17](17_NORMALIZED_HEAT_GLOBAL_LIMIT_AND_ARITHMETIC_COSTS_20261020.md)
+now gives a complete RH-conditional profile sum after explicit carrier
+normalization at t=v/(log N)^2, uniformly for bounded v. It also proves
+that this carrier destroys ordinary Dirichlet-series structure, creates
+an essential singularity at one, and has a nonzero double-event transfer
+cost. The unchanged-norm obstruction here and the original ST theorem
+are retained; no original multiple zero is excluded.
+
 Section 12 separately tracks a moving almost-linear taper, proving
 \(E_{N,\eta}\le C\exp(C\eta^{-a})/\log N\), where
 \(a>1/(2-\sigma)\) and \((\log N)^{-\theta_0}\le\eta<1/4\),

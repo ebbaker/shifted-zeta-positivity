@@ -62,3 +62,5 @@ Notes [11 §7](11_FULL_ABSOLUTE_PRIME_ENVELOPE_AND_LOGARITHMIC_SPREAD_20261020.m
 [Note 16 §15](16_GEVREY_GLOBAL_APPROXIMATION_AND_RATE_20261020.md) adds the actual compact-neighborhood heat norm and its sharp nonmonotone finite-separation coefficient. It preserves the original Möbius polynomial and proves no complete heat-family tail or endpoint exclusion.
 
 [Note 16 §16](16_GEVREY_GLOBAL_APPROXIMATION_AND_RATE_20261020.md) proves unconditional divergence of the unchanged global heat norm for every nonzero finite Dirichlet polynomial at 0<t<=1/2, and the sharp logarithmic Gaussian damping threshold t/8. The compact and ratio-energy results are unaffected.
+
+- [17 — Normalized heat limits and arithmetic costs](17_NORMALIZED_HEAT_GLOBAL_LIMIT_AND_ARITHMETIC_COSTS_20261020.md). Complete RH-conditional scaled tails and all-zero heat-profile sum at t=v/(log N)², for fixed Gevrey tapers and bounded v. The specified normalization has no convergent ordinary Dirichlet series, has an essential singularity at one, and retains a positive fixed-double transfer cost. No original-zero exclusion; the manuscript remains unchanged.

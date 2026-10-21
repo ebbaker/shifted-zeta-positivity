@@ -462,3 +462,15 @@ proves divergence for every nonzero finite Dirichlet polynomial at
 at each t=v/(log N)², despite the compact HD limit. The exact damping
 threshold t/8 restores finiteness in a changed norm; it does not transfer
 the original lower bound or provide a simplicity estimate.
+
+**Restored boundary finiteness does not restore arithmetic, 20 October 2026.**
+Prepared for Edward Baker with substantial LLM assistance,
+**gpt-6-astra, actual effort ultra**; same-model internal review.
+[BW10 Note 17](../papers/investigations-3/13_contradiction_analysis/04_boundary_winding/threshold_routes/10_rh_implies_simple_zeros/notes/17_NORMALIZED_HEAT_GLOBAL_LIMIT_AND_ARITHMETIC_COSTS_20261020.md)
+pays the complete normalized heat norm but proves that this carrier has
+no ordinary Dirichlet series and has an essential singularity at one.
+At an original double zero, the local squared perturbation back to zeta
+has positive order-1/log N coefficient. The source states: “Any
+triangle-inequality transfer of a sharp \(1/L\) coefficient must pay the
+nonzero coefficient in (NT3).” Retain that cost and the changed analytic
+hypotheses; do not assign the original lower bound to the new target.

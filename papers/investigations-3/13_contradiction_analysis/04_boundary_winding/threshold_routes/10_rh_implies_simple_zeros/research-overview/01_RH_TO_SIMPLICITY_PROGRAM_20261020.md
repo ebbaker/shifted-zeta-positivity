@@ -887,3 +887,34 @@ arithmetic estimate. The [result index](../../../../../../../result-summaries/RE
 [complete-payment rule](../../../../../../../avoid/12_term_by_term_matching_and_separate_bounds.md)
 prevent interpreting local heat separation as a complete upper bound.
 See [Review 16 §13](../reviews/16_GEVREY_GLOBAL_APPROXIMATION_REVIEW_20261020.md).
+
+## 30. A complete normalized heat estimate retains an arithmetic transfer cost
+
+20 October 2026. Prepared for Edward Baker with substantial LLM assistance,
+**gpt-6-astra, actual effort ultra**. Same-model internal review only.
+
+[Note 17](../notes/17_NORMALIZED_HEAT_GLOBAL_LIMIT_AND_ARITHMETIC_COSTS_20261020.md)
+normalizes the heat quotient by exp[−t alpha(s)²/4]. Under RH it proves
+the complete scaled tail and actual profile-sum limit at t=v/(log N)²,
+uniformly for bounded v and a fixed Gevrey taper. The extra Gaussian
+cluster factor is bounded by exp(sqrt(V)|x|), so its Gaussian moments
+leave the crucial Gevrey exponent unchanged. Both remote integrals are
+paid before height exhaustion.
+
+This is a changed target with a quantified arithmetic defect. At every
+fixed t>0 its right-real-axis correction is
+[t² log²(sigma/(2pi))/64+t/8]/sigma, precluding any convergent ordinary
+Dirichlet series. Its singularity at one is essential, and at a hypothetical
+double zero the squared local perturbation back to zeta has positive
+coefficient v²||uw||²/(4|rho|²) at order 1/log N. Restored finiteness
+therefore does not authorize the original Burnol lower bound or a free
+transfer of the new upper coefficient.
+
+The [result index](../../../../../../../result-summaries/README.md),
+[avoid index](../../../../../../../avoid/README.md) and
+[complete-payment rule](../../../../../../../avoid/12_term_by_term_matching_and_separate_bounds.md)
+continue to require an opposing estimate in the original arithmetic
+problem. BW09 may reuse the Gaussian identities and normalization
+warnings; the full approximation theorem assumes the original RH and
+cannot supply BW09's contradiction. [Review 17](../reviews/17_NORMALIZED_HEAT_LIMIT_AND_ARITHMETIC_REVIEW_20261020.md)
+checks the new proof and its scope. No multiple-zero exclusion is obtained.

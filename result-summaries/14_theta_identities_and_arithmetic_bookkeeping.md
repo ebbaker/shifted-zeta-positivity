@@ -615,3 +615,16 @@ for finiteness. Reusable as a scoped limit on BW09/BW10 heat comparisons;
 no event exclusion or objection to completed-ratio energies follows.
 [Review 16 §13](../papers/investigations-3/13_contradiction_analysis/04_boundary_winding/threshold_routes/10_rh_implies_simple_zeros/reviews/16_GEVREY_GLOBAL_APPROXIMATION_REVIEW_20261020.md)
 is same-model internal review only.
+
+**Normalized heat continuation, 20 October 2026.** Prepared for Edward
+Baker with substantial LLM assistance, **gpt-6-astra, actual effort ultra**.
+[Note 17](../papers/investigations-3/13_contradiction_analysis/04_boundary_winding/threshold_routes/10_rh_implies_simple_zeros/notes/17_NORMALIZED_HEAT_GLOBAL_LIMIT_AND_ARITHMETIC_COSTS_20261020.md)
+is **proved in-note under RH**: the specified normalized heat target has
+a complete scaled-tail bound and all-zero profile sum at t=v/(log N)²,
+uniformly for bounded v and a fixed Gevrey taper. It also proves the
+carrier's fixed-time ordinary-Dirichlet obstruction and essential
+singularity unconditionally. Its stated scope is: “It does not restore
+an Euler product or a Nyman--Beurling lower bound for the changed target.”
+A double-zero transfer costs v²||uw||²/(4L|rho|²), so no original
+multiplicity exclusion follows. [Review 17](../papers/investigations-3/13_contradiction_analysis/04_boundary_winding/threshold_routes/10_rh_implies_simple_zeros/reviews/17_NORMALIZED_HEAT_LIMIT_AND_ARITHMETIC_REVIEW_20261020.md)
+is same-model internal review only.

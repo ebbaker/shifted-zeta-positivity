@@ -87,3 +87,5 @@ same-model checks; the signed arithmetic gate remains open.
 [Review 16 §12](16_GEVREY_GLOBAL_APPROXIMATION_REVIEW_20261020.md) checks the actual compact heat transfer, sharp cosine/sine Gram cost, flat-taper approximation and nonmonotonicity. The review is same-model and retains the local scope.
 
 [Review 16 §13](16_GEVREY_GLOBAL_APPROXIMATION_REVIEW_20261020.md) checks the primary positive-heat normalization, complete finite-frequency divergence proof and sharp weight threshold, including equality. Same-model internal review; no simplicity exclusion.
+
+- [17 — Normalized heat and arithmetic review](17_NORMALIZED_HEAT_LIMIT_AND_ARITHMETIC_REVIEW_20261020.md). Checks the Gaussian completion cancellation, both complete tails, all-multiplicity profiles, right-axis curvature correction, essential singularity and local transfer cost. Corrects disk-wide approximation wording to a critical-line segment. Same-model internal review only.

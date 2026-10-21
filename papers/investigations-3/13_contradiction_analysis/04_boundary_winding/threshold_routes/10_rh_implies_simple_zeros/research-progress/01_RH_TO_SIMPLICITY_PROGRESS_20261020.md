@@ -47,6 +47,21 @@ the present results are internally reviewed and need specialist scrutiny.
 
 ## Quantitative outcomes
 
+- [Note 17][n17] proves a complete RH-conditional norm theorem for the
+  explicit carrier-normalized heat target T_(v/L²), retaining the original
+  fixed Gevrey polynomial. Its scaled height tail has the same exponent
+  sigma−2+epsilon, uniformly for bounded v, and its first-order limit is
+  the sum of the actual Hermite heat-profile costs over every zero.
+  This repairs finiteness and pays all heights in a changed target.
+  For every fixed t>0, unconditionally, that target has no convergent
+  ordinary Dirichlet series: its real-axis correction is
+  [t² log²(sigma/(2pi))/64+t/8]/sigma, with a smaller paid remainder.
+  It also has an essential singularity at one. At an original double
+  zero the local squared transfer cost back to zeta is
+  v²||uw||²/(4L|rho|²)+O(L^−2). Thus the improved heat norm cannot be
+  treated as the original arithmetic norm with a negligible error.
+  [Review 17][review17] records same-model checks; the simplicity and
+  BW09 strict-surplus gates remain open. The manuscript is unchanged.
 - [Note 16 §16][n16] proves unconditionally that, at each fixed
   0<t<=1/2, every nonzero finite Dirichlet polynomial has infinite
   full error against the heat-deformed numerator divided by the
@@ -728,3 +743,6 @@ unproved arithmetic and all-zero tasks complete.
 
 [n16]: ../notes/16_GEVREY_GLOBAL_APPROXIMATION_AND_RATE_20261020.md
 [review16]: ../reviews/16_GEVREY_GLOBAL_APPROXIMATION_REVIEW_20261020.md
+
+[n17]: ../notes/17_NORMALIZED_HEAT_GLOBAL_LIMIT_AND_ARITHMETIC_COSTS_20261020.md
+[review17]: ../reviews/17_NORMALIZED_HEAT_LIMIT_AND_ARITHMETIC_REVIEW_20261020.md
