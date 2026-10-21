@@ -10,14 +10,21 @@ no specialist review.
 transfers the local machinery, and screens the generic arguments.
 **No such implication or new theta exclusion has been proved here.**
 
-**Read first for the current discussion:** the six-page [analytic manuscript](../manuscript/main.tex)
+**Read first for the current discussion:** the eleven-page [analytic manuscript](../manuscript/main.tex)
 ([PDF](../manuscript/main.pdf)) consolidates the complete-tail, infimum,
 finite-filter and heat-energy estimates. It states the missing opposing
-arithmetic estimate and compares the reusable machinery with BW09 in
-Section 5. RH simplifies the conditional problem's event setup; it does
-not establish a relative-difficulty theorem or supply the missing
+arithmetic estimate. Sections 5–7 include Notes 17–18's normalized-heat
+limit, sharp arithmetic repair and completion obstructions; Section 8
+compares the reusable machinery with BW09. RH simplifies the conditional
+problem's event setup; it does not establish a relative-difficulty theorem or supply the missing
 multiple-zero exclusion. Numerical and bounded formal checks are cited
 as support only. External review of the scaled-tail theorem is a priority.
+
+21 October continuation — **gpt-6-astra (Codex), actual effort max**:
+[Program 02](02_HEAT_ROOT_MOTION_AND_SIGNED_CONTOURS_PROGRAM_20261021.md)
+and [Register 02](../research-progress/02_HEAT_ROOT_MOTION_AND_SIGNED_CONTOURS_PROGRESS_20261021.md)
+govern the focused HMC-00–07 work on heat root motion and signed contours.
+The RHS task statuses below remain separate.
 
 **Current quantitative advance:** [Note 16 §13](../notes/16_GEVREY_GLOBAL_APPROXIMATION_AND_RATE_20261020.md) proves under RH alone
 (log N)d_N²→K=Σ m_rho²/|rho|² for the complete length-N

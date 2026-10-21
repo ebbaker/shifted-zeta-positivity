@@ -8,14 +8,17 @@
 \setlist{nosep,leftmargin=*}
 \newtheorem{theorem}{Theorem}
 \newtheorem{proposition}[theorem]{Proposition}
+\DeclareMathOperator{\Log}{Log}
 \newcommand{\RH}{\mathrm{RH}}
 \newcommand{\E}{\mathcal E}
 \newcommand{\dd}{\,\mathrm d}
 \newcommand{\Nref}{\href{../notes/16_GEVREY_GLOBAL_APPROXIMATION_AND_RATE_20261020.md}{Note 16}}
 \newcommand{\Href}{\href{../notes/15_COMPLETED_RATIO_ENERGY_AND_MULTIPLICITY_20261020.md}{Note 15}}
+\newcommand{\CNref}{\href{../notes/17_NORMALIZED_HEAT_GLOBAL_LIMIT_AND_ARITHMETIC_COSTS_20261020.md}{Note 17}}
+\newcommand{\CTref}{\href{../notes/18_ARITHMETIC_HEAT_TRANSFER_AND_EXACT_COMPLETION_20261021.md}{Note 18}}
 \title{RH-Conditional Approximation Estimates\\and the Remaining Simplicity Problem}
 \author{Drafted for Edward Baker}
-\date{20 October 2026\\\small Research consolidation draft}
+\date{21 October 2026\\\small Research consolidation through Notes 17--18}
 \begin{document}
 \maketitle
 \begin{abstract}
@@ -26,8 +29,13 @@ research notes, a complete first-order limit for fixed Gevrey-tapered
 M\"obius polynomials and an RH-conditional infimum constant equal to the
 sum of squared multiplicities. A completed-ratio energy has an explicit
 heat-scale transition governed by the same multiplicity excess. Exact
-finite Dirichlet filters give a sharp local resolution cost. These
-estimates do not exclude a multiple zero: the missing ingredient is an
+finite Dirichlet filters give a sharp local resolution cost. A normalized
+heat target admits a complete first-order limit at bounded scaled time.
+We compute the sharp cost of transferring its profiles back to the
+original arithmetic problem over fixed finite filtered-Gevrey families,
+and show that specified exact heat completions still fail to retain an
+ordinary Dirichlet series at fixed positive time. These estimates do
+not exclude a multiple zero: the missing ingredient is an
 arithmetic upper estimate that contradicts its additional cost. This
 brief presents precise statements and proof mechanisms, with the full
 analytic payments referenced to the research notes.
@@ -77,6 +85,9 @@ For a Dirichlet polynomial \(D\), define
  \qquad
  d_N^2=\inf_{D(s)=\sum_{n\le N}a_n n^{-s}}E(D).
 \]
+We also use \(\|g\|_{\mathcal H}^2=(2\pi)^{-1}
+\int_{\mathbb R}|g(\frac12+iy)|^2(1/4+y^2)^{-1}\dd y\),
+so \(E(D)=\|1-\zeta D\|_{\mathcal H}^2\).
 Let \(W\) be real, smooth, supported in \([-1,1]\), with \(W(0)=1\)
 and
 \[
@@ -326,6 +337,270 @@ For \(b\ge0\), multiplying the weight at large heights by
 \(b\ge t/8\) (\Nref, Section 16). This changes the norm; it leaves
 the compact heat calculation and completed-ratio energy intact.
 
+\section{A complete normalized heat limit}\label{sec:normalized}
+The divergence just described motivates removing the leading completion
+carrier while keeping the original polynomial and boundary weight. Put
+\begin{equation}\label{eq:normalized-target}
+ a(s)=\frac1{2s}+\frac1{s-1}+\frac12\Log\frac{s}{2\pi},\qquad
+ T_\tau(s)=e^{-\tau a(s)^2/4}
+                \frac{\mathcal F_\tau(s-\frac12)}{A(s)}.
+\end{equation}
+The principal logarithm is used on the critical line. For fixed
+\(v\ge0\), set
+\[
+ E_{N,w}^{[v]}=\|1-T_{v/L^2}V_{N,w}\|_{\mathcal H}^2,\qquad
+ f_m(u)=\frac{u^{m-1}w(u)}{(m-1)!},
+\]
+and define the heat profile
+\begin{equation}\label{eq:heat-profile}
+ h_{m,v,w}=-\sum_{k=0}^{\lfloor m/2\rfloor}
+       \frac{m!}{k!(m-2k)!}\left(\frac v4\right)^k f_m^{(m-2k)}.
+\end{equation}
+Here \(h\) denotes an approximation profile, not a physical derivative
+of \(H\).
+
+\begin{theorem}[Normalized complete limit]\label{thm:CN}
+Assume RH and fix the normalized Gevrey taper of
+Theorem~\ref{thm:ST}. For every fixed \(V<\infty\) and
+\(0<\eta<2-\sigma\),
+\begin{align}
+ \sup_{N\ge2}\sup_{0\le v\le V}
+       L(E_{N,w}^{[v]})^{>T}
+       &\ll_{W,V,\eta}T^{\sigma-2+\eta},\qquad T\ge2,
+       \label{eq:CN-tail}\\
+ \lim_{N\to\infty}L E_{N,w}^{[v]}
+       &=\sum_{\rho\ {\rm distinct}}
+          \frac{\|h_{m_\rho,v,w}\|_2^2}{|\rho|^2}<\infty.
+       \label{eq:CN-limit}
+\end{align}
+The limit is locally uniform in \(v\ge0\). The taper is fixed;
+no joint limit with unbounded \(v=v_N\) is asserted.
+\end{theorem}
+
+\paragraph{Proof mechanism.}
+\CNref, Sections 1--5, starts with the exact complete-source identity
+\[
+ \mathcal F_\tau(s-\tfrac12)=\frac1{\sqrt\pi}
+       \int_{\mathbb R}e^{-x^2}\xi(s+\sqrt\tau x)\dd x.
+\]
+Gaussian domination justifies both integrations before any approximation.
+Carrier cancellation and reflection give a subpower bound for
+\(T_\tau\) uniformly over bounded \(\tau\ge0\). Combining this
+Gaussian integral with the M\"obius convolution retains both remote
+tails and the entire nearby zero cluster. The same nearest-zero-cell
+argument as in Theorem~\ref{thm:ST} pays the scaled height tail.
+The compact heat polynomial at an order-\(m\) zero then gives
+\eqref{eq:heat-profile}; only after \eqref{eq:CN-tail} is established
+is the compact calculation exhausted over all heights.
+
+At \(m=1\) the profile is unchanged. At \(m=2\) it is
+\(h_{2,v,w}=-(uw)''-(v/2)uw\). In particular the squared local norm
+of \((T_{v/L^2}-\zeta)V_{N,w}\) at an exact double zero is
+\[
+ \frac{v^2\|uw\|_2^2}{4L|\rho|^2}+O_{v,w,\rho}(L^{-2});
+\]
+the norm here is over a fixed isolated neighborhood of that zero.
+It occurs at the same first-order scale as the proposed heat gain.
+
+\paragraph{Analytic and arithmetic limitations.}
+For each fixed \(t>0\), \CNref, Sections 6--7, proves unconditionally,
+with \(\ell=\log(\sigma/(2\pi))\) and real \(\sigma\to+\infty\),
+\begin{equation}\label{eq:carrier-defect}
+ T_t(\sigma)=1+\frac{t^2\ell^2/64+t/8}{\sigma}
+             +O_t\!\left(\frac{(1+|\ell|)^4}{\sigma^2}\right).
+\end{equation}
+An ordinary Dirichlet series converging in a right half-plane has
+remainder \(O(2^{-\sigma})\) after its constant term, so cannot
+represent this target, even if its initially assumed convergence is
+conditional. Separately, \(s=1\) becomes an essential singularity:
+\[
+ T_t(1+z)=z^{-1}e^{-t/(4z^2)-tb_0/(2z)}U_t(z),\qquad
+ b_0=\frac{1-\log(2\pi)}2,
+\]
+where \(U_t\) is holomorphic and \(U_t(0)>0\). A finite-order zero
+or pole subtraction cannot repair it. The essential singularity alone
+would not exclude a Dirichlet series farther right; that conclusion
+uses \eqref{eq:carrier-defect}. Thus the finite critical-line norm does
+not restore the original Nyman--Beurling/Hardy hypotheses or authorize
+the original arithmetic lower bound for this changed target.
+
+\section{The sharp arithmetic repair of a heat profile}\label{sec:repair}
+Heating the finite coefficients instead of the numerator is exact:
+\begin{equation}\label{eq:coefficient-heat}
+ e^{\frac{v}{4L^2}\partial_s^2}V_{N,w}=V_{N,w_v},\qquad
+ w_v(u)=e^{vu^2/4}w(u).
+\end{equation}
+This stays within the fixed Gevrey class, but its original-arithmetic
+profile is \(q_{m,v,w}=-(e^{vu^2/4}f_m)^{(m)}\), not
+\(h_{m,v,w}\). In fact
+\[
+ \left.\partial_v(q_{m,v,w}-h_{m,v,w})\right|_{v=0}
+ =-\tfrac14\{u^2f_m^{(m)}+2mu f_m^{(m-1)}\}\ne0.
+\]
+The braces equal \(2mu+O(u^2)\) near zero. Even a simple zero has
+this coefficient-transfer defect. The two complete tail theorems give
+the actual all-zero transfer limit by polarization; no infinite
+heat-evolved Euler series is used.
+
+Let \(\Pi_m\) project onto the polynomials of degree below \(m\),
+and abbreviate \(K_m=\mathcal K_m(\,\cdot\,,0)\). Every original
+arithmetic profile satisfies \(\Pi_m p=K_m\), by its first \(m\)
+moments. The least squared correction to a specified heat profile is
+therefore
+\begin{equation}\label{eq:repair}
+ \delta_{m,v}(w)^2=\|K_m-\Pi_m h_{m,v,w}\|_2^2,\qquad
+ p_*=h_{m,v,w}+K_m-\Pi_m h_{m,v,w}.
+\end{equation}
+This distance is sharp in the closure of real normalized flat Gevrey
+tapers, without a positivity or monotonicity constraint. To see this,
+solve \(f^{(m)}=-p_*\) with the normalized initial jets. The moment
+conditions force \(f^{(j)}(1)=0\) for \(j<m\); flattening \(f\)
+near one changes its \(m\)th derivative by \(O(\eta^{1/2})\)
+in \(L^2\). Orthogonality makes the excess squared correction
+\(O(\eta)\). See \CTref, Sections 1--3.
+
+The correction is explicit. If
+\(b_j=\int_0^1u^j(p_{m,w}-h_{m,v,w})\dd u\) and
+\(G_m=(1/(i+j+1))_{0\le i,j<m}\), then
+\[
+ \delta_{m,v}(w)^2=b^*G_m^{-1}b
+       \ge (m-\|h_{m,v,w}\|_2)_+^2.
+\]
+For a double zero, with \(I_j=\int_0^1u^j(uw(u))\dd u\),
+\begin{equation}\label{eq:double-repair}
+ \delta_{2,v}(w)^2=\frac{v^2}{4}
+                 (4I_0^2-12I_0I_1+12I_1^2).
+\end{equation}
+A double heat profile with squared norm below two consequently requires
+a correction strictly greater than \((2-\sqrt2)^2\) at that zero,
+before division by \(|\rho|^2\).
+
+\begin{theorem}[Complete optimal transfer in the declared class]
+\label{thm:transfer}
+Assume RH and the complete estimates of Theorems~\ref{thm:ST}
+and~\ref{thm:CN}. Fix \(v,w\). Consider families
+\[
+ D_N=\sum_{j=0}^J A_j(s)V_{\lfloor N/M\rfloor,w_j}(s),\qquad
+ \sum_{j=0}^J A_j\equiv1,
+\]
+with fixed finite Dirichlet multipliers supported through \(M\) and
+fixed normalized Gevrey tapers. Put
+\(q_\rho=\sum_jA_j(\rho)p_{m_\rho,w_j}\). Then
+\begin{align}
+ \mathcal T(D;v,w)&:=\lim_{N\to\infty}L
+     \|\zeta D_N-T_{v/L^2}V_{N,w}\|_{\mathcal H}^2
+       =\sum_\rho\frac{\|q_\rho-h_{m_\rho,v,w}\|_2^2}{|\rho|^2},
+       \label{eq:transfer-limit}\\
+ \inf_D\mathcal T(D;v,w)&=
+       \Delta_v(w):=\sum_\rho\frac{\delta_{m_\rho,v}(w)^2}{|\rho|^2}
+       <\infty.\label{eq:transfer-inf}
+\end{align}
+The infimum is over these fixed families after taking their \(N\)
+limits, not over arbitrary coefficient sequences depending on \(N\).
+\end{theorem}
+\begin{proof}[Proof outline]
+The compact mixed profiles and the two complete tail estimates prove
+\eqref{eq:transfer-limit}. Projection gives the lower bound in
+\eqref{eq:transfer-inf}. Use the original taper as a baseline with
+finite total transfer cost, repair a finite set of profiles to within
+any tolerance, and assign them using the bounded two-prime filters.
+The complete majorant includes the baseline and every selected taper
+and is independent of filter degree. Dominated convergence pays the
+exterior profile mass. First take \(N\to\infty\) for each fixed
+family, then increase filter degree and optimize tapers. This gives
+the matching upper bound (\CTref, Section 5).
+\end{proof}
+
+\paragraph{An exact example distinguishing correction from final cost.}
+At \(v=2\pi^2\), take the order-two closure profile
+\[
+ f(u)=\frac{(1-u)\sin(\pi u)}\pi,\qquad
+ w(u)=f(u)/u,\qquad h=-f''-\pi^2f=2\cos(\pi u).
+\]
+Its heat cost is \(\|h\|_2^2=2\), whereas
+\begin{align*}
+ \delta^2&=4-\frac{48}{\pi^2}+\frac{192}{\pi^4},\\
+ p_*&=2\cos(\pi u)+4-\frac{24}{\pi^2}
+                   +\left(-6+\frac{48}{\pi^2}\right)u,\\
+ \|p_*\|_2^2&=6-\frac{192}{\pi^4}>4.
+\end{align*}
+Fixed flat cutoffs realize these local limits, with \(N\to\infty\)
+before the cutoff width decreases. The closest repair to \(h\) need
+not minimize the repaired profile's own norm. This example does not
+raise the original infimum above \(K\); it quantifies the price of
+retaining this particular heat profile. No uniform full-height limit
+for a moving base cutoff is claimed.
+
+\section{Exact completion still changes the arithmetic}\label{sec:completion}
+The algebraic error in \eqref{eq:carrier-defect} might suggest heating
+the completion exactly. \CTref, Sections 6--10, treats that alternative
+without assuming RH. Write \(X_t(s)=\mathcal F_t(s-\frac12)\).
+For fixed \(t>0\) and \(c>1\), define the entire first-mode factor
+\begin{equation}\label{eq:exact-completion}
+ B_t^c(s)=\frac1{\sqrt{\pi t}}\int_c^\infty
+                     e^{-(x-s)^2/t}A(x)\dd x.
+\end{equation}
+It is positive on the real axis and solves
+\(\partial_tB_t^c=\frac14\partial_s^2B_t^c\).
+Splitting the Gaussian formula for \(X_t\) at \(c\), and expanding
+the absolutely convergent Euler series only on \(x\ge c\), gives
+\begin{equation}\label{eq:mode-decomposition}
+ X_t(s)=Q_t^c(s)+\sum_{n\ge1}n^{-s}e^{t(\log n)^2/4}
+                     B_t^c(s-\tfrac t2\log n).
+\end{equation}
+The series converges absolutely and locally uniformly for every complex
+\(s\); its displayed coefficients depend on \(s\). The entire
+left contribution satisfies
+\(Q_t^c(\sigma)=O_{t,c}(e^{-(\sigma-c)^2/t})\) for real
+\(\sigma\ge c\). This retains the full negative-real-axis integral.
+
+\begin{proposition}[Fixed-time second-mode obstruction]
+\label{prop:completion}
+For fixed \(t>0,c>1\), as real \(\sigma\to+\infty\),
+\begin{equation}\label{eq:second-mode}
+ \frac{X_t(\sigma)}{B_t^c(\sigma)}-1
+ =2^{-\sigma}e^{t(\log2)^2/4}
+    \left(\frac{\sigma}{2\pi}\right)^{-t\log2/4}
+    \left[1+O_{t,c}\!\left(\frac{\log\sigma}{\sigma}\right)\right].
+\end{equation}
+This quotient has no ordinary Dirichlet-series representation converging
+in a right half-plane, even conditionally.
+\end{proposition}
+\begin{proof}[Proof mechanism]
+A fixed-shift Laplace estimate for \(B_t^c\) gives the \(n=2\)
+term. Monotonicity on the real axis bounds the complete \(n\ge3\)
+tail by \(O_{t,c}(3^{-\sigma}\sigma^{-t\log3/4})\); the left
+term is Gaussian-small. A hypothetical Dirichlet series has expansion
+\(d_1+d_2 2^{-\sigma}+O(3^{-\sigma})\) sufficiently far right.
+Equation~\eqref{eq:second-mode} forces \(d_1=1,d_2=0\), but its
+nonzero second-mode remainder is not \(O(3^{-\sigma})\).
+\end{proof}
+
+The same conclusion holds for the explicit contour prescriptions
+\[
+ B_{t,\eta}(s)=\frac1{\sqrt{\pi t}}
+     \int_{\mathbb R+i\eta}e^{-(z-s)^2/t}A(z)\dd z,
+       \qquad \eta\in\mathbb R\setminus\{0\},
+\]
+and their symmetric upper/lower average. Gamma reflection pays the
+negative horizontal ray. Deforming only the pole-free right part gives
+\(B_{t,\eta}(\sigma)-B_t^c(\sigma)
+=O_{t,c,\eta}(e^{-(\sigma-c)^2/t})\), preserving
+\eqref{eq:second-mode}. More generally the comparison applies to
+analytic normalizers differing from \(B_t^c\) by a Gaussian-small
+term on this ray. It is not an exclusion of arbitrary completions.
+
+Wherever a heat-solution normalizer \(B\) is nonzero, its quotient
+obeys
+\[
+ \partial_t(X_t/B)=\tfrac14\partial_s^2(X_t/B)
+               +\tfrac12(B'/B)\partial_s(X_t/B).
+\]
+Thus exact division leaves a completion drift. No global zero-free
+property, critical-line norm theorem for these exact quotients, or
+uniform assertion for \(t=t_N\to0\) is established here. In particular,
+Theorem~\ref{thm:CN} is not being reassigned to these new normalizers.
+
 \section{Relation to BW09}
 The originating BW09 route seeks to rule out a hypothetical positive
 all-real threshold by forcing a later collision. Its current manuscript
@@ -351,6 +626,10 @@ unchanged M\"obius convolution. Importing that assumption into BW09's
 positive-threshold contradiction would assume the desired conclusion.
 All-realness of a positive-time heat deformation supplies neither this
 original Dirichlet arithmetic nor a substitute theorem.
+The normalized heat and sharp transfer theorems inherit this RH premise.
+In contrast, the fixed-positive-time completion obstructions in
+Sections~\ref{sec:normalized} and~\ref{sec:completion} are unconditional
+and may inform either route, within their stated normalization classes.
 
 BW09 still needs a complete theta estimate forcing an ordinary born
 pair's cap-phase decrease strictly beyond \(\pi\), with wall
@@ -369,6 +648,13 @@ excess coefficient \((K-Z)/4\). Both are compatible with a multiple
 endpoint. A simplicity proof needs an additional estimate using the
 unchanged arithmetic of zeta that rules out this excess, or a different
 mechanism that excludes an original multiple zero.
+Sections~\ref{sec:normalized}--\ref{sec:completion} make the transfer
+issue quantitative: normalized numerator heat has a complete norm,
+but returning its profiles to the original arithmetic class costs
+\(\Delta_v(w)\), and the tested exact completions retain a
+non-Dirichlet second mode. These results close specific unpaid
+transfers; they do not rule out every use of heat flow or every
+possible completion.
 
 The tested absolute prime and M\"obius-correlation payments do not
 supply that estimate. In the exact ratio-energy representation, signed
@@ -407,13 +693,19 @@ theorem or simplicity and are not proof premises here.
 
 \paragraph{Acknowledgement and draft record.}
 Drafted for Edward Baker with substantial OpenAI \texttt{gpt-6-astra}
-assistance, recorded effort \texttt{ultra}. Derivations and reviews are
+assistance. The original derivations and reviews recorded effort
+\texttt{ultra}; the 21 October manuscript integration of Notes 17--18
+and associated discussion recorded effort \texttt{max}.
+Derivations and reviews are
 internal LLM work. Detailed proofs and corrections are in
 \href{../notes/12_FINITE_EVALUATION_AND_ENDPOINT_INVERSE_COSTS_20261020.md}{Note 12},
-\Href, \Nref, and
-\href{../reviews/16_GEVREY_GLOBAL_APPROXIMATION_REVIEW_20261020.md}{Review 16}.
+\Href, \Nref, \CNref, \CTref, and
+\href{../reviews/16_GEVREY_GLOBAL_APPROXIMATION_REVIEW_20261020.md}{Review 16},
+\href{../reviews/17_NORMALIZED_HEAT_LIMIT_AND_ARITHMETIC_REVIEW_20261020.md}{Review 17}
+and \href{../reviews/18_ARITHMETIC_HEAT_TRANSFER_AND_COMPLETION_REVIEW_20261021.md}{Review 18}.
 \texttt{../DRAFT\_HISTORY.md} indexes milestones of this canonical draft.
 
+\clearpage
 \begin{thebibliography}{9}\small
 \bibitem{Burnol}
 J.-F. Burnol, \emph{A lower bound in an approximation problem involving

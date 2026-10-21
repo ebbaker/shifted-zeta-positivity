@@ -167,6 +167,21 @@ signed integral bounds. Write \(h_j=\partial_x^jH\),
   or coverage. For Edward Baker with substantial LLM assistance,
   **gpt-6.1-sol, actual effort ultra**.
 
+- **BW10 moving product tube (21 October 2026).**
+  [Note 21](../papers/investigations-3/13_contradiction_analysis/04_boundary_winding/threshold_routes/10_rh_implies_simple_zeros/notes/21_MOVING_SIGNED_TUBES_AND_PHYSICAL_TRACE_20261021.md) is **proved in-note for bounded product tubes** on
+  compact positive-time intervals: all-face signed Stokes and phase
+  transport, physical-weight correction, explicit trace and derivative
+  payments with complete source tails and a paid physical energy floor.
+  Its exact primitive change reduces the normalized four-dimensional
+  formula to a planar transverse average. Under RH,
+  `pi<=I_eta<=pi+g eta^2 D0/6`; generalized Laguerre positivity supplies
+  the lower bound. The quadratic double model has `R_eta>=eta^2/(2t)`.
+  “The selected product-tube comparison supplies no new signed theta
+  gain.” Other domains and arithmetic estimates remain open.
+  [Same-assistant self-review](../papers/investigations-3/13_contradiction_analysis/04_boundary_winding/threshold_routes/10_rh_implies_simple_zeros/reviews/20_MOVING_TUBE_AND_TRACE_REVIEW_20261021.md); finite algebra replay only,
+  no numerical theta floor or specialist review. Prepared for Edward
+  Baker with substantial LLM assistance, **gpt-6-astra, actual effort max**.
+
 ## Status
 
 The cited notes give analytic proofs and exact algebraic checks, with

@@ -48,6 +48,18 @@ positive finite pencil as a string, a graph and an operator.
   Added for Edward Baker with substantial LLM assistance,
   **gpt-6.1-sol, actual effort ultra**.
 
+- **Moving product-tube comparison (21 October 2026).**
+  [BW10 Note 21](../papers/investigations-3/13_contradiction_analysis/04_boundary_winding/threshold_routes/10_rh_implies_simple_zeros/notes/21_MOVING_SIGNED_TUBES_AND_PHYSICAL_TRACE_20261021.md) retains the physical weight derivative and
+  every boundary face, then proves an exact reduction to a planar
+  transverse average. Its conclusion is: “The successful compact trace
+  estimate is therefore **not separating**.” Generic all-real-product
+  positivity makes the tube observation at least the known cap budget;
+  the quadratic double model retains a nonvanishing trace loss at
+  square-root thickness. This concerns the stated product domains and
+  weight, not every contour or source-correlated estimate.
+  [Same-assistant review](../papers/investigations-3/13_contradiction_analysis/04_boundary_winding/threshold_routes/10_rh_implies_simple_zeros/reviews/20_MOVING_TUBE_AND_TRACE_REVIEW_20261021.md). Prepared for Edward Baker with
+  substantial LLM assistance, **gpt-6-astra, actual effort max**.
+
 ## What it cost
 
 Sixteen lifts plus twenty-two notes rated "promise 1/5"; CCM rounds 1–4

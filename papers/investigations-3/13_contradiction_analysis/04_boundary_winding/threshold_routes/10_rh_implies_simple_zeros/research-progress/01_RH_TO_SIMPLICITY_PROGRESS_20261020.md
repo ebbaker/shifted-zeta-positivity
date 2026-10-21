@@ -26,15 +26,26 @@ no novelty or best-known-bound claim is made.
 The original scope was selected in [chat 0003][origin]; this round is
 [chat 0004][current].
 
-**Consolidation for discussion:** the six-page [canonical manuscript](../manuscript/main.tex)
+**Consolidation for discussion:** the eleven-page [canonical manuscript](../manuscript/main.tex)
 and [PDF](../manuscript/main.pdf) collect the analytic estimates, with
 computational checks cited briefly. Its central bottleneck is the missing
-complete arithmetic estimate that excludes the excess K−Z. Section 5
-compares BW09: heat, source and contour calculations overlap, but the
+complete arithmetic estimate that excludes the excess K−Z. Sections 5–7
+include Notes 17–18's normalized-heat and arithmetic-repair results.
+Section 8 compares BW09: heat, source and contour calculations overlap, but the
 RH-based original-zeta approximation theorem cannot prove RH there
 without circularity. BW09 also retains threshold-event coverage and
 strict cap-surplus gates. Neither project has a nearly complete proof;
 the present results are internally reviewed and need specialist scrutiny.
+
+21 October continuation — **gpt-6-astra (Codex), actual effort max**:
+[Register 02](02_HEAT_ROOT_MOTION_AND_SIGNED_CONTOURS_PROGRESS_20261021.md)
+tracks HMC-00–07 in the [heat-motion and signed-contour program](../research-overview/02_HEAT_ROOT_MOTION_AND_SIGNED_CONTOURS_PROGRAM_20261021.md).
+Notes 19–20 prove its compact root-motion and fixed-label saddle bounds;
+Note 21 completes a bounded moving-tube transport/trace comparison with
+no new signed gain. Note 22 gives a complete-source heat-scale trace error
+and a universal profile shared by matching controls. This first HMC-05
+comparison does not separate theta. The arithmetic and endpoint-exclusion
+tasks remain open, and the RHS statuses below are unchanged.
 
 | Task | Current status | Evidence / unresolved requirement |
 | --- | --- | --- |
@@ -73,7 +84,8 @@ the present results are internally reviewed and need specialist scrutiny.
   v²||uw||²/(4L|rho|²)+O(L^−2). Thus the improved heat norm cannot be
   treated as the original arithmetic norm with a negligible error.
   [Review 17][review17] records same-model checks; the simplicity and
-  BW09 strict-surplus gates remain open. The manuscript is unchanged.
+  BW09 strict-surplus gates remain open. The manuscript was unchanged at
+  that checkpoint; the 21 October consolidation now includes Notes 17–18.
 - [Note 16 §16][n16] proves unconditionally that, at each fixed
   0<t<=1/2, every nonzero finite Dirichlet polynomial has infinite
   full error against the heat-deformed numerator divided by the

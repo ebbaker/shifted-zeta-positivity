@@ -81,6 +81,19 @@ measure.
   review](../papers/investigations-3/13_contradiction_analysis/04_boundary_winding/threshold_routes/10_rh_implies_simple_zeros/reviews/05_SOURCE_CONTROL_AND_SHIFT_AUDIT_20261020.md). Added for Edward Baker with substantial LLM assistance,
   **gpt-6-astra, effort ultra**; no specialist review.
 
+- **Heat-scale leading-profile comparison (21 October 2026).**
+  [BW10 Note 22](../papers/investigations-3/13_contradiction_analysis/04_boundary_winding/threshold_routes/10_rh_implies_simple_zeros/notes/22_HEAT_SCALE_SIGNED_TRACE_AND_UNIVERSAL_PROFILE_20261021.md) proves a paid tube profile at a hypothetical
+  multiple endpoint, then checks matching collision controls. Its scope
+  is explicit: “This is a **scoped obstruction to a leading-profile
+  discriminator**.” The profile and improved denominator treatment are
+  generic local heat data. Close positive-source controls share the
+  profile; their majorant moments can also be arbitrarily close, without
+  implying close event derivatives or identical arithmetic. Controls
+  without an all-real heat slice use a separate local analytic argument.
+  A new source-specific bound below the profile is not ruled out.
+  [Same-assistant review](../papers/investigations-3/13_contradiction_analysis/04_boundary_winding/threshold_routes/10_rh_implies_simple_zeros/reviews/21_HEAT_SCALE_TRACE_AND_CONTROL_REVIEW_20261021.md). Prepared for Edward Baker with
+  substantial LLM assistance, **gpt-6-astra, actual effort max**.
+
 ## What it cost
 
 The 09-to-06 continuation, 02's continuation and 17's pilot ended at

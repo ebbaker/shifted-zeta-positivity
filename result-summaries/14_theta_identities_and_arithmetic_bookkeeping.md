@@ -640,3 +640,11 @@ leave a second mode proportional to 2^(−sigma) sigma^(−t log 2/4),
 precluding ordinary Dirichlet series at fixed t>0. No zero is excluded.
 [Review 18](../papers/investigations-3/13_contradiction_analysis/04_boundary_winding/threshold_routes/10_rh_implies_simple_zeros/reviews/18_ARITHMETIC_HEAT_TRANSFER_AND_COMPLETION_REVIEW_20261021.md)
 is same-model internal review only.
+
+21 October manuscript integration for Edward Baker with substantial LLM
+assistance, **gpt-6-astra, effort max**: the [canonical manuscript, Sections 5–7](../papers/investigations-3/13_contradiction_analysis/04_boundary_winding/threshold_routes/10_rh_implies_simple_zeros/manuscript/main.tex)
+now consolidates Notes 17–18 with their original scope: “These results
+close specific unpaid transfers; they do not rule out every use of heat
+flow or every possible completion.” The [integration record](../papers/investigations-3/13_contradiction_analysis/04_boundary_winding/threshold_routes/10_rh_implies_simple_zeros/brainstorm/03_HEAT_ROOT_MOTION_AND_HIGHER_DIMENSIONAL_CONTOURS_20261021.md)
+also discusses cap motion and signed higher-dimensional boundaries; no
+new simplicity estimate is claimed.

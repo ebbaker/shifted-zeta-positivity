@@ -91,3 +91,17 @@ same-model checks; the signed arithmetic gate remains open.
 - [17 — Normalized heat and arithmetic review](17_NORMALIZED_HEAT_LIMIT_AND_ARITHMETIC_REVIEW_20261020.md). Checks the Gaussian completion cancellation, both complete tails, all-multiplicity profiles, right-axis curvature correction, essential singularity and local transfer cost. Corrects disk-wide approximation wording to a critical-line segment. Same-model internal review only.
 
 - [18 — Arithmetic heat repair and exact completion review](18_ARITHMETIC_HEAT_TRANSFER_AND_COMPLETION_REVIEW_20261021.md). Checks the affine moment projection, Gevrey closure, ordered full-tail sharpness, exact pi example, complete Gaussian decomposition and ordinary-series contradiction. Includes a bounded reread of the GC/ST premises and keeps their internal status explicit.
+
+21 October continuation — **gpt-6-astra, actual effort max**.
+[19 — Root motion and differentiated saddle](19_ROOT_MOTION_AND_DIFFERENTIATED_SADDLE_REVIEW_20261021.md)
+reviews the manuscript's dependency scope and Notes 19–20's counting,
+pairing, deflation, finite-width and differentiated-saddle bounds.
+Same-assistant self-review only; no multiple-zero exclusion.
+
+[20 — Moving tube and physical trace](20_MOVING_TUBE_AND_TRACE_REVIEW_20261021.md) checks the orientation, weighted primitive change, moving normalization, complete-source tails, compact floor rule, trace constants and scoped planar/control comparison. Same-assistant self-review, **gpt-6-astra, actual effort max**; no endpoint exclusion.
+
+[21 — Heat-scale trace and control comparison](21_HEAT_SCALE_TRACE_AND_CONTROL_REVIEW_20261021.md) checks the full-source Cauchy bound, phase-measure concentration, root membership, explicit profile error, Gaussian-quadrature outer formula and scoped control conclusion. Same-assistant self-review, **gpt-6-astra, actual effort max**; no separating theta estimate or endpoint exclusion.
+
+[22 — HMC-06 gate and endpoint limit](22_HMC06_GATE_AND_ENDPOINT_LIMIT_REVIEW_20261021.md) reviews the manuscript/program dependency scope, the shrinking-cap proposal, the finite-time quadratic baseline, and the original quaternionic, octonionic and theta-bundle constructions. HMC-05 remains open and HMC-06 gated. Separate-chat, same-model internal assessment, **gpt-6-astra, actual effort max**.
+
+[23 — Gauss area and curvature flux](23_GAUSS_AREA_AND_CURVATURE_FLUX_REVIEW_20261021.md) checks the concentration mass, explicit boundary error, exact double control, complex inner profile, parity energies and four-dimensional normalization. Same-assistant review, **gpt-6-astra, actual effort max**. HMC-05 remains open and HMC-06 gated.

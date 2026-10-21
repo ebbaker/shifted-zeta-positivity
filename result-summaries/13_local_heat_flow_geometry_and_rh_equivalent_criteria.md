@@ -176,6 +176,37 @@ finite order \(m=2r+j\), \(r\ge1\), \(j\in\{0,1\}\).
   Prepared for Edward Baker with substantial LLM assistance,
   gpt-6-astra, ultra; no physical exclusion or specialist review.
 
+- **BW-10 heat-root motion (21 October 2026).** **Proved in-note;
+  same-assistant self-review:** under RH, explicit Jensen bounds give
+  complete gap/center velocity remainders of order `(1+log R)/R` on
+  compact positive-time intervals. A finite root-block bound supplies
+  the label/height-dependent enclosure and a mirror-compression width
+  estimate. Complete-source covariance cancellation and effective moment
+  bounds give `g_k'=-pi L_t'/L_t^2+O_k(1/(L_t kappa_t^(5/4)))` for fixed
+  adjacent labels, hence eventual strict shrinkage. Late-time fixed-rank
+  estimates themselves are unconditional; RH identifies continued birth
+  walls. “Eventual shrinkage is compatible with a multiple endpoint.”
+  No numerical onset, growing-label theorem, signed-contour gain or
+  simplicity exclusion. [Root-tail proof](../papers/investigations-3/13_contradiction_analysis/04_boundary_winding/threshold_routes/10_rh_implies_simple_zeros/notes/19_COMPLETE_ROOT_MOTION_AND_FINITE_TIME_BOUNDS_20261021.md),
+  [differentiated saddle](../papers/investigations-3/13_contradiction_analysis/04_boundary_winding/threshold_routes/10_rh_implies_simple_zeros/notes/20_DIFFERENTIATED_SADDLE_AND_EVENTUAL_GAP_SHRINKAGE_20261021.md),
+  [self-review](../papers/investigations-3/13_contradiction_analysis/04_boundary_winding/threshold_routes/10_rh_implies_simple_zeros/reviews/19_ROOT_MOTION_AND_DIFFERENTIATED_SADDLE_REVIEW_20261021.md).
+  Prepared for Edward Baker with substantial LLM assistance,
+  **gpt-6-astra, actual effort max**; no specialist review.
+
+- **BW10 heat-scale tube profile (21 October 2026).**
+  [Note 22](../papers/investigations-3/13_contradiction_analysis/04_boundary_winding/threshold_routes/10_rh_implies_simple_zeros/notes/22_HEAT_SCALE_SIGNED_TRACE_AND_UNIVERSAL_PROFILE_20261021.md) is **proved in-note, conditional on the specified
+  endpoint event**. The exact physical phase measure gives a complete-source
+  error `O(sqrt(t) log(1/t))`, uniform for bounded `eta/sqrt(2t)` at a
+  fixed event. The double profile is `pi(1+r^2)`; Hermite orthogonality
+  proves the outer profile `pi[L_(m-1)^(1)(-r^2)-1]` for each fixed
+  multiplicity. A separate local analytic version covers controls without
+  an all-real heat slice. Matching controls share these leading data:
+  “The selected leading-profile discriminator therefore fails.” This
+  does not rule out a source-specific arithmetic bound below the profile.
+  HMC-05 remains open. [Same-assistant self-review](../papers/investigations-3/13_contradiction_analysis/04_boundary_winding/threshold_routes/10_rh_implies_simple_zeros/reviews/21_HEAT_SCALE_TRACE_AND_CONTROL_REVIEW_20261021.md); finite
+  exact algebra only. Prepared for Edward Baker with substantial LLM
+  assistance, **gpt-6-astra, actual effort max**; no specialist review.
+
 ## Status
 
 The local laws, indices, surface identities and equivalences have written

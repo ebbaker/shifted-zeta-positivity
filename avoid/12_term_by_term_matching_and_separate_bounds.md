@@ -486,3 +486,11 @@ minimize the repaired profile's own norm.” Exact first-mode completion
 also retains a second-mode arithmetic defect. Neither optimizing the
 taper nor removing the approximate carrier's leading error authorizes
 a free transfer to the original zeta norm.
+
+21 October consolidation for Edward Baker with substantial LLM assistance,
+**gpt-6-astra, effort max**: [manuscript Section 6](../papers/investigations-3/13_contradiction_analysis/04_boundary_winding/threshold_routes/10_rh_implies_simple_zeros/manuscript/main.tex)
+now preserves this distinction explicitly: “The closest repair to h need
+not minimize the repaired profile's own norm.” Sections 5–7 retain the
+complete tails and fixed-family/fixed-time scopes of Notes 17–18;
+the [integration record](../papers/investigations-3/13_contradiction_analysis/04_boundary_winding/threshold_routes/10_rh_implies_simple_zeros/brainstorm/03_HEAT_ROOT_MOTION_AND_HIGHER_DIMENSIONAL_CONTOURS_20261021.md)
+records the checks. This is consolidation, not a stronger exclusion.

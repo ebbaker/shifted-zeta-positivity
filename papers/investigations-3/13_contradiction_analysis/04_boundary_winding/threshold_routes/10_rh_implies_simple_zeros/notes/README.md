@@ -66,3 +66,19 @@ Notes [11 §7](11_FULL_ABSOLUTE_PRIME_ENVELOPE_AND_LOGARITHMIC_SPREAD_20261020.m
 - [17 — Normalized heat limits and arithmetic costs](17_NORMALIZED_HEAT_GLOBAL_LIMIT_AND_ARITHMETIC_COSTS_20261020.md). Complete RH-conditional scaled tails and all-zero heat-profile sum at t=v/(log N)², for fixed Gevrey tapers and bounded v. The specified normalization has no convergent ordinary Dirichlet series, has an essential singularity at one, and retains a positive fixed-double transfer cost. No original-zero exclusion; the manuscript remains unchanged.
 
 - [18 — Sharp arithmetic heat repair and exact completion](18_ARITHMETIC_HEAT_TRANSFER_AND_EXACT_COMPLETION_20261021.md). Exact complete transfer infimum over fixed finite filtered-Gevrey families, with an explicit double-zero repair cost. Exact first-mode and specified contour heat normalizations still fail ordinary Dirichlet arithmetic. No original-zero exclusion or moving-time theorem for the new normalizers.
+
+21 October analytic continuation — **gpt-6-astra, actual effort max**;
+same-assistant self-review.
+
+- [19 — Complete root motion and finite time bounds](19_COMPLETE_ROOT_MOTION_AND_FINITE_TIME_BOUNDS_20261021.md). Explicit uniform zero tails and both velocity remainders; finite root-block enclosure, mirror compression and full moving deflation. No endpoint exclusion.
+- [20 — Differentiated saddle and eventual gap shrinkage](20_DIFFERENTIATED_SADDLE_AND_EVENTUAL_GAP_SHRINKAGE_20261021.md). Complete covariance cancellation and explicit moment errors prove fixed-label velocity asymptotics and eventual adjacent-gap shrinkage. No numerical onset or separating arithmetic estimate.
+
+- [21 — Moving signed tubes and physical trace](21_MOVING_SIGNED_TUBES_AND_PHYSICAL_TRACE_20261021.md). Complete phase/Stokes transport, all faces, physical-weight correction, explicit trace and derivative errors. Exact planar reduction; generic nonnegative excess and a quadratic endpoint control. HMC-04 complete for bounded product tubes; no new signed theta gain. **gpt-6-astra, max**, same-assistant self-review.
+
+- [22 — Heat-scale signed trace and universal profile](22_HEAT_SCALE_SIGNED_TRACE_AND_UNIVERSAL_PROFILE_20261021.md). Explicit complete-source error of order `sqrt(t) log(1/t)` around the Hermite tube profile; exact all-multiplicity outer formula. Matching controls share the leading profile, closing only that proposed discriminator. HMC-05 remains open. **gpt-6-astra, max**, same-assistant self-review.
+
+- [23 — Cap phase concentration and finite time baseline](23_CAP_PHASE_CONCENTRATION_AND_FINITE_TIME_BASELINE_20261021.md). Distinguishes spatial phase, collision index and infinite-time concentration; proves an explicit quadratic correction bound and calculates the higher-dimensional cap image in the cosine model. Reviews the parity-specific oriented Gauss-map target. No theta exclusion. **gpt-6-astra, actual effort max**, internal analytic observations.
+
+- [24 — Gauss area concentration and curvature flux](24_GAUSS_AREA_CONCENTRATION_AND_CURVATURE_FLUX_20261021.md). Proves the local Gauss-area defect pi(m−1), an explicit fixed-boundary error, the exact double-control area and the induced four-dimensional Ricci-form reduction. Bounded total curvature permits the cusp; no signed theta estimate. **gpt-6-astra, actual effort max**, same-assistant review.
+
+- [25 — Multiplicity-selective Chern and Hopf observations](25_MULTIPLICITY_SELECTIVE_CHERN_AND_HOPF_OBSERVATIONS_20261021.md). Identifies the existing complex heat-jet intersection as a relative second Chern number and Hopf invariant, and derives an explicit positive regularized measure with mass binomial(m,2). The simple-zero mass is zero; ambient hyperkähler geometry alone does not force vanishing. HMC-06 remains gated. **gpt-6-astra, actual effort max**, same-assistant analytic assessment.

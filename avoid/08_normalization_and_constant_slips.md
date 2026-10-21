@@ -55,3 +55,13 @@ unverified item".
 ## Instead
 
 Reconcile conventions before comparing ([program meta-analysis](../papers/investigations/program-meta-analysis/reviews/PROGRAM_META_ANALYSIS_20260926.md) §2: "Factors of two in support length differ between papers; comparisons must first reconcile…"); check endpoints of every boxed formula explicitly; recompute every imported constant once in a second normalization; "check object type" and "read the printed PDF" (house rules in [`CONTRIBUTING.md`](../CONTRIBUTING.md)); and keep a conventions block at the top of every investigation, as 22's manuscript does for its heat normalization.
+
+21 October 2026 — moving-source normalization check, prepared for Edward
+Baker with substantial LLM assistance, **gpt-6-astra, actual effort max**.
+[BW10 Review 19](../papers/investigations-3/13_contradiction_analysis/04_boundary_winding/threshold_routes/10_rh_implies_simple_zeros/reviews/19_ROOT_MOTION_AND_DIFFERENTIATED_SADDLE_REVIEW_20261021.md)
+records: “Dropping the moving-scale term loses a cancellation at the full
+leading velocity scale.” The new differentiated-saddle proof retains both
+the source covariance and the derivative of `z/L_t`, and bounds their
+residual before differentiating root locations. This is a preventive
+lesson from the successful estimate, not a retraction of the earlier
+location theorem; it supplies no simplicity exclusion.
