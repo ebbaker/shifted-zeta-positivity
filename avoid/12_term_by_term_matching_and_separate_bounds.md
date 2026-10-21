@@ -348,3 +348,20 @@ two statements distinct. The sharp simple/double tradeoff concerns local
 costs; the bounded Lean proof assumes their analytic inner-product data.
 [Internal review §10](../papers/investigations-3/13_contradiction_analysis/04_boundary_winding/threshold_routes/10_rh_implies_simple_zeros/reviews/12_FINITE_PRECISION_SIGNED_KERNEL_AND_ENERGY_REVIEW_20261020.md). Prepared for Edward Baker
 with substantial LLM assistance, **gpt-6-astra, ultra**.
+
+
+**A failed allowance is not a global obstruction, 20 October 2026 (BW10).**
+[Note 16](../papers/investigations-3/13_contradiction_analysis/04_boundary_winding/threshold_routes/10_rh_implies_simple_zeros/notes/16_GEVREY_GLOBAL_APPROXIMATION_AND_RATE_20261020.md) supersedes the prior missing-global-upper
+status for fixed compact Gevrey order 1<sigma<2. Its coherent quotient,
+adaptive cluster and complete height-tail estimates prove the actual
+rate E_(N,w)≪(loglog N)^B/log N, B>1+2sigma:
+“The proof bounds the actual norm at all heights.” The earlier growing
+absolute-transfer allowance remains a failure of that payment alone.
+Conversely, “The extra logarithmic factor leaves room for multiple zeros.”
+Do not turn this upper rate or its direct d_N² infimum corollary into a
+sharp simple-zero constant, or apply its fixed-taper constants to the
+moving family whose actual lower rates are paid in
+[Note 12 §13](../papers/investigations-3/13_contradiction_analysis/04_boundary_winding/threshold_routes/10_rh_implies_simple_zeros/notes/12_FINITE_EVALUATION_AND_ENDPOINT_INVERSE_COSTS_20261020.md).
+[Same-model review 16](../papers/investigations-3/13_contradiction_analysis/04_boundary_winding/threshold_routes/10_rh_implies_simple_zeros/reviews/16_GEVREY_GLOBAL_APPROXIMATION_REVIEW_20261020.md). Prepared for Edward
+Baker with substantial LLM assistance, **gpt-6-astra, ultra**; no novelty,
+optimality or simplicity claim.

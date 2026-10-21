@@ -10,6 +10,13 @@ no specialist review.
 transfers the local machinery, and screens the generic arguments.
 **No such implication or new theta exclusion has been proved here.**
 
+**Current quantitative advance:** [Note 16](../notes/16_GEVREY_GLOBAL_APPROXIMATION_AND_RATE_20261020.md) proves under RH
+the actual full-norm rate E_(N,w)≪(loglog N)^B/log N for each fixed compact
+Gevrey order 1<sigma<2 and B>1+2sigma. The direct infimum corollary is
+d_N²≪_B(loglog N)^B/log N for every fixed B>3, using one fixed w_p.
+This supersedes the earlier missing-global-upper status for that class;
+the remaining logarithmic factor is compatible with multiple zeros.
+
 This is a separate conditional simplicity program. [Program 03][psc]
 continues to govern the original hypothetical positive-threshold surplus;
 its unexecuted tasks are not completed or restarted by this document.
@@ -623,7 +630,7 @@ outside a proved obstruction is not such an estimate. RH implies
 simplicity remains open in this investigation.
 
 
-## 22. Actual Gevrey local transfer and its remaining global upper error
+## 22. Actual Gevrey local transfer and the preceding global-upper gap
 
 20 October 2026. Prepared for Edward Baker with substantial LLM assistance,
 **gpt-6-astra, actual effort ultra**. Separate same-model internal checks;
@@ -650,10 +657,56 @@ analytic transfer or a zeta theorem.
 
 For the explicit flat profile, the old coefficient obstruction vanishes,
 but the tested absolute transfer from damped approximants has a growing
-allowance. No matching global upper bound or convergence theorem has
-been established. N-dependent taper choices need a separate uniform
-estimate. The next acceptable arithmetic gain must control that actual
-remaining norm or another opposing quantity; another local reformulation
-will not close RHS-02. See the [review §10](../reviews/12_FINITE_PRECISION_SIGNED_KERNEL_AND_ENERGY_REVIEW_20261020.md),
+allowance. At this stage no matching global upper bound or convergence
+theorem had been established. **That missing-upper status is superseded
+for fixed compact Gevrey order 1<sigma<2 by §23 and Note 16.** The local
+proof and the failed absolute-transfer allowance retain their stated
+scopes. Changing tapers need a separate uniform argument; a sharp global
+constant or another opposing quantity is still required to exclude an
+original multiple zero. See the [review §10](../reviews/12_FINITE_PRECISION_SIGNED_KERNEL_AND_ENERGY_REVIEW_20261020.md),
 [result index](../../../../../../../result-summaries/README.md) and
 [scope/payment rule](../../../../../../../avoid/12_term_by_term_matching_and_separate_bounds.md).
+
+
+## 23. Complete Gevrey approximation, its rate and the moving-taper boundary
+
+20 October 2026. Prepared for Edward Baker with substantial LLM assistance,
+**gpt-6-astra, actual effort ultra**. Separate same-model internal checks;
+no specialist review, novelty or optimality claim.
+
+[Note 16](../notes/16_GEVREY_GLOBAL_APPROXIMATION_AND_RATE_20261020.md) proves under RH, for each fixed normalized compact
+Gevrey taper of order 1<sigma<2,
+E_(N,w)≪_(w,B)(loglog N)^B/log N whenever B>1+2sigma.
+Its exact convolution retains the original Möbius coefficients. An
+adaptive nearby-zero cluster estimate and a complementary moving-line
+reciprocal estimate give uniform domination at every height; the
+zero-free distance decomposition then supplies the complete rate.
+“The proof bounds the actual norm at all heights.” This is an actual
+upper estimate and convergence theorem, superseding the earlier unpaid
+global-norm status for this fixed class.
+
+The distance d_N² is the infimum over length-N Dirichlet polynomials,
+so d_N²≤E_(N,w) directly. For every fixed B>3, choose one sufficiently
+large fixed p>1 with B>3+2/p in w_p; then
+d_N²≪_B(loglog N)^B/log N. No N-dependent choice of p is needed or
+licensed. The same note pays the whole fixed-height norm with its
+first-order profile sum and proves that sum converges for sigma<2;
+neither statement permits an unproved global first-order limit.
+
+[Note 12 §13](../notes/12_FINITE_EVALUATION_AND_ENDPOINT_INVERSE_COSTS_20261020.md) separately proves an actual lower rate for
+the prescribed moving almost-linear flat family. At an exact order-m
+zero, m≥2, its scaled norm has liminf at least A_m/|rho|² after
+multiplication by eta_N^(2m−3)log N, under the displayed uniform
+transfer condition. At eta_N=(log N)^(-theta), a double gives a
+growing (log N)E cost; an exact triple with 1/3<theta<1/2 makes E
+diverge while the extracted coefficient tends to zero. The fixed-taper
+upper theorem does not apply uniformly to this moving family.
+
+[Review 16](../reviews/16_GEVREY_GLOBAL_APPROXIMATION_REVIEW_20261020.md) checks the primary inputs, complete tails,
+normalizations and scope. “The extra logarithmic factor leaves room for
+multiple zeros.” No sharp simple-zero upper constant, original-zero
+exclusion or RH-to-simplicity theorem follows. The original RHS-02–05
+exclusion gates remain open; a stronger arithmetic comparison must
+remove an actual remaining allowance, not restate those gates. See the
+[result index](../../../../../../../result-summaries/README.md) and
+[complete-payment rule](../../../../../../../avoid/12_term_by_term_matching_and_separate_bounds.md).

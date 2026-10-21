@@ -496,10 +496,30 @@ for fixed normalized Gevrey-flat logarithmic tapers with the stated compact
 extension: the complete local
 transfer gives liminf (log N)E≥Σ C_m(w)/|rho|². The same-taper simple/double
 tradeoff yields an explicit positive uniform gap over Σm²/|rho|² when
-both orders occur. “No full-norm convergence, matching asymptotic, or
-opposing bound follows.” Arbitrary smooth or N-dependent tapers are not
+both orders occur. “This lower-bound argument alone proves no full-norm
+convergence, matching asymptotic, or opposing upper constant.” Arbitrary
+smooth or N-dependent tapers are not
 covered by the transfer; sharpness concerns local model costs only.
 [Same-model review §10](../papers/investigations-3/13_contradiction_analysis/04_boundary_winding/threshold_routes/10_rh_implies_simple_zeros/reviews/12_FINITE_PRECISION_SIGNED_KERNEL_AND_ENERGY_REVIEW_20261020.md); the
 [Lean check](../papers/investigations-3/13_contradiction_analysis/04_boundary_winding/threshold_routes/10_rh_implies_simple_zeros/numerics/lean/README.md) verifies only the abstract
 Hilbert-space implication. Prepared for Edward Baker with substantial
 LLM assistance, **gpt-6-astra, ultra**; no specialist review or novelty claim.
+
+
+**Complete Gevrey upper rate, 20 October 2026:**
+[BW10 Note 16](../papers/investigations-3/13_contradiction_analysis/04_boundary_winding/threshold_routes/10_rh_implies_simple_zeros/notes/16_GEVREY_GLOBAL_APPROXIMATION_AND_RATE_20261020.md) is **proved in-note under RH** for
+each fixed compact Gevrey taper of order 1<sigma<2:
+E_(N,w)≪(loglog N)^B/log N for B>1+2sigma.
+“The proof bounds the actual norm at all heights.” This supersedes the
+preceding no-global-upper/no-convergence status for that class, while
+preserving the local proof's scope and its failed separate allowance.
+Since d_N²≤E_(N,w), one sufficiently large fixed p in w_p gives
+d_N²≪_B(loglog N)^B/log N for every fixed B>3. The complete fixed-height
+asymptotic and convergent profile mass do not remove the growing factor:
+“The extra logarithmic factor leaves room for multiple zeros.”
+[Note 12 §13](../papers/investigations-3/13_contradiction_analysis/04_boundary_winding/threshold_routes/10_rh_implies_simple_zeros/notes/12_FINITE_EVALUATION_AND_ENDPOINT_INVERSE_COSTS_20261020.md) separately proves actual lower rates
+for its specified moving almost-linear family; the fixed-taper upper
+is not uniform there. [Same-model review 16](../papers/investigations-3/13_contradiction_analysis/04_boundary_winding/threshold_routes/10_rh_implies_simple_zeros/reviews/16_GEVREY_GLOBAL_APPROXIMATION_REVIEW_20261020.md).
+Prepared for Edward Baker with substantial LLM assistance,
+**gpt-6-astra, ultra**; no specialist review, novelty, optimality or
+simplicity claim.

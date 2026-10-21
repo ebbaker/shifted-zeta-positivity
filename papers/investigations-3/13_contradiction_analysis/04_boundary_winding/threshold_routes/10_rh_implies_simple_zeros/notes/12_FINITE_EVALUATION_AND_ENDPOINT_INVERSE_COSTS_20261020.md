@@ -4,7 +4,7 @@
 **gpt-6-astra (Codex), reasoning effort ultra**, verified turn metadata.
 Separate same-model internal checks; no specialist review or novelty claim.
 
-**Outcome.** A classical Riemann–Siegel formula plus a discrete Cauchy derivative lowers the sufficient leading summand exponent for both existing gap-certified extraction schemes to one-half. The earlier geometric-versus-single-width exponent advantage belongs to the specified Euler-sum method. A separate exact Möbius mollifier still has a large paid remainder and retains the multiple-zero residue when its contour crosses the line. Endpoint heat energy retains its compatible divergence. Sections 10–12 now prove an actual local transfer for fixed Gevrey-flat logarithmic tapers and a stronger prescribed-approximant lower bound, including a sharp simple/double local tradeoff. The upper estimate needed for simplicity remains open. No original multiple zero is excluded.
+**Outcome.** A classical Riemann–Siegel formula plus a discrete Cauchy derivative lowers the sufficient leading summand exponent for both existing gap-certified extraction schemes to one-half. The earlier geometric-versus-single-width exponent advantage belongs to the specified Euler-sum method. A separate exact Möbius mollifier still has a large paid remainder and retains the multiple-zero residue when its contour crosses the line. Endpoint heat energy retains its compatible divergence. Sections 10–12 prove an actual local transfer for fixed Gevrey-flat logarithmic tapers and a stronger prescribed-approximant lower bound, including a sharp simple/double local tradeoff. [Note 16](16_GEVREY_GLOBAL_APPROXIMATION_AND_RATE_20261020.md) now supplies the complete RH upper bound \(E_{N,w}\ll(\log\log N)^B/\log N\) for each fixed compact Gevrey taper of order \(1<\sigma<2\) and each fixed \(B>1+2\sigma\). Section 13 proves a distinct actual lower rate for almost-linear tapers whose endpoint layer shrinks with \(N\). The fixed-taper upper bound does not assert uniform constants for that moving family, and its growing \(\log\log N\) allowance leaves the sharp opposing estimate for simplicity open. No original multiple zero is excluded.
 
 This continuation follows the [result index](../../../../../../../result-summaries/README.md), [collision controls](../../../../../../../result-summaries/12_collision_controls_and_screening.md), and [avoid index](../../../../../../../avoid/README.md), particularly [scoped conclusions](../../../../../../../avoid/07_scoped_exclusions_read_as_universal.md), [complete payments](../../../../../../../avoid/12_term_by_term_matching_and_separate_bounds.md), and [gain before expansion](../../../../../../../avoid/20_volume_without_a_gain.md). These are bounded quantitative comparisons, not additional equivalent simplicity criteria.
 
@@ -1451,12 +1451,20 @@ theorem does not prove convergence of the fixed flat profile: undoing
 the damping costs e^(au), whereas its available square-root norm bound
 returns only e^(−au/4). The needed signed correlations are not supplied.
 
-**Assessment.** The former coefficient-sum obstruction vanishes for this
-class, but the checked full-norm transfer does not close. No general
-literature nonexistence claim, sufficient convergence theorem, or new
-simplicity criterion is asserted. Infinite flatness alone does not authorize dropping the remaining norm.
-Section 12 separately pays the actual local transfer for this Gevrey
-profile; it still supplies no full-norm upper estimate.
+**Assessment of this payment.** The former coefficient-sum obstruction
+vanishes for this class, but the absolute transfer allowance in (FA7)–(FA8)
+does not close the full norm. That scoped failure remains valid.
+Section 12's separate local-transfer and lower-bound argument did not
+itself give convergence or an upper estimate. [Note 16](16_GEVREY_GLOBAL_APPROXIMATION_AND_RATE_20261020.md)
+now pays the complete norm by a different argument, proving
+\(E_{N,w}\ll(\log\log N)^B/\log N\) for each fixed compact Gevrey taper
+of order \(1<\sigma<2\), with any fixed \(B>1+2\sigma\).
+For \(w_p\), this means \(B>3+2/p\). The growing logarithmic allowance
+does not supply the sharp opposing bound needed for simplicity.
+Infinite flatness alone still does not authorize dropping a norm
+portion or applying fixed-taper constants to a moving family.
+The global continuation and Section 13 are checked in
+[Review 16](../reviews/16_GEVREY_GLOBAL_APPROXIMATION_REVIEW_20261020.md).
 
 
 ## 11. Flat tapers have a sharp simple/double local tradeoff
@@ -1680,9 +1688,14 @@ simultaneously realize the best simple and double local profiles.
 For arbitrary smooth flat tapers, the model calculation alone supplies
 no actual zeta transfer. Section 12 proves that transfer for each fixed
 Gevrey taper, retaining the other poles and full height tail, and obtains
-a lower bound by finite-window exhaustion. It does not obtain global
-tightness or an upper estimate. The cutoff approximations in (FT14)
-can be chosen in any fixed Gevrey class of order greater than one.
+a lower bound by finite-window exhaustion. That lower-bound argument
+alone does not obtain global tightness or an upper estimate.
+[Note 16](16_GEVREY_GLOBAL_APPROXIMATION_AND_RATE_20261020.md) supplies
+complete convergence and the stated rate separately for each fixed
+compact Gevrey taper of order \(1<\sigma<2\), with a growing
+\(\log\log N\) allowance. It does not establish a sharp first-order
+constant or uniformity over varying tapers. The cutoff approximations
+in (FT14) can be chosen in any fixed Gevrey class of order greater than one.
 For each fixed smoothing parameter they are affine near zero and flat
 at one, and admit a compact Gevrey extension. Thus the model infima
 remain approachable in the subclass covered by Section 12. Each taper
@@ -1869,7 +1882,7 @@ both sides of that formula equal one exactly. This is an actual local
 transfer for the fixed Gevrey profile, unlike the uncontrolled grouped-pole
 remainder for the finite-order polynomial taper in Note 12 §5.5.
 
-### 12.4 A prescribed-approximant lower constant, with no global upper claim
+### 12.4 A prescribed-approximant lower constant
 
 Flatness at 1 and m integrations by parts imply
 \[
@@ -1899,8 +1912,13 @@ Both signs of the ordinate occur. The right side is interpreted as an
 extended nonnegative sum; no convergence of that sum is needed for this
 lower-bound argument. This does not discard a signed remainder or assume
 global tightness. It upgrades the fixed-Gevrey local model to a legitimate
-lower bound for the prescribed original-coefficient approximant. No
-full-norm convergence, matching asymptotic, or opposing bound follows.
+lower bound for the prescribed original-coefficient approximant.
+This lower-bound argument alone proves no full-norm convergence,
+matching asymptotic, or opposing upper constant. The separate
+[Note 16](16_GEVREY_GLOBAL_APPROXIMATION_AND_RATE_20261020.md) now proves
+complete convergence and a quantitative upper rate for each fixed
+compact Gevrey taper with \(1<\sigma<2\). Its growing logarithmic
+allowance is compatible with the lower constants here.
 
 
 ### 12.5 An actual simultaneous lower bound
@@ -1931,10 +1949,318 @@ Every fixed flat taper has C_m(w)>m² separately. In particular, in the
 all-simple case (GF13) gives liminf (log N)E_(N,w)≥C_1(w)K>K.
 
 Only the weighted model optimization A C_1+B C_2 is sharp here. The
-higher-order costs have been bounded below, not optimized, and no upper
-bound for the actual global norm has been proved. Choosing Gevrey
-approximations approaching (FT15) does not justify interchanging their
-parameter limit with N→∞. The concrete advance is the actual transfer
+higher-order costs have been bounded below, not optimized. The separate
+complete upper rate in [Note 16](16_GEVREY_GLOBAL_APPROXIMATION_AND_RATE_20261020.md)
+applies to each fixed compact Gevrey taper of order \(1<\sigma<2\);
+it bounds \((\log N)E_{N,w}\) by a growing power of \(\log\log N\),
+not by a sharp multiplicity-free constant. Choosing Gevrey approximations
+approaching (FT15) therefore does not justify interchanging their
+parameter limit with N→∞ or using uniform upper constants. Section 13
+pays a particular joint limit and exhibits its multiplicity-dependent
+actual cost. The gains in this section remain the actual transfer
 (GF2) and lower bounds (GF13)/(GF15), not a simplicity conclusion.
 
 [Separate same-model continuation review, §10](../reviews/12_FINITE_PRECISION_SIGNED_KERNEL_AND_ENERGY_REVIEW_20261020.md).
+
+
+## 13. Almost-linear flat tapers: a joint-scale actual lower bound
+
+20 October 2026. Prepared for Edward Baker with substantial LLM assistance.
+Actual model **gpt-6-astra**, effort **ultra**.
+Separate same-model internal derivation and review; no specialist review
+or novelty claim. The original finite Möbius coefficients and the entire
+reciprocal-zeta height tail are retained.
+
+**Quantitative gain.** There are normalized nonnegative decreasing
+Gevrey-flat tapers \(w_\eta\to1-u\) for which an exact order-\(m\)
+critical zero, \(m\ge2\), gives the actual joint lower bound
+\[
+ \liminf_{N\to\infty}
+       \eta_N^{\,2m-3}(\log N)E_{N,w_{\eta_N}}
+       \ge \frac{A_m}{|\rho|^2}>0.
+ \tag{JL1}
+\]
+Here \(\eta_N\downarrow0\) and
+\((\eta_N\log N)^\beta/\log\log N\to\infty\), for a fixed
+Gevrey exponent \(0<\beta<1\). The constant \(A_m\) is explicit in
+the fixed cutoff below. Both conjugate windows may be added, doubling
+the right side for one nonreal conjugate pair.
+
+In particular \(\eta_N=(\log N)^{-\theta}\), \(0<\theta<1\), is allowed.
+A double zero makes the actual scaled norm \((\log N)E\) grow at least
+as \((\log N)^\theta\). An exact triple and \(1/3<\theta<1/2\) give
+an actual full norm tending to infinity, even though the previously
+extracted coefficient divided by \(\sqrt N\) tends to zero.
+This is a conditional cost for a specified moving approximant, not
+an opposing upper bound or a zero exclusion. [Note 16](16_GEVREY_GLOBAL_APPROXIMATION_AND_RATE_20261020.md)
+proves a complete upper rate for each fixed compact Gevrey taper of
+order \(1<\sigma<2\). Its constants are not asserted to remain uniform
+as the layer width in this section tends to zero with \(N\).
+
+### 13.1 Fixed cutoff, exact local cost, and the moving family
+
+Choose once and for all a nondecreasing Gevrey function \(\chi\) of
+fixed order \(\sigma>1\), with \(0\le\chi\le1\),
+\(\chi(r)=0\) for \(r\le1/2\), and \(\chi(r)=1\) for \(r\ge1\).
+The integrated Gevrey bump construction in Note12 (GF3) supplies it.
+Set \(\beta=1/\sigma\), \(Q(r)=r\chi(r)\), and, for \(0<\eta<1/4\),
+\[
+ w_\eta(u)=(1-u)\chi((1-u)/\eta)
+          =\eta Q((1-u)/\eta),\quad 0\le u\le1,
+ \qquad
+ A_m=\frac1{((m-1)!)^2}\int_0^1|Q^{(m)}(r)|^2\,dr.
+ \tag{JL2}
+\]
+These tapers equal \(1-u\) on \(u\le1-\eta\) and vanish on
+\(u\ge1-\eta/2\). They are nonnegative, decreasing, normalized at zero
+and infinitely flat at one. Every \(A_m\), \(m\ge2\), is positive:
+otherwise \(Q\) would be one polynomial of degree below \(m\) on
+\([0,1]\), incompatible with being zero near zero and equal to \(r\)
+near one.
+
+Put \(P=Q'\) and \(d=\int_0^1P^2-1>0\). The exact simple and double
+model costs of Note12 (FT4) are
+\[
+ C_1(w_\eta)=1+d\eta,\qquad
+ C_2(w_\eta)=2(1+d\eta)
+       +\frac1\eta\int_0^1(1-\eta r)^2|Q''(r)|^2\,dr
+       =\frac{A_2}{\eta}+O(1).
+ \tag{JL3}
+\]
+Indeed \(\int_0^1P=1\), and \(P\) is not the constant one. More
+generally, if \(p_{m,\eta}=-(u^{m-1}w_\eta)^{(m)}/(m-1)!\), then
+\[
+ p_{m,\eta}(u)=m\quad (0\le u\le1-\eta),
+\]
+\[
+ p_{m,\eta}(1-\eta r)
+ =\frac{(-1)^{m+1}\eta^{1-m}}{(m-1)!}
+       \frac{d^m}{dr^m}\{(1-\eta r)^{m-1}Q(r)\}.
+ \tag{JL4}
+\]
+Consequently
+\[
+ C_m(w_\eta)=A_m\eta^{3-2m}(1+O_m(\eta)),
+ \qquad m\ge2.
+ \tag{JL5}
+\]
+All constants here can depend on the one fixed cutoff. These are
+model identities; the next sections pay the joint actual transfer.
+
+### 13.2 Uniform Fourier decay and the full reciprocal tail
+
+Multiply \(w_\eta\), extended by the same formula, on the left by one
+fixed Gevrey cutoff equal to one for \(u\ge-1/2\) and zero for \(u\le-1\).
+Call the resulting compact extension \(W_\eta\). It is supported in
+\([-1,1-\eta/2]\), and equals \(w_\eta\) on \([0,1]\).
+For fixed \(H>0\), let
+\[
+ K_{H,\eta}(v)=\frac1{2\pi}\int_{\mathbb R}
+                       W_\eta(u)e^{Hu+ivu}\,du.
+\]
+The left transition is fixed. In the right transition, a derivative
+of order \(n+2\) has amplitude \(O(\eta^{-n-1})\) and support length
+\(O(\eta)\). The fixed Gevrey derivative bounds and the product rule
+therefore give, uniformly in \(0<\eta<1/4\),
+\[
+ \|(W_\eta e^{H\cdot})^{(n+2)}\|_{L^1}
+       \le C_H^{n+1}\eta^{-n}(n!)^\sigma,\qquad n\ge0,
+\]
+\[
+ \boxed{|K_{H,\eta}(v)|
+       \le \frac{C_H}{1+v^2}
+                \exp\{-c_H(\eta|v|)^\beta\},\qquad
+       \|K_{H,\eta}\|_1\le C_H.}
+ \tag{JL6}
+\]
+Replacing \((n+2)!\) by a larger exponential constant times \(n!\)
+in the derivative bound is harmless. To obtain the displayed Fourier
+estimate, integrate \(n+2\) times for \(|v|\ge1\), optimize
+\(n\asymp(\eta|v|)^\beta\), and use the uniform \(L^1\) bound for
+\(|v|\le1\). Thus the quadratic factor and its constant are uniform;
+the decay scale alone moves with \(\eta\).
+
+For each \(N,\eta\), Note12's exact convolution (GF5) holds:
+\[
+ V_{N,w_\eta}(s)=\int_{\mathbb R}
+       \frac{K_{H,\eta}(v)}
+            {\zeta(s+(H+iv)/L)}\,dv,\qquad L=\log N.
+ \tag{JL7}
+\]
+It starts with Fourier inversion on an absolutely convergent
+Dirichlet line and continues without crossing any reciprocal zero
+under RH. The compact extension for negative \(u\) changes no
+integer coefficient.
+
+Assume henceforth
+\[
+ \eta=\eta_N\longrightarrow0,\qquad
+ \frac{(\eta L)^\beta}{\log L}\longrightarrow\infty.
+ \tag{JL8}
+\]
+Fix a zero \(\rho\), a positive constant \(M\), and a fixed isolated
+disk about \(\rho\). Take \(H=1\). For \(|y|\le M/\eta\),
+the reciprocal in (JL7) at \(s=\rho+iy/L\) has real displacement
+\(1/L\). Note12 (GF6), derived from the complete xi product and
+unit-window zero counts, bounds its logarithm by
+\[
+ C\log L\,\log(C_\rho+|v|/L),
+ \qquad |v|\ge rL,
+\]
+once \(N\) is large. Here \(y/L=o(1)\) by (JL8), and \(r>0\)
+is any fixed sufficiently small radius. Uniformly on that entire
+unbounded range, this is
+\(o((\eta|v|)^\beta)\): put \(x=|v|/L\ge r\), and use boundedness of
+\(\log(C_\rho+x)/x^\beta\).
+Therefore
+\[
+ \sup_{|y|\le M/\eta}\int_{|v|\ge rL}
+ \left|\frac{K_{1,\eta}(v)}
+ {\zeta(\rho+(1+i(y+v))/L)}\right|\,dv
+       \le C_{\rho,M,r}\exp\{-c_r(\eta L)^\beta\}.
+ \tag{JL9}
+\]
+Every external height and every other zero is included. The same
+estimate for each of the finitely many Laurent principal parts follows
+directly from (JL6); no inverse-derivative moment is assumed.
+
+### 13.3 The growing-window error, with its true multiplicity scaling
+
+For the fixed event, write
+\[
+ \frac1{\zeta(\rho+z)}
+       =\sum_{j=1}^m b_j z^{-j}+G(z),\qquad
+       b_m=\frac{m!}{\zeta^{(m)}(\rho)}.
+\]
+On the central part \(|v|\le rL\), the argument stays in a smaller
+isolated disk for all \(|y|\le M/\eta\). The analytic \(G\) contribution
+is \(O(1)\) uniformly, by (JL6). The tail is paid by (JL9).
+The exact Laplace inversion in (GF10) now yields
+\[
+ V_{N,w_\eta}(\rho+iy/L)
+   =\sum_{j=1}^m b_jL^j I_{j,\eta}(y)+O_{\rho,M}(1),
+ \quad
+ I_{j,\eta}(y)=\frac1{(j-1)!}\int_0^1
+           u^{j-1}w_\eta(u)e^{-iyu}\,du .
+ \tag{JL10}
+\]
+The constants in the \(O(1)\) are independent of \(\eta_N\).
+There is no deletion of a contour or of a noncentral residue.
+
+Uniform integration by parts gives
+\[
+ |I_{1,\eta}(y)|\le\frac{C}{1+|y|},\qquad
+ |I_{j,\eta}(y)|\le\frac{C_j}{1+y^2}\quad(j\ge2).
+ \tag{JL11}
+\]
+For the second bound, \(u^{j-1}w_\eta\) vanishes at both endpoints and
+has uniformly bounded second derivative in \(L^1\). For the first,
+one integration by parts suffices. In particular, the endpoint layer
+does not introduce an unpriced factor into these bounds.
+
+Let \(e_{N,\eta}(s)=1-\zeta(s)V_{N,w_\eta}(s)\) and
+\(\mathcal E_{m,\eta}(z)=1-z^m I_{m,\eta}(-iz)\).
+Equivalently \(\mathcal E_{m,\eta}\) is Note12 (GF1) with \(w=w_\eta\).
+Multiplying (JL10) by
+\(\zeta(\rho+iy/L)=b_m^{-1}(iy/L)^m(1+O_\rho(|y|/L))\), and using
+(JL11) for every lower Laurent term, proves
+\[
+ \boxed{\sup_{|y|\le M/\eta}
+ \frac{|e_{N,\eta}(\rho+iy/L)-\mathcal E_{m,\eta}(iy)|}
+      {(1+|y|)^{m-1}}
+       \le \frac{C_{\rho,m,M}}L,\qquad m\ge2.}
+ \tag{JL12}
+\]
+The analytic-remainder term is \(O(|y|^m/L^m)\), also covered because
+\(|y|=o(L)\). In particular, on \(y=\lambda/\eta\), \(|\lambda|\le M\),
+the error after multiplication by \(\eta^{m-2}\) is
+\(O_{\rho,m,M}(1/(\eta L))=o(1)\).
+The unnormalized error is not claimed to be that small for \(m\ge3\):
+at \(|y|\asymp1/\eta\) it can be \(O(\eta^{1-m}/L)\).
+
+### 13.4 Exact scaled-window limit and the actual lower rate
+
+For almost every fixed real \(\lambda\), (JL4) and the constant bulk
+part \(p_{m,\eta}=m\) give
+\[
+ \eta^{m-2}e^{i\lambda/\eta}
+       \mathcal E_{m,\eta}(i\lambda/\eta)
+       \longrightarrow
+       \frac{(-1)^{m+1}}{(m-1)!}
+          \int_0^1Q^{(m)}(r)e^{i\lambda r}\,dr .
+ \tag{JL13}
+\]
+The constant bulk Fourier integral is \(O(\eta/|\lambda|)\) when
+\(\lambda\ne0\), and so disappears after the indicated scaling.
+At \(m=2,\lambda=0\) its pointwise contribution need not disappear;
+that singleton has no effect on the integral. The left side is
+uniformly bounded on each fixed \(\lambda\) interval, since
+\(\eta^{m-2}\|p_{m,\eta}\|_1=O_m(1)\).
+Dominated convergence, (JL12), and
+\(\rho+i\lambda/(\eta L)\to\rho\) uniformly for \(|\lambda|\le M\)
+therefore prove the actual local norm limit
+\[
+ \begin{split}
+ &\eta^{2m-3}L\,\frac1{2\pi}
+ \int_{|t-\gamma|\le M/(\eta L)}
+       \frac{|e_{N,\eta}(1/2+it)|^2}{1/4+t^2}\,dt\\
+ &\quad\longrightarrow
+ \frac1{2\pi|\rho|^2((m-1)!)^2}
+       \int_{-M}^M
+       \left|\int_0^1Q^{(m)}(r)e^{i\lambda r}\,dr\right|^2d\lambda .
+ \end{split}
+ \tag{JL14}
+\]
+All other portions of the complete squared norm are nonnegative.
+Letting \(M\to\infty\) after this joint \(N,\eta_N\) limit and using
+Plancherel proves (JL1). Fixed finitely many such windows can be
+added. In particular the conjugate zero has the same multiplicity
+and coefficient, and contributes a second copy under RH.
+
+Taking \(\eta_N=L^{-\theta}\), \(0<\theta<1\), gives the explicit rate
+\[
+ \boxed{\liminf_{N\to\infty}
+       \frac{E_{N,w_{L^{-\theta}}}}
+            {L^{\theta(2m-3)-1}}
+       \ge \frac{A_m}{|\rho|^2}.}
+ \tag{JL15}
+\]
+The assertion keeps every arbitrary noncentral multiplicity; it only
+conditions the displayed local contribution on the chosen exact order
+\(m\). If \(\theta(2m-3)>1\), the actual full norm tends to infinity.
+For \(m=2\) this condition is unavailable in \(0<\theta<1\), so no
+double-zero full-norm nonconvergence is claimed from this rate.
+
+### 13.5 The coefficient screen can vanish while the full norm diverges
+
+Let \(c_{\eta}(N)=\sum_{n\le N}\mu(n)w_\eta(\log n/L)\).
+Exact partial summation and the nonnegative derivative
+\(-w_\eta'\), with total integral one, give under RH
+\[
+ \frac{|c_\eta(N)|}{\sqrt N}
+ \le C_\nu
+   \exp\left\{C_\nu\sqrt L(\log L)^{5/2+\nu}
+                         -\frac{\eta L}{4}\right\}.
+ \tag{JL16}
+\]
+Indeed the derivative is supported in \(u\le1-\eta/2\), so
+\(N^{(u-1)/2}\le e^{-\eta L/4}\). The Mertens bound is the primary
+RH estimate already used in Note12 (FA2)–(FA4):
+[Balazard–de Roton, p.1](https://arxiv.org/pdf/0810.3587).
+No replacement of the original Möbius coefficients is made.
+
+For \(\eta=L^{-\theta}\) with \(0<\theta<1/2\), the right side
+tends to zero. The actual shrinking-interval contribution from
+Note12 (FA5) then also tends to zero. Nonetheless, at an exact triple
+zero, every \(1/3<\theta<1/2\) makes (JL15) force the full norm
+to infinity at least as \(L^{3\theta-1}\).
+
+This separates a vanishing extracted coefficient from the remaining
+full error by an explicit actual lower rate. It also quantifies the
+double-event cost \(L E\gg L^\theta\), rather than simply invoking
+the infinite \(L^2\) cost of the limiting linear model. The proof
+requires (JL8); no claim is made at layer width \(\eta\asymp1/L\)
+or under an unproved interchange of limits. There is no opposing
+upper estimate for these moving tapers and no simplicity conclusion.
+
+[Separate same-model continuation review](../reviews/16_GEVREY_GLOBAL_APPROXIMATION_REVIEW_20261020.md).
