@@ -10,15 +10,16 @@ no specialist review.
 transfers the local machinery, and screens the generic arguments.
 **No such implication or new theta exclusion has been proved here.**
 
-**Current quantitative advance:** [Note 16 §11](../notes/16_GEVREY_GLOBAL_APPROXIMATION_AND_RATE_20261020.md) proves under RH
-the complete limit (log N)E_(N,w)→Σ C_m(w)/|rho|² for each fixed compact
-Gevrey order 1<sigma<2, with a uniform scaled height tail. It removes the
-preceding logarithmic loss and gives d_N² of order 1/log N. Under the
-additional simplicity assumption the infimum has exact constant
-Z=2+EulerGamma−log(4pi), without an inverse-derivative moment. The true
-multiplicities remain in the fixed-taper constant; no exclusion follows.
-Section 25 records the separate uniform proof for slowly moving
-almost-linear tapers, whose actual upper remains multiplicity-compatible.
+**Current quantitative advance:** [Note 16 §13](../notes/16_GEVREY_GLOBAL_APPROXIMATION_AND_RATE_20261020.md) proves under RH alone
+(log N)d_N²→K=Σ m_rho²/|rho|² for the complete length-N
+Dirichlet-polynomial infimum. Bounded finite two-prime multipliers and
+the fixed-taper scaled-tail theorem pay the mixed local profiles and
+all exterior zeros, without an inverse-derivative moment. The previous
+RH-plus-simplicity value Z is a special case. The true squared
+multiplicities remain in K; no exclusion or RH-only upper Z follows.
+Section 26 records the ordered choices and scope. The fixed-taper
+asymptotic in §24 and separately uniform moving-family upper in §25
+retain their stated classes and constants.
 
 This is a separate conditional simplicity program. [Program 03][psc]
 continues to govern the original hypothetical positive-threshold surplus;
@@ -652,7 +653,7 @@ lower estimate for the unchanged Möbius coefficients.
 The exact local costs also satisfy a sharp simultaneous simple/double
 tradeoff. With K=Σm²/|rho|² and A,B the exact simple/double masses,
 the actual liminf is at least K+[sqrt(B(4A+9B))−3B]/2. This exceeds
-K when A,B>0; only the two-order model optimization is sharp. Every
+K when A,B>0 for one common taper; only the two-order model optimization is sharp. Section 26 shows that this common-taper gap does not persist for the full polynomial infimum. Every
 fixed flat taper costs more than m² at each order separately. The
 [Lean check](../numerics/lean/README.md) verifies the abstract
 projection identity from supplied Hilbert-space hypotheses, not the
@@ -772,3 +773,33 @@ a full upper, but no opposing multiplicity-free constant or moving
 first-order asymptotic follows. Larger kappa and arbitrary taper schedules
 are not ruled out. [Review 16](../reviews/16_GEVREY_GLOBAL_APPROXIMATION_REVIEW_20261020.md) checks these uniformities
 and scope; RH ⇒ simplicity remains unproved.
+
+## 26. Exact RH infimum constant through finite Dirichlet multipliers
+
+20 October 2026. Prepared for Edward Baker with substantial LLM assistance,
+**gpt-6-astra, actual effort ultra**. Separate same-model internal audits;
+no specialist review, analytic formalization or priority claim.
+
+[Note 16 §13](../notes/16_GEVREY_GLOBAL_APPROXIMATION_AND_RATE_20261020.md) proves under RH alone
+(log N)d_N²→K=Σ m_rho²/|rho|², with distinct zeros of both signs.
+For a fixed finite zero set, products of two-prime Dirichlet peaks
+select fixed tapers adapted to each multiplicity. Their support is at
+most 6^k; shortening the base polynomial to floor(N/6^k) preserves the
+length-N class. The mixed local-profile limit retains every cross term,
+and the complete scaled-tail theorem supplies summable domination.
+The finite set, tapers and peak degree are fixed before N tends to
+infinity. Burnol's lower constant then matches the upper. Real
+coefficients suffice; no effective threshold or convergence statement
+for the original linear Möbius polynomial is supplied.
+
+The same-taper tradeoff in §22 remains valid for its stated class,
+but is not a lower gap for the general infimum. The earlier simple-zero
+Z corollary in §24 remains valid as the special case K=Z. In general,
+K−Z=Σ m_rho(m_rho−1)/|rho|², with a double conjugate pair contributing
+4/(gamma²+1/4). Thus the attained upper retains the full multiple-zero
+cost and does not prove simplicity. The fixed-taper and moving-family
+results are unchanged. [Review 16](../reviews/16_GEVREY_GLOBAL_APPROXIMATION_REVIEW_20261020.md) includes the
+adversarial analytic-input recheck and separate same-model mixture
+checks. The [result index](../../../../../../../result-summaries/README.md)
+and [complete-payment rule](../../../../../../../avoid/12_term_by_term_matching_and_separate_bounds.md)
+continue to require an actual opposing estimate for an original event.

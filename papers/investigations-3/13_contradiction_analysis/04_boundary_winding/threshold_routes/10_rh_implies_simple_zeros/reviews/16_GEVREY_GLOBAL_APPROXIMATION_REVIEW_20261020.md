@@ -5,9 +5,9 @@ Actual model **gpt-6-astra (Codex), reasoning effort ultra**.
 Initial same-model derivations and checks at HEAD **663e006**; complete first-order and moving-taper continuations checked at HEAD **341152b**.
 This is an internal research review, not specialist or cross-model review.
 
-**Verdict.** The current claims in [Note 16 §§11–12](../notes/16_GEVREY_GLOBAL_APPROXIMATION_AND_RATE_20261020.md) pass the recorded internal checks. For every fixed declared Gevrey taper under RH, the actual complete norm has the exact first-order constant given by the full multiplicity-dependent profile sum. The proof now pays the actual scaled height tail. It gives \(d_N^2\asymp1/\log N\) under RH, and the constant \(Z\) for the infimum under the additional assumption of simplicity. A separate estimate tracks the exponentially growing constant for the specified moving almost-linear family and proves convergence on stated slow schedules. The earlier estimates below remain valid historical steps. The [Note 12 §13](../notes/12_FINITE_EVALUATION_AND_ENDPOINT_INVERSE_COSTS_20261020.md) moving-taper lower rates are compatible with these upper results. No RH-to-simplicity conclusion, sharp moving-taper asymptotic, specialist validation, or literature-priority claim is made.
+**Verdict.** The current claims in [Note 16 §§11–13](../notes/16_GEVREY_GLOBAL_APPROXIMATION_AND_RATE_20261020.md) pass the recorded internal checks. For every fixed declared Gevrey taper under RH, the actual complete norm has the exact first-order constant given by the full multiplicity-dependent profile sum. The proof now pays the actual scaled height tail. Section 13 now gives \((\log N)d_N^2\to K=\sum_{\rho\ {\rm distinct}}m_\rho^2/|\rho|^2\) under RH, with real coefficients and the complete tail retained. The constant \(Z\) is its all-simple special case. A separate estimate tracks the exponentially growing constant for the specified moving almost-linear family and proves convergence on stated slow schedules. The earlier estimates below remain valid historical steps. The [Note 12 §13](../notes/12_FINITE_EVALUATION_AND_ENDPOINT_INVERSE_COSTS_20261020.md) moving-taper lower rates are compatible with these upper results. No RH-to-simplicity conclusion, sharp moving-taper asymptotic, specialist validation, or literature-priority claim is made.
 
-The [result index](../../../../../../../result-summaries/README.md), [control register](../../../../../../../result-summaries/12_collision_controls_and_screening.md), and [avoid index](../../../../../../../avoid/README.md) apply. In particular this review retains [scoped conclusions](../../../../../../../avoid/07_scoped_exclusions_read_as_universal.md), [complete payments](../../../../../../../avoid/12_term_by_term_matching_and_separate_bounds.md), and [gain before expansion](../../../../../../../avoid/20_volume_without_a_gain.md). The gain is an actual complete-norm upper bound for prescribed original Möbius coefficients; it is not another event-equivalent criterion.
+The [result index](../../../../../../../result-summaries/README.md), [control register](../../../../../../../result-summaries/12_collision_controls_and_screening.md), and [avoid index](../../../../../../../avoid/README.md) apply. In particular this review retains [scoped conclusions](../../../../../../../avoid/07_scoped_exclusions_read_as_universal.md), [complete payments](../../../../../../../avoid/12_term_by_term_matching_and_separate_bounds.md), and [gain before expansion](../../../../../../../avoid/20_volume_without_a_gain.md). The gains are actual complete-norm estimates for the declared tapered Möbius polynomials and, in §9, the sharp constant for the full polynomial infimum using finite mixtures. These are quantitative conclusions, not another event-equivalent criterion.
 
 ## 1. Objects, hypotheses, and exact claims
 
@@ -23,7 +23,7 @@ Its restriction to \([0,1]\) is \(w\). The approximation and complete error are
  \frac{|1-\zeta(\tfrac12+it)V_{N,w}(\tfrac12+it)|^2}
       {\tfrac14+t^2}\,dt.
 \]
-The general upper and asymptotic theorems assume RH and no inverse-derivative moment. The infimum constant corollary explicitly assumes simplicity in addition. Fixed-taper constants may depend on the one fixed extension; §8 separately states and audits the moving-family uniformity. The coefficients remain the original finite Möbius coefficients multiplied by the declared taper.
+The general upper and asymptotic theorems assume RH and no inverse-derivative moment. The earlier IC4 corollary assumes simplicity in addition; AD2 now identifies the general multiplicity-dependent infimum constant under RH alone. Fixed-taper constants may depend on the one fixed extension; §8 separately states and audits the moving-family uniformity. In the fixed- and moving-taper statements, the coefficients remain the original finite Möbius coefficients multiplied by the declared taper. AD uses finite Dirichlet multiplier mixtures of these polynomials, which belong to the larger infimum class.
 
 The reviewed conclusions have the following distinct scopes.
 
@@ -37,6 +37,7 @@ The reviewed conclusions have the following distinct scopes.
 | ST1–ST20 | Uniform scaled height tail and \(LE_{N,w}\to\sum C_{m_\rho}(w)/|\rho|^2\) | One fixed taper; all zero multiplicities retained |
 | IC1–IC4 | \(d_N^2\asymp1/L\) under RH; \(Ld_N^2\to Z\) under RH plus simplicity | Infimum over polynomials; the sharper constant has an additional premise |
 | MU1–MU16 | \(E_{N,\eta}\le C e^{C\eta^{-a}}/L\), \(a>1/(2-\sigma)\) | Fixed cutoff, \(L^{-\theta_0}\le\eta<1/4\), fixed \(0<\theta_0<1\) |
+| AD1–AD18 | \((\log N)d_N^2\to\sum m_\rho^2/|\rho|^2\) under RH | Full polynomial infimum; finite target set, tapers and filter degree fixed before N tends to infinity |
 
 For a zero of exact multiplicity \(m\), the local profile is
 \[
@@ -225,9 +226,9 @@ Section 8 now supplies an explicitly paid upper bound for the declared moving fa
 
 The consolidated record uses three separate same-model review paths: phase, arithmetic, and Gaussian. The coordinator also independently checked the principal global and rate derivations. Coverage is explicit: the global GC proof received independent phase and Gaussian audits in addition to the coordinator's check; the QR proof received phase, arithmetic, and Gaussian audits. CH and JL received separate checks of their constants, annuli or growing windows, and complete tail payments. PM was checked separately from the actual-height argument. These are separate analytic checks within the same model family, not independent specialist validation.
 
-The earlier bounded Lean artifact for the abstract two-cost projection identity formalizes none of GC, QR, CH, PM, JL, ST, IC, or MU. No analytic Lean proof, machine-checked contour argument, or formal verification of these global approximation results is claimed here.
+The earlier bounded Lean artifact for the abstract two-cost projection identity formalizes none of GC, QR, CH, PM, JL, ST, IC, MU, or AD. No analytic Lean proof, machine-checked contour argument, or formal verification of these global approximation results is claimed here.
 
-The anchor-direction correction is resolved. The new §§7–8 supersede the earlier statements that the fixed-class global first-order passage and every moving-family upper payment were missing. The exact fixed-taper profile constant and the specific MU uniform upper bound are now proved in-note and separately checked. A sharp moving-taper asymptotic and an opposing signed arithmetic or winding estimate excluding an original multiple zero remain unproved. No novelty, universal optimality, or specialist-review claim is attached to this checkpoint.
+The anchor-direction correction is resolved. The new §§7–8 supersede the earlier statements that the fixed-class global first-order passage and every moving-family upper payment were missing. The exact fixed-taper profile constant and the specific MU uniform upper bound are now proved in-note and separately checked. Section 9 additionally checks the exact full-infimum constant K, using finite Dirichlet filters. A sharp moving-taper asymptotic and an opposing signed arithmetic or winding estimate excluding an original multiple zero remain unproved. No novelty, universal optimality, or specialist-review claim is attached to this checkpoint.
 
 
 ## 7. Complete first-order tail, exact constant, and infimum corollaries
@@ -293,7 +294,7 @@ For the infimum, \(d_N^2\le E_{N,w}\) and the already imported [Burnol lower bou
  0<K:=\sum_{\rho\ {\rm distinct}}\frac{m_\rho^2}{|\rho|^2}
  \le\liminf Ld_N^2\le\limsup Ld_N^2\le S_w<\infty.
 \]
-Thus \(d_N^2\asymp1/\log N\) under RH. Finiteness of \(K\) follows also from \(C_m\ge m^2\) and the finite upper sum. The upper coefficient is not replaced by \(K\) in the presence of multiple zeros.
+Thus \(d_N^2\asymp1/\log N\) under RH. Finiteness of \(K\) follows also from \(C_m\ge m^2\) and the finite upper sum. This fixed-taper comparison alone does not replace its upper coefficient by \(K\) in the presence of multiple zeros. Section 9 now checks a finite-filter construction that reaches \(K\) for the larger polynomial infimum.
 
 If simplicity is assumed in addition, fix an almost-linear taper first. Its coefficient is \(C_1=1+d_\chi\eta\), so
 \(\limsup Ld_N^2\le(1+d_\chi\eta)Z\) for every positive fixed \(\eta\). Taking the infimum of these bounds and applying Burnol yields
@@ -351,3 +352,132 @@ These schedules also satisfy JL8. The JL contribution of a fixed order-\(m\) zer
 \(e^{C\eta^{-a}}\eta^{2m-3}\), which grows as \(\eta\to0\).
 
 The reviewed statements therefore supply no contradiction to a putative multiple zero. They prove neither a necessary schedule threshold nor a sharp moving-family constant. The original Möbius identity, exact completion, and all multiplicities remain intact; the distinct generic controls' preservation lists are not combined into a purported arithmetic counterexample. No analytic formalization, specialist validation, novelty, or literature-optimality claim is made for either continuation.
+
+
+## 9. Finite Dirichlet filters and the full infimum constant
+
+20 October 2026 continuation, from checkpoint 39d6dba. Prepared for Edward
+Baker with substantial LLM assistance, **gpt-6-astra, actual effort ultra**.
+This is separate same-model internal review, not specialist validation.
+
+A further adversarial check rederived the Fourier normalization and
+contour shift, the anchored completed regular factor, the algebraic local
+ratio inequality, the adaptive kernel moments, and coverage of both
+height ranges in GC and ST. No shared-premise flaw was found in that
+bounded check. The primary [Burnol lower bound](https://arxiv.org/pdf/math/0103058)
+and [Bettin–Conrey–Farmer formulation and Theorem 1](https://arxiv.org/pdf/1211.5191)
+were reopened: the infimum permits these polynomial coefficients, and
+the specified-linear-polynomial theorem's additional inverse-derivative
+hypothesis is not an extra premise of the new construction.
+
+**Dependency and verdict.** The finite-filter conclusion passes the
+independent derivation and checks below, **conditional on the internally
+established Note 16 §11 scaled-tail and exact fixed-taper theorem (ST)**.
+ST is a prior result of this research, not an independently published
+external theorem. Its original proof has separate same-model internal
+reviews; this assessment does not turn those checks into specialist or
+cross-model verification. The new proof checked here is the finite
+arithmetic filtering, actual mixed-profile transfer, complete dominated
+peak limit, and ordered optimization of the infimum. The arithmetic and Gaussian paths supplied separate full derivations; the phase path and coordinator checked the complete construction. The final AD1–AD18 argument in Note 16 §13 was read in full, including its local-norm normalization repair and complex moment identity.
+
+### 9.1. Finite arithmetic filters and polynomial length
+
+The proposed peak at τ is
+P_{τ,k}(s)=[(1+2^{τ−s})/2]^k[(1+3^{τ−s})/2]^k. Under RH its boundary
+modulus is at most one, and its value at τ is exactly one. At any other
+critical-line point at least one factor has modulus strictly below one:
+otherwise both ordinate differences times log 2 and log 3 are integral
+multiples of 2π. A nonzero difference would make log 2/log 3 rational,
+contradicting unique prime factorization. Thus the peak tends to zero
+at every other fixed ordinate. This is pointwise separation, not a
+uniform gap, density, equidistribution, or interpolation assertion.
+
+Each peak is supported on 2^a3^b with 0≤a,b≤k, so its Dirichlet length
+is at most 6^k. The correction
+V_{n,w0}+Σ_{τ∈F}P_{τ,k}(V_{n,wτ}−V_{n,w0}) has length at most 6^k n.
+Taking n=floor(N/6^k) preserves admissibility, and log N/log n tends to
+one for each fixed k. No bound uniform in both k and this logarithmic
+ratio is needed or asserted. Choosing F conjugation-symmetric and the
+same real taper at conjugate locations gives real coefficients: the
+paired peak coefficients are complex conjugates.
+
+### 9.2. Actual mixed profiles, with the entire norm retained
+
+The multiplier partition is A_τ=P_{τ,k}, A_0=1−ΣP_{τ,k}; its sum is
+identically one. Hence the full error is exactly Σ_j A_j e_{n,wj}, not
+an approximation obtained by comparing separate norms. At each order-m
+zero, this identity also preserves the exact finite-n Taylor jets
+1+O((s−ρ)^m).
+
+For fixed k, the compact CH estimate on a whole isolated zero disk is
+e_{n,wj}(ρ+iy)=E_{m,wj}(iℓy)+O(1/ℓ), ℓ=log n, while
+E_{m,wj}(ix)=O((1+|x|)^{-1}). Analyticity of each fixed multiplier gives
+[A_j(ρ+iy)−A_j(ρ)]E_{m,wj}(iℓy)=O_k(|y|/(1+ℓ|y|))=O_k(1/ℓ).
+This pays the full annulus as well as the shrinking central window.
+The compact complement has error O(1/ℓ). Consequently the actual mixed
+compact limit has the coherent density p_eff=Σ_j A_j(ρ)p_{m,wj}.
+Its squared norm includes every cross term. The repaired primary text
+correctly states the **unscaled** local norm as
+||p_eff||²/(ℓ|ρ|²)+O(log ℓ/ℓ²); its scaled error is therefore
+O(log ℓ/ℓ), not O(log ℓ/ℓ²).
+
+The boundary bounds |A_τ|≤1 and |A_0|≤1+|F| dominate the complete actual
+mixed squared tail by a fixed multiple of the sum of the base-taper
+tails. ST therefore supplies tightness after multiplication by log n.
+This completes the mixed global limit. The argument uses ST only for
+its real fixed base tapers; it does not silently require a separately
+proved complex-taper theorem. Complex values occur in a finite linear
+combination whose cross-profile limit was just checked directly.
+
+### 9.3. The complete peak limit and independent local optimization
+
+For the fixed finite set F and the finitely many fixed tapers, the mixed
+profile summand is bounded, uniformly in k, by
+C_F[ C_m(w0)+Σ_{τ∈F}C_m(wτ)]/|ρ|². Every series in this finite sum is
+summable by ST. Dominated convergence on the full countable zero set
+therefore gives the chosen local taper exactly on F and the default
+taper at every other zero. There is no discarded remote zero tail, even
+if a remote phase lies arbitrarily close to a peak for some k.
+
+The primary AD13 additionally pays this limit by a finite-height
+geometric term B_H θ_H^k and the complete profile tail. Its θ_H<1
+follows from the explicit two-prime separation for finitely many
+off-diagonal pairs. The tail constant 4(J+1)² bounds both S_k and its
+pointwise limit, and is independent of k. Choosing H after the fixed
+family, then k, controls the entire difference; no uniformity in zero
+separation is claimed.
+
+Choose F first so that the default taper's complementary profile mass
+is small. At each of its finitely many locations choose a fixed flat
+Gevrey approximation to (1−u)^m. The endpoint cutoff changes the m-th
+source derivative by a uniformly bounded function supported on a layer
+of shrinking length, so its local cost approaches m². Such tapers admit
+compact extensions of any one fixed Gevrey order between one and two.
+All tapers are fixed before k, and k is fixed before N tends to infinity.
+Taking the peak limit only in the resulting constant, then the outer
+approximation tolerance to zero, proves the upper constant K. Burnol's
+already imported multiplicity-squared lower bound gives the reverse
+inequality. These ordered operations do not prescribe a moving k_N or
+swap unproved uniform limits.
+
+### 9.4. No accidental cancellation below the moment floor
+
+For each effective complex density and each 0≤r<m,
+∫_0^1 u^r p_eff(u)du=δ_{r0}, because the individual densities satisfy
+these conditions and Σ_j A_j(ρ)=1. If K_m(u,0) is the real endpoint
+reproducing kernel of polynomials of degree below m, complex Hilbert
+orthogonality therefore gives exactly
+
+\[
+ \|p_{\rm eff}\|_2^2=m^2+\|p_{\rm eff}-K_m(\cdot,0)\|_2^2.
+\]
+
+The interpolation does not cancel any required moment or produce a
+cost below m². It removes the additional restriction that one fixed
+taper must serve locations of different orders. The final constant
+K=Σ_{distinct ρ}m_ρ²/|ρ|², with both ordinate signs, retains every true
+multiplicity. Thus the result is compatible with multiple zeros and
+provides no RH-to-simplicity conclusion. It concerns an infimum over
+all admissible finite Dirichlet polynomials, not a universal prescribed
+Möbius taper, a finite zero-certification algorithm, or a new simplicity
+criterion.

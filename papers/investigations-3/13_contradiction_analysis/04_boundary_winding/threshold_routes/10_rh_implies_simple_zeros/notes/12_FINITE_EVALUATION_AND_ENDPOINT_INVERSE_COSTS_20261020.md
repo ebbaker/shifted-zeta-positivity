@@ -4,7 +4,7 @@
 **gpt-6-astra (Codex), reasoning effort ultra**, verified turn metadata.
 Separate same-model internal checks; no specialist review or novelty claim.
 
-**Outcome.** A classical Riemann–Siegel formula plus a discrete Cauchy derivative lowers the sufficient leading summand exponent for both existing gap-certified extraction schemes to one-half. The earlier geometric-versus-single-width exponent advantage belongs to the specified Euler-sum method. A separate exact Möbius mollifier still has a large paid remainder and retains the multiple-zero residue when its contour crosses the line. Endpoint heat energy retains its compatible divergence. Sections 10–12 prove an actual local transfer for fixed Gevrey-flat logarithmic tapers and a stronger prescribed-approximant lower bound, including a sharp simple/double local tradeoff. [Note 16 §11](16_GEVREY_GLOBAL_APPROXIMATION_AND_RATE_20261020.md) now proves a uniform scaled height-tail bound and the exact complete limit \((\log N)E_{N,w}\to\sum_{\rho\ {\rm distinct}}C_{m_\rho}(w)/|\rho|^2<\infty\) for every fixed compact Gevrey taper of order \(1<\sigma<2\), superseding its earlier logarithmically weakened upper rate. Section 13 proves a distinct actual lower rate for almost-linear tapers whose endpoint layer shrinks with \(N\). Note 16 §12 separately proves a uniform upper bound for that declared moving family and convergence for sufficiently slow shrinking layers. The complete fixed-taper constant and the moving-family allowance retain compatibility with the actual multiplicity costs. No original multiple zero is excluded.
+**Outcome.** A classical Riemann–Siegel formula plus a discrete Cauchy derivative lowers the sufficient leading summand exponent for both existing gap-certified extraction schemes to one-half. The earlier geometric-versus-single-width exponent advantage belongs to the specified Euler-sum method. A separate exact Möbius mollifier still has a large paid remainder and retains the multiple-zero residue when its contour crosses the line. Endpoint heat energy retains its compatible divergence. Sections 10–12 prove an actual local transfer for fixed Gevrey-flat logarithmic tapers and a stronger prescribed-approximant lower bound, including a sharp simple/double local tradeoff. [Note 16 §11](16_GEVREY_GLOBAL_APPROXIMATION_AND_RATE_20261020.md) now proves a uniform scaled height-tail bound and the exact complete limit \((\log N)E_{N,w}\to\sum_{\rho\ {\rm distinct}}C_{m_\rho}(w)/|\rho|^2<\infty\) for every fixed compact Gevrey taper of order \(1<\sigma<2\), superseding its earlier logarithmically weakened upper rate. Section 13 proves a distinct actual lower rate for almost-linear tapers whose endpoint layer shrinks with \(N\). Note 16 §12 separately proves a uniform upper bound for that declared moving family and convergence for sufficiently slow shrinking layers. The complete fixed-taper constant and the moving-family allowance retain compatibility with the actual multiplicity costs. Note 16 §13 now proves that the full polynomial infimum has exact coefficient K=Σm²/|rho|² under RH, using bounded finite Dirichlet multipliers to choose different local tapers. Thus the common-taper tradeoff below is not an additional gap for that larger infimum. No original multiple zero is excluded.
 
 This continuation follows the [result index](../../../../../../../result-summaries/README.md), [collision controls](../../../../../../../result-summaries/12_collision_controls_and_screening.md), and [avoid index](../../../../../../../avoid/README.md), particularly [scoped conclusions](../../../../../../../avoid/07_scoped_exclusions_read_as_universal.md), [complete payments](../../../../../../../avoid/12_term_by_term_matching_and_separate_bounds.md), and [gain before expansion](../../../../../../../avoid/20_volume_without_a_gain.md). These are bounded quantitative comparisons, not additional equivalent simplicity criteria.
 
@@ -1695,6 +1695,13 @@ the exact-cost approximation above. The value strictly exceeds
 the independent minima \(A+4B\). One fixed flat taper cannot
 simultaneously realize the best simple and double local profiles.
 
+This is a restriction of the common-taper class. [Note 16 §13](16_GEVREY_GLOBAL_APPROXIMATION_AND_RATE_20261020.md)
+now proves \((\log N)d_N^2\to K=\sum m_\rho^2/|\rho|^2\) under RH
+for the full polynomial infimum. Bounded finite Dirichlet multipliers
+permit different profiles at different zero locations and pay the
+complete tail. The larger infimum therefore does not inherit the
+additional common-taper gap in (FT15).
+
 For arbitrary smooth flat tapers, the model calculation alone supplies
 no actual zeta transfer. Section 12 proves that transfer for each fixed
 Gevrey taper, retaining the other poles and full height tail, and obtains
@@ -1976,7 +1983,11 @@ pays a particular joint lower limit and exhibits its multiplicity-dependent
 actual cost; Note 16 §12 supplies a separate upper estimate for its
 declared moving family, with a compatible allowance. The gains in this
 section remain the actual transfer (GF2) and lower bounds (GF13)/(GF15),
-not a simplicity conclusion.
+not a simplicity conclusion. The sharper prescribed common-taper cost
+in (GF15) is not a lower bound of that size for the unrestricted
+Dirichlet-polynomial infimum: Note 16 §13 gives its exact RH-conditional
+coefficient \(K\). This distinction preserves the class of every
+lower bound in the present section.
 
 [Separate same-model continuation review, §10](../reviews/12_FINITE_PRECISION_SIGNED_KERNEL_AND_ENERGY_REVIEW_20261020.md).
 

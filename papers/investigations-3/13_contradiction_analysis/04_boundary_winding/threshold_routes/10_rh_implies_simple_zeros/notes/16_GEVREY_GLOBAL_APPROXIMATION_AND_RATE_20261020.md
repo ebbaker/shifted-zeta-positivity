@@ -14,17 +14,26 @@ polynomial has the complete first-order squared-error limit
 \]
 Section 11 pays the actual scaled height tail uniformly in N. It removes
 the logarithmic loss of §7 and proves \(E_{N,w}=O_W(1/\log N)\),
-without simplicity or inverse-derivative moments. It also gives
-\(d_N^2\asymp1/\log N\) for the Dirichlet-polynomial infimum under RH.
-If simplicity is **additionally assumed**, ordered fixed-taper limits give
-\((\log N)d_N^2\to2+\gamma_E-\log(4\pi)\).
+without simplicity or inverse-derivative moments.
+
+Section 13 now proves the exact constant for the full Dirichlet-polynomial
+infimum under RH:
+\[
+ \lim_{N\to\infty}(\log N)d_N^2
+       =K:=\sum_{\rho\ {\rm distinct}}\frac{m_\rho^2}{|\rho|^2}.
+\]
+Explicit bounded filters built from powers of 2 and 3 let finitely many
+zeros use different local tapers while the complete remaining tail stays
+controlled. The filters and tapers are fixed before the N limit, and real
+coefficients suffice. The previous additional-simplicity constant
+\(2+\gamma_E-\log(4\pi)\) is the all-simple special case of this result.
 
 Section 12 separately tracks a moving almost-linear taper, proving
 \(E_{N,\eta}\le C\exp(C\eta^{-a})/\log N\), where
 \(a>1/(2-\sigma)\) and \((\log N)^{-\theta_0}\le\eta<1/4\),
 for each fixed \(0<\theta_0<1\). The specified slow schedules converge.
 This is a uniform-family proof, not an application of fixed-taper constants.
-Both estimates remain compatible with the costs of multiple zeros.
+These estimates remain compatible with the costs of multiple zeros.
 **RH ⇒ simplicity remains unproved.**
 
 This continues [Note 12 §§10–12](12_FINITE_EVALUATION_AND_ENDPOINT_INVERSE_COSTS_20261020.md) at repository HEAD
@@ -36,8 +45,8 @@ and [gain before expansion](../../../../../../../avoid/20_volume_without_a_gain.
 The changed quantity is the actual complete upper error. This is a
 quantitative estimate, not another equivalent simplicity criterion.
 [Review 16](../reviews/16_GEVREY_GLOBAL_APPROXIMATION_REVIEW_20261020.md) records the checks, the original anchor
-correction, and the separate same-model audits of §§11–12. The latter
-extensions start from checkpoint `341152badb4340eed052f4e9e1e48ebe52b000aa`.
+correction, and the separate same-model audits of §§11–13. Sections 11–12
+start from checkpoint `341152badb4340eed052f4e9e1e48ebe52b000aa`.
 No analytic part of this note has been formalized in Lean.
 
 ## 1. Statement
@@ -921,8 +930,11 @@ multiplicity-dependent profile sum from (GF13) of
 The logarithmic allowance in (QR1), and the earlier gap between compact
 asymptotics and the full first-order norm, are superseded. The exact
 coefficient is still \(S_w=\sum C_{m_\rho}(w)/|\rho|^2\); the proof
-does not replace it by a multiplicity-free constant. Fixed multiple-zero
-costs remain compatible with this complete estimate.
+does not replace it by a multiplicity-free constant. Section 13 attains
+the smaller constant \(K=\sum m_\rho^2/|\rho|^2\) for the full
+polynomial infimum by allowing different profiles at different locations.
+That removes the common-taper restriction, not the multiplicity cost.
+Neither complete estimate supplies an opposing simplicity bound.
 
 Note 12 §13 gives actual lower rates for an almost-linear moving taper.
 A triple zero can force divergence on certain faster schedules even while
@@ -1295,10 +1307,11 @@ In particular, under RH,
                        d_N^2\asymp\frac1{\log N}.
  \tag{IC3}
 \]
-The constants here need not be the sharp constant \(K\). The upper
-constant is supplied by any one fixed admissible Gevrey taper. This
-changes the logarithmic order of the upper estimate; it does not replace
-the multiplicity-squared lower constant by a multiplicity-free one.
+This fixed-taper comparison alone need not give the sharp constant
+\(K\): its upper constant is supplied by one fixed admissible taper.
+Section 13 subsequently attains \(K\) for the full polynomial infimum
+using finite Dirichlet multiplier mixtures. Neither result replaces the
+multiplicity-squared constant by a multiplicity-free one.
 
 There is a stronger constant statement under the **additional assumption
 that all nontrivial zeros are simple**. Let
@@ -1721,3 +1734,376 @@ multiplicities. Generic source or arithmetic controls from earlier
 notes do not satisfy those premises in combination. No source-control
 exclusion, sharp norm asymptotic for a moving taper, necessary
 convergence threshold, or RH-to-simplicity conclusion is claimed.
+
+
+## 13. Two-prime filters and the sharp polynomial-infimum constant
+
+20 October 2026 extension, from checkpoint 39d6dba. Prepared for Edward
+Baker with substantial LLM assistance, **gpt-6-astra, actual effort ultra**.
+The complete derivation and separate same-model checks are recorded in
+Review 16 §9. The gain is the exact infimum coefficient under RH, with its
+true multiplicities. This uses the internally established ST and CH
+theorems; no specialist validation, analytic formalization, or
+literature-priority claim is made.
+
+### 13.1. Statement and exact hypotheses
+
+Assume RH. With the convention of Note 12 (NB1), let
+
+\[
+ d_N^2=\inf_{D(s)=\sum_{n\le N}a_n n^{-s}}
+       \frac1{2\pi}\int_{\mathbb R}
+          \frac{|1-\zeta(\frac12+it)D(\frac12+it)|^2}
+               {1/4+t^2}\,dt,
+ \qquad
+ K=\sum_{\rho\ {\rm distinct}}\frac{m_\rho^2}{|\rho|^2}.
+ \tag{AD1}
+\]
+
+Then this note’s complete fixed-taper theorem, together with the explicit
+finite mixtures below and Burnol's lower bound, proves
+
+\[
+                  \boxed{\lim_{N\to\infty}(\log N)d_N^2=K.}
+ \tag{AD2}
+\]
+
+Both conjugate zeros appear separately in the sum, with their actual
+orders. Real coefficients suffice in the infimum. No simplicity,
+inverse-derivative moment, uniform gap, or bound on multiplicity beyond
+the proved RH inputs of this note is assumed. This supplies no effective
+threshold in \(N\) and no asymptotic for the original linear Möbius
+polynomial. Its finite coefficient choices may depend on the actual
+zero locations and multiplicities.
+
+The imported lower bound is
+\(\liminf(\log N)d_N^2\ge K\), from
+[Burnol, Theorem 1.3](https://arxiv.org/pdf/math/0103058), already checked
+in Note 12 (NB2). Its multiplicity convention is the square in (AD1).
+Finiteness of \(K\) follows from the unit-window zero count: the sum
+of squared multiplicities in a unit interval is at most the square of
+the total multiplicity, \(O(\log^2(3+|t|))\), which is summable with
+the present weight. The source distinctions from
+[Bettin--Conrey--Farmer, Theorem 1](https://arxiv.org/pdf/1211.5191),
+concerning a specified polynomial and an extra inverse-derivative moment,
+remain as recorded in Notes 12 and 16. No priority comparison is asserted.
+
+### 13.2. A mixed complete-limit lemma
+
+Fix finitely many real normalized tapers \(w_0,\ldots,w_J\), each
+admitting a compact Gevrey extension of some fixed order below two.
+Taking the largest of those finitely many orders gives a common
+\(1<\sigma<2\). Write
+
+\[
+ p_{m,j}(u)=-\frac{(u^{m-1}w_j(u))^{(m)}}{(m-1)!},\qquad
+ \mathcal E_{m,j}(z)=\int_0^1p_{m,j}(u)e^{-zu}\,du,
+ \quad C_m(w_j)=\|p_{m,j}\|_2^2.
+ \tag{AD3}
+\]
+
+Let \(A_0,\ldots,A_J\) be fixed finite Dirichlet polynomials supported
+on integers at most \(M\), satisfying \(\sum_jA_j(s)\equiv1\).
+For \(n=\lfloor N/M\rfloor\), put
+
+\[
+ D_N(s)=\sum_{j=0}^J A_j(s)V_{n,w_j}(s).
+ \tag{AD4}
+\]
+
+Every term has index at most \(Mn\le N\). Its complete error is
+exactly \(e_N(t)=\sum_j A_j(\frac12+it)e_{n,j}(t)\), by the
+identity \(\sum_jA_j=1\). The complete limit is
+
+\[
+ \boxed{
+ \lim_{N\to\infty}(\log N)E(D_N)
+   =\sum_{\rho\ {\rm distinct}}\frac1{|\rho|^2}
+      \left\|\sum_{j=0}^J A_j(\rho)p_{m_\rho,j}\right\|_2^2.
+ }
+ \tag{AD5}
+\]
+
+Here complex values \(A_j(\rho)\) are permitted, and the norm is the
+complex \(L^2(0,1)\) norm. This identity retains the signed cross
+terms; it does not replace them by separately optimized squared norms.
+
+For completeness, fix a zero \(\rho=1/2+i\gamma\) and its isolated
+disk. Let \(l=\log n\). This note’s fixed-height calculation (CH9)
+gives, uniformly in a fixed real neighborhood of \(y=0\),
+
+\[
+ e_{n,j}(\gamma+y)=\mathcal E_{m_\rho,j}(ily)+O(1/l),\qquad
+ |\mathcal E_{m_\rho,j}(ily)|\ll(1+l|y|)^{-1}.
+\]
+
+Since \(A_j(\rho+iy)-A_j(\rho)=O(|y|)\), replacement of every
+multiplier by its value at \(\rho\) introduces only \(O(1/l)\)
+throughout that disk. Plancherel and the same complete local integration
+as CH1 give the **unscaled** local norm
+\(\|\sum_j A_j(\rho)p_{m_\rho,j}\|_2^2/(l|\rho|^2)
++O(\log l/l^2)\). Away from the finitely many zeros on a fixed
+height interval, the complete error is \(O(1/l)\).
+
+The actual exterior heights are paid separately. Each finite polynomial
+is bounded on the critical line; Cauchy--Schwarz gives
+
+\[
+ |e_N(t)|^2\le C_A\sum_{j=0}^J|e_{n,j}(t)|^2.
+\]
+
+For fixed \(M\), \(\log N/\log n\to1\), and that ratio is at
+most two once \(N\ge(2M)^2\). Thus this note (ST2) gives a uniform
+decaying bound for the scaled actual tail in (AD5). Fixed-height limits
+followed by height exhaustion prove the full equality. Every derivative
+and threshold used here may depend on the fixed multiplier polynomials;
+there is no assertion uniform in a multiplier varying with \(N\).
+
+The local moment constraint is preserved even for complex multiplier
+values. If \(q=\sum_jA_j(\rho)p_{m,j}\), then
+\(\int_0^1u^r q(u)\,du=\delta_{r0}\) for \(0\le r<m\), since
+\(\sum_jA_j(\rho)=1\). Let \(K_m\) be the degree-\((m-1)\)
+endpoint reproducing kernel on \([0,1]\). Then \(q-K_m\) is
+orthogonal to that polynomial space in the complex Hilbert space, so
+\(\|q\|_2^2=m^2+\|q-K_m\|_2^2\). Thus the filters cannot cancel
+a zero's local cost below \(m^2\).
+
+### 13.3. An explicit bounded two-prime peak
+
+For each target zero \(\rho\) and integer \(k\ge1\), set
+
+\[
+ P_{\rho,k}(s)=
+       \left(\frac{1+2^{\rho-s}}2\right)^k
+       \left(\frac{1+3^{\rho-s}}2\right)^k.
+ \tag{AD6}
+\]
+
+It is a finite ordinary Dirichlet polynomial supported on
+\(2^a3^b\), \(0\le a,b\le k\), hence on integers at most
+\(M_k=6^k\). It obeys
+
+\[
+ |P_{\rho,k}(s)|\le1\quad(\Re s\ge1/2),\qquad
+ P_{\rho,k}(\rho)=1.
+ \tag{AD7}
+\]
+
+At any distinct zero \(\nu=1/2+i\lambda\),
+
+\[
+ P_{\rho,k}(\nu)\longrightarrow0.
+ \tag{AD8}
+\]
+
+Indeed each factor has modulus at most one. Equality for both would
+require \((\gamma-\lambda)\log2\) and
+\((\gamma-\lambda)\log3\) both to lie in \(2\pi\mathbb Z\).
+For \(\gamma\ne\lambda\), this would make \(\log2/\log3\)
+rational, contrary to unique prime factorization. Thus at least one
+factor has modulus strictly less than one. This argument applies to
+the entire zero set, not merely to a finite preselected list. A one-prime
+peak would not provide this guarantee.
+
+Fix a finite set \(F\) of distinct zeros, a baseline \(w_0\), and a
+fixed real taper \(w_\rho\) for each \(\rho\in F\). Define
+
+\[
+ D_{N,k}(s)=V_{n,w_0}(s)+\sum_{\rho\in F}P_{\rho,k}(s)
+                   [V_{n,w_\rho}(s)-V_{n,w_0}(s)],
+ \qquad n=\lfloor N/6^k\rfloor.
+ \tag{AD9}
+\]
+
+This has length at most \(N\), and its multiplier coefficients sum
+identically to one. For each fixed \(k\), (AD5) yields the actual
+constant
+
+\[
+ S_k=\lim_{N\to\infty}(\log N)E(D_{N,k})
+ =\sum_{\nu\ {\rm distinct}}\frac{\|q_{\nu,k}\|_2^2}{|\nu|^2},
+\]
+\[
+ q_{\nu,k}=p_{m_\nu,0}+\sum_{\rho\in F}P_{\rho,k}(\nu)
+                  (p_{m_\nu,\rho}-p_{m_\nu,0}).
+ \tag{AD10}
+\]
+
+### 13.4. Paying the complete tail as the peak degree grows
+
+Let \(J=|F|\). For every \(k\) and every zero \(\nu\),
+
+\[
+ \|q_{\nu,k}\|_2^2
+   \le 2(J+1)^2\left(C_{m_\nu}(w_0)
+                    +\sum_{\rho\in F}C_{m_\nu}(w_\rho)\right).
+ \tag{AD11}
+\]
+
+This follows from (AD7), the triangle inequality, and the coefficient
+vector \((J+1,1,\ldots,1)\) in Cauchy--Schwarz. Crucially, this
+bound is independent of \(k\), despite \(M_k=6^k\) and arbitrarily
+large individual Dirichlet coefficients. Each weighted sum on its right
+is finite by this note (ST4), because there are only finitely many fixed
+Gevrey tapers.
+
+For \(\nu\in F\), (AD7)--(AD8) give
+\(q_{\nu,k}\to p_{m_\nu,\nu}\). For \(\nu\notin F\), they
+give \(q_{\nu,k}\to p_{m_\nu,0}\). Dominated convergence in the
+**complete** sum therefore proves
+
+\[
+ \boxed{
+ \lim_{k\to\infty}S_k
+ =S_\infty(F,\{w_\rho\})
+ :=\sum_{\rho\in F}\frac{C_{m_\rho}(w_\rho)}{|\rho|^2}
+       +\sum_{\nu\notin F}\frac{C_{m_\nu}(w_0)}{|\nu|^2}.
+ }
+ \tag{AD12}
+\]
+
+Here is an explicit tail-selection form of that payment. Fix \(H\)
+containing all of \(F\), and let \(\theta_H<1\) be the maximum of
+the modulus of \(P_{\rho,1}(\nu)\) over the finitely many pairs
+\(\rho\in F\), \(|\Im\nu|\le H\), \(\nu\ne\rho\).
+Take \(\theta_H=0\) if this set is empty. The same triangle and
+norm-difference identities give a finite constant \(B_H\), independent
+of \(k\), such that
+
+\[
+ |S_k-S_\infty|
+ \le B_H\theta_H^k
+       +4(J+1)^2\sum_{j\in\{0\}\cup F}
+                  \sum_{|\Im\nu|>H}\frac{C_{m_\nu}(w_j)}{|\nu|^2}.
+ \tag{AD13}
+\]
+
+Explicitly, for \(\rho=1/2+i\gamma\) and \(\nu=1/2+i\lambda\),
+\(|P_{\rho,1}(\nu)|=
+ |\cos((\gamma-\lambda)\log2/2)
+   \cos((\gamma-\lambda)\log3/2)|\).
+
+First choose \(H\) to make the actual complete profile tail small,
+uniformly in \(k\); then choose \(k\) for the finite-height term.
+There is no appeal to a finite-zero interpolation while leaving its
+complexity-dependent tail unpaid. This estimate supplies no uniform
+effective rate in \(F\), the taper parameters, or zero separation.
+
+### 13.5. Approaching the individual order-m cost inside the fixed Gevrey class
+
+For every integer \(m\ge1\) and every \(\varepsilon>0\), there is
+a fixed admissible real Gevrey taper of any prescribed order
+\(1<\sigma<2\) for which
+
+\[
+                  m^2\le C_m(w)<m^2+\varepsilon.
+ \tag{AD14}
+\]
+
+This is the individual-order approximation in Note 12 §11; a direct
+construction verifies the required class. Fix a normalized Gevrey cutoff
+\(\chi\), zero on \(( -\infty,1/2]\) and one on \([1,\infty)\),
+and put
+
+\[
+ w_{m,\delta}(u)=(1-u)^m\chi((1-u)/\delta),\quad 0\le u\le1.
+ \tag{AD15}
+\]
+
+For fixed \(0<\delta<1/2\), this is normalized at zero, flat near one,
+and has a compact Gevrey extension using the fixed left cutoff of
+Note 12. For the limiting polynomial \(w_m=(1-u)^m\), the function
+\(p_{m,w_m}\) is the degree-\((m-1)\) endpoint reproducing kernel
+on \([0,1]\); its squared norm is \(m^2\). One can verify this
+directly: its degree is \(m-1\), and integration by parts retains the
+moments \(\int_0^1u^jp_{m,w_m}(u)\,du=\delta_{j0}\) for
+\(0\le j<m\). The shifted Legendre orthonormal basis gives squared
+endpoint norm \(\sum_{j=0}^{m-1}(2j+1)=m^2\).
+
+The \(m\)-th derivative of
+\(u^{m-1}(w_{m,\delta}-w_m)\) is bounded independently of \(\delta\)
+and supported in an interval of length \(\delta\). Leibniz's rule
+pays every cutoff derivative by the corresponding factor
+\((1-u)^m\). Thus
+\(\|p_{m,w_{m,\delta}}-p_{m,w_m}\|_2^2=O_{m,\chi}(\delta)\).
+Both functions have the same moment constraints. Orthogonality to the
+reproducing kernel therefore gives the stronger exact comparison
+
+\[
+ C_m(w_{m,\delta})-m^2
+   =\|p_{m,w_{m,\delta}}-p_{m,w_m}\|_2^2
+   =O_{m,\chi}(\delta),
+ \tag{AD16}
+\]
+
+which proves (AD14). No parameter in this approximation is varied with
+\(N\) in the argument below.
+
+### 13.6. Ordered choices, real coefficients, and the sharp infimum
+
+Fix \(\varepsilon>0\) and any one admissible baseline \(w_0\).
+Its complete profile sum is finite. Choose a finite conjugation-invariant
+set \(F\) such that
+\(\sum_{\nu\notin F}C_{m_\nu}(w_0)/|\nu|^2<\varepsilon\).
+Next choose a fixed taper \(w_\rho\) as in (AD14) at every target,
+using the same taper at conjugate targets, so that
+
+\[
+ \sum_{\rho\in F}\frac{C_{m_\rho}(w_\rho)-m_\rho^2}{|\rho|^2}
+                                    <\varepsilon.
+\]
+
+Equation (AD12) then gives \(S_\infty\le K+2\varepsilon\).
+With these choices fixed, (AD13) supplies a finite \(k\) such that
+\(S_k\le K+3\varepsilon\). For this one fixed polynomial mixture,
+take \(N\to\infty\) in (AD10). The infimum comparison gives
+
+\[
+       \limsup_{N\to\infty}(\log N)d_N^2
+          \le S_k\le K+3\varepsilon.
+ \tag{AD17}
+\]
+
+Finally let \(\varepsilon\downarrow0\) and combine with Burnol's
+lower bound. This proves (AD2). The choice order is
+\(F\), tapers, finite height for (AD13), \(k\), then
+\(N\to\infty\), then \(\varepsilon\downarrow0\). In particular
+there is no unproved uniform interchange of the taper or peak degree
+with \(N\), and no shortening of the length budget.
+
+The coefficients can be real without an additional projection. Indeed
+\(P_{\bar\rho,k}(s)=\overline{P_{\rho,k}(\bar s)}\); pair conjugate
+targets with the same real taper in (AD9). Their coefficient sums are
+real, and the baseline is real. Its constant coefficient is one because
+each difference \(V_{n,w_\rho}-V_{n,w_0}\) has zero constant coefficient.
+
+### 13.7. What this changes, and what it does not
+
+The common-taper simple/double tradeoff of Note 12 §11 remains valid for
+that class. It is not a lower gap for the full Dirichlet-polynomial
+infimum: the bounded multipliers select different profiles at different
+zeros and pay the entire remaining sum through (AD11)--(AD13).
+
+Under RH the linear zero mass is
+\(Z=\sum_{\rho\ {\rm distinct}}m_\rho/|\rho|^2
+ =2+\gamma_E-\log(4\pi)\). The constant just obtained satisfies
+
+\[
+ K-Z=\sum_{\rho\ {\rm distinct}}
+              \frac{m_\rho(m_\rho-1)}{|\rho|^2}.
+ \tag{AD18}
+\]
+
+An order-m conjugate pair at ordinates \(\pm\gamma\) contributes
+exactly \(2m(m-1)/(\gamma^2+1/4)\) to this excess. The complete
+upper constant therefore increases by the same multiplicity cost as
+the lower constant. This proves neither an RH-only upper \(Z\), nor
+simplicity, nor convergence of the prescribed original linear taper.
+The missing opposing arithmetic estimate remains missing.
+
+The controls previously constructed do not satisfy all the unchanged
+Möbius/zeta convolution and exact completion premises used in this note.
+This argument does not combine their different preservation lists or
+claim that the present finite mixtures preserve the coefficients of a
+single original Möbius taper. They are explicit admissible polynomials
+for the full infimum, which is exactly the class stated in (AD1).

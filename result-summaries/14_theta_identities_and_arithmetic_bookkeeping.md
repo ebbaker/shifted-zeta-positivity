@@ -532,9 +532,10 @@ each fixed compact Gevrey order 1<sigma<2: the uniform actual scaled tail
 is sup_N (log N)E^(|t|>T)≪T^(sigma−2+eta), and
 (log N)E_(N,w)→Σ C_m(w)/|rho|²<infinity. This removes the previous
 logarithmic loss and pays the complete first-order passage. Burnol's
-lower bound then gives d_N² of order 1/log N under RH. With simplicity
-additionally assumed, fixed almost-linear tapers give the infimum limit
-(log N)d_N²→Z, without an inverse-derivative moment. This is neither
+lower bound then gives d_N² of order 1/log N under RH. At that checkpoint, with simplicity
+additionally assumed, fixed almost-linear tapers gave the infimum limit
+(log N)d_N²→Z, without an inverse-derivative moment; the RH-only K
+continuation below now contains this as a special case. This is neither
 convergence of the original linear Möbius polynomial nor a changing-taper
 uniformity claim. The actual C_m and m² costs retain the missing
 opposition to a multiple zero. [Same-model review 16](../papers/investigations-3/13_contradiction_analysis/04_boundary_winding/threshold_routes/10_rh_implies_simple_zeros/reviews/16_GEVREY_GLOBAL_APPROXIMATION_REVIEW_20261020.md).
@@ -555,3 +556,19 @@ constant, necessary threshold or simplicity conclusion follows.
 [Same-model review 16](../papers/investigations-3/13_contradiction_analysis/04_boundary_winding/threshold_routes/10_rh_implies_simple_zeros/reviews/16_GEVREY_GLOBAL_APPROXIMATION_REVIEW_20261020.md); for Edward Baker with
 substantial LLM assistance, **gpt-6-astra, ultra**, no specialist review
 or priority claim.
+
+
+**Exact RH infimum constant, 20 October 2026:**
+[BW10 Note 16 §13](../papers/investigations-3/13_contradiction_analysis/04_boundary_winding/threshold_routes/10_rh_implies_simple_zeros/notes/16_GEVREY_GLOBAL_APPROXIMATION_AND_RATE_20261020.md) is **proved in-note under RH**:
+(log N)d_N²→K=Σ m_rho²/|rho|² over distinct zeros of both signs.
+Fixed finite two-prime Dirichlet multipliers select local tapers, pay
+all exterior zeros through the complete scaled-tail theorem, and retain
+the length budget. Real coefficients suffice. This extends the earlier
+simple-zero Z corollary without an inverse-derivative moment. The
+source states: “The complete upper constant therefore increases by the
+same multiplicity cost as the lower constant.” The same-taper tradeoff
+is not a gap for the full infimum. K−Z=Σm(m−1)/|rho|², including
+4/(gamma²+1/4) from a double pair; no RH-only upper Z or original-zero
+exclusion follows. [Same-model review 16](../papers/investigations-3/13_contradiction_analysis/04_boundary_winding/threshold_routes/10_rh_implies_simple_zeros/reviews/16_GEVREY_GLOBAL_APPROXIMATION_REVIEW_20261020.md).
+For Edward Baker with substantial LLM assistance, **gpt-6-astra, ultra**;
+no specialist review, analytic Lean verification or priority claim.

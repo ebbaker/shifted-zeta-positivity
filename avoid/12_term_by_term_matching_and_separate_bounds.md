@@ -376,9 +376,11 @@ for each fixed compact Gevrey order 1<sigma<2. The earlier logarithmic
 loss and missing first-order passage are superseded. Do not retain them
 as current obstructions. Conversely, the limiting sum still contains
 the true multiplicity-dependent C_m; recovering it is not an opposing
-bound. The RH-only infimum has order 1/log N. Its exact constant Z
-requires simplicity as an additional assumption and uses fixed-taper
-limits in order, without an inverse-derivative moment; it is not a
+bound. At that checkpoint the RH-only infimum had order 1/log N,
+and the exact Z constant was proved with simplicity additionally
+assumed. The RH-only K continuation below contains this as a special
+case. Both use ordered fixed-parameter limits and no inverse-derivative
+moment; neither is a
 convergence theorem for the original linear Möbius polynomial or a
 uniform upper for changing tapers. [Same-model review 16](../papers/investigations-3/13_contradiction_analysis/04_boundary_winding/threshold_routes/10_rh_implies_simple_zeros/reviews/16_GEVREY_GLOBAL_APPROXIMATION_REVIEW_20261020.md).
 Prepared for Edward Baker with substantial LLM assistance,
@@ -399,3 +401,23 @@ moving tapers and a moving first-order asymptotic remain outside this
 claim. [Same-model review 16](../papers/investigations-3/13_contradiction_analysis/04_boundary_winding/threshold_routes/10_rh_implies_simple_zeros/reviews/16_GEVREY_GLOBAL_APPROXIMATION_REVIEW_20261020.md). For Edward Baker
 with substantial LLM assistance, **gpt-6-astra, ultra**; no priority or
 simplicity claim.
+
+
+**A common-taper gap is not an infimum gap, 20 October 2026 (BW10).**
+[Note 16 §13](../papers/investigations-3/13_contradiction_analysis/04_boundary_winding/threshold_routes/10_rh_implies_simple_zeros/notes/16_GEVREY_GLOBAL_APPROXIMATION_AND_RATE_20261020.md) proves the RH-only full infimum
+constant K=Σm²/|rho|² by explicit bounded finite two-prime Dirichlet
+multipliers. The source says of the common-taper tradeoff: “It is not
+a lower gap for the full Dirichlet-polynomial infimum”. Different
+local profiles are allowed in that larger class. Retain the length
+payment floor(N/6^k), complete mixed profiles and all-zero tail; bounded
+holomorphic selectors alone would not supply admissible polynomials.
+The finite set, tapers and k are fixed before N tends to infinity.
+Do not infer a uniform k_N or taper schedule, an effective cutoff, or
+an asymptotic for the original linear Möbius polynomial. Conversely,
+attaining K does not remove its squared multiplicities: K−Z is the
+positive multiplicity excess, so an upper Z is still unproved. This
+updates the infimum conclusion while preserving the fixed-taper
+tradeoff and separately paid moving-family scope.
+[Same-model review 16](../papers/investigations-3/13_contradiction_analysis/04_boundary_winding/threshold_routes/10_rh_implies_simple_zeros/reviews/16_GEVREY_GLOBAL_APPROXIMATION_REVIEW_20261020.md). For Edward Baker
+with substantial LLM assistance, **gpt-6-astra, ultra**; no analytic
+formalization, priority or simplicity claim.
