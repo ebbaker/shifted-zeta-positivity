@@ -566,3 +566,55 @@ complete heat-tail estimate, original-zeta upper below its endpoint
 cost, multiple-zero exclusion, or BW09 cap surplus. Only the elementary
 Gram and heat-geometry parts transfer without original-zeta RH arithmetic.
 The canonical manuscript was left at its requested consolidation checkpoint.
+
+## 13. Positive-heat complete-norm obstruction and exact damping threshold
+
+20 October 2026, from checkpoint `79e76cf`. Prepared for Edward Baker
+with substantial LLM assistance, **gpt-6-astra, actual effort ultra**.
+Separate same-model derivation and adversarial checks; no specialist
+validation, analytic formalization or novelty claim.
+
+**Verdict: the scoped GH1–GH13 claims in [Note 16 §16](../notes/16_GEVREY_GLOBAL_APPROXIMATION_AND_RATE_20261020.md) pass the internal checks.**
+The arithmetic and Gaussian paths directly checked [Polymath15,
+equations (1), (2), (6)–(10) and Proposition 9.1(i)](https://arxiv.org/html/1904.12438v2#S9),
+including the real axis and the precise range 0<t<=1/2. The normalized
+carrier is q=8|M_t|/|A|, with h=2cos(theta)+error; equivalently the
+cosine amplitude is 16|M_t|/|A|. Squaring gives the exponent t/8.
+The phase derivatives come from the exact carrier formula, never from
+differentiating the uncontrolled remainder.
+
+The phase path separately expanded every frequency of |D|² and checked
+integration by parts with boundary terms, proving the cosine-square
+mean rather than assuming independence. The additive asymptotic error,
+the minimum of the actual positive amplitude, the original weight and
+the target subtraction are all retained. Each remote block has lower
+bound T^(-1)exp[(t/8)log²(T/(2pi))], tending to infinity. Thus every
+nonzero finite D is inadmissible in the unchanged weighted space;
+D=0 has error one. This is an extended-real infimum, not a new ordinary
+Nyman–Beurling distance theorem. Applying the result separately at each
+finite N with t=v/(log N)² needs no uniform onset as N grows.
+
+For the damping corollary, the combined carrier/weight exponent is
+(t/8−b)log²(u/(2pi))−t pi²/32+O_t(log u/u). Its exact remainder
+makes the equality case b=t/8 integrable. Below the threshold the
+combined minimum, rather than separate minima, gives divergence.
+Negative heights, arbitrary complex D and every bounded compact
+continuation of the weight are accounted for. The zero polynomial is
+excluded from the iff statement, and the original infimum value one
+is not assigned to changed weights.
+
+The obstruction is unconditional and concerns the original theta heat
+flow, original completion and specified weight. The control screen
+names the source identity that the four control families change; the
+finite-frequency lemma does not exclude their collisions. Original
+fixed-zeta ST, the compact HD result and completed-ratio energies are
+unaffected. BW09 receives this same scoped limitation, not an RH or
+cap-surplus result. The canonical manuscript summarizes the obstruction
+and cites the primary input; the detailed proof stays in the note.
+
+The revised PDF remains six pages. Two-pass compilation has no unresolved
+references or layout warnings; all six final rendered pages were visually
+checked. Two long section headings were shortened to restore clear number
+spacing, without changing their mathematical content. The manuscript
+keeps analytic estimates primary and cites computational checks briefly.
+These are document checks, separate from the internal analytic review.

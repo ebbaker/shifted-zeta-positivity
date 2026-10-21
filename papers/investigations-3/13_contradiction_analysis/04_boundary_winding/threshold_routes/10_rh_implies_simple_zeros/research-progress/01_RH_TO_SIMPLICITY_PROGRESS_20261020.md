@@ -47,6 +47,19 @@ the present results are internally reviewed and need specialist scrutiny.
 
 ## Quantitative outcomes
 
+- [Note 16 §16][n16] proves unconditionally that, at each fixed
+  0<t<=1/2, every nonzero finite Dirichlet polynomial has infinite
+  full error against the heat-deformed numerator divided by the
+  original completion, with the unchanged weight. The extended-real
+  infimum is one, attained only by D=0. This applies separately at
+  t=v/(log N)² for each sufficiently large finite N. Multiplying the
+  weight by exp[−b log²(|u|/(2pi))] at large heights restores finiteness
+  for each fixed nonzero D exactly when b>=t/8. This is a different norm,
+  not a simplicity bound.
+  The compact calculation below and Note 15's ratio energy remain valid.
+  [Review 16 §13][review16] checks the primary asymptotic, finite-frequency
+  correlation and the equality case. The canonical brief records the
+  limitation; no original-zero exclusion or BW09 surplus is obtained.
 - [Note 16 §15][n16] proves an actual fixed-neighborhood norm limit
   at a double zero for t=v/(log N)^2, retaining the original Möbius
   polynomial and deforming only the completed numerator. With
@@ -55,9 +68,8 @@ the present results are internally reviewed and need specialist scrutiny.
   at coalescence, is below two at a=5pi/4, and exceeds two again at
   a=3pi/2. The fixed-taper coefficient is an exact convex quadratic
   in v. Thus Note 15's ratio-energy monotonicity cannot be transferred
-  to this cost. The new estimate is local; no global heat-family
-  infimum, original endpoint exclusion or BW09 surplus is obtained.
-  The six-page consolidation manuscript remains unchanged.
+  to this cost. This estimate is local; the literal full norm is now shown infinite
+  in §16. No original endpoint exclusion or BW09 surplus is obtained.
 - [Note 16 §14][n16] now replaces finite-height attenuation by exact
   finite Dirichlet filters, with the complete remaining profile tail
   bounded independently of the filters' degrees. For two nearby nodes

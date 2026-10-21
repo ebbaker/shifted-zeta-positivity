@@ -85,3 +85,5 @@ same-model checks; the signed arithmetic gate remains open.
 [Review 16 §10](16_GEVREY_GLOBAL_APPROXIMATION_REVIEW_20261020.md) checks the exact three-term annihilator, finite-set products, degree-independent complete profile-tail bound, primary Bernstein inequality, sharp two-point length and larger-supremum tradeoff. It retains the original heat-coordinate factor and the root-isolation-only scope; no heat-family infimum or simplicity claim follows. Separate same-model internal review, **gpt-6-astra, ultra**.
 
 [Review 16 §12](16_GEVREY_GLOBAL_APPROXIMATION_REVIEW_20261020.md) checks the actual compact heat transfer, sharp cosine/sine Gram cost, flat-taper approximation and nonmonotonicity. The review is same-model and retains the local scope.
+
+[Review 16 §13](16_GEVREY_GLOBAL_APPROXIMATION_REVIEW_20261020.md) checks the primary positive-heat normalization, complete finite-frequency divergence proof and sharp weight threshold, including equality. Same-model internal review; no simplicity exclusion.

@@ -1142,3 +1142,9 @@ Its optimized coefficient is not monotone: Q(pi)=2, Q(5pi/4)<2 and
 Q(3pi/2)>2. This does not alter the ratio-energy theorem; it rules out
 transferring that theorem's monotonicity to this approximation cost.
 No complete heat-family norm estimate is supplied by the compact result.
+
+**Global-norm clarification:** [Note 16 §16](16_GEVREY_GLOBAL_APPROXIMATION_AND_RATE_20261020.md)
+now proves that the unchanged original-completion Dirichlet norm is
+infinite for every nonzero finite polynomial when 0<t<=1/2, without RH.
+The sharp logarithmic Gaussian damping threshold is t/8. This does not
+affect the ratio energy here, whose denominator is itself heat-deformed.

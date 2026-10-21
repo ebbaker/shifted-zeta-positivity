@@ -3,6 +3,7 @@
 \usepackage[T1]{fontenc}
 \usepackage{lmodern,microtype,amsmath,amssymb,amsthm}
 \usepackage[colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue]{hyperref}
+\hypersetup{pdftitle={RH-Conditional Approximation Estimates and the Remaining Simplicity Problem},pdfauthor={Drafted for Edward Baker}}
 \usepackage{enumitem}
 \setlist{nosep,leftmargin=*}
 \newtheorem{theorem}{Theorem}
@@ -33,7 +34,7 @@ analytic payments referenced to the research notes.
 \end{abstract}
 
 \section{Scope and the unresolved quantity}
-Throughout, RH is an assumption, not a conclusion. Write
+Unless stated otherwise, RH is an assumption, not a conclusion. Write
 \(\rho=\frac12+i\gamma\) for a distinct nontrivial zero, \(m_\rho\) for
 its multiplicity, and sum over both ordinate signs. The two masses are
 \begin{equation}\label{eq:KZ}
@@ -68,7 +69,7 @@ formalization. In particular, the complete scaled-tail theorem below is
 a substantial internal premise, not a previously published theorem
 being cited under a new name. No novelty or priority claim is made.
 
-\section{Fixed Gevrey approximation and the complete tail}
+\section{Fixed Gevrey approximation and complete tails}
 For a Dirichlet polynomial \(D\), define
 \[
  E(D)=\frac1{2\pi}\int_{\mathbb R}
@@ -312,10 +313,20 @@ zeros. At \(\alpha=\frac12\), the last coefficient is \((K-Z)/4\).
 These are ordered limits: first \(\epsilon\to0\) at fixed \(v\), then
 \(v\to\infty\). They do not assert convergence of time derivatives
 or a joint limit with unbounded \(v(\epsilon)\).
-The heat-deformed completion has not been assigned an Euler product
-or the original zeta Dirichlet convolution.
+There is also a global obstruction to using the original completion
+\(A(s)=\tfrac12s(s-1)\pi^{-s/2}\Gamma(s/2)\).
+For every fixed \(0<t\le\frac12\) and nonzero finite Dirichlet polynomial
+\(D\), the original weighted error against
+\(Z_t(s)=\mathcal F_t(s-\frac12)/A(s)\) is infinite, unconditionally.
+Polymath's two-carrier asymptotic~\cite{Polymath}, with finite-frequency
+integration by parts, gives a block lower bound
+\(T^{-1}\exp[(t/8)\log^2(T/(2\pi))]\to\infty\).
+For \(b\ge0\), multiplying the weight at large heights by
+\(e^{-b\log^2(|y|/(2\pi))}\) restores finiteness exactly when
+\(b\ge t/8\) (\Nref, Section 16). This changes the norm; it leaves
+the compact heat calculation and completed-ratio energy intact.
 
-\section{Relation to the expanding-contour RH investigation}
+\section{Relation to BW09}
 The originating BW09 route seeks to rule out a hypothetical positive
 all-real threshold by forcing a later collision. Its current manuscript
 assumes an attained finite-height ordinary event at that threshold;
@@ -387,25 +398,21 @@ The present estimates warrant consolidation and a change of viewpoint,
 not a claim of proximity to a proof.
 
 \paragraph{Supporting checks.}
-The repository's
-\href{../numerics/EXACT_ALGEBRA_REPLAY_20261020.json}{exact-algebra replay}
+The \href{../numerics/EXACT_ALGEBRA_REPLAY_20261020.json}{exact-algebra replay}
 and \href{../numerics/lean/README.md}{bounded Lean check}
-support selected algebraic identities and a bounded inner-product
-tradeoff. Numerical investigations in the originating
-\href{../../09_expanding_contour_later_collision/manuscript/main.tex}{boundary-winding manuscript}
-provide context. None verifies the analytic tail theorem or simplicity;
-no numerical evidence is used as a proof premise here.
+support selected identities and an inner-product tradeoff.
+The \href{../../09_expanding_contour_later_collision/manuscript/main.tex}{BW09 manuscript}
+cites supporting numerics. These checks do not verify the analytic tail
+theorem or simplicity and are not proof premises here.
 
 \paragraph{Acknowledgement and draft record.}
-This manuscript was drafted for Edward Baker with substantial assistance
-from OpenAI's \texttt{gpt-6-astra}, recorded reasoning effort
-\texttt{ultra}. The derivations and reviews are internal LLM work.
-Detailed proofs, corrections and scope checks remain in
+Drafted for Edward Baker with substantial OpenAI \texttt{gpt-6-astra}
+assistance, recorded effort \texttt{ultra}. Derivations and reviews are
+internal LLM work. Detailed proofs and corrections are in
 \href{../notes/12_FINITE_EVALUATION_AND_ENDPOINT_INVERSE_COSTS_20261020.md}{Note 12},
 \Href, \Nref, and
 \href{../reviews/16_GEVREY_GLOBAL_APPROXIMATION_REVIEW_20261020.md}{Review 16}.
-Milestones are recorded in \texttt{../DRAFT\_HISTORY.md}; this is the
-canonical draft, with no new snapshot directory.
+\texttt{../DRAFT\_HISTORY.md} indexes milestones of this canonical draft.
 
 \begin{thebibliography}{9}\small
 \bibitem{Burnol}
@@ -420,6 +427,11 @@ Theorem 2. \href{https://arxiv.org/abs/1309.1526}{arXiv:1309.1526}.
 V. Chandee and K. Soundararajan,
 \emph{Bounding \(|\zeta(1/2+it)|\) on the Riemann hypothesis},
 Theorem 1.1. \href{https://arxiv.org/abs/0908.2008}{arXiv:0908.2008}.
+\bibitem{Polymath}
+D. H. J. Polymath, \emph{Effective approximation of heat flow evolution
+of the Riemann $\xi$ function, and a new upper bound for the de
+Bruijn--Newman constant}, Proposition 9.1(i).
+\href{https://arxiv.org/abs/1904.12438v2}{arXiv:1904.12438v2}.
 \bibitem{Redheffer}
 R. M. Redheffer, \emph{On a theorem of Plancherel and P\'olya},
 Pacific J. Math. \textbf{3} (1953), 823--835, Section 5, Theorem 11.

@@ -853,10 +853,37 @@ minimum with O(eta) excess while preserving both moments. For a single
 fixed taper the coefficient is a convex quadratic in v.
 
 This is different from Note 15's monotone completed-ratio energy.
-No full heat-family tail, endpoint contradiction or phase surplus has
-been proved. The Gram calculation and Hermite separation can inform
+The compact calculation alone supplies no full heat-family upper bound;
+§29 proves that its literal unchanged global norm diverges. No endpoint
+contradiction or phase surplus has been proved. The Gram calculation and Hermite separation can inform
 BW09; the actual Möbius transfer requires RH at the original zeta
 endpoint. [Review 16 §12](../reviews/16_GEVREY_GLOBAL_APPROXIMATION_REVIEW_20261020.md)
 checks the transfer and scope. The
 [complete-payment rule](../../../../../../../avoid/12_term_by_term_matching_and_separate_bounds.md)
 prevents using this compact result as a complete-norm bound.
+
+## 29. The unchanged global heat norm is infinite
+
+20 October 2026. Prepared for Edward Baker with substantial LLM assistance,
+**gpt-6-astra, actual effort ultra**. Same-model internal checks only.
+
+[Note 16 §16](../notes/16_GEVREY_GLOBAL_APPROXIMATION_AND_RATE_20261020.md)
+proves an unconditional obstruction: for 0<t<=1/2, every nonzero finite
+Dirichlet polynomial has infinite complete error against the heat
+numerator divided by the original completion, with the original weight.
+The zero polynomial has error one. Thus the compact result in §28 cannot
+be extended by keeping this norm unchanged, even at t=v/(log N)².
+The proof uses Polymath15's exact two-carrier asymptotic and pays every
+finite-frequency correlation; it requires no RH or event assumption.
+Logarithmic Gaussian damping exp[−b log²(|u|/(2pi))] restores finiteness
+for each fixed nonzero D precisely at b>=t/8, but changes the space.
+
+BW09 inherits this limitation in the stated time range. Its contour and
+completed-ratio methods are unaffected; the result supplies no strict
+surplus, threshold coverage or multiplicity exclusion. BW10 remains a
+structurally narrower conditional target, with an unresolved signed
+arithmetic estimate. The [result index](../../../../../../../result-summaries/README.md),
+[avoid index](../../../../../../../avoid/README.md) and
+[complete-payment rule](../../../../../../../avoid/12_term_by_term_matching_and_separate_bounds.md)
+prevent interpreting local heat separation as a complete upper bound.
+See [Review 16 §13](../reviews/16_GEVREY_GLOBAL_APPROXIMATION_REVIEW_20261020.md).

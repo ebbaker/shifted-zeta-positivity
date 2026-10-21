@@ -39,7 +39,10 @@ transfer the fixed-zeta theorem to a heat-deformed function.
 Section 15 gives the exact actual local norm at a heat-split double
 zero on the scale t=v/(log N)^2. Its sharp fixed-taper infimum is a
 nonmonotone finite-separation coefficient, distinct from Note 15's
-monotone ratio energy. No complete heat-family norm is asserted.
+monotone ratio energy. Section 16 proves unconditionally that the literal
+full norm is infinite for every nonzero finite Dirichlet polynomial at
+each fixed 0<t<=1/2. Logarithmic Gaussian damping has sharp threshold
+t/8 for restoring finiteness; it changes the approximation space.
 
 Section 12 separately tracks a moving almost-linear taper, proving
 \(E_{N,\eta}\le C\exp(C\eta^{-a})/\log N\), where
@@ -58,7 +61,7 @@ and [gain before expansion](../../../../../../../avoid/20_volume_without_a_gain.
 The changed quantity is the actual complete upper error. This is a
 quantitative estimate, not another equivalent simplicity criterion.
 [Review 16](../reviews/16_GEVREY_GLOBAL_APPROXIMATION_REVIEW_20261020.md) records the checks, the original anchor
-correction, and the separate same-model audits of §§11–15. Sections 11–12
+correction, and the separate same-model audits of §§11–16. Sections 11–12
 start from checkpoint `341152badb4340eed052f4e9e1e48ebe52b000aa`.
 No analytic part of this note has been formalized in Lean.
 
@@ -2557,7 +2560,9 @@ the actual local coefficient in (HD3) strictly below two. The
 reduction comes from finite-resolution cross terms, retained in
 the Gram matrix. It violates no original-zeta lower bound: the
 target function varies with N, only a fixed neighborhood is measured,
-and no complete heat-family Dirichlet infimum has been identified.
+and this local statement identifies no complete heat-family infimum.
+Section 16 now proves that the literal unchanged full norm is infinite
+for every nonzero finite polynomial at each positive time in its range.
 
 This rejects a monotone interpolation claim for this precise optimized
 local approximation class. It does not contradict Note 15's distinct
@@ -2565,6 +2570,235 @@ monotone completed-ratio coefficient, exclude a multiple zero, or
 supply BW09's strict phase surplus. The elementary Gram calculation
 and Hermite separation are reusable in BW09; (HD3) uses the original
 Möbius convolution under RH and cannot simply be transplanted to
-an unknown positive threshold. The canonical six-page manuscript
-remains a consolidation checkpoint; this scoped continuation belongs
-in the notes.
+an unknown positive threshold. The detailed local continuation remains in the notes; the canonical
+brief now also records the global obstruction proved in §16.
+
+## 16. Positive heat time leaves the original weighted Dirichlet approximation space
+
+20 October 2026, from checkpoint `79e76cf`. Prepared for Edward Baker with substantial LLM assistance.
+Actual model **gpt-6-astra**, reasoning effort **ultra**. Same-model
+derivation from an explicitly checked primary asymptotic; no specialist
+review or novelty claim. This is a scoped obstruction to an unchanged
+global norm, not an event-exclusion criterion.
+
+**Result.** For every fixed \(0<\tau\le1/2\) and every nonzero finite
+Dirichlet polynomial \(D\),
+\[
+ \boxed{\quad \frac1{2\pi}\int_{\mathbb R}
+ \frac{|1-Z_\tau(1/2+iu)D(1/2+iu)|^2}{1/4+u^2}\,du=\infty,\quad}
+ \qquad Z_\tau(s)=\frac{8H_\tau(-2i(s-1/2))}{\mathcal A(s)}.
+ \tag{GH1}
+\]
+Here \(\mathcal A(s)=s(s-1)\pi^{-s/2}\Gamma(s/2)/2\) is the
+**unchanged** completion factor. This assertion is unconditional. Its
+stated heat-time range is exactly the range of the primary proposition
+used below; a blanket extension to \(\tau>1/2\) is not asserted.
+
+### 16.1. The checked primary input includes the real axis
+
+[Polymath15, Proposition 9.1(i), equations (6)–(10)](https://arxiv.org/html/1904.12438v2#S9)
+was checked in both HTML and the [PDF, p.56](https://arxiv.org/pdf/1904.12438v2).
+For \(0<\tau\le1/2\), it implies at real \(x\ge\exp(C/\tau)\)
+\[
+ H_\tau(x)=2\Re M_\tau((1+ix)/2)
+                 +O(x^{-c\tau})|M_\tau((1+ix)/2)|,
+ \quad M_\tau(s)=e^{\tau\alpha(s)^2/4}M_0(s),                 \tag{GH2}
+\]
+where \(M_0\) is the leading Stirling expression for
+\(\mathcal A/8\), and
+\[
+ \alpha(s)=(\log M_0)'(s)
+       =\frac1{2s}+\frac1{s-1}+\frac12\Log\frac{s}{2\pi}.
+                                                               \tag{GH3}
+\]
+The proposition has no RH hypothesis. It estimates both conjugate
+carriers; replacing them by a single nonoscillating lower bound on the
+real axis would be invalid.
+
+### 16.2. Carrier and phase in the original zeta coordinate
+
+Put \(s_u=1/2+iu\), so the heat coordinate is \(x=2u\). Choose the
+continuous phase \(\theta_\tau(u)=\Im\log M_\tau(s_u)\) for large
+positive \(u\), and define
+\[
+ q_\tau(u)=\frac{8|M_\tau(s_u)|}{|\mathcal A(s_u)|},\qquad
+ h_\tau(u)=\frac{H_\tau(2u)}{|M_\tau(s_u)|}.
+\]
+Then \(|Z_\tau(s_u)|=q_\tau(u)|h_\tau(u)|\) exactly, and (GH2)
+gives
+\[
+ h_\tau(u)=2\cos\theta_\tau(u)+O(u^{-c\tau}).                 \tag{GH4}
+\]
+From (GH3),
+\(\alpha(s_u)=\tfrac12\log(u/(2\pi))+i\pi/4+O(u^{-1})\).
+The [sectorial Stirling formula](https://dlmf.nist.gov/5.11#E3)
+gives \(8M_0(s_u)/\mathcal A(s_u)=1+O(u^{-1})\), and hence
+\[
+ \log q_\tau(u)=\frac\tau{16}\log^2\frac{u}{2\pi}
+             -\frac{\tau\pi^2}{64}
+             +O_\tau\!\left(\frac{\log u}{u}\right).
+                                                               \tag{GH5}
+\]
+In particular, uniformly on \(T\le u\le2T\) for sufficiently large
+\(T\),
+\[
+ \inf q_\tau(u)^2\gg_\tau
+                   \exp\left(\frac\tau8\log^2\frac{T}{2\pi}\right).
+                                                               \tag{GH6}
+\]
+
+Phase derivatives must not be obtained by differentiating an unspecified
+error term. Differentiate (GH3) and the exact definition of \(M_\tau\)
+instead:
+\[
+ \theta_\tau'(u)=\Re\{\alpha(s_u)
+                      +(\tau/2)\alpha(s_u)\alpha'(s_u)\}
+       =\tfrac12\log(u/(2\pi))+O_\tau(u^{-1}),
+\]
+\[
+ \theta_\tau''(u)=\Re\{i\alpha'(s_u)
+       +(i\tau/2)[\alpha'(s_u)^2+\alpha(s_u)\alpha''(s_u)]\}
+       =O_\tau(u^{-1}).                                      \tag{GH7}
+\]
+These estimates are uniform on each sufficiently high dyadic interval.
+
+### 16.3. A finite Dirichlet polynomial cannot follow the increasing oscillation
+
+Write \(D(s)=\sum_{n\le M}a_n n^{-s}\), collect equal frequencies,
+and put \(d_n=a_n/\sqrt n\),
+\(A_D=\sum|d_n|^2>0\). Elementary finite-sum integration gives
+\[
+ \int_T^{2T}|D(s_u)|^2du=A_DT+O_D(1).                         \tag{GH8}
+\]
+For each fixed frequency \(\omega=\log(n/m)\), the phase
+\(2\theta_\tau(u)+\omega u\) has derivative at least
+\(\tfrac12\log T\) in absolute value once \(T\) is sufficiently
+large depending on \(M,\tau\). Its second derivative is
+\(O_\tau(T^{-1})\). A single integration by parts therefore yields
+\[
+ \int_T^{2T}e^{i(2\theta_\tau(u)+\omega u)}du
+                         =O_{\tau,M}(1/\log T).
+\]
+Expanding \(|D|^2\) and using \(\cos^2\theta=(1+\cos2\theta)/2\),
+\[
+ \int_T^{2T}|D(s_u)|^2\cos^2\theta_\tau(u)\,du
+                  =\tfrac12 A_DT+O_{D,\tau}(1).              \tag{GH9}
+\]
+No equidistribution assertion about a moving family of polynomials is
+needed: the polynomial is fixed while the height goes to infinity.
+
+Write (GH4) as \(h=2\cos\theta+e\). The elementary inequality
+\(|b+e|^2\ge\tfrac12|b|^2-|e|^2\), together with (GH8)–(GH9),
+shows
+\[
+ \int_T^{2T}|D(s_u)|^2|h_\tau(u)|^2du
+       \ge A_DT+O_{D,\tau}(1)-O_{D,\tau}(T^{1-2c\tau})
+       \ge\tfrac12 A_DT                                   \tag{GH10}
+\]
+for all sufficiently large \(T\). The oscillatory error is thus paid
+without a false pointwise lower estimate for \(H_\tau\).
+
+### 16.4. Divergence and the precise consequence for the local heat experiment
+
+Factor (GH6) out of the **nonnegative actual squared integrand** before
+applying (GH10). Since \((1/4+u^2)^{-1}\gg T^{-2}\) on the block,
+\[
+ \frac1{2\pi}\int_T^{2T}
+     \frac{|Z_\tau(s_u)D(s_u)|^2}{1/4+u^2}\,du
+ \gg_{D,\tau}\frac1T
+       \exp\left(\frac\tau8\log^2\frac{T}{2\pi}\right)
+                    \longrightarrow\infty.                 \tag{GH11}
+\]
+This is a block lower bound, not an asymptotic for the whole integral.
+Finally \(|1-z|^2\ge\tfrac12|z|^2-1\) subtracts only \(O(1/T)\)
+on the block. It proves (GH1).
+
+The zero polynomial has residual norm one, so for each length bound
+N the extended-valued infimum in this unchanged norm is one; every nonzero polynomial has infinite norm. If normalization forces
+a nonzero polynomial, no finite competitor exists in this norm. This is
+not an ordinary Hilbert-space approximation distance: the nonzero trial
+vectors lie outside the weighted space.
+
+In particular fix \(v>0\). For every sufficiently large but finite
+\(N\), the time \(\tau_N=v/(\log N)^2\) lies in \((0,1/2]\).
+The original normalized Möbius taper has constant coefficient one and
+is nonzero. Its **full** heat-deformed residual norm is therefore
+infinite at that \(N\), despite the finite compact-neighborhood
+asymptotic in Note16 §15. The height threshold in the proof may grow
+extremely rapidly with \(N\); an infinite-height integral still sees it.
+This proves an actual obstruction to transferring ST to that target and
+weight, rather than merely leaving the needed uniform bound unproved.
+It does not affect the original time-zero ST theorem, the compact HD
+calculation, or completed horizontal-ratio energies with their own
+normalization.
+
+
+### 16.5. Sharp logarithmic Gaussian damping threshold
+
+Fix \(0<\tau\le1/2\), a nonzero finite D, and \(b\ge0\). For
+\(|u|\ge U_0>2\pi\), change the weight to
+\[
+ \omega_b(u)=\frac{\exp[-b\log^2(|u|/(2\pi))]}{1/4+u^2},
+\]
+with any positive bounded measurable continuation on the compact interval.
+Then
+\[
+ \boxed{\int_{\mathbb R}|1-Z_\tau(1/2+iu)D(1/2+iu)|^2
+                  \omega_b(u)\,du<\infty
+        \quad\Longleftrightarrow\quad b\ge\tau/8.}
+ \tag{GH12}
+\]
+Indeed the exact carrier estimate (GH5), with
+\(\ell(u)=\log(u/(2\pi))\), gives
+\[
+ q_\tau(u)^2e^{-b\ell(u)^2}
+ =\exp\left\{(\tau/8-b)\ell(u)^2-\tau\pi^2/32
+                 +O_\tau(\log u/u)\right\}.
+ \tag{GH13}
+\]
+For \(b\ge\tau/8\) this is bounded, including equality. Since h in
+(GH4) and every finite D are bounded on the critical line, the weighted
+squared signal is \(O_{\tau,D,b}(u^{-2})\). The target term is also
+integrable, and \(|1-z|^2\le2+2|z|^2\) pays their sum.
+
+For \(b<\tau/8\), take the minimum of the **combined** factor in
+(GH13) on [T,2T] before using (GH10). The signal's weighted block mass
+is at least a positive constant times
+\(T^{-1}\exp[(\tau/8-b)\log^2(T/(2\pi))]\), which tends to infinity.
+Subtracting the target costs only O(1/T). This proves the other direction.
+Evenness of H and conjugacy of the completion modulus give the same upper
+bound on the negative tail; D need not have real coefficients. On the
+compact interval the completion is nonzero on the critical line, so the
+bounded weight and continuous numerator give a finite contribution.
+
+This sharp threshold defines a different norm. It provides no uniform
+estimate as the heat time, weight or polynomial varies, and does not
+transfer the original Burnol lower bound or ST to that norm. The zero
+polynomial is excluded from (GH12), since its error is finite for every
+b. The earlier infimum value one concerns only the original normalized
+weight in (GH1).
+
+### 16.6. Control screen and BW09 scope
+
+The quantified gain is divergence of the full unchanged norm, the exact
+extended-real infimum one, and the damping threshold \(\tau/8\). The
+[result index](../../../../../../../result-summaries/README.md),
+[avoid index](../../../../../../../avoid/README.md),
+[collision controls](../../../../../../../result-summaries/12_collision_controls_and_screening.md)
+and [complete-payment rule](../../../../../../../avoid/12_term_by_term_matching_and_separate_bounds.md)
+set its scope. The source-identity premise in the imported asymptotic is
+the original theta heat flow. Each screened family changes that source:
+Euler-factor controls add translates; weighted-square controls change
+its square coefficients; reflected and positive-primitive controls use
+different sources. None is silently assigned the original Polymath
+asymptotic. The elementary finite-frequency argument applies to any
+function satisfying the same displayed carrier bounds and is compatible
+with collisions; it is not intended to reject those controls.
+
+Because this obstruction is unconditional, BW09 also cannot use this
+literal original-completion norm for its positive heat times in the
+stated interval. Its contour and completed-ratio methods use different
+objects and are unaffected. No threshold event, strict cap surplus,
+multiple-zero exclusion or ordering of the two projects' difficulty
+follows. [Review 16 §13](../reviews/16_GEVREY_GLOBAL_APPROXIMATION_REVIEW_20261020.md)
+records the primary normalization, finite-frequency and weight checks.

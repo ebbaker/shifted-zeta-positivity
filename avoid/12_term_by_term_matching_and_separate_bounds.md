@@ -451,3 +451,14 @@ has a different monotone transition. Preserve the named norm, cross
 terms and order of limits; shared zeros and heat scales do not transfer
 monotonicity. The compact norm is not a global heat-family upper bound
 and cannot contradict the original endpoint lower bound.
+
+**A compact heat norm can have an infinite global extension, 20 October 2026.**
+Prepared for Edward Baker with substantial LLM assistance,
+**gpt-6-astra, actual effort ultra**; same-model internal review.
+[BW10 Note 16 §16](../papers/investigations-3/13_contradiction_analysis/04_boundary_winding/threshold_routes/10_rh_implies_simple_zeros/notes/16_GEVREY_GLOBAL_APPROXIMATION_AND_RATE_20261020.md)
+proves divergence for every nonzero finite Dirichlet polynomial at
+0<t<=1/2 with the original completion and weight. It states:
+“an infinite-height integral still sees it.” This remains true separately
+at each t=v/(log N)², despite the compact HD limit. The exact damping
+threshold t/8 restores finiteness in a changed norm; it does not transfer
+the original lower bound or provide a simplicity estimate.

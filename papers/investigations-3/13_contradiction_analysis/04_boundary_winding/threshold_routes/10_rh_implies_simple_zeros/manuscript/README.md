@@ -5,7 +5,8 @@
 
 [Read the six-page PDF](main.pdf) or [edit the canonical LaTeX source](main.tex).
 This brief emphasizes the analytic estimates and the missing arithmetic
-bound. Section 5 compares the shared methods and additional hypotheses
+bound. Section 4 also records the unconditional failure of the unchanged
+global heat norm and its sharp logarithmic weight threshold. Section 5 compares the shared methods and additional hypotheses
 of the originating BW09 investigation. Neither RH nor RH implies
 simplicity is proved here. The results have same-model internal review,
 with no external specialist validation or novelty claim.

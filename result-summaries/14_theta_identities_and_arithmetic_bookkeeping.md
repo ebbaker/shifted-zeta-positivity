@@ -602,3 +602,16 @@ Möbius approximation from the monotone ratio energy. It is reusable
 for finite-resolution comparisons, with no global heat-tail theorem,
 multiple-zero exclusion or BW09 surplus. See
 [Review 16 §12](../papers/investigations-3/13_contradiction_analysis/04_boundary_winding/threshold_routes/10_rh_implies_simple_zeros/reviews/16_GEVREY_GLOBAL_APPROXIMATION_REVIEW_20261020.md).
+
+**Unchanged global heat norm, 20 October 2026.** Prepared for Edward Baker
+with substantial LLM assistance, **gpt-6-astra, actual effort ultra**.
+[Note 16 §16](../papers/investigations-3/13_contradiction_analysis/04_boundary_winding/threshold_routes/10_rh_implies_simple_zeros/notes/16_GEVREY_GLOBAL_APPROXIMATION_AND_RATE_20261020.md)
+is **proved in-note, unconditionally** for 0<t<=1/2: every nonzero finite
+Dirichlet polynomial has infinite error against the heat numerator divided
+by the original completion in the unchanged weighted norm. The source
+states: “This proves an actual obstruction to transferring ST to that
+target and weight”. Logarithmic Gaussian damping has exact threshold t/8
+for finiteness. Reusable as a scoped limit on BW09/BW10 heat comparisons;
+no event exclusion or objection to completed-ratio energies follows.
+[Review 16 §13](../papers/investigations-3/13_contradiction_analysis/04_boundary_winding/threshold_routes/10_rh_implies_simple_zeros/reviews/16_GEVREY_GLOBAL_APPROXIMATION_REVIEW_20261020.md)
+is same-model internal review only.
