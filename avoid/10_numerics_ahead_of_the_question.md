@@ -36,6 +36,19 @@ amplification tuned to a limit that a published result beat anyway.
   margin. Added for Edward Baker with substantial LLM assistance,
   **gpt-6.1-sol, actual effort ultra**, same-model internal review.
 
+- **BW12 boundary-only data comparison (21 October 2026).**
+  [Note 03](../papers/investigations-3/13_contradiction_analysis/04_boundary_winding/threshold_routes/12_relative_chern_hopf_charges/notes/03_TWO_ZERO_THETA_BOUNDARY_AND_DIRECT_COMPARISON_20261021.md)
+  records: “This thin-box implementation does not establish a boundary
+  advantage.” A full-source charge certificate succeeds, but every
+  direct tensor-cell vertex is already on the outer boundary. Direct
+  exclusion reuses the same data, has a stronger paid margin and needs
+  fewer consumer operations. Boundary-only acquisition does not by
+  itself establish a saving; compare actual data reuse before enlarging
+  a mesh. The stop is scoped to that declared implementation.
+  [Same-assistant review](../papers/investigations-3/13_contradiction_analysis/04_boundary_winding/threshold_routes/12_relative_chern_hopf_charges/reviews/03_TWO_ZERO_THETA_COMPARISON_REVIEW_20261021.md).
+  Prepared for Edward Baker with substantial LLM assistance,
+  **gpt-6-astra, actual effort max**; no independent validation.
+
 ## What it cost
 
 Computation time, and a sequence of records that had to be re-read as

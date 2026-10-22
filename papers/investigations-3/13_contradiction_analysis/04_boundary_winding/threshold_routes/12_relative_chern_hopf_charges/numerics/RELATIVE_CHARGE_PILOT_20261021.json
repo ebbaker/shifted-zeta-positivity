@@ -1,0 +1,200 @@
+{
+  "schema": "rch12-bounded-relative-charge-v1",
+  "date": "2026-10-21",
+  "timezone": "America/New_York",
+  "prepared_for": "Edward Baker",
+  "authoring_model": "gpt-6-astra",
+  "actual_effort": "max",
+  "LLM_assistance": "substantial; same-assistant derivation and checks",
+  "status": "finite interval certificate and scoped comparison; no global theta conclusion",
+  "python": "3.10.0",
+  "python_flint": "0.9.0",
+  "script_sha256": "dbce44570c998e571e99a9fda92326e5448586ec417715893d4be455930a6c1c",
+  "parameters": {
+    "modes": 4,
+    "source_cutoff": "1",
+    "abs_quad_tolerance": "1e-32",
+    "rel_quad_tolerance": "1e-28",
+    "max_seconds": 180,
+    "eval_limit_per_integral": 100000,
+    "depth_limit": 30
+  },
+  "controls": {
+    "quadratic": {
+      "H": "w^2-2t",
+      "reference": "(-2t,2w)",
+      "reference_complex_determinant": "-4",
+      "reference_degree": 1,
+      "boundary_floor": "1/50",
+      "error_upper": "1/64",
+      "gap": "7/1600",
+      "domain_radii": [
+        "1/100",
+        "1/8"
+      ],
+      "constant_reference_degree": 0,
+      "constant_reference_norm": "1",
+      "constant_reference_error_at_t_T_w_0": "51/50",
+      "direct_exclusion": "must fail because G(0,0)=0"
+    },
+    "cubic": {
+      "H": "z^3-(4+6t)z+2",
+      "event_equations": "z^3=1; t=(-4+3z^2)/6",
+      "event_jacobian": "-36 z^2, nonzero at all three events",
+      "complex_events": 3,
+      "real_events": 1,
+      "real_event_time": "-1/6",
+      "time_zero_discriminant": 148,
+      "scope": "exact algebra screen, not theta or a numerical boundary integral"
+    }
+  },
+  "run": {
+    "bits": 192,
+    "seconds": 0.03784800000721589,
+    "domain": {
+      "type": "smooth complex ellipsoid",
+      "center_t": "0",
+      "center_z": "113/4",
+      "time_radius": "1/100",
+      "space_radius": "1/8",
+      "definition": "|t/(1/100)|^2+|(z-113/4)/(1/8)|^2 < 1",
+      "orientation": "dRe(t) dIm(t) dRe(z) dIm(z)",
+      "physical_slice": "real ellipse, including t=0 and z in (28.125,28.375)"
+    },
+    "reference": "(c0+c1*w-c2*t, c1+c2*w-c3*t), w=z-113/4",
+    "reference_degree": 0,
+    "certified_charge": 0,
+    "source_acquisitions": [
+      {
+        "kind": "jet",
+        "order": 0,
+        "core": "[1.69038891090700349951949550652288542527848794e-6 +/- 3.32e-37]",
+        "quadrature_radius": "[3.31358215828226677115705045916983137577745484e-37 +/- 4.79e-82]",
+        "omitted_modes_upper": "[3.14249323655730847964404867332525847874309727e-33 +/- 4.08e-78]",
+        "retained_exterior_upper": "[7.60154758331298325835989062758476976537484675e-73 +/- 4.19e-119]",
+        "callbacks": 276,
+        "seconds": 0.010710667003877461,
+        "midpoint": "[1.69038891090700349951949550652288542527848794e-6 +/- 2.11e-52]",
+        "complete_error_upper": "[3.14282459477313670632116437837117546188143517e-33 +/- 4.32e-78]",
+        "complete_enclosure": "[1.69038891090700349951949550652288542527848794e-6 +/- 3.15e-33]"
+      },
+      {
+        "kind": "jet",
+        "order": 1,
+        "core": "[-8.73975335251006971187233361401226915976128680e-5 +/- 3.41e-37]",
+        "quadrature_radius": "[3.40619332218570802033446176779520570308276631e-37 +/- 1.21e-82]",
+        "omitted_modes_upper": "[1.02978791512706742981254707698270453340059068e-35 +/- 3.20e-81]",
+        "retained_exterior_upper": "[7.61279080320698341251590735045021809331008519e-73 +/- 3.32e-119]",
+        "callbacks": 276,
+        "seconds": 0.0035086249699816108,
+        "midpoint": "[-8.73975335251006971187233361401226915976128680e-5 +/- 3.94e-51]",
+        "complete_error_upper": "[1.06384984834892451001589169466065659050754625e-35 +/- 8.25e-81]",
+        "complete_enclosure": "[-8.73975335251006971187233361401226915976128680e-5 +/- 1.07e-35]"
+      },
+      {
+        "kind": "jet",
+        "order": 2,
+        "core": "[5.04305669468739487441246497134007002251611879e-5 +/- 3.53e-37]",
+        "quadrature_radius": "[3.52715682479447918245025115932497449093023885e-37 +/- 4.14e-82]",
+        "omitted_modes_upper": "[6.74918334146373562405837927245013111683972142e-38 +/- 4.82e-83]",
+        "retained_exterior_upper": "[7.62406733138153001385377246898423417422243762e-73 +/- 2.42e-118]",
+        "callbacks": 276,
+        "seconds": 0.0037712089833803475,
+        "midpoint": "[5.04305669468739487441246497134007002251611879e-5 +/- 1.83e-50]",
+        "complete_error_upper": "[4.20207515894085274485608908656998761023827832e-37 +/- 2.74e-83]",
+        "complete_enclosure": "[5.04305669468739487441246497134007002251611879e-5 +/- 4.21e-37]"
+      },
+      {
+        "kind": "jet",
+        "order": 3,
+        "core": "[-1.74613159467095164958546853601745967162439872e-5 +/- 3.67e-37]",
+        "quadrature_radius": "[3.66788430400251845915111702446529550393951410e-37 +/- 2.57e-82]",
+        "omitted_modes_upper": "[6.63507627748829940148261756511108686354267126e-40 +/- 4.90e-85]",
+        "retained_exterior_upper": "[7.63537731607094208275499919936240214459051392e-73 +/- 3.51e-118]",
+        "callbacks": 276,
+        "seconds": 0.0034882090403698385,
+        "midpoint": "[-1.74613159467095164958546853601745967162439872e-5 +/- 1.37e-50]",
+        "complete_error_upper": "[3.67451938028000675855259964203040659843843409e-37 +/- 1.10e-83]",
+        "complete_enclosure": "[-1.74613159467095164958546853601745967162439872e-5 +/- 3.68e-37]"
+      },
+      {
+        "kind": "moment",
+        "order": 2,
+        "core": "[0.000733261471059267246711320108532787388003782440 +/- 1.89e-38]",
+        "quadrature_radius": "[1.88330694410081474053372986835552020855461280e-38 +/- 2.64e-83]",
+        "omitted_modes_upper": "[6.75748398613803601046634444301203383195604292e-38 +/- 3.91e-83]",
+        "retained_exterior_upper": "[8.72790011003076215541007394916302692326036945e-73 +/- 8.09e-119]",
+        "callbacks": 276,
+        "seconds": 0.003546082996763289,
+        "complete_upper": "[0.000733261471059267246711320108532787474411691742 +/- 2.87e-49]"
+      },
+      {
+        "kind": "moment",
+        "order": 3,
+        "core": "[0.000122727158807658066129521701565921834546751305 +/- 1.97e-38]",
+        "quadrature_radius": "[1.96895929836612671706940338627284035282468009e-38 +/- 3.19e-83]",
+        "omitted_modes_upper": "[6.64595891696183366422422425842664437823924021e-40 +/- 3.63e-85]",
+        "retained_exterior_upper": "[8.74085037005259323579386946786086068342423129e-73 +/- 9.90e-119]",
+        "callbacks": 276,
+        "seconds": 0.0037563330261036754,
+        "complete_upper": "[0.000122727158807658066129521701565921854900940180 +/- 2.75e-49]"
+      },
+      {
+        "kind": "moment",
+        "order": 4,
+        "core": "[2.37920699880620318061409054897319723037690512e-5 +/- 2.06e-38]",
+        "quadrature_radius": "[2.05872763406200756660686101545529859437530198e-38 +/- 5.99e-84]",
+        "omitted_modes_upper": "[8.71503260021039588968147834934954331993353999e-42 +/- 3.93e-87]",
+        "retained_exterior_upper": "[8.75383911778520164542787574446969607315577409e-73 +/- 3.47e-119]",
+        "callbacks": 276,
+        "seconds": 0.0035025420365855098,
+        "complete_upper": "[2.37920699880620318061409054897319928997604244e-5 +/- 1.05e-50]"
+      },
+      {
+        "kind": "moment",
+        "order": 5,
+        "core": "[5.13962126806426586376060419684176475352053588e-6 +/- 2.16e-38]",
+        "quadrature_radius": "[2.15271882647070826253808077010355047599741604e-38 +/- 2.52e-83]",
+        "omitted_modes_upper": "[1.42853337967688924310141158371600237184888940e-43 +/- 3.59e-88]",
+        "retained_exterior_upper": "[8.76686652506008095906061077969626025680647655e-73 +/- 1.61e-118]",
+        "callbacks": 276,
+        "seconds": 0.003515290969517082,
+        "complete_upper": "[5.13962126806426586376060419684178628085165392e-6 +/- 4.78e-51]"
+      }
+    ],
+    "component_remainders": [
+      "[5.88320379465950104918439752014429106211250498e-6 +/- 3.18e-51]",
+      "[9.88802996733309394687752455555771571852338272e-7 +/- 4.23e-52]"
+    ],
+    "component_complete_errors": [
+      "[5.88320379465950104918439752328844967127123679e-6 +/- 4.02e-51]",
+      "[9.88802996733309394687752455566466270794694557e-7 +/- 3.45e-52]"
+    ],
+    "reference_floor_lower": "[8.09190994972743583607492080723458581023052796e-5 +/- 4.69e-50]",
+    "vector_error_upper": "[5.96572026295607709626129376686048426543661813e-6 +/- 4.09e-51]",
+    "boundary_gap_lower": "[7.49533792343182812644879143054853738368686615e-5 +/- 2.10e-50]",
+    "direct_derivative_floor_lower": "[7.99302965005410489660614556167793918315105851e-5 +/- 1.06e-50]",
+    "gap_ratio_direct_over_boundary": "[1.06640017190771337399600903781058739537592618 +/- 4.26e-45]",
+    "root_bracket": {
+      "t": "0",
+      "left_z": "451/16",
+      "right_z": "453/16",
+      "left_H": "[7.15273475622579706943970401528055365012929219e-6 +/- 1.44e-6]",
+      "right_H": "[-3.77195693441179007040071300223478279957231631e-6 +/- 1.44e-6]",
+      "unique_and_simple": "real monotonicity from derivative exclusion"
+    },
+    "cost": {
+      "boundary_scalar_integrals": 8,
+      "direct_scalar_integrals": 6,
+      "boundary_callbacks": 2208,
+      "direct_subset_callbacks": 1656,
+      "boundary_acquisition_seconds": 0.035798959026578814,
+      "direct_subset_acquisition_seconds": 0.021542209025938064,
+      "timing_scope": "one shared acquisition; direct time sums its required subset, not a separate timed run",
+      "boundary_mesh_cells": 0,
+      "interior_mesh_cells": 0,
+      "coverage": "both bounds apply throughout the same ellipsoid; the majorants also cover the containing polydisc",
+      "extra_root_bracket": "no extra integrals; uses already acquired boundary inputs; not needed for exclusion"
+    }
+  }
+}

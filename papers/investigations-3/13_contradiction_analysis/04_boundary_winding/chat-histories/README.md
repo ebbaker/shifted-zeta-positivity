@@ -26,3 +26,14 @@ Model gpt-6-astra, actual effort max. Current capture metadata belongs
 to index.json.
 
 20 October 2026 — Prepared for Edward Baker with substantial LLM assistance, **gpt-6-astra, actual effort ultra**. [Continue signed arithmetic research](0006_2026-10-20T06-41-53Z_continue-signed-arithmetic-research.json), canonical thread `01a1580b-88b0-7d40-9adc-e70195d220d3`, is registered here as history 6 through the repository refresh tool. It covers overview 03 execution. Current counts, times and hashes belong to index.json; no duplicated route registration.
+
+
+21 October 2026 — Prepared for Edward Baker with substantial LLM assistance,
+**gpt-6-astra (Codex), actual effort max**.
+[Create proposal research folders](0008_2026-10-21T16-44-53Z_create-proposal-research-folders.json),
+canonical thread 01a15f59-f6ee-7e53-995e-141f6b9e5e35, is registered once
+here as history 8. It covers the shared setup of
+[BW-11–15](../threshold_routes/README.md) from BW10's global heat-geometry
+proposal note. Route-specific future conversations belong in their
+actual affiliated route; this shared setup keeps its existing identity.
+Current capture counts, times and hashes belong to index.json.

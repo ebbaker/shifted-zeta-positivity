@@ -1,0 +1,193 @@
+\section{Supporting certificates and exact arithmetic checks}
+\label{sec:support}
+
+The analytic identities and counterexamples above do not depend on the
+computations in this section. The numerical work serves two purposes:
+to demonstrate that the complete theta source can satisfy the finite
+boundary hypotheses, and to check implementations against exact models.
+All reported numerical claims retain the scope and internal-review
+status of their recorded calculations.
+
+\subsection{A complete-theta application of the two-root theorem}
+
+The interval calculation in \cite{note06,realcap} uses
+\begin{equation}
+ |\operatorname{Re}t|,|\operatorname{Im}t|\leq10^{-2},\qquad
+ a=\frac{71}{2},\quad r=8,\quad R=10.
+ \label{n:window}
+\end{equation}
+Both circular root counts are two. The enclosing data, rounded
+outward for display, are
+\begin{center}
+\begin{tabular}{@{}lr@{}}
+\toprule
+Quantity & Certified bound\\
+\midrule
+Inner circular wall floor & $>8.36937\times10^{-7}$\\
+Outer circular wall floor & $>7.57583\times10^{-7}$\\
+Exterior coefficient modulus & $|A|<3.489078$\\
+Phase product & $10^{-2}\sup|A|<0.034891$\\
+Discriminant at each real time cap & $\Delta(\pm10^{-2})>144$\\
+Complete source integrals & $4146$\\
+\bottomrule
+\end{tabular}
+\end{center}
+The two-root cap theorem therefore gives $Q=0$ on this window.
+No RH assumption or tabulated zero location is an input.
+
+The certificate covers entire arcs and the full complex-time rectangle,
+not only sampled points. It uses 256 arcs on each circle, complete jets
+of orders zero through fifteen at the time-zero anchors, and a
+joint Taylor expansion of total degree seven. Complete moments pay the
+order-eight remainder. All omitted source modes and exterior integration
+tails are bounded. Zero-avoiding convex disks around the boundary image
+arcs justify the polygonal winding counts. The coefficient estimate
+retains the coupled numerator $H_z+(3/10)H$ before taking absolute
+values. If $d_k$ and $n_k$ are the full-arc lower and upper bounds for
+the denominator and this numerator, respectively, the calculation uses
+\[
+ |A|\leq\frac{4R}{(R-r)^2}\frac1{256}\sum_{k=0}^{255}\frac{n_k}{d_k}.
+\]
+At each real time cap, the certified signs at spatial points
+$28,29,41,43$ are $+,-,-,+$. The intermediate value theorem and the
+total count of two put one simple root in each of $(28,29)$ and
+$(41,43)$. Their gap exceeds twelve, proving the displayed
+discriminant bound. Thus the cap signs have an independent real-source
+payment.
+
+This is a separated-pair example. Its large cap gap does not address an
+unknown shrinking gap near a hypothetical endpoint. The same boundary
+and phase procedure also admits the exact quadratic collision
+$H=(z-71/2)^2-2t$, returning charge one from its opposite cap signs.
+It therefore does not silently assume that events are absent.
+
+\subsection{Earlier direct comparisons}
+
+The earlier finite experiments \cite{note01,note03} compared specified
+boundary and direct joint-exclusion procedures using complete source
+data. Their certified margins and acquisition counts were
+\begin{center}
+\begin{tabular}{@{}lccc@{}}
+\toprule
+Experiment & Boundary margin & Direct margin & Source integrals\\
+\midrule
+One-zero ellipsoid & $>7.495\times10^{-5}$ & $>7.993\times10^{-5}$ & $8$ versus $6$\\
+Two-zero thin box & $>3.5683\times10^{-7}$ & $>3.9348\times10^{-7}$ & $1032$ each\\
+\bottomrule
+\end{tabular}
+\end{center}
+The thin box has $|\operatorname{Re}t|,|\operatorname{Im}t|\leq0.01$,
+$28\leq\operatorname{Re}z\leq43$, and
+$|\operatorname{Im}z|\leq0.01$. Both methods used the same source
+acquisition and 2056 boundary vertices. The direct procedure had the
+stronger certified margin in these declared implementations. This is
+neither a universal complexity ordering nor evidence against other
+boundary geometries. The analytic reference-transfer result in
+Appendix~\ref{app:reference} explains why an already certified
+holomorphic reference does not by itself confer an improved uniform
+margin on the boundary method.
+
+\subsection{Exact controls and reproducibility}
+
+The standard-library rational calculation \cite{controls} checks the
+Hermite discriminants for $2\leq m\leq8$, five finite clusters with
+nonzero exterior forcing, the cubic expression for $T$, and quadratic
+source response. It also verifies the explicit boundary-paid affine
+homotopy example from the signed-response section. These checks agree
+with the proofs, including the negative-time signs of the many-root
+forcing. They are finite algebra checks, not a proof for all $m$.
+
+The earlier piecewise affine boundary-degree controls \cite{note02}
+return degrees $+1,-1,+1,0$ for, respectively, a complex-oriented
+linear map, an orientation-reversing real map, an enclosed quadratic
+heat event, and a quadratic heat field with its event outside the box.
+The negative-degree example deliberately fails holomorphicity. It
+checks the orientation convention rather than holomorphic positivity.
+
+The repository records supply scripts, arithmetic versions, parameter
+choices, source-tail and interpolation budgets, and small execution
+receipts. The theta runs use \texttt{python-flint 0.9.0}; the exact
+algebra checks require only Python's standard library. Source-array
+hashes bind the recorded computations but do not replace their
+analytic error estimates. No additional theta numerical region was
+acquired for this manuscript.
+
+\section{What remains to obtain endpoint exclusion}
+\label{sec:open}
+
+The geometric difficulty at an isolated hypothetical double has been
+resolved in a pointwise quantitative sense: a positive radius, collar,
+time width, pair of root counts, and phase margin follow from the
+nonzero second jet and complete moments. The resulting window correctly
+has charge one when a double is assumed. A new exclusion must therefore
+use information beyond those universal local properties.
+
+\paragraph{A sign for the unchanged theta source.}
+The signed response and the canonical-tail mixture retain correlations
+that absolute moment bounds discard. Their remaining task is to prove,
+with a declared reference and the entire residual included, either a
+strictly positive incoming discriminant or a strictly negative event
+location. For a proper two-root window with a positive outgoing cap,
+the first gives charge zero. Alternatively, an independently located
+negative-time event uses the unique event allowed by the phase theorem
+and excludes another event at zero. Neither required theta-specific
+inequality has been established here. A strict improvement over another
+enclosure can still leave zero inside the resulting interval.
+
+\paragraph{Height coverage.}
+The windows exist separately at every finite hypothetical double
+height. Their sizes depend on the local curvature; the displayed
+construction can shrink with height. The source sign, error terms,
+tail cutoff and event-location margin must therefore be controlled with
+the same dependence. A calculation on one fixed interval, or an
+unquantified limiting statement about the head cutoff, cannot discharge
+the universal quantifier over endpoint heights. No common negative
+all-real time slice is being proposed.
+
+\paragraph{Every multiplicity.}
+The all-root identity $D'=8T+BD$ retains the whole cluster and its
+exterior contribution. For $m>2$, the forcing $T$ is no longer constant.
+The cubic control shows that nonreal time events survive even when
+$B=0$; the quartic control has charge six despite equal positive real
+cap signs. Applying the two-root theorem to an arbitrarily selected
+pair at a higher birth is invalid, because the other birth roots
+destroy the required isolating collar. The cubic real-event monotonicity
+provides a possible conditional event-location argument, but no
+complete-source location estimate is supplied. Higher multiplicities
+still require an exclusion compatible with their full discriminant.
+
+The finite-moment control constructed above has exactly its stated
+preservation properties; it does not realize the actual theta moment
+vector. Broader collision controls in the project have different
+failures of the theta premises: Euler-factor controls change arithmetic
+data; finite square-source and finite-prime controls lack the complete
+normalized coefficient/reflection conjunction; reflected or smooth
+positive-source controls lack the canonical square-source expansion;
+the close positive endpoint controls in \cite{bw10control} fail ordinary
+Dirichlet-series arithmetic. Their preservation lists must not be
+combined. They rule out arguments using only their shared premises,
+not estimates specific to the unchanged complete theta source.
+
+In the task register, the hypothetical-double window is complete in
+its stated parameterized scope (ECE-01). The distinguishing sign
+(ECE-02), its all-height use (the signed part of ECE-04), and
+higher-multiplicity exclusion (the remaining part of ECE-05) are open.
+Endpoint exclusion and RH-conditional simplicity (ECE-03 and ECE-06)
+remain contingent on those results. The manuscript is an analytic
+consolidation, not an upgrade of those statuses.
+
+\section*{Acknowledgements and research provenance}
+\addcontentsline{toc}{section}{Acknowledgements and research provenance}
+This manuscript was drafted for Edward Baker with substantial assistance
+from OpenAI's Codex language-model system. The manuscript drafting and
+internal review session recorded model \texttt{gpt-6-astra}, reasoning
+effort \texttt{ultra}. The underlying 21 October 2026 notes record their
+own configurations, including earlier \texttt{max} sessions; those
+provenance distinctions are retained in the source records. Separate
+agents of the same model assisted in drafting and checking sections.
+These checks do not constitute independent specialist review or formal
+verification. The author designation above identifies the intended
+recipient of the draft and does not imply that he has approved every
+claim. The investigation's notes, reviews, progress register and chat
+archive preserve the detailed research history; no manuscript snapshot
+series is created.

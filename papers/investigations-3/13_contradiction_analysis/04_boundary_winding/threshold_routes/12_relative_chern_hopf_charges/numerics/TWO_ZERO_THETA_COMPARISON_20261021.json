@@ -1,0 +1,427 @@
+{
+  "schema": "rch12-two-zero-theta-comparison-v1",
+  "date": "2026-10-21",
+  "timezone": "America/New_York",
+  "prepared_for": "Edward Baker",
+  "authoring_model": "gpt-6-astra",
+  "actual_effort": "max",
+  "LLM_assistance": "substantial; same-assistant derivation and computation",
+  "status": "finite full-theta certificate and matched direct comparison; no global simplicity conclusion",
+  "python": "3.10.0",
+  "python_flint": "0.9.0",
+  "script_sha256": "a4eaff26ea05d950ef6a3277affb54d41a3b3932d6731df75cf73f724b157147",
+  "dependency_sha256": {
+    "certify_relative_charge_pilot.py": "dbce44570c998e571e99a9fda92326e5448586ec417715893d4be455930a6c1c",
+    "check_boundary_degree_controls.py": "181b79b892f2053f54405436269fd902973493ba2364257d5383f976998b7d5f"
+  },
+  "declared_budget": {
+    "source_integrals_max": 1100,
+    "wall_seconds_max": 180,
+    "bits": 192,
+    "retained_modes": 4,
+    "source_cutoff": "1",
+    "abs_quad_tolerance": "1e-32",
+    "rel_quad_tolerance": "1e-28"
+  },
+  "anisotropic_controls": [
+    {
+      "field": "identity",
+      "mesh": [
+        1,
+        1,
+        4,
+        1
+      ],
+      "radii": [
+        "1",
+        "1",
+        "1",
+        "1"
+      ],
+      "vertices": 40,
+      "tetrahedra": 156,
+      "boundary_gap_lower": "1",
+      "positive": 1,
+      "negative": 0,
+      "outside": 155,
+      "singular_empty": 0,
+      "degree": 1,
+      "target": [
+        "1/1000000000039",
+        "1/1000000000061",
+        "1/1000000000063",
+        "1/1000000000091"
+      ],
+      "seconds": 0.013470624980982393
+    },
+    {
+      "field": "time_conjugation",
+      "mesh": [
+        1,
+        1,
+        4,
+        1
+      ],
+      "radii": [
+        "1",
+        "1",
+        "1",
+        "1"
+      ],
+      "vertices": 40,
+      "tetrahedra": 156,
+      "boundary_gap_lower": "1",
+      "positive": 0,
+      "negative": 1,
+      "outside": 155,
+      "singular_empty": 0,
+      "degree": -1,
+      "target": [
+        "1/1000000000039",
+        "1/1000000000061",
+        "1/1000000000063",
+        "1/1000000000091"
+      ],
+      "seconds": 0.013238458021078259
+    },
+    {
+      "field": "quadratic_collision",
+      "mesh": [
+        1,
+        1,
+        8,
+        1
+      ],
+      "radii": [
+        "1/100",
+        "1/100",
+        "1/8",
+        "1/100"
+      ],
+      "vertices": 72,
+      "tetrahedra": 300,
+      "boundary_gap_lower": "1923/102400",
+      "positive": 1,
+      "negative": 0,
+      "outside": 299,
+      "singular_empty": 0,
+      "degree": 1,
+      "target": [
+        "1/1000000000039",
+        "1/1000000000061",
+        "1/1000000000063",
+        "1/1000000000091"
+      ],
+      "seconds": 0.03808837500400841
+    }
+  ],
+  "run": {
+    "domain": {
+      "Re_t": [
+        "-1/100",
+        "1/100"
+      ],
+      "Im_t": [
+        "-1/100",
+        "1/100"
+      ],
+      "Re_z": [
+        "28",
+        "43"
+      ],
+      "Im_z": [
+        "-1/100",
+        "1/100"
+      ],
+      "orientation": "Re(t), Im(t), Re(z), Im(z)",
+      "boundary": "piecewise smooth box; Brouwer degree, no smoothing"
+    },
+    "mesh_subintervals": [
+      1,
+      1,
+      256,
+      1
+    ],
+    "anchor_spacing": "15/256",
+    "bits": 192,
+    "source": {
+      "retained_modes": 4,
+      "source_cutoff": "1",
+      "complete_moment_rows": [
+        {
+          "kind": "moment",
+          "order": 2,
+          "core": "[0.000719303878830252666010644424501565023435405472 +/- 1.68e-38]",
+          "quadrature_radius": "[1.67227589266575623211240318895669021025838918e-38 +/- 3.49e-83]",
+          "omitted_modes_upper": "[6.74984689257984893633257610827824619641672692e-38 +/- 4.90e-83]",
+          "retained_exterior_upper": "[7.77842936439184031240528971993018848767056606e-73 +/- 1.45e-118]",
+          "callbacks": 276,
+          "seconds": 0.010736415977589786,
+          "complete_upper": "[0.000719303878830252666010644424501565107656633325 +/- 2.19e-49]"
+        },
+        {
+          "kind": "moment",
+          "order": 3,
+          "core": "[0.000120024752318723401619072215856463911595474464 +/- 1.75e-38]",
+          "quadrature_radius": "[1.74830573838179048803707742106666852005188065e-38 +/- 4.92e-84]",
+          "omitted_modes_upper": "[6.63594606853071479014816150235489297819910608e-40 +/- 3.25e-85]",
+          "retained_exterior_upper": "[7.78996885224496386165315650651304304865643580e-73 +/- 2.15e-118]",
+          "callbacks": 276,
+          "seconds": 0.0037495410069823265,
+          "complete_upper": "[0.000120024752318723401619072215856463929742126454 +/- 2.50e-49]"
+        },
+        {
+          "kind": "moment",
+          "order": 4,
+          "core": "[2.32089297511212733921385948023023576075087368e-5 +/- 1.83e-38]",
+          "quadrature_radius": "[1.82799941906264841067538883654511664456221750e-38 +/- 2.66e-83]",
+          "omitted_modes_upper": "[8.69862303056722126514937121628063963386398548e-42 +/- 1.49e-87]",
+          "retained_exterior_upper": "[7.80154262918471772837890650155747546241086198e-73 +/- 2.18e-118]",
+          "callbacks": 276,
+          "seconds": 0.0037259170203469694,
+          "complete_upper": "[2.32089297511212733921385948023023758962015505e-5 +/- 1.25e-50]"
+        },
+        {
+          "kind": "moment",
+          "order": 5,
+          "core": "[5.00260957088579346627854237156210617789547691e-6 +/- 1.92e-38]",
+          "quadrature_radius": "[1.91144808260484777785522100404644517116225763e-38 +/- 2.74e-83]",
+          "omitted_modes_upper": "[1.42530623829851136478800444925285514790673272e-43 +/- 4.59e-88]",
+          "retained_exterior_upper": "[7.81315084827130377367888319301815940883520879e-73 +/- 3.97e-118]",
+          "callbacks": 276,
+          "seconds": 0.00386870902730152,
+          "complete_upper": "[5.00260957088579346627854237156212529251883358e-6 +/- 3.69e-51]"
+        }
+      ],
+      "real_anchor_count": 257,
+      "anchor_time": "-1/100",
+      "anchor_boundary_face": "Re(t)=-1/100",
+      "actual_interior_field_anchors": 0,
+      "jet_orders": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "jet_scalar_integrals": 1028,
+      "total_scalar_integrals": 1032,
+      "jet_callbacks": 283728,
+      "total_callbacks": 284832,
+      "jet_quad_seconds": 4.23662528488785,
+      "acquisition_elapsed_seconds": 4.27896199998213,
+      "uniform_anchor_errors": [
+        "[6.719366134762468431745083820809378236887e-21 +/- 3.06e-61]",
+        "[5.571434850661596690485702566214269571351e-21 +/- 1.69e-61]",
+        "[3.131114423278384586398327705373259717454e-21 +/- 3.98e-61]",
+        "[1.618714161996161827738894300783411799275e-21 +/- 3.14e-61]"
+      ],
+      "maximum_quadrature_radius": "[1.885197857211967342912546085315275709894e-36 +/- 2.04e-77]",
+      "maximum_source_tails_by_order": [
+        "[3.142493236557308479644048673325258478744e-33 +/- 3.38e-73]",
+        "[1.029787915127067429812547076982704533477e-35 +/- 5.38e-75]",
+        "[6.749183341463735624058379272450131193081e-38 +/- 6.06e-78]",
+        "[6.635076277488299401482617565111094498920e-40 +/- 6.46e-80]"
+      ],
+      "rational_anchor_midpoints_sha256": "0bd11b911a4293403597616b89ed5b965deebddff35a85e27818e50256572508",
+      "arrays": "regenerated in memory; the hash identifies approximants, not a proof"
+    },
+    "real_slice": {
+      "zeros": [
+        {
+          "cluster_indices": [
+            4,
+            5
+          ],
+          "cluster_x": [
+            "1807/64",
+            "7243/256"
+          ],
+          "bracket_indices": [
+            4,
+            5
+          ],
+          "bracket_x": [
+            "1807/64",
+            "7243/256"
+          ],
+          "left_value": "[3.061956815887909681830414757031100236873e-6 +/- 1.17e-9]",
+          "right_value": "[-2.018834063441037912119005795497095334667e-6 +/- 1.17e-9]",
+          "monotonic_derivative_floor_lower": "[8.519489640820619211055157574059104419878e-5 +/- 8.20e-46]",
+          "uniqueness": "entire uncertain cluster monotone; all other segments exclude zero"
+        },
+        {
+          "cluster_indices": [
+            235,
+            246
+          ],
+          "cluster_x": [
+            "10693/256",
+            "5429/128"
+          ],
+          "bracket_indices": [
+            239,
+            240
+          ],
+          "bracket_x": [
+            "10753/256",
+            "673/16"
+          ],
+          "left_value": "[-4.524211221818557042942301592985954172832e-8 +/- 1.17e-9]",
+          "right_value": "[2.029755494546187714046787617123285274445e-8 +/- 1.17e-9]",
+          "monotonic_derivative_floor_lower": "[7.715792741652726678784252548367310661783e-7 +/- 1.50e-47]",
+          "uniqueness": "entire uncertain cluster monotone; all other segments exclude zero"
+        }
+      ],
+      "stationary_points": [
+        {
+          "cluster_indices": [
+            54,
+            55
+          ],
+          "cluster_x": [
+            "3989/128",
+            "7993/256"
+          ],
+          "bracket_indices": [
+            54,
+            55
+          ],
+          "bracket_x": [
+            "3989/128",
+            "7993/256"
+          ],
+          "left_value": "[-1.033775388403954325169161604369705287354e-7 +/- 2.51e-10]",
+          "right_value": "[7.084608020621272473268926171685588855098e-7 +/- 2.51e-10]",
+          "monotonic_derivative_floor_lower": "[6.850246299081684409571180819753212612698e-6 +/- 2.13e-46]",
+          "uniqueness": "entire uncertain cluster monotone; all other segments exclude zero"
+        }
+      ],
+      "real_interpolation_errors": [
+        "[3.098521822068751958097364871125483469544e-7 +/- 4.20e-47]",
+        "[5.175916610727448164309072514055642538637e-8 +/- 2.50e-48]"
+      ],
+      "time_zero_anchor_transfer_errors": [
+        "[1.160446487562814346885924992392727861908e-9 +/- 5.94e-50]",
+        "[2.501304785498772953062086768868693561352e-10 +/- 3.63e-50]",
+        "[2.320892975112158650358092264076101572897e-7 +/- 2.09e-47]"
+      ]
+    },
+    "vertex_lift": {
+      "formula": "G_j=c_j+i*y*c_(j+1)-(t+T)*c_(j+2), c_j=H_j(-T,x), j=0,1",
+      "component_error_upper": [
+        "[6.860577689602389978328493347274781304853e-8 +/- 3.02e-48]",
+        "[1.244156446951570171205896593695423093855e-8 +/- 3.15e-48]"
+      ],
+      "boundary_vertices": 2056,
+      "direct_complex_source_integrals": 0
+    },
+    "boundary": {
+      "tetrahedra": 9228,
+      "PL_floor_lower": "814994811761/1000000000000000000",
+      "face_component_errors": [
+        [
+          "[4.515786541229061661311022579150630470312e-7 +/- 1.44e-47]",
+          "[7.738664800033844114586189467958330135783e-8 +/- 4.88e-48]"
+        ],
+        [
+          "[4.515786541229061661311022579150630470312e-7 +/- 1.44e-47]",
+          "[7.738664800033844114586189467958330135783e-8 +/- 4.88e-48]"
+        ],
+        [
+          "[1.238659270676096826150539536687939186200e-7 +/- 3.84e-47]",
+          "[2.222530136476046377124060114548851194262e-8 +/- 3.43e-48]"
+        ],
+        [
+          "[4.293471065327170282885415606124040191419e-7 +/- 7.21e-48]",
+          "[7.406679363995782866311246020776497602453e-8 +/- 3.69e-49]"
+        ]
+      ],
+      "face_vector_errors": [
+        "[4.581615153504095915645962874976984219850e-7 +/- 4.91e-47]",
+        "[4.581615153504095915645962874976984219850e-7 +/- 4.91e-47]",
+        "[1.258440777671830863047336604567480482475e-7 +/- 3.87e-47]",
+        "[4.356889117341871974200348106994536992814e-7 +/- 2.54e-48]"
+      ],
+      "homotopy_gap_lower": "[3.568332964105904084354037125023015780150e-7 +/- 4.91e-47]",
+      "worst": {
+        "tetrahedron_index": 4579,
+        "axis": 1,
+        "vertex_indices": [
+          [
+            0,
+            0,
+            251,
+            0
+          ],
+          [
+            1,
+            0,
+            251,
+            0
+          ],
+          [
+            1,
+            0,
+            251,
+            1
+          ],
+          [
+            1,
+            0,
+            252,
+            1
+          ]
+        ],
+        "floor": "814994811761/1000000000000000000",
+        "gap": "[3.568332964105904084354037125023015780150e-7 +/- 4.91e-47]"
+      },
+      "floor_check_seconds": 0.23432737501570955,
+      "positive": 0,
+      "negative": 0,
+      "outside": 9228,
+      "singular_empty": 0,
+      "degree": 0,
+      "target": [
+        "1/1000000000039",
+        "1/1000000000061",
+        "1/1000000000063",
+        "1/1000000000091"
+      ],
+      "seconds": 1.6916502920212224
+    },
+    "direct": {
+      "full_dimensional_cells": 256,
+      "vertices_per_cell": 16,
+      "same_vertex_set": true,
+      "tensor_floor_lower": "814994811761/1000000000000000000",
+      "component_error_upper": [
+        "[4.155835995319610418858815762982119251134e-7 +/- 3.50e-47]",
+        "[7.045209867126505548742494743060319598514e-8 +/- 2.60e-48]"
+      ],
+      "vector_error_upper": "[4.215130204479181178184585026489541193029e-7 +/- 1.35e-47]",
+      "joint_floor_lower": "[3.934817913130818821815414973510458806971e-7 +/- 1.35e-47]",
+      "worst": {
+        "cell": 251,
+        "x": [
+          "10933/256",
+          "2737/64"
+        ],
+        "floor": "814994811761/1000000000000000000",
+        "gap": "[3.934817913130818821815414973510458806971e-7 +/- 1.35e-47]"
+      },
+      "check_seconds": 0.017189249978400767
+    },
+    "comparison": {
+      "same_source_integrals": true,
+      "same_domain": true,
+      "actual_interior_field_evaluations_both": 0,
+      "direct_gap_strictly_larger": true,
+      "gap_difference_lower": "[3.664849490249147374613778484874430268216e-8 +/- 2.44e-48]",
+      "boundary_total_consumer_seconds": 1.925977667036932,
+      "direct_total_consumer_seconds": 0.017189249978400767,
+      "time_scope": "one shared acquisition; consumer passes timed sequentially; not an optimal-complexity benchmark",
+      "structural_scope": "one mesh interval in each transverse coordinate puts every direct cell vertex on the outer boundary"
+    },
+    "run_seconds": 6.271752749977168
+  }
+}

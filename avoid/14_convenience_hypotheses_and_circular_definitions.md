@@ -33,6 +33,25 @@ a target divided by the unknown jet.
   object being estimated. [Separate same-model review](../papers/investigations-3/11_arithmetic_collision_rigidity/symmetries/07_geometric_duality_and_quaternionic_symmetry/reviews/03_CONSTRAINED_THETA_SPACE_INTERNAL_REVIEW_20261019.md).
   Added for Edward Baker with substantial LLM assistance, **gpt-6.1-sol, ultra**.
 
+- **BW12 analytic charge hypothesis audit (21 October 2026).**
+  [Note 05](../papers/investigations-3/13_contradiction_analysis/04_boundary_winding/threshold_routes/12_relative_chern_hopf_charges/notes/05_TWO_ROOT_DISCRIMINANT_FLOW_AND_REAL_CAP_CHARGE_20261021.md)
+  proves a real-cap reduction but records: “The half-plane bound is on
+  the derivative Psi'=mu. It implies injectivity and charge at most one,
+  **not** charge zero.” The quadratic collision passes the phase bound;
+  spatial-wall lower bounds and the missing cap sign remain inputs to
+  prove, not quantities made positive by definition. [Self-review](../papers/investigations-3/13_contradiction_analysis/04_boundary_winding/threshold_routes/12_relative_chern_hopf_charges/reviews/05_TWO_ROOT_DISCRIMINANT_AND_CAP_REVIEW_20261021.md).
+  Prepared for Edward Baker with substantial LLM assistance,
+  **gpt-6-astra, actual effort max**; no independent review.
+
+  The subsequent [BW12 Note 06](../papers/investigations-3/13_contradiction_analysis/04_boundary_winding/threshold_routes/12_relative_chern_hopf_charges/notes/06_COMPLETE_THETA_WALLS_AND_REAL_CAP_APPLICATION_20261021.md)
+  pays those inputs for one complete-theta window, with source-derived
+  walls, counts and cap signs. Its matching event control still passes
+  the wall and phase consumer. The [self-review](../papers/investigations-3/13_contradiction_analysis/04_boundary_winding/threshold_routes/12_relative_chern_hopf_charges/reviews/06_COMPLETE_THETA_REAL_CAP_APPLICATION_REVIEW_20261021.md)
+  records: “A useful phase bound does not itself supply the missing
+  near-event sign.” The finite gap >12 does not resolve a degenerating
+  endpoint. Added 21 October 2026 for Edward Baker with substantial LLM
+  assistance, **gpt-6-astra, actual effort max**.
+
 ## What it cost
 
 A retracted manuscript section; a retired deformation; a planned
@@ -46,3 +65,24 @@ it (the matching amplitude, the matching source) before using it; for every
 defined constant, say what proves it positive; for every proposed test,
 state the hypothesis it assumes and confirm the test can fail. The
 [investigations-2 README](../papers/investigations-2/README.md) rule 3 ("Model tests must preserve the hypotheses they challenge") and Note 11's rejection rule are the standing versions.
+
+**A paid local window still admits the event, 21 October 2026.** Prepared
+for Edward Baker with substantial LLM assistance, **gpt-6-astra, ultra**.
+[BW12 Note 07](../papers/investigations-3/13_contradiction_analysis/04_boundary_winding/threshold_routes/12_relative_chern_hopf_charges/notes/07_QUANTITATIVE_ENDPOINT_WINDOWS_AND_HEIGHT_COVERAGE_20261021.md) now pays the hypothetical-double
+geometry from complete moments; its correctly retained charge is one.
+For higher multiplicity, [Note 09](../papers/investigations-3/13_contradiction_analysis/04_boundary_winding/threshold_routes/12_relative_chern_hopf_charges/notes/09_MANY_ROOT_DISCRIMINANT_FLOW_AND_CAP_LIMITS_20261021.md) proves:
+“Even same positive cap signs permit a charge-six endpoint.” The missing
+variable polynomial forcing cannot be omitted from the many-root
+evolution. This screens the direct extension of that particular cap
+consumer, not other theta-specific estimates. [Review 08](../papers/investigations-3/13_contradiction_analysis/04_boundary_winding/threshold_routes/12_relative_chern_hopf_charges/reviews/08_ENDPOINT_CHARGE_OPENING_ROUND_REVIEW_20261021.md)
+checks the complete roots, source dependence and scoped conclusion;
+all review is internal to the same model configuration.
+
+**Manuscript checkpoint, 21 October 2026.** The [BW12 manuscript](../papers/investigations-3/13_contradiction_analysis/04_boundary_winding/threshold_routes/12_relative_chern_hopf_charges/manuscript/main.tex)
+retains the distinction between a strict matched-envelope improvement
+and an actual sign: “A strict improvement over another enclosure can
+still leave zero inside the resulting interval.” Its windows and
+higher-root controls do not close the source-sign obligation.
+[Same-model integration review](../papers/investigations-3/13_contradiction_analysis/04_boundary_winding/threshold_routes/12_relative_chern_hopf_charges/reviews/09_MANUSCRIPT_INTEGRATION_REVIEW_20261021.md);
+prepared for Edward Baker with substantial LLM assistance,
+**gpt-6-astra, actual effort ultra**. No broader impossibility claim.

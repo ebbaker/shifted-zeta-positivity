@@ -1,0 +1,133 @@
+\appendix
+\section{Holomorphic references and boundary interpolation}
+\label{app:reference}
+
+This appendix makes explicit two analytic ingredients of the earlier
+finite comparisons \cite{note02}. They are separate from the signed
+source estimates used in the endpoint program.
+
+\begin{proposition}[Minimum norm for a zero-free square holomorphic map]
+\label{a:minimum}
+Let $\Omega\Subset\mathbb C^n$ be a bounded domain with piecewise smooth
+boundary, and let $F$ be holomorphic near $\overline\Omega$, with
+values in $\mathbb C^n$. Suppose
+$b=\min_{\partial\Omega}\|F\|>0$. If
+$\deg(F,\Omega,0)=0$, then $F$ has no zero in $\overline\Omega$ and
+\[
+ \min_{\overline\Omega}\|F\|=b.
+\]
+\end{proposition}
+\begin{proof}
+For $\|v\|<b$, the fiber $F^{-1}(v)\cap\Omega$ is a compact analytic
+subset of the open Euclidean domain: it cannot approach the boundary.
+Such a subset is finite. Indeed, on a compact irreducible analytic
+component the maximum principle makes every holomorphic coordinate
+function constant, excluding positive dimension; compactness then
+makes the discrete set finite. At each isolated holomorphic preimage
+the local degree is a positive integer, the analytic multiplicity.
+The degree at $v$ is their sum. It is constant for $\|v\|<b$, since
+that ball misses $F(\partial\Omega)$. Degree zero at $0$ therefore
+implies that every such fiber is empty. This proves the claimed
+interior lower bound, and compactness of the boundary gives equality.
+\end{proof}
+
+\begin{corollary}[Transfer of the same certified margin]
+\label{a:transfer}
+Under the hypotheses of Proposition~\ref{a:minimum}, let $G$ be another
+square holomorphic map near $\overline\Omega$ and suppose
+$\sup_{\partial\Omega}\|G-F\|\leq e<b$. Then
+\[
+ \|G\|\geq b-e\quad\hbox{on }\overline\Omega,
+ \qquad \deg(G,\Omega,0)=0.
+\]
+\end{corollary}
+\begin{proof}
+Apply the scalar maximum-modulus principle to every unit linear
+functional of $G-F$. Taking the supremum over those functionals gives
+$\sup_{\overline\Omega}\|G-F\|\leq e$. The norm inequality follows
+from Proposition~\ref{a:minimum}; the straight boundary homotopy
+$F+s(G-F)$ is nonzero and preserves degree.
+\end{proof}
+
+The same supplied reference-degree proof, boundary floor and error
+certificate thus yield a direct interior joint margin without additional
+source acquisition. This is a comparison of those data, not a lower
+bound for the cost of every boundary algorithm. Computing the reference
+degree has a cost shared by both uses.
+
+The margin is sharp even for a heat jet requiring both components.
+On $|\operatorname{Re}t|,|\operatorname{Im}t|<1/10$ and
+$|\operatorname{Re}z|,|\operatorname{Im}z|<3/2$, set
+\[
+ F=(z^2-1-2t,2z),\qquad
+ G=(z^2-1-2t+\eta,2z),\quad 0<\eta<4/5.
+\]
+Writing $s=|z|^2$ and $k=1+2t$ gives
+\[
+ \|F\|^2\geq(s-|k|)^2+4s
+ =|k|^2+(4-2|k|)s+s^2\geq16/25,
+\]
+because $\operatorname{Re}k\geq4/5$ and $|k|<2$.
+Equality holds at $t=-1/10,z=0$.
+The identical argument with $k-\eta$ gives exact floor $4/5-\eta$
+for $G$, while $\|G-F\|=\eta$. At time zero, the first component
+of $F$ vanishes at $z=\pm1$, and its second component at $z=0$.
+Neither component by itself supplies the joint floor.
+
+\subsection{A complete interpolation payment}
+
+Suppose a convex boundary simplex is approximated by affine
+interpolation of the jets $H_j=\partial_z^jH$, $j=0,1$.
+Let $(t_i,z_i)$ be its vertices, $\lambda_i$ barycentric weights,
+and $(t,z)=\sum_i\lambda_i(t_i,z_i)$. Put
+\[
+ V_t=\sum_i\lambda_i|t_i-t|^2,\qquad
+ V_z=\sum_i\lambda_i|z_i-z|^2.
+\]
+If complete moments $M_k(T,R)$ bound all segment derivatives, Taylor's
+formula and cancellation of the linear barycentric term give
+\begin{equation}
+ \left|\sum_i\lambda_iH_j(t_i,z_i)-H_j(t,z)\right|
+ \leq I_j:=\frac12\left(M_{j+4}V_t+
+ 2M_{j+3}\sqrt{V_tV_z}+M_{j+2}V_z\right).
+ \label{a:interpolation}
+\end{equation}
+To check this, the second directional derivative has terms
+$H_{j,tt}=H_{j+4}$, $H_{j,tz}=-H_{j+3}$ and
+$H_{j,zz}=H_{j+2}$. Integrating the Taylor remainder contributes
+$1/2$, and Cauchy--Schwarz bounds the mixed barycentric sum.
+For a real coordinate with range length $h$, its variance is at most
+$h^2/4$: this follows by taking expectations in
+$(X-a)(b-X)\geq0$ and maximizing
+$(\mathbb EX-a)(b-\mathbb EX)$. Summing over the two time and
+two space coordinates bounds $V_t,V_z$ explicitly.
+
+If the vertex errors in $H_j$ are at most $\delta_j$, convexity keeps
+the interpolated acquisition errors at most $\delta_j$. Thus the
+full Euclidean jet error on the simplex is at most
+\begin{equation}
+ e_\sigma=\sqrt{(\delta_0+I_0)^2+(\delta_1+I_1)^2}.
+ \label{a:fullerror}
+\end{equation}
+A certified lower bound $b_\sigma$ for the norm on the entire affine
+image, with $e_\sigma<b_\sigma$, gives a nonzero straight boundary
+homotopy. Vertex norms alone are insufficient for $b_\sigma$; for
+example, enclosing the image convex hull in a coordinate box permits
+a lower bound by that box's distance from zero.
+
+For completeness, a finite piecewise affine degree computation can
+cone a coherently triangulated box boundary to its center, assigning
+the artificial target value zero to the cone vertex. This is an
+extension of the boundary map, not an interior approximation to $G$.
+For each four-simplex form the domain and target matrices
+$X=[x_0\ x_1\ x_2\ x_3]$ and
+$Y=[y_0\ y_1\ y_2\ y_3]$ relative to the cone center. A sufficiently
+small regular target $v$ contributes $\operatorname{sgn}(\det Y/\det X)$
+exactly when $Y^{-1}v$ has positive coordinates with sum less than one.
+Choose $\|v\|<\min_\sigma b_\sigma$ and verify that it is on no
+simplex image face and has no preimage in a singular simplex. The sum
+is the boundary degree, by additivity and homotopy invariance. Rational
+linear algebra can verify these finite conditions exactly. The
+artificial center uses no evaluation of the actual heat field. Finally,
+holomorphic positivity is what makes zero degree exclude a zero of
+$(H,H_z)$; that last conclusion would fail for a general real map.

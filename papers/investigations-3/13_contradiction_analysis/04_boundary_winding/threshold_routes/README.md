@@ -23,6 +23,11 @@ Execution update, 20 October 2026: prepared for Edward Baker with substantial LL
 | BW-08 | [Deflated threshold jets as inputs to winding contradictions](08_deflated_jet_hierarchy/README.md) | Can all-real threshold constraints on higher jets provide the arithmetic input needed by a local or later winding contradiction? |
 | BW-09 | [Expanding contours and later collisions](09_expanding_contour_later_collision/README.md) | Can a complete expanding-contour estimate force winding below the initial event's contribution, hence a strictly later collision? |
 | BW-10 | [RH implies simple zeros](10_rh_implies_simple_zeros/README.md) | Assuming RH, can exact time-zero arithmetic exclude every multiple zeta zero, directly or by forcing a later collision? |
+| BW-11 | [Global physical jet geometry](11_global_physical_jet_geometry/README.md) | Can a complete theta curvature or boundary estimate constrain the multiplicity defect? |
+| BW-12 | [Relative Chern and Hopf charges](12_relative_chern_hopf_charges/README.md) | Can a paid complex boundary-charge certificate improve on direct jet exclusion? |
+| BW-13 | [Spectral covers and periods](13_spectral_covers_and_periods/README.md) | Can a finite spectral-period estimate reveal a source-dependent constraint beyond generic degeneration? |
+| BW-14 | [Theta source geometry and transform constraints](14_theta_source_transform_constraints/README.md) | Which coupled arithmetic estimate survives the complete transform from the marked theta family to a physical observable? |
+| BW-15 | [Jensen surface degeneration and resolution](15_jensen_surface_degeneration/README.md) | Can complete moment and degree bounds yield a useful multiplicity-sensitive resolution diagnostic? |
 
 New route, 20 October 2026: prepared for Edward Baker with substantial
 LLM assistance, **gpt-6-astra (Codex), actual effort max**. BW-09 has a
@@ -65,3 +70,26 @@ estimates and wall-aware root counts are methods within BW-01 and BW-04.
 
 New distinct track, 20 October 2026: prepared for Edward Baker with substantial LLM assistance, **gpt-6-astra, actual effort ultra**.
 [BW-10](10_rh_implies_simple_zeros/README.md) investigates the conditional implication RH ⇒ simplicity of every nontrivial zero. Its [opening analysis](10_rh_implies_simple_zeros/brainstorm/01_RH_IMPLIES_SIMPLICITY_20261020.md), [program](10_rh_implies_simple_zeros/research-overview/01_RH_TO_SIMPLICITY_PROGRAM_20261020.md) and [register](10_rh_implies_simple_zeros/research-progress/01_RH_TO_SIMPLICITY_PROGRESS_20261020.md) retain all-multiplicity accounting and exact time-zero controls. No new theta exclusion is proved; the first arithmetic estimate is unexecuted. BW-09 keeps its separate positive-threshold scope.
+
+
+## Global geometry proposals opened on 21 October 2026
+
+Prepared for Edward Baker with substantial LLM assistance,
+**gpt-6-astra (Codex), actual effort max**, verified from recorded turn metadata.
+
+BW-11–15 give each of the five directions in
+[the global heat-geometry proposal note](10_rh_implies_simple_zeros/brainstorm/04_GLOBAL_HEAT_GEOMETRY_PROPOSALS_AND_INITIAL_SCREENS_20261021.md)
+its own README, research overview and progress register. BW-11–13 retain
+the note's related A–C group through cross-links and shared controls.
+BW-14 is the separate source-to-transform program; BW-15 remains a reserve
+resolution diagnostic until its benefit is specified. The source note's
+earlier statement that no folders had been opened describes that initial
+screening stage.
+
+These are organizational openings with inherited analytic screens.
+The new finite comparisons remain unexecuted, and no theta exclusion or
+new reviewed result is claimed. The existing
+[HMC register](10_rh_implies_simple_zeros/research-progress/02_HEAT_ROOT_MOTION_AND_SIGNED_CONTOURS_PROGRESS_20261021.md)
+keeps HMC-05 open and HMC-06 gated. The setup conversation is registered
+once in the shared
+[boundary-winding archive](../chat-histories/0008_2026-10-21T16-44-53Z_create-proposal-research-folders.json).

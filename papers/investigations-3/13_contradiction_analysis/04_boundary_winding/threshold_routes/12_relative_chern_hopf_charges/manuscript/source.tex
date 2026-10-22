@@ -1,0 +1,814 @@
+\section{Signed source response and displacement of a double event}
+\label{s:response}
+
+The two-root flow separates the analytic geometry of a possible collision
+from the source information needed to exclude it.  This section gives a
+signed source functional, an explicit nonlinear error, and a continuation
+criterion for the event itself.  The results consolidate the analytic
+arguments in \cite{note08}; their proofs are included here.
+
+\subsection{An exact response formula at a fixed real time}
+
+Fix a real time, which is suppressed in the notation, and a real spatial
+center $a$.  Let $F$ and $H=F+E$ be holomorphic near
+$\overline{B(a,R)}$.  Assume that $F$ is nonzero on
+$\Gamma=\{z:|z-a|=R\}$, has exactly two zeros counted with multiplicity
+inside $\Gamma$, and that both zeros belong to $B(a,r)$, where $0<r<R$.
+Write $c$ for their centroid and $\Delta_F$ for their squared difference.
+The reference zeros may coincide.  Throughout this section contours have
+counterclockwise orientation, and
+\[
+ \mathcal I[g]=\frac{1}{2\pi i}\int_\Gamma g(z)\,dz.
+\]
+Suppose the complete wall estimate is
+\begin{equation}
+ \rho:=\sup_\Gamma|E/F|<1.
+ \label{s:ratio}
+\end{equation}
+Rouch\'e's theorem then gives two zeros of $F+sE$ inside $\Gamma$ for
+$0\le s\le1$.  A count in a smaller disk, if needed for the two-root
+flow theorem, is an additional condition; it does not follow from
+\eqref{s:ratio} alone.
+
+\begin{theorem}[Logarithmic discriminant response]
+\label{s:log-response}
+Let $\ell=\log(1+E/F)$ be the branch defined by its convergent power
+series on an annulus containing $\Gamma$.  Then
+\begin{equation}
+ \Delta_H-\Delta_F
+ =-4\mathcal I[(z-c)\ell]-\bigl(\mathcal I[\ell]\bigr)^2.
+ \label{s:exact-response}
+\end{equation}
+Set
+\begin{align}
+ \mathcal L_F(E)&=-4\mathcal I[(z-c)E/F],\label{s:linear-response}\\
+ l_1(\rho)&=-\log(1-\rho),\qquad
+ l_2(\rho)=-\log(1-\rho)-\rho,\notag\\
+ \mathcal B(\rho)&=4R(R+r)l_2(\rho)+R^2l_1(\rho)^2.
+ \label{s:quadratic-payment}
+\end{align}
+The finite response satisfies
+\begin{equation}
+ |\Delta_H-\Delta_F-\mathcal L_F(E)|\le\mathcal B(\rho).
+ \label{s:response-bound}
+\end{equation}
+In particular the error is $O(\rho^2)$, with constants independent of
+the distance between the two reference zeros.
+\end{theorem}
+
+\begin{proof}
+Put $w=z-a$, and for $G=F,H$ let
+$S_k(G)=\mathcal I[w^kG_z/G]$ be the sum of the $k$th powers of its
+two centered zeros, counting multiplicity.  On the annulus,
+$H_z/H-F_z/F=\ell_z$.  Integration by parts on the closed contour gives
+\[
+ S_1(H)-S_1(F)=-\mathcal I[\ell],\qquad
+ S_2(H)-S_2(F)=-2\mathcal I[w\ell].
+\]
+The identity $\Delta_G=2S_2(G)-S_1(G)^2$, together with
+$S_1(F)=2(c-a)$, proves \eqref{s:exact-response}.  No extension of
+$\ell$ across the zeros of $F$ was used.  Its power series yields
+$|\ell|\le l_1(\rho)$ and $|\ell-E/F|\le l_2(\rho)$ on $\Gamma$.
+Now $|\mathcal I[g]|\le R\sup_\Gamma|g|$ and
+$|z-c|\le R+r$ prove \eqref{s:response-bound}.
+\end{proof}
+
+If $F$ and $H$ are real-symmetric, their discriminants and
+$\mathcal L_F(E)$ are real.  Thus a signed enclosure
+$\mathcal L_F(E)\in[L_-,L_+]$ gives
+\begin{equation}
+ \Delta_F+L_- -\mathcal B(\rho)
+ \le\Delta_H\le
+ \Delta_F+L_+ +\mathcal B(\rho).
+ \label{s:signed-enclosure}
+\end{equation}
+A positive lower bound at a negative real cap can be combined with the
+two-root charge theorem once all its spatial and phase hypotheses have
+been established.  A positive lower bound at $t=0$ itself excludes an
+endpoint double in this fiber.  Formula \eqref{s:signed-enclosure}
+does not provide either strict inequality without further source
+information.  It also retains the external wall ratio and the radii;
+being finite at an internal double is not a uniform condition estimate
+over all heights.
+
+\subsection{The complete signed source functional}
+
+Suppose, now displaying the fixed real time $t$, that
+\[
+ E(t,z)=\int_0^\infty\psi(u)e^{tu^2}\cos(zu)\,du.
+\]
+If $|F(t,z)|\ge\delta>0$ on $\Gamma$ and
+\begin{equation}
+ N_\psi(t,R):=\int_0^\infty|\psi(u)|e^{tu^2}\cosh(Ru)\,du<\infty,
+ \label{s:complete-residual-norm}
+\end{equation}
+then Fubini's theorem gives
+\begin{align}
+ \mathcal L_F(E)&=\int_0^\infty\psi(u)e^{tu^2}K_F(u)\,du,
+ \label{s:source-functional}\\
+ K_F(u)&=-4\mathcal I\!\left[
+             \frac{(z-c)\cos(zu)}{F(t,z)}\right],
+ \qquad
+ |K_F(u)|\le\frac{4R(R+r)}{\delta}\cosh(Ru).
+ \label{s:source-kernel}
+\end{align}
+Indeed $|\operatorname{Im}z|\le R$ on the circle because $a$ is real,
+so $|\cos(zu)|\le\cosh(Ru)$.  This proves an integrable majorant for
+the exchanged integrals, and also
+$\rho\le N_\psi(t,R)/\delta$.  Conjugation symmetry makes $K_F$ real
+on the positive real $u$ axis.
+
+At an exact double $b=c$, factor $F(t,z)=U(t,z)(z-b)^2$ with $U$ a
+nonvanishing analytic function.  A residue in
+\eqref{s:linear-response} then gives the particularly simple identity
+\begin{equation}
+ \mathcal L_F(E)=-\frac{4E(t,b)}{U(t,b)}
+               =-\frac{8E(t,b)}{F_{zz}(t,b)}.
+ \label{s:double-response}
+\end{equation}
+The sign is therefore an oscillatory source measurement divided by a
+nonzero curvature.  Positivity of the source and absolute moment bounds
+alone do not determine it.  For numerical use, every omitted source
+mode, unbounded integration ray, contour arc, and quadrature error must
+be included in both the wall ratio and the signed functional.  No new
+numerical acquisition is used to prove this identity.
+
+\subsection{Differentiating a real event through an affine heat family}
+
+Let $H_s(t,z)=F(t,z)+sE(t,z)$ be real-symmetric, with both $F$ and $E$
+satisfying the backward heat equation.  Suppose $F$ has an ordinary real
+double at $(\tau_0,b_0)$, so $F=F_z=0$ and $F_{zz}\ne0$ there.
+
+\begin{proposition}[Event derivatives and a one-sided finite error]
+\label{s:event-derivatives}
+There is a unique local real-analytic event branch
+$s\mapsto(\tau_s,b_s)$.  At a point on this branch, set
+\[
+ N=H_{s,zz}(\tau_s,b_s),\quad M=H_{s,zzz}(\tau_s,b_s),\quad
+ P_4=H_{s,zzzz}(\tau_s,b_s).
+\]
+With the residual derivatives evaluated at the same point,
+\begin{align}
+ \tau_s'&=\frac{E}{N}, &
+ b_s'&=\frac{M\tau_s'-E_z}{N},\label{s:event-first}\\
+ \tau_s''&=\frac{P_4}{N}(\tau_s')^2
+          -\frac{2E_{zz}}{N}\tau_s'-(b_s')^2.
+ \label{s:event-second}
+\end{align}
+If the branch exists for $0\le s\le1$ and along it
+\[
+ |N|\ge\nu>0,\quad |P_4|\le C_4,\quad |E|\le E_0,
+ \quad |E_{zz}|\le E_2,
+\]
+then
+\begin{equation}
+ \tau_1\le\tau_0+\frac{E(\tau_0,b_0)}{F_{zz}(\tau_0,b_0)}
+       +\frac12\left(\frac{C_4E_0^2}{\nu^3}
+                         +\frac{2E_2E_0}{\nu^2}\right).
+ \label{s:event-location}
+\end{equation}
+\end{proposition}
+
+\begin{proof}
+The Jacobian of $(H_s,H_{s,z})$ with respect to $(t,z)$ at an event is
+\[
+ \begin{pmatrix}-N&0\\-M&N\end{pmatrix},
+\]
+whose determinant is $-N^2$.  The analytic implicit-function theorem
+gives the local branch, and real symmetry gives its reality.  One
+derivative of the two event equations gives
+$-N\tau_s'+E=0$ and $-M\tau_s'+Nb_s'+E_z=0$.
+For a second derivative of the first equation, use
+$H_{s,tt}=P_4$, $H_{s,tz}=-M$, and $E_t=-E_{zz}$ to obtain
+\[
+ 0=-N\tau_s''+P_4(\tau_s')^2-2M\tau_s'b_s'
+       +N(b_s')^2-2E_{zz}\tau_s'+2E_zb_s'.
+\]
+Substitution of $E_z=M\tau_s'-Nb_s'$ leaves
+\eqref{s:event-second}.  All terms are real.  In particular
+$-(b_s')^2\le0$, whereas $|\tau_s'|\le E_0/\nu$, so
+\[
+ \tau_s''\le\frac{C_4E_0^2}{\nu^3}
+                         +\frac{2E_2E_0}{\nu^2}.
+\]
+Integrating twice on $[0,1]$ proves \eqref{s:event-location}.
+\end{proof}
+
+This calculation also checks the signs in the discriminant formula.
+At a double, $\partial_s\Delta_s=-8E/N$ by
+\eqref{s:double-response}, while $\partial_t\Delta_s=8$ by the
+two-root heat equation.  Differentiating
+$\Delta_s(\tau_s)=0$ recovers $\tau_s'=E/N$.
+
+\subsection{Paying continuation and curvature from common walls}
+
+The local implicit-function theorem by itself does not continue an
+event to $s=1$.  The following conditions supply that missing step and
+the curvature floor in \eqref{s:event-location}.
+
+\begin{proposition}[A complete conditional continuation criterion]
+\label{s:continuation}
+Let $\mathcal D$ be a closed time rectangle with real caps $t_-<t_+$
+and imaginary half-width $\tau$.  Suppose every $H_s=F+sE$,
+$0\le s\le1$, has exactly two zeros inside $B(a,r)$ throughout
+$\mathcal D$, none in the closed collar to $\Gamma$, a common outer
+wall floor $|H_s|\ge\delta>0$, and a common strict phase condition
+from the two-root real-cap theorem.  Assume
+\[
+ \Delta_F(t_-)<0<\Delta_F(t_+),\qquad
+ m_{\rm cap}=\min\{-\Delta_F(t_-),\Delta_F(t_+)\}>0.
+\]
+If the two outer cap circles satisfy $|E/F|\le\rho<1$ and
+\begin{equation}
+ C_{\rm cap}:=4R(R+r)l_1(\rho)+R^2l_1(\rho)^2<m_{\rm cap},
+ \label{s:cap-persistence}
+\end{equation}
+then a unique real event exists for every $s\in[0,1]$, the events form
+one real-analytic branch, and
+\begin{equation}
+ |H_{s,zz}(\tau_s,b_s)|\ge\frac{2\delta}{(R+r)^2}.
+ \label{s:curvature-payment}
+\end{equation}
+\end{proposition}
+
+\begin{proof}
+Apply \eqref{s:exact-response} to $sE$ at each cap.  The bound
+$|\ell|\le l_1(\rho)$ gives
+$|\Delta_s(t_\pm)-\Delta_F(t_\pm)|\le C_{\rm cap}$.
+Thus both cap signs persist.  The two-root real-cap theorem gives
+exactly one event for each $s$, located on the real time interval.  It
+has spatial multiplicity two and $\partial_t\Delta_s=8$.  The local
+branches of Proposition~\ref{s:event-derivatives} agree wherever their
+domains overlap by uniqueness.  They extend along the full compact
+parameter interval: any limit of event points remains away from the
+time caps by the strict cap margins and from the spatial boundary by
+the common walls, and is again a double.  The implicit-function theorem
+then extends the branch at that limit.
+
+For the curvature, write $H_s=U_sP_s$ in the disk.  On $\Gamma$,
+$|P_s|\le(R+r)^2$, hence $|U_s|\ge\delta/(R+r)^2$.  Since $U_s$
+has no zeros, the maximum modulus principle applied to $1/U_s$
+propagates this bound throughout the disk.  At an event,
+$P_s=(z-b_s)^2$ and $H_{s,zz}=2U_s$, proving
+\eqref{s:curvature-payment}.
+\end{proof}
+
+Here are sufficient reference data for all the common hypotheses.
+Suppose $F$ has two zeros inside each of the disks of radii $r,R$
+throughout $\mathcal D$, with wall floors $\delta_{F,r},\delta_{F,R}$,
+and
+\[
+ Q_v=\sup_{t\in\mathcal D,\ |z-a|=v}|E/F|<1\quad(v=r,R).
+\]
+Rouch\'e's theorem supplies both counts for every $H_s$, with floors
+$\delta_v=(1-Q_v)\delta_{F,v}$.  Take $\delta=\delta_R$.  If a
+complete outer-wall derivative bound is $|F_z|+|E_z|\le L$, the
+sufficient common phase inequality is
+\begin{equation}
+ \frac{4RL}{\delta(R-r)^2}\,\tau<\frac\pi2.
+ \label{s:common-phase}
+\end{equation}
+A more precise common estimate for the regular coefficient $A_s$ may
+replace this one.  If the source densities are $\Phi_0$ and $\psi$,
+the remaining bounds along the real event branch can be taken to be
+\begin{align}
+ E_j&=\int_0^\infty|\psi(u)|u^je^{t_+u^2}\,du\quad(j=0,2),\notag\\
+ C_4&=\int_0^\infty\bigl(|\Phi_0(u)|+|\psi(u)|\bigr)
+                           u^4e^{t_+u^2}\,du.
+ \label{s:moment-payments}
+\end{align}
+The real event positions allow $|\cos(b_su)|\le1$ in these bounds.
+All source modes and integration rays are included.
+
+Consequently \eqref{s:event-location}, together with
+\eqref{s:cap-persistence}--\eqref{s:moment-payments}, is a complete
+conditional criterion for locating the unique event below zero.  It
+does not supply a negative right-hand side for the unchanged theta
+source.  Both the signed initial velocity and the external wall
+margins remain substantive inputs.
+
+\begin{example}[An exact nonlinear and continuation check]
+\label{s:quadratic-control}
+For
+\[
+ H_s(t,z)=z^2-2t+s(bz+c),
+\]
+one has
+\[
+ \Delta_s(t)=8t+s^2b^2-4sc,\qquad
+ \tau_s=\frac{sc}{2}-\frac{s^2b^2}{8},\qquad b_s=-\frac{sb}{2}.
+\]
+The initial signed response is $-4c$, while the finite correction is
+$s^2b^2$.  The logarithmic integral alone in
+\eqref{s:exact-response} contributes $2s^2b^2$; its last square is
+essential.  The event equations give $\tau_0'=c/2$ and
+$\tau_s''=-b^2/4$, as required.
+
+The continuation inequalities can also be checked with strict rational
+margins.  Set $r=1$, $R=2$, $|\operatorname{Re}t|,
+|\operatorname{Im}t|\le1/4$, $b=1/16$, and $c=\pm1/32$.
+Since $2|t|\le\sqrt2/2<3/4$, the inner and outer reference wall
+floors exceed $1/4$ and $13/4$.  Thus the relative errors are less
+than $3/8$ and $5/104$, respectively, and both counts persist.  The
+outer floor of $H_s$ exceeds $99/32$, so
+\eqref{s:curvature-payment} permits $\nu=11/16$.
+Here $A_s=0$ exactly, and the reference cap discriminants are $-2,+2$.
+Since $l_1(5/104)\le5/99$,
+\[
+ C_{\rm cap}\le\frac{120}{99}+\frac{100}{9801}<2.
+\]
+For $c=-1/32$, one has $P_4=E_{zz}=0$, so
+\eqref{s:event-location} proves $\tau_1\le-1/64<0$; its exact value
+is $-1/64-1/2048$.  For $c=+1/32$ the event is positive.  The same
+geometric conditions accommodate both outcomes; the sign comes from
+the signed displacement.
+\end{example}
+
+\section{What finite complete envelope moments cannot determine}
+\label{s:moment-obstruction}
+
+The obstruction proved here concerns precisely the envelope moments
+used in absolute source estimates.  It does not apply to an arbitrary
+finite list of observations, which could include the oscillatory
+measurement one wishes to determine.
+
+\begin{theorem}[Fixed envelope moments with both event directions]
+\label{s:finite-moment-control}
+Fix any finite collection
+\begin{equation}
+ k_j(u)=u^{n_j}e^{T_ju^2}\cosh(Y_ju),\qquad
+ n_j\in\mathbb Z_{\ge0},\quad T_j\in\mathbb R,\quad Y_j\ge0.
+ \label{s:envelope-moments}
+\end{equation}
+There is a strictly positive smooth even source $\Phi_0$, with
+super-Gaussian decay, and a real smooth perturbation $\psi$ supported
+in a compact subinterval of $(0,\infty)$, such that for all sufficiently
+small positive and negative $s$:
+\begin{enumerate}
+ \item $\Phi_s=\Phi_0+s\psi$ remains positive, with the same source
+       near zero and outside a fixed compact interval;
+ \item every selected complete moment
+       $\int_0^\infty\Phi_s(u)k_j(u)\,du$ is independent of $s$;
+ \item the associated heat family has a real ordinary-double branch
+       with $\tau_0=0$ and $\tau_0'>0$.
+\end{enumerate}
+In particular the double event lies on either side of zero for the
+respective signs of sufficiently small $s$.
+\end{theorem}
+
+\begin{proof}
+Take $c_0>0$ and
+\[
+ \Phi_0(u)=c_0\left(e^{-u^4}
+          +\tfrac12e^{-(u-4)^4}+\tfrac12e^{-(u+4)^4}\right).
+\]
+This is positive, even, and rapidly decaying.  If
+$G(z)=\int_0^\infty e^{-u^4}\cos(zu)\,du$, translation of the
+whole-line Fourier integral gives
+\[
+ H_0(0,z)=c_0G(z)(1+\cos4z).
+\]
+At $b=\pi/4$ the last factor has an ordinary double.  To see that
+$G(b)>0$ without numerical evaluation, write
+$M_j=\int_0^\infty u^je^{-u^4}\,du$.  Integration of
+$(ue^{-u^4})'$ gives $M_4=M_0/4$; Cauchy--Schwarz gives
+$M_2\le(M_0M_4)^{1/2}=M_0/2$.  Since
+$\cos x\ge1-x^2/2$,
+\[
+ G(b)\ge M_0-\frac{b^2}{2}M_2
+       \ge M_0(1-b^2/4)>0.
+\]
+Consequently $H_{0,zz}(0,b)=16c_0G(b)>0$.
+
+Choose a bounded open interval $I\Subset(0,\infty)$ and a smooth
+nonnegative bump $\chi$ supported in $I$ and positive on a subinterval.
+In the real inner product
+$\langle f,g\rangle_\chi=\int_0^\infty\chi fg$, let $p$ be the
+orthogonal projection of $f(u)=\cos(bu)$ onto the span of the $k_j$;
+linearly dependent functions may first be discarded.  Set
+$\psi=\chi(f-p)$.  Then
+\begin{equation}
+ \int_0^\infty\psi k_j=0,
+ \qquad
+ \int_0^\infty\psi(u)\cos(bu)\,du
+    =\int_0^\infty\chi(u)(f(u)-p(u))^2\,du>0.
+ \label{s:projection-control}
+\end{equation}
+
+For the strict inequality, $\cos(bu)$ cannot belong to the indicated
+finite span on any interval.  Such an equality would extend to the
+whole real axis by analyticity.  Expanding each hyperbolic cosine and
+grouping equal exponential factors writes its proposed right-hand side
+as a finite sum of polynomial multiples of $e^{Tu^2+Yu}$ with real
+$T,Y$.  As $u\to+\infty$, eliminate the largest quadratic exponent
+$T>0$, and within it the largest linear exponent, since a nonzero
+polynomial times that factor cannot remain bounded.  Repeating removes
+all growing terms, including those with $T=0,Y>0$.  All terms with
+$T<0$, or with $T=0,Y<0$, decay.  The remaining term is a polynomial,
+which must be constant to remain bounded.  The resulting right-hand
+side has a limit, whereas $\cos(bu)$ does not.  This contradiction
+proves \eqref{s:projection-control}.
+
+The base source has a positive minimum on $\operatorname{supp}\psi$;
+therefore both signs of sufficiently small $s$ preserve positivity.
+The even extension of $\psi$ is smooth because its support is away
+from zero, and all prescribed moments remain exactly fixed.  The
+super-Gaussian tail and the compact perturbation give jointly entire
+heat transforms.  Proposition~\ref{s:event-derivatives} and
+\eqref{s:projection-control}, divided by the positive curvature,
+give $\tau_0'>0$.  The local implicit-function theorem supplies the
+branch and the asserted signs.
+\end{proof}
+
+A sufficiently small proper two-root time-space window exists around
+the base double: isolate the zero at time zero, use nonvanishing on
+nested spatial circles to preserve the two counts, and shrink the time
+rectangle until the regular coefficient satisfies the strict phase
+condition.  Its strict margins persist for all sufficiently small
+$|s|$ by uniform convergence on compact sets.  Thus the two event
+directions coexist with the same selected moments and the same strict
+local analytic requirements.
+
+\begin{remark}[Scope of the control]
+The preserved moment vector is that of the constructed source
+$\Phi_0$, not the theta source.  Compact smooth perturbations need not
+preserve analyticity in the source variable, stronger shape conditions,
+or additional primitive identities.  This construction asserts no
+global all-real heat slice, no all-positive-time real-rootedness, no
+canonical theta coefficient expansion, and no ordinary Dirichlet
+series or full normalized arithmetic reflection identity.  It excludes
+only a universal inference from the displayed finite envelope moments
+and strict local analytic data.  A measured signed functional such as
+\eqref{s:source-functional}, exact arithmetic data, and further
+consequences of RH lie outside that information class.  In particular,
+this preservation list must not be combined with the distinct lists
+belonging to the other collision controls.
+\end{remark}
+
+\section{The canonical theta tail in the discriminant response}
+\label{s:canonical-tail}
+
+The actual theta tail has more structure than an arbitrary positive
+source bounded between two envelopes.  We construct that structure
+explicitly, following the source identity in \cite{tail04}, and then
+apply it to the signed kernel.  The resulting interval is strictly
+narrower than a specified pointwise-envelope interval, but is not
+proved to exclude zero.
+
+\subsection{An explicit positive Laplace law}
+
+Retain the complete mode normalization
+\[
+ \lambda_n=\pi n^2,\qquad
+ \phi_n(u)=\lambda_ne^{5u}(2\lambda_ne^{4u}-3)
+                              e^{-\lambda_ne^{4u}}.
+\]
+Every mode is positive for $u\ge0$.  Fix an integer $m\ge1$, and set
+\begin{gather}
+ S_m=\sum_{n=1}^m\phi_n,\qquad R_m=\sum_{n>m}\phi_n,\notag\\
+ \alpha=\lambda_m,\quad\beta=\lambda_{m+1},\quad d=\beta-\alpha,
+ \quad v=e^{4u}-1,\quad D_0=2\alpha-3,\quad
+ \gamma=\frac{D_0}{2\alpha}>0.\notag
+\end{gather}
+For $n>m$, define the nonnegative quantities
+\begin{equation}
+ d_n=\lambda_n-\alpha,\qquad e_n=\lambda_n-\beta,
+ \qquad
+ a_n=\frac{\lambda_n^2}{\alpha^2}e^{-d_n},\qquad
+ b_n=\frac{3\lambda_nd_n}{\alpha^2D_0}e^{-d_n}.
+ \label{s:tail-masses}
+\end{equation}
+
+\begin{proposition}[Canonical tail measure]
+\label{s:laplace-law}
+Let $\mathsf X_\gamma$ have exponential density
+$\gamma e^{-\gamma x}$ on $[0,\infty)$, and put
+\begin{align}
+ E_m&=\sum_{n>m}(a_n+b_n)=\frac{R_m(0)}{\phi_m(0)},\notag\\
+ \nu_m&=\frac1{E_m}\sum_{n>m}
+       \left[a_n\delta_{e_n}
+                +b_n\operatorname{Law}(e_n+\mathsf X_\gamma)\right],
+ \label{s:tail-probability}\\
+ p_m(v)&=\int_0^\infty e^{-xv}\,d\nu_m(x).
+ \label{s:laplace-transform}
+\end{align}
+Then $\nu_m$ is a probability measure and
+\begin{equation}
+ R_m(u)=E_m\phi_m(u)e^{-dv}p_m(v).
+ \label{s:exact-tail}
+\end{equation}
+If $A=a_{m+1}$ and $\eta=A/E_m$, then
+\[
+ 0<\eta<1,\qquad p_m(0)=1,\qquad p_m(\infty)=\eta,
+ \qquad (-1)^jp_m^{(j)}(v)\ge0\quad(j\ge0,v\ge0).
+\]
+In particular
+\begin{equation}
+ A\phi_m(u)e^{-dv}\le R_m(u)\le E_m\phi_m(u)e^{-dv}.
+ \label{s:tail-envelope}
+\end{equation}
+\end{proposition}
+
+\begin{proof}
+Division of the source polynomials, retaining their lower-order terms,
+gives
+\begin{equation}
+ \frac{\phi_n(u)}{\phi_m(u)}
+   =e^{-d_nv}\left(a_n+b_n\frac{\gamma}{\gamma+v}\right).
+ \label{s:mode-division}
+\end{equation}
+For example, with $q=1+v$ the needed algebra is
+\[
+ \frac{2\lambda_nq-3}{2\alpha q-3}
+ =\frac{\lambda_n}{\alpha}
+    +\frac{3(\lambda_n-\alpha)}{\alpha(2\alpha q-3)}.
+\]
+Also $\int_0^\infty e^{-xv}\gamma e^{-\gamma x}\,dx
+=\gamma/(\gamma+v)$.  Factor $e^{-dv}$ out of
+\eqref{s:mode-division} and sum over all $n>m$ to obtain
+\eqref{s:exact-tail} and \eqref{s:tail-probability}.  Evaluating at
+$v=0$ proves the expression for $E_m$ and total mass one.  The masses
+have Gaussian decay in $n$, and the continuous pieces have exponential
+tails, so every moment of $\nu_m$ is finite.  Differentiation under its
+integral proves the alternating derivative inequalities, including at
+zero.  Its only mass at zero is $a_{m+1}/E_m$; the exponential pieces
+have no atoms, and $b_{m+1}>0$, so this number lies strictly between
+zero and one.  Dominated convergence gives $p_m(\infty)=\eta$.
+The last enclosure follows.
+\end{proof}
+
+For later use, $E_m/A$ is bounded as $m$ varies and tends to one.  Here
+is a direct estimate.  Put $k=m+1$ and
+\[
+ \varrho_m=\left(\frac{k+1}{k}\right)^4e^{-\pi(2k+1)}<1.
+\]
+Successive ratios of $a_n$ for $n\ge k$ are at most $\varrho_m$,
+and $b_n/a_n=3d_n/(\lambda_nD_0)\le3/D_0$.  Consequently
+\begin{equation}
+ 1\le\frac{E_m}{A}
+ \le\frac{1+3/D_0}{1-\varrho_m}\longrightarrow1.
+ \label{s:tail-mass-ratio}
+\end{equation}
+This also supplies a complete elementary majorant for the infinite
+mass sum.
+
+\subsection{A cumulative-integral enclosure for the actual response}
+
+At a fixed real cap take the \emph{unshifted} reference and residual
+\begin{equation}
+ F(t,z)=\int_0^\infty S_m(u)e^{tu^2}\cos(zu)\,du,
+ \qquad E(t,z)=\int_0^\infty R_m(u)e^{tu^2}\cos(zu)\,du.
+ \label{s:unshifted-head}
+\end{equation}
+Assume $F$ has the proper two-root geometry of Section~\ref{s:response}
+and outer wall floor $\delta>0$.  Define
+\begin{align}
+ W(u)&=e^{tu^2}\phi_m(u)e^{-d(e^{4u}-1)},\notag\\
+ z_m(u)&=\frac{p_m(e^{4u}-1)-\eta}{1-\eta},\qquad
+ d\sigma_m(w)=-z_m'(w)\,dw.
+ \label{s:monotone-tail}
+\end{align}
+The function $z_m$ decreases from one to zero.  Hence $\sigma_m$ is
+a probability measure, and $z_m(u)=\sigma_m([u,\infty))$.
+The source identity becomes
+\begin{equation}
+ e^{tu^2}R_m(u)=W(u)\{A+(E_m-A)z_m(u)\}.
+ \label{s:affine-multiplier}
+\end{equation}
+For the real kernel in \eqref{s:source-kernel}, put
+\[
+ J_K=\int_0^\infty W(u)K_F(u)\,du,
+ \qquad C_K(w)=\int_0^wW(u)K_F(u)\,du,
+ \qquad C_K(\infty)=J_K.
+\]
+The bound in \eqref{s:source-kernel} and the complete source decay
+make these integrals absolutely convergent.
+
+\begin{theorem}[Canonical signed discriminant interval]
+\label{s:tail-discriminant}
+With the preceding notation,
+\begin{equation}
+ \mathcal L_F(E)=A J_K+(E_m-A)
+                        \int_0^\infty C_K(w)\,d\sigma_m(w).
+ \label{s:tail-response}
+\end{equation}
+Suppose a complete wall-ratio payment is
+\begin{equation}
+ \overline\rho=\frac{E_m}{\delta}
+                \int_0^\infty W(u)\cosh(Ru)\,du<1.
+ \label{s:tail-ratio}
+\end{equation}
+Then
+\begin{align}
+ \Delta_H&\ge\Delta_F+A J_K+(E_m-A)\min_{0\le w\le\infty}C_K(w)
+                         -\mathcal B(\overline\rho),\notag\\
+ \Delta_H&\le\Delta_F+A J_K+(E_m-A)\max_{0\le w\le\infty}C_K(w)
+                         +\mathcal B(\overline\rho).
+ \label{s:canonical-interval}
+\end{align}
+The extrema exist on the compactified half-line.  A sharper established
+wall ratio can replace \eqref{s:tail-ratio}.
+\end{theorem}
+
+\begin{proof}
+Substitute \eqref{s:affine-multiplier} into
+\eqref{s:source-functional}, write
+$z_m(u)=\int\mathbf1_{u\le w}\,d\sigma_m(w)$, and use Fubini.
+Absolute integrability follows from $\sigma_m$ having mass one and
+$\int W|K_F|<\infty$.  This proves \eqref{s:tail-response}.
+Continuity of $C_K$ and its limit at infinity give a compact range,
+so its probability average lies between its minimum and maximum.
+The upper envelope in \eqref{s:tail-envelope} proves
+$\sup_\Gamma|E/F|\le\overline\rho$.  Finally
+\eqref{s:response-bound}, with the increasing function
+$\mathcal B$, proves \eqref{s:canonical-interval}.
+\end{proof}
+
+This enclosure retains every theta mode and the entire source ray.
+It is an analytic estimate, independent of a sampling scheme.  An
+implementation must additionally enclose the acquisition errors and
+the full-domain extrema of $C_K$; no positive numerical lower endpoint
+is asserted here.
+
+\subsection{Strict improvement over a matched pointwise envelope}
+
+The following comparison keeps the same known lower and upper source
+bounds, the same wall ratio, and the same nonlinear response error.
+The pointwise comparison drops only the monotonicity of $z_m$.
+
+\begin{lemma}[Oscillation of the two-root response kernel]
+\label{s:kernel-oscillation}
+If both reference roots lie in $\operatorname{Re}z>0$, then $K_F$
+has strictly positive and strictly negative intervals arbitrarily far
+along the positive $u$ axis.
+\end{lemma}
+
+\begin{proof}
+Factor $F=UP$.  For distinct roots $z_1,z_2$, their centroid satisfies
+$(z_i-c)/P_z(z_i)=1/2$.  The residue theorem therefore gives
+\begin{equation}
+ K_F(u)=-2\left(\frac{\cos(z_1u)}{U(z_1)}
+                         +\frac{\cos(z_2u)}{U(z_2)}\right).
+ \label{s:kernel-residues}
+\end{equation}
+At a double $b>0$ the formula is
+$K_F(u)=-4\cos(bu)/U(b)$, which has the asserted signs.
+For distinct real positive roots, \eqref{s:kernel-residues} is a
+nonzero real combination of two distinct positive-frequency cosines.
+Its primitive is bounded and its mean square is positive: integrating
+the cosine products shows that the time average of the square tends
+to half the sum of the squared coefficients.  If the kernel were
+eventually nonnegative, its integral on the remaining ray would be
+bounded, whereas $K_F^2\le\|K_F\|_\infty K_F$ would then bound the
+square integral, contradicting its positive linear growth.  Eventual
+nonpositivity is excluded in the same way.  Continuity converts the
+resulting arbitrarily distant points of either sign into intervals.
+
+The other possibility under real symmetry is a conjugate pair
+$b\pm iy$ with $b,y>0$.  Write $1/U(b+iy)=c+ie$.  Equation
+\eqref{s:kernel-residues} becomes
+\[
+ K_F(u)=-4\{c\cos(bu)\cosh(yu)+e\sin(bu)\sinh(yu)\}.
+\]
+After division by $e^{yu}$ this is a nonzero sinusoid plus a term
+tending exponentially to zero; $(c,e)\ne(0,0)$ because $U$ is
+nonvanishing.  Its positive and negative lobes give the claim.
+\end{proof}
+
+\begin{theorem}[Strict matched-envelope improvement]
+\label{s:strict-improvement}
+Under the hypotheses of Theorem~\ref{s:tail-discriminant}, assume also
+that both reference roots lie in $\operatorname{Re}z>0$.  Set
+\[
+ f(u)=W(u)K_F(u),\qquad
+ P_+=\int_0^\infty f_+(u)\,du,
+ \qquad P_-=\int_0^\infty f_-(u)\,du,
+\]
+where $f_+=\max(f,0)$ and $f_-=\max(-f,0)$.
+The pointwise relaxation using the same bounds
+$AW\le e^{tu^2}R_m\le E_mW$ has the exact interval for the linear response
+\begin{equation}
+ [A J_K-(E_m-A)P_-,\ A J_K+(E_m-A)P_+].
+ \label{s:pointwise-interval}
+\end{equation}
+There are explicit numbers $d_-,d_+>0$, given by integrals over
+ordered sign intervals, for which
+\begin{equation}
+ \min C_K\ge-P_-+d_-,\qquad
+ \max C_K\le P_+-d_+.
+ \label{s:ordered-gains}
+\end{equation}
+Thus \eqref{s:canonical-interval} strictly improves both endpoints
+of the discriminant interval obtained from
+\eqref{s:pointwise-interval} with the identical nonlinear payment
+$\mathcal B(\overline\rho)$.
+\end{theorem}
+
+\begin{proof}
+The pointwise relaxation permits an arbitrary measurable multiplier
+$0\le a(u)\le1$ in $W\{A+(E_m-A)a\}$.  Choosing $a=1$ exactly
+where $f$ is positive or negative proves the two extrema in
+\eqref{s:pointwise-interval}; intermediate values follow by convexity.
+
+Since $W>0$, Lemma~\ref{s:kernel-oscillation} supplies a compact
+negative interval $I_-$ followed by a compact positive interval $I_+$.
+Set
+\[
+ d_+=\min\left\{\int_{I_-}f_-\,du,
+                         \int_{I_+}f_+\,du\right\}>0.
+\]
+For every $w$, the identity
+\[
+ P_+-C_K(w)=\int_w^\infty f_+(u)\,du
+                              +\int_0^w f_-(u)\,du
+\]
+is at least $d_+$: before the end of $I_-$ the later positive interval
+is wholly omitted, and after that point the negative interval is
+wholly included.  This proves the upper inequality.  A positive
+interval followed by a negative one gives, by the same argument,
+\[
+ d_-:=\min\left\{\int_{I_+^{\prime}}f_+\,du,
+                         \int_{I_-^{\prime}}f_-\,du\right\}>0,
+ \qquad C_K(w)+P_-\ge d_-.
+\]
+Finally $E_m-A>0$, so both improvements remain strict after adding
+the same respective nonlinear errors.
+\end{proof}
+
+The right-half-plane condition is material: a reference on the
+imaginary axis can have a kernel of one sign.  The strict comparison
+just proved can be arbitrarily small and its improved interval may
+still contain zero.  It establishes neither a uniform useful gain as
+height increases nor optimality among estimators retaining the full
+Laplace law.  It compares two specified source relaxations, not all
+methods of arithmetic evaluation.
+
+\subsection{Conditional applicability and the remaining source issue}
+
+\begin{proposition}[Local applicability at every putative positive double]
+\label{s:tail-local-applicability}
+Suppose the unchanged theta field has an ordinary double at $(0,a)$
+with $a>0$.  On a sufficiently small fixed proper two-root window about
+that event, the unshifted reference \eqref{s:unshifted-head} satisfies
+the hypotheses of Theorems~\ref{s:tail-discriminant} and
+\ref{s:strict-improvement} for every sufficiently large cutoff $m$.
+The assertion is pointwise in the event; it supplies no uniform cutoff
+over all heights and no contradiction to the assumed double.
+\end{proposition}
+
+\begin{proof}
+In the quantitative double-window construction, impose additionally
+$R\le a/2$ and then choose the inner radius and time widths with the
+same inequalities.  The proof of its positive wall margins is
+unchanged.  Every point in the spatial disk has positive real part.
+On this fixed compact window the complete theta tails tend uniformly
+to zero on both nested walls.  For all sufficiently large $m$, their
+absolute bounds are less than half the corresponding wall floors of
+$H$.  Rouch\'e's theorem gives two zeros of $F=H-E$ inside each disk,
+none in the collar, and an outer reference floor at least half that of
+$H$.  In particular the reference roots lie in the right half-plane,
+and $|E/F|\le|E|/(|H|-|E|)<1$ on the outer wall.
+
+The explicit sufficient ratio \eqref{s:tail-ratio} also tends to zero.
+By \eqref{s:tail-envelope},
+\[
+ E_m\int_0^\infty W(u)\cosh(Ru)\,du
+ \le\frac{E_m}{A}
+       \int_0^\infty R_m(u)e^{tu^2}\cosh(Ru)\,du.
+\]
+The mass ratio is bounded by \eqref{s:tail-mass-ratio}; the complete
+tail integral tends to zero uniformly on the compact time interval by
+dominated convergence.  The reference floor stays bounded below, so
+\eqref{s:tail-ratio} eventually holds.  The cited theorems now apply.
+\end{proof}
+
+The reference in \eqref{s:unshifted-head} is essential.  A shifted or
+reflection-corrected head changes the residual; the corresponding
+connector terms and shifted integration rays must then be restored
+before applying a source identity.  The present proof uses the
+unshifted head and its complete tail, and makes no claim to resolve
+their small signed cancellation.  This distinction is developed in
+\cite{tail05}.
+
+There is also a limitation within the weighted-square source class.
+Positive weights for which the relevant source sums and integrals
+converge leave the same construction with masses $a_n,b_n$ multiplied
+by those weights.  Thus positivity of the Laplace
+law does not characterize the canonical coefficient sequence.  When
+another source agrees through mode $m+1$ and has the same source value
+at zero, it has the same $F,W,A,E_m$ and hence the same monotone
+response enclosure at any fixed admissible reference window.  Its
+actual probability law and response need not agree with theta's.
+No assertion that a prescribed window contains a collision of that
+other source follows from such a match.  This observation is separate
+from the finite envelope-moment control in
+Theorem~\ref{s:finite-moment-control}; their preservation hypotheses
+are different.
+
+The analytic output is therefore the actual-source enclosure
+\eqref{s:canonical-interval}, its strict matched comparison
+\eqref{s:ordered-gains}, and its conditional applicability near each
+putative ordinary double.  The sign of the full theta discriminant
+lower bound remains open.  The proof and control boundaries were
+internally checked in \cite{review08}; these statements do not claim
+independent specialist validation.

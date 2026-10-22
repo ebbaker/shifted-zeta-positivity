@@ -494,3 +494,18 @@ not minimize the repaired profile's own norm.” Sections 5–7 retain the
 complete tails and fixed-family/fixed-time scopes of Notes 17–18;
 the [integration record](../papers/investigations-3/13_contradiction_analysis/04_boundary_winding/threshold_routes/10_rh_implies_simple_zeros/brainstorm/03_HEAT_ROOT_MOTION_AND_HIGHER_DIMENSIONAL_CONTOURS_20261021.md)
 records the checks. This is consolidation, not a stronger exclusion.
+
+
+**A changed representation is not changed information, 21 October 2026.**
+Prepared for Edward Baker with substantial LLM assistance,
+**gpt-6-astra, effort ultra**; separate same-model internal review.
+[BW12 Note 14](../papers/investigations-3/13_contradiction_analysis/04_boundary_winding/threshold_routes/12_relative_chern_hopf_charges/notes/14_GAUSSIAN_HERMITE_RECONSTRUCTION_AND_RESPONSE_QUOTIENT_20261021.md)
+shows that Gaussian Hermite projection reconstructs the endpoint Taylor
+polynomial and reproduces its same-data norm bound. Its qualification is:
+“A full derivative sequence is stronger information than finitely many
+measured jets”. [Note 15](../papers/investigations-3/13_contradiction_analysis/04_boundary_winding/threshold_routes/12_relative_chern_hopf_charges/notes/15_CANONICAL_COVARIANCE_SIGNED_ENCLOSURE_20261021.md)
+does improve a specified direct range scheme by retaining canonical
+covariance. Keep its common grid, additional cell moments, complete mixed
+term and acquisition errors; it is not a comparison with all direct
+methods or an endpoint sign. The exact controls reject the dropped-mixed-
+term estimate. [Review 12](../papers/investigations-3/13_contradiction_analysis/04_boundary_winding/threshold_routes/12_relative_chern_hopf_charges/reviews/12_FINITE_TIME_SIGNED_RECONSTRUCTION_OPENING_REVIEW_20261021.md).

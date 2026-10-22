@@ -207,6 +207,50 @@ finite order \(m=2r+j\), \(r\ge1\), \(j\in\{0,1\}\).
   exact algebra only. Prepared for Edward Baker with substantial LLM
   assistance, **gpt-6-astra, actual effort max**; no specialist review.
 
+- **BW12 relative charge and two-zero theta comparison (21 October 2026).**
+  **Proved in-note / interval-certified finite comparison; same-assistant
+  review:** a square holomorphic degree-zero reference transfers its
+  boundary floor into the interior, giving the same direct margin from
+  the same error and degree proof ([Note 02](../papers/investigations-3/13_contradiction_analysis/04_boundary_winding/threshold_routes/12_relative_chern_hopf_charges/notes/02_HOLOMORPHIC_REFERENCE_TRANSFER_AND_BOUNDARY_DEGREE_20261021.md)).
+  A complete-theta box with |Re t|,|Im t|,|Im z|<.01 and 28<Re z<43
+  has charge zero, exactly two simple real zeros and one stationary
+  point at t=0. Boundary gap >3.5683e−7 loses to direct >3.9348e−7
+  from identical 1,032 source integrals and 2,056 boundary vertices.
+  “This thin-box implementation does not establish a boundary advantage.”
+  The direct consumer uses 256 full cells; the boundary consumer checks
+  9,228 tetrahedra and solves 9,228 exact degree systems. This stops the
+  declared comparison, not other boundary acquisition schemes or global
+  programs. [Note 03](../papers/investigations-3/13_contradiction_analysis/04_boundary_winding/threshold_routes/12_relative_chern_hopf_charges/notes/03_TWO_ZERO_THETA_BOUNDARY_AND_DIRECT_COMPARISON_20261021.md),
+  [self-review](../papers/investigations-3/13_contradiction_analysis/04_boundary_winding/threshold_routes/12_relative_chern_hopf_charges/reviews/03_TWO_ZERO_THETA_COMPARISON_REVIEW_20261021.md).
+  Prepared for Edward Baker with substantial LLM assistance,
+  **gpt-6-astra, actual effort max**; no independent review or global
+  simplicity conclusion.
+
+- **BW12 analytical two-root charge reduction (21 October 2026).**
+  [Note 05](../papers/investigations-3/13_contradiction_analysis/04_boundary_winding/threshold_routes/12_relative_chern_hopf_charges/notes/05_TWO_ROOT_DISCRIMINANT_FLOW_AND_REAL_CAP_CHARGE_20261021.md)
+  is **proved in-note under isolation and phase hypotheses; self-review**.
+  An analytic coefficient gives Delta'=8+A Delta. On a proper
+  real-symmetric two-root time rectangle, K tau<pi/2 makes every event
+  real, allows at most one, and determines the charge from real cap signs.
+  A complete-moment strip width uses proved spatial-wall floors without
+  an inverse internal gap. “Injectivity controls how many times a value
+  is attained; it does not say that the value is omitted.” That round
+  established no new theta wall floors or cap signs. [Review 05](../papers/investigations-3/13_contradiction_analysis/04_boundary_winding/threshold_routes/12_relative_chern_hopf_charges/reviews/05_TWO_ROOT_DISCRIMINANT_AND_CAP_REVIEW_20261021.md).
+  Prepared for Edward Baker with substantial LLM assistance,
+  **gpt-6-astra, actual effort max**; no independent validation.
+
+  **Complete-source continuation, 21 October 2026:**
+  [Note 06](../papers/investigations-3/13_contradiction_analysis/04_boundary_winding/threshold_routes/12_relative_chern_hopf_charges/notes/06_COMPLETE_THETA_WALLS_AND_REAL_CAP_APPLICATION_20261021.md) is **proved in-note / interval-certified; self-review**.
+  On |Re t|,|Im t|<.01 and |z−71/2|<10, nested theta walls and counts,
+  K tau<.034891 and both cap discriminants >144 give charge zero.
+  The same wall/phase consumer admits a quadratic event with charge one.
+  “This is not a new qualitative property distinguishing theta from every
+  colliding family.” Near-event and arbitrary-height signs remain open.
+  [Review 06](../papers/investigations-3/13_contradiction_analysis/04_boundary_winding/threshold_routes/12_relative_chern_hopf_charges/reviews/06_COMPLETE_THETA_REAL_CAP_APPLICATION_REVIEW_20261021.md),
+  [receipt](../papers/investigations-3/13_contradiction_analysis/04_boundary_winding/threshold_routes/12_relative_chern_hopf_charges/numerics/REAL_CAP_THETA_APPLICATION_20261021.json).
+  Prepared for Edward Baker with substantial LLM assistance,
+  **gpt-6-astra, actual effort max**; no independent validation.
+
 ## Status
 
 The local laws, indices, surface identities and equivalences have written
@@ -332,3 +376,52 @@ normalization and reality data retained.
   of a limit or finite-parameter monotonicity is claimed.
   [Review 12 §7](../papers/investigations-3/13_contradiction_analysis/04_boundary_winding/threshold_routes/10_rh_implies_simple_zeros/reviews/12_FINITE_PRECISION_SIGNED_KERNEL_AND_ENERGY_REVIEW_20261020.md). Prepared for Edward Baker with
   substantial LLM assistance, **gpt-6-astra, ultra**; no specialist review.
+
+**BW12 endpoint-window and signed-response continuation, 21 October 2026.**
+Prepared for Edward Baker with substantial LLM assistance,
+**gpt-6-astra, actual effort ultra**. **Proved in-note; separate same-model
+internal review:** [Note 07](../papers/investigations-3/13_contradiction_analysis/04_boundary_winding/threshold_routes/12_relative_chern_hopf_charges/notes/07_QUANTITATIVE_ENDPOINT_WINDOWS_AND_HEIGHT_COVERAGE_20261021.md) pays explicit proper
+two-root windows from complete moments at every hypothetical exact
+double, pointwise at every finite height; the event still has charge one.
+[Note 08](../papers/investigations-3/13_contradiction_analysis/04_boundary_winding/threshold_routes/12_relative_chern_hopf_charges/notes/08_SIGNED_DISCRIMINANT_RESPONSE_AND_EVENT_DISPLACEMENT_20261021.md) proves exact logarithmic discriminant
+response, its quadratic remainder and boundary-paid event continuation.
+Its canonical-tail appendix gives a strictly narrower signed interval
+than the matched pointwise envelope: “The interval can still straddle
+zero.” [Note 09](../papers/investigations-3/13_contradiction_analysis/04_boundary_winding/threshold_routes/12_relative_chern_hopf_charges/notes/09_MANY_ROOT_DISCRIMINANT_FLOW_AND_CAP_LIMITS_20261021.md) proves D'=8T+B D for every proper
+finite cluster, with complete regular exterior coefficient and explicit
+wall bounds. A proper cubic has at most one real event, but may have
+three complex-window events; a quartic birth has equal positive caps
+and charge six. These controls exclude only the direct many-root
+phase/cap extension. ECE-01's parameterized geometry is complete;
+the positive unchanged-theta margin, endpoint exclusion and full
+height/multiplicity assembly remain open. [Review 08](../papers/investigations-3/13_contradiction_analysis/04_boundary_winding/threshold_routes/12_relative_chern_hopf_charges/reviews/08_ENDPOINT_CHARGE_OPENING_ROUND_REVIEW_20261021.md);
+exact algebra controls, no new theta numerical certificate or specialist
+validation.
+
+**BW12 manuscript consolidation, 21 October 2026.**
+The [self-contained analytic manuscript](../papers/investigations-3/13_contradiction_analysis/04_boundary_winding/threshold_routes/12_relative_chern_hopf_charges/manuscript/main.tex)
+consolidates the preceding in-note results, with numerical certificates
+as support and separate same-model internal review. Its explicit limit
+is: “The geometric quantifier is paid here; that signed quantifier remains
+open.” No research-status upgrade or specialist validation follows.
+[Integration review](../papers/investigations-3/13_contradiction_analysis/04_boundary_winding/threshold_routes/12_relative_chern_hopf_charges/reviews/09_MANUSCRIPT_INTEGRATION_REVIEW_20261021.md).
+Prepared for Edward Baker with substantial LLM assistance,
+**gpt-6-astra, actual effort ultra**.
+
+
+**BW12 finite-time reconstruction and covariance, 21 October 2026.**
+Prepared for Edward Baker with substantial LLM assistance,
+**gpt-6-astra, effort ultra**. **Proved in-note; separate same-model
+internal review:** [Note 13](../papers/investigations-3/13_contradiction_analysis/04_boundary_winding/threshold_routes/12_relative_chern_hopf_charges/notes/13_PAID_ENDPOINT_WINDOW_AND_FINITE_TIME_BASELINE_20261021.md)
+pays an explicit conditional canonical cutoff/window with actual rho<=1/15.
+[Note 14](../papers/investigations-3/13_contradiction_analysis/04_boundary_winding/threshold_routes/12_relative_chern_hopf_charges/notes/14_GAUSSIAN_HERMITE_RECONSTRUCTION_AND_RESPONSE_QUOTIENT_20261021.md)
+identifies Gaussian Hermite reconstruction with endpoint Taylor truncation
+and compresses the quadratic response modulo P², without inverse root gap.
+[Note 15](../papers/investigations-3/13_contradiction_analysis/04_boundary_winding/threshold_routes/12_relative_chern_hopf_charges/notes/15_CANONICAL_COVARIANCE_SIGNED_ENCLOSURE_20261021.md)
+proves a signed covariance correction with O(J^-3) remainder and strict
+containment in exact range enclosures on the same uniform cutoff grid.
+Extra moments and acquisition errors are paid. Its scope is explicit:
+“There is no T-dependent gain.” Same-information direct evaluation gives
+the same refined interval. No theta numerical endpoint, positive-time
+advantage, endpoint exclusion or specialist validation is established.
+[Review 12](../papers/investigations-3/13_contradiction_analysis/04_boundary_winding/threshold_routes/12_relative_chern_hopf_charges/reviews/12_FINITE_TIME_SIGNED_RECONSTRUCTION_OPENING_REVIEW_20261021.md).

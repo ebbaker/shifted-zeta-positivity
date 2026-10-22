@@ -1,0 +1,565 @@
+\section{Finite clusters and their positive charge}\label{f:cluster-section}
+
+The objects in this section are finite clusters, rather than a product
+over all zeros of an entire function.  This distinction makes the
+boundary assumptions explicit and retains the influence of the exterior
+zeros through a holomorphic unit.  The construction consolidates
+\cite{note04}.
+
+\begin{definition}[Proper spatial cluster]\label{f:proper}
+Let $D\subset\mathbb C$ be a bounded disk or rectangle, and let
+$\Omega_R=\{z:|z-a|<R\}$.  Suppose $H$ is holomorphic on a neighborhood
+of $\overline D\times\overline\Omega_R$ and
+\[
+ H(t,z)\ne0\qquad
+ (t\in\overline D,\ |z-a|=R).
+\]
+The zeros of $H(t,\cdot)$ in $\Omega_R$, counted with multiplicity,
+form a proper cluster.  Their number $m$ is independent of $t$.
+A collar of radius $r<R$ means that all these zeros lie in
+$\Omega_r=\{|z-a|<r\}$ throughout $\overline D$.
+\end{definition}
+
+The count is the integer-valued continuous function
+$(2\pi i)^{-1}\oint H_z/H\,dz$.  In particular, two counts, one on each
+of the circles of radii $r$ and $R$, certify a collar; an inner count
+alone does not exclude additional roots in the annulus.
+
+\begin{lemma}[Preparation without root labels]\label{f:preparation}\label{f:cluster}
+A proper cluster has a monic polynomial
+\[
+ P(t,z)=z^m+p_1(t)z^{m-1}+\cdots+p_m(t)
+\]
+with coefficients holomorphic in $t$, and
+$H(t,z)=U(t,z)P(t,z)$, where $U$ is holomorphic and nonvanishing on
+the product.  The polynomial is uniquely determined by the cluster.
+\end{lemma}
+
+\begin{proof}
+For $k\ge1$ the contour integrals
+\begin{equation}\label{f:root-moments}
+ S_k(t)=\frac1{2\pi i}\oint_{|\zeta-a|=R}
+       \zeta^k\frac{H_z(t,\zeta)}{H(t,\zeta)}\,d\zeta
+\end{equation}
+are holomorphic and equal the sums of the $k$th powers of the roots,
+including multiplicity.  Newton's identities determine the elementary
+symmetric functions recursively from $S_1,\ldots,S_m$, hence construct
+$P$ with holomorphic coefficients.  On each fixed time fiber $H/P$
+has removable singularities at exactly the selected roots and has no
+zeros in the disk.  Joint holomorphy follows, without choosing those
+roots, from the Cauchy representation
+\[
+ U(t,z)=\frac1{2\pi i}\oint_{|\zeta-a|=R}
+        \frac{H(t,\zeta)}{P(t,\zeta)(\zeta-z)}\,d\zeta,
+       \qquad |z-a|<R.
+\]
+For each $t$ this is the removable quotient, and the integrand is
+holomorphic in its parameters.  Near the spatial wall the quotient
+itself supplies the extension.  Compactness and the strict boundary
+condition allow the same construction on a slightly enlarged time
+neighborhood.  Uniqueness follows from the multiset of roots.
+\end{proof}
+
+Define the finite discriminant by
+\begin{equation}\label{f:discriminant-definition}
+ \Delta_P(t)=\operatorname{Disc}_z P(t,z)
+    =\prod_{i<j}(z_i(t)-z_j(t))^2.
+\end{equation}
+The symmetric expression is holomorphic even when the roots cannot be
+labeled holomorphically.  We set $\Delta_P=1$ if $m\le1$.
+
+\begin{theorem}[Boundary charge and discriminant winding]
+\label{f:charge-winding}\label{f:charge}
+In addition to properness, suppose that $(H,H_z)$ has no zero on
+$\partial D\times\overline\Omega_R$.  Give complex two-space its
+complex orientation and the product boundary its induced orientation.
+The degree of
+\[
+ \frac{(H,H_z)}{\sqrt{|H|^2+|H_z|^2}}:
+       \partial(D\times\Omega_R)\longrightarrow S^3
+\]
+is well defined and equals
+\begin{equation}\label{f:winding-formula}
+ Q_{D\times\Omega_R}
+   =\frac1{2\pi i}\oint_{\partial D}
+              \frac{\Delta_P'(t)}{\Delta_P(t)}\,dt.
+\end{equation}
+It is the sum of the local complex intersection multiplicities of
+$(H,H_z)$, and is therefore a nonnegative integer.
+\end{theorem}
+
+\begin{proof}
+The side wall contains no zero of $H$, and the remaining boundary
+contains no joint zero by hypothesis.  The discriminant is nonzero
+on $\partial D$.  It is consequently not identically zero and has
+only finitely many zeros in $\overline D$.  Above each such time there
+are only finitely many cluster roots, so the joint zeros are isolated.
+
+Fix one such time $t_0$ and put
+$\mathcal R=\mathbb C\{t-t_0\}$, the ring of convergent power series.
+The module $\mathcal A=\mathcal R[z]/(P)$ is free of rank $m$ over
+$\mathcal R$.  Multiplication by $P_z$ on $\mathcal A$ has determinant
+\[
+ \operatorname{Res}_z(P,P_z)
+    =(-1)^{m(m-1)/2}\Delta_P.
+\]
+Indeed, at a time with distinct roots multiplication is diagonal in
+the evaluation coordinates, with determinant $\prod_iP_z(z_i)$;
+the identity then extends holomorphically.  The ring $\mathcal R$ is
+a discrete valuation ring.  Elementary row and column reduction puts
+any matrix with nonzero determinant into diagonal form with entries
+units times powers $(t-t_0)^{e_j}$.  Thus the order of its determinant
+is the sum of the $e_j$, which is also the length of its cokernel.
+Applying this to multiplication by $P_z$ gives
+\[
+ \operatorname{ord}_{t_0}\Delta_P
+       =\operatorname{length}_{\mathcal R}\mathcal A/(P_z).
+\]
+Small disjoint spatial disks around the distinct roots at $t_0$
+split this quotient into its local factors.  In each factor, analytic
+division by the monic local polynomial identifies its length with
+\[
+ \dim_{\mathbb C}
+ \frac{\mathbb C\{t-t_0,z-b\}}{(P,P_z)}.
+\]
+Since $U$ is a unit, $(H,H_z)=(UP,UP_z+U_zP)$ and $(P,P_z)$
+generate the same ideal.  These dimensions are therefore precisely
+the local intersection multiplicities of the original jet.
+
+For completeness, the topological interpretation uses the usual local
+degree property of a holomorphic square map: at an isolated zero its
+degree is the dimension of its local analytic quotient.  One way to
+see the sign and multiplicity is to perturb the target to a nearby
+regular value in an isolating neighborhood.  The local intersection
+number counts the preimages with their multiplicities; at a regular
+preimage the real Jacobian determinant is
+$|\det_{\mathbb C}DF|^2>0$.  Conservation of the intersection number
+and homotopy invariance of boundary degree give the asserted equality
+at the original value.  Additivity over disjoint isolating neighborhoods
+then identifies the product-boundary degree with the sum of the above
+lengths.  The scalar argument principle sums
+$\operatorname{ord}_{t_0}\Delta_P$ and proves
+\eqref{f:winding-formula}.  Corners of a product rectangle may be
+rounded within a boundary neighborhood free of joint zeros, without
+changing either degree.
+\end{proof}
+
+The heat equation determines the local multiplicity in this formula.
+Here and below the time normalization is $H_t=-H_{zz}$.
+
+\begin{proposition}[Hermite birth and local charge]\label{f:hermite}
+Suppose $H(t_0,b+w)=c_mw^m+O(w^{m+1})$, where $c_m\ne0$ and
+$m\ge2$.  The event $(t_0,b)$ is an isolated zero of $(H,H_z)$.
+For its local $m$-root cluster, writing $s=t-t_0$ and
+$N=m(m-1)/2$, one has
+\begin{equation}\label{f:hermite-discriminant}
+ \Delta_P(t_0+s)=d_m s^N+O(s^{N+1}),\qquad
+ d_m=2^N\prod_{i<j}(\lambda_i-\lambda_j)^2>0,
+\end{equation}
+where $\lambda_1,\ldots,\lambda_m$ are the roots of the probabilists'
+Hermite polynomial $\operatorname{He}_m$.  The local jet charge is $N$.
+\end{proposition}
+
+\begin{proof}
+The heat equation recursively determines the Taylor coefficients in
+$s$ from the initial spatial Taylor series.  Terms arising from $w^\ell$
+have weighted degree $\ell$ when $w$ has weight one and $s$ has weight
+two.  The leading weighted polynomial is
+\[
+ c_m e^{-s\partial_w^2}w^m
+   =c_m(2s)^{m/2}\operatorname{He}_m
+                  \left(\frac{w}{\sqrt{2s}}\right).
+\]
+This is a polynomial identity, so the notation involving square roots
+introduces no choice into the polynomial itself.
+
+The polynomial $\operatorname{He}_m$ has $m$ distinct real roots.
+Indeed, its Rodrigues formula and integration by parts imply
+orthogonality to every polynomial of degree less than $m$ for the
+positive weight $e^{-x^2/2}$.  If it had fewer than $m$ distinct real
+roots of odd multiplicity, multiply it by the product of the linear
+factors at just those roots.  The resulting real polynomial would
+have a constant nonzero sign except at finitely many points, so its
+weighted integral could not vanish.  Orthogonality contradicts this.
+Degree $m$ now forces all $m$ roots to be real and simple.
+
+Set $s=\varepsilon^2$ and $w=\varepsilon x$.  Taylor convergence gives,
+uniformly for bounded $x$,
+\[
+ \varepsilon^{-m}H(t_0+\varepsilon^2,b+\varepsilon x)
+ =c_m2^{m/2}\operatorname{He}_m(x/\sqrt2)+O(\varepsilon).
+\]
+The left side extends holomorphically to $\varepsilon=0$.
+The simple-root implicit function theorem gives all $m$ cluster roots
+as
+$w_i=\varepsilon(\sqrt2\lambda_i+O(\varepsilon))$.
+They are distinct for sufficiently small nonzero $\varepsilon$.
+Their squared differences have product
+$d_m\varepsilon^{2N}(1+O(\varepsilon))$.
+The discriminant is holomorphic in $s=\varepsilon^2$, so its Taylor
+series has only even powers of $\varepsilon$; this proves
+\eqref{f:hermite-discriminant}.  It also proves local isolation of
+the event.  Theorem~\ref{f:charge-winding} identifies its charge with
+the order $N$.
+\end{proof}
+
+Consequently, on any product satisfying Theorem~\ref{f:charge-winding}
+for a heat family,
+\begin{equation}\label{f:positive-sum}
+ Q_{D\times\Omega_R}
+    =\sum_{(t,b):\,H(t,b)=H_z(t,b)=0}\binom{m(t,b)}2.
+\end{equation}
+Interior event charges do not cancel.  Reality and spatial parity do
+not change this: simultaneous conjugation in two complex coordinates
+has real orientation sign $+1$, and spatial sign reversal is complex
+linear, also of sign $+1$.  These symmetries can pair equal charges,
+but cannot force their sum to vanish.
+
+\section{The two-root equation and the real-cap theorem}
+\label{f:two-root-section}
+
+Assume a proper cluster consists of two roots in a collar
+$0<r<R$.  Write $H=UP$, $P=(z-z_1)(z-z_2)$, and
+$\Delta=(z_1-z_2)^2$.  Set $q=U_z/U$ and, on the outer circle,
+$f=H_z/H$.  The exterior unit $U$ is retained throughout; replacing
+it by a constant would change the equation for the original cluster.
+
+\begin{proposition}[Regular affine discriminant flow]\label{f:affine}
+The holomorphic coefficient
+\begin{equation}\label{f:A-contour}
+ A(t)=\frac4{2\pi i}\oint_{|\zeta-a|=R}
+        \frac{H_z(t,\zeta)}{H(t,\zeta)P(t,\zeta)}\,d\zeta
+\end{equation}
+is regular through collisions and satisfies
+\begin{equation}\label{f:affine-equation}
+                    \Delta'=8+A\Delta.
+\end{equation}
+For any holomorphic scalar $\kappa(t)$, $H_z$ may be replaced in
+\eqref{f:A-contour} by $H_z-\kappa H$.  If on the outer wall
+$|H|\ge\delta>0$ and $|H_z-\kappa H|\le L_\kappa$, then
+\begin{equation}\label{f:A-bound}
+          |A|\le K:=\frac{4RL_\kappa}{\delta(R-r)^2}.
+\end{equation}
+Every zero of $\Delta$ is simple and has derivative $8$.
+\end{proposition}
+
+\begin{proof}
+At a simple root the heat equation gives $z_i'=H_{zz}/H_z$.
+Differentiating $UP$ at that root yields
+\[
+ z_1'=\frac2{z_1-z_2}+2q(t,z_1),\qquad
+ z_2'=\frac2{z_2-z_1}+2q(t,z_2).
+\]
+Thus
+\[
+ \Delta'=8+4\Delta\frac{q(t,z_1)-q(t,z_2)}{z_1-z_2}.
+\]
+By residues the divided difference is
+$(2\pi i)^{-1}\oint q/P\,d\zeta$.  Since $f=q+P_z/P$ and
+$P_z/P^2=-\partial_z(1/P)$, the integral is unchanged if $q$ is
+replaced by $f$.  This proves the equation away from events.
+The discriminant is not identically zero by
+Proposition~\ref{f:hermite}; alternatively, a persistent double
+$H=U(z-c(t))^2$ would give $H_t(t,c(t))=0$ and
+$H_{zz}(t,c(t))=2U(t,c(t))\ne0$, contradicting heat flow.
+Both sides of \eqref{f:affine-equation} are holomorphic, so the equation
+extends through its isolated events.
+
+The scalar subtraction is exact because $\oint1/P\,d\zeta=0$:
+the rational function $1/P$ has no exterior finite poles and decays
+quadratically at infinity.  On the outer wall,
+$|P|\ge(R-r)^2$.  Estimating the contour length $2\pi R$ gives
+\eqref{f:A-bound}.  Substitution of $\Delta=0$ in the equation gives
+$\Delta'=8$.
+\end{proof}
+
+There is no inverse internal root separation in
+\eqref{f:A-contour} or \eqref{f:A-bound}.  The bound does pay for
+the exterior collar and the spatial-wall floor.  A scalar centering
+$\kappa$ improves it only if the corresponding coupled numerator is
+actually estimated more sharply.
+
+\begin{theorem}[Reduction of complex charge to two real cap signs]
+\label{f:real-cap}
+Let
+\[
+ D=\{x+iy:t_-<x<t_+,\ |y|<\tau\},\qquad t_-<t_+,
+\]
+and suppose the proper two-root and collar hypotheses hold on a
+neighborhood of its closure.  Let $a\in\mathbb R$ and assume reality
+$H(\overline t,\overline z)=\overline{H(t,z)}$.  It suffices that
+\begin{equation}\label{f:phase}
+ \sup_{x+iy\in\overline D}
+   \left|\int_0^y\operatorname{Re} A(x+is)\,ds\right|<\frac\pi2.
+\end{equation}
+In particular, $|A|\le K$ and $K\tau<\pi/2$ suffice.  Then there
+is at most one cluster event in $\overline D$, and any such event has
+real time and real spatial position.  If
+$\Delta(t_-)\Delta(t_+)\ne0$, the entire product boundary is free
+of joint zeros, and
+\begin{equation}\label{f:cap-charge}
+ Q_{D\times\Omega_R}
+  =\frac{\operatorname{sgn}\Delta(t_+)
+               -\operatorname{sgn}\Delta(t_-)}2\in\{0,1\}.
+\end{equation}
+\end{theorem}
+
+\begin{proof}
+Choose $t_*\in(t_-,t_+)$ and define the holomorphic primitives
+\[
+ J(t)=\int_{t_*}^t A(v)\,dv,\qquad
+ \mu(t)=e^{-J(t)},\qquad \Psi(t)=\int_{t_*}^t\mu(v)\,dv.
+\]
+They are single valued on the rectangle.  Reality and uniqueness of
+the prepared polynomial imply reality of $A$ on the real interval.
+Integrating first horizontally and then vertically gives
+\[
+ \operatorname{Im}J(x+iy)=\int_0^y\operatorname{Re}A(x+is)\,ds.
+\]
+Therefore \eqref{f:phase} implies $\operatorname{Re}\mu>0$ on the
+closed rectangle.  Convexity gives, for distinct $s,t$ in its closure,
+\[
+ \frac{\Psi(t)-\Psi(s)}{t-s}
+      =\int_0^1\mu(s+v(t-s))\,dv,
+\]
+whose real part is positive.  Thus $\Psi$ is injective, including
+on the boundary.  Multiplying \eqref{f:affine-equation} by $\mu$
+and integrating yields
+\begin{equation}\label{f:normal-form}
+                 \mu(t)\Delta(t)=\Delta(t_*)+8\Psi(t).
+\end{equation}
+There is at most one zero.  A nonreal zero would have a distinct
+conjugate zero, so any zero is real.  At a real event the real monic
+quadratic has a repeated root, which is necessarily real as well.
+
+The only possible event times on the boundary are now $t_-$ and
+$t_+$, and the cap assumptions exclude them.  On real time $\mu>0$
+and $(\mu\Delta)'=8\mu>0$.  Equal nonzero cap signs give no event;
+negative then positive signs give exactly one.  The reversed sign
+pattern cannot occur.  Each event contributes one by
+Proposition~\ref{f:affine} and Theorem~\ref{f:charge-winding}, proving
+\eqref{f:cap-charge}.
+\end{proof}
+
+The theorem proves an upper bound of one event, not zero events.  The
+heat family $H=z^2-2t$ has $A=0$ and $\Delta=8t$; on
+$|\operatorname{Re}t|,|\operatorname{Im}t|\le1/4$ its roots lie in
+$|z|<1$, so $r=1,R=2$ supply a proper collar and charge one.  The
+phase condition is entirely compatible with this collision.  This
+distinction is central to the endpoint problem \cite{note05}.
+
+\subsection{A complete-source strip criterion}
+
+For the complete positive source, use the moments
+\[
+ M_j(T,s)=\int_0^\infty\Phi(u)u^j e^{Tu^2}\cosh(su)\,du.
+\]
+They are finite, and no source modes or exterior tail are omitted.
+Suppose $d_r,d_R>0$ are established bounds
+\[
+ |H(x,z)|\ge d_s\quad
+ (t_-\le x\le t_+,\ |z-a|=s),\qquad s=r,R,
+\]
+and a real anchor has root count two on both circles.  Put
+$B_s=M_2(t_+,s)$ and $L=M_1(t_+,R)$.  Then a sufficient width is
+\begin{equation}\label{f:source-strip}
+ 0<\tau<\min\left\{
+    \frac{d_r}{B_r},
+    \frac{d_R}{B_R+8RL/(\pi(R-r)^2)}\right\}.
+\end{equation}
+Indeed, $|e^{iyu^2}-1|\le|y|u^2$ and
+$|\cos(zu)|,|\sin(zu)|\le\cosh(su)$ on a circle centered at a
+real $a$ give
+\[
+ |H(x+iy,z)-H(x,z)|\le\tau B_s,\qquad
+ |H_z(x+iy,z)|\le M_1(t_+,s).
+\]
+Both walls therefore have positive floors $d_s-\tau B_s$, and
+continuity of their counts gives the proper two-root collar throughout
+the strip.  Applying \eqref{f:A-bound} with $\kappa=0$ and
+$\delta=d_R-\tau B_R$ gives $K\tau<\pi/2$ exactly from the second
+inequality in \eqref{f:source-strip}.  Purely imaginary time lifting
+requires no extra factor $e^{\tau u^2}$.  The cap signs still require
+separate information.  The finite verified application discussed later
+uses this type of complete-source payment \cite{note06}.
+
+\section{Explicit windows at a hypothetical double}
+\label{f:window-section}
+
+The preceding theorem has a pointwise geometric contract at every
+finite real height.  This section pays it in terms of the local
+second jet, including when the two roots coincide \cite{note07}.
+Fix $T_0,R_0>0$ and set
+\begin{equation}\label{f:B-moments}
+ B_j=M_j(T_0,R_0),\qquad j=2,3.
+\end{equation}
+The complete source gives
+$|\partial_z^jH(t,z)|\le B_j$ whenever
+$\operatorname{Re}t\le T_0$ and $|\operatorname{Im}z|\le R_0$.
+These bounds do not depend on $\operatorname{Re}z$.
+
+\begin{theorem}[Quantitative double window]\label{f:double-window}
+Assume, conditionally, that for a real $a$,
+\[
+ H(0,a)=H_z(0,a)=0,\qquad
+ c=\tfrac12H_{zz}(0,a)\ne0,
+ \qquad q_0=|c|.
+\]
+Define
+\begin{equation}\label{f:window-constants}
+ \begin{split}
+ R&=\min\{R_0/2,q_0/B_3\},\qquad r=R/2,\\
+ h&=\min\left\{T_0/2,
+       \frac{q_0R^2}{16\sqrt2 B_2},\frac{R^2}{128}\right\}.
+ \end{split}
+\end{equation}
+For every $t$ with $|\operatorname{Re}t|,|\operatorname{Im}t|\le h$,
+$H(t,\cdot)$ has exactly two roots inside each of the spatial circles
+of radii $r$ and $R$, and their walls satisfy
+\begin{equation}\label{f:double-floors}
+ |H(t,z)|>\tfrac12q_0s^2\quad(|z-a|=s,\ s=r,R).
+\end{equation}
+On the outer wall $|H_z|<3q_0R$.  The regular coefficient satisfies
+\begin{equation}\label{f:double-phase}
+          |A|\le K:=96/R^2,\qquad Kh\le3/4<\pi/2.
+\end{equation}
+The hypotheses extend to a neighborhood of the closed product.
+\end{theorem}
+
+\begin{proof}
+For $|w|=s\le R$, spatial Taylor expansion with integral remainder
+and straight-line integration in complex time give
+\[
+ |H(0,a+w)-cw^2|\le B_3s^3/6\le q_0s^2/6,
+\]
+\[
+ |H(t,a+w)-H(0,a+w)|\le|t|B_2
+       \le\sqrt2hB_2\le q_0R^2/16=q_0r^2/4.
+\]
+At $s=r,R$ their sum is at most $5q_0s^2/12<q_0s^2$.
+Rouch\'e's theorem against $cw^2$ gives both counts and the stronger
+common floor $7q_0s^2/12$.  At the outer circle the same calculation
+gives $37q_0R^2/48$.  Counting twice excludes annular roots.
+
+For the first derivative use its spatial remainder and
+$H_{zt}=-H_{zzz}$:
+\[
+ \begin{split}
+ |H_z(t,a+w)|
+ &\le2q_0R+\tfrac12 B_3R^2+\sqrt2hB_3\\
+ &\le\left(\tfrac52+\frac{\sqrt2}{128}\right)q_0R<3q_0R.
+ \end{split}
+\]
+The last step uses $RB_3\le q_0$ and $h\le R^2/128$.
+Equation~\eqref{f:A-bound}, with
+$\delta=q_0R^2/2$ and $R-r=R/2$, now gives $K=96/R^2$.
+All required wall margins are strict and $Kh\le3/4<\pi/2$;
+continuity on the compact boundary preserves the conditions on a
+small enlargement.  The corner factor $\sqrt2$ was included explicitly
+in the time estimates.
+\end{proof}
+
+\begin{corollary}[The compatible cap signs]\label{f:double-caps}
+In Theorem~\ref{f:double-window} define, for $x\ge0$,
+\begin{equation}\label{f:LU}
+ L_K(x)=\frac8K(1-e^{-Kx}),\qquad
+ U_K(x)=\frac8K(e^{Kx}-1),
+\end{equation}
+with continuous limiting values $8x$ if $K=0$.  Then
+\begin{equation}\label{f:double-cap-bounds}
+ \begin{split}
+ L_K(h)&\le\Delta(h)\le U_K(h),\\
+ -U_K(h)&\le\Delta(-h)\le-L_K(h).
+ \end{split}
+\end{equation}
+The resulting product has charge one, with its unique event at $(0,a)$.
+\end{corollary}
+
+\begin{proof}
+At the assumed double, $\Delta(0)=0$.  On real time the affine equation
+has the exact solution
+\[
+ \Delta(t)=8\int_0^t
+       \exp\left(\int_s^t A(v)\,dv\right)\,ds.
+\]
+The coefficient is real and bounded by $K$, so comparison with
+$e^{-K|t-s|}$ and $e^{K|t-s|}$ gives
+\eqref{f:double-cap-bounds}.  In particular the cap margins are
+positive, and $L_K(h)\ge8he^{-Kh}$.  Theorem~\ref{f:real-cap}
+gives the charge and uniqueness.
+\end{proof}
+
+This is a geometry theorem conditional on an exact double.  It cannot
+also be an exclusion theorem: its actual cap signs are those of a
+collision.  Improving an absolute coefficient bound changes their
+quantitative margins, but cannot turn them into equal signs.
+
+\subsection{A finite-jet test away from an assumed event}
+
+At any real center let
+$c_0=H(0,a)$, $c_1=H_z(0,a)$, $c_2=H_{zz}(0,a)/2$, and assume
+$q_0=|c_2|>0$.  Choose $0<r<R\le R_0$ and
+$\sqrt2h\le T_0$.  If, for $s=r,R$,
+\begin{equation}\label{f:off-event}
+ d_s=q_0s^2-|c_0|-s|c_1|-B_3s^3/6-\sqrt2hB_2>0,
+\end{equation}
+then the same Rouch\'e proof gives two roots inside each circle and
+wall floors $d_s$ on the closed time square.  Moreover
+\begin{equation}\label{f:off-event-A}
+ L=|c_1|+2q_0R+B_3R^2/2+\sqrt2hB_3,
+ \qquad K=\frac{4RL}{d_R(R-r)^2}
+\end{equation}
+are valid outer derivative and coefficient bounds.  If $Kh<\pi/2$,
+the real-cap theorem applies once the two cap discriminants are
+enclosed away from zero.  The test does not assert an event, an
+internal gap, or either cap sign.  An interval implementation needs a
+lower enclosure for $q_0$ and complete upper enclosures for every
+error term; uncertain jet equalities cannot be promoted to an exact
+double.
+
+\subsection{Event duration and the height quantifier}
+
+If an event is already known to occur at real time $s<t_*$ and
+$|A|\le K$ between them, put $d=t_*-s$ and
+$\delta=\Delta(t_*)>0$.  The preceding integral solution gives
+$L_K(d)\le\delta\le U_K(d)$.  Therefore, if
+$0<\delta_-\le\delta\le\delta_+$ and $K\delta_+<8$,
+\begin{equation}\label{f:duration}
+ \frac{\log(1+K\delta_-/8)}K
+ \le d\le
+ -\frac{\log(1-K\delta_+/8)}K.
+\end{equation}
+For $K=0$ the interval is $[\delta_-/8,\delta_+/8]$.
+These inequalities require event existence, supplied for example by
+opposite cap signs; a single positive cap value does not supply it.
+The scalar bounds are sharp under the information $|A|\le K$, as
+constant coefficients $A=K$ and $A=-K$ attain the two extremes.
+This statement does not assert that either coefficient is realized by
+theta.  A strictly negative event location would follow only from
+data making the resulting upper bound for $s$ negative.
+
+The moments in \eqref{f:B-moments} work for every finite real $a$.
+Thus every hypothetical exact double has a positive window from
+\eqref{f:window-constants}, point by point.  No uniform lower bound
+for its second jet is proved.  In fact, with
+$f(u)=u^2\Phi(u)$ and $C=\|f'\|_{L^1(0,\infty)}/2<\infty$,
+integration by parts gives, for $a\ne0$,
+\[
+ q_0(a)=\frac12\left|\int_0^\infty f(u)\cos(au)\,du\right|
+         \le\frac C{|a|}.
+\]
+Consequently this particular prescription obeys
+\begin{equation}\label{f:height-scale}
+ R(a)\le\frac{C}{B_3|a|},\qquad
+ h(a)\le\frac{C^3}{16\sqrt2 B_2B_3^2|a|^3}.
+\end{equation}
+These are upper bounds for conservatively chosen window sizes, not
+necessary scales for every possible construction.  On a bounded
+real interval there are only finitely many zeros of the nonzero entire
+function $H(0,\cdot)$, so the windows of its exact doubles there have
+positive minima if the set is nonempty.  This does not compute those
+minima or identify any doubles.  An all-height exclusion may work
+pointwise and need not use a common negative cap, but its signed
+estimate must cover every admissible finite $a$ and the associated
+shrinking parameters.  The geometric quantifier is paid here; that
+signed quantifier remains open.

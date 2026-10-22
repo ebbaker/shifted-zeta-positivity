@@ -1,0 +1,454 @@
+\section{Discriminant evolution for a finite cluster of arbitrary size}
+\label{m:section}
+
+The two-root equation has a regular extension to every finite cluster,
+but its constant forcing does not.  This distinction gives both a useful
+general identity and exact limits on what can be inferred from two real
+cap signs.  The results in this section develop the analytic statements
+recorded in \cite{note09}; their earlier internal review is \cite{review08}.
+
+\subsection{A regular equation through collisions}
+
+Let $D$ be a bounded Jordan complex-time domain with piecewise smooth
+boundary, and let $H$
+be holomorphic near
+$\overline D\times\{z:|z-a|\leq R\}$, with $H_t=-H_{zz}$.
+Assume that, for every $t\in\overline D$, $H(t,\cdot)$ has exactly
+$m\geq2$ zeros in the outer disk, all in $|z-a|<r<R$, and has no zero
+on the outer circle.  These assumptions are understood with strict
+margins sufficient to extend them to a neighborhood of the closed
+product.  The cluster factorization gives
+\begin{equation}\label{m:factor}
+ P(t,z)=\prod_{i=1}^m(z-z_i(t)),\qquad H(t,z)=U(t,z)P(t,z),
+ \qquad q=\frac{U_z}{U},\qquad f=\frac{H_z}{H},
+\end{equation}
+where $P$ has single-valued holomorphic coefficients and $U$ is
+holomorphic and nonvanishing on the spatial disk.  Individual root
+labels need not be single-valued.  In particular, $q$ includes the
+complete exterior contribution, including any zero-free factor of $H$.
+
+Put $N=m(m-1)/2$ and define
+\begin{equation}\label{m:DT}
+ \mathfrak D=\prod_{i<j}(z_i-z_j)^2,\qquad
+ \mathfrak T=\sum_{i<j}
+       \prod_{\substack{k<\ell\\(k,\ell)\ne(i,j)}}
+                         (z_k-z_\ell)^2.
+\end{equation}
+The empty product is one.  Both expressions are symmetric polynomials
+in the roots and hence are holomorphic functions of the coefficients
+of $P$.  Thus \eqref{m:DT} defines $\mathfrak T$ at collisions; the
+quotient expression
+$\mathfrak T=\mathfrak D\sum_{i<j}(z_i-z_j)^{-2}$ is used only when
+the roots are distinct.
+
+\begin{theorem}[Regular finite-cluster discriminant equation]
+\label{m:evolution}
+Under these assumptions,
+\begin{align}
+ \mathfrak D'&=8\mathfrak T+B\mathfrak D,
+                                                        \label{m:ode}\\
+ B(t)&=\frac{2}{2\pi i}\oint_{|\zeta-a|=R}
+        \frac{H_z(t,\zeta)}{H(t,\zeta)}
+        \frac{P_{zz}(t,\zeta)}{P(t,\zeta)}\,d\zeta.
+                                                        \label{m:B}
+\end{align}
+The coefficient $B$ is holomorphic through every internal
+collision.  For any holomorphic scalar $\kappa(t)$, replacing $H_z$
+by $H_z-\kappa H$ in \eqref{m:B} leaves it unchanged.  If, on the
+complete outer wall,
+\begin{equation}\label{m:wallinputs}
+ |H|\geq\delta>0,\qquad |H_z-\kappa H|\leq L_\kappa,
+\end{equation}
+then
+\begin{equation}\label{m:Bbound}
+ |B|\leq
+ \frac{2R\,m(m-1)L_\kappa}{\delta(R-r)^2}.
+\end{equation}
+In particular, the bound contains no inverse internal root separation.
+\end{theorem}
+
+\begin{proof}
+At a simple zero, differentiation and the heat equation give
+\begin{equation}\label{m:motion}
+ z_i'=\frac{H_{zz}(t,z_i)}{H_z(t,z_i)}
+      =2\sum_{j\ne i}\frac{1}{z_i-z_j}+2q(t,z_i).
+\end{equation}
+Writing $d_{ij}=z_i-z_j$, we obtain
+\begin{equation}\label{m:pairmotion}
+ \frac{z_i'-z_j'}{d_{ij}}
+ =\frac{4}{d_{ij}^2}
+ -2\sum_{k\ne i,j}\frac{1}{(z_i-z_k)(z_j-z_k)}
+ +2\frac{q(t,z_i)-q(t,z_j)}{d_{ij}}.
+\end{equation}
+The middle terms cancel after summation over all pairs, because every
+unordered triple contributes a multiple of the identity
+\[
+ \frac{1}{(x-z)(y-z)}+
+ \frac{1}{(x-y)(z-y)}+
+ \frac{1}{(y-x)(z-x)}=0.
+\]
+Logarithmic differentiation therefore yields
+\begin{equation}\label{m:logderivative}
+ \frac{\mathfrak D'}{\mathfrak D}
+ =8\sum_{i<j}\frac{1}{d_{ij}^2}
+  +4\sum_{i<j}\frac{q(t,z_i)-q(t,z_j)}{z_i-z_j}.
+\end{equation}
+The divided differences in the last term extend holomorphically when
+their arguments coincide.  Cauchy's formula and
+\[
+ \frac{P_{zz}(t,\zeta)}{P(t,\zeta)}
+    =2\sum_{i<j}\frac{1}{(\zeta-z_i)(\zeta-z_j)}
+\]
+give
+\[
+ 4\sum_{i<j}\frac{q(t,z_i)-q(t,z_j)}{z_i-z_j}
+ =\frac{2}{2\pi i}\oint_{|\zeta-a|=R}
+             q(t,\zeta)\frac{P_{zz}(t,\zeta)}{P(t,\zeta)}\,d\zeta.
+\]
+Replacing $q$ by $f-P_z/P$ introduces the rational integral of
+$P_zP_{zz}/P^2$.  All finite poles of this rational function lie inside
+the contour, and it is $O(\zeta^{-3})$ at infinity.  Its total residue
+is consequently zero.  This proves \eqref{m:B}.  The same reasoning
+applied to $P_{zz}/P=O(\zeta^{-2})$ proves the exact scalar subtraction.
+
+Every denominator in \eqref{m:B} is nonzero on the integration circle,
+so the coefficient is holomorphic in time.  The simple-root set is
+dense: at any time, the local heat splitting of a zero of multiplicity
+$k$ has distinct Hermite leading roots after a nonzero small time
+increment.  The finitely many clusters in that fiber can all be
+separated by one sufficiently small increment.  Thus $\mathfrak D$
+is not identically zero.  Multiplying \eqref{m:logderivative} by
+$\mathfrak D$ proves \eqref{m:ode} on a dense set, and then everywhere
+by holomorphic continuation.
+
+Finally, $|\zeta-z_i|\geq R-r$ on the circle, whence
+\[
+ \left|\frac{P_{zz}}{P}\right|
+       \leq\frac{m(m-1)}{(R-r)^2}.
+\]
+Using the contour length $2\pi R$ and \eqref{m:wallinputs} in
+\eqref{m:B} proves \eqref{m:Bbound}.
+\end{proof}
+
+For $m=2$ one has $\mathfrak T=1$, so the theorem is exactly the
+two-root evolution equation.  For larger clusters, it keeps every
+root in the birth while retaining the same power two of the spatial
+collar in the coefficient bound.
+
+\subsection{An explicit window at a hypothesized full birth}
+
+For the complete theta source, write
+\[
+ B_j=M_j(T_0,R_0)
+   =\int_0^\infty\Phi(u)u^j e^{T_0u^2}\cosh(R_0u)\,du,
+ \qquad T_0,R_0>0.
+\]
+These finite positive moments bound all derivatives needed below.
+\begin{proposition}[Parameterized geometry at multiplicity $m$]
+\label{m:window}
+Suppose $a\in\mathbb R$ and $H(0,\cdot)$ has exact multiplicity
+$m\geq2$ at $a$.  Set
+\begin{align}
+ q_m&=\frac{|\partial_z^mH(0,a)|}{m!}>0,
+ &R&=\min\left\{\frac{R_0}{2},
+                \frac{(m+1)!q_m}{4B_{m+1}}\right\},
+ &r&=\frac R2,                                             \label{m:radii}\\
+ h&=\min\left\{\frac{T_0}{2},
+                \frac{q_mr^m}{4\sqrt2 B_2}\right\}.
+                                                               \label{m:width}
+\end{align}
+For $|\operatorname{Re}t|,|\operatorname{Im}t|\leq h$, each of the
+two disks of radii $r$ and $R$ contains exactly $m$ roots, and
+\begin{equation}\label{m:paidwall}
+ |H(t,z)|\geq\frac{q_ms^m}{2}
+       \quad\hbox{if } |z-a|=s,\quad s\in\{r,R\}.
+\end{equation}
+The complete coefficient in \eqref{m:B} obeys
+\begin{equation}\label{m:paidB}
+ |B|\leq
+       \frac{16m(m-1)B_1}{q_mR^{m+1}}.
+\end{equation}
+\end{proposition}
+
+\begin{proof}
+Put $c_m=\partial_z^mH(0,a)/m!$.  Spatial Taylor expansion, with the
+complete derivative bound on the segment from $a$ to $z$, gives
+\[
+ |H(0,z)-c_m(z-a)^m|
+ \leq\frac{B_{m+1}s^{m+1}}{(m+1)!}
+ \leq\frac{q_ms^m}{4} \qquad (|z-a|=s\in\{r,R\}).
+\]
+Along the straight time segment, $|H_t|=|H_{zz}|\leq B_2$ and
+$|t|\leq\sqrt2h$, so
+\[
+ |H(t,z)-H(0,z)|\leq\sqrt2hB_2\leq\frac{q_mr^m}{4}.
+\]
+The total error is at most $q_ms^m/2$, strictly less than
+$|c_m(z-a)^m|$.  Rouch\'e's theorem gives both root counts and the
+triangle inequality gives \eqref{m:paidwall}.  The inequalities have
+strict slack relative to the zero-avoidance and root-count requirements,
+so the contract extends near the closed product.  In
+\eqref{m:Bbound}, take $\kappa=0$, $L_\kappa=B_1$,
+$\delta=q_mR^m/2$ and $R-r=R/2$, obtaining \eqref{m:paidB}.
+\end{proof}
+
+This construction is conditional on the event and its nonzero order-$m$
+derivative.  It gives a positive window at every such finite event,
+with all theta modes retained in $B_j$.  It supplies neither a sign of
+the discriminant nor nonvanishing on the complex time boundary.
+The dependence on $q_m$ and $m$ is explicit and may deteriorate with
+height.
+
+\subsection{Birth order, forcing, and charge}
+
+Suppose the entire cluster coalesces at $(t_0,z_0)$.  Write
+$s=t-t_0$ and $s=\rho^2$.  The local heat splitting is
+\begin{equation}\label{m:hermitesplit}
+ z_i(t_0+\rho^2)=z_0+\sqrt2\lambda_i\rho+O(\rho^2),
+\end{equation}
+where $\lambda_1,\ldots,\lambda_m$ are the distinct real roots of the
+monic probabilists' Hermite polynomial $\operatorname{He}_m$.
+Indeed, the leading part of parabolic weight $m$ is
+\[
+ e^{-s\partial_z^2}(z-z_0)^m
+    =(2s)^{m/2}\operatorname{He}_m
+                   \left(\frac{z-z_0}{\sqrt{2s}}\right).
+\]
+All higher initial spatial Taylor terms have larger parabolic weight;
+analytic continuation of the simple scaled roots gives
+\eqref{m:hermitesplit}.
+
+\begin{corollary}[Order at a full birth]\label{m:birth}
+At a full multiplicity-$m$ birth,
+\begin{align}
+ \mathfrak D(t)&=d_ms^N+O(s^{N+1}),
+ &d_m&=2^N\prod_{i<j}(\lambda_i-\lambda_j)^2>0,
+                                                               \label{m:Dleading}\\
+ \mathfrak T(t)&=\frac{Nd_m}{8}s^{N-1}+O(s^N).
+                                                               \label{m:Tleading}
+\end{align}
+If $\mathfrak D$ is nonzero on $\partial D$, the product-domain
+charge is
+\begin{equation}\label{m:charge}
+ Q=\frac{1}{2\pi i}\oint_{\partial D}
+                   \frac{\mathfrak D'}{\mathfrak D}\,dt
+  =\frac{8}{2\pi i}\oint_{\partial D}
+                   \frac{\mathfrak T}{\mathfrak D}\,dt.
+\end{equation}
+\end{corollary}
+\begin{proof}
+Taking the product of squared differences in \eqref{m:hermitesplit}
+gives the leading coefficient in \eqref{m:Dleading}.  Holomorphy in
+$s$ removes any noninteger power from its remainder.  Substitution
+in \eqref{m:ode}, using holomorphy of $B$, proves
+\eqref{m:Tleading}.  The first equality in \eqref{m:charge} is the
+finite-cluster charge formula.  For the second, integrate
+\eqref{m:ode} divided by $\mathfrak D$; the integral of the holomorphic
+coefficient $B$ is zero.
+\end{proof}
+
+The exterior contribution still changes $\mathfrak D$, $\mathfrak T$
+and their zero locations through \eqref{m:ode}; its vanishing contour
+integral is not permission to omit it from the evolution.  For $m>2$
+the forcing vanishes at a full birth.  This removes the constant
+forcing used by the two-root univalence argument.  A full birth has
+charge $N$, while two real discriminant signs record at most its
+parity.  Conjugate nonreal event pairs can contribute further even
+charge without changing those signs.
+
+\subsection{A cubic real-time monotonicity theorem}
+
+Assume now that $a$ is real, $D$ is invariant under conjugation and
+$H(\overline t,\overline z)=\overline{H(t,z)}$.  For $m=3$, depress
+the cluster polynomial:
+\[
+ P(t,z)=(z-c(t))^3+p(t)(z-c(t))+q_0(t).
+\]
+The notation $q_0$ distinguishes the constant coefficient from $U_z/U$.
+Direct expansion gives
+\begin{equation}\label{m:cubicDT}
+ \mathfrak D=-4p^3-27q_0^2,\qquad \mathfrak T=9p^2.
+\end{equation}
+For the second identity, $\mathfrak T$ is a translation-invariant
+symmetric polynomial of degree four.  After centering, the fundamental
+symmetric polynomials have degrees two and three, so it is a constant
+multiple of $p^2$.  Substituting roots $(-1,0,1)$ gives the constant
+$9$.
+
+\begin{proposition}[At most one real cubic collision time]
+\label{m:cubicmonotone}
+On each real interval contained in $D$, a proper real-symmetric
+three-root heat cluster has at most one collision time.  An
+independently located collision at a strictly negative time in such an
+interval excludes an additional collision at time zero in that
+interval.
+\end{proposition}
+\begin{proof}
+Choose an antiderivative of $B$ which is real on the real
+interval, and put $\mu=\exp(-\int B)$.  Then $\mu>0$ there
+and \eqref{m:ode}--\eqref{m:cubicDT} imply
+\begin{equation}\label{m:cubicderivative}
+                  (\mu\mathfrak D)'=72\mu p^2\geq0.
+\end{equation}
+If $p$ is not identically zero, its real zeros are isolated.  The
+integral of the right side over every nontrivial subinterval is then
+positive, so $\mu\mathfrak D$ is strictly increasing and has at most
+one zero.  If $p$ is identically zero, $\mu\mathfrak D$ is constant
+and nonzero, since $\mathfrak D$ cannot be identically zero.  There
+are no collisions in that case.
+\end{proof}
+
+A real event in this cubic cluster can be a double, of charge one,
+or a triple, of charge three.  Thus the proposition bounds the number
+of real event locations, not their total charge.  It also gives no
+bound on nonreal event times.  At complex time $p^2$ need not have
+positive real part, even if $\mu$ lies in a fixed open half-plane.
+For $m\geq4$, even the real inequality in
+\eqref{m:cubicderivative} need not persist.
+
+\subsection{Exact controls for the failure of the cap formula}
+
+The following polynomial heat solutions pay the cluster and boundary
+conditions explicitly.  They disprove the extension of the two-root
+cap formula to arbitrary multiplicity, without challenging its
+two-root hypothesis.  Their conclusions are algebraic; the exact
+arithmetic replay in \cite{controls} is supplementary support.
+
+\begin{proposition}[A cubic with three event times]
+\label{m:cubiccontrol}
+Let
+\[
+ H(t,z)=z^3-6tz+2,\qquad
+ D=\{t:|\operatorname{Re}t|<1,\ |\operatorname{Im}t|<1\},
+ \qquad r=4,\quad R=5,\quad a=0.
+\]
+This is a proper three-root heat cluster with $B=0$.  Its
+total charge is three, although
+$\bigl(\operatorname{sgn}\mathfrak D(1)
+       -\operatorname{sgn}\mathfrak D(-1)\bigr)/2=1$.
+\end{proposition}
+\begin{proof}
+One has $H_t=-6z=-H_{zz}$.  On the inner wall and closed time
+rectangle,
+\[
+ |6tz-2|\leq24\sqrt2+2<64=|z^3|.
+\]
+Rouch\'e's theorem puts all three polynomial roots strictly in the
+inner disk, hence also in the outer disk; both walls are nonzero.
+Here $U=1$, and thus $B=0$.  Formula
+\eqref{m:cubicDT} gives
+\[
+ \mathfrak D(t)=864t^3-108,
+ \qquad \mathfrak T(t)=324t^2.
+\]
+The event times are the three simple roots of $t^3=1/8$:
+\[
+ \frac12,\qquad -\frac14+\frac{\sqrt3}{4}i,
+ \qquad -\frac14-\frac{\sqrt3}{4}i.
+\]
+At each event the repeated root is $z=1/(2t)$, of modulus one;
+$H_{zz}=6z\ne0$ there, so each event is an ordinary double.  All
+three lie strictly within the product domain, and no event is on its
+boundary.  Each has charge one.  Finally,
+$\mathfrak D(-1)=-972$ and $\mathfrak D(1)=756$, proving the
+claimed discrepancy.
+\end{proof}
+
+\begin{proposition}[A quadruple endpoint with equal positive cap signs]
+\label{m:quarticcontrol}
+On the same time rectangle, let
+\[
+ H(t,z)=z^4-12tz^2+12t^2,
+ \qquad a=0,\quad r=5,\quad R=6.
+\]
+This proper four-root heat cluster has $B=0$, nonzero
+time-boundary discriminant, equal positive real cap discriminants and
+total charge six.  For every positive real time its spatial roots are
+real and simple.
+\end{proposition}
+\begin{proof}
+The heat equation follows by direct differentiation.  The inner-wall
+estimate is
+\[
+ |12tz^2-12t^2|\leq300\sqrt2+24<625=|z^4|,
+\]
+so all four roots lie strictly in the inner disk throughout the
+closed rectangle.  Again $U=1$ and $B=0$.  Set
+$\alpha=6+2\sqrt6$, $\beta=6-2\sqrt6$.  The factorization
+\[
+ H(t,z)=(z^2-\alpha t)(z^2-\beta t)
+\]
+gives roots $\pm\sqrt{\alpha t}$ and $\pm\sqrt{\beta t}$.
+The squared differences within the two opposite pairs contribute
+$16\alpha\beta t^2$, and the four cross-pair squared differences
+contribute $(\alpha-\beta)^4t^4$.  Therefore
+\[
+ \mathfrak D(t)=16\alpha\beta(\alpha-\beta)^4t^6
+              =1{,}769{,}472\,t^6,
+ \qquad
+ \mathfrak T(t)=1{,}327{,}104\,t^5,
+\]
+where the last identity also follows from $\mathfrak D'=8\mathfrak T$.
+The only event is $(0,0)$, of charge six.  Both cap discriminants are
+positive, and no point of the time boundary is an event.  Since
+$\alpha>\beta>0$, the four displayed roots are real and distinct for
+$t>0$.  Notice also that $\mathfrak T$ changes sign on real time.
+\end{proof}
+
+More generally, the Hermite family $e^{-t\partial_z^2}z^m$ has
+$\mathfrak D=d_mt^N$, $\mathfrak T=Nd_mt^{N-1}/8$ and
+$B=0$; a sufficiently large spatial disk gives a proper
+finite window.  Thus zero exterior phase alone is compatible with
+every full-birth charge.  The controls above concern the specified
+phase-and-cap inference.  They do not preclude other boundary
+estimates or estimates using additional properties of the theta
+source.
+
+\subsection{Why centered variance cannot replace the discriminant}
+
+Define
+\[
+ c=\frac1m\sum_i z_i,\qquad
+ V=\sum_i(z_i-c)^2=\frac1m\sum_{i<j}(z_i-z_j)^2.
+\]
+The equality follows by expanding the pairwise sum.  This quantity is
+holomorphic even when root labels are not.
+
+\begin{proposition}[Centered second-moment evolution]\label{m:variance}
+For a proper $m$-root heat cluster,
+\begin{equation}\label{m:Vflow}
+ V'=2m(m-1)+4\sum_i(z_i-c)q(t,z_i).
+\end{equation}
+At a full birth $(t_0,z_0)$,
+\begin{equation}\label{m:Vbirth}
+ V=2m(m-1)(t-t_0)+O((t-t_0)^2).
+\end{equation}
+\end{proposition}
+\begin{proof}
+Since $\sum_i(z_i-c)=0$, differentiating gives
+$V'=2\sum_i(z_i-c)z_i'$.  Substitute \eqref{m:motion}.  For
+each unordered internal pair the contribution is
+\[
+ 4\left(\frac{z_i-c}{z_i-z_j}
+       +\frac{z_j-c}{z_j-z_i}\right)=4.
+\]
+There are $N$ pairs, proving \eqref{m:Vflow} at simple fibers.  The
+remaining symmetric sum is holomorphic, for it equals
+\[
+ \frac{1}{2\pi i}\oint_{|\zeta-a|=R}
+       (\zeta-c)q(t,\zeta)\frac{P_z(t,\zeta)}{P(t,\zeta)}\,d\zeta.
+\]
+Continuation proves the identity everywhere.  At a full birth $V=0$
+and each $z_i-c=0$, so evaluating \eqref{m:Vflow} gives
+\eqref{m:Vbirth}.
+\end{proof}
+
+The real sign transition in \eqref{m:Vbirth} is compatible with
+every Hermite birth.  Moreover, $V$ need not have the discriminant's
+zero set: the cubic in Proposition~\ref{m:cubiccontrol} has
+$V=12t$, hence $V(0)=0$ but $\mathfrak D(0)=-108\ne0$.
+On an all-real fiber, $V=0$ does force full coalescence, but that
+fiber condition cannot be assumed on an unknown negative cap.
+Conversely, $V>0$ does not exclude a partial collision in a larger
+real cluster.  Neither centered variance nor two discriminant signs
+therefore replace the full multiplicity-sensitive event calculation.

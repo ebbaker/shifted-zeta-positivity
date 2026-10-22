@@ -1,0 +1,170 @@
+\section{The endpoint problem and the complete source}
+\label{sec:intro}
+
+The purpose of this paper is to assemble the analytic results of the
+relative-charge investigation into a single argument with explicit
+hypotheses. The question motivating the investigation is whether the
+unchanged theta source supplies enough signed information to exclude a
+multiple zero at time zero, conditional on the Riemann hypothesis (RH).
+The results below supply geometric windows, exact response identities,
+and quantitative estimates to which such information could be applied.
+They also identify limitations of several simpler substitutes.
+
+\subsection{Normalization and analytic bounds}
+
+Throughout the theta application, put
+\begin{align}
+ H(t,z)&=\int_0^\infty \Phi(u)e^{tu^2}\cos(zu)\,du,\label{i:source}\\
+ \Phi(u)&=\sum_{n\geq1}\phi_n(u),\qquad \lambda_n=\pi n^2,\notag\\
+ \phi_n(u)&=(2\lambda_n^2e^{9u}-3\lambda_ne^{5u})
+                  e^{-\lambda_ne^{4u}}.\label{i:phi}
+\end{align}
+This is the standard normalization used in \cite{polymath}:
+\begin{equation}
+ H(0,z)=\frac18\xi\!\left(\frac12+\frac{iz}{2}\right),\qquad
+ \xi(s)=\frac{s(s-1)}2\pi^{-s/2}\Gamma(s/2)\zeta(s).
+ \label{i:xi}
+\end{equation}
+The Fourier representation \eqref{i:xi} and the classical real-zero
+threshold theorem are the analytic number-theory inputs; none of the
+local proofs below uses a zero table or RH unless it is explicitly stated.
+
+For $u\geq0$ every summand in \eqref{i:phi} is positive, since
+$2\lambda_ne^{4u}-3>0$. The series and its derivatives converge
+uniformly on compact real $u$ intervals. For large $u$ the summands are
+bounded by a polynomial in $n,e^u$ times $e^{-\pi n^2e^{4u}}$;
+factoring out, for example, $e^{-(\pi/2)e^{4u}}$ leaves a uniformly
+summable series. Consequently $\Phi$ and each of its fixed-order
+derivatives decay faster than $e^{-cu^2-du}$ for any fixed real $c,d$.
+Differentiation under the integral is therefore justified locally
+uniformly in $(t,z)\in\mathbb C^2$. In particular,
+\begin{equation}
+ H_t=-H_{zz},\qquad
+ H(t,-z)=H(t,z),\qquad
+ H(\overline t,\overline z)=\overline{H(t,z)}.
+ \label{i:heat}
+\end{equation}
+Here and below subscripts denote derivatives; the time parameter is
+written as an argument to avoid confusing it with a derivative.
+
+For $T\in\mathbb R$, $R\geq0$ and nonnegative integer $j$, define the
+\emph{complete moment}
+\begin{equation}
+ M_j(T,R)=\int_0^\infty \Phi(u)u^j e^{Tu^2}\cosh(Ru)\,du.
+ \label{i:moments}
+\end{equation}
+Since $|\cos(x+iy)|$ and $|\sin(x+iy)|$ are at most $\cosh y$,
+\begin{equation}
+ |\partial_t^a\partial_z^bH(t,z)|\leq M_{2a+b}(T,R)
+ \quad(\operatorname{Re}t\leq T,\ |\operatorname{Im}z|\leq R).
+ \label{i:jet-bound}
+\end{equation}
+These bounds are independent of $\operatorname{Re}z$. ``Complete'' means
+that every source mode and the entire integration tail are included.
+For a signed residual source $\psi$, the same assertion holds with
+$|\psi|$ in place of $\Phi$.
+
+\subsection{What RH supplies, and what it leaves open}
+
+The de Bruijn--Newman theorem gives a finite real $\Lambda$ for which
+all zeros of $H(t,\cdot)$ are real exactly when $t\geq\Lambda$.
+In this normalization RH is equivalent to $\Lambda\leq0$;
+Rodgers and Tao proved $\Lambda\geq0$ \cite{rodgers-tao}.
+Thus under RH the zeros are real for all $t\geq0$. They are simple for
+$t>0$: if a real zero had multiplicity $m\geq2$ at $t_0>0$, the local
+Hermite splitting proved in Proposition~\ref{f:hermite}, applied at
+$t=t_0-\varepsilon$, would give nonreal zeros for sufficiently small
+$\varepsilon>0$. At least two Hermite roots are nonzero, and their
+imaginary displacement has order $\sqrt{\varepsilon}$, whereas the
+error is $O(\varepsilon)$. This contradicts reality at that time.
+The argument does not rule out a multiple zero at $t=0$.
+
+A common negative time at which \emph{all} theta zeros are real is
+unavailable, even under RH, since it would contradict $\Lambda\geq0$.
+This restriction does not prohibit different negative-time neighborhoods
+for different endpoint heights. The quantitative windows below are
+explicitly allowed to depend on the hypothetical event.
+
+The local charge at an endpoint of multiplicity $m$ will be
+$q=\binom m2$. It relates directly to the multiplicity excess studied
+in the companion heat-motion investigation \cite{bw10,assessment07}.
+Under RH let $\rho=\tfrac12+i\gamma$ range over distinct nontrivial
+zeros of both ordinate signs, with multiplicity $m_\rho$. For every
+finite symmetric cutoff $Y$, define
+\begin{equation}
+ K_Y=\sum_{|\gamma|\leq Y}\frac{m_\rho^2}{|\rho|^2},\qquad
+ Z_Y=\sum_{|\gamma|\leq Y}\frac{m_\rho}{|\rho|^2}.
+ \label{i:weighted}
+\end{equation}
+Termwise algebra gives
+\begin{equation}
+ K_Y-Z_Y=2\sum_{|\gamma|\leq Y}\frac{q_\rho}{|\rho|^2}.
+ \label{i:bridge}
+\end{equation}
+When the two weighted sums converge, as in the companion framework,
+the same identity holds without the cutoff. No convergence theorem is
+needed for the local arguments in this paper. At the physical coordinate
+$a=2\gamma$, the charge weight on the right is $8/(1+a^2)$.
+Thus the local integer charge does not produce a positive uniform gap
+for the weighted excess. An endpoint-local charge must also be
+distinguished from the charge of a larger window, which might contain a
+negative-time event.
+
+\subsection{Degree, relative Chern number, and Hopf interpretation}
+
+Let $\Omega\subset\mathbb C^2$ be a bounded domain with piecewise smooth
+boundary, and suppose $G=(H,H_z)$ is nonzero on that boundary. Equip both
+copies of $\mathbb C^2$ with the complex orientation, in the coordinate
+order $(\operatorname{Re}t,\operatorname{Im}t,
+\operatorname{Re}z,\operatorname{Im}z)$. The boundary charge is
+\begin{equation}
+ Q_\Omega=\deg\left(\frac{G}{\|G\|}:\partial\Omega\longrightarrow S^3\right).
+ \label{i:degree}
+\end{equation}
+It is the relative top Chern number of the trivial complex rank-two
+bundle with the specified nonvanishing boundary section: equivalently,
+the total index of its interior zeros. For isolated holomorphic zeros
+these indices are positive analytic intersection multiplicities.
+Theorem~\ref{f:charge} supplies the discriminant computation of them.
+
+For the product of a time rectangle and a spatial disk, rounding corners
+makes the boundary an oriented $S^3$. Its usual Hopf interpretation
+requires no additional charge formula. Let $\pi:S^3\to S^2$ be the Hopf
+map, let $\omega$ have integral one on $S^2$, and choose a connection
+form $\alpha$ with $d\alpha=\pi^*\omega$ and
+$\int_{S^3}\alpha\wedge d\alpha=1$. For $g=G/\|G\|$ the Hopf invariant
+of $\pi\circ g$ is
+\[
+ \int_{\partial\Omega}g^*\alpha\wedge d(g^*\alpha)
+ =\int_{\partial\Omega}g^*(\alpha\wedge d\alpha)=\deg g.
+\]
+Here the integral formula defines the normalized Hopf invariant; its
+independence of the chosen primitive follows by Stokes' theorem and
+$H^1(S^3)=0$. It agrees with \eqref{i:degree}. The analytic estimates
+in this paper use degree and discriminants directly.
+
+Neither reality nor spatial parity supplies cancellation. Conjugating
+both complex domain coordinates preserves real orientation, as does
+conjugating both target coordinates. The change $z\mapsto-z$ and its
+target action $(H,H_z)\mapsto(H,-H_z)$ are also orientation preserving.
+The corresponding reflected events therefore have the same positive
+local charge.
+
+\subsection{Reading the results}
+
+The first part proves proper cluster preparation, local charge, the
+two-root cap theorem and explicit event-compatible windows. The second
+part retains signs in source perturbations, proves quantitative event
+continuation, and specializes the response to the actual canonical theta
+tail. The many-root part keeps every root of a higher birth and shows
+exactly where the two-root argument ceases to apply. Numerical evidence
+is collected separately in Section~\ref{sec:support}. Appendix~\ref{app:reference}
+records the holomorphic reference comparison and the boundary
+interpolation contract used by earlier certificates.
+
+All propositions are statements with the hypotheses displayed here.
+In particular, a narrower source-response interval need not lie on one
+side of zero, and a phase bound need not imply zero charge. This
+manuscript consolidates internally reviewed research results; it has not
+received independent specialist validation. It asserts no priority for
+the standard complex-analysis and heat-root-motion ingredients.

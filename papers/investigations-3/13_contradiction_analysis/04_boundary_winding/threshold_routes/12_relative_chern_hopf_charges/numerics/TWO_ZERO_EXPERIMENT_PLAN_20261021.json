@@ -1,0 +1,51 @@
+{
+  "date": "2026-10-21",
+  "model": "gpt-6-astra",
+  "effort": "max",
+  "status": "declared before the full acquisition",
+  "domain": {
+    "Re_t": [
+      "-1/100",
+      "1/100"
+    ],
+    "Im_t": [
+      "-1/100",
+      "1/100"
+    ],
+    "Re_z": [
+      "28",
+      "43"
+    ],
+    "Im_z": [
+      "-1/100",
+      "1/100"
+    ]
+  },
+  "mesh_subintervals": [
+    1,
+    1,
+    256,
+    1
+  ],
+  "precision_bits": 192,
+  "source_plan": "Four real jets at each of 257 real-axis anchors, then first-order complex-time/imaginary-position lifting with certified second-order remainder; complete moments of orders 2 through 5",
+  "scalar_integrals": 1032,
+  "boundary_vertices": 2056,
+  "boundary_tetrahedra": 9228,
+  "direct_cells": 256,
+  "budgets": {
+    "source_integrals_max": 1100,
+    "wall_seconds_max": 180,
+    "integral_eval_limit": 100000,
+    "retained_modes": 4,
+    "source_cutoff": 1
+  },
+  "comparator": "Same vertex approximations and source errors; direct tensor interpolation on 256 full-dimensional cells with pure-second-derivative remainder",
+  "acceptance": "Pay every boundary simplex and direct cell; prove exactly two time-zero real zeros and one intervening critical point; compute degree by exact oriented cones without using the direct result",
+  "stop": "No automatic mesh or budget increase if the declared consumer fails; record quantitative failure",
+  "source_anchor_time": "-1/100",
+  "source_anchor_location": "boundary face Re(t)=-1/100, Im(t)=Im(z)=0",
+  "revision": "A development audit replaced time-zero interior anchors with boundary-face anchors before the final replay; all declared mesh, precision and acquisition budgets are unchanged.",
+  "prepared_for": "Edward Baker",
+  "LLM_assistance": "substantial"
+}
