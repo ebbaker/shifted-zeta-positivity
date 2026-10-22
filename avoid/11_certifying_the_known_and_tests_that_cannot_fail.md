@@ -77,3 +77,33 @@ test's difficulty, charge setup to both methods, and use actual collision
 and uncertainty controls on the new helpers. The stop is this fixed-box
 comparison, not a universal exclusion of boundary methods. [Same-model
 internal review](../papers/investigations-3/11_arithmetic_collision_rigidity/symmetries/reviews/01_GEO_T1_WINDING_DIRECT_INTERNAL_REVIEW_20261019.md).
+
+
+## Support rejection already pays direct exclusion, 22 October 2026
+
+Prepared for Edward Baker with substantial LLM assistance, **gpt-6.1-sol,
+actual effort ultra**. [I4/08 Note 02](../papers/investigations-4/08_real_thom_degree_integrals/notes/02_SUPPORT_REJECTION_AND_CONTROL_ANALYSIS_20261022.md)
+states: “The direct rule can stop at least as early.” With the same complete
+Cartesian first-jet ranges and subdivision tree, support rejection implies
+direct nonvanishing; the anticipated exact-zero integral is machinery
+validation. Its inherited pilot ties direct at 255 calls. Keep the practical
+direct comparator even if the polygon winding costs more. This comparison
+does not screen active signed integration, other information or other
+densities/domains. [Separate same-model review](../papers/investigations-4/08_real_thom_degree_integrals/reviews/01_OPENING_SUPPORT_COMPARISON_INTERNAL_REVIEW_20261022.md)
+checks replay, injected uncertainty and a nonzero corruption-failure exit.
+
+
+## A distinct proof route is not new coverage, 22 October 2026
+
+Prepared for Edward Baker with substantial LLM assistance, **gpt-6.1-sol,
+actual effort ultra**. [I4/08 Note 04](../papers/investigations-4/08_real_thom_degree_integrals/notes/04_INTEGRAL_BOUNDS_WITHOUT_INTERIOR_NONVANISHING_20261022.md)
+proves a complete theta integral upper below 0.699 while nine interior
+first-jet boxes still contain zero, with a separately paid boundary floor.
+This answers the bounded proof-method question, but the same inherited
+rectangle was already excluded and the new implementation costs more.
+Its scope is explicit: “The method uses a positive-part majorant and obtains
+no theta cancellation benefit.” Do not upgrade unresolved interval boxes
+to actual nonempty target support, or an alternate integral proof to RH
+evidence. [Separate same-model review](../papers/investigations-4/08_real_thom_degree_integrals/reviews/02_ACTIVE_BULK_COMPARISON_INTERNAL_REVIEW_20261022.md)
+replaces a polynomial control's global lower-bound argument with face-only
+boundary payments, preserving the intended premise distinction.

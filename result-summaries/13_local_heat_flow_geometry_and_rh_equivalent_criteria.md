@@ -425,3 +425,178 @@ Extra moments and acquisition errors are paid. Its scope is explicit:
 the same refined interval. No theta numerical endpoint, positive-time
 advantage, endpoint exclusion or specialist validation is established.
 [Review 12](../papers/investigations-3/13_contradiction_analysis/04_boundary_winding/threshold_routes/12_relative_chern_hopf_charges/reviews/12_FINITE_TIME_SIGNED_RECONSTRUCTION_OPENING_REVIEW_20261021.md).
+
+22 October 2026 — Prepared for Edward Baker with substantial LLM assistance,
+**gpt-6-astra, effort ultra**. **Proved in-note; contributing-agent same-model
+review:** [I4 Note 03](../papers/investigations-4/03_heat_transport_and_charges/notes/03_SCALAR_SOURCE_CONTRACT_AND_SURVIVOR_WIDTH_20261022.md)
+bounds the terminal scalar-current survivor set near a real-analytic ordinary
+double by O(epsilon^(5/2)), sharp for the quadratic; constants are local,
+with no global all-real premise. Its tested unsigned terminal-floor source
+contract is dominated by direct stationary evaluation.
+[Note 04](../papers/investigations-4/03_heat_transport_and_charges/notes/04_PHASE_BOUNDARY_REMOVAL_AND_CAP_REDUCTION_20261022.md)
+specializes the inherited phase current to an exact finite cap reduction:
+side integrals vanish, while an ordinary-double shrinking cap retains a
+nonzero phase contribution. This is an independent integral-simplification
+result, not a theta exclusion or a complex Hopf-side reduction.
+[Review](../papers/investigations-4/03_heat_transport_and_charges/reviews/03_SOURCE_CONTRACT_SURVIVOR_AND_BOUNDARY_REVIEW_20261022.md);
+no specialist validation or theta numerical acquisition.
+
+22 October 2026 — Prepared for Edward Baker with substantial LLM assistance,
+**gpt-6-astra, effort ultra**. **Proved in-note; contributing-agent same-model
+review:** [I4 shared Note 01](../papers/investigations-4/notes/01_CHERN_HOPF_PROJECTIVE_SIDES_AND_LOCAL_SECTORS_20261022.md)
+constructs local ordinary-double sectors with exactly cancelling projective
+sides and retained opposite cap fluxes. [Note 02](../papers/investigations-4/notes/02_CHERN_HOPF_PHYSICAL_TIME_SECTOR_REDUCTION_20261022.md)
+reduces actual heat-edge three-form integrals to one critical-value phase
+trace using harmonic averaging, with sufficient source-chart contracts.
+Its scope is explicit: “That event is a boundary apex of this sector, not an
+interior event of a full spatial neighborhood.” At that opening milestone,
+full event-enclosing physical assembly remained open; Note 03 below completes
+its conditional local analytic construction. Actual theta acquisition and
+exclusion remain open.
+[Review](../papers/investigations-4/03_heat_transport_and_charges/reviews/04_CHERN_HOPF_BOUNDARY_OPENING_REVIEW_20261022.md);
+exact algebra and noncertified quadratic diagnostics, no specialist validation.
+
+**I4 complete physical boundary and integral bounds, 22 October 2026.**
+Prepared for Edward Baker with substantial LLM assistance,
+**gpt-6-astra, effort ultra**. **Proved in-note; contributing-agent same-model
+review:** [shared Note 03](../papers/investigations-4/notes/03_COMPLETE_PHYSICAL_BOUNDARY_AND_CRITICAL_VALUE_WINDING_20261022.md)
+completes CHB-04 as a conditional local analytic assembly: all physical faces
+and both charts reduce to one critical-value winding, with explicit source
+geometry, boundary floors and regulator error. It states: “The spatial wall
+generally has nonzero flux”; its separate integral is removed only in the
+complete assembly. The quartic with exterior neighbors preserves spatial
+total multiplicity through a double zero while retaining full Hopf charge one.
+[Shared Note 04](../papers/investigations-4/notes/04_TOPOLOGICAL_MASS_BOUNDS_AND_INDEX_THEOREM_INTERFACE_20261022.md)
+begins CHB-07 independently of simplicity: finite-regulator mass and
+bounded-weight estimates, plus the exact Gauss-area/Schur interface with
+its inverse cost. Its scope is explicit: “It is not automatically a bound
+on one fixed-time slice”; a useful Gauss-area comparison uniform as the regulator tends
+to zero, or a theta-specific gain, remains open. [Review 05](../papers/investigations-4/03_heat_transport_and_charges/reviews/05_COMPLETE_BOUNDARY_AND_INTEGRAL_BOUNDS_REVIEW_20261022.md)
+and [control receipt](../papers/investigations-4/03_heat_transport_and_charges/numerics/CHB_FULL_BOUNDARY_CHECKS_20261022.json)
+record exact controls and noncertified floating diagnostics. No parent
+exclusion-gate upgrade, theta acquisition, certified quadrature or specialist
+validation; the charge/discriminant identity is inherited from BW12.
+
+**I4 first Gauss-area certificate comparison, 22 October 2026.** Prepared
+for Edward Baker with substantial LLM assistance, **gpt-6.1-sol, effort
+ultra**. **Proved in-note; contributing-agent internal LLM review:**
+[Note 05](../papers/investigations-4/notes/05_TARGET_INVENTORY_AND_FINITE_REGULATOR_GAUSS_COMPARISON_20261022.md)
+pays the spatial Green regulator bias and proves that Note 04's global
+inverse-Schur certificate exceeds the direct unregularized Green certificate
+by at least (5242880 pi/23273)(D_2/h)^4, for every finite regulator on
+Note 03's sufficient ordinary-double window. The source qualifies:
+“The inequality compares upper-bound certificates, not the actual integrals.”
+This stops that regulator-optimization class, not weighted/localized or
+source-specific estimates. The critical-wall g_2=q² connection still needs
+trace, signed moment and endpoint payments. [Review 06](../papers/investigations-4/03_heat_transport_and_charges/reviews/06_FINITE_REGULATOR_GAUSS_COMPARISON_REVIEW_20261022.md);
+no theta acquisition, exclusion-gate upgrade or specialist validation.
+
+**I4 critical-wall trace and signed remainder, 22 October 2026.** Prepared
+for Edward Baker with substantial LLM assistance, **gpt-6.1-sol, effort
+ultra**. **Proved in-note; contributing-agent internal LLM review:**
+[Note 06](../papers/investigations-4/notes/06_CRITICAL_WALL_TRACES_AND_SIGNED_ENDPOINT_BUDGET_20261022.md)
+proves the sharp disk trace q²<=(1+P²)A/(pi r²), a fully costed complex-bulk
+to moving-curve bound, and the conditional ordinary-double signed residual
+C_2-C_0/t=tB', |tB'|<=K_0t. The tested local-Schur/total-mass certificate
+is dominated by direct critical-value estimation. The source says:
+“These statements preserve the coefficient one; they cannot supply ICW's
+strictly subunit coefficient.” Its signed center and both square-trace
+singular subtractions have explicit endpoint/acquisition allowances.
+[Review 07](../papers/investigations-4/03_heat_transport_and_charges/reviews/07_CRITICAL_WALL_TRACE_AND_ENDPOINT_BUDGET_REVIEW_20261022.md);
+no actual theta sign, acquisition, exclusion margin or specialist validation.
+
+**Reciprocal Hodge energy first finite pilot, 22 October 2026.** Prepared
+for Edward Baker with substantial LLM assistance, **gpt-6.1-sol, effort ultra**.
+**Proved in-note; separate same-model internal review:**
+[RHE Note 01](../papers/investigations-4/09_reciprocal_hodge_energy/notes/01_FINITE_COVER_CONTRACT_AND_ENERGY_ENCLOSURE_20261022.md)
+completes a conditional finite bordered-cover contract and derives an explicit
+O(log(1/tau)) direct energy upper bound from the inherited ordinary-double
+event chart. It says: “It is a direct reciprocal majorant available to both
+methods.” The bound diverges at the endpoint and supplies no Hodge advantage.
+[Note 02](../papers/investigations-4/09_reciprocal_hodge_energy/notes/02_FULL_QUADRATIC_ENERGY_AND_TRANSVERSE_PAYMENT_20261022.md)
+keeps every quadratic cut and physical boundary term; the core period remains
+constant while the relative period diverges. The failure concerns bounded
+exterior norms/core-period compression, not complete theta boundary data.
+[Review](../papers/investigations-4/09_reciprocal_hodge_energy/reviews/01_CONTRACT_AND_QUADRATIC_PILOT_REVIEW_20261022.md);
+small floating calibration only, no theta acquisition, endpoint exclusion
+or specialist validation.
+
+
+## Real Thom support-rejection opening, 22 October 2026
+
+Prepared for Edward Baker with substantial LLM assistance, **gpt-6.1-sol,
+actual effort ultra**. [I4/08 Note 02](../papers/investigations-4/08_real_thom_degree_integrals/notes/02_SUPPORT_REJECTION_AND_CONTROL_ANALYSIS_20261022.md)
+records an **interval-certified bounded support comparison** and a scoped
+same-range dominance proof. On the inherited [0.01,0.20] x [25,45] rectangle,
+the fixed compact density has empty pullback support: integral exactly zero.
+Compact and direct interior each use 255 range enclosures; the reproduced
+polygon winding uses 698, sharing 76 complete midpoint integrals. Every
+support-rejected Cartesian range already directly excludes zero, so this
+support-only consumer cannot beat matched direct subdivision. Stop this
+specified comparison for comparative benefit; active signed integration
+remains unimplemented. No new region, global theta estimate or endpoint
+simplicity claim. [Separate same-model internal review](../papers/investigations-4/08_real_thom_degree_integrals/reviews/01_OPENING_SUPPORT_COMPARISON_INTERNAL_REVIEW_20261022.md),
+with process replay and adverse-input checks; no specialist validation.
+
+**RHE coupled remainder continuation, 22 October 2026.** Prepared for
+Edward Baker with substantial LLM assistance, **gpt-6.1-sol, effort ultra**.
+**Proved in-note; separate same-model internal review:**
+[RHE Note 03](../papers/investigations-4/09_reciprocal_hodge_energy/notes/03_REAL_PRIMITIVE_REDUCTION_AND_BOUNDED_MODEL_REMAINDER_20261022.md)
+reduces the full finite-annulus energy to a projected relative period plus
+a bounded exterior correction, and proves gap-uniform energy/period/full-boundary
+remainders after complete quadratic subtraction. Its explicit upper strictly
+improves the earlier coarse certificate on a declared window. The source
+qualifies: “This is a sharper shared direct baseline, not a win over a direct
+method given the same model and constraints.”
+[Review](../papers/investigations-4/09_reciprocal_hodge_energy/reviews/02_REAL_PRIMITIVE_AND_MODEL_REMAINDER_REVIEW_20261022.md);
+floating nonconstant heat-cubic calibration only. Actual theta acquisition,
+Hodge-specific advantage and endpoint exclusion remain open.
+
+
+## Integral budget without a prior interior certificate, 22 October 2026
+
+Prepared for Edward Baker with substantial LLM assistance, **gpt-6.1-sol,
+actual effort ultra**. [I4/08 Note 04](../papers/investigations-4/08_real_thom_degree_integrals/notes/04_INTEGRAL_BOUNDS_WITHOUT_INTERIOR_NONVANISHING_20261022.md)
+records an **interval-certified bounded estimate**: the fixed wider compact
+theta integral on the inherited rectangle is enclosed in
+[-0.436449,0.698391], with nine origin-containing first-jet boxes retained.
+Boundary-only ranges pay the collar; the integer degree law then gives zero
+as a conclusion, without a prior complete interior nonvanishing certificate.
+The upper uses a positive-part majorant, with no cancellation gain. Total
+801 range calls / 2,108 component ranges lose to direct 255 /510; the bulk
+needs two extra midpoint jets. Stop this specified benchmark for efficiency
+or coverage benefit. An exact polynomial control has genuinely active signed
+support and a proved-in-note absolute allowance below 0.86, without using an
+interior floor. This updates the opening's unimplemented status, not its
+support-only closure. [Separate same-model review](../papers/investigations-4/08_real_thom_degree_integrals/reviews/02_ACTIVE_BULK_COMPARISON_INTERNAL_REVIEW_20261022.md)
+checks the proof, replay and failure controls; no new region, global theta
+estimate, RH or specialist validation.
+
+**RHE actual regular theta fiber, 22 October 2026.** Prepared for Edward
+Baker with substantial LLM assistance, **gpt-6.1-sol, effort ultra**.
+[Note 04](../papers/investigations-4/09_reciprocal_hodge_energy/notes/04_ACTUAL_REGULAR_THETA_FIBER_COMPARISON_20261022.md)
+records “one actual regular theta fiber enclosed with outward ball arithmetic”
+at t=0 on |z-35|<=8, with exact count 2 and two simple real branches. Both
+native consumers meet the 25% width target; the boundary interval is strictly
+inside the native direct interval. Measured consumer/fresh ratios 1.99749/1.17383
+include failed meshes and the same setup. The source qualifies: “the equally
+informed direct method may reuse the boundary identity.”
+[Separate same-model internal review and final replay](../papers/investigations-4/09_reciprocal_hodge_energy/reviews/03_ACTUAL_THETA_FIBER_COMPARISON_REVIEW_20261022.md);
+all canonical source, root, geometry, primitive and rounding errors retained.
+This is one implementation comparison, not intrinsic dominance or endpoint
+exclusion; no specialist validation.
+
+**Coupled signed theta-tail acquisition, 22 October 2026.** Prepared for
+Edward Baker with substantial LLM assistance, **gpt-6.1-sol, effort ultra**.
+[CHB local Note 02](../papers/investigations-4/10_chern_hopf_integral_estimates/notes/02_COUPLED_SIGNED_THETA_TAIL_ESTIMATES_20261022.md)
+is **proved in-note; one regular canonical critical point interval-certified**.
+Using both C_0=V and S_1=0 gives one-sided signed intervals with exact-data
+width factors 4/5 and 3/7 versus specified same-moment cosine-Taylor bounds;
+complete finite errors retain strict endpoint gains. Its best finite width
+is 1.90544e-29, but an added direct signed tail integral gives 1.26549e-61.
+The source says: “This is a useful moment-interface refinement, not the missing
+global signed theta estimate or an advantage intrinsic to topological mass.”
+The positive atomic collision is retained; published controls pass the
+universal inequalities. [Internal review and hash-bound certificate](../papers/investigations-4/10_chern_hopf_integral_estimates/reviews/02_COUPLED_SIGNED_TAIL_REVIEW_20261022.md).
+Stop this finite moment pilot as a dominance claim; global arithmetic
+signed bounds and inherited exclusion gates remain open. No specialist review.

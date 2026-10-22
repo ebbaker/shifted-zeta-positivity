@@ -87,3 +87,19 @@ q >= 10^12 threshold, Project 03's proved-in-note 0.215 is the stronger
 finite benchmark; 0.27 remains the simpler initial-floor application.
 The new appendix text has authoring checks only; specialist review remains
 outstanding. This updates, rather than replaces, the preceding milestone.
+
+## Investigations 4 compact-circle screen — 21 October 2026
+
+Prepared for Edward Baker with substantial LLM assistance; **gpt-6-astra,
+effort ultra**. The [circle note](../papers/investigations-4/01_compact_weil_positivity/notes/01_CIRCLE_COMPARISON_AND_POSITIVE_COMPLETION_OBSTRUCTIONS_20261021.md)
+is “proved in-note, with separate same-model agent review.” It derives a
+complete fixed-test comparison with an exponentially small archimedean
+image error when P>2L and max(2,e^L)<=X<=e^(P-L). Literal sampled-circle
+positivity and finite image corrections fail in the specified odd-mode
+regime; the positive jump completion pays a nonvanishing scalar/pole cost.
+Fixed-rank and successful nonnegative diagonal repairs have separate stated
+cutoff obstructions. The conclusion is candidate/map/schedule-specific:
+“This candidate is not the Connes–Consani–Moscovici construction.”
+[Review](../papers/investigations-4/01_compact_weil_positivity/reviews/01_CIRCLE_COMPARISON_REVIEW_20261021.md);
+checks are exact algebra plus floating diagnostics, not new certified theta
+or Weil positivity. I4-W02 and the actual CCM gates remain unchanged.

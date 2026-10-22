@@ -52,3 +52,40 @@ universal one and in branches that ignored a scoped no-go that did apply.
 
 State every negative result with the class it was proved for and the
 hypothesis that distinguishes the next class ([`avoid/02`](02_shape_only_arguments_and_the_controls.md) gives the positive form). The repository's own phrasing is the template: "Closure of the program is a research judgment, not a theorem" ([YM README](../papers/weil-positivity/susy-positivity/investigations/wilson-loewner/YM/README.md)); "Inactive status does not assert mathematical impossibility" ([investigations-2 README](../papers/investigations-2/README.md)). A no-go that is meant as a decision rule should be filed as one (a kill criterion with its number), not as a theorem.
+
+**A cancelling side does not remove a shrinking event cap, 22 October 2026.**
+Prepared for Edward Baker with substantial LLM assistance, **gpt-6-astra, ultra**.
+[I4 shared Note 01](../papers/investigations-4/notes/01_CHERN_HOPF_PROJECTIVE_SIDES_AND_LOCAL_SECTORS_20261022.md)
+states: “The inner cap still contributes -kappa as r_0 tends to zero.”
+Its punctured projective sector is a valid exact integral simplification,
+but its apex is a boundary event, not a fractional enclosed event. A charged
+full boundary also retains its complementary chart and seam. Scope this
+qualification to the sector construction; it is not an obstruction to all
+boundary-removal strategies. [Internal review](../papers/investigations-4/03_heat_transport_and_charges/reviews/04_CHERN_HOPF_BOUNDARY_OPENING_REVIEW_20261022.md).
+
+**Scope complete-boundary simplification and its controls, 22 October 2026.**
+Prepared for Edward Baker with substantial LLM assistance, **gpt-6-astra, ultra**.
+[I4 shared Note 03](../papers/investigations-4/notes/03_COMPLETE_PHYSICAL_BOUNDARY_AND_CRITICAL_VALUE_WINDING_20261022.md)
+completes the local event-enclosing assembly left open by the sector above:
+“The spatial wall generally has nonzero flux”; only its separate integral
+is removed by the full reduction. Its quartic control shows that “merging
+two simple zeros into a double leaves N unchanged.” This defeats exclusion
+from conserved total multiplicity alone, not an arithmetic simplicity theorem.
+[Note 04](../papers/investigations-4/notes/04_TOPOLOGICAL_MASS_BOUNDS_AND_INDEX_THEOREM_INTERFACE_20261022.md)
+uses the charge independently to bound specified weighted integrals; its
+heat-field comparison controls “do not rule out additional theta-specific
+comparisons.” Retain the inverse Schur cost and complex-time averaging;
+no useful Gauss-area comparison uniform as the regulator tends to zero or
+fixed-time theta bound is supplied.
+[Contributing-agent same-model review](../papers/investigations-4/03_heat_transport_and_charges/reviews/05_COMPLETE_BOUNDARY_AND_INTEGRAL_BOUNDS_REVIEW_20261022.md).
+
+**A failed global certificate is not failure of the mass, 22 October 2026.**
+Prepared for Edward Baker with substantial LLM assistance, **gpt-6.1-sol,
+effort ultra**. [I4 Note 05](../papers/investigations-4/notes/05_TARGET_INVENTORY_AND_FINITE_REGULATOR_GAUSS_COMPARISON_20261022.md)
+decides every finite regulator for one global inverse-Schur implementation:
+“It is not a lower bound on the true Gauss area, an optimal constant, or
+a claim about every Schur comparison.” Preserve its sufficient-window and
+constant-certificate scope. Weighted/localized or canonical-source
+comparisons and positive mass paying a signed error term remain outside
+that failure; the independent bounded-mass result is retained.
+[Contributing-agent internal review](../papers/investigations-4/03_heat_transport_and_charges/reviews/06_FINITE_REGULATOR_GAUSS_COMPARISON_REVIEW_20261022.md).

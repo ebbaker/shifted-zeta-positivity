@@ -60,6 +60,19 @@ positive finite pencil as a string, a graph and an operator.
   [Same-assistant review](../papers/investigations-3/13_contradiction_analysis/04_boundary_winding/threshold_routes/10_rh_implies_simple_zeros/reviews/20_MOVING_TUBE_AND_TRACE_REVIEW_20261021.md). Prepared for Edward Baker with
   substantial LLM assistance, **gpt-6-astra, actual effort max**.
 
+- **Circle positive-completion cost (21 October 2026).** The
+  [I4-W01 note](../papers/investigations-4/01_compact_weil_positivity/notes/01_CIRCLE_COMPARISON_AND_POSITIVE_COMPLETION_OBSTRUCTIONS_20261021.md)
+  proves a complete signed comparison, but its positive jump energy adds
+  a fixed scalar/pole cost: “The pole term is not the sole reason.”
+  Pole-null tests still pay the diagonal subtraction. Diagonal-symbol
+  clipping alone also leaves the negative pole; successful nonnegative
+  diagonal repairs have a divergent fixed-test cost only in the stated
+  X->infinity, log X=o(P) regime. These are scoped candidate failures,
+  not exclusions of CCM or non-diagonal arithmetic geometry.
+  [Internal review](../papers/investigations-4/01_compact_weil_positivity/reviews/01_CIRCLE_COMPARISON_REVIEW_20261021.md).
+  Prepared for Edward Baker with substantial LLM assistance,
+  **gpt-6-astra, actual effort ultra**.
+
 ## What it cost
 
 Sixteen lifts plus twenty-two notes rated "promise 1/5"; CCM rounds 1–4

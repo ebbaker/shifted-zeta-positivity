@@ -1,0 +1,35 @@
+# Integral-budget comparison: internal review
+
+22 October 2026, America/New_York. Prepared for **Edward Baker** with substantial LLM assistance. Coordinating model **gpt-6.1-sol (Codex)**, reasoning effort **ultra**, verified by the coordinator. This is a separate **same-model internal review**; this delegated process's configuration was not independently inspected. It is not cross-model validation, specialist review or formal verification.
+
+**Disposition: the bounded integral gate passes; the cost/coverage improvement gate does not.** The [contract](../notes/03_INTEGRAL_BUDGET_COMPARISON_CONTRACT_20261022.md), [derivation](../notes/04_INTEGRAL_BOUNDS_WITHOUT_INTERIOR_NONVANISHING_20261022.md), [checker](../numerics/check_real_thom_integral_budget.py) and [receipt](../numerics/REAL_THOM_INTEGRAL_BUDGET_20261022.json) preserve the distinction between an integral proof and a preliminary complete interior nonvanishing proof. Review follows the [result index](../../../../result-summaries/README.md), [collision screen](../../../../result-summaries/12_collision_controls_and_screening.md) and [avoid index](../../../../avoid/README.md), especially [01](../../../../avoid/01_restating_the_target.md), [07](../../../../avoid/07_scoped_exclusions_read_as_universal.md) and [11](../../../../avoid/11_certifying_the_known_and_tests_that_cannot_fail.md).
+
+For each retained cell, the density bound is (0\le\rho\le C=4/(e\pi r^2)). If ([\ell,u]) encloses (L_1), the complete integral lies in (|Q|C[\min(0,\ell),\max(0,u)]). This remains valid when both first-jet intervals contain zero. The interval products retain signed lower allowances, while the upper estimate is a positive-part majorant and gains no cancellation. Support rejection is used only on individual cells; the stopping rule uses the total upper sum, and a complete interior nonvanishing cover is not an input. The extended source orders 0–77 and moment bound through 79 correctly pay the four-jet Taylor remainders, omitted modes, source ray and coefficient/quadrature uncertainty.
+
+The fixed tiny-radius branch fails the requested retained-uncertainty gate: its last positive upper is approximately 748.8531, then zero after all support cells reject at 255 calls. This is not a universal failure of integral estimates. A separately declared (r=10^{-7}, b=1.5\times10^{-7}) variant succeeds. The reviewed calculation gives
+
+\[
+ -0.436449<I_r(D)<0.698391<1,
+\]
+
+with **nine retained cells, all nine having complete first-jet rectangles containing the origin**, and positive unresolved upper mass. There are 127 final cells and 253 four-component bulk calls. The first upper below one is approximately 0.9444345611 at 247 calls; the prospective stopping target is below 3/4. The complete boundary alone is separately certified above (1.53909638788\times10^{-7}>b), using 548 two-component calls without winding or an interior cover. The classical compact degree identity therefore gives the nonnegative integer (K=I_r=0) as a conclusion.
+
+This establishes a finite complete-source integral upper before complete coordinate-separation interior nonvanishing has been acquired. It does not establish that actual wider-radius support is met. The old tiny-radius support result does not decide that question. The rectangle was already covered by inherited methods, and this route supplies no new height coverage, RH evidence or endpoint simplicity estimate.
+
+Standalone work loses to the practical direct consumer: 548 boundary plus 253 bulk calls = 801, or 2,108 component ranges, versus 255 two-component direct calls = 510 component ranges. The active source needs 78 midpoint integrals and moments through 79; the first-jet comparator can use 76 midpoint integrals and moments through 77. Its later direct replay is absent from the integral proof. Bulk-call count alone is not an honest advantage measure.
+
+An independent process replay at 160 bits with Python 3.12.14 and python-flint 0.9.0 passed **98 assertions**, including the unchanged upstream-file check. All JSON content matched the saved receipt after recursively removing timing fields. After a comment-only clarification of the inflated-uncertainty control, both the saved receipt and separate replay were regenerated and checked. The final canonical non-timing SHA256 was `54aedb53997006f1a8238ca9ba86e251ae8076f75580e25b610c096cd25b1308`; the reviewed checker SHA256 was `633a1d77387012c8767d5db85ea2d13e29d843f657055afccdd63363042c6fbe`. Hashes identify content and do not certify mathematics. A deliberately altered upstream-file subprocess exited 1 with the named hash assertion and produced no receipt, including after that final comment change.
+
+The same budget helper correctly returns inconclusive on the exact quadratic collision with a paid collar (127 calls; upper above 7.84, true mass one). Inflating every actual theta jet by the complete moment bound also returns inconclusive after its separate 31-call stress budget. Boundary events are refused. Nonfinite jets are rejected before maximum/sign operations; interval products avoid a reproduced python-flint 0.9.0 nonfinite-power issue for sign-changing balls. Exact outward endpoints and per-cell boundary payments are retained.
+
+The polynomial control in Note 04 independently establishes **genuine active support**. For (H=(1+t^2)x-tx^3/3+x^5/60) on the half-unit box, direct differentiation verifies backward heat. The bulk bounds (|H_{xx}|\le13/24), (|H_x|\le265/192), (|H_{xxx}|\le5/4) give (|L_1|\le4651/2304). With (r^2=11/10), the integral absolute allowance is
+
+\[
+ \frac{186040}{25344e\pi}=0.85958101773866\ldots<43/50<1.
+\]
+
+The exact rational exponential/arctangent comparisons supporting this strict threshold were checked independently. Boundary-only estimates give (E\ge29/24>b^2=6/5): on the spatial faces, (|H|\ge23/48), (H_x\ge95/96), giving (E\ge11141/9216>29/24); on the final/initial time faces (H_x\ge9/8,5/4), respectively. A review correction replaces a global lower-(E) derivation, which itself would have pre-established interior nonvanishing, with these face-only payments. At ((t,x)=(\pm1/10,0)), (E=10201/10000<r^2) and (L_1=\pm101/500), so positive-area regions of both integrand signs are genuinely active. Easy direct (H_x) positivity remains an available alternative, unused by this bulk bound.
+
+For the quadratic event, the ideal support-area maximum-density allowance is (4/e>1) at every radius. More generally, normalized density implies its supremum times target support area is at least one, so this allowance cannot falsely exclude that event merely by shrinking the support. These are scoped control results, not new theta arithmetic information.
+
+Retain the complete bounded estimate and exact active control. Close this specified positive-part budget as a source of demonstrated cost or coverage improvement; leave correlated/signed upper improvements and other domains open. The arithmetic collision families retain their separate failed theta-source premises. No specialist validation or global result is claimed.

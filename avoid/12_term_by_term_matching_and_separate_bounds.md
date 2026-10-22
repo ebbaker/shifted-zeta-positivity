@@ -509,3 +509,43 @@ covariance. Keep its common grid, additional cell moments, complete mixed
 term and acquisition errors; it is not a comparison with all direct
 methods or an endpoint sign. The exact controls reject the dropped-mixed-
 term estimate. [Review 12](../papers/investigations-3/13_contradiction_analysis/04_boundary_winding/threshold_routes/12_relative_chern_hopf_charges/reviews/12_FINITE_TIME_SIGNED_RECONSTRUCTION_OPENING_REVIEW_20261021.md).
+
+22 October 2026 — Prepared for Edward Baker with substantial LLM assistance,
+**gpt-6-astra, effort ultra**. The [I4 pilot review](../papers/investigations-4/03_heat_transport_and_charges/reviews/03_SOURCE_CONTRACT_SURVIVOR_AND_BOUNDARY_REVIEW_20261022.md)
+records: “Every successful terminal-floor tube already supplies a stronger
+stationary-interval gap bound from the same source data.” Stop that unsigned
+floor comparison class; do not upgrade this to a failure of coupled currents
+or of the separate objective of removing topological boundary integrals.
+
+**A subleading square-trace term can still be nonintegrable, 22 October 2026.**
+Prepared for Edward Baker with substantial LLM assistance, **gpt-6.1-sol,
+effort ultra**. [I4 Note 06](../papers/investigations-4/notes/06_CRITICAL_WALL_TRACES_AND_SIGNED_ENDPOINT_BUDGET_20261022.md)
+proves a bounded signed residual q=1/t+r, but its square retains 2r_0/t:
+“Subtracting t^(-2) alone can leave a nonintegrable 2r_0/t.” Its two-sign
+quartic controls keep charge one while changing r_0's sign. Retain the
+coupled C_2C_4+S_3² center and both singular subtractions; a fixed error in
+r_0 has logarithmic endpoint cost. This is a local ordinary-double result,
+not a canonical theta sign or universal obstruction to trace estimates.
+[Internal review](../papers/investigations-4/03_heat_transport_and_charges/reviews/07_CRITICAL_WALL_TRACE_AND_ENDPOINT_BUDGET_REVIEW_20261022.md).
+
+22 October 2026 — bounded analytic remainders and acquired period errors,
+prepared for Edward Baker with substantial LLM assistance,
+**gpt-6.1-sol, effort ultra**. [RHE Note 03, §5](../papers/investigations-4/09_reciprocal_hodge_energy/notes/03_REAL_PRIMITIVE_REDUCTION_AND_BOUNDED_MODEL_REMAINDER_20261022.md)
+retains the whole quadratic energy and both boundary payments, with bounded
+exact remainders. It warns: “fixed absolute core-period error causes
+logarithmic energy uncertainty.” The complete product allowance contains
+|p| epsilon_q as the transverse period diverges. Do not promote a bounded
+exact subtraction into a fixed-precision or cost advantage; retain shared
+source correlations and compare equally informed direct integration.
+[Separate same-model review](../papers/investigations-4/09_reciprocal_hodge_energy/reviews/02_REAL_PRIMITIVE_AND_MODEL_REMAINDER_REVIEW_20261022.md).
+
+**A coupled gain still needs the strongest direct comparator, 22 October 2026.**
+Prepared for Edward Baker with substantial LLM assistance, **gpt-6.1-sol,
+effort ultra**. [CHB local Note 02](../papers/investigations-4/10_chern_hopf_integral_estimates/notes/02_COUPLED_SIGNED_THETA_TAIL_ESTIMATES_20261022.md)
+proves and interval-certifies strict same-moment gains by keeping C_0=V
+and S_1=0 together. The added signed tail integral is far sharper in that
+finite pilot. The note says: “An equally informed direct method can use
+(1) or (6) itself.” Retain the useful coupling; scope its gain to the
+declared moment interface. Neither a narrower interval than a separated
+Taylor bound nor the already-forced LP sign supplies a global arithmetic
+exclusion premise. [Internal review](../papers/investigations-4/10_chern_hopf_integral_estimates/reviews/02_COUPLED_SIGNED_TAIL_REVIEW_20261022.md).

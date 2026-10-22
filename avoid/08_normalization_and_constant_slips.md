@@ -65,3 +65,13 @@ the source covariance and the derivative of `z/L_t`, and bounds their
 residual before differentiating root locations. This is a preventive
 lesson from the successful estimate, not a retraction of the earlier
 location theorem; it supplies no simplicity exclusion.
+
+22 October 2026 — reciprocal energy on a bordered cover, prepared for
+Edward Baker with substantial LLM assistance, **gpt-6.1-sol, effort ultra**.
+[RHE Note 02, §2](../papers/investigations-4/09_reciprocal_hodge_energy/notes/02_FULL_QUADRATIC_ENERGY_AND_TRANSVERSE_PAYMENT_20261022.md)
+computes the entire quadratic annulus and states: “Keeping only the cut
+term would miss half the leading energy.” Independent primitive constants
+on its two physical boundaries also discard the divergent relative period.
+This is a preventive normalization check of the inherited degeneration,
+not a new theta exclusion or a claim that all period methods fail.
+[Separate same-model internal review](../papers/investigations-4/09_reciprocal_hodge_energy/reviews/01_CONTRACT_AND_QUADRATIC_PILOT_REVIEW_20261022.md).

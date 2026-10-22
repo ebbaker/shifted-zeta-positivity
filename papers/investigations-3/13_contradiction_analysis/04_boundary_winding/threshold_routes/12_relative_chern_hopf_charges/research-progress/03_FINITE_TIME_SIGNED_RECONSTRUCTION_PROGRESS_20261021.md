@@ -194,6 +194,18 @@ sibling statuses are unchanged. Prepared for Edward Baker with substantial
 LLM assistance, **gpt-6-astra, actual effort max**; authoring-assistant
 analytic checks only, in chat 0005.
 
+**21 October 2026 — Investigations 4 founding brainstorm.** At Edward
+Baker's request, the connected ideas now have a new organizational home
+in [Investigations 4][investigations4]. Its opening note maps compact
+Weil energies, complete-source constraints, heat transport and charge,
+spectral periods, compact Jensen surfaces, and signed reconstruction.
+The proposed README, research overview and six project folders remain
+for the subsequent organization step. Existing proofs and computations
+remain at their source paths; FTSR-00–07 and sibling mathematical
+statuses are unchanged. Chat 0005 has moved to the new investigation
+with its identity preserved. Prepared for Edward Baker with substantial
+LLM assistance, **gpt-6-astra, actual effort max**.
+
 The three analytical checkpoints for Notes 13–15 were prepared for Edward Baker with
 substantial LLM assistance, **gpt-6-astra, effort ultra**, and separate
 same-model checks only. This research round is [chat 0005][chat5]. Earlier
@@ -225,5 +237,7 @@ with the bounded exact-turn follow-up.
 [a07]: ../../../../../../../avoid/07_scoped_exclusions_read_as_universal.md
 [a12]: ../../../../../../../avoid/12_term_by_term_matching_and_separate_bounds.md
 [chat4]: ../chat-histories/0004_2026-10-21T21-29-18Z_analyze-endpoint-charge-obstacles.json
-[chat5]: ../chat-histories/0005_2026-10-21T23-15-19Z_investigate-finite-time-charge-route.json
+[chat5]: ../../../../../../investigations-4/chat-histories/0005_2026-10-21T23-15-19Z_investigate-finite-time-charge-route.json
 [history-policy]: ../../../../../../../tools/CHAT_HISTORY.md
+
+[investigations4]: ../../../../../../investigations-4/brainstorm/01_COMPACT_GEOMETRY_HEAT_TRANSPORT_AND_WEIL_POSITIVITY_20261021.md

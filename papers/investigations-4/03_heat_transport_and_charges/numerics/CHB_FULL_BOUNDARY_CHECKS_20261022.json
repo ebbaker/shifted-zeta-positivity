@@ -1,0 +1,179 @@
+{
+  "research_date": "2026-10-22",
+  "prepared_for": "Edward Baker",
+  "llm_assistance": "Substantial; same-model contributing-agent derivation/check",
+  "recorded_root_model": "gpt-6-astra (Codex)",
+  "recorded_reasoning_effort": "ultra",
+  "status": "Exact rational geometry checks and floating diagnostics; NOT interval-certified",
+  "scope": "Quadratic/quartic polynomial controls only; no theta event, arithmetic gain, or exclusion certificate",
+  "executed_at_utc": "2026-10-22T12:16:27.629276+00:00",
+  "source_file": "check_chb_full_boundary.py",
+  "source_sha256": "ccd352aedd853605be0b3b911953a8301173cbd527a378186ab3cdba9681ecc0",
+  "exact_geometry": {
+    "parameters": {
+      "R": "1",
+      "T": "1/16",
+      "Y": "1/16",
+      "P": "1/4"
+    },
+    "tau_modulus_upper": "1/8",
+    "sqrt_branch_argument_upper": "1/64",
+    "pH_wall_upper": "5/16",
+    "Hz_wall_exact": "2",
+    "kappa": "1/17",
+    "minus_piece_each_heat_face": "1/68",
+    "complement_base_each_heat_face": "4/17",
+    "checks": {
+      "proper_two_root_wall": true,
+      "proper_Hz_wall": true,
+      "F_wall_Rouche": true,
+      "analytic_sqrt_branch": true,
+      "event_off_all_heat_edges": true,
+      "kappa_equals_one_seventeenth": true,
+      "minus_heat_fraction": true,
+      "complement_before_wall_payment": true,
+      "quadratic_complex_jacobian": true,
+      "quadratic_real_jacobian": true
+    }
+  },
+  "exact_quartic_fixed_boundary_control": {
+    "field": "H(tau,z)=z^4-(1+12tau)z^2+2tau+12tau^2",
+    "scope": "Non-theta polynomial control; |tau|<=d for complex-time wall statements",
+    "R": "1/2",
+    "d": "1/64",
+    "checks": {
+      "heat_equation_exact": true,
+      "ordinary_center_double": true,
+      "discriminant_positive_coefficients": true,
+      "inner_root_bound": true,
+      "outer_root_square_lower": true,
+      "initial_wall_floor": true,
+      "complex_time_Rouche": true,
+      "other_critical_points_outside": true,
+      "critical_value_has_only_center_zero": true
+    },
+    "initial_wall_floor": "3/16",
+    "complete_wall_perturbation_upper": "83/1024",
+    "inner_root_square_upper_for_0<t<=d": "35/1024",
+    "other_critical_point_modulus_squared_lower": "13/32",
+    "critical_value": "V(tau)=2tau(1+6tau)",
+    "analytic_interpretation": [
+      "y_plus=(1+12t+sqrt(1+16t+96t^2))/2>=1 for t>=0",
+      "y_minus*y_plus=2t+12t^2, hence 0<y_minus<=35/1024 for 0<t<=d",
+      "Rouche gives exactly two spatial zeros throughout the fixed complex-time window",
+      "The only spatial critical point inside the fixed disk is z=0",
+      "The interior double at tau=0 persists despite the fixed separating boundary"
+    ]
+  },
+  "exact_curvature_algebra_controls": {
+    "scope": "Exact real-rational control cases, not a general proof",
+    "checks": "spatial Gram, determinant, Schur complement, H=z comparison control",
+    "cases": [
+      {
+        "jets": [
+          "2",
+          "1",
+          "3",
+          "4"
+        ],
+        "delta": "1/2",
+        "spatial_entry": "440/441",
+        "determinant": "400/9261"
+      },
+      {
+        "jets": [
+          "1",
+          "2",
+          "-3",
+          "5"
+        ],
+        "delta": "1/3",
+        "spatial_entry": "2043/1058",
+        "determinant": "81/97336"
+      },
+      {
+        "jets": [
+          "0",
+          "1",
+          "0",
+          "0"
+        ],
+        "delta": "1/2",
+        "spatial_entry": "4/5",
+        "determinant": "0"
+      },
+      {
+        "jets": [
+          "1",
+          "0",
+          "0",
+          "0"
+        ],
+        "delta": "1/4",
+        "spatial_entry": "0",
+        "determinant": "0"
+      }
+    ]
+  },
+  "floating_runs": [
+    {
+      "gauss_legendre_order_per_nonangular_coordinate": 96,
+      "angular_trapezoid_nodes": 64,
+      "K_each_edge": 0.0007944455548660255,
+      "analytic_reduction": {
+        "each_minus_heat_piece": 0.014705882352941176,
+        "each_complement_heat_piece": 0.2344996720921928,
+        "each_complete_heat_face": 0.24920555444513398,
+        "complete_spatial_wall": 0.003177782219464102,
+        "all_faces_total": 1.0,
+        "fixed_tau_corner_integrals_J": "zero by rotation and conjugation symmetry",
+        "projective_interface_flux": "zero exactly"
+      },
+      "direct_pullback_quadrature": {
+        "heat_faces": {
+          "late": 0.24920555422167118,
+          "early": 0.24920555422167118,
+          "top_imaginary_time": 0.2492055542216712,
+          "bottom_imaginary_time": 0.2492055542216712
+        },
+        "spatial_wall": 0.0031777822194640195,
+        "all_faces_total": 0.9999999991061488
+      },
+      "diagnostic_errors": {
+        "max_heat_face_vs_reduction": 2.2346280381668748e-10,
+        "spatial_wall_vs_reduction": 8.239936510889834e-17,
+        "all_faces_vs_one": 8.938512152667499e-10
+      }
+    },
+    {
+      "gauss_legendre_order_per_nonangular_coordinate": 160,
+      "angular_trapezoid_nodes": 64,
+      "K_each_edge": 0.0007944455548660258,
+      "analytic_reduction": {
+        "each_minus_heat_piece": 0.014705882352941176,
+        "each_complement_heat_piece": 0.2344996720921928,
+        "each_complete_heat_face": 0.24920555444513398,
+        "complete_spatial_wall": 0.0031777822194641032,
+        "all_faces_total": 1.0,
+        "fixed_tau_corner_integrals_J": "zero by rotation and conjugation symmetry",
+        "projective_interface_flux": "zero exactly"
+      },
+      "direct_pullback_quadrature": {
+        "heat_faces": {
+          "late": 0.2492055544451211,
+          "early": 0.2492055544451211,
+          "top_imaginary_time": 0.24920555444512105,
+          "bottom_imaginary_time": 0.2492055544451211
+        },
+        "spatial_wall": 0.0031777822194645313,
+        "all_faces_total": 0.9999999999999489
+      },
+      "diagnostic_errors": {
+        "max_heat_face_vs_reduction": 1.2934098236883074e-14,
+        "spatial_wall_vs_reduction": 4.2804301769727715e-16,
+        "all_faces_vs_one": 5.10702591327572e-14
+      }
+    }
+  ],
+  "elapsed_seconds": 3.468982042046264
+}

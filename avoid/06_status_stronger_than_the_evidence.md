@@ -50,3 +50,14 @@ a legacy-key guide in 19; headlines that still outrun their reviews.
 ## Instead
 
 Use the status vocabulary of [`result-summaries/README.md`](../result-summaries/README.md) and the source's own words; state the hypothesis that does the work in the headline; run the originality search before "new" (house rule 2 of [`CONTRIBUTING.md`](../CONTRIBUTING.md); item C2 of the [first-slab protocol](../papers/weil-positivity/shifted-zeta/first-slab-positivity/verification/PROTOCOL_C1_C2.md)); when a claim is withdrawn, write the withdrawal into the file that made it, not only into a review ([`REDACTION_CHECKLIST.md`](../early-chat-logs/initial-project-files/rh3/REDACTION_CHECKLIST.md) item 9: corrections get a pointer, never a silent fix).
+
+22 October 2026 — actual finite-fiber estimating gains, prepared for
+Edward Baker with substantial LLM assistance, **gpt-6.1-sol, effort ultra**.
+[RHE Note 04, §5](../papers/investigations-4/09_reciprocal_hodge_energy/notes/04_ACTUAL_REGULAR_THETA_FIBER_COMPARISON_20261022.md)
+finds strict native interval containment and a consumer ratio near 2, but
+only a 1.174 ratio after the same acquisition setup. It states: “the measured
+native speed and width gain therefore do not prove intrinsic Hodge
+superiority.” Retain the fixed disk, native implementation, shared-data
+reuse, failed meshes and timing scope in the headline; a finite regular
+theta certificate does not establish endpoint nondegeneration.
+[Separate same-model review/replay](../papers/investigations-4/09_reciprocal_hodge_energy/reviews/03_ACTUAL_THETA_FIBER_COMPARISON_REVIEW_20261022.md).

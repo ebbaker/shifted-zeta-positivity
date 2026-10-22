@@ -28,20 +28,32 @@ reasoning effort **max**.
   estimate and rechecking infinite-time reconstruction. Recorded model
   gpt-6-astra, effort ultra. The earlier registrations retain their identities.
 
-- [0005 Investigate finite-time charge route](0005_2026-10-21T23-15-19Z_investigate-finite-time-charge-route.json):
+- [0005 Investigate finite-time charge route](../../../../../../investigations-4/chat-histories/0005_2026-10-21T23-15-19Z_investigate-finite-time-charge-route.json):
   paid canonical endpoint window, finite-time Hermite/Taylor comparison,
   exact response quotient, and canonical covariance estimate with complete
   common-grid comparison and acquisition errors. Recorded model
   gpt-6-astra, effort ultra. Earlier chat identities remain unchanged.
+
+**21 October 2026 — Investigations 4 continuation.** At Edward Baker's
+request, chat 0005 now follows the new compact-geometry, heat-transport
+and Weil-positivity [brainstorm](../../../../../../investigations-4/brainstorm/01_COMPACT_GEOMETRY_HEAT_TRANSPORT_AND_WEIL_POSITIVITY_20261021.md). Its sole canonical
+archive is the linked Investigations 4 copy, with its original number,
+filename, creation time and public message history preserved. The four
+earlier chats remain here. The transfer is recorded in the
+[relocation receipt](../../../../../../investigations-4/CHAT_HISTORY_RELOCATION_20261021.json).
+Prepared for Edward Baker with substantial LLM assistance,
+**gpt-6-astra, actual effort max**.
 
 The shared program-setup chat remains in the parent
 [boundary-winding archive](../../../chat-histories/0008_2026-10-21T16-44-53Z_create-proposal-research-folders.json).
 It is not duplicated here.
 
 Use the repository [history workflow](../../../../../../../tools/CHAT_HISTORY.md)
-to refresh this chat. The generated registry and transcript retain their
+to refresh each chat at its canonical home. The generated registry and transcript retain their
 unique identity and original creation and first-capture provenance.
-Consult [index.json](index.json) for current counts, capture times,
-model configuration and hashes. Only completed public conversation text
+The local [index](index.json) describes the remaining registrations here;
+chat 0005 uses the [Investigations 4 index](../../../../../../investigations-4/chat-histories/index.json).
+The generated indexes provide current counts, capture times, model
+configurations and hashes. Only completed public conversation text
 is archived; raw sessions stay outside the repository. A bounded worker
 captures the actual final reply after the turn completes.

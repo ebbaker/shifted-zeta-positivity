@@ -1,0 +1,21 @@
+# Real Thom and degree integrals: progress
+
+22 October 2026, America/New_York. Prepared for **Edward Baker** with substantial LLM assistance. Actual coordinating model **gpt-6.1-sol (Codex)**, reasoning effort **ultra**, verified from current turn metadata.
+
+**Current disposition:** the user's bounded question is answered **yes**. The complete theta integral has raw enclosure [-0.436449,0.698391] before the integer index is used, while nine retained interior first-jet rectangles still contain the origin. A separately acquired complete boundary floor supports the degree identity, yielding K=0 without a prior complete interior nonvanishing certificate. This validates a distinct proof route on inherited covered territory. The specified implementation loses the practical cost comparison; no new coverage, global theta estimate, RH or endpoint simplicity result.
+
+| ID | Task | Status and completion gate |
+| --- | --- | --- |
+| RTD-00 | Separate home, program and ledger | **Complete, organizational only.** Inherited identities retained. |
+| RTD-01 | Opening support-only fixed contract | **Complete.** [Note 01](../notes/01_BOUNDED_SUPPORT_COMPARISON_CONTRACT_20261022.md) fixes the small cutoff and discloses prior inspection. |
+| RTD-02 | Opening support-rejection comparison | **Complete for that branch.** [Note 02](../notes/02_SUPPORT_REJECTION_AND_CONTROL_ANALYSIS_20261022.md), [opening receipt](../numerics/REAL_THOM_SUPPORT_PILOT_20261022.json). Exact zero via empty support; direct and support both 255 calls. |
+| RTD-03 | Opening review and disposition | **Complete.** [Review 01](../reviews/01_OPENING_SUPPORT_COMPARISON_INTERNAL_REVIEW_20261022.md); support-only dominance/closure remains scoped. |
+| RTD-04 | Endpoint-relative or negative-time treatment | **Gated.** Needs a separate complete source/boundary contract; positive-time RH alone does not supply it. |
+| RTD-05 | Extend height or multiplicity coverage | **Reserve.** Needs demonstrated benefit and explicit global dependencies. |
+| RTD-06 | Bound the integral below one while retaining unresolved interior boxes | **Complete, bounded validation.** [Contract 03](../notes/03_INTEGRAL_BUDGET_COMPARISON_CONTRACT_20261022.md), [Note 04](../notes/04_INTEGRAL_BOUNDS_WITHOUT_INTERIOR_NONVANISHING_20261022.md), [checker](../numerics/check_real_thom_integral_budget.py), [receipt](../numerics/REAL_THOM_INTEGRAL_BUDGET_20261022.json), [Review 02](../reviews/02_ACTIVE_BULK_COMPARISON_INTERNAL_REVIEW_20261022.md). Fixed wider r=1e-7,b=1.5e-7 gives upper<0.699 with 9 origin-containing first-jet boxes. No actual nonempty theta support or theta signed-cancellation gain is asserted. |
+| RTD-07 | Cost comparison and genuinely active control | **Complete for this consumer.** Compact uses 253 four-jet bulk calls plus 548 two-jet boundary calls, total 801/2,108 component ranges, versus direct 255/510; source78 midpoint jets vs practical76. Stop this benchmark for efficiency/coverage benefit. Note 04 proves a genuinely active signed polynomial integral with allowance<0.86; quadratic collision and inflated-source controls remain inconclusive. |
+| RTD-08 | Coupled signed upper estimate or a new informative domain | **Unstarted.** A new contract must state a quantitative reason to improve the complete upper allowance, acquisition or coverage. No continuation is justified merely by shrinking the same cutoff or adding another equivalent criterion. |
+
+The tiny-radius integral-budget attempt is retained as a scoped failure: it jumps from an upper allowance around748.85 directly to zero only after all cells separate. The wider variant is separately fixed in Contract 03; there is no hidden within-run radius tuning. The successful upper bound is a positive-part majorant, with no cancellation benefit; complete interval and source errors are paid.
+
+Formula checks, interval certification and specialist review remain distinct. Both reviews are same-model internal assessments. See the [program](../research-overview/01_REAL_THOM_DEGREE_INTEGRALS_PROGRAM_20261022.md), [results](../../../../result-summaries/README.md) and [avoid](../../../../avoid/README.md). This chat retains its unique [history registration](../chat-histories/README.md), archive 0001; exact-turn recorder status governs final capture completion.

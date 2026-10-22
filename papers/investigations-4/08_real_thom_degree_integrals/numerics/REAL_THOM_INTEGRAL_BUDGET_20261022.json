@@ -1,0 +1,1581 @@
+{
+  "date": "2026-10-22",
+  "timezone": "America/New_York",
+  "prepared_for": "Edward Baker",
+  "llm_assistance": "Substantial LLM assistance; complete-source Arb/Acb interval enclosures.",
+  "coordinating_model": "gpt-6.1-sol",
+  "coordinating_reasoning_effort": "ultra",
+  "provenance": "Coordinator verified metadata; delegated configuration not independently recorded.",
+  "checker": "check_real_thom_integral_budget.py",
+  "checker_sha256": "633a1d77387012c8767d5db85ea2d13e29d843f657055afccdd63363042c6fbe",
+  "upstream_supplier": {
+    "path": "papers/investigations-2/active/22_theta_manifold_geometry/numerics/check_theta_boundary_winding.py",
+    "sha256": "ad11eea2ead62eb3a009de3ce0308dc5b94f048293cd9daca500795578926634",
+    "optional_original_hash_verified": true,
+    "extension": "Same formulas; jets H through Hxxx, midpoint orders 0..77, moments through79."
+  },
+  "python_version": "3.12.14",
+  "python_flint_version": "0.9.0",
+  "precision_bits": 160,
+  "contract": {
+    "t": [
+      "1/100",
+      "1/5"
+    ],
+    "x": [
+      "25",
+      "45"
+    ],
+    "orientation": "dt wedge dx",
+    "density": "s=|y|^2/r^2; exp(-s/(1-s))/(pi*r^2*(1-s)^2) for s<1, zero otherwise",
+    "global_density_upper": "4/(e*pi*r^2)",
+    "bulk_target": "upper<3/4",
+    "bulk_range_cap": 4095,
+    "split_rule": "Bisect x of the retained cell with largest positive integral upper; full time interval retained.",
+    "stopping_rule": "Integral upper only; interior nonvanishing and origin counts are not consulted.",
+    "collar_radius": "3/20000000",
+    "disclosure": "Tiny-radius empty support was previously certified; tiny attempt and source point scouting precede the wider fixed contract. No adaptive radius change within a run. Wider-radius pullback emptiness is neither assumed nor established; nonemptiness is not claimed."
+  },
+  "source": {
+    "finite_modes": 4,
+    "source_cutoff": 1,
+    "midpoint_jets": 78,
+    "maximum_jet_order": 77,
+    "maximum_moment_order": 79,
+    "taylor_degrees": {
+      "x": 50,
+      "t": 12
+    },
+    "moment_upper": "[0.076337672385010614620066999664980 +/- 3.53e-34]",
+    "omitted_mode_bound": "[3.7282921464475698082981336802390e-33 +/- 3.18e-65]",
+    "all_modes_source_ray_bound": "[1.0517933547951133462852266887941e-72 +/- 4.78e-104]",
+    "complete_jet_tail": "[3.7282921464475698082981336802390e-33 +/- 3.18e-65]",
+    "uniform_taylor_error_per_jet": "[4.9228450793042262035086191209267e-17 +/- 1.71e-49]"
+  },
+  "complete_boundary": {
+    "method": "Adaptive whole-edge first-jet norm bounds; no winding polygon or interior proof.",
+    "status": "complete_collar_floor_certified",
+    "range_calls": 548,
+    "component_ranges": 1096,
+    "accepted_segments": 276,
+    "minimum_norm_floor": "[1.5390963878817360318526762864796e-7 +/- 3.84e-39]",
+    "collar_paid_for_both_variants": true,
+    "vertex_evaluations": 0
+  },
+  "variants": {
+    "tiny_radius": {
+      "name": "tiny_radius",
+      "support_radius": "1/1000000000",
+      "target_upper": "3/4",
+      "maximum_range_calls": 4095,
+      "range_calls": 255,
+      "component_ranges": 1020,
+      "status": "integral_upper_below_three_quarters",
+      "integral_enclosure": [
+        "0",
+        "0"
+      ],
+      "accepted_partition_cells": 128,
+      "support_rejected_cells": 128,
+      "retained_uncertain_support_cells": 0,
+      "origin_containing_first_jet_boxes_after_stopping": 0,
+      "retained_positive_upper_mass": "0",
+      "first_below_one": {
+        "range_calls": 255,
+        "upper": "0"
+      },
+      "previous_nonzero_budget": {
+        "range_calls": 253,
+        "upper": "[748.85310048331955122214768644663 +/- 2.58e-30]",
+        "uncertain_cells": 1
+      },
+      "interior_nonvanishing_consulted_as_stopping_premise": false,
+      "partition_sha256": "dbf1dcd5c7a130dc56cf8e2f4a0116bb5dd7ae460e742a806a734170f6a61087",
+      "retained_cell_records": [],
+      "timing_seconds": 0.4987049159826711,
+      "scoped_comparison_outcome": "Failure to retain an uncertain integral contribution: all support boxes reject before a positive upper below one is reached."
+    },
+    "wider_radius": {
+      "name": "wider_radius",
+      "support_radius": "1/10000000",
+      "target_upper": "3/4",
+      "maximum_range_calls": 4095,
+      "range_calls": 253,
+      "component_ranges": 1012,
+      "status": "integral_upper_below_three_quarters",
+      "integral_enclosure": [
+        "[-0.43644844922374891599440258082419 +/- 3.70e-33]",
+        "[0.69839031499053337326894456045981 +/- 2.60e-33]"
+      ],
+      "accepted_partition_cells": 127,
+      "support_rejected_cells": 118,
+      "retained_uncertain_support_cells": 9,
+      "origin_containing_first_jet_boxes_after_stopping": 9,
+      "retained_positive_upper_mass": "[0.69839031499053337326894456045981 +/- 2.60e-33]",
+      "first_below_one": {
+        "range_calls": 247,
+        "upper": "[0.94443456107753722604529785103547 +/- 4.93e-34]"
+      },
+      "previous_nonzero_budget": {
+        "range_calls": 251,
+        "upper": "[0.77961553674470040722302292376208 +/- 2.98e-33]",
+        "uncertain_cells": 10
+      },
+      "interior_nonvanishing_consulted_as_stopping_premise": false,
+      "partition_sha256": "d5a348de3ea0fd581245688f75c2b4154ab09737f1b9b8288c8aa75832170d77",
+      "retained_cell_records": [
+        {
+          "x": [
+            "5715/128",
+            "715/16"
+          ],
+          "status": "retained_uncertain_support",
+          "lower": "[-0.047997050503941460074708753442907 +/- 4.48e-34]",
+          "upper": "[0.080457589284365248667462786104581 +/- 2.75e-34]",
+          "origin_in_first_jet_box": true,
+          "jet_enclosures": [
+            "[9.6246218926806012986353966365471e-7 +/- 1.26e-6]",
+            "[-1.1764714102620277389317618206008e-7 +/- 4.63e-7]",
+            "[-1.7039219145041069280290848177547e-7 +/- 1.68e-7]",
+            "[1.5005510024870581094186559490354e-7 +/- 5.21e-8]"
+          ],
+          "L1_enclosure": "[4.6687052447933898266632534848946e-14 +/- 1.85e-13]"
+        },
+        {
+          "x": [
+            "715/16",
+            "5725/128"
+          ],
+          "status": "retained_uncertain_support",
+          "lower": "[-0.048140615075991025194455343354921 +/- 4.14e-35]",
+          "upper": "[0.079706138533412972515193418957546 +/- 3.58e-34]",
+          "origin_in_first_jet_box": true,
+          "jet_enclosures": [
+            "[9.5773808309350543575448168260638e-7 +/- 1.27e-6]",
+            "[-1.2418926491625593675071321889489e-7 +/- 4.67e-7]",
+            "[-1.6458145885992545887642656145796e-7 +/- 1.69e-7]",
+            "[1.4745816598598643466391311390497e-7 +/- 5.25e-8]"
+          ],
+          "L1_enclosure": "[4.5399777840160245967802060444960e-14 +/- 1.84e-13]"
+        },
+        {
+          "x": [
+            "5725/128",
+            "2865/64"
+          ],
+          "status": "retained_uncertain_support",
+          "lower": "[-0.048275159799449661147151372549506 +/- 5.07e-35]",
+          "upper": "[0.078970690655269907617424836504384 +/- 3.71e-34]",
+          "origin_in_first_jet_box": true,
+          "jet_enclosures": [
+            "[9.5276283269947892398996946866219e-7 +/- 1.28e-6]",
+            "[-1.3050638262550904133645127984115e-7 +/- 4.71e-7]",
+            "[-1.5887172775594484291056102532145e-7 +/- 1.71e-7]",
+            "[1.4488384726508862684827221885421e-7 +/- 5.29e-8]"
+          ],
+          "L1_enclosure": "[4.4148492687592522998580164620787e-14 +/- 1.84e-13]"
+        },
+        {
+          "x": [
+            "2865/64",
+            "5735/128"
+          ],
+          "status": "retained_uncertain_support",
+          "lower": "[-0.048401203187164727338888315370600 +/- 1.79e-34]",
+          "upper": "[0.078251077252663365651241609281209 +/- 5.0e-36]",
+          "origin_in_first_jet_box": true,
+          "jet_enclosures": [
+            "[9.4754515055690492227252133126915e-7 +/- 1.30e-6]",
+            "[-1.3660242223547946333121802208102e-7 +/- 4.76e-7]",
+            "[-1.5326211206273934180664330683488e-7 +/- 1.72e-7]",
+            "[1.4233227870483092182682120175932e-7 +/- 5.32e-8]"
+          ],
+          "L1_enclosure": "[4.2932209027306927691647700212433e-14 +/- 1.83e-13]"
+        },
+        {
+          "x": [
+            "5735/128",
+            "1435/32"
+          ],
+          "status": "retained_uncertain_support",
+          "lower": "[-0.048519254989213115305879025382219 +/- 4.52e-34]",
+          "upper": "[0.077547138985553342034997320567791 +/- 2.15e-34]",
+          "origin_in_first_jet_box": true,
+          "jet_enclosures": [
+            "[9.4209359637336251586083855378230e-7 +/- 1.31e-6]",
+            "[-1.4248127711473470263128231735758e-7 +/- 4.80e-7]",
+            "[-1.4775172060627136327321254251500e-7 +/- 1.73e-7]",
+            "[1.3980358674227698867243023506109e-7 +/- 5.36e-8]"
+          ],
+          "L1_enclosure": "[4.1749964526373891973713159984757e-14 +/- 1.82e-13]"
+        },
+        {
+          "x": [
+            "1435/32",
+            "5745/128"
+          ],
+          "status": "retained_uncertain_support",
+          "lower": "[-0.048629818831593566554993354439297 +/- 1.48e-34]",
+          "upper": "[0.076858727791066759965720414718334 +/- 2.86e-34]",
+          "origin_in_first_jet_box": true,
+          "jet_enclosures": [
+            "[9.3641657845286890903544209063008e-7 +/- 1.32e-6]",
+            "[-1.4814680572594761469657509507322e-7 +/- 4.85e-7]",
+            "[-1.4233965743116269604945706181404e-7 +/- 1.75e-7]",
+            "[1.3729788976737399907336756405262e-7 +/- 5.40e-8]"
+          ],
+          "L1_enclosure": "[4.0600821879570476501942042390351e-14 +/- 1.81e-13]"
+        },
+        {
+          "x": [
+            "5745/128",
+            "2875/64"
+          ],
+          "status": "retained_uncertain_support",
+          "lower": "[-0.048733389918439751758426803622328 +/- 5.00e-34]",
+          "upper": "[0.076185704175426721410808882843346 +/- 8.34e-35]",
+          "origin_in_first_jet_box": true,
+          "jet_enclosures": [
+            "[9.3052235506295920006762866917784e-7 +/- 1.33e-6]",
+            "[-1.5360283144523067242101190239207e-7 +/- 4.89e-7]",
+            "[-1.3702502211241878871470683631250e-7 +/- 1.76e-7]",
+            "[1.3481529825676366486204926768980e-7 +/- 5.44e-8]"
+          ],
+          "L1_enclosure": "[3.9483868219281027722574248215602e-14 +/- 1.80e-13]"
+        },
+        {
+          "x": [
+            "2875/64",
+            "5755/128"
+          ],
+          "status": "retained_uncertain_support",
+          "lower": "[-0.048830456484458512484668594900790 +/- 2.81e-34]",
+          "upper": "[0.075527938264443100283880522837959 +/- 4.29e-34]",
+          "origin_in_first_jet_box": true,
+          "jet_enclosures": [
+            "[9.2441903580858691205121521323193e-7 +/- 1.35e-6]",
+            "[-1.5885314239354508058629766795983e-7 +/- 4.94e-7]",
+            "[-1.3180691006194238630465326977152e-7 +/- 1.77e-7]",
+            "[1.3235591490675414098608813666728e-7 +/- 5.48e-8]"
+          ],
+          "L1_enclosure": "[3.8398214537387520592724985444819e-14 +/- 1.79e-13]"
+        },
+        {
+          "x": [
+            "5755/128",
+            "45"
+          ],
+          "status": "retained_uncertain_support",
+          "lower": "[-0.048921500433497096135231017761619 +/- 4.81e-34]",
+          "upper": "[0.074885310048331955122214768644663 +/- 2.58e-34]",
+          "origin_in_first_jet_box": true,
+          "jet_enclosures": [
+            "[9.1811458301237757270774026009030e-7 +/- 1.36e-6]",
+            "[-1.6390149127998184533634672561184e-7 +/- 4.98e-7]",
+            "[-1.2668441282986952860337094882688e-7 +/- 1.79e-7]",
+            "[1.2991983476544131976166000493943e-7 +/- 5.52e-8]"
+          ],
+          "L1_enclosure": "[3.7342995118953473889719247650544e-14 +/- 1.79e-13]"
+        }
+      ],
+      "timing_seconds": 0.4929415830411017,
+      "scoped_comparison_outcome": "Integral budget succeeds with positive retained uncertain-cell upper mass; actual pullback support nonemptiness is not asserted."
+    }
+  },
+  "direct_comparator": {
+    "method": "Same complete source; adaptive x-only full-time coordinate separation AFTER integral result.",
+    "range_calls": 255,
+    "component_ranges": 510,
+    "accepted_strips": 128,
+    "source_midpoint_jets_shared": 78,
+    "standalone_minimum_midpoint_jets_for_first_jet": 76
+  },
+  "controls": {
+    "quadratic_exact_mass": "1",
+    "quadratic_exact_mass_reason": "det DF=-4, L1=4; the entire radius-1/2 target disk preimage lies inside [-1,1]^2, and rho is normalized.",
+    "quadratic_collar": "3/4",
+    "quadratic_boundary_norm_floors": [
+      "0.99999999254941940307617187500000",
+      "0.99999999254941940307617187500000",
+      "2.0000000000000000000000000000000",
+      "2.0000000000000000000000000000000"
+    ],
+    "quadratic_integral_budget": {
+      "name": "quadratic_collision",
+      "support_radius": "1/2",
+      "target_upper": "3/4",
+      "maximum_range_calls": 127,
+      "range_calls": 127,
+      "component_ranges": 508,
+      "status": "maximum_range_limit_inconclusive",
+      "integral_enclosure": [
+        "0",
+        "[7.8456774242587675324924639745334 +/- 3.92e-32]"
+      ],
+      "accepted_partition_cells": 64,
+      "support_rejected_cells": 11,
+      "retained_uncertain_support_cells": 53,
+      "origin_containing_first_jet_boxes_after_stopping": 2,
+      "retained_positive_upper_mass": "[7.8456774242587675324924639745334 +/- 3.92e-32]",
+      "first_below_one": null,
+      "previous_nonzero_budget": {
+        "range_calls": 127,
+        "upper": "[7.8456774242587675324924639745334 +/- 3.92e-32]",
+        "uncertain_cells": 53
+      },
+      "interior_nonvanishing_consulted_as_stopping_premise": false,
+      "partition_sha256": "9f361256ad441ec2722e352c1f28a90923fb8b4d724bf5db4e52f0f4a1f69b7d",
+      "retained_cell_records": [
+        {
+          "x": [
+            "-33/128",
+            "-1/4"
+          ],
+          "status": "retained_uncertain_support",
+          "lower": "0",
+          "upper": "[0.11709966304863832138048453693333 +/- 3.75e-33]",
+          "origin_in_first_jet_box": false,
+          "jet_enclosures": [
+            "[0.064468383789062500000000000000000 +/- 2.01]",
+            "[-0.50781250000000000000000000000000 +/- 7.82e-3]",
+            "2.0000000000000000000000000000000",
+            "0"
+          ],
+          "L1_enclosure": "4.0000000000000000000000000000000"
+        },
+        {
+          "x": [
+            "-1/4",
+            "-31/128"
+          ],
+          "status": "retained_uncertain_support",
+          "lower": "0",
+          "upper": "[0.11709966304863832138048453693333 +/- 3.75e-33]",
+          "origin_in_first_jet_box": false,
+          "jet_enclosures": [
+            "[0.060562133789062500000000000000000 +/- 2.01]",
+            "[-0.49218750000000000000000000000000 +/- 7.82e-3]",
+            "2.0000000000000000000000000000000",
+            "0"
+          ],
+          "L1_enclosure": "4.0000000000000000000000000000000"
+        },
+        {
+          "x": [
+            "-31/128",
+            "-15/64"
+          ],
+          "status": "retained_uncertain_support",
+          "lower": "0",
+          "upper": "[0.11709966304863832138048453693333 +/- 3.75e-33]",
+          "origin_in_first_jet_box": false,
+          "jet_enclosures": [
+            "[0.056777954101562500000000000000000 +/- 2.01]",
+            "[-0.47656250000000000000000000000000 +/- 7.82e-3]",
+            "2.0000000000000000000000000000000",
+            "0"
+          ],
+          "L1_enclosure": "4.0000000000000000000000000000000"
+        },
+        {
+          "x": [
+            "-15/64",
+            "-29/128"
+          ],
+          "status": "retained_uncertain_support",
+          "lower": "0",
+          "upper": "[0.11709966304863832138048453693333 +/- 3.75e-33]",
+          "origin_in_first_jet_box": false,
+          "jet_enclosures": [
+            "[0.053115844726562500000000000000000 +/- 2.01]",
+            "[-0.46093750000000000000000000000000 +/- 7.82e-3]",
+            "2.0000000000000000000000000000000",
+            "0"
+          ],
+          "L1_enclosure": "4.0000000000000000000000000000000"
+        },
+        {
+          "x": [
+            "-29/128",
+            "-7/32"
+          ],
+          "status": "retained_uncertain_support",
+          "lower": "0",
+          "upper": "[0.11709966304863832138048453693333 +/- 3.75e-33]",
+          "origin_in_first_jet_box": false,
+          "jet_enclosures": [
+            "[0.049575805664062500000000000000000 +/- 2.01]",
+            "[-0.44531250000000000000000000000000 +/- 7.82e-3]",
+            "2.0000000000000000000000000000000",
+            "0"
+          ],
+          "L1_enclosure": "4.0000000000000000000000000000000"
+        },
+        {
+          "x": [
+            "-7/32",
+            "-27/128"
+          ],
+          "status": "retained_uncertain_support",
+          "lower": "0",
+          "upper": "[0.11709966304863832138048453693333 +/- 3.75e-33]",
+          "origin_in_first_jet_box": false,
+          "jet_enclosures": [
+            "[0.046157836914062500000000000000000 +/- 2.01]",
+            "[-0.42968750000000000000000000000000 +/- 7.82e-3]",
+            "2.0000000000000000000000000000000",
+            "0"
+          ],
+          "L1_enclosure": "4.0000000000000000000000000000000"
+        },
+        {
+          "x": [
+            "-27/128",
+            "-13/64"
+          ],
+          "status": "retained_uncertain_support",
+          "lower": "0",
+          "upper": "[0.11709966304863832138048453693333 +/- 3.75e-33]",
+          "origin_in_first_jet_box": false,
+          "jet_enclosures": [
+            "[0.042861938476562500000000000000000 +/- 2.01]",
+            "[-0.41406250000000000000000000000000 +/- 7.82e-3]",
+            "2.0000000000000000000000000000000",
+            "0"
+          ],
+          "L1_enclosure": "4.0000000000000000000000000000000"
+        },
+        {
+          "x": [
+            "-13/64",
+            "-25/128"
+          ],
+          "status": "retained_uncertain_support",
+          "lower": "0",
+          "upper": "[0.11709966304863832138048453693333 +/- 3.75e-33]",
+          "origin_in_first_jet_box": false,
+          "jet_enclosures": [
+            "[0.039688110351562500000000000000000 +/- 2.01]",
+            "[-0.39843750000000000000000000000000 +/- 7.82e-3]",
+            "2.0000000000000000000000000000000",
+            "0"
+          ],
+          "L1_enclosure": "4.0000000000000000000000000000000"
+        },
+        {
+          "x": [
+            "-25/128",
+            "-3/16"
+          ],
+          "status": "retained_uncertain_support",
+          "lower": "0",
+          "upper": "[0.11709966304863832138048453693333 +/- 3.75e-33]",
+          "origin_in_first_jet_box": false,
+          "jet_enclosures": [
+            "[0.036636352539062500000000000000000 +/- 2.01]",
+            "[-0.38281250000000000000000000000000 +/- 7.82e-3]",
+            "2.0000000000000000000000000000000",
+            "0"
+          ],
+          "L1_enclosure": "4.0000000000000000000000000000000"
+        },
+        {
+          "x": [
+            "-3/16",
+            "-23/128"
+          ],
+          "status": "retained_uncertain_support",
+          "lower": "0",
+          "upper": "[0.11709966304863832138048453693333 +/- 3.75e-33]",
+          "origin_in_first_jet_box": false,
+          "jet_enclosures": [
+            "[0.033706665039062500000000000000000 +/- 2.01]",
+            "[-0.36718750000000000000000000000000 +/- 7.82e-3]",
+            "2.0000000000000000000000000000000",
+            "0"
+          ],
+          "L1_enclosure": "4.0000000000000000000000000000000"
+        },
+        {
+          "x": [
+            "-23/128",
+            "-11/64"
+          ],
+          "status": "retained_uncertain_support",
+          "lower": "0",
+          "upper": "[0.11709966304863832138048453693333 +/- 3.75e-33]",
+          "origin_in_first_jet_box": false,
+          "jet_enclosures": [
+            "[0.030899047851562500000000000000000 +/- 2.01]",
+            "[-0.35156250000000000000000000000000 +/- 7.82e-3]",
+            "2.0000000000000000000000000000000",
+            "0"
+          ],
+          "L1_enclosure": "4.0000000000000000000000000000000"
+        },
+        {
+          "x": [
+            "-11/64",
+            "-21/128"
+          ],
+          "status": "retained_uncertain_support",
+          "lower": "0",
+          "upper": "[0.11709966304863832138048453693333 +/- 3.75e-33]",
+          "origin_in_first_jet_box": false,
+          "jet_enclosures": [
+            "[0.028213500976562500000000000000000 +/- 2.01]",
+            "[-0.33593750000000000000000000000000 +/- 7.82e-3]",
+            "2.0000000000000000000000000000000",
+            "0"
+          ],
+          "L1_enclosure": "4.0000000000000000000000000000000"
+        },
+        {
+          "x": [
+            "-21/128",
+            "-5/32"
+          ],
+          "status": "retained_uncertain_support",
+          "lower": "0",
+          "upper": "[0.11709966304863832138048453693333 +/- 3.75e-33]",
+          "origin_in_first_jet_box": false,
+          "jet_enclosures": [
+            "[0.025650024414062500000000000000000 +/- 2.01]",
+            "[-0.32031250000000000000000000000000 +/- 7.82e-3]",
+            "2.0000000000000000000000000000000",
+            "0"
+          ],
+          "L1_enclosure": "4.0000000000000000000000000000000"
+        },
+        {
+          "x": [
+            "-5/32",
+            "-19/128"
+          ],
+          "status": "retained_uncertain_support",
+          "lower": "0",
+          "upper": "[0.11709966304863832138048453693333 +/- 3.75e-33]",
+          "origin_in_first_jet_box": false,
+          "jet_enclosures": [
+            "[0.023208618164062500000000000000000 +/- 2.01]",
+            "[-0.30468750000000000000000000000000 +/- 7.82e-3]",
+            "2.0000000000000000000000000000000",
+            "0"
+          ],
+          "L1_enclosure": "4.0000000000000000000000000000000"
+        },
+        {
+          "x": [
+            "-19/128",
+            "-9/64"
+          ],
+          "status": "retained_uncertain_support",
+          "lower": "0",
+          "upper": "[0.11709966304863832138048453693333 +/- 3.75e-33]",
+          "origin_in_first_jet_box": false,
+          "jet_enclosures": [
+            "[0.020889282226562500000000000000000 +/- 2.01]",
+            "[-0.28906250000000000000000000000000 +/- 7.82e-3]",
+            "2.0000000000000000000000000000000",
+            "0"
+          ],
+          "L1_enclosure": "4.0000000000000000000000000000000"
+        },
+        {
+          "x": [
+            "-9/64",
+            "-17/128"
+          ],
+          "status": "retained_uncertain_support",
+          "lower": "0",
+          "upper": "[0.11709966304863832138048453693333 +/- 3.75e-33]",
+          "origin_in_first_jet_box": false,
+          "jet_enclosures": [
+            "[0.018692016601562500000000000000000 +/- 2.01]",
+            "[-0.27343750000000000000000000000000 +/- 7.82e-3]",
+            "2.0000000000000000000000000000000",
+            "0"
+          ],
+          "L1_enclosure": "4.0000000000000000000000000000000"
+        },
+        {
+          "x": [
+            "-17/128",
+            "-1/8"
+          ],
+          "status": "retained_uncertain_support",
+          "lower": "0",
+          "upper": "[0.11709966304863832138048453693333 +/- 3.75e-33]",
+          "origin_in_first_jet_box": false,
+          "jet_enclosures": [
+            "[0.016616821289062500000000000000000 +/- 2.01]",
+            "[-0.25781250000000000000000000000000 +/- 7.82e-3]",
+            "2.0000000000000000000000000000000",
+            "0"
+          ],
+          "L1_enclosure": "4.0000000000000000000000000000000"
+        },
+        {
+          "x": [
+            "-1/8",
+            "-15/128"
+          ],
+          "status": "retained_uncertain_support",
+          "lower": "0",
+          "upper": "[0.11709966304863832138048453693333 +/- 3.75e-33]",
+          "origin_in_first_jet_box": false,
+          "jet_enclosures": [
+            "[0.014663696289062500000000000000000 +/- 2.01]",
+            "[-0.24218750000000000000000000000000 +/- 7.82e-3]",
+            "2.0000000000000000000000000000000",
+            "0"
+          ],
+          "L1_enclosure": "4.0000000000000000000000000000000"
+        },
+        {
+          "x": [
+            "-15/128",
+            "-7/64"
+          ],
+          "status": "retained_uncertain_support",
+          "lower": "0",
+          "upper": "[0.11709966304863832138048453693333 +/- 3.75e-33]",
+          "origin_in_first_jet_box": false,
+          "jet_enclosures": [
+            "[0.012832641601562500000000000000000 +/- 2.01]",
+            "[-0.22656250000000000000000000000000 +/- 7.82e-3]",
+            "2.0000000000000000000000000000000",
+            "0"
+          ],
+          "L1_enclosure": "4.0000000000000000000000000000000"
+        },
+        {
+          "x": [
+            "-7/64",
+            "-13/128"
+          ],
+          "status": "retained_uncertain_support",
+          "lower": "0",
+          "upper": "[0.11709966304863832138048453693333 +/- 3.75e-33]",
+          "origin_in_first_jet_box": false,
+          "jet_enclosures": [
+            "[0.011123657226562500000000000000000 +/- 2.01]",
+            "[-0.21093750000000000000000000000000 +/- 7.82e-3]",
+            "2.0000000000000000000000000000000",
+            "0"
+          ],
+          "L1_enclosure": "4.0000000000000000000000000000000"
+        },
+        {
+          "x": [
+            "-13/128",
+            "-3/32"
+          ],
+          "status": "retained_uncertain_support",
+          "lower": "0",
+          "upper": "[0.11709966304863832138048453693333 +/- 3.75e-33]",
+          "origin_in_first_jet_box": false,
+          "jet_enclosures": [
+            "[0.0095367431640625000000000000000000 +/- 2.01]",
+            "[-0.19531250000000000000000000000000 +/- 7.82e-3]",
+            "2.0000000000000000000000000000000",
+            "0"
+          ],
+          "L1_enclosure": "4.0000000000000000000000000000000"
+        },
+        {
+          "x": [
+            "-3/32",
+            "-11/128"
+          ],
+          "status": "retained_uncertain_support",
+          "lower": "0",
+          "upper": "[0.11709966304863832138048453693333 +/- 3.75e-33]",
+          "origin_in_first_jet_box": false,
+          "jet_enclosures": [
+            "[0.0080718994140625000000000000000000 +/- 2.01]",
+            "[-0.17968750000000000000000000000000 +/- 7.82e-3]",
+            "2.0000000000000000000000000000000",
+            "0"
+          ],
+          "L1_enclosure": "4.0000000000000000000000000000000"
+        },
+        {
+          "x": [
+            "-11/128",
+            "-5/64"
+          ],
+          "status": "retained_uncertain_support",
+          "lower": "0",
+          "upper": "[0.11709966304863832138048453693333 +/- 3.75e-33]",
+          "origin_in_first_jet_box": false,
+          "jet_enclosures": [
+            "[0.0067291259765625000000000000000000 +/- 2.01]",
+            "[-0.16406250000000000000000000000000 +/- 7.82e-3]",
+            "2.0000000000000000000000000000000",
+            "0"
+          ],
+          "L1_enclosure": "4.0000000000000000000000000000000"
+        },
+        {
+          "x": [
+            "-5/64",
+            "-9/128"
+          ],
+          "status": "retained_uncertain_support",
+          "lower": "0",
+          "upper": "[0.11709966304863832138048453693333 +/- 3.75e-33]",
+          "origin_in_first_jet_box": false,
+          "jet_enclosures": [
+            "[0.0055084228515625000000000000000000 +/- 2.01]",
+            "[-0.14843750000000000000000000000000 +/- 7.82e-3]",
+            "2.0000000000000000000000000000000",
+            "0"
+          ],
+          "L1_enclosure": "4.0000000000000000000000000000000"
+        },
+        {
+          "x": [
+            "-9/128",
+            "-1/16"
+          ],
+          "status": "retained_uncertain_support",
+          "lower": "0",
+          "upper": "[0.11709966304863832138048453693333 +/- 3.75e-33]",
+          "origin_in_first_jet_box": false,
+          "jet_enclosures": [
+            "[0.0044097900390625000000000000000000 +/- 2.01]",
+            "[-0.13281250000000000000000000000000 +/- 7.82e-3]",
+            "2.0000000000000000000000000000000",
+            "0"
+          ],
+          "L1_enclosure": "4.0000000000000000000000000000000"
+        },
+        {
+          "x": [
+            "-1/16",
+            "-7/128"
+          ],
+          "status": "retained_uncertain_support",
+          "lower": "0",
+          "upper": "[0.11709966304863832138048453693333 +/- 3.75e-33]",
+          "origin_in_first_jet_box": false,
+          "jet_enclosures": [
+            "[0.0034332275390625000000000000000000 +/- 2.01]",
+            "[-0.11718750000000000000000000000000 +/- 7.82e-3]",
+            "2.0000000000000000000000000000000",
+            "0"
+          ],
+          "L1_enclosure": "4.0000000000000000000000000000000"
+        },
+        {
+          "x": [
+            "-7/128",
+            "-3/64"
+          ],
+          "status": "retained_uncertain_support",
+          "lower": "0",
+          "upper": "[0.11709966304863832138048453693333 +/- 3.75e-33]",
+          "origin_in_first_jet_box": false,
+          "jet_enclosures": [
+            "[0.0025787353515625000000000000000000 +/- 2.01]",
+            "[-0.10156250000000000000000000000000 +/- 7.82e-3]",
+            "2.0000000000000000000000000000000",
+            "0"
+          ],
+          "L1_enclosure": "4.0000000000000000000000000000000"
+        },
+        {
+          "x": [
+            "-3/64",
+            "-5/128"
+          ],
+          "status": "retained_uncertain_support",
+          "lower": "0",
+          "upper": "[0.11709966304863832138048453693333 +/- 3.75e-33]",
+          "origin_in_first_jet_box": false,
+          "jet_enclosures": [
+            "[0.0018463134765625000000000000000000 +/- 2.01]",
+            "[-0.085937500000000000000000000000000 +/- 7.82e-3]",
+            "2.0000000000000000000000000000000",
+            "0"
+          ],
+          "L1_enclosure": "4.0000000000000000000000000000000"
+        },
+        {
+          "x": [
+            "-5/128",
+            "-1/32"
+          ],
+          "status": "retained_uncertain_support",
+          "lower": "0",
+          "upper": "[0.11709966304863832138048453693333 +/- 3.75e-33]",
+          "origin_in_first_jet_box": false,
+          "jet_enclosures": [
+            "[0.0012359619140625000000000000000000 +/- 2.01]",
+            "[-0.070312500000000000000000000000000 +/- 7.82e-3]",
+            "2.0000000000000000000000000000000",
+            "0"
+          ],
+          "L1_enclosure": "4.0000000000000000000000000000000"
+        },
+        {
+          "x": [
+            "-1/32",
+            "-3/128"
+          ],
+          "status": "retained_uncertain_support",
+          "lower": "0",
+          "upper": "[0.11709966304863832138048453693333 +/- 3.75e-33]",
+          "origin_in_first_jet_box": false,
+          "jet_enclosures": [
+            "[0.00074768066406250000000000000000000 +/- 2.01]",
+            "[-0.054687500000000000000000000000000 +/- 7.82e-3]",
+            "2.0000000000000000000000000000000",
+            "0"
+          ],
+          "L1_enclosure": "4.0000000000000000000000000000000"
+        },
+        {
+          "x": [
+            "-3/128",
+            "-1/64"
+          ],
+          "status": "retained_uncertain_support",
+          "lower": "0",
+          "upper": "[0.11709966304863832138048453693333 +/- 3.75e-33]",
+          "origin_in_first_jet_box": false,
+          "jet_enclosures": [
+            "[0.00038146972656250000000000000000000 +/- 2.01]",
+            "[-0.039062500000000000000000000000000 +/- 7.82e-3]",
+            "2.0000000000000000000000000000000",
+            "0"
+          ],
+          "L1_enclosure": "4.0000000000000000000000000000000"
+        },
+        {
+          "x": [
+            "-1/64",
+            "-1/128"
+          ],
+          "status": "retained_uncertain_support",
+          "lower": "0",
+          "upper": "[0.11709966304863832138048453693333 +/- 3.75e-33]",
+          "origin_in_first_jet_box": false,
+          "jet_enclosures": [
+            "[0.00013732910156250000000000000000000 +/- 2.01]",
+            "[-0.023437500000000000000000000000000 +/- 7.82e-3]",
+            "2.0000000000000000000000000000000",
+            "0"
+          ],
+          "L1_enclosure": "4.0000000000000000000000000000000"
+        },
+        {
+          "x": [
+            "-1/128",
+            "0"
+          ],
+          "status": "retained_uncertain_support",
+          "lower": "0",
+          "upper": "[0.11709966304863832138048453693333 +/- 3.75e-33]",
+          "origin_in_first_jet_box": true,
+          "jet_enclosures": [
+            "[1.5258789062500000000000000000000e-5 +/- 2.01]",
+            "[-0.0078125000000000000000000000000000 +/- 7.82e-3]",
+            "2.0000000000000000000000000000000",
+            "0"
+          ],
+          "L1_enclosure": "4.0000000000000000000000000000000"
+        },
+        {
+          "x": [
+            "0",
+            "1/128"
+          ],
+          "status": "retained_uncertain_support",
+          "lower": "0",
+          "upper": "[0.11709966304863832138048453693333 +/- 3.75e-33]",
+          "origin_in_first_jet_box": true,
+          "jet_enclosures": [
+            "[1.5258789062500000000000000000000e-5 +/- 2.01]",
+            "[0.0078125000000000000000000000000000 +/- 7.82e-3]",
+            "2.0000000000000000000000000000000",
+            "0"
+          ],
+          "L1_enclosure": "4.0000000000000000000000000000000"
+        },
+        {
+          "x": [
+            "1/128",
+            "1/64"
+          ],
+          "status": "retained_uncertain_support",
+          "lower": "0",
+          "upper": "[0.11709966304863832138048453693333 +/- 3.75e-33]",
+          "origin_in_first_jet_box": false,
+          "jet_enclosures": [
+            "[0.00013732910156250000000000000000000 +/- 2.01]",
+            "[0.023437500000000000000000000000000 +/- 7.82e-3]",
+            "2.0000000000000000000000000000000",
+            "0"
+          ],
+          "L1_enclosure": "4.0000000000000000000000000000000"
+        },
+        {
+          "x": [
+            "1/64",
+            "3/128"
+          ],
+          "status": "retained_uncertain_support",
+          "lower": "0",
+          "upper": "[0.11709966304863832138048453693333 +/- 3.75e-33]",
+          "origin_in_first_jet_box": false,
+          "jet_enclosures": [
+            "[0.00038146972656250000000000000000000 +/- 2.01]",
+            "[0.039062500000000000000000000000000 +/- 7.82e-3]",
+            "2.0000000000000000000000000000000",
+            "0"
+          ],
+          "L1_enclosure": "4.0000000000000000000000000000000"
+        },
+        {
+          "x": [
+            "3/128",
+            "1/32"
+          ],
+          "status": "retained_uncertain_support",
+          "lower": "0",
+          "upper": "[0.11709966304863832138048453693333 +/- 3.75e-33]",
+          "origin_in_first_jet_box": false,
+          "jet_enclosures": [
+            "[0.00074768066406250000000000000000000 +/- 2.01]",
+            "[0.054687500000000000000000000000000 +/- 7.82e-3]",
+            "2.0000000000000000000000000000000",
+            "0"
+          ],
+          "L1_enclosure": "4.0000000000000000000000000000000"
+        },
+        {
+          "x": [
+            "1/32",
+            "5/128"
+          ],
+          "status": "retained_uncertain_support",
+          "lower": "0",
+          "upper": "[0.11709966304863832138048453693333 +/- 3.75e-33]",
+          "origin_in_first_jet_box": false,
+          "jet_enclosures": [
+            "[0.0012359619140625000000000000000000 +/- 2.01]",
+            "[0.070312500000000000000000000000000 +/- 7.82e-3]",
+            "2.0000000000000000000000000000000",
+            "0"
+          ],
+          "L1_enclosure": "4.0000000000000000000000000000000"
+        },
+        {
+          "x": [
+            "5/128",
+            "3/64"
+          ],
+          "status": "retained_uncertain_support",
+          "lower": "0",
+          "upper": "[0.11709966304863832138048453693333 +/- 3.75e-33]",
+          "origin_in_first_jet_box": false,
+          "jet_enclosures": [
+            "[0.0018463134765625000000000000000000 +/- 2.01]",
+            "[0.085937500000000000000000000000000 +/- 7.82e-3]",
+            "2.0000000000000000000000000000000",
+            "0"
+          ],
+          "L1_enclosure": "4.0000000000000000000000000000000"
+        },
+        {
+          "x": [
+            "3/64",
+            "1/16"
+          ],
+          "status": "retained_uncertain_support",
+          "lower": "0",
+          "upper": "[0.23419932609727664276096907386667 +/- 2.52e-33]",
+          "origin_in_first_jet_box": false,
+          "jet_enclosures": [
+            "[0.0029907226562500000000000000000000 +/- 2.01]",
+            "[0.10937500000000000000000000000000 +/- 0.0157]",
+            "2.0000000000000000000000000000000",
+            "0"
+          ],
+          "L1_enclosure": "4.0000000000000000000000000000000"
+        },
+        {
+          "x": [
+            "1/16",
+            "5/64"
+          ],
+          "status": "retained_uncertain_support",
+          "lower": "0",
+          "upper": "[0.23419932609727664276096907386667 +/- 2.52e-33]",
+          "origin_in_first_jet_box": false,
+          "jet_enclosures": [
+            "[0.0049438476562500000000000000000000 +/- 2.01]",
+            "[0.14062500000000000000000000000000 +/- 0.0157]",
+            "2.0000000000000000000000000000000",
+            "0"
+          ],
+          "L1_enclosure": "4.0000000000000000000000000000000"
+        },
+        {
+          "x": [
+            "5/64",
+            "3/32"
+          ],
+          "status": "retained_uncertain_support",
+          "lower": "0",
+          "upper": "[0.23419932609727664276096907386667 +/- 2.52e-33]",
+          "origin_in_first_jet_box": false,
+          "jet_enclosures": [
+            "[0.0073852539062500000000000000000000 +/- 2.01]",
+            "[0.17187500000000000000000000000000 +/- 0.0157]",
+            "2.0000000000000000000000000000000",
+            "0"
+          ],
+          "L1_enclosure": "4.0000000000000000000000000000000"
+        },
+        {
+          "x": [
+            "3/32",
+            "7/64"
+          ],
+          "status": "retained_uncertain_support",
+          "lower": "0",
+          "upper": "[0.23419932609727664276096907386667 +/- 2.52e-33]",
+          "origin_in_first_jet_box": false,
+          "jet_enclosures": [
+            "[0.010314941406250000000000000000000 +/- 2.01]",
+            "[0.20312500000000000000000000000000 +/- 0.0157]",
+            "2.0000000000000000000000000000000",
+            "0"
+          ],
+          "L1_enclosure": "4.0000000000000000000000000000000"
+        },
+        {
+          "x": [
+            "7/64",
+            "1/8"
+          ],
+          "status": "retained_uncertain_support",
+          "lower": "0",
+          "upper": "[0.23419932609727664276096907386667 +/- 2.52e-33]",
+          "origin_in_first_jet_box": false,
+          "jet_enclosures": [
+            "[0.013732910156250000000000000000000 +/- 2.01]",
+            "[0.23437500000000000000000000000000 +/- 0.0157]",
+            "2.0000000000000000000000000000000",
+            "0"
+          ],
+          "L1_enclosure": "4.0000000000000000000000000000000"
+        },
+        {
+          "x": [
+            "1/8",
+            "9/64"
+          ],
+          "status": "retained_uncertain_support",
+          "lower": "0",
+          "upper": "[0.23419932609727664276096907386667 +/- 2.52e-33]",
+          "origin_in_first_jet_box": false,
+          "jet_enclosures": [
+            "[0.017639160156250000000000000000000 +/- 2.01]",
+            "[0.26562500000000000000000000000000 +/- 0.0157]",
+            "2.0000000000000000000000000000000",
+            "0"
+          ],
+          "L1_enclosure": "4.0000000000000000000000000000000"
+        },
+        {
+          "x": [
+            "9/64",
+            "5/32"
+          ],
+          "status": "retained_uncertain_support",
+          "lower": "0",
+          "upper": "[0.23419932609727664276096907386667 +/- 2.52e-33]",
+          "origin_in_first_jet_box": false,
+          "jet_enclosures": [
+            "[0.022033691406250000000000000000000 +/- 2.01]",
+            "[0.29687500000000000000000000000000 +/- 0.0157]",
+            "2.0000000000000000000000000000000",
+            "0"
+          ],
+          "L1_enclosure": "4.0000000000000000000000000000000"
+        },
+        {
+          "x": [
+            "5/32",
+            "11/64"
+          ],
+          "status": "retained_uncertain_support",
+          "lower": "0",
+          "upper": "[0.23419932609727664276096907386667 +/- 2.52e-33]",
+          "origin_in_first_jet_box": false,
+          "jet_enclosures": [
+            "[0.026916503906250000000000000000000 +/- 2.01]",
+            "[0.32812500000000000000000000000000 +/- 0.0157]",
+            "2.0000000000000000000000000000000",
+            "0"
+          ],
+          "L1_enclosure": "4.0000000000000000000000000000000"
+        },
+        {
+          "x": [
+            "11/64",
+            "3/16"
+          ],
+          "status": "retained_uncertain_support",
+          "lower": "0",
+          "upper": "[0.23419932609727664276096907386667 +/- 2.52e-33]",
+          "origin_in_first_jet_box": false,
+          "jet_enclosures": [
+            "[0.032287597656250000000000000000000 +/- 2.01]",
+            "[0.35937500000000000000000000000000 +/- 0.0157]",
+            "2.0000000000000000000000000000000",
+            "0"
+          ],
+          "L1_enclosure": "4.0000000000000000000000000000000"
+        },
+        {
+          "x": [
+            "3/16",
+            "13/64"
+          ],
+          "status": "retained_uncertain_support",
+          "lower": "0",
+          "upper": "[0.23419932609727664276096907386667 +/- 2.52e-33]",
+          "origin_in_first_jet_box": false,
+          "jet_enclosures": [
+            "[0.038146972656250000000000000000000 +/- 2.01]",
+            "[0.39062500000000000000000000000000 +/- 0.0157]",
+            "2.0000000000000000000000000000000",
+            "0"
+          ],
+          "L1_enclosure": "4.0000000000000000000000000000000"
+        },
+        {
+          "x": [
+            "13/64",
+            "7/32"
+          ],
+          "status": "retained_uncertain_support",
+          "lower": "0",
+          "upper": "[0.23419932609727664276096907386667 +/- 2.52e-33]",
+          "origin_in_first_jet_box": false,
+          "jet_enclosures": [
+            "[0.044494628906250000000000000000000 +/- 2.01]",
+            "[0.42187500000000000000000000000000 +/- 0.0157]",
+            "2.0000000000000000000000000000000",
+            "0"
+          ],
+          "L1_enclosure": "4.0000000000000000000000000000000"
+        },
+        {
+          "x": [
+            "7/32",
+            "15/64"
+          ],
+          "status": "retained_uncertain_support",
+          "lower": "0",
+          "upper": "[0.23419932609727664276096907386667 +/- 2.52e-33]",
+          "origin_in_first_jet_box": false,
+          "jet_enclosures": [
+            "[0.051330566406250000000000000000000 +/- 2.01]",
+            "[0.45312500000000000000000000000000 +/- 0.0157]",
+            "2.0000000000000000000000000000000",
+            "0"
+          ],
+          "L1_enclosure": "4.0000000000000000000000000000000"
+        },
+        {
+          "x": [
+            "15/64",
+            "1/4"
+          ],
+          "status": "retained_uncertain_support",
+          "lower": "0",
+          "upper": "[0.23419932609727664276096907386667 +/- 2.52e-33]",
+          "origin_in_first_jet_box": false,
+          "jet_enclosures": [
+            "[0.058654785156250000000000000000000 +/- 2.01]",
+            "[0.48437500000000000000000000000000 +/- 0.0157]",
+            "2.0000000000000000000000000000000",
+            "0"
+          ],
+          "L1_enclosure": "4.0000000000000000000000000000000"
+        },
+        {
+          "x": [
+            "1/4",
+            "17/64"
+          ],
+          "status": "retained_uncertain_support",
+          "lower": "0",
+          "upper": "[0.23419932609727664276096907386667 +/- 2.52e-33]",
+          "origin_in_first_jet_box": false,
+          "jet_enclosures": [
+            "[0.066467285156250000000000000000000 +/- 2.01]",
+            "[0.51562500000000000000000000000000 +/- 0.0157]",
+            "2.0000000000000000000000000000000",
+            "0"
+          ],
+          "L1_enclosure": "4.0000000000000000000000000000000"
+        }
+      ],
+      "timing_seconds": 0.002855458064004779
+    },
+    "source_error_stress": {
+      "name": "inflated_source_error",
+      "support_radius": "1/10000000",
+      "target_upper": "3/4",
+      "maximum_range_calls": 31,
+      "range_calls": 31,
+      "component_ranges": 124,
+      "status": "maximum_range_limit_inconclusive",
+      "integral_enclosure": [
+        "[-2076112499810.9316068785078116247 +/- 2.64e-20]",
+        "[2076112683315.1544276623326488722 +/- 2.52e-20]"
+      ],
+      "accepted_partition_cells": 16,
+      "support_rejected_cells": 0,
+      "retained_uncertain_support_cells": 16,
+      "origin_containing_first_jet_boxes_after_stopping": 16,
+      "retained_positive_upper_mass": "[2076112683315.1544276623326488722 +/- 2.52e-20]",
+      "first_below_one": null,
+      "previous_nonzero_budget": {
+        "range_calls": 31,
+        "upper": "[2076112683315.1544276623326488722 +/- 2.52e-20]",
+        "uncertain_cells": 16
+      },
+      "interior_nonvanishing_consulted_as_stopping_premise": false,
+      "partition_sha256": "f2b7a7225aa09898e2c708253992b53f5d91a59adc5d2813b77af7d694818a0b",
+      "retained_cell_records": [
+        {
+          "x": [
+            "25",
+            "105/4"
+          ],
+          "status": "retained_uncertain_support",
+          "lower": "[-130218165245.02191355797495704176 +/- 2.10e-21]",
+          "upper": "[130218253911.83708714591871255616 +/- 3.55e-21]",
+          "origin_in_first_jet_box": true,
+          "jet_enclosures": [
+            "[0.00045350326729129987216043840414193 +/- 0.0766]",
+            "[-0.00028844121571199240604165757990222 +/- 0.0765]",
+            "[0.00010886784379922460349189611969773 +/- 0.0764]",
+            "[-2.7274158498366725594495370393994e-5 +/- 0.0764]"
+          ],
+          "L1_enclosure": "[3.98521597870189937008447447830e-9 +/- 0.0118]"
+        },
+        {
+          "x": [
+            "105/4",
+            "55/2"
+          ],
+          "status": "retained_uncertain_support",
+          "lower": "[-130033872875.71234599701400724321 +/- 4.35e-21]",
+          "upper": "[130033919852.38832367531017253830 +/- 3.88e-21]",
+          "origin_in_first_jet_box": true,
+          "jet_enclosures": [
+            "[0.00016948963806102078374698593412617 +/- 0.0765]",
+            "[-0.00017249536740425917879813973481203 +/- 0.0764]",
+            "[7.7605742549446192070027572150284e-5 +/- 0.0764]",
+            "[-2.2674458366239720773215925787739e-5 +/- 0.0764]"
+          ],
+          "L1_enclosure": "[2.11141225007382418764704582744e-9 +/- 0.0117]"
+        },
+        {
+          "x": [
+            "55/2",
+            "115/4"
+          ],
+          "status": "retained_uncertain_support",
+          "lower": "[-129894997058.86382043835254995597 +/- 1.69e-21]",
+          "upper": "[129895021157.14918467329549075640 +/- 4.04e-21]",
+          "origin_in_first_jet_box": true,
+          "jet_enclosures": [
+            "[7.5079783462827612616008765963707e-6 +/- 0.0765]",
+            "[-9.1957607293686200111319248309579e-5 +/- 0.0764]",
+            "[5.2249036214246532611131502316729e-5 +/- 0.0764]",
+            "[-1.7908697633174764786915104755509e-5 +/- 0.0764]"
+          ],
+          "L1_enclosure": "[1.08312080122479309702769315609e-9 +/- 0.0117]"
+        },
+        {
+          "x": [
+            "115/4",
+            "30"
+          ],
+          "status": "retained_uncertain_support",
+          "lower": "[-129794959807.55207600763013560668 +/- 1.16e-21]",
+          "upper": "[129794971866.94091784639760240259 +/- 9.86e-22]",
+          "origin_in_first_jet_box": true,
+          "jet_enclosures": [
+            "[-7.2072548461430537676180970547279e-5 +/- 0.0764]",
+            "[-3.9437447794657903104392828558081e-5 +/- 0.0764]",
+            "[3.2722166985089234973058426934433e-5 +/- 0.0764]",
+            "[-1.3406529011646837819295604499387e-5 +/- 0.0764]"
+          ],
+          "L1_enclosure": "[5.4202092419567513208409742498e-10 +/- 0.0117]"
+        },
+        {
+          "x": [
+            "30",
+            "125/4"
+          ],
+          "status": "retained_uncertain_support",
+          "lower": "[-129726594782.50476293585846649097 +/- 2.43e-21]",
+          "upper": "[129726600728.14805390449079630600 +/- 4.11e-21]",
+          "origin_in_first_jet_box": true,
+          "jet_enclosures": [
+            "[-9.9832063070848712820030409505454e-5 +/- 0.0764]",
+            "[-7.9376730837480287151479791739104e-6 +/- 0.0764]",
+            "[1.8501070541474035318487748542797e-5 +/- 0.0764]",
+            "[-9.4557822956278248429425659801879e-6 +/- 0.0764]"
+          ],
+          "L1_enclosure": "[2.6723270256681222389077778466e-10 +/- 0.0117]"
+        },
+        {
+          "x": [
+            "125/4",
+            "65/2"
+          ],
+          "status": "retained_uncertain_support",
+          "lower": "[-129697604144.29356933727829802757 +/- 4.72e-21]",
+          "upper": "[129697607063.66186093968544617342 +/- 5.52e-22]",
+          "origin_in_first_jet_box": true,
+          "jet_enclosures": [
+            "[-9.8096015748335380130790397435017e-5 +/- 0.0764]",
+            "[8.6948778232675269869076060365065e-6 +/- 0.0764]",
+            "[8.7872973316423408413667755861866e-6 +/- 0.0764]",
+            "[-6.2102360916446137851107199158603e-6 +/- 0.0764]"
+          ],
+          "L1_enclosure": "[1.3121383846518495723042356202e-10 +/- 0.0117]"
+        },
+        {
+          "x": [
+            "65/2",
+            "135/4"
+          ],
+          "status": "retained_uncertain_support",
+          "lower": "[-129683597207.40739335587856332083 +/- 1.44e-22]",
+          "upper": "[129683598647.08893243221481713761 +/- 5.01e-22]",
+          "origin_in_first_jet_box": true,
+          "jet_enclosures": [
+            "[-8.2162440679316466520592496567483e-5 +/- 0.0764]",
+            "[1.5526241010547353266156452509233e-5 +/- 0.0764]",
+            "[2.6634480835590262630765496622890e-6 +/- 0.0764]",
+            "[-3.7107453726889004955682751381684e-6 +/- 0.0764]"
+          ],
+          "L1_enclosure": "[6.470788267895547919250597914e-11 +/- 0.0117]"
+        },
+        {
+          "x": [
+            "135/4",
+            "35"
+          ],
+          "status": "retained_uncertain_support",
+          "lower": "[-129676252483.56206446482819181007 +/- 2.57e-21]",
+          "upper": "[129676253198.36405505984770322030 +/- 2.38e-21]",
+          "origin_in_first_jet_box": true,
+          "jet_enclosures": [
+            "[-6.1719233540470306711752957394305e-5 +/- 0.0764]",
+            "[1.6467749401673737646153467450230e-5 +/- 0.0764]",
+            "[-7.830008240591291922215509959045e-7 +/- 0.0764]",
+            "[-1.9137028063247505352036417884596e-6 +/- 0.0764]"
+          ],
+          "L1_enclosure": "[3.212746853431303865021207780e-11 +/- 0.0117]"
+        },
+        {
+          "x": [
+            "35",
+            "145/4"
+          ],
+          "status": "retained_uncertain_support",
+          "lower": "[-129675357615.92408663025449520727 +/- 6.94e-22]",
+          "upper": "[129675357971.36115240535443760037 +/- 3.30e-21]",
+          "origin_in_first_jet_box": true,
+          "jet_enclosures": [
+            "[-4.2258700116390385166294006052719e-5 +/- 0.0764]",
+            "[1.4340198257076897066431238839917e-5 +/- 0.0764]",
+            "[-2.3731069870000746732755845068092e-6 +/- 0.0764]",
+            "[-7.213168600166457404497103352588e-7 +/- 0.0764]"
+          ],
+          "L1_enclosure": "[1.597546355055945597303014670e-11 +/- 0.0117]"
+        },
+        {
+          "x": [
+            "145/4",
+            "75/2"
+          ],
+          "status": "retained_uncertain_support",
+          "lower": "[-129673575058.06120335593578103707 +/- 3.79e-21]",
+          "upper": "[129673575233.11526810043542560008 +/- 4.34e-22]",
+          "origin_in_first_jet_box": true,
+          "jet_enclosures": [
+            "[-2.6353990618539415471643820974225e-5 +/- 0.0764]",
+            "[1.1023011756375741224105440219421e-5 +/- 0.0764]",
+            "[-2.7865201633787446777981327107202e-6 +/- 0.0764]",
+            "[-9.3694946995386631243159570555e-9 +/- 0.0764]"
+          ],
+          "L1_enclosure": "[7.86797467114062080857383059e-12 +/- 0.0117]"
+        },
+        {
+          "x": [
+            "75/2",
+            "155/4"
+          ],
+          "status": "retained_uncertain_support",
+          "lower": "[-129671886347.12987467203155868768 +/- 1.73e-21]",
+          "upper": "[129671886431.42339814770616089801 +/- 7.12e-22]",
+          "origin_in_first_jet_box": true,
+          "jet_enclosures": [
+            "[-1.4718711239677359318373403537116e-5 +/- 0.0764]",
+            "[7.6454073509605254823732903479320e-6 +/- 0.0764]",
+            "[-2.5431083007210224411457050503230e-6 +/- 0.0764]",
+            "[3.503731800286009700645435631966e-7 +/- 0.0764]"
+          ],
+          "L1_enclosure": "[3.78865414302608487514145442e-12 +/- 0.0117]"
+        },
+        {
+          "x": [
+            "155/4",
+            "40"
+          ],
+          "status": "retained_uncertain_support",
+          "lower": "[-129670393005.29334587631788162364 +/- 1.74e-21]",
+          "upper": "[129670393044.54548988217137956005 +/- 6.01e-22]",
+          "origin_in_first_jet_box": true,
+          "jet_enclosures": [
+            "[-7.0199959584197028973600728933507e-6 +/- 0.0764]",
+            "[4.7847091490496408810532601144029e-6 +/- 0.0764]",
+            "[-2.0085033836856922504523598318797e-6 +/- 0.0764]",
+            "[4.743987775682956298540074108176e-7 +/- 0.0764]"
+          ],
+          "L1_enclosure": "[1.76422567094788545314280330e-12 +/- 0.0117]"
+        },
+        {
+          "x": [
+            "40",
+            "165/4"
+          ],
+          "status": "retained_uncertain_support",
+          "lower": "[-129670068927.74382841962713427850 +/- 1.22e-21]",
+          "upper": "[129670068945.30516419559714980808 +/- 4.97e-21]",
+          "origin_in_first_jet_box": true,
+          "jet_enclosures": [
+            "[-2.4525970928321458635070682472311e-6 +/- 0.0764]",
+            "[2.6471798435859639728575111301684e-6 +/- 0.0764]",
+            "[-1.4151370588536377396354343987556e-6 +/- 0.0764]",
+            "[4.583374395514441296595573062197e-7 +/- 0.0764]"
+          ],
+          "L1_enclosure": "[7.8931126379954107509525253e-13 +/- 0.0117]"
+        },
+        {
+          "x": [
+            "165/4",
+            "85/2"
+          ],
+          "status": "retained_uncertain_support",
+          "lower": "[-129671285963.99676195591106678826 +/- 2.80e-23]",
+          "upper": "[129671285971.54276050500057884480 +/- 1.70e-21]",
+          "origin_in_first_jet_box": true,
+          "jet_enclosures": [
+            "[-1.058400975224383198847510005425e-7 +/- 0.0764]",
+            "[1.2170112866139740717413963906264e-6 +/- 0.0764]",
+            "[-8.909572292286726985874634007887e-7 +/- 0.0764]",
+            "[3.735730046049289427566856914219e-7 +/- 0.0764]"
+          ],
+          "L1_enclosure": "[3.3916222133634099552227832e-13 +/- 0.0117]"
+        },
+        {
+          "x": [
+            "85/2",
+            "175/4"
+          ],
+          "status": "retained_uncertain_support",
+          "lower": "[-129674289692.55890035976127488140 +/- 1.38e-21]",
+          "upper": "[129674289695.69567680808426187894 +/- 4.65e-21]",
+          "origin_in_first_jet_box": true,
+          "jet_enclosures": [
+            "[8.325081834357485936781794107450e-7 +/- 0.0764]",
+            "[3.679876761539405447238347520150e-7 +/- 0.0764]",
+            "[-4.895442550151494683891149398422e-7 +/- 0.0764]",
+            "[2.681288672032576226651376915800e-7 +/- 0.0764]"
+          ],
+          "L1_enclosure": "[1.4098545886642239936533697e-13 +/- 0.0117]"
+        },
+        {
+          "x": [
+            "175/4",
+            "45"
+          ],
+          "status": "retained_uncertain_support",
+          "lower": "[-129679599595.30565951385344962385 +/- 2.13e-22]",
+          "upper": "[129679599596.58710194082251359112 +/- 1.25e-21]",
+          "origin_in_first_jet_box": true,
+          "jet_enclosures": [
+            "[9.889670540265489964988584127002e-7 +/- 0.0764]",
+            "[-6.10035852113899446024285782484e-8 +/- 0.0764]",
+            "[-2.172799957802849495000148148525e-7 +/- 0.0764]",
+            "[1.702371386122416461322573634727e-7 +/- 0.0764]"
+          ],
+          "L1_enclosure": "[5.759567235775573006160834e-14 +/- 0.0117]"
+        }
+      ],
+      "timing_seconds": 0.059535334003157914
+    },
+    "exact_boundary_event_status": "refused"
+  },
+  "cost_accounting": {
+    "source_calls_by_consumer": {
+      "boundary": {
+        "range_calls": 548,
+        "component_ranges": 1096
+      },
+      "tiny_bulk": {
+        "range_calls": 255,
+        "component_ranges": 1020
+      },
+      "wide_bulk": {
+        "range_calls": 253,
+        "component_ranges": 1012
+      },
+      "direct": {
+        "range_calls": 255,
+        "component_ranges": 510
+      },
+      "inflated_error_control": {
+        "range_calls": 31,
+        "component_ranges": 124
+      }
+    },
+    "shared_midpoint_integrals": 78,
+    "extra_midpoint_integrals_beyond_first_jet": 2,
+    "wide_bulk_four_component_ranges": 1012,
+    "wide_boundary_plus_bulk_range_calls": 801,
+    "direct_two_component_ranges": 510,
+    "assessment": "This certifies an integral upper before complete interior nonvanishing. It is not an acquisition saving: the stronger source setup, four-component bulk ranges and separately paid boundary must be charged."
+  },
+  "timing_seconds": {
+    "source_setup": 0.41656287491787225,
+    "boundary": 0.02240816701669246,
+    "direct": 0.24363266699947417,
+    "total": 1.741021458990872
+  },
+  "assertions_passed": 98,
+  "establishes": [
+    "A complete compact degree-integral upper below one on this finite theta rectangle with positive uncertain-cell upper mass and origin-containing first-jet boxes retained.",
+    "Boundary and complete source payments are supplied; the integer index is therefore zero without using the later direct comparator."
+  ],
+  "does_not_establish": [
+    "Either nonemptiness or emptiness of the wider-radius target pullback support, a signed cancellation benefit or a speed/acquisition advantage.",
+    "New excluded height coverage, a global theta estimate, RH or endpoint simplicity."
+  ]
+}

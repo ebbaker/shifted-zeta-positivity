@@ -33,6 +33,7 @@ exactly two simple zeros and one intervening stationary point.
 
 ## Start here
 
+- [Investigations 4 opening brainstorm](../../../../../investigations-4/brainstorm/01_COMPACT_GEOMETRY_HEAT_TRANSPORT_AND_WEIL_POSITIVITY_20261021.md): the new home for the connected compact-geometry, heat-transport and Weil-positivity ideas; source results and current task statuses remain linked here.
 - [Compact surface sequences and Weil positivity](notes/19_COMPACT_SURFACE_SEQUENCES_AND_WEIL_POSITIVITY_20261021.md): the existing real-surface criterion, fixed-support compact limits, and the seam and cap obligations.
 - [Heat evolution and early-to-late invariants](notes/18_HEAT_EVOLUTION_AND_EARLY_LATE_TOPOLOGICAL_TRANSPORT_20261021.md): changing loop phases, conserved boundary charge, marked monodromy and endpoint degeneration.
 - [Parallel transport and the collision problem](notes/17_PARALLEL_TRANSPORT_CONNECTIONS_AND_COLLISION_CONTROLS_20261021.md): the existing phase, gap and spectral-cycle connections, and the source estimate still needed.

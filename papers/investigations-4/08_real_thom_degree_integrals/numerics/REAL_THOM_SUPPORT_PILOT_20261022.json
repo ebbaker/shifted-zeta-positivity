@@ -1,0 +1,919 @@
+{
+  "date": "2026-10-22",
+  "timezone": "America/New_York",
+  "prepared_for": "Edward Baker",
+  "llm_assistance": "Substantial LLM assistance; Arb/Acb validation and exact-rational polynomial and polygon controls.",
+  "coordinating_model": "gpt-6.1-sol",
+  "coordinating_reasoning_effort": "ultra",
+  "provenance": "Coordinator verified its metadata; delegated configuration not independently recorded.",
+  "checker": "check_real_thom_support_pilot.py",
+  "checker_sha256": "3004e89289eb7a8b1c44e2f24645792af609defb562193d04ecace3446b3986b",
+  "upstream_supplier": {
+    "repository_path": "papers/investigations-2/active/22_theta_manifold_geometry/numerics/check_theta_boundary_winding.py",
+    "sha256": "ad11eea2ead62eb3a009de3ce0308dc5b94f048293cd9daca500795578926634",
+    "optional_original_file_verified": true,
+    "adaptation": "Copied complete-source formulas, remainder and first-jet Horner supplier; unchanged mathematical parameters."
+  },
+  "python_version": "3.12.14",
+  "python_flint_version": "0.9.0",
+  "precision_bits": 160,
+  "declared_contract": {
+    "box_t": [
+      "1/100",
+      "1/5"
+    ],
+    "box_x": [
+      "25",
+      "45"
+    ],
+    "midpoint": [
+      "21/200",
+      "35"
+    ],
+    "support_radius": "1/1000000000",
+    "collar_radius": "3/2000000000",
+    "density": "s=|y|^2/r^2; rho_r=exp(-s/(1-s))/(pi*r^2*(1-s)^2) for s<1, zero otherwise",
+    "target_integral_error": "0 by exact whole-cell support rejection",
+    "preacquisition_disclosure": "Inherited pilot and replay were inspected before this fixed comparison; support-empty outcome was anticipated. No radius tuning."
+  },
+  "source": {
+    "finite_modes": 4,
+    "finite_source_cutoff": 1,
+    "midpoint_jets": 76,
+    "maximum_midpoint_jet_order": 75,
+    "maximum_moment_order": 77,
+    "taylor_degrees": {
+      "x": 50,
+      "t": 12
+    },
+    "absolute_moment_bound": "[0.076337672385010614620066999664980 +/- 3.53e-34]",
+    "omitted_mode_bound_u_0_1": "[3.7282921464475698082981336802390e-33 +/- 3.18e-65]",
+    "all_modes_source_ray_bound_u_ge_1": "[1.0482856265202549507041432706367e-72 +/- 4.11e-104]",
+    "complete_jet_tail": "[3.7282921464475698082981336802390e-33 +/- 3.18e-65]",
+    "uniform_taylor_error_each_component": "[4.9228450793042262035086191209267e-17 +/- 1.71e-49]"
+  },
+  "boundary_winding": {
+    "orientation": "dt wedge dx",
+    "accepted_segments": 234,
+    "range_evaluations": 464,
+    "vertex_evaluations": 234,
+    "total_enclosure_evaluations": 698,
+    "minimum_coordinate_floor": "[1.9066820356218876288201010126168e-9 +/- 2.07e-41]",
+    "winding_exact": 0,
+    "polygon_sha256": "252ebd95c0ba7618d32b2dbbd8459b7db52bc8efcb68ecc0c626a72da7feea65",
+    "optional_whole_wall_checks_performed": 0
+  },
+  "direct_baseline": {
+    "method": "Adaptive x-only strips retaining the full time interval; one strict coordinate sign.",
+    "accepted_strips": 128,
+    "range_evaluations": 255,
+    "minimum_coordinate_floor": "[7.0703012359028667465027928702749e-9 +/- 1.31e-41]",
+    "complete_collision_allowance": [
+      "0",
+      "0"
+    ]
+  },
+  "compact_support": {
+    "method": "Adaptive x-only strips; interval-rectangle norm lower bound strictly exceeds fixed r.",
+    "accepted_strips": 128,
+    "range_evaluations": 255,
+    "minimum_norm_floor": "[7.0703012359028667465027928702749e-9 +/- 1.31e-41]",
+    "exact_signed_integral_enclosure": [
+      "0",
+      "0"
+    ],
+    "active_support_cells": 0,
+    "extra_Hxx_Hxxx_acquisitions": 0,
+    "nonlinear_product_or_signed_quadrature_acquisitions": 0,
+    "standalone_boundary_floor_shared_with_cover": true,
+    "standalone_enclosure_evaluations": 255,
+    "same_first_jet_coordinate_information_already_excludes_zero": true,
+    "strip_intervals": [
+      [
+        "25",
+        "55/2"
+      ],
+      [
+        "55/2",
+        "115/4"
+      ],
+      [
+        "115/4",
+        "30"
+      ],
+      [
+        "30",
+        "35"
+      ],
+      [
+        "35",
+        "75/2"
+      ],
+      [
+        "75/2",
+        "155/4"
+      ],
+      [
+        "155/4",
+        "315/8"
+      ],
+      [
+        "315/8",
+        "40"
+      ],
+      [
+        "40",
+        "325/8"
+      ],
+      [
+        "325/8",
+        "655/16"
+      ],
+      [
+        "655/16",
+        "165/4"
+      ],
+      [
+        "165/4",
+        "1325/32"
+      ],
+      [
+        "1325/32",
+        "665/16"
+      ],
+      [
+        "665/16",
+        "1335/32"
+      ],
+      [
+        "1335/32",
+        "335/8"
+      ],
+      [
+        "335/8",
+        "1345/32"
+      ],
+      [
+        "1345/32",
+        "675/16"
+      ],
+      [
+        "675/16",
+        "2705/64"
+      ],
+      [
+        "2705/64",
+        "1355/32"
+      ],
+      [
+        "1355/32",
+        "2715/64"
+      ],
+      [
+        "2715/64",
+        "85/2"
+      ],
+      [
+        "85/2",
+        "2725/64"
+      ],
+      [
+        "2725/64",
+        "1365/32"
+      ],
+      [
+        "1365/32",
+        "2735/64"
+      ],
+      [
+        "2735/64",
+        "5475/128"
+      ],
+      [
+        "5475/128",
+        "685/16"
+      ],
+      [
+        "685/16",
+        "5485/128"
+      ],
+      [
+        "5485/128",
+        "2745/64"
+      ],
+      [
+        "2745/64",
+        "5495/128"
+      ],
+      [
+        "5495/128",
+        "1375/32"
+      ],
+      [
+        "1375/32",
+        "5505/128"
+      ],
+      [
+        "5505/128",
+        "2755/64"
+      ],
+      [
+        "2755/64",
+        "5515/128"
+      ],
+      [
+        "5515/128",
+        "345/8"
+      ],
+      [
+        "345/8",
+        "5525/128"
+      ],
+      [
+        "5525/128",
+        "2765/64"
+      ],
+      [
+        "2765/64",
+        "11065/256"
+      ],
+      [
+        "11065/256",
+        "5535/128"
+      ],
+      [
+        "5535/128",
+        "11075/256"
+      ],
+      [
+        "11075/256",
+        "1385/32"
+      ],
+      [
+        "1385/32",
+        "11085/256"
+      ],
+      [
+        "11085/256",
+        "5545/128"
+      ],
+      [
+        "5545/128",
+        "11095/256"
+      ],
+      [
+        "11095/256",
+        "2775/64"
+      ],
+      [
+        "2775/64",
+        "11105/256"
+      ],
+      [
+        "11105/256",
+        "5555/128"
+      ],
+      [
+        "5555/128",
+        "11115/256"
+      ],
+      [
+        "11115/256",
+        "695/16"
+      ],
+      [
+        "695/16",
+        "11125/256"
+      ],
+      [
+        "11125/256",
+        "5565/128"
+      ],
+      [
+        "5565/128",
+        "11135/256"
+      ],
+      [
+        "11135/256",
+        "2785/64"
+      ],
+      [
+        "2785/64",
+        "11145/256"
+      ],
+      [
+        "11145/256",
+        "5575/128"
+      ],
+      [
+        "5575/128",
+        "11155/256"
+      ],
+      [
+        "11155/256",
+        "1395/32"
+      ],
+      [
+        "1395/32",
+        "11165/256"
+      ],
+      [
+        "11165/256",
+        "5585/128"
+      ],
+      [
+        "5585/128",
+        "11175/256"
+      ],
+      [
+        "11175/256",
+        "2795/64"
+      ],
+      [
+        "2795/64",
+        "11185/256"
+      ],
+      [
+        "11185/256",
+        "5595/128"
+      ],
+      [
+        "5595/128",
+        "11195/256"
+      ],
+      [
+        "11195/256",
+        "175/4"
+      ],
+      [
+        "175/4",
+        "11205/256"
+      ],
+      [
+        "11205/256",
+        "5605/128"
+      ],
+      [
+        "5605/128",
+        "11215/256"
+      ],
+      [
+        "11215/256",
+        "2805/64"
+      ],
+      [
+        "2805/64",
+        "11225/256"
+      ],
+      [
+        "11225/256",
+        "5615/128"
+      ],
+      [
+        "5615/128",
+        "11235/256"
+      ],
+      [
+        "11235/256",
+        "1405/32"
+      ],
+      [
+        "1405/32",
+        "11245/256"
+      ],
+      [
+        "11245/256",
+        "5625/128"
+      ],
+      [
+        "5625/128",
+        "11255/256"
+      ],
+      [
+        "11255/256",
+        "2815/64"
+      ],
+      [
+        "2815/64",
+        "11265/256"
+      ],
+      [
+        "11265/256",
+        "5635/128"
+      ],
+      [
+        "5635/128",
+        "11275/256"
+      ],
+      [
+        "11275/256",
+        "705/16"
+      ],
+      [
+        "705/16",
+        "11285/256"
+      ],
+      [
+        "11285/256",
+        "5645/128"
+      ],
+      [
+        "5645/128",
+        "11295/256"
+      ],
+      [
+        "11295/256",
+        "2825/64"
+      ],
+      [
+        "2825/64",
+        "11305/256"
+      ],
+      [
+        "11305/256",
+        "5655/128"
+      ],
+      [
+        "5655/128",
+        "11315/256"
+      ],
+      [
+        "11315/256",
+        "1415/32"
+      ],
+      [
+        "1415/32",
+        "11325/256"
+      ],
+      [
+        "11325/256",
+        "5665/128"
+      ],
+      [
+        "5665/128",
+        "11335/256"
+      ],
+      [
+        "11335/256",
+        "2835/64"
+      ],
+      [
+        "2835/64",
+        "11345/256"
+      ],
+      [
+        "11345/256",
+        "5675/128"
+      ],
+      [
+        "5675/128",
+        "11355/256"
+      ],
+      [
+        "11355/256",
+        "355/8"
+      ],
+      [
+        "355/8",
+        "11365/256"
+      ],
+      [
+        "11365/256",
+        "5685/128"
+      ],
+      [
+        "5685/128",
+        "11375/256"
+      ],
+      [
+        "11375/256",
+        "2845/64"
+      ],
+      [
+        "2845/64",
+        "11385/256"
+      ],
+      [
+        "11385/256",
+        "5695/128"
+      ],
+      [
+        "5695/128",
+        "11395/256"
+      ],
+      [
+        "11395/256",
+        "1425/32"
+      ],
+      [
+        "1425/32",
+        "11405/256"
+      ],
+      [
+        "11405/256",
+        "5705/128"
+      ],
+      [
+        "5705/128",
+        "11415/256"
+      ],
+      [
+        "11415/256",
+        "2855/64"
+      ],
+      [
+        "2855/64",
+        "11425/256"
+      ],
+      [
+        "11425/256",
+        "5715/128"
+      ],
+      [
+        "5715/128",
+        "11435/256"
+      ],
+      [
+        "11435/256",
+        "715/16"
+      ],
+      [
+        "715/16",
+        "11445/256"
+      ],
+      [
+        "11445/256",
+        "5725/128"
+      ],
+      [
+        "5725/128",
+        "11455/256"
+      ],
+      [
+        "11455/256",
+        "2865/64"
+      ],
+      [
+        "2865/64",
+        "11465/256"
+      ],
+      [
+        "11465/256",
+        "5735/128"
+      ],
+      [
+        "5735/128",
+        "11475/256"
+      ],
+      [
+        "11475/256",
+        "1435/32"
+      ],
+      [
+        "1435/32",
+        "11485/256"
+      ],
+      [
+        "11485/256",
+        "5745/128"
+      ],
+      [
+        "5745/128",
+        "11495/256"
+      ],
+      [
+        "11495/256",
+        "2875/64"
+      ],
+      [
+        "2875/64",
+        "11505/256"
+      ],
+      [
+        "11505/256",
+        "5755/128"
+      ],
+      [
+        "5755/128",
+        "11515/256"
+      ],
+      [
+        "11515/256",
+        "45"
+      ]
+    ]
+  },
+  "cost_accounting": {
+    "shared_midpoint_integrals": 76,
+    "diagnostic_actual_midpoint_control_enclosures": 1,
+    "measured_replay_total_enclosures_including_diagnostic": 1209,
+    "standalone_winding_after_shared_supplier": 698,
+    "standalone_direct_after_shared_supplier": 255,
+    "standalone_support_after_shared_supplier": 255,
+    "boundary_first_support_if_floor_acquired_separately": 719,
+    "boundary_first_cost_explanation": "464 boundary ranges pay the floor, plus support ranges. The 234 polygon vertices are unnecessary when acquiring only the boundary floor.",
+    "separate_boundary_floor_assembly_after_support_cover": 0,
+    "assessment": "Support cells also pay the boundary collar by covering the entire closed rectangle; do not double-charge the separate winding replay. No stricter allowance or acquisition benefit over direct coordinate strips is established."
+  },
+  "controls": {
+    "hermite_domain": {
+      "t": [
+        "-1/100",
+        "1/100"
+      ],
+      "x": [
+        "-10",
+        "10"
+      ]
+    },
+    "hermite_real_degrees": [
+      {
+        "order": 2,
+        "overall_sign": 1,
+        "time_face_counts": [
+          0,
+          2
+        ],
+        "oriented_winding": -1,
+        "real_weight_floor_m_over_2": 1
+      },
+      {
+        "order": 2,
+        "overall_sign": -1,
+        "time_face_counts": [
+          0,
+          2
+        ],
+        "oriented_winding": -1,
+        "real_weight_floor_m_over_2": 1
+      },
+      {
+        "order": 3,
+        "overall_sign": 1,
+        "time_face_counts": [
+          1,
+          3
+        ],
+        "oriented_winding": -1,
+        "real_weight_floor_m_over_2": 1
+      },
+      {
+        "order": 3,
+        "overall_sign": -1,
+        "time_face_counts": [
+          1,
+          3
+        ],
+        "oriented_winding": -1,
+        "real_weight_floor_m_over_2": 1
+      },
+      {
+        "order": 4,
+        "overall_sign": 1,
+        "time_face_counts": [
+          0,
+          4
+        ],
+        "oriented_winding": -2,
+        "real_weight_floor_m_over_2": 2
+      },
+      {
+        "order": 4,
+        "overall_sign": -1,
+        "time_face_counts": [
+          0,
+          4
+        ],
+        "oriented_winding": -2,
+        "real_weight_floor_m_over_2": 2
+      },
+      {
+        "order": 5,
+        "overall_sign": 1,
+        "time_face_counts": [
+          1,
+          5
+        ],
+        "oriented_winding": -2,
+        "real_weight_floor_m_over_2": 2
+      },
+      {
+        "order": 5,
+        "overall_sign": -1,
+        "time_face_counts": [
+          1,
+          5
+        ],
+        "oriented_winding": -2,
+        "real_weight_floor_m_over_2": 2
+      },
+      {
+        "order": 6,
+        "overall_sign": 1,
+        "time_face_counts": [
+          0,
+          6
+        ],
+        "oriented_winding": -3,
+        "real_weight_floor_m_over_2": 3
+      },
+      {
+        "order": 6,
+        "overall_sign": -1,
+        "time_face_counts": [
+          0,
+          6
+        ],
+        "oriented_winding": -3,
+        "real_weight_floor_m_over_2": 3
+      },
+      {
+        "order": 7,
+        "overall_sign": 1,
+        "time_face_counts": [
+          1,
+          7
+        ],
+        "oriented_winding": -3,
+        "real_weight_floor_m_over_2": 3
+      },
+      {
+        "order": 7,
+        "overall_sign": -1,
+        "time_face_counts": [
+          1,
+          7
+        ],
+        "oriented_winding": -3,
+        "real_weight_floor_m_over_2": 3
+      },
+      {
+        "order": 8,
+        "overall_sign": 1,
+        "time_face_counts": [
+          0,
+          8
+        ],
+        "oriented_winding": -4,
+        "real_weight_floor_m_over_2": 4
+      },
+      {
+        "order": 8,
+        "overall_sign": -1,
+        "time_face_counts": [
+          0,
+          8
+        ],
+        "oriented_winding": -4,
+        "real_weight_floor_m_over_2": 4
+      },
+      {
+        "order": 9,
+        "overall_sign": 1,
+        "time_face_counts": [
+          1,
+          9
+        ],
+        "oriented_winding": -4,
+        "real_weight_floor_m_over_2": 4
+      },
+      {
+        "order": 9,
+        "overall_sign": -1,
+        "time_face_counts": [
+          1,
+          9
+        ],
+        "oriented_winding": -4,
+        "real_weight_floor_m_over_2": 4
+      },
+      {
+        "order": 10,
+        "overall_sign": 1,
+        "time_face_counts": [
+          0,
+          10
+        ],
+        "oriented_winding": -5,
+        "real_weight_floor_m_over_2": 5
+      },
+      {
+        "order": 10,
+        "overall_sign": -1,
+        "time_face_counts": [
+          0,
+          10
+        ],
+        "oriented_winding": -5,
+        "real_weight_floor_m_over_2": 5
+      },
+      {
+        "order": 11,
+        "overall_sign": 1,
+        "time_face_counts": [
+          1,
+          11
+        ],
+        "oriented_winding": -5,
+        "real_weight_floor_m_over_2": 5
+      },
+      {
+        "order": 11,
+        "overall_sign": -1,
+        "time_face_counts": [
+          1,
+          11
+        ],
+        "oriented_winding": -5,
+        "real_weight_floor_m_over_2": 5
+      },
+      {
+        "order": 12,
+        "overall_sign": 1,
+        "time_face_counts": [
+          0,
+          12
+        ],
+        "oriented_winding": -6,
+        "real_weight_floor_m_over_2": 6
+      },
+      {
+        "order": 12,
+        "overall_sign": -1,
+        "time_face_counts": [
+          0,
+          12
+        ],
+        "oriented_winding": -6,
+        "real_weight_floor_m_over_2": 6
+      }
+    ],
+    "adverse_status_tests": {
+      "exact_support_hit": "inconclusive",
+      "unresolved_support_rectangle": "inconclusive",
+      "nonzero_point_inside_support": "inconclusive",
+      "exact_quadratic_boundary_event": "refused",
+      "actual_midpoint_first_jet_with_added_absolute_error_M": "inconclusive"
+    },
+    "collision_free_linear_field": {
+      "H": "x",
+      "Hx": "1",
+      "L1": "0",
+      "status": "support_rejected",
+      "norm_floor": "1.0000000000000000000000000000000",
+      "compact_mass_exact": [
+        "0",
+        "0"
+      ]
+    },
+    "quadratic_target_preimage": {
+      "map": "F=(x^2-2t,2x)",
+      "domain": "F^{-1}(open unit target disk)",
+      "det_DF_exact": "-4",
+      "L1_exact": "4",
+      "K": 1,
+      "compact_mass_enclosure": "[1.0000000000000000000000000000000 +/- 1.0e-36]",
+      "compact_normalization_payment": "v=s/(1-s); integral exp(-v) on [0,1] plus exact tail exp(-1)",
+      "gaussian_lambda": "1",
+      "gaussian_radius": "1",
+      "gaussian_mass_enclosure": "[0.63212055882855767840447622983854 +/- 8.69e-34]",
+      "gaussian_exact_expression": "1-exp(-1)",
+      "gaussian_boundary_correction": "[-0.36787944117144232159552377016146 +/- 8.68e-34]"
+    },
+    "boundary_event_policy": "Exact quadratic common zero on the time-face is refused; no finite positive boundary floor exists there.",
+    "quadratic_gaussian": {
+      "box_t": [
+        "-1",
+        "1"
+      ],
+      "box_x": [
+        "-1",
+        "1"
+      ],
+      "lambda": "1",
+      "K": 1,
+      "bulk_integral": "[0.98862876835135463061961002191951 +/- 2.58e-33]",
+      "complete_boundary_correction": "[-0.011371231648645369380389978080487 +/- 4.53e-34]",
+      "bulk_minus_correction": "[1.0000000000000000000000000000000 +/- 2.77e-35]",
+      "identity_residual": "[-3.466024170353414723862912391e-44 +/- 2.75e-35]"
+    }
+  },
+  "timing_seconds": {
+    "shared_midpoint_integrals": 0.4060054589062929,
+    "boundary_winding": 0.027534875087440014,
+    "direct_strips": 0.24403066700324416,
+    "support_strips": 0.243798749987036,
+    "total_including_controls": 1.0076343750115484
+  },
+  "assertions_passed": 685,
+  "establishes": [
+    "The fixed compact density has empty pullback support on this complete-source rectangle, so its signed integral is exactly zero.",
+    "The prescribed collar is paid on the boundary and by the support cover.",
+    "Every accepted support rectangle already directly excludes a common first-jet zero; this does not improve the complete allowance or acquisition cost over the practical direct baseline."
+  ],
+  "does_not_establish": [
+    "A new excluded theta region or improved Newman bound, RH, or simplicity.",
+    "A comparison with active-support signed quadrature or any obstruction to other densities, domains or bulk estimators.",
+    "An independent specialist review or formal verification."
+  ]
+}
