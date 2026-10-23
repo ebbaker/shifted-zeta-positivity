@@ -8,7 +8,7 @@ formal verification.
 
 ## Reviewed deliverable and conclusion
 
-The current [manuscript](../manuscript/main.tex), [compiled PDF](../manuscript/main.pdf)
+The current [manuscript](../manuscript/main.tex), [PDF build guide](../manuscript/README.md)
 and [research assessment](../notes/16_RESEARCH_RESET_AND_NEXT_STEPS_20261023.md)
 are ready for the author's mathematical review as a working research draft.
 The draft contains 19 pages, names its intended author, acknowledges the

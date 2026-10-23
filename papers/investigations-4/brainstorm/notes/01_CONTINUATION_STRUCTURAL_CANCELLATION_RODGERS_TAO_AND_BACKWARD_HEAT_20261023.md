@@ -12,12 +12,12 @@ Start with the repository [result index](../../../../result-summaries/README.md)
 
 The two essential local sources are:
 
-1. [Review 05 on usefulness](../../../investigations-4/reviews/05_TOPOLOGICAL_TRANSPORT_USEFULNESS_ASSESSMENT_20261023.md): the complete late boundary cancels exactly; no comparative gain has been established.
-2. [Note 13 on height dependent backward heat contours](../../../investigations-4/notes/13_HEIGHT_DEPENDENT_BACKWARD_HEAT_CONTOURS_20261023.md): the signed curved-collar identity, its slope contribution, the microscopic time scale, and its remaining analytic task.
+1. [Review 05 on usefulness](../../reviews/05_TOPOLOGICAL_TRANSPORT_USEFULNESS_ASSESSMENT_20261023.md): the complete late boundary cancels exactly; no comparative gain has been established.
+2. [Note 13 on height dependent backward heat contours](../../notes/13_HEIGHT_DEPENDENT_BACKWARD_HEAT_CONTOURS_20261023.md): the signed curved-collar identity, its slope contribution, the microscopic time scale, and its remaining analytic task.
 
-The maintained manuscripts are [Topological Zero Transport and the Phase of the Discriminant](../../../investigations-4/manuscript/topological_zero_transport/README.md), the focused paper, and [Zero Counts, Heat Transport, and Localized Hodge Energy](../../../investigations-4/manuscript/zero_count_heat_transport/README.md), the broader catalogue. Preserve their separate roles. This continuation does not revise either manuscript or create another snapshot.
+The maintained manuscripts are [Topological Zero Transport and the Phase of the Discriminant](../../manuscript/topological_zero_transport/README.md), the focused paper, and [Zero Counts, Heat Transport, and Localized Hodge Energy](../../manuscript/zero_count_heat_transport/README.md), the broader catalogue. Preserve their separate roles. This continuation does not revise either manuscript or create another snapshot.
 
-The original [Continuation 08](../../../investigations-4/notes/08_CONTINUATION_SHARP_DIVISOR_STABILITY_AND_GROWING_CLOCK_WINDOWS_20261022.md) led to [Note 09 on sharp divisor stability](../../../investigations-4/notes/09_SHARP_C2_DIVISOR_STABILITY_20261022.md) and [Note 10 on growing clock windows](../../../investigations-4/notes/10_GROWING_CLOCK_WINDOWS_20261022.md). Those tasks should not be restarted as if still only proposals. The present question arose after the later cap estimates and the focused manuscript exposed the need for a stronger cancellation mechanism.
+The original [Continuation 08](../../notes/08_CONTINUATION_SHARP_DIVISOR_STABILITY_AND_GROWING_CLOCK_WINDOWS_20261022.md) led to [Note 09 on sharp divisor stability](../../notes/09_SHARP_C2_DIVISOR_STABILITY_20261022.md) and [Note 10 on growing clock windows](../../notes/10_GROWING_CLOCK_WINDOWS_20261022.md). Those tasks should not be restarted as if still only proposals. The present question arose after the later cap estimates and the focused manuscript exposed the need for a stronger cancellation mechanism.
 
 ## The author's research objective
 
@@ -36,7 +36,7 @@ H_\tau=-H_{zz},\qquad G=(H,H_z),\qquad
 \tau=t+i\sigma,\quad z=x+iy.
 \]
 
-Let \(\mathcal C\) be the normalized Chern–Hopf three-form of the physical jet \(G\), as defined in the [boundary derivation](../../../investigations-4/manuscript/topological_zero_transport/boundary.tex). For a compact domain with \(G\ne0\) on its complete boundary,
+Let \(\mathcal C\) be the normalized Chern–Hopf three-form of the physical jet \(G\), as defined in the [boundary derivation](../../manuscript/topological_zero_transport/boundary.tex). For a compact domain with \(G\ne0\) on its complete boundary,
 
 \[
 Q(W)=\int_{\partial W}\mathcal C
@@ -76,7 +76,7 @@ For an event-free regular extension from \(a\) to \(T\), with the same populatio
 
 Thus adding a longer late tube cannot improve the exact complete event balance by itself. Bounding its cap and closures separately can destroy an identity that is already exact. The gain sought must come from estimating the remaining quantity, or from additional propagation information.
 
-The existing large-heat estimates control the full terminal cap per root, a smaller Vandermonde contribution, and late edge flux. They do not close the early boundary starting at zero. Moreover, the proof of the full cap estimate uses the complete product \(\mathscr D\) directly and does not require the separate Vandermonde perturbation lemma. Any claim that the determinant decomposition improves the estimate must therefore be demonstrated by a comparison. [Review 05](../../../investigations-4/reviews/05_TOPOLOGICAL_TRANSPORT_USEFULNESS_ASSESSMENT_20261023.md) gives the estimates together, including their different limiting geometries.
+The existing large-heat estimates control the full terminal cap per root, a smaller Vandermonde contribution, and late edge flux. They do not close the early boundary starting at zero. Moreover, the proof of the full cap estimate uses the complete product \(\mathscr D\) directly and does not require the separate Vandermonde perturbation lemma. Any claim that the determinant decomposition improves the estimate must therefore be demonstrated by a comparison. [Review 05](../../reviews/05_TOPOLOGICAL_TRANSPORT_USEFULNESS_ASSESSMENT_20261023.md) gives the estimates together, including their different limiting geometries.
 
 ## What Rodgers–Tao renormalizes
 
@@ -169,7 +169,7 @@ Thus a worthwhile next question is whether a relative energy for the complete so
 
 ## The proposed shrinking backward-time collar
 
-Let \(\epsilon(x)>0\) be \(C^1\) on a finite height interval. Consider the compact collar between \(t=-\epsilon(x)\) and \(t=0\), with a fixed base in \((\sigma,x,y)\). Give both cap integrals the forward parameter orientation, and let \(S_\epsilon\) include all other outward faces. If \(G\ne0\) on the complete boundary, [Note 13](../../../investigations-4/notes/13_HEIGHT_DEPENDENT_BACKWARD_HEAT_CONTOURS_20261023.md) gives
+Let \(\epsilon(x)>0\) be \(C^1\) on a finite height interval. Consider the compact collar between \(t=-\epsilon(x)\) and \(t=0\), with a fixed base in \((\sigma,x,y)\). Give both cap integrals the forward parameter orientation, and let \(S_\epsilon\) include all other outward faces. If \(G\ne0\) on the complete boundary, [Note 13](../../notes/13_HEIGHT_DEPENDENT_BACKWARD_HEAT_CONTOURS_20261023.md) gives
 
 \[
 \boxed{I_0=I_\epsilon-S_\epsilon+Q_-
@@ -240,7 +240,7 @@ H(-\epsilon,z)=\frac1{\sqrt{4\pi}}
 \tag{17}
 \]
 
-The source and interchange justification are in [Note 13](../../../investigations-4/notes/13_HEIGHT_DEPENDENT_BACKWARD_HEAT_CONTOURS_20261023.md). Keeping this coupled averaging before taking absolute values is available to both the contour approach and its direct comparator. A height-dependent time trace is not generally holomorphic in the spatial variable; apply topology to the original spacetime domain, not an invented holomorphic trace.
+The source and interchange justification are in [Note 13](../../notes/13_HEIGHT_DEPENDENT_BACKWARD_HEAT_CONTOURS_20261023.md). Keeping this coupled averaging before taking absolute values is available to both the contour approach and its direct comparator. A height-dependent time trace is not generally holomorphic in the spatial variable; apply topology to the original spacetime domain, not an invented holomorphic trace.
 
 ## Control screen and scope
 
@@ -267,13 +267,13 @@ The intended deliverable is one new applicable inequality or a precise obstructi
 1. **Choose the consumer and reference.** Fix a finite height window and explicit \(\epsilon(h)\). State whether the target is the physical cap, a real angular integral, or a bound for \(Q_+\). Specify the reference configuration or complete reference jet without defining its accuracy by an unknown collision distance.
 2. **Perform exact cancellations first.** Collapse regular late tubes using (4). For the negative collar retain \(I_\epsilon-S_\epsilon\) as one object. If using a reference subtraction, expand the complete product including its analytic factor, endpoints, slope and any changing-population terms.
 3. **Ask for the missing structural property.** Does the first variation cancel? Is the remainder coercive in a stated norm? Is there a signed evolution identity, or a controllable error in one? Equation (10) is a finite real model; (15) is an evolution model. Neither already controls the complex cap. Keep separate the real-to-complex transfer and the source-specific estimate.
-4. **Compare under the same information.** Give the direct method the same theta source, Gaussian formula, signed correlations, analytic continuation bounds, and critical-value or discriminant reductions. The existing [scalar-source comparison](../../../investigations-4/03_heat_transport_and_charges/notes/03_SCALAR_SOURCE_CONTRACT_AND_SURVIVOR_WIDTH_20261022.md) explains why independent absolute moment payments alone are an inadequate starting point. Compare a proved bound, required information, verification cost, or meaningful simplification of proof.
+4. **Compare under the same information.** Give the direct method the same theta source, Gaussian formula, signed correlations, analytic continuation bounds, and critical-value or discriminant reductions. The existing [scalar-source comparison](../../03_heat_transport_and_charges/notes/03_SCALAR_SOURCE_CONTRACT_AND_SURVIVOR_WIDTH_20261022.md) explains why independent absolute moment payments alone are an inadequate starting point. Compare a proved bound, required information, verification cost, or meaningful simplification of proof.
 5. **Decide from the complete result.** A sharper event count, an improved threshold or region, a rigorously cheaper certificate, or an equally strong theorem under substantially simpler hypotheses justifies continuation. If a specified ansatz only transfers the original unknown sign, record that scoped failure and stop that ansatz. It does not establish that every geometric or renormalized approach must fail.
 
-Before a novelty claim, compare the completed inequality with the primary sources under matching hypotheses. The current [literature and proof review](../../../investigations-4/reviews/04_TOPOLOGICAL_TRANSPORT_LITERATURE_AND_PROOF_REVIEW_20261023.md) and [usefulness review](../../../investigations-4/reviews/05_TOPOLOGICAL_TRANSPORT_USEFULNESS_ASSESSMENT_20261023.md) are starting maps, not a conclusion that a useful new result exists or that the field is exhausted. The next Rodgers–Tao reading should focus on how the linear corrections and exterior interactions are paid, alongside the definition of the positive remainder.
+Before a novelty claim, compare the completed inequality with the primary sources under matching hypotheses. The current [literature and proof review](../../reviews/04_TOPOLOGICAL_TRANSPORT_LITERATURE_AND_PROOF_REVIEW_20261023.md) and [usefulness review](../../reviews/05_TOPOLOGICAL_TRANSPORT_USEFULNESS_ASSESSMENT_20261023.md) are starting maps, not a conclusion that a useful new result exists or that the field is exhausted. The next Rodgers–Tao reading should focus on how the linear corrections and exterior interactions are paid, alongside the definition of the positive remainder.
 
 ## Continuation instructions and provenance
 
 A new chat can start with the request: “Read this continuation, Review 05, and Note 13. Investigate one structural cancellation mechanism for the complete shrinking backward-time collar. Start from the reference-state subtraction in Rodgers–Tao, retain the analytic factor and every boundary cost, and compare with a direct estimate using the same information. Preserve both manuscripts until a useful inequality or a precisely scoped failure is established.”
 
-This chat is **Continue divisor stability research**, uniquely archived as history **0010** in [Investigations 4](../../../investigations-4/chat-histories/0010_2026-10-23T03-12-24Z_continue-divisor-stability-research.json). The continuation is saved in the brainstorm area at the author's request; this does not relocate or duplicate that history. A new chat should retain its own identity and follow [the history workflow](../../../../tools/CHAT_HISTORY.md). Saving this brainstorm does not select a new investigation series or establish a manuscript milestone.
+This chat is **Continue divisor stability research**, uniquely archived as history **0010** in [Investigations 4](../../chat-histories/0010_2026-10-23T03-12-24Z_continue-divisor-stability-research.json). The continuation is saved in the brainstorm area at the author's request; this does not relocate or duplicate that history. A new chat should retain its own identity and follow [the history workflow](../../../../tools/CHAT_HISTORY.md). Saving this brainstorm does not select a new investigation series or establish a manuscript milestone.

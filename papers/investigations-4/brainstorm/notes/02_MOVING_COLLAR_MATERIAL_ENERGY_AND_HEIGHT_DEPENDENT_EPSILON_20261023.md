@@ -30,7 +30,7 @@ If \(W\) is subdivided into cells with regular shared faces, then
 
 Every shared face cancels with the opposite orientation. This holds even when some cells contain events. It is possible to certify each complete cell integral below one instead of paying one absolute error over the entire population. But a cell enclosing an event retains a positive integer charge however small it becomes. Singular derivatives compensate for its shrinking volume.
 
-A smoothly tilted left face has \(dt=-\epsilon'(x)\,dx\), which must enter the full three-form pullback. A practical first construction uses height bands and constant time faces, retains all joining faces, and cancels them before estimation. The graph cannot simply be treated as a holomorphic spatial slice. See [the earlier collar calculation](../../../investigations-4/notes/13_HEIGHT_DEPENDENT_BACKWARD_HEAT_CONTOURS_20261023.md).
+A smoothly tilted left face has \(dt=-\epsilon'(x)\,dx\), which must enter the full three-form pullback. A practical first construction uses height bands and constant time faces, retains all joining faces, and cancels them before estimation. The graph cannot simply be treated as a holomorphic spatial slice. See [the earlier collar calculation](../../notes/13_HEIGHT_DEPENDENT_BACKWARD_HEAT_CONTOURS_20261023.md).
 
 ## Estimating the original integral through the deformation
 
@@ -67,7 +67,7 @@ The closest established ingredients are the following.
 | [Papanicolaou, Kallitsi and Smyrlis, 2021, Section 4](https://ejde.math.txstate.edu/Volumes/2021/44/papanicolaou.pdf) | Complex caloric multiple zeros are isolated, and individual zero branches satisfy differential equations between ramification events. This directly supports the trajectory viewpoint. Their forward-heat sign convention must be reversed here. |
 | [Hall–Ho, 2025, Section 3](https://link.springer.com/article/10.1007/s11005-025-01946-9) | Polynomial heat-root dynamics and their Calogero–Moser connection are established background. The paper distinguishes its exact finite identities from its large-population conjectures. |
 
-The focused primary-source search did not identify a theorem combining a height-dependent collar across zero, this particular first-jet three-form, and Rodgers–Tao renormalization to exclude theta collisions. That is a limited literature finding, not a priority claim. The repository already contains the [projective-wall calculation](../../../investigations-4/manuscript/topological_zero_transport/boundary.tex) and a [two-root discriminant equation](../../../investigations-3/13_contradiction_analysis/04_boundary_winding/threshold_routes/12_relative_chern_hopf_charges/notes/05_TWO_ROOT_DISCRIMINANT_FLOW_AND_REAL_CAP_CHARGE_20261021.md); these should be reused.
+The focused primary-source search did not identify a theorem combining a height-dependent collar across zero, this particular first-jet three-form, and Rodgers–Tao renormalization to exclude theta collisions. That is a limited literature finding, not a priority claim. The repository already contains the [projective-wall calculation](../../manuscript/topological_zero_transport/boundary.tex) and a [two-root discriminant equation](../../../investigations-3/13_contradiction_analysis/04_boundary_winding/threshold_routes/12_relative_chern_hopf_charges/notes/05_TWO_ROOT_DISCRIMINANT_FLOW_AND_REAL_CAP_CHARGE_20261021.md); these should be reused.
 
 ## A precise flow for points away from a zero
 

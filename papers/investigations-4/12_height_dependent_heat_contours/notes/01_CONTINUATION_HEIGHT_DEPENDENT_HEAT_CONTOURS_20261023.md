@@ -71,7 +71,7 @@ Retain the elementary controls: \(H=z^2-2\tau\) prevents a false crossing of an 
 
 Read the [original structural-cancellation continuation][original], the founding brainstorm and self-review, then the new overview and progress register. The [README reading guide][home] also links the inherited collar and two-root derivations and the primary papers by Rodgers–Tao, Csordas and collaborators, Papanicolaou and collaborators, and Polymath.
 
-Save new Investigation 12 derivations in notes, computations in numerics, and assessments in reviews. The original brainstorm notes stay at their existing paths. Update the sole HDC register when a deliverable is actually completed.
+Save new Investigation 12 derivations in notes, computations in numerics, and assessments in reviews. The founding brainstorm notes are now housed in the series-wide Investigations 4 brainstorm, following the author's 23 October affiliation correction. Update the sole HDC register when a deliverable is actually completed.
 
 The conversation **Study height-dependent epsilon** retains its unique [brainstorm archive 0001][chat]. The [verification record][verification] identifies the checked snapshot, source coverage, stored-byte and canonical-content hashes, and prior completed-turn capture. Later ordinary refreshes legitimately change the snapshot hashes and count. This turn's final reply is captured only after it is sent, through the bounded exact-turn follow-up prescribed by the [history workflow][history-policy].
 
@@ -82,11 +82,11 @@ The conversation **Study height-dependent epsilon** retains its unique [brainsto
 [home]: ../README.md
 [overview]: ../research-overview/01_HEIGHT_DEPENDENT_HEAT_CONTOURS_PROGRAM_20261023.md
 [progress]: ../research-progress/01_HEIGHT_DEPENDENT_HEAT_CONTOURS_PROGRESS_20261023.md
-[brainstorm]: ../../../brainstorm/investigations-4/notes/02_MOVING_COLLAR_MATERIAL_ENERGY_AND_HEIGHT_DEPENDENT_EPSILON_20261023.md
-[original]: ../../../brainstorm/investigations-4/notes/01_CONTINUATION_STRUCTURAL_CANCELLATION_RODGERS_TAO_AND_BACKWARD_HEAT_20261023.md
-[review]: ../../../brainstorm/investigations-4/reviews/01_MOVING_COLLAR_AND_MATERIAL_ENERGY_SELF_REVIEW_20261023.md
-[checks]: ../../../brainstorm/investigations-4/numerics/MATERIAL_JET_ENERGY_CHECKS_20261023.json
-[chat]: ../../../brainstorm/investigations-4/chat-histories/0001_2026-10-23T07-39-02Z_study-height-dependent-epsilon.json
+[brainstorm]: ../../brainstorm/notes/02_MOVING_COLLAR_MATERIAL_ENERGY_AND_HEIGHT_DEPENDENT_EPSILON_20261023.md
+[original]: ../../brainstorm/notes/01_CONTINUATION_STRUCTURAL_CANCELLATION_RODGERS_TAO_AND_BACKWARD_HEAT_20261023.md
+[review]: ../../brainstorm/reviews/01_MOVING_COLLAR_AND_MATERIAL_ENERGY_SELF_REVIEW_20261023.md
+[checks]: ../../brainstorm/numerics/MATERIAL_JET_ENERGY_CHECKS_20261023.json
+[chat]: ../../brainstorm/chat-histories/0001_2026-10-23T07-39-02Z_study-height-dependent-epsilon.json
 [verification]: ../chat-histories/VERIFICATION_20261023.json
 [results]: ../../../../result-summaries/README.md
 [geometry]: ../../../../result-summaries/13_local_heat_flow_geometry_and_rh_equivalent_criteria.md

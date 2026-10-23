@@ -55,11 +55,11 @@ The founding conversation **Study height-dependent epsilon** retains its unique 
 
 [overview]: research-overview/01_HEIGHT_DEPENDENT_HEAT_CONTOURS_PROGRAM_20261023.md
 [progress]: research-progress/01_HEIGHT_DEPENDENT_HEAT_CONTOURS_PROGRESS_20261023.md
-[continuation]: ../../brainstorm/investigations-4/notes/01_CONTINUATION_STRUCTURAL_CANCELLATION_RODGERS_TAO_AND_BACKWARD_HEAT_20261023.md
-[brainstorm]: ../../brainstorm/investigations-4/notes/02_MOVING_COLLAR_MATERIAL_ENERGY_AND_HEIGHT_DEPENDENT_EPSILON_20261023.md
-[brainstorm-review]: ../../brainstorm/investigations-4/reviews/01_MOVING_COLLAR_AND_MATERIAL_ENERGY_SELF_REVIEW_20261023.md
-[checks]: ../../brainstorm/investigations-4/numerics/MATERIAL_JET_ENERGY_CHECKS_20261023.json
-[chat]: ../../brainstorm/investigations-4/chat-histories/0001_2026-10-23T07-39-02Z_study-height-dependent-epsilon.json
+[continuation]: ../brainstorm/notes/01_CONTINUATION_STRUCTURAL_CANCELLATION_RODGERS_TAO_AND_BACKWARD_HEAT_20261023.md
+[brainstorm]: ../brainstorm/notes/02_MOVING_COLLAR_MATERIAL_ENERGY_AND_HEIGHT_DEPENDENT_EPSILON_20261023.md
+[brainstorm-review]: ../brainstorm/reviews/01_MOVING_COLLAR_AND_MATERIAL_ENERGY_SELF_REVIEW_20261023.md
+[checks]: ../brainstorm/numerics/MATERIAL_JET_ENERGY_CHECKS_20261023.json
+[chat]: ../brainstorm/chat-histories/0001_2026-10-23T07-39-02Z_study-height-dependent-epsilon.json
 [collar]: ../notes/13_HEIGHT_DEPENDENT_BACKWARD_HEAT_CONTOURS_20261023.md
 [usefulness]: ../reviews/05_TOPOLOGICAL_TRANSPORT_USEFULNESS_ASSESSMENT_20261023.md
 [boundary]: ../manuscript/topological_zero_transport/boundary.tex
@@ -86,4 +86,8 @@ Coefficient-filter follow-up, 23 October 2026, **gpt-6-astra, ultra**: [Note 11]
 
 Complete-source backward follow-up, 23 October 2026, **gpt-6-astra, ultra**: [Note 12](notes/12_COUPLED_COEFFICIENT_BACKWARD_TRANSPORT_20261023.md) transports prepared coefficients using a finite polynomial in integrated source wall moments. Its appendix pays the full exterior-force, quotient-floor, derivative-error and reference-defect inputs. [Review 10](reviews/10_COUPLED_COEFFICIENT_TRANSPORT_REVIEW_20261023.md); microscopic theta acquisition and simplicity remain open.
 
-Manuscript checkpoint, 23 October 2026, **gpt-6-astra, ultra**: [working LaTeX manuscript](manuscript/main.tex), [PDF](manuscript/main.pdf), and [critical next-step assessment](notes/16_RESEARCH_RESET_AND_NEXT_STEPS_20261023.md). New records: [finite canonical certificate](notes/13_COMPLETE_THETA_WALL_AND_COEFFICIENT_CERTIFICATE_20261023.md), [corrected microscopic reference](notes/14_MICROSCOPIC_COMPLETE_REFERENCE_AND_HEAT_DEFECT_20261023.md), and [complete cap comparison](notes/15_COMPLETE_PHYSICAL_CAP_COMPARISON_20261023.md). The manuscript is drafted for Edward Baker with LLM acknowledgement and separate same-model review; no global simplicity theorem or publication-readiness claim.
+Manuscript checkpoint, 23 October 2026, **gpt-6-astra, ultra**: [working LaTeX manuscript](manuscript/main.tex), [reading-copy build guide](manuscript/README.md), and [critical next-step assessment](notes/16_RESEARCH_RESET_AND_NEXT_STEPS_20261023.md). New records: [finite canonical certificate](notes/13_COMPLETE_THETA_WALL_AND_COEFFICIENT_CERTIFICATE_20261023.md), [corrected microscopic reference](notes/14_MICROSCOPIC_COMPLETE_REFERENCE_AND_HEAT_DEFECT_20261023.md), and [complete cap comparison](notes/15_COMPLETE_PHYSICAL_CAP_COMPARISON_20261023.md). The manuscript is drafted for Edward Baker with LLM acknowledgement and separate same-model review; no global simplicity theorem or publication-readiness claim.
+
+Analytic open-boundary continuation, 23 October 2026, for Edward Baker with substantial LLM assistance, **gpt-6-astra (Codex), effort max**: the author’s proposed relaxation now has a [research overview](brainstorm/research-overview/01_ANALYTIC_OPEN_BOUNDARY_FLUX_PROGRAM_20261023.md), [OBF progress register](brainstorm/research-progress/01_OPEN_BOUNDARY_FLUX_PROGRESS_20261023.md), and [next-chat continuation](brainstorm/notes/05_CONTINUATION_ANALYTIC_OPEN_BOUNDARY_FLUX_20261023.md) in the requested brainstorm home. The milestones are analytic transport and complete-source flux estimates; numerics support those goals. OBF has its own task identifiers, while this investigation retains the HDC register. No negative-time theta flux estimate or larger useful backward width has yet been acquired.
+
+Brainstorm affiliation correction, 23 October 2026: exploratory work for this investigation belongs in its [own brainstorm folder](brainstorm/README.md), including the open-boundary flux program and statistical-mechanics analogy. Earlier series-wide material belongs in [Investigations 4's brainstorm](../brainstorm/README.md). For Edward Baker with substantial LLM assistance, **gpt-6.1-sol (Codex), actual effort max**. [Relocation record](brainstorm/CHAT_HISTORY_RELOCATION_20261023.json).

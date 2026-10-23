@@ -179,8 +179,11 @@ The first-slab preprint keeps its statement blueprint, verification records and
 certificate release gate in [its own folder](papers/weil-positivity/shifted-zeta/first-slab-positivity/README.md); these were
 repository-root folders until 16 October 2026 (see the
 [relocation record](papers/REORGANIZATION_20261016.md)). Reproduction code
-lives beside each paper or investigation. Draft PDFs built into the root
-`output/` folder are not tracked; rebuild them from the `.tex` sources.
+lives beside each paper or investigation. Keep generated working-draft PDFs
+out of the individual research and manuscript folders. Build local reading
+copies into the root `output/pdf/<paper-or-investigation>/` directory, which
+is not tracked, and rebuild them from the `.tex` sources; see the standing
+[PDF storage rule](LARGE_FILES.md#1-the-convention).
 
 Within each investigation, incremental research belongs in `notes/`, numerical
 work in `numerics/`, and reviews in `reviews/`, with model and reasoning-effort

@@ -60,10 +60,10 @@ The [founding conversation][chat] retains its unique registration in the brainst
 
 [overview]: ../research-overview/01_HEIGHT_DEPENDENT_HEAT_CONTOURS_PROGRAM_20261023.md
 [readme]: ../README.md
-[brainstorm]: ../../../brainstorm/investigations-4/notes/02_MOVING_COLLAR_MATERIAL_ENERGY_AND_HEIGHT_DEPENDENT_EPSILON_20261023.md
-[review]: ../../../brainstorm/investigations-4/reviews/01_MOVING_COLLAR_AND_MATERIAL_ENERGY_SELF_REVIEW_20261023.md
-[checks]: ../../../brainstorm/investigations-4/numerics/MATERIAL_JET_ENERGY_CHECKS_20261023.json
-[chat]: ../../../brainstorm/investigations-4/chat-histories/0001_2026-10-23T07-39-02Z_study-height-dependent-epsilon.json
+[brainstorm]: ../../brainstorm/notes/02_MOVING_COLLAR_MATERIAL_ENERGY_AND_HEIGHT_DEPENDENT_EPSILON_20261023.md
+[review]: ../../brainstorm/reviews/01_MOVING_COLLAR_AND_MATERIAL_ENERGY_SELF_REVIEW_20261023.md
+[checks]: ../../brainstorm/numerics/MATERIAL_JET_ENERGY_CHECKS_20261023.json
+[chat]: ../../brainstorm/chat-histories/0001_2026-10-23T07-39-02Z_study-height-dependent-epsilon.json
 [collar]: ../../notes/13_HEIGHT_DEPENDENT_BACKWARD_HEAT_CONTOURS_20261023.md
 [boundary]: ../../manuscript/topological_zero_transport/boundary.tex
 [usefulness]: ../../reviews/05_TOPOLOGICAL_TRANSPORT_USEFULNESS_ASSESSMENT_20261023.md

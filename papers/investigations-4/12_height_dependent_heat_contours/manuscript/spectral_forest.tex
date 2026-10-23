@@ -1,15 +1,75 @@
 % Prepared for Edward Baker, 23 October 2026.
 % Substantial LLM assistance: gpt-6-astra (Codex), reasoning effort ultra.
 % Working manuscript contribution; auxiliary details are in Notes 10 and 11.
+% Expository clarification, 23 October 2026: gpt-6.1-sol (Codex), effort xhigh.
 
 \section{Collision spectra, positive-time transfer, and the missing global estimate}
 \label{sec:spectral-transfer}
 
-For distinct real points $x_1,\ldots,x_N$, write
+For distinct real points $x_1,\ldots,x_N$, let $e_i$ denote the $i$th
+standard basis column vector in $\R^N$, and write
 \[
  L(x)=\sum_{i<j}\frac{(e_i-e_j)(e_i-e_j)^T}{(x_i-x_j)^2},
  \qquad q(t)=\Tr\!\left(4tL(x(t))[I+4tL(x(t))]^{-1}\right).
 \]
+
+\paragraph{Geometric meaning and choice of the filter.}
+Let $V(x)=(x_i^{j-1})_{i,j=1}^N$ be the Vandermonde matrix and put
+$\Delta=(\det V)^2=\prod_{i<j}(x_i-x_j)^2$. Direct differentiation gives
+\begin{equation}
+ L=-\operatorname{Hess}_x\log|\det V|
+   =-\tfrac12\operatorname{Hess}_x\log\Delta,
+ \qquad
+ v^TLv=\sum_{i<j}\frac{(v_i-v_j)^2}{(x_i-x_j)^2}.
+ \label{eq:vandermonde-hessian}
+\end{equation}
+Thus $L$ is the curvature matrix of the logarithmic repulsion energy,
+and also the weighted graph Laplacian with inverse-square gap weights.
+The Hessian here is the full matrix of second derivatives with respect to
+the root positions; the scalar spatial Laplacian would give its trace.
+The constant vector is a zero mode because a common translation changes
+none of the gaps.
+
+For $t>0$ on a real simple slice, let $\lambda_k(t)\ge0$ be the eigenvalues
+of $L(x(t))$. Then
+\begin{equation}
+ q(t)=\sum_{k=1}^N f(4t\lambda_k(t)),
+ \qquad f(u)=\frac{u}{1+u}.
+ \label{eq:filter-effective-dimension}
+\end{equation}
+This is a smooth count, or effective dimension, of the modes at the heat
+scale: a mode with $4t\lambda_k\ll1$ contributes little, a mode with
+$4t\lambda_k\gg1$ contributes nearly one, and a mode at $4t\lambda_k=1$
+contributes one half. Each mode contributes at most one, so a single
+exceptionally small gap cannot give an arbitrarily large contribution
+through one eigenvalue.
+
+The factor $4t$ is calibrated by the elementary heat birth
+$H(t,z)=z^2-2t$. Its roots are $\pm\sqrt{2t}$, their squared gap is $8t$,
+and their two-point Laplacian has nonzero eigenvalue $2/(8t)=1/(4t)$.
+This double therefore contributes exactly $1/2$ to $q$.
+The proposition below gives the corresponding spectrum for every local
+multiplicity. For a fixed finite population of distinct real endpoint
+roots, by contrast, $L(x(t))$ stays bounded and $q(t)\to0$ as $t\downarrow0$.
+At positive time, very close descendants of distinct endpoint roots can
+also contribute; $q$ is therefore used to bound multiplicity.
+
+The particular function $f$ is a convenient choice of smooth filter.
+Besides boundedness, it has the matrix order property
+$f(A)=I-(I+A)^{-1}$ for $A\succeq0$, used in the comparison proof below,
+and a determinant representation:
+\begin{equation}
+ q(t)=\left.
+ a\,\partial_a\log\det\!\left(I+aL(x(t))\right)
+ \right|_{a=4t}.
+ \label{eq:filter-log-determinant}
+\end{equation}
+Here the root configuration and time are held fixed in $\partial_a$;
+this is not the total derivative along the heat flow.
+Thus the filter is also the logarithmic scale derivative of the determinant
+of the regularized curvature matrix. This identity leads to the
+forest-polynomial representation in Section~\ref{sec:forest-filter}.
+
 A selected population is \emph{complete at its endpoint sites} if it includes
 all multiplicity labels at every site it selects. Its finite matrix contains
 only those labels, but their motion is always that of the complete field.

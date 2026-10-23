@@ -4,7 +4,7 @@
 
 Save assessments of the complete boundary, claimed inequality, source inputs and direct comparison here. State the actual model and effort and whether a review is by the authoring assistant, another model or an independent specialist.
 
-The inherited [brainstorm self-review](../../../brainstorm/investigations-4/reviews/01_MOVING_COLLAR_AND_MATERIAL_ENERGY_SELF_REVIEW_20261023.md) is a same-assistant algebra and scope assessment. No new mathematical review is claimed by this setup. Record actionable findings in the [progress register](../research-progress/01_HEIGHT_DEPENDENT_HEAT_CONTOURS_PROGRESS_20261023.md).
+The inherited [brainstorm self-review](../../brainstorm/reviews/01_MOVING_COLLAR_AND_MATERIAL_ENERGY_SELF_REVIEW_20261023.md) is a same-assistant algebra and scope assessment. No new mathematical review is claimed by this setup. Record actionable findings in the [progress register](../research-progress/01_HEIGHT_DEPENDENT_HEAT_CONTOURS_PROGRESS_20261023.md).
 
 Execution review, 23 October 2026, **gpt-6-astra (Codex), effort ultra**: [Review 01](01_FINITE_CONTRACT_AND_COUPLED_ESTIMATOR_REVIEW_20261023.md) records a separate same-model audit of Notes 02–03 and the exact algebra checks. No mathematical blocker; HDC-01/HDC-02 completion is limited to specification and conditional expression, with theta acquisition/comparison still open.
 

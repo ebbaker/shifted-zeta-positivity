@@ -2,7 +2,7 @@
 
 23 October 2026. Prepared for Edward Baker with substantial LLM assistance, **gpt-6-astra (Codex), effort max**.
 
-The founding conversation **Study height-dependent epsilon**, thread 01a167b2-ef19-7010-a6e5-e013e2199c5a, remains uniquely registered as [brainstorm history 0001](../../../brainstorm/investigations-4/chat-histories/0001_2026-10-23T07-39-02Z_study-height-dependent-epsilon.json). This folder links that archive; no duplicate registration or transcript is created.
+The founding conversation **Study height-dependent epsilon**, thread 01a167b2-ef19-7010-a6e5-e013e2199c5a, remains uniquely registered as [brainstorm history 0001](../../brainstorm/chat-histories/0001_2026-10-23T07-39-02Z_study-height-dependent-epsilon.json). This folder links that archive; no duplicate registration or transcript is created.
 
 Register new chats dedicated to this investigation here using the repository [history workflow](../../../../tools/CHAT_HISTORY.md). An already registered chat retains its identity and current registration unless its relocation is requested and performed through the documented checked procedure. Use the authorized refresh tool at the beginning and end of replies and the bounded exact-turn capture until native completion-hook activation is verified.
 

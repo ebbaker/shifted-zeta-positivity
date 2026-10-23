@@ -175,12 +175,12 @@ Q_+\le I_T+S_+-L_{\rm deform}.
 
 Exclusion requires a complete upper bound strictly below one. Reality at zero also needs a real-root anchor and population control; zero charge alone permits simple nonreal zeros. All-height conclusions, higher multiplicities and the \(0^+\) limit require their own coverage theorems.
 
-Use the [README][readme] for the background and external reading path. Keep derivations, computations and assessments in their respective folders. Existing brainstorm notes and their self-review retain their source paths and same-assistant status. The [milestone history][history] records concise changes; opening this program creates no manuscript milestone or new mathematical claim.
+Use the [README][readme] for the background and external reading path. Keep derivations, computations and assessments in their respective folders. The founding brainstorm notes and their self-review are housed in the series-wide Investigations 4 brainstorm and retain their same-assistant status. The [milestone history][history] records concise changes; opening this program creates no manuscript milestone or new mathematical claim.
 
 [progress]: ../research-progress/01_HEIGHT_DEPENDENT_HEAT_CONTOURS_PROGRESS_20261023.md
 [readme]: ../README.md
 [history]: ../DRAFT_HISTORY.md
-[brainstorm]: ../../../brainstorm/investigations-4/notes/02_MOVING_COLLAR_MATERIAL_ENERGY_AND_HEIGHT_DEPENDENT_EPSILON_20261023.md
+[brainstorm]: ../../brainstorm/notes/02_MOVING_COLLAR_MATERIAL_ENERGY_AND_HEIGHT_DEPENDENT_EPSILON_20261023.md
 [two-root]: ../../../investigations-3/13_contradiction_analysis/04_boundary_winding/threshold_routes/12_relative_chern_hopf_charges/notes/05_TWO_ROOT_DISCRIMINANT_FLOW_AND_REAL_CAP_CHARGE_20261021.md
 [results]: ../../../../result-summaries/README.md
 [geometry]: ../../../../result-summaries/13_local_heat_flow_geometry_and_rh_equivalent_criteria.md

@@ -103,7 +103,7 @@ shared history; new focused chats may register in their project folders.
 
 ## Height dependent backward contours — 23 October 2026
 
-[Home 12](12_height_dependent_heat_contours/README.md) studies whether a shrinking negative-time deformation makes the original time-zero cap easier to bound. The [overview](12_height_dependent_heat_contours/research-overview/01_HEIGHT_DEPENDENT_HEAT_CONTOURS_PROGRAM_20261023.md) prioritizes the complete cap-and-connector lower bound, with collision exclusion as a later consumer. The [HDC register](12_height_dependent_heat_contours/research-progress/01_HEIGHT_DEPENDENT_HEAT_CONTOURS_PROGRESS_20261023.md) owns execution; HDC-00 is organization complete and HDC-01 is Unstarted. The founding notes and unique conversation archive remain in the [brainstorm folder](../brainstorm/investigations-4/README.md). Prepared for Edward Baker with substantial LLM assistance, **gpt-6-astra (Codex), effort max**.
+[Home 12](12_height_dependent_heat_contours/README.md) studies whether a shrinking negative-time deformation makes the original time-zero cap easier to bound. The [overview](12_height_dependent_heat_contours/research-overview/01_HEIGHT_DEPENDENT_HEAT_CONTOURS_PROGRAM_20261023.md) prioritizes the complete cap-and-connector lower bound, with collision exclusion as a later consumer. The [HDC register](12_height_dependent_heat_contours/research-progress/01_HEIGHT_DEPENDENT_HEAT_CONTOURS_PROGRESS_20261023.md) owns execution; HDC-00 is organization complete and HDC-01 is Unstarted. The founding notes and unique conversation archive remain in the [brainstorm folder](brainstorm/README.md). Prepared for Edward Baker with substantial LLM assistance, **gpt-6-astra (Codex), effort max**.
 
 ## Project homes
 

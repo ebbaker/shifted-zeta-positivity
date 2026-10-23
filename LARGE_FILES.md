@@ -3,7 +3,7 @@
 This repository is archived whole at every release tag (Zenodo takes the tag's
 tree), it is meant to be cloned by verifiers and formalizers, and its history
 should stay small enough that a clone is quick. Git therefore holds **sources
-and small records** — LaTeX, code, PDFs, JSON certificates, hashes, notes — and
+and small records** — LaTeX, code, JSON certificates, hashes, notes — and
 **no large derived data**. This file states the convention and the procedure
 that goes with it. The worked instances are [Weil-depth](papers/weil-positivity/shifted-zeta/weil-depth/ARCHIVES.md)
 (about 122 MB of ball matrices) and [storage-depth](papers/weil-positivity/shifted-zeta/storage-depth/ARCHIVES.md)
@@ -13,7 +13,8 @@ describe the data and any availability limits.
 ## 1. The convention
 
 1. **Size.** Every committed file stays below about 1 MB. The largest tracked
-   files today are compiled PDFs of 350–700 KB. Anything larger needs a reason
+   files include released PDFs of 350–700 KB. Generated working-draft PDFs
+   follow rule 8 regardless of size. Anything larger needs a reason
    written into the commit message, and anything above 5 MB is not committed
    at all. (GitHub warns at 50 MB and refuses files above 100 MB; long before
    that, history bloat is the real cost, because a blob committed once stays
@@ -58,6 +59,16 @@ describe the data and any availability limits.
    deposited as its own Zenodo *dataset* record before release and linked
    from the root `.zenodo.json` by related identifier — never committed and
    never left on a drive.
+8. **Working manuscript PDFs.** Keep generated draft PDFs out of individual
+   paper, investigation, manuscript, notes, review and snapshot folders. Build
+   local reading copies into the repository-root `output/pdf/<paper-or-investigation>/`
+   directory, which is ignored by Git, or into a temporary directory outside
+   the repository. Retain the editable TeX sources, build instructions and
+   small build records in the research folder; do not commit the generated
+   draft PDF, even when it is below the size limit. When updating a draft
+   with a colocated PDF, move its reading copy to the shared output location
+   and repair current documentation links. This rule does not remove existing
+   released PDFs or alter historical snapshots and chat transcripts.
 
 ## 2. Where the data live
 

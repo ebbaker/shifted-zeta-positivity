@@ -14,11 +14,7 @@ records.
   additional brainstorm are recorded, with discussion to narrow the options
   intended.
 
-- [Investigations 4](investigations-4/README.md): continuation on structural
-  cancellation, Rodgers–Tao renormalization, and shrinking backward-time
-  contours, following the assessment of the topological transport paper.
-  Added 23 October 2026 for Edward Baker with substantial LLM assistance,
-  **gpt-6-astra (Codex), effort max**.
+- [Investigations 4 brainstorm](../investigations-4/brainstorm/README.md) and [Investigation 12 brainstorm](../investigations-4/12_height_dependent_heat_contours/brainstorm/README.md) now live inside their research homes, following the author's 23 October 2026 affiliation correction. The [former location](investigations-4/README.md) retains a historical pointer.
 
 Start with the repository's [result summaries](../../result-summaries/README.md)
 and [patterns to avoid](../../avoid/README.md). Earlier brainstorming within

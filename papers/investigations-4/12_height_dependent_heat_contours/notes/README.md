@@ -4,7 +4,7 @@
 
 Save incremental derivations here and link them from the [progress register](../research-progress/01_HEIGHT_DEPENDENT_HEAT_CONTOURS_PROGRESS_20261023.md). HDC-01's finite-band contract and HDC-02's exact expression are recorded below. The new analytical priority is HDC-07 source control of the filtered pair spectrum; the finite-cap source acquisition remains open in parallel.
 
-The [founding brainstorm](../../../brainstorm/investigations-4/notes/02_MOVING_COLLAR_MATERIAL_ENERGY_AND_HEIGHT_DEPENDENT_EPSILON_20261023.md) retains the inherited identities and conditional radius at its original path. The [program README](../README.md) supplies the complete reading path.
+The [founding brainstorm](../../brainstorm/notes/02_MOVING_COLLAR_MATERIAL_ENERGY_AND_HEIGHT_DEPENDENT_EPSILON_20261023.md) retains the inherited identities and conditional radius in the series-wide Investigations 4 brainstorm. The [program README](../README.md) supplies the complete reading path.
 
 [Continuation note](01_CONTINUATION_HEIGHT_DEPENDENT_HEAT_CONTOURS_20261023.md): agreed objective, inherited tools, next bounded task and archive verification. This historical handoff left HDC-01 Unstarted; the execution update below supersedes that status.
 
@@ -41,3 +41,7 @@ Actual-source and manuscript continuation, 23 October 2026, **gpt-6-astra, ultra
 - [Note 14](14_MICROSCOPIC_COMPLETE_REFERENCE_AND_HEAT_DEFECT_20261023.md): corrected analytic microscopic reference, explicit field/heat-defect budgets, and remaining wall/complex-time gates.
 - [Note 15](15_COMPLETE_PHYSICAL_CAP_COMPARISON_20261023.md): every original cap face enclosed at 512 spatial leaves; both lower endpoints negative, no demonstrated gain.
 - [Note 16](16_RESEARCH_RESET_AND_NEXT_STEPS_20261023.md): critical research reset, ranked next steps and stopping rules, accompanying the [working manuscript](../manuscript/main.tex).
+
+Clarification, 23 October 2026, **gpt-6.1-sol, effort xhigh**:
+
+- [Note 17](17_STATISTICAL_MECHANICS_AND_FOREST_RESPONSE_20261023.md): statistical-mechanics dictionary, heat threshold, exact forest edge-count variance and its bump filter, with links to existing Lee-Yang and root-relaxation work. Explanatory identities only.
