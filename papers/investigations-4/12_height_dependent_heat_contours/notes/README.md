@@ -45,3 +45,5 @@ Actual-source and manuscript continuation, 23 October 2026, **gpt-6-astra, ultra
 Clarification, 23 October 2026, **gpt-6.1-sol, effort xhigh**:
 
 - [Note 17](17_STATISTICAL_MECHANICS_AND_FOREST_RESPONSE_20261023.md): statistical-mechanics dictionary, heat threshold, exact forest edge-count variance and its bump filter, with links to existing Lee-Yang and root-relaxation work. Explanatory identities only.
+
+23 October 2026, **gpt-6-astra, ultra**: [Note 18](18_RELATIVE_FLUX_AND_ANALYTIC_MANUSCRIPT_SELECTION_20261023.md) records the selective analytic manuscript, moving reference determinant, ordered theta source improvement and what remains in the first research draft. [Internal review](../reviews/15_RELATIVE_FLUX_ANALYTIC_MANUSCRIPT_REVIEW_20261023.md).

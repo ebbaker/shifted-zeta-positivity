@@ -24,3 +24,5 @@ Source and manuscript continuation, 23 October 2026, **gpt-6-astra, ultra**:
 - [Review 12](12_MICROSCOPIC_REFERENCE_AND_HEAT_DEFECT_REVIEW_20261023.md): analytic correction, finite derivative budgets and 74 Arb algebra controls.
 - [Review 13](13_COMPLETE_PHYSICAL_CAP_COMPARISON_REVIEW_20261023.md): every face, coupled sigma subtraction, denominator handling and the bounded inconclusive lower bounds.
 - [Review 14](14_MANUSCRIPT_AND_RESEARCH_RESET_REVIEW_20261023.md): manuscript cross-review, applied scope corrections, build and visual checks. All reviews are internal same-model work, not specialist refereeing.
+
+23 October 2026, **gpt-6-astra, ultra**: [Review 15](15_RELATIVE_FLUX_ANALYTIC_MANUSCRIPT_REVIEW_20261023.md) checks the selective moving-boundary manuscript, current limit, arithmetic source ordering, controls and rendering. Separate same-model internal review; useful high-height flux and earlier nonreal discrimination remain open.

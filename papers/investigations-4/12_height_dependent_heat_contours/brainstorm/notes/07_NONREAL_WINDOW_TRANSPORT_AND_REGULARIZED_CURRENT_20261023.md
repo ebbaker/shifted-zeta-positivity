@@ -6,6 +6,10 @@
 
 This executes the opening task in [Continuation 05][continuation]: OBF-01 and the representation/error part of OBF-02. The [result index][results] and [avoid index][avoid], especially [classification][a01], [control premises][a02], [numerics before structure][a10], [coupled estimates][a12] and [scoped conclusions][a07], govern the claims. The inherited [finite hard-wall derivation][previous], [earlier-time consumer][earlier], [total-divisor regularization][regularization], [coefficient theorem][coefficient], [physical contours][contours] and [current HDC snapshot][snapshot] are distinct inputs. The [self-review][review] records the proof checks and remaining limitations.
 
+**Continuation update, 23 October 2026 (gpt-6-astra, ultra):** [Note 08](08_ANCHORED_SMALL_VALUES_AND_EXACT_CURRENT_LIMIT_20261023.md) proves the exact fixed-field current limit and derives an anchored quantitative small-value bound, with a coarse complete-source theta application. The historical opening record below is retained. Useful normalized high-height size, earlier nonreal mass, and improved width remain open; see the [current register][progress-update].
+
+[progress-update]: ../research-progress/01_OPEN_BOUNDARY_FLUX_PROGRESS_20261023.md
+
 ## 1. Finite convention and the hard-wall audit
 
 Put I=[a,0], a<0. Work with H(t,z) jointly holomorphic on a complex neighborhood of I times a spatial neighborhood of the compact sets used below, real type for real t, and H_t=-H_zz. No spatial slice is identically zero. Joint analyticity is an explicit sufficient hypothesis; no assertion about arbitrary nonanalytic heat solutions is needed. The canonical theta integral satisfies it on every compact set.

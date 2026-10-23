@@ -2,6 +2,8 @@
 
 23 October 2026, America/New_York. Prepared for **Edward Baker** with substantial LLM assistance. Actual recorded model **gpt-6-astra (Codex)**, reasoning effort **max**.
 
+**Forward pointer, 23 October 2026:** this is the historical opening handoff. Its finite transport/current tasks were completed in Notes 07–08 and extended in the selective manuscript. Use [Continuation 09](09_CONTINUATION_BOOK_PROOF_AND_ARITHMETIC_RELATIVE_FLUX_20261023.md) for the current high-level brainstorm and full context. This pointer was added for Edward Baker with LLM assistance, **gpt-6-astra, ultra**; the original provenance and historical instructions below are preserved.
+
 ## The author's request
 
 Investigate whether allowing zeros to enter a bounded heat-flow region, with an estimated flux allowance, can permit a useful larger backward width ε at high height and strengthen the estimating tools. **Focus on analytic goals. Numerics have a supporting role.** Start from proofs and source-specific inequalities; do not make a numerical acquisition, a parameter scan or a search for a large ε the opening research task.
