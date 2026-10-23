@@ -1,0 +1,188 @@
+\section{Quadratic subtraction with a bounded full remainder}\label{sec:remainders}
+
+Continue with the disk and unit factor in \eqref{eq:diskpair}--\eqref{eq:eta}.
+Assume throughout this section that
+\begin{equation}\label{eq:unitbudgets}
+ |V|\ge\nu>0,\qquad |b'|\le L,\qquad |b''|\le K
+ \quad\hbox{on }\overline{D(C,R)},\qquad b=V^{-1/2}.
+\end{equation}
+These are explicit budgets on a fixed disk. Uniformity below means
+independence of the branch separation within a family for which the same
+$R,\nu,L,K$ work. Section~\ref{sec:heat} derives such budgets from the
+complete canonical source on an event-dependent chart.
+
+\subsection{The mean core coefficient and an exact primitive}
+\begin{lemma}[The core mean]\label{lem:coremean}
+With the plus marking of Section~\ref{sec:geometry},
+\begin{equation}\label{eq:cmean}
+ c:=\frac{q}{2\pi\ii}
+   =\frac1\pi\int_0^\pi b(m+a\cos\theta)\dd\theta.
+\end{equation}
+Writing $b_0=b(m)$, one has
+\begin{equation}\label{eq:cerror}
+ |c|,|b_0|\le\nu^{-1/2},\qquad |c-b_0|\le\frac{Ka^2}{4}.
+\end{equation}
+If $V$ is real and nonzero on the slit $[\alpha,\beta]$, then $c\ne0$.
+\end{lemma}
+\begin{proof}
+Shrink the plus contour counterclockwise onto the slit. On its upper
+bank $y_0=\ii\sqrt{a^2-(z-m)^2}$ and the direction is from $\beta$
+to $\alpha$; the lower bank has the opposite square root and direction.
+Their contributions add to
+\[
+ q=2\ii\int_\alpha^\beta
+       \frac{b(x)}{\sqrt{a^2-(x-m)^2}}\dd x.
+\]
+The endpoint arcs vanish in the local regular coordinate
+\eqref{eq:branchregular}. Substituting $x=m+a\cos\theta$ proves
+\eqref{eq:cmean}. The bound for $c$ follows by averaging $|b|$.
+Taylor's formula on the real segment gives
+\[
+ b(m+h)=b_0+h b'(m)+h^2\int_0^1(1-t)b''(m+th)\dd t.
+\]
+The mean of $\cos\theta$ is zero and that of $\cos^2\theta$ is $1/2$,
+proving the second estimate. For real nonzero $V$, its sign is constant
+on the slit. The coherent $b$ has one fixed phase times a strictly
+positive real function there, so its average cannot vanish. For a general
+complex unit no such nonvanishing assertion is made.
+\end{proof}
+
+\begin{proposition}[Exact quadratic subtraction]\label{prop:subtract}
+There is a single-valued holomorphic function $G$ on the whole cover,
+normalized by $G(\beta)=0$, such that
+\begin{equation}\label{eq:Gdecomp}
+ \omega=c\eta+\dd G,\qquad G=y_0 f(z),
+\end{equation}
+where $f$ is holomorphic on the base disk and satisfies
+\begin{equation}\label{eq:fode}
+ ((z-m)^2-a^2)f'(z)+(z-m)f(z)=b(z)-c.
+\end{equation}
+If $\Eo$ is the full energy of $\eta$, then
+\begin{equation}\label{eq:exactsubtract}
+ \E=|c|^2\Eo+
+ 2\re\left[\bar c\frac{\ii}{2}\int_{\partial X}G\bar\eta\right]
+       +\frac{\ii}{2}\int_{\partial X}G\dd\bar G.
+\end{equation}
+Here $\partial X$ consists of the two physical boundaries.
+\end{proposition}
+\begin{proof}
+The only period of $\omega-c\eta$ is $q-2\pi\ii c=0$. Its path
+integral is therefore a single-valued holomorphic primitive $G$.
+The differential changes sign under sheet interchange, so
+$G\circ\iota+G$ is constant. Its value at the fixed point $\beta$
+is zero, proving that $G$ is odd and, in particular, also vanishes at
+$\alpha$. The quotient $G/y_0$ is even and descends away from the two
+branches. At either branch use $z-\gamma=\zeta^2$. Both $G$ and
+$y_0$ are odd in $\zeta$, while $y_0/\zeta$ is nonzero. Their quotient
+extends holomorphically. Differentiation of $G=y_0 f$ proves
+\eqref{eq:fode}.
+
+Expand the energy of $c\eta+\dd G$. The two mixed integrals are complex
+conjugates. For one of them,
+$\dd(G\bar\eta)=\dd G\wedge\bar\eta$, and the last term is
+$\dd(G\dd\bar G)=\dd G\wedge\dd\bar G$. Stokes gives
+\eqref{eq:exactsubtract}. These correction forms are single-valued;
+paired cut edges cancel, so no relative or physical contribution was
+suppressed. The mixed term in \eqref{eq:exactsubtract} is essential.
+\end{proof}
+
+\subsection{Uniform energy estimates}
+Set $\delta=m-C$, $R_-=R-|\delta|$, $R_+=R+|\delta|$. Disk inclusion
+about $m$ and \eqref{eq:quadbounds} give
+\begin{equation}\label{eq:shiftedsandwich}
+ 4\pi\arcosh(R_-/a)\le\Eo
+ :=2\int_{D(C,R)}\frac{\dd A}{|z-\alpha||z-\beta|}
+ \le4\pi\arsinh(R_+/a).
+\end{equation}
+The roots are interior, so $R_->a$ and $R_+<2R$.
+
+\begin{theorem}[Bounds independent of the gap]\label{thm:remainder}
+Under \eqref{eq:unitbudgets}, define
+\begin{align}
+ C_{\osc}&=\frac{8\pi RL}{\sqrt\nu}+8\pi R^2L^2,\label{eq:Cosc}\\
+ C_E&=C_{\osc}+\frac{8\pi KR^2}{\sqrt\nu}.\label{eq:CE}
+\end{align}
+Then the complete energy satisfies
+\begin{equation}\label{eq:energyremainders}
+ |\E-|b_0|^2\Eo|\le C_{\osc},\qquad
+ |\E-|c|^2\Eo|\le C_E.
+\end{equation}
+\end{theorem}
+\begin{proof}
+For any $\gamma$ in the disk, let $\rho(\theta)$ be the exit distance
+along the ray from $\gamma$ in direction $\theta$. Polar integration
+and Cauchy--Schwarz give
+\[
+ \int_{D(C,R)}\frac{\dd A}{|z-\gamma|}
+ =\int_0^{2\pi}\rho(\theta)\dd\theta
+ \le\sqrt{2\pi\int_0^{2\pi}\rho(\theta)^2\dd\theta}=2\pi R.
+\]
+Put $d_1=|z-\alpha|$, $d_2=|z-\beta|$. Since
+$|z-m|\le(d_1+d_2)/2$ and $|z-m|<2R$,
+\begin{equation}\label{eq:weightedI}
+ I_1:=\int\frac{|z-m|}{d_1d_2}\dd A\le2\pi R,
+ \qquad
+ I_2:=\int\frac{|z-m|^2}{d_1d_2}\dd A\le4\pi R^2.
+\end{equation}
+All integrals here are over the full base disk. The straight segment
+from $m$ to $z$ remains in the disk, so $|b(z)-b_0|\le L|z-m|$.
+Expanding the square, including its mixed term, yields
+\[
+ \big||b(z)|^2-|b_0|^2\big|
+ \le2\nu^{-1/2}L|z-m|+L^2|z-m|^2.
+\]
+Multiply by $2/(d_1d_2)$ and apply \eqref{eq:weightedI}; this proves
+the first bound. By \eqref{eq:cerror},
+\[
+ \big||c|^2-|b_0|^2\big|\le\frac{Ka^2}{2\sqrt\nu}.
+\]
+Furthermore $\arsinh x\le x$ for $x\ge0$, whence
+$a^2\arsinh(R_+/a)\le aR_+\le R_+^2\le4R^2$.
+Using the upper bound in \eqref{eq:shiftedsandwich} proves the second
+estimate with exactly the constant \eqref{eq:CE}.
+\end{proof}
+
+\subsection{The relative period and the full boundary remainder}
+Let $\ell=C+R-m>a$. For the path from plus to minus through $\beta$,
+\begin{equation}\label{eq:preal}
+ p=-2\int_a^\ell\frac{b(m+y)}{\sqrt{y^2-a^2}}\dd y,
+ \qquad p_0=-2\arcosh(\ell/a).
+\end{equation}
+The negative sign records travel toward the branch on the plus sheet;
+the return on the minus sheet contributes the same integral.
+
+\begin{theorem}[Complete transverse and boundary bounds]\label{thm:payment}
+Put $C_p=4LR+2KR^2$. With the real contributions of
+Proposition~\ref{prop:cutallocation},
+\begin{align}
+ |p-cp_0|&\le C_p,\label{eq:pbound}\\
+ |E_{\cut}+\pi|c|^2p_0|&\le\pi|c|C_p,\label{eq:cutbound}\\
+ |E_{\phys}-|c|^2(\Eo+\pi p_0)|&\le C_E+\pi|c|C_p.
+ \label{eq:physbound}
+\end{align}
+These bounds retain the full physical boundary, not only a selected
+bounded subtotal.
+\end{theorem}
+\begin{proof}
+By \eqref{eq:preal} and $|b(m+y)-b_0|\le Ly$,
+\[
+ |p-b_0p_0|\le2L\int_a^\ell\frac{y}{\sqrt{y^2-a^2}}\dd y
+ =2L\sqrt{\ell^2-a^2}\le4LR.
+\]
+Since $\arcosh x\le x$ for $x\ge1$,
+\[
+ |b_0-c||p_0|\le\frac K2a^2\arcosh(\ell/a)
+ \le\frac K2\ell^2\le2KR^2.
+\]
+This proves \eqref{eq:pbound}. Now $q=2\pi\ii c$ gives
+$E_{\cut}=\im(\bar q p)/2=-\pi\re(\bar c p)$.
+Subtract the corresponding model to prove \eqref{eq:cutbound}.
+Finally $E_{\phys}=\E-E_{\cut}$; Theorem~\ref{thm:remainder} and
+\eqref{eq:cutbound} prove \eqref{eq:physbound}.
+\end{proof}
+
+Both model boundary payments still have logarithmic growth. The bounded
+remainders locate that growth precisely and keep the algebra complete;
+they do not make the endpoint energy finite. In particular, boundedness
+of $G$ in an unquantified family is neither assumed nor needed in the
+proof of the estimates.

@@ -1,0 +1,505 @@
+% Prepared for Edward Baker, 22 October 2026.
+% LLM assistance: gpt-6-astra (Codex), effort ultra, inherited parent configuration.
+% Standalone manuscript fragment: requires amsmath, amssymb, amsthm and
+% theorem/lemma/proposition/corollary/remark environments in the main document.
+
+\section{Finite pair matrices and the complete heat dynamics}
+\label{pm:section}
+
+A pair statistic becomes useful for this problem only after its
+population, spatial normalization, singular weights, and exterior
+contribution have been specified.  This section works with a fixed finite
+population.  Its matrix is the inverse-square graph Laplacian, which is
+also the Hessian of the logarithmic pair energy.  The subsequent canonical
+theta application proves convergence to a clock matrix by a direct
+complete-source concentration estimate.  No random ensemble or statistical
+universality assumption enters either argument.
+
+\subsection{A finite inverse-square matrix}
+\label{pm:matrix-subsection}
+
+For an ordered configuration
+\(x=(x_1,\ldots,x_m)\), where \(x_1<\cdots<x_m\) and \(m\ge2\), set
+\begin{equation}
+ S_i(x)=\sum_{j\ne i}\frac1{x_i-x_j},\qquad
+ W_{ij}(x)=\frac1{(x_i-x_j)^2}\quad(i\ne j).
+ \label{pm:S-and-W}
+\end{equation}
+Define the real symmetric matrix \(\mathcal L(x)\) by
+\begin{equation}
+ \mathcal L(x)_{ij}=-W_{ij}(x)\quad(i\ne j),\qquad
+ \mathcal L(x)_{ii}=\sum_{j\ne i}W_{ij}(x).
+ \label{pm:laplacian-definition}
+\end{equation}
+For every \(v\in\mathbb R^m\),
+\begin{equation}
+ v^{\mathsf T}\mathcal L(x)v
+   =\sum_{i<j}\frac{(v_i-v_j)^2}{(x_i-x_j)^2}.
+ \label{pm:quadratic-form}
+\end{equation}
+In particular \(\mathcal L(x)\) is positive semidefinite, its kernel is
+exactly the constant vectors, and all its other eigenvalues are positive.
+The positivity is a statement about a configuration at one time; by
+itself it gives no sign for the time derivative of this matrix.
+
+\begin{theorem}[Finite clock-matrix comparison]
+\label{pm:clock-matrix}
+Let \(c_i=c_0+i-1\), \(1\le i\le m\), and let
+\(\mathcal L_* =\mathcal L(c)\).  Suppose
+\begin{equation}
+ |y_i-c_i|\le\delta\quad(1\le i\le m),\qquad 0\le\delta<\tfrac12.
+ \label{pm:clock-error}
+\end{equation}
+Then the points \(y_i\) are strictly increasing and
+\begin{equation}
+ (1+2\delta)^{-2}\mathcal L_*
+   \preceq\mathcal L(y)
+   \preceq(1-2\delta)^{-2}\mathcal L_*.
+ \label{pm:loewner-comparison}
+\end{equation}
+Here \(A\preceq B\) means that \(B-A\) is positive semidefinite.
+Furthermore,
+\begin{equation}
+ \|\mathcal L(y)-\mathcal L_*\|_{\mathrm{op}}
+ \le16\delta\sum_{d=1}^{m-1}(d-2\delta)^{-3}.
+ \label{pm:operator-comparison}
+\end{equation}
+Writing \(0=\lambda_1<\lambda_2\le\cdots\le\lambda_m\) for the
+ordered eigenvalues, one has
+\begin{equation}
+ \lambda_2(\mathcal L_*)\ge\frac{m}{(m-1)^2},\qquad
+ \|\mathcal L_*\|_{\mathrm{op}}
+   \le4\sum_{d=1}^{m-1}d^{-2}.
+ \label{pm:clock-spectrum}
+\end{equation}
+Every nonzero eigenvalue of \(\mathcal L(y)\) satisfies the corresponding
+multiplicative bounds in \eqref{pm:loewner-comparison}.
+\end{theorem}
+
+\begin{proof}
+If \(i<j\) and \(d=j-i\), then
+\begin{equation}
+ d-2\delta\le y_j-y_i\le d+2\delta.
+ \label{pm:gap-comparison}
+\end{equation}
+Since \(d\ge1\), these inequalities imply positivity of every adjacent
+gap and
+\[
+ (1-2\delta)d\le y_j-y_i\le(1+2\delta)d.
+\]
+Insert the resulting inverse-square bounds into
+\eqref{pm:quadratic-form} to obtain
+\eqref{pm:loewner-comparison}.
+
+On the positive interval between \(d\) and \(y_j-y_i\), the derivative
+of \(r^{-2}\) has absolute value at most \(2(d-2\delta)^{-3}\).
+The mean-value theorem therefore gives
+\[
+ \left|W_{ij}(y)-\frac1{(j-i)^2}\right|
+ \le\frac{4\delta}{(|j-i|-2\delta)^3}.
+\]
+The sum of the absolute values in a row of a Laplacian difference is at
+most twice the sum of its absolute weight differences.  There are at most
+two indices at each label distance \(d\).  Consequently every absolute
+row sum is bounded by the right side of
+\eqref{pm:operator-comparison}.  For a real symmetric matrix its operator
+norm is at most its maximum absolute row sum, proving that estimate.
+
+Every clock weight is at least \((m-1)^{-2}\).  If
+\(\sum_i v_i=0\), the elementary identity
+\[
+ \sum_{i<j}(v_i-v_j)^2=m\sum_i v_i^2
+\]
+therefore proves the first bound in \eqref{pm:clock-spectrum} by the
+Rayleigh quotient.  The diagonal degree of any clock vertex is at most
+\(2\sum_{d=1}^{m-1}d^{-2}\), so its absolute Laplacian row sum is at most
+twice that quantity.  This proves the second bound.  The eigenvalue
+comparisons follow from the minimum--maximum characterization of the
+ordered eigenvalues on the common orthogonal complement of constants.
+\end{proof}
+
+The physical normalization matters.  If \(y=\alpha x\), \(\alpha>0\),
+then
+\begin{equation}
+ S(x)=\alpha S(y),\qquad
+ \mathcal L(x)=\alpha^2\mathcal L(y).
+ \label{pm:spatial-scaling}
+\end{equation}
+Thus convergence of \(\mathcal L(y)\) to a finite matrix is consistent
+with divergence of the physical inverse-square weights if
+\(\alpha\to\infty\).  The convergence statement and its spatial scale
+must always be given together.
+
+\subsection{Complete root motion and the logarithmic energy}
+\label{pm:root-motion-subsection}
+
+Let \(H(t,z)\) be continuously differentiable in real \(t\), holomorphic
+in \(z\), real for real \(t,z\), and satisfy
+\begin{equation}
+ H_t=-H_{zz}.
+ \label{pm:heat-equation}
+\end{equation}
+On a real time interval \(I\), let \(x_1(t)<\cdots<x_m(t)\) be distinct
+simple real zeros, with their labels continued continuously.  Implicit
+differentiation makes each label continuously differentiable.  Put
+\[
+ P(t,z)=\prod_{i=1}^m(z-x_i(t)),\qquad H(t,z)=U(t,z)P(t,z).
+\]
+The quotient is interpreted by removable continuation at the selected
+roots.  It is nonzero near each of them.  Define
+\begin{equation}
+ b_i(t)=\frac{U_z(t,x_i(t))}{U(t,x_i(t))}.
+ \label{pm:exterior-unit}
+\end{equation}
+These numbers are real.  They retain every zero outside the selected
+finite population and every nonzero factor of the field.  No infinite
+root sum is being truncated or reordered.  A globally proper cluster
+provides one convenient way to construct \(U\), but the calculations
+below require only these regular local factorizations along the roots.
+
+\begin{proposition}[Complete finite-cluster dynamics]
+\label{pm:complete-root-dynamics}
+Under the preceding assumptions,
+\begin{equation}
+ x_i'=2S_i(x)+2b_i.
+ \label{pm:root-equation}
+\end{equation}
+For \(i\ne j\), one has
+\begin{align}
+ \frac{x_i'-x_j'}{x_i-x_j}
+  &=\frac4{(x_i-x_j)^2}
+   -2\sum_{k\ne i,j}
+        \frac1{(x_i-x_k)(x_j-x_k)}
+   +2\frac{b_i-b_j}{x_i-x_j},
+ \label{pm:gap-evolution}\\
+ W_{ij}(x)'&=-2W_{ij}(x)\frac{x_i'-x_j'}{x_i-x_j}.
+ \label{pm:physical-weight-evolution}
+\end{align}
+\end{proposition}
+
+\begin{proof}
+Differentiate \(H(t,x_i(t))=0\), use
+\eqref{pm:heat-equation}, and divide by the nonzero \(H_z(t,x_i)\):
+\[
+ x_i'=\frac{H_{zz}(t,x_i)}{H_z(t,x_i)}.
+\]
+At a root, \(H_z=UP_z\) and \(H_{zz}=UP_{zz}+2U_zP_z\).
+Writing \(P=(z-x_i)\prod_{j\ne i}(z-x_j)\) gives
+\[
+ \frac{P_{zz}(x_i)}{P_z(x_i)}
+   =2\sum_{j\ne i}\frac1{x_i-x_j}.
+\]
+This proves \eqref{pm:root-equation}.  Next,
+\[
+ S_i-S_j=\frac2{x_i-x_j}
+ -(x_i-x_j)\sum_{k\ne i,j}
+       \frac1{(x_i-x_k)(x_j-x_k)}.
+\]
+Subtracting the two root equations proves
+\eqref{pm:gap-evolution}.  Ordinary differentiation of
+\((x_i-x_j)^{-2}\) proves
+\eqref{pm:physical-weight-evolution}.
+\end{proof}
+
+Define the squared Vandermonde and its negative logarithm by
+\begin{equation}
+ \Delta(x)=\prod_{i<j}(x_j-x_i)^2,
+ \qquad E(x)=-\log\Delta(x).
+ \label{pm:energy-definition}
+\end{equation}
+These are functions on the ordered simple-root chamber.  The energy is
+singular at a collision; none of its differential formulas below is
+asserted at the collision itself.
+
+\begin{lemma}[Pair identities and the forced energy balance]
+\label{pm:forced-energy}
+On that chamber,
+\begin{equation}
+ \nabla E=-2S,\qquad \nabla^2E=2\mathcal L(x),\qquad
+ \|S(x)\|^2=2\sum_{i<j}(x_i-x_j)^{-2}.
+ \label{pm:energy-identities}
+\end{equation}
+Along the complete heat motion,
+\begin{align}
+ E'
+  &=-4\|S\|^2-4S\mathbin{\cdot}b\notag\\
+  &=-8\sum_{i<j}(x_j-x_i)^{-2}
+    -4\sum_{i<j}\frac{b_j-b_i}{x_j-x_i}.
+ \label{pm:forced-energy-balance}
+\end{align}
+Equivalently,
+\begin{equation}
+ (\log\Delta)'=P_{\mathrm{pair}}+B_{\mathrm{ext}},\qquad
+ P_{\mathrm{pair}}=8\sum_{i<j}(x_j-x_i)^{-2},\quad
+ B_{\mathrm{ext}}=4\sum_{i<j}\frac{b_j-b_i}{x_j-x_i}.
+ \label{pm:complete-discriminant-balance}
+\end{equation}
+\end{lemma}
+
+\begin{proof}
+Differentiating \(-2\sum_{i<j}\log(x_j-x_i)\) gives the gradient
+and Hessian.  In the expansion of \(\sum_i S_i^2\), the diagonal
+summands give twice the inverse-square pair sum.  For every unordered
+triple of distinct coordinates \(a,b,c\), the remaining terms cancel by
+\[
+ \frac1{(a-b)(a-c)}+
+ \frac1{(b-a)(b-c)}+
+ \frac1{(c-a)(c-b)}=0.
+\]
+This proves the last identity in \eqref{pm:energy-identities}.
+Also, grouping the two terms belonging to each unordered pair gives
+\[
+ S\mathbin{\cdot}b
+ =\sum_{i<j}\frac{b_j-b_i}{x_j-x_i}.
+\]
+The chain rule, \(\nabla E=-2S\), and
+\eqref{pm:root-equation} now give
+\eqref{pm:forced-energy-balance}; changing sign proves
+\eqref{pm:complete-discriminant-balance}.
+\end{proof}
+
+The first term in \eqref{pm:forced-energy-balance} is negative, but the
+second has no sign under the stated assumptions.  Positivity of the
+pair matrix does not remove it.  In fact, the canonical application in
+Corollary~\ref{pm:theta-cumulative-cancellation} shows that the physical
+pair energy tends to positive infinity for every fixed late-time block.
+Consequently that energy cannot be nonincreasing on an entire late-time
+tail of the actual theta motion.  This conclusion needs no differentiation
+of an asymptotic location error.
+
+\subsection{Normalized matrix evolution and a centered contraction bound}
+\label{pm:normalized-subsection}
+
+Let \(\alpha(t)>0\) be continuously differentiable and put
+\(y_i=\alpha x_i\), \(r=\alpha'/\alpha\).  The normalized equation is
+\begin{equation}
+ y'=2\alpha^2S(y)+f,\qquad f=ry+2\alpha b.
+ \label{pm:normalized-root-equation}
+\end{equation}
+In particular the correctly normalized weight evolution is
+\begin{align}
+ W_{ij}(y)'
+  =-2W_{ij}(y)\biggl[
+      r+\frac{4\alpha^2}{(y_i-y_j)^2}
+       -2\alpha^2\sum_{k\ne i,j}
+          \frac1{(y_i-y_k)(y_j-y_k)}
+       +2\alpha\frac{b_i-b_j}{y_i-y_j}\biggr].
+ \label{pm:normalized-weight-evolution}
+\end{align}
+This formula follows either by differentiating \(W_{ij}(y)\) directly
+in \eqref{pm:normalized-root-equation}, or by differentiating
+\(W_{ij}(y)=\alpha^{-2}W_{ij}(x)\).  In particular the rescaling term
+\(r\) is present in the normalized formula, and the physical formula
+\eqref{pm:physical-weight-evolution} has no such term.
+
+Fix an ordered reference \(c\in\mathbb R^m\), independent of time.
+Let \(P_0v=v-m^{-1}(\sum_i v_i)\mathbf 1\) be orthogonal projection
+onto the mean-zero subspace, and define
+\begin{equation}
+ d=y-c,\quad d_0=P_0d,\qquad
+ R=ry+2\alpha b+2\alpha^2S(c).
+ \label{pm:centered-residual}
+\end{equation}
+The residual \(R\) is a complete forced residual.  Treating it as zero,
+or estimating only one of its summands, is an additional assertion about
+the field and is not part of the next theorem.
+
+\begin{theorem}[Centered forced contraction]
+\label{pm:centered-contraction}
+As long as \(y\) and \(c\) are strictly increasing,
+\begin{equation}
+ \frac12\frac{d}{dt}\|d_0\|^2
+ =-2\alpha^2\sum_{i<j}
+       \frac{(d_i-d_j)^2}{(y_i-y_j)(c_i-c_j)}
+   +d_0\mathbin{\cdot}P_0R.
+ \label{pm:exact-centered-contraction}
+\end{equation}
+Suppose in addition that \(c_i=c_0+i-1\) and
+\(|y_i-c_i|\le\delta(t)<1/2\), with a continuous nonnegative
+allowance \(\delta(t)\).  Set
+\begin{equation}
+ w_0(t)=\frac1{(m-1)(m-1+2\delta(t))},\qquad
+ \lambda(t)=2\alpha(t)^2m w_0(t).
+ \label{pm:contraction-rate}
+\end{equation}
+Then, on every compact time interval on which these bounds hold,
+\begin{align}
+ \|d_0(t)\|
+ &\le \exp\left(-\int_{t_0}^t\lambda(u)\,du\right)
+             \|d_0(t_0)\|\notag\\
+ &\quad+\int_{t_0}^t
+     \exp\left(-\int_s^t\lambda(u)\,du\right)
+             \|P_0R(s)\|\,ds.
+ \label{pm:contraction-convolution}
+\end{align}
+The mean has its separate equation
+\begin{equation}
+ \frac{d}{dt}\left(\frac1m\sum_i y_i\right)
+  =r\left(\frac1m\sum_i y_i\right)
+     +\frac{2\alpha}{m}\sum_i b_i.
+ \label{pm:center-equation}
+\end{equation}
+\end{theorem}
+
+\begin{proof}
+The identity
+\[
+ \frac1{y_i-y_j}-\frac1{c_i-c_j}
+  =-\frac{d_i-d_j}{(y_i-y_j)(c_i-c_j)}
+\]
+gives
+\[
+ S_i(y)-S_i(c)
+ =-\sum_{j\ne i}
+       \frac{d_i-d_j}{(y_i-y_j)(c_i-c_j)}.
+\]
+Both vectors \(S(y)\) and \(S(c)\) have component sum zero.
+Subtract their contribution in \eqref{pm:normalized-root-equation},
+project onto the mean-zero subspace, and pair with \(d_0\).  Grouping
+unordered pairs proves \eqref{pm:exact-centered-contraction}, since
+\(d_{0,i}-d_{0,j}=d_i-d_j\).
+
+For clock \(c\), both factors in each mixed denominator have the same
+sign.  Their absolute product is at most
+\((m-1)(m-1+2\delta)\).  The pair quadratic form is therefore at
+least
+\[
+ w_0\sum_{i<j}(d_i-d_j)^2=w_0m\|d_0\|^2.
+\]
+Cauchy--Schwarz in the forcing term gives, at times with
+\(\|d_0\|>0\),
+\[
+ \frac{d}{dt}\|d_0\|
+ \le-\lambda\|d_0\|+\|P_0R\|.
+\]
+At a zero of \(d_0\), the same statement holds for the upper right
+Dini derivative, directly from the differentiable vector equation.
+Equivalently one may regularize the norm and pass to the limit.
+Multiplication by the integrating factor yields
+\eqref{pm:contraction-convolution}.  Finally, summing
+\eqref{pm:normalized-root-equation} and using \(\sum_iS_i=0\)
+proves \eqref{pm:center-equation}.
+\end{proof}
+
+This theorem identifies the estimate a proposed source-based relaxation
+argument must pay: the centered, complete residual \(P_0R\).  It is not
+a proof that this residual has a favorable sign or a sufficiently small
+norm for theta.  Recovering \(R\) from already-known root motion is an
+exact diagnostic, but supplies no new independent decay mechanism.
+
+\subsection{The unforced polynomial model and its Hermite limit}
+\label{pm:hermite-subsection}
+
+The polynomial case supplies a rigorous calibration of what deterministic
+pair repulsion does achieve.  It also shows why regular late fibers alone
+do not exclude a multiple initial zero.
+
+\begin{theorem}[Deterministic Hermite relaxation]
+\label{pm:hermite-relaxation}
+Let \(P(t,z)\) be a monic real polynomial of degree \(m\) satisfying
+\(P_t=-P_{zz}\).  Suppose all its zeros are simple and real at some
+\(t_0>0\).  Then they remain simple and real for every \(t\ge t_0\).
+Let \(x_1(t)<\cdots<x_m(t)\), put
+\(u_i(t)=x_i(t)/\sqrt{2t}\), and set \(s=\log t\).  On the ordered
+chamber define
+\begin{equation}
+ V(u)=\frac14\sum_i u_i^2-\sum_{i<j}\log(u_j-u_i).
+ \label{pm:hermite-potential}
+\end{equation}
+This potential has a unique minimizer \(h\); its coordinates are the
+ordered roots of the monic probabilists' Hermite polynomial
+\(\operatorname{He}_m\), characterized by
+\[
+ Q''(z)-zQ'(z)+mQ(z)=0.
+\]
+The normalized motion and its estimates are
+\begin{align}
+ \frac{du}{ds}&=S(u)-\frac12u=-\nabla V(u),
+ \label{pm:hermite-gradient-flow}\\
+ \frac{d}{ds}V(u(s))&=-\|\nabla V(u(s))\|^2,
+ \label{pm:hermite-dissipation}\\
+ \|u(t)-h\|&\le\left(\frac{t_0}{t}\right)^{1/2}
+                              \|u(t_0)-h\|,
+ \label{pm:hermite-distance}\\
+ V(u(t))-V(h)&\le\frac{t_0}{t}
+                              \bigl(V(u(t_0))-V(h)\bigr).
+ \label{pm:hermite-energy-decay}
+\end{align}
+\end{theorem}
+
+\begin{proof}
+Initially the simple roots solve \(x'=2S(x)\), because the full
+polynomial has unit \(U=1\).  Differentiating \(x=\sqrt{2t}\,u\)
+and changing to \(s=\log t\) gives
+\eqref{pm:hermite-gradient-flow}.  Direct differentiation of
+\eqref{pm:hermite-potential} gives
+\[
+ \nabla V=\frac12u-S(u),\qquad
+ \nabla^2V=\frac12I+\mathcal L(u)\succeq\frac12I.
+\]
+The potential tends to positive infinity at a finite collision.
+It also tends to positive infinity as \(\|u\|\to\infty\): the
+quadratic term dominates the at-most-logarithmic negative contribution
+from each of the finitely many pair distances.  Its sublevel sets are
+therefore compact subsets of the ordered chamber.  Existence of a
+minimizer follows, and the displayed strict convexity on this convex
+chamber makes the minimizer unique.
+
+At this minimizer, \(2S_i(h)=h_i\).  If
+\(Q(z)=\prod_i(z-h_i)\), the same elementary root calculation used
+above yields \(Q''(h_i)/Q'(h_i)=2S_i(h)=h_i\).  Thus
+\(Q''-zQ'+mQ\) vanishes at all \(m\) distinct roots of \(Q\).
+Its leading term cancels, so its degree is at most \(m-1\); it is
+identically zero.  The monic polynomial satisfying this equation is
+unique by comparing coefficients in descending order.  It is precisely
+\(\operatorname{He}_m\).  This also proves its real, simple root
+property here, rather than importing that property into the minimization
+argument.
+
+The chain rule gives \eqref{pm:hermite-dissipation}.  The normalized
+trajectory cannot leave its initial compact sublevel set, so the smooth
+gradient equation extends for every finite forward \(s\), with all
+gaps positive.  Its coordinates reconstruct simple real zeros of the
+original polynomial: both obey the same locally unique root equation,
+and continuation gives their agreement.  Hence no later finite collision
+or loss of reality occurs.
+
+Strong convexity gives
+\[
+ (u-h)\mathbin{\cdot}(\nabla V(u)-\nabla V(h))
+       \ge\frac12\|u-h\|^2.
+\]
+Differentiate squared distance along the gradient flow and integrate to
+obtain \eqref{pm:hermite-distance}.  Also strong convexity at \(u\),
+with comparison point \(h\), implies
+\[
+ V(u)-V(h)
+ \le \nabla V(u)\mathbin{\cdot}(u-h)-\frac14\|u-h\|^2
+ \le\|\nabla V(u)\|^2.
+\]
+Together with \eqref{pm:hermite-dissipation} this gives exponential
+decay of the potential gap in \(s\), which is exactly
+\eqref{pm:hermite-energy-decay} in physical time.
+\end{proof}
+
+For a direct event calibration, the finite heat series gives
+\begin{equation}
+ e^{-t\partial_z^2}z^m
+ =\sum_{k=0}^{\lfloor m/2\rfloor}
+       \frac{(-t)^k m!}{k!(m-2k)!}z^{m-2k}
+ =(2t)^{m/2}\operatorname{He}_m\!\left(\frac z{\sqrt{2t}}\right).
+ \label{pm:exact-hermite-birth}
+\end{equation}
+Its normalized configuration is exactly \(h\) for every \(t>0\),
+while its time-zero polynomial has one zero of multiplicity \(m\).
+Perfect equilibrium of the normalized pair statistic therefore does not
+erase a past event.  This is a statement about the explicit polynomial
+class, not an exclusion of an arithmetic argument for the canonical
+source.  The deterministic minimizer in this theorem is one configuration;
+no random-matrix distribution has been produced.
+
+The stochastic comparison is different: Dyson Brownian motion includes
+diffusion and, in its stationary Gaussian version, a confining drift.
+Its equilibrium is a probability distribution, whereas the gradient
+flow above converges to one minimizing configuration; see
+Joyner--Smilansky~\cite{sc:JoynerSmilansky2015} for the stochastic equations.

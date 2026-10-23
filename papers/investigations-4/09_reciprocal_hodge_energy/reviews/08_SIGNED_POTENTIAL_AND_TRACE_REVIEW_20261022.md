@@ -1,0 +1,47 @@
+# Signed potential and completed trace internal review
+
+22 October 2026, America/New_York. Prepared for **Edward Baker** with substantial LLM assistance. Actual recorded model **gpt-6.1-sol (Codex), reasoning effort ultra**, verified from the current turn metadata.
+
+**Status: accepted as bounded internal interval-certified evidence; all three final consumers separately audited and replayed.** This review covers [Note15](../notes/15_SIGNED_CANONICAL_POTENTIAL_AND_COMPLETED_TRACE_20261022.md), its potential, added whole-cell bulk payment and independent direct trace. One agent separately audited/replayed the root's potential script. A second separately audited/replayed the root's whole-cell bulk script and a third agent's direct script. The root checked the derivations, interval directions, comparison and final saved files. All agents used the same model and effort and share source premises. No specialist human or cross-model validation is claimed.
+
+Read the [result index](../../../../result-summaries/README.md), [collision controls](../../../../result-summaries/12_collision_controls_and_screening.md) and [avoid index](../../../../avoid/README.md), particularly patterns01,02,05,07,08,10,11,12,13 and20. A finite signed estimate and measured interval gain are the outputs; no global sign or exclusion is inferred.
+
+## 1. Potential proof and first frozen acquisition
+
+The [potential contract](../numerics/07_SIGNED_POTENTIAL_CONTRACT_20261022.md), [script](../numerics/07_certify_signed_potential_20261022.py) and [receipt](../numerics/07_SIGNED_POTENTIAL_20261022.json) retain the unchanged t=0 xi/8 field, C=35,L=h=4sqrt2, source disk8, outer Cauchy radius16 and degree64 coefficient balls. The normalized Laplacian measure is exactly K=w''(s)w(v)+w(s)w''(v). Its constant and first cell moments use correct polynomial primitives. Complete signed cancellation is retained; a constant modulus contributes zero.
+
+Simultaneous Horner recurrences give the polynomial jet f,f',f''. The global third-derivative sum bounds all true cell segments in the convex radius8 source disk. Local derivative uppers D1,D2 derive a polynomial modulus floor before any division. With m>0 the Hessian norm of abs(f) is at most D2+D1²/m. The normalized affine gradients correctly include L. Exact signed moment integration and the residual times a complete absolute-kernel cell upper pay all kernel variation. A failing floor uses only the center modulus with its valid Lipschitz error, not an unproved affine term. Thus the method assumes no global nonvanishing. All8192 actual cells pass the stronger rule, with zero fallback cells.
+
+The true rectangle is covered because32+32=64; arbitrary rounding supersets are not assigned analytic source coverage. Complete source replacement is paid once by (epsilon_H+epsilon_Hprime)*12288/(875sqrt5), below8.03934e-19. This root-free potential payment is not asserted for the full bulk or trace. The first128x64 mesh has quadrature allowance about3.27652610e-7 and internal radius below5e-7, passing the frozen target. No256x128 refinement was used. Compact decimal ball text can print a coarser center/error; the exact rational endpoints and internal ball radius establish accuracy.
+
+The complete result is P in[0.00010703357776392685882717378096690,0.00010768888298556866975820630447975]. Subtracting only Note14's original disk lower gives the correct upper T<0.00010231023210. A positive potential and positive trace upper alone would not establish a trace sign. Nor could [P_lower-delta,P_upper-delta] be called a trace interval when delta is only a mass lower.
+
+## 2. Additional whole-cell bulk payment
+
+After that positive result, a [separate extension contract](../numerics/08_WHOLE_RECTANGLE_BULK_CONTRACT_20261022.md) froze exactly the same8192 cells. Its [script](../numerics/08_certify_whole_rectangle_bulk_20261022.py) imports the hash-bound potential helper and pins the accepted potential receipt and oracle. It acquires no new roots, support, coefficients or mesh.
+
+For each true cell, B=abs(f0)_upper+D1*r+epsilon_J bounds abs(J) above, and ell=max(0,abs(f1)_lower-D2*r-epsilon_Jprime) bounds abs(J') below. Therefore ell²/B is a valid density lower almost everywhere, including cells that might contain J zeros. It uses an upper denominator; no J floor is assumed for the lower. The exact positive phi integral is32 I0,s I0,v. The factor32 is retained because this weight has no Laplacian scale cancellation. Summing all cells gives M_lower>8.1471167782462868e-5, over15.147 times the previous local lower.
+
+An optional upper separately derives a=abs(f0)_lower-D1*r-epsilon_J and b'=abs(f1)_upper+D2*r+epsilon_Jprime. Only when every a>0 may the script sum32 I0,s I0,v (b')²/a. A failing cell marks the entire upper unavailable; it is not omitted. Every actual cell passes, with canonical J floor above3.62267e-6, yielding M_upper<9.4362657472936912e-5. Both complete source errors, coefficients and rounding remain. This floor is an acquired finite conclusion, not a replacement endpoint hypothesis.
+
+The [bulk receipt](../numerics/08_WHOLE_RECTANGLE_BULK_20261022.json) and opposite-endpoint subtraction give the area-derived T interval [1.2670920e-5,2.6217716e-5], with outward shortened endpoints. Shared-source correlations are conservatively enclosed; independence is not assumed. These density bounds do not assert a uniform source-to-bulk Lipschitz estimate through a collision.
+
+The first bulk run stopped before writing a receipt because a rational already on the chosen decimal lattice could not be uniquely redisplayed via a rounded ball and floor. The final script retains that imported lower endpoint as a literal rational string. Its mathematics, cell data and extension contract are unchanged. No failed receipt is installed.
+
+## 3. Independent direct trace and comparison
+
+The [direct contract](../numerics/07_DIRECT_TRACE_REFERENCE_CONTRACT_20261022.md), [portable script](../numerics/07_direct_trace_reference_20261022.py) and [receipt](../numerics/07_DIRECT_TRACE_REFERENCE_20261022.json) freeze1024 real cells and no refinement. Centered Taylor ranges of H,H',H'' correctly use polynomial remainders through H^(5), followed by complete derivative source errors. The coordinate L*s is correctly relative to the Taylor center35. Every E lower is acquired before division. Exact positive psi cell weights then enclose Q/sqrt(E) over every cell, not merely at centers. The script assumes no RH, LP regime, root list, Q sign or input floor.
+
+Its trace interval is[1.9523542402679458754e-5,1.9794808859088084100e-5], with relative width about1.37985%. Full cells also prove E>1.33538e-11 and Q>3.43170e-12 throughout the interval. These finite signs follow from source acquisition, not from regularity alone. The direct interval is strictly inside the area-derived interval and about49.9391 times narrower. No general optimality or method-cost ordering is claimed. The equally informed direct estimator can reuse all potential/bulk observations.
+
+P minus the direct trace gives the tighter mass interval[8.7238768e-5,8.8165341e-5]. That is a same-data consequence using the direct observation, not a new independent bulk acquisition or an independent improvement of the trace. The fixed positive Q certificate rules out a negative witness on this exact interval with a nonnegative cutoff; it does not rule out other regions or analytical regimes.
+
+A default-interpreter import probe performed no quadrature. The final direct script uses explicit --contract/--output arguments and sibling oracle imports; the earlier hardcoded staging paths were removed before its final replay. Its fixed mathematics and every arithmetic endpoint were unchanged by that portability correction. Timings are recorded but not used for a dominance claim.
+
+## 4. Separate replay and acceptance boundary
+
+All final replays used Python3.10.0, python-flint0.9.0 and192-bit Arb with the unchanged canonical oracle. The potential replay matches all24 top-level fields, every nested value and stored bytes exactly (receipt SHA2566986dcd06ffc8c6d253091591a6adc1d502884ae11c7e200ef782b02fc1c8bf8). The whole-cell bulk replay matches every field exactly. The direct replay matches every field except setup_seconds and consumer_seconds. Exact rational endpoints, source errors, derivative/denominator floors, conditions, script/contract/oracle hashes all match. Hashes identify the replayed data; the preceding audits supply the mathematical argument.
+
+Constant-modulus cancellation and H=cos z check the kernel and half-plane sign analytically. Quadratic/Hermite collisions retain the exact Green identity and endpoint sensitivity. The positive Gaussian-source control retains possible negative potential on other strips and fails the canonical source arithmetic/tail conjunction. Euler-factor, weighted-square/finite-prime, reflected and primitive controls retain their separate failed canonical premises; none is assigned the actual acquired theta coefficients or an unproved LP premise.
+
+Accept the bounded canonical potential, original lower-mass subtraction, stronger whole-cell bulk payment and resulting positive trace interval. Stop further precision aimed at obtaining a negative witness on this fixed window, since its complete Q sign is now paid. The original unweighted energy endpoint, all-height/event isolation, unweighted phase and BW09/BW10 signed-surplus/exclusion gates remain open. No manuscript change, global sign, new collision or specialist validation.

@@ -1,0 +1,161 @@
+\documentclass[11pt,letterpaper]{article}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage{microtype,booktabs,enumitem,xurl,xcolor}
+\usepackage[colorlinks=true,linkcolor=blue!45!black,citecolor=blue!45!black,urlcolor=blue!45!black]{hyperref}
+\hypersetup{pdftitle={Zero Counts, Heat Transport, and Localized Hodge Energy},pdfauthor={Drafted for Edward Baker}}
+\numberwithin{equation}{section}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\newcommand{\C}{\mathbb C}
+\newcommand{\R}{\mathbb R}
+\newcommand{\D}{\mathbb D}
+\newcommand{\ii}{\mathrm i}
+\newcommand{\re}{\operatorname{Re}}
+\newcommand{\im}{\operatorname{Im}}
+\newcommand{\dd}{\,d}
+\newcommand{\supp}{\operatorname{supp}}
+\setlist{itemsep=3pt,topsep=5pt}
+\setlength{\emergencystretch}{2em}
+\allowdisplaybreaks[2]
+\title{Zero Counts, Heat Transport,\\and Localized Hodge Energy}
+\author{Drafted for Edward Baker}
+\date{22 October 2026}
+\begin{document}
+\maketitle
+\begin{abstract}
+For a holomorphic function with nonzero boundary values, the
+derivative-weighted energy over the region $|f|<\varepsilon$ is exactly
+$4\pi\varepsilon$ times its zero count, provided $\varepsilon$ lies below
+the boundary amplitude. The formula includes every multiplicity and is
+the energy of the exact differential $2\,dw$ on the normalized cover
+$w^2=f$. We give a general power-energy and root-cover formulation,
+construct compact target-space regularizations of the divisor, and prove
+explicit field-error, boundary-bias and localization estimates. Harmonic
+reproduction gives second-order bias; complete disk and unit control
+give a weighted-divisor rate $O(\eta^{\min(1,2/m)})$ at an
+$m$-fold zero, with matching exponent examples.
+For analytic backward heat flow we prove the complete real cap-and-wall
+balance with event weight $\lfloor m/2\rfloor$, distinguish it from
+conserved complex multiplicity, and identify the complex discriminant
+residue $\binom m2$. We then derive finite inverse-square pair-matrix
+bounds and the complete forced root dynamics. An elementary concentration
+argument for the full theta source proves clock limits on explicit
+growing rank windows and fixed-population cumulative exterior cancellation. Finally, weighted pair-law
+transfer and exact physical cap formulas specify the additional
+small-gap, analytic-unit and phase information that such data require.
+The proofs are analytic and finite-domain; a numerical certificate is
+used only in a supporting appendix. No assertion of RH or endpoint
+simplicity is made.
+\end{abstract}
+\tableofcontents
+\input{sections/01_introduction}
+\input{sections/02_localized_energy}
+\input{sections/03_regularization}
+\input{sections/04_zero_transport}
+\input{sections/05_cover_geometry}
+\input{sections/06_pair_matrices}
+\input{sections/07_statistics_caps}
+\input{sections/08_theta_concentration}
+\input{sections/09_further_questions}
+\appendix
+\input{sections/10_supporting_certificate}
+\section*{Acknowledgements, provenance and status}
+\addcontentsline{toc}{section}{Acknowledgements, provenance and status}
+This manuscript was drafted for Edward Baker with substantial assistance
+from OpenAI's Codex, recorded model \texttt{gpt-6-astra}, reasoning effort
+\emph{ultra}. LLM assistance was used for derivation, checking, exposition
+and document preparation. Separate agents of the same model reviewed the
+transport, localized-energy and theta-concentration arguments. These are
+internal checks, not independent specialist or human validation.
+The divisor-stability and growing-window continuation used the recorded
+model \texttt{gpt-6-astra}, reasoning effort \emph{max}; its proof
+audit is a same-assistant self-review, not a separate review.
+
+The work consolidates and extends the author's research archive on
+physical jet geometry, relative Chern--Hopf charges, reciprocal Hodge
+energy and late heat caps~\cite{ResearchArchive}. In particular the real
+wall/birth identity and the complex event charge were established in
+earlier notes; their proofs are included here. The exact low-value count
+is a refinement of the same area formula used for the earlier full-energy
+count bound. Classical ingredients are identified in the text, and no
+priority claim is made. The manuscript is a working analytic treatment
+with the stated hypotheses and limitations. Its supporting numerical
+appendix imports an existing certificate rather than reporting a new
+computation. Detailed internal reviews and a source-to-result crosswalk
+are retained with the manuscript's research records.
+
+\begin{thebibliography}{99}
+\bibitem{RT}
+B.~Rodgers and T.~Tao,
+\emph{The de Bruijn--Newman constant is non-negative},
+Forum of Mathematics, Pi \textbf{8} (2020), e6.
+Corrected version, arXiv:1801.05914v5, 2021.
+\url{https://arxiv.org/abs/1801.05914}.
+The canonical source normalization is given in the introduction.
+
+\bibitem{sc:Montgomery1973}
+H.~L.~Montgomery,
+\emph{The pair correlation of zeros of the zeta function},
+in \emph{Analytic Number Theory}, Proceedings of Symposia in Pure
+Mathematics, vol.~24, American Mathematical Society, 1973, pp.~181--193.
+\url{https://www-personal.umich.edu/~hlm/paircor1.pdf}.
+
+\bibitem{sc:JoynerSmilansky2015}
+C.~H.~Joyner and U.~Smilansky, with an appendix by D.~B.~Zagier,
+\emph{Dyson's Brownian-motion model for random matrix theory---revisited},
+arXiv:1503.06417 [math-ph], 2015.
+\url{https://arxiv.org/abs/1503.06417}.
+
+\bibitem{Simon}
+L.~Simon, \emph{Introduction to Geometric Measure Theory}, 2014,
+Chapter~2, \S3, formulas (3.4)--(3.5), pp.~53--54.
+\url{https://web.stanford.edu/class/math285/ts-gmt.pdf}.
+
+\bibitem{Beauzamy}
+B.~Beauzamy, \emph{How the roots of a polynomial vary with its
+coefficients: a local quantitative result}, Canadian Mathematical
+Bulletin \textbf{42} (1999), 3--12.
+\url{https://doi.org/10.4153/CMB-1999-001-6}.
+
+\bibitem{Barlet}
+D.~Barlet, \emph{Fonctions de type trace}, Annales de l'Institut Fourier
+\textbf{33}, no.~2 (1983), 43--76.
+\url{https://doi.org/10.5802/aif.915}.
+
+\bibitem{PR}
+A.~Parusi\'nski and A.~Rainer,
+\emph{On the continuity of the solution map for polynomials},
+arXiv:2410.01326, 2024; author-hosted version consulted October 2026.
+\url{https://www.mat.univie.ac.at/~armin/publ/continuity_gen.pdf}.
+
+\bibitem{ResearchArchive}
+E.~Baker, \emph{Shifted-zeta-positivity research archive}, working notes
+prepared with LLM assistance, October 2026. Relevant source groups are
+Investigations~2/22 (physical jet geometry, Notes~04 and~06),
+Investigations~3/13/BW12 (relative Chern--Hopf foundations),
+Investigations~4/09 (reciprocal Hodge energy, Notes~08--09), and
+Investigations~4/11 (late heat caps, Notes~01--08).
+Repository: \url{https://github.com/ebbaker/shifted-zeta-positivity}.
+The accompanying manuscript README and analytic review give exact local
+source paths and distinguish inherited results from extensions proved here.
+
+\bibitem{RHErecord}
+E.~Baker, \emph{Actual regular theta fiber comparison},
+research note prepared with substantial LLM assistance,
+22 October 2026; associated outward-ball certificate and review in
+the research archive. Local source:
+\path{papers/investigations-4/09_reciprocal_hodge_energy/notes/04_ACTUAL_REGULAR_THETA_FIBER_COMPARISON_20261022.md}.
+This is the supporting numerical input of Appendix~\ref{app:numerics}
+only.
+\end{thebibliography}
+\end{document}

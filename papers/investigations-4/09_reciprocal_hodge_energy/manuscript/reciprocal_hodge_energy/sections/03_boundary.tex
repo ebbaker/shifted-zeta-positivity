@@ -1,0 +1,156 @@
+\section{Complete boundary identities}\label{sec:boundary}
+
+\subsection{The complex primitive and paired cuts}
+Cut the annulus along a simple relative arc connecting its two physical
+boundary components, obtaining a disk $D$. Choose a single primitive
+$F$ on this disk, $\dd F=\omega$, with one common additive constant.
+\begin{proposition}[Complete Stokes identity]\label{prop:stokes}
+With all cut edges and both physical boundaries given their induced
+orientations,
+\begin{equation}\label{eq:stokes}
+ \E=\frac{\ii}{2}\int_{\partial D}F\bar\omega.
+\end{equation}
+For a paired cut edge, let $e_+$ have its $\partial D$ orientation and
+identify $e_-$ oppositely under gluing. Then
+\begin{equation}\label{eq:jump}
+ \int_{e_+\cup e_-}F\bar\omega
+       =J_e\overline{P_e},\qquad
+ J_e=F_+-F_-,\quad P_e=\int_{e_+}\omega.
+\end{equation}
+The jump $J_e$ is constant; every unpaired physical arc remains in
+\eqref{eq:stokes}.
+\end{proposition}
+\begin{proof}
+Holomorphicity implies $\dd\bar\omega=0$, so
+$\dd(F\bar\omega)=\omega\wedge\bar\omega$. Stokes proves
+\eqref{eq:stokes}. On a paired edge the differential agrees under gluing
+and the orientations are opposite. Its two integrals therefore combine
+to $\int_{e_+}(F_+-F_-)\bar\omega$. The difference has zero differential,
+which proves both constancy and \eqref{eq:jump}.
+\end{proof}
+
+On a compact boundaryless surface, a symplectic polygon pairs all edges;
+the contributions are $A_j\bar B_j-B_j\bar A_j$, and hence
+$\E=\sum_j\im(\bar A_jB_j)$. This is the usual bilinear relation
+\cite[Section 3.1.2]{Grava}. On the present annulus there are unpaired
+physical boundaries. It has a relative transverse path, not a compact
+genus-one dual cycle. Capping those boundaries without extending the
+differential and accounting for its poles would not justify deleting them.
+
+\subsection{A real primitive on the whole annulus}
+Let $q=\int_c\omega$ on the counterclockwise plus core. Let $p$ be the
+integral along a fixed relative path from the plus basepoint over
+$z_*=C+R$ to its minus partner. Choose the path and core consistently;
+in the real two-root chart we take the path through $\beta$.
+Changing the relative path by a core adds an integer multiple of $q$,
+which leaves $\im(\bar q p)$ unchanged.
+
+\begin{theorem}[Real-primitive reduction]\label{thm:realprimitive}
+Suppose $q\ne0$ and define
+\begin{equation}\label{eq:lambdaS}
+ \lambda=\frac{\ii\bar q}{|q|},\quad
+ P=\re(\lambda p),\quad S=\im(\bar q p)=-P|q|.
+\end{equation}
+On the plus boundary, parametrized by $z=C+Re^{\ii\theta}$, write
+$\omega=B(\theta)\dd\theta$ and set
+\begin{equation}\label{eq:vt}
+ v(\theta)=\re\left(\lambda\int_0^\theta B(s)\dd s\right),
+ \qquad t(\theta)=\im(\lambda B(\theta)).
+\end{equation}
+Then
+\begin{equation}\label{eq:realGreen}
+ \boxed{\E=S+R_{\ext},\qquad
+ R_{\ext}=2\int_0^{2\pi}v(\theta)t(\theta)\dd\theta.}
+\end{equation}
+If $|B|\le K_\partial$ on the whole circle, then
+\begin{equation}\label{eq:Rbound}
+ |R_{\ext}|\le2\pi^2K_\partial^2.
+\end{equation}
+If $q=0$, choose any unit $\lambda$; the same formula holds with
+$S=0$ and with \eqref{eq:vt} defined using that choice.
+\end{theorem}
+\begin{proof}
+Every loop in the annulus is homologous to an integer multiple of $c$.
+Since $\lambda q=\ii|q|$, the real part of every period of
+$\lambda\omega$ is zero. Thus
+$h=\re(\lambda F)$ is a single-valued harmonic function on $X$.
+Its differential changes sign under $\iota$, so $h\circ\iota+h$ is
+constant. A single global change of additive constant makes $h$ odd.
+At the two basepoints,
+$h_--h_+=\re(\lambda p)=P$ and $h_-=-h_+$, giving $h_+=-P/2$.
+Consequently the boundary traces are $h_+=-P/2+v$ and $h_-=-h_+$.
+
+For completeness, in a local coordinate $x+\ii y$ write
+$\lambda\omega=f\dd z$ and a primitive $h+\ii k$. The Cauchy--Riemann
+equations give $h_x=\re f$, $h_y=-\im f$. Hence
+$|\nabla h|^2\dd A=(\ii/2)\omega\wedge\bar\omega$.
+On a positively oriented boundary the outward normal flux of $h$
+is $\dd k=\im(\lambda\omega)$. Green's formula therefore gives
+\[
+ \E=\int_X|\nabla h|^2\dd A
+       =\int_{\partial X}h\,\im(\lambda\omega).
+\]
+Both sheet values change sign under $\iota$, so the two physical
+components contribute equally. Using $\int_0^{2\pi}t=|q|$ yields
+\[
+ \E=2\int_0^{2\pi}(-P/2+v)t\dd\theta
+      =-P|q|+2\int_0^{2\pi}vt\dd\theta.
+\]
+This proves \eqref{eq:realGreen} and its sign convention.
+
+The function $v$ is periodic, with $v(0)=v(2\pi)=0$ and
+$|v'|\le K_\partial$. Integrating from either endpoint gives
+$|v(\theta)|\le K_\partial\min(\theta,2\pi-\theta)$.
+Since the integral of this minimum is $\pi^2$, \eqref{eq:Rbound} follows.
+If $q=0$, the complex primitive itself is single-valued and the preceding
+argument applies with $\int t=0$, proving the stated extension.
+\end{proof}
+
+\begin{remark}[What disappeared from the cut formula]
+The cut terms vanish for the real primitive because $h$ is single-valued.
+They have not become zero information: the relative constant $P$ remains
+in $S$. In particular, independently resetting the primitive constant on
+each physical boundary would destroy \eqref{eq:realGreen}.
+\end{remark}
+
+\begin{proposition}[Real allocation between cuts and physical boundary]
+\label{prop:cutallocation}
+Choose the relative cut as above and the consistent polygon primitive.
+The real cut contribution to \eqref{eq:stokes} is $S/2$, and the real
+physical-boundary contribution is $S/2+R_{\ext}$.
+\end{proposition}
+\begin{proof}
+Orient one copy of the cut from minus to plus, opposite to the orientation
+of $p$. With the positive core chosen above, its primitive jump is $-q$.
+Equation~\eqref{eq:jump} gives cut integral $q\bar p$, whose real energy
+contribution is
+$\re((\ii/2)q\bar p)=\im(\bar q p)/2=S/2$.
+Subtracting this contribution from \eqref{eq:realGreen} proves the second
+claim. An individual complex subtotal need not be real; only its real
+energy contribution is asserted here.
+\end{proof}
+
+\begin{corollary}[An exterior floor and a finite energy interval]
+If $|H|\ge\mu>0$ on the spatial circle, then
+$K_\partial\le R/\sqrt\mu$, and
+\begin{equation}\label{eq:periodInterval}
+ \E\in\left[S-\frac{2\pi^2R^2}{\mu},
+             S+\frac{2\pi^2R^2}{\mu}\right]\cap[0,\infty).
+\end{equation}
+\end{corollary}
+\begin{proof}
+The pullback satisfies $|B|=R/\sqrt{|H|}$; apply the theorem.
+\end{proof}
+
+If the field has real type, the unit is positive on the real interval,
+and its square root is chosen positive there, then $q=\ii Q$ with
+$Q>0$ (proved in Section~\ref{sec:remainders}). Thus $\lambda=1$.
+Conjugation of the boundary trace gives
+$B(2\pi-\theta)=-\overline{B(\theta)}$ and
+$v(2\pi-\theta)=v(\theta)$, so
+\begin{equation}\label{eq:halfboundary}
+ Q=2\int_0^\pi\im B\dd\theta,\qquad
+ R_{\ext}=4\int_0^\pi v\im B\dd\theta.
+\end{equation}
+These are exact symmetry reductions, not separate estimates of positive
+sectors.

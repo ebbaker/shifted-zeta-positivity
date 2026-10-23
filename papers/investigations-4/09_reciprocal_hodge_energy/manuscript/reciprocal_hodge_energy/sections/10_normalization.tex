@@ -1,0 +1,65 @@
+\section{Canonical normalization and source reflection}\label{sec:normalization}
+
+For completeness we derive the classical normalization used in
+\eqref{eq:xi}. Let
+\[
+ \psi(x)=\sum_{n=1}^\infty e^{-\pi n^2x},\qquad
+ \Theta(x)=1+2\psi(x)\quad(x>0).
+\]
+The Fourier transform of $e^{-\pi x v^2}$, with kernel
+$e^{-2\pi\ii v\xi}$, is $x^{-1/2}e^{-\pi\xi^2/x}$.
+Poisson summation for this rapidly decaying Gaussian therefore gives
+\begin{equation}\label{eq:Jacobitheta}
+ \Theta(x)=x^{-1/2}\Theta(1/x),\qquad
+ \psi(x)=x^{-1/2}\psi(1/x)+\tfrac12(x^{-1/2}-1).
+\end{equation}
+Set $f(u)=e^u\psi(e^{4u})$ for real $u$. Direct differentiation of the
+locally uniformly convergent series gives
+\begin{equation}\label{eq:Phioperator}
+ \frac{f''(u)-f(u)}8
+ =2e^{9u}\psi''(e^{4u})+3e^{5u}\psi'(e^{4u})=\Phi(u).
+\end{equation}
+The theta identity gives $f(-u)=f(u)+\sinh u$. Applying
+$\partial_u^2-1$, which annihilates $\sinh u$, proves
+$\Phi(-u)=\Phi(u)$. Differentiating at zero also gives
+$-f'(0)=f'(0)+1$, or $f'(0)=-1/2$.
+These identities concern the complete series.
+
+For $\re s>1$, absolute convergence and the gamma integral give
+\[
+ \pi^{-s/2}\Gamma(s/2)\zeta(s)
+ =\int_0^\infty\psi(x)x^{s/2-1}\dd x.
+\]
+Split at $x=1$, apply \eqref{eq:Jacobitheta} on $(0,1)$, and substitute
+$x\mapsto1/x$ in its decaying part. The elementary remaining integral is
+$1/(s-1)-1/s=1/(s(s-1))$. Hence
+\begin{equation}\label{eq:completedMellin}
+ \pi^{-s/2}\Gamma(s/2)\zeta(s)
+ =\frac1{s(s-1)}+
+ \int_1^\infty\psi(x)
+ \left(x^{s/2-1}+x^{(1-s)/2-1}\right)\dd x.
+\end{equation}
+The last integral is entire in $s$ by its exponential decay. Multiplying
+by $s(s-1)/2$ thus continues $\xi$ as an entire function. Put
+$v=2s-1$ and $x=e^{4u}$ in \eqref{eq:completedMellin}. This gives
+\begin{equation}\label{eq:ximellin}
+ \xi(s)=\frac12+(v^2-1)\int_0^\infty f(u)\cosh(vu)\dd u.
+\end{equation}
+Twice integrating by parts, using the super-exponential decay of $f,f'$
+at $+\infty$ and $\sinh(0)=0$, yields
+\begin{align*}
+ \int_0^\infty(f''-f)\cosh(vu)\dd u
+ &=-f'(0)+(v^2-1)\int_0^\infty f(u)\cosh(vu)\dd u\\
+ &=\xi(s).
+\end{align*}
+All these integrals converge for every complex $v$, so analytic
+continuation introduces no new restriction. Finally take
+$s=(1+\ii z)/2$, for which $v=\ii z$, and use
+\eqref{eq:Phioperator}. The result is
+\[
+ H(0,z)=\int_0^\infty\Phi(u)\cos(zu)\dd u
+       =\frac18\xi\bigl((1+\ii z)/2\bigr),
+\]
+as claimed. This derivation also fixes the factor $1/8$ used by the
+energy and numerical records; a scalar change of $H$ would rescale its
+reciprocal energy by the inverse scalar modulus.

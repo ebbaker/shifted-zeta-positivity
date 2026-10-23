@@ -1,0 +1,631 @@
+\section{Zero transport, real births, and complex event residues}
+\label{tr:section}
+
+This section distinguishes three quantities that agree in some double-zero
+models but are different in general: the number of complex zeros counted
+with multiplicity, the number of real zeros on a regular time slice, and
+the residue charge of a multiple-zero event.  Every domain below is finite.
+In particular, no limiting contour, infinite product over zeros, or
+unproved assertion about zeros at arbitrarily large height is used.
+We use the backward-heat normalization
+\begin{equation}\label{tr:heat}
+                    H_t=-H_{zz}.
+\end{equation}
+When real variables are used, $H(t,x)$ is real and $H_x=H_z$ on the real
+slice.  Joint real analyticity permits local complexification.  All
+arguments involving complex time explicitly assume joint holomorphy on
+a neighborhood of the indicated closed product.
+
+\subsection{The local heat polynomial and its roots}
+
+\begin{lemma}[Elementary Hermite root calculation]\label{tr:hermite-roots}
+For $m\geq1$ define
+\[
+ p_m(s,w)=\sum_{k=0}^{\lfloor m/2\rfloor}
+        \frac{m!(-s)^k w^{m-2k}}{k!(m-2k)!}.
+\]
+Then $p_m(1,\cdot)$ has $m$ distinct real roots.  The polynomial
+$p_m(-1,\cdot)$ has no real root when $m$ is even and exactly one real
+root, a simple root at zero, when $m$ is odd.  If
+$\lambda_1,\ldots,\lambda_m$ are the roots of the monic probabilists'
+Hermite polynomial, then the roots of $p_m(1,\cdot)$ are
+$\sqrt2\lambda_1,\ldots,\sqrt2\lambda_m$.
+\end{lemma}
+
+\begin{proof}
+Define
+\[
+ \operatorname{He}_m(u)=(-1)^m e^{u^2/2}
+                       \frac{d^m}{du^m}e^{-u^2/2}.
+\]
+Differentiating $e^{u\xi-\xi^2/2}$ in $\xi$, or expanding its two
+exponentials, gives
+\[
+ \operatorname{He}_m(u)=
+ \sum_{k=0}^{\lfloor m/2\rfloor}
+ \frac{m!(-1)^k u^{m-2k}}{2^k k!(m-2k)!},
+ \qquad p_m(1,w)=2^{m/2}\operatorname{He}_m(w/\sqrt2).
+\]
+Repeated integration by parts, whose boundary terms vanish by Gaussian
+decay, shows that
+\[
+ \int_{\mathbb R}\operatorname{He}_m(u)q(u)e^{-u^2/2}\,du=0
+                      \quad(\deg q<m).
+\]
+Suppose that $\operatorname{He}_m$ has fewer than $m$ distinct real zeros
+of odd multiplicity.  Let $q$ be the product of the linear factors at
+those zeros, once each.  Then $\deg q<m$, while
+$\operatorname{He}_m q$ has constant sign on the real line apart from
+its zeros and is not identically zero.  Its Gaussian integral cannot
+vanish, a contradiction.  Degree $m$ forces all its roots to be real and
+simple.  Finally $p_m(-1,w)$ is a polynomial in $w^2$ with strictly
+positive coefficients if $m$ is even; if $m$ is odd it is $w$ times such
+a polynomial, with a strictly positive constant term.  This proves the
+negative-time assertion as well.
+\end{proof}
+
+\begin{theorem}[Local analytic splitting and isolation]\label{tr:splitting}
+Suppose $H$ is holomorphic near $(t_*,z_*)$, satisfies
+\eqref{tr:heat}, and
+\[
+ H(t_*,z_*+w)=c_m w^m+O(w^{m+1}),\qquad c_m\ne0.
+\]
+There is a proper local cluster of exactly $m$ spatial zeros, counted
+with multiplicity.  With $s=t-t_*\ne0$ sufficiently small, all its roots
+are simple.  More precisely, after $s=\varepsilon^2$, they can be written
+\begin{equation}\label{tr:root-expansion}
+ z_j(t_*+\varepsilon^2)-z_*
+       =\varepsilon\bigl(\sqrt2\lambda_j+O(\varepsilon)\bigr),
+       \qquad 1\leq j\leq m,
+\end{equation}
+with the parenthesized functions holomorphic in $\varepsilon$.
+For $m\geq2$, $(t_*,z_*)$ is consequently an isolated common zero of
+$(H,H_z)$ in complex two-space.
+
+If $t_*,z_*$ are real and $H$ is of real type, all $m$ roots are real
+for small positive $s$.  For small negative $s$, exactly $m\bmod2$ of
+them are real.  Thus the local number of real zeros increases by
+$2\lfloor m/2\rfloor$ as real time passes through the event.
+\end{theorem}
+
+\begin{proof}
+Write $H(t_*,z_*+w)=\sum_{n\geq m}c_nw^n$.  The heat equation identifies
+the convergent bivariate Taylor coefficients as
+\[
+ H(t_*+s,z_*+w)=\sum_{k,l\geq0}
+       \frac{(-1)^l(k+2l)!}{k!l!}c_{k+2l}s^lw^k.
+\]
+Every nonzero term has weighted degree at least $m$, when $s$ has weight
+two and $w$ weight one.  Substitution $s=\varepsilon^2$, $w=\varepsilon y$
+therefore gives a holomorphic extension to $\varepsilon=0$ of
+\[
+ F(\varepsilon,y)=\varepsilon^{-m}
+                  H(t_*+\varepsilon^2,z_*+\varepsilon y),
+ \qquad F(0,y)=c_m p_m(1,y).
+\]
+Convergence is uniform on every sufficiently small $\varepsilon$-disk
+and every fixed bounded $y$-disk.  Lemma~\ref{tr:hermite-roots} and the
+holomorphic implicit function theorem give $m$ distinct root branches
+$y_j(\varepsilon)=\sqrt2\lambda_j+O(\varepsilon)$.
+
+Choose a fixed small spatial circle around $z_*$ on which
+$H(t_*,\cdot)$ is nonzero and whose interior contains just its order-$m$
+zero.  Uniform continuity on that circle, followed by Rouch\'e's theorem,
+preserves the count $m$ for all sufficiently small complex $s$.
+The displayed branches lie inside this circle and account for every
+root.  Since $F_y$ remains nonzero at them, $H_z$ is nonzero whenever
+$\varepsilon\ne0$.  This proves isolation in complex two-space.
+
+For real positive $\varepsilon$, each branch is real by uniqueness and
+complex conjugation, so the positive-time conclusion follows.  At
+negative real $s$, take $\varepsilon=i\sqrt{|s|}$.  If $\lambda_j\ne0$,
+\eqref{tr:root-expansion} has a nonzero imaginary leading term of order
+$\sqrt{|s|}$, and its error is $O(|s|)$, so that root is not real.
+There is no zero Hermite root when $m$ is even.  When $m$ is odd there
+is exactly one, because parity gives a zero and all Hermite roots are
+simple.  For its branch, $w_0(\varepsilon)=\varepsilon y_0(\varepsilon)
+=O(\varepsilon^2)$.  Both $w_0(\varepsilon)$ and $w_0(-\varepsilon)$ are
+roots of the same function $H(t_*+\varepsilon^2,z_*+w)$ and correspond
+to the unique $y$-root near zero: the second has normalized coordinate
+$w_0(-\varepsilon)/\varepsilon=-y_0(-\varepsilon)=O(\varepsilon)$.
+Hence they coincide.  The function
+$w_0$ is even in $\varepsilon$ and is holomorphic in $s$.  Reality on
+positive real $s$ makes its Taylor coefficients real, so it remains
+real for negative real $s$.  It is the sole real root there.
+\end{proof}
+
+\subsection{An angular-current formula with every wall term}
+
+Give the real $(t,x)$-plane the orientation $dt\wedge dx$.  Wherever
+$J=(H,H_x)\ne0$, put
+\begin{equation}\label{tr:angular-form}
+ \alpha=\frac{H\,dH_x-H_x\,dH}{H^2+H_x^2},\qquad
+ \beta=-\frac{\alpha}{2\pi}.
+\end{equation}
+Locally $\alpha=d\arg(H+iH_x)$, so $d\alpha=d\beta=0$ away from joint
+zeros.  The sign in $\beta$ is chosen to assign a positive real charge
+to a backward-heat event.  On a spatial cap its coefficient is
+\begin{equation}\label{tr:cap-density}
+ \beta\big|_{t=\mathrm{constant}}
+      =\frac{H_x^2-HH_{xx}}{2\pi(H^2+H_x^2)}\,dx.
+\end{equation}
+
+\begin{lemma}[Phase increments and signed crossings]\label{tr:phase-jumps}
+Let an oriented analytic path carry a nonzero real vector $(A,B)$, with
+$A$ nonzero at its endpoints and not identically zero.  At an isolated
+zero $v_j$ of $A$, put
+\[
+ q_j=\operatorname{sgn}B(v_j)\,
+ \frac{\operatorname{sgn}A(v_j+\delta)
+          -\operatorname{sgn}A(v_j-\delta)}2,
+\]
+where $\delta>0$ is small enough to isolate that zero.  Then
+\begin{equation}\label{tr:path-phase}
+ \int\frac{A\,dB-B\,dA}{A^2+B^2}
+   =\left[\arctan(B/A)\right]_{\rm start}^{\rm end}
+                       -\pi\sum_jq_j.
+\end{equation}
+Even-order tangencies contribute zero.  At a transverse crossing,
+$q_j=\operatorname{sgn}(B A')(v_j)$.
+\end{lemma}
+
+\begin{proof}
+Off the zeros of $A$, the differential of the principal arctangent
+$\arctan(B/A)\in(-\pi/2,\pi/2)$ is the integrand.  At a zero of $A$,
+$B$ is nonzero.  The one-sided limits of the arctangent have difference
+$\pi q_j$: they are equal at an even tangency and differ by the stated
+signed multiple of $\pi$ at an odd crossing.  Summing the integrals on
+the complementary path intervals gives \eqref{tr:path-phase}.  The
+formula is also the increment of a continuous argument of $A+iB$.
+\end{proof}
+
+\begin{proposition}[Cap count and wall correction]\label{tr:boundary-count}
+Let
+\[
+ \mathcal R=\{(t,x):a<t<b,\quad \ell(t)<x<r(t)\}
+\]
+be a bounded moving rectangle, with analytic walls $\ell<r$ on a
+neighborhood of $[a,b]$.  Assume $H$ is real analytic near its closure,
+$J=(H,H_x)$ is nonzero on its whole boundary, and $H$ is nonzero at the
+four corners.  Let $N_a,N_b$ count the zeros of $H$ on the two open
+spatial caps; these zeros are simple.  For either wall $c=\ell,r$, set
+$F_c(t)=H(t,c(t))$ and
+\begin{equation}\label{tr:wall-flux}
+ Q_c=\sum_{F_c(t_j)=0}\operatorname{sgn}H_x(t_j,c(t_j))\,
+ \frac{\operatorname{sgn}F_c(t_j+\delta_j)
+       -\operatorname{sgn}F_c(t_j-\delta_j)}2.
+\end{equation}
+The sums are finite, and
+\begin{equation}\label{tr:count-winding}
+ \frac1{2\pi}\oint_{\partial\mathcal R}\alpha
+       =\frac{N_a-N_b-Q_\ell+Q_r}{2},\qquad
+ \oint_{\partial\mathcal R}\beta
+       =\frac{N_b-N_a+Q_\ell-Q_r}{2}.
+\end{equation}
+The orientation traverses the lower wall with increasing $t$, the late
+cap with increasing $x$, the upper wall with decreasing $t$, and the
+early cap with decreasing $x$.
+\end{proposition}
+
+\begin{proof}
+Analyticity and nonzero corner values make each wall function nonzero
+identically and give finitely many wall zeros on the compact interval.
+At such a zero, boundary regularity gives $H_x\ne0$.  The same argument
+on each cap gives finitely many simple spatial zeros.  Apply
+Lemma~\ref{tr:phase-jumps} to each of the four edges with
+$(A,B)=(H,H_x)$.  Along a forward cap, the signed crossing number is
+$+1$ at every root, since $A'=H_x=B$.  Along a forward wall it is the
+corresponding summand of $Q_c$.  The four endpoint arctangent
+differences telescope.  The remaining contributions, with the declared
+orientations, are $-\pi Q_\ell-\pi N_b+\pi Q_r+\pi N_a$.
+This proves both identities.
+\end{proof}
+
+\begin{remark}[A single cap still counts ordinary zeros]\label{tr:cap-roots}
+For fixed walls $\ell<r$ with $H(t,\ell)H(t,r)\ne0$, let
+\[
+ B(t)=\int_\ell^r\beta,
+ \qquad\theta_c(t)=\arctan\frac{H_x(t,c)}{H(t,c)}.
+\]
+On a regular cap, Lemma~\ref{tr:phase-jumps} gives exactly
+\begin{equation}\label{tr:single-cap}
+ B(t)=\frac{N_t}{2}
+                +\frac{\theta_\ell(t)-\theta_r(t)}{2\pi}.
+\end{equation}
+Thus simplicity of every cap root does not imply that the cap integral
+vanishes.  If $H$ never vanishes on either wall, the wall contribution
+to $\oint\beta$ is
+$[\theta_r(b)-\theta_r(a)-\theta_\ell(b)+\theta_\ell(a)]/(2\pi)$;
+it cancels precisely the endpoint terms of the two cap formulas.
+\end{remark}
+
+\begin{theorem}[Complete real birth balance]\label{tr:real-balance}
+Assume the hypotheses of Proposition~\ref{tr:boundary-count}, the heat
+equation \eqref{tr:heat}, and no identically zero spatial slice in the
+analytic neighborhood.  The interior event set $\{H=H_x=0\}$ is finite.
+If $m(T,x_*)$ is the exact spatial multiplicity at an event, then
+\begin{align}
+ \operatorname{ind}_{(T,x_*)}(H,H_x)
+       &=-\left\lfloor\frac{m(T,x_*)}{2}\right\rfloor,
+                                                        \label{tr:local-index}\\
+ \oint_{\partial\mathcal R}\beta
+       &=\sum_{(T,x_*)\in\mathcal R:\,H=H_x=0}
+                   \left\lfloor\frac{m(T,x_*)}{2}\right\rfloor,
+                                                        \label{tr:real-charge}\\
+ N_b-N_a+Q_\ell-Q_r
+       &=2\sum_{(T,x_*)\in\mathcal R:\,H=H_x=0}
+                   \left\lfloor\frac{m(T,x_*)}{2}\right\rfloor.
+                                                        \label{tr:birth-balance}
+\end{align}
+Here the local index is the counterclockwise winding of
+$(H+iH_x)/|H+iH_x|$ on a small positively oriented loop.
+\end{theorem}
+
+\begin{proof}
+Each event has finite spatial multiplicity by the nonzero-slice
+hypothesis and is isolated by Theorem~\ref{tr:splitting}.  Boundary
+regularity, compactness, and analyticity then make the event set finite:
+an infinite set would have an accumulation point in the compact closure,
+which could be neither a regular point nor an isolated event.
+
+For one event, choose a small fixed real spatial interval enclosing its
+local cluster and a small time interval symmetric about $T$.  Its walls
+have $H\ne0$, its time caps are regular, and its sole event is the given
+one.  Theorem~\ref{tr:splitting} gives cap counts $m\bmod2$ and $m$.
+Proposition~\ref{tr:boundary-count} therefore gives local winding
+$((m\bmod2)-m)/2=-\lfloor m/2\rfloor$, proving
+\eqref{tr:local-index}.  Remove disjoint small neighborhoods of the
+finitely many events from $\mathcal R$.  On the remainder $d\beta=0$.
+Stokes' theorem, with the inner boundaries oppositely oriented, gives
+\eqref{tr:real-charge}.  Combining it with
+\eqref{tr:count-winding} proves \eqref{tr:birth-balance}.
+\end{proof}
+
+For a transverse wall crossing the formula can also be checked by
+ordinary root motion.  A simple root satisfies
+$x'(t)=H_{xx}/H_x$, so
+\[
+ Q_c=\sum_{H(t,c(t))=0}
+       \operatorname{sgn}\{H_x(-H_{xx}+c'H_x)\}.
+\]
+A positive lower-wall crossing removes a root from the interval; a
+positive upper-wall crossing adds one.  This is the sign convention in
+\eqref{tr:birth-balance}.  The sign-change definition
+\eqref{tr:wall-flux}, unlike this transverse formula, also handles
+higher-order contacts.
+
+\subsection{Conservation of the ordinary complex divisor}
+
+\begin{proposition}[Multiplicity conservation on a proper spatial domain]
+\label{tr:complex-conservation}
+Let $\Omega$ be a bounded domain with piecewise smooth boundary.  Suppose
+$H(t,\cdot)$ is holomorphic on a neighborhood of $\overline\Omega$,
+continuously with its first spatial derivative in $t\in[a,b]$, and
+$H(t,z)\ne0$ for $z\in\partial\Omega$.  Then
+\begin{equation}\label{tr:complex-count}
+ N_{\mathbb C}(t)=\frac1{2\pi i}\oint_{\partial\Omega}
+                                      \frac{H_z(t,z)}{H(t,z)}\,dz
+\end{equation}
+is independent of $t$, with every root counted with its multiplicity.
+No heat equation is needed.
+\end{proposition}
+
+\begin{proof}
+The argument principle makes \eqref{tr:complex-count} an integer.  The
+nonzero boundary condition and compactness give a positive common
+boundary margin.  Hence the displayed integral is continuous in $t$,
+and a continuous integer-valued function on an interval is constant.
+\end{proof}
+
+In particular, collision and splitting are not creation or destruction
+of the complex divisor.  The $m$ descendants in
+Theorem~\ref{tr:splitting} have the same total multiplicity as the
+initial order-$m$ zero.  Their realness can change, which is why
+\eqref{tr:birth-balance} carries an event term while
+\eqref{tr:complex-count} does not.  A domain that permits zeros to cross
+its spatial boundary must retain the signed boundary crossings; the
+properness hypothesis is exactly what eliminates them here.
+
+\subsection{Preparation and the discriminant residue}
+
+Let $D\subset\mathbb C$ be a bounded disk or rectangle and
+$\Omega_R=\{z:|z-z_c|<R\}$.  Suppose $H$ is holomorphic on a
+neighborhood of $\overline D\times\overline\Omega_R$ and
+\begin{equation}\label{tr:proper-cluster}
+ H(t,z)\ne0\qquad(t\in\overline D,\ |z-z_c|=R).
+\end{equation}
+The number $n$ of roots in $\Omega_R$, including multiplicity, is then
+constant.  We call this a proper finite spatial cluster.
+
+\begin{lemma}[Preparation from contour moments]\label{tr:preparation}
+Under \eqref{tr:proper-cluster}, there is a unique monic polynomial
+$P(t,z)$ of degree $n$ in $z$, with coefficients holomorphic in $t$,
+whose roots are precisely the selected cluster.  Moreover
+$H(t,z)=U(t,z)P(t,z)$, where $U$ is holomorphic and nonvanishing on a
+neighborhood of the closed product.
+\end{lemma}
+
+\begin{proof}
+For $1\leq k\leq n$, set
+\[
+ S_k(t)=\frac1{2\pi i}\oint_{|\zeta-z_c|=R}
+           \zeta^k\frac{H_z(t,\zeta)}{H(t,\zeta)}\,d\zeta.
+\]
+Residues identify these holomorphic functions as the power sums of the
+cluster roots.  Newton's identities recursively express the elementary
+symmetric functions as polynomials in $S_1,\ldots,S_n$; these are the
+coefficients of the required monic $P$.  At each fixed $t$, the quotient
+$H/P$ has only removable singularities and is nonzero throughout the
+disk.  Its joint holomorphy follows from
+\[
+ U(t,z)=\frac1{2\pi i}\oint_{|\zeta-z_c|=R}
+             \frac{H(t,\zeta)}{P(t,\zeta)(\zeta-z)}\,d\zeta.
+\]
+For each $t$, this is precisely the removable quotient by Cauchy's
+formula.  On a collar of the spatial boundary it agrees with the
+ordinary quotient, giving the extension there.  Strict nonvanishing on
+the compact wall persists after a small enlargement, which also gives
+the asserted neighborhood.  Uniqueness follows from the prescribed
+root multiset and monicity.
+\end{proof}
+
+Define the finite discriminant by
+\begin{equation}\label{tr:discriminant}
+ \Delta_P(t)=\prod_{i<j}(z_i(t)-z_j(t))^2,
+                   \qquad \Delta_P=1\ \text{if }n\leq1.
+\end{equation}
+It is a symmetric polynomial in the roots and therefore holomorphic in
+the coefficients of $P$, even through collisions and without a global
+choice of root labels.
+
+\begin{proposition}[The local heat residue]\label{tr:local-residue}
+For the local cluster at an order-$m$ heat event from
+Theorem~\ref{tr:splitting}, put $q_m=\binom m2$.  Its discriminant has
+\begin{equation}\label{tr:disc-expansion}
+ \Delta(t_*+s)=d_m s^{q_m}+O(s^{q_m+1}),\qquad
+ d_m=2^{q_m}\prod_{i<j}(\lambda_i-\lambda_j)^2>0.
+\end{equation}
+Consequently $d\log\Delta$ has residue $q_m$ at the event time.
+\end{proposition}
+
+\begin{proof}
+Substitute the $m$ root branches \eqref{tr:root-expansion} into
+\eqref{tr:discriminant}.  Each squared difference has leading term
+$2(\lambda_i-\lambda_j)^2\varepsilon^2$.  Their product is
+$d_m\varepsilon^{2q_m}(1+O(\varepsilon))$.  The discriminant is
+holomorphic in $s=\varepsilon^2$, so its Taylor series in $\varepsilon$
+is even.  This improves the remainder to $O(\varepsilon^2)$ and proves
+\eqref{tr:disc-expansion}.  Taking the logarithmic derivative gives the
+residue.  The coefficient is positive because the Hermite roots are
+real and distinct; the original scalar factor $c_m$ does not enter a
+monic-root discriminant.
+\end{proof}
+
+\begin{theorem}[Finite complex event charge]\label{tr:complex-charge}
+Assume \eqref{tr:proper-cluster}, the heat equation, and
+\[
+ (H,H_z)\ne(0,0)\qquad
+             \text{on }\partial D\times\overline\Omega_R.
+\]
+Then there are finitely many events in $D\times\Omega_R$, and
+\begin{equation}\label{tr:charge-residue}
+ Q_{\mathbb C}:=\frac1{2\pi i}\oint_{\partial D}d\log\Delta_P
+  =\sum_{(t,z)\in D\times\Omega_R:\,H=H_z=0}\binom{m(t,z)}2.
+\end{equation}
+The boundary of $D$ has its positive complex orientation.  In particular,
+all interior complex event residues have the same positive sign.
+\end{theorem}
+
+\begin{proof}
+The hypotheses make $\Delta_P$ nonzero on $\partial D$.  Thus it is not
+identically zero and has finitely many zeros in the closed time domain.
+At a zero time, the spatial cluster is finite.  Small disjoint spatial
+disks about its distinct roots give separate monic cluster polynomials.
+The discriminant of their product is the product of their discriminants
+times the squared pairwise resultants.  The latter are nonzero at the
+chosen time because roots in distinct disks do not coincide.  Hence the
+order of the full discriminant is the sum of the local orders.
+Proposition~\ref{tr:local-residue} identifies each order as
+$\binom m2$.  The scalar argument principle now proves
+\eqref{tr:charge-residue}.
+\end{proof}
+
+\begin{proposition}[Agreement with the complex boundary degree]
+\label{tr:degree-agreement}
+Under the hypotheses of Theorem~\ref{tr:complex-charge}, give
+$D\times\Omega_R$ the orientation
+$d\operatorname{Re}t\wedge d\operatorname{Im}t
+ \wedge d\operatorname{Re}z\wedge d\operatorname{Im}z$.
+Then
+\begin{equation}\label{tr:degree-formula}
+ \deg\left(\frac{(H,H_z)}{\sqrt{|H|^2+|H_z|^2}}\right)
+                  \bigg|_{\partial(D\times\Omega_R)}
+       =\frac1{2\pi i}\oint_{\partial D}d\log\Delta_P.
+\end{equation}
+\end{proposition}
+
+\begin{proof}
+If $n=0$, then $H$ has no zero on the whole product, the normalized
+jet extends across it, and both sides are zero.  Assume henceforth
+$n\geq1$.  Here we use the elementary degree facts that a boundary map into the
+unit sphere has homotopy-invariant integer degree, and that its degree
+is the signed number of inverse images of a nearby regular value.
+The latter follows by excising neighborhoods of the inverse images and
+applying Stokes' theorem to the normalized sphere volume form; each
+invertible derivative contributes the sign of its real determinant.
+These facts apply to the piecewise smooth product boundary by rounding
+corners in its nonvanishing collar.
+
+By preparation,
+\[
+ \binom H{H_z}=
+ \begin{pmatrix}U&0\\ U_z&U\end{pmatrix}\binom P{P_z}.
+\]
+Since the product of two disks or a rectangle and a disk is simply
+connected and $U$ is nonzero, $U$ has a holomorphic logarithm there.
+The invertible matrices
+\[
+ M_v=\begin{pmatrix}e^{v\log U}&0\\ vU_z&e^{v\log U}\end{pmatrix},
+                         \qquad 0\leq v\leq1,
+\]
+give a nonzero boundary homotopy from $(P,P_z)$ to $(H,H_z)$.
+It suffices to compute the degree of $F=(P,P_z)$.
+
+Choose a regular target value $(\eta,\xi)$ with $\xi\ne0$ and norm
+smaller than $\min_{\partial(D\times\Omega_R)}|F|$, and small enough
+for the Rouch\'e comparison below.  Such choices exist by the regular-value theorem, and they
+have no preimage on the product boundary.  Uniform Rouch\'e comparison
+on the spatial wall keeps every root of $P(t,\cdot)-\eta$ inside
+$\Omega_R$ for all $t\in\overline D$.  Consider the scalar resultant
+\[
+ R_{\eta,\xi}(t)=\operatorname{Res}_z(P(t,z)-\eta,P_z(t,z)-\xi).
+\]
+Its zeros are exactly the time coordinates of the inverse images of
+$(\eta,\xi)$.  At such an inverse image $P_z=\xi\ne0$, so
+$P(t,z)-\eta=0$ has a local branch $z=r(t)$.  The corresponding factor
+$g(t)=P_z(t,r(t))-\xi$ has
+\[
+ g'(t)=P_{zt}-P_{zz}P_t/\xi
+           =-\det(D_{(t,z)}F)/\xi\ne0.
+\]
+Thus this solution contributes one to the zero order of the resultant;
+several solutions at the same time contribute additively.  All other
+local factors are nonzero.  It follows that the argument-principle
+count for $R_{\eta,\xi}$ equals the number of regular inverse images.
+Every one contributes $+1$ to degree because the real Jacobian of a
+complex-linear invertible derivative is
+$|\det_{\mathbb C}DF|^2>0$.
+
+At target zero the resultant is
+\[
+ R_{0,0}(t)=\prod_iP_z(t,z_i)
+          =(-1)^{n(n-1)/2}\Delta_P(t).
+\]
+The formula holds first for distinct roots and then everywhere by
+holomorphy.  Small target perturbations keep the resultant nonzero on
+$\partial D$, so its winding is unchanged.  The number of inverse
+images, and hence the degree, equals the winding of $\Delta_P$, as
+asserted.
+\end{proof}
+
+\begin{remark}[Dimension and multiplicity distinctions]\label{tr:distinct-charges}
+The integral \eqref{tr:complex-count} counts ordinary zeros on a spatial
+complex curve.  The real angular current \eqref{tr:angular-form} is a
+one-form on a two-dimensional real spacetime and counts births with
+weight $\lfloor m/2\rfloor$.  Formula \eqref{tr:degree-formula} is a
+degree on a three-dimensional boundary in complex two-space and has
+weight $\binom m2$.  Its reduction to a one-dimensional time contour is
+through the discriminant, not through the ordinary divisor count.
+The two event weights agree for $m=2$ but already differ for $m=3$.
+\end{remark}
+
+\subsection{Cap decompositions and endpoint terms}
+
+\begin{proposition}[The complete scalar cap balance]\label{tr:complex-caps}
+Let $D=(a,b)+i(-Y,Y)$ satisfy Theorem~\ref{tr:complex-charge}.  Define
+forward vertical cap contributions by
+\[
+ C_t=\frac1{2\pi}\int_{-Y}^{Y}
+             \frac{d}{ds}\arg\Delta_P(t+is)\,ds,
+                        \qquad t=a,b,
+\]
+using any continuous argument along the indicated nonzero segment.
+Let $S$ be the sum of the argument increments, divided by $2\pi$, on
+the lower horizontal edge traversed from $a-iY$ to $b-iY$ and the upper
+horizontal edge traversed from $b+iY$ to $a+iY$.  Then
+\begin{equation}\label{tr:complex-cap-balance}
+                      Q_{\mathbb C}=C_b-C_a+S.
+\end{equation}
+Subtracting $d\log\Delta_0$ for a holomorphic nonvanishing reference
+$\Delta_0$ on a neighborhood of $\overline D$ changes the individual
+edge contributions but leaves their total unchanged.
+\end{proposition}
+
+\begin{proof}
+The argument increment around a nonzero closed loop is the imaginary
+part of its logarithmic-derivative integral.  The real part is the
+increment of $\log|\Delta_P|$ and telescopes to zero.  Splitting the
+positively oriented boundary into its four edges gives the stated
+signs.  A nonvanishing holomorphic reference on the simply connected
+rectangle has a holomorphic logarithm, whose closed-contour integral
+is zero.
+\end{proof}
+
+Consequently, for a family of complete domains carrying the same
+interior charge, genuinely proved limits $C_b\to0$ and $S\to0$ would
+imply $C_a\to-Q_{\mathbb C}$.  This implication is a transport identity,
+not a proof of either limit.  A late cap with only simple roots merely
+has $\Delta_P\ne0$; its argument may still vary.  A reference defined
+only locally, or one with its own zeros or poles, instead brings its
+transition or divisor terms and is not covered by the final assertion
+of Proposition~\ref{tr:complex-caps}.
+
+\begin{proposition}[An explicitly retained endpoint indentation]
+\label{tr:indentation}
+Suppose a scalar discriminant has an event at a boundary time $t_0$,
+with $\Delta(t)=(t-t_0)^q g(t)$, $q\geq1$, and $g$ holomorphic and
+nonzero near $t_0$.  On an oriented circular arc
+$t=t_0+\varepsilon e^{i\theta}$, with $\theta$ running from
+$\theta_0$ to $\theta_1$ in the declared orientation,
+\begin{equation}\label{tr:arc-term}
+ \frac1{2\pi i}\int_{\mathrm{arc}}d\log\Delta
+        =\frac{q(\theta_1-\theta_0)}{2\pi}+O(\varepsilon).
+\end{equation}
+A clockwise semicircular indentation therefore contributes
+$-q/2+O(\varepsilon)$.  The argument principle applies to the indented
+domain with this arc included, counting only the events left in its
+interior.
+\end{proposition}
+
+\begin{proof}
+Write $d\log\Delta=q\,dt/(t-t_0)+(g'/g)dt$.  The first integral is
+$iq(\theta_1-\theta_0)$; the second is $O(\varepsilon)$ because
+$g'/g$ is bounded and the arc has length $O(\varepsilon)$.  Division
+by $2\pi i$ gives \eqref{tr:arc-term}.  The final assertion is the
+ordinary argument principle on the boundary-regular indented domain.
+\end{proof}
+
+\begin{remark}[No silent endpoint convention]\label{tr:endpoint-warning}
+A real multiple zero on the initial cap violates the boundary-jet
+hypothesis of Theorem~\ref{tr:real-balance}.  One may start at an earlier
+regular time, or excise a prescribed small neighborhood of the endpoint
+and retain the resulting oriented arc in the real angular integral.
+Stokes' theorem remains exact on this excised domain.  Its real angular
+arc is not automatically given by the scalar discriminant formula
+\eqref{tr:arc-term}; these are different currents on different spaces.
+In particular, no universal ``half charge'' for an unspecified endpoint
+regularization is assumed here.
+
+An order-$m$ real zero on the initial cap, counted with its spatial
+multiplicity, already contributes $m$.  Its $m$ simple real descendants
+at positive time also contribute $m$.  Thus ordinary multiplicity
+counts at these two times do not detect the initial multiplicity.
+Moreover \eqref{tr:single-cap} cannot be evaluated at that endpoint by
+replacing its regular-root count with a multiplicity count: the angular
+current itself is undefined at the joint zero.  This is the exact
+reason that an all-zero cap difference alone is not an endpoint
+simplicity theorem.
+\end{remark}
+
+\subsection{Exact controls}
+
+For $H(t,z)=z^2-2t$, a sufficiently wide proper spatial window has two
+complex zeros on either regular time cap, whereas its real counts are
+zero before $t=0$ and two after it.  Its real charge is one and
+$\Delta=8t$ gives complex charge one.  For
+$H(t,z)=z^3-6tz$, the real counts are one and three, so its real charge
+is again one, while $\Delta=864t^3$ gives complex charge three.
+Both controls satisfy the analytic and heat hypotheses exactly.
+They verify the normalization and illustrate that none of the
+conservation identities excludes an event.  No numerical approximation
+is used in any proof of this section.
+
+\begin{remark}[Scope]\label{tr:scope}
+These identities hold for every heat family satisfying the stated
+finite-domain hypotheses.  The explicit polynomial controls show that
+they are compatible with multiple-zero events.  An exclusion theorem
+requires an additional analytic estimate on the complete boundary
+integral, including every cap, wall, and endpoint term, that contradicts
+the positive event sum.  Neither simplicity of a late cap nor
+conservation of its ordinary complex multiplicity supplies that estimate.
+\end{remark}

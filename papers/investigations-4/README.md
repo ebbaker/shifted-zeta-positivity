@@ -13,6 +13,18 @@ is the primary task ledger. The first bounded research round is complete: an
 exact compact comparison and scoped failed positivity candidates, plus a
 zero-following boundary screen. No global positivity or theta exclusion follows.
 
+## Shared analytic manuscript — 22 October 2026
+
+[**Zero Counts, Heat Transport, and Localized Hodge Energy**](manuscript/zero_count_heat_transport/README.md) is the shared Investigations 4 manuscript: [PDF](manuscript/zero_count_heat_transport/main.pdf), [source](manuscript/zero_count_heat_transport/main.tex), [overview](research-overview/04_ZERO_COUNT_HEAT_TRANSPORT_AND_HODGE_PROGRAM_20261022.md), [progress](research-progress/04_ZERO_COUNT_HEAT_TRANSPORT_AND_HODGE_PROGRESS_20261022.md), and [review](reviews/01_ZERO_COUNT_HEAT_TRANSPORT_MANUSCRIPT_REVIEW_20261022.md). It gives self-contained analytic proofs of localized Hodge counts, complete heat-event balances, pair-matrix dynamics, sharp C² divisor stability on controlled disks and a canonical clock limit on growing spatial windows, with the [new extensions](notes/07_LOCALIZED_ROOT_COVER_ENERGY_AND_MANUSCRIPT_EXTENSIONS_20261022.md) distinguished from inherited results. Numerics occur only in a supporting appendix; no new numerical replay is claimed. Prepared for Edward Baker with substantial LLM assistance, **gpt-6-astra, ultra**; the checks are same-model internal reviews, not specialist validation. No RH or endpoint-simplicity theorem is claimed, and the existing local ledgers retain their open exclusion tasks.
+
+The 22 October stability continuation, **gpt-6-astra, effort max**, adds [Note 09](notes/09_SHARP_C2_DIVISOR_STABILITY_20261022.md), [the growing-window corollary](notes/10_GROWING_CLOCK_WINDOWS_20261022.md), and [same-assistant self-review](reviews/02_DIVISOR_STABILITY_AND_GROWING_WINDOWS_SELF_REVIEW_20261022.md). The fixed-disk ZHM-10 target is complete; complete exterior forcing and signed physical-boundary estimates remain open. Earlier manuscript provenance and archive 0001 remain; this distinct continuation is base chat 0010.
+
+## A focused topological transport manuscript — 23 October 2026
+
+[**Topological Zero Transport and the Phase of the Discriminant**](manuscript/topological_zero_transport/README.md) is a separate reader-oriented paper centered on one complete physical boundary formula. It preserves the earlier catalogue. Its new large-heat estimates control growing populations of roots, separate the Vandermonde from the leading analytic-factor phase, and give O(1/log T) late imaginary-face flux per root; fixed projective side walls have zero flux. The early boundary attached to events remains a distinct estimation task.
+
+[Note 12](notes/12_GROWING_COMPLEX_CAPS_AND_VANDERMONDE_PHASE_20261023.md) and [Review 04](reviews/04_TOPOLOGICAL_TRANSPORT_LITERATURE_AND_PROOF_REVIEW_20261023.md) record proofs, seventeen external references, source access and the narrower unresolved novelty question. Prepared for Edward Baker with substantial LLM assistance, **gpt-6-astra, effort max**; same-assistant self-review only. This is a maintained additional manuscript, not a snapshot, and gives no new RH or unconditional time-zero event bound.
+
 ## Objectives and priorities
 
 Two global formulations concern RH: positivity of the **complete** central
@@ -89,6 +101,10 @@ comparison status and links any later weighted-Green result instead of
 duplicating it. The current cross-project chat remains archive 0009 in the
 shared history; new focused chats may register in their project folders.
 
+## Height dependent backward contours — 23 October 2026
+
+[Home 12](12_height_dependent_heat_contours/README.md) studies whether a shrinking negative-time deformation makes the original time-zero cap easier to bound. The [overview](12_height_dependent_heat_contours/research-overview/01_HEIGHT_DEPENDENT_HEAT_CONTOURS_PROGRAM_20261023.md) prioritizes the complete cap-and-connector lower bound, with collision exclusion as a later consumer. The [HDC register](12_height_dependent_heat_contours/research-progress/01_HEIGHT_DEPENDENT_HEAT_CONTOURS_PROGRESS_20261023.md) owns execution; HDC-00 is organization complete and HDC-01 is Unstarted. The founding notes and unique conversation archive remain in the [brainstorm folder](../brainstorm/investigations-4/README.md). Prepared for Edward Baker with substantial LLM assistance, **gpt-6-astra (Codex), effort max**.
+
 ## Project homes
 
 | Home | Object and first task | Current disposition |
@@ -103,6 +119,8 @@ shared history; new focused chats may register in their project folders.
 | [08 Real Thom/degree integrals][p8] | Signed real collision integral versus complete winding; RTD-01 | Setup complete; first contract Unstarted |
 | [09 Reciprocal Hodge energy][p9] | Full reciprocal-form energy, paired periods and degeneration; RHE-01 | Setup complete; first contract Unstarted; later limits gated |
 | [10 Chern/Hopf integral estimates][p10] | Evaluated mass, Gauss comparisons and signed critical-wall amplitude; CHB-07 | Coupled signed tail bounds proved and finitely certified; added direct quadrature wins this pilot, global arithmetic improvement open |
+| [11 Late heat caps and charge transport][p11] | Complete projective tubes, canonical complex-time caps and closure allocation | LHCT-01–03 proved in declared fixed-rank scope; shrinking/fixed-width closure limits retain charge. Opposing signed estimate and exclusion remain open; [ledger][lhct-progress] |
+| [12 Height dependent heat contours](12_height_dependent_heat_contours/README.md) | Complete shrinking backward deformation as an estimator for the original time-zero cap; HDC-01 | Setup complete; finite-band contract Unstarted; canonical coupled bound and comparative gain open. [Sole ledger](12_height_dependent_heat_contours/research-progress/01_HEIGHT_DEPENDENT_HEAT_CONTOURS_PROGRESS_20261023.md) |
 
 Every home has notes/, numerics/ and reviews/. The user also authorized
 a shared [notes folder](notes/README.md) for derivations crossing homes.
@@ -120,6 +138,16 @@ Former program paths route there; shared detailed derivations and original
 checks/reviews retain their source paths. Chat 0008 is uniquely affiliated
 with that home, preserving its number and provenance. This is organization
 and exposition of existing results, with no new mathematical status.
+
+**Late heat cap direction, 22 October 2026.** Prepared for Edward Baker
+with substantial LLM assistance, actual recorded **gpt-6.1-sol, effort ultra**.
+[Home 11][p11] now owns the analytical program for distant-cap estimates,
+zero-following projective sides and complete charge transport. Its
+[overview][lhct-overview] and sole [local register][lhct-progress] begin
+with boundary geometry and complex-time cap asymptotics; pair statistics
+are an optional analytical bridge and numerics support the proofs. Setup
+changes no I4-H01/H02, CHB or BW12 exclusion gate. The founding assessment
+and unique originating chat remain in home 10.
 
 ## Reading path
 
@@ -236,3 +264,17 @@ is internal LLM review, with no theta acquisition or exclusion upgrade.
 [p9]: 09_reciprocal_hodge_energy/README.md
 [p10]: 10_chern_hopf_integral_estimates/README.md
 [chb-writeup]: 10_chern_hopf_integral_estimates/notes/01_ESTABLISHED_MASS_TRACE_AND_AMPLITUDE_RESULTS_20261022.md
+
+[p11]: 11_late_heat_caps_and_charge_transport/README.md
+[lhct-overview]: 11_late_heat_caps_and_charge_transport/research-overview/01_LATE_HEAT_CAPS_AND_CHARGE_TRANSPORT_PROGRAM_20261022.md
+[lhct-progress]: 11_late_heat_caps_and_charge_transport/research-progress/01_LATE_HEAT_CAPS_AND_CHARGE_TRANSPORT_PROGRESS_20261022.md
+
+**Initial cap and increasing-height continuation, 23 October 2026.**
+[Note 11](notes/11_INITIAL_CAP_FUTURE_BIRTHS_AND_HEIGHT_BOUNDARIES_20261023.md) relates the initial real-angular integral to later
+births with explicit multiplicity, crossing and endpoint terms. It derives
+canonical relative wall and creation-event bounds after a shrinking
+initial time layer, and records a separate compact physical-cap product.
+[Self-review](reviews/03_INITIAL_CAP_AND_HEIGHT_BOUNDARY_SELF_REVIEW_20261023.md); **gpt-6-astra, effort max**, for Edward Baker
+with substantial LLM assistance. The early layer and physical signed
+estimate remain open; these results are in the note, not yet integrated
+into the maintained manuscript.

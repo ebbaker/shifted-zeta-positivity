@@ -1,0 +1,311 @@
+\section{A Vandermonde estimate with linear population cost}
+\label{sec:vandermonde}
+
+A termwise estimate of pair phases suggests an unnecessary harmonic
+sum. Summing the linear part first removes it. This observation is
+useful because a cluster has $m(m-1)/2$ pairs, whereas its physical
+cap should be compared with a population of size $m$.
+
+\begin{lemma}[Perturbing a clock discriminant]
+\label{lem:vandermonde}
+Let $c_j=c_1+(j-1)\pi$, $1\le j\le m$, and let
+$w_j=c_j+\delta_j$ with $|\delta_j|\le\eta\le\pi/8$.
+For $m=1$ both discriminants below are one. Using the logarithm
+obtained by continuously moving the points from
+$c_j$ to $w_j$, one has
+\begin{equation}
+ \left|\log\frac{\prod_{i<j}(w_j-w_i)^2}
+                      {\prod_{i<j}(c_j-c_i)^2}\right|
+ \le \frac{4(m-1)}\pi\eta+\frac{8m}{9}\eta^2
+ \le 2m\eta.
+ \label{eq:vandermondebound}
+\end{equation}
+\end{lemma}
+\begin{proof}
+Set $u_{ij}=(\delta_j-\delta_i)/(\pi(j-i))$, so $|u_{ij}|\le1/4$.
+Each pair ratio stays in a disk about one avoiding zero. Hence its
+logarithm is unambiguously the power-series logarithm, and
+\[
+ \log(\Delta(w)/\Delta(c))
+ =2\sum_{i<j}u_{ij}+2\sum_{i<j}\{\Log(1+u_{ij})-u_{ij}\}.
+\]
+With $H_0=0$ and $H_j=\sum_{d=1}^j d^{-1}$,
+\[
+ \sum_{i<j}\frac{\delta_j-\delta_i}{j-i}
+ =\sum_{j=1}^m\delta_j(H_{j-1}-H_{m-j}).
+\]
+For each $d$, the two indicator sequences in
+$H_{j-1}-H_{m-j}$ differ at $2\min(d,m-d)$ indices. Therefore
+\[
+ \sum_{j=1}^m|H_{j-1}-H_{m-j}|
+ \le\sum_{d=1}^{m-1}\frac{2\min(d,m-d)}d
+ \le2(m-1).
+\]
+This bounds the linear part by $4(m-1)\eta/\pi$.
+The elementary remainder estimate
+$|\Log(1+u)-u|\le |u|^2/[2(1-|u|)]$ bounds the rest by
+\[
+ \frac{16\eta^2}{3\pi^2}
+       \sum_{d=1}^{m-1}\frac{m-d}{d^2}
+ \le\frac{8m}{9}\eta^2.
+\]
+Finally $4/\pi+\pi/9<2$, proving the last inequality.
+\end{proof}
+
+The estimate controls a continuously lifted complex logarithm, not
+only the modulus of a determinant. A lower gap bound by itself
+would not give the same phase information. The proof is elementary;
+no optimality or priority for its numerical constants is asserted.
+
+\section{The complete theta source on a narrow spatial strip}
+\label{sec:source}
+
+We now prove Theorem~\ref{thm:headline}. The central simplification
+is to work in disks around the clock points, whose imaginary parts
+are bounded independently of the rank. On such disks the exponential
+bound for sine and cosine involves $|\im w|$, not $|w|$. The real
+width can therefore grow without introducing an $e^{\pi K}$ loss.
+
+\begin{lemma}[Weighted concentration]
+\label{lem:moments}
+Let $U$ be the positive random variable with density
+$e^{Tu^2}\Phi(u)/H(T,0)$ on $u\ge0$, and put $V=U-L$.
+For each fixed $a\ge0$ and $j=1,2,3$,
+\begin{equation}
+ M_j(T,a):=\mathbb E\bigl[|V|^j e^{a|V|/L}\bigr]
+ =O_a(\kappa^{-j/2}).
+ \label{eq:moments}
+\end{equation}
+The constants do not depend on a root rank or a selected population.
+\end{lemma}
+\begin{proof}
+All theta indices can be retained in the factorization
+\begin{align*}
+ e^{Tu^2}\Phi(u)&=2\pi^2 e^{q_T(u)}b(u),&
+ q_T(u)&=Tu^2+9u-\pi e^{4u},\\
+ b(u)&=\sum_{n\ge1}\left(n^4-\frac{3n^2e^{-4u}}{2\pi}\right)
+          e^{-\pi(n^2-1)e^{4u}}.
+\end{align*}
+For all $u\ge0$,
+\begin{equation}
+ 0<b_*:=1-\frac3{2\pi}\le b(u)
+ \le B_*:=\frac1{1-16e^{-3\pi}}.
+ \label{eq:sourcebounds}
+\end{equation}
+The lower bound uses the first term; all terms are positive. For
+the upper bound discard the subtraction and compare successive terms
+$n^4e^{-\pi(n^2-1)}$ with a geometric series of ratio at most
+$16e^{-3\pi}$.
+
+For large $T$, $L\to\infty$, $T/\kappa\to0$, and
+\[
+ q_T(L+v)-q_T(L)=Tv^2-\pi e^{4L}(e^{4v}-1-4v).
+\]
+On $v\ge-1/4$ one has $q_T''(L+v)\le-\kappa/(2e)$
+eventually. Hence this difference is at most
+$-c\kappa v^2$, where $c=1/(4e)$.
+On $0\le u\le L-1/4$, $q_T$ has at most one local minimum and
+no local maximum: $q_T'$ first increases and then decreases, with
+its later zero at $L$. Since $q_T(L-1/4)>q_T(0)$ eventually,
+the maximum on that interval is its right endpoint. Thus the entire
+far-left part has exponent at most $q_T(L)-c\kappa/16$.
+
+On $|v|\le\kappa^{-1/2}$, Taylor's formula gives
+$q_T(L+v)-q_T(L)\ge-1/2-O(\kappa^{-1/2})$.
+The normalization is therefore at least a positive constant times
+$e^{q_T(L)}/\sqrt\kappa$. On the near and right parts put
+$w=\sqrt\kappa v$. Dividing by this lower normalization bounds
+the moment by a constant times
+\[
+ \kappa^{-j/2}\int_\R |w|^j
+ e^{-cw^2+a|w|/(L\sqrt\kappa)}\dd w
+ +L^{j+1}\sqrt\kappa\,e^{a-c\kappa/16}.
+\]
+The integral is bounded for large $T$; the second term is smaller
+than every negative power of $\kappa$. This proves the assertion.
+Both tails, the normalization, and all source indices were included.
+\end{proof}
+
+\begin{lemma}[A rank-uniform complex-time approximation]
+\label{lem:strip}
+For real $|s|\le Y$ define
+\[
+ F(s,w)=\frac{H(T+is,w/L)}{H(T,0)},\qquad
+ c_j(w)=\partial_w^j\cos w.
+\]
+On $|\im w|\le a$ and $|w|\le Z$, for $j=0,1,2,3$,
+\begin{equation}
+ |\partial_w^jF-e^{isL^2}c_j(w)|\le
+ e^a\left\{
+ \sum_{k=1}^j\binom jk\frac{M_k(T,a)}{L^k}
+ +\frac{ZM_1(T,a)}L
+ +Y\bigl(2LM_1(T,a)+M_2(T,a)\bigr)\right\}.
+ \label{eq:stripbound}
+\end{equation}
+The sum is zero for $j=0$. In particular, for fixed $a,Y$ and
+$Z\le\pi K+1$, the right side is $O_{a,Y}(\varepsilon_T)$.
+\end{lemma}
+\begin{proof}
+Put $R=U/L$. Differentiation under the convergent complete source
+gives $\partial_w^jF=\mathbb E[R^je^{isU^2}c_j(Rw)]$.
+Split the error into the changes in $R^j$, in $c_j(Rw)$, and in
+$e^{isU^2}$. The first is bounded using
+\[
+ |R^j-1|\le\sum_{k=1}^j\binom jk|V|^k/L^k,
+ \qquad |c_j(Rw)|\le e^a e^{a|V|/L}.
+\]
+The line segment from $w$ to $Rw$ gives
+$|c_j(Rw)-c_j(w)|\le Z|V|e^ae^{a|V|/L}/L$.
+Finally, because $s,U,L$ are real,
+\[
+ |e^{isU^2}-e^{isL^2}|
+ \le |s|\,|U^2-L^2|\le Y(2L|V|+V^2).
+\]
+Taking expectations proves \eqref{eq:stripbound}. No complex-time
+derivative of an asymptotic error has been taken.
+\end{proof}
+
+\subsection{Actual moving disks and their rank labels}
+
+Let $s_j=(j-1/2)\pi$, $r_1=1/3$, and $\rho=1/4$.
+For $|v|\le r_1$ consider
+\begin{equation}
+ F(s,w)-vF_w(s,w)=0,
+ \qquad w_{0,j}(v)=s_j+\arctan v.
+ \label{eq:rootinverse}
+\end{equation}
+The principal branch of $\arctan$ is analytic here. On
+$|w-w_{0,j}(v)|=\rho$, the reference equation is
+\[
+ e^{isL^2}(\cos w+v\sin w)
+ =-\sin(s_j)e^{isL^2}\sqrt{1+v^2}\,
+       \sin(w-w_{0,j}(v)).
+\]
+Its modulus is at least
+$\sqrt{1-r_1^2}(2\rho-\sinh\rho)>0$, uniformly in $j$.
+These disks have $|\im w|\le\operatorname{arctanh}(1/3)+1/4<1$
+and $|w|\le\pi K+1$ for $j\le K$.
+Lemma~\ref{lem:strip} and Rouch\'e's theorem therefore give exactly
+one simple solution in each disk, once $\varepsilon_T$ is small.
+Throughout the disk,
+\[
+ |\sin w|=|\cos(w-s_j)|
+ \ge2-\cosh\bigl(\operatorname{arctanh}(1/3)+1/4\bigr)>0.
+\]
+Thus $F_w\ne0$ at the actual solutions as well.
+The solutions depend holomorphically on $\tau=T+is$ and $v$
+locally, and uniqueness patches them along the compact strip.
+Since $H/H_z=v/L$, they are the required inverse disks in the
+physical coordinate $q=v/L$.
+Injectivity in $v$ follows by recovering $v$ from that quotient.
+Their images are disjoint, since the disks around adjacent clock
+centers have total diameter less than $\pi$.
+
+At $s=0$ the source and the reference are real. Choose any fixed
+$0<\beta<\pi/4$. On the real interval from zero to $s_K+\beta$,
+the uniform errors for $F$ and $F_w$ tend to zero. On each
+$[s_j-\beta,s_j+\beta]$ the derivative has constant nonzero
+sign and the two endpoint values have opposite signs. On the
+remaining intervals $|\cos w|\ge\sin\beta$, so no zero is
+missed. This identifies the roots as exactly the first $K$
+positive real roots, not merely $K$ roots near guessed labels.
+
+At the centers $v=0$, the same estimates imply, uniformly for
+$j\le K$ and $|s|\le Y$,
+\begin{align}
+ Lz_j(T+is)&=s_j+\delta_j(s),& |\delta_j(s)|&\le C_Y\varepsilon_T,
+ \label{eq:rooterror}\\
+ h_j(T+is)&=H(T,0)L[-\sin(s_j)]e^{isL^2}(1+\rho_j(s)),&
+ |\rho_j(s)|&\le C_Y\varepsilon_T.
+ \label{eq:herror}
+\end{align}
+For \eqref{eq:rooterror}, use the lower linear bound for $\sin$
+on the fixed root disk. For \eqref{eq:herror}, evaluate the
+$F_w$ estimate there and use the bounded derivative of $\sin$.
+Increasing $C_Y$ if needed pays both bounds; it is independent of
+the population. The ratio in \eqref{eq:herror} remains in a disk
+about one of radius less than $1/2$, so it has a single near-one
+logarithm throughout the cap. This is what controls a lifted phase,
+even though $YL^2$ itself becomes large.
+
+\subsection{Proof of the terminal estimates}
+
+Equation~\eqref{eq:herror}, summed over the selected block, gives
+\begin{equation}
+ \Theta(T,Y)=mYL^2+O_Y(m\varepsilon_T).
+ \label{eq:thetaerror}
+\end{equation}
+Substitution in \eqref{eq:closures}, with
+$k_\epsilon=r^2/(L^2+r^2)$, proves \eqref{eq:capheadline}.
+This argument uses endpoint logarithms and the exact disk integral;
+it does not multiply an uncontrolled derivative error by a growing
+cap volume.
+
+Apply Lemma~\ref{lem:vandermonde} to the unfolded roots in
+\eqref{eq:rooterror}. The reference discriminant is positive real
+and independent of $s$; the factor $L^{-m(m-1)}$ is also positive
+real. For $\eta=C_Y\varepsilon_T\le\pi/8$ the two endpoint
+logarithms have modulus at most $2m\eta$ each. Therefore
+\begin{equation}
+ \left|\frac{k_\epsilon}{2\pi}
+       \im\int_{T-iY}^{T+iY}d\log\Delta\right|
+ \le\frac{2k_\epsilon m\eta}{\pi}.
+ \label{eq:vfinite}
+\end{equation}
+This proves \eqref{eq:vheadline}. The factorization
+\eqref{eq:factor} proves the corresponding analytic-factor estimate
+by subtraction. In particular,
+\begin{equation}
+ \frac{k_\epsilon}{2\pi m}
+       \im\int_{T-iY}^{T+iY}d\log\UU
+ =\frac{r^2YL^2}{\pi(L^2+r^2)}
+       +O_Y\!\left(\frac{r^2\varepsilon_T}{L^2}\right).
+ \label{eq:unitbound}
+\end{equation}
+
+If $Y=Y_T=S/L^2$ with fixed $S>0$, repeat
+\eqref{eq:stripbound} with that value, rather than using a fixed-width
+error. Its scale becomes $O_S((K+1)/(L\sqrt\kappa))$.
+The same construction gives
+\begin{equation}
+ \frac{\II_{T,m}}m
+ =\frac{r^2S}{\pi(L^2+r^2)}
+ +O_S\!\left(\frac{r^2(K+1)}{L^3\sqrt\kappa}\right)
+ =O_{r,S}(L^{-2}).
+ \label{eq:shrinkingcap}
+\end{equation}
+This is a uniform estimate per root even when $m$ grows. An absolute
+vanishing cap follows, for example, if also $m=o(L^2)$.
+
+\subsection{Proof of the late edge estimate}
+
+On $[\theta T,T]$, $L_t/L_T\to1$ and
+$\kappa_t/\kappa_T$ stays bounded above and below by positive
+constants depending on $\theta$. The preceding error estimates
+are therefore uniform there. For the fixed physical radius
+$\epsilon=r/L_T$, the local inverse variable is
+$v=L_tq$, with $|v|\le r$. The same construction gives disjoint
+holomorphic tubes over the whole rectangle: the unique inverse
+branches agree on overlaps. No assertion about continuation back
+to time zero is needed.
+
+At each endpoint $b\in\{\theta T,T\}$, formula
+\eqref{eq:thetaerror} reads
+$\II_b/m=k_\epsilon YL_b^2/\pi+O_{Y,\theta}(k_\epsilon\varepsilon_T)$.
+Thus \eqref{eq:closures} yields the more precise finite asymptotic
+\begin{equation}
+ \frac{\JJ_\pm}{m}
+ =\frac{r^2Y(L_{\theta T}^2-L_T^2)}{2\pi(L_T^2+r^2)}
+ +O_{Y,\theta}\!\left(\frac{r^2\varepsilon_T}{L_T^2}\right).
+ \label{eq:lateedge}
+\end{equation}
+Differentiating the defining saddle equation gives the exact identity
+$L_t'=2L_t/\kappa_t\sim1/(4t)$, uniformly on this interval.
+Hence $L_T-L_{\theta T}=\frac14\log(1/\theta)+o(1)$.
+Substitution proves \eqref{eq:edgeheadline} and completes
+Theorem~\ref{thm:headline}.
+
+These tubes contain no collision. Their late edge estimate is a
+proved bound on a named part of a longer boundary, not an estimate
+on the earlier connection to an event-containing region. The latter
+has a different asymptotic behavior, described next.

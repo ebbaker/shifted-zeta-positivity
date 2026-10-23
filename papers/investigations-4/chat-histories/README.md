@@ -118,3 +118,9 @@ index. Archives 0005, 0006, 0007 and 0009 remain here. This is a historical
 pointer, not another registration or transcript copy. Prepared for Edward
 Baker with substantial LLM assistance, actual recorded **gpt-6.1-sol,
 effort ultra**, verified from this turn.
+
+## Divisor stability continuation — 22 October 2026
+
+Prepared for Edward Baker with substantial LLM assistance; actual **gpt-6-astra (Codex), effort max**.
+
+- [0010 Continue divisor stability research](0010_2026-10-23T03-12-24Z_continue-divisor-stability-research.json): distinct new conversation completing [Note 08's fixed-disk target](../notes/09_SHARP_C2_DIVISOR_STABILITY_20261022.md) and [growing spatial clock extraction](../notes/10_GROWING_CLOCK_WINDOWS_20261022.md). Its UTC creation date is 23 October; the local research date is 22 October. Earlier home 11 archive 0001 and all earlier base identities are preserved. Current counts, configurations and hashes belong to the generated index; the final exact-turn follow-up captures the actual completed reply.

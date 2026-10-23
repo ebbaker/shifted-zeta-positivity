@@ -1,0 +1,128 @@
+\documentclass[11pt,letterpaper]{article}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage{microtype,booktabs,enumitem}
+\usepackage{xurl}
+\usepackage{xcolor}
+\usepackage[colorlinks=true,linkcolor=blue!50!black,citecolor=blue!50!black,urlcolor=blue!50!black]{hyperref}
+\hypersetup{pdftitle={Reciprocal Differential Energy on Finite Double Covers},pdfauthor={Drafted for Edward Baker}}
+\numberwithin{equation}{section}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\newcommand{\C}{\mathbb C}
+\newcommand{\R}{\mathbb R}
+\newcommand{\D}{\mathbb D}
+\newcommand{\E}{\mathcal E}
+\newcommand{\Eo}{\mathcal E_0}
+\newcommand{\dd}{\,d}
+\newcommand{\ii}{\mathrm i}
+\newcommand{\re}{\operatorname{Re}}
+\newcommand{\im}{\operatorname{Im}}
+\newcommand{\arsinh}{\operatorname{arsinh}}
+\newcommand{\arcosh}{\operatorname{arcosh}}
+\newcommand{\supp}{\operatorname{supp}}
+\newcommand{\osc}{\mathrm{osc}}
+\newcommand{\ext}{\mathrm{ext}}
+\newcommand{\cut}{\mathrm{cut}}
+\newcommand{\phys}{\mathrm{phys}}
+\newcommand{\repo}{\texttt{shifted-zeta-positivity}}
+\setlist[enumerate]{itemsep=3pt,topsep=5pt}
+\setlength{\emergencystretch}{2em}
+\allowdisplaybreaks[2]
+\title{Reciprocal Differential Energy on Finite Double Covers\\
+\large Boundary reductions, quadratic models, and the theta heat flow}
+\author{Drafted for Edward Baker}
+\date{Draft manuscript --- 22 October 2026}
+\begin{document}
+\maketitle
+\begin{abstract}
+For a holomorphic function on a bounded spatial domain, the differential
+$dz/\sqrt H$ on its two-sheeted cover has energy $2\int |H|^{-1}\dd A$.
+This energy is finite at a simple zero and diverges at a multiple zero.
+The research objective is an independent quantitative upper estimate for
+the canonical theta heat flow, rather than another formulation of
+simplicity. We develop the finite-domain analytic framework for this
+objective. On a two-branch annulus, a single-valued real primitive gives
+an exact reduction to a projected relative period and a complete exterior
+boundary correction. Subtracting a quadratic differential with the same
+core period yields explicit energy, relative-period, and full-boundary
+remainders bounded independently of the branch separation. A complete
+moment-controlled chart at a hypothetical nondegenerate heat event supplies
+all constants and a finite upper bound; a sharper bound strictly improves
+the initial coarse certificate on an explicit window. An exact quadratic
+calculation shows why a bounded core period and bounded exterior norm
+budgets do not bound the full energy. A previously recorded interval
+computation on one regular theta fiber supports the finite acquisition
+framework. The analytic estimates remain compatible with ordinary double
+collisions: no endpoint-uniform theta estimate, RH theorem, or simplicity
+exclusion is obtained.
+\end{abstract}
+\tableofcontents
+\input{sections/01_goals}
+\input{sections/02_geometry}
+\input{sections/03_boundary}
+\input{sections/04_quadratic}
+\input{sections/05_remainders}
+\input{sections/06_heat_chart}
+\input{sections/07_enclosures}
+\input{sections/08_status}
+\appendix
+\input{sections/10_normalization}
+\input{sections/09_source_tails}
+\section*{Acknowledgements and draft status}
+This manuscript was drafted for Edward Baker with substantial assistance
+from OpenAI's Codex, recorded model \texttt{gpt-6.1-sol}, reasoning effort
+\emph{ultra}. LLM assistance was used in derivation, checking, exposition,
+and preparation of the accompanying computations. Separate agents of the
+same model supplied internal checks; these are not independent specialist
+or human validation. The manuscript consolidates the local research notes
+and retains their stated scope. Classical identities are attributed below;
+no mathematical priority claim is made. The numerical support has a
+replayable outward-ball record, while the theorems and proofs in the main
+text do not depend on a numerical sign or timing result.
+\begin{thebibliography}{9}
+\bibitem{RT}
+B.~Rodgers and T.~Tao,
+\emph{The de Bruijn--Newman constant is non-negative},
+Forum of Mathematics, Pi \textbf{8} (2020), e6, 62 pp.
+\href{https://doi.org/10.1017/fmp.2020.6}{doi:10.1017/fmp.2020.6}.
+The normalization used here is Introduction, equations (1)--(4).
+
+\bibitem{Grava}
+T.~Grava, \emph{Riemann Surfaces and Integrable Systems},
+lecture notes, 14 February 2021, Section 3.1.2.
+\url{https://people.sissa.it/~grava/RS2021.pdf}.
+
+\bibitem{Arb}
+F.~Johansson, \emph{Arb: Efficient Arbitrary-Precision Midpoint-Radius
+Interval Arithmetic}, 2016.
+\url{https://arxiv.org/abs/1611.02831}.
+
+\bibitem{Notes}
+E.~Baker research project, \emph{Reciprocal Hodge energy},
+Notes 01--03, 22 October 2026. Prepared for Edward Baker with substantial
+LLM assistance, \texttt{gpt-6.1-sol}, effort ultra.
+Accompanying \repo\ working repository, directory
+\path{papers/investigations-4/09_reciprocal_hodge_energy/notes/}.
+The proofs are developed independently of these records in the present text.
+
+\bibitem{ThetaRecord}
+E.~Baker research project, \emph{Actual regular theta fiber comparison},
+Note 04, certificate \path{03_ACTUAL_THETA_COMPARISON_20261022.json},
+and Review 03, 22 October 2026. Prepared for Edward Baker with substantial
+LLM assistance, \texttt{gpt-6.1-sol}, effort ultra.
+Accompanying repository directory
+\path{papers/investigations-4/09_reciprocal_hodge_energy/}.
+The certificate and its three replay scripts are in \path{numerics/};
+the implementation-specific comparison and all error budgets are documented
+in Note 04 and the fixed comparison contract.
+\end{thebibliography}
+\end{document}

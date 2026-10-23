@@ -1,0 +1,94 @@
+\section{Project goals and the results established so far}\label{sec:goals}
+
+The project studies the reciprocal differential on finite covers of the
+canonical theta heat field. The intended long-term application is to
+control degeneration as zeros approach one another. The distinction between
+an identity and an estimate is central. Expressing simplicity as local
+integrability does not prove simplicity. A useful advance would be an
+upper estimate obtained from the unchanged canonical source and remaining
+controlled in the relevant limiting regime, or a demonstrable finite
+acquisition advantage over direct integration using the same information.
+
+This manuscript develops the analytic part of that program. Its setting
+is a bounded disk containing two simple real zeros. The resulting cover
+is an annulus, with two physical boundary components, one absolute core
+cycle, and a relative path connecting the two boundary components. The
+relative period must be retained: it can diverge even when the core period
+is constant and the exterior differential has uniformly bounded traces.
+
+\subsection{Canonical normalization and the motivating question}
+We use
+\begin{align}
+ H(t,z)&=\int_0^\infty e^{tu^2}\Phi(u)\cos(zu)\dd u,\label{eq:Hdef}\\
+ \Phi(u)&=\sum_{n=1}^\infty
+ (2\pi^2n^4e^{9u}-3\pi n^2e^{5u})e^{-\pi n^2e^{4u}}.
+ \label{eq:Phi}
+\end{align}
+The classical theta identity fixes the normalization
+\begin{equation}\label{eq:xi}
+ H(0,z)=\frac18\xi\left(\frac12+\frac{\ii z}{2}\right),\qquad
+ \xi(s)=\frac{s(s-1)}2\pi^{-s/2}\Gamma(s/2)\zeta(s).
+\end{equation}
+Appendix~\ref{sec:normalization} derives this identity and the complete
+source reflection $\Phi(u)=\Phi(-u)$ from the Gaussian theta identity.
+The convention agrees with \cite[(1)--(4)]{RT}.
+Our derivative and energy estimates below start from
+\eqref{eq:Hdef}--\eqref{eq:Phi}. In particular,
+\begin{equation}\label{eq:heat}
+ \partial_t H=-\partial_z^2H.
+\end{equation}
+The RH motivation concerns the zero set of \eqref{eq:xi}; none of the local
+theorems below assumes RH. In a hypothetical ordinary collision, the
+zeros split at the square-root scale in positive physical time. The
+reciprocal energy then grows logarithmically. Preventing such a collision
+would require a source estimate incompatible with that growth, with
+constants valid in the limiting family. The present finite estimates do
+not have that property.
+
+\subsection{Analytic contributions}
+The results are organized as follows.
+\begin{enumerate}
+\item Section~\ref{sec:geometry} constructs the cover, normalizes the
+energy, and proves the local integrability statement at all multiplicities.
+It gives explicit coordinates for the full bordered annulus.
+\item Section~\ref{sec:boundary} proves the complete cut-boundary identity
+and a real-primitive reduction. With consistently oriented periods $q,p$,
+\begin{equation}\label{eq:roadmapGreen}
+ \E=\im(\bar q p)+R_{\ext},\qquad
+ |R_{\ext}|\le 2\pi^2K_\partial^2.
+\end{equation}
+The bound uses the exterior differential trace; the relative period
+contains the missing degeneration.
+\item Section~\ref{sec:quadratic} evaluates the entire quadratic cover and
+each of its cut and physical-boundary contributions. It proves a scoped
+failure of upper estimates based only on fixed exterior norm budgets and
+the permitted core period.
+\item Section~\ref{sec:remainders} subtracts a quadratic differential with
+the same core period. It proves explicit bounds for the full energy,
+relative period, and both boundary contributions, with constants independent
+of the root separation when the unit and its derivatives are controlled.
+\item Section~\ref{sec:heat} derives a complete quantitative chart from
+canonical source moments at a hypothetical ordinary event. It proves a
+finite logarithmic upper bound and a strict improvement over its coarse
+version on a specified smaller window. These are shared direct estimates,
+not a new restriction on the source's admissible events.
+\end{enumerate}
+Section~\ref{sec:enclosures} records analytic error consequences. Numerical
+support is confined to Section~\ref{sec:support}, with the detailed
+computational exposition left to its cited record. Section~\ref{sec:open}
+identifies the remaining endpoint and coverage problems.
+
+\subsection{Comparison principle and scope}
+The direct comparator is always the same quantity,
+$2\int_\Omega |H|^{-1}\dd A$, supplied with all the same source,
+normalization, root, boundary, and period observations. It may use the
+same coordinate substitutions and exact identities. Consequently, a
+better bound than one coarse direct certificate does not establish a
+general advantage over direct integration. Likewise, a native numerical
+implementation can be faster without having more information.
+
+The results collected here consolidate \cite{Notes}; their proofs are
+included in full. Classical complex analysis, the exact canonical
+normalization above, and ordinary calculus supply the background. There
+is no compact finite-genus model of the complete entire theta cover in
+the argument, and no omission of the spatial boundary of a finite cover.

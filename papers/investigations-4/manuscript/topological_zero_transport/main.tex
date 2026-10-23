@@ -1,0 +1,256 @@
+\documentclass[11pt,letterpaper]{article}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,microtype}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools,mathrsfs,booktabs,enumitem,xurl,xcolor}
+\usepackage[colorlinks=true,linkcolor=blue!40!black,citecolor=blue!40!black,urlcolor=blue!40!black]{hyperref}
+\hypersetup{pdftitle={Topological Zero Transport and the Phase of the Discriminant},pdfauthor={Drafted for Edward Baker}}
+\numberwithin{equation}{section}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{remark}\newtheorem{remark}[theorem]{Remark}
+\newcommand{\C}{\mathbb C}\newcommand{\R}{\mathbb R}
+\newcommand{\im}{\operatorname{Im}}\newcommand{\re}{\operatorname{Re}}
+\newcommand{\HH}{\mathcal H}\newcommand{\Aconn}{\mathcal A}
+\newcommand{\CC}{\mathcal C}\newcommand{\DD}{\mathscr D}
+\newcommand{\UU}{\mathscr U}\newcommand{\II}{\mathcal I}
+\newcommand{\JJ}{\mathcal J}\newcommand{\QQ}{\mathcal Q}
+\newcommand{\RR}{\mathcal R}\newcommand{\dd}{\,d}
+\newcommand{\ord}{\operatorname{ord}}\newcommand{\Log}{\operatorname{Log}}
+\setlength{\emergencystretch}{2em}
+\setlist{itemsep=3pt,topsep=5pt}
+\allowdisplaybreaks[2]
+\title{Topological Zero Transport\\and the Phase of the Discriminant}
+\author{Drafted for Edward Baker}
+\date{23 October 2026}
+\begin{document}
+\maketitle
+\begin{abstract}
+A multiple zero of an analytic backward heat flow carries a positive
+local degree. Integrating the normalized first jet over a complete
+spacetime boundary therefore relates an initial integral to later
+collision charge. We evaluate the terminal integral on moving root
+tubes as the phase increment of one scalar function: the squared
+Vandermonde multiplied by the analytic factor evaluated at the roots.
+The projective side walls have exactly zero flux. For the canonical
+de Bruijn--Newman flow we prove uniform complex-time cap estimates for
+the first $K=o(L\sqrt\kappa)$ roots, where $L\sim\frac14\log T$ and
+$\kappa\sim8TL$. The Vandermonde phase error is linear in the population;
+the analytic factor supplies the leading cap flux. Imaginary-time flux
+per root is $O(1/\log T)$ on proportional late-time intervals. At a fixed
+event core, shrinking the terminal caps instead concentrates half the
+charge on each imaginary-time face. These estimates distinguish the
+terms that become small from those that retain the topology. The
+topological and algebraic ingredients are classical; the paper's focus
+is their quantitative boundary realization, not a new invariant or an
+RH conclusion.
+\end{abstract}
+
+\section{One boundary formula}
+\label{sec:intro}
+
+The useful question is not only where the zeros of a heat-evolved
+function lie, but how their creation can be measured from a boundary.
+A boundary formula separates that question into concrete analytic
+tasks: estimate a terminal cap, choose side walls with manageable
+flux, and account for the faces needed to close the domain. This paper
+develops that separation for the actual first jet $(H,H_z)$.
+
+Let $\tau=t+is$ and $z=x+iy$, and suppose that $H$ is holomorphic and
+satisfies $H_\tau=-H_{zz}$. Away from joint zeros of $(H,H_z)$, put
+\begin{equation}
+ G=(H,H_z),\qquad
+ \Aconn=\frac{\im(G^*dG)}{|G|^2},\qquad
+ \CC=\frac{\Aconn\wedge d\Aconn}{4\pi^2}.
+ \label{eq:forms}
+\end{equation}
+Here ``physical jet'' means that the two components have precisely this
+relative normalization. Multiplying both by a positive real scalar
+does not change the normalized jet. Removing a varying common phase,
+or rescaling only $H_z$, generally changes individual boundary integrals.
+
+Write $\II_t$ for a forward-oriented real-time cap integral, $\JJ_\pm$
+for the outward integrals on $s=\pm Y$, and $\RR$ for the remaining
+outward spatial and joining faces. The initial outward face is
+$-\II_0$. When the terminal cap consists of $m$ regular root disks
+$|H/H_z|\le\epsilon$, the formula to keep in view is
+\begin{equation}
+ \boxed{\displaystyle
+ \II_0=
+ \frac{k_\epsilon}{2\pi}\im\int_{T-iY}^{T+iY}
+             d\log(\Delta\UU)
+ +\JJ_++\JJ_-+\RR-\QQ,\qquad
+ k_\epsilon=\frac{\epsilon^2}{1+\epsilon^2}.}
+ \label{eq:organizing}
+\end{equation}
+Its scalar and integer terms are
+\begin{equation}
+ \Delta=\prod_{i<j}(z_j-z_i)^2,\qquad
+ \UU=\prod_{j=1}^m U(\tau,z_j(\tau)),\qquad
+ \QQ=\sum_{p\in W:\,H(p)=H_z(p)=0}\binom{m_p}{2},
+ \label{eq:terms}
+\end{equation}
+where $H=U\prod_j(z-z_j)$ near the selected roots and $m_p$ is the
+spatial multiplicity at an interior event. The logarithmic integral
+uses a continuous phase, so it retains every winding. A complete
+statement of the geometric hypotheses is Theorem~\ref{thm:transport}.
+
+Equation~\eqref{eq:organizing} is an equality of genuine
+three-dimensional boundary integrals. It does not replace the initial
+cap by a one-dimensional integral on the real axis. It counts all
+complex events inside the chosen four-dimensional domain, including
+the real events at which new real zeros appear. At a real event of
+order $m$, the number of new real zeros is $2\lfloor m/2\rfloor$;
+its complex charge is $\binom m2$. These are different quantities.
+If the initial slice contains a joint zero, its indentation or a local
+core must be specified and retained. The theorem does not assign a
+value to an unspecified singular initial cap.
+
+The three main conclusions are as follows. The terminal cap is exactly
+the phase of $\Delta\UU$, with no derivative or volume loss. A fixed
+projective radius on a moving root tube makes its spatial wall flux
+zero. Finally, the remaining imaginary-time faces admit quantitative
+asymptotics: they are small per root on a late interval $[\theta T,T]$,
+but retain collision charge when attached to a fixed event core.
+The distinction matters even when only a relative bound is sought.
+
+\subsection{The canonical quantitative result}
+
+We use the normalization
+\begin{align}
+ H(\tau,z)&=\int_0^\infty e^{\tau u^2}\Phi(u)\cos(zu)\dd u,
+ \label{eq:theta}\\
+ \Phi(u)&=\sum_{n\ge1}
+ (2\pi^2n^4e^{9u}-3\pi n^2e^{5u})e^{-\pi n^2e^{4u}}.
+ \nonumber
+\end{align}
+Thus $H(0,z)=\xi(\frac12+\frac{iz}{2})/8$.
+Define the large real saddle $L=L_T$ and its curvature by
+\begin{equation}
+ 4\pi e^{4L}=2TL+9,\qquad
+ \kappa=16\pi e^{4L}-2T=8TL-2T+36.
+ \label{eq:saddle}
+\end{equation}
+For fixed $Y>0$, $0<r<1/4$, and an integer $K=K(T)$, set
+\begin{equation}
+ \varepsilon_T=\frac{K+1+L^2}{L\sqrt\kappa},\qquad
+ \epsilon=\frac rL,
+ \qquad K=o(L\sqrt\kappa).
+ \label{eq:range}
+\end{equation}
+The two different symbols distinguish the analytic error scale
+$\varepsilon_T$ from the physical tube radius $\epsilon$.
+
+\begin{theorem}[Growing populations and their boundary flux]
+\label{thm:headline}
+For sufficiently large $T$, the first $K$ positive real zeros of
+\eqref{eq:theta} continue to distinct simple roots on
+$T+i[-Y,Y]$, with disjoint projective inverse disks
+$|H/H_z|\le r/L$. For any consecutive block of $m\le K$ of these
+roots, its forward physical cap satisfies
+\begin{align}
+ \frac{\II_{T,m}}m
+ &=\frac{r^2YL^2}{\pi(L^2+r^2)}
+       +O_Y\!\left(\frac{r^2\varepsilon_T}{L^2}\right),
+ \label{eq:capheadline}\\
+ \frac1m\left|\frac{k_\epsilon}{2\pi}
+       \im\int_{T-iY}^{T+iY}d\log\Delta\right|
+ &=O_Y\!\left(\frac{r^2\varepsilon_T}{L^2}\right).
+ \label{eq:vheadline}
+\end{align}
+All constants are independent of $K$ and $m$. The analytic-factor
+contribution is the difference of these two terms; it has leading
+value $r^2Y/\pi$ per root.
+
+Fix also $0<\theta<1$. The same population has regular root tubes over
+$[\theta T,T]+i[-Y,Y]$, with the same constant radius $r/L_T$ on
+each entire tube. Their projective side flux vanishes, and each
+imaginary-time face satisfies
+\begin{equation}
+ \frac{\JJ_\pm}{m}
+ =-\frac{r^2Y\log(1/\theta)}{4\pi L_T}
+       +o_{Y,\theta,r}(L_T^{-1}).
+ \label{eq:edgeheadline}
+\end{equation}
+The population is held fixed while integrating on each such interval;
+it may grow between choices of $T$.
+\end{theorem}
+
+Theorem~\ref{thm:headline} concerns increasing heat time, with ranks
+allowed to grow. It is not a high-height theorem at fixed heat time.
+For example $K=\lfloor\sqrt\kappa\rfloor$ is permitted. The number of
+included zeros then tends to infinity, the cap has a finite nonzero
+limit per zero, and the late imaginary-face flux tends to zero per
+zero. None of these statements asserts that the unnormalized flux
+tends to zero for every growing population.
+
+The Vandermonde is essential for identifying the pair contribution,
+but it is not the whole physical cap. In this regime it has no leading
+phase increment at all. The dominant common phase comes from the
+canonical analytic factor. Keeping both gives a short proof and avoids
+trying to estimate two large cancelling force sums separately.
+
+\subsection{Relation to previous work and scope of novelty}
+
+The heat deformation belongs to the classical program of de Bruijn
+and Newman~\cite{deBruijn,Newman}; Newman and Wu~\cite{NewmanWu}
+describe its connections with statistical physics. Ki, Kim and
+Lee~\cite{KKL} proved eventual reality and simplicity at large height
+for every fixed positive heat time. Polymath~\cite{Polymath},
+especially Theorem~1.5 and Section~9, obtained effective high-height
+approximations and zero counts. Those results use a different limiting
+regime from \eqref{eq:range}. We prove the needed complex-time
+estimates directly from the complete positive source.
+
+Root dynamics and pair interaction are also established territory.
+Csordas, Smith and Varga~\cite{CSV} used zero-motion equations and
+inverse-square sums in their work on Lehmer pairs. Rodgers and
+Tao~\cite{RT}, Section~4 and Lemma~4.18, developed localized
+logarithmic Hamiltonians with exterior interaction terms in proving
+$\Lambda\ge0$. Dobner~\cite{Dobner} gives a different route to
+Newman's conjecture and its extension. Hall and Ho~\cite{HallHo},
+Proposition~3.1, place polynomial heat-root motion in the
+Calogero--Moser setting. None of the finite pair identities used here
+is proposed as a new dynamics. Montgomery's pair-correlation
+theorem~\cite{Montgomery} concerns a different statistical limit;
+weak pair convergence alone does not supply the complex phase or
+uniform small-gap information needed by a physical cap.
+
+The topological ingredients are classical as well. Whitehead's
+integral formula~\cite{Whitehead} and Chern--Simons
+transgression~\cite{ChernSimons} explain the boundary form in
+\eqref{eq:forms}. Rudolph~\cite{Rudolph} explicitly discusses
+reducing Hopf integrals by integration along fibers; therefore the
+general idea of reducing a three-form to a one-form is not new.
+The discriminant and resultant identities belong to classical
+elimination theory~\cite{GKZ}. Papanicolaou, Kallitsi and
+Smyrlis~\cite{PKS}, Theorem~4.1, prove that multiple zeros of an
+entire caloric function are isolated in complex spacetime. The local
+Hermite splitting used below is consistent with that result and with
+the real zero-number theory of Angenent~\cite{Angenent}, after time
+reversal. Pashaev and Gurkan~\cite{PashaevGurkan} already connect
+Chern--Simons vortices, holomorphic linear evolution and zero dynamics;
+their gauge-field construction is distinct from the normalized
+first-jet boundary considered here.
+
+Accordingly, the contribution proposed for assessment is the explicit
+physical boundary formula together with its population-uniform
+asymptotic estimates and complete closure accounting. The elementary
+$O(m\eta)$ Vandermonde logarithm estimate in
+Lemma~\ref{lem:vandermonde} and the narrow-strip source estimate are
+the quantitative steps that make the growing-population statement
+possible. We do not claim priority for the invariant, the
+discriminant identity, root-following coordinates, or heat-zero
+creation. A targeted primary-source review found the substantial
+overlaps just described; it does not establish that no equivalent
+quantitative theorem exists elsewhere. This is a research working
+manuscript, with originality of that narrower contribution still
+subject to specialist assessment.
+
+\input{boundary}
+\input{asymptotics}
+\input{closures}
+\input{references}
+\end{document}

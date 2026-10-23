@@ -1,0 +1,134 @@
+\section{The complete quadratic calibration}\label{sec:quadratic}
+
+\subsection{Exact energy and both boundary payments}
+Take $H_a(z)=z^2-a^2$ on $|z|<R$, with $0<a<R$. In
+Lemma~\ref{lem:cylinder}, $m=C=0$ and
+\begin{equation}\label{eq:Uround}
+ U_a(\theta)=\arsinh\sqrt{(R/a)^2-\cos^2\theta},\qquad
+ U_0:=U_a(0)=\arcosh(R/a).
+\end{equation}
+Here $\omega=\dd u$ and the full energy is the cylinder area.
+\begin{proposition}[Exact quadratic calculation]\label{prop:quadratic}
+One has
+\begin{align}
+ \E_a&=2\int_0^{2\pi}U_a(\theta)\dd\theta,
+ \label{eq:Equad}\\
+ 4\pi\arcosh(R/a)&\le\E_a\le4\pi\arsinh(R/a),
+ \label{eq:quadbounds}\\
+ \E_a&=4\pi\log(2R/a)+O(a^2/R^2)\quad(a/R\longrightarrow0).
+ \label{eq:quadasymp}
+\end{align}
+With $q=2\pi\ii$ and $p=-2U_0$ oriented plus to minus, the real
+cut and physical contributions are
+\begin{equation}\label{eq:quadpayments}
+ E_{\cut}=2\pi U_0,\qquad
+ E_{\phys}=\E_a-2\pi U_0.
+\end{equation}
+Each contains half of the leading logarithmic divergence.
+\end{proposition}
+\begin{proof}
+The coordinate $u=s+\ii\theta$ has energy form
+$(\ii/2)\dd u\wedge\dd\bar u=\dd s\dd\theta$, proving
+\eqref{eq:Equad}. The minimum and maximum of $U_a$ are
+$\arcosh(R/a)$ and $\arsinh(R/a)$, proving \eqref{eq:quadbounds}.
+The identities
+$\arcosh x=\log(x+\sqrt{x^2-1})$ and
+$\arsinh x=\log(x+\sqrt{x^2+1})$ give the stated asymptotics.
+
+To verify every boundary contribution directly, cut the cylinder at
+$\theta=0$ and use $F=u$ on $0\le\theta\le2\pi$.
+The bottom runs from $-U_0$ to $U_0$, the right side upward,
+the top in reverse, and the left side downward. The bottom-to-top jump
+is $-2\pi\ii$, so the paired cut integral is $-4\pi\ii U_0$.
+Its energy contribution is $2\pi U_0$.
+On the right $u=U_a+\ii\theta$ and on the left
+$u=-U_a+\ii\theta$, with opposite $\theta$ orientations. Thus
+\begin{align*}
+ \int_{\partial X}F\bar\omega
+ &=2\ii\int_0^{2\pi}(\theta U_a'-U_a)\dd\theta\\
+ &=4\pi\ii U_0-4\ii\int_0^{2\pi}U_a\dd\theta.
+\end{align*}
+Multiplication by $\ii/2$ proves \eqref{eq:quadpayments}. A common
+global primitive shift changes neither grouped contribution, since the
+integral of $\bar\omega$ over either grouped boundary pair is zero.
+\end{proof}
+
+For the heat control $H(\tau,z)=z^2-2\tau$, $a=\sqrt{2\tau}$, so
+\begin{equation}\label{eq:quadheat}
+ \E_\tau=2\pi\log(1/\tau)+O(1)
+ \qquad(\tau\downarrow0).
+\end{equation}
+The finite core period is not a finite-energy endpoint statement.
+
+\subsection{A scoped limitation of bounded exterior summaries}
+\begin{proposition}\label{prop:compression}
+Fix $R>0$ and $0<a\le R/2$. The core period, an exterior field floor,
+every prescribed finite collection of exterior differential derivative
+upper bounds, and separately normalized boundary primitive oscillation
+upper bounds can all be chosen uniformly in $a$. Nevertheless $\E_a$
+is unbounded as $a\downarrow0$. No finite upper estimate for the energy
+can depend only on those fixed common budget inequalities.
+\end{proposition}
+\begin{proof}
+The core period is identically $2\pi\ii$. On $|z|=R$,
+$|H_a|\ge3R^2/4$. On a fixed collar, for example
+$3R/4\le|z|\le5R/4$, the expression
+\[
+ \frac1{\sqrt{z^2-a^2}}=\frac1z
+       \left(1-\frac{a^2}{z^2}\right)^{-1/2}
+\]
+is holomorphic with the branch near one and uniformly bounded.
+Cauchy's estimates on smaller fixed collars bound every fixed finite
+derivative collection. In the cylinder parametrization the separately
+rebased boundary primitives have increments
+$\pm(U_a(\theta)-U_0)+\ii\theta$; they are uniformly bounded since
+\[
+ 0\le U_a-U_0\le\arsinh(R/a)-\arcosh(R/a).
+\]
+But \eqref{eq:quadbounds} diverges. The missing relative constant is
+$2U_0$, which is unbounded.
+\end{proof}
+
+The scope is important. Exact attained norms or complete exact boundary
+values can encode $a$ and permit its recovery. The proposition concerns
+fixed common upper-budget inequalities, not every possible use of exterior
+data. It also shows why an absolute field error set admitting arbitrarily
+small positive $a$ admits arbitrarily large finite reciprocal energy,
+even if each admitted positive-$a$ fiber is regular.
+
+\subsection{A lower bound for general pair charts}
+\begin{lemma}\label{lem:screenlower}
+Suppose $H(z)=(z^2-a^2)V(z)$ on $|z|\le R$, $0<2a<R$, and
+$|V|\le M$. Then
+\begin{equation}\label{eq:lowerlog}
+ \E\ge\frac{16\pi}{5M}\log\frac{R}{2a}.
+\end{equation}
+Consequently, an independently obtained upper $\E\le B$ implies
+$a\ge(R/2)\exp[-5MB/(16\pi)]$.
+\end{lemma}
+\begin{proof}
+On $2a\le|z|\le R$, $|z^2-a^2|\le(5/4)|z|^2$.
+Integrating $2\cdot4/(5M|z|^2)$ over this annulus proves
+\eqref{eq:lowerlog}; rearranging proves the consequence.
+\end{proof}
+An endpoint conclusion requires a fixed positive $R$ and uniform $M,B$.
+The upper estimates later in this manuscript do not supply uniform $B$.
+
+\subsection{Capacity as supporting analysis}
+On the round annulus $r<|z|<R$, the function
+$\varphi(z)=\log(|z|/r)/\log(R/r)$ has boundary values zero and one.
+Direct polar integration gives, with no factor $1/2$,
+\[
+ \operatorname{cap}A(r,R)=\int|\nabla\varphi|^2\dd A
+        =\frac{2\pi}{\log(R/r)}.
+\]
+For a closed real one-form of core period $p$, circlewise
+Cauchy--Schwarz and radial integration give
+\[
+ \int|\alpha|^2\dd A\ge\frac{p^2}{2\pi}\log(R/r).
+\]
+Indeed its tangential integral is $p$ on each circle, so its energy on
+that circle is at least $p^2/(2\pi s)$. These formulas explain the
+degeneration scale but do not give an upper modulus bound. In particular,
+a trial potential gives an upper capacity bound and hence a lower bound
+for the fixed-period core energy, not the upper estimate sought here.

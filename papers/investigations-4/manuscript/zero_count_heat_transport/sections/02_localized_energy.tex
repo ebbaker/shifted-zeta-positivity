@@ -1,0 +1,139 @@
+\section{Localized energy and holomorphic degree}
+\label{en:section}
+
+Throughout this section, $\Omega\subset\mathbb C$ is a bounded connected
+domain whose boundary consists of finitely many disjoint piecewise $C^1$ Jordan curves, and $f$ is
+holomorphic on a neighborhood of $\overline\Omega$. All boundary components
+have their positive orientation relative to $\Omega$, including the
+clockwise orientation of inner components. Suppose
+\begin{equation}\label{en:boundary}
+ b:=\min_{\partial\Omega}|f|>0,\qquad
+ N:=\sum_{a\in\Omega:f(a)=0}\operatorname{ord}_a f.
+\end{equation}
+The assumptions exclude the identically zero function. They allow a
+nonzero constant, in which case $N=0$. Write $dA=dx\,dy$ and
+$\Delta=\partial_x^2+\partial_y^2$.
+
+\begin{lemma}[Constant valence over a target disk]\label{en:valence}
+For each $w\in\mathbb C$ with $|w|<b$, the equation $f(z)=w$ has exactly
+$N$ solutions in $\Omega$, counted with multiplicity. Consequently, for
+every nonnegative measurable function $\rho$ supported in $\{|w|<b\}$,
+\begin{equation}\label{en:area}
+ \int_\Omega \rho(f(z))|f'(z)|^2\,dA_z
+ =N\int_{\mathbb C}\rho(w)\,dA_w.
+\end{equation}
+Both sides may initially be interpreted as nonnegative extended integrals, with the measure-theoretic convention $0\cdot\infty=0$.
+\end{lemma}
+\begin{proof}
+The homotopy $f-sw$, $0\le s\le1$, is nonzero on every boundary component,
+since $|f-sw|\ge b-|w|>0$. The argument principle therefore makes the
+number of zeros independent of $s$, proving the first assertion. For a
+nonconstant $f$, its critical points in $\overline\Omega$ are finite.
+Away from their finitely many values, the inverse function theorem gives
+local inverse branches, and the real Jacobian of a holomorphic map is
+$|f'|^2$. Apply the ordinary change-of-variables formula on a countable
+partition of such inverse-branch neighborhoods. The number of branches
+above each regular value in the target disk is $N$. Critical values have
+planar measure zero. First proving the assertion for bounded simple
+functions and then using monotone convergence proves \eqref{en:area}.
+For a nonzero constant, both integrands are zero in the relevant target
+disk, and the conclusion is immediate.
+\end{proof}
+
+\begin{theorem}[Localized power-energy identity]\label{en:power}
+For every $p>0$ and $0<\varepsilon<b$,
+\begin{equation}\label{en:poweridentity}
+ \int_{\Omega\cap\{|f|<\varepsilon\}}
+       |f'|^2|f|^{p-2}\,dA
+ =\frac{2\pi}{p}\varepsilon^p N.
+\end{equation}
+In particular the localized derivative-weighted energy
+\begin{equation}\label{en:Wdef}
+ W_{<\varepsilon}(f;\Omega)
+ :=2\int_{\Omega\cap\{|f|<\varepsilon\}}
+                 \frac{|f'|^2}{|f|}\,dA
+\end{equation}
+satisfies
+\begin{equation}\label{en:Wcount}
+ \boxed{W_{<\varepsilon}(f;\Omega)=4\pi\varepsilon N.}
+\end{equation}
+The integrals are finite at zeros of every finite multiplicity.
+\end{theorem}
+\begin{proof}
+Use Lemma~\ref{en:valence} with
+$\rho(w)=|w|^{p-2}\mathbf1_{\{|w|<\varepsilon\}}$ and evaluate
+$2\pi\int_0^\varepsilon r^{p-1}\,dr=2\pi\varepsilon^p/p$.
+For direct local verification, write $f(z)=(z-a)^m u(z)$ with $u(a)\ne0$.
+Then $|f'|^2|f|^{p-2}=O(|z-a|^{mp-2})$, whose area integral near $a$
+is finite because $mp>0$. Setting $p=1$ and multiplying by two gives
+\eqref{en:Wcount}.
+\end{proof}
+
+\begin{corollary}[Full energy bound]\label{en:fullbound}
+With
+$W(f;\Omega)=2\int_\Omega |f'|^2/|f|\,dA$, one has
+\begin{equation}\label{en:fullineq}
+ W(f;\Omega)\ge4\pi bN.
+\end{equation}
+More generally the full $p$-energy is at least
+$2\pi b^pN/p$.
+\end{corollary}
+\begin{proof}
+The full integral dominates the localized one for every $\varepsilon<b$.
+Let $\varepsilon\uparrow b$ in Theorem~\ref{en:power}.
+\end{proof}
+
+The quantity in \eqref{en:Wcount} counts all zeros with their
+multiplicities; it does not separate a multiple zero from its simple
+descendants. The identity is a degree/area formula, rather than a new
+integer-valued period. It is exact because the entire target disk lies
+below the boundary threshold. No bound on individual root gaps occurs.
+
+\begin{example}[Sharpness at every multiplicity]\label{en:monomial}
+For $f(z)=az^m$ on $|z|<R$, where $a\ne0$, the boundary threshold is
+$b=|a|R^m$ and $N=m$. Direct radial integration gives
+\[
+ W_{<\varepsilon}=4\pi m\varepsilon,\qquad
+ W=4\pi m|a|R^m=4\pi bN.
+\]
+Thus \eqref{en:fullineq} is sharp even at a multiple zero.
+\end{example}
+
+\begin{proposition}[Energy on a finite root cover]\label{en:rootcover}
+Let $q\ge1$ be an integer. Normalize $w^q=f(z)$ over an open neighborhood of $\overline\Omega$, and let $X_q$ be the inverse image of $\overline\Omega$ on that normalization. The differential
+$\eta_q=q\,dw$ is holomorphic on $X_q$, including points over multiple
+zeros. Define its localized energy by
+\[
+ \mathcal E_{q,<\varepsilon}
+ :=\frac i2\int_{X_q\cap\{|w|^q<\varepsilon\}}
+                    \eta_q\wedge\overline{\eta_q}.
+\]
+For $0<\varepsilon<b$,
+\begin{equation}\label{en:qcover}
+ \boxed{\mathcal E_{q,<\varepsilon}
+ =q\int_{\Omega\cap\{|f|<\varepsilon\}}
+          |f'|^2|f|^{2/q-2}\,dA
+ =\pi q^2\varepsilon^{2/q}N.}
+\end{equation}
+The cover may have several connected components.
+\end{proposition}
+\begin{proof}
+Away from the zeros of $f$, the projection has $q$ sheets and
+$q\,dw=f'\,dz/w^{q-1}$. Summing the sheetwise energy gives the first
+equality. The local normalization at an $m$-fold zero, with
+$d=\gcd(q,m)$, has $d$ charts of the form
+$z-a=\xi^{q/d}$, $w=\xi^{m/d}v(\xi)$, with $v$ holomorphic and nonzero.
+Thus $dw$ is regular, and the omitted branch set has zero area.
+Theorem~\ref{en:power} with $p=2/q$ proves the second equality.
+Equivalently, above each sufficiently small regular $w$ the map
+$w:X_q\to\mathbb C$ has $N$ preimages; applying the area formula to
+$q\,dw$ gives $q^2N$ times the area of the disk of radius
+$\varepsilon^{1/q}$.
+\end{proof}
+
+For $q=2$, $\eta_2=f'\,dz/w=2\,dw$, and
+$\mathcal E_{2,<\varepsilon}=W_{<\varepsilon}$.
+This is the localized Hodge-energy interpretation of
+\eqref{en:Wcount}. The original reciprocal differential $dz/w$ is a
+different differential; its singularities are examined in
+Section~\ref{cv:section}.

@@ -1,0 +1,218 @@
+\section{The topological balance and the moving wall}
+\label{sec:boundary}
+
+We orient $\C^2$ by $dt\wedge ds\wedge dx\wedge dy$.
+All boundaries below are piecewise smooth, with the outward
+orientation. Corners have zero three-dimensional measure.
+
+\begin{lemma}[Local heat charge]
+\label{lem:charge}
+Suppose $H\not\equiv0$ is holomorphic near a point $p=(\tau_*,z_*)$,
+satisfies $H_\tau=-H_{zz}$, and $H(\tau_*,\cdot)$ has a zero
+of order $n\ge2$ at $z_*$. Then the joint zero of $(H,H_z)$ is
+isolated, and its local complex degree is $\binom n2$.
+\end{lemma}
+\begin{proof}
+Translate $p$ to zero and write the leading spatial coefficient as
+$a\ne0$. The convergent heat expansion has weighted leading term
+\[
+ H(\tau,z)=aP_n(\tau,z)+\text{terms of weighted degree greater than }n,
+ \qquad
+ P_n=\sum_{j=0}^{\lfloor n/2\rfloor}
+       \frac{n!(-\tau)^jz^{n-2j}}{j!(n-2j)!},
+\]
+where $\tau$ has weight two and $z$ weight one.
+The polynomial $P_n(1,z)$ is a scaled Hermite polynomial and has
+$n$ distinct real roots. One elementary proof uses its orthogonality
+with a positive Gaussian weight: fewer than $n$ distinct sign changes
+would produce a polynomial of degree below $n$ whose product with
+$P_n$ has one sign, contradicting orthogonality.
+
+Put $\tau=v^2$ and $z=vw$. The quotient $v^{-n}H(v^2,vw)$
+extends holomorphically to $v=0$ and equals $aP_n(1,w)$ there.
+The implicit function theorem gives all $n$ roots in the cluster as
+$z_j(v^2)=v(r_j+O(v))$, with distinct $r_j$.
+Consequently its monic Weierstrass discriminant is
+\[
+ \Delta(\tau)=c\tau^{n(n-1)/2}(1+o(1)),\qquad c\ne0.
+\]
+It is holomorphic in $\tau$, so its zero has the indicated integer
+order and is isolated. This also isolates the joint zero.
+
+For completeness, the local intersection number of $H=0$ and
+$H_z=0$ equals the vanishing order of this discriminant. Indeed,
+Weierstrass preparation writes $H=UP$, with $U$ a unit and $P$
+monic of degree $n$. Modulo $P$, $H_z=UP_z$; multiplication by
+the unit changes the resultant by a nonvanishing factor. The
+resultant of $P$ and $P_z$ is its discriminant up to sign. Equivalently,
+the determinant of multiplication by $P_z$ on the free
+$\C\{\tau\}$-module $\C\{\tau\}[z]/(P)$ has this vanishing
+order, equal to the dimension of the local intersection algebra.
+A small regular perturbation counts that many positive holomorphic
+intersections, hence gives the local degree.
+\end{proof}
+
+At real coefficients the same expansion shows that, just after a real
+event, all $n$ local roots are simple and real. Just before it there
+are $n\bmod2$ real roots. Thus the real birth weight and complex
+degree stated in Section~\ref{sec:intro} follow. Positivity of the
+degree is not a sign estimate on each individual boundary face.
+
+\begin{lemma}[Complete boundary integral]
+\label{lem:degree}
+Let $W$ be a compact domain on whose boundary $G$ is nonzero.
+Then
+\begin{equation}
+ \int_{\partial W}\CC
+ =\deg(G/|G|\,;\partial W)
+ =\sum_{p\in W:\,G(p)=0}\binom{m_p}{2}.
+ \label{eq:degree}
+\end{equation}
+\end{lemma}
+\begin{proof}
+On the unit sphere in $\C^2$, the form
+$\alpha=\im(\bar\zeta_1d\zeta_1+\bar\zeta_2d\zeta_2)$ satisfies
+$\alpha\wedge d\alpha=2\,d\mathrm{Vol}_{S^3}$.
+Its integral is $4\pi^2$. This follows by evaluating at $(1,0)$
+on $(\partial_{y_1},\partial_{x_2},\partial_{y_2})$ and using
+unitary invariance. The form $\CC$ is the pullback of this normalized
+volume. Excise disjoint balls around the finitely many joint zeros
+and apply degree additivity, then Lemma~\ref{lem:charge}.
+\end{proof}
+
+\subsection{The exact cap integral}
+
+A regular projective root tube over a complex-time rectangle $D$
+is a holomorphic inverse
+\begin{equation}
+ Z:D\times\{|q|\le\epsilon\}\longrightarrow\C,
+ \qquad H_z(\tau,Z)\ne0,\qquad
+ \frac{H(\tau,Z)}{H_z(\tau,Z)}=q,
+ \label{eq:inverse}
+\end{equation}
+defined on a neighborhood of the displayed compact set and injective
+in each $q$ fiber. The radius is constant on this whole tube.
+Differentiating the inverse equation gives $Z_q\ne0$, so its
+parameterization preserves the complex spatial orientation. Its
+center $z(\tau)=Z(\tau,0)$ follows a simple zero.
+
+\begin{proposition}[Phase reduction and zero side flux]
+\label{prop:phase}
+For $m$ disjoint tubes of the form \eqref{eq:inverse}, with a common
+radius $\epsilon$, define
+\begin{equation}
+ h_j(\tau)=H_z(\tau,z_j(\tau)),\qquad
+ \DD(\tau)=\prod_{j=1}^m h_j(\tau).
+ \label{eq:D}
+\end{equation}
+For an oriented heat edge $e$, the integral over its root disks is
+\begin{equation}
+ I(e)=\frac{k_\epsilon}{2\pi}\im\int_e d\log\DD.
+ \label{eq:phase}
+\end{equation}
+Every wall $|q|=\epsilon$ has identically zero pullback of $\CC$.
+Furthermore,
+\begin{equation}
+ \DD=(-1)^{m(m-1)/2}\Delta\UU.
+ \label{eq:factor}
+\end{equation}
+The factor $U=H/\prod_j(z-z_j)$ need only be a nonvanishing
+holomorphic factor near the selected roots. It can have zeros outside
+those neighborhoods; no infinite product is required.
+\end{proposition}
+\begin{proof}
+In one tube write $h(\tau,q)=H_z(\tau,Z(\tau,q))$ and
+$\phi=\im\log h$, using a continuous logarithm on the contractible
+parameter domain. The physical jet is exactly $h(q,1)$, so
+\begin{align}
+ \Aconn&=d\phi+a(q),&
+ a(q)&=\frac{\im(\bar q\,dq)}{1+|q|^2},\nonumber\\
+ d\Aconn&=\omega(q),&
+ \omega(q)&=\frac{2\,du\wedge dv}{(1+u^2+v^2)^2},\quad q=u+iv.
+ \label{eq:chart}
+\end{align}
+Since $a\wedge\omega=0$,
+$\CC=d\phi\wedge\omega/(4\pi^2)$. The derivative of $\phi$
+in the edge direction is harmonic in $q$. Its weighted average over
+the disk is its center value times
+\[
+ \int_{|q|\le\epsilon}\omega
+ =\int_0^{2\pi}\int_0^\epsilon\frac{2r}{(1+r^2)^2}\dd r\dd\vartheta
+ =2\pi k_\epsilon.
+\]
+This proves \eqref{eq:phase} after summing the tubes.
+On the wall $q=\epsilon e^{i\vartheta}$, the two-form $\omega$
+pulls back to zero, proving the side assertion.
+
+At a selected simple root,
+$H_z(\tau,z_j)=U(\tau,z_j)\prod_{i\ne j}(z_j-z_i)$.
+Multiplying these identities pairs the factors belonging to every
+unordered pair and gives \eqref{eq:factor}.
+\end{proof}
+
+The vanishing side flux is a geometric statement, not a bound on the
+speed of a root. It remains true when the disks move rapidly. A
+radius allowed to vary \emph{along} the tube would produce
+$dr\wedge d\vartheta$ terms and would not have the same property.
+We allow a different constant radius for each chosen terminal $T$.
+
+\begin{theorem}[The complete transport formula]
+\label{thm:transport}
+Suppose $W$ is an event-containing compact domain with $G\ne0$ on
+its boundary, whose terminal face is the union of $m$ disks from
+Proposition~\ref{prop:phase}. Decompose its other boundary into the
+initial face, the two imaginary-time faces, regular projective walls,
+and all remaining spatial or joining faces. Their oriented integrals
+are $-\II_0$, $\JJ_+$, $\JJ_-$, $0$, and $\RR$, respectively.
+Then \eqref{eq:organizing} holds with \eqref{eq:terms}.
+
+If $A(W)$ is the number of distinct real creation events in the
+interior, and separately proved bounds give
+\[
+ \II_0\ge L_0,\quad \II_T\le U_T,\quad
+ \JJ_++\JJ_-\le U_J,\quad \RR\le U_R,
+\]
+then
+\begin{equation}
+ A(W)\le\QQ\le U_T+U_J+U_R-L_0.
+ \label{eq:eventbound}
+\end{equation}
+\end{theorem}
+\begin{proof}
+Lemma~\ref{lem:degree} gives
+$\QQ=\II_T-\II_0+\JJ_++\JJ_-+\RR$.
+Substitute Proposition~\ref{prop:phase}. Each real event contributes
+at least one to the nonnegative sum defining $\QQ$, proving the bound.
+\end{proof}
+
+This is a useful interface for estimates, but it does not prove that
+the four required one-sided bounds have favorable sizes. In
+particular, a bound for a closure expressed in terms of $\QQ$ itself
+characterizes the closure; it cannot be inserted into
+\eqref{eq:eventbound} as independent information about $\QQ$.
+
+\subsection{The other two faces of a regular tube}
+
+Assume real type, meaning
+$H(\bar\tau,\bar z)=\overline{H(\tau,z)}$, and let the root branches be real at real time on
+$[a,b]$. Each $h_j(t)$ then has a constant real sign. Choose
+\begin{equation}
+ \Theta(t,Y)=\sum_j\im\log\frac{h_j(t+iY)}{h_j(t)},
+ \label{eq:Theta}
+\end{equation}
+where each logarithm is continued vertically from zero imaginary
+time. Conjugation and Proposition~\ref{prop:phase} give
+\begin{equation}
+ \boxed{\displaystyle
+ \II_t=\frac{k_\epsilon}{\pi}\Theta(t,Y),\qquad
+ \JJ_+=\JJ_-=
+ \frac{k_\epsilon}{2\pi}\{\Theta(a,Y)-\Theta(b,Y)\}
+ =\frac{\II_a-\II_b}{2}.}
+ \label{eq:closures}
+\end{equation}
+The orientation on the upper imaginary face is
+$-dt\wedge du\wedge dv$; on the lower it is
+$dt\wedge du\wedge dv$. Thus the complete regular tube obeys
+$\II_b-\II_a+\JJ_++\JJ_-=0$, as it must because it contains
+no joint zero. Attaching tubes to an event region does not remove
+the complement of their attachment disks.

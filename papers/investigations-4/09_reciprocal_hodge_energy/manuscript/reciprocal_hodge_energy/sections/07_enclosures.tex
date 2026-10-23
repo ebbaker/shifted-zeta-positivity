@@ -1,0 +1,108 @@
+\section{Analytic consequences for finite enclosures}\label{sec:enclosures}
+
+The preceding statements are exact. A numerical acquisition must also
+control the uncertainty of every term that it uses. This section records
+the analytic bounds behind such an acquisition; it does not prescribe
+an implementation or assume that the boundary expression is cheaper.
+
+\subsection{Primitive products and period products}
+Suppose the cut polygon is decomposed into finitely many oriented arcs
+with real parameters $s$. On each arc write $\omega=B(s)\dd s$ and let
+$F$ denote the coherent primitive in Proposition~\ref{prop:stokes}.
+Suppose approximations satisfy
+\[
+ |F-\widehat F|\le\delta_F(s),\qquad
+ |B-\widehat B|\le\delta_B(s).
+\]
+An independent quadrature enclosure for
+$(\ii/2)\sum\int\widehat F\overline{\widehat B}\dd s$ has error
+$E_{\rm quad}$. Then its real part $\widehat E$ satisfies
+\begin{equation}\label{eq:producterror}
+ |\E-\widehat E|\le E_{\rm quad}+
+ \frac12\sum\int\left(\delta_F|\widehat B|
+       +|\widehat F|\delta_B+\delta_F\delta_B\right)\dd s.
+\end{equation}
+Indeed expand $(\widehat F+\Delta_F)
+\overline{(\widehat B+\Delta_B)}$ and apply the triangle inequality.
+The primitive error includes the basepoint and accumulated integral
+errors; it cannot be reset independently on different boundary arcs.
+Paired-edge cancellation is usable only with the corresponding common
+primitive and jump enclosure.
+
+Likewise, if $|q-\widehat q|\le\epsilon_q$ and
+$|p-\widehat p|\le\epsilon_p$, then
+\begin{equation}\label{eq:perioderror}
+ \left|\im(\bar q p)-\im(\overline{\widehat q}\widehat p)\right|
+ \le|\widehat q|\epsilon_p+|\widehat p|\epsilon_q
+                         +\epsilon_q\epsilon_p.
+\end{equation}
+This follows by the same expansion. In a collision chart $|p|$ grows
+logarithmically, so a fixed absolute uncertainty in $q$ is amplified.
+A bounded exact remainder in Theorem~\ref{thm:payment} alone does not
+imply a bounded acquisition error.
+
+\subsection{Simple-root neighborhoods}
+If $H(z)=(z-\alpha)U(z)$ on $|z-\alpha|\le\eta$, with
+$0<\nu_1\le|U|\le M_1$, then direct polar integration gives
+\begin{equation}\label{eq:cap}
+ \frac{4\pi\eta}{M_1}
+ \le\E(H;D(\alpha,\eta))
+ \le\frac{4\pi\eta}{\nu_1}.
+\end{equation}
+Thus the neighborhood of a simple zero has an explicit finite payment.
+Equivalently the coordinate \eqref{eq:branchregular} removes the local
+singularity. An exterior floor on $H$ is never used as an interior floor
+across a root. When two roots are present, the full coordinate formula
+\eqref{eq:directU} is a direct integration route using exactly the same
+unit and root information as the period formulas.
+
+\subsection{A complete analytic approximation and exact deflation}
+Let $H$ be holomorphic on $|z-C|\le\mathcal R$ with $|H|\le M$ there,
+and let $0<R<\mathcal R$, $\rho=R/\mathcal R$. For the degree-$N$
+Taylor polynomial $P_N$ about $C$, Cauchy's coefficient estimate gives,
+when $N\ge2$,
+\begin{align}
+ \epsilon_0&:=\sup_{|z-C|\le R}|H-P_N|
+ \le M\frac{\rho^{N+1}}{1-\rho},\label{eq:tay0}\\
+ \epsilon_1&:=\sup_{|z-C|\le R}|H'-P_N'|
+ \le\frac M{\mathcal R}\rho^N
+       \left(\frac{N+1}{1-\rho}+\frac\rho{(1-\rho)^2}\right),
+ \label{eq:tay1}\\
+ \epsilon_2&:=\sup_{|z-C|\le R}|H''-P_N''|
+ \le\frac M{\mathcal R^2}\rho^{N-1}
+ \left(\frac{N(N+1)}{1-\rho}
+ +\frac{(2N+1)\rho}{(1-\rho)^2}
+ +\frac{\rho(1+\rho)}{(1-\rho)^3}\right).
+ \label{eq:tay2}
+\end{align}
+For example the last formula is the sum of
+$(N+1+k)(N+k)\rho^k$, using
+$\sum\rho^k=(1-\rho)^{-1}$,
+$\sum k\rho^k=\rho(1-\rho)^{-2}$, and
+$\sum k^2\rho^k=\rho(1+\rho)(1-\rho)^{-3}$.
+The first two are the corresponding zeroth and first derivatives of the
+geometric tail. For the complete theta field, $M$ can be supplied by a
+complete source moment; \eqref{eq:xi} is also an exact alternative at
+$t=0$.
+
+Let $\alpha,\beta$ be the exact simple roots, enclosed independently,
+and define the polynomial divided difference
+$Q_N(z)=P_N[\alpha,\beta,z]$. Even though $P_N$ need not vanish at the
+exact roots, the complete function does vanish at them, and its divided
+difference is $V(z)=H[\alpha,\beta,z]$. The elementary simplex identity proved in
+Section~\ref{sec:heat} therefore yields
+\begin{equation}\label{eq:deflationerror}
+ |V(z)-Q_N(z)|\le\frac{\epsilon_2}{2}
+ \quad(z,\alpha,\beta\in\overline{D(C,R)}).
+\end{equation}
+Indeed the second derivative of $H-P_N$ is integrated over a simplex of
+area $1/2$; the disk is convex. This argument does not divide a field
+error by $|(z-\alpha)(z-\beta)|$ near a root. It retains the exact
+removable continuation and a uniform error bound. Root enclosures must
+still be propagated through $Q_N$ and the coordinate map; replacing the
+roots by their midpoints would not justify \eqref{eq:deflationerror}.
+
+All these bounds apply before selecting a mesh or an arithmetic package.
+They specify the error information required by either comparison route.
+In particular, taking the intersection of two proved intervals is a
+shared improvement available to both routes.

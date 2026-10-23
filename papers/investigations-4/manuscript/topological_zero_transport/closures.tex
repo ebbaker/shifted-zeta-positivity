@@ -1,0 +1,212 @@
+\section{What remains when a boundary encloses an event}
+\label{sec:eventclosure}
+
+An estimate on a late regular tube does not determine the flux on a
+complete boundary starting at time zero. We now give a quantitative
+description of this difference. It also shows why the extra terms in
+\eqref{eq:organizing} cannot be suppressed by taking a thinner strip.
+
+Let a fixed core be
+\[
+ W_c(Y)=[0,a]+i[-Y,Y]\;\times\;\{|z-x_*|\le R\},
+ \qquad x_*\in\R,\quad 0<Y\le Y_0.
+\]
+Assume real type, a nonzero jet on its boundary for these $Y$, and
+that the only joint zeros in the core are a fixed finite set of real
+events in its interior. Denote their total complex charge by $Q$.
+The initial face, the whole face $t=a$, and the spatial wall are
+uniformly separated from the joint zeros. Suppose on their union
+for $|s|\le Y_0$ that
+\begin{equation}
+ |G|\ge b>0,\qquad \|DG\|_{\rm op}\le D.
+ \label{eq:corefloor}
+\end{equation}
+These are compact boundary quantities, not assumptions about a floor
+at the events. Assume $m$ disjoint real root tubes attach along disks
+of the $t=a$ face and continue to the terminal cap. The complement
+of those disks remains part of the boundary.
+
+For the canonical flow, a fixed finite set of real simple branches
+that remains simple for $t\ge a$ admits such tubes for every finite
+$T$. A compact initial segment has a common positive complex-time
+width and inverse radius by the implicit function theorem. The
+late part is covered by Section~\ref{sec:source}. Combining them,
+and decreasing the common width if necessary, permits a fixed small
+$Y>0$ and radius $r/L_T$ for all sufficiently large $T$. For
+example, branches starting at $a>1/2$ stay simple: de Bruijn's
+reality theorem and the local splitting lemma rule out a later
+collision. This continuation statement neither asserts an actual
+earlier theta event nor supplies a height-uniform core floor.
+
+\begin{theorem}[Quantitative closure allocation]
+\label{thm:core}
+In this fixed-core geometry let $\mathcal R_T^{\rm all}$ be the
+signed sum of the initial, joining and local spatial faces, including
+the initial sign $-\II_0$. Set
+\begin{equation}
+ B=\frac{D^3}{2\pi^2b^3}(4\pi R^2+4\pi Ra).
+ \label{eq:Bcore}
+\end{equation}
+Every projective tube wall has zero flux, and
+\begin{equation}
+ |\mathcal R_T^{\rm all}|\le BY,\qquad
+ \boxed{\displaystyle
+ \JJ_+=\JJ_-=
+ \frac{Q-\II_{T,m}-\mathcal R_T^{\rm all}}2.}
+ \label{eq:coreidentity}
+\end{equation}
+For the following asymptotic assertions, assume that $H$ is the
+canonical flow \eqref{eq:theta} and that the attached roots have
+fixed positive ranks. If $Y_T=S/L_T^2$ and $\epsilon_T=r/L_T$, with
+fixed $S,r$ and fixed attached population, then
+\begin{equation}
+ \II_{T,m}=O(mL_T^{-2}),\qquad
+ \left|\JJ_\pm-\frac Q2\right|
+ \le\frac{BY_T+|\II_{T,m}|}{2}
+ =O((B+m)L_T^{-2}).
+ \label{eq:halfcharge}
+\end{equation}
+For fixed admissible $Y>0$, let $R_c(Y)$ be the signed sum of the
+three non-imaginary faces of the unmodified core. Then
+\begin{align}
+ \II_{T,m}&\longrightarrow \frac{mr^2Y}{\pi},\nonumber\\
+ \mathcal R_T^{\rm all}&\longrightarrow R_c(Y),
+       &|R_c(Y)|&\le BY,\nonumber\\
+ \JJ_\pm&\longrightarrow
+      \frac{Q-R_c(Y)}2-\frac{mr^2Y}{2\pi}.
+ \label{eq:fixedwidthcore}
+\end{align}
+The errors in these fixed-width limits are
+$O(L_T^{-2})+O(\varepsilon_T/L_T^2)$ with fixed core and
+population constants.
+\end{theorem}
+\begin{proof}
+The normalized sphere-volume expression for \eqref{eq:forms}
+gives a comass bound $D^3/(2\pi^2b^3)$ on the faces in
+\eqref{eq:corefloor}. Their total three-volume is at most
+$Y(4\pi R^2+4\pi Ra)$. Removing the attachment disks only
+reduces this upper bound. This proves the first inequality.
+
+Simultaneous conjugation $(t,s,x,y)\mapsto(t,-s,x,-y)$ preserves
+the ambient orientation, exchanges the outward imaginary faces,
+and sends $\Aconn$ and $d\Aconn$ to their negatives. It therefore
+preserves $\CC$ and proves $\JJ_+=\JJ_-$. The complete boundary
+has charge $Q$ by Lemma~\ref{lem:degree}, yielding
+\eqref{eq:coreidentity}. Equation~\eqref{eq:shrinkingcap} proves
+\eqref{eq:halfcharge}.
+
+For fixed width, the removed attachment caps at $t=a$ have size
+$O(k_{\epsilon_T})=O(L_T^{-2})$, because their center derivatives
+are nonvanishing on a fixed compact segment and their lifted phase
+increments are bounded. Thus
+$\mathcal R_T^{\rm all}=R_c(Y)+O(L_T^{-2})$.
+The terminal estimate \eqref{eq:capheadline} and the exact balance
+give \eqref{eq:fixedwidthcore} with the stated errors.
+\end{proof}
+
+The half-charge limit is a characterization of the remaining flux,
+not an independent upper bound on the event count. Its constants
+belong to a fixed core. Allowing height, multiplicity or the number
+of cores to grow requires new estimates for $b,D,R,a$; none is
+implicit here. Shrinking $Y$ also changes the initial cap being
+integrated. At fixed $Y$, the initial core and its initial integral
+remain fixed, and the nonzero limits in \eqref{eq:fixedwidthcore}
+give the appropriate comparison.
+
+\subsection{Two exact controls}
+
+The quadratic heat solution
+$H(\tau,z)=z^2-2\tau$ has charge one at the origin. Its inverse
+root disks are
+\[
+ Z_\pm(\tau,q)=q\pm\sqrt{q^2+2\tau}.
+\]
+For $t\ge a>0$ and $\epsilon^2<2a$, these are disjoint regular
+tubes on a sufficiently small imaginary-time strip. Their two-root
+terminal cap is exactly
+\begin{equation}
+ \II_T=\frac{k_\epsilon}{\pi}\arctan(Y/T).
+ \label{eq:quadraticcap}
+\end{equation}
+Indeed $\DD=-8\tau$, so the vertical phase increment is
+$2\arctan(Y/T)$. The cap tends to zero and the sides have zero
+flux, although an attached core still has charge one. The two
+inverse branches pinch at $q^2=-2\tau$ when continued backward;
+one cannot extend a fixed-radius regular disk bundle through the
+event. This example checks the need for a joining region.
+
+For $\lambda>0$, the exact heat solution
+$H(\tau,z)=e^{\lambda^2\tau}\sin(\lambda z)/\lambda$
+has stationary simple roots. On any fixed finite collection of
+their projective disks, $\Delta$ is constant but
+$\DD$ has phase rate $m\lambda^2$. Hence
+\begin{equation}
+ \II_T=\frac{k_\epsilon m\lambda^2Y}{\pi}.
+ \label{eq:sinecap}
+\end{equation}
+This cap is nonzero; the full regular tube still has zero charge.
+It checks that root positions alone do not determine the physical
+cap. The leading phase in Theorem~\ref{thm:headline} is the
+canonical, increasing-frequency counterpart of this calculation.
+
+Both controls satisfy the heat equation but lack the unchanged
+theta source. Conversely, the source proof uses only the displayed
+positive density bounds and concentration: it is not claimed to
+distinguish theta from every other source with the same asymptotic
+properties. No collision exclusion can be inferred merely from
+the late clock pattern.
+
+\section{What the formula now makes accessible}
+\label{sec:outlook}
+
+The initial-to-future identity \eqref{eq:organizing} and its
+independent-bound consumer \eqref{eq:eventbound} are the organizing
+framework. The estimates proved here supply a terminal cap, its
+Vandermonde and analytic-factor decomposition, exactly vanishing
+projective sides, and relative late-edge asymptotics for a growing
+population. They also identify a substantial surviving term at a
+fixed event core. These are concrete bounds with different domains
+of validity; their domains must match before they can be combined
+to bound events.
+
+The next estimate needed for a full time-zero application is on the
+complete earlier attachment and imaginary-time boundary, with
+constants controlled as the spatial height grows. A meaningful
+first target is a bound for that contribution divided by the
+enclosed zero population. It need not be small enough to exclude
+every event. One could then use an independently obtained lower
+bound on the fixed initial cap in \eqref{eq:eventbound}. Neither
+that lower bound nor a uniform early-boundary estimate is proved
+here. The fixed-core half-charge formula cannot replace them,
+because it already contains the unknown charge.
+
+There is also a separate real-variable route. At fixed positive
+heat time, the high-height estimates of Polymath yield zero-free
+moving barriers and finite budgets for later real births. Those
+budgets do not estimate the physical imaginary-time integrals in
+this paper. Likewise a pair-correlation law for real zeros does
+not supply the analytic factor in \eqref{eq:organizing}. Keeping
+these distinctions explicit leaves a modest but useful conclusion:
+the topological formula has quantitatively tractable pieces, and
+the remaining task is located on a specified boundary rather than
+hidden in a presumed vanishing cap.
+
+\section*{Acknowledgements and research status}
+This manuscript was drafted for Edward Baker with substantial
+assistance from OpenAI's Codex, recorded model \texttt{gpt-6-astra},
+reasoning effort \emph{max}. LLM assistance was used for derivation,
+literature comparison, checking and exposition. The checks in this
+round are by the same assistant; they are not independent specialist
+or human review. The general transport and fixed-population cap
+arguments consolidate earlier LLM-assisted research notes in the
+author's archive~\cite{Archive}. The present continuation adds the
+narrow-strip growing-population estimates, the linear-population
+Vandermonde logarithm bound and the proportional-interval edge
+asymptotic. The companion working manuscript on zero counts and
+localized Hodge energy remains a separate catalogue.
+
+All asymptotic statements have analytic proofs. No numerical onset,
+theta-zero certificate, priority certification, proof of RH, or
+proof of initial simplicity is asserted. The accompanying literature
+and proof review records source access, overlap, control examples
+and the remaining novelty question.

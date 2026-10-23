@@ -1,0 +1,637 @@
+% Prepared for Edward Baker, 22 October 2026 (America/New_York).
+% Substantial LLM assistance: gpt-6-astra (Codex), reasoning effort ultra.
+% Module for the investigations-4 analytic manuscript. No new macros required.
+% Required environments: theorem, proposition, lemma, corollary, remark, proof.
+% Citation keys supplied separately in i4_statistics_caps_bibliography.tex.
+
+\section{Pair statistics and the inverse-square observable}
+\label{sc:statistics}
+
+A statistical description becomes useful for heat-flow topology only after
+its normalization, limiting procedure, and singular weights have been
+specified. We give a precise formulation and prove the relevant transfer
+statements. All populations in this section are finite, with labels
+retained when locations repeat.
+
+Let $x_1,\ldots,x_m\in\mathbb R$, let $\rho>0$, and put
+$y_i=\rho x_i$. The factor $\rho$ is the chosen unfolding density. Define
+\begin{equation}
+ \mu_m=\frac1m\sum_{i\ne j}\delta_{y_i-y_j}.
+ \label{sc:pairmeasure}
+\end{equation}
+The sum is over ordered pairs of distinct labels. Thus a repeated location
+contributes an atom at zero even though the label diagonal is omitted.
+The sine-kernel pair density is
+\begin{equation}
+ R_2(s)=1-\left(\frac{\sin\pi s}{\pi s}\right)^2,
+ \qquad R_2(0)=0.
+ \label{sc:sine}
+\end{equation}
+A sine-kernel pair limit means vague convergence
+$\mu_m\to R_2(s)\,ds$, that is, convergence against every continuous
+compactly supported test function. Its meaning includes the choice of
+populations and of the density $\rho$.
+
+Montgomery's original formulation concerns a growing height cutoff and
+unfolding by $\log T/(2\pi)$, with RH assumed in that paper; $T$ there is
+not a heat time. His discussion identifies the sine-kernel pair law and
+its random-matrix connection, and obtains density-one simplicity from
+the conjectured law \cite[pp.~181--184]{sc:Montgomery1973}. In a heat
+problem one must separately prescribe the joint limits of heat time,
+height, and population. Fixed-rank late-time information alone does not
+specify a growing-population law.
+
+If the points are distinct, define the real antisymmetric matrix
+\begin{equation}
+ A_{ij}=\begin{cases}(y_i-y_j)^{-1},&i\ne j,\\0,&i=j,\end{cases}
+ \qquad
+ Q_m=\frac1m\lVert A\rVert_F^2
+     =\int_{\mathbb R}\frac{d\mu_m(s)}{s^2}.
+ \label{sc:matrixenergy}
+\end{equation}
+Here the integrand is assigned the value $+\infty$ at zero, so the last
+expression also defines an extended nonnegative quantity when labels
+repeat. The observable $Q_m$ is the ordered inverse-square pair energy
+per point. In physical coordinates,
+\begin{equation}
+ 8\sum_{i<j}\frac1{(x_i-x_j)^2}=4m\rho^2Q_m.
+ \label{sc:physicalweight}
+\end{equation}
+This is the pair term in the logarithmic derivative of the cluster
+discriminant. The complete heat formula also contains the exterior
+holomorphic factor; changing to matrix notation does not remove that
+factor. Moreover, at complex time the holomorphic weight
+$(z_i-z_j)^{-2}$ is distinct from the positive weight
+$|z_i-z_j|^{-2}$ in a Frobenius norm.
+
+\subsection{Exact clock and sine-kernel moments}
+\label{sc:moments}
+
+\begin{proposition}[Two different inverse-square target values]
+\label{sc:targets}
+For $m$ consecutive unit-spaced points,
+\begin{equation}
+ Q_m^{\mathrm{clock}}=
+ \frac2m\sum_{d=1}^{m-1}\frac{m-d}{d^2}
+ \longrightarrow\frac{\pi^2}{3}.
+ \label{sc:clockmoment}
+\end{equation}
+The sine-kernel target instead has the finite moment
+\begin{equation}
+ \int_{\mathbb R}\frac{R_2(s)}{s^2}\,ds=
+ \frac{2\pi^2}{3}.
+ \label{sc:sinemoment}
+\end{equation}
+\end{proposition}
+
+\begin{proof}
+There are $m-d$ unordered pairs at distance $d$, which proves the finite
+formula in \eqref{sc:clockmoment}. Rewriting it as
+\[
+ 2\sum_{d=1}^{m-1}d^{-2}
+ -\frac2m\sum_{d=1}^{m-1}d^{-1}
+\]
+and using $\sum_{d\ge1}d^{-2}=\pi^2/6$ proves its limit. The latter
+identity follows, for example, by applying Parseval to the Fourier sine
+series of $x$ on $[-\pi,\pi]$, whose coefficients are
+$2(-1)^{d+1}/d$.
+
+For the second claim, the elementary triangular Fourier identity is
+\begin{equation}
+ \left(\frac{\sin\pi s}{\pi s}\right)^2
+ =\int_{-1}^{1}(1-|u|)\cos(2\pi us)\,du.
+ \label{sc:triangular}
+\end{equation}
+It follows either by integrating the right side twice, or by taking the
+Fourier transform of the convolution of two interval indicators. Since
+$\int_{-1}^{1}(1-|u|)\,du=1$, the integrand in
+\[
+ \frac{R_2(s)}{s^2}
+ =\int_{-1}^{1}(1-|u|)
+       \frac{1-\cos(2\pi us)}{s^2}\,du
+\]
+is nonnegative. Tonelli's theorem therefore applies without a prior
+integrability assumption. The elementary integral
+\[
+ \int_{\mathbb R}\frac{1-\cos(as)}{s^2}\,ds=\pi|a|
+\]
+may be obtained by scaling and integration by parts, using the
+Dirichlet integral $\int_0^\infty\sin v/v\,dv=\pi/2$; the latter follows
+by first inserting $e^{-\varepsilon v}$, differentiating with respect
+to the sine frequency, and then letting $\varepsilon\downarrow0$.
+Consequently
+\[
+ \int_{\mathbb R}\frac{R_2(s)}{s^2}\,ds
+ =2\pi^2\int_{-1}^{1}|u|(1-|u|)\,du
+ =\frac{2\pi^2}{3}.
+\]
+This calculation also proves finiteness. Directly,
+$R_2(s)=\pi^2s^2/3+O(s^4)$ at zero and $0\le R_2(s)\le1$ at infinity.
+\end{proof}
+
+The normalization difference in Proposition~\ref{sc:targets} is
+substantive. A clock and a sine-kernel population have different positive
+inverse-square energies; neither target energy is zero. If, for each
+fixed finite group of ranks, $L_t x_j(t)/\pi\to j-\tfrac12$ as
+$t\to\infty$, then taking the heat limit first and the population limit
+second gives \eqref{sc:clockmoment}. A different simultaneous limit
+requires estimates uniform in its growing ranks and population.
+
+\subsection{Sparse exceptional points and the information in a pair law}
+\label{sc:sparse}
+
+\begin{lemma}[Sparse modifications preserve a local pair limit]
+\label{sc:sparselemma}
+For each $n$, let $y_1^{(n)},\ldots,y_n^{(n)}$ be a real labeled array.
+Suppose its pair measures \eqref{sc:pairmeasure} converge vaguely to a
+locally finite measure $\mu$. There is a choice of one old point in each
+array such that adjoining a second label at that same location preserves
+the vague limit. Alternatively, one can adjoin a distinct point at
+distance at most $n^{-2}$ from the chosen point, preserving the vague
+limit but ensuring
+\begin{equation}
+ Q_{n+1}\ge\frac{2n^4}{n+1}.
+ \label{sc:nearpairgrowth}
+\end{equation}
+If the original arrays are simple, the latter arrays can also be chosen
+simple.
+\end{lemma}
+
+\begin{proof}
+For every fixed positive integer $R$, dominate
+$\mathbf 1_{[-R,R]}$ by a nonnegative continuous compactly supported
+function. Vague convergence gives
+\[
+ \#\{(i,j):i\ne j,\ |y_i^{(n)}-y_j^{(n)}|\le R\}=O_R(n).
+\]
+A diagonal selection yields $R_n\to\infty$ sufficiently slowly that
+this count with $R=R_n$ is $o(n^2)$. For completeness, choose integers
+$N_k$ so large that for $n\ge N_k$ the count at radius $k$ is at most
+$n^2/k$, make $N_k$ increasing, and let $R_n$ be the largest admissible
+$k$ with $N_k\le n$. Averaging over the first label gives an index $i_n$
+with $o(n)$ neighbors inside radius $R_n$.
+
+Adjoin a point $v_n=y_{i_n}^{(n)}$. For a continuous function $f$
+supported in $[-R,R]$, the new pair integral equals
+\begin{equation}
+ \frac{n}{n+1}\int f\,d\mu_n+
+ \frac1{n+1}\sum_{j=1}^{n}
+ \bigl[f(v_n-y_j^{(n)})+f(y_j^{(n)}-v_n)\bigr].
+ \label{sc:addedpoint}
+\end{equation}
+The first term tends to $\int f\,d\mu$. The sum in the second term has
+$o(n)$ nonzero summands, each bounded by $2\lVert f\rVert_\infty$,
+so it tends to zero after division by $n+1$. The new repeated pair
+contributes the atom $2\delta_0/(n+1)$, which is invisible in the limit.
+
+For the alternative, choose $0<\varepsilon_n\le n^{-2}$ so that
+$v_n=y_{i_n}^{(n)}+\varepsilon_n$ is distinct from every old point.
+Only finitely many choices are forbidden. For each fixed $R$, its
+neighbors within $R$ are old neighbors of $y_{i_n}^{(n)}$ within $R+1$,
+so the proof using \eqref{sc:addedpoint} is unchanged. The two ordered
+terms associated with $y_{i_n}^{(n)}$ give
+\[
+ Q_{n+1}\ge\frac{2}{(n+1)\varepsilon_n^2}
+ \ge\frac{2n^4}{n+1}.
+\]
+No existing points were moved, which proves the simplicity assertion.
+\end{proof}
+
+Thus weak pair convergence measures the bulk while admitting sparse
+exceptional pairs. This is a statement about the information content of
+a pair law, independent of whether a particular array can be realized
+as a zero set of a specified heat solution.
+
+\begin{corollary}[Density-one simplicity from a sine-kernel pair law]
+\label{sc:densityone}
+If $\mu_n\to R_2(s)\,ds$, and a distinct location $a$ in the $n$th
+array has multiplicity $m_a$, then
+\begin{equation}
+ \frac1n\sum_a m_a(m_a-1)\longrightarrow0.
+ \label{sc:multiplicitydensity}
+\end{equation}
+In particular, the fraction of labels lying at repeated locations tends
+to zero.
+\end{corollary}
+
+\begin{proof}
+The left side is $\mu_n(\{0\})$. For each $\delta>0$ choose a continuous
+function $g_\delta$ with $0\le g_\delta\le1$, $g_\delta(0)=1$, and
+support in $[-\delta,\delta]$. Then
+\[
+ \limsup_{n\to\infty}\mu_n(\{0\})
+ \le\int g_\delta(s)R_2(s)\,ds
+ \le\int_{-\delta}^{\delta}R_2(s)\,ds.
+\]
+The final bound tends to zero with $\delta$. At a repeated location
+$m_a\le m_a(m_a-1)$, proving the last assertion.
+\end{proof}
+
+\subsection{Transfer of the singular inverse-square weight}
+\label{sc:transfer}
+
+\begin{proposition}[Singular-moment transfer]
+\label{sc:UI}
+Suppose $\mu_n\to R_2(s)\,ds$ vaguely and
+\begin{align}
+ &\lim_{\delta\downarrow0}\limsup_{n\to\infty}
+    \int_{|s|<\delta}\frac{d\mu_n(s)}{s^2}=0,
+ \label{sc:UIzero}\\
+ &\lim_{R\to\infty}\limsup_{n\to\infty}
+    \int_{|s|>R}\frac{d\mu_n(s)}{s^2}=0.
+ \label{sc:UItail}
+\end{align}
+Then $Q_n\to2\pi^2/3$.
+\end{proposition}
+
+\begin{proof}
+Fix $0<\delta<R$. On the compact annulus
+$\delta\le|s|\le R$ the weight is bounded, and its only discontinuities
+when extended by zero are at four points of zero limiting measure.
+Continuous upper and lower cutoffs, or the usual weak-convergence
+criterion for bounded functions with a null discontinuity set, give
+\[
+ \int_{\delta\le|s|\le R}s^{-2}\,d\mu_n
+ \longrightarrow
+ \int_{\delta\le|s|\le R}s^{-2}R_2(s)\,ds.
+\]
+The two nonnegative omitted terms are uniformly negligible in the
+successive limits by \eqref{sc:UIzero}--\eqref{sc:UItail}. The corresponding
+limiting terms vanish by Proposition~\ref{sc:targets}. Removing the
+cutoffs proves the assertion.
+\end{proof}
+
+Conditions \eqref{sc:UIzero} and \eqref{sc:UItail} identify the exact
+additional information needed by this moment transfer. A zero-gap atom
+makes the first integral infinite; that condition therefore cannot be
+assumed as an innocuous consequence of a weak pair law in an argument
+intended to establish simplicity. A regularized measurable observable is
+\[
+ Q_{n,\varepsilon}=\int_{\mathbb R}
+     \frac{d\mu_n(s)}{s^2+\varepsilon^2},\qquad\varepsilon>0,
+\]
+but its uniform behavior as $\varepsilon\downarrow0$ is an additional
+estimate. Conversely, a genuinely proved finite bound $Q_m\le C$ gives
+\begin{equation}
+ \min_{i\ne j}|y_i-y_j|\ge\sqrt{\frac{2}{mC}},
+ \label{sc:mingap}
+\end{equation}
+because any one pair contributes two terms to $mQ_m$.
+
+\subsection{A finite-population error threshold}
+\label{sc:tent}
+
+The following quantitative counting implication specifies how a
+sufficiently sharp pair estimate can establish more than density-one
+simplicity.
+
+\begin{proposition}[Shrinking-tent test]
+\label{sc:tenttheorem}
+Let $f_\delta(s)=(1-|s|/\delta)_+$ for $\delta>0$. Suppose a real labeled
+population of size $m$ has a proved enclosure
+\begin{equation}
+ \left|\int f_\delta\,d\mu_m
+       -\int_{\mathbb R}f_\delta(s)R_2(s)\,ds\right|
+ \le e_m(\delta).
+ \label{sc:tenterror}
+\end{equation}
+If
+\begin{equation}
+ \frac{\pi^2\delta^3}{18}+e_m(\delta)<\frac2m,
+ \label{sc:simplicitythreshold}
+\end{equation}
+all locations are simple. If the right side in
+\eqref{sc:simplicitythreshold} is replaced by $1/m$, every two distinct
+labels are separated by more than $\delta/2$.
+\end{proposition}
+
+\begin{proof}
+By \eqref{sc:triangular} and $1-\cos v\le v^2/2$,
+\[
+ R_2(s)\le2\pi^2s^2
+       \int_{-1}^{1}u^2(1-|u|)\,du
+       =\frac{\pi^2s^2}{3}.
+\]
+Since
+\[
+ \int_{-\delta}^{\delta}(1-|s|/\delta)s^2\,ds
+ =2\left(\frac{\delta^3}{3}-\frac{\delta^3}{4}\right)
+ =\frac{\delta^3}{6},
+\]
+we obtain
+\begin{equation}
+ \int f_\delta(s)R_2(s)\,ds\le\frac{\pi^2\delta^3}{18}.
+ \label{sc:tentconstant}
+\end{equation}
+Any repeated location contributes at least two ordered terms of value
+$f_\delta(0)=1$, hence $\int f_\delta\,d\mu_m\ge2/m$.
+Equations \eqref{sc:tenterror}--\eqref{sc:tentconstant} contradict this
+under \eqref{sc:simplicitythreshold}. Likewise a pair at distance at
+most $\delta/2$ contributes two terms each at least $1/2$, giving the
+threshold $1/m$.
+\end{proof}
+
+For example, $\delta_m=o(m^{-1/3})$ and
+$e_m(\delta_m)=o(m^{-1})$ suffice for eventual simplicity of these finite
+populations. This is a conditional quantitative test: neither the
+shrinking-test uniformity nor its error bound follows from vague PCC.
+The threshold states an analytic task rather than an estimate for the
+canonical theta source.
+
+\section{Physical projective caps and their phase}
+\label{sc:caps}
+
+We next derive a boundary formula that identifies the information beyond
+root positions needed for the physical Chern--Hopf integral. Let
+$\tau=t+is$ and $z=x+iy$. Let $H(\tau,z)$ be holomorphic and put
+\begin{equation}
+ G=(H,H_z),\qquad
+ \mathcal A=\frac{\operatorname{Im}(G^*dG)}{|G|^2},\qquad
+ \mathcal C=\frac{\mathcal A\wedge d\mathcal A}{4\pi^2}.
+ \label{sc:forms}
+\end{equation}
+These are the physical jet and its normalized connection and three-form;
+in particular, the derivative component has not been rescaled relative
+to the value component.
+
+\begin{lemma}[Normalization of the boundary three-form]
+\label{sc:degreeform}
+If $W$ is a compact oriented four-dimensional domain with piecewise
+$C^1$ boundary, $G=(H,H_z)$ is nonzero on that boundary, and
+$\partial W$ has the outward orientation, then
+(with the complex orientation when $W\subset\mathbb C^2$)
+\[
+ \int_{\partial W}\mathcal C
+ =\deg\left(\frac G{|G|}:\partial W\longrightarrow S^3\right).
+\]
+For a proper product window satisfying Theorem~\ref{tr:complex-charge},
+this is the discriminant charge in \eqref{tr:charge-residue}.
+\end{lemma}
+\begin{proof}
+On the unit sphere in $\mathbb C^2$, let
+$\alpha=\operatorname{Im}(\overline\zeta_1d\zeta_1+
+\overline\zeta_2d\zeta_2)$. At $(1,0)$, an oriented orthonormal tangent
+basis is $(\partial_{y_1},\partial_{x_2},\partial_{y_2})$, and
+$\alpha\wedge d\alpha$ evaluates to $2$. Unitary invariance and the
+transitive action of $U(2)$ therefore give
+$\alpha\wedge d\alpha=2\,d\operatorname{Vol}_{S^3}$ everywhere.
+The area of the unit three-sphere is $2\pi^2$ (by polar integration of
+the four-dimensional Gaussian), so this form divided by $4\pi^2$
+has integral one. The physical connection is the pullback of $\alpha$
+under $G/|G|$, since differentiating the real norm adds no imaginary
+part. The degree formula for a normalized volume form proves the first
+claim. Proposition~\ref{tr:degree-agreement} proves the last.
+\end{proof}
+
+This identifies the total complete-boundary integral. It does not
+identify an individual scalar discriminant edge integral from
+Proposition~\ref{tr:complex-caps} with an individual physical
+three-dimensional cap; the latter is evaluated next.
+
+Fix real numbers $t_0<T$ and a rectangle
+\[
+ D=\{\tau:t_0\le\operatorname{Re}\tau\le T,
+                 \ |\operatorname{Im}\tau|\le Y\},
+ \qquad Y>0,
+\]
+and a number $\varepsilon>0$. Assume there is a holomorphic map
+$Z(\tau,q)$ on a neighborhood of
+$D\times\{|q|\le\varepsilon\}$ such that
+\begin{equation}
+ H_z(\tau,Z(\tau,q))\ne0,\qquad
+ \frac{H(\tau,Z(\tau,q))}{H_z(\tau,Z(\tau,q))}=q,
+ \label{sc:inversecontract}
+\end{equation}
+and $q\mapsto Z(\tau,q)$ is one-to-one for each $\tau$.
+The inverse derivative is nonzero, because differentiating the second
+identity gives $(H/H_z)_z Z_q=1$. Thus
+$(\tau,q)\mapsto(\tau,Z(\tau,q))$ is an embedded tube, with the same
+orientation as $dt\wedge ds\wedge d\operatorname{Re}q\wedge
+ d\operatorname{Im}q$. Indeed the spatial Jacobian is $|Z_q|^2>0$.
+Its central branch $Z(\tau,0)$ is a simple root.
+
+\begin{proposition}[Exact phase formula for a physical cap]
+\label{sc:capformula}
+Under \eqref{sc:inversecontract}, set
+\[
+ h(\tau,q)=H_z(\tau,Z(\tau,q)),\qquad
+ k_\varepsilon=\frac{\varepsilon^2}{1+\varepsilon^2}.
+\]
+Choose a continuous phase $\phi=\operatorname{Im}\log h$ on the parameter
+tube. For the forward real-time cap at $t=b$, oriented by increasing
+$s$ followed by the complex $q$ orientation,
+\begin{equation}
+ I_b=\int_{t=b}\mathcal C
+ =\frac{k_\varepsilon}{2\pi}
+       \bigl[\phi(b+iY,0)-\phi(b-iY,0)\bigr].
+ \label{sc:capexact}
+\end{equation}
+The projective-circle wall $|q|=\varepsilon$ has identically zero
+pullback of $d\mathcal A$ and hence of $\mathcal C$.
+\end{proposition}
+
+\begin{proof}
+The parameter domain is contractible and $h$ is nonvanishing, so it
+admits a logarithm. In these coordinates $G=h(q,1)$, whence direct
+substitution in \eqref{sc:forms} gives
+\begin{equation}
+ \mathcal A=d\phi+a(q),\qquad
+ a(q)=\frac{\operatorname{Im}(\overline q\,dq)}{1+|q|^2},\qquad
+ d\mathcal A=\omega(q):=
+ \frac{2\,du\wedge dv}{(1+u^2+v^2)^2},\quad q=u+iv.
+ \label{sc:chartforms}
+\end{equation}
+Both $a$ and $\omega$ use only the two $q$ coordinates, so
+$a\wedge\omega=0$. Therefore
+\begin{equation}
+ \mathcal C=\frac{d\phi\wedge\omega}{4\pi^2}.
+ \label{sc:phaseform}
+\end{equation}
+On a fixed real-time cap, only $\phi_s\,ds$ in $d\phi$ contributes.
+For each $s$, $q\mapsto\phi_s(b+is,q)$ is harmonic: it is the imaginary
+part of the $s$ derivative of the holomorphic logarithm of $h$.
+Angular averaging on every centered circle gives its central value.
+Since $\omega$ has radial density,
+\[
+ \int_{|q|\le\varepsilon}\phi_s(b+is,q)\,\omega(q)
+ =\phi_s(b+is,0)\int_{|q|\le\varepsilon}\omega(q).
+\]
+The curvature mass is
+\[
+ \int_{|q|\le\varepsilon}\omega
+ =\int_0^{2\pi}\int_0^\varepsilon
+       \frac{2r}{(1+r^2)^2}\,dr\,d\theta
+ =2\pi k_\varepsilon.
+\]
+Integrating in $s$ proves \eqref{sc:capexact}. On the wall,
+$q=\varepsilon e^{i\theta}$ depends on only one real parameter. Thus
+the two-form $\omega$ pulls back to zero, proving the wall assertion.
+\end{proof}
+
+Equation \eqref{sc:phaseform} retains the common scalar phase. Replacing
+$G=h(q,1)$ by its projective representative $(q,1)$ would give
+$a\wedge da=0$ and would remove the very term measured by
+\eqref{sc:capexact}. It is therefore essential to carry the phase of
+$H_z$ along the continued root. This observation concerns the normalized
+jet; arbitrary multiplication of $H$ by a time-dependent scalar is not
+asserted to preserve the heat equation.
+
+\subsection{The complete regular tube}
+\label{sc:tube}
+
+\begin{proposition}[The imaginary-time faces close the cap identity]
+\label{sc:closedtube}
+In the setting of Proposition~\ref{sc:capformula}, let $J_+$ and $J_-$
+be the outward oriented integrals on $s=Y$ and $s=-Y$, respectively.
+Then
+\begin{align}
+ J_+&=-\frac{k_\varepsilon}{2\pi}
+       [\phi(T+iY,0)-\phi(t_0+iY,0)],
+ \label{sc:topface}\\
+ J_-&=\frac{k_\varepsilon}{2\pi}
+       [\phi(T-iY,0)-\phi(t_0-iY,0)],
+ \label{sc:bottomface}\\
+ I_T-I_{t_0}+J_++J_-&=0.
+ \label{sc:tubebalance}
+\end{align}
+If $H$ and the inverse branch have real type, there is a continuous
+choice
+\[
+ \theta(t,Y)=\operatorname{Im}\log
+          \frac{h(t+iY,0)}{h(t,0)}
+\]
+for which
+\begin{equation}
+ I_t=\frac{k_\varepsilon}{\pi}\theta(t,Y),\qquad
+ J_+=J_-=\frac{k_\varepsilon}{2\pi}
+           [\theta(t_0,Y)-\theta(T,Y)].
+ \label{sc:realtypebalance}
+\end{equation}
+\end{proposition}
+
+\begin{proof}
+The ambient orientation is $dt\wedge ds\wedge du\wedge dv$.
+Contraction with the upper outward normal $\partial_s$ gives
+$-dt\wedge du\wedge dv$, whereas the lower outward normal
+$-\partial_s$ gives $+dt\wedge du\wedge dv$. Apply the same harmonic
+radial averaging as in Proposition~\ref{sc:capformula}, now to
+$\phi_t$, and integrate in $t$. This yields
+\eqref{sc:topface}--\eqref{sc:bottomface}; substitution of
+\eqref{sc:capexact} proves \eqref{sc:tubebalance} by cancellation of
+its four endpoint values. Equivalently,
+$d\mathcal C=\omega\wedge\omega/(4\pi^2)=0$ on this regular chart,
+so Stokes gives the same identity, with the zero wall already paid.
+
+For the last claim, $h(t,0)$ is nonzero real on the real segment, and
+therefore has constant sign. The logarithm after division by that sign
+can be chosen real on the real segment. Conjugation then gives opposite
+imaginary parts at $t+iY$ and $t-iY$. Inserting these two values in the
+preceding formulas gives \eqref{sc:realtypebalance}.
+\end{proof}
+
+This proposition makes a useful distinction: an exactly vanishing
+projective wall is compatible with nonzero real-time caps, because the
+imaginary-time faces provide the remaining flux. The assertion requires
+a fixed projective radius on each tube. If the radius varies with time,
+the wall pulls back $dr\wedge d\theta$ terms and requires a separate
+calculation. A tube satisfying \eqref{sc:inversecontract} contains no
+joint zero of $(H,H_z)$; attaching it to an event-containing region does
+not remove that region's other boundary pieces.
+
+\subsection{Exact heat examples}
+\label{sc:controls}
+
+We give two explicit calculations within the backward heat convention
+$H_\tau=-H_{zz}$. They isolate the respective roles of root regularity
+and physical phase without assuming a statistical model.
+
+\begin{proposition}[A heat event followed by simple clock asymptotics]
+\label{sc:clockcontrol}
+The entire real-type field
+\begin{equation}
+ H(\tau,z)=e^\tau\cos z+1
+ \label{sc:cosineplusone}
+\end{equation}
+satisfies the backward heat equation. At $(\tau,z)=(0,\pi)$ it has an
+ordinary double spatial zero and local complex degree one for the map
+$(H,H_z)$. At every positive real time all its spatial zeros are real
+and simple, and its late real zero pattern converges to a clock of
+spacing $\pi$.
+\end{proposition}
+
+\begin{proof}
+Direct differentiation gives $H_\tau=e^\tau\cos z=-H_{zz}$.
+At $(0,\pi)$, $H=H_z=0$, $H_{zz}=1$, and the complex Jacobian is
+\[
+ \frac{\partial(H,H_z)}{\partial(\tau,z)}(0,\pi)
+ =\begin{pmatrix}-1&0\\0&1\end{pmatrix}.
+\]
+Its nonzero determinant makes the zero of this holomorphic map simple,
+with local degree one. For $t>0$, the equation is
+$\cos z=-e^{-t}\in(-1,0)$. If $z=x+iy$ with $y\ne0$ and $\cos z$
+is real, then $\sin x=0$, so $|\cos z|=\cosh y>1$, a contradiction.
+Thus all zeros are real, and $\sin z\ne0$ at them, proving simplicity.
+The two roots in $(0,2\pi)$ are
+\[
+ x_\pm(t)=\pi\pm\arccos(e^{-t}).
+\]
+They tend to $\pi/2$ and $3\pi/2$; translation by multiples of $2\pi$
+gives the clock limit. For $t<0$ the same local pair is
+$\pi\pm i\operatorname{arcosh}(e^{-t})$, displaying explicitly the
+transition through the event.
+\end{proof}
+
+The source of \eqref{sc:cosineplusone} is a positive atomic cosine
+measure. The example proves that late simplicity and clock relaxation
+are compatible with earlier event charge in the general heat class; it
+makes no assertion about an event for the canonical theta source.
+
+\begin{proposition}[Identical tracked roots with different cap phases]
+\label{sc:phasecontrol}
+For $a>0$, the two exact real-type heat fields
+\begin{equation}
+ H_1(\tau,z)=z,\qquad
+ H_2(\tau,z)=e^{a^2\tau}\frac{\sin(az)}a
+ \label{sc:twoheatfields}
+\end{equation}
+have the same simple tracked root $z=0$ at every complex time. For any
+$0<\varepsilon<1/a$, their root inverse disks are respectively
+\begin{equation}
+ Z_1(\tau,q)=q,\qquad
+ Z_2(\tau,q)=\frac1a\arctan(aq),
+ \label{sc:twoinverses}
+\end{equation}
+and their physical cap integrals at $t=T$, $-Y\le s\le Y$, are
+\begin{equation}
+ I_{T,1}=0,\qquad
+ I_{T,2}=\frac{\varepsilon^2}{1+\varepsilon^2}
+             \frac{a^2Y}{\pi}.
+ \label{sc:twocaps}
+\end{equation}
+\end{proposition}
+
+\begin{proof}
+Both heat equations follow by differentiation. Their derivatives at the
+tracked root are $1$ and $e^{a^2\tau}$, so that root is simple.
+The projective quotients are $q=z$ and $q=\tan(az)/a$.
+The principal branch of $\arctan(aq)$ is holomorphic on $|q|<1/a$;
+it is one-to-one there because its tangent recovers $aq$, and its
+derivative is $(1+a^2q^2)^{-1}\ne0$. Thus both inverse disks satisfy
+\eqref{sc:inversecontract}. On the second disk,
+\[
+ h_2(\tau,q)=\frac{e^{a^2\tau}}{\sqrt{1+a^2q^2}},
+\]
+with the square root equal to one at $q=0$. The central phases are
+therefore $0$ and $a^2s$. Formula~\eqref{sc:capexact} gives
+\eqref{sc:twocaps}.
+\end{proof}
+
+The last example identifies a precise information deficit of a finite
+tracked population: its positions do not specify the physical phase
+of the derivative along the root. The second field has exterior roots;
+no claim is made about nonuniqueness from an entire global zero set.
+Together, the pair-energy results and the cap formula provide a concrete
+route for future estimates: control the weighted pair statistic in a
+stated limit, retain its complete exterior contribution, and then
+estimate the complex-time derivative phase and all faces of the chosen
+boundary.

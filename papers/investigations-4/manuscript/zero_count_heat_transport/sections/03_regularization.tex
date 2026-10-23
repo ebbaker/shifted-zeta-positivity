@@ -1,0 +1,421 @@
+\section{Regularized divisor measures and quantitative stability}
+\label{reg:section}
+
+The localized identity has a potential-theoretic form that avoids locating
+the roots inside the integral. This section supplies the complete
+regularization error and the dependence on the field approximation.
+
+\subsection{A compact target-space regularization}
+For $p>0$ define
+\begin{equation}\label{reg:potential}
+ v_{\varepsilon,p}(r)=
+ \begin{cases}
+  \dfrac1p(r/\varepsilon)^p,&0\le r\le\varepsilon,\\[3pt]
+  \log(r/\varepsilon)+\dfrac1p,&r\ge\varepsilon.
+ \end{cases}
+\end{equation}
+The two branches and their first derivatives agree at $\varepsilon$.
+For a holomorphic $f$ that is not identically zero, set
+\begin{equation}\label{reg:measure}
+ \mu_{\varepsilon,p}(f)
+ :=\frac1{2\pi}\Delta v_{\varepsilon,p}(|f|)
+ =\frac{p}{2\pi\varepsilon^p}
+       |f'|^2|f|^{p-2}\mathbf1_{\{|f|<\varepsilon\}}\,dA.
+\end{equation}
+The Laplacian is distributional. For a constant zero function the left
+side is zero, and we define its measure accordingly.
+
+\begin{proposition}[Exact mass and weak divisor limit]\label{reg:mass}
+Formula \eqref{reg:measure} defines a positive locally finite measure.
+There is no singular measure on the level $|f|=\varepsilon$, even when
+that level contains critical points of $f$, and no point mass at a zero
+for fixed $\varepsilon>0$. Under \eqref{en:boundary},
+\begin{equation}\label{reg:massN}
+ \mu_{\varepsilon,p}(f)(\Omega)=N\quad(0<\varepsilon<b).
+\end{equation}
+For $f$ not identically zero, as $\varepsilon\downarrow0$,
+\begin{equation}\label{reg:divisorlimit}
+ \mu_{\varepsilon,p}(f)\ \longrightarrow\
+       \sum_{f(a)=0}\operatorname{ord}_a(f)\,\delta_a
+\end{equation}
+weakly on compact subsets of the holomorphy domain.
+\end{proposition}
+\begin{proof}
+At $f\ne0$, the chain rule for a radial function gives
+\[
+ \Delta v(|f|)=\left(v''(|f|)+\frac{v'(|f|)}{|f|}\right)|f'|^2.
+\]
+Inside the target disk this is $p\varepsilon^{-p}|f|^{p-2}|f'|^2$;
+outside it is zero. Near $|f|=\varepsilon$, $v_{\varepsilon,p}(|f|)$ is
+$C^{1,1}$, because $f\ne0$ there and the one-sided second derivatives of
+$v$ are bounded. Hence no interface measure occurs. Near an $m$-fold
+zero the density has radial order $r^{mp-2}$ and its integral is
+$O(r^{mp})$. The normal flux of the potential around a radius-$r$ circle
+also tends to zero at that rate. Removing small circles, integrating by
+parts and letting their radii tend to zero verifies the distributional
+identity without atoms.
+
+Theorem~\ref{en:power} gives \eqref{reg:massN}. For the weak limit,
+choose disjoint small disks around the finitely many zeros in a compact
+neighborhood. Once $\varepsilon$ is below the boundary minimum on each
+disk, its measure is exactly the multiplicity there. The measure vanishes
+where $|f|\ge\varepsilon$, so its support contracts to those zeros.
+Uniform continuity of each compactly supported test function completes
+the proof.
+\end{proof}
+
+\begin{theorem}[Field-error bounds]\label{reg:field}
+Let $\psi\in C_c^2(\Omega)$ and let $f,g$ be holomorphic on a neighborhood
+of its support. Suppose $|f-g|\le\eta$ on that support. For $p\ge1$,
+\begin{equation}\label{reg:Lip}
+ \left|\int\psi\,d\mu_{\varepsilon,p}(f)
+              -\int\psi\,d\mu_{\varepsilon,p}(g)\right|
+ \le\frac{\eta}{2\pi\varepsilon}\|\Delta\psi\|_{L^1}.
+\end{equation}
+For $0<p<1$ the corresponding bound is
+\begin{equation}\label{reg:Holder}
+ \left|\int\psi\,d\mu_{\varepsilon,p}(f)
+              -\int\psi\,d\mu_{\varepsilon,p}(g)\right|
+ \le\frac{\eta^p}{2\pi p\varepsilon^p}\|\Delta\psi\|_{L^1}.
+\end{equation}
+No root separation, zero-free interior or derivative approximation is
+assumed.
+\end{theorem}
+\begin{proof}
+The distributional definition gives
+\begin{equation}\label{reg:Green}
+ \int\psi\,d\mu_{\varepsilon,p}(f)
+ =\frac1{2\pi}\int v_{\varepsilon,p}(|f|)\Delta\psi\,dA.
+\end{equation}
+For $p\ge1$, the radial derivative is at most $1/\varepsilon$ on both
+pieces of \eqref{reg:potential}; the radial function on $\mathbb C$ has
+the same global Lipschitz constant. For $0<p<1$, it is increasing,
+concave and zero at the origin. Consequently
+$|v(r)-v(s)|\le v(|r-s|)$ for $r,s\ge0$. Moreover
+$v(h)\le h^p/(p\varepsilon^p)$: this is equality for $h\le\varepsilon$,
+while for $h\ge\varepsilon$ it follows from
+$\log x+1/p\le x^p/p$ for $x\ge1$.
+In either case $\big||f|-|g|\big|\le\eta$ and
+\eqref{reg:Green} give the claim.
+\end{proof}
+
+\begin{remark}[Optimal scalar Lipschitz cost]\label{reg:optimal}
+Among globally Lipschitz radial potentials whose radial profiles are $C^1$ for $r>0$ and equal $\log r$ plus a constant for
+$r\ge\varepsilon$, any global Lipschitz constant is at least
+$1/\varepsilon$, because the derivative at $\varepsilon$ equals that
+number. Every potential \eqref{reg:potential} with $p\ge1$ attains this
+minimum. For $p>1$ these potentials are also $C^1$ on the plane; for $p=1$ the origin has an allowed radial cusp. This is an optimality statement for the scalar potential within
+the specified class, not a lower bound on every algorithm for computing
+zero counts or on every integrated error. For the $q$-fold energy in
+Proposition~\ref{en:rootcover}, the natural exponent is $p=2/q$:
+$q=2$ is the borderline between this Lipschitz regime and the displayed
+H\"older regime for $q>2$.
+\end{remark}
+
+For the compact cubic disk cutoff, whose closed support disk lies inside $\Omega$,
+$\psi(z)=(1-|z-C|^2/R^2)_+^3$, direct radial differentiation gives
+\[
+ \|\Delta\psi\|_1
+ =12\pi\int_0^1|{-1+4s-3s^2}|\,ds=\frac{32\pi}{9}.
+\]
+Thus \eqref{reg:Lip} has allowance $16\eta/(9\varepsilon)$ for that
+cutoff. To turn a weighted integral into an unweighted count, one must
+also ensure that the cutoff is one on the entire low-value region; this
+requires a zero-free collar and is not part of the field-error hypothesis.
+
+\subsection{Quantitative localization near zeros}
+\begin{proposition}[Bias for a Lipschitz test]\label{reg:bias}
+Assume \eqref{en:boundary}. Let $a_1,\ldots,a_k$ be all the zeros in
+$\Omega$, with multiplicities $m_j$. Choose disjoint closed disks
+$D_j\Subset\Omega$ centered at $a_j$ and positive constants $c_j$ such
+that
+\begin{equation}\label{reg:localunit}
+ |f(z)|\ge c_j|z-a_j|^{m_j}\quad(z\in D_j).
+\end{equation}
+Choose $\varepsilon$ smaller than the minimum of $|f|$ on the compact set $\overline\Omega\setminus\bigcup_j\operatorname{int}D_j$. Then for every Lipschitz
+function $\psi$ on $\overline\Omega$ and every $p>0$,
+\begin{equation}\label{reg:biasbound}
+ \left|\int\psi\,d\mu_{\varepsilon,p}(f)
+               -\sum_{j=1}^k m_j\psi(a_j)\right|
+ \le \operatorname{Lip}(\psi)
+          \sum_{j=1}^k m_j(\varepsilon/c_j)^{1/m_j}.
+\end{equation}
+\end{proposition}
+\begin{proof}
+The measure is supported in the union of the disks. Its mass in $D_j$
+is $m_j$ by Proposition~\ref{reg:mass}, and \eqref{reg:localunit}
+restricts its support there to
+$|z-a_j|<(\varepsilon/c_j)^{1/m_j}$. Integrate
+$|\psi(z)-\psi(a_j)|\le\operatorname{Lip}(\psi)|z-a_j|$ on each disk.
+\end{proof}
+
+The constants in \eqref{reg:localunit} exist by the nonvanishing analytic
+unit in the local factorization; their quantitative acquisition is
+additional information. The next result uses the smoothness already
+available for the tests in Theorem~\ref{reg:field}.
+
+\begin{proposition}[Harmonic reproduction and second-order bias]
+\label{reg:harmonic-bias}
+Let $D=D(a,R)$, $R>0$, and let $f$ be holomorphic near $\overline D$, with
+its only zero in $\overline D$ at $a$, of order $m\ge1$. Put
+$b=\min_{\partial D}|f|>0$. For $p>0$, $0<\varepsilon<b$, and every
+real harmonic $h$ on a neighborhood of $\overline D$,
+\begin{equation}\label{reg:harmonic-reproduction}
+ \int_D h\,d\mu_{\varepsilon,p}(f)=m h(a).
+\end{equation}
+If also $|f(z)|\ge c|z-a|^m$ on $\overline D$ for some $c>0$, and $\psi$ is real
+$C^2$ near $\overline D$, then
+\begin{equation}\label{reg:C2-bias}
+ \left|\int_D\psi\,d\mu_{\varepsilon,p}(f)-m\psi(a)\right|
+ \le \frac m2\|D^2\psi\|_{\infty,D}
+       \frac{p}{p+2/m}(\varepsilon/c)^{2/m}.
+\end{equation}
+The Hessian norm is its real two-dimensional operator norm. No
+regular-value assumption on $\varepsilon$ is imposed.
+\end{proposition}
+\begin{proof}
+Choose a holomorphic $q$ near $\overline D$ with $h=\operatorname{Re}q$.
+The trace
+\[
+ T_q(w)=\frac1{2\pi i}\int_{\partial D}
+                 q(z)\frac{f'(z)}{f(z)-w}\,dz,\qquad |w|<b,
+\]
+is holomorphic in $w$. By the residue theorem it is the sum of $q$
+over all preimages of $w$ in $D$, with multiplicities, and
+$T_q(0)=m q(a)$. This does not label the preimages or assume them simple.
+The weighted area formula, applied to the real and imaginary parts,
+gives
+\[
+ \int_D q\,d\mu_{\varepsilon,p}(f)
+ =\frac{p}{2\pi\varepsilon^p}
+   \int_{|w|<\varepsilon}|w|^{p-2}T_q(w)\,dA_w=T_q(0).
+\]
+The last equality is the angular mean-value identity followed by
+$p\varepsilon^{-p}\int_0^\varepsilon r^{p-1}dr=1$.
+All integrals are absolutely convergent, since $q$ is bounded and the
+measure has mass $m$. Critical target values have area zero, including
+any on the cutoff circle; Proposition~\ref{reg:mass} excludes an
+additional interface measure. Taking real parts proves reproduction.
+
+Every preimage of $w$ satisfies $|z-a|\le(|w|/c)^{1/m}$. The same
+area formula therefore yields
+\begin{equation}\label{reg:second-moment}
+ \int_D|z-a|^2\,d\mu_{\varepsilon,p}(f)
+ \le\frac{mp}{\varepsilon^p}
+       \int_0^\varepsilon r^{p-1}(r/c)^{2/m}\,dr
+ =m\frac p{p+2/m}(\varepsilon/c)^{2/m}.
+\end{equation}
+Reproduction for real affine functions cancels the linear Taylor term
+of $\psi$ at $a$. The Taylor remainder on the convex disk is bounded
+by $\|D^2\psi\|_{\infty,D}|z-a|^2/2$. Integration proves
+\eqref{reg:C2-bias}. For $f(z)=c(z-a)^m$, $c>0$, and
+$\psi(z)=|z-a|^2$, equality holds, including the displayed coefficient.
+\end{proof}
+
+Apply this proposition separately to the disks in
+Proposition~\ref{reg:bias}; keep its complement floor and cutoff
+condition. The resulting bias is the sum of the right sides of
+\eqref{reg:C2-bias}. Combined with Theorem~\ref{reg:field}, it bounds
+the regularized approximate field against the exact divisor, even when
+the field error is known only on the support of the compact test.
+For fixed local data, $N>0$, $M=\max_jm_j$, fixed $p\ge1$, and
+$0<\varepsilon\le1$, the bound now has the form
+\begin{equation}\label{reg:balance}
+ A\eta/\varepsilon+B\varepsilon^{2/M}.
+\end{equation}
+Taking $\varepsilon=\eta^{M/(M+2)}$ for sufficiently small $\eta$
+gives $O(\eta^{2/(M+2)})$. For $0<p<1$, taking
+$\varepsilon=\eta^{pM/(pM+2)}$ gives
+$O(\eta^{2p/(pM+2)})$. If $N=0$, the bias is zero for small
+$\varepsilon$. The earlier Lipschitz-only bias gives the valid weaker
+rates $1/(M+1)$ and $p/(pM+1)$. These optimized regularization
+bounds are upper estimates, not optimality statements about divisor
+perturbation.
+
+\subsection{Direct stability with complete cluster information}
+
+\begin{theorem}[Weighted divisor perturbation on a controlled disk]
+\label{reg:direct-divisor}
+Let $R,c>0$ and let $f,g$ be holomorphic near $\overline{D(a,R)}$. Suppose $f$ has
+exactly one zero there, at $a$ of order $m\ge1$, and
+\[
+ |f(z)|\ge c|z-a|^m\quad(z\in\overline D),\qquad
+ b=\min_{\partial D}|f|>0,\qquad
+ \|f-g\|_{\infty,\overline D}\le\eta<b.
+\]
+Then $g$ has exactly $m$ zeros $\zeta_1,\ldots,\zeta_m$ in $D$,
+counted with multiplicity. For every real $C^2$ function $\psi$ near
+$\overline D$,
+\begin{align}
+ \left|\sum_{\nu=1}^m\psi(\zeta_\nu)-m\psi(a)\right|
+ &\le |\nabla\psi(a)|R\log\frac b{b-\eta}\notag\\
+ &\quad+\frac m2\|D^2\psi\|_{\infty,D}(\eta/c)^{2/m}.
+ \label{reg:direct-bound}
+\end{align}
+No separation of the zeros of $g$, derivative-error estimate, or lower
+bound for its analytic unit is required.
+\end{theorem}
+\begin{proof}
+The case $\eta=0$ is immediate. For $\eta>0$, the classical
+Rouch\'e theorem preserves the full count $m$, since $|g-f|<|f|$
+on $\partial D$. At a zero of $g$, the interior error and the floor
+give $c|\zeta_\nu-a|^m\le|f(\zeta_\nu)|\le\eta$.
+
+On the boundary, $g/f=1+u$ with $|u|\le\eta/b<1$. By compactness
+and holomorphy, $f$ is nonzero and $|u|<1$ on a sufficiently thin
+collar of that circle. The convergent principal logarithm
+$\lambda=\log(1+u)$ is single valued and holomorphic on the collar,
+and its boundary values satisfy
+\[
+ |\lambda|\le\sum_{k\ge1}\frac{(\eta/b)^k}{k}
+                  =\log\frac b{b-\eta}.
+\]
+Only this collar logarithm is used; there need be no logarithm of
+$g/f$ throughout $D$. The residue theorem and integration by parts
+around the closed circle give
+\begin{align}
+ \sum_{\nu=1}^m(\zeta_\nu-a)
+ &=\frac1{2\pi i}\int_{\partial D}(z-a)
+          \left(\frac{g'}g-\frac{f'}f\right)dz\notag\\
+ &=-\frac1{2\pi i}\int_{\partial D}\lambda(z)\,dz.
+ \label{reg:centroid-trace}
+\end{align}
+Consequently the modulus of this sum is at most
+$R\log[b/(b-\eta)]$. Summing the real Taylor formula at $a$
+now bounds its linear term by this centroid allowance, and bounds the
+quadratic remainders by
+$m\|D^2\psi\|_{\infty,D}(\eta/c)^{2/m}/2$. This proves
+\eqref{reg:direct-bound} with all multiplicities retained.
+\end{proof}
+
+For finitely many disjoint controlled disks $D_j=D(a_j,R_j)$, the
+same proof gives the sum of \eqref{reg:direct-bound}, with each
+$m_j,c_j,b_j,\eta_j$ retained. This compares the complete divisors in
+their union. To assert a statement about a larger domain, one must also
+exclude zeros of $g$ on its complement, for example by a field-error
+bound strictly below the positive floor of $|f|$ there.
+
+For $0\le\eta\le\theta b$, $\theta<1$ fixed,
+$\log[b/(b-\eta)]\le\eta/[(1-\theta)b]$. Thus the fixed-geometry
+rate in \eqref{reg:direct-bound} is
+$O(\eta^{\min(1,2/m)})$ for tests with bounded $C^2$ norm.
+For $m\ge2$, $f=z^m$, $g=z^m-\eta$ on the unit disk, and
+$\psi=|z|^2$ give exactly $m\eta^{2/m}$. For $m=1$, use
+$f=z$, $g=z-\eta$ and $\psi=\operatorname{Re}z$ to get exactly
+$\eta$. These fixed tests have smooth compact extensions on a larger
+disk, independent of $\eta$. Hence the exponent cannot be increased
+over this declared class. Translating the whole cluster to $d$, with
+$g=(z-d)^m$ and a linear test, also shows why a centroid term is
+necessary even though its Hessian vanishes. This is an exponent
+calibration, not an optimal constant or algorithmic lower bound.
+
+The direct theorem has more information than Theorem~\ref{reg:field}:
+it controls the whole disk, the boundary and the analytic unit of $f$,
+and compares actual divisors. The latter theorem compares regularized
+measures using only the error on a test's support. Their rates are not
+claims under identical assumptions. Common multiplication of $f,g$ by
+$A\ne0$ scales $c,b,\eta$ by $|A|$ and leaves
+\eqref{reg:direct-bound} invariant. Constants are not asserted uniform
+as boundary floors vanish or independently chosen clusters merge.
+
+The trace and area mechanisms are classical; the weighted area formula
+is stated in Simon~\cite[Chapter~2, \S3]{Simon}. Beauzamy's local
+polynomial bounds~\cite[Theorems~1 and~4]{Beauzamy} use a coefficient
+norm and give multiplicity-sensitive nearby-root estimates. Barlet
+\cite[pp.~43--44]{Barlet} studies smooth functions summed over finite
+holomorphic fibers. Parusi\'nski--Rainer~\cite[Theorem~1.1 and
+\S11]{PR} study parameter-dependent polynomial roots in Sobolev and
+Wasserstein spaces. Those contracts differ from the disk-supremum and
+$C^2$-test estimate above. In particular, the monomial example has
+Wasserstein distance $\eta^{1/m}$ from its normalized zero measure to
+$\delta_0$, while its quadratic-test discrepancy is $\eta^{2/m}$.
+We claim an explicit specialization with proved constants, not priority
+over the trace or root-perturbation literature.
+
+\subsection{A smooth logarithmic alternative}
+Set
+\begin{equation}\label{reg:smooth}
+ u_\varepsilon(f)=\tfrac12\log(|f|^2+\varepsilon^2),\qquad
+ \widetilde\mu_\varepsilon(f)
+ =\frac1{2\pi}\Delta u_\varepsilon(f)
+ =\frac{\varepsilon^2|f'|^2}
+        {\pi(|f|^2+\varepsilon^2)^2}\,dA.
+\end{equation}
+Unlike \eqref{reg:measure}, this measure has no compact cutoff in target
+space. The chain rule proves \eqref{reg:smooth} also at zeros, since its
+potential is smooth.
+
+\begin{proposition}[Smooth-kernel boundary and field errors]\label{reg:smoothbounds}
+Under \eqref{en:boundary}, define
+$V_{\partial}=(2\pi)^{-1}\int_{\partial\Omega}|d\arg f|$. Then
+\begin{align}
+ \widetilde\mu_\varepsilon(f)(\Omega)
+ &=\frac1{2\pi}\int_{\partial\Omega}
+            \frac{|f|^2}{|f|^2+\varepsilon^2}\,d\arg f,
+       \label{reg:smoothboundary}\\
+ |N-\widetilde\mu_\varepsilon(f)(\Omega)|
+ &\le\frac{\varepsilon^2}{b^2+\varepsilon^2}V_{\partial},
+ &V_{\partial}&\le
+ \frac{\operatorname{length}(\partial\Omega)\sup_{\partial\Omega}|f'|}
+      {2\pi b}. \label{reg:bdyerror}
+\end{align}
+For the fields and cutoff of Theorem~\ref{reg:field},
+\begin{equation}\label{reg:smoothfield}
+ \left|\int\psi\,d\widetilde\mu_\varepsilon(f)
+       -\int\psi\,d\widetilde\mu_\varepsilon(g)\right|
+ \le\frac{\eta}{4\pi\varepsilon}\|\Delta\psi\|_1.
+\end{equation}
+Also
+\begin{equation}\label{reg:Wcomparison}
+ \widetilde\mu_\varepsilon(f)(\Omega)
+ \le\frac{9}{32\sqrt3\pi\varepsilon}\,W(f;\Omega).
+\end{equation}
+\end{proposition}
+\begin{proof}
+On the boundary, the outward normal derivative of $u_\varepsilon$
+is $|f|^2/(|f|^2+\varepsilon^2)$ times that of $\log|f|$.
+The Cauchy--Riemann equations identify
+$\partial_n\log|f|\,ds=d\arg f$ with the specified orientations.
+Green's formula proves \eqref{reg:smoothboundary}. Subtract the argument
+principle and take total variation to get \eqref{reg:bdyerror}; pointwise,
+$|d\arg f|\le |f'|\,ds/b$.
+The scalar radial derivative $r/(r^2+\varepsilon^2)$ is bounded by
+$1/(2\varepsilon)$, giving \eqref{reg:smoothfield} by integration by
+parts. Finally
+\[
+ \max_{r\ge0}\frac{r}{(r^2+\varepsilon^2)^2}
+ =\frac{9}{16\sqrt3\varepsilon^3},
+\]
+attained at $r=\varepsilon/\sqrt3$. Comparing the density in
+\eqref{reg:smooth} with $2|f'|^2/|f|$ proves
+\eqref{reg:Wcomparison}.
+\end{proof}
+
+The boundary bias in \eqref{reg:bdyerror} is an absolute error; no sign
+is asserted because $d\arg f$ need not have one sign along a general
+boundary. The improved factor two in \eqref{reg:smoothfield} comes with
+that nonzero boundary bias. In contrast, the compact regularization has
+exact total mass below $b$.
+
+\subsection{Transport of the regularized count}
+Suppose $f(t,z)$ is smooth in real $t$ and holomorphic in $z$ on a
+neighborhood of $[t_0,T]\times\overline\Omega$, with no spatial-boundary
+zero. Its common boundary minimum $b_*>0$ makes
+\begin{equation}\label{reg:counttransport}
+ \mu_{\varepsilon,p}(f(t))(\Omega)=N_{\mathbb C}(t_0)
+ \quad(0<\varepsilon<b_*,\ t_0\le t\le T).
+\end{equation}
+Indeed the argument-principle integer is continuous in $t$, and hence
+constant. For the smooth kernel one may also differentiate explicitly:
+\begin{equation}\label{reg:heattransport}
+ \partial_t\widetilde\mu_\varepsilon(f)
+ =\frac1{2\pi}\Delta\left(
+       \frac{\operatorname{Re}(\overline f f_t)}{|f|^2+\varepsilon^2}
+                       \right).
+\end{equation}
+This identity is an equality of smooth densities. Under $f_t=-f_{zz}$
+the numerator is $-\operatorname{Re}(\overline f f_{zz})$; integration
+gives its complete boundary flux, with no automatic sign. Interior
+collisions preserve the complex count in \eqref{reg:counttransport}.
+The real-birth and discriminant balances in the next section measure
+different quantities.

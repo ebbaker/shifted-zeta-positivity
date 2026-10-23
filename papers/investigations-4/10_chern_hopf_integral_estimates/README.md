@@ -82,3 +82,9 @@ organization from the later coupled-estimate acquisition.
 The [home-establishment receipt](HOME_ESTABLISHMENT_20261022.json)
 records the program/register routing; [chat histories](chat-histories/README.md)
 retain the actual conversation identity and provenance.
+
+**Dedicated late-heat continuation, 22 October 2026.** Future work on the
+[cap and charge-transport direction](../11_late_heat_caps_and_charge_transport/README.md)
+now belongs to home 11 and its LHCT register. The [founding assessment](notes/03_LATE_HEAT_PAIR_STATISTICS_AND_CAP_FLUX_20261022.md)
+retains its source path here. This split changes no CHB task or exclusion
+status; home 10 continues to own its mass, trace and signed-amplitude work.

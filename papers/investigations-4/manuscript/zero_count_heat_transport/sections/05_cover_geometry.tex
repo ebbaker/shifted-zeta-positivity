@@ -1,0 +1,109 @@
+\section{Cover topology and the choice of differential}
+\label{cv:section}
+
+The energy identity and the topology of a normalized cover are compatible,
+but they are not interchangeable. This distinction is visible without
+any asymptotic limit.
+
+\begin{proposition}[Euler characteristic of a normalized root cover]
+\label{cv:euler}
+Let $\Omega$ be a disk and suppose $f$ is holomorphic near
+$\overline\Omega$, nonzero on its boundary, with distinct interior zeros
+$a_1,\ldots,a_k$ of orders $m_1,\ldots,m_k$. On the normalization $X_q$
+of $w^q=f(z)$,
+\begin{equation}\label{cv:generalchi}
+ \chi(X_q)=q-\sum_{j=1}^k\bigl(q-\gcd(q,m_j)\bigr).
+\end{equation}
+For $q=2$, writing $B_{\rm odd}=\#\{j:m_j\text{ is odd}\}$ and
+$N=\sum_jm_j$, this becomes
+\begin{equation}\label{cv:chi}
+ \chi(X_2)=2-B_{\rm odd},\qquad
+ \chi(X_2)-(2-N)=2\sum_j\lfloor m_j/2\rfloor.
+\end{equation}
+\end{proposition}
+\begin{proof}
+The local normalization described in Proposition~\ref{en:rootcover}
+has $d_j=\gcd(q,m_j)$ points above $a_j$, each with ramification index
+$q/d_j$. Triangulate the closed disk with the zeros as vertices and with
+no other branch values on edges. Each open edge and face has $q$ lifts;
+ordinary vertices have $q$ lifts, while $a_j$ has $d_j$. Thus the lifted
+Euler characteristic is $q\chi(\Omega)-\sum_j(q-d_j)$, proving
+\eqref{cv:generalchi}. For $q=2$, $d_j$ is one for odd $m_j$ and two
+for even $m_j$. Subtracting $2-N$ gives
+$N-B_{\rm odd}=2\sum_j\lfloor m_j/2\rfloor$.
+\end{proof}
+
+The proof includes disconnected covers, for example the two components
+of the normalized curve $w^2=z^2$. In a proper analytic family with fixed
+complex zero count $N$, any regular fiber with $N$ simple zeros has
+$\chi(X_2)=2-N$. Before and after a collision the regular complex fibers
+therefore have the same Euler characteristic. The excess in
+\eqref{cv:chi} occurs at the \emph{normalized singular fiber}, not as a
+permanent difference between the two regular fibers. The unnormalized
+singular curve is a different topological space.
+
+\begin{proposition}[Reciprocal differential at a zero]\label{cv:poles}
+On the normalized double cover $w^2=f(z)$, the differential
+$\omega=dz/w$ is regular above a simple zero. At a zero of order
+$m=2r$ it has a pole of order $r$ on each of the two local components.
+At a zero of order $m=2r+1$ it has a pole of order $2r$ when $r\ge1$.
+Its reciprocal energy, denoted $\mathcal E(f;\Omega)$, is
+\begin{equation}\label{cv:reciprocalenergy}
+ \frac i2\int_{X_2}\omega\wedge\overline\omega
+ =2\int_\Omega\frac{dA}{|f|},
+\end{equation}
+where both sides are interpreted locally or as extended integrals.
+This energy is finite at a simple zero, logarithmically divergent at a
+double, and power-divergent at higher multiplicity.
+\end{proposition}
+\begin{proof}
+Write $f(z)=z^m g(z)$ after translating the zero, with $g(0)\ne0$ and
+with a local holomorphic square root of $g$. For $m=2r$ the normalized
+charts have $w=\pm z^r\sqrt g$, so
+$\omega=\pm z^{-r}g^{-1/2}\,dz$. For $m=2r+1$, use $z=\xi^2$ and
+$w=\xi^{2r+1}\sqrt{g(\xi^2)}$ to obtain
+\[
+ \omega=2\xi^{-2r}g(\xi^2)^{-1/2}\,d\xi.
+\]
+Summing the two sheetwise densities gives \eqref{cv:reciprocalenergy}.
+The radial comparison $|f(z)|\asymp|z|^m$ reduces integrability to
+$\int_0^\delta r^{1-m}\,dr$.
+\end{proof}
+
+By contrast, the derivative differential $\eta_2=2\,dw$ is regular at
+all multiplicities. Its finite energy counts zeros only after the
+localization and normalization in Theorem~\ref{en:power}. At a pure
+double $f=Az^2$, the residues of $dz/w$ are
+$\pm A^{-1/2}$; they are not integer residues. The integer residue of
+$d\log f$ counts ordinary multiplicity, while that of a cluster
+discriminant counts collision multiplicity. These three uses of
+``residue'' have different normalizations and different consumers.
+
+\begin{proposition}[Amplitude and analytic-unit dependence]\label{cv:amplitude}
+Multiplication of a heat field $H$ by a nonzero constant $c$ preserves
+its zeros, their trajectories and all pair distances. Nevertheless
+\begin{align*}
+ \omega_{cH}&=c^{-1/2}\omega_H,&
+ \oint\omega_{cH}&=c^{-1/2}\oint\omega_H,\\
+ \mathcal E(cH;\Omega)&=|c|^{-1}\mathcal E(H;\Omega),&
+ W(cH;\Omega)&=|c|W(H;\Omega),
+\end{align*}
+with a consistent square-root choice and cycles identified through the natural cover isomorphism. More generally, if $H=UP$ on a
+simply connected disk, with $U$ nonvanishing, the identification
+$w=\sqrt U\,v$ sends the cover to $v^2=P$, but sends the physical
+differential to $dz/(\sqrt U\,v)$.
+\end{proposition}
+\begin{proof}
+The asserted transformations follow by substitution in the differentials
+and energy densities. A holomorphic nonvanishing function on a simply
+connected disk has a holomorphic logarithm, hence a coherent square root.
+\end{proof}
+
+Thus root positions determine the finite branched covering data, but not
+the unnormalized physical periods or energies without the analytic unit.
+The normalized period matrix of a separately specified compact Riemann
+surface is another object. The argument above concerns the physical
+differential and the bordered cover, whose relative periods and boundary
+terms remain part of its energy. For the canonical theta field the
+amplitude is fixed by its source; the proposition is an information
+test, not permission to change that normalization.

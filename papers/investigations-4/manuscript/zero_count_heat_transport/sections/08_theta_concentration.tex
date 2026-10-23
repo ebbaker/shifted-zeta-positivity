@@ -1,0 +1,564 @@
+% Prepared for Edward Baker, 22 October 2026.
+% LLM assistance: gpt-6-astra (Codex), effort ultra, inherited parent configuration.
+% Complete elementary concentration proof; no differentiated saddle result
+% or unproved pair-correlation conjecture is used in these results.
+
+\section{Complete-source theta clock limits and growing windows}
+\label{pm:theta-section}
+\label{th:section}
+
+This section supplies a self-contained canonical application of the finite
+matrix theorem.  The proof uses the entire positive theta source, an
+explicit elementary concentration bound, and a real Fourier comparison.
+It proves locations, simplicity, rank identification and matrix
+convergence at large real heat time, including the growing windows
+specified below. It does not differentiate a root
+location remainder.  A separate, stronger differentiated saddle theorem
+would be needed for pointwise velocity asymptotics; those asymptotics are
+not used here.
+
+\subsection{The source and its elementary bounds}
+\label{pm:theta-source-subsection}
+
+Use the fixed normalization
+\begin{equation}
+ H(t,z)=\int_0^\infty e^{tu^2}\Phi(u)\cos(zu)\,du,
+ \qquad
+ \Phi(u)=\sum_{n=1}^\infty
+       \bigl(2\pi^2n^4e^{9u}-3\pi n^2e^{5u}\bigr)
+                         e^{-\pi n^2e^{4u}}.
+ \label{pm:theta-source}
+\end{equation}
+In particular the complete summands are positive for \(u\ge0\).
+Writing
+\begin{align}
+ \Phi(u)&=2\pi^2e^{9u-\pi e^{4u}}\mathfrak b(u),
+ \label{pm:theta-factorization}\\
+ \mathfrak b(u)
+  &=\sum_{n=1}^\infty
+       \left(n^4-\frac{3n^2}{2\pi}e^{-4u}\right)
+                       e^{-\pi(n^2-1)e^{4u}},
+ \label{pm:theta-b-definition}
+\end{align}
+we have the global bounds
+\begin{equation}
+ 0<\mathfrak b_-:=1-\frac3{2\pi}
+ \le\mathfrak b(u)\le
+ \mathfrak b_+:=\frac1{1-16e^{-3\pi}}<\infty.
+ \label{pm:theta-b-bounds}
+\end{equation}
+Indeed the \(n=1\) term supplies the lower bound, and every term is
+positive.  For the upper bound discard only the negative summand in this
+upper estimate and use
+\(n\le2^{n-1}\), \(n^2-1\ge3(n-1)\), and \(e^{4u}\ge1\).
+The resulting series is bounded by the geometric series with ratio
+\(16e^{-3\pi}<1\).  No term is discarded from the field in
+\eqref{pm:theta-source} itself.
+
+The upper bound in \eqref{pm:theta-b-bounds} implies convergence of
+\eqref{pm:theta-source} and all its parameter derivatives uniformly on
+compact subsets of \(\mathbb C^2\).  In fact every such derivative is
+bounded in absolute value by a constant times
+\[
+ \int_0^\infty (1+u)^j
+             e^{A u^2+B u+9u-\pi e^{4u}}\,du<\infty
+\]
+for suitable finite \(A,B,j\).  Thus \(H\) is holomorphic in both
+variables and satisfies \(H_t=-H_{zz}\) by differentiation under the
+integral.  For real \(t\), its normalizing value \(H(t,0)\) is
+strictly positive.
+
+For \(L\ge2\), define
+\begin{equation}
+ t=t(L)=\frac{4\pi e^{4L}-9}{2L},\qquad
+ \kappa=16\pi e^{4L}-2t=8tL-2t+36.
+ \label{pm:theta-saddle-parameters}
+\end{equation}
+The function \(t(L)\) is strictly increasing, because
+\[
+ t'(L)=\frac{4\pi e^{4L}(4L-1)+9}{2L^2}>0.
+\]
+It maps \([2,\infty)\) onto \([t_2,\infty)\), where
+\(t_2=(4\pi e^8-9)/4\).  We use its inverse to define \(L=L(t)\)
+for every \(t\ge t_2\).  Set
+\begin{equation}
+ q_t(u)=tu^2+9u-\pi e^{4u}.
+ \label{pm:theta-q-definition}
+\end{equation}
+Then \(q_t'(L)=0\) and \(q_t''(L)=-\kappa<0\).  The identities
+\eqref{pm:theta-saddle-parameters} imply
+\begin{equation}
+ \kappa\ge36,\qquad
+ \frac t\kappa\le\frac1{8L-2}\le\frac1{14}<\frac1{4e},
+ \qquad \pi e^{4L}\le\frac\kappa8.
+ \label{pm:theta-parameter-bounds}
+\end{equation}
+For the last inequality, writing \(A=\pi e^{4L}\), one has
+\(t=(4A-9)/(2L)<A\) for \(L\ge2\), and hence
+\(\kappa=16A-2t>14A\).
+
+\subsection{An explicit first-moment concentration theorem}
+\label{pm:theta-concentration-subsection}
+
+Let \(U\) denote a nonnegative random variable with the complete
+probability law
+\begin{equation}
+ d\mu_t(u)=\frac{e^{tu^2}\Phi(u)}{H(t,0)}\,du.
+ \label{pm:theta-probability}
+\end{equation}
+This notation is only a convenient integral normalization; the zero
+configuration itself is deterministic.  Put \(c_*=(4e)^{-1}\).
+
+\begin{theorem}[Complete elementary concentration bound]
+\label{pm:theta-concentration}
+For every \(t\ge t_2\), with \(L,\kappa\) as in
+\eqref{pm:theta-saddle-parameters},
+\begin{equation}
+ \mathbb E_t|U-L|\le M_1(t):=
+ \frac{e\mathfrak b_+}{\mathfrak b_-}
+ \left\{\frac1{c_*\sqrt\kappa}
+       +\frac{L^2\sqrt\kappa}{2}
+                   e^{-c_*\kappa/16}\right\}.
+ \label{pm:theta-M1-bound}
+\end{equation}
+In particular
+\begin{equation}
+ M_1(t)=O(\kappa^{-1/2}),\qquad
+ L\sim\tfrac14\log t,\qquad \kappa\sim8tL
+ \quad(t\to\infty).
+ \label{pm:theta-concentration-asymptotics}
+\end{equation}
+The bound includes every theta mode and the entire half-line of
+integration.
+\end{theorem}
+
+\begin{proof}
+Write \(A=\pi e^{4L}\), \(v=u-L\), and \(a=1/4\).
+The saddle equation gives the exact identity
+\begin{equation}
+ q_t(L+v)-q_t(L)=tv^2-A(e^{4v}-1-4v).
+ \label{pm:theta-exact-exponent}
+\end{equation}
+For \(v\ge0\), Taylor's formula with positive remainder gives
+\(e^{4v}-1-4v\ge8v^2\), so
+\begin{equation}
+ q_t(L+v)-q_t(L)\le-\frac\kappa2v^2.
+ \label{pm:theta-right-gaussian}
+\end{equation}
+For \(-a\le v\le0\), the integral second-order Taylor remainder
+instead gives \(e^{4v}-1-4v\ge8e^{-1}v^2\).  Since
+\(8A=(\kappa+2t)/2\),
+\[
+ t-8A/e=-\frac\kappa{2e}+t(1-e^{-1})
+ \le-\frac\kappa{4e}=-c_*\kappa
+\]
+by \eqref{pm:theta-parameter-bounds}.  Combining both sides yields
+\begin{equation}
+ q_t(L+v)-q_t(L)\le-c_*\kappa v^2
+            \qquad(-a\le v<\infty).
+ \label{pm:theta-near-gaussian}
+\end{equation}
+
+We must also pay the whole far-left interval \(0\le u\le L-a\).
+The second derivative \(q_t''(u)=2t-16\pi e^{4u}\) is strictly
+decreasing.  Any local maximum of \(q_t\) must be on the descending
+part of \(q_t'\), where its only zero is the already identified
+point \(L\).  Thus \(q_t\) has no interior local maximum in
+\([0,L-a]\); its maximum there is at an endpoint.  Moreover,
+\begin{align*}
+ q_t(L-a)
+ &=t\left((L-\tfrac14)^2-\frac{L}{2e}\right)
+       +9\left(L-\tfrac14-\frac1{4e}\right)>0,
+\end{align*}
+where both brackets are positive for \(L\ge2\).  Since
+\(q_t(0)=-\pi<0\), the right endpoint is the larger one.
+Equation~\eqref{pm:theta-near-gaussian} at \(v=-a\) consequently
+gives the complete far-left bound
+\begin{equation}
+ q_t(u)-q_t(L)\le-\frac{c_*\kappa}{16}
+                  \qquad(0\le u\le L-\tfrac14).
+ \label{pm:theta-far-left}
+\end{equation}
+
+For a normalization lower bound, use
+\(|v|\le1/(2\sqrt\kappa)\).  This interval lies in \([-a,a]\)
+and in the physical half-line after translation by \(L\).
+The elementary upper Taylor bound
+\[
+ 0\le e^{4v}-1-4v\le8e^{4|v|}v^2
+\]
+and \(A\le\kappa/8\) show that
+\[
+ q_t(L+v)-q_t(L)\ge-\kappa e^{4|v|}v^2
+             \ge-e/4>-1.
+\]
+Here \(4|v|\le2/\sqrt\kappa<1\).  Therefore
+\begin{equation}
+ Z_t:=\int_0^\infty e^{q_t(u)-q_t(L)}\mathfrak b(u)\,du
+       \ge\frac{\mathfrak b_-e^{-1}}{\sqrt\kappa}.
+ \label{pm:theta-normalization-lower}
+\end{equation}
+
+Using \eqref{pm:theta-near-gaussian},
+\eqref{pm:theta-far-left}, and \(\mathfrak b\le\mathfrak b_+\),
+the first absolute-moment numerator is at most
+\begin{align*}
+ &\int_0^\infty |u-L|e^{q_t(u)-q_t(L)}\mathfrak b(u)\,du\\
+ &\quad\le\mathfrak b_+
+ \left\{\int_{\mathbb R}|v|e^{-c_*\kappa v^2}\,dv
+        +e^{-c_*\kappa/16}\int_{-L}^{-1/4}|v|\,dv\right\}\\
+ &\quad\le\mathfrak b_+
+       \left\{\frac1{c_*\kappa}
+                  +\frac{L^2}{2}e^{-c_*\kappa/16}\right\}.
+\end{align*}
+Division by \eqref{pm:theta-normalization-lower} proves
+\eqref{pm:theta-M1-bound}.
+
+Finally,
+\[
+ t=\frac{2\pi e^{4L}}L-\frac9{2L},\qquad
+ \kappa=4\pi e^{4L}(4-L^{-1})+9L^{-1}.
+\]
+These formulas prove \(L\sim(\log t)/4\) and
+\(\kappa\sim8tL\).  They also give
+\(\kappa\ge14\pi e^{4L}\) for \(L\ge2\), and therefore
+\(L^2\kappa e^{-c_*\kappa/16}\to0\).  The second term in
+\eqref{pm:theta-M1-bound} is consequently
+\(o(\kappa^{-1/2})\), proving its stated order.
+\end{proof}
+
+\subsection{The Fourier transfer and the first finitely many roots}
+\label{pm:theta-fourier-subsection}
+
+The following simple transfer isolates exactly which information from
+concentration is used.  It does not assume real-rootedness of the entire
+function.
+
+\begin{lemma}[Real Fourier concentration transfer]
+\label{pm:fourier-transfer}
+Let \(U\ge0\) have a probability law with finite first moment, let
+\(L>0\), and let \(m_1=\mathbb E|U-L|\).  For real \(z\) put
+\(F(z)=\mathbb E\cos(zU/L)\).  Then for every \(Z>0\),
+\begin{equation}
+ \sup_{|z|\le Z}|F(z)-\cos z|\le\frac{Zm_1}{L},\qquad
+ \sup_{|z|\le Z}|F'(z)+\sin z|\le\frac{(1+Z)m_1}{L}.
+ \label{pm:fourier-C1-bounds}
+\end{equation}
+\end{lemma}
+
+\begin{proof}
+Write \(U/L=1+V/L\), with \(V=U-L\).  Since cosine is
+\(1\)-Lipschitz on the real line,
+\[
+ |\cos(zU/L)-\cos z|\le |z||V|/L.
+\]
+The finite first moment permits differentiation under the expectation.
+For the derivative use
+\begin{align*}
+ \left|\frac UL\sin(zU/L)-\sin z\right|
+ &\le\frac{|V|}{L}|\sin(zU/L)|
+           +|\sin(zU/L)-\sin z|\\
+ &\le(1+|z|)|V|/L.
+\end{align*}
+Taking expectations proves both bounds.
+\end{proof}
+
+\begin{theorem}[Canonical fixed-rank clock and matrix limit]
+\label{pm:theta-clock}
+Fix \(K\ge1\) and \(0<\beta<\pi/4\), and set
+\begin{equation}
+ s_j=(j-\tfrac12)\pi,\qquad Z=s_K+\beta,\qquad
+ \epsilon_0(t)=\frac{ZM_1(t)}L,\quad
+ \epsilon_1(t)=\frac{(1+Z)M_1(t)}L.
+ \label{pm:theta-finite-errors}
+\end{equation}
+Suppose \(t\ge t_2\) and
+\begin{equation}
+ \epsilon_0(t)<\sin\beta,\qquad
+ \epsilon_1(t)<\cos\beta.
+ \label{pm:theta-finite-tests}
+\end{equation}
+Then the first \(K\) positive real zeros of \(H(t,\cdot)\) exist,
+are simple, and satisfy
+\begin{equation}
+ |Lx_j(t)-s_j|\le e(t):=\arcsin\epsilon_0(t)<\beta,
+             \qquad1\le j\le K.
+ \label{pm:theta-root-enclosure}
+\end{equation}
+All these finite tests hold for every sufficiently large \(t\), and
+\begin{equation}
+ e(t)=O_K((L\sqrt\kappa)^{-1}).
+ \label{pm:theta-root-rate}
+\end{equation}
+No RH assumption is needed for these assertions about the indicated
+late-time positive roots.
+
+In particular, fix \(\ell\ge0\), \(m\ge2\), \(K=\ell+m\), and
+put
+\begin{equation}
+ y_i=\frac L\pi x_{\ell+i}(t),\qquad
+ c_i=\ell+i-\tfrac12,\qquad \delta(t)=e(t)/\pi.
+ \label{pm:theta-clock-coordinates}
+\end{equation}
+The finite matrix bounds \eqref{pm:loewner-comparison} and
+\eqref{pm:operator-comparison} hold with these data.  Consequently
+\begin{align}
+ \|\mathcal L(y)-\mathcal L_*\|_{\mathrm{op}}
+    &=O_K((L\sqrt\kappa)^{-1}),
+ \label{pm:theta-normalized-matrix-rate}\\
+ \left\|\mathcal L(x_{\ell+1},\ldots,x_{\ell+m})
+                -\frac{L^2}{\pi^2}\mathcal L_*\right\|_{\mathrm{op}}
+    &=O_K(L/\sqrt\kappa).
+ \label{pm:theta-physical-matrix-rate}
+\end{align}
+The second error tends to zero, while the leading physical matrix grows
+like \(L^2\).
+\end{theorem}
+
+\begin{proof}
+Normalize the actual field by
+\[
+ F_t(z)=\frac{H(t,z/L)}{H(t,0)}=\mathbb E_t\cos(zU/L).
+\]
+Theorem~\ref{pm:theta-concentration} and
+Lemma~\ref{pm:fourier-transfer} give
+\[
+ |F_t(z)-\cos z|\le\epsilon_0,
+ \qquad |F_t'(z)+\sin z|\le\epsilon_1
+                     \quad(|z|\le Z).
+\]
+On the interval \([s_j-\beta,s_j+\beta]\), the endpoint cosine
+values have opposite signs and absolute value \(\sin\beta\).
+The first strict test in \eqref{pm:theta-finite-tests} preserves those
+signs for \(F_t\).  On that interval the function \(\sin z\) has
+one sign and absolute value at least \(\cos\beta\).  The second
+strict test therefore gives a nonzero derivative with fixed sign for
+\(F_t\).  There is exactly one simple zero in each interval.
+On the complement of these intervals in \([0,Z]\), one has
+\(|\cos z|\ge\sin\beta\), so the first test excludes every other
+positive real zero there.  This proves the rank statement.
+
+At the zero in the \(j\)-th interval,
+\(|\cos z|=|\sin(z-s_j)|\le\epsilon_0\).  Since
+\(|z-s_j|<\beta<\pi/2\), inversion of sine gives
+\eqref{pm:theta-root-enclosure}.  The concentration theorem shows that
+both \(\epsilon_0\) and \(\epsilon_1\) tend to zero, with size
+\(O_K((L\sqrt\kappa)^{-1})\); hence the tests eventually hold and
+so does \eqref{pm:theta-root-rate}.
+
+For the selected block, \(|y_i-c_i|\le\delta<1/4\).  Apply
+Theorem~\ref{pm:clock-matrix}.  Since \(m\) is fixed, its finite sum
+in \eqref{pm:operator-comparison} is bounded uniformly for
+\(0\le\delta<1/4\), proving
+\eqref{pm:theta-normalized-matrix-rate}.  The physical rate follows
+by multiplying that bound by \(L^2/\pi^2\), using
+\eqref{pm:spatial-scaling}.
+\end{proof}
+
+The proof establishes simplicity on these large-time real root blocks.
+It does not establish simplicity at time zero, nor does it identify a
+hypothetical initial multiple root with one of these labels without
+additional global continuation hypotheses.  The asymptotic statements
+above fix the maximum rank \(K\).  The explicit finite tests also permit
+the following uniform spatial consequence.
+
+\begin{corollary}[Growing clock windows and dimension-independent matrix error]
+\label{pm:theta-growing-clock}
+Fix $0<\beta<\pi/4$ and let $K=K(t)\ge1$ be integer valued. At each
+time define $Z,\epsilon_0,\epsilon_1$ by
+\eqref{pm:theta-finite-errors} with this value of $K$. Whenever
+\eqref{pm:theta-finite-tests} holds, all first $K$ positive real roots
+are simple and obey \eqref{pm:theta-root-enclosure} simultaneously.
+For every contiguous block of $m\ge2$ roots ending by rank $K$, set
+$y_i=Lx_{\ell+i}/\pi$, $c_i=\ell+i-1/2$, and
+$\delta=\pi^{-1}\arcsin\epsilon_0<1/4$. Then
+\begin{align}
+ \|\mathcal L(y)-\mathcal L(c)\|_{\mathrm{op}}
+ &\le\frac{16\zeta(3)}{(1-2\delta)^3}\delta
+ \le128\zeta(3)\delta.\label{pm:growing-matrix-bound}
+\end{align}
+In particular, the sufficient condition
+\begin{equation}\label{pm:growing-window}
+ K(t)=o\bigl(L(t)\sqrt{\kappa(t)}\bigr)
+\end{equation}
+makes the finite tests hold eventually and gives, uniformly over all
+such blocks,
+\begin{align}
+ \max_{j\le K}|Lx_j-s_j|
+   &=O\!\left(\frac K{L\sqrt\kappa}\right)=o(1),
+       \label{pm:growing-root-rate}\\
+ \|\mathcal L(y)-\mathcal L(c)\|_{\mathrm{op}}
+   &=O\!\left(\frac K{L\sqrt\kappa}\right),
+       \label{pm:growing-normalized-rate}\\
+ \left\|\mathcal L(x_{\ell+1},\ldots,x_{\ell+m})
+             -\frac{L^2}{\pi^2}\mathcal L(c)\right\|_{\mathrm{op}}
+   &=O\!\left(\frac{KL}{\sqrt\kappa}\right).
+       \label{pm:growing-physical-rate}
+\end{align}
+The constants do not depend on $K$, $m$ or the block's starting rank.
+The stronger condition $K=o(\sqrt\kappa/L)$ is sufficient for the
+absolute physical-matrix error to tend to zero.
+\end{corollary}
+\begin{proof}
+The sign, monotonicity and complementary-interval arguments in
+Theorem~\ref{pm:theta-clock} are finite-time implications with explicit
+$K$ dependence, so apply to $K(t)$ at each time. For $d\ge1$,
+$d-2\delta\ge(1-2\delta)d$, and therefore
+\[
+ \sum_{d=1}^{m-1}(d-2\delta)^{-3}
+ \le(1-2\delta)^{-3}\sum_{d=1}^\infty d^{-3}
+ =(1-2\delta)^{-3}\zeta(3).
+\]
+Insert this in \eqref{pm:operator-comparison}; $\delta<1/4$ makes
+$(1-2\delta)^{-3}\le8$. This proves
+\eqref{pm:growing-matrix-bound} without a population factor.
+Since $Z\le\pi K$ and $1+Z\le(1+\pi)K$, the
+$K$-independent bound $M_1=O(\kappa^{-1/2})$ proves the eventual
+tests and the first two rates. Multiplication by $L^2/\pi^2$ gives
+the physical rate. Finally $L\to\infty$, so the stronger condition
+also implies \eqref{pm:growing-window}.
+\end{proof}
+
+At each time the compared matrices have the same dimension, which may
+grow; no operator limit between unspecified varying spaces is asserted.
+The corollary is spatial and requires no time regularity of $K(t)$.
+Changing the population in time creates entry and exit terms. In
+particular it does not extend the next fixed-population discriminant
+identity by substituting $m(t)$, nor does it estimate the complete
+centered exterior residual or yield a pair-correlation law.
+
+\subsection{Cumulative exterior cancellation without velocity asymptotics}
+\label{pm:theta-cancellation-subsection}
+
+The location theorem also proves a useful dynamical consequence.  It is
+weaker than a pointwise estimate for \((\log\Delta)'\), but requires
+no differentiated saddle analysis and exposes the necessary exterior
+payment in a fully analytic way.
+
+\begin{corollary}[Physical energy growth and cumulative cancellation]
+\label{pm:theta-cumulative-cancellation}
+Fix the block from Theorem~\ref{pm:theta-clock} and choose \(T_0\)
+large enough that its strict finite tests hold for every \(t\ge T_0\).
+The root labels are real analytic on this time interval.  Define
+\(\Delta(t)\), \(P_{\mathrm{pair}}(t)\), and
+\(B_{\mathrm{ext}}(t)\) by
+\eqref{pm:energy-definition} and
+\eqref{pm:complete-discriminant-balance}, with the complete local
+unit of the actual theta field.  Put
+\begin{equation}
+ A_m=\sum_{d=1}^{m-1}\frac{m-d}{d^2},\qquad
+ C_m=m(m-1)\log\pi
+       +2\sum_{d=1}^{m-1}(m-d)\log d.
+ \label{pm:theta-pair-constants}
+\end{equation}
+Then
+\begin{align}
+ \log\Delta(t)&=-m(m-1)\log L(t)+C_m+o(1),
+ \label{pm:theta-logdelta-asymptotic}\\
+ P_{\mathrm{pair}}(t)&=\frac{8A_m}{\pi^2}L(t)^2
+                         +O_K\!\left(\frac{L(t)}{\sqrt{\kappa(t)}}\right),
+ \label{pm:theta-pair-asymptotic}\\
+ \int_{T_0}^T P_{\mathrm{pair}}(t)\,dt
+       &\sim\frac{8A_m}{\pi^2}T L(T)^2,
+ \label{pm:theta-integrated-pair}\\
+ \int_{T_0}^T B_{\mathrm{ext}}(t)\,dt
+       &=-\int_{T_0}^T P_{\mathrm{pair}}(t)\,dt
+             -m(m-1)\log L(T)+O(1).
+ \label{pm:theta-integrated-exterior}
+\end{align}
+In particular \(E(t)=-\log\Delta(t)\to+\infty\), and
+\begin{equation}
+ \frac{\displaystyle\int_{T_0}^T B_{\mathrm{ext}}(t)\,dt}
+      {\displaystyle\int_{T_0}^T P_{\mathrm{pair}}(t)\,dt}
+                  \longrightarrow-1.
+ \label{pm:theta-cancellation-ratio}
+\end{equation}
+These are cumulative statements.  They assert no sign for the pointwise
+remainder obtained by differentiating
+\eqref{pm:theta-logdelta-asymptotic}.
+\end{corollary}
+
+\begin{proof}
+The field is holomorphic in both variables, and each selected zero is
+simple.  The implicit-function theorem gives local analytic labels;
+the unique rank identification in Theorem~\ref{pm:theta-clock} makes
+these labels agree on overlapping intervals.
+
+For \(i<j\), the root enclosure gives
+\[
+ x_{\ell+j}-x_{\ell+i}
+  =\frac\pi L\left((j-i)+O_K((L\sqrt\kappa)^{-1})\right).
+\]
+There are finitely many pairs.  Taking logarithms and summing proves
+\eqref{pm:theta-logdelta-asymptotic}, with \(C_m\) as displayed.
+The inverse-square expansion, or equivalently the trace of
+\eqref{pm:theta-physical-matrix-rate}, gives
+\eqref{pm:theta-pair-asymptotic}.
+
+The relation \(L(t)\sim(\log t)/4\) implies
+\[
+ \int_{T_0}^T L(t)^2\,dt\sim\frac1{16}T(\log T)^2
+                         \sim T L(T)^2.
+\]
+To see this directly, fix any relative error, use the asymptotic
+comparison with \((\log t)^2/16\) beyond a fixed threshold, and
+integrate the upper and lower bounds; the finite initial interval is
+negligible.  The elementary antiderivative
+\(\int(\log t)^2dt=t((\log t)^2-2\log t+2)\)
+then proves the assertion.  Applying the same comparison argument to
+\(P_{\mathrm{pair}}(t)/L(t)^2\to8A_m/\pi^2\) proves
+\eqref{pm:theta-integrated-pair}.
+
+Finally the exact identity
+\eqref{pm:complete-discriminant-balance} integrates to
+\[
+ \int_{T_0}^T B_{\mathrm{ext}}(t)\,dt
+  =\log\Delta(T)-\log\Delta(T_0)
+          -\int_{T_0}^T P_{\mathrm{pair}}(t)\,dt.
+\]
+Substitute \eqref{pm:theta-logdelta-asymptotic} to obtain
+\eqref{pm:theta-integrated-exterior}.  The logarithmic remainder is
+negligible relative to the positive quantity in
+\eqref{pm:theta-integrated-pair}, proving
+\eqref{pm:theta-cancellation-ratio}.  The same log-discriminant formula
+proves \(E(t)\to+\infty\).
+\end{proof}
+
+The complete finite-cluster unit therefore cannot be omitted when the
+inverse-square matrix is used dynamically.  Its cumulative contribution
+cancels an order-\(T L(T)^2\) internal pair contribution, leaving an
+order-\(\log L(T)\) change in the log discriminant.  This conclusion is
+specific to the proved fixed-rank clock regime and the complete field.
+It is neither an exclusion of other functionals nor a proof of
+large-population random-matrix statistics.
+
+\subsection{Limits of the statistical interpretation}
+\label{pm:theta-scope-subsection}
+
+For the fixed block, the normalized ordered pair differences tend to the
+integers \(j-i\).  For example its empirical measure
+\[
+ \nu_{m,t}=\frac1{m(m-1)}\sum_{i\ne j}\delta_{y_j(t)-y_i(t)}
+\]
+converges weakly to
+\[
+ \frac1{m(m-1)}\sum_{i\ne j}\delta_{j-i}.
+\]
+This follows immediately by evaluating any bounded continuous test
+function on the finitely many converging differences.  It is an atomic
+clock limit.  It is not a claim about a smooth limiting pair-correlation
+density, a random matrix ensemble, or a high-height limit at fixed heat
+time.  Nor does fixed-rank convergence imply convergence uniformly over
+all roots.  Those populations and limiting operations have to be
+specified and estimated separately.
+
+Finally, the full-source proof above exploits definite analytic
+properties of the canonical source, but its conclusion alone is not a
+simplicity discriminator at an earlier time.  The exact Hermite birth in
+\eqref{pm:exact-hermite-birth} already exhibits simple late roots and a
+multiple initial zero.  In the present theta regime the late physical gaps
+shrink, while the normalized gaps converge to positive values.  Neither
+feature supplies a vanishing complex-time boundary integral or pays an
+unmeasured closure face.  Such a boundary consumer still needs the
+complete field, its exterior unit and amplitude, its chosen topology,
+and every term in its own transport identity.

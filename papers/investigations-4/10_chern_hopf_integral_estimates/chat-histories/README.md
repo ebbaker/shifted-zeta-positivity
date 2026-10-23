@@ -12,6 +12,12 @@ ultra**, verified from this turn's metadata.
   The [relocation receipt](../CHAT_HISTORY_RELOCATION_20261022.json) records
   the verified transfer. This is not a second import or a new chat.
 
+- [0009 Review Chern–Hopf zero sensitivity](0009_2026-10-22T19-29-58Z_review-chern-hopf-zero-sensitivity.json)
+  reviews the charge, develops the late-real-heat cap proposal and establishes
+  [home 11](../../11_late_heat_caps_and_charge_transport/README.md). Its
+  unique registration remains here; the new home links this sole archive
+  without importing or relocating it.
+
 Originating archive [0007 Begin interior boundaries research](../../chat-histories/0007_2026-10-22T04-22-16Z_begin-interior-boundaries-research.json)
 remains in the shared history, with all other conversations untouched.
 Future focused chats register their own actual identities here through

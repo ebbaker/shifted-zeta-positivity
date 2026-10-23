@@ -1,0 +1,174 @@
+\section{Effective complete-source moment tails}\label{sec:tails}
+
+The moments used in the event chart retain the entire theta source and
+the entire integration half-line. This appendix gives explicit upper
+bounds for replacing them by finitely many modes on a finite interval.
+For $S\ge0$, $Y\ge0$, and an integer $j\ge0$, recall the notation
+\begin{equation}\label{eq:tails-moment}
+ M_{j,Y}(S)=\int_0^\infty u^j e^{Su^2+Yu}\Phi(u)\dd u.
+\end{equation}
+Write $\lambda_n=\pi n^2$ and split the source in
+\eqref{eq:Phi} into its complete individual summands,
+\begin{equation}\label{eq:tails-summand}
+ \Phi_n(u)=\lambda_n e^{5u}(2\lambda_ne^{4u}-3)
+                         e^{-\lambda_ne^{4u}}.
+\end{equation}
+For $u\ge0$, the factor $2\lambda_ne^{4u}-3$ is at least
+$2\pi-3>0$. Thus every $\Phi_n$ is positive, and
+\begin{equation}\label{eq:tails-leading}
+ 0<\Phi_n(u)\le 2\lambda_n^2e^{9u-\lambda_ne^{4u}}.
+\end{equation}
+The smaller term in \eqref{eq:tails-summand} is discarded only in
+this upper estimate; it remains part of the finite source below.
+
+Choose an integer $N\ge0$ and a real $U\ge1$. Put $k=N+1$ and define
+the exact finite head
+\begin{equation}\label{eq:tails-head}
+ M^{N,U}_{j,Y}(S)=\sum_{n=1}^{N}
+       \int_0^U u^j e^{Su^2+Yu}\Phi_n(u)\dd u.
+\end{equation}
+An empty sum is understood as zero. Positivity and Tonelli's theorem,
+initially allowing infinite values, give the disjoint decomposition
+\begin{align}
+ M_{j,Y}(S)=M^{N,U}_{j,Y}(S)
+ &+\sum_{n=k}^\infty\int_0^\infty
+                  u^j e^{Su^2+Yu}\Phi_n(u)\dd u\notag\\
+ &+\sum_{n=1}^{N}\int_U^\infty
+                  u^j e^{Su^2+Yu}\Phi_n(u)\dd u.
+ \label{eq:tails-decomposition}
+\end{align}
+The first omitted piece comprises all omitted modes on the whole
+half-line. The second comprises only retained modes on their exterior
+rays. Their index--integration regions do not overlap.
+
+\begin{proposition}[All omitted modes]\label{prop:tails-modes}
+Set
+\begin{equation}\label{eq:tails-mode-parameters}
+ \rho_k=\left(\frac{k+1}{k}\right)^4e^{-\pi(2k+1)},
+ \qquad b_k=4\lambda_k-9-Y.
+\end{equation}
+If $b_k>0$ and $S\le8\lambda_k$, then
+\begin{equation}\label{eq:tails-modes}
+ \sum_{n=k}^\infty\int_0^\infty
+       u^j e^{Su^2+Yu}\Phi_n(u)\dd u
+ \le L_{j,Y}(S;N):=
+ \frac{2\lambda_k^2e^{-\lambda_k}j!}
+                  {(1-\rho_k)b_k^{j+1}}.
+\end{equation}
+In particular $\rho_k<1$ for every $k\ge1$.
+\end{proposition}
+
+\begin{proof}
+For $n\ge k$ and $u\ge0$, the ratio of consecutive leading terms in
+\eqref{eq:tails-leading} is
+\[
+ \frac{\lambda_{n+1}^2e^{-\lambda_{n+1}e^{4u}}}
+      {\lambda_n^2e^{-\lambda_ne^{4u}}}
+ =\left(\frac{n+1}{n}\right)^4
+                 e^{-\pi(2n+1)e^{4u}}
+ \le\rho_k.
+\]
+Both the rational factor and the exponential factor are bounded above
+by their values at $n=k$, $u=0$. Also
+$\rho_k\le16e^{-3\pi}<1$. Geometric summation therefore gives
+\begin{equation}\label{eq:tails-geometric}
+ \sum_{n=k}^\infty\Phi_n(u)
+ \le\frac{2\lambda_k^2}{1-\rho_k}
+                 e^{9u-\lambda_ke^{4u}}.
+\end{equation}
+For $u\ge0$, Taylor's inequality for the positive exponential series is
+\begin{equation}\label{eq:tails-exp-inequality}
+ e^{4u}\ge1+4u+8u^2.
+\end{equation}
+Consequently
+\begin{align*}
+ Su^2+(9+Y)u-\lambda_ke^{4u}
+ &\le-\lambda_k-(4\lambda_k-9-Y)u
+                         +(S-8\lambda_k)u^2\\
+ &\le-\lambda_k-b_ku.
+\end{align*}
+Multiply \eqref{eq:tails-geometric} by $u^je^{Su^2+Yu}$ and
+integrate. The elementary integral
+\[
+ \int_0^\infty u^je^{-bu}\dd u=\frac{j!}{b^{j+1}}
+ \qquad(b>0)
+\]
+follows by scaling and $j$ integrations by parts. It gives exactly
+\eqref{eq:tails-modes}.
+\end{proof}
+
+\begin{proposition}[Retained exterior rays]\label{prop:tails-rays}
+For each retained index $1\le n\le N$, suppose that
+\begin{equation}\label{eq:tails-ray-parameters}
+ b_n(U)=4\lambda_ne^{4U}-9-2SU-Y>0,
+ \qquad S\le8\lambda_ne^{4U}.
+\end{equation}
+Then
+\begin{align}
+ \int_U^\infty u^je^{Su^2+Yu}\Phi_n(u)\dd u
+ &\le R_{n,j,Y}(S;U),\label{eq:tails-ray-bound}\\
+ R_{n,j,Y}(S;U)
+ &:={2\lambda_n^2}
+ e^{SU^2+(9+Y)U-\lambda_ne^{4U}}
+ \sum_{h=0}^{j}\binom{j}{h}
+       \frac{U^{j-h}h!}{b_n(U)^{h+1}}.
+ \label{eq:tails-ray}
+\end{align}
+\end{proposition}
+
+\begin{proof}
+Set $u=U+v$, where $v\ge0$. Applying
+\eqref{eq:tails-exp-inequality} to $v$ gives
+\begin{align*}
+ S(U+v)^2+(9+Y)(U+v)-\lambda_ne^{4U}e^{4v}
+ \le{}&SU^2+(9+Y)U-\lambda_ne^{4U}\\
+ &-b_n(U)v+(S-8\lambda_ne^{4U})v^2.
+\end{align*}
+The quadratic coefficient is nonpositive by hypothesis. Thus
+\eqref{eq:tails-leading} bounds the exterior integral by
+\[
+ 2\lambda_n^2e^{SU^2+(9+Y)U-\lambda_ne^{4U}}
+       \int_0^\infty(U+v)^je^{-b_n(U)v}\dd v.
+\]
+The binomial theorem and the same elementary exponential integrals give
+\[
+ \int_0^\infty(U+v)^je^{-bv}\dd v
+ =\sum_{h=0}^{j}\binom{j}{h}
+                  \frac{U^{j-h}h!}{b^{h+1}},
+\]
+which proves \eqref{eq:tails-ray-bound}--\eqref{eq:tails-ray}.
+\end{proof}
+
+\begin{corollary}[Complete finite enclosure]\label{cor:tails-complete}
+Under the hypotheses of Propositions~\ref{prop:tails-modes} and
+\ref{prop:tails-rays},
+\begin{equation}\label{eq:tails-complete}
+ M^{N,U}_{j,Y}(S)\le M_{j,Y}(S)
+ \le M^{N,U}_{j,Y}(S)+L_{j,Y}(S;N)
+                       +\sum_{n=1}^{N}R_{n,j,Y}(S;U).
+\end{equation}
+For each fixed $S,Y,j$, admissible $N,U$ exist and the sum of the
+displayed tail bounds can be made arbitrarily small.
+\end{corollary}
+
+\begin{proof}
+Insert the two upper bounds into the positive disjoint identity
+\eqref{eq:tails-decomposition}. To verify the final assertion, first
+increase $N$. Then $b_k=4\pi k^2-9-Y$ is positive,
+$8\pi k^2\ge S$, $\rho_k\to0$, and the right-hand side of
+\eqref{eq:tails-modes} tends to zero because of $e^{-\pi k^2}$.
+With such an $N$ fixed, increase $U$. For the finitely many retained
+indices, the term $e^{4U}$ dominates both $U$ and the constant $S$;
+hence \eqref{eq:tails-ray-parameters} eventually holds simultaneously.
+In \eqref{eq:tails-ray}, the negative exponent
+$-\lambda_ne^{4U}$ dominates $SU^2+(9+Y)U$, while the finite sum has
+only polynomial powers of $U$ and inverse positive powers of $b_n(U)$.
+Thus every $R_{n,j,Y}(S;U)$ tends to zero. This proves the assertion
+and also proves finiteness of \eqref{eq:tails-moment} directly.
+\end{proof}
+
+These bounds estimate the complete positive moments. They do not impose
+separate reflection identities on a source head or tail, and they make
+no replacement of the canonical coefficient sequence. In particular, the
+finite head in \eqref{eq:tails-head} retains both terms of every
+summand in \eqref{eq:tails-summand}.

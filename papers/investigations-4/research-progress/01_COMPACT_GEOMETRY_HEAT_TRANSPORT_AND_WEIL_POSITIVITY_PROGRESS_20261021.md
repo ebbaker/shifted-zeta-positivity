@@ -84,6 +84,8 @@ next research priority. I4-W02 and I4-H01 remain gated.
 | I4-ORG-01 | Complete (organization only) | Root guide, shared program/register, six focused homes and retained empty work folders; milestone, links/status/size validation | [Prompt][prompt], [brainstorm][brainstorm], source audits | Complete; validation recorded below. No mathematical status changed. |
 | I4-ORG-02 | Complete (organization only) | Three additional integral projects, each with overview, local register, README and work/history guidance; parent links and milestone | [Survey][formula-survey], [new project summaries](#additional-integral-projects--22-october-2026) | Setup validated; WGI-01, RTD-01 and RHE-01 remain Unstarted. No mathematical gate changed. |
 | I4-ORG-03 | Complete (organization and exposition only) | Dedicated home 10, coherent CHB results write-up, relocation of existing sole CHB program/register and own archive 0008 with provenance preserved | [Home 10][p10], [write-up][chb-writeup], local integration review and relocation receipts | Existing CHB IDs/statuses and all inherited mathematical gates retained; no new theorem or acquisition. |
+| I4-ORG-04 | Complete (organization only) | Dedicated late-heat cap/charge home, analytical overview and sole LHCT ledger, work/history guidance and portfolio routing | [Home 11][p11], [LHCT overview][lhct-overview], founding home 10 assessment | LHCT-01–03 subsequently proved in declared scope; optional fixed-rank statistic and complete closure allocation recorded. Opposing signed estimate/exclusion remain open; see sole LHCT ledger. Parent mathematical statuses unchanged. |
+| I4-ORG-05 | Complete (organization only) | Dedicated height-dependent heat-contour home, overview, sole HDC register, reading guide and work folders | [Home 12](../12_height_dependent_heat_contours/README.md), founding brainstorm and inherited local identities | HDC-01 Unstarted; complete canonical cap estimate and same-information gain remain open. Detailed execution belongs to the HDC register. |
 | I4-W01 | Complete for the stated candidate class; positivity/comparison gate failed | Exact complete-form circle comparison with exponential image error; odd-mode and finite-rank obstructions; exact positive-completion defect; specified diagonal-repair divergence | [Note][round1], [review][round1-review], [check receipt][round1-check] | Retain approximation identities; stop the tested candidates in their stated cutoff regimes. Resume only with a different arithmetic coupling/input contract. |
 | I4-W02 | Gated | Quantified compact family with epsilon_j[f]->0 for every fixed compact test, then justified all-support conclusion | I4-W01 useful bounded comparison; [diagonal source][weil] | State the fixed-test schedule and varying parameters only after the bounded estimate; no uniform positive gap is assumed necessary. |
 | I4-S01 | Unstarted | A theta-specific joint constraint on the small response space, using complete reflection and simultaneous event matching; full matched lower-endpoint comparison | [Home 02][p2], [BW14 current][bw14-progress], [Notes 14][n14] and [15][n15] | Fix the full source and direct comparator. The user’s interior-current proposal supplies a candidate backward-survival or critical-amplitude consumer; derive one new coupled restriction before acquisition. |
@@ -393,3 +395,24 @@ was performed in this setup step; no result-summary upgrade is appropriate.
 [rhe-progress]: ../09_reciprocal_hodge_energy/research-progress/01_RECIPROCAL_HODGE_ENERGY_PROGRESS_20261022.md
 [p10]: ../10_chern_hopf_integral_estimates/README.md
 [chb-writeup]: ../10_chern_hopf_integral_estimates/notes/01_ESTABLISHED_MASS_TRACE_AND_AMPLITUDE_RESULTS_20261022.md
+
+## Late heat caps and charge transport — 22 October 2026
+
+Prepared for Edward Baker with substantial LLM assistance; actual recorded
+**gpt-6.1-sol (Codex), effort ultra**. I4-ORG-04 establishes
+[home 11][p11] and its analytical [program][lhct-overview]. The sole
+[LHCT register][lhct-progress] owns detailed execution; the portfolio
+retains only this routing and dependencies. The first tasks specify the
+complete boundary, prove projective-side continuation and derive a uniform
+complex-time late-cap estimate. A weighted pair-statistics bridge is
+optional. Supporting computations follow analytical needs.
+
+Analytical execution update, 22 October 2026, for Edward Baker with substantial LLM assistance, actual **gpt-6-astra, effort ultra**: home 11 Notes 01–04 now prove regular finite/growing-interval projective tubes, full-source complex-time caps in shrinking and fixed-width regimes, and complete closure allocation. The original task ledger retains the precise scopes. Late caps can vanish, or approach an explicit nonzero reference, while the complete boundary still retains the event charge. The selected cap-only exclusion payment is stopped in this family; opposing signed and exclusion estimates remain open. Internal same-model review only; no numerical campaign, parent exclusion upgrade or manuscript snapshot. The founding chat remains in home 10 and the distinct execution chat is home 11 history 0001.
+
+[p11]: ../11_late_heat_caps_and_charge_transport/README.md
+[lhct-overview]: ../11_late_heat_caps_and_charge_transport/research-overview/01_LATE_HEAT_CAPS_AND_CHARGE_TRANSPORT_PROGRAM_20261022.md
+[lhct-progress]: ../11_late_heat_caps_and_charge_transport/research-progress/01_LATE_HEAT_CAPS_AND_CHARGE_TRANSPORT_PROGRESS_20261022.md
+
+## Height dependent heat contours — 23 October 2026
+
+Prepared for Edward Baker with substantial LLM assistance, actual **gpt-6-astra (Codex), effort max**. [Home 12](../12_height_dependent_heat_contours/README.md) owns the program for bounding the original time-zero cap through a complete shrinking backward deformation. The [overview](../12_height_dependent_heat_contours/research-overview/01_HEIGHT_DEPENDENT_HEAT_CONTOURS_PROGRAM_20261023.md) defines the physical observable and direct comparison. The sole [HDC register](../12_height_dependent_heat_contours/research-progress/01_HEIGHT_DEPENDENT_HEAT_CONTOURS_PROGRESS_20261023.md) records setup complete, HDC-01 Unstarted and later acquisition/comparison/coverage tasks gated. Generic transport identities and the conditional two-root radius remain inherited brainstorm results; no new source estimate or exclusion is claimed by setup.

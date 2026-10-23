@@ -4,8 +4,8 @@
 Model: **gpt-6-astra (Codex)**. Reasoning effort: **ultra**.
 
 This folder holds brainstorming after a major series of investigations and
-before the next research program is chosen. Each subfolder names the
-prospective series. It preserves the alternatives, discussion and reasons
+before the next research program is chosen. Each subfolder identifies the
+series its discussion concerns. It preserves the alternatives, discussion and reasons
 for narrowing them, while the source investigations retain their research
 records.
 
@@ -13,6 +13,12 @@ records.
   second investigation series; the initial Codex brainstorm and Claude's
   additional brainstorm are recorded, with discussion to narrow the options
   intended.
+
+- [Investigations 4](investigations-4/README.md): continuation on structural
+  cancellation, Rodgers–Tao renormalization, and shrinking backward-time
+  contours, following the assessment of the topological transport paper.
+  Added 23 October 2026 for Edward Baker with substantial LLM assistance,
+  **gpt-6-astra (Codex), effort max**.
 
 Start with the repository's [result summaries](../../result-summaries/README.md)
 and [patterns to avoid](../../avoid/README.md). Earlier brainstorming within

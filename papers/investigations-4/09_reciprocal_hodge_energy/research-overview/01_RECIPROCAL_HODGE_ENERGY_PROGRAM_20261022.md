@@ -100,6 +100,25 @@ boundary observations let direct evaluation inherit the same intersection;
 no intrinsic Hodge dominance, optimal direct cost or endpoint exclusion
 is established. The register names the next accuracy/reuse gate.
 
+## Analytic manuscript on 22 October 2026
+
+Prepared for Edward Baker with substantial LLM assistance; actual recorded
+gpt-6.1-sol, effort ultra. The [working manuscript](../manuscript/reciprocal_hodge_energy/main.tex)
+and [25-page PDF](../manuscript/reciprocal_hodge_energy/reciprocal_hodge_energy.pdf)
+now give self-contained derivations of the finite cover, complete boundary
+identity, exact quadratic payments, bounded full model remainders, explicit
+source-controlled event chart, and strict improvement of the coarse upper
+on its stated window. Appendices derive canonical xi/8 normalization,
+reflection and complete moment tails. Numerical support is limited to one
+brief cited section. The [manuscript review](../reviews/04_ANALYTIC_MANUSCRIPT_REVIEW_20261022.md)
+records a separate same-model audit and clean compilation/visual checks.
+This consolidates the established finite results; endpoint-uniform source
+control and the RHE-05 coverage gates remain open. Read the [result index][results]
+and [avoid index][avoid], particularly cluster 13 and patterns 07, 08, 12;
+the manuscript's equal-information comparator and conditional event scope
+retain those restrictions. No manuscript snapshot or new numerical sweep
+is introduced.
+
 [survey]: ../../brainstorm/05_BROAD_SURVEY_OF_TOPOLOGICAL_INTEGRAL_FORMULAS_FOR_RH_AND_SIMPLICITY_20261022.md
 [progress]: ../research-progress/01_RECIPROCAL_HODGE_ENERGY_PROGRESS_20261022.md
 [results]: ../../../../result-summaries/README.md
@@ -113,3 +132,27 @@ is established. The register names the next accuracy/reuse gate.
 [bw10]: ../../../investigations-3/13_contradiction_analysis/04_boundary_winding/threshold_routes/10_rh_implies_simple_zeros/brainstorm/04_GLOBAL_HEAT_GEOMETRY_PROPOSALS_AND_INITIAL_SCREENS_20261021.md
 [period]: ../../../investigations-3/13_contradiction_analysis/04_boundary_winding/threshold_routes/13_spectral_covers_and_periods/notes/01_NODAL_PERIOD_VARIATION_AND_FOUR_JET_COMPARISON_20261021.md
 [bilinear]: https://people.sissa.it/~grava/RS2021.pdf
+
+## Broader integral bounds on 22 October 2026
+
+Prepared for Edward Baker with substantial LLM assistance; actual recorded gpt-6.1-sol, effort ultra. The [continuation brainstorm](../notes/05_PATHS_FORWARD_AND_INTEGRAL_CONSUMERS_20261022.md) ranks concrete analytic consumers. [Note 06](../notes/06_FINITE_PART_AND_POSITIVE_ENDPOINT_CORRECTION_20261022.md) replaces the bounded endpoint remainder by an exact finite part with positive coefficient series and explicit small excess bound. [Note 07](../notes/07_TIME_AVERAGED_AND_FRACTIONAL_RECIPROCAL_BOUNDS_20261022.md) gives a sharp fractional estimate and a paid ordinary-event time strip. [Note 08](../notes/08_DERIVATIVE_WEIGHTED_ENERGY_AND_GLOBAL_STRIP_BOUND_20261022.md) controls the different integral 2 integral |H_z|^2/|H| over all-height disks and whole horizontal strips. Its modulus-potential cutoff identity makes source replacement Lipschitz through every multiplicity; existing actual-fiber Taylor data already give a model-only allowance below 3.10e-19. The cubic cutoff is inherited from I4/07, whose logarithmic potential has different singularities and gates.
+
+The [internal review](../reviews/05_FINITE_PART_AND_WEIGHTED_INTEGRAL_REVIEW_20261022.md) records separate same-model audits and exact algebra checks. These are useful analytic integral bounds under their stated hypotheses; they do not bound the original unweighted energy uniformly, transfer bulk bounds to a spatial trace, or establish BW09's signed surplus. A next application must pay its precise observable comparison before claiming a sibling gain. Read [the result index][results] and [the avoid index][avoid], especially patterns 01, 07, 12 and 13. The existing manuscript and actual-fiber certificate are unchanged.
+
+## Paid signed and trace transfers on 22 October 2026
+
+Prepared for Edward Baker with substantial LLM assistance; gpt-6.1-sol, actual effort ultra. [Note 09](../notes/09_SIGNED_LAGUERRE_TRANSFER_AND_COUNT_BOUND_20261022.md) transfers weighted area to the nonsingular derivative trace and complete BW09 signed-functional errors; a boundary amplitude also gives a multiplicity-count upper. [Note 10](../notes/10_SIGNED_JET_FLUX_AND_PHASE_TRACE_OBSTACLES_20261022.md) uses the actual spatial holomorphic jet to derive the signed amplitude-weighted physical phase trace as a modulus potential minus nonnegative bulk mass. Its potential has a model-only error below 8.05e-19 on existing theta data, but an upper mass gives a lower trace endpoint. [Note 11](../notes/11_WEIGHTED_TRACE_PAYMENT_AND_ENDPOINT_OBSTRUCTION_20261022.md) pays the existing BW10 remainder with a collar and Laguerre floor; the quadratic shows the inverse-time cost is necessary. The full hard trace is not assigned the whole-plane cutoff error bound. [Review 06](../reviews/06_DERIVATIVE_WEIGHTED_TRANSFER_REVIEW_20261022.md) records separate same-model audits and exact finite checks.
+
+The useful transfers are proved in-note under their stated contracts. No negative signed theta value, unweighted endpoint bound or cap surplus is acquired. The next step requires an actual complete-source signed estimate, rather than another transfer identity. Read the [result index][results] and [avoid index][avoid], especially patterns 01, 07, 12, 13.
+
+## Canonical and amplitude lower estimates on 22 October 2026
+
+Prepared for Edward Baker with substantial LLM assistance; actual recorded gpt-6.1-sol, effort ultra. [Note 12](../notes/12_CANONICAL_ANCHORS_AND_ISOLATED_EVENT_FLOORS_20261022.md) obtains explicit canonical curvature and born-cap physical-amplitude floors from bounded height, complete normalization/count/moment data and a declared isolation distance. A deflated-unit Harnack alternative needs no RH but retains complex-root isolation. [Note 13](../notes/13_CRITICAL_AMPLITUDE_AND_PROPAGATED_LAGUERRE_FLOORS_20261022.md) proves convex critical amplitude and a nondecreasing minimum Q on continued adjacent caps in an LP heat regime; a source chart then pays Note11's physical denominator rather than assuming it separately. All endpoint losses remain explicit.
+
+[Note 14](../notes/14_CANONICAL_BULK_MASS_LOWER_BOUND_20261022.md) supplies a different, unconditional canonical lower for the nonnegative mass in T=P-M. The fixed source/geometry contract and outward Arb acquisition certify M_phi>5.37865e-6, so any paid potential upper improves by at least that amount. No P or T value/sign has been acquired. [Review 07](../reviews/07_CANONICAL_AMPLITUDE_AND_BULK_LOWER_REVIEW_20261022.md) records separate same-model proof audits and identical replay of every receipt field. The remaining tasks are a useful signed potential estimate and event-independent isolation/curvature/coverage; these estimates do not supply a contradiction to compatible collision profiles. Read the [result index][results] and [avoid index][avoid], especially patterns01,07,11,12,13 and20. No manuscript expansion or numerical sweep.
+
+## Completed signed potential and trace on 22 October 2026
+
+Prepared for Edward Baker with substantial LLM assistance; actual recorded gpt-6.1-sol, effort ultra. [Note15](../notes/15_SIGNED_CANONICAL_POTENTIAL_AND_COMPLETED_TRACE_20261022.md) now acquires P_phi in[1.0703357e-4,1.0768889e-4] on the existing canonical t=0 rectangle. The previous disk mass lower gives T<1.0231023210e-4. Reusing all8192 fixed area cells strengthens M_lower to8.1471167e-5 and acquires M_upper<9.4362658e-5 from derived finite floors. The area-derived trace is in[1.2670920e-5,2.6217716e-5]. These update the preceding unacquired-potential status only for this fixed geometry.
+
+A separate1024-cell direct reference is tighter, in[1.9523542e-5,1.9794809e-5], and acquires Q>0 throughout the interval without RH. More precision here cannot yield a negative witness; stop that specified attempt. [Review08](../reviews/08_SIGNED_POTENTIAL_AND_TRACE_REVIEW_20261022.md) records separate same-model proof audits and final replays. The result and avoid indexes remain binding, particularly patterns01,07,10,11,12,13 and20: finite positive trace and successful denominator payments are not an unweighted phase surplus or endpoint exclusion. All-height/event isolation and sibling signed-surplus tasks remain open; the manuscript is unchanged.

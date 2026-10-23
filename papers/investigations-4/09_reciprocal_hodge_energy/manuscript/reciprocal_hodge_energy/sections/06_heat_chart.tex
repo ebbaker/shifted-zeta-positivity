@@ -1,0 +1,424 @@
+\section{A complete moment-controlled heat-event chart}\label{sec:heat}
+
+The preceding estimates apply to a holomorphic pair chart. We now derive
+all of its constants from the complete canonical source at an assumed
+ordinary double. This construction is conditional local analysis: it
+does not assert the existence of such an event for the theta field.
+
+\subsection{Complete-source analyticity and derivative bounds}
+Put $\lambda_n=\pi n^2$. The $n$th summand in \eqref{eq:Phi} is
+\[
+ \Phi_n(u)=\lambda_n e^{5u}(2\lambda_n e^{4u}-3)
+                        e^{-\lambda_n e^{4u}}>0
+ \qquad(u\geq0),
+\]
+because $2\lambda_n e^{4u}-3\geq2\pi-3>0$.
+For the positive leading terms the successive ratio satisfies
+\[
+ \frac{(n+1)^4e^{-\pi(n+1)^2e^{4u}}}
+      {n^4e^{-\pi n^2e^{4u}}}
+ \leq16e^{-3\pi}=:q_0<1.
+\]
+Dropping the negative part only for this upper bound and summing the
+geometric majorant gives
+\begin{equation}\label{eq:sourceglobal}
+ 0<\Phi(u)\leq\frac{2\pi^2}{1-q_0}
+                          e^{9u-\pi e^{4u}}.
+\end{equation}
+Consequently, for every real $S$, $Y\geq0$, and nonnegative integer $j$,
+\begin{equation}\label{eq:generalmoment}
+ M_{j,Y}(S):=\int_0^\infty u^j e^{Su^2+Yu}\Phi(u)\dd u
+                                                        <\infty.
+\end{equation}
+The decay of $e^{-\pi e^{4u}}$ dominates every displayed quadratic,
+linear, and polynomial factor. This also gives a common integrable
+majorant on every compact subset of the two complex variables $(t,z)$.
+Thus \eqref{eq:Hdef} defines a jointly entire function, its derivatives
+can be taken under the complete integral, and
+\begin{equation}\label{eq:momentderivative}
+ |\partial_z^jH(t,z)|\leq M_{j,Y}(S)
+ \quad\text{if }\re t\leq S,\quad |\im z|\leq Y.
+\end{equation}
+Indeed the derivatives of cosine are cosine or sine with the factor
+$u^j$, and both trigonometric functions have modulus at most
+$e^{|\im z|u}$. Time differentiation adds two powers of $u$ and
+gives \eqref{eq:heat}. The source is real, so $H(t,z)$ is real for
+real $t,z$. These statements use all modes and the whole half-line.
+An explicit finite acquisition ledger for the moments is given in
+Appendix~\ref{sec:tails}.
+
+\subsection{The finite ordinary-double chart}
+Assume
+\begin{equation}\label{eq:event}
+ T\geq0,\quad x_*\in\R,\quad
+ H(T,x_*)=H_z(T,x_*)=0,\qquad
+ A=\tfrac12H_{zz}(T,x_*)\in\R\setminus\{0\}.
+\end{equation}
+Use the shifted field and complete moments
+\begin{equation}\label{eq:shiftedfield}
+ F_\tau(x)=H(T+\tau,x_*+x),\quad h(x)=F_0(x),\quad
+ M_j=M_{j,1}(T+1)\quad(j\geq0).
+\end{equation}
+On the complex bidisk $|\tau|\leq1$, $|x|\leq1$, formula
+\eqref{eq:momentderivative} bounds the $j$th spatial derivative of
+$F_\tau$ by $M_j$. In particular the following constants are finite
+and strictly positive:
+\begin{align}
+ r&=\min\{1,|A|/(4M_3)\},\label{eq:radius}\\
+ \sigma&=\min\{1,3|A|r^2/(8M_2),|A|r/(4M_3),|A|/(4M_4)\}.
+ \label{eq:timewindow}
+\end{align}
+They depend on the event and its curvature. No lower bound uniform in
+height, time, or the event is asserted.
+
+\begin{theorem}[Explicit finite event chart]\label{thm:eventchart}
+For every complex $|\tau|\leq\sigma$, the field $F_\tau$ has exactly
+two zeros in $|x|<r$, counted with multiplicity, and obeys the outer floor
+\begin{equation}\label{eq:outerfloor}
+ |F_\tau(x)|\geq m_{\rm out}:=3|A|r^2/8
+                                      \qquad(|x|=r).
+\end{equation}
+There is exactly one critical point $k(\tau)$ in this disk. It depends
+holomorphically on $\tau$, and the two zeros are simple for
+$0<|\tau|\leq\sigma$. For real $0<\tau\leq\sigma$ they are real
+and can be ordered as $\alpha<k(\tau)<\beta$. With
+\begin{equation}\label{eq:eventmidpoint}
+ m=\frac{\alpha+\beta}{2},\qquad a=\frac{\beta-\alpha}{2}>0,
+\end{equation}
+one has
+\begin{equation}\label{eq:splitbounds}
+ \frac{6\tau}{5}\leq a^2\leq\frac{10\tau}{3},\qquad
+ |m|\leq\frac{28M_3}{27|A|}\tau.
+\end{equation}
+In particular the finite physical cover is a smooth bordered annulus
+for each such positive time, with both physical boundaries retained.
+\end{theorem}
+\begin{proof}
+Taylor's formula with integral remainder gives $h(x)=x^2g(x)$ and
+\begin{equation}\label{eq:gcontrol}
+ |g(x)-A|\leq M_3|x|/6\leq|A|/24
+                                         \qquad(|x|\leq r).
+\end{equation}
+Thus $g$ is nonvanishing on the closed disk. The only zero of $h$
+there is its double zero at the origin, and on the circle
+$|h|\geq3|A|r^2/4$. Integrating
+$\partial_\tau F_\tau=-F_\tau''$ along the complex time segment gives
+\begin{equation}\label{eq:timefieldchange}
+ |F_\tau(x)-h(x)|\leq M_2|\tau|\leq3|A|r^2/8.
+\end{equation}
+The outer floor follows by subtraction. Since the right side is
+strictly less than the boundary lower bound for $|h|$, Rouch\'e's
+theorem gives the count two.
+
+On the entire closed disk and time window, spatial and time integration
+of the derivative bounds gives
+\begin{equation}\label{eq:curvaturechart}
+ |F_\tau''(x)-2A|\leq M_3r+M_4\sigma\leq|A|/2.
+\end{equation}
+On $|x|=r$, Taylor's theorem in space and
+$\partial_\tau F_\tau'=-F_\tau'''$ likewise give
+\[
+ |F_\tau'(x)-2Ax|\leq M_3r^2/2+M_3\sigma
+                       \leq3|A|r/8<2|A|r.
+\]
+Rouch\'e's theorem applied to $F_\tau'$ gives exactly one critical
+point, counted with multiplicity. Its second derivative is nonzero by
+\eqref{eq:curvaturechart}. The local implicit functions therefore
+patch, by uniqueness, to one holomorphic function $k(\tau)$ on the
+time disk, with $k(0)=0$.
+
+Set $v(\tau)=F_\tau(k(\tau))$. The chain rule, the critical-point
+equation, and the heat equation imply
+\begin{equation}\label{eq:criticalvalue}
+ v'=-F_\tau''(k(\tau)),\quad v(0)=0,\quad
+ |v(\tau)+2A\tau|\leq|A||\tau|/2.
+\end{equation}
+The last inequality follows by integrating
+\eqref{eq:curvaturechart} along the complex segment. It implies
+$|v(\tau)|\geq3|A||\tau|/2>0$ when $\tau\ne0$. A multiple zero
+would have to be the unique critical point, and hence would force
+$v=0$. Thus both zeros are simple throughout the punctured time disk.
+
+Now let $\tau$ be positive and real. Reality and uniqueness give a real
+critical point. On the real spatial interval the function $f=F_\tau/A$
+satisfies
+\begin{equation}\label{eq:realconvexity}
+ 3/2\leq f''\leq5/2,\qquad
+ -5\tau/2\leq f(k)\leq-3\tau/2.
+\end{equation}
+The required endpoint signs follow from more than the modulus floor:
+\eqref{eq:gcontrol} gives $h(\pm r)/A\geq3r^2/4$, and
+\eqref{eq:timefieldchange} gives
+$|F_\tau(\pm r)-h(\pm r)|/|A|\leq3r^2/8$.
+Hence $f(\pm r)\geq3r^2/8>0$. Strict convexity now yields one
+real zero on each side of $k$, and these exhaust the count two.
+
+For either root $\gamma$, Taylor's theorem about $k$ gives
+\[
+ \tfrac34|\gamma-k|^2\leq-f(k)
+                       \leq\tfrac54|\gamma-k|^2.
+\]
+Combining this with \eqref{eq:realconvexity}, each of the distances
+$k-\alpha$ and $\beta-k$ lies between $\sqrt{6\tau/5}$ and
+$\sqrt{10\tau/3}$. Their arithmetic mean is $a$, proving its
+two-sided estimate in \eqref{eq:splitbounds}.
+
+To control the midpoint, first use
+$|F_\tau'(0)|\leq M_3\tau$, which follows from the time derivative
+of $F_\tau'$ and the event equation. The real curvature floor then
+gives
+\[
+ |k|\leq\frac{2M_3}{3|A|}\tau.
+\]
+Expand $F_\tau(m+a)=F_\tau(m-a)=0$ through second order at $m$.
+The two cubic remainders have magnitudes at most $M_3a^3/6$ each.
+Subtracting the expansions gives $|F_\tau'(m)|\leq M_3a^2/6$.
+Another application of the curvature floor yields
+\[
+ |m-k|\leq\frac{M_3a^2}{9|A|}
+       \leq\frac{10M_3}{27|A|}\tau.
+\]
+Adding the last two estimates proves the midpoint bound. Finally the
+outer floor and simple zero count give the regular finite cover, and
+Lemma~\ref{lem:cylinder} identifies it as the asserted annulus.
+\end{proof}
+
+\subsection{Deflation and derivative constants from the same source}
+For the remainder of this section $0<\tau\leq\sigma$ is real and
+$F_\tau(x)=(x-\alpha)(x-\beta)V(x)$.
+
+\begin{lemma}[Explicit deflated-unit estimates]\label{lem:eventunit}
+On the complex disk $|x|\leq r$, set $\nu=3|A|/4$. Then
+\begin{align}
+ |V-A|&\leq|A|/4,\qquad |V|\geq\nu,\label{eq:unitfloor}\\
+ |V'|&\leq M_3/6,\qquad |V''|\leq M_4/12.\label{eq:unitderivatives}
+\end{align}
+For a coherent holomorphic choice $b=V^{-1/2}$ the constants
+\begin{equation}\label{eq:eventLK}
+ L=\frac{M_3}{12\nu^{3/2}},\qquad
+ K=\frac{M_3^2}{48\nu^{5/2}}+\frac{M_4}{24\nu^{3/2}}
+\end{equation}
+satisfy $|b|\leq\nu^{-1/2}$, $|b'|\leq L$, and $|b''|\leq K$.
+At the root midpoint one has the sharper estimate
+\begin{equation}\label{eq:Jmidpoint}
+ |V(m)-A|\leq J\tau,
+ \qquad J=\frac{14M_3^2}{27|A|}+\frac{23M_4}{36}.
+\end{equation}
+\end{lemma}
+\begin{proof}
+Let $\Delta=\{(s,t):s,t\geq0,\ s+t\leq1\}$. Twice applying the
+fundamental theorem of calculus along complex line segments gives
+\begin{equation}\label{eq:simplexunit}
+ V(x)=\int_\Delta
+ F_\tau''\bigl(s\alpha+t\beta+(1-s-t)x\bigr)\dd s\dd t.
+\end{equation}
+To verify the normalization, for distinct $x,\alpha,\beta$ first
+integrate in $t$ and then in $s$. The result is
+\[
+ \frac1{\beta-x}
+ \left\{\frac{F_\tau(\alpha)-F_\tau(\beta)}{\alpha-\beta}
+       -\frac{F_\tau(\alpha)-F_\tau(x)}{\alpha-x}\right\}
+ =\frac{F_\tau(x)}{(x-\alpha)(x-\beta)}.
+\]
+The cases $x=\alpha,\beta$ follow by removable continuation.
+The disk is convex, so every evaluation point in
+\eqref{eq:simplexunit} belongs to the same disk on which our source
+derivative bounds hold. The elementary simplex integrals are
+\begin{align*}
+ \int_\Delta1&=\tfrac12,&
+ \int_\Delta(1-s-t)&=\tfrac16,&
+ \int_\Delta(1-s-t)^2&=\tfrac1{12},\\
+ \int_\Delta(t-s)&=0,&
+ \int_\Delta(t-s)^2&=\tfrac1{12}.&&
+\end{align*}
+For example these follow by successive integration of monomials, or
+from $\int_\Delta s^it^j(1-s-t)^k\dd s\dd t
+=i!j!k!/(i+j+k+2)!$. Integrating
+\eqref{eq:curvaturechart} proves \eqref{eq:unitfloor}; differentiating
+\eqref{eq:simplexunit} once and twice in $x$ and using the next two
+simplex integrals proves \eqref{eq:unitderivatives}.
+
+The unit has no zero, so it has a holomorphic square root on the disk.
+The derivative identities
+\[
+ b'=-\tfrac12V^{-3/2}V',\qquad
+ b''=\tfrac34V^{-5/2}(V')^2-\tfrac12V^{-3/2}V''
+\]
+give exactly \eqref{eq:eventLK}. On the real interval, $V$ is real
+and \eqref{eq:unitfloor} makes its sign the sign of $A$. Therefore
+$b$ has a fixed nonzero phase there. In particular its arcsine average,
+which determines the core period in Section~\ref{sec:remainders},
+is nonzero.
+
+At $x=m$ the simplex evaluation point is $m+a(t-s)$. Expand
+$F_\tau''$ at $m$. Its linear term integrates to zero, and the
+quadratic remainder and the last simplex integral give
+\[
+ |V(m)-\tfrac12F_\tau''(m)|\leq M_4a^2/24.
+\]
+Time integration and spatial integration also give
+$|F_\tau''(m)-2A|\leq M_4\tau+M_3|m|$. Combining with
+\eqref{eq:splitbounds} yields
+\begin{align*}
+ |V(m)-A|
+ &\leq\tfrac12M_4\tau+\tfrac12M_3|m|+M_4a^2/24\\
+ &\leq\left(\frac{14M_3^2}{27|A|}
+            +\frac12M_4+\frac5{36}M_4\right)\tau,
+\end{align*}
+which is \eqref{eq:Jmidpoint}.
+\end{proof}
+
+The deflated-unit floor \eqref{eq:unitfloor} is a conclusion of the
+event equations and complete derivative bounds. It is not a lower floor
+for $F_\tau$, which vanishes at each branch. Theorem~\ref{thm:remainder}
+therefore applies on this chart with the explicitly derived constants
+$\nu,L,K,r$; its constants \eqref{eq:Cosc} and \eqref{eq:CE} do not
+depend on the shrinking pair separation.
+
+\subsection{A finite coarse upper bound}
+\begin{proposition}\label{prop:coarseheat}
+For $0<\tau\leq\sigma$ the complete energy obeys
+\begin{equation}\label{eq:Bcoarse}
+ \E_\tau\leq B(\tau):=
+ \frac8{3|A|}\left[4\pi+2\pi\log\left(
+                   2r\sqrt{\frac5{6\tau}}\right)\right].
+\end{equation}
+In particular $[0,B(\sigma/2)]$ encloses all energies on the bounded
+window $\sigma/2\leq\tau\leq\sigma$.
+\end{proposition}
+\begin{proof}
+Set $d=\beta-\alpha=2a$. Split the base disk into its intersections
+with $B(\alpha,d/2)$ and $B(\beta,d/2)$ and the complement. The two
+small disks are disjoint except at their tangent point. On the first,
+$|x-\beta|\geq d/2$, so its contribution to the integral of
+$1/(|x-\alpha||x-\beta|)$ is bounded by the integral of
+$2/(d|x-\alpha|)$ over the full radius-$d/2$ disk, which is $2\pi$.
+The same bound holds at the other root. On the complement the two
+distances $p,q$ lie between $d/2$ and $2r$. Use
+$1/(pq)\leq(p^{-2}+q^{-2})/2$ and bound each resulting integral by
+its full centered annulus integral. This gives
+\[
+ \int_{|x|<r}\frac{\dd A_x}{|x-\alpha||x-\beta|}
+                  \leq4\pi+2\pi\log(4r/d).
+\]
+The two-sheet energy has the additional factor two, and
+$|V|\geq3|A|/4$. Finally $d\geq2\sqrt{6\tau/5}$ by
+\eqref{eq:splitbounds}. These facts give \eqref{eq:Bcoarse}.
+The right side decreases with $\tau$, proving the window statement.
+\end{proof}
+
+\subsection{A strictly sharper shared upper certificate}
+Write the explicit constant \eqref{eq:Cosc} on the present chart as
+\begin{equation}\label{eq:heatCosc}
+ C_{\osc}=8\pi rL/\sqrt\nu+8\pi r^2L^2.
+\end{equation}
+Define
+\begin{align}
+ D&=2r\sqrt{5/6},\qquad c_*=\log2+\tfrac14,\label{eq:sharpD}\\
+ K_*&=\max\{0,3|A|C_{\osc}/(2\pi)+7c_*-16\},\label{eq:sharpK}\\
+ s_*&=\min\{\sigma,D^2,\nu/(6J),D^2e^{-2(K_*+1)}\}>0.
+ \label{eq:sharpwindow}
+\end{align}
+The canonical source has $J>0$, since its moments are positive. If the
+same argument is used for a polynomial calibration with $J=0$, the
+division term in \eqref{eq:sharpwindow} is omitted.
+
+\begin{theorem}[Strict improvement of the coarse certificate]
+\label{thm:sharpheat}
+For $0<\tau\leq s_*$ a valid complete upper bound is
+\begin{equation}\label{eq:Usharp}
+ \E_\tau\leq U(\tau):=
+ 4\pi\left(\frac1{|A|}+\frac{J\tau}{|A|\nu}\right)
+               \arsinh(D/\sqrt\tau)+C_{\osc}.
+\end{equation}
+It satisfies the explicit strict comparison
+\begin{equation}\label{eq:strictBU}
+ B(\tau)-U(\tau)\geq\frac{2\pi}{3|A|}>0.
+\end{equation}
+Thus $[0,U(\tau)]$ is strictly contained in $[0,B(\tau)]$ on this
+declared window.
+\end{theorem}
+\begin{proof}
+The root midpoint is real and the two roots are interior, so
+$r-|m|>a$ and $r+|m|\leq2r$. The upper shifted-disk bound
+\eqref{eq:shiftedsandwich} gives
+\[
+ \Eo\leq4\pi\arsinh((r+|m|)/a)
+       \leq4\pi\arsinh(D/\sqrt\tau),
+\]
+where the last step uses \eqref{eq:splitbounds}. Also
+\eqref{eq:unitfloor} and \eqref{eq:Jmidpoint} imply
+\[
+ \frac1{|V(m)|}-\frac1{|A|}
+ =\frac{|A|-|V(m)|}{|A||V(m)|}
+ \leq\frac{J\tau}{|A|\nu}.
+\]
+Apply the $b(m)$ version of Theorem~\ref{thm:remainder}, with
+remainder \eqref{eq:Cosc}, to obtain \eqref{eq:Usharp}.
+
+For $x\geq1$ the elementary inequalities
+$\sqrt{1+y}\leq1+y/2$ and $\log(1+y/4)\leq y/4$,
+with $y=x^{-2}\leq1$, give
+\begin{equation}\label{eq:arsinhestimate}
+ \arsinh x=\log x+\log(1+\sqrt{1+x^{-2}})
+                          \leq\log x+\log2+\tfrac14.
+\end{equation}
+Let $\ell=\log(D/\sqrt\tau)$. From \eqref{eq:sharpwindow},
+$\ell\geq K_*+1$, $D/\sqrt\tau\geq1$, and
+$1+J\tau/\nu\leq7/6$. The coarse certificate is
+$B=(2\pi/(3|A|))(16+8\ell)$, whereas
+\eqref{eq:Usharp} and \eqref{eq:arsinhestimate} give
+\[
+ U\leq\frac{2\pi}{3|A|}(7\ell+7c_*)+C_{\osc}.
+\]
+Subtracting gives
+\[
+ B-U\geq\frac{2\pi}{3|A|}
+       \left[\ell+16-7c_*-\frac{3|A|C_{\osc}}{2\pi}\right]
+       \geq\frac{2\pi}{3|A|},
+\]
+by the definition of $K_*$.
+\end{proof}
+
+This is a strict improvement over a specified coarse certificate. Both
+bounds are available to direct integration supplied with the same roots,
+unit, and source bounds. Thus the theorem gives a sharper shared direct
+baseline; it supplies no ordering of all boundary and direct methods.
+
+\subsection{The resulting degeneration is still logarithmic}
+\begin{corollary}[Ordinary-double energy scale]\label{cor:heatasymptotic}
+For the fixed event chart above,
+\begin{equation}\label{eq:heatasymptotic}
+ \E_\tau=\frac{2\pi}{|A|}\log(1/\tau)+O(1)
+                                    \qquad(\tau\downarrow0).
+\end{equation}
+The bounded remainder may depend on the event and its chart constants.
+\end{corollary}
+\begin{proof}
+By \eqref{eq:splitbounds}, $a\longrightarrow0$,
+$\log(1/a)=\tfrac12\log(1/\tau)+O(1)$, and $m=O(\tau)$.
+In particular, for sufficiently small time both $r-|m|$ and $r+|m|$
+lie in a fixed positive interval about $r$. Apply the lower and upper
+shifted-disk bounds \eqref{eq:shiftedsandwich} and the elementary
+large-argument asymptotics used in \eqref{eq:quadasymp}. They give
+\[
+ \Eo=4\pi\log(1/a)+O(1)
+      =2\pi\log(1/\tau)+O(1).
+\]
+The unit estimate \eqref{eq:Jmidpoint} and the floor $|V(m)|\geq\nu$
+give the two-sided estimate
+\[
+ \left|\frac1{|V(m)|}-\frac1{|A|}\right|
+                       \leq\frac{J\tau}{|A|\nu}.
+\]
+Finally Theorem~\ref{thm:remainder}, using \eqref{eq:Cosc}, gives
+$\E_\tau=|V(m)|^{-1}\Eo+O(1)$. The normalization error is
+$O(\tau\log(1/\tau))$, hence bounded and tending to zero. This proves
+\eqref{eq:heatasymptotic}.
+\end{proof}
+
+The positive logarithmic coefficient is consistent with the exact
+quadratic control. Neither \eqref{eq:Bcoarse} nor \eqref{eq:Usharp}
+remains bounded as $\tau$ tends to the singular fiber. A source estimate
+that excludes the event would have to add information not supplied by
+this generic ordinary-double chart.

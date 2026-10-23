@@ -1,0 +1,148 @@
+\section{Finite double covers and reciprocal energy}\label{sec:geometry}
+
+\subsection{Regular fibers and the factor of two}
+Let $\Omega\subset\C$ be a bounded domain with smooth boundary, and let
+$H$ be holomorphic on a neighborhood of $\overline\Omega$, nonzero on
+$\partial\Omega$. When every zero in $\Omega$ is simple, set
+\begin{equation}\label{eq:cover}
+ X=\{(z,w):z\in\overline\Omega,\ w^2=H(z)\},\qquad
+ \omega=\frac{dz}{w}.
+\end{equation}
+The complex structure on $X$ gives its orientation. At a zero $\alpha$,
+write $H(z)=(z-\alpha)U(z)$, $U(\alpha)\ne0$. In the local coordinate
+$z=\alpha+\zeta^2$,
+\begin{equation}\label{eq:branchregular}
+ w=\zeta\sqrt{U(\alpha+\zeta^2)},\qquad
+ \omega=\frac{2\dd\zeta}{\sqrt{U(\alpha+\zeta^2)}}.
+\end{equation}
+Thus the branch point is regular on the cover and $\omega$ is holomorphic.
+
+\begin{proposition}[Full energy]\label{prop:energy}
+The conformally invariant energy of $\omega$ is
+\begin{equation}\label{eq:energy}
+ \E(H;\Omega):=\frac{\ii}{2}\int_X\omega\wedge\bar\omega
+       =2\int_\Omega\frac{\dd A_z}{|H(z)|}.
+\end{equation}
+The factor two counts both sheets. In a local conformal coordinate,
+the energy convention has no additional factor $1/2$.
+\end{proposition}
+\begin{proof}
+Away from the finitely many branch points, $z$ is a coordinate on either
+sheet and $\omega=f(z)\dd z$ with $|f|^2=|H|^{-1}$.
+Since $(\ii/2)\dd z\wedge\dd\bar z=\dd A_z$, each sheet contributes
+$\int_\Omega |H|^{-1}\dd A$. The branch points have area zero, and
+\eqref{eq:branchregular} gives local finiteness, so the equality extends
+across them.
+\end{proof}
+
+\begin{proposition}[Multiplicity and local integrability]\label{prop:multi}
+If $H(z)=(z-z_0)^kU(z)$ with $U(z_0)\ne0$, its local reciprocal energy
+is finite precisely when $k=1$ (or when $k=0$, meaning no zero).
+A double zero gives logarithmic divergence; a zero of order $k>2$
+gives a power divergence.
+\end{proposition}
+\begin{proof}
+On a sufficiently small disk there are constants $0<u_-\le|U|\le u_+$.
+The radial energy is comparable to
+\begin{equation}\label{eq:radial}
+ \int_0^\varepsilon r^{1-k}\dd r.
+\end{equation}
+This converges for $k<2$, is logarithmic for $k=2$, and diverges more
+strongly for $k>2$.
+The same conclusion holds on the normalization of the singular cover.
+For $k=2\ell$, its two normalized branches have
+$w=\pm(z-z_0)^\ell\sqrt U$, and $\omega$ has a pole of order $\ell$.
+For $k=2\ell+1$, put $z-z_0=\zeta^2$; then
+$\omega=2\zeta^{-2\ell}U(z_0+\zeta^2)^{-1/2}\dd\zeta$.
+It is regular for $k=1$ and has a pole for each odd $k\ge3$.
+These expressions also explain geometrically why the singular fiber
+cannot simply be included among the smooth finite-energy fibers.
+\end{proof}
+
+For a nonzero holomorphic field on a closed bounded domain with no boundary
+zero, local reciprocal integrability therefore restates simplicity of its
+interior zeros. We use this observation once, as a classification of the
+observable; it is not an independent simplicity estimate.
+
+\subsection{A disk with two real branches}
+In the remainder of the finite-cover analysis let
+\begin{equation}\label{eq:diskpair}
+ \Omega=D(C,R):=\{|z-C|<R\},\quad C\in\R,\quad
+ \alpha<\beta\in\Omega\cap\R,
+\end{equation}
+and suppose these are exactly the two zeros of $H$, both simple. Then
+\begin{equation}\label{eq:unitfactor}
+ H(z)=(z-\alpha)(z-\beta)V(z),\quad
+ m=\frac{\alpha+\beta}{2},\quad a=\frac{\beta-\alpha}{2}>0.
+\end{equation}
+The unit $V$ is holomorphic and nonvanishing on the disk and its boundary.
+Choose a holomorphic square root of $V$ and put
+\begin{equation}\label{eq:eta}
+ y_0^2=(z-m)^2-a^2,\quad b=V^{-1/2},\quad
+ \eta=\frac{dz}{y_0},\quad \omega=b(z)\eta.
+\end{equation}
+The two covers are identified by $w=\sqrt V\,y_0$.
+
+\begin{lemma}[Explicit annulus coordinates]\label{lem:cylinder}
+The full cover is an annulus. It is parametrized by
+\begin{equation}\label{eq:Joukowski}
+ z=m+a\cosh u,\qquad y_0=a\sinh u,\qquad
+ u=s+\ii\theta\pmod{2\pi\ii},\qquad \eta=\dd u.
+\end{equation}
+Writing $\delta=m-C$, its domain is $-U(\theta)\le s\le U(\theta)$,
+where
+\begin{equation}\label{eq:Ushift}
+ U(\theta)=\arcosh\left(
+ \frac{-\delta\cos\theta+
+ \sqrt{R^2+(a^2-\delta^2)\sin^2\theta}}a\right)>0.
+\end{equation}
+Both physical boundary components are retained.
+\end{lemma}
+\begin{proof}
+In the nonzero coordinate $\zeta=e^u$,
+$z=m+(a/2)(\zeta+\zeta^{-1})$ and
+$y_0=(a/2)(\zeta-\zeta^{-1})$. The inverse is
+$\zeta=(z-m+y_0)/a$, nonzero because
+$(z-m+y_0)(z-m-y_0)=a^2$. Thus these are genuine coordinates on
+the cover, including $u=0,\pi\ii$, where $y_0=0$ but the derivative
+of the pair $(z,y_0)$ is nonzero.
+
+The real interior roots imply $|\delta|+a<R$. Set $v=\cosh s\ge1$.
+A direct calculation gives
+\[
+ |z-C|^2=a^2v^2+2a\delta v\cos\theta+
+                \delta^2-a^2\sin^2\theta.
+\]
+The equation $|z-C|=R$ has the positive solution for $v$ in
+\eqref{eq:Ushift}. At $s=0$, $z=m+a\cos\theta$ lies strictly inside
+the disk. The quadratic expression has just one crossing for $v\ge1$,
+so the domain is precisely the asserted strip. Its positive continuous
+width and $2\pi$ periodicity identify an annulus, with boundaries
+$s=\pm U(\theta)$. Differentiating \eqref{eq:Joukowski} gives
+$dz/y_0=\dd u$, with the identity extending at the branch points.
+\end{proof}
+
+We label the boundary component over $z=C+R$ with $y_0>0$ as the plus
+component. Its induced positive orientation projects counterclockwise
+onto the base circle; its core period for $\eta$ is $2\pi\ii$.
+The other component has the opposite sheet label, but its induced
+orientation also projects counterclockwise. The sheet involution
+$\iota$ satisfies $\iota^*\eta=-\eta$ and $\iota^*\omega=-\omega$.
+
+\begin{corollary}[Full direct coordinate formula]\label{cor:direct}
+If $H(\bar z)=\overline{H(z)}$, the energy can be written without a
+branch singularity as
+\begin{equation}\label{eq:directU}
+ \E=4\int_0^\pi\int_0^1
+ \frac{U(\theta)}{|V(m+a\cosh(tU(\theta)+\ii\theta))|}
+          \dd t\dd\theta.
+\end{equation}
+\end{corollary}
+\begin{proof}
+In \eqref{eq:Joukowski}, the energy density is
+$|b(z)|^2\dd s\dd\theta=|V(z)|^{-1}\dd s\dd\theta$.
+The replacements $s\mapsto-s$ and $\theta\mapsto2\pi-\theta$
+conjugate $z$, while leaving $U$ unchanged in the needed pairs.
+Reality of $V$ gives the two factors of two. Finally put $s=tU(\theta)$;
+the area Jacobian in $(s,\theta)$ is exactly $U(\theta)$.
+\end{proof}

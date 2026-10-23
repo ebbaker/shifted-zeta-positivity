@@ -51,3 +51,5 @@ fixed-window strict margin, measured same-data advantage, or a scoped
 failure before expansion. This documentation milestone does not relax
 that gate. Prepared for Edward Baker with substantial LLM assistance,
 gpt-6-astra, actual effort ultra.
+
+**Require utility before polishing the physical transport paper, 23 October 2026.** For Edward Baker with substantial LLM assistance, **gpt-6-astra, max**. [I4 Review 05](../papers/investigations-4/reviews/05_TOPOLOGICAL_TRANSPORT_USEFULNESS_ASSESSMENT_20261023.md) concludes: “Their potential novelty does not establish their usefulness for the author's chosen goal.” Exact cancellation removes the regular late extension, while the early event estimate remains unpaid. Require a measurable region, threshold, data/cost or proof advantage over an equally informed direct method before expanding the manuscript. This qualification preserves the stated analytic estimates and does not exclude a stronger coupled method.
