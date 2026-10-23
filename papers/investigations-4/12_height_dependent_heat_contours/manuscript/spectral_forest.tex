@@ -1,0 +1,298 @@
+% Prepared for Edward Baker, 23 October 2026.
+% Substantial LLM assistance: gpt-6-astra (Codex), reasoning effort ultra.
+% Working manuscript contribution; auxiliary details are in Notes 10 and 11.
+
+\section{Collision spectra, positive-time transfer, and the missing global estimate}
+\label{sec:spectral-transfer}
+
+For distinct real points $x_1,\ldots,x_N$, write
+\[
+ L(x)=\sum_{i<j}\frac{(e_i-e_j)(e_i-e_j)^T}{(x_i-x_j)^2},
+ \qquad q(t)=\Tr\!\left(4tL(x(t))[I+4tL(x(t))]^{-1}\right).
+\]
+A selected population is \emph{complete at its endpoint sites} if it includes
+all multiplicity labels at every site it selects. Its finite matrix contains
+only those labels, but their motion is always that of the complete field.
+For endpoint multiplicities $m_a$, distinguish
+\[
+ M_0=\sum_{m_a\ge2}m_a,\qquad D_0=\sum_a(m_a-1),\qquad N=\sum_a m_a.
+\]
+Thus $M_0$ counts labels at nonsimple sites; $D_0$ counts excess multiplicity.
+
+\begin{proposition}[Endpoint spectrum and scalar multiplicity encoding]
+\label{prop:endpoint-spectrum}
+Let a finite complete endpoint population of a real-type analytic solution of
+$H_t=-H_{zz}$ have real sites, with real simple descendants for small $t>0$.
+Then
+\[
+ \operatorname{spec}(4tL(x(t)))\longrightarrow
+ \bigsqcup_a\{0,1,\ldots,m_a-1\},
+ \qquad
+ q_0:=\lim_{t\downarrow0}q(t)=\sum_a(m_a-\mathsf H_{m_a}),
+ \quad \mathsf H_m=\sum_{j=1}^m\frac1j.
+\]
+In particular $D_0/2\le q_0\le D_0$ and $M_0\le4q_0$.
+\end{proposition}
+\begin{proof}
+The local heat expansion gives
+$x_{a,j}(t)=a+\sqrt{2t}\,h_{m_a,j}+O(t)$, where the $h_{m,j}$ are the
+zeros of the probabilists' monic Hermite polynomial $\mathrm{He}_m$.
+The Hermite equation implies
+$\sum_{j\ne i}(h_i-h_j)^{-1}=h_i/2$.
+Acting with $L(h)$ on evaluations of the monomial $x^k$ gives
+$(k/2)h_i^k$ plus lower-degree terms. The evaluations of degrees
+$0,\ldots,m-1$ form a Vandermonde basis, so
+$\operatorname{spec}L(h)=\{0,1/2,\ldots,(m-1)/2\}$.
+Inter-site entries, including their diagonal contributions, vanish after
+multiplication by $t$. The block limits therefore give the stated spectrum.
+Applying $u\mapsto u/(1+u)$ yields
+$\sum_{k=1}^{m-1}k/(k+1)=m-\mathsf H_m$.
+Each positive summand lies between $1/2$ and $1$; also
+$m-\mathsf H_m\ge m/4$ for $m\ge2$, with equality at $m=2$.
+\end{proof}
+
+The Hermite spectrum is inherited from the local analysis in Note 06; its
+scalar trace is an exact encoding, not a theta upper estimate. A double
+contributes $1/2$, a triple $7/6$, and a quadruple $23/12$.
+These are fixed-population limits, with no uniform exchange of height and
+time limits asserted.
+
+\begin{theorem}[Sharp positive-time transfer]
+\label{thm:sharp-transfer}
+Suppose, in addition, that all adjacent descendants within each selected
+endpoint cluster remain globally adjacent in a complete real simple system
+on $(0,T]$, and that their gaps satisfy
+\[
+ (g^2)'\le8,\qquad g(0)=0.
+\]
+Then $M_0\le4q(t)$ for every $0<t\le T$. The constant four is sharp.
+\end{theorem}
+\begin{proof}
+Every such gap obeys $g(t)^2\le8t$. Partition each even cluster into adjacent
+pairs, and each odd cluster of size at least three into pairs and one
+consecutive triple. Retain only the pair edges and the two consecutive edges
+in each triple. Then $4tL\succeq A_*$, where the pair and triple blocks of
+$A_*$ are one half of the respective path Laplacians.
+The map $f(A)=I-(I+A)^{-1}$ is operator monotone on positive semidefinite
+matrices. A pair block has spectrum $\{0,1\}$ and contributes $1/2$ to
+$\Tr f(A_*)$. A triple has spectrum $\{0,1/2,3/2\}$ and contributes
+$1/3+3/5=14/15\ge3/4$. Thus each block pays at least one quarter of its
+labels. Singleton sites need no payment. For sharpness,
+$H(t,z)=z^2-2t$ gives $M_0=2$ and $q(t)=1/2$.
+\end{proof}
+
+For canonical theta, the hypothesis on gaps is supplied by the full
+canonical real-root motion. For globally adjacent roots $a<b$, $g=b-a$,
+\[
+ (g^2)'=8-4g^2\sum_{r\ne a,b}\frac1{(a-r)(b-r)}\le8.
+\]
+The exterior sum is part of the hypothesis and is absolutely convergent;
+its terms are nonnegative by global adjacency. No external factor is set to
+one. In the conditional theta application, RH supplies the required complete
+real system at positive time. The finite matrix need not contain the exterior
+roots, but a truncated motion law is insufficient. The improvement from the
+earlier constant six concerns proportional transfer; the sufficient
+all-simple threshold remains $q(t)<1/2$.
+
+\begin{theorem}[Bounded spectral mass and short adjacent gaps]
+\label{thm:gap-filter}
+For arbitrary $y_1<\cdots<y_N$, set $A=L(y)$ and
+\[
+ B_N(\delta)=\frac1N\#\{i<N:y_{i+1}-y_i<\delta\},\qquad
+ Q_N(s)=\frac1N\Tr\!\left(sA(I+sA)^{-1}\right).
+\]
+For $s,\delta>0$,
+\begin{equation}
+ B_N(\delta)\frac{s}{\delta^2+2s}
+ \le Q_N(s)\le2B_N(\delta)+\frac{\pi^2s}{3\delta^2}.
+ \label{eq:gap-filter-two-sided}
+\end{equation}
+Consequently, along any sequence of configurations and positive scales,
+\[
+ Q_N(s_N)\longrightarrow0
+ \quad\Longleftrightarrow\quad
+ B_N(a\sqrt{s_N})\longrightarrow0\quad\hbox{for every fixed }a>0.
+\]
+\end{theorem}
+\begin{proof}
+Mark every vertex touching a short adjacent gap. If $r$ vertices are marked,
+then $r\le2NB_N(\delta)$. The unmarked vertices are $\delta$-separated;
+every marked point is also at distance at least $\delta$ from each
+unmarked point. Otherwise the unmarked point's nearest original neighbor
+on that side would be less than $\delta$ away.
+
+Let $D$ be the principal submatrix of $A$ on the unmarked set. Its diagonal
+\emph{retains} interactions with marked vertices. For an unmarked vertex,
+its $k$th unmarked neighbor on either side is at distance at least $k\delta$.
+For a marked vertex, its $k$th unmarked neighbor on either side satisfies the
+same bound. Summing $2\sum_{k\ge1}(k\delta)^{-2}$ first over the unmarked
+vertices and then over marked-to-unmarked interactions gives
+\[
+ \Tr D\le\frac{\pi^2N}{3\delta^2}.
+\]
+Interlacing pays at most $r$ for the discarded eigenvalues; the remaining
+filter values are bounded by $s$ times the eigenvalues of $D$. This proves
+the upper bound, including the empty-principal-matrix case.
+
+The short adjacent edges form disjoint paths. From $K$ such edges select a
+matching of at least $K/2$ edges. Each retained edge has a Laplacian
+eigenvalue at least $2/\delta^2$. Dropping all other edges and using operator
+monotonicity proves the lower bound. Substituting $\delta=a\sqrt{s}$ gives
+\[
+ B_N(a\sqrt{s})\le(a^2+2)Q_N(s),\qquad
+ Q_N(s)\le2B_N(a\sqrt{s})+\frac{\pi^2}{3a^2}.
+\]
+The equivalence follows by taking a limsup at fixed $a$, then letting
+$a\to\infty$ for the reverse direction.
+\end{proof}
+
+For example, independently acquired bounds
+$B_N(\delta)\le C\delta^\beta+\varepsilon_N$, $\beta>0$, imply
+\[
+ Q_N(s)\le\left(2C+\frac{\pi^2}{3}\right)s^{\beta/(\beta+2)}
+             +2\varepsilon_N
+\]
+whenever $s^{1/(\beta+2)}$ lies in their certified range. This is a sufficient
+source input, not a bound proved here for theta.
+
+To state the global interface precisely, let an endpoint target have $N_h$
+labels, of which $n_h=N_h-r_h$ are covered by complete clusters. At a
+source-prescribed time $t_h$, set $y_i=\nu_hx_i(t_h)$ and
+$s_h=4t_h\nu_h^2$. Under Theorem~\ref{thm:sharp-transfer},
+\begin{equation}
+ \frac{M_h}{N_h}\le\frac{r_h}{N_h}
+       +4\frac{n_h}{N_h}Q_{n_h}(s_h).
+ \label{eq:global-spectral-interface}
+\end{equation}
+Thus density-one simplicity would follow conditionally from $r_h=o(N_h)$
+and a vanishing fraction of gaps smaller than $2a\sqrt{t_h}$ for every fixed
+$a>0$. That microscopic gap estimate remains unpaid. Choosing times after
+resolving the unknown endpoint gaps would merely reformulate the target.
+The published late-clock onset $x\ge e^{C/t}$ in \cite{polymath} does not
+supply this estimate. With its natural unfolding
+$\nu_X=g_x(X,t)\sim\log X/(4\pi)$, the uniformly bounded normalized gaps
+instead imply $Q_N(s)\ge1-1/N-(1+4s/C_g^2)^{-1/2}$ by path comparison.
+For this unfolding, $s=4t\nu_X^2\to\infty$ in the high-height onset regime,
+so the unmodified filter saturates. This does not exclude
+matched backward transport on a different clock.
+
+\section{A coefficient-level filter with explicit conditioning}
+\label{sec:forest-filter}
+
+The preceding filter is defined through roots, but its acquisition need not
+isolate them individually. Let $P(z)=\prod_{i=1}^N(z-x_i)$ be monic and
+$\Delta=\prod_{i<j}(x_i-x_j)^2$. The following identity is algebraic; real
+rootedness is needed only for the positivity conclusions.
+
+\begin{proposition}[Forest polynomial and coefficient enclosure]
+\label{prop:forest-filter}
+For $a>0$ and distinct roots define $D=\Delta\det(I+aL)$ and $G=a\partial_aD$.
+Then
+\begin{equation}
+ D=\sum_{F\,\operatorname{forest}}
+     a^{|E(F)|}\prod_{C\in\operatorname{comp}(F)}|C|
+     \prod_{\{i,j\}\notin E(F)}(x_i-x_j)^2,
+ \qquad q_a=\frac GD.
+ \label{eq:forest-polynomial}
+\end{equation}
+The sum runs over all spanning labeled forests, including isolated vertices.
+The quotient identity is asserted where $D\ne0$. Both $D$ and $G$ are
+symmetric polynomials in the roots and hence polynomials in the coefficients
+of $P$. Fix $q_*=G_*/D_*$ and form the coupled polynomial $K=G-q_*D$.
+If coefficient data give $|D-D_*|\le E_D<|D_*|$ and $|K|\le E_K$, then
+\begin{equation}
+ |q_a-q_*|\le\frac{E_K}{|D_*|-E_D}.
+ \label{eq:forest-residual-bound}
+\end{equation}
+The separate allowance $E_K=\epsilon_G+|q_*|\epsilon_D$, obtained from
+$|G-G_*|\le\epsilon_G$, is a valid fallback.
+\end{proposition}
+\begin{proof}
+Apply Cauchy--Binet to the weighted incidence matrix in $L$.
+A cyclic edge selection has dependent columns and contributes zero.
+For a forest, its incidence Gram determinant is $\prod_C|C|$: its nonzero
+maximal minors omit one vertex per component and have square one.
+Thus its determinant contribution is the edge-weight product times
+$a^{|E|}\prod_C|C|$. Each edge occurs at most once, so multiplying
+by the single product $\Delta$ cancels every denominator. This proves the
+polynomial identity. Logarithmic differentiation of the determinant gives
+\[
+ a\partial_a\log D=a\Tr\bigl(L(I+aL)^{-1}\bigr)=q_a.
+\]
+The discriminant is independent of $a$. Finally $q_a-q_*=K/D$, and
+$|D|\ge|D_*|-E_D$, proving \eqref{eq:forest-residual-bound}.
+\end{proof}
+
+The coefficient residuals in the proposition are finite, computable quantities.
+For example, on a coefficient polydisc $|c_j-c_{*,j}|\le r_j$, take
+$D_*=D(c_*)$, $G_*=G(c_*)$ and use the finite Taylor majorants
+$E_D=\sum_{\alpha\ne0}|\partial^\alpha D(c_*)|r^\alpha/\alpha!$
+and
+$E_K=\sum_{\alpha\ne0}|\partial^\alpha K(c_*)|r^\alpha/\alpha!$,
+since $K(c_*)=0$. Form $K$ before taking absolute values, so correlated
+coefficient changes can cancel. The estimating gain is that the paid
+margin is for $D$, not necessarily for $\Delta$ or individual roots. It is
+not a statement that all coefficient balls are well conditioned.
+
+\begin{lemma}[Real repeated-root boundary]
+For fixed $a>0$ and a real root multiset, the polynomial extension has $D>0$
+if and only if every root multiplicity is at most two.
+\end{lemma}
+\begin{proof}
+All forest terms are nonnegative. A nonzero term must include every edge
+joining equal roots, since any omitted such edge contributes zero. A cluster
+of three or more forces a cycle and makes every term vanish. If all clusters
+have size at most two, the disjoint collapsed pair edges form a forest whose
+complementary gaps are nonzero, so its term is positive.
+\end{proof}
+
+The distinction is visible already in degrees two and three. For
+$P=z^2+bz+c$, put $\delta=b^2-4c$. Then
+\[
+ D=\delta+2a,\qquad G=2a,\qquad q_a=\frac{2a}{\delta+2a}.
+\]
+In particular, $P=z^2+p$, $-a/8\le p\le0$, gives $4/5\le q_a\le1$,
+including the repeated reference polynomial. There is no discriminant floor
+or internal root isolation in this enclosure. It is a stable filter
+calculation, not a simplicity certificate: its values are above the relevant
+threshold. For complex $|p|\le a/8$, one similarly has
+$|D|\ge3a/2$ and $|q_a-1|\le1/3$.
+
+For $P=z^3+bz^2+cz+d$, let $B=b^2-3c$. Directly from the three-vertex forest
+sum,
+\[
+ D=\Delta+2aB^2+6a^2B,\qquad G=2aB^2+12a^2B.
+\]
+On the real-rooted cone, $0\le\Delta\le4B^3/27$. Thus, for $B>0$ and
+$\kappa=B/a$,
+\[
+ \frac{2\kappa+12}{4\kappa^2/27+2\kappa+6}
+ \le q_a\le\frac{2\kappa+12}{2\kappa+6}.
+\]
+The restricted real limit at a triple is two. There is no corresponding
+universal extension in complex coefficient space: along $P=z^3-r^3$,
+$B=0$, $\Delta=-27r^6$, and $q_a=0$, whereas the real Hermite approach gives
+$q_a\to2$ at fixed $a$.
+
+The heat scale must also be retained. For the cubic heat polynomial
+$P_t=z^3-6tz$,
+\[
+ D(t,a)=108t(a+2t)(a+4t),\qquad
+ D(t,4t)=5184t^3,\qquad G(t,4t)=6048t^3,
+\]
+so $q(t)=7/6$. More generally, the coefficient snapshots
+\[
+ P_t=z^3-6tz+\eta t^{3/2},\qquad
+ q(t)=\frac{6048}{5184-27\eta^2}.
+\]
+For $\eta\ne0$ these snapshots do not form a heat solution.
+For real $\eta$ with $|\eta|\le\sqrt{32}$ the polynomials are real rooted
+and $7/6\le q\le7/5$. A constant coefficient perturbation of order $t^{3/2}$
+therefore has an order-one effect on the limiting filter. To recover the
+Hermite value, sufficient depressed-coefficient accuracies are
+$p+6t=o(t)$ and $d_{\rm depressed}=o(t^{3/2})$; the cost of centering must
+be included. Likewise the quadratic heat polynomial retains the scale
+$\epsilon/t$ for its constant coefficient error. Exact coefficient transport
+removes rootwise inverse-gap factors, but cannot remove these source precision
+requirements. Notes 10 and 11 give further controls and the associated
+complete finite replays.

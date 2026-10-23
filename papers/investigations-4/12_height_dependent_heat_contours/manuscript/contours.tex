@@ -1,0 +1,181 @@
+\section{Complete physical contours and matched comparisons}
+\label{sec:complete-contours}
+
+A contour calculation must preserve the observable before it estimates its
+pieces.  Write $\tau=t+i\sigma$, $z=x+iy$, and $H_j=\partial_z^jH$ for a
+holomorphic solution of $H_\tau=-H_{zz}$.  For the first jet
+$G=(H_0,H_1)$, put
+\[
+ E=|H_0|^2+|H_1|^2,\qquad
+ L=H_1^2-H_0H_2,\quad N=H_2^2-H_1H_3,\quad M=H_1H_2-H_0H_3.
+\]
+Where $E>0$, the normalized sphere-volume form is
+\[
+ \mathcal C=\frac{\mathcal A\wedge d\mathcal A}{4\pi^2},\qquad
+ \mathcal A=\frac{\operatorname{Im}(G^*dG)}{E}.
+\]
+Define
+\[
+ (f,p)=\frac{(\Re(L\overline N),\Im(L\overline N))}{2\pi^2E^2},
+ \qquad
+ (r,s)=\frac{(\Re(M\overline N),\Im(M\overline N))}{2\pi^2E^2}.
+\]
+Direct evaluation on the coordinate vectors, using
+$G_t=(-H_2,-H_3)$, $G_\sigma=iG_t$, $G_x=(H_1,H_2)$ and
+$G_y=iG_x$, gives
+\begin{equation}
+ \mathcal C=f\,d\sigma\wedge dx\wedge dy
+ -p\,dt\wedge dx\wedge dy
+ +r\,dt\wedge d\sigma\wedge dy
+ -s\,dt\wedge d\sigma\wedge dx.
+ \label{eq:physical-density}
+\end{equation}
+These formulas use no projective denominator such as $H$ or $H_z$ alone.
+A zero of either coordinate is harmless when $E>0$.
+
+Let $\Omega=[A,B]+i[-b,b]$ and
+$W_-=[-\epsilon,0]\times[-Y,Y]\times\Omega$.  Give the cap at fixed $t$
+the forward orientation $d\sigma\wedge dx\wedge dy$, and write
+\[
+ I_t=\int_{-Y}^Y\int_A^B\int_{-b}^b f(t,\sigma,x,y)\,dy\,dx\,d\sigma.
+\]
+The entire remaining outward-face contribution is
+\begin{align}
+ S_\epsilon={}&\int_{-\epsilon}^0\int_A^B\int_{-b}^b
+ [p(t,Y,x,y)-p(t,-Y,x,y)]\,dy\,dx\,dt\notag\\
+ &+\int_{-\epsilon}^0\int_{-Y}^Y\int_{-b}^b
+ [r(t,\sigma,B,y)-r(t,\sigma,A,y)]\,dy\,d\sigma\,dt\notag\\
+ &+\int_{-\epsilon}^0\int_{-Y}^Y\int_A^B
+ [s(t,\sigma,x,b)-s(t,\sigma,x,-b)]\,dx\,d\sigma\,dt.
+ \label{eq:all-physical-faces}
+\end{align}
+
+\begin{proposition}[Complete physical-cap identity]
+Suppose the first jet is nonzero on $\partial W_-$ and its interior joint
+zeros are isolated.  Then
+\begin{equation}
+ I_0=I_{-\epsilon}-S_\epsilon+Q_-,\qquad
+ Q_-=\sum_{p\in\operatorname{int}W_-}\binom{m_p}{2}\ge0,
+ \label{eq:complete-cap-transfer}
+\end{equation}
+where $m_p$ is the spatial multiplicity of the heat zero at $p$.
+In particular $I_{-\epsilon}-S_\epsilon$ is a lower bound for the same
+whole cap $I_0$.
+\end{proposition}
+
+\begin{proof}
+Remove small four-dimensional balls about the joint zeros.  On the
+remaining domain $\mathcal C$ is the pullback of a closed three-form on
+$S^3$.  Stokes' theorem therefore identifies the complete outer boundary
+integral with the sum of the local degrees on small spheres oriented outward
+from the removed balls, opposite to their induced orientations as holes.  The
+local holomorphic heat-degree calculation assigns a spatial multiplicity
+$m$ the positive degree $\binom m2$; this is the local result used in
+Investigation Note~02, Section~2.  Substituting the outward orientations in
+\eqref{eq:physical-density} yields \eqref{eq:all-physical-faces} and
+\eqref{eq:complete-cap-transfer}.
+\end{proof}
+
+A joint zero on a cap does not meet this proposition's hypotheses.
+Removing it requires retaining the actual partial sphere and deleted cap
+piece; no automatic half-integer or one-sided replacement is available.
+Likewise, shared computational interfaces cancel only when they are the
+same physical face with opposite orientation.  A changed time, radius or
+population creates a joining contribution.  Optional root charts must be
+supplemented by their full spatial complement.  Even a prepared
+factorization $H=UP$ does not identify its discriminant with the physical
+root product: for $N_0$ interior roots,
+\[
+ \prod_iH_z(\tau,z_i)
+ =(-1)^{N_0(N_0-1)/2}\operatorname{disc}(P)\prod_iU(\tau,z_i).
+\]
+The nonzero unit remains part of the physical observable.
+
+\subsection{Common time and a height graph are different constructions}
+
+Along a common complex-time path $\tau=\gamma(s)$, a zero-free spatial wall
+preserves the complete population, and its prepared coefficients remain
+holomorphic through internal collisions.  Moving the wall does not change
+its contour moments while the same complete population remains enclosed.
+This fact does not control the spectrum of a pair matrix on a complex
+slice.  If $R=(I+aL)^{-1}$ and $q=\Tr(I-R)$, then
+\[
+ \frac{dq}{ds}=\Tr\!\left[R(a'L+a\gamma'L_\tau)R\right].
+\]
+A matrix-norm estimate requires a lower singular-value bound for $I+aL$;
+its two derivative terms should remain coupled.  Distinct roots alone do
+not guarantee this resolvent condition.  For example,
+$H=z^2-1-2\tau$ has $q=2\tau/(1+4\tau)$, whose pole at $-1/4$ is not a
+root collision.  The coefficient/forest method elsewhere in this paper
+provides a different scalar denominator test, with its own stated scope.
+
+A height graph instead samples
+$F(z)=H(h(\Re z)+i\sigma,z)$, with real $C^1$ function $h$.  It is generally
+nonholomorphic:
+\begin{equation}
+ F_z=H_z-\tfrac12h'H_{zz},\qquad
+ F_{\bar z}=-\tfrac12h'H_{zz},\qquad
+ \frac{dF}{F}=\frac{H_z}{H}\,dz-h'\frac{H_{zz}}H\,dx.
+ \label{eq:height-graph-corrections}
+\end{equation}
+The resulting winding is a topological degree, rather than an unsigned
+holomorphic zero count.  At a graph zero with $H_z\ne0$, its Jacobian is
+\[
+ J_F=|H_z|^2\Re\!\left(1-h'\frac{H_{zz}}{H_z}\right).
+\]
+Positive orientation therefore needs a separate transversality condition.
+For isolated transverse graph zeros, weighted counting also has the bulk
+correction
+\[
+ \sum_{F(\zeta)=0}\operatorname{ind}_\zeta(F)\zeta^k
+ =\frac1{2\pi i}\oint_{\partial\Omega}z^k\frac{dF}{F}
+ +\frac{k}{\pi}\int_\Omega z^{k-1}\frac{F_{\bar z}}F\,dA,
+ \qquad k\ge1.
+\]
+This follows by Stokes' theorem on the punctured domain; the integrand is
+locally integrable at a transverse zero.  A negative graph $t=-\epsilon(x)$
+also changes the physical cap density to $f+\epsilon'(x)r$.
+Neither correction is optional.  These distinctions and finite graph
+comparison bounds are proved in Investigation Note~08, Sections~6--7.
+
+\subsection{What the comparison has established}
+
+The direct estimator receives the same complete source representation,
+precision, signed correlations, wall data and any acquired factorization as
+the deformed estimator.  A common analytic endpoint identity does not by
+itself make a detour cheaper.  Under a uniform residual allowance $e$, a
+path pays its length times $e$; a longer path can improve that budget only
+if its actual source or conditioning bounds improve enough.  This is a
+scoped comparison, not an exclusion of useful contour deformation.
+
+The finite canonical test uses the original box
+\[
+ [26,46]+i[-2,2],\qquad
+ \tau\in[-10^{-4},10^{-4}]+i[-10^{-4},10^{-4}].
+\]
+An interval certificate supplies $E>1.1178\cdot10^{-13}$ throughout the
+whole box, with no deleted root disks.  Thus $Q_-=0$ and both estimators
+know the exact equality in \eqref{eq:complete-cap-transfer}.  A single
+bounded range-quadrature pilot, using 512 spatial leaves and all the faces
+in \eqref{eq:all-physical-faces}, nevertheless gives only
+\[
+ I_0=2.0247388041\cdot10^{-5}\ \pm1.42\cdot10^{-4},\qquad
+ I_{-\epsilon}-S_\epsilon
+ =2.0247432516\cdot10^{-5}\ \pm1.42\cdot10^{-4}.
+\]
+These are certified enclosing intervals, not accurate midpoint estimates.
+Both lower endpoints are negative.  The raw deformed width is slightly
+larger, approximately $0.000283934$ versus $0.000283522$, and it requires
+additional face evaluations.  The close $\sigma$ faces were subtracted
+algebraically before interval bounds, retaining their factor $2iY$.
+The total side-face interval has radius below $2.05\cdot10^{-7}$;
+spatial range overestimation of the caps dominates the uncertainty.
+Investigation Note~15 and its replay give the complete budgets and scope.
+
+Accordingly this finite experiment pays the source, regularity and full
+boundary-accounting obligations, but demonstrates neither a positive
+complete cap lower bound nor a contour advantage.  It does not justify a
+larger-height campaign.  A further numerical comparison, if undertaken,
+should test higher-order correlated spatial integration on the same
+observable and at a fixed total budget, with the same improvement made
+available to the direct baseline.

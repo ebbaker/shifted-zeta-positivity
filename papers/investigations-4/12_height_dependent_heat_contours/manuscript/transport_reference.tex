@@ -1,0 +1,377 @@
+\section{Complete-source coefficient transport on a fixed wall}
+\label{sec:coefficient-transport}
+
+The root velocity equations introduce inverse internal gaps. Passing to the
+complete prepared polynomial removes those denominators from the transport
+equation. The source information is still required, but it can be acquired on
+one exterior wall. We give the finite theorem with its source cost explicit.
+
+Fix a circle $\Gamma=\{|z-z_0|=R\}$, positively oriented, and a real time
+interval $[t,T]$. Suppose $H$ is holomorphic on a neighborhood of the closed
+spatial disk and the time interval, satisfies
+\begin{equation}\label{eq:heat-fixed-wall}
+ \partial_tH=-\partial_z^2H,
+ \qquad H(u,w)\ne0\quad(u\in[t,T],\ w\in\Gamma),
+\end{equation}
+and has $N$ zeros inside $\Gamma$, counted with multiplicity. Write
+$H=UP$, where $P$ is the complete monic polynomial of those zeros and $U$ is
+holomorphic and nonzero in the disk. The center and radius remain fixed.
+For a polynomial $f$, set
+\[
+ Q_f(w,z)=\frac{f(w)-f(z)}{w-z},\qquad
+ Z_H=\frac{H_{zz}}H,\qquad
+ \mathcal A_Hf=\frac1{2\pi i}\int_\Gamma Z_H(w)Q_f(w,z)\,dw.
+\]
+The divided difference $Q_f$ is a polynomial, including when $w=z$.
+
+\begin{proposition}[Complete-source equation]\label{prop:source-coeff}
+The prepared polynomial satisfies
+\begin{equation}\label{eq:source-coeff}
+ P_t=-\mathcal A_HP=-P_{zz}-2\mathcal T_P(bP_z),
+ \qquad b=U_z/U,
+\end{equation}
+where
+\[
+ \mathcal T_Pg(z)=\frac1{2\pi i}\int_\Gamma
+                   \frac{g(w)}{P(w)}Q_P(w,z)\,dw.
+\]
+These identities remain valid at internal multiple zeros.
+\end{proposition}
+
+\begin{proof}
+The operator $\mathcal T_P$ gives the degree less than $N$ analytic remainder
+modulo $P$; in particular it fixes every polynomial of degree less than $N$
+and annihilates $P$ times a function holomorphic in the disk. These statements
+follow directly from Cauchy's formula and do not require simple roots.
+Since $H_t/H=P_t/P+U_t/U$, multiplying by $Q_P$ and integrating gives
+$P_t=\int_\Gamma(H_t/H)Q_P/(2\pi i)$. The heat equation proves the first
+identity. Finally
+$H_{zz}/U=P_{zz}+2bP_z+(U_{zz}/U)P$, and analytic remainder gives the second.
+\end{proof}
+
+Put $\zeta=z-z_0$, and let $S$ be the plain coefficient shift:
+$S\zeta^j=\zeta^{j-1}$ for $j\ge1$, and $S1=0$. It is not
+$d/dz$. Define the complete source moments
+\[
+ M_k(t)=\frac1{2\pi i}\int_\Gamma(w-z_0)^k Z_H(t,w)\,dw.
+\]
+Expanding a divided monomial gives, on polynomials of degree at most $n$,
+\begin{equation}\label{eq:source-shift}
+ \mathcal A_H=\sum_{j=1}^{n}M_{j-1}S^j.
+\end{equation}
+Thus all these operators commute, including operators constructed from
+different source fields. They lower degree and are nilpotent.
+
+\begin{theorem}[Finite coefficient propagator]\label{thm:nilpotent-propagator}
+Let $m_j(t,s)=\int_t^sM_{j-1}(u)\,du$. The backward propagator of
+$E'=-\mathcal A_HE$ on degree at most $n$ is
+\begin{equation}\label{eq:nilpotent-propagator}
+ \mathcal U_H(t,s)=\exp\!\left(\sum_{j=1}^n m_j(t,s)S^j\right).
+\end{equation}
+The exponential terminates after degree $n$. For the fixed coefficient norm
+$\|f\|_R=\sum_j|f_j|R^j$, its exact induced norm is
+\begin{equation}\label{eq:propagator-norm}
+ B_n(t,s)=\sum_{k=0}^n
+ \left|[v^k]\exp\!\left(\sum_{j=1}^n\frac{m_j(t,s)}{R^j}v^j\right)\right|.
+\end{equation}
+If $V=\int_t^s\sup_\Gamma|Z_H(u,w)|\,du$, then
+\begin{equation}\label{eq:propagator-majorant}
+ B_n(t,s)\le\sum_{\ell=0}^n\binom n\ell\frac{V^\ell}{\ell!}.
+\end{equation}
+\end{theorem}
+
+\begin{proof}
+Equation~\eqref{eq:source-shift} makes the time generators commuting
+polynomials in $S$, so differentiating the finite exponential proves
+\eqref{eq:nilpotent-propagator}. If $\mathcal U=\sum b_kS^k$, the weighted
+column sum of its $j$th column is $\sum_{k=0}^j|b_k|R^{-k}$, maximal at
+$j=n$. This proves the exact norm formula. The wall estimate gives
+$|m_j|/R^j\le V$. Majorize the generating series by
+$\exp(Vv/(1-v))$ through degree $n$. Summing those coefficients and using
+$\sum_{k=\ell}^n\binom{k-1}{\ell-1}=\binom n\ell$ proves
+\eqref{eq:propagator-majorant}.
+\end{proof}
+
+The estimate is polynomial in acquired integrated source sizes at fixed
+degree. It is not asserted to be polynomial uniformly in height, population
+size, or a late-time parameter. For a difference of monic degree-$N$
+polynomials, use $n=N-1$ in the error propagator, while propagating the
+polynomial itself uses $n=N$.
+
+\subsection{Reference errors and what must be acquired}
+
+Let $G$ be a reference holomorphic field with the same zero count and with
+$G(u,w)
+e0$ for every $u\in[t,T]$ and $w\in\Gamma$, with complete monic prepared polynomial $P_*$. It need not be an exact
+heat solution. Define
+\[
+ d_*=\partial_tP_*+\mathcal A_GP_*,\qquad E=P-P_*,\qquad
+ r=(\mathcal A_H-\mathcal A_G)P_*+d_*.
+\]
+Then $E'=-\mathcal A_HE-r$, and hence
+\begin{equation}\label{eq:paid-duhamel}
+ E(t)=\mathcal U_H(t,T)E(T)+\int_t^T\mathcal U_H(t,s)r(s)\,ds.
+\end{equation}
+The complete reference defect is also a wall quantity:
+\[
+ d_*(z)=\frac1{2\pi i}\int_\Gamma
+                   \frac{G_t+G_{zz}}G(w)Q_{P_*}(w,z)\,dw.
+\]
+If $\eta_Z\ge\sup_\Gamma|Z_H-Z_G|$ and
+$W_R(P_*)=\sum_jj|p_{*,j}|R^j$, a closed finite error estimate is
+\begin{equation}\label{eq:paid-error}
+ \|E(t)\|_R\le B_{N-1}(t,T)\|E(T)\|_R+
+ \int_t^TB_{N-1}(t,s)
+       \bigl(\eta_Z(s)W_R(P_*(s))+\|d_*(s)\|_R\bigr)\,ds.
+\end{equation}
+A directly evaluated correlated residual can replace this absolute majorant.
+Its size must be acquired independently; an unknown coefficient difference
+inside a forcing bound is not free data.
+
+For example, acquired field and second-derivative errors $e_0,e_2$, reference
+wall floor $m_*>e_0$, and reference second-derivative upper bound $M_{2,*}$ give
+\begin{equation}\label{eq:source-quotient-budget}
+ \eta_Z\le\frac{e_2}{m_*-e_0}
+              +\frac{M_{2,*}e_0}{m_*(m_*-e_0)}.
+\end{equation}
+An analytic field-error bound on a spatial collar of width $d$ gives
+$e_2\le2e_{\rm collar}/d^2$. This Cauchy step concerns the field error,
+not a logarithmic ratio continued through different interior zero sets.
+
+For exact heat fields the integrated moments have the endpoint representation
+\begin{equation}\label{eq:source-endpoint-log}
+ m_j(t,T)=-\frac1{2\pi i}\int_\Gamma(w-z_0)^{j-1}
+              \log\frac{H(T,w)}{H(t,w)}\,dw,
+\end{equation}
+using the logarithm lifted continuously from time $t$. Thus equally informed
+endpoint wall data already determine the homogeneous propagator. The
+commutation theorem does not confer an intrinsic advantage on a curved path;
+a gain would have to come from improved source estimates or conditioning along
+that path, with its entire error paid.
+
+\begin{remark}
+The fixed-source generator is different from free polynomial heat evolution
+on arbitrary error vectors. For $H=z^3-6tz$, one finds
+$\mathcal A_H=6S^2$ on degree at most three, while
+$\partial_z^2(z^2)=2$. Comparing two independently evolving polynomial heat
+fields includes the source-quotient difference in
+\eqref{eq:paid-duhamel}. Conversely, suppressing the external unit in
+\eqref{eq:source-coeff} changes the complete problem. Note~12 contains the
+free-heat comparison, complex-path formulation and collision controls.
+\end{remark}
+
+\section{A complete reference at microscopic real heat times}
+\label{sec:microscopic-reference}
+
+We now specify a theta source input rather than assume a small wall error.
+Throughout,
+\[
+ H_t(z)=\int_0^\infty e^{tu^2}\Phi(u)\cos(zu)\,du,
+ \qquad H_0(z)=\tfrac18\xi(\tfrac12+\tfrac{iz}2).
+\]
+The effective approximation of Polymath~\cite{polymath} applies for real
+$0<t\le1/2$, $x\ge200$, $0\le y\le1$. In this section $z=x+iy$ and
+\[
+ N=\left\lfloor\sqrt{x/(4\pi)+t/16}\right\rfloor.
+\]
+We work on a chart where $N$ stays fixed. Changes of $N$ require explicit
+patching; a jumping truncation is not a holomorphic reference.
+
+Define, with principal logarithms away from their cuts,
+\[
+ M_0(s)=\frac{s(s-1)}{16}\pi^{-s/2}\sqrt{2\pi}
+ \exp\!\left[(s/2-1/2)\operatorname{Log}(s/2)-s/2\right],
+\quad
+ \alpha(s)=\frac1{2s}+\frac1{s-1}+\frac12\operatorname{Log}\frac{s}{2\pi}.
+\]
+Here $\alpha=M_0'/M_0$. Put $s=(1-iz)/2$ and
+\begin{equation}\label{eq:complete-finite-reference}
+ G_{t,N}(z)=\sum_{\sigma\in\{s,1-s\}}\sum_{n=1}^N
+ M_0(\sigma)n^{-\sigma}
+             \exp\!\left[\frac t4(\alpha(\sigma)-\log n)^2\right],
+ \qquad B_t(z)=M_0(s)e^{t\alpha(s)^2/4}.
+\end{equation}
+This rewrites the complete two-sum reference without complex conjugates.
+In particular $G$ is locally holomorphic in $t,z$, although it is not an exact
+heat solution.
+
+\subsection{Explicit field and heat-defect budgets}
+
+For completeness, a finite coarsening of the imported error bounds is as
+follows. Set $X=x/(4\pi)$, $L=\log X$, and
+\[
+ p=\operatorname{Re}(s+t\alpha(s)/2),\quad
+ \rho=e^{0.02y}X^{-y/2},\quad \nu=\frac{ty}{2(x-6)},
+\]
+\[
+ S_0=\sum_{n=1}^N(1+\rho N^\nu n^y)e^{t\log^2n/4}n^{-p},
+ \quad b_0=\frac{t^2L^2/16+0.626}{x-6.66},\quad
+ E_{AB}=S_0(e^{b_0}-1).
+\]
+The exact value of $p$ avoids relying on slightly different printed
+lower-bound corrections for its real part. Theorem~1.3 of
+\cite{polymath} gives $|H_t-G_{t,N}|/|B_t|\le E_{AB}+E_{C,0}$, with
+\[
+ E_{C,0}=X^{-(1+y)/4}
+ \exp\!\left[-\frac{tL^2}{16}
+ +\frac{1.24(3^y+3^{-y})}{N-0.125}
+ +\frac{3|L+i\pi/2|+10.44}{x-12}\right].
+\]
+For $tL^2\le K$ and $y=0$, $E_{AB}=O_K(X^{-3/4})$, whereas
+$E_{C,0}=O_K(X^{-1/4})$. Indeed the retained weights have modulus at most
+a constant times $n^{-1/2}$, and their relative error bracket is $O_K(1/x)$.
+These are usable absolute errors even when $tL^2\to0$; the late-clock
+assumption $x\ge e^{C/t}$ is not needed. That assumption is needed for the
+much shorter two-carrier asymptotic, whose omitted absolute sum is not small
+on the microscopic clock.
+
+For a term $g=M_0(\sigma)n^{-\sigma}e^{t\beta^2/4}$, with
+$\beta=\alpha(\sigma)-\log n$, direct differentiation gives
+\begin{equation}\label{eq:finite-reference-defect}
+ (\partial_t+\partial_z^2)g=-\frac g4
+ \left[\alpha'+t\beta^2\alpha'
+ +\frac t2\bigl((\alpha')^2+\beta\alpha''\bigr)
+ +\frac{t^2}{4}\beta^2(\alpha')^2\right].
+\end{equation}
+Here both $\sigma=s$ and $\sigma=1-s$ satisfy
+$\partial_z^2=-\partial_\sigma^2/4$. Taking absolute values in this finite
+sum is an explicit defect budget. Since $\beta=O(\log x)$,
+$\alpha'=O(x^{-1})$, $\alpha''=O(x^{-2})$, it proves
+\begin{equation}\label{eq:uncorrected-defect-order}
+ |G_t+G_{zz}|/|B_t|=O_K(X^{-3/4})\qquad(y=0,\ tL^2\le K).
+\end{equation}
+No source quotient has been divided by an unacquired wall floor in this step.
+
+\subsection{An analytic continuation of the explicit correction}
+
+Corollary~6.4 and Proposition~6.6(vi) of \cite{polymath} improve the field
+remainder by retaining a correction $C_t$. Define
+\[
+ v_0=x/2+\pi t/8,\quad p_N(v)=1+2N-\sqrt{2v/\pi},
+\]
+\[
+ U(v)=\exp\!\left[-i\left(\frac v2\log\frac v{2\pi}-\frac v2-\frac\pi8\right)\right],
+ \quad
+ C_0(p)=\frac{e^{\pi i(p^2/2+3/8)}-i\sqrt2\cos(\pi p/2)}{2\cos(\pi p)}.
+\]
+The singularities at $p=\pm1/2$ are removable, with value $(1-i)/4$.
+The displayed source correction is
+\[
+ C_t(x+iy)=2(-1)^Ne^{-\pi iy/8+t\pi^2/64}
+       \operatorname{Re}\{M_0(iv_0)C_0(p_N(v_0))U(v_0)e^{\pi i/8}\}.
+\]
+It gives
+\begin{equation}\label{eq:corrected-field-remainder}
+ \frac{|H_t-(G_{t,N}-C_t)|}{|B_t|}\le E_{AB}+E_C,
+\end{equation}
+where
+\[
+ E_C=X^{-(1+y)/4}
+ e^{-tL^2/16+(3|L+i\pi/2|+3.58)/(x-8.52)}
+ \left[\frac{1.24(3^y+3^{-y})}{N-0.125}+\frac{6.92}{x-12}\right].
+\]
+The extra $1/N$ makes this remainder $O_K(X^{-3/4})$ on the real axis.
+However, the displayed $C_t$ is generally not holomorphic in $z$; its real-part
+operation cannot be differentiated as an analytic reference.
+
+There is an explicit analytic replacement. Let
+$C_0^\#(p)=\overline{C_0(\bar p)}$,
+$C_R=(C_0+C_0^\#)/2$, $C_I=(C_0-C_0^\#)/(2i)$, and
+\[
+ V_N(v)=v^{3/2}C_R(p_N(v))-v^{1/2}C_I(p_N(v)),\qquad
+ k_N=-(-1)^N\frac{\sqrt\pi}{4}.
+\]
+The functions $C_R,C_I$ are holomorphic continuations of the real and imaginary
+parts on the real axis, not real-part operations on complex arguments. Set
+\begin{equation}\label{eq:analytic-correction}
+ \widetilde C_{t,N}(z)=k_Ne^{-\pi z/8-\pi^2t/64}
+                      V_N(z/2+\pi t/8),\qquad
+ \widehat G=G-\widetilde C.
+\end{equation}
+Use principal square roots on $\operatorname{Re}v>0$.
+
+\begin{proposition}[Corrected analytic reference]\label{prop:corrected-reference}
+The correction \eqref{eq:analytic-correction} agrees with $C_t$ at $y=0$.
+With
+\[
+ Q(t,z)=\frac{\sqrt\pi}{4}\frac{e^{-\pi x/8-\pi^2t/64}}{|B_t(z)|},
+\]
+it satisfies the explicit bounds
+\begin{align}
+ \frac{|H_t-\widehat G|}{|B_t|}
+ &\le E_{AB}+E_C+Q(t,z)\frac{|y|}{2}
+       \sup_{0\le\theta\le1}|V_N'(v_0+i\theta y/2)|,
+                                                   \label{eq:analytic-correction-error}\\
+ (\partial_t+\partial_z^2)\widetilde C
+ &=\frac{k_N}{4}e^{-\pi z/8-\pi^2t/64}
+                         V_N''(z/2+\pi t/8).       \label{eq:analytic-correction-defect}
+\end{align}
+For fixed $K$ and $y_0<1$, its normalized field allowance is
+$O_{K,y_0}(X^{-(3+y)/4})$ uniformly for $0\le y\le y_0$ and
+$0<tL^2\le K$. Its correction defect is
+$O_{K,y_0}(X^{-(5+y)/4})$. In particular both the field error and total heat
+defect of $\widehat G$ are $O_K(X^{-3/4})$ at $y=0$.
+\end{proposition}
+
+\begin{proof}
+For positive real $v$, substituting
+$\operatorname{Log}(iv/2)=\log(v/2)+i\pi/2$ gives the exact cancellation
+\[
+ M_0(iv)U(v)e^{\pi i/8}
+       =-\frac{\sqrt\pi}{8}\sqrt v\,(v+i)e^{-\pi v/4}.
+\]
+Consequently
+$C_t(x+iy)=k_Ne^{-\pi(x+iy)/8-\pi^2t/64}V_N(v_0)$.
+The fundamental theorem of calculus from $v_0$ to $v_0+iy/2$ proves
+\eqref{eq:analytic-correction-error}. In the heat defect, the coefficients of
+$V_N$ and $V_N'$ cancel because the argument derivatives are $1/2$ and
+$\pi/8$, while the exponential logarithmic derivatives are $-\pi/8$ and
+$-\pi^2/64$. This proves \eqref{eq:analytic-correction-defect}.
+
+For completeness the derivative sizes have explicit, zero-independent
+constants. Along the comparison segment,
+\[
+ |p_N(v)-p_N(v_0)|\le\frac{|y|}{2\sqrt{2\pi v_0}}<\frac18,
+\]
+so $|p_N(v)|<9/8$. On this disk both $C_R^{(j)}$ and $C_I^{(j)}$ are bounded
+by $K_j=j!8^jM_*$ for $j=0,1,2$, where
+\[
+ M_*=\frac{e^{25\pi/32}+\sqrt2\cosh(5\pi/8)}{2\sinh(\pi/8)}.
+\]
+Indeed $|\cos\pi p|\ge\sinh(\pi/8)$ on $|p|=5/4$: split into
+$|\operatorname{Im}p|\ge1/8$ and its complement, where
+$1<|\operatorname{Re}p|\le5/4$. Bound the numerator on that circle, remove
+$\pm1/2$, and apply Cauchy's estimate with radius $1/8$.
+Since $p_N'=-1/\sqrt{2\pi v}$ and $p_N''=-p_N'/(2v)$, differentiation gives
+$V_N'=O(|v|)$ and $V_N''=O(|v|^{1/2})$ with these explicit constants.
+Finally $Q=O_{K,y_0}(X^{-(7+y)/4})$ follows directly from the displayed
+Stirling factor. Combine these estimates with
+\eqref{eq:finite-reference-defect}. Note~14 records the full derivative
+formulas and convenient finite majorants.
+\end{proof}
+
+\subsection{The remaining wall and time gates}
+
+These are absolute source allowances. To use the coefficient theorem, acquire
+a wall floor $m_f>e_0$ for $f=\widehat G/B$, where $e_0$ bounds the
+right-hand side of \eqref{eq:analytic-correction-error}. Then
+$|H/\widehat G-1|\le e_0/m_f$. For a common analytic normalization write
+$e=H/B-f$ and $\lambda=B'/B$. The complete quotient cancellation is
+\[
+ \frac{H_{zz}}H-\frac{\widehat G_{zz}}{\widehat G}
+ =\frac{fe''-ef''+2\lambda(fe'-ef')}{f(f+e)}.
+\]
+Thus an acquired spatial collar supplies derivative errors without introducing
+internal root gaps. The local reference derivative ratios still require
+bounds. A collar crossing the real axis must convert the reflected error to
+one analytic carrier before applying Cauchy's estimate.
+
+All imported field errors here concern real $t$. The explicit references
+extend analytically in complex time on their charts, but that does not extend
+the error for $H$ with the same bound. A complex-time route needs a separately
+paid source remainder. Finally a fixed-$N$ chart is not the same as a fixed
+number of roots in a selected block: a prepared population count, common wall,
+and the forest denominator remain separate acquisition obligations. The finite
+certificate in Note~13 pays those obligations in its original bounded box.
+No estimate in this section supplies the missing unbounded-height small-gap
+upper bound or a global simplicity conclusion.

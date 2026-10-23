@@ -12,6 +12,8 @@ The [dated progress snapshot](../research-progress/02_PAIR_SPECTRUM_AND_CURVED_C
 
 Read the [result index][results], [local heat geometry][geometry], [theta identities][theta], [control register][controls], and [avoid index][avoid], particularly [target classification][a01], [coupled estimates][a12], [numerics before structure][a10], and [scoped conclusions][a07].
 
+**Execution update, 23 October 2026, gpt-6-astra, effort ultra:** [Notes 07–12](../notes/README.md) now prove finite source-tail, wall/graph and inverse-error estimates, improve the finite multiplicity consumer to M_0≤4q, and give explicit gap/filter comparisons. Note 11 adds a coefficient-to-filter enclosure without internal root isolation, with explicit double/higher-collision and heat-scale conditioning limits. Note 12 adds an exact finite backward coefficient propagator from complete source wall moments, retaining exterior force and reference defects without an internal gap floor. The published high-height clock regime saturates q/N at one; scalar separate-error use of fixed-rank late data also fails its paid inverse budget. These are scoped diagnoses. The microscopic theta upper estimate, high-height canonical wall acquisition and useful correlated backward residual remain open; the subsequent finite-box acquisition below pays one bounded example. See the [updated snapshot](../research-progress/02_PAIR_SPECTRUM_AND_CURVED_CONTOUR_PROGRESS_20261023.md) and [round review](../reviews/04_ANALYTICAL_RESEARCH_ROUND_REVIEW_20261023.md). The work packages below retain their full acceptance conditions.
+
 ## The field and the observable
 
 Use the unchanged canonical source and normalization
@@ -71,11 +73,11 @@ For a complete endpoint population of N labels and its positive-time descendants
 Under RH, [Note 06][n6] uses the complete adjacent-gap bound g²<=8t and a matching comparison to prove that every multiple endpoint contributes at least one eigenvalue of L(t) at least 1/(4t). If M_0 counts all labels at multiple endpoint sites, then
 
 \[
- M_0\le6q(t).
+ M_0\le4q(t).
  \tag{4}
 \]
 
-Two distinct analytical targets follow:
+The constant 4 follows from the pair-plus-triple comparison in [Note 10](../notes/10_EXACT_COLLISION_SPECTRUM_AND_GLOBAL_REDUCTION_20261023.md), improving Note 06’s earlier 6. Two distinct analytical targets follow:
 
 - **Every-zero simplicity in a finite complete population:** prove q(t)<1/2 at a source-prescribed positive time. Any multiple endpoint would force q(t)>=1/2. An all-height theorem needs complete coverage and uniform control, not a finite collection of examples.
 - **Almost-all simplicity:** prove q(t_h)=o(N(h)) for prescribed times and populations covering all but o(N(h)) endpoint labels. This tolerates a sparse exceptional set and is the first global milestone to pursue if the stronger threshold is inaccessible.
@@ -215,7 +217,7 @@ Apply the [registered controls][controls] to the premise actually being used. Th
 
 Future notes should contain proofs, stated domains and source-derived constants or asymptotic errors. Small exact computations may verify factors, signs and matrix identities. Targeted numerical experiments may discriminate between two precise analytical conjectures or locate a sharp regime, and interval numerics may later support a finite theorem. Broad heat/height sweeps, fitted spectral laws and large certification campaigns are not the default next step. No numerical observation upgrades an assumed wall, gap or RH premise.
 
-The immediate next note is **HDC-07: complete source control of the filtered pair spectrum**. Its endpoint is a usable analytical force/residual bound, with control examples and its precise dependence on RH. HDC-08 may proceed in parallel on geometry. The backward and global tasks use those results, with separate acceptance criteria in the [progress register][progress].
+The immediate remaining source task is **HDC-07: control of the retained local filtered residual**, beyond Note 07’s paid distant-tail estimate. Its endpoint is a usable analytical force/residual bound, with control examples and its precise dependence on RH. HDC-08 may proceed in parallel on geometry. The backward and global tasks use those results, with separate acceptance criteria in the [progress register][progress].
 
 ## Reading path
 
@@ -244,3 +246,9 @@ For primary literature, [Polymath][poly], Proposition 3.1 and its stated asympto
 [review]: ../reviews/03_ANALYTICAL_SPECTRAL_CONTOUR_PROGRAM_REVIEW_20261023.md
 [poly]: https://arxiv.org/html/1904.12438
 [rt]: https://arxiv.org/html/1801.05914
+
+## Manuscript checkpoint and revised next step
+
+23 October 2026, **gpt-6-astra, ultra**, prepared for Edward Baker with substantial LLM assistance. [Note 13](../notes/13_COMPLETE_THETA_WALL_AND_COEFFICIENT_CERTIFICATE_20261023.md) pays the original finite canonical wall, complete count, discriminant and full first-jet floor. [Note 14](../notes/14_MICROSCOPIC_COMPLETE_REFERENCE_AND_HEAT_DEFECT_20261023.md) derives a holomorphic corrected microscopic reference with explicit field and heat-defect budgets. [Note 15](../notes/15_COMPLETE_PHYSICAL_CAP_COMPARISON_20261023.md) encloses every original cap face: both lower endpoints are negative and no deformation advantage appears at the declared range-quadrature budget. The actual finite source gate is therefore no longer merely assumed, while the global source estimate remains unpaid.
+
+The author requested a synthesis and a critical pause in new experiments. The [working manuscript](../manuscript/main.tex) and [next-step assessment](../notes/16_RESEARCH_RESET_AND_NEXT_STEPS_20261023.md) implement that request. The recommended next diagnostic is one prescribed high-height corrected-reference wall with a full error/conditioning ledger and a matched direct calculation. Its success would validate acquisition, not establish a limiting simplicity law. The status ledger remains authoritative.

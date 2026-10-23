@@ -1,88 +1,66 @@
 # Pair spectrum and curved contour research progress
 
-23 October 2026, America/New_York. Prepared for **Edward Baker** with substantial LLM assistance. Actual recorded model **gpt-6-astra (Codex)**, reasoning effort **ultra**. Mathematical status checked by a separate same-model agent; no specialist review.
+23 October 2026, America/New_York. Prepared for **Edward Baker** with substantial LLM assistance. Actual recorded model **gpt-6-astra (Codex)**, reasoning effort **ultra**. Separate same-model mathematical audits; no specialist review.
 
-**Current position:** the analytical program, exact evolution identities and finite simplicity-transfer mechanisms are recorded. The next substantive task is to obtain a useful bound from the complete theta source. No new theta spectral upper bound, improved simplicity proportion or all-simple theorem has been established.
+**Current position:** the complete source-to-coefficient-to-filter method now has an actual canonical theta certificate on the original finite complex-time box. The complete population is two, its discriminant stays nonzero, and the full first jet has a quantitative floor. Direct terminal evaluation gives a tighter filter enclosure. The microscopic corrected reference now has explicitly paid analytic continuation and field/heat-defect allowances of order x^(-3/4) on the real clock. The complete 512-cell cap comparison encloses every face but gives negative lower endpoints for both estimators; no deformation advantage is demonstrated. The global microscopic theta upper estimate and high-height wall margins remain open. At the author's request, results are synthesized in a [working manuscript](../manuscript/main.tex), with a separate [research reset and next-step assessment](../notes/16_RESEARCH_RESET_AND_NEXT_STEPS_20261023.md). No new global simplicity proportion or RH theorem is claimed.
 
-This is a dated progress snapshot for the [new analytical overview][overview]. The [existing progress register][ledger] remains the sole mutable owner of HDC task statuses. This note records what is ready to use, what remains unproved and where the next analytical note should begin; it does not create a second task ledger.
+This is the maintained outcome snapshot for [Overview 02](../research-overview/02_PAIR_SPECTRUM_CURVED_CONTOURS_AND_CONDITIONAL_SIMPLICITY_PROGRAM_20261023.md). The [existing progress register](01_HEIGHT_DEPENDENT_HEAT_CONTOURS_PROGRESS_20261023.md) remains the sole owner of HDC task statuses. The primary goal remains RH implying simple zeros, with RH implying almost-all simplicity as the first global intermediate target.
 
-## Objective and current priorities
+## Results of this research round
 
-The primary application is **RH implies simple zeros**. The intermediate global milestone is **RH implies almost all zeros simple**. Curved-contour transport and backward use of long-time data are methods to investigate toward those targets. An eventual application to RH remains separate, with the RH-dependent inputs explicitly identified.
-
-HDC-07, complete source control of the filtered pair spectrum, is next. HDC-08 may develop curved-contour geometry in parallel. Backward propagation, growing-height upper estimates and conditional theorem assembly remain planned or dependent on those estimates. Numerics support analytical proofs and sharp controls; a broad numerical campaign is not the next task.
-
-## Foundations already recorded
-
-| Foundation | Established scope | Main source |
+| Result | Established scope | Source |
 | --- | --- | --- |
-| Complete finite physical-cap geometry and expression | HDC-01 is a specification; HDC-02 is a conditional exact expression retaining the complement, analytic factor and connecting faces. | [Notes 02–03][notes] and [Review 01][review1] |
-| One-sided use of pair statistics | A truncated positive real pair lower bound can contribute to a cap lower bound. It does not pay the transverse or complementary terms. | [Note 04][n4] |
-| Earlier-time density-one transfer | For a complete isolated population with real endpoint roots, M_0<=3 N_nr(a)/2. A near-zero upper bound for the complete projected-pair measure can therefore imply density-one simplicity. | [Note 05][n5] |
-| Pair-spectrum simplicity transfer | Under RH and complete tracked endpoint populations, the matching argument gives M_0<=6q(t), with q(t)=Tr[4tL(I+4tL)^−1]. | [Note 06][n6] and [Review 02][review2] |
-| Source, contour and backward identities | The complete force can be represented on a zero-free spatial wall; filtered evolution retains L+tL'; common-time moving-wall transport and the signed backward error identity are explicit. | [Overview 02][overview] and [Review 03][review3] |
+| Complete distant-force error | For a finite real canonical population under RH, the filtered derivative tail has explicit error O(N C_T log R_c/R_c), without an internal-gap or 1/t loss. Nearby coupled force remains unpaid. | [Note 07](../notes/07_COMPLETE_SOURCE_FORCE_AND_FILTER_RESIDUAL_20261023.md) |
+| Relative wall-value acquisition interface | A strict C0 relative wall error controls exterior force, power sums, coefficients and discriminant without differentiating the error or presupposing internal gaps. Complete source truncation errors are explicit; the high-height wall floor remains unacquired; Note 13 now pays one frozen finite box. | Notes 07 and [08](../notes/08_CURVED_CONTOUR_TRANSPORT_AND_HEIGHT_GRAPH_20261023.md) |
+| Curved and height-graph transport | Complete common-time transport, independent resolvent costs, graph slope/orientation/area corrections and a contraction error bound. The physical cap retains its analytic factor, complement and joins. | Note 08 |
+| Filter enclosure directly from coefficients | D=Delta det(I+aL) is a polynomial in complete prepared coefficients, q=a D_a/D, and the coupled residual gives an explicit error test without internal root disks. Stable at separated doubles for fixed a>0; higher collisions and heat-scale source precision are treated explicitly. | [Note 11](../notes/11_FOREST_POLYNOMIAL_AND_GAP_FREE_FILTER_ENCLOSURE_20261023.md) |
+| Backward finite theorem | Matched-reference Euclidean and max-norm bounds, complete source residual, reference defect, scalar signed gap bound and sharp terminal precision controls. | [Note 09](../notes/09_BACKWARD_FILTER_TRANSPORT_AND_TERMINAL_PRECISION_20261023.md) |
+| Complete-source coefficient transport | The prepared-polynomial equation uses only a complete field wall quotient; its commuting nilpotent coefficient operators have an exact finite propagator and explicit error bounds through internal collisions. All integrated wall moments, reference defects and source floors remain paid inputs. | [Note 12](../notes/12_COUPLED_COEFFICIENT_BACKWARD_TRANSPORT_20261023.md) and its wall-budget appendix |
+| Scoped backward diagnostic | For actual fixed theta ranks at large heat, log A~T(log T)²/(2pi²). Existing algebraic saddle allowances do not close the scalar separate-error budget. Correlated transport is not excluded. | Note 09 |
+| Sharper finite simplicity consumer | M_0≤4q at every covered positive time under the complete RH-dependent adjacent-gap law. Constant 4 is sharp; the all-simple threshold stays q<1/2. | [Note 10](../notes/10_EXACT_COLLISION_SPECTRUM_AND_GLOBAL_REDUCTION_20261023.md) |
+| Microscopic source target identified quantitatively | q/N tends to zero exactly when adjacent gaps below every fixed multiple of sqrt(t) have vanishing normalized count along the declared slices. Explicit two-sided inequalities and coverage losses are proved. This is an interface, not an acquired theta estimate. | Note 10 |
+| Direct high-height clock route screened | In the currently published complete high-height clock regime, q/N tends to one. That regime cannot directly establish q=o(N) for the unmodified filter. The finer source formula and correlated backward routes remain open. | Note 10, using [Polymath, Section 9](https://arxiv.org/html/1904.12438) |
+| Actual complete theta coefficient certificate | Original Ω=[26,46]+i[-2,2], full complex time square with half-width 10^-4: wall floor >4.94e-7, complete count 2, positive-real-part discriminant, q(10^-4)<4.2176e-6. Whole-box first-jet squared norm >1.1178e-13. No root isolation premise; direct terminal estimate tighter. | [Note 13](../notes/13_COMPLETE_THETA_WALL_AND_COEFFICIENT_CERTIFICATE_20261023.md) |
+| Microscopic corrected reference | Full finite-sum source, explicit heat defect, analytic Riemann–Siegel correction and paid off-axis mismatch. Field and total defect allowances O(x^(-3/4)) at y=0, t log²x=O(1). Whole-wall margin and complex-time source error remain open. | [Note 14](../notes/14_MICROSCOPIC_COMPLETE_REFERENCE_AND_HEAT_DEFECT_20261023.md) |
+| Complete physical-cap comparison | 512 spatial leaves, every original face and complement included. Direct/deformed widths about 0.000283522/0.000283934; both lower endpoints negative. This bounded range-quadrature implementation shows no gain; spatial range error dominates. | [Note 15](../notes/15_COMPLETE_PHYSICAL_CAP_COMPARISON_20261023.md) |
 
-These are identities and conditional transfers with their stated domains. They do not supply the missing theta upper estimate. The earlier fixed-band physical-cap acquisition remains open as a parallel branch, with no demonstrated theta comparison advantage.
+The existing physical-cap specification, full expression and earlier-time projected-pair transfer in Notes 02–06 remain valid within their stated contracts. The earlier spectral constant 6 is superseded by 4; its proof remains in the historical note.
 
-## The quantitative distinction between the two simplicity targets
+## Precise remaining estimate
 
-For a complete finite endpoint population and its positive-time descendants, put
-
-\[
- R(t)=(I+4tL(t))^{-1},\qquad
- q(t)=\operatorname{Tr}(I-R(t)).
-\]
-
-Under RH, a multiple endpoint forces q(t)>=1/2. Thus an independently proved **q(t)<1/2** excludes all multiple endpoints in that population. Complete all-height coverage is still needed for every-zero simplicity.
-
-The weaker bound **q(t_h)=o(N(h))** gives almost-all simplicity through M_0<=6q. It permits a sparse exceptional set. These thresholds must not be interchanged, and the time/height scale must come from source information rather than inspection of unknown endpoint gaps.
-
-The collision singularity is understood: L itself diverges, while tL and bounded filters retain a finite nonzero signature. Regularizing the observable is useful only if it preserves that signature. Neither differentiating log Delta nor moving around a complex collision removes it.
-
-## What remains open
-
-The central missing result is a useful analytical upper bound for q, its large-eigenvalue count or the earlier projected-pair statistic, derived from the complete canonical source. Available identities identify the quantity to estimate; they do not establish a favorable sign or error budget.
-
-Curved-contour wall and resolvent bounds also remain unpaid. A common complex-time path, a moving spatial wall and a height-dependent time graph are distinct geometries. An event-free contour need not be free of poles of the chosen resolvent. A proof must retain the relevant population, wall, slope, interpolation and invertibility conditions.
-
-Backward use of late-time data needs a stability and precision theorem. Leading long-time asymptotics can agree for simple and multiple endpoint models. The retained terminal information and the complete integrated residual must distinguish those cases, with explicit backward error and growing-rank dependence.
-
-The required global coverage, uniform height bounds and any new simplicity conclusion remain open. An RH-free application must establish endpoint reality independently before using the positive-spectrum argument. RH is not a source of negative-time reality or complex-time positivity.
-
-## The next analytical note
-
-HDC-07 should begin with one declared common-time population and spatial domain, using the complete H and its source. It should carry the exterior force through
+For a complete tracked population put R=(I+4tL)⁻¹ and q=Tr(I−R). Let y_i=nu x_i, s=4t nu², and let B(delta) be the number of adjacent y-gaps below delta divided by the population size. Note 10 proves
 
 \[
- q'=4\operatorname{Tr}\bigl[R^2(L+tL')\bigr]
+\frac qN\le2B(\delta)+\frac{\pi^2s}{3\delta^2},
+\qquad B(a\sqrt s)\le(a^2+2)\frac qN.
 \]
 
-and its edge-weight representation, then use the wall formula for the divided differences of partial_z log U. This avoids inserting an unproved internal gap floor while keeping the wall floor and complete source errors explicit.
+The missing step is an **independent complete-theta upper estimate** at source-prescribed times. A mean density, a generic heat-root equation, source positivity, or the preceding equivalence does not supply it. The complete source distinguishes theta, but identifying its coefficients does not prove the needed signed inequality.
 
-The deliverable is a **source-derived force or residual inequality** with its time, height and error dependence. It must identify where RH enters, retain the cancellation between scale differentiation and root motion, and compare the result with the absolute fallback estimate. Repeating the exact evolution equations does not complete the task. A precisely scoped explanation of why the selected information cannot improve the fallback is an acceptable diagnostic; it does not exclude other source estimates.
+For every-zero simplicity, the unnormalized threshold q<1/2 must hold on complete covering blocks. For density one, q=o(N) and o(N) omitted endpoint labels suffice through M_0≤4q. These conclusions remain different. The sharper finite constant alone does not improve a known simplicity proportion.
 
-Use the quadratic, Hermite, simple-endpoint quadratic and sine controls already specified in the overview. Small exact or numerical checks may support factors, signs and constants after the analytical claim is stated. Keep the [result summaries][results] and [patterns to avoid][avoid] in view, especially [target reformulations][a01], [premature numerics][a10] and [loss of coupled cancellations][a12].
+The paid distant-force tail isolates the remaining local work. A relative wall approach at growing height must acquire its actual complete-source wall floor and residual; one finite low-height box is now paid. A backward approach must control the **joint amplified** source/reference error; moving farther into the currently available late regime does not improve that budget by itself. A curved path needs a demonstrated source or conditioning advantage over the equally informed direct wall estimate. The completed finite comparisons do not show that advantage.
 
-## Chat history verification
+[Note 11](../notes/11_FOREST_POLYNOMIAL_AND_GAP_FREE_FILTER_ENCLOSURE_20261023.md) now provides a direct finite acquisition target: from a complete canonical wall and reference, bound the prepared coefficient errors, then prove a useful positive margin |D_*|−E_D and a sufficiently small complete residual E_K for K=G−q_*D. The upper estimate q_*+E_K/(|D_*|−E_D) must meet the stated simplicity threshold. This reduces internal root-isolation requirements; it does not acquire the required source precision. A Hermite collision reference itself retains nonzero collision mass. At a declared m-fold heat birth the normalized coefficient and wall-error scales must be paid, and no universal complex extension through a triple exists.
 
-The execution conversation **Continue heat contour research**, thread `01a167d3-3ce1-7ba3-8551-633916294ba0`, remains history **0001** in this investigation. The [verification receipt][receipt] records a point-in-time comparison of **37 completed public messages** against the source session, in exact order. The stored byte hash, canonical conversation hash, original creation and first-capture times, linear message structure and preceding completed final reply were checked. No private reasoning or tool-message phases were admitted by the exporter.
+[Note 12](../notes/12_COUPLED_COEFFICIENT_BACKWARD_TRANSPORT_20261023.md) provides a second concrete target: acquire the complete source quotient H_zz/H on a zero-free enclosing wall over the declared common-time path, its integrated wall moments, and any reference heat defect. The resulting coefficient propagator is an explicit finite polynomial in those moments at fixed degree. Source errors can then be transferred to Note 11's filter test without internal root isolation. Polynomial dependence on acquired moments is not an acquired polynomial bound in time or height; the current scalar late-data failure is not contradicted. Direct endpoint-wall information gives the same integrated moments when it is available.
 
-The scan found one matching registration among 79 discovered indexes. One unrelated malformed index is recorded in the receipt; it contains no exact match for this thread and was left unchanged. The founding brainstorm conversation and its earlier verification receipt remain separate.
+The original finite physical-cap branch now has complete source and regularity acquisition and a bounded full-face comparison in [Note 15](../notes/15_COMPLETE_PHYSICAL_CAP_COMPARISON_20261023.md); its useful lower-bound acceptance test remains unmet. Height-dependent joins and coverage are still unacquired. An RH-free extension additionally needs endpoint reality; zero collision mass does not exclude simple nonreal roots.
 
-The verification is a snapshot: later authorized refreshes change its counts and hashes. This turn's unsent final reply cannot be in that snapshot; the standing bounded follow-up captures it after the real response and turn completion are recorded. Archive verification establishes provenance and message coverage, not mathematical correctness.
+## Review and computational support
 
-[overview]: ../research-overview/02_PAIR_SPECTRUM_CURVED_CONTOURS_AND_CONDITIONAL_SIMPLICITY_PROGRAM_20261023.md
-[ledger]: 01_HEIGHT_DEPENDENT_HEAT_CONTOURS_PROGRESS_20261023.md
-[notes]: ../notes/README.md
-[n4]: ../notes/04_PAIR_STATISTICS_AS_A_ONE_SIDED_CONTOUR_INPUT_20261023.md
-[n5]: ../notes/05_EARLIER_TIME_PAIR_COUNTS_AND_DENSITY_ONE_SIMPLICITY_20261023.md
-[n6]: ../notes/06_PAIR_MATRIX_SPECTRUM_AND_ENDPOINT_MULTIPLICITY_20261023.md
-[review1]: ../reviews/01_FINITE_CONTRACT_AND_COUPLED_ESTIMATOR_REVIEW_20261023.md
-[review2]: ../reviews/02_PAIR_STATISTICS_AND_SIMPLICITY_TRANSFER_REVIEW_20261023.md
-[review3]: ../reviews/03_ANALYTICAL_SPECTRAL_CONTOUR_PROGRAM_REVIEW_20261023.md
-[results]: ../../../../result-summaries/README.md
-[avoid]: ../../../../avoid/README.md
-[a01]: ../../../../avoid/01_restating_the_target.md
-[a10]: ../../../../avoid/10_numerics_ahead_of_the_question.md
-[a12]: ../../../../avoid/12_term_by_term_matching_and_separate_bounds.md
-[receipt]: ../chat-histories/VERIFICATION_EXECUTION_CHAT_20261023.json
+The [round review](../reviews/04_ANALYTICAL_RESEARCH_ROUND_REVIEW_20261023.md) links the source, contour, backward and spectral audits; the [forest review](../reviews/09_FOREST_FILTER_AND_COLLISION_CONDITIONING_REVIEW_20261023.md) adds two separate same-model checks of the coefficient theorem. The [coefficient-transport review](../reviews/10_COUPLED_COEFFICIENT_TRANSPORT_REVIEW_20261023.md) checks the additional complete-source propagator and wall budgets. The [computation guide](../numerics/README.md) links **1,333 exact-rational assertions** and small floating contour/resolvent diagnostics. All replays passed. Those earlier checks concern finite algebra. The subsequent installed Arb records separately pass 109 complete wall/coefficient checks, 46 source checks, five full-volume floor checks, and 74 corrected-reference algebra checks. The complete-cap receipt records all faces and its failed positivity flags. Only the stated finite theta box is certified; none is evidence for an RH-equivalent assertion.
+
+The [result summaries](../../../../result-summaries/README.md) and [patterns to avoid](../../../../avoid/README.md) remain required reading, particularly [target reformulations](../../../../avoid/01_restating_the_target.md), [control premises](../../../../avoid/02_shape_only_arguments_and_the_controls.md), [coupled cancellations](../../../../avoid/12_term_by_term_matching_and_separate_bounds.md), and [scoped exclusions](../../../../avoid/07_scoped_exclusions_read_as_universal.md).
+
+## Manuscript and research decision
+
+The [working manuscript](../manuscript/main.tex) collects selected proofs, finite certificates, complete source normalization, explicit unpaid inputs and the unfavorable bounded cap comparison. It names the intended author, acknowledges substantial LLM assistance, and makes no priority or publication-readiness claim. Separate same-model cross-review clarified all-time wall assumptions, natural unfolding, coefficient snapshots versus true heat solutions, integration-domain holomorphy and local sphere orientation.
+
+The [next-step assessment](../notes/16_RESEARCH_RESET_AND_NEXT_STEPS_20261023.md) recommends one prescribed high-height corrected-reference acquisition with a complete error/conditioning ledger and a matched direct comparator. The substantive global task remains an independent arithmetic estimate for the reference/field clustering; a good wall margin alone is insufficient. Additional low-height cap refinement and contour optimization are lower priorities until a specific source or integration advantage is proposed. No new experiment was started after this manuscript checkpoint.
+
+## Chat histories and provenance
+
+The current conversation **Investigate curved contour program**, thread 01a1697e-def9-7cc3-9cc1-192e87492edb, is uniquely registered as [history 0002](../chat-histories/0002_2026-10-23T16-01-24Z_investigate-curved-contour-program.json). Completed public text is refreshed with the repository tool; the bounded exact-turn worker captures the final reply after the actual reply and completion are recorded. Current counts, configuration and hashes belong to the registry, not this snapshot.
+
+The preceding conversation **Continue heat contour research**, thread 01a167d3-3ce1-7ba3-8551-633916294ba0, retains history 0001. Its [verification receipt](../chat-histories/VERIFICATION_EXECUTION_CHAT_20261023.json) preserves the earlier 37-message snapshot and its noted unrelated malformed index. The founding brainstorm chat remains separately registered at its original home. No conversation was moved or renumbered in this research round.

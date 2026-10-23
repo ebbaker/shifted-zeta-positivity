@@ -1,0 +1,194 @@
+\section{Complete-source acquisition on a fixed theta box}
+\label{sec:finite}
+The following calculation supplies actual canonical source data to the
+coefficient interface. Its purpose is a bounded calibration, not a new
+high-height zero result. The parameters were fixed before acquisition:
+\begin{equation}
+ \Omega=[26,46]+i[-2,2],\qquad
+ D=[-10^{-4},10^{-4}]+i[-10^{-4},10^{-4}].
+ \label{eq:finitebox}
+\end{equation}
+Every zero in the rectangle is included. No individual root location,
+root disk, RH assumption or internal gap is an input.
+
+\begin{theorem}[Finite complete-theta certificate]
+\label{thm:finitecertificate}
+For the unchanged field \eqref{eq:canonical} on \eqref{eq:finitebox},
+the interval computation and analytic error bounds below establish
+\[
+ \inf_{D\times\partial\Omega}|H|>4.94\cdot10^{-7},\qquad
+ \inf_{D\times\Omega}(|H|^2+|H_z|^2)>1.1178\cdot10^{-13}.
+\]
+The complete spatial population has multiplicity count two for every
+\(\tau\in D\). Its centered monic quadratic has discriminant satisfying
+\[
+ 189.68<\Re\Delta(\tau)<189.80,\qquad
+ |\Im\Delta(\tau)|<0.058.
+\]
+Hence both roots are distinct throughout \(D\), and real and simple for
+every real \(t\in[-10^{-4},10^{-4}]\). At \(t=10^{-4}\),
+\[
+ 4.2149\cdot10^{-6}<q(t)<4.2176\cdot10^{-6}<\tfrac12.
+\]
+These conclusions concern only this finite population.
+\end{theorem}
+
+\subsection{Uniform error for the complete source}
+Arb ball arithmetic \cite{arb}, through python-flint 0.9.0 at 192-bit
+precision, encloses the first 96 Taylor coefficients of
+\(H_0(z)=\xi(1/2+iz/2)/8\) about the real center 36. Real-type symmetry
+justifies real coefficients; the computed imaginary coefficient balls
+are checked to contain zero. Denote the degree-95 polynomial by
+\(P_{95}\). Positivity of \(\Phi\) gives
+\[
+ |H_0(36+w)|\le H_0(24i)\quad(|w|\le24),
+\]
+so the full spatial Taylor remainder on the radius-12 disk is at most
+\begin{equation}
+ E_{\mathrm{sp}}=2H_0(24i)2^{-96}.
+ \label{eq:spatialtail}
+\end{equation}
+On the radius-11 disk, Cauchy's inequality on a radius-one circle gives
+the derivative error \(j!E_{\mathrm{sp}}\). The physical rectangle lies
+strictly inside that disk since \(\sqrt{104}<11\).
+
+Put \(T_*=1/5000\), so the entire time square, including its outward
+interval representation, lies in \(|\tau|<T_*\). Use
+\begin{equation}
+ G_\tau(z)=\sum_{k=0}^{5}\frac{(-\tau)^k}{k!}P_{95}^{(2k)}(z).
+ \label{eq:finiteheat}
+\end{equation}
+For \(|\Im z|\le2\), Taylor's integral remainder for the source
+exponential and \eqref{eq:spatialtail} give
+\begin{equation}
+ |H_j(\tau,z)-G_\tau^{(j)}(z)|
+ \le E_{\mathrm{sp}}\sum_{k=0}^{5}
+       \frac{T_*^k(j+2k)!}{k!}
+       +\frac{T_*^6}{6!}M_{12+j},\qquad 0\le j\le3,
+ \label{eq:heaterror}
+\end{equation}
+where
+\[
+ M_j=\int_0^\infty u^je^{T_*u^2}\Phi(u)\cosh(2u)\,du.
+\]
+Every source index and the entire integration tail are paid. In fact,
+with
+\[
+ C_\Phi=\frac{2\pi^2}{1-16e^{-3\pi}},\quad
+ B_j=T_*/e^2+(11+j)/(2e),\quad X_*=(\pi/2)e^4,
+\]
+one has
+\begin{equation}
+ M_j\le e^{T_*}H_0(2i)+\frac{C_\Phi}{4X_*}
+                   \exp\{B_j^2/(2\pi)-X_*\}.
+ \label{eq:momentbound}
+\end{equation}
+For \(u\le1\), retain \(\cosh(2u)\) and bound \(u^je^{T_*u^2}\)
+by \(e^{T_*}\). For \(u\ge1\), use
+\(\Phi\le C_\Phi e^{9u-\pi e^{4u}}\), \(u^j\le e^{ju}\),
+\(u^2\le e^{2u}/e^2\), and \(u\le e^{2u}/(2e)\).
+Completing a square in \(e^{2u}\), followed by
+\(\Gamma(0,X_*)\le e^{-X_*}/X_*\), proves \eqref{eq:momentbound}.
+All four errors in \eqref{eq:heaterror} are below \(6\cdot10^{-27}\).
+This is an approximation to the complete field, not a replacement source.
+
+\subsection{Wall count and coefficient enclosure}
+On each accepted wall segment \(\gamma_\nu\), the source oracle gives
+\[
+ m_\nu\le\inf|H_0|,\qquad
+ \omega_\nu\ge\sup_{D\times\gamma_\nu}|H_\tau-H_0|,
+ \qquad \eta_\nu=\omega_\nu/m_\nu<1/4.
+\]
+The time difference is evaluated with its constant heat term cancelled
+before interval evaluation. Sixteen segments, found in 28 cell calls,
+cover the complete closed rectangle. The largest \(\eta_\nu\) is less
+than \(3.82\cdot10^{-4}\). Thus Rouch\'e's theorem transfers the
+entire multiplicity count from the anchor.
+
+At the anchor, validated integration encloses
+\begin{equation}
+ p_k(0)=\frac1{2\pi i}\oint_{\partial\Omega}
+       (w-36)^k\frac{H_0'(w)}{H_0(w)}\,dw,\qquad k=0,1,2.
+ \label{eq:anchormoments}
+\end{equation}
+The meromorphic quotient formed from the entire finite polynomial is passed
+to the validated integrator. It is holomorphic near the certified wall;
+the integrator checks its required complex neighborhoods. A physical-cell range enclosure, which is valid only on its
+declared physical subset, is not an analytic callback.
+If \(|H_0|\ge m\), \(|H_0'|\le L\), and source errors are
+\(e_0,e_1\), the external correction is
+\begin{equation}
+ \left|\frac{H_0'}{H_0}-\frac{G_0'}{G_0}\right|
+ \le\frac{e_1}{m}+\frac{(L+e_1)e_0}{m(m-e_0)},\qquad m>e_0.
+ \label{eq:quotienterror}
+\end{equation}
+Here \(e_0=e_1=E_{\mathrm{sp}}\). Integrating this bound on the
+accepted segments pays the complete-source correction.
+The resulting \(p_0\) enclosure isolates the unique integer two.
+The argument principle therefore supplies the count rather than a
+numerical guess about root locations.
+
+The principal relative logarithm
+\(\ell_\tau=\operatorname{Log}(H_\tau/H_0)\) is single-valued around
+the wall and obeys \(|\ell_\tau|\le-\log(1-\eta_\nu)\).
+Integration by parts gives
+\begin{align}
+ p_k(\tau)-p_k(0)
+   &=-\frac{k}{2\pi i}\oint(w-36)^{k-1}\ell_\tau(w)\,dw,\nonumber\\
+ |p_k(\tau)-p_k(0)|
+   &\le\frac{k}{2\pi}\sum_\nu
+      |\gamma_\nu|r_\nu^{k-1}[-\log(1-\eta_\nu)],
+ \label{eq:logtransfer}
+\end{align}
+where \(r_\nu=\sup_{\gamma_\nu}|w-36|\). No internal gap or
+interior logarithmic ratio is differentiated. The acquired values are
+\[
+ p_1(0)=-1.6864704389875024\pm7.4\cdot10^{-12},\quad
+ p_2(0)=96.29229323297757\pm4.1\cdot10^{-11},
+\]
+with these bounds on each complex component. The uniform continuation
+errors are below \(0.001772\) and \(0.025736\), respectively.
+Since \(\Delta=2p_2-p_1^2\), outward interval arithmetic proves the
+discriminant enclosure in Theorem~\ref{thm:finitecertificate}.
+Conjugation symmetry gives real coefficients on real time slices;
+positivity of the discriminant then supplies reality and simplicity.
+The quadratic forest formula gives \(q=8t/(\Delta+8t)\).
+
+For the first-jet floor, 31 closed spatial rectangles, obtained in
+61 cell calls, cover \(\Omega\) while every cell uses all of \(D\).
+The sum of the squared lower bounds on \(|H|\) and \(|H_z|\) is
+positive on every cell. Exact rational area, containment and disjointness
+checks verify the cover. This is also a direct quantitative certificate
+of regularity on every physical cap and face.
+
+\subsection{Matched direct comparison and reproducibility}
+Direct evaluation of \eqref{eq:anchormoments} at \(t=10^{-4}\), using
+the same source, wall, tolerance and correction, gives the much tighter
+ball
+\[
+ q(10^{-4})=
+ 4.2162799666292433\cdot10^{-6}\ \pm\ 2.34\cdot10^{-18}.
+\]
+The uniform complex-time transport ball has radius
+\(1.28\cdot10^{-9}\). The different information delivered by the two
+calculations should be kept in view: the latter controls all of \(D\),
+whereas the former is a direct terminal enclosure. For real-time
+simplicity alone, four source values give sign changes in \((28,29)\)
+and \((42,43)\), uniformly on the real interval; together with the
+shared complete count they give a cheaper direct conclusion.
+No practical advantage for continuation is established here.
+
+Research Note~13 and Review~11 contain the detailed proof and audit.
+The sibling \texttt{numerics} folder contains the source core,
+the \texttt{07} source and wall scripts and their small JSON receipts,
+and the \texttt{08} complete first-jet cover. The installed wall replay
+passes 109 assertions, the independent complete-source quadrature
+checks pass 46, and the full-volume cover passes five. The source checks
+include four direct theta-integral evaluations with both omitted modes
+and the integration tail paid. They supplement the uniform analytic
+bounds, rather than proving them by sampling.
+The receipts record numerical precision, source errors, geometry,
+script hashes and timings. Typical wall work is a fraction of a second;
+the anchor and direct contour integrations take several seconds on the
+recorded machine. These timings are implementation observations, not
+asymptotic complexity claims.

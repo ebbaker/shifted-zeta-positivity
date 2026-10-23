@@ -1,0 +1,152 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools,booktabs,array}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,microtype}
+\usepackage{xcolor}
+\usepackage[colorlinks=true,linkcolor=blue!45!black,citecolor=blue!45!black,urlcolor=blue!45!black]{hyperref}
+\usepackage{enumitem}
+\setlist{itemsep=3pt,topsep=5pt}
+\setlength{\emergencystretch}{2em}
+\newcommand{\C}{\mathbb C}
+\newcommand{\R}{\mathbb R}
+\newcommand{\N}{\mathbb N}
+\DeclareMathOperator{\Tr}{Tr}
+\DeclareMathOperator{\Res}{Res}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\hypersetup{pdftitle={Complete-source coefficient transport and pair-spectrum bounds for the theta heat flow},pdfauthor={Drafted for Edward Baker}}
+\title{Complete-source coefficient transport and pair-spectrum bounds for the theta heat flow}
+\author{Drafted for Edward Baker}
+\date{Working research draft\\23 October 2026}
+\begin{document}
+\maketitle
+\begin{abstract}
+We develop finite-population estimates for the canonical theta heat flow,
+retaining the complete field and its exterior contribution. The bounded
+pair-spectrum trace admits an exact endpoint collision value, a sharp
+finite multiplicity consumer, and a forest-polynomial representation in
+prepared coefficients. A contour equation for those coefficients is driven
+by commuting degree-lowering operators; at fixed degree its backward
+propagator is an explicit finite polynomial in integrated source moments.
+These statements permit quantitative error accounting without assuming
+internal root separation. We also construct a holomorphic correction to
+the effective Riemann--Siegel reference and give its field and heat-defect
+budgets in a microscopic real-time regime. A complete-source interval
+calculation on one fixed low-height box certifies its entire two-root
+population and discriminant throughout a complex time square. Direct
+evaluation is stronger for the terminal filter in this comparison. A bounded
+complete-cap calculation also encloses every face, but both lower bounds
+are negative and the direct interval is slightly narrower.
+The height-uniform microscopic upper estimate required for a global
+simplicity conclusion remains unproved; this manuscript proves neither
+RH nor a new global simplicity proportion.
+\end{abstract}
+
+\section{Purpose, scope and normalization}
+The aim is to turn complete source information into quantitative control
+of a finite collection of zeros of the theta heat flow, and to determine
+which resulting bounds could support a global simplicity theorem. We
+separate three levels of result: finite identities with paid perturbation
+bounds; a bounded computation for the unchanged theta field; and the
+independent, still missing source estimate needed at growing height.
+This distinction is essential when a generic heat identity also holds
+for collision controls.
+
+Throughout,
+\begin{align}
+H(\tau,z)&=\int_0^\infty e^{\tau u^2}\Phi(u)\cos(zu)\,du,
+\label{eq:canonical}\\
+\Phi(u)&=\sum_{n\ge1}
+ (2\pi^2n^4e^{9u}-3\pi n^2e^{5u})e^{-\pi n^2e^{4u}}.
+\nonumber
+\end{align}
+The source is positive for \(u\ge0\), has superexponential decay, and defines
+an entire function of both variables. With the standard completed zeta
+function,
+\begin{equation}
+ H_\tau=-H_{zz},\qquad 8H(0,z)=\xi(1/2+iz/2).
+ \label{eq:normalization}
+\end{equation}
+These conventions agree with \cite{polymath,rodgers-tao}; the real
+\(H\)-coordinate is twice the usual zeta ordinate.
+
+A \emph{complete finite population} means every spatial zero inside a
+declared enclosing wall, counted with multiplicity. A nonzero wall keeps
+this count constant, including through internal collisions. Its monic
+prepared polynomial \(P\) gives \(H=UP\) in the interior, with \(U\)
+nonvanishing. The factor \(U\), equivalently complete field data on the
+wall, retains the exterior contribution. None of the results below
+permits replacing this population by a selected subset of convenient
+real roots.
+
+The main results are organized by their logical roles.
+The spectral and forest results give consumers of source estimates.
+The coefficient equation provides a finite transport mechanism.
+The corrected reference supplies explicit source and defect budgets,
+but still requires a whole-wall lower bound. The finite theta certificate
+shows that the interfaces can actually be supplied on one prescribed
+box. The physical-cap comparison retains the full boundary and its
+spatial complement.
+
+\paragraph{Assumptions and research status.}
+Real-spectrum positivity and the global adjacent-gap comparison are used
+only where explicitly stated. A local Hermite birth, a complex contour
+identity, or a finite complete-source certificate does not itself require
+RH. Conversely, excluding multiple roots does not establish reality of
+all roots and therefore does not prove RH.
+No priority claim is made for the finite algebraic identities or the
+combination of classical ingredients. The repository research notes give
+the derivation history; this draft collects selected statements and
+proofs into one reviewable account.
+
+\input{spectral_forest}
+\input{transport_reference}
+\input{finite_certificate}
+\input{contours}
+\input{outlook}
+
+\section*{Acknowledgements and verification status}
+This working manuscript was prepared for Edward Baker with substantial
+assistance from OpenAI Codex using \texttt{gpt-6-astra}, reasoning effort
+\emph{ultra}. Separate agents using the same model checked derivations,
+source formulas, interval implementations and stated scope. These checks
+are not independent specialist refereeing, cross-model validation, or
+formal proof verification. The draft is intended for the author's
+mathematical review before any circulation or attribution as an approved
+paper.
+
+Research Notes 07--15, their reviews and small execution records are
+maintained in the parent investigation directory. The earlier analytical
+controls include 1,333 counted exact-rational assertions, with separate
+floating diagnostics. The complete-source certificate uses Arb interval
+arithmetic through python-flint, as described in its section; numerical
+checks support the stated finite claims only. Sources, receipts and
+provenance are kept separately so the mathematical assertions do not
+depend on a file hash.
+
+\begin{thebibliography}{9}
+\bibitem{polymath}
+D.~H.~J. Polymath,
+\emph{Effective approximation of heat flow evolution of the Riemann
+\(\xi\) function, and a new upper bound for the de Bruijn--Newman constant},
+arXiv:1904.12438v2 (2019).
+\url{https://arxiv.org/abs/1904.12438}.
+
+\bibitem{rodgers-tao}
+B.~Rodgers and T.~Tao,
+\emph{The de Bruijn--Newman constant is non-negative},
+Forum of Mathematics, Pi 8 (2020), e6.
+\url{https://arxiv.org/abs/1801.05914}.
+
+\bibitem{arb}
+F.~Johansson,
+\emph{Arb: efficient arbitrary-precision midpoint-radius interval arithmetic},
+IEEE Transactions on Computers 66 (2017), 1281--1292.
+\url{https://arxiv.org/abs/1611.02831}.
+\end{thebibliography}
+\end{document}

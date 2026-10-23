@@ -21,3 +21,23 @@ Statistical continuation, 23 October 2026, **gpt-6-astra (Codex), effort ultra**
 - [Review](../reviews/02_PAIR_STATISTICS_AND_SIMPLICITY_TRANSFER_REVIEW_20261023.md): separate same-model checks; no new simplicity proportion.
 
 The [second research overview](../research-overview/02_PAIR_SPECTRUM_CURVED_CONTOURS_AND_CONDITIONAL_SIMPLICITY_PROGRAM_20261023.md) specifies the next analytical notes: complete source control of L, curved-contour transport, backward error estimates and the spectral upper bound needed for conditional simplicity. Numerics serve a supporting role. 23 October 2026, **gpt-6-astra, ultra**.
+
+Analytical research round, 23 October 2026, **gpt-6-astra (Codex), effort ultra**:
+
+- [Note 07: Complete source force](07_COMPLETE_SOURCE_FORCE_AND_FILTER_RESIDUAL_20261023.md): Canonical distant-force error O(N C_T log R_c/R_c), relative wall-value force bounds and complete source truncation; nearby residual remains open.
+- [Note 08: Curved contour transport](08_CURVED_CONTOUR_TRANSPORT_AND_HEIGHT_GRAPH_20261023.md): Prepared-polynomial/discriminant stability through collisions, separate resolvent costs, and height-graph orientation, area and contraction corrections.
+- [Note 09: Backward transport](09_BACKWARD_FILTER_TRANSPORT_AND_TERMINAL_PRECISION_20261023.md): Finite matched-reference error theorem; fixed-rank scalar theta amplification log A~T(log T)^2/(2pi²) defeats the stated separate algebraic error budget.
+- [Note 10: Endpoint spectrum and global reduction](10_EXACT_COLLISION_SPECTRUM_AND_GLOBAL_REDUCTION_20261023.md): Sharp M_0≤4q, two-sided short-gap/filter bounds, and q/N→1 in the published high-height clock regime. The microscopic upper estimate remains open.
+
+[Round review](../reviews/04_ANALYTICAL_RESEARCH_ROUND_REVIEW_20261023.md) with separate same-model audits and 862 exact-rational assertions plus floating contour diagnostics. No new simplicity proportion or all-simple theorem.
+
+Coefficient-filter continuation, 23 October 2026, **gpt-6-astra, ultra**: [Note 11: Forest polynomial and gap-free filtered-spectrum enclosure](11_FOREST_POLYNOMIAL_AND_GAP_FREE_FILTER_ENCLOSURE_20261023.md) proves an explicit coefficient-only error theorem for the scalar filter, with a coupled residual and no internal root disks. Double-collision neighborhoods are covered at fixed filter scale; higher collisions and parabolic source precision have separate conditions. [Review](../reviews/09_FOREST_FILTER_AND_COLLISION_CONDITIONING_REVIEW_20261023.md) and 219 additional exact assertions, bringing this research round to 1,081. This advances HDC-08's finite interface, not the global simplicity task HDC-11.
+
+Complete coefficient transport, 23 October 2026, **gpt-6-astra, ultra**: [Note 12](12_COUPLED_COEFFICIENT_BACKWARD_TRANSPORT_20261023.md) and its source-wall appendix give the prepared-polynomial equation, sharp free-heat norm, and exact commuting nilpotent propagator driven by the complete field quotient. Explicit source/reference error budgets remain; internal collisions need no root charts. The propagator is polynomial in acquired integrated moments at fixed degree, with no automatic large-height or large-rank bound. [Review](../reviews/10_COUPLED_COEFFICIENT_TRANSPORT_REVIEW_20261023.md); 252 additional exact assertions, **1,333** across this research round. Canonical moment acquisition remains open.
+
+Actual-source and manuscript continuation, 23 October 2026, **gpt-6-astra, ultra**:
+
+- [Note 13](13_COMPLETE_THETA_WALL_AND_COEFFICIENT_CERTIFICATE_20261023.md): complete canonical wall/count/discriminant certificate on the original complex-time box, a full-volume first-jet floor, and stronger direct terminal comparison.
+- [Note 14](14_MICROSCOPIC_COMPLETE_REFERENCE_AND_HEAT_DEFECT_20261023.md): corrected analytic microscopic reference, explicit field/heat-defect budgets, and remaining wall/complex-time gates.
+- [Note 15](15_COMPLETE_PHYSICAL_CAP_COMPARISON_20261023.md): every original cap face enclosed at 512 spatial leaves; both lower endpoints negative, no demonstrated gain.
+- [Note 16](16_RESEARCH_RESET_AND_NEXT_STEPS_20261023.md): critical research reset, ranked next steps and stopping rules, accompanying the [working manuscript](../manuscript/main.tex).
