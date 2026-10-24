@@ -2,1100 +2,992 @@
 \usepackage[margin=1in]{geometry}
 \usepackage[T1]{fontenc}
 \usepackage{lmodern,microtype}
-\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage{amsmath,amssymb,amsthm,mathtools,booktabs,tabularx}
 \usepackage{xcolor}
 \usepackage[colorlinks=true,linkcolor=blue!40!black,citecolor=blue!40!black,urlcolor=blue!40!black]{hyperref}
 \setlength{\emergencystretch}{2em}
 \newcommand{\C}{\mathbb C}
 \newcommand{\R}{\mathbb R}
 \newcommand{\dd}{\,d}
-\newcommand{\nr}{\mathrm{nr}}
-\newcommand{\all}{\mathrm{all}}
-\newcommand{\D}{\mathsf D}
-\newcommand{\FF}{\mathcal F}
-\newcommand{\BB}{\mathcal B}
-\newcommand{\WW}{\mathcal W}
+\newcommand{\eps}{\epsilon}
+\newcommand{\cT}{\mathcal T}
+\newcommand{\cE}{\mathcal E}
+\newcommand{\cD}{\mathcal D}
+\newcommand{\cB}{\mathcal B}
+\DeclareMathOperator{\Rea}{Re}
+\DeclareMathOperator{\Ima}{Im}
 \DeclareMathOperator{\supp}{supp}
 \newtheorem{theorem}{Theorem}[section]
 \newtheorem{proposition}[theorem]{Proposition}
 \newtheorem{lemma}[theorem]{Lemma}
 \newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
 \theoremstyle{remark}
 \newtheorem{remark}[theorem]{Remark}
-\hypersetup{pdftitle={Conserved heat contours toward simple zeta zeros},pdfauthor={Drafted for Edward Baker}}
-\title{Conserved heat contours\\toward simple zeta zeros}
+\hypersetup{pdftitle={Complex zero fields and conserved heat evolution},pdfauthor={Drafted for Edward Baker}}
+\title{Complex zero fields\\and conserved heat evolution}
 \author{Drafted for Edward Baker}
-\date{23 October 2026}
+\date{24 October 2026}
 \begin{document}
 \maketitle
 
 \begin{abstract}
-Assuming the Riemann hypothesis, with multiplicities allowed, we prove
-a relative short-time expansion for the complete theta heat field on
-strips at a fixed positive distance from the real axis. On the scale
-$s\le c/(\log Y)^2$, extracting the full complex Gaussian exponential
-gives an explicit first correction and a relative remainder
-$O((\log Y)^{-2})$. The proof controls the entire Gaussian tail relative
-to the small initial field. It acquires nonvanishing and justifies the
-actual contours preserving $H\,dz$, with displacement and tangent change
-$O((\log Y)^{-1})$, including their finite spatial containment and upward
-motion as heat time runs backward.
+A holomorphic backward-heat field admits a smooth complex amplitude
+whose squared modulus is a regularized zero-counting density. We derive
+its phase transport, a nonlinear Schr\"odinger--Poisson evolution, and
+its exact identification with a focusing Davey--Stewartson II system.
+The emphasis is analytic: every field identity and conservation law used
+here is calculated in the stated normalization.
 
-The overarching goal is to approach the implication from the Riemann
-hypothesis to simple zeros. We connect the acquired outer wall to an
-exact collision balance and sharp multiplicity bounds, retaining the
-earlier nonreal population and one-sided inward flux. An explicit
-positive-source field with the same coarse zero count and no simple
-zeros satisfies the contour estimates. The remaining task is therefore
-a multiplicity-sensitive arithmetic estimate inside the wall. The paper
-proves the contour theorem and identifies this missing step; it proves
-no new simplicity proportion.
+For the potential selected by a translation-invariant Fourier multiplier,
+we prove conservation of mass, two momenta and an indefinite Hamiltonian,
+together with first-moment and mixed-virial identities under the required
+integrability assumptions. A separate pullback calculation gives a family
+of local conservation laws for the holomorphic lift. The area formula
+classifies the amplitude's total mass: it equals the degree for a
+polynomial and is infinite for a transcendental entire function. Thus
+the theta heat field requires localization or a change of weighting.
+Polynomial heat fields have zero momenta and zero Hamiltonian, including
+at multiple zeros, and provide explicit controls on the meaning of these
+invariants.
+
+A self-subtracted square of a spatially smoothed density converges to
+the multiplicity excess $\sum m(m-1)$. We calculate its scale dependence,
+transport law and a quantitative measure-comparison bound. This
+observable is not conserved. The resulting formulation supplies an
+evolution and multiplicity-sensitive measurements; a useful
+theta-specific upper bound remains open.
 \end{abstract}
 
-\section{The main comparison and the simplicity question}
-\label{sec:main}
+\clearpage
+\tableofcontents
+\clearpage
 
-The Riemann hypothesis places every nontrivial zero on the critical line.
-It does not by itself state that those zeros are simple. Our objective is
-to determine what additional control can be proved from the actual theta
-source, assuming RH but retaining every possible endpoint multiplicity.
-A useful intermediate theorem must acquire an analytic estimate before
-it is used in a multiplicity argument.
+\section{The field and the question}
+\label{sec:setup}
 
-Use the normalization
+Let $t$ be real time and $z=x+iy$ the complex spatial variable. Suppose
+$H(t,z)$ is holomorphic in $z$, smooth in $t$, has no constant spatial
+slice, and satisfies
+\begin{equation}
+ H_t=-H_{zz}. \label{eq:heat}
+\end{equation}
+All local calculations are on regions where these hypotheses hold.
+Global results state their extra hypotheses separately. Fix a constant
+$\eps>0$ and put
+\begin{equation}
+ D=|H|^2+\eps^2,\qquad
+ A=\frac{\eps}{\sqrt\pi}\frac{H_z}{D},\qquad
+ \rho=|A|^2,\qquad V=-2\partial_{xy}\log D.
+ \label{eq:definition}
+\end{equation}
+Dependence on $\eps$ is suppressed in $A,\rho,V$ when no confusion is
+possible. The positive denominator makes all three fields smooth,
+including at multiple zeros of $H$.
+
+The amplitude $A$ is the primary field in the evolution below. A
+normalized observation state will be denoted $\psi$, and a real spatial
+cutoff will be denoted $h$. These objects have different roles. A
+probability density is $|\psi|^2$, while its complex phase supplies
+transport information. A moving spatial wall is not required to define
+either field.
+
+The canonical application is
 \begin{align}
  H(t,z)&=\int_0^\infty e^{tu^2}\Phi(u)\cos(zu)\dd u,
- &H_t&=-H_{zz},\label{eq:theta}\\
+ \label{eq:theta}\\
  \Phi(u)&=\sum_{n\ge1}
  (2\pi^2n^4e^{9u}-3\pi n^2e^{5u})e^{-\pi n^2e^{4u}},
- &F(z):=H(0,z)&=\tfrac18\xi(\tfrac12+iz/2).
- \label{eq:canonical}
+ &H(0,z)&=\tfrac18\xi(\tfrac12+iz/2).
+ \label{eq:source}
 \end{align}
-Here $\xi(w)=\tfrac12w(w-1)\pi^{-w/2}\Gamma(w/2)\zeta(w)$.
-These conventions agree with \cite{polymath,DLMF}. The complete even
-source is positive and superexponentially decaying. Its decay justifies
-all fixed-strip Gaussian integrals below. The field is even, is of real
-type for real $t$, and is jointly entire in $t$ and $z$.
+Here $\xi(s)=\tfrac12s(s-1)\pi^{-s/2}\Gamma(s/2)\zeta(s)$;
+the convention agrees with \cite{polymath}. In this coordinate, real
+$z$ corresponds to the critical line. The source is positive and
+superexponentially decaying. Differentiation under its integral proves
+\eqref{eq:heat} and joint analyticity. No Riemann hypothesis is needed
+for the field identities in this paper.
 
-Under RH, $F$ has only real zeros. We do not assume they are simple.
-Set $p=F'/F$, which is holomorphic in the upper half-plane. Throughout,
-$s\ge0$ denotes backward duration: the earlier field is $H(-s,z)$.
-The spatial offset $\Im z$ is a different variable.
+The construction is a reformulation of holomorphic heat evolution and
+its zero density, with a connection to established DS-II theory
+\cite{KS,Taimanov}. It is not a claim of a new integrable system or a
+proof of simplicity. Our question is which exact equations,
+conserved quantities and observables remain available when
+multiplicities are allowed.
 
-\begin{theorem}[Complete relative Gaussian comparison]
-\label{thm:gaussian}
-Assume RH. Fix $0<b_-<b_+$ and $c>0$. For $L=\log Y$, uniformly on
-\[
- Y\le\Re z\le2Y,\qquad b_-\le\Im z\le b_+,\qquad
- 0\le s\le cL^{-2},
-\]
-one has, as $Y\to\infty$,
+\section{Zero density and the global mass classification}
+\label{sec:mass}
+
+\subsection{Local counting with a smooth amplitude}
+
+\begin{proposition}[Density identity]
+The amplitude \eqref{eq:definition} satisfies
 \begin{equation}
- \boxed{\frac{H(-s,z)}{F(z)e^{sp(z)^2}}
- =1+s p'(z)\bigl(1+2s p(z)^2\bigr)+O(L^{-2}).}
- \label{eq:main-comparison}
+ \rho=\frac{\eps^2|H_z|^2}{\pi D^2}
+      =\frac1{4\pi}\Delta\log D. \label{eq:lapdensity}
 \end{equation}
-The same estimate holds with any fixed horizontal end extensions and
-on an enlarged fixed positive-offset strip. On a smaller strip with a
-fixed margin, every fixed-order spatial derivative of the remainder is
-$O_k(L^{-2})$. Constants and the sufficiently-large-height threshold may
-depend on $b_-,b_+,c$, the margins and the derivative order. At $s=0$
-the formula is exact.
-
-In particular the field is nonzero throughout this region for large
-$Y$, and, for some strip constant $C$,
+For fixed $t$, its measures converge on compact sets as
 \begin{equation}
- |H(-s,z)|\ge\tfrac12e^{-C^2c}|F(z)|.
- \label{eq:acquired-floor}
+ \rho\dd x\dd y\ \rightharpoonup\
+ \sum_{H(t,a)=0}m_a\delta_a\qquad(\eps\downarrow0).
+ \label{eq:divisor}
 \end{equation}
-Writing $p_s(z)=H_z(-s,z)/H(-s,z)$, one also has
-\begin{align}
- p_s(z)&=p(z)+2s p(z)p'(z)+O(L^{-1}),\label{eq:velocity-expansion}\\
- \partial_zp_s(z)&=p'(z)+2s\bigl((p'(z))^2+p(z)p''(z)\bigr)
-                      +O(L^{-1})=p'(z)+O(1).
- \label{eq:strain-expansion}
-\end{align}
-\end{theorem}
-
-This theorem has a useful geometric consequence. An initially flat
-arc $z_a=a+ib$, with $b$ fixed and positive and with fixed horizontal
-end extensions, has an actual continuation satisfying
-\begin{equation}
- \partial_sZ(s,a)=-p_s(Z(s,a)),\qquad Z(0,a)=z_a.
- \label{eq:material-ode-intro}
-\end{equation}
-It remains inside a prescribed finite buffer, is a graph over an
-interval covering $[Y,2Y]$, and obeys
-\begin{equation}
- Z(s,a)=z_a-sp(z_a)+O(L^{-2}),\qquad
- \partial_a Z(s,a)=1-sp'(z_a)+O(L^{-2}).
- \label{eq:material-intro}
-\end{equation}
-The full statement and proof are given in Section~\ref{sec:scf-contours}.
-This motion preserves $H(-s,Z)\partial_aZ=F(z_a)$; it is the literal
-$H\,dz$ conservation law.
-
-The point is to obtain the moving contour from initial RH and complete
-field information, rather than to assume a zero-free moving tube.
-The raw xi field can be exponentially small at large height.
-Consequently an absolutely small omitted Gaussian tail would not be
-enough. The proof integrates the initial logarithmic derivative to
-control the entire tail \emph{after division by $F$}, and retains the
-phase of $e^{sp^2}$ until its relative error has been paid.
-
-The theorem is a conditional intermediate result, not a criterion
-asserted to be equivalent to RH or to simplicity. Its offsets stay
-bounded away from zero; its time is real; $c$ is fixed before $Y$ tends
-to infinity. No numerical height threshold is supplied. Sections
-\ref{sec:limits} and \ref{sec:resource} explain respectively why the
-estimates admit multiple zeros and how an additional bound on the
-complete nonreal resource would restrict them.
-
-\section{Proof of the Gaussian comparison}
-\label{scf-proof}
-
-The proof of Theorem~\ref{thm:gaussian} has two separate analytic tasks.
-The local Gaussian calculation must retain its complex leading exponential,
-and the omitted horizontal tail must be small relative to the complete
-initial field.  We first establish the bounds that accomplish both tasks.
-Throughout this section RH is assumed, with multiplicities retained.
-Constants may depend on fixed positive-offset strips, fixed margins and
-$c$, but not on $Y$, $z$ or $0\le s\le c/(\log Y)^2$.
-
-\subsection{The full product and a logarithmic anchor}
-
-Let $\mathcal Z$ be the signed multiset of zeros of $F$, and let $N_F(X)$
-count its positive members up to $X$, with multiplicity.  The classical
-order-one product, paired using evenness, gives
-\begin{equation}\label{scf-product}
- F(z)=F(0)\prod_{\lambda>0}\left(1-\frac{z^2}{\lambda^2}\right),
- \qquad
- p(z)=\sum_{\lambda>0}
- \left(\frac1{z-\lambda}+\frac1{z+\lambda}\right).
-\end{equation}
-Here $\lambda$ is twice a positive zeta ordinate.  Pairing specifies the
-convergence; evenness removes the linear exponential allowed by the
-general order-one factorization.  For every integer $k\ge1$,
-\begin{equation}\label{scf-derivative-product}
- p^{(k)}(z)=(-1)^k k!\sum_{\lambda\in\mathcal Z}
-                     (z-\lambda)^{-k-1},
-\end{equation}
-with absolute locally uniform convergence away from the real axis.
-The zero-counting formula in the present normalization is
-\begin{equation}\label{scf-count}
- N_F(X)=\frac{X}{4\pi}\log\frac{X}{4\pi}-\frac{X}{4\pi}
-              +O(\log(2+X)).
-\end{equation}
-These standard inputs include multiplicities; see \cite{Elkies}.
-The entire completion used here is $(w^2-w)/2$ times the meromorphic
-completion denoted by $\xi$ in that reference.
-
-\begin{lemma}[Fixed-strip logarithmic bounds]\label{scf-strip-bounds}
-For $0<\alpha<\beta<\infty$ and every fixed nonnegative integer $k$,
-\begin{equation}\label{scf-logbound}
- |p^{(k)}(x+iy)|\le C_{k,\alpha,\beta}\log(2+|x|),
- \qquad x\in\R,\quad \alpha\le y\le\beta.
-\end{equation}
-\end{lemma}
-\begin{proof}
-Formula~\eqref{scf-count} bounds the number of zeros in each unit real
-interval near $v$ by $O(\log(2+|v|))$.  For $k\ge1$, grouping the absolute
-sum in \eqref{scf-derivative-product} into unit intervals about $x$ gives
-\[
- \sum_{\lambda\in\mathcal Z}|x+iy-\lambda|^{-k-1}
- \le C_k\sum_{n\ge0}\frac{\log(2+|x|+n)}{(1+n)^{k+1}}
- \le C_k\log(2+|x|).
-\]
-The fixed lower bound on $y$ pays the central intervals.  This argument
-uses the coarse count with multiplicity and requires no simplicity bound.
-
-For $k=0$ we use a logarithmic anchor instead of an absolute unpaired
-reciprocal sum.  Choose $B>\max\{\beta,1\}$ with a fixed positive margin.
-The functional equation, with $w=(1+B)/2-ix/2$, yields
-\[
- p(x+iB)=-\frac i2\left\{\frac1w+\frac1{w-1}
- -\frac12\log\pi+\frac12\psi(w/2)
- +\frac{\zeta'}{\zeta}(w)\right\}
- =O(\log(2+|x|)).
-\]
-Indeed $\Re w>1$ by a fixed amount, so the Euler logarithmic derivative
-converges absolutely; the digamma estimate controls the gamma factor
-\cite[\S\S 5.11, 25.4]{DLMF}.  Bounded $x$ is handled by compactness
-and Euler nonvanishing.  Integrating $p'$ vertically from $x+iB$ to
-$x+iy$ proves \eqref{scf-logbound} for $k=0$.  RH pays this passage
-through the strip; no Euler product is asserted there.
-\end{proof}
-
-\subsection{A global relative bound for the Gaussian tail}
-
-For real $s>0$, the full theta transform gives the exact identity
-\begin{equation}\label{scf-gaussian-integral}
- H(-s,z)=\frac1{\sqrt{4\pi s}}\int_\R
-                 e^{-u^2/(4s)}F(z+u)\,\dd u.
-\end{equation}
-To see the normalization, insert
-$F(z)=\int_\R\rho(v)e^{izv}\,\dd v$: the Gaussian integral in $u$
-contributes $e^{-sv^2}$.  The positive even theta density $\rho$ has
-superexponential decay, justifying Fubini for every fixed $\Im z$.
-This representation retains the complete source.
-
-Since $F$ has no upper-half-plane zeros under RH, integration along the
-horizontal segment gives
-\[
- \frac{F(z+u)}{F(z)}
-       =\exp\left(\int_0^u p(z+v)\,\dd v\right).
-\]
-Consequently Lemma~\ref{scf-strip-bounds} implies, for all real $u$,
-\begin{equation}\label{scf-global-ratio}
- \left|\frac{F(z+u)}{F(z)}\right|
- \le\exp\{C|u|\log(2+|\Re z|+|u|)\}.
-\end{equation}
-This is already a relative estimate, even when $F(z)$ is exponentially
-small.  It covers shifts to bounded real height and arbitrarily far
-beyond the target interval.
-
-Fix $r>0$ independent of $Y$.  If $x\in[Y-O(1),2Y+O(1)]$, then for
-$v\ge r$ and sufficiently large $Y$,
-\[
- Cv\log(2+|x|+v)\le\frac{v^2}{8s},
- \qquad 0<s\le cL^{-2},\qquad L=\log Y.
-\]
-Indeed $\log(2+|x|+v)\le C_0+L+\log(1+v)$, and division by $v$
-bounds the right-hand expression inside this logarithmic comparison by
-$L/r+O_r(1)$, whereas $1/(8s)$ grows quadratically in $L$.
-Thus the part of \eqref{scf-gaussian-integral} with $|u|>r$, after
-division by $F(z)$, is bounded in absolute value by
-\begin{equation}\label{scf-tail}
- C\exp\left(-\frac{r^2}{16s}\right).
-\end{equation}
-Dividing further by $e^{sp(z)^2}$ costs at most
-$\exp(s|p(z)|^2)\le\exp(C^2c)$.
-The entire relative tail is therefore $O(L^{-M})$ for every fixed $M$,
-uniformly throughout the stated real-time range.  The same Gaussian
-argument controls the tails of $e^{pu}$ times each fixed polynomial in
-$u$ that appears below.
-
-\subsection{The first correction and its spatial derivatives}
-
-For $|u|\le r$, integrate the Taylor expansion of $p$ along the real
-segment.  With $p=p(z)$ and $p'=p'(z)$ this gives
-\begin{equation}\label{scf-log-expansion}
- \log\frac{F(z+u)}{F(z)}=pu+\frac12p'u^2+R_3(z,u),
- \qquad |R_3(z,u)|\le CL|u|^3.
-\end{equation}
-The logarithm is continued from its value zero at $u=0$.
-Writing $A=p'u^2/2$, and taking $r$ fixed and small, the elementary
-exponential remainder estimate implies
-\begin{equation}\label{scf-exp-remainder}
- |e^{A+R_3}-1-A|
- \le C\{L|u|^3+L^2|u|^4\}e^{CLu^2}.
-\end{equation}
-
-Let $E_s$ denote expectation for a centered real Gaussian of variance
-$2s$.  For every fixed integer $j\ge0$,
-\begin{equation}\label{scf-weighted-moment}
- \frac{E_s[|u|^j e^{(\Re p)u+CLu^2}]}{|e^{sp^2}|}
- \le C_{j,c}(\sqrt{s}+sL)^j.
-\end{equation}
-For completeness, put $d=1-4CLs\ge1/2$.  Completing the real square
-changes the variance to $2s/d$, the mean to $2s\Re p/d$, and the scalar
-mass to $d^{-1/2}e^{s(\Re p)^2/d}$.  Relative to $|e^{sp^2}|$, the
-exponent of this mass is
-\[
- s(\Im p)^2+s(\Re p)^2(d^{-1}-1)=O_c(1).
-\]
-The usual absolute moments of the shifted Gaussian prove
-\eqref{scf-weighted-moment}.  This calculation pays the possible complex
-cancellation without discarding the complex leading exponential.
-Since $\sqrt{s}+sL=O_c(L^{-1})$, integrating
-\eqref{scf-exp-remainder} gives a relative error $O(L^{-2})$.
-The discarded original and polynomial tails are covered by
-\eqref{scf-tail}.
-
-The remaining Gaussian moments are exact, also for complex $p$:
-\[
- E_s[e^{pu}]=e^{sp^2},\qquad
- E_s[u^2e^{pu}]=(2s+4s^2p^2)e^{sp^2}.
-\]
-Combining them with \eqref{scf-log-expansion} proves
-\begin{equation}\label{scf-first-correction}
- \frac{H(-s,z)}{F(z)e^{sp(z)^2}}
- =1+sp'(z)\{1+2sp(z)^2\}+O(L^{-2}),
-\end{equation}
-and hence the $1+O(L^{-1})$ comparison of
-Theorem~\ref{thm:gaussian}.  At $s=0$ the ratio is exactly one, and
-these conclusions hold by continuity with zero remainder there.
-
-Carry out the proof on a fixed larger positive-offset strip and with
-fixed horizontal extensions.  The remainder in
-\eqref{scf-first-correction} is holomorphic in $z$ on that larger
-region: its denominator $F(z)e^{sp(z)^2}$ never vanishes.
-Cauchy's estimate on fixed-radius disks then bounds every fixed spatial
-derivative of this remainder by $O_k(L^{-2})$ on the smaller region.
-The corresponding derivatives of the $O(L^{-1})$ remainder have order
-$O_k(L^{-1})$.  The margins are essential here.
-
-For sufficiently large $Y$ the relative ratio lies within $O(L^{-1})$
-of one.  It follows that $H(-s,z)$ is nonzero and
-\[
- |H(-s,z)|\ge\tfrac12 e^{-C^2c}|F(z)|.
-\]
-Only now define the negative-time logarithmic derivative by
-\begin{equation}\label{scf-ps-definition}
- p_s(z):=\frac{H_z(-s,z)}{H(-s,z)}.
-\end{equation}
-Taking the analytic logarithm of the relative ratio and differentiating
-in $z$ gives, with the same fixed margins,
-\begin{align}
- p_s(z)&=p(z)+2sp(z)p'(z)+O(L^{-1}),\label{scf-ps-estimate}\\
- \partial_zp_s(z)&=p'(z)+2s\{p'(z)^2+p(z)p''(z)\}+O(L^{-1})
-                  =p'(z)+O(1).\label{scf-ps-derivative}
-\end{align}
-All time parameters in this argument are real.  Neither complex-time
-uniformity nor uniformity as the positive offset tends to zero has been
-established.
-
-\section{Conserved spatial contours}
-\label{sec:scf-contours}
-
-The comparison theorem acquires a region on which material transport is
-well defined.  We next turn that analytic fact into an actual continued
-contour, including its horizontal coverage.  Its endpoints are allowed
-to move.
-
-\begin{theorem}[Fixed-offset material graphs]\label{scf-flow-theorem}
-Assume RH.  Fix $0<b_-<b_+$, $c>0$ and $d>0$.
-For all sufficiently large $Y$, for every $b\in[b_-,b_+]$ and every
-$a\in[Y-d,2Y+d]$, the initial point $z_a=a+ib$ has a unique material
-continuation
-\begin{equation}\label{scf-flow}
- \partial_s Z(s,a)=-p_s(Z(s,a)),\qquad Z(0,a)=z_a,
- \qquad 0\le s\le cL^{-2}.
-\end{equation}
-Uniformly in these parameters, with $J=\partial_a Z$,
-\begin{align}
- Z(s,a)&=z_a-sp(z_a)+O(L^{-2}),\label{scf-position-expansion}\\
- J(s,a)&=1-sp'(z_a)+O(L^{-2}).\label{scf-tangent-expansion}
-\end{align}
-The image is a graph over its advected real interval, covers $[Y,2Y]$,
-and has displacement, tangent angle and slope $O(L^{-1})$.
-Moreover
-\begin{equation}\label{scf-material}
- H(-s,Z(s,a))J(s,a)=F(z_a),\qquad
- P(-s,Z(s,a))=P(0,z_a),
-\end{equation}
-where $P(t,z)=\int_0^z H(t,w)\,\dd w$ is the canonical primitive of
-the even field.  There are constants $0<\kappa<K$ such that
-\begin{equation}\label{scf-upward}
- \kappa sL\le\Im Z(s,a)-b\le KsL.
-\end{equation}
-At fixed real coordinate the graph also moves upward with increasing
-backward duration $s$.
-\end{theorem}
-\begin{proof}
-Choose a rectangle containing the initial segment with additional fixed
-horizontal margins and with fixed positive lower and finite upper
-imaginary margins.  Establish the comparison and derivative estimates
-on a still larger rectangle, leaving room for the Cauchy disks above.
-On the containing rectangle,
-$|p_s|+|\partial_zp_s|\le KL$.  Local ODE existence therefore applies.
-Until the first exit,
-\[
- |Z(s,a)-z_a|\le KLs\le Kc/L.
-\]
-For sufficiently large $Y$ this is less than half every initial spatial
-buffer.  A first exit is impossible, and ordinary ODE continuation gives
-the solution on the full interval.  This is continuation in a paid
-finite rectangle; no global properness assumption is involved.
-
-Differentiating in the label gives
-\[
- \partial_sJ=-(\partial_zp_s)(Z)J,\qquad J(0,a)=1.
-\]
-The continuous logarithm with initial value zero satisfies
-$|\log J|\le Kc/L$.  Hence $J=1+O(L^{-1})$, $\Re J>0$, and its
-continuous argument is $O(L^{-1})$.  Strict increase of $\Re Z$ in $a$
-makes the image a graph with slope $\Im J/\Re J=O(L^{-1})$.
-The fixed initial end extensions and the displacement bound put its left
-endpoint to the left of $Y$ and its right endpoint to the right of $2Y$.
-Thus the graph covers the whole target interval without fixing endpoints.
-
-For \eqref{scf-position-expansion},
-\eqref{scf-ps-estimate} and $|Z-z_a|=O(sL)$ give
-$p_s(Z)-p(z_a)=O(sL^2+L^{-1})$.  Integration over
-$0\le s\le cL^{-2}$ costs $O(L^{-2})$.
-Similarly \eqref{scf-ps-derivative} gives
-$\partial_zp_s(Z)=p'(z_a)+O(1)$, while $J=1+O(L^{-1})$.
-Inserting these into the equation for $J$ proves
-\eqref{scf-tangent-expansion}.
-
-Since $\partial_sH(-s,z)=H_{zz}(-s,z)$, differentiation gives
-\[
- \partial_s\{H(-s,Z)J\}
-  =\bigl[H_{zz}(-s,Z)-H_z(-s,Z)p_s(Z)
-       -H(-s,Z)\partial_zp_s(Z)\bigr]J=0.
-\]
-This proves the first identity in \eqref{scf-material}.
-Evenness gives $H_z(t,0)=0$, so $P_t=-H_z$ and
-\[
- \partial_s P(-s,Z)=H_z(-s,Z)-H(-s,Z)p_s(Z)=0.
-\]
-This proves the second identity.  The continued contour is therefore the
-selected local inverse-primitive lift.  Its finite-rectangle bound
-prevents escape to an asymptotic value on this interval; other inverse
-branches sharing the same primitive value do not affect this uniqueness.
-
-It remains to prove the direction of motion.  Taking imaginary parts in
-\eqref{scf-product} yields the absolutely convergent positive kernel
-\begin{equation}\label{scf-positive-kernel}
- -\Im p(x+iy)=\sum_{\lambda\in\mathcal Z}
-                   \frac{y}{(x-\lambda)^2+y^2}.
-\end{equation}
-Its upper bound is $KL$ on the containing rectangle.
-For the lower bound choose a fixed $R$ sufficiently large that the main
-term in $N_F(x+R)-N_F(x-R)$,
-$(R/(2\pi))\log x+O_R(1)$, dominates the two
-$O(\log x)$ errors in \eqref{scf-count}.  A slightly enlarged fixed
-window absorbs endpoint conventions.  It contains at least a positive
-multiple of $\log x$ zeros, including multiplicity.  Each contributes a
-fixed positive amount to \eqref{scf-positive-kernel} on the containing
-strip.  Thus $\kappa_0L\le-\Im p\le K_0L$ there.
-Equation~\eqref{scf-ps-estimate} changes $p$ by only $O(1)$.
-The flow equation consequently gives
-$\kappa L\le\partial_s\Im Z\le KL$ for large $Y$, and integration
-proves \eqref{scf-upward}.
-
-Finally write the graph as $y=\varepsilon(x,s)$, where $s$ denotes
-backward duration.  Its transport equation is
-\[
- \partial_s\varepsilon=-\Im p_s
-                   +(\Re p_s)\partial_x\varepsilon.
-\]
-The first term is bounded below by a positive multiple of $L$; the
-second is $O(1)$ because the slope is $O(L^{-1})$.
-Thus the fixed-$x$ derivative is positive for sufficiently large $Y$.
-\end{proof}
-
-The upward direction is a statement about these spatial graphs.  It is
-not a sign theorem for a regularized relative zero current or for a
-physical three-form.  Material conservation transfers the acquired
-field estimate into geometry; it does not supply an additional
-multiplicity-sensitive arithmetic estimate.
-
-\section{What regular contours do not distinguish}
-\label{sec:limits}
-
-The acquired wall is compatible with a multiple zero inside it. This
-limitation can be seen both at the local heat scale and in a complete
-positive-source field with the same two-term zero count as the target.
-It concerns the information used in the preceding estimates; it is not
-an exclusion of estimates using the exact theta arithmetic.
-
-\begin{proposition}[A positive-source field with no simple zeros]
-\label{prop:all-multiple}
-Assume RH for $F$ and set
-\begin{equation}
- a_* =\frac{\log2}{4},\qquad
- G_0(z)=F(z/2)^2\bigl(1+\cos(a_*z)\bigr).
- \label{eq:all-multiple-control}
-\end{equation}
-Every zero of $G_0$ is real and has even multiplicity. Its positive zero
-count, with multiplicities, satisfies
-\begin{equation}
- N_G(X)=\frac X{4\pi}\log\frac X{4\pi}-\frac X{4\pi}
-             +O(\log X).
- \label{eq:matched-count}
-\end{equation}
-It is the Fourier transform of a positive even superexponentially
-decaying source. Its heat evolution obeys the Gaussian comparison and
-material-contour conclusions proved above, with its own constants.
+Here $m_a$ is the multiplicity (order) of the zero of $H(t,\cdot)$
+at $a$, and $\delta_a$ is the unit point mass at $a$.
 \end{proposition}
 \begin{proof}
-Zeros of the squared factor have even multiplicity. The other factor
-is $2\cos^2(a_*z/2)$, with double zeros at the odd multiples of
-$\pi/a_*$. Multiplicities add at coincidences. Hence
+Write $f=H$ and $p=H_z$. The Cauchy--Riemann equations give
 \[
- N_G(X)=2N_F(X/2)+a_*X/\pi+O(1).
+ \Delta D=4|p|^2,\qquad |\nabla D|^2=4|f|^2|p|^2.
 \]
-The first term has the main expression in \eqref{eq:matched-count}
-minus $X\log2/(4\pi)$; the second term restores exactly this linear
-term. This proves the count.
-
-The logarithmic derivative is
+The quotient rule for $\Delta\log D$ proves
+\eqref{eq:lapdensity}. For the measure limit, set
 \begin{equation}
- \frac{G_0'}{G_0}(z)=p(z/2)-a_*\tan(a_*z/2).
- \label{eq:control-log-derivative}
+ k_\eps(w)=\frac{\eps^2}{\pi(|w|^2+\eps^2)^2},
+ \qquad \int_\C k_\eps(w)\dd A_w=1.
+ \label{eq:targetkernel}
 \end{equation}
-The tangent and every fixed derivative are bounded on a fixed positive
-offset strip. The $F$ term inherits the bounds at the half-height and
-half-offset. Thus all the initial logarithmic estimates, the global
-horizontal ratio and the local Gaussian estimates apply. The positive
-real-zero kernel and the count give the same upward-drift lower bound.
-The exact canonical Euler factorization is absent, but the logarithmic
-bound it supplied to our proof is already present in
-\eqref{eq:control-log-derivative}.
-
-For the source, write
-$F(z)=\int_\R\rho(u)e^{izu}\dd u$ with
-$\rho=\Phi_{\mathrm{even}}/2$. Put $h(u)=2\rho(2u)$ and $q=h*h$.
-Then the full Fourier density of $G_0$ is
-\begin{equation}
- \rho_G(u)=q(u)+\tfrac12q(u-a_*)+\tfrac12q(u+a_*).
- \label{eq:control-source}
-\end{equation}
-It is positive and even. To check its decay, split the convolution
-integral into $|v|\ge|u|/2$ and its complement, where
-$|u-v|\ge|u|/2$. It follows that
-\[
- q(u)\le2\|h\|_1\sup_{|v|\ge|u|/2}h(v).
-\]
-Superexponential decay therefore survives convolution and fixed shifts.
-The integral
-$G(t,z)=\int_\R e^{tu^2}\rho_G(u)e^{izu}\dd u$
-exists for every real $t$, gives $G_t=-G_{zz}$, and has the exact
-Gaussian representation. Every step of the comparison and flow proof
-now applies.
+The holomorphic area formula uses the Jacobian $|H_z|^2$.
+On a small disk containing just an order-$m$ zero, every sufficiently
+small regular target value has $m$ preimages, counted with multiplicity;
+this follows from Rouch\'e's theorem. All those preimages approach the
+zero as the target approaches zero. Integration against the approximate
+identity $k_\eps$ gives mass $m$ and the appropriate value of each
+continuous test function. On the remaining compact set, $|H|$ has a
+positive lower bound and the density tends uniformly to zero. A finite
+disk cover proves \eqref{eq:divisor}.
 \end{proof}
 
-The proposition shows that initial real-rootedness, the displayed coarse
-count, a positive source, and the existence of the fixed-offset bounds
-are compatible with \emph{zero simple zeros}. Their existence alone
-cannot yield even a positive simplicity proportion. The failed premise
-for this control is the exact canonical source identity, not the coarse
-bounds already acquired. An estimate using actual theta coefficients,
-exact invariant values or sharper quantitative constants may
-still distinguish the target.
-
-\subsection{The offset cannot simply be taken to zero}
-
-The local model $K(t,z)=(z-a)^2-2t$ gives, at
-$z=a+i\beta/L$ and $s=\kappa/L^2$,
+For the exact local model $H=c(z-a)^m$, radial integration gives
 \begin{equation}
- \frac{K(-s,z)}{K(0,z)}=1-\frac{2\kappa}{\beta^2},
- \qquad
- \exp\left(s\left(\frac{K_z(0,z)}{K(0,z)}\right)^2\right)
-       =e^{-4\kappa/\beta^2}.
- \label{eq:quadratic-obstruction}
+ \int_{|z-a|<R}\rho\dd A
+ =\frac{m|c|^2R^{2m}}{|c|^2R^{2m}+\eps^2}. \label{eq:monomial}
 \end{equation}
-The first expression vanishes at $\kappa=\beta^2/2$; the second never
-does. Here the initial logarithmic derivative has derivative
-$2L^2/\beta^2$, beyond the fixed-offset $O(L)$ hypothesis. This is a
-local obstruction to extending the same generic argument through an
-allowed double. To put the model literally in the growing-height band,
-one may take the translated family $a=Y$; the field then depends on $Y$.
-Proposition~\ref{prop:all-multiple} separately supplies a single fixed
-field with multiple zeros at arbitrarily large heights.
+At a simple zero, $A(a)=H_z(a)/(\sqrt\pi\eps)$ is finite and
+nonzero for fixed $\eps$. At a multiple zero, $A(a)=0$. For $m>1$,
+the model density peaks on the circle
+\[
+ |z-a|^{2m}=\frac{m-1}{m+1}\frac{\eps^2}{|c|^2}.
+\]
+Thus a multiple zero can be represented by a ring of density around a
+zero of the amplitude. Multiplicity is the limiting integrated mass;
+it need not be the height of a pointwise density maximum.
 
-A near-axis argument must therefore keep the true local zero factor and
-control its multiplicity-sensitive part. Assuming a floor through this
-model would assume away the event to be studied.
+The regulator measures function values. The spatial scale near a simple
+zero is approximately $\eps/|H_z(a)|$, and near the displayed
+order-$m$ model it is $(\eps/|c|)^{1/m}$. Fixed $\eps$ does not give
+fixed spatial resolution at different heights. A space- or
+time-dependent regulator would add terms to the subsequent equations.
 
-\section{From a collision balance to simple zeros}
-\label{sec:resource}
+\subsection{Finite mass is exactly the polynomial case}
 
-The contour theorem supplies a zero-free outer corridor. To use it toward
-simplicity, one must also control the nonreal population inside the
-corridor at the earlier time. The following exact balance states that
-remaining requirement without replacing one-sided motion by signed
-conservation. The time endpoints $a,b$ in this section are unrelated to
-the height label of a material arc.
-
-Let $H$ be a nonzero, jointly holomorphic solution of
+\begin{theorem}[Total mass of an entire slice]
+\label{thm:massclassification}
+Let $f$ be a nonconstant entire function and let $A$ be
+\eqref{eq:definition} with $H=f$. For every $\eps>0$,
 \begin{equation}
- H_t=-H_{zz},\qquad H(t,\bar z)=\overline{H(t,z)}\quad(t\in\R),
- \label{eq:heat}
+ \int_\C |A|^2\dd A_z=
+ \begin{cases}
+ n,&f\text{ is a polynomial of degree }n,\\
+ +\infty,&f\text{ is transcendental entire}.
+ \end{cases} \label{eq:massclassification}
 \end{equation}
-on a connected complex neighborhood of a compact time--space cylinder. We study real times
-$I=[a,b]$. A simple zero moves with velocity
-\begin{equation}
- v(t,z)=\frac{H_{zz}(t,z)}{H_z(t,z)}.
- \label{eq:velocity}
-\end{equation}
-Individual velocities become singular at a collision. The weighted
-population nevertheless has finite variation.
-
-A \emph{moving window} is a function $\psi(t,z)$, $C^1$ in time and $C^2$
-in space, with $0\le\psi\le1$, $\psi(t,\bar z)=\psi(t,z)$, and support
-contained in a fixed compact spatial set. Its derivatives are continuous
-on the cylinder. Every zero in a sum below is counted with its full
-spatial multiplicity. Put
-\begin{align}
- N_{\psi,\nr}(t)&=\sum_{\substack{H(t,z)=0\\\Im z\ne0}}\psi(t,z),
- \label{eq:nonreal-population}\\
- \FF_{\psi,\nr}^{\pm}
- &=\int_a^b\sum_{\substack{H(t,z)=0\\\Im z\ne0}}
- \bigl[\pm\{\psi_t+\nabla\psi\cdot v\}\bigr]_+\dd t.
- \label{eq:relative-flux}
-\end{align}
-The integrands are defined at regular times; the exceptional times have
-measure zero. Here $[s]_+=\max(s,0)$ and complex velocities are viewed as
-planar vectors. These are one-sided fluxes: repeated inward and outward
-motion is counted each time.
-
-At a real multiple zero $(t_e,x_e)$ of order $m_e$, let
-\begin{equation}
- \BB_\psi=\sum_{a<t_e\le b}
- 2\left\lfloor\frac{m_e}{2}\right\rfloor\psi(t_e,x_e).
- \label{eq:birth-weight}
-\end{equation}
-The endpoint convention is deliberate: an event at $b$ is included; an
-event at $a$ has already occurred.
-
-\begin{theorem}[Nonreal mass and relative flux]
-\label{thm:balance}
-Under the preceding hypotheses, the fluxes are finite and
-\begin{equation}
- \boxed{\quad
- N_{\psi,\nr}(b)+\BB_\psi
- =N_{\psi,\nr}(a)+\FF_{\psi,\nr}^{+}-\FF_{\psi,\nr}^{-}.
- \quad}
- \label{eq:balance}
-\end{equation}
-If $\psi_t+u\cdot\nabla\psi=0$ for a smooth boundary velocity $u$, then
-the integrand in \eqref{eq:relative-flux} is
-$[\pm\nabla\psi\cdot(v-u)]_+$.
 \end{theorem}
-
-Thus the relevant motion is relative to the boundary. Formula
-\eqref{eq:balance} applies equally when the window changes shape without
-being carried by a globally regular velocity field.
-
-Suppose $\psi(b,x)=1$ at each real nonsimple endpoint site in a prescribed
-core $K$. Let
-\[
- M_K=\sum_{\substack{x\in K\cap\R\\m_x\ge2}}m_x,
- \qquad D_K=\sum_{\substack{x\in K\cap\R\\m_x\ge2}}(m_x-1),
- \qquad \mathcal R_\psi=N_{\psi,\nr}(a)+\FF_{\psi,\nr}^{+}.
-\]
-
-\begin{corollary}[Sharp endpoint bounds]
-\label{cor:multiplicity}
-\begin{equation}
- \boxed{D_K\le\mathcal R_\psi,\qquad
- M_K\le\frac32\mathcal R_\psi.}
- \label{eq:sharp-bounds}
-\end{equation}
-Both constants are optimal. If $\mathcal R_\psi<2$, there is no nonsimple
-real endpoint site in $K$.
-\end{corollary}
-
-These statements concern real endpoint zeros and need no Riemann
-hypothesis. Endpoint reality is an additional hypothesis when all zeros
-of a canonical target are to be covered.
-
-\subsection{Why a collision costs an even number of nonreal labels}
-
-\begin{lemma}[Local heat birth]
-\label{lem:birth}
-At a spatial zero of order $m$ at $(t_e,z_e)$, the leading parabolic
-polynomial, with $s=t-t_e$ and $w=z-z_e$, is a nonzero multiple of
-\begin{equation}
- p_m(s,w)=\sum_{k=0}^{\lfloor m/2\rfloor}
- \frac{m!(-s)^k w^{m-2k}}{k!(m-2k)!}.
- \label{eq:hermite}
-\end{equation}
-The local roots are analytic in a one-sided square-root time parameter
-and have integrable speeds $O(|s|^{-1/2})$. At a real event exactly
-$2\lfloor m/2\rfloor$ nonreal labels disappear as real time increases.
-Multiple events are isolated, and hence finite on the compact sets used
-here.
-\end{lemma}
 \begin{proof}
-Successive time derivatives are $(-\partial_z^2)^kH$, so the terms of
-parabolic degree $m$ are precisely \eqref{eq:hermite}. For $s>0$,
-$p_m(s,w)=(2s)^{m/2}\mathrm{He}_m(w/\sqrt{2s})$, where the monic
-probabilists' Hermite polynomial has distinct real roots. For $s<0$ the
-rescaled roots are purely imaginary, with one zero root if $m$ is odd.
-The implicit function theorem after square-root rescaling continues each
-simple rescaled root analytically. At a real event, real type and
-uniqueness keep the forward roots real and the odd central backward
-branch real. The other backward branches are nonreal.
-
-The same rescaling is valid for complex $s$. It makes the local prepared
-discriminant a nonzero multiple of
-$s^{m(m-1)/2}$ to leading order. There is consequently no other multiple
-event sufficiently near the given one. Compactness proves finiteness.
-A spatial slice cannot vanish identically: the heat equation would make
-all its time derivatives vanish, and analyticity would force $H$ to be
-identically zero on the connected neighborhood.
-\end{proof}
-
-\begin{proof}[Proof of Theorem~\ref{thm:balance} and
-Corollary~\ref{cor:multiplicity}]
-Between events, differentiate the window along each root. Lemma
-\ref{lem:birth} makes the resulting variation integrable. Roots entering
-or leaving the compact support cause no jump because the window vanishes
-there. An off-real collision preserves the weighted nonreal mass; a real
-collision removes exactly the weight in \eqref{eq:birth-weight}.
-Adding these changes proves \eqref{eq:balance}.
-
-For $m\ge2$,
-\[
- m-1\le2\lfloor m/2\rfloor,
- \qquad m\le\tfrac32\,2\lfloor m/2\rfloor.
-\]
-Each target site is counted with window value one. Discarding the
-nonnegative terms $N_{\psi,\nr}(b)$ and $\FF^-_{\psi,\nr}$ proves
-\eqref{eq:sharp-bounds}. A target multiple site costs at least two,
-giving the final assertion. The field $H=z^3-6tz$, with a window equal
-to one on its local roots, has earlier nonreal mass two and endpoint
-values $D_K=2$, $M_K=3$. It attains both constants.
-\end{proof}
-
-
-\subsection{The part of the resource supplied by the new wall}
-\label{sec:wall-resource}
-
-The material velocity in forward heat time is $U=H_z/H$.
-It differs from the root velocity $v=H_{zz}/H_z$ in
-\eqref{eq:velocity}. Preserving $H\,dz$ therefore does not transport
-individual zeros or annihilate their relative current.
-Nevertheless the acquired zero-free corridor has an exact use in the
-balance: the upper and lower outer transitions can be placed where
-there are no roots.
-
-\begin{corollary}[Reduction to earlier mass and height-end flux]
-\label{cor:wall-resource}
-Fix $b>0$, $c>0$ and fixed horizontal margins. Under RH, for all
-sufficiently large $Y$ there is a conjugation-symmetric smooth window
-$\psi_Y$ on $[-S,0]$, $S=c/(\log Y)^2$, equal to one at every real
-point of $[Y,2Y]$, whose upper and lower transition corridors contain
-no zeros at any time. Its nonreal flux is supported only in the fixed
-horizontal end regions. If $M_Y$ counts labels at nonsimple endpoint
-sites in $[Y,2Y]$, then
+Apply the area formula first on increasing disks and then use monotone
+convergence. If $n_f(w)$ is the number of preimages of $w$, it gives
 \begin{equation}
- M_Y\le\frac32\left\{
- N_{\psi_Y,\nr}(-S)+\FF_{\mathrm{ends},\nr}^{+}\right\}.
- \label{eq:wall-resource-consumer}
+ \int_\C |A|^2\dd A_z
+ =\int_\C k_\eps(w)n_f(w)\dd A_w. \label{eq:globalarea}
 \end{equation}
-The right-hand terms retain their full definitions; neither is estimated
-in size by the contour theorem.
+A degree-$n$ polynomial has $n_f(w)=n$ at every regular value, giving
+the first case.
+
+A transcendental entire function has an essential singularity at
+infinity. Great Picard's theorem, in the form stated in
+\cite[\S1.10(iii)]{DLMFPicard}, implies that at most one complex value
+can have only finitely many preimages: if two did, a sufficiently large
+exterior disk would omit both. Hence $n_f(w)=\infty$ for almost every
+$w$. Since $k_\eps$ is strictly positive, \eqref{eq:globalarea} is
+infinite. Critical values form a null set and do not affect the area
+formula or either conclusion.
+\end{proof}
+
+\begin{corollary}[The canonical field has infinite mass]
+For every real $t$ and every constant $\eps>0$, the amplitude constructed
+from \eqref{eq:theta} satisfies $\int_\C|A|^2=\infty$.
 \end{corollary}
 \begin{proof}
-Choose the strip for Theorem~\ref{thm:gaussian} to contain a fixed
-neighborhood of $y=b$, and reflect it across the real axis. Use the
-material graph $y=\varepsilon(x,-t)$ of
-Theorem~\ref{scf-flow-theorem}, with sufficiently long fixed initial end
-extensions. Its $O(1/\log Y)$ displacement leaves a fixed thin
-transition about this graph inside the zero-free strip.
-
-Take a smooth compact horizontal cutoff $\eta$, equal to one on
-$[Y,2Y]$, supported inside the covered extended interval. Choose an
-even smooth cutoff $\chi$ equal to one for $|r|\le1-\delta$ and zero
-for $|r|\ge1+\delta$, with fixed small $\delta>0$, and set
-\[
- \psi_Y(t,x+iy)=\eta(x)
-       \chi\left(\frac{y}{\varepsilon(x,-t)}\right).
-\]
-The graph is smooth and positive. Choosing $\delta$ small and then $Y$
-large puts every point with $\chi'\ne0$ in the acquired zero-free
-corridors. At a regular root, all terms containing $\chi'$ vanish.
-The remaining window variation is exactly
-\[
- \frac{d}{dt}\psi_Y(t,z(t))
-   =\eta'(\Re z)\chi\left(\frac{\Im z}
-                                  {\varepsilon(\Re z,-t)}\right)
-                         \Re v(t,z).
-\]
-It is supported at the horizontal ends. Corollary~\ref{cor:multiplicity}
-then proves \eqref{eq:wall-resource-consumer}.
+The Riemann--Lebesgue lemma applies to the integrable source
+$e^{tu^2}\Phi(u)$, so $H(t,x)\to0$ as real $|x|\to\infty$.
+Positivity gives $H(t,0)>0$. Thus the entire slice cannot be a
+polynomial, and Theorem~\ref{thm:massclassification} applies.
 \end{proof}
 
-A fixed upper wall inside the same acquired strip would also remove
-these transition contributions. Thus the new analytic floor pays an
-outer boundary; material conservation describes a natural evolution
-of that boundary. Neither choice removes the interior earlier mass.
-The construction is independent of the field regulator used below.
+This is a statement about the specific amplitude \eqref{eq:definition},
+not about all possible weighted zero fields. It proves that a global
+constant normalization of this amplitude is impossible. It does not
+preclude a finite-window state, treated in Section~\ref{sec:window}.
+Unfolding height to constant mean zero spacing cannot turn an infinite
+count into finite total mass.
 
-For $N_Y$ the total endpoint multiplicity in the covered band, the
-number of simple zeros is $N_Y-M_Y$. An acquired estimate
-$\mathcal R_Y\le\alpha N_Y$, with
-$\mathcal R_Y=N_{\psi_Y,\nr}(-S)+\FF_{\mathrm{ends},\nr}^{+}$,
-would give
-\[
- N_Y-M_Y\ge(1-3\alpha/2)N_Y.
-\]
-A bound $\mathcal R_Y=o(N_Y)$ would give density-one simplicity on
-these bands. An individual-site window with resource below two would
-exclude a multiple zero there. These are quantitative consequences of
-the proved balance, not bounds on $\mathcal R_Y$ already obtained.
-Any cumulative conclusion also needs complete coverage of its height
-range and its exceptional low-height region.
+\section{Phase, zero velocity and local conservation}
+\label{sec:transport}
 
-\section{The arithmetic estimate still required}
-\label{sec:next-arithmetic}
+We write planar velocities and currents as complex-valued fields.
+For any smooth field, use the Wirtinger derivative
+$\partial_z=\tfrac12(\partial_x-i\partial_y)$; on holomorphic $H$
+this agrees with its holomorphic derivative. For a complex current
+$j=u+iv$, its divergence is $2\Re(\partial_z j)=u_x+v_y$.
+For a real function $f$, the directional pairing is
+$2\Re((\partial_z f)j)=f_xu+f_yv$.
 
-The main theorem acquires a useful outer contour at the mean-spacing
-squared heat clock. It does not estimate how many nonreal zeros have
-already appeared inside that contour. The all-multiple field in
-Proposition~\ref{prop:all-multiple} demonstrates that this distinction
-persists even with the same two-term zero count and positive source.
-There are two natural ways to advance: bound the complete resource in
-\eqref{eq:wall-resource-consumer}, or obtain a near-axis comparison
-which retains the actual cluster factor and controls its
-multiplicity-sensitive part using canonical arithmetic.
-
-\subsection{A complete field quantity, with ordered limits}
-
-For $\D\psi=\psi_x-i\psi_y$, put
+At a simple zero $a(t)$, the implicit-function theorem and
+\eqref{eq:heat} give
 \begin{equation}
- A_\psi=\psi_t|H_z|^2+
-          \Re\{\D\psi\,H_{zz}\overline{H_z}\},\qquad
- k_\rho(w)=\frac{\rho^2}{\pi(|w|^2+\rho^2)^2}.
- \label{eq:resource-numerator}
+ \dot a=\frac{H_{zz}}{H_z}(t,a). \label{eq:zerovelocity}
 \end{equation}
-Let $\vartheta_\delta(y)$ vanish for $|y|\le\delta$, equal one for
-$|y|\ge2\delta$, and increase to $1_{y\ne0}$ as
-$\delta\downarrow0$. The precise field representation, proved in
-Appendix~\ref{sec:field}, is
+Where $H_z\ne0$, choose a local phase $\theta=\arg A=\arg H_z$.
+Holomorphicity yields
+\begin{equation}
+ \theta_x=\Im\frac{H_{zz}}{H_z},\qquad
+ \theta_y=\Re\frac{H_{zz}}{H_z},\qquad
+ v=\theta_y+i\theta_x=\frac{H_{zz}}{H_z}.
+ \label{eq:phasevelocity}
+\end{equation}
+Thus the phase gradient supplies the zero velocity with its coordinate
+derivatives exchanged. The density gradient alone does not determine
+transport.
+
+\begin{proposition}[Smooth conserved current]
+Define
 \begin{align}
- N_{\psi,\nr}(-S)
- &=\lim_{\delta\downarrow0}\lim_{\rho\downarrow0}
-   \int\vartheta_\delta(\Im z)\psi(-S,z)
-     k_\rho(H(-S,z))|H_z(-S,z)|^2\dd A_z,
- \label{eq:resource-population}\\
- \FF_{\psi,\nr}^{+}
- &=\lim_{\delta\downarrow0}\lim_{\rho\downarrow0}
-   \int_{-S}^0\int\vartheta_\delta(\Im z)
-        k_\rho(H)[A_\psi]_+\dd A_z\dd t.
- \label{eq:resource-field-flux}
+ j&:=\Im(\bar A A_y)+i\Im(\bar A A_x),
+ \label{eq:current}\\
+ j&=\frac{\eps^2H_{zz}\overline{H_z}}{\pi D^2}.
+ \label{eq:currentheat}
 \end{align}
-These are exact for each fixed analytic field and fixed smooth window.
-They do not assert uniform convergence as $Y$ grows or as a window
-itself depends on $\rho$. A finite-regulator approximation needs its
-own uniform error before such limits can be interchanged. The cutoff
-$\vartheta_\delta$ measures nonreal roots; it is not multiplied into
-$\psi$ before differentiating.
-
-\subsection{Retain the coupled relative current}
-
-One possible arithmetic reference uses another analytic field $G$ of
-real type and a smooth conjugation-symmetric cutoff
-$\chi:\C\to[0,1]$, with $\psi=\chi(G)$ on a compact packet.
-The packet condition means the reference stays outside $\supp\chi$
-on a containing spatial collar, so the window extends smoothly by zero.
-A direct chain rule gives
+The real part of $j$ is the $x$-current and its imaginary part is
+the $y$-current; $j$ is generally not holomorphic.
+Then everywhere, including at critical and multiple points,
 \begin{equation}
- A_\psi=\Re\{\D\chi(G)(G_tH_z-G_zH_t)\overline{H_z}\}.
- \label{eq:reference-determinant}
+ \rho_t+2\Re(\partial_z j)=0.
+ \label{eq:continuity}
 \end{equation}
-If $G_t=-G_{zz}$, the determinant in this expression is
-\[
- \WW(H,G)=H_{zz}G_z-H_zG_{zz}.
-\]
-No division by either derivative is required. If
-$d_G=G_t+G_{zz}$, retain the additional term $d_GH_z$.
-For $\psi=\eta\chi(G)$ without a packet condition, the right-hand
-side of \eqref{eq:reference-determinant} is multiplied by $\eta$ and
-one must add
-$\chi(G)\Re\{\D\eta H_{zz}\overline{H_z}\}$.
-The positive part is taken after summing these terms.
-
-When $G$ is a constant multiple of $H$, the matched field-level window
-has zero relative field-level flux. Its boundary velocity, where
-regular, is $H_{zz}/H_z$, not $H_z/H$. This exact cancellation does not
-bound its earlier nonreal mass. It is a different construction from
-the conserved spatial contours of Section~\ref{sec:scf-contours}.
-
-For the complete theta source a finite prefix is an exact heat
-reference, but its entire omitted tail must remain in the determinant.
-Writing $\Phi=A_N+T_N$ and
-$G_N(t,z)=\int_0^\infty e^{tu^2}A_N(u)\cos(zu)\dd u$, one obtains
-\begin{align}
- \WW(H,G_N)&=\int_0^\infty\!\int_0^\infty
- e^{t(u^2+v^2)}A_N(u)T_N(v)K_z(u,v)\dd u\dd v,
- \label{eq:complete-residual}\\
- K_z(u,v)&=\frac{uv}{2}\bigl\{(v-u)\sin(z(u+v))
-                    +(u+v)\sin(z(u-v))\bigr\}.
- \label{eq:antisymmetric-kernel}
-\end{align}
-Indeed the prefix-prefix products cancel, and differentiating the
-complete transforms leaves precisely the displayed prefix-tail terms.
-The sine addition formulas give the stated kernel. It is
-antisymmetric in $u,v$ and vanishes on the diagonal. This is an
-available arithmetic quantity to estimate before taking absolute values;
-its identity supplies neither a flux sign nor a small-value denominator.
-A small absolute source tail is not necessarily a small relative field
-error near a high zero.
-
-The proof objective is now specific: use information that the control
-\eqref{eq:all-multiple-control} does not possess to bound a complete,
-multiplicity-sensitive expression such as
-\eqref{eq:resource-population}--\eqref{eq:resource-field-flux}, with its
-height ends, near-real cutoff, errors and coverage intact. More terms in
-the fixed-offset asymptotic alone do not meet this objective. The
-contour theorem supplies a proved outer boundary from which that
-arithmetic problem can be pursued.
-
-\appendix
-\section{The complete field representation of the resource}
-\label{sec:field}
-
-Recall the moving-window numerator $A_\psi$ and define
-\begin{equation}
- k_\rho(w)=\frac{\rho^2}{\pi(|w|^2+\rho^2)^2},\qquad
- A_\psi=\psi_t|H_z|^2+\Re\{\D\psi\,H_{zz}\overline{H_z}\}.
- \label{eq:kernel}
-\end{equation}
-The kernel has integral one on the target plane. Its pullback gives a
-smooth density and current
-\[
- \mu_\rho=k_\rho(H)|H_z|^2,\qquad
- j_\rho=k_\rho(H)H_{zz}\overline{H_z},\qquad
- \partial_t\mu_\rho+\operatorname{div}j_\rho=0.
-\]
-One can obtain the last identity by pulling back the closed target-plane
-area form. The moving-window integrand is exactly
-$k_\rho(H)A_\psi=\psi_t\mu_\rho+\nabla\psi\cdot j_\rho$. In a material window it is
-$\nabla\psi\cdot(j_\rho-u\mu_\rho)$.
-
-Let $0\le\vartheta_\delta(y)\le1$ be continuous, vanish for $|y|\le\delta$,
-equal one for $|y|\ge2\delta$, and increase to $1_{y\ne0}$ as
-$\delta\downarrow0$. Set
-\begin{equation}
- Q_{\rho,\delta}^{\pm}
- =\int_I\int\vartheta_\delta(\Im z)k_\rho(H)
-          [\pm A_\psi]_+\dd A_z\dd t.
- \label{eq:regularized-flux}
-\end{equation}
-
-\begin{theorem}[Exact field representation]
-\label{thm:current-limit}
-The complete nonreal flux is
-\begin{equation}
- \FF_{\psi,\nr}^{\pm}
-   =\lim_{\delta\downarrow0}\lim_{\rho\downarrow0}
-                    Q_{\rho,\delta}^{\pm}.
- \label{eq:nonreal-limit}
-\end{equation}
-Without $\vartheta_\delta$, the limit is the corresponding variation of
-\emph{all} roots. In particular it bounds the nonreal positive flux
-from above. There is no excess current concentrated at the collision
-times.
-\end{theorem}
-
-The measuring cutoff in \eqref{eq:regularized-flux} is not part of the
-moving window. Replacing $\psi$ by $\psi\vartheta_\delta$ would introduce
-additional derivative terms and would be a different formula.
-
-\begin{lemma}[Uniform variation of nearby levels]
-\label{lem:levels}
-Let $f$ be jointly holomorphic near a compact cylinder, with no identically
-zero spatial slice. On a compact spatial set, the roots of $f(t,z)=w$
-have locally bounded total variation, uniformly for almost every
-sufficiently small $w$. Their speed sums have a uniform $L^p(I)$ bound
-for some $p>1$.
-\end{lemma}
+On the regular set, $j=\rho v$.
+\end{proposition}
 \begin{proof}
-Cover the compact zero set by finitely many time--disk charts on whose
-spatial circles $f$ stays away from zero, throughout a complex time
-collar. Outside the chart interiors the remaining compact set has a
-positive minimum of $|f|$. Choose the target radius below this minimum
-and the circle bounds, so that every nearby level is covered. In each
-chart $f-w$ has a fixed-degree monic root polynomial, with coefficients
-holomorphic in time and $w$. After normalizing its disk and time interval,
-root containment bounds its coefficients; Cauchy's estimates bound their
-$C^{n-1,1}$ norms uniformly in $w$.
-
-The polynomial-root theorem of Parusi\'nski--Rainer
-\cite[Theorem 1]{pr} gives $L^p$ derivatives of every continuous root
-for $1<p<n/(n-1)$. Choose one admissible $p$ for the finite cover and
-sum the bounds. Degree one is immediate. Returning to physical time
-introduces the factor $|I_{\rm chart}|^{1/p-1}$, where
-$I_{\rm chart}$ is that chart's physical time interval; all these
-factors and any overlaps are included. No root separation is used.
-\end{proof}
-
-\begin{proof}[Proof of Theorem~\ref{thm:current-limit}]
-For almost every target $w$, the spatial area formula, whose Jacobian
-is $|H_z|^2$, rewrites the integral without the measuring cutoff as
-\begin{equation}
- Q_\rho^{\pm}=\int_\C k_\rho(w)V^{\pm}(w)\dd A_w,
- \quad
- V^{\pm}(w)=\int_I\sum_{H(t,z)=w}
- [\pm\{\psi_t+\nabla\psi\cdot v_w\}]_+\dd t,
- \label{eq:area}
-\end{equation}
-where $v_w=-H_t/H_z$. Quotients are used only at regular preimages;
-critical points contribute zero to the original density. Exceptional
-fibers are handled by the almost-everywhere area formula and Fubini.
-
-At every regular time for the zero level, roots and velocities converge
-as $w\to0$. The additional term $\psi_t$ is bounded by the finite chart
-degrees. Lemma~\ref{lem:levels} makes the velocity terms uniformly
-integrable across the finitely many zero-level events. Hence
-$V^{\pm}(w)\to V^{\pm}(0)$ in the essential target-plane sense. The
-portion $|w|\ge r$ in \eqref{eq:area} is at most
+The derivatives of the positive denominator in \eqref{eq:definition}
+contribute only real terms to $\bar A A_x$ and $\bar A A_y$.
+Their imaginary parts therefore give \eqref{eq:currentheat} and
+\eqref{eq:phasevelocity}. For an independent geometric proof of the
+continuity equation, pull back the closed target-plane two-form
+$k_\eps(w)\dd\Re w\wedge\dd\Im w$ by $H(t,z)$. Its pullback is
 \[
- \frac{\rho^2}{\pi(r^2+\rho^2)^2}
- \int_I\int\bigl(|\psi_t||H_z|^2+
-                   |\nabla\psi||H_tH_z|\bigr)\dd A\dd t,
+ \rho\dd x\wedge\dd y+\Im(j)\dd t\wedge\dd x
+ -\Re(j)\dd t\wedge\dd y.
 \]
-which tends to zero. The approximate identity therefore converges to
-the all-root flux. For fixed $\delta$, insert the continuous bounded
-factor $\vartheta_\delta$ in the same proof; then apply monotone
-convergence on the root trajectories as $\delta\downarrow0$.
+Its exterior derivative is
+$(\rho_t+2\Re(\partial_z j))\dd t\wedge\dd x\wedge\dd y$,
+which must vanish. No quotient by $H_z$ is used at critical points.
 \end{proof}
 
-The earlier population has a parallel field representation:
-\begin{equation}
- N_{\psi,\nr}(a)=
- \lim_{\delta\downarrow0}\lim_{\rho\downarrow0}
- \int\vartheta_\delta(\Im z)\psi(a,z)
-                   k_\rho(H(a,z))|H_z(a,z)|^2\dd A_z.
- \label{eq:initial-field}
-\end{equation}
-At a multiple zero the pullback area counts its full multiplicity.
-Thus \eqref{eq:balance}, \eqref{eq:nonreal-limit}, and
-\eqref{eq:initial-field} describe the whole nonreal resource through
-the complete field. They do not yet make that resource small.
+The field and current remain smooth at fixed $\eps$ even when
+individual zero velocities diverge. An order-$m$ zero of $H$ produces
+local phase winding $m-1$ in $A$. However, $A$ also vanishes at critical
+points with $H\ne0$. Winding alone does not identify a zero of $H$;
+it must be combined with the density or the holomorphic lift.
 
-\begin{remark}[The near-real strip]
-For a conjugation-symmetric moving window the omitted flux is locally
-$O(\delta^2)$. Indeed, near a real event put $q=\sqrt{t_e-t}$.
-Uniqueness of the rescaled branches and real type give
-$z_j(-q)=\overline{z_j(q)}$. Therefore $x_j$ is even and $y_j$ odd
-in $q$. In time derivatives, $x_j'=O(1)$,
-$y_j'=O(q^{-1})$, while $\psi_y=O(y_j)=O(q)$.
-The total window derivative is bounded. If
-$|y_j|\ge c_j\sqrt{t_e-t}$ and $|d\psi/dt|\le A_j$, the omitted
-portion costs at most $4A_j\delta^2/c_j^2$. Sum over the finite incoming
-branches after taking $\delta$ below the other tracks' clearance.
-These constants are local field data; no uniform height estimate is
-implicit in this observation.
+\begin{proposition}[Weighted target laws]
+For every fixed smooth real function $g$ on the target plane,
+\begin{equation}
+ \partial_t\{g(H)\rho\}
+ +2\Re\bigl(\partial_z\{g(H)j\}\bigr)=0.
+ \label{eq:targetlaws}
+\end{equation}
+Consequently $\int g(H)\rho$ is conserved whenever it is integrable
+and the current has no net boundary contribution. For a degree-$n$
+polynomial and bounded $g$ it equals
+\begin{equation}
+ n\int_\C g(w)k_\eps(w)\dd A_w. \label{eq:targetcharges}
+\end{equation}
+\end{proposition}
+\begin{proof}
+Replace the target area form above by
+$g(w)k_\eps(w)\dd\Re w\wedge\dd\Im w$, which is still closed.
+The same pullback proves the local identity. Integrate it with its
+boundary flux retained. Formula \eqref{eq:targetcharges} follows from
+the area formula.
+\end{proof}
+
+These are conservation laws of the holomorphic lift $(H,A)$; they use
+$H$ as well as $A$. They are not asserted for every solution of the
+larger field equation below. In the polynomial case the charges in
+\eqref{eq:targetcharges} depend only on degree and the target weight,
+and therefore do not distinguish a simple configuration from a
+multiple one of the same degree.
+
+\section{The exact nonlinear field equation}
+\label{sec:evolution}
+
+\begin{theorem}[Schr\"odinger--Poisson evolution]
+\label{thm:evolution}
+The fields \eqref{eq:definition} satisfy
+\begin{equation}
+ \boxed{\quad iA_t=-A_{xy}+VA,\qquad
+ \Delta V=-8\pi\partial_{xy}|A|^2.\quad}
+ \label{eq:SP}
+\end{equation}
+Both identities hold smoothly through zeros of $H$ and $H_z$.
+\end{theorem}
+\begin{proof}
+Write $f=H$, $p=H_z$, $q=H_{zz}$, $r=H_{zzz}$ and
+$c=\eps/\sqrt\pi$. Then
+\begin{align*}
+ D_x&=p\bar f+f\bar p,&D_y&=i(p\bar f-f\bar p),\\
+ D_t&=-q\bar f-f\bar q,&D_{xy}&=i(q\bar f-f\bar q),\\
+ p_t&=-r,&p_x&=q,\quad p_y=iq,\quad p_{xy}=ir.
+\end{align*}
+Differentiating $A=cp/D$ gives
+\begin{align*}
+ A_t&=c\left(-\frac rD-\frac{pD_t}{D^2}\right),\\
+ A_{xy}&=c\left(\frac{ir}D
+ -\frac{q(D_y+iD_x)+pD_{xy}}{D^2}
+ +\frac{2pD_xD_y}{D^3}\right).
+\end{align*}
+Since $D_y+iD_x=2ip\bar f$ and
+$-iD_t-2iq\bar f=-D_{xy}$, cancellation gives
+\[
+ iA_t+A_{xy}
+ =-2\left(\frac{D_{xy}}D-\frac{D_xD_y}{D^2}\right)A=VA.
+\]
+Applying $-2\partial_{xy}$ to
+$\Delta\log D=4\pi\rho$ proves the second equation.
+\end{proof}
+
+An equivalent useful formula is
+\begin{equation}
+ V=4\Im\left(\frac{\bar H H_{zz}}D
+             -\frac{\bar H^2 H_z^2}{D^2}\right).
+ \label{eq:explicitV}
+\end{equation}
+No derivative quotient occurs in this expression. For any smooth
+solution of the first equation in \eqref{eq:SP} with real $V$, taking
+the real part of $2\bar A A_t$ proves
+\eqref{eq:continuity} with the current \eqref{eq:current}.
+
+\subsection{Davey--Stewartson II coordinates}
+
+Set
+\[
+ X=\frac{x+y}{\sqrt2},\quad Y=\frac{y-x}{\sqrt2},\quad t=2\tau,
+ \quad q(\tau,X,Y)=2\sqrt\pi A(2\tau,x,y).
+\]
+Writing $V^\#(\tau,X,Y)=V(2\tau,x,y)$ and
+$\Phi=V^\#-|q|^2$, the identities
+$\partial_{xy}=\tfrac12(\partial_{XX}-\partial_{YY})$ and
+$\Delta=\partial_{XX}+\partial_{YY}$ give
+\begin{equation}
+ \begin{split}
+ iq_\tau+q_{XX}-q_{YY}-2(\Phi+|q|^2)q&=0,\\
+ \Delta\Phi+2\partial_{XX}|q|^2&=0.
+ \end{split} \label{eq:DSII}
+\end{equation}
+This is the focusing DS-II convention in \cite[equation (1)]{KS}.
+Related constructions from holomorphic Schr\"odinger seeds and
+two-dimensional Dirac operators occur in \cite{Taimanov}; its displayed
+Moutard formula is not identified with \eqref{eq:definition}.
+Only the differential-system comparison is imported here. We derive
+the conservation statements used below directly, without importing a
+global existence or finite-mass theorem for theta.
+
+\subsection{Selecting the potential}
+
+The Poisson equation determines $V$ only up to a harmonic function.
+For the finite-mass theory we specify a real, translation-invariant
+operator by
+\begin{equation}
+ \widehat{\cT f}(k_x,k_y)
+ =-8\pi\frac{k_xk_y}{k_x^2+k_y^2}\widehat f(k_x,k_y),
+ \qquad k\ne0. \label{eq:multiplier}
+\end{equation}
+Its value at $k=0$ is irrelevant in $L^2$. This bounded, selfadjoint
+operator has norm at most $4\pi$, commutes with derivatives and
+translations, and is homogeneous of degree zero. The closed equation
+in the next section is
+\begin{equation}
+ iA_t=-A_{xy}+(\cT\rho)A,\qquad \rho=|A|^2.
+ \label{eq:closed}
+\end{equation}
+The holomorphic formula supplies its own potential; identifying that
+potential with $\cT\rho$ requires global hypotheses. These are proved
+for polynomials below and are not assumed for theta. Moreover, an
+arbitrary solution of \eqref{eq:closed} need not admit the lift
+\eqref{eq:definition}, much less the unchanged theta source.
+
+\section{Conserved quantities and their hypotheses}
+\label{sec:conservation}
+
+In this section suppose $A$ solves \eqref{eq:closed} smoothly on a
+time interval and has enough decay to justify the indicated integrals,
+differentiation and integrations by parts. A smooth rapidly decreasing
+$A$ suffices. The polynomial fields of Section~\ref{sec:polynomial}
+have slower explicit decay, for which the same steps are verified.
+These are conditional conservation theorems for solutions, not
+existence theorems or assertions of global finiteness for theta.
+
+Define momentum densities, total mass and momenta by
+\begin{equation}
+ p_x=\Im(\bar A A_x),\quad p_y=\Im(\bar A A_y),\qquad
+ M=\int\rho,\quad P_x=\int p_x,\quad P_y=\int p_y.
+ \label{eq:charges}
+\end{equation}
+All unmarked integrals in this section are over $\R^2$ with measure
+$\dd x\dd y$. The complex current is $j=p_y+ip_x$.
+Set
+\begin{equation}
+ K=\int\Re(\overline{A_x}A_y),\qquad
+ U=\int\rho\cT\rho,\qquad
+ \boxed{\cE=K+\tfrac12U.} \label{eq:energy}
+\end{equation}
+
+\begin{theorem}[Mass, momentum and Hamiltonian]
+\label{thm:conservation}
+Under these hypotheses, $M$, $P_x$, $P_y$ and $\cE$ are independent
+of time.
+\end{theorem}
+\begin{proof}
+Mass conservation is the integral of \eqref{eq:continuity}.
+For $i=x,y$, differentiating $p_i$ using a general real potential gives
+\begin{align}
+ (p_i)_t
+ &=\Re(\bar A A_{ixy}-\overline{A_{xy}}A_i)-\rho V_i\notag\\
+ &=\partial_x\Re(\bar A A_{iy})
+   -\partial_y\Re(\overline{A_x}A_i)-\rho V_i.
+ \label{eq:momentumlocal}
+\end{align}
+The divergence terms have zero integral. For $V=\cT\rho$,
+selfadjointness and commutation with derivatives imply
+\[
+ \int\rho\partial_i\cT\rho
+ =\int(\cT\rho)\partial_i\rho
+ =-\int\rho\partial_i\cT\rho=0.
+\]
+This proves conservation of both momenta.
+
+For the energy, integrations by parts and selfadjointness give
+\begin{align*}
+ \frac{dK}{dt}&=2\Re\int\overline{-A_{xy}}A_t,\\
+ \frac12\frac{dU}{dt}
+ &=\int V\rho_t=2\Re\int\overline{VA}A_t.
+\end{align*}
+Their sum is $2\Re\int\overline{iA_t}A_t=0$ by
+\eqref{eq:closed}. The factor $1/2$ in the potential energy is
+necessary: the potential depends on the density and is differentiated
+along with it.
+\end{proof}
+
+The variational derivative is
+\[
+ \frac{\delta\cE}{\delta\bar A}=-A_{xy}+(\cT\rho)A.
+\]
+Accordingly the action
+\begin{equation}
+ \int\left\{\int\frac i2(\bar A A_t-A\bar A_t)-\cE[A]\right\}\dd t
+ \label{eq:action}
+\end{equation}
+has \eqref{eq:closed} as its Euler--Lagrange equation. Its phase,
+translation and time symmetries agree with the three preceding
+calculations. This action is nonlocal in space through $\cT$.
+
+\begin{remark}[The Hamiltonian is indefinite]
+The multiplier of $-\partial_{xy}$ is $k_xk_y$, which takes both
+signs, and $|U|\le4\pi\|A\|_4^4$. For a small amplitude modulated
+real radial test function $A=\delta g(x,y)e^{i(k_xx+k_yy)}$,
+$K=\delta^2 k_xk_y\|g\|_2^2$, while $U=O(\delta^4)$.
+Choosing either sign of $k_xk_y$ gives either sign of $\cE$.
+Conservation therefore does not provide a positive gradient bound.
 \end{remark}
 
+\subsection{First moments and mixed virial identities}
 
-\section*{Acknowledgements and status}
+\begin{theorem}[Explicit time-dependent charges]
+\label{thm:virial}
+Assume additionally the moments and boundary terms in the following
+calculation are finite. Define
+\[
+ C_x=\int x\rho,\quad C_y=\int y\rho,\quad
+ \cD=\int(xp_x+yp_y),\quad \cB=\int xy\rho.
+\]
+Then
+\begin{equation}
+ \dot C_x=P_y,\qquad\dot C_y=P_x,\qquad
+ \dot\cB=\cD,\qquad\dot\cD=2\cE.
+ \label{eq:virial}
+\end{equation}
+In particular the quantities
+\begin{equation}
+ C_x-tP_y,\quad C_y-tP_x,\quad
+ \cD-2t\cE,\quad \cB-t\cD+t^2\cE
+ \label{eq:timecharges}
+\end{equation}
+are conserved.
+\end{theorem}
+\begin{proof}
+Integrating the continuity equation against $x$, $y$ and $xy$ gives
+the first three identities. Multiply \eqref{eq:momentumlocal} by
+$x$ for $i=x$ and by $y$ for $i=y$, then integrate and add:
+\begin{equation}
+ \dot\cD=2K-\int\rho(xV_x+yV_y). \label{eq:dilationstep}
+\end{equation}
+Write $R=x\partial_x+y\partial_y$. Degree-zero homogeneity of
+\eqref{eq:multiplier} gives $R\cT=\cT R$. Thus, with
+$I=\int\rho RV$,
+\[
+ I=\int\rho\cT(R\rho)=\int V R\rho=-2\int V\rho-I.
+\]
+Hence $I=-U$, and \eqref{eq:dilationstep} becomes
+$\dot\cD=2K+U=2\cE$. Differentiate the expressions in
+\eqref{eq:timecharges} to finish the proof.
+\end{proof}
+
+The virial here is the signed mixed moment $xy$, not the positive
+variance $x^2+y^2$. Thus $\ddot\cB=2\cE$ has no automatic
+positive-variance consequence. The time-dependent charges are not
+independent claims that $C_x$, $C_y$, $\cD$ or $\cB$ themselves
+are stationary.
+
+\subsection{Boundary forcing and the potential ambiguity}
+
+For a fixed bounded region $\Omega$, write its outward unit normal
+as the complex number $n=n_x+in_y$. The universally valid mass law is
+\begin{equation}
+ \frac d{dt}\int_\Omega\rho
+ =-\int_{\partial\Omega}\Re(j\bar n)\dd s.
+ \label{eq:boundarymass}
+\end{equation}
+The local momentum balance \eqref{eq:momentumlocal} similarly retains
+its two boundary stresses and the force $-\rho\nabla V$.
+
+Even on the whole plane, adding harmonic data changes the available
+invariants. If $V=\cT\rho+W(t,x,y)$, with real prescribed $W$ and
+integrable terms, the same calculation gives
+\begin{equation}
+ \dot P_i=-\int\rho W_i,\qquad
+ \frac d{dt}\left(\cE+\int W\rho\right)=\int W_t\rho.
+ \label{eq:forcing}
+\end{equation}
+For the original Poisson equation $W$ must be harmonic, but these
+identities hold for any real external potential. It is therefore
+essential to specify the potential and the boundary conditions before
+claiming conserved global energy or momentum.
+
+\section{Exact polynomial calculations and collision controls}
+\label{sec:polynomial}
+
+Let
+\begin{equation}
+ H(t,z)=\sum_{k=0}^n a_k(t)z^k,\qquad n\ge1,\quad a_n\ne0,
+ \label{eq:polynomial}
+\end{equation}
+solve \eqref{eq:heat}. Its degree and leading two coefficients are
+constant, and for $n\ge2$,
+\begin{equation}
+ \dot a_{n-2}=-n(n-1)a_n. \label{eq:coefficient}
+\end{equation}
+
+\begin{theorem}[Charges on the polynomial sector]
+\label{thm:polycharges}
+For every such polynomial heat field and every $\eps>0$, the
+amplitude in \eqref{eq:definition} has
+\begin{equation}
+ M=n,\qquad P_x=P_y=0,\qquad\cE=0.
+ \label{eq:polycharges}
+\end{equation}
+The angular moment $L=\int(xp_y-yp_x)$, not asserted conserved for
+general solutions of \eqref{eq:closed}, has the fixed value
+\begin{equation}
+ L=n(n-1). \label{eq:polyangular}
+\end{equation}
+For $n\ge2$, the complex moments are
+\begin{align}
+ \int z\rho\dd A&=-\frac{a_{n-1}}{a_n},\label{eq:firstmoment}\\
+ \int z^2\rho\dd A
+ &=\left(\frac{a_{n-1}}{a_n}\right)^2
+    -\frac{2a_{n-2}(t)}{a_n}.
+ \label{eq:secondmoment}
+\end{align}
+The first-moment formula also holds for $n=1$.
+\end{theorem}
+\begin{proof}
+Uniformly on compact time intervals, $A=O(|z|^{-n-1})$,
+$\nabla A=O(|z|^{-n-2})$, $A_t=O(|z|^{-n-3})$ and
+$V=O(|z|^{-2})$ at infinity. Their further derivatives have the
+corresponding bounds. These justify mass, momentum and energy
+calculations. The second spatial moment is absolutely integrable for
+$n\ge2$. Also $V,\rho\in L^2$ and $\Delta(V-\cT\rho)=0$.
+An entire harmonic $L^2$ function is zero, so the potential agrees
+with \eqref{eq:multiplier}.
+
+Theorem~\ref{thm:massclassification} gives $M=n$. For the other
+moments, use the area formula with the spatial weights $z,z^2$.
+For $n\ge2$, the sum of roots of $H(z)=w$ is
+$-a_{n-1}/a_n$. For $n\ge3$, their squared sum is the right-hand side
+of \eqref{eq:secondmoment}. For $n=2$, an additional term $2w/a_n$
+occurs. Since
+\[
+ \int_\C w k_\eps(w)\dd A_w=0,
+ \qquad \int_\C |w|k_\eps(w)\dd A_w<\infty,
+\]
+the additional term integrates to zero. The same first target moment
+proves \eqref{eq:firstmoment} for the linear polynomial. Absolute
+integrability justifies these applications of Fubini.
+
+The first complex moment is stationary, so
+\eqref{eq:virial} implies $P_x=P_y=0$. For $n\ge2$,
+\eqref{eq:coefficient}--\eqref{eq:secondmoment} give
+\begin{equation}
+ \frac d{dt}\int z^2\rho\dd A=2n(n-1)\in\R.
+ \label{eq:secondderivative}
+\end{equation}
+Its imaginary part says that $\cB=\tfrac12\Im\int z^2\rho$
+is constant. Then $\cD=0$ and $\cE=0$ follow from
+Theorem~\ref{thm:virial}. Its real part, together with continuity,
+is
+\[
+ \frac d{dt}\int(x^2-y^2)\rho
+ =2\int(xp_y-yp_x)=2L,
+\]
+which proves \eqref{eq:polyangular}.
+
+For $n=1$ the field is stationary and has constant phase. Both momenta
+and $L$ are zero. Its density is radial about the single zero;
+the kinetic and potential energy integrals each vanish by oddness in
+the centered coordinates. This gives $\cE=0$ without using a
+divergent second spatial moment.
+\end{proof}
+
+These values are independent of the number of distinct zeros. In
+particular, take
+\begin{equation}
+ H(t,z)=z^2-2t,\qquad
+ A=\frac{2\eps z}{\sqrt\pi(|z^2-2t|^2+\eps^2)}.
+ \label{eq:doublecontrol}
+\end{equation}
+For every real $t$, $M=2$, $P_x=P_y=\cE=0$ and $L=2$.
+The globally normalized state $A/\sqrt2$ is smooth at the double
+zero at $t=0$. The two zeros are nonreal for $t<0$ and real simple
+for $t>0$. Therefore these conserved quantities and smooth normalized
+evolution admit a change in multiplicity and in real-zero population.
+
+The same local field identities hold for the repository's positive-source
+collision controls because they solve holomorphic heat evolution.
+Finite localization is available for each one. They fail no hypothesis
+of the generic field construction. Transcendental controls fail the
+finite-global-mass hypothesis, just as theta does; the polynomial
+control satisfies that additional hypothesis. What distinguishes theta is its
+unchanged complete arithmetic source, which has not yet supplied a
+quantitative bound on the observable developed below.
+
+\section{Normalized local states and their exact corrections}
+\label{sec:window}
+
+Choose a fixed real $h\in C_c^\infty(\C)$, nonnegative and equal
+to one on the finite region of interest. For a nonconstant entire
+slice and nonzero $h$, define
+\begin{equation}
+ Z(t)=\int h^2\rho\dd A>0,\qquad
+ \psi=\frac{hA}{\sqrt Z},\qquad \int|\psi|^2\dd A=1.
+ \label{eq:localstate}
+\end{equation}
+The phase agrees with that of $A$ wherever $h>0$. Retain $Z$
+alongside the state, since norm one alone does not record absolute
+counting mass.
+
+\begin{proposition}[Localization and normalization]
+Put $J=h^2j/Z$. Then
+\begin{align}
+ \dot Z&=\int 4h\Re(h_zj)\dd A,
+ \label{eq:Zdot}\\
+ \partial_t|\psi|^2+2\Re(\partial_z J)
+ &=\frac{4h\Re(h_zj)}{Z}
+   -\frac{\dot Z}{Z}|\psi|^2,\label{eq:probability}\\
+ i\psi_t&=-\psi_{xy}+V\psi
+ +\frac{h_{xy}A+h_xA_y+h_yA_x}{\sqrt Z}
+ -i\frac{\dot Z}{2Z}\psi.\label{eq:psievolution}
+\end{align}
+Here $h_z=\partial_z h$. The complex current $J$ is also obtained
+from $\psi$ using
+\eqref{eq:current}.
+\end{proposition}
+\begin{proof}
+Multiply continuity by $h^2$ and integrate by parts to obtain
+\eqref{eq:Zdot}. The product rule applied before integration gives
+\eqref{eq:probability}. Expand $(hA)_{xy}$ and differentiate
+$Z^{-1/2}$ to obtain \eqref{eq:psievolution}. The terms containing
+$h_x$ or $h_y$ in $\bar\psi\psi_x$ or $\bar\psi\psi_y$ are real
+and do not change the current. None of these formulas divides by $h$.
+\end{proof}
+
+The state remains regular at the edge of its support. It satisfies an
+equation with explicit localization and normalization terms, rather than
+the unmodified whole-plane equation. Its potential is still supplied
+by the complete field; replacing it by $\cT|\psi|^2$ would define a
+different evolution. This is particularly relevant for theta, where
+the unlocalized mass is infinite.
+
+For an approximate amplitude with real potential, define
+\begin{equation}
+ r=iA_t+A_{xy}-VA.
+\end{equation}
+The exact continuity defect is
+\begin{equation}
+ \rho_t+2\Re(\partial_z j)=2\Im(\bar A r),\qquad
+ \left|\dot Z-\int4h\Re(h_zj)\dd A\right|
+ \le2\|hA\|_2\|hr\|_2.
+ \label{eq:residual}
+\end{equation}
+This follows by substituting the residual in the calculation of
+continuity and using Cauchy--Schwarz. A residual in the potential
+equation must be tracked separately. Normalization cannot remove
+either evolution error.
+
+\section{A multiplicity observable from smoothed density squares}
+\label{sec:observable}
+
+The mass counts zeros with multiplicity but is conserved through
+collisions. To distinguish coincident zeros from separated zeros,
+consider a square of a spatially smoothed density. The semigroup
+factorization behind this calculation is the useful feature of the
+earlier continuum-sigma notes \cite{BakerSigma}; its self-contribution
+must be subtracted.
+
+\subsection{The finite-divisor identity}
+
+Fix a nonempty finite divisor $\nu=\sum_a m_a\delta_a$, with distinct support
+points $a$, and let $N=\nu(\C)$. Define
+\begin{equation}
+ K_s(z)=\frac1{4\pi s}e^{-|z|^2/(4s)},\qquad
+ \rho_s=K_s*\nu,\qquad s>0.
+ \label{eq:spatialkernel}
+\end{equation}
+This spatial smoothing scale $s$ is distinct from the value-plane
+regulator $\eps$.
+
+\begin{theorem}[Self-subtracted pair observable]
+\label{thm:pairs}
+One has
+\begin{align}
+ Q_s(\nu)&:=8\pi s\int_\C\rho_s^2\dd A-N\notag\\
+ &=\sum_a m_a(m_a-1)
+   +\sum_{a\ne b}m_am_b e^{-|a-b|^2/(8s)}.
+ \label{eq:pairidentity}
+\end{align}
+The second sum is over ordered pairs. In particular
+\begin{equation}
+ \lim_{s\downarrow0}Q_s(\nu)=\sum_a m_a(m_a-1).
+ \label{eq:excess}
+\end{equation}
+If distinct support points are separated by at least $d>0$, then
+\begin{equation}
+ 0\le Q_s(\nu)-\sum_a m_a(m_a-1)
+ \le\left(N^2-\sum_a m_a^2\right)e^{-d^2/(8s)}.
+ \label{eq:separation}
+\end{equation}
+\end{theorem}
+\begin{proof}
+The Gaussian semigroup law gives
+\[
+ \int K_s(z-a)K_s(z-b)\dd A_z
+ =K_{2s}(a-b)=\frac1{8\pi s}e^{-|a-b|^2/(8s)}.
+\]
+Expand the square of the finite sum defining $\rho_s$. The diagonal
+terms give $\sum m_a^2$; subtracting $N=\sum m_a$ leaves the first
+sum in \eqref{eq:pairidentity}. The finite off-diagonal sum tends to
+zero and obeys \eqref{eq:separation}.
+\end{proof}
+
+For $p_s=\rho_s/N$, the same expression is
+$8\pi sN^2\int p_s^2-N$. If $p_s=|\psi_s|^2$, it is a quartic
+observable of a normalized amplitude with its mass factor retained.
+The smoothed amplitude $\psi_s$ need not have the phase or evolution
+of \eqref{eq:definition}; the observable can instead be applied directly
+to that field's density.
+
+\subsection{Recovering the observable from the smooth field}
+
+At a fixed time choose $h$ to equal one near every selected zero, with
+no zeros in its transition region and no unselected zero in its support.
+Put $\mu_\eps=h^2\rho\dd A$ and $Z_\eps=\mu_\eps(\C)$.
+Then the directly measurable expression is
+\begin{equation}
+ Q_{s,\eps}=8\pi s\int
+ \left[K_s*(Z_\eps|\psi|^2)\right]^2\dd A-Z_\eps.
+ \label{eq:fieldobservable}
+\end{equation}
+For every fixed $s>0$, \eqref{eq:divisor} gives
+$\mu_\eps\rightharpoonup\nu$ and $Z_\eps\to N$ on a common compact
+support. The continuous bounded pair kernel therefore gives
+\begin{equation}
+ \lim_{s\downarrow0}\lim_{\eps\downarrow0}Q_{s,\eps}
+ =\sum_a m_a(m_a-1). \label{eq:orderedlimit}
+\end{equation}
+This can also be proved by approximating the pair kernel uniformly by
+finite sums of products of continuous functions on the compact support.
+
+The order matters. At fixed $\eps>0$ the localized density is smooth
+and square integrable, so $K_s*(h^2\rho)\to h^2\rho$ in $L^2$ as
+$s\downarrow0$. Consequently $Q_{s,\eps}\to-Z_\eps$. Thus
+\eqref{eq:fieldobservable} is not automatically nonnegative at finite
+regulator. Fractional cutoff values at zeros would also replace the
+integer multiplicities by weighted masses.
+
+\begin{proposition}[A quantitative comparison at fixed scale]
+\label{prop:W1}
+Use the same definition of $Q_s$ for positive finite measures.
+If $\mu,\nu$ have equal finite mass $N>0$ and finite
+first moments, then
+\begin{equation}
+ |Q_s(\mu)-Q_s(\nu)|
+ \le\frac{N e^{-1/2}}{\sqrt s}W_1(\mu,\nu),
+ \label{eq:W1}
+\end{equation}
+where $W_1$ is the transport cost for measures of mass $N$, without
+normalizing them to probability measures. If $\mu(\C)=Z>0$ and
+$\widehat\mu=(N/Z)\mu$, then
+\begin{equation}
+ |Q_s(\mu)-Q_s(\nu)|
+ \le(Z+N+1)|Z-N|
+   +\frac{N e^{-1/2}}{\sqrt s}W_1(\widehat\mu,\nu).
+ \label{eq:W1mass}
+\end{equation}
+\end{proposition}
+\begin{proof}
+Write $G_s(z)=e^{-|z|^2/(8s)}$. Its maximum gradient is
+$e^{-1/2}/(2\sqrt s)$, attained at $|z|=2\sqrt s$.
+For any coupling of $\mu$ and $\nu$, take its product with itself.
+The difference of the two pair kernels is at most this Lipschitz
+constant times the sum of the two displacement lengths. Integration
+gives $2N$ times the single transport cost, proving \eqref{eq:W1}.
+For unequal masses, $0\le\iint G_s\dd\widehat\mu\dd\widehat\mu\le N^2$.
+Rescaling the quadratic term changes it by at most
+$(Z+N)|Z-N|$, and rescaling the subtracted mass changes it by
+$|Z-N|$. Apply \eqref{eq:W1} to $\widehat\mu,\nu$.
+\end{proof}
+
+This bound states the resolution cost explicitly. It does not supply a
+theta-specific estimate for $W_1$ or the mass error as height grows.
+
+\subsection{The observable evolves; it is not a conserved charge}
+
+For differentiable distinct tracks $a(t)$ with fixed multiplicities,
+differentiate \eqref{eq:pairidentity}:
+\begin{equation}
+ \frac d{dt}Q_s
+ =-\frac1{4s}\sum_{a\ne b}m_am_b
+ \Re\bigl(\overline{a-b}(\dot a-\dot b)\bigr)
+ e^{-|a-b|^2/(8s)}.
+ \label{eq:pairtime}
+\end{equation}
+The real part is the Euclidean pairing of the complex displacement
+and relative velocity. There is no universal sign. For
+\eqref{eq:doublecontrol}, including the coincident divisor
+at $t=0$, the exact value is
+\begin{equation}
+ Q_s(t)=2e^{-|t|/s}. \label{eq:paircontrol}
+\end{equation}
+It increases toward the collision and decreases afterward, while all
+charges in \eqref{eq:polycharges} remain fixed. The scale limit is not
+uniform at the collision.
+
+For the smooth field with a fixed cutoff, put
+$m=h^2\rho$, $j_h=h^2j$ and $b_h=4h\Re(h_zj)$. Then
+$m_t+2\Re(\partial_z j_h)=b_h$. Direct differentiation yields
+\begin{align}
+ \frac d{dt}Q_{s,\eps}
+ &=32\pi s\Re\int
+ \partial_z(K_s*m)(K_s*j_h)\dd A\notag\\
+ &\quad+16\pi s\int(K_s*m)(K_s*b_h)\dd A-\int b_h\dd A.
+ \label{eq:observabletransport}
+\end{align}
+The first term describes transport within the observed density, and
+the last two retain the window's flux. The formula follows by moving
+the divergence through convolution and integrating by parts against
+the Gaussian-smoothed density. An approximate amplitude adds the
+source $2h^2\Im(\bar A r)$ to $b_h$.
+
+\section{What the formulation accomplishes}
+\label{sec:scope}
+
+The analytic conclusions separate into three levels. Locally, every
+holomorphic heat field has the smooth amplitude, phase transport,
+Schr\"odinger--Poisson equation and conserved current. With a selected
+translation-invariant potential and sufficient global integrability,
+mass, momenta, Hamiltonian and the stated moment combinations are
+conserved. For a finite observed divisor, the self-subtracted density
+square detects multiplicity in the ordered small-scale limit.
+
+The canonical theta field belongs to the first level but has infinite
+unlocalized mass at every positive regulator. Local normalization has
+therefore been included as an exact part of the formulation. Infinite
+mass alone does not decide whether some other signed global integral
+converges; no finite global theta energy or momentum theorem is asserted
+here. A fixed observation window suffices, with its flux retained.
+
+The polynomial calculation shows why conservation alone is not the
+desired simplicity mechanism. Degree, the two zero momenta, the zero
+Hamiltonian, and even the restricted angular moment can coexist with
+collisions. The observable $Q_s$ records the missing distinction, but
+also responds to close distinct zeros. Its useful control would require
+an estimate from the actual theta source, together with regulator,
+localization and increasing-height costs. No such upper estimate or
+new simplicity proportion is obtained here.
+
+\section*{Source tools, verification and acknowledgements}
+
+The useful ingredients of the author's earlier manuscripts are the
+heat-semigroup density-square identity and its self-subtraction
+\cite{BakerSigma}, separation of state normalization from an evolution
+constraint with residuals \cite{BakerHeat}, and first-order operator
+representations with their cross terms retained \cite{BakerDirac}.
+They motivate the calculations here; no incomplete operator-square or
+variational assertion from those notes is used as a theorem. The
+mixed kinetic operator of this paper is explicitly indefinite.
 
 This manuscript was drafted for Edward Baker with substantial assistance
 from OpenAI Codex, model \texttt{gpt-6-astra}, reasoning effort
-\emph{ultra}. Contributing and reviewing agents used the same model.
-The new Gaussian and contour argument, its controls, and the retained
-finite collision balance have undergone internal derivation checks.
-These are not independent specialist refereeing or formal verification.
-The Riemann hypothesis is assumed in the canonical contour results;
-simplicity is the overarching objective and is not proved here.
-No priority claim is made for the classical ingredients or their
-combination. The broader research draft and earlier dated TeX versions
-retain the auxiliary spectral, source-ordering and numerical work.
+\emph{max}. The original derivations and their self-review were
+performed by the same assistant. The complex-current notation revision used OpenAI Codex,
+model \texttt{gpt-6.1-sol}, reasoning effort \emph{xhigh}.
+Exact symbolic checks support the signs, normalization
+factors and local balances; the analytic proofs above establish the
+stated conclusions. Compilation and symbolic checks are not independent
+specialist review or formal proof verification. The DS-II comparison,
+Picard theorem and Gaussian factorization are classical ingredients;
+no priority claim is made. The preceding contour-centered book is
+preserved separately as the author's requested dated TeX draft.
 
+\clearpage
 \begin{thebibliography}{9}
-\bibitem{Elkies}
-N.~D. Elkies,
-\emph{The product formula for $\xi(s)$ and $\zeta(s)$; vertical
-distribution of zeros}, Math 259 course notes, Harvard University,
-March 7 entry, spring 2007, pp.~1--3, equations (1)--(4).
-\url{https://people.math.harvard.edu/~elkies/M259.06/zeta2.pdf}.
-The meromorphic completion in these notes differs from the entire
-$\xi$ used here by the factor $s(s-1)/2$.
+\bibitem{KS}
+C.~Klein and N.~Stoilov,
+\emph{Numerical study of blow-up mechanisms for Davey--Stewartson II
+systems}, arXiv:1712.08814v1 (2017), equation (1).
+\url{https://arxiv.org/abs/1712.08814v1}.
 
-\bibitem{DLMF}
+\bibitem{Taimanov}
+I.~A.~Taimanov,
+\emph{The Moutard transformation for the Davey--Stewartson II equation
+and its geometrical meaning}, arXiv:2111.07251v1 (2021), introduction
+and \S4.1, especially equation (19).
+\url{https://arxiv.org/abs/2111.07251v1}.
+
+\bibitem{DLMFPicard}
 NIST Digital Library of Mathematical Functions,
-\S5.11, \emph{Asymptotic expansions}, and
-\S25.4, \emph{Reflection formulas}.
-\url{https://dlmf.nist.gov/5.11};
-\url{https://dlmf.nist.gov/25.4}. Accessed 23 October 2026.
+\S1.10(iii), \emph{Laurent series}, classification at infinity and
+Picard's theorem. \url{https://dlmf.nist.gov/1.10#iii}.
+Checked 24 October 2026.
 
 \bibitem{polymath}
 D.~H.~J. Polymath,
@@ -1104,11 +996,19 @@ $\xi$ function, and a new upper bound for the de Bruijn--Newman constant},
 arXiv:1904.12438v2 (2019).
 \url{https://arxiv.org/abs/1904.12438v2}.
 
-\bibitem{pr}
-A.~Parusi\'nski and A.~Rainer,
-\emph{Optimal Sobolev regularity of roots of polynomials},
-Annales scientifiques de l'\'Ecole normale sup\'erieure (4) 51 (2018),
-1343--1387.
-\href{https://doi.org/10.24033/asens.2376}{doi:10.24033/asens.2376}.
+\bibitem{BakerSigma}
+E.~B. Baker III, \emph{Notes on the continuum sigma limit},
+unpublished notes, 22 November 2017, source file
+\texttt{Continuum\_sigma.pdf}, pp.~3--4, equations (23)--(25).
+
+\bibitem{BakerHeat}
+E.~B. Baker III, \emph{Notes on the continuum sigma limit},
+unpublished notes, 28 February 2018, source file
+\texttt{Heat\_Quantum.pdf}, p.~3, equations (14)--(19), and p.~5.
+
+\bibitem{BakerDirac}
+E.~B. Baker III, \emph{Notes on the continuum sigma limit},
+unpublished notes, 17 August 2018, source file
+\texttt{Dirac\_operator\_flow.pdf}, pp.~3--8 and 12.
 \end{thebibliography}
 \end{document}

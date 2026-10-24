@@ -22,7 +22,7 @@
 \hypersetup{pdftitle={Complete-source transport, conserved contours and pair-spectrum bounds for the theta heat flow},pdfauthor={Drafted for Edward Baker}}
 \title{Complete-source transport, conserved contours and pair-spectrum bounds for the theta heat flow}
 \author{Drafted for Edward Baker}
-\date{Working research draft\\23 October 2026}
+\date{Working research draft\\24 October 2026}
 \begin{document}
 \maketitle
 \begin{abstract}
@@ -42,11 +42,16 @@ population and discriminant throughout a complex time square. Direct
 evaluation is stronger for the terminal filter in this comparison. A bounded
 complete-cap calculation also encloses every face, but both lower bounds
 are negative and the direct interval is slightly narrower.
-A provisional extension develops conservation of the heat one-form on
-moving spatial contours, primitive and adjoint Noether actions, and an
-infinite hierarchy of Fourier and polynomial invariants. Explicit
-collision controls distinguish these exact laws from the still missing
-canonical deformation and one-sided flux estimates.
+We also record conserved spatial heat forms and their primitive and
+adjoint invariants. Under RH, a complete near-axis Gaussian comparison
+retains every zero in an initial fixed-radius cluster and the quadratic
+exterior factor. On spatial scale $1/\log Y$ and backward duration
+$O((\log Y)^{-2})$, its additive error is $O((\log Y)^{-1/2})$ times the
+absolute Gaussian model integral, uniformly for cluster degree $O(\log Y)$.
+A real-rooted polynomial control shows why the exterior curvature cannot
+be omitted at this level of information. An all-multiple positive-source
+field satisfies the same comparison, so no model floor or multiplicity
+restriction follows.
 The height-uniform microscopic upper estimate required for a global
 simplicity conclusion remains unproved; this manuscript proves neither
 RH nor a new global simplicity proportion.
@@ -55,10 +60,10 @@ RH nor a new global simplicity proportion.
 \section{Purpose, scope and normalization}
 The aim is to turn complete source information into quantitative control
 of a finite collection of zeros of the theta heat flow, and to determine
-which resulting bounds could support a global simplicity theorem. We
-separate three levels of result: finite identities with paid perturbation
-bounds; a bounded computation for the unchanged theta field; and the
-independent, still missing source estimate needed at growing height.
+which resulting bounds could support a global simplicity theorem. We distinguish finite identities with paid perturbation bounds, a bounded
+computation for the unchanged theta field, and RH-conditional comparisons
+at growing height from the still missing arithmetic estimate that would
+restrict multiplicity.
 This distinction is essential when a generic heat identity also holds
 for collision controls.
 
@@ -96,8 +101,14 @@ The corrected reference supplies explicit source and defect budgets,
 but still requires a whole-wall lower bound. The finite theta certificate
 shows that the interfaces can actually be supplied on one prescribed
 box. The physical-cap comparison retains the full boundary and its
-spatial complement. The provisional spatial-conservation section supplies
-a separate analytic direction whose useful canonical estimates remain open.
+spatial complement. The spatial-conservation section records the generic
+flow and current identities. The companion book \cite[Theorems 1.1 and
+3.1]{book-contours} proves their fixed-offset canonical comparison and
+actual material graph under RH. Section~\ref{sec:near-axis-cluster} gives
+a complete comparison at microscopic spatial offsets, retaining the
+initial cluster and exterior curvature. Its absolute-integral error is
+uniform through allowed multiple zeros but supplies no nonvanishing
+wall or small collision resource.
 
 \paragraph{Assumptions and research status.}
 Real-spectrum positivity and the global adjacent-gap comparison are used
@@ -115,6 +126,7 @@ proofs into one reviewable account.
 \input{finite_certificate}
 \input{contours}
 \input{conserved_contours}
+\input{near_axis_cluster}
 \input{outlook}
 
 \section*{Acknowledgements and verification status}
@@ -129,12 +141,16 @@ reasoning effort \texttt{xhigh}. The draft is intended for the author's
 mathematical review before any circulation or attribution as an approved
 paper.
 
-The conservation section develops brainstorm Note 16 and its same-model
-Review 07; it remains in this working draft pending a substantive analytic
-result suitable for the selective book. Its manuscript integration and
-proof obligations are recorded in brainstorm Review 08.
+The conservation section retains the structural results of brainstorm
+Note 16 and its internal reviews. The companion book contains the later
+fixed-offset theorem. The near-axis comparison, its complete proof and
+scoped controls develop research Note 19 and Review 16; they were
+integrated here on 24 October 2026 with separate same-model proof and
+manuscript checks. The initial cluster in that theorem is not assumed to
+be a complete transported population behind a common nonzero wall.
+No additional simplicity conclusion is asserted.
 
-Research Notes 07--15, their reviews and small execution records are
+Research Notes 07--19, their reviews and small execution records are
 maintained in the parent investigation directory. The earlier analytical
 controls include 1,333 counted exact-rational assertions, with separate
 floating diagnostics. The complete-source certificate uses Arb interval
@@ -208,6 +224,28 @@ V.~G. Papanicolaou, E.~Kallitsi and G.~Smyrlis,
 \emph{Entire solutions for the heat equation},
 Electronic Journal of Differential Equations (2021), no.~44, 1--25.
 \url{https://ejde.math.txstate.edu/Volumes/2021/44/papanicolaou.pdf}.
+
+
+\bibitem{Elkies}
+N.~D. Elkies,
+\emph{The product formula for $\xi(s)$ and $\zeta(s)$; vertical
+distribution of zeros}, Math 259 course notes, Harvard University,
+March 7 entry, spring 2007, pp.~1--3, equations (1)--(4).
+\url{https://people.math.harvard.edu/~elkies/M259.06/zeta2.pdf}.
+The meromorphic completion there differs from the entire $\xi$ used
+here by the factor $s(s-1)/2$.
+
+\bibitem{DLMF}
+NIST Digital Library of Mathematical Functions,
+\S5.11, \emph{Asymptotic expansions}, and
+\S25.4, \emph{Reflection formulas}.
+\url{https://dlmf.nist.gov/5.11};
+\url{https://dlmf.nist.gov/25.4}.
+
+\bibitem{book-contours}
+\emph{Conserved heat contours toward simple zeta zeros},
+working manuscript drafted for Edward Baker, 23 October 2026.
+Companion source \texttt{book.tex}; Theorems 1.1 and 3.1.
 
 \end{thebibliography}
 \end{document}

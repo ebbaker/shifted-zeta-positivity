@@ -1,0 +1,607 @@
+% Prepared for Edward Baker, 24 October 2026, America/New_York.
+% Substantial LLM assistance: gpt-6-astra (Codex), reasoning effort ultra.
+% Integration of investigation Note 19; book.tex is not an input or dependency.
+\section{Near-axis comparison with a complete initial zero cluster}
+\label{na-section}
+\label{sec:near-axis-cluster}
+
+This section gives a complete comparison at spatial distance
+$O(1/\log Y)$ from the real axis and real backward duration
+$O((\log Y)^{-2})$. It retains every zero in a fixed-radius initial
+cluster, with multiplicity, and the quadratic logarithmic term of the
+remaining analytic factor. Its error is small relative to the
+\emph{absolute Gaussian integral of the model integrand}; it is not a
+relative error against the value of the model, and it does not supply a
+nonvanishing floor. All initial estimates and the full Gaussian tail
+are proved or accounted for below.
+
+The polynomial $P_a$ used here is the factor of the initial field
+$F(z)=H(0,z)$ formed from a fixed-radius interval about $a$. It is not the
+time-dependent prepared polynomial of a complete population inside a
+common nonzero wall used in the spectral and coefficient sections.
+The explicit heat polynomial constructed from $P_a$ does not acquire
+that interpretation without a separate complete-count comparison.
+
+\subsection{Complete initial data under RH}
+\label{na-initial-data}
+
+Assume RH throughout this section, allowing all zero multiplicities.
+Use the normalization \eqref{eq:normalization} and put
+\[
+ F(z)=\tfrac18\xi(\tfrac12+iz/2),\qquad p(z)=F'(z)/F(z).
+\]
+Here $\xi(\omega)=\tfrac12\omega(\omega-1)\pi^{-\omega/2}
+\Gamma(\omega/2)\zeta(\omega)$ is the entire completion.
+Let $\mathcal Z$ be the signed multiset of real zeros of $F$, repeated
+with multiplicity, and let $N_F(X)$ count its positive members up to $X$.
+The classical order-one product and zero-counting formula give
+\begin{align}
+ F(z)&=F(0)\prod_{\lambda>0}
+              \left(1-\frac{z^2}{\lambda^2}\right),
+ &p(z)&=\sum_{\lambda>0}
+        \left(\frac1{z-\lambda}+\frac1{z+\lambda}\right),
+ \label{na-paired-product}\\
+ N_F(X)&=\frac X{4\pi}\log\frac X{4\pi}-\frac X{4\pi}
+                      +O(\log(2+X)).
+ \label{na-zero-count}
+\end{align}
+Here $\lambda$ is twice the usual zeta ordinate. Pairing specifies the
+convergence in \eqref{na-paired-product}; evenness removes the linear
+exponential in the order-one factorization. These classical statements
+include multiplicity; see \cite{Elkies}. The entire completion used here
+is $w(w-1)/2$ times the meromorphic completion in that reference.
+For every fixed integer $k\ge1$,
+\begin{equation}
+ p^{(k)}(z)=(-1)^k k!\sum_{\lambda\in\mathcal Z}
+                         (z-\lambda)^{-k-1},
+ \label{na-log-derivative-product}
+\end{equation}
+with absolute locally uniform convergence off the real axis.
+
+\begin{lemma}[Fixed-strip logarithmic bounds]
+\label{na-strip-lemma}
+For fixed $0<\alpha<\beta<\infty$ and integer $k\ge0$,
+\begin{equation}
+ |p^{(k)}(x+iy)|\le C_{k,\alpha,\beta}\log(2+|x|),
+ \qquad x\in\R,\quad \alpha\le y\le\beta.
+ \label{na-strip-bound}
+\end{equation}
+\end{lemma}
+\begin{proof}
+The difference of \eqref{na-zero-count} at the endpoints of a unit
+interval bounds the number of zeros near height $v$ by
+$O(\log(2+|v|))$. For $k\ge1$, grouping the absolute sum in
+\eqref{na-log-derivative-product} into unit distance intervals about $x$
+gives a bound by a constant multiple of
+\[
+ \sum_{j\ge0}\frac{\log(2+|x|+j)}{(1+j)^{k+1}}
+       =O_k(\log(2+|x|)).
+\]
+The lower bound on $y$ pays the central intervals.
+
+For $k=0$, choose a fixed $b>\max\{\beta,1\}$. By the functional
+equation, with $\omega=(1+b)/2-ix/2$,
+\[
+ p(x+ib)=-\frac i2\left\{
+ \frac1\omega+\frac1{\omega-1}-\frac12\log\pi
+ +\frac12\psi(\omega/2)+\frac{\zeta'}{\zeta}(\omega)
+ \right\}=O(\log(2+|x|)).
+\]
+The Euler logarithmic derivative converges absolutely because
+$\Re\omega>1$ by a fixed amount. The digamma estimate controls the gamma
+factor; see \cite[\S\S5.11, 25.4]{DLMF}. Bounded $x$ is covered by
+compactness and Euler nonvanishing. Integrating the already proved
+$p'$ bound vertically from $x+ib$ to $x+iy$ proves the assertion.
+RH ensures that no zero is crossed. No Euler product inside the
+critical strip is assumed.
+\end{proof}
+
+The full field also has the exact Gaussian representation, for real $s>0$,
+\begin{equation}
+ H(-s,z)=\frac1{\sqrt{4\pi s}}\int_\R
+              e^{-u^2/(4s)}F(z+u)\,du
+        =\mathbb E_u F(z+u),\qquad u\sim N(0,2s).
+ \label{na-gaussian-identity}
+\end{equation}
+Indeed write $F(z)=\int_\R\rho(v)e^{izv}\,dv$, where
+$\rho(v)=\Phi(|v|)/2$ is the complete even source. Inserting this
+representation into the Gaussian integral multiplies $e^{izv}$ by
+$e^{-sv^2}$. The source decay justifies Fubini for each fixed $z$, and
+its transform is exactly $H(-s,z)$. This proves
+\eqref{na-gaussian-identity} without truncating the source. At $s=0$
+we use the degenerate Gaussian of mass one at zero.
+
+\subsection{The cluster and its complete exterior factor}
+\label{na-exterior-subsection}
+
+Fix $r,K,c>0$, put $L=\log Y$, and let $a\in[Y,2Y]$. Define
+\begin{equation}
+ P_a(v)=\prod_{|\lambda-a|\le r}(v-(\lambda-a)),\qquad
+ m=\deg P_a,\qquad U_a(v)=\frac{F(a+v)}{P_a(v)}.
+ \label{na-cluster-definition}
+\end{equation}
+Every root in the indicated interval is included, with its full
+multiplicity, and removable values are filled in. In particular
+$U_a(0)\ne0$, even when $a$ is a multiple zero. Introduce
+\begin{equation}
+ A_a=\frac{U_a'(0)}{U_a(0)},\qquad
+ B_a=(\log U_a)''(0),\qquad
+ S_j(a)=\sum_{|\lambda-a|>r}|a-\lambda|^{-j}\quad(j\ge2).
+ \label{na-exterior-data}
+\end{equation}
+The logarithmic derivative in this definition is local; a logarithm
+of $U_a(v)/U_a(0)$ is continued from value zero at the origin.
+
+\begin{lemma}[Local exterior estimates and a global product bound]
+\label{na-exterior-lemma}
+Uniformly for $a\in[Y,2Y]$,
+\begin{equation}
+ m\le C_r L,\qquad S_j(a)\le C_{r,j}L,
+ \qquad A_a\in\R,\qquad B_a=-S_2(a)\le0,
+ \qquad |A_a|+|B_a|\le C_rL.
+ \label{na-exterior-bounds}
+\end{equation}
+On $|v|\le r/2$ one has
+\begin{equation}
+ \log\frac{U_a(v)}{U_a(0)}
+     =A_av+\frac{B_a}2v^2+R_{a,3}(v),
+ \qquad |R_{a,3}(v)|\le C_rL|v|^3.
+ \label{na-exterior-taylor}
+\end{equation}
+For every complex $v$, the complete exterior product satisfies
+\begin{align}
+ \frac{U_a(v)}{U_a(0)}
+ &=e^{A_av}\prod_{|\lambda-a|>r}
+       \left(1+\frac v{a-\lambda}\right)e^{-v/(a-\lambda)},
+ \label{na-exterior-product}\\
+ \left|\frac{U_a(v)}{U_a(0)}\right|
+ &\le \exp\left(A_a\Re v+\frac{S_2(a)}2|v|^2\right),
+ \label{na-global-exterior-bound}\\
+ \left|\frac{U_a(v)}{U_a(0)e^{A_av+B_av^2/2}}\right|
+ &\le \exp\left(S_2(a)(\Re v)^2\right).
+ \label{na-global-exterior-ratio}
+\end{align}
+\end{lemma}
+\begin{proof}
+The unit-interval consequence of \eqref{na-zero-count} proves the
+bound on $m$. Grouping exterior roots by their distance from $a$
+reduces the bound on $S_j(a)$ to the convergent sum
+\[
+ C_{r,j}\sum_{n\ge0}
+       \frac{\log(2+a+n)}{(r+n)^j}=O_{r,j}(L),\qquad j\ge2.
+\]
+Put $q_a=U_a'/U_a$. For any fixed $b>0$, Lemma~\ref{na-strip-lemma}
+and the bound on $m$ give
+\[
+ q_a(ib)=p(a+ib)-\sum_{|\lambda-a|\le r}
+                 \frac1{ib-(\lambda-a)}=O_r(L).
+\]
+The exterior derivative sum gives $|q_a'(iy)|\le S_2(a)$ on
+$0\le y\le b$. Integrating to zero proves $A_a=O_r(L)$.
+Reality gives $A_a\in\R$, and evaluation of that same derivative
+sum at zero gives $B_a=-S_2(a)$. For $|v|\le r/2$ the absolutely
+convergent exterior sum gives $q_a''(v)=O_r(L)$.
+Taylor's formula integrated along a straight segment proves
+\eqref{na-exterior-taylor}.
+
+Translate the order-one Hadamard product and remove the finite cluster.
+The resulting genus-one product is \eqref{na-exterior-product}; it
+converges locally uniformly because $S_2(a)<\infty$. Each displayed
+factor has zero logarithmic derivative at zero, so the coefficient
+of its remaining linear exponential is exactly $A_a$.
+For every complex $t$,
+\[
+ |1+t|\le\exp(\Re t+|t|^2/2),
+\]
+since $1+x\le e^x$ for $x=2\Re t+|t|^2\ge-1$.
+Apply this inequality to the entire product to obtain
+\eqref{na-global-exterior-bound}. Since $B_a=-S_2(a)$ and
+$|v|^2+\Re(v^2)=2(\Re v)^2$, division by the nonzero quadratic
+exponential gives \eqref{na-global-exterior-ratio}.
+This bound remains valid across exterior zeros and arbitrarily far
+from the initial cluster.
+\end{proof}
+
+\subsection{The complete comparison}
+\label{na-comparison-subsection}
+
+For real $0\le s\le cL^{-2}$ and complex $|w|\le KL^{-1}$, put
+$d=1-2sB_a\ge1$ and define
+\begin{equation}
+ \begin{split}
+ Q_{a,s}(w)={}&U_a(0)d^{-1/2}
+ \exp\left(\frac{A_aw+B_aw^2/2+sA_a^2}{d}\right)\\
+ &\hspace{8mm}\cdot
+ \left(e^{(s/d)\partial_v^2}P_a\right)
+                  \left(\frac{w+2sA_a}{d}\right).
+ \end{split}
+ \label{na-quadratic-model}
+\end{equation}
+The differential exponential here is a finite series on the polynomial
+$P_a$. In particular, the exterior curvature changes the effective
+polynomial heat time from $s$ to $s/d\le s$.
+
+To state the error, let $X\sim N(0,1)$ and define the real quantities
+\begin{align}
+ \mu&=\frac{2s(A_a+B_a\Re w)}d,&
+ \sigma&=\sqrt{\frac{2s}d},
+ \label{na-real-tilt}\\
+ M&=d^{-1/2}\exp\left(A_a\Re w+\frac{B_a}2\Re(w^2)
+                  +\frac{s(A_a+B_a\Re w)^2}d\right),
+ \nonumber\\[-2mm]
+ \mathcal E_{a,s}(w)&=|U_a(0)|M
+                      \mathbb E|P_a(w+\mu+\sigma X)|.
+ \label{na-absolute-envelope}
+\end{align}
+Equivalently, with $u\sim N(0,2s)$,
+\begin{equation}
+ \mathcal E_{a,s}(w)=|U_a(0)|\mathbb E_u
+ \left[|P_a(w+u)|
+ e^{A_a\Re(w+u)+(B_a/2)\Re((w+u)^2)}\right].
+ \label{na-envelope-integral}
+\end{equation}
+This is the integral of the absolute value of the quadratic model's
+integrand, not the absolute value of its possibly cancelling integral.
+
+\begin{theorem}[Complete near-axis cluster comparison]
+\label{na-main-theorem}
+\label{thm:na-comparison}
+Assume RH, allowing multiplicities. For fixed $r,K,c>0$ there are
+constants $C,\kappa>0$ and a sufficiently large height threshold such
+that, uniformly for $a\in[Y,2Y]$, $|w|\le K/L$, and real
+$0\le s\le c/L^2$, where $L=\log Y$,
+\begin{equation}
+ \boxed{\left|H(-s,a+w)-Q_{a,s}(w)\right|
+ \le C\left(\frac{(m+1)^{3/2}}{L^2}+e^{-\kappa L^2}\right)
+                         \mathcal E_{a,s}(w).}
+ \label{na-main-estimate}
+\end{equation}
+The error factor is $O(L^{-1/2})$ uniformly for the full allowed
+$m=O(L)$, and $O(L^{-2})$ at bounded degree. Constants are independent
+of the positions, internal gaps and multiplicities of the cluster
+zeros, subject to the stated ranges. No lower bound for $P_a$,
+$Q_{a,s}$, $F$ or $H$ is assumed.
+\end{theorem}
+
+At $s>0$ the envelope is positive. At $s=0$ we use
+$\mu=\sigma=0$; the quadratic initial approximation need not equal
+$F(a+w)$ away from $w=0$. If $P_a(w)=0$, both fields and the envelope
+vanish at this endpoint. The statement asserts neither spatial
+derivative estimates for the error nor a complex-time extension.
+In particular, it does not imply a zero count or a nonvanishing floor.
+
+The following elementary lemma pays the degree dependence without
+replacing the absolute Gaussian integral by an absolute coefficient sum.
+
+\begin{lemma}[Gaussian polynomial concentration and weighted moments]
+\label{na-polynomial-lemma}
+Let $R$ be a nonzero complex polynomial of degree at most $m$, set
+$n=m+1$, let $X\sim N(0,1)$ have density $\phi$, and put
+$N=\mathbb E|R(X)|>0$. There is an absolute constant $C$ such that
+\begin{equation}
+ \frac{|R(x)|\phi(x)}N\le Ce^{-x^2/8},
+                       \qquad |x|\ge4\sqrt n.
+ \label{na-polynomial-tail-density}
+\end{equation}
+For each fixed integer $j\ge0$, $0\le t\le1/16$, and
+$h\ge4\sqrt n$, one consequently has
+\begin{align}
+ \frac{\mathbb E[|R(X)|(1+|X|)^je^{tX^2}]}N
+   &\le C_j n^{j/2}e^{16tn},
+ \label{na-polynomial-weighted-moment}\\
+ \frac{\mathbb E[|R(X)|e^{tX^2}\mathbf1_{\{|X|\ge h\}}]}N
+   &\le Ce^{-h^2/32}.
+ \label{na-polynomial-tail-moment}
+\end{align}
+The constants also cover degrees zero and one.
+\end{lemma}
+\begin{proof}
+Let $b=\sqrt n$, $S=\max_{[-b,b]}|R|$, and expand
+\[
+ R(b\cos\theta)=\sum_{k=0}^m a_k\cos(k\theta),
+                       \qquad 0\le\theta\le\pi.
+\]
+The cosine integral formulas give $|a_0|\le S$ and $|a_k|\le2S$
+for $k\ge1$, also for complex coefficients. Thus the absolute
+value of the derivative in $\theta$ is at most $n^2S$.
+At a maximum choose an angular interval of length
+$\delta=1/(4n^2)$, contained in $[0,\pi]$ and within distance
+$\delta$ of that maximum. Its modulus is at least $3S/4$.
+Its image under $x=b\cos\theta$ has length at least
+$b(1-\cos\delta)\ge cb/n^4$, including when the maximum is
+at an endpoint. The Gaussian density on $[-b,b]$ is at least
+$ce^{-n/2}$. Therefore
+\begin{equation}
+ N\ge cS n^{-7/2}e^{-n/2}.
+ \label{na-polynomial-local-norm}
+\end{equation}
+
+The cosine expansion is also the polynomial identity
+$R(by)=\sum_{k=0}^m a_kT_k(y)$. For $|y|\ge1$, the elementary
+Chebyshev formula gives $|T_k(y)|\le(2|y|)^k$. Summing the
+geometric series yields
+\[
+ |R(x)|\le4S(2|x|/\sqrt n)^m,\qquad |x|\ge\sqrt n.
+\]
+If $v=|x|/\sqrt n\ge4$, then
+\[
+ \frac n2+m\log(2v)-\frac{x^2}2
+ \le n\left\{\frac12+\log(2v)-\frac{v^2}2\right\}
+ \le-\frac{x^2}4.
+\]
+Together with \eqref{na-polynomial-local-norm}, this implies
+\[
+ \frac{|R(x)|\phi(x)}N
+ \le Cn^{7/2}e^{-x^2/4}\le Ce^{-3x^2/16},
+\]
+because $n^{7/2}\le Ce^n$ and $x^2\ge16n$. This proves
+\eqref{na-polynomial-tail-density}.
+
+Split the first expectation in
+\eqref{na-polynomial-weighted-moment} at $4\sqrt n$. On the
+central interval its extra weight is at most
+$C_jn^{j/2}e^{16tn}$. Outside, the normalized integral is at
+most
+\[
+ C\int_\R(1+|x|)^je^{-(1/8-t)x^2}\,dx\le C_j,
+\]
+since $t\le1/16$. Absorb this into the central bound.
+The same density estimate integrated over $|x|\ge h$ proves
+\eqref{na-polynomial-tail-moment}, with the exponent weakened
+to absorb the Gaussian tail prefactor.
+\end{proof}
+
+\begin{proof}[Proof of Theorem~\ref{na-main-theorem}]
+Integrating
+\[
+ U_a(0)P_a(w+u)e^{A_a(w+u)+B_a(w+u)^2/2}
+\]
+against $u\sim N(0,2s)$ gives \eqref{na-quadratic-model}.
+One can verify this by finite Gaussian moment differentiation for each
+monomial of $P_a$; no contour translation of the original field is
+needed. For its absolute weight, completing the real square gives
+exactly
+\begin{equation}
+ \mathbb E_u\left[
+ e^{A_a\Re(w+u)+(B_a/2)\Re((w+u)^2)}f(u)\right]
+       =M\mathbb E_X f(\mu+\sigma X).
+ \label{na-real-square}
+\end{equation}
+This proves \eqref{na-envelope-integral}. The real tilted mean
+$\mu$ is distinct from the complex polynomial argument
+$(w+2sA_a)/d$ in \eqref{na-quadratic-model}.
+
+By Lemma~\ref{na-exterior-lemma}, uniformly on the declared ranges,
+\begin{equation}
+ 1\le d\le1+C/L,\qquad |w+\mu|\le C/L,\qquad
+ \sigma\le C/L,
+ \qquad |v|\le C(1+|X|)/L,
+ \quad v=w+\mu+\sigma X.
+ \label{na-tilt-sizes}
+\end{equation}
+For $|v|\le r/2$, \eqref{na-exterior-taylor} and
+$|e^R-1|\le |R|e^{|R|}$ imply
+\begin{equation}
+ |e^{R_{a,3}(v)}-1|
+ \le \frac C{L^2}(1+|X|)^3e^{C(1+X^2)/L}.
+ \label{na-local-error}
+\end{equation}
+For the exponential factor use $|v|^3\le(r/2)|v|^2$ on this
+local disk. A cubic exponential is not integrated over the whole line.
+For $s>0$, the polynomial
+$R(X)=P_a(w+\mu+\sigma X)$ is nonzero and has degree $m$.
+Apply \eqref{na-polynomial-weighted-moment} with $j=3$,
+$t=C/L$ and $n=m+1\le C'_rL$. Its factor $e^{16tn}$ is uniformly
+bounded. Equations \eqref{na-real-square} and
+\eqref{na-local-error} bound the local difference by
+\[
+ C(m+1)^{3/2}L^{-2}\mathcal E_{a,s}(w).
+\]
+
+It remains to pay the complete original and model tails. On
+$|v|>r/2$, \eqref{na-tilt-sizes} implies, for sufficiently large $L$,
+\[
+ |X|\ge\kappa_0L\ge4\sqrt{m+1}.
+\]
+The global exterior bound \eqref{na-global-exterior-ratio} gives
+the division-free estimate
+\[
+ \begin{split}
+ &|U_a(v)P_a(v)|
+   +|U_a(0)P_a(v)e^{A_av+B_av^2/2}|\\
+ &\qquad\le
+ 2|U_a(0)||P_a(v)|
+ e^{A_a\Re v+(B_a/2)\Re(v^2)}
+ e^{S_2(a)(\Re v)^2}.
+ \end{split}
+\]
+The last factor is at most $e^{C(1+X^2)/L}$. This estimate
+retains the common polynomial factor, including at its zeros.
+Thus \eqref{na-polynomial-tail-moment} bounds their entire
+contribution by
+$Ce^{-\kappa L^2}\mathcal E_{a,s}(w)$. Together with the exact
+complete-field identity \eqref{na-gaussian-identity}, this proves
+\eqref{na-main-estimate} for $s>0$. No source or exterior zero has
+been omitted.
+
+At $s=0$, \eqref{na-exterior-taylor} gives the estimate directly,
+since $L|w|^3=O(L^{-2})$. If $P_a(w)=0$, both the actual field and
+its quadratic approximation vanish and the envelope is zero;
+the assertion is $0\le0$, without division. This completes the proof.
+\end{proof}
+
+\subsection{Why the exterior quadratic term cannot be dropped uniformly}
+\label{na-curvature-subsection}
+
+The next example concerns the local growing-degree and exterior-bound
+information class. It is not a counterexample for the unchanged theta
+source and does not assert its global zero count or source positivity.
+
+\begin{proposition}[Order-one error from a linear exterior carrier]
+\label{na-linear-omission}
+Fix $R>r$, $c>0$, and positive $\mu_0,\nu_0$. Choose even integers
+$m=m_L$ and nonnegative integers $n=n_L$ such that
+$m/L\to\mu_0$ and $n/L\to\nu_0$. Put
+\[
+ F_L(v)=v^m(1-v^2/R^2)^n,\qquad s=c/L^2.
+\]
+All roots are real. The cluster at zero is $v^m$, and its exterior
+has $A=0$, $B=-2n/R^2=O(L)$. Nevertheless,
+\begin{equation}
+ \frac{(e^{s\partial_v^2}F_L)(0)}
+      {(e^{s\partial_v^2}v^m)(0)}
+       \longrightarrow e^{-2c\mu_0\nu_0/R^2}\ne1.
+ \label{na-linear-failure-limit}
+\end{equation}
+The denominator is the model obtained by retaining only the linear
+exterior exponential. The quadratic model has ratio
+\begin{equation}
+ (1+4sn/R^2)^{-(m+1)/2}
+       \longrightarrow e^{-2c\mu_0\nu_0/R^2},
+ \label{na-quadratic-correct-limit}
+\end{equation}
+which has the correct limit.
+\end{proposition}
+\begin{proof}
+Let $u\sim N(0,2s)$. Since $m$ is even, weighting this probability
+measure by $u^m/\mathbb E u^m$ gives a probability measure;
+write its expectation as $\mathbb E_L$. Direct Gaussian integration
+gives, for $4st<1$,
+\[
+ \mathbb E_L e^{tu^2}=(1-4st)^{-(m+1)/2}.
+\]
+In particular,
+\[
+ \mathbb E_Lu^2=2s(m+1),\quad
+ \operatorname{Var}_L(u^2)=8s^2(m+1),\quad
+ \mathbb E_Lu^4=4s^2(m+1)(m+3).
+\]
+It follows that $nu^2/R^2\to2c\mu_0\nu_0/R^2$ and
+$nu^4\to0$ in probability. On the event $u^2<R^2/2$, whose
+probability tends to one, expansion of $n\log(1-u^2/R^2)$
+therefore gives
+\[
+ (1-u^2/R^2)^n\longrightarrow
+               e^{-2c\mu_0\nu_0/R^2}
+ \quad\hbox{in probability}.
+\]
+Uniform integrability follows from
+\[
+ \mathbb E_L\bigl|(1-u^2/R^2)^n\bigr|^2
+ \le\mathbb E_L e^{2nu^2/R^2}
+ =(1-8sn/R^2)^{-(m+1)/2}=O(1).
+\]
+Taking expectations proves \eqref{na-linear-failure-limit}.
+The finite Gaussian formula \eqref{na-quadratic-model} for $P(v)=v^m$
+at $w=0$ gives \eqref{na-quadratic-correct-limit} directly.
+\end{proof}
+
+This proves failure of a uniform $o(1)$ linear-exterior comparison
+for the declared growing-degree class. Bounded degree, stronger local
+zero information, and other theta-specific approximations are outside
+this conclusion. The quadratic model repairs this particular loss;
+it does not supply a simplicity estimate.
+
+\subsection{An all-multiple field passes the comparison}
+\label{na-control-subsection}
+\label{subsec:na-controls}
+
+The proof consumed initial real-rootedness, the complete order-one
+product, a unit-interval $O(\log Y)$ zero count, a fixed-strip logarithmic
+bound and the full Gaussian identity. The next complete field satisfies
+all of them while having no simple zeros.
+
+\begin{proposition}[Control with the same coarse count and no simple zeros]
+\label{na-all-multiple-control}
+Assume RH for $F$ and put
+\begin{equation}
+ a_* =\frac{\log2}{4},\qquad
+ G_0(z)=F(z/2)^2\bigl(1+\cos(a_*z)\bigr).
+ \label{na-control-field}
+\end{equation}
+All zeros of $G_0$ are real and have even multiplicity. Its positive
+zero count, with multiplicity, has exactly the two leading terms in
+\eqref{na-zero-count}. It is the Fourier transform of a positive even
+source with sufficient decay for its complete heat evolution and
+Gaussian identity. Theorem~\ref{na-main-theorem}, with its proof and
+its own constants, applies to this heat field.
+\end{proposition}
+\begin{proof}
+The squared factor has even zero multiplicities, and
+$1+\cos(a_*z)=2\cos^2(a_*z/2)$ has double zeros at the odd
+multiples of $\pi/a_*$. Multiplicities add at coincidences. Hence
+\[
+ N_G(X)=2N_F(X/2)+a_*X/\pi+O(1)
+       =\frac X{4\pi}\log\frac X{4\pi}-\frac X{4\pi}
+          +O(\log X).
+\]
+The cosine contribution restores precisely the term
+$X\log2/(4\pi)$ lost by replacing $X$ by $X/2$ in the first
+factor's count. The logarithmic derivative is
+\begin{equation}
+ \frac{G_0'}{G_0}(z)=p(z/2)-a_*\tan(a_*z/2).
+ \label{na-control-log-derivative}
+\end{equation}
+On every fixed positive-offset strip the tangent and its fixed
+spatial derivatives are bounded. The first term satisfies
+Lemma~\ref{na-strip-lemma} at half-height and half-offset.
+Thus the logarithmic bounds used in the comparison hold for $G_0$.
+The entire field is even and of order one, so the corresponding
+complete real-zero product applies as well.
+
+For the source, write $F(z)=\int_\R\rho(u)e^{izu}\,du$ and put
+$h(u)=2\rho(2u)$ and $q=h*h$. The Fourier density of $G_0$ is
+\begin{equation}
+ \rho_G(u)=q(u)+\tfrac12q(u-a_*)+\tfrac12q(u+a_*),
+ \label{na-control-source}
+\end{equation}
+which is positive and even. To verify decay, split the convolution
+integral into $|v|\ge|u|/2$ and its complement, on which
+$|u-v|\ge|u|/2$. Then
+\[
+ q(u)\le2\|h\|_1\sup_{|v|\ge|u|/2}h(v).
+\]
+The theta source's decay faster than every Gaussian therefore
+survives convolution and fixed shifts. Thus
+\[
+ G(t,z)=\int_\R e^{tu^2}\rho_G(u)e^{izu}\,du
+\]
+has the complete real-time Gaussian representation by the same Fubini
+argument as \eqref{na-gaussian-identity}. All inputs used in
+Lemmas~\ref{na-exterior-lemma} and \ref{na-polynomial-lemma} and
+Theorem~\ref{na-main-theorem} are now available for $G$.
+\end{proof}
+
+For this control all multiplicities in $P_a$ are even. Consequently
+$P_a(v)\ge0$ for real $v$ and $U_a(0)>0$. If $w$ is real and
+$s>0$, the quadratic Gaussian integrand is nonnegative, and
+\[
+ \mathcal E_{a,s}(w)=Q_{a,s}(w)>0.
+\]
+Thus the new theorem even gives a genuine relative comparison on this
+real near-axis line for a field with no simple endpoint zeros. The
+missing arithmetic discrimination is not an artifact of an absolute
+coefficient bound or of Gaussian cancellation alone.
+
+\paragraph{What is acquired and what remains open.}
+Theorem~\ref{na-main-theorem} pays the coupling of a possibly large
+initial cluster to its complete exterior analytic factor, including
+the entire Gaussian tail. It allows the multiple zero being investigated
+and supplies a finite polynomial reference with a vanishing error in
+the stated absolute-integral norm. It neither estimates that norm
+relative to the comparison field on a useful complex contour nor
+bounds an earlier nonreal population or the complete one-sided
+collision resource. The fixed-strip Euler anchor has supplied only
+a coarse $O(L)$ estimate, which \eqref{na-control-log-derivative}
+also satisfies; the exact canonical source has not yet supplied a
+multiplicity-restricting inequality.
+
+In particular, substituting this heat polynomial into a forest or
+coefficient consumer would require an acquired nonzero enclosing wall,
+a paid complete-count transfer from the actual field, and all the
+endpoint and flux obligations of that consumer. Those properties do
+not follow from the additive estimate above. A root-count use must
+control cancellation in the model integral and pay its boundary margin
+in the same absolute-integral norm. The present result makes no new
+simple-zero proportion or individual-site exclusion, and no negative
+claim about stronger estimates using the complete theta arithmetic.

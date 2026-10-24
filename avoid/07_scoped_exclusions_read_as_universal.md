@@ -89,3 +89,7 @@ constant-certificate scope. Weighted/localized or canonical-source
 comparisons and positive mass paying a signed error term remain outside
 that failure; the independent bounded-mass result is retained.
 [Contributing-agent internal review](../papers/investigations-4/03_heat_transport_and_charges/reviews/06_FINITE_REGULATOR_GAUSS_COMPARISON_REVIEW_20261022.md).
+
+**Scope the exterior-curvature omission control, 24 October 2026.**
+Prepared for Edward Baker with substantial LLM assistance, **gpt-6-astra, ultra**.
+The polynomial array in [HDC main Section 9.4](../papers/investigations-4/12_height_dependent_heat_contours/manuscript/near_axis_cluster.tex) proves an order-one linear-carrier omission error when both cluster degree and exterior curvature can grow like log Y. It states: "Bounded degree, stronger local zero information, and other theta-specific approximations are outside this conclusion." This is a control for the declared coarse bounds, not a canonical theta counterexample or an exclusion of all linear-carrier approaches. [Internal same-model review](../papers/investigations-4/12_height_dependent_heat_contours/reviews/17_MAIN_NEAR_AXIS_INTEGRATION_REVIEW_20261024.md).

@@ -2,6 +2,8 @@
 
 23 October 2026, America/New_York. Prepared for **Edward Baker** with substantial LLM assistance. Recorded model **gpt-6-astra (Codex)**, reasoning effort **ultra**.
 
+**Book-version routing, 24 October 2026:** the theorem and section numbers in this contour/arithmetic program refer to the preserved [contour book, draft 03](../manuscript/drafts/book_draft_20261024_03_conserved_contours.tex). The author has now requested an exclusive [complex-field book](../manuscript/book.tex); its conservation laws, mass classification and observables are recorded in [Note 23](../brainstorm/notes/23_COMPLEX_FIELD_BOOK_AND_CONSERVATION_LAWS_20261024.md). This routing update changes no research completion status or claim of a theta-specific estimate. Prepared for Edward Baker with substantial LLM assistance, **gpt-6-astra (Codex), actual effort max**.
+
 **Current position:** the fixed-offset Gaussian theorem, actual conserved graph, all-multiple control and exact wall-resource reduction are established in the cited notes and book. The next open task is a canonical arithmetic estimate that restricts multiplicity beyond those coarse bounds. RH implies simple zeros remains the overarching goal. This register organizes the work after the book rewrite; its creation proves no new estimate and changes no mathematical completion status.
 
 The [new overview](../research-overview/04_ARITHMETIC_INSIDE_CONSERVED_CONTOURS_PROGRAM_20261023.md) is the current analytic starting point. The [SIMP register](../brainstorm/research-progress/02_ANALYTIC_RH_TO_SIMPLICITY_PROGRESS_20261023.md) owns SIMP-01–03; the [SCF register](../brainstorm/research-progress/03_CONSERVED_SPATIAL_CONTOURS_PROGRESS_20261023.md) owns SCF-01–04. The table below tracks their next outcomes without inventing replacement goal IDs. OBF and HDC retain their existing scope and owners.
@@ -62,3 +64,26 @@ Follow the [result index](../../../../result-summaries/README.md), [avoid index]
 The author requested a fresh overview and progress document after the new theorem and book rewrite, together with verification of this chat. This pair now provides the continuation beyond the acquired outer wall. The book source was not changed for this planning task. The overview and register received a [separate-agent same-model scope review](../brainstorm/reviews/11_POST_CONTOUR_RESEARCH_PROGRAM_REVIEW_20261023.md); no new mathematical result or literature priority claim is made.
 
 The [history verification receipt](../brainstorm/chat-histories/VERIFICATION_POST_CONTOUR_PROGRAM_20261023.json) checks the archived snapshot against the completed public source, current identity and prior final replies. This remains **history 0008, Continue contour conservation study**, thread `01a16b52-9407-7e80-8f09-3d5b3303e5b2`, in the existing brainstorm archive. Counts and hashes change on normal refreshes; the receipt is a snapshot, not proof that an unsent reply was captured. Follow [tools/CHAT_HISTORY.md](../../../../tools/CHAT_HISTORY.md) for each reply's refresh and bounded exact-turn capture.
+
+## Near-axis execution checkpoint — 23 October 2026
+
+Prepared for Edward Baker with substantial LLM assistance, **gpt-6-astra (Codex), ultra**.
+
+| Outcome | Evidence and precise scope | Status and remaining obligation |
+| --- | --- | --- |
+| Complete cluster/exterior comparison near the axis | [Note 19](../notes/19_NEAR_AXIS_CLUSTER_AND_QUADRATIC_EXTERIOR_20261023.md): all local zeros retained; exterior quadratic carrier; real \(s\le c/(\log Y)^2\), \(\lvert w\rvert\le K/\log Y\); error \(O((m+1)^{3/2}/(\log Y)^2)\) times the actual absolute Gaussian integral, uniformly for \(m=O(\log Y)\); global product pays the full tail. | **Proved supporting estimate; partial progress** on the near-axis transfer branch of SIMP-01/02. No model floor, root-count comparison or multiplicity restriction. |
+| Scope of the linear-exterior approximation | Note 19's real-rooted polynomial array has an order-one omission error for growing degree and curvature both \(O(\log Y)\); [exact finite diagnostic](../numerics/10_QUADRATIC_CLUSTER_DIAGNOSTIC_20261023.json). | **Scoped obstruction** to that coarse-information approximation only. Sharper canonical root statistics and other comparisons are not ruled out. |
+| Arithmetic discrimination and strongest simplicity conclusion | The book's all-multiple \(G_0\) passes the new comparison; on the real line its absolute Gaussian envelope even equals its positive model value. | **Open, unchanged.** No new simple-zero proportion, useful upper bound on \(\mathcal R_Y\), or per-site exclusion. |
+| Review and manuscript disposition | [Review 16](../reviews/16_BOOK_AND_NEAR_AXIS_CLUSTER_REVIEW_20261023.md): no blocking book proof gap found; missing nonvanishing symbol and stale scope narrative in the broader manuscript recorded for later correction. | All manuscripts unchanged under the author's explicit instruction; no Git commit or new snapshot. |
+
+The next estimate must use actual theta information in a multiplicity-sensitive way, not merely improve the generic Gaussian approximation. A root-count application must pay cancellation in the model integral; a resource application must retain earlier mass, one-sided end flux and coverage. The historical completion statements and ownership of goal IDs above are unchanged.
+
+This execution belongs to **Review and extend contour research**, thread 01a16b79-206b-7900-949c-1fc4f295d619, uniquely registered in the investigation's main [chat-histories](../chat-histories/README.md) as history 0005. It does not replace the originating overview chat's historical registration.
+
+## Main manuscript integration checkpoint - 24 October 2026
+
+Prepared for Edward Baker with substantial LLM assistance, **gpt-6-astra (Codex), ultra**.
+
+The author's subsequent instruction, "Please write these results into main.tex", authorizes this manuscript integration and supersedes the previous checkpoint's no-edit disposition for the broader draft only. [Main Section 9](../manuscript/near_axis_cluster.tex) now contains Note 19's complete comparison and proof, including the Gaussian polynomial lemma, exterior product and complete tail, curvature-omission control, and the positive-source all-multiple control. The initial polynomial is explicitly distinguished from a complete population behind a common heat-time wall.
+
+[Review 17](../reviews/17_MAIN_NEAR_AXIS_INTEGRATION_REVIEW_20261024.md) records the same-model proof checks and the correction of the draft tail estimate's common factor. The reference-field nonvanishing typo and outdated fixed-offset narrative were corrected. The [35-page build receipt](../manuscript/NEAR_AXIS_BUILD_RECORD_20261024.json) records compilation, rendering and source preservation. The book and retained book drafts are unchanged. No commit, new snapshot, new numerical certificate or mathematical completion upgrade was made: this remains a proved supporting estimate and partial near-axis progress; multiplicity-sensitive arithmetic, useful complete-resource bounds and new simplicity consequences remain open.

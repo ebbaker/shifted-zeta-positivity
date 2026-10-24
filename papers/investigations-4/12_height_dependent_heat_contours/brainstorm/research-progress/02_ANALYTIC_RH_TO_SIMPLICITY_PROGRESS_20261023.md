@@ -116,7 +116,7 @@ This chat remains [brainstorm history 0006][chat], with its unique existing regi
 [hdc]: ../../research-progress/01_HEIGHT_DEPENDENT_HEAT_CONTOURS_PROGRESS_20261023.md
 [book]: ../../manuscript/book.tex
 
-[prior-book]: ../../manuscript/book_draft_20261023_01_relative_flux.tex
+[prior-book]: ../../manuscript/drafts/book_draft_20261023_01_relative_flux.tex
 [book-review]: ../../reviews/15_RELATIVE_FLUX_ANALYTIC_MANUSCRIPT_REVIEW_20261023.md
 [spectral]: ../../manuscript/spectral_forest.tex
 [reference]: ../../notes/14_MICROSCOPIC_COMPLETE_REFERENCE_AND_HEAT_DEFECT_20261023.md

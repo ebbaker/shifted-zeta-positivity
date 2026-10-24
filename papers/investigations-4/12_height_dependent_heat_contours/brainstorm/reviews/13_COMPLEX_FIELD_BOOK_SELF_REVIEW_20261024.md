@@ -1,0 +1,28 @@
+# Self-review of the complex-field book rewrite
+
+24 October 2026, America/New_York. Prepared for **Edward Baker** with substantial LLM assistance, **gpt-6-astra (Codex), actual effort max**. This is the drafting assistant's own review, not a separate-agent, independent specialist or formal verification result.
+
+## Reviewed scope
+
+The maintained [book](../../manuscript/book.tex), *Complex zero fields and conserved heat evolution*, replaces the contour-centered exposition at the author's request. [Note 23](../notes/23_COMPLEX_FIELD_BOOK_AND_CONSERVATION_LAWS_20261024.md) records the analytic additions and scope. The prior source was preserved byte-for-byte as [draft 03](../../manuscript/drafts/book_draft_20261024_03_conserved_contours.tex), before edits; the [receipt](../../manuscript/BOOK_PRE_FIELD_DRAFT_RECEIPT_20261024.json) records its hash. The broader main.tex and prior hash-bound notes were left unchanged.
+
+## Mathematical checks
+
+1. **Density and phase.** The Laplacian factor is \(4\pi\), and the target kernel integrates to one. The phase gradient is exchanged, \(\mathbf v=(\theta_y,\theta_x)\); current remains smooth at critical points although the velocity quotient need not. Local winding of the amplitude also detects critical points away from zeros and is not used alone as a zero detector.
+2. **Evolution and convention.** The product-rule calculation explicitly cancels the third derivatives and yields \(V=-2\partial_{xy}\log D\). The rotation, \(t=2\tau\), amplitude factor \(2\sqrt\pi\), and potential shift reproduce the checked DS-II convention. A general DS-II solution is not claimed to retain a theta lift.
+3. **Conserved quantities.** The Fourier multiplier is \(-8\pi k_xk_y/|k|^2\), with norm at most \(4\pi\), and is selfadjoint and homogeneous of degree zero. The momentum force integrates to zero only after this potential selection. The Hamiltonian has the essential one-half in its density-dependent potential term. The explicit derivative gives conservation; its kinetic part is indefinite. The signed virial satisfies \(\dot{\mathcal B}=\mathcal D\), \(\dot{\mathcal D}=2\mathcal E\); no positive-variance conclusion is asserted. Harmonic/external forcing and boundary flux are retained separately.
+4. **Mass classification.** The full-plane area formula is obtained by exhaustion and monotone convergence, so infinite valence is legitimate. Great Picard allows at most one finite-valence target value; that null exception does not change the positive weighted integral. The canonical heat slice is nonpolynomial by its positive value at zero and real-axis decay. This proves infinite mass at fixed positive regulator, a stronger conclusion than the uncertainty in Note 22, without inferring divergence of every signed energy integral.
+5. **Polynomial sector.** Decay justifies the global identities and ensures \(V-\mathcal T\rho\) is harmonic in \(L^2\), hence zero. The second spatial moment is integrable only for degree at least two. The extra target term in the quadratic case integrates to zero because the first absolute target moment is finite. These checks validate the zero momenta, zero Hamiltonian and restricted angular moment \(n(n-1)\). Degree one is treated separately rather than assigned a finite second moment.
+6. **Observable and limits.** The Gaussian factor is \(8\pi s\); pairs are ordered, and subtracting \(N\) removes individual self-terms. The Lipschitz constant is \(e^{-1/2}/(2\sqrt s)\), giving the stated \(N e^{-1/2}/\sqrt s\) comparison for unnormalized equal-mass transport. The comparison proposition explicitly assumes \(N>0\). The cutoff must be one at selected zeros and have no transition zeros. The regulator limit precedes the spatial-scale limit; finite-regulator nonnegativity is not claimed. The full window transport formula retains both source terms and mass subtraction.
+
+## Controls and interpretation
+
+The polynomial \(z^2-2t\) satisfies the global conservation hypotheses and has a double event despite \(M=2\), \(P_x=P_y=\mathcal E=0\). Its observable \(Q_s=2e^{-|t|/s}\) is not conserved. All analytic source controls in [Summary 12](../../../../../result-summaries/12_collision_controls_and_screening.md) pass the local construction and compact normalization. Transcendental controls fail global finite mass, as does theta. No generic premise is presented as a theta discriminator.
+
+The statement “The polynomial calculation shows why conservation alone is not the desired simplicity mechanism” has this explicit scope: the displayed charges and the stated field class. It is not an exclusion of every DS-II method, higher invariant, weighted field or source-specific observable estimate.
+
+## Verification and remaining limits
+
+The [exact execution record](../numerics/18_FIELD_CONSERVATION_CHECKS_20261024.json) contains seven vanishing local/multiplier residuals, six polynomial coefficient cases and the Gaussian gradient calculation. The earlier eight heat-jet residuals are separately recorded in [record 17](../numerics/17_COMPLEX_ZERO_FIELD_CHECKS_20261024.json). These are same-assistant algebra checks, not independent validation of the global proofs. The [build receipt](../../manuscript/BOOK_COMPLEX_FIELD_BUILD_RECORD_20261024.json) records compilation and layout checks.
+
+No unresolved mathematical defect was identified in this self-review. Global conservation is conditional on the stated regularity, integrability and potential selection. No global finite-mass theta application, theorem of well-posedness, arithmetic upper bound, simplicity result or novelty claim is established. Specialist review of the analytic arguments remains desirable before external mathematical reliance.
