@@ -1,0 +1,204 @@
+\section{Scope and exact evolution}\label{sec:framework}
+Averaging can suppress the fine peaks near individual zeros while
+preserving their spatial density and transport. The central question is
+whether this averaged quantity admits an explicit approximation whose
+error remains controlled as both time and the observed zero population
+grow. A density approximation alone is insufficient for evolution: its
+time derivative and current require separate estimates, and the filtered
+potential equation contains an actual gradient covariance.
+
+We use $z=x+iy$; height means $x$. The physical density is never divided
+by its mean except when stating a scaled limiting profile.
+Sections~\ref{sec:negative}--\ref{sec:positive} first establish the
+endpoint estimates for a fixed positive regulator.
+Section~\ref{sec:explicit} then gives the explicit differentiated clock
+for a specified adaptive regulator. Section~\ref{sec:finite} constructs
+finite-time approximants under the same globally extended measurement
+protocol. The fixed-regulator and adaptive statements are distinguished
+throughout; derivatives of an error bound are never substituted for
+bounds on the differentiated error.
+
+The account consolidates repository Notes~02, 04--06, 09, 11--12,
+14, 16 and 19--20 \cite{n02,n04,n05,n06,n09,n11,n12,n14,n16,n19,n20}.
+Long finite-constant derivations and computational records remain in
+those notes. All mathematical review to date is by the same assistant.
+Appendix~\ref{app:numerics} gives brief supporting checks, and
+Appendix~\ref{app:scope} records the control hypotheses and limitations.
+
+\subsection{Canonical normalization and a fixed regulator}
+Define
+\begin{align}
+ \Phi(u)&=\sum_{n\ge1}
+ (2\pi^2n^4e^{9u}-3\pi n^2e^{5u})e^{-\pi n^2e^{4u}},\qquad u\ge0,
+ \label{eq:phi}\\
+ H(t,z)&=\int_0^\infty e^{tu^2}\Phi(u)\cos(zu)\,du .
+ \label{eq:H}
+\end{align}
+The source is positive on this half-line, has an even smooth extension,
+and decays faster than every Gaussian. Consequently all the source
+moments and differentiated transforms used below exist,
+\begin{equation}
+ H_t=-H_{zz},\qquad
+ H(0,z)=\tfrac18\xi(\tfrac12+\tfrac i2z).
+ \label{eq:heat}
+\end{equation}
+For a constant $\epsilon>0$, set
+\begin{equation}
+ D=|H|^2+\epsilon^2,\quad S=\log D,\quad
+ \rh=\frac{\epsilon^2|H_z|^2}{\pi D^2},\quad
+ j=\frac{\epsilon^2H_{zz}\overline{H_z}}{\pi D^2},
+ \qquad \sqd=\partial_x^2-\partial_y^2.
+ \label{eq:definitions}
+\end{equation}
+The real vector represented by $j$ is $(\Re j,\Im j)$.
+
+\begin{proposition}[Potential and current identities]\label{prop:exact}
+For real $t$ and all $z\in\C$,
+\begin{align}
+ \Delta S&=4\pi\rh, \label{eq:curvature}\\
+ S_t&=-\tfrac12(\sqd S+S_x^2-S_y^2), \label{eq:potential}\\
+ \partial_t\rh+\partial_x\Re j+\partial_y\Im j&=0. \label{eq:current}
+\end{align}
+These formulas are smooth at zeros of $H$.
+\end{proposition}
+\begin{proof}
+Holomorphy gives $\Delta |H|^2=4|H_z|^2$ and
+$|\nabla |H|^2|^2=4|H|^2|H_z|^2$, proving
+\eqref{eq:curvature}. Also
+$\sqd D=4\Re(H_{zz}\overline H)$ and
+$D_t=-2\Re(H_{zz}\overline H)$.
+Since $\sqd S+S_x^2-S_y^2=\sqd D/D$, this proves
+\eqref{eq:potential}. Differentiation of \eqref{eq:definitions},
+using $H_t=-H_{zz}$ and the Cauchy--Riemann equations, gives
+\eqref{eq:current}. Every denominator is bounded below by a positive
+power of $\epsilon$.
+\end{proof}
+
+Let $F$ be convolution by a fixed, nonnegative, compactly supported,
+normalized space-time kernel. It need not be a projection.
+Define
+\begin{equation}
+ U=FS,\quad R=F\rh,\quad
+ Q=F(S_x^2-S_y^2)-(U_x^2-U_y^2).
+ \label{eq:filtereddefs}
+\end{equation}
+Derivatives commute with this fixed filter. Therefore
+\begin{align}
+ U_t&=-\tfrac12(\sqd U+U_x^2-U_y^2+Q),\qquad \Delta U=4\pi R,
+ \label{eq:U}\\
+ R_t&=-\tfrac12\sqd R-\frac1{8\pi}\Delta(U_x^2-U_y^2+Q),
+ \label{eq:R}\\
+ R_t+\partial_x\Re(Fj)+\partial_y\Im(Fj)&=0. \label{eq:Fcurrent}
+\end{align}
+The exact unresolved quantity is the difference of two gradient
+variances, $Q=\Var_F(S_x)-\Var_F(S_y)$.
+In particular, it is not a function of the density variance alone.
+For example, the exact heat field $H=e^{-t}\cosh z$, at $t=0$,
+$\epsilon=1$, averaged over $x=\pm\log2$, $y=0$, has zero density
+variance but $Q=900/1681$ \cite{n02}.
+
+A useful differentiated form is
+\begin{equation}
+ \Delta Q=2\{\Var_F(S_{xx})-\Var_F(S_{yy})\}
+ +8\pi\{\Cov_F(S_x,\rho_x)-\Cov_F(S_y,\rho_y)\}.
+ \label{eq:lapQ}
+\end{equation}
+Indeed, $\Delta(g^2)=2|\nabla g|^2+2g\Delta g$,
+$\Delta S_i=4\pi\rho_i$, and the two $S_{xy}$ variances cancel.
+
+\subsection{A controlled small-width approximation}
+Assume independent even kernels with variances $v_t,v_x,v_y$ and
+supports scaled by a common small parameter $\delta$.
+Taylor expansion of a covariance gives
+\begin{align}
+ Q_\nabla={}&v_t(U_{xt}^2-U_{yt}^2)
+ +v_x(U_{xx}^2-U_{xy}^2)
+ +v_y(U_{xy}^2-U_{yy}^2), \label{eq:gradient}\\
+ Q-Q_\nabla&=O(\delta^4)\quad\hbox{in spatial }C^2.
+ \label{eq:gradienterror}
+\end{align}
+Here $S$ has bounded $C^7$ norm on the compact filter buffer and
+$\epsilon$ is fixed. To see the remainder, expand the two factors in
+each covariance to second order; evenness removes odd total degrees,
+and the fourth moments control the remainder and its two derivatives.
+Replacing derivatives of $S$ by derivatives of $U$ changes the
+quadratic terms by $O(\delta^4)$.
+For spatial-only isotropic variance $v$ this reduces to
+\begin{equation}
+ Q_\nabla=v(U_{xx}^2-U_{yy}^2)
+          =4\pi v R(U_{xx}-U_{yy}).
+ \label{eq:isotropic}
+\end{equation}
+The bound is a consistency estimate, not a stability theorem for a
+closed reduced PDE. Broad filters require different information.
+Height-dependent widths are permitted in the static estimates below,
+but their derivatives produce commutators if inserted in
+\eqref{eq:U}--\eqref{eq:Fcurrent}.
+
+\subsection{A variable regulator and its exact corrections}\label{sec:variable}
+Let now $q=\epsilon(t,x,y)^2>0$ be smooth, set $r=\log q$ and
+$w=q/(|H|^2+q)$, and retain \eqref{eq:definitions} with $\epsilon^2=q$.
+The source exponent $q_t(u)$ introduced later is a different quantity.
+The algebraic density $\rho$ remains nonnegative, whereas
+$\Delta S/(4\pi)$ need not be. Define
+\begin{align}
+ \mathcal B_\epsilon&=w\{r_t+\tfrac12(r_{xx}-r_{yy}+r_x^2-r_y^2)\},
+ \label{eq:adaptiveB}\\
+ 4\pi C_\epsilon&=2\operatorname{div}(w\nabla r)-w\Delta r
+                     -w(1-w)|\nabla r|^2,\label{eq:adaptiveC}\\
+ \mathcal S_\epsilon&=(1-2w)(r_t\rho+\nabla r\cdot\mathbf j).
+ \label{eq:adaptiveSource}
+\end{align}
+\begin{proposition}[Exact adaptive equations]\label{prop:adaptive}
+For a fixed positive normalized convolution $F$, put
+$\overline C=FC_\epsilon$, $\overline{\mathcal B}=F\mathcal B_\epsilon$
+and retain the actual covariance in \eqref{eq:filtereddefs}. Then
+\begin{align}
+ U_t&=-\tfrac12(\sqd U+U_x^2-U_y^2+Q)+\overline{\mathcal B},
+ &\Delta U&=4\pi(R+\overline C),\label{eq:adaptiveU}\\
+ R_t&=-\tfrac12\sqd R-\frac1{8\pi}\Delta(U_x^2-U_y^2+Q)
+       +\frac1{4\pi}\Delta\overline{\mathcal B}
+       -\partial_t\overline C-\tfrac12\sqd\overline C,
+ \label{eq:adaptiveR}\\
+ R_t+\operatorname{div}(F\mathbf j)&=F\mathcal S_\epsilon.
+ \label{eq:adaptiveCurrent}
+\end{align}
+\end{proposition}
+\begin{proof}
+Writing $f=|H|^2$, direct differentiation gives
+$S_t+\tfrac12(\sqd S+S_x^2-S_y^2)=(q_t+\sqd q/2)/(f+q)$
+and
+\[
+ \Delta S-4\pi\rho=\frac{\Delta q}{f+q}
+ -\frac{2\nabla f\cdot\nabla q+|\nabla q|^2}{(f+q)^2}.
+\]
+These are \eqref{eq:adaptiveB}--\eqref{eq:adaptiveC}.
+At fixed $q$ the continuity identity holds; the chain rule adds
+$q_t\partial_q\rho+\nabla q\cdot\partial_q\mathbf j$, with
+$q\partial_q\rho=(1-2w)\rho$ and
+$q\partial_q\mathbf j=(1-2w)\mathbf j$.
+Convolution proves \eqref{eq:adaptiveU} and \eqref{eq:adaptiveCurrent};
+taking the Laplacian of the potential equation proves
+\eqref{eq:adaptiveR}, including both derivatives of $\overline C$.
+\end{proof}
+For time-only regulators $C_\epsilon=0$, but the other two corrections
+remain. A constant nonzero heat field has $\rho=0$ and can have
+$\Delta S\ne0$ when $q$ varies spatially, so the distinction is necessary.
+The differentiated fixed-regulator formula \eqref{eq:lapQ} is used only
+in its stated constant-regulator setting. Adaptive results below use
+fixed spatial kernels; changing their widths in time or space would
+introduce additional filter commutators \cite{n14}.
+
+A weak form useful at zeros follows from the distributional identity
+$\Delta\log|H|^2=4\pi\nu$, with multiplicities included in $\nu$.
+For a compactly supported real $C^2$ test $\psi$, let
+$\Lambda_q=\log(1+q/|H|^2)$. Then
+\begin{align}
+ 4\pi\langle\rho-\nu,\psi\rangle
+ ={}&\int\Lambda_q\Delta\psi+2\int w\nabla r\cdot\nabla\psi\notag\\
+ &+\int w\{\Delta r+(1-w)|\nabla r|^2\}\psi.
+ \label{eq:adaptiveWeak}
+\end{align}
+This retains the spatial correction without a pointwise bound on
+$H_z/H$ near its poles. Neither \eqref{eq:adaptiveR} nor
+\eqref{eq:adaptiveCurrent} is an autonomous equation for $R$ alone.

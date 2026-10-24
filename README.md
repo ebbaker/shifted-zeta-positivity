@@ -32,6 +32,13 @@ Edward Baker — August–October 2026. **Overview updated 3 October 2026; layou
 
 **Reference workflow (23 October 2026):** record relevant research articles as they are found, with versioned citations, checked passages and use notes in the affiliated investigation's `references/` folder. Follow the root [reference guidance](REFERENCE_WORKFLOW.md); third-party PDFs stay in the external reading archive, outside Git.
 
+**GPT research model workflow (24 October 2026):** GPT-6 Astra owns analytical
+formulas and proofs; GPT-6.1 Sol owns numerical implementation and execution.
+This division applies to GPT work alongside the repository's Claude work.
+Edward Baker manages the chats and model selection. Use the
+[manual handoff workflow](GPT_RESEARCH_MODEL_WORKFLOW.md) to specify each
+numerical request and return its evidence for analytical assessment.
+
 ## Background
 
 The program grew out of a series of papers, some posted as preprints and some

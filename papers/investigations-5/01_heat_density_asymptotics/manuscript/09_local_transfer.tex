@@ -1,0 +1,185 @@
+\subsection{Source locality removes artificial cutoff amplification}
+The global bound \eqref{eq:jetallowances} loses the source decay before
+applying the heat weight. A cellwise replacement preserves it. Let
+$[a_i,b_i]$ be a source cell of length $h_i$, let $B_i$ bound
+$\sup_{[a_i,b_i]}|\Phi''|$, and let $\lambda_i$ be the nodal hats.
+For implemented nodal data $v_i$, assume
+$|v_i-\Phi_N(u_i)|\le\sigma_i$, with nonnegative interpolant $f$.
+Define the spatially dependent omitted-mode allowance
+\begin{equation}
+ \tau_N(v)=\frac{2\pi^2(N+1)^4e^{9v-\pi(N+1)^2e^{4v}}}
+ {1-(1+1/(N+1))^4e^{-\pi(2N+3)e^{4v}}}.
+ \label{eq:localmodetail}
+\end{equation}
+For a time ceiling $b$, write $W_j(u)=u^je^{bu^2+Yu}$ and retain
+$T_j$ from \eqref{eq:jetallowances} with $s=\max\{b,0\}$.
+
+\begin{proposition}[Cellwise jet comparison]\label{prop:localjets}
+Uniformly for $t\le b$ in the chosen slab, all real $x$, and $|y|\le Y$,
+\begin{align}
+ |\partial_z^j(H-H_f)|&\le\delta_j^{\rm loc},\qquad 0\le j\le3,\notag\\
+ \delta_j^{\rm loc}
+ &=\frac12\sum_i B_i\int_{a_i}^{b_i}(u-a_i)(b_i-u)W_j(u)\,du\notag\\
+ &\quad+\sum_i\bigl(\tau_N(u_i)+\sigma_i\bigr)
+                \int_0^U\lambda_i(u)W_j(u)\,du+T_j.
+ \label{eq:localjets}
+\end{align}
+For the complete-source cell constants below, the interpolation term is
+no larger than $B_2h_s^2F_j/8$. For fixed $b,Y,j$ and maximum cell length
+bounded above, its coefficient of $h_s^2$ remains bounded as $U$ grows.
+\end{proposition}
+\begin{proof}
+Linear interpolation of the complete source costs
+$B_i(u-a_i)(b_i-u)/2$. The positive hats transfer the nodal mode and
+arithmetic errors, while consecutive omitted-mode ratios prove
+\eqref{eq:localmodetail}. Integrating these bounds against $W_j$ and
+adding the complete source tail proves \eqref{eq:localjets}.
+
+To specify $B_i$, put $A_n=\pi n^2e^{4a_i}$ and $B_n=\pi n^2e^{4b_i}$.
+Assign coefficients $75,330,224,32$ to the powers $5/4,9/4,13/4,17/4$,
+respectively. Write $m_p(A,B)=v^pe^{-v}$, where
+$v=\min\{B,\max\{A,p\}\}$. Then
+\[
+ B_i=\pi^{-1/4}\sum_{n\ge1}n^{-1/2}\sum_p c_p m_p(A_n,B_n)
+ \le B_2.
+\]
+This follows by bounding the four monomials in the differentiated
+source as in Lemma~\ref{lem:B2}. For a finite sum through $N_B\ge1$,
+the omitted tail is at most its first omitted expression at $a_i$
+divided by
+$1-(1+1/(N_B+1))^8e^{-\pi(2N_B+3)e^{4a_i}}$.
+Each omitted monomial is decreasing in $u$.
+
+For cell lengths at most $h_0$, a bound for $B_i$ at $u$ is the
+supremum of this positive derivative envelope over
+$|v-u|\le h_0$, $v\ge0$. Its far tail is bounded by a polynomial in
+$e^{4(u+h_0)}$ times $e^{-\pi e^{4(u-h_0)}}$. This is integrable
+against $W_j$. Using $(u-a_i)(b_i-u)\le h_s^2/4$ proves the final
+assertion. The original coefficient $B_2F_j/8$, in contrast, diverges
+with $U$ when $b>0$. This distinction concerns artificial cutoff
+amplification, not the genuine time growth of the approximation cost.
+\end{proof}
+A quadrature-free upper bound for each interpolation contribution is
+$B_i h_i^3\max_{[a_i,b_i]}W_j/12$; the nodal contribution is at most
+$h_i\max W_j$ times the mean of its two endpoint allowances.
+The positive maxima occur at endpoints or positive solutions of
+$2bu^2+Yu+j=0$. Taking the minimum with the original bound preserves
+dominance even on a coarse mesh. Nodal arithmetic retains the source
+decay only when its pointwise allowances do; a relative rounding
+hypothesis must be verified. Note~23 \cite{n23} records the separate
+interpolation, mode, tail and arithmetic terms.
+
+\subsection{Local amplitude improves nonlinear transfer}
+At a comparison point put $g=H_f$, $g_j=\partial_z^jH_f$, and let
+$d_j$ be any valid jet allowances. Set
+\[
+ P_j=|g_j|+d_j,\quad m=(|g|-d_0)_+,\quad M=|g|+d_0,\quad q=\epsilon_g^2.
+\]
+Define maxima over $m\le v\le M$:
+\begin{align}
+ A_*&=\frac{q}{\pi(q+m^2)^2},&
+ A_1&=\max_v\frac{4qv}{\pi(q+v^2)^3},\notag\\
+ a_*&=\max_v\frac{v}{q+v^2},& b_*&=\frac1{q+m^2},&
+ w_1&=\max_v\frac{2qv}{(q+v^2)^2}.\label{eq:localrational}
+\end{align}
+The three maxima are evaluated at the clamped points
+$\epsilon_g/\sqrt5$, $\epsilon_g$, and $\epsilon_g/\sqrt3$.
+Set
+\begin{align}
+ e_\rho&=2A_*P_1d_1+A_1P_1^2d_0,\notag\\
+ e_j&=A_*(P_1d_2+P_2d_1)+A_1P_1P_2d_0,\notag\\
+ e_{13}&=A_*(P_1d_3+P_3d_1)+A_1P_1P_3d_0,\notag\\
+ e_w&=w_1d_0,\qquad e_S=2a_*d_0,\qquad \rho_*=A_*P_1^2,\notag\\
+ e_{\rho,t}&=2e_{13}+|r_t|(e_\rho+2\rho_*e_w)
+ +4\{P_2a_*e_\rho+\rho_*(a_*d_2+P_2b_*d_0)\}.
+ \label{eq:localnonlinear}
+\end{align}
+
+\begin{proposition}[Amplitude-aware comparison]\label{prop:localnonlinear}
+The quantities in \eqref{eq:localnonlinear} bound the corresponding
+actual density, current, potential and density-time-derivative errors.
+In addition,
+\begin{align}
+ |S_t-(S_f)_t|&\le2(a_*d_2+P_2b_*d_0)+|r_t|e_w,\notag\\
+ |S_i|,|(S_f)_i|&\le G_i:=2P_1a_*+|r_i|,\notag\\
+ |S_i-(S_f)_i|&\le d_i^S:=2a_*d_1+2P_1b_*d_0+|r_i|e_w.
+ \label{eq:localpotential}
+\end{align}
+No simple-root or nonvanishing-field premise is needed.
+\end{proposition}
+\begin{proof}
+The segment between the two field values lies in the annulus
+$m\le|h|\le M$. The constants \eqref{eq:localrational} bound
+$A(h)$, $|\nabla_h A|$, $|h/(|h|^2+q)|$, the derivative norm of
+that map, and $|\nabla_h w|$, respectively.
+For the fourth bound the radial eigenvalues are
+$(q-v^2)/(q+v^2)^2$ and $1/(q+v^2)$.
+The product comparison and exact time-derivative argument from
+Proposition~\ref{prop:fieldstability} now give
+\eqref{eq:localnonlinear}. The exact formulas for $S_t,S_i$ give
+\eqref{eq:localpotential} directly.
+All constants are bounded by their global counterparts in
+\eqref{eq:fieldstability}--\eqref{eq:gradientstability}.
+For example, relative to $1/(\pi\epsilon_g^2)$, $A_*$ gains the
+factor $[1+(m/\epsilon_g)^2]^{-2}$.
+The gain may disappear at a zero; the bound remains valid there.
+\end{proof}
+No physical normalization has changed. In particular there is no
+unpaid time derivative of a rescaled field.
+
+\subsection{Local covariance and evaluation budgets}
+The local envelopes may be filtered before taking suprema.
+For any pointwise error $e_V$,
+$|\partial^\alpha K*(V-V_f)|\le|\partial^\alpha K|*e_V$.
+With $d_i=d_i^S$ from \eqref{eq:localpotential}, direct comparison of
+the actual covariances gives
+\begin{align}
+ |Q-Q_f|&\le2\sum_i\{K*(G_id_i)+(K*G_i)(K*d_i)\},\notag\\
+ |\Delta(Q-Q_f)|&\le\sum_i\biggl\{2|\Delta K|*(G_id_i)
+ +2(K*d_i)(|\Delta K|*G_i)\notag\\
+ &\qquad+2(K*G_i)(|\Delta K|*d_i)
+ +4\sum_{a=x,y}(|K_a|*G_i)(|K_a|*d_i)\biggr\}.
+ \label{eq:localcovariance}
+\end{align}
+To prove this, move the derivatives of the averaged squares onto $K$
+and use $\Delta(v^2)=2v\Delta v+2|\nabla v|^2$ for each averaged
+gradient. This is the proof of Theorem~\ref{thm:covariance} with its
+spatial information retained. For constant envelopes the Laplacian
+coefficient becomes
+$6\|\Delta K\|_1+4(\|K_x\|_1^2+\|K_y\|_1^2)$, slightly sharper
+than \eqref{eq:covariancestability}. Positive convolution bounds still
+need a numerical integration enclosure if evaluated by quadrature.
+
+There is also a finite evaluation formula without division by $t$ or $z$.
+On a cell centered at $c$ with half-width $d$, expand
+\[
+ e^{tu^2\pm izu}=e^{tc^2\pm izc}
+ \sum_{n=0}^{M_e}\frac{[(2tc\pm iz)(u-c)+t(u-c)^2]^n}{n!}
+       +\text{remainder}.
+\]
+Multiply by the linear source and $u^j$, and integrate the polynomial
+exactly, with derivative factors $(\pm i)^j/2$ for the two branches.
+Writing $b=c+d$ and $\Theta=(2|t|c+|z|)d+|t|d^2$, the cell's
+absolute jet truncation error is at most
+\begin{equation}
+ 2d\max\{f(c-d),f(c+d)\}b^j
+ e^{tc^2+|y|c+\Theta}\frac{\Theta^{M_e+1}}{(M_e+1)!}.
+ \label{eq:localevaluation}
+\end{equation}
+This follows from the absolute exponential remainder. Sum over cells.
+It pays truncation, not rounding. The exact $H_f$ still solves heat;
+a truncated implementation is compared to it with this additional error.
+The raw error-function subtraction can be unusable near its removable
+singularity even at high precision; Note~23 records a failed case and
+the separate local evaluation check.
+
+For the first trial, Note~23 fixes $[-16,64]$, observation rectangle
+$[-8,8]\times[-1/2,1/2]$, the full buffer
+$[-10,10]\times[-1,1]$, widths $(2,1/2)$ and $\eta=1/2$.
+Its absolute contract includes $R,J,R_t,U,Q,\Delta Q$, the required
+filtered derivatives and source-derived boundary traces.
+On this slab $r_x=r_y=0$, so the spatial curvature correction is exactly
+zero, while the time forcing and current source remain.
+The 192-cell diagnostic does not meet the contract. The proved local
+bounds are an improvement to the comparison method, not an informative
+full-transition representation or a certified numerical solution.

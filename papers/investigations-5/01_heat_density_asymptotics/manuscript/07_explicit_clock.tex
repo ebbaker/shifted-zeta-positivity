@@ -1,0 +1,369 @@
+\section{An explicit differentiated clock}\label{sec:explicit}
+The continuum mean $Lk_h/\pi$ suppresses the lattice phase. Its static
+accuracy does not by itself control a time derivative on a growing
+height window. We retain that phase exactly and replace the source mean
+and its drift by explicit saddle quantities, with a separate error for
+each replacement. Throughout this section $\ell,h,Y$ are fixed,
+$Y>h$, and there is no time average.
+
+Use the large saddle in \eqref{eq:saddle} and set
+\begin{equation}
+ M_0=2\pi^2e^{q_t(L)}\sqrt{2\pi/\kappa},\qquad
+ \epsilon_+(t,x)=M_0\kappa^{-1}e^{-x^2/(2\kappa)},\qquad
+ p=\pi/L.
+ \label{eq:positiveRegulator}
+\end{equation}
+Implicit differentiation gives $L'=2L/\kappa$ and
+$\kappa'=8L+16tL/\kappa-2$.
+The candidate below uses only $L,\kappa$, the kernel widths and
+fractional parts. Complete-source moments enter its proof and error
+allowances, not its evaluated formula.
+
+\subsection{A score estimate for the mean and drift}
+\begin{lemma}[Complete-source score refinement]\label{lem:score}
+Under the source gates of Appendix~\ref{app:source}, write
+$\alpha=\mu'/\mu$ and put
+\begin{align}
+ M_-&=2\pi^2e^{q_t(L)}Z_-/\sqrt\kappa,&
+ \overline p_0&=2\pi^2C_be^{-\pi}/M_-,& a&=1+2t/\kappa,\notag\\
+ e_s&=2aA_2(4)+(5+\overline p_0)/\kappa,&
+ e&=\min\{e_\mu,e_s\},\notag\\
+ E_v^s&=2aA_3(4)+5A_1(0)/\kappa
+                   +L\overline p_0/\kappa+e^2,\notag\\
+ B_3^s&=4\{A_3(0)+e^3A_0(0)\},&
+ E_\alpha&=2E_v^s+B_3^s/(L-e).\label{eq:scoreallowances}
+\end{align}
+If $L>e$, then
+\begin{equation}
+ |\mu-L|\le e=O(\kappa^{-1}),\qquad
+ |v-\kappa^{-1}|\le E_v^s=O(\kappa^{-3/2}),\qquad
+ |\alpha-2/\kappa|\le E_\alpha=O(\kappa^{-3/2}).
+ \label{eq:scorebounds}
+\end{equation}
+The weight $4$ in $A_j(4)$ is a source weight, independent of the
+physical transverse strip.
+\end{lemma}
+\begin{proof}
+The complete prefactor in \eqref{eq:q} satisfies
+$b\ge1-3/(2\pi)>1/2$ and $|b'/b|\le5$ on $u\ge0$.
+Indeed the first term contributes at most $6/\pi$ to $|b'|$;
+the remaining terms are bounded by
+\[
+ \sum_{n\ge2}(2n^2+16n^6)e^{-3(n^2-1)}<0.13.
+\]
+For this tail, its first term is $1032e^{-9}$ and the subsequent
+ratios are less than $10^{-5}$. This also justifies differentiation
+of the full series. Thus $|b'|<2.13$ and the stated score bound follows.
+
+Let $\zeta=u-L$, $d=\E\zeta$, $\beta=b'/b$ and
+$p_0=\Phi(0)/M$. The logarithmic source derivative is
+\begin{equation}
+ \partial_u\log(dP_t/du)=-\kappa\zeta+E_q(\zeta)+\beta(u),
+ \qquad E_q=-\frac{\kappa+2t}{4}(e^{4\zeta}-1-4\zeta).
+ \label{eq:scoreidentity}
+\end{equation}
+The exponential remainder gives
+$|E_q|\le2(\kappa+2t)\zeta^2e^{4|\zeta|}$.
+Integration by parts on the half-line, including its endpoint, yields
+\begin{equation}
+ \kappa d=\E E_q+\E\beta+p_0,\qquad
+ \kappa\E\zeta^2=1-Lp_0+\E(\zeta E_q)+\E(\zeta\beta).
+ \label{eq:scoreparts}
+\end{equation}
+Here $\int P_t'=-p_0$ and
+$\int(u-L)P_t'=Lp_0-1$ fix the endpoint signs.
+Apply the weighted moment bounds and $p_0\le\overline p_0$,
+then use $v=\E\zeta^2-d^2$.
+Finally differentiation of the source law gives
+$\mu'=\Cov(u,u^2)=2\mu v+m_3$, where
+$m_j=\E(u-\mu)^j$, and $|m_3|\le B_3^s$.
+This proves the finite bounds. Their orders follow from
+$A_j(4)=O(\kappa^{-j/2})$ and the superalgebraically small endpoint term.
+No differentiated asymptotic remainder is used.
+\end{proof}
+
+\subsection{The lattice phase as a finite polynomial formula}
+Write $\mathcal B_m(v)=B_m(\{v\})$ for the periodic Bernoulli
+polynomial, with convention $B_1(v)=v-1/2$, and put
+\[
+ \theta_-=(x-\ell)/p+\tfrac12,\qquad
+ \theta_+=(x+\ell)/p+\tfrac12.
+\]
+Use the interior endpoint derivatives of the polynomial kernel:
+\begin{equation}
+ a_j=\frac{315\sigma_j}{256\ell^{j+1}},\qquad
+ (\sigma_4,\sigma_5,\sigma_6,\sigma_7,\sigma_8)
+       =(384,3840,17280,40320,40320),\qquad
+ b_j=\ell a_j+j a_{j-1},
+ \label{eq:phasecoefficients}
+\end{equation}
+with other $a_j$ zero. Define
+\begin{align}
+ P(p,x)&=\frac1p+\sum_{j=4}^8\frac{p^ja_j}{(j+1)!}
+ [\mathcal B_{j+1}(\theta_-)-(-1)^j\mathcal B_{j+1}(\theta_+)],
+ \label{eq:finiteP}\\
+ D(p,x)&=\sum_{j=4}^9\frac{p^jb_j}{(j+1)!}
+ [\mathcal B_{j+1}(\theta_-)-(-1)^{j+1}\mathcal B_{j+1}(\theta_+)].
+ \label{eq:finiteD}
+\end{align}
+The symbol $D(p,x)$ in these formulas is a lattice first moment;
+it is distinct from the field denominator in \eqref{eq:definitions}.
+
+\begin{proposition}[Exact phase and continuity]\label{prop:phase}
+For $d_j=(j+1/2)p$,
+\begin{equation}
+ P=\sum_{j\in\mathbb Z}k_\ell(x-d_j),\qquad
+ D=\sum_{j\in\mathbb Z}(x-d_j)k_\ell(x-d_j).
+ \label{eq:latticeidentity}
+\end{equation}
+Consequently
+\begin{equation}
+ R_L=k_h(y)P(p,x),\qquad
+ J_L=-\frac2\kappa k_h(y)\{xP(p,x)-D(p,x)\}
+ \label{eq:explicitcandidate}
+\end{equation}
+have $R_L\ge0$ and satisfy $\partial_tR_L+\partial_xJ_L=0$
+exactly. The current vector is $(J_L,0)$.
+\end{proposition}
+\begin{proof}
+For a polynomial $f$ supported on $[-\ell,\ell]$ whose endpoint
+jets of orders zero through three vanish, integration by parts terminates:
+\[
+ \widehat f(\omega)=-\sum_{j=4}^{\deg f}
+ \frac{f^{(j)}(\ell)e^{-i\omega\ell}
+             -f^{(j)}(-\ell)e^{i\omega\ell}}{(i\omega)^{j+1}}.
+\]
+Its shifted periodization has Fourier coefficients
+$p^{-1}(-1)^n\widehat f(2\pi n/p)$.
+Insert the Bernoulli Fourier identity \cite{dlmf24} and take
+$f(s)=k_\ell(s)$ and $f(s)=sk_\ell(s)$.
+The zero coefficients are respectively $1/p$ and zero; parity gives
+\eqref{eq:finiteP}--\eqref{eq:finiteD}.
+The series used are absolutely convergent, including at edge arguments.
+Thus the finite formulas are exact, with no phase truncation error.
+The locally finite lattice sums are $C^3$ through kernel-edge crossings.
+Since $p'=-2p/\kappa$ and
+$\partial_x(xP-D)=-pP_p$, continuity follows, with no edge point masses.
+\end{proof}
+
+\subsection{Differentiated root motion and regulator transfer}
+We record the analytical ingredients that connect the explicit formula
+to the adaptive density; full finite constants are given in Note~16
+\cite{n16}. All moments below refer to the complete source law.
+The weighted bounds in Appendix~\ref{app:source} extend to order six.
+For $j\ge1$ one may use
+\[
+ B_j(Y):=\E[|u-\mu|^je^{Y|u-\mu|}]
+ \le2^{j-1}e^{Ye_\mu}\{A_j(Y)+e_\mu^jA_0(Y)\}.
+\]
+The Gaussian fourth-moment comparison and centering give
+$|m_4-3v^2|\le E_4=O(\kappa^{-9/4})$, with an explicit allowance
+from the same $D_0,D_2,D_4$ bounds (Note~16, AT3--AT4).
+Differentiating the source law, rather than a moment allowance, gives
+\begin{equation}
+ \mu'=2\mu v+m_3,\quad v'=2\mu m_3+m_4-v^2,\quad
+ m_3'=2\mu(m_4-3v^2)+m_5-4vm_3.
+ \label{eq:momentderivatives}
+\end{equation}
+In particular $|m_3'|=O(L\kappa^{-9/4})$.
+
+Use \eqref{eq:carriergates} and \eqref{eq:growing}, and write the
+root-location radius as $r_0=s/\mu$. For $f=H/M$ on the real axis,
+Taylor expansion of the differentiated complete transform gives
+\begin{align}
+ f_z&=-\mu A\sin(\mu z)-vz\cos(\mu z)+\mathcal R_z,
+ &|\mathcal R_z|&\le E_1,\notag\\
+ E_1&=\tfrac12X^2B_3(0)+\tfrac16X^3\{\mu B_3(0)+B_4(0)\},
+ \label{eq:derivativegate}\\
+ d_z&:=\mu a_*\cos s-vX\sin s-E_1>0.\notag
+\end{align}
+The last strict inequality holds eventually and bounds $|f_z|$ at
+each covered zero from below. Separately, cubic expansion in the
+source covariance $f_t=\Cov(u^2,\cos(zu))$ yields
+\begin{equation}
+ f_t-\alpha zf_z=\tfrac16m_3'z^3\sin(\mu z)
+ +(\alpha v-v'/2)z^2\cos(\mu z)
+ +\mathcal R_t-\alpha z\mathcal R_z,
+ \label{eq:driftcancellation}
+\end{equation}
+where
+$|\mathcal R_t|\le T_4=X^4\{2\mu B_5(0)+B_6(0)+vB_4(0)\}/24$.
+The cubic coefficient is $m_3'$, since
+$2\mu m_4+m_5-vm_3-3\mu'v=m_3'$.
+At a root $|\cos(\mu a_j)|\le\sin s$; hence
+\begin{equation}
+ |a_j'+\alpha a_j|\le E_{\rm vel}:=
+ \frac{|m_3'|X^3/6+(|\alpha|v+|v'|/2)X^2\sin s
+                       +T_4+|\alpha|XE_1}{d_z}
+ =O(\kappa^{-7/6}).
+ \label{eq:velocitybound}
+\end{equation}
+The moment identities and upper allowances replace the absolute
+moment derivatives here by finite source bounds whenever desired.
+This estimate holds uniformly over the growing zero population.
+
+For regularization use wider collars of radius $R_c=1/(4\mu)$,
+retaining $r_0$ for location accuracy, and strengthen the gate to
+$s<1/8$. Put $\beta=1/4$ and
+\[
+ b=a_*\{e^{-\beta}\sin\beta-\delta\}>0,\qquad c=b/(2R_c).
+\]
+Then $|H/M|\ge be^{\mu|y|}$ off the collars and on their boundaries,
+and $|H/M|\ge c|z-a_j|$ inside them.
+There are at most $n=2\mu(\ell+R_c)/\pi+2$ relevant collars.
+For $\eta=\sqrt{2\pi}/(Z_-\kappa)$ and $a_e=\eta/c$, set
+\begin{align}
+ W_0&=4\ell h\,\eta^2/b^2
+              +n\pi a_e^2\log(1+4R_c^2/a_e^2),&
+ \Lambda_0&=W_0+n\pi a_e^2,\label{eq:collarintegrals}\\
+ Q_2&=\mu^2B_0(Y)+2\mu B_1(Y)+B_2(Y),&
+ V&=|\alpha|X+E_{\rm vel},\notag\\
+ I_0&=\left\{Q_2/b+\frac{V}{R_c-r_0}\right\}W_0
+                                      +n\pi^2Va_e.\label{eq:poleintegral}
+\end{align}
+Here $B_0(Y)=\E e^{Y|u-\mu|}$; the moment $B_2(Y)$ differs from
+the global source derivative constant $B_2$ in Lemma~\ref{lem:B2}.
+On a full kernel support $\Omega$,
+\begin{equation}
+ \int_\Omega w\le W_0=O(\kappa^{-2}),\quad
+ \int_\Omega\Lambda_q\le\Lambda_0=O(\kappa^{-2}),\quad
+ \int_\Omega|H_{zz}/H|w\le I_0
+             =O(L^2\kappa^{-2}+\kappa^{-5/3}).
+ \label{eq:weakorders}
+\end{equation}
+For the first two bounds integrate the rational and logarithmic
+simple-zero profiles over disks of radius $2R_c$ about the actual zeros.
+For the third, $H_{zz}/H$ has residue $a_j'$ at a covered zero.
+Subtract that pole and use the boundary maximum principle for its
+regular part. The pole contributes at most
+$V\int w/|z-a_j|\le\pi^2Va_e$ per collar.
+This step preserves the small pole residue rather than bounding the
+meromorphic quotient uniformly across a zero.
+
+Let $J_\nu=\sum_j a_j'\delta_{a_j}$. With
+$\partial_{\bar z}=(\partial_x+i\partial_y)/2$, one has distributionally
+\begin{equation}
+ j-J_\nu=\frac1\pi\left\{\frac{H_{zz}}H w(1-w)\partial_{\bar z}r
+             -\partial_{\bar z}\left(\frac{H_{zz}}H w\right)\right\}.
+ \label{eq:weakcurrentbridge}
+\end{equation}
+This follows by differentiating $w$ off the zeros and using
+$\partial_{\bar z}(1/(z-a))=\pi\delta_a$ at each simple zero.
+For norms on the full buffer set
+\begin{align*}
+ b_1&=\|\nabla r\|_\infty,&b_2&=\|\Delta r\|_\infty,&a_0&=\|r_t\|_\infty,\\
+ b_{1t}&=\|\nabla r_t\|_\infty,&b_{2t}&=\|\Delta r_t\|_\infty,\\
+ \mathcal K_r(\psi)&=\|\Delta\psi\|_\infty+2b_1\|\nabla\psi\|_\infty
+                     +(b_2+b_1^2)\|\psi\|_\infty,\\
+ \mathcal K_{r,t}(\psi)&=2b_{1t}\|\nabla\psi\|_\infty
+                     +(b_{2t}+2b_1b_{1t})\|\psi\|_\infty.
+\end{align*}
+Equations \eqref{eq:adaptiveWeak} and \eqref{eq:weakcurrentbridge}
+then give the finite allowances
+\begin{align}
+ E_R(\psi)&=\mathcal K_r(\psi)\Lambda_0/(4\pi),\notag\\
+ E_J(\psi)&=(\|\nabla\psi\|_\infty+b_1\|\psi\|_\infty)I_0/(2\pi),\notag\\
+ E_T(\psi)&=\{\mathcal K_r(\psi)(a_0W_0+2I_0)
+                          +\mathcal K_{r,t}(\psi)W_0\}/(4\pi).
+ \label{eq:transportallowances}
+\end{align}
+They bound, respectively, the pairings of $\rho-\nu$,
+$j-J_\nu$, and $\partial_t\rho-\partial_t\nu$ against $\psi$.
+For the last estimate differentiate the exact weak identity, using
+\[
+ (\Lambda_q)_t=w(r_t+2\Re(H_{zz}/H)),\qquad
+ w_t=w(1-w)(r_t+2\Re(H_{zz}/H)).
+\]
+The simple-pole singularities are locally integrable; local simple-zero
+factorization justifies the distributional time derivative.
+For \eqref{eq:positiveRegulator},
+\begin{gather*}
+ a_0\le2L^2+3|\kappa'|/\kappa+X^2|\kappa'|/\kappa^2,\qquad
+ b_1\le2X/\kappa,\quad b_2=2/\kappa,\\
+ b_{1t}\le2X|\kappa'|/\kappa^2,\qquad b_{2t}=2|\kappa'|/\kappa^2.
+\end{gather*}
+Thus $E_R(K)=O(\kappa^{-2})$ and
+$E_J(K),E_T(K)=O(\kappa^{-5/3}+L^2\kappa^{-2})$.
+The signed weak source $K*\mathcal S_\epsilon$ has the latter order
+by the two continuity equations. Also
+$|K*\mathcal B_\epsilon|=O(L^2\kappa^{-2})$.
+These are bounds on the actual correlated terms; they are not products
+of separately averaged factors.
+
+\subsection{The explicit approximation theorem}
+Let $k_i=\|k_\ell^{(i)}\|_\infty$ and $h_0=\|k_h\|_\infty$.
+Matching zeros to the mean clock $c_j=(j+1/2)\pi/\mu$ first gives
+finite current and time-derivative errors
+\begin{align}
+ A_J&=E_J(K)+nh_0\{E_{\rm vel}k_0+|\alpha|r_0(k_0+Xk_1)\},\notag\\
+ A_T&=E_T(K)+nh_0\{E_{\rm vel}k_1+|\alpha|r_0(k_1+Xk_2)\}.
+ \label{eq:meanclockcosts}
+\end{align}
+Both are $O(L\kappa^{-7/6})$ by the preceding estimates.
+
+\begin{theorem}[Explicit density and transport]\label{thm:explicit}
+Take \eqref{eq:positiveRegulator}, \eqref{eq:kernel} and
+\eqref{eq:growing}. Impose the source, carrier and derivative gates
+above, $s<1/8$, and the full buffers
+\begin{equation}
+ |x|+\ell+2R_c+\delta_c<X,\qquad |y|+h+2R_c<Y,\qquad
+ \delta_c=Xe/L.
+ \label{eq:explicitbuffer}
+\end{equation}
+Put $X_*=X+\delta_c$ and
+$n_*=2\mu(\ell+R_c+\delta_c)/\pi+2$.
+Then the density error is at most
+\begin{equation}
+ \mathcal E_R=E_R(K)+h_0n_*k_1(r_0+\delta_c),
+ \label{eq:finalRerror}
+\end{equation}
+and the current and density time-derivative errors are at most
+\begin{align}
+ \mathcal E_J&=A_J+h_0n_*
+       \{E_\alpha Xk_0+(2/\kappa)\delta_c(k_0+X_*k_1)\},\notag\\
+ \mathcal E_T&=A_T+h_0n_*
+       \{E_\alpha Xk_1+(2/\kappa)\delta_c(k_1+X_*k_2)\}.
+ \label{eq:finalTransportError}
+\end{align}
+In particular, uniformly on these growing windows as $t\to\infty$,
+\begin{align}
+ \|K*\rho-R_L\|_\infty&=O(\kappa^{-1/2}),\label{eq:explicitDensityRate}\\
+ \|K*\mathbf j-(J_L,0)\|_\infty+
+ \|\partial_t(K*\rho)-\partial_tR_L\|_\infty
+ &=O(L\kappa^{-7/6})=o(L/\kappa).
+ \label{eq:explicitTransportRate}
+\end{align}
+All gates hold eventually; no finite certified onset is asserted.
+\end{theorem}
+\begin{proof}
+For every relevant matched label,
+$|c_j-d_j|=|c_j||\mu-L|/L\le\delta_c$.
+Matching $a_j$ to $c_j$ and then to $d_j$ costs
+$k_1(r_0+\delta_c)$ per density term. At most $n_*$ labels enter;
+the buffers include their full collars.
+For current compare $\alpha c_jk_\ell(x-c_j)$ with
+$(2/\kappa)d_jk_\ell(x-d_j)$.
+The drift error costs $E_\alpha Xk_0$, and the position error costs
+$(2/\kappa)\delta_c(k_0+X_*k_1)$.
+The same argument with $k_\ell'$ gives the time-derivative comparison.
+The mean-clock errors \eqref{eq:meanclockcosts} follow from
+\eqref{eq:velocitybound} and the weak allowances.
+Zero extension of the $C^3$ kernel validates these comparisons at
+kernel-edge crossings.
+
+Now $n_*=O(L)$, $r_0=O(\kappa^{-1/2}/L)$ and
+$\delta_c=O(\kappa^{-2/3}/L)$.
+The new drift error costs $O(L\kappa^{-7/6})$, and the position error
+in transport is $O(\kappa^{-4/3})$.
+Combine these with \eqref{eq:transportallowances} and
+\eqref{eq:meanclockcosts}. The finite phase formulas add zero error.
+All appearances of $\mu$ and positive moments in the allowances can be
+bounded using the source majorants, with $L-e$ in denominators and
+$L+e_\mu$ in upper counts.
+\end{proof}
+This theorem controls the unnormalized density and its transport.
+It does not assign a potential or the actual theta covariance to
+$(R_L,J_L)$ by forcing an equation to close. The distinction matters
+because the true adaptive continuity law has the small source in
+\eqref{eq:adaptiveCurrent}, whereas the explicit reference is exactly
+conservative.

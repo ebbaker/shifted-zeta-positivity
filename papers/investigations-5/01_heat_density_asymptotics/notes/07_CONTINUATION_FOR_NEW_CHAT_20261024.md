@@ -4,6 +4,11 @@
 substantial LLM assistance, **gpt-6-astra (Codex), recorded effort max**.
 
 
+**Continuation update, 24 October 2026:** the next bounded round is now
+recorded in [Note 09](09_COMPLETE_SOURCE_MOMENT_TRANSFER_AND_WEAK_CURRENT_20261024.md).
+Use [Note 10](10_CONTINUATION_AFTER_COARSE_TRANSFER_20261024.md) for current
+next steps. The first-round state below is retained as historical context.
+
 ## Author's objective and current state
 
 Continue investigation `papers/investigations-5/01_heat_density_asymptotics`

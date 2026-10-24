@@ -61,3 +61,69 @@ superiority.” Retain the fixed disk, native implementation, shared-data
 reuse, failed meshes and timing scope in the headline; a finite regular
 theta certificate does not establish endpoint nondegeneration.
 [Separate same-model review/replay](../papers/investigations-4/09_reciprocal_hodge_energy/reviews/03_ACTUAL_THETA_FIBER_COMPARISON_REVIEW_20261022.md).
+
+
+**Regulator bias is not total error, 24 October 2026.** Prepared for
+Edward Baker with substantial LLM assistance, **gpt-6-astra, recorded
+effort max**. The [coarse-density self-review](../papers/investigations-5/01_heat_density_asymptotics/reviews/02_COARSE_TRANSFER_AND_WEAK_CURRENT_SELF_REVIEW_20261024.md)
+states: “A minute regulator-bias formula does not bound source or total
+error.” Log-bound values below -328 here are floating evaluations of a
+conditional formula. They do not pay source quadrature, rounding, closure
+or stability, and underflow is not an exact zero. Preserve those separate
+budgets and the distinction between a kinematically defined covariance
+and an independently tested closure.
+
+
+- **Time limits versus all-height uniformity (5/01, 24 October 2026).**
+  [Note 11](../papers/investigations-5/01_heat_density_asymptotics/notes/11_TWO_TIME_LIMITS_ALL_HEIGHT_ERROR_20261024.md)
+  proves that “that nonzero stationary profile cannot be a global uniform
+  limit for this averaging class.” A growing positive-time clock window
+  eventually includes each fixed height, but fixed epsilon still erases
+  its bounded-transverse density at sufficiently large height at every
+  finite time. Keep the quantified domain and the physical amplitude.
+  [Same-assistant assessment](../papers/investigations-5/01_heat_density_asymptotics/reviews/03_TWO_TIME_LIMITS_AND_VANDERMONDE_SELF_REVIEW_20261024.md).
+  Prepared for Edward Baker with substantial LLM assistance,
+  **gpt-6-astra, actual effort max**.
+
+**Static averaging error does not pay its derivative, 24 October 2026.**
+Prepared for Edward Baker with substantial LLM assistance,
+**gpt-6-astra, actual effort max**. [Heat-density Note 16](../papers/investigations-5/01_heat_density_asymptotics/notes/16_ADAPTIVE_FORCING_AND_DIFFERENTIATED_CLOCK_20261024.md)
+proves a differentiated moving-clock comparison but states:
+“Retain R_c there.” Its continuum phase-derivative allowance contains
+|x|, so the existing growing-window density approximation alone does
+not justify a uniform relative time-derivative approximation by the
+smooth mean. Differentiate the complete source, retain the covariance
+cancellation and finite lattice phase, and state the smaller domain
+where the continuum derivative is controlled. This limits the present
+comparison, not every averaging kernel or global approach.
+[Same-assistant assessment](../papers/investigations-5/01_heat_density_asymptotics/reviews/05_ADAPTIVE_TRANSPORT_SELF_REVIEW_20261024.md).
+
+
+**Zero heat residual is not global closeness, 24 October 2026.**
+Prepared for Edward Baker with substantial LLM assistance,
+**gpt-6-astra (Codex), actual effort max**. [Heat-density Note 20](../papers/investigations-5/01_heat_density_asymptotics/notes/20_GLOBAL_REGULATOR_AND_FINITE_SOURCE_BRIDGE_20261024.md)
+proves a useful source-error comparison on finite slabs, but its fixed
+compact source grows only like exp(tU^2) and cannot match theta's growing
+positive saddle. It states: “The exact heat residual remains zero in this
+failed example.” Pay source/anchor error and the informative time domain;
+do not upgrade a finite-slab construction to an all-time approximation.
+The failure is scoped to fixed compact source cutoffs and the stated
+regulator, not growing representations or all global methods.
+[Same-assistant assessment](../papers/investigations-5/01_heat_density_asymptotics/reviews/06_EXPLICIT_CLOCK_AND_FINITE_BRIDGE_SELF_REVIEW_20261024.md).
+
+The [analytical manuscript integration review](../papers/investigations-5/01_heat_density_asymptotics/reviews/07_ANALYTICAL_MANUSCRIPT_INTEGRATION_SELF_REVIEW_20261024.md)
+retains the distinction: "The construction proves approximability on each
+compact slab." A global regulator and finite-slab existence do not pay
+useful transition overlap. Added 24 October 2026 for Edward Baker with
+LLM assistance, gpt-6-astra, actual effort max; same-assistant assessment.
+
+
+**A large bound improvement is not an accepted approximation, 24 October 2026.**
+For Edward Baker with substantial LLM assistance, **gpt-6-astra, max**.
+[Heat-density Note 23](../papers/investigations-5/01_heat_density_asymptotics/notes/23_FINITE_TRANSITION_CONTRACT_AND_LOCAL_BOUNDS_20261024.md)
+removes severe cutoff amplification but states: “No tolerance claim follows
+from the large ratio itself.” The bounded trial still misses its contract,
+and arithmetic/filter checks fail. Preserve those failures and compare
+absolute budgets with the predeclared thresholds; neither an enormous
+relative improvement nor high working precision is a certificate.
+[Same-assistant review](../papers/investigations-5/01_heat_density_asymptotics/reviews/08_FINITE_TRANSITION_LOCAL_BOUNDS_SELF_REVIEW_20261024.md).

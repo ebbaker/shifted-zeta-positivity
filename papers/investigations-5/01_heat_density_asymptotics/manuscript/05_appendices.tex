@@ -1,0 +1,212 @@
+\section{Explicit weighted source allowances}\label{app:source}
+Here are finite inputs for \eqref{eq:momentbounds}, extending the
+complete-source argument in BW10 Note~20 \cite{bw20,n12}.
+Put $d=1/4$, $c=1/(4e)$ and $h_0=\kappa^{1/12}$.
+Require
+\begin{equation}
+ L\ge d,\quad \kappa\ge32,\quad t/\kappa\le c,\quad
+ q_t(L-d)\ge q_t(0).
+ \label{eq:sourcegates}
+\end{equation}
+These hold eventually. Define
+\[
+ Q_L=16e^{-3\pi e^{4(L-d)}},\quad
+ d_L=\frac3{2\pi}e^{-4(L-d)}+\frac{Q_L}{1-Q_L},\quad
+ e_c=e^{(4e/3)\kappa^{-1/4}}(1+d_L)-1.
+\]
+For any fixed nonnegative integer $p$ (here $p\le6$ suffices) and fixed $Y\ge0$, set $\lambda=Y/\sqrt\kappa$,
+\begin{align}
+ G_p(Y)&=\int_\R|w|^pe^{-w^2/2+\lambda|w|}\,dw,\notag\\
+ D_p(Y)&=e_cG_p(Y)
+ +\int_{|w|>h_0}|w|^pe^{\lambda|w|}
+            (C_be^{-cw^2}+e^{-w^2/2})\,dw\notag\\
+ &\hspace{15mm}
+ +C_b(L\sqrt\kappa)^{p+1}e^{YL-c\kappa d^2}. \label{eq:Dp}
+\end{align}
+All integrals are Gaussian tails.
+With the additional gate $Z_-=\sqrt{2\pi}-D_0(0)>0$, put
+\begin{equation}
+ A_p(Y)=\kappa^{-p/2}\frac{G_p(Y)+D_p(Y)}{Z_-},\quad
+ e_\mu=\kappa^{-1/2}\frac{D_1(0)}{Z_-},\quad
+ \widehat B_3(Y)=4e^{Ye_\mu}\{A_3(Y)+e_\mu^3A_0(Y)\}.
+ \label{eq:allowances}
+\end{equation}
+
+To verify the bounds, extend by zero below $w=-L\sqrt\kappa$ the
+rescaled source
+\[
+ B_t(w)=e^{q_t(L+w/\sqrt\kappa)-q_t(L)}
+                         b(L+w/\sqrt\kappa).
+\]
+On $|w|\le h_0$ it differs from $e^{-w^2/2}$ by at most
+$e_ce^{-w^2/2}$. Indeed, with $v=w/\sqrt\kappa$,
+\[
+ q_t(L+v)-q_t(L)
+ =tv^2-\pi e^{4L}(e^{4v}-1-4v),
+\]
+and the cubic exponential remainder is at most
+$(4e/3)\kappa^{-1/4}$ on this central region; the theta factor
+differs from one by at most $d_L$.
+For $v\ge-d$ the remaining near-left and right source is bounded
+by $C_be^{-c\kappa v^2}$, using
+$e^{4v}-1-4v\ge8e^{-1}v^2$ on $[-d,0]$ and
+$\ge8v^2$ on $[0,\infty)$, together with \eqref{eq:sourcegates}.
+On $0\le u\le L-d$, $q_t$ has no interior maximum:
+$q_t''$ strictly decreases, so before the selected maximum at $L$,
+$q_t'$ has at most a local-minimum zero.
+The maximum on this interval lies at an endpoint; the last gate
+in \eqref{eq:sourcegates} picks $L-d$.
+The far-left source is thus bounded by $C_be^{-c\kappa d^2}$.
+These estimates also cover the missing Gaussian tail of the half-line.
+
+Multiplying by $|w|^pe^{\lambda|w|}$ and integrating gives
+\[
+ \int_\R |w|^pe^{\lambda|w|}
+             |B_t(w)-e^{-w^2/2}|\,dw\le D_p(Y).
+\]
+Normalization is bounded below by $Z_-$.
+The odd Gaussian mean is zero, which gives the smaller signed-mean
+allowance $e_\mu$, rather than $A_1(0)$.
+The variance is at most $\E(u-L)^2\le A_2(0)$.
+Finally $|u-\mu|\le|u-L|+e_\mu$ and
+$(a+b)^3\le4(a^3+b^3)$ give $\widehat B_3$.
+This proves \eqref{eq:momentbounds}. For fixed $Y$,
+$D_p(Y)=O(\kappa^{-1/4})$, yielding \eqref{eq:momentorders}.
+No truncated theta source or measured variance is substituted here.
+
+\section{Exact cosine-cell covariance}\label{app:cosine}
+The elementary carrier also illustrates why averaging does not remove
+the fluctuation term. For $H=M\cos(Lz)$ with fixed $L>0$,
+set $\eta=\epsilon/M$, $Y=Ly$, $a=\sinh^2Y+\eta^2$ and
+$d=\sqrt{a(a+1)}$. Averaging over a complete horizontal period gives
+\begin{align}
+ U_c&=2\log M+2\operatorname{arsinh}\sqrt a-2\log2,&
+ (U_c)_y&=\frac{L\sinh(2Y)}d,\notag\\
+ R_c&=\frac{L^2\eta^2}{2\pi}
+ \frac{2a(a+1)+1-\eta^2(2a+1)}{d^3}. \label{eq:cosmean}
+\end{align}
+For the exact heat carrier $M'=L^2M$, its covariance is
+\begin{equation}
+ Q_c=4\pi R_c+(U_c)_y^2-4L^2+\frac{4L^2\eta^2}{d}.
+ \label{eq:cosQ}
+\end{equation}
+These formulas follow by integrating
+$\log(\cos^2(Lx)+\sinh^2(Ly)+\eta^2)$ and differentiating with
+respect to $y$ and $\eta^2$ \cite{n05}.
+In the distributional limit $\eta\to0$,
+$R_c\to(L/\pi)\delta_0$ and $Q_c\to4L\delta_0$.
+If a further fixed positive filter $G$ averages in $y$ or time,
+the full covariance becomes
+\begin{equation}
+ Q_{\rm total}=GQ_c-
+ \{G((U_c)_y^2)-((GU_c)_y)^2\}.
+ \label{eq:secondcov}
+\end{equation}
+For transverse convolution by $k_h$, the limiting expression is
+\[
+ 4Lk_h+4L^2\{(k_h*\sgn)^2-1\}.
+\]
+In particular this correction is not negligible merely because several
+horizontal periods have been averaged. An arbitrary fitted pair
+$M(t),L(t)$ does not satisfy the exact carrier heat equation;
+\eqref{eq:cosQ} must not be used as an exact theta closure.
+
+\section{Supporting numerical observations}\label{app:numerics}
+The analytical arguments do not use numerical agreement as a premise.
+Earlier local-closure, Gaussian, carrier and determinant checks are
+recorded in Notes~04, 09 and 11--12 and their execution records
+\cite{round1,round2,round3}. They include failed refinements and failed
+finite source gates; passing samples do not certify an onset time.
+
+For the explicit clock, 72 exact rational equalities in 24 phase/width
+cases check \eqref{eq:finiteP}, \eqref{eq:finiteD} and continuity against
+direct polynomial lattice sums, including kernel-edge crossings.
+Ten floating theta zero-measure observations have maximum density
+discrepancy $2.702\,10^{-8}$ in units of $L/\pi$ and derivative
+discrepancy $3.708\,10^{-7}$ in units of $2L/(\pi\kappa)$.
+Omitting phase reaches $0.003143$ in the latter units.
+These are neither finite-regulator peak measurements nor interval
+certificates; some discrepancies are near the observed refinement floor.
+Note~19 gives the complete settings, refinements and conservative
+allowance evaluations \cite{n19,explicitrecord}.
+
+Nine small-argument checks of the finite-source primitives against
+Gaussian quadrature give maximum floating discrepancy
+$7.03\,10^{-16}$, including $t=0$ and $z=0$.
+They check the primitive formulas, not a selected theta bridge or useful
+transition overlap. Details are in Note~20 and its record
+\cite{n20,primitiverecord}. No independent implementation or mathematical
+review is claimed.
+
+The finite-transition diagnostic fixes its contract before comparing
+48, 96 and 192 source cells. At the trial time $t=64$, the 192-cell
+zeroth-jet allowance falls from $3.79\,10^{58}$ to $5.64\,10^{-2}$
+when source locality is retained. Interpolation dominates the new bound;
+these are floating evaluations of analytical formulas. The trial still
+fails the declared observable tolerances, and covariance filtering needs
+further resolution. A raw error-function evaluation near $t=0$ and an
+initial nodal-rounding allowance fail their checks; both failures are
+retained. The local polynomial evaluator has a separate truncation bound.
+Details and all arithmetic/filter limitations are in Note~23 and its
+record \cite{n23,localrecord}. No uniform numerical certificate is claimed.
+
+\section{Source crosswalk and control scope}\label{app:scope}
+The exact framework is from Note~02; the small-width expansion and
+pilot are from Note~04; fixed-region and cosine-cell formulas are from
+Note~05; the generic regulator bridge is from Note~06.
+Note~09 supplies the earlier finite-rectangle source-to-density and
+weak-current comparison. Notes~11--12 supply the all-height negative
+bound, global hierarchy, growing-height clock and determinant estimates.
+Note~14 supplies the variable-regulator corrections, Note~16 the
+differentiated carrier and weak transport bridge, Note~19 the score
+refinement and exact phase formulas, and Note~20 the global protocol
+and finite-source comparison. Note~23 sharpens its source and nonlinear
+allowances and declares a first transition trial. The improved first term in
+\eqref{eq:Vorder} follows by inserting Note~19's mean bound into the
+earlier determinant proof.
+Appendix~\ref{app:source} records explicitly the weighted extension
+of BW10 Note~20 used in this draft.
+The numerical appendix cites execution records separately from proofs.
+
+The repository's collision register \cite{controls} imposes several
+useful scope checks. Finite atomic collision controls fail the smooth
+canonical-source hypotheses of the negative endpoint theorem.
+Euler-factor and primitive perturbations change the unchanged theta
+coefficients; weighted-square and reflected controls do not supply
+the canonical source bounds used here.
+The generic score identity applies to smooth sources with the stated
+endpoint terms, and the finite-field stability estimates can also apply
+to smooth colliding controls. Their canonical source constants cannot
+be transferred unchanged. A fixed compact-source heat field has zero
+heat residual but fails at positive infinite time by
+Proposition~\ref{prop:fixedsource}; zero residual alone therefore does
+not pay the source-approximation error.
+Those failures explain why the canonical bounds are not automatically
+available for the controls; the generic density, regularization and
+determinant inequalities themselves may still apply to them.
+A valid carrier lemma can hold in a collision-free box of a control.
+At the positive three-atom double event used in Note~09, its carrier
+gate fails ($a_*<0$).
+Smooth perturbed sources can share leading endpoint asymptotics and
+still collide earlier, so the endpoint limits are not collision
+exclusions.
+
+The stationary sine heat field has external zeros that cancel a
+selected block's internal repulsion. Full finite Hermite heat
+polynomials have a stationary pattern after $\sqrt t$ scaling but can
+retain a multiple endpoint. They do not have the canonical smooth
+source and logarithmic clock scale used here.
+These controls rule out interpreting stationarity alone as endpoint
+simplicity or as an unforced theta equilibrium.
+The repository's evidence and scope policies \cite{scope} are therefore
+part of the research record, not additional mathematical premises.
+
+\section*{Acknowledgment and preparation record}
+This manuscript was drafted for Edward Baker with substantial assistance
+from the OpenAI model \texttt{gpt-6-astra} in Codex, recorded reasoning
+effort \texttt{max}, on 24 October 2026.
+The model assisted with derivations, consolidation, code and prose.
+The mathematical results and their checks have received same-assistant
+review only; no independent mathematical review is claimed.
+The maintained source and linked notes preserve the derivations and
+their stated limitations. Numerical agreement is not used as a proof.

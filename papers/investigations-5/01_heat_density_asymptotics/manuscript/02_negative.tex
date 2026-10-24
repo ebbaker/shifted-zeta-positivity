@@ -1,0 +1,155 @@
+\section{Negative time: a uniform Gaussian approximation}\label{sec:negative}
+Write $t=-T$, $T>0$, and $\phi_0=\Phi(0)>0$.
+We first supply a complete-source constant, so that the error does
+not depend on a numerically estimated source derivative.
+
+\begin{lemma}[A global derivative bound]\label{lem:B2}
+Put $S_p(a)=(\max\{a,p\})^pe^{-\max\{a,p\}}$. Then
+\begin{equation}
+ B_2=\pi^{-1/4}\sum_{n\ge1}n^{-1/2}
+ \left\{75S_{5/4}(\pi n^2)+330S_{9/4}(\pi n^2)
+       +224S_{13/4}(\pi n^2)+32S_{17/4}(\pi n^2)\right\}
+ \label{eq:B2}
+\end{equation}
+is finite and bounds $\sup_{u\ge0}|\Phi''(u)|$.
+After $n=N\ge1$, its tail is at most the first omitted summand
+divided by $1-r_N$, where
+\[
+ r_N=\left(1+\frac1{N+1}\right)^8e^{-\pi(2N+3)}<1.
+\]
+In particular $|\Phi(u)-\phi_0|\le B_2u^2/2$ on $[0,\infty)$.
+\end{lemma}
+\begin{proof}
+For $a=\pi n^2e^{4u}$, twice differentiating $e^{bu-a}$ produces
+$b^2-(8b+16)a+16a^2$. Applying the triangle inequality separately to
+the $b=9$ and $b=5$ terms of \eqref{eq:phi}, then maximizing
+$a^pe^{-a}$ over $a\ge\pi n^2$, gives \eqref{eq:B2}.
+For omitted indices $n\ge2$, each positive component is a constant
+times $n^qe^{-\pi n^2}$ with $2\le q\le8$.
+Its consecutive ratio is at most $r_N$.
+Uniform convergence justifies differentiation.
+Evenness gives $\Phi'(0)=0$, and Taylor's theorem finishes the proof.
+\end{proof}
+
+Define the analytic Gaussian field and its density by
+\begin{align}
+ G_T(z)&=\frac{\phi_0\sqrt\pi}{2\sqrt T}e^{-z^2/(4T)},&
+ C_T^2&=\frac{\pi\phi_0^2}{4T},&
+ E_T(x,y)&=e^{-(x^2-y^2)/(2T)}, \label{eq:Gaussian}\\
+ \rho_{G,T}(x,y)&=
+ \frac{\epsilon^2\phi_0^2(x^2+y^2)E_T(x,y)}
+ {16T^3[\epsilon^2+C_T^2E_T(x,y)]^2}.
+ \label{eq:Gaussiandensity}
+\end{align}
+In particular the denominator retains the regulator crossover.
+
+\begin{theorem}[All-height negative-time error]\label{thm:negative}
+Fix $A\ge0$, and put
+\[
+ J_m(A)=\int_0^\infty v^me^{-v^2+Av}\,dv,\qquad
+ d_j=\frac{B_2J_{j+2}(A)}{2T^{(j+3)/2}}\quad(j=0,1),
+\]
+\[
+ Q_0=\frac{\phi_0J_0(A)}{\sqrt T}+d_0,\qquad
+ P=\frac{\phi_0J_1(A)}{T}+d_1 .
+\]
+Then, simultaneously for all $x\in\R$ and $|y|\le A\sqrt T$,
+\begin{equation}
+ |\rh(-T,x+iy)-\rho_{G,T}(x,y)|
+ \le \mathcal E_-(T,A):=
+ \frac{2Pd_1}{\pi\epsilon^2}
+ +\frac{4Q_0P^2d_0}{\pi\epsilon^4}
+ =O_{A,\epsilon}(T^{-3}).
+ \label{eq:Eminus}
+\end{equation}
+A positive normalized spatial average obeys the same bound if its
+support remains in this strip.
+\end{theorem}
+\begin{proof}
+The constant-source integral is exactly $G_T$.
+Using Lemma~\ref{lem:B2} and
+$|\partial_z^j\cos(zu)|\le u^je^{|y|u}$ gives
+$|\partial_z^j(H-G_T)|\le d_j$, independently of $x$.
+Along the straight segment joining $(H,H_z)$ and $(G_T,G_T')$,
+the field and derivative moduli are at most $Q_0$ and $P$.
+As a real function of two complex variables $(h,p)$,
+\[
+ \rho(h,p)=\frac{\epsilon^2|p|^2}{\pi(|h|^2+\epsilon^2)^2}
+\]
+has gradient norms at most $2P/(\pi\epsilon^2)$ in $p$
+and $4Q_0P^2/(\pi\epsilon^4)$ in $h$ on this segment.
+The mean-value theorem proves \eqref{eq:Eminus}.
+Positivity and normalization of the filter transfer the absolute bound.
+\end{proof}
+
+All constants are evaluable: $J_0=\sqrt\pi e^{A^2/4}
+\operatorname{erfc}(-A/2)/2$, $J_1=(1+AJ_0)/2$, and
+$J_{m+1}=(mJ_{m-1}+AJ_m)/2$ for $m\ge1$.
+A positive time average has error bounded by the average of
+$\mathcal E_-$ at its constituent times, with their strip conditions.
+No derivative of a moving filter is used in this assertion.
+
+\begin{corollary}[Stationary scaled profile]\label{cor:negative}
+For fixed $\epsilon>0$,
+\begin{equation}
+ T^2\rh(-T,\sqrt T(\xi+i\upsilon))
+ =F_-(\xi,\upsilon)+O_{A,\epsilon}(T^{-1}),\qquad
+ F_-=\frac{\phi_0^2}{16\epsilon^2}
+       (\xi^2+\upsilon^2)e^{-(\xi^2-\upsilon^2)/2},
+ \label{eq:negativeprofile}
+\end{equation}
+uniformly for $\xi\in\R$, $|\upsilon|\le A$.
+\end{corollary}
+\begin{proof}
+The scaled expression from \eqref{eq:Gaussiandensity} is
+$F_-[1+B e^{-(\xi^2-\upsilon^2)/2}/T]^{-2}$, where
+$B=\pi\phi_0^2/(4\epsilon^2)$.
+Use $0\le1-(1+a)^{-2}\le2a$ and the finite bound
+\[
+ M_A=\frac{\phi_0^2e^{A^2/2}}{16\epsilon^2}
+ \begin{cases}2e^{-1+A^2/2},&A^2\le2,\\ A^2,&A^2\ge2.\end{cases}
+\]
+An explicit error is $T^2\mathcal E_-+
+2Be^{A^2/2}M_A/T$.
+\end{proof}
+
+\subsection{Fixed-region mean and covariance}
+A different expansion holds on fixed physical compact sets.
+For a spatial product filter with identical even coordinate kernels
+of variance $v$ and fourth moment $m_4$, Note~05 gives
+\begin{align}
+ R(-T,z)&=\frac{B}{4\pi T^3}(|z|^2+2v)+O(T^{-4}), \label{eq:fixedR}\\
+ Q(-T,z)&=-\frac{2B^2}{T^5}\{v|z|^2+m_4-v^2\}
+            +O(T^{-6}), \label{eq:fixedQ}\\
+ \Delta Q(-T,z)&=-\frac{8B^2v}{T^5}+O(T^{-6}). \label{eq:fixedlapQ}
+\end{align}
+The remainders here include the derivatives displayed, on a fixed
+compact buffer with fixed $\epsilon$.
+These coefficients follow by expanding the source endpoint integral,
+then the logarithm with its regulator retained, before filtering.
+In particular the $T^{-4}$ covariance cancels under isotropy.
+Unequal variances produce the earlier term
+$B^2(v_x-v_y)T^{-4}$.
+The gradient formula \eqref{eq:isotropic} gives
+$-2B^2v(|z|^2+2v)T^{-5}$: its leading difference from
+\eqref{eq:fixedQ} is constant in space, so their leading Laplacians agree.
+This explains a useful consistency mechanism without identifying
+$Q_\nabla$ with the exact broad-filter covariance.
+
+\subsection{A regulator that retains the Gaussian crossover}
+The preceding theorem also gives a different stationary profile when
+$\epsilon(-T)=\eta C_T$, where $\eta>0$ is fixed and $C_T$ is from
+\eqref{eq:Gaussian}. Indeed the right side of \eqref{eq:Eminus} is then
+$O_A(T^{-2})$, and direct substitution yields
+\begin{equation}
+ T\rho(-T,\sqrt T(\xi+i\upsilon))
+ =F_\eta(\xi,\upsilon)+O_{A,\eta}(T^{-1}),\qquad
+ F_\eta=\frac{\eta^2(\xi^2+\upsilon^2)e^{-(\xi^2-\upsilon^2)/2}}
+ {4\pi[\eta^2+e^{-(\xi^2-\upsilon^2)/2}]^2}.
+ \label{eq:adaptiveNegative}
+\end{equation}
+The error is uniform for all real $\xi$ and $|\upsilon|\le A$.
+Thus a change of regulator changes the power of the physical scaling:
+$T^2\rho$ for fixed $\epsilon$, and $T\rho$ for this adaptive choice.
+Section~\ref{sec:finite} extends the latter to a smooth protocol at all
+finite times; the negative-time estimate survives that extension.

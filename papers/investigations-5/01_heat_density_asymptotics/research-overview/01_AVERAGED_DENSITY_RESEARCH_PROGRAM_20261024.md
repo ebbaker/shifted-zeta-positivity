@@ -4,26 +4,106 @@
 substantial LLM assistance, **gpt-6-astra (Codex), actual recorded effort max**,
 verified from this turn's metadata.
 
-**Purpose.** Construct an unnormalized smoothed function that accurately
-represents the average behavior of the zeros. Determine its asymptotic
-values, derive the evolution it actually obeys with fluctuation corrections,
-solve a compatible boundary problem, and refine those solutions against
-the canonical heat field.
+**GPT model ownership, author decision of 24 October:** GPT-6 Astra leads
+analytical formulas and proofs; GPT-6.1 Sol performs all numerical work.
+The author manages the chats manually. Follow the
+[shared handoff workflow](../../../../GPT_RESEARCH_MODEL_WORKFLOW.md);
+the existing progress register records the next owner and packet.
 
-The [progress register][progress] is the sole task/status ledger.
-The [opening brainstorm][opening] supplies candidate asymptotic models;
-the [filtered-equation note][filtered] supplies the exact starting
-identities. The [first-round continuation][round-one] now links a fixed
-contract, local closure pilot, asymptotic covariance calculations and a
-conditional regulator-bias bound. A uniform theta approximation and an
-independently validated evolution closure remain open.
+**Purpose.** Find a relatively simple explicit formula for the unnormalized
+smoothed density, defined for every real heat time \(t\), and progressively
+refine it into an approximation to the canonical theta solution with
+proved control extending to arbitrarily large height. Analytical estimates
+on unbounded height domains have priority; numerics support named steps
+in those estimates.
 
-The [result index][results], especially [heat geometry][geometry] and
-[collision controls][controls], and the [avoid index][avoid] apply.
-This is a quantitative approximation milestone under
-[target classification][a01]. Its useful output is a function, a domain,
-averaging scales and an error budget. Generic identities alone do not
-count as accuracy evidence.
+**Long-term goal, clarified by Edward Baker on 24 October 2026.** The
+eventual construction must satisfy the appropriate evolution equations,
+with the required fluctuation terms retained, and the correct asymptotic,
+spatial boundary and source-anchor conditions. It must remain provably
+close to the true solution throughout time, including the finite-time
+transition between the negative- and positive-time regimes. Any auxiliary
+potential, current or covariance needed to express these equations is part
+of that construction.
+
+Seek a decomposition of the form
+\[
+R_{\mathrm{true}}(t,\cdot)
+=R_{\mathrm{app}}(t,\cdot)+\mathcal E(t,\cdot),
+\qquad
+\|\mathcal E(t,\cdot)\|_{X_t}\le B(t),
+\qquad t\in\mathbb R,
+\]
+where \(R_{\mathrm{app}}\) has a relatively simple mathematical form and
+\(B\) is an explicit, proved error bound on the stated spatial domains,
+with the averaging and regulator specified. The bound must remain
+informative across the full time range; its scale may depend on time
+because the physical density is unnormalized. Distinguish the error
+against the regularized theta density from the additional regulator error
+against smoothed zero counts, as in (P6) below.
+
+Each improvement should sharpen the explicit approximation, reduce its
+proved error or extend the domain on which the bound is useful. The
+current endpoint formulas and bounded-window estimates are intermediate
+steps toward this all-time objective. A reduced formula with omitted
+fluctuations must retain their quantified equation residual and a stability
+estimate connecting that residual to solution error. This global
+construction and error theorem remain open.
+
+## Revision decision and the current starting point
+
+**Current priority, clarified by Edward Baker on 24 October 2026:**
+analytical results extending to infinite height lead the program. The
+earlier choice to finish a bounded-window bridge before starting positive
+outer-height analysis is superseded. HDA-19 is now the first analytical
+priority, with HDA-16 completing the endpoint evolution estimates.
+HDA-17 supplies finite-transition estimates needed by that global program;
+passing its existing bounded numerical pilot is not a prerequisite to
+HDA-19. The [current new-session handoff][priority] records the decision.
+
+Keep this overview and its existing [progress register][progress]. The
+objective, canonical source, physical density and exact equations are
+unchanged. Existing task identifiers and historical evidence are retained;
+this priority amendment adds no theorem or completed research task.
+
+| Program obligation | Current implementation |
+| --- | --- |
+| Define the unnormalized averaged density and its error | State the height/time quantifiers, transverse buffer, regulator, kernels and informative norm before a comparison; keep regulator-to-zero-measure error separate. |
+| Obtain both time endpoints and their fluctuations | Extend the all-height negative estimates to the required derivatives and covariance; resolve the positive outer regime and match it to the inner clock. |
+| Construct and compare the approximation | Use direct source comparison or another proved analytic representation; an autonomous reduced PDE remains an alternative with its own stability obligation. |
+| Match asymptotic, boundary and source data | Pay both spatial interfaces and time overlaps, with full buffers, source-derived traces and all joining residuals. |
+| Extend the approximation globally | Work on unbounded height domains now. A bounded-height all-time result is a supporting subresult when it supplies an explicit input to the global theorem. |
+
+**HDA-15 checkpoint:** [Note 23][local-bounds] supplies a transition
+contract and sharper source, nonlinear and actual-covariance bounds. Its
+192-cell diagnostic fails the contract. Those findings remain useful,
+but a larger mesh is not the default continuation.
+
+The present analytical inputs are:
+
+- [Notes 11][negative] and [12][positive] give the all-height negative Gaussian estimate,
+  positive growing-window carrier, determinant bounds and global analytic
+  fallback. [Note 14][adaptive] supplies the variable-regulator corrections
+  and adaptive negative profile.
+- [Notes 16][transport] and [19][explicit] give the differentiated explicit
+  clock on buffered windows of size X~kappa^(1/3), with density error
+  O(kappa^-1/2) and current/time error O(L kappa^-7/6). Its phase is exact;
+  its actual potential/covariance comparison remains incomplete.
+- [Note 20][bridge] fixes a smooth global regulator and proves finite-slab
+  source/jet, density/current/time and actual covariance/Laplacian stability.
+  Informative transition parameters and overlap have not been established.
+- The [maintained manuscript][manuscript] consolidates these proofs with
+  brief numerical support. [Note 21][integration] records its scope and
+  the sharper determinant mean-error term. Review remains same-assistant.
+
+The [progress register][progress] holds statuses, dependencies and the
+research history; this overview holds the objective, equations and
+acceptance contract. Read the [result index][results], especially
+[heat geometry][geometry] and [collision controls][controls], alongside
+the [avoid index][avoid], especially [target classification][a01],
+[scope][a07] and [status synchronization][a19]. This is an approximation
+program judged by a function, domain and error bound, with no RH or
+simplicity criterion.
 
 ## 1. The object and the comparison target
 
@@ -64,7 +144,7 @@ chosen regime. In particular the fixed-\(\epsilon\), negative-time
 on a region with no zeros. Matching that term is not by itself a
 description of a nonzero zero population.
 
-The opening contract must specify the domain, kernels, scales, norm \(X\),
+Each new bounded contract must specify the domain, kernels, scales, norm \(X\),
 and limits being taken. Treat fixed regions, diffusive spatial scales,
 and growing height/rank as distinct regimes. For centered time averages,
 provide data on both sides of the observation time; for causal evolution,
@@ -72,168 +152,294 @@ choose a one-sided kernel and state its history data.
 
 ## 2. Determine asymptotic values and fluctuation scales together
 
-At \(t=-T\to-\infty\), start from the Gaussian field and its differentiated
-source expansion in [Note 01][opening]. Determine leading values and
-corrections for \(R_\epsilon\), its required derivatives and its current,
-with the spatial/time averaging widths retained. Compare the fixed-region
-and \(z=\sqrt T\,\zeta\) regimes, and separate any regulator background
-from the target zero measure.
+The endpoint density estimates are already available; the next work must
+supply the quantities still missing from an evolution comparison.
+At negative time, extend the Gaussian/source estimates to current and the
+density time derivative under the same adaptive regulator. Also pay the
+potential, covariance and covariance-Laplacian quantities needed by the
+selected full-system theorem; the fixed-regulator, fixed-region covariance
+expansion does not supply an adaptive all-time endpoint automatically.
 
-At \(t\to+\infty\), start from the complete-source saddle and the
-analytically averaged cosine slice. Determine the absolute mean
-intensity, transverse shape and time trend, then pay the carrier,
-source-tail and uniformity errors. Fixed finite root-label information
-must not be silently promoted to growing-height averages.
+At positive time, retain the exact finite phase in the differentiated
+clock. Derive an actual potential/covariance comparison from a source-based
+field approximation or another paid weak argument. Defining a covariance
+to make a chosen density equation hold is not that comparison. The exact
+cosine-cell calculation is a starting model, not a proved theta closure.
 
-For both signs of time, derive the asymptotics of the fluctuation term
-below as well as the mean function. A term small in value can contribute
-at leading order after the derivatives in the evolution equation.
-Endpoint calculations must specify uniformity in the full averaging
-buffer, and any joint order of \(t,\epsilon,\ell_x,\ell_y,\tau\) limits.
+All endpoint estimates must hold on the full averaging buffer, with the
+same regulator and stated norms as the transition comparison. A static
+error cannot be differentiated to obtain a derivative error. Choose
+thresholds from bounds that hold for the entire corresponding time tail;
+a check at one large time is insufficient. In particular, the regulator's
+switch points 64 and 128 are not theorem-onset times.
 
-## 3. The exact evolution identifies what the closure must retain
+The all-height objective governs the next estimates. Distinguish
+|x| tending to infinity at fixed time, uniformity over a compact time slab,
+and joint large positive time/height limits. The existing growing inner
+window does not establish uniformity over all real x at a fixed time.
+State joint limits in regulator or averaging widths explicitly.
 
-Let
+## 3. The exact evolution identifies what the approximation must retain
+
+Write \(S=\log(|H|^2+\epsilon^2)\), \(U=FS\), \(R=F\rho\), and retain
+the actual filtered gradient covariance
 \[
-U=\mathcal F\log(|H|^2+\epsilon^2),\quad
-T_{ij}=\mathcal F(S_iS_j)-U_iU_j,\quad Q=T_{xx}-T_{yy},
-\qquad S=\log(|H|^2+\epsilon^2).
+Q=F(S_x^2-S_y^2)-(U_x^2-U_y^2).
 \]
-The [derivation][filtered] gives, for fixed filters and regulator,
+For a fixed filter and constant regulator, [Note 02][filtered] gives
 \[
-\boxed{
 R_t=-\tfrac12(R_{xx}-R_{yy})
--\frac1{8\pi}\Delta\!\left(U_x^2-U_y^2+Q\right),
-\qquad \Delta U=4\pi R.
-} \tag{P3}
+-\frac1{8\pi}\Delta(U_x^2-U_y^2+Q),\qquad \Delta U=4\pi R.
+\tag{P3}
 \]
-The compatible potential equation is
 \[
-U_t=-\tfrac12(U_{xx}-U_{yy})
--\tfrac12(U_x^2-U_y^2+Q). \tag{P4}
+U_t=-\tfrac12(U_{xx}-U_{yy})-\tfrac12(U_x^2-U_y^2+Q).
+\tag{P4}
 \]
-These are exact identities, not yet a usable closed model.
-
-Local density fluctuations satisfy
-\(\Delta(S-U)=4\pi(\rho_\epsilon-R)\). They affect \(Q\) through
-gradient correlations, cross terms and unresolved harmonic data.
-Use these relations to construct \(Q_{\rm model}\). A bare local
-density variance need not supply the entire correction; Note 02 gives
-an explicit control. Ordinary smoothing is not an idempotent ensemble
-average, so its cross terms cannot be dropped without justification.
-
-Study a hierarchy: first measure the exact correlations from the complete
-field, then test a small closure using the mean density, potential and
-selected fluctuation statistics, and add gradient, nonlocal or temporal
-memory terms only when the errors require them. Do not assume \(Q\) has
-a fixed sign or is lower order. If a density-only equation cannot close
-at the requested accuracy, retain auxiliary fields.
-
-In parallel use the independent current balance
+With
 \[
-R_t+2\Re\partial_zJ=0,\qquad J=\mathcal F j.
+j=\frac{\epsilon^2 H_{zz}\overline{H_z}}
+{\pi(|H|^2+\epsilon^2)^2},\qquad J=Fj,
+\]
+the fixed-regulator current balance is
+\[
+R_t+2\Re\partial_zJ=0.
 \tag{P5}
 \]
-The modeled fluctuation contribution must agree with this transport and
-its physical boundary flux.
+These are the original fixed-regulator equations, not the current adaptive
+contract. For that contract put
+\[
+q=\epsilon_g^2,\quad r=\log q,\quad w=\frac{q}{|H|^2+q},\qquad
+\mathcal D=\partial_x^2-\partial_y^2.
+\]
+[Note 14][adaptive] defines
+\[
+\mathcal B=w\{r_t+\tfrac12(r_{xx}-r_{yy}+r_x^2-r_y^2)\},
+\]
+\[
+4\pi C=2\operatorname{div}(w\nabla r)-w\Delta r
+-w(1-w)|\nabla r|^2,\qquad
+\mathcal S=(1-2w)(r_t\rho+\nabla r\cdot\mathbf j).
+\]
+The fixed-filter equations to use in the next phase are
+\[
+U_t=-\tfrac12(\mathcal D U+U_x^2-U_y^2+Q)+F\mathcal B,
+\qquad \Delta U=4\pi(R+FC),
+\tag{P4a}
+\]
+\[
+R_t=-\tfrac12\mathcal D R-\frac1{8\pi}\Delta(U_x^2-U_y^2+Q)
++\frac1{4\pi}\Delta(F\mathcal B)-\partial_t(FC)-\tfrac12\mathcal D(FC),
+\tag{P3a}
+\]
+\[
+R_t+\operatorname{div}(F\mathbf j)=F\mathcal S.
+\tag{P5a}
+\]
+Both derivatives of FC are required. The positive algebraic density and
+potential curvature are different when the regulator varies spatially.
+Moving filters require the additional commutators in Note 14; they are
+not included silently in these equations.
+
+Q is a difference of gradient variances, not a density variance or a
+quantity of assumed sign. Ordinary smoothing need not be an idempotent
+projection; cross correlations and potential boundary/harmonic data remain.
+For the adaptive contract, even the local fluctuation identity is
+\[
+\Delta(S-U)=4\pi\{\rho-R+C-FC\}.
+\]
+A source-generated approximant supplies its own U and Q. A reduced model
+that omits or substitutes them must estimate the resulting equation
+residual and justify any inference from that residual to solution error.
 
 ## 4. Solve with compatible asymptotic and boundary data
 
-Once the two asymptotic regimes and a usable closure have error budgets,
-formulate a finite-domain problem whose boundary data approximate them.
-Specify which fields and derivatives are prescribed on each boundary,
-how the outer domains will grow, and the full averaging buffers.
+**Primary route: analytical comparison with the canonical source.**
+Start HDA-19 with the outer-height field estimates and their transfer to
+the physical observables. Use the global analytic hierarchy of Note 11 as
+a fixed-regulator benchmark, the exact-phase inner clock of Note 19, and
+the finite-source bounds of Notes 20/23 where their assumptions apply.
+Direct comparison does not require first closing an autonomous density
+PDE. The next gain must be a useful bound on an unbounded height domain,
+or a precisely scoped obstacle identifying the estimate to replace.
 
-Supply the boundary/harmonic information for \(U\), the source
-normalization, and a compatible finite-time anchor or complete-source
-constraint. The two leading time limits alone do not select theta:
-the compact spectral perturbation in Note 01 preserves them while
-changing the intermediate field.
+The source-to-jet allowances of Notes 20/23 already hold for every real x
+on a stated transverse buffer and compact time slab. On slabs ending at
+t<=64, the common regulator has a positive uniform floor, so the existing
+nonlinear comparison can also be uniform in x, though its constants may
+be uninformative. The bounded pilot is not the domain of those lemmas.
+After spatial regulator dependence turns on, that global floor is lost.
+An absolute jet allowance alone does not then supply a uniform observable
+error by the same argument. Derive height-dependent comparison estimates
+or an appropriate weak bound; do not silently replace the regulator or
+claim that the fixed-regulator fallback proves the adaptive result.
 
-Analyze existence, uniqueness or the remaining solution family for the
-chosen approximate problem. Do not assume an ordinary forward
-parabolic solver applies to (P3), or prescribe incompatible data at
-both time ends. If several solutions remain, use actual source data
-and evolution constraints to select among them.
+Sharpen global interpolation allowances by source-weighted, cellwise
+bounds where needed; retain separate theta-mode and source-tail errors.
+Use amplitude-aware nonlinear estimates to avoid losing the source scale
+before comparison. Any normalization used internally must preserve the
+physical density and retain the extra time/space terms it induces in an
+evolution equation. Proposed refinements require proofs; no gain is assumed
+from their names. A fixed compact source cannot represent the positive
+infinite-time endpoint, as Note 20 shows for that class.
 
-Candidate implementations are source-compatible cosine quadrature on
-bounded time slabs, matched Gaussian/saddle expansions, and a reduced
-potential-density system with a controlled fluctuation closure. Preserve
-positivity and reflection symmetries of \(R\), the absolute density scale,
-and local mass/flux balances throughout.
+Supply full convolution buffers, the common regulator, source normalization
+and source-derived boundary traces. The negative endpoint, finite bridge
+and positive clock must be compared to the same canonical field. Endpoint
+shape alone does not select theta: compact source perturbations can preserve
+leading asymptotics while changing finite time.
+
+Prove overlap on nonempty time intervals using each approximation's own
+error against theta. A triangle inequality pays their value mismatch;
+a differentiable joined evolution also needs all switching or blending
+terms. For example, blending two exact heat fields introduces
+chi'(t)(H_2-H_1). Density/current blends require the analogous balance and
+constraint calculation. No unestimated splice completes an all-time theorem.
+
+**Alternative route: a reduced potential-density evolution.** If a useful
+closure is obtained, formulate a compatible boundary/anchor problem and
+prove the needed existence, uniqueness and stability estimates. Do not
+assume (P3a) is an ordinary forward parabolic equation or prescribe
+incompatible data at both time ends. Direct source-error estimates can
+establish approximation without such PDE propagation; a residual-based
+claim of solution accuracy still requires its own stability argument.
 
 ## 5. Constrain and improve the solutions against the actual equations
 
-Compare the candidate with independent complete-source calculations of
-\(R,U,J,Q\), using the same averaging kernels and regulator. Refine the
-solution family or closure using:
+The principal acceptance target covers all real x on a declared transverse
+strip, with full averaging buffers and explicit time quantifiers. A
+proposed error contract may take the form
+\[
+\sup_{x\in\mathbb R,\ |y|\le Y_0}
+\frac{|R_{\rm app}(t,x,y)-R_{\epsilon_g}(t,x,y)|}{W_R(t,x,y)}
+\le B_R(t),
+\tag{P7}
+\]
+with a positive, explicitly prescribed reference scale W_R and a useful
+bound throughout the stated time regime. W_R=1 is the absolute-error case.
+Any weight must have a stated physical interpretation and cannot be chosen
+afterward to conceal uncontrolled outer error. This is a target contract,
+not an established theorem. State analogous norms for the other required
+observables; the final assembly must cover all real heat time.
 
-- The exact density/potential and averaged-current identities.
-- Complete theta-source data and compatible spatial boundary traces.
-- The two asymptotic value expansions and their derivative corrections.
-- Measured density fluctuations and gradient/cross correlations.
-- Symmetries, nonnegativity and unnormalized local mass balance.
-- Time intervals, heights and averaging widths reserved from fitting.
+A theorem on |x|>=X(t), paired with a proved inner theorem and a controlled
+overlap, can supply all-height coverage. A growing window or a collection
+of finite samples alone cannot. A bounded-height all-time result may be
+used as a sublemma, but its necessity for the global argument must be
+identified before making it an execution priority.
 
-Track the density residual in (P3), the potential constraint defect,
-the closure discrepancy after its required derivatives, and boundary
-and initial/anchor errors separately. A small PDE residual is not an
-accuracy theorem: quantify how errors propagate in the chosen problem,
-or label the comparison as numerical on its tested domain.
+Fix the regulator protocol, eta, kernel widths and norms before comparison.
+Spatial averaging with fixed widths remains the current baseline;
+time averaging and moving widths remain allowed once their data and
+commutators are paid. Any regulator change requires a declared new target
+and comparison with the old target where claimed.
 
-For a candidate \(R_{\rm model}\), the basic target decomposition is
+Before a pilot, declare componentwise tolerances or nonvanishing reference
+scales for R, J, R_t, U, Q and Delta Q, together with the derivatives,
+constraints and boundary traces actually needed by the stated theorem.
+The principal error is against the regularized theta observables. Use
+absolute norms where a comparison quantity vanishes; relative errors must
+not divide by a sampled zero. Any time-dependent error scale must be stated
+before using observed discrepancies to assess it.
+
+Keep the source approximation, nonlinear transfer, arithmetic evaluation,
+filter integration, endpoint and joining errors separate. When numerical
+estimates are part of a theorem, enclose them over the whole slab and
+buffer, including gaps between samples. Floating observations and held-out
+checks are diagnostics, not uniform bounds. Before any numerical run,
+record the named analytic estimate or theorem it supports, the question
+and decision it can resolve, the fixed regime and numerical budget, and
+a stopping condition. Useful roles include testing a proposed estimate,
+evaluating explicit constants, checking a derived identity, or certifying
+a finite input whose remaining height range has an analytical bound.
+Stop when the question is answered, the method fails its declared gate,
+or numerical uncertainty is below the dominant analytical allowance.
+More heights, cells or precision require a new unresolved analytic need;
+they are not independent milestones. See the [numerical policy][numerics]
+and [avoid 10][a10].
+
+For the zero measure, the additional comparison is still
 \[
 \|R_{\rm model}-R_{\rm zeros}\|_X
-\le
-\|R_{\rm model}-R_\epsilon\|_X
+\le\|R_{\rm model}-R_\epsilon\|_X
 +\|R_\epsilon-R_{\rm zeros}\|_X.
 \tag{P6}
 \]
-Bound or measure the first term through actual-field validation and
-stability; bound the second through the regulator-to-divisor comparison.
-Report all terms with the same domain, scale choices and norm.
+The second term needs its own multiplicity-aware weak argument. It is not
+a prerequisite for a theorem explicitly restricted to the regularized
+density, and cannot be omitted when interpreting that theorem as a
+zero-count approximation. Smooth regulated field estimates through a
+multiple event do not by themselves control regulator removal there.
+
+Record the number of source modes/cells or formula terms and its dependence
+on domain and tolerance. A finite representation may be too large to meet
+the intended simplicity goal. If a budget is uninformative, preserve the
+failed regime and improve the dominant estimate; a finer sample grid does
+not repair a loose analytical allowance. Independent comparisons must name
+their provenance and shared dependencies.
 
 ## 6. Execution sequence and success conditions
 
-1. **Define the comparison:** averaging, domain, regulator protocol and
-   accuracy measures (HDA-01), plus the zero-measure bridge (HDA-02).
-2. **Acquire the anchors:** negative and positive time values, derivatives
-   and fluctuation scales (HDA-03–04); audit the exact filtered equations
-   (HDA-05).
-3. **Close the evolution:** approximate the required fluctuation
-   correlations and quantify their contribution (HDA-06).
-4. **Solve the boundary problem:** use paid asymptotics and compatible
-   source data (HDA-07).
-5. **Refine and validate:** constrain those solutions against the actual
-   equations and independent averaged theta data (HDA-08), then review
-   the deliverable (HDA-09).
+The [progress register][progress] owns task statuses; the following defines
+the next deliverables and their order. Earlier completed results are inputs,
+not tasks to repeat.
 
-The first successful result is a reproducible smoothed function or small
-family of functions, with explicit averaging choices, asymptotic values,
-fluctuation correction, boundary conditions and a stated error against
-the true averaged zero behavior. It may be a bounded-domain numerical
-result before a uniform analytic theorem.
+| Task | Next deliverable | Acceptance condition |
+| --- | --- | --- |
+| HDA-19, under HDA-04 — first priority | Analytical positive outer-height comparison | State fixed-time and joint time/height regimes; prove useful field and observable error on an unbounded height domain, address the decaying regulator, and match the inner clock with paid spatial interfaces. A precise failure is scoped to its representation and norm. |
+| HDA-16, under HDA-03--06 — endpoint priority | Complete endpoint evolution budgets with all-height scope | Extend negative Gaussian current/time and actual potential/Q/Delta Q estimates uniformly in height; supply corresponding positive estimates using inner and outer representations, with full buffers and boundary traces. Differentiate the source argument, not a static allowance. |
+| HDA-17, under HDA-14 — supporting task | Informative finite-transition bounds needed by the global comparison | Identify the analytic theorem using the finite input; prove the required whole-slab errors and height coverage with explicit cost. Finite certification is useful when coupled to analytic tails. Refining the Note 23 pilot requires a stated analytic benefit. |
+| HDA-18, under HDA-07--09 — assembly | All-time approximation with complete height coverage | Combine HDA-16/17/19: whole-tail thresholds, time and spatial overlaps, full buffers and all joining/constraint residuals. Give direct comparison or required propagation stability. A bounded-height special case is recorded only at that scope. |
+| HDA-20, supporting HDA-09 — review | Review with a distinct reviewer | Audit existing source, transport and covariance estimates and new outer/joining claims as available; record reviewer provenance and shared inputs. Same-assistant checks do not fulfill independent review. |
+| HDA-15, under HDA-14 — completed input | Transition contract and sharper source/nonlinear allowances | Note 23 supplies its declared analytical/diagnostic deliverable; its failed trial does not pass HDA-17. No repeat is scheduled merely to produce a better numerical table. |
 
-Use the [opening control screen][opening] and Note 02's nonzero-covariance
-control when choosing a closure. Generic exact evolution must work on
-those controls; canonical asymptotic constants must use the actual
-theta source. A failure is scoped to the tested model and regime under
-[avoid 07][a07]. No simplicity or RH conclusion is an acceptance criterion.
+HDA-19 does not depend on passing HDA-17. HDA-16 and review of existing
+proofs can proceed alongside the outer-height analysis. HDA-18 retains
+the all-time objective and now explicitly requires all-height assembly;
+its formerly prioritized bounded-height version is an optional intermediate
+result. These priorities do not imply that unfinished proofs have started
+or that any research status has advanced.
 
-Keep derivations in notes, computations and small records in numerics,
-and assessments in reviews. Update the progress register after each
-bounded research step, retaining incomplete dependencies and measured
-errors. Record milestones in the investigation's history without new
-manuscript snapshots.
+The common control screen is [the collision register][controls] and the
+source-specific discussions in Notes 19--20. Generic field stability must
+remain valid for smooth colliding controls with their own constants. Atomic
+and polynomial controls lack the smooth canonical-source premises;
+Euler-factor, weighted-square, reflected and primitive controls do not
+inherit the unchanged theta majorants. A simple-root collar fails at a
+covered collision. No earlier simplicity or RH conclusion is an acceptance
+criterion, and every failed approximation is excluded only in its proved
+class and regime under [avoid 07][a07].
+
+Keep derivations in notes, numerics and small execution records in numerics,
+and assessments in reviews. Analytical results lead; numerical observations
+support and diagnose. Update this overview's contract when the route or
+scope changes and the existing progress register when evidence changes a
+status. Preserve its historical checkpoints, original task IDs and chat
+registration. No new overview, progress ledger or manuscript snapshot is
+created for this continuation of the same objective.
 
 [progress]: ../research-progress/01_AVERAGED_DENSITY_RESEARCH_PROGRESS_20261024.md
 [opening]: ../notes/01_AVERAGED_DENSITY_AND_TWO_TIME_LIMITS_BRAINSTORM_20261024.md
 [filtered]: ../notes/02_FILTERED_EVOLUTION_AND_FLUCTUATION_IDENTITIES_20261024.md
+[negative]: ../notes/11_TWO_TIME_LIMITS_ALL_HEIGHT_ERROR_20261024.md
+[adaptive]: ../notes/14_VARIABLE_EPSILON_EVOLUTION_AND_ASYMPTOTICS_20261024.md
+[transport]: ../notes/16_ADAPTIVE_FORCING_AND_DIFFERENTIATED_CLOCK_20261024.md
+[explicit]: ../notes/19_EXPLICIT_SADDLE_CLOCK_AND_EXACT_PHASE_20261024.md
+[bridge]: ../notes/20_GLOBAL_REGULATOR_AND_FINITE_SOURCE_BRIDGE_20261024.md
+[manuscript]: ../manuscript/README.md
+[integration]: ../notes/21_ANALYTICAL_MANUSCRIPT_INTEGRATION_20261024.md
 [results]: ../../../../result-summaries/README.md
 [geometry]: ../../../../result-summaries/13_local_heat_flow_geometry_and_rh_equivalent_criteria.md
 [controls]: ../../../../result-summaries/12_collision_controls_and_screening.md
 [avoid]: ../../../../avoid/README.md
 [a01]: ../../../../avoid/01_restating_the_target.md
 [a07]: ../../../../avoid/07_scoped_exclusions_read_as_universal.md
+[a19]: ../../../../avoid/19_status_files_that_lag_the_findings.md
 
-[round-one]: ../notes/07_CONTINUATION_FOR_NEW_CHAT_20261024.md
+[positive]: ../notes/12_GROWING_HEIGHT_STATIONARY_CLOCK_AND_VANDERMONDE_20261024.md
+
+[local-bounds]: ../notes/23_FINITE_TRANSITION_CONTRACT_AND_LOCAL_BOUNDS_20261024.md
+
+[priority]: ../notes/24_CONTINUATION_FOR_GPT_ASTRA_INFINITE_HEIGHT_ANALYSIS_20261024.md
+[numerics]: ../numerics/README.md
+[a10]: ../../../../avoid/10_numerics_ahead_of_the_question.md

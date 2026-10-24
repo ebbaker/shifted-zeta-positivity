@@ -75,3 +75,14 @@ on its two physical boundaries also discard the divergent relative period.
 This is a preventive normalization check of the inherited degeneration,
 not a new theta exclusion or a claim that all period methods fail.
 [Separate same-model internal review](../papers/investigations-4/09_reciprocal_hodge_energy/reviews/01_CONTRACT_AND_QUADRATIC_PILOT_REVIEW_20261022.md).
+
+24 October 2026 — variable-regulator object check, prepared for Edward
+Baker with substantial LLM assistance, **gpt-6-astra, actual effort max**.
+[Heat-density Note 14](../papers/investigations-5/01_heat_density_asymptotics/notes/14_VARIABLE_EPSILON_EVOLUTION_AND_ASYMPTOTICS_20261024.md)
+states: “Spatial variation also breaks the identity between the positive
+algebraic density and the Laplacian of that potential.” A zero-free
+Gaussian control has negative curvature density under a height-matched
+regulator. Keep the curvature correction as well as the potential forcing
+and current source when epsilon varies. This is a preventive scope check
+for the extension; the fixed-epsilon identities are unchanged.
+[Same-assistant assessment](../papers/investigations-5/01_heat_density_asymptotics/reviews/04_MANUSCRIPT_AND_VARIABLE_EPSILON_SELF_REVIEW_20261024.md).

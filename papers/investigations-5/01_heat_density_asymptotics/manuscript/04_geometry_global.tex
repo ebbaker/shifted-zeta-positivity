@@ -1,0 +1,190 @@
+\section{Vandermonde and pair-matrix limits}\label{sec:geometry}
+Choose any $m$ consecutive zeros from the $2N$ zeros in
+Lemma~\ref{lem:carrier}. In source-mean coordinates write
+\[
+ y_i=\frac{\mu a_i}{\pi}=c+i+e_i,\qquad |e_i|\le e:=s/\pi<\tfrac12 .
+\]
+Let $\Delta_m(a)=\prod_{i<j}(a_j-a_i)^2$, the squared
+Vandermonde, and define its explicit clock value by
+\begin{equation}
+ \Delta_m^{\rm clock}(L)=
+ \left(\frac{\pi}{L}\right)^{m(m-1)}
+       \prod_{k=1}^{m-1}(k!)^2 .
+ \label{eq:Dclock}
+\end{equation}
+The distinction between the Vandermonde and its square fixes all
+factors of two in the following estimate.
+
+\begin{theorem}[Growing-block determinant comparison]\label{thm:V}
+Let $e_s^*=\min\{e_\mu,e_s\}$ be the score allowance in
+Lemma~\ref{lem:score}. If $L>e_s^*$, then
+\begin{equation}
+ \left|\log\frac{\Delta_m(a)}{\Delta_m^{\rm clock}(L)}\right|
+ \le \mathcal V_m:=
+ m(m-1)\frac{e_s^*}{L-e_s^*}
+ +\frac{4e}{1-2e}\{mH_{m-1}-(m-1)\},
+ \label{eq:V}
+\end{equation}
+where $H_{m-1}=\sum_{d=1}^{m-1}d^{-1}$ and $\mathcal V_1=0$.
+For the choice \eqref{eq:growing}, uniformly for $m\le2N$,
+\begin{equation}
+ \mathcal V_m=O(L\kappa^{-1/3}
+                    +L\log\kappa\,\kappa^{-1/6})=o(1).
+ \label{eq:Vorder}
+\end{equation}
+Consequently $\Delta_m/\Delta_m^{\rm clock}(L)\to1$ uniformly
+for these growing consecutive blocks.
+\end{theorem}
+\begin{proof}
+For index distance $d$, the unfolded gap equals
+$d(1+\theta_{ij})$ with $|\theta_{ij}|\le2e/d$.
+Apply $|\log(1+\theta)|\le|\theta|/(1-|\theta|)$
+and sum over the $m-d$ pairs of distance $d$, retaining the factor two
+from the squared Vandermonde. This yields the second term of
+\eqref{eq:V}. Since
+$|\log(L/\mu)|\le e_s^*/(L-e_s^*)$, changing the reference spacing
+from $\pi/\mu$ to $\pi/L$ costs the first term.
+The identity $\prod_{d=1}^{m-1}d^{2(m-d)}
+=\prod_{k=1}^{m-1}(k!)^2$ proves \eqref{eq:Dclock}.
+Now $m=O(L\kappa^{1/3})$, $e=O(\kappa^{-1/2})$ and
+$e_s^*=O(\kappa^{-1})$ imply \eqref{eq:Vorder}.
+\end{proof}
+
+Let $\mathsf L_{\rm pair}(a)$ be the graph Laplacian with edge weights
+$(a_i-a_j)^{-2}$; equivalently
+$\mathsf L_{\rm pair}=\tfrac12\operatorname{Hess}(-\log\Delta_m)$.
+Let $\mathsf L_{\rm clock}$ have the weights $(i-j)^{-2}$.
+Termwise comparison in the corresponding quadratic forms yields
+\begin{equation}
+ \left(\frac\mu L\right)^2(1+2e)^{-2}\mathsf L_{\rm clock}
+ \preceq
+ \left(\frac\pi L\right)^2\mathsf L_{\rm pair}(a)
+ \preceq
+ \left(\frac\mu L\right)^2(1-2e)^{-2}\mathsf L_{\rm clock}.
+ \label{eq:Loewner}
+\end{equation}
+The comparison includes the constant zero mode and all nonzero
+eigenvalues, uniformly in dimension.
+
+The score estimate improves the first term of the earlier
+$O(L\kappa^{-1/12}+L\log\kappa\,\kappa^{-1/6})$ bound
+without changing its root-location term. These are slice estimates. For a selected block,
+$H=U_0\prod_i(z-a_i)$ gives the complete zero motion
+\begin{equation}
+ a_i'=2\sum_{j\ne i}(a_i-a_j)^{-1}
+                   +2(U_{0,z}/U_0)(a_i).
+ \label{eq:exterior}
+\end{equation}
+Unfolding by $y_i=\gamma(t)a_i$ also adds
+$(\gamma'/\gamma)y_i$.
+The exterior force and this moving normalization cannot be discarded.
+The determinant is translation invariant and does not determine a
+density or all gaps by itself. We derive determinant closeness from
+root-location estimates, not conversely.
+The antecedent pair-matrix and transport notes
+\cite{hdc06,hdc09,lhct07} explain why a selected theta block
+does not inherit the unforced finite-polynomial equilibrium law.
+
+\section{All-height scope and an analytic fallback}\label{sec:global}
+\begin{proposition}[Fixed-regulator obstruction]\label{prop:obstruction}
+For each fixed finite $t$, fixed $\epsilon>0$ and $Y<\infty$,
+\begin{equation}
+ \rh(t,x+iy)\longrightarrow0
+ \quad\hbox{as }|x|\to\infty,\quad\hbox{uniformly for }|y|\le Y.
+ \label{eq:vanishing}
+\end{equation}
+This remains true for positive normalized spatial averages whose
+transverse support stays bounded and whose horizontal supports satisfy
+$|x|-\ell(x,t)\to\infty$.
+For that class, whenever $k_h(y)>0$,
+\begin{equation}
+ \sup_{x\in\R}\left|\frac{\pi}{L(t)}R(t,x,y)-k_h(y)\right|
+ \ge k_h(y)
+ \label{eq:obstruction}
+\end{equation}
+at each finite $t$ for which $L(t)$ is defined.
+\end{proposition}
+\begin{proof}
+The source and its $u$ multiple are integrable with weight $e^{Yu}$.
+Their Fourier transforms tend to zero, uniformly in bounded $y$.
+For a direct uniform proof, first truncate in $u$ with a uniform
+integrable majorant, then approximate the compact family of truncated
+integrands in $L^1$ by finitely many step functions.
+Their oscillatory integrals tend to zero.
+Thus $H,H_z\to0$, and $\rh\le |H_z|^2/(\pi\epsilon^2)$ proves
+\eqref{eq:vanishing}. The support condition transfers this statement
+to the averages. Taking $|x|\to\infty$ in their discrepancy proves
+\eqref{eq:obstruction}.
+\end{proof}
+This does not exclude a different outer profile, a changing regulator,
+unbounded transverse scales, or nonlocal averages reaching the origin.
+
+An absolute all-height approximation is nonetheless available.
+For $t\ge0$, define
+\begin{equation}
+ P_N(t,z)=\frac18\sum_{k=0}^N\frac{(t/4)^k}{k!}
+                   \xi^{(2k)}(\tfrac12+\tfrac i2z).
+ \label{eq:PN}
+\end{equation}
+This is a finite analytic expression and uses no zero locations.
+
+\begin{theorem}[A global analytic hierarchy]\label{thm:global}
+For $s,Y\ge0$ put $V=1+\log(s+Y+10)$ and, for $j=0,1$,
+\begin{equation}
+ \mathcal B_j(s,Y)=2\pi^2C_b
+ \left\{\frac{V^{j+1}}{j+1}e^{sV^2+(9+Y)V}
+                    +\frac12\Gamma((j+1)/2)\right\}.
+ \label{eq:majorant}
+\end{equation}
+For every positive normalized spatial filter at time $t$, supported in $|\Im z|\le Y$,
+\begin{equation}
+ |F\rh[H]-F\rh[P_N]|
+ \le 2^{-N-1}\mathcal A(t,Y,\epsilon), \label{eq:globalbudget}
+\end{equation}
+where
+\begin{equation}
+ \mathcal A=
+ \frac{2\mathcal B_1(t,Y)\mathcal B_1(2t,Y)}{\pi\epsilon^2}
+ +\frac{c_0\mathcal B_1(t,Y)^2\mathcal B_0(2t,Y)}{\pi\epsilon^3},
+ \qquad c_0=\frac{125}{54\sqrt5}.
+ \label{eq:Aglobal}
+\end{equation}
+The bound is uniform over all real heights.
+For prescribed $p>0$, the degree
+\[
+ N=\max\{0,\lceil\log_2\mathcal A+p\log_2(1+t)\rceil-1\}
+\]
+gives error at most $(1+t)^{-p}$ and is
+$O_{Y,\epsilon,p}(t\log^2(t+10))$.
+\end{theorem}
+\begin{proof}
+The source estimate in \eqref{eq:q} implies
+$\int_0^\infty u^je^{su^2+Yu}\Phi(u)\,du\le\mathcal B_j(s,Y)$.
+On $[0,V]$ discard the negative exponential.
+For $u\ge V$, with $D_0=s+Y+10$, one has
+$(s+1)u^2+(9+Y)u\le D_0u^2\le(\pi/2)e^{4u}$.
+The last inequality follows at $V$ from $V\le D_0$ and then from
+monotonicity of $e^{4u}/u^2$.
+The integrand exponent is therefore at most $-u^2$, proving
+\eqref{eq:majorant}.
+
+Expanding $e^{tu^2}$ in the source integral gives \eqref{eq:PN}.
+For $a\ge0$ its tail satisfies
+$\sum_{k>N}a^k/k!\le2^{-N-1}e^{2a}$.
+Consequently, on the entire strip,
+\[
+ |\partial_z^j(H-P_N)|\le2^{-N-1}\mathcal B_j(2t,Y),\qquad
+ |H_z|,|(P_N)_z|\le\mathcal B_1(t,Y).
+\]
+The coefficient $\epsilon^2/\{\pi(|h|^2+\epsilon^2)^2\}$
+has global gradient maximum $c_0/(\pi\epsilon^3)$:
+maximize $4r\epsilon^2/(r^2+\epsilon^2)^3$ at
+$r=\epsilon/\sqrt5$. A mean-value bound for the density gives
+\eqref{eq:globalbudget}, and positivity transfers it to the filter.
+The stated choice of $N$ then follows.
+\end{proof}
+A time average uses the average of the right side of \eqref{eq:globalbudget}
+at its constituent times. This hierarchy is conservative: evaluation errors in the xi derivatives
+and the filter must be added separately. It is a constructive absolute
+budget, not an efficient outer-height asymptotic model.
+

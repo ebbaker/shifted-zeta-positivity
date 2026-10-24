@@ -672,3 +672,102 @@ closure estimate. [Self-review](../papers/investigations-4/reviews/03_INITIAL_CA
 **HDC complete near-axis comparison, 24 October 2026.** Prepared for Edward Baker with substantial LLM assistance, **gpt-6-astra, ultra**; **proved supporting estimate under RH, internal same-model review**. [Note 19](../papers/investigations-4/12_height_dependent_heat_contours/notes/19_NEAR_AXIS_CLUSTER_AND_QUADRATIC_EXTERIOR_20261023.md), now integrated with full proof in [main Section 9](../papers/investigations-4/12_height_dependent_heat_contours/manuscript/near_axis_cluster.tex), retains all initial cluster zeros and quadratic exterior curvature at spatial scale 1/log Y and backward time O(log^-2 Y). Error is O((m+1)^(3/2)/log^2 Y) times the true absolute Gaussian model integral, uniformly for m=O(log Y); the complete exterior tail is paid. The source states: "In particular, it does not imply a zero count or a nonvanishing floor." A polynomial array defeats omission of curvature in the declared coarse class; the all-multiple positive-source G_0 passes the comparison. [Review 17](../papers/investigations-4/12_height_dependent_heat_contours/reviews/17_MAIN_NEAR_AXIS_INTEGRATION_REVIEW_20261024.md). Reusable as a cluster/exterior transfer, not a complete-population wall or multiplicity discriminator; no specialist validation or new simplicity bound.
 
 - **Complex zero field and conservation (4/12, 24 October).** **Proved in-manuscript; same-assistant self-review:** the smooth square root of the regularized zero density has phase velocity `(theta_y,theta_x)` and a Schrödinger–Poisson evolution equivalent under the stated rotation/scaling to focusing DS-II. The author-requested complex presentation now leads with W=2 S_zz and the first-order potential constraint; the book states, “This complex notation retains two real spatial dimensions.” [Notation derivation](../papers/investigations-4/12_height_dependent_heat_contours/notes/20_COMPLEX_POTENTIAL_AND_WIRTINGER_FORMULATION_20261024.md), [revision self-review](../papers/investigations-4/12_height_dependent_heat_contours/reviews/18_COMPLEX_POTENTIAL_PRESENTATION_REVIEW_20261024.md). For the selected Fourier potential and sufficient integrability, mass, two momenta, a Hamiltonian and explicit moment/virial combinations are conserved. Area formula plus Picard gives mass equal to degree for polynomials and infinite for transcendental entire slices, including theta. “Polynomial heat fields have zero momenta and zero Hamiltonian, including at multiple zeros.” A self-subtracted density-square observable converges to multiplicity excess, with explicit transport and measure-comparison costs; it is not conserved. No theta-specific upper bound or simplicity result. [Book](../papers/investigations-4/12_height_dependent_heat_contours/manuscript/book.tex), [Note 23](../papers/investigations-4/12_height_dependent_heat_contours/brainstorm/notes/23_COMPLEX_FIELD_BOOK_AND_CONSERVATION_LAWS_20261024.md), [self-review](../papers/investigations-4/12_height_dependent_heat_contours/brainstorm/reviews/13_COMPLEX_FIELD_BOOK_SELF_REVIEW_20261024.md). Prepared for Edward Baker with substantial LLM assistance, **gpt-6-astra (Codex), max**; no independent specialist review or novelty claim.
+
+
+**Coarse heat density and weak transport (5/01, 24 October 2026).**
+Prepared for Edward Baker with substantial LLM assistance, **gpt-6-astra,
+recorded effort max**. [Note 09](../papers/investigations-5/01_heat_density_asymptotics/notes/09_COMPLETE_SOURCE_MOMENT_TRANSFER_AND_WEAK_CURRENT_20261024.md)
+records “conditional finite-domain estimates proved below”: a variance-
+adjusted source carrier controls finite coarse density and logarithmic
+regulator bias, using explicit moment and nonvanishing premises. Floating
+theta contour comparisons at t=512,768,1024 and one centered time average
+give maximum observed relative errors about 0.03% in density, 0.086% in
+nonzero current and 0.36% in time derivative. These are finite diagnostics,
+not certificates or evolved-solution errors. The covariance companion is
+defined kinematically, not validated against theta; full covariance,
+uniform numerical enclosures and boundary stability remain open.
+[Same-assistant assessment](../papers/investigations-5/01_heat_density_asymptotics/reviews/02_COARSE_TRANSFER_AND_WEAK_CURRENT_SELF_REVIEW_20261024.md).
+Reuse for coarse-average and regulator error budgeting, not global
+simplicity/RH. No independent or specialist review.
+
+
+24 October 2026 — **Heat-density time limits (5/01): proved in-note;
+same-assistant review only.** [Notes 11--12](../papers/investigations-5/01_heat_density_asymptotics/notes/11_TWO_TIME_LIMITS_ALL_HEIGHT_ERROR_20261024.md)
+give an all-height negative-time Gaussian density error, a positive-time
+clock on X~kappa^(1/3), and a growing-block Vandermonde/Hessian comparison.
+“The physical density itself grows like (log t)/(4pi) k_h(y).” Global
+uniform clock convergence fails for the stated fixed-regulator averaging
+class; a costly analytic hierarchy has a separate all-height absolute
+budget. [Self-review](../papers/investigations-5/01_heat_density_asymptotics/reviews/03_TWO_TIME_LIMITS_AND_VANDERMONDE_SELF_REVIEW_20261024.md).
+No endpoint simplicity or evolved boundary solution. Prepared for Edward
+Baker with substantial LLM assistance, **gpt-6-astra, actual effort max**.
+
+24 October 2026 — **Analytical heat-density draft and variable regulator
+(5/01): identities and estimates proved in-note; same-assistant review.**
+The [manuscript](../papers/investigations-5/01_heat_density_asymptotics/manuscript/main.tex)
+initially consolidated the fixed-epsilon proofs with numerics in an appendix;
+the later integration below expands that maintained manuscript.
+[Note 14](../papers/investigations-5/01_heat_density_asymptotics/notes/14_VARIABLE_EPSILON_EVOLUTION_AND_ASYMPTOTICS_20261024.md)
+adds exact potential forcing, curvature/current corrections and a weak
+bias bound for epsilon(t,x). “Unlike rho, tilde-rho need not be
+nonnegative.” Adaptive choices give an all-height negative T-rho profile
+with O(T^-1) error and preserve the positive growing-window density rate;
+an explicit saddle regulator suffices. Sixteen exact polynomial identities
+pass. No global positive adaptive limit or boundary solution is proved.
+[Assessment](../papers/investigations-5/01_heat_density_asymptotics/reviews/04_MANUSCRIPT_AND_VARIABLE_EPSILON_SELF_REVIEW_20261024.md).
+Prepared for Edward Baker with substantial LLM assistance, **gpt-6-astra,
+actual effort max**.
+
+24 October 2026 — **Adaptive heat-density transport (5/01): estimates
+proved in-note; same-assistant review.** [Note 16](../papers/investigations-5/01_heat_density_asymptotics/notes/16_ADAPTIVE_FORCING_AND_DIFFERENTIATED_CLOCK_20261024.md)
+uses enlarged phase collars to give O(kappa^-2) regulator bias and
+O(kappa^-5/3+L^2*kappa^-2) weak current/time/source allowances for
+the explicit p=1 regulator. Complete source moments through degree six
+give a'=-(mu'/mu)a+O(kappa^-7/6), and current/density-derivative error
+O(L*kappa^-7/6) against the moving mu-clock on X~kappa^(1/3).
+“This is not an autonomous reduced PDE or a saddle-only dynamical model.”
+Finite phase is retained; the smooth continuum derivative comparison
+is only o(L/kappa) on fixed height ranges. Exact controls, floating
+allowance evaluations and six theta contour observations support the
+[same-assistant assessment](../papers/investigations-5/01_heat_density_asymptotics/reviews/05_ADAPTIVE_TRANSPORT_SELF_REVIEW_20261024.md); no interval
+onset, independent review, outer-height theorem or boundary solve.
+Prepared for Edward Baker with substantial LLM assistance,
+**gpt-6-astra, actual effort max**.
+
+
+24 October 2026 — **Explicit saddle clock and finite-source connection
+(5/01): proved in-note; same-assistant assessment.**
+[Note 19](../papers/investigations-5/01_heat_density_asymptotics/notes/19_EXPLICIT_SADDLE_CLOCK_AND_EXACT_PHASE_20261024.md)
+pays complete-source mean/drift substitution and retains phase in five
+periodic-polynomial density terms: O(kappa^-1/2) density and
+O(L kappa^-7/6) current/time error on the eventual growing inner window.
+“Potential harmonic data, actual covariance and its derivatives for the
+clock remain additional obligations.” [Note 20](../papers/investigations-5/01_heat_density_asymptotics/notes/20_GLOBAL_REGULATOR_AND_FINITE_SOURCE_BRIDGE_20261024.md)
+adds a global regulator and finite-slab source/jet/actual-covariance
+comparison; useful full-transition parameters and overlap remain open.
+Exact rational controls and floating theta diagnostics are distinct from
+the proof; no interval onset or all-time theorem.
+[Same-assistant assessment](../papers/investigations-5/01_heat_density_asymptotics/reviews/06_EXPLICIT_CLOCK_AND_FINITE_BRIDGE_SELF_REVIEW_20261024.md).
+Prepared for Edward Baker with substantial LLM assistance,
+**gpt-6-astra, actual effort max**.
+
+The author-requested [manuscript revision](../papers/investigations-5/01_heat_density_asymptotics/manuscript/main.tex)
+now integrates these analytical results and improves the determinant's
+mean-error term to O(L kappa^-1/3), leaving its location term unchanged.
+[Note 21](../papers/investigations-5/01_heat_density_asymptotics/notes/21_ANALYTICAL_MANUSCRIPT_INTEGRATION_20261024.md)
+states: "It is not a new all-time theorem."
+[Integration self-review](../papers/investigations-5/01_heat_density_asymptotics/reviews/07_ANALYTICAL_MANUSCRIPT_INTEGRATION_SELF_REVIEW_20261024.md),
+24 October 2026, gpt-6-astra, actual effort max; same-assistant review only.
+
+
+**Finite-transition local bounds, 24 October 2026 (5/01): proved in-note;
+same-assistant review.** [Note 23](../papers/investigations-5/01_heat_density_asymptotics/notes/23_FINITE_TRANSITION_CONTRACT_AND_LOCAL_BOUNDS_20261024.md)
+replaces the global source allowance by cellwise weighted interpolation,
+retains local amplitudes in zero-safe nonlinear transfer, and bounds the
+actual covariance/Laplacian before spatial maximization. The interpolation
+coefficient remains bounded as the cutoff grows at fixed finite time.
+It also pays a local polynomial evaluator's truncation. Its disposition is:
+“The working 192-cell trial is not accepted”. Arithmetic/filter failures
+and all-time gates remain. [Same-assistant review](../papers/investigations-5/01_heat_density_asymptotics/reviews/08_FINITE_TRANSITION_LOCAL_BOUNDS_SELF_REVIEW_20261024.md).
+Prepared for Edward Baker with substantial LLM assistance, **gpt-6-astra,
+actual effort max**; no independent specialist review.

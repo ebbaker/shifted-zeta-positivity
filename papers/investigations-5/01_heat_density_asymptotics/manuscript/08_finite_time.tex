@@ -1,0 +1,296 @@
+\section{Finite-time approximation under a global regulator}\label{sec:finite}
+The two endpoint formulas do not yet provide informative overlap through
+the intervening times. We now fix one smooth measurement protocol and
+construct a finite heat field on any compact time slab. Its error is
+controlled at the source, then transferred to the density, current and
+actual covariance. The construction has a finite explicit cost; the
+bounds alone do not assert that this cost is small.
+
+\subsection{One regulator for both endpoints}
+Let $C=\Phi(0)\sqrt\pi/2$, fix $\eta>0$, and define
+\[
+ \epsilon_b(t)=\eta C(1+t^2)^{-1/4}.
+\]
+For $64<t<128$ put $v=(t-64)/64$ and
+$\chi(t)=e^{-1/v}/(e^{-1/v}+e^{-1/(1-v)})$; extend $\chi$ by zero
+for $t\le64$ and one for $t\ge128$. Set
+\begin{equation}
+ \epsilon_g(t,x)=
+ \begin{cases}
+ \epsilon_b(t),&t\le64,\\
+ \exp\{(1-\chi(t))\log\epsilon_b(t)+\chi(t)\log\epsilon_+(t,x)\},
+       &t>64.
+ \end{cases}
+ \label{eq:globalRegulator}
+\end{equation}
+This is positive and smooth at every finite $(t,x)$.
+To check that the large saddle used in $\epsilon_+$ exists throughout
+the switch, the maximum of $q_t'$ is
+$(t/2)(\log(t/(8\pi))-1)+9$, attained at
+$u_*=\log(t/(8\pi))/4$.
+It is positive at $t=64$ and increasing thereafter; the larger zero
+has $\kappa>0$. Smooth extension slightly below $64$ and the flatness
+of $\chi$ justify the gluing. The switch points specify the regulator;
+they are not onset times for Theorem~\ref{thm:explicit}.
+
+At $t=-T$,
+$\epsilon_b/ (\eta C_T)=(1+T^{-2})^{-1/4}=1+O(T^{-2})$.
+Using \eqref{eq:Eminus} with this regulator and replacing $\eta$ by
+$\eta(1+T^{-2})^{-1/4}$ in \eqref{eq:adaptiveNegative} preserves its
+$O(T^{-1})$ scaled error. Indeed
+$|\partial_{\log\eta}F_\eta|\le2F_\eta$, and $F_\eta$ is bounded on
+each fixed scaled transverse strip, uniformly over real scaled heights.
+For $t\ge128$, \eqref{eq:globalRegulator} equals
+\eqref{eq:positiveRegulator} exactly.
+On a compact time and spatial buffer it has a positive lower bound.
+After the height dependence turns on, positivity alone does not supply
+such a bound over all real heights.
+
+\subsection{A finite source field with error-function primitives}
+Choose a time slab $[a,b]$, transverse buffer $|y|\le Y$, cutoff $U>0$,
+number of theta modes $N\ge1$, and nodes
+$0=u_0<\cdots<u_m=U$ with largest step $h_s$.
+Let $\Phi_N$ be the first $N$ terms of \eqref{eq:phi} and let $f$
+be its continuous piecewise linear interpolant on $[0,U]$, extended
+by zero for $u>U$. Each nodal value is positive, so $f\ge0$.
+The possible jump at $U$ is allowed. Define
+\begin{equation}
+ H_f(t,z)=\int_0^U e^{tu^2}f(u)\cos(zu)\,du.
+ \label{eq:finitefield}
+\end{equation}
+This integral has a finite error-function expression.
+On each interval write $f(u)=A_i+B_i u$ and use
+\begin{align}
+ I_0(t,z;u)&=\frac{\sqrt\pi}{2\sqrt{-t}}e^{z^2/(4t)}
+ \left[\operatorname{erf}\left(\sqrt{-t}\,u-\frac{iz}{2\sqrt{-t}}\right)
+       -\operatorname{erf}\left(-\frac{iz}{2\sqrt{-t}}\right)\right],
+ \label{eq:primitive0}\\
+ I_1(t,z;u)&=\frac{e^{tu^2+izu}-1-izI_0(t,z;u)}{2t},\qquad
+ C_j(t,z;u)=\frac{I_j(t,z;u)+I_j(t,-z;u)}2.
+ \label{eq:primitive1}
+\end{align}
+Then $H_f=\sum_i(A_i\Delta_iC_0+B_i\Delta_iC_1)$, where
+$\Delta_iC_j=C_j(u_{i+1})-C_j(u_i)$.
+The branch choice in the square root does not change the result.
+At $t=0$ the removable limits are
+\[
+ I_0=(e^{izu}-1)/(iz),\qquad
+ I_1=\{e^{izu}(izu-1)+1\}/(iz)^2,
+\]
+with values $u$ and $u^2/2$ when also $z=0$.
+Completing the square and differentiating in $u$ prove the formulas.
+The field is entire in $(t,z)$, even in $z$, real on the real axis,
+and satisfies $(H_f)_t=-(H_f)_{zz}$ exactly.
+Its coefficients come from prescribed source values, without fitting
+theta roots or densities. Numerical cancellation in the primitives
+requires its own evaluation allowance.
+
+\subsection{A complete source-to-jet error}
+Let $B_2$ be the source derivative bound of Lemma~\ref{lem:B2} and put
+\begin{equation}
+ \tau_N=\frac{2\pi^2(N+1)^4e^{-\pi(N+1)^2}}{1-\vartheta_N},\qquad
+ \vartheta_N=\left(1+\frac1{N+1}\right)^4e^{-\pi(2N+3)},\qquad
+ d_s=B_2h_s^2/8+\tau_N.
+ \label{eq:sourceinterpolation}
+\end{equation}
+For $s=\max\{b,0\}$ choose $U$ so that, for $0\le j\le3$,
+\begin{equation}
+ 16\pi e^{4U}\ge2s,\qquad
+ \lambda_j=4\pi e^{4U}-2sU-9-Y-j/U>0.
+ \label{eq:tailgates}
+\end{equation}
+Define
+\begin{align}
+ T_j&=\frac{2\pi^2C_bU^j
+               e^{sU^2+(9+Y)U-\pi e^{4U}}}{\lambda_j},\notag\\
+ F_j&=\int_0^U u^je^{su^2+Yu}\,du
+       \le\frac{U^{j+1}}{j+1}e^{sU^2+YU},\qquad
+ \delta_j=d_sF_j+T_j.\label{eq:jetallowances}
+\end{align}
+The $F_j$ also have finite error-function recurrences.
+
+\begin{theorem}[Uniform finite-time jet approximation]\label{thm:finitejets}
+Under \eqref{eq:tailgates}, for all $t\in[a,b]$, all real $x$ and
+$|y|\le Y$,
+\begin{equation}
+ |\partial_z^j(H-H_f)(t,x+iy)|\le\delta_j,\qquad 0\le j\le3.
+ \label{eq:finitejets}
+\end{equation}
+For every fixed finite slab and strip, arbitrary positive jet tolerances
+are attainable by first enlarging $U$, then $N$ and the mesh resolution.
+\end{theorem}
+\begin{proof}
+Each omitted positive leading theta term decreases on $u\ge0$;
+its value at zero and the consecutive mode ratio give
+$0\le\Phi-\Phi_N\le\tau_N$.
+Interpolation of the complete $\Phi$ costs at most $B_2h_s^2/8$,
+and interpolation of its finite nodal approximations adds at most
+$\tau_N$. Thus $|\Phi-f|\le d_s$ on $[0,U]$.
+On $[U,\infty)$ the logarithm of
+$u^je^{su^2+(9+Y)u-\pi e^{4u}}$ is concave by
+\eqref{eq:tailgates} and has derivative $-\lambda_j$ at $U$.
+Its tangent exponential integrates to the tail bound $T_j$.
+Finally $|\partial_z^j\cos(zu)|\le u^je^{Y u}$, independently of $x$,
+so the two source regions contribute $d_sF_j$ and $T_j$.
+For fixed $s,Y$, the tails tend to zero with $U$; after fixing $U$,
+the finite-mode and interpolation errors tend to zero with $N$ and
+mesh refinement.
+\end{proof}
+The heat equation also pays the corresponding time derivatives:
+$\partial_t\partial_z^j(H-H_f)=-\partial_z^{j+2}(H-H_f)$.
+Nodal arithmetic error $d_{\rm num}$ adds $d_{\rm num}F_j$ to
+$\delta_j$. Primitive evaluation and spatial averaging errors remain
+separate. Refining the mesh alone cannot remove a fixed mode or tail
+allowance.
+
+\subsection{Density and transport stability through zeros}
+Fix a full comparison buffer where $\epsilon_g\ge e_*>0$ and
+$|r_t|\le a_0$. Both the true and approximate jets are bounded by
+\begin{equation}
+ P_j=\int_0^U u^je^{su^2+Yu}f(u)\,du+\delta_j.
+ \label{eq:finitejetmajorants}
+\end{equation}
+These positive integrals are finite combinations of the same primitives.
+Let $c_0=125/(54\sqrt5)$ and define
+\begin{align}
+ E_\rho&=\frac{2P_1\delta_1}{\pi e_*^2}
+                   +\frac{c_0P_1^2\delta_0}{\pi e_*^3},\notag\\
+ E_j&=\frac{P_1\delta_2+P_2\delta_1}{\pi e_*^2}
+                   +\frac{c_0P_1P_2\delta_0}{\pi e_*^3},\notag\\
+ E_3&=\frac{P_1\delta_3+P_3\delta_1}{\pi e_*^2}
+                   +\frac{c_0P_1P_3\delta_0}{\pi e_*^3},\qquad
+ \rho_{\max}=P_1^2/(\pi e_*^2),\label{eq:fieldstability}\\
+ E_{\rho,t}&=2E_3+a_0(E_\rho+2\rho_{\max}\delta_0/e_*)
+       +2P_2E_\rho/e_*+2\rho_{\max}\delta_2/e_*
+       +4\rho_{\max}P_2\delta_0/e_*^2.\notag
+\end{align}
+
+\begin{proposition}[Regulated field stability]\label{prop:fieldstability}
+Use the same regulator at each point for $H$ and $H_f$. Then
+\begin{equation}
+ |\rho[H]-\rho[H_f]|\le E_\rho,\quad
+ |j[H]-j[H_f]|\le E_j,\quad
+ |\rho_t[H]-\rho_t[H_f]|\le E_{\rho,t}.
+ \label{eq:stabilityconclusions}
+\end{equation}
+Positive normalized convolution preserves these sup-norm bounds.
+No simple-zero premise is needed, so the comparison includes multiple
+zeros and nonzero stationary points.
+\end{proposition}
+\begin{proof}
+For $A(h)=q/[\pi(|h|^2+q)^2]$,
+$A\le1/(\pi e_*^2)$ and the global gradient bound is
+$|\nabla_h A|\le c_0/(\pi e_*^3)$, as in
+Theorem~\ref{thm:global}. Product comparison proves the first two
+bounds and the analogous product bound $E_3$.
+Writing $p=H_z$, $v=H_{zz}$ and $w=q/(|H|^2+q)$, the exact derivative is
+\[
+ \rho_t=-2A\Re(H_{zzz}\overline p)+r_t(1-2w)\rho
+              +4\rho\Re\frac{v\overline H}{|H|^2+q}.
+\]
+Use $|w[H]-w[H_f]|\le\delta_0/e_*$,
+$|H|/(|H|^2+q)\le1/(2e_*)$, and the Lipschitz bound
+$\delta_0/e_*^2$ for $H/(|H|^2+q)$. Termwise comparison gives exactly
+$E_{\rho,t}$. This compares the actual time derivatives and does not
+differentiate the static error allowance.
+\end{proof}
+For a slab ending at $b\le64$, $\epsilon_g$ depends only on time,
+so these estimates are uniform over all real heights. On later slabs
+a finite horizontal buffer supplies $e_*$ and $a_0$.
+
+\subsection{The actual covariance and its Laplacian}
+Let $S_f=\log(|H_f|^2+q)$, $U_f=K*S_f$ and
+\[
+ Q_f=K*((S_f)_x^2-(S_f)_y^2)-((U_f)_x^2-(U_f)_y^2).
+\]
+This is computed from the approximate field, not chosen to force a
+potential equation. For $i=x,y$ put
+\begin{equation}
+ b_i=\|r_i\|_\infty,\qquad
+ G_i=P_1/e_*+b_i,\qquad
+ d_i=\delta_1/e_*+2P_1\delta_0/e_*^2+b_i\delta_0/e_*.
+ \label{eq:gradientstability}
+\end{equation}
+Then
+\[
+ |S-S_f|\le\delta_0/e_*,\qquad
+ |S_i|,|(S_f)_i|\le G_i,\qquad |S_i-(S_f)_i|\le d_i.
+\]
+These follow from
+$S_i=2\Re(H_i\overline H/(|H|^2+q))+wr_i$ and the same bounded
+rational maps used above.
+
+\begin{theorem}[Filtered covariance stability]\label{thm:covariance}
+Let $K$ be fixed, nonnegative, normalized and compactly supported,
+with the full comparison buffer supplied. Set
+$L_1=\|K_x\|_1+\|K_y\|_1$ and $L_2=\|\Delta K\|_1$.
+Then
+\begin{equation}
+ \|Q-Q_f\|_\infty\le4\sum_{i=x,y}G_i d_i,\qquad
+ \|\Delta(Q-Q_f)\|_\infty
+       \le(4L_1^2+6L_2)\sum_{i=x,y}G_i d_i.
+ \label{eq:covariancestability}
+\end{equation}
+\end{theorem}
+\begin{proof}
+The difference of the averaged gradient squares costs
+$2\sum_iG_i d_i$, as does the difference of the squared means.
+For the Laplacian, move both derivatives of the first averaged squares
+onto $K$, costing $2L_2\sum_iG_i d_i$.
+For a mean gradient $v_i=K*S_i$ use
+$\Delta(v_i^2)=2v_i\Delta v_i+2|\nabla v_i|^2$.
+Comparing true and approximate mean gradients costs
+$4(L_2+L_1^2)\sum_iG_i d_i$. Adding the two costs proves the result.
+The $C^3$ kernel \eqref{eq:kernel} has all the required integrable
+derivatives. No pointwise third spatial gradient of $S$ is required.
+\end{proof}
+The potential bound also controls its convolved boundary traces wherever
+the full buffer is provided; an arbitrary harmonic correction has not
+been introduced. Since $H_f$ solves heat exactly, its density, current,
+potential and covariance satisfy Proposition~\ref{prop:adaptive} with
+all three regulator corrections retained.
+These are source-based comparisons with the true quantities. They do
+not give an autonomous covariance closure in $R_f$ alone or transfer
+the clock's transport error to an unknown clock covariance.
+
+\input{09_local_transfer}
+
+\subsection{What the finite bridge does and does not complete}
+The construction proves approximability on each compact slab.
+A useful transition bridge must still choose and evaluate $U,N$, the
+mesh, widths, $\eta$ and the time interval, and show informative overlap
+with both endpoint formulas using the complete error budgets.
+Where two independently paid approximations overlap, the triangle
+inequality bounds their difference. A time blend of heat fields has
+an additional heat residual: $(1-\chi)H_f+\chi G$ contributes
+$\chi'(G-H_f)$ even if each component solves heat. No such blend is
+asserted here.
+
+\begin{proposition}[Failure of a fixed compact source at positive infinity]
+\label{prop:fixedsource}
+Fix $U$ and $f$ in \eqref{eq:finitefield}. Under the regulator
+\eqref{eq:positiveRegulator}, its density tends to zero uniformly on
+fixed spatial buffers as $t\to\infty$. For the true theta field, at
+any $y$ with $k_h(y)>0$, the corresponding averaged density grows
+like $Lk_h(y)/\pi$. Thus this fixed compact-source field cannot supply
+the positive endpoint of an all-time approximation.
+\end{proposition}
+\begin{proof}
+For fixed $U,Y$, each fixed jet of $H_f$ is $O(e^{tU^2+YU})$.
+But $\log M_0\sim tL^2$ and $L\to\infty$, so $\epsilon_+$
+outgrows every $e^{tU^2}$ on a fixed spatial buffer.
+The bound $\rho[H_f]\le|(H_f)_z|^2/(\pi\epsilon_+^2)$ proves
+vanishing. For theta, Theorem~\ref{thm:explicit} and the periodization
+bound give $K*\rho=Lk_h/\pi+o(1)$ there.
+\end{proof}
+This exclusion is specific to a fixed compact source; it does not
+exclude growing cutoffs. It also shows why an exactly zero heat
+residual alone cannot establish approximation to theta.
+
+The remaining analytical tasks are informative transition overlap,
+a positive outer-height model and a potential/covariance comparison for
+the explicit clock on a domain suitable for evolution.
+Certified finite onset and independent mathematical review remain
+separate tasks. The endpoint asymptotics, determinant comparisons and
+finite-slab stability inequalities do not exclude earlier collisions
+or establish simplicity at a prescribed earlier time.
