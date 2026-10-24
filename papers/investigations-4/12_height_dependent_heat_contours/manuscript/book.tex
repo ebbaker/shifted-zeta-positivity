@@ -35,8 +35,8 @@
 \begin{abstract}
 A holomorphic backward-heat field admits a smooth complex amplitude
 whose squared modulus is a regularized zero-counting density. We derive
-its phase transport, a nonlinear Schr\"odinger--Poisson evolution, and
-its exact identification with a focusing Davey--Stewartson II system.
+its phase transport and a complex-potential evolution, with equivalent
+Schr\"odinger--Poisson and focusing Davey--Stewartson II forms.
 The emphasis is analytic: every field identity and conservation law used
 here is calculated in the stated normalization.
 
@@ -67,8 +67,16 @@ theta-specific upper bound remains open.
 \section{The field and the question}
 \label{sec:setup}
 
-Let $t$ be real time and $z=x+iy$ the complex spatial variable. Suppose
-$H(t,z)$ is holomorphic in $z$, smooth in $t$, has no constant spatial
+Let $t$ be real time and $z=x+iy$ the complex spatial variable. For
+every smooth field we use the Wirtinger derivatives
+\begin{equation}
+ \partial_z=\tfrac12(\partial_x-i\partial_y),\qquad
+ \partial_{\bar z}=\tfrac12(\partial_x+i\partial_y),\qquad
+ \Delta=4\partial_z\partial_{\bar z}.
+ \label{eq:wirtinger}
+\end{equation}
+In particular, $\partial_{xy}=i(\partial_z^2-\partial_{\bar z}^2)$.
+Suppose $H(t,z)$ is holomorphic in $z$, smooth in $t$, has no constant spatial
 slice, and satisfies
 \begin{equation}
  H_t=-H_{zz}. \label{eq:heat}
@@ -77,14 +85,28 @@ All local calculations are on regions where these hypotheses hold.
 Global results state their extra hypotheses separately. Fix a constant
 $\eps>0$ and put
 \begin{equation}
- D=|H|^2+\eps^2,\qquad
- A=\frac{\eps}{\sqrt\pi}\frac{H_z}{D},\qquad
- \rho=|A|^2,\qquad V=-2\partial_{xy}\log D.
+ \begin{gathered}
+ D=|H|^2+\eps^2,\qquad S=\log D,\qquad
+ A=\frac{\eps}{\sqrt\pi}\frac{H_z}{D},\qquad\rho=|A|^2,\\
+ W=2S_{zz},\qquad V=2\Im W=-2S_{xy}.
+ \end{gathered}
  \label{eq:definition}
 \end{equation}
-Dependence on $\eps$ is suppressed in $A,\rho,V$ when no confusion is
-possible. The positive denominator makes all three fields smooth,
+Here $W$ is a complex potential and $V$ its real Schr\"odinger
+potential. Dependence on $\eps$ is suppressed when no confusion is
+possible. The positive denominator makes these fields smooth,
 including at multiple zeros of $H$.
+
+Holomorphicity is required of $H$, not of the amplitude or potential.
+Indeed,
+\begin{equation}
+ A_{\bar z}=-S_{\bar z}A
+ =-\frac{\eps}{\sqrt\pi}\frac{H|H_z|^2}{D^2}.
+ \label{eq:nonholomorphic}
+\end{equation}
+Both Wirtinger derivatives must therefore be retained; in particular,
+$A_{\bar z\bar z}$ is not $\overline{A_{zz}}$.
+This complex notation retains two real spatial dimensions.
 
 The amplitude $A$ is the primary field in the evolution below. A
 normalized observation state will be denoted $\psi$, and a real spatial
@@ -125,7 +147,8 @@ multiplicities are allowed.
 The amplitude \eqref{eq:definition} satisfies
 \begin{equation}
  \rho=\frac{\eps^2|H_z|^2}{\pi D^2}
-      =\frac1{4\pi}\Delta\log D. \label{eq:lapdensity}
+      =\frac1\pi S_{z\bar z}
+      =\frac1{4\pi}\Delta S. \label{eq:lapdensity}
 \end{equation}
 For fixed $t$, its measures converge on compact sets as
 \begin{equation}
@@ -137,12 +160,12 @@ Here $m_a$ is the multiplicity (order) of the zero of $H(t,\cdot)$
 at $a$, and $\delta_a$ is the unit point mass at $a$.
 \end{proposition}
 \begin{proof}
-Write $f=H$ and $p=H_z$. The Cauchy--Riemann equations give
+Since $H_{\bar z}=0$, direct differentiation gives
 \[
- \Delta D=4|p|^2,\qquad |\nabla D|^2=4|f|^2|p|^2.
+ S_z=\frac{H_z\bar H}{D},\qquad
+ S_{z\bar z}=\frac{\eps^2|H_z|^2}{D^2}=\pi\rho.
 \]
-The quotient rule for $\Delta\log D$ proves
-\eqref{eq:lapdensity}. For the measure limit, set
+This proves \eqref{eq:lapdensity}. For the measure limit, set
 \begin{equation}
  k_\eps(w)=\frac{\eps^2}{\pi(|w|^2+\eps^2)^2},
  \qquad \int_\C k_\eps(w)\dd A_w=1.
@@ -236,12 +259,11 @@ count into finite total mass.
 \label{sec:transport}
 
 We write planar velocities and currents as complex-valued fields.
-For any smooth field, use the Wirtinger derivative
-$\partial_z=\tfrac12(\partial_x-i\partial_y)$; on holomorphic $H$
-this agrees with its holomorphic derivative. For a complex current
-$j=u+iv$, its divergence is $2\Re(\partial_z j)=u_x+v_y$.
+For $j=j_x+ij_y$, the real divergence is
+$\partial_zj+\partial_{\bar z}\bar j=2\Re(\partial_zj)
+=\partial_xj_x+\partial_yj_y$.
 For a real function $f$, the directional pairing is
-$2\Re((\partial_z f)j)=f_xu+f_yv$.
+$2\Re(f_zj)=f_xj_x+f_yj_y$.
 
 At a simple zero $a(t)$, the implicit-function theorem and
 \eqref{eq:heat} give
@@ -251,9 +273,8 @@ At a simple zero $a(t)$, the implicit-function theorem and
 Where $H_z\ne0$, choose a local phase $\theta=\arg A=\arg H_z$.
 Holomorphicity yields
 \begin{equation}
- \theta_x=\Im\frac{H_{zz}}{H_z},\qquad
- \theta_y=\Re\frac{H_{zz}}{H_z},\qquad
- v=\theta_y+i\theta_x=\frac{H_{zz}}{H_z}.
+ v=2i\theta_z=\frac{H_{zz}}{H_z}
+   =\theta_y+i\theta_x.
  \label{eq:phasevelocity}
 \end{equation}
 Thus the phase gradient supplies the zero velocity with its coordinate
@@ -263,26 +284,28 @@ transport.
 \begin{proposition}[Smooth conserved current]
 Define
 \begin{align}
- j&:=\Im(\bar A A_y)+i\Im(\bar A A_x),
+ j&:=\bar A\,\partial_zA-A\,\partial_z\bar A,
  \label{eq:current}\\
  j&=\frac{\eps^2H_{zz}\overline{H_z}}{\pi D^2}.
  \label{eq:currentheat}
 \end{align}
-The real part of $j$ is the $x$-current and its imaginary part is
-the $y$-current; $j$ is generally not holomorphic.
-Then everywhere, including at critical and multiple points,
+Its real components are
+$j_x=\Im(\bar A A_y)$ and $j_y=\Im(\bar A A_x)$;
+$j$ is generally not holomorphic.
+Everywhere, including at critical and multiple points,
 \begin{equation}
- \rho_t+2\Re(\partial_z j)=0.
+ \rho_t+\partial_zj+\partial_{\bar z}\bar j=0.
  \label{eq:continuity}
 \end{equation}
-On the regular set, $j=\rho v$.
+Equivalently, $\rho_t+2\Re(\partial_zj)=0$.
+On the regular set, $j=2i\rho\theta_z=\rho v$.
 \end{proposition}
 \begin{proof}
-The derivatives of the positive denominator in \eqref{eq:definition}
-contribute only real terms to $\bar A A_x$ and $\bar A A_y$.
-Their imaginary parts therefore give \eqref{eq:currentheat} and
-\eqref{eq:phasevelocity}. For an independent geometric proof of the
-continuity equation, pull back the closed target-plane two-form
+Substitution of $A=(\eps/\sqrt\pi)H_z/D$ into
+\eqref{eq:current} cancels the two denominator-derivative terms and
+gives \eqref{eq:currentheat}. Writing $A=|A|e^{i\theta}$ on a
+phase chart gives $j=2i\rho\theta_z$. For a geometric proof of
+continuity, pull back the closed target-plane two-form
 $k_\eps(w)\dd\Re w\wedge\dd\Im w$ by $H(t,z)$. Its pullback is
 \[
  \rho\dd x\wedge\dd y+\Im(j)\dd t\wedge\dd x
@@ -331,55 +354,90 @@ multiple one of the same degree.
 \section{The exact nonlinear field equation}
 \label{sec:evolution}
 
-\begin{theorem}[Schr\"odinger--Poisson evolution]
+\begin{theorem}[Complex-potential evolution]
 \label{thm:evolution}
 The fields \eqref{eq:definition} satisfy
 \begin{equation}
- \boxed{\quad iA_t=-A_{xy}+VA,\qquad
- \Delta V=-8\pi\partial_{xy}|A|^2.\quad}
- \label{eq:SP}
+ \boxed{\begin{aligned}
+ A_t&=A_{\bar z\bar z}-A_{zz}+(\bar W-W)A,\\
+ W_{\bar z}&=2\pi\partial_z|A|^2.
+ \end{aligned}}
+ \label{eq:complexSP}
 \end{equation}
 Both identities hold smoothly through zeros of $H$ and $H_z$.
+With $V=2\Im W$, their real-coordinate form is
+\begin{equation}
+ iA_t=-A_{xy}+VA,\qquad
+ \Delta V=-8\pi\partial_{xy}|A|^2.
+ \label{eq:SP}
+\end{equation}
 \end{theorem}
 \begin{proof}
-Write $f=H$, $p=H_z$, $q=H_{zz}$, $r=H_{zzz}$ and
-$c=\eps/\sqrt\pi$. Then
+The density identity immediately gives
+$W_{\bar z}=2\partial_zS_{z\bar z}=2\pi\rho_z$.
+For the evolution, $H_t=-H_{zz}$ and the definition of $S$ give
+\begin{equation}
+ S_t=-S_{zz}-S_{\bar z\bar z}-S_z^2-S_{\bar z}^2,
+ \qquad S_zA_z=S_{zz}A.
+ \label{eq:potentialidentities}
+\end{equation}
+The second identity follows directly from
+$S_z=H_z\bar H/D$ and $A=(\eps/\sqrt\pi)H_z/D$;
+it requires no division by $H_z$.
+Differentiating this expression for $A$, using
+$(H_z)_t=-(H_z)_{zz}$ and \eqref{eq:nonholomorphic}, gives
 \begin{align*}
- D_x&=p\bar f+f\bar p,&D_y&=i(p\bar f-f\bar p),\\
- D_t&=-q\bar f-f\bar q,&D_{xy}&=i(q\bar f-f\bar q),\\
- p_t&=-r,&p_x&=q,\quad p_y=iq,\quad p_{xy}=ir.
+ A_t+A_{zz}-A_{\bar z\bar z}
+ &=(-S_t-S_{zz}-S_z^2-S_{\bar z}^2+S_{\bar z\bar z})A
+   -2S_zA_z\\
+ &=2(S_{\bar z\bar z}-S_{zz})A=(\bar W-W)A.
 \end{align*}
-Differentiating $A=cp/D$ gives
-\begin{align*}
- A_t&=c\left(-\frac rD-\frac{pD_t}{D^2}\right),\\
- A_{xy}&=c\left(\frac{ir}D
- -\frac{q(D_y+iD_x)+pD_{xy}}{D^2}
- +\frac{2pD_xD_y}{D^3}\right).
-\end{align*}
-Since $D_y+iD_x=2ip\bar f$ and
-$-iD_t-2iq\bar f=-D_{xy}$, cancellation gives
+This proves the first equation of \eqref{eq:complexSP}.
+The identity $\partial_{xy}=i(\partial_z^2-\partial_{\bar z}^2)$
+and $i(\bar W-W)=V$ give the first equation in \eqref{eq:SP}.
+For the second,
 \[
- iA_t+A_{xy}
- =-2\left(\frac{D_{xy}}D-\frac{D_xD_y}{D^2}\right)A=VA.
+ \Delta V=2\Im(4\partial_zW_{\bar z})
+ =16\pi\Im\rho_{zz}=-8\pi\rho_{xy}.\qedhere
 \]
-Applying $-2\partial_{xy}$ to
-$\Delta\log D=4\pi\rho$ proves the second equation.
 \end{proof}
 
-An equivalent useful formula is
+The complex potential is explicitly
 \begin{equation}
- V=4\Im\left(\frac{\bar H H_{zz}}D
-             -\frac{\bar H^2 H_z^2}{D^2}\right).
+ W=2\left(\frac{\bar H H_{zz}}D
+             -\frac{\bar H^2H_z^2}{D^2}\right),\qquad
+ V=2\Im W.
  \label{eq:explicitV}
 \end{equation}
-No derivative quotient occurs in this expression. For any smooth
-solution of the first equation in \eqref{eq:SP} with real $V$, taking
-the real part of $2\bar A A_t$ proves
+No derivative quotient occurs in this expression. The equation
+$W_{\bar z}=2\pi\rho_z$ makes clear that $W$ is generally
+nonholomorphic. For any smooth solution of the amplitude equation in
+\eqref{eq:complexSP}, its potential term cancels from
+$\partial_t|A|^2$. The derivative terms then give
 \eqref{eq:continuity} with the current \eqref{eq:current}.
 
 \subsection{Davey--Stewartson II coordinates}
 
-Set
+A rotation by $45$ degrees puts the equations in a standard complex
+DS-II convention. Set $w=e^{-i\pi/4}z$ and
+\[
+ u(t,w)=\sqrt\pi\,A(t,e^{i\pi/4}w),\qquad
+ Q(t,w)=iW(t,e^{i\pi/4}w).
+\]
+Since $\partial_z^2=-i\partial_w^2$ and
+$\partial_{\bar z}^2=i\partial_{\bar w}^2$,
+\eqref{eq:complexSP} becomes
+\begin{equation}
+ \begin{aligned}
+ u_t&=i\{u_{ww}+u_{\bar w\bar w}+(Q+\bar Q)u\},\\
+ Q_{\bar w}&=2\partial_w|u|^2.
+ \end{aligned}
+ \label{eq:complexDSII}
+\end{equation}
+This is precisely the normalization of the introductory equation (1)
+in \cite{Taimanov}; no time rescaling is used here.
+
+For comparison with the real-coordinate convention of \cite{KS}, set
 \[
  X=\frac{x+y}{\sqrt2},\quad Y=\frac{y-x}{\sqrt2},\quad t=2\tau,
  \quad q(\tau,X,Y)=2\sqrt\pi A(2\tau,x,y).
@@ -395,6 +453,8 @@ $\Delta=\partial_{XX}+\partial_{YY}$ give
  \end{split} \label{eq:DSII}
 \end{equation}
 This is the focusing DS-II convention in \cite[equation (1)]{KS}.
+The real form displays the indefinite kinetic operator
+$-\partial_{xy}=-\tfrac12(\partial_{XX}-\partial_{YY})$.
 Related constructions from holomorphic Schr\"odinger seeds and
 two-dimensional Dirac operators occur in \cite{Taimanov}; its displayed
 Moutard formula is not identified with \eqref{eq:definition}.
@@ -404,27 +464,55 @@ global existence or finite-mass theorem for theta.
 
 \subsection{Selecting the potential}
 
-The Poisson equation determines $V$ only up to a harmonic function.
-For the finite-mass theory we specify a real, translation-invariant
+The constraint $W_{\bar z}=2\pi\rho_z$ determines $W$ up to a
+holomorphic function. Its imaginary part changes $V=2\Im W$ by a
+harmonic function, reproducing the ambiguity of the Poisson equation.
+Conversely, for real $V,\rho$ satisfying that equation, write
+$W=b+iV/2$. The required real part obeys
+\[
+ b_x=2\pi\rho_x+\tfrac12V_y,\qquad
+ b_y=-2\pi\rho_y-\tfrac12V_x.
+\]
+The Poisson equation is exactly their compatibility condition.
+Thus $W$ exists on a simply connected spatial domain, up to a real
+spatial constant that cancels from $\bar W-W$; on a multiply connected
+domain the periods must also vanish. The lifted expression
+$W=2S_{zz}$ already selects a specific potential.
+
+For the finite-mass theory we specify a translation-invariant complex
 operator by
+\begin{equation}
+ \widehat{\mathcal K f}(k_x,k_y)
+ =2\pi\frac{k_x-ik_y}{k_x+ik_y}\widehat f(k_x,k_y),
+ \qquad k\ne0.
+ \label{eq:complexmultiplier}
+\end{equation}
+For real $f$, the corresponding real operator
+$\cT f=2\Im(\mathcal Kf)$ has multiplier
 \begin{equation}
  \widehat{\cT f}(k_x,k_y)
  =-8\pi\frac{k_xk_y}{k_x^2+k_y^2}\widehat f(k_x,k_y),
  \qquad k\ne0. \label{eq:multiplier}
 \end{equation}
-Its value at $k=0$ is irrelevant in $L^2$. This bounded, selfadjoint
-operator has norm at most $4\pi$, commutes with derivatives and
-translations, and is homogeneous of degree zero. The closed equation
-in the next section is
+The values at $k=0$ are irrelevant in $L^2$. The real operator
+$\cT$ is bounded and selfadjoint, has norm at most $4\pi$,
+commutes with derivatives and translations, and is homogeneous of
+degree zero. With $W=\mathcal K\rho$, the closed equation is
 \begin{equation}
- iA_t=-A_{xy}+(\cT\rho)A,\qquad \rho=|A|^2.
+ A_t=A_{\bar z\bar z}-A_{zz}
+   +(\overline{\mathcal K\rho}-\mathcal K\rho)A,
+ \qquad\rho=|A|^2.
  \label{eq:closed}
 \end{equation}
-The holomorphic formula supplies its own potential; identifying that
-potential with $\cT\rho$ requires global hypotheses. These are proved
-for polynomials below and are not assumed for theta. Moreover, an
-arbitrary solution of \eqref{eq:closed} need not admit the lift
-\eqref{eq:definition}, much less the unchanged theta source.
+Equivalently, $iA_t=-A_{xy}+(\cT\rho)A$. We use this real form
+when pairing the momentum and kinetic-energy components below.
+
+The holomorphic lift supplies its own potential. Identifying its
+$W$ with $\mathcal K\rho$, or its $V$ with $\cT\rho$, requires
+global hypotheses. These are verified for polynomials below and are
+not assumed for theta. An arbitrary solution of \eqref{eq:closed}
+need not admit the lift \eqref{eq:definition}, much less the unchanged
+theta source.
 
 \section{Conserved quantities and their hypotheses}
 \label{sec:conservation}
@@ -571,14 +659,16 @@ The local momentum balance \eqref{eq:momentumlocal} similarly retains
 its two boundary stresses and the force $-\rho\nabla V$.
 
 Even on the whole plane, adding harmonic data changes the available
-invariants. If $V=\cT\rho+W(t,x,y)$, with real prescribed $W$ and
-integrable terms, the same calculation gives
+invariants. If $V=\cT\rho+V_{\mathrm{ext}}(t,x,y)$, with real
+prescribed $V_{\mathrm{ext}}$ and integrable terms, the same
+calculation gives
 \begin{equation}
- \dot P_i=-\int\rho W_i,\qquad
- \frac d{dt}\left(\cE+\int W\rho\right)=\int W_t\rho.
+ \dot P_i=-\int\rho\,\partial_iV_{\mathrm{ext}},\qquad
+ \frac d{dt}\left(\cE+\int V_{\mathrm{ext}}\rho\right)
+ =\int(\partial_tV_{\mathrm{ext}})\rho.
  \label{eq:forcing}
 \end{equation}
-For the original Poisson equation $W$ must be harmonic, but these
+For the original Poisson equation $V_{\mathrm{ext}}$ must be harmonic, but these
 identities hold for any real external potential. It is therefore
 essential to specify the potential and the boundary conditions before
 claiming conserved global energy or momentum.
@@ -623,12 +713,14 @@ The first-moment formula also holds for $n=1$.
 \begin{proof}
 Uniformly on compact time intervals, $A=O(|z|^{-n-1})$,
 $\nabla A=O(|z|^{-n-2})$, $A_t=O(|z|^{-n-3})$ and
-$V=O(|z|^{-2})$ at infinity. Their further derivatives have the
+$W,V=O(|z|^{-2})$ at infinity. Their further derivatives have the
 corresponding bounds. These justify mass, momentum and energy
 calculations. The second spatial moment is absolutely integrable for
 $n\ge2$. Also $V,\rho\in L^2$ and $\Delta(V-\cT\rho)=0$.
-An entire harmonic $L^2$ function is zero, so the potential agrees
-with \eqref{eq:multiplier}.
+An entire harmonic $L^2$ function is zero, so $V=\cT\rho$.
+Similarly, $W-\mathcal K\rho$ is an entire holomorphic $L^2$
+function and therefore zero. Thus both selected potentials agree
+with the lifted ones.
 
 Theorem~\ref{thm:massclassification} gives $M=n$. For the other
 moments, use the area formula with the spatial weights $z,z^2$.
@@ -706,44 +798,53 @@ alongside the state, since norm one alone does not record absolute
 counting mass.
 
 \begin{proposition}[Localization and normalization]
-Put $J=h^2j/Z$. Then
+Put $J=h^2j/Z$ and define the localization term
+\begin{equation}
+ \mathcal C_h[A]=(h_{zz}-h_{\bar z\bar z})A
+       +2(h_zA_z-h_{\bar z}A_{\bar z}).
+ \label{eq:localizationterm}
+\end{equation}
+Then
 \begin{align}
  \dot Z&=\int 4h\Re(h_zj)\dd A,
  \label{eq:Zdot}\\
  \partial_t|\psi|^2+2\Re(\partial_z J)
  &=\frac{4h\Re(h_zj)}{Z}
    -\frac{\dot Z}{Z}|\psi|^2,\label{eq:probability}\\
- i\psi_t&=-\psi_{xy}+V\psi
- +\frac{h_{xy}A+h_xA_y+h_yA_x}{\sqrt Z}
- -i\frac{\dot Z}{2Z}\psi.\label{eq:psievolution}
+ \psi_t&=\psi_{\bar z\bar z}-\psi_{zz}+(\bar W-W)\psi
+ +\frac{\mathcal C_h[A]}{\sqrt Z}
+ -\frac{\dot Z}{2Z}\psi.\label{eq:psievolution}
 \end{align}
-Here $h_z=\partial_z h$. The complex current $J$ is also obtained
-from $\psi$ using
-\eqref{eq:current}.
+The complex current $J$ is also obtained from $\psi$ using
+\eqref{eq:current}. The real-coordinate localization expression is
+$i\mathcal C_h[A]=h_{xy}A+h_xA_y+h_yA_x$.
 \end{proposition}
 \begin{proof}
 Multiply continuity by $h^2$ and integrate by parts to obtain
 \eqref{eq:Zdot}. The product rule applied before integration gives
-\eqref{eq:probability}. Expand $(hA)_{xy}$ and differentiate
-$Z^{-1/2}$ to obtain \eqref{eq:psievolution}. The terms containing
-$h_x$ or $h_y$ in $\bar\psi\psi_x$ or $\bar\psi\psi_y$ are real
-and do not change the current. None of these formulas divides by $h$.
+\eqref{eq:probability}. Expand
+$(\partial_{\bar z}^2-\partial_z^2)(hA)$ and differentiate
+$Z^{-1/2}$ to obtain \eqref{eq:psievolution}. The two terms
+containing $h_z$ cancel in
+$\bar\psi\,\partial_z\psi-\psi\,\partial_z\bar\psi$,
+giving $J=h^2j/Z$. None of these formulas divides by $h$.
 \end{proof}
 
 The state remains regular at the edge of its support. It satisfies an
 equation with explicit localization and normalization terms, rather than
-the unmodified whole-plane equation. Its potential is still supplied
-by the complete field; replacing it by $\cT|\psi|^2$ would define a
+the unmodified whole-plane equation. Its potential $W$ is still supplied
+by the complete field; replacing it by $\mathcal K|\psi|^2$ would define a
 different evolution. This is particularly relevant for theta, where
 the unlocalized mass is infinite.
 
-For an approximate amplitude with real potential, define
+For an approximate amplitude and complex potential $W$, define
 \begin{equation}
- r=iA_t+A_{xy}-VA.
+ r=A_t-A_{\bar z\bar z}+A_{zz}+(W-\bar W)A.
 \end{equation}
+Thus $ir=iA_t+A_{xy}-VA$ when $V=2\Im W$.
 The exact continuity defect is
 \begin{equation}
- \rho_t+2\Re(\partial_z j)=2\Im(\bar A r),\qquad
+ \rho_t+2\Re(\partial_z j)=2\Re(\bar A r),\qquad
  \left|\dot Z-\int4h\Re(h_zj)\dd A\right|
  \le2\|hA\|_2\|hr\|_2.
  \label{eq:residual}
@@ -915,14 +1016,15 @@ The first term describes transport within the observed density, and
 the last two retain the window's flux. The formula follows by moving
 the divergence through convolution and integrating by parts against
 the Gaussian-smoothed density. An approximate amplitude adds the
-source $2h^2\Im(\bar A r)$ to $b_h$.
+source $2h^2\Re(\bar A r)$ to $b_h$.
 
 \section{What the formulation accomplishes}
 \label{sec:scope}
 
 The analytic conclusions separate into three levels. Locally, every
 holomorphic heat field has the smooth amplitude, phase transport,
-Schr\"odinger--Poisson equation and conserved current. With a selected
+complex-potential evolution and conserved current. Its real-coordinate
+form is the Schr\"odinger--Poisson system. With a selected
 translation-invariant potential and sufficient global integrability,
 mass, momenta, Hamiltonian and the stated moment combinations are
 conserved. For a finite observed divisor, the self-subtracted density
@@ -956,17 +1058,16 @@ variational assertion from those notes is used as a theorem. The
 mixed kinetic operator of this paper is explicitly indefinite.
 
 This manuscript was drafted for Edward Baker with substantial assistance
-from OpenAI Codex, model \texttt{gpt-6-astra}, reasoning effort
-\emph{max}. The original derivations and their self-review were
-performed by the same assistant. The complex-current notation revision used OpenAI Codex,
-model \texttt{gpt-6.1-sol}, reasoning effort \emph{xhigh}.
-Exact symbolic checks support the signs, normalization
-factors and local balances; the analytic proofs above establish the
-stated conclusions. Compilation and symbolic checks are not independent
-specialist review or formal proof verification. The DS-II comparison,
-Picard theorem and Gaussian factorization are classical ingredients;
-no priority claim is made. The preceding contour-centered book is
-preserved separately as the author's requested dated TeX draft.
+from OpenAI Codex. The original derivations and complex-potential
+revision used \texttt{gpt-6-astra}, effort \emph{max}; the complex-current
+revision used \texttt{gpt-6.1-sol}, effort \emph{xhigh}. Derivation and
+review were performed by the same assistants. Exact symbolic checks
+support signs, constants and local balances; these checks and
+compilation are not independent specialist review or formal proof
+verification. The DS-II comparison, Picard theorem and Gaussian
+factorization are classical; no priority is claimed. The preceding
+contour-centered book is preserved as the author's requested dated
+TeX draft.
 
 \clearpage
 \begin{thebibliography}{9}
@@ -980,7 +1081,7 @@ systems}, arXiv:1712.08814v1 (2017), equation (1).
 I.~A.~Taimanov,
 \emph{The Moutard transformation for the Davey--Stewartson II equation
 and its geometrical meaning}, arXiv:2111.07251v1 (2021), introduction
-and \S4.1, especially equation (19).
+and \S4.1, equations (1) and (19).
 \url{https://arxiv.org/abs/2111.07251v1}.
 
 \bibitem{DLMFPicard}
